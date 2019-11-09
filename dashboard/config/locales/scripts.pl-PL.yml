@@ -4931,3 +4931,11 @@ pl:
               name: Zmienne
             For Loops:
               name: Pętle dla (for)
+        dance-extras-2019:
+          title: Nie przestawaj tańczyć
+          description: Wyjdź poza pierwszą godzinę dzięki rozszerzonym pomysłom na
+            projekt.
+        csp10-pilot:
+          stages:
+            new stage:
+              name: nowy etap

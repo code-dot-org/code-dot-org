@@ -588,6 +588,7 @@
             '"rotation"': rotasjon
             '"x"': horisontal posisjon
             '"y"': vertikal posisjon
+            '"tint"': fargetone
       Dancelab_setPropRandom:
         text: tilfeldig {SPRITE} {PROPERTY}
         options:
@@ -806,6 +807,8 @@
             '1': mellomtone
             '2': diskant
       Dancelab_whenSetup:
+        text: oppsett
+      Dancelab_whenSetup2:
         text: oppsett
       gamelab_changePropBy:
         text: endre {SPRITE} {PROPERTY} med {VAL}

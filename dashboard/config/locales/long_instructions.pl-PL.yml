@@ -39,8 +39,8 @@ pl-PL:
       CSD Problem Solving Process Video: |-
         ## Pytania do przemyślenia
 
-        \-W jaki sposób rozwiązywałeś problemy  z poprzedniej lekcji?
-        \-W jakich sytuacjach mógłbyś użyć tego sposobu rozwiązywania problemów?
+        -   Jak stosowałeś proces rozwiązywania problemów podczas ostatniej lekcji?
+        -   Jak mógłbyś wykorzystać ten proces do rozwiązywania problemów z Twojego codziennego życia?
       CSD U2 HTML Adding Paragraphs pt 2_2019: |-
         <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
 
@@ -177,10 +177,10 @@ pl-PL:
       CSD U6 iter predict bubbles_2018: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       CSD U6 iter predict bubbles_2019: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       CSD What Makes a Computer a Computer Video_2019: |-
-        ## Zastanów się nad tymi pytaniami
+        ## Pytania do przemyślenia
 
-        -   Co odróżnia komputery od maszyn które powstały przed nimi?
-        -   Pomyśl o czymś co robisz przy użyciu komputera. Jakie rodzaje danych, wyników, przechowania i przetwarzania zachodzą?
+        -   Czym różniły się komputery od maszyn, które pojawiły się przed nimi?
+        -   Pomyśl o czymś, co robisz na komputerze. Jakiego rodzaju dane, wyniki, pamięć i przetwarzanie mają miejsce?
       Course 4 Artist For Loops 6a: Zrób trzy niewielkie zmiany w kodzie z poprzedniego
         poziomu, aby to otrzymać!
       CourseD_Dance_Party_01: |-
@@ -282,6 +282,11 @@ pl-PL:
         ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
         ! Wykorzystaj niebieski i czerwony koral, aby dotrzeć do **kufra** ze skarbem
         ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
+      Dance_2019_05: |-
+        _Teraz się bawimy!_
+
+        Dodaj do swojego obszaru roboczego blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml>. Spraw, aby tancerz zaczął nowy ruch po 6 taktach.
+      Dance_2019_10: Dobrej zabawy! Utwórz własny taniec i udostępnij go przyjaciołom.
       Dance_Party_01: |-
         _Urządźmy potańcówkę!_
 
@@ -360,6 +365,14 @@ pl-PL:
         -   Dodaj kolejne przyciski kontrolujące taniec
         -   Spraw, aby tancerze wspierający również reagowali na wciskanie klawiszy
         -   Zmieniaj tancerza co 4 takty, ustawiając jego widoczność
+      Dance_Party_extras_battle_2019: |-
+        # Grupy taneczne
+
+        To bitwa taneczna pomiędzy dwiema grupami. Klawisze ze strzałkami sterują jednym z tancerzy, a klawisze "w, a, s, d" drugim. Zagraj w taneczną bitwę z przyjacielem, a potem spróbuj udoskonalić ten taniec.
+
+        -   Dodaj kolejne przyciski kontrolujące taniec
+        -   Spraw, aby tancerze wspierający również reagowali na wciskanie klawiszy
+        -   Zmieniaj tancerza co 4 takty, ustawiając jego widoczność
       Dance_Party_extras_every_beat: "# Ćwierćnuty\n\nWiększość naszych tańców wykorzystuje
         pełne takty, ale każdy takt składa się z 4 ćwierćnut. Ten taniec używa \"co
         0,25 taktu\", co sprawia, że tancerz klaszcze w każdej ćwierćnucie. \n\nW
@@ -381,11 +394,23 @@ pl-PL:
         # Bas, średni i wysoki ton
 
         Ten taniec wykorzystuje zdarzenia "szczyt" do wywołania kodu, gdy różne partie muzyki stają się głośne. Spróbuj pomajsterkować z różnymi piosenkami, aby zobaczyć, jak one zmieniają taniec.
+      Dance_Party_extras_on_beat_2019: |-
+        # Bas, średni i wysoki ton
+
+        Ten taniec wykorzystuje zdarzenia "szczyt" do wywołania kodu, gdy różne partie muzyki stają się głośne. Spróbuj pomajsterkować z różnymi piosenkami, aby zobaczyć, jak one zmieniają taniec.
       Dance_Party_extras_speed: |-
         # Przyspiesz, spowolnij
 
         Ten ostatni taniec wykorzystuje blok "ustaw prędkość" do sterowania szybkością poruszania się tancerzy. Spróbuj poeksperymentować z różnymi prędkościami podczas różnych fragmentów piosenki. Nie przestawaj majstrować przy tym tańcu lub powróć do któregokolwiek z poprzednich tańców, aby uczynić je bardziej porywającymi.
       Dance_Party_extras_visible: |-
+        # Gdzie oni poszli?
+
+        Ten taniec pokazuje i ukrywa dwie różne grupy tancerzy. Sprawdź to, a następnie spróbuj dodać własne ulepszenia.
+
+        -   Dodaj kolejną grupę tancerzy
+        -   Pokaż i ukryj tancerzy przy użyciu klawiszy strzałek
+        -   Ukryj wszystkich tancerzy i przełącz na ekscytujący efekt tła
+      Dance_Party_extras_visible_2019: |-
         # Gdzie oni poszli?
 
         Ten taniec pokazuje i ukrywa dwie różne grupy tancerzy. Sprawdź to, a następnie spróbuj dodać własne ulepszenia.
@@ -518,6 +543,10 @@ pl-PL:
         wełnę z obu owiec.
       Overworld Shear Sheep_2019: Czas strzyżenia owiec! Użyj polecenia `shear`, aby
         zebrać wełnę z obu owiec.
+      'Widget: Text Compression': Poszukaj wzorców (powtarzające się słowa lub frazy)
+        w tekście. Wprowadź do słownika po prawej stronie wzorce, które widzisz. Podczas
+        ich wpisywania do słownika, symbol wpisu jest wstawiany do tekstu zamiast
+        wzorca.
       course1_maze_debugging_challenge2: Debuguj ten poziom. Te bloki są poprawne,
         ale w złej kolejności!
       course2_collector_prog_challenge1: Spójrz uważnie! Czy potrafisz zebrać wszystkie

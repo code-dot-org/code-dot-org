@@ -148,6 +148,16 @@ it-IT:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Nuovo blocco!
         dance_callout_11_b: Nuovo blocco!
+      Dance_2019_01:
+        dance_callout_01: Aggiungi questo blocco al tuo programma!
+      Dance_2019_04:
+        dance_callout_02: Aggiungi questo blocco al tuo programma!
+      Dance_2019_06:
+        dance_party_11_5_groups: Nuovo blocco!
+      Dance_2019_07:
+        setprop_hint: Nuovo blocco!
+      Dance_2019_09:
+        new_block_1: Nuovo blocco!
       Dance_Party_01:
         dance_callout_01: Aggiungi questo blocco al tuo programma!
       Dance_Party_02:
@@ -282,6 +292,8 @@ it-IT:
         craft_what_is_iron: Estrai il ferro!
       Underground Iron_2019:
         craft_what_is_iron: Estrai il ferro!
+      Virtual Pet 2_2019:
+        '': Clicca qui!
       behaviors 3a:
         behavior_callout: Perché questo comportamento non funziona per la stella centrale?
         star2_callout: Rimuovi questo blocco costume e usa al suo posto il blocco
@@ -300,8 +312,8 @@ it-IT:
         courseE_artist_functions_challenge2_callout2: Se non ti piace questo progetto,
           cambialo con qualunque cosa vuoi!
       course3_bee_debugging_challenge1:
-        courseD_bee_debugging_challenge1_callout1: Usa questo comando per muovere
-          l'ape indietro.
+        courseD_bee_debugging_challenge1_callout1: Usa quest'istruzione per far andare
+          l'ape all'indietro.
       course3_bee_functions_challenge3:
         courseF_bee_functions_challenge1_1: Quale codice dovresti inserire in questa
           funzione?
@@ -359,6 +371,8 @@ it-IT:
       courseA_collector_loops3_2019:
         gradek_adventurer_loops2_1: Questo numero ti dice quanti di questi blocchi
           puoi usare in questo esercizio.
+      courseA_collector_preLoops1:
+        courseA_collector_preLoops1_1: Clicca qui per eseguire il codice!
       courseA_collector_preLoops2:
         courseA_collector_loops1_1: Vedi qualche nuovo blocco nella cassetta degli
           attrezzi? Non preoccuparti, ti mostreremo come usarli più avanti in questa
@@ -636,11 +650,11 @@ it-IT:
         courseD_bee_conditionals_challenge2_1: Usa questo ciclo per raccogliere tutto
           il nettare da un fiore o fare tutto il miele in un favo.
       courseD_bee_debugging_challenge1:
-        courseD_bee_debugging_challenge1_callout1: Usa questo comando per muovere
-          l'ape indietro.
+        courseD_bee_debugging_challenge1_callout1: Usa quest'istruzione per far andare
+          l'ape all'indietro.
       courseD_bee_debugging_challenge1a:
-        courseD_bee_debugging_challenge1_callout1: Usa questo comando per muovere
-          l'ape indietro.
+        courseD_bee_debugging_challenge1_callout1: Usa quest'istruzione per far andare
+          l'ape all'indietro.
       courseD_collector_ramp8:
         courseD_collector_ramp8_1: Usa questo blocco per raccogliere un diamante.
       courseD_farmer_while7_2018:
@@ -715,6 +729,8 @@ it-IT:
       courseD_scrat_ramp7:
         courseD_maze_ramp6_1: Qualiasi codice inserisci qui sarà ripetuto quante volte
           gli dici di farlo, poi continua ad eseguire il resto del programma.
+      courseE_aboutme_2:
+        '': Clicca qui!
       courseE_artist_functions1:
         courseD_artist_functions1_1: Cominciamo usando questo blocco per creare il
           primo quadrato.

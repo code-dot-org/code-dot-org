@@ -601,6 +601,7 @@ ro:
             '"rotation"': rotație
             '"x"': poziţie orizontală
             '"y"': poziţie verticală
+            '"tint"': tentă
       Dancelab_setPropRandom:
         text: alege aleatoriu {SPRITE} {PROPERTY}
         options:
@@ -839,6 +840,8 @@ ro:
             '1': sunet mediu
             '2': sunet înalt
       Dancelab_whenSetup:
+        text: configurare
+      Dancelab_whenSetup2:
         text: configurare
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"

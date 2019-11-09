@@ -6,10 +6,9 @@ markdown <<MARKDOWN
 <img src="https://images.code.org/319df539d56b2795d659a56e9334a5fb-image-1434397946590.JPG" width="450px" style="border-radius: 10px; float: right; margin: 0 0 40px 40px;">
 
 ## Coding concepts: Events
-- Making a program interactive
-- Important in all CS Fundamentals courses (Courses A-F)
+- Make a program interactive
 
 ## Teaching practice: Debugging
-- Finding and fixing problems in an algorithm or program
+- Find and fix problems in an algorithm or program
 
 MARKDOWN
