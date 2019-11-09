@@ -352,10 +352,14 @@ function getSingleton() {
       import('aws-sdk/lib/core'),
       import('aws-sdk/clients/firehose'),
       import('aws-sdk/lib/config')
-    ]).then(
-      ([{default: AWS}, {default: Firehose}]) =>
-        new Promise(resolve => resolve(new FirehoseClient(AWS, Firehose)))
-    );
+    ])
+      .then(
+        ([{default: AWS}, {default: Firehose}]) =>
+          new Promise(resolve => resolve(new FirehoseClient(AWS, Firehose)))
+      )
+      .catch(() => {
+        promise = null;
+      });
   }
   return promise;
 }
