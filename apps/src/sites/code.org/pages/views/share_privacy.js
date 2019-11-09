@@ -4,6 +4,12 @@
 
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
+const LOCATION_TO_PDF_MAPPING = {
+  '/privacy/student-privacy': '/files/privacy-policy-csf.pdf',
+  '/privacy/student-privacy-csd': '/files/privacy-policy-csd.pdf',
+  '/privacy/student-privacy-csp': '/files/privacy-policy-csp.pdf'
+};
+
 $(document).ready(function() {
   $('#share_on_remind').click(function() {
     firehoseClient.putRecord({
@@ -26,26 +32,21 @@ $(document).ready(function() {
       event: 'printed'
     });
 
-    // Prevent repeatedly adding this iframe if button pressed repeatedly
-    if (!$('#iFramePdf').length) {
-      let pdfToPrintHash = {
-        '/privacy/student-privacy': '/files/privacy-policy-csf.pdf',
-        '/privacy/student-privacy-csd': '/files/privacy-policy-csd.pdf',
-        '/privacy/student-privacy-csp': '/files/privacy-policy-csp.pdf'
-      };
+    let printFrame = document.getElementById('iFramePdf');
+    if (!printFrame) {
+      const pdfToPrint = LOCATION_TO_PDF_MAPPING[window.location.pathname];
 
-      let pdfToPrint = pdfToPrintHash[window.location.pathname];
+      const iFramePdf = $(`
+        <iframe
+          id="iFramePdf"
+          src="${pdfToPrint}"
+        ></iframe>
+      `);
 
-      let iFramePdf = $(
-        '<iframe id="iFramePdf" src=' +
-          pdfToPrint +
-          ' style="display:none;"></iframe>'
-      );
       $('body').append(iFramePdf);
+      printFrame = iFramePdf[0];
     }
-
-    let getPrintFrame = document.getElementById('iFramePdf');
-    getPrintFrame.focus();
-    getPrintFrame.contentWindow.print();
+    printFrame.focus();
+    printFrame.contentWindow.print();
   });
 });
