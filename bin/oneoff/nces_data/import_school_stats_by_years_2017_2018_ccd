@@ -57,18 +57,15 @@ COMMUNITY_TYPE_MAP = {
 # @returns [String, nil] the sanitized version of the string, with newlines stripped and double
 #   quotations escaped. Returns nil on nil input
 def sanitize_string_for_db(unsanitized)
-  return nil if unsanitized.nil?
-  unsanitized.tr('="', '')
+  unsanitized&.tr('="', '')
 end
 
-# Context: used to be in "wide" format, switched to long.
-# Used table generator on website to get data I want.
-# However, this approach comes with a new set of problems.
-# Questions:
-# Want to check (per row) if race categories add up to total, and insert 0 instead of null if so
-# ="" appearing in a bunch of fields, so running through a function to sanitize but isn't working
-
-# Get school characteristics (grades served, whether it's a virtual school)
+# Context: data from NCES used to be in "wide" format (one row per school),
+# switched to long (one row per school-metric), which would break our import code:
+# https://nces.ed.gov/ccd/pubschuniv.asp
+# Downloaded data this year using their table generator here:
+# https://nces.ed.gov/ccd/elsi/tableGenerator.aspx
+# Required a bit of manual cleaning before importing (deleted top couple of rows that contained metadata about the file)
 AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/school_stats_201718.csv") do |filename|
   SchoolStatsByYear.transaction do
     SchoolStatsByYear.merge_from_csv(filename, {col_sep: ",", headers: true, quote_char: "\x00"}) do |row|
