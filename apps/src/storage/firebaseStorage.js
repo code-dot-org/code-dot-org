@@ -49,6 +49,17 @@ function getKeysRef() {
 }
 
 /**
+ * Deletes the entire channel in firebase.
+ * @param {function} onSuccess
+ * @param {function} onError
+ */
+FirebaseStorage.clearAllData = function(onSuccess, onError) {
+  getProjectDatabase()
+    .set(null)
+    .then(onSuccess, onError);
+};
+
+/**
  * Reads the value associated with the key, accessible to all users of the app.
  * @param {string} key The name of the key.
  * @param {function (Object)} onSuccess Function to call on success with the
