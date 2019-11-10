@@ -4,7 +4,7 @@ import {AppMode, Modes} from '../constants';
 const guides = [
   {
     id: 'fishvtrash-training-init',
-    text: 'Welcome to the tutorial!',
+    text: "Let's clean up the ocean!",
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Training},
     style: 'TopLeft',
     arrow: 'none'
@@ -138,7 +138,8 @@ const guides = [
     id: 'creaturesvtrash-training-init',
     text: 'Let’s train A.I. again!',
     when: {appMode: AppMode.CreaturesVTrash, currentMode: Modes.Training},
-    style: 'BottomMiddleButtons'
+    style: 'BottomMiddleButtons',
+    hideBackground: true
   },
   {
     id: 'creaturesvtrash-training-keeptraining',
