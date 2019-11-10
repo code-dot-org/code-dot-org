@@ -15,17 +15,6 @@ import Typist from 'react-typist';
 import {getCurrentGuide, dismissCurrentGuide} from './models/guide';
 
 const styles = {
-  header: {
-    position: 'absolute',
-    top: 10,
-    width: '100%',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    fontSize: 28,
-    lineHeight: '52px',
-    display: 'none'
-  },
   body: {
     position: 'relative',
     width: '100%',
@@ -165,24 +154,6 @@ const styles = {
     width: '65%',
     height: 38
   },
-  pondText: {
-    display: 'none',
-    position: 'absolute',
-    bottom: 10,
-    left: '50%',
-    transform: 'translateX(-50%)',
-    fontSize: 18,
-    lineHeight: '22px',
-    textAlign: 'center',
-    width: '45%',
-    backgroundColor: colors.transparentBlack,
-    padding: '1%',
-    borderRadius: 10,
-    color: colors.white
-  },
-  pondTextParagraph: {
-    marginBottom: 4
-  },
   pondFishDetails: {
     position: 'absolute',
     backgroundColor: colors.transparentWhite,
@@ -213,17 +184,6 @@ const styles = {
     borderRadius: 33,
     marginLeft: -18
   },
-  bubble: {
-    display: 'none',
-    position: 'absolute',
-    backgroundColor: colors.transparentBlack,
-    color: colors.white,
-    padding: '10px 20px',
-    borderRadius: 10,
-    top: 0,
-    width: 212,
-    textAlign: 'center'
-  },
   count: {
     position: 'absolute',
     top: '3%'
@@ -239,7 +199,6 @@ const styles = {
     backgroundColor: colors.black,
     color: colors.white,
     padding: 15,
-    color: 'white',
     textAlign: 'center',
     lineHeight: '140%'
   },
@@ -337,16 +296,6 @@ class Body extends React.Component {
         <Guide />
       </div>
     );
-  }
-}
-
-class Header extends React.Component {
-  static propTypes = {
-    children: PropTypes.node
-  };
-
-  render() {
-    return <div style={styles.header}>{this.props.children}</div>;
   }
 }
 
@@ -456,7 +405,6 @@ class Instructions extends React.Component {
 
     return (
       <Body>
-        <Header>{instructionsText[appModeVariant][currentPage].heading}</Header>
         <div style={styles.instructionsText}>
           {instructionsText[appModeVariant][currentPage].text.map(
             (instruction, index) => {
@@ -513,20 +461,6 @@ let Pill = class Pill extends React.Component {
 };
 Pill = Radium(Pill);
 
-let SpeechBubble = class SpeechBubble extends React.Component {
-  static propTypes = {
-    text: PropTypes.string.isRequired,
-    style: PropTypes.object
-  };
-
-  render() {
-    return (
-      <div style={[styles.bubble, this.props.style]}>{this.props.text}</div>
-    );
-  }
-};
-SpeechBubble = Radium(SpeechBubble);
-
 const wordSet = {
   short: {
     text: ['What type of fish do you want to train A.I. to detect?'],
@@ -582,7 +516,6 @@ class Words extends React.Component {
 
     return (
       <Body>
-        <Header>Choose Fish Type</Header>
         <Content>
           {wordSet[state.appMode].text && (
             <div style={styles.wordsText}>
@@ -607,23 +540,6 @@ class Words extends React.Component {
 }
 
 let Train = class Train extends React.Component {
-  renderSpeechBubble = state => {
-    const total = state.yesCount + state.noCount;
-    let text = '';
-
-    if (total >= 40) {
-      text = "Great work! You can continue when you're ready.";
-    } else if (total >= 5) {
-      text = 'Keep training!';
-    } else if (total === 0 && state.appMode === AppMode.CreaturesVTrash) {
-      text = 'Let’s train A.I. again!';
-    } else {
-      return null;
-    }
-
-    return <SpeechBubble text={text} style={{top: '70%', right: '5%'}} />;
-  };
-
   render() {
     const state = getState();
     const trainQuestionTextStyle = state.isRunning
@@ -635,10 +551,8 @@ let Train = class Train extends React.Component {
       state.appMode === AppMode.CreaturesVTrash ? 'No' : `Not ${state.word}`;
     return (
       <Body>
-        <Header>A.I. Training</Header>
         <div style={trainQuestionTextStyle}>{state.trainingQuestion}</div>
         <img style={styles.trainBot} src={aiBotClosed} />
-        {this.renderSpeechBubble(state)}
         <Pill
           text={state.noCount}
           icon={xIcon}
@@ -678,41 +592,11 @@ let Train = class Train extends React.Component {
 Train = Radium(Train);
 
 class Predict extends React.Component {
-  speechBubbleText = state => {
-    if (state.isRunning) {
-      return null;
-    }
-
-    if (state.appMode === AppMode.FishVTrash) {
-      return 'Now let’s see if A.I. knows what a fish looks like.';
-    } else if (state.appMode === AppMode.CreaturesVTrashDemo) {
-      if (state.isPaused) {
-        return 'There are lots of creatures in the sea who don’t look like fish. But that doesn’t mean they should be removed! A.I. only knows what we teach it!';
-      } else {
-        return 'A.I. has learned to remove objects it identifies as  “Not Fish”. What unintended consequences might this lead to?';
-      }
-    } else if (state.appMode === AppMode.CreaturesVTrash) {
-      return 'Now let’s see if A.I. does a better job separating what should be in the ocean and what shouldn’t.';
-    } else if (
-      state.appMode === AppMode.FishShort ||
-      state.appMode === AppMode.FishLong
-    ) {
-      return `Nice work! Your training data has programmed A.I. to recognize ${state.word.toLowerCase()} fish. Let’s run A.I.’s program and see how it works.`;
-    } else {
-      return null;
-    }
-  };
-
   render() {
     const state = getState();
-    const speechBubbleText = this.speechBubbleText(state);
 
     return (
       <Body>
-        <Header>A.I. Sorting</Header>
-        {speechBubbleText && (
-          <SpeechBubble text={speechBubbleText} style={styles.predictSpeech} />
-        )}
         {!state.isRunning && !state.showBiasText && (
           <Button
             style={styles.continueButton}
@@ -794,24 +678,6 @@ class Pond extends React.Component {
 
   render() {
     const state = getState();
-    let pondText = [];
-
-    if (
-      state.appMode === AppMode.FishVTrash ||
-      state.appMode === AppMode.CreaturesVTrash
-    ) {
-      pondText[0] = `Out of ${
-        state.fishData.length
-      } random objects, A.I. identified ${
-        state.totalPondFish
-      } that belong in water.`;
-    } else {
-      pondText[0] = `Out of ${state.fishData.length} objects, I identified ${
-        state.totalPondFish
-      } that are ${state.word.toUpperCase()}.`;
-    }
-    pondText[1] = 'How did A.I. do?';
-    pondText[2] = 'Choose to Train More or Continue.';
 
     const showFishDetails = !!state.pondClickedFish;
     let pondFishDetailsStyle;
@@ -847,20 +713,6 @@ class Pond extends React.Component {
 
     return (
       <Body onClick={this.onPondClick}>
-        <Header>A.I. Results</Header>
-        {state.canSeePondText && (
-          <div>
-            <div style={styles.pondText}>
-              {pondText.map((text, index) => {
-                return (
-                  <div key={index} style={styles.pondTextParagraph}>
-                    {text}
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        )}
         <img style={styles.pondBot} src={aiBotClosed} />
         {showFishDetails && (
           <div style={pondFishDetailsStyle}>{confidence}</div>
