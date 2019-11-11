@@ -62,7 +62,13 @@ const guides = [
         state.totalPondFish
       } that belong in water.`;
     },
-    when: {appMode: AppMode.FishVTrash, currentMode: Modes.Pond},
+    when: {
+      appMode: AppMode.FishVTrash,
+      currentMode: Modes.Pond,
+      fn: state => {
+        return state.fishData && state.totalPondFish !== null;
+      }
+    },
     style: 'BottomMiddle',
     arrow: 'none'
   },
@@ -176,7 +182,13 @@ const guides = [
         state.totalPondFish
       } that belong in water.`;
     },
-    when: {appMode: AppMode.CreaturesVTrash, currentMode: Modes.Pond},
+    when: {
+      appMode: AppMode.CreaturesVTrash,
+      currentMode: Modes.Pond,
+      fn: state => {
+        return state.fishData && state.totalPondFish !== null;
+      }
+    },
     style: 'BottomMiddle',
     arrow: 'none'
   },
@@ -213,7 +225,13 @@ const guides = [
         state.totalPondFish
       } that are ${state.word.toLowerCase()}.`;
     },
-    when: {appMode: AppMode.FishShort, currentMode: Modes.Pond},
+    when: {
+      appMode: AppMode.FishShort,
+      currentMode: Modes.Pond,
+      fn: state => {
+        return state.fishData && state.totalPondFish !== null;
+      }
+    },
     style: 'BottomMiddle',
     arrow: 'none'
   },
@@ -250,7 +268,13 @@ const guides = [
         state.totalPondFish
       } that are ${state.word.toLowerCase()}.`;
     },
-    when: {appMode: AppMode.FishLong, currentMode: Modes.Pond},
+    when: {
+      appMode: AppMode.FishLong,
+      currentMode: Modes.Pond,
+      fn: state => {
+        return state.fishData && state.totalPondFish !== null;
+      }
+    },
     style: 'BottomMiddle',
     arrow: 'none'
   },
