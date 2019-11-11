@@ -24,7 +24,6 @@ path /v3/config {
 // Don't allow reading /v3/channels, since that would expose the list of channels.
 path /v3/channels/{channelId} {
   read() { canAccessChannel(channelId) }
-  write() { canAccessChannel(channelId) }
 }
 
 path /v3/channels/shared {
