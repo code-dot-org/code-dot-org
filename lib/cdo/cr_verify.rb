@@ -22,10 +22,10 @@ PEGASUS_REPORTING_DB_READER = sequel_connect(
   query_timeout: MAX_EXECUTION_TIME_SEC
 )
 
-def compare_rows(row_cnt = nil)
+def compare_rows(columns, row_cnt = nil)
   # Connect to 2 tables
   query = <<-SQL.squish
-    select id, email, updated_at from contact_rollups #{row_cnt ? "limit #{row_cnt}" : ''} order by id
+    select #{columns.join(',')} from contact_rollups order by id #{row_cnt ? "limit #{row_cnt}" : ''}
   SQL
 
   reporting_iter = PEGASUS_REPORTING_DB_READER[query].stream.to_enum
@@ -40,12 +40,11 @@ def compare_rows(row_cnt = nil)
   # Compare id and email
   # TODO: write logs to file
   while reporting_row
-    reporting_values = reporting_row.slice(:id, :email).transform_values {|v| v.is_a?(String) ? v.downcase : v}
-    production_values = production_row.slice(:id, :email).transform_values {|v| v.is_a?(String) ? v.downcase : v}
+    reporting_values = reporting_row.slice(*columns).transform_values {|v| v.is_a?(String) ? v.downcase : v}
+    production_values = production_row.slice(*columns).transform_values {|v| v.is_a?(String) ? v.downcase : v}
     if reporting_values != production_values
       diff_cnt += 1
-      p "reporting_values = #{reporting_values} != production_values = #{production_values}"
-      return
+      p "Diff #{diff_cnt}: reporting_values = #{reporting_values} != production_values = #{production_values}"
     else
       same_cnt += 1
     end
@@ -68,8 +67,9 @@ rescue StandardError => error
 end
 
 def main
-  compare_rows(10)
-  # compare_rows()
+  compare_rows([:id], 10)
+  compare_rows([:id, :email], 10)
+  compare_rows([:id, :email])
 end
 
 main
