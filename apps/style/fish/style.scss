@@ -26,3 +26,49 @@ button:focus {
     font-size: 60%;
   }
 }
+
+@media screen and (max-height: 1350px) {
+  #container {
+    max-width: 2050px;
+  }
+}
+@media screen and (max-height: 1260px) {
+  #container {
+    max-width: 1890px;
+  }
+}
+@media screen and (max-height: 1170px) {
+  #container {
+    max-width: 1730px;
+  }
+}
+@media screen and (max-height: 1080px) {
+  #container {
+    max-width: 1570px;
+  }
+}
+@media screen and (max-height: 990px) {
+  #container {
+    max-width: 1410px;
+  }
+}
+@media screen and (max-height: 900px) {
+  #container {
+    max-width: 1250px;
+  }
+}
+@media screen and (max-height: 810px) {
+  #container {
+    max-width: 1090px;
+  }
+}
+@media screen and (max-height: 720px) {
+  #container {
+    max-width: 930px;
+  }
+}
+@media screen and (max-height: 630px) {
+  #container {
+    max-width: 770px;
+  }
+}

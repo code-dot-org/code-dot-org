@@ -12668,6 +12668,8 @@ en:
               name: Semester Hackathon Part 5
             Unit 5 Assessment:
               name: Unit 5 Assessment
+            Semester Exam:
+              name: Semester Exam
           title: CSP Unit 5 Pilot - Lists, Loops, and Traversals
           description_audience: ''
           description_short: ''
@@ -13527,6 +13529,8 @@ en:
               name: Reviewing reflections
             Reviewing your reflections:
               name: Reviewing your reflections
+            End of Course projects:
+              name: End of Course projects
         dance-extras-2019:
           title: Keep On Dancing
           description: Go beyond the first hour with extended project ideas.
@@ -13549,6 +13553,12 @@ en:
               name: Security Risks Part 1
             Security Risks Part 2:
               name: Security Risks Part 2
+            Data Policies and Privacy:
+              name: Data Policies and Privacy
+            The Value of Privacy:
+              name: The Value of Privacy
+            'Project: Innovation Simulation Part 3':
+              name: 'Project: Innovation Simulation Part 3'
           title: Cybersecurity and Global Impacts
           description_audience: ''
           description_short: ''

@@ -40,7 +40,10 @@
   },
   "https://studio.code.org/s/dance/stage/1/puzzle/5": {
     "short_instructions": "Use another new block to make the dancer change moves every 2 measures.",
-    "long_instructions": "Use another new block to make the dancer change moves **every 2 measures**!\n\n-   Choosing `(Next)`, `(Previous)`, or `(Random)` tells the dancer to perform a different move every time the code is run."
+    "long_instructions": "Use another new block to make the dancer change moves **every 2 measures**!\n\n-   Choosing `(Next)`, `(Previous)`, or `(Random)` tells the dancer to perform a different move every time the code is run.",
+    "authored_hints": {
+      "validation": "**How do I pass this level?**\n\n-   Your dancer needs to cycle through at least 4 different dance moves before the level ends.\n\n_This level ends after 12 measures._"
+    }
   },
   "https://studio.code.org/s/dance/stage/1/puzzle/6": {
     "short_instructions": "Create a backup dancer called `backup_dancer1` to dance with the cat.",

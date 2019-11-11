@@ -81,7 +81,7 @@ class DataVisualizer extends React.Component {
         }
         break;
       case 'Cross Tab':
-        // No GoogleChart for Cross Tab
+        // Cross Tab is rendered by React, so no Google Chart is required.
         break;
       case 'Scatter Plot':
         if (this.state.xValues && this.state.yValues) {
