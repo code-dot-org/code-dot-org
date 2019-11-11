@@ -423,7 +423,8 @@ const fishComponents = {
     glasses_1: {
       src: glasses_1_image,
       knnData: [841, 1.8402625820568927],
-      type: FishBodyPart.EYE
+      type: FishBodyPart.EYE,
+      exclusions: [AppMode.FishVTrash, AppMode.CreaturesVTrash]
     },
     small_1: {
       src: small_1_image,
