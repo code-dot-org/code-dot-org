@@ -53,20 +53,11 @@ const styles = {
     backgroundColor: colors.blue,
     color: colors.white
   },
-  words2Columns: {
-    columns: '2 auto',
-    marginLeft: '32%',
-    marginRight: '22%'
-  },
   button2col: {
     width: '20%',
-    marginTop: '2%',
-    marginRight: '6%'
-  },
-  words3Columns: {
-    columns: '3 auto',
-    marginLeft: '6%',
-    //marginRight: '6%'
+    marginLeft: '14%',
+    marginRight: '14%',
+    marginTop: '2%'
   },
   button3col: {
     width: '20%',
@@ -521,33 +512,33 @@ const wordSet = {
   short: {
     text: ['What type of fish do you want to train A.I. to detect?'],
     choices: [['Blue', 'Green', 'Red'], ['Triangle', 'Round', 'Square']],
-    buttonStyle: styles.button2col,
-    divStyle: styles.words2Columns
+    style: styles.button2col
   },
   long: {
     text: [
       'What happens if the words are more subjective?',
       'Choose a new word to teach A.I.'
     ],
-    choices: [[
-      'Friendly',
-      'Funny',
-      'Bizarre',
-      'Shy',
-      'Glitchy',
-      'Delicious',
-      'Fun',
-      'Angry',
-      'Fast',
-      'Smart',
-      'Brave',
-      'Scary',
-      'Wild',
-      'Fierce',
-      'Tropical'
-    ]],
-    buttonStyle: styles.button3col,
-    divStyle: styles.words3Columns
+    choices: [
+      [
+        'Friendly',
+        'Funny',
+        'Bizarre',
+        'Shy',
+        'Glitchy',
+        'Delicious',
+        'Fun',
+        'Angry',
+        'Fast',
+        'Smart',
+        'Brave',
+        'Scary',
+        'Wild',
+        'Fierce',
+        'Tropical'
+      ]
+    ],
+    style: styles.button3col
   }
 };
 
@@ -559,7 +550,21 @@ class Words extends React.Component {
     const appMode = getState().appMode;
     const appModeWordSet = wordSet[appMode].choices;
     let choices = [];
-    appModeWordSet.forEach(col => choices = choices.concat(_.shuffle(col)));
+    let maxSize = 0;
+    for (var i = 0; i < appModeWordSet.length; ++i) {
+      appModeWordSet[i] = _.shuffle(appModeWordSet[i]);
+      if (appModeWordSet[i].length > maxSize) {
+        maxSize = appModeWordSet[i].length;
+      }
+    }
+    for (i = 0; i < maxSize; ++i) {
+      appModeWordSet.forEach(col => {
+        if (col[i]) {
+          choices.push(col[i]);
+        }
+      });
+    }
+    
     this.state = {choices};
   }
 
@@ -585,17 +590,15 @@ class Words extends React.Component {
               ))}
             </div>
           )}
-          <div style={wordSet[state.appMode].divStyle}>
           {this.state.choices.map((item, itemIndex) => (
             <Button
               key={itemIndex}
-              style={wordSet[state.appMode].buttonStyle}
+              style={wordSet[state.appMode].style}
               onClick={() => this.onChangeWord(itemIndex)}
             >
               {item}
             </Button>
           ))}
-          </div>
         </Content>
       </Body>
     );
