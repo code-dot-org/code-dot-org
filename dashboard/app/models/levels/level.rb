@@ -376,6 +376,23 @@ class Level < ActiveRecord::Base
     update_attribute(:ideal_level_source_id, ideal_level_source.id) if ideal_level_source
   end
 
+  # Ensure Level uses script-cache for relevant queries.
+  def self.find(id)
+    find_by(id: id)
+  end
+
+  # Ensure Level uses script-cache for relevant queries.
+  def self.find_by(opts)
+    other = opts.dup
+    id = other.delete(:id)&.to_i
+    name = other.delete(:name)
+    if (id || name) && other.empty?
+      Script.cache_find_level(id || name)
+    else
+      super(opts)
+    end
+  end
+
   def self.find_by_key(key)
     # this is the key used in the script files, as a way to uniquely
     # identify a level that can be defined by the .level file or in a

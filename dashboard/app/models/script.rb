@@ -405,7 +405,7 @@ class Script < ActiveRecord::Base
     # the db. Note the field trickery is to allow passing an ID as a string,
     # which some tests rely on (unsure about non-tests).
     field = level_identifier.to_i.to_s == level_identifier.to_s ? :id : :name
-    level = Level.find_by!(field => level_identifier)
+    level = Level.where(field => level_identifier).take!
     # Cache the level by ID and by name, unless it wasn't found.
     @@level_cache[level.id] = level if level && should_cache?
     @@level_cache[level.name] = level if level && should_cache?

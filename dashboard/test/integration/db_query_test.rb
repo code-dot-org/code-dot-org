@@ -89,4 +89,17 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       assert_response :success
     end
   end
+
+  test 'get_rubric' do
+    script = Script.hoc_2014_script
+    stage = script.stages.first
+    level = stage.script_levels.first.levels.first
+
+    assert_cached_queries(0) do
+      get get_rubric_level_path(
+        id: level.id
+      )
+      assert_response :success
+    end
+  end
 end
