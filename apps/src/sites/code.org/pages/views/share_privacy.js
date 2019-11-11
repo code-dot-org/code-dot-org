@@ -40,6 +40,7 @@ $(document).ready(function() {
         <iframe
           id="iFramePdf"
           src="${pdfToPrint}"
+          style="display:none;"
         ></iframe>
       `);
 
