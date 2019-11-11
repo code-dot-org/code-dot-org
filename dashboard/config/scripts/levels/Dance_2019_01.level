@@ -38,14 +38,14 @@
     "block_pool": "Dancelab",
     "preload_asset_list": [
       "https://curriculum.code.org/images/DancePartyLoading.gif",
-      "https://curriculum.code.org/images/sprites/dance_20181127/cat_08.png",
-      "https://curriculum.code.org/images/sprites/dance_20181127/cat_09.png",
-      "https://curriculum.code.org/images/sprites/dance_20181127/cat_10.png",
-      "https://curriculum.code.org/images/sprites/dance_20181127/cat_11.png",
-      "https://curriculum.code.org/images/sprites/dance_20181120/sloth_00.png",
-      "https://curriculum.code.org/images/sprites/dance_20181120/sloth_01.png",
-      "https://curriculum.code.org/images/sprites/dance_20181120/sloth_02.png",
-      "https://curriculum.code.org/images/sprites/dance_20181120/sloth_03.png"
+      "https://curriculum.code.org/images/sprites/dance_20191106/cat_08.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/cat_09.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/cat_10.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/cat_11.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/sloth_40.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/sloth_41.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/sloth_42.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/sloth_43.png"
     ],
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"dance_callout_01\",\r\n  \"callout_text\": \"Choose the type of dancer here.\",\r\n  \"element_id\": \".svgFlyoutGroup [block-id=\\\"1\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "parent_level_id": 14643,
