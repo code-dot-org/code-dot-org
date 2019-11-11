@@ -437,103 +437,86 @@ const fishComponents = {
     mouth1: {
       src: mouth1_image,
       knnData: [2, 4.454545454545454, MouthExpression.NEUTRAL],
-      tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth10: {
       src: mouth10_image,
       knnData: [0, 1.125, MouthExpression.NEUTRAL],
-      tinted: true,
       type: FishBodyPart.MOUTH
     },
     mouth11: {
       src: mouth11_image,
       knnData: [4, 1.2857142857142858, MouthExpression.FROWN],
-      tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth12: {
       src: mouth12_image,
       knnData: [4, 2.0555555555555554, MouthExpression.FROWN],
-      tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth13: {
       src: mouth13_image,
       knnData: [10, 2.3333333333333335, MouthExpression.NEUTRAL],
-      tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth14: {
       src: mouth14_image,
       knnData: [1, 2, MouthExpression.NEUTRAL],
-      tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth15: {
       src: mouth15_image,
       knnData: [1, 1.263157894736842, MouthExpression.SMILE],
-      tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth16: {
       src: mouth16_image,
       knnData: [0, 0.6666666666666666, MouthExpression.NEUTRAL],
-      tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth17: {
       src: mouth17_image,
       knnData: [0, 2.25, MouthExpression.NEUTRAL],
-      tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth2: {
       src: mouth2_image,
       knnData: [3, 1.3428571428571427, MouthExpression.NEUTRAL],
-      tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth3: {
       src: mouth3_image,
       knnData: [7, 1.2727272727272727, MouthExpression.NEUTRAL],
-      tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth4: {
       src: mouth4_image,
       knnData: [0, 1.8928571428571428, MouthExpression.SMILE],
-      tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth5: {
       src: mouth5_image,
       knnData: [0, 1.8666666666666667, MouthExpression.SMILE],
-      tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth6: {
       src: mouth6_image,
       knnData: [0, 2.4, MouthExpression.FROWN],
-      tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth7: {
       src: mouth7_image,
       knnData: [9, 1.75, MouthExpression.SMILE],
-      tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth8: {
       src: mouth8_image,
       knnData: [4, 1.875, MouthExpression.SMILE],
-      tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth9: {
       src: mouth9_image,
       knnData: [1, 1.7058823529411764, MouthExpression.FROWN],
-      tinted: false,
       type: FishBodyPart.MOUTH
     }
   },
