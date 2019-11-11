@@ -25,7 +25,7 @@ PEGASUS_REPORTING_DB_READER = sequel_connect(
 def compare_rows(row_cnt = nil)
   # Connect to 2 tables
   query = <<-SQL.squish
-    select id, email, updated_at from contact_rollups #{row_cnt ? "limit #{row_cnt}" : ''}
+    select id, email, updated_at from contact_rollups #{row_cnt ? "limit #{row_cnt}" : ''} order by id
   SQL
 
   reporting_iter = PEGASUS_REPORTING_DB_READER[query].stream.to_enum
@@ -40,14 +40,14 @@ def compare_rows(row_cnt = nil)
   # Compare id and email
   # TODO: write logs to file
   while reporting_row
-    reporting_values = reporting_row.slice(:id, :email)
-    production_values = production_row.slice(:id, :email)
+    reporting_values = reporting_row.slice(:id, :email).transform_values {|v| v.is_a?(String) ? v.downcase : v}
+    production_values = production_row.slice(:id, :email).transform_values {|v| v.is_a?(String) ? v.downcase : v}
     if reporting_values != production_values
       diff_cnt += 1
-      # p "reporting_values = #{reporting_values} != production_values = #{production_values}"
+      p "reporting_values = #{reporting_values} != production_values = #{production_values}"
+      return
     else
       same_cnt += 1
-      # p "reporting_values == production_values == #{reporting_values}"
     end
 
     reporting_row = grab_next(reporting_iter)
