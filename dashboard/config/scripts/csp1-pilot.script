@@ -51,6 +51,7 @@ level 'U1L9 Pixelation - Make the Letter A_2019', progression: 'Pixelation Widge
 level 'U1L9 Pixelation Widget Fix bit offset', progression: 'Pixelation Widget: B&W'
 level 'U1L9 Pixelation Widget challenge a', progression: 'Pixelation Widget: B&W'
 level 'U1L9 Pixelation Widget challenge B', progression: 'Pixelation Widget: B&W'
+level 'U1L9 Pixelation Widget challenge C', progression: 'Pixelation Widget: B&W'
 level 'U1L9 CFU pixel data', progression: 'Check For Understanding', assessment: true
 level 'U1L9 Multiple Choice Digital Analog', progression: 'Check For Understanding', assessment: true
 level 'U1L9 CFU Sampling', progression: 'Check For Understanding', assessment: true
