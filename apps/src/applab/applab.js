@@ -606,16 +606,15 @@ Applab.init = function(config) {
   // initializes, the error will be printed only to the browser debug console.
   let dataLoadedPromise = Promise.resolve();
   if (level.dataTables) {
-    dataLoadedPromise = Applab.storage.populateTable(level.dataTables, false); // overwrite = false
+    dataLoadedPromise = Applab.storage.populateTable(level.dataTables);
     dataLoadedPromise.catch(outputError);
   }
   if (level.dataProperties) {
     Applab.storage.populateKeyValue(
       level.dataProperties,
-      false,
       () => {},
       outputError
-    ); // overwrite = false
+    );
   }
 
   Applab.handleVersionHistory = studioApp().getVersionHistoryHandler(config);
