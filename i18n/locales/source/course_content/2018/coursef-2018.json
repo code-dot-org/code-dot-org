@@ -1168,7 +1168,8 @@
               "correct": false,
               "feedback": "The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers."
             }
-          ]
+          ],
+          "markdown": "Ah!  The use of `for` loops makes this puzzle a lot easier!\n\n\n"
         }
       }
     ]
@@ -1380,7 +1381,8 @@
               "correct": false,
               "feedback": "Incorrect. Each time through the `for` loop, the artist draws a longer line that is also thicker."
             }
-          ]
+          ],
+          "markdown": "We used the counter from our `for` loop to change the width of the brush on this drawing.  \n\n\n"
         }
       }
     ]
