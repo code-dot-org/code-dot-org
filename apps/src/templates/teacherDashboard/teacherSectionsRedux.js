@@ -782,7 +782,7 @@ export default function teacherSections(state = initialState, action) {
       firehoseClient.putRecord({
         study: 'assignment',
         study_group: 'v0',
-        event: newSection ? 'create_section' : 'edit_section',
+        event: newSection ? 'create_section' : 'edit_section_details',
         data_json: JSON.stringify(assignmentData)
       });
     }
