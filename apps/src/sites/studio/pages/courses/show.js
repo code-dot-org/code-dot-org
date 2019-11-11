@@ -6,7 +6,8 @@ import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {getStore} from '@cdo/apps/code-studio/redux';
 import {
   setSections,
-  selectSection
+  selectSection,
+  setPageName
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import clientState from '@cdo/apps/code-studio/clientState';
 import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenStageRedux';
@@ -35,6 +36,8 @@ function showCourseOverview() {
   if (courseSummary.has_verified_resources) {
     store.dispatch(setVerifiedResources());
   }
+
+  store.dispatch(setPageName('course_overview'));
 
   store.dispatch(setUserSignedIn(getUserSignedInFromCookieAndDom()));
 
