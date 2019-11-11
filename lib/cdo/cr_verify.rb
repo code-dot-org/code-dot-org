@@ -90,8 +90,18 @@ end
 def main
   # compare_rows([:id], 10)
   # compare_rows([:id, :email], 10)
-  compare_rows([:id])
+  # compare_rows([:id])
   # compare_rows([:id, :email])
+
+  columns_to_compare = [
+    :email, :opted_out, :dashboard_user_id, :name, :street_address, :city, :state, :country,
+    :postal_code, :district_name, :district_city, :district_state, :district_zip, :school_name,
+    :roles, :courses_facilitated, :professional_learning_enrolled, :professional_learning_attended,
+    :hoc_organizer_years, :grades_taught, :ages_taught, :email_malformed, :forms_submitted,
+    :form_roles, :opt_in
+  ]
+
+  compare_rows(columns_to_compare)
 end
 
 main
