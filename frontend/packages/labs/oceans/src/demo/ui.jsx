@@ -214,9 +214,19 @@ const styles = {
     position: 'absolute',
     backgroundColor: colors.black,
     color: colors.white,
-    padding: 15,
     textAlign: 'center',
     lineHeight: '140%'
+  },
+  guideTypingText: {
+    position: 'absolute',
+    padding: 15
+  },
+  guideFinalText: {
+    padding: 15,
+    color: colors.white,
+    textAlign: 'center',
+    lineHeight: '140%',
+    opacity: 0
   },
   guideBackground: {
     backgroundColor: 'rgba(0,0,0,0.3)',
@@ -254,7 +264,7 @@ const styles = {
     left: '5%'
   },
   guideBottomMiddle: {
-    bottom: '10%',
+    bottom: 10,
     left: '50%',
     transform: 'translateX(-50%)'
   },
@@ -803,16 +813,23 @@ class Guide extends React.Component {
             <div
               style={{...styles.guide, ...styles[`guide${currentGuide.style}`]}}
             >
-              <Typist
-                avgTypingDelay={35}
-                stdTypingDelay={15}
-                cursor={{show: false}}
-                onTypingDone={this.onShowing}
-              >
+              <div style={styles.guideTypingText}>
+                <Typist
+                  avgTypingDelay={35}
+                  stdTypingDelay={15}
+                  cursor={{show: false}}
+                  onTypingDone={this.onShowing}
+                >
+                  {currentGuide.textFn
+                    ? currentGuide.textFn(getState())
+                    : currentGuide.text}
+                </Typist>
+              </div>
+              <div style={styles.guideFinalText}>
                 {currentGuide.textFn
                   ? currentGuide.textFn(getState())
                   : currentGuide.text}
-              </Typist>
+              </div>
               {getState().guideShowing && currentGuide.arrow !== 'none' && (
                 <div>
                   <div style={styles.guideArrow}> </div>
