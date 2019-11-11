@@ -35,16 +35,25 @@ def compare_rows(columns, row_cnt = nil)
 
   same_cnt = 0
   diff_cnt = 0
+  not_there_cnt = 0
 
   # Iterate through 2 tables, row by row
   # Compare id and email
   # TODO: write logs to file
   while reporting_row
+    while reporting_row[:id] < production_row[:id]
+      reporting_row = grab_next(reporting_iter)
+      not_there_cnt += 1
+    end
+    break unless reporting_row
+
     reporting_values = reporting_row.slice(*columns).transform_values {|v| v.is_a?(String) ? v.downcase : v}
     production_values = production_row.slice(*columns).transform_values {|v| v.is_a?(String) ? v.downcase : v}
+
     if reporting_values != production_values
       diff_cnt += 1
       p "Diff #{diff_cnt}: reporting_values = #{reporting_values} != production_values = #{production_values}"
+      break if diff_cnt > 10
     else
       same_cnt += 1
     end
@@ -53,8 +62,8 @@ def compare_rows(columns, row_cnt = nil)
     production_row = grab_next(production_iter)
   end
 
-  p "Done! Finished comparing #{same_cnt + diff_cnt} rows in reporting db and production db"
-  p "Same rows = #{same_cnt}. Diff rows = #{diff_cnt}."
+  p "Done! Finished comparing #{same_cnt + diff_cnt + not_there_cnt} rows in reporting db and production db"
+  p "Same rows = #{same_cnt}. Diff rows = #{diff_cnt}. Rows in reporting but not in production = #{not_there_cnt}."
 end
 
 def grab_next(s)
@@ -67,9 +76,10 @@ rescue StandardError => error
 end
 
 def main
-  compare_rows([:id], 10)
-  compare_rows([:id, :email], 10)
-  compare_rows([:id, :email])
+  # compare_rows([:id], 10)
+  # compare_rows([:id, :email], 10)
+  compare_rows([:id])
+  # compare_rows([:id, :email])
 end
 
 main
