@@ -1055,7 +1055,8 @@
               "correct": false,
               "feedback": "The code will have the harvester repeatedly make a stairstep pattern and pick as much corn or lettuce as she comes across. She will not pick the pumpkin."
             }
-          ]
+          ],
+          "markdown": "The sprouts in this puzzle will be either corn or lettuce.\n<br/>\n"
         }
       }
     ]
@@ -1213,7 +1214,8 @@
               "correct": true,
               "feedback": "Correct!"
             }
-          ]
+          ],
+          "markdown": "<table>\n<tr>\n\n<td style=\"padding: 0 30px 0 0;\"> <b>A)</b> <img src=\"https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png\" width=\"100px\"/></td>\n\n<td style=\"padding: 0 20px 0 0;\"> <b>B)</b> <img src=\"https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png\" width=\"100px\"/></td>\n\n<td style=\"padding: 0 20px 0 0;\"> <b>C)</b> <img src=\"https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png\" width=\"100px\"/></td>\n\n\n<td style=\"padding: 0 20px 0 0;\"> <b>D)</b> <img src=\"https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png\" width=\"100px\"/></td>\n</tr></table>\n<br/>\n\n"
         }
       }
     ]

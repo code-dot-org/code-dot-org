@@ -20,6 +20,9 @@ level 'U10L3 CFU Why Collect PII', progression: 'Check For Understanding', asses
 stage 'The Value of Privacy'
 level 'CSP U10L4 SFLP 20-21', progression: 'Lesson Overview'
 
+stage 'Project: Innovation Simulation Part 3'
+level 'CSP U10L5 SFLP 20-21', progression: 'Lesson Overview'
+
 stage 'Security Risks Part 1'
 level 'CSP U10L6 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP 20-21 Keylogging', progression: 'Keylogging'
