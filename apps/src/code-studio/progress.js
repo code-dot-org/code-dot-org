@@ -26,7 +26,10 @@ import {
   queryUserProgress as reduxQueryUserProgress
 } from './progressRedux';
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
-import {setSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {
+  setSections,
+  setPageName
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {queryLockStatus, renderTeacherPanel} from './teacherPanelHelpers';
 
 var progress = module.exports;
@@ -157,6 +160,8 @@ progress.renderCourseProgress = function(scriptData) {
   if (scriptData.sections) {
     store.dispatch(setSections(scriptData.sections));
   }
+
+  store.dispatch(setPageName('script_overview'));
 
   const mountPoint = document.createElement('div');
   $('.user-stats-block').prepend(mountPoint);
