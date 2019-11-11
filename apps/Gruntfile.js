@@ -590,6 +590,7 @@ describe('entry tests', () => {
     'levels/editors/_dsl': './src/sites/studio/pages/levels/editors/_dsl.js',
     'levels/editors/_gamelab':
       './src/sites/studio/pages/levels/editors/_gamelab.js',
+    'levels/editors/_grid': './src/sites/studio/pages/levels/editors/_grid.js',
     'levels/editors/_pixelation':
       './src/sites/studio/pages/levels/editors/_pixelation.js',
     'levels/editors/_studio':
