@@ -38,6 +38,7 @@ def compare_rows(row_cnt = nil)
 
   # Iterate through 2 tables, row by row
   # Compare id and email
+  # TODO: write logs to file
   while reporting_row
     reporting_values = reporting_row.slice(:id, :email)
     production_values = production_row.slice(:id, :email)
