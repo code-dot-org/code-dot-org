@@ -34,18 +34,18 @@ export const getState = function() {
   return state;
 };
 
-export const setState = function(newState) {
-  return setStateInternal({...state, ...newState});
+export const setState = function(newState, options = null) {
+  return setStateInternal({...state, ...newState}, options);
 };
 
 export const setInitialState = function(newState) {
   return setStateInternal({...initialState, ...newState});
 };
 
-function setStateInternal(newState) {
+function setStateInternal(newState, options = null) {
   state = newState;
 
-  if (setStateCallback) {
+  if (setStateCallback && !(options && options.skipCallback)) {
     setStateCallback();
   }
 

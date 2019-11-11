@@ -260,7 +260,7 @@ const guides = [
     when: {appMode: AppMode.FishLong, currentMode: Modes.Pond},
     style: 'BottomMiddle',
     arrow: 'none'
-  },
+  }
 ];
 
 export function getCurrentGuide() {
@@ -290,7 +290,9 @@ export function getCurrentGuide() {
 export function dismissCurrentGuide() {
   const currentGuide = getCurrentGuide();
 
-  if (currentGuide) {
+  // If we have a current guide, and it's actually showing (rather than still
+  // typing).
+  if (currentGuide && getState().guideShowing) {
     const state = getState();
     const currentGuideDismissals = state.guideDismissals;
     let newGuideDismissals = [...currentGuideDismissals];
