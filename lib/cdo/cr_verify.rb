@@ -63,7 +63,7 @@ def grab_next(s)
 rescue StopIteration
   nil
 rescue StandardError => error
-  log "Error iterating over stream #{s} - #{error}"
+  p "Error iterating over stream #{s} - #{error}"
   raise error
 end
 
