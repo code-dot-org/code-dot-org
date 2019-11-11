@@ -903,10 +903,10 @@
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/@code-dot-org/craft/-/craft-0.2.2.tgz#4b117337a5a601613f2d38514aa50ba972362939"
 
-"@code-dot-org/dance-party@0.0.45":
-  version "0.0.45"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/dance-party/-/dance-party-0.0.45.tgz#8a3a59721cb6b565b722d2ceb35a73554d33982d"
-  integrity sha512-Ngp0gEHSsdmhUaRoSd2IZkWF2VJirLhwvwow2Mjrk4Y/f3JcUTSJz2gOu/93u5GCRBrmDRCCDknvRFyhvS8ksQ==
+"@code-dot-org/dance-party@0.0.47":
+  version "0.0.47"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/dance-party/-/dance-party-0.0.47.tgz#e37b22a10629cb13a50a9f1dee590b1275cefd88"
+  integrity sha512-f+OECyrMJB21o+ZSL+IgTpen7TnfmTMdBrtgRKxu6NjWUFwHefFaeDCQCKIYxBv1lAxyQuAf585AQEuuIL5ssQ==
   optionalDependencies:
     canvas "^1.6.13"
 
