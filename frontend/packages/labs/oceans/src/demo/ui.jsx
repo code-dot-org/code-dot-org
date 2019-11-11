@@ -53,10 +53,20 @@ const styles = {
     backgroundColor: colors.blue,
     color: colors.white
   },
-  button1col: {
+  words2Columns: {
+    columns: '2 auto',
+    marginLeft: '32%',
+    marginRight: '22%'
+  },
+  button2col: {
     width: '20%',
-    display: 'block',
-    margin: '2% auto'
+    marginTop: '2%',
+    marginRight: '6%'
+  },
+  words3Columns: {
+    columns: '3 auto',
+    marginLeft: '6%',
+    //marginRight: '6%'
   },
   button3col: {
     width: '20%',
@@ -510,15 +520,16 @@ Pill = Radium(Pill);
 const wordSet = {
   short: {
     text: ['What type of fish do you want to train A.I. to detect?'],
-    choices: ['Blue', 'Green', 'Red', 'Round', 'Square'],
-    style: styles.button1col
+    choices: [['Blue', 'Green', 'Red'], ['Triangle', 'Round', 'Square']],
+    buttonStyle: styles.button2col,
+    divStyle: styles.words2Columns
   },
   long: {
     text: [
       'What happens if the words are more subjective?',
       'Choose a new word to teach A.I.'
     ],
-    choices: [
+    choices: [[
       'Friendly',
       'Funny',
       'Bizarre',
@@ -534,8 +545,9 @@ const wordSet = {
       'Wild',
       'Fierce',
       'Tropical'
-    ],
-    style: styles.button3col
+    ]],
+    buttonStyle: styles.button3col,
+    divStyle: styles.words3Columns
   }
 };
 
@@ -544,7 +556,10 @@ class Words extends React.Component {
     super(props);
 
     // Randomize word choices and set in state.
-    const choices = _.shuffle(wordSet[getState().appMode].choices);
+    const appMode = getState().appMode;
+    const appModeWordSet = wordSet[appMode].choices;
+    let choices = [];
+    appModeWordSet.forEach(col => choices = choices.concat(_.shuffle(col)));
     this.state = {choices};
   }
 
@@ -570,15 +585,17 @@ class Words extends React.Component {
               ))}
             </div>
           )}
+          <div style={wordSet[state.appMode].divStyle}>
           {this.state.choices.map((item, itemIndex) => (
             <Button
               key={itemIndex}
-              style={wordSet[state.appMode].style}
+              style={wordSet[state.appMode].buttonStyle}
               onClick={() => this.onChangeWord(itemIndex)}
             >
               {item}
             </Button>
           ))}
+          </div>
         </Content>
       </Body>
     );
