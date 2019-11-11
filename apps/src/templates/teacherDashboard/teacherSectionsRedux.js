@@ -442,7 +442,8 @@ function newSectionData(id, courseId, scriptId, loginType) {
     code: '',
     courseId: courseId || null,
     scriptId: scriptId || null,
-    hidden: false
+    hidden: false,
+    isAssigned: undefined
   };
 }
 
@@ -594,7 +595,7 @@ export default function teacherSections(state = initialState, action) {
 
     sections.forEach(section => {
       // SET_SECTIONS is called in two different contexts. On some pages it is called
-      // in a way that only provides name/id per section, in other places (homepage)
+      // in a way that only provides name/id per section, in other places (homepage, script overview)
       // it provides more detailed information. There are currently no pages where
       // it should be called in both manners, but we want to make sure that if it
       // were it will throw an error rather than destroy data.
@@ -981,7 +982,8 @@ export const sectionFromServerSection = serverSection => ({
   scriptId: serverSection.script
     ? serverSection.script.id
     : serverSection.script_id || null,
-  hidden: serverSection.hidden
+  hidden: serverSection.hidden,
+  isAssigned: serverSection.isAssigned
 });
 
 /**
@@ -1096,7 +1098,12 @@ export function sectionsNameAndId(state) {
   }));
 }
 
-export function sectionsForDropdown(state, scriptId, courseId) {
+export function sectionsForDropdown(
+  state,
+  scriptId,
+  courseId,
+  onCourseOverview
+) {
   return state.sectionIds.map(id => ({
     id: parseInt(id, 10),
     name: state.sections[id].name,
@@ -1104,7 +1111,9 @@ export function sectionsForDropdown(state, scriptId, courseId) {
     courseId: state.sections[id].courseId,
     isAssigned:
       (scriptId !== null && state.sections[id].scriptId === scriptId) ||
-      (courseId !== null && state.sections[id].courseId === courseId)
+      (courseId !== null &&
+        state.sections[id].courseId === courseId &&
+        onCourseOverview)
   }));
 }
 

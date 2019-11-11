@@ -586,6 +586,7 @@ sk:
             '"rotation"': otočenie
             '"x"': horizontálna pozícia
             '"y"': vertikálna pozícia
+            '"tint"': sfarbenie
       Dancelab_setPropRandom:
         text: nastav náhodne {SPRITE} {PROPERTY}
         options:
@@ -804,6 +805,8 @@ sk:
             '1': stredy
             '2': výšky
       Dancelab_whenSetup:
+        text: nastavenie
+      Dancelab_whenSetup2:
         text: nastavenie
       gamelab_changePropBy:
         text: zmeň {SPRITE} {PROPERTY} o {VAL}

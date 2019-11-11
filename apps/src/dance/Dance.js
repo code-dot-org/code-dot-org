@@ -183,7 +183,9 @@ Dance.prototype.awaitTimingMetrics = function() {
 
 Dance.prototype.initSongs = async function(config) {
   let is2019Script =
-    config.scriptName === 'dance-2019' && experiments.isEnabled('newSongs');
+    (config.scriptName === 'dance-2019' ||
+      config.scriptName === 'dance-extras-2019') &&
+    experiments.isEnabled('newSongs');
   const songManifest = await getSongManifest(
     config.useRestrictedSongs,
     is2019Script
@@ -399,7 +401,7 @@ Dance.prototype.afterInject_ = function() {
     container: 'divDance',
     i18n: danceMsg,
     resourceLoader: new ResourceLoader(
-      'https://curriculum.code.org/images/sprites/dance_20181127/'
+      'https://curriculum.code.org/images/sprites/dance_20191106/'
     )
   });
 

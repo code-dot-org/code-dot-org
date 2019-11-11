@@ -393,6 +393,12 @@ hu-HU:
         ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
         ! A kék és vörös korall segítségével juss el a kincset tartalmazó **ládához**
         ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
+      Dance_2019_05: |-
+        _Most elkezdünk növekedni!_
+
+        Adj hozzá egy <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> blokkot a munkaterületedhez. Állítsd be, hogy a táncos 6 ütem után új mozdulatot kezdjen.
+      Dance_2019_10: Lássuk, te hogy táncolsz! Hozd létre a saját táncodat, és oszd
+        meg az ismerőseiddel.
       Dance_Party_01: |-
         _Induljon a buli és a tánc!_
 
@@ -471,6 +477,14 @@ hu-HU:
         -   Adj hozzá további billentyűket a táncok irányítására
         -   Érd el, hogy a billentyűlenyomásokra a háttértáncosok is reagáljanak
         -   A láthatóságuk beállításával 4 ütemenként váltogasd a táncosokat
+      Dance_Party_extras_battle_2019: |-
+        # Tánccsapatok
+
+        Íme egy két csapat közti táncverseny. A nyílbillentyűkkel lehet irányítani az egyik, a „w, a, s, d” billentyűkkel a másik táncost. Tartsatok táncversenyt egy ismerősöddel, majd próbáljátok meg továbbfejleszteni ezt a táncversenyt.
+
+        -   Adj hozzá további billentyűket a táncok irányítására
+        -   Érd el, hogy a billentyűlenyomásokra a háttértáncosok is reagáljanak
+        -   A láthatóságuk beállításával 4 ütemenként váltogasd a táncosokat
       Dance_Party_extras_every_beat: |-
         # Negyedek
 
@@ -493,11 +507,23 @@ hu-HU:
         # Basszus, közép- és magashangok
 
         Ebben a táncban a „csúcs” események olyankor váltanak ki kódrészleteket, amikor a zene bizonyos részei nagy a hangerővel szólalnak meg. Próbáld ki különböző dalokkal, és figyeld meg, hogyan befolyásolják a táncot.
+      Dance_Party_extras_on_beat_2019: |-
+        # Basszus, közép- és magashangok
+
+        Ebben a táncban a „csúcs” események olyankor váltanak ki kódrészleteket, amikor a zene bizonyos részei nagy a hangerővel szólalnak meg. Próbáld ki különböző dalokkal, és figyeld meg, hogyan befolyásolják a táncot.
       Dance_Party_extras_speed: |-
         # Gyorsítás, lassítás
 
         Ez az utolsó tánc a „sebesség beállítása” blokkal szabályozza, milyen gyorsan mozogjanak az egyes táncosok. Kísérletezésképpen a dal különböző részein adj meg eltérő sebességeket. Nyugodtan bütykölgesd tovább ezt a táncot, vagy térj vissza bármelyik korábbihoz, és alakítsd őket még menőbbé.
       Dance_Party_extras_visible: |-
+        # Hová tűntek?
+
+        Ez a tánc két különböző tánccsoportot jelenít meg és tüntet el. Nézd meg, és egészítsd ki a saját ötleteiddel.
+
+        -   Adj hozzá még egy tánccsapatot
+        -   A nyílbillentyűkkel jelenítsd meg és tüntesd el a táncosokat
+        -   Tüntesd el az összes táncost, és válts át egy izgalmas háttéreffektre
+      Dance_Party_extras_visible_2019: |-
         # Hová tűntek?
 
         Ez a tánc két különböző tánccsoportot jelenít meg és tüntet el. Nézd meg, és egészítsd ki a saját ötleteiddel.

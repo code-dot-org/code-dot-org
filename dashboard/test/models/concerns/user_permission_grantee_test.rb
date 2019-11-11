@@ -196,7 +196,7 @@ class UserPermissionGranteeTest < ActiveSupport::TestCase
 
   test 'admin_changed? equates nil and false' do
     # admins must be teacher
-    teacher = create :teacher
+    teacher = create :admin
 
     # Each row is a test consisting of 3 values in order:
     #   from - the initial state of the admin attribute

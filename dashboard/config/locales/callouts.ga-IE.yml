@@ -218,6 +218,16 @@ ga-IE:
         dance_callout_11_b: Bloc nua!
       CourseD_Dance_Party_11_5:
         dance_party_11_5_groups: Gheobhaidh tú na blocanna "gach lacha" anseo
+      Dance_2019_01:
+        dance_callout_01: Cuir an bloc seo le do chlár!
+      Dance_2019_04:
+        dance_callout_02: Cuir an bloc seo le do chlár!
+      Dance_2019_06:
+        dance_party_11_5_groups: Bloc nua!
+      Dance_2019_07:
+        setprop_hint: Bloc nua!
+      Dance_2019_09:
+        new_block_1: Bloc nua!
       Dance_Party_01:
         dance_callout_01: Cuir an bloc seo le do chlár!
       Dance_Party_02:
