@@ -22,10 +22,10 @@ PEGASUS_REPORTING_DB_READER = sequel_connect(
   query_timeout: MAX_EXECUTION_TIME_SEC
 )
 
-def compare_rows(row_cnt)
+def compare_rows(row_cnt = nil)
   # Connect to 2 tables
   query = <<-SQL.squish
-    select id, email, updated_at from contact_rollups limit #{row_cnt};
+    select id, email, updated_at from contact_rollups #{row_cnt ? "limit #{row_cnt}" : ''}
   SQL
 
   reporting_iter = PEGASUS_REPORTING_DB_READER[query].stream.to_enum
@@ -39,8 +39,8 @@ def compare_rows(row_cnt)
   # Iterate through 2 tables, row by row
   # Compare id and email
   while reporting_row
-    reporting_values = reporting_row.slice(:id, :email, :updated_at)
-    production_values = production_row.slice(:id, :email, :updated_at)
+    reporting_values = reporting_row.slice(:id, :email)
+    production_values = production_row.slice(:id, :email)
     if reporting_values != production_values
       diff_cnt += 1
       # p "reporting_values = #{reporting_values} != production_values = #{production_values}"
@@ -53,21 +53,22 @@ def compare_rows(row_cnt)
     production_row = grab_next(production_iter)
   end
 
-  p "Done! Finished comparing #{row_cnt} rows in reporting db and production db"
+  p "Done! Finished comparing #{same_cnt + diff_cnt} rows in reporting db and production db"
   p "Same rows = #{same_cnt}. Diff rows = #{diff_cnt}."
 end
 
-def main
-  compare_rows(10)
-end
-
-def self.grab_next(s)
+def grab_next(s)
   s.next
 rescue StopIteration
   nil
 rescue StandardError => error
   log "Error iterating over stream #{s} - #{error}"
   raise error
+end
+
+def main
+  compare_rows(10)
+  # compare_rows()
 end
 
 main
