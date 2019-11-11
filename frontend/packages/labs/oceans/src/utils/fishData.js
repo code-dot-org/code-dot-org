@@ -1,5 +1,5 @@
 // TODO add this back in when we know which components are in which app mode
-//import {AppMode} from '../demo/constants';
+import {AppMode} from '../demo/constants';
 
 import pectoral_fin_1_image from '../../public/images/fish/pectoralFin/pectoral_fin_1.png';
 import pectoral_fin_10_image from '../../public/images/fish/pectoralFin/pectoral_fin_10.png';
@@ -905,15 +905,18 @@ const fishComponents = {
     },
     orange: {
       rgb: [248, 151, 36],
-      knnData: [248, 151, 36]
+      knnData: [248, 151, 36],
+      exclusions: [AppMode.FishShort]
     },
     purple: {
       rgb: [187, 115, 188],
-      knnData: [187, 115, 188]
+      knnData: [187, 115, 188],
+      exclusions: [AppMode.FishShort]
     },
     pink: {
       rgb: [238, 142, 180],
-      knnData: [238, 142, 180]
+      knnData: [238, 142, 180],
+      exclusions: [AppMode.FishShort]
     }
   }
 };
