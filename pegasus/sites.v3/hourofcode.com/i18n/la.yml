@@ -14,17 +14,17 @@ la:
   hoc2019_header: Aprende programación. Cambia el mundo.
   hoc2019_header_line1_mobile: Aprende programación.
   hoc2019_header_line2_mobile: Cambia el mundo.
-  social_hoc2019_every_sudent: 'Cada estudiantes tiene el potencial de cambiar el
-    mundo. Ayúdelos a comenzar. #CSforGood'
-  social_hoc2019_learn_computer_science: 'Aprender informática. Cambia el mundo. #CSforGood
-    #HourOfCode'
-  social_hoc_is_coming: La Hora del Código esta llegando!
-  social_hoc2019_hoc_is_about_csforgood: 'EL #HourOfCode se trada de #CSforGood. Aprender
-    informática. Cambia el mundo.'
-  social_hoc2019_coming_dates: La Hora del Código llegará el 9-15 de diciembre del
-    2019. La informática es fundamental para que cada estudiante aprenda.
+  social_hoc2019_every_sudent: 'Cada estudiante tiene el potencial de cambiar el mundo.
+    Ayúdalo a comenzar. #CSforGood'
+  social_hoc2019_learn_computer_science: 'Aprende ciencias de la computación. Cambia
+    el mundo. #CSforGood #HourOfCode'
+  social_hoc_is_coming: "¡La Hora del Código está llegando!"
+  social_hoc2019_hoc_is_about_csforgood: "#HourOfCode se trata de #CSforGood. Aprende
+    ciencias de la computación. Cambia el mundo."
+  social_hoc2019_coming_dates: La Hora del Código tendrá lugar del 9 al 15 de diciembre
+    de 2019. Es fundamental que cada estudiante aprenda ciencias de la computación.
   social_hoc2019_dance: "¡Con la presencia de Katy Perry, Jonas Brothers, Lil Nas
-    X, Panic at the Disco, y muchos más!"
+    X, Panic at the Disco y muchos más!"
   codeorg_homepage_hoc2018_curriculum: Avanza con los <a href="%{studio_url}/courses"
     class="hoc2018-curriculum-link">cursos de Code.org</a>
   codeorg_homepage_hoc2018_dance_heading: Crea tu propia <span class="highlight-word">Fiesta&nbsp;de
@@ -409,8 +409,8 @@ la:
   twitter_default_text: 'Este año estoy participando en #HourOfCode, ¿Y usted? @codeorg'
   twitter_donor_text: 'Este año #HourOfCode es sobre la creatividad. ¡Yo voy a participar!
     ¿Y tú? (Gracias %{random_donor} por apoyar a @codeorg)'
-  twitter_donor_text_2019: 'This year''s #HourOfCode is about #CSforGood. I’m in!
-    Are you? (Thanks %{random_donor} for supporting @codeorg)'
+  twitter_donor_text_2019: 'Este año #HourOfCode se trata de #CSforGood. ¡Yo voy a
+    participar! ¿Y tú? (Gracias %{random_donor} por apoyar a @codeorg)'
   hoc_faq_title: Preguntas frecuentes
   hoc_faq_what_is_hoc_q: "¿Qué es la Hora del Código?"
   hoc_faq_what_is_hoc_a: La Hora del Código comenzó como una hora de introducción
@@ -795,7 +795,7 @@ la:
   tutorial_buildpong_name: Construye Pong con AI
   tutorial_tynkerdrones_name: Programa Drones y Robots
   tutorial_carla_name: Programando con Carla
-  tutorial_zulama_name: Zulama MakeQuest Video Game Activity
+  tutorial_zulama_name: Actividad de videojuego MakeQuest de Zulama
   tutorial_capost_name: Crea una postal digital con HTML y CSS
   tutorial_marco_name: 'Corre Marco! '
   tutorial_codestersflappybike_name: Bicicleta Flappy
@@ -1456,8 +1456,8 @@ la:
     dron.
   tutorial_carla_shortdescription: "¡Aprende código programando un robot virtual parlante
     llamado Carla!"
-  tutorial_zulama_shortdescription: Go on a MakeQuest! Modify code to beat our game,
-    then build your own!
+  tutorial_zulama_shortdescription: "¡Emprende un MakeQuest! Modifica el código para
+    vencer a nuestro juego, ¡y luego crea el tuyo!"
   tutorial_capost_shortdescription: Usa el código para construir una tarjeta genial
     de vacaciones o de cumpleaños.
   tutorial_marco_shortdescription: Un juego envolvente para guiar a Marco con un lenguaje
@@ -3001,11 +3001,11 @@ la:
     para la práctica, además de sugerencias y comentarios específicos.
 
 '
-  tutorial_zulama_longdescription: In this activity you will learn to edit JavaScript
-    code through a playful action game and master computer science concepts like variables
-    and functions. Create your own game in the Sandbox by remixing and expanding on
-    existing game code. Then publish and share your game with friends and family.
-    A scripted lesson guide is included for teachers.
+  tutorial_zulama_longdescription: En esta actividad, aprendes a editar el código
+    JavaScript a través de un divertido juego de acción y a dominar conceptos de ciencias
+    de la computación como variables y funciones. Vuelve a mezclar y ampliar el código
+    actual para crear tu propio juego en Sandbox. Luego, publica y comparte tu juego
+    con amigos y familiares. Se incluye una guía de lecciones para los docentes.
   tutorial_capost_longdescription: Empezar a aprender HTML y CSS es fácil y divertido
     con esta postal digital. Aprende a agregar encabezados, párrafos, imágenes y enlaces
     para crear una tarjeta navideña o una celebración de cumpleaños para compartir
@@ -8651,17 +8651,17 @@ la:
   tutorial_duckrace_string_detail_programming_languages: Bloques
   tutorial_allcancodeapps_string_detail_programming_languages: Bloques
   tutorial_n2y_string_detail_programming_languages: ''
-  tutorial_scratchimagine_name: Imagine a World
-  tutorial_codesterspsa_name: 'Codesters: Code Your Own PSA'
-  tutorial_googlehero_name: Code Your Hero
-  tutorial_codestersbball_name: 'Codesters: Basketball'
-  tutorial_scratchcartoon_name: Code a Cartoon
-  tutorial_codemonkeyjr_name: 'CodeMonkey Jr.: Pre-coding for Preschoolers'
-  tutorial_bananatales_name: 'Banana Tales: Python Coding Game'
-  tutorial_scratchtales_name: Talking Tales
-  tutorial_msemoji_name: Quick Draw Emoji with Machine Learning
+  tutorial_scratchimagine_name: Imagina un mundo
+  tutorial_codesterspsa_name: 'Programadores: programen su propio PSA'
+  tutorial_googlehero_name: Programa a tu héroe
+  tutorial_codestersbball_name: 'Programadores: baloncesto'
+  tutorial_scratchcartoon_name: Programa una caricatura
+  tutorial_codemonkeyjr_name: 'CodeMonkey Jr.: preprogramación para preescolares'
+  tutorial_bananatales_name: 'Banana Tales: un juego de programación de Python'
+  tutorial_scratchtales_name: Cuentos de conversación
+  tutorial_msemoji_name: Dibujo rápido de emojis con aprendizaje automático
   tutorial_cacolor_name: Professor Photon's Color Conundrum
-  tutorial_kodablebeach_name: Beach Cleanup with Kodable
+  tutorial_kodablebeach_name: Limpieza de playa con Kodable
   tutorial_tynkeren_name: Affordable and Clean Energy
   tutorial_tynkerjavapro_name: Responsible Consumption and Production (JavaScript)
   tutorial_grasshopperhack_name: Hack a Game
@@ -8669,7 +8669,7 @@ la:
   tutorial_nclabdata_name: Data Power!
   tutorial_grasshopperphoto_name: Filter a Photo
   tutorial_tynkerpyland_name: Life on Land (Python)
-  tutorial_codeitimages_name: Code it! - Images and Animations with Processing
+  tutorial_codeitimages_name: Code it! - Images and Animations
   tutorial_hyperpadenemy_name: Create a Smarter Enemy AI in hyperPad
   tutorial_tynkerpro_name: Responsible Consumption and Production
   tutorial_trashtag_name: 'Eco Warriors #Trashtag'
