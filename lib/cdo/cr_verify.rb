@@ -36,6 +36,7 @@ def compare_rows(columns, row_cnt = nil)
   same_cnt = 0
   diff_cnt = 0
   not_there_cnt = 0
+  diff_col_cnt = {}
 
   # Iterate through 2 tables, row by row
   # Compare id and email
@@ -50,10 +51,17 @@ def compare_rows(columns, row_cnt = nil)
     reporting_values = reporting_row.slice(*columns).transform_values {|v| v.is_a?(String) ? v.downcase : v}
     production_values = production_row.slice(*columns).transform_values {|v| v.is_a?(String) ? v.downcase : v}
 
-    if reporting_values != production_values
+    diff = false
+    columns.each do |col|
+      next if reporting_values[col] == production_values[col]
+      diff_col_cnt[col] ||= 0
+      diff_col_cnt[col] += 1
+      diff = true
+    end
+
+    if diff
       diff_cnt += 1
-      p "Diff #{diff_cnt}: reporting_values = #{reporting_values} != production_values = #{production_values}"
-      break if diff_cnt > 10
+      # p "Diff #{diff_cnt}: reporting_values = #{reporting_values} != production_values = #{production_values}"
     else
       same_cnt += 1
     end
@@ -64,6 +72,10 @@ def compare_rows(columns, row_cnt = nil)
 
   p "Done! Finished comparing #{same_cnt + diff_cnt + not_there_cnt} rows in reporting db and production db"
   p "Same rows = #{same_cnt}. Diff rows = #{diff_cnt}. Rows in reporting but not in production = #{not_there_cnt}."
+  p "Column diff distribution:"
+  columns.each do |col|
+    puts "\t#{col}: #{diff_col_cnt[col]}"
+  end
 end
 
 def grab_next(s)
