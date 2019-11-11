@@ -435,7 +435,7 @@ const drawPondFishImages = () => {
       h: constants.fishCanvasHeight / 2,
       confidence: fish.result
     });
-    setState({pondFishBounds: fishBounds});
+    setState({pondFishBounds: fishBounds}, {skipCallback: true});
   });
 };
 

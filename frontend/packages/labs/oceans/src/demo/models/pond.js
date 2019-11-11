@@ -45,7 +45,7 @@ const arrangeFish = fishes => {
     const x = randomInt(xBounds[side].minX, xBounds[side].maxX);
 
     // Don't put fish at the very bottom of the pond because of UI.
-    const bottomAreaHeight = 160;
+    const bottomAreaHeight = 80;
     const y = randomInt(
       0,
       constants.canvasHeight - constants.fishCanvasHeight / 2 - bottomAreaHeight

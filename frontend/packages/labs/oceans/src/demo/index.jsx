@@ -22,7 +22,7 @@ function initDemoPage() {
 
 function onContinue() {
   const nextRadioButton = $(`#${currentAppMode}`).next();
-  if (nextRadioButton) {
+  if (nextRadioButton.length > 0) {
     nextRadioButton.prop('checked', true);
     onLevelChange({
       target: {
