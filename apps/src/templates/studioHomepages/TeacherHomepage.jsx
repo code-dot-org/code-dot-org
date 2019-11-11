@@ -171,7 +171,7 @@ export default class TeacherHomepage extends Component {
       locale
     } = this.props;
 
-    // Hide the special announcement for now.
+    // Show the special announcement for Hour of Code 2019.
     const showSpecialAnnouncement = true;
 
     // Hide the regular announcement/notification for now.
