@@ -885,7 +885,7 @@ const fishComponents = {
       type: FishBodyPart.TAIL
     }
   },
-  // COLOR KNN DATA: [...bodyRgb]
+  // COLOR KNN DATA: [red, green, blue]
   colors: {
     yellow: {
       rgb: [255, 203, 72],
