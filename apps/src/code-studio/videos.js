@@ -15,11 +15,21 @@ videos.createVideoWithFallback = function(
   parentElement,
   options,
   width,
-  height
+  height,
+  fullWidth,
+  roundedCorners
 ) {
   upgradeInsecureOptions(options);
   var video = createVideo(options);
-  video.width(width).height(height);
+  if (fullWidth) {
+    video.addClass('video-player-full-width');
+    parentElement.addClass('video-content-full-width');
+  } else {
+    video.width(width).height(height);
+  }
+  if (roundedCorners) {
+    video.addClass('video-player-rounded-corners');
+  }
   if (parentElement) {
     parentElement.append(video);
   }
