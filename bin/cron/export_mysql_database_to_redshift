@@ -48,6 +48,7 @@ def execute_replication_task(replication_task_arn)
   start_task_response = dms_client.start_replication_task(
     {
       replication_task_arn: replication_task_arn,
+      # TODO: (suresh) This argument is incorrect after the Tasks have been started once.  Start Type : START_REPLICATION, valid only for tasks running for the first time (Aws::DatabaseMigrationService::Errors::InvalidParameterCombinationException)
       start_replication_task_type: "start-replication"
     }
   )
