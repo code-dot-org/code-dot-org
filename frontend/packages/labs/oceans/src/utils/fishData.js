@@ -1,4 +1,3 @@
-// TODO add this back in when we know which components are in which app mode
 import {AppMode} from '../demo/constants';
 
 import pectoral_fin_1_image from '../../public/images/fish/pectoralFin/pectoral_fin_1.png';
