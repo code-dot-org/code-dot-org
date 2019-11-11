@@ -6,7 +6,8 @@ import {
   bodyAnchorFromType,
   colorForFishPart,
   randomInt,
-  clamp
+  clamp,
+  generateColorPalette
 } from './helpers';
 import {trashImagePaths, seaCreatureImagePaths} from '../utils/imagePaths';
 
@@ -42,7 +43,7 @@ export const loadAllFishPartImages = () => {
 
   let fishPartImagesToLoad = [];
   Object.keys(fishData)
-    .filter(partName => partName !== 'colorPalettes')
+    .filter(partName => partName !== 'colors')
     .forEach((partName, partIndex) => {
       Object.keys(fishData[partName]).forEach(variationName => {
         const partData = {
@@ -225,9 +226,8 @@ export class FishOceanObject extends OceanObject {
       this.tail = tails[Math.floor(Math.random() * tails.length)];
     }
     if (!this.colorPalette) {
-      const colorPalettes = Object.values(this.componentOptions.colorPalettes);
-      this.colorPalette =
-        colorPalettes[Math.floor(Math.random() * colorPalettes.length)];
+      const colors = Object.values(this.componentOptions.colors);
+      this.colorPalette = generateColorPalette(colors);
     }
     this.knnData = [
       ...this.body.knnData,
@@ -275,10 +275,10 @@ export class FishOceanObject extends OceanObject {
     const xPos = bodyAnchor[0] + anchor[0];
     const yPos = bodyAnchor[1] + anchor[1];
     if (part.type === FishBodyPart.PECTORAL_FIN_BACK) {
-          intermediateCtx.translate(xPos+img.width,yPos);
+      intermediateCtx.translate(xPos + img.width, yPos);
       intermediateCtx.scale(-1, 1);
-      intermediateCtx.drawImage(img, 0,0);
-      intermediateCtx.setTransform(1,0,0,1,0,0);
+      intermediateCtx.drawImage(img, 0, 0);
+      intermediateCtx.setTransform(1, 0, 0, 1, 0, 0);
     } else {
       intermediateCtx.drawImage(img, xPos, yPos);
     }

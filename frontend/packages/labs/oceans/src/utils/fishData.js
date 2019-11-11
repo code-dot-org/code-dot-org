@@ -437,103 +437,86 @@ const fishComponents = {
     mouth1: {
       src: mouth1_image,
       knnData: [2, 4.454545454545454, MouthExpression.NEUTRAL],
-      tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth10: {
       src: mouth10_image,
       knnData: [0, 1.125, MouthExpression.NEUTRAL],
-      tinted: true,
       type: FishBodyPart.MOUTH
     },
     mouth11: {
       src: mouth11_image,
       knnData: [4, 1.2857142857142858, MouthExpression.FROWN],
-      tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth12: {
       src: mouth12_image,
       knnData: [4, 2.0555555555555554, MouthExpression.FROWN],
-      tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth13: {
       src: mouth13_image,
       knnData: [10, 2.3333333333333335, MouthExpression.NEUTRAL],
-      tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth14: {
       src: mouth14_image,
       knnData: [1, 2, MouthExpression.NEUTRAL],
-      tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth15: {
       src: mouth15_image,
       knnData: [1, 1.263157894736842, MouthExpression.SMILE],
-      tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth16: {
       src: mouth16_image,
       knnData: [0, 0.6666666666666666, MouthExpression.NEUTRAL],
-      tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth17: {
       src: mouth17_image,
       knnData: [0, 2.25, MouthExpression.NEUTRAL],
-      tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth2: {
       src: mouth2_image,
       knnData: [3, 1.3428571428571427, MouthExpression.NEUTRAL],
-      tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth3: {
       src: mouth3_image,
       knnData: [7, 1.2727272727272727, MouthExpression.NEUTRAL],
-      tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth4: {
       src: mouth4_image,
       knnData: [0, 1.8928571428571428, MouthExpression.SMILE],
-      tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth5: {
       src: mouth5_image,
       knnData: [0, 1.8666666666666667, MouthExpression.SMILE],
-      tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth6: {
       src: mouth6_image,
       knnData: [0, 2.4, MouthExpression.FROWN],
-      tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth7: {
       src: mouth7_image,
       knnData: [9, 1.75, MouthExpression.SMILE],
-      tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth8: {
       src: mouth8_image,
       knnData: [4, 1.875, MouthExpression.SMILE],
-      tinted: false,
       type: FishBodyPart.MOUTH
     },
     mouth9: {
       src: mouth9_image,
       knnData: [1, 1.7058823529411764, MouthExpression.FROWN],
-      tinted: false,
       type: FishBodyPart.MOUTH
     }
   },
@@ -902,56 +885,35 @@ const fishComponents = {
       type: FishBodyPart.TAIL
     }
   },
-  // COLOR PALETTE KNN DATA: [...bodyRgb, ...finRgb]
-  colorPalettes: {
-    // Blue, peach, pink
-    palette1: {
-      bodyRgb: [126, 205, 202],
-      finRgb: [248, 192, 157],
-      mouthRgb: [221, 148, 193],
-      knnData: [126, 205, 202]
+  // COLOR KNN DATA: [red, green, blue]
+  colors: {
+    yellow: {
+      rgb: [255, 203, 72],
+      knnData: [255, 203, 72]
     },
-    // orange
-    palette2: {
-      bodyRgb: [253, 192, 77],
-      finRgb: [235, 120, 50],
-      mouthRgb: [235, 120, 50],
-      knnData: [253, 192, 77]
+    green: {
+      rgb: [143, 194, 63],
+      knnData: [143, 194, 63]
     },
-    // red
-    palette3: {
-      bodyRgb: [164, 3, 31],
-      finRgb: [253, 217, 136],
-      mouthRgb: [253, 217, 136],
-      knnData: [164, 3, 31]
+    blue: {
+      rgb: [94, 121, 188],
+      knnData: [94, 121, 188]
     },
-    // green
-    palette4: {
-      bodyRgb: [72, 139, 73],
-      finRgb: [200, 220, 92],
-      mouthRgb: [200, 220, 92],
-      knnData: [72, 139, 73]
-    },
-    // light + dark lime green
-    palette5: {
-      bodyRgb: [201, 219, 83],
-      finRgb: [143, 194, 63],
-      mouthRgb: [143, 194, 63],
-      knnData: [201, 219, 83]
-    },
-    // red + navy blue
-    palette6: {
-      bodyRgb: [227, 72, 44],
-      finRgb: [15, 36, 55],
-      mouthRgb: [15, 36, 55],
+    red: {
+      rgb: [227, 72, 44],
       knnData: [227, 72, 44]
     },
-    // purple + pink
-    palette7: {
-      bodyRgb: [94, 121, 188],
-      finRgb: [221, 82, 124],
-      mouthRgb: [221, 82, 124],
-      knnData: [94, 121, 188]
+    orange: {
+      rgb: [248, 151, 36],
+      knnData: [248, 151, 36]
+    },
+    purple: {
+      rgb: [187, 115, 188],
+      knnData: [187, 115, 188]
+    },
+    pink: {
+      rgb: [238, 142, 180],
+      knnData: [238, 142, 180]
     }
   }
 };

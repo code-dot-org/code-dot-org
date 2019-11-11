@@ -5,7 +5,7 @@ import {
 } from '../demo/OceanObject';
 import {getState} from '../demo/state';
 import {fishData} from './fishData';
-import {filterFishComponents} from '../demo/helpers';
+import {filterFishComponents, generateColorPalette} from '../demo/helpers';
 import _ from 'lodash';
 
 /*
@@ -40,18 +40,16 @@ export const generateOcean = (
   ) {
     possibleObjects.push(SeaCreatureOceanObject);
   }
+
   const possibleFishComponents = filterFishComponents(
     fishData,
     getState().appMode
   );
-  let bodies = Object.values(possibleFishComponents.bodies);
-  bodies = _.shuffle(bodies);
-  let eyes = Object.values(possibleFishComponents.eyes);
-  eyes = _.shuffle(eyes);
-  let mouths = Object.values(possibleFishComponents.mouths);
-  mouths = _.shuffle(mouths);
-  let colorPalettes = Object.values(possibleFishComponents.colorPalettes);
-  colorPalettes = _.shuffle(colorPalettes);
+  let bodies = _.shuffle(Object.values(possibleFishComponents.bodies));
+  let eyes = _.shuffle(Object.values(possibleFishComponents.eyes));
+  let mouths = _.shuffle(Object.values(possibleFishComponents.mouths));
+  let colors = _.shuffle(Object.values(possibleFishComponents.colors));
+
   for (var i = idStart; i < numFish + idStart; ++i) {
     const object = new possibleObjects[i % possibleObjects.length](
       i,
@@ -63,8 +61,10 @@ export const generateOcean = (
       object.body = bodies[i % bodies.length];
       object.eye = eyes[i % eyes.length];
       object.mouth = mouths[i % mouths.length];
-      object.colorPalette = colorPalettes[i % colorPalettes.length];
+      const bodyIdx = i % colors.length;
+      object.colorPalette = generateColorPalette(colors, bodyIdx);
     }
+
     if (i % bodies.length === bodies.length - 1) {
       bodies = _.shuffle(bodies);
     }
@@ -74,8 +74,8 @@ export const generateOcean = (
     if (i % mouths.length === mouths.length - 1) {
       mouths = _.shuffle(mouths);
     }
-    if (i % colorPalettes.length === colorPalettes.length - 1) {
-      colorPalettes = _.shuffle(colorPalettes);
+    if (i % colors.length === colors.length - 1) {
+      colors = _.shuffle(colors);
     }
 
     object.randomize();

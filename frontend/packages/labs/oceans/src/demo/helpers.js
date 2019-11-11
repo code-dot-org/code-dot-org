@@ -43,11 +43,6 @@ export const bodyAnchorFromType = (body, type) => {
 
 export const colorForFishPart = (palette, part) => {
   switch (part.type) {
-    case FishBodyPart.MOUTH:
-      // If the mouth should be tinted, return the mouth
-      // color. Otherwise, return null so that it is
-      // not tinted.
-      return part.tinted ? palette.mouthRgb : null;
     case FishBodyPart.DORSAL_FIN:
     case FishBodyPart.PECTORAL_FIN_FRONT:
     case FishBodyPart.PECTORAL_FIN_BACK:
@@ -115,7 +110,7 @@ export const getAppMode = state => {
   if (state.appMode) {
     appModeBase = _.last(state.appMode.toLowerCase().split('-'));
 
-    // If the mode is "fishy-instrutions" then we extract "fishy" as the
+    // If the mode is "fishy-instructions" then we extract "fishy" as the
     // appModeVariant.
     if (appModeBase === 'instructions') {
       appModeVariant = state.appMode.toLowerCase().split('-')[0];
@@ -123,4 +118,22 @@ export const getAppMode = state => {
   }
 
   return [appModeBase, appModeVariant];
+};
+
+// Given an array of colors and an optional bodyIndex, returns an object
+// that represents a color palette.
+export const generateColorPalette = (colors, bodyIndex = null) => {
+  if (!bodyIndex) {
+    bodyIndex = randomInt(0, colors.length - 1);
+  }
+
+  const bodyColor = colors[bodyIndex];
+  colors = colors.filter((_, index) => index !== bodyIndex);
+  const finIndex = randomInt(0, colors.length - 1);
+
+  return {
+    bodyRgb: bodyColor.rgb,
+    finRgb: colors[finIndex].rgb,
+    knnData: bodyColor.knnData
+  };
 };
