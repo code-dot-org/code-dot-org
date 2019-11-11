@@ -601,6 +601,7 @@ pl:
             '"rotation"': obrót
             '"x"': pozycja pozioma
             '"y"': pozycja pionowa
+            '"tint"': odcień
       Dancelab_setPropRandom:
         text: losuj {SPRITE} {PROPERTY}
         options:
@@ -836,6 +837,8 @@ pl:
             '1': średni ton
             '2': wysoki ton
       Dancelab_whenSetup:
+        text: układ
+      Dancelab_whenSetup2:
         text: układ
       Dancelab_whenSetupSong:
         text: 'ustaw {SONG} '

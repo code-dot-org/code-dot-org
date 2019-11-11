@@ -594,6 +594,7 @@ he:
             '"rotation"': סיבוב
             '"x"': מיקום אופקי
             '"y"': מיקום אנכי
+            '"tint"': גוון
       Dancelab_setPropRandom:
         text: קבע באקראי את {PROPERTY} של {SPRITE}
         options:
@@ -829,6 +830,8 @@ he:
             '1': אמצע
             '2': טְרֶבֶּל
       Dancelab_whenSetup:
+        text: הגדרה
+      Dancelab_whenSetup2:
         text: הגדרה
       gamelab_addBehaviorSimple:
         text: דמות {SPRITE} מתחילה {BEHAVIOR}

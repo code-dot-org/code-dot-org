@@ -1,5 +1,9 @@
 /** @file JavaScript run only on the applab level edit page. */
 import $ from 'jquery';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import getScriptData from '@cdo/apps/util/getScriptData';
+import datasets from '@cdo/apps/storage/dataBrowser/datasetManifest.json';
 
 $(document).ready(function() {
   const makerBlocks = {
@@ -58,4 +62,75 @@ $(document).ready(function() {
       editor.getDoc().setValue(JSON.stringify(functionsWithMaker, null, ' '));
     }
   });
+
+  const data = getScriptData('applabOptions');
+  const tableNames = datasets.tables.map(table => table.name);
+  class DataLibrary extends React.Component {
+    state = {
+      value: data.data_library_tables ? data.data_library_tables.split(',') : []
+    };
+
+    handleChange = event => {
+      let options = event.target.options;
+      let value = [];
+      for (var i = 0; i < options.length; i++) {
+        if (options[i].selected) {
+          value.push(options[i].value);
+        }
+      }
+      this.setValue(value);
+    };
+
+    selectAll = event => {
+      event.preventDefault();
+      this.setValue(tableNames);
+    };
+
+    clearAll = event => {
+      event.preventDefault();
+      this.setValue([]);
+    };
+
+    setValue = value => {
+      this.setState({value: value});
+      $('#level_data_library_tables').val(value);
+    };
+
+    render() {
+      return (
+        <div>
+          <div>(shift-click or cmd-click to select multiple)</div>
+          <div>
+            <a href="#" onClick={this.selectAll}>
+              Select All
+            </a>
+            <span> | </span>
+            <a href="#" onClick={this.clearAll}>
+              Select None
+            </a>
+          </div>
+          <select
+            value={this.state.value}
+            multiple={true}
+            onChange={this.handleChange}
+          >
+            {tableNames.map(name => {
+              return (
+                <option key={name} value={name}>
+                  {name}
+                </option>
+              );
+            })}
+          </select>
+        </div>
+      );
+    }
+  }
+
+  ReactDOM.render(
+    <DataLibrary />,
+    $('<div></div>')
+      .insertAfter(`label[for="level_data_library_tables"]`)
+      .get(0)
+  );
 });

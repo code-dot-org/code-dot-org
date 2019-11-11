@@ -366,6 +366,7 @@ eu:
             '"rotation"': itzulikapena
             '"x"': posizio horizontala
             '"y"': posizio bertikala
+            '"tint"': tinta
       Dancelab_setPropRandom:
         options:
           PROPERTY:

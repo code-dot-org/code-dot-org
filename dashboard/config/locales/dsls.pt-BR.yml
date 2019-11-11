@@ -2475,12 +2475,81 @@ pt-BR:
       CSD U5 crosstab warmup:
         title: Questionário sobre pizza
         content1: descrição aqui
+        markdown: |-
+          # Pesquisa de bolo
+
+          Para esta pesquisa, as pessoas escolheram um sabor de bolo e um sabor de gelo.
+
+          <table style="text-align: center; border: solid 1px darkgray;">
+          <tr><td style="width: 50px; background-color: gray; color:white"></td><td style="width: 200px; background-color: gray; color:white">Sabor de Bolo</td><td style="width: 200px; background-color: gray; color:white">Sabor de Cobertura</td></tr>
+          <tr><td>1</td><td>Bolo de Chocolate</td><td>Cobertura de Chocolate</td></tr>
+          <tr><td>2</td><td>Bolo Red Velvet</td><td>Cobertura de Cream Cheese</td></tr>
+          <tr><td>3</td><td>Bolo de Chocolate</td><td>Cobertura de Chocolate</td></tr>
+          <tr><td>4</td><td>Bolo de Cenoura</td><td>Cobertura de Cream Cheese</td></tr>
+          <tr><td>5</td><td>Bolo de Cenoura</td><td>Cobertura de Baunilha</td></tr>
+          <tr><td>6</td><td>Bolo de Chocolate</td><td>Cobertura de Chocolate</td></tr>
+          <tr><td>7</td><td>Bolo de Chocolate</td><td>Cobertura de Cream Cheese</td></tr>
+          <tr><td>8</td><td>Bolo de Cenoura</td><td>Cobertura de Cream Cheese</td></tr>
+          </table>
+          <br><br>
+
+          Se essas pessoas precisassem concordar com uma combinação de bolo e cobertura para uma festa, o que deveria ser?
+
+          E se eles pudessem pedir dois bolos com cobertura?
+
+          Como o conhecimento de ambas as escolhas nos ajuda a entender melhor que tipo de bolos devemos pedir?
       CSD U5 crosstab warmup_2018:
         title: Questionário sobre pizza
         content1: descrição aqui
+        markdown: |-
+          # Pesquisa de bolo
+
+          Para esta pesquisa, as pessoas escolheram um sabor de bolo e um sabor de gelo.
+
+          <table style="text-align: center; border: solid 1px darkgray;">
+          <tr><td style="width: 50px; background-color: gray; color:white"></td><td style="width: 200px; background-color: gray; color:white">Sabor de Bolo</td><td style="width: 200px; background-color: gray; color:white">Sabor de Cobertura</td></tr>
+          <tr><td>1</td><td>Bolo de Chocolate</td><td>Cobertura de Chocolate</td></tr>
+          <tr><td>2</td><td>Bolo Red Velvet</td><td>Cobertura de Cream Cheese</td></tr>
+          <tr><td>3</td><td>Bolo de Chocolate</td><td>Cobertura de Chocolate</td></tr>
+          <tr><td>4</td><td>Bolo de Cenoura</td><td>Cobertura de Cream Cheese</td></tr>
+          <tr><td>5</td><td>Bolo de Cenoura</td><td>Cobertura de Baunilha</td></tr>
+          <tr><td>6</td><td>Bolo de Chocolate</td><td>Cobertura de Chocolate</td></tr>
+          <tr><td>7</td><td>Bolo de Chocolate</td><td>Cobertura de Cream Cheese</td></tr>
+          <tr><td>8</td><td>Bolo de Cenoura</td><td>Cobertura de Cream Cheese</td></tr>
+          </table>
+          <br><br>
+
+          Se essas pessoas precisassem concordar com uma combinação de bolo e cobertura para uma festa, o que deveria ser?
+
+          E se eles pudessem pedir dois bolos com cobertura?
+
+          Como o conhecimento de ambas as escolhas nos ajuda a entender melhor que tipo de bolos devemos pedir?
       CSD U5 crosstab warmup_2018_2019:
         title: Questionário sobre pizza
         content1: descrição aqui
+        markdown: |-
+          # Pesquisa de bolo
+
+          Para esta pesquisa, as pessoas escolheram um sabor de bolo e um sabor de gelo.
+
+          <table style="text-align: center; border: solid 1px darkgray;">
+          <tr><td style="width: 50px; background-color: gray; color:white"></td><td style="width: 200px; background-color: gray; color:white">Sabor de Bolo</td><td style="width: 200px; background-color: gray; color:white">Sabor de Cobertura</td></tr>
+          <tr><td>1</td><td>Bolo de Chocolate</td><td>Cobertura de Chocolate</td></tr>
+          <tr><td>2</td><td>Bolo Red Velvet</td><td>Cobertura de Cream Cheese</td></tr>
+          <tr><td>3</td><td>Bolo de Chocolate</td><td>Cobertura de Chocolate</td></tr>
+          <tr><td>4</td><td>Bolo de Cenoura</td><td>Cobertura de Cream Cheese</td></tr>
+          <tr><td>5</td><td>Bolo de Cenoura</td><td>Cobertura de Baunilha</td></tr>
+          <tr><td>6</td><td>Bolo de Chocolate</td><td>Cobertura de Chocolate</td></tr>
+          <tr><td>7</td><td>Bolo de Chocolate</td><td>Cobertura de Cream Cheese</td></tr>
+          <tr><td>8</td><td>Bolo de Cenoura</td><td>Cobertura de Cream Cheese</td></tr>
+          </table>
+          <br><br>
+
+          Se essas pessoas precisassem concordar com uma combinação de bolo e cobertura para uma festa, o que deveria ser?
+
+          E se eles pudessem pedir dois bolos com cobertura?
+
+          Como o conhecimento de ambas as escolhas nos ajuda a entender melhor que tipo de bolos devemos pedir?
       CSD U5 data visualization:
         title: título
         content1: descrição aqui
@@ -3191,6 +3260,14 @@ pt-BR:
           foi feito em um nível anterior ou combine conceitos entre os projetos. Experimente
           todos, escolha o seu favorito e gaste seu tempo trabalhando para que este
           projeto se torne o seu\n"
+      Dance_Party_extras_intro_2019:
+        markdown: "#Continue dançando!\n\nPara a parte 2, você criará o seu próprio
+          projeto. Não há quebra-cabeças aqui - em vez disso, há vários projetos que
+          mostram maneiras diferentes de fazer uma festa dançante muito mais complexa.
+          \n\nVocê pode fazer esses níveis em qualquer ordem. Pule para ver como algo
+          foi feito em um nível anterior ou combine conceitos entre os projetos. Experimente
+          todos, escolha o seu favorito e gaste seu tempo trabalhando para que este
+          projeto se torne o seu\n"
       Design a Screen for your App_2018:
         markdown: |
           # Simulando seu App
@@ -3327,9 +3404,99 @@ pt-BR:
       Internet Simulator Setup:
         title: Configuração do simulador de internet
         content1: descrição aqui
+        markdown: "# Simulador de Internet da Code.org\n\n_Nota: As instruções contidas
+          neste tutorial são para professores que desejam usar o Simulador de Internet
+          como uma ferramenta autônoma, separada do currículo Princípios de Ciências
+          da Computação (CSP) da Code.org. Se você estiver planejando usar as atividades
+          apresentadas como parte do currículo CSP da Code.org, então por favor se
+          dirija à [página do currículo CSP.](https://code.org/educate/csp)_\n\n###
+          Conteúdo\nExistem 3 páginas de noções gerais e informações contidas aqui:\n\n*
+          O que é o Simulador de Internet? Visão geral (veja abaixo)\n* [Instruções
+          de configuração](/s/netsim/stage/1/puzzle/2)\n* [FAQ - Perguntas mais frequentes](/s/netsim/stage/1/puzzle/3)\n\n###
+          O que é o Simulador de Internet? Uma visão geral:\n\nO Simulador de Internet
+          é uma ferramenta desenvolvida pela Code.org para nossas classes de alunos
+          de Ensino Médio [Princípios de Ciências da Computação - CSP](https://code.org/educate/csp).
+          A ferramenta é concebida para permitir aos alunos obterem experiência prática
+          com o tratamento e solução de diferentes tipos de problemas relacionados
+          a computadores conectados em rede. O Simulador de Internet é usado em várias
+          lições durante as Unidades 1 e 2 em nosso currículo para construir progressivamente
+          as diferentes camadas da Internet.\n\nSe você está considerando usar a ferramenta
+          em sua sala de aula com atividades que você criar, nós recomendaríamos a
+          você se familiarizar com a ferramenta através de nosso [plano de aulas](https://curriculum.code.org/csp/unit1).
+          **As instruções de configuração** na próxima página são para professores
+          que gostariam de usar o Simulador de Internet separado do currículo CSP
+          da Code.org.\n\nA ferramenta em si não _ensina_ estes conceitos, mas somente
+          oferece um ambiente para vários estudantes se juntarem e enviarem mensagens
+          baseadas em códigos binário, decimal ou ascii entre eles, ou para outros
+          colegas de classe. **O ambiente pode ser configurado** de várias formas
+          para que sejam expostos diferentes tipos de problemas, visualizados dados
+          e conexões entre servidores, e suportado o aprendizado de vários conceitos
+          relacionados à Internet.\n\nO Simulador de Internet foi concebido para ser
+          usado em *sala de aula* com estudantes trabalhando de forma presencial e
+          colaborativa para solucionar problemas. Por vezes estes problemas requerem
+          a criação de um protocolo de comunicação, ou a invenção de formas para codificar
+          informação de maneira estruturada para que seu transporte via Internet seja
+          viável.\n\n**No currículo de Princípios de Ciências da Computação da Code.org
+          (CSP)** nós normalmente estruturamos as aulas e atividades da seguinte forma:\n\n*
+          **Primeiro apresentamos um desafio aos alunos**\n * ex: A Internet física
+          é pouco confiável e pode perder mensagens\n* **Damos uma oportunidade de
+          experimentar com o simulador para que os problemas sejam percebidos**\n
+          * ex: Examinar os registros do roteador para descobrir que 10-20% de todas
+          as mensagens são perdidas e pacotes podem ser roteados fora de ordem\n*
+          **Damos uma oportunidade para criar uma solução própria para o desafio**\n
+          * ex: Inventar seu próprio protocolo para como enviar mensagens de forma
+          confiável sobre uma rede não confiável\n* **Por fim, os alunos pesquisam
+          como este protocolo ou invenção é aplicada \"no mundo real\"**\n * ex: Perquisar
+          como o TCP realmente funciona e assistir um vídeo\n\n### O Que o Simulador
+          de Internet Pode Ser Configurado Para Fazer?\n\nEm sua forma mais simples,
+          o Simulador de Internet pode comunicar um único bit de informação através
+          de um único cabo compartilhado, sem nenhuma coordenação ou sincronização.
+          Em seu modo mais avançado ele pode simular conexões não confiáveis através
+          de múltiplos roteadores, usando endereços IP, um DNS, e pacotes de tamanho
+          fixo que requerem a criação de protocolos similares a TCP/IP ou HTTP.\n\nNós
+          configuramos o Simulador de Internet de várias formas que são propícias
+          a lecionar determinados tópicos. Mas se você estiver usando o Simulador
+          de Internet em sala de aula você deverá estar ciente das configurações de
+          interface disponíveis que você poderá controlar ou dizer aos seus alunos
+          para configurá-las de uma forma determinada.\n\nPor exemplo: uma das características
+          do Simulador de Internet é que você pode exibir as representações binária,
+          decimal, hexadecimal e ASCII de quaisquer dados que você enviar. Em algumas
+          configurações você também poderá definir o \"tamanho do segmento\" que determina
+          como os bits são interpretados. Para uma aula que você mesmo criar, você
+          poderá escolher alguma das configurações fornecidas, mas poderá orientar
+          os alunos para que exibam somente uma representação dos bits em particular,
+          ou talvez poderá estipular que o tamanho do segmento seja um valor em particular.\n\nO
+          ponto é que as configurações fornecidas têm por finalidade servir como um
+          ponto de partida para lecionar um determinado tema. Você poderá ter que
+          empregar alguma ingenuidade e estratégias de ensino para refinar o uso do
+          Simulador para satisfazer suas necessidades.\n\n\n<br><br>\n<img src=\"https://images.code.org/0bf9799b2bec2756c1664b84e12cbe27-image-1438642671141.57.13.png\"
+          width=\"600px\" style=\"margin:0 100px\"/>\n<br><br>\n\n\n\n \n\n_Próximo
+          tópico: Instruções de configuração_\n\n<a class=\"btn btn-large btn-primary
+          next-stage submitButton\">Prosseguir</a>\n"
       Internet Simulator Setup 2:
         title: título
         content1: descrição aqui
+        markdown: "# Simulador de Internet: Instruções de Configuração\n\n1. **Crie
+          uma seção no Code Studio.** Para que os alunos de sua classe possam se comunicar
+          uns com os outros, todos eles deverão estar associados à mesma seção no
+          Code Studio. Quando estiver autenticado com uma conta de professor, você
+          irá precisar criar uma seção em que todos os seus alunos se vinculam. Para
+          criar uma seção:\n* Navegue para a área de [seções](https://code.org/teacher-dashboard#/sections)
+          no painel do professor\n* Clique no botão 'Nova Seção'. Recomendamos usar
+          o Tipo de Login 'Email' e 'cspunit1' para o curso. \n<br>\n<img src=\"https://images.code.org/9e9961a44b0a2f76ab92e6f9634d8f55-image-1438640255737.17.04.png\"
+          width=\"600px\" />\n<br><br>\n2. **Faça seus alunos se vincularem à sua
+          seção.** Após a seção ser criada, clique no link 'Gerenciar Alunos' para
+          a seção. Você verá um código da seção que você pode pedir a seus alunos
+          se associarem, quando eles já tiverem criado suas próprias contas no Code
+          Studio.\n<br>\n<img src=\"https://images.code.org/9b8863dbb5a8e229e9bc1c4fc74ddd22-image-1438641516264.png\"
+          width=\"400px\" />\n<br><br>\n3. **Forneça a seus alunos a URL da versão
+          do Simulador de Internet que você quer usar.** Nós criamos várias configurações
+          distintas do Simulador de Internet que estão disponíveis em [code.org/internetsimulator](http://code.org/internetsimulator).
+          Quando você encontrar uma configuração que esteja adequada à sua atividade,
+          compartihe a URL com os alunos. Se eles estiverem todos na mesma seção,
+          então eles automaticamente estarão aptos a se conectarem entre si quando
+          estiverem navegando na mesma URL. \n\n_Próximo tópico: Perguntas Mais Frequentes_\n\n<a
+          class=\"btn btn-large btn-primary next-stage submitButton\">Prosseguir</a>\n\n"
       Internet Simulator Setup 3:
         title: Configuração do Simulador de Internet 3
         content1: descrição aqui
