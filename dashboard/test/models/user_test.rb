@@ -4145,9 +4145,8 @@ class UserTest < ActiveSupport::TestCase
     migrated_teacher = create(:teacher, :with_google_authentication_option, email: email)
 
     migrated_teacher.admin = true
-    migrated_teacher.save!
 
-    assert migrated_teacher.admin
+    assert migrated_teacher.valid?
   end
 
   test 'does set admin to false when it is not a google oauth codeorg account' do
@@ -4155,9 +4154,8 @@ class UserTest < ActiveSupport::TestCase
     migrated_teacher = create(:teacher, email: email)
 
     migrated_teacher.admin = true
-    migrated_teacher.save!
 
-    refute migrated_teacher.admin
+    refute migrated_teacher.valid?
   end
 
   test 'does set admin to false when it is not a codeorg account' do
@@ -4165,9 +4163,8 @@ class UserTest < ActiveSupport::TestCase
     migrated_teacher = create(:teacher, :with_google_authentication_option, email: email)
 
     migrated_teacher.admin = true
-    migrated_teacher.save!
 
-    refute migrated_teacher.admin
+    refute migrated_teacher.valid?
   end
 
   test 'does set admin to false when unmigrated teacher account' do
@@ -4175,8 +4172,7 @@ class UserTest < ActiveSupport::TestCase
     unmigrated_teacher_without_password.update_attribute(:encrypted_password, '')
 
     unmigrated_teacher_without_password.admin = true
-    unmigrated_teacher_without_password.save!
 
-    refute unmigrated_teacher_without_password.admin
+    refute unmigrated_teacher_without_password.valid?
   end
 end
