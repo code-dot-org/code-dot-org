@@ -12,12 +12,11 @@ const styles = {
   }
 };
 
-export default class LibraryManagerDialog extends React.Component {
+export default class LibraryViewCode extends React.Component {
   static propTypes = {
     onClose: PropTypes.func.isRequired,
     isOpen: PropTypes.bool.isRequired,
-    library: PropTypes.object.isRequired,
-    onAdd: PropTypes.func
+    library: PropTypes.object.isRequired
   };
 
   render() {
