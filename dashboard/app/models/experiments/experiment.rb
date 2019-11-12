@@ -48,6 +48,8 @@ class Experiment < ApplicationRecord
   PILOT_EXPERIMENTS = %w(
     csd-piloters
     csp-piloters
+    csp-preview
+    denny-science
   )
 
   def self.get_editor_experiment(user)
