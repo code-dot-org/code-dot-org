@@ -28,7 +28,7 @@ import {
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import {
   setSections,
-  setPageName
+  setPageType
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {queryLockStatus, renderTeacherPanel} from './teacherPanelHelpers';
 
@@ -161,7 +161,7 @@ progress.renderCourseProgress = function(scriptData) {
     store.dispatch(setSections(scriptData.sections));
   }
 
-  store.dispatch(setPageName('script_overview'));
+  store.dispatch(setPageType('script_overview'));
 
   const mountPoint = document.createElement('div');
   $('.user-stats-block').prepend(mountPoint);

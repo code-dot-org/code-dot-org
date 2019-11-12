@@ -12,7 +12,7 @@ import {
   setStageExtrasScriptIds,
   setAuthProviders,
   beginEditingNewSection,
-  setPageName
+  setPageType
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenStageRedux';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
@@ -32,7 +32,7 @@ function showHomepage() {
   store.dispatch(setStageExtrasScriptIds(homepageData.stageExtrasScriptIds));
   store.dispatch(setAuthProviders(homepageData.providers));
   store.dispatch(initializeHiddenScripts(homepageData.hiddenScripts));
-  store.dispatch(setPageName('homepage'));
+  store.dispatch(setPageType('homepage'));
 
   let courseId;
   let scriptId;
