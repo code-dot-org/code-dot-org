@@ -12,6 +12,7 @@ const initialState = {
   trainer: null,
   trainingIndex: 0,
   isRunning: false,
+  isPaused: false,
   runStartTime: null,
   biasTextTime: null,
   canSkipPredict: null,
