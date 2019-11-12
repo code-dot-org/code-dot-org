@@ -26,9 +26,10 @@ Feature: App Lab Data Blocks
     And I wait until element "#successLabel" is visible within element "#divApplab"
 
   Scenario: Start over clears Data
-    Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/23?noautoplay=true"
+    Given I am on "http://studio.code.org/projects/applab/new"
     And I rotate to landscape
     And I wait for the page to fully load
+    Then I add code "setKeyValue('key', 'value', function() {getKeyValue('key', function(value) {if (value === 'value') {textLabel('keyValueLabel', 'success');}})});" to ace editor
     And element "#runButton" is visible
     Then I press "runButton"
     And I wait until element "#keyValueLabel" is visible within element "#divApplab"
