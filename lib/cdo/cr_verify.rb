@@ -117,9 +117,11 @@ def compare_rows(columns, max_row_read = nil, max_row_write = nil)
       diff_col_cnt[col] += 1
     end
 
-    if changed_columns
+    if changed_columns.present?
       diff_cnt += 1
       insert_values = changed_columns.except(*EXCLUDED_COLUMNS)
+      raise if insert_values.blank?
+
       PEGASUS_REPORTING_DB_WRITER[DUMP_TABLE].insert(insert_values)
 
       if diff_cnt % 100 == 0
