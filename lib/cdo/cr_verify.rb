@@ -22,6 +22,52 @@ PEGASUS_REPORTING_DB_READER = sequel_connect(
   query_timeout: MAX_EXECUTION_TIME_SEC
 )
 
+# Connection to write to Pegasus reporting database.
+PEGASUS_REPORTING_DB_WRITER = sequel_connect(
+  CDO.pegasus_reporting_db_writer,
+  CDO.pegasus_reporting_db_writer,
+  query_timeout: MAX_EXECUTION_TIME_SEC
+)
+
+DUMP_TABLE = :contact_rollups_future
+
+def create_dump_table
+  # PEGASUS_REPORTING_DB_WRITER.schema(DUMP_TABLE)
+  # PEGASUS_REPORTING_DB_WRITER.drop_table(DUMP_TABLE)
+  if PEGASUS_REPORTING_DB_WRITER.table_exists?(DUMP_TABLE)
+    p "#{DUMP_TABLE} already exists"
+  else
+    PEGASUS_REPORTING_DB_WRITER.create_table DUMP_TABLE do
+      Integer :id
+      Integer :opted_out
+      Integer :dashboard_user_id
+      String :street_address, size: 1024
+      String :city
+      String :state
+      String :country
+      String :postal_code
+      String :district_name
+      String :district_city
+      String :district_state
+      String :district_zip
+      String :school_name
+      String :roles
+      String :courses_facilitated, size: 1024
+      String :professional_learning_enrolled, size: 1024
+      String :professional_learning_attended, size: 1024
+      String :hoc_organizer_years
+      String :grades_taught
+      String :ages_taught
+      Integer :email_malformed
+      String :forms_submitted, size: 4096
+      String :form_roles, size: 4096
+      Integer :opt_in
+    end
+
+    p "Created #{DUMP_TABLE} table"
+  end
+end
+
 def compare_rows(columns, row_cnt = nil)
   # Connect to 2 tables
   query = <<-SQL.squish
@@ -40,7 +86,6 @@ def compare_rows(columns, row_cnt = nil)
 
   # Iterate through 2 tables, row by row
   # Compare id and email
-  # TODO: write logs to file
   while reporting_row
     while reporting_row[:id] < production_row[:id]
       reporting_row = grab_next(reporting_iter)
@@ -51,17 +96,19 @@ def compare_rows(columns, row_cnt = nil)
     reporting_values = reporting_row.slice(*columns).transform_values {|v| v.is_a?(String) ? v.downcase : v}
     production_values = production_row.slice(*columns).transform_values {|v| v.is_a?(String) ? v.downcase : v}
 
-    diff = false
+    diff_cols = Set.new
     columns.each do |col|
       next if reporting_values[col] == production_values[col]
+      diff_cols << col
       diff_col_cnt[col] ||= 0
       diff_col_cnt[col] += 1
-      diff = true
     end
 
-    if diff
+    if diff_cols
       diff_cnt += 1
+      # TODO: write comparison data to table in reporting db
       # p "Diff #{diff_cnt}: reporting_values = #{reporting_values} != production_values = #{production_values}"
+      # return if
     else
       same_cnt += 1
     end
@@ -88,13 +135,10 @@ rescue StandardError => error
 end
 
 def main
-  # compare_rows([:id], 10)
-  # compare_rows([:id, :email], 10)
-  # compare_rows([:id])
-  # compare_rows([:id, :email])
+  create_dump_table
 
   columns_to_compare = [
-    :email, :opted_out, :dashboard_user_id, :name, :street_address, :city, :state, :country,
+    :id, :email, :opted_out, :dashboard_user_id, :name, :street_address, :city, :state, :country,
     :postal_code, :district_name, :district_city, :district_state, :district_zip, :school_name,
     :roles, :courses_facilitated, :professional_learning_enrolled, :professional_learning_attended,
     :hoc_organizer_years, :grades_taught, :ages_taught, :email_malformed, :forms_submitted,
@@ -104,4 +148,12 @@ def main
   compare_rows(columns_to_compare)
 end
 
+def test
+  #load "../lib/cdo/cr_verify.rb"; test
+  create_dump_table
+  compare_rows([:id], 10)
+  compare_rows([:id, :email], 10)
+end
+
+# test
 main
