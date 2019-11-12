@@ -178,6 +178,7 @@ class ActivitiesController < ApplicationController
         submitted: params[:submitted] == 'true',
         level_source_id: @level_source.try(:id),
         pairing_user_ids: pairing_user_ids,
+        time_spent: [params[:timeSinceLastMilestone].to_i, MAX_INT_MILESTONE].min
       )
       # Make sure we don't log when @script_level is a multi-page assessment
       # and @level is a multi level.
@@ -193,9 +194,6 @@ class ActivitiesController < ApplicationController
         )
       end
     end
-
-    time_spent = [params[:timeSinceLastMilestone].to_i, MAX_INT_MILESTONE].min
-    @user_level&.record_time_spent(time_spent)
 
     passed = ActivityConstants.passing?(test_result)
     if lines > 0 && passed
