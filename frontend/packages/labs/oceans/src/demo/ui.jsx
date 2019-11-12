@@ -546,11 +546,12 @@ class Words extends React.Component {
   constructor(props) {
     super(props);
 
-    // Randomize word choices and set in state.
+    // Randomize word choices in each set, merge the sets, and set as state.
     const appMode = getState().appMode;
     const appModeWordSet = wordSet[appMode].choices;
     let choices = [];
     let maxSize = 0;
+    // Each subset represents a different column, so merge the sets
     for (var i = 0; i < appModeWordSet.length; ++i) {
       appModeWordSet[i] = _.shuffle(appModeWordSet[i]);
       if (appModeWordSet[i].length > maxSize) {
