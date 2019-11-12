@@ -62,16 +62,18 @@ def create_dump_table
       String :forms_submitted, size: 4096
       String :form_roles, size: 4096
       Integer :opt_in
+
+      unique :id
     end
 
     p "Created #{DUMP_TABLE} table"
   end
 end
 
-def compare_rows(columns, row_cnt = nil)
+def compare_rows(columns, max_row_read = nil, max_row_write = nil)
   # Connect to 2 tables
   query = <<-SQL.squish
-    select #{columns.join(',')} from contact_rollups order by id #{row_cnt ? "limit #{row_cnt}" : ''}
+    select #{columns.join(',')} from contact_rollups order by id #{max_row_read ? "limit #{max_row_read}" : ''}
   SQL
 
   reporting_iter = PEGASUS_REPORTING_DB_READER[query].stream.to_enum
@@ -96,19 +98,20 @@ def compare_rows(columns, row_cnt = nil)
     reporting_values = reporting_row.slice(*columns).transform_values {|v| v.is_a?(String) ? v.downcase : v}
     production_values = production_row.slice(*columns).transform_values {|v| v.is_a?(String) ? v.downcase : v}
 
-    diff_cols = Set.new
+    changed_columns = {}
     columns.each do |col|
       next if reporting_values[col] == production_values[col]
-      diff_cols << col
+      changed_columns[col] = production_values[col]
       diff_col_cnt[col] ||= 0
       diff_col_cnt[col] += 1
     end
 
-    if diff_cols
+    if changed_columns
       diff_cnt += 1
-      # TODO: write comparison data to table in reporting db
+      PEGASUS_REPORTING_DB_WRITER[DUMP_TABLE].insert(changed_columns)
       # p "Diff #{diff_cnt}: reporting_values = #{reporting_values} != production_values = #{production_values}"
-      # return if
+
+      break if max_row_write && (diff_cnt == max_row_write)
     else
       same_cnt += 1
     end
