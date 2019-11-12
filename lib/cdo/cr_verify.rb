@@ -120,12 +120,12 @@ def compare_rows(columns, max_row_read = nil, max_row_write = nil)
     if changed_columns.present?
       diff_cnt += 1
       insert_values = changed_columns.except(*EXCLUDED_COLUMNS)
-      next if insert_values.blank?
-      # raise "insert_values = #{insert_values} MUST not be blank!" if insert_values.blank?
 
-      PEGASUS_REPORTING_DB_WRITER[DUMP_TABLE].insert(insert_values)
+      if insert_values.present?
+        PEGASUS_REPORTING_DB_WRITER[DUMP_TABLE].insert(insert_values.merge!({id: reporting_row[:id]}))
+      end
 
-      if diff_cnt % 100 == 0
+      if diff_cnt % 1000 == 0
         p "Diff #{diff_cnt}: reporting_values = #{reporting_values} != production_values = #{production_values}. insert_values = #{insert_values}"
       end
 
