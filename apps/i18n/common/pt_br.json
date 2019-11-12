@@ -880,6 +880,7 @@
   "manageStudentsNotificationCannotAdd": "Você não pode adicionar {numStudents, plural, one{1 estudante} other {# estudantes}} para sua seção. Por favor tente novamente ou recarregue a página.",
   "manageStudentsNotificationAddSuccess": "Você adicionou {numStudents, plural, one {1 estudante} other {# estudantes}} para a sua seção.",
   "manageStudentsNotificationSuccess": "Sucesso!",
+  "map": "Mapa",
   "matchQuestionsOverview": "Combine a revisão de questões ({numSubmissions} / {numStudents} estudantes)",
   "matchStudentOverview": "Combine questões gerais ({studentName})",
   "migrateToMutiAuth_buttonText": "Experimentar Nova Versão",

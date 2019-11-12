@@ -695,6 +695,8 @@ ca:
             '2': agut
       Dancelab_whenSetup:
         text: configuració
+      Dancelab_whenSetup2:
+        text: configuració
       gamelab_changePropBy:
         text: canvi {SPRITE} {PROPERTY} per {VAL}
         options:

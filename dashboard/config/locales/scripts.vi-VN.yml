@@ -5851,3 +5851,11 @@ vi:
               name: Các biến
             For Loops:
               name: Cho vòng lặp
+        dance-extras-2019:
+          title: Hãy Tiếp tục Nhảy
+          description: Hãy làm nhiều hơn nữa so với giờ đầu tiên với các ý tưởng dự
+            án mở rộng.
+        csp10-pilot:
+          stages:
+            new stage:
+              name: giai đoạn mới

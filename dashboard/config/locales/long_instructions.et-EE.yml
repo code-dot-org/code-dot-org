@@ -108,6 +108,10 @@ et-EE:
         Süda \*\*! \[] (<https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png>)!
         Kasuta siniseid ja punaseid koralle, et jõuda aarde \*\* kirstuni \*\*! \[]
         (<https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png>).
+      Dance_2019_05: "-   Nüüd gruuvime! \\* \n\nLisa <xml><block type=\"Dancelab_atTimestamp\"><title
+        name=\"TIMESTAMP\">6</title><title name=\"UNIT\">plokk \"ühikud\"<div class=\"notranslate\">6</div></block></xml>
+        oma töölauale. Las tantsija alustab uue liigutusega peale 6 ühikut."
+      Dance_2019_10: Hakka gruuvima! Loo omaenda tants, mida sõpradega jagada.
       Dance_Party_01: |-
         -   Korraldame tantsuõhtu! \*
 
@@ -177,6 +181,14 @@ et-EE:
         -   Muuda paigutust kui vajutatakse klahvi
         -   Muuda omadust kui tantsijad muudavad positsioone
       Dance_Party_extras_visible: |-
+        # Kuhu nad kadusid?
+
+        See tants näitab ja peidab kahte erinevat tantsijate rühma. Vaadake tants üle ja proovige midagi põnevat omalt poolt lisada.
+
+        -   Lisage teine rühma tantsijaid
+        -   Näita või peida tantsijaid kui bassi heli lööb
+        -   Kasuta tingimuslauset, et peita tantsijad ainult siis _kui_ treble energia on piisavalt suur
+      Dance_Party_extras_visible_2019: |-
         # Kuhu nad kadusid?
 
         See tants näitab ja peidab kahte erinevat tantsijate rühma. Vaadake tants üle ja proovige midagi põnevat omalt poolt lisada.

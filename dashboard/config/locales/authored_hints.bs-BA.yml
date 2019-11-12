@@ -105,6 +105,32 @@ bs-BA:
           -   Iskoristi blok `kada je lijeva strelica pritisnuta` da bi robot napravio pokret kada pristisneš na strelicu.
 
           _Level se završava nakon 7 taktova._
+      Dance_2019_01:
+        validation: |-
+          **Kako da pređem ovaj level?**
+
+          -   Postarajte se da se plesač pojavi na ekranu.
+
+          _Ovaj level se završava nakon 4 takta._
+      Dance_2019_04:
+        validation: |-
+          **Kako da pređem ovaj level?**
+
+          -   Plesač mora promjeniti novi pokret svako četiri takta.
+
+          _Level se završava nakon 7 taktova._
+      Dance_2019_05:
+        validation: |-
+          **Kako da pređem ovaj level?**
+
+          -   Nakon 6 taktova, vaš plesač mora da uradi drugačiji ples od onog od nakon 4 takta.
+
+          _Level se završava nakon 11 taktova._
+      Dance_2019_07:
+        challenges: |-
+          **Neobavezni izazovi**
+
+          -   Eksperimentiši mijenjajući druge osobine (širina, visina, rotacija i sl.)
       Dance_Party_01:
         validation: |-
           **Kako da pređem ovaj level?**

@@ -25,7 +25,8 @@
 }
 
 #mapbox {
-  height: 500px;
+  width: 100%;
+  padding-bottom: 56.25%;
 }
 
 #footer-text {
@@ -179,4 +180,24 @@
 .census-info-window .inaccuracy-link {
   text-align: center;
   font-size: 11px;
+}
+
+#census-map .legend-offers-cs {
+  background-color: #66DC57;
+}
+
+#census-map .legend-limited-cs {
+  background-color: #989CF8;
+}
+
+#census-map .legend-inconclusive-cs {
+  background-color: #FFFDA6;
+}
+
+#census-map .legend-no-data-cs {
+  background-color: #FFFFFF;
+}
+
+.mapboxgl-map button {
+  margin: 0px;
 }

@@ -23,11 +23,13 @@ fil:
     attributes:
       user:
         name: Ipapakita na Pangalan
-        name_example: Naka-display na Pangalan<br/>(e.g. Cool Coder o Jane S.)
+        name_example: Naka-display na Pangalan (e.g. Cool Coder o Jane S.)
         email: Email
         parent_email: Email Magulang/Tagapangalaga
         personal_email: Personal na email address <a href="%{url}">(mag-click dito
           kung wala ka pang email address)</a>
+        personal_email_markdown: Personal na email address [(mag-click dito kung wala
+          ka pang email address)](%{url})
         username: Username
         password: Password
         password_confirmation: Kumpirmahin ang password
@@ -107,6 +109,10 @@ fil:
       o i-manage ang iyong silid-aralan. <a href="/">Pwede kang mag-browse ng iba't
       ibang stages at palaisipan</a> nang walang account, pero kailangan mong mag-sign
       up para i-save ang iyong progreso at mga proyekto.
+    overview_markdown: Mag-sign up para sa isang account upang masundan ang iyong
+      progreso o i-manage ang iyong silid-aralan. [Pwede kang mag-browse ng iba't
+      ibang stages at palaisipan](/) nang walang account, pero kailangan mong mag-sign
+      up para i-save ang iyong progreso at mga proyekto.
     hoc_already_signed_up_heading: Magsimula nang hindi nagla-login
     hoc_already_signed_up_content: Ikaw ay naka-sign up para magturo ng Hour of Code!
       Ikaw at ang iyong mga mag-aaral ay hindi kailangang mag-sign in sa Code Studio
@@ -121,6 +127,12 @@ fil:
       Makapagtatalaga ka ng mga kurso para sa mga mag-aaral at masusundan ang kanilang
       progreso. <a href="%{studio_url}">Pwede ka ring magpatuloy sa pag-browse ng
       iba't ibang stages at palaisipan</a> nang hindi gumagawa ng account.
+    hoc_already_signed_up_content_post_hoc_markdown: Salamat sa pag-host ng Hour of
+      Code. Para mag-sign in sa Code Studio, kailangan mong mag-set up ng password
+      para sa iyong account. Magagawa nitong i-save ang iyong progreso at i-manage
+      ang iyong silid-aralan. Makapagtatalaga ka ng mga kurso para sa mga mag-aaral
+      at masusundan ang kanilang progreso. [Pwede ka ring magpatuloy sa pag-browse
+      ng iba't ibang stages at palaisipan](%{studio_url}) nang hindi gumagawa ng account.
     teacher_educator_guide: Bisitahin ang gabay para sa mga guro
     title: Mag-sign up para sa Code.org
     school_name: Pangalan ng Paaralan (optional)
@@ -429,11 +441,21 @@ fil:
       ng Code.org. Kung ako ay nasa baba ng 13 taong gulang, kinukompirma ko na ako
       ay maayrong pahintulot mula sa aking mga magulang o legal na taga-pangalaga
       na gumamit sa mga serbisyo ng Code.org kahit na walang guro.
+    create_personal_login_terms_markdown: Sa paglikha ng personal na login, ako ay
+      sumasang-ayon na masailalaim sa mga [alituntunin](%{terms_of_service_url}) ng
+      Code.org. Kung ako ay nasa baba ng 13 taong gulang, kinukompirma ko na ako ay
+      maayrong pahintulot mula sa aking mga magulang o legal na taga-pangalaga na
+      gumamit sa mga serbisyo ng Code.org kahit na walang guro.
     create_personal_login_email_note: 'Tandaan: Ang mga email address ay hindi nakastore
       sa isang form na magbigay sa atin ng kakayahan na makipag-ugnayan sa mga estudyante.
       Ang mga estudyante ay hinding-hindi makatanggap ng mga emails mula sa Code.org
       maliban na lang sa password recovery. Tingnan ang aming <a href=''%{privacy_policy_url}'',
       target=''_blank''>patakaran sa privacy</a> para sa karagdagan impormasyon.'
+    create_personal_login_email_note_markdown: 'Tandaan: Ang mga email address ay
+      hindi nakastore sa isang form na magbigay sa atin ng kakayahan na makipag-ugnayan
+      sa mga estudyante. Ang mga estudyante ay hinding-hindi makatanggap ng mga emails
+      mula sa Code.org maliban na lang sa password recovery. Tingnan ang aming [patakaran
+      sa privacy](%{privacy_policy_url}) para sa karagdagan impormasyon.'
     enter_new_login_info: Ipasok ang iyong bagong login na impormasyon
     confirm_secret_words: Ikompirma na ikaw talaga ito sa pamamagitan ng paglagay
       ng iyong kasalukuyang mga secret na mga pulong
@@ -845,6 +867,13 @@ fil:
       bagay para sa amin, at kami ay umaasa na magbibigay ito ng bagong pamantayan
       para sa privacy ng mga estudyante sa teknolohiya na pang-edukasyon. Kami ay
       nagpapadala ng buod ng lahat ng mga pagbabago sa pamamagitan ng email.'
+    intro_desc_markdown: 'Binago namin ang aming mga palatuntunan at privacy policy,
+      gaya ng pinakita namin sa baba. Ang mga pagbabago ay magkaroon ng bisa sa ika-24
+      ng Agosto, 2016. Ang pinakamalaking pagbabago: kami ay _hindi na mag-store ng
+      email address ng mga estudyanteng account sa Code Studio._ Ito ay isang malaking
+      bagay para sa amin, at kami ay umaasa na magbibigay ito ng bagong pamantayan
+      para sa privacy ng mga estudyante sa teknolohiya na pang-edukasyon. Kami ay
+      nagpapadala ng buod ng lahat ng mga pagbabago sa pamamagitan ng email.'
     intro_instructions: Kailangan mong tanggapin ang mga bagong pamatayan para sa
       mga estudyante na wala pang 13 taong gulang sa iyong silid-aralan para magkaroon
       ng buong access sa lahat ng mga bagong katangian ng Code Studio. Kung magrehistro
@@ -858,6 +887,8 @@ fil:
     privacy_notice: Pahayag sa Privacy
     accept_label: Ako ay sumang-ayon sa updated na <a href="%{tos_url}" target="_blank">mga
       Palatuntunan</a> at sa <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
+    accept_label_markdown: Ako ay sumang-ayon sa updated na [mga Palatuntunan](%{tos_url})
+      at sa [Privacy Policy](%{privacy_url})
     accept: Tanggapin
     print: I-print
     reminder_desc: Nag-update kami sa aming <a href="%{tos_url}" target="_blank">mga
@@ -865,6 +896,11 @@ fil:
       Pakibasa ng mabuti ang mga ito bago mo tanggapin. Tandaan na ang aming mga kagamitan
       na nagtuturo ng Javascript ay maaaring hindi magagamit ng iyong mga estudyante
       bago mo hayagang tanggapin ang mga binagong pamantayan.
+    reminder_desc_markdown: Nag-update kami sa aming [mga Palatuntunan](%{tos_url})
+      at [Privacy Policy](%{privacy_url}). Pakibasa ng mabuti ang mga ito bago mo
+      tanggapin. Tandaan na ang aming mga kagamitan na nagtuturo ng Javascript ay
+      maaaring hindi magagamit ng iyong mga estudyante bago mo hayagang tanggapin
+      ang mga binagong pamantayan.
     review_terms: Repasuhin ang mga binagong tuntunin
   school_info_interstitial:
     title: Gusto naming dalhin ang Computer Sciece sa bawat estudyante - tulungan
@@ -893,6 +929,10 @@ fil:
     maaring mag-sign in sa aming support na site. Maari kang mag-browse sa <a href="http://support.code.org">support.code.org</a>
     kahit hindi naka-sign in o magpatulong sa iyong magulang o guro para makipag-ugnayan
     sa amin para sa iyo.
+  zendesk_too_young_message_markdown: Ipagpaumanhin niyo po, ang nakakabatang mga
+    user ay hindi maaring mag-sign in sa aming support na site. Maari kang mag-browse
+    sa [support.code.org](http://support.code.org) kahit hindi naka-sign in o magpatulong
+    sa iyong magulang o guro para makipag-ugnayan sa amin para sa iyo.
   progress:
     not_started: hindi pa nasimulan
     in_progress: nasimulan na

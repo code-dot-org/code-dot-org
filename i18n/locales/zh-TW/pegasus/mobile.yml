@@ -335,6 +335,7 @@
   homepage_slot_text_link_high: "高中"
   homepage_slot_text_link_k5: "K-5 階段課程"
   homepage_slot_text_link_fullcurriculum: "看看我們完整的課程"
+  homepage_slot_text_link_pd: "專業發展"
   homepage_slot_text_title_advocates: "推廣者"
   homepage_slot_text_blurb_advocates: "支持資訊學習多元性"
   homepage_slot_text_link_stats: "觀看統計結果"
@@ -578,6 +579,7 @@
   dashboard_landing_progress_biggest: "這是你最大的學習小組的進度。"
   dashboard_landing_view_progress: "檢視 %{biggest_section} 的進度"
   dashboard_landing_print_progress: "列印進度"
+  dashboard_landing_available_title: "可用課程"
   dashboard_landing_available_courses: "這裡是你和你的學生目前可用的課程。"
   dashboard_landing_more_tutorials: "想看更多教程？"
   dashboard_landing_more_tutorials_desc: "這裡有更多<a href=\"/learn/beyond\">由我們的合作夥伴提供的</a>的教程。像是學習為機器人編程、製作站台網頁、製作自己的應用程式，或是探索其他的編程語言，像是 C++、Ruby 或 Python！"
@@ -664,6 +666,7 @@
   dashboard_sections_name: '學習小組名稱'
   dashboard_sections_choose_secret: "如果您想要提供帳號給學生使用，請為該學習小組選擇一個 <b>通關文字</b> 或 <b>通關圖片</b> 做為進入密鑰。"
   dashboard_sections_secret_word: "<b>通關文字</b> 允許您為每個學生設置一個機密文字。"
+  dashboard_sections_secret_picture: "<b>通關圖片</b> 是針對年紀小到無法輸入文字的學生，由您為他們設置秘密圖片作為通關密鑰。"
   dashboard_sections_secret_none: "如果您想讓學生去管理他們自己的帳戶，包括選擇他們自己的密碼，通關類型請選擇「無」。"
   dashboard_sections_print_secrets: "您可以列印一張帳戶資訊的小卡，再個別分發給學生。"
   dashboard_sections_switch_section: '切換學習小組：'
@@ -713,6 +716,8 @@
   dashboard_lesson_plans: "教學計畫"
   dashboard_view_all_lesson_plans: "下載完整的 1-4 課程"
   dashboard_course1: '課程 1：'
+  dashboard_course2: '課程 2：'
+  dashboard_course3: '課程 3：'
   dashboard_course4: '課程 4： '
   dashboard_coursea: '課程 A：'
   dashboard_courseb: '課程 B：'
@@ -729,7 +734,10 @@
   dashboard_overview: "概覽"
   dashboard_sequence: "序列 "
   dashboard_framework: "框架（Framework）"
+  dashboard_standards: "標準"
+  dashboard_implementation_guide: "實施指南"
   dashboard_glossary: "詞彙表"
+  dashboard_classroom_strategies: "教師的教學策略"
   dashboard_debugging: '除錯：'
   dashboard_puzzle_solving: '關卡解法：'
   dashboard_student_worksheet: "學生工作表"
@@ -770,8 +778,10 @@
   dashboard_sections_password_question: "學生要用什麼當作「密碼」？"
   dashboard_sections_picture_account_creation: "由 Code.org 分配的圖片"
   dashboard_sections_word_account_creation: "由 Code.org 分配的簡單單字"
+  dashboard_sections_sign_in_question: "學生從何處登入？"
   dashboard_sections_sign_in_unique: "在「管理學生」頁籤上列出的單獨網頁"
   dashboard_sections_sign_in_main: "http://code.org 並點擊「登入」"
+  dashboard_sections_password_account_creation: "學生建立的文字密碼"
   dashboard_sections_login_type_explanation: "本表協助説明你可以選擇的學習小組登入類型，<b>通關圖片、 通關密語或電子信箱</b>。"
   dashboard_faq: "常見問答"
   dashboard_faq_k5: "K-5 常見問答"
@@ -830,6 +840,7 @@
   more_resources_educators: "更多的教師資源"
   beyond_submission: "想要提交超越一小時玩程式的教程嗎？看看規範和提交表單。"
   third_party_submission: "想要分享你的教程嗎？<a href=\"%{submission_url}\">檢視條件和提交表單</a>。"
+  participants: "參與者"
   teachers_notes: "教師備註"
   teachers_notes_hoc: '教師：請閱讀這些重要的教師備註'
   previous: "上一個"
@@ -841,6 +852,7 @@
   starwars_name: '星際大戰：用程式建立一個銀河系'
   codeorg_name: "經典迷宮"
   codeintl_name: "經典迷宮"
+  khan_name: "JavaScript 簡介"
   khanes_name: "JavaScript 簡介"
   khanpt_name: "JavaScript 簡介"
   khanhe_name: "JavaScript 簡介"
@@ -848,13 +860,16 @@
   khanpl_name: "JavaScript 簡介"
   tynker_name: "建立你自己的遊戲"
   scratch_name: "透過編程發揮創意"
+  thinkersmith_name: "我的機器人朋友"
   condcards_name: "用撲克牌學習條件判斷（Conditionals）"
   codehs_name: "與小狗 Karel 一起學習編程"
   codemonkey_name: "CodeMonkey"
   codeavengers_name: "用 JavaScript 創建一個遊戲"
+  processing_name: "用程式繪圖"
   robomind_name: "編程一個虛擬機器人"
   groklearning_name: "Eliza the Chatterbot Doctor"
   quorum_name: "無障礙編程（可用螢幕閱讀器輔助）"
+  codespark_name: "Foos (歡迎學齡前使用者)"
   kodable_name: "Kodable（歡迎學齡前使用者）"
   tynkerapp_name: "Tynker - 適用於平板"
   robomindnl_name: "用程式設計出虛擬機器人"
@@ -908,8 +923,15 @@
   coursed-2019_name: 課程 D（2019）
   coursee-2019_name: 課程 E（2019）
   coursef-2019_name: 課程 F（2019）
+  express-2018_name: 速學課程（2017）
   pre-express-2018_name: 學前兒童的速學課程（2018）
+  express-2019_name: 速學課程（2017）
+  pre-express-2019_name: 學前兒童的速學課程（2017）
+  csd2_name: '單元 2：Web 開發'
+  csd3_name: '單元 3：動畫與遊戲'
   accelerated_name: "速成課程"
+  express_name: "速學課程"
+  pre-express_name: 學前兒童的速學課程
   20-hour_name: 速成課程
   algebra_name: "代數裡的 CS"
   AlgebraA_name: "代數裡的 CS 課程 A"
@@ -1066,11 +1088,14 @@
   lightbot_shortdescription: "編程 Lightbot 以完成關卡！"
   thinkersmith_shortdescription: "給團體的不插電計算機科學"
   condcards_shortdescription: "透過一副撲克牌學習演算法（algorithms）"
+  lightbotintl_shortdescription: "教導程式設計概念的遊戲"
   codehs_shortdescription: "與小狗 Karel 一同學習程式設計，是一個有趣的視覺化的編程入門 ！"
   codecademy_shortdescription: "透過網頁瀏覽器學習 JavaScript 程式。"
+  codecombat_shortdescription: "在這個史詩般的電腦遊戲中，打敗食人魔並學會 Python 或 JavaScript 程式語言！"
   codemonkey_shortdescription: "學生為一隻猴子編程，目標是獲得香蕉。"
   codeavengers_shortdescription: "透過網頁瀏覽器學習 JavaScript 程式。"
   processing_shortdescription: "語言處理器的一小時教程"
+  robomind_shortdescription: "為虛擬機器器人編寫程式碼"
   groklearning_shortdescription: "教聊天機器人 Eliza 捉弄你的朋友，讓他們誤以為她是人類！"
   quorum_shortdescription: "與瑪麗一同探索學習 Quorum 編程語言。"
   codespark_shortdescription: "Foos 是一個學習程式設計的遊戲，有趣且適合孩子。"
@@ -1140,7 +1165,9 @@
   codehs_longdescription: "透過指令來操作電腦，這就是編程，就像是對小狗發號施令。讓初學者能夠學習如何用程式控制 Karel 這隻小狗&mdash;透過有趣的、沒有障礙的視覺化指南，來學習純文字式的編程概念，像是指令和函式。教程內容是學生自學導向，不過教師可以註冊以獲得教師工具並追蹤學生進度！"
   codecademy_longdescription: "Codecademy 透過 JavaScript，以互動式、學生導向的方式介紹基礎的計算機科學，已經有數以千萬計、來自世界各地的學生使用它。我們已經準備了可以減少初學瓶頸的「一小時學程式」課程活動，內容有隨堂測驗、教學簡報，並給學生一個完整的專題為結束。"
   codecombat_longdescription: "在這個史詩般的電腦遊戲中，打敗食人魔並學會 Python 或 JavaScript 程式語言！"
+  codemonkey_longdescription: 'CodeMonkey 是一個線上的遊戲，用真正的程式語言教授程式碼編寫 ！學生設計程式讓一隻猴子抓住香蕉，而它在每個級別會稍微增加複雜程度。他們在解決問題時獲得星星分數並點擊一下就可以分享。'
   codeavengers_longdescription: "使用 JavaScrip 語言建立的雙人直向捲軸遊戲，共有 10 個簡短任務。當您建立一個問答遊戲與朋友分享時，能持續學習程式設計的一些基礎知識（變數和如果陳述式） 。在到達班級排行榜榜首的過程中賺取積分和徽章。"
+  processing_longdescription: "使用程式語言處理器，在視覺藝術的情境中介紹程式設計。簡短的影片課程介紹引導設計互動式繪圖程式的編寫程式碼練習"
   robomind_longdescription: '通過控制他們自己的虛擬機器人，學生可以學習編程的基礎知識。這個線上課程很完整，包含了簡報、影片、測驗與自動的指引/提示來協助編程練習。 '
   groklearning_longdescription: "使用編程語言 Python 來把名為 Eliza 的聊天機器人編程成為一個精神治療醫師。你將教導 Eliza 如何說話和說出正確的事情。她可以捉弄你的朋友，讓他們誤以為她是個人不是台電腦嗎？"
   quorum_longdescription: "本教案可供視障人士透過輔助器閱讀與瀏覽。從程式設計師的角度，與瑪麗一同探索生物學實驗室，並學習 Quorum 語言。教程包含線上示例，是學生自學式的活動。"
@@ -1172,6 +1199,7 @@
   khan_beyond_name: "學習計算機編程"
   tynker_beyond_name: "在家學習編程"
   scratch_beyond_name: "透過編程發揮創意"
+  kodable_beyond_name: "Kodable"
   scratchjr_beyond_name: "給學齡前幼童的 ScratchJR"
   hopscotch_beyond_name: 'Hopscotch：在你的 iPad 上設計程式'
   groklearning_beyond_name: "學習 Python 編程"
@@ -1187,9 +1215,11 @@
   udacity_beyond_name: "CS 101"
   teachingtree_beyond_name: "大學的線上課程"
   w3schools_beyond_name: "學習 HTML"
+  codeavengers_beyond_name: "學習網站程式設計"
   codea_beyond_name: "Codea"
   finch_beyond_name: "Finch"
   arduino_beyond_name: "Arduino 與 Sparkfun"
+  processing_beyond_name: "處理常式"
   alice_beyond_name: "Alice"
   sphero_beyond_name: "SPRK"
   codeorg_beyond_gradelevel: "年齡 4-104"
