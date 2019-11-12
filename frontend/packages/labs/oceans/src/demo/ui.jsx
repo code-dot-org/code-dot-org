@@ -53,10 +53,11 @@ const styles = {
     backgroundColor: colors.blue,
     color: colors.white
   },
-  button1col: {
+  button2col: {
     width: '20%',
-    display: 'block',
-    margin: '2% auto'
+    marginLeft: '14%',
+    marginRight: '14%',
+    marginTop: '2%'
   },
   button3col: {
     width: '20%',
@@ -361,8 +362,8 @@ Pill = Radium(Pill);
 const wordSet = {
   short: {
     text: ['What type of fish do you want to train A.I. to detect?'],
-    choices: ['Blue', 'Green', 'Red', 'Round', 'Square'],
-    style: styles.button1col
+    choices: [['Blue', 'Green', 'Red'], ['Triangle', 'Round', 'Square']],
+    style: styles.button2col
   },
   long: {
     text: [
@@ -370,21 +371,23 @@ const wordSet = {
       'Choose a new word to teach A.I.'
     ],
     choices: [
-      'Friendly',
-      'Funny',
-      'Bizarre',
-      'Shy',
-      'Glitchy',
-      'Delicious',
-      'Fun',
-      'Angry',
-      'Fast',
-      'Smart',
-      'Brave',
-      'Scary',
-      'Wild',
-      'Fierce',
-      'Tropical'
+      [
+        'Friendly',
+        'Funny',
+        'Bizarre',
+        'Shy',
+        'Glitchy',
+        'Delicious',
+        'Fun',
+        'Angry',
+        'Fast',
+        'Smart',
+        'Brave',
+        'Scary',
+        'Wild',
+        'Fierce',
+        'Tropical'
+      ]
     ],
     style: styles.button3col
   }
@@ -394,8 +397,28 @@ class Words extends React.Component {
   constructor(props) {
     super(props);
 
-    // Randomize word choices and set in state.
-    const choices = _.shuffle(wordSet[getState().appMode].choices);
+    // Randomize word choices in each set, merge the sets, and set as state.
+    const appMode = getState().appMode;
+    const appModeWordSet = wordSet[appMode].choices;
+    let choices = [];
+    let maxSize = 0;
+    // Each subset represents a different column, so merge the subsets
+    // Start by shuffling the subsets and finding the max length
+    for (var i = 0; i < appModeWordSet.length; ++i) {
+      appModeWordSet[i] = _.shuffle(appModeWordSet[i]);
+      if (appModeWordSet[i].length > maxSize) {
+        maxSize = appModeWordSet[i].length;
+      }
+    }
+    // Iterate through each subset and add those elements to choices
+    for (i = 0; i < maxSize; ++i) {
+      appModeWordSet.forEach(col => {
+        if (col[i]) {
+          choices.push(col[i]);
+        }
+      });
+    }
+
     this.state = {choices};
   }
 
