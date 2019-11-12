@@ -44,7 +44,7 @@ const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
 const SET_STAGE_EXTRAS_SCRIPT_IDS =
   'teacherDashboard/SET_STAGE_EXTRAS_SCRIPT_IDS';
 const SET_STUDENT_SECTION = 'teacherDashboard/SET_STUDENT_SECTION';
-const SET_PAGE_NAME = 'teacherDashboard/SET_PAGE_NAME';
+const SET_PAGE_TYPE = 'teacherDashboard/SET_PAGE_TYPE';
 /** Sets teacher's current authentication providers */
 const SET_AUTH_PROVIDERS = 'teacherDashboard/SET_AUTH_PROVIDERS';
 const SET_SECTIONS = 'teacherDashboard/SET_SECTIONS';
@@ -120,7 +120,7 @@ export const setStudentsForCurrentSection = (sectionId, studentInfo) => ({
   sectionId: sectionId,
   students: studentInfo
 });
-export const setPageName = pageName => ({type: SET_PAGE_NAME, pageName});
+export const setPageType = pageType => ({type: SET_PAGE_TYPE, pageType});
 
 // Enum of allowed values for pageType
 export const pageTypes = {
@@ -159,7 +159,7 @@ export const toggleSectionHidden = sectionId => (dispatch, getState) => {
  * @param {number} courseId
  * @param {number} scriptId
  */
-export const assignToSection = (sectionId, courseId, scriptId, pageName) => {
+export const assignToSection = (sectionId, courseId, scriptId, pageType) => {
   return (dispatch, getState) => {
     dispatch(beginEditingSection(sectionId, true));
     dispatch(
@@ -168,7 +168,7 @@ export const assignToSection = (sectionId, courseId, scriptId, pageName) => {
         scriptId: scriptId
       })
     );
-    return dispatch(finishEditingSection(pageName));
+    return dispatch(finishEditingSection(pageType));
   };
 };
 
@@ -429,7 +429,7 @@ const initialState = {
   // Error that occurred while loading oauth classrooms
   loadError: null,
   // The page where the action is occurring
-  pageName: ''
+  pageType: ''
 };
 
 /**
@@ -506,10 +506,10 @@ export default function teacherSections(state = initialState, action) {
     };
   }
 
-  if (action.type === SET_PAGE_NAME) {
+  if (action.type === SET_PAGE_TYPE) {
     return {
       ...state,
-      pageName: action.pageName
+      pageType: action.pageType
     };
   }
 
@@ -775,7 +775,7 @@ export default function teacherSections(state = initialState, action) {
     let assignmentData = {
       section_id: section.id,
       section_creation_timestamp: section.createdAt,
-      page_name: state.pageName
+      page_name: state.pageType
     };
     if (section.scriptId !== state.initialScriptId) {
       assignmentData.script_id = section.scriptId;
