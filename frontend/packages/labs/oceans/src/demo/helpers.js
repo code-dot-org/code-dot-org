@@ -1,8 +1,15 @@
+import _ from 'lodash';
 import queryString from 'query-string';
 import {FishBodyPart} from '../utils/fishData';
-import _ from 'lodash';
-// import {Modes} from './constants';
+import {setState} from './state';
+import {Modes} from './constants';
 // import underwaterBackground from '../../public/images/underwater-background.png';
+
+export const $time =
+  Date.now ||
+  function() {
+    return +new Date();
+  };
 
 export const backgroundPathForMode = mode => {
   // Temporarily disable background everywhere.
@@ -136,4 +143,29 @@ export const generateColorPalette = (colors, bodyIndex = null) => {
     finRgb: colors[finIndex].rgb,
     knnData: bodyColor.knnData
   };
+};
+
+export const currentRunTime = state => {
+  let t = 0;
+  if (state.isRunning) {
+    if (!state.lastStartTime) {
+      state = setState({lastStartTime: $time()});
+    }
+
+    t = $time() - state.lastStartTime;
+    if (state.currentMode === Modes.Training && t > state.moveTime) {
+      t = state.moveTime;
+    }
+  }
+
+  return t;
+};
+
+export const finishMovement = (t, pause = true) => {
+  setState({
+    isRunning: false,
+    isPaused: pause,
+    lastPauseTime: t,
+    lastStartTime: null
+  });
 };

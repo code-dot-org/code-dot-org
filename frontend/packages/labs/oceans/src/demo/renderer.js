@@ -2,7 +2,12 @@ import 'idempotent-babel-polyfill';
 import {getState, setState} from './state';
 import constants, {AppMode, Modes, ClassType} from './constants';
 import CanvasCache from './canvasCache';
-import {backgroundPathForMode} from './helpers';
+import {
+  backgroundPathForMode,
+  finishMovement,
+  currentRunTime,
+  $time
+} from './helpers';
 import {predictFish} from './models/predict';
 import {
   loadAllFishPartImages,
@@ -18,12 +23,6 @@ import aiBotX from '../../public/images/ai-bot/ai-bot-x.png';
 import redScanner from '../../public/images/ai-bot/red-scanner.png';
 import greenScanner from '../../public/images/ai-bot/green-scanner.png';
 import blueScanner from '../../public/images/ai-bot/blue-scanner.png';
-
-var $time =
-  Date.now ||
-  function() {
-    return +new Date();
-  };
 
 let prevState = {};
 let currentModeStartTime = $time();
@@ -170,31 +169,6 @@ const loadAllBotImages = async () => {
   });
 
   await Promise.all(imagePromises);
-};
-
-const currentRunTime = state => {
-  let t = 0;
-  if (state.isRunning) {
-    if (!state.lastStartTime) {
-      state = setState({lastStartTime: $time()});
-    }
-
-    t = $time() - state.lastStartTime;
-    if (state.currentMode === Modes.Training && t > state.moveTime) {
-      t = state.moveTime;
-    }
-  }
-
-  return t;
-};
-
-export const finishMovement = (t, pause = true) => {
-  setState({
-    isRunning: false,
-    isPaused: pause,
-    lastPauseTime: t,
-    lastStartTime: null
-  });
 };
 
 // Calculate the screen's current X offset.

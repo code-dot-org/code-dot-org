@@ -5,6 +5,7 @@ import _ from 'lodash';
 import {getState, setState} from './state';
 import constants, {AppMode, Modes} from './constants';
 import {toMode} from './toMode';
+import {$time, currentRunTime, finishMovement} from './helpers';
 import {onClassifyFish} from './models/train';
 import colors from './colors';
 import aiBotClosed from '../../public/images/ai-bot/ai-bot-closed.png';
@@ -276,12 +277,6 @@ function Collide(x1, y1, w1, h1, x2, y2, w2, h2) {
   return true;
 }
 
-var $time =
-  Date.now ||
-  function() {
-    return +new Date();
-  };
-
 class Body extends React.Component {
   static propTypes = {
     children: PropTypes.node,
@@ -497,11 +492,22 @@ class Predict extends React.Component {
     }
   };
 
+  onPressPlay = state => {
+    if (state.isRunning) {
+      finishMovement(state.lastPauseTime + currentRunTime(state));
+    } else {
+      setState({isRunning: true, isPaused: false});
+    }
+  };
+
   render() {
     const state = getState();
 
     return (
       <Body>
+        <Button onClick={() => this.onPressPlay(state)}>
+          {state.isRunning ? 'Pause' : 'Play'}
+        </Button>
         {!state.isRunning && !state.isPaused && (
           <Button
             style={styles.continueButton}
