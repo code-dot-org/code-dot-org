@@ -54,31 +54,9 @@ function getKeysRef() {
  * @param {function} onError
  */
 FirebaseStorage.clearAllData = function(onSuccess, onError) {
-  const projectRef = getProjectDatabase();
-  projectRef
-    .child('counters')
+  getProjectDatabase()
     .set(null)
-    .then(
-      projectRef
-        .child('current_tables')
-        .set(null)
-        .then(
-          projectRef
-            .child('metadata')
-            .set(null)
-            .then(
-              projectRef
-                .child('serverTime')
-                .set(null)
-                .then(
-                  projectRef
-                    .child('storage')
-                    .set(null)
-                    .then(onSuccess, onError)
-                )
-            )
-        )
-    );
+    .then(onSuccess, onError);
 };
 
 /**
