@@ -135,6 +135,12 @@ ca-ES:
         de la Mar** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
         ! Fés servir el corall blau i vermell per arribar al **cofre** del tresor
         ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
+      Dance_2019_05: |-
+        _Ara sí que marquem el ritme!_
+
+        Afegeix un bloc de <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"mesures"</title></block></xml> al teu espai de treball. Fés que el dansaire comenci un nou moviment després de 6 mesures.
+      Dance_2019_10: Anima't i segueix el ritme! Crea una dansa pròpia per compartir
+        amb els teus amics.
       Dance_Party_01: |-
         _Anem a fer una festa de ball!_
 
@@ -211,6 +217,14 @@ ca-ES:
         -   Afegir més tecles per controlar les danses
         -   Fer que els ballarins de reserva també responguin quan es premin les tecles
         -   Canvia el ballarí cada quatre mesures tot configurant-ne la visibilitat
+      Dance_Party_extras_battle_2019: |-
+        # Grups de dansa
+
+        Aquí tens una dansa entre dos equips. Les tecles de fletxes controlen un dels ballarins i les tecles "w, a, s, d" controlen l'altre. Balleu amb un amic i després intenteu millorar aquesta dansa poc a poc.
+
+        -   Afegir més tecles per controlar les danses
+        -   Fer que els ballarins de reserva també responguin quan es premin les tecles
+        -   Canvia el ballarí cada quatre mesures tot configurant-ne la visibilitat
       Dance_Party_extras_every_beat: |-
         # Notes negres
 
@@ -233,11 +247,23 @@ ca-ES:
         # Greus, mitjans i aguts
 
         Aquesta dansa utilitza esdeveniments "pic" per activar un codi quan diferents parts de la música fan molt soroll. Prova de jugar amb diferents cançons per veure com canvien la dansa.
+      Dance_Party_extras_on_beat_2019: |-
+        # Greus, mitjans i aguts
+
+        Aquesta dansa utilitza esdeveniments "pic" per activar un codi quan diferents parts de la música fan molt soroll. Prova de jugar amb diferents cançons per veure com canvien la dansa.
       Dance_Party_extras_speed: |-
         # Vés més ràpid, vés més lent
 
         Aquesta dansa final empra el bloc 'Configurar velocitat' per controlar la velocitat de cada ballarí en moure's. Prova d'experimentar amb diferents velocitats a diferents punts de la cançó. Segueix jugant a tocar coses d'aquesta dansa tant com vulguis, o torna a qualsevulla de les danses anteriors per fer-les encara més genials.
       Dance_Party_extras_visible: |-
+        # A on han anat?
+
+        Aquesta dansa mostra i amaga dos grups diferents de ballarins. Mira-t'ho i després prova a afegir-hi el teu estil propi.
+
+        -   Afegir un altre grup de ballarins
+        -   Mostrar i amagar els dansaires amb les tecles de fletxes
+        -   Amagar tots els ballarins i canviar a un emocionant efecte de fons
+      Dance_Party_extras_visible_2019: |-
         # A on han anat?
 
         Aquesta dansa mostra i amaga dos grups diferents de ballarins. Mira-t'ho i després prova a afegir-hi el teu estil propi.

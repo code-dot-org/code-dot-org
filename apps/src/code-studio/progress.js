@@ -26,6 +26,7 @@ import {
   queryUserProgress as reduxQueryUserProgress
 } from './progressRedux';
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
+import {setSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {queryLockStatus, renderTeacherPanel} from './teacherPanelHelpers';
 
 var progress = module.exports;
@@ -149,12 +150,17 @@ progress.renderCourseProgress = function(scriptData) {
   );
 
   store.dispatch(initializeHiddenScripts(scriptData.section_hidden_unit_info));
+  if (scriptData.sections) {
+    store.dispatch(setSections(scriptData.sections));
+  }
 
   const mountPoint = document.createElement('div');
   $('.user-stats-block').prepend(mountPoint);
   ReactDOM.render(
     <Provider store={store}>
       <ScriptOverview
+        id={scriptData.id}
+        courseId={scriptData.course_id}
         onOverviewPage={true}
         excludeCsfColumnInLegend={scriptData.excludeCsfColumnInLegend}
         teacherResources={teacherResources}
@@ -169,7 +175,7 @@ progress.renderCourseProgress = function(scriptData) {
         locale={scriptData.locale}
         showAssignButton={scriptData.show_assign_button}
         userId={scriptData.user_id}
-        sections={scriptData.sections}
+        assignedSectionId={scriptData.assigned_section_id}
       />
     </Provider>,
     mountPoint
@@ -244,9 +250,8 @@ function queryUserProgress(store, scriptData, currentLevelId) {
       (data.isTeacher || data.teacherViewingStudent) &&
       !data.professionalLearningCourse
     ) {
-      queryLockStatus(store, scriptData.id);
-
       const pageType = currentLevelId ? 'level' : 'script_overview';
+      queryLockStatus(store, scriptData.id, pageType);
       renderTeacherPanel(
         store,
         scriptData.id,

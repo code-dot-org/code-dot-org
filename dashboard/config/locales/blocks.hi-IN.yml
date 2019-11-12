@@ -584,6 +584,7 @@ hi:
             '"rotation"': आवर्तन
             '"x"': क्षैतिज स्थिति
             '"y"': लंबवत स्थिति
+            '"tint"': रंगत
       Dancelab_setPropRandom:
         text: बेतरतीब{SPRITE} {PROPERTY}
         options:
@@ -813,6 +814,8 @@ hi:
             '1': मध्य
             '2': ऊंची ध्वनि
       Dancelab_whenSetup:
+        text: सेटअप
+      Dancelab_whenSetup2:
         text: सेटअप
       gamelab_addBehaviorSimple:
         text: स्प्राइट {SPRITE} {BEHAVIOR} शुरू करता है

@@ -194,12 +194,8 @@ class ActivitiesController < ApplicationController
       end
     end
 
-    is_csf_course = @script_level.try(:script).try(:curriculum_umbrella) == 'CSF'
-    is_free_play = @level.try(:free_play) ? @level.try(:free_play).to_bool : false
-    is_validated_level = Level::TYPES_WITH_IDEAL_LEVEL_SOURCE.include?(@level.type) && @level.try(:ideal_level_source)
-    if is_csf_course && is_validated_level && !is_free_play
-      record_time_spent(@user_level)
-    end
+    time_spent = [params[:timeSinceLastMilestone].to_i, MAX_INT_MILESTONE].min
+    @user_level&.record_time_spent(time_spent)
 
     passed = ActivityConstants.passing?(test_result)
     if lines > 0 && passed
@@ -217,25 +213,6 @@ class ActivitiesController < ApplicationController
         level_source_id: @level_source_image.level_source_id,
         autosaved: true
       )
-    end
-  end
-
-  # Record the time spent on a level by creating or updating the ValidatedUserLevel table
-  # for the UserLevel for the current user, level, and script
-  def record_time_spent(user_level)
-    Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-      if user_level
-        validated_user_level = ValidatedUserLevel.find_by(
-          user_level_id: user_level.id
-        )
-      end
-
-      if validated_user_level
-        # Add past time spent to current time spent on level
-        validated_user_level.update(time_spent: [validated_user_level.time_spent + [params[:timeSinceLastMilestone].to_i, 0].max, MAX_INT_MILESTONE].min)
-      elsif user_level
-        ValidatedUserLevel.create(user_level_id: user_level.id, time_spent: [[params[:timeSinceLastMilestone].to_i, 0].max, MAX_INT_MILESTONE].min)
-      end
     end
   end
 

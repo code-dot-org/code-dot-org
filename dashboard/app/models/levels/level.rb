@@ -361,6 +361,10 @@ class Level < ActiveRecord::Base
     StarWarsGrid
   ).freeze
 
+  def validated?
+    TYPES_WITH_IDEAL_LEVEL_SOURCE.include?(type) && ideal_level_source && !try(:free_play?)
+  end
+
   def self.where_we_want_to_calculate_ideal_level_source
     where('type not in (?)', TYPES_WITHOUT_IDEAL_LEVEL_SOURCE).
     where('ideal_level_source_id is null').

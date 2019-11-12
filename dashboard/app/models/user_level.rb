@@ -32,6 +32,8 @@ class UserLevel < ActiveRecord::Base
   belongs_to :script
   belongs_to :level_source
 
+  has_one :validated_user_level
+
   after_save :after_submit, if: :submitted_or_resubmitted?
   before_save :before_unsubmit, if: ->(ul) {ul.submitted_changed? from: true, to: false}
 
@@ -106,6 +108,20 @@ class UserLevel < ActiveRecord::Base
 
   def paired?
     driver? || navigator?
+  end
+
+  def csf_validated?
+    Script.get_from_cache(script_id).csf? && Script.cache_find_level(level_id).validated?
+  end
+
+  # Record the time spent on a level by creating or updating the ValidatedUserLevel table
+  # for the UserLevel
+  def record_time_spent(time)
+    return unless time > 0 && csf_validated?
+    Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+      vul = ValidatedUserLevel.find_or_create_by!(user_level_id: id)
+      ValidatedUserLevel.update(vul.id, time_spent: vul.time_spent + time)
+    end
   end
 
   def submitted_or_resubmitted?

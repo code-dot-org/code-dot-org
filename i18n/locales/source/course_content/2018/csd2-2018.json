@@ -78,7 +78,8 @@
           "text": "https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png",
           "correct": false
         }
-      ]
+      ],
+      "markdown": "<pre>\n&lt;h3&gt; Eggs &lt;/h3&gt;\n&lt;h1&gt; Bacon &lt;/h1&gt;\n&lt;h6&gt; Waffles &lt;/h6&gt;\n</pre>\n"
     }
   },
   "https://studio.code.org/s/csd2-2018/stage/4/puzzle/6": {
@@ -160,7 +161,8 @@
         {
           "text": "https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32 AM.png"
         }
-      ]
+      ],
+      "markdown": " *Hint: Some of the HTML lists have errors, so you'll have to think about what mistakes in the code are causing the errors.*\n\n"
     }
   },
   "https://studio.code.org/s/csd2-2018/stage/6/puzzle/6": {

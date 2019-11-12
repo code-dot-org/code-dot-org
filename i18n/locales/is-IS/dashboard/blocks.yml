@@ -597,6 +597,7 @@ is:
             '"rotation"': snúningur
             '"x"': lárétt staða
             '"y"': lóðrétt staða
+            '"tint"': litur
       Dancelab_setPropRandom:
         text: handahófsstilla {SPRITE} {PROPERTY}
         options:
@@ -835,6 +836,8 @@ is:
             '1': miðhljóð
             '2': háhljóð
       Dancelab_whenSetup:
+        text: uppstilling
+      Dancelab_whenSetup2:
         text: uppstilling
       gamelab_addBehaviorSimple:
         text: vera {SPRITE} byrjar {BEHAVIOR}

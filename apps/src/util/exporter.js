@@ -12,13 +12,9 @@ import * as assetPrefix from '../assetManagement/assetPrefix';
 import exportExpoAppJsonEjs from '../templates/export/expo/app.json.ejs';
 import exportExpoPackagedFilesEjs from '../templates/export/expo/packagedFiles.js.ejs';
 import exportExpoPackagedFilesEntryEjs from '../templates/export/expo/packagedFilesEntry.js.ejs';
+import {EXPO_SDK_VERSION, PLATFORM_ANDROID} from './exporterConstants';
 
-export const EXPO_SDK_VERSION = '34.0.0';
-export const EXPO_REACT_NATIVE_WEBVIEW_VERSION = '7.2.4';
-
-export const PLATFORM_ANDROID = 'android';
-export const PLATFORM_IOS = 'ios';
-export const DEFAULT_PLATFORM = PLATFORM_ANDROID;
+const EXPO_REACT_NATIVE_WEBVIEW_VERSION = '7.2.4';
 
 export function createPackageFilesFromZip(zip, appName) {
   const moduleList = [];
