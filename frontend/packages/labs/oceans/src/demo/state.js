@@ -11,7 +11,6 @@ const initialState = {
   ctx: null,
   trainer: null,
   trainingIndex: 0,
-  iterationCount: 0,
   isRunning: false,
   runStartTime: null,
   biasTextTime: null,
