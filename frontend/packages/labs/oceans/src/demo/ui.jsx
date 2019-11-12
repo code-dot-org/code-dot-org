@@ -4,7 +4,6 @@ import Radium from 'radium';
 import _ from 'lodash';
 import {getState, setState} from './state';
 import constants, {AppMode, Modes} from './constants';
-import {getAppMode} from './helpers';
 import {toMode} from './toMode';
 import {onClassifyFish} from './models/train';
 import colors from './colors';
