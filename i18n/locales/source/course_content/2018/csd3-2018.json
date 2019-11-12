@@ -500,7 +500,8 @@
               "text": "  false<br>true<br>false",
               "correct": false
             }
-          ]
+          ],
+          "markdown": "# Boolean Expressions\n\nDecision-making on computers are based on statements called **boolean expressions**. A boolean expression is **any expression that can only evaluate to either `TRUE` or `FALSE`**. This can be particularly useful when used to compare the properties of two sprites. For example, you could figure out which one is larger or placed higher up. In the next few puzzles we'll use simple boolean expressions to compare sprite properties.\n\n# Predict\n\nRead the code below. There are some new symbols in it which you haven't been introduced to. Take a guess at what they mean and try to answer the following question\n"
         }
       }
     ]
@@ -1016,7 +1017,8 @@
               "correct": false,
               "feedback": "Functions can be created anywhere you like in your code. It is still a good idea to keep them all at the bottom for organization though!"
             }
-          ]
+          ],
+          "markdown": "# Does It Matter Where You Create Functions?\n\nSo far all your functions have been created at the bottom of your code. What do you think will happen if you call a function before it's defined?\n\nNotice that the red square is drawn **before** its function is created while the green square is drawn **after** its function is created. Which of these do you think will be drawn?\n"
         }
       }
     ]

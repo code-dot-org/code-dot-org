@@ -595,6 +595,7 @@ hu:
             '"rotation"': forgás
             '"x"': vízszintes helyzet
             '"y"': függőleges helyzet
+            '"tint"': árnyalat
       Dancelab_setPropRandom:
         text: "{SPRITE} {PROPERTY} legyen véletlenszerű"
         options:
@@ -814,6 +815,8 @@ hu:
             '1': közepes
             '2': magas
       Dancelab_whenSetup:
+        text: beállítás
+      Dancelab_whenSetup2:
         text: beállítás
       gamelab_addBehaviorSimple:
         text: szereplő {SPRITE} elkezd {BEHAVIOR}

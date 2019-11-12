@@ -4,12 +4,15 @@ es-ES:
     dsls:
       2-3 Algorithms Multi 1:
         title: "- Respuesta múltiple"
+        content1: "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
         questions:
         - text: Elige un algoritmo para esta imagen
         answers:
         - text: Comienza con un cuadrado<br/>Pon un triángulo sobre cuadrado<br/>Pon
             un triángulo debajo del cuadrado
-        - {}
+        - text: Empieza con un cuadrado<br/>Pon un triángulo a la derecha del cuadrado<br/>Pon
+            un paralelogramos debajo del cuadrado<br/>Ponun triángulo a la derecha
+            del paralelogramo
         - text: Comienza con un cuadrado <br/> Pon un paralelogramo sobre el cuadrado
             <br/> Pon un triángulo a la derecha del paralelogramo
         - text: Comienza con un cuadrado <br/> Pon un triángulo debajo del cuadrado
@@ -21,10 +24,10 @@ es-ES:
         questions:
         - text: "¿Qué imagen <em>no</em> sigue este algoritmo?"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a4.png"
       2-3 Big Event Match 1:
         title: Emparejar
         content2: Haz que coincidan las combinaciones de botones con los movimientos.
@@ -74,33 +77,34 @@ es-ES:
         title: Emparejar
         content1: Haz coincidir la cuadrícula con el programa.
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
       2-3 Graph Paper Multi 1:
         title: "- Respuesta múltiple"
+        content1: "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
         questions:
         - text: "¿Qué programa hace esta imagen?"
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
       2-3 Maze Match 2:
         title: Partida del Laberinto
         content1: Une los rompecabezas a los bloques
         pre_title: Instrucciones
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png"
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a3.png"
       2-3 Maze Multi 2:
         title: Laberinto - Opción Múltiple
         questions:
@@ -127,81 +131,91 @@ es-ES:
         - {}
         - {}
       2-3 artist debug multi 1:
+        content1: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
+          700"
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
       2-3 artist functions multi 1:
         title: Funciones del Artista - Opción Múltiple Uno
+        content1: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png,
+          500"
         questions:
         - text: Elegir los bloques correctos para dibujar esta imagen usando las funciones
             dadas
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png"
       2-3 artist loops match 1:
         content2: Haz coincidir el bucle con la figura
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png"
       2-3 artist loops multi 1:
         title: Bucles del Artista - Opción Múltiple
+        content1: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png,
+          500"
         questions:
         - text: "¿Qué figura hace este bucle?"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
       2-3 artist loops multi 2:
         title: Bucles del Artista - Opción Múltiple
+        content1: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png,
+          500"
         questions:
         - text: "¿Qué figura se forma a partir de este programa?"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
       2-3 artist match 1:
         title: Artista que coincide
         content1: Haz coincidir la figura con los bloques que la completan.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q4.png"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a4.png"
       2-3 bee conditionals multi 1:
         questions:
         - text: "¿Qué comparación de las de abajo es verdadera?"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png"
       2-3 bee conditionals multi 3:
+        content1: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png,
+          500"
         questions:
         - text: Escoge el mejor bloque.
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png"
       2-3 bee loops multi 1:
         title: Bucles de la Abeja - Opción Múltiple Uno
         questions:
@@ -215,13 +229,13 @@ es-ES:
         title: Partido Uno del Laberinto
         content1: Une los rompecabezas a los bloques
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png"
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a3.png"
       2-3 maze multi 1:
         title: Laberinto de Opción Múltiple Uno
         questions:
@@ -264,12 +278,15 @@ es-ES:
         - text: "<h3>Ruedas/lado: 2<br/>Ventanas/lado: 6</h3>"
         - text: "<h3>Ruedas/lado: 3<br/>Ventanas/lado: 2</h3>"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png"
       4-5 Computational Thinking Multi 1:
         title: "- Respuesta múltiple"
+        content1: "? Aquí hay tres frases. ¿Cuál de las plantillas que están debajo
+          abstrae correctamente de tal forma que las tres frases coincidan con el
+          mismo patrón que la plantilla?"
         questions:
         - text: Seattle es una gran ciudad. <br/> Eugene es una ciudad mediana <br/>
             Hillview es una ciudad pequeña.
@@ -283,8 +300,8 @@ es-ES:
         questions:
         - text: "¿Cual de estas imágenes representa mejor el crowdsourcing?"
         answers:
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png"
       4-5 Crowdsourcing Multi 2:
         title: "- Respuesta múltiple"
         questions:
@@ -306,6 +323,7 @@ es-ES:
         - text: El número de tarjeta de crédito de tus padres
       4-5 Internet Multi 1:
         title: "- Respuesta múltiple"
+        content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
         questions:
         - text: "¿Al intentar iniciar sesión en code.org, a qué dirección IP es más
             probable que te lleve el DNS?"
@@ -316,6 +334,7 @@ es-ES:
         - {}
       4-5 Internet Multi 2:
         title: "- Respuesta múltiple"
+        content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
         questions:
         - text: Si el DNS te lleva a la página en la dirección IP 100.42.50.110, ¿en
             qué sitio Web estás?
@@ -326,23 +345,30 @@ es-ES:
         - {}
       4-5 Songwriting Multi 1:
         title: "- Respuesta múltiple"
+        content1: "/script_assets/4-5_images/unplugged/songwriting_1_q.png"
         questions:
-        - {}
+        - text: "¿Qué trozo de esta canción puedes definir como el verso para que
+            el verso se repita exactamente la cantidad de veces que se indica?"
         answers:
         - text: Lou, Lou, saltear a mi Lou,
         - text: Lou, Lou, saltear a mi Lou, <br/>Lou, Lou, saltear a mi Lou, <br/>Lou,
             Lou, saltear a mi Lou, <br/>saltear a mi Lou, mi querida.
-        - {}
-        - {}
+        - text: Lou, Lou, a ver a mi Lou, <br/>Lou, Lou, a ver a mi Lou, <br/>Lou,
+            Lou, a ver a mi Lou, <br/>A ver a mi Lou, querida.<br/><br/><p>Moscas
+            en la mantequilla, <br/>Fuera, mosca, fuera,
+        - text: Moscas en la mantequilla, <br/>Fuera, mosca, fuera, <br/>Moscas en
+            la mantequilla, <br/>Fuera, mosca, fuera, <br/>Moscas en la mantequilla,
+            <br/>Fuera, mosca, fuera, <br/>A ver a mi Lou, querida.
       4-5 Suncatchers Match 1:
         title: Emparejar
         content1: Une cada programa a la palabra que produce, utilizando el grupo
           de habilidades provistas.
+        content2: "/script_assets/4-5_images/unplugged/suncatchers_1.png"
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a2.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a3.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png"
         answers:
         - text: "<h4>STACK</h4>"
         - text: "<h4>STAMP</h4>"
@@ -350,67 +376,77 @@ es-ES:
         - text: "<h4>RAMP</h4>"
       4-5 Suncatchers Multi 1:
         title: "- Respuesta múltiple"
+        content1: "/script_assets/4-5_images/unplugged/suncatchers_2_q.png"
         questions:
         - text: "¿Cuál de los programas de abajo <em>no</em> hacen la secuencia exacta
             que programa 1?"
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png"
       4-5 artist loops multi 1:
         title: Bucles del Artista - Opción Múltiple
+        content1: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png,
+          500"
         questions:
         - text: "¿Qué bloques crearán el diseño?"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png"
       4-5 artist multi 1:
         title: El Artista - Opción Múltiple
         questions:
         - text: "¿Qué bloques dibujan un rectángulo con un perímetro de 100?"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png"
       4-5 artist multi 2:
         title: El Artista - Opción Múltiple
         questions:
         - text: "¿Qué dibujo es simétrico?"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png"
       4-5 bee conditionals multi 1:
         title: Condicionales de la Abeja - Opción Múltiple
+        content1: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png"
+        content2: "? Una flor morada puede tener 3, 2 o 1 néctares, pero no se sabe
+          cuántos. ¿Qué bloques correctamente comprueban y recogen todo el néctar
+          de una flor morada?"
         questions:
         - text: Escoge el mejor bloque.
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png"
       4-5 bee debug multi 1:
         title: Depuración de la Abeja - Opción Múltiple
+        content1: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png"
+        content2: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png"
         questions:
         - text: "¿Qué versión de la función funcionará?"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png"
       4-5 bee loops multi 1:
         title: Bucles de la Abeja - Opción Múltiple
+        content1: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png"
         questions:
         - text: "¿Qué bloques resolverán el puzzle?"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png"
       4-5 maze conditionals multi 1:
         title: Condicionales del Laberinto - Opción Múltiple
         questions:
@@ -473,6 +509,63 @@ es-ES:
         - {}
         - {}
         - {}
+      CSD U1 Lesson 5 Overview:
+        markdown: |
+          # Resumen
+
+          En esta lección aprenderás los diferentes tipos de dispositivos de entrada y salida que utilizan los ordenadores y los tipos de información que envían y reciben.
+
+          ## Vocabulario
+
+          * ** Entrada** - Un dispositivo o componente que permite dar información a un ordenador.
+          * **Salida** - Cualquier dispositivo o componente que reciba información de un ordenador
+
+
+          ## Recursos
+
+          * [Entrada y Salida - Guía de Actividades](https://docs.google.com/document/d/1ObS_kxkXoueaotPYFAEkcCDzn690zumqoLLnrU5kY2Q/export?format=pdf)
+      CSD U1 Lesson 6 Overview:
+        markdown: |
+          # Resumen
+
+          En esta lección aprenderás cómo es utilizado el procesamiento por los humanos y los ordenadores para convertir las entradas en salidas.
+
+          ## Vocabulario
+
+          * ** Algoritmo** - Una secuencia precisa de instrucciones para procesos que pueden ser ejecutados por un ordenador.
+
+          ## Recursos
+
+          * [Algoritmo de Clasificación de Tarjetas - Guía de Actividades](https://docs.google.com/document/d/1o4kVRnXnigufkS9WsjHjeD38f8MQrX6qCEFpka-F9Oo/export?format=pdf)
+      CSD U1 Lesson 7 Overview:
+        markdown: |
+          # Resumen
+
+          En esta lección aprenderás sobre los tipos de información que almacenan los ordenadores y cómo el almacenamiento es una parte crítica del procesamiento de la información.
+
+          ## Recursos
+
+          * [Almacenamieno y Procesamiento - Guía de Actividades](https://docs.google.com/document/d/1I-OzbJizf7m5DK5jfRxDtSYtc_SoSk6vGtSM9tqlGw0/export?format=pdf)
+      CSD U1 Lesson 8 Overview:
+        markdown: |
+          # Resumen
+
+          En esta lección explorarás las formas en que las aplicaciones procesan diferentes tipos de información para resolver problemas.
+
+          ## Recursos
+
+          * [Exploración de Aplicación - Guía de Actividades](https://docs.google.com/document/d/1OW-fkwA7xeNZWiduWescL-6a6zFigtJVP7hfL1oNgVA/export?format=pdf)
+      CSD U1 Lesson 9 Overview:
+        markdown: |
+          # Resumen
+
+          Para este proyecto diseñarás tu propia aplicación que resuelva un problema que tienes que definir.
+
+          ## Recursos
+
+          * [Aplicaciones y Resolución de Problemas - Guía del Proyecto](https://docs.google.com/document/d/1S7X-B2V1-WuT7ZLk1LAZRO1O5f4u7pgth4F7G00tGak/export?format=pdf)
+          * [Aplicaciones y Resolución de Problemas - Revisión por Pares](https://docs.google.com/document/d/13ekhJvtz1vovS6FhGBeDf1mcYFRyJe65bQdi8S8T9lU/export?format=pdf)
+          * [Aplicaciones y Resolución de Problemas - Epígrafe](https://docs.google.com/document/d/1ix0LfgiVglwyC5Bb6PBlfBrnbeCOz2wPIPTgXu-qMZE/export?format=pdf)
       CSD U2 Design Project:
         title: Título
         content1: descripción aquí
@@ -485,9 +578,41 @@ es-ES:
       CSD U2 L2 Overview:
         title: Título
         content1: descripción aquí
+        markdown: |
+          # Resumen
+
+          Esta lección presenta los sitios web como un medio de expresión personal.  Primero la clase discute las diferentes maneras en que las personas expresan y comparten sus intereses e ideas y luego examina algunos ejemplos de sitios web hechos por los estudiantes de un curso anterior. Finalmente, todos comparten una lista de temas e intereses a incluir, creando un recurso para desarrollar un sitio web personal en el resto de la unidad.
+          ## Vocabulario
+
+          * **Contenido del Sitio Web** - El texto sin procesar, imágenes y otros elementos incluidos en una página web.
+
+
+          ## Recursos
+
+          * [Personal Website Sketch - Activity Guide](https://docs.google.com/document/d/1wnK0ntxFWvUyuEB6SksiTtUDqrEhZZn3VPLWynz-fV4/export?format=pdf)
       CSD U2 L3 Overview:
         title: Título
         content1: descripción aquí
+        markdown: |
+          # Resumen
+
+          Esta lección introduce el HTML como una solución al problema de cómo comunicar tanto el contenido como la estructura de un sitio web a un ordenador. La lección comienza con una breve actividad sin conexión que demuestra los desafíos de comunicar eficazmente la estructura de una página web. La clase examina una página HTML en el Laboratorio Web y discute cómo las etiquetas HTML ayudan a resolver este problema, y luego utiliza HTML para escribir las primeras páginas web de la unidad.
+
+          ## Vocabulario
+
+          * **HTML** - Lenguaje de Marcado de HiperTexto, un lenguaje utilizado para crear páginas web
+          * **HTML Element** - Una elemento de un sitio web, marcado con una etiqueta de inicio y a veces cerrada con una etiqueta final
+          * **HTML Tag** - El conjunto especial de caracteres que indica el inicio y el final de un elemento HTML y el tipo de ese elemento.
+          * **Contenido del Sitio Web** - El texto sin formato, imágenes y otros elementos incluidos en una página web
+          * **Estructura del Sitio Web** - El propósito de diferentes piezas de contenido en una página web, utilizado para ayudar a que el ordenador determine cómo se debe mostrar ese contenido.
+
+          ## Código Introducido
+
+          * **[HTML](//docs.code.org/weblab/html/)** - `<html></html>`
+          * **[Doctype](//docs.code.org/weblab/doctype/)** - `<!DOCTYPE>`
+          * **[Paragraph](//docs.code.org/weblab/P/)** - `<p></p>`
+          * **[Body](//docs.code.org/weblab/body/)** - `<body></body>`
+          * **[Head](//docs.code.org/weblab/head/)** - `<head></head>`
       CSD U2 L4 Overview:
         title: Título
         content1: descripción aquí
@@ -499,6 +624,19 @@ es-ES:
         content1: descripción aquí
       CSD U2 Lesson 6 Overview:
         content1: descripción aquí
+      CSD U2 Top Websites:
+        markdown: |
+          # Los mejores sitios web en EE.UU.
+
+          Los siguientes sitios web son los más visitados en Estados Unidos. Cada uno incluye una breve descripción de su funcionalidad principal.
+
+
+          1. Google.com - Motor de búsqueda de sitios web, imágenes, vídeos y otros medios de comunicación
+          2. Youtube.com - Sitio web de videos enviados por los usuarios con calificaciones y comentarios
+          3. Facebook.com - Red social que permite a los usuarios compartir información con sus amigos
+          4. Amazon.com - Sitios de compras en línea para todo tipo de productos
+          4. Yahoo.com - Motor de búsqueda, proveedor de correo electrónico y proveedor de noticias
+          5. Wikipedia.org - Una enciclopedia libre con contenido generado por los usuarios
       CSD U2 expand project:
         title: Título
         content1: descripción aquí
@@ -786,6 +924,14 @@ es-ES:
       CSD U3 combining rep_2018_2019:
         title: Título
         content1: descripción aquí
+      CSD U3 complex sprite movement SFLP:
+        markdown: 'La clase aprende a combinar las propiedades de velocidad de los
+          sprites con el patrón de contador para crear un movimiento de sprite más
+          complejo, como simular la gravedad, hacer que un sprite salte y permitir
+          que un sprite flote hacia la izquierda o hacia la derecha. En los niveles
+          finales, la clase combina estos movimientos para animar y controlar un solo
+          sprite y construir un juego simple en el que un personaje vuela y recoge
+          monedas. '
       CSD U3 drawSprites placement match:
         questions:
         - {}
@@ -946,6 +1092,7 @@ es-ES:
         content1: descripción aquí
       K-1 Artist 1 Multi 1:
         title: "- Respuesta múltiple"
+        content1: "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500"
         questions:
         - text: "¿Qué bloques resuelven este puzzle?"
         answers:
@@ -966,46 +1113,48 @@ es-ES:
         title: Emparejar
         content2: Relaciona las figuras de acuerdo a su tipo.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/small_circle.png"
+        - text: "/script_assets/k_1_images/artist_images/large_square.png"
+        - text: "/script_assets/k_1_images/artist_images/medium_rectangle.png"
+        - text: "/script_assets/k_1_images/artist_images/small_triangle.png"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/medium_circle.png"
+        - text: "/script_assets/k_1_images/artist_images/small_square.png"
+        - text: "/script_assets/k_1_images/artist_images/large_rectangle.png"
+        - text: "/script_assets/k_1_images/artist_images/large_triangle.png"
       K-1 Bee 1 Multi 1:
         title: "- Respuesta múltiple"
+        content1: "/script_assets/k_1_images/bee_images/1nectar+2nectar.png"
         questions:
         - text: "¿Cuánto néctar hay?"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/4nectar.png"
       K-1 Bee 1 Multi 2:
         title: "- Respuesta múltiple"
+        content1: "/script_assets/k_1_images/bee_images/2nectar+2nectar.png"
         questions:
         - text: "¿Cuánto néctar hay?"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/4nectar.png"
       K-1 Bee Loops Match 1:
         title: Emparejar
         content2: Relaciona los bloques
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/r4_gnectar.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+        - text: "/script_assets/k_1_images/bee_images/r5_ghoney.png"
+        - text: "/script_assets/k_1_images/move_blocks/r5_E.png"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/4_gnectar.png"
+        - text: "/script_assets/k_1_images/move_blocks/NNN.png"
+        - text: "/script_assets/k_1_images/bee_images/5_ghoney.png"
+        - text: "/script_assets/k_1_images/move_blocks/EEEEE.png"
       K-1 Big Event Match 1:
         title: Emparejar
         content2: Haz que coincidan las combinaciones de botones con los movimientos.
@@ -1019,96 +1168,101 @@ es-ES:
         - {}
       K-1 Digital Footprint Multi 1:
         title: "- Respuesta múltiple"
+        content1: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png"
         questions:
         - text: "¿Cuál animal deja la huella digital que lo hace <strong>más inseguro</strong>?"
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png"
       K-1 Getting Loopy Multi 1:
         title: "- Respuesta múltiple"
+        content1: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png"
         questions:
         - text: "¿Cómo simplificarías esta secuencia con bucles?"
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png"
       K-1 Happy Maps Multi 1:
         title: "- Respuesta múltiple"
+        content1: "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
         questions:
         - text: "¿Qué flecha lleva al Flurb al tesoro?"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/up.png"
+        - text: "/script_assets/k_1_images/unplugged_images/down.png"
+        - text: "/script_assets/k_1_images/unplugged_images/left.png"
+        - text: "/script_assets/k_1_images/unplugged_images/right.png"
       K-1 Keep it Private Multi 1:
         title: "- Respuesta múltiple"
         questions:
         - text: "¿Qué información <strong>no</strong> deberías compartir en línea?"
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png"
       K-1 Maze Debugging Multi 1:
         title: "- Respuesta múltiple"
         questions:
         - text: "¿Qué opción debería ser el bloque final?"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/N.png"
+        - text: "/script_assets/k_1_images/move_blocks/S.png"
+        - text: "/script_assets/k_1_images/move_blocks/E.png"
+        - text: "/script_assets/k_1_images/move_blocks/W.png"
       K-1 Maze Loops Multi 1:
         title: "- Respuesta múltiple"
         questions:
         - text: "¿Qué bloque significa lo mismo?"
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_NN.png"
+        - text: "/script_assets/k_1_images/move_blocks/r4_N.png"
       K-1 Maze Loops Multi 2:
         title: "- Respuesta múltiple"
         questions:
         - text: Elige el bloque de repetición correcto.
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/r3_S.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_ES.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_SE.png"
       K-1 Maze Match 1:
         title: Emparejar
         content2: Haz coincidir los rompecabezas y los bloques
         pre_title: Instrucciones
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/maze_images/maze_EN.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_ENE.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_WW.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_WSS.png"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/EN.png"
+        - text: "/script_assets/k_1_images/move_blocks/ENE.png"
+        - text: "/script_assets/k_1_images/move_blocks/WW.png"
+        - text: "/script_assets/k_1_images/move_blocks/WSS.png"
       K-1 Maze Multiple Choice 2:
         title: Laberinto
         questions:
         - text: "¿Qué respuesta resuelve este nivel?"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/EN.png"
+        - text: "/script_assets/k_1_images/move_blocks/ES.png"
+        - text: "/script_assets/k_1_images/move_blocks/WS.png"
+        - text: "/script_assets/k_1_images/move_blocks/WN.png"
       K-1 Move It Multi 1:
         title: "- Respuesta múltiple"
+        content1: "/script_assets/k_1_images/unplugged_images/move_it_1_q.png"
         questions:
         - text: "¿Qué algoritmo lleva al Flurb a las flores?"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/rightright.png"
+        - text: "/script_assets/k_1_images/unplugged_images/leftleft.png"
+        - text: "/script_assets/k_1_images/unplugged_images/upleft.png"
+        - text: "/script_assets/k_1_images/unplugged_images/leftdown.png"
       K-1 Plant a Seed Multi 1:
         title: "- Respuesta múltiple"
+        content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png"
         questions:
         - text: "¿Qué paso debe ir al principio de este algoritmo?"
         answers:
@@ -1117,6 +1271,7 @@ es-ES:
         - {}
       K-1 Plant a Seed Multi 2:
         title: "- Respuesta múltiple"
+        content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png"
         questions:
         - text: "¿Qué paso debe llenar el espacio en blanco para este algoritmo?"
         answers:
@@ -1128,9 +1283,9 @@ es-ES:
         questions:
         - text: ¿Cuáles bloques forman la palabra "MOVE"?
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/EEES.png"
+        - text: "/script_assets/k_1_images/move_blocks/EESS.png"
+        - text: "/script_assets/k_1_images/move_blocks/EESS.png"
       K-1 Word Search Multi 3:
         title: "- Respuesta múltiple"
         questions:
@@ -1155,6 +1310,33 @@ es-ES:
         content1: descripción aquí
       Terminology Recap:
         content1: descripción aquí
+      Unit 1 Lesson 2 Overview:
+        markdown: |
+          # Resumen
+
+          En esta lección aprenderás un proceso formal de resolución de problemas que te ayudará a estructurar tu enfoque en una amplia variedad de problemas.
+
+
+          ## Recursos
+
+          * [Proceso de Resolución de Problemas - Guía de Actividades](https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf)
+      Unit 1 Lesson 3 Overview:
+        markdown: |
+          # Resumen
+          En esta lección vamos a aplicar el proceso de resolución de problemas a varios casos para descubrir cómo cada paso te ayuda a desarrollar y mejorar las soluciones a los problemas.
+
+          ## Recursos
+
+          * [Resolución de Problemas - Guía de Actividades](https://docs.google.com/document/d/1cym5lMuy41CbvXYe7F57N2XfI6Afp0hJsHovhR0GD2M/export?format=pdf)
+      Unit 1 Lesson 4 Overview:
+        markdown: |
+          # Resumen
+
+          En esta lección comenzarás a pensar en cómo los ordenadores ayudan a resolver ciertos tipos de problemas y aprenderás las características clave de cada ordenador.
+
+          ## Recursos
+
+          * [Qué es un Ordenador - Guía de Actividades](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)
       behaviors 1 predict:
         questions:
         - text: Haga clic en el botón "editar" para ver cómo funciona el "comportamiento
@@ -1177,17 +1359,18 @@ es-ES:
           feedback: Incorrecto
       courseC_multi_artist_prog6_predict1:
         questions:
-        - {}
+        - text: Mira cuidadosamente el código. ¿Qué pasará cuando pulses "Ejecutar"?
         answers:
         - text: El artista dibujará un triángulo con tres lados iguales.
           feedback: Incorrecto. El artista dibuja un cuadrado.
         - text: El artista dibujará una sola línea.
           feedback: Incorrecto. El artista dibuja un cuadrado.
-        - {}
+        - text: El artista dibuja un cuadrado.
         - text: No lo se.
+          feedback: El artista dibuja un cuadrado.
       courseC_multi_artist_prog6_predict1_2018:
         questions:
-        - {}
+        - text: Mira cuidadosamente el código. ¿Qué pasará cuando pulses "Ejecutar"?
         answers:
         - text: El artista dibujará un triángulo con tres lados iguales.
           feedback: Incorrecto. El artista dibuja un cuadrado.
@@ -1195,9 +1378,10 @@ es-ES:
           feedback: Incorrecto. El artista dibuja un cuadrado.
         - {}
         - text: No lo se.
+          feedback: El artista dibuja un cuadrado.
       courseC_multi_artist_prog6_predict1_2018_2019:
         questions:
-        - {}
+        - text: Mira cuidadosamente el código. ¿Qué pasará cuando pulses "Ejecutar"?
         answers:
         - text: El artista dibujará un triángulo con tres lados iguales.
           feedback: Incorrecto. El artista dibuja un cuadrado.
@@ -1205,6 +1389,7 @@ es-ES:
           feedback: Incorrecto. El artista dibuja un cuadrado.
         - {}
         - text: No lo se.
+          feedback: El artista dibuja un cuadrado.
       courseC_multi_harvester_loops11_predict1:
         questions:
         - text: Mira cuidadosamente el código. ¿Cúantas calabazas recogerá el granjero
@@ -1288,51 +1473,54 @@ es-ES:
         - text: No lo se.
       courseC_multi_starWars_predict1:
         questions:
-        - {}
+        - text: ¿Qué crees que pasará cuando pulses "Ejecutar"?
         answers:
-        - {}
-        - {}
-        - {}
+        - text: BB-8 no se moverá.
+        - text: BB-8 se moverá sólo un espacio
+        - text: BB-8 se moverá 5 veces y conseguirá toda la chatarra
         - text: No lo sé
       courseC_multi_starWars_predict1_2018:
         questions:
-        - {}
+        - text: ¿Qué crees que pasará cuando pulses "Ejecutar"?
         answers:
-        - {}
-        - {}
-        - {}
+        - text: BB-8 no se moverá.
+        - text: BB-8 se moverá sólo un espacio
+        - text: BB-8 se moverá 5 veces y conseguirá toda la chatarra
         - text: No lo sé
       courseC_multi_starWars_predict1_2018_2019:
         questions:
-        - {}
+        - text: ¿Qué crees que pasará cuando pulses "Ejecutar"?
         answers:
-        - {}
-        - {}
-        - {}
+        - text: BB-8 no se moverá.
+        - text: BB-8 se moverá sólo un espacio
+        - text: BB-8 se moverá 5 veces y conseguirá toda la chatarra
         - text: No lo sé
       courseC_multi_starWars_predict2:
         questions:
-        - {}
+        - text: Mira cuidadosamente el código. ¿Qué pasará cuando pulses "Ejecutar"?
         answers:
-        - {}
-        - {}
-        - {}
+        - text: BB-8 llegará demasiado lejos en el primer bucle.
+        - text: BB-8 no llegará suficientemente lejos en el primer bucle para poder
+            coger toda la chatarra.
+        - text: BB-8 recogerá toda la chatarra sin problemas.
         - text: No lo se.
       courseC_multi_starWars_predict2_2018:
         questions:
-        - {}
+        - text: Mira cuidadosamente el código. ¿Qué pasará cuando pulses "Ejecutar"?
         answers:
-        - {}
-        - {}
-        - {}
+        - text: BB-8 llegará demasiado lejos en el primer bucle.
+        - text: BB-8 no llegará suficientemente lejos en el primer bucle para poder
+            coger toda la chatarra.
+        - text: BB-8 recogerá toda la chatarra sin problemas.
         - text: No lo se.
       courseC_multi_starWars_predict2_2018_2019:
         questions:
-        - {}
+        - text: Mira cuidadosamente el código. ¿Qué pasará cuando pulses "Ejecutar"?
         answers:
-        - {}
-        - {}
-        - {}
+        - text: BB-8 llegará demasiado lejos en el primer bucle.
+        - text: BB-8 no llegará suficientemente lejos en el primer bucle para poder
+            coger toda la chatarra.
+        - text: BB-8 recogerá toda la chatarra sin problemas.
         - text: No lo se.
       courseD_multi_artist_binary8_predict1:
         questions:
@@ -1838,27 +2026,46 @@ es-ES:
         - {}
         - {}
         - {}
+      csd-pre-survey-2017-levelgroup:
+        markdown: "# Resumen\n\nLa clase trabaja en grupos para diseñar barcos de
+          papel de aluminio que soporten la mayor cantidad de centavos posible.  Al
+          final de la lección, los grupos reflexionan sobre sus experiencias con la
+          actividad y establecen conexiones con los tipos de resolución de problemas
+          que harán durante el resto del curso. \n\n\n## Recursos\n\n* [Barcos de
+          Aluminio](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
+          - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
+          [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n"
       grade2_multi_collector_A_predict1:
         questions:
-        - {}
+        - text: Mira con atención el código. Si se ejecutara hasta el final (ignorando
+            los errores), ¿cuantas joyas recogería Laurel?
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Laurel recogerá 4 joyas con este código.
+        - text: Laurel intentará recoger una joya donde no la hay y eso provocará
+            un error.
+        - text: Laurel recogerá todas las joyas.
         - text: No lo se.
       grade2_multi_collector_A_predict1_2018:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Laurel recogerá 4 joyas con este código.
+        - text: Laurel intentará recoger una joya donde no la hay y eso provocará
+            un error.
+        - text: Laurel recogerá todas las joyas.
         - text: No lo se.
       grade2_multi_collector_A_predict1_2018_2019:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Laurel recogerá 4 joyas con este código.
+        - text: Laurel intentará recoger una joya donde no la hay y eso provocará
+            un error.
+        - text: Laurel recogerá todas las joyas.
         - text: No lo se.
+      gradek1_activity_beNice:
+        title: El ordenador es tu amigo
+        markdown: "#  Comportamiento en el Laboratorio de Computación \n\n<br/><br/>
+          \   \n    \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
+          target=\"_new\">\n<button>\nIr a la lección\n</button> \n</a>\n\n<br/><br/>\n<a
+          class=\"btn btn-large btn-primary next-stage submitButton\">Continuar</a>\n"

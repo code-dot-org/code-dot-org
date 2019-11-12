@@ -9,7 +9,8 @@ lv-LV:
         answers:
         - text: Sāc ar kvadrātu <br/> Novieto trīsstūri virs kvadrāta<br/> Novieto
             trīsstūri zem kvadrāta
-        - {}
+        - text: Sāc ar kvadrātu<br/>Novieto trijstūri pa labi no kvadrāta<br/>Noliec
+            paralelogramu zem kvadrāta<br/>Noliec trijstūri pa labi no paralelograma
         - text: Sāc ar kvadrātu<br/>Noliec paralelogramu virs kvadrāta<br/>Noliec
             trīsstūri pa labi no paralelograma
         - text: Sāc ar kvadrātu<br/>Noliec trīsstūri zem kvadrāta<br/>Noliec paralelogramu
@@ -101,7 +102,7 @@ lv-LV:
       2-3 Maze Multi 2:
         title: Labirints Vairākas izvēles
         questions:
-        - {}
+        - text: Kura bloku kombinācija aizvedīs mani pie cūkas?
         answers:
         - {}
         - {}
