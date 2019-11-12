@@ -7,7 +7,8 @@ import {getStore} from '@cdo/apps/code-studio/redux';
 import {
   setSections,
   selectSection,
-  setPageType
+  setPageType,
+  pageTypes
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import clientState from '@cdo/apps/code-studio/clientState';
 import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenStageRedux';
@@ -37,7 +38,7 @@ function showCourseOverview() {
     store.dispatch(setVerifiedResources());
   }
 
-  store.dispatch(setPageType('course_overview'));
+  store.dispatch(setPageType(pageTypes.courseOverview));
 
   store.dispatch(setUserSignedIn(getUserSignedInFromCookieAndDom()));
 

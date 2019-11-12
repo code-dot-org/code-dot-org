@@ -122,7 +122,8 @@ export const setStudentsForCurrentSection = (sectionId, studentInfo) => ({
 });
 export const setPageType = pageType => ({type: SET_PAGE_TYPE, pageType});
 
-// Enum of allowed values for pageType
+// pageType describes the current route the user is on. Used only for logging.
+// Enum of allowed values:
 export const pageTypes = {
   level: 'level',
   scriptOverview: 'script_overview',
