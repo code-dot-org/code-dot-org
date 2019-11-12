@@ -42,42 +42,43 @@ EXCLUDED_COLUMNS = [:email, :name]
 DUMP_TABLE = :contact_rollups_future
 
 def create_dump_table
-  # PEGASUS_REPORTING_DB_WRITER.schema(DUMP_TABLE)
-  # PEGASUS_REPORTING_DB_WRITER.drop_table(DUMP_TABLE)
   if PEGASUS_REPORTING_DB_WRITER.table_exists?(DUMP_TABLE)
     p "#{DUMP_TABLE} already exists"
-  else
-    PEGASUS_REPORTING_DB_WRITER.create_table DUMP_TABLE do
-      Integer :id
-      Integer :opted_out
-      Integer :dashboard_user_id
-      String :street_address, size: 1024
-      String :city
-      String :state
-      String :country
-      String :postal_code
-      String :district_name
-      String :district_city
-      String :district_state
-      String :district_zip
-      String :school_name
-      String :roles
-      String :courses_facilitated, size: 1024
-      String :professional_learning_enrolled, size: 1024
-      String :professional_learning_attended, size: 1024
-      String :hoc_organizer_years
-      String :grades_taught
-      String :ages_taught
-      Integer :email_malformed
-      String :forms_submitted, size: 4096
-      String :form_roles, size: 4096
-      Integer :opt_in
-
-      unique :id
-    end
-
-    p "Created #{DUMP_TABLE} table"
+    PEGASUS_REPORTING_DB_WRITER.drop_table(DUMP_TABLE)
+    p "Dropped table #{DUMP_TABLE}"
   end
+
+  # PEGASUS_REPORTING_DB_WRITER.schema(DUMP_TABLE)
+  PEGASUS_REPORTING_DB_WRITER.create_table DUMP_TABLE do
+    Integer :id
+    Integer :opted_out
+    Integer :dashboard_user_id
+    String :street_address, size: 1024
+    String :city
+    String :state
+    String :country
+    String :postal_code
+    String :district_name
+    String :district_city
+    String :district_state
+    String :district_zip
+    String :school_name
+    String :roles
+    String :courses_facilitated, size: 1024
+    String :professional_learning_enrolled, size: 1024
+    String :professional_learning_attended, size: 1024
+    String :hoc_organizer_years
+    String :grades_taught
+    String :ages_taught
+    Integer :email_malformed
+    String :forms_submitted, size: 4096
+    String :form_roles, size: 4096
+    Integer :opt_in
+
+    unique :id
+  end
+
+  p "Created #{DUMP_TABLE} table"
 end
 
 def compare_rows(columns, max_row_read = nil, max_row_write = nil)
@@ -118,8 +119,12 @@ def compare_rows(columns, max_row_read = nil, max_row_write = nil)
 
     if changed_columns
       diff_cnt += 1
-      PEGASUS_REPORTING_DB_WRITER[DUMP_TABLE].insert(changed_columns.except(*EXCLUDED_COLUMNS))
-      # p "Diff #{diff_cnt}: reporting_values = #{reporting_values} != production_values = #{production_values}"
+      insert_values = changed_columns.except(*EXCLUDED_COLUMNS)
+      PEGASUS_REPORTING_DB_WRITER[DUMP_TABLE].insert(insert_values)
+
+      if diff_cnt % 100 == 0
+        p "Diff #{diff_cnt}: reporting_values = #{reporting_values} != production_values = #{production_values}. insert_values = #{insert_values}"
+      end
 
       break if max_row_write && (diff_cnt == max_row_write)
     else
