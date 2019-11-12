@@ -1689,7 +1689,7 @@ class User < ActiveRecord::Base
 
   # The synchronous handler for the track_level_progress helper.
   # @return [UserLevel]
-  def self.track_level_progress(user_id:, level_id:, script_id:, new_result:, submitted:, level_source_id:, pairing_user_ids: nil, is_navigator: false)
+  def self.track_level_progress(user_id:, level_id:, script_id:, new_result:, submitted:, level_source_id:, pairing_user_ids: nil, is_navigator: false, time_spent: nil)
     new_level_completed = false
     new_csf_level_perfected = false
 
@@ -1726,6 +1726,8 @@ class User < ActiveRecord::Base
       user_level.atomic_save!
     end
 
+    user_level&.record_time_spent(time_spent)
+
     if pairing_user_ids
       pairing_user_ids.each do |navigator_user_id|
         navigator_user_level, _ = User.track_level_progress(
@@ -1736,7 +1738,8 @@ class User < ActiveRecord::Base
           submitted: submitted,
           level_source_id: level_source_id,
           pairing_user_ids: nil,
-          is_navigator: true
+          is_navigator: true,
+          time_spent: time_spent
         )
         Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
           PairedUserLevel.find_or_create_by(
