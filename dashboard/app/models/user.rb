@@ -508,14 +508,13 @@ class User < ActiveRecord::Base
   # not allowed to be admins.
   validate :enforce_google_sso_for_admin
   def enforce_google_sso_for_admin
-    if admin
-      errors.add(:admin, 'must be a migrated user') unless migrated?
+    return unless admin
+    errors.add(:admin, 'must be a migrated user') unless migrated?
 
-      google_oauth = google_oauth_authentications
-      errors.add(:admin, 'must have google_oauth2 as an authentication option') unless google_oauth&.present?
+    google_oauth = google_oauth_authentications
+    errors.add(:admin, 'must have google_oauth2 as an authentication option') unless google_oauth&.present?
 
-      errors.add(:admin, 'email must have code.org domain') unless google_oauth.any?(&:codeorg_email?)
-    end
+    errors.add(:admin, 'email must have code.org domain') unless google_oauth.any?(&:codeorg_email?)
   end
 
   def google_oauth_authentications
