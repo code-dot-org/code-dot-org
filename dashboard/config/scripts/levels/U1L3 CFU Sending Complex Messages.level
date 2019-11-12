@@ -7,7 +7,7 @@
   "properties": {
     "title": "Reflection: Sending Complex Messages",
     "placeholder": "Enter your reflection here.",
-    "long_instructions": "Recall when you built your binary message sending device. Why did we decide to send a message as a sequence of states (A and B) rather than modifying our devices to represent more states (State C, State D, State E, ...)?\r\n",
+    "long_instructions": "Recall when you built your information sending device. Why did we decide to send a message as a sequence of states (A and B) rather than modifying our devices to represent more states (State C, State D, State E, ...)?\r\n",
     "skip_dialog": true,
     "skip_sound": true,
     "submittable": "false",
@@ -22,7 +22,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-08-24 17:19:24 +0000\",\"changed\":[],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2018-08-24 17:30:45 +0000\",\"changed\":[\"encrypted_solution\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-08-01 17:48:08 +0000\",\"changed\":[\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-08-24 17:19:24 +0000\",\"changed\":[],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2018-08-24 17:30:45 +0000\",\"changed\":[\"encrypted_solution\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-08-01 17:48:08 +0000\",\"changed\":[\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-11-12 16:09:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
