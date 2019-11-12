@@ -128,10 +128,11 @@ class DataTableView extends React.Component {
   };
 
   exportCsv = () => {
+    const isCurrent =
+      this.props.tableListMap[this.props.tableName] === 'shared';
     const tableName = encodeURIComponent(this.props.tableName);
-    location.href = `/v3/export-firebase-tables/${
-      Applab.channelId
-    }/${tableName}`;
+    const channelId = isCurrent ? 'shared' : Applab.channelId;
+    location.href = `/v3/export-firebase-tables/${channelId}/${tableName}`;
   };
 
   /** Delete all rows, but preserve the columns. */
