@@ -223,7 +223,7 @@ const guides = [
     textFn: state => {
       return `Out of ${state.fishData.length} objects, A.I. identified ${
         state.totalPondFish
-      } that are ${state.word.toLowerCase()}.`;
+      } that ${state.fishData.length === 1 ? 'is' : 'are'} ${state.word.toLowerCase()}.`;
     },
     when: {
       appMode: AppMode.FishShort,
@@ -266,7 +266,7 @@ const guides = [
     textFn: state => {
       return `Out of ${state.fishData.length} objects, A.I. identified ${
         state.totalPondFish
-      } that are ${state.word.toLowerCase()}.`;
+      } that ${state.fishData.length === 1 ? 'is' : 'are'} ${state.word.toLowerCase()}.`;
     },
     when: {
       appMode: AppMode.FishLong,
