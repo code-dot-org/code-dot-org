@@ -30,7 +30,6 @@ let currentModeStartTime = $time();
 let canvasCache;
 let lastPauseTime = 0;
 let lastStartTime;
-let defaultMoveTime = 1000;
 let moveTime;
 let botImages = {};
 let botVelocity = 3;
@@ -65,9 +64,9 @@ export const render = () => {
     currentPredictedClassId = null;
 
     if (state.currentMode === Modes.Training) {
-      moveTime = defaultMoveTime / 2;
+      moveTime = constants.defaultMoveTime / 2;
     } else {
-      moveTime = defaultMoveTime;
+      moveTime = constants.defaultMoveTime;
     }
 
     if (state.currentMode === Modes.Predicting) {
