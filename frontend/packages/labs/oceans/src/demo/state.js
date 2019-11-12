@@ -13,6 +13,7 @@ const initialState = {
   trainingIndex: 0,
   isRunning: false,
   isPaused: false,
+  moveTime: 1000,
   runStartTime: null,
   biasTextTime: null,
   canSkipPredict: null,

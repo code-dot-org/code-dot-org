@@ -30,7 +30,6 @@ let currentModeStartTime = $time();
 let canvasCache;
 let lastPauseTime = 0;
 let lastStartTime;
-let moveTime;
 let botImages = {};
 let botVelocity = 3;
 let botY, botYDestination;
@@ -64,9 +63,9 @@ export const render = () => {
     currentPredictedClassId = null;
 
     if (state.currentMode === Modes.Training) {
-      moveTime = constants.defaultMoveTime / 2;
+      setState({moveTime: constants.defaultMoveTime / 2});
     } else {
-      moveTime = constants.defaultMoveTime;
+      setState({moveTime: constants.defaultMoveTime});
     }
 
     if (state.currentMode === Modes.Predicting) {
@@ -176,16 +175,16 @@ const loadAllBotImages = async () => {
   await Promise.all(imagePromises);
 };
 
-const currentRunTime = (isRunning, clampTime) => {
+const currentRunTime = state => {
   let t = 0;
-  if (isRunning) {
+  if (state.isRunning) {
     if (!lastStartTime) {
       lastStartTime = $time();
     }
 
     t = $time() - lastStartTime;
-    if (clampTime && t > moveTime) {
-      t = moveTime;
+    if (state.currentMode === Modes.Training && t > state.moveTime) {
+      t = state.moveTime;
     }
   }
 
@@ -199,15 +198,15 @@ const finishMovement = (t, pause = true) => {
 };
 
 // Calculate the screen's current X offset.
-const getOffsetForTime = (t, totalFish) => {
+const getOffsetForTime = (state, t) => {
   // Normalize the fish movement amount from 0 to 1.
-  let amount = t / moveTime;
+  let amount = t / state.moveTime;
 
   // Apply an S-curve to that amount.
   amount = amount - Math.sin(amount * 2 * Math.PI) / (2 * Math.PI);
 
   return (
-    constants.fishCanvasWidth * totalFish -
+    constants.fishCanvasWidth * state.fishData.length -
     constants.canvasWidth / 2 +
     constants.fishCanvasWidth / 2 -
     Math.round(amount * constants.fishCanvasWidth)
@@ -257,12 +256,9 @@ const getYForFish = (numFish, fishIdx, state, offsetX, predictedClassId) => {
 };
 
 const drawMovingFish = state => {
-  const runtime = currentRunTime(
-    state.isRunning,
-    state.currentMode === Modes.Training
-  );
+  const runtime = currentRunTime(state);
   const t = lastPauseTime + runtime;
-  const offsetX = getOffsetForTime(t, state.fishData.length);
+  const offsetX = getOffsetForTime(state, t);
   const maxScreenX =
     state.currentMode === Modes.Training
       ? constants.canvasWidth - 100
@@ -328,8 +324,8 @@ const drawMovingFish = state => {
       : null;
   }
 
-  if (state.currentMode === Modes.Training && runtime === moveTime) {
-    finishMovement(moveTime, false);
+  if (state.currentMode === Modes.Training && runtime === state.moveTime) {
+    finishMovement(state.moveTime, false);
   }
 };
 
