@@ -13,18 +13,12 @@ level 'CSP U1L1 SFLP 20-21', progression: 'Lesson Overview'
 level 'Computer Science is Changing Everything_2020', progression: 'Computer Science is Changing Everything'
 level 'csp_socialBelonging_control_2018', progression: 'Check For Understanding', assessment: true
 
-stage 'Sending Binary Messages'
+stage 'Representing Information'
 level 'CSP U1L2 SFLP 20-21', progression: 'Lesson Overview'
 level 'U1L3 CFU Sending Complex Messages', progression: 'Check For Understanding', assessment: true
 
-stage 'Sending Binary Messages with the Internet Simulator'
-level 'CSP U1L3 SFLP 20-21', progression: 'Lesson Overview'
-level 'CSP U1L03 NetSim', progression: 'Widget: Internet Simulator'
-level 'U1L4 Multiple Choice_2020', progression: 'Check For Understanding', assessment: true
-
 stage 'AB Patterns'
 level 'CSP U1L4 SFLP 20-21', progression: 'Lesson Overview'
-level 'CSP U1L4 CYU2', progression: 'Check For Understanding', assessment: true
 level 'CSP U1L4 CYU3', progression: 'Check For Understanding', assessment: true
 
 stage 'Binary Numbers'
@@ -34,8 +28,8 @@ level 'U1L5 CFU adding bits', progression: 'Check For Understanding', assessment
 level 'U1L5 CFU bin dec similarities', progression: 'Check For Understanding', assessment: true
 
 stage 'Overflow and Rounding'
-level 'Widget: Binary Odometer_2020', progression: 'Widget: Binary Odometer'
 level 'CSP U1L6 SFLP 20-21', progression: 'Lesson Overview'
+level 'Widget: Binary Odometer_2020', progression: 'Widget: Binary Odometer'
 level 'U1L6 CFU beyond odometer', progression: 'Check For Understanding', assessment: true
 level 'U1L6 CFU representing fractions', progression: 'Check For Understanding', assessment: true
 
@@ -94,7 +88,7 @@ stage 'Project: Digital Information Dilemmas, pt 2'
 level 'CSP U1L14 SFLP 20-21', progression: 'Lesson Overview'
 level 'U1L14 CSP CFU digital information', progression: 'Check For Understanding', assessment: true
 
-stage 'Lesson 15: Unit Assessment', lockable: true
+stage 'Lesson 14: Unit Assessment', lockable: true
 level 'CSP Unit 1 AP-Style Assessment _2020', assessment: true
 
 stage 'Unit 1 STUDENT Survey', lockable: true, flex_category: 'required'
