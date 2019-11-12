@@ -122,6 +122,15 @@ export const setStudentsForCurrentSection = (sectionId, studentInfo) => ({
 });
 export const setPageName = pageName => ({type: SET_PAGE_NAME, pageName});
 
+// Enum of allowed values for pageType
+export const pageTypes = {
+  level: 'level',
+  scriptOverview: 'script_overview',
+  courseOverview: 'course_overview',
+  stageExtras: 'stage_extras',
+  homepage: 'homepage'
+};
+
 /**
  * Set the list of sections to display.
  * @param sections
