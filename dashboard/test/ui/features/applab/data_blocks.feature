@@ -24,3 +24,21 @@ Feature: App Lab Data Blocks
     And I open the debug console
     Then I press "runButton"
     And I wait until element "#successLabel" is visible within element "#divApplab"
+
+  Scenario: Start over clears Data
+    Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/23?noautoplay=true"
+    And I rotate to landscape
+    And I wait for the page to fully load
+    And element "#runButton" is visible
+    Then I press "runButton"
+    And I wait until element "#keyValueLabel" is visible within element "#divApplab"
+    And element "#keyValueLabel" eventually contains text "success"
+    Then I press "versions-header"
+    And I wait until element "button:contains(Start over):eq(0)" is visible
+    And I click selector ".btn-danger"
+    And I click selector "#confirm-button" to load a new page
+    And I wait for the page to fully load
+    Then I add code "getKeyValue('key', function(value) {if (value === undefined) {textLabel('keyValueLabel', 'success')}});" to ace editor
+    And I press "runButton"
+    And I wait until element "#keyValueLabel" is visible within element "#divApplab"
+    And element "#keyValueLabel" eventually contains text "success"
