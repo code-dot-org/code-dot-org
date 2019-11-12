@@ -129,7 +129,7 @@ class DataTableView extends React.Component {
 
   exportCsv = () => {
     const isCurrent =
-      this.props.tableListMap[this.props.tableName] === 'shared';
+      this.props.tableListMap[this.props.tableName] === tableType.SHARED;
     const tableName = encodeURIComponent(this.props.tableName);
     const channelId = isCurrent ? 'shared' : Applab.channelId;
     location.href = `/v3/export-firebase-tables/${channelId}/${tableName}`;
@@ -177,6 +177,9 @@ class DataTableView extends React.Component {
         display: this.state.showDebugView ? '' : 'none'
       }
     ];
+    const readOnly =
+      this.props.tableListMap[this.props.tableName] === tableType.SHARED;
+
     return (
       <div id="dataTable" style={containerStyle} className="inline-flex">
         <div style={dataStyles.viewHeader}>
@@ -206,15 +209,11 @@ class DataTableView extends React.Component {
           importCsv={this.importCsv}
           exportCsv={this.exportCsv}
           tableName={this.props.tableName}
+          readOnly={readOnly}
         />
         <div style={debugDataStyle}>{this.getTableJson()}</div>
         {!this.state.showDebugView && (
-          <DataTable
-            getColumnNames={this.getColumnNames}
-            readOnly={
-              this.props.tableListMap[this.props.tableName] === tableType.SHARED
-            }
-          />
+          <DataTable getColumnNames={this.getColumnNames} readOnly={readOnly} />
         )}
       </div>
     );
