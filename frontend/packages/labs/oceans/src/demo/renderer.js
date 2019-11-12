@@ -92,7 +92,7 @@ export const render = () => {
       drawMovingFish(state);
 
       if (state.appMode === AppMode.CreaturesVTrashDemo) {
-        if (state.showBiasText) {
+        if (state.biasTextTime) {
           setState({
             canSkipPredict:
               $time() >= state.biasTextTime + timeBeforeCanSkipBiasText
@@ -315,7 +315,7 @@ const drawMovingFish = state => {
             }
             if (i === lastFishIdx && Math.abs(midScreenX - x) <= 1) {
               pauseMovement(t);
-              setState({showBiasText: true, biasTextTime: $time()});
+              setState({biasTextTime: $time()});
             }
           }
         }
