@@ -489,12 +489,20 @@ let Train = class Train extends React.Component {
 Train = Radium(Train);
 
 class Predict extends React.Component {
+  onContinue = state => {
+    if (state.appMode === AppMode.CreaturesVTrashDemo && state.onContinue) {
+      state.onContinue();
+    } else {
+      toMode(Modes.Pond);
+    }
+  };
+
   render() {
     const state = getState();
 
     return (
       <Body>
-        {!state.isRunning && !state.showBiasText && (
+        {!state.isRunning && !state.isPaused && (
           <Button
             style={styles.continueButton}
             onClick={() => setState({isRunning: true, runStartTime: $time()})}
@@ -506,13 +514,7 @@ class Predict extends React.Component {
           <Button
             style={styles.continueButton}
             onClick={() => {
-              if (state.showBiasText) {
-                if (state.onContinue) {
-                  state.onContinue();
-                }
-              } else {
-                toMode(Modes.Pond);
-              }
+              this.onContinue(state);
             }}
           >
             Continue
