@@ -22,14 +22,15 @@ const styles = {
   },
   content: {
     position: 'absolute',
-    top: '10%',
+    top: 0,
     left: 0,
     width: '100%'
   },
+  // Note that button fontSize is currently set by surrounding HTML for
+  // responsiveness.
   button: {
     cursor: 'pointer',
     backgroundColor: colors.white,
-    fontSize: '120%',
     borderRadius: 8,
     minWidth: 160,
     padding: '16px 30px',
