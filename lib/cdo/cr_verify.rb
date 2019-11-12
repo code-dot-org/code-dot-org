@@ -112,17 +112,17 @@ def compare_rows(columns, max_row_read = nil, max_row_write = nil)
     changed_columns = {}
     columns.each do |col|
       next if reporting_values[col] == production_values[col]
-      changed_columns[col] = production_row[col]
+      changed_columns[col] = production_row[col] || 'null'
       diff_col_cnt[col] ||= 0
       diff_col_cnt[col] += 1
     end
 
     if changed_columns.present?
       diff_cnt += 1
-      insert_values = changed_columns.except(*EXCLUDED_COLUMNS)
+      insert_values = changed_columns.except(*EXCLUDED_COLUMNS).merge({id: reporting_row[:id]})
 
       if insert_values.present?
-        PEGASUS_REPORTING_DB_WRITER[DUMP_TABLE].insert(insert_values.merge!({id: reporting_row[:id]}))
+        PEGASUS_REPORTING_DB_WRITER[DUMP_TABLE].insert(insert_values)
       end
 
       if diff_cnt % 1000 == 0
