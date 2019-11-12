@@ -25,14 +25,13 @@ const styles = {
     left: 0,
     width: '100%'
   },
-  // Note that button fontSize is currently set by surrounding HTML for
+  // Note that button fontSize and padding are currently set by surrounding HTML for
   // responsiveness.
   button: {
     cursor: 'pointer',
     backgroundColor: colors.white,
     borderRadius: 8,
     minWidth: 160,
-    padding: '16px 30px',
     outline: 'none',
     border: `2px solid ${colors.black}`,
     ':focus': {
@@ -311,6 +310,7 @@ class Content extends React.Component {
 
 let Button = class Button extends React.Component {
   static propTypes = {
+    className: PropTypes.string,
     style: PropTypes.object,
     children: PropTypes.node,
     onClick: PropTypes.func
@@ -325,6 +325,7 @@ let Button = class Button extends React.Component {
     return (
       <button
         type="button"
+        className={this.props.className}
         style={[styles.button, this.props.style]}
         onClick={event => this.onClick(event)}
       >
@@ -447,6 +448,7 @@ class Words extends React.Component {
           {this.state.choices.map((item, itemIndex) => (
             <Button
               key={itemIndex}
+              className="words-button"
               style={wordSet[state.appMode].style}
               onClick={() => this.onChangeWord(itemIndex)}
             >
