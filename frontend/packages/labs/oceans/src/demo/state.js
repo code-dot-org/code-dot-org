@@ -14,6 +14,8 @@ const initialState = {
   isRunning: false,
   isPaused: false,
   moveTime: 1000,
+  lastStartTime: null,
+  lastPauseTime: 0,
   runStartTime: null,
   biasTextTime: null,
   canSkipPredict: null,

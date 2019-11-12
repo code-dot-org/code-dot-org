@@ -28,8 +28,6 @@ var $time =
 let prevState = {};
 let currentModeStartTime = $time();
 let canvasCache;
-let lastPauseTime = 0;
-let lastStartTime;
 let botImages = {};
 let botVelocity = 3;
 let botY, botYDestination;
@@ -56,11 +54,10 @@ export const render = () => {
     canvasCache.clearCache();
     drawBackground(state);
     currentModeStartTime = $time();
-    lastPauseTime = 0;
-    lastStartTime = null;
     botY = null;
     botYDestination = null;
     currentPredictedClassId = null;
+    setState({lastPauseTime: 0, lastStartTime: null});
 
     if (state.currentMode === Modes.Training) {
       setState({moveTime: constants.defaultMoveTime / 2});
@@ -178,11 +175,11 @@ const loadAllBotImages = async () => {
 const currentRunTime = state => {
   let t = 0;
   if (state.isRunning) {
-    if (!lastStartTime) {
-      lastStartTime = $time();
+    if (!state.lastStartTime) {
+      state = setState({lastStartTime: $time()});
     }
 
-    t = $time() - lastStartTime;
+    t = $time() - state.lastStartTime;
     if (state.currentMode === Modes.Training && t > state.moveTime) {
       t = state.moveTime;
     }
@@ -191,10 +188,13 @@ const currentRunTime = state => {
   return t;
 };
 
-const finishMovement = (t, pause = true) => {
-  setState({isRunning: false, isPaused: pause});
-  lastPauseTime += t;
-  lastStartTime = null;
+export const finishMovement = (t, pause = true) => {
+  setState({
+    isRunning: false,
+    isPaused: pause,
+    lastPauseTime: t,
+    lastStartTime: null
+  });
 };
 
 // Calculate the screen's current X offset.
@@ -257,7 +257,7 @@ const getYForFish = (numFish, fishIdx, state, offsetX, predictedClassId) => {
 
 const drawMovingFish = state => {
   const runtime = currentRunTime(state);
-  const t = lastPauseTime + runtime;
+  const t = state.lastPauseTime + runtime;
   const offsetX = getOffsetForTime(state, t);
   const maxScreenX =
     state.currentMode === Modes.Training
@@ -325,7 +325,7 @@ const drawMovingFish = state => {
   }
 
   if (state.currentMode === Modes.Training && runtime === state.moveTime) {
-    finishMovement(state.moveTime, false);
+    finishMovement(t, false);
   }
 };
 
