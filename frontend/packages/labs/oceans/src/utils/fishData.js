@@ -906,17 +906,32 @@ const fishComponents = {
     orange: {
       rgb: [248, 151, 36],
       knnData: [248, 151, 36],
-      exclusions: [AppMode.FishShort]
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     purple: {
       rgb: [187, 115, 188],
       knnData: [187, 115, 188],
-      exclusions: [AppMode.FishShort]
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     pink: {
       rgb: [238, 142, 180],
       knnData: [238, 142, 180],
-      exclusions: [AppMode.FishShort]
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     }
   }
 };
