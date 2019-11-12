@@ -1,11 +1,7 @@
 import {assert} from 'chai';
-import {
-  compileHTML,
-  getLocations,
-  i18n
-} from '@cdo/apps/sites/code.org/pages/public/learn/local';
+import {compileHTML, getLocations, i18n} from '@cdo/apps/lib/ui/classroomMap';
 
-describe('/learn/local', () => {
+describe('classroomMap.js', () => {
   describe('getLocations()', () => {
     it("doesn't throw any errors", () => {
       const result = getLocations(SAMPLE_RESPONSE);
