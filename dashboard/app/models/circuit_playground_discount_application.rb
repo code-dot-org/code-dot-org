@@ -68,12 +68,11 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
         pd_workshops: {
           course: Pd::Workshop::COURSE_CSD,
           subject: [
-            Pd::Workshop::SUBJECT_SUMMER_WORKSHOP,
-            Pd::Workshop::SUBJECT_TEACHER_CON
+            Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
           ]
         }
       ).
-      where("pd_workshops.started_at > '2018-05-01'").
+      where("pd_workshops.started_at > '2019-05-01'").
       exists?
   end
 
