@@ -3,7 +3,7 @@ import $ from 'jquery';
 import {queryStrFor} from './helpers';
 import {initAll} from './init';
 
-let currentAppMode = queryStrFor('mode') || 'fishvtrash-instructions';
+let currentAppMode = queryStrFor('mode') || 'fishvtrash';
 let canvas, backgroundCanvas;
 
 function onLevelChange(event) {

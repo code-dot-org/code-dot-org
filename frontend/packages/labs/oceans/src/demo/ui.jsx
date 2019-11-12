@@ -65,35 +65,6 @@ const styles = {
     marginRight: '6%',
     marginTop: '2%'
   },
-  instructionsText: {
-    position: 'absolute',
-    top: '20%',
-    left: '10%',
-    width: '80%'
-  },
-  instructionsFooter: {
-    textAlign: 'center'
-  },
-  instructionsParagraph: {
-    marginTop: 18,
-    marginBottom: 18
-  },
-  instructionsDots: {
-    textAlign: 'center',
-    fontSize: 20,
-    position: 'absolute',
-    bottom: 20,
-    left: 0,
-    width: '100%'
-  },
-  activeDot: {
-    color: colors.black,
-    margin: 2
-  },
-  inactiveDot: {
-    color: colors.grey,
-    margin: 2
-  },
   activityIntroText: {
     position: 'absolute',
     fontSize: 22,
@@ -363,126 +334,6 @@ let Button = class Button extends React.Component {
   }
 };
 Button = Radium(Button);
-
-const instructionsText = {
-  fishvtrash: [
-    {
-      heading: 'Train AI to Clean the Ocean',
-      text: [
-        'In the following activity we’ll learn about artificial intelligence (AI) and machine learning.',
-        'Now let’s consider how machine learning can be used for good in the real world.',
-        '1 in 3 people worldwide do not have access to safe drinking water. Access to clean water could reduce global diseases by 10%.',
-        'Garbage dumped in ocean or rivers affects the water health and impacts the marine life in the water.',
-        'In this activity, you will "program" or "train" an artificial intelligence to identify trash to remove from the ocean.'
-      ],
-      footer:
-        'Sources <a href="https://www.cdc.gov/healthywater/global/assessing.html" target="_blank">X</a>, <a href="https://unfoundation.org/blog/post/tapping-benefits-clean-water-sanitation-hygiene-achieve-sustainable-development-goals/" target="_blank">Y</a>, <a href="https://www.unwater.org/water-facts/water-sanitation-and-hygiene/" target="_blank">Z</a>'
-    },
-    {
-      heading: 'Meet A.I.',
-      text: [
-        "A.I. can't tell if an object is a fish or a piece of trash yet, but it can process different images and identify patterns.",
-        'To program A.I., label the images we show you as either "fish" or "not fish". This will train A.I. to do it on its own!'
-      ],
-      image: aiBotClosed
-    }
-  ],
-
-  short: [
-    {
-      heading: 'Training Data',
-      text: [
-        'A.I. needs lots of training data to do its job well. When you train A.I., the data you provide can make a difference!',
-        'We learned how AI and machine learning can be used to do good things like identify trash in the ocean!',
-        'What else can we use AI to do?'
-      ]
-    },
-    {
-      heading: 'Training Data',
-      text: [
-        'AI and machine learning can also be used to give recommendations, like when a computer suggests videos to watch or products to buy.',
-        'Next, you’re going to teach A.I. a new word just by showing examples of that type of fish.'
-      ]
-    }
-  ]
-};
-
-class Instructions extends React.Component {
-  setInstructionsPage(page) {
-    setState({currentInstructionsPage: page});
-  }
-
-  onContinueButton = () => {
-    const state = getState();
-    const {onContinue, currentInstructionsPage} = state;
-    const [, appModeVariant] = getAppMode(state);
-    const numPages = instructionsText[appModeVariant].length;
-
-    if (currentInstructionsPage < numPages - 1) {
-      this.setInstructionsPage(currentInstructionsPage + 1);
-      return;
-    }
-    if (onContinue) {
-      onContinue();
-    }
-  };
-
-  render() {
-    const state = getState();
-    const currentPage = state.currentInstructionsPage;
-    const [, appModeVariant] = getAppMode(state);
-
-    return (
-      <Body>
-        <div style={styles.instructionsText}>
-          {instructionsText[appModeVariant][currentPage].text.map(
-            (instruction, index) => {
-              return (
-                <div key={index} style={styles.instructionsParagraph}>
-                  {instruction}
-                </div>
-              );
-            }
-          )}
-          {instructionsText[appModeVariant][currentPage].image && (
-            <div style={styles.instructionsFooter}>
-              <img src={instructionsText[appModeVariant][currentPage].image} />
-            </div>
-          )}
-          {instructionsText[appModeVariant][currentPage].footer && (
-            <div
-              style={styles.instructionsFooter}
-              dangerouslySetInnerHTML={{
-                __html: instructionsText[appModeVariant][currentPage].footer
-              }}
-            />
-          )}
-        </div>
-        {instructionsText[appModeVariant].length > 1 && (
-          <div style={styles.instructionsDots}>
-            {instructionsText[appModeVariant].map((instruction, index) => {
-              return (
-                <span
-                  style={
-                    index === currentPage
-                      ? styles.activeDot
-                      : styles.inactiveDot
-                  }
-                  key={index}
-                >
-                  {'\u25CF'}
-                </span>
-              );
-            })}
-          </div>
-        )}
-        <Button style={styles.continueButton} onClick={this.onContinueButton}>
-          Continue
-        </Button>
-      </Body>
-    );
-  }
-}
 
 let Pill = class Pill extends React.Component {
   static propTypes = {
@@ -850,7 +701,6 @@ export default class UI extends React.Component {
 
     return (
       <div>
-        {currentMode === Modes.Instructions && <Instructions />}
         {currentMode === Modes.Words && <Words />}
         {currentMode === Modes.Training && <Train />}
         {currentMode === Modes.Predicting && <Predict />}
