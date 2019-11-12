@@ -551,13 +551,15 @@ class Words extends React.Component {
     const appModeWordSet = wordSet[appMode].choices;
     let choices = [];
     let maxSize = 0;
-    // Each subset represents a different column, so merge the sets
+    // Each subset represents a different column, so merge the subsets
+    // Start by shuffling the subsets and finding the max length
     for (var i = 0; i < appModeWordSet.length; ++i) {
       appModeWordSet[i] = _.shuffle(appModeWordSet[i]);
       if (appModeWordSet[i].length > maxSize) {
         maxSize = appModeWordSet[i].length;
       }
     }
+    // Iterate through each subset and add those elements to choices
     for (i = 0; i < maxSize; ++i) {
       appModeWordSet.forEach(col => {
         if (col[i]) {
