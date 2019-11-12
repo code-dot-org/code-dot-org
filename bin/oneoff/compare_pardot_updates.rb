@@ -105,6 +105,9 @@ end
 # The most important constraint here is (id, email) combination in contact_rollups must never changes.
 # And newer emails inserted to the table will have higher ids.
 #
+# Output table contains only the columns that change and the original row id.
+# Other columns are NULL.
+#
 # @param columns [Array<symbol>] columns used for content comparison
 # @param pii_columns [Array<symbol>] PII columns that need special treatment
 # @param max_row_read [Integer] max number of rows to read from each input table (used for limited testing).
