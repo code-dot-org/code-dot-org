@@ -11886,6 +11886,10 @@ en:
               name: Unit 1 STUDENT Survey
             Unit 1 TEACHER Survey:
               name: Unit 1 TEACHER Survey
+            'Lesson 14: Unit Assessment':
+              name: 'Lesson 14: Unit Assessment'
+            Representing Information:
+              name: Representing Information
           title: CSP Unit 1 Pilot - Digital Information
           description_audience: ''
           description_short: ''
@@ -13598,6 +13602,66 @@ en:
             'Lesson 15: Unit 4 Assessment':
               name: 'Lesson 15: Unit 4 Assessment'
           title: Variables, Conditionals, and Functions
+          description_audience: ''
+          description_short: ''
+          description: ''
+        time4cs-control-unit-1:
+          stages:
+            Sequencing in Maze:
+              name: Sequencing in Maze
+            Programming and Loops with the Artist:
+              name: Programming and Loops with the Artist
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Conditionals in Minecraft: Voyage Aquatic'
+            Conditionals:
+              name: Conditionals
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+            Simon Says:
+              name: Simon Says
+            Learning Sprites with Sprite Lab:
+              name: Learning Sprites with Sprite Lab
+            Alien Dance Party with Sprite Lab:
+              name: Alien Dance Party with Sprite Lab
+            Private and Personal Information:
+              name: Private and Personal Information
+            About Me:
+              name: About Me
+            Access Ability:
+              name: Access Ability
+            Conditionals Review:
+              name: Conditionals Review
+            Drawing with Loops:
+              name: Drawing with Loops
+          title: Time4CS Control Unit 1
+          description_audience: ''
+          description_short: ''
+          description: ''
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Conditionals with Cards
+            Nested Loops in Bee:
+              name: Nested Loops in Bee
+            Nested Loops in Artist:
+              name: Nested Loops in Artist
+            Nested Loops in Frozen:
+              name: Nested Loops in Frozen
+            'Functions: Songwriting':
+              name: 'Functions: Songwriting'
+            Functions in Minecraft:
+              name: Functions in Minecraft
+            Functions in Harvester:
+              name: Functions in Harvester
+            Functions in Artist:
+              name: Functions in Artist
+            End of Course Project:
+              name: End of Course Project
+            Nested Loops in the Maze:
+              name: Nested Loops in the Maze
+          title: Time4CS Control Unit 2
           description_audience: ''
           description_short: ''
           description: ''
