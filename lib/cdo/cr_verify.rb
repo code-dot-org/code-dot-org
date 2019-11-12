@@ -29,6 +29,16 @@ PEGASUS_REPORTING_DB_WRITER = sequel_connect(
   query_timeout: MAX_EXECUTION_TIME_SEC
 )
 
+COMPARED_COLUMNS = [
+  :id, :email, :opted_out, :dashboard_user_id, :name, :street_address, :city, :state, :country,
+  :postal_code, :district_name, :district_city, :district_state, :district_zip, :school_name,
+  :roles, :courses_facilitated, :professional_learning_enrolled, :professional_learning_attended,
+  :hoc_organizer_years, :grades_taught, :ages_taught, :email_malformed, :forms_submitted,
+  :form_roles, :opt_in
+]
+
+EXCLUDED_COLUMNS = [:email, :name]
+
 DUMP_TABLE = :contact_rollups_future
 
 def create_dump_table
@@ -108,7 +118,7 @@ def compare_rows(columns, max_row_read = nil, max_row_write = nil)
 
     if changed_columns
       diff_cnt += 1
-      PEGASUS_REPORTING_DB_WRITER[DUMP_TABLE].insert(changed_columns)
+      PEGASUS_REPORTING_DB_WRITER[DUMP_TABLE].insert(changed_columns.except(*EXCLUDED_COLUMNS))
       # p "Diff #{diff_cnt}: reporting_values = #{reporting_values} != production_values = #{production_values}"
 
       break if max_row_write && (diff_cnt == max_row_write)
@@ -139,16 +149,7 @@ end
 
 def main
   create_dump_table
-
-  columns_to_compare = [
-    :id, :email, :opted_out, :dashboard_user_id, :name, :street_address, :city, :state, :country,
-    :postal_code, :district_name, :district_city, :district_state, :district_zip, :school_name,
-    :roles, :courses_facilitated, :professional_learning_enrolled, :professional_learning_attended,
-    :hoc_organizer_years, :grades_taught, :ages_taught, :email_malformed, :forms_submitted,
-    :form_roles, :opt_in
-  ]
-
-  compare_rows(columns_to_compare)
+  compare_rows(COMPARED_COLUMNS)
 end
 
 def test
