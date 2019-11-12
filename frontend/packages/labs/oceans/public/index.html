@@ -41,17 +41,17 @@
         border-radius: 10px;
         border: 2px solid black;
       }
-      @media screen and (max-width: 800px) {
-        button {
-          font-size: 90%;
-        }
-        #activity-intro-text {
-          font-size: 14px;
-        }
+      button {
+        font-size: 120%;
       }
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 830px) {
         button {
           font-size: 60%;
+        }
+      }
+      @media screen and (max-width: 970px) {
+        button {
+          font-size: 70%;
         }
       }
       @media screen and (max-height: 1350px) {
@@ -93,10 +93,16 @@
         #container {
           max-width: 930px;
         }
+        button {
+          font-size: 60%;
+        }
       }
       @media screen and (max-height: 630px) {
         #container {
           max-width: 770px;
+        }
+        button {
+          font-size: 70%;
         }
       }
       input[type="radio"] {
@@ -106,12 +112,6 @@
   </head>
   <body>
     <div id="level-select">
-      <input
-        type="radio"
-        class="level-radio"
-        name="level-radio"
-        id="fishvtrash-instructions"
-      />
       <input
         type="radio"
         class="level-radio"
@@ -129,12 +129,6 @@
         class="level-radio"
         name="level-radio"
         id="creaturesvtrash"
-      />
-      <input
-        type="radio"
-        class="level-radio"
-        name="level-radio"
-        id="short-instructions"
       />
       <input type="radio" class="level-radio" name="level-radio" id="short" />
       <input type="radio" class="level-radio" name="level-radio" id="long" />
