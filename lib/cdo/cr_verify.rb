@@ -112,7 +112,7 @@ def compare_rows(columns, max_row_read = nil, max_row_write = nil)
     changed_columns = {}
     columns.each do |col|
       next if reporting_values[col] == production_values[col]
-      changed_columns[col] = production_values[col]
+      changed_columns[col] = production_row[col]
       diff_col_cnt[col] ||= 0
       diff_col_cnt[col] += 1
     end
