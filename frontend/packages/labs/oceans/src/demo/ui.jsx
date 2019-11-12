@@ -565,7 +565,7 @@ class Words extends React.Component {
         }
       });
     }
-    
+
     this.state = {choices};
   }
 
