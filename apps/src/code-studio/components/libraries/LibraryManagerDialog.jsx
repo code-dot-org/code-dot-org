@@ -183,14 +183,19 @@ export default class LibraryManagerDialog extends React.Component {
     this.setState({viewingLibrary: library, isViewingCode: true});
   };
 
+  closeLibraryManager = () => {
+    this.setState({cachedClassLibraries: []});
+    this.props.onClose();
+  };
+
   render() {
-    let {isOpen, onClose} = this.props;
+    let {isOpen} = this.props;
     let {isViewingCode, importLibraryId, viewingLibrary} = this.state;
     return (
       <div>
         <BaseDialog
           isOpen={isOpen}
-          handleClose={onClose}
+          handleClose={this.closeLibraryManager}
           style={isViewingCode ? styles.hidden : {}}
           useUpdatedStyles
         >
