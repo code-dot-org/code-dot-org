@@ -1,0 +1,53 @@
+#!/usr/bin/env ruby
+
+#
+# Script to remove all authentication options other than Google SSO from admin
+# users
+#
+
+require_relative '../../../dashboard/config/environment'
+
+File.readlines(ARGV[0]).each do |line|
+  id = line.to_i
+  user = User.find_by_id(id)
+  if user.nil?
+    puts("user #{id} - ERROR - does not exist")
+    next
+  end
+
+  unless user.admin
+    puts("user #{id} - ERROR - is not admin")
+    next
+  end
+
+  cdo_sso_options = user.
+    authentication_options.
+    where(credential_type: "google_oauth2").
+    where("email LIKE ?", '%@code.org')
+  if cdo_sso_options.count > 1
+    puts("user #{id} - ERROR - multiple code.org SSO options")
+    next
+  elsif cdo_sso_options.count == 0
+    puts("user #{id} - ERROR - no code.org SSO options")
+    next
+  end
+
+  cdo_sso_option = cdo_sso_options.first
+  if user.primary_contact_info != cdo_sso_option
+    user.primary_contact_info = cdo_sso_option
+    user.save!
+  end
+
+  user.authentication_options.each do |ao|
+    next if ao == cdo_sso_option
+    ao.destroy
+  end
+
+  if user.authentication_options.count > 1
+    puts("user #{id} - ERROR - still has multiple authentication options")
+  else
+    puts("user #{id} - success")
+  end
+rescue
+  puts("user #{id} - ERROR - other")
+end
