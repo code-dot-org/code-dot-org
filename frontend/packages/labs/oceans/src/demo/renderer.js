@@ -192,15 +192,9 @@ const currentRunTime = (isRunning, clampTime) => {
   return t;
 };
 
-const finishMovement = () => {
-  setState({isRunning: false});
-  lastPauseTime += moveTime;
-  lastStartTime = null;
-};
-
-const pauseMovement = t => {
-  setState({isRunning: false, isPaused: true});
-  lastPauseTime = t;
+const finishMovement = (t, pause = true) => {
+  setState({isRunning: false, isPaused: pause});
+  lastPauseTime += t;
   lastStartTime = null;
 };
 
@@ -313,7 +307,7 @@ const drawMovingFish = state => {
               fish.result.predictedClassId = 1;
             }
             if (i === lastFishIdx && Math.abs(midScreenX - x) <= 1) {
-              pauseMovement(t);
+              finishMovement(t);
               setState({biasTextTime: $time()});
             }
           }
@@ -335,7 +329,7 @@ const drawMovingFish = state => {
   }
 
   if (state.currentMode === Modes.Training && runtime === moveTime) {
-    finishMovement();
+    finishMovement(moveTime, false);
   }
 };
 
