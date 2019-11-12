@@ -4,6 +4,7 @@ import React from 'react';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
 import LibraryListItem from '@cdo/apps/code-studio/components/libraries/LibraryListItem';
+import LibraryViewCode from '@cdo/apps/code-studio/components/libraries/LibraryViewCode';
 import libraryParser from './libraryParser';
 import color from '@cdo/apps/util/color';
 
@@ -53,7 +54,9 @@ export default class LibraryManagerDialog extends React.Component {
   state = {
     importLibraryId: '',
     libraries: [],
-    classLibraries: []
+    classLibraries: [],
+    viewingLibrary: {},
+    viewingCode: false
   };
 
   componentDidUpdate(prevProps) {
@@ -113,6 +116,10 @@ export default class LibraryManagerDialog extends React.Component {
     this.setState({libraries: dashboard.project.getProjectLibraries()});
   };
 
+  viewCode = library => {
+    this.setState({viewingLibrary: library, viewingCode: true});
+  };
+
   displayProjectLibraries = () => {
     let libraries = this.state.libraries;
     if (!Array.isArray(libraries) || !libraries.length) {
@@ -130,6 +137,7 @@ export default class LibraryManagerDialog extends React.Component {
           library={library}
           onRefresh={undefined}
           onRemove={this.removeLibrary}
+          onViewCode={() => this.viewCode(library)}
         />
       );
     });
@@ -151,6 +159,7 @@ export default class LibraryManagerDialog extends React.Component {
           key={library.channel}
           library={library}
           onAdd={() => this.addLibrary(library.channel)}
+          onViewCode={() => console.log('VIEWED CODE!!')}
         />
       );
     });
@@ -158,32 +167,40 @@ export default class LibraryManagerDialog extends React.Component {
 
   render() {
     return (
-      <BaseDialog
-        isOpen={this.props.isOpen}
-        handleClose={this.props.onClose}
-        useUpdatedStyles
-      >
-        <div style={styles.header}>Manage libraries in this project</div>
-        <div style={styles.libraryList}>{this.displayProjectLibraries()}</div>
-        <div style={styles.header}>Import library from my class</div>
-        <div style={styles.libraryList}>{this.displayClassLibraries()}</div>
-        <div style={styles.header}>Import library from ID</div>
-        <div style={styles.inputParent}>
-          <input
-            style={styles.linkBox}
-            type="text"
-            value={this.state.importLibraryId}
-            onChange={this.setLibraryToImport}
-          />
-          <button
-            style={styles.add}
-            onClick={() => this.addLibrary(this.state.importLibraryId)}
-            type="button"
-          >
-            Add
-          </button>
-        </div>
-      </BaseDialog>
+      <div>
+        <BaseDialog
+          isOpen={this.props.isOpen}
+          handleClose={this.props.onClose}
+          useUpdatedStyles
+        >
+          <div style={styles.header}>Manage libraries in this project</div>
+          <div style={styles.libraryList}>{this.displayProjectLibraries()}</div>
+          <div style={styles.header}>Import library from my class</div>
+          <div style={styles.libraryList}>{this.displayClassLibraries()}</div>
+          <div style={styles.header}>Import library from ID</div>
+          <div style={styles.inputParent}>
+            <input
+              style={styles.linkBox}
+              type="text"
+              value={this.state.importLibraryId}
+              onChange={this.setLibraryToImport}
+            />
+            <button
+              style={styles.add}
+              onClick={() => this.addLibrary(this.state.importLibraryId)}
+              type="button"
+            >
+              Add
+            </button>
+          </div>
+        </BaseDialog>
+        <LibraryViewCode
+          isOpen={this.state.viewingCode}
+          onClose={() => this.setState({viewingCode: false})}
+          library={this.state.viewingLibrary}
+          onAdd={() => console.log('added!')}
+        />
+      </div>
     );
   }
 }
