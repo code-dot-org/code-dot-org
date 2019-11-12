@@ -42,6 +42,9 @@ const styles = {
   },
   add: {
     margin: DEFAULT_MARGIN
+  },
+  hidden: {
+    visibility: 'hidden'
   }
 };
 
@@ -55,8 +58,9 @@ export default class LibraryManagerDialog extends React.Component {
     importLibraryId: '',
     libraries: [],
     classLibraries: [],
+    cachedClassLibraries: [],
     viewingLibrary: {},
-    viewingCode: false
+    isViewingCode: false
   };
 
   componentDidUpdate(prevProps) {
@@ -77,33 +81,43 @@ export default class LibraryManagerDialog extends React.Component {
     this.setState({importLibraryId: event.target.value});
   };
 
-  importLibrary = (channelId, versionId) => {
-    // TODO: Check for naming collisions between libraries.
-    let libraryClient = new LibraryClientApi(channelId);
-    libraryClient.fetchByVersion(
-      versionId,
-      data => {
-        let updatedjson = libraryParser.prepareLibraryForImport(
-          data,
-          channelId,
-          versionId
-        );
-        dashboard.project.setProjectLibraries([
-          ...this.state.libraries,
-          updatedjson
-        ]);
-        this.setState({libraries: dashboard.project.getProjectLibraries()});
-      },
-      error => {
-        console.log('ERROR: ' + error);
-      }
-    );
+  addLibraryToProject = libraryJson => {
+    dashboard.project.setProjectLibraries([
+      ...this.state.libraries,
+      libraryJson
+    ]);
+    this.setState({libraries: dashboard.project.getProjectLibraries()});
   };
 
-  addLibrary = channelId => {
+  fetchLatestLibrary = (channelId, callback) => {
+    let {cachedClassLibraries} = this.state;
+    let cachedLibrary = cachedClassLibraries.find(
+      library => library.channelId === channelId
+    );
+    if (cachedLibrary) {
+      callback(cachedLibrary);
+      return;
+    }
     let libraryClient = new LibraryClientApi(channelId);
     libraryClient.fetchLatestVersionId(versionId =>
-      this.importLibrary(channelId, versionId)
+      // TODO: Check for naming collisions between libraries.
+      libraryClient.fetchByVersion(
+        versionId,
+        data => {
+          let updatedjson = libraryParser.prepareLibraryForImport(
+            data,
+            channelId,
+            versionId
+          );
+          this.setState({
+            cachedClassLibraries: [...cachedClassLibraries, updatedjson]
+          });
+          callback(updatedjson);
+        },
+        error => {
+          console.log('ERROR: ' + error);
+        }
+      )
     );
   };
 
@@ -116,12 +130,8 @@ export default class LibraryManagerDialog extends React.Component {
     this.setState({libraries: dashboard.project.getProjectLibraries()});
   };
 
-  viewCode = library => {
-    this.setState({viewingLibrary: library, viewingCode: true});
-  };
-
   displayProjectLibraries = () => {
-    let libraries = this.state.libraries;
+    let {libraries} = this.state;
     if (!Array.isArray(libraries) || !libraries.length) {
       return (
         <div style={styles.message}>
@@ -144,7 +154,7 @@ export default class LibraryManagerDialog extends React.Component {
   };
 
   displayClassLibraries = () => {
-    let classLibraries = this.state.classLibraries;
+    let {classLibraries} = this.state;
     if (!Array.isArray(classLibraries) || !classLibraries.length) {
       return (
         <div style={styles.message}>
@@ -158,19 +168,30 @@ export default class LibraryManagerDialog extends React.Component {
         <LibraryListItem
           key={library.channel}
           library={library}
-          onAdd={() => this.addLibrary(library.channel)}
-          onViewCode={() => console.log('VIEWED CODE!!')}
+          onAdd={() =>
+            this.fetchLatestLibrary(library.channel, this.addLibraryToProject)
+          }
+          onViewCode={() =>
+            this.fetchLatestLibrary(library.channel, this.viewCode)
+          }
         />
       );
     });
   };
 
+  viewCode = library => {
+    this.setState({viewingLibrary: library, isViewingCode: true});
+  };
+
   render() {
+    let {isOpen, onClose} = this.props;
+    let {isViewingCode, importLibraryId, viewingLibrary} = this.state;
     return (
       <div>
         <BaseDialog
-          isOpen={this.props.isOpen}
-          handleClose={this.props.onClose}
+          isOpen={isOpen}
+          handleClose={onClose}
+          style={isViewingCode ? styles.hidden : {}}
           useUpdatedStyles
         >
           <div style={styles.header}>Manage libraries in this project</div>
@@ -182,12 +203,17 @@ export default class LibraryManagerDialog extends React.Component {
             <input
               style={styles.linkBox}
               type="text"
-              value={this.state.importLibraryId}
+              value={importLibraryId}
               onChange={this.setLibraryToImport}
             />
             <button
               style={styles.add}
-              onClick={() => this.addLibrary(this.state.importLibraryId)}
+              onClick={() =>
+                this.fetchLatestLibrary(
+                  importLibraryId,
+                  this.addLibraryToProject
+                )
+              }
               type="button"
             >
               Add
@@ -195,10 +221,9 @@ export default class LibraryManagerDialog extends React.Component {
           </div>
         </BaseDialog>
         <LibraryViewCode
-          isOpen={this.state.viewingCode}
-          onClose={() => this.setState({viewingCode: false})}
-          library={this.state.viewingLibrary}
-          onAdd={() => console.log('added!')}
+          isOpen={isViewingCode}
+          onClose={() => this.setState({isViewingCode: false})}
+          library={viewingLibrary}
         />
       </div>
     );
