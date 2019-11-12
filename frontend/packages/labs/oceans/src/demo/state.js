@@ -14,6 +14,7 @@ const initialState = {
   iterationCount: 0,
   isRunning: false,
   runStartTime: null,
+  biasTextTime: null,
   canSkipPredict: null,
   canSeePondText: null,
   canSkipPond: null,
