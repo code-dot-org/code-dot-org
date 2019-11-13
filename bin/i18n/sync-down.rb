@@ -7,9 +7,14 @@
 require_relative 'i18n_script_utils'
 
 def sync_down
-  system "crowdin --config #{CODEORG_CONFIG_FILE} --identity #{CODEORG_IDENTITY_FILE} download translations"
-  system "crowdin --config #{CODEORG_MARKDOWN_CONFIG_FILE} --identity #{CODEORG_MARKDOWN_IDENTITY_FILE} download translations"
-  system "crowdin --config #{HOUROFCODE_CONFIG_FILE} --identity #{HOUROFCODE_IDENTITY_FILE} download translations"
+  puts "Beginning sync down"
+
+  CROWDIN_PROJECTS.each do |name, options|
+    puts "Downloading translations from #{name} project"
+    system "crowdin --config #{options[:config_file]} --identity #{options[:identity_file]} download translations"
+  end
+
+  puts "Sync down complete"
 end
 
 sync_down if __FILE__ == $0
