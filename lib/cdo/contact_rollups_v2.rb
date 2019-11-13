@@ -51,12 +51,12 @@ class ContactRollupsV2
         primary_key :id
         String :email, null: false
         String :source_table, null: false
-        String :data
+        column :data, 'json'
         Date :data_date, null: false
         DateTime :created_at, null: false
 
         index :email
-        index [:source_table, :data_date]
+        index :data_date
         unique [:email, :source_table, :data_date]
       end
       puts "created crv2_daily table"
@@ -72,8 +72,8 @@ class ContactRollupsV2
       PEGASUS_DB_WRITER.create_table :crv2_all do
         primary_key :id
         String :email, null: false
-        String :data_final
-        String :data
+        column :data, 'json'
+        column :data_final, 'json'
         DateTime :data_date, null: false
         Integer :pardot_id
         DateTime :pardot_sync_at
@@ -88,6 +88,11 @@ class ContactRollupsV2
     # TODO: Create tracker tables:
     # Job tracker: What runs, when, result
     # Data tracker: table, data_package, date added, date last updated, number of updates
+  end
+
+  def self.drop_tables
+    PEGASUS_DB_WRITER.drop_table(:crv2_daily)
+    PEGASUS_DB_WRITER.drop_table(:crv2_all)
   end
 
   def self.empty_tables
@@ -203,50 +208,75 @@ class ContactRollupsV2
   end
 
   def self.update_data_to_crv2_all
-    unless PEGASUS_DB_WRITER[:crv2_daily].first
+    if PEGASUS_DB_WRITER[:crv2_daily].empty?
       puts "crv2_daily is empty. stop processing"
       return
     end
 
-    # find all packages to insert. Each daily package is defined by source_table and data_date
-    # TODO: collapse daily data? Each data package is defined only by data_date
-    package_query = <<-SQL.squish
-      select distinct source_table, data_date
+    # Each data package is defined only by data_date
+    daily_data_query = <<-SQL.squish
+      select distinct data_date
       from crv2_daily
-      order by data_date, source_table
+      order by data_date
     SQL
 
-    PEGASUS_DB_WRITER[package_query].each do |row|
-      source_table, data_date = row.values_at(:source_table, :data_date)
-      update_daily_data_to_crv2_all source_table, data_date
+    PEGASUS_DB_WRITER[daily_data_query].each do |row|
+      update_daily_data_to_crv2_all row[:data_date]
+      # puts "process only 1 package"; break  # TODO: remove
     end
   end
 
-  # TODO: WIP
-  def self.update_daily_data_to_crv2_all(source_table, data_date)
+  def self.update_daily_data_to_crv2_all(data_date)
     puts "_____update_daily_data_to_crv2_all_____"
-    puts "source_table = #{source_table}; data_date = #{data_date}"
+    puts "data_date = #{data_date}"
 
+    # Collapse daily data
     data_to_insert_query = <<-SQL.squish
-      select * from crv2_daily
-      where source_table = '#{source_table}' and data_date = '#{data_date}'
+      select email, json_objectagg(source_table, data) as data
+      from crv2_daily
+      where data_date = '#{data_date}'
+      group by email
     SQL
     p data_to_insert_query
 
+    data_to_insert = PEGASUS_DB_WRITER[data_to_insert_query]
+    puts "Inserting/updating #{data_to_insert.count} rows to crv2_all"
+
+    data_to_insert.each do |row|
+      email, data = row.values_at(:email, :data)
+      current_time = Time.now
+
+      dest = PEGASUS_DB_WRITER[:crv2_all].where(email: email).first
+      if dest
+        old_data = JSON.parse(dest[:data])
+        new_data = old_data.merge(JSON.parse(data))
+
+        if old_data == new_data
+          puts "No data change for #{email}"
+        else
+          update_values = {data: new_data.to_json, updated_at: current_time}
+          PEGASUS_DB_WRITER[:crv2_all].where(email: email).update(update_values)
+
+          puts "Updated data for #{email}. Old data: #{dest[:data]}. New data: #{new_data.to_json}"
+        end
+      else
+        insert_values = {
+          email: email,
+          data: data,
+          data_date: data_date,
+          created_at: current_time,
+          updated_at: current_time
+        }
+        PEGASUS_DB_WRITER[:crv2_all].insert(insert_values)
+
+        puts "Inserted #{email} into crv2_all"
+      end
+    end
+
+    # Consider SQL approach:
     # crv2_daily left outer join to crv2_all on email
     # merge crv2_daily.data & crv2_all.data
     # update crv2_all.data
-
-    # join_query = <<-SQL.squish
-    #   select crv2_daily.email, crv2_daily.data, crv2_all.data as crv2_all_data
-    #   from crv2_daily
-    #   left outer join crv2_all
-    #   on crv2_daily.email = crv2_all.email
-    # SQL
-    #
-    # PEGASUS_DB_WRITER[join_query].to_a
-    # PEGASUS_DB_WRITER[:crv2_daily].left_outer_join(:crv2_all, email: :email).sql
-    # PEGASUS_DB_WRITER[:crv2_daily].join(:crv2_all, email: :email).sql
   end
 
   def self.sync_to_pardot
@@ -279,10 +309,11 @@ class ContactRollupsV2
   end
 
   def self.test
-    create_tables
-    empty_tables
-    collect_data_to_crv2_daily
-    # update_data_to_crv2_all
+    # drop_tables
+    # create_tables
+    # empty_tables
+    # collect_data_to_crv2_daily
+    update_data_to_crv2_all
     count_table_rows
     nil
   end
