@@ -13,6 +13,7 @@ import {
   setFlexCategory
 } from './editorRedux';
 import FlexCategorySelector from './FlexCategorySelector';
+import color from '../../util/color';
 
 const styles = {
   checkbox: {
@@ -21,7 +22,9 @@ const styles = {
   stageCard: {
     fontSize: 18,
     background: 'white',
-    border: '1px solid #ccc',
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: '#ccc',
     borderRadius: borderRadius,
     padding: 20,
     margin: 10
@@ -44,6 +47,13 @@ const styles = {
     boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.8)',
     margin: '0 5px 0 0'
   }
+};
+
+styles.targetStageCard = {
+  ...styles.stageCard,
+  borderWidth: 5,
+  borderColor: color.cyan,
+  padding: 16
 };
 
 export class UnconnectedStageCard extends Component {
@@ -150,6 +160,7 @@ export class UnconnectedStageCard extends Component {
         targetStagePos
       );
     }
+    this.props.setTargetStage(null);
 
     this.setState({drag: null, newPosition: null, currentPositions: []});
     window.removeEventListener('selectstart', this.preventSelect);
@@ -190,9 +201,10 @@ export class UnconnectedStageCard extends Component {
   }
 
   render() {
-    const {stage} = this.props;
+    const {stage, targetStagePos} = this.props;
+    const isTargetStage = targetStagePos === stage.position;
     return (
-      <div style={styles.stageCard}>
+      <div style={isTargetStage ? styles.targetStageCard : styles.stageCard}>
         <div style={styles.stageCardHeader}>
           {!stage.lockable && (
             <span>Stage {stage.relativePosition}:&nbsp;</span>
