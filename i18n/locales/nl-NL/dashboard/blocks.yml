@@ -680,6 +680,25 @@ nl:
             '"x"': horizontale positie
             '"y"': verticale positie
             '"direction"': bewegingsrichting
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"hearts_colorful"': Hartjes
+            '"diamond"': diamant
+            '"s"': s
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenKey:
         text: als {KEY} ingedrukt
         options:
