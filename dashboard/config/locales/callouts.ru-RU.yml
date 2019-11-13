@@ -159,8 +159,6 @@ ru-RU:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Новый блок!
         dance_callout_11_b: Новый блок!
-      Dance_2019_01:
-        dance_callout_01: Добавьте этот блок в вашу программу!
       Dance_2019_04:
         dance_callout_02: Добавьте этот блок в вашу программу!
       Dance_2019_06:
@@ -168,7 +166,8 @@ ru-RU:
       Dance_2019_07:
         setprop_hint: Новый блок!
       Dance_2019_09:
-        new_block_1: Новый блок!
+        new_block_3: Новый блок!
+        new_block_4: Новый блок!
       Dance_Party_01:
         dance_callout_01: Добавьте этот блок в вашу программу!
       Dance_Party_02:
