@@ -61,7 +61,9 @@ class FlexGroup extends Component {
   };
 
   state = {
-    addingFlexCategory: false
+    addingFlexCategory: false,
+    // Which stage a level is currently being dragged to.
+    targetStagePos: null
   };
 
   handleAddFlexCategory = () => {
@@ -84,6 +86,10 @@ class FlexGroup extends Component {
 
   handleAddStage = position => {
     this.props.addStage(position, prompt('Enter new stage name'));
+  };
+
+  setTargetStage = targetStagePos => {
+    this.setState({targetStagePos});
   };
 
   /**
@@ -202,6 +208,8 @@ class FlexGroup extends Component {
                       }
                     }}
                     stageMetrics={this.stageMetrics}
+                    setTargetStage={this.setTargetStage}
+                    targetStagePos={this.state.targetStagePos}
                   />
                 );
               })}

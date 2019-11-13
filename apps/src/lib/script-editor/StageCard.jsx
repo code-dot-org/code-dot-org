@@ -55,7 +55,9 @@ export class UnconnectedStageCard extends Component {
     stagesCount: PropTypes.number.isRequired,
     stage: PropTypes.object.isRequired,
     stageMetrics: PropTypes.object.isRequired,
-    setFlexCategory: PropTypes.func.isRequired
+    setFlexCategory: PropTypes.func.isRequired,
+    setTargetStage: PropTypes.func.isRequired,
+    targetStagePos: PropTypes.number
   };
 
   /**
@@ -92,7 +94,7 @@ export class UnconnectedStageCard extends Component {
     window.addEventListener('mouseup', this.handleDragStop);
   };
 
-  handleDrag = ({pageY}) => {
+  handleDrag = ({pageY, y}) => {
     const scrollDelta = document.body.scrollTop - this.state.initialScroll;
     const delta = pageY - this.state.initialPageY;
     const dragPosition = this.metrics[this.state.drag].top + scrollDelta;
@@ -118,6 +120,8 @@ export class UnconnectedStageCard extends Component {
       }
     );
     this.setState({currentPositions, newPosition});
+    const targetStagePos = this.getTargetStage(y);
+    this.props.setTargetStage(targetStagePos);
   };
 
   getTargetStage = y => {
@@ -129,10 +133,9 @@ export class UnconnectedStageCard extends Component {
     return stagePos ? Number(stagePos) : null;
   };
 
-  handleDragStop = ({y}) => {
-    const {stage} = this.props;
-    const newStagePos = this.getTargetStage(y);
-    if (newStagePos === stage.position) {
+  handleDragStop = () => {
+    const {stage, targetStagePos} = this.props;
+    if (targetStagePos === stage.position) {
       if (this.state.drag !== this.state.newPosition) {
         this.props.reorderLevel(
           stage.position,
@@ -140,8 +143,12 @@ export class UnconnectedStageCard extends Component {
           this.state.newPosition
         );
       }
-    } else if (newStagePos) {
-      this.props.moveLevelToStage(stage.position, this.state.drag, newStagePos);
+    } else if (targetStagePos) {
+      this.props.moveLevelToStage(
+        stage.position,
+        this.state.drag,
+        targetStagePos
+      );
     }
 
     this.setState({drag: null, newPosition: null, currentPositions: []});
