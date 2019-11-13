@@ -119,8 +119,9 @@ class UserLevel < ActiveRecord::Base
   def record_time_spent(time)
     return unless time > 0 && csf_validated?
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-      vul = ValidatedUserLevel.find_or_create_by!(user_level_id: id)
-      ValidatedUserLevel.update(vul.id, time_spent: vul.time_spent + time)
+      vul = ValidatedUserLevel.find_or_initialize_by(user_level_id: id)
+      vul.time_spent += time
+      vul.save!
     end
   end
 
