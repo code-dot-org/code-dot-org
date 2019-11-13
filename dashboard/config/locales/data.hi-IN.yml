@@ -33,8 +33,11 @@ hi:
         Webapp: ऐप लैब
         ArtistEC: कलाकार
         TextMatch: टेक्सट मिलान
+        StudioEC: प्ले लैब
         Applab: ऐप लैब
         NetSim: इंटरनेट अनुकारक
+        Custom: आर्टिस्ट
+        CustomStudio: प्ले लैब
         Gamelab: गेम लैब
     trophy:
       name:
@@ -730,6 +733,7 @@ hi:
         applab_intro_sounds: ऐप लैब - चित्र व ध्वनियां
         applab_intro_designmode: ऐप लैब - डिज़ाइन मोड
         applab_intro_share: ऐप लैब - अपना ऐप साझा करें
+        csd_applab_arrays: श्रृंखला समूहों का परिचय
         CSF_skinOverview_Harvester: कटाई मशीन
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
