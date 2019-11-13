@@ -175,7 +175,7 @@ export class OceanObject {
   generateLogits(canvas) {
     if (mobilenet && !this.logits) {
       const image = tf.browser.fromPixels(canvas);
-      const infer = () => mobilenet.infer(image);
+      const infer = () => mobilenet.infer(image, 'conv_preds');
       this.logits = infer();
     }
   }

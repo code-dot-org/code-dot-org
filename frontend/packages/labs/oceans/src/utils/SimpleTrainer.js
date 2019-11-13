@@ -32,6 +32,7 @@ export default class SimpleTrainer {
     }
 
     const res = await this.knn.predictClass(this.converterFn(example), this.TOPK);
+    // The rest of this repo expects an integer in predictedClassId so cast it here
     result.predictedClassId = parseInt(res.label);
     result.confidencesByClassId = res.confidences;
     return result;
