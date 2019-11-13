@@ -3,6 +3,14 @@ el:
   data:
     course:
       name:
+        csp-2017:
+          assignment_family_title: Αρχές επιστήμης υπολογιστών
+          title: Αρχές επιστήμης υπολογιστών ('17-'18)
+          version_title: "'17-'18"
+        csd-2017:
+          assignment_family_title: Ανακαλύψεις στην επιστήμη υπολογιστών
+          title: Ανακαλύψεις στην επιστήμη υπολογιστών ('17-'18)
+          version_title: "'17-'18"
         allthethingscourse:
           title: Allthethingscourse
           description_short: Αυτό είναι ένα μάθημα για Αllthethings
@@ -10,3 +18,17 @@ el:
             μεγαλύτερη περιγραφή για τους μαθητές
           description_teacher: Αυτό είναι ένα μάθημα για Αllthethings και έχει μια
             μεγαλύτερη περιγραφή για τους καθηγητές
+        csd-2018:
+          assignment_family_title: Ανακαλύψεις στην επιστήμη υπολογιστών
+          title: Ανακαλύψεις στην επιστήμη υπολογιστών ('18-'19)
+          version_title: "'18-'19"
+        csp-2018:
+          assignment_family_title: Αρχές επιστήμης υπολογιστών
+          title: Αρχές επιστήμης υπολογιστών ('18-'19)
+          version_title: "'18-'19"
+        csp-2019:
+          title: Αρχές επιστήμης υπολογιστών ('19-'20)
+          version_title: "'19-'20"
+        csd-2019:
+          title: Ανακαλύψεις στην επιστήμη υπολογιστών ('19-'20)
+          version_title: "'19-'20"
