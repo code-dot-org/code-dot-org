@@ -120,29 +120,30 @@ export class UnconnectedStageCard extends Component {
     this.setState({currentPositions, newPosition});
   };
 
-  handleDragStop = ({y}) => {
-    const {stage, stageMetrics} = this.props;
-    Object.keys(stageMetrics).forEach(stagePos => {
+  getTargetStage = y => {
+    const {stageMetrics} = this.props;
+    const stagePos = Object.keys(stageMetrics).find(stagePos => {
       const stageRect = stageMetrics[stagePos];
-      if (y > stageRect.top && y < stageRect.top + stageRect.height) {
-        const newStagePos = Number(stagePos);
-        if (newStagePos === stage.position) {
-          if (this.state.drag !== this.state.newPosition) {
-            this.props.reorderLevel(
-              this.props.stage.position,
-              this.state.drag,
-              this.state.newPosition
-            );
-          }
-        } else {
-          this.props.moveLevelToStage(
-            this.props.stage.position,
-            this.state.drag,
-            newStagePos
-          );
-        }
-      }
+      return y > stageRect.top && y < stageRect.top + stageRect.height;
     });
+    return stagePos ? Number(stagePos) : null;
+  };
+
+  handleDragStop = ({y}) => {
+    const {stage} = this.props;
+    const newStagePos = this.getTargetStage(y);
+    if (newStagePos === stage.position) {
+      if (this.state.drag !== this.state.newPosition) {
+        this.props.reorderLevel(
+          stage.position,
+          this.state.drag,
+          this.state.newPosition
+        );
+      }
+    } else if (newStagePos) {
+      this.props.moveLevelToStage(stage.position, this.state.drag, newStagePos);
+    }
+
     this.setState({drag: null, newPosition: null, currentPositions: []});
     window.removeEventListener('selectstart', this.preventSelect);
     window.removeEventListener('mousemove', this.handleDrag);
