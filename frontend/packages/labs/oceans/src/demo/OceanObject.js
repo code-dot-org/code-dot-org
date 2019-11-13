@@ -5,8 +5,6 @@ import constants from './constants';
 import {
   bodyAnchorFromType,
   colorForFishPart,
-  randomInt,
-  clamp,
   generateColorPalette
 } from './helpers';
 import {trashImagePaths, seaCreatureImagePaths} from '../utils/imagePaths';
