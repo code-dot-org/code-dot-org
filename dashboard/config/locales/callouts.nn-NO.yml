@@ -173,8 +173,6 @@ nn-NO:
         dance_callout_11_b: Ny blokk!
       CourseD_Dance_Party_11_5:
         dance_party_11_5_groups: Se her for "alle ender" blokker
-      Dance_2019_01:
-        dance_callout_01: Legg denne blokka til programmet ditt!
       Dance_2019_04:
         dance_callout_02: Legg denne blokka til programmet ditt!
       Dance_2019_06:
@@ -182,7 +180,8 @@ nn-NO:
       Dance_2019_07:
         setprop_hint: Ny blokk!
       Dance_2019_09:
-        new_block_1: Ny blokk!
+        new_block_3: Ny blokk!
+        new_block_4: Ny blokk!
       Dance_Party_01:
         dance_callout_01: Legg denne blokka til programmet ditt!
       Dance_Party_02:
