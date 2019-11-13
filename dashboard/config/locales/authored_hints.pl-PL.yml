@@ -24,6 +24,8 @@ pl-PL:
       2-3 Artist 4:
         2-3_Artist_4_a: Aby dokończyć dom wystarczy tylko narysować kwadrat!
       2-3 Artist 6:
+        2-3_Artist_6_a: 'By zrobić te małe kąty musisz za każdym razem obrócić się
+          _dalej_ niż to robiłeś z kwadratem.   '
         2-3_Artist_6_b: Skoro już patrzę w prawo, będzie łatwiej pójść najpierw do
           przodu a potem, skręcając w lewo, stworzyć trójkąt.
         2-3_Artist_6_c: Każdy bok trójkąta ma taką samą długość jak każdy bok kwadratu...
@@ -671,11 +673,6 @@ pl-PL:
           -   Po 6 taktach Twój tancerz musi tańczyć inny taniec niż po 4 taktach.
 
           -   Ten poziom kończy się po 11 taktach.
-      Dance_2019_07:
-        challenges: |-
-          **Dodatkowe wyzwanie**
-
-          -   Eksperymentuj, zmieniając inne właściwości (szerokość, wysokość, obrót, itp.)
       Dance_Party_01:
         validation: |-
           **Jak przejdę ten poziom?**
@@ -713,6 +710,13 @@ pl-PL:
           **Dodatkowe wyzwanie**
 
           Zmieniaj efekt tła w różnych momentach piosenki, łącząc nowy blok pod zdarzeniami <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      Dance_Party_05:
+        validation: |-
+          **Jak przejść ten poziom?**
+
+          -   Twój tancerz musi wykonać cykl co najmniej 4 różnych ruchów tanecznych, zanim poziom się skończy.
+
+          _Ten poziom kończy się po 12 taktach._
       Dance_Party_06:
         validation: |-
           **Jak przejdę ten poziom?**
@@ -1098,6 +1102,8 @@ pl-PL:
           corn` tak wiele razy jak tylko zechcesz, następnie `turn right` w każdym
           narożniku.
       course2_maze_programming_challenge2:
+        courseC_maze_programming_challenge2_a: _Jeśli wyślesz mnie tyłem bądź bardzo
+          ostrożny, bym obrócił się w dobrą stronę!_
         courseC_maze_programming_challenge2_b: Najkrótszym rozwiązaniem jest użycie
           5 bloków, ale wykorzystuje blok `repeat`!
       course3_bee_functions_challenge1:
@@ -1465,16 +1471,25 @@ pl-PL:
           Nie poddawaj się!
         courseB_collector_loops_challenge2a_b: Spójrz na te opcje, aby wydostać się
           z labiryntu. Czy zauważasz jakiś wzór, który możesz powtórzyć?
+        courseB_collector_loops_challenge2a_c: Aby zebrać cały skarb, musisz albo
+          dodać dwa bloki <xml> <block type="collector_collect"/></xml> w swojej pętli,
+          albo umieścić blok wewnątrz własnego bloku „powtarzaj".
       courseB_collector_loops_challenge2a_2018:
         courseB_collector_loops_challenge2a_a: Jeśli coś idzie źle, spróbuj to debugować.
           Nie poddawaj się!
         courseB_collector_loops_challenge2a_b: Spójrz na te opcje, aby wydostać się
           z labiryntu. Czy zauważasz jakiś wzór, który możesz powtórzyć?
+        courseB_collector_loops_challenge2a_c: Aby zebrać cały skarb, musisz albo
+          dodać dwa bloki <xml> <block type="collector_collect"/></xml> w swojej pętli,
+          albo umieścić blok wewnątrz własnego bloku „powtarzaj".
       courseB_collector_loops_challenge2a_2019:
         courseB_collector_loops_challenge2a_a: Jeśli coś idzie źle, spróbuj to debugować.
           Nie poddawaj się!
         courseB_collector_loops_challenge2a_b: Spójrz na te opcje, aby wydostać się
           z labiryntu. Czy zauważasz jakiś wzór, który możesz powtórzyć?
+        courseB_collector_loops_challenge2a_c: Aby zebrać cały skarb, musisz albo
+          dodać dwa bloki <xml> <block type="collector_collect"/></xml> w swojej pętli,
+          albo umieścić blok wewnątrz własnego bloku „powtarzaj".
       courseB_iceage_loops3:
         courseB_iceage_loops3_b: Aby powtórzyć kod, przeciągnij pętlę `repeat`, następnie
           umieść tam blok, który chcesz aby się powtarzał.
