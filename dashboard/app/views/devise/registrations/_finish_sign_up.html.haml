@@ -10,18 +10,18 @@
   %h1= @page_title
 
   = form_for(@user, url: registration_path(@user), html: {class: "finish-signup"}) do |f|
-    %p
+    %div#instructions
       - if @user.provider.present?
         - provider = t("auth.#{@user.provider}")
-        = t('activerecord.attributes.user.finish_sign_up_subheader_provider', provider: provider, email: @user.email).html_safe
+        = t('activerecord.attributes.user.finish_sign_up_subheader_provider_markdown', provider: provider, email: @user.email, markdown: true).html_safe
       - else
-        = t('activerecord.attributes.user.finish_sign_up_subheader', email: @user.email).html_safe
-      %span= link_to 'Cancel', users_cancel_path
+        = t('activerecord.attributes.user.finish_sign_up_subheader_markdown', email: @user.email, markdown: true).html_safe
+      %p= link_to 'Cancel', users_cancel_path
+    %br/
 
     = f.hidden_field :locale, value: locale
     = f.hidden_field :email
     = f.hidden_field :encrypted_password
-
     .field-row
       .field
         = f.label :user_type, t('signup_form.user_type_label')
@@ -34,7 +34,7 @@
         #teacher-name-label{style: "display: none;"}
           = f.label :name, t('activerecord.attributes.user.name').html_safe
         #student-name-label{style: "display: none;"}
-          = f.label :name, t('activerecord.attributes.user.name_example').html_safe
+          = f.label :name, t('activerecord.attributes.user.name_example')
         = f.text_field :name, maxlength: 255
       - if @user.errors[:name].present?
         %span.error.padded= @user.errors[:name].join(', ')
@@ -65,13 +65,14 @@
           = ff.hidden_field :full_address
 
     .checkbox
-      = f.label :terms_of_service_version do
+      = f.label :terms_of_service_version, {class: 'terms'} do
         = f.check_box :terms_of_service_version, {style: "margin-right: 1em"}, User::TERMS_OF_SERVICE_VERSIONS.last
-        = t('terms_interstitial.accept_label', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy')).html_safe
-        %span#student-consent{style: "display: none;"}
-          = t('signup_form.student_consent')
-        - if @user.errors[:terms_of_service_version].present?
-          %span.error= t('signup_form.accept_terms')
+        %div.terms-text
+          = t('terms_interstitial.accept_label_markdown', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy'), markdown: true).html_safe
+          %p#student-consent{style: "display: none;"}
+            = t('signup_form.student_consent')
+          - if @user.errors[:terms_of_service_version].present?
+            %span.error= t('signup_form.accept_terms')
 
     -# If GDPR applies, show an additional checkbox.
     - if request.gdpr? || request.params['force_in_eu']
