@@ -667,6 +667,16 @@ de-DE:
         -   Was ist ein Sprite?
         -   Was sind Eigenschaften?
         -   Welches Problem lösen Sprites?
+      CSDU4 - Design Mode - 15: "# Designmodus\n\nWillkommen im Designmodus in AppLab!
+        So kannst du ganz einfach eine digitale Version Deiner skizzierten Wireframes
+        erstellen, indem du Oberflächenelemente aus der Toolbox hinzufügst und sie
+        so gestalten, wie du es wünschen!\n\n**Ziel:** Füge Deiner App im Designmodus
+        einen großen roten Knopf hinzu..\n\n# Mache Folgendes:\n\n-   **Suche <img
+        src=\"https://images.code.org/278f146396c80c97d0b5d73f24d48aec-image-1444335461720.png\">
+        in the Design Toolbox** und ziehe eine Schaltfläche heraus und ändere dessen
+        Größe. \n\n-   **Ändere den Text der Schaltfläche** auf \"Click Me\"..\n\n-
+        \  **Setze die Farbe für die Schaltfläche** auf rot.\n\n<img src=\"https://images.code.org/4cab6a5233cf07df0d8e312932762012-image-1444314797615.gif\"
+        style=\"width: 500px; float: middle\">"
       CSDU4 Design Mode Video_2019: |-
         ## Zu berücksichtigende Fragen
 

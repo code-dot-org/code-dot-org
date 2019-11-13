@@ -270,11 +270,6 @@ de-DE:
           -   Nach 6 Takten muss Ihr Tänzer einen anderen Tanz tun als nach 4 Takten.
 
           _Dieser Level endet nach 12 Takten._
-      Dance_2019_07:
-        challenges: |-
-          **Optionale Herausforderung**
-
-          -   Experimentieren Sie, indem Sie weitere Eigenschaften (Breite, Höhe, Rotation etc.) ändern
       Dance_Party_01:
         validation: |-
           **Wie schaffe ich diesen Level?**
