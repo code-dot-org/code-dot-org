@@ -11,8 +11,28 @@ You can do these levels _in any order_. Jump around to look at how something was
 
 <div class="clearfix"></div>
 
+
 <div style="float: left; margin: 10px">
 <a href="2">
+<h2>
+Back and Forth
+</h2>
+
+<img src="https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif"></a>
+
+</div>
+
+<div style="float: left; margin: 10px">
+<a href="3">
+<h2>
+More Buttons
+</h2>
+
+<img src="https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif"></a>
+
+</div>
+<div style="float: left; margin: 10px">
+<a href="4">
 <h2>
 Get in Formation
 </h2>
@@ -22,7 +42,7 @@ Get in Formation
 </div>
 
 <div style="float: left; margin: 10px">
-<a href="3">
+<a href="5">
 <h2>
 Where'd They Go?
 </h2>
@@ -32,7 +52,7 @@ Where'd They Go?
 </div>
 
 <div style="float: left; margin: 10px">
-<a href="4">
+<a href="6">
 <h2>
 Dance Crews
 </h2>
@@ -42,7 +62,7 @@ Dance Crews
 </div>
 
 <div style="float: left; margin: 10px">
-<a href="5">
+<a href="7">
 <h2>
 Quarter Notes
 </h2>
@@ -52,7 +72,7 @@ Quarter Notes
 </div>
 
 <div style="float: left; margin: 10px">
-<a href="6">
+<a href="8">
 <h2>
 Bass, Mid, Treble
 </h2>
@@ -62,7 +82,7 @@ Bass, Mid, Treble
 </div>
 
 <div style="float: left; margin: 10px">
-<a href="7">
+<a href="9">
 <h2>
 Speed it Up, Slow it Down
 </h2>
