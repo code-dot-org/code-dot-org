@@ -52,6 +52,7 @@ export class UnconnectedStageCard extends Component {
     setStageLockable: PropTypes.func.isRequired,
     stagesCount: PropTypes.number.isRequired,
     stage: PropTypes.object.isRequired,
+    stageMetrics: PropTypes.object.isRequired,
     setFlexCategory: PropTypes.func.isRequired
   };
 
@@ -117,14 +118,25 @@ export class UnconnectedStageCard extends Component {
     this.setState({currentPositions, newPosition});
   };
 
-  handleDragStop = () => {
-    if (this.state.drag !== this.state.newPosition) {
-      this.props.reorderLevel(
-        this.props.stage.position,
-        this.state.drag,
-        this.state.newPosition
-      );
-    }
+  handleDragStop = ({y}) => {
+    const {stage, stageMetrics} = this.props;
+    Object.keys(stageMetrics).forEach(stagePos => {
+      const stageRect = stageMetrics[stagePos];
+      stagePos = Number(stagePos);
+      if (y > stageRect.top && y < stageRect.top + stageRect.height) {
+        if (stagePos === stage.position) {
+          if (this.state.drag !== this.state.newPosition) {
+            this.props.reorderLevel(
+              this.props.stage.position,
+              this.state.drag,
+              this.state.newPosition
+            );
+          }
+        } else {
+          console.log('move level to stage', stagePos);
+        }
+      }
+    });
     this.setState({drag: null, newPosition: null, currentPositions: []});
     window.removeEventListener('selectstart', this.preventSelect);
     window.removeEventListener('mousemove', this.handleDrag);
