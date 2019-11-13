@@ -153,6 +153,10 @@ ms:
           PROPERTY:
             '"scale"': saiz
             '"height"': ketinggian
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"x"': x
       Dancelab_whenKey:
         options:
           KEY:
