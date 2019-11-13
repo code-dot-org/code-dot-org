@@ -231,7 +231,13 @@ const getYForFish = (numFish, fishIdx, state, offsetX, predictedClassId) => {
 
 const drawMovingFish = state => {
   const runtime = currentRunTime(state);
-  const t = state.lastPauseTime + runtime;
+  let t;
+  if (state.rewind) {
+    t = state.lastPauseTime - runtime;
+  } else {
+    t = state.lastPauseTime + runtime;
+  }
+
   const offsetX = getOffsetForTime(state, t);
   const maxScreenX =
     state.currentMode === Modes.Training

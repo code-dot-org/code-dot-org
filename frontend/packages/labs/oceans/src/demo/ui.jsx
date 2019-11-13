@@ -492,12 +492,30 @@ class Predict extends React.Component {
     }
   };
 
+  finishMovement = state => {
+    if (state.rewind) {
+      finishMovement(state.lastPauseTime - currentRunTime(state));
+    } else {
+      finishMovement(state.lastPauseTime + currentRunTime(state));
+    }
+  };
+
   onPressPlay = state => {
     if (state.isRunning) {
-      finishMovement(state.lastPauseTime + currentRunTime(state));
+      this.finishMovement(state);
     } else {
-      setState({isRunning: true, isPaused: false});
+      setState({isRunning: true, isPaused: false, rewind: false});
     }
+  };
+
+  onRewind = state => {
+    this.finishMovement(state);
+    setState({rewind: true, isRunning: true, isPaused: false});
+  };
+
+  onFastForward = state => {
+    this.finishMovement(state);
+    setState({rewind: false, isRunning: true, isPaused: false});
   };
 
   render() {
@@ -505,9 +523,11 @@ class Predict extends React.Component {
 
     return (
       <Body>
+        <Button onClick={() => this.onRewind(state)}>{'<<'}</Button>
         <Button onClick={() => this.onPressPlay(state)}>
           {state.isRunning ? 'Pause' : 'Play'}
         </Button>
+        <Button onClick={() => this.onFastForward(state)}>{'>>'}</Button>
         {!state.isRunning && !state.isPaused && (
           <Button
             style={styles.continueButton}
