@@ -33,9 +33,8 @@ level 'Widget: Binary Odometer_2020', progression: 'Widget: Binary Odometer'
 level 'U1L6 CFU beyond odometer', progression: 'Check For Understanding', assessment: true
 level 'U1L6 CFU representing fractions', progression: 'Check For Understanding', assessment: true
 
-stage 'Sending Text'
+stage 'Representing Text'
 level 'CSP U1L7 SFLP 20-21', progression: 'Lesson Overview'
-level 'Internet Simulator: Sending Text CSP U1', progression: 'Widget: Internet Simulator'
 level 'U1L8 Reflection Multiple Representations CSP', progression: 'Check For Understanding', assessment: true
 
 stage 'Black and White Images'
