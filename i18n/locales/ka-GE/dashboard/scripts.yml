@@ -5718,3 +5718,7 @@ ka:
           stages:
             new stage:
               name: ახალი დონე
+        csp4-preview:
+          stages:
+            new stage:
+              name: ახალი დონე
