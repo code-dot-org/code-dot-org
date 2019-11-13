@@ -194,7 +194,9 @@ function compileDetails(index, location, initialContent) {
   container.id = `location-details-${index}`;
 
   const heading = document.createElement('h2');
-  heading.style = 'margin-top: 0; margin-bottom: .5em; padding-top: 0;';
+  heading.style.marginTop = '0';
+  heading.style.marginBottom = '0.5em';
+  heading.style.paddingTop = '0';
   heading.textContent = location.school_name_s;
   container.appendChild(heading);
 
@@ -221,7 +223,7 @@ function compileDetails(index, location, initialContent) {
 
   if (location.class_description_s) {
     const descriptionP = document.createElement('p');
-    descriptionP.style = 'margin-top: 1em;';
+    descriptionP.style.marginTop = '1em';
     descriptionP.textContent = location.class_description_s;
     container.appendChild(descriptionP);
   }
