@@ -64,7 +64,9 @@ export const loadAllFishPartImages = () => {
 };
 
 export const initMobilenet = () => {
-  return mobilenetModule.load({version: 1, modelUrl: 'models/mobilenet/model.json'}).then(res => (mobilenet = res));
+  return mobilenetModule
+    .load({version: 1, modelUrl: 'models/mobilenet/model.json'})
+    .then(res => (mobilenet = res));
 };
 
 // Load all of the trash assets and store them
