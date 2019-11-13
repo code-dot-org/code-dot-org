@@ -89,8 +89,6 @@ bs-BA:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Novi blok!
         dance_callout_11_b: Novi blok!
-      Dance_2019_01:
-        dance_callout_01: Dodajte ovaj blok u svoj program!
       Dance_2019_04:
         dance_callout_02: Dodajte ovaj blok u svoj program!
       Dance_2019_06:
@@ -98,7 +96,8 @@ bs-BA:
       Dance_2019_07:
         setprop_hint: Novi blok!
       Dance_2019_09:
-        new_block_1: Novi blok!
+        new_block_3: Novi blok!
+        new_block_4: Novi blok!
       Dance_Party_01:
         dance_callout_01: Dodajte ovaj blok u svoj program!
       Dance_Party_02:

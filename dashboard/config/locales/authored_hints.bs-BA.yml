@@ -126,11 +126,6 @@ bs-BA:
           -   Nakon 6 taktova, vaš plesač mora da uradi drugačiji ples od onog od nakon 4 takta.
 
           _Level se završava nakon 11 taktova._
-      Dance_2019_07:
-        challenges: |-
-          **Neobavezni izazovi**
-
-          -   Eksperimentiši mijenjajući druge osobine (širina, visina, rotacija i sl.)
       Dance_Party_01:
         validation: |-
           **Kako da pređem ovaj level?**
