@@ -136,6 +136,17 @@ const styles = {
     top: '28%',
     left: '76%'
   },
+  playButtons: {
+    position: 'absolute',
+    width: '100%',
+    bottom: 10,
+    display: 'flex',
+    justifyContent: 'center'
+  },
+  playButton: {
+    minWidth: 0,
+    margin: '0 1%'
+  },
   predictSpeech: {
     top: '88%',
     left: '12%',
@@ -506,12 +517,10 @@ class Predict extends React.Component {
   onPressPlay = () => {
     const state = getState();
     this.finishMovement();
-
     setState({
       isRunning: !state.isRunning,
       isPaused: !state.isPaused,
-      rewind: false,
-      moveTime: constants.defaultMoveTime
+      rewind: false
     });
   };
 
@@ -520,21 +529,19 @@ class Predict extends React.Component {
     setState({rewind: true, isRunning: true, isPaused: false});
   };
 
-  onFastForward = () => {
-    this.finishMovement();
-    setState({rewind: false, isRunning: true, isPaused: false});
-  };
-
   render() {
     const state = getState();
 
     return (
       <Body>
-        <Button onClick={this.onRewind}>{'<<'}</Button>
-        <Button onClick={this.onPressPlay}>
-          {state.isRunning ? 'Pause' : 'Play'}
-        </Button>
-        <Button onClick={this.onFastForward}>{'>>'}</Button>
+        <div style={styles.playButtons}>
+          <Button onClick={this.onRewind} style={styles.playButton}>
+            Rewind
+          </Button>
+          <Button onClick={this.onPressPlay} style={styles.playButton}>
+            {state.isRunning ? 'Pause' : 'Play'}
+          </Button>
+        </div>
         {!state.isRunning && !state.isPaused && (
           <Button
             style={styles.continueButton}
