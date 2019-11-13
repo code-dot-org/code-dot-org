@@ -223,7 +223,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     params[:script_level_id] = @script_level.id
 
     user_level = UserLevel.create(level: @script_level.level, user: @user, script: @script_level.script)
-    validated_user_level = ValidatedUserLevel.create(user_level_id: user_level.id, time_spent: 1000)
+    validated_user_level = ValidatedUserLevel.create(user_level_id: user_level.id, time_spent: 2000)
 
     assert_does_not_create(UserLevel, ValidatedUserLevel) do
       post :milestone, params: @milestone_params

@@ -1727,7 +1727,7 @@ class User < ActiveRecord::Base
       user_level.atomic_save!
     end
 
-    user_level&.record_time_spent(time_spent)
+    user_level&.record_time_spent(time_spent) unless time_spent.nil?
 
     if pairing_user_ids
       pairing_user_ids.each do |navigator_user_id|
