@@ -136,6 +136,11 @@ my:
         options:
           GROUP:
             sprites: အားလုံး
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': စိန်
+            '"x"': "×"
       Dancelab_whenKey:
         options:
           KEY:
