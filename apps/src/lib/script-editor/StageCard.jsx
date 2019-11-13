@@ -190,30 +190,31 @@ export class UnconnectedStageCard extends Component {
   }
 
   render() {
+    const {stage} = this.props;
     return (
       <div style={styles.stageCard}>
         <div style={styles.stageCardHeader}>
-          {!this.props.stage.lockable && (
-            <span>Stage {this.props.stage.relativePosition}:&nbsp;</span>
+          {!stage.lockable && (
+            <span>Stage {stage.relativePosition}:&nbsp;</span>
           )}
-          {this.props.stage.name}
+          {stage.name}
           <OrderControls
             type={ControlTypes.Stage}
-            position={this.props.stage.position}
+            position={stage.position}
             total={this.props.stagesCount}
           />
           <label style={styles.stageLockable}>
             Require teachers to unlock this stage before students in their
             section can access it
             <input
-              checked={this.props.stage.lockable}
+              checked={stage.lockable}
               onChange={this.toggleLockable}
               type="checkbox"
               style={styles.checkbox}
             />
           </label>
         </div>
-        {this.props.stage.levels.map(level => (
+        {stage.levels.map(level => (
           <LevelToken
             ref={levelToken => {
               if (levelToken) {
@@ -225,7 +226,7 @@ export class UnconnectedStageCard extends Component {
             }}
             key={level.position + '_' + level.ids[0]}
             level={level}
-            stagePosition={this.props.stage.position}
+            stagePosition={stage.position}
             dragging={!!this.state.drag}
             drag={level.position === this.state.drag}
             delta={this.state.currentPositions[level.position - 1] || 0}
