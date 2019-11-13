@@ -145,7 +145,10 @@ const styles = {
   },
   playButton: {
     minWidth: 0,
-    margin: '0 1%'
+    margin: '0 1%',
+    ':focus': {
+      outline: 'none'
+    }
   },
   predictSpeech: {
     top: '88%',
