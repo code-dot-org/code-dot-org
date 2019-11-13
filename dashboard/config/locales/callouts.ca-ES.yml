@@ -42,8 +42,6 @@ ca-ES:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Nou bloc!
         dance_callout_11_b: Nou bloc!
-      Dance_2019_01:
-        dance_callout_01: Afegir aquest bloc al teu programa!
       Dance_2019_04:
         dance_callout_02: Afegir aquest bloc al teu programa!
       Dance_2019_06:
@@ -51,7 +49,8 @@ ca-ES:
       Dance_2019_07:
         setprop_hint: Nou bloc!
       Dance_2019_09:
-        new_block_1: Nou bloc!
+        new_block_3: Nou bloc!
+        new_block_4: Nou bloc!
       Dance_Party_01:
         dance_callout_01: Afegir aquest bloc al teu programa!
       Dance_Party_02:
