@@ -167,6 +167,10 @@ bn:
           PROPERTY:
             '"scale"': আকার
             '"height"': উচ্চতা
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"x"': এক্স
       Dancelab_whenKey:
         options:
           KEY:
