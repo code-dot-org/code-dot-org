@@ -12,6 +12,8 @@ import xIcon from '../../public/images/x-icon.png';
 import checkmarkIcon from '../../public/images/checkmark-icon.png';
 import Typist from 'react-typist';
 import {getCurrentGuide, dismissCurrentGuide} from './models/guide';
+import {loadSounds, playSound} from './models/soundLibrary';
+import {randomInt} from './helpers';
 
 const styles = {
   body: {
@@ -313,10 +315,15 @@ let Button = class Button extends React.Component {
     className: PropTypes.string,
     style: PropTypes.object,
     children: PropTypes.node,
-    onClick: PropTypes.func
+    onClick: PropTypes.func,
+    sound: PropTypes.string
   };
 
   onClick(event) {
+    if (this.props.sound) {
+      playSound(this.props.sound + "_" + randomInt(1,10));
+    }
+
     dismissCurrentGuide();
     this.props.onClick(event);
   }
@@ -491,12 +498,14 @@ let Train = class Train extends React.Component {
           <Button
             style={styles.trainButtonNo}
             onClick={() => onClassifyFish(false)}
+            sound={"no"}
           >
             {noButtonText}
           </Button>
           <Button
             style={styles.trainButtonYes}
             onClick={() => onClassifyFish(true)}
+            sound={"yes"}
           >
             {yesButtonText}
           </Button>
@@ -549,6 +558,12 @@ class Predict extends React.Component {
 }
 
 class Pond extends React.Component {
+  constructor(props) {
+    super(props);
+
+    playSound("ambience");
+  }
+
   onPondClick(e) {
     const state = getState();
     const clickX = e.nativeEvent.offsetX;
@@ -671,6 +686,12 @@ class Guide extends React.Component {
     setState({guideShowing: true});
   }
 
+  dismissGuideClick() {
+    playSound("other_" + randomInt(1,4));
+
+    dismissCurrentGuide();
+  }
+
   render() {
     const currentGuide = getCurrentGuide();
 
@@ -684,7 +705,7 @@ class Guide extends React.Component {
                 ? styles.guideBackgroundHidden
                 : styles.guideBackground
             }
-            onClick={dismissCurrentGuide}
+            onClick={this.dismissGuideClick}
           >
             <div
               style={{...styles.guide, ...styles[`guide${currentGuide.style}`]}}
@@ -720,6 +741,12 @@ class Guide extends React.Component {
 }
 
 export default class UI extends React.Component {
+  constructor(props) {
+    super(props);
+
+    loadSounds();
+  }
+
   render() {
     const currentMode = getState().currentMode;
 

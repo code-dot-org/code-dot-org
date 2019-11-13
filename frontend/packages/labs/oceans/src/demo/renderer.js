@@ -18,6 +18,8 @@ import aiBotX from '../../public/images/ai-bot/ai-bot-x.png';
 import redScanner from '../../public/images/ai-bot/red-scanner.png';
 import greenScanner from '../../public/images/ai-bot/green-scanner.png';
 import blueScanner from '../../public/images/ai-bot/blue-scanner.png';
+import {playSound} from './models/soundLibrary';
+import {randomInt} from './helpers';
 
 var $time =
   Date.now ||
@@ -340,6 +342,9 @@ const drawMovingFish = state => {
   }
 };
 
+let lastScannerImg = null;
+let scannerImageChangeCount = 0;
+
 // Draw AI bot + scanner to canvas for predict mode.
 // *Note:* This will no-op if the expected bot/scanner is not present
 // in the botImages cache. Call loadAllBotImages() to populate the botImages cache.
@@ -358,6 +363,13 @@ const drawPredictBot = state => {
 
   if (!botImg || !scannerImg) {
     return;
+  }
+
+  if (scannerImg !== lastScannerImg) {
+    if (scannerImageChangeCount++ % 4 === 0) {
+      playSound("voice_" + randomInt(1, 10));
+    }
+    lastScannerImg = scannerImg;
   }
 
   let botX = state.canvas.width / 2 - botImg.width / 2;
