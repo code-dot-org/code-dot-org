@@ -729,6 +729,13 @@ ko:
             '"bass"': 베이스
             '"mid"': 중간음
             '"treble"': 고음
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"hearts_colorful"': 하트
+            '"diamond"': 다이아몬드
+            '"x"': x
+            '"y"': 예
       Dancelab_whenKey:
         text: "{KEY} 누를 때"
         options:
