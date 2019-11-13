@@ -6,6 +6,7 @@ import i18n from '@cdo/locale';
 import Button from '../Button';
 import CourseScriptTeacherInfo from './CourseScriptTeacherInfo';
 import AssignButton from '@cdo/apps/templates/AssignButton';
+import Assigned from '@cdo/apps/templates/Assigned';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {
@@ -15,7 +16,6 @@ import {
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import experiments from '@cdo/apps/util/experiments';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const styles = {
   main: {
@@ -49,14 +49,6 @@ const styles = {
     marginLeft: 0,
     marginRight: 0
   },
-  assigned: {
-    color: color.level_perfect,
-    fontSize: 16,
-    fontFamily: '"Gotham 5r", sans-serif',
-    lineHeight: '36px',
-    marginLeft: 10,
-    verticalAlign: 'top'
-  },
   flex: {
     display: 'flex'
   }
@@ -70,10 +62,10 @@ class CourseScript extends Component {
     courseId: PropTypes.number,
     description: PropTypes.string,
     assignedSectionId: PropTypes.number,
-
+    showAssignButton: PropTypes.bool,
     // redux provided
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
-    selectedSectionId: PropTypes.number.isRequired,
+    selectedSectionId: PropTypes.number,
     hiddenStageState: PropTypes.object.isRequired,
     hasNoSections: PropTypes.bool.isRequired,
     toggleHiddenScript: PropTypes.func.isRequired,
@@ -110,7 +102,8 @@ class CourseScript extends Component {
       hasNoSections,
       assignedSectionId,
       courseId,
-      sectionsForDropdown
+      sectionsForDropdown,
+      showAssignButton
     } = this.props;
 
     const isHidden = isScriptHiddenForSection(
@@ -154,13 +147,12 @@ class CourseScript extends Component {
             />
             {isAssigned &&
               experiments.isEnabled(experiments.ASSIGNMENT_UPDATES) && (
-                <span style={styles.assigned}>
-                  <FontAwesome icon="check" />
-                  {i18n.assigned()}
-                </span>
+                <Assigned />
               )}
             {!isAssigned &&
               viewAs === ViewType.Teacher &&
+              showAssignButton &&
+              selectedSection &&
               experiments.isEnabled(experiments.ASSIGNMENT_UPDATES) && (
                 <AssignButton
                   sectionId={selectedSectionId}
@@ -190,7 +182,8 @@ export default connect(
     sectionsForDropdown: sectionsForDropdown(
       state.teacherSections,
       ownProps.id,
-      ownProps.courseId
+      ownProps.courseId,
+      true
     ),
     hiddenStageState: state.hiddenStage,
     hasNoSections:
