@@ -283,15 +283,13 @@ export class FishOceanObject extends OceanObject {
       intermediateCtx.drawImage(img, xPos, yPos);
     }
 
-    const rgb = colorForFishPart(this.colorPalette, part);
+    let rgb = colorForFishPart(this.colorPalette, part);
 
     if (rgb) {
-      // Add some random tint to the RGB value.
-      const tintAmount = 20;
-      let newRgb = [];
-      newRgb[0] = clamp(rgb[0] + randomInt(-tintAmount, tintAmount), 0, 255);
-      newRgb[1] = clamp(rgb[1] + randomInt(-tintAmount, tintAmount), 0, 255);
-      newRgb[2] = clamp(rgb[2] + randomInt(-tintAmount, tintAmount), 0, 255);
+      // Darken back pectoral fin by 15.
+      if (part.type === FishBodyPart.PECTORAL_FIN_BACK) {
+        rgb = rgb.map(c => (c -= 15));
+      }
 
       let imageData = intermediateCtx.getImageData(
         xPos,
@@ -304,9 +302,9 @@ export class FishOceanObject extends OceanObject {
       for (let i = 0; i < data.length; i += 4) {
         // Tint any visible pixels
         if (data[i + 3] > 0) {
-          data[i] = newRgb[0];
-          data[i + 1] = newRgb[1];
-          data[i + 2] = newRgb[2];
+          data[i] = rgb[0];
+          data[i + 1] = rgb[1];
+          data[i + 2] = rgb[2];
         }
       }
 
