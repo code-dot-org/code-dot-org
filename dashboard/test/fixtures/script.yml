@@ -218,6 +218,7 @@ course1:
   user_id:
   login_required: false
   properties: '{"has_lesson_plan": true}'
+  curriculum_umbrella: 'CSF'
 course2:
   id: 49
   name: course2
