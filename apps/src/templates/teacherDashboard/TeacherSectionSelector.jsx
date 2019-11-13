@@ -7,6 +7,7 @@ import TeacherSectionSelectorMenuItem from './TeacherSectionSelectorMenuItem';
 import {sectionForDropdownShape} from './shapes';
 import SmallChevronLink from '@cdo/apps/templates/SmallChevronLink';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
+import queryString from 'query-string';
 
 const styles = {
   select: {
@@ -26,7 +27,9 @@ export default class TeacherSectionSelector extends Component {
   static propTypes = {
     sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
     selectedSection: PropTypes.object,
-    onChangeSection: PropTypes.func.isRequired
+    onChangeSection: PropTypes.func.isRequired,
+    courseId: PropTypes.number,
+    scriptId: PropTypes.number
   };
 
   state = {
@@ -82,9 +85,10 @@ export default class TeacherSectionSelector extends Component {
   };
 
   render() {
-    const {sections, selectedSection} = this.props;
+    const {sections, selectedSection, courseId, scriptId} = this.props;
     const menuOffset = {x: 0, y: 0};
     const value = selectedSection ? selectedSection.id : '';
+    const queryParams = queryString.stringify({courseId, scriptId});
 
     return (
       <div>
@@ -120,7 +124,7 @@ export default class TeacherSectionSelector extends Component {
             ))}
           <div style={styles.addNewSection}>
             <SmallChevronLink
-              link={'/home'}
+              link={`/home?${queryParams}`}
               linkText={i18n.addNewSection()}
               isRtl={false}
             />
