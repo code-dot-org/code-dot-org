@@ -70,18 +70,13 @@ COLUMNS_TO_COMPARE = [
 # will not be written out to output table.
 PII_COLUMNS = [:email, :name]
 
+# Always create new output table. Drop table if it already exists.
 def create_output_table
-  if PEGASUS_REPORTING_DB_WRITER.table_exists?(OUTPUT_TABLE)
-    p "#{OUTPUT_TABLE} table already exists"
-    PEGASUS_REPORTING_DB_WRITER.drop_table(OUTPUT_TABLE)
-    p "Dropped #{OUTPUT_TABLE} table"
-  end
-
   # The output table has the same schema as contact_rollups.
   # Two ways to see contact_rollups schema
   # 1. In mysql: describe contact_rollups;
   # 2. In rails: PEGASUS_REPORTING_DB_WRITER.schema(:contact_rollups)
-  PEGASUS_REPORTING_DB_WRITER.create_table OUTPUT_TABLE do
+  PEGASUS_REPORTING_DB_WRITER.create_table! OUTPUT_TABLE do
     Integer :id
     column :opted_out, 'tinyint(1)'
     Integer :dashboard_user_id
@@ -110,7 +105,7 @@ def create_output_table
     unique :id
   end
 
-  p "Created #{OUTPUT_TABLE} table"
+  puts "Created #{OUTPUT_TABLE} table"
 end
 
 # Compare 2 versions of contact_rollups table and write the changes to output table.
@@ -186,11 +181,11 @@ def compare_tables(columns, pii_columns = [], max_row_read = nil, max_row_write 
       end
 
       if debug && diff_count % 1000 == 0
-        p "Diff #{diff_count}:"
-        p "+ src_values = #{src_values}"
-        p "+ dest_values = #{dest_values}"
-        p "+ changed_values = #{changed_values}"
-        p "+ insert_values = #{insert_values}"
+        puts "Diff #{diff_count}:"
+        puts "+ src_values = #{src_values}"
+        puts "+ dest_values = #{dest_values}"
+        puts "+ changed_values = #{changed_values}"
+        puts "+ insert_values = #{insert_values}"
       end
 
       break if max_row_write && (diff_count == max_row_write)
@@ -202,9 +197,15 @@ def compare_tables(columns, pii_columns = [], max_row_read = nil, max_row_write 
     dest_row = grab_next(dest_iterator)
   end
 
-  p "Done! Finished comparing #{same_count + diff_count + not_there_count} rows in contact_rollups table in reporting db and production db"
-  p "Same rows = #{same_count}. Diff rows = #{diff_count}. Rows in reporting but not in production = #{not_there_count}. (Did not count rows in production but not in reporting db.)"
-  p "Column diff distribution:"
+  print %(
+    Done! Finished comparing #{same_count + diff_count + not_there_count} rows in contact_rollups table in reporting db and production db.
+    Same rows = #{same_count}.
+    Diff rows = #{diff_count}.
+    Rows in reporting but not in production = #{not_there_count}.
+    (Did not count rows in production but not in reporting db.)
+  )
+
+  puts "\nColumn diff distribution:"
   columns.each do |col|
     puts "+ #{col}: #{column_diff_counts[col]}"
   end
