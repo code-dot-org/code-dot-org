@@ -4,12 +4,12 @@ title: Computer Science Fundamentals Transition Guide theme: responsive style_mi
 
 * * *
 
-# Ուսման Կուրսեր A-F
+# Ուսուցման Դասեր Ա-Ֆ
 
 ## Բովանդակություն
 
 * [Նախաբան](#overview)
-* [Teaching the new courses](#newcourses)
+* [Նոր դասերի ուսուցում](#newcourses)
 * [Circle-Time Stories (Courses A and B)](#circletime)
 * [Lesson Scaffolding & Challenge Puzzles (All Ages)](#scaffolding)
 * [Bridging Activities For Unplugged Lessons (All Ages)](#unplugged)
@@ -25,20 +25,20 @@ The landscape of computer science education has changed immensely since the crea
 
 Computer Science Fundamentals Courses A-F, are our answer to that issue. The creation of a grade-by-grade curriculum allowed us to step back and rethink the way we were presenting material. It also allowed us the chance to wholeheartedly incorporate feedback from the dedicated teacher community that has supported us on this mission. Designed with the help of some of the best elementary school CS education specialists across the country, Courses A-F should feel familiar enough to run with no extra professional development, but fresh enough to present to students who have done our lessons in the past.
 
-* Course A: Kindergarten
-* Course B: 1st Grade
-* Course C: 2nd Grade
-* Course D: 3rd Grade
-* Course E: 4th Grade
-* Course F: 5th Grade
+* Դաս A. Kindergarten
+* Դաս B. 1-ին Աստիճան
+* Դաս C. 2-րդ Աստիճան
+* Դաս D. 3-րդ Աստիճան
+* Դաս E. 4-րդ Աստիճան
+* Դաս F. 5-րդ Աստիճան
 * Pre-reader Express Course: Kindergarten - 1st Grade
-* Express Course: 2nd Grade - 5th Grade
+* Էքսպերես դաս. 2-րդ Աստիճանից - 5-րդ Աստիճան
 
 The biggest update to CS Fundamentals is that content will move from four courses (Courses 1-4) to six courses aligned to each K-5 grade level (Courses A-F). In doing so, the lessons have become more tailored to the appropriate levels for reading, math, and overall cognitive development. Note the addition of two different “Express” courses, one for pre-readers and one for all other grades. These are similar to the previous suite’s “accelerated” version.
 
 <a id="newcourses"></a>
 
-## Teaching the new courses
+## Նոր դասերի ուսուցում
 
 As mentioned earlier, the courses should feel familiar, but different. If you’ve been to a Code.org professional development workshop, then you’re ready to teach the new courses. There are a small number of changes, but the overall platform, curriculum and pedagogical philosophy is unchanged. If you haven’t yet been, Code.org offers 1 day workshops at no cost to help you learn how to understand the curricula, navigate the Code.org platform, and teach the unplugged lessons.
 
