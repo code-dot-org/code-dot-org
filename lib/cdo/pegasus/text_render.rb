@@ -1,5 +1,4 @@
 require 'erb'
-require 'haml'
 require 'ostruct'
 require 'redcarpet'
 require 'yaml'
@@ -81,6 +80,19 @@ module TextRender
   #
   class HamlEngine
     def initialize(template)
+      # Lazily require haml here because requiring it at the top has some
+      # potential unwanted side effects.
+      #
+      # Specifically, when haml is loaded it check to see if Rails is also in
+      # the environment:
+      # https://github.com/haml/haml/blob/9be4e1fd86a5086ba234053f5c21eeece39af681/lib/haml.rb#L25
+      # If it doesn't find rails, it doesn't initialize Haml::Template, which
+      # means that when we _do_ initialize rails, things will break.
+      #
+      # Loading haml here rather than at the top of the file will help make
+      # sure that this file doesn't accidentally try to load haml too early in
+      # the initialization process.
+      require 'haml'
       @engine = Haml::Engine.new(template)
     end
 

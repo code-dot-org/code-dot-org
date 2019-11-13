@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "для кожного елемента";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "Для кожного елемента списку задай змінну '%1', а потім запиши деякі команди.";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "від %1 до %2 через %3";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "для";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Нехай змінна %1 приймає значення від початкового до кінцевого значення, враховуючи заданий інтервал, і виконує вказані блоки.";

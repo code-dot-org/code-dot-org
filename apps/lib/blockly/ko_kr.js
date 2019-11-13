@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "각 아이템들에 대해";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "리스트 안에 들어있는 각 아이템들을, 순서대로 변수 '%1' 에 한 번씩 저장시키고, 그 때 마다 명령을 실행합니다.";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#count_with";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "를 %1부터 %2까지, %3씩 더하면서";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "다음에 대해";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "변수 %1 의 값을 변경하면서 반복 실행합니다. 변수에 저장되는 값은, 첫번째 수부터 두번째 수까지, 일정 값씩 늘어납니다.";

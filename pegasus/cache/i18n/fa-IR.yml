@@ -1387,10 +1387,21 @@ fa-IR:
   header_courses: مراحل
   header_course_catalog: سرفصل دوره‌ها
   header_project_gallery: پروژه ها
+  header_sections: بخش‌ها
   header_educate_hoc: ساعت کد نویسی
+  header_educate_tools: ابزار‌ها و فیلم‌ها
   header_about_us: درباره ما
+  header_about_partners: شرکا
+  header_about_team: کل تیم
+  header_about_jobs: مشاغل
+  header_about_contact: تماس با ما
+  header_about_faqs: سوال‌های متداول
+  header_learn: یادگیری
+  header_teach: آموزش
+  header_help_us: به ما کمک کنید
   header_about: درباره
   user_header_label: سلام %{username}
+  user_header_team: تیم
   user_header_settings: حساب کاربری من
   user_header_logout: خروج
   user_header_signin: ورود

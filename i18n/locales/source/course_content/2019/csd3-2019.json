@@ -20,7 +20,7 @@
   },
   "https://studio.code.org/s/csd3-2019/stage/2/puzzle/1": {
     "dsls": {
-      "markdown": "# This survey is still under development\n"
+      "markdown": "# CS Discoveries Post-Course Survey\n\n**Your input and feedback is important to us!** We use it to:\n\n* understand your experience\n* make improvements to the course\n\nThanks for taking the time to help make CS Principles even better!\n\n"
     }
   },
   "https://studio.code.org/s/csd3-2019/stage/3/puzzle/1": {
@@ -505,7 +505,8 @@
               "text": "  false<br>true<br>false",
               "correct": false
             }
-          ]
+          ],
+          "markdown": "# Boolean Expressions\n\nDecision-making on computers are based on statements called **boolean expressions**. A boolean expression is **any expression that can only evaluate to either `TRUE` or `FALSE`**. This can be particularly useful when used to compare the properties of two sprites. For example, you could figure out which one is larger or placed higher up. In the next few puzzles we'll use simple boolean expressions to compare sprite properties.\n\n# Predict\n\nRead the code below. There are some new symbols in it which you haven't been introduced to. Take a guess at what they mean and try to answer the following question\n"
         }
       }
     ]
@@ -559,7 +560,7 @@
     }
   },
   "https://studio.code.org/s/csd3-2019/stage/11/puzzle/6": {
-    "long_instructions": "# Booleans\n\nIn the past few levels, we have been comparing values of sprites to find out whether something is true or false. Let's start putting that in the context of an animation.\n\n# Do This\n\nThe program draws a race car and a finish line. We are going to figure out when the race car crosses the finish line. The sprites have all been set up for you.\n\n-   Add a `console.log` statement inside the draw loop. ( [Show me where][0] )\n-   Add an Boolean expression inside the `console.log` that asks \"Is the x position of the race car less than the x position of the finish line?\"\n-   Look at the output of the program as the car moves. When does the output change? Why?",
+    "long_instructions": "# Booleans\n\nIn the past few levels, we have been comparing values of sprites to find out whether something is true or false. Let's start putting that in the context of an animation.\n\n# Do This\n\nThe program draws a race car and a finish line. We are going to figure out when the race car crosses the finish line. The sprites have all been set up for you.\n\n-   Add a `console.log` statement inside the draw loop. ( [Show me where][0] )\n-   Add a Boolean expression inside the `console.log` that asks \"Is the x position of the race car less than the x position of the finish line?\"\n-   Look at the output of the program as the car moves. When does the output change? Why?",
     "callouts": {
       "CSD_U3_L8_S6_C1": "Put the console log statement here"
     }
@@ -1039,7 +1040,8 @@
               "correct": false,
               "feedback": "Functions can be created anywhere you like in your code. It is still a good idea to keep them all at the bottom for organization though!"
             }
-          ]
+          ],
+          "markdown": "# Does It Matter Where You Create Functions?\n\nSo far all your functions have been created at the bottom of your code. What do you think will happen if you call a function before it's defined?\n\nNotice that the red square is drawn **before** its function is created while the green square is drawn **after** its function is created. Which of these do you think will be drawn?\n"
         }
       }
     ]

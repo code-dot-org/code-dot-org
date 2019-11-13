@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "za svaku stavku";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "Za svaku stavku na listi, varijabli '%1' daje vrijednost stavke, a potom izvršava zadane naredbe.";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "https://github.com/google/blockly/wiki/Loops";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "od %1 do %2 s razmakom %3";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "za";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "U ovom bloku varijabla %1 poprima vrijednosti od početnog do krajnjeg broja, brojeći sa zadanim razmakom, a pritom se izvršavaju umetnuti blokovi.";

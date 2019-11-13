@@ -42,6 +42,7 @@ class Applab < Blockly
     log_conditions
     data_tables
     data_properties
+    data_library_tables
     hide_view_data_button
     show_debug_watch
     expand_debugger
@@ -52,6 +53,8 @@ class Applab < Blockly
     helper_libraries
     widget_mode
     starter_assets
+    start_libraries
+    libraries_enabled
   )
 
   # List of possible skins, the first is used as a default.

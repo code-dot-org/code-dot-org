@@ -184,6 +184,8 @@ en:
             "-1": "←"
       Dancelab_eval:
         text: eval [CODE][0]
+      Dancelab_everyMeasuresRange:
+        text: 'repeat every [N][0] measures after [START][1] '
       Dancelab_everySeconds:
         text: 'repeat every [N][0] [UNIT][1] '
         options:
@@ -338,6 +340,7 @@ en:
             '"ROBOT"': robot
             '"SHARK"': shark
             '"UNICORN"': unicorn
+            '"SLOTH"': sloth
           LOCATION:
             "{x: 200, y: 100}": top
             "{x: 200, y: 300}": bottom
@@ -477,7 +480,7 @@ en:
       Dancelab_setBackgroundEffectWithPalette:
         text: |-
           set background effect
-          [EFFECT][0] [PALETTE][1]
+          [PALETTE][0] [EFFECT][1]
         options:
           EFFECT:
             '"none"': None
@@ -499,6 +502,9 @@ en:
             '"spiral"': Spiral
             '"disco"': Squares
             '"stars"': Stars
+            '"music_wave"': Waves
+            '"quads"': Angles
+            '"flowers"': Flowers
           PALETTE:
             '"rave"': Black and White
             '"cool"': Cool
@@ -612,6 +618,7 @@ en:
             '"rotation"': rotation
             '"x"': horizontal position
             '"y"': vertical position
+            '"tint"': tint
       Dancelab_setPropRandom:
         text: randomize [SPRITE][0] [PROPERTY][1]
         options:
@@ -639,6 +646,7 @@ en:
             '"ROBOT"': robots
             '"SHARK"': sharks
             '"UNICORN"': unicorns
+            '"SLOTH"': sloths
           PROPERTY:
             '"scale"': size
             '"width"': width
@@ -796,6 +804,52 @@ en:
             '"bass"': bass
             '"mid"': mid
             '"treble"': treble
+      Dancelab_translateStrings:
+        text: translate [STRING][0]
+        options:
+          STRING:
+            '"music_wave"': Waves
+            '"ripples"': Ripples
+            '"ripples_random"': Random Ripples
+            '"quads"': Angles
+            '"flowers"': Flowers
+            '"popsicles"': Popsicles
+            '"squiggles"': Squiggles
+            '"growing_stars"': Growing Stars
+            '"emojis"': Emojis
+            '"hearts_colorful"': Hearts
+            '"paint_drio"': Paint Drip
+            '"exploding_stars"': Starburst
+            '"row_top"': top row
+            '"row_bottom"': bottom row
+            '"column_left"': left column
+            '"column_right"': right column
+            '"diamond"': diamond
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenKey:
         text: when [KEY][0] pressed
         options:
@@ -850,6 +904,8 @@ en:
             '1': mid
             '2': treble
       Dancelab_whenSetup:
+        text: setup
+      Dancelab_whenSetup2:
         text: setup
       Dancelab_whenSetupSong:
         text: 'setup [SONG][0] '
@@ -1134,6 +1190,17 @@ en:
         text: y coordinate of [SPRITE][0]
       Mikelab_addBehaviorSimple:
         text: sprite [SPRITE][0] begins [BEHAVIOR][1]
+      Mikelab_addTrainingData:
+        text: 'add training data: [NAME][0],[LOCATION][1]'
+        options:
+          NAME:
+            "{x: 201, y: 100}": object
+            "{x: 200, y: 100}": fish
+          LOCATION:
+            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": fish
+            "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": not fish
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": my-label
+            "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": not my-label
       Mikelab_changeAnim:
         text: set [SPRITE][0]'s to costume to [COSTUME][1]
       Mikelab_changePropBy:
@@ -1169,6 +1236,8 @@ en:
         text: eval [CODE][0]
       Mikelab_getAnim:
         text: "[SPRITE][0]'s costume"
+      Mikelab_getNext:
+        text: get next object
       Mikelab_getProp:
         text: "[SPRITE][0]'s [PROPERTY][1]"
         options:
@@ -1280,6 +1349,12 @@ en:
           [STATEMENT][2]
       Mikelab_hasBehavior:
         text: "[SPRITE][0] is currently [BEHAVIOR][1]"
+      Mikelab_hideFish:
+        text: remove [TRASH][0]
+        options:
+          TRASH:
+            object: object
+            fish: fish
       Mikelab_ifDanceIs:
         text: |-
           if [SPRITE][0] is doing [DANCE][1]
@@ -1298,6 +1373,30 @@ en:
             MOVES.ThisOrThat: This or That
             MOVES.Thriller: Zombie
             MOVES.Rest: None
+      Mikelab_ifLabel:
+        text: |-
+          if [DANCE][0]
+           do [DO1][1] else [DO2][2]
+        options:
+          DANCE:
+            MOVES.ClapHigh: fish
+            MOVES.Clown: my-label
+      Mikelab_ifRecognizeLabel:
+        text: |-
+          if recognize object as [DANCE][0]
+           do [DO1][1] else [DO2][2]
+        options:
+          DANCE:
+            MOVES.ClapHigh: fish
+            MOVES.Clown: my-label
+      Mikelab_ifRecognizeLabelOnly:
+        text: |-
+          if recognize object as [DANCE][0]
+           do [DO1][1]
+        options:
+          DANCE:
+            MOVES.ClapHigh: fish
+            MOVES.Clown: not my-label
       Mikelab_isAnim:
         text: "[SPRITE][0]'s costume is [COSTUME][1]"
       Mikelab_locationAt:
@@ -1312,6 +1411,12 @@ en:
         text: sprite [SPRITE][0] stops [BEHAVIOR][1]
       Mikelab_removeTint:
         text: remove color from [SPRITE][0]
+      Mikelab_repeatUntilComplete:
+        text: repeat forever
+      Mikelab_sendBad:
+        text: move object left
+      Mikelab_sendGood:
+        text: move object right
       Mikelab_setBG:
         text: set background to [BG][0]
         options:
@@ -1406,6 +1511,12 @@ en:
         text: when mouse released
       Mikelab_whenTouchesAny:
         text: when[SPRITE][0] touches any sprite
+      Mikelab_whenYesNoClicked:
+        text: when [KEY][0] clicked
+        options:
+          KEY:
+            '"yes"': 'yes'
+            '"no"': 'no'
       Mikelab_whileClicked:
         text: while clicking on[SPRITE][0]
       Mikelab_whileKeyPressed:

@@ -3,6 +3,16 @@ title: Amazon Future Engineer
 theme: responsive
 ---
 
+<% authentication_required! %>
+
+<style>
+  .show-if-eligible, .show-if-not-eligible {
+    display: none;
+  }
+</style>
+
+[show-if-eligible]
+
 <center><img src="/images/marketing/afe-hs.jpg" width="70%"/></center>
 
 # Amazon Future Engineer proudly supports your classroom 
@@ -62,3 +72,11 @@ Take your teaching to the next level with a CSTA+ membership sponsored by Amazon
 # Sign-up today to get started!
 
 <%= view :donor_teacher_banner %>
+
+[/show-if-eligible]
+
+[show-if-not-eligible]
+
+Sorry, this program is only available to select schools. If you have any questions, please contact us [here](https://support.code.org/hc/en-us/requests/new).
+
+[/show-if-not-eligible]

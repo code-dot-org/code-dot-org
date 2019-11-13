@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "elementu bakoitzerako";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "Zerrendako elementu bakoitzari '%1' aldagaia ezarri eta ondoren agindu batzuk jarraitu.";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "%1-(e)tik %2-(e)ra %3-naka";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "ondokoarekin zenbatu";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Hasierako zenbakitik, azkeneko zenbakira, %1 aldagaiak balioak hartzen ditu zehaztutako tartearen arabera zenbatuz eta zehaztutako blokeak eginez.";

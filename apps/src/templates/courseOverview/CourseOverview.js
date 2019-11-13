@@ -253,6 +253,8 @@ class CourseOverview extends Component {
             id={script.id}
             description={script.description}
             assignedSectionId={script.assigned_section_id}
+            courseId={id}
+            showAssignButton={showAssignButton}
           />
         ))}
       </div>
@@ -265,6 +267,7 @@ export default connect((state, ownProps) => ({
   sectionsForDropdown: sectionsForDropdown(
     state.teacherSections,
     null,
-    ownProps.id
+    ownProps.id,
+    true
   )
 }))(CourseOverview);

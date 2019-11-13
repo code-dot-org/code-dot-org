@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "iga elemendi jaoks";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "Väärtusta muutuja '%1' iga järjestikuse elemendiga loendis ja täida sellega käske.";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "alates %1 kuni %2 sammuga %3";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "millegi jaoks";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Muutuja %1 saab väärtusi alates algusarvust kuni lõpuarvuni ning väärtusi suurendatakse antud sammu võrra. Iga väärtuse kohta täidetakse käskude plokk.";

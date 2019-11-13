@@ -3,7 +3,7 @@ peer_reviews_to_complete 6
 login_required true
 student_detail_progress_view true
 
-stage 'Deeper Learning Overview'
+stage 'Deeper Learning Overview', flex_category: 'required'
 level 'dlp19_overview1', progression: 'Background'
 level 'dlp19_overview2', progression: 'Process'
 level 'dlp19_overview3', progression: 'Preparation'

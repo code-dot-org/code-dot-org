@@ -43,7 +43,7 @@ class ScriptsController < ApplicationController
 
     @show_redirect_warning = params[:redirect_warning] == 'true'
     @section = current_user&.sections&.find_by(id: params[:section_id])&.summarize
-    sections = current_user.try {|u| u.sections.where(hidden: false).select(:id, :name, :script_id)}
+    sections = current_user.try {|u| u.sections.where(hidden: false).select(:id, :name, :script_id, :course_id)}
     @sections_with_assigned_info = sections&.map {|section| section.attributes.merge!({"isAssigned" => section[:script_id] == @script.id})}
   end
 
@@ -60,9 +60,9 @@ class ScriptsController < ApplicationController
   def create
     @script = Script.new(script_params)
     if @script.save && @script.update_text(script_params, params[:script_text], i18n_params, general_params)
-      redirect_to @script, notice: I18n.t('crud.created', model: Script.model_name.human)
+      redirect_to edit_script_url(@script), notice: I18n.t('crud.created', model: Script.model_name.human)
     else
-      render 'new'
+      render json: @script.errors
     end
   end
 

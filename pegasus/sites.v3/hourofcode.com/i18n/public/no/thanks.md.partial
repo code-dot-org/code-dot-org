@@ -3,22 +3,8 @@ title: Takk for at du meldte deg på som vert for Kodetimen!
 layout: wide
 nav: how_to_nav
 social:
-  og:title: Kodetimen kommer
-  og:description: 'Kodetimen er en verdensomspennende bevegelse som når ut til et
-    titalls millioner elever i mer enn 180 land og finnes på over 45 språk. Alder:
-    4 til 104.'
-  og:image: http://hourofcode.com/images/hourofcode-2015-video-thumbnail.png
-  og:image:width: 1440
-  og:image:height: 900
-  og:url: http://hourofcode.com
   twitter:card: player
   twitter:site: "@codeorg"
-  twitter:url: http://hourofcode.com
-  twitter:title: Kodetimen kommer
-  twitter:description: 'Kodetimen er en verdensomspennende bevegelse som når ut til
-    et titalls millioner elever i mer enn 180 land og finnes på over 45 språk. Alder:
-    4 til 104.'
-  twitter:image:src: http://hourofcode.com/images/hourofcode-2015-video-thumbnail.png
 ---
 
 # Takk for at du meldte deg på som vert for Kodetimen!

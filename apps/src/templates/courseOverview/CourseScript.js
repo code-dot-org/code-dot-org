@@ -5,14 +5,17 @@ import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import Button from '../Button';
 import CourseScriptTeacherInfo from './CourseScriptTeacherInfo';
+import AssignButton from '@cdo/apps/templates/AssignButton';
+import Assigned from '@cdo/apps/templates/Assigned';
+import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {
   isScriptHiddenForSection,
   toggleHiddenScript
 } from '@cdo/apps/code-studio/hiddenStageRedux';
+import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import experiments from '@cdo/apps/util/experiments';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const styles = {
   main: {
@@ -46,13 +49,8 @@ const styles = {
     marginLeft: 0,
     marginRight: 0
   },
-  assigned: {
-    color: color.level_perfect,
-    fontSize: 16,
-    fontFamily: '"Gotham 5r", sans-serif',
-    lineHeight: '36px',
-    marginLeft: 10,
-    verticalAlign: 'top'
+  flex: {
+    display: 'flex'
   }
 };
 
@@ -61,15 +59,17 @@ class CourseScript extends Component {
     title: PropTypes.string.isRequired,
     name: PropTypes.string,
     id: PropTypes.number.isRequired,
+    courseId: PropTypes.number,
     description: PropTypes.string,
     assignedSectionId: PropTypes.number,
-
+    showAssignButton: PropTypes.bool,
     // redux provided
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
-    selectedSectionId: PropTypes.string.isRequired,
+    selectedSectionId: PropTypes.number,
     hiddenStageState: PropTypes.object.isRequired,
     hasNoSections: PropTypes.bool.isRequired,
-    toggleHiddenScript: PropTypes.func.isRequired
+    toggleHiddenScript: PropTypes.func.isRequired,
+    sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired
   };
 
   onClickHiddenToggle = value => {
@@ -100,7 +100,10 @@ class CourseScript extends Component {
       selectedSectionId,
       hiddenStageState,
       hasNoSections,
-      assignedSectionId
+      assignedSectionId,
+      courseId,
+      sectionsForDropdown,
+      showAssignButton
     } = this.props;
 
     const isHidden = isScriptHiddenForSection(
@@ -114,9 +117,13 @@ class CourseScript extends Component {
     }
 
     const assignedToStudent = viewAs === ViewType.Student && assignedSectionId;
+    const selectedSection = sectionsForDropdown.find(
+      section => section.id === selectedSectionId
+    );
     const assignedByTeacher =
       viewAs === ViewType.Teacher &&
-      assignedSectionId === parseInt(selectedSectionId);
+      selectedSection &&
+      selectedSection.scriptId === id;
     const isAssigned = assignedToStudent || assignedByTeacher;
 
     return (
@@ -131,18 +138,29 @@ class CourseScript extends Component {
         <div style={styles.content}>
           <div style={styles.title}>{title}</div>
           <div style={styles.description}>{description}</div>
-          <Button
-            text={i18n.goToUnit()}
-            href={`/s/${name}${location.search}`}
-            color={Button.ButtonColor.gray}
-            className="uitest-go-to-unit-button"
-          />
-          {isAssigned && experiments.isEnabled(experiments.ASSIGNMENT_UPDATES) && (
-            <span style={styles.assigned}>
-              <FontAwesome icon="check" />
-              {i18n.assigned()}
-            </span>
-          )}
+          <span style={styles.flex}>
+            <Button
+              text={i18n.goToUnit()}
+              href={`/s/${name}${location.search}`}
+              color={Button.ButtonColor.gray}
+              className="uitest-go-to-unit-button"
+            />
+            {isAssigned &&
+              experiments.isEnabled(experiments.ASSIGNMENT_UPDATES) && (
+                <Assigned />
+              )}
+            {!isAssigned &&
+              viewAs === ViewType.Teacher &&
+              showAssignButton &&
+              selectedSection &&
+              experiments.isEnabled(experiments.ASSIGNMENT_UPDATES) && (
+                <AssignButton
+                  sectionId={selectedSectionId}
+                  scriptId={id}
+                  courseId={courseId}
+                />
+              )}
+          </span>
         </div>
         {viewAs === ViewType.Teacher && !hasNoSections && (
           <CourseScriptTeacherInfo
@@ -158,9 +176,15 @@ class CourseScript extends Component {
 export const UnconnectedCourseScript = CourseScript;
 
 export default connect(
-  state => ({
+  (state, ownProps) => ({
     viewAs: state.viewAs,
-    selectedSectionId: state.teacherSections.selectedSectionId,
+    selectedSectionId: parseInt(state.teacherSections.selectedSectionId),
+    sectionsForDropdown: sectionsForDropdown(
+      state.teacherSections,
+      ownProps.id,
+      ownProps.courseId,
+      true
+    ),
     hiddenStageState: state.hiddenStage,
     hasNoSections:
       state.teacherSections.sectionsAreLoaded &&

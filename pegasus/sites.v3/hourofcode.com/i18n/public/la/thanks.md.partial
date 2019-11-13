@@ -3,22 +3,8 @@ title: "¡Gracias por registrarte como anfitrión de la Hora del Código!"
 layout: wide
 nav: how_to_nav
 social:
-  og:title: 'Hora del Código: únete al movimiento'
-  og:description: La Hora del Código es un movimiento global, el alcanze es de decenas
-    de millones de estudiantes de todas las edades en más de 180 países y más de 45
-    idiomas.
-  og:image: http://hourofcode.com/images/hourofcode-2015-video-thumbnail.png
-  og:image:width: 1440
-  og:image:height: 900
-  og:url: http://hourofcode.com
   twitter:card: player
   twitter:site: "@codeorg"
-  twitter:url: http://hourofcode.com
-  twitter:title: 'Hora del Código: únete al movimiento'
-  twitter:description: La Hora del Código es un movimiento global, el alcanze es de
-    decenas de millones de estudiantes de todas las edades en más de 180 países y
-    más de 45 idiomas.
-  twitter:image:src: http://hourofcode.com/images/hourofcode-2015-video-thumbnail.png
 ---
 
 # ¡Gracias por inscribirte para ser anfitrión de una Hora del Código!

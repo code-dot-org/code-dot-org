@@ -877,7 +877,7 @@ DSL
     sign_in @not_admin
     get :show, params: {id: level}
     assert_response :success
-    assert_select '#markdown', "this is the markdown for #{@not_admin.id}"
+    assert_select '.markdown-container[data-markdown=?]', "this is the markdown for #{@not_admin.id}"
   end
 
   # test_platformization_partner_calling_get_new_should_receive_success

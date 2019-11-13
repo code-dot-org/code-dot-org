@@ -62,6 +62,10 @@ class AuthenticationOption < ApplicationRecord
     MICROSOFT
   ]
 
+  def codeorg_email?
+    Mail::Address.new(email).domain == 'code.org'
+  end
+
   def oauth?
     OAUTH_CREDENTIAL_TYPES.include? credential_type
   end

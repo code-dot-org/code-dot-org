@@ -955,6 +955,7 @@
   pre-express-2018_name: Pre-reader Express Course (2018)
   express-2019_name: Express Course (2019)
   pre-express-2019_name: Pre-reader Express Course (2019)
+  csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Animation and Games'
   accelerated_name: "Accelerated Course"
   express_name: "Express Course"
@@ -1548,6 +1549,7 @@
   hoc2018_mc_aquatic_announcement: "Sign up your class to try one of the over 150 NEW activities for the Hour of Code (Dec 3-9). Be sure to check out our brand new Minecraft activity for 2018, the Voyage Aquatic! Sign up your class today."
   hoc2018_mc_aquatic_title: "Minecraft Voyage Aquatic"
   hoc2018_mc_aquatic_description: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
+  hoc2019_mc_aquatic_description: "Explore and build underwater worlds with code."
   hoc2018_mc_hero_title: "Minecraft Hero’s Journey"
   hoc2018_mc_hero_description: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
   hoc2018_mc_designer_title: "Minecraft Designer"
@@ -1658,3 +1660,7 @@
   page_not_found_button: "Return home"
   hoc2018_mc_with_microsoft: "In partnership with"
   hoc2018_mc_thank_microsoft: "We thank Microsoft for supporting our vision and mission to ensure every child has the opportunity to learn computer science and the skills to succeed in the 21st century."
+  hoc2019_mc_mee_title: "Minecraft AI for Good"
+  hoc2019_mc_mee_description1: 'The new Minecraft Hour of Code tutorial is now available in Minecraft: Education Edition for Windows, Mac, and iPad. Learn the basics of coding and explore AI with your students!'
+  hoc2019_mc_mee_description2: "Access free resources including a lesson plan, videos, computer science curriculum, and teacher trainings."
+  hoc2019_mc_more_coding_resources: "More Coding Resources"

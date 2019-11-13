@@ -1,9 +1,0 @@
-#!/usr/bin/env ruby
-
-# Uploads all English source files from i18n/locales/source
-# to Hour of Code project on Crowdin for translation.
-# https://crowdin.com/project/hour-of-code
-
-require_relative 'i18n_script_utils'
-
-exec "crowdin --config #{HOUROFCODE_CONFIG_FILE} --identity #{HOUROFCODE_IDENTITY_FILE} upload sources"

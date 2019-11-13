@@ -3,7 +3,7 @@
   "libraries": [
     {
       "name": "twoFunctionLibrary",
-      "functionNames": ["functionWithParams", "functionWithGlobalVariable"],
+      "functions": ["functionWithParams", "functionWithGlobalVariable"],
       "dropletConfig": [
         {
           "func": "twoFunctionLibrary.functionWithParams",
@@ -16,18 +16,18 @@
           "category": "Functions"
         }
       ],
-      "source": "var twoFunctionLibrary = (function() {var GLOBAL_VARIABLE = 'GLOBAL_VARIABLE'; function functionWithParams(one, two) {console.log(one+two)}; function functionWithGlobalVariable() {console.log(GLOBAL_VARIABLE)} return {functionWithParams: functionWithParams, functionWithGlobalVariable: functionWithGlobalVariable};})();"
+      "source": "var GLOBAL_VARIABLE = 'GLOBAL_VARIABLE'; function functionWithParams(one, two) {console.log(one+two)}; function functionWithGlobalVariable() {console.log(GLOBAL_VARIABLE)}"
     },
     {
       "name": "oneFunctionLibrary",
-      "functionNames": ["functionWithPrivateFunctionCall"],
+      "functions": ["functionWithPrivateFunctionCall"],
       "dropletConfig": [
         {
           "func": "oneFunctionLibrary.functionWithPrivateFunctionCall",
           "category": "Functions"
         }
       ],
-      "source": "var oneFunctionLibrary = (function() {function functionWithPrivateFunctionCall() {privateFunction();}; function privateFunction() {console.log('oneFunctionLibrary.functionWithPrivateFunctionCall')} return {functionWithPrivateFunctionCall: functionWithPrivateFunctionCall};})();"
+      "source": "function() {function functionWithPrivateFunctionCall() {privateFunction();}; function privateFunction() {console.log('oneFunctionLibrary.functionWithPrivateFunctionCall')}"
     }
   ]
 }

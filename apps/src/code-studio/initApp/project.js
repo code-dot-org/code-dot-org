@@ -179,6 +179,17 @@ var projects = (module.exports = {
   },
 
   /**
+   * @returns {string} description of the most recently published library from the
+   * project, or undefined if we don't have a current project
+   */
+  getCurrentLibraryDescription() {
+    if (!current) {
+      return;
+    }
+    return current.libraryDescription;
+  },
+
+  /**
    * This method is used so that it can be mocked for unit tests.
    */
   getUrl() {
@@ -551,6 +562,13 @@ var projects = (module.exports = {
     if (newName) {
       current.name = newName;
       this.setTitle(newName);
+    }
+  },
+  setLibraryDescription(description, callback) {
+    current = current || {};
+    if (description && current.libraryDescription !== description) {
+      current.libraryDescription = description;
+      this.updateChannels_(callback);
     }
   },
   setLibraryName(newName, callback) {
@@ -1167,6 +1185,15 @@ var projects = (module.exports = {
     });
   },
   setProjectLibraries(updatedLibrariesList) {
+    if (appOptions.level.editBlocks) {
+      // If we're in start_blocks on levelbuilder, reload is disabled, so we
+      // need to set currentSources so it can be saved when the save button is
+      // clicked.
+      currentSources.libraries = updatedLibrariesList;
+      updatedLibrariesList.forEach(library => {
+        library.fromLevelbuilder = true;
+      });
+    }
     return new Promise(resolve => {
       this.getUpdatedSourceAndHtml_(sourceAndHtml => {
         this.saveSourceAndHtml_(
@@ -1183,7 +1210,19 @@ var projects = (module.exports = {
     });
   },
   getProjectLibraries() {
-    return currentSources.libraries;
+    let startLibraries = appOptions.level.startLibraries;
+    return (
+      currentSources.libraries || (startLibraries && JSON.parse(startLibraries))
+    );
+  },
+  /**
+   * @returns {string} searches through all data we have on a level to find its
+   * name.
+   */
+  getLevelName() {
+    let name = current && current.name;
+    name = name || appOptions.level.name;
+    return name;
   },
   showSaveError_(errorType, errorCount, errorText) {
     header.showProjectSaveError();
@@ -1363,6 +1402,7 @@ var projects = (module.exports = {
     delete current.id;
     delete current.hidden;
     delete current.libraryName;
+    delete current.libraryDescription;
     current.projectType = this.getStandaloneApp();
     if (shouldPublish) {
       current.shouldPublish = true;

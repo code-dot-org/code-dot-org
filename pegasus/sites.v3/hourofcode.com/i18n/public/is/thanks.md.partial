@@ -3,20 +3,8 @@ title: Takk fyrir að skrá þig fyrir Klukkustund kóðunar!
 layout: wide
 nav: how_to_nav
 social:
-  og:title: Klukkustund kóðunar er komin
-  og:description: Klukkustund kóðunar er alþjóðleg hreyfing sem nær til tuga miljóna
-    nemenda í yfir 180 löndum og meira en 30 tungumála. Fyrir 4 til 104 ára.
-  og:image: http://hourofcode.com/images/hourofcode-2015-video-thumbnail.png
-  og:image:width: 1440
-  og:image:height: 900
-  og:url: http://hourofcode.com
   twitter:card: player
   twitter:site: "@codeorg"
-  twitter:url: http://hourofcode.com
-  twitter:title: Klukkustund kóðunar er komin
-  twitter:description: Klukkustund kóðunar er alþjóðleg hreyfing sem nær til tuga
-    miljóna nemenda í yfir 180 löndum og meira en 30 tungumála. Fyrir 4 til 104 ára.
-  twitter:image:src: http://hourofcode.com/images/hourofcode-2015-video-thumbnail.png
 ---
 
 # Takk fyrir að skrá þig fyrir Klukkustund kóðunar!

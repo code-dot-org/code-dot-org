@@ -22,6 +22,7 @@ class MatchDSL < ContentDSL
     %i(
       questions
       answers
+      markdown
     ).each do |property|
       strings[property] = @hash[property] unless @hash[property].blank?
     end

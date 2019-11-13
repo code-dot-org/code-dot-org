@@ -1,11 +1,16 @@
 import {expect, assert} from '../../../../util/reconfiguredChai';
 import React from 'react';
 import {mount} from 'enzyme';
-import {UnconnectedLibraryCreationDialog as LibraryCreationDialog} from '@cdo/apps/code-studio/components/libraries/LibraryCreationDialog.jsx';
+import {
+  UnconnectedLibraryCreationDialog as LibraryCreationDialog,
+  PublishState
+} from '@cdo/apps/code-studio/components/libraries/LibraryCreationDialog.jsx';
 import libraryParser from '@cdo/apps/code-studio/components/libraries/libraryParser';
 import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
 import sinon from 'sinon';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
+import annotationList from '@cdo/apps/acemode/annotationList';
 
 const LIBRARY_SOURCE =
   '/*\n' +
@@ -30,12 +35,37 @@ const LIBRARY_SOURCE =
 
 describe('LibraryCreationDialog', () => {
   let wrapper;
-  let clientApi = new LibraryClientApi('123');
-  let publishSpy = sinon.stub(clientApi, 'publish');
+  let clientApi;
+  let publishSpy;
 
   const SUBMIT_SELECTOR = 'input[type="submit"]';
   const CHECKBOX_SELECTOR = 'input[type="checkbox"]';
   const DESCRIPTION_SELECTOR = 'textarea';
+  const CHANNEL_ID_SELECTOR = 'input[type="text"]';
+  const PUBLISH_ERROR_SELECTOR = '#error-alert';
+
+  before(() => {
+    replaceOnWindow('dashboard', {
+      project: {
+        setLibraryName: () => {},
+        setLibraryDescription: () => {},
+        getCurrentId: () => {},
+        getUpdatedSourceAndHtml_: () => {},
+        getLevelName: () => {}
+      }
+    });
+    sinon.stub(window.dashboard.project, 'setLibraryName').returns(undefined);
+    sinon
+      .stub(window.dashboard.project, 'setLibraryDescription')
+      .returns(undefined);
+    sinon.stub(window.dashboard.project, 'getCurrentId').returns('123');
+    clientApi = new LibraryClientApi('123');
+    publishSpy = sinon.stub(clientApi, 'publish');
+  });
+
+  after(() => {
+    restoreOnWindow('dashboard');
+  });
 
   beforeEach(() => {
     wrapper = mount(
@@ -51,12 +81,66 @@ describe('LibraryCreationDialog', () => {
     wrapper = null;
   });
 
+  describe('onOpen', () => {
+    it('sets the loading state to CODE_ERROR when a code error exists', () => {
+      sinon
+        .stub(annotationList, 'getJSLintAnnotations')
+        .returns([{type: 'error'}]);
+      wrapper.instance().onOpen();
+      wrapper.update();
+      expect(wrapper.state().publishState).to.equal(PublishState.CODE_ERROR);
+      annotationList.getJSLintAnnotations.restore();
+    });
+
+    it('sets loading state to NO_FUNCTIONS when there are no functions', () => {
+      sinon.stub(annotationList, 'getJSLintAnnotations').returns([]);
+      let sourceStub = sinon.stub(
+        window.dashboard.project,
+        'getUpdatedSourceAndHtml_'
+      );
+      sourceStub.yields({source: ''});
+      sinon.stub(libraryParser, 'getFunctions').returns([]);
+
+      wrapper.instance().onOpen();
+      wrapper.update();
+      expect(wrapper.state().publishState).to.equal(PublishState.NO_FUNCTIONS);
+
+      annotationList.getJSLintAnnotations.restore();
+      window.dashboard.project.getUpdatedSourceAndHtml_.restore();
+      libraryParser.getFunctions.restore();
+    });
+
+    it('sets loading state to DONE_LOADING on success', () => {
+      sinon.stub(annotationList, 'getJSLintAnnotations').returns([]);
+      sinon
+        .stub(libraryParser, 'getFunctions')
+        .returns([{functionName: 'foo', comment: ''}]);
+      sinon.stub(libraryParser, 'sanitizeName').returns('name');
+      sinon.stub(window.dashboard.project, 'getLevelName').returns('name');
+      let sourceStub = sinon.stub(
+        window.dashboard.project,
+        'getUpdatedSourceAndHtml_'
+      );
+      sourceStub.yields({source: 'function foo() {}'});
+
+      wrapper.instance().onOpen();
+      wrapper.update();
+      expect(wrapper.state().publishState).to.equal(PublishState.DONE_LOADING);
+
+      annotationList.getJSLintAnnotations.restore();
+      libraryParser.getFunctions.restore();
+      libraryParser.sanitizeName.restore();
+      window.dashboard.project.getLevelName.restore();
+      window.dashboard.project.getUpdatedSourceAndHtml_.restore();
+    });
+  });
+
   describe('UI', () => {
     it('publish is disabled when nothing checked', () => {
       wrapper.setState({
         libraryName: 'testLibrary',
         librarySource: LIBRARY_SOURCE,
-        loadingFinished: true,
+        publishState: PublishState.DONE_LOADING,
         sourceFunctionList: libraryParser.getFunctions(LIBRARY_SOURCE)
       });
 
@@ -67,7 +151,7 @@ describe('LibraryCreationDialog', () => {
       wrapper.setState({
         libraryName: 'testLibrary',
         librarySource: LIBRARY_SOURCE,
-        loadingFinished: true,
+        publishState: PublishState.DONE_LOADING,
         sourceFunctionList: libraryParser.getFunctions(LIBRARY_SOURCE)
       });
 
@@ -86,7 +170,7 @@ describe('LibraryCreationDialog', () => {
       wrapper.setState({
         libraryName: 'testLibrary',
         librarySource: LIBRARY_SOURCE,
-        loadingFinished: true,
+        publishState: PublishState.DONE_LOADING,
         sourceFunctionList: libraryParser.getFunctions(LIBRARY_SOURCE)
       });
 
@@ -107,7 +191,7 @@ describe('LibraryCreationDialog', () => {
       wrapper.setState({
         libraryName: 'testLibrary',
         librarySource: LIBRARY_SOURCE,
-        loadingFinished: true,
+        publishState: PublishState.DONE_LOADING,
         sourceFunctionList: libraryParser.getFunctions(LIBRARY_SOURCE)
       });
 
@@ -118,6 +202,41 @@ describe('LibraryCreationDialog', () => {
           .prop('required')
       );
     });
+
+    it('displays channel id when in published state', () => {
+      wrapper.setState({
+        libraryName: 'testLibrary',
+        librarySource: LIBRARY_SOURCE,
+        publishState: PublishState.PUBLISHED,
+        sourceFunctionList: libraryParser.getFunctions(LIBRARY_SOURCE)
+      });
+
+      assert.isTrue(
+        wrapper.find(CHANNEL_ID_SELECTOR).instance().value === '123'
+      );
+    });
+
+    it('does not display publish error message when loading is finished before publish', () => {
+      wrapper.setState({
+        libraryName: 'testLibrary',
+        librarySource: LIBRARY_SOURCE,
+        publishState: PublishState.LOADING,
+        sourceFunctionList: libraryParser.getFunctions(LIBRARY_SOURCE)
+      });
+
+      expect(wrapper.find(PUBLISH_ERROR_SELECTOR).exists()).to.be.false;
+    });
+
+    it('displays publish error message after being set to error state', () => {
+      wrapper.setState({
+        libraryName: 'testLibrary',
+        librarySource: LIBRARY_SOURCE,
+        publishState: PublishState.ERROR_PUBLISH,
+        sourceFunctionList: libraryParser.getFunctions(LIBRARY_SOURCE)
+      });
+
+      expect(wrapper.find(PUBLISH_ERROR_SELECTOR).exists()).to.be.true;
+    });
   });
 
   describe('publish', () => {
@@ -126,7 +245,7 @@ describe('LibraryCreationDialog', () => {
       wrapper.setState({
         libraryName: 'testLibrary',
         librarySource: LIBRARY_SOURCE,
-        loadingFinished: true,
+        publishState: PublishState.DONE_LOADING,
         sourceFunctionList: functionList
       });
 

@@ -13,6 +13,7 @@ import {
   isScriptHiddenForSection,
   updateHiddenScript
 } from '@cdo/apps/code-studio/hiddenStageRedux';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const styles = {
   main: {
@@ -74,6 +75,17 @@ class AssignToSection extends Component {
         }
         this.setState({
           sectionIndexToAssign: null
+        });
+        firehoseClient.putRecord({
+          study: 'assignment',
+          study_group: 'v0',
+          event: scriptId ? 'unit_overview' : 'course_overview',
+          data_json: JSON.stringify({
+            section_id: result.id,
+            section_creation_timestamp: result.createdAt,
+            script_id: result.script.id,
+            course_id: result.course_id
+          })
         });
       })
       .fail((jqXhr, status) => {

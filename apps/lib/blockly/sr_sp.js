@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "за сваку ставку";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "За сваку ставку унутар листе, подеси промењиву '%1' по ставци, и онда начини неке изјаве-наредбе.";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#count_with";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "од %1 до %2 по %3";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "Za";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Нека промењива %1 узме вредности од почетног броја до задњег броја, бројећи по одређеном интервалу, и изврши одређене блокове.";

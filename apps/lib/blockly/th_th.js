@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "สำหรับแต่ละอัน";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "สำหรับแต่ละสิ่งในรายการ ตั้งค่าตัวแปร '%1' เป็นสิ่งนั้น แล้วทำข้อความคำสั่งบางอย่าง";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "จาก %1 จนถึง %2 นับทีละ %3";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "สำหรับ";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "กำหนดค่าตัวแปร %1 โดยเริ่มนับค่าจากจำนวนเริ่มต้นไปยังจำนวนสิ้นสุด โดยนับข้ามตามจำนวนที่กำหนดไว้ และทำคำสั่งที่ถูกระบุในบล็อก";

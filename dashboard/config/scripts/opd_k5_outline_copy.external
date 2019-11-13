@@ -3,86 +3,92 @@ skip_dialog true
 markdown <<MARKDOWN
 # Course outline
 
-The course is divided into nine stages, and each stage is made up of "levels" or "puzzles." Here's an overview of what you'll learn if you complete the entire course:
+The course is divided into four concept chunks, which each have lessons in them. Lessons consists of different "levels", which are colloquially referred to as bubbles, stages, or puzzles by students and teachers. Here's an overview of what you'll learn if you complete the entire course:
 
-## Stage 1: Welcome to 'Teaching Computer Science Fundamentals' (TIME)
+## Getting Started
 
-By completing Stage 1, you will:
-
+### Lesson 1: Welcome to 'Teaching Computer Science Fundamentals'
 - Review the course details
-- Plan your participation in this course
 - Understand what computer science is and differentiate between "coding" and computer science"
 - Identify the benefits of teaching and learning computer science
+- Plan your participation in this course
 
-## Stage 2: Getting to know the Computer Science Fundamentals Courses (TIME)
-
-By completing Stage 2, you will:
-
+### Lesson 2: Getting to know the Computer Science Fundamentals Courses
 - Become familiar with the content and organization of the Computer Science Fundamentals courses
-- Understand different types of Computer Science Fundamentals lessons
-- Identify which course(s) are most appropriate for your students
+- Identify which course is most appropriate for your students
 - Understand the importance of the teacher in the Computer Science Fundamentals curriculum
+- Understand different types of Computer Science Fundamentals lessons
 
-## Stage 3: Sequencing (TIME)
+## Basic Coding Concepts and Teaching Practices
 
-By completing Stage 3, you will:
-
+### Lesson 3: Sequencing
 - Define "program" and "algorithm"
+- Identify where sequencing is introduced in the Computer Science Fundamentals courses
 - Use the Code.org visual programming engine to write simple programs
-- Explore unplugged lessons on sequencing and reflect on classroom application
-- Understand how to find and utilize Code.org lesson plans
+- Explore an unplugged lesson on sequencing and reflect on classroom application
+- Think about how to use lesson plans
 
-## Stage 5: Loops (TIME)
-
-By completing Stage 4, you will:
-
+### Lesson 4: Loops
 - Define "loops" and explain their importance
-- Explore unplugged lessons on loops and reflect on classroom application
+- Identify where loops are introduced in the Computer Science Fundamentals courses
+- Explore an unplugged lesson on loops and reflect on classroom application
 - Practice coding simple loops
 - Understand the benefits of pair programming
 
-## Stage 8: Events (TIME)
-
-By completing Stage 5, you will:
-
+### Lesson 5: Events
 - Define "events" and explain their importance
-- Explore unplugged lessons on events and reflect on classroom application
+- Identify where events are introduced in the Computer Science Fundamentals courses
+- Explore an unplugged lesson on events and reflect on classroom application
 - Practice coding simple events
 - Understand the debugging process
 
-## Stage 6: Conditionals (TIME)
-
-By completing Stage 6, you will:
-
+### Lesson 6: Conditionals
 - Define "conditionals" and explain their importance
-- Explore unplugged lessons on conditionals and reflect on classroom application
+- Identify where conditionals are introduced in the Computer Science Fundamentals courses
+- Explore an unplugged lesson on conditionals and reflect on classroom application
 - Practice coding simple conditionals
 - Understand the teaching practice of journaling
 
-## Stage 7: Functions (TIME)
+## [Optional] Diving Deeper: Courses E and F
+You will want to complete this section if you are teaching Courses E or F. This section dives into some of the harder concepts covered in these courses for older students.
 
-By completing Stage 7, you will:
+### Lesson 7: End of Course Projects
+- Understand the benefit of end of course projects
+- Identify where end of course projects are introduced in the Computer Science Fundamentals courses
+- Practice coding a project
 
-- Define "functions" and explain their importance
-- Explore unplugged lessons on functions and reflect on classroom application
-- Practice coding simple functions
-- Understand the steps in the problem solving process
-
-## Stage 8: Diving deeper (for Courses E and F) (TIME)
-
-By completing Stage 8, you will:
-
+### Lesson 8: Functions
 - Identify if you will be teaching Courses E or F to students
-- Learn about aspects of these courses that are unique, including working with Sprites, end-of-course projects, and more advanced kinds of loops (nested loops and for loops).
+- Define "functions" and explain their importance
+- Identify where functions are introduced in the Computer Science Fundamentals courses
+- Explore the unplugged lesson on functions and reflect on classroom application
+- Practice coding simple functions
 
-## Stage 9: Next Steps (TIME)
+### Lesson 9: Variables
+- Define "variable" and explain its importance
+- Identify where variables are introduced in the Computer Science Fundamentals courses
+- Explore the unplugged lesson on variables and reflect on classroom application
+- Practice coding with variables
 
-By completing Stage 9, you will
+### Lesson 10: For Loops
+- Define "for loops" and explain its importance
+- Identify where for loops are introduced in the Computer Science Fundamentals courses
+- Explore the unplugged lesson on for loops and reflect on classroom application
+- Practice coding with for loops
 
-- Reflect on your learning
+### Lesson 11: Sprite Lab
+- Define "sprite" and "behavior"
+- Identify where sprites and behaviors are introduced in the Computer Science Fundamentals courses
+- Explore the coding environment Sprite Lab
+
+## Next Steps
+
+### Lesson 12: Reviewing your Reflections
+- Review the reflections you have made throughout the course so far
+
+### Lesson 13: Next Steps
+- Explore teacher resources
 - Plan for next steps you can take to continue your learning
 - Connect with a global community of fellow educators interested in computer science education
 - Share your takeaways and feedback on this course
-
-> **Note**: Suggested times are provided above to help you plan your learning. Please note that you may want to spend more or less time on a given stage, depending on your prior knowledge, interest and capacity. Keep in mind that this course is entirely self-paced; you can always leave the course and come back or revisit any stage or level at any time.
 MARKDOWN

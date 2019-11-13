@@ -3,22 +3,8 @@ title: Dziękujemy za rejestrację jako organizator Godziny Kodowania!
 layout: wide
 nav: how_to_nav
 social:
-  og:title: Zbliża się Godzina Kodowania
-  og:description: The Hour of Code to globalny ruch docierający do dziesiątek milionów
-    uczniów w ponad 180 krajach, posługujących się ponad 30 językami. Wiek od 4 do
-    104 lat.
-  og:image: http://hourofcode.com/images/hourofcode-2015-video-thumbnail.png
-  og:image:width: 1440
-  og:image:height: 900
-  og:url: http://hourofcode.com
   twitter:card: player
   twitter:site: "@codeorg"
-  twitter:url: http://hourofcode.com
-  twitter:title: Zbliża się Godzina Kodowania
-  twitter:description: The Hour of Code to globalny ruch docierający do dziesiątek
-    milionów uczniów w ponad 180 krajach, posługujących się ponad 30 językami. Wiek
-    od 4 do 104 lat.
-  twitter:image:src: http://hourofcode.com/images/hourofcode-2015-video-thumbnail.png
 ---
 
 # Dziękujemy za rejestrację jako organizator Godziny Kodowania!

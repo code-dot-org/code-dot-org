@@ -3,7 +3,8 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import i18n from '@cdo/locale';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import ScriptOverviewTopRow, {
+import {
+  UnconnectedScriptOverviewTopRow as ScriptOverviewTopRow,
   NOT_STARTED,
   IN_PROGRESS,
   COMPLETED
@@ -15,7 +16,7 @@ import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
 
 const defaultProps = {
-  sections: [],
+  sectionsForDropdown: [],
   sectionsInfo: [],
   scriptProgress: NOT_STARTED,
   scriptId: 42,

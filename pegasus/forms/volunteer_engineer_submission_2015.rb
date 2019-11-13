@@ -127,7 +127,8 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
       ).
       exclude(
         Sequel.function(:coalesce, Forms.json('data.unsubscribed_s'), '') => UNSUBSCRIBE_FOREVER
-      )
+      ).
+      order(Sequel.desc(:id))
 
     # UNSUBSCRIBE_HOC means a volunteer said "I want to unsubscribe until the next Hour of Code".
     # We don't want them to be getting volunteer requests until then.  So, if we're not currently

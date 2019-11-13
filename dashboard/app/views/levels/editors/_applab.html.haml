@@ -100,13 +100,15 @@
   :javascript
     levelbuilder.initializeCodeMirror('level_data_properties', 'javascript');
 
+.field
+  = f.label :data_library_tables,'Dataset Libraries'
+  = f.text_area :data_library_tables, value: @level.data_library_tables, readonly: true
 
 .field
   = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :hide_view_data_button, description: "Hide Data Button"}
 
 .field
   = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :debugger_disabled, description: "Disable code debugger (Console is still enabled)"}
-
 
 .field
   = f.label :helper_libraries
@@ -117,3 +119,12 @@
     %a.select_none{href: '#'} none
     (shift-click or cmd-click to select multiple).
   = f.select :helper_libraries, (Library.distinct.pluck(:name) + (@level.helper_libraries || [])).uniq.sort, {}, {multiple: true}
+
+:ruby
+  script_data = {
+    applabOptions: {
+      data_library_tables: @level.data_library_tables
+    }.to_json
+  }
+%script{src: webpack_asset_path('js/levels/editors/_applab.js'),
+        data: script_data}

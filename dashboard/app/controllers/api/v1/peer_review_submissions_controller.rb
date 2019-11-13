@@ -30,9 +30,7 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
     if user_query.presence
       reviews =
         if user_query.include? '@'
-          reviews.
-            joins(submitter: [:primary_contact_info]).
-            where(authentication_options: {email: user_query})
+          reviews.where submitter: User.find_by_email(user_query)
         else
           # I feel safe-ish using fuzzy search against user display names because we are already
           # constrained by our join to the set of users submitting for peer review, which is below

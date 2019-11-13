@@ -67,7 +67,8 @@ FactoryGirl.define do
       user_type User::TYPE_TEACHER
       birthday Date.new(1980, 3, 14)
       factory :admin do
-        admin true
+        with_google_authentication_option
+        after(:create) {|user| user.update(admin: true)}
       end
       trait :with_school_info do
         school_info
@@ -355,7 +356,7 @@ FactoryGirl.define do
           email: user.email,
           hashed_email: user.hashed_email,
           credential_type: AuthenticationOption::GOOGLE,
-          authentication_id: 'abcd123',
+          authentication_id: "abcd#{user.id}",
           data: {
             oauth_token: 'some-google-token',
             oauth_refresh_token: 'some-google-refresh-token',
@@ -1214,4 +1215,11 @@ FactoryGirl.define do
     association :level
     association :script_level
   end
+
+  factory :validated_user_level do
+    time_spent 10
+    user_level_id 1
+  end
+
+  factory :donor_school
 end
