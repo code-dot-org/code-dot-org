@@ -78,7 +78,7 @@ class AssignToSection extends Component {
         });
         firehoseClient.putRecord({
           study: 'assignment',
-          study_group: 'v0',
+          study_group: 'v1',
           event: scriptId ? 'unit_overview' : 'course_overview',
           data_json: JSON.stringify({
             section_id: result.id,
