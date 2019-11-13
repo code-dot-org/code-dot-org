@@ -64,7 +64,9 @@ module Cdo
       def translate(locale, key, options = ::I18n::EMPTY_HASH)
         translation = super(locale, key, options)
         if options.fetch(:markdown, false)
-          @renderer ||= Redcarpet::Markdown.new(Redcarpet::Render::Safe)
+          # The safe_links_only just makes sure that the URL is a "safe" web one which starts with: "#", "/", "http://", "https://", "ftp://", "mailto:"
+          # However, it isn't good enough because it ignores URLS which are just '/' or start with '//'.
+          @renderer ||= Redcarpet::Markdown.new(Redcarpet::Render::Safe.new(safe_links_only: false))
           @renderer.render(translation)
         else
           translation
