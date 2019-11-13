@@ -27,6 +27,7 @@ class SectionAssigner extends Component {
     selectSection: PropTypes.func.isRequired,
     showAssignButton: PropTypes.bool,
     courseId: PropTypes.number,
+    scriptId: PropTypes.number,
     selectedSectionId: PropTypes.number
   };
 
@@ -39,6 +40,7 @@ class SectionAssigner extends Component {
       sections,
       showAssignButton,
       courseId,
+      scriptId,
       selectedSectionId
     } = this.props;
     const selectedSection = sections.find(
@@ -53,6 +55,8 @@ class SectionAssigner extends Component {
             sections={sections}
             onChangeSection={this.onChangeSection}
             selectedSection={selectedSection}
+            courseId={courseId}
+            scriptId={scriptId}
           />
           {selectedSection && selectedSection.isAssigned && (
             <UnassignButton sectionId={selectedSection.id} />
@@ -63,6 +67,7 @@ class SectionAssigner extends Component {
               <AssignButton
                 sectionId={selectedSection.id}
                 courseId={courseId}
+                scriptId={scriptId}
               />
             )}
         </div>

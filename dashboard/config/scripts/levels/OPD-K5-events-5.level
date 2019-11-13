@@ -1,0 +1,95 @@
+<Flappy>
+  <config><![CDATA[{
+  "game_id": 61,
+  "created_at": "2019-11-08T00:19:20.000Z",
+  "level_num": "custom",
+  "user_id": 156,
+  "properties": {
+    "skin": "flappy",
+    "obstacles": "true",
+    "ground": "true",
+    "goal": "{\"startX\":572,\"startY\":324,\"moving\":true}",
+    "scale": "{\"snapRadius\":2}",
+    "success_condition": "function successCondition() {\r\n\t        return Flappy.obstacles[0].hitAvatar && Flappy.gameState === Flappy.GameStates.OVER;\r\n\t      }",
+    "failure_condition": "function failureCondition() {\r\n\t        // todo - would be nice if we could distinguish feedback for\r\n\t        // flew through pipe vs. didnt hook up endGame block\r\n\t        var obstacleEnd = Flappy.obstacles[0].x + Flappy.OBSTACLE_WIDTH;\r\n\t        return obstacleEnd < Flappy.avatarX;\r\n\t      }",
+    "short_instructions": "Attach a block to the `when hit an obstacle` event so that the game ends when Flappy crashes into the first set of pipes.",
+    "embed": "false",
+    "long_instructions": "Flappy will fly right through obstacles unless you write code to make him crash. \r\n\r\nAttach a block to the `when hit an obstacle` event so that the game ends when Flappy crashes into the first set of pipes.",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Connect the `end game` block to `when hit an obstacle` to solve this puzzle.\",\"hint_id\":\"courseC_flappy_events4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/208e4ef529ed9c9f7db7a5cebfccd9cc/courseC_flappy_events4.mp3\"}]",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "default_flap": "NORMAL",
+    "score": "false",
+    "shareable": "false",
+    "parent_level_id": 15464,
+    "name_suffix": "_2019",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-27 19:24:14 +0000\",\"changed\":[\"notes\",\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"obstacles\",\"ground\",\"success_condition\",\"failure_condition\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 21:43:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 23:02:06 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2019-11-08 00:19:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"preload_asset_list\"],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false">
+          <next>
+            <block type="flappy_setSpeed">
+              <title name="VALUE">Flappy.LevelSpeed.NORMAL</title>
+            </block>
+          </next>
+        </block>
+        <block type="flappy_whenCollideGround" deletable="false">
+          <next>
+            <block type="flappy_endGame"/>
+          </next>
+        </block>
+        <block type="flappy_whenClick" deletable="false">
+          <next>
+            <block type="flappy_flap_height">
+              <title name="VALUE">Flappy.FlapHeight.NORMAL</title>
+            </block>
+          </next>
+        </block>
+        <block type="flappy_whenCollideObstacle" deletable="false"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml id="toolbox" style="display: none;">
+        <block type="flappy_flap_height"/>
+        <block type="flappy_endGame"/>
+        <block type="flappy_playSound"/>
+        <block type="flappy_setSpeed"/>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="flappy_endGame"/>
+      </xml>
+    </required_blocks>
+  </blocks>
+</Flappy>

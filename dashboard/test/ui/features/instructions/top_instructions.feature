@@ -16,7 +16,7 @@ Scenario: CSF Top Instructions
   Then I click selector ".fa-chevron-circle-down"
   And I see no difference for "artist long instructions uncollapsed"
 
-  Then I am on "http://studio.code.org/s/course1/stage/4/puzzle/5?noautoplay=true"
+  Then I am on "http://studio.code.org/s/allthethings/stage/2/puzzle/7?noautoplay=true"
   And I wait for the page to fully load
   And I see no difference for "maze short instructions with ani gif"
 

@@ -4,8 +4,8 @@
 # Variable definitions:
 # https://github.com/sysown/proxysql/wiki/Global-variables
 
-datadir="/var/lib/proxysql"
-errorlog="/var/lib/proxysql/proxysql.log"
+datadir="<%=@data_dir%>"
+errorlog="<%=@data_dir%>/proxysql.log"
 
 # https://github.com/sysown/proxysql/wiki/Global-variables#admin-variables
 admin_variables=
@@ -36,11 +36,6 @@ mysql_variables=
   monitor_username="<%= @reader.user %>"
   monitor_password="<%= @reader.password %>"
 
-  # When a node change its read_only value from 1 to 0, this variable determines
-  # if the node should be present in both hostgroups or not.
-  # https://github.com/sysown/proxysql/wiki/Global-variables#mysql-monitor_writer_is_also_reader
-  monitor_writer_is_also_reader=false
-
   # If this variable is set, after an OK packet with `last_insert_id` is received,
   # multiplexing is temporary disabled for the number of queries specified (default 5).
   # This prevents inconsistent results if a query containing `LAST_INSERT_ID()` uses a
@@ -53,7 +48,7 @@ mysql_variables=
 # https://github.com/sysown/proxysql/wiki/Main-(runtime)#mysql_servers
 mysql_servers =
 (
-<% [@writer, @reader].each_with_index do |server, hostgroup| -%>
+<% [@writer, @reader].uniq.product([1, 2]).push([@writer, 0]).each do |server, hostgroup| -%>
   {
     address =        "<%= server.host %>"
     port =            <%= server.port || 3306 %>
@@ -79,7 +74,8 @@ mysql_aws_aurora_hostgroups:
   {
     writer_hostgroup=0
     reader_hostgroup=1
-    new_reader_weight=1
+    new_reader_weight=10000000
+    writer_is_also_reader=1
     domain_name="<%=@writer.host.sub(/[^.]*/, '')%>"
   }
 )
@@ -127,11 +123,12 @@ mysql_query_rules:
     apply=1
   },
   {
-    # Global read-write split on SELECT, disabled by default (set active=1 to enable).
+    # Send writer-user SELECTs to the primary-reader (HG2).
     rule_id=3
-    active=0
+    username="<%= @writer.user %>"
+    active=1
     match_pattern="^SELECT"
-    destination_hostgroup=1
+    destination_hostgroup=2
     apply=1
   },
   {
