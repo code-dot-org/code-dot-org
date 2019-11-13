@@ -23,7 +23,6 @@ experiments.SCHOOL_AUTOCOMPLETE_DROPDOWN_NEW_SEARCH =
   'schoolAutocompleteDropdownNewSearch';
 experiments.APPLAB_DATASETS = 'applabDatasets';
 experiments.CENSUS_MAP_ON_MAPBOX = 'censusMapOnMapbox';
-experiments.ASSIGNMENT_UPDATES = 'assignmentUpdates';
 experiments.STUDENT_LIBRARIES = 'student-libraries';
 
 /**
