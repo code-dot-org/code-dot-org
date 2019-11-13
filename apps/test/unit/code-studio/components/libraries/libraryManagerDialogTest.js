@@ -25,6 +25,17 @@ describe('LibraryManagerDialog', () => {
   });
 
   describe('cachedClassLibraries', () => {
+    it('are cleared onClose', () => {
+      const wrapper = shallow(
+        <LibraryManagerDialog onClose={() => {}} isOpen={true} />
+      );
+      let library = {channelId: ID};
+      wrapper.setState({cachedClassLibraries: [library]});
+      expect(wrapper.state().cachedClassLibraries).to.deep.equal([library]);
+      wrapper.instance().closeLibraryManager();
+      expect(wrapper.state().cachedClassLibraries).to.be.empty;
+    });
+
     it('are used by fetchLatestLibrary', () => {
       let callback = sinon.fake();
       const wrapper = shallow(
@@ -52,7 +63,6 @@ describe('LibraryManagerDialog', () => {
         <LibraryManagerDialog onClose={() => {}} isOpen={true} />
       );
       wrapper.instance().fetchLatestLibrary(ID, callback);
-      wrapper.update();
       expect(wrapper.state().cachedClassLibraries).to.deep.equal([library]);
       expect(callback).to.have.been.calledOnce;
       expect(callback).to.have.been.calledWith(library);
