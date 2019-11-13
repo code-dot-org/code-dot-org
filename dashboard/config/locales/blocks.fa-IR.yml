@@ -171,6 +171,11 @@ fa:
           PROPERTY:
             '"scale"': اندازه
             '"height"': ارتفاع
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': الماس
+            '"x"': طول (x)
       Dancelab_whenKey:
         options:
           KEY:
