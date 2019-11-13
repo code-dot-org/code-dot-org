@@ -129,4 +129,28 @@ class ExperimentsControllerTest < ActionController::TestCase
 
     experiment.destroy
   end
+
+  test_user_gets_response_for(
+    :set_single_user_experiment,
+    name: 'teacher cannot join experiment where allow_joining_via_url is false',
+    response: :redirect,
+    user: :teacher,
+    params: -> {{experiment_name: Experiment::PILOT_EXPERIMENTS.find {|p| !p[:allow_joining_via_url]}[:name]}}
+  ) do
+    assert_includes flash[:alert], "is not a valid experiment"
+    assert_nil flash[:notice]
+    assert_nil Experiment.first
+  end
+
+  test_user_gets_response_for(
+    :set_single_user_experiment,
+    name: 'teacher can join experiment where allow_joining_via_url is true',
+    response: :redirect,
+    user: -> {@teacher},
+    params: -> {{experiment_name: Experiment::PILOT_EXPERIMENTS.find {|p| p[:allow_joining_via_url]}[:name]}}
+  ) do
+    assert_nil flash[:alert]
+    assert_includes flash[:notice], "success"
+    assert Experiment.find_by(min_user_id: @teacher.id, name: Experiment::PILOT_EXPERIMENTS.find {|p| p[:allow_joining_via_url]}[:name])
+  end
 end
