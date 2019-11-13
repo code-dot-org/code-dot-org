@@ -66,22 +66,7 @@ export const loadAllFishPartImages = () => {
 };
 
 export const initMobilenet = () => {
-  //return mobilenetModule.load().then(res => (mobilenet = res));
-  //return tf.loadModel('https://storage.googleapis.com/tfjs-models/tfjs/mobilenet_v1_0.25_224/model.json').then(res => (mobilenet = res));
-  //return mobilenetModule.load({version: 1, modelUrl: 'https://storage.googleapis.com/tfhub-tfjs-modules/google/imagenet/mobilenet_v1_100_224/classification/1/model.json'}).then(res => (mobilenet = res));
-  return mobilenetModule.load({version: 1, modelUrl: 'http://localhost:8080/models/mobilenet/model.json'}).then(res => (mobilenet = res));
-  /*return mobilenetModule
-    .load()
-    .then(res =>
-      res.loadModel(
-        'https://storage.googleapis.com/tfjs-models/tfjs/mobilenet_v1_0.25_224/model.json'
-      )
-    )
-    .then(res => (mobilenet = res));*/
-  /*return tf.loadModel('https://storage.googleapis.com/tfjs-models/tfjs/mobilenet_v1_0.25_224/model.json').then(loadedModel => {
-    const outputLayer = loadedModel.getLayer('conv_preds');
-    mobilenet = tf.model({inputs: loadedModel.inputs, outputs: outputLayer.output, name: 'modelModified'});
-  });*/
+  return mobilenetModule.load({version: 1, modelUrl: 'models/mobilenet/model.json'}).then(res => (mobilenet = res));
 };
 
 // Load all of the trash assets and store them
