@@ -904,11 +904,6 @@ es-ES:
           -   Después de 6 compases, tu bailarín tiene que hacer un baile diferente del que hacía después de 4 compases.
 
           _El nivel termina después de 12 compases._
-      Dance_2019_07:
-        challenges: |-
-          **Desafío opcional**
-
-          -   Experimenta cambiando otras propiedades (anchura, altura, rotación, etc.).
       Dance_Party_01:
         validation: |-
           **¿Cómo paso este nivel?**

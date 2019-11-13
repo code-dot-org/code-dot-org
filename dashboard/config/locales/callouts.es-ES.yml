@@ -175,8 +175,6 @@ es-ES:
         dance_callout_11_b: "¡Bloque nuevo!"
       CourseD_Dance_Party_11_5:
         dance_party_11_5_groups: Mira aquí para los bloques "todos los patos"
-      Dance_2019_01:
-        dance_callout_01: "¡Añade este bloque a tu programa!"
       Dance_2019_04:
         dance_callout_02: "¡Añade este bloque a tu programa!"
       Dance_2019_06:
@@ -184,7 +182,8 @@ es-ES:
       Dance_2019_07:
         setprop_hint: "¡Bloque nuevo!"
       Dance_2019_09:
-        new_block_1: "¡Bloque nuevo!"
+        new_block_3: "¡Bloque nuevo!"
+        new_block_4: "¡Bloque nuevo!"
       Dance_Party_01:
         dance_callout_01: "¡Añade este bloque a tu programa!"
       Dance_Party_02:

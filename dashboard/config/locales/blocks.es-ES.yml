@@ -777,6 +777,26 @@ es:
             '"bass"': bajo
             '"mid"': medio
             '"treble"': tiple
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"hearts_colorful"': Corazones
+            '"diamond"': diamante
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
+            '"6"': '6'
       Dancelab_whenKey:
         text: al pulsar {KEY}
         options:
