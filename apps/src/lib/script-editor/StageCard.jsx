@@ -245,18 +245,10 @@ export class UnconnectedStageCard extends Component {
 
 export default connect(
   state => ({}),
-  dispatch => ({
-    reorderLevel(stage, originalPosition, newPosition) {
-      dispatch(reorderLevel(stage, originalPosition, newPosition));
-    },
-    addLevel(stage) {
-      dispatch(addLevel(stage));
-    },
-    setStageLockable(stage, lockable) {
-      dispatch(setStageLockable(stage, lockable));
-    },
-    setFlexCategory(stage, flexCategory) {
-      dispatch(setFlexCategory(stage, flexCategory));
-    }
-  })
+  {
+    reorderLevel,
+    addLevel,
+    setStageLockable,
+    setFlexCategory
+  }
 )(UnconnectedStageCard);
