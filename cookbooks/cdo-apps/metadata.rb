@@ -8,6 +8,7 @@ version          '0.2.396'
 
 depends 'apt'
 depends 'build-essential'
+depends 'yarn'
 
 depends 'cdo-cloudwatch-extra-metrics'
 depends 'cdo-repository'
