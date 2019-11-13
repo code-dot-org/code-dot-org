@@ -17,21 +17,21 @@ const DEFAULT_PROPS = {
 };
 
 describe('StageExtras', () => {
-  it('does not show stage extras warning if showStageExtrasWarning is false ', () => {
+  it('does not show stage extras warning if showStageExtrasWarning is false', () => {
     const wrapper = shallow(
       <StageExtras {...DEFAULT_PROPS} showStageExtrasWarning={false} />
     );
     expect(wrapper.find('StageExtrasNotification')).to.have.lengthOf(0);
   });
 
-  it('does not show stage extras warning if sectionId is not provided ', () => {
+  it('does not show stage extras warning if sectionId is not provided', () => {
     const wrapper = shallow(
       <StageExtras {...DEFAULT_PROPS} sectionId={null} />
     );
     expect(wrapper.find('StageExtrasNotification')).to.have.lengthOf(0);
   });
 
-  it('show stage extra warning if showStageExtrasWarning and have sectionId ', () => {
+  it('show stage extra warning if showStageExtrasWarning and have sectionId', () => {
     const wrapper = shallow(<StageExtras {...DEFAULT_PROPS} />);
     expect(wrapper.find('StageExtrasNotification')).to.have.lengthOf(1);
   });
