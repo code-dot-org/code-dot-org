@@ -189,6 +189,8 @@ class ScriptLevelsController < ApplicationController
         @section = current_user.sections[0]
         @user = @section&.students&.find_by(id: params[:user_id])
       end
+      # This airs on the side of not showing the warning by not showing it if the script we are in
+      # is not the assigned script for the section
       @show_stage_extras_warning = !@section&.stage_extras && @section.script.name == params[:script_id]
     end
 
