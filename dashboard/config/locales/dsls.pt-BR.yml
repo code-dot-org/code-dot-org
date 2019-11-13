@@ -4844,6 +4844,46 @@ pt-BR:
           <hr>
 
           ** Agora você tenta! **
+      'Overview: If Statements':
+        markdown: |+
+          # Declaração If
+
+          ## Como funcionam as declarações If
+
+          <img src="https://images.code.org/361556bbff61bf91e2c737f745582dff-image-1479418505481.png" style="float: right; margin-left: 20px; margin-right: 20px">
+
+          As declarações If permitem a você *tomar uma decisão que determina quais linhas de código devem ser executadas em seguida.*
+
+          À direita temos um diagrama que mostra os elementos de uma declaração `If` básica em JavaScript.
+
+          Existem duas partes básicas em uma declaração If.
+
+          1. A condição que será calculada (Uma expressão booleana que resulta em **verdadeiro** ou **falso**)
+          2. O código que deverá ser executado *se* o resultado da expressão for verdadeiro - delimitado entre chaves
+
+          ## Um exemplo testado
+          <img src="https://images.code.org/ca716e009ddb8dc397eb5a651a1ac2d7-image-1479420772852.png" style="display: block; margin: auto; float: right">
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 150%;">1.</span>
+          O programa roda linha a linha conforme esperado. Ele exibe uma mensagem, e depois pede ao usuário que insira um número. Aquilo que o usuário digita é armazenado na variável <code>idade</code> e depois prossegue à próxima linha...
+          </p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 150%;">2.</span>
+          Quando o código da declaração <code>if</code> é encontrado, a <em>primeira</em> coisa que ocorre é a avaliação da condição contida entre parêntesis. Ele verifica se, neste ponto do programa, o valor da variável <code>idade</code> é maior ou igual a 18. Se ele for, dizemos que a expressão "<strong>retorna verdadeiro</strong>". Caso contrário ele retorna falso.
+          </p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 150%;">3.</span>
+          Estas declarações console.log irão <em>somente</em> rodar se a expressão for verdadeira. As chaves contém todo o código que deverá ser executado se, e somente se, a expressão for verdadeira. Caso contrário, a seção inteira do código contido na declaração if é <em>pulado</em>.
+          </p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 150%;">4.</span>
+          A execução é retomada aqui, na primeira linha após o fechamento das chaves da declaração if. Esta linha irá rodar <em>sempre</em>, mas note que se o usuário digitar uma idade inferior a 18, toda a declaração if será pulada, e o programa irá dizer somente "Obrigado por verificar". (Nós iremos consertar esta situação estranha em breve).
+
+          </p>
+
+          <div style="clear: both">&nbsp;</div>
+
+
       'Overview: Images':
         markdown: |+
           # Imagens
@@ -4975,6 +5015,62 @@ pt-BR:
           # Programação por Revesamento
 
           Introduza-se nas equipes e trabalhe junto para escrever programas que desenhem figuras.
+      Responding to User Input:
+        markdown: "# Respondendo à Entrada do Usuário\n\nO Modo de Desenho torna realmente
+          fácil desenhar a Interface de Usuário para sua aplicação, mas teremos que
+          mergulhar no Modo de Codificação para fazer o programa responder aos usuários.\n\nNo
+          Laboratório de Jogos o laço de Desenho simplesmente rodou código, usando
+          condicionais para checar interações do usuário. O Laboratório de Aplicativos,
+          por outro lado, aguarda para responder a determinados **eventos** que ocorrem
+          em um programa. Esta é a maneira do Laboratório de Aplicativos dizer \"Oi!
+          Algo acabou de acontecer!\". Isso significa que não precisa haver qualquer
+          código rodando quando você não estiver interagindo diretamente com um aplicativo,
+          e seu código pode responder a estes eventos à medida em que ocorrem.\n\nDe
+          forma geral, as tarefas de codificação envolvidas em fazer seu aplicativo
+          responder a eventos através do acionamento de funções são chamadas **Tratamento
+          de Eventos**. \n\nNo Laboratório de Aplicativos todo o tratamento de eventos
+          começa através da adicção de um bloco de código especial chamado `onEvent`.
+          Aqui está a forma de fazer isso:\n\n<br><br>\n\n<div style=\"column-count:
+          4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count:
+          4; width: 100%\">\n\n<p><span style=\"font-weight: bold; color: #00adbc;
+          font-size: 200%;\">1.</span>\nAtive o Modo de Desenho</p>\n\n<p><span style=\"font-weight:
+          bold; color: #00adbc; font-size: 200%;\">2.</span>\nArraste um bloco <code>onEvent</code>
+          da caixa de ferramentas para a área de trabalho.</p>\n\n<p><span style=\"font-weight:
+          bold; color: #00adbc; font-size: 200%;\">3.</span>\nUse o menu de contexto
+          para selecionar o <em>ID</em> do elemento da UI que você quer configurar
+          para responder a algum evento. Os IDs de todos os elementos da UI adicionados
+          em modo de desenho serão listados aqui.</p>\n<p><span style=\"font-weight:
+          bold; color: #00adbc; font-size: 200%;\">4.</span>\nUse o menu de contexto
+          para selecionar o <em>tipo</em> de evento a que você quer responder. (Use
+          somente \"click\" por enquanto).</p>\n\n<p><span style=\"font-weight: bold;
+          color: #00adbc; font-size: 200%;\">5.</span>\nAdicione código dentro da
+          função que você quer executar <em>quando</em> o usuário aciona o evento.
+          A função irá executar uma vez a cada vez que o usuário ativa o evento específico.</p>\n\n</div>\n\n![](https://images.code.org/9b506faaaadf61338dc738a4eafb66b2-image-1476740205599.png)\n\n###
+          Alterando Telas com um \"Clique\"\n\nEm programação orientada a eventos,
+          é importante entender que:\n\n* **Usuários acionam eventos** - Eventos ocorrem
+          quando os usuários clicam um botão, tocam a tela, movem o mouse, digitam
+          uma tecla no teclado, etc.\n* **Eventos acionam código** - Quanto um evento
+          ocorre ou \"é ativado\" ele pode ser usado para acionar uma função javascript
+          específica.\n\nO bloco `onEvent` do Laboratório de Aplicativos é um tipo
+          de função para tratamento de eventos chamada **Ouvidor de Eventos**. Ele
+          contém toda a configuração necessária para tratar eventos em um único comando,
+          que possui várias partes. Aqui está um exemplo com anotações completas:\n\n<img
+          src=\"//curriculum.code.org/images/applab/onEvent_diagram.png\" style=\"display:
+          block; margin: 20px auto\">\n\n<div style=\"column-count: 3; column-gap:
+          20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%\">\n\n<p><span
+          style=\"font-weight: bold; color: #00adbc; font-size: 200%;\">1.</span>\nCódigo
+          para executar quando a função callback é acionada quando o usuário clica
+          em <em>botão1</em>. Neste caso, simplesmente mova a tartaruga para a frente
+          em 27 pixels. O código para tratamento de eventos terá tipicamente mais
+          que uma linha. Isto é somente um exemplo simples para começar.</p>\n\n<p><span
+          style=\"font-weight: bold; color: #00adbc; font-size: 200%;\">2.</span>\nNote
+          que esta função, diferentemente de outras que vimos, não tem um nome. Ela
+          é também chamada de <em>função callback</em> que é um termo estranho. O
+          que faz uma função callback ser diferente de uma função comum é que você
+          não chama ela diretamente do seu código. Ao invés disso, a função callback
+          é <strong>chamada pelo sistema</strong> ao mesmo tempo em que um evento
+          específico ocorre. Funções callback são um padrão comum em programação orientada
+          a eventos.</p>\n</div>\n\n\n### Você irá experimentar isto em seguida!\n\n"
       ScreenOutTheMean-Unplugged:
         markdown: |
           # Identifique o Perturbador
@@ -5588,6 +5684,21 @@ pt-BR:
         - text: D
           correct: true
           feedback: Correto!
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
       courseD_multi_artist_binary8_predict1_2018:
         questions:
         - text: Olhe com atenção o código abaixo. Qual imagem será criada quando você
@@ -5602,6 +5713,21 @@ pt-BR:
         - text: D
           correct: true
           feedback: Correto!
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
       courseD_multi_artist_binary8_predict1_2018_2019:
         questions:
         - text: Olhe com atenção o código abaixo. Qual imagem será criada quando você
@@ -5616,6 +5742,21 @@ pt-BR:
         - text: D
           correct: true
           feedback: Correto!
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
       courseD_multi_artist_nestedLoops9_predict1:
         questions:
         - text: Olhe com atenção o código abaixo. Qual desenho será feito quando você
@@ -6388,17 +6529,6 @@ pt-BR:
         - text: Eu não sei.
           feedback: A variável volta a ser 0 antes das duas últimas chamadas de função,
             onde 1 é adicionado a cada vez. A abelha recolhe 2 unidades de néctar.
-      courseF_external_variableConstant:
-        markdown: |+
-          <h2>Mais sobre Variáveis</h2>
-
-
-          <img src="https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png" style="padding-left: 30px; width:300px; float:right;"/>
-          <h3>Você acaba de aprender um ótimo jeito de usar uma variável... Como uma constante!
-          Quando você usa uma variável como uma constante, você configura o valor uma vez e então usa o *mesmo* valor várias vezes no seu programa sem mudá-lo após clicar em "Executar".</h3>
-          <br/><hr/>
-          <h3>Nas próximas etapas, você vai escrever códigos com variáveis que *mudam* dentro do programa.</h3>
-
       courseF_external_variableConstant_2018:
         markdown: |+
           <h2>Mais sobre Variáveis</h2>

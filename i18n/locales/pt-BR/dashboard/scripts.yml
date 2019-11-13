@@ -2882,6 +2882,8 @@ pt-BR:
               name: Usando o processo de design de jogos
             'Project: Build a Game':
               name: 'Projeto: Construir um Jogo'
+            'Project: Design a Game':
+              name: 'Projeto - Projetar um Jogo'
             Programming for Entertainment:
               name: Programação para entretenimento
             Plotting Shapes:
@@ -2894,8 +2896,12 @@ pt-BR:
               name: variáveis
             Sprites:
               name: Sprite
+            The Draw Loop:
+              name: O laço de desenho
             The Counter Pattern Unplugged:
               name: O padrão do contador desconectado
+            Sprite Movement:
+              name: Movimento sprite
             Conditionals:
               name: Condições
             Other Forms of Input:
@@ -3213,10 +3219,14 @@ pt-BR:
               name: Propriedade intelectual
             'Personal Website: Finalizing Site':
               name: 'Site pessoal: finalizando site'
+            'Project: Personal Portfolio Website':
+              name: 'Projeto - Site do portfólio pessoal'
             Images in HTML:
               name: Imagens em HTML
             Styling Text with CSS:
               name: Estilo de texto com CSS
+            Styling Elements with CSS:
+              name: Estilizando elementos com CSS
             Exploring Websites:
               name: Explorando sites
             'Websites for Expression ':
@@ -3228,8 +3238,12 @@ pt-BR:
               description_teacher: Nesta lição, os alunos continuam usando o HTML para estruturar o texto nas páginas da Web, desta vez com cabeçalhos. Os alunos aprendem como os diferentes elementos do cabeçalho são exibidos por padrão e praticam usá-los para criar títulos de páginas e seções. Os alunos começam a decidir como organizarão seu conteúdo em suas próprias páginas pessoais. No último nível, os alunos iniciam o projeto no qual continuarão trabalhando em toda a unidade.
             Lists:
               name: Listas
+            Intellectual Property and Images:
+              name: Propriedade intelectual e imagens
             Project - Multi-Page Websites:
               name: Projeto - Sites com várias páginas
+            Project - Personal Portfolio Website:
+              name: Projeto - Site do portfólio pessoal
         csp2-support:
           stages:
             Unit 2 Overview:
@@ -3276,6 +3290,8 @@ pt-BR:
               name: Criando aplicativos para o bem
             Market Research:
               name: Pesquisa de mercado
+            Paper Prototypes:
+              name: Protótipos de papel
             Prototype Testing:
               name: Protótipo de Teste
             Digital Design:
@@ -3287,12 +3303,22 @@ pt-BR:
               name: Funcionalidade básica do aplicativo
               description_student: As equipes adicionam um pouco mais de polimento e funcionalidade a seus aplicativos antes do teste. Vários exemplos são fornecidos para demonstrar um código simples que adiciona recursos interessantes.
               description_teacher: Nesse ponto do processo de desenvolvimento, cada aluno deve ter o que é essencialmente uma versão digital do protótipo de papel - telas estáticas que são vinculadas a botões. Para muitos aplicativos, é tudo o que você realmente precisa para começar a testar com os usuários, mas esta lição dará aos alunos a chance de explorar maneiras simples de adicionar um pouco mais de funcionalidade aos aplicativos antes de passar para a fase de teste. Os conceitos de programação introduzidos nesta lição ** não são necessários ** para concluir o projeto com êxito e podem ser omitidos a seu critério.
+            Testing the App:
+              name: Testando o aplicativo
             Improving and Iterating:
               name: Improvizando e Interagindo
             App Presentation:
               name: Apresentação de aplicativos
+            User Interface and Prototype Testing:
+              name: Interface de usuário e teste de protótipo
+            Feedback and Prototypes:
+              name: Feedback e protótipos
             Identifying User Needs:
               name: Identificando Necessidades do Usuário
+            Project - Paper Prototype:
+              name: Projeto - Protótipo de Papel
+            Linking Screens:
+              name: Telas de vinculação
             User Interfaces:
               name: Interfaces de Usuário
         minecraft:
@@ -3308,6 +3334,8 @@ pt-BR:
               name: Pré-Pesquisa hora do código
             Flappy Code:
               name: Código do Flappy bird
+            Post Hour of Code Survey:
+              name: Postar Pesquisa hora do código
         coursea-draft:
           title: 'Fundamentos de Ciência da Computação: Curso A'
           description_short: Uma introdução à ciência da computação para novos leitores.
@@ -3550,6 +3578,8 @@ pt-BR:
               name: Pré-Pesquisa hora do código
             Hour of Code 2013:
               name: Hora do Código 2013
+            Post Hour of Code Survey:
+              name: Postar Pesquisa hora do código
         hoc-impact-study:
           description_short: Conheça os conceitos básicos da ciência da computação com a ajuda de vários personagens divertidos!
           stages:
@@ -3557,6 +3587,8 @@ pt-BR:
               name: Pré-Pesquisa hora do código
             Hour of Code 2013:
               name: Hora do Código 2013
+            Post Hour of Code Survey:
+              name: Postar Pesquisa hora do código
         sports:
           title: Programe seus próprios jogos esportivos
           description_short: Esportes
@@ -3709,6 +3741,7 @@ pt-BR:
             Wrap-Up:
               name: Resumo
         csp5-support:
+          description_short: Curso de Aprendizagem Profissional para Professores da Unidade CSP 5
           stages:
             Unit 5 Overview:
               name: Visão geral da unidade 5
@@ -3761,16 +3794,26 @@ pt-BR:
               name: Inovações em computação
             Input Unplugged:
               name: Entrada desconectada
+        gamelab-demo:
+          stages:
+            Simple Sprite Movement:
+              name: Movimento simples de Sprite
         csd6-draft:
           stages:
             UI and Input:
               name: Interface de usuário e entrada
             Computing Innovations:
               name: Inovações em computação
+            The Circuit Playground:
+              name: O parque de diversões do circuito
             Foo:
               name: Foo
             Lists:
               name: Listas
+            Lights:
+              name: Luzes
+            Event Types:
+              name: Tipos de Eventos
             Input Unplugged:
               name: Entrada desconectada
             Timed Loop:
@@ -3884,6 +3927,8 @@ pt-BR:
               name: Programação Orientada a Eventos
             Basic App Functionality:
               name: Funcionalidade básica do aplicativo
+            Event Types:
+              name: Tipos de Eventos
             Extra:
               name: Extra
         applab-2hour:
@@ -3899,14 +3944,19 @@ pt-BR:
               name: Programação Orientada a Eventos
             Basic App Functionality:
               name: Funcionalidade básica do aplicativo
+            Event Types:
+              name: Tipos de Eventos
         coursed-ramp:
           stages:
             Introduction:
               name: Introdução
         workshop-maker:
+          description_short: Progressão de nível para acompanhar um workshop do Maker Toolkit pessoalmente
           stages:
             App Lab Basics:
               name: Noções básicas do laboratório de aplicativos
+            The Circuit Playground:
+              name: O parque de diversões do circuito
             Physical Input:
               name: Entrada física
             Analog Input:
@@ -3929,27 +3979,40 @@ pt-BR:
               name: Entrada desconectada
               description_student: Experimente duas maneiras diferentes que um aplicativo pode receber informações de um usuário, enquanto aprende mais sobre o modelo de programação orientado a eventos usado no Laboratório de Aplicativos.
             Event Types:
+              name: Tipos de Eventos
               description_student: Revise os conceitos básicos de programação no Laboratório de Aplicativos e explore alguns novos tipos de eventos que podem ser usados em seus programas.
+            The Circuit Playground:
+              name: O parque de diversões do circuito
             Lists:
               name: Listas
               description_student: Aprenda como as listas podem ser usadas para armazenar vários valores em um único nome de variável.
               description_teacher: Uma lista, também conhecida como matriz, é um tipo de variável que pode armazenar muitos valores de uma só vez. Nesta lição, os alunos aprendem a criar listas que armazenam uma série de valores relacionados em uma única variável. Depois de criar listas próprias, os alunos aprenderão sobre maneiras de extrair um valor específico ou aleatório de uma lista usando seu índice.
+            Lights:
+              name: Luzes
             For Loops:
               name: Laços para
+              description_student: A turma aprende sobre a repetição de instruções usando um _laço para_, primeiro controlando um "robô" por meio de uma grade e depois no Laboratório de Aplicativos.
             Lists and For Loops:
               name: Lista e laços para
             Timed Loops:
               name: Laços temporizado
+              description_student: Nesta lição, baseamos os alunos na compreensão dos laços para com o objetivo de aprender sobre uma estrutura mais sofisticada chamada laço temporizado. Diferentemente dos laços, você pode controlar a rapidez com que um laço cronometrado se repete e outros códigos (como manipuladores de eventos) podem ser executados entre as iterações do laço. Isso nos permite criar animações interessantes que se repetem infinitamente, enquanto ainda permite que outro código seja executado ao lado dele.
             'Project: Board Output':
               name: 'Projeto: Saída da Placa'
+              description_student: Os alunos aprendem o que aprenderam no capítulo um e desenvolvem um aplicativo de design próprio que usa o quadro para gerar informações.
+              description_teacher: Os alunos aprendem o que aprenderam no capítulo um e desenvolvem um aplicativo de design próprio que usa o quadro para gerar informações.
             Physical Input:
               name: Entrada física
             Analog Input:
               name: Entrada analógica
+              description_teacher: Nesta lição, os alunos exploram como os três sensores analógicos (som, luz e temperatura) podem ser usados para escrever programas que respondem a mudanças no ambiente. O uso desses sensores marca uma transição em termos de como os usuários interagem com um programa. Ao usar sensores como entrada, o usuário de um aplicativo não precisa interagir diretamente com ele, ou pode interagir sem realmente perceber que está fazendo isso.
             Sensor Applications:
               name: Aplicações de sensores
+              description_student: Trabalhe em três aplicativos pequenos para entender melhor o uso dos sensores da lição anterior.
+              description_teacher: Para acompanhar os sensores que os alunos aprenderam na lição anterior, percorremos três aplicativos, cada um deles baseado em um sensor diferente. Esses três aplicativos podem servir como pontos de partida para os alunos no projeto final a seguir.
             'Project: Prototype an Innovation':
               name: 'Projeto: Protótipo de Inovação'
+              description_student: Desenvolva dispositivos de computação inovadores de seu próprio projeto, usando tudo o que aprendeu ao longo deste curso.
             Designing Screens with Code:
               name: Criando telas com código
             Getting Properties:
@@ -3958,24 +4021,35 @@ pt-BR:
               name: O processo de design de programa
             'Project: Make a Game':
               name: 'Projeto: Fazer um Jogo'
+              description_student: Os alunos aprendem o que aprenderam no capítulo um e desenvolvem um aplicativo de design próprio que usa o quadro para gerar informações.
+              description_teacher: Os alunos aprendem o que aprenderam no capítulo um e desenvolvem um aplicativo de design próprio que usa o quadro para gerar informações.
             Arrays:
               name: Vetores
               description_student: Aprenda como as listas podem ser usadas para armazenar vários valores em um único nome de variável.
             Making Music:
               name: Fazendo Música
+              description_student: Nesta lição, os alunos usarão a campainha em toda sua extensão, produzindo sons, notas e músicas com a campainha. Os alunos começam com uma breve revisão dos parâmetros de frequência e duração da campainha e depois passam para o conceito de notas. As notas permitem que os alunos se limitem às frequências usadas na música ocidental e fornecem uma camada de abstração que os ajuda a entender quais frequências podem soar bem juntas. Quando os alunos são capazes de tocar notas na campainha, eles usam matrizes para segurar e tocar seqüências de notas, formando canções simples.
+              description_teacher: Nesta lição, os alunos usarão a campainha em toda sua extensão, produzindo sons, notas e músicas com a campainha. Os alunos começam com uma breve revisão dos parâmetros de frequência e duração da campainha e depois passam para o conceito de notas. As notas permitem que os alunos se limitem às frequências usadas na música ocidental e fornecem uma camada de abstração que os ajuda a entender quais frequências podem soar bem juntas. Quando os alunos são capazes de tocar notas na campainha, eles usam matrizes para segurar e tocar seqüências de notas, formando canções simples.
             Arrays and For Loops:
               name: Vetores e laços para
             Accelerometer:
               name: Acelerômetro
+              description_student: Nesta lição, os alunos explorarão o acelerômetro e seus recursos. Eles se familiarizarão com seus eventos e propriedades, além de criarem vários programas utilizando o acelerômetro semelhante aos que provavelmente encontraram em aplicativos do mundo real.
+              description_teacher: Nesta lição, os alunos explorarão o acelerômetro e seus recursos. Eles se familiarizarão com seus eventos e propriedades, além de criarem vários programas utilizando o acelerômetro semelhante aos que provavelmente encontraram em aplicativos do mundo real.
             Functions with Parameters:
               name: Funções com Parâmetros
+              description_student: A lição começa com uma rápida revisão dos parâmetros, no contexto dos blocos do Laboratório de Aplicativos que os alunos viram recentemente. Os alunos examinam exemplos de parâmetros nas funções criadas pelo usuário no Laboratório de Aplicativos e criam e chamam funções com parâmetros para eles mesmos, usando-os para controlar vários elementos em uma tela. Posteriormente, os alunos usam laços para iterar sobre uma matriz, passando cada elemento para uma função. Por fim, os alunos usam o que aprenderam para criar um jogo de captura de estrelas.
+              description_teacher: A lição começa com uma rápida revisão dos parâmetros, no contexto dos blocos do Laboratório de Aplicativos que os alunos viram recentemente. Os alunos examinam exemplos de parâmetros nas funções criadas pelo usuário no Laboratório de Aplicativos e criam e chamam funções com parâmetros para eles mesmos, usando-os para controlar vários elementos em uma tela. Posteriormente, os alunos usam laços para iterar sobre uma matriz, passando cada elemento para uma função. Por fim, os alunos usam o que aprenderam para criar um jogo de captura de estrelas.
             Circuits and Physical Prototypes:
               name: Circuitos e Protótipos Físicos
+              description_student: Conecte circuitos simples para criar um protótipo físico usando materiais baratos e facilmente encontrados.
             Innovations in Computing_:
               description_student: Explore uma ampla variedade de plataformas de computação novas e inovadoras enquanto expande sua compreensão do que pode ser um computador.
               description_teacher: Para iniciar a unidade final deste curso, os alunos farão algumas pesquisas sobre inovações interessantes na computação. Esta lição irá expor os alunos a uma variedade mais ampla de fatores de forma de computação (aparência de um computador) e campos afetados pela computação. Posteriormente nesta unidade, os alunos analisarão os dispositivos que encontraram nesta lição à medida que desenvolvem seus próprios dispositivos físicos de computação.
             Designing Screens with Code_:
               name: Criando telas com código
+            The Circuit Playground_:
+              name: O parque de diversões do circuito
             Input Unplugged_:
               name: Entrada desconectada
               description_student: Experimente duas maneiras diferentes que um aplicativo pode receber informações de um usuário, enquanto aprende mais sobre o modelo de programação orientado a eventos usado no Laboratório de Aplicativos.
@@ -3983,27 +4057,39 @@ pt-BR:
               name: Obtendo propriedades
             Analog Input_:
               name: Entrada analógica
+              description_teacher: Nesta lição, os alunos exploram como os três sensores analógicos (som, luz e temperatura) podem ser usados para escrever programas que respondem a mudanças no ambiente. O uso desses sensores marca uma transição em termos de como os usuários interagem com um programa. Ao usar sensores como entrada, o usuário de um aplicativo não precisa interagir diretamente com ele, ou pode interagir sem realmente perceber que está fazendo isso.
             The Program Design Process_:
               name: O processo de design de programa
             'Project: Make a Game_':
               name: 'Projeto: Fazer um Jogo'
             Making Music_:
               name: Fazendo Música
+              description_student: Nesta lição, os alunos usarão a campainha em toda sua extensão, produzindo sons, notas e músicas com a campainha. Os alunos começam com uma breve revisão dos parâmetros de frequência e duração da campainha e depois passam para o conceito de notas. As notas permitem que os alunos se limitem às frequências usadas na música ocidental e fornecem uma camada de abstração que os ajuda a entender quais frequências podem soar bem juntas. Quando os alunos são capazes de tocar notas na campainha, eles usam matrizes para segurar e tocar seqüências de notas, formando canções simples.
+              description_teacher: Nesta lição, os alunos usarão a campainha em toda sua extensão, produzindo sons, notas e músicas com a campainha. Os alunos começam com uma breve revisão dos parâmetros de frequência e duração da campainha e depois passam para o conceito de notas. As notas permitem que os alunos se limitem às frequências usadas na música ocidental e fornecem uma camada de abstração que os ajuda a entender quais frequências podem soar bem juntas. Quando os alunos são capazes de tocar notas na campainha, eles usam matrizes para segurar e tocar seqüências de notas, formando canções simples.
             Arrays and For Loops_:
               name: Vetores e laços para
             Accelerometer_:
               name: Acelerômetro
+              description_student: Nesta lição, os alunos explorarão o acelerômetro e seus recursos. Eles se familiarizarão com seus eventos e propriedades, além de criarem vários programas utilizando o acelerômetro semelhante aos que provavelmente encontraram em aplicativos do mundo real.
+              description_teacher: Nesta lição, os alunos explorarão o acelerômetro e seus recursos. Eles se familiarizarão com seus eventos e propriedades, além de criarem vários programas utilizando o acelerômetro semelhante aos que provavelmente encontraram em aplicativos do mundo real.
             Functions with Parameters_:
               name: Funções com Parâmetros
+              description_student: A lição começa com uma rápida revisão dos parâmetros, no contexto dos blocos do Laboratório de Aplicativos que os alunos viram recentemente. Os alunos examinam exemplos de parâmetros nas funções criadas pelo usuário no Laboratório de Aplicativos e criam e chamam funções com parâmetros para eles mesmos, usando-os para controlar vários elementos em uma tela. Posteriormente, os alunos usam laços para iterar sobre uma matriz, passando cada elemento para uma função. Por fim, os alunos usam o que aprenderam para criar um jogo de captura de estrelas.
+              description_teacher: A lição começa com uma rápida revisão dos parâmetros, no contexto dos blocos do Laboratório de Aplicativos que os alunos viram recentemente. Os alunos examinam exemplos de parâmetros nas funções criadas pelo usuário no Laboratório de Aplicativos e criam e chamam funções com parâmetros para eles mesmos, usando-os para controlar vários elementos em uma tela. Posteriormente, os alunos usam laços para iterar sobre uma matriz, passando cada elemento para uma função. Por fim, os alunos usam o que aprenderam para criar um jogo de captura de estrelas.
             Circuits and Physical Prototypes_:
               name: Circuitos e Protótipos Físicos
+              description_student: Conecte circuitos simples para criar um protótipo físico usando materiais baratos e facilmente encontrados.
             'Project: Prototype an Innovation_':
               name: 'Projeto: Protótipo de Inovação'
+              description_student: Desenvolva dispositivos de computação inovadores de seu próprio projeto, usando tudo o que aprendeu ao longo deste curso.
             'Project: Make a Game__':
               name: 'Projeto: Fazer um Jogo'
+              description_student: Os alunos aprendem o que aprenderam no capítulo um e desenvolvem um aplicativo de design próprio que usa o quadro para gerar informações.
+              description_teacher: Os alunos aprendem o que aprenderam no capítulo um e desenvolvem um aplicativo de design próprio que usa o quadro para gerar informações.
             Arrays and Color LEDs__:
               description_student: Aprenda como as listas podem ser usadas para armazenar vários valores em um único nome de variável.
         csd3-draft:
+          title: 'CSD Unidade 3 - Programando: Animações e Jogos'
           description_short: Animações e Jogos
           stages:
             Shapes and Randomess:
@@ -4020,6 +4106,10 @@ pt-BR:
               name: Sprite
             Plotting Shapes:
               name: Formas de plotagem
+            Sprite Movement:
+              name: Movimento sprite
+            The Draw Loop:
+              name: O laço de desenho
             The Counter Pattern Unplugged:
               name: O padrão do contador desconectado
             Booleans and Conditionals:
@@ -4046,6 +4136,8 @@ pt-BR:
               name: O processo de design de jogos
             Using the Game Design Process:
               name: Usando o processo de design de jogos
+            'Project: Design a Game':
+              name: 'Projeto - Projetar um Jogo'
         csd5-2017:
           title: CSD Unidade 5 - Data e Sociedade ('17 -'18)
           stages:
@@ -4084,6 +4176,7 @@ pt-BR:
             Structuring Data:
               name: Estruturação de dados
         csd3-old:
+          description: Este é o rascunho original da Unidade 3 de CSD, lançado no outono de 2016. A menos que você tenha estudantes atualmente usando este curso, você deve usar a versão atualizada desta unidade em studio.code.org/s/csd3 - este rascunho original permanecerá disponível até 1º de julho de 2017.
           stages:
             Drawing in Game Lab:
               name: Desenhando no Laboratório de Jogos
@@ -4119,7 +4212,10 @@ pt-BR:
               name: O processo de design de jogos
             Using the Game Design Process:
               name: Usando o processo de design de jogos
+            'Project: Design a Game':
+              name: 'Projeto - Projetar um Jogo'
         csd1-old:
+          title: CSD Unidade 1 (descontinuada)
           stages:
             Intro to Problem Solving:
               name: Introdução a Resolução de problemas
@@ -4165,10 +4261,16 @@ pt-BR:
               name: Projeto - Sites com várias páginas
             Styling Text with CSS:
               name: Estilo de texto com CSS
+            Styling Elements with CSS:
+              name: Estilizando elementos com CSS
             Sources and Search Engines:
               name: Fontes e mecanismos de pesquisa
+            Project - Personal Portfolio Website:
+              name: Projeto - Site do portfólio pessoal
             Headers:
               name: Cabeçalhos
+            Intellectual Property and Images:
+              name: Propriedade intelectual e imagens
             Lists:
               name: Listas
         csd1-draft:
@@ -4181,6 +4283,8 @@ pt-BR:
               name: Explorando a solução de problemas
             What is a Computer?:
               name: O que é um computador?
+            Inputs and Outputs:
+              name: Entradas e saídas
             Processing:
               name: Processando
         csd3-chapters:
@@ -4197,8 +4301,12 @@ pt-BR:
               name: variáveis
             Sprites:
               name: Sprite
+            The Draw Loop:
+              name: O laço de desenho
             The Counter Pattern Unplugged:
               name: O padrão do contador desconectado
+            Sprite Movement:
+              name: Movimento sprite
             Booleans and Conditionals:
               name: Booleanos e Condicionais
             Conditionals:
@@ -4221,6 +4329,8 @@ pt-BR:
               name: O processo de design de jogos
             Using the Game Design Process:
               name: Usando o processo de design de jogos
+            'Project: Design a Game':
+              name: 'Projeto - Projetar um Jogo'
             'null':
               name: 'nulo'
         coursef-ramp:
@@ -4272,6 +4382,8 @@ pt-BR:
               name: Código limpo e depuração
             Styling Text with CSS:
               name: Estilo de texto com CSS
+            Styling Elements with CSS:
+              name: Estilizando elementos com CSS
             Multi-Page Websites:
               name: Websites com várias páginas
             Classes:
@@ -4286,8 +4398,33 @@ pt-BR:
               name: Fontes e mecanismos de pesquisa
             Intellectual Property:
               name: Propriedade intelectual
+            'Project: Personal Portfolio Website':
+              name: 'Projeto - Site do portfólio pessoal'
+          title: CSD Unidade 2 (descontinuada)
         artist-and-bb8:
           stages:
+            B8 New BB8:
+              name: B8 Novo BB8
+            c8 to BB8:
+              name: c8 para BB8
+            B8 BB8:
+              name: B8 BB8
+            C9 Artist Loops:
+              name: C9 Laços do Artista
+            C8 to BB8:
+              name: C8 para BB8
+            D7 to Laurel:
+              name: D7 para Laurel
+            D6 Frozen Artist:
+              name: D6 Artista Frozen
+            F7 add Conditionals:
+              name: F7 adicionar condicionais
+            F5 Minecraft:
+              name: F5 Minecraft
+            Loops with BB-8:
+              name: Laços com BB-8
+            D13 no If/While:
+              name: D13 não Se / Enquanto
             Ice Age Play Lab:
               name: Laboratório da Era do Gelo
             Bounce:
@@ -4372,6 +4509,8 @@ pt-BR:
           description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
         coursec-2017:
           stages:
+            Building a Foundation:
+              name: 'Persistência: Construindo uma Fundação'
             Programming in Maze:
               name: Programação no labirinto
             Debugging in Maze:
@@ -4390,6 +4529,10 @@ pt-BR:
               name: 'Eventos: O Grande Evento'
             Events in Play Lab:
               name: Eventos no Laboratório de jogos
+            Screen Out the Mean:
+              name: 'Cidadania digital: descubra a média'
+            Binary Bracelets:
+              name: 'Além da programação: pulseiras binárias'
             Loops in Artist:
               name: Laços no Artista
           title: Curso C
@@ -4397,24 +4540,52 @@ pt-BR:
           description_short: Aprenda o básico da ciência da computação e crie sua própria arte, histórias e jogos.
         coursed-2017:
           stages:
+            Introduction:
+              description_student: Esta lição lhe permitirá praticar as habilidades necessárias para este curso.
             'Algorithms: Graph Paper Programming':
-              description_teacher: Através da programação para desenhar as figuras, os alunos vão começar a entender o que de fato é programar. A aula vai começar com alunos dando instruções uns aos outros para colorir os quadrados em um papel quadriculado na tentativa de reproduzir uma figura existente. Se houver tempo, a aula pode ser concluída com imagens que os próprios alunos criaram.
+              name: 'Programação: Programação em papel milimetrado'
+              description_student: Nesta lição, você programará seu amigo para desenhar!
+              description_teacher: Ao "programar" um ao outro para desenhar figuras, os alunos começarão a entender o que realmente é a codificação. A aula começará instruindo os alunos a colorir quadrados em papel milimetrado, em um esforço para reproduzir uma imagem existente. Se houver tempo, a lição pode terminar com imagens criadas pelos alunos.
+            Events in Bounce:
+              description_student: Você já desejou poder jogar videogame na escola? Nesta lição, você poderá fazer o seu próprio!
+              description_teacher: Nesta atividade online, os alunos aprenderão o que são eventos e como os computadores os usam em programas como videogames. Os alunos trabalharão com quebra-cabeças, fazendo o programa reagir a eventos (como botões de seta sendo pressionados.) No final do quebra-cabeça, os alunos terão a oportunidade de personalizar seu jogo com diferentes velocidades e sons.
             Nested Loops:
               name: Laços aninhados
+              description_student: Laços dentro de loops dentro de laços. O que isto significa? Esta lição ensinará o que acontece quando você coloca uma repetição dentro de outro laço.
             Nested Loops in Artist:
               name: Laços Aninhados no Artista
+              description_student: Aqui você usará loops aninhados para fazer desenhos legais para mostrar à sua família e amigos.
+              description_teacher: Agora que os alunos sabem como estratificar seus laços, eles podem criar muitas coisas bonitas. Esta lição guiará os alunos por uma série de exercícios para ajudá-los a criar suas próprias imagens prontas para o portfólio.
+            'Algorithms: Relay Programming':
+              name: 'Depuração: Programação de retransmissão'
+              description_student: Lembra no início do curso quando você fez desenhos com código? Nesta lição, você estará trabalhando com uma equipe para fazer algo muito semelhante!
             Debugging in Bee:
               name: Depurando na Abelha
             While Loops in Farmer:
               name: Laços Enquanto no Fazendeiro
+              description_student: 'Laços são muito úteis na codificação. Esta lição ensinará sobre um novo tipo de laço: laços enquanto!'
+            Conditionals with Cards:
+              name: 'Se / Se-não: Condicionais com Cartões'
+              description_student: É hora de jogar um jogo em que você ganha pontos apenas sob certas condições!
+              description_teacher: "Esta lição demonstra como os condicionais podem ser usados para adaptar um programa a informações específicas. Nem sempre temos todas as informações necessárias ao escrever um programa. Às vezes, você desejará fazer algo diferente em uma situação do que em outra, mesmo que você não saiba qual situação será verdadeira quando seu código for executado. É aí que entram os condicionais. Os condicionais permitem que um computador tome uma decisão, com base nas informações verdadeiras sempre que seu código for executado.\n\n"
             Conditionals in Bee:
               name: Estruturas condicionais em abelhas
+              description_teacher: Até esse momento, os alunos escreviam um código que é executado exatamente da mesma maneira cada vez que é executado - confiável, mas não muito flexível. Nesta lição, sua classe começará a codificar com condicionais, permitindo que eles escrevam códigos que funcionem de maneira diferente, dependendo das condições específicas que o programa encontra.
             Conditionals & Loops in Maze:
               name: Condicionais e laços em labirinto
+              description_student: Você pode fazer coisas incríveis ao usar condicionais e laços juntos!
+              description_teacher: 'Nesta lição, os alunos irão juntar dois conceitos-chave: laços e condicionais. Esse conjunto de quebra-cabeças preenche as lacunas no entendimento que ocorrem ao trabalhar em quebra-cabeças que usam vários tipos de blocos. Ao reunir duas idéias, os alunos criarão um código mais complexo que mostra criatividade impressionante e pensamento crítico!'
             Conditionals & Loops in Farmer:
               name: Condicionais e laços em colheitadeira
+              description_student: Nem sempre é claro quando usar cada condicional. Esta lição ajudará você a praticar o processo de decisão.
+            Digital Citizenship:
+              name: 'Cidadania digital: praticando a cidadania digital'
+              description_student: Algumas informações não são seguras para compartilhar online. Esta lição o ajudará a aprender a diferença entre informações seguras e privadas.
             Build a Play Lab Game:
               name: Crie um jogo do Laboratório de Jogos
+              description_student: Esta lição o guiará através da criação de seu próprio videogame.
+            'Unplugged: Binary':
+              name: 'Além da programação: imagens binárias'
             Debugging in Collector:
               name: Depurando no coletor
           title: Curso D
@@ -4503,6 +4674,8 @@ pt-BR:
               name: 'Repetições: Meus amigos robôs esquisitos'
             Loops in Artist:
               name: Laços no Artista
+            Nested Loops with Frozen:
+              name: Laços Aninhados com Frozen
             Nested Loops:
               name: Laços aninhados
           title: Curso E
@@ -4515,6 +4688,8 @@ pt-BR:
               name: 'Algoritmos: tangrams'
             Ice Age Play Lab:
               name: Eventos na Era do Gelo
+            Envelope Variables:
+              name: 'Variáveis: variáveis de envelope'
             Variables in Artist:
               name: Variáveis no Artista
             Variables in Play Lab:
@@ -4523,6 +4698,8 @@ pt-BR:
               name: Laços Para na abelha
             For Loops in Artist:
               name: Laços Para no Artista
+            Songwriting with Parameters:
+              name: 'Funções: Composição musical com parâmetros'
             Functions with Parameters in Artist:
               name: Funções com parâmetros no Artista
             Functions with Parameters in Bee:
@@ -4552,6 +4729,8 @@ pt-BR:
               name: 'Repetições: Meus amigos robôs esquisitos'
             Loops in Artist:
               name: Laços no Artista
+            Nested Loops with Frozen:
+              name: Laços Aninhados com Frozen
           title: Curso F
           assignment_family_title: Curso F
           description_short: Aprenda todos os conceitos Fundamentais da Ciência da Computação e crie sua própria arte, história ou jogo.
@@ -4619,10 +4798,22 @@ pt-BR:
               name: Quinta-feira
             Wrap Up:
               name: Resumo
+        novice-view:
+          title: ver respostas iniciantes
+        csp1-dlp:
+          description: 'Esta é a Unidade 1 do Plano de Aprendizagem Mais Profunda para os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará orientações e orientações para demonstrar a proficiência da Unidade 1 do Currículo CSP do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
         express-2017:
           stages:
+            'Programming Unplugged: My Robotic Friends':
+              name: 'Programação desconectada: Meus amigos robóticos'
             Introduction:
               name: Introdução
+            'Algorithms: Graph Paper Programming':
+              name: 'Programação: Programação em papel milimetrado'
+            'Algorithms: Relay Programming':
+              name: 'Depuração: Programação de retransmissão'
+            Debugging in Collector:
+              name: Introdução à depuração
             'Loops: My Loopy Robotic Friends':
               name: 'Repetições: Meus amigos robôs esquisitos'
             Loops in Artist:
@@ -4677,14 +4868,29 @@ pt-BR:
               name: Revisar Seu Projeto
             Present Your Project:
               name: Apresente seu projeto
+            'Common Sense Education: Digital Citizenship':
+              name: 'Cidadania digital: praticando a cidadania digital'
+            'Common Sense Education: Screen Out the Mean':
+              name: 'Cidadania digital: descubra a média'
+            Events in Star Wars:
+              name: Eventos em Guerra nas Estrelas
+            'Conditionals: Conditionals with Cards':
+              name: 'Condicional: Condicionais com Cartões'
             Conditional Loops in Maze:
               name: Condicionais e laços em labirinto
+            'Variables: Envelope Variables':
+              name: 'Variáveis: variáveis de envelope'
+            'Functions: Songwriting with Parameters':
+              name: 'Funções: Composição musical com parâmetros'
             Building a Foundation:
               name: Criando uma base
             Nested Loops:
               name: Laços aninhados
             Conditionals & Loops in Harvester:
               name: Condicionais e laços em colheitadeira
+          title: Curso Expresso
+          description_audience: '9-18 anos de idade'
+          description_short: 'Uma introdução à ciência da computação: combina o melhor do nosso currículo do ensino fundamental para alunos mais velhos.'
           description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
         pre-express-2017:
           stages:
@@ -4716,6 +4922,8 @@ pt-BR:
               name: Eventos no Laboratório de jogos
             Spelling Bee:
               name: Soletrando
+          description_audience: 'Idades: 4-8'
+          description_short: 'Uma introdução à ciência da computação para pré-leitores: combina o melhor do nosso jardim de infância e cursos de primeira série.'
           description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
         subgoal-labels-opt-in:
           stages:
@@ -4758,12 +4966,20 @@ pt-BR:
               name: Análise de Design
             Understanding Your User:
               name: Entendendo seu usuário
+            User Interface and Prototype Testing:
+              name: Interface de usuário e teste de protótipo
+            Feedback and Prototypes:
+              name: Feedback e protótipos
             Identifying User Needs:
               name: Identificando Necessidades do Usuário
+            Project - Paper Prototype:
+              name: Projeto - Protótipo de Papel
             Designing Apps for Good:
               name: Criando aplicativos para o bem
             Market Research:
               name: Pesquisa de mercado
+            Paper Prototypes:
+              name: Protótipos de papel
             Prototype Testing:
               name: Protótipo de Teste
             Digital Design:
@@ -4772,10 +4988,35 @@ pt-BR:
               name: Programação Orientada a Eventos
             Basic App Functionality:
               name: Funcionalidade básica do aplicativo
+            Testing the App:
+              name: Testando o aplicativo
             Improving and Iterating:
               name: Improvizando e Interagindo
             App Presentation:
               name: Apresentação de aplicativos
+            Linking Screens:
+              name: Telas de vinculação
+        applab-intro:
+          stages:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: Introdução ao Laboratório de Aplicativos - Escolha sua própria aventura
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: Introdução ao Laboratório de Aplicativos - Escolha sua própria aventura 2
+            Intro to AppLab - Your First App:
+              name: Introdução ao Laboratório de Aplicativos - Seu primeiro aplicativo
+            Intro to AppLab - Your First App 2:
+              name: Introdução ao Laboratório de Aplicativos - Seu primeiro aplicativo 2
+            Intro to AppLab - Your First App 3:
+              name: Introdução ao Laboratório de Aplicativos - Seu primeiro aplicativo 3
+            Intro to AppLab - Your First App 4:
+              name: Introdução ao Laboratório de Aplicativos - Seu primeiro aplicativo 4
+            Intro to AppLab - Getting Started:
+              name: Introdução ao Laboratório de Aplicativos - Introdução
+            Intro to App Lab:
+              name: Introdução Laboratório de Aplicativos
+          title: Introdução Laboratório de Aplicativos
+          description_short: Crie seu próprio aplicativo em JavaScript usando programação ou texto com base em bloco. Se você já fez alguma programação com blocos, leve suas habilidades para o próximo nível.
+          description: Crie seu próprio aplicativo em JavaScript usando programação ou texto com base em bloco. Se você já fez alguma programação com blocos, leve suas habilidades para o próximo nível.
         e-f-ramp:
           stages:
             'Programming: My Robotic Friends':
@@ -4790,6 +5031,10 @@ pt-BR:
               name: Laços no Artista
             Nested Loops:
               name: Laços aninhados
+            Nested Loops with Frozen:
+              name: Laços Aninhados com Frozen
+            Intro to Conditionals with Farmer:
+              name: Introdução aos condicionais com o agricultor
             'Algorithms: Dice Race':
               name: 'Algoritmos: Corrida de Dados'
             Conditionals:
@@ -4886,10 +5131,16 @@ pt-BR:
               name: 'Como Isto Funciona: A Internet'
             'Events: The Big Event':
               name: 'Eventos: O Grande Evento'
+            Events in Star Wars:
+              name: Eventos em Guerra nas Estrelas
+            'Conditionals: Conditionals with Cards':
+              name: 'Condicional: Condicionais com Cartões'
             While Loops in Farmer:
               name: Laços Enquanto no Fazendeiro
             Conditionals in Minecraft:
               name: Condicionais no Minecraft
+            'Variables: Envelope Variables':
+              name: 'Variáveis: variáveis de envelope'
             Variables in Artist:
               name: Variáveis no Artista
             Variables in Play Lab:
@@ -4898,6 +5149,8 @@ pt-BR:
               name: Laços Para na abelha
             For Loops in Artist:
               name: Laços Para no Artista
+            'Functions: Songwriting with Parameters':
+              name: 'Funções: Composição musical com parâmetros'
             Functions in Bee:
               name: Funções na Abelha
             Functions with Parameters in Artist:
@@ -4918,6 +5171,9 @@ pt-BR:
               name: Criando uma base
             Nested Loops:
               name: Laços aninhados
+            Loops in Artist (UPDATED!):
+              name: Laços em Artista (ATUALIZADO!)
+          title: Novo script expresso
         new-stages-sept-2017:
           stages:
             Loops in Artist:
@@ -4934,6 +5190,8 @@ pt-BR:
               name: 'Repetições: Meus amigos robôs esquisitos'
             Loops in Artist:
               name: Laços no Artista
+            Nested Loops with Frozen:
+              name: Laços Aninhados com Frozen
             'Algorithms: Dice Race':
               name: 'Algoritmos: Corrida de Dados'
             Conditionals:
@@ -4978,6 +5236,8 @@ pt-BR:
               name: 'Repetições: Meus amigos robôs esquisitos'
             Loops in Artist:
               name: Laços no Artista
+            Nested Loops with Frozen:
+              name: Laços Aninhados com Frozen
             'Algorithms: Tangrams':
               name: 'Algoritmos: tangrams'
             The Power of Words:
@@ -5054,12 +5314,20 @@ pt-BR:
               name: Análise de Design
             Understanding Your User:
               name: Entendendo seu usuário
+            User Interface and Prototype Testing:
+              name: Interface de usuário e teste de protótipo
+            Feedback and Prototypes:
+              name: Feedback e protótipos
             Identifying User Needs:
               name: Identificando Necessidades do Usuário
+            Project - Paper Prototype:
+              name: Projeto - Protótipo de Papel
             Designing Apps for Good:
               name: Criando aplicativos para o bem
             Market Research:
               name: Pesquisa de mercado
+            Paper Prototypes:
+              name: Protótipos de papel
             Prototype Testing:
               name: Protótipo de Teste
             Digital Design:
@@ -5068,6 +5336,8 @@ pt-BR:
               name: Programação Orientada a Eventos
             Basic App Functionality:
               name: Funcionalidade básica do aplicativo
+            Testing the App:
+              name: Testando o aplicativo
             Improving and Iterating:
               name: Improvizando e Interagindo
             App Presentation:
@@ -5098,22 +5368,67 @@ pt-BR:
           stages:
             new stage:
               name: nova fase
+            'Problem Solving: Personal Innovations':
+              name: 'Resolução de problemas - inovações pessoais'
+            'Technology Foundations: What is a Computer?':
+              name: 'Fundamentos de tecnologia - o que é um computador?'
             Personal Innovations:
               name: Inovações Pessoais
             What is a Computer?:
               name: O que é um computador?
+            Programming - Hour of Code:
+              name: Programação - Hora do Código
             Simple Encryption:
               name: Criptografia simples
             Web Development - Creating Webpages:
               name: Desenvolvimento Web - Criando Páginas Web
+            Creating Webpages:
+              name: Criação de páginas Web
             User Interfaces:
               name: Interfaces de Usuário
+            Intro to App Lab:
+              name: Introdução Laboratório de Aplicativos
+            Smart Clothing Design:
+              name: Design inteligente de roupas
+            Intro to App Lab (13+):
+              name: Introdução ao Laboratório de Apps (13+)
+        allthesurveys:
+          stages:
+            CSP pre survey Test 2017:
+              name: Teste CSP pré-pesquisa 2017
+            Place for testing crazy stuff:
+              name: Lugar para testar coisas loucas
+          title: Todas as pesquisas
+          description_short: Local para organizar e testar as pesquisas do Code.org
+        k1hoc2017:
+          stages:
+            Collector Hour of Code 2017:
+              name: Hora do Código do Coletor 2017
         hero:
           stages:
             Minecraft Hour of Code:
               name: Hora do Código Minecraft
           title: 'Minecraft: Jornada do Herói'
+          description_short: O Minecraft está de volta com uma nova atividade para a Hora do Código!
           description: O Minecraft está de volta para a Hora do Código com uma nova atividade! Viaje através de Minecraft com código.
+        applab-intro-staging:
+          stages:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: Introdução ao Laboratório de Aplicativos - Escolha sua própria aventura
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: Introdução ao Laboratório de Aplicativos - Escolha sua própria aventura 2
+            Intro to AppLab - Your First App:
+              name: Introdução ao Laboratório de Aplicativos - Seu primeiro aplicativo
+            Intro to AppLab - Your First App 2:
+              name: Introdução ao Laboratório de Aplicativos - Seu primeiro aplicativo 2
+            Intro to AppLab - Your First App 3:
+              name: Introdução ao Laboratório de Aplicativos - Seu primeiro aplicativo 3
+            Intro to AppLab - Your First App 4:
+              name: Introdução ao Laboratório de Aplicativos - Seu primeiro aplicativo 4
+            Intro to AppLab - Getting Started:
+              name: Introdução ao Laboratório de Aplicativos - Introdução
+            Intro to App Lab:
+              name: Introdução Laboratório de Aplicativos
         csp-explore-2017:
           stages:
             new stage:
@@ -5126,6 +5441,8 @@ pt-BR:
               name: Explorar PT - Complete a Tarefa
             Tech Setup - Your AP Digital Portfolio and Other Tools:
               name: Configuração tecnológica - Seu Portfólio Digital AP e Outras Ferramentas
+            'Setup: Digital Portfolio and Other Tools':
+              name: 'Configuração: Portfólio Digital e Outras Ferramentas'
             Post-Course Survey:
               name: Pesquisa Pós-Curso
         csp-create-2017:
@@ -5140,6 +5457,14 @@ pt-BR:
               name: Criar PT - Complete a Tarefa
             Post-Course Survey:
               name: Pesquisa Pós-Curso
+        csp3-reovery:
+          stages:
+            Under the sea recovery:
+              name: Recuperação sob o mar
+        csp3-recovery:
+          stages:
+            Under the sea recovery:
+              name: Recuperação sob o mar
         aws-demo:
           stages:
             new stage:
@@ -5164,6 +5489,8 @@ pt-BR:
               name: Laços no Artista
             Nested Loops:
               name: Laços aninhados
+            Nested Loops with Frozen:
+              name: Laços Aninhados com Frozen
             'Algorithms: Dice Race':
               name: 'Algoritmos: Corrida de Dados'
             Introduction:
@@ -5210,6 +5537,8 @@ pt-BR:
               name: 'Repetições: Meus amigos robôs esquisitos'
             Loops in Artist:
               name: Laços no Artista
+            Nested Loops with Frozen:
+              name: Laços Aninhados com Frozen
             'Algorithms: Tangrams':
               name: 'Algoritmos: tangrams'
             Introduction:
@@ -5256,8 +5585,14 @@ pt-BR:
               name: Inovações em computação
             Input Unplugged:
               name: Entrada desconectada
+            Event Types:
+              name: Tipos de Eventos
+            The Circuit Playground:
+              name: O parque de diversões do circuito
             Lists:
               name: Listas
+            Lights:
+              name: Luzes
             For Loops:
               name: Laços para
             Lists and For Loops:
@@ -5292,8 +5627,12 @@ pt-BR:
               name: variáveis
             Sprites:
               name: Sprite
+            The Draw Loop:
+              name: O laço de desenho
             The Counter Pattern Unplugged:
               name: O padrão do contador desconectado
+            Sprite Movement:
+              name: Movimento sprite
             Booleans Unplugged:
               name: Booleanos off-line
             Conditionals:
@@ -5342,8 +5681,12 @@ pt-BR:
               name: variáveis
             Sprites:
               name: Sprite
+            The Draw Loop:
+              name: O laço de desenho
             The Counter Pattern Unplugged:
               name: O padrão do contador desconectado
+            Sprite Movement:
+              name: Movimento sprite
             Booleans Unplugged:
               name: Booleanos off-line
             Conditionals:
@@ -5380,14 +5723,20 @@ pt-BR:
               name: Pegada Digital
             Lists:
               name: Listas
+            Intellectual Property and Images:
+              name: Propriedade intelectual e imagens
             Clean Code and Debugging:
               name: Código limpo e depuração
             Project - Multi-Page Websites:
               name: Projeto - Sites com várias páginas
             Styling Text with CSS:
               name: Estilo de texto com CSS
+            Styling Elements with CSS:
+              name: Estilizando elementos com CSS
             Sources and Search Engines:
               name: Fontes e mecanismos de pesquisa
+            Project - Personal Portfolio Website:
+              name: Projeto - Site do portfólio pessoal
         coursea-2018:
           title: Curso A (2018)
           assignment_family_title: Curso A
@@ -5460,12 +5809,20 @@ pt-BR:
               name: 'Como Isto Funciona: A Internet'
             'Events: The Big Event':
               name: O grande evento
+            Events in Star Wars:
+              name: Eventos em Guerra nas Estrelas
+            'Conditionals: Conditionals with Cards':
+              name: 'Condicional: Condicionais com Cartões'
             Conditionals in Minecraft:
               name: Condicionais no Minecraft
+            'Variables: Envelope Variables':
+              name: 'Variáveis: variáveis de envelope'
             Variables in Artist:
               name: Variáveis no Artista
             Variables in Play Lab:
               name: Variáveis no Laboratório
+            'Functions: Songwriting with Parameters':
+              name: 'Funções: Composição musical com parâmetros'
             Functions in Bee:
               name: Funções na Abelha
             Functions with Parameters in Artist:
@@ -5640,6 +5997,8 @@ pt-BR:
               name: Funções com parâmetros
             Designing Screens with Code:
               name: Criando telas com código
+            The Circuit Playground:
+              name: O parque de diversões do circuito
             Input Unplugged:
               name: Entrada desconectada
             Getting Properties:
@@ -5673,6 +6032,8 @@ pt-BR:
               name: Criando uma base
             Nested Loops:
               name: Laços Aninhados no Labirinto
+            Nested Loops with Frozen:
+              name: Laços Aninhados com Frozen
             'Algorithms: Dice Race':
               name: 'Algoritmos: Corrida de Dados'
               description_student: Aprenda a descrever um jogo, do ponto de vista do computador, nesta lição sobre algoritmos.
@@ -5740,6 +6101,8 @@ pt-BR:
               name: Criando uma base
             Nested Loops in Bee/Zombie:
               name: Laços Aninhados no Labirinto
+            Nested Loops with Frozen:
+              name: Laços Aninhados com Frozen
             'Algorithms: Tangrams':
               name: 'Algoritmos: tangrams'
             Introduction:
@@ -5835,14 +6198,22 @@ pt-BR:
               name: Interfaces de Usuário
             Identifying User Needs:
               name: Identificando Necessidades do Usuário
+            Project - Paper Prototype:
+              name: Projeto - Protótipo de Papel
             Designing Apps for Good:
               name: Criando aplicativos para o bem
             Market Research:
               name: Pesquisa de mercado
+            Paper Prototypes:
+              name: Protótipos de papel
             Prototype Testing:
               name: Protótipo de Teste
             Digital Design:
               name: Design digital
+            Linking Screens:
+              name: Telas de vinculação
+            Testing the App:
+              name: Testando o aplicativo
             Improving and Iterating:
               name: Improvizando e Interagindo
         csd5-2018:
@@ -6238,6 +6609,8 @@ pt-BR:
           stages:
             Digital Design:
               name: Design digital
+            Linking Screens:
+              name: Telas de vinculação
             Test Lesson:
               name: Lição de Teste
         dance--draft:
@@ -6293,6 +6666,8 @@ pt-BR:
               name: 'Repetições: Meus amigos robôs esquisitos'
             Loops in Artist:
               name: Laços no Artista
+            Nested Loops with Frozen:
+              name: Laços Aninhados com Frozen
             Conditionals with Cards:
               name: Condicionais com cartas
             The Power of Words:
@@ -6316,6 +6691,7 @@ pt-BR:
               name: O Artista
             Nested Loops in the Maze:
               name: Laços Aninhados no Labirinto
+              description_student: Laços dentro de loops dentro de laços. O que isto significa? Esta lição ensinará o que acontece quando você coloca uma repetição dentro de outro laço.
             Sequencing in the Maze:
               name: Sequenciamento no labirinto
             Loops with the Artist:
@@ -6340,9 +6716,15 @@ pt-BR:
           stages:
             'Algorithms: Graph Paper Programming':
               name: Programação em papel quadriculado
+            Introduction to Online Puzzles:
+              description_student: Esta lição lhe permitirá praticar as habilidades necessárias para este curso.
             Relay Programming:
               name: Programação por revezamento
+              description_student: Lembra no início do curso quando você fez desenhos com código? Nesta lição, você estará trabalhando com uma equipe para fazer algo muito semelhante!
               description_teacher: Esta atividade começará com uma pequena aula sobre depuração e persistência, então irá mudar rapidamente para uma corrida contra o tempo à medida que os alunos se dividem em times e trabalham juntos para escrever um programa uma instrução por vez.
+            Events in Bounce:
+              description_student: Você já desejou poder jogar videogame na escola? Nesta lição, você poderá fazer o seu próprio!
+              description_teacher: Nesta atividade online, os alunos aprenderão o que são eventos e como os computadores os usam em programas como videogames. Os alunos trabalharão com quebra-cabeças, fazendo o programa reagir a eventos (como botões de seta sendo pressionados.) No final do quebra-cabeça, os alunos terão a oportunidade de personalizar seu jogo com diferentes velocidades e sons.
             Loops in Ice Age:
               name: Laços na Era do gelo
             Nested Loops in Bee:
@@ -6351,10 +6733,17 @@ pt-BR:
               name: Laços Aninhados no Artista
             While Loops in Farmer:
               name: Laços Enquanto no Fazendeiro
+              description_student: 'Laços são muito úteis na codificação. Esta lição ensinará sobre um novo tipo de laço: laços enquanto!'
             Conditionals with Cards:
               name: Condicionais com cartas
+              description_student: É hora de jogar um jogo em que você ganha pontos apenas sob certas condições!
+            Conditionals in Bee:
+              description_teacher: Até esse momento, os alunos escreviam um código que é executado exatamente da mesma maneira cada vez que é executado - confiável, mas não muito flexível. Nesta lição, sua classe começará a codificar com condicionais, permitindo que eles escrevam códigos que funcionem de maneira diferente, dependendo das condições específicas que o programa encontra.
+            Conditionals & Loops in Harvester:
+              description_student: Nem sempre é claro quando usar cada condicional. Esta lição ajudará você a praticar o processo de decisão.
             Digital Citizenship:
               name: Cidadania digital
+              description_student: Algumas informações não são seguras para compartilhar online. Esta lição o ajudará a aprender a diferença entre informações seguras e privadas.
             Build a Play Lab Game:
               name: Crie um jogo do Laboratório de Jogos
             'Unplugged: Binary':
@@ -6383,6 +6772,8 @@ pt-BR:
               name: Laços no Artista
             Nested Loops:
               name: Laços aninhados
+            Nested Loops with Frozen:
+              name: Laços Aninhados com Frozen
             Conditionals with Cards:
               name: Condicionais com cartas
             Conditionals:
@@ -6425,6 +6816,9 @@ pt-BR:
               name: Crowdsourcing
             Nested Loops in Bee:
               name: Laços Aninhados no Labirinto
+              description_student: Laços dentro de loops dentro de laços. O que isto significa? Esta lição ensinará o que acontece quando você coloca uma repetição dentro de outro laço.
+            Nested Loops in Frozen:
+              name: Laços Aninhados com Frozen
             Sequencing in the Maze:
               name: Sequenciamento no labirinto
             Programming and Loops with the Artist:
@@ -6734,14 +7128,20 @@ pt-BR:
               name: Pegada Digital
             Lists:
               name: Listas
+            Intellectual Property and Images:
+              name: Propriedade intelectual e imagens
             Clean Code and Debugging:
               name: Código limpo e depuração
             Project - Multi-Page Websites:
               name: Projeto - Sites com várias páginas
             Styling Text with CSS:
               name: Estilo de texto com CSS
+            Styling Elements with CSS:
+              name: Estilizando elementos com CSS
             Sources and Search Engines:
               name: Fontes e mecanismos de pesquisa
+            Project - Personal Portfolio Website:
+              name: Projeto - Site do portfólio pessoal
             Post-Project Test:
               name: Teste pós-projeto
         csd3-2019:
@@ -6759,8 +7159,12 @@ pt-BR:
               name: variáveis
             Sprites:
               name: Sprite
+            The Draw Loop:
+              name: O laço de desenho
             The Counter Pattern Unplugged:
               name: O padrão do contador desconectado
+            Sprite Movement:
+              name: Movimento sprite
             Booleans Unplugged:
               name: Booleanos off-line
             Conditionals:
@@ -6797,14 +7201,22 @@ pt-BR:
               name: Interfaces de Usuário
             Identifying User Needs:
               name: Identificando Necessidades do Usuário
+            Project - Paper Prototype:
+              name: Projeto - Protótipo de Papel
             Designing Apps for Good:
               name: Criando aplicativos para o bem
             Market Research:
               name: Pesquisa de mercado
+            Paper Prototypes:
+              name: Protótipos de papel
             Prototype Testing:
               name: Protótipo de Teste
             Digital Design:
               name: Design digital
+            Linking Screens:
+              name: Telas de vinculação
+            Testing the App:
+              name: Testando o aplicativo
             Improving and Iterating:
               name: Improvizando e Interagindo
             Post-Project Test:
@@ -6843,6 +7255,8 @@ pt-BR:
           stages:
             Designing Screens with Code:
               name: Criando telas com código
+            The Circuit Playground:
+              name: O parque de diversões do circuito
             Input Unplugged:
               name: Entrada desconectada
             Getting Properties:
@@ -7105,6 +7519,8 @@ pt-BR:
               name: 'Repetições: Meus amigos robôs esquisitos'
             Loops in Artist:
               name: Laços no Artista
+            Nested Loops with Frozen:
+              name: Laços Aninhados com Frozen
             Build a Star Wars Game:
               name: Construa um jogo de Guerra nas estrelas
             'Events: The Big Event':
@@ -7445,14 +7861,20 @@ pt-BR:
               name: Pegada Digital
             Lists:
               name: Listas
+            Intellectual Property and Images:
+              name: Propriedade intelectual e imagens
             Clean Code and Debugging:
               name: Código limpo e depuração
             Project - Multi-Page Websites:
               name: Projeto - Sites com várias páginas
             Styling Text with CSS:
               name: Estilo de texto com CSS
+            Styling Elements with CSS:
+              name: Estilizando elementos com CSS
             Sources and Search Engines:
               name: Fontes e mecanismos de pesquisa
+            Project - Personal Portfolio Website:
+              name: Projeto - Site do portfólio pessoal
             Post-Project Test:
               name: Teste pós-projeto
             Intellectual Property:
@@ -7476,8 +7898,12 @@ pt-BR:
               name: variáveis
             Sprites:
               name: Sprite
+            The Draw Loop:
+              name: O laço de desenho
             The Counter Pattern Unplugged:
               name: O padrão do contador desconectado
+            Sprite Movement:
+              name: Movimento sprite
             Booleans Unplugged:
               name: Booleanos off-line
             Conditionals:
@@ -7560,6 +7986,10 @@ pt-BR:
               name: Laços no Artista
             Nested Loops:
               name: Laços aninhados
+            Events in Star Wars:
+              name: Eventos em Guerra nas Estrelas
+            Introduction to Debugging:
+              name: Introdução à depuração
         dance-2019:
           stages:
             Dance Party:
@@ -7612,3 +8042,29 @@ pt-BR:
           stages:
             new stage:
               name: nova fase
+        csp4-preview:
+          stages:
+            new stage:
+              name: nova fase
+            Variables Explore:
+              name: Explorar Variáveis
+            Variables Investigate:
+              name: Investigar Variáveis
+            Variables Practice:
+              name: Prática de Variáveis
+            Variables Make:
+              name: Criar Variáveis
+            Conditionals Explore:
+              name: Explorar Condicionais
+            Conditionals Investigate:
+              name: Investigar Condicionais
+            Conditionals Practice:
+              name: Prática de Condicionais
+            Conditional Make:
+              name: Criar Condicionais
+            Functions Explore / Investigate:
+              name: Explorar / Investigar Funções
+            Functions Practice:
+              name: Prática de Funções
+            Functions Make:
+              name: Criar Funções
