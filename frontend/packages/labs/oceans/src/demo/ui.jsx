@@ -8,8 +8,6 @@ import {toMode} from './toMode';
 import {onClassifyFish} from './models/train';
 import colors from './colors';
 import aiBotClosed from '../../public/images/ai-bot/ai-bot-closed.png';
-import xIcon from '../../public/images/x-icon.png';
-import checkmarkIcon from '../../public/images/checkmark-icon.png';
 import Typist from 'react-typist';
 import {getCurrentGuide, dismissCurrentGuide} from './models/guide';
 
@@ -99,15 +97,6 @@ const styles = {
     transform: 'translateX(-50%)',
     fontSize: 32,
     lineHeight: '35px'
-  },
-  trainQuestionTextDisabled: {
-    position: 'absolute',
-    top: '15%',
-    left: '50%',
-    transform: 'translateX(-50%)',
-    fontSize: 32,
-    lineHeight: '35px',
-    opacity: 0.5
   },
   trainButtons: {
     position: 'absolute',
@@ -352,30 +341,6 @@ let Button = class Button extends React.Component {
 };
 Button = Radium(Button);
 
-let Pill = class Pill extends React.Component {
-  static propTypes = {
-    text: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-    icon: PropTypes.string,
-    iconBgColor: PropTypes.string,
-    style: PropTypes.object
-  };
-
-  render() {
-    const {text, icon, iconBgColor} = this.props;
-
-    let iconStyle = styles.pillIcon;
-    iconStyle.backgroundColor = iconBgColor || colors.white;
-
-    return (
-      <div style={[styles.pill, this.props.style]}>
-        {icon && <img src={icon} style={iconStyle} />}
-        <div style={styles.pillText}>{text}</div>
-      </div>
-    );
-  }
-};
-Pill = Radium(Pill);
-
 const wordSet = {
   short: {
     text: ['What type of fish do you want to train A.I. to detect?'],
@@ -383,10 +348,7 @@ const wordSet = {
     style: styles.button2col
   },
   long: {
-    text: [
-      'What happens if the words are more subjective?',
-      'Choose a new word to teach A.I.'
-    ],
+    text: ['Choose a new word to teach A.I.'],
     choices: [
       [
         'Friendly',
@@ -480,29 +442,14 @@ class Words extends React.Component {
 let Train = class Train extends React.Component {
   render() {
     const state = getState();
-    const trainQuestionTextStyle = state.isRunning
-      ? styles.trainQuestionTextDisabled
-      : styles.trainQuestionText;
     const yesButtonText =
       state.appMode === AppMode.CreaturesVTrash ? 'Yes' : state.word;
     const noButtonText =
       state.appMode === AppMode.CreaturesVTrash ? 'No' : `Not ${state.word}`;
     return (
       <Body>
-        <div style={trainQuestionTextStyle}>{state.trainingQuestion}</div>
+        <div style={styles.trainQuestionText}>{state.trainingQuestion}</div>
         <img style={styles.trainBot} src={aiBotClosed} />
-        <Pill
-          text={state.noCount}
-          icon={xIcon}
-          iconBgColor={colors.red}
-          style={[styles.count, styles.noCount]}
-        />
-        <Pill
-          text={state.yesCount}
-          icon={checkmarkIcon}
-          iconBgColor={colors.green}
-          style={[styles.count, styles.yesCount]}
-        />
         <div style={styles.trainButtons}>
           <Button
             style={styles.trainButtonNo}
@@ -540,7 +487,7 @@ class Predict extends React.Component {
             style={styles.continueButton}
             onClick={() => setState({isRunning: true, runStartTime: $time()})}
           >
-            Run A.I.
+            Run
           </Button>
         )}
         {(state.isRunning || state.isPaused) && state.canSkipPredict && (
