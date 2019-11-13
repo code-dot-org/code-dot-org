@@ -207,6 +207,12 @@ sl:
           PROPERTY:
             '"scale"': velikost
             '"height"': višina
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': diamant
+            '"x"': x
+            '"y"': 'y'
       Dancelab_whenKey:
         options:
           KEY:

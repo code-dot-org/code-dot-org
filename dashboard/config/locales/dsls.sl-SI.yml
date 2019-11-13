@@ -977,10 +977,68 @@ sl-SI:
         title: naslov
       New Challenge Introduction:
         title: naslov
+        markdown: "### Nov izziv: Razvozlaj Naključno Zamenjalno Šifro... z novim
+          gradnikom\n\nKaj, če bi namesto premikanja celotne abecede, naredili seznam
+          s povezavo vsake črke v abecedi z neko naključno drugo črko iz abecede?
+          Temu rečemo **naključna zamenjalna šifra.**\n\n![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)\n\nNamesto,
+          da bi bila skrivna sporočila šifrirana z enostavnim premikom abecede, se
+          boš od zdaj naprej srečal/a s sporočili šifriranimi z **naključno zamenjavo**.
+          \n\n\nTa so dosti težja za razbiti in potrebujejo bolj napredno orodje,
+          zato...\n\nKo klikneš Nadaljuj, se ti bo pokazala **nova, naprednejša verzija
+          kriptirnega orodja,** ki ti pokaže veliko različnih stvari.\n\nAmpak to,
+          kar počne, je neke vrste skrivnost! \n\n### Tvoja naloga\n\n * Ugotovi,
+          kaj se dogaja v tej novi verziji orodja.\n * Katere informacije so ti predstavljene?\n
+          * Ugotovi, kaj ti orodje omogoča.\n * Kot ponavadi: ne moreš ga pokvariti.
+          Klikni na stvari, raziskuj naokoli.\n * Če ugotoviš kaj dela, ti mogoče
+          uspe razbiti skrivno sporočilo šifrirano z naključno zamenjavo.\n\n### Namig\n*
+          Si vedel/a, da je **E** najbolj pogosto uporabljena črka v Angleščini.\n\n\n"
       OPD-K5 Stage3aGo:
         title: naslov
       Prepare for your presentation:
         title: naslov
+      'Technique: Frequency Analysis':
+        title: Kako razvozlati zamenjalno šifro
+        markdown: "# Razvozlanje Zamenjalnih Šifer\n\nNajboljši način za razvozlanje
+          naključne zamenjalne šifre se imenuje **frekvenčna analiza** \n\nPovzeto
+          po: [wikipedia](https://en.wikipedia.org/wiki/Frequency_analysis)\n\n* **Frekvenčna
+          analiza** je tehnika, ki bazira na tem kako *pogosto* se določene črke pojavijo
+          v Angleščini.\n* Na primer, če imamo odstavek angleškega teksta, so *E*,
+          *T*, *A*, in *O* najpogostejše, medtem ko so *Z*, *Q* in *X* redkejše. Prav
+          tako so *TH*, *ER*, *ON*, in *AN* najpogostejši pari črk, ki se pojavijo
+          druga ob drugi.\n* V bistvu je distribucija črk približno enaka za skoraj
+          *katerikoli* primer angleškega besedila.\n\nVerzija orodja na prejšnji strani
+          je namenjena pomaganju **razvozlanja zamenjalne šifre s frekvenčno analizo**.\n\nZ
+          analizo pogostosti črk v enkriptiranem besedilu in primerjavo s pogostostjo
+          črk v angleškem navadnem besedilu, si lahko približno predstavljamo katere
+          črke bi lahko bile povezane v šifri. \n\nOrodje ti pokaže kako se pogostost
+          črk v enkriptiranem besedilu (oranžno) primerja s pogostostjo črk v navadni
+          angleščini (modro).\n\n### Namig: Kje začeti?\n\n1. Najprej najdi krajše
+          besede in jih \"razvozlaj\". Koliko enočrkovnih besed poznaš? (\"a\"). Zelo
+          pogosto tričrkovna beseda je \"the\".\n2. Ko si konec s tem, imaš zamenjavo
+          za nekaj najpogostejših črk. Z intuicijo bi lahko pogledal/a ostale besede
+          in s pomočjo razvozlanih črk uganil/a manjkajoče.\n3. Ko najdeš le nekaj
+          pomembnih črk, bo razvozlanje ostalih manjkajočih enostavno.\n4. S primerjavo
+          pogostosti črk lahko dobiš dober občutek za ugibanje ostalih.\n\n### Poizkusi
+          to:\nAnimacija spodaj prikazuje nekoga, ki ravno začenja. Poizkusili so
+          že\n\n* Razvrstiti znake po pogostosti.\n* Identificirati skupino znakov
+          ki se mogoče ujemajo z besedo `the`.  \nTo je dober začetek!\n\n![](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)\n\n##
+          Je naključna zamenjava dobra?\n* Z malo vadbe, koliko časa rabiš, da razvozlaš
+          naključno zamenjalno šifro?\n* Je to dobro, ali ne?\n\n\n"
+      Terminology Recap:
+        title: To je bilo enostavno, kaj sledi?
+        markdown: "# Premor in ponovitev\n\nSporočila šifrirana s **Cezarjevo šifro**
+          so zelo enostavna za razvozlanje, še posebno z uporabo računskega orodja.
+          Zdaj ko imaš za sabo malo treninga z razvozlavanjem abecedne zamenjalne
+          šifre (precej enostavno, kajne?), poizkusimo nekaj težjega.\n\n**Ponovimo
+          izrazoslovje:**\n\n* **Enkripcija** - proces šifriranja sporočil z namenom,
+          da ostanejo skrivna, tako da jih lahko preberjo samo tisti z dovoljenjem.\n*
+          **Dekripcija** - proces, ki obrne enkripcijo, tako da vzame skrivno sporočilo
+          in proizvede originalni tekst.\n* **Šifra** - splošni izraz za tehniko (ali
+          algoritem) ki izvede enkripcijo.\n* **Cezarjeva šifra** - tehnika enkripcije
+          ki črke po abecedi premakne za nekaj mest.\n* **Razvozlanje enkripcije**
+          - Ko poizkusiš dešifrirati skrivno sporočilo *brez*, da poznaš šifro, se
+          temu reče, da poizkusiš razvozlati enkripcijo.\n\n\nKlikni Nadaljuj, da
+          vidiš **Naslednji izziv**...\n\n \n"
       behaviors 1 predict:
         questions:
         - {}

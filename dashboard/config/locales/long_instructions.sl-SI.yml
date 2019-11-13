@@ -49,6 +49,47 @@ sl-SI:
       CourseE_HOC 2018 Level_9b: Uspelo ti je priveslati do koralnega grebena. Zdaj
         pa poišči  **središče morja** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
         ! Uporabi moder in rdeč koral, da prideš do zaklada v  **zaboju** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
+      Crack Random Substitution: |-
+        # Razvozlaj naključno zamenjalno šifro!
+
+        Ta verzija orodja ti ponuja več informacij o šifriranem besedilu in več opcij za preizkušanje različnih zamenjav.
+
+        ### Različni načini analize besedila
+
+        -   Igraj se z nekaterimi opcijami sortiranja v zavihku Naključna zamenjalna šifra, da dobiš različne poglede na pogostost črk v vhodnem besedilu, kot tudi v standardnem Angleškem tekstu.
+            ![](https://images.code.org/82efbca1807206c9a07de520fdb22027-image-1443572614493.23.28.png)
+
+        ### Različni načini zamenjav
+
+        -   Da zamenjaš črko, lahko povlečeš modro črko iz abecede direktno pod oranžno črko, ki jo hočeš zamenjati v originalu.
+            ![](https://images.code.org/da9a7af7568d8c1698872ab91b4d79d7-image-1443572471212.gif)
+
+        ### Igraj. Vedno se igraj.
+
+        -   Obstajajo drugi načini za analizo in zamenjavo znakov, ki jih lahko najdeš s klikom na gumbe in preizkušanjem česarkoli hočeš.
+        -   Zapomni si: orodja ne moreš pokvariti :)
+
+        Poglej kako dolgo traja, da razvozlaš šifro! Je to dober način za enkripcijo skrivnih podatkov?
+
+        <img src="http://code.org/api/hour/finish_encryption.png">
+      Crack a Caesar Cipher: |-
+        # Razvozlaj Cezarjevo šifro!
+
+        To orodje ti omogoča igranje s tekstom in sestavljanje Cezarjevih šifer. Lahko ga uporabiš za šifriranje sporočil, ali pa za dešifriranje.
+
+        # Naredi to
+
+        -   Naloži **Primer sporočila** s seznama sporočil. To bo naložilo sporočilo, ki je bilo šifrirano s Cezarjevo šifro.
+
+        ![](https://images.code.org/347139486c8c729bf3c6e72ce67da878-image-1476286380409.gif)
+
+        -   Z uporabo gumbov v Cezarjevem zamenjalnem zavihku lahko premakneš abecedo naprej ali nazaj, da poizkusiš dešifrirati sporočilo.
+
+        ![](https://images.code.org/ef9ebc16d2f1442dc46fba9bd48b5d43-image-1476285966821.gif)
+
+        Preveri kako dolgo potrebuješ, da razvozlaš šifro! Je to dobra metoda za šifriranje skrivnih podatkov?
+
+        <img src="http://code.org/api/hour/begin_encryption.png">
       HOC 2018 Level_1: 'Potrebuješ pripomočke za potovanje, ki te čaka. Poberi **čoln**
         ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
         iz **zaboja** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png). '
@@ -82,6 +123,10 @@ sl-SI:
       K-1 Bee Loops 5: Uporabi "ponovi" zanke, da dobiš nektar in narediš med!
       K-1 Maze Loops 2: Uporabi `ponovi` blok, da me pripelješ do prašička!
       K-1 Maze Loops 8: Uporabi "ponovi" zanko, da me pripelješ do prašička.
+      MC HOC 2016 SCORE LEVEL: "Nekatere igre hranijo rezultat. Igraj se \"Ulovi me\"
+        igro z Železnimi Golemi in uporabi <xml>  <block type=\"craft_addScore\">\n
+        \   <title name=\"SCORE\">1</title>\n  </block></xml> blok, da si daš eno
+        točko, ko jih uloviš. \n\n Doseži 5 točk, da zmagaš!"
       Overworld Move to Sheep: Dodajte še en ukaz 'premakni naprej', da dosežete ovco.
       Overworld Move to Sheep_2019: Dodajte še en ukaz 'premakni naprej', da dosežete
         ovco.
@@ -93,6 +138,9 @@ sl-SI:
         Namig: Cvetovi so narazen 150 točk'
       Standalone_Artist_9: Sedaj nadaljuj in naredi kakršno koli sliko želiš! Imaš
         prazno funkcijo s katero lahko narediš karkoli želiš!
+      'Widget: Text Compression': Išči vzorce (ponovljene besede ali fraze) v besedilu.
+        Vnesi vzorce, ki jih vidiš, v slovar na desni. Med tipkanjem vnosa v slovar,
+        bo simbol vnosa vnešen v besedilo namesto vzorca.
       course4_artist_fwp_challenge1: Zaženi program ter preveri kaj se dogaja, če
         ga spreminjaš. Poskusi ugotoviti kako deluje? (Lahko ga tudi povsem zbrišeš
         in nadomestiš s povsem drugačnim)
