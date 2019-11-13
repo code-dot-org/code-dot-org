@@ -33,6 +33,7 @@ class AssignButton extends React.Component {
           text={i18n.assignToSection()}
           icon="plus"
           onClick={this.assign}
+          className={'uitest-assign-button'}
         />
       </div>
     );
