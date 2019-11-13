@@ -148,8 +148,6 @@ it-IT:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Nuovo blocco!
         dance_callout_11_b: Nuovo blocco!
-      Dance_2019_01:
-        dance_callout_01: Aggiungi questo blocco al tuo programma!
       Dance_2019_04:
         dance_callout_02: Aggiungi questo blocco al tuo programma!
       Dance_2019_06:
@@ -157,7 +155,8 @@ it-IT:
       Dance_2019_07:
         setprop_hint: Nuovo blocco!
       Dance_2019_09:
-        new_block_1: Nuovo blocco!
+        new_block_3: Nuovo blocco!
+        new_block_4: Nuovo blocco!
       Dance_Party_01:
         dance_callout_01: Aggiungi questo blocco al tuo programma!
       Dance_Party_02:

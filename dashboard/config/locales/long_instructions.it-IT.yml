@@ -2201,6 +2201,11 @@ it-IT:
             </block></xml>
       course3_bee_functions_challenge1: Dovrai cavartela da solo in questa sfida.
         Potrebbe essere più difficile di quanto sembri!
+      course3_farmer_until_challenge2: Usa il blocco `Se/Altrimenti` per seguire questo
+        percorso con molte curve in diverse direzioni. Ad ogni angolo, usa il blocco
+        `rimuovi 1` all'interno di un ciclo per eliminare il mucchio di terra.
+      course3_maze_until_challenge1: Nessun suggerimento, solo una sfida. Fai arrivare
+        lo zombie fino al girasole.
       course3_playLab_challenge1: "_Gli **scoiattoli** sono terrorizzati all'idea
         che un **dinosauro** sia capitato in città! Riuscirà il coraggioso **cavaliere**
         a tranquillizzarli?_\n\nRegole:\n\n1.  _Toccare gli scoiattoli fa aumentare
@@ -5174,6 +5179,9 @@ it-IT:
         _"Mi trovo in un labirinto con tanti ortaggi differenti!"_
 
         `Gira a destra` in corrispondenza delle zucche, `gira a sinistra` se trovi una lattuga. Raccogli tutto per completare l'esercizio.
+      courseD_farmer_until_challenge2: Usa il blocco `Se/Altrimenti` per seguire questo
+        percorso con molte curve in diverse direzioni. Ad ogni angolo, usa il blocco
+        `rimuovi 1` all'interno di un ciclo per eliminare il mucchio di terra.
       courseD_farmer_while1: |-
         _"Ciao, sono una contadina. Ho bisogno del tuo aiuto per livellare il terreno nella mia fattoria, in modo che sia pronto per la semina."_
 
@@ -5441,6 +5449,8 @@ it-IT:
         ad arrivare fino al girasole."
       courseD_maze_until9_2019: "**Sfida:** Evita le piante carnivore e aiuta lo zombie
         ad arrivare fino al girasole."
+      courseD_maze_until_challenge1: Nessun suggerimento, solo una sfida. Fai arrivare
+        lo zombie fino al girasole.
       courseD_playLab_cond1: "Per iniziare il gioco, il pirata (personaggio 1) deve
         essere in grado di muoversi in tutte le direzioni. Collega i blocchi agli
         eventi corretti per permettere di muovere il pirata.  \n\n* * *\n\nAiuta il

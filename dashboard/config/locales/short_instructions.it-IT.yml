@@ -1041,8 +1041,6 @@ it-IT:
       Dance Party Freeplay_2019: Ora crea la tua discoteca aliena!
       Dance Party Predict: 'Cosa pensi che succederà quando cliccherai sull''alieno?  '
       Dance Party Predict_2019: 'Cosa pensi che succederà quando cliccherai sull''alieno?  '
-      Dance_2019_01: Trascina nell’area di lavoro il blocco `crea un nuovo`e aggancialo
-        al blocco `quando si clicca su "Esegui"` (`setup`).
       Dance_2019_05: Adesso fai in modo che il ballerino cominci una nuova mossa dopo
         6 battute.
       Dance_2019_08: Usa il blocco `imposta la tonalità` per modificare il colore
@@ -1813,6 +1811,11 @@ it-IT:
       course3_bee_functions_challenge1: Dovrai cavartela da solo in questa sfida.
         Potrebbe essere più difficile di quanto sembri!
       course3_farmer_condLoops_challenge2: Raccogli tutto per completare l'esercizio.
+      course3_farmer_until_challenge2: Usa il blocco `Se/Altrimenti` per seguire questo
+        percorso con molte curve in diverse direzioni. Ad ogni angolo, usa il blocco
+        `rimuovi 1` all'interno di un ciclo per eliminare il mucchio di terra.
+      course3_maze_until_challenge1: Nessun suggerimento, solo una sfida. Fai arrivare
+        lo zombie fino al girasole.
       course3_playLab_challenge1: Bisognerebbe far succedere qualcosa di particolare
         quando superi un certo punteggio e quando vai sotto zero. Aggiungi del codice
         alle funzioni `vittoria` e `sconfitta` per far funzionare il gioco come si
@@ -3269,6 +3272,8 @@ it-IT:
         Ora abbiamo una griglia 16 x 16 per disegnare con una risoluzione superiore!
 
         Crea il tuo programma e guarda come possiamo essere creativi con i bit!
+      courseD_artist_binaryFP8: "**Tempo di giocare**: disegna in binario qualunque
+        cosa ti piaccia! "
       courseD_artist_binaryFP_2018: |-
         Ora abbiamo una griglia 16 x 16 per disegnare con una risoluzione superiore!
 
@@ -3722,6 +3727,9 @@ it-IT:
       courseD_farmer_condLoops_challenge2: Raccogli tutto per completare l'esercizio.
       courseD_farmer_condLoops_challenge2_2018: Raccogli tutto per completare l'esercizio.
       courseD_farmer_condLoops_challenge2_2019: Raccogli tutto per completare l'esercizio.
+      courseD_farmer_until_challenge2: Usa il blocco `Se/Altrimenti` per seguire questo
+        percorso con molte curve in diverse direzioni. Ad ogni angolo, usa il blocco
+        `rimuovi 1` all'interno di un ciclo per eliminare il mucchio di terra.
       courseD_farmer_while1: Vai fino al mucchio di terra e usa il blocco `rimuovi
         1` per rimuoverlo.
       courseD_farmer_while10: Abbatti tutti questi mucchi usando il minor numero possibile
@@ -3952,6 +3960,8 @@ it-IT:
         ad arrivare fino al girasole."
       courseD_maze_until9_2019: "**Sfida:** Evita le piante carnivore e aiuta lo zombie
         ad arrivare fino al girasole."
+      courseD_maze_until_challenge1: Nessun suggerimento, solo una sfida. Fai arrivare
+        lo zombie fino al girasole.
       courseD_playLab_cond1: Fai arrivare il pirata fino alle bandierine per risolvere
         questo esercizio.
       courseD_playLab_cond1_2018: Fai arrivare il pirata fino alle bandierine per
