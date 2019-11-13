@@ -58,6 +58,8 @@ class SectionAssigner extends Component {
             onChangeSection={this.onChangeSection}
             selectedSection={selectedSection}
             forceReload={forceReload}
+            courseId={courseId}
+            scriptId={scriptId}
           />
           {selectedSection && selectedSection.isAssigned && (
             <UnassignButton sectionId={selectedSection.id} />
