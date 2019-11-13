@@ -116,6 +116,7 @@ ta-IN:
   volunteer_engineer_submission_field_email_preference_yes: ஆம்
   volunteer_engineer_submission_field_email_preference_no: இல்லை
   volunteer_engineer_submission_submit: சமர்ப்பிக்க
+  volunteer_engineer_submission_commitment_more: அதிகம்
   volunteer_engineer_submission_experience_software_professional: மென்பொருள் பொறியாளர்
   petition_age: வயது
   dashboard_action_cancel: ரத்து செய்
@@ -144,11 +145,17 @@ ta-IN:
   lightbot_beyond_gradelevel: அனைத்து வயதினரும்
   flappy_shortcode: flap
   header_courses: பாடங்கள்
+  header_course_catalog: பாடத்திட்ட கேட்டலாக்
+  header_project_gallery: திட்டப்பணிகள்
   header_educate_hoc: நிரல்வரி நேரம்
+  header_about: பற்றி
+  header_help_support: 'உதவி மற்றும் ஆதரவு '
+  header_report_bug: ஒரு பிரச்னையை தெரிவிக்கவும்
   user_header_label: வணக்கம் %{username}
   user_header_settings: எனது கணக்கு
   user_header_logout: வெளியேறு
   user_header_signin: உள்நுழை
+  user_header_create: 'உருவாக்குக '
   applab_tile_start_tutorial: தொடங்குக
   hoc_overview_start_tutorial: தொடங்குக
   hoc2018_creativity_create: உருவாக்கு
