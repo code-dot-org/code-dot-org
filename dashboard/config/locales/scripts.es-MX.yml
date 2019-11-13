@@ -7042,7 +7042,7 @@ es-MX:
           description_short: Rápidamente repasada conceptos del Curso C, luego puedes
             ir más allá con algoritmos, ciclos anidados, condicionales y más.
           description: Aprende nuevos conceptos de programación incluyendo algoritmos,
-            loops anidados, loops, condicionales y eventos. Recibe una introducción
+            bucles anidados, bucles, condicionales y eventos. Recibe una introducción
             a la ciudadanía digital antes de crear tu propio juego o historia que
             puedes compartir.
         coursee-2017:
@@ -15608,7 +15608,7 @@ es-MX:
             Unit 4 STUDENT Survey:
               name: Encuesta de la Unidad 3 para ESTUDIANTES
             Unit 4 TEACHER Survey:
-              name: Encuesta de la Unidad 1 para DOCENTES
+              name: Encuesta de la Unidad 4 para DOCENTES
           title: 'Unidad 4: Variables, condicionales, funciones'
         csp1-2019:
           title: CSP Unidad 1 - Internet ('19-'20)
@@ -16752,6 +16752,8 @@ es-MX:
               name: Hackatón semestral Parte 5
             Unit 5 Assessment:
               name: Evaluación de la Unidad 5
+            Semester Exam:
+              name: Examen semestral
           title: 'Unidad 5: Listas, bucles y recorridos'
         fit2019-novice:
           stages:
@@ -18119,6 +18121,12 @@ es-MX:
               name: Proyectos de fin de curso
             Who is this section for?:
               name: "¿Para quién es esta sección?"
+            Reviewing reflections:
+              name: Revisión de reflexiones
+            Reviewing your reflections:
+              name: Revisión de tus reflexiones
+            End of Course projects:
+              name: Proyectos de fin de curso
         dance-extras-2019:
           title: Sigue bailando
           description: Motívate con más ideas de proyectos.
@@ -18137,4 +18145,47 @@ es-MX:
               name: 'Proyecto: simulación de la innovación, parte 2'
             Security Risks Part 1:
               name: Riesgos de seguridad, parte 1
+            Security Risks Part 2:
+              name: Riesgos de seguridad Parte 2
+            Data Policies and Privacy:
+              name: Políticas y privacidad de datos
+            The Value of Privacy:
+              name: El valor de la privacidad
+            'Project: Innovation Simulation Part 3':
+              name: 'Proyecto: simulación de la innovación, parte 3'
           title: Ciberseguridad e impactos globales
+        csp4-preview:
+          stages:
+            new stage:
+              name: nueva etapa
+            Variables Explore:
+              name: Variables Explorar
+            Variables Investigate:
+              name: Investigar variables
+            Variables Practice:
+              name: Variables Practicar
+            Variables Make:
+              name: Variables Crear
+            Conditionals Explore:
+              name: Condicionales Explorar
+            Conditionals Investigate:
+              name: Condicionales Investigar
+            Conditionals Practice:
+              name: Condicionales Practicar
+            Conditional Make:
+              name: Condicionales Crear
+            Functions Explore / Investigate:
+              name: Funciones Explorar / Investigar
+            Functions Practice:
+              name: Funciones Practicar
+            Functions Make:
+              name: Funciones Crear
+            Practice PT Part 1:
+              name: PT de práctica Parte 1
+            Practice PT Part 2:
+              name: PT de práctica Parte 2
+            Practice PT Part 3:
+              name: PT de práctica Parte 3
+            'Lesson 15: Unit 4 Assessment':
+              name: 'Lección 15: evaluación de la unidad 4'
+          title: Variables, condicionales y funciones

@@ -3406,6 +3406,10 @@ es-MX:
           feedback: El bloque `recoger calabaza` está dentro del bucle, por lo que
             la granjera intentará recoger calabazas en cada paso, en lugar de hacerlo
             solo al final.
+        markdown: |+
+          Este es un nuevo tipo de desafío que utiliza bloques similares a lo que ya has visto. ¿Puedes hacer una predicción acerca de lo que ocurrirá cuando ejecutes el código que se encuentra debajo?
+
+
       courseD_multi_farmer_while10_predict2:
         questions:
         - text: Observa el código siguiente con atención. ¿Qué quedará al final de
@@ -3792,6 +3796,15 @@ es-MX:
         - text: No lo sé.
           feedback: La variable vuelve a 0 antes de las dos últimas llamadas de funciones,
             donde se agrega 1 cada vez. La abeja recogerá 2 unidades de néctar.
+      courseF_external_variableConstant:
+        markdown: "<h2>Más sobre variables</h2>\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
+          style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>Acabas de
+          aprender una manera genial de usar una variable... ¡como una constante!
+          \ \nCuando usas una variable como una constante, lo que haces es establecer
+          un valor una vez y, luego, usas el *mismo* valor varias veces en tu programa
+          sin cambiarlo luego de hacer clic en \"Ejecutar\".  </h3>\n<br/><hr/>\n<h3>En
+          la próxima parte de la serie, escribirás código con variables que *hacen*
+          cambios dentro del programa.</h3>\n\n"
       courseF_markdown_algorithms_end:
         title: Prueba de reducción de la página del libro de texto
         content1: Prueba de reducción de la página del libro de texto
@@ -3919,6 +3932,10 @@ es-MX:
         - text: No lo sé.
           feedback: El programa usa parámetros para que una única función pueda crear
             dos cajas de diferente tamaño.
+        markdown: |+
+          Añadimos parámetros a la función 'dibujar un cuadrado'. Haz clic en el botón "editar" azul para ver la definición de toda la función.
+
+
       courseF_multi_artist_variables3a_predict1:
         questions:
         - text: Hemos establecido la variable "longitud" en 50. ¿Qué sucederá cuando
@@ -3989,6 +4006,10 @@ es-MX:
         - text: No lo sé.
           feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
             néctar solamente si hay una flor debajo de la nube.
+        markdown: 'La nube bloquea la vista. Podría haber una flor debajo de esta
+          nube. Si hay una flor, la abeja deberá recoger el néctar **una vez**.
+
+'
       courseF_multi_bee_conditionals7_predict2:
         questions:
         - text: Observa el siguiente código con atención. ¿Qué crees que sucederá
@@ -4007,6 +4028,10 @@ es-MX:
         - text: No lo sé.
           feedback: El bloque `si en la flor` permite a la abeja tomar el néctar de
             cada flor; de lo contrario, hará miel.
+        markdown: 'A veces la nube cubre una flor, ¡y a veces cubre un panal! De una
+          u otra manera, solo habrá **una** flor o **un* panal debajo de cada nube.
+
+'
       courseF_multi_bee_for3_predict1:
         questions:
         - text: Lee el siguiente código. ¿Qué sucederá cuando hagas clic en "Ejecutar"?
@@ -4077,6 +4102,10 @@ es-MX:
         - text: No lo sé.
           feedback: Al hacer clic para ver dentro de la función, verás que está definida
             por un parámetro para recoger todo el néctar o la miel que se encuentre.
+        markdown: |+
+          Debajo de estas nubes, hay una flor con 1 néctar o un panal con 1 miel. Haz clic en el botón "editar" azul de la función para ver lo que hay adentro antes de responder la pregunta a continuación.
+
+
       courseF_multi_playlab_variables4c_predictive1:
         questions:
         - text: ¿Qué sucederá si el usuario ingresa el nombre "Ali" en la ventana?
@@ -4093,6 +4122,11 @@ es-MX:
         - text: No lo sé.
           feedback: 'Incorrecto. Observa que el bloque `unirse` inserta el nombre
             (Ali) en la oración del pirata. '
+        markdown: "**Este desafío usa un nuevo bloque llamado `preguntar`.**\n\nEl
+          bloque `preguntar` detiene el programa y pide al usuario que ingrese algún
+          texto. \n\nEl texto ingresado por el usuario es guardado en la variable
+          que se muestra al final del bloque `preguntar`. En este caso, es la variable
+          `nombre`.\n"
       courseF_project_exemplars_2019:
         title: Prueba de reducción de la página del libro de texto
         content1: Prueba de reducción de la página del libro de texto

@@ -1041,8 +1041,9 @@ es-MX:
       Dance Party Freeplay_2019: "¡Ahora crea tu propia discoteca extraterrestre!"
       Dance Party Predict: "¿Qué crees que ocurrirá al hacer clic en el extraterrestre?"
       Dance Party Predict_2019: "¿Qué crees que ocurrirá al hacer clic en el extraterrestre?"
-      Dance_2019_01: Arrastra el bloque de 'Crear nuevo' en el espacio de trabajo
-        y conéctalo dentro del bloque de 'instalación'.
+      Dance_2019_01: Arrastra el bloque [blockly block] [0] al espacio de trabajo
+        y conéctalo dentro del bloque [blockly block] [1].
+      Dance_2019_02: Crea un movimiento de hacer un baile cuando presionas una tecla.
       Dance_2019_05: Haz que el bailarín comience un nuevo movimiento después de 6
         medidas.
       Dance_2019_08: Utiliza el bloque de 'definir tinte ' para cambiar el color de

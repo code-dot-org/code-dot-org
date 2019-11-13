@@ -383,7 +383,10 @@ es-MX:
       CourseD_Dance_Party_11_5:
         dance_party_11_5_groups: Busca aquí los bloques de "todos los patos"
       Dance_2019_01:
-        dance_callout_01: "¡Añade este bloque a tu programa!"
+        dance_callout_01: Elige el tipo de bailarín aquí...
+      Dance_2019_02:
+        dance_callout_11_a: Agrega este bloque a tu programa.
+        arrow_buttons: Presiona los botones de flecha para controlar a tu bailarín.
       Dance_2019_04:
         dance_callout_02: "¡Añade este bloque a tu programa!"
       Dance_2019_06:
@@ -391,7 +394,8 @@ es-MX:
       Dance_2019_07:
         setprop_hint: "¡Bloque nuevo!"
       Dance_2019_09:
-        new_block_1: "¡Bloque nuevo!"
+        new_block_3: "¡Bloque nuevo!"
+        new_block_4: "¡Bloque nuevo!"
       Dance_Party_01:
         dance_callout_01: "¡Añade este bloque a tu programa!"
       Dance_Party_02:

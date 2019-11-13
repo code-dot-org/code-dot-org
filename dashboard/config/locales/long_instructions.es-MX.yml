@@ -16268,6 +16268,17 @@ es-MX:
         ¡Observa cuánto tiempo te lleva descifrar el código! ¿Es un buen método para cifrar datos secretos?
 
         <img src="http://code.org/api/hour/begin_encryption.png">
+      Dance_2019_01: |-
+        Arrastra el bloque [blockly block] [0] al espacio de trabajo y conéctalo dentro del bloque [blockly block] [1].
+
+         Elige `gato` o`perezoso` para crear tu primer bailarín.
+
+        -   _También puedes hacer clic en la bombilla de la izquierda si quieres más información o desafíos adicionales._
+      Dance_2019_02: |-
+        El bloque <xml><block type="Dancelab_whenKey" block-text="when up pressed"></block></xml> te permite ejecutar código cuando presionas los botones de flecha.
+        ¡Usa el bloque <xml><block type="Dancelab_doMoveEachLR" block-text="do once"><title name="GROUP">"CAT"</title><title name="MOVE">MOVES.XClapSide</title><title name="DIR">-1</title></block></xml> para hacer que el gato aplauda!
+
+        _¡Asegúrate de presionar la tecla "flecha arriba" o ![](<https://images.code.org/419e704e6841c0b696016bf5029b8cb9-image-1571864825506.06.45 PM.png>) después de hacer clic en el botón Ejecutar!_
       Dance_2019_05: |-
         _¡Ya estamos entrando en ritmo!_
 
