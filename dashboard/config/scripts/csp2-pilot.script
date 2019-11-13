@@ -27,7 +27,7 @@ level 'U1L4 CSP Internet Simulator Packets 2', progression: 'Internet Simulator:
 level 'U2L4 Multiple Choice packets', progression: 'Check For Understanding', assessment: true
 level 'U2L4 CSP CFU terms', progression: 'Check For Understanding', assessment: true
 
-stage 'The Growing Internet'
+stage 'DNS and HTTP'
 level 'CSP U2L5 SFLP 20-21', progression: 'Lesson Overview'
 level 'U1L5 CSP Internet Simulator DNS', progression: 'Internet Simulator: DNS'
 level 'U2L4 CSP CFU scale', progression: 'Check For Understanding', assessment: true
