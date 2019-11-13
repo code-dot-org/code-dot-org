@@ -2087,11 +2087,6 @@ fr-FR:
           -   Après 6 mesures, ton danseur doit faire une danse différente de ce qu'il faisait après 4 mesures.
 
           _Le niveau se termine après 11 mesures._
-      Dance_2019_07:
-        challenges: |-
-          **Défi optionnel**
-
-          \*Expérimente en changeant d'autres propriétés (largeur, hauteur, rotation, etc.)
       Dance_Party_01:
         validation: |-
           **Comment puis-je réussir ce niveau ?**

@@ -4248,3 +4248,7 @@ fr:
           stages:
             new stage:
               name: nouvelle étape
+        csp4-preview:
+          stages:
+            new stage:
+              name: nouvelle étape

@@ -777,6 +777,35 @@ fr:
             '"bass"': grave
             '"mid"': médium
             '"treble"': aigu
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"hearts_colorful"': Cœurs
+            '"diamond"': diamant
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
+            '"0"': '1'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenKey:
         text: En appuyant sur {KEY}
         options:
