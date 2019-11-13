@@ -27,7 +27,7 @@ Feature: (Un)Assign on script and course overview pages
     And I wait until element ".uitest-unassign-button" is visible
     # One assign button for each of 9 currently unassigned units in this course.
     Then the overview page contains 9 assign buttons
-    And I press the first ".uitest-go-to-unit-button" element
+    And I press the first ".uitest-go-to-unit-button" element to load a new page
     And check that the URL contains "s/csp1-2017"
     Then the url contains the section id
     And I wait until element ".uitest-assign-button" is visible
@@ -43,7 +43,7 @@ Feature: (Un)Assign on script and course overview pages
     And I wait until element ".uitest-CourseScript" is visible
     And I wait until element ".uitest-unassign-button" is not visible
     And I wait until element ".uitest-assigned" is visible
-    And I press the first ".uitest-go-to-unit-button" element
+    And I press the first ".uitest-go-to-unit-button" element to load a new page
     And check that the URL contains "s/csp1-2017"
     And I wait until element ".uitest-unassign-button" is not visible
     And I wait until element ".uitest-assigned" is visible
