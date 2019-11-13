@@ -124,9 +124,9 @@ export class UnconnectedStageCard extends Component {
     const {stage, stageMetrics} = this.props;
     Object.keys(stageMetrics).forEach(stagePos => {
       const stageRect = stageMetrics[stagePos];
-      stagePos = Number(stagePos);
       if (y > stageRect.top && y < stageRect.top + stageRect.height) {
-        if (stagePos === stage.position) {
+        const newStagePos = Number(stagePos);
+        if (newStagePos === stage.position) {
           if (this.state.drag !== this.state.newPosition) {
             this.props.reorderLevel(
               this.props.stage.position,
@@ -138,7 +138,7 @@ export class UnconnectedStageCard extends Component {
           this.props.moveLevelToStage(
             this.props.stage.position,
             this.state.drag,
-            stagePos
+            newStagePos
           );
         }
       }
