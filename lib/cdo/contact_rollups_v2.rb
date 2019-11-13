@@ -106,6 +106,10 @@ class ContactRollupsV2
   end
 
   def self.collect_data_to_crv2_daily
+    # Insert daily changes to crv2_daily
+    #   Get emails from user_view table
+    #   Get opted_out from pegasus.contacts
+    #   Get opt_in from dashboard.email_preferences
     collect_changes_in_users
   end
 
@@ -208,6 +212,16 @@ class ContactRollupsV2
   end
 
   def self.update_data_to_crv2_all
+    # Pull 1-day data from crv2_daily to crv2_all
+    # Ruby approach:
+    #   Process 1 row in daily table at a time.
+    #   Find the corresponding row in crv2_all and update it or insert it
+    # SQL approach:
+    #   Condense daily changes to an email to 1 row.
+    #   Join condensed table to crv2_all and update crv2_all data
+    # Optimization:
+    #   Normalize email to id?
+
     if PEGASUS_DB_WRITER[:crv2_daily].empty?
       puts "crv2_daily is empty. stop processing"
       return
@@ -222,7 +236,6 @@ class ContactRollupsV2
 
     PEGASUS_DB_WRITER[daily_data_query].each do |row|
       update_daily_data_to_crv2_all row[:data_date]
-      # puts "process only 1 package"; break  # TODO: remove
     end
   end
 
@@ -242,6 +255,7 @@ class ContactRollupsV2
     data_to_insert = PEGASUS_DB_WRITER[data_to_insert_query]
     puts "Inserting/updating #{data_to_insert.count} rows to crv2_all"
 
+    # TODO: add counters for post-condition/assertion
     data_to_insert.each do |row|
       email, data = row.values_at(:email, :data)
       current_time = Time.now
@@ -280,31 +294,15 @@ class ContactRollupsV2
   end
 
   def self.sync_to_pardot
+    # Get latest pardot id for email
+    # Sync new changes to pardot
+    # Get pardot id for the new records
   end
 
   def self.main
     create_tables
-
-    # Insert daily changes to crv2_daily
-    #   Get emails from user_view table
-    #   Get opted_out from pegasus.contacts
-    #   Get opt_in from dashboard.email_preferences
     collect_data_to_crv2_daily
-
-    # Pull 1-day data from crv2_daily to crv2_all
-    # Ruby approach:
-    #   Process 1 row in daily table at a time.
-    #   Find the corresponding row in crv2_all and update it or insert it
-    # SQL approach:
-    #   Condense daily changes to an email to 1 row.
-    #   Join condensed table to crv2_all and update crv2_all data
-    # Optimization:
-    #   Normalize email to id?
     update_data_to_crv2_all
-
-    # Get latest pardot id for email
-    # Sync new changes to pardot
-    # Get pardot id for the new records
     sync_to_pardot
   end
 
