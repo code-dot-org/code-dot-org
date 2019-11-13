@@ -1451,20 +1451,36 @@ const fishComponents = {
   // COLOR KNN DATA: [red, green, blue]
   colors: {
     yellow: {
-      rgb: [255, 203, 72],
-      knnData: [255, 203, 72]
+      rgb: [255, 226, 100],
+      knnData: [255, 226, 100]
+    },
+    darkYellow: {
+      rgb: [249, 197, 0],
+      knnData: [249, 197, 0]
     },
     green: {
       rgb: [143, 194, 63],
       knnData: [143, 194, 63]
     },
+    darkGreen: {
+      rgb: [34, 151, 109],
+      knnData: [34, 151, 109]
+    },
     blue: {
-      rgb: [94, 121, 188],
-      knnData: [94, 121, 188]
+      rgb: [92, 144, 222],
+      knnData: [92, 144, 222]
+    },
+    darkBlue: {
+      rgb: [96, 94, 188],
+      knnData: [96, 94, 188]
     },
     red: {
       rgb: [227, 72, 44],
       knnData: [227, 72, 44]
+    },
+    darkRed: {
+      rgb: [217, 65, 98],
+      knnData: [217, 65, 98]
     },
     orange: {
       rgb: [248, 151, 36],
@@ -1476,9 +1492,29 @@ const fishComponents = {
         AppMode.FishShort
       ]
     },
+    darkOrange: {
+      rgb: [251, 123, 96],
+      knnData: [251, 123, 96],
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
+    },
     purple: {
-      rgb: [187, 115, 188],
-      knnData: [187, 115, 188],
+      rgb: [199, 119, 181],
+      knnData: [199, 119, 181],
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
+    },
+    darkPurple: {
+      rgb: [168, 87, 181],
+      knnData: [168, 87, 181],
       exclusions: [
         AppMode.FishVTrash,
         AppMode.CreaturesVTrashDemo,
@@ -1487,8 +1523,18 @@ const fishComponents = {
       ]
     },
     pink: {
-      rgb: [238, 142, 180],
-      knnData: [238, 142, 180],
+      rgb: [255, 153, 220],
+      knnData: [255, 153, 220],
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
+    },
+    darkPink: {
+      rgb: [255, 109, 172],
+      knnData: [255, 109, 172],
       exclusions: [
         AppMode.FishVTrash,
         AppMode.CreaturesVTrashDemo,
