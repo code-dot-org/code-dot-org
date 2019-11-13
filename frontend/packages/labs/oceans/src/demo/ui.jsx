@@ -234,23 +234,39 @@ const styles = {
     top: '5%',
     left: '5%'
   },
-  guideBottomMiddle: {
-    bottom: 10,
+  guideCenter: {
+    bottom: '40%',
     left: '50%',
+    maxWidth: '47%',
     transform: 'translateX(-50%)'
   },
-  guideBottomMiddleButtons: {
-    bottom: '30%',
+  guideTopRight: {
+    top: '15%',
+    right: '13%',
+  },
+  guideTopRightNarrow: {
+    top: '15%',
+    right: '2%',
+    maxWidth: '40%'
+  },
+  guideBottomMiddle: {
+    bottom: '25%',
     left: '50%',
     transform: 'translateX(-50%)'
   },
   guideBottomRight: {
-    bottom: '25%',
-    right: '5%'
-  },
-  guideBottomRightNarrow: {
-    bottom: '25%',
+    bottom: '18%',
     right: '2%',
+    maxWidth: '25%'
+  },
+  guideBottomLeft: {
+    bottom: '18%',
+    left: '2%',
+    maxWidth: '25%'
+  },
+  guideBottomRightCenter: {
+    bottom: '20%',
+    right: '5%',
     maxWidth: '25%'
   },
   guideButton: {
