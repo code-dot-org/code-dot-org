@@ -24,7 +24,7 @@ const guides = [
   },
   {
     id: 'fishvtrash-training-init4',
-    text: "To program A.I., use the buttons to label an image as either 'fish' or 'not fish'. This will train A.I. to do it on it's own. Let's get started!",
+    text: "To program A.I., use the buttons to label an image as either 'fish' or 'not fish'. This will train A.I. to do it on its own. Let's get started!",
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Training},
     style: 'BottomMiddle',
   },
