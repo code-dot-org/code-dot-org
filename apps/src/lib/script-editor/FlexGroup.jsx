@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import ReactDOM from 'react-dom';
 import {connect} from 'react-redux';
 import _ from 'lodash';
 import color from '../../util/color';
@@ -160,6 +161,9 @@ class FlexGroup extends Component {
     return s;
   }
 
+  // To be populated with the bounding client rect of each level token element.
+  stageMetrics = {};
+
   render() {
     const groups = _.groupBy(
       this.props.stages,
@@ -189,6 +193,15 @@ class FlexGroup extends Component {
                     key={`stage-${index}`}
                     stagesCount={this.props.stages.length}
                     stage={stage}
+                    ref={stageCard => {
+                      if (stageCard) {
+                        const metrics = ReactDOM.findDOMNode(
+                          stageCard
+                        ).getBoundingClientRect();
+                        this.stageMetrics[stage.position] = metrics;
+                      }
+                    }}
+                    stageMetrics={this.stageMetrics}
                   />
                 );
               })}
