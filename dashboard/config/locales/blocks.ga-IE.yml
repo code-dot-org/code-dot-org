@@ -237,6 +237,12 @@ ga:
           PROPERTY:
             '"scale"': méid
             '"height"': airde
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': diamant
+            '"x"': x
+            '"y"': y
       Dancelab_whenKey:
         options:
           KEY:
