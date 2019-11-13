@@ -147,6 +147,7 @@ class ScriptOverviewTopRow extends React.Component {
               showAssignButton={showAssignButton}
               courseId={currentCourseId}
               scriptId={scriptId}
+              forceReload={true}
             />
           )}
         {!experiments.isEnabled(experiments.ASSIGNMENT_UPDATES) &&
