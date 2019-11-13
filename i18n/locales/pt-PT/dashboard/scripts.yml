@@ -1924,3 +1924,7 @@ pt:
           stages:
             new stage:
               name: nova fase
+        csp4-preview:
+          stages:
+            new stage:
+              name: nova fase

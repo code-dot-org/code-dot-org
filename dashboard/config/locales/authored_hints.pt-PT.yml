@@ -9,6 +9,59 @@ pt-PT:
       CourseE_HOC 2018 Level_9b:
         voyage_aquatic_9a: Que bonito recife de coral! O coral azul é a maneira **direita**
           e certifica-te de que o coral vermelho não seja **esquerda**!
+      Dance_2019_02:
+        validation: |-
+          **Como é que eu passo este nível?**
+
+          -   O dançarino tem que realizar um movimento.
+          -   Precisas de premir um botão de direção.
+
+          _Este nível termina após 4 compassos._
+        challenges: |-
+          **Desafio Opcional**
+
+          -   Usa mais que um bloco <xml><block type="Dancelab_whenKey"><title name="KEY">"up"</title></block></xml>.
+      Dance_2019_03:
+        validation: |-
+          **Como é que eu passo este nível?**
+
+          -   Ambos os dançarinos têm que realizar um movimento.
+          -   Precisas de premir os botões de direção.
+
+          _Este nível termina após 4 compassos._
+      Dance_2019_06:
+        validation: |-
+          **Como é que eu passo este nível?**
+
+          -   Cria um dançarino principal e um grupo de dançarinos secundários.
+
+          _Este nível termina após 7 compassos._
+      Dance_2019_07:
+        validation: |-
+          **Como é que eu passo este nível?**
+
+          -   Altera o tamanho de pelo menos um dançarino após a música começar.
+
+          _Este nível termina após 6 compassos._
+      Dance_2019_08:
+        validation: |-
+          **Como é que eu passo este nível?**
+
+          -   Troca a matiz da cor de pelo menos um dançarino.
+
+          _Este nível termina após 6 compassos._
+      Dance_2019_09:
+        validation: |-
+          **Como é que eu passo este nível?**
+
+          -   Apenas prime o botão "Terminar"!
+      Dance_Party_05:
+        validation: |-
+          **Como é que eu passo este nível?**
+
+          -   O teu dançarino precisa de deslocar-se ciclicamente no mínimo em 4 movimentos de dança diferentes antes do nível acabar.
+
+          _Este nível termina após 12 compassos._
       Function intro Ryan:
         Function_intro_Ryan_a: Podes chamar uma função várias vezes no teu programa!  Experimenta
           chamá-la duas vezes para resolver este quebra-cabeças.
