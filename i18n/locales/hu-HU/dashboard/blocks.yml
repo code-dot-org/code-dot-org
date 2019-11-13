@@ -777,6 +777,25 @@ hu:
             '"bass"': basszus
             '"mid"': közepes
             '"treble"': magas
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"hearts_colorful"': Szívek
+            '"diamond"': gyémánt
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
       Dancelab_whenKey:
         text: "{KEY} lenyomásakor"
         options:
