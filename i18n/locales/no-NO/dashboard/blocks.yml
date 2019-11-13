@@ -770,6 +770,25 @@
             '"bass"': bass
             '"mid"': mellomtone
             '"treble"': diskant
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"hearts_colorful"': Hjerter
+            '"diamond"': diamant
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
       Dancelab_whenKey:
         text: når {KEY} trykkes
         options:
