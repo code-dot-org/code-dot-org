@@ -49,6 +49,15 @@ function getKeysRef() {
 }
 
 /**
+ * @return {Promise<boolean>} whether the project channel exists
+ */
+FirebaseStorage.channelExists = function() {
+  return getProjectDatabase()
+    .once('value')
+    .then(snapshot => snapshot.val() !== null);
+};
+
+/**
  * Deletes the entire channel in firebase.
  * @param {function} onSuccess
  * @param {function} onError
