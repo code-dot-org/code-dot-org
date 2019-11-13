@@ -97,7 +97,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     sl = Script.find_by_name('course1').script_levels[16]
     params = {program: 'fake program', testResult: 0, result: 'false', time: 1000, timeSinceLastMilestone: 2000}
 
-    assert_cached_queries(10) do
+    assert_cached_queries(6) do
       post milestone_path(
         user_id: student.id,
         script_level_id: sl.id
