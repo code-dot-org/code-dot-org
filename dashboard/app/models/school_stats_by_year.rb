@@ -46,33 +46,6 @@ class SchoolStatsByYear < ActiveRecord::Base
 
   belongs_to :school
 
-  # Mapping of urban-centric locale code to community type.
-  # @see https://nces.ed.gov/programs/edge/geographicZCTA.aspx
-  COMMUNITY_TYPE_MAP = {
-    '11' => 'city_large',
-    '12' => 'city_midsize',
-    '13' => 'city_small',
-    '21' => 'suburban_large',
-    '22' => 'suburban_midsize',
-    '23' => 'suburban_small',
-    '31' => 'town_fringe',
-    '32' => 'town_distant',
-    '33' => 'town_remote',
-    '41' => 'rural_fringe',
-    '42' => 'rural_distant',
-    '43' => 'rural_remote'
-  }.freeze
-
-  # Enumeration of urban-centric community types
-  enum community_type: COMMUNITY_TYPE_MAP.values.index_by(&:to_sym).freeze
-
-  # Maps the community type form the urban-centric locale code.
-  # @param code [String] The urban-centric locale code.
-  # @return [String] The community type.
-  def self.map_community_type(code)
-    return code.presence.try {|v| COMMUNITY_TYPE_MAP[v]}
-  end
-
   # Loads/merges the data from a CSV into the table.
   # Requires a block to parse the row.
   # @param filename [String] The CSV file name.
@@ -82,7 +55,11 @@ class SchoolStatsByYear < ActiveRecord::Base
       parsed = yield row
       loaded = find_by(primary_keys.map(&:to_sym).map {|k| [k, parsed[k]]}.to_h)
       if loaded.nil?
-        SchoolStatsByYear.new(parsed).save!
+        begin
+          SchoolStatsByYear.new(parsed).save!
+        rescue ActiveRecord::InvalidForeignKey
+          puts parsed[:school_id]
+        end
       else
         loaded.assign_attributes(parsed)
         loaded.update!(parsed) if loaded.changed?

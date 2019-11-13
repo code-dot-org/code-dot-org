@@ -62,10 +62,10 @@ class CourseScript extends Component {
     courseId: PropTypes.number,
     description: PropTypes.string,
     assignedSectionId: PropTypes.number,
-
+    showAssignButton: PropTypes.bool,
     // redux provided
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
-    selectedSectionId: PropTypes.number.isRequired,
+    selectedSectionId: PropTypes.number,
     hiddenStageState: PropTypes.object.isRequired,
     hasNoSections: PropTypes.bool.isRequired,
     toggleHiddenScript: PropTypes.func.isRequired,
@@ -102,7 +102,8 @@ class CourseScript extends Component {
       hasNoSections,
       assignedSectionId,
       courseId,
-      sectionsForDropdown
+      sectionsForDropdown,
+      showAssignButton
     } = this.props;
 
     const isHidden = isScriptHiddenForSection(
@@ -150,6 +151,8 @@ class CourseScript extends Component {
               )}
             {!isAssigned &&
               viewAs === ViewType.Teacher &&
+              showAssignButton &&
+              selectedSection &&
               experiments.isEnabled(experiments.ASSIGNMENT_UPDATES) && (
                 <AssignButton
                   sectionId={selectedSectionId}
