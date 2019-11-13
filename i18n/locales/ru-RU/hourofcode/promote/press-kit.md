@@ -1,7 +1,5 @@
 ---
 title: Материалы для прессы
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

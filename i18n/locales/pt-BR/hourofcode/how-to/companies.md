@@ -1,7 +1,5 @@
 ---
 title: Como organizar um evento da Hora do Código - Empresas
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

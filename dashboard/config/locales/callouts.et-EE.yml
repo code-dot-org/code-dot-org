@@ -128,6 +128,16 @@ et-EE:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Uus plokk!
         dance_callout_11_b: Uus plokk!
+      Dance_2019_01:
+        dance_callout_01: Lisa see plokk oma programmi!
+      Dance_2019_04:
+        dance_callout_02: Lisa see plokk oma programmi!
+      Dance_2019_06:
+        dance_party_11_5_groups: Uus plokk!
+      Dance_2019_07:
+        setprop_hint: Uus plokk!
+      Dance_2019_09:
+        new_block_1: Uus plokk!
       Dance_Party_01:
         dance_callout_01: Lisa see plokk oma programmi!
       Dance_Party_02:

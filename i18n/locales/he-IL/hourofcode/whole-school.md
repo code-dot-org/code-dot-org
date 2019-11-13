@@ -1,6 +1,5 @@
 ---
 title: השתתפות כל בית הספר
-layout: wide
 ---
 
 {{ signup_button }}

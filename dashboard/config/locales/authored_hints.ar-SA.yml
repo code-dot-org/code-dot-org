@@ -719,6 +719,25 @@ ar-SA:
         voyage_aquatic_9a: يا لها من شعاب مرجانية جميلة! المرجان الأزرق هو الطريقة
           \* \* الصحيحة \* \* للمضي، وتحقق من أن المرجان الأحمر ليس إلى \* \* اليسار
           \* \*!
+      Dance_2019_01:
+        validation: |-
+          **كيف يمكنني تجاوز هذا المستوى؟**
+          \*تأكد من ظهور الراقص على الشاشة.
+
+          _ينتهي هذا المستوى بعد 4 إجراءات._
+      Dance_2019_04:
+        validation: |-
+          **كيف يمكنني تجاوز هذا المستوى؟**
+          \*يحتاج الراقص إلى الانتقال إلى خطوة جديدة بعد 4 إجراءات.
+
+          _ينتهي هذا المستوى بعد 8 إجراءات._
+      Dance_2019_05:
+        validation: |-
+          **كيف يمكنني تجاوز هذا المستوى؟**
+
+          -   بعد 6 إجراءات، يلزم على راقصك أداء رقصة مختلفة عن الرقصة التي أدّاها بعد 4 إجراءات.
+
+          _ينتهي هذا المستوى بعد 12 إجراءًا._
       Dance_Party_01:
         validation: |-
           **كيف يمكنني تجاوز هذا المستوى؟**
@@ -1267,7 +1286,9 @@ ar-SA:
 
           <img src= "https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif" style="width: 200px">
         idea2: |-
-          **الذهاب إلى مغامرة**- غير الخلفية, ومن ثم أجعل الشخصية تتكلم عن إين مكانها الآن.
+          _تحتاج فكرة؟_
+
+          **الذهاب إلى مغامرة**- غير الخلفية, ومن ثم أجعل الشخصية تتكلم عن مكانها الآن.
 
           <img src= "https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif" style="width: 200px">
         idea3: |-
@@ -1372,15 +1393,15 @@ ar-SA:
             </block>
           </xml>
 
-          يمكنك استخدام اليمين أو اليسار بالإضافة إلىرقم درجة الدوران.
+          يمكنك استخدام اليمين أو اليسار بالإضافة إلى رقم درجة الدوران.
       courseC_artist_loops2a_2019:
         courseC_artist_loops2a_a: داخل التكرار, يجب عليك القفز إلى المنتصف, ومن ثم
           الالتفاف, ومن ثم رسم الملصق.
       courseC_artist_loops3a_2019:
-        courseC_artist_loops3a_a: يجب عليك إضافة بلوكة واحدة داخر التكرار, بعد الملصق
+        courseC_artist_loops3a_a: يجب عليك إضافة بلوكة واحدة داخر دالةكرر, بعد الملصق
           الأول.
         courseC_artist_loops3a_b: |-
-          يجب أنيكون برنامجك كالتالي!
+          يجب أن يكون برنامجك كالتالي!
 
           <xml>
             <block type="when_run" deletable="false" movable="false">
@@ -1617,9 +1638,11 @@ ar-SA:
           <xml><block type="draw_turn_by_constant_dropdown"><title name="DIR">اتجه
           إلى اليمين</title><title name="VALUE" config="45,60,90,120,180">90</title></block></xml>.
       courseC_artist_prog5_2018:
-        courseC_artist_prog5_c: يمكنك استخدام القائمة المنسدلة لتغير كيفية استخدامها!
+        courseC_artist_prog5_c: يمكنك استخدام القائمة المنسدلةفي البلوكة لتغير كيفية
+          استخدامها!
       courseC_artist_prog5_2019:
-        courseC_artist_prog5_c: يمكنك استخدام القائمة المنسدلة لتغير كيفية استخدامها!
+        courseC_artist_prog5_c: يمكنك استخدام القائمة المنسدلةفي البلوكة لتغير كيفية
+          استخدامها!
       courseC_collector_loops_challenge2:
         courseC_maze_loops_challenge2_b: استخدم دالة كرر لكي لاتنتهي بلوكات "اجمع"!
       courseC_collector_loops_challenge2_2018:
@@ -1994,6 +2017,30 @@ ar-SA:
         courseC_harvester_loops_challenge1_a: هذا صعب بدون دالة كرر!
         courseC_harvester_loops_challenge1_b: يمكنك تكرار "تحريك إلى الامام" و " التقط
           ذرة" على قدر ماتحتاج, ومن ثم استخدم "اتجه إلى اليمين" عند كل زاوية.
+        courseC_harvester_loops_challenge1_c: |-
+          بعد أول محاولتين لجمع الذرة, يمكنك استخدام دالة تكرار متداخلة لتجمع 8 حبات التالية.
+
+          <xml><block type="controls_repeat">
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                          <next>
+                            <block type="harvester_corn"/>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  </block></xml>
       courseC_harvester_loops_challenge1a_2019:
         courseC_harvester_loops_challenge1_a: هذا صعب بدون دالة كرر!
         courseC_harvester_loops_challenge1_b: يمكنك تكرار "تحريك إلى الامام" و " التقط
@@ -2322,11 +2369,11 @@ ar-SA:
         courseC_starWars_loops5_a: أفضل حل باستخام الاتجاه ومن ثم التحرك للامام مرة
           واحدة ومن ثم الاتجاه مرة اخرى واخيرا التكرار.
       courseC_starWars_loops5_2018:
-        courseC_starWars_loops5_a: افضل حل استخدم "تحريك إلى الأمام" ومن ثم الالتفاف,
-          ومن ثم تكرار.
+        courseC_starWars_loops5_a: افضل حل استخدم "تحريك إلى الأمام" ومن ثم "اتجه
+          إلى", ومن ثم كرر.
       courseC_starWars_loops5_2019:
-        courseC_starWars_loops5_a: افضل حل استخدم "تحريك إلى الأمام" ومن ثم الالتفاف,
-          ومن ثم تكرار.
+        courseC_starWars_loops5_a: افضل حل استخدم "تحريك إلى الأمام" ومن ثم "اتجه
+          إلى", ومن ثم كرر.
       courseC_starWars_loops6:
         courseC_starWars_loops6_a: حاول كتابة كل الحركات على ورقة وابحث عن النمط.
         courseC_starWars_loops6_b: إذا اردت استخدام القليل من الكود برمجي, يمكنك أن

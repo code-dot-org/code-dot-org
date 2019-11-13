@@ -47,6 +47,7 @@
   "jumpBackward": "jump backward by",
   "jumpForward": "jump forward by",
   "jumpToOverDown": "",
+  "jumpToPosition": "",
   "jumpByDirection": "",
   "jumpTooltip": "Moves the artist without leaving any marks.",
   "jumpEastTooltip": "Moves the artist east without leaving any marks.",

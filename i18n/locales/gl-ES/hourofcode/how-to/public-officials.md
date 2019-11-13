@@ -1,7 +1,5 @@
 ---
 title: Guía de instrucións para funcionarios públicos
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

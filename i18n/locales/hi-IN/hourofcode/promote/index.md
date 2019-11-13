@@ -1,7 +1,5 @@
 ---
 title: प्रचार कीजिये
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

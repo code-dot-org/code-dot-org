@@ -1,7 +1,5 @@
 ---
 title: Leiðarvísir fyrir opinbera aðila
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

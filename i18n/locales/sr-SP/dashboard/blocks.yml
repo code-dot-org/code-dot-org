@@ -286,6 +286,8 @@ sr:
             '"scale"': величина
       Mikelab_randomColor:
         text: насумична боја
+      Mikelab_repeatUntilComplete:
+        text: понављај заувек
       Mikelab_setBG:
         options:
           BG:

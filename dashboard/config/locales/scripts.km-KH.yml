@@ -326,3 +326,17 @@ km:
               name: លក្ខខណ្ឌ
             Functions:
               name: អនុ​គមន៍
+        k5-onlinepd-copy:
+          stages:
+            Computer Science Fundamentals:
+              name: មូលដ្ឋានគ្រិះវិទ្យាសាស្រ្ដកុំព្យូទ័រ
+            Loops:
+              name: រង្វិល​ជុំ
+            Conditionals:
+              name: លក្ខខណ្ឌ
+            Events:
+              name: ព្រឹត្តិការណ៍
+            Functions:
+              name: អនុ​គមន៍
+            Variables:
+              name: អ​ថេរ

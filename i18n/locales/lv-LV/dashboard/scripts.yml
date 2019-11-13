@@ -1379,3 +1379,17 @@ lv:
               name: Ievads
             Nested Loops:
               name: Cikls ciklā
+        k5-onlinepd-copy:
+          stages:
+            Loops:
+              name: Cikli
+            Conditionals:
+              name: Sazarojumi
+            Events:
+              name: Pasākumi
+            Functions:
+              name: Funkcijas
+            Variables:
+              name: Mainīgie
+            For Loops:
+              name: '"par" cikli'

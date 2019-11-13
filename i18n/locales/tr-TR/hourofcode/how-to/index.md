@@ -1,7 +1,5 @@
 ---
 title: Etkinlik Rehberi
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

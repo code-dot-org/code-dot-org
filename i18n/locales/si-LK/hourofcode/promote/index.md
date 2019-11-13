@@ -1,7 +1,5 @@
 ---
 title: අරාංචිය පතුරවන්න
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

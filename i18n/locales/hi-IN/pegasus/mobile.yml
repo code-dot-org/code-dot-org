@@ -890,6 +890,9 @@
   boxisland_name: "बॉक्स आइलैंड"
   texasinstruments_name: "10 मिनट कोड"
   teacherled_name: "अध्यापकों द्वारा संचालित पाठ योजनाएं"
+  course1_name: "कोर्स 1"
+  course2_name: "कोर्स 2"
+  course3_name: "कोर्स 3"
   coursea-draft_name: कोर्स A
   coursea_name: "कोर्स A"
   courseb-draft_name: कोर्स B
@@ -977,7 +980,10 @@
   codesters_gradelevel: "आयु 12-14"
   texasinstruments_gradelevel: "आयु 13-16"
   teacherled_gradelevel: "आयु 5+"
+  course1_gradelevel: "आयु 4-6"
   course2_gradelevel: "आयु 6-18"
+  course3_gradelevel: "उम्र 8-18"
+  course4_gradelevel: "आयु 10-18"
   coursea_gradelevel: "आयु 4-7"
   courseb_gradelevel: "आयु 5-8"
   coursec_gradelevel: "आयु 6-10"
@@ -1002,6 +1008,7 @@
   coursed-2019_gradelevel: आयु 7-11
   coursee-2019_gradelevel: उम्र 8-12
   coursef-2019_gradelevel: आयु 9-13
+  accelerated_gradelevel: "आयु 10-18"
   codeorg_platformtext: "आधुनिक ब्राउजर, स्मार्टफोन, टैब्लेट्स"
   codeintl_platformtext: "आधुनिक ब्राउजर, स्मार्टफोन, टैब्लेट्स"
   thinkersmithspanish_platformtext: "अनप्लग्ड"
@@ -1418,6 +1425,7 @@
   applab_tile_subtitle: "ब्लॉक आधारित प्रोग्रामिंग का उपयोग करते हुए JavaScript में अपना खुद का ऐप बनाएं। या अपने कौशलों को टेक्सट-आधारित प्रोग्रामिंग के साथ अगले स्तर तक ले जाएं। (केवल अंग्रेजी)"
   applab_tile_start_tutorial: "शुरू करें"
   applab_tile_teacher_guide: "अध्यापक गाइड देखें"
+  aquatic_name: 'Minecraft: समुद्री यात्रा जलचर'
   account_sign_up_email_opt_in: "क्या हम आपको हमारे पाठ्यक्रमों में अद्यतन, स्थानीय अवसरों या अन्य कंप्यूटर साइंस के बारे में ईमेल भेज सकते हैं? (मोटे तौर पर माह में एक बार)"
   account_sign_up_child_accept_terms: "मैं पुष्टि करता हूं कि मैं अपने माता पिता या कानूनी है गार्जियन Code.org सेवाओं का उपयोग करने की अनुमति है ।"
   hoc_overview_dance_title: "डांस पार्टी"

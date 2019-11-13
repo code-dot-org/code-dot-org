@@ -286,7 +286,7 @@ it:
         Unplug11: Conclusione
         C1_happy_maps_unplugged: Mappe Felici
         C1_moveitmoveit_unplugged: Muovilo, muovilo
-        C1_bigevent_unplugged: Gli eventi
+        C1_bigevent_unplugged: Il grande evento
         C1_getting_loopy: Diventare ripetitivi
         C1_pair_programming: Programmazione in coppia
         C1_maze_intro_sequencing: 'Labirinto - Corso 1: Introduzione'
@@ -300,7 +300,7 @@ it:
         C1_playlab_storytelling: 'Laboratorio: crea una storia'
         C1_planting_seed: Piantare un seme
         C1_building_foundation: Costruire le fondamenta
-        C1_going_places_safely: Cittadinanza digitale - Visitare luoghi in modo sicuro
+        C1_going_places_safely: Cittadinanza digitale - Il mio quartiere digitale
         C2_maze_intro: 'Labirinto - Corso 2: Introduzione'
         C2_artist_intro: Artista - Introduzione
         C2_zuck_repeat_loop: 'Labirinto: Cicli'
@@ -537,6 +537,7 @@ it:
         CSF_SpriteLab_SpritesInAction_v2: Personaggi in azione
         csd_debugging: Correzione errori (debugging)
         csd_applab_designmode_short: Sviluppo App - Modalità Interfaccia
+        CSF-Teaching-Problem-Solving: Fondamenti di informatica - Insegnare a risolvere i problemi (Problem Solving)
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto l'altro blocco qua sopra

@@ -1,7 +1,5 @@
 ---
 title: Panduan Bagaimana bagi Acara Hour of Code
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

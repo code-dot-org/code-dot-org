@@ -324,6 +324,7 @@ id:
             '"scale"': ukuran
             '"height"': tinggi
             '"rotation"': Perputaran
+            '"tint"': Mewarnai
       Dancelab_setPropRandom:
         options:
           PROPERTY:
@@ -670,6 +671,8 @@ id:
             MOVES.Rest: Tidak ada
       Mikelab_randomColor:
         text: warna acak
+      Mikelab_repeatUntilComplete:
+        text: Ulangi selamanya
       Mikelab_setBG:
         options:
           BG:

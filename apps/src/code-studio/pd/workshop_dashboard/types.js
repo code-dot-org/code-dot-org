@@ -13,8 +13,8 @@ const workshopShape = PropTypes.shape({
   capacity: PropTypes.number.isRequired,
   facilitators: PropTypes.array.isRequired,
   organizer: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    email: PropTypes.string.isRequired
+    name: PropTypes.string,
+    email: PropTypes.string
   }).isRequired,
   enrollment_code: PropTypes.string
 });

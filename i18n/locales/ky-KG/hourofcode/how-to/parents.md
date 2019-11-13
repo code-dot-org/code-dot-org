@@ -1,7 +1,5 @@
 ---
 title: Ата-энелер үчүн кандай өтүү жетектемеси
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

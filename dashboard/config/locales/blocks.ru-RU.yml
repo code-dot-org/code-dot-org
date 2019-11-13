@@ -81,6 +81,7 @@ ru:
             '"x"': горизонтальное положение
             '"y"': вертикальное положение
       Dancelab_changePropEachBy:
+        text: изменить {GROUP} {PROPERTY} на {VAL}
         options:
           GROUP:
             sprites: все
@@ -429,7 +430,7 @@ ru:
             '"vintage"': Винтаж
             '"warm"': Красный
       Dancelab_setBackgroundEffectWithPalette:
-        text: задать фоновый эффект {EFFECT} {PALETTE}
+        text: задать фоновый эффект {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Нет
@@ -553,6 +554,7 @@ ru:
             '"rotation"': вращение
             '"x"': горизонтальное положение
             '"y"': вертикальное положение
+            '"tint"': оттенок
       Dancelab_setPropRandom:
         text: рандомизировать {SPRITE} {PROPERTY}
         options:
@@ -741,8 +743,17 @@ ru:
             '"down"': вниз
             '"right"': вправо
             '"space"': космос
+            '"f"': f
+            '"g"': g
+            '"q"': q
             '"x"': x
             '"y"': у
+            '"1"': '1'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"8"': '8'
       Dancelab_whenPeak:
         text: при максимуме {RANGE}
         options:
@@ -751,6 +762,8 @@ ru:
             '1': средние
             '2': высокие
       Dancelab_whenSetup:
+        text: установка
+      Dancelab_whenSetup2:
         text: установка
       gamelab_changePropBy:
         text: изменить {SPRITE} {PROPERTY} на {VAL}
@@ -792,6 +805,9 @@ ru:
             '"left"': влево
             '"right"': вправо
             '"space"': космос
+            '"f"': f
+            '"g"': g
+            '"q"': q
             '"x"': x
             '"y"': у
       gamelab_locationOf:
@@ -835,6 +851,7 @@ ru:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': под
               водой
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': зима
+            undefined: none
       gamelab_setProp:
         text: установить {SPRITE} {PROPERTY} в {VAL}
         options:
@@ -1012,6 +1029,8 @@ ru:
             MOVES.Rest: Нет
       Mikelab_randomColor:
         text: случайный цвет
+      Mikelab_repeatUntilComplete:
+        text: повторять бесконечно
       Mikelab_setBG:
         options:
           BG:

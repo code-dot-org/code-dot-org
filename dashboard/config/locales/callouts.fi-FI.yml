@@ -81,6 +81,16 @@ fi-FI:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Uusi blokki!
         dance_callout_11_b: Uusi blokki!
+      Dance_2019_01:
+        dance_callout_01: Lisää tämä blokki ohjelmaasi!
+      Dance_2019_04:
+        dance_callout_02: Lisää tämä blokki ohjelmaasi!
+      Dance_2019_06:
+        dance_party_11_5_groups: Uusi blokki!
+      Dance_2019_07:
+        setprop_hint: Uusi blokki!
+      Dance_2019_09:
+        new_block_1: Uusi blokki!
       Dance_Party_01:
         dance_callout_01: Lisää tämä blokki ohjelmaasi!
       Dance_Party_02:

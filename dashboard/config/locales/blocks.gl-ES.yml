@@ -312,6 +312,8 @@ gl:
             '"y"': posición y
       Mikelab_randomColor:
         text: cor aleatoria
+      Mikelab_repeatUntilComplete:
+        text: Repetir para sempre
       Mikelab_setBG:
         options:
           BG:

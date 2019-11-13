@@ -1208,6 +1208,8 @@ ro:
             Hour of Code 2015:
               name: Ora de cod 2015
           description_audience: '[șir gol]'
+        ocean:
+          description_audience: '[șir gol]'
         CSPPD3-Unit3-pt2:
           stages:
             Challenge Overview:
@@ -1233,6 +1235,8 @@ ro:
               name: Prezentare generală a Capitolului 1
             Chapter 2 Overview:
               name: Prezentare generală a Capitolului 2
+        cspunit6draft:
+          description_audience: '[șir gol]'
         CSPPD3-Unit5:
           stages:
             Challenge Overview:
@@ -2267,8 +2271,6 @@ ro:
               name: Construirea unei Fundaţii
             Nested Loops:
               name: Repetiții imbricate
-          title: Curs Expres
-          assignment_family_title: Curs Expres
         pre-express-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -4685,3 +4687,74 @@ ro:
               name: Petrecere cu dans
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
+        k5-onlinepd-copy:
+          description_audience: '[șir gol]'
+          stages:
+            Getting Started:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Computer Science Fundamentals:
+              name: Fundamentele informaticii
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Looking Ahead:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'Mastering the Basics: Sequencing':
+              name: 'Cum să stăpâniți elementele de bază: Secvențiere'
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'Mastering the Basics: Loops':
+              name: 'Cum să stăpâniți elementele de bază: Bucle'
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'Mastering the Basics: Conditionals':
+              name: 'Cum să stăpâniți elementele de bază: Condiționale'
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'Mastering the Basics: Functions':
+              name: 'Cum să stăpâniți elementele de bază: Funcții'
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'Mastering the Basics: Events':
+              name: 'Cum să stăpâniți elementele de bază: Evenimente'
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Best Practices for Teaching Computer Science:
+              name: Cele mai bune practici în predarea informaticii
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Planning:
+              name: Planificare
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Next Steps:
+              name: Pașii următori
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Loops:
+              name: Bucle
+            Conditionals:
+              name: Condiţionale
+            Events:
+              name: Evenimente
+            Functions:
+              name: Funcţii
+            Sprite Lab:
+              name: Laborator Sprite
+            Variables:
+              name: Variabile
+            For Loops:
+              name: Bucle Pentru
+        dance-extras-2019:
+          title: Continuă să dansezi
+          description: Mergi mai departe de prima oră cu ideile de extindere a proiectelor.
+          description_audience: '[șir gol]'
+          stages:
+            Dance Party - Go Further:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+        csp10-pilot:
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'

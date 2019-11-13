@@ -25,6 +25,8 @@ fr-FR:
         2-3_Artist_4_a: Pour finir la maison, tout ce qu'on a besoin de faire est
           tracer un carré!
       2-3 Artist 6:
+        2-3_Artist_6_a: 'Pour faire ces petits angles, tu dois tourner _plus_ chaque
+          fois que tu as fait un carré.   '
         2-3_Artist_6_b: Étant donné que je suis déjà orienté vers la droite, il est
           plus simple de commencer par avancer, puis de tourner à gauche pour créer
           le triangle.
@@ -40,6 +42,9 @@ fr-FR:
       2-3 Artist 9 NEW:
         2-3_Artist_9_a: Ce losange n’est vraiment qu’un carré sur le côté
       2-3 Artist Debugging 10:
+        2-3_Artist_Debugging_10_a: Souviens-toi, tu veux que le panneau de contrôle
+          soit 10 pixels _plus large_...alors sois sûr **d'ajouter** 10 à chaque nombre
+          que tu modifies.
         2-3_Artist_Debugging_10_b: "**On peut procéder par essai et erreur ici !**
           \ \n\nCommence par changer un nombre à la fois. \n\nQuels nombres font quoi
           ?  \n\nSi tu es perdu, clique sur « Recommencer » et ton code sera réinitialisé."
@@ -52,6 +57,11 @@ fr-FR:
       2-3 Artist Debugging 7:
         2-3_Artist_Debugging_7_a: Que se passe-t-il si l’artiste recule ou saute en
           arrière après qu’il dessine la première ligne ?
+      2-3 Artist Debugging 8:
+        2-3_Artist_Debugging_8_a: |-
+          Combien de fois est-ce que ma forme se répète ?
+          Combien de fois est-ce que ma forme _devrait_ se répéter ?
+          Où peux-tu changer cela dans le programme ?
       2-3 Artist Debugging 9:
         2-3_Artist_Debugging_9_a: L'artiste doit tourner à 60 degrés plus loin à gauche
           avant de commencer à dessiner!
@@ -264,6 +274,11 @@ fr-FR:
         4-5_Artist_4_a: "Il y a 360 degrés dans un cercle ! \n\nC’est le nombre de
           fois que tu dois répéter ce code (en tournant d’un degré à la fois) avant
           que le cercle soit terminé !"
+      4-5 Artist 5:
+        4-5_Artist_5_a: |-
+          La méthode par essai et erreur et bien, mais tu peux aussi résoudre le problème en divisant l’angle de 90 degrés en trois.
+
+          **90 / 3 = **\_****
       4-5 Artist 7:
         4-5_Artist_7_a: 'Quel angle est le plus petit ?  À quel angle l’artiste est-il
           debout ? '
@@ -271,7 +286,13 @@ fr-FR:
         4-5_Artist_8_a: "Les côtés longs font chacun 240 pixels. Cela signifie que
           les deux côtés courts doivent être égaux à :\n\n**800 - 240 - 240 = 320**\n\nCombien
           font **320 / 2** ? "
+        4-5_Artist_8_b: "Cette image peut être réalisée de deux façons ! \n\n-   Dessiner
+          deux rectangles de **120** de long et **160** de haut avec un côté qui se
+          chevauche\n\n-   Dessiner un rectangle de **240** de long et **160** de
+          haut, puis ajouter une ligne au milieu."
       4-5 Artist 9:
+        4-5_Artist_9_a: Quand un triangle est équilatéral, tous ses côtés et angles
+          sont identiques.
         4-5_Artist_9_b: Tu devras dessiner trois triangles de la même taille. N’oublie
           pas de changer de position après chaque triangle.
       4-5 Artist Assessment 1:
@@ -364,6 +385,9 @@ fr-FR:
           d’un hexagone** suivie de **2/3 d’un triangle**. '
         Course_4_Artist_12_b: 'La forme est presque la même que dans le casse-tête
           précédent, sauf que le demi-hexagone est un peu plus grand. '
+        Course_4_Artist_12_c: "1.  Les trois premières lignes font 60 pixels de long
+          et tu dois tourner de 60 degrés.  \n2.  Les deux lignes suivantes font 80
+          pixels de long et tu dois tourner de 120 degrés "
         Course_4_Artist_12_d: |-
           **Solution :**
 
@@ -1045,7 +1069,7 @@ fr-FR:
           </block>
           </xml>
       Course 4 SCFL 1:
-        Course_4_SCFL_1_a: "Jette un œil à cette option pour le mouvement :  \n\n\\!\\[]
+        Course_4_SCFL_1_a: "Jette un œil à cette option pour le mouvement :  \n\n!\\[]
           (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)"
         Course_4_SCFL_1_b: 'Essaie d’utiliser deux boucles ˋpour\` : une pour aller
           vers le haut et obtenir le nectar, et l’autre pour aller vers le bas et
@@ -1113,7 +1137,7 @@ fr-FR:
       Course 4 SCFL 1a:
         Course_4_SCFL_1a_a: Tu devras peut-être avancer plus loin pour utiliser le
           moins de blocs possible.
-        Course_4_SCFL_1a_b: "Jette un œil à cette option pour le mouvement :  \n\n\\!\\[]
+        Course_4_SCFL_1a_b: "Jette un œil à cette option pour le mouvement :  \n\n!\\[]
           (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)"
         Course_4_SCFL_1a_c: Une boucle ˋpour\` t’aidera à suivre le même motif, mais
           avec un nombre différent d’étapes. Note que le nombre d’étapes requises
@@ -1176,7 +1200,7 @@ fr-FR:
           </xml>
       Course 4 SCFL 1b:
         Course_4_SCFL_1b_a: Essaie d’utiliser une boucle ˋpour\`.
-        Course_4_SCFL_1b_b: "Jette un œil à cette option pour le mouvement :  \n\n\\!\\[]
+        Course_4_SCFL_1b_b: "Jette un œil à cette option pour le mouvement :  \n\n!\\[]
           (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)"
         Course_4_SCFL_1b_c: |-
           **Solution :**
@@ -1235,7 +1259,7 @@ fr-FR:
           </block>
           </xml>
       Course 4 SCFL 2:
-        Course_4_SCFL_2_a: "Jette un œil à cette option pour le mouvement :  \n\n\\!\\[]
+        Course_4_SCFL_2_a: "Jette un œil à cette option pour le mouvement :  \n\n!\\[]
           (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)"
         Course_4_SCFL_2_b: Note qu’il y a trois points pendant chaque itération de
           la boucle ˋpour\` où tu t’arrêtes pour interagir avec des objets.
@@ -1752,7 +1776,7 @@ fr-FR:
         Course_4_SCV_4_b: 'Il sera très utile d’utiliser trois boucles à l’intérieur
           de ta boucle principale. Une pour avancer, une pour collecter le nectar
           et une pour fabriquer du miel. '
-        Course_4_SCV_4_c: "Jette un œil à cette option pour le mouvement :  \n\n\\!\\[]
+        Course_4_SCV_4_c: "Jette un œil à cette option pour le mouvement :  \n\n!\\[]
           (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)"
         Course_4_SCV_4_d: |-
           **Solution :**
@@ -1879,6 +1903,11 @@ fr-FR:
           zag est mauve (rvb = 100, 50, 150).
         Course_4_SCV_6_d: 'Pour faire un zig, tourne à gauche de ˋ360`/`côtés`. Pour
           faire un zag, tourne à droite de ˋ360` / ˋcôtés\`. '
+        Course_4_SCV_6_e: 'Le reste du programme est plutôt habituel pour faire une
+          rotation de 360 degrés depuis une forme, sauf que l’on fait chevaucher les
+          formes de moitié, donc on doit tourner à droite de ˋ180`/ ˋcôtés`, ce qui
+          signifie qu’on doit en faire deux fois plus que d’habitude (`côtés` \* ˋ2\`
+          répétitions). '
         Course_4_SCV_6_f: |-
           **Solution :**
 
@@ -2038,6 +2067,31 @@ fr-FR:
       CourseE_HOC 2018 Level_9b:
         voyage_aquatic_9a: Quel manifique récif de corail ! Si le corail bleu est
           dans son bon **droit**, le corail rouge n'est pas non plus très **gauche** !
+      Dance_2019_01:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          \*Assure-toi qu'un danseur apparaît à l'écran.
+
+          _Ce niveau se termine après 4 mesures._
+      Dance_2019_04:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          -   Le danseur doit passer à un nouveau mouvement après 4 mesures.
+
+          _Le niveau se termine après 7 mesures._
+      Dance_2019_05:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          -   Après 6 mesures, ton danseur doit faire une danse différente de ce qu'il faisait après 4 mesures.
+
+          _Le niveau se termine après 11 mesures._
+      Dance_2019_07:
+        challenges: |-
+          **Défi optionnel**
+
+          \*Expérimente en changeant d'autres propriétés (largeur, hauteur, rotation, etc.)
       Dance_Party_01:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
@@ -2310,10 +2364,17 @@ fr-FR:
       NEW Course 4 Artist Params 11:
         NEW_Course_4_Artist_Params_11_a: Il y a plus d’un nombre qui doit être remplacé
           par une variable à l’intérieur de la fonction.
+      NEW Course 4 Artist Params 13:
+        NEW_Course_4_Artist_Params_13_a: 'Tu devras diviser le _périmètre_ par le
+          nombre de côtés pour que les formes gardent la même taille. '
       NEW Course 4 Artist Params inspire:
         brush_width: Nous avons défini la largeur du pinceau à 1 puis la couleur à
           bleu avant tout.
         double_loop: Essaie de mettre une boucle ˋpourˋ dans une boucle ˋrépéterˋ.
+        specifics: |-
+          La boucle ˋpourˋ s’exécute de trois à dix-sept pour chacune des six « pétales » avant de créer la suivante, en dessinant des formes ayant uniquement un nombre impair de côtés.
+
+          Le bloc ˋdéfinis alphaˋ utilise la division pour faire s’effacer la couleur au fur et à mesure que le compteur augmente.
         after: Quand tu as fini chaque « pétale », assure-toi d’ˋavancerˋ de 20 pixels
           avant de tourner de 60 degrés.
       NEW Course 4 Bee For Loops 8:
@@ -2474,9 +2535,18 @@ fr-FR:
         courseC_maze_programming4_b: 'Ajoute un commentaire quand tu changes de direction
           : que se serait-il passé si tu t’étais tourné de l’autre côté ?'
       course1_artist_loops_challenge1:
+        courseA_artist_loops_challenge1_a: |-
+          Tu peux utiliser des boucles comme ceci pour créer les murs et le toit. Essaie de répéter différents blocs.
+
+          ![](https://images.code.org/1581a2f599b501103064fc9864aa964d-image-1491863694560.png)
+
+          Crée la tienne ou clique sur ![](https://images.code.org/53090194cea5dbf35ce9e35205156f5d-image-1491864793265.png) pour des idées !
         courseA_artist_loops_challenge1_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseA_artist_loops_challenge1_c: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseA_artist_loops_challenge1_d: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      course1_artist_loops_challenge2:
+        harvey_tictactoe: Tu peux utiliser des blocs `sauter` pour te déplacer sur
+          les autres espaces.
       course1_artist_loops_challenge3:
         courseA_artist_loops_challenge2_a: 'Les blocs comme ceux-ci : <xml>  <block
           type="simple_move_up_left"/></xml> feront bouger ton artiste en oblique
@@ -2497,7 +2567,7 @@ fr-FR:
         courseA_collector_loops_challenge1_a: Essaie de changer les nombres dans chaque
           boucle si quelque chose ne va pas.
         courseA_collector_loops_challenge1_b: Tu n’as pas besoin d’utiliser de boucle
-          si tu ne fais quelque chose qu’une fois.
+          si tu fais quelque chose qu’une seule fois.
         courseA_collector_loops_challenge1_c: Il y a 6 gemmes sur la droite de la
           grotte, mais tu n’as besoin de bouger et de collecter que 5 fois. Sais-tu
           pourquoi ?
@@ -2652,22 +2722,22 @@ fr-FR:
           commencer.
       course1_playlab_events_challenge1:
         courseA_playlab_events_challenge1_a: "Fais apparaître Waddles le pingouin
-          quand on clique sur Robin !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          quand tu cliques sur Robin !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n
           \     </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_b: "Fais apparaître Boo le fantôme quand
-          on clique sur Waddles !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          tu cliques sur Waddles !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n
           \     </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_c: "Fais apparaître Jayden le monstre poilu
-          quand on clique sur Boo !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          quand tu cliques sur Boo !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n
           \     </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_d: "Fais apparaître Spiff le robot quand
-          on clique sur le monstre !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          tu cliques sur le monstre !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n
           \     </block>\n    </next>\n  </block></xml>"
@@ -2690,27 +2760,26 @@ fr-FR:
           Tu peux faire grogner un monstre mécontent.
 
           <xml>  <block type="studio_whenSpriteClicked">
-
-          <title name="SPRITE">5</title>
-          <next>
-          <block type="studio_setSpriteEmotion">
-          <title name="SPRITE">5</title>
-          <title name="VALUE">2</title>
-          <next>
-          <block type="studio_saySprite">
-          <title name="SPRITE">5</title>
-          <title name="TEXT">Roar!</title>
-          <next>
-          <block type="studio_setSpriteEmotion">
-          <title name="SPRITE">5</title>
-          <title name="VALUE">0</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block></xml>
+              <title name="SPRITE">5</title>
+              <next>
+                <block type="studio_setSpriteEmotion">
+                  <title name="SPRITE">5</title>
+                  <title name="VALUE">2</title>
+                  <next>
+                    <block type="studio_saySprite">
+                      <title name="SPRITE">5</title>
+                      <title name="TEXT">Roar!</title>
+                      <next>
+                        <block type="studio_setSpriteEmotion">
+                          <title name="SPRITE">5</title>
+                          <title name="VALUE">0</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block></xml>
       course2_artist_nestedLoops_challenge1:
         courseD_artist_nestedLoops_challenge1_a: Commece par créer une boucle imbriquée
           pour créer quatre octogones. Tourne de 45 degrés pour faire l’octogone.
@@ -2782,7 +2851,12 @@ fr-FR:
           Le modèle spirale peut être codé avec juste 18 blocs!
 
           ![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)
+      course2_maze_loops_challenge1:
+        courseC_maze_loops_challenge1_a: Pense à ce chemin comme étant 2 différente
+          parties. Chacune d'elles à un modèle qui se répète.
       course2_maze_programming_challenge2:
+        courseC_maze_programming_challenge2_a: _"Si tu me fais aller en arrière, fais
+          très attention de me faire tourner dans le bon sens!"_
         courseC_maze_programming_challenge2_b: La solution la plus courte n’utilise
           que 5 blocs, mais elle utilise le bloc ˋrépéter\` !
       course3_artist_functions_challenge2:
@@ -2881,12 +2955,23 @@ fr-FR:
           </block>
           </xml>
       course3_collector_debugging_challenge2:
-        courseD_collector_debugging_challenge2_b: "Ensuite, ramasse les diamants restant
-          dans la rangée.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04
-          AM.png>)\nAjoute ces blocs à ton programme..\n\n<xml><block type=\"maze_move\">\n
-          \                   <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block
-          type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement
-          name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
+        courseD_collector_debugging_challenge2_b: |-
+          Ensuite, ramasse les diamants restant dans la rangée.
+
+          ![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)
+          Ajoute ces blocs à ton programme..
+
+          <xml><block type="maze_move">
+                              <title name="DIR">moveBackward</title>
+                            </block>
+          <block type="controls_repeat">
+                  <title name="TIMES">4</title>
+                  <statement name="DO">
+
+                  </statement>
+                </block>
+
+          </xml>
         courseD_collector_debugging_challenge2_c: "Enfin, ramasse le diamant principal.
           Ajoute ces blocs à ton programme.\n\n<xml>\n  <block type=\"maze_turn\">\n
           \               <title name=\"DIR\">turnRight</title>\n              </block>\n
@@ -3074,6 +3159,9 @@ fr-FR:
           </statement>
           </block></xml>
       course4_bee_fwp_challenge2:
+        courseF_bee_fwp_challenge2_b: "Tu es à court de blocs ˋavancer`? Essaie d’utiliser
+          une *deuxième* boucle ˋpour` dans ton programme principal. \n\n**Remarque
+          :** Attention à ne pas confondre ˋcompteur`et ˋcompteur2` dans ton code."
         courseF_bee_fwp_challenge2_c: |-
           **Voici à quoi ta fonction devrait ressembler :**
 
@@ -3443,55 +3531,55 @@ fr-FR:
           pour terminer ce casse-tête.
       courseA_collector_loops1:
         courseA_collector_loops1_a: |-
-          Après t’être déplacé sur une case avec un trésor, utilise ce bloc pour le ramasser.
+          Après t’être déplacé sur une case avec un diamant, utilise ce bloc pour le ramasser.
 
           <xml>  <block type="collector_collect"/></xml>
         courseA_collector_loops1_b: Une solution simple serait de te déplacer vers
-          l’Est deux fois, puis d’obtenir le trésor.
+          l’Est deux fois, puis d’obtenir le diamant.
       courseA_collector_loops1_2018:
         courseA_collector_loops1_a: |-
-          Après t’être déplacé sur une case avec un trésor, utilise ce bloc pour le ramasser.
+          Après t’être déplacé sur une case avec un diamant, utilise ce bloc pour le ramasser.
 
           <xml>  <block type="collector_collect"/></xml>
         courseA_collector_loops1_b: Une solution simple serait de te déplacer vers
-          l’Est deux fois, puis d’obtenir le trésor.
+          l’Est deux fois, puis d’obtenir le diamant.
       courseA_collector_loops1_2019:
         courseA_collector_loops1_a: |-
-          Après t’être déplacé sur une case avec un trésor, utilise ce bloc pour le ramasser.
+          Après t’être déplacé sur une case avec un diamant, utilise ce bloc pour le ramasser.
 
           <xml>  <block type="collector_collect"/></xml>
         courseA_collector_loops1_b: Une solution simple serait de te déplacer vers
-          l’Est deux fois, puis d’obtenir le trésor.
+          l’Est deux fois, puis d’obtenir le diamant.
       courseA_collector_loops2:
         courseA_collector_loops2_a: Tu devras te déplacer avant de pouvoir collecter
-          un trésor.
+          un diamant.
         courseA_collector_loops2_b: |-
-          Après t’être déplacé sur une case avec un trésor, utilise ce bloc pour le ramasser.
+          Après t’être déplacé sur une case avec un diamant, utilise ce bloc pour le ramasser.
 
           <xml>  <block type="collector_collect"/></xml>
       courseA_collector_loops2_2018:
         courseA_collector_loops2_a: Tu devras te déplacer avant de pouvoir collecter
-          un trésor.
+          un diamant.
         courseA_collector_loops2_b: |-
-          Après t’être déplacé sur une case avec un trésor, utilise ce bloc pour le ramasser.
+          Après t’être déplacé sur une case avec un diamant, utilise ce bloc pour le ramasser.
 
           <xml>  <block type="collector_collect"/></xml>
       courseA_collector_loops2_2019:
         courseA_collector_loops2_a: Tu devras te déplacer avant de pouvoir collecter
-          un trésor.
+          un diamant.
         courseA_collector_loops2_b: |-
-          Après t’être déplacé sur une case avec un trésor, utilise ce bloc pour le ramasser.
+          Après t’être déplacé sur une case avec un diamant, utilise ce bloc pour le ramasser.
 
           <xml>  <block type="collector_collect"/></xml>
       courseA_collector_loops3:
         courseA_collector_loops3_a: Essaie d’utiliser une boucle <xml><block type="controls_repeat_simplified_dropdown"><title
-          name="TIMES" config="3-10">???</title></block></xml> !
+          name="TIMES" config="3-10">???</title></block></xml>!
         courseA_collector_loops3_b: N’oublie pas que tu peux mettre plus d’1 bloc
           dans une boucle <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml>.
       courseA_collector_loops3_2018:
         courseA_collector_loops3_a: Essaie d’utiliser une boucle <xml><block type="controls_repeat_simplified_dropdown"><title
-          name="TIMES" config="3-10">???</title></block></xml> !
+          name="TIMES" config="3-10">???</title></block></xml>!
         courseA_collector_loops3_b: N’oublie pas que tu peux mettre plus d’1 bloc
           dans une boucle <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml>.
@@ -3502,68 +3590,65 @@ fr-FR:
           dans une boucle <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml>.
       courseA_collector_loops4:
-        courseA_collector_loops4_a: Pour modifier la distance à laquelle Laurel va,
-          modifie le nombre de fois que la boucle s’exécute.
+        courseA_collector_loops4_a: Pour modifier la distance où Laurel va, modifie
+          le nombre de fois que la boucle s’exécute.
         courseA_collector_loops4_b: N’oublie pas que Laurel doit descendre et collecter
-          le trésor après la fin de la boucle <xml><block type="controls_repeat_simplified_dropdown"><title
-          name="TIMES" config="3-10">???</title></block></xml> !
+          le diamant après la fin de la boucle <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml>!
       courseA_collector_loops4_2018:
-        courseA_collector_loops4_a: Pour modifier la distance à laquelle Laurel va,
-          modifie le nombre de fois que la boucle s’exécute.
+        courseA_collector_loops4_a: Pour modifier la distance où Laurel va, modifie
+          le nombre de fois que la boucle s’exécute.
         courseA_collector_loops4_b: N’oublie pas que Laurel doit descendre et collecter
-          le trésor après la fin de la boucle <xml><block type="controls_repeat_simplified_dropdown"><title
-          name="TIMES" config="3-10">???</title></block></xml> !
+          le diamant après la fin de la boucle <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml>!
       courseA_collector_loops4_2019:
-        courseA_collector_loops4_a: Pour modifier la distance à laquelle Laurel va,
-          modifie le nombre de fois que la boucle s’exécute.
+        courseA_collector_loops4_a: Pour modifier la distance où Laurel va, modifie
+          le nombre de fois que la boucle s’exécute.
         courseA_collector_loops4_b: N’oublie pas que Laurel doit descendre et collecter
-          le trésor après la fin de la boucle <xml><block type="controls_repeat_simplified_dropdown"><title
-          name="TIMES" config="3-10">???</title></block></xml> !
+          le diamant après la fin de la boucle <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml>!
       courseA_collector_loops5:
         courseA_collector_loops5_a: Si tu ne peux pas trouver la réponse tout de suite,
           essaie d’utiliser une feuille de papier pour comprendre de quelles flèches
-          tu auras besoin et cherche un motif.
+          tu auras besoin et cherche un modèle.
         courseA_collector_loops5_b: 'Essaie de diviser le problème en deux parties
           : se déplacer sur le côté et vers le bas.'
         courseA_collector_loops5_c: Tu devrais commencer par une boucle <xml><block
           type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
-          qui déplace Laurel vers l’Ouest et collecte les trésors.
+          qui déplace Laurel vers l’Ouest et collecte les diamants.
       courseA_collector_loops5_2018:
         courseA_collector_loops5_a: Si tu ne peux pas trouver la réponse tout de suite,
           essaie d’utiliser une feuille de papier pour comprendre de quelles flèches
-          tu auras besoin et cherche un motif.
+          tu auras besoin et cherche un modèle.
         courseA_collector_loops5_b: 'Essaie de diviser le problème en deux parties
           : se déplacer sur le côté et vers le bas.'
         courseA_collector_loops5_c: Tu devrais commencer par une boucle <xml><block
           type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
-          qui déplace Laurel vers l’Ouest et collecte les trésors.
+          qui déplace Laurel vers l’Ouest et collecte les diamants.
       courseA_collector_loops5_2019:
         courseA_collector_loops5_a: Si tu ne peux pas trouver la réponse tout de suite,
           essaie d’utiliser une feuille de papier pour comprendre de quelles flèches
-          tu auras besoin et cherche un motif.
+          tu auras besoin et cherche un modèle.
         courseA_collector_loops5_b: 'Essaie de diviser le problème en deux parties
           : se déplacer sur le côté et vers le bas.'
         courseA_collector_loops5_c: Tu devrais commencer par une boucle <xml><block
           type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
-          qui déplace Laurel vers l’Ouest et collecte les trésors.
+          qui déplace Laurel vers l’Ouest et collecte les diamants.
       courseA_collector_loops6:
         courseA_collector_loops6_a: Tu ne trouves pas le problème ? Essaie d’exécuter
           le code quelques fois pour voir ce qui se passe.
-        courseA_collector_loops6_b: La solution la plus courte utilise 2 boucles <xml><block
-          type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>,
-          l’une après l’autre.
+        courseA_collector_loops6_b: La solution la plus courte utilise 2 boucles blockly
+          block][0], l’une après l’autre.
       courseA_collector_loops6_2018:
         courseA_collector_loops6_a: Tu ne trouves pas le problème ? Essaie d’exécuter
           le code quelques fois pour voir ce qui se passe.
-        courseA_collector_loops6_b: La solution la plus courte utilise 2 boucles <xml><block
-          type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>,
-          l’une après l’autre.
+        courseA_collector_loops6_b: La solution la plus courte utilise 2 boucles blockly
+          block][0], l’une après l’autre.
       courseA_collector_loops6_2019:
         courseA_collector_loops6_a: Tu ne trouves pas le problème ? Essaie d’exécuter
           le code quelques fois pour voir ce qui se passe.
-        courseA_collector_loops6_b: La solution la plus courte utilise 2 boucles <xml><block
-          type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>,
-          l’une après l’autre.
+        courseA_collector_loops6_b: La solution la plus courte utilise 2 boucles blockly
+          block][0], l’une après l’autre.
       courseA_collector_loops7:
         courseA_collector_loops7_a: Si tu ne sais pas ce qu’il faut faire ensuite,
           essaie d’exécuter le code pour voir où Laurel se retrouve.
@@ -3575,43 +3660,46 @@ fr-FR:
           essaie d’exécuter le code pour voir où Laurel se retrouve.
       courseA_collector_loops8:
         courseA_collector_loops8_a: Si tu as du mal à comprendre ce casse-tête, essaie
-          d’écrire les mouvements sur une feuille de papier et de rechercher un motif.
+          d’écrire les mouvements sur une feuille de papier et recherche un motif
+          ou modèle.
         courseA_collector_loops8_b: Essaie de séparer ce casse-tête en 3 problèmes,
-          puis d’écrire des boucles pour chacun.
+          puis d’écrire des boucles pour chacun d'entre-eux.
         courseA_collector_loops8_c: N'oublie pas que tu peux écrire une partie de
           code à la fois, puis appuyer sur « Exécuter » pour déterminer ce que tu
           dois faire à partir de là.
       courseA_collector_loops8_2018:
         courseA_collector_loops8_a: Si tu as du mal à comprendre ce casse-tête, essaie
-          d’écrire les mouvements sur une feuille de papier et de rechercher un motif.
+          d’écrire les mouvements sur une feuille de papier et recherche un motif
+          ou modèle.
         courseA_collector_loops8_b: Essaie de séparer ce casse-tête en 3 problèmes,
-          puis d’écrire des boucles pour chacun.
+          puis d’écrire des boucles pour chacun d'entre-eux.
         courseA_collector_loops8_c: N'oublie pas que tu peux écrire une partie de
           code à la fois, puis appuyer sur « Exécuter » pour déterminer ce que tu
           dois faire à partir de là.
       courseA_collector_loops8_2019:
         courseA_collector_loops8_a: Si tu as du mal à comprendre ce casse-tête, essaie
-          d’écrire les mouvements sur une feuille de papier et de rechercher un motif.
+          d’écrire les mouvements sur une feuille de papier et recherche un motif
+          ou modèle.
         courseA_collector_loops8_b: Essaie de séparer ce casse-tête en 3 problèmes,
-          puis d’écrire des boucles pour chacun.
+          puis d’écrire des boucles pour chacun d'entre-eux.
         courseA_collector_loops8_c: N'oublie pas que tu peux écrire une partie de
           code à la fois, puis appuyer sur « Exécuter » pour déterminer ce que tu
           dois faire à partir de là.
       courseA_collector_loops9:
         courseA_collector_loops9_a: 'Si tu as du mal à repérer où utiliser des boucles,
-          essaie de tout coder étape par étape et de rechercher un motif. '
+          essaie de tout coder étape par étape et de rechercher un motif ou modèle. '
         courseA_collector_loops9_b: Essaie de mettre 2 de tes boucles <xml><block
           type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
           à l’intérieur d’une autre boucle pour raccourcir ton code !
       courseA_collector_loops9_2018:
         courseA_collector_loops9_a: 'Si tu as du mal à repérer où utiliser des boucles,
-          essaie de tout coder étape par étape et de rechercher un motif. '
+          essaie de tout coder étape par étape et de rechercher un motif ou modèle. '
         courseA_collector_loops9_b: Essaie de mettre 2 de tes boucles <xml><block
           type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
           à l’intérieur d’une autre boucle pour raccourcir ton code !
       courseA_collector_loops9_2019:
         courseA_collector_loops9_a: 'Si tu as du mal à repérer où utiliser des boucles,
-          essaie de tout coder étape par étape et de rechercher un motif. '
+          essaie de tout coder étape par étape et de rechercher un motif ou modèle. '
         courseA_collector_loops9_b: Essaie de mettre 2 de tes boucles <xml><block
           type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
           à l’intérieur d’une autre boucle pour raccourcir ton code !
@@ -3619,9 +3707,9 @@ fr-FR:
         courseA_collector_loops_challenge1_a: Essaie de changer les nombres dans chaque
           boucle si quelque chose ne va pas.
         courseA_collector_loops_challenge1_b: Tu n’as pas besoin d’utiliser de boucle
-          si tu ne fais quelque chose qu’une fois.
-        courseA_collector_loops_challenge1_c: Il y a 6 gemmes sur le côté droit de
-          la grotte quand tu commences, mais tu n’as besoin de récupérer le trésor
+          si tu fais quelque chose qu’une seule fois.
+        courseA_collector_loops_challenge1_c: Il y a 6 diamants sur le côté droit
+          de la grotte quand tu commences, mais tu n’as besoin de récupérer les diamants
           que 5 fois en allant vers le Sud. Sais-tu pourquoi ?
         courseA_collector_loops_challenge1_d: |-
           Le programme de départ ne récupère pas les 2 dernières gemmes. Essaie d’ajouter ce code tout à la fin :
@@ -3643,9 +3731,9 @@ fr-FR:
         courseA_collector_loops_challenge1_a: Essaie de changer les nombres dans chaque
           boucle si quelque chose ne va pas.
         courseA_collector_loops_challenge1_b: Tu n’as pas besoin d’utiliser de boucle
-          si tu ne fais quelque chose qu’une fois.
-        courseA_collector_loops_challenge1_c: Il y a 6 gemmes sur le côté droit de
-          la grotte quand tu commences, mais tu n’as besoin de récupérer le trésor
+          si tu fais quelque chose qu’une seule fois.
+        courseA_collector_loops_challenge1_c: Il y a 6 diamants sur le côté droit
+          de la grotte quand tu commences, mais tu n’as besoin de récupérer les diamants
           que 5 fois en allant vers le Sud. Sais-tu pourquoi ?
         courseA_collector_loops_challenge1_d: |-
           Le programme de départ ne récupère pas les 2 dernières gemmes. Essaie d’ajouter ce code tout à la fin :
@@ -3667,9 +3755,9 @@ fr-FR:
         courseA_collector_loops_challenge1_a: Essaie de changer les nombres dans chaque
           boucle si quelque chose ne va pas.
         courseA_collector_loops_challenge1_b: Tu n’as pas besoin d’utiliser de boucle
-          si tu ne fais quelque chose qu’une fois.
-        courseA_collector_loops_challenge1_c: Il y a 6 gemmes sur le côté droit de
-          la grotte quand tu commences, mais tu n’as besoin de récupérer le trésor
+          si tu fais quelque chose qu’une seule fois.
+        courseA_collector_loops_challenge1_c: Il y a 6 diamants sur le côté droit
+          de la grotte quand tu commences, mais tu n’as besoin de récupérer les diamants
           que 5 fois en allant vers le Sud. Sais-tu pourquoi ?
         courseA_collector_loops_challenge1_d: |-
           Le programme de départ ne récupère pas les 2 dernières gemmes. Essaie d’ajouter ce code tout à la fin :
@@ -3687,6 +3775,11 @@ fr-FR:
           </block>
           </next>
           </block></xml>
+      courseA_collector_loops_challenge2:
+        courseA_collector_loops_challenge2_b: Tu n’as besoin que d’1 bloc pour résoudre
+          ce problème.
+        courseA_collector_loops_challenge2_a: Tu peux retourner sur le chemin une
+          deuxième fois avant de te déplacer vers le Sud.
       courseA_collector_loops_challenge2kp:
         courseA_collector_loops_challenge2kp_b: Essaie ce chemin pour trouver une
           solution.
@@ -3702,9 +3795,12 @@ fr-FR:
           solution.
         courseA_collector_loops_challenge2kp_a: Peux-tu utiliser des boucles pour
           résoudre ce casse-tête ?
+      courseA_collector_preLoops5:
+        courseA_collector_preLoops5_a: Tu devras aller dans deux directions pour obtenir
+          ne serait-ce qu’une gemme !
       courseA_collector_preLoops7:
         courseA_collector_loops2_b: |-
-          Après t’être déplacé sur une case avec un trésor, utilise ce bloc pour le ramasser.
+          Après t’être déplacé sur une case avec un diamant, utilise ce bloc pour le ramasser.
 
           <xml>  <block type="collector_collect"/></xml>
       courseA_harvester_loops1:
@@ -4201,19 +4297,15 @@ fr-FR:
           un chemin de l’oiseau jusqu'au cochon.
         courseA_maze_seq13_b: N’aie pas peur de faire des erreurs ! Essaie d’ajouter
           des blocs et d’exécuter le code pour voir ce qui se passe.
-        courseA_maze_seq13_c: |-
-          Ces blocs <xml><block type="maze_moveNorth"/></xml>
-
-          <xml><block type="maze_moveEast"/></xml> t’aideront à te rapprocher du cochon.
+        courseA_maze_seq13_c: Ces blocs <xml><block type="maze_moveNorth"/></xml><xml><block
+          type="maze_moveEast"/></xml> t’aideront à te rapprocher du cochon.
       courseA_maze_seq13_2018:
         courseA_maze_seq13_a: Si le chemin ne te semble pas clair, trace du doigt
           un chemin de l’oiseau jusqu'au cochon.
         courseA_maze_seq13_b: N’aie pas peur de faire des erreurs ! Essaie d’ajouter
           des blocs et d’exécuter le code pour voir ce qui se passe.
-        courseA_maze_seq13_c: |-
-          Ces blocs <xml><block type="maze_moveNorth"/></xml>
-
-          <xml><block type="maze_moveEast"/></xml> t’aideront à te rapprocher du cochon.
+        courseA_maze_seq13_c: Ces blocs <xml><block type="maze_moveNorth"/></xml><xml><block
+          type="maze_moveEast"/></xml> t’aideront à te rapprocher du cochon.
       courseA_maze_seq13_2019:
         courseA_maze_seq13_a: Si le chemin ne te semble pas clair, trace du doigt
           un chemin de l’oiseau jusqu'au cochon.
@@ -4341,9 +4433,9 @@ fr-FR:
           <block type="when_run" movable="false" deletable="false">
           <next>
           <block type="studio_saySpriteChoices">
-          <title name="SPRITE">1</title>
-          <title name="VALUE">Hi there.</title>
-          </block>
+              <title name="SPRITE">1</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
           </next>
           </block>
           </xml>
@@ -4357,9 +4449,9 @@ fr-FR:
           <block type="when_run" movable="false" deletable="false">
           <next>
           <block type="studio_saySpriteChoices">
-          <title name="SPRITE">1</title>
-          <title name="VALUE">Hi there.</title>
-          </block>
+              <title name="SPRITE">1</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
           </next>
           </block>
           </xml>
@@ -4373,155 +4465,122 @@ fr-FR:
           <block type="when_run" movable="false" deletable="false">
           <next>
           <block type="studio_saySpriteChoices">
-          <title name="SPRITE">1</title>
-          <title name="VALUE">Hi there.</title>
-          </block>
+              <title name="SPRITE">1</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
           </next>
           </block>
           </xml>
       courseA_playLab_events3:
         courseA_playLab_events3_a: |-
-          Fais glisser ce bloc  <xml><block type="studio_move">
-
-          <title name="SPRITE">1</title>
-          <title name="DIR">8</title>
-          </block></xml> et connecte-le au bas de <xml><block type="studio_whenArrow">
-          <title name="VALUE">left</title>
-          </block></xml>
-        courseA_playLab_events3_b: N’oublie pas d’appuyer sur la touche directionnelle
-          gauche pour déplacer Jorge vers le drapeau une fois que tu as écrit ton
-          programme. Quand le drapeau devient vert, tu as terminé !
+          Fais glisser ce bloc <xml><block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">8</title>
+            </block></xml> et connecte-le au bas de <xml><block type="studio_whenArrow">
+              <title name="VALUE">left</title>
+            </block></xml>
+        courseA_playLab_events3_b: N’oublie pas d’appuyer sur la flêche gauche pour
+          déplacer Jorge vers le drapeau une fois que tu as écrit ton programme. Quand
+          le drapeau devient vert, tu as terminé !
       courseA_playLab_events3_2018:
         courseA_playLab_events3_a: |-
-          Fais glisser ce bloc  <xml><block type="studio_move">
-
-          <title name="SPRITE">1</title>
-          <title name="DIR">8</title>
-          </block></xml> et connecte-le au bas de <xml><block type="studio_whenArrow">
-          <title name="VALUE">left</title>
-          </block></xml>
-        courseA_playLab_events3_b: N’oublie pas d’appuyer sur la touche directionnelle
-          gauche pour déplacer Jorge vers le drapeau une fois que tu as écrit ton
-          programme. Quand le drapeau devient vert, tu as terminé !
+          Fais glisser ce bloc <xml><block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">8</title>
+            </block></xml> et connecte-le au bas de <xml><block type="studio_whenArrow">
+              <title name="VALUE">left</title>
+            </block></xml>
+        courseA_playLab_events3_b: N’oublie pas d’appuyer sur la flêche gauche pour
+          déplacer Jorge vers le drapeau une fois que tu as écrit ton programme. Quand
+          le drapeau devient vert, tu as terminé !
       courseA_playLab_events3_2019:
         courseA_playLab_events3_a: |-
-          Fais glisser ce bloc  <xml><block type="studio_move">
-
-          <title name="SPRITE">1</title>
-          <title name="DIR">8</title>
-          </block></xml> et connecte-le au bas de <xml><block type="studio_whenArrow">
-          <title name="VALUE">left</title>
-          </block></xml>
-        courseA_playLab_events3_b: N’oublie pas d’appuyer sur la touche directionnelle
-          gauche pour déplacer Jorge vers le drapeau une fois que tu as écrit ton
-          programme. Quand le drapeau devient vert, tu as terminé !
+          Fais glisser ce bloc <xml><block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">8</title>
+            </block></xml> et connecte-le au bas de <xml><block type="studio_whenArrow">
+              <title name="VALUE">left</title>
+            </block></xml>
+        courseA_playLab_events3_b: N’oublie pas d’appuyer sur la flêche gauche pour
+          déplacer Jorge vers le drapeau une fois que tu as écrit ton programme. Quand
+          le drapeau devient vert, tu as terminé !
       courseA_playLab_events4:
         courseA_playLab_events4_a: |-
           Voici le bloc événement dont tu auras besoin pour déplacer Jorge vers la droite :
 
           <xml><block type="studio_move">
-
-          <title name="SPRITE">1</title>
-          <title name="DIR">2</title>
-          </block></xml>
+              <title name="SPRITE">1</title>
+              <title name="DIR">2</title>
+            </block></xml>
         courseA_playLab_events4_b: |-
           Voici le code dont tu auras besoin pour résoudre ce casse-tête :
 
           <xml><block type="studio_whenArrow">
-
-          <title name="VALUE">right</title>
-          <next>
-          <block type="studio_move">
-          <title name="SPRITE">1</title>
-          <title name="DIR">2</title>
-          </block></next></block></xml>
+              <title name="VALUE">right</title>
+              <next>
+            <block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">2</title>
+            </block></next></block></xml>
       courseA_playLab_events4_2018:
         courseA_playLab_events4_a: |-
           Voici le bloc événement dont tu auras besoin pour déplacer Jorge vers la droite :
 
           <xml><block type="studio_move">
-
-          <title name="SPRITE">1</title>
-          <title name="DIR">2</title>
-          </block></xml>
+              <title name="SPRITE">1</title>
+              <title name="DIR">2</title>
+            </block></xml>
         courseA_playLab_events4_b: |-
           Voici le code dont tu auras besoin pour résoudre ce casse-tête :
 
           <xml><block type="studio_whenArrow">
-
-          <title name="VALUE">right</title>
-          <next>
-          <block type="studio_move">
-          <title name="SPRITE">1</title>
-          <title name="DIR">2</title>
-          </block></next></block></xml>
+              <title name="VALUE">right</title>
+              <next>
+            <block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">2</title>
+            </block></next></block></xml>
       courseA_playLab_events4_2019:
         courseA_playLab_events4_a: |-
           Voici le bloc événement dont tu auras besoin pour déplacer Jorge vers la droite :
 
           <xml><block type="studio_move">
-
-          <title name="SPRITE">1</title>
-          <title name="DIR">2</title>
-          </block></xml>
+              <title name="SPRITE">1</title>
+              <title name="DIR">2</title>
+            </block></xml>
         courseA_playLab_events4_b: |-
           Voici le code dont tu auras besoin pour résoudre ce casse-tête :
 
           <xml><block type="studio_whenArrow">
-
-          <title name="VALUE">right</title>
-          <next>
-          <block type="studio_move">
-          <title name="SPRITE">1</title>
-          <title name="DIR">2</title>
-          </block></next></block></xml>
+              <title name="VALUE">right</title>
+              <next>
+            <block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">2</title>
+            </block></next></block></xml>
       courseA_playLab_events5:
-        courseA_playLab_events5_a: |-
-          Voici les blocs événements que tu devras utiliser pour déplacer Jorge vers le haut et vers le bas :
-
-          <xml><block type="studio_whenArrow">
-              <title name="VALUE">up</title>
-            </block></xml>
-
-          et
-
-          <xml><block type="studio_whenArrow">
-              <title name="VALUE">down</title>
-            </block></xml>
+        courseA_playLab_events5_a: "Voici les blocs événements que tu devras utiliser
+          pour déplacer Jorge vers le haut et vers le bas :\n\n<xml><block type=\"studio_whenArrow\">\n
+          \   <title name=\"VALUE\">up</title>\n  </block></xml> \n\net\n\n<xml><block
+          type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n  </block></xml>"
         courseA_playLab_events5_b: |-
           Savais-tu que tu peux changer la touche de la flèche en cliquant sur l’image dans le bloc et en choisissant une nouvelle touche ?
 
           ![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)
       courseA_playLab_events5_2018:
-        courseA_playLab_events5_a: |-
-          Voici les blocs événements que tu devras utiliser pour déplacer Jorge vers le haut et vers le bas :
-
-          <xml><block type="studio_whenArrow">
-              <title name="VALUE">up</title>
-            </block></xml>
-
-          et
-
-          <xml><block type="studio_whenArrow">
-              <title name="VALUE">down</title>
-            </block></xml>
+        courseA_playLab_events5_a: "Voici les blocs événements que tu devras utiliser
+          pour déplacer Jorge vers le haut et vers le bas :\n\n<xml><block type=\"studio_whenArrow\">\n
+          \   <title name=\"VALUE\">up</title>\n  </block></xml> \n\net\n\n<xml><block
+          type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n  </block></xml>"
         courseA_playLab_events5_b: |-
           Savais-tu que tu peux changer la touche de la flèche en cliquant sur l’image dans le bloc et en choisissant une nouvelle touche ?
 
           ![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)
       courseA_playLab_events5_2019:
-        courseA_playLab_events5_a: |-
-          Voici les blocs événements que tu devras utiliser pour déplacer Jorge vers le haut et vers le bas :
-
-          <xml><block type="studio_whenArrow">
-              <title name="VALUE">up</title>
-            </block></xml>
-
-          et
-
-          <xml><block type="studio_whenArrow">
-              <title name="VALUE">down</title>
-            </block></xml>
+        courseA_playLab_events5_a: "Voici les blocs événements que tu devras utiliser
+          pour déplacer Jorge vers le haut et vers le bas :\n\n<xml><block type=\"studio_whenArrow\">\n
+          \   <title name=\"VALUE\">up</title>\n  </block></xml> \n\net\n\n<xml><block
+          type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n  </block></xml>"
         courseA_playLab_events5_b: |-
           Savais-tu que tu peux changer la touche de la flèche en cliquant sur l’image dans le bloc et en choisissant une nouvelle touche ?
 
@@ -4531,169 +4590,157 @@ fr-FR:
           Voici le bloc événement que tu devras utiliser pour que Jorge fasse quelque chose quand on lui clique dessus :
 
           <xml><block type="studio_whenSpriteClicked">
-
-          <title name="SPRITE">1</title>
-          </block></xml>
+              <title name="SPRITE">1</title>
+            </block></xml>
         courseA_playLab_events6_b: |-
           Voici le bloc que tu devras utiliser pour modifier le fond :
 
           <xml><block type="studio_setBackground">
-
-          <title name="VALUE">random</title>
-          </block></xml>
+              <title name="VALUE">random</title>
+            </block></xml>
         courseA_playLab_events6_c: |-
           Voici le bloc que tu devras utiliser pour jouer un son aléatoire :
 
           <xml><block type="studio_playSound">
-
-          <title name="SOUND">random</title>
-          </block></xml>
+              <title name="SOUND">random</title>
+            </block></xml>
       courseA_playLab_events6_2018:
         courseA_playLab_events6_a: |-
           Voici le bloc événement que tu devras utiliser pour que Jorge fasse quelque chose quand on lui clique dessus :
 
           <xml><block type="studio_whenSpriteClicked">
-
-          <title name="SPRITE">1</title>
-          </block></xml>
+              <title name="SPRITE">1</title>
+            </block></xml>
         courseA_playLab_events6_b: |-
           Voici le bloc que tu devras utiliser pour modifier le fond :
 
           <xml><block type="studio_setBackground">
-
-          <title name="VALUE">random</title>
-          </block></xml>
+              <title name="VALUE">random</title>
+            </block></xml>
         courseA_playLab_events6_c: |-
           Voici le bloc que tu devras utiliser pour jouer un son aléatoire :
 
           <xml><block type="studio_playSound">
-
-          <title name="SOUND">random</title>
-          </block></xml>
+              <title name="SOUND">random</title>
+            </block></xml>
       courseA_playLab_events6_2019:
         courseA_playLab_events6_a: |-
           Voici le bloc événement que tu devras utiliser pour que Jorge fasse quelque chose quand on lui clique dessus :
 
           <xml><block type="studio_whenSpriteClicked">
-
-          <title name="SPRITE">1</title>
-          </block></xml>
+              <title name="SPRITE">1</title>
+            </block></xml>
         courseA_playLab_events6_b: |-
           Voici le bloc que tu devras utiliser pour modifier le fond :
 
           <xml><block type="studio_setBackground">
-
-          <title name="VALUE">random</title>
-          </block></xml>
+              <title name="VALUE">random</title>
+            </block></xml>
         courseA_playLab_events6_c: |-
           Voici le bloc que tu devras utiliser pour jouer un son aléatoire :
 
           <xml><block type="studio_playSound">
-
-          <title name="SOUND">random</title>
-          </block></xml>
+              <title name="SOUND">random</title>
+            </block></xml>
       courseA_playLab_events7:
         courseA_playLab_events7_a: |-
           Utilise ce bloc pour contrôler ce qui se passe lorsque les acteurs entrent en collision.
 
           <xml><block type="studio_whenSpriteCollided">
-
-          <title name="SPRITE1">1</title>
-          <title name="SPRITE2">0</title>
-          </block></xml>
+              <title name="SPRITE1">1</title>
+              <title name="SPRITE2">0</title>
+            </block></xml>
       courseA_playLab_events7_2018:
         courseA_playLab_events7_a: |-
           Utilise ce bloc pour contrôler ce qui se passe lorsque les acteurs entrent en collision.
 
           <xml><block type="studio_whenSpriteCollided">
-
-          <title name="SPRITE1">1</title>
-          <title name="SPRITE2">0</title>
-          </block></xml>
+              <title name="SPRITE1">1</title>
+              <title name="SPRITE2">0</title>
+            </block></xml>
       courseA_playLab_events7_2019:
         courseA_playLab_events7_a: |-
           Utilise ce bloc pour contrôler ce qui se passe lorsque les acteurs entrent en collision.
 
           <xml><block type="studio_whenSpriteCollided">
-
-          <title name="SPRITE1">1</title>
-          <title name="SPRITE2">0</title>
-          </block></xml>
+              <title name="SPRITE1">1</title>
+              <title name="SPRITE2">0</title>
+            </block></xml>
       courseA_playlab_events_challenge1:
         courseA_playlab_events_challenge1_a: "Fais apparaître Waddles le pingouin
-          quand on clique sur Robin !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          quand tu cliques sur Robin !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n
           \     </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_b: "Fais apparaître Boo le fantôme quand
-          on clique sur Waddles !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          tu cliques sur Waddles !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n
           \     </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_c: "Fais apparaître Jayden le monstre poilu
-          quand on clique sur Boo !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          quand tu cliques sur Boo !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n
           \     </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_d: "Fais apparaître Spiff le robot quand
-          on clique sur le monstre !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          tu cliques sur le monstre !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n
           \     </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_e: "Enfin, fais apparaître Wendel le sorcier
-          quand on clique sur Spiff !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          quand tu cliques sur Spiff !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n
           \     </block>\n    </next>\n  </block></xml>"
       courseA_playlab_events_challenge1_2018:
         courseA_playlab_events_challenge1_a: "Fais apparaître Waddles le pingouin
-          quand on clique sur Robin !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          quand tu cliques sur Robin !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n
           \     </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_b: "Fais apparaître Boo le fantôme quand
-          on clique sur Waddles !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          tu cliques sur Waddles !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n
           \     </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_c: "Fais apparaître Jayden le monstre poilu
-          quand on clique sur Boo !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          quand tu cliques sur Boo !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n
           \     </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_d: "Fais apparaître Spiff le robot quand
-          on clique sur le monstre !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          tu cliques sur le monstre !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n
           \     </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_e: "Enfin, fais apparaître Wendel le sorcier
-          quand on clique sur Spiff !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          quand tu cliques sur Spiff !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n
           \     </block>\n    </next>\n  </block></xml>"
       courseA_playlab_events_challenge1_2019:
         courseA_playlab_events_challenge1_a: "Fais apparaître Waddles le pingouin
-          quand on clique sur Robin !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          quand tu cliques sur Robin !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n
           \     </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_b: "Fais apparaître Boo le fantôme quand
-          on clique sur Waddles !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          tu cliques sur Waddles !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n
           \     </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_c: "Fais apparaître Jayden le monstre poilu
-          quand on clique sur Boo !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          quand tu cliques sur Boo !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n
           \     </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_d: "Fais apparaître Spiff le robot quand
-          on clique sur le monstre !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          tu cliques sur le monstre !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n
           \     </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_e: "Enfin, fais apparaître Wendel le sorcier
-          quand on clique sur Spiff !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          quand tu cliques sur Spiff !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n
           \     </block>\n    </next>\n  </block></xml>"
@@ -4711,27 +4758,26 @@ fr-FR:
           Tu peux faire grogner un monstre mécontent.
 
           <xml>  <block type="studio_whenSpriteClicked">
-
-          <title name="SPRITE">5</title>
-          <next>
-          <block type="studio_setSpriteEmotion">
-          <title name="SPRITE">5</title>
-          <title name="VALUE">2</title>
-          <next>
-          <block type="studio_saySprite">
-          <title name="SPRITE">5</title>
-          <title name="TEXT">Roar!</title>
-          <next>
-          <block type="studio_setSpriteEmotion">
-          <title name="SPRITE">5</title>
-          <title name="VALUE">0</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block></xml>
+              <title name="SPRITE">5</title>
+              <next>
+                <block type="studio_setSpriteEmotion">
+                  <title name="SPRITE">5</title>
+                  <title name="VALUE">2</title>
+                  <next>
+                    <block type="studio_saySprite">
+                      <title name="SPRITE">5</title>
+                      <title name="TEXT">Roar!</title>
+                      <next>
+                        <block type="studio_setSpriteEmotion">
+                          <title name="SPRITE">5</title>
+                          <title name="VALUE">0</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block></xml>
       courseA_playlab_events_challenge2_2018:
         courseA_playlab_events_challenge2_a: "Tu peux faire chanter un oiseau.\n\n<xml>
           \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n
@@ -4746,27 +4792,26 @@ fr-FR:
           Tu peux faire grogner un monstre mécontent.
 
           <xml>  <block type="studio_whenSpriteClicked">
-
-          <title name="SPRITE">5</title>
-          <next>
-          <block type="studio_setSpriteEmotion">
-          <title name="SPRITE">5</title>
-          <title name="VALUE">2</title>
-          <next>
-          <block type="studio_saySprite">
-          <title name="SPRITE">5</title>
-          <title name="TEXT">Roar!</title>
-          <next>
-          <block type="studio_setSpriteEmotion">
-          <title name="SPRITE">5</title>
-          <title name="VALUE">0</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block></xml>
+              <title name="SPRITE">5</title>
+              <next>
+                <block type="studio_setSpriteEmotion">
+                  <title name="SPRITE">5</title>
+                  <title name="VALUE">2</title>
+                  <next>
+                    <block type="studio_saySprite">
+                      <title name="SPRITE">5</title>
+                      <title name="TEXT">Roar!</title>
+                      <next>
+                        <block type="studio_setSpriteEmotion">
+                          <title name="SPRITE">5</title>
+                          <title name="VALUE">0</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block></xml>
       courseA_playlab_events_challenge2_2019:
         courseA_playlab_events_challenge2_a: "Tu peux faire chanter un oiseau.\n\n<xml>
           \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n
@@ -4781,27 +4826,26 @@ fr-FR:
           Tu peux faire grogner un monstre mécontent.
 
           <xml>  <block type="studio_whenSpriteClicked">
-
-          <title name="SPRITE">5</title>
-          <next>
-          <block type="studio_setSpriteEmotion">
-          <title name="SPRITE">5</title>
-          <title name="VALUE">2</title>
-          <next>
-          <block type="studio_saySprite">
-          <title name="SPRITE">5</title>
-          <title name="TEXT">Roar!</title>
-          <next>
-          <block type="studio_setSpriteEmotion">
-          <title name="SPRITE">5</title>
-          <title name="VALUE">0</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block></xml>
+              <title name="SPRITE">5</title>
+              <next>
+                <block type="studio_setSpriteEmotion">
+                  <title name="SPRITE">5</title>
+                  <title name="VALUE">2</title>
+                  <next>
+                    <block type="studio_saySprite">
+                      <title name="SPRITE">5</title>
+                      <title name="TEXT">Roar!</title>
+                      <next>
+                        <block type="studio_setSpriteEmotion">
+                          <title name="SPRITE">5</title>
+                          <title name="VALUE">0</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block></xml>
       courseB_Scrat_ramp1_2018:
         '1': Si Scrat ne fait pas ce que tu veux, assure-toi que les deux blocs sont
           connectés, puis appuie de nouveau sur « Exécuter ».
@@ -5243,17 +5287,17 @@ fr-FR:
           permet de ramasser le trésor quand tu te tiens dessus.
       courseB_collector_loops2:
         courseB_collector_loops2_a: Tu devras te déplacer avant de pouvoir collecter
-          un trésor.
+          un diamant.
         courseB_collector_loops2_b: Lorsque tu arrives sur une case avec un trésor,
           utilise le bloc <xml><block type="collector_collect"/></xml> pour le ramasser.
       courseB_collector_loops2_2018:
         courseB_collector_loops2_a: Tu devras te déplacer avant de pouvoir collecter
-          un trésor.
+          un diamant.
         courseB_collector_loops2_b: Lorsque tu arrives sur une case avec un trésor,
           utilise le bloc <xml><block type="collector_collect"/></xml> pour le ramasser.
       courseB_collector_loops2_2019:
         courseB_collector_loops2_a: Tu devras te déplacer avant de pouvoir collecter
-          un trésor.
+          un diamant.
         courseB_collector_loops2_b: Lorsque tu arrives sur une case avec un trésor,
           utilise le bloc <xml><block type="collector_collect"/></xml> pour le ramasser.
       courseB_collector_loops3:
@@ -5274,15 +5318,15 @@ fr-FR:
       courseB_collector_loops4:
         courseB_collector_loops4_a: Essaie d’utiliser le bouton « Étape » pour voir
           où les choses tournent mal.
-        courseB_collector_loops4_b: Pour modifier la distance à laquelle Laurel va,
-          modifie le nombre de fois que la boucle s’exécute.
+        courseB_collector_loops4_b: Pour modifier la distance où Laurel va, modifie
+          le nombre de fois que la boucle s’exécute.
         courseB_collector_loops4_c: Laurel doit descendre et ramasser le trésor après
           la fin de la boucle ˋrépéter\` !
       courseB_collector_loops4_2018:
         courseB_collector_loops4_a: Essaie d’utiliser le bouton « Étape » pour voir
           où les choses tournent mal.
-        courseB_collector_loops4_b: Pour modifier la distance à laquelle Laurel va,
-          modifie le nombre de fois que la boucle s’exécute.
+        courseB_collector_loops4_b: Pour modifier la distance où Laurel va, modifie
+          le nombre de fois que la boucle s’exécute.
         courseB_collector_loops4_c: |-
           Laurel doit descendre et ramasser le trésor après la fin de la boucle ˋrépéter\` <xml><block type="controls_repeat_simplified">
 
@@ -5291,8 +5335,8 @@ fr-FR:
       courseB_collector_loops4_2019:
         courseB_collector_loops4_a: Essaie d’utiliser le bouton « Étape » pour voir
           où les choses tournent mal.
-        courseB_collector_loops4_b: Pour modifier la distance à laquelle Laurel va,
-          modifie le nombre de fois que la boucle s’exécute.
+        courseB_collector_loops4_b: Pour modifier la distance où Laurel va, modifie
+          le nombre de fois que la boucle s’exécute.
         courseB_collector_loops4_c: |-
           Laurel doit descendre et ramasser le trésor après la fin de la boucle ˋrépéter\` <xml><block type="controls_repeat_simplified">
 
@@ -7096,8 +7140,8 @@ fr-FR:
 
           <xml>
           <block type="sticker">
-          <title name="VALUE">Bird</title>
-          </block>
+              <title name="VALUE">Bird</title>
+            </block>
           </xml>
       courseC_artist_loops1a_2018:
         courseC_artist_loops1a_a: |-
@@ -7114,8 +7158,8 @@ fr-FR:
 
           <xml>
           <block type="sticker">
-          <title name="VALUE">Bird</title>
-          </block>
+              <title name="VALUE">Bird</title>
+            </block>
           </xml>
       courseC_artist_loops1a_2019:
         courseC_artist_loops1a_a: |-
@@ -7132,8 +7176,8 @@ fr-FR:
 
           <xml>
           <block type="sticker">
-          <title name="VALUE">Bird</title>
-          </block>
+              <title name="VALUE">Bird</title>
+            </block>
           </xml>
       courseC_artist_loops2a:
         courseC_artist_loops2a_a: Dans ta boucle, tu devras sauter de 200 pixels dessus
@@ -7174,9 +7218,9 @@ fr-FR:
 
           <xml>
           <block type="jump_by_constant">
-          <title name="DIR">jumpForward</title>
-          <title name="VALUE">100</title>
-          </block>
+              <title name="DIR">jumpForward</title>
+              <title name="VALUE">100</title>
+            </block>
           </xml>
 
           N’oublie pas de modifier la distance !
@@ -7186,9 +7230,9 @@ fr-FR:
 
           <xml>
           <block type="jump_by_constant">
-          <title name="DIR">jumpForward</title>
-          <title name="VALUE">100</title>
-          </block>
+              <title name="DIR">jumpForward</title>
+              <title name="VALUE">100</title>
+            </block>
           </xml>
 
           N’oublie pas de modifier la distance !
@@ -7219,8 +7263,8 @@ fr-FR:
 
           <xml>
           <block type="draw_line_style_pattern">
-          <title name="VALUE">DEFAULT</title>
-          </block>
+              <title name="VALUE">DEFAULT</title>
+            </block>
           </xml>
         courseC_artist_loops5b_b: Pour réaliser un dessin comme celui ci-dessus, tu
           devras reculer de la même distance que tu avances.
@@ -7230,8 +7274,8 @@ fr-FR:
 
           <xml>
           <block type="draw_line_style_pattern">
-          <title name="VALUE">DEFAULT</title>
-          </block>
+              <title name="VALUE">DEFAULT</title>
+            </block>
           </xml>
         courseC_artist_loops5b_b: Pour réaliser un dessin comme celui ci-dessus, tu
           devras reculer de la même distance que tu avances.
@@ -7241,8 +7285,8 @@ fr-FR:
 
           <xml>
           <block type="draw_line_style_pattern">
-          <title name="VALUE">DEFAULT</title>
-          </block>
+              <title name="VALUE">DEFAULT</title>
+            </block>
           </xml>
         courseC_artist_loops5b_b: Pour réaliser un dessin comme celui ci-dessus, tu
           devras reculer de la même distance que tu avances.
@@ -7754,15 +7798,6 @@ fr-FR:
           sur chaque case.
         courseC_collector_prog_challenge1_b: Tu es perdu ? Essaie de suivre ce chemin
           pour résoudre le puzzle !
-      courseC_data wizard:
-        courseA_playLab_events7_a: |-
-          Utilise ce bloc pour contrôler ce qui se passe lorsque les acteurs entrent en collision.
-
-          <xml><block type="studio_whenSpriteCollided">
-
-          <title name="SPRITE1">1</title>
-          <title name="SPRITE2">0</title>
-          </block></xml>
       courseC_flappy_events1:
         courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseC_flappy_events1_2018:
@@ -9269,6 +9304,27 @@ fr-FR:
           choisir l'angle dont tu as besoin!
         courseD_artist_project1_b: Souviens toi que `Avancer` dessine une ligne, alos
           que `sauter en avant` ne le fait pas.
+      courseD_artist_project1a:
+        courseD_artist_project1a_a: |-
+          Cet escalier tourne à 76 degrés et répéte 4 fois.
+
+          <img src="https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png" width="200px" />
+        courseD_artist_project1a_b: Ces modèles sont identiques à des escaliers d'autres
+          puzzles, mais avec des angles différents.
+      courseD_artist_project1a_2018:
+        courseD_artist_project1a_a: |-
+          Cet escalier tourne à 76 degrés et répéte 4 fois.
+
+          <img src="https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png" width="200px" />
+        courseD_artist_project1a_b: Ces modèles sont identiques à des escaliers d'autres
+          puzzles, mais avec des angles différents.
+      courseD_artist_project1a_2019:
+        courseD_artist_project1a_a: |-
+          Cet escalier tourne à 76 degrés et répéte 4 fois.
+
+          <img src="https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png" width="200px" />
+        courseD_artist_project1a_b: Ces modèles sont identiques à des escaliers d'autres
+          puzzles, mais avec des angles différents.
       courseD_artist_project2:
         courseD_artist_project2_a: Souviens toi que `Avancer` dessine une ligne, alos
           que `sauter en avant` ne le fait pas.
@@ -9284,6 +9340,21 @@ fr-FR:
           que `sauter en avant` ne le fait pas.
         courseD_artist_project2_b: Après avoir dessiner et bouger la première fois,
           tu peux répéter le code en ajoutant une boucle autour.
+      courseD_artist_project2a:
+        courseD_artist_project2a_a: |-
+          Ce dessin a été réalisé en imbriquant des boucles de 4 escaliers et un bloc `tourne à droite de 180 degrés` à l'intérieur d'un bloc `répéter 2 fois`.
+
+          <img src="https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png" width="200px" />
+      courseD_artist_project2a_2018:
+        courseD_artist_project2a_a: |-
+          Ce dessin a été réalisé en imbriquant des boucles de 4 escaliers et un bloc `tourne à droite de 180 degrés` à l'intérieur d'un bloc `répéter 2 fois`.
+
+          <img src="https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png" width="200px" />
+      courseD_artist_project2a_2019:
+        courseD_artist_project2a_a: |-
+          Ce dessin a été réalisé en imbriquant des boucles de 4 escaliers et un bloc `tourne à droite de 180 degrés` à l'intérieur d'un bloc `répéter 2 fois`.
+
+          <img src="https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png" width="200px" />
       courseD_artist_project3:
         courseD_artist_project3_a: Utilise le menu déroulant du bloc `tourner` pour
           choisir l'angle dont tu as besoin!
@@ -9314,6 +9385,78 @@ fr-FR:
 
           -   Essaie 72 degrés si tu répétes la boucle extérieur 5 fois.
           -   Essaie 60 degrés si tu répétes la boucle extérieur 6 fois
+      courseD_artist_project3a:
+        courseD_artist_project3a_a: Tu peux choisir différentes valeurs pour faire
+          tourner ta forme! Pourquoi pas 18 fois en tournant de 20 degrés entre chaque?
+      courseD_artist_project3a_2018:
+        courseD_artist_project3a_a: Tu peux choisir différentes valeurs pour faire
+          tourner ta forme! Pourquoi pas 18 fois en tournant de 20 degrés entre chaque?
+      courseD_artist_project3a_2019:
+        courseD_artist_project3a_a: Tu peux choisir différentes valeurs pour faire
+          tourner ta forme! Pourquoi pas 18 fois en tournant de 20 degrés entre chaque?
+      courseD_artist_project4:
+        courseD_artist_project4_a: |-
+          Voici le flocon de neige en pentagone avec un angle à 36 degrés avant un flocon de neige en triangle:
+
+          <img src="https://images.code.org/2ba023db9404f948fab655bfa7923160-image-1495822526223.14.13.png" width="200px" />
+
+          Voici un ensemble d'hexagones avec des carrés:
+
+          <img src="https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png" width="200px" />
+        courseD_artist_project4_b: Pour essayer ça, dessine ton premier flocon de
+          neige, tourne, puis dessine un deuxième flocon.
+      courseD_artist_project4_2018:
+        courseD_artist_project4_a: |-
+          Voici le flocon de neige en pentagone avec un angle à 36 degrés avant un flocon de neige en triangle:
+
+          <img src="https://images.code.org/2ba023db9404f948fab655bfa7923160-image-1495822526223.14.13.png" width="200px" />
+
+          Voici un ensemble d'hexagones avec des carrés:
+
+          <img src="https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png" width="200px" />
+        courseD_artist_project4_b: Pour essayer ça, dessine ton premier flocon de
+          neige, tourne, puis dessine un deuxième flocon.
+      courseD_artist_project4_2019:
+        courseD_artist_project4_a: |-
+          Voici le flocon de neige en pentagone avec un angle à 36 degrés avant un flocon de neige en triangle:
+
+          <img src="https://images.code.org/2ba023db9404f948fab655bfa7923160-image-1495822526223.14.13.png" width="200px" />
+
+          Voici un ensemble d'hexagones avec des carrés:
+
+          <img src="https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png" width="200px" />
+        courseD_artist_project4_b: Pour essayer ça, dessine ton premier flocon de
+          neige, tourne, puis dessine un deuxième flocon.
+      courseD_artist_project4a:
+        courseD_artist_project4a_a: |-
+          Voici 2 longueurs différentes de flocon de neige, dessiné l'un sur l'autre (avec un angle de 30 degrés entre chaque.)
+
+          <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
+      courseD_artist_project4a_2018:
+        courseD_artist_project4a_a: |-
+          Voici 2 longueurs différentes de flocon de neige, dessiné l'un sur l'autre (avec un angle de 30 degrés entre chaque.)
+
+          <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
+      courseD_artist_project4a_2019:
+        courseD_artist_project4a_a: |-
+          Voici 2 longueurs différentes de flocon de neige, dessiné l'un sur l'autre (avec un angle de 30 degrés entre chaque.)
+
+          <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
+      courseD_artist_project5:
+        courseD_artist_project4_a: |-
+          Lignes de 2 hexagones et 4 triangles:
+
+          <img src="https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png" width="200px" />
+      courseD_artist_project5_2018:
+        courseD_artist_project4_a: |-
+          Lignes de 2 hexagones et 4 triangles:
+
+          <img src="https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png" width="200px" />
+      courseD_artist_project5_2019:
+        courseD_artist_project4_a: |-
+          Lignes de 2 hexagones et 4 triangles:
+
+          <img src="https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png" width="200px" />
       courseD_artist_ramp11:
         courseD_artist_ramp11a: Pour dessiner un côté, utilise le bloc `move forward
           by 100 pixels`, et remplace 100 par 200.
@@ -9455,6 +9598,17 @@ fr-FR:
       courseD_bee_conditionals5_2018:
         courseD_bee_conditionals5_hintVid1: Besoin d'aide pour démarrer? Regarde la
           vidéo!
+        courseD_bee_conditionals5_a: Pense à chaque côté du rectangle comme un chemin.
+          Configure une boucle imbriquée avec un bloc `répète` à l 'extérieur et une
+          boucle `tant que chemin devant` à l'intérieur. Sur combien de chemins l'abeille
+          a-t-elle besoin de bourdonner si elle a besoin de bourdonner sur chaque
+          côté avec une fleur?
+        courseD_bee_conditionals5_c: Il y a 3 côtés du rectangle avec une fleur, donc
+          le code a besoin de `Répéter 3 fois`. Dans chaque répétition, l'abeille
+          devra continuer sur le chemin `tant que chemin devant`. Pour continuer vers
+          le bas, l'abeille devra `avancer`. Tant que sur le chemin, l 'abeille doit
+          vérifier s'il y a une fleur. `si à la fleur`, l'abeille doit `obtenir du
+          nectar`.
         courseD_bee_conditionals5_hintVid2: Regarde cette vidéo pour t'aider à résoudre
           ce puzzle.
       courseD_bee_conditionals6:
@@ -9586,7 +9740,7 @@ fr-FR:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">&gt;</title>
+              <title name="OP">></title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -9597,7 +9751,7 @@ fr-FR:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">&gt;</title>
+              <title name="OP">></title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -9608,7 +9762,7 @@ fr-FR:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">&gt;</title>
+              <title name="OP">></title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -9919,13 +10073,24 @@ fr-FR:
           \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
           name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
           \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
-          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
-        courseD_collector_debugging_challenge2_b: "Ensuite, ramasse les diamants restant
-          dans la rangée.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04
-          AM.png>)\nAjoute ces blocs à ton programme..\n\n<xml><block type=\"maze_move\">\n
-          \                   <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block
-          type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement
-          name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
+        courseD_collector_debugging_challenge2_b: |-
+          Ensuite, ramasse les diamants restant dans la rangée.
+
+          ![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)
+          Ajoute ces blocs à ton programme..
+
+          <xml><block type="maze_move">
+                              <title name="DIR">moveBackward</title>
+                            </block>
+          <block type="controls_repeat">
+                  <title name="TIMES">4</title>
+                  <statement name="DO">
+
+                  </statement>
+                </block>
+
+          </xml>
         courseD_collector_debugging_challenge2_c: "Enfin, ramasse le diamant principal.
           Ajoute ces blocs à ton programme.\n\n<xml>\n  <block type=\"maze_turn\">\n
           \               <title name=\"DIR\">turnRight</title>\n              </block>\n
@@ -10221,6 +10386,205 @@ fr-FR:
       courseD_farmer_condLoops7_2019:
         courseD_farmer_condLoops7_b: Essaie d’utiliser ˋquand chemin devant\` pour
           que le moissonneur continue d’avancer le bon nombre de fois.
+      courseD_farmer_while1:
+        courseD_farmer_while1_a: Tu auras besoin d'avancer 4 fois pour aller jusqu'au
+          tas. Peux-tu utiliser une boucle `répéter` pour ça ?
+        courseD_farmer_while1_b: Utilise le bloc `retirer 1` lorsque tu te tiens sur
+          le tas de saletés pour l'enlever.
+      courseD_farmer_while1_2018:
+        courseD_farmer_while1_a: Tu auras besoin d'avancer 4 fois pour aller jusqu'au
+          tas. Peux-tu utiliser une boucle `répéter` pour ça ?
+        courseD_farmer_while1_b: Utilise le bloc `retirer 1` lorsque tu te tiens sur
+          le tas de saletés pour l'enlever.
+      courseD_farmer_while1_2019:
+        courseD_farmer_while1_a: Tu auras besoin d'avancer 4 fois pour aller jusqu'au
+          tas. Peux-tu utiliser une boucle `répéter` pour ça ?
+        courseD_farmer_while1_b: Utilise le bloc `retirer 1` lorsque tu te tiens sur
+          le tas de saletés pour l'enlever.
+      courseD_farmer_while2:
+        courseD_farmer_while2_a: Tu auras besoin de bouger seulement une fois pour
+          aller jusq'au trou.
+        courseD_farmer_while2_b: Tu auras besoin du bloc `remplir 1` six fois. Peux-tu
+          utiliser une boucle pour rendre cela plus simple ?
+      courseD_farmer_while2_2018:
+        courseD_farmer_while2_a: Tu auras besoin de bouger seulement une fois pour
+          aller jusq'au trou.
+        courseD_farmer_while2_b: Tu auras besoin du bloc `remplir 1` six fois. Peux-tu
+          utiliser une boucle pour rendre cela plus simple ?
+      courseD_farmer_while2_2019:
+        courseD_farmer_while2_a: Tu auras besoin de bouger seulement une fois pour
+          aller jusq'au trou.
+        courseD_farmer_while2_b: Tu auras besoin du bloc `remplir 1` six fois. Peux-tu
+          utiliser une boucle pour rendre cela plus simple ?
+      courseD_farmer_while3:
+        courseD_farmer_while3_a: Une boucle peut aider à simplifier ton code ici.
+        courseD_farmer_while3_b: Tu ne devrais pas avoir besoin d'un bloc `tourner`
+          pour aller au tas.
+      courseD_farmer_while3_2018:
+        courseD_farmer_while3_a: Une boucle peut aider à simplifier ton code ici.
+        courseD_farmer_while3_b: Tu ne devrais pas avoir besoin d'un bloc `tourner`
+          pour aller au tas.
+      courseD_farmer_while3_2019:
+        courseD_farmer_while3_a: Une boucle peut aider à simplifier ton code ici.
+        courseD_farmer_while3_b: Tu ne devrais pas avoir besoin d'un bloc `tourner`
+          pour aller au tas.
+      courseD_farmer_while4:
+        courseD_farmer_conditionals4_a: Au lieu d'utiliser une boucle `répéter`, utilise
+          une boucle `tant que` pour continuer de creuser tant que le tas n'est pas
+          parti.
+        courseD_farmer_conditionals4_b: Cela ressemble beaucoup à un puzzle précédent,
+          la seule différence c'est quelle boucle choisir.
+      courseD_farmer_while4_2018:
+        courseD_farmer_conditionals4_a: Au lieu d'utiliser une boucle `répéter`, utilise
+          une boucle `tant que` pour continuer de creuser tant que le tas n'est pas
+          parti.
+        courseD_farmer_conditionals4_b: Cela ressemble beaucoup à un puzzle précédent,
+          la seule différence c'est quelle boucle choisir.
+      courseD_farmer_while4_2019:
+        courseD_farmer_conditionals4_a: Au lieu d'utiliser une boucle `répéter`, utilise
+          une boucle `tant que` pour continuer de creuser tant que le tas n'est pas
+          parti.
+        courseD_farmer_conditionals4_b: Cela ressemble beaucoup à un puzzle précédent,
+          la seule différence c'est quelle boucle choisir.
+      courseD_farmer_while5:
+        courseD_farmer_conditionals5a_a: Essai d'imbriquer une boucle `tant que` dans
+          une boucle `répéter`.
+        courseD_farmer_conditionals5a_b: |-
+          La fermière a besoin d'avancer 5 fois au total pour arriver à la fin de la rangée.
+          Qu'est ce que la fermière a besoin encore de faire?
+        courseD_farmer_conditionals5a_c: Avance 5 fois. A chaque fois que tu avances,
+          enlève le tas de saleté en utilisant le bloc `tant que il y a une pile`.
+      courseD_farmer_while5_2018:
+        courseD_farmer_conditionals5a_a: Essai d'imbriquer une boucle `tant que` dans
+          une boucle `répéter`.
+        courseD_farmer_conditionals5a_b: |-
+          La fermière a besoin d'avancer 5 fois au total pour arriver à la fin de la rangée.
+          Qu'est ce que la fermière a besoin encore de faire?
+        courseD_farmer_conditionals5a_c: Avance 5 fois. A chaque fois que tu avances,
+          enlève le tas de saleté en utilisant le bloc `tant que il y a une pile`.
+      courseD_farmer_while5_2019:
+        courseD_farmer_conditionals5a_a: Essai d'imbriquer une boucle `tant que` dans
+          une boucle `répéter`.
+        courseD_farmer_conditionals5a_b: |-
+          La fermière a besoin d'avancer 5 fois au total pour arriver à la fin de la rangée.
+          Qu'est ce que la fermière a besoin encore de faire?
+        courseD_farmer_conditionals5a_c: Avance 5 fois. A chaque fois que tu avances,
+          enlève le tas de saleté en utilisant le bloc `tant que il y a une pile`.
+      courseD_farmer_while6:
+        courseD_farmer_conditionals6_a: Assure toi que tu utilises bien la boucle
+          `tant que` pour trouver combien de fois remplir chaque trou.
+        courseD_farmer_conditionals6_b: Note bien que la fermière a besoin d'avancer
+          et de descendre plusieurs fois dans le modèle d'escalier.
+        courseD_farmer_conditionals6_c: "Le modèle de marches d'escalier utilise les
+          blocs suivant\n\n-   avancer\n-   remplir\n-   tourner à droite\n-   avancer\n-
+          \  remplir \n-   tourner à gauche\n\nCombien de fois dois-tu utiliser ce
+          modèle de marches d'escalier?\n\nAssure toi d'utiliser le bloc `tant que
+          il y a un trou` pour remplir le trou."
+      courseD_farmer_while6_2018:
+        courseD_farmer_conditionals6_a: Assure toi que tu utilises bien la boucle
+          `tant que` pour trouver combien de fois remplir chaque trou.
+        courseD_farmer_conditionals6_b: Note bien que la fermière a besoin d'avancer
+          et de descendre plusieurs fois dans le modèle d'escalier.
+        courseD_farmer_conditionals6_c: "Le modèle de marches d'escalier utilise les
+          blocs suivant\n\n-   avancer\n-   remplir\n-   tourner à droite\n-   avancer\n-
+          \  remplir \n-   tourner à gauche\n\nCombien de fois dois-tu utiliser ce
+          modèle de marches d'escalier?\n\nAssure toi d'utiliser le bloc `tant que
+          il y a un trou` pour remplir le trou."
+      courseD_farmer_while6_2019:
+        courseD_farmer_conditionals6_a: Assure toi que tu utilises bien la boucle
+          `tant que` pour trouver combien de fois remplir chaque trou.
+        courseD_farmer_conditionals6_b: Note bien que la fermière a besoin d'avancer
+          et de descendre plusieurs fois dans le modèle d'escalier.
+        courseD_farmer_conditionals6_c: "Le modèle de marches d'escalier utilise les
+          blocs suivant\n\n-   avancer\n-   remplir\n-   tourner à droite\n-   avancer\n-
+          \  remplir \n-   tourner à gauche\n\nCombien de fois dois-tu utiliser ce
+          modèle de marches d'escalier?\n\nAssure toi d'utiliser le bloc `tant que
+          il y a un trou` pour remplir le trou."
+      courseD_farmer_while7:
+        courseD_farmer_conditionals8_a: Le bloc `tant que chemin devant` te permet
+          de continuer, même si tu ne sais pas combien de carrés sont dans le chemin.
+        courseD_farmer_conditionals8_b: Mettre une boucle `tant que chemin devant`
+          à l'intérieur d'une boucle `répéter` doit t'aider dans ce puzzle.
+        courseD_farmer_conditionals8_c: Qu'as tu besoin de faire à la fin de chaque
+          chemin?
+      courseD_farmer_while7_2018:
+        courseD_farmer_conditionals8_a: Le bloc `tant que chemin devant` te permet
+          de continuer, même si tu ne sais pas combien de carrés sont dans le chemin.
+        courseD_farmer_conditionals8_b: Mettre une boucle `tant que chemin devant`
+          à l'intérieur d'une boucle `répéter` doit t'aider dans ce puzzle.
+        courseD_farmer_conditionals8_c: Qu'as tu besoin de faire à la fin de chaque
+          chemin?
+      courseD_farmer_while7_2019:
+        courseD_farmer_conditionals8_a: Le bloc `tant que chemin devant` te permet
+          de continuer, même si tu ne sais pas combien de carrés sont dans le chemin.
+        courseD_farmer_conditionals8_b: Mettre une boucle `tant que chemin devant`
+          à l'intérieur d'une boucle `répéter` doit t'aider dans ce puzzle.
+        courseD_farmer_conditionals8_c: Qu'as tu besoin de faire à la fin de chaque
+          chemin?
+      courseD_farmer_while8:
+        courseD_farmer_conditionals8_a: Tu vas avoir besoin d'utiliser plus d'une
+          boucle `tant que`.
+        courseD_farmer_conditionals8_b: Tous les trous sont à la fin d'un chemin,
+          donc utilise `tant que chemin devant` avant d'utiliser `tant que il y a
+          un trou`.
+        courseD_farmer_conditionals8_c: Note que tu dois utiliser le code `tant que
+          chemin devant`, `tant que il y a trou` 6 fois.
+      courseD_farmer_while8_2018:
+        courseD_farmer_conditionals8_a: Tu vas avoir besoin d'utiliser plus d'une
+          boucle `tant que`.
+        courseD_farmer_conditionals8_b: Tous les trous sont à la fin d'un chemin,
+          donc utilise `tant que chemin devant` avant d'utiliser `tant que il y a
+          un trou`.
+        courseD_farmer_conditionals8_c: Note que tu dois utiliser le code `tant que
+          chemin devant`, `tant que il y a trou` 6 fois.
+      courseD_farmer_while8_2019:
+        courseD_farmer_conditionals8_a: Tu vas avoir besoin d'utiliser plus d'une
+          boucle `tant que`.
+        courseD_farmer_conditionals8_b: Tous les trous sont à la fin d'un chemin,
+          donc utilise `tant que chemin devant` avant d'utiliser `tant que il y a
+          un trou`.
+        courseD_farmer_conditionals8_c: Note que tu dois utiliser le code `tant que
+          chemin devant`, `tant que il y a trou` 6 fois.
+      courseD_farmer_while_challenge1:
+        courseD_farmer_while_challenge1_a: Chaque trou ou tas se trouve 1 espace derrière
+          la fin du chemin.
+        courseD_farmer_while_challenge1_b: Si tu utilises une boucle `tant que`, tu
+          peux dire à la fermière d'enlever un tas ou de remplir un trou, même s'il
+          n'y a rien. Cela veut dire que tu peux la programmer pour enlever n'importe
+          quelle saleté ou remplir n'importe quel trou, où qu'elle se trouve.
+        courseD_farmer_conditionals8_c: Il est possible de le résoudre sans utiliser
+          de boucles `répéter`. Pour faire ça, tu devras utiliser 4 boucles `tant
+          que`.
+      courseD_farmer_while_challenge1_2018:
+        courseD_farmer_while_challenge1_a: Chaque trou ou tas se trouve 1 espace derrière
+          la fin du chemin.
+        courseD_farmer_while_challenge1_b: Si tu utilises une boucle `tant que`, tu
+          peux dire à la fermière d'enlever un tas ou de remplir un trou, même s'il
+          n'y a rien. Cela veut dire que tu peux la programmer pour enlever n'importe
+          quelle saleté ou remplir n'importe quel trou, où qu'elle se trouve.
+        courseD_farmer_conditionals8_c: Il est possible de le résoudre sans utiliser
+          de boucles `répéter`. Pour faire ça, tu devras utiliser 4 boucles `tant
+          que`.
+      courseD_farmer_while_challenge1_2019:
+        courseD_farmer_while_challenge1_a: Chaque trou ou tas se trouve 1 espace derrière
+          la fin du chemin.
+        courseD_farmer_while_challenge1_b: Si tu utilises une boucle `tant que`, tu
+          peux dire à la fermière d'enlever un tas ou de remplir un trou, même s'il
+          n'y a rien. Cela veut dire que tu peux la programmer pour enlever n'importe
+          quelle saleté ou remplir n'importe quel trou, où qu'elle se trouve.
+        courseD_farmer_conditionals8_c: Il est possible de le résoudre sans utiliser
+          de boucles `répéter`. Pour faire ça, tu devras utiliser 4 boucles `tant
+          que`.
+      courseD_farmer_while_challenge2:
+        courseD_farmer_while_challenge1_a: Chaque trou ou tas se trouve 1 espace derrière
+          la fin du chemin.
+        courseD_farmer_while_challenge1_b: Si tu utilises une boucle `tant que`, tu
+          peux dire à la fermière d'enlever un tas ou de remplir un trou, même s'il
+          n'y a rien. Cela veut dire que tu peux la programmer pour enlever n'importe
+          quelle saleté ou remplir n'importe quel trou, en restant à la même place.
+        courseD_farmer_conditionals8_c: Il est possible de le résoudre sans utiliser
+          de boucles `répéter`. Pour faire ça, tu devras utiliser 4 boucles `tant
+          que`.
       courseD_harvester_nested_loops_challenge1:
         courseD_harvester_nested_loops_challenge1_a: 'Essaie de suivre ce chemin pour
           récolter tout le maïs! '
@@ -10287,13 +10651,23 @@ fr-FR:
 
           <title name="TIMES" config="3-10">5</title>
           </block></xml>
+      courseD_iceage_loops3_2019:
+        courseB_iceage_loops3_a: |-
+          Utilise ce nouveau bloc !
+           <xml><block type="controls_repeat_dropdown">
+              <title name="TIMES" config="2-10">5</title>
+            </block></xml>
       courseD_iceage_loops4:
         courseD_iceage_loops4_a: N’aie pas peur d’exécuter ton code pour voir ce qui
           se passe !
+        courseD_iceage_loops4_b: Essaie d’écrire les étapes que Scrat devrait suivre
+          pour arriver au gland. Vois-tu un motif ?
         courseD_iceage_loops4_c: Voici le chemin que Scrat devrait emprunter.
       courseD_iceage_loops4_2019:
         courseD_iceage_loops4_a: N’aie pas peur d’exécuter ton code pour voir ce qui
           se passe !
+        courseD_iceage_loops4_b: Essaie d’écrire les étapes que Scrat devrait suivre
+          pour arriver au gland. Vois-tu un motif ?
         courseD_iceage_loops4_c: Voici le chemin que Scrat devrait emprunter.
       courseD_iceage_loops6:
         courseD_iceage_loops6_b: Tu n’as besoin d’ajouter qu’**une** boucle !
@@ -10335,6 +10709,13 @@ fr-FR:
           processus !
         courseD_iceage_loops9_b: Ton code final devrait avoir **4** boucles.
         courseD_iceage_loops9_c: Scrat devrait suivre ce chemin pour obtenir le gland.
+      courseD_maze_intro4_2019:
+        courseC_maze_programming4_a: Tu peux tourner à gauche ou à droite du point
+          de vue de l'oiseau. Si tu te diriges à droite, tourner à droite te fera
+          aller vers le bas.
+        courseC_maze_programming4_b: Pour suive le chemin, avance et tourne dans un
+          sens, puis avance à nouveau et tourne dans le sens opposé. Avance une fois
+          de plus pour atteindre le cochon.
       courseD_maze_intro5a_2019:
         courseC_maze_programming5_a: Essaie d'utiliser le bouton "Etape" pour exécuter
           ton code ligne par ligne. Peux-tu deviner ce que tu dois faire ensuite ?
@@ -10505,6 +10886,10 @@ fr-FR:
         courseC_maze_programming4_b: Pour suive le chemin, avance et tourne dans un
           sens, puis avance à nouveau et tourne dans le sens opposé. Avance une fois
           de plus pour atteindre le cochon.
+      courseD_maze_ramp4_2019:
+        courseC_maze_programming4_b: Pour suive le chemin, avance et tourne dans un
+          sens, puis avance à nouveau et tourne dans le sens opposé. Avance une fois
+          de plus pour atteindre le cochon.
       courseD_maze_ramp5:
         courseC_maze_programming5_a: Essaie d'utiliser le bouton "Etape" pour exécuter
           ton code ligne par ligne. Peux-tu deviner ce que tu dois faire ensuite ?
@@ -10591,6 +10976,151 @@ fr-FR:
         courseD_maze_ramp7_c: |-
           Si tu souhaites simplifier ton code, tu peux mettre une boucle dans une autre!
           Cela s'appelle une **boucle imbriquée**.
+      courseD_maze_until1:
+        courseD_maze_until1_a: Est-ce qu'il y a des séquences que tu peux mettre dans
+          une boucle pour réduire ton code ?
+        courseD_maze_until1_b: Essai d'utiliser une boucle imbriqués pour résoudre
+          ce puzzle.
+      courseD_maze_until1_2018:
+        courseD_maze_until1_a: Est-ce qu'il y a des séquences que tu peux mettre dans
+          une boucle pour réduire ton code ?
+        courseD_maze_until1_b: Essai d'utiliser une boucle imbriqués pour résoudre
+          ce puzzle.
+      courseD_maze_until1_2019:
+        courseD_maze_until1_a: Est-ce qu'il y a des séquences que tu peux mettre dans
+          une boucle pour réduire ton code ?
+        courseD_maze_until1_b: Essai d'utiliser une boucle imbriqués pour résoudre
+          ce puzzle.
+      courseD_maze_until3:
+        courseD_maze_until3_a: |-
+          -   Que fait ton code ?
+          -   Qu’est-il censé faire ?
+          -   Qu’est-ce que ça veut dire ?
+        courseD_maze_until3_b: Si tu es bloqué, essai d'écrire les étapes sur une
+          feuille de papier et de trouver les emplacements qui se répétent.
+        courseD_maze_until3_c: Est-ce qu'il y a un modèle de marches d'escalier que
+          tu peux suivre pour ce puzzle?
+        courseD_maze_until3_d: N'oublie pas d'utiliser le bloc `répéter jusqu'à` pour
+          réduire ton code.
+      courseD_maze_until3_2018:
+        courseD_maze_until3_a: |-
+          -   Que fait ton code ?
+          -   Qu’est-il censé faire ?
+          -   Qu’est-ce que ça veut dire ?
+        courseD_maze_until3_b: Si tu es bloqué, essai d'écrire les étapes sur une
+          feuille de papier et de trouver les emplacements qui se répétent.
+        courseD_maze_until3_c: Est-ce qu'il y a un modèle de marches d'escalier que
+          tu peux suivre pour ce puzzle?
+        courseD_maze_until3_d: N'oublie pas d'utiliser le bloc `répéter jusqu'à` pour
+          réduire ton code.
+      courseD_maze_until3_2019:
+        courseD_maze_until3_a: |-
+          -   Que fait ton code ?
+          -   Qu’est-il censé faire ?
+          -   Qu’est-ce que ça veut dire ?
+        courseD_maze_until3_b: Si tu es bloqué, essai d'écrire les étapes sur une
+          feuille de papier et de trouver les emplacements qui se répétent.
+        courseD_maze_until3_c: Est-ce qu'il y a un modèle de marches d'escalier que
+          tu peux suivre pour ce puzzle?
+        courseD_maze_until3_d: N'oublie pas d'utiliser le bloc `répéter jusqu'à` pour
+          réduire ton code.
+      courseD_maze_until4:
+        courseD_maze_until4_a: |-
+          Utilise le bouton "Étape" pour passer dans ton code ligne par ligne.
+
+          -   Est-ce que tout fonctionne à la première étape?
+          -   Est-ce que tout fonctionne à la seconde étape?
+          -   Où est ce que cela ne va pas?
+        courseD_maze_until4_b: Est-ce qu'il y a un modèle de marches d'escalier que
+          tu peux suivre pour ce puzzle?
+        courseD_maze_until4_c: N'oublie pas d'utiliser le bloc `répéter jusqu'à` pour
+          réduire ton code.
+      courseD_maze_until4_2018:
+        courseD_maze_until4_a: |-
+          Utilise le bouton "Étape" pour passer dans ton code ligne par ligne.
+
+          -   Est-ce que tout fonctionne à la première étape?
+          -   Est-ce que tout fonctionne à la seconde étape?
+          -   Où est ce que cela ne va pas?
+        courseD_maze_until4_b: Est-ce qu'il y a un modèle de marches d'escalier que
+          tu peux suivre pour ce puzzle?
+        courseD_maze_until4_c: N'oublie pas d'utiliser le bloc `répéter jusqu'à` pour
+          réduire ton code.
+      courseD_maze_until4_2019:
+        courseD_maze_until4_a: |-
+          Utilise le bouton "Étape" pour passer dans ton code ligne par ligne.
+
+          -   Est-ce que tout fonctionne à la première étape?
+          -   Est-ce que tout fonctionne à la seconde étape?
+          -   Où est ce que cela ne va pas?
+        courseD_maze_until4_b: Est-ce qu'il y a un modèle de marches d'escalier que
+          tu peux suivre pour ce puzzle?
+        courseD_maze_until4_c: N'oublie pas d'utiliser le bloc `répéter jusqu'à` pour
+          réduire ton code.
+      courseD_maze_until5:
+        courseD_maze_until5_a: N'oublie pas d'utiliser `si chemin à gauche` pour que
+          le zombie continue de cherche un endroit où tourner.
+        courseD_maze_until5_b: Pour utiliser seulement un `avancer`, met le à l'intérieur
+          d'un bloc `répéter jusqu'à tournesol`.
+        courseD_maze_until5_c: Après chaque étape, le zombie devrait vérifier s'il
+          y a un chemin à gauche. Que devrait-il faire s'il en trouve un?
+      courseD_maze_until5_2018:
+        courseD_maze_until5_b: Pour utiliser seulement un `avancer`, met le à l'intérieur
+          d'un bloc `répéter jusqu'à tournesol`.
+      courseD_maze_until5_2019:
+        courseD_maze_until5_b: Pour utiliser seulement un `avancer`, met le à l'intérieur
+          d'un bloc `répéter jusqu'à tournesol`.
+      courseD_maze_until6:
+        courseD_maze_until6_a: Cette fois, essai le bloc `si chemin à droite` pour
+          garder le zombie sur la bonne voie.
+        courseD_maze_until6_b: Pour utiliser seulement un `avancer`, met le à l'intérieur
+          d'un bloc `répéter jusqu'à tournesol`.
+        courseD_maze_until6_c: Même s'il y a plus de tourner ici que sur le dernier
+          puzzle, ton code peut-être ipresque dentique grâce au bloc `répéter jusqu'à`!
+      courseD_maze_until6_2018:
+        courseD_maze_until6_b: Pour utiliser seulement un `avancer`, met le à l'intérieur
+          d'un bloc `répéter jusqu'à tournesol`.
+      courseD_maze_until6_2019:
+        courseD_maze_until6_b: Pour utiliser seulement un `avancer`, met le à l'intérieur
+          d'un bloc `répéter jusqu'à tournesol`.
+      courseD_maze_until7:
+        courseD_maze_until7_a: Tu n'as pas besoin que ton code soit plus long que
+          la dernière fois, juste parce que le labyrinthe l'est!
+        courseD_maze_until7_b: Même s'il y a plus de tourner ici que sur le dernier
+          puzzle, ton code peut-être ipresque dentique grâce au bloc `répéter jusqu'à`!
+        courseD_maze_until7_c: Souviens-toi de vérifier les chemins à gauche, parce
+          que tourner à droite t'amèneras en bas vers le mauvais chemin!
+      courseD_maze_until7_2018:
+        courseD_maze_until7_a: Tu n'as pas besoin que ton code soit plus long que
+          la dernière fois, juste parce que le labyrinthe l'est!
+        courseD_maze_until7_b: Même s'il y a plus de tourner ici que sur le dernier
+          puzzle, ton code peut-être ipresque dentique grâce au bloc `répéter jusqu'à`!
+      courseD_maze_until7_2019:
+        courseD_maze_until7_a: Tu n'as pas besoin que ton code soit plus long que
+          la dernière fois, juste parce que le labyrinthe l'est!
+        courseD_maze_until7_b: Même s'il y a plus de tourner ici que sur le dernier
+          puzzle, ton code peut-être ipresque dentique grâce au bloc `répéter jusqu'à`!
+      courseD_maze_until8:
+        courseD_maze_until8_a: Assure toi d'utiliser un bloc `Si/autre` pour garder
+          le zombie dans la bonne direction.
+        courseD_maze_until8_b: 'Avec ton bloc `si/autre`: s''il y a un chemin devant,
+          que ferais-tu ?'
+        courseD_maze_until8_c: 'Avec ton bloc `si/autre`: s''il n''y a pas un chemin
+          devant, de quel côté tournerais-tu?'
+      courseD_maze_until9:
+        courseD_maze_until8_a: Tu pourras continuer d'avancer tant que possible en
+          utilisant `si chemin devant`, en t'aidant à manquer les chemins avec des
+          plantes carnivores.
+        courseD_maze_until8_b: Dans quel direction aller s'il n'y a pas de chemin
+          devant ?
+        courseD_maze_until8_c: N'oublie pas d'utiliser le bloc `répéter jusqu'à` pour
+          rejoindre le tournesol!
+      courseD_maze_until9_2018:
+        courseD_maze_until8_c: N'oublie pas d'utiliser le bloc `répéter jusqu'à` pour
+          rejoindre le tournesol!
+      courseD_maze_until9_2019:
+        courseD_maze_until8_c: N'oublie pas d'utiliser le bloc `répéter jusqu'à` pour
+          rejoindre le tournesol!
       courseD_playLab_cond1:
         courseD_playLab_cond1_a: Pour résoudre ce défi, attache le bloc `déplacer
           l'acteur 1 vers le haut` à l'évènement `quand flèche vers le haut`.
@@ -10705,6 +11235,9 @@ fr-FR:
         courseC_maze_programming3_b: Souviens toi que tourner à droite et à gauche,
           c'est du point de vue de Scrat.
       courseD_scrat_ramp4:
+        courseC_maze_programming4_b: Pour suive le chemin, avance et tourne dans un
+          sens, puis avance à nouveau et tourne dans le sens opposé. Avance une fois
+          de plus pour atteindre le cochon.
         courseC_maze_programming4_c: N'aie pas peur de faire des erreurs! Essaie d'ajouter
           des blocs et d'exécuter ton code pour voie ce qui va se passer, même si
           tu penses que tu n'as pas résolu encore le puzzle.
@@ -11333,11 +11866,17 @@ fr-FR:
         courseE_farmer_concept2_c: Ton programme principal peut appeler cette fonction
           avec le bloc vert `fais quelque chose`.
       courseE_farmer_concept3:
+        grade3_robotFarmer_ConditionalsIntro_8_a: Le bloc `tant que chemin devant`
+          te permet de continuer, même si tu ne sais pas combien de carrés sont dans
+          le chemin.
         grade3_robotFarmer_ConditionalsIntro_8_b: Qu'est ce que tu devrais faire dès
           que tu as atteint la fin du chemin?
         grade3_robotFarmer_ConditionalsIntro_8_c: Utilise une boucle `répéter` pour
           exécuter ton code plusieurs fois pour chaque chemin droit.
       courseE_farmer_concept3_2018:
+        grade3_robotFarmer_ConditionalsIntro_8_a: Le bloc `tant que chemin devant`
+          te permet de continuer, même si tu ne sais pas combien de carrés sont dans
+          le chemin.
         grade3_robotFarmer_ConditionalsIntro_8_b: Qu'est ce que tu devrais faire dès
           que tu as atteint la fin du chemin?
         grade3_robotFarmer_ConditionalsIntro_8_c: Utilise une boucle `répéter` pour
@@ -12107,27 +12646,54 @@ fr-FR:
       courseF_artist_variables4:
         courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_artist_variables_challenge2:
+        courseF_artist_variables_challenge2_a: 'Les variables sont utiles car tu peux
+          les modifier à chaque fois avec une boucle. '
+        courseF_artist_variables_challenge2_c: Utiliser une variable pour ˋcôtés`et
+          une pour ˋlongueur` rend le code plus propre car tu peux boucler le même
+          code plusieurs fois au lieu de créer une nouvelle copie pour chaque ensemble
+          de nombres.
         courseF_artist_variables_challenge2_d: |-
           **Solution :**
 
           ![Solution](https://images.code.org/311b4a946cb8f3b4144b5075be6460a3-image-1469641878222.png)
       courseF_artist_variables_challenge2_2018:
+        courseF_artist_variables_challenge2_a: 'Les variables sont utiles car tu peux
+          les modifier à chaque fois avec une boucle. '
+        courseF_artist_variables_challenge2_c: Utiliser une variable pour ˋcôtés`et
+          une pour ˋlongueur` rend le code plus propre car tu peux boucler le même
+          code plusieurs fois au lieu de créer une nouvelle copie pour chaque ensemble
+          de nombres.
         courseF_artist_variables_challenge2_d: |-
           **Solution :**
 
           ![Solution](https://images.code.org/311b4a946cb8f3b4144b5075be6460a3-image-1469641878222.png)
       courseF_artist_variables_challenge2_2019:
+        courseF_artist_variables_challenge2_a: 'Les variables sont utiles car tu peux
+          les modifier à chaque fois avec une boucle. '
+        courseF_artist_variables_challenge2_c: Utiliser une variable pour ˋcôtés`et
+          une pour ˋlongueur` rend le code plus propre car tu peux boucler le même
+          code plusieurs fois au lieu de créer une nouvelle copie pour chaque ensemble
+          de nombres.
         courseF_artist_variables_challenge2_d: |-
           **Solution :**
 
           ![Solution](https://images.code.org/311b4a946cb8f3b4144b5075be6460a3-image-1469641878222.png)
+      courseF_bee_conditionals5:
+        courseF_bee_conditionals5_a: Pense à chaque côté du rectangle comme un chemin.
+          Configure une boucle imbriquée avec un bloc `répète` à l 'extérieur et une
+          boucle `tant que chemin devant` à l'intérieur. Sur combien de chemins l'abeille
+          a-t-elle besoin de bourdonner si elle a besoin de bourdonner sur chaque
+          côté avec une fleur?
+        courseF_bee_conditionals5_b: A l'intérieur du bloc `tant que chemin devant`,
+          tu devras avancer et vérifier qu'il ya une fleur. Comment tu vérifies qu'il
+          y a une fleur ? Qu'est ce que tu fais s'il y a une fleur?
       courseF_bee_conditionals8:
         courseF_bee_conditionals8_a: "**Souviens-toi :** Ce casse-tête change à chaque
           fois qu’il est exécuté. \n\nTu devras utiliser un bloc conditionnel (ˋsiˋ
           ou ˋsi / sinonˋ) pour résoudre le problème."
       courseF_bee_for_challenge2:
         courseF_bee_for_challenge2_a: "Jette un œil à cette option pour le mouvement :
-          \ \n\n\\!\\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)"
+          \ \n\n!\\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)"
         courseF_bee_for_challenge2_b: 'Essaie d’utiliser deux boucles ˋpour\` : une
           pour aller vers le haut et obtenir le nectar, et l’autre pour aller vers
           le bas et fabriquer le miel.'
@@ -12270,7 +12836,7 @@ fr-FR:
           </xml>
       courseF_bee_for_challenge2_2018:
         courseF_bee_for_challenge2_a: "Jette un œil à cette option pour le mouvement :
-          \ \n\n\\!\\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)"
+          \ \n\n!\\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)"
         courseF_bee_for_challenge2_b: 'Essaie d’utiliser deux boucles ˋpour\` : une
           pour aller vers le haut et obtenir le nectar, et l’autre pour aller vers
           le bas et fabriquer le miel.'
@@ -12336,7 +12902,7 @@ fr-FR:
           </xml>
       courseF_bee_for_challenge2_2019:
         courseF_bee_for_challenge2_a: "Jette un œil à cette option pour le mouvement :
-          \ \n\n\\!\\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)"
+          \ \n\n!\\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)"
         courseF_bee_for_challenge2_b: 'Essaie d’utiliser deux boucles ˋpour\` : une
           pour aller vers le haut et obtenir le nectar, et l’autre pour aller vers
           le bas et fabriquer le miel.'

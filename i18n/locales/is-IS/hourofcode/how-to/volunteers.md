@@ -1,7 +1,5 @@
 ---
 title: Leiðarvísir fyrir sjálfboðaliða á Klukkustund kóðunar
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

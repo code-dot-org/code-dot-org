@@ -1,7 +1,5 @@
 ---
 title: Vodič za Sat Kodiranja volontere
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

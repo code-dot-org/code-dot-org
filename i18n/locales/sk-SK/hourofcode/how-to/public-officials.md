@@ -1,7 +1,5 @@
 ---
 title: Návod pre verejných činiteľov
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

@@ -41,7 +41,7 @@
     "CONTROLS_FOREACH_INPUT_ITEM": "для каждого элемента",
     "CONTROLS_FOREACH_TOOLTIP": "Для каждого элемента в списке, присваивает переменной '%1' значение элемента  и выполняет указанные  команды.",
     "CONTROLS_FOR_HELPURL": "https://code.google.com/p/blockly/wiki/Loops#count_with",
-    "CONTROLS_FOR_INPUT_COUNTER": "",
+    "CONTROLS_FOR_INPUT_COUNTER": "для каждого %1 от %2 до %3 с шагом %4",
     "CONTROLS_FOR_INPUT_FROM_TO_BY": "от %1 до %2 с шагом %3",
     "CONTROLS_FOR_INPUT_WITH": "для",
     "CONTROLS_FOR_TOOLTIP": "Присваивает переменной %1 значения от начального до конечного числа с заданным шагом и выполняет указанные блоки.",

@@ -1,7 +1,5 @@
 ---
 title: Príručka - Ako na to pre dobrovoľníkov Hodiny kódu
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

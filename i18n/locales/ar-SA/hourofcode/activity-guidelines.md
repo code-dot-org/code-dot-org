@@ -1,6 +1,5 @@
 ---
 title: إرشادات النشاط
-layout: wide
 ---
 
 <style>

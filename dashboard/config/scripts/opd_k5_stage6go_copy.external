@@ -1,33 +1,25 @@
 name 'OPD-K5 Stage6Go_copy'
 skip_dialog true
 markdown <<MARKDOWN
-# Functions > Unplugged lessons
+# Unplugged Lesson: Songwriting
 
-Programmers are always looking for ways to make their code more efficient. One way that they do that is through **functions**, which allow them to reuse segments of code
+> A **function** is a piece of code that you can easily call over and over again.
 
-**1. Review "[Functions: Songwriting](https://curriculum.code.org/csf-19/coursee/14/)" Lesson Plan from Course E.**
+Programmers are always looking for ways to make their code more efficient. One way that they do that is through **functions**, which allow them to reuse segments of code.
+
+*** 
+
+## **1. Review "[Functions: Songwriting](https://curriculum.code.org/csf-19/coursee/14/)" Lesson Plan from Course E.**
 <br/>
 Course E is meant for students in Grade 4. Functions are not covered in Courses A-D. 
 
-**2. Watch the student video: Functions: Songwriting**
-<br/>
+## **2. Watch the student video: "Functions: Songwriting" (found in the lesson plan)**
 This is a video that you would show your students to help introduce the concept of functions and kick off the unplugged lesson.  
 
-[![](https://images.code.org/7fe2de2239edca27f26ae77cd0dc4c35-image-1571253900570.24.39 PM.png)](https://youtube.com/watch?v=5iDCKkI6y2Y)
-
-[Can't see the video? Click here](http://videos.code.org/2014/C3-songwriting-with-parameters.mp4)
-
-<br/>
-
-**3. Watch a teacher model this lesson: "Functions: Songwriting"**
-<br/>
+## **3. Watch a teacher model this lesson: "Functions: Songwriting" (found in the lesson plan)**
 This video is meant to be support for you as the teacher, if you are looking for tips on how to run this lesson.
-[![](https://images.code.org/cfa0204ea2de0de27dab274369069a58-image-1571253902872.24.46 PM.png)](https://youtube.com/watch?v=QuIMLel1mmw)
-[Can't see the video? Click here](https://videos.code.org/levelbuilder/unplugged-lessoninaction-songwritingwithfunctions-mp4.mp4)
-<br/>
 
----
+***
 
-> ## Reflect
-> How would you explain the concept of functions to your students?
+[![](https://images.code.org/c961585a0e79fc2934530d251dd84f53-image-1573080971047.55.58 PM.png)](https://curriculum.code.org/csf-19/coursee/14/)
 MARKDOWN

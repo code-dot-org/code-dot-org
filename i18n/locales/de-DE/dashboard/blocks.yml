@@ -462,7 +462,7 @@ de:
             '"vintage"': Altmodisch
             '"warm"': Rottöne
       Dancelab_setBackgroundEffectWithPalette:
-        text: Hintergrundeffekt einstellen {EFFECT} {PALETTE}
+        text: Hintergrundeffekt einstellen {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Keiner
@@ -595,6 +595,7 @@ de:
             '"rotation"': Rotation
             '"x"': horizontale Position
             '"y"': vertikale Position
+            '"tint"': Farbton
       Dancelab_setPropRandom:
         text: randomisieren Sie {SPRITE} {PROPERTY}
         options:
@@ -830,6 +831,8 @@ de:
             '1': Mitten
             '2': Höhen
       Dancelab_whenSetup:
+        text: Setup
+      Dancelab_whenSetup2:
         text: Setup
       gamelab_addBehaviorSimple:
         text: "{SPRITE} beginnt {BEHAVIOR}"
@@ -1207,6 +1210,8 @@ de:
         text: zufällige Farbe
       Mikelab_removeBehaviorSimple:
         text: Sprite {SPRITE} stoppt {BEHAVIOR}
+      Mikelab_repeatUntilComplete:
+        text: ewig wiederholen
       Mikelab_setBG:
         options:
           BG:

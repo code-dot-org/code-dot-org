@@ -1,7 +1,5 @@
 ---
 title: सार्वजनिक अधिकारियों के लिए मार्गदर्शिका कैसे करें
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

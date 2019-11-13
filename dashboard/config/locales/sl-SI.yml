@@ -587,6 +587,9 @@ sl:
   zendesk_too_young_message: Žal se mlajši uporabniki ne morejo prijaviti. Lahko pa
     brez prijave brskate po <a href="http://support.code.org">support.code.org</a>,
     ali pa zaprosite starše ali učitelje, da nas kontaktirajo.
+  zendesk_too_young_message_markdown: Žal se mlajši uporabniki ne morejo prijaviti.
+    Lahko pa brez prijave brskate po [support.code.org](http://support.code.org),
+    ali pa zaprosite starše ali učitelje, da nas kontaktirajo.
   progress:
     not_started: ni začeto
     in_progress: v teku

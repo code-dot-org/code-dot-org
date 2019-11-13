@@ -3,22 +3,8 @@ title: Спасибо за регистрацию на проведение Ча
 layout: wide
 nav: how_to_nav
 social:
-  og:title: Скоро наступит Час Программирования
-  og:description: Час Кода - это глобальное движение, охватывающее десятки миллионов
-    учеников в более чем 180 странах и более чем на 30 языках. В возрасте от 4 до
-    104.
-  og:image: http://hourofcode.com/images/hourofcode-2015-video-thumbnail.png
-  og:image:width: 1440
-  og:image:height: 900
-  og:url: http://hourofcode.com
   twitter:card: player
   twitter:site: "@codeorg"
-  twitter:url: http://hourofcode.com
-  twitter:title: Скоро наступит Час Программирования
-  twitter:description: Час Кода - это глобальное движение, охватывающее десятки миллионов
-    учеников в более чем 180 странах и более чем на 30 языках. В возрасте от 4 до
-    104.
-  twitter:image:src: http://hourofcode.com/images/hourofcode-2015-video-thumbnail.png
 ---
 
 # Спасибо за регистрацию на проведение Часа Кода!

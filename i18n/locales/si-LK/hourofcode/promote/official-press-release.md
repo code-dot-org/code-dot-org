@@ -1,7 +1,5 @@
 ---
 title: තෝරා පත් කරගන්නා ලද නිලධාරින් Hour of Code සඳහා නිල නිවේදන
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

@@ -408,6 +408,8 @@ ga:
             MOVES.Rest: Dada
       Mikelab_randomColor:
         text: dath randamach
+      Mikelab_repeatUntilComplete:
+        text: go deo na ndeor
       Mikelab_setBG:
         options:
           BG:

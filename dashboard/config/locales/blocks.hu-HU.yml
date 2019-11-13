@@ -462,7 +462,7 @@ hu:
             '"vintage"': Régi
             '"warm"': Vörösek
       Dancelab_setBackgroundEffectWithPalette:
-        text: háttéreffekt beállítása {EFFECT} {PALETTE}
+        text: háttéreffekt beállítása {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Egyik sem
@@ -595,6 +595,7 @@ hu:
             '"rotation"': forgás
             '"x"': vízszintes helyzet
             '"y"': függőleges helyzet
+            '"tint"': árnyalat
       Dancelab_setPropRandom:
         text: "{SPRITE} {PROPERTY} legyen véletlenszerű"
         options:
@@ -814,6 +815,8 @@ hu:
             '1': közepes
             '2': magas
       Dancelab_whenSetup:
+        text: beállítás
+      Dancelab_whenSetup2:
         text: beállítás
       gamelab_addBehaviorSimple:
         text: szereplő {SPRITE} elkezd {BEHAVIOR}
@@ -1198,6 +1201,8 @@ hu:
         text: Véletlen szín
       Mikelab_removeBehaviorSimple:
         text: sprite {SPRITE} abbahagyja {BEHAVIOR}
+      Mikelab_repeatUntilComplete:
+        text: ismételd végtelenszer
       Mikelab_setBG:
         options:
           BG:

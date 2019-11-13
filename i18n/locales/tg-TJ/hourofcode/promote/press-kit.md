@@ -1,7 +1,5 @@
 ---
 title: Маводҳо барои воситаҳои ахбори омма
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

@@ -1,7 +1,5 @@
 ---
 title: კოდის ერთი საათის პრეს-რელიზი
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

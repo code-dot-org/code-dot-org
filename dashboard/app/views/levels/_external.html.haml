@@ -31,8 +31,12 @@
 
 - if video && use_large_video_player
   .clear
-  .video-container.external-video-container
-  %a.btn.btn-large.btn-primary.next-stage.submitButton.pull-right= t('continue')
+  .video-container.external-video-container{{style: 'max-width: 970px; margin: auto'}}
+  .button-box{{style: 'width: 970px; margin: auto'}}
+    %a.btn.btn-large.btn-primary.next-stage.submitButton.pull-right= t('continue')
+    - if video.download
+      %a.video-download.btn.btn-large.pull-left{href: video.download}
+        = t('video.download')
 
 .clear
 

@@ -1768,8 +1768,6 @@ nn:
               name: Bygge eit fundament
             Nested Loops:
               name: Løkker i løkke
-          title: Ekspresskurs
-          assignment_family_title: Ekspresskurs
         pre-express-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -2447,3 +2445,24 @@ nn:
             Dance Party:
               name: Dansefest
           description: Programmer din egen dansefest du kan dele med vennene dine!
+        k5-onlinepd-copy:
+          stages:
+            Computer Science Fundamentals:
+              name: Grunnleggande informatikk
+            Next Steps:
+              name: Neste steg
+            Loops:
+              name: Løkker
+            Conditionals:
+              name: Betingelser
+            Events:
+              name: Hendingar
+            Functions:
+              name: Funksjonar
+            Variables:
+              name: Variablar
+            For Loops:
+              name: For-løkker
+        dance-extras-2019:
+          title: Fortsett å danse
+          description: Fortsett etter den første timen med større prosjektideer.

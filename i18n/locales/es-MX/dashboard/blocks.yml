@@ -82,6 +82,7 @@ es-MX:
             '"x"': posición horizontal
             '"y"': posición vertical
       Dancelab_changePropEachBy:
+        text: cambiar {GROUP} {PROPERTY} por {VAL}
         options:
           GROUP:
             sprites: todo
@@ -178,6 +179,8 @@ es-MX:
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_everyMeasuresRange:
+        text: 'repetir cada {N} medidas después de {START} '
       Dancelab_everySeconds:
         text: 'cada {N} {UNIT} '
         options:
@@ -264,6 +267,7 @@ es-MX:
             "{x: 300, y: 300}": abajo a la derecha
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": al azar
       Dancelab_jumpToEach:
+        text: saltar de {GROUP} a {LOCATION}
         options:
           GROUP:
             sprites: todo
@@ -463,7 +467,7 @@ es-MX:
             '"vintage"': Vintage
             '"warm"': Tibio
       Dancelab_setBackgroundEffectWithPalette:
-        text: establecer efecto de fondo {EFFECT} {PALETTE}
+        text: establecer efecto de fondo {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Ninguna
@@ -596,6 +600,7 @@ es-MX:
             '"rotation"': rotación
             '"x"': posición horizontal
             '"y"': posición vertical
+            '"tint"': tinte
       Dancelab_setPropRandom:
         text: distribuye aleatoriamente {SPRITE} {PROPERTY}
         options:
@@ -608,6 +613,7 @@ es-MX:
             '"y"': posición vertical
             '"tint"': tinte
       Dancelab_setPropRandomEach:
+        text: distribuir {GROUP} {PROPERTY} aleatoriamente
         options:
           GROUP:
             sprites: todo
@@ -707,6 +713,7 @@ es-MX:
             '"mid"': medio
             '"treble"': agudos
       Dancelab_startMappingEach:
+        text: "{GROUP} comienza {PROPERTY} siguiendo {RANGE}"
         options:
           GROUP:
             sprites: todo
@@ -750,6 +757,7 @@ es-MX:
             '"mid"': medio
             '"treble"': agudos
       Dancelab_stopMappingEach:
+        text: "{GROUP} se detiene {PROPERTY} siguiendo {RANGE}"
         options:
           GROUP:
             sprites: todo
@@ -831,6 +839,8 @@ es-MX:
             '1': medio
             '2': agudos
       Dancelab_whenSetup:
+        text: establecer
+      Dancelab_whenSetup2:
         text: establecer
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} comienza {BEHAVIOR}
@@ -1090,6 +1100,17 @@ es-MX:
         text: coordenada y de {SPRITE}
       Mikelab_addBehaviorSimple:
         text: sprite {SPRITE} comienza {BEHAVIOR}
+      Mikelab_addTrainingData:
+        text: 'añadir datos de entrenamiento: {NAME},{LOCATION}'
+        options:
+          NAME:
+            "{x: 201, y: 100}": objeto
+            "{x: 200, y: 100}": pez
+          LOCATION:
+            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": pez
+            "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": sin pez
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": mi-etiqueta
+            "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": no es mi-etiqueta
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1110,6 +1131,8 @@ es-MX:
             "{x: 300, y: 100}": arriba a la derecha
             "{x: 100, y: 300}": abajo a la izquierda
             "{x: 300, y: 300}": abajo a la derecha
+      Mikelab_getNext:
+        text: obtener siguiente objeto
       Mikelab_getProp:
         options:
           PROPERTY:
@@ -1219,6 +1242,12 @@ es-MX:
           {STATEMENT}
       Mikelab_hasBehavior:
         text: "{SPRITE} actualmente es {BEHAVIOR}"
+      Mikelab_hideFish:
+        text: eliminar {TRASH}
+        options:
+          TRASH:
+            object: objeto
+            fish: pez
       Mikelab_ifDanceIs:
         text: |-
           Si {SPRITE} está haciendo {DANCE}
@@ -1236,6 +1265,30 @@ es-MX:
             MOVES.Kick: Estrella
             MOVES.ThisOrThat: Esto o aquello
             MOVES.Rest: Ninguna
+      Mikelab_ifLabel:
+        text: |-
+          si {DANCE}
+          hacer {DO1} si no {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: pez
+            MOVES.Clown: mi-etiqueta
+      Mikelab_ifRecognizeLabel:
+        text: |-
+          si reconoce objeto como {DANCE}
+          hacer {DO1} si no {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: pez
+            MOVES.Clown: mi-etiqueta
+      Mikelab_ifRecognizeLabelOnly:
+        text: |-
+          si reconoce objeto como {DANCE}
+          hacer {DO1}
+        options:
+          DANCE:
+            MOVES.ClapHigh: pez
+            MOVES.Clown: no es mi-etiqueta
       Mikelab_locationAt:
         text: 'ubicación x: {X} y: {Y}'
       Mikelab_location_picker:
@@ -1244,6 +1297,12 @@ es-MX:
         text: color al azar
       Mikelab_removeBehaviorSimple:
         text: sprite {SPRITE} detiene {BEHAVIOR}
+      Mikelab_repeatUntilComplete:
+        text: Repetir para siempre
+      Mikelab_sendBad:
+        text: mover objeto a la izquierda
+      Mikelab_sendGood:
+        text: mover objeto a la derecha
       Mikelab_setBG:
         options:
           BG:
@@ -1301,6 +1360,12 @@ es-MX:
             '"d"': D
       Mikelab_whenMouseClicked:
         text: cuando se hace clic con el ratón
+      Mikelab_whenYesNoClicked:
+        text: cuando se hace clic en {KEY}
+        options:
+          KEY:
+            '"yes"': sí
+            '"no"': 'no'
       Mikelab_whileKeyPressed:
         options:
           KEY:

@@ -1,7 +1,5 @@
 ---
 title: Spargi la voce
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

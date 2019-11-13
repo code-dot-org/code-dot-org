@@ -3,21 +3,8 @@ title: Terima kasih karena telah mendaftar sebagai penyelengara Hour of Code!
 layout: wide
 nav: how_to_nav
 social:
-  og:title: Hour of Code akan segera hadir
-  og:description: Hour of Code adalah gerakan mendunia yang mencapai sepuluh juta
-    pelajar dari lebih 180+ negara dan lebih dari 30 bahasa. Dari umur 4 sampai 104.
-  og:image: http://hourofcode.com/images/hourofcode-2015-video-thumbnail.png
-  og:image:width: 1440
-  og:image:height: 900
-  og:url: http://hourofcode.com
   twitter:card: player
   twitter:site: "@codeorg"
-  twitter:url: http://hourofcode.com
-  twitter:title: Hour of Code akan segera hadir
-  twitter:description: Hour of Code adalah gerakan mendunia yang mencapai sepuluh
-    juta pelajar dari lebih 180+ negara dan lebih dari 30 bahasa. Dari umur 4 sampai
-    104.
-  twitter:image:src: http://hourofcode.com/images/hourofcode-2015-video-thumbnail.png
 ---
 
 # Terima kasih karena telah mendaftar sebagai penyelengara Hour of Code!

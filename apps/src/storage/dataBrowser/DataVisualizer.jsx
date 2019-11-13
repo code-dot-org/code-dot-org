@@ -2,20 +2,24 @@ import React from 'react';
 import Radium from 'radium';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
+import _ from 'lodash';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 import DropdownField from './DropdownField';
 import * as dataStyles from './dataStyles';
 import * as rowStyle from '@cdo/apps/applab/designElements/rowStyle';
 import GoogleChart from '@cdo/apps/applab/GoogleChart';
+import CrossTabChart from './CrossTabChart';
 
 const INITIAL_STATE = {
   isVisualizerOpen: false,
   chartTitle: '',
   chartType: '',
-  numBins: 0,
+  bucketSize: 0,
   values: '',
   xValues: '',
-  yValues: ''
+  yValues: '',
+  parsedRecords: [],
+  numericColumns: []
 };
 
 class DataVisualizer extends React.Component {
@@ -38,42 +42,131 @@ class DataVisualizer extends React.Component {
   };
 
   handleClose = () => {
-    this.setState({isVisualizerOpen: false});
+    this.setState({...INITIAL_STATE});
   };
 
   aggregateRecordsByColumn = (records, columnName) => {
-    let counts = {};
-    records.forEach(record => {
-      let value = record[columnName];
-      counts[value] = (counts[value] || 0) + 1;
-    });
-    let chartData = [];
-    Object.keys(counts).forEach(key => {
-      chartData.push({[columnName]: key, count: counts[key]});
-    });
-    return chartData;
+    const counts = _.countBy(records, r => r[columnName]);
+
+    return _.map(counts, (count, key) => ({[columnName]: key, count}));
   };
 
   updateChart = () => {
     const targetDiv = document.getElementById('chart-area');
-    const records =
-      Object.keys(this.props.tableRecords).length > 0 &&
-      this.props.tableRecords.map(tableRecord => JSON.parse(tableRecord));
-    if (this.state.chartType === 'Bar Chart' && this.state.values) {
-      var chart = new GoogleChart.MaterialBarChart(targetDiv);
-      const chartData = this.aggregateRecordsByColumn(
-        records,
-        this.state.values
-      );
-      chart.drawChart(chartData, [this.state.values, 'count']);
+    if (!targetDiv) {
+      return;
+    }
+
+    let chart;
+    let chartData;
+    let columns;
+    const options = {};
+    switch (this.state.chartType) {
+      case 'Bar Chart':
+        if (this.state.values) {
+          chart = new GoogleChart.MaterialBarChart(targetDiv);
+          chartData = this.aggregateRecordsByColumn(
+            this.state.parsedRecords,
+            this.state.values
+          );
+          columns = [this.state.values, 'count'];
+        }
+        break;
+      case 'Histogram':
+        if (this.state.values && this.state.bucketSize) {
+          options.histogram = {bucketSize: this.state.bucketSize};
+          chart = new GoogleChart.Histogram(targetDiv);
+          chartData = this.state.parsedRecords;
+          columns = [this.state.values];
+        }
+        break;
+      case 'Cross Tab':
+        // Cross Tab is rendered by React, so no Google Chart is required.
+        break;
+      case 'Scatter Plot':
+        if (this.state.xValues && this.state.yValues) {
+          chart = new GoogleChart.MaterialScatterChart(targetDiv);
+          chartData = this.state.parsedRecords;
+          columns = [this.state.xValues, this.state.yValues];
+        }
+        break;
+      default:
+        console.warn(`unknown chart type ${this.state.chartType}`);
+        break;
+    }
+    if (chart && chartData) {
+      chart.drawChart(chartData, columns, options);
     }
   };
 
+  parseRecords = () => {
+    if (Object.keys(this.props.tableRecords).length === 0) {
+      return [];
+    } else {
+      let parsedRecords = [];
+      this.props.tableRecords.forEach(record => {
+        if (record) {
+          parsedRecords.push(JSON.parse(record));
+        }
+      });
+      return parsedRecords;
+    }
+  };
+
+  findNumericColumns = records => {
+    return this.props.tableColumns.filter(
+      column =>
+        records.filter(
+          record =>
+            typeof record[column] === 'undefined' ||
+            typeof record[column] === 'number'
+        ).length === records.length
+    );
+  };
+
+  componentDidUpdate(previousProps, prevState) {
+    const visualizerJustOpened =
+      !prevState.isVisualizerOpen && this.state.isVisualizerOpen;
+
+    const recordsChangedWithVisualizerOpen =
+      this.props.tableRecords !== previousProps.tableRecords &&
+      this.state.isVisualizerOpen;
+
+    if (visualizerJustOpened || recordsChangedWithVisualizerOpen) {
+      let parsedRecords = this.parseRecords();
+      let numericColumns = this.findNumericColumns(parsedRecords);
+      this.setState({
+        parsedRecords: parsedRecords,
+        numericColumns: numericColumns
+      });
+    }
+  }
+
   render() {
-    this.updateChart();
+    if (
+      this.state.isVisualizerOpen &&
+      this.props.tableRecords &&
+      this.state.chartType
+    ) {
+      this.updateChart();
+    }
+
+    let options = this.props.tableColumns;
+    let disabledOptions = [];
+
+    const disableNonNumericColumns =
+      this.state.chartType === 'Scatter Plot' ||
+      this.state.chartType === 'Histogram';
+
+    if (disableNonNumericColumns) {
+      disabledOptions = _.difference(
+        this.props.tableColumns,
+        this.state.numericColumns
+      );
+    }
 
     const modalBody = (
-      <div>
+      <div style={{overflow: 'auto', maxHeight: '90%'}}>
         <h1> Explore {this.props.tableName} </h1>
         <h2> Overview </h2>
         <div id="selection-area">
@@ -96,12 +189,14 @@ class DataVisualizer extends React.Component {
           />
 
           {this.state.chartType === 'Histogram' && (
-            <div id="numBinsRow" style={rowStyle.container}>
-              <label style={rowStyle.description}>Bins</label>
+            <div style={rowStyle.container}>
+              <label style={rowStyle.description}>Bucket Size</label>
               <input
                 style={rowStyle.input}
-                value={this.state.numBins}
-                onChange={event => this.setState({numBins: event.target.value})}
+                value={this.state.bucketSize}
+                onChange={event =>
+                  this.setState({bucketSize: event.target.value})
+                }
               />
             </div>
           )}
@@ -109,7 +204,8 @@ class DataVisualizer extends React.Component {
             this.state.chartType === 'Histogram') && (
             <DropdownField
               displayName="Values"
-              options={this.props.tableColumns}
+              options={options}
+              disabledOptions={disabledOptions}
               value={this.state.values}
               onChange={event => this.setState({values: event.target.value})}
             />
@@ -120,20 +216,31 @@ class DataVisualizer extends React.Component {
             <div>
               <DropdownField
                 displayName="X Values"
-                options={this.props.tableColumns}
+                options={options}
+                disabledOptions={disabledOptions}
                 value={this.state.xValues}
                 onChange={event => this.setState({xValues: event.target.value})}
               />
               <DropdownField
                 displayName="Y Values"
-                options={this.props.tableColumns}
+                options={options}
+                disabledOptions={disabledOptions}
                 value={this.state.yValues}
                 onChange={event => this.setState({yValues: event.target.value})}
               />
             </div>
           )}
         </div>
-        <div id="chart-area" />
+        {this.state.chartType === 'Cross Tab' ? (
+          <CrossTabChart
+            parsedRecords={this.state.parsedRecords}
+            numericColumns={this.state.numericColumns}
+            rowName={this.state.xValues}
+            columnName={this.state.yValues}
+          />
+        ) : (
+          <div id="chart-area" />
+        )}
       </div>
     );
 

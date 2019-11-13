@@ -8,14 +8,18 @@ import libraryParser from './libraryParser';
 import i18n from '@cdo/locale';
 import PadAndCenter from '@cdo/apps/templates/teacherDashboard/PadAndCenter';
 import {Heading1, Heading2} from '@cdo/apps/lib/ui/Headings';
+import annotationList from '@cdo/apps/acemode/annotationList';
 import Spinner from '../../pd/components/spinner';
+import Button from '@cdo/apps/templates/Button';
 
 const styles = {
   alert: {
-    color: 'red'
+    color: 'red',
+    width: '90%'
   },
   libraryBoundary: {
-    padding: 10
+    padding: 10,
+    width: '90%'
   },
   largerCheckbox: {
     width: 20,
@@ -28,10 +32,36 @@ const styles = {
   textarea: {
     width: 400
   },
-  centerSpinner: {
+  centerContent: {
     display: 'flex',
     justifyContent: 'center'
+  },
+  copy: {
+    cursor: 'copy',
+    width: 300,
+    height: 25
+  },
+  button: {
+    marginLeft: 10,
+    marginRight: 10
   }
+};
+
+function select(event) {
+  event.target.select();
+}
+
+/**
+ * @readonly
+ * @enum {string}
+ */
+export const PublishState = {
+  LOADING: 'loading',
+  DONE_LOADING: 'done_loading',
+  PUBLISHED: 'published',
+  ERROR_PUBLISH: 'error_publish',
+  CODE_ERROR: 'code_error',
+  NO_FUNCTIONS: 'no_functions'
 };
 
 class LibraryCreationDialog extends React.Component {
@@ -44,7 +74,7 @@ class LibraryCreationDialog extends React.Component {
   state = {
     librarySource: '',
     sourceFunctionList: [],
-    loadingFinished: false,
+    publishState: PublishState.LOADING,
     libraryName: '',
     canPublish: false
   };
@@ -56,24 +86,44 @@ class LibraryCreationDialog extends React.Component {
   }
 
   onOpen = () => {
+    var error = annotationList.getJSLintAnnotations().find(annotation => {
+      return annotation.type === 'error';
+    });
+    if (error) {
+      this.setState({publishState: PublishState.CODE_ERROR});
+      return;
+    }
+
     dashboard.project.getUpdatedSourceAndHtml_(response => {
+      let functionsList = libraryParser.getFunctions(response.source);
+      if (!functionsList || functionsList.length === 0) {
+        this.setState({publishState: PublishState.NO_FUNCTIONS});
+        return;
+      }
       this.setState({
         libraryName: libraryParser.sanitizeName(
-          dashboard.project.getCurrentName()
+          dashboard.project.getLevelName()
         ),
         librarySource: response.source,
-        loadingFinished: true,
-        sourceFunctionList: libraryParser.getFunctions(response.source)
+        publishState: PublishState.DONE_LOADING,
+        sourceFunctionList: functionsList
       });
     });
   };
 
   handleClose = () => {
-    this.setState({loadingFinished: false});
+    this.setState({publishState: PublishState.LOADING});
     this.props.onClose();
   };
 
-  publish = () => {
+  copyChannelId = () => {
+    let channelId = document.getElementById('library-sharing');
+    channelId.select();
+    document.execCommand('copy');
+  };
+
+  publish = event => {
+    event.preventDefault();
     let formElements = this.formElements.elements;
     let selectedFunctionList = [];
     let libraryDescription = '';
@@ -97,14 +147,14 @@ class LibraryCreationDialog extends React.Component {
       libraryJson,
       error => {
         console.warn(`Error publishing library: ${error}`);
+        this.setState({publishState: PublishState.ERROR_PUBLISH});
       },
-      data => {
-        console.log(
-          `Successfully published library. VersionID: ${data.versionId}`
-        );
+      () => {
+        this.setState({publishState: PublishState.PUBLISHED});
       }
     );
     dashboard.project.setLibraryName(this.state.libraryName);
+    dashboard.project.setLibraryDescription(libraryDescription);
   };
 
   validateInput = () => {
@@ -122,14 +172,19 @@ class LibraryCreationDialog extends React.Component {
     }
   };
 
+  displayError = errorMessage => {
+    return <div>{errorMessage}</div>;
+  };
+
+  displayLoadingState = () => {
+    return (
+      <div style={styles.centerContent}>
+        <Spinner />
+      </div>
+    );
+  };
+
   displayFunctions = () => {
-    if (!this.state.loadingFinished) {
-      return (
-        <div style={styles.centerSpinner}>
-          <Spinner />
-        </div>
-      );
-    }
     let keyIndex = 0;
     return (
       <div>
@@ -174,18 +229,73 @@ class LibraryCreationDialog extends React.Component {
               </div>
             );
           })}
-          <input
-            className="btn btn-primary"
-            type="submit"
-            value={i18n.publish()}
-            disabled={!this.state.canPublish}
-          />
+          <div>
+            <input
+              className="btn btn-primary"
+              type="submit"
+              value={i18n.publish()}
+              disabled={!this.state.canPublish}
+            />
+            {this.state.publishState === PublishState.ERROR_PUBLISH && (
+              <div>
+                <p id="error-alert" style={styles.alert}>
+                  {i18n.libraryPublishFail()}
+                </p>
+              </div>
+            )}
+          </div>
         </form>
       </div>
     );
   };
 
+  displaySuccess = () => {
+    return (
+      <div>
+        <Heading2>
+          <b>{i18n.libraryPublishTitle()}</b>
+          {this.state.libraryName}
+        </Heading2>
+        <div>
+          <p>{i18n.libraryPublishExplanation()}</p>
+          <div style={styles.centerContent}>
+            <input
+              type="text"
+              id="library-sharing"
+              onClick={select}
+              readOnly="true"
+              value={dashboard.project.getCurrentId()}
+              style={styles.copy}
+            />
+            <Button
+              onClick={this.copyChannelId}
+              text={i18n.copyId()}
+              style={styles.button}
+            />
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   render() {
+    let bodyContent;
+    switch (this.state.publishState) {
+      case PublishState.LOADING:
+        bodyContent = this.displayLoadingState();
+        break;
+      case PublishState.PUBLISHED:
+        bodyContent = this.displaySuccess();
+        break;
+      case PublishState.CODE_ERROR:
+        bodyContent = this.displayError(i18n.libraryCodeError());
+        break;
+      case PublishState.NO_FUNCTIONS:
+        bodyContent = this.displayError(i18n.libraryNoFunctonsError());
+        break;
+      default:
+        bodyContent = this.displayFunctions();
+    }
     return (
       <Dialog
         isOpen={this.props.dialogIsOpen}
@@ -196,7 +306,7 @@ class LibraryCreationDialog extends React.Component {
           <PadAndCenter>
             <div style={styles.libraryBoundary}>
               <Heading1>{i18n.libraryExportTitle()}</Heading1>
-              {this.displayFunctions()}
+              {bodyContent}
             </div>
           </PadAndCenter>
         </Body>

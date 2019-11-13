@@ -23,11 +23,13 @@
     attributes:
       user:
         name: Visningsnavn
-        name_example: Kallenavn<br/>(f.eks Kule Knut eller Tøffe Trine)
+        name_example: Kallenavn (f.eks Kule Knut eller Tøffe Trine)
         email: E-post
         parent_email: Foreldre/foresatt epost
         personal_email: Personlig e-post adresse <a href="%{url}"> (Klikk her hvis
           du ikke har en e-postadresse)</a>
+        personal_email_markdown: Personlig e-post adresse [(Klikk her hvis du ikke
+          har en e-postadresse)](%{url})
         username: brukernavn
         password: Passord
         password_confirmation: Bekreftelse på passord
@@ -38,8 +40,12 @@
         edit_header: Rediger kontodetaljer
         finish_sign_up_header: Fullfør oppretting av kontoen
         finish_sign_up_subheader: Fyll ut for å gjøre ferdig Code.org-konto for <strong>%{email}</strong>.
+        finish_sign_up_subheader_markdown: Fyll ut for å gjøre ferdig Code.org-konto
+          for **%{email}**.
         finish_sign_up_subheader_provider: Fyll ut følgende informasjon for å fullføre
           opprettelsen av en Code.org konto med <strong>%{provider}</strong> for <strong>%{email}</strong>.
+        finish_sign_up_subheader_provider_markdown: Fyll ut følgende informasjon for
+          å fullføre opprettelsen av en Code.org konto med **%{provider}** for **%{email}**.
         error:
           future: ikke mulig å være i framtiden
   beta: beta
@@ -110,6 +116,9 @@
     overview: Registrer deg for å følge fremdriften din eller administrere klasserommet.
       <a href="/">Du kan bla gjennom de ulike scenene og oppgavene</a> uten en konto,
       men du må registrere deg for å lagre fremgang og prosjekter.
+    overview_markdown: Registrer deg for å følge fremdriften din eller administrere
+      klasserommet. [Du kan bla gjennom de ulike scenene og oppgavene](/) uten en
+      konto, men du må registrere deg for å lagre fremgang og prosjekter.
     hoc_already_signed_up_heading: Kom i gang uten å logge inn
     hoc_already_signed_up_content: Du er meldt på til Kodetimen! Dere trenger ikke
       å logge inn i Code Studio for å delta. For å komme i gang, <a href="https://code.org/learn">velg
@@ -123,6 +132,11 @@
       å tilordne kurs til elever og se fremgangen. <a href="%{studio_url}">Du kan
       også fortsette å bla i de forskjellige nivåene og oppgavene</a> uten å lage
       en konto.
+    hoc_already_signed_up_content_post_hoc_markdown: Takk for at du arrangerer Kodetimen.
+      For å logge inn på Code Studio, trenger du å lage et passord til kontoen din.
+      Dette vil la deg lagre fremgangen din og styre klasserommet. Du vil ha mulighet
+      til å tilordne kurs til elever og se fremgangen. [Du kan også fortsette å bla
+      i de forskjellige nivåene og oppgavene](%{studio_url}) uten å lage en konto.
     teacher_educator_guide: Se lærerveiledningen
     title: Registrer deg på Code.org
     school_name: Skolens navn (valgfritt)
@@ -445,10 +459,18 @@
       Code.org <a href='%{terms_of_service_url}', target='_blank'> sine vilkår for
       bruk</a>. Hvis jeg er under 13 år, bekrefter jeg at jeg har mine foreldre eller
       verges tillatelse til å bruke Code.org tjenestene selv uten en lærer.
+    create_personal_login_terms_markdown: Ved å opprette en personlig pålogging, godtar
+      jeg Code.org [sine vilkår for bruk](%{terms_of_service_url}). Hvis jeg er under
+      13 år, bekrefter jeg at jeg har mine foreldre eller verges tillatelse til å
+      bruke Code.org tjenestene selv uten en lærer.
     create_personal_login_email_note: 'Merk: Epostadresser er ikke lagret i et format
       som tillater oss å kontakte elevene. Elevene vil aldri få epost fra Code.org,
       unntatt ved passordgjenoppretting. Se våre <a href=''%{privacy_policy_url}'',
       target=''_blank''> retningslinjer for personvern</a> for mer informasjon.'
+    create_personal_login_email_note_markdown: 'Merk: Epostadresser er ikke lagret
+      i et format som tillater oss å kontakte elevene. Elevene vil aldri få epost
+      fra Code.org, unntatt ved passordgjenoppretting. Se våre [retningslinjer for
+      personvern](%{privacy_policy_url}) for mer informasjon.'
     enter_new_login_info: Angi ny påloggingsinformasjon
     confirm_secret_words: Bekreft at det er deg ved å angi gjeldende hemmelige ord
     parent_email_label: Foreldre/foresatte e-post (valgfritt)
@@ -837,6 +859,12 @@
       på Code Studio</i>. Dette er viktig for oss, og vi håper det setter en ny personvernstandard
       for elever i opplæringsteknologi. Vi har sendt deg en oppsummering av øvrige
       endringer via epost.'
+    intro_desc_markdown: 'Vi har oppdatert våre tjenestebetingelser og personvernbetingelser,
+      som du kan se nedenunder. Endringene gjelder fra 24 august 2016. Den største
+      endringen: Vi vil _ikke lenger lagre epost-adressene til elevenes kontoer på
+      Code Studio_. Dette er viktig for oss, og vi håper det setter en ny personvernstandard
+      for elever i opplæringsteknologi. Vi har sendt deg en oppsummering av øvrige
+      endringer via epost.'
     intro_instructions: Du vil måtte akseptere disse nye betingelsene for at elever
       yngre enn 13 år kan ha full tilgang på all den nyeste funksjonaliteten i Code
       Studio. Når du registrerer en konto for en elev under 13, vil du måtte bekrefte
@@ -847,6 +875,8 @@
     privacy_notice: Personvernerklæring
     accept_label: Jeg aksepterer de oppdaterte <a href="%{tos_url}" target="_blank">tjenestevilkårene</a>
       og<a href="%{privacy_url}" target="_blank">retningslinjer for personvern</a>.
+    accept_label_markdown: Jeg aksepterer de oppdaterte [tjenestevilkårene](%{tos_url})
+      og[retningslinjer for personvern](%{privacy_url}).
     accept: Godta
     print: Skriv ut
     reminder_desc: Vi har oppdatert våre <a href="%{tos_url}" target="_blank">tjenestevilkår</a>
@@ -854,6 +884,10 @@
       Vær s. nill å les disse nøye før du aksepterer dem. Merk at våre verktøy for
       å undervise i JavaScript kan være utilgjengelig for dine elever før de oppdaterte
       betingelsene aksepteres.
+    reminder_desc_markdown: Vi har oppdatert våre [tjenestevilkår](%{tos_url}) og
+      [retningslinjer for personvern](%{privacy_url}). Vær s. nill å les disse nøye
+      før du aksepterer dem. Merk at våre verktøy for å undervise i JavaScript kan
+      være utilgjengelig for dine elever før de oppdaterte betingelsene aksepteres.
     review_terms: Les våre oppdaterte betingelser
   school_info_interstitial:
     title: Vi ønsker å fremme kunnskap om informatikk til alle studenter - hjelp oss
@@ -879,6 +913,9 @@
     decline: Lukk
   zendesk_too_young_message: Beklager, yngre brukere kan ikke logge på nettstedet
     for kundestøtte. Du kan bla gjennom <a href="http://support.code.org"> support.code.org</a>
+    uten å logge på eller be en forelder eller lærer å kontakte oss for deg.
+  zendesk_too_young_message_markdown: Beklager, yngre brukere kan ikke logge på nettstedet
+    for kundestøtte. Du kan bla gjennom [support.code.org](http://support.code.org)
     uten å logge på eller be en forelder eller lærer å kontakte oss for deg.
   progress:
     not_started: ikke påbegynt
@@ -1023,6 +1060,7 @@
     csp_lists: Lister
     csp_loops: Løkker
     dlp: Spørsmål til refleksjon
+    k5_next_steps: De Neste Trinnene
   external_links:
     disclaimer: Ansvarsfraskrivelse
     leaving_domain: Du går nå utenfor vårt domene, til et nettsted som ikke drives

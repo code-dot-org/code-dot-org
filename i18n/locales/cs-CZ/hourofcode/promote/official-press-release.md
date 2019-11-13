@@ -1,7 +1,5 @@
 ---
 title: Tisková zpráva hodiny kódu pro zvolené úředníky
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

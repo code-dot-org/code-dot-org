@@ -1,7 +1,5 @@
 ---
 title: Korleis halde ein Kodetime - for frivillige
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

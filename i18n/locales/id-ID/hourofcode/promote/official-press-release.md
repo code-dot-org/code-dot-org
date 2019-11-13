@@ -1,7 +1,5 @@
 ---
 title: Siaran pers Hour of Code untuk pejabat terpilih
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

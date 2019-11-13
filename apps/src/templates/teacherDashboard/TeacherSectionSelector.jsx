@@ -6,11 +6,11 @@ import PopUpMenu from '../../lib/ui/PopUpMenu';
 import TeacherSectionSelectorMenuItem from './TeacherSectionSelectorMenuItem';
 import {sectionForDropdownShape} from './shapes';
 import SmallChevronLink from '@cdo/apps/templates/SmallChevronLink';
+import {updateQueryParam} from '@cdo/apps/code-studio/utils';
+import {reload} from '../../utils';
+import queryString from 'query-string';
 
 const styles = {
-  main: {
-    marginRight: 10
-  },
   select: {
     height: 34
   },
@@ -19,7 +19,8 @@ const styles = {
     paddingTop: 16,
     paddingBottom: 8,
     paddingLeft: 12,
-    paddingRight: 12
+    paddingRight: 12,
+    width: 196
   }
 };
 
@@ -27,7 +28,12 @@ export default class TeacherSectionSelector extends Component {
   static propTypes = {
     sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
     selectedSection: PropTypes.object,
-    onChangeSection: PropTypes.func.isRequired
+    onChangeSection: PropTypes.func.isRequired,
+    // We need to reload on section change on the script overview page to get
+    // accurate information about students in the selected section.
+    forceReload: PropTypes.bool,
+    courseId: PropTypes.number,
+    scriptId: PropTypes.number
   };
 
   state = {
@@ -76,28 +82,38 @@ export default class TeacherSectionSelector extends Component {
 
   chooseMenuItem = section => {
     this.props.onChangeSection(section.id);
+    updateQueryParam('section_id', section.id);
+    // If we have a user_id when we switch sections we should get rid of it
+    updateQueryParam('user_id', undefined);
+    if (this.props.forceReload) {
+      reload();
+    }
     this.closeMenu();
   };
 
   render() {
-    const {sections, selectedSection} = this.props;
+    const {sections, selectedSection, courseId, scriptId} = this.props;
     const menuOffset = {x: 0, y: 0};
+    const value = selectedSection ? selectedSection.id : '';
+    const queryParams = queryString.stringify({courseId, scriptId});
 
     return (
-      <div style={styles.main}>
+      <div>
         <select
-          value={selectedSection.id}
+          value={value}
           onChange={this.props.onChangeSection}
           ref={select => (this.select = select)}
           onClick={this.handleClick}
           onMouseDown={this.handleMouseDown}
           style={styles.select}
         >
-          {sections.map(section => (
-            <option key={section.id} value={section.id}>
-              {section.name}
-            </option>
-          ))}
+          <option value="">{i18n.selectSectionOption()}</option>
+          {sections &&
+            sections.map(section => (
+              <option key={section.id} value={section.id}>
+                {section.name}
+              </option>
+            ))}
         </select>
         <PopUpMenu
           isOpen={this.state.isMenuOpen}
@@ -105,16 +121,17 @@ export default class TeacherSectionSelector extends Component {
           beforeClose={this.beforeClose}
           offset={menuOffset}
         >
-          {sections.map(section => (
-            <TeacherSectionSelectorMenuItem
-              section={section}
-              onClick={() => this.chooseMenuItem(section)}
-              key={section.id}
-            />
-          ))}
+          {sections &&
+            sections.map(section => (
+              <TeacherSectionSelectorMenuItem
+                section={section}
+                onClick={() => this.chooseMenuItem(section)}
+                key={section.id}
+              />
+            ))}
           <div style={styles.addNewSection}>
             <SmallChevronLink
-              link={'/home'}
+              link={`/home?${queryParams}`}
               linkText={i18n.addNewSection()}
               isRtl={false}
             />

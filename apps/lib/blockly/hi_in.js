@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "प्रत्येक आइटम के लिए";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "सूची के प्रत्येक आइटम के लिए चल को  '%1' पर सेट करें, और फिर कुछ स्टेटमेंट्स एक्सीक्यूट करें।";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#count_with";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "%1 से %2 तक । %3 द्वारा";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "के साथ गिनती करें ";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "चर %1 मूल्यों पर प्रारंभ संख्या से ले के अंत संख्या द्वारा निर्दिष्ट अंतराल, गिनती, और निर्दिष्ट ब्लॉक नहीं है।";

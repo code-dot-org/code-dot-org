@@ -2,16 +2,17 @@
 fr-FR:
   data:
     display_name:
+      AB_Debug_Artist1: 'Débogage artiste #1 (AB)'
       Alien Defender: Défenseur alien
       App Lab Intro 8 - Video Design Mode: 'Vidéo : Mode création'
       App Lab Intro 8 - Video Getting Started: 'Vidéo : Démarrer'
       App Lab Intro 8 - Video Images and Sounds: 'Vidéo : Images et sons'
-      App Lab Intro 8 - Video Make It Interactive: 'Vidéo : Rendre interactif'
+      App Lab Intro 8 - Video Make It Interactive: 'Vidéo : Rend le intéractif'
       App Lab Intro 8 - Video Share Your App: 'Vidéo : Partage ton appli'
       AppLab Intro 7 - Change Screen Color: Modifier la couleur de l’écran
-      AppLab Intro 7 - Change Text 2: Modifier le texte
+      AppLab Intro 7 - Change Text 2: Modifie le texte
       AppLab Intro 7 - Full Text: Deux boutons
-      AppLab Intro 7 - onEvent intro: Faire fonctionner des boutons
+      AppLab Intro 7 - onEvent intro: Fais fonctionner les boutons
       AppLab Intro 7 - onEvent twoButtons: Plus d’entraînement onEvent
       AppLab Intro 7 - playSound: Utiliser playSound
       AppLab Intro 7 - thisOrThatAddButton: Ceci ou cela
@@ -263,6 +264,9 @@ fr-FR:
       CSD U3 challenge new shape: 'Défi : Forme de formes'
       CSD U3 challenge new shape_2018: 'Défi : Forme de formes'
       CSD U3 challenge new shape_2019: 'Défi : Forme de formes'
+      CSD U3 collisions build isTouching: Détection de collision
+      CSD U3 collisions build isTouching_2018: Détection de collision
+      CSD U3 collisions build isTouching_2019: Détection de collision
       CSD U3 collisions car intro: Jeu d’exemple
       CSD U3 collisions car intro_2018: Jeu d’exemple
       CSD U3 collisions car intro_2019: Jeu d’exemple
@@ -610,16 +614,24 @@ fr-FR:
       'Course E: Artist Project': Cours E Projet Artistique
       'Course E: Artist Project_2018': Cours E Projet Artistique
       'Course E: Artist Project_2019': Cours E Projet Artistique
+      'Course F: Artist Project_2018': Cours E Projet Artistique
+      'Course F: Artist Project_2019': Cours E Projet Artistique
       CourseEF_video_IntroSpriteLab: Voici Sprite Lab
       CourseEF_video_IntroSpriteLab_2019: Voici Sprite Lab
       CourseEF_video_MakeSprite: Comment créer un sprite
       CourseEF_video_MakeSprite_2019: Comment créer un sprite
       Dance_Party_extras_battle: Équipes de danse
+      Dance_Party_extras_battle_2019: Équipes de danse
       Dance_Party_extras_every_beat: Noires
-      Dance_Party_extras_layout: Soyez informé
-      Dance_Party_extras_on_beat: grave, médium et aigu
-      Dance_Party_extras_speed: Accélérer, ralentir
-      Dance_Party_extras_visible: Où iraient-ils\_?
+      Dance_Party_extras_every_beat_2019: Noires
+      Dance_Party_extras_layout: Restons en formation
+      Dance_Party_extras_layout_2019: Restons en formation
+      Dance_Party_extras_on_beat: Grave, médium et aigü
+      Dance_Party_extras_on_beat_2019: Grave, médium et aigü
+      Dance_Party_extras_speed: Accélére la, ralenti la
+      Dance_Party_extras_speed_2019: Accélére la, ralenti la
+      Dance_Party_extras_visible: Où iraient-ils?
+      Dance_Party_extras_visible_2019: Où iraient-ils?
       Geometric Sun_2018: Soleil géométrique
       InspirationalArtwork_2018: Inspiration !
       Intro to Web Lab - Part 1: 'Vidéo : Introduction au labo du web - Partie 1'

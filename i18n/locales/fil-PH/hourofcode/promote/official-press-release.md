@@ -1,7 +1,5 @@
 ---
 title: Hour of Code na Press Release para sa mga Napiling mga Opisyal
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

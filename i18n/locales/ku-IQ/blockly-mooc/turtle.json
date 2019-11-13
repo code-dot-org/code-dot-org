@@ -47,6 +47,7 @@
   "jumpBackward": "",
   "jumpForward": "",
   "jumpToOverDown": "",
+  "jumpToPosition": "",
   "jumpByDirection": "",
   "jumpTooltip": "",
   "jumpEastTooltip": "",

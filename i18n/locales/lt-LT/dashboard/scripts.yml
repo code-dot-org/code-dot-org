@@ -1682,3 +1682,19 @@ lt:
               name: Įvadas
             Nested Loops:
               name: Kartojimas kartojime
+        k5-onlinepd-copy:
+          stages:
+            Next Steps:
+              name: Kiti žingsniai
+            Loops:
+              name: Kartojimas
+            Conditionals:
+              name: Sąlyginiai sakiniai
+            Events:
+              name: Įvykiai
+            Functions:
+              name: Komandų kūrimas
+            Variables:
+              name: Kintamieji
+            For Loops:
+              name: Kartojimas

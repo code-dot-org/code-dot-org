@@ -1,6 +1,5 @@
 ---
 title: Ná sambandi við alþjóðlega samstarfsaðila
-layout: wide
 ---
 
 <style>

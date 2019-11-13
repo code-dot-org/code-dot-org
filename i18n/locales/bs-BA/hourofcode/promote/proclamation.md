@@ -1,7 +1,5 @@
 ---
 title: Primjer rezolucije podrške Sedmici Podučavanja Računarstva i Satu Kodiranja
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

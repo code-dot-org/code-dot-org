@@ -1,10 +1,5 @@
 ---
 title: Vă mulţumim ca v-ați înscris pentru organizarea Hour of Code!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # Vă mulţumim ca v-ați înscris pentru organizarea Hour of Code!

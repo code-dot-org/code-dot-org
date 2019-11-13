@@ -318,6 +318,58 @@ de-DE:
         -   Schaffe mehr Platz um die Bilder herum.
         -   Setze den gesamten Text in eine andere Farbe.
         -   Füge nach eigenem Ermessen andere Stile hinzu.
+      CSD U2 classes summer_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+
+        ::: details [**Wie funktioniert der Code?**]
+        Damit der Code für die Winterklasse funktioniert, muss sowohl eine Winterklasse anlegt als auch Elemente der Klasse hinzugefügt werden.
+
+        Die Klasse wird im Stylesheet mit folgendem Code angelegt:
+
+            .winter {
+              color: rgb(195,230,255);
+            }
+
+        Dieser Code erzeugt eine Klasse namens `Winter` und macht alles in der Klasse zu unserem Winterblau, das die RGB-Werte von (195, 230, 255) hat.
+
+        Der Code, der ein `h5` Element zur Winterklasse hinzufügt, ist `<h5 class="winter">`.  Der `class=winter` innerhalb des öffnenden Tags fügt alles innerhalb des Tags der Klasse hinzu.
+        :::
+
+        ::: details [**Wie erstelle ich einen neuen Regelsatz?**]
+
+        Du kannst einen neuen Regelsatz erstellen, indem du dem Muster folgst, das die Klassen `winter` und `spring` im Style Sheet verwendet haben.
+
+            .winter {
+              color: rgb(195,230,255);
+            }
+
+        Der Name des Selektors und die Farbwerte sind unterschiedlich, aber das folgende Muster ist immer das gleiche.
+
+            .classname {
+              property1: value1;
+              property2: value2;
+            }
+
+        :::
+
+        ::: details [**Warum hat der Selektor einen Punkt davor?**]
+        In CSS bedeutet ein Punkt vor einem Selektor, dass der Selektor der Name einer Klasse ist.  Wenn es keinen Punkt gibt, bedeutet dies, dass der Selektor der Name eines HTML-Tags ist.
+        :::
+
+        ::: details [**Warum sollte ein Webentwickler Klassen verwenden?**]
+
+        Ein Webentwickler verwendet Klassen, wenn einige Elemente anders gestaltet werden sollen als andere, auch wenn sie das gleiche Tag sind.  Klassen können auch verwendet werden, um Elementen, die unterschiedliche Tags haben, den gleichen Stil zu geben.
+
+        :::
+
+        </div>
+
+        # Sommer- und Herbstklassen
+
+        -   Erstelle innerhalb des Style Sheets ein neues Regelwerk für eine "Sommer"-Klasse.
+        -   Füge eine Regel hinzu, um den Text in der Sommerklasse auf deine Sommer-RGB-Farbe einzustellen.
+        -   Füge die Sommerklasse zu den Sommerelementen auf der HTML-Seite hinzu.
+        -   Das Gleiche gilt für die Herbstklasse.
       CSD U2 layout style margin_2019: "<div class=\"no-pullthrough\" style=\"float:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
         markdown=\"1\">\n<details>\n\n<summary>\n<strong>Wie funktioniert der Code?</strong>\n</summary>\nHier
@@ -825,6 +877,12 @@ de-DE:
       Dance Party Predict_2019: "**Mache eine Vorhersage:** Hier ist ein Sprite, das
         wie ein blauer Außerirdischer aussieht!   \n\nWas wird deiner Meinung nach
         passieren, wenn du darauf klickst?  "
+      Dance_2019_05: |-
+        _Jetzt grooven wir!_
+
+        Füge einen <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> Baustein zu Deienem Arbeitsbereich hinzu. Lasse den Tänzer nach 6 Takten einen neuen Tanzschritt beginnen.
+      Dance_2019_10: Grooven Sie los! Erstellen Sie einen eigenen Tanz und teilen
+        Sie ihn mit Ihren Freunden.
       Dance_Party_01: |-
         _Los geht‘s mit der Tanzparty!_
 
@@ -834,7 +892,7 @@ de-DE:
       Dance_Party_02: |-
         Lasse den Elch tanzen!
 
-        Ziehe den Baustein <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> in den Arbeitsbereich. Verbinde ihn unterhalb des Bausteins <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Dein Tänzer sollte nach dem vierten Takt mit einem neuen Tanzschritt beginnen.
+        Ziehe den Baustein <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> in den Arbeitsbereich. Verbinde ihn unterhalb des Bausteins <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Dein Tänzer sollte nach dem vierten Takt mit einem neuen Tanzschritt beginnen.
 
         **Takte** sind die zeitliche Struktur von Musik. In diesem Tutorial ist ein Takt vier Schläge lang.
       Dance_Party_03: |-
@@ -894,6 +952,14 @@ de-DE:
         -   Füge weitere Tasten zum Steuern der Tänzer hinzu
         -   Bringe die Backup-Tänzer dazu, ebenfalls zu reagieren, wenn die Tasten betätigt werden
         -   Wechsle die Tänzer nach jeweils 4 Takten durch das Festlegen ihrer Sichtbarkeit
+      Dance_Party_extras_battle_2019: |-
+        # Tanz-Crews
+
+        Hier ist ein Tanzduell zwischen zwei Crews. Die Pfeiltasten steuern einen der Tänzer und die Tasten „w, a, s, d“ steuern den anderen. Liefere dir ein Tanzduell mit einem Freund, und versuche dann, dieses Tanzduell zu verbessern.
+
+        -   Füge weitere Tasten zum Steuern der Tänzer hinzu
+        -   Bringe die Backup-Tänzer dazu, ebenfalls zu reagieren, wenn die Tasten betätigt werden
+        -   Wechsle die Tänzer nach jeweils 4 Takten durch das Festlegen ihrer Sichtbarkeit
       Dance_Party_extras_every_beat: |-
         # Viertelnoten
 
@@ -916,11 +982,23 @@ de-DE:
         # Bass, Mitten und Höhen
 
         Dieser Tanz verwendet „Peak“-Ereignisse, um den Code auszulösen, wenn verschiedene Teile der Musik laut werden. Versuche, mit verschiedenen Liedern herumzuexperimentieren, um zu sehen, wie sie den Tanz verändern.
+      Dance_Party_extras_on_beat_2019: |-
+        # Bass, Mitten und Höhen
+
+        Dieser Tanz verwendet „Peak“-Ereignisse, um den Code auszulösen, wenn verschiedene Teile der Musik laut werden. Versuche, mit verschiedenen Liedern herumzuexperimentieren, um zu sehen, wie sie den Tanz verändern.
       Dance_Party_extras_speed: |-
         # Beschleunigen, verlangsamen
 
         Dieser letzte Tanz nutzt den Block „festgelegte Geschwindigkeit“, um zu kontrollieren, wie schnell sich jeder Tänzer bewegt. Versuche, an verschiedenen Stellen im Lied mit unterschiedlichen Geschwindigkeiten zu experimentieren. Zögere nicht, bei diesem Tanz herumzuexperimentieren oder kehre zu einem der bisherigen Tänze zurück, um ihn noch cooler zu machen.
       Dance_Party_extras_visible: |-
+        # Wo würden sie hingehen?
+
+        Dieser Tanz blendet zwei verschiedene Gruppen von Tänzern ein und aus. Sieh ihn dir an und versuche dann, dein eigenes Flair hinzuzufügen.
+
+        -   Füge eine weitere Gruppe von Tänzern hinzu
+        -   Blende Tänzer mithilfe der Pfeiltasten ein- und aus
+        -   Blende alle der Tänzer aus und wechsle zu einem spannenden Hintergrundeffekt
+      Dance_Party_extras_visible_2019: |-
         # Wo würden sie hingehen?
 
         Dieser Tanz blendet zwei verschiedene Gruppen von Tänzern ein und aus. Sieh ihn dir an und versuche dann, dein eigenes Flair hinzuzufügen.

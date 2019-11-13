@@ -1124,8 +1124,6 @@ ar:
               name: بناء قاعدة
             Nested Loops:
               name: الحلقات المتداخلة
-          title: دورة سريعة
-          assignment_family_title: دورة سريعة
         pre-express-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1674,3 +1672,22 @@ ar:
             Dance Party:
               name: حفلة رقص
           description: برمِج حفلة الرقص الخاصة بك لمشاركتها مع أصدقائك.
+        k5-onlinepd-copy:
+          stages:
+            Sequencing:
+              name: التجزيء
+            Loops:
+              name: الحلقات
+            Conditionals:
+              name: الجمل الشرطية
+            Events:
+              name: الأحداث
+            Functions:
+              name: دوال
+            Variables:
+              name: المتغيرات
+            For Loops:
+              name: للحلقات
+        dance-extras-2019:
+          title: استمر في الرقص
+          description: تجاوز الساعة الأولى بأفكار مشاريع موسعة.

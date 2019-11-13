@@ -108,6 +108,10 @@ fi-FI:
       CourseE_HOC 2018 Level_9b: Saavutit riutan, nyt etsi \*\* Valtameren sydän\*\*
         ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)!
         Käytä sinistä ja punaista korallia päästäksesi **aarrearkulle** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
+      Dance_2019_05: |-
+        _Nyt groovaillaan!_
+
+        Lisää <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> blokki työtilaasi. Laita tanssija aloittamaan uusi liike 6 tahdin jälkeen
       Dance_Party_01: |-
         _Pidetään tanssibileet!_
 
@@ -168,6 +172,14 @@ fi-FI:
         -   Lisää painikkeita hallitsemaan tansseja
         -   Saa taustatanssijat reagoimaan, kun näppäimiä painetaan.
         -   Vaihda tanssijaa joka 4 tahdin välein määrittämällä niiden näkyvyyttä.
+      Dance_Party_extras_battle_2019: |-
+        # Tanssiryhmät
+
+        Tässä on tanssikisa kahden ryhmän kesken. Nuolinäppäimet ohjaavat yhtä tanssijaa, ja “w,a,s,d”-näppäimet ohjaavat toista. Pidä tanssikisa kaverin kanssa, ja koita parantaa tuloksiasi.
+
+        -   Lisää painikkeita hallitsemaan tansseja
+        -   Saa taustatanssijat reagoimaan, kun näppäimiä painetaan.
+        -   Vaihda tanssijaa joka 4 tahdin välein määrittämällä niiden näkyvyyttä.
       Dance_Party_extras_every_beat: |-
         # Neljäsosanuotit
 
@@ -190,11 +202,23 @@ fi-FI:
         Basso, midi ja diskantti
 
         Tämä tanssi käyttää “piikki”-tapahtumia laukaistakseen koodin, kun musiikin eri osuudet kovenevat. Puuhaile eri kappaleilla ja näe, kuinka he muuttavat tanssia.
+      Dance_Party_extras_on_beat_2019: |-
+        Basso, midi ja diskantti
+
+        Tämä tanssi käyttää “piikki”-tapahtumia laukaistakseen koodin, kun musiikin eri osuudet kovenevat. Puuhaile eri kappaleilla ja näe, kuinka he muuttavat tanssia.
       Dance_Party_extras_speed: |-
         # Pistä vauhtia, himmaa ja hidasta
 
         Viimeinen tanssi käyttää `asetettu nopeus`-blokkia hallitsemaan kunkin tanssijan nopeutta. Kokeile eri nopeuksia kappaleen eri kohdissa. Voit vapaasti puuhastella tämän tanssin parissa, tai palata mihin tahansa aiempaan tanssiisi tehdäksesi niistä entistä coolempia.
       Dance_Party_extras_visible: |-
+        # Mihin he menivät?
+
+        Tämä tanssi näyttää ja piilottaa kaksi tanssijoiden ryhmää. Tsekkaa se ja lisää oma vivahteesi.
+
+        -   Lisää uusi ryhmä tanssijoita
+        -   Näyttää ja piilottaa tanssijat nuolinäppäimillä
+        -   Piilota kaikki tanssijat, ja siirry jännittävään taustaefektiin.
+      Dance_Party_extras_visible_2019: |-
         # Mihin he menivät?
 
         Tämä tanssi näyttää ja piilottaa kaksi tanssijoiden ryhmää. Tsekkaa se ja lisää oma vivahteesi.

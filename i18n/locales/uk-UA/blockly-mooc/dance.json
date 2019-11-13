@@ -11,5 +11,12 @@
   "danceFeedbackNeedEveryTwoMeasures": "Переконайся, що використовується блок `every two measures`",
   "danceFeedbackNeedMakeANewDancer": "Використай блок `make new` для створення другого танцюриста.",
   "danceFeedbackKeyEvent": "Переконайтеся, що ви прикріпили код до блоку \"коли ключ\" і натискайте цей \"ключ\" доки ваш танець триває.",
+  "danceFeedbackDidntPress": "",
+  "danceFeedbackPressedKey": "",
+  "danceFeedbackNeedTwoDancers": "",
+  "danceFeedbackOnlyOneDancerMoved": "",
+  "danceFeedbackNeedLead": "",
+  "danceFeedbackNeedBackup": "",
+  "danceFeedbackSetSize": "",
   "measure": "Крок:"
 }

@@ -27,10 +27,11 @@ fi:
     attributes:
       user:
         name: 'Nimimerkki'
-        name_example: 'Näyttönimi<br/>(Esim. Viileä koodaaja tai Jane S.)'
+        name_example: 'Näyttönimi (Esim. Viileä koodaaja tai Jane S.)'
         email: 'Sähköposti'
         parent_email: 'Huoltajan sähköpostiosoite'
         personal_email: "Henkilökohtainen sähköposti osoite <a href=\"%{url}\"> (Klikkaa tästä jos sinulla ei ole sähköpostiosoitetta)</a>"
+        personal_email_markdown: "Henkilökohtainen sähköposti osoite [(Klikkaa tästä jos sinulla ei ole sähköpostiosoitetta)](%{url})"
         username: 'Käyttäjätunnus'
         password: 'Salasana'
         password_confirmation: 'Salasanan vahvistus'
@@ -41,7 +42,9 @@ fi:
         edit_header: 'Muokkaa tiliä'
         finish_sign_up_header: 'Viimeistele tilin luominen'
         finish_sign_up_subheader: 'Täytä seuraavat tiedot viimeistelläksesi Code.org tilin <strong>%{email}</strong>.'
+        finish_sign_up_subheader_markdown: 'Täytä seuraavat tiedot viimeistelläksesi Code.org tilin **%{email}**.'
         finish_sign_up_subheader_provider: 'Täytä seuraavat tiedot viimeistelläksesi Code.org -tilin luomisen <strong>%{provider}</strong> -tunnuksella <strong>%{email}</strong>.'
+        finish_sign_up_subheader_provider_markdown: 'Täytä seuraavat tiedot viimeistelläksesi Code.org -tilin luomisen **%{provider}** -tunnuksella **%{email}**.'
         error:
           future: ei voi olla tulevaisuudessa
   beta: "beta"
@@ -111,6 +114,7 @@ fi:
     student_count: '%{count} oppilasta on jo rekisteröitynyt.'
     teacher_count: '%{count} opettajaa on jo rekisteröitynyt.'
     overview: 'Rekisteröi tili seurataksesi omaa edistymistäsi tai hallitaksesi omaa luokkaasi<a href="/">Voit selata lukuisia tasoja ja tehtäviä </a>ilman tiliä, mutta sinun täytyy rekisteröityä, jotta voit tallentaa edistymisesi.'
+    overview_markdown: 'Rekisteröi tili seurataksesi omaa edistymistäsi tai hallitaksesi omaa luokkaasi[Voit selata lukuisia tasoja ja tehtäviä](/)ilman tiliä, mutta sinun täytyy rekisteröityä, jotta voit tallentaa edistymisesi.'
     hoc_already_signed_up_heading: 'Aloita ilman sisäänkirjautumista'
     teacher_educator_guide: 'Katso opettajan opas'
     title: "Rekisteröidy Code.org:n"
@@ -663,6 +667,7 @@ fi:
     submit: "Jatka"
     decline: "Sulje"
   zendesk_too_young_message: 'Pahoittelut, nuoremmat käyttäjät eivät voi kirjautua tukisivustollemme. Voit selailla <a href="http://support.code.org">support.code.org</a> -sivuja ilman kirjautumista tai pyytää vanhempiasi tai opettajaasi ottamaan yhteyttä meihin puolestasi.'
+  zendesk_too_young_message_markdown: 'Pahoittelut, nuoremmat käyttäjät eivät voi kirjautua tukisivustollemme. Voit selailla [support.code.org](http://support.code.org) -sivuja ilman kirjautumista tai pyytää vanhempiasi tai opettajaasi ottamaan yhteyttä meihin puolestasi.'
   progress:
     not_started: ei aloitettu
     in_progress: käynnissä

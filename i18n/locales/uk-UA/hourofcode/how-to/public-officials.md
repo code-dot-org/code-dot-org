@@ -1,7 +1,5 @@
 ---
 title: Інструкції для органів влади
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

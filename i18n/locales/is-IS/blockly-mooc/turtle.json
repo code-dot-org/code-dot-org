@@ -47,6 +47,7 @@
   "jumpBackward": "hoppa afturábak um",
   "jumpForward": "hoppa fram um",
   "jumpToOverDown": "",
+  "jumpToPosition": "",
   "jumpByDirection": "",
   "jumpTooltip": "Færir listamanninn án þess að skilja eftir slóð.",
   "jumpEastTooltip": "Færir listamanninn austur án þess að skilja eftir slóð.",

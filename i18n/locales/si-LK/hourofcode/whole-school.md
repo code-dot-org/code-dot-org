@@ -1,6 +1,5 @@
 ---
 title: මුලු පාසලේම සහභාගිත්වය
-layout: wide
 ---
 
 {{ signup_button }}

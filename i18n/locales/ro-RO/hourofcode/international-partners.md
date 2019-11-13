@@ -1,6 +1,5 @@
 ---
 title: Date de contact parteneri internaționali
-layout: wide
 ---
 
 <style>

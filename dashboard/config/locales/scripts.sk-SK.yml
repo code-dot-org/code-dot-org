@@ -2596,8 +2596,8 @@ sk:
               name: Podmienky a cykly so Záhradníčkou
             Until Loops in Maze:
               name: Cykly "dovtedy kým" v bludisku
-          title: Zrýchlený kurz
-          assignment_family_title: Zrýchlený kurz
+          title: Zrýchlený kurz (2018)
+          assignment_family_title: Zrýchlený kurz (2018)
           description_audience: 'Vek: 9-18'
           description: Nauč sa základy informatiky a bezpečnosti na internete. Na
             konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať
@@ -4946,3 +4946,35 @@ sk:
             Dance Party:
               name: Tanečná Párty
           description: Nakóduj si vlastnú Tanečnú párty a zdieľaj ju s kamarátmi!
+        k5-onlinepd-copy:
+          stages:
+            Getting Started:
+              name: Začíname
+            Computer Science Fundamentals:
+              name: Základy informatiky
+            Planning:
+              name: Plánovanie
+            Next Steps:
+              name: Ďalšie kroky
+            Sequencing:
+              name: Postupnosť
+            Loops:
+              name: Cykly
+            Conditionals:
+              name: Podmienky
+            Events:
+              name: Udalosti
+            Functions:
+              name: Funkcie
+            Variables:
+              name: Premenné
+            For Loops:
+              name: Cykly "For"
+        dance-extras-2019:
+          title: Pokračuj v tancovaní
+          description: Pokračuj za hranice prvej hodiny s nápadmi na ďalšie projekty.
+          description_short: Pokračuj za hranice Hodiny Kódu s touto aktivitou nadväzujúcou
+            na Code.org Tanečnú Párty.
+          stages:
+            Dance Party - Go Further:
+              name: Tanečná párty - Pokračuj ďalej

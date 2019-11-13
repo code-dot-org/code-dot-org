@@ -471,3 +471,15 @@ ms:
               name: Bersyarat
             Functions:
               name: Fungsi
+        k5-onlinepd-copy:
+          stages:
+            Loops:
+              name: Gelung
+            Conditionals:
+              name: Bersyarat
+            Events:
+              name: Acara-acara
+            Functions:
+              name: Fungsi
+            Variables:
+              name: Pembolehubah

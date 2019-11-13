@@ -1,7 +1,5 @@
 ---
 title: Қалай жүргізу жолнұсқасы
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

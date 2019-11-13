@@ -4,6 +4,7 @@ it-IT:
     dsls:
       2-3 Algorithms Multi 1:
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
         questions:
         - text: Scegli l'algoritmo che ti fa disegnare questa figura.
         answers:
@@ -24,10 +25,11 @@ it-IT:
         questions:
         - text: Quale figura <em>non</em> può essere disegnata seguendo questo algoritmo?
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a4.png"
       2-3 Big Event Match 1:
         title: Esercizio di Verifica (Corrispondenza)
         content1: "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
@@ -60,6 +62,7 @@ it-IT:
         - text: "/script_assets/2-3_images/unplugged/binary_1_a4.png"
       2-3 Conditionals Multi 1:
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/2-3_images/unplugged/conditionals_1_q.png"
         questions:
         - text: |-
             Applicando queste regole, a quale insieme di carte viene assegnato il punteggio corretto?<br>
@@ -73,20 +76,23 @@ it-IT:
             &emsp; Se (la CARTA è di CUORI)<br>
             &emsp; &emsp; Assegna alla TUA squadra 1 punto.
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a4.png"
       2-3 Getting Loopy Multi 1:
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png"
         questions:
         - text: Come semplificheresti la sequenza di blocchi sulla sinistra usando
             i blocchi `ripeti`, cioè i <i>cicli</i>?
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a4.png"
       2-3 Graph Paper Match 1:
         title: Esercizio di Verifica (Corrispondenza)
         content1: Associa ad ogni figura il programma corretto.
@@ -100,24 +106,26 @@ it-IT:
         - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
       2-3 Graph Paper Multi 1:
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
         questions:
         - text: Quale programma ti fa disegnare questa figura?
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
       2-3 Maze Match 2:
         title: Esercizio di Verifica (Associazioni)
         content1: Associa ad ogni situazione la sequenza di blocchi corretta.
         pre_title: Istruzioni
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png"
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a3.png"
       2-3 Maze Multi 2:
         title: Esercizio di Verifica (Risposte Multiple)
         questions:
@@ -129,28 +137,32 @@ it-IT:
         - {}
       2-3 Relay Programming Multi 1:
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/2-3_images/unplugged/relay_programming_1_q.png"
         questions:
-        - {}
+        - text: Quale programma **non** ti fa disegnare questa figura?
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png"
+          correct: true
       2-3 Relay Programming Multi 2:
         title: Esercizio di Verifica (Risposte Multiple)
         questions:
         - text: Quale delle seguenti coppie figura-programma non contiene errori?
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png"
+          correct: true
       2-3 artist debug multi 1:
         questions:
         - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
       2-3 artist functions multi 1:
         title: Esercizio di Verifica (Risposte Multiple)
         questions:
@@ -164,15 +176,15 @@ it-IT:
       2-3 artist loops match 1:
         content2: Associa ogni figura con il ciclo che la disegna.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png"
       2-3 artist loops multi 1:
         title: Esercizio di Verifica (Risposte Multiple)
         questions:
@@ -195,33 +207,37 @@ it-IT:
         title: Esercizio di Verifica (Corrispondenza)
         content1: Associa ad ogni figura l'insieme dei blocchi che la completa.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q4.png"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a4.png"
       2-3 bee conditionals multi 1:
         title: Esercizio di Verifica (Risposte Multiple)
         questions:
         - text: Quale confronto qua sotto è vero?
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png"
       2-3 bee conditionals multi 3:
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/2-3_images/Bee/2-3_beeconditionals_multi_3_q.png,
+          500"
         questions:
         - text: Scegli la sequenza di blocchi che risolve l'esercizio.
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png"
       2-3 bee loops multi 1:
         title: Esercizio di Verifica (Risposte Multiple)
         questions:
@@ -235,13 +251,13 @@ it-IT:
         title: Esercizio di Verifica (Corrispondenza)
         content1: Associa ad ogni situazione la sequenza di blocchi corretta.
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png"
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a3.png"
       2-3 maze multi 1:
         title: Esercizio di Verifica (Risposte Multiple)
         questions:
@@ -287,10 +303,10 @@ it-IT:
         - text: "<h3>Ruote per lato: 2<br/>Finestre per lato: 6</h3>"
         - text: "<h3>Ruote per lato: 3<br/>Finestre per lato: 2</h3>"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png"
       4-5 Computational Thinking Multi 1:
         title: Esercizio di Verifica (Risposte Multiple)
         content1: Ecco tre frasi. Quale degli schemi qua sotto è un'astrazione in
@@ -311,8 +327,9 @@ it-IT:
         questions:
         - text: Quale di queste immagini rappresenta meglio l'intelligenza collettiva?
         answers:
-        - {}
-        - correct: true
+        - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png"
+          correct: true
       4-5 Crowdsourcing Multi 2:
         title: Esercizio di Verifica (Risposte Multiple)
         questions:
@@ -337,6 +354,7 @@ it-IT:
         - text: Il numero della carta di credito di tua madre
       4-5 Internet Multi 1:
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
         questions:
         - text: Quando ti colleghi a code.org, a quale indirizzo IP fra quelli elencati
             in questa tabella ti farà arrivare il DNS?
@@ -347,6 +365,7 @@ it-IT:
         - correct: true
       4-5 Internet Multi 2:
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
         questions:
         - text: Se il DNS ti ha fatto arrivare ad una pagina con indirizzo IP 100.42.50.110,
             su quale sito web fra quelli elencati in questa tabella sei arrivato?
@@ -357,6 +376,7 @@ it-IT:
         - {}
       4-5 Songwriting Multi 1:
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/4-5_images/unplugged/songwriting_1_q.png"
         questions:
         - text: Qual è il pezzo più lungo di questa canzone che puoi definire come
             ritornello, in modo tale che il ritornello sia ripetuto esattamente ogni
@@ -376,11 +396,12 @@ it-IT:
         title: Esercizio di Verifica (Corrispondenza)
         content1: Utilizzando i gruppi di istruzioni (o "skill") che vengono forniti,
           associa ogni programma alla parola che esso restituisce.
+        content2: "/script_assets/4-5_images/unplugged/suncatchers_1.png"
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a2.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a3.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png"
         answers:
         - text: "<h4>STACK</h4>"
         - text: "<h4>STAMP</h4>"
@@ -388,13 +409,15 @@ it-IT:
         - text: "<h4>RAMP</h4>"
       4-5 Suncatchers Multi 1:
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/4-5_images/unplugged/suncatchers_2_q.png"
         questions:
         - text: Quale dei programmi qui sotto <em>non</em> produce la stessa sequenza
             di istruzioni definita dal programma 1?
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png"
+          correct: true
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png"
       4-5 artist loops multi 1:
         title: Esercizio di Verifica (Risposte Multiple)
         questions:
@@ -467,13 +490,13 @@ it-IT:
         content1: Associa ad ogni situazione la sequenza di blocchi corretta.
         pre_title: Istruzioni
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png"
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a3.png"
       4-5 maze multi 1:
         title: Esercizio di Verifica (Risposte Multiple)
         questions:
@@ -725,6 +748,32 @@ it-IT:
       CSD U2 Lesson 6 Overview:
         content1: Descrizione qui
       CSD U2 Top Websites:
+        markdown: |
+          # Migliori Siti Werb negli Stati Uniti
+
+          I seguenti sono i siti web visitati più frequentemente negli Stati Uniti. Ognuno include una breve descrizione della sua funzione principale.
+
+
+          1. Google.com - Motore di ricerca per siti web, immagini, video ed altri media
+          2. Youtube.com - Sito di Video inviati dall'utente con valutazioni e commenti
+          3. Facebook.com - Comunità social media che consente agli utenti di condividere informazioni con gli amici
+          4. Amazon.com - Siti di shopping online per ogni genere di prodotto
+          5. Yahoo.com - Un motore di ricerca, fornitore email e fonte di notizie
+          6. Wikipedia.org - Un'enciclopedia libera con contenuti generati dagli utenti
+      CSD U2 Top Websites_2018:
+        markdown: |
+          # Migliori Siti Werb negli Stati Uniti
+
+          I seguenti sono i siti web visitati più frequentemente negli Stati Uniti. Ognuno include una breve descrizione della sua funzione principale.
+
+
+          1. Google.com - Motore di ricerca per siti web, immagini, video ed altri media
+          2. Youtube.com - Sito di Video inviati dall'utente con valutazioni e commenti
+          3. Facebook.com - Comunità social media che consente agli utenti di condividere informazioni con gli amici
+          4. Amazon.com - Siti di shopping online per ogni genere di prodotto
+          5. Yahoo.com - Un motore di ricerca, fornitore email e fonte di notizie
+          6. Wikipedia.org - Un'enciclopedia libera con contenuti generati dagli utenti
+      CSD U2 Top Websites_2018_2019:
         markdown: |
           # Migliori Siti Werb negli Stati Uniti
 
@@ -1155,6 +1204,7 @@ it-IT:
       CSD U6 final intro_2018_2019:
         content1: Descrizione qui
       CSD U6 setProperty predict multi:
+        title: Fai una previsione
         questions:
         - {}
         answers:
@@ -1163,6 +1213,7 @@ it-IT:
         - correct: true
         - {}
       CSD U6 setProperty predict multi_2018:
+        title: Fai una previsione
         questions:
         - {}
         answers:
@@ -1171,6 +1222,77 @@ it-IT:
         - correct: true
         - {}
       Dance_Party_extras_intro:
+        markdown: |
+          # Continua a Ballare!
+
+          Per la parte 2, creerai il tuo progetto. Non ci sono rompicapi qui - invece ci sono un sacco di progetti che mostrano differenti modi di fare feste da ballo più complesse.
+
+          Puoi fare questi livelli _in ogni ordine_. Salta intorno per vedere come qualcosa era stato fatto in un livello precedente, o combina un concetto tra i progetti. Provali tutti, scegli il tuo preferito, e passa il tuo tempo a lavorare su aggiungere a quel progetto per renderlo tuo.
+
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Continua</a>
+
+          <div class="clearfix">
+
+          <div style="float: left; margin: 10px">
+          <a href="2">
+          <h2>
+          Vai in Formazione
+          </h2>
+
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif">
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="3">
+          <h2>
+          Dove andranno?
+          </h2>
+
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif">
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="4">
+          <h2>
+          Crew di Ballo
+          </h2>
+
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif">
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="5">
+          <h2>
+          Quartine
+          </h2>
+
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif">
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="6">
+          <h2>
+          Bassi, Medi, Acuti
+          </h2>
+
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif">
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="7">
+          <h2>
+          Velocizzalo, Rallentalo
+          </h2>
+
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif">
+
+          </div>
+      Dance_Party_extras_intro_2019:
         markdown: |
           # Continua a Ballare!
 
@@ -1255,10 +1377,11 @@ it-IT:
         questions:
         - text: Quale sequenza di blocchi ti fa completare il disegno?
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/W|S|S.png"
+        - text: "/script_assets/k_1_images/artist_images/E|S|S.png"
+          correct: true
+        - text: "/script_assets/k_1_images/artist_images/S|E|E.png"
+        - text: "/script_assets/k_1_images/artist_images/E|S.png"
       K-1 Artist 1 Multi 2:
         title: Esercizio di Verifica (Risposte Multiple)
         questions:
@@ -1273,15 +1396,15 @@ it-IT:
         content2: Associa ogni figura a destra con la figura a sinistra che è dello
           stesso tipo.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/small_circle.png"
+        - text: "/script_assets/k_1_images/artist_images/large_square.png"
+        - text: "/script_assets/k_1_images/artist_images/medium_rectangle.png"
+        - text: "/script_assets/k_1_images/artist_images/small_triangle.png"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/medium_circle.png"
+        - text: "/script_assets/k_1_images/artist_images/small_square.png"
+        - text: "/script_assets/k_1_images/artist_images/large_rectangle.png"
+        - text: "/script_assets/k_1_images/artist_images/large_triangle.png"
       K-1 Bee 1 Multi 1:
         title: Esercizio di Verifica (Risposte Multiple)
         questions:
@@ -1291,7 +1414,7 @@ it-IT:
         - {}
         - correct: true
         - {}
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/4_gnectar.png"
       K-1 Bee 1 Multi 2:
         title: Esercizio di Verifica (Risposte Multiple)
         questions:
@@ -1301,21 +1424,22 @@ it-IT:
         - {}
         - {}
         - {}
-        - correct: true
+        - text: "/script_assets/k_1_images/bee_images/4_gnectar.png"
+          correct: true
       K-1 Bee Loops Match 1:
         title: Esercizio di Verifica (Corrispondenza)
         content2: Associa ciascun blocco sulla destra con il blocco sulla sinistra
           che esegue le stesse azioni.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/r4_gnectar.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+        - text: "/script_assets/k_1_images/bee_images/r5_ghoney.png"
+        - text: "/script_assets/k_1_images/move_blocks/r5_E.png"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/4_gnectar.png"
+        - text: "/script_assets/k_1_images/move_blocks/NNN.png"
+        - text: "/script_assets/k_1_images/bee_images/5_ghoney.png"
+        - text: "/script_assets/k_1_images/move_blocks/EEEEE.png"
       K-1 Big Event Match 1:
         title: Esercizio di Verifica (Corrispondenza)
         content1: "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
@@ -1331,125 +1455,143 @@ it-IT:
         - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
       K-1 Digital Footprint Multi 1:
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png"
         questions:
         - text: Quale animale ha l'impronta digitale che lo rende <strong>il più insicuro</strong>?
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png"
+          correct: true
       K-1 Getting Loopy Multi 1:
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png"
         questions:
         - text: Come semplificheresti la sequenza di blocchi sulla sinistra usando
             i blocchi `ripeti`, cioè i <i>cicli</i>?
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png"
       K-1 Happy Maps Multi 1:
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
         questions:
         - text: Quale freccia fa arrivare il Flurb al tesoro?
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/up.png"
+        - text: "/script_assets/k_1_images/unplugged_images/down.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/left.png"
+        - text: "/script_assets/k_1_images/unplugged_images/right.png"
       K-1 Keep it Private Multi 1:
         title: Esercizio di Verifica (Risposte Multiple)
         questions:
         - text: Quali informazioni dovresti <strong>non condividere online</strong>?
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png"
       K-1 Maze Debugging Multi 1:
         title: Esercizio di Verifica (Risposte Multiple)
         questions:
         - text: Quale blocco devi aggiungere alla sequenza mostrata qua a sinistra
             per farmi arrivare al maialino?
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/EN.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/WSS.png"
+        - text: "/script_assets/k_1_images/move_blocks/EN.png"
+        - text: "/script_assets/k_1_images/move_blocks/WW.png"
       K-1 Maze Loops Multi 1:
         title: Esercizio di Verifica (Risposte Multiple)
         questions:
         - text: Quale blocco `ripeti` fa gli stessi movimenti della sequenza di blocchi
             sulla sinistra?
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
       K-1 Maze Loops Multi 2:
         title: Esercizio di Verifica (Risposte Multiple)
         questions:
         - text: Scegli il blocco `ripeti` che esegue gli stessi movimenti della sequenza
             di blocchi sulla sinistra.
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+          correct: true
       K-1 Maze Match 1:
         title: Esercizio di Verifica (Corrispondenza)
         content2: Associa ad ogni situazione la sequenza di blocchi che mi fa arrivare
           al maialino.
         pre_title: Istruzioni
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/maze_images/maze_EN.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_ENE.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_WW.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_WSS.png"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/EN.png"
+        - text: "/script_assets/k_1_images/move_blocks/ENE.png"
+        - text: "/script_assets/k_1_images/move_blocks/WW.png"
+        - text: "/script_assets/k_1_images/move_blocks/WSS.png"
       K-1 Maze Multiple Choice 2:
         title: 'Labirinto: Sequenze e Cicli'
         questions:
         - text: Quale sequenza di blocchi mi fa arrivare al maialino?
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/EN.png"
+        - text: "/script_assets/k_1_images/move_blocks/EN.png"
+        - text: "/script_assets/k_1_images/move_blocks/WSS.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/EN.png"
       K-1 Move It Multi 1:
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/k_1_images/unplugged_images/move_it_1_q.png"
         questions:
         - text: Quali frecce fanno arrivare il Flurb ai fiori?
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/rightright.png"
+        - text: "/script_assets/k_1_images/unplugged_images/leftleft.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/upleft.png"
+        - text: "/script_assets/k_1_images/unplugged_images/leftdown.png"
       K-1 Plant a Seed Multi 1:
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png"
         questions:
         - text: Quale immagine scegli per descrivere il primo passo di questo algoritmo?
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/poke-hole.png"
+        - text: "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png"
+        - text: "/script_assets/k_1_images/unplugged_images/dirty-teeth.png"
+          correct: true
       K-1 Plant a Seed Multi 2:
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png"
         questions:
         - text: Quale immagine scegli per descrivere il passo di questo algoritmo
             rappresentato dal punto interrogativo?
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/brush-teeth.png"
+        - text: "/script_assets/k_1_images/unplugged_images/cover-seed.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/water-pot.png"
       K-1 Word Search Multi 1:
         title: Esercizio di Verifica (Risposte Multiple)
         questions:
         - text: Quale sequenza di blocchi devi scegliere per scrivere le lettere della
             parola "MOVE"?
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/EEEEE.png"
+        - text: "/script_assets/k_1_images/move_blocks/WSS.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/WSS.png"
       K-1 Word Search Multi 3:
         title: Esercizio di Verifica (Risposte Multiple)
         questions:
@@ -1621,7 +1763,7 @@ it-IT:
         - feedback: Sbagliato.
         - correct: true
           feedback: Corretto!
-        - {}
+        - feedback: 'Sbagliato. '
         - feedback: Sbagliata
       courseC_multi_artist_prog6_predict1:
         questions:
@@ -2303,6 +2445,8 @@ it-IT:
             di raccogliere tutti i diamanti.'
         - text: 'Il ciclo non sarà ripetuto un numero sufficiente di volte per consentire
             a Laura di raccogliere tutti i diamanti. '
+          feedback: 'Sbagliato. La tua risposta è incompleta: prima di tutto Laura
+            gira dalla parte sbagliata alla prima curva del percorso a quadrato.'
         - text: Laura girerà dalla parte sbagliata mentre cercherà di realizzare il
             percorso a quadrato *inoltre* il ciclo non sarebbe ripetuto un numero
             sufficiente di volte per consentire a Laura di raccogliere tutti i diamanti.
@@ -2616,12 +2760,19 @@ it-IT:
             il maialino!
       courseD_multi_scrat_predict1:
         questions:
-        - {}
+        - text: In questo programma c'è un nuovo blocco. Cosa pensi che succederà
+            quando cliccherai su "Esegui"?
         answers:
-        - {}
-        - correct: true
+        - text: Niente. Scrat non si muoverà.
+          feedback: Sbagliato. Visto che il blocco 'vai avanti' è inserito in un blocco
+            'ripeti ... volte', Scrat si muoverà avanti per tre volte.
+        - text: Scrat andrà avanti tre volte, girerà, quindi andrà avanti altre tre
+            volte, facendolo arrivare alla ghianda!
+          correct: true
           feedback: Corretto!
-        - {}
+        - text: Scrat andrà avanti, quindi girerà e andrà a sbattere.
+          feedback: Sbagliato. Visto che il blocco 'vai avanti' è inserito in un blocco
+            'ripeti ... volte', Scrat si muoverà avanti per tre volte.
         - text: Non lo so.
           feedback: Visto che il blocco `vai avanti` è inserito in un blocco `ripeti
             ... volte`, Scrat si muove avanti per tre volte. Poi si gira e va avanti
@@ -2632,10 +2783,18 @@ it-IT:
             di miele da produrre in questo caso è diversa. Cosa accadrà quando cliccherai
             su "Esegui"?
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: Lo stesso programma funzionerà anche per risolvere questo esercizio.
+          correct: true
+          feedback: Corretto! Non importa che la quantità di miele sia diversa. La
+            funzione è stata costruita proprio per gestire qualsiasi quantità di miele.
+        - feedback: Sbagliato. Il codice presente nella funzione è in grado di gestire
+            qualsiasi quantità di miele.
+        - feedback: Sbagliato. Il codice presente nella funzione è in grado di gestire
+            qualsiasi quantità di miele.
         - text: Non lo so.
+          feedback: Il programma funzionerà anche per risolvere questo esercizio.
+            Il codice presente nella funzione è in grado di gestire qualsiasi quantità
+            di miele.
       courseE_multi_farmer_functions11_predict:
         questions:
         - text: Guarda le funzioni definite qui sotto.  Cosa raccoglierà la contadina?
@@ -3110,9 +3269,13 @@ it-IT:
         answers:
         - correct: true
           feedback: Corretto!
-        - {}
-        - {}
+        - feedback: Sbagliato. I parametri ti consentono di utilizzare una singola
+            funzione per ottenere diversi risultati.
+        - feedback: Sbagliato. I parametri ti consentono di utilizzare una singola
+            funzione per ottenere diversi risultati.
         - text: Non lo so.
+          feedback: Il programma utilizza i parametri per consentire ad una singola
+            funzione di creare caselle di dimensioni diverse.
       courseF_multi_artist_variables3a_predict1:
         questions:
         - text: Abbiamo impostato la variabile "length" ("lunghezza") a 50. Cosa accadrà
@@ -3197,7 +3360,11 @@ it-IT:
             il nettare da ogni fiore e fare il miele se non c'è un fiore (e quindi
             c'è un favo).
         - text: L'ape cercherà di fare il miele sia sui fiori che sui favi.
+          feedback: Sbagliato. Il blocco `se c'è un fiore` permette all'ape di prendere
+            il nettare da ogni fiore e fare il miele in ogni favo.
         - text: Non lo so.
+          feedback: Il blocco `se c'è un fiore` permette all'ape di prendere il nettare
+            da ogni fiore, altrimenti fa il miele.
       courseF_multi_bee_for3_predict1:
         questions:
         - text: Guarda il codice presente nell'area di lavoro. Cosa succederà quando
@@ -3266,9 +3433,13 @@ it-IT:
         questions:
         - text: Cosa succederà quando cliccherai su "Esegui"?
         answers:
-        - {}
+        - feedback: Sbagliato. La funzione è progettata per raccogliere il numero
+            di dosi di nettare o di miele passato attraverso un parametro.
         - correct: true
-        - {}
+          feedback: Corretto! La funzione è progettata per raccogliere il numero di
+            dosi di nettare o di miele passato attraverso un parametro.
+        - feedback: Sbagliato. La funzione è progettata per raccogliere il numero
+            di dosi di nettare o di miele passato attraverso un parametro.
         - text: Non lo so.
           feedback: Se clicchi per guardare com'è fatta all'interno la funzione, vedi
             che è progettata per raccogliere il numero di dosi di nettare o di miele
@@ -3278,9 +3449,14 @@ it-IT:
         - {}
         answers:
         - correct: true
-        - {}
-        - {}
+          feedback: 'Corretto. '
+        - feedback: Sbagliato. Nota che il blocco `unisci` permette di inserire il
+            nome fornito nella frase del pirata.
+        - feedback: Sbagliato. Nota che il blocco `unisci` permette di inserire il
+            nome fornito nella frase del pirata.
         - text: Non lo so.
+          feedback: 'Sbagliato. Nota che il blocco `unisci` permette di inserire il
+            nome fornito nella frase del pirata. '
       coursee_prediction_artistfunction2:
         questions:
         - text: Cosa succederà quando cliccherai su "Esegui"?

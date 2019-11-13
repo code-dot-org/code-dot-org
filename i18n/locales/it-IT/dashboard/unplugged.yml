@@ -56,10 +56,10 @@ it:
         title: Istruzioni condizionali
         desc: Per imparare le istruzioni condizionali, gli studenti giocano con le carte e creano regole del tipo "SE estraggo una carta rossa ottengo un punto" e "SE estraggo una carta nera tu ottieni un punto".
       BigEvent:
-        title: Gli eventi
+        title: Il grande evento
         desc: Gli studenti vengono introdotti al concetto di "evento" nella programmazione. Gli eventi sono azioni che un calcolatore controlla in continuazione se accadono o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di un controller di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
       GoingPlacesSafely:
-        title: Cittadinanza digitale - Visitare luoghi in modo sicuro
+        title: Cittadinanza digitale - Il mio quartiere digitale
         desc: 'Internet è un luogo potente, ma alle volte pericoloso. L''insegnante introduce come navigare su Internet in modo sicuro. Cerca questa lezione in italiano sul sito di Programma il Futuro: programmailfuturo.it / "Percorsi" / "Cittadinanza digitale consapevole" / "Per la scuola primaria"'
       GraphPaperProgramming:
         title: Programmazione su carta a quadretti
@@ -158,10 +158,10 @@ it:
         title: Mappe felici
         desc: Gli studenti creano semplici algoritmi (sequenze di istruzioni) per spostare un personaggio attraverso un labirinto utilizzando un solo comando.
       courseA_unplugged_goingPlacesSafely:
-        title: Cittadinanza digitale - Visitare luoghi in modo sicuro
+        title: Cittadinanza digitale - Il mio quartiere digitale
         desc: 'Internet è un luogo potente, ma alle volte pericoloso. L''insegnante introduce come navigare su Internet in modo sicuro. Cerca questa lezione in italiano sul sito di Programma il Futuro: programmailfuturo.it / "Percorsi" / "Cittadinanza digitale consapevole" / "Per la scuola primaria"'
       courseABC_unplugged_bigEvent:
-        title: Gli eventi
+        title: Il grande evento
         desc: Gli studenti vengono introdotti al concetto di "evento" nella programmazione. Gli eventi sono azioni che un calcolatore controlla in continuazione se accadono o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di un controller di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
       courseB_unplugged_digitalFootprint:
         title: La tua impronta digitale
@@ -227,13 +227,13 @@ it:
         title: Mappe felici
         desc: Gli studenti creano semplici algoritmi (sequenze di istruzioni) per spostare un personaggio attraverso un labirinto utilizzando un solo comando.
       GoingPlacesSafely_2018:
-        title: Cittadinanza digitale - Visitare luoghi in modo sicuro
+        title: Cittadinanza digitale - Il mio quartiere digitale
         desc: 'Internet è un luogo potente, ma alle volte pericoloso. L''insegnante introduce come navigare su Internet in modo sicuro. Cerca questa lezione in italiano sul sito di Programma il Futuro: programmailfuturo.it / "Percorsi" / "Cittadinanza digitale consapevole" / "Per la scuola primaria"'
       courseA_unplugged_loops_2018:
         title: 'Cicli: Lezioni Tradizionali'
         desc: In questa lezione, si parlerà di cicli!
       BigEvent_2018:
-        title: Gli eventi
+        title: Il grande evento
         desc: Gli studenti vengono introdotti al concetto di "evento" nella programmazione. Gli eventi sono azioni che un calcolatore controlla in continuazione se accadono o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di un controller di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
       GraphPaperProgramming_2018:
         title: Programmazione su carta a quadretti
@@ -305,7 +305,7 @@ it:
         title: Attività tradizionale
         desc: 'Oggi impareremo come comportarsi quando qualcuno viene maltrattato in rete. Cerca questa lezione in italiano sul sito di Programma il Futuro: programmailfuturo.it / "Percorsi" / "Cittadinanza digitale consapevole" / "Per la scuola primaria"'
       BigEvent_2019:
-        title: Gli eventi
+        title: Il grande evento
         desc: Gli studenti vengono introdotti al concetto di "evento" nella programmazione. Gli eventi sono azioni che un calcolatore controlla in continuazione se accadono o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di un controller di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
       BinaryBracelets_2019:
         title: Braccialetti binari
@@ -320,7 +320,7 @@ it:
         title: Mappe felici
         desc: Gli studenti creano semplici algoritmi (sequenze di istruzioni) per spostare un personaggio attraverso un labirinto utilizzando un solo comando.
       GoingPlacesSafely_2019:
-        title: Cittadinanza digitale - Visitare luoghi in modo sicuro
+        title: Cittadinanza digitale - Il mio quartiere digitale
         desc: 'Internet è un luogo potente, ma alle volte pericoloso. L''insegnante introduce come navigare su Internet in modo sicuro. Cerca questa lezione in italiano sul sito di Programma il Futuro: programmailfuturo.it / "Percorsi" / "Cittadinanza digitale consapevole" / "Per la scuola primaria"'
       courseA_unplugged_loops_2019:
         title: 'Cicli: Lezioni Tradizionali'

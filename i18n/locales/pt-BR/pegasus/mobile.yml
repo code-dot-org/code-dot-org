@@ -952,7 +952,6 @@
   pre-express-2019_name: Curso Pre-reader Express (2019)
   csd3_name: 'Unidade 3: Jogos e Animação'
   accelerated_name: "Curso acelerado"
-  express_name: "Curso Expresso"
   20-hour_name: Curso acelerado
   algebra_name: "CC na Álgebra Curso Completo"
   AlgebraA_name: "CC no Curso A de Álgebra"
@@ -1151,21 +1150,25 @@
   course4_shortdescription_congrats: "Vamos mais longe? Os alunos vão se aprofundar nos tópicos de programação apresentados em cursos anteriores para encontrar soluções flexíveis para problemas mais complexos. No final deste curso, os alunos criarão histórias interativas e jogos que podem ser compartilhados com outras pessoas. Recomendado para alunos do 4º ao 8º ano."
   coursea_shortdescription_congrats: "Uma introdução à ciência da computação para pré-leitores."
   courseb_shortdescription_congrats: "Uma introdução à ciência da computação para pré-leitores. (Similar ao Curso A, mas com mais variedade para os alunos mais velhos.)"
+  coursec_shortdescription_congrats: "Aprenda o básico da ciência da computação e crie sua própria arte, histórias e jogos."
   coursed_shortdescription_congrats: "Abrange rapidamente conceitos do Curso C e, em seguida, vá mais longe com algoritmos, laços aninhados, condicionais e muito mais."
   coursee_shortdescription_congrats: "Rapidamente cobrem conceitos de curso C e D e vai mais longe com funções."
   coursef_shortdescription_congrats: "Aprenda todos os conceitos Fundamentais da Ciência da Computação e crie sua própria arte, história ou jogo."
   coursea-2017_shortdescription_congrats: Uma introdução à ciência da computação para pré-leitores.
   courseb-2017_shortdescription_congrats: Uma introdução à ciência da computação para pré-leitores. (Similar ao Curso A, mas com mais variedade para os alunos mais velhos.)
+  coursec-2017_shortdescription_congrats: Aprenda o básico da ciência da computação e crie sua própria arte, histórias e jogos.
   coursed-2017_shortdescription_congrats: Abrange rapidamente conceitos do Curso C e, em seguida, vá mais longe com algoritmos, laços aninhados, condicionais e muito mais.
   coursee-2017_shortdescription_congrats: Rapidamente cobrem conceitos de curso C e D e vai mais longe com funções.
   coursef-2017_shortdescription_congrats: Aprenda todos os conceitos Fundamentais da Ciência da Computação e crie sua própria arte, história ou jogo.
   coursea-2018_shortdescription_congrats: Uma introdução à ciência da computação para pré-leitores.
   courseb-2018_shortdescription_congrats: Uma introdução à ciência da computação para pré-leitores. (Similar ao Curso A, mas com mais variedade para os alunos mais velhos.)
+  coursec-2018_shortdescription_congrats: Aprenda o básico da ciência da computação e crie sua própria arte, histórias e jogos.
   coursed-2018_shortdescription_congrats: Abrange rapidamente conceitos do Curso C e, em seguida, vá mais longe com algoritmos, laços aninhados, condicionais e muito mais.
   coursee-2018_shortdescription_congrats: Rapidamente cobrem conceitos de curso C e D e vai mais longe com funções.
   coursef-2018_shortdescription_congrats: Aprenda todos os conceitos Fundamentais da Ciência da Computação e crie sua própria arte, história ou jogo.
   coursea-2019_shortdescription_congrats: Uma introdução à ciência da computação para pré-leitores.
   courseb-2019_shortdescription_congrats: Uma introdução à ciência da computação para pré-leitores. (Similar ao Curso A, mas com mais variedade para os alunos mais velhos.)
+  coursec-2019_shortdescription_congrats: Aprenda o básico da ciência da computação e crie sua própria arte, histórias e jogos.
   coursed-2019_shortdescription_congrats: Abrange rapidamente conceitos do Curso C e, em seguida, vá mais longe com algoritmos, laços aninhados, condicionais e muito mais.
   coursee-2019_shortdescription_congrats: Rapidamente cobrem conceitos de curso C e D e vai mais longe com funções.
   coursef-2019_shortdescription_congrats: Aprenda todos os conceitos Fundamentais da Ciência da Computação e crie sua própria arte, história ou jogo.

@@ -1,7 +1,7 @@
 {
   "danceFeedbackNeedNewDancer": "Du skal lave en danser.",
   "danceFeedbackNoDancers": "Du har ingen dansere.",
-  "danceFeedbackNoBackground": "Du skal tilføje en baggrunde effekt.",
+  "danceFeedbackNoBackground": "Du skal tilføje en baggrunds effekt.",
   "danceFeedbackTooManyDancers": "Vær forsigtig! Hvis du sætter 'lave en ny' blok inde i \"hver 2 foranstaltninger\", så vil du oprette en masse dansere.",
   "danceFeedbackUseSetSize": "Bruge 'sæt backup_dancer2 størrelse' blokken til at gøre denne danser mindre.",
   "danceFeedbackUseSetTint": "Brug 'indstille farvetone' blokken til at ændre en danser farvetone.",
@@ -9,5 +9,13 @@
   "danceFeedbackStartNewMove": "Din danser lavede ikke et nyt dansetrin efter den fjerde foranstaltning.",
   "danceFeedbackNeedDifferentDance": "Du skal bruge en anden dans.",
   "danceFeedbackNeedEveryTwoMeasures": "Kontroller, at du bruger 'hver 2 foranstaltninger'-blok",
-  "danceFeedbackNeedMakeANewDancer": "Brug 'lave en ny' blok til at oprette en anden danser."
+  "danceFeedbackNeedMakeANewDancer": "Brug 'lave en ny' blok til at oprette en anden danser.",
+  "danceFeedbackKeyEvent": "Husk at tilføje noget kode til <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"op\"</title></block></xml> block og tryk på knappen mens din dans kører.",
+  "danceFeedbackDidntPress": "Husk at trykke på Piltasterne mens din dans er i gang.",
+  "danceFeedbackPressedKey": "Du trykkede på en tast, men din danser reagerede ikke.",
+  "danceFeedbackNeedTwoDancers": "Du skal lave to dansere.",
+  "danceFeedbackOnlyOneDancerMoved": "Kun en af dine dansere bevægede sig.",
+  "danceFeedbackNeedLead": "Du skal også lave første danser med <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">\\{x: 200, y: 200\\}</title></block></xml> blokken.",
+  "danceFeedbackNeedBackup": "Du skal lave en gruppe af baggrundsdansere med <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml> blokken.",
+  "danceFeedbackSetSize": "Du skal ændre størrelsen på mindst en dancer ved brug af et event."
 }

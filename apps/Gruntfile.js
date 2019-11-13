@@ -74,6 +74,7 @@ describe('entry tests', () => {
     'craft',
     'dance',
     'eval',
+    'fish',
     'flappy',
     'gamelab',
     'spritelab',
@@ -457,9 +458,8 @@ describe('entry tests', () => {
       }
     },
     unit: {
-      coverageReporter: {
-        dir: 'coverage/unit',
-        reporters: [{type: 'html'}, {type: 'lcovonly'}]
+      coverageIstanbulReporter: {
+        dir: 'coverage/unit'
       },
       junitReporter: Object.assign({}, junitReporterBaseConfig, {
         outputFile: 'unit.xml'
@@ -467,9 +467,8 @@ describe('entry tests', () => {
       files: [{src: ['test/unit-tests.js'], watched: false}]
     },
     integration: {
-      coverageReporter: {
-        dir: 'coverage/integration',
-        reporters: [{type: 'html'}, {type: 'lcovonly'}]
+      coverageIstanbulReporter: {
+        dir: 'coverage/integration'
       },
       junitReporter: Object.assign({}, junitReporterBaseConfig, {
         outputFile: 'integration.xml'
@@ -477,9 +476,8 @@ describe('entry tests', () => {
       files: [{src: ['test/integration-tests.js'], watched: false}]
     },
     scratch: {
-      coverageReporter: {
-        dir: 'coverage/scratch',
-        reporters: [{type: 'html'}, {type: 'lcovonly'}]
+      coverageIstanbulReporter: {
+        dir: 'coverage/scratch'
       },
       junitReporter: Object.assign({}, junitReporterBaseConfig, {
         outputFile: 'scratch.xml'
@@ -487,9 +485,8 @@ describe('entry tests', () => {
       files: [{src: ['test/scratch-tests.js'], watched: false}]
     },
     storybook: {
-      coverageReporter: {
-        dir: 'coverage/storybook',
-        reporters: [{type: 'html'}, {type: 'lcovonly'}]
+      coverageIstanbulReporter: {
+        dir: 'coverage/storybook'
       },
       junitReporter: Object.assign({}, junitReporterBaseConfig, {
         outputFile: 'storybook.xml'
@@ -497,9 +494,8 @@ describe('entry tests', () => {
       files: [{src: ['test/storybook-tests.js'], watched: false}]
     },
     entry: {
-      coverageReporter: {
-        dir: 'coverage/entry',
-        reporters: [{type: 'html'}, {type: 'lcovonly'}]
+      coverageIstanbulReporter: {
+        dir: 'coverage/entry'
       },
       files: [{src: ['test/entry-tests.js'], watched: false}],
       preprocessors: {
@@ -538,6 +534,7 @@ describe('entry tests', () => {
       './src/sites/studio/pages/layouts/_terms_interstitial.js',
     'levels/_bubble_choice':
       './src/sites/studio/pages/levels/_bubble_choice.js',
+    'levels/_content': './src/sites/studio/pages/levels/_content.js',
     'levels/_contract_match':
       './src/sites/studio/pages/levels/_contract_match.js',
     'levels/_curriculum_reference':
@@ -593,12 +590,14 @@ describe('entry tests', () => {
     'levels/editors/_dsl': './src/sites/studio/pages/levels/editors/_dsl.js',
     'levels/editors/_gamelab':
       './src/sites/studio/pages/levels/editors/_gamelab.js',
+    'levels/editors/_grid': './src/sites/studio/pages/levels/editors/_grid.js',
     'levels/editors/_pixelation':
       './src/sites/studio/pages/levels/editors/_pixelation.js',
     'levels/editors/_studio':
       './src/sites/studio/pages/levels/editors/_studio.js',
     'libraries/edit': './src/sites/studio/pages/libraries/edit.js',
-    'scripts/_form': './src/sites/studio/pages/scripts/_form.js',
+    'scripts/edit': './src/sites/studio/pages/scripts/edit.js',
+    'scripts/new': './src/sites/studio/pages/scripts/new.js',
     'shared_blockly_functions/edit':
       './src/sites/studio/pages/shared_blockly_functions/edit.js'
   };

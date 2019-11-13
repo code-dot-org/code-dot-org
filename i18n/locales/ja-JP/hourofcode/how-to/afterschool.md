@@ -1,7 +1,5 @@
 ---
 title: イベント開催ガイド
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
@@ -12,7 +10,7 @@ nav: how_to_nav
 
 * * *
 
-## 1. この「やり方を説明している動画」を見る <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. この手引きビデオを見る <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2. チュートリアルを選ぶ
 

@@ -71,6 +71,34 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     )
   end
 
+  test 'Peer reviews can be found by email for unmigrated submitters' do
+    common_scenario
+
+    # Create some for another submitter
+    unmigrated_submitter = create :teacher, :demigrated
+    create_peer_reviews_for_user_and_level(unmigrated_submitter, @level_3)
+    submissions = PeerReview.where(level: @level_3, submitter: unmigrated_submitter)
+
+    get :index, params: {user_q: unmigrated_submitter.email}
+    assert_response :success
+    response = JSON.parse(@response.body)
+    assert_equal [
+      [
+        [submissions.first.id, nil, submissions.first.updated_at],
+        [submissions.second.id, 'escalated', submissions.second.updated_at]
+      ]
+    ], response['submissions'].map {|submission| submission['review_ids']}
+
+    # Verify expected pagination metadata
+    assert_equal(
+      {
+        "total_pages" => 1,
+        "current_page" => 1
+      },
+      response['pagination']
+    )
+  end
+
   test 'Peer reviews email filter can also fuzzy-search for name' do
     daneel = create :teacher, name: 'R. Daneel Olivaw'
     danielle = create :teacher, name: 'Danielle B'

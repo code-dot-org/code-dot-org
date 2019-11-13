@@ -372,6 +372,8 @@ sl:
             '"all"': vse
       Mikelab_randomColor:
         text: naključna barva
+      Mikelab_repeatUntilComplete:
+        text: ponavljaj kar naprej
       Mikelab_setBG:
         options:
           BG:

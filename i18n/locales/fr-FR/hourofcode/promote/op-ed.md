@@ -1,7 +1,5 @@
 ---
 title: Exemple de papier d'opinion favorable à la semaine d'éducation sur l'informatique et à Une Heure de Code
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

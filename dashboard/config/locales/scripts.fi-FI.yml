@@ -1758,3 +1758,22 @@ fi:
               name: Sisäkkäiset silmukat
         dance-2019:
           description: Koodaa oma Dance Party, jonka voit jakaa ystäviesi kanssa!
+        k5-onlinepd-copy:
+          stages:
+            Computer Science Fundamentals:
+              name: Tietojenkäsittelyn Perusteet
+            Loops:
+              name: Silmukat
+            Conditionals:
+              name: Ehtolausekkeet
+            Events:
+              name: Tapahtumat
+            Functions:
+              name: Funktiot
+            Variables:
+              name: Muuttujat
+            For Loops:
+              name: Silmukat
+        dance-extras-2019:
+          title: Jatka tanssimista
+          description: Syvennä ensimmäisen oppitunnin osaamistasi laajennetuilla projekti-ideoilla.

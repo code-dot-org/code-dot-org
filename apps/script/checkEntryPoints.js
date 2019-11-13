@@ -49,6 +49,7 @@ const SILENCED = [
   'craft',
   'dance',
   'eval',
+  'fish',
   'flappy',
   'gamelab',
   'jigsaw',

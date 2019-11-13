@@ -182,4 +182,4 @@ Students have positive attitudes about science careers when they’re able to se
 - [Fact sheet for participation by women](http://www.ncwit.org/infographic/3435)
 
 <a id="notes"></a>
-*Our recommendations summarize learnings from interviews with and written materials from CS educators, psychology researchers, as well as material from [NCWIT](http://www.ncwit.org/), [DotDiva](http://www.dotdiva.org/), Google, and other organizations dedicated to growing participation of women in technology. 
+*Our recommendations summarize learnings from interviews with and written materials from CS educators, psychology researchers, as well as material from [NCWIT](http://www.ncwit.org/), Google, and other organizations dedicated to growing participation of women in technology. 

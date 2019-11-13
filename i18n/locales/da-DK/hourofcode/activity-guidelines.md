@@ -1,6 +1,5 @@
 ---
 title: Guidelines for Øvelser
-layout: wide
 ---
 
 <style>

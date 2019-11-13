@@ -1287,8 +1287,6 @@ ga:
               name: Dúshraith a Leagan
             Nested Loops:
               name: Lúba Neadaithe
-          title: Luaschúrsa
-          assignment_family_title: Luaschúrsa
         pre-express-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1806,3 +1804,19 @@ ga:
               name: Réamhrá
             Nested Loops:
               name: Lúba Neadaithe
+        k5-onlinepd-copy:
+          stages:
+            Computer Science Fundamentals:
+              name: Buntús na Ríomheolaíochta
+            Loops:
+              name: Lúba
+            Conditionals:
+              name: Coinníollacha
+            Events:
+              name: Teagmhais
+            Functions:
+              name: Feidhmeanna
+            Variables:
+              name: Athróga
+            For Loops:
+              name: Lúba "Do Gach"

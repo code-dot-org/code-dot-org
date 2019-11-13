@@ -167,6 +167,12 @@ no-NO:
         dance_callout_11_b: Ny blokk!
       CourseD_Dance_Party_11_5:
         dance_party_11_5_groups: Se her for "alle ender" blokker
+      Dance_2019_06:
+        dance_party_11_5_groups: Ny blokk!
+      Dance_2019_07:
+        setprop_hint: Ny blokk!
+      Dance_2019_09:
+        new_block_1: Ny blokk!
       Dance_Party_06:
         dance_callout_06: Legg til din nye danser her
       Dance_Party_11:

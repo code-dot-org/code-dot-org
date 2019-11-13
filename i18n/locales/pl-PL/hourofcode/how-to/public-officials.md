@@ -1,7 +1,5 @@
 ---
 title: Porady dla urzędników
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

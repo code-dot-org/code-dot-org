@@ -1855,6 +1855,32 @@ nl-NL:
         voyage_aquatic_9a: Wat een prachtig koraalrif! Blauw koraal geeft de \*\*
           rechte \*\* manier aan, en zorg ervoor dat je rood koraal niet \*\* links
           \*\* laat liggen!
+      Dance_2019_01:
+        validation: |-
+          **Hoe haal ik dit level?**
+
+          -   Zorg ervoor dat er een danser op het scherm verschijnt.
+
+          -   Dit level eindigt na 4 maten.\*
+      Dance_2019_04:
+        validation: |-
+          **Hoe haal ik dit level?**
+
+          -   De danser moet na 4 maten een nieuwe move doen.
+
+          _Dit level eindigt na 8 maten._
+      Dance_2019_05:
+        validation: |-
+          **Hoe haal ik dit level?**
+
+          -   Na 6 maten moet je danser een andere move doen dan na 4 maten.
+
+          _Dit level eindigt na 12 maten._
+      Dance_2019_07:
+        challenges: |-
+          **Extra uitdaging**
+
+          -   Experimenteer door andere eigenschappen te veranderen (breedte, hoogte, rotatie, enz.)
       Dance_Party_01:
         validation: |-
           **Hoe haal ik dit level?**

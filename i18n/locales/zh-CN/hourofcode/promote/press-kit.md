@@ -1,7 +1,5 @@
 ---
 title: 新闻资料袋
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

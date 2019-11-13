@@ -84,6 +84,16 @@ sv-SE:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Nytt Block!
         dance_callout_11_b: Nytt Block!
+      Dance_2019_01:
+        dance_callout_01: Lägg till detta block till ditt program!
+      Dance_2019_04:
+        dance_callout_02: Lägg till detta block till ditt program!
+      Dance_2019_06:
+        dance_party_11_5_groups: Nytt Block!
+      Dance_2019_07:
+        setprop_hint: Nytt Block!
+      Dance_2019_09:
+        new_block_1: Nytt Block!
       Dance_Party_01:
         dance_callout_01: Lägg till detta block till ditt program!
       Dance_Party_02:

@@ -390,6 +390,8 @@ az:
             MOVES.Rest: Heç biri
       Mikelab_randomColor:
         text: ixtiyari rəng
+      Mikelab_repeatUntilComplete:
+        text: təkrar et sonsuz
       Mikelab_setBG:
         options:
           BG:

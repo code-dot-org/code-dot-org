@@ -27,6 +27,8 @@ class StandaloneVideo < Level
   serialized_attrs %w(
     skip_dialog
     skip_sound
+    video_rounded_corners
+    video_full_width
   )
 
   before_validation do
@@ -48,6 +50,11 @@ class StandaloneVideo < Level
 
   def concept_level?
     true
+  end
+
+  def enable_scrolling?
+    # ensures we have the small footer when in "full width" mode
+    video_full_width
   end
 
   def self.create_from_level_builder(params, level_params)

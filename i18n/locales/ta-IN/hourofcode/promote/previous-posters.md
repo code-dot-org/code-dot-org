@@ -1,7 +1,5 @@
 ---
 title: குறியீடு சுவரொட்டிகளின் கடந்த நேரம்
-layout: wide
-nav: promote_nav
 ---
 
 {{signup_button}}

@@ -1,6 +1,5 @@
 ---
 title: Výukový návod
-layout: wide
 ---
 
 <style>

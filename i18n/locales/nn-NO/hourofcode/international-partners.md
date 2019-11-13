@@ -1,6 +1,5 @@
 ---
 title: Kontakt internasjonale partnarar
-layout: wide
 ---
 
 <style>

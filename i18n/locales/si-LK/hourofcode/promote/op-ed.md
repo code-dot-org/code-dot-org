@@ -1,7 +1,5 @@
 ---
 title: පරිගණක විද්‍යා අධ්‍යාපන සතිය සහ Hour of Code පිලිබඳව සම්මත වූ යෝජනා පිලිබඳ වූ පුවත් පත් වාර්ථා
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

@@ -1,6 +1,5 @@
 ---
 title: Orientacións sobre os titoriais
-layout: wide
 ---
 
 <style>

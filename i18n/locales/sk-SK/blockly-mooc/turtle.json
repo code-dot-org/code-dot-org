@@ -47,6 +47,7 @@
   "jumpBackward": "skoč dozadu o",
   "jumpForward": "skoč dopredu o",
   "jumpToOverDown": "",
+  "jumpToPosition": "",
   "jumpByDirection": "",
   "jumpTooltip": "Posunie maliara bez zanechania stôp.",
   "jumpEastTooltip": "Posunie maliara na východ bez zanechania stôp.",

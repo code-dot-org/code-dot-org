@@ -1,7 +1,5 @@
 ---
 title: पत्रकारों के किये सामान
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

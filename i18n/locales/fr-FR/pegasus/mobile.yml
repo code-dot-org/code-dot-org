@@ -910,7 +910,9 @@
   coursed-2017_name: Cours D (2017)
   coursee-2017_name: Cours E (2017)
   coursef-2017_name: Cours F (2017)
+  express-2018_name: Cour rapide (2017)
   pre-express-2018_name: Cours rapide pour les primo-lecteurs (2018)
+  express-2019_name: Cour rapide (2017)
   pre-express-2019_name: Cours rapide pour les primo-lecteurs (2019)
   csd3_name: 'Unité 3 : Animation et jeux'
   accelerated_name: "Cours accéléré"
@@ -1444,6 +1446,7 @@
   applab_tile_subtitle: "Créez votre propre appli en JavaScript avec la programmation en blocs. Ou passez au niveau supérieur avec la programmation en texte. (en anglais seulement)"
   applab_tile_start_tutorial: "Commencer"
   applab_tile_teacher_guide: "Voir le guide de l'enseignant"
+  aquatic_name: 'Minecraft : Voyage Aquatique'
   account_sign_up_email_opt_in: "Pouvons-nous vous envoyer des e-mails d’information sur nos formations, des opportunités près de chez vous ou d’autres brèves dans le domaine informatique?"
   account_sign_up_child_accept_terms: "Je confirme que j’ai l'autorisation de mes parents ou de mon tuteur légal pour utiliser les services de Code.org."
   hoc_overview_dance_title: "Fête dansante"

@@ -468,7 +468,7 @@ pl:
             '"vintage"': Starocie
             '"warm"': Czerwone
       Dancelab_setBackgroundEffectWithPalette:
-        text: ustaw efekt tła {EFFECT} {PALETTE}
+        text: ustaw efekt tła {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Żaden
@@ -601,6 +601,7 @@ pl:
             '"rotation"': obrót
             '"x"': pozycja pozioma
             '"y"': pozycja pionowa
+            '"tint"': odcień
       Dancelab_setPropRandom:
         text: losuj {SPRITE} {PROPERTY}
         options:
@@ -836,6 +837,8 @@ pl:
             '1': średni ton
             '2': wysoki ton
       Dancelab_whenSetup:
+        text: układ
+      Dancelab_whenSetup2:
         text: układ
       Dancelab_whenSetupSong:
         text: 'ustaw {SONG} '
@@ -1096,6 +1099,8 @@ pl:
             MOVES.Rest: Żaden
       Mikelab_randomColor:
         text: losowy kolor
+      Mikelab_repeatUntilComplete:
+        text: powtarzaj w nieskończoność
       Mikelab_setBG:
         options:
           BG:

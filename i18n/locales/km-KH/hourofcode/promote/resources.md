@@ -1,7 +1,5 @@
 ---
 title: ប្រភពមេរៀន
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

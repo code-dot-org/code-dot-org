@@ -1,6 +1,5 @@
 ---
 title: קווים מנחים לפעילות
-layout: wide
 ---
 
 <style>

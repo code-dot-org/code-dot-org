@@ -419,7 +419,7 @@ et:
       Dancelab_setBackgroundEffectWithPalette:
         text: |-
           määra taustaefekt
-          {EFFECT} {PALETTE}
+          {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Mitte ükski
@@ -517,6 +517,7 @@ et:
             '"rotation"': pööramine
             '"x"': horisontaalne asend
             '"y"': vertikaalne asend
+            '"tint"': toon
       Dancelab_setPropRandom:
         text: juhusliku valiku alusel {SPRITE} {PROPERTY}
         options:
@@ -734,6 +735,8 @@ et:
             '1': keskel
             '2': kõrged helid
       Dancelab_whenSetup:
+        text: seadistus
+      Dancelab_whenSetup2:
         text: seadistus
       gamelab_changePropBy:
         text: muuda {SPRITE} {PROPERTY} {VAL} võrra
@@ -971,6 +974,8 @@ et:
             MOVES.Rest: Mitte ükski
       Mikelab_randomColor:
         text: juhuslik värv
+      Mikelab_repeatUntilComplete:
+        text: korda igavesti
       Mikelab_setBG:
         options:
           BG:

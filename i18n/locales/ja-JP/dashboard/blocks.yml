@@ -426,7 +426,7 @@ ja:
             '"vintage"': ヴィンテージ
             '"warm"': 赤
       Dancelab_setBackgroundEffectWithPalette:
-        text: 背景エフェクトを {EFFECT} {PALETTE} にセット
+        text: 背景エフェクトを {PALETTE} {EFFECT} にセット
         options:
           EFFECT:
             '"none"': 設定なし
@@ -549,6 +549,7 @@ ja:
             '"rotation"': 回転
             '"x"': 水平方向の位置
             '"y"': 垂直方向の位置
+            '"tint"': 色合い
       Dancelab_setPropRandom:
         text: ランダムにする {SPRITE} {PROPERTY}
         options:
@@ -747,6 +748,8 @@ ja:
             '1': ミドル
             '2': トレブル
       Dancelab_whenSetup:
+        text: セットアップ
+      Dancelab_whenSetup2:
         text: セットアップ
       gamelab_changePropBy:
         text: "{SPRITE} {PROPERTY} を {VAL} 変更"
@@ -960,6 +963,8 @@ ja:
             MOVES.Rest: 設定なし
       Mikelab_randomColor:
         text: てきとうな色
+      Mikelab_repeatUntilComplete:
+        text: ずっと
       Mikelab_setBG:
         options:
           BG:

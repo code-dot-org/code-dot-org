@@ -1326,3 +1326,15 @@ ky:
               name: Тоңгондогу салынган циклдар
             Nested Loops in Frozen:
               name: Тоңгондогу салынган циклдар
+        k5-onlinepd-copy:
+          stages:
+            Loops:
+              name: Циклдер
+            Conditionals:
+              name: Шартуулар
+            Events:
+              name: Окуялар
+            Functions:
+              name: Функциялар
+            Variables:
+              name: Өзгөрмөлөр

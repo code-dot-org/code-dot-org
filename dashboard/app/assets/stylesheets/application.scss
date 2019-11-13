@@ -760,6 +760,77 @@ $default-modal-width: 640px;
   margin: 0;
 }
 
+.video-player-rounded-corners {
+  border-radius: 10px;
+  border-width: 0;
+}
+
+.video-player-full-width {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.video-content-full-width {
+  position: relative;
+  // Specifically supports 16x9 aspect ratio
+  padding-top: 56.25%;
+}
+
+@media screen and (max-height: 1330px) {
+  .standalone-video-full-width {
+    max-width: 1973px;
+  }
+}
+@media screen and (max-height: 1240px) {
+  .standalone-video-full-width {
+    max-width: 1813px;
+  }
+}
+@media screen and (max-height: 1150px) {
+  .standalone-video-full-width {
+    max-width: 1653px;
+  }
+}
+@media screen and (max-height: 1060px) {
+  .standalone-video-full-width {
+    max-width: 1493px;
+  }
+}
+@media screen and (max-height: 970px) {
+  .standalone-video-full-width {
+    max-width: 1333px;
+  }
+}
+@media screen and (max-height: 880px) {
+  .standalone-video-full-width {
+    max-width: 1173px;
+  }
+}
+@media screen and (max-height: 790px) {
+  .standalone-video-full-width {
+    max-width: 1013px;
+  }
+}
+@media screen and (max-height: 700px) {
+  .standalone-video-full-width {
+    max-width: 853px;
+  }
+}
+@media screen and (max-height: 610px) {
+  .standalone-video-full-width {
+    max-width: 693px;
+  }
+}
+
+.buttons-right-aligned {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: -44px;
+}
+
 .fallback-video-player-failed {
   video, div {
     visibility: hidden;
@@ -2184,6 +2255,9 @@ a.download-video {
     display: inline-block;
   }
 
+  &-full-width {
+    width: unset;
+  }
 }
 
 .multi #markdown.teacher {

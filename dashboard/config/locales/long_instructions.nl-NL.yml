@@ -106,15 +106,15 @@ nl-NL:
       CourseE_HOC 2018 Level_2: Boten zijn veel gemakkelijker dan zwemmen in open
         water! Ga naar het einde van de steiger en klim aan boord.
       CourseE_HOC 2018 Level_3: Pak de roeispanen en stuur je boot over de open zee
-        om de \*\* kabeljauw \*\* \!\[] (<https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png>)
+        om de \*\* kabeljauw \*\* !\[] (<https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png>)
         te vangen.
-      CourseE_HOC 2018 Level_4: Laten we de kabeljauw aan de \*\* dolfijn \*\* \!\[]
+      CourseE_HOC 2018 Level_4: Laten we de kabeljauw aan de \*\* dolfijn \*\* !\[]
         (<https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png>)
         voeren. Gebruik een herhalingsblok om de oceaan sneller te doorkruisen.
       CourseE_HOC 2018 Level_5: Er is ergens een **nautilusschelp** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
         verborgen! Verken het scheepswrak om de **kist** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png)
         te vinden.
-      CourseE_HOC 2018 Level_6: Dat ziet er ijskoud uit! Vang een **zalm** \!\[] (<https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png>)
+      CourseE_HOC 2018 Level_6: Dat ziet er ijskoud uit! Vang een **zalm** !\[] (<https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png>)
         op weg naar de onderwaterruïnes.
       CourseE_HOC 2018 Level_7a: Je hebt de onderwaterruïnes gevonden. Doorzoek het
         zandsteen voor een **kist** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
@@ -126,6 +126,11 @@ nl-NL:
         hart van de zee** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
         ! Gebruik het blauwe en rode koraal om de schat **kist** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png)
         te vinden.
+      Dance_2019_05: |-
+        _Nu gaan we lekker!_
+
+        Voeg een blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> toe aan je werkruimte. Zorg ervoor dat de danser een nieuwe move start na 6 maten.
+      Dance_2019_10: Ga helemaal los! Maak je eigen dans om te delen met je vrienden.
       Dance_Party_01: |-
         _Laten we een dansfeestje houden!_
 
@@ -201,6 +206,14 @@ nl-NL:
         -   Voeg meer toetsen toe om de dans te besturen
         -   Zorg ervoor dat de achtergronddansers ook meedoen als je de toetsen ingedrukt
         -   Wissel elke 4 maten van danser door hun zichtbaarheid in te stellen
+      Dance_Party_extras_battle_2019: |-
+        # Dancecrews
+
+        Hier is een danswedstrijd tussen twee crews: De pijltoetsen besturen één van de dansers en de "w, a, s, d"-toetsen besturen de andere. Ga een danswedstrijd aan met een vriend, en probeer de wedstrijd vervolgens te verbeteren.
+
+        -   Voeg meer toetsen toe om de dans te besturen
+        -   Zorg ervoor dat de achtergronddansers ook meedoen als je de toetsen ingedrukt
+        -   Wissel elke 4 maten van danser door hun zichtbaarheid in te stellen
       Dance_Party_extras_every_beat: |-
         # kwartnoten
 
@@ -223,11 +236,23 @@ nl-NL:
         # Bass, mid en treble
 
         Deze dans gebruikt "piek"-gebeurtenissen om code te activeren wanneer verschillende delen van de muziek extra luid worden. Probeer het met verschillende liedjes uit om te zien hoe het de dans verandert.
+      Dance_Party_extras_on_beat_2019: |-
+        # Bass, mid en treble
+
+        Deze dans gebruikt "piek"-gebeurtenissen om code te activeren wanneer verschillende delen van de muziek extra luid worden. Probeer het met verschillende liedjes uit om te zien hoe het de dans verandert.
       Dance_Party_extras_speed: |-
         # Versnellen, vertragen
 
         Deze laatste dans gebruikt het blok 'snelheid instellen' om te bepalen hoe snel elke danser beweegt. Probeer tijdens het lied te experimenteren met verschillende snelheden. Blijf aan deze dans knutselen, of ga terug naar de eerdere dansen om ze nog cooler te maken.
       Dance_Party_extras_visible: |-
+        # Waar zijn ze heen?
+
+        Deze dans toont en verbergt twee verschillende groepen van dansers. Bekijk hem eens, en probeer dan je eigen touch toe te voegen.
+
+        -   Voeg nog een groep dansers toe
+        -   Laat dansers verschijnen en verdwijnen met behulp van de pijltoetsen
+        -   Verberg alle dansers en schakel over naar een spannend achtergrondeffect
+      Dance_Party_extras_visible_2019: |-
         # Waar zijn ze heen?
 
         Deze dans toont en verbergt twee verschillende groepen van dansers. Bekijk hem eens, en probeer dan je eigen touch toe te voegen.
@@ -259,14 +284,14 @@ nl-NL:
       HOC 2018 Level_2: Boten zijn veel gemakkelijker dan zwemmen in open water! Ga
         naar het einde van de steiger en klim aan boord.
       HOC 2018 Level_3: Pak de roeispanen en stuur je boot over de open zee om de
-        \*\* kabeljauw \*\* \!\[] (<https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png>)
+        \*\* kabeljauw \*\* !\[] (<https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png>)
         te vangen.
-      HOC 2018 Level_4: Laten we de kabeljauw aan de \*\* dolfijn \*\* \!\[] (<https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png>)
+      HOC 2018 Level_4: Laten we de kabeljauw aan de \*\* dolfijn \*\* !\[] (<https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png>)
         voeren. Gebruik een herhalingsblok om de oceaan sneller te doorkruisen.
       HOC 2018 Level_5: Er is ergens een **nautilusschelp** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
         verborgen! Verken het scheepswrak om de **kist** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png)
         te vinden.
-      HOC 2018 Level_6: Dat ziet er ijskoud uit! Vang een **zalm** \!\[] (<https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png>)
+      HOC 2018 Level_6: Dat ziet er ijskoud uit! Vang een **zalm** !\[] (<https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png>)
         op weg naar de onderwaterruïnes.
       HOC 2018 Level_7a: Je hebt de onderwaterruïnes gevonden. Doorzoek het zandsteen
         voor een **kist** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)

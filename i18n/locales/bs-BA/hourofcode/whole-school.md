@@ -1,6 +1,5 @@
 ---
 title: Sudjelovanje cijele škole
-layout: wide
 ---
 
 {{ signup_button }}

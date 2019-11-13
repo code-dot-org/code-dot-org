@@ -1,6 +1,5 @@
 ---
 title: Þátttaka alls skólans
-layout: wide
 ---
 
 {{ signup_button }}

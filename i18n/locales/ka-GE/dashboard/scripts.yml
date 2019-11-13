@@ -5686,3 +5686,35 @@ ka:
           stages:
             Dance Party:
               name: ცეკვა
+        k5-onlinepd-copy:
+          stages:
+            Getting Started:
+              name: დაწყება
+            Computer Science Fundamentals:
+              name: კომპიუტერული მეცნიერების საფუძვლები
+            'Mastering the Basics: Loops':
+              name: 'საფუძვლების დაუფლება: ციკლები'
+            'Mastering the Basics: Conditionals':
+              name: 'საფუძვლების დაუფლება: პირობითი ბრძანებები'
+            'Mastering the Basics: Functions':
+              name: 'საფუძვლების დაუფლება: ფუნქციები'
+            Planning:
+              name: დაგეგმვა
+            Next Steps:
+              name: მომდევნო ნაბიჯები
+            Loops:
+              name: ციკლები
+            Conditionals:
+              name: პირობითი ბრძანებები
+            Events:
+              name: მოვლენები
+            Functions:
+              name: ფუნქციები
+            Variables:
+              name: ცვლადები
+            For Loops:
+              name: '"მიზნისთვის" ციკლები'
+        csp10-pilot:
+          stages:
+            new stage:
+              name: ახალი დონე

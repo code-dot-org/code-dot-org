@@ -116,6 +116,12 @@ sv-SE:
       CourseE_HOC 2018 Level_9b: Du tog dig till revet, sök nu efter **Havets hjärta**
         ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
         ! Använd den blåa och röda korallen för att nå **skattkistan** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
+      Dance_2019_05: |-
+        _Nu rockar vi!_
+
+        Lägg till ett <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> block till din arbetsyta. Gör så att dansaren startar en ny rörelse efter 6 åtgärder.
+      Dance_2019_10: Dags att svänga på höfterna! Skapa en egen dans att dela med
+        dina vänner.
       Dance_Party_01: |-
         _Nu ska vi ha ett dansparty!_
 
@@ -192,6 +198,14 @@ sv-SE:
         -   Lägg till fler tangenter för att styra danserna
         -   Gör så att backgrundsdansarna också reagerar när en tangent trycks in
         -   Växla dansare vid var 4:e åtgärd genom att ange deras synlighet
+      Dance_Party_extras_battle_2019: |-
+        # Dansgrupper
+
+        Här är en danstävling mellan två grupper. Piltangenterna styr den ena dansaren och ”w,a,s,d”-tangenterna styr den andra. Ha en danstävling med en vän och försök sedan att förbättra tävlingen.
+
+        -   Lägg till fler tangenter för att styra danserna
+        -   Gör så att backgrundsdansarna också reagerar när en tangent trycks in
+        -   Växla dansare vid var 4:e åtgärd genom att ange deras synlighet
       Dance_Party_extras_every_beat: |-
         # Kvartsnoter
 
@@ -214,11 +228,23 @@ sv-SE:
         # Bas, mellanregister och diskant
 
         Denna dans använder ”topp”-händelser för att starta kod när olika delar av musiken blir hög. Försöka mixtra med olika låtar för att se hur de förändrar dansen.
+      Dance_Party_extras_on_beat_2019: |-
+        # Bas, mellanregister och diskant
+
+        Denna dans använder ”topp”-händelser för att starta kod när olika delar av musiken blir hög. Försöka mixtra med olika låtar för att se hur de förändrar dansen.
       Dance_Party_extras_speed: |-
         # Öka takten, sakta ner
 
         Denna sista dans använder blocket ”ange hastighet” för att styra hur snabbt varje dansare rör sig. Testa att experimentera med olika hastigheter under olika tidpunkter i låten. Fortsätt gärna mixtra med denna dans eller återgå till någon av de tidigare danserna för att göra dem ännu coolare.
       Dance_Party_extras_visible: |-
+        # Vart tog de vägen?
+
+        Denna dans visar och döljer två olika grupper av dansare. Kolla in det och försök sedan att lägga till din egen stil.
+
+        -   Lägg till en grupp av dansare
+        -   Visa och dölj dansare med hjälp av piltangenterna
+        -   Dölj alla dansare och växla till en spännande bakgrundseffekt
+      Dance_Party_extras_visible_2019: |-
         # Vart tog de vägen?
 
         Denna dans visar och döljer två olika grupper av dansare. Kolla in det och försök sedan att lägga till din egen stil.

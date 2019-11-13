@@ -1,0 +1,25 @@
+name 'OPD-K5 events introduced'
+title 'Events Introduced'
+description 'description here'
+markdown <<MARKDOWN
+# Events: Where are they introduced?
+
+This gives you a sense of where events is introduced in Courses A-F. You don't need to go look at all of these lessons – we will dive into some in this part of the online course – but feel free to reference this as needed.
+
+## [Course A](https://curriculum.code.org/csf-19/coursea/)
+- Lesson 11 (Unplugged):  The Big Event Jr.
+- Lesson 12: On the Move with Events
+
+## [Course B](https://curriculum.code.org/csf-19/courseb/)
+- Lesson 11 (Unplugged): The Big Event Jr.
+- Lesson 12: A Royal Battle with Events
+
+## [Course C](https://curriculum.code.org/csf-19/coursec/)
+- Lesson 14: (Unplugged): The Big Event
+- Lesson 15: Build a Flappy Game
+- Lesson 16: Chase Game with Events
+
+## [Course D](https://curriculum.code.org/csf-19/coursed/)
+- Lesson 5: Events in Bounce
+- Lesson 6: Build a Star Wars Game
+MARKDOWN

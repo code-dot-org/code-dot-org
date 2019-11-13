@@ -20,6 +20,10 @@ ro-RO:
           spațiul de lucru
       Course 4 Artist For Loops 4:
         place_counter_variable: Trageți variabila contor înăuntrul acestui block
+      Course 4 Artist Functions challenge:
+        Course_4_Artist_Functions_challenge_1: Observă că am sortat toate blocurile
+          şi le-am pus în categorii pentru a ţine totul ordonat. Apasă aici pentru
+          a găsi toate blocurile de care ai nevoie.
       Course 4 Artist Vars 1:
         repeat_blocks: Utilizaţi blocul "Repetă" şi aduceți-l lângă blocurile din
           spațiul de lucru
@@ -30,20 +34,41 @@ ro-RO:
       Course 4 Artist Vars 6:
         degrees_per_side: Împărțiți 360 la numărul de laturi pentru a obține mărimea
           în grade a fiecărui unghi.
+      Course 4 Artist Vars 8:
+        Course_4_Artist_Vars_8_a: Ai nevoie de mai mult spaţiu? Trage de această bară
+          pentru a face spaţiul de program mai lat.
       Course 4 Bee 1:
         if_bee_nectar: Folosește blocul "dacă" pentru a decide dacă albina ar trebui
           să ia nectarul sau să facă miere
+      Course 4 Bee 3:
+        if_else_bee: Utilizează blocul "dacă/altfel", astfel încât albina să ia nectar
+          de la o floare şi să facă miere dacă nu este o floare
       Course 4 Bee Params 2:
         edit_get_nectar: Utilizaţi acest buton pentru a edita funcţia şi pentru a
           schimba direcţia spre care se va întoarce albina ca să obţină nectarul.
       Course 4 Maze 4:
         repeat: Pune blocuri în interiorul buclei pentru a repeta comenzi
+      Course 4 Play Lab Params 2:
+        Course_4 _Play_Lab_Params_2_1: Apasă "editează" pentru a actualiza această
+          funcţie pentru a folosi parametrul înălţime.
       Course 4 Play Lab Params 3:
         edit_function: Click aici pentru a edita funcţia dumneavoastră.
       Course 4 Play Lab Params 6:
         edit_add_parameter: Clic editare pentru a adăuga un parametru în funcția ta
       Course 4 Play Lab Vars 1:
         arrows_move_actor: Utilizează săgețile pentru a muta actorul
+      Course 4 Play Lab Vars 9:
+        Course_4_Play_Lab_Vars_9_1: Toate blocurile tale sunt acum aranjate în categorii!
+          Apasă pe o etichetă pentru a vedea piesele din acea categorie.
+      Course 4 Playlab For Loops 4b:
+        Course_4_Playlab_For_Loops_4b_1: Observă că variabila `contor` are un nume
+          diferit pentru fiecare caracter? Aceasta este aşa pentru ca fiecare buclă
+          `pentru` să-şi controleze propriul contor.
+        Course_4_Playlab_For_Loops_4b_2: Pentru această problemă, ai voie doar să
+          schimbi "incrementul" buclelor `pentru`.
+      Course 4 SCV 6:
+        Course_4_SCV_6: Acest bloc îţi permite să modifici culoarea cu aproape orice
+          vrei vrei să vezi! Joacă-te cu numerele ca să vezi ce se întamplă!
       CourseD_Dance_Party_01:
         dance_callout_01: Adaugă acest bloc la programul tău!
       CourseD_Dance_Party_02:
@@ -55,6 +80,16 @@ ro-RO:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Bloc nou!
         dance_callout_11_b: Bloc nou!
+      Dance_2019_01:
+        dance_callout_01: Adaugă acest bloc la programul tău!
+      Dance_2019_04:
+        dance_callout_02: Adaugă acest bloc la programul tău!
+      Dance_2019_06:
+        dance_party_11_5_groups: Bloc nou!
+      Dance_2019_07:
+        setprop_hint: Bloc nou!
+      Dance_2019_09:
+        new_block_1: Bloc nou!
       Dance_Party_01:
         dance_callout_01: Adaugă acest bloc la programul tău!
       Dance_Party_02:
@@ -82,6 +117,9 @@ ro-RO:
           programul.
       MC HOC 2016 New Walk:
         MC_HOC_2016_New_Walk_callout2: Apasă "Rulează" pentru a începe mişcarea.
+      NEW Course 4 Artist Functions 3:
+        NEW_Course_4_Artist_Functions_3_1: Apasă aici pentru a edita funcţia nouă
+          astfel încât să creze un pătrat.
       NEW Course 4 Artist Functions 7:
         edit_function: Click aici pentru a edita funcţia dumneavoastră.
       NEW Course 4 Artist Functions 8:
@@ -96,6 +134,9 @@ ro-RO:
       NEW Course 4 Artist Vars 6:
         place_length_variable: Muta variabila length aici pentru a înlocui semnul
           de interogație
+      NEW Course 4 Bee For Loops 4:
+        bee_for_loop: Introdu cel mai mare număr care să indice de câte ori doreşti
+          ca albina să strângă polen de aici
       NEW Course 4 Bee For Loops 5:
         actions_category: Caseta de instrumente are acum un nou aspect! Blocurile
           "Acţiuni" sunt aici acum.
@@ -127,6 +168,8 @@ ro-RO:
         craft_what_is_iron: Extrage acest fier!
       Underground Iron_2019:
         craft_what_is_iron: Extrage acest fier!
+      courseA_collector_preLoops1:
+        courseA_collector_preLoops1_1: Apasă aici pentru a vedea acest cod rulând!
       frozen circle function with parameter:
         frozen_circle_function_with_parameter_circle: Utilizaţi blocul "crează un
           cerc" şi modificaţi dimensiunea.

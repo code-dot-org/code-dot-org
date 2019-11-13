@@ -25,6 +25,7 @@ it-IT:
         2-3_Artist_4_a: Per completare la casa, tutto quello che devi fare è disegnare
           un quadrato!
       2-3 Artist 6:
+        2-3_Artist_6_a: 'Per gli angoli piccoli, dovete girare intorno \* più \* volte.   '
         2-3_Artist_6_b: Visto che sono già rivolto verso destra, disegnare il triangolo
           è più facile se inizi andando avanti e poi giri a sinistra.
         2-3_Artist_6_c: Ogni lato del triangolo è la stessa lunghezza di ciascun lato
@@ -39,6 +40,8 @@ it-IT:
       2-3 Artist 9 NEW:
         2-3_Artist_9_a: Questo rombo è semplicemente un quadrato ruotato.
       2-3 Artist Debugging 10:
+        2-3_Artist_Debugging_10_a: Prova ad eseguire il codice così com'è per capire
+          dov'è l'errore.
         2-3_Artist_Debugging_10_b: |-
           Ricorda che devi allargare il controller di 10 pixel: quindi devi <b>aggiungere</b> 10 a qualche valore.<br>
           Questo è un caso in cui è ragionevole fare esperimenti.<br>
@@ -54,6 +57,11 @@ it-IT:
       2-3 Artist Debugging 7:
         2-3_Artist_Debugging_7_a: Prova a far tornare indietro l'artista dopo aver
           disegnato la prima linea.
+      2-3 Artist Debugging 8:
+        2-3_Artist_Debugging_8_a: |-
+          Quante volte viene ripetuta la figura?<br>
+          Invece, quante volte <i>dovrebbe</i> essere ripetuta?<br>
+          Quindi, come devi correggere il blocco `ripeti ... volte`?
       2-3 Artist Debugging 9:
         2-3_Artist_Debugging_9_a: Prima di iniziare a disegnare, l'artista deve girare
           a sinistra di 60 gradi in più.
@@ -264,6 +272,10 @@ it-IT:
         4-5_Artist_4_a: |-
           Ci sono 360 gradi in un cerchio!<br>
           Ecco quante volte devi ripetere il codice che trovi già pronto (girando 1 grado ogni volta) per completare il cerchio!
+      4-5 Artist 5:
+        4-5_Artist_5_a: |-
+          Fare delle prove può funzionare, ma osserva che in totale devi fare un angolo di 90 gradi in 3 passi.<br>
+          Quanto fa 90 diviso 3?
       4-5 Artist 7:
         4-5_Artist_7_a: 'Quale angolo è il più piccolo?  In quale angolo è collocato
           l''artista? '
@@ -271,7 +283,14 @@ it-IT:
         4-5_Artist_8_a: "Ogni lato lungo è di 240 pixel. Questo significa che la somma
           di quelli corti vale:<br>\n <b>800 - 240 - 240 = 320</b><br>\nChe cosa rappresenta
           <b>320 / 2 </b>? "
+        4-5_Artist_8_b: |-
+          Quest'immagine può essere disegnata in due modi:<br>
+
+          -   disegna due rettangoli con lati 120 e 160, con un lato sovrapposto, oppure<br>
+          -   disegna un rettangolo con lati 240 e 160, e poi aggiungi la linea di centrocampo.
       4-5 Artist 9:
+        4-5_Artist_9_a: Quando un triangolo è equilatero, tutti i lati e tutti gli
+          angoli sono uguali tra loro.
         4-5_Artist_9_b: Devi disegnare tre triangoli uguali. Non dimenticare di spostarti
           alla nuova posizione dopo ognuno di essi.
       4-5 Artist Assessment 1:
@@ -362,6 +381,10 @@ it-IT:
           di **mezzo esagono** con **due terzi di un triangolo**. '
         Course_4_Artist_12_b: 'Ogni singola figura è quasi uguale a quella dell''ultimo
           esercizio, tranne per il fatto che il mezzo esagono è un po'' più grande. '
+        Course_4_Artist_12_c: |-
+          Le prime tre linee sono lunghe 60 pixel e devi ruotare di 60 gradi.
+
+          Le ultime due linee sono lunghe 80 pixel e devi ruotare di 120 gradi.
         Course_4_Artist_12_d: |-
           **Soluzione:**
 
@@ -3263,6 +3286,9 @@ it-IT:
             </block>
           </xml>
       Course 4 SCV 5:
+        Course_4_SCV_5_a: "L'ape dovrebbe seguire un percorso in cui raccoglie prima
+          tutto il nettare (andando a zig-zag verso destra e verso l'alto) e poi tutto
+          il miele (andando a zig-zag verso il basso e verso sinistra):  \n\n![](https://images.code.org/7f6f09c55cf9552a91fc1d33f44a7315-image-1469641639330.png)"
         Course_4_SCV_5_b: Ad ogni ripetizione del ciclo che fa percorrere all'ape
           questo tracciato, sui fiori ci sono due dosi di nettare in meno e l'ape
           deve produrre una dose di miele in più.
@@ -3405,6 +3431,8 @@ it-IT:
         Course_4_SCV_6_d: |-
           -   Sono necessari 3 "cicli annidati", il più esterno per ripetere i pentagoni, quello intermedio per disegnare il singolo pentagono, quello più interno per disegnare il singolo lato. <br>
           -   Il colore dei segmenti "zig" ha le seguenti componenti: rosso=0, verde=175, blu=200; quello degli "zag" ha: rosso=100, verde=50, blu=150.
+        Course_4_SCV_6_e: Per disegnare lo zig bisogna ruotare a sinistra di `360`/`sides`,
+          per lo zag a destra della stessa quantità.
         Course_4_SCV_6_f: |-
           **Soluzione:**
 
@@ -3808,6 +3836,32 @@ it-IT:
       CourseE_HOC 2018 Level_9b:
         voyage_aquatic_9a: Che bella barriera corallina! I coralli blu ti suggeriscono
           quando girare a **destra** e quelli rossi quando girare a **sinistra**.
+      Dance_2019_01:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          -   Assicurati che sullo schermo appaia un ballerino.
+
+          _L'esercizio terminerà dopo 4 battute._
+      Dance_2019_04:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          -   Il ballerino deve cambiare mossa dopo 4 battute.
+
+          _L'esercizio terminerà dopo 8 battute._
+      Dance_2019_05:
+        validation: |-
+          **Come faccio a completare questo esercizio?**
+
+          -   Dopo 6 battute, il tuo ballerino dovrà ballare in modo diverso rispetto a come ballava dopo 4 battute.
+
+          _L'esercizio terminerà dopo 12 battute._
+      Dance_2019_07:
+        challenges: |-
+          **Sfida supplementare**
+
+          -   Fai qualche esperimento modificando le altre proprietà (larghezza, altezza, rotazione e così via)
       Dance_Party_01:
         validation: |-
           **Come faccio a completare questo esercizio?**
@@ -4097,6 +4151,12 @@ it-IT:
         NEW_Course_4_Artist_Params_11_a: Clicca su "Esegui" per vedere cosa fa la
           funzione. Nota che la funzione è stata definita con due parametri, ma il
           suo codice ne usa uno solo.
+      NEW Course 4 Artist Params 13:
+        NEW_Course_4_Artist_Params_13_a: Nella funzione `draw a polygon` (<i>disegna
+          un poligono</i>) devi dividere il valore del perimetro per il numero di
+          lati del poligono per ottenere la lunghezza di ogni lato. In questo modo
+          riesci a disegnare una figura il cui perimetro ha sempre la stessa lunghezza
+          indipendentemente dal numero dei lati.
       NEW Course 4 Artist Params 14:
         NEW_Course_4_Artist_Params_14_a: Va benissimo sperimentare il comportamento
           della funzione per capire come si comporta al variare del valore dei parametri.
@@ -4105,8 +4165,145 @@ it-IT:
           colore a blu.
         double_loop: Prova ad inserire un "ciclo con contatore" all'interno di un
           altro ciclo.
+        specifics: |-
+          In ogni petalo, il poligono più piccolo ha 3 lati ed il più grande ne ha 17.<br>
+          <br>
+          Nel blocco `imposta l'opacità`, usa un blocco divisione per rendere il colore sempre più trasparente man mano che il numero dei lati del poligono aumenta (minore è il valore dell'opacità più trasparente è il colore).
         after: Quando hai finito un petalo, assicurati di spostarti in avanti di 20
           pixel prima di ruotare di 60 gradi per iniziare il petalo successivo.
+        solution: |-
+          **Soluzione:**
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="draw_width" inline="false">
+          <value name="WIDTH">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+          <block type="colour_picker">
+          <title name="COLOUR">#0000cd</title>
+          </block>
+          </value>
+          <next>
+          <block type="controls_for_counter" inline="true">
+          <mutation counter="counter"></mutation>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">50</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="math_number">
+          <title name="NUM">350</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">50</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="alpha" inline="true" id="alpha">
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">DIVIDE</title>
+          <value name="A">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="math_number">
+          <title name="NUM">4</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">90</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="jump" inline="true">
+          <title name="DIR">jumpBackward</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">25</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">90</title>
+          </block>
+          </value>
+          <next>
+          <block type="jump" inline="true">
+          <title name="DIR">jumpBackward</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">25</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnLeft</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">90</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       NEW Course 4 Bee For Loops 10a:
         NEW_Course_4_Bee_For_Loops_10a_a: Riesci a trovare una relazione tra il numero
           di passi che l'ape fa per arrivare al fiore ed il numero di dosi di nettare
@@ -4394,6 +4591,11 @@ it-IT:
           name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n
           \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_e: "Infine, fai apparire il mago quando
+          clicchi sul robot!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
       course1_playlab_events_challenge2:
         courseA_playlab_events_challenge2_a: "Puoi fare cantare l'uccellino.\n\n<xml>
           \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n
@@ -4462,6 +4664,10 @@ it-IT:
       course2_collector_loops_challenge2:
         courseC_maze_loops_challenge2_b: Usa dei cicli per non superare il numero
           massimo di blocchi `raccogli`!
+      course2_harvester_loops_challenge1:
+        courseC_harvester_loops_challenge1_b: Puoi ripetere i blocchi `vai avanti`
+          e `prendi pannocchia` tutte le volte che ti serve, poi `gira a destra` ad
+          ogni angolo.
       course2_harvester_loops_challenge2:
         courseC_harvester_loops_challenge2_a: Un modo per risolvere questo esercizio
           assomiglia a uno zig-zag. Un altro modo ricorda una spirale! Ci sono tante
@@ -4476,7 +4682,12 @@ it-IT:
           Lo schema a spirale può essere ottenuto con solo 18 blocchi!
 
            ![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)
+      course2_maze_loops_challenge1:
+        courseC_maze_loops_challenge1_a: Considera questo percorso diviso in due parti
+          diverse. Ognuna ha un suo schema che si ripete.
       course2_maze_programming_challenge2:
+        courseC_maze_programming_challenge2_a: _"Se mi fai muovere all'indietro, stai
+          particolarmente attento a farmi girare dalla parte giusta!"_
         courseC_maze_programming_challenge2_b: La soluzione più corta usa solo 5 blocchi,
           ma usa questo blocco `ripeti ... volte`!
       course3_artist_functions_challenge2:
@@ -4496,6 +4707,10 @@ it-IT:
               <title name="YPOS">200</title>
             </block>
             </xml>
+      course3_bee_debugging_challenge1:
+        courseD_bee_debugging_challenge1_a: Perché la prima parte di questo programma
+          funziona? Perché l'ape fa un movimento all'indietro ad ogni ciclo? Quanto
+          nettare raccoglie l'ape ogni volta che si passa su un fiore?
       course3_bee_functions_challenge1:
         courseE_bee_functions_challenge1_a: |-
           Se ti sembra troppo difficile, prova a creare la funzione poco per volta.<br>
@@ -4615,12 +4830,83 @@ it-IT:
               </statement>
             </block>
           </xml>
+      course3_collector_debugging_challenge2:
+        courseD_collector_debugging_challenge2_b: |-
+          Quindi, dopo aver fatto un passo indietro, raccogli i diamanti rimanenti. E ripeti questo meccanismo su tutta la fila.
+
+          ![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)
+          Aggiungi questi blocchi al tuo programma:
+
+          <xml><block type="maze_move">
+                              <title name="DIR">moveBackward</title>
+                            </block>
+          <block type="controls_repeat">
+                  <title name="TIMES">4</title>
+                  <statement name="DO">
+
+                  </statement>
+                </block>
+
+          </xml>
+        courseD_collector_debugging_challenge2_c: "Infine, per raccogliere i diamanti
+          rimanenti su tutti i lati del percorso, aggiungi questi blocchi al tuo programma:\n\n<xml>\n
+          \ <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n
+          \             </block>\n      <block type=\"controls_repeat\">\n        <title
+          name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n
+          \       </statement>\n      </block>\n</xml>"
+        courseD_collector_debugging_challenge2_d: |-
+          Ecco la soluzione completa di questo esercizio:
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">4</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="controls_repeat">
+                          <title name="TIMES">2</title>
+                          <statement name="DO">
+                            <block type="maze_move">
+                              <title name="DIR">moveForward</title>
+                              <next>
+                                <block type="controls_repeat">
+                                  <title name="TIMES">2</title>
+                                  <statement name="DO">
+                                    <block type="collector_collect"/>
+                                  </statement>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="maze_move">
+                              <title name="DIR">moveBackward</title>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </xml>
       course3_farmer_condLoops_challenge1:
         courseD_farmer_condLoops_challenge1_b: Di solito, quando ci si trova su una
           zucca, si esegue solamente il blocco `prendi zucca`. Cos'altro devi fare
           in questo caso se sei su una zucca?
       course3_maze_debugging_challenge1:
         courseC_maze_debugging_challenge1_a: Destra o sinistra? A te la scelta!
+        courseC_maze_debugging_challenge1_b: Il percorso che deve seguire Scrat ha
+          la forma di un rettangolo! Deve girare dalla stessa parte ad ogni svolta.
       course3_playLab_challenge1:
         courseE_playLab_challenge1_a: |-
           Ecco alcune possibili cose da fare quando il giocatore vince la partita:
@@ -7304,11 +7590,10 @@ it-IT:
           e inserisci al suo interno i blocchi che vuoi ripetere.
       courseB_iceage_loops3_2019:
         courseB_iceage_loops3_a: |-
-          Prova ad usare un ciclo!
-          <xml><block type="controls_repeat_simplified_dropdown">
-
-          <title name="TIMES" config="3-10">5</title>
-          </block></xml>
+          Usa questo nuovo blocco!
+           <xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="3-10">5</title>
+              </block></xml>
         courseB_iceage_loops3_b: Per ripetere una sequenza di istruzioni, trascina
           nell'area di lavoro un blocco `ripeti` e inserisci al suo interno i blocchi
           che vuoi ripetere.
@@ -9321,14 +9606,6 @@ it-IT:
           ad ogni casella.
         courseC_collector_prog_challenge1_b: Ti sei perso? Prova questo percorso per
           risolvere l'esercizio!
-      courseC_data wizard:
-        courseA_playLab_events7_a: |-
-          Usa questo blocco per definire cosa deve succedere quando i personaggi si scontrano.
-
-          <xml><block type="studio_whenSpriteCollided">
-              <title name="SPRITE1">1</title>
-              <title name="SPRITE2">0</title>
-            </block></xml>
       courseC_flappy_events1:
         courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
       courseC_flappy_events1_2018:
@@ -11384,6 +11661,35 @@ it-IT:
                                 <block type="maze_nectar"/>
                               </statement>
             </block></xml>
+      courseD_bee_debugging_challenge1:
+        courseD_bee_debugging_challenge1_a: Perché la prima parte di questo programma
+          funziona? Perché l'ape fa un movimento all'indietro ad ogni ciclo? Quanto
+          nettare raccoglie l'ape ogni volta che si passa su un fiore?
+      courseD_bee_debugging_challenge1a:
+        courseD_bee_debugging_challenge1_a: Perché la prima parte di questo programma
+          funziona? Perché l'ape fa un movimento all'indietro ad ogni ciclo? Quanto
+          nettare raccoglie l'ape ogni volta che si passa su un fiore?
+        courseD_bee_debugging_challenge1_b: In questo esercizio, per produrre il miele,
+          l'ape deve seguire lo stesso schema utilizzato per raccoglie il nettare.
+        courseD_bee_debugging_challenge1_c: |-
+          Quando l'ape raggiunge la fine della fila di fiori, deve ripetere queste istruzioni:
+
+          <xml><block type="controls_repeat">
+                              <title name="TIMES">2</title>
+                              <statement name="DO">
+                                <block type="maze_move">
+                                  <title name="DIR">moveForward</title>
+                                  <next>
+                                    <block type="maze_honey"/>
+                                  </next>
+                                </block>
+                              </statement>
+                              <next>
+                                <block type="maze_move">
+                                  <title name="DIR">moveBackward</title>
+                                </block>
+                              </next>
+                            </block></xml>
       courseD_bee_nestedLoops1:
         courseD_bee_nestedLoops1_a: Non funziona? Prova ad usare il pulsante "Fai
           un passo" per vedere cosa succede eseguendo un blocco alla volta.
@@ -11621,6 +11927,8 @@ it-IT:
         courseD_collector_debugging1_c: Ricorda di usare il blocco `raccogli` per
           collezionare tutti i diamanti ogni volta che sei arrivato su di essi.
       courseD_collector_debugging10_predict1:
+        courseD_collector_debugging9_a: Ci sono tanti modi per risolvere questo esercizio...
+          ma tutti richiedono delle curve!
         courseD_collector_debugging9_b: Cerca di capire come dovresti risolvere questo
           esercizio, quindi vai avanti un passo per volta, facendo corrispondere le
           istruzioni a ciò che hai in mente.
@@ -11751,6 +12059,9 @@ it-IT:
           E al secondo?
 
           Dov'è che qualcosa comincia a non funzionare?
+        courseD_collector_debugging6_b: Dopo che hai messo nel corretto ordine le
+          istruzioni, devi anche fare in modo che l'avventuriera raccolga tutti i
+          diamanti. Come puoi ripetere più volte l'azione `raccogli`?
       courseD_collector_debugging6a_2018:
         courseD_collector_debugging6_a: |-
           Prova ad eseguire il codice un blocco per volta usando il pulsante "Fai un passo". È tutto giusto al primo passo?
@@ -11777,9 +12088,89 @@ it-IT:
         courseD_collector_debugging8_b: Prova ad usare un ciclo annidato per rendere
           più breve questo programma.
       courseD_collector_debugging9:
+        courseD_collector_debugging9_a: Ci sono tanti modi per risolvere questo esercizio...
+          ma tutti richiedono delle curve!
         courseD_collector_debugging9_b: Cerca di capire come dovresti risolvere questo
           esercizio, quindi vai avanti un passo per volta, facendo corrispondere le
           istruzioni a ciò che hai in mente.
+      courseD_collector_debugging_challenge2:
+        courseD_collector_debugging_challenge2_a: "Dopo aver fatto un passo avanti,
+          inizia raccogliendo solo **due** diamanti da ognuna delle prime **due**
+          caselle.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04
+          AM copy.png>)\nUsa questi blocchi:\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block
+          type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n
+          \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
+          name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
+          \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
+        courseD_collector_debugging_challenge2_b: |-
+          Quindi, dopo aver fatto un passo indietro, raccogli i diamanti rimanenti. E ripeti questo meccanismo su tutta la fila.
+
+          ![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)
+          Aggiungi questi blocchi al tuo programma:
+
+          <xml><block type="maze_move">
+                              <title name="DIR">moveBackward</title>
+                            </block>
+          <block type="controls_repeat">
+                  <title name="TIMES">4</title>
+                  <statement name="DO">
+
+                  </statement>
+                </block>
+
+          </xml>
+        courseD_collector_debugging_challenge2_c: "Infine, per raccogliere i diamanti
+          rimanenti su tutti i lati del percorso, aggiungi questi blocchi al tuo programma:\n\n<xml>\n
+          \ <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n
+          \             </block>\n      <block type=\"controls_repeat\">\n        <title
+          name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n
+          \       </statement>\n      </block>\n</xml>"
+        courseD_collector_debugging_challenge2_d: |-
+          Ecco la soluzione completa di questo esercizio:
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">4</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="controls_repeat">
+                          <title name="TIMES">2</title>
+                          <statement name="DO">
+                            <block type="maze_move">
+                              <title name="DIR">moveForward</title>
+                              <next>
+                                <block type="controls_repeat">
+                                  <title name="TIMES">2</title>
+                                  <statement name="DO">
+                                    <block type="collector_collect"/>
+                                  </statement>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="maze_move">
+                              <title name="DIR">moveBackward</title>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </xml>
       courseD_collector_nested_loops_challenge2:
         courseD_bee_nested_loops_challenge2_a: Non dimenticare che puoi inserire nel
           blocco `ripeti ... volte` un singolo comando o uno schema più lungo. E si
@@ -11985,6 +12376,9 @@ it-IT:
         courseD_collector_nested_loops_challenge2a_a: Non dimenticare che puoi inserire
           nel blocco `ripeti ... volte` un singolo comando o uno schema più lungo.
           E si può anche ripetere un blocco `ripeti ... volte`!
+        courseD_collector_nested_loops_challenge2a_b: Riesci a capire come raccogliere
+          tutti e quattro i diamanti senza usare più blocchi di quanti ne servono
+          per raccoglierne due?
       courseD_collector_ramp10:
         courseD_artist_ramp10_a: |-
           Invece di usare quattro blocchi `vai avanti` per ogni lato, prova a mettere un unico blocco `vai avanti` all'interno di un ciclo `ripeti ... volte`, come qui:
@@ -12416,6 +12810,10 @@ it-IT:
       courseD_farmer_while_challenge2:
         courseD_farmer_while_challenge1_a: Le buche e i mucchi si trovano sempre una
           casella **prima** della fine del percorso.
+        courseD_farmer_while_challenge1_b: Usando un ciclo `mentre`, puoi dire alla
+          contadina di rimuovere un mucchio o riempire una buca, anche se non c'è.
+          Ciò significa che è possibile programmarla per rimuovere qualsiasi mucchio
+          o riempire qualsiasi buca, dovunque lei sia.
         courseD_farmer_conditionals8_c: È possibile risolvere questo esercizio senza
           usare alcun blocco `ripeti ... volte`. Per farlo, avrai bisogno di usare
           quattro cicli `mentre`.
@@ -12482,13 +12880,19 @@ it-IT:
           alla ghianda.
       courseD_iceage_loops3:
         courseB_iceage_loops3_a: |-
-          Usa questo nuovo blocco! <xml><block type="controls_repeat_dropdown">
+          Prova ad usare un ciclo! <xml><block type="controls_repeat_dropdown">
               <title name="TIMES" config="2-10">5</title>
             </block></xml>
         courseB_iceage_loops3_b: Per ripetere una sequenza di istruzioni, trascina
           nell'area di lavoro un blocco `ripeti ... volte` e inserisci al suo interno
           i blocchi che vuoi ripetere.
       courseD_iceage_loops3_2019:
+        courseB_iceage_loops3_a: |-
+          Usa questo nuovo blocco!
+
+           <xml><block type="controls_repeat_dropdown">
+              <title name="TIMES" config="2-10">5</title>
+            </block></xml>
         courseB_iceage_loops3_b: Per ripetere una sequenza di istruzioni, trascina
           nell'area di lavoro un blocco `ripeti ... volte` e inserisci al suo interno
           i blocchi che vuoi ripetere.
@@ -12553,6 +12957,9 @@ it-IT:
         courseD_iceage_loops9_c: Scrat dovrebbe seguire questo percorso per raggiungere
           la ghianda.
       courseD_maze_intro4_2019:
+        courseC_maze_programming4_a: Puoi girare a destra o a sinistra dal punto di
+          vista di Scrat. Se Scrat è rivolto verso destra, girare a destra significa
+          dirigersi verso la parte bassa dello schermo.
         courseC_maze_programming4_b: Per seguire il percorso, vai avanti e gira da
           una parte, poi spostati di nuovo e gira nella direzione opposta. Per raggiungere
           la ghianda, vai ancora una volta avanti.
@@ -13130,6 +13537,8 @@ it-IT:
           dopo?
         courseC_maze_programming5_b: Di quante caselle devi andare avanti per raggiungere
           l'angolo?
+        courseC_maze_programming5_c: Una volta raggiunto l'angolo, dovrai girare a
+          sinistra per arrivare alla ghianda.
       courseD_scrat_ramp6:
         courseC_maze_programming6a_a: Usa un ciclo `ripeti ... volte` per far muovere
           Scrat!
@@ -16204,6 +16613,10 @@ it-IT:
         courseF_bee_conditionals4_b: Usa un blocco `se` all'interno del ciclo per
           controllare la presenza di un fiore in ogni casella.
       courseF_bee_conditionals5:
+        courseF_bee_conditionals5_a: Pensa ad ogni lato del percorso rettangolare
+          come ad un percorso a sé stante. Imposta un ciclo annidato con un blocco
+          `ripeti ... volte` all'esterno ed uno `mentre c'è strada in avanti` all'interno.
+          Lungo quanti lati deve volare l'ape per ronzare su ogni fiore?
         courseF_bee_conditionals5_b: All'interno del blocco `mentre c'è strada in
           avanti` devi andare avanti e controllare se c'è un fiore. Come controlli
           se c'è un fiore? Cosa fai se c'è un fiore?

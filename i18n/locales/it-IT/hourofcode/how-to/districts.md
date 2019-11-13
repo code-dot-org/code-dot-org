@@ -1,7 +1,5 @@
 ---
 title: L'Ora del Codice - Guida per le Province
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

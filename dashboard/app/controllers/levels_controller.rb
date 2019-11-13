@@ -30,6 +30,7 @@ class LevelsController < ApplicationController
     EvaluationMulti,
     External,
     ExternalLink,
+    Fish,
     Flappy,
     FreeResponse,
     FrequencyAnalysis,
@@ -316,6 +317,8 @@ class LevelsController < ApplicationController
         @game = Game.craft
       elsif @type_class == Weblab
         @game = Game.weblab
+      elsif @type_class == Fish
+        @game = Game.fish
       elsif @type_class == CurriculumReference
         @game = Game.curriculum_reference
       end

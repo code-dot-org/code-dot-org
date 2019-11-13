@@ -45,6 +45,9 @@ pt-BR:
       CSD LEDs Map: 'Circuit Playground: LEDs'
       CSD LEDs Map_2018: 'Circuit Playground: LEDs'
       CSD LEDs Map_2019: 'Circuit Playground: LEDs'
+      CSD Polling Events Map: Eventos de votação
+      CSD Polling Events Map_2018: Eventos de votação
+      CSD Polling Events Map_2019: Eventos de votação
       CSD Problem Solving Process Video: 'Vídeo: Processo de resolução de problemas'
       CSD Set Scale Map: Alterando a escala do Sensor
       CSD Set Scale Map_2018: Alterando a escala do Sensor
@@ -525,6 +528,9 @@ pt-BR:
       CSD U6 sensor experiment embedded: Experimento com Sensor
       CSD U6 sensor experiment embedded_2018: Experimento com Sensor
       CSD U6 sensor experiment embedded_2019: Experimento com Sensor
+      CSD U6 setProperty Map: Criando telas com código
+      CSD U6 setProperty Map_2018: Criando telas com código
+      CSD U6 setProperty Map_2019: Criando telas com código
       CSD U6 tugowar demo: Demo - Pegue o Bug
       CSD U6 tugowar demo_2018: Demo - Pegue o Bug
       CSD U6 tugowar demo_2019: Demo - Pegue o Bug
@@ -659,11 +665,17 @@ pt-BR:
       CourseF_Project_SpriteLab: Projeto de Laboratório de Sprite do Curso F
       CourseF_Project_SpriteLab_2019: Projeto de Laboratório de Sprite do Curso F
       Dance_Party_extras_battle: Equipes de dança
+      Dance_Party_extras_battle_2019: Equipes de dança
       Dance_Party_extras_every_beat: Semínimas
+      Dance_Party_extras_every_beat_2019: Semínimas
       Dance_Party_extras_layout: Entrar em formação
+      Dance_Party_extras_layout_2019: Entrar em formação
       Dance_Party_extras_on_beat: Grave, Médio e Agudo
+      Dance_Party_extras_on_beat_2019: Grave, Médio e Agudo
       Dance_Party_extras_speed: Acelerar, retardar
+      Dance_Party_extras_speed_2019: Acelerar, retardar
       Dance_Party_extras_visible: Onde eles foram?
+      Dance_Party_extras_visible_2019: Onde eles foram?
       Final Personal Website: Website pessoal final
       Final Personal Website_2018: Website pessoal final
       Final Personal Website_2019: Website pessoal final

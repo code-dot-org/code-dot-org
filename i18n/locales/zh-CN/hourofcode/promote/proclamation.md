@@ -1,7 +1,5 @@
 ---
 title: 支持计算机科学教育周和编程一小时的示例决议
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

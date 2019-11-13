@@ -1,9 +1,0 @@
-#!/usr/bin/env ruby
-
-# Downloads all translations from Crowdin
-# Hour of Code project to i18n/locales.
-# https://crowdin.com/project/hour-of-code
-
-require_relative 'i18n_script_utils'
-
-exec "crowdin --config #{HOUROFCODE_CONFIG_FILE} --identity #{HOUROFCODE_IDENTITY_FILE} download"

@@ -1,7 +1,5 @@
 ---
 title: Ultima Ora del Codice
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

@@ -437,6 +437,7 @@ bg:
             '"rotation"': въртене
             '"x"': хоризонтално положение
             '"y"': вертикално положение
+            '"tint"': оттенък
       Dancelab_setPropRandom:
         options:
           PROPERTY:
@@ -837,6 +838,8 @@ bg:
         text: "{LOCATION}"
       Mikelab_randomColor:
         text: случаен цвят
+      Mikelab_repeatUntilComplete:
+        text: повтаряй завинаги
       Mikelab_setBG:
         options:
           BG:

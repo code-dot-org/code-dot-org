@@ -1,7 +1,5 @@
 ---
 title: Hour of Code-guide för kommuner
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

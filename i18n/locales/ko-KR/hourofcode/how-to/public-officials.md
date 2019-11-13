@@ -1,7 +1,5 @@
 ---
 title: 공무원들을 위한 이벤트 가이드
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

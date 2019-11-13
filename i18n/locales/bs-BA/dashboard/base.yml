@@ -538,6 +538,7 @@ bs:
     submit: "Potvrdi"
     decline: "Zatvori"
   zendesk_too_young_message: 'Nažalost, mlađi korisnici se ne mogu prijaviti na našu stranicu za podršku. Možeš pregledavati <a href="http://support.code.org"> support.code.org</a> bez prijavljivanja ili pitaj roditelje ili učitelja da nas kontaktiraju umjesto tebe.'
+  zendesk_too_young_message_markdown: 'Nažalost, mlađi korisnici se ne mogu prijaviti na našu stranicu za podršku. Možeš pregledavati [support.code.org](http://support.code.org) bez prijavljivanja ili pitaj roditelje ili učitelja da nas kontaktiraju umjesto tebe.'
   progress:
     not_started: nije započeto
     in_progress: u toku
@@ -616,6 +617,7 @@ bs:
     csp_functions: 'Funkcije'
     csp_lists: 'Liste'
     csp_loops: 'Petlje'
+    k5_next_steps: 'Slijedeći Koraci'
   external_links:
     leaving_domain: Sada napuštate ovu domenu, na stranicu koja nije rukovođena od strane Code.org-a.
     disclaimer_text: Ova stranica može imati politike privatnosti koje se razlikuju od onih na Code.org-u. Mi smo izabrali ova sredstva od trećih strana zato što mislimo da će Vam biti od koristi. Iako mi nismo direktno odgovorni za sadržaj ove stranice, molimo<a href='%{support_url}'>kontaktirajke podršku</a> ako nađete sporni sadržaj, ili ako povezana stranice više nije dostupna.

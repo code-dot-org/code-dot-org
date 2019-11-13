@@ -1,7 +1,5 @@
 ---
 title: பெற்றோர்களுக்கு வழிகாட்டுவது எப்படி என்று
-layout: wide
-nav: how_to_nav
 ---
 
 {{signup_button}}

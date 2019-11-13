@@ -93,6 +93,12 @@ uk-UA:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Новий блок!
         dance_callout_11_b: Новий блок!
+      Dance_2019_06:
+        dance_party_11_5_groups: Новий блок!
+      Dance_2019_07:
+        setprop_hint: Новий блок!
+      Dance_2019_09:
+        new_block_1: Новий блок!
       Dance_Party_06:
         dance_callout_06: Додай сюди свого нового танцюриста
       Dance_Party_11:
@@ -299,6 +305,7 @@ uk-UA:
         snowflake_dropdown: Скористайтесь розкривним списком, щоб створювати різні
           сніжинки!
       frozen line:
+        run: Натисни "Запустити", щоб випробувати програму!
         move_elsa_forward: Перемісти блок "Рухатися вперед" та прикріпи його під блоком
           "Коли гра починається", щоб змусити Ельзу рухатися вперед
       frozen perpendicular:

@@ -4139,4 +4139,44 @@ class UserTest < ActiveSupport::TestCase
     assert teacher.update(school_info: school_info)
     assert_equal teacher.user_school_infos.count, 2
   end
+
+  test 'does set admin to true when google oauth codeorg account' do
+    email = 'fernhunt@code.org'
+    migrated_teacher = create(:teacher, :with_google_authentication_option, email: email)
+
+    migrated_teacher.admin = true
+    migrated_teacher.save!
+
+    assert migrated_teacher.admin
+  end
+
+  test 'does set admin to false when it is not a google oauth codeorg account' do
+    email = 'annieeasley@code.org'
+    migrated_teacher = create(:teacher, email: email)
+
+    migrated_teacher.admin = true
+    migrated_teacher.save!
+
+    refute migrated_teacher.admin
+  end
+
+  test 'does set admin to false when it is not a codeorg account' do
+    email = 'milesmorales@gmail.com'
+    migrated_teacher = create(:teacher, :with_google_authentication_option, email: email)
+
+    migrated_teacher.admin = true
+    migrated_teacher.save!
+
+    refute migrated_teacher.admin
+  end
+
+  test 'does set admin to false when unmigrated teacher account' do
+    unmigrated_teacher_without_password = create :teacher, :demigrated
+    unmigrated_teacher_without_password.update_attribute(:encrypted_password, '')
+
+    unmigrated_teacher_without_password.admin = true
+    unmigrated_teacher_without_password.save!
+
+    refute unmigrated_teacher_without_password.admin
+  end
 end

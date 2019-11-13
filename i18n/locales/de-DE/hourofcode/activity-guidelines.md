@@ -1,6 +1,5 @@
 ---
 title: Tutorial Richtlinien
-layout: wide
 ---
 
 <style>

@@ -1,10 +1,5 @@
 ---
 title: Cảm ơn bạn đã đăng ký để tổ chức Hour of Code!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # Cảm ơn bạn đã đăng ký để tổ chức Hour of Code!

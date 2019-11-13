@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "listedeki her bir";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "Listedeki her öğeyi  '%1' değişkenine ver ve komutu yerine getir.";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#count_with";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "%1 den %2 ye, her adımda %3 değişim";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "şununla say";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "%1 değişkenini başlangıç numarasından bitiş numarasına kadar belirtilen farkla değerler verirken belirtilen blokları gerçekleştirir.";

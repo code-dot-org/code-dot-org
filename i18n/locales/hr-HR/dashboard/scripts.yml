@@ -1486,3 +1486,17 @@ hr:
               name: Uvod
             Nested Loops:
               name: Ugniježđene petlje
+        k5-onlinepd-copy:
+          stages:
+            Loops:
+              name: Petlje
+            Conditionals:
+              name: Uvjeti
+            Events:
+              name: Događaji
+            Functions:
+              name: Funkcije
+            Variables:
+              name: Varijable
+            For Loops:
+              name: Petlja brojača

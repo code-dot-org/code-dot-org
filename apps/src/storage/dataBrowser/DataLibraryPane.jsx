@@ -37,7 +37,7 @@ class DataLibraryPane extends React.Component {
 
   onError = error => {
     if (error.type === WarningType.DUPLICATE_TABLE_NAME) {
-      this.props.onShowWarning(error);
+      this.props.onShowWarning(error.msg);
     }
   };
 

@@ -2118,3 +2118,24 @@ nl:
             Dance Party:
               name: Dansfeest
           description: Programmeer je eigen dansfeest om te delen met je vrienden!
+        k5-onlinepd-copy:
+          stages:
+            Computer Science Fundamentals:
+              name: Basisbegrippen Computer Wetenschappen
+            Next Steps:
+              name: Volgende stappen
+            Loops:
+              name: Lussen
+            Conditionals:
+              name: Voorwaardelijke instructies
+            Events:
+              name: Gebeurtenissen
+            Functions:
+              name: Functies
+            Variables:
+              name: Variabelen
+            For Loops:
+              name: For-lussen
+        dance-extras-2019:
+          title: Blijf dansen
+          description: Breid de kennis van het eerste uur uit met uitgebreide projectideeën.

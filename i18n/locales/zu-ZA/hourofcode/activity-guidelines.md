@@ -1,6 +1,5 @@
 ---
 title: Imihlahlandlela yeZifundiso
-layout: wide
 ---
 
 <style>

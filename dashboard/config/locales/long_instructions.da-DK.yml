@@ -78,6 +78,14 @@ da-DK:
         \*Tilføj flere taster for at kontrollere dansene
         \*Få også baggrundsdanserne til at reagere, når der trykkes på tasterne
         \*Forandr danseren hver 4. takt ved at indstille deres synlighed
+      Dance_Party_extras_battle_2019: |-
+        # Dansegrupper
+
+        Her er en dansekonkurrence mellem to grupper. Piletasterne styrer en af danserne, og tasterne "w, a, s, d" kontrollere den anden. Dans mod en ven, og gør det endnu bedre i en revanche.
+
+        \*Tilføj flere taster for at kontrollere dansene
+        \*Få også baggrundsdanserne til at reagere, når der trykkes på tasterne
+        \*Forandr danseren hver 4. takt ved at indstille deres synlighed
       Dance_Party_extras_every_beat: |-
         # Fjerdedelsnoder
 
@@ -100,11 +108,23 @@ da-DK:
         # Lav, medio og høj
 
         Denne dans bruger "peak"-hændelser til at udløse kode, når forskellige dele af musikken bliver høj. Prøv dig frem med forskellige sange for at se, hvordan de ændrer dansen.
+      Dance_Party_extras_on_beat_2019: |-
+        # Lav, medio og høj
+
+        Denne dans bruger "peak"-hændelser til at udløse kode, når forskellige dele af musikken bliver høj. Prøv dig frem med forskellige sange for at se, hvordan de ændrer dansen.
       Dance_Party_extras_speed: |-
         # Sæt fart på, sænk farten
 
         Denne sidste dans bruger blokken 'sæt hastighed' til at styre, hvor hurtigt hver danser bevæger sig. Prøv at eksperimentere med forskellige hastigheder på forskellige steder i sangen. Det er helt i orden at prøve sig lidt frem i denne dans, eller vend tilbage til en af de tidligere danse for at gøre dem endnu sejere.
       Dance_Party_extras_visible: |-
+        # Hvor forsvandt de hen?
+
+        Denne dans viser og skjuler to forskellige dansegrupper. Tjek det ud, og giv det derefter dit eget udtryk.
+
+        \*Tilføj en anden gruppe dansere
+        \*Vis og skjul dansere ved hjælp af piletasterne
+        \*Skjul alle danserne, og skift til en spændende baggrundseffekt
+      Dance_Party_extras_visible_2019: |-
         # Hvor forsvandt de hen?
 
         Denne dans viser og skjuler to forskellige dansegrupper. Tjek det ud, og giv det derefter dit eget udtryk.

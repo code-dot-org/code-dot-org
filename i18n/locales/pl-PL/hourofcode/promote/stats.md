@@ -1,7 +1,5 @@
 ---
 title: Notki i przydatne statystyki
-layout: wide
-nav: promote_nav
 ---
 
 <a id="blurb"></a>

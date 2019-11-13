@@ -1568,3 +1568,19 @@ gl:
               name: Introdución
             Nested Loops:
               name: Bucles aniñados
+        k5-onlinepd-copy:
+          stages:
+            Computer Science Fundamentals:
+              name: Fundamentos de Informática
+            Loops:
+              name: Bucles
+            Conditionals:
+              name: Condicionais
+            Events:
+              name: Eventos
+            Functions:
+              name: Funcións
+            Variables:
+              name: Variables
+            For Loops:
+              name: Bucles "Para" (For)

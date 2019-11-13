@@ -389,3 +389,13 @@ uz:
               name: Funksiyalar
             Sprite Properties:
               name: Sprait hususiyatlari
+        k5-onlinepd-copy:
+          stages:
+            Loops:
+              name: Sikllar
+            Conditionals:
+              name: Shart buyruqlari
+            Functions:
+              name: Funksiyalar
+            Variables:
+              name: O‘zgaruvchilar

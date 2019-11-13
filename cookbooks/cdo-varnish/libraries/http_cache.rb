@@ -118,6 +118,7 @@ class HttpCache
             ) +
             # TODO: Collapse these paths into /private to simplify Pegasus caching config.
             %w(
+              /amazon-future-engineer*
               /create-company-profile*
               /edit-company-profile*
               /teacher-dashboard*

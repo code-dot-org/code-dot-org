@@ -1,7 +1,5 @@
 ---
 title: ทรัพยากร
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

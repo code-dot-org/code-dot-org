@@ -1,7 +1,5 @@
 ---
 title: '"Как да" Пътеводител за държавни служители'
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

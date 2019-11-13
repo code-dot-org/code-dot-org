@@ -1,7 +1,5 @@
 ---
 title: Інструкції з Години коду для волонтерів
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

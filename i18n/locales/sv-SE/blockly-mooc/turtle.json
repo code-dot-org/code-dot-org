@@ -47,6 +47,7 @@
   "jumpBackward": "hoppa bakåt med",
   "jumpForward": "hoppa framåt med",
   "jumpToOverDown": "",
+  "jumpToPosition": "",
   "jumpByDirection": "",
   "jumpTooltip": "Flyttar konstnären utan att lämna några spår.",
   "jumpEastTooltip": "Flyttar konstnären åt öster utan att lämna några märken.",

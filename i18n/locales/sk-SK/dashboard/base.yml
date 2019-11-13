@@ -27,10 +27,11 @@ sk:
     attributes:
       user:
         name: 'Zobrazované meno'
-        name_example: 'Zobrazované meno <br/>(napr. SuperKóder alebo Jana S.)'
+        name_example: 'Zobrazované meno (napr. SuperKóder alebo Jana S.)'
         email: 'Email'
         parent_email: 'Email rodiča/zákonného zástupcu'
         personal_email: "Súkromná emailová addresa <a href=\"%{url}\">(kliknite sem, ak nemáte emailovú adresu)</a>"
+        personal_email_markdown: "Súkromná emailová addresa [(kliknite sem, ak nemáte emailovú adresu)](%{url})"
         username: 'Používateľské meno'
         password: 'Heslo'
         password_confirmation: 'Potvrdenie hesla'
@@ -41,7 +42,9 @@ sk:
         edit_header: 'Upraviť údaje o účte'
         finish_sign_up_header: 'Dokonči vytvorenie svojho účtu'
         finish_sign_up_subheader: 'Vyplň nasledujúce informácie na dokončenie vytvorenia Code.org účtu pre <strong>%{email}</strong>.'
+        finish_sign_up_subheader_markdown: 'Vyplň nasledujúce informácie na dokončenie vytvorenia Code.org účtu pre **%{email}**.'
         finish_sign_up_subheader_provider: 'Vyplň nasledujúce informácie na dokončenie vytvorenia Code.org účtu s <strong>%{provider}</strong> pre <strong>%{email}</strong>.'
+        finish_sign_up_subheader_provider_markdown: 'Vyplň nasledujúce informácie na dokončenie vytvorenia Code.org účtu s **%{provider}** pre **%{email}**.'
         error:
           future: nemôže byť v budúcnosti
   beta: "beta"
@@ -113,9 +116,11 @@ sk:
     student_count: '%{count} študentov sa už zaregistrovalo.'
     teacher_count: '%{count} učiteľov sa už zaregistrovalo.'
     overview: 'Vytvor si účet, aby si mohol sledovať svoj pokrok alebo spravovať svoju triedu. <a href="/">Môžeš prechádzať jednotlivými úlohy</a> aj bez účtu, ale ak si budeš chcieť uložiť svoj pokrok alebo projekty, musíš sa zaregistrovať.'
+    overview_markdown: 'Vytvor si účet, aby si mohol sledovať svoj pokrok alebo spravovať svoju triedu. [Môžeš prechádzať jednotlivými úlohy](/) aj bez účtu, ale ak si budeš chcieť uložiť svoj pokrok alebo projekty, musíš sa zaregistrovať.'
     hoc_already_signed_up_heading: 'Začať bez prihlásenia'
     hoc_already_signed_up_content: 'Zaregistrovali ste sa, aby ste odučili Hodinu kódu! Pre účasť na Hodine kódu sa vy ani vaši študenti sa nemusíte registrovať ani prihlasovať. Začnite <a href="%{learn_url}">výberom kurzu</a> vhodného pre vašu triedu a pošlite žiakom jeho odkaz.:<br/><br/>Ak sa vám Hodina kódu páčila a chcete pokračovať, možete si vytvoriť účet a nastaviť heslo, aby ste mohli vašich študentov zapísať na ktorýkoľvek z našich <a href="%{educate_url}">dlhodobých kurzov</a>.'
     hoc_already_signed_up_content_post_hoc: 'Ďakujeme vám za usporiadanie Hodiny Kódu. Pre prihlásenie sa do Code Studio, musíte nastaviť heslo pre Vaše konto. Toto vám umožní uložiť váš pokrok a spravovať Vašu triedu. Môžete priraďovať lekcie študentom a sledovať ich pokrok. <a href="%{studio_url}"> Taktiež môžete pokračovať v prehliadaní rôznych úrovní a lekcií</a> bez vytvorenia účtu.'
+    hoc_already_signed_up_content_post_hoc_markdown: 'Ďakujeme vám za usporiadanie Hodiny Kódu. Pre prihlásenie sa do Code Studio, musíte nastaviť heslo pre Vaše konto. Toto vám umožní uložiť váš pokrok a spravovať Vašu triedu. Môžete priraďovať lekcie študentom a sledovať ich pokrok. [Taktiež môžete pokračovať v prehliadaní rôznych úrovní a lekcií](%{studio_url}) bez vytvorenia účtu.'
     teacher_educator_guide: 'Pozrieť príručku učiteľa'
     title: "Zaregistruj sa na Code.org"
     school_name: 'Názov školy (voliteľné)'
@@ -421,7 +426,9 @@ sk:
     create_personal_login_info: 'Ak si chceš ponechať svoje konto na Code.org aj po skončení školského roka, tu si môžeš vytvoriť vlastný účet.'
     create_personal_login_link_account: 'Namiesto toho si tiež môžeš vybrať pripojenie sa k osobného účtu v sekcii “Spravovanie prepojených účtov”.'
     create_personal_login_terms: "Vytvorením užívateľského konta súhlasím s <a href='%{terms_of_service_url}', target='_blank'>podmienkami používania</a> Code.org. Potvrdzujem, že mám súhlás rodiča alebo zákonného zástupcu používať Code.org aj bez prítomnosti učiteľa."
+    create_personal_login_terms_markdown: "Vytvorením užívateľského konta súhlasím s [podmienkami používania](%{terms_of_service_url}) Code.org. Potvrdzujem, že mám súhlás rodiča alebo zákonného zástupcu používať Code.org aj bez prítomnosti učiteľa."
     create_personal_login_email_note: "Poznámka: Emailové adresy neukladáme vo formáte, ktorý by nám umožňoval kontaktovať študentov. Študenti od nás nikdy nedostanú emaily s výnimkou obnovenia hesla. Prečítajte si naše <a href='%{privacy_policy_url}', target='_blank'>podmienky ochrany súkromia</a> pre viac informácií."
+    create_personal_login_email_note_markdown: 'Poznámka: Emailové adresy neukladáme vo formáte, ktorý by nám umožňoval kontaktovať študentov. Študenti od nás nikdy nedostanú emaily s výnimkou obnovenia hesla. Prečítajte si naše [podmienky ochrany súkromia](%{privacy_policy_url}) pre viac informácií.'
     enter_new_login_info: 'Zadajte Vaše nové prihlasovacie informácie'
     confirm_secret_words: 'Potvrď, že si to ty zadaním tvojich tajných slov'
     parent_email_label: "Email rodiča / zákonného zástupcu (nepovinné)"
@@ -728,14 +735,17 @@ sk:
   terms_interstitial:
     title: "Aktualizované podmienky poskytovania služby a ochrany súkromia"
     intro_desc: "Aktualizovali sme naše Zmluvné podmienky a Zásady ochrany osobných údajov. Zmeny sú účinné od 24. augusta 2016.  Najväčšou zmenou je,  že <i>už viac nebudeme uchovávať emailové adresy študentských účtov v Code Studiu.</i> Je to pre nás veľký krok a dúfame, že sme nastavili nový štandard pre súkromie študentov v technológiách pre vzdelávanie. Súhrn zmien sme vám poslali emailom."
+    intro_desc_markdown: "Aktualizovali sme naše Zmluvné podmienky a Zásady ochrany osobných údajov. Zmeny sú účinné od 24. augusta 2016. Najväčšou zmenou je, že _už viac nebudeme uchovávať emailové adresy študentských účtov v Code Studiu._ Je to pre nás veľký krok a dúfame, že sme nastavili nový štandard pre súkromie študentov v technológiách pre vzdelávanie. Súhrn zmien sme vám poslali emailom."
     intro_instructions: "Je potrebné, aby ste akceptovali tieto nové podmienky pre študentov mladších ako 13 rokov, aby získali plný prístup ku všetkýn najnovším funkciám Code Studia.  Pri registrácii účtu pre študenta mladšieho ako 13 rokov budete musieť potvrdiť, že vaša škola má súhlas rodiča na zhromažďovanie osobných údajov študenta a ich využitie vo vzdelávacích programoch, ako napríklad Code Studio."
     tos: "Podmienky používania služby"
     privacy: "Zásady ochrany súkromia"
     privacy_notice: "Ochrana osobných údajov"
     accept_label: 'Súhlasím s <a href="%{tos_url}" target="_blank">Podmienkami poskytovania služby</a> a so <a href="%{privacy_url}" target="_blank">Zásadami ochrany osobných údajov</a>.'
+    accept_label_markdown: Súhlasím s [Podmienkami poskytovania služby](%{tos_url}) a so [Zásadami ochrany osobných údajov](%{privacy_url}).
     accept: "Prijať"
     print: "Tlačiť"
     reminder_desc: 'Aktualizovali sme naše <a href="%{tos_url}" target="_blank"> Zmluvné podmienky</a> a <a href="%{privacy_url}" target="_blank"> Zásady ochrany osobných údajov</a>. Prečítajte si ich starostlivo predtým, než s nimi budete súhlasiť. Všimnite si, že ak výslovne neakceptujete aktualizované podmienky, naše nástroje výučby JavaScript môžu byť nedostupné vašim študentom.'
+    reminder_desc_markdown: Aktualizovali sme naše [Zmluvné podmienky](%{tos_url}) a [Zásady ochrany osobných údajov](%{privacy_url}). Prečítajte si ich starostlivo predtým, než s nimi budete súhlasiť. Všimnite si, že ak výslovne neakceptujete aktualizované podmienky, naše nástroje výučby JavaScript môžu byť nedostupné vašim študentom.
     review_terms: "Prezrieť aktualizované podmienky"
   school_info_interstitial:
     title: "Chceme priniesť informatiku ku každému študentovi - pomôžte nám sledovať náš pokrok!"
@@ -757,6 +767,7 @@ sk:
     submit: "Odoslať"
     decline: "Zatvoriť"
   zendesk_too_young_message: 'Prepáč, mladší užívatelia sa nemôžu prihlásiť na našu stránku podpory. Môžeš si prezerať <a href="http://support.code.org">support.code.org</a> bez prihlásenia, alebo požiadaj svojich rodičov alebo učiteľa, aby nás za teba kontaktovali.'
+  zendesk_too_young_message_markdown: 'Prepáč, mladší užívatelia sa nemôžu prihlásiť na našu stránku podpory. Môžeš si prezerať [support.code.org](http://support.code.org) bez prihlásenia, alebo požiadaj svojich rodičov alebo učiteľa, aby nás za teba kontaktovali.'
   progress:
     not_started: nezačaté
     in_progress: v procese
@@ -899,6 +910,8 @@ sk:
     time4cs_c3: 'Život v Everglades'
     time4cs_c4: 'Invazívne vplyvy na Everglades'
     time4cs_c5: 'Občania ovplyvňujú zmeny v Everglades'
+    k5_getting_started: 'Začíname'
+    k5_next_steps: 'Ďalšie kroky'
   external_links:
     disclaimer: Upozornenie
     leaving_domain: Opúštate túto doménu na stránku, ktorá nie je prevádzkovaná spoločnosťou Code.org.
@@ -1066,3 +1079,7 @@ sk:
     privacy_policy: 'Zásady ochrany osobných údajov'
     logout: 'Odhlásiť sa'
     yes: 'Áno'
+  page_not_found_title: "Stránka nebola nájdená"
+  page_not_found_header: '404: Stránka nebola nájdená'
+  page_not_found_description: "Stránka, ktorú hľadáte na tejto adrese neexistuje. Skontrolujte adresu a zadajte ju znova. Alebo prejdite na našu domovskú stránku."
+  page_not_found_button: "Späť na domovskú stránku"

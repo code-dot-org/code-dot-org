@@ -1,7 +1,5 @@
 ---
 title: Te taurima i tētahi Hour of Code - Kamupene
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

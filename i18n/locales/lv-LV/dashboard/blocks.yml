@@ -359,6 +359,8 @@ lv:
             '"scale"': izmērs
       Mikelab_randomColor:
         text: nejauša krāsa
+      Mikelab_repeatUntilComplete:
+        text: mūžīgi atkārtot
       Mikelab_setBG:
         options:
           BG:

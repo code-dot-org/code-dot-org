@@ -88,6 +88,10 @@ bs-BA:
         Vrijeme je za plesno natjecanje! Mačka podigne ruke kada pritisnete lijevu strelicu. Neka se robot "spusti" kada kliknete desnu stelicu i "klapne rukama" kada pritisnete strelicu gore.
 
         **Iskoristite strelice kako bi robot što brže se spustio-klepnuo-spustio-klepnuo!**
+      Dance_2019_05: |-
+        _Sada smo napredovali!_
+
+        Dodajte još jedan blok od <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"takta"</title></block></xml> u svoj radni prostor. Neka plesač započne novi pokret nakon 6 taktova.
       Dance_Party_01: |-
         _Hajde da održimo jednu plesnu zabavu!_
 
@@ -162,6 +166,14 @@ bs-BA:
         -   Dodaj dodatne tipke da bi kontrolisao plesanje
         -   Napravi da i dodatni igrači reaguje na pritiskanje tipki
         -   Zamjeni plesača svako 4 takta tako što ćeš podesiti njihovu vidljivost
+      Dance_Party_extras_battle_2019: |-
+        # Plesne skupine
+
+        Ovdje se radi o takmičenju između dvije skupine. Tipke sa strelicama kontrolišu jednog od plesača a tipke "w, a, s, d" kontrolišu drugog. Takmiči se sa prijateljem, i probaj da unaprijediš takmičenje.
+
+        -   Dodaj dodatne tipke da bi kontrolisao plesanje
+        -   Napravi da i dodatni igrači reaguje na pritiskanje tipki
+        -   Zamjeni plesača svako 4 takta tako što ćeš podesiti njihovu vidljivost
       Dance_Party_extras_every_beat: |-
         # Četvrtina note
 
@@ -184,11 +196,23 @@ bs-BA:
         # Basovi, Mid i Trebl
 
         Ovaj ples koristi "vrhunac" događaja da bi pokrenuo druge dijelove kada muzika postane glasna. Probaj mijenjati druge pjesme i pokušaj da vidiš na koji način vrše izmjenu plesa.
+      Dance_Party_extras_on_beat_2019: |-
+        # Basovi, Mid i Trebl
+
+        Ovaj ples koristi "vrhunac" događaja da bi pokrenuo druge dijelove kada muzika postane glasna. Probaj mijenjati druge pjesme i pokušaj da vidiš na koji način vrše izmjenu plesa.
       Dance_Party_extras_speed: |-
         # Ubrzaj i uspori
 
         Ovaj poslednji ples koristi blok `podesi brzinu` da bi kontrolisao brzinu pokreta svakog plesača. Probaj da eksperimentišeš sa različitim dijelovima u pjesmi. Slobodno istražuj ovaj ples ili se vrati na bilo koji drug ples i probaj da ih učiniš malo više cool.
       Dance_Party_extras_visible: |-
+        # Gdje su otišli?
+
+        Ovaj ples prikazuje i skriva dvije različite skupine plesača. Testiraj i dodaj nešto po svom ukusu.
+
+        -   Dodaj drugu skupinu plesača
+        -   Prikaži i sakrij drugu skupinu plesača koristeći strelice
+        -   Sakrij sve plesače i promjeni uzbudljive efekte pozadine
+      Dance_Party_extras_visible_2019: |-
         # Gdje su otišli?
 
         Ovaj ples prikazuje i skriva dvije različite skupine plesača. Testiraj i dodaj nešto po svom ukusu.

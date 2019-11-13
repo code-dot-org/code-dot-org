@@ -1,0 +1,25 @@
+{
+  "category": "Events",
+  "config": {
+    "func": "everyMeasuresRange",
+    "blockText": "repeat every {N} measures after {START} ",
+    "args": [
+      {
+        "name": "N",
+        "type": "ClampedNumber(0.1,)",
+        "field": true
+      },
+      {
+        "name": "START",
+        "type": "ClampedNumber(0,)",
+        "field": true
+      }
+    ],
+    "eventLoopBlock": true,
+    "color": [
+      322,
+      0.9,
+      0.95
+    ]
+  }
+}

@@ -1,6 +1,5 @@
 ---
 title: Internationale partnere
-layout: wide
 ---
 
 <style>

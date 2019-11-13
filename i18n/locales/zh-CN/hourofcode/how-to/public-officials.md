@@ -1,7 +1,5 @@
 ---
 title: 公职人员的操作指南
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

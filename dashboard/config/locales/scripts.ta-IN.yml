@@ -286,3 +286,11 @@ ta:
               name: மாறிலிகள்
             Functions:
               name: செயல்பாடுகள்
+        k5-onlinepd-copy:
+          stages:
+            Loops:
+              name: சுழற்சிகள்
+            Functions:
+              name: செயல்பாடுகள்
+            Variables:
+              name: மாறிலிகள்

@@ -1,8 +1,9 @@
 ---
-title: Како-да се биде водич за волонтери на Hour of Code
+title: "<%= hoc_s(:title_how_to_volunteers) %>"
 layout: wide
 nav: how_to_nav
 ---
+
 <%= view :signup_button %>
 
 # How-to Guide for Volunteers

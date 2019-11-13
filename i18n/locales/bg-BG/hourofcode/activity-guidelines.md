@@ -1,6 +1,5 @@
 ---
 title: Насоки по уроците
-layout: wide
 ---
 
 <style>

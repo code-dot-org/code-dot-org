@@ -1,10 +1,5 @@
 ---
 title: Grazie per esserti iscritto per organizzare un evento dell'Ora del Codice!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # Grazie per esserti iscritto per organizzare un evento dell'Ora del Codice!

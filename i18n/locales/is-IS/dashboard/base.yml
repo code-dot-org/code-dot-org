@@ -19,6 +19,11 @@ is:
       pair_programmer: 'Þú ert nú í félagaforritun með nemanda sem hefur ekki aðgang að þessu efni. Til að fá aðgang þarft þú að hætta í félagaforritun og reyna svo aftur.'
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: "er ógilt. Athugaðu að hvern tengil er aðeins hægt að nota einu sinni til að endurstilla lykilorð þitt, og aðeins nýlegasti tengillinn virkar."
       messages:
         blank: "er nauðsynlegt"
         blank_plural: "eru áskilin"
@@ -27,10 +32,11 @@ is:
     attributes:
       user:
         name: 'Sýnilegt nafn'
-        name_example: 'Birtingarnafn<br/>(t.d. Kalli kóðari eða Anna J.)'
+        name_example: 'Birtingarnafn (t.d. Kalli kóðari eða Anna J.)'
         email: 'Netfang'
         parent_email: 'Netfang foreldris/forráðamanns'
         personal_email: "Einkanetfang <a href=\"%{url}\">(smelltu hér ef þú hefur ekki netfang)</a>"
+        personal_email_markdown: "Einkanetfang [(smelltu hér ef þú hefur ekki netfang)](%{url})"
         username: 'notandanafn'
         password: 'Lykilorð'
         password_confirmation: 'Staðfesting lykilorðs'
@@ -41,7 +47,10 @@ is:
         edit_header: 'Breyta upplýsingum reiknings'
         finish_sign_up_header: 'Ljúka við að stofna aðgang'
         finish_sign_up_subheader: 'Færðu inn eftirfarandi upplýsingar til að ljúka við að stofna Code.org aðgang fyrir <strong>%{email}</strong>.'
+        finish_sign_up_subheader_markdown: 'Færðu inn eftirfarandi upplýsingar til að ljúka við að stofna Code.org aðgang fyrir **%{email}**.'
         finish_sign_up_subheader_provider: 'Færðu inn eftirfarandi upplýsingar til að ljúka við að stofna Code.org aðgang hjá <strong>%{provider}</strong> fyrir <strong>%{email}</strong>.'
+        finish_sign_up_subheader_provider_markdown: 'Færðu inn eftirfarandi upplýsingar til að ljúka við að stofna Code.org aðgang hjá **%{provider}** fyrir **%{email}**.'
+        reset_password_token: "Tengillinn sem þú hefur notað til að endurstilla lykilorðið"
         error:
           future: má ekki vera í framtíð
   beta: "beta"
@@ -60,7 +69,11 @@ is:
   heading_x_of_y: "%{heading} (síða %{x} af %{y})"
   join_section:
     code:
+      title: 'Gerast meðlimur hóps á Code.org'
       placeholder: "Hópkóði (ABCDEF)"
+      instructions: "Vinsamlegast sláðu inn 6 stafa kóðann sem kennarinn lét þig fá (t.d. \"ABCDEF\") til að skrá þig í hópinn."
+      instructions_short: "Sláðu inn 6 stafa kóða hópsins"
+      submit: 'Skrá'
   add_hint_form:
     placeholder: 'Færðu vísbendingu þína inn hér'
     submit: 'Bæta við vísbendingu'
@@ -89,6 +102,8 @@ is:
     continue_with: 'Halda áfram hjá %{provider}'
     sign_in_with: 'Innskrá með %{provider}'
     signed_in: 'Skráð(ur) inn!'
+    signed_out_markdown: '### Þú hefur skráð þig út af [Code.org](%{url}).'
+    sign_out_of_markdown: '#### Þú notaðir %{provider} til að skrá þig inn. [Smelltu hér](%{url}) til að skrá þig út af %{provider}.'
     already_signedup: 'Búin/n að skrá þig?'
     notyet_signedup: "Ekki skráð þig enn?"
     google_oauth2: 'Google'
@@ -113,9 +128,11 @@ is:
     student_count: '%{count} nemendur hafa þegar skráð sig.'
     teacher_count: '%{count} kennarar hafa þegar skráð sig.'
     overview: 'Skráðu þig til að geta fylgst með framvindu þinni eða haft umsjón með nemendum. <a href="/">Þú getur prófað hin ýmsu borð og þrautir</a> án þess að skrá þig, en þú verður að skrá þig ef þú vilt vista það sem þú gerir.'
+    overview_markdown: 'Skráðu þig til að geta fylgst með framvindu þinni eða haft umsjón með nemendum. [Þú getur prófað hin ýmsu borð og þrautir](/) án þess að skrá þig, en þú verður að skrá þig ef þú vilt vista það sem þú gerir.'
     hoc_already_signed_up_heading: 'Byrja án þess að skrá inn'
     hoc_already_signed_up_content: 'Þú hefur skráð þig til að kenna Klukkustund kóðunar! Þú og nemendur þínir þurfa ekki að skrá ykkur inn í Kóðastúdíóið til að taka þátt í viðburðinum. Byrjaðu á að <a href="https://code.org/learn">velja kennsluefni</a> fyrir hópinn þinn og deildu svo tenglinum með þeim.<br/><br/>Ef þið hafið gaman af Klukkustund kóðunar og viljið halda lengra, getur þú sett aðgangsorð og stofnað aðgang að Kóðastúdíóinu hér fyrir neðan til skrá nemendur þína á eitt af <a href="https://code.org/educate">lengri námskeiðum</a> okkar.'
     hoc_already_signed_up_content_post_hoc: 'Þakka þér fyrir að hýsa Klukkustund kóðunar. Til að skrá þig inn í Kóðastúdíóið þarft þú að stofna aðgang með lykilorði. Þá getur þú vistað framvindu þína og haft umsjón með bekknum. Þú getur skráð nemendur á námskeið og fylgst með framvindu þeirra. <a href="%{studio_url}">En þú getur líka skoðað hina ýmsu áfanga og þrautir</a> án þess að stofna aðgang.'
+    hoc_already_signed_up_content_post_hoc_markdown: 'Þakka þér fyrir að hýsa Klukkustund kóðunar. Til að skrá þig inn í Kóðastúdíóið þarft þú að stofna aðgang með lykilorði. Þá getur þú vistað framvindu þína og haft umsjón með bekknum. Þú getur skráð nemendur á námskeið og fylgst með framvindu þeirra. [En þú getur líka skoðað hina ýmsu áfanga og þrautir](%{studio_url}) án þess að stofna aðgang.'
     teacher_educator_guide: 'Sjá leiðarvísi kennara'
     title: "Nýskrá á Code.org"
     school_name: 'Nafn skóla (valfrjálst)'
@@ -138,6 +155,7 @@ is:
     student_consent: "Ég staðfesti að ég hef leyfi foreldris eða löglegs forráðamanns til að nota þjónustur Code.org."
     agree_us_website: "Ég samþykki að nota vef sem er staðsettur í Bandaríkjunum."
     my_data_to_us: "Gögn sem verða til með notkun minni á þessum vef kunna að verða send til og geymd eða greind í Bandaríkjunum."
+    student_terms_markdown: "Netföng eru ekki geymd á sniði sem gerir okkur kleift að hafa samband við nemendur. Nemendur munu aldrei fá póst frá Code.org nema til að endurstilla aðgangsorð. Sjá nánar um þetta í [persónuverndarstefnu](http://code.org/privacy) okkar."
     additional_information: "Við þurfum viðbótarupplýsingar til að geta haldið áfram að skrá þig."
     user_type_button: "Uppfæra tegund aðgangs"
     user_type_label: "Tegund aðgangs"
@@ -190,6 +208,7 @@ is:
     login: 'Innskráning'
     invalid_login: 'Innskráning tókst ekki. Reyndu aftur.'
     pair_programming: 'Ég er með félaga við tölvuna'
+    student_privacy_markdown: "Nánari skýring á því að þú sérð ekki fullt nafn þitt [here](%{student_privacy_blog})."
   password:
     reset_form:
       title: 'Gleymdir þú lykilorðinu þínu ?'
@@ -419,7 +438,9 @@ is:
     create_personal_login_info: 'Ef þú vilt halda áfram að nota Code.org eftir lok skólaársins, getur þú stofnað þinn eigin aðgang hér fyrir neðan.'
     create_personal_login_link_account: 'Þú getur líka í staðinn valið að tengja við persónulegan aðgang undir "Umsjón tengdra aðganga".'
     create_personal_login_terms: "Með því að stofna minn eigin aðgang, samþykki ég að undirgangast <a href='%{terms_of_service_url}', target='_blank'>þjónustuskilmála</a> Code.org. Ég staðfesti að ég hef leyfi foreldris eða löglegs forráðamanns til að nota þjónustu Code.org án kennara."
+    create_personal_login_terms_markdown: "Með því að stofna minn eigin aðgang, samþykki ég að undirgangast [þjónustuskilmála](%{terms_of_service_url}) Code.org. Ég staðfesti að ég hef leyfi foreldris eða löglegs forráðamanns til að nota þjónustu Code.org án kennara."
     create_personal_login_email_note: "Athugið: Netföng eru ekki vistuð þannig að við getum haft samband við nemendur. Nemendur munu aldrei fá tölvupósta frá Code.org nema þegar þeir þurfa að endurheimta aðgangsorð. Nánari upplýsingar má finna í <a href='%{privacy_policy_url}', target='_blank'>persónuverndarstefnu</a> okkar."
+    create_personal_login_email_note_markdown: 'Athugið: Netföng eru ekki vistuð þannig að við getum haft samband við nemendur. Nemendur munu aldrei fá tölvupósta frá Code.org nema þegar þeir þurfa að endurheimta aðgangsorð. Nánari upplýsingar má finna í [persónuverndarstefnu](%{privacy_policy_url}) okkar.'
     enter_new_login_info: 'Færðu inn nýju innskráningarupplýsingarnar þínar'
     confirm_secret_words: 'Staðfestu að þetta sért þú með því að slá inn núverandi leyniorð'
     parent_email_label: "Netfang foreldris/forráðamanns (valkostur)"
@@ -462,6 +483,7 @@ is:
     test_videos_help: 'Prófaðu nýja myndbandaspilarann okkar í skólanum þínum'
     try_beta_courses: 'Nýtt! Prófaðu beta námskeiðin okkar fyrir K-5 nemendur'
     use_as_teacher: 'Nota þennan vef sem kennari'
+    heading_elementary_markdown: "## 20 stunda námskeið í\n\n# Grunnatriðum tölvunarfræði (allir aldurshópar)"
     your_gallery: Safn
     no_primary_course: "Prófaðu námskeið í Kóðastúdíóinu"
     choose_next_course: "Prófaðu Kóðastúdíóið með því að velja námskeið hér fyrir neðan"
@@ -657,6 +679,7 @@ is:
     header_artist: "Listamaður"
     report_abuse: "Tilkynna misnotkun"
   landing:
+    prerelease_tutorial: "Þetta kennsluefni er **beta** útgáfa. Það gæti breyst eftir því sem endurgjöf berst og endurbætur eru gerðar."
     report_bug: "Tilkynna galla"
     support: "Fá hjálp"
     support_url: "//support.code.org"
@@ -724,17 +747,23 @@ is:
   age_interstitial:
     age: Aldur þinn
     header: Uppfæra reikningsupplýsingar
+    warning: "Við erum uppfæra viðmótið og innleiða enn öflugri vernd fyrir persónuupplýsingar. Þess vegna þurfum við að biðja núverandi notendur að skrá aldur sinn hér."
+    disclaimer: "Sem fyrr mun code.org aldrei leigja, selja eða deila þessum upplýsingum með þriðja aðila."
+    sign_out_markdown: 'Ef þú vilt ekki gefa upp aldur getur þú [skráð þig út](%{url}).'
   terms_interstitial:
     title: "Nýjungar í þjónustuskilmálum og persónuverndarstefnu"
     intro_desc: "Frá og með 24. ágúst 2016 hafa gilt nýir þjónustuskilmálar og persónuverndarstefna hjá okkur, sbr. hér fyrir neðan. Stærsta breytingin er að við munum <i>ekki lengur geyma netföng nemenda sem skráðir eru í Kóðastúdíóið.</i> Fyrir okkur er þetta stórmál og við vonum að þetta verði nýtt viðmið í persónuverndun nemenda þar sem tölvutækni er notuð við kennslu. Við höfum sent þér yfirlit annarra breytinga í tölvupósti."
+    intro_desc_markdown: "Frá og með 24. ágúst 2016 hafa gilt nýir þjónustuskilmálar og persónuverndarstefna hjá okkur, sbr. hér fyrir neðan. Stærsta breytingin er að við munum _ekki lengur geyma netföng nemenda sem skráðir eru í Kóðastúdíóið._ Fyrir okkur er þetta stórmál og við vonum að þetta verði nýtt viðmið í persónuverndun nemenda þar sem tölvutækni er notuð við kennslu. Við höfum sent þér yfirlit annarra breytinga í tölvupósti."
     intro_instructions: "Þú þarft að samþykkja þessa nýju skilmála fyrir nemendur þína yngri en 13 ára til að þeir fái fullan aðgang að því allra nýjasta í Kóðastúdíóinu. Þegar aðgangur er skráður fyrir nemanda undir 13 ára aldri, verður þú beðin/n að staðfesta að skólinn hafi fengið samþykki forráðamanns fyrir því að safna megi persónulegum gögnum um nemandann til notkunar og hagsbóta fyrir skólann, þar á meðal í kennsluverkefnum eins og Kóðastúdíóinu."
     tos: "Skilmálar"
     privacy: "Persónuverndarstefna"
     privacy_notice: "Tilkynning um persónuvernd"
     accept_label: 'Ég samþykki <a href="%{tos_url}" target="_blank">þjónustuskilmálana</a> og <a href="%{privacy_url}" target="_blank">persónuverndarstefnuna</a>.'
+    accept_label_markdown: Ég samþykki [þjónustuskilmálana](%{tos_url}) og [persónuverndarstefnuna](%{privacy_url}).
     accept: "Samþykkja"
     print: "Prenta"
     reminder_desc: 'Við höfum uppfært <a href="%{tos_url}" target="_blank">þjónustuskilmála</a> og <a href="%{privacy_url}" target="_blank">persónuverndarstefnu</a> okkar. Vinsamlegast lestu þetta áður en þú samþykkir. Athugaðu að verkfærin okkar til að kenna JavaScript kunna að verða óaðgengileg nemendum þínum þangað hinir uppfærðu skilmálar eru samþykktir.'
+    reminder_desc_markdown: Við höfum uppfært [þjónustuskilmála](%{tos_url}) og [persónuverndarstefnu](%{privacy_url}) okkar. Vinsamlegast lestu þetta áður en þú samþykkir. Athugaðu að verkfærin okkar til að kenna JavaScript kunna að verða óaðgengileg nemendum þínum þangað hinir uppfærðu skilmálar eru samþykktir.
     review_terms: "Skoða uppfærða skilmála"
   school_info_interstitial:
     title: "Við viljum koma tölvunarfræði á framfæri við hvern nemanda - hjálpaðu okkur að fylgjast með árangri okkar!"
@@ -756,6 +785,7 @@ is:
     submit: "Staðfesta"
     decline: "Loka"
   zendesk_too_young_message: 'Því miður mega yngri notendur ekki skrá sig á hjálparvefinn. Þú getur skoðað <a href="http://support.code.org">support.code.org</a> án þess að skrá þig inn eða beðið foreldri eða kennara að hafa samband við okkur fyrir þig.'
+  zendesk_too_young_message_markdown: 'Því miður mega yngri notendur ekki skrá sig á hjálparvefinn. Þú getur skoðað [support.code.org](http://support.code.org) án þess að skrá þig inn eða beðið foreldri eða kennara að hafa samband við okkur fyrir þig.'
   progress:
     not_started: ekki byrjað
     in_progress: í vinnslu
@@ -819,8 +849,10 @@ is:
   peer_review:
     accepted:
       name: 'Samþykkt'
+      description_markdown: '**Já**, þessi færsla **uppfyllir** kröfurnar'
     rejected:
       name: 'Hafnað'
+      description_markdown: '**Nei**, þessi færsla **uppfyllir ekki** kröfurnar'
     escalated:
       name: 'Fá álit'
       description: 'Ég vil að leiðbeinandi gefi álit á þessu innleggi'
@@ -903,6 +935,8 @@ is:
     time4cs_c3: 'Líf í Everglades'
     time4cs_c4: 'Utanaðkomandi áhrif í Everglades'
     time4cs_c5: 'Borgarar til hins betra í Everglades'
+    k5_getting_started: 'Fyrstu skrefin'
+    k5_next_steps: 'Næstu skref'
   external_links:
     disclaimer: Afsal ábyrgðar
     leaving_domain: Þú ert nú að yfirgefa þetta vefsvæði og fara á svæði sem Code.org sér ekki um.
@@ -1058,9 +1092,15 @@ is:
       title: 'Aðsókn að Smiðju'
       intro: "Takk fyrir að gefa þér tíma til að fá þjálfun í námsefni Code.org. Markmið okkar er að veita börnum í skólum um allan heim tækifæri til að nema tölvunarfræði og það væri ekki hægt án þín."
       instructions: "Vinsamlegast fylltu út formið hér fyrir neðan til að láta vita að 1) þú hafir sótt þjálfunarsmiðju sem haldin var af einum af alþjóðlegum samstarfsaðilum Code.org og 2) þú samþykkir að deila upplýsingum þínum með alþjóðlegum samstarfsaðila okkar í þínu landi svo þeir geti hjálpað til að styðja þig í vegferð þinni sem tölvunarfræðikennari."
+      thanks_markdown: "Takk fyrir þessar upplýsingar! Við hlökkum til að styðja þig í að kynnast námsefni og verkfærum Code.org. Vinsamlegast haltu áfram að deila spurningum þínum og endurgjöf með okkur með því að skrifa til okkar á [support@code.org](%{support_email_url}) eða með innlögnum á [spjallvef kennara](%{teacher_forum_url})!"
     logged_out:
       heading: 'Takk fyrir áhuga inn á Fagkennsluverkefninu (Professional Learning Program)!'
       body: 'Áður en þú getur byrjað þarftu að skrá þig inn á Code.org aðganginn þinn. Ef þú vilt fá meiri upplýsingar áður en þú sækir um getur fundið þær á <a href="%{url}">Professional Learning Program overview</a>.'
+    not_teacher:
+      body_markdown: 'Takk fyrir áhuga þinn á Fagkennslu Code.org (Professional Learning Program)! Þú ert nú skráð/ur inn sem nemandi. Vinsamlegast stofnaðu sérstakan kennaraaðgang eða farðu í [notendastillingar þínar](%{user_settings}) til að breyta nemendaaðganginum í kennaraaðgang.'
+      more_markdown: 'Viltu vita meira um fagkennsluna áður en þú byrjar umsóknarferlið? Kíktu þá á [Professional Learning Program overview](%{pl_overview}).'
+    no_teacher_email:
+      body_markdown: 'Aðgangurinn þinn er ekki með skráð netfang. Vinsamlegast [farðu í notendastillingar þínar](%{user_registration}) til að bæta við netfangi þínu áður en þú fyllir út þetta form.'
   courses_category: 'Heil námskeið'
   cookie_banner:
     message: 'Með því að halda áfram að vafra á vef okkar eða smella á "Ég samþykki" samþykkir þú vistun fótspora (cookies) á tölvu þinni eða tæki.'
@@ -1073,3 +1113,7 @@ is:
     privacy_policy: 'persónuverndarstefna'
     logout: 'Útskráning'
     yes: 'Já'
+  page_not_found_title: "Síða finnst ekki"
+  page_not_found_header: '404: Síða finnst ekki'
+  page_not_found_description: "Síðan sem þú ert að leita að finnst ekki á þessu veffangi. Athugaðu veffangið og prófaðu aftur. Eða farðu aftur á heimasíðu okkar."
+  page_not_found_button: "Aftur á heimasíðu"

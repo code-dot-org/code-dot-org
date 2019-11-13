@@ -24,11 +24,13 @@ fr:
     attributes:
       user:
         name: Nom à afficher
-        name_example: Afficher le nom<br/>(par ex. SuperCodeur ou Jeanne S.)
+        name_example: Afficher le nom (par ex. SuperCodeur ou Jeanne S.)
         email: E-mail
         parent_email: Email du parent/tuteur
         personal_email: Adresse email personnel <a href="%{url}">(cliquez ici si vous
           n'avez pas d'adresse email)</a>
+        personal_email_markdown: Adresse email personnel [(cliquez ici si vous n'avez
+          pas d'adresse email)](%{url})
         username: nom d'utilisateur
         password: Mot de passe
         password_confirmation: Confirmation du mot de passe
@@ -40,9 +42,13 @@ fr:
         finish_sign_up_header: Terminez la création de votre profil
         finish_sign_up_subheader: Remplissez les informations suivantes pour finir
           de créer votre compte Code.org pour <strong>%{email}</strong>.
+        finish_sign_up_subheader_markdown: Remplissez les informations suivantes pour
+          finir de créer votre compte Code.org pour **%{email}**.
         finish_sign_up_subheader_provider: Remplissez les informations suivantes pour
           compléter la création d'un Code.org avec <strong>%{provider}</strong> de
           <strong>%{email}</strong>.
+        finish_sign_up_subheader_provider_markdown: Remplissez les informations suivantes
+          pour compléter la création d'un Code.org avec **%{provider}** de **%{email}**.
         error:
           future: ne peut pas être dans le futur
   beta: beta
@@ -133,6 +139,9 @@ fr:
       href="/">Vous pouvez parcourir les différentes étapes et les puzzles</a> sans
       compte, mais vous devez vous inscrire pour sauvegarder votre progression et
       vos projets.
+    overview_markdown: Inscrivez-vous pour suivre vos progression ou gérer votre classe.
+      [Vous pouvez parcourir les différentes étapes et les puzzles](/) sans compte,
+      mais vous devez vous inscrire pour sauvegarder votre progression et vos projets.
     hoc_already_signed_up_heading: Commencez sans vous connecter
     hoc_already_signed_up_content: Vous êtes inscrit pour enseigner une Heure du Code!
       Vous et vos élèves n'avez pas besoin de vous connecter à Code Studio pour participer
@@ -149,6 +158,12 @@ fr:
       aux élèves et suivre leurs évolutions. <a href="%{studio_url}"> vous pouvez
       également continuer à parcourir les différentes étapes et énigmes</a> sans créer
       un compte.
+    hoc_already_signed_up_content_post_hoc_markdown: Je vous remercie d’avoir accueilli
+      Une Heure De Code. Pour vous connecter à Code Studio, vous aurez besoin d' un
+      mot de passe pour votre compte. Cela vous permettra de sauvegarder votre progression
+      et de gérer votre salle de classe. Vous serez en mesure d’assigner des cours
+      aux élèves et suivre leurs évolutions. [vous pouvez également continuer à parcourir
+      les différentes étapes et énigmes](%{studio_url}) sans créer un compte.
     teacher_educator_guide: Consultez le guide de l'enseignant
     title: S'inscrire sur Code.org
     school_name: Nom de l'école (facultatif)
@@ -502,11 +517,21 @@ fr:
       target='_blank'>termes et conditions</a> de Code.org . Si j'ai moins de 13 ans,
       je confirme en soumettant ce formulaire que j'ai l'autorisation des mes parents
       ou de mon tuteur légal pour utiliser les services de Code.org même sans un professeur.
+    create_personal_login_terms_markdown: En créant un login personnel, j'accepte
+      les [termes et conditions](%{terms_of_service_url}) de Code.org . Si j'ai moins
+      de 13 ans, je confirme en soumettant ce formulaire que j'ai l'autorisation des
+      mes parents ou de mon tuteur légal pour utiliser les services de Code.org même
+      sans un professeur.
     create_personal_login_email_note: 'Remarque : Les adresses E-mail ne sont pas
       stockées sous une forme qui permet de communiquer avec les élèves. Les étudiants
       ne recevront jamais d''e-mails de Code.org à l’exception de la récupération
       de mot de passe. Consultez notre <a href=''%{privacy_policy_url}'', target=''_blank''>politique
       de confidentialité</a> pour plus d’informations.'
+    create_personal_login_email_note_markdown: 'Remarque : Les adresses E-mail ne
+      sont pas stockées sous une forme qui permet de communiquer avec les élèves.
+      Les étudiants ne recevront jamais d''e-mails de Code.org à l’exception de la
+      récupération de mot de passe. Consultez notre [politique de confidentialité](%{privacy_policy_url})
+      pour plus d’informations.'
     enter_new_login_info: Entrez vous nouvelles informations de connexion
     confirm_secret_words: Confirmez votre identité en entrant vos mots secrets actuels
     parent_email_label: E-mail du parent / tuteur (facultatif)
@@ -935,6 +960,13 @@ fr:
       important pour nous et nous espérons établir ainsi un nouveau standard pour
       la protection de la vie privée des élèves dans les technologies de l’éducation.
       Nous vous avons envoyé un résumé des autres modifications par e-mail.
+    intro_desc_markdown: Nous avons mis à jour nos conditions d’utilisation et politique
+      de confidentialité, tel que montré ci-dessous. Les changements sont en vigueur
+      à partir du 24 août 2016. Le changement le plus important est que nous n'allons
+      _plus stocker les adresses e-mail des élèves sur Code Studio._ C'est très important
+      pour nous et nous espérons établir ainsi un nouveau standard pour la protection
+      de la vie privée des élèves dans les technologies de l’éducation. Nous vous
+      avons envoyé un résumé des autres modifications par e-mail.
     intro_instructions: Vous devrez accepter ces nouvelles conditions pour que vos
       élèves âgés de moins de 13 ans aient un accès complet aux dernières fonctionnalités
       de Code Studio. Lorsque vous créez un compte pour un élève de moins de 13 ans,
@@ -947,6 +979,8 @@ fr:
     accept_label: J'accepte la mise à jour des <a href="%{tos_url}" target="_blank">
       Conditions d’utilisation</a> et de la<a href="%{privacy_url}" target="_blank">
       Politique de confidentialité</a>
+    accept_label_markdown: J'accepte la mise à jour des [Conditions d’utilisation](%{tos_url})
+      et de la[Politique de confidentialité](%{privacy_url})
     accept: Accepter 
     print: Imprimer
     reminder_desc: Nous avons mis à jour nos <a href="%{tos_url}" target="_blank">Conditions
@@ -954,6 +988,11 @@ fr:
       de confidentialité</a>. Veuillez les lire soigneusement avant de les accepter.
       Notez que nos outils pédagogiques JavaScript peuvent être indisponibles pour
       vos élèves avant votre acceptation expresse des conditions mises à jour.
+    reminder_desc_markdown: Nous avons mis à jour nos [Conditions d’utilisation](%{tos_url})
+      et notre[Politique de confidentialité](%{privacy_url}). Veuillez les lire soigneusement
+      avant de les accepter. Notez que nos outils pédagogiques JavaScript peuvent
+      être indisponibles pour vos élèves avant votre acceptation expresse des conditions
+      mises à jour.
     review_terms: Consulter les éléments modifiés
   school_info_interstitial:
     title: Nous voulons apporter l'informatique à tous les étudiants - aidez-nous
@@ -979,6 +1018,10 @@ fr:
     decline: Fermer
   zendesk_too_young_message: Désolé, les plus jeunes utilisateurs ne peuvent pas accéder
     à notre site d’aide. Tu peux parcourir <a href="http://support.code.org"> support.code.org</a>
+    sans t’authentifier ou demander à tes parents ou ton enseignant de nous contacter
+    à ta place.
+  zendesk_too_young_message_markdown: Désolé, les plus jeunes utilisateurs ne peuvent
+    pas accéder à notre site d’aide. Tu peux parcourir [support.code.org](http://support.code.org)
     sans t’authentifier ou demander à tes parents ou ton enseignant de nous contacter
     à ta place.
   progress:
@@ -1151,6 +1194,7 @@ fr:
     time4cs_c3: Vivre dans les Everglades
     time4cs_c4: Impact Invasif sur les Everglades
     time4cs_c5: Citoyens influent sur les changements dans les Everglades
+    k5_next_steps: Prochaines étapes
   external_links:
     disclaimer: Clause de non-responsabilité
     leaving_domain: Vous quittez maintenant ce domaine pour un site qui n’est pas
@@ -1384,3 +1428,8 @@ fr:
     privacy_policy: politique de confidentialité
     logout: Déconnexion
     true: Oui
+  page_not_found_title: Page introuvable
+  page_not_found_header: '404 : Page introuvable'
+  page_not_found_description: La page recherchée n’existe pas à cette adresse. Vérifiez
+    l’adresse web et réessayez, ou retournez à notre page d’accueil.
+  page_not_found_button: Retourner à la page d’accueil

@@ -1,7 +1,5 @@
 ---
 title: نحوه‌ی راهنمایی برای راهنمایی مقامات دولتی
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

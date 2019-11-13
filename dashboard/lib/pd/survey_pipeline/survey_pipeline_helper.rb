@@ -64,10 +64,13 @@ module Pd::SurveyPipeline::Helper
     context[:related_workshop_ids] = related_ws_ids
 
     # Retrieve data
-    context.merge!(only_facilitator_questions ?
-      retrieve_facilitator_surveys([facilitator_id], related_ws_ids) :
-      retrieve_workshop_surveys(related_ws_ids)
-    )
+    if only_facilitator_questions
+      context[:survey_questions], context[:facilitator_submissions] =
+        Pd::SurveyPipeline::DailySurveyRetriever.retrieve_facilitator_surveys facilitator_id, related_ws_ids
+    else
+      context[:survey_questions], context[:workshop_submissions] =
+        Pd::SurveyPipeline::DailySurveyRetriever.retrieve_general_workshop_surveys related_ws_ids
+    end
 
     # Process data
     process_rollup_data context
@@ -140,12 +143,11 @@ module Pd::SurveyPipeline::Helper
   def report_single_workshop(workshop, current_user)
     # Centralized context object shared by all workers in the pipeline.
     # Workers read from and write to this object.
-    context = {
-      current_user: current_user,
-      filters: {workshop_ids: workshop.id}
-    }
+    context = {current_user: current_user}
 
-    Pd::SurveyPipeline::DailySurveyRetriever.process_data context
+    context[:survey_questions], context[:workshop_submissions], context[:facilitator_submissions] =
+      Pd::SurveyPipeline::DailySurveyRetriever.retrieve_all_workshop_surveys workshop.id
+
     Pd::SurveyPipeline::DailySurveyParser.process_data context
     Pd::SurveyPipeline::DailySurveyJoiner.process_data context
 
@@ -188,42 +190,5 @@ module Pd::SurveyPipeline::Helper
       where(users: {id: facilitator_id}, course: course).
       distinct.
       pluck(:id)
-  end
-
-  # Retrieve facilitator submissions and survey questions for selected facilitators and workshops.
-  #
-  # @param facilitator_ids [Array<number>] non-empty list of facilitator ids
-  # @param ws_ids [Array<number>] non-empty list of workshop ids
-  #
-  # @return [Hash{:facilitator_submissions, :survey_questions => Array}]
-  #
-  # TODO: Move these functions into a Retriever
-  #
-  def retrieve_facilitator_surveys(facilitator_ids, ws_ids)
-    fac_submissions = Pd::WorkshopFacilitatorDailySurvey.where(
-      facilitator_id: facilitator_ids, pd_workshop_id: ws_ids
-    )
-    form_ids = fac_submissions.pluck(:form_id).uniq
-
-    {
-      survey_questions: Pd::SurveyQuestion.where(form_id: form_ids),
-      facilitator_submissions: fac_submissions
-    }
-  end
-
-  # Retrieve workshop daily submissions and survey questions for selected workshops.
-  #
-  # @param ws_ids [Array<number>] non-empty list of workshop ids
-  #
-  # @return [Hash{:workshop_submissions, :survey_questions => Array}]
-  #
-  def retrieve_workshop_surveys(ws_ids)
-    ws_submissions = Pd::WorkshopDailySurvey.where(pd_workshop_id: ws_ids)
-    form_ids = ws_submissions.pluck(:form_id).uniq
-
-    {
-      survey_questions: Pd::SurveyQuestion.where(form_id: form_ids),
-      workshop_submissions: ws_submissions
-    }
   end
 end

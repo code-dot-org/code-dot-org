@@ -298,17 +298,26 @@ export default class JSInterpreter {
     });
 
     codeFunctions.forEach(codeFunction => {
+      let fullComment = '';
       let comment = getPrecedingComment(allComments, codeFunction.start);
-      let commentText = comment ? comment.text : '';
-      if (comment && comment.isBlockComment && commentText[0] === '*') {
-        // For a JSDoc style comment, acorn doesn't strip the * that starts
-        // each line, so we do that here.
-        commentText = commentText
-          .substr(1)
-          .split('\n * ')
-          .join('\n');
+      if (comment && comment.isBlockComment) {
+        fullComment = comment.text;
+        if (fullComment[0] === '*') {
+          // For a JSDoc style comment, acorn doesn't strip the * that starts
+          // each line, so we do that here.
+          fullComment = fullComment
+            .substr(1)
+            .split('\n * ')
+            .join('\n');
+        }
+      } else {
+        while (comment) {
+          // Find all adjacent singleline comments preceding the function
+          fullComment = comment.text.trim() + '\n' + fullComment;
+          comment = getPrecedingComment(allComments, comment.startLocation);
+        }
       }
-      commentText = commentText.trim();
+      fullComment = fullComment.trim();
 
       let params = codeFunction.params.map(param => {
         return param.name;
@@ -317,7 +326,7 @@ export default class JSInterpreter {
       functionsAndMetadata.push({
         functionName: codeFunction.id.name,
         parameters: params,
-        comment: commentText
+        comment: fullComment
       });
     });
 

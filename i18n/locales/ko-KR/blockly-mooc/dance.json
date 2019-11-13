@@ -11,5 +11,12 @@
   "danceFeedbackNeedEveryTwoMeasures": "'2마디마다' 블록을 사용하고 있는지 확인하세요.",
   "danceFeedbackNeedMakeANewDancer": "'새로 만들기’ 블록을 사용하여 두 번째 댄서를 만드세요.",
   "danceFeedbackKeyEvent": "'when key '블록에 코드를 붙이고, 댄스가 움직일때 키를 눌러주세요.",
+  "danceFeedbackDidntPress": "",
+  "danceFeedbackPressedKey": "",
+  "danceFeedbackNeedTwoDancers": "",
+  "danceFeedbackOnlyOneDancerMoved": "",
+  "danceFeedbackNeedLead": "",
+  "danceFeedbackNeedBackup": "",
+  "danceFeedbackSetSize": "",
   "measure": "마디:"
 }

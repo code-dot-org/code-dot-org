@@ -42,6 +42,14 @@ ar-SA:
       CourseD_Dance_Party_11:
         dance_callout_11_a: مربع برمجي جديد!
         dance_callout_11_b: مربع برمجي جديد!
+      Dance_2019_04:
+        dance_callout_02: أضف هذا المربع البرمجي إلى برنامجك!
+      Dance_2019_06:
+        dance_party_11_5_groups: مربع برمجي جديد!
+      Dance_2019_07:
+        setprop_hint: مربع برمجي جديد!
+      Dance_2019_09:
+        new_block_1: مربع برمجي جديد!
       Dance_Party_01:
         dance_callout_01: أضف هذا المربع البرمجي إلى برنامجك!
       Dance_Party_02:
@@ -156,9 +164,9 @@ ar-SA:
         courseC_PlayLab_events_challenge1_1: هذه البلوكة تحرك اللاعب إلى أماكن اخرى
           في ساحة اللعب.
       courseC_artist_loops1a_2019:
-        jumpto_callout: هذه البلوكة مهمة لبرنامجك. احرص على استخدامها!
+        jumpto_callout: هذه البلوكة مهمة جداً لبرنامجك. احرص على استخدامها!
       courseC_artist_loops1b_2019:
-        sticker2: أضف هذه في منتصفبرنامجك.
+        sticker2: أضف هذه في منتصف برنامجك.
       courseC_artist_loopsPrePre1a:
         courseC_artist_loopsPrePre1a_1: ابدأ باستخدام هذه البلوكة لتجعل الرسام في
           منتصف الشاشة.
@@ -193,7 +201,7 @@ ar-SA:
         courseC_harvester_loops1_callout1: الرقم 4 في القرعة يخبرك أن هناك أربع قرعات
           لتجمعها.
       courseC_maze_debugging5_2018:
-        courseC_maze_debugging5_1: هذه البلوكات الرمادية مقفلة ولا يمكنك تغيرها!
+        courseC_maze_debugging5_1: هذه البلوكات الرمادية مقفلة ولا يمكنك حذفها!
       courseC_maze_debugging5_2019:
         courseC_maze_debugging5_1: هذه البلوكات مغلقة ولايمكن حذفها!
       courseC_maze_debugging9_2019:

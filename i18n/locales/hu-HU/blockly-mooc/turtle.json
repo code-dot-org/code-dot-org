@@ -47,6 +47,7 @@
   "jumpBackward": "ugrás hátra",
   "jumpForward": "ugrás előre",
   "jumpToOverDown": "",
+  "jumpToPosition": "",
   "jumpByDirection": "",
   "jumpTooltip": "A művészt mozgatja rajzolás nélkül.",
   "jumpEastTooltip": "A művészt kelet felé mozgatja rajzolás nélkül.",

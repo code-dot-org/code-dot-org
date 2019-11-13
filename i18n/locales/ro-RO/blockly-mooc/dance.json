@@ -11,5 +11,12 @@
   "danceFeedbackNeedEveryTwoMeasures": "Asigură-te că utilizezi blocul `la fiecare 2 măsuri`",
   "danceFeedbackNeedMakeANewDancer": "Foloseşte blocul `crează un nou` pentru a crea un al doilea dansator.",
   "danceFeedbackKeyEvent": "Asigură-te că adaugi cod la blocul `când tasta` și apasă tasta în timp ce dansul tău este pornit.",
+  "danceFeedbackDidntPress": "",
+  "danceFeedbackPressedKey": "",
+  "danceFeedbackNeedTwoDancers": "",
+  "danceFeedbackOnlyOneDancerMoved": "",
+  "danceFeedbackNeedLead": "",
+  "danceFeedbackNeedBackup": "",
+  "danceFeedbackSetSize": "",
   "measure": "Măsură:"
 }

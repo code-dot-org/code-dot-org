@@ -1,7 +1,5 @@
 ---
 title: Ukážka podporujúca Týždeň vyučovania informatiky a Hodiny kódu
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

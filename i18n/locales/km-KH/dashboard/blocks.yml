@@ -406,6 +406,8 @@ km:
             MOVES.Rest: គ្មាន
       Mikelab_randomColor:
         text: ពណ៌​ព្រាវ
+      Mikelab_repeatUntilComplete:
+        text: ធ្វើ​ឡើង​វិញ​ជា​រៀង​រហូត
       Mikelab_setBG:
         options:
           BG:

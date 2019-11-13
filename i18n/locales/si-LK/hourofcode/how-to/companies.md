@@ -1,7 +1,5 @@
 ---
 title: සමාගම් සඳහා - Hour of Code වැඩසටහනක් සංවිධානය කරන්නේ කෙසේද
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

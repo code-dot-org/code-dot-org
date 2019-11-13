@@ -1095,6 +1095,8 @@ es-MX:
               name: Bubble Choice
             Contained Levels:
               name: Niveles contenidos
+            ML Fish:
+              name: Pez ML
         algebraPD2b:
           title: Ciencias de la computación en álgebra PD
           description: 'Enseñar programación funcional a través de álgebra'
@@ -1697,6 +1699,13 @@ es-MX:
           stages:
             Hour of Code 2015:
               name: Hora del código 2015
+        ocean:
+          title: Hora del Código en el océano
+          description: Descripción a definir.
+          description_short: Descripción corta a definir.
+          stages:
+            Ocean:
+              name: Océano
         CSPPD3-Unit3-pt2:
           stages:
             Challenge Overview:
@@ -5651,7 +5660,7 @@ es-MX:
             Until Loops in Maze:
               name: Bucles 'mientras' en el Laberinto
           title: Curso Express
-          assignment_family_title: Curso Express
+          assignment_family_title: Curso Express (2018)
           description_audience: 'Edades: 9 a 18'
           description_short: 'Una introducción a la ciencia de la computación, que combina lo mejor de nuestro plan de estudios de escuela primaria para estudiantes mayores.'
           description: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
@@ -9843,6 +9852,10 @@ es-MX:
               name: Evaluación de la Unidad 4
             'Lesson 15: Unit 4 Assessment':
               name: 'Lección 15: evaluación de la unidad 4'
+            Unit 4 STUDENT Survey:
+              name: Encuesta de la Unidad 3 para ESTUDIANTES
+            Unit 4 TEACHER Survey:
+              name: Encuesta de la Unidad 1 para DOCENTES
           title: 'Unidad 4: Variables, condicionales, funciones'
         csp1-2019:
           title: CSP Unidad 1 - Internet ('19-'20)
@@ -10873,6 +10886,24 @@ es-MX:
               name: Encuesta de estudiantes (bibliotecas)
             Teacher Survey (Libraries):
               name: Encuesta de docentes (bibliotecas)
+            Loops Investigate:
+              name: Bucles Investigar
+            Loops Practice:
+              name: Bucles Practicar
+            Loops Make:
+              name: Bucles Crear
+            Semester Hackathon Part 1:
+              name: Hackatón semestral Parte 1
+            Semester Hackathon Part 2:
+              name: Hackatón semestral Parte 2
+            Semester Hackathon Part 3:
+              name: Hackatón semestral Parte 3
+            Semester Hackathon Part 4:
+              name: Hackatón semestral Parte 4
+            Semester Hackathon Part 5:
+              name: Hackatón semestral Parte 5
+            Unit 5 Assessment:
+              name: Evaluación de la Unidad 5
           title: 'Unidad 5: Listas, bucles y recorridos'
         fit2019-novice:
           stages:
@@ -11302,12 +11333,24 @@ es-MX:
           stages:
             CS Discoveries Deeper Learning Module 3:
               name: Módulo 3 de Aprendizaje Profundo de Descubrimientos de Ciencias de la Computación
+            Deeper Learning Overview:
+              name: Resumen del aprendizaje profundo
+            'Step 1: Develop Understanding':
+              name: 'Paso 1: desarrollar la comprensión'
+            'Step 2: Demonstrate Understanding':
+              name: 'Paso 2: demostrar la comprensión'
           title: Módulo 3 de Aprendizaje Profundo de Descubrimientos de Ciencias de la Computación
           description_audience: Facilitadores de Descubrimientos de las Ciencias de la Computación en período de formación 2019
         dlp19-csd-mod-w4:
           stages:
             CS Discoveries Deeper Learning Module 4:
               name: Módulo 4 de Aprendizaje Profundo de Descubrimientos de Ciencias de la Computación
+            Deeper Learning Overview:
+              name: Resumen del aprendizaje profundo
+            'Step 1: Develop Understanding':
+              name: 'Paso 1: desarrollar la comprensión'
+            'Step 2: Demonstrate Understanding':
+              name: 'Paso 2: demostrar la comprensión'
           title: Módulo 4 de Aprendizaje Profundo de Descubrimientos de Ciencias de la Computación
           description_audience: Facilitadores de Descubrimientos de las Ciencias de la Computación en período de formación 2019
         dlp19-csp-mod-w1:
@@ -11336,11 +11379,23 @@ es-MX:
           stages:
             CS Principles Deeper Learning Module 3:
               name: Módulo 3 de Aprendizaje Profundo de Principios de Ciencias de la Computación
+            Deeper Learning Overview:
+              name: Resumen del aprendizaje profundo
+            'Step 1: Develop Understanding':
+              name: 'Paso 1: desarrollar la comprensión'
+            'Step 2: Demonstrate Understanding':
+              name: 'Paso 2: demostrar la comprensión'
           title: Módulo 3 de Aprendizaje Profundo de Principios de Ciencias de la Computación
         dlp19-csp-mod-w4:
           stages:
             CS Principles Deeper Learning Module 4:
               name: Módulo 4 de Aprendizaje Profundo de Principios de Ciencias de la Computación
+            Deeper Learning Overview:
+              name: Resumen del aprendizaje profundo
+            'Step 1: Develop Understanding':
+              name: 'Paso 1: desarrollar la comprensión'
+            'Step 2: Demonstrate Understanding':
+              name: 'Paso 2: demostrar la comprensión'
           title: Módulo 4 de Aprendizaje Profundo de Principios de Ciencias de la Computación
         csd-pilot:
           stages:
@@ -11490,6 +11545,10 @@ es-MX:
               name: Tiempo poco razonable
             Traveling Salesman:
               name: Vendedor viajero
+            Parallel and Distributed Algorithms:
+              name: Algoritmos paralelos y distribuidos
+            The Limits of Algorithms:
+              name: Los límites de los algoritmos
         denny-science-8:
           title: Detector de colisiones
           stages:
@@ -11511,4 +11570,92 @@ es-MX:
           stages:
             Dance Party:
               name: Fiesta de baile
+          title: Fiesta de baile (remix 2019)
           description: '¡Programa tu propia fiesta de baile para compartir con tus amigos!'
+        k5-onlinepd-copy:
+          description: '¡Aprende a enseñar ciencias de la computación con este curso en línea gratuito y autodidacta de Fundamentos de Ciencias de la Computación!'
+          stages:
+            Getting Started:
+              name: Primeros pasos
+            Computer Science Fundamentals:
+              name: Fundamentos de la informática
+            Looking Ahead:
+              name: Mirar hacia adelante
+            'Mastering the Basics: Sequencing':
+              name: 'Dominio de los conceptos básicos: secuencias'
+            'Mastering the Basics: Loops':
+              name: 'Dominio de los conceptos básicos: bucles'
+            'Mastering the Basics: Conditionals':
+              name: 'Dominio de los conceptos básicos: condicionales'
+            'Mastering the Basics: Functions':
+              name: 'Dominio de los conceptos básicos: funciones'
+            'Mastering the Basics: Events':
+              name: 'Dominio de los conceptos básicos: eventos'
+            Best Practices for Teaching Computer Science:
+              name: Mejores prácticas para la enseñanza de ciencias de la computación
+            Planning:
+              name: Planificación
+            Next Steps:
+              name: Próximos pasos
+            Understanding the Computer Science Fundamentals Courses:
+              name: Cursos de comprensión de los Fundamentos de Ciencias de la Computación
+            extra:
+              name: extra
+            Welcome to this online course:
+              name: Bienvenido a este curso en línea
+            Understanding the Computer Science Fundamentals courses:
+              name: Cursos de comprensión de los Fundamentos de Ciencias de la Computación
+            Best practices for teaching computer science:
+              name: Mejores prácticas para la enseñanza de ciencias de la computación
+            Sequencing:
+              name: Secuencias
+            Loops:
+              name: Bucles
+            Conditionals:
+              name: Condicionales
+            Events:
+              name: Eventos
+            Functions:
+              name: Funciones
+            Diving Deeper:
+              name: Profundizar
+            Next steps:
+              name: Próximos pasos
+            Diving deeper:
+              name: Profundizar
+            Diving deeper (for Courses E and F):
+              name: Profundizar (para cursos E y F)
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Bienvenido a "Cómo enseñar los Fundamentos de Ciencias de la Computación"
+            Diving Deeper (for Courses E and F):
+              name: Profundizar (para cursos E y F)
+            'Diving Deeper: Courses E and F':
+              name: 'Profundizar: cursos E y F'
+            Sprite Lab:
+              name: Laboratorio de sprites
+            Variables:
+              name: Variables
+            For Loops:
+              name: Bucles Para
+            End-of-course projects:
+              name: Proyectos de fin de curso
+            Who is this section for?:
+              name: '¿Para quién es esta sección?'
+        dance-extras-2019:
+          title: Sigue bailando
+          description: Motívate con más ideas de proyectos.
+          description_short: Ve más allá de la Hora del Código con esta actividad de seguimiento para el tutorial de la Fiesta de baile de Code.org.
+          stages:
+            Dance Party - Go Further:
+              name: Fiesta de baile - Ir más allá
+        csp10-pilot:
+          stages:
+            new stage:
+              name: nueva etapa
+            'Project: Innovation Simulation Part 1':
+              name: 'Proyecto: simulación de la innovación, parte 1'
+            'Project: Innovation Simulation Part 2':
+              name: 'Proyecto: simulación de la innovación, parte 2'
+            Security Risks Part 1:
+              name: Riesgos de seguridad, parte 1
+          title: Ciberseguridad e impactos globales

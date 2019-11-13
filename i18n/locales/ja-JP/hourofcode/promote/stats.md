@@ -1,7 +1,5 @@
 ---
 title: 宣伝文句や役立つ統計情報
-layout: wide
-nav: promote_nav
 ---
 
 <a id="blurb"></a>

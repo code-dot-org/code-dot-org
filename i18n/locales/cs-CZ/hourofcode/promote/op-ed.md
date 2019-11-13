@@ -1,7 +1,5 @@
 ---
 title: Vzor textu, který podporuje Týden vědy a Hodinu kódu
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

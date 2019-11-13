@@ -1,6 +1,5 @@
 ---
 title: مشارکت کل مدرسه
-layout: wide
 ---
 
 {{ signup_button }}

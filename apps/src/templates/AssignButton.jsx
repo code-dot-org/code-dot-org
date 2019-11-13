@@ -3,58 +3,38 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import Button from './Button';
 import i18n from '@cdo/locale';
-import ConfirmAssignment from '@cdo/apps/templates/courseOverview/ConfirmAssignment';
-import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
-import {assignCourseToSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {assignToSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+
+const styles = {
+  buttonMargin: {
+    marginLeft: 10
+  }
+};
 
 class AssignButton extends React.Component {
   static propTypes = {
-    section: sectionForDropdownShape,
+    sectionId: PropTypes.number.isRequired,
     courseId: PropTypes.number,
     scriptId: PropTypes.number,
-    assignmentName: PropTypes.string,
     // Redux
-    assignCourseToSection: PropTypes.func.isRequired
+    assignToSection: PropTypes.func.isRequired
   };
 
-  state = {
-    dialogOpen: false,
-    errorString: null
-  };
-
-  onClickAssign = event => {
-    this.setState({dialogOpen: true});
-  };
-
-  onCloseDialog = event => {
-    this.setState({dialogOpen: false});
-  };
-
-  assignCourse = () => {
-    const {section, courseId, assignCourseToSection} = this.props;
-    assignCourseToSection(section.id, courseId);
-    this.setState({dialogOpen: false});
+  assign = () => {
+    const {sectionId, courseId, scriptId, assignToSection} = this.props;
+    assignToSection(sectionId, courseId, scriptId);
   };
 
   render() {
-    const {section, assignmentName} = this.props;
     return (
-      <div>
+      <div style={styles.buttonMargin}>
         <Button
           color={Button.ButtonColor.orange}
           text={i18n.assignToSection()}
           icon="plus"
-          onClick={this.onClickAssign}
+          onClick={this.assign}
+          className={'uitest-assign-button'}
         />
-        {this.state.dialogOpen && (
-          <ConfirmAssignment
-            sectionName={section.name}
-            assignmentName={assignmentName}
-            onClose={this.onCloseDialog}
-            onConfirm={this.assignCourse}
-            isHiddenFromSection={false}
-          />
-        )}
       </div>
     );
   }
@@ -67,6 +47,6 @@ export default connect(
     sections: state.teacherSections.sections
   }),
   {
-    assignCourseToSection
+    assignToSection
   }
 )(AssignButton);

@@ -1,7 +1,5 @@
 ---
 title: Mall för brev som uppmuntrar till deltagande på Computer Science Education Week och Hour of Code
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

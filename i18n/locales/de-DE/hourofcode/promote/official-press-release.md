@@ -1,7 +1,5 @@
 ---
 title: Pressematerial für Volksvertreter
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

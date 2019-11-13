@@ -49,6 +49,7 @@ namespace :seed do
     'pre-express-2017',
     'coursea-2018',
     'coursea-2019',
+    'coursec-2019',
     'coursee-2019',
     'csp1-2017',
     'csp2-2017',

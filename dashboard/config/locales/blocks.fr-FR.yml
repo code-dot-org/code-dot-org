@@ -462,7 +462,7 @@ fr:
             '"vintage"': Vintage
             '"warm"': Rouges
       Dancelab_setBackgroundEffectWithPalette:
-        text: définir l’effet de fond {EFFECT} {PALETTE}
+        text: définir l’effet de fond {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Aucun
@@ -595,6 +595,7 @@ fr:
             '"rotation"': orientation
             '"x"': position horizontale
             '"y"': position verticale
+            '"tint"': nuance
       Dancelab_setPropRandom:
         text: randomiser {SPRITE} {PROPERTY}
         options:
@@ -829,6 +830,8 @@ fr:
             '1': médium
             '2': aigu
       Dancelab_whenSetup:
+        text: configuration
+      Dancelab_whenSetup2:
         text: configuration
       gamelab_addBehaviorSimple:
         text: le sprite {SPRITE} commence {BEHAVIOR}
@@ -1217,6 +1220,8 @@ fr:
         text: couleur aléatoire
       Mikelab_removeBehaviorSimple:
         text: le sprite {SPRITE} arrête de {BEHAVIOR}
+      Mikelab_repeatUntilComplete:
+        text: répéter à l'infini
       Mikelab_setBG:
         options:
           BG:
@@ -1296,6 +1301,10 @@ fr:
         text: lieu aléatoire
       Vector_vectorNorth:
         text: nord
+      Vector_where:
+        options:
+          PROPERTY:
+            "'shapeColor'": couleur
       aalab_goToScene:
         options:
           SCENE:

@@ -24,7 +24,7 @@ export default class LibraryClientApi {
     );
   }
 
-  getLatest(onSuccess, onError) {
+  fetchLatest(onSuccess, onError) {
     this.libraryApi.fetch(
       this.channelId + '/' + LIBRARY_NAME,
       (error, data) => {
@@ -37,17 +37,31 @@ export default class LibraryClientApi {
     );
   }
 
-  getVersion(versionId) {
+  fetchLatestVersionId(onSuccess, onError) {
+    this.libraryApi.fetch(
+      this.channelId + '/' + LIBRARY_NAME + '/versions',
+      (error, data) => {
+        if (data) {
+          let mostRecent = data.find(libraryVersion => {
+            return libraryVersion.isLatest;
+          });
+          onSuccess(mostRecent.versionId);
+        } else {
+          onError(error);
+        }
+      }
+    );
+  }
+
+  fetchByVersion(versionId, onSuccess, onError) {
     let library;
     this.libraryApi.fetch(
       this.channelId + '/' + LIBRARY_NAME + '?version=' + versionId,
       (error, data) => {
         if (data) {
-          // in the future, responses will be passed back to the import dialog
-          console.log('Library: ' + data);
+          onSuccess(data);
         } else {
-          // In the future, errors will be surfaced to the user in the import dialog
-          console.warn('Error getting library: ' + error);
+          onError(error);
         }
       }
     );
@@ -89,6 +103,7 @@ export default class LibraryClientApi {
                     .filter(library => !!library.libraryName)
                     .map(library => {
                       library.name = library.libraryName;
+                      library.description = library.libraryDescription;
                       return library;
                     });
                   libraries.forEach(library => {

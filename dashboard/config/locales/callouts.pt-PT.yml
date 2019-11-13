@@ -55,6 +55,9 @@ pt-PT:
       Course 4 Artist Vars 6:
         degrees_per_side: Divida 360 pelo número de lados para obter o tamanho de
           cada ângulo em graus.
+      Course 4 Bee 3:
+        if_else_bee: Use o bloco "se-senão" para que a abelha colete o néctar de uma
+          flor, e faça mel se não for uma flor
       Course 4 Bee Params 2:
         edit_get_nectar: Use este botão para editar a função e alterar a direção para
           a qual a abelha vai virar para obter o néctar.

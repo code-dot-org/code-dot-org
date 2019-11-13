@@ -365,6 +365,7 @@ class Blockly < Level
 
       if is_a? Gamelab
         level_prop['startAnimations'] = try(:project_template_level).try(:start_animations) || start_animations
+        level_prop['name'] = name
       end
 
       if is_a?(Maze) && step_mode

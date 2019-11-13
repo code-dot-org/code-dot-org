@@ -153,6 +153,7 @@ class ShareAllowedDialog extends React.Component {
     }).isRequired,
     allowExportExpo: PropTypes.bool.isRequired,
     exportApp: PropTypes.func,
+    librariesEnabled: PropTypes.bool,
     icon: PropTypes.string,
     shareUrl: PropTypes.string.isRequired,
     // Only applicable to Dance Party projects, used to Tweet at song artist.
@@ -422,7 +423,8 @@ class ShareAllowedDialog extends React.Component {
                       className="no-mc"
                     />
                   )}
-                  {experiments.isEnabled('student-libraries') && isDroplet && (
+                  {(experiments.isEnabled(experiments.STUDENT_LIBRARIES) ||
+                    this.props.librariesEnabled) && (
                     <button
                       type="button"
                       onClick={this.props.openLibraryCreationDialog}
@@ -527,6 +529,7 @@ export default connect(
   state => ({
     allowExportExpo: state.pageConstants.allowExportExpo || false,
     exportApp: state.pageConstants.exportApp,
+    librariesEnabled: state.pageConstants.librariesEnabled,
     isOpen: state.shareDialog.isOpen,
     isUnpublishPending: state.shareDialog.isUnpublishPending
   }),

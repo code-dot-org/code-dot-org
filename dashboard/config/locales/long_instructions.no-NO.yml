@@ -123,6 +123,12 @@ no-NO:
       CourseE_HOC 2018 Level_9b: Du kom deg til korallrevet, let etter \*\* hjertet
         av havet \*\*! \[] (<https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png>)!
         Blå og rød korall for å komme frem til \*\* skattekisten \*\*! \[] (<https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png>).
+      Dance_2019_05: "_Nå svinger det!_ \n\nLegg til en <xml><block type=\"Dancelab_atTimestamp\"><title
+        name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml>
+        blokk i arbeidsområdet ditt. Få danseren til å starte en ny bevegelse etter
+        6 taker."
+      Dance_2019_10: Ta på deg danseskoene! Lag din egen dans og del den med vennene
+        dine.
       Dance_Party_01: |-
         _La oss ha en danse-fest!_
 
@@ -192,6 +198,14 @@ no-NO:
         -   Legg til flere taster for å kontrollere dansene
         -   Få også bakgrunnsdanserne til å reagere når tastene trykkes ned
         -   Bytt danser hver fjerde takt ved å justere synligheten
+      Dance_Party_extras_battle_2019: |-
+        # Dansegrupper
+
+        Her er det en dansekonkurranse mellom to grupper. Piltastene kontrollerer én av danserne, og wasd-tastene kontrollere den andre. Arranger en dansekonkurranse med en venn, og prøv å forbedre denne dansekonkurransen.
+
+        -   Legg til flere taster for å kontrollere dansene
+        -   Få også bakgrunnsdanserne til å reagere når tastene trykkes ned
+        -   Bytt danser hver fjerde takt ved å justere synligheten
       Dance_Party_extras_every_beat: |-
         # Firedelsnoter
 
@@ -214,11 +228,23 @@ no-NO:
         # Bass, mellomtone og diskant
 
         Denne dansen bruker "topphendelser" til å aktivere kode når forskjellige deler av musikken blir høy. Prøv å leke deg litt med forskjellige sanger for å se hvordan de endrer dansen.
+      Dance_Party_extras_on_beat_2019: |-
+        # Bass, mellomtone og diskant
+
+        Denne dansen bruker "topphendelser" til å aktivere kode når forskjellige deler av musikken blir høy. Prøv å leke deg litt med forskjellige sanger for å se hvordan de endrer dansen.
       Dance_Party_extras_speed: |-
         # Fortere, saktere
 
         Den siste dansen bruker ‘sett fart’-blokken til å styre hvor raskt hver danser beveger seg. Prøv å eksperimentere med forskjellige hastigheter på forskjellige punkter i sangen. Du kan fortsette å flikke på denne dansen, eller gå tilbake til noen av de tidligere dansene og gjøre dem enda kulere.
       Dance_Party_extras_visible: |-
+        # Hvor ble det av dem?
+
+        Denne dansen viser og skjuler to forskjellige grupper med dansere. Sjekk den ut, og prøv å gi den din egen stil.
+
+        -   Legg til en ny gruppe dansere
+        -   Vis og skjul danserne med piltastene
+        -   Skjul alle danserne og bytt til en spennende bakgrunnseffekt
+      Dance_Party_extras_visible_2019: |-
         # Hvor ble det av dem?
 
         Denne dansen viser og skjuler to forskjellige grupper med dansere. Sjekk den ut, og prøv å gi den din egen stil.

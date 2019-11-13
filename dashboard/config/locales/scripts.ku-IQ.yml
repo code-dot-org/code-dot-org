@@ -385,3 +385,13 @@ ku:
               name: مەرجیەکان
             Functions:
               name: فرمانەکان
+        k5-onlinepd-copy:
+          stages:
+            Loops:
+              name: گرێکان
+            Conditionals:
+              name: مەرجیەکان
+            Functions:
+              name: فرمانەکان
+            Variables:
+              name: گۆڕاوەکان

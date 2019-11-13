@@ -4,6 +4,7 @@ import React from 'react';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
 import LibraryListItem from '@cdo/apps/code-studio/components/libraries/LibraryListItem';
+import libraryParser from './libraryParser';
 import color from '@cdo/apps/util/color';
 
 const DEFAULT_MARGIN = 7;
@@ -24,7 +25,7 @@ const styles = {
     marginTop: 20
   },
   libraryList: {
-    maxHeight: '110px',
+    maxHeight: '140px',
     overflowY: 'auto'
   },
   message: {
@@ -73,15 +74,22 @@ export default class LibraryManagerDialog extends React.Component {
     this.setState({importLibraryId: event.target.value});
   };
 
-  addLibrary = channelId => {
-    let libraryToImport = channelId ? channelId : this.state.importLibraryId;
-    let libraryClient = new LibraryClientApi(libraryToImport);
-    libraryClient.getLatest(
+  importLibrary = (channelId, versionId) => {
+    // TODO: Check for naming collisions between libraries.
+    let libraryClient = new LibraryClientApi(channelId);
+    libraryClient.fetchByVersion(
+      versionId,
       data => {
+        let updatedjson = libraryParser.prepareLibraryForImport(
+          data,
+          channelId,
+          versionId
+        );
         dashboard.project.setProjectLibraries([
           ...this.state.libraries,
-          JSON.parse(data)
+          updatedjson
         ]);
+        this.setState({libraries: dashboard.project.getProjectLibraries()});
       },
       error => {
         console.log('ERROR: ' + error);
@@ -89,8 +97,11 @@ export default class LibraryManagerDialog extends React.Component {
     );
   };
 
-  refreshLibrary = libraryName => {
-    console.log('refreshed ' + libraryName + '!');
+  addLibrary = channelId => {
+    let libraryClient = new LibraryClientApi(channelId);
+    libraryClient.fetchLatestVersionId(versionId =>
+      this.importLibrary(channelId, versionId)
+    );
   };
 
   removeLibrary = libraryName => {
@@ -99,6 +110,7 @@ export default class LibraryManagerDialog extends React.Component {
         return library.name !== libraryName;
       })
     );
+    this.setState({libraries: dashboard.project.getProjectLibraries()});
   };
 
   displayProjectLibraries = () => {
@@ -116,7 +128,7 @@ export default class LibraryManagerDialog extends React.Component {
         <LibraryListItem
           key={library.name}
           library={library}
-          onRefresh={this.refreshLibrary}
+          onRefresh={undefined}
           onRemove={this.removeLibrary}
         />
       );
@@ -163,7 +175,11 @@ export default class LibraryManagerDialog extends React.Component {
             value={this.state.importLibraryId}
             onChange={this.setLibraryToImport}
           />
-          <button style={styles.add} onClick={this.addLibrary} type="button">
+          <button
+            style={styles.add}
+            onClick={() => this.addLibrary(this.state.importLibraryId)}
+            type="button"
+          >
             Add
           </button>
         </div>

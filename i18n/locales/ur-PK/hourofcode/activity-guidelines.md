@@ -1,6 +1,5 @@
 ---
 title: سرگرمی کی ہدایات
-layout: wide
 ---
 
 <style>

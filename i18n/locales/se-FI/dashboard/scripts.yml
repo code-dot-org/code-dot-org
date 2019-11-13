@@ -28,3 +28,7 @@ se:
           stages:
             Events:
               name: Dáhpáhusaid
+        k5-onlinepd-copy:
+          stages:
+            Events:
+              name: Dáhpáhusaid

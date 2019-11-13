@@ -1,7 +1,5 @@
 ---
 title: این مفهوم را گسترش دهید
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

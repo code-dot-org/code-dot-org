@@ -1,7 +1,5 @@
 ---
 title: 資源
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

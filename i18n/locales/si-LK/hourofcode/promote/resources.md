@@ -1,7 +1,5 @@
 ---
 title: සම්පත්
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

@@ -1,7 +1,5 @@
 ---
 title: උපදෙස් ගොන්න
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

@@ -436,7 +436,7 @@ ar:
             '"vintage"': عتيق
             '"warm"': الأحمر بدرجاته
       Dancelab_setBackgroundEffectWithPalette:
-        text: عيّن تأثيرات الخلفية {EFFECT} {PALETTE}
+        text: عيّن تأثيرات الخلفية {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': لا شيء
@@ -559,6 +559,7 @@ ar:
             '"rotation"': الدوران
             '"x"': وضع أفقي
             '"y"': الموضع الرأسي
+            '"tint"': لون خفيف
       Dancelab_setPropRandom:
         text: رتّب {SPRITE} {PROPERTY} عشوائيًا
         options:
@@ -757,6 +758,8 @@ ar:
             '1': أوسط
             '2': طنين ثلاثي
       Dancelab_whenSetup:
+        text: الإعداد
+      Dancelab_whenSetup2:
         text: الإعداد
       gamelab_changePropBy:
         text: غيّر {SPRITE} {PROPERTY} بمقدار {VAL}
@@ -976,6 +979,8 @@ ar:
             MOVES.Rest: لا شيء
       Mikelab_randomColor:
         text: لون عشوائي
+      Mikelab_repeatUntilComplete:
+        text: التكرار للأبد
       Mikelab_setBG:
         options:
           BG:

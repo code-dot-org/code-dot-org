@@ -27,10 +27,11 @@ tr:
     attributes:
       user:
         name: 'Görünen İsim'
-        name_example: 'Görüntü adı <br/> (Süpe Kodcu veya Irmak K.)'
+        name_example: 'Görüntü adı (Süpe Kodcu veya Irmak K.)'
         email: 'e-posta'
         parent_email: 'Veli e-posta'
         personal_email: "Kişisel e-posta adresi<a href=\"%{url}\">(eğer kişisel e-posta adresiniz yoksa buraya tıklayın)</a>\n \n"
+        personal_email_markdown: "Kişisel e-posta adresi[(eğer kişisel e-posta adresiniz yoksa buraya tıklayın)](%{url})"
         username: 'kullanıcı adı'
         password: 'Parola'
         password_confirmation: 'Şifre doğrulama'
@@ -59,6 +60,7 @@ tr:
   join_section:
     code:
       placeholder: "Bölüm kodu (ABCDEF)"
+      instructions_short: "6 harfli bölüm kodunuzu girin"
   add_hint_form:
     placeholder: 'Lütfen ipucunu buraya girin'
     submit: 'İpucu ekle'
@@ -103,9 +105,11 @@ tr:
     student_count: '%{count}öğrenci çoktan kaydoldu.'
     teacher_count: '%{count}öğretmen çoktan kaydoldu.'
     overview: 'İlerleme durumunuzu izlemek veya sınıfı yönetmek için bir hesap açın. <a href="/"> Farklı aşamaları ve bulmacaları inceleyebilirsiniz fakat ilerlemenizi ve projelerinizi saklamak için giriş yapmak gerekecektir.'
+    overview_markdown: 'İlerleme durumunuzu izlemek veya sınıfı yönetmek için bir hesap açın. [Farklı aşamaları ve bulmacaları inceleyebilirsiniz fakat ilerlemenizi ve projelerinizi saklamak için giriş yapmak gerekecektir.](/)'
     hoc_already_signed_up_heading: 'Giriş yapmadan başla'
     hoc_already_signed_up_content: 'Kod Saatinde öğretmek için kaydoldunuz! Siz ve öğrencilerinizin bu etkinliğe katılmak için kaydolmanıza gerek yok. Başlamak için<a href="%{learn_url}">bir eğitim seçin </a> ve bu linki onlarla paylaşın.<br/><br/>. Eğer Kod Saatinden memnun kaldıysanız ve bir adım ileri gitmek istiyorsanız, bir şifre oluşturup Code Studio hesabı oluşturarak öğrencilerinizi aşağıdaki <a href="%{educate_url}">daha uzun kurslara kaydedebilirsiniz</a>.'
     hoc_already_signed_up_content_post_hoc: 'Kodlama saati düzenlediğiniz için teşekkür ederiz. Kod stüdyoya kayıt hesabınız için bir parola ayarlamak gerekir. Bu sizin ilerlemenizi kaydetmenizi ve sınıfınızı yönetmenizi sağlar. Öğrenciler için kurslar atama ve ilerlemelerini izleme olanağı bulacaksınız. <a href="%{studio_url}"> Ayrıca çeşitli aşamalara ve bulmacalara gözatmak için hesap oluşturmadan </a> devam edebilirsiniz.'
+    hoc_already_signed_up_content_post_hoc_markdown: 'Kodlama saati düzenlediğiniz için teşekkür ederiz. Kod stüdyoya kayıt hesabınız için bir parola ayarlamak gerekir. Bu sizin ilerlemenizi kaydetmenizi ve sınıfınızı yönetmenizi sağlar. Öğrenciler için kurslar atama ve ilerlemelerini izleme olanağı bulacaksınız. [Ayrıca çeşitli aşamalara ve bulmacalara gözatmak için hesap oluşturmadan](%{studio_url}) devam edebilirsiniz.'
     teacher_educator_guide: 'Eğitim rehberine bakın'
     title: "Code.org için kayıt ol"
     school_name: 'Okul Adı (isteğe bağlı)'
@@ -330,6 +334,7 @@ tr:
       minecraft_hero: 'Minecraft Kahraman'
       playlab: 'Oyun Laboratuvarı'
       playlab_k1: 'Oyun Lab (Okul Öncesi)'
+      scratch: 'Scratch'
       sports: 'Spor'
       starwars: 'Yıldız Savaşları'
       starwarsblocks: 'Yıldız savaşları (blok)'
@@ -378,6 +383,7 @@ tr:
     email_confirm_needed_required: 'E-posta adresin %{email} doğrulanmadı:'
     email_confirm_wrong_email: '(Yanlış e-posta adresi?)'
     email_resend_confirm: 'Onay yönergelerini yeniden gönder'
+    new_email_hint: '(Bu e-posta adresinden, e-posta alabildiğinizden emin olunuz.)'
     new_password_hint: "(Eğer değiştirmek istemiyorsanız boş bırakın)"
     current_password_hint: '(Değişikliklerinizi onaylamak için geçerli parolanız gerekiyor)'
     delete: 'Hesabını Sil'
@@ -393,7 +399,9 @@ tr:
     create_personal_login_under_13_parent_email: 'Ebeveyn eposta adresi (şifreni kurtarmak için)'
     create_personal_login_info: 'Code.org hesabınızı öğretim yılı bitiminden sonra kullanmaya devam etmek istiyorsanız, altta kendi girişinizi yapın.'
     create_personal_login_terms: "Kişisel hesap oluşturmakla ben, Code.org'un <a href='%{terms_of_service_url}', target='_blank'> hizmet şartlarına bağlı olmayı kabul ediyorum</a>. Eğer 13 yaşının altındaysam, öğretmen olmadan ebeveynlerimin veya yasal vasilerimin izni ile Code.org hizmetlerini kullandığımı onaylıyorum."
+    create_personal_login_terms_markdown: "Kişisel hesap oluşturmakla ben, Code.org'un [hizmet şartlarına bağlı olmayı kabul ediyorum](%{terms_of_service_url}). Eğer 13 yaşının altındaysam, öğretmen olmadan ebeveynlerimin veya yasal vasilerimin izni ile Code.org hizmetlerini kullandığımı onaylıyorum."
     create_personal_login_email_note: "Öğrenci elektronik postaları öğrencilerle iletişim kurmamıza izin verecek bir formda saklanmıyor. Öğrenciler şifrelerini tekrar almak dışında asla Code.org'dan elektronik posta almazlar. Daha fazla bilgi için <a href='%{privacy_policy_url}', target='_blank'>Güvenlik politikamıza</a> bakınız."
+    create_personal_login_email_note_markdown: 'Öğrenci elektronik postaları öğrencilerle iletişim kurmamıza izin verecek bir formda saklanmıyor. Öğrenciler şifrelerini tekrar almak dışında asla Code.org''dan elektronik posta almazlar. Daha fazla bilgi için [Güvenlik politikamıza](%{privacy_policy_url}) bakınız.'
     enter_new_login_info: 'Oturum açma bilgilerini gir'
     confirm_secret_words: 'Gizli kelimenizi girerek siz olduğunuzu doğrulayın'
     enter_parent_email: "Ebeveyn ya da velinizin elektronik posta adresini girin (şifre kurtarmak için)"
@@ -697,14 +705,17 @@ tr:
   terms_interstitial:
     title: "Güncellenen Hizmet ve Gizlilik Politikası şartları"
     intro_desc: "Kullanıcı sözleşmesini aşağıdaki gibi güncelledik. Değişiklikler 24 Ağustos 2016'dan itibaren uygulanıyor. En büyük değişiklik: <i>Artık Code Studio'daki öğrencilerin email adreslerini artık arşivlemiyoruz.</i> Bu bizim için büyük bir şey, ve umuyoruz eğitim teknolojilerindeki öğrenci mahremiyetine yeni bir standart getirir. Diğer değişikliklerin özetini de size mail olarak gönderdik."
+    intro_desc_markdown: "Kullanıcı sözleşmesini aşağıdaki gibi güncelledik. Değişiklikler 24 Ağustos 2016'dan itibaren uygulanıyor. En büyük değişiklik: _Artık Code Studio'daki öğrencilerin email adreslerini artık arşivlemiyoruz._ Bu bizim için büyük bir şey, ve umuyoruz eğitim teknolojilerindeki öğrenci mahremiyetine yeni bir standart getirir. Diğer değişikliklerin özetini de size mail olarak gönderdik."
     intro_instructions: "Kod Studio tüm son özelliklerine tam erişim sınıfında 13 yaşın altındaki öğrenciler için bu yeni şartları kabul gerekir.  13 yaşından küçük bir öğrenci için bir hesap kayıt olurken okul kullanımı için öğrencinin kişisel bilgilerin toplanması ve kod Studio gibi eğitim programları da dahil olmak üzere okul parası için ebeveyn izni olduğundan emin olun istenecektir."
     tos: "Şartlar"
     privacy: "Gizlilik Politikası"
     privacy_notice: "Gizlilik Politikası"
     accept_label: 'Güncellenme Zamanı <a href="%{tos_url}" target="_blank"> Hizmet şartları</a> ve <a href="%{privacy_url}" target="_blank"> Gizlilik politikasını</a> kabul ediyorum'
+    accept_label_markdown: Güncellenme Zamanı [Hizmet şartları](%{tos_url}) ve [Gizlilik politikasını](%{privacy_url}) kabul ediyorum
     accept: "Kabul et"
     print: "Yazdır"
     reminder_desc: ' <a href="%{tos_url}" target="_blank"> Hizmet şartları</a> ve <a href="%{privacy_url}" target="_blank"> Gizlilik Politikası</a> güncellendi. Bunlar onları kabul etmeden önce dikkatlice okuyunuz.  JavaScript öğretim özelliği güncellenen Şartları kabul etmeden önce kullanılamıyor olabilir.'
+    reminder_desc_markdown: '[Hizmet şartları](%{tos_url}) ve [Gizlilik Politikası](%{privacy_url}) güncellendi. Bunlar onları kabul etmeden önce dikkatlice okuyunuz. JavaScript öğretim özelliği güncellenen Şartları kabul etmeden önce kullanılamıyor olabilir.'
     review_terms: "Güncellenen Hizmet ve Gizlilik politikasını göster"
   school_info_interstitial:
     title: "Her öğrenciye bilgisayar bilim ini getirmek için bize yardım etmeni istiyoruz!"
@@ -726,6 +737,7 @@ tr:
     submit: "Gönder"
     decline: "Kapat"
   zendesk_too_young_message: 'Üzgünüz, genç kullanıcılarımız destek sitemize üye olamazlar. <a href="http://support.code.org">support.code.org</a> adresini giriş yapmadan kullanın ya da ebeveynlerinize veya öğretmeninize bizimle temasa geçmelerini söyleyin.'
+  zendesk_too_young_message_markdown: 'Üzgünüz, genç kullanıcılarımız destek sitemize üye olamazlar. [support.code.org](http://support.code.org) adresini giriş yapmadan kullanın ya da ebeveynlerinize veya öğretmeninize bizimle temasa geçmelerini söyleyin.'
   progress:
     not_started: Başlatılmadı
     in_progress: İşlem devam ediyor
@@ -849,6 +861,7 @@ tr:
     csp_ap_1: 'Bölüm 1: AP teknik kurulum'
     csp_ap_2: 'Bölüm 2: AP performans görevini keşfet'
     csp_ap_3: 'Bölüm 2: AP performans görevini yarat'
+    csp_postap_1: 'Bölüm 2: Veriyi İşleme ve Görselleştirme'
     csp2_1_2018: 'Ünite 2: Sayısal bilgi'
     csp_variables: 'Değişkenler'
     csp_conditionals: 'Koşullar'
@@ -856,6 +869,8 @@ tr:
     csp_lists: 'Listeler'
     csp_loops: 'Döngüler'
     dlp: 'Yansıma İstemleri'
+    k5_getting_started: 'İlk adım'
+    k5_next_steps: 'Sonraki Adımlar'
   external_links:
     disclaimer: Yasal uyarı
     leaving_domain: Code.org tarafından işletilen site değil. 
@@ -938,8 +953,11 @@ tr:
         science: 'Fen Bilimleri'
         la: 'Dil Sanatları'
       resources:
+        khan: 'Khan Akademi'
         kodable: 'Kodlanabilir'
+        scratch: 'Scratch'
       robotics:
+        grok: 'Grok'
         kodable: 'Kodlanabilir'
       workshop_course:
         csp: ''' 16 - 17'' Bilgisayar bilimleri ilkeleri'
@@ -950,5 +968,7 @@ tr:
   cookie_banner:
     accept: 'Kabul ediyorum'
   gdpr_dialog:
+    heading: 'Amerika Birleşik Devletleri merkezli bir web sitesi kullanmayı kabul ediyor musunuz?'
     message: 'Bu siteyi kullanımınıza ilişkin veriler Amerika Birleşik Devletleri’ne gönderilebilir ve Amerika Birleşik Devletleri’nde depolanabilir veya işlenebilir.'
     yes: 'Evet'
+  page_not_found_title: "Sayfa Bulunamadı"

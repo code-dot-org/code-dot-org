@@ -3,20 +3,8 @@ title: Hvala na prijavi za domaćina Sata Kodiranja!
 layout: wide
 nav: how_to_nav
 social:
-  og:title: Sat kodiranja se približava
-  og:description: Sat Kodiranja je globalni pokret koji doseže milijune učenika u
-    180+ zemalja i na preko 30 jezika. Od 4 do 104 godine.
-  og:image: http://hourofcode.com/images/hourofcode-2015-video-thumbnail.png
-  og:image:width: 1440
-  og:image:height: 900
-  og:url: http://hourofcode.com
   twitter:card: player
   twitter:site: "@codeorg"
-  twitter:url: http://hourofcode.com
-  twitter:title: Sat kodiranja se približava
-  twitter:description: Sat Kodiranja je globalni pokret koji doseže milijune učenika
-    u 180+ zemalja i na preko 30 jezika. Od 4 do 104 godine.
-  twitter:image:src: http://hourofcode.com/images/hourofcode-2015-video-thumbnail.png
 ---
 
 # Hvala na prijavi za domaćina Sata Kodiranja!

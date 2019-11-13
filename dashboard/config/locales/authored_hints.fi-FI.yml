@@ -215,6 +215,31 @@ fi-FI:
       CourseE_HOC 2018 Level_9b:
         voyage_aquatic_9a: Miten kaunis koralliriutta! Sininen koralli on **oikea**
           tie. Varmista, että punainen koralli ei ole **vasemmalla**!
+      Dance_2019_01:
+        validation: |-
+          **Kuinka ylitän tämän tason?**
+          \*Varmista, että tanssija näkyy ruudulla.
+
+          _Tämä taso päättyy 4 tahdin jälkeen._
+      Dance_2019_04:
+        validation: |-
+          **Kuinka ylitän tämän tason?**
+
+          -   Tanssijan täytyy vaihtaa uuteen liikkeeseen 4 tahdin jälkeen.
+
+          _Tämä taso päättyy 8 tahdin jälkeen._
+      Dance_2019_05:
+        validation: |-
+          **Kuinka ylitän tämän tason?**
+
+          -   Kuuden tahdin jälkeen, tanssijasi täytyy tanssia eri tanssia, kuin 4 tahtia sitten.
+
+          _Tämä taso päättyy 12 tahdin jälkeen._
+      Dance_2019_07:
+        challenges: |-
+          **Vapaaehtoinen haaste**
+
+          -   Kokeile vaihtelemalla muita ominaisuuksia (leveys, pituus, kierto, yms.)
       Dance_Party_01:
         validation: |-
           **Kuinka ylitän tämän tason?**

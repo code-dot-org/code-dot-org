@@ -1,7 +1,5 @@
 ---
 title: Hour of Code vejledning for kommuner (skoledistrikter)
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

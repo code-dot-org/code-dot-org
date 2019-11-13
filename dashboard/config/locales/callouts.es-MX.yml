@@ -382,6 +382,16 @@ es-MX:
         dance_callout_11_b: "¡Bloque nuevo!"
       CourseD_Dance_Party_11_5:
         dance_party_11_5_groups: Busca aquí los bloques de "todos los patos"
+      Dance_2019_01:
+        dance_callout_01: "¡Añade este bloque a tu programa!"
+      Dance_2019_04:
+        dance_callout_02: "¡Añade este bloque a tu programa!"
+      Dance_2019_06:
+        dance_party_11_5_groups: "¡Bloque nuevo!"
+      Dance_2019_07:
+        setprop_hint: "¡Bloque nuevo!"
+      Dance_2019_09:
+        new_block_1: "¡Bloque nuevo!"
       Dance_Party_01:
         dance_callout_01: "¡Añade este bloque a tu programa!"
       Dance_Party_02:
@@ -514,6 +524,8 @@ es-MX:
         craft_what_is_iron: "¡Extrae este hierro!"
       Underground Iron_2019:
         craft_what_is_iron: "¡Extrae este hierro!"
+      Virtual Pet 2_2019:
+        '': "¡Haz clic aquí!"
       behaviors 1:
         behaviors_edit: Haz clic aquí para ver cómo funciona este comportamiento.
       behaviors 3a:
@@ -600,6 +612,8 @@ es-MX:
       courseA_collector_loops3_2019:
         gradek_adventurer_loops2_1: Este número indica cuántos de estos bloques se
           pueden utilizar en este desafío.
+      courseA_collector_preLoops1:
+        courseA_collector_preLoops1_1: "¡Haz click aquí para ver tu código ejecutarse!"
       courseA_collector_preLoops2:
         courseA_collector_loops1_1: "¿Ves algunos bloques nuevos en la caja de herramientas?
           No te preocupes, te mostraremos cómo utilizarlos más adelante en el escenario."
@@ -999,6 +1013,8 @@ es-MX:
       courseD_scrat_ramp8:
         courseD_maze_ramp7_1: "¡Este es tu primer súper desafío! Estos están hechos
           difíciles a propósito y pueden implicar varios intentos."
+      courseE_aboutme_2:
+        '': "¡Haz clic aquí!"
       courseE_artist_functions1:
         courseD_artist_functions1_1: Comencemos usando este bloque para ayudar a crear
           el primer cuadrado.

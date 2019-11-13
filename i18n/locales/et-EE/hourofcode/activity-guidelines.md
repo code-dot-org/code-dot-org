@@ -1,6 +1,5 @@
 ---
 title: Tegevuste juhised
-layout: wide
 ---
 
 <style>

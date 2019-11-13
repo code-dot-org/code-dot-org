@@ -54,6 +54,16 @@ hu-HU:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Új blokk!
         dance_callout_11_b: Új blokk!
+      Dance_2019_01:
+        dance_callout_01: Add hozzá ezt a blokkot a programodhoz!
+      Dance_2019_04:
+        dance_callout_02: Add hozzá ezt a blokkot a programodhoz!
+      Dance_2019_06:
+        dance_party_11_5_groups: Új blokk!
+      Dance_2019_07:
+        setprop_hint: Új blokk!
+      Dance_2019_09:
+        new_block_1: Új blokk!
       Dance_Party_01:
         dance_callout_01: Add hozzá ezt a blokkot a programodhoz!
       Dance_Party_02:

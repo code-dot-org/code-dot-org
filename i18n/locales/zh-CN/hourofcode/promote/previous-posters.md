@@ -1,7 +1,5 @@
 ---
 title: 往年的编程一小时海报
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

@@ -450,11 +450,11 @@ id-ID:
         Animasi.\\\r\n-   Membuat sprite dan menetapkan gambar.\\\r\n-   M\n-   Tetapkan\n
         \   hingga gambar loop untuk gambar latar belakang dan sprite anda."
       CSD U5 black white images pixelation 2: "# lakukan ini\\\r\n\n\\\r\ngunakan\nwidget
-        pixelasi untuk menggambar wajah tersenyum\\\r\n\\\r\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-\n1491425592286.52.47\nPM.png>)"
+        pixelasi untuk menggambar wajah tersenyum\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image->\n1491425592286.52.47\nPM.png>)"
       CSD U5 black white images pixelation 2_2018: "# lakukan ini\\\r\n\n\\\r\ngunakan\nwidget
-        pixelasi untuk menggambar wajah tersenyum\\\r\n\\\r\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-\n1491425592286.52.47\nPM.png>)"
+        pixelasi untuk menggambar wajah tersenyum\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image->\n1491425592286.52.47\nPM.png>)"
       CSD U5 black white images pixelation 2_2019: "# lakukan ini\\\r\n\n\\\r\ngunakan\nwidget
-        pixelasi untuk menggambar wajah tersenyum\\\r\n\\\r\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-\n1491425592286.52.47\nPM.png>)"
+        pixelasi untuk menggambar wajah tersenyum\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image->\n1491425592286.52.47\nPM.png>)"
       CSD U6 game project finish: "# Menyelesaikan Sentuhan dan Pengujian\\\r\n\n\\\r\nDi\nPoin
         ini anda harus memiliki sebagian besar program di tempat Anda. Sekarang anda
         perlu untuk\nMenambahkan dengan menyelesaikan sentuhan yang diperlukan dan
@@ -623,6 +623,9 @@ id-ID:
       Dance Party Predict_2019: "**Buat sebuah prediksi:** seorang peri yang nampak
         seperti alien biru!\n\nMenurut anda apa yang akan terjadi saat anda meng-kliknya?
         \ "
+      Dance_2019_05: "\\_Sekarang kami sedang grooving! \\_ \n\nTambahkan blok <xml><block
+        type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"ukur\"</title></block></xml>
+        ke ruang kerja Anda. Buat penari memulai langkah baru setelah 6 langkah."
       Dance_Party_02: |-
         Ayo kita ini rusa besar menari!
 
@@ -664,6 +667,14 @@ id-ID:
         \-Tambahkan lebih banyak tombol untuk untuk mengontrol tarian.
         \-Buatlah penari cadangan yang juga merespon saat tombol ditekan.
         \-Ganti penari setiap 4 langkah dengan mengatur visibilitas mereka
+      Dance_Party_extras_battle_2019: |-
+        # Kru Tari
+
+        Inilah tarian antara dua kru.Tombol panah mengontrol seorang penari dan kunci"w,a,s,d"mengontrol penari yang lain.Menarilah dengan seorang teman dan coba perbaiki tarian itu.
+
+        \-Tambahkan lebih banyak tombol untuk untuk mengontrol tarian.
+        \-Buatlah penari cadangan yang juga merespon saat tombol ditekan.
+        \-Ganti penari setiap 4 langkah dengan mengatur visibilitas mereka
       Dance_Party_extras_every_beat: |-
         # Seperempat Not
 
@@ -687,11 +698,24 @@ id-ID:
 
         Tarian ini menggunakan acara"puncak"untuk memicu kode saat bagian bagian musik bersuara keras.
         Cobalah bermain dengan lagu berbeda untuk melihat bagaimana mereka mengubah tarian.
+      Dance_Party_extras_on_beat_2019: |-
+        # Suara rendah, menengah, dan tinggi
+
+        Tarian ini menggunakan acara"puncak"untuk memicu kode saat bagian bagian musik bersuara keras.
+        Cobalah bermain dengan lagu berbeda untuk melihat bagaimana mereka mengubah tarian.
       Dance_Party_extras_speed: |-
         # Mempercepat, Memperlambat
 
         Tarian terakhir menggunakan blok'pengaturan kecepatan'untuk mengontrol seberapa cepat setiap penari bersetiap. Cobalah bereksperimen dengan kecepatan berbeda selama berbeda titik dalam lagu. Bebaslah bermain main dalam tarian ini, atau kembali kesalah satu tarian untuk membuatnya lebih keren.
       Dance_Party_extras_visible: |-
+        # kemana mereka pergi?
+
+        Tarian ini memperlihatkan dan menyembunyikan dua kelompok penari berbeda. Lihat, dan kemudian coba tambahkan bakat anda sendiri.
+
+        \-Tambahkan kelompok penari lain
+        \-Perlihatkan dan lainunyikan penari memnggunakan tombol panah
+        \-Sembunyikan semua penari dan beralih ke efek latar belakang yang menarik
+      Dance_Party_extras_visible_2019: |-
         # kemana mereka pergi?
 
         Tarian ini memperlihatkan dan menyembunyikan dua kelompok penari berbeda. Lihat, dan kemudian coba tambahkan bakat anda sendiri.

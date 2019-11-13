@@ -1,7 +1,5 @@
 ---
 title: Carteles de la última Hora del Código
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

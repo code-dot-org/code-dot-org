@@ -1,7 +1,5 @@
 ---
 title: Basın için Malzemeler
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

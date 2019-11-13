@@ -290,6 +290,8 @@ fa:
             '"scale"': اندازه
       Mikelab_randomColor:
         text: رنگ تصادفی
+      Mikelab_repeatUntilComplete:
+        text: تکرار بی‌پایان
       Mikelab_setBG:
         options:
           BG:

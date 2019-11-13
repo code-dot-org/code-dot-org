@@ -1,49 +1,18 @@
 module Pd::SurveyPipeline
-  class DailySurveyRetriever < SurveyPipelineWorker
-    REQUIRED_INPUT_KEYS = [:filters]
-    OUTPUT_KEYS = [:survey_questions, :workshop_submissions, :facilitator_submissions]
-
-    # @param context [Hash] contains necessary input for this worker to process.
-    #   Results are added back to the context object.
+  class DailySurveyRetriever
+    # Retrieve all survey submissions and questions for a workshop.
     #
-    # @return [Hash] the same context object.
+    # @param workshop_id [Integer]
+    # @return [Array<Enumerable>, nil] An array of 3 enumerable: Enumerable<Pd::SurveyQuestion>,
+    #   Enumerable<Pd::WorkshopDailySurvey> and Enumerable<Pd::WorkshopFacilitatorDailySurvey>.
+    #   Returns nil if the input workshop_id is nil.
     #
-    # @raise [RuntimeError] if required input keys are missing.
-    #
-    def self.process_data(context)
-      check_required_input_keys REQUIRED_INPUT_KEYS, context
-
-      results = retrieve_data context.slice(*REQUIRED_INPUT_KEYS)
-
-      OUTPUT_KEYS.each do |key|
-        context[key] ||= []
-        context[key] += results[key]
-      end
-
-      context
-    end
-
-    # Retrieve data from Pd::SurveyQuestion, Pd::WorkshopDailySurvey
-    # and Pd::WorkshopFacilitatorDailySurvey.
-    #
-    # @param filters [Hash{:workshop_ids, :form_ids => Array<Integer>}] contains array of selected
-    #   workshop ids form ids.
-    #
-    # @return [Hash{:survey_questions, :workshop_submissions, :facilitator_submissions => Array}]
-    #   contains arrays of questions and submissions.
-    #
-    def self.retrieve_data(filters:)
-      workshop_ids = filters[:workshop_ids]
-      form_ids = filters[:form_ids]
-
-      # Build where clause from filter values
-      submission_filter = {}
-      submission_filter[:pd_workshop_id] = workshop_ids if workshop_ids.present?
-      submission_filter[:form_id] = form_ids if form_ids.present?
+    def self.retrieve_all_workshop_surveys(workshop_id)
+      return unless workshop_id
 
       # Collect submissions
-      ws_submissions = Pd::WorkshopDailySurvey.where(submission_filter)
-      facilitator_submissions = Pd::WorkshopFacilitatorDailySurvey.where(submission_filter)
+      ws_submissions = Pd::WorkshopDailySurvey.where(pd_workshop_id: workshop_id)
+      facilitator_submissions = Pd::WorkshopFacilitatorDailySurvey.where(pd_workshop_id: workshop_id)
 
       # Collect survey questions; ignore forms that don't have submissions.
       form_ids_with_submissions =
@@ -52,11 +21,44 @@ module Pd::SurveyPipeline
       questions = form_ids_with_submissions.empty? ? []
         : Pd::SurveyQuestion.where(form_id: form_ids_with_submissions)
 
-      {
-        survey_questions: questions,
-        workshop_submissions: ws_submissions,
-        facilitator_submissions: facilitator_submissions
-      }
+      [questions, ws_submissions, facilitator_submissions]
+    end
+
+    # Retrieve facilitator-specific survey submissions and questions for a facilitator
+    # in a selected list of workshops.
+    #
+    # @param facilitator_id [Integer]
+    # @param workshop_ids [Integer, Array<Integer>] a workshop id or a list of workshop ids
+    # @return [Array<Enumerable>, nil] An array of 2 enumerable: Enumerable<Pd::SurveyQuestion> and
+    #   Enumerable<Pd::WorkshopFacilitatorDailySurvey>.
+    #   Returns nil if either of the input parameter is nil.
+    #
+    def self.retrieve_facilitator_surveys(facilitator_id, workshop_ids)
+      return unless facilitator_id && workshop_ids
+
+      submissions = Pd::WorkshopFacilitatorDailySurvey.where(
+        facilitator_id: facilitator_id, pd_workshop_id: workshop_ids
+      )
+      form_ids = submissions.pluck(:form_id).uniq
+      questions = Pd::SurveyQuestion.where(form_id: form_ids)
+
+      [questions, submissions]
+    end
+
+    # Retrieve general workshop survey submissions and questions for selected workshops.
+    #
+    # @param workshop_ids [Integer, Array<Integer>] a workshop id or a list of workshop ids
+    # @return [Array<Enumerable>] An array of 2 enumerable: Enumerable<Pd::SurveyQuestion> and
+    #   Enumerable<Pd::WorkshopDailySurvey>. Returns nil if the input parameter is nil.
+    #
+    def self.retrieve_general_workshop_surveys(workshop_ids)
+      return unless workshop_ids
+
+      submissions = Pd::WorkshopDailySurvey.where(pd_workshop_id: workshop_ids)
+      form_ids = submissions.pluck(:form_id).uniq
+      questions = Pd::SurveyQuestion.where(form_id: form_ids)
+
+      [questions, submissions]
     end
   end
 end

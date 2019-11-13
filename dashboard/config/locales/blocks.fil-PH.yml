@@ -409,6 +409,8 @@ fil:
             MOVES.Rest: Wala
       Mikelab_randomColor:
         text: iba-ibang kulay
+      Mikelab_repeatUntilComplete:
+        text: ulitin ng walang katapusan
       Mikelab_setBG:
         options:
           BG:

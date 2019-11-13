@@ -366,6 +366,7 @@ eu:
             '"rotation"': itzulikapena
             '"x"': posizio horizontala
             '"y"': posizio bertikala
+            '"tint"': tinta
       Dancelab_setPropRandom:
         options:
           PROPERTY:
@@ -721,6 +722,8 @@ eu:
             MOVES.ThisOrThat: Hau edo Hori
       Mikelab_randomColor:
         text: ausazko kolorea
+      Mikelab_repeatUntilComplete:
+        text: errepikatu betirako
       Mikelab_setBG:
         options:
           BG:

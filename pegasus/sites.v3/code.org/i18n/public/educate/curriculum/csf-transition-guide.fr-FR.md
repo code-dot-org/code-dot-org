@@ -1,16 +1,16 @@
 * * *
 
-title: Computer Science Fundamentals Transition Guide theme: responsive style_min: true
+title: Guide de transition pour les sciences fondamentales numériques theme: responsive style_min: true
 
 * * *
 
-# Teaching Courses A-F
+# Évolution des enseignements A-F
 
 ## Table des matières
 
 * [Aperçu](#overview)
-* [Teaching the new courses](#newcourses)
-* [Circle-Time Stories (Courses A and B)](#circletime)
+* [Enseignement des nouvelles évolutions](#newcourses)
+* [Histoire Cyclique ( Évolution A et B)](#circletime)
 * [Lesson Scaffolding & Challenge Puzzles (All Ages)](#scaffolding)
 * [Bridging Activities For Unplugged Lessons (All Ages)](#unplugged)
 * [End of Course Projects (Courses E & F)](#endofcourse)
@@ -38,7 +38,7 @@ The biggest update to CS Fundamentals is that content will move from four course
 
 <a id="newcourses"></a>
 
-## Teaching the new courses
+## Enseignement des nouvelles évolutions
 
 As mentioned earlier, the courses should feel familiar, but different. If you’ve been to a Code.org professional development workshop, then you’re ready to teach the new courses. There are a small number of changes, but the overall platform, curriculum and pedagogical philosophy is unchanged. If you haven’t yet been, Code.org offers 1 day workshops at no cost to help you learn how to understand the curricula, navigate the Code.org platform, and teach the unplugged lessons.
 
@@ -53,7 +53,7 @@ The rest of this guide will present each idea in more detail, offering tips and 
 
 <a id="circletime"></a>
 
-## Circle-Time Stories (Courses A and B)
+## Histoire Cyclique ( Évolution A et B)
 
 Some concepts are difficult to teach through activities and puzzles alone, especially for young students. This is why we’ve introduced a small number of circle-time stories in the Kindergarten and First Grade curricula. These stories are intended to be read by the teacher to the entire class, with stops along the way to discuss critical ideas like debugging, persistence, and frustration. Our hope is that allowing students to experience these tough concepts via story characters will help them to recognize the same notions when they arise in future lessons.
 

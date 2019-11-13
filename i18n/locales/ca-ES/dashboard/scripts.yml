@@ -1454,3 +1454,24 @@ ca:
             Dance Party:
               name: Festa de ball
           description: Crea un codi amb la teva pròpia festa de ball i comparteix-la amb els teus amics!
+        k5-onlinepd-copy:
+          stages:
+            Computer Science Fundamentals:
+              name: Fonaments de la informàtica
+            Loops:
+              name: Bucles
+            Conditionals:
+              name: Condicionals
+            Events:
+              name: Esdeveniments
+            Functions:
+              name: Funcions
+            Sprite Lab:
+              name: Laboratori de personatges
+            Variables:
+              name: Variables
+            For Loops:
+              name: Per bucles
+        dance-extras-2019:
+          title: Seguir ballant
+          description: Anar més enllà de la primera hora amb idees desenvolupades del projecte.

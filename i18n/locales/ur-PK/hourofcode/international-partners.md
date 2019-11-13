@@ -1,6 +1,5 @@
 ---
 title: بین الاقوامی پارٹنرز
-layout: wide
 ---
 
 <style>

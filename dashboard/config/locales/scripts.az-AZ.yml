@@ -880,3 +880,17 @@ az:
           stages:
             Introduction:
               name: Giriş
+        k5-onlinepd-copy:
+          stages:
+            Loops:
+              name: dövrlər
+            Conditionals:
+              name: Şərti ifadələr
+            Events:
+              name: Hadisələr
+            Functions:
+              name: funksiyalar
+            Variables:
+              name: dəyişənlər
+        dance-extras-2019:
+          title: Rəqs etməyə davam edin

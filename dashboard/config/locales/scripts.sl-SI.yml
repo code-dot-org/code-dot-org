@@ -1215,3 +1215,17 @@ sl:
               name: Uvod
             Nested Loops:
               name: Gnezdenje zank
+        k5-onlinepd-copy:
+          stages:
+            Computer Science Fundamentals:
+              name: Osnove Računalništva
+            Loops:
+              name: Zanke
+            Conditionals:
+              name: Pogoji
+            Events:
+              name: Dogodki
+            Functions:
+              name: Funkcije
+            Variables:
+              name: Spremenljivke
