@@ -9,6 +9,20 @@
 # for further analysis.
 #
 # This script can be modified to compare other tables.
+#
+# Analysis examples:
+# How many rows changed values in "country" column?
+#   select count(*) from contact_rollups_future where country is not null;
+#
+# What are those new values? (Note, 'null' string means the new value is NULL.)
+#   select country, count(*) as cnt from contact_rollups_future group by country order by cnt desc;
+#
+# What were the previous values?
+#   select a.country, b.country as new_country, count(*) as cnt
+#   from contact_rollups as a inner join contact_rollups_future as b on a.id = b.id
+#   where b.country is not null
+#   group by country, new_country
+#   order by cnt desc;
 
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require_relative '../../deployment'
