@@ -1,7 +1,6 @@
 # Test in rails console:
-# load "../lib/cdo/cr_new.rb"
-# ContactRollupsV2.test
-# ContactRollupsV2.main
+# load "../lib/cdo/contact_rollups_v2.rb"; ContactRollupsV2.test
+# load "../lib/cdo/contact_rollups_v2.rb"; ContactRollupsV2.main
 
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require src_dir 'database'
@@ -46,7 +45,7 @@ class ContactRollupsV2
     # PEGASUS_DB_WRITER.drop_table(:crv2_daily)
 
     if PEGASUS_DB_WRITER.table_exists?(:crv2_daily)
-      p "crv2_daily table already exists"
+      puts "crv2_daily table already exists"
     else
       PEGASUS_DB_WRITER.create_table :crv2_daily do
         primary_key :id
@@ -60,7 +59,7 @@ class ContactRollupsV2
         index [:source_table, :data_date]
         unique [:email, :source_table, :data_date]
       end
-      p "created crv2_daily table"
+      puts "created crv2_daily table"
     end
 
     # Create crv2_all table, index on email. (optimization: index/partition by data_date)
@@ -68,7 +67,7 @@ class ContactRollupsV2
     # PEGASUS_DB_WRITER.schema(:crv2_all)
 
     if PEGASUS_DB_WRITER.table_exists?(:crv2_all)
-      p "crv2_all table already exists"
+      puts "crv2_all table already exists"
     else
       PEGASUS_DB_WRITER.create_table :crv2_all do
         primary_key :id
@@ -83,7 +82,7 @@ class ContactRollupsV2
 
         unique :email
       end
-      p "created crv2_all table"
+      puts "created crv2_all table"
     end
 
     # TODO: Create tracker tables:
@@ -97,8 +96,8 @@ class ContactRollupsV2
   end
 
   def self.count_table_rows
-    p "crv2_daily total row count = #{PEGASUS_DB_WRITER[:crv2_daily].count}"
-    p "crv2_all total row count = #{PEGASUS_DB_WRITER[:crv2_all].count}"
+    puts "crv2_daily total row count = #{PEGASUS_DB_WRITER[:crv2_daily].count}"
+    puts "crv2_all total row count = #{PEGASUS_DB_WRITER[:crv2_all].count}"
   end
 
   def self.collect_data_to_crv2_daily
@@ -115,7 +114,7 @@ class ContactRollupsV2
 
     # get latest processed date. save it to tracker table to retrieve later
     processed_date = Date.new(2019, 9, 15)
-    p "last processed_date = #{processed_date}"
+    puts "last processed_date = #{processed_date}"
 
     DASHBOARD_DB_READER[updated_date_query].each do |row|
       date = row[:updated_date]
@@ -165,10 +164,10 @@ class ContactRollupsV2
       raise "Mismatch number of rows inserted!"
     end
   rescue StandardError => e
-    p "Caught error: #{e.message}. Will save to tracker table with logs"
+    puts "Caught error: #{e.message}. Will save to tracker table with logs"
   ensure
-    p "_____collect_daily_changes_in_users_____"
-    logs.each {|log| p log}
+    puts "_____collect_daily_changes_in_users_____"
+    logs.each {|log| puts log}
   end
 
   # TODO: generalize to delete_daily_changes_from_table(table_name)
@@ -199,13 +198,13 @@ class ContactRollupsV2
     # TODO: add assertion/raise
     # raise "Mismatch number of rows deleted" if row count after delete > 0, or it deletes more than it shoul
   ensure
-    p "_____delete_daily_changes_from_users_____"
-    logs.each {|log| p log}
+    puts "_____delete_daily_changes_from_users_____"
+    logs.each {|log| puts log}
   end
 
   def self.update_data_to_crv2_all
     unless PEGASUS_DB_WRITER[:crv2_daily].first
-      p "crv2_daily is empty. stop processing"
+      puts "crv2_daily is empty. stop processing"
       return
     end
 
@@ -225,8 +224,8 @@ class ContactRollupsV2
 
   # TODO: WIP
   def self.update_daily_data_to_crv2_all(source_table, data_date)
-    p "_____update_daily_data_to_crv2_all_____"
-    p "source_table = #{source_table}; data_date = #{data_date}"
+    puts "_____update_daily_data_to_crv2_all_____"
+    puts "source_table = #{source_table}; data_date = #{data_date}"
 
     data_to_insert_query = <<-SQL.squish
       select * from crv2_daily
@@ -283,7 +282,7 @@ class ContactRollupsV2
     create_tables
     empty_tables
     collect_data_to_crv2_daily
-    update_data_to_crv2_all
+    # update_data_to_crv2_all
     count_table_rows
     nil
   end
