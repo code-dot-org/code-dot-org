@@ -7,6 +7,7 @@ import OrderControls from './OrderControls';
 import LevelToken from './LevelToken';
 import {
   reorderLevel,
+  moveLevelToStage,
   addLevel,
   setStageLockable,
   setFlexCategory
@@ -48,6 +49,7 @@ const styles = {
 export class UnconnectedStageCard extends Component {
   static propTypes = {
     reorderLevel: PropTypes.func.isRequired,
+    moveLevelToStage: PropTypes.func.isRequired,
     addLevel: PropTypes.func.isRequired,
     setStageLockable: PropTypes.func.isRequired,
     stagesCount: PropTypes.number.isRequired,
@@ -133,7 +135,11 @@ export class UnconnectedStageCard extends Component {
             );
           }
         } else {
-          console.log('move level to stage', stagePos);
+          this.props.moveLevelToStage(
+            this.props.stage.position,
+            this.state.drag,
+            stagePos
+          );
         }
       }
     });
@@ -259,6 +265,7 @@ export default connect(
   state => ({}),
   {
     reorderLevel,
+    moveLevelToStage,
     addLevel,
     setStageLockable,
     setFlexCategory
