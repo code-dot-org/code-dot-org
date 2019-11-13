@@ -55,8 +55,8 @@ ja-JP:
       CourseD_Dance_Party_11:
         dance_callout_11_a: 新しいブロック！
         dance_callout_11_b: 新しいブロック！
-      Dance_2019_01:
-        dance_callout_01: プログラムにこのブロックを追加！
+      CourseD_Dance_Party_11_5:
+        dance_party_11_5_groups: '"すべてのアヒル" は、ここにあります。'
       Dance_2019_04:
         dance_callout_02: プログラムにこのブロックを追加！
       Dance_2019_06:
@@ -64,7 +64,8 @@ ja-JP:
       Dance_2019_07:
         setprop_hint: 新しいブロック！
       Dance_2019_09:
-        new_block_1: 新しいブロック！
+        new_block_3: 新しいブロック！
+        new_block_4: 新しいブロック！
       Dance_Party_01:
         dance_callout_01: プログラムにこのブロックを追加！
       Dance_Party_02:
@@ -76,6 +77,10 @@ ja-JP:
       Dance_Party_11:
         dance_callout_11_a: 新しいブロック！
         dance_callout_11_b: 新しいブロック！
+      Dance_Party_11_5:
+        dance_party_11_5_groups: '"すべてのアヒル" は、ここにあります。'
+      Fish Tank 3-validated_2019:
+        spritelab_comment: このブロックを使って、プログラムがどのように動くか あなたや先生のメモを 残すことができます。
       Function intro Ryan:
         Function_intro_Ryan_1: このほんの小さな命令が、ワークスペースにある同じ名前をもったぼう大なコードを実行するようコンピューターに命令します。
       Function intro Ryan_2019:
@@ -160,10 +165,20 @@ ja-JP:
         craft_what_is_iron: 鉄を掘りましょう！
       Underground Iron_2019:
         craft_what_is_iron: 鉄を掘りましょう！
+      Virtual Pet 2_2019:
+        '': ここクリック！
       behaviors 1:
         behaviors_edit: クリックして どうなっているのか見てみよう。
+      behaviors 3a:
+        behavior_callout: 真ん中の星が、回らないのはなぜ？
+        star2_callout: コスチュームブロックを外して、 代わりに "this sprite" を使います。
+        this_sprite_callout: コスチュームブロックを これに変えてみよう。
       behaviors 4:
         behaviors_edit: クリックして どうなっているのか見てみよう。
+      behaviors 5:
+        behaviors_edit: この行動にコードを追加します。
+      behaviors free play:
+        behaviors_edit: この行動にコードを追加します。
       course2_bee_conditionals_challenge2:
         courseD_bee_conditionals_challenge2_1: 花（または、ハチの巣）のところで、すべてのミツを集める（または、ハチミツをつくる）には、これを使います。
       course3_artist_functions_challenge1:
@@ -304,6 +319,10 @@ ja-JP:
         courseC_PlayLab_events_challenge1_1: このブロックは、キャラを ほかの ばしょに いどうさせるのに つかいます。
       courseC_PlayLab_events_challenge1_2019:
         courseC_PlayLab_events_challenge1_1: このブロックは、キャラを ほかの ばしょに いどうさせるのに つかいます。
+      courseC_artist_loops1a_2019:
+        jumpto_callout: このブロックはたいせつです。かならず、これを使います。
+      courseC_artist_loops1b_2019:
+        sticker2: プログラムに これを ついかしよう。
       courseC_artist_loopsPrePre1a:
         courseC_artist_loopsPrePre1a_1: さいしょに このブロックを つかって、プレイエリアの まん中に 行きます。
       courseC_artist_loopsPrePre1a_2018:
@@ -332,6 +351,10 @@ ja-JP:
         courseC_maze_debugging5_1: 灰色のブロックは消せません！
       courseC_maze_debugging5_2018:
         courseC_maze_debugging5_1: はい色のブロックは、けすことができません。
+      courseC_maze_debugging5_2019:
+        courseC_maze_debugging5_1: 灰色のブロックは、消すことができません。
+      courseC_maze_debugging9_2019:
+        courseC_maze_debugging9_2019_1: ブロックをドラックして、ツールボックスからワークスペースに持っていこう。
       courseC_maze_programming1:
         grade2_CaringForNewPet_0_1: すべてのブロックをつなげたら「実行」を押してプログラムを実行してください。
       courseC_maze_programming1_2018:
@@ -436,6 +459,7 @@ ja-JP:
         stone_block_2: 灰色のブロックは消せません。
       courseD_maze_ramp3_2019:
         courseC_maze_programming3_2: 余計なブロックを消すには、そのブロックをドラックしてツールボックスに持っていきます。
+        stone_block_2: 灰色のブロックは、消すことができません。
       courseD_maze_ramp4:
         courseC_maze_programming4_1: ブロックの左上にある数字は、そのブロックを使用する回数です。
       courseD_maze_ramp4_2018:
@@ -476,6 +500,8 @@ ja-JP:
         courseD_maze_ramp6_1: ここに書いた回数だけ、中に書いた命令を実行してから、次の命令を実行します。
       courseD_scrat_ramp8:
         courseD_maze_ramp7_1: これが、パズルへの さいしょの チャレンジです。あきらめずに がんばろう。
+      courseE_aboutme_2:
+        '': ここクリック！
       courseE_artist_functions1:
         courseD_artist_functions1_1: この命令で正方形をかくことから始めよう。
       courseE_artist_functions2:
@@ -619,9 +645,11 @@ ja-JP:
       courseF_playlab_variables7c:
         courseF_playlab_variables7c_1: "`しつもん`ブロックは、ここにあります。"
       coursea_maze_ramp1_2018:
-        grade2_CaringForNewPet_0_1: すべてのブロックを つなげたら、"実行（じっこう）" を おしてください。
+        grade2_CaringForNewPet_0_1: すべてのブロックを つなげたら、"実行（じっこう）" を おしてみよう。
       coursea_maze_ramp1_2019:
-        grade2_CaringForNewPet_0_1: すべてのブロックを つなげたら、"実行（じっこう）" を おしてください。
+        grade2_CaringForNewPet_0_1: すべてのブロックを つなげたら、"実行（じっこう）" を おしてみよう。
+      express_maze_debugging9_2019:
+        express_maze_debugging9_2019_1: ブロックをドラックして、ツールボックスからワークスペースに持っていこう。
       frozen circle function with parameter:
         frozen_circle_function_with_parameter_circle: '"円を描く"ブロックを使い、そして大きさを変えてください。'
       frozen cross:

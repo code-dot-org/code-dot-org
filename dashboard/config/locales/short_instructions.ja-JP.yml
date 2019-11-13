@@ -484,17 +484,21 @@ ja-JP:
       Crack a Caesar Cipher: 'やり方:'
       Dance Party 1-validated: 'エイリアンをクリックしたら、どうなりますか？  '
       Dance Party 2: エイリアンが、はねまわるように `___ begins ___` に引っ付ける動きを変更しよう。
+      Dance Party 2_2019: "`sprite begins` ブロックの行動を別のものに変えて、エイリアンが はねまわるようにしてみよう。"
       Dance Party 3: "`エイリアン2`のスプライトを作って、クリックされたとき、別のダンスを するようにしましょう。  "
+      Dance Party 3_2019: 'ピンクのエイリアンのスプライトを作って、クリックされたら動くようにしよう。  '
       Dance Party 4: "`エイリアン3`も作って、一直線にならばせましょう。 "
+      Dance Party 4_2019: 3つのスプライト、黄色のエイリアンを作りましょう。クリックされたらダンスするようにしましょう。また、エイリアンを横一列に並べましょう。
       Dance Party 5: クリックされたら、エイリアンの色が、変わるようにしよう。
+      Dance Party 5_2019: キーが押されたときのイベントブロックを使って、あるキーを押されたら、エイリアンの色が変わるようにしよう。
       Dance Party 6: "`stops everything` を使って、エイリアンがクリックされたら、動きを止めるようにしよう。"
+      Dance Party 6_2019: ベルのスプライトを作って、クリックされたら エイリアンがダンスをや止めるようにしよう。
       Dance Party 7: "「私のベル」という新しいベルスプライトを追加して、それがクリックされたときに、すべてのエイリアンに同じダンスの動きをさせようにします。"
       Dance Party 7_2019: "「私のベル」という新しいベルスプライトを追加して、それがクリックされたときに、すべてのエイリアンに同じダンスの動きをさせようにします。"
       Dance Party Freeplay: さあ、あなたのエイリアンディスコを作ろう！
       Dance Party Freeplay_2019: さあ、あなたのエイリアンディスコを作ろう！
       Dance Party Predict: 'エイリアンをクリックしたら、どうなりますか？  '
       Dance Party Predict_2019: 'エイリアンをクリックしたら、どうなりますか？  '
-      Dance_2019_01: "`新しくつくる`ブロックをワークスペースにドラッグしてひっぱってきてください。それを’セットアップ’ブロックの中につなぎましょう。"
       Dance_2019_05: では、6小節後にダンサーが新しい動きを始めるようにしましょう！
       Dance_2019_08: ダンサーの色を変更するには`色合いを設定`ブロックを使用します。
       Dance_2019_10: グルーブをつづけて！自分だけのダンスを作成して、友達と共有しましょう。
@@ -514,9 +518,13 @@ ja-JP:
       Dance_Party_12: グルーブをつづけて！自分だけのダンスを作成して、友達と共有しましょう。
       Find the Wizard: これは、数当てゲームのサンプルです。
       Fish Tank 2-validated: ほこりみたいな球（タンブルウィード）を魚に変えよう。
+      Fish Tank 2-validated_2019: タンブルウィードを魚に変えよう！
       Fish Tank 3-validated: 水そうの中を 魚が 泳ぎまわるように しよう。
+      Fish Tank 3-validated_2019: 魚の動作を変えて、左右に 泳ぐように しよう。
       Fish Tank 4-validated: "`背景色を にセット` を 使って 背景を 青にしよう。"
+      Fish Tank 4-validated_2019: "`set background color`ブロックを使って、背景の色を変えよう。"
       Fish Tank 5-validated: 魚が、ちょっと さみしそう。水そうに ほかのスプライトを入れてみよう。
+      Fish Tank 5-validated_2019: 魚は冒険好きで、海の中で新しい生き物に会いたがっています。水そうに新たなスプライトを入れましょう。スプライトは、今の魚とは、別のコスチュームにしましょう。
       Fish Tank 6-validated: 魚の新しい友達に対する動きを プログラムしよう。
       Fish Tank 6-validated_2019: 魚の新しい友達に対する動きを プログラムしよう。
       Fish Tank 7-validated: ツールボックスにある新しいブロックを使って、水そうの中を にぎやかに しよう。
@@ -742,10 +750,17 @@ ja-JP:
       Virtual Pet 4: 石けんをドラックできるようにして、キリンの上に 持ってくれば きれいなる ようにします。
       Virtual Pet 5: キリンが何かにさわったとき、5小さくなるようにしましょう。
       Virtual Pet 6: キリンがリンゴにさわったら、もとの大きさに もどるようにしましょう。
+      Virtual Pet 8_2019: "**フリー プレイ** ペットに何をさせますか？好きなことを 試してみよう。"
       Virtual Pet Freeplay: 'フリープレイ キリンに もっと 何かさせてみよう。 '
       behaviors 1: どうなるか予測してみよう！
       behaviors 2: ロケットを星に飛ばそう！
+      behaviors 3: 探査車をロボットよりも早く走らせよう！
+      behaviors 3a: デバッグ すべての星が、同じように回るようにしよう。
       behaviors 4: どうなるか予測してみよう！
+      behaviors 5: 宇宙飛行士をななめに進ませよう。
+      behaviors 6: ボールを転がそう。
+      behaviors 7: 水平線に向かってドライブしよう。
+      behaviors free play: フリープレイ 自分だけの宇宙を作ってみよう！
       bounce_1: "「左向きのブロックが押されたとき」のブロックにべつのブロックをつなげて、「実行」ボタンを押してください。左向き矢印を押してパドルをゴールまで動かしましょう"
       bounce_10: 一番上にゴールがあります。ゲームを作るには、「得点」と「敵の得点」ブロックを「ボールがゴールにあるとき」と「ボールがラケットに当たらなかったとき」ブロックに接続します。相手が2回得点する前に自分がどれだけ得点するか見てみましょう
       bounce_10_basketball: 一番上に、ゴールがあります！ゲームを作るには「ポイントを採点する」と「相手のポイントを採点する」ブロックを、「ボールがゴールに入った場合」と「ボールが手を外れた場合」ブロックにつなげます。相手が2回得点する前に、何点とれるか見てみよう。
@@ -892,6 +907,8 @@ ja-JP:
       courseA_collector_loops1_2019: ローレルを うごかして、たからものを あつめよう！
       courseA_collector_loops2: たからものを ３つ あつめよう。
       courseA_collector_loops2_2018: たからものを ３つ あつめよう。
+      courseA_collector_loops2_2019: たからものを 3つ あつめよう。たからものを あつめるには、ローレルを たからもの のところまで
+        うごかして、とる をつかいます。
       courseA_collector_loops4: ローレルの うごきを なおして、たからものを すべて あつめられるようにしよう。
       courseA_collector_loops4_2018: ローレルの うごきを なおして、たからものを すべて あつめられるようにしよう。
       courseA_collector_loops4_2019: ローレルの うごきを なおして、たからものを すべて あつめられるようにしよう。
@@ -941,6 +958,7 @@ ja-JP:
       courseA_harvester_loops5b: トウモロコシを ぜんぶ しゅうかく できるように プログラムを なおすことが できるかな？
       courseA_harvester_loops5b_2019: トウモロコシを ぜんぶ しゅうかく できるように プログラムを なおすことが できるかな？
       courseA_harvester_loops6: "`西` を **1つ** と `北`を **1つ** つかいます。"
+      courseA_harvester_loops6_2019: "`南` を**1つ** と`西` を**1つ** つかいます。"
       courseA_harvester_loops7: 'じぶんで やってみよう！ '
       courseA_harvester_loops7_2019: 'じぶんで やってみよう！ '
       courseA_harvester_loops9: トウモロコシを ぜんぶ しゅうかくするには どうすればいいかな？
@@ -948,8 +966,8 @@ ja-JP:
       courseA_harvester_seq1: トウモロコシを しゅうかく しよう。
       courseA_harvester_seq10: トウモロコシを しゅうかく しよう！
       courseA_harvester_seq10_2019: トウモロコシを しゅうかく しよう！
-      courseA_harvester_seq11: じぶんで やってみよう！トウモロコシをぜんぶ しゅうかく してね。
-      courseA_harvester_seq11_2019: じぶんで やってみよう！トウモロコシをぜんぶ しゅうかく してね。
+      courseA_harvester_seq11: じぶんで やってみよう！トウモロコシを ぜんぶ しゅうかく しよう。
+      courseA_harvester_seq11_2019: じぶんで やってみよう！トウモロコシを ぜんぶ しゅうかく しよう。
       courseA_harvester_seq12: トウモロコシをぜんぶ しゅうかくしよう。
       courseA_harvester_seq12_2019: トウモロコシをぜんぶ しゅうかくしよう。
       courseA_harvester_seq13: トウモロコシを しゅうかく するのを てつだおう。
@@ -961,21 +979,25 @@ ja-JP:
       courseA_harvester_seq3_2019: "`北` を 3つ と `ピック トウモロコシ` を 1つ つかいます。"
       courseA_harvester_seq4: ブロックを 1つ ひっつけて トウモロコシを しゅうかく しよう。
       courseA_harvester_seq4_2019: ブロックを 1つ ひっつけて トウモロコシを しゅうかく しよう。
-      courseA_harvester_seq5: バグをみつけて なおそう！
-      courseA_harvester_seq5_2019: バグをみつけて なおそう！
+      courseA_harvester_seq5: バグをなおそう！
+      courseA_harvester_seq5_2019: バグをなおそう！
       courseA_harvester_seq6: 自分でやってみよう！
       courseA_harvester_seq6_2019: 自分でやってみよう！
       courseA_harvester_seq7: 自分でやってみよう！
       courseA_harvester_seq7_2019: 自分でやってみよう！
-      courseA_harvester_seq8: トウモロコシを 2つ しゅうかく しましょう。
-      courseA_harvester_seq8_2019: トウモロコシを 2つ しゅうかく しましょう。
+      courseA_harvester_seq8: トウモロコシを 2つ しゅうかく しよう。
+      courseA_harvester_seq8_2019: トウモロコシを 2つ しゅうかく しよう。
       courseA_harvester_seq9: あと 2つ ブロックを ひっつけて、パズルをクリアしよう。
       courseA_harvester_seq9_2019: あと 2つ ブロックを ひっつけて、パズルをクリアしよう。
-      courseA_maze_ramp2_2018: すべてのブロックを ひっつけたら、”実行（じっこう）”を おしてください。
-      courseA_maze_ramp2_2019: すべてのブロックを ひっつけたら、”実行（じっこう）”を おしてください。
+      courseA_maze_ramp2_2018: すべてのブロックを ひっつけたら、”実行（じっこう）”を おしてみよう。
+      courseA_maze_ramp2_2019: すべてのブロックを ひっつけたら、”実行（じっこう）”を おしてみよう。
       courseA_maze_ramp3a_2018: プログラムの いちばん したに `北` ブロックを ひっつけて、"▶ 実行（じっこう）"を クリックして
         みよう。
       courseA_maze_ramp3a_2019: プログラムの いちばん したに `北` ブロックを ひっつけて、"▶ 実行（じっこう）"を クリックして
+        みよう。
+      courseA_maze_ramp3b_2018: プログラムの いちばん したに `北` ブロックを ひっつけて、"実行（じっこう）"を クリックして
+        みよう。
+      courseA_maze_ramp3b_2019: プログラムの いちばん したに `北` ブロックを ひっつけて、"実行（じっこう）"を クリックして
         みよう。
       courseA_maze_ramp4a_2018: ブタを つまえるには、どのブロックを ひっつければ いいか わかるかな？
       courseA_maze_ramp4a_2019: ブタを つまえるには、どのブロックを ひっつければ いいか わかるかな？
@@ -1020,8 +1042,10 @@ ja-JP:
       courseA_maze_seq_challenge2_2019: みちを すすんで ブタをつかまえよう。TNTにあたると はねが なくなちゃうよ！
       courseA_playLab_events1: ワークスペースにブロックをおいて 実行（じっこう）してみよう！
       courseA_playLab_events1_2018: ワークスペースにブロックをおいて 実行（じっこう）してみよう！
+      courseA_playLab_events1_2019: プレイ ラボを やってみよう。ブロックをひっつけて どうなるか みてみよう！
       courseA_playLab_events2: 犬に ”こんにちは”と いわせてみよう！
       courseA_playLab_events2_2018: 犬に ”こんにちは”と いわせてみよう！
+      courseA_playLab_events2_2019: いぬのジョージは "Hi there." と いおうとしています。てつだうことが できますか？
       courseA_playLab_events3: 左やじるしキーが おされたとき、左にうごくようにしてみよう。
       courseA_playLab_events3_2018: 左やじるしキーが おされたとき、左にうごくようにしてみよう。
       courseA_playLab_events3_2019: 左やじるしキーが おされたとき、左にうごくようにしてみよう。
@@ -1168,8 +1192,8 @@ ja-JP:
       courseB_iceage_loops7_2019: 'ドングリがほしい！！！ '
       courseB_iceage_loops8: 'バグを なおせる？ '
       courseB_iceage_loops8_2019: 'バグを なおせる？ '
-      courseB_iceage_loops9: どんぐりが、とおくへ いっちゃた！スクラットは、くりかえしを つかって どんぐりのところへ いけるかな？
-      courseB_iceage_loops9_2019: どんぐりが、とおくへ いっちゃた！スクラットは、くりかえしを つかって どんぐりのところへ いけるかな？
+      courseB_iceage_loops9: どんぐりが、とおくへ いっちゃた！スクラットは、くりかえしを つかって ドングリのところへ いけるかな？
+      courseB_iceage_loops9_2019: どんぐりが、とおくへ いっちゃた！スクラットは、くりかえしを つかって ドングリのところへ いけるかな？
       courseB_maze_seq1: ブロックをつかって、ぼくをブタさんのところに、つれていってください。
       courseB_maze_seq10: バグをなおして、ブタをつかまよう。
       courseB_maze_seq10_2018: バグをなおそう。
@@ -1290,8 +1314,10 @@ ja-JP:
       courseB_starWars_prog9_2018: BB-8、スクラップを あつめるのを てつだって
       courseB_starWars_prog9_2019: BB-8、スクラップを あつめるのを てつだって
       courseC19_playLab_EOC1: はいけいとゲームの主人公になるキャラを選ぼう。
+      courseC19_playLab_EOC2: イベントとあなたの主人公を動かす命令を使って、はたをゲットします。
       courseC19_playLab_EOC3: ゲームにキャラを二人追加して、動かしてみよう。
       courseC19_playLab_EOC4: ポイントをゲットする仕組みを考えよう。どうすればポイントをゲットできるようにする？
+      courseC19_playLab_EOC5: すごい！ゲームを ほとんど 作ってしまった。あとは、ゲームを すきなように かえてみよう！
       courseC19_playLab_EOC6: 完成、ゲームをプレイしてみよう！ともだちとゲームを共有しよう！
       courseC_PlayLab_events1: 犬のジョージ(キャラ 1) に、 "Hi there."と言わせてみよう。
       courseC_PlayLab_events1_2018: 犬のジョージ(キャラ 1) に、 "Hi there."と言わせてみよう。
@@ -1346,6 +1372,7 @@ ja-JP:
       courseC_PlayLab_eventsA_2019: |-
         `実行（じっこう）した時`に はいけいを かえて、ペンギンの うごくスピードを かえてみよう。
         矢じるしキーで ペンギンを うごかして、ポイントを ゲットしよう！
+      courseC_PlayLab_eventsA_embed_2019: ゲームをしよう。ペンギンを タコのところへ 動かして 5ポイント ゲットしよう。
       courseC_PlayLab_eventsFP: 自分だけの ものがたりを 作ってみよう。かんせい したら、 "おわり" をクリックして 友だちに 知らせよう。ものがたりの
         アイデアは ヒントの中にあるよ。
       courseC_PlayLab_eventsFP_2018: 自分だけの ものがたりを 作ってみよう。かんせい したら、 "おわり" をクリックして 友だちに
@@ -1366,12 +1393,18 @@ ja-JP:
       courseC_artist_loop1_2019: "`線のかたち`を つかってみよう。"
       courseC_artist_loops1a: 'プレイエリアの真ん中に行って、鳥のスタンプを押そう。 '
       courseC_artist_loops1a_2018: 'プレイエリアの真ん中に行って、鳥のスタンプを押そう。 '
+      courseC_artist_loops1a_2019: 'プレイエリアの真ん中に行って、スタンプをおそう。 '
+      courseC_artist_loops1b_2019: "`まがる` をつかえば、スタンプの向きを 変えることが できます。 "
       courseC_artist_loops2a: くり返しを使って 30度ずつ角度を変えながら 12回 鳥のスタンプを押そう。
       courseC_artist_loops2a_2018: くり返しを使って 30度ずつ角度を変えながら 12回 鳥のスタンプを押そう。
+      courseC_artist_loops2a_2019: くり返しを使って、スタンプを たくさん おしてみよう。曲がる角度 や くり返しの回数を 変えて、ちがう
+        もようを かいてみよう。
       courseC_artist_loops3a: コウモリを追加しよう！
       courseC_artist_loops3a_2018: コウモリを追加しよう！
+      courseC_artist_loops3a_2019: 2つ目のスタンプをおそう！
       courseC_artist_loops4a: 75ピクセル前にジャンプしよう。
       courseC_artist_loops4a_2018: 75ピクセル前にジャンプしよう。
+      courseC_artist_loops4a_2019: 1つ目のスタンプをおして、2つ目をおす前に ジャンプするようにしよう。
       courseC_artist_loops5a: ステッカーをつかってみよう！
       courseC_artist_loops5a_2018: ステッカーをつかってみよう！
       courseC_artist_loops5a_2019: ステッカーをつかってみよう！
@@ -1467,6 +1500,12 @@ ja-JP:
       courseC_collector_prog_challenge2: １０こ いじょう たからものを あつめれば このパズルを クリアできます！
       courseC_collector_prog_challenge2_2018: １０こ いじょう たからものを あつめれば このパズルを クリアできます！
       courseC_collector_prog_challenge2_2019: １０こ いじょう たからものを あつめれば このパズルを クリアできます！
+      courseC_data wizard: |-
+        実行（じっこう）キーを おしてみよう。
+        動物が出てきます。
+
+        何匹出てくるか数えよう。
+        何か気づいた？
       courseC_flappy_events1: "`クリックしたとき` の下に `ふつうにパタパタする` をひっつけて”実行（じっこう）”してみよう。クリックするかタップすれば、フラッピーは、まとに
         むかって うごきます。"
       courseC_flappy_events10: '自分だけのゲームを作ってみよう！ '
@@ -1569,6 +1608,7 @@ ja-JP:
       courseC_maze_debugging7_2019: "**チャレンジ** ブロックを 並べ直したり、追加したり、消したりしてデバッグしよう。"
       courseC_maze_debugging9: バグをなおして、スクラットをドングリのことへ連れて行こう。
       courseC_maze_debugging9_2018: バグをなおして、スクラットをドングリのことへ連れて行こう。
+      courseC_maze_debugging9_2019: ツールボックスからブロックをとりだして、プログラムを作ろう。ブタをつかまえて。
       courseC_maze_debugging_challenge1: どの道を行けばドングリのところに行けるか、スクラットに教えて。
       courseC_maze_debugging_challenge1_2018: どの道を行けばドングリのところに行けるか、スクラットに教えて。
       courseC_maze_debugging_challenge1_2019: どの道を行けばドングリのところに行けるか、スクラットに教えて。
@@ -1945,9 +1985,9 @@ ja-JP:
       courseD_bounce_events11s_2019: '新しいボールが ひつようとなる すべての場所に、`新しいボールをなげる` を ついかしよう。 '
       courseD_bounce_events12s_2018: 自分だけのゲームを作ってみよう。見た目やルールは自由に変えることができます。完成したら、"おわり"をおして、友だちに遊んでもらえるようにしましょう。
       courseD_bounce_events12s_2019: 自分だけのゲームを作ってみよう。見た目やルールは自由に変えることができます。完成したら、"おわり"をおして、友だちに遊んでもらえるようにしましょう。
-      courseD_bounce_events1s_2018: '"左矢じるしのとき"の下にブロックをひっつけて、”実行（じっこう）”を押したら、プレイヤーを
+      courseD_bounce_events1s_2018: '"左矢じるしのとき"の下にブロックをひっつけて、”実行（じっこう）”をおしたら、プレイヤーを
         ゴールの方に 動かしてみよう。'
-      courseD_bounce_events1s_2019: '"左矢じるしのとき"の下にブロックをひっつけて、”実行（じっこう）”を押したら、プレイヤーを
+      courseD_bounce_events1s_2019: '"左矢じるしのとき"の下にブロックをひっつけて、”実行（じっこう）”をおしたら、プレイヤーを
         ゴールの方に 動かしてみよう。'
       courseD_bounce_events2s_2018: "`右矢じるしのとき`にブロックをひっつけて、どちらのゴールにも 行けるようにしよう。"
       courseD_bounce_events2s_2019: "`右矢じるしのとき`にブロックをひっつけて、どちらのゴールにも 行けるようにしよう。"
@@ -2089,8 +2129,11 @@ ja-JP:
       courseD_iceage_loops7_2019: 'ドングリがほしい！！！ '
       courseD_iceage_loops8: 'バグを なおせる？ '
       courseD_iceage_loops8_2019: 'バグを なおせる？ '
-      courseD_iceage_loops9: どんぐりが、とおくへ いっちゃた！スクラットは、くりかえしを つかって どんぐりのところへ いけるかな？
-      courseD_iceage_loops9_2019: どんぐりが、とおくへ いっちゃた！スクラットは、くりかえしを つかって どんぐりのところへ いけるかな？
+      courseD_iceage_loops9: どんぐりが、とおくへ いっちゃた！スクラットは、くりかえしを つかって ドングリのところへ いけるかな？
+      courseD_iceage_loops9_2019: どんぐりが、とおくへ いっちゃた！スクラットは、くりかえしを つかって ドングリのところへ いけるかな？
+      courseD_maze_intro4_2019: ブタを つかまえるのを てつだって。
+      courseD_maze_intro5a_2019: 何マス進めばいいのか、注意して 数えてみよう。
+      courseD_maze_intro5c_2019: TNTに気をつけて！ブタを つかまえるのを てつだって。
       courseD_maze_nestedLoops3: できるだけ少ないブロックで、ゾンビをひまわりのところに行かせよう。
       courseD_maze_nestedLoops3_2018: できるだけ少ないブロックで、ゾンビをひまわりのところに行かせよう。
       courseD_maze_nestedLoops3_2019: できるだけ少ないブロックで、ゾンビをひまわりのところに行かせよう。
@@ -2111,18 +2154,22 @@ ja-JP:
       courseD_maze_ramp2_2019: ツールボックスから もうひとつ `前に すすむ` を取り出して、 `実行（じっこう）した時`の下に引っ付けよう。
       courseD_maze_ramp3: 余分なブロックが１つあるので、トリさんは かべに ぶつかってしまいます。不要なブロックをドラックしてツールボックスにもどそう。
       courseD_maze_ramp3_2018: 余分なブロックが１つあるので、トリさんは かべに ぶつかってしまいます。不要なブロックをドラックしてツールボックスにもどそう。
+      courseD_maze_ramp3_2019: いらない "前に すすむ" を さくじょしよう。.
       courseD_maze_ramp4: TNTにぶつからないで！羽がなくなちゃうよ。
       courseD_maze_ramp4_2018: TNTにぶつからないで！羽がなくなちゃうよ。
+      courseD_maze_ramp4_2019: スクラットを ドングリのところへ つれていって！
       courseD_maze_ramp5: TNTにぶつからないで。
       courseD_maze_ramp5_2018: TNTにぶつからないで。
       courseD_maze_ramp5_2019: TNTにぶつからないで。
       courseD_maze_ramp5a: ブタをつかまえるには、どのように命令を並べればよいか順番に注意してね！
       courseD_maze_ramp5a_2018: ブタをつかまえるには、どのように命令を並べればよいか順番に注意してね！
+      courseD_maze_ramp5a_2019: 何マス進めばいいのか、注意して 数えてみよう。
       courseD_maze_ramp5b: トリさんが ブタを つかまえられるように 道案内をしてください！
       courseD_maze_ramp5b_2018: トリさんが ブタを つかまえられるように 道案内をしてください！
       courseD_maze_ramp5b_2019: トリさんが ブタを つかまえられるように 道案内をしてください！
       courseD_maze_ramp5c: ブタを つかまえるのを 手伝って。
       courseD_maze_ramp5c_2018: ブタを つかまえるのを 手伝って。
+      courseD_maze_ramp5c_2019: 割れた氷に気を付けて！スクラットをドングリのところまで連れて行こう。
       courseD_maze_ramp5d: ブタをつかまえよう。
       courseD_maze_ramp5d_2018: ブタをつかまえよう。
       courseD_maze_ramp5d_2019: ブタをつかまえよう。
@@ -2191,6 +2238,7 @@ ja-JP:
       courseD_scrat_ramp6: くり返しを使って、スクラットがドングリのところへ行くのを手伝って！
       courseD_scrat_ramp7: スクラットを ドングリのところへ つれていって！
       courseD_scrat_ramp8: 今までやったことを活かして、ドングリをゲットしよう！
+      courseE_aboutme_6: '続けよう！もっと、いろんなことを言わせてみよう。 '
       courseE_artist_concept1: 'つぎの もようを かいてみよう。 '
       courseE_artist_concept1_2018: 'つぎの もようを かいてみよう。 '
       courseE_artist_concept4: つぎのもようをかいてみよう。
@@ -2557,6 +2605,8 @@ ja-JP:
       courseF_video_createFunctions: 関数を作るためのビデオは、まだありません。これは、その代りのビデオです。
       coursea_maze_ramp1_2018: ブロックをひっつけて、”▶ 実行（じっこう）”を おしてみよう！
       coursea_maze_ramp1_2019: ブロックをひっつけて、”▶ 実行（じっこう）”を おしてみよう！
+      express_maze_debugging9_2019: ツールボックスからブロックをとりだして、プログラムをつりましょう。スクラットを ドングリのところへ
+        つれて行って。
       flappy_1: "「クリックしたとき」ブロックに「パタパタする」ブロックを くっつけて、「実行」ボタンを おしてください。クリック（または がめんをタップ）すると、フラッピーは
         もくひょうにむかって とんでいきます。"
       flappy_11: じぶんのフラッピー ゲームを作ろう。みため、ルール、じゅうりょくも、ぜんぶ かえられます。作りおわったら、「おわり」ボタンをクリックして、ともだちにシェアして
@@ -2638,6 +2688,7 @@ ja-JP:
       ramp_artist_loops3_2019: 色とりどりの5本の線をかくには、 `くりかえし`を使います。
       ramp_artist_loops4: ループの最後に75度右に曲がるを追加したら、どうなるかな？
       ramp_artist_loops4_2018: ループの最後に75度右に曲がるを追加したら、どうなるかな？
+      ramp_artist_loops4_2019: '"前に すすむ" と "まがる みぎに 144 度" をくり返すことで、星のもようを かきましょう。'
       ramp_artist_loops5: くり返しを使って、階段をかいてみよう。
       ramp_artist_loops5_2018: くり返しを使って、階段をかいてみよう。
       ramp_artist_loops5_2019: くり返しを使って、階段をかいてみよう。
