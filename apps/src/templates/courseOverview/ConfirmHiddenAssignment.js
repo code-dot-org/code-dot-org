@@ -27,7 +27,7 @@ const styles = {
 };
 
 /**
- * Confirmation dialog for when assigning a course from the course or script overview page
+ * Confirmation dialog for when assigning a script or course from the course or script overview page
  */
 export default class ConfirmHiddenAssignment extends Component {
   static propTypes = {
