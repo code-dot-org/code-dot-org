@@ -29,7 +29,7 @@ def main
   threads = []
   Thread.abort_on_exception = true
   production_tasks.each do |task|
-    threads << Thread.new {execute_replication_task(task.replication_task_arn)}
+    threads << Thread.new {execute_replication_task(task.replication_task_arn, task.status)}
   end
   threads.each(&:join)
 
@@ -42,14 +42,14 @@ end
 # Start a replication task and wait until it completes, raising an error if the task did not complete within a
 # configurable time period or did not complete successfully.
 # @replication_task_arn [String]
-def execute_replication_task(replication_task_arn)
+def execute_replication_task(replication_task_arn, current_task_status)
   ChatClient.message 'cron-daily', "Starting DMS Replication Task: #{replication_task_arn}"
   dms_client = Aws::DatabaseMigrationService::Client.new
   start_task_response = dms_client.start_replication_task(
     {
       replication_task_arn: replication_task_arn,
-      # TODO: (suresh) This argument is incorrect after the Tasks have been started once.  Start Type : START_REPLICATION, valid only for tasks running for the first time (Aws::DatabaseMigrationService::Errors::InvalidParameterCombinationException)
-      start_replication_task_type: "start-replication"
+      # TODO: (suresh) 'not-started' is not the correct status of a Replication Task that has not ever been executed.
+      start_replication_task_type: current_task_status != 'not-started' ? 'reload-target' : 'start-replication'
     }
   )
   ChatClient.message 'cron-daily', "Start DMS Task Response: #{replication_task_arn} - #{start_task_response}"
@@ -59,7 +59,7 @@ def execute_replication_task(replication_task_arn)
       filters: [
         {
           name: 'replication-task-arn',
-          value: replication_task_arn
+          values: [replication_task_arn]
         }
       ]
     }
@@ -73,7 +73,7 @@ def execute_replication_task(replication_task_arn)
       filters: [
         {
           name: 'replication-task-arn',
-          value: replication_task_arn
+          values: [replication_task_arn]
         }
       ]
     },
