@@ -497,7 +497,14 @@ let Train = class Train extends React.Component {
 };
 Train = Radium(Train);
 
+const defaultTimeScale = 1;
+const timeScales = [1, 2, 4];
+
 class Predict extends React.Component {
+  state = {
+    timeScale: defaultTimeScale
+  };
+
   onContinue = state => {
     if (state.appMode === AppMode.CreaturesVTrashDemo && state.onContinue) {
       state.onContinue();
@@ -524,18 +531,24 @@ class Predict extends React.Component {
       isRunning: !state.isRunning,
       isPaused: !state.isPaused,
       rewind: false,
-      moveTime: 1000
+      moveTime: constants.defaultMoveTime / defaultTimeScale
     });
+    this.setState({timeScale: defaultTimeScale});
   };
 
-  onRewind = () => {
+  onScaleTime = rewind => {
     this.finishMovement();
-    setState({rewind: true, isRunning: true, isPaused: false});
-  };
+    const nextIdx = timeScales.indexOf(this.state.timeScale) + 1;
+    const timeScale =
+      nextIdx > timeScales.length - 1 ? timeScales[0] : timeScales[nextIdx];
 
-  onFastForward = () => {
-    this.finishMovement();
-    setState({rewind: false, isRunning: true, isPaused: false, moveTime: 500});
+    setState({
+      rewind,
+      isRunning: true,
+      isPaused: false,
+      moveTime: constants.defaultMoveTime / timeScale
+    });
+    this.setState({timeScale});
   };
 
   render() {
@@ -544,13 +557,19 @@ class Predict extends React.Component {
     return (
       <Body>
         <div style={styles.playButtons}>
-          <Button onClick={this.onRewind} style={styles.playButton}>
+          <Button
+            onClick={() => this.onScaleTime(true)}
+            style={styles.playButton}
+          >
             Rewind
           </Button>
           <Button onClick={this.onPressPlay} style={styles.playButton}>
             {state.isRunning ? 'Pause' : 'Play'}
           </Button>
-          <Button onClick={this.onFastForward} style={styles.playButton}>
+          <Button
+            onClick={() => this.onScaleTime(false)}
+            style={styles.playButton}
+          >
             Fast-Forward
           </Button>
         </div>
