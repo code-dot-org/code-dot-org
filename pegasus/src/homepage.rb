@@ -357,7 +357,10 @@ class Homepage
   def self.get_heroes_arranged(request)
     hero_create = [{text: "homepage_hero_text_stat_students", centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/announcement.jpg"}]
     hero_hoc2019 = [{text: "homepage_hero_text_stat_students", centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2019.jpg"}]
-    hero_dance2019 = [{text: "homepage_hero_text_stat_students", centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2019_dance.jpg"}]
+    hero_dance2019 = [
+      {text: "homepage_hero_text_stat_students", classname: "desktop-feature", centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2019_dance.jpg"},
+      {text: "homepage_hero_text_stat_students", classname: "mobile-feature", centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2019_dance_narrow.jpg"}
+    ]
 
     # Generate a random set of hero images alternating between non-celeb and celeb.
     heroes = get_heroes
