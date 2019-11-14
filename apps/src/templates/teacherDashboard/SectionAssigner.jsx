@@ -28,7 +28,8 @@ class SectionAssigner extends Component {
     showAssignButton: PropTypes.bool,
     courseId: PropTypes.number,
     scriptId: PropTypes.number,
-    selectedSectionId: PropTypes.number
+    selectedSectionId: PropTypes.number,
+    forceReload: PropTypes.bool
   };
 
   onChangeSection = sectionId => {
@@ -41,7 +42,8 @@ class SectionAssigner extends Component {
       showAssignButton,
       courseId,
       scriptId,
-      selectedSectionId
+      selectedSectionId,
+      forceReload
     } = this.props;
     const selectedSection = sections.find(
       section => section.id === selectedSectionId
@@ -55,6 +57,9 @@ class SectionAssigner extends Component {
             sections={sections}
             onChangeSection={this.onChangeSection}
             selectedSection={selectedSection}
+            forceReload={forceReload}
+            courseId={courseId}
+            scriptId={scriptId}
           />
           {selectedSection && selectedSection.isAssigned && (
             <UnassignButton sectionId={selectedSection.id} />

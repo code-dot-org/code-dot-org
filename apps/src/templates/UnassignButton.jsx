@@ -43,6 +43,7 @@ class UnassignButton extends React.Component {
         onMouseOver={this.onMouseOver}
         onMouseLeave={this.onMouseOut}
         style={styles.buttonMargin}
+        className={'uitest-unassign-button'}
       >
         <Button
           color={Button.ButtonColor.green}
