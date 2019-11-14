@@ -362,6 +362,12 @@ class Level < ActiveRecord::Base
   ).freeze
 
   def validated?
+    puts "Type"
+    puts TYPES_WITH_IDEAL_LEVEL_SOURCE.include?(type)
+    puts "Ideal level source"
+    puts ideal_level_source
+    puts "Free play"
+    puts !try(:free_play?)
     TYPES_WITH_IDEAL_LEVEL_SOURCE.include?(type) && ideal_level_source && !try(:free_play?)
   end
 
