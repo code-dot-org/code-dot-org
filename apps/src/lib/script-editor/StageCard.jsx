@@ -235,7 +235,7 @@ export class UnconnectedStageCard extends Component {
                 this.metrics[level.position] = metrics;
               }
             }}
-            key={level.position + '_' + level.ids[0]}
+            key={level.activeId}
             level={level}
             stagePosition={stage.position}
             dragging={!!this.state.drag}
