@@ -28,9 +28,9 @@ A few tips:
 
 <a id="top"></a>
 
-## Index:
+## Inhaltsverzeichnis:
 
-- [What to Submit](#whatsubmit)
+- [Was sollte übermittelt werden](#whatsubmit)
 - [General guidelines for creating an Hour of Code™ activity](#guidelines)
 - [How to Submit](#submit)
 - [How activities will be evaluated](#inclusion)
@@ -41,7 +41,7 @@ A few tips:
 
 <a id="whatsubmit"></a>
 
-## What to Submit
+## Was sollte übermittelt werden
 
 **Self-guided puzzle or game ([example](https://code.org/mc))**
 

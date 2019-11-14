@@ -742,6 +742,15 @@ pt-PT:
         ao tesouro.
       Crack Random Substitution: Instruções
       Crack a Caesar Cipher: Instruções
+      Dance_2019_02: O bloco `quando premido`, permite-te executar código quando o
+        botão da seta para cima é premida. Faz com que o teu dançarino aplauda quando
+        primes o botão ou experimenta outro movimento!
+      Dance_2019_03: 'Está na hora da dança! Programa cada dançarino de modo a mover-se
+        quando premires teclas diferentes. Escolhe o teu movimento preferido para
+        cada dançarino ou defini-o para "(Aleatório)" para algo completamente imprevisível! '
+      Dance_2019_06: Forma um grupo de dançarinos secundários à volta do dançarino
+        principal que está no meio.
+      Dance_2019_09: Sê criativo com estes blocos novos!
       Dance_Party_extras_battle: Maltas da Dança (Clica em "Mais" para veres os detalhes)
       Dance_Party_extras_battle_2019: Maltas da Dança (Clica em "Mais" para veres
         os detalhes)
@@ -943,37 +952,36 @@ pt-PT:
         blocos para me levar até o porco!
       MC HOC 2016 Level 10: Está na hora de criares o teu próprio Minecraft! Gera
         criaturas e depois faz com que elas façam o que tu quiseres. Diverte-te!
-      MC HOC 2016 Level 2-2: A galinha não se mexe. Coloca blocos de "mover" e "virar"
-        na vaga de "quando gerado" para conseguires que ela se mova.
-      MC HOC 2016 Level 3: Excelente, a galinha moveu-se! Mas depois parou. Nos jogos,
-        as galinhas andam para sempre. Utiliza uma ação circular "fazer para sempre"
-        para manteres essas galinhas em movimento.
-      MC HOC 2016 Level 4: Agora as galinhas ficam esquisitas porque se movem todas
+      MC HOC 2016 Level 2-2: A galinha não se mexe. Coloca blocos `mover` e `virar`
+        na ranhura de "quando gerado" para conseguires que ela se mova.
+      MC HOC 2016 Level 3: Porreiro, a galinha mexeu-se! Mas depois parou. Nos jogos,
+        as galinhas andam para sempre. Utiliza um ciclo `fazer para sempre` para manter
+        estas galinhas a mexerem-se.
+      MC HOC 2016 Level 4: Agora as galinhas ficam estranhas porque se movem todas
         da mesma maneira. Os jogos utilizam movimentos aleatórios para fazer com que
-        as coisas pareçam reais. Faz com que as galinhas possam "virar aleatoriamente".
-      MC HOC 2016 Level 5: As vacas perderam-se! Leva-as até à relva com um bloco
-        "dar um passo em direção a" numa ação circular "fazer para sempre".
-      MC HOC 2016 Level 6: Agora cria os mortos-vivos. Utiliza o bloco "gerar" para
-        criar 3 mortos-vivos quando a noite cair. Faz com que eles se movam na tua
-        direção. Sobrevive até de manhã.
+        as coisas se pareçam reais. Faz com que as galinhas possam `virar aleatoriamente`.
+      MC HOC 2016 Level 5: Estas vacas estão perdidas! Leva-as até à relva com o bloco
+        `dar um passo em direção a` num ciclo `fazer para sempre`.
+      MC HOC 2016 Level 6: Agora crias os zombies. Utiliza o bloco `gerar` para criar
+        3 zombies quando a noite cair. Faz com que eles se movam na tua direção. Sobrevive
+        até de manhã.
       MC HOC 2016 Level 8: O caminho até à tua ovelha está bloqueado por uma parede
         de pedra. Felizmente, há um Creeper aqui. Os Creepers explodem quando lhes
         tocas. Faz com que a explosão do Creeper rebente a parede, para que possas
         alcançar a tua ovelha!
-      MC HOC 2016 New Drop: Em Minecraft, as ovelhas largam lã. Coloca o bloco "largar"
-        em "quando utilizado" e depois caminha até à ovelha e faz com que ela largue
+      MC HOC 2016 New Drop: No Minecraft, as ovelhas largam lã. Coloca o bloco `largar`
+        em `quando utilizado` e depois caminha até à ovelha e faz com que ela largue
         um item.
-      MC HOC 2016 New Spawn: Nos jogos, gerar significa adicionar algo ao mundo. Coloca
-        um bloco "gerar" sob "quando executado" para gerar qualquer coisa quando o
-        jogo começar.
+      MC HOC 2016 New Spawn: Agora podes encher o mundo com o que tu quiseres! Coloca
+        um bloco `gerar` sob `quando executado` para gerar coisas quando o jogo começar.
       MC HOC 2016 New Walk: Vamos explorar o nosso mundo! Move-te com as setas e prime
-        a barra de espaços ou toca no painel do jogo para utilizar os itens. Utiliza
-        a porta para entrar na casa.
+        a barra de espaços ou toca no painel do jogo para utilizar itens. Usa a porta
+        para entrar na casa.
       MC HOC 2016 SCORE LEVEL: Alguns jogos permitem-te registar pontuações. Joga
-        à apanhada com estes Golems de Ferro e utiliza o bloco "adicionar 1 à pontuação"
+        à apanhada com estes Golems de Ferro e utiliza o bloco `adicionar 1 à pontuação`
         para obteres um ponto quando os apanhares. Alcança cinco pontos para ganhar!
-      MC HOC 2016 Village Test: Oh, não! Os Mortos-Vivos aprisionaram-te no interior!
-        Codifica o Golem de Ferro para que ele persiga e ataque os mortos-vivos!
+      MC HOC 2016 Village Test: Oh não! Os Zombies aprisionaram-te no interior! Programa
+        o Golem de Ferro para que ele persiga e ataque os zombies!
       MC_HOC_2017_01_RETRY: 'Leva o Agent até à placa de pressão, prime "Executar"
         e utiliza as teclas de seta para mover o jogador para fora da casa e recolher
         o baú. '

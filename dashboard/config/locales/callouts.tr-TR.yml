@@ -236,8 +236,6 @@ tr-TR:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Yeni blok!
         dance_callout_11_b: Yeni blok!
-      Dance_2019_01:
-        dance_callout_01: Bu bloğu programınıza ekleyin!
       Dance_2019_04:
         dance_callout_02: Bu bloğu programınıza ekleyin!
       Dance_2019_06:
@@ -245,7 +243,8 @@ tr-TR:
       Dance_2019_07:
         setprop_hint: Yeni blok!
       Dance_2019_09:
-        new_block_1: Yeni blok!
+        new_block_3: Yeni blok!
+        new_block_4: Yeni blok!
       Dance_Party_01:
         dance_callout_01: Bu bloğu programınıza ekleyin!
       Dance_Party_02:

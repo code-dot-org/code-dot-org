@@ -7099,6 +7099,18 @@ pt-BR:
         -   Adicione uma instrução `console.log` dentro do loop de desenho. ([Mostre-me onde] [0])
         -   Adicione uma expressão booleana dentro do `console.log` que pergunta" A posição x do carro de corrida é menor que a posição x da linha de chegada? "
         -   Veja a saída do programa enquanto o carro se move. Quando a saída muda? Por quê?
+      CSD U3 - conditionals - transition_2019: |-
+        # Booleanos
+
+        Nos últimos níveis, temos comparado valores de sprites para descobrir se algo é verdadeiro ou falso. Vamos começar a colocar isso no contexto de uma animação.
+
+        # Faça isso
+
+        O programa desenha um carro de corrida e uma linha de chegada. Vamos descobrir quando o carro de corrida cruza a linha de chegada. Os sprites foram criados para você.
+
+        -   Adicione uma instrução `console.log` dentro do loop de desenho. ([Mostre-me onde] [0])
+        -   Adicione uma expressão booleana dentro do `console.log` que pergunta "A posição x do carro de corrida é menor que a posição x da linha de chegada? "
+        -   Veja a saída do programa enquanto o carro se move. Quando a saída muda? Por que?
       CSD U3 AnimationsMulti Play Defender: |-
         # Defenda seu bolo!
 
@@ -19237,10 +19249,28 @@ pt-BR:
       Dance Party Predict_2019: "\\*\\* Faça uma previsão: \\*\\* Aqui está uma figura
         que se parece com um alien azul!\n\nO que você acha que vai acontecer quando
         você clicar nele?  "
+      Dance_2019_03: Está na hora da dança! Programa cada dançarino de modo a mover-se
+        quando premires teclas diferentes. Escolhe o teu movimento preferido para
+        cada dançarino ou defini-o para `(Aleatório)` para algo completamente imprevisível!
       Dance_2019_05: "_Agora vamos curtir!_ \n\nAdicione um bloco <xml><block type=\"Dancelab_atTimestamp\"><title
         name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"compassos\"</title></block></xml>
         à sua área de trabalho. Faça o(a) dançarino(a) iniciar um novo movimento após
         6 compassos."
+      Dance_2019_06: "Usa este novo bloco para formar um grupo mais pequeno de dançarinos
+        secundários à volta do dançarino principal que está no meio. \n\n  <xml><block
+        type=\"Dancelab_makeNewDanceSpriteGroup\">\n    <title name=\"N\">???</title>\n
+        \   <title name=\"COSTUME\" config=\"&quot;BEAR&quot;, &quot;CAT&quot;, &quot;FROG&quot;,
+        &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title>\n
+        \   <title name=\"LAYOUT\">\"circle\"</title>\n  </block></xml>\n\nAgora podes
+        criar um monte de dançarinos secundários duma vez só!"
+      Dance_2019_09: |-
+        Isto é um tipo especial de evento que é acionado repetidamente.
+
+        <xml><block type="Dancelab_everySeconds"><title name="N">2</title><title name="UNIT">"measures"</title></block></xml>
+
+        Os outros blocos novos na tua caixa de ferramentas permitem-te trocar progressivamente (ou aleatoriamente!) as propriedades dos dançarinos ao longo do tempo.
+
+        _Sê criativo e diverte-te!_
       Dance_2019_10: Entre no ritmo! Crie sua própria dança para compartilhar com
         seus amigos.
       Dance_Party_01: |-
@@ -19338,6 +19368,15 @@ pt-BR:
         -   Experimente outras durações de notas (como 0,5 para uma mínima ou 0,125 para uma colcheia).
         -   Adicione alguns eventos `após o compasso`.
         -   Troque "compassos" por "segundos" e tente sincronizar suas danças dessa maneira.
+      Dance_Party_extras_every_beat_2019: |-
+        # Semínimas
+
+        A maioria das nossas danças usou compassos inteiros mas cada compasso é composto por 4 semínimas. Esta dança usa <xml><block type="Dancelab_everyMeasuresRange" block-text="a new repeat block"><title name="N">0.25</title><title name="START">5</title><statement name="DO"></statement></block></xml> para fazer o dançarino aplaudir a cada semínima.
+
+        Experimenta mudar os números no bloco para ver como é que altera a dança.
+
+        -   Experimenta com outras durações de notas (como 0,5 para uma mínima ou 0,125 para uma colcheia)
+        -   Adiciona outros eventos
       Dance_Party_extras_layout: |-
         # Vamos entrar em formação!
 
@@ -19346,6 +19385,14 @@ pt-BR:
         -   Crie um segundo grupo de dançarinos em um layout diferente
         -   Mude o layout quando uma tecla é pressionada
         -   Altere uma propriedade quando os dançarinos mudam de formação
+      Dance_Party_extras_layout_2019: |-
+        # Ponham-se em formação!
+
+        Vê esta dança que usa o bloco <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> para mudar a formação dos dançarinos secundários ao longo da dança. Experimenta uma destas ideias para estendê-la:
+
+        -   Cria um segundo grupo de dançarinos numa disposição diferente
+        -   Muda a disposição quando uma tecla é premida
+        -   Altera uma propriedade quando os dançarinos mudarem de formação
       Dance_Party_extras_on_beat: |-
         # Grave, médio e agudo
 
@@ -19358,6 +19405,10 @@ pt-BR:
         # Acelerar, Desacelerar
 
         Esta dança final usa o bloco `definir velocidade` para controlar a rapidez com que cada dançarino se move. Tente experimentar diferentes velocidades durante diferentes pontos na música. Sinta-se à vontade para continuar mexendo nessa dança ou retornar a qualquer uma das danças anteriores para torná-las ainda mais legais.
+      Dance_Party_extras_speed_2019: |-
+        # Acelera-a, Abranda-a
+
+        Esta dança final usa o bloco <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> para controlar o quão rápido cada dançarino se mexe. Tenta experimentar com diferentes velocidades durante pontos diferentes na canção. Põe-te à vontade em mexericar nesta dança ou volta a qualquer uma das danças anteriores para torná-las mais fixes.
       Dance_Party_extras_visible: |-
         # Onde eles foram?
 
@@ -20267,6 +20318,22 @@ pt-BR:
         -   Adicione uma imagem para o exterior
         -   Escolha um bom ID (talvez _fora_)
         -   Esconda a imagem do exterior (será mostrada quando a porta se abrir)
+      Room Escape Workshop - 10 - 2: |-
+        # Porta Aberta
+
+        <img src="https://images.code.org/57407cb51f50e08ecddb8ce7d2d89157-image-1491065952915.58.58 PM.png" style="width:200px;float:right">
+
+        Abra a porta se eles tiverem a chave!
+
+        # Faça Isto
+
+        -   Adicione um bloco `onEvent` para clicar na porta
+        -   Adiciona uma declaração `if` dentro do `onEvent` para verificar se a posição da chave se moveu para a parte inferior da tela
+        -   Adicione uma declaração if
+        -   Na declaração if acrescente o `==`
+        -   Em um lado do `==` coloque a posição x em que a chave estiver posicionada ao ser clicada
+        -   No outro lado adicione o bloco `getXPosition()` - O ID para isto deverá ser o ID da sua chave!
+        -   Dentro da declaração `if` use `showElement` para exibir a imagem oculta da parte externa se eles tiverem a chave
       Room Escape Workshop - 3: |-
         # Ocultar o código
 
@@ -20297,6 +20364,38 @@ pt-BR:
         (o nome da variável) para ser _guess_ \n         \\- No lado direito, mude
         \\_ \"Digite um valor\" \\_ (a mensagem para solicitar ao usuário) para \\_
         \"Digite o código\" \\_"
+      Room Escape Workshop - 5: |-
+        # Verificando o Código Secreto
+
+        Agora que você já obteve do usuário uma tentativa do código secreto, você deverá verificar se ela está correta! Nós podemos fazer isto usando uma declaração `if`. Uma declaração if verifica se uma condição é verdadeira, e neste caso irá checar se o número fornecido pelo usuário é igual ao código secreto
+
+        # Faça Isto
+
+        -   Dentro do bloco `onEvent` para o cofre abaixo da linha de comando adicione uma declaração <img src="https://images.code.org/5e9a434b1ad6b8f010db928b668127a5-image-1491061131564.37.01 AM.png" style="width:100px">
+        -   Crie a condição usando o bloco <img src="https://images.code.org/f0680979704c30975550211b03ed222e-image-1491061134985.37.08 AM.png" style="width:100px"> que irá verificar se duas coisas são iguais
+        -   Em um lado do <img src="https://images.code.org/f0680979704c30975550211b03ed222e-image-1491061134985.37.08 AM.png" style="width:100px"> coloque _tentativa_ (o nome da variável que usamos para armazenar a tentativa do usuário)
+        -   No outro lado coloque o valor de seu código secreto
+      Room Escape Workshop - 7: |-
+        # Exibindo o interior do cofre
+
+        <img src="https://images.code.org/71e74305187a46d0badeb29a9a69ac56-image-1490371014841.55.37 AM.png" style="width:200px;float:right">
+
+        Quando você tiver o programa funcionando para verificar o código secreto, você irá querer "abrir" o cofre e mostrar a chave dentro. Primeiro você deverá criar estes elementos em modo de desenho.
+
+        # Faça Isto
+
+        -   Entre no modo de desenho e adicione uma imagem com um quadrado cinza
+            -   Clique e arraste um elemento de imagem <img src="https://images.code.org/8f4bc108415d83e5c528c9204502efc2-image-1491059181186.06.13 AM.png" style="width:75px"> para a tela
+            -   Dê a ele um bom ID (talvez _interiorCofre_)
+            -   Ache um quadrado cinza para usar como figura
+            -   Isto irá funcionar como o interior do cofre, já que irá encobrir a parte da frente do cofre quando for exibido
+        -   Adicione a imagem da chave
+        -   Clique e arraste um elemento de imagem <img src="https://images.code.org/8f4bc108415d83e5c528c9204502efc2-image-1491059181186.06.13 AM.png" style="width:75px"> para a tela
+        -   Dê a ele um bom ID (talvez _chave_)
+        -   Localize a imagem de uma chave para usar
+        -   Clique a propriedade ocultar no Modo de Desenho para o quadrado cinza e a chave. Quando eles estiverem ocultos irá parecer algo como abaixo em Modo de Desenho
+
+        <img src="https://images.code.org/2c2c7e9996515f2b30d416b558fd1360-image-1489605526794.17.55 PM.png" style="width:200px">
       Room Escape Workshop - 8: |-
         # Mostrando dentro do cofre
 
