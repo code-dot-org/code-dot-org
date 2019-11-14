@@ -11,7 +11,6 @@ level 'U2L1 CFU how use internet', progression: 'Check For Understanding', asses
 
 stage 'Building a Network'
 level 'CSP U2L2 SFLP 20-21', progression: 'Lesson Overview'
-level 'U2L2 CFU terms', progression: 'Check For Understanding', assessment: true
 level 'U2L1 CFU paths', progression: 'Check For Understanding', assessment: true
 
 stage 'IP Addresses'
