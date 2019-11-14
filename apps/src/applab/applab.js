@@ -560,14 +560,10 @@ Applab.init = function(config) {
     project.sourceHandler.setInitialLibrariesList(startLibraries);
     designMode.resetIds();
     Applab.setLevelHtml(config.level.startHtml || '');
-    let promise = Applab.storage.populateTable(level.dataTables, true); // overwrite = true
-    promise.catch(outputError);
-    Applab.storage.populateKeyValue(
-      level.dataProperties,
-      true,
-      () => {},
-      outputError
-    ); // overwrite = true
+    Applab.storage.clearAllData(
+      () => console.log('success'),
+      err => console.log(err)
+    );
     studioApp().resetButtonClick();
   };
 
@@ -610,16 +606,15 @@ Applab.init = function(config) {
   // initializes, the error will be printed only to the browser debug console.
   let dataLoadedPromise = Promise.resolve();
   if (level.dataTables) {
-    dataLoadedPromise = Applab.storage.populateTable(level.dataTables, false); // overwrite = false
+    dataLoadedPromise = Applab.storage.populateTable(level.dataTables);
     dataLoadedPromise.catch(outputError);
   }
   if (level.dataProperties) {
     Applab.storage.populateKeyValue(
       level.dataProperties,
-      false,
       () => {},
       outputError
-    ); // overwrite = false
+    );
   }
 
   Applab.handleVersionHistory = studioApp().getVersionHistoryHandler(config);
