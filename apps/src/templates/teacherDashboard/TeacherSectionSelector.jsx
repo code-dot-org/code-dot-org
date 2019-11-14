@@ -7,6 +7,7 @@ import TeacherSectionSelectorMenuItem from './TeacherSectionSelectorMenuItem';
 import {sectionForDropdownShape} from './shapes';
 import SmallChevronLink from '@cdo/apps/templates/SmallChevronLink';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
+import {reload} from '../../utils';
 import queryString from 'query-string';
 
 const styles = {
@@ -28,6 +29,9 @@ export default class TeacherSectionSelector extends Component {
     sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
     selectedSection: PropTypes.object,
     onChangeSection: PropTypes.func.isRequired,
+    // We need to reload on section change on the script overview page to get
+    // accurate information about students in the selected section.
+    forceReload: PropTypes.bool,
     courseId: PropTypes.number,
     scriptId: PropTypes.number
   };
@@ -81,6 +85,9 @@ export default class TeacherSectionSelector extends Component {
     updateQueryParam('section_id', section.id);
     // If we have a user_id when we switch sections we should get rid of it
     updateQueryParam('user_id', undefined);
+    if (this.props.forceReload) {
+      reload();
+    }
     this.closeMenu();
   };
 
