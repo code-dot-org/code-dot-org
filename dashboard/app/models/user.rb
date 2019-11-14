@@ -503,33 +503,14 @@ class User < ActiveRecord::Base
     true
   end
 
-  # Implement validation that refuses to set admin:true attribute unless
-  # there's a Code.org google sso option present.  Unmigrated users are
-  # not allowed to be admins.
+  # Only allow admin permission for studio accounts with Google OAuth authentication.
   validate :enforce_google_sso_for_admin
   def enforce_google_sso_for_admin
     return unless admin
 
     errors.add(:admin, 'must be a migrated user') unless migrated?
 
-    google_oauth = google_oauth_authentications
-    errors.add(:admin, 'must have google_oauth2 as an authentication option') unless google_oauth&.present?
-
-    errors.add(:admin, 'email must have code.org domain') unless google_oauth.any?(&:codeorg_email?)
-  end
-
-  def google_oauth_authentications
-    authentication_options&.where(credential_type: AuthenticationOption::GOOGLE)
-  end
-
-  validate :validate_authentication_option
-  def validate_authentication_option
-    return unless admin
-
-    if authentication_options.count != 1
-      errors.add(:admin, 'must have only one authentication option')
-      return
-    end
+    errors.add(:admin, 'must have only one authentication option') unless authentication_options.count == 1
 
     unless authentication_options.all? {|ao| ao.google_oauth2? && ao.codeorg_email?}
       errors.add(:admin, 'must be a code.org account with only google oauth')
