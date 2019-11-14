@@ -148,6 +148,9 @@ const styles = {
     alignItems: 'center',
     ':hover': {
       color: colors.orange
+    },
+    ':active': {
+      color: colors.black
     }
   },
   selectedControl: {
