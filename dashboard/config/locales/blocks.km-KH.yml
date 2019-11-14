@@ -237,6 +237,12 @@ km:
           PROPERTY:
             '"scale"': ទំហំ
             '"height"': កម្ពស់
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': គ្រាប់ពេជ្រ
+            '"x"': x
+            '"y"': y
       Dancelab_whenKey:
         options:
           KEY:

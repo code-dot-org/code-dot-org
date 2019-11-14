@@ -432,11 +432,6 @@ cs-CZ:
           -   Po 6 taktech musí tanečník tančit jiný tanec než po 4 taktech.
 
           _Tato úroveň končí po 12 taktech._
-      Dance_2019_07:
-        challenges: |-
-          **Volitelná výzva**
-
-          -   Experimentuj se změnami různých vlastností (šířka, výška, otočení atd.)
       Dance_Party_01:
         validation: |-
           **Jak splním tuto úroveň?**

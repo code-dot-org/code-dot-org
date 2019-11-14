@@ -50,8 +50,6 @@ cs-CZ:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Nový blok!
         dance_callout_11_b: Nový blok!
-      Dance_2019_01:
-        dance_callout_01: Přidej do svého programu tento blok!
       Dance_2019_04:
         dance_callout_02: Přidej do svého programu tento blok!
       Dance_2019_06:
@@ -59,7 +57,8 @@ cs-CZ:
       Dance_2019_07:
         setprop_hint: Nový blok!
       Dance_2019_09:
-        new_block_1: Nový blok!
+        new_block_3: Nový blok!
+        new_block_4: Nový blok!
       Dance_Party_01:
         dance_callout_01: Přidej do svého programu tento blok!
       Dance_Party_02:

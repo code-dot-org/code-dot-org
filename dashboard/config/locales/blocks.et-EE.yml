@@ -699,6 +699,22 @@ et:
             '"bass"': bass
             '"mid"': keskel
             '"treble"': kõrged helid
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': teemant
+            '"l"': l
+            '"m"': m
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"z"': z
       Dancelab_whenKey:
         text: kui vajutad {KEY}
         options:
