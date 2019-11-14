@@ -282,7 +282,7 @@ export const getCurrentProgress = state => {
 
 /**
  * Retrieves the data on time spent on levels for the section in the selected script
- * @returns {studentLevelProgressPropType} keys are student ids, values are
+ * @returns obj - keys are student ids, values are
  * objects of {levelIds: timeSpent}
  */
 export const getCurrentTimeSpent = state => {
