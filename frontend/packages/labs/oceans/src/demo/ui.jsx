@@ -523,7 +523,8 @@ let Predict = class Predict extends React.Component {
     this.setState({displayControls: true});
   };
 
-  onContinue = state => {
+  onContinue = () => {
+    const state = getState();
     if (state.appMode === AppMode.CreaturesVTrashDemo && state.onContinue) {
       state.onContinue();
     } else {
@@ -638,12 +639,7 @@ let Predict = class Predict extends React.Component {
           </Button>
         )}
         {(state.isRunning || state.isPaused) && state.canSkipPredict && (
-          <Button
-            style={styles.continueButton}
-            onClick={() => {
-              this.onContinue(state);
-            }}
-          >
+          <Button style={styles.continueButton} onClick={this.onContinue}>
             Continue
           </Button>
         )}
