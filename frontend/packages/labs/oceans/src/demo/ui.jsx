@@ -508,7 +508,7 @@ let Train = class Train extends React.Component {
 Train = Radium(Train);
 
 const defaultTimeScale = 1;
-const timeScales = [1, 2, 4];
+const timeScales = [1, 2];
 const MediaControl = Object.freeze({
   Rewind: 'rewind',
   Play: 'play',
