@@ -436,6 +436,6 @@ class Homepage
       "Los del Río", "Madonna", "Mark Ronson (ft. Bruno Mars)", "MC Hammer",
       "Miley Cyrus", "Selena Gomez", "The Weeknd", "Yolanda Be Cool"
     ]
-    DCDO.get("hoc2018_dance_stars", stars)
+    DCDO.get("hoc2019_dance_stars", stars)
   end
 end
