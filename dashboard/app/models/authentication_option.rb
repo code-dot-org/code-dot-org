@@ -62,6 +62,10 @@ class AuthenticationOption < ApplicationRecord
     MICROSOFT
   ]
 
+  def google_oauth2?
+    credential_type == GOOGLE
+  end
+
   def codeorg_email?
     Mail::Address.new(email).domain == 'code.org'
   end
