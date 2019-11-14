@@ -91,12 +91,15 @@ class DBQueryTest < ActionDispatch::IntegrationTest
   end
 
   test "post milestone records time" do
+    puts "Starting post milestone records time"
     student = create :student
     sign_in student
 
     sl = Script.find_by_name('course1').script_levels[16]
     sl.level.ideal_level_source = create :level_source, data: ""
     sl.level.save!
+    puts "Ideal level source after set up"
+    puts sl.level.ideal_level_source
     params = {program: 'fake program', testResult: 0, result: 'false', time: 1000, timeSinceLastMilestone: 2000}
 
     assert_cached_queries(10) do
