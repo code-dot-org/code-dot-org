@@ -38,12 +38,6 @@ class ContactRollupsV2
 
   def self.create_tables
     # Create crv2_daily table that partition by (date + source table). Index on (email + source + date)
-    # PEGASUS_DB_WRITER.table_exists?(:crv2_daily)
-    # PEGASUS_DB_WRITER.schema(:crv2_daily)
-    # PEGASUS_DB_WRITER[:crv2_daily].count
-    # PEGASUS_DB_WRITER[:crv2_daily].all
-    # PEGASUS_DB_WRITER.drop_table(:crv2_daily)
-
     if PEGASUS_DB_WRITER.table_exists?(:crv2_daily)
       puts "crv2_daily table already exists"
     else
@@ -63,9 +57,6 @@ class ContactRollupsV2
     end
 
     # Create crv2_all table, index on email. (optimization: index/partition by data_date)
-    # PEGASUS_DB_WRITER.drop_table(:crv2_all)
-    # PEGASUS_DB_WRITER.schema(:crv2_all)
-
     if PEGASUS_DB_WRITER.table_exists?(:crv2_all)
       puts "crv2_all table already exists"
     else
@@ -294,9 +285,18 @@ class ContactRollupsV2
   end
 
   def self.sync_to_pardot
-    # Get latest pardot id for email
+    # Get pardot id for new emails
+    # Prepare data to sync
+    prepare_data_to_sync
     # Sync new changes to pardot
-    # Get pardot id for the new records
+    # Get pardot id for the new inserted emails
+  end
+
+  def self.prepare_data_to_sync
+    # Read crv2_all, get all rows that should be sent to Pardot
+    # Process data column to create data_to_sync
+    # Merge keys from all sources
+    # Filter/Translate keys to pardot keys
   end
 
   def self.main
@@ -311,8 +311,9 @@ class ContactRollupsV2
     # create_tables
     # empty_tables
     # collect_data_to_crv2_daily
-    update_data_to_crv2_all
-    count_table_rows
+    # update_data_to_crv2_all
+    sync_to_pardot
+    # count_table_rows
     nil
   end
 end
