@@ -11,6 +11,13 @@ import colors from './colors';
 import aiBotClosed from '../../public/images/ai-bot/ai-bot-closed.png';
 import Typist from 'react-typist';
 import {getCurrentGuide, dismissCurrentGuide} from './models/guide';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {
+  faPlay,
+  faPause,
+  faBackward,
+  faForward
+} from '@fortawesome/free-solid-svg-icons';
 
 const styles = {
   body: {
@@ -125,19 +132,31 @@ const styles = {
     top: '28%',
     left: '76%'
   },
-  playButtons: {
+  mediaControls: {
     position: 'absolute',
     width: '100%',
-    bottom: 10,
+    bottom: 25,
     display: 'flex',
     justifyContent: 'center'
   },
-  playButton: {
-    minWidth: 0,
-    margin: '0 1%',
-    ':focus': {
-      outline: 'none'
+  mediaControl: {
+    cursor: 'pointer',
+    margin: '0 20px',
+    fontSize: 42,
+    color: colors.grey,
+    display: 'flex',
+    alignItems: 'center',
+    ':hover': {
+      color: colors.orange
     }
+  },
+  selectedControl: {
+    color: colors.black
+  },
+  timeScale: {
+    width: 40,
+    fontSize: 24,
+    textAlign: 'center'
   },
   predictSpeech: {
     top: '88%',
@@ -246,7 +265,7 @@ const styles = {
   },
   guideTopRight: {
     top: '15%',
-    right: '13%',
+    right: '13%'
   },
   guideTopRightNarrow: {
     top: '15%',
@@ -487,10 +506,21 @@ Train = Radium(Train);
 
 const defaultTimeScale = 1;
 const timeScales = [1, 2, 4];
+const MediaControl = Object.freeze({
+  Rewind: 'rewind',
+  Play: 'play',
+  FastForward: 'fast-forward'
+});
 
-class Predict extends React.Component {
+let Predict = class Predict extends React.Component {
   state = {
+    displayControls: false,
     timeScale: defaultTimeScale
+  };
+
+  onRun = () => {
+    setState({isRunning: true, runStartTime: $time()});
+    this.setState({displayControls: true});
   };
 
   onContinue = state => {
@@ -541,31 +571,69 @@ class Predict extends React.Component {
 
   render() {
     const state = getState();
+    let selectedControl;
+    if (state.isRunning && state.rewind) {
+      selectedControl = MediaControl.Rewind;
+    } else if (
+      state.isRunning &&
+      !state.rewind &&
+      this.state.timeScale !== defaultTimeScale
+    ) {
+      selectedControl = MediaControl.FastForward;
+    } else {
+      selectedControl = MediaControl.Play;
+    }
 
     return (
       <Body>
-        <div style={styles.playButtons}>
-          <Button
-            onClick={() => this.onScaleTime(true)}
-            style={styles.playButton}
-          >
-            Rewind
-          </Button>
-          <Button onClick={this.onPressPlay} style={styles.playButton}>
-            {state.isRunning ? 'Pause' : 'Play'}
-          </Button>
-          <Button
-            onClick={() => this.onScaleTime(false)}
-            style={styles.playButton}
-          >
-            Fast-Forward
-          </Button>
-        </div>
+        {this.state.displayControls && (
+          <div style={styles.mediaControls}>
+            <span
+              onClick={() => this.onScaleTime(true)}
+              style={[
+                styles.mediaControl,
+                selectedControl === MediaControl.Rewind &&
+                  styles.selectedControl
+              ]}
+              key={MediaControl.Rewind}
+            >
+              <span style={styles.timeScale}>
+                {selectedControl === MediaControl.Rewind &&
+                  this.state.timeScale !== defaultTimeScale &&
+                  `x${this.state.timeScale}`}
+              </span>
+              <FontAwesomeIcon icon={faBackward} />
+            </span>
+            <span
+              onClick={this.onPressPlay}
+              style={[
+                styles.mediaControl,
+                selectedControl === MediaControl.Play && styles.selectedControl
+              ]}
+              key={MediaControl.Play}
+            >
+              <FontAwesomeIcon icon={state.isRunning ? faPause : faPlay} />
+            </span>
+            <span
+              onClick={() => this.onScaleTime(false)}
+              style={[
+                styles.mediaControl,
+                selectedControl === MediaControl.FastForward &&
+                  styles.selectedControl
+              ]}
+              key={MediaControl.FastForward}
+            >
+              <FontAwesomeIcon icon={faForward} />
+              <span style={styles.timeScale}>
+                {selectedControl === MediaControl.FastForward &&
+                  this.state.timeScale !== defaultTimeScale &&
+                  `x${this.state.timeScale}`}
+              </span>
+            </span>
+          </div>
+        )}
         {!state.isRunning && !state.isPaused && (
-          <Button
-            style={styles.continueButton}
-            onClick={() => setState({isRunning: true, runStartTime: $time()})}
-          >
+          <Button style={styles.continueButton} onClick={this.onRun}>
             Run
           </Button>
         )}
@@ -582,7 +650,8 @@ class Predict extends React.Component {
       </Body>
     );
   }
-}
+};
+Predict = Radium(Predict);
 
 class Pond extends React.Component {
   onPondClick(e) {
