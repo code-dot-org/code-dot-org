@@ -6,7 +6,7 @@ require File.expand_path('../../../pegasus/src/env', __FILE__)
 require src_dir 'database'
 require_relative '../../deployment'
 require 'cdo/pegasus'
-require 'set'
+require 'cdo/pardot'
 
 class ContactRollupsV2
   # Database names
@@ -64,7 +64,7 @@ class ContactRollupsV2
         primary_key :id
         String :email, null: false
         column :data, 'json'
-        column :data_final, 'json'
+        column :data_to_sync, 'json'
         DateTime :data_date, null: false
         Integer :pardot_id
         DateTime :pardot_sync_at
@@ -286,17 +286,58 @@ class ContactRollupsV2
 
   def self.sync_to_pardot
     # Get pardot id for new emails
-    # Prepare data to sync
+    # Prepare data to sync. A package is a day worth of data?
     prepare_data_to_sync
     # Sync new changes to pardot
     # Get pardot id for the new inserted emails
   end
 
   def self.prepare_data_to_sync
-    # Read crv2_all, get all rows that should be sent to Pardot
-    # Process data column to create data_to_sync
-    # Merge keys from all sources
-    # Filter/Translate keys to pardot keys
+    # Read crv2_all, get all rows that should be sent to Pardot.
+    # They are rows that have not been synced (pardot_sync_at is null)
+    # or rows that have been updated since the last sync.
+    rows_to_sync_query = <<-SQL.squish
+      select * from crv2_all
+      where pardot_sync_at IS NULL OR (pardot_sync_at < updated_at)
+    SQL
+
+    PEGASUS_DB_WRITER[rows_to_sync_query].each do |row|
+      # Process data column to create data_to_sync
+      collapsed_data = collapse_data JSON.parse(row[:data])
+      prospect_info = convert_data_to_prospect_info(collapsed_data)
+      Pardot.apply_special_fields(collapsed_data, prospect_info)
+      PEGASUS_DB_WRITER[:crv2_all].where(email: row[:email]).update(data_to_sync: prospect_info.to_json)
+    end
+  end
+
+  def self.collapse_data(data)
+    # Merge values from all sources
+    {}.tap do |collapsed_data|
+      data.values.each do |val|
+        collapsed_data.merge!(val) {|subkey| ([] << collapsed_data[subkey] << val[subkey]).flatten}
+      end
+    end
+  end
+
+  def self.convert_data_to_prospect_info(data)
+    # Translate keys and values to Pardot API format
+    {}.tap do |prospect|
+      data.each_pair do |key, value|
+        pardot_info = Pardot::MYSQL_TO_PARDOT_MAP[key.to_sym]
+        next unless pardot_info
+
+        # For single data fields, set [field_name] = value.
+        # For multi data fields (e.g. multi-select), set keys as [field_name]_0, [field_name]_1, etc.
+        if pardot_info[:multi]
+          value_array = [value].flatten
+          value_array.each_with_index do |item, index|
+            prospect["#{pardot_info[:field]}_#{index}"] = item
+          end
+        else
+          prospect[pardot_info[:field]] = value
+        end
+      end
+    end
   end
 
   def self.main
