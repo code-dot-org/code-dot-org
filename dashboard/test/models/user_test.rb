@@ -4142,7 +4142,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'can grant admin role with google oauth, codeorg account' do
     email = 'fernhunt@code.org'
-    migrated_teacher = create(:teacher, :with_google_authentication_option, email: email)
+    migrated_teacher = create(:teacher, :google_sso_provider, email: email)
 
     migrated_teacher.update!(admin: true)
 
@@ -4159,7 +4159,6 @@ class UserTest < ActiveSupport::TestCase
     end
 
     refute migrated_teacher.reload.admin?
-    assert migrated_teacher.errors[:admin].length == 2
   end
 
   test 'cannot grant admin role when not a codeorg account' do
@@ -4181,5 +4180,55 @@ class UserTest < ActiveSupport::TestCase
     end
 
     refute unmigrated_teacher_without_password.reload.admin?
+  end
+
+  test 'can grant admin role with only google oauth as authentication option' do
+    email = 'fernhunt@code.org'
+    migrated_teacher = create(:teacher, :google_sso_provider, email: email)
+
+    assert_equal 1, migrated_teacher.authentication_options.count
+    migrated_teacher.admin = true
+
+    assert migrated_teacher.valid?
+  end
+
+  test 'cannot grant admin role with multiple authentication options' do
+    email = 'fernhunt@code.org'
+    migrated_teacher = create(:teacher, :google_sso_provider, email: email)
+    create(:facebook_authentication_option, user: migrated_teacher)
+
+    assert_equal 2, migrated_teacher.authentication_options.count
+
+    assert_raises(ActiveRecord::RecordInvalid) do
+      migrated_teacher.update!(admin: true)
+    end
+
+    refute migrated_teacher.reload.admin?
+  end
+
+  test 'cannot grant admin role when authentication option is not present' do
+    migrated_teacher = create(:teacher)
+    migrated_teacher.authentication_options.destroy_all
+
+    assert_equal 0, migrated_teacher.authentication_options.count
+
+    assert_raises(ActiveRecord::RecordInvalid) do
+      migrated_teacher.update!(admin: true)
+    end
+
+    refute migrated_teacher.reload.admin?
+  end
+
+  test 'admin is not set to true when email domain is not code.org' do
+    email = 'toproveyouwrong@gmail.org'
+    migrated_teacher = create(:teacher, :google_sso_provider, email: email)
+
+    assert_equal migrated_teacher.authentication_options.count, 1
+
+    assert_raises(ActiveRecord::RecordInvalid) do
+      migrated_teacher.update!(admin: true)
+    end
+
+    refute migrated_teacher.reload.admin?
   end
 end
