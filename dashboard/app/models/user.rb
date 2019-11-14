@@ -509,6 +509,7 @@ class User < ActiveRecord::Base
   validate :enforce_google_sso_for_admin
   def enforce_google_sso_for_admin
     return unless admin
+
     errors.add(:admin, 'must be a migrated user') unless migrated?
 
     google_oauth = google_oauth_authentications
