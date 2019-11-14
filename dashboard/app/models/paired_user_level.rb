@@ -45,13 +45,11 @@ class PairedUserLevel < ActiveRecord::Base
     initial_hash = Hash[users.map {|user| [user.id, Set.new]}]
     user_ids = users.map(&:id)
     drivers = PairedUserLevel.
-      select('*').
-      joins(driver_user_level: :validated_user_level).
+      joins(:driver_user_level).
       where(user_levels: {user_id: user_ids}).
       pluck('user_levels.user_id', 'user_levels.id')
     navigators = PairedUserLevel.
-      select('*').
-      joins(navigator_user_level: :validated_user_level).
+      joins(:navigator_user_level).
       where(user_levels: {user_id: user_ids}).
       pluck('user_levels.user_id', 'user_levels.id')
     drivers.
