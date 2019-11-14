@@ -27,39 +27,25 @@ const styles = {
 };
 
 /**
- * Confirmation dialog for when assigning a course from the course overview page
+ * Confirmation dialog for when assigning a course from the course or script overview page
  */
-export default class ConfirmAssignment extends Component {
+export default class ConfirmHiddenAssignment extends Component {
   static propTypes = {
     sectionName: PropTypes.string.isRequired,
     assignmentName: PropTypes.string.isRequired,
     onClose: PropTypes.func.isRequired,
-    onConfirm: PropTypes.func.isRequired,
-    isHiddenFromSection: PropTypes.bool
+    onConfirm: PropTypes.func.isRequired
   };
 
   render() {
-    const {
-      sectionName,
-      assignmentName,
-      onClose,
-      onConfirm,
-      isHiddenFromSection
-    } = this.props;
-    const header = isHiddenFromSection
-      ? i18n.unhideAndAssignHeader()
-      : i18n.assignCourse();
-    const content = isHiddenFromSection
-      ? i18n.assignHiddenUnitConfirm({assignmentName, sectionName})
-      : i18n.assignConfirm({assignmentName, sectionName});
-    const buttonText = isHiddenFromSection
-      ? i18n.unhideUnitAndAssign()
-      : i18n.assign();
+    const {sectionName, assignmentName, onClose, onConfirm} = this.props;
 
     return (
       <BaseDialog isOpen={true} handleClose={onClose}>
-        <div style={styles.header}>{header}</div>
-        <div style={styles.content}>{content}</div>
+        <div style={styles.header}>{i18n.unhideAndAssignHeader()}</div>
+        <div style={styles.content}>
+          {i18n.assignHiddenUnitConfirm({assignmentName, sectionName})}
+        </div>
         <div style={{textAlign: 'right'}}>
           <Button
             text={i18n.dialogCancel()}
@@ -68,7 +54,7 @@ export default class ConfirmAssignment extends Component {
           />
           <Button
             id="confirm-assign"
-            text={buttonText}
+            text={i18n.unhideUnitAndAssign()}
             style={{marginLeft: 5}}
             onClick={onConfirm}
             color={Button.ButtonColor.orange}
