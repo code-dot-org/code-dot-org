@@ -94,15 +94,23 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     student = create :student
     sign_in student
 
-    sl = Script.find_by_name('course1').script_levels[16]
-    sl.level.ideal_level_source = create :level_source, data: ""
-    sl.level.save!
-    params = {program: 'fake program', testResult: 0, result: 'false', time: 1000, timeSinceLastMilestone: 2000}
+    level = create(:level, :blockly, :with_ideal_level_source)
+    script = create(:script)
+    script.update(curriculum_umbrella: 'CSF')
+    script_level = create(:script_level, levels: [level], script: script)
+
+    params = {
+      program: 'fake program',
+      testResult: 0,
+      result: 'false',
+      time: 1000,
+      timeSinceLastMilestone: 2000
+    }
 
     assert_cached_queries(10) do
       post milestone_path(
         user_id: student.id,
-        script_level_id: sl.id
+        script_level_id: script_level.id
       ), params: params
       assert_response :success
     end
