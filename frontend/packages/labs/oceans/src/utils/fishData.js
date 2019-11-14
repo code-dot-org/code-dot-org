@@ -172,7 +172,13 @@ const fishComponents = {
       dorsalFinAnchor: [69, 15],
       tailAnchor: [130, 15],
       knnData: [7150, BodyShape.OTHER],
-      type: FishBodyPart.BODY
+      type: FishBodyPart.BODY,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     other_2: {
       src: other_2_image,
@@ -184,7 +190,13 @@ const fishComponents = {
       dorsalFinAnchor: [71, 15],
       tailAnchor: [135, 71],
       knnData: [10223, BodyShape.SQUARE],
-      type: FishBodyPart.BODY
+      type: FishBodyPart.BODY,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     other_3: {
       src: other_3_image,
@@ -196,7 +208,13 @@ const fishComponents = {
       dorsalFinAnchor: [48, 14],
       tailAnchor: [85, 40],
       knnData: [5782, BodyShape.OTHER],
-      type: FishBodyPart.BODY
+      type: FishBodyPart.BODY,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     other_4: {
       src: other_4_image,
@@ -208,7 +226,13 @@ const fishComponents = {
       dorsalFinAnchor: [57, 13],
       tailAnchor: [103, 57],
       knnData: [9524, BodyShape.OTHER],
-      type: FishBodyPart.BODY
+      type: FishBodyPart.BODY,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     other_5: {
       src: other_5_image,
@@ -220,7 +244,13 @@ const fishComponents = {
       dorsalFinAnchor: [65, 14],
       tailAnchor: [115, 50],
       knnData: [9338, BodyShape.OTHER],
-      type: FishBodyPart.BODY
+      type: FishBodyPart.BODY,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     oval_1: {
       src: oval_1_image,
@@ -232,7 +262,13 @@ const fishComponents = {
       dorsalFinAnchor: [60, 17],
       tailAnchor: [110, 50],
       knnData: [9344, BodyShape.OVAL],
-      type: FishBodyPart.BODY
+      type: FishBodyPart.BODY,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     oval_2: {
       src: oval_2_image,
@@ -244,7 +280,13 @@ const fishComponents = {
       dorsalFinAnchor: [58, 15],
       tailAnchor: [105, 48],
       knnData: [5985, BodyShape.OVAL],
-      type: FishBodyPart.BODY
+      type: FishBodyPart.BODY,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     oval_3: {
       src: oval_3_image,
@@ -256,7 +298,13 @@ const fishComponents = {
       dorsalFinAnchor: [68, 10],
       tailAnchor: [130, 39],
       knnData: [7642, BodyShape.OVAL],
-      type: FishBodyPart.BODY
+      type: FishBodyPart.BODY,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     oval_4: {
       src: oval_4_image,
@@ -268,7 +316,13 @@ const fishComponents = {
       dorsalFinAnchor: [64, 10],
       tailAnchor: [118, 40],
       knnData: [7129, BodyShape.OVAL],
-      type: FishBodyPart.BODY
+      type: FishBodyPart.BODY,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     rectangle_1: {
       src: rectangle_1_image,
@@ -304,7 +358,13 @@ const fishComponents = {
       dorsalFinAnchor: [53, 10],
       tailAnchor: [100, 21],
       knnData: [4243, BodyShape.OVAL],
-      type: FishBodyPart.BODY
+      type: FishBodyPart.BODY,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     triangle2: {
       src: triangle2_image,
@@ -328,7 +388,13 @@ const fishComponents = {
       dorsalFinAnchor: [88, 10],
       tailAnchor: [80, 60],
       knnData: [6743, BodyShape.TRIANGLE],
-      type: FishBodyPart.BODY
+      type: FishBodyPart.BODY,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     triangle_1: {
       src: triangle_1_image,
@@ -348,12 +414,24 @@ const fishComponents = {
     eyebrow_raise_1: {
       src: eyebrow_raise_1_image,
       knnData: [1186, 5.647619047619048],
-      type: FishBodyPart.EYE
+      type: FishBodyPart.EYE,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     eyes1: {
       src: eyes1_image,
       knnData: [455, 1.9612068965517242],
-      type: FishBodyPart.EYE
+      type: FishBodyPart.EYE,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     eyes10: {
       src: eyes10_image,
@@ -363,32 +441,68 @@ const fishComponents = {
     eyes11: {
       src: eyes11_image,
       knnData: [437, 1.39171974522293],
-      type: FishBodyPart.EYE
+      type: FishBodyPart.EYE,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     eyes12: {
       src: eyes12_image,
       knnData: [717, 4.910958904109589],
-      type: FishBodyPart.EYE
+      type: FishBodyPart.EYE,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     eyes13: {
       src: eyes13_image,
       knnData: [301, 4.703125],
-      type: FishBodyPart.EYE
+      type: FishBodyPart.EYE,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     eyes14: {
       src: eyes14_image,
       knnData: [496, 1.6533333333333333],
-      type: FishBodyPart.EYE
+      type: FishBodyPart.EYE,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     eyes2: {
       src: eyes2_image,
       knnData: [100, 1],
-      type: FishBodyPart.EYE
+      type: FishBodyPart.EYE,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     eyes3: {
       src: eyes3_image,
       knnData: [463, 1.9372384937238494],
-      type: FishBodyPart.EYE
+      type: FishBodyPart.EYE,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     eyes4: {
       src: eyes4_image,
@@ -398,38 +512,79 @@ const fishComponents = {
     eyes5: {
       src: eyes5_image,
       knnData: [472, 1],
-      type: FishBodyPart.EYE
+      type: FishBodyPart.EYE,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     eyes6: {
       src: eyes6_image,
       knnData: [972, 2.1315789473684212],
-      type: FishBodyPart.EYE
+      type: FishBodyPart.EYE,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     eyes7: {
       src: eyes7_image,
       knnData: [374, 1],
-      type: FishBodyPart.EYE
+      type: FishBodyPart.EYE,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     eyes8: {
       src: eyes8_image,
       knnData: [899, 1.4453376205787782],
-      type: FishBodyPart.EYE
+      type: FishBodyPart.EYE,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     eyes9: {
       src: eyes9_image,
       knnData: [732, 1.6944444444444444],
-      type: FishBodyPart.EYE
+      type: FishBodyPart.EYE,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     glasses_1: {
       src: glasses_1_image,
       knnData: [841, 1.8402625820568927],
       type: FishBodyPart.EYE,
-      exclusions: [AppMode.FishVTrash, AppMode.CreaturesVTrash]
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     small_1: {
       src: small_1_image,
       knnData: [112, 1.018181818181818],
-      type: FishBodyPart.EYE
+      type: FishBodyPart.EYE,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     }
   },
   // MOUTH KNN DATA: [numTeeth, ratio of height:width, MouthExpression]
@@ -437,7 +592,13 @@ const fishComponents = {
     mouth1: {
       src: mouth1_image,
       knnData: [2, 4.454545454545454, MouthExpression.NEUTRAL],
-      type: FishBodyPart.MOUTH
+      type: FishBodyPart.MOUTH,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     mouth10: {
       src: mouth10_image,
@@ -452,62 +613,134 @@ const fishComponents = {
     mouth12: {
       src: mouth12_image,
       knnData: [4, 2.0555555555555554, MouthExpression.FROWN],
-      type: FishBodyPart.MOUTH
+      type: FishBodyPart.MOUTH,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     mouth13: {
       src: mouth13_image,
       knnData: [10, 2.3333333333333335, MouthExpression.NEUTRAL],
-      type: FishBodyPart.MOUTH
+      type: FishBodyPart.MOUTH,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     mouth14: {
       src: mouth14_image,
       knnData: [1, 2, MouthExpression.NEUTRAL],
-      type: FishBodyPart.MOUTH
+      type: FishBodyPart.MOUTH,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     mouth15: {
       src: mouth15_image,
       knnData: [1, 1.263157894736842, MouthExpression.SMILE],
-      type: FishBodyPart.MOUTH
+      type: FishBodyPart.MOUTH,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     mouth16: {
       src: mouth16_image,
       knnData: [0, 0.6666666666666666, MouthExpression.NEUTRAL],
-      type: FishBodyPart.MOUTH
+      type: FishBodyPart.MOUTH,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     mouth17: {
       src: mouth17_image,
       knnData: [0, 2.25, MouthExpression.NEUTRAL],
-      type: FishBodyPart.MOUTH
+      type: FishBodyPart.MOUTH,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     mouth2: {
       src: mouth2_image,
       knnData: [3, 1.3428571428571427, MouthExpression.NEUTRAL],
-      type: FishBodyPart.MOUTH
+      type: FishBodyPart.MOUTH,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     mouth3: {
       src: mouth3_image,
       knnData: [7, 1.2727272727272727, MouthExpression.NEUTRAL],
-      type: FishBodyPart.MOUTH
+      type: FishBodyPart.MOUTH,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     mouth4: {
       src: mouth4_image,
       knnData: [0, 1.8928571428571428, MouthExpression.SMILE],
-      type: FishBodyPart.MOUTH
+      type: FishBodyPart.MOUTH,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     mouth5: {
       src: mouth5_image,
       knnData: [0, 1.8666666666666667, MouthExpression.SMILE],
-      type: FishBodyPart.MOUTH
+      type: FishBodyPart.MOUTH,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     mouth6: {
       src: mouth6_image,
       knnData: [0, 2.4, MouthExpression.FROWN],
-      type: FishBodyPart.MOUTH
+      type: FishBodyPart.MOUTH,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     mouth7: {
       src: mouth7_image,
       knnData: [9, 1.75, MouthExpression.SMILE],
-      type: FishBodyPart.MOUTH
+      type: FishBodyPart.MOUTH,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     mouth8: {
       src: mouth8_image,
@@ -517,7 +750,13 @@ const fishComponents = {
     mouth9: {
       src: mouth9_image,
       knnData: [1, 1.7058823529411764, MouthExpression.FROWN],
-      type: FishBodyPart.MOUTH
+      type: FishBodyPart.MOUTH,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     }
   },
   // PECTORAL FIN KNN DATA: [pointiness rank]
@@ -525,12 +764,24 @@ const fishComponents = {
     pectoral_fin_1: {
       src: pectoral_fin_1_image,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_FRONT
+      type: FishBodyPart.PECTORAL_FIN_FRONT,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     pectoral_fin_10: {
       src: pectoral_fin_10_image,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_FRONT
+      type: FishBodyPart.PECTORAL_FIN_FRONT,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     pectoral_fin_11: {
       src: pectoral_fin_11_image,
@@ -545,22 +796,46 @@ const fishComponents = {
     pectoral_fin_13: {
       src: pectoral_fin_13_image,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_FRONT
+      type: FishBodyPart.PECTORAL_FIN_FRONT,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     pectoral_fin_14: {
       src: pectoral_fin_14_image,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_FRONT
+      type: FishBodyPart.PECTORAL_FIN_FRONT,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     pectoral_fin_15: {
       src: pectoral_fin_15_image,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_FRONT
+      type: FishBodyPart.PECTORAL_FIN_FRONT,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     pectoral_fin_16: {
       src: pectoral_fin_16_image,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_FRONT
+      type: FishBodyPart.PECTORAL_FIN_FRONT,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     pectoral_fin_17: {
       src: pectoral_fin_17_image,
@@ -570,54 +845,114 @@ const fishComponents = {
     pectoral_fin_2: {
       src: pectoral_fin_2_image,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_FRONT
+      type: FishBodyPart.PECTORAL_FIN_FRONT,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     pectoral_fin_3: {
       src: pectoral_fin_3_image,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_FRONT
+      type: FishBodyPart.PECTORAL_FIN_FRONT,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     pectoral_fin_4: {
       src: pectoral_fin_4_image,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_FRONT
+      type: FishBodyPart.PECTORAL_FIN_FRONT,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     pectoral_fin_5: {
       src: pectoral_fin_5_image,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_FRONT
+      type: FishBodyPart.PECTORAL_FIN_FRONT,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     pectoral_fin_6: {
       src: pectoral_fin_6_image,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_FRONT
+      type: FishBodyPart.PECTORAL_FIN_FRONT,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     pectoral_fin_7: {
       src: pectoral_fin_7_image,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_FRONT
+      type: FishBodyPart.PECTORAL_FIN_FRONT,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     pectoral_fin_8: {
       src: pectoral_fin_8_image,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_FRONT
+      type: FishBodyPart.PECTORAL_FIN_FRONT,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     pectoral_fin_9: {
       src: pectoral_fin_9_image,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_FRONT
+      type: FishBodyPart.PECTORAL_FIN_FRONT,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     }
   },
   pectoralFinsBack: {
     pectoral_fin_1: {
       src: pectoral_fin_1_image,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_BACK
+      type: FishBodyPart.PECTORAL_FIN_BACK,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     pectoral_fin_10: {
       src: pectoral_fin_10_image,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_BACK
+      type: FishBodyPart.PECTORAL_FIN_BACK,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     pectoral_fin_11: {
       src: pectoral_fin_11_image,
@@ -632,22 +967,46 @@ const fishComponents = {
     pectoral_fin_13: {
       src: pectoral_fin_13_image,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_BACK
+      type: FishBodyPart.PECTORAL_FIN_BACK,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     pectoral_fin_14: {
       src: pectoral_fin_14_image,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_BACK
+      type: FishBodyPart.PECTORAL_FIN_BACK,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     pectoral_fin_15: {
       src: pectoral_fin_15_image,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_BACK
+      type: FishBodyPart.PECTORAL_FIN_BACK,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     pectoral_fin_16: {
       src: pectoral_fin_16_image,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_BACK
+      type: FishBodyPart.PECTORAL_FIN_BACK,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     pectoral_fin_17: {
       src: pectoral_fin_17_image,
@@ -657,7 +1016,13 @@ const fishComponents = {
     pectoral_fin_2: {
       src: pectoral_fin_2_image,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_BACK
+      type: FishBodyPart.PECTORAL_FIN_BACK,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     pectoral_fin_3: {
       src: pectoral_fin_3_image,
@@ -667,32 +1032,68 @@ const fishComponents = {
     pectoral_fin_4: {
       src: pectoral_fin_4_image,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_BACK
+      type: FishBodyPart.PECTORAL_FIN_BACK,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     pectoral_fin_5: {
       src: pectoral_fin_5_image,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_BACK
+      type: FishBodyPart.PECTORAL_FIN_BACK,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     pectoral_fin_6: {
       src: pectoral_fin_6_image,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_BACK
+      type: FishBodyPart.PECTORAL_FIN_BACK,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     pectoral_fin_7: {
       src: pectoral_fin_7_image,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_BACK
+      type: FishBodyPart.PECTORAL_FIN_BACK,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     pectoral_fin_8: {
       src: pectoral_fin_8_image,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_BACK
+      type: FishBodyPart.PECTORAL_FIN_BACK,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     pectoral_fin_9: {
       src: pectoral_fin_9_image,
       knnData: [],
-      type: FishBodyPart.PECTORAL_FIN_BACK
+      type: FishBodyPart.PECTORAL_FIN_BACK,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     }
   },
 
@@ -708,53 +1109,107 @@ const fishComponents = {
       src: dorsal_fin_10_image,
       knnData: [],
       type: FishBodyPart.DORSAL_FIN,
-      x_adjustment: -10
+      x_adjustment: -10,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     dorsal_fin_11: {
       src: dorsal_fin_11_image,
       knnData: [],
       type: FishBodyPart.DORSAL_FIN,
-      x_adjustment: -20
+      x_adjustment: -20,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     dorsal_fin_12: {
       src: dorsal_fin_12_image,
       knnData: [],
-      type: FishBodyPart.DORSAL_FIN
+      type: FishBodyPart.DORSAL_FIN,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     dorsal_fin_13: {
       src: dorsal_fin_13_image,
       knnData: [],
       type: FishBodyPart.DORSAL_FIN,
-      x_adjustment: -15
+      x_adjustment: -15,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     dorsal_fin_14: {
       src: dorsal_fin_14_image,
       knnData: [],
       type: FishBodyPart.DORSAL_FIN,
-      x_adjustment: -30
+      x_adjustment: -30,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     dorsal_fin_15: {
       src: dorsal_fin_15_image,
       knnData: [],
       type: FishBodyPart.DORSAL_FIN,
-      x_adjustment: -18
+      x_adjustment: -18,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     dorsal_fin_16: {
       src: dorsal_fin_16_image,
       knnData: [],
       type: FishBodyPart.DORSAL_FIN,
-      x_adjustment: -26
+      x_adjustment: -26,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     dorsal_fin_17: {
       src: dorsal_fin_17_image,
       knnData: [],
       type: FishBodyPart.DORSAL_FIN,
-      x_adjustment: -23
+      x_adjustment: -23,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     dorsal_fin_2: {
       src: dorsal_fin_2_image,
       knnData: [],
-      type: FishBodyPart.DORSAL_FIN
+      type: FishBodyPart.DORSAL_FIN,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     dorsal_fin_3: {
       src: dorsal_fin_3_image,
@@ -766,19 +1221,37 @@ const fishComponents = {
       src: dorsal_fin_4_image,
       knnData: [],
       type: FishBodyPart.DORSAL_FIN,
-      x_adjustment: -14
+      x_adjustment: -14,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     dorsal_fin_5: {
       src: dorsal_fin_5_image,
       knnData: [],
       type: FishBodyPart.DORSAL_FIN,
-      x_adjustment: -50
+      x_adjustment: -50,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     dorsal_fin_6: {
       src: dorsal_fin_6_image,
       knnData: [],
       type: FishBodyPart.DORSAL_FIN,
-      x_adjustment: -55
+      x_adjustment: -55,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     dorsal_fin_7: {
       src: dorsal_fin_7_image,
@@ -794,7 +1267,13 @@ const fishComponents = {
       src: dorsal_fin_9_image,
       knnData: [],
       type: FishBodyPart.DORSAL_FIN,
-      x_adjustment: -40
+      x_adjustment: -40,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     }
   },
   // TAIL KNN DATA: []
@@ -802,7 +1281,13 @@ const fishComponents = {
     tail_1: {
       src: tail_1_image,
       knnData: [],
-      type: FishBodyPart.TAIL
+      type: FishBodyPart.TAIL,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     tail_10: {
       src: tail_10_image,
@@ -812,52 +1297,112 @@ const fishComponents = {
     tail_11: {
       src: tail_11_image,
       knnData: [],
-      type: FishBodyPart.TAIL
+      type: FishBodyPart.TAIL,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     tail_12: {
       src: tail_12_image,
       knnData: [],
-      type: FishBodyPart.TAIL
+      type: FishBodyPart.TAIL,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     tail_13: {
       src: tail_13_image,
       knnData: [],
-      type: FishBodyPart.TAIL
+      type: FishBodyPart.TAIL,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     tail_14: {
       src: tail_14_image,
       knnData: [],
-      type: FishBodyPart.TAIL
+      type: FishBodyPart.TAIL,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     tail_15: {
       src: tail_15_image,
       knnData: [],
-      type: FishBodyPart.TAIL
+      type: FishBodyPart.TAIL,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     tail_16: {
       src: tail_16_image,
       knnData: [],
-      type: FishBodyPart.TAIL
+      type: FishBodyPart.TAIL,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     tail_17: {
       src: tail_17_image,
       knnData: [],
-      type: FishBodyPart.TAIL
+      type: FishBodyPart.TAIL,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     tail_2: {
       src: tail_2_image,
       knnData: [],
-      type: FishBodyPart.TAIL
+      type: FishBodyPart.TAIL,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     tail_3: {
       src: tail_3_image,
       knnData: [],
-      type: FishBodyPart.TAIL
+      type: FishBodyPart.TAIL,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     tail_4: {
       src: tail_4_image,
       knnData: [],
-      type: FishBodyPart.TAIL
+      type: FishBodyPart.TAIL,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     tail_5: {
       src: tail_5_image,
@@ -867,12 +1412,24 @@ const fishComponents = {
     tail_6: {
       src: tail_6_image,
       knnData: [],
-      type: FishBodyPart.TAIL
+      type: FishBodyPart.TAIL,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     tail_7: {
       src: tail_7_image,
       knnData: [],
-      type: FishBodyPart.TAIL
+      type: FishBodyPart.TAIL,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     tail_8: {
       src: tail_8_image,
@@ -882,41 +1439,108 @@ const fishComponents = {
     tail_9: {
       src: tail_9_image,
       knnData: [],
-      type: FishBodyPart.TAIL
+      type: FishBodyPart.TAIL,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     }
   },
   // COLOR KNN DATA: [red, green, blue]
   colors: {
     yellow: {
-      rgb: [255, 203, 72],
-      knnData: [255, 203, 72]
+      rgb: [255, 226, 100],
+      knnData: [255, 226, 100]
+    },
+    darkYellow: {
+      rgb: [249, 197, 0],
+      knnData: [249, 197, 0]
     },
     green: {
       rgb: [143, 194, 63],
       knnData: [143, 194, 63]
     },
+    darkGreen: {
+      rgb: [34, 151, 109],
+      knnData: [34, 151, 109]
+    },
     blue: {
-      rgb: [94, 121, 188],
-      knnData: [94, 121, 188]
+      rgb: [92, 144, 222],
+      knnData: [92, 144, 222]
+    },
+    darkBlue: {
+      rgb: [96, 94, 188],
+      knnData: [96, 94, 188]
     },
     red: {
       rgb: [227, 72, 44],
       knnData: [227, 72, 44]
     },
+    darkRed: {
+      rgb: [217, 65, 98],
+      knnData: [217, 65, 98]
+    },
     orange: {
       rgb: [248, 151, 36],
       knnData: [248, 151, 36],
-      exclusions: [AppMode.FishShort]
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
+    },
+    darkOrange: {
+      rgb: [251, 123, 96],
+      knnData: [251, 123, 96],
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     purple: {
-      rgb: [187, 115, 188],
-      knnData: [187, 115, 188],
-      exclusions: [AppMode.FishShort]
+      rgb: [199, 119, 181],
+      knnData: [199, 119, 181],
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
+    },
+    darkPurple: {
+      rgb: [168, 87, 181],
+      knnData: [168, 87, 181],
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     pink: {
-      rgb: [238, 142, 180],
-      knnData: [238, 142, 180],
-      exclusions: [AppMode.FishShort]
+      rgb: [255, 153, 220],
+      knnData: [255, 153, 220],
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
+    },
+    darkPink: {
+      rgb: [255, 109, 172],
+      knnData: [255, 109, 172],
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     }
   }
 };
