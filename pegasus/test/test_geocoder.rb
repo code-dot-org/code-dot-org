@@ -48,4 +48,8 @@ class GeocoderTest < Minitest::Test
     assert_equal original_configuration, Geocoder::Configuration.instance
     assert_equal [], Geocoder::Configuration.instance.data[:always_raise]
   end
+
+  def test_saucelabs_override
+    assert_equal 'US', Geocoder.search('66.85.52.120').first.country_code
+  end
 end
