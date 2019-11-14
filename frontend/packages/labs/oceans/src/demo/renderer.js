@@ -48,7 +48,7 @@ export const initRenderer = () => {
 // Render a single frame of the scene.
 // Sometimes performs special rendering actions, such as when mode has changed.
 export const render = () => {
-  const state = getState();
+  let state = getState();
 
   if (state.currentMode !== prevState.currentMode) {
     canvasCache.clearCache();
@@ -59,12 +59,12 @@ export const render = () => {
     currentPredictedClassId = null;
     currentRawXOffset = null;
     lastRawXOffset = null;
-    setState({lastPauseTime: 0, lastStartTime: null});
+    state = setState({lastPauseTime: 0, lastStartTime: null});
 
     if (state.currentMode === Modes.Training) {
-      setState({moveTime: constants.defaultMoveTime / 2});
+      state = setState({moveTime: constants.defaultMoveTime / 2});
     } else {
-      setState({moveTime: constants.defaultMoveTime});
+      state = setState({moveTime: constants.defaultMoveTime});
     }
 
     if (state.currentMode === Modes.Predicting) {
@@ -80,6 +80,10 @@ export const render = () => {
       state.isRunning !== prevState.isRunning)
   ) {
     currentRawXOffset = lastRawXOffset;
+  }
+
+  if (state.isRunning && !state.lastStartTime) {
+    state = setState({lastStartTime: $time()});
   }
 
   clearCanvas(state.canvas);
@@ -247,7 +251,7 @@ const getYForFish = (numFish, fishIdx, state, offsetX, predictedClassId) => {
 };
 
 const drawMovingFish = state => {
-  const runtime = currentRunTime(state);
+  const runtime = currentRunTime(state, state.currentMode === Modes.Training);
   let t = currentRawXOffset ? 0 : state.lastPauseTime;
   t += state.rewind ? -runtime : runtime;
 

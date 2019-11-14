@@ -145,15 +145,13 @@ export const generateColorPalette = (colors, bodyIndex = null) => {
   };
 };
 
-export const currentRunTime = state => {
+// If the app is running, returns the amount of time that has passed since state.lastStartTime.
+// If the app is not currently running, 0 is returned.
+export const currentRunTime = (state, clampTime = false) => {
   let t = 0;
   if (state.isRunning) {
-    if (!state.lastStartTime) {
-      state = setState({lastStartTime: $time()});
-    }
-
     t = $time() - state.lastStartTime;
-    if (state.currentMode === Modes.Training && t > state.moveTime) {
+    if (clampTime && t > state.moveTime) {
       t = state.moveTime;
     }
   }
@@ -161,6 +159,8 @@ export const currentRunTime = state => {
   return t;
 };
 
+// Sets the necessary state to stop fish movement at any time, t.
+// Pausing is optional, but defaults to true.
 export const finishMovement = (t, pause = true) => {
   setState({
     isRunning: false,
