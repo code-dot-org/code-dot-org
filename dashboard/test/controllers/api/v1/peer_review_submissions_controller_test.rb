@@ -351,6 +351,73 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     end
   end
 
+  test 'Peer Review report can have empty first submission date and latest submission date' do
+    sign_out @plc_reviewer
+
+    # Create a one-level peer review module
+    course_unit = create :plc_course_unit
+    level = create :free_response, peer_reviewable: true
+    script_level = create :script_level, script: course_unit.script, levels: [level]
+    learning_module = create :plc_learning_module, plc_course_unit: course_unit, stage: script_level.stage
+
+    # Create a PD'd teacher and an instructor
+    learner = create :teacher
+    instructor = create :plc_reviewer
+
+    # Assign the learner to the peer review module
+    # (Whoa let's simplify this in the future...)
+    create(
+      :plc_enrollment_module_assignment,
+      user: learner,
+      plc_learning_module: learning_module,
+      plc_enrollment_unit_assignment: create(
+        :plc_enrollment_unit_assignment,
+        user: learner,
+        plc_course_unit: course_unit,
+        plc_user_course_enrollment: create(
+          :plc_user_course_enrollment,
+          user: learner,
+          plc_course: course_unit.plc_course
+        )
+      )
+    )
+
+    # Learner saves their answer (creating a UserLevel) but does not *submit* it,
+    # so no Peer Reviews are created.
+    first_answer = create :level_source, level: level
+    create :user_level,
+      user: learner,
+      level: level,
+      level_source: first_answer,
+      script: course_unit.script,
+      submitted: false,
+      best_result: ActivityConstants::UNREVIEWED_SUBMISSION_RESULT
+
+    # Setup check: We have a UserLevel but no peer reviews for this submission
+    assert_equal 0, PeerReview.where(level_source: first_answer).count
+
+    # Jump forward one more day for good measure
+    Timecop.travel 1.day
+
+    # Finally, the thing we wanted to test:
+    # Generate CSV as the instructor
+    sign_in instructor
+    get :report_csv, params: {plc_course_unit_id: course_unit.id}
+    assert_response :success
+    response = CSV.parse(@response.body)
+
+    # Check that the relevant columns are where we expect them to be
+    assert_equal "#{level.name.titleize} First Submit Date", response[0][3]
+    assert_equal "#{level.name.titleize} Latest Submit Date", response[0][4]
+
+    # Check that our test submission is still included (a header row and one data row)
+    assert_equal 2, response.count
+
+    # Check columns for correct dates
+    assert_equal '', response[1][3]
+    assert_equal '', response[1][4]
+  end
+
   test 'Peer Review report returns expected columns' do
     common_scenario
     create :peer_review, reviewer: @submitter, script: @course_unit.script
