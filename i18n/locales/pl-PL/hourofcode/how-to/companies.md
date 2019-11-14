@@ -1,5 +1,5 @@
 ---
-title: Jak poprowadzić Godzinę Kodowania - firmy
+title: Jak przeprowadzić Godzinę Kodowania - Firmy
 ---
 
 {{ signup_button }}
@@ -12,30 +12,30 @@ title: Jak poprowadzić Godzinę Kodowania - firmy
 
 ## Skontaktuj się z lokalnymi klasami, by na ochotnika poprowadzić Godzinę Kodowania
 
-Code.org offers the opportunity for your employees to [connect]({{ urls/volunteer }}) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
+Code.org umożliwia Twoim pracownikom [przyłączenie się]({{ urls/volunteer }}) do lokalnych klas uczestniczących w Godzinie Kodowania, by podzielić się swoimi doświadczeniami zawodowymi i zainspirować uczniów do nauki informatyki.
 
-[<button>Sign up to volunteer!</button>]({{ urls/volunteer }}) <br /> <br />
+[<button>Zarejestruj się jako ochotnik!</button>]({{ urls/volunteer }}) <br /> <br />
 
-For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
+Więcej wskazówek dotyczących udziału pracowników w zajęciach lekcyjnych znajdziesz w naszym [Przewodniku dla partnerów korporacyjnych]({{ localized_files/hoc_corporate_toolkit }}).
 
-## Firmy mogą wspomóc Godzinę Kodowania dodatkowo
+## Dodatkowe wsparcie Godziny Kodowania przez firmy
 
-- Ask your CEO to [send a company-wide email]({{ promote/sample_emails }}) emphasizing the importance of computer science and encouraging employees to spread the word.
-- Host an Hour of Code Happy Hour with coworkers to try the [activities]({{ urls/learn }}).
+- Poproś swojego CEO, aby [ rozesłał w firmie mail ]({{ promote/sample_emails }}), podkreślający znaczenie informatyki i zachęcający pracowników, aby to rozpowszechniali.
+- Bądź gospodarzem radosnej Godziny Kodowania ze współpracownikami, aby spróbowali [tych aktywności ]({{ urls/learn }}).
 - Zorganizuj wydarzenie Godziny Kodowania dla lokalnej klasy uczniów lub dla partnerów niekomercyjnych w biurze Twojej firmy. Zobacz poniżej poradnik, jak to zrobić.
 
 # Jak zorganizować Godzinę Kodowania dla uczniów
 
 ## 1. Promuj swoją Godzinę Kodowania
 
-- Promote your [Hour of Code]({{ urls/promote }}) event and encourage others to host.
-- Zachęć programistów w swojej firmie do odwiedzenia lokalnej klasy, aby pomogli w poprowadzeniu Godziny Kodowania i zainspirowali uczniów do studiowania informatyki. They can [sign up]({{ urls/volunteer_engineer }}) to be connected with a classroom.
+- Promuj swoją [Godzinę Kodowania]({{ urls/promote }}) i zachęć innych do jej zorganizowania.
+- Zachęć programistów w swojej firmie do odwiedzenia lokalnej klasy, aby pomogli w poprowadzeniu Godziny Kodowania i zainspirowali uczniów do studiowania informatyki. Mogą się [zarejestrować]({{ urls/volunteer_engineer }}), by być w kontakcie z klasą.
 
 ## 2. Obejrzyj ten film instruktażowy <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 3. Wybierz aktywność
 
-We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participants of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+Oferujemy różnorodne [ zabawne samouczki na godzinę]({{ urls/learn }}) dla uczestników w każdym wieku, utworzone przez różnych partnerów. [ Wypróbuj je! ]({{ urls/learn }})
 
 **Wszystkie aktywności Godziny Kodowania** wymagają niewielkiego czasu na przygotowanie i są samo objaśniające się - umożliwiając uczestnikom pracę we własnym tempie i na własnym poziomie przygotowania.
 
@@ -75,7 +75,7 @@ Rozpocznij Godzinę Kodowania inspirując uczestników i dyskutując, jaki jest 
 
 **Poleć uczestnikom tę aktywność**
 
-- Write the activity link on a whiteboard. Find the link listed on the [information for your selected activity]({{ urls/learn }}) under the number of participants.
+- Napisz link do samouczka na tablicy. Znajdź link wymieniony w [informacji dla Twojej wybranej aktywności]({{ urls/learn }}) pod liczbą uczestników.
 - Dla młodszych uczniów, załaduj stronę samouczka wcześniej lub zapisz ją jako zakładkę.
 
 **Oto, co można powiedzieć, kiedy Twoi uczniowie napotkają trudności:**
@@ -90,8 +90,8 @@ Rozpocznij Godzinę Kodowania inspirując uczestników i dyskutując, jaki jest 
 
 ## 7. Świętuj
 
-- [Print certificates]({{ urls/certificates }}) for participants and students.
-- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers.
+- [Wydrukuj certyfikaty]({{ urls/certificates }}) dla uczestników i uczniów.
+- [Wydrukuj naklejki "I did an Hour of Code!"]({{ promote/resources_stickers }}) dla swoich uczniów.
 - [Zamów specjalne koszulki](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) dla Twoich pracowników.
 - Udostępnij w mediach społecznościowych zdjęcia i wideo ze swojej Godziny Kodowania. Użyj #HourOfCode i @codeorg, byśmy również mogli wyróżnić Twój sukces!
 
