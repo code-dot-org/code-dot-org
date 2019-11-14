@@ -109,8 +109,6 @@ vi-VN:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Khối mới!
         dance_callout_11_b: Khối mới!
-      Dance_2019_01:
-        dance_callout_01: Thêm khối này vào chương trình của bạn!
       Dance_2019_04:
         dance_callout_02: Thêm khối này vào chương trình của bạn!
       Dance_2019_06:
@@ -118,7 +116,8 @@ vi-VN:
       Dance_2019_07:
         setprop_hint: Khối mới!
       Dance_2019_09:
-        new_block_1: Khối mới!
+        new_block_3: Khối mới!
+        new_block_4: Khối mới!
       Dance_Party_01:
         dance_callout_01: Thêm khối này vào chương trình của bạn!
       Dance_Party_02:
