@@ -795,13 +795,13 @@ async function initDataTab(levelOptions) {
           Applab.storage.addCurrentTableToProject(
             table,
             () => console.log('success'),
-            err => console.log(err)
+            outputError
           );
         } else {
           Applab.storage.copyStaticTable(
             table,
             () => console.log('success'),
-            err => console.log(err)
+            outputError
           );
         }
       });
