@@ -527,16 +527,12 @@ class User < ActiveRecord::Base
     return unless admin
 
     if authentication_options.count != 1
-      errors.add(:admin, 'must have only 1 oauth...')
+      errors.add(:admin, 'must have only one authentication option')
       return
     end
 
-    unless authentication_options.all?(&:google_oauth2?)
-      errors.add(:admin, 'authentication option is not google oauth')
-    end
-
-    unless authentication_options.all?(&:codeorg_email?)
-      errors.add(:admin, 'email domain in google oauth is not code.org')
+    unless authentication_options.all? {|ao| ao.google_oauth2? && ao.codeorg_email?}
+      errors.add(:admin, 'must be a code.org account with only google oauth')
     end
   end
 
