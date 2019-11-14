@@ -28,7 +28,7 @@ let prevState = {};
 let currentModeStartTime = $time();
 let canvasCache;
 let botImages = {};
-let botVelocity = 3;
+let botVelocity = 10;
 let botY, botYDestination;
 let currentPredictedClassId;
 let currentRawXOffset, lastRawXOffset;
