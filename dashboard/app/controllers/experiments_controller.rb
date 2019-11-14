@@ -22,7 +22,7 @@ class ExperimentsController < ApplicationController
     redirect_to '/', flash: {notice: "You have successfully joined the experiment '#{params[:experiment_name]}'."}
   end
 
-  VALID_EXPERIMENTS = ['2018-teacher-experience', 'csd-piloters']
+  VALID_EXPERIMENTS = ['2018-teacher-experience'] + Experiment::PILOT_EXPERIMENTS.collect {|p| p[:name] if p[:allow_joining_via_url]}.compact
 
   # GET /experiments/set_single_user_experiment/:experiment_name
   def set_single_user_experiment
