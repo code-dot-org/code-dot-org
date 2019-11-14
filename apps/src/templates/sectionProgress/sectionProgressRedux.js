@@ -1,5 +1,5 @@
 import {
-  getLevelProgress,
+  getLevelResult,
   levelsByLesson
 } from '@cdo/apps/code-studio/progressRedux';
 import {processedLevel} from '@cdo/apps/templates/progress/progressHelpers';
@@ -23,6 +23,8 @@ const ADD_STUDENT_LEVEL_PAIRING = 'sectionProgress/ADD_STUDENT_LEVEL_PAIRING';
 const START_LOADING_PROGRESS = 'sectionProgress/START_LOADING_PROGRESS';
 const FINISH_LOADING_PROGRESS = 'sectionProgress/FINISH_LOADING_PROGRESS';
 const ADD_LEVELS_BY_LESSON = 'sectionProgress/ADD_LEVELS_BY_LESSON';
+const ADD_STUDENT_LEVEL_TIME_SPENT =
+  'sectionProgress/ADD_STUDENT_LEVEL_TIME_SPENT';
 
 // Action creators
 export const startLoadingProgress = () => ({type: START_LOADING_PROGRESS});
@@ -53,6 +55,12 @@ export const addStudentLevelProgress = (scriptId, studentLevelProgress) => ({
   scriptId,
   studentLevelProgress
 });
+export const addStudentLevelTimeSpent = (scriptId, studentLevelTimeSpent) => ({
+  type: ADD_STUDENT_LEVEL_TIME_SPENT,
+  scriptId,
+  studentLevelTimeSpent
+});
+
 export const addStudentLevelPairing = (scriptId, studentLevelPairing) => {
   const data = studentLevelPairing;
   const isValid = Object.keys(data).every(userId =>
@@ -157,7 +165,8 @@ const initialState = {
   studentLevelPairingByScript: {},
   levelsByLessonByScript: {},
   lessonOfInterest: INITIAL_LESSON_OF_INTEREST,
-  isLoadingProgress: true
+  isLoadingProgress: true,
+  studentLevelTimeSpentByScript: {}
 };
 
 export default function sectionProgress(state = initialState, action) {
@@ -242,6 +251,19 @@ export default function sectionProgress(state = initialState, action) {
     };
   }
 
+  if (action.type === ADD_STUDENT_LEVEL_TIME_SPENT) {
+    return {
+      ...state,
+      studentLevelTimeSpentByScript: {
+        ...state.studentLevelTimeSpentByScript,
+        [action.scriptId]: {
+          ...state.studentLevelTimeSpentByScript[action.scriptId],
+          ...action.studentLevelTimeSpent
+        }
+      }
+    };
+  }
+
   return state;
 }
 
@@ -250,10 +272,21 @@ export default function sectionProgress(state = initialState, action) {
 /**
  * Retrieves the progress for the section in the selected script
  * @returns {studentLevelProgressPropType} keys are student ids, values are
- * objects of {levelIds: {status: LevelStatus, timeSpent: time}}
+ * objects of {levelIds: LevelStatus}
  */
 export const getCurrentProgress = state => {
   return state.sectionProgress.studentLevelProgressByScript[
+    state.scriptSelection.scriptId
+  ];
+};
+
+/**
+ * Retrieves the data on time spent on levels for the section in the selected script
+ * @returns {studentLevelProgressPropType} keys are student ids, values are
+ * objects of {levelIds: timeSpent}
+ */
+export const getCurrentTimeSpent = state => {
+  return state.sectionProgress.studentLevelTimeSpentByScript[
     state.scriptSelection.scriptId
   ];
 };
@@ -375,6 +408,12 @@ export const loadScript = scriptId => {
             )
           );
           dispatch(
+            addStudentLevelTimeSpent(
+              scriptId,
+              getStudentLevelTimeSpent(dataByStudent)
+            )
+          );
+          dispatch(
             addStudentLevelPairing(scriptId, getStudentPairing(dataByStudent))
           );
         });
@@ -395,7 +434,11 @@ export function getStudentPairing(dataByStudent) {
 }
 
 export function getStudentLevelResult(dataByStudent) {
-  return getInfoByStudentByLevel(dataByStudent, getLevelProgress);
+  return getInfoByStudentByLevel(dataByStudent, getLevelResult);
+}
+
+export function getStudentLevelTimeSpent(dataByStudent) {
+  return getInfoByStudentByLevel(dataByStudent, level => level.time_spent);
 }
 
 function getInfoByStudentByLevel(dataByStudent, infoFromLevelData) {

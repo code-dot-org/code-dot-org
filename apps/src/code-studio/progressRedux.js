@@ -249,19 +249,12 @@ function bestResultLevelId(levelIds, progressData) {
   return bestId;
 }
 
-export const getLevelProgress = level => {
-  return {
-    status: getLevelResult(level),
-    timeSpent: level.time_spent
-  };
-};
-
 /**
  * Given a level that we get from the server using either /api/user_progress or
  * /dashboardapi/section_level_progress, extracts the result, appropriately
  * discerning a locked/submitted result for certain levels.
  */
-const getLevelResult = level => {
+export const getLevelResult = level => {
   if (level.status === LevelStatus.locked) {
     return TestResults.LOCKED_RESULT;
   }
@@ -352,7 +345,7 @@ const userProgressFromServer = (state, dispatch, userId = null) => {
 
     // Merge progress from server
     if (data.levels) {
-      const levelProgress = _.mapValues(data.levels, getLevelProgress);
+      const levelProgress = _.mapValues(data.levels, getLevelResult);
       dispatch(mergeProgress(levelProgress));
 
       if (data.peerReviewsPerformed) {
@@ -541,9 +534,6 @@ const levelWithStatus = (
   return {
     ...processedLevel(level),
     status: statusForLevel(level, levelProgress),
-    timeSpent: levelProgress[level.activeId]
-      ? levelProgress[level.activeId].timeSpent
-      : undefined,
     isCurrentLevel: isCurrentLevel(currentLevelId, level),
     paired: levelPairing[level.activeId],
     readonlyAnswers: level.readonly_answers
@@ -601,7 +591,7 @@ export const getPercentPerfect = levels => {
  * the status for that level.
  * @param {object} level - Level object from state.stages.levels
  * @param {object<number, TestResult>} levelProgress - Mapping from levelId to
- *   object containing testResult and timeSpent
+ *   TestResult
  */
 export function statusForLevel(level, levelProgress) {
   // Peer Reviews use a level object to track their state, but have some subtle
@@ -622,15 +612,10 @@ export function statusForLevel(level, levelProgress) {
   // Worth noting that in the majority of cases, ids will be a single
   // id here
   const id = level.uid || bestResultLevelId(level.ids, levelProgress);
-  const levelStatus = levelProgress[id] ? levelProgress[id].status : null;
-  let status = activityCssClass(levelStatus);
+  let status = activityCssClass(levelProgress[id]);
   if (
     level.uid &&
-    level.ids.every(id =>
-      levelProgress[id]
-        ? levelProgress[id].status === TestResults.LOCKED_RESULT
-        : false
-    )
+    level.ids.every(id => levelProgress[id] === TestResults.LOCKED_RESULT)
   ) {
     status = LevelStatus.locked;
   }
