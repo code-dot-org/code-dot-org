@@ -14,6 +14,7 @@ import DisabledBubblesAlert from './DisabledBubblesAlert';
 import {getStore} from './redux';
 import {setViewType, ViewType} from './viewAsRedux';
 import {getHiddenStages, initializeHiddenScripts} from './hiddenStageRedux';
+import {TestResults} from '@cdo/apps/constants';
 import {
   initProgress,
   mergeProgress,
@@ -31,7 +32,6 @@ import {
   pageTypes
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {queryLockStatus, renderTeacherPanel} from './teacherPanelHelpers';
-import {TestResults} from '@cdo/apps/constants';
 
 var progress = module.exports;
 
