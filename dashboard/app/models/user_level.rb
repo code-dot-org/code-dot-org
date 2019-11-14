@@ -111,6 +111,10 @@ class UserLevel < ActiveRecord::Base
   end
 
   def csf_validated?
+    puts "csf?"
+    puts Script.get_from_cache(script_id).csf?
+    puts "validated?"
+    puts Script.cache_find_level(level_id).validated?
     Script.get_from_cache(script_id).csf? && Script.cache_find_level(level_id).validated?
   end
 

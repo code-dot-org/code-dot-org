@@ -46,7 +46,7 @@ export default class StageExtras extends React.Component {
 
     return (
       <div>
-        {showStageExtrasWarning && <StageExtrasNotification />}
+        {showStageExtrasWarning && sectionId && <StageExtrasNotification />}
 
         <h1>{msg.extrasStageNumberCompleted({number: stageNumber})}</h1>
 
