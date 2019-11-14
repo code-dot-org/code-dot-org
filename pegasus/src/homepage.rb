@@ -434,7 +434,7 @@ class Homepage
       "Carly Rae Jepsen", "Ciara", "Coldplay", "Ed Sheeran", "Imagine Dragons",
       "J Balvin and Willy William", "Justin Bieber", "Keith Urban", "Lady Gaga",
       "Los del Río", "Madonna", "Mark Ronson (ft. Bruno Mars)", "MC Hammer",
-      "Miley Cyrus", "Selena Gomez", "The Weeknd", "Yoland Be Cool"
+      "Miley Cyrus", "Selena Gomez", "The Weeknd", "Yolanda Be Cool"
     ]
     DCDO.get("hoc2018_dance_stars", stars)
   end
