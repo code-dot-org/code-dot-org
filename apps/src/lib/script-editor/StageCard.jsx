@@ -79,14 +79,14 @@ export class UnconnectedStageCard extends Component {
     currentPositions: [],
     drag: null,
     dragHeight: null,
-    initialPageY: null,
+    initialClientY: null,
     initialScroll: null,
     newPosition: null,
     startingPositions: null,
     editingFlexCategory: false
   };
 
-  handleDragStart = (position, {pageY}) => {
+  handleDragStart = (position, {clientY}) => {
     const startingPositions = this.props.stage.levels.map(level => {
       const metrics = this.metrics[level.position];
       return metrics.top + metrics.height / 2;
@@ -94,7 +94,7 @@ export class UnconnectedStageCard extends Component {
     this.setState({
       drag: position,
       dragHeight: this.metrics[position].height + levelTokenMargin,
-      initialPageY: pageY,
+      initialClientY: clientY,
       initialScroll: document.body.scrollTop,
       newPosition: position,
       startingPositions
@@ -104,10 +104,9 @@ export class UnconnectedStageCard extends Component {
     window.addEventListener('mouseup', this.handleDragStop);
   };
 
-  handleDrag = ({pageY, y}) => {
-    const scrollDelta = document.body.scrollTop - this.state.initialScroll;
-    const delta = pageY - this.state.initialPageY;
-    const dragPosition = this.metrics[this.state.drag].top + scrollDelta;
+  handleDrag = ({clientY}) => {
+    const delta = clientY - this.state.initialClientY;
+    const dragPosition = this.metrics[this.state.drag].top;
     let newPosition = this.state.drag;
     const currentPositions = this.state.startingPositions.map(
       (midpoint, index) => {
@@ -130,7 +129,7 @@ export class UnconnectedStageCard extends Component {
       }
     );
     this.setState({currentPositions, newPosition});
-    const targetStagePos = this.getTargetStage(y);
+    const targetStagePos = this.getTargetStage(clientY);
     this.props.setTargetStage(targetStagePos);
   };
 
