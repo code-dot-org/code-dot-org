@@ -57,6 +57,8 @@ export const render = () => {
     botY = null;
     botYDestination = null;
     currentPredictedClassId = null;
+    currentRawXOffset = null;
+    lastRawXOffset = null;
     setState({lastPauseTime: 0, lastStartTime: null});
 
     if (state.currentMode === Modes.Training) {
