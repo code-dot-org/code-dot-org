@@ -7623,11 +7623,11 @@ ar:
   tutorial_duckrace_string_detail_programming_languages: مربعات برمجية
   tutorial_allcancodeapps_string_detail_programming_languages: مربعات برمجية
   tutorial_n2y_string_detail_programming_languages: ''
-  tutorial_scratchimagine_name: Imagine a World
+  tutorial_scratchimagine_name: تخيل عالما
   tutorial_codesterspsa_name: 'Codesters: Code Your Own PSA'
-  tutorial_googlehero_name: Code Your Hero
+  tutorial_googlehero_name: برمج بطلك
   tutorial_codestersbball_name: 'Codesters: Basketball'
-  tutorial_scratchcartoon_name: Code a Cartoon
+  tutorial_scratchcartoon_name: برمج رسوما متحركة
   tutorial_codemonkeyjr_name: 'CodeMonkey Jr.: Pre-coding for Preschoolers'
   tutorial_bananatales_name: 'Banana Tales: Python Coding Game'
   tutorial_scratchtales_name: Talking Tales
@@ -7636,7 +7636,7 @@ ar:
   tutorial_kodablebeach_name: Beach Cleanup with Kodable
   tutorial_tynkeren_name: Affordable and Clean Energy
   tutorial_tynkerjavapro_name: Responsible Consumption and Production (JavaScript)
-  tutorial_grasshopperhack_name: Hack a Game
+  tutorial_grasshopperhack_name: قرصن لعبة
   tutorial_pbskids_name: PBS KIDS Scratch Jr
   tutorial_nclabdata_name: Data Power!
   tutorial_grasshopperphoto_name: Filter a Photo
@@ -7658,10 +7658,10 @@ ar:
   tutorial_vidcodemap_name: 'Vidcode: Map Your Community'
   tutorial_robotmagicfarm_name: 'FarmBot: Plant with Code'
   tutorial_codehstriangle_name: Triangle Computations with CodeHS
-  tutorial_ttwhitehouse_name: White House
+  tutorial_ttwhitehouse_name: البيت الأبيض
   tutorial_modulo_name: 'Modulo Code: Code E.D.'
   tutorial_codingtown_name: Coding Town
-  tutorial_kanoart_name: Art Playground
+  tutorial_kanoart_name: ملعب الفن
   tutorial_dragonscript_name: 'DragonScript Arena: a Javascript coding game with Dragons'
   tutorial_uwcloud_name: Cloud Constructor
   tutorial_htmlmuffin_name: Master the Web with Muffin the Cat
@@ -7671,7 +7671,7 @@ ar:
   tutorial_rpiscratch_name: Scratch 3.0 phrasebook
   tutorial_ozaria_name: Ozaria by CodeCombat
   tutorial_ttovum_name: Ovum City
-  tutorial_ttpassage_name: The Passage
+  tutorial_ttpassage_name: المقطع
   tutorial_tynkerhtmlen_name: Affordable and Clean Energy (HTML)
   tutorial_ttfrog_name: Frog Squash
   tutorial_codemojijava_name: Learn Basic Java
@@ -7689,11 +7689,11 @@ ar:
   tutorial_spherobaby_name: Sphero Baby Steps
   tutorial_toxarchitect_name: Utopian Architect
   tutorial_idodge_name: Ice Cream Dodge
-  tutorial_firiacodebot_name: Intro to Python with CodeBot
+  tutorial_firiacodebot_name: مقدمة لبايتون بواسطة CodeBot
   tutorial_modlighthouse_name: Lighthouse Design Challenge with Cubelets
   tutorial_spherogreen_name: Sphero Goes Green
   tutorial_ozopopstar_name: PopStar|Creating Functions With OzoBlockly
-  tutorial_eddesign_name: Edison the designer
+  tutorial_eddesign_name: المصمم Edison
   tutorial_edshapeup_name: Robot shape-up with Edison
   tutorial_ozocolor_name: Pop Star|Creating Functions With Ozobot Color Codes
   tutorial_kcjanimals_name: About a Canadian Animal
@@ -7705,7 +7705,7 @@ ar:
   tutorial_microbit14_name: 'micro:bit: coding towards Global Goal 14, Life Below
     Water'
   tutorial_barobomoon_name: Moon Base SOS with Arduino
-  tutorial_eddog_name: Code a guard dog with Edison
+  tutorial_eddog_name: برمج كلب حراسة بواسطة Edison
   tutorial_microbit15_name: 'micro:bit: coding towards Global Goal 15, Life on Land'
   tutorial_unity_name: 'Unity Game Development Creator Kit: Beginner Code'
   tutorial_blockscadtarget_name: Transformation Target Practice

@@ -17,7 +17,7 @@ stage 'Representing Information'
 level 'CSP U1L2 SFLP 20-21', progression: 'Lesson Overview'
 level 'U1L3 CFU Sending Complex Messages', progression: 'Check For Understanding', assessment: true
 
-stage 'AB Patterns'
+stage 'Circle Square Patterns'
 level 'CSP U1L4 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP U1L4 CYU3', progression: 'Check For Understanding', assessment: true
 

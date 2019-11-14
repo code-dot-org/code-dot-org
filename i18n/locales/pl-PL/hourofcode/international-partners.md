@@ -1,5 +1,5 @@
 ---
-title: Contact International Partners
+title: Kontaktuj się z Międzynarodowymi Partnerami
 ---
 
 <style>
@@ -10,7 +10,7 @@ title: Contact International Partners
 
 {{ signup_button }}
 
-# Contact International Partners
+# Kontaktuj się z Międzynarodowymi Partnerami
 
 Code.org works with many organizations around the world to make the Hour of Code a truly international movement. Did you know that in 2017, 60% of all Hour of Code events occurred outside of the U.S.?
 

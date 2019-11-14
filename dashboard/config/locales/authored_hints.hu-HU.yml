@@ -292,11 +292,6 @@ hu-HU:
           -   6 ütem után a táncosodnak másfajta táncot kell járnia, mint amit 4 ütem után járt.
 
           _A szint 12 ütem után ér véget._
-      Dance_2019_07:
-        challenges: |-
-          **Választható feladat**
-
-          -   Kísérletezz más tulajdonságok (szélesség, magasság, forgás stb.) módosításával
       Dance_Party_01:
         validation: |-
           **Hogyan csinálhatom meg ezt a szintet?**

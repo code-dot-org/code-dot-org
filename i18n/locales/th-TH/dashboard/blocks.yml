@@ -729,6 +729,12 @@ th:
             '"bass"': เสียงต่ำ
             '"mid"': เสียงกลาง
             '"treble"': เสียงสูง
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"hearts_colorful"': หัวใจ
+            '"diamond"': เพชร
+            '"x"': x
       Dancelab_whenKey:
         text: เมื่อ {KEY} ถูกกด
         options:
