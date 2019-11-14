@@ -114,6 +114,10 @@ a:hover {
   white-space: nowrap;
 }
 
+.sponsor-logo-image {
+  margin-top: -5px;
+}
+
 @media screen and (min-width: 0px) and (max-width: 512px) {
   .sponsor-logo-with-text {
     flex-direction: column;
