@@ -31,7 +31,7 @@ let botImages = {};
 let botVelocity = 3;
 let botY, botYDestination;
 let currentPredictedClassId;
-let xOffset, lastAmount;
+let currentRawXOffset, lastRawXOffset;
 
 export const initRenderer = () => {
   canvasCache = new CanvasCache();
@@ -77,7 +77,7 @@ export const render = () => {
       state.rewind !== prevState.rewind ||
       state.isRunning !== prevState.isRunning)
   ) {
-    xOffset = lastAmount;
+    currentRawXOffset = lastRawXOffset;
   }
 
   clearCanvas(state.canvas);
@@ -182,19 +182,19 @@ const loadAllBotImages = async () => {
   await Promise.all(imagePromises);
 };
 
-const getAmountForTime = (state, t, offset = 0, moveTime = null) => {
-  moveTime = moveTime || state.moveTime;
-
+const getRawOffsetForTime = (state, t, offset = 0) => {
   // Normalize the fish movement amount from 0 to 1.
-  let amount = offset + t / moveTime;
+  let amount = offset + t / state.moveTime;
 
   // Apply an S-curve to that amount.
-  return amount - Math.sin(amount * 2 * Math.PI) / (2 * Math.PI);
+  amount -= Math.sin(amount * 2 * Math.PI) / (2 * Math.PI);
+
+  return amount;
 };
 
 // Calculate the screen's current X offset.
-const getOffsetForTime = (state, t, offset = 0, moveTime = null) => {
-  const amount = getAmountForTime(state, t, offset, moveTime);
+const getOffsetForTime = (state, t, offset = 0) => {
+  const amount = getRawOffsetForTime(state, t, offset);
 
   return (
     constants.fishCanvasWidth * state.fishData.length -
@@ -248,19 +248,11 @@ const getYForFish = (numFish, fishIdx, state, offsetX, predictedClassId) => {
 
 const drawMovingFish = state => {
   const runtime = currentRunTime(state);
-  let t;
-  if (xOffset) {
-    t = state.rewind ? -runtime : runtime;
-  } else {
-    if (state.rewind) {
-      t = state.lastPauseTime - runtime;
-    } else {
-      t = state.lastPauseTime + runtime;
-    }
-  }
+  let t = currentRawXOffset ? 0 : state.lastPauseTime;
+  t += state.rewind ? -runtime : runtime;
 
-  const offsetX = getOffsetForTime(state, t, xOffset);
-  lastAmount = getAmountForTime(state, t, xOffset);
+  const offsetX = getOffsetForTime(state, t, currentRawXOffset);
+  lastRawXOffset = getRawOffsetForTime(state, t, currentRawXOffset);
 
   const maxScreenX =
     state.currentMode === Modes.Training
