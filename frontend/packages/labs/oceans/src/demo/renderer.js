@@ -186,17 +186,15 @@ const loadAllBotImages = async () => {
 
 const getRawOffsetForTime = (state, t, offset = 0) => {
   // Normalize the fish movement amount from 0 to 1.
-  let amount = offset + t / state.moveTime;
-
-  // Apply an S-curve to that amount.
-  amount -= Math.sin(amount * 2 * Math.PI) / (2 * Math.PI);
-
-  return amount;
+  return offset + t / state.moveTime;
 };
 
 // Calculate the screen's current X offset.
 const getOffsetForTime = (state, t, offset = 0) => {
-  const amount = getRawOffsetForTime(state, t, offset);
+  let amount = getRawOffsetForTime(state, t, offset);
+
+  // Apply an S-curve to that amount.
+  amount -= Math.sin(amount * 2 * Math.PI) / (2 * Math.PI);
 
   return (
     constants.fishCanvasWidth * state.fishData.length -
