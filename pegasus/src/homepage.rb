@@ -357,7 +357,10 @@ class Homepage
   def self.get_heroes_arranged(request)
     hero_create = [{text: "homepage_hero_text_stat_students", centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/announcement.jpg"}]
     hero_hoc2019 = [{text: "homepage_hero_text_stat_students", centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2019.jpg"}]
-    hero_dance2019 = [{text: "homepage_hero_text_stat_students", centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2019_dance.jpg"}]
+    hero_dance2019 = [
+      {text: "homepage_hero_text_stat_students", classname: "desktop-feature", centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2019_dance.jpg"},
+      {text: "homepage_hero_text_stat_students", classname: "mobile-feature", centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2019_dance_narrow.jpg"}
+    ]
 
     # Generate a random set of hero images alternating between non-celeb and celeb.
     heroes = get_heroes
@@ -428,14 +431,14 @@ class Homepage
 
   def self.get_dance_stars
     stars = [
-      "Lil Nas X and Billy Ray Cyrus", "Jonas Brothers", "Panic! At the Disco",
+      "Katy Perry", "Lil Nas X and Billy Ray Cyrus", "Jonas Brothers", "Panic! At the Disco",
       "Shawn Mendes", "Nicki Minaj", "Pedro Capó", "Francesco Gabbani", "Sia",
       "A-ha", "Ariana Grande", "Avicii and Aloe Blacc", "Calvin Harris",
       "Carly Rae Jepsen", "Ciara", "Coldplay", "Ed Sheeran", "Imagine Dragons",
       "J Balvin and Willy William", "Justin Bieber", "Keith Urban", "Lady Gaga",
       "Los del Río", "Madonna", "Mark Ronson (ft. Bruno Mars)", "MC Hammer",
-      "Miley Cyrus", "Selena Gomez", "The Weeknd", "Yoland Be Cool"
+      "Miley Cyrus", "Selena Gomez", "The Weeknd", "Yolanda Be Cool"
     ]
-    DCDO.get("hoc2018_dance_stars", stars)
+    DCDO.get("hoc2019_dance_stars", stars)
   end
 end
