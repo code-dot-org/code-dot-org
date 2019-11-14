@@ -2,7 +2,7 @@ import _ from 'lodash';
 import queryString from 'query-string';
 import {FishBodyPart} from '../utils/fishData';
 import {setState} from './state';
-import {Modes} from './constants';
+// import {Modes} from './constants';
 // import underwaterBackground from '../../public/images/underwater-background.png';
 
 export const $time =
