@@ -519,8 +519,10 @@ let Predict = class Predict extends React.Component {
   };
 
   onRun = () => {
-    setState({isRunning: true, runStartTime: $time()});
-    this.setState({displayControls: true});
+    const state = setState({isRunning: true, runStartTime: $time()});
+    if (state.appMode !== AppMode.CreaturesVTrashDemo) {
+      this.setState({displayControls: true});
+    }
   };
 
   onContinue = () => {
