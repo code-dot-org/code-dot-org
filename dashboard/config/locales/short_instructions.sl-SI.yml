@@ -202,7 +202,7 @@ sl-SI:
       MC HOC 2016 New Walk: Raziščimo svet! Premikaj se s smernimi tipkami ter pritisni
         presledek ali tapni na igralno površino, da uporabiš predmete. Uporabi vrata,
         da prideš v hišo.
-      MC HOC 2016 SCORE LEVEL: Nekatere igre hranijo rezultat. Igra se "Ulovi me"
+      MC HOC 2016 SCORE LEVEL: Nekatere igre hranijo rezultat. Igraj se "Ulovi me"
         igro z Železnimi Golemi in uporabi `dodaj 1 rezultatu` blok, da si daš eno
         točko, ko jih uloviš. Doseži 5 točk, da zmagaš!
       MC HOC 2016 Village Test: Oh ne! Zombiji so te ujeli notri! Skodiraj Železnega
@@ -270,6 +270,9 @@ sl-SI:
         je lahko tam temno. Postavi vsaj 2 bakle in izkopaj vsaj 2 premoga.
       Underground Mining Coal_2019: Najbolj dragocene vire boš našel/a pod zemljo,
         vendar je lahko tam temno. Postavi vsaj 2 bakle in izkopaj vsaj 2 premoga.
+      'Widget: Text Compression': Išči vzorce (ponovljene besede ali fraze) v besedilu.
+        Vnesi vzorce, ki jih vidiš, v slovar na desni. Med tipkanjem vnosa v slovar,
+        bo simbol vnosa vnešen v besedilo namesto vzorca.
       bounce_1: K bloku "ko je pritisnjena leva puščica" dodaj nov blok in pritisni
         "Zaženi". Z levo puščico nato premikaj lopar, da boš zadel tarčo.
       bounce_10: Zdaj je na vrhu gol. Dodaj bloke "dosežena točka" in "nasprotnik

@@ -751,6 +751,12 @@ sv:
             '"bass"': bas
             '"mid"': mellan
             '"treble"': diskant
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"hearts_colorful"': Hjärtan
+            '"diamond"': diamant
+            '"x"': x
       Dancelab_whenKey:
         text: när {KEY} är intryckt
         options:

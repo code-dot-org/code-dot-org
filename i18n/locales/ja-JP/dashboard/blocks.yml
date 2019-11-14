@@ -729,6 +729,13 @@ ja:
             '"bass"': ベース
             '"mid"': ミドル
             '"treble"': トレブル
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"hearts_colorful"': ハート
+            '"diamond"': ダイヤモンド
+            '"x"': x
+            '"y"': 'y'
       Dancelab_whenKey:
         text: "{KEY} が押されたとき"
         options:
