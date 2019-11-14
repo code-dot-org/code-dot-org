@@ -522,6 +522,24 @@ class User < ActiveRecord::Base
     authentication_options&.where(credential_type: AuthenticationOption::GOOGLE)
   end
 
+  validate :validate_authentication_option
+  def validate_authentication_option
+    return unless admin
+
+    if authentication_options.count != 1
+      errors.add(:admin, 'must have only 1 oauth...')
+      return
+    end
+
+    unless authentication_options.all?(&:google_oauth2?)
+      errors.add(:admin, 'authentication option is not google oauth')
+    end
+
+    unless authentication_options.all?(&:codeorg_email?)
+      errors.add(:admin, 'email domain in google oauth is not code.org')
+    end
+  end
+
   def fix_by_user_type
     if student?
       self.email = ''
