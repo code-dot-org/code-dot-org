@@ -232,35 +232,13 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
   test 'Peer Review report shows first submission date and latest submission date' do
     sign_out @plc_reviewer
 
+    # Create a PD'd teacher and an instructor
+    learner = create :teacher
+    instructor = create :plc_reviewer
+
+    course_unit, level = create_peer_review_module_for_learner learner
+
     Timecop.freeze do
-      # Create a one-level peer review module
-      course_unit = create :plc_course_unit
-      level = create :free_response, peer_reviewable: true
-      script_level = create :script_level, script: course_unit.script, levels: [level]
-      learning_module = create :plc_learning_module, plc_course_unit: course_unit, stage: script_level.stage
-
-      # Create a PD'd teacher and an instructor
-      learner = create :teacher
-      instructor = create :plc_reviewer
-
-      # Assign the learner to the peer review module
-      # (Whoa let's simplify this in the future...)
-      create(
-        :plc_enrollment_module_assignment,
-        user: learner,
-        plc_learning_module: learning_module,
-        plc_enrollment_unit_assignment: create(
-          :plc_enrollment_unit_assignment,
-          user: learner,
-          plc_course_unit: course_unit,
-          plc_user_course_enrollment: create(
-            :plc_user_course_enrollment,
-            user: learner,
-            plc_course: course_unit.plc_course
-          )
-        )
-      )
-
       # All set up - let's jump forward in time
       Timecop.travel 1.day
 
@@ -354,33 +332,9 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
   test 'Peer Review report can have empty first submission date and latest submission date' do
     sign_out @plc_reviewer
 
-    # Create a one-level peer review module
-    course_unit = create :plc_course_unit
-    level = create :free_response, peer_reviewable: true
-    script_level = create :script_level, script: course_unit.script, levels: [level]
-    learning_module = create :plc_learning_module, plc_course_unit: course_unit, stage: script_level.stage
-
-    # Create a PD'd teacher and an instructor
+    # Set up PD'd teacher
     learner = create :teacher
-    instructor = create :plc_reviewer
-
-    # Assign the learner to the peer review module
-    # (Whoa let's simplify this in the future...)
-    create(
-      :plc_enrollment_module_assignment,
-      user: learner,
-      plc_learning_module: learning_module,
-      plc_enrollment_unit_assignment: create(
-        :plc_enrollment_unit_assignment,
-        user: learner,
-        plc_course_unit: course_unit,
-        plc_user_course_enrollment: create(
-          :plc_user_course_enrollment,
-          user: learner,
-          plc_course: course_unit.plc_course
-        )
-      )
-    )
+    course_unit, level = create_peer_review_module_for_learner learner
 
     # Learner saves their answer (creating a UserLevel) but does not *submit* it,
     # so no Peer Reviews are created.
@@ -396,12 +350,9 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     # Setup check: We have a UserLevel but no peer reviews for this submission
     assert_equal 0, PeerReview.where(level_source: first_answer).count
 
-    # Jump forward one more day for good measure
-    Timecop.travel 1.day
-
     # Finally, the thing we wanted to test:
     # Generate CSV as the instructor
-    sign_in instructor
+    sign_in create(:plc_reviewer)
     get :report_csv, params: {plc_course_unit_id: course_unit.id}
     assert_response :success
     response = CSV.parse(@response.body)
@@ -484,6 +435,34 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
   end
 
   private
+
+  def create_peer_review_module_for_learner(learner)
+    # Create a one-level peer review module
+    course_unit = create :plc_course_unit
+    level = create :free_response, peer_reviewable: true
+    script_level = create :script_level, script: course_unit.script, levels: [level]
+    learning_module = create :plc_learning_module, plc_course_unit: course_unit, stage: script_level.stage
+
+    # Assign the learner to the peer review module
+    # (Whoa let's simplify this in the future...)
+    create(
+      :plc_enrollment_module_assignment,
+      user: learner,
+      plc_learning_module: learning_module,
+      plc_enrollment_unit_assignment: create(
+        :plc_enrollment_unit_assignment,
+        user: learner,
+        plc_course_unit: course_unit,
+        plc_user_course_enrollment: create(
+          :plc_user_course_enrollment,
+          user: learner,
+          plc_course: course_unit.plc_course
+        )
+      )
+    )
+
+    [course_unit, level]
+  end
 
   def create_peer_reviews_for_user_and_level(user, level, course_unit = @course_unit)
     level_source = create :level_source, level: level
