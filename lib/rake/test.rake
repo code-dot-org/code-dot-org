@@ -29,7 +29,7 @@ namespace :test do
         '-d', CDO.site_host('studio.code.org'),
         '-p', CDO.site_host('code.org'),
         '--db', # Ensure features that require database access are run even if the server name isn't "test"
-        '--parallel', '120',
+        '--parallel', '100',
         '--magic_retry',
         '--with-status-page',
         '--fail_fast',
@@ -62,7 +62,7 @@ namespace :test do
         '--magic_retry',
         '--with-status-page',
         '-f', eyes_features.join(","),
-        '--parallel', (eyes_features.count * 2).to_s
+        '--parallel', '45'
       )
       if failed_browser_count == 0
         message = '⊙‿⊙ Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
