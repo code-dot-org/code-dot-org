@@ -13,9 +13,9 @@ function configureStore() {
   );
   store.dispatch(
     mergeProgress({
-      6: 100,
-      7: 100,
-      8: 100
+      6: {status: 100, timeSpent: 1000},
+      7: {status: 100, timeSpent: 1200},
+      8: {status: 100, timeSpent: 1400}
     })
   );
   return store;
