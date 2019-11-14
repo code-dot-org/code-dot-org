@@ -42,7 +42,9 @@ export default class ConfirmHiddenAssignment extends Component {
 
     return (
       <BaseDialog isOpen={true} handleClose={onClose}>
-        <div style={styles.header}>{i18n.unhideAndAssignHeader()}</div>
+        <div style={styles.header} className="uitest-confirm-assignment-dialog">
+          {i18n.unhideAndAssignHeader()}
+        </div>
         <div style={styles.content}>
           {i18n.assignHiddenUnitConfirm({assignmentName, sectionName})}
         </div>

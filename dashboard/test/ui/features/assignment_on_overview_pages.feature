@@ -49,3 +49,21 @@ Feature: (Un)Assign on script and course overview pages
     And check that the URL contains "s/csp1-2017"
     And I wait until element ".uitest-unassign-button" is not visible
     And I wait until element ".uitest-assigned" is visible
+
+  Scenario: Assignment for hidden script shows confirmation dialog
+    And I save the section id from row 0 of the section table
+    When I click selector ".uitest-owned-sections a:contains('Computer Science Principles')" to load a new page
+    Then the url contains the section id
+    And check that the URL contains "courses/csp-2017"
+    And I wait until element ".uitest-CourseScript" is visible
+    And I wait until element ".uitest-unassign-button" is visible
+    And I wait until element ".uitest-assigned" is visible
+    And I press the first ".uitest-unassign-button" element
+    And I press the first ".uitest-togglehidden" element
+    And I press the first ".uitest-go-to-unit-button" element to load a new page
+    And check that the URL contains "s/csp1-2017"
+    And I wait until element ".uitest-assign-button" is visible
+    And I press the first ".uitest-assign-button" element
+    And I wait until element ".uitest-confirm-assignment-dialog" is visible
+    And I wait until element "#confirm-assign" is visible
+    And I press the first "#confirm-assign" element
