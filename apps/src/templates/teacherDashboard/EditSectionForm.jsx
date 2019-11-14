@@ -240,6 +240,7 @@ const SectionNameField = ({value, onChange, disabled}) => (
       onChange={event => onChange(event.target.value)}
       style={style.sectionNameInput}
       disabled={disabled}
+      id="uitest-section-name"
     />
   </div>
 );

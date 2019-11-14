@@ -904,11 +904,6 @@ ro-RO:
           -   După 6 măsuri, dansatorul trebuie să facă alt dans decât cel cel făcut după 4 măsuri.
 
           _Nivelul se termină după 11 măsuri._
-      Dance_2019_07:
-        challenges: |-
-          **Optional Challenge**
-
-          -   Experimentează schimbând alte proprietăţi (lăţimea, înălţimea, rotaţie, etc)
       Dance_Party_01:
         validation: |-
           **Cum trec de acest nivel?**

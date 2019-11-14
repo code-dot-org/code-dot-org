@@ -3,20 +3,44 @@ hi:
   data:
     script:
       category:
+        csd_category_name: CS अन्वेषण ('17-'18)
+        csd_2018_category_name: CS अन्वेषण ('18-'19)
+        csd_2019_category_name: CS अन्वेषण ('19-'20)
         csf_category_name: कंप्यूटर साइंस की बुनियादी बातें
         csf_2018_category_name: CS के मूल सिद्धांत (2018)
+        csf_international_category_name: CS के मूल सिद्धांत अंतर्राष्ट्रीय
+        csf2_draft_category_name: 'विकास अधीन: कोर्स A - F'
+        csp_category_name: "'15-'16 CS के सिद्धांत"
+        csp_2018_category_name: CS के सिद्धांत ('18-'19)
+        csp_2019_category_name: CS के सिद्धांत ('19-'20)
+        cspexams_category_name: CS के सिद्धांत अभ्यास टेस्ट
+        csp17_category_name: CS के सिद्धांत ('17-'18)
         full_course_category_name: Full Courses
         hoc_category_name: आवर ऑफ़ कोड
         math_category_name: गणित
+        research_studies_category_name: शोध अध्ययन
       name:
         course1:
           title: कोर्स 1
+          description: आरंभिक पाठकों के लिए कोर्स 1 से शुरुआत करें। छात्र ऐसे कंप्यूटर
+            प्रोग्राम बनाएंगे, जो उन्हें दूसरों के साथ मिलकर काम करने, सवाल हल करने
+            के कौशलों को विकसित करने और मुश्किल कार्यों में दृढ़ रहने के बारे में
+            सीखने में मदद करेगा। इस कोर्स के अंत में, छात्र अपनी खुद की अनुकूलित गेम
+            या कहानी तैयार करेंगे, जिसे वे साझा कर सकें। ग्रेड्स K-1 के लिए इसकी सिफारिश
+            की गई है।
+          description_short: आरंभिक-पाठकों के लिए कंप्यूटर साइंस का परिचय।
           description_audience: आयु 4-6
           stages:
             'Artist: Loops':
-              name: 'कलाकार: लूप्स'
+              name: 'आर्टिस्ट: लूप्स'
+            'Artist: Sequence':
+              name: 'आर्टिस्ट: अनुक्रम'
+            'Artist: Shapes':
+              name: 'आर्टिस्ट: आकृतियां'
             'Bee: Loops':
               name: 'मधुमक्खी: लूप्स'
+            'Bee: Sequence':
+              name: 'मधुमक्खी: अनुक्रमण'
             Building a Foundation:
               name: नींव का निर्माण करना
             Getting Loopy:
@@ -25,27 +49,45 @@ hi:
               name: सुरक्षित रूप से स्थानों पर जाना
             Happy Maps:
               name: हैप्पी मैप्स
+            'Jigsaw: Learn to drag and drop':
+              name: 'पहेली: खींचना और छोड़ना सीखें'
             'Maze: Debugging':
               name: 'पहेली: डीबगिंग'
             'Maze: Loops':
               name: 'पहेली: लूप्स'
+            'Maze: Sequence':
+              name: 'पहेली: अनुक्रम'
             Move it, Move it:
               name: इसे मूव करें, इसे मूव करें
             'Real-life Algorithms: Plant a Seed':
               name: 'वास्तविक-जीवन की कलन विधियां: पौधा उगाना'
             Spelling Bee:
               name: उच्चारण मधुमक्खी
+            'Studio: Create a Story':
+              name: 'प्ले लैब: कहानी तैयार करें'
             The Big Event:
               name: विशाल इवेंट
         course2:
           title: कोर्स 2
+          description: उन छात्रों के लिए कोर्स 2 से शुरुआत करें, जो पढ़ सकते हैं और
+            जिन्हें पहले कोई प्रोग्रामिंग अनुभव न हो। इस कोर्स में, छात्र सवालों को
+            हल करने और ऐसी संवादात्मक गेम्स या कहानियां विकसित करने के लिए प्रोग्राम
+            बनाएंगे, जिन्हें वे साझा कर सकें। ग्रेड्स 2-5 के लिए इसकी सिफारिश की गई
+            है।
+          description_short: उन छात्रों के लिए कंप्यूटर साइंस का परिचय, जो पढ़ सकते
+            हैं।
+          description_audience: आयु 6+ (रीडिंग आवश्यक है)
           stages:
             'Artist: Debugging':
-              name: 'कलाकार: डीबगिंग'
+              name: कलाकार डीबगिंग
             'Artist: Loops':
-              name: 'कलाकार: लूप्स'
+              name: 'आर्टिस्ट: लूप्स'
+            'Artist: Nested Loops':
+              name: 'आर्टिस्ट: नेस्टड लूप्स'
+            'Artist: Sequence':
+              name: 'आर्टिस्ट: अनुक्रम'
             'Bee: Conditionals':
-              name: 'मधुमक्खी: शर्तें'
+              name: 'मधुमक्खी: कंडिशनल्स'
             'Bee: Debugging':
               name: 'मधुमक्खी: डीबगिंग'
             'Bee: Loops':
@@ -54,28 +96,47 @@ hi:
               name: युग्मक ब्रैस्लेट्स
             Conditionals:
               name: शर्तें
+            Flappy:
+              name: फ्लैपी
             Getting Loopy:
               name: लूपी होना
             Graph Paper Programming:
               name: ग्राफ पेपर प्रोग्रामिंग
             'Maze: Loops':
               name: 'पहेली: लूप्स'
+            'Maze: Sequence':
+              name: 'पहेली: अनुक्रम'
             'Real-life Algorithms: Paper Planes':
               name: 'वास्तविक-जीवन की कलन विधियां: कागज के जहाज'
             Relay programming:
               name: रिले प्रोग्रामिंग
+            'Studio: Create a Story':
+              name: 'प्ले लैब: कहानी तैयार करें'
             The Big Event:
               name: विशाल इवेंट
             Your Digital Footprint:
               name: आपका डिजीटल फुटप्रिंट
         course3:
           title: कोर्स 3
-          description_audience: उम्र 8-18
+          description: कोर्स 3 उन छात्रों के लिए तैयार किया गया है, जो कोर्स 2 कर
+            चुके हैं। छात्र अधिक जटिल सवालों के लचीले समाधान ढूंढने के लिए पिछले कोर्सों
+            में पेश किए गए प्रोग्रामिंग विषयों पर गहन शोध करेंगे। इस कोर्स के अंत
+            में, छात्र संवादात्मक कहानियां और गेम्स बनाएंगे, जिन्हें वे किसी भी व्यक्ति
+            के साथ साझा कर सकते हैं। ग्रेड 4-5 के लिए इसकी सिफारिश की गई है।
+          description_short: गेम्स और संवादात्मक कहानियां तैयार करते समय प्रोग्रामिंग
+            का भी गहन शोध करें। यह कोर्स 2 का फॉलो-अप है।
+          description_audience: आयु 8-18
           stages:
+            Artist:
+              name: आर्टिस्ट
             'Artist: Functions':
               name: 'कलाकार: फंक्शन्स'
+            'Artist: Nested Loops':
+              name: 'आर्टिस्ट: नेस्टड लूप्स'
+            'Artist: Patterns':
+              name: 'आर्टिस्ट: पैटर्न'
             'Bee: Conditionals':
-              name: 'मधुमक्खी: शर्तें'
+              name: 'मधुमक्खी: कंडिशनल्स'
             'Bee: Debugging':
               name: 'मधुमक्खी: डीबगिंग'
             'Bee: Functions':
@@ -92,6 +153,8 @@ hi:
               name: डाइस रेस
             Digital Citizenship:
               name: डिजीटल नागरिकता
+            'Farmer: While Loops':
+              name: 'किसान: व्हाइल लूप्स'
             Functional Suncatchers:
               name: फंक्शनल सनकैचर्स
             Internet:
@@ -99,68 +162,271 @@ hi:
             Maze:
               name: पहेली
             'Maze: Conditionals':
-              name: 'पहेली: शर्तें'
+              name: 'पहेली: कंडिशनल्स'
             Songwriting:
               name: गीत लेखन
             'Studio: Create a Game':
               name: 'प्ले लैब: गेम बनाएं'
+            'Studio: Create a Story':
+              name: 'प्ले लैब: कहानी तैयार करें'
+        playlab:
+          title: प्ले लैब
+          description: प्ले लैब के साथ कहानी तैयार करें या गेम बनाएं!
+          description_short: प्ले लैब के साथ कहानी तैयार करें या गेम बनाएं!
+          stages:
+            Play Lab:
+              name: प्ले लैब
+        artist:
+          title: आर्टिस्ट
+          description: आर्टिस्ट के साथ बढ़िया तस्वीरें खींचें और डिज़ाइन बनाएं!
+          description_short: आर्टिस्ट के साथ बढ़िया तस्वीरें खींचें और डिज़ाइन बनाएं!
+          stages:
+            Artist:
+              name: आर्टिस्ट
         hourofcode:
           title: क्लासिक भूलभुलैया
+          description: एंग्री बर्ड्स, पौधे बनाम ज़ोम्बीज और हिमयुग के स्क्रैट के पात्रों
+            के साथ कंप्यूटर साइंस के मूल सिद्धांत आजमाएं!
+          description_short: कई मज़ेदार पात्रों के साथ कंप्यूटर साइंस के मूल सिद्धांत
+            आजमाएं!
           stages:
             Maze:
               name: पहेली
         frozen:
+          title: ऐना और एल्सा के साथ कूटलेखन
+          description: आइए ऐना और एल्सा के साथ जुड़ें, जब वे बर्फ के जादू और सुंदरता
+            की पड़ताल करती हैं। आप आइस-स्केटिंग करते समय हिम-पक्षी व पैटर्न और सर्दी
+            का परीलोक बनाएंगे, जिसे आप तब अपने दोस्तों के साथ साझा कर सकते हैं।
           description_short: आइए ऐना और एल्सा से जुड़ने के लिए कोड का उपयोग करें,
             जब वे बर्फ के जादू और सुंदरता की पड़ताल करती हैं।
-        course4:
           stages:
+            Artist:
+              name: आर्टिस्ट
+        course4:
+          title: कोर्स 4
+          description: कोर्स 4 उन छात्रों के लिए तैयार किया गया है, जो कोर्स 2 और
+            3 कर चुके हैं। छात्र सीखेंगे कि बढ़ी हुई जटिलता के साथ पहेलियों को कैसे
+            हल करना है क्योंकि वे सीखेंगे कि प्रत्येक चुनौती को हल करते समय कई अवधारणाओं
+            का संयोजन कैसे करना है। इस कोर्स के पूरा होने तक, छात्र ऐसे प्रोग्राम
+            बनाएंगे, जिनसे वे कौशल को प्रदर्शित कर पाएंगे, मापदंडों के साथ फॉर लूप्स
+            और फंक्शन्स सहित। ग्रेड 4-8 के लिए इसकी सिफारिश की गई है।
+          description_short: मापदंडों के साथ फॉर लूप्स और फंक्शन्स जैसी अवधारणाओं
+            के साथ और जटिल प्रोग्राम बनाएं। यह कोर्स 3 का फॉलो-अप है।
+          description_audience: आयु 9-18
+          stages:
+            Artist:
+              name: आर्टिस्ट
+            Artist Binary:
+              name: आर्टिस्ट युग्मक
+            'Artist: For Loops':
+              name: 'आर्टिस्ट: फॉर लूप्स'
             'Artist: Functions':
               name: 'कलाकार: फंक्शन्स'
+            'Artist: Functions with Parameters':
+              name: 'आर्टिस्ट: मापदंडों के साथ फंक्शन'
+            'Artist: Variables':
+              name: 'आर्टिस्ट: वेरिएबल्स'
+            'Bee: For Loops':
+              name: 'मधुमक्खी: फॉर लूप्स'
+            'Bee: Functions with Parameters':
+              name: 'मधुमक्खी: मापदंडों के साथ फंक्शन'
+            Extreme Challenge - Comprehensive:
+              name: तीव्र चुनौती - व्यापक
+            Maze and Bee:
+              name: पहेली और मधुमक्खी
+            'Play Lab: For Loops':
+              name: 'प्ले लैब: फॉर लूप्स'
+            'Play Lab: Functions with Parameters':
+              name: 'प्ले लैब: मापदंडों के साथ फंक्शन'
+            'Play Lab: Variables':
+              name: 'प्ले लैब: वेरिएबल्स'
+            Super Challenge - For Loops:
+              name: सुपर चुनौती - फॉर लूप्स
+            Super Challenge - Functions and Parameters:
+              name: सुपर चुनौती - फंक्शन और मापदंड
+            Super Challenge - Variables:
+              name: सुपर चुनौती - वेरिएबल्स
+            'Unplugged: Binary':
+              name: 'अनप्लग्ड: युग्मक'
+            'Unplugged: Envelope Variables':
+              name: 'अनप्लग्ड: एन्वलोप वेरिएबल्स'
+            'Unplugged: For Loop Fun':
+              name: 'अनप्लग्ड: फॉर लूप फन'
+            'Unplugged: Madlibs':
+              name: 'अनप्लग्ड: Madlibs'
             'Unplugged: Songwriting with Parameters':
               name: 'अनप्लग्ड: मापदंडों के साथ गीत लिखना'
+            'Unplugged: Tangrams':
+              name: 'अनप्लग़्ड: टैन्ग्राम्स'
         Course4pre:
+          title: कोर्स 4 आवश्यक
+          description: उन छात्रों के लिए अवधारणाओं का संक्षिप्त विवरण, जो कोर्स 2
+            और 3 कर चुके हैं।
+          description_short: उन छात्रों के लिए अवधारणाओं का संक्षिप्त विवरण, जो कोर्स
+            2 और 3 कर चुके हैं।
           stages:
             'Artist: Functions':
               name: 'कलाकार: फंक्शन्स'
             'Artist: Loops':
-              name: 'कलाकार: लूप्स'
+              name: 'आर्टिस्ट: लूप्स'
+            'Artist: Nested Loops':
+              name: 'आर्टिस्ट: नेस्टड लूप्स'
+            'Artist: Sequence':
+              name: 'आर्टिस्ट: अनुक्रम'
             'Bee: Conditionals':
-              name: 'मधुमक्खी: शर्तें'
+              name: 'मधुमक्खी: कंडिशनल्स'
             'Bee: Debugging':
               name: 'मधुमक्खी: डीबगिंग'
             'Bee: Nested Loops':
               name: 'मधुमक्खी: नेस्टड लूप्स'
+            'Farmer: While Loops':
+              name: 'किसान: व्हाइल लूप्स'
+            'Maze: Sequence':
+              name: 'पहेली: अनुक्रम'
         usability:
           stages:
             Binary:
               name: युग्मक
             For Loops:
               name: फॉर लूप्स
+            Functions and Functions with Parameters:
+              name: फंक्शन और मापदंडों के साथ फंक्शन
+            Intro:
+              name: परिचय
             Variables:
               name: चर
         algebra:
           stages:
+            'Calc: Defining Variables':
+              name: वेरिएबल्स और प्रतिस्थापन को परिभाषित करना
+            'Calc: Evaluation Blocks':
+              name: मूल्यांकन ब्लॉक्स और गणितीय अभिव्यक्तियां
+            'Eval: Boolean Operators':
+              name: बूलियन ऑपरेटर्स
             'Eval: Conditionals':
               name: शर्तें
+            'Eval: Defining Functions':
+              name: संयुक्त फंक्शन
+            'Eval: Functions':
+              name: डिज़ाइन रेसिपी के साथ शब्द संबंधी सवालों को हल करना
+            'Eval: Strings and Images':
+              name: स्ट्रिंग्स और चित्र
+            'Eval: Writing Contracts':
+              name: कॉन्टरैक्ट्स लिखना
+            'Play Lab: Animation (Big Game)':
+              name: बड़ी गेम - ऐनिमेशन
+            'Play Lab: Boolean (Big Game)':
+              name: बड़ी गेम - बूलियन्स
+            'Play Lab: Booleans':
+              name: सैम द बैट
+            'Play Lab: Collision Detection (Big Game)':
+              name: बड़ी गेम - संघट्टन अभिज्ञान
+            'Play Lab: Defining Functions':
+              name: रॉकेट की ऊंचाई
+            'Play Lab: Defining Variables (Big Game)':
+              name: बड़ी गेम - वेरिएबल्स
+            'Unplugged: Booleans':
+              name: 'अनप्लग्ड: बूलियन्स और तर्क'
+            'Unplugged: Collision Detection and the Distance Formula':
+              name: 'अनप्लग्ड: संघट्टन अभिज्ञान और पाइथागोरस प्रमेय'
+            'Unplugged: Conditionals and Piecewise Functions':
+              name: 'अनप्लग्ड: सापेक्ष और खंडश फंक्शन्स'
+            'Unplugged: Contracts':
+              name: 'अनप्लग्ड: कॉन्टरैक्ट्स, डोमेन और रेंज'
+            'Unplugged: The Design Recipe':
+              name: 'अनप्लग्ड: डिज़ाइन रेसिपी'
+            'Unplugged: Video Games and Coordinate Planes':
+              name: 'अनप्लग्ड: वीडियो गेम्स और कोआर्डीनेट प्लेन्स'
         infinity:
+          title: डिज़्नी इनफिनिटी प्ले लैब
+          description: डिज़्नी इनिफिनिटी के पात्रों की भूमिका में कहानी या गेम तैयार
+            करने के लिए प्ले लैब का उपयोग करें।
+          description_short: डिज़्नी इनिफिनिटी के पात्रों की भूमिका में कहानी या गेम
+            तैयार करने के लिए प्ले लैब का उपयोग करें।
           stages:
             Infinity:
               name: अनंत
         algebrademo:
           stages:
+            Defining Simple Functions:
+              name: साधारण फंक्शन्स को परिभाषित करना
+            Defining Variables:
+              name: वेरिएबल्स को परिभाषित करना
+            Evaluation Blocks:
+              name: मूल्यांकन ब्लॉक्स
+            Making Pictures:
+              name: तस्वीरें बनाना
             The Design Recipe:
               name: डिज़ाइन रेसिपी
         K5PD:
           stages:
+            Computer Science Pedagogy:
+              name: कंप्यूटर साइंस का प्रशिक्षण
+            Introduction to PD:
+              name: PD का परिचय
             K-5 Courses:
               name: K-5 कोर्स
             Next Steps:
               name: अगले चरण
+            'Programming Concept: Conditionals':
+              name: 'प्रोग्रामिंग अवधारणा: सापेक्ष'
+            'Programming Concept: Events':
+              name: 'प्रोग्रामिंग अवधारणा: इवेंट्स'
+            'Programming Concept: Functions':
+              name: 'प्रोग्रामिंग अवधारणा: फंक्शन्स'
+            'Programming Concept: Loops':
+              name: 'प्रोग्रामिंग अवधारणा: लूप्स'
+            Reflection:
+              name: प्रतिबिंब
             Teacher Dashboard:
               name: अध्यापक डैशबोर्ड
+            Unplugged lessons:
+              name: अनप्लग्ड पाठ
+            Writing computer programs:
+              name: कंप्यूटर प्रोग्राम लिखना
         netsim:
           title: इंटरनेट अनुकारक
+          stages:
+            Automatic DNS node:
+              name: ऑटोमैटिक DNS बिंदु
+            Broadcasting messages:
+              name: संदेशों को प्रसारित करना
+            Internet Simulator Freeplay:
+              name: इंटरनेट सिम्युलेटर फ्रीप्ले
+            Manual DNS:
+              name: मैनुअल DNS
+            Overview and Setup Instructions:
+              name: रूपरेखा और सेटअप निर्देश
+            Packets and Reliability:
+              name: पैकेट्स और विश्वसनीयता
+            Peer to Peer - Sending Ascii:
+              name: एक से दूसरे सहपाठी को - Ascii भेजना
+            Peer to Peer - Sending Bits on a Shared Wire:
+              name: एक से दूसरे सहपाठी को - साझी तार पर बिट्स भेजना
+            Peer to Peer - Sending Numbers:
+              name: एक से दूसरे सहपाठी को - संख्याएं भेजना
+            Routers and addresses:
+              name: रूटर्स और पते
+        pixelation:
+          stages:
+            Black & White Pixelation Freeplay:
+              name: काला व सफेद पिक्लेशन फ्रीप्ले
+            Black & White Pixelation Tutorial:
+              name: काला व सफेद पिक्लेशन ट्यूटोरियल
+            Color Pixelation Examples:
+              name: रंग पिक्लेशन के उदाहरण
+            Color Pixelation Freeplay:
+              name: रंग पिक्लेशन फ्रीप्ले
+            Color Pixelation Tutorial:
+              name: रंग पिक्लेशन ट्यूटोरियल
         20-hour:
+          title: CS कोर्स का त्वरित परिचय
+          description: 20-घंटे के इस कोर्स में मुख्य कंप्यूटर साइंस और कोर्स 2-4 में
+            मौजूद प्रोग्रामिंग अवधारणाओं को शामिल किया गया है। कोर्स 10-18 आयु वर्ग
+            के छात्रों के लिए तैयार किया गया है। अधिक संपूर्ण अनुभव के लिए कोर्स 2-4
+            देखें!
+          description_short: 20-घंटे के इस कोर्स में मुख्य कंप्यूटर साइंस और कोर्स
+            2-4 में मौजूद प्रोग्रामिंग अवधारणाओं को शामिल किया गया है।
           description_audience: आयु 10-18
           stages:
             Abstraction:
@@ -205,6 +471,12 @@ hi:
               name: समाप्ति
         edit-code:
           stages:
+            Applab:
+              name: Applab
+            Hoc2015 Blockly:
+              name: Hoc2015 Blockly
+            Play Lab:
+              name: प्ले लैब
             The Artist:
               name: कलाकार
             The Maze:
@@ -216,102 +488,418 @@ hi:
           stages:
             Bounce:
               name: उछाल
+            Calc:
+              name: Calc
+            Eval:
+              name: Eval
             Studio:
               name: स्टूडियो
         flappy:
           title: फ्लैपी कोड
           description: क्या आप 10 मिनट से कम समय में अपनी खुद की गेम लिख सकते हैं?
             हमारा फ्लैपी कोड ट्यूटोरियल आजमाएं!
+          description_short: अपनी खुद की फ्लैपी गेम लिखें!
           stages:
             Flappy Code:
               name: फ्लैपी कोड
         jigsaw:
           title: पहेली
+          description: हमारा पहेली ट्यूटोरियल आजमाएं।
+          description_short: हमारा पहेली ट्यूटोरियल आजमाएं।
           stages:
             Jigsaw:
               name: पहेली
         step:
           title: चरण
+          description: स्टेप ट्यूटोरियल
+          description_short: स्टेप ट्यूटोरियल
           stages:
             Step:
               name: चरण
         Hour of Code:
           title: आवर ऑफ़ कोड 2013
+          description: एंग्री बर्ड्स और पौधे बनाम ज़ोम्बीज के पात्रों के साथ कंप्यूटर
+            साइंस के मूल सिद्धांत आजमाएं!
+          description_short: कई मज़ेदार पात्रों के साथ कंप्यूटर साइंस के मूल सिद्धांत
+            आजमाएं!
           stages:
             Hour of Code 2013:
               name: आवर ऑफ़ कोड 2013
         CodeStudioPuzzleChallenge:
           stages:
             Puzzles:
-              name: पहेलियाँ
+              name: पहेलियां
         Tutorial Video - Code Studio Puzzle Challenge:
           stages:
             Puzzles:
-              name: पहेलियाँ
+              name: पहेलियां
+        cspunit1:
+          stages:
+            Binary Numbers:
+              name: युग्मक संख्याएं
+            Bytes and File Sizes:
+              name: बाइट्स और फाइल आकार
+            Encode a Complex Thing:
+              name: अनुभव का कूटलेखन
+            Encoding B&W Images:
+              name: काले व सफेद चित्रों का कूटलेखन करना
+            Encoding Color Images:
+              name: रंगीन चित्रों का कूटलेखन करें
+            Encoding Numbers in the Real World:
+              name: वास्तविक दुनिया में संख्याओं का कूटलेखन करना
+            Encoding and Sending Text:
+              name: टेक्सट का कूटलेखन करना और भेजना
+            Lossy Compression and File Formats:
+              name: हानिपूर्ण संक्षिप्तीकरण और फाइल फॉरमैट
+            Number Systems:
+              name: संख्या प्रणालियां
+            Personal Innovations:
+              name: निजी अन्वेषण
+            Sending Binary Messages:
+              name: युग्मक संदेश भेजना
+            Sending Binary Messages with the Internet Simulator:
+              name: इंटरनेट सिमुलेटर के साथ युग्मक संदेश भेजना
+            Sending Bits in the Real World:
+              name: वास्तविक दुनिया में बिट्स भेजना
+            Sending Complex Messages:
+              name: जटिल संदेश भेजना
+            Sending Formatted Text:
+              name: फॉर्मेट किया हुआ टेक्सट भेजना
+            Sending Numbers:
+              name: संख्याएं भेजना
+            Text Compression:
+              name: टेक्सट संक्षिप्तीकरण
         algebraPD:
           stages:
+            Course Overview:
+              name: कोर्स की रूपरेखा
+            Evaluation Blocks:
+              name: मूल्यांकन ब्लॉक्स
+            Introduction to PD:
+              name: PD का परिचय
+            Preparing for in-person PD:
+              name: व्यक्तिगत PD के लिए तैयारी करना
             Teacher Dashboard:
               name: अध्यापक डैशबोर्ड
+            Why Computer Science belongs in Algebra:
+              name: बीजगणित कंप्यूटर साइंस से क्यों संबद्ध रखता है
         algPDmiami:
           stages:
             Booleans:
-              name: बूलियन
+              name: बूलियन्स
+            Design Recipe Practice:
+              name: डिज़ाइन रेसिपी का अभ्यास
+            Evaluation Blocks:
+              name: मूल्यांकन ब्लॉक्स
+            Luigi's Pizza:
+              name: लुइगी का पिज्ज़ा
+            Rocket-Height:
+              name: रॉकेट-ऊंचाई
+            Sam the Bat:
+              name: सैम द बैट
+            Strings and Images:
+              name: स्ट्रिंग्स और चित्र
+            Your Game - Animation:
+              name: आपकी गेम - ऐनिमेशन
+            Your Game - Booleans:
+              name: आपकी गेम - बूलियन्स
+            Your Game - Collision Detection:
+              name: आपकी गेम - संघट्टन अभिज्ञान
+            Your Game - Player Movement:
+              name: आपकी गेम - खिलाड़ी की गतिविधि
+        text-compression:
+          title: टेक्सट संक्षिप्तीकरण
+          stages:
+            Text Compression:
+              name: टेक्सट संक्षिप्तीकरण
         CSPPD:
           stages:
+            Exploring CSP Instructional Materials:
+              name: CSP निर्देशात्मक सामग्रियों की पड़ताल करना
+            Growth Mindset:
+              name: वृद्धि मानसिकता
+            Impact of Computer Science:
+              name: कंप्यूटर साइंस का प्रभाव
+            Introduction to PD:
+              name: PD का परिचय
+            Preparing for in-person PD:
+              name: व्यक्तिगत PD के लिए तैयारी करना
+            Teaching Strategies:
+              name: कार्यनीतियां सिखाना
             What is CSP?:
               name: CSP क्या है?
+        CSPLessonSamples:
+          stages:
+            Lesson 14:
+              name: पाठ 14
+            Lesson 15:
+              name: पाठ 15
         ECSPD:
           stages:
+            Growth Mindset:
+              name: वृद्धि मानसिकता
+            Impact of Computer Science:
+              name: कंप्यूटर साइंस का प्रभाव
+            Introduction to PD:
+              name: PD का परिचय
+            Preparing for in-person PD:
+              name: व्यक्तिगत PD के लिए तैयारी करना
+            Teaching Strategies:
+              name: कार्यनीतियां सिखाना
             What is ECS?:
               name: ECS क्या है?
+        sciencePD:
+          stages:
+            Agent Based Modeling of Complex Adaptive Systems:
+              name: जटिल ग्रहणशील प्रणालियों की एजेंट आधारित मॉडलिंग
+            Computational Thinking And The Framework For K-12 Science Education:
+              name: K-12 साइंस शिक्षा के लिए अभिकलनात्मक चिंतन और फ्रेमवर्क
+            Dispositions and Classroom Culture:
+              name: डिस्पोजीशंस और कक्षा की संस्कृति
+            Introduction to Complex Adaptive Systems:
+              name: जटिल ग्रहणशील प्रणालियों का परिचय
+            Introduction to Computational Science:
+              name: अभिकलनात्मक साइंस का परिचय
+            Introduction to PD:
+              name: PD का परिचय
+            Introduction to StarLogo Nova:
+              name: StarLogo Nova का परिचय
+            Post-Survey:
+              name: सर्वेक्षण के बाद
+            The Tutorial:
+              name: ट्यूटोरियल
+            Using Computer Models in Science:
+              name: साइंस में कंप्यूटर नमूनों का उपयोग करना
+            Using Models in the Classroom:
+              name: कक्षा में नमूनों का उपयोग करना
+            What to Expect:
+              name: क्या अपेक्षा की जाए
         rbo-reference:
           stages:
             reference:
               name: संदर्भ
+        Test Wednesday:
+          stages:
+            PDK5 Intro:
+              name: PDK5 का परिचय
         cspunit3:
           stages:
+            APIs and Function Parameters:
+              name: APIs और फंक्शन मापदंड
+            Beyond Buttons Toward Apps:
+              name: ऐप्स के प्रति बटनों से आगे
+            Canvas and Arrays in Apps:
+              name: ऐप्स में कैनवास और श्रृंखला समूह
+            Compound Conditional Logic:
+              name: संयुक्त सापेक्ष तर्क
+            Controlling Memory with Variables:
+              name: वेरिएबल्स के साथ मेमरी को नियंत्रित करना
             Creating Functions:
               name: फंक्शन्स बनाना
+            Creating functions with Parameters:
+              name: मापदंडों के साथ फंक्शन बनाना
+            Digital Assistant Project:
+              name: डिजीटल सहायक प्रोजेक्ट
+            Event-Driven Programming and Debugging:
+              name: इवेंट-संचालित प्रोग्रामिंग और डीबगिंग
+            Events Unplugged:
+              name: इवेंट्स अनप्लग्ड
+            Functions and Top-Down Design:
+              name: फंक्शन्स और टॉप-डाउन डिज़ाइन
+            Functions with Return Values:
+              name: रिटर्न मूल्यों के साथ फंक्शन
+            Image Scroller with Key Events:
+              name: मुख्य इवेंट्स के साथ चित्र स्क्रॉलर
+            Introducing Design Mode:
+              name: डिज़ाइन मोड का परिचय देना
+            Introduction to Arrays:
+              name: श्रृंखला समूहों का परिचय
+            Introduction to Conditional Logic:
+              name: सापेक्ष तर्क का परिचय
+            Introduction to Digital Assistants:
+              name: डिजीटल सहायकों का परिचय
+            Looping and Random Numbers:
+              name: लूपिंग और बेतरतीब संख्याएं
+            Loops and Simulations:
+              name: लूप्स और अनुकरण
+            Multi-screen Apps:
+              name: मल्टी-स्क्रीन ऐप्स
+            Practice PT - Design a Digital Scene:
+              name: PT का अभ्यास - डिजीटल दृश्य डिज़ाइन करें
+            'Practice PT: Create':
+              name: 'PT का अभ्यास: बनाएं'
+            Processing Arrays:
+              name: श्रृंखला समूहों की प्रक्रिया करना
+            The Need For Programming Languages:
+              name: प्रोग्रामिंग भाषाओं की जरूरत
+            Understanding Program Flow and Logic:
+              name: प्रोग्राम प्रवाह और तर्क को समझना
+            User Input and Strings:
+              name: उपयोगकर्ता इनपुट और स्ट्रिंग्स
+            Using Simple Commands:
+              name: साधारण कमांड्स का उपयोग करना
+            Using Variables in Apps:
+              name: ऐप्स में वेरिएबल्स का उपयोग करना
             While Loops:
               name: व्हाइल लूप्स
         algebraPD3:
           stages:
+            Computer Science Pedagogy:
+              name: कंप्यूटर साइंस का प्रशिक्षण
+            Course Overview:
+              name: कोर्स की रूपरेखा
+            Evaluation Blocks:
+              name: मूल्यांकन ब्लॉक्स
             Next Steps:
               name: अगले चरण
+            Strings and Images:
+              name: स्ट्रिंग्स और चित्र
             Teacher Dashboard:
               name: अध्यापक डैशबोर्ड
+            The Big Game:
+              name: बड़ी गेम
             The Design Recipe:
               name: डिज़ाइन रेसिपी
         ECSPD-NexTech:
           stages:
+            Growth Mindset:
+              name: वृद्धि मानसिकता
+            Impact of Computer Science:
+              name: कंप्यूटर साइंस का प्रभाव
+            Introduction to PD:
+              name: PD का परिचय
+            Preparing for in-person PD:
+              name: व्यक्तिगत PD के लिए तैयारी करना
+            Teaching Strategies:
+              name: कार्यनीतियां सिखाना
             What is ECS?:
               name: ECS क्या है?
         ECSPD-iZone:
           stages:
+            Growth Mindset:
+              name: वृद्धि मानसिकता
+            Impact of Computer Science:
+              name: कंप्यूटर साइंस का प्रभाव
+            Introduction to PD:
+              name: PD का परिचय
+            Preparing for in-person PD:
+              name: व्यक्तिगत PD के लिए तैयारी करना
+            Teaching Strategies:
+              name: कार्यनीतियां सिखाना
             What is ECS?:
               name: ECS क्या है?
         algebraPD-NexTech:
           stages:
+            Course Overview:
+              name: कोर्स की रूपरेखा
+            Evaluation Blocks:
+              name: मूल्यांकन ब्लॉक्स
+            Introduction to PD:
+              name: PD का परिचय
+            Preparing for in-person PD:
+              name: व्यक्तिगत PD के लिए तैयारी करना
             Teacher Dashboard:
               name: अध्यापक डैशबोर्ड
+            Why Computer Science belongs in Algebra:
+              name: बीजगणित कंप्यूटर साइंस से क्यों संबद्ध रखता है
         algebraPD-iZone:
           stages:
+            Course Overview:
+              name: कोर्स की रूपरेखा
+            Evaluation Blocks:
+              name: मूल्यांकन ब्लॉक्स
+            Introduction to PD:
+              name: PD का परिचय
+            Preparing for in-person PD:
+              name: व्यक्तिगत PD के लिए तैयारी करना
             Teacher Dashboard:
               name: अध्यापक डैशबोर्ड
+            Why Computer Science belongs in Algebra:
+              name: बीजगणित कंप्यूटर साइंस से क्यों संबद्ध रखता है
+        sciencePD-NexTech:
+          stages:
+            Agent Based Modeling of Complex Adaptive Systems:
+              name: जटिल ग्रहणशील प्रणालियों की एजेंट आधारित मॉडलिंग
+            Computational Thinking And The Framework For K-12 Science Education:
+              name: K-12 साइंस शिक्षा के लिए अभिकलनात्मक चिंतन और फ्रेमवर्क
+            Dispositions and Classroom Culture:
+              name: डिस्पोजीशंस और कक्षा की संस्कृति
+            Introduction to Complex Adaptive Systems:
+              name: जटिल ग्रहणशील प्रणालियों का परिचय
+            Introduction to Computational Science:
+              name: अभिकलनात्मक साइंस का परिचय
+            Introduction to PD:
+              name: PD का परिचय
+            Introduction to StarLogo Nova:
+              name: StarLogo Nova का परिचय
+            Post-Survey:
+              name: सर्वेक्षण के बाद
+            The Tutorial:
+              name: ट्यूटोरियल
+            Using Computer Models in Science:
+              name: साइंस में कंप्यूटर नमूनों का उपयोग करना
+            Using Models in the Classroom:
+              name: कक्षा में नमूनों का उपयोग करना
+            What to Expect:
+              name: क्या अपेक्षा की जाए
+        sciencePD-iZone:
+          stages:
+            Agent Based Modeling of Complex Adaptive Systems:
+              name: जटिल ग्रहणशील प्रणालियों की एजेंट आधारित मॉडलिंग
+            Computational Thinking And The Framework For K-12 Science Education:
+              name: K-12 साइंस शिक्षा के लिए अभिकलनात्मक चिंतन और फ्रेमवर्क
+            Dispositions and Classroom Culture:
+              name: डिस्पोजीशंस और कक्षा की संस्कृति
+            Introduction to Complex Adaptive Systems:
+              name: जटिल ग्रहणशील प्रणालियों का परिचय
+            Introduction to Computational Science:
+              name: अभिकलनात्मक साइंस का परिचय
+            Introduction to PD:
+              name: PD का परिचय
+            Introduction to StarLogo Nova:
+              name: StarLogo Nova का परिचय
+            Post-Survey:
+              name: सर्वेक्षण के बाद
+            The Tutorial:
+              name: ट्यूटोरियल
+            Using Computer Models in Science:
+              name: साइंस में कंप्यूटर नमूनों का उपयोग करना
+            Using Models in the Classroom:
+              name: कक्षा में नमूनों का उपयोग करना
+            What to Expect:
+              name: क्या अपेक्षा की जाए
         sciencePD2:
           stages:
+            Creating Breeds in Starlogo Nova:
+              name: Starlogo Nova में ब्रीड्स बनाना
             Wrap-Up:
               name: समाप्ति
         algebraPD2a:
           stages:
             Booleans:
-              name: बूलियन
+              name: बूलियन्स
+            Defining Variables:
+              name: वेरिएबल्स को परिभाषित करना
+            Evaluation Blocks:
+              name: मूल्यांकन ब्लॉक्स
+            Luigi's Pizza:
+              name: लुइगी का पिज्ज़ा
+            Rocket-Height:
+              name: रॉकेट-ऊंचाई
+            Sam the Bat:
+              name: सैम द बैट
+            Strings and Images:
+              name: स्ट्रिंग्स और चित्र
             The Design Recipe:
               name: डिज़ाइन रेसिपी
         allthethings:
           stages:
+            Artist:
+              name: आर्टिस्ट
             Bounce:
               name: उछाल
+            Flappy:
+              name: फ्लैपी
             Jigsaw:
               name: पहेली
             Match:
@@ -324,16 +912,30 @@ hi:
               name: प्लेलैब
             Studio:
               name: स्टूडियो
+            Text Compression:
+              name: टेक्सट संक्षिप्तीकरण
             Web Lab:
               name: वेब लैब
         algebraPD2b:
           stages:
             Booleans:
-              name: बूलियन
+              name: बूलियन्स
+            Course Overview:
+              name: कोर्स की रूपरेखा
+            Defining Variables:
+              name: वेरिएबल्स को परिभाषित करना
+            Evaluation Blocks:
+              name: मूल्यांकन ब्लॉक्स
             Next Steps:
               name: अगले चरण
+            Rocket-Height:
+              name: रॉकेट-ऊंचाई
+            Strings and Images:
+              name: स्ट्रिंग्स और चित्र
             Teacher Dashboard:
               name: अध्यापक डैशबोर्ड
+            Writing Contracts:
+              name: कॉन्टरैक्ट्स लिखना
         cspfacilitator:
           stages:
             App Lab:
@@ -428,14 +1030,20 @@ hi:
           stages:
             Getting Started:
               name: शुरू करें
+            Teaching Strategies:
+              name: कार्यनीतियां सिखाना
         ECSPD3-Unit3:
           stages:
             Getting Started:
               name: शुरू करें
+            Teaching Strategies:
+              name: कार्यनीतियां सिखाना
         ECSPD3-Unit4:
           stages:
             Getting Started:
               name: शुरू करें
+            Teaching Strategies:
+              name: कार्यनीतियां सिखाना
         ECSPD3-Unit5:
           stages:
             Getting Started:
@@ -466,6 +1074,20 @@ hi:
               name: शुरू करें
         cspunit3temp:
           stages:
+            Canvas and Arrays in Apps:
+              name: ऐप्स में कैनवास और श्रृंखला समूह
+            Functions with Return Values:
+              name: रिटर्न मूल्यों के साथ फंक्शन
+            Image Scroller with Key Events:
+              name: मुख्य इवेंट्स के साथ चित्र स्क्रॉलर
+            Introduction to Arrays:
+              name: श्रृंखला समूहों का परिचय
+            Loops and Simulations:
+              name: लूप्स और अनुकरण
+            'Practice PT: Create':
+              name: 'PT का अभ्यास: बनाएं'
+            Processing Arrays:
+              name: श्रृंखला समूहों की प्रक्रिया करना
             While Loops:
               name: व्हाइल लूप्स
         starwars:
@@ -489,28 +1111,84 @@ hi:
           stages:
             Getting Started:
               name: शुरू करें
+        AlgebraA:
+          stages:
+            'Unplugged: The Design Recipe':
+              name: 'अनप्लग्ड: डिज़ाइन रेसिपी'
+        AlgebraB:
+          stages:
+            'Unplugged: Conditionals and Piecewise Functions':
+              name: 'अनप्लग्ड: सापेक्ष और खंडश फंक्शन्स'
+            'Unplugged: Video Games and Coordinate Planes':
+              name: 'अनप्लग्ड: वीडियो गेम्स और कोआर्डीनेट प्लेन्स'
         algebraPD1:
           stages:
+            Course Overview:
+              name: कोर्स की रूपरेखा
+            Evaluation Blocks:
+              name: मूल्यांकन ब्लॉक्स
+            Introduction to PD:
+              name: PD का परिचय
+            Preparing for in-person PD:
+              name: व्यक्तिगत PD के लिए तैयारी करना
             Teacher Dashboard:
               name: अध्यापक डैशबोर्ड
+            Why Computer Science belongs in Algebra:
+              name: बीजगणित कंप्यूटर साइंस से क्यों संबद्ध रखता है
         algebraPD3c:
           stages:
             Getting Started:
               name: शुरू करें
         csp1-2017:
           stages:
+            Binary Numbers:
+              name: युग्मक संख्याएं
+            Number Systems:
+              name: संख्या प्रणालियां
+            Personal Innovations:
+              name: निजी अन्वेषण
+            Sending Binary Messages:
+              name: युग्मक संदेश भेजना
+            Sending Binary Messages with the Internet Simulator:
+              name: इंटरनेट सिमुलेटर के साथ युग्मक संदेश भेजना
+            Sending Numbers:
+              name: संख्याएं भेजना
             The Internet:
               name: इंटरनेट
             Post-Course Survey:
               name: पाठ्यक्रम के बाद का सर्वेक्षण
         csp2-2017:
           stages:
+            Bytes and File Sizes:
+              name: बाइट्स और फाइल आकार
+            Encoding B&W Images:
+              name: काले व सफेद चित्रों का कूटलेखन करना
+            Encoding Color Images:
+              name: रंगीन चित्रों का कूटलेखन करें
+            Lossy Compression and File Formats:
+              name: हानिपूर्ण संक्षिप्तीकरण और फाइल फॉरमैट
+            Text Compression:
+              name: टेक्सट संक्षिप्तीकरण
             Post-Course Survey:
               name: पाठ्यक्रम के बाद का सर्वेक्षण
         csp3-2017:
           stages:
+            APIs and Function Parameters:
+              name: APIs और फंक्शन मापदंड
             Creating Functions:
               name: फंक्शन्स बनाना
+            Functions and Top-Down Design:
+              name: फंक्शन्स और टॉप-डाउन डिज़ाइन
+            Looping and Random Numbers:
+              name: लूपिंग और बेतरतीब संख्याएं
+            Practice PT - Design a Digital Scene:
+              name: PT का अभ्यास - डिजीटल दृश्य डिज़ाइन करें
+            The Need For Programming Languages:
+              name: प्रोग्रामिंग भाषाओं की जरूरत
+            Using Simple Commands:
+              name: साधारण कमांड्स का उपयोग करना
+            Creating Functions with Parameters:
+              name: मापदंडों के साथ फंक्शन बनाना
             Post-Course Survey:
               name: पाठ्यक्रम के बाद का सर्वेक्षण
         csp4-2017:
@@ -521,6 +1199,46 @@ hi:
               name: पाठ्यक्रम के बाद का सर्वेक्षण
         csp5-2017:
           stages:
+            Beyond Buttons Toward Apps:
+              name: ऐप्स के प्रति बटनों से आगे
+            Canvas and Arrays in Apps:
+              name: ऐप्स में कैनवास और श्रृंखला समूह
+            Compound Conditional Logic:
+              name: संयुक्त सापेक्ष तर्क
+            Controlling Memory with Variables:
+              name: वेरिएबल्स के साथ मेमरी को नियंत्रित करना
+            Digital Assistant Project:
+              name: डिजीटल सहायक प्रोजेक्ट
+            Event-Driven Programming and Debugging:
+              name: इवेंट-संचालित प्रोग्रामिंग और डीबगिंग
+            Events Unplugged:
+              name: इवेंट्स अनप्लग्ड
+            Functions with Return Values:
+              name: रिटर्न मूल्यों के साथ फंक्शन
+            Image Scroller with Key Events:
+              name: मुख्य इवेंट्स के साथ चित्र स्क्रॉलर
+            Introducing Design Mode:
+              name: डिज़ाइन मोड का परिचय देना
+            Introduction to Arrays:
+              name: श्रृंखला समूहों का परिचय
+            Introduction to Conditional Logic:
+              name: सापेक्ष तर्क का परिचय
+            Introduction to Digital Assistants:
+              name: डिजीटल सहायकों का परिचय
+            Loops and Simulations:
+              name: लूप्स और अनुकरण
+            Multi-screen Apps:
+              name: मल्टी-स्क्रीन ऐप्स
+            'Practice PT: Create':
+              name: 'PT का अभ्यास: बनाएं'
+            Processing Arrays:
+              name: श्रृंखला समूहों की प्रक्रिया करना
+            Understanding Program Flow and Logic:
+              name: प्रोग्राम प्रवाह और तर्क को समझना
+            User Input and Strings:
+              name: उपयोगकर्ता इनपुट और स्ट्रिंग्स
+            Using Variables in Apps:
+              name: ऐप्स में वेरिएबल्स का उपयोग करना
             While Loops:
               name: व्हाइल लूप्स
             Post-Course Survey:
@@ -531,16 +1249,78 @@ hi:
               name: कार्य
             Velocity:
               name: वेग
+        2016_sciencePD_phase1:
+          stages:
+            Agent Based Modeling of Complex Adaptive Systems:
+              name: जटिल ग्रहणशील प्रणालियों की एजेंट आधारित मॉडलिंग
+            Computational Thinking And The Framework For K-12 Science Education:
+              name: K-12 साइंस शिक्षा के लिए अभिकलनात्मक चिंतन और फ्रेमवर्क
+            Dispositions and Classroom Culture:
+              name: डिस्पोजीशंस और कक्षा की संस्कृति
+            Introduction to Complex Adaptive Systems:
+              name: जटिल ग्रहणशील प्रणालियों का परिचय
+            Introduction to Computational Science:
+              name: अभिकलनात्मक साइंस का परिचय
+            Introduction to PD:
+              name: PD का परिचय
+            Introduction to StarLogo Nova:
+              name: StarLogo Nova का परिचय
+            Post-Survey:
+              name: सर्वेक्षण के बाद
+            The Tutorial:
+              name: ट्यूटोरियल
+            Using Computer Models in Science:
+              name: साइंस में कंप्यूटर नमूनों का उपयोग करना
+            Using Models in the Classroom:
+              name: कक्षा में नमूनों का उपयोग करना
+            What to Expect:
+              name: क्या अपेक्षा की जाए
         CSF_Secret_Sample:
-          description_audience: उम्र 8-18
+          description_audience: आयु 8-18
         ECSPD1:
           stages:
             Wrap Up:
               name: समाप्ति
         algebraFacilitator:
           stages:
+            Evaluation Blocks:
+              name: मूल्यांकन ब्लॉक्स
+            Introduction to PD:
+              name: PD का परिचय
             Teacher Dashboard:
               name: अध्यापक डैशबोर्ड
+            Why Computer Science belongs in Algebra:
+              name: बीजगणित कंप्यूटर साइंस से क्यों संबद्ध रखता है
+        sciencePD1:
+          stages:
+            Agent Based Modeling of Complex Adaptive Systems:
+              name: जटिल ग्रहणशील प्रणालियों की एजेंट आधारित मॉडलिंग
+            Computational Thinking And The Framework For K-12 Science Education:
+              name: K-12 साइंस शिक्षा के लिए अभिकलनात्मक चिंतन और फ्रेमवर्क
+            Dispositions and Classroom Culture:
+              name: डिस्पोजीशंस और कक्षा की संस्कृति
+            Introduction to Complex Adaptive Systems:
+              name: जटिल ग्रहणशील प्रणालियों का परिचय
+            Introduction to Computational Science:
+              name: अभिकलनात्मक साइंस का परिचय
+            Introduction to PD:
+              name: PD का परिचय
+            Introduction to StarLogo Nova:
+              name: StarLogo Nova का परिचय
+            Post-Survey:
+              name: सर्वेक्षण के बाद
+            The Tutorial:
+              name: ट्यूटोरियल
+            Using Computer Models in Science:
+              name: साइंस में कंप्यूटर नमूनों का उपयोग करना
+            Using Models in the Classroom:
+              name: कक्षा में नमूनों का उपयोग करना
+            What to Expect:
+              name: क्या अपेक्षा की जाए
+        cspunit1-support:
+          stages:
+            Sending Binary Messages:
+              name: युग्मक संदेश भेजना
         allthehiddenthings:
           stages:
             Game Lab:
@@ -550,15 +1330,19 @@ hi:
             Artist Functions:
               name: कलाकार फंक्शन्स
         artistExemplar:
-          description_audience: उम्र 8-18
+          description_audience: आयु 8-18
         kinderTest:
           stages:
             'Bee: Conditionals':
-              name: 'मधुमक्खी: शर्तें'
+              name: 'मधुमक्खी: कंडिशनल्स'
         gradeKinder:
           stages:
             Events:
               name: घटनाएँ
+            Events Unplugged:
+              name: इवेंट्स अनप्लग्ड
+            'Jigsaw: Learn to drag and drop':
+              name: 'पहेली: खींचना और छोड़ना सीखें'
             Loops:
               name: फंदे
             'Real-life Algorithms: Plant a Seed':
@@ -573,14 +1357,34 @@ hi:
           stages:
             Events:
               name: घटनाएँ
+            Events Unplugged:
+              name: इवेंट्स अनप्लग्ड
+            'Jigsaw: Learn to drag and drop':
+              name: 'पहेली: खींचना और छोड़ना सीखें'
             Loops:
               name: फंदे
             Unspotted Bugs:
               name: बिना देखे बग्स
         grade5:
           stages:
+            'Artist: For Loops':
+              name: 'आर्टिस्ट: फॉर लूप्स'
+            'Artist: Functions with Parameters':
+              name: 'आर्टिस्ट: मापदंडों के साथ फंक्शन'
+            'Artist: Variables':
+              name: 'आर्टिस्ट: वेरिएबल्स'
+            'Bee: For Loops':
+              name: 'मधुमक्खी: फॉर लूप्स'
+            'Bee: Functions with Parameters':
+              name: 'मधुमक्खी: मापदंडों के साथ फंक्शन'
             Digital Citizenship:
               name: डिजीटल नागरिकता
+            'Play Lab: Variables':
+              name: 'प्ले लैब: वेरिएबल्स'
+            'Unplugged: Envelope Variables':
+              name: 'अनप्लग्ड: एन्वलोप वेरिएबल्स'
+            'Unplugged: For Loop Fun':
+              name: 'अनप्लग्ड: फॉर लूप फन'
             'Unplugged: Songwriting with Parameters':
               name: 'अनप्लग्ड: मापदंडों के साथ गीत लिखना'
         ecs-unit1:
@@ -597,14 +1401,20 @@ hi:
           stages:
             Getting Started:
               name: शुरू करें
+            Teaching Strategies:
+              name: कार्यनीतियां सिखाना
         ecs-unit3:
           stages:
             Getting Started:
               name: शुरू करें
+            Teaching Strategies:
+              name: कार्यनीतियां सिखाना
         ecs-unit4:
           stages:
             Getting Started:
               name: शुरू करें
+            Teaching Strategies:
+              name: कार्यनीतियां सिखाना
         ecs-unit5:
           stages:
             Getting Started:
@@ -615,10 +1425,14 @@ hi:
               name: शुरू करें
         grade3:
           stages:
+            'Artist: Nested Loops':
+              name: 'आर्टिस्ट: नेस्टड लूप्स'
             Bee Debugging:
               name: मधुमक्खी डीबगिंग
             Bounce:
               name: उछाल
+            'Farmer: While Loops':
+              name: 'किसान: व्हाइल लूप्स'
         csd3-2017:
           stages:
             Velocity:
@@ -631,6 +1445,8 @@ hi:
               name: शर्तें
         grade2:
           stages:
+            Flappy:
+              name: फ्लैपी
             Binary Bracelets:
               name: युग्मक ब्रैस्लेट्स
             'Real-life Algorithms: Paper Planes':
@@ -669,6 +1485,10 @@ hi:
           stages:
             Bounce:
               name: उछाल
+        sample-csp5:
+          stages:
+            Controlling Memory with Variables:
+              name: वेरिएबल्स के साथ मेमरी को नियंत्रित करना
         hoc-encryption:
           stages:
             Simple Encryption:
@@ -680,6 +1500,8 @@ hi:
               name: युग्मक ब्रैस्लेट्स
             Binary Images:
               name: युग्मक चित्र
+            Play Lab:
+              name: प्ले लैब
         csd2-2017:
           stages:
             Lists:
@@ -721,6 +1543,10 @@ hi:
               name: कार्डों के साथ सापेक्ष
             Digital Citizenship:
               name: डिजीटल नागरिकता
+            'Unplugged: Binary':
+              name: 'अनप्लग्ड: युग्मक'
+            Artist Binary:
+              name: आर्टिस्ट युग्मक
             Nested Loops:
               name: नेस्टड लूप्स
             Introduction:
@@ -750,10 +1576,14 @@ hi:
             Introduction:
               name: परिचय
         classic-hoc-impact-study:
+          description_short: कई मज़ेदार पात्रों के साथ कंप्यूटर साइंस के मूल सिद्धांत
+            आजमाएं!
           stages:
             Hour of Code 2013:
               name: आवर ऑफ़ कोड 2013
         hoc-impact-study:
+          description_short: कई मज़ेदार पात्रों के साथ कंप्यूटर साइंस के मूल सिद्धांत
+            आजमाएं!
           stages:
             Hour of Code 2013:
               name: आवर ऑफ़ कोड 2013
@@ -968,8 +1798,20 @@ hi:
               name: धन्यवाद
         csp3-research-mxghyt:
           stages:
+            The Need For Programming Languages:
+              name: प्रोग्रामिंग भाषाओं की जरूरत
+            Using Simple Commands:
+              name: साधारण कमांड्स का उपयोग करना
             Creating Functions:
               name: फंक्शन्स बनाना
+            Functions and Top-Down Design:
+              name: फंक्शन्स और टॉप-डाउन डिज़ाइन
+            APIs and Function Parameters:
+              name: APIs और फंक्शन मापदंड
+            Looping and Random Numbers:
+              name: लूपिंग और बेतरतीब संख्याएं
+            Practice PT - Design a Digital Scene:
+              name: PT का अभ्यास - डिजीटल दृश्य डिज़ाइन करें
         e-f-ramp:
           stages:
             Building a Foundation:
@@ -992,6 +1834,10 @@ hi:
               name: कार्डों के साथ सापेक्ष
             Digital Citizenship:
               name: डिजीटल नागरिकता
+            'Unplugged: Binary':
+              name: 'अनप्लग्ड: युग्मक'
+            Artist Binary:
+              name: आर्टिस्ट युग्मक
             Building a Foundation:
               name: नींव का निर्माण करना
             Loops in Ice Age:
@@ -1026,10 +1872,24 @@ hi:
               name: मापदंडों के साथ गीत लिखना
         csp3-staging:
           stages:
+            The Need For Programming Languages:
+              name: प्रोग्रामिंग भाषाओं की जरूरत
+            Using Simple Commands:
+              name: साधारण कमांड्स का उपयोग करना
             Creating Functions:
               name: फंक्शन्स बनाना
+            Functions and Top-Down Design:
+              name: फंक्शन्स और टॉप-डाउन डिज़ाइन
+            APIs and Function Parameters:
+              name: APIs और फंक्शन मापदंड
+            Looping and Random Numbers:
+              name: लूपिंग और बेतरतीब संख्याएं
+            Practice PT - Design a Digital Scene:
+              name: PT का अभ्यास - डिजीटल दृश्य डिज़ाइन करें
         pwc:
           stages:
+            Personal Innovations:
+              name: निजी अन्वेषण
             Simple Encryption:
               name: साधारण कूटलेखन
         hero:
@@ -1245,20 +2105,74 @@ hi:
               name: कार्डों के साथ सापेक्ष
         csp1-2018:
           stages:
+            Personal Innovations:
+              name: निजी अन्वेषण
+            Sending Binary Messages:
+              name: युग्मक संदेश भेजना
+            Sending Binary Messages with the Internet Simulator:
+              name: इंटरनेट सिमुलेटर के साथ युग्मक संदेश भेजना
+            Number Systems:
+              name: संख्या प्रणालियां
+            Binary Numbers:
+              name: युग्मक संख्याएं
+            Sending Numbers:
+              name: संख्याएं भेजना
             The Internet:
               name: इंटरनेट
+        csp2-2018:
+          stages:
+            Bytes and File Sizes:
+              name: बाइट्स और फाइल आकार
+            Text Compression:
+              name: टेक्सट संक्षिप्तीकरण
+            Encoding B&W Images:
+              name: काले व सफेद चित्रों का कूटलेखन करना
+            Encoding Color Images:
+              name: रंगीन चित्रों का कूटलेखन करें
+            Lossy Compression and File Formats:
+              name: हानिपूर्ण संक्षिप्तीकरण और फाइल फॉरमैट
         csp3-2018:
           stages:
+            The Need For Programming Languages:
+              name: प्रोग्रामिंग भाषाओं की जरूरत
+            Using Simple Commands:
+              name: साधारण कमांड्स का उपयोग करना
             Creating Functions:
               name: फंक्शन्स बनाना
+            Functions and Top-Down Design:
+              name: फंक्शन्स और टॉप-डाउन डिज़ाइन
+            APIs and Function Parameters:
+              name: APIs और फंक्शन मापदंड
+            Looping and Random Numbers:
+              name: लूपिंग और बेतरतीब संख्याएं
+            Practice PT - Design a Digital Scene:
+              name: PT का अभ्यास - डिजीटल दृश्य डिज़ाइन करें
+            Creating Functions with Parameters:
+              name: मापदंडों के साथ फंक्शन बनाना
         csp4-2018:
           stages:
             Simple Encryption:
               name: साधारण कूटलेखन
         csp5-2018:
           stages:
+            Multi-screen Apps:
+              name: मल्टी-स्क्रीन ऐप्स
+            Controlling Memory with Variables:
+              name: वेरिएबल्स के साथ मेमरी को नियंत्रित करना
+            User Input and Strings:
+              name: उपयोगकर्ता इनपुट और स्ट्रिंग्स
             While Loops:
               name: व्हाइल लूप्स
+            Loops and Simulations:
+              name: लूप्स और अनुकरण
+            Introduction to Arrays:
+              name: श्रृंखला समूहों का परिचय
+            Processing Arrays:
+              name: श्रृंखला समूहों की प्रक्रिया करना
+            Functions with Return Values:
+              name: रिटर्न मूल्यों के साथ फंक्शन
+            'Practice PT: Create':
+              name: 'PT का अभ्यास: बनाएं'
         csd-novice-18:
           stages:
             Wrap Up:
@@ -1293,11 +2207,23 @@ hi:
               name: यह ग्रेट टू क्रिएट एंड प्ले फेयर है
             'Persistence & Frustration: Stevie and the Big Project':
               name: स्टेवी और बड़ा प्रोजेक्ट
+        frozen-2018:
+          stages:
+            Artist:
+              name: आर्टिस्ट
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: आर्टिस्ट
         dance:
           stages:
             Dance Party:
               name: डांस पार्टी
           title: डांस पार्टी
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: आर्टिस्ट
         aquatic:
           title: 'Minecraft: समुद्री यात्रा जलचर'
           description_short: पड़ताल के लिए अपनी रचनात्मकता और सवाल हल करने के कौशलों
@@ -1361,6 +2287,8 @@ hi:
               name: डिजीटल नागरिकता
             'Unplugged: Binary':
               name: युग्मक चित्र
+            Artist Binary:
+              name: आर्टिस्ट युग्मक
             Dance Party:
               name: डांस पार्टी
         coursee-2019:
@@ -1401,6 +2329,10 @@ hi:
               name: फॉर लूप फन
             Binary Bracelets:
               name: युग्मक ब्रैस्लेट्स
+            'Unplugged: Binary':
+              name: 'अनप्लग्ड: युग्मक'
+            Artist Binary:
+              name: आर्टिस्ट युग्मक
             Internet:
               name: इंटरनेट
             Crowdsourcing:
@@ -1481,20 +2413,78 @@ hi:
               name: सर्वेक्षण
         csp1-2019:
           stages:
+            Personal Innovations:
+              name: निजी अन्वेषण
+            Sending Binary Messages:
+              name: युग्मक संदेश भेजना
+            Sending Binary Messages with the Internet Simulator:
+              name: इंटरनेट सिमुलेटर के साथ युग्मक संदेश भेजना
+            Number Systems:
+              name: संख्या प्रणालियां
+            Binary Numbers:
+              name: युग्मक संख्याएं
+            Sending Numbers:
+              name: संख्याएं भेजना
             The Internet:
               name: इंटरनेट
+        csp2-2019:
+          stages:
+            Bytes and File Sizes:
+              name: बाइट्स और फाइल आकार
+            Text Compression:
+              name: टेक्सट संक्षिप्तीकरण
+            Encoding B&W Images:
+              name: काले व सफेद चित्रों का कूटलेखन करना
+            Encoding Color Images:
+              name: रंगीन चित्रों का कूटलेखन करें
         csp3-2019:
           stages:
+            The Need For Programming Languages:
+              name: प्रोग्रामिंग भाषाओं की जरूरत
+            Using Simple Commands:
+              name: साधारण कमांड्स का उपयोग करना
             Creating Functions:
               name: फंक्शन्स बनाना
+            Functions and Top-Down Design:
+              name: फंक्शन्स और टॉप-डाउन डिज़ाइन
+            APIs and Function Parameters:
+              name: APIs और फंक्शन मापदंड
+            Looping and Random Numbers:
+              name: लूपिंग और बेतरतीब संख्याएं
+            Practice PT - Design a Digital Scene:
+              name: PT का अभ्यास - डिजीटल दृश्य डिज़ाइन करें
         csp4-2019:
           stages:
             Simple Encryption:
               name: साधारण कूटलेखन
         csp5-2019:
           stages:
+            Multi-screen Apps:
+              name: मल्टी-स्क्रीन ऐप्स
+            Controlling Memory with Variables:
+              name: वेरिएबल्स के साथ मेमरी को नियंत्रित करना
+            User Input and Strings:
+              name: उपयोगकर्ता इनपुट और स्ट्रिंग्स
             While Loops:
               name: व्हाइल लूप्स
+            Loops and Simulations:
+              name: लूप्स और अनुकरण
+            Introduction to Arrays:
+              name: श्रृंखला समूहों का परिचय
+            Processing Arrays:
+              name: श्रृंखला समूहों की प्रक्रिया करना
+            Functions with Return Values:
+              name: रिटर्न मूल्यों के साथ फंक्शन
+        csp1-pilot:
+          stages:
+            Number Systems:
+              name: संख्या प्रणालियां
+            Sending Binary Messages:
+              name: युग्मक संदेश भेजना
+            Sending Binary Messages with the Internet Simulator:
+              name: इंटरनेट सिमुलेटर के साथ युग्मक संदेश भेजना
+            Binary Numbers:
+              name: युग्मक संख्याएं
         time4csdemo:
           stages:
             Crowdsourcing:

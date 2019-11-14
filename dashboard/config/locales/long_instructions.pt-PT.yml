@@ -431,9 +431,27 @@ pt-PT:
       CourseE_HOC 2018 Level_9b: Chegaste ao recife de coral, agora procura o **Heart
         of the Sea** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
         ! Usa o coral azul e vermelho para alcançar o **baú** do tesouro ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
+      Dance_2019_03: Está na hora da dança! Programa cada dançarino de modo a mover-se
+        quando premires teclas diferentes. Escolhe o teu movimento preferido para
+        cada dançarino ou defini-o para `(Aleatório)` para algo completamente imprevisível!
       Dance_2019_05: "_Agora já estamos a curtir!_ \n\nAdiciona um bloco <xml><block
         type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml>
         à tua área de trabalho. Faz o dançarino iniciar um novo movimento após 6 compassos."
+      Dance_2019_06: "Usa este novo bloco para formar um grupo mais pequeno de dançarinos
+        secundários à volta do dançarino principal que está no meio. \n\n  <xml><block
+        type=\"Dancelab_makeNewDanceSpriteGroup\">\n    <title name=\"N\">???</title>\n
+        \   <title name=\"COSTUME\" config=\"&quot;BEAR&quot;, &quot;CAT&quot;, &quot;FROG&quot;,
+        &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title>\n
+        \   <title name=\"LAYOUT\">\"circle\"</title>\n  </block></xml>\n\nAgora podes
+        criar um monte de dançarinos secundários duma vez só!"
+      Dance_2019_09: |-
+        Isto é um tipo especial de evento que é acionado repetidamente.
+
+        <xml><block type="Dancelab_everySeconds"><title name="N">2</title><title name="UNIT">"measures"</title></block></xml>
+
+        Os outros blocos novos na tua caixa de ferramentas permitem-te trocar progressivamente (ou aleatoriamente!) as propriedades dos dançarinos ao longo do tempo.
+
+        _Sê criativo e diverte-te!_
       Dance_Party_02: |-
         Vamos pôr este alce a dançar!
 
@@ -486,10 +504,27 @@ pt-PT:
         -   Experimenta com outras durações de notas (como 0,5 para uma mínima ou 0,125 para uma colcheia).
         -   Adiciona alguns eventos "após o compasso".
         -   Troca "compassos" por "segundos" e tenta sincronizar as tuas danças dessa maneira.
+      Dance_Party_extras_every_beat_2019: |-
+        # Semínimas
+
+        A maioria das nossas danças usou compassos inteiros mas cada compasso é composto por 4 semínimas. Esta dança usa <xml><block type="Dancelab_everyMeasuresRange" block-text="a new repeat block"><title name="N">0.25</title><title name="START">5</title><statement name="DO"></statement></block></xml> para fazer o dançarino aplaudir a cada semínima.
+
+        Experimenta mudar os números no bloco para ver como é que altera a dança.
+
+        -   Experimenta com outras durações de notas (como 0,5 para uma mínima ou 0,125 para uma colcheia)
+        -   Adiciona outros eventos
       Dance_Party_extras_layout: |-
         # Ponham-se em formação!
 
         Vê esta dança que usa o bloco "disposição" para mudar a formação dos dançarinos secundários ao longo da dança. Experimenta uma destas ideias para estendê-la:
+
+        -   Cria um segundo grupo de dançarinos numa disposição diferente
+        -   Muda a disposição quando uma tecla é premida
+        -   Altera uma propriedade quando os dançarinos mudarem de formação
+      Dance_Party_extras_layout_2019: |-
+        # Ponham-se em formação!
+
+        Vê esta dança que usa o bloco <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> para mudar a formação dos dançarinos secundários ao longo da dança. Experimenta uma destas ideias para estendê-la:
 
         -   Cria um segundo grupo de dançarinos numa disposição diferente
         -   Muda a disposição quando uma tecla é premida
@@ -506,6 +541,10 @@ pt-PT:
         # Acelera-a, Abranda-a
 
         Esta dança final usa o bloco "definir velocidade" para controlar o quão rápido cada dançarino se mexe. Tenta experimentar com diferentes velocidades durante pontos diferentes na canção. Põe-te à vontade em mexericar nesta dança ou volta a qualquer uma das danças anteriores para torná-las mais fixes.
+      Dance_Party_extras_speed_2019: |-
+        # Acelera-a, Abranda-a
+
+        Esta dança final usa o bloco <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> para controlar o quão rápido cada dançarino se mexe. Tenta experimentar com diferentes velocidades durante pontos diferentes na canção. Põe-te à vontade em mexericar nesta dança ou volta a qualquer uma das danças anteriores para torná-las mais fixes.
       Dance_Party_extras_visible: |-
         # Para onde é que eles foram?
 
@@ -574,6 +613,10 @@ pt-PT:
       K-1 Maze Loops Assessment 1: |-
         Avaliação -- use laços para me levar
         até o poco!
+      MC HOC 2016 SCORE LEVEL: "Alguns jogos permitem-te registar pontuações. Joga
+        à apanhada com estes Golems de Ferro e utiliza o bloco <xml>  <block type=\"craft_addScore\">\n
+        \   <title name=\"SCORE\">1</title>\n  </block></xml> para obteres um ponto
+        quando os apanhares.  \n\n  Alcança cinco pontos para ganhar!"
       MC_HOC_2017_01_RETRY: "{currentPlayerName} está preso dentro da casa, mas o
         Agent está aqui para ajudar!   \\\r\n \\\r\n   \\\r\nEncaixa um bloco \"avançar\"
         no bloco \"quando executado\" no espaço de trabalho, para levar o Agent até
@@ -730,7 +773,7 @@ pt-PT:
         possas usá-la sempre que quiseres desenhar uma flor. \nUsa isto e o novo bloco
         \"saltar\" para desenhar essas flores. Dica: as flores estão separadas por
         150 pixeis"
-      Standalone_Artist_8: "Aqui está uma função chamada \"Desenhar uma forma\" que
+      Standalone_Artist_8: "Aqui está uma função chamada `Desenhar uma forma` que
         programamos para desenhar hexágonos. Executa o código para ver o que ele faz
         e depois experimenta com a função para ver o que acontece. \nConsegues fazer
         com que desenhe um padrão de quadrados, triângulos ou octógonos?"

@@ -793,7 +793,7 @@ de:
     want_to_make_your_own: Möchtest du dein eigenes Programm machen?
     how_to_save: Eine der letzten Stufe dieser Tutorials klicken Sie auf "Fertig stellen"
       und "Speichern", um Ihre Arbeit in der Galerie speichern.
-    more: Mehr &rarr;
+    more: Mehr →
     caption_by_name_age: Von %{name}, Alter %{age}
     caption_time_ago: vor %{time_ago}
     header: Galerie

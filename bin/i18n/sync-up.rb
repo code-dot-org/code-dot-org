@@ -8,9 +8,14 @@
 require_relative 'i18n_script_utils'
 
 def sync_up
-  system "crowdin --config #{CODEORG_CONFIG_FILE} --identity #{CODEORG_IDENTITY_FILE} upload sources"
-  system "crowdin --config #{CODEORG_MARKDOWN_CONFIG_FILE} --identity #{CODEORG_MARKDOWN_IDENTITY_FILE} upload sources"
-  system "crowdin --config #{HOUROFCODE_CONFIG_FILE} --identity #{HOUROFCODE_IDENTITY_FILE} upload sources"
+  puts "Beginning sync up"
+
+  CROWDIN_PROJECTS.each do |name, options|
+    puts "Uploading source strings to #{name} project"
+    system "crowdin --config #{options[:config_file]} --identity #{options[:identity_file]} upload sources"
+  end
+
+  puts "Sync up complete"
 end
 
 sync_up if __FILE__ == $0
