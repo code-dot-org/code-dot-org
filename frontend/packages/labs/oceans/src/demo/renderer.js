@@ -31,6 +31,13 @@ let botImages = {};
 let botVelocity = 10;
 let botY, botYDestination;
 let currentPredictedClassId;
+
+/**
+ * currentRawXOffset & lastRawXOffset track fish movement.
+ * lastRawXOffset is set every time drawMovingFish() is called, and records
+ * our current x offset. This allows the user to pause, play, rewind, and
+ * fast-forward the fish without them jumping around as our time scale changes.
+ */
 let currentRawXOffset, lastRawXOffset;
 
 export const initRenderer = () => {
