@@ -4,9 +4,9 @@ title: Beispiel für einen Aufruf zur Unterstüzung einer Informatikwoche und de
 
 {{ signup_button }}
 
-# Sample Computer Science Education Week resolution
+# Beispielresolution für die Informatik Bildungswoche
 
-### Below is language for a sample resolution supportive of Computer Science Education Week and its goals that can be used by state and local legislators.
+### Unten ist ein Wortlaut für eine Beispielresulution, die die Computer Science Education Week und ihre Ziele unterstützt, die von staatlichen und lokalen Gesetzgebern verwendet werden können.
 
 * * *
 

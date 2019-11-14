@@ -5859,3 +5859,7 @@ vi:
           stages:
             new stage:
               name: giai đoạn mới
+        csp4-preview:
+          stages:
+            new stage:
+              name: giai đoạn mới

@@ -4597,3 +4597,7 @@ is:
           stages:
             new stage:
               name: nýr áfangi
+        csp4-preview:
+          stages:
+            new stage:
+              name: nýr áfangi

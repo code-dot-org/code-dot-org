@@ -3338,11 +3338,6 @@ sk-SK:
           -   Po 6 taktoch musí tvoj tanečník robiť iný krok ako robil po 4 taktoch.
 
           _Úroveň končí po 11 taktoch._
-      Dance_2019_07:
-        challenges: |-
-          **Dobrovoľná výzva**
-
-          -   Experimentuj s menením aj ďalších vlastností (šírka, výška, otočenie, atď.)
       Dance_Party_01:
         validation: |-
           **Ako prejdem túto úroveň?**

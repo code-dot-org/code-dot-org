@@ -705,6 +705,23 @@ fi:
             '"bass"': basso
             '"mid"': midi
             '"treble"': diskantti
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': timantti
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"z"': z
       Dancelab_whenKey:
         text: kun {KEY} painettuna
         options:
