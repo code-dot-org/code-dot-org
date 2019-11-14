@@ -17,7 +17,6 @@ import {getHiddenStages, initializeHiddenScripts} from './hiddenStageRedux';
 import {
   initProgress,
   mergeProgress,
-  getLevelProgress,
   disablePostMilestone,
   setIsHocScript,
   setIsAge13Required,
@@ -32,6 +31,7 @@ import {
   pageTypes
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {queryLockStatus, renderTeacherPanel} from './teacherPanelHelpers';
+import {TestResults} from '@cdo/apps/constants';
 
 var progress = module.exports;
 
@@ -106,7 +106,11 @@ progress.renderStageProgress = function(
   );
 
   store.dispatch(
-    mergeProgress(_.mapValues(progressData.levels, getLevelProgress))
+    mergeProgress(
+      _.mapValues(progressData.levels, level =>
+        level.submitted ? TestResults.SUBMITTED_RESULT : level.result
+      )
+    )
   );
 
   store.dispatch(setIsHocScript(isHocScript));
