@@ -43,6 +43,7 @@ export default class Congrats extends Component {
     const tutorialType =
       {
         dance: 'dance',
+        'dance-2019': 'dance',
         'applab-intro': 'applab',
         aquatic: '2018Minecraft',
         hero: '2017Minecraft',
