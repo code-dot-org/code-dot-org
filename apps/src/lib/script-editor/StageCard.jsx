@@ -77,7 +77,7 @@ export class UnconnectedStageCard extends Component {
 
   state = {
     currentPositions: [],
-    drag: null,
+    draggedLevelPos: null,
     dragHeight: null,
     initialClientY: null,
     newPosition: null,
@@ -95,7 +95,7 @@ export class UnconnectedStageCard extends Component {
         return metrics.top + metrics.height / 2;
       });
       this.setState({
-        drag: position,
+        draggedLevelPos: position,
         dragHeight: this.metrics[position].height + levelTokenMargin,
         initialClientY: clientY,
         newPosition: position,
@@ -109,20 +109,20 @@ export class UnconnectedStageCard extends Component {
 
   handleDrag = ({clientY}) => {
     const delta = clientY - this.state.initialClientY;
-    const dragPosition = this.metrics[this.state.drag].top;
-    let newPosition = this.state.drag;
+    const dragPosition = this.metrics[this.state.draggedLevelPos].top;
+    let newPosition = this.state.draggedLevelPos;
     const currentPositions = this.state.startingPositions.map(
       (midpoint, index) => {
         const position = index + 1;
-        if (position === this.state.drag) {
+        if (position === this.state.draggedLevelPos) {
           return delta;
         }
-        if (position < this.state.drag && dragPosition < midpoint) {
+        if (position < this.state.draggedLevelPos && dragPosition < midpoint) {
           newPosition--;
           return this.state.dragHeight;
         }
         if (
-          position > this.state.drag &&
+          position > this.state.draggedLevelPos &&
           dragPosition + this.state.dragHeight > midpoint
         ) {
           newPosition++;
@@ -148,23 +148,27 @@ export class UnconnectedStageCard extends Component {
   handleDragStop = () => {
     const {stage, targetStagePos} = this.props;
     if (targetStagePos === stage.position) {
-      if (this.state.drag !== this.state.newPosition) {
+      if (this.state.draggedLevelPos !== this.state.newPosition) {
         this.props.reorderLevel(
           stage.position,
-          this.state.drag,
+          this.state.draggedLevelPos,
           this.state.newPosition
         );
       }
     } else if (targetStagePos) {
       this.props.moveLevelToStage(
         stage.position,
-        this.state.drag,
+        this.state.draggedLevelPos,
         targetStagePos
       );
     }
     this.props.setTargetStage(null);
 
-    this.setState({drag: null, newPosition: null, currentPositions: []});
+    this.setState({
+      draggedLevelPos: null,
+      newPosition: null,
+      currentPositions: []
+    });
     window.removeEventListener('selectstart', this.preventSelect);
     window.removeEventListener('mousemove', this.handleDrag);
     window.removeEventListener('mouseup', this.handleDragStop);
@@ -204,6 +208,7 @@ export class UnconnectedStageCard extends Component {
 
   render() {
     const {stage, targetStagePos} = this.props;
+    const {draggedLevelPos} = this.state;
     const isTargetStage = targetStagePos === stage.position;
     return (
       <div style={isTargetStage ? styles.targetStageCard : styles.stageCard}>
@@ -241,8 +246,8 @@ export class UnconnectedStageCard extends Component {
             key={level.activeId}
             level={level}
             stagePosition={stage.position}
-            dragging={!!this.state.drag}
-            drag={level.position === this.state.drag}
+            dragging={!!draggedLevelPos}
+            draggedLevelPos={level.position === draggedLevelPos}
             delta={this.state.currentPositions[level.position - 1] || 0}
             handleDragStart={this.handleDragStart}
           />
