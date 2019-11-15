@@ -322,8 +322,9 @@ const drawMovingFish = state => {
         const midScreenX =
           constants.canvasWidth / 2 - constants.fishCanvasWidth / 2;
         drawPrediction = x >= midScreenX;
+        const nearCenterX = x - midScreenX <= 50;
 
-        if (drawPrediction && x - midScreenX <= 50) {
+        if (drawPrediction && nearCenterX) {
           centerFish = fish;
 
           if (
