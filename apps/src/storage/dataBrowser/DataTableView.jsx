@@ -128,10 +128,10 @@ class DataTableView extends React.Component {
   };
 
   exportCsv = () => {
-    const isCurrent =
+    const isSharedTable =
       this.props.tableListMap[this.props.tableName] === tableType.SHARED;
     const tableName = encodeURIComponent(this.props.tableName);
-    const channelId = isCurrent ? 'shared' : Applab.channelId;
+    const channelId = isSharedTable ? 'shared' : Applab.channelId;
     location.href = `/v3/export-firebase-tables/${channelId}/${tableName}`;
   };
 
