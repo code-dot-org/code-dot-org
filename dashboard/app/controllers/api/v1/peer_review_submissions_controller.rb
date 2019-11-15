@@ -101,8 +101,8 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
         submission_times = submission_times_by_user_script_level[[user_level.user_id, user_level.script_id, user_level.level_id]]
         peer_review_submissions[user_level.level.name] = {
           status: result_to_status(user_level.best_result),
-          first_submission_date: submission_times.min&.strftime("%-m/%-d/%Y"),
-          last_submission_date: submission_times.max&.strftime("%-m/%-d/%Y")
+          first_submission_date: submission_times&.min&.strftime("%-m/%-d/%Y"),
+          last_submission_date: submission_times&.max&.strftime("%-m/%-d/%Y")
         }
       end
 
