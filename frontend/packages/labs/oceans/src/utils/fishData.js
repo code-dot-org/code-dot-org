@@ -1576,6 +1576,11 @@ export const initFishData = () => {
         }
       });
       Object.values(variations).forEach((component, idx) => {
+        component.dataFields = [];
+        for (var i = 0; i < component.knnData.length; ++i) {
+          component.dataFields.push(`${key}_field_${i}`);
+        };
+
         for (var i = 0; i < component.knnData.length; ++i) {
           if (maxArray[i] === minArray[i]) {
             component.knnData[i] = 0;
@@ -1589,7 +1594,12 @@ export const initFishData = () => {
         // Add an "id" to each component to train on
         const numVariations = Object.keys(variations).length;
         if (numVariations > 1) {
-          component.knnData.push(...oneHotEncode(idx, numVariations));
+          const indexVector = oneHotEncode(idx, numVariations);
+          component.knnData.push(...indexVector);
+
+          for (var i = 0; i < indexVector.length; ++i) {
+            component.dataFields.push(`${key}_index_${i}`);
+          };
         }
       });
     });

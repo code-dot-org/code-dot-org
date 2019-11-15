@@ -236,6 +236,15 @@ export class FishOceanObject extends OceanObject {
       ...this.tail.knnData,
       ...this.colorPalette.knnData
     ];
+    this.dataFields = [
+      ...this.body.dataFields,
+      ...this.eye.dataFields,
+      ...this.mouth.dataFields,
+      ...this.pectoralFinFront.dataFields,
+      ...this.dorsalFin.dataFields,
+      ...this.tail.dataFields,
+      ...this.colorPalette.dataFields
+    ];
   }
 
   getColorPalette() {
