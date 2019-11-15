@@ -32,8 +32,8 @@ class AuthenticationOption < ApplicationRecord
   validates :email, no_utf8mb4: true
   validates_email_format_of :email, allow_blank: true, if: :email_changed?, unless: -> {email.to_s.utf8mb4?}
 
-  validate :email_must_be_unique, :hashed_email_must_be_unique,
-    :cred_type_and_auth_id_must_be_unique
+  validate :email_must_be_unique, :hashed_email_must_be_unique, unless: -> {UNTRUSTED_EMAIL_CREDENTIAL_TYPES.include? credential_type}
+  validate :cred_type_and_auth_id_must_be_unique
 
   after_create :set_primary_contact_info
 
