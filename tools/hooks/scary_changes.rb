@@ -44,9 +44,11 @@ class ScaryChangeDetector
     return if changes.empty? || !(@changed_lines.include?("add_column") || !@changed_lines.include?("create_table"))
 
     puts red <<-EOS
+
         Looks like you are creating a table or adding a column in this migration:
         #{changes.join("\n")}
         Do you have all the indexes needed for this change?
+
     EOS
   end
 
