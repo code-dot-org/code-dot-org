@@ -3,6 +3,7 @@ hideable_stages true
 has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-preview/unit4/{LESSON}'
+pilot_experiment 'csp-preview'
 curriculum_umbrella 'CSP'
 
 stage 'Variables Explore', flex_category: 'csp_variables'
