@@ -80,7 +80,6 @@ export class UnconnectedStageCard extends Component {
     drag: null,
     dragHeight: null,
     initialClientY: null,
-    initialScroll: null,
     newPosition: null,
     startingPositions: null,
     editingFlexCategory: false
@@ -99,7 +98,6 @@ export class UnconnectedStageCard extends Component {
         drag: position,
         dragHeight: this.metrics[position].height + levelTokenMargin,
         initialClientY: clientY,
-        initialScroll: document.body.scrollTop,
         newPosition: position,
         startingPositions
       });
