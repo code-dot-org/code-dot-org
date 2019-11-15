@@ -41,7 +41,7 @@ class ScaryChangeDetector
   end
 
   def detect_new_table_or_new_column
-    changes = @all.grep(/^dashboard\/app\/migrate\//) # add_column or create_table
+    changes = @all.grep(/^dashboard\/db\/migrate\//) # add_column or create_table
     return if changes.empty?
 
     puts "Looks like you are creating a table or adding a column."
