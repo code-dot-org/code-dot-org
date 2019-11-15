@@ -64,8 +64,17 @@ module Cdo
       def translate(locale, key, options = ::I18n::EMPTY_HASH)
         translation = super(locale, key, options)
         if options.fetch(:markdown, false)
-          # The safe_links_only just makes sure that the URL is a "safe" web one which starts with: "#", "/", "http://", "https://", "ftp://", "mailto:"
-          # However, it isn't good enough because it ignores URLS which are just '/' or start with '//'.
+          # The safe_links_only just makes sure that the URL is a "safe" web
+          # one which starts with: "#", "/", "http://", "https://", "ftp://",
+          # "mailto:" However, it isn't good enough because it ignores URLS
+          # which are just '/' or start with '//'.  Although I couldn't find
+          # documentation about what "safe" means, I think its meant to limit
+          # URLs to using known safe ones because the future is unknown.
+          # Imagine someone on Crowdin changing the URL to be
+          # "bitcoin://send.coin/to/evil-account". It's hard to predict what
+          # future URLs will be like, so its easier to just filter for the
+          # currently known ones. The actual "safe" think we should be doing is
+          # redacting all URLs in strings given to outside translators.
           @renderer ||= Redcarpet::Markdown.new(Redcarpet::Render::Safe.new(safe_links_only: false))
           @renderer.render(translation)
         else
