@@ -24,6 +24,7 @@ class ScaryChangeDetector
       change = `git diff --cached`
       puts change
       puts change.include? "add_column"
+      puts change.include? "create_table"
     end
     @all = @added + @deleted + @modified
   end

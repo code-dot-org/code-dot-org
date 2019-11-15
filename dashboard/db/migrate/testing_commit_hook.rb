@@ -1,2 +1,3 @@
 add_column
 add_column
+create_table
