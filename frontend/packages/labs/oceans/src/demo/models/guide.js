@@ -1,5 +1,6 @@
 import {getState, setState} from '../state';
 import {AppMode, Modes} from '../constants';
+import crabImage from '../../../public/images/seaCreatures/Crab.png';
 
 const guides = [
   {
@@ -7,7 +8,8 @@ const guides = [
     text: "Garbage dumped in the ocean and rivers affects water health and marine life.  In this activity you will program an artificial intelligence (AI) to identify trash.  Let's clean up the ocean!",
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Training},
     style: 'Center',
-    arrow: 'none'
+    arrow: 'none',
+    image: crabImage
   },
   {
     id: 'fishvtrash-training-init2',
