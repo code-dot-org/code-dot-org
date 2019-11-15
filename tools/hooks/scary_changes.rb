@@ -22,7 +22,6 @@ class ScaryChangeDetector
         end
       end
     end
-    puts @added
     @all = @added + @deleted + @modified
   end
 
@@ -107,6 +106,7 @@ class ScaryChangeDetector
 
   def detect_scary_changes
     detect_new_models
+    detect_new_table_or_new_column
     detect_missing_yarn_lock
     detect_special_files
     detect_dropbox_conflicts
