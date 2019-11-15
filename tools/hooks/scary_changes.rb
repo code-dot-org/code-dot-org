@@ -22,9 +22,8 @@ class ScaryChangeDetector
         end
       end
       `git diff --cached`.split("\n").each do |change|
-        change = change.split("\t")
         puts change
-        puts change.grep(/^add_column/)
+        puts change.include? "add_column"
       end
     end
     @all = @added + @deleted + @modified
