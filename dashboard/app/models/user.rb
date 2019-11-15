@@ -682,12 +682,9 @@ class User < ActiveRecord::Base
     user.user_type = params['user_type'] || auth.info.user_type
     user.user_type = 'teacher' if user.user_type == 'staff' # Powerschool sends through 'staff' instead of 'teacher'
 
-    # Store emails, except when using Clever
+    # Store emails, except when using an authentication provider whose emails
+    # we don't trust
     user.email = auth.info.email unless user.user_type == 'student' && AuthenticationOption::UNTRUSTED_EMAIL_CREDENTIAL_TYPES.include?(auth.provider)
-
-    if AuthenticationOption::UNTRUSTED_EMAIL_CREDENTIAL_TYPES.include?(auth.provider) && User.find_by_email_or_hashed_email(user.email)
-      user.email = user.email + '.oauthemailalreadytaken'
-    end
 
     if auth.provider == :the_school_project
       user.username = auth.extra.raw_info.nickname
