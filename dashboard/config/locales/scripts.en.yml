@@ -11894,6 +11894,8 @@ en:
               name: Representing Text
             Circle Square Patterns:
               name: Circle Square Patterns
+            'Lesson 14: Assessment Day':
+              name: 'Lesson 14: Assessment Day'
           title: CSP Unit 1 Pilot - Digital Information
           description_audience: ''
           description_short: ''
@@ -13351,6 +13353,8 @@ en:
               name: DNS and HTTP
             Welcome to the Internet:
               name: Welcome to the Internet
+            'Lesson 9: Assessment Day':
+              name: 'Lesson 9: Assessment Day'
           title: CSP Unit 2 Pilot - The Internet
           description_audience: ''
           description_short: ''
@@ -13609,7 +13613,7 @@ en:
               name: Practice PT Part 3
             'Lesson 15: Unit 4 Assessment':
               name: 'Lesson 15: Unit 4 Assessment'
-          title: Variables, Conditionals, and Functions
+          title: 'CSP Preview: Variables, Conditionals, and Functions'
           description_audience: ''
           description_short: ''
           description: ''
