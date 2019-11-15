@@ -226,8 +226,7 @@ export class UnconnectedStageCard extends Component {
             type={ControlTypes.Stage}
             position={stage.position}
             total={this.props.stagesCount}
-            itemType="Stage"
-            itemName={this.props.stage.name}
+            name={this.props.stage.name}
           />
           <label style={styles.stageLockable}>
             Require teachers to unlock this stage before students in their

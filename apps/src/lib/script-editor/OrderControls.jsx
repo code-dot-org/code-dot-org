@@ -22,8 +22,7 @@ class OrderControls extends Component {
     type: PropTypes.oneOf(Object.keys(ControlTypes)).isRequired,
     position: PropTypes.number.isRequired,
     total: PropTypes.number.isRequired,
-    itemType: PropTypes.string.isRequired,
-    itemName: PropTypes.string.isRequired
+    name: PropTypes.string.isRequired
   };
 
   state = {
@@ -57,9 +56,9 @@ class OrderControls extends Component {
 
   render() {
     const {showConfirm} = this.state;
-    const {itemType, itemName} = this.props;
+    const {type, name} = this.props;
     const text =
-      `Are you sure you want to delete the ${itemType} named "${itemName}" ` +
+      `Are you sure you want to delete the ${type} named "${name}" ` +
       'and all its contents?';
     return (
       <div style={styles.controls}>
