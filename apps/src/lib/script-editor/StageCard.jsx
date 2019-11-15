@@ -87,21 +87,26 @@ export class UnconnectedStageCard extends Component {
   };
 
   handleDragStart = (position, {clientY}) => {
-    const startingPositions = this.props.stage.levels.map(level => {
-      const metrics = this.metrics[level.position];
-      return metrics.top + metrics.height / 2;
+    // The bounding boxes in this.metrics will be stale if the user scrolled the
+    // page since the last time this component was updated. Therefore, force the
+    // component to rerender so that this.metrics will be up to date.
+    this.forceUpdate(() => {
+      const startingPositions = this.props.stage.levels.map(level => {
+        const metrics = this.metrics[level.position];
+        return metrics.top + metrics.height / 2;
+      });
+      this.setState({
+        drag: position,
+        dragHeight: this.metrics[position].height + levelTokenMargin,
+        initialClientY: clientY,
+        initialScroll: document.body.scrollTop,
+        newPosition: position,
+        startingPositions
+      });
+      window.addEventListener('selectstart', this.preventSelect);
+      window.addEventListener('mousemove', this.handleDrag);
+      window.addEventListener('mouseup', this.handleDragStop);
     });
-    this.setState({
-      drag: position,
-      dragHeight: this.metrics[position].height + levelTokenMargin,
-      initialClientY: clientY,
-      initialScroll: document.body.scrollTop,
-      newPosition: position,
-      startingPositions
-    });
-    window.addEventListener('selectstart', this.preventSelect);
-    window.addEventListener('mousemove', this.handleDrag);
-    window.addEventListener('mouseup', this.handleDragStop);
   };
 
   handleDrag = ({clientY}) => {
