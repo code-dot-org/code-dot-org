@@ -21,7 +21,7 @@ class ScaryChangeDetector
           @deleted << filename
         end
       end
-      change = `git diff --cached --raw`
+      change = `git diff --cached --unified=0`
       puts change
       puts change.include? "add_column"
       puts change.include? "create_table"
