@@ -136,6 +136,9 @@ export class UnconnectedStageCard extends Component {
     this.props.setTargetStage(targetStagePos);
   };
 
+  // Given a clientY value of a location on the screen, find the StageCard
+  // corresponding to that location, and return the position of the
+  // corresponding stage within the script.
   getTargetStage = y => {
     const {stageMetrics} = this.props;
     const stagePos = Object.keys(stageMetrics).find(stagePos => {
@@ -148,6 +151,7 @@ export class UnconnectedStageCard extends Component {
   handleDragStop = () => {
     const {stage, targetStagePos} = this.props;
     if (targetStagePos === stage.position) {
+      // When dragging within a stage, reorder the level within that stage.
       if (this.state.draggedLevelPos !== this.state.newPosition) {
         this.props.reorderLevel(
           stage.position,
@@ -156,6 +160,7 @@ export class UnconnectedStageCard extends Component {
         );
       }
     } else if (targetStagePos) {
+      // When dragging between stages, move it to the end of the new stage.
       this.props.moveLevelToStage(
         stage.position,
         this.state.draggedLevelPos,

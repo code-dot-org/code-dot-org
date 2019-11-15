@@ -167,7 +167,7 @@ class FlexGroup extends Component {
     return s;
   }
 
-  // To be populated with the bounding client rect of each level token element.
+  // To be populated with the bounding client rect of each StageCard element.
   stageMetrics = {};
 
   render() {
