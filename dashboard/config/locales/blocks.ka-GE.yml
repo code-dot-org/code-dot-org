@@ -340,6 +340,14 @@ ka:
             '"bass"': დაბალი
             '"mid"': საშუალო
             '"treble"': მაღალი
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': ბრილიანტი
+            '"s"': s
+            '"w"': w
+            '"x"': x
+            '"y"': y
       Dancelab_whenKey:
         options:
           KEY:

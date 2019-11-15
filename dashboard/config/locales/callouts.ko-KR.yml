@@ -87,8 +87,6 @@ ko-KR:
       CourseD_Dance_Party_11:
         dance_callout_11_a: 새 블록!
         dance_callout_11_b: 새 블록!
-      Dance_2019_01:
-        dance_callout_01: 이 블록을 프로그램에 추가하세요!
       Dance_2019_04:
         dance_callout_02: 이 블록을 프로그램에 추가하세요!
       Dance_2019_06:
@@ -96,7 +94,8 @@ ko-KR:
       Dance_2019_07:
         setprop_hint: 새 블록!
       Dance_2019_09:
-        new_block_1: 새 블록!
+        new_block_3: 새 블록!
+        new_block_4: 새 블록!
       Dance_Party_01:
         dance_callout_01: 이 블록을 프로그램에 추가하세요!
       Dance_Party_02:
