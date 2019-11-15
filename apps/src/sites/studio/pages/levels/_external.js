@@ -20,8 +20,14 @@ $(document).ready(() => {
   // make milestone post
   postMilestoneForPageLoad();
 
-  // handle click on continue (results in navigating to next puzzle)
-  $('.submitButton').click(function() {
+  // Handle click on the continue button (results in navigating to next puzzle)
+  // Note: We're using this pattern instead of
+  //   $('.submitButton').click(...)
+  // on purpose, because .submitButton may not exist yet when this code is run.
+  // By using a static ancestor jQuery will automatically bind the event handler later
+  // when .submitButton is added to the DOM.
+  // @see https://stackoverflow.com/q/203198
+  $('.full_container').on('click', '.submitButton', function() {
     onContinue();
   });
 });
