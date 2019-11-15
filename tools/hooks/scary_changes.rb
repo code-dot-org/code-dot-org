@@ -41,7 +41,7 @@ class ScaryChangeDetector
 
   def detect_new_table_or_new_column
     changes = @all.grep(/^dashboard\/db\/migrate\//) # add_column or create_table
-    return if changes.empty? && @changed_lines.include?("add_column") && @changed_lines.include?("create_table")
+    return if changes.empty? && !@changed_lines.include?("add_column") && !@changed_lines.include?("create_table")
 
     puts red <<-EOS
 
