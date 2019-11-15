@@ -189,6 +189,8 @@ class FlexGroup extends Component {
                 type={ControlTypes.Group}
                 position={afterStage}
                 total={Object.keys(groups).length}
+                itemType="Flex Category"
+                itemName={group || '(none)'}
               />
             </div>
             <div style={styles.groupBody}>
