@@ -6,7 +6,6 @@ class ScaryChangeDetector
   include CdoCli
 
   def initialize
-    puts "doing"
     @added = []
     @deleted = []
     @modified = []
@@ -23,7 +22,6 @@ class ScaryChangeDetector
         end
       end
     end
-    puts @added
     @all = @added + @deleted + @modified
   end
 
@@ -44,9 +42,13 @@ class ScaryChangeDetector
     changes = @all.grep(/^dashboard\/db\/migrate\//) # add_column or create_table
     return if changes.empty?
 
-    puts "Looks like you are creating a table or adding a column."
+    puts red <<-EOS
+
+        Looks like you are creating a table or adding a column.
+        Do you have all the indexes needed for this change?
+
+    EOS
     puts changes.join("\n")
-    puts "Do you have all the indexes needed for this change?"
   end
 
   def detect_missing_yarn_lock
@@ -63,7 +65,6 @@ class ScaryChangeDetector
   end
 
   def detect_special_files
-    puts @all
     changes = @all.grep(/locals.yml$/)
     unless changes.empty?
       puts red <<-EOS
