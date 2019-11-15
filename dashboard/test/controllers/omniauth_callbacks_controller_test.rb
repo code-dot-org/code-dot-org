@@ -1101,7 +1101,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal User.last.id, signed_in_user_id
   end
 
-  test 'sign_up_clever: email taken redirect if any users are already using your email address' do
+  test 'sign_up_clever: email conflict redirect if any users are already using your email address' do
     email = 'alreadytaken@example.com'
     create :student, email: email
 
@@ -1115,7 +1115,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     refute_creates(User) do
       get :clever
     end
-    assert_redirected_to "/users/sign_in?providerNotLinked=clever&email=#{email}"
+    assert_redirected_to users_email_conflict_path({provider: "clever", email: email})
   end
 
   test 'connect_provider: can connect multiple auth options with the same email to the same user' do
