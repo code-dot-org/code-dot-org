@@ -270,6 +270,7 @@ export default class CensusMapReplacement extends Component {
         ]
       });
 
+      _this.map.addControl(new mapboxgl.FullscreenControl(), 'top-right');
       _this.map.addControl(
         new mapboxgl.NavigationControl({showCompass: false}),
         'bottom-right'
