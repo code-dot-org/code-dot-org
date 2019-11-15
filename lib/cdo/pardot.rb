@@ -114,14 +114,18 @@ class Pardot
     {num_inserts: num_inserts, num_updates: num_updates}
   end
 
+  def self.update_pardot_ids_of_new_contacts
+    update_pardot_ids(:contact_rollups)
+  end
+
   # Query Pardot for recently created contacts and retrieve the Pardot-side ID
   # for that contact and store in our DB. We need Pardot's ID to be able to
   # update the contact.
-  def self.update_pardot_ids_of_new_contacts
+  def self.update_pardot_ids(table)
     # Find the highest Pardot ID of contacts stored in our database. Any newer
     # contacts are guaranteed to have a higher ID. (Not stated in docs, but
     # confirmed by Pardot support who said this was the best way to do this.)
-    id_max = PEGASUS_DB[:contact_rollups].max(:pardot_id) || 0
+    id_max = PEGASUS_DB[table].max(:pardot_id) || 0
 
     # Run repeated requests querying for prospects above our highest known
     # Pardot ID. Up to 200 prospects will be returned at a time by Pardot, so
@@ -144,7 +148,7 @@ class Pardot
         email = node.xpath("email").text
         results_in_response += 1
         id_max = id
-        PEGASUS_DB[:contact_rollups].where(email: email).update(pardot_id: id)
+        PEGASUS_DB[table].where(email: email).update(pardot_id: id)
       end
 
       log "Updated Pardot IDs in our database for #{results_in_response} contacts."
@@ -160,7 +164,7 @@ class Pardot
     # will be missing the pardot_sync_at time so we don't know how old the data
     # is. In this corner case, set the pardot_sync_at time to the start of the
     # epoch which will force a sync of this contact from our DB.
-    PEGASUS_DB[:contact_rollups].
+    PEGASUS_DB[table].
       where(pardot_sync_at: nil).
       exclude(pardot_id: nil).
       update(pardot_sync_at: Time.utc(1970, 1, 1, 0, 0))

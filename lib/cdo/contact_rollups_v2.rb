@@ -286,10 +286,15 @@ class ContactRollupsV2
 
   def self.sync_to_pardot
     # Get pardot id for new emails
+    Pardot.update_pardot_ids(:crv2_all)
+
     # Prepare data to sync. A package is a day worth of data?
     prepare_data_to_sync
+
     # Sync new changes to pardot
+
     # Get pardot id for the new inserted emails
+    Pardot.update_pardot_ids(:crv2_all)
   end
 
   def self.prepare_data_to_sync
