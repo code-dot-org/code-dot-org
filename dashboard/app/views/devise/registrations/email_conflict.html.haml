@@ -1,0 +1,20 @@
+%h1
+  = "Good news! You already have a Code.org account that uses #{params[:email]}"
+
+#signin
+
+  - link_authentication_path = omniauth_authorize_path(User, params[:provider])
+
+  %p
+    = "Please sign in and we’ll link your #{I18n.t(params[:provider], scope: "auth")} profile."
+
+  %p
+    = link_to new_user_session_path({user_return_to: link_authentication_path}) do
+      %button= I18n.t('nav.user.signin')
+
+  %p
+    = "Not your email? Want to create a new account with a different email? We will also link your #{I18n.t(params[:provider], scope: "auth")} profile if you choose to create a new account."
+
+  %p
+    = link_to new_user_registration_path({user_return_to: link_authentication_path}) do
+      %button.blue-button= I18n.t('nav.user.signup')
