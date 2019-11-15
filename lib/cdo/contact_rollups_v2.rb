@@ -1,6 +1,8 @@
 # Test in rails console:
 # load "../lib/cdo/contact_rollups_v2.rb"; ContactRollupsV2.test
 # load "../lib/cdo/contact_rollups_v2.rb"; ContactRollupsV2.main
+# load "../lib/cdo/pardot.rb"; Pardot.request_pardot_api_key;
+# load "../lib/cdo/pardot.rb"; Pardot.update_pardot_ids(:crv2_all, 80999343)
 
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require src_dir 'database'
@@ -286,7 +288,8 @@ class ContactRollupsV2
 
   def self.sync_to_pardot
     # Get pardot id for new emails
-    Pardot.update_pardot_ids(:crv2_all)
+    # TODO: remove max_pardot_id in function signature
+    Pardot.update_pardot_ids(:crv2_all, 80_999_343)
 
     # Prepare data to sync. A package is a day worth of data?
     prepare_data_to_sync
@@ -294,7 +297,7 @@ class ContactRollupsV2
     # Sync new changes to pardot
 
     # Get pardot id for the new inserted emails
-    Pardot.update_pardot_ids(:crv2_all)
+    Pardot.update_pardot_ids(:crv2_all, 80_999_343)
   end
 
   def self.prepare_data_to_sync

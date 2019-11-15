@@ -121,11 +121,11 @@ class Pardot
   # Query Pardot for recently created contacts and retrieve the Pardot-side ID
   # for that contact and store in our DB. We need Pardot's ID to be able to
   # update the contact.
-  def self.update_pardot_ids(table)
+  def self.update_pardot_ids(table, max_pardot_id = nil)
     # Find the highest Pardot ID of contacts stored in our database. Any newer
     # contacts are guaranteed to have a higher ID. (Not stated in docs, but
     # confirmed by Pardot support who said this was the best way to do this.)
-    id_max = PEGASUS_DB[table].max(:pardot_id) || 0
+    id_max = max_pardot_id || PEGASUS_DB[table].max(:pardot_id) || 0
 
     # Run repeated requests querying for prospects above our highest known
     # Pardot ID. Up to 200 prospects will be returned at a time by Pardot, so
