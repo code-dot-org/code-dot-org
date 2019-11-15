@@ -270,6 +270,7 @@ module SharedConstants
       "insertItem": null,
       "appendItem": null,
       "removeItem": null,
+      "join": null,
 
       // Functions
       "functionParams_none": null,
