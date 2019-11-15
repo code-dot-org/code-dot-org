@@ -31,7 +31,7 @@ const trial = async function(trainSize, testSize, trainer, labelFn) {
 
   const fieldsAndValues = [];
   for (var i = 0; i < trainer.svm.w.length; i++) {
-    fieldsAndValues.push([testOcean[0].dataFields[i], Math.abs(trainer.svm.w[i])]);
+    fieldsAndValues.push([testOcean[0].dataFields[i], Math.abs(trainer.svm.w[i]), Math.abs(trainer.svm.w[i])/trainer.svm.w[i]]);
   }
   fieldsAndValues.sort((a, b) => b[1] - a[1]);
 
@@ -214,6 +214,7 @@ describe('Model quality test', () => {
     }
   });
 */
+/*
   test('test eyes', async () => {
     const partData = fishData.eyes;
     const partKey = PartKey.EYE;
@@ -234,6 +235,7 @@ describe('Model quality test', () => {
       analyzeConfusionMatrix(trainSize, result);
     }
   });
+  */
 /*
   test('test mouths', async () => {
     const partData = fishData.mouths;
@@ -275,6 +277,7 @@ describe('Model quality test', () => {
       analyzeConfusionMatrix(trainSize, result);
     }
   });
+*/
 
   test('test mouth expressions', async () => {
     const partKey = PartKey.MOUTH;
@@ -298,7 +301,7 @@ describe('Model quality test', () => {
       analyzeConfusionMatrix(trainSize, result);
     }
   });
-
+/*
   test('test shark teeth', async () => {
     const partData = fishData.mouths;
     const partKey = PartKey.MOUTH;
