@@ -22,6 +22,7 @@ class ScaryChangeDetector
         end
       end
     end
+    puts @added
     @all = @added + @deleted + @modified
   end
 
