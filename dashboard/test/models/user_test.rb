@@ -4160,6 +4160,7 @@ class UserTest < ActiveSupport::TestCase
 
     refute migrated_teacher.reload.admin?
     assert migrated_teacher.errors[:admin].length == 2
+    assert_equal ["Admin must have Google OAuth", "Admin email must have code.org domain"], migrated_teacher.errors.full_messages
   end
 
   test 'cannot grant admin role when not a codeorg account' do
@@ -4170,6 +4171,8 @@ class UserTest < ActiveSupport::TestCase
     end
 
     refute migrated_teacher.reload.admin?
+    assert migrated_teacher.errors[:admin].length == 1
+    assert_equal ["Admin email must have code.org domain"], migrated_teacher.errors.full_messages
   end
 
   test 'cannot grant admin role when unmigrated teacher account' do
@@ -4181,5 +4184,7 @@ class UserTest < ActiveSupport::TestCase
     end
 
     refute unmigrated_teacher_without_password.reload.admin?
+    assert unmigrated_teacher_without_password.errors[:admin].length == 3
+    assert_equal ["Admin must be a migrated user", "Admin must have Google OAuth", "Admin email must have code.org domain"], unmigrated_teacher_without_password.errors.full_messages
   end
 end

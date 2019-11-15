@@ -513,7 +513,7 @@ class User < ActiveRecord::Base
     errors.add(:admin, 'must be a migrated user') unless migrated?
 
     google_oauth = google_oauth_authentications
-    errors.add(:admin, 'must have google_oauth2 as an authentication option') unless google_oauth&.present?
+    errors.add(:admin, 'must have Google OAuth') unless google_oauth&.present?
 
     errors.add(:admin, 'email must have code.org domain') unless google_oauth.any?(&:codeorg_email?)
   end
