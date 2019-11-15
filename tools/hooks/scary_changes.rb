@@ -21,6 +21,9 @@ class ScaryChangeDetector
           @deleted << filename
         end
       end
+      `git diff --cached`.split("\n").each do |change|
+        puts change
+      end
     end
     @all = @added + @deleted + @modified
   end
