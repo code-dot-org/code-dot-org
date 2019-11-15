@@ -146,6 +146,9 @@ a:hover {
   }
 
   .img-container {
+    /* This background is only visible on mobile width.  It's covered by an image
+     * on wider widths. */
+    background: url(/images/dance-hoc/dance_party_2019_tutorial_hero.png);
     margin: 5px;
     border-radius: 5px;
     background-size: cover;
