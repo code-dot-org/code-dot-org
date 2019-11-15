@@ -214,6 +214,16 @@ const styles = {
     textAlign: 'center',
     lineHeight: '140%'
   },
+  guideLeft: {
+    float: 'left'
+  },
+  guideRight: {
+    float: 'right'
+  },
+  guideImage: {
+    width: '70%',
+    paddingTop: 15
+  },
   guideTypingText: {
     position: 'absolute',
     padding: 15
@@ -780,6 +790,16 @@ class Guide extends React.Component {
   render() {
     const currentGuide = getCurrentGuide();
 
+    // We migth show an image on the left and text on the right.  If there's
+    // no image, it's all right.
+    let leftWidth, rightWidth;
+    if (currentGuide.image) {
+      leftWidth = '30%';
+      rightWidth = '70%';
+    } else {
+      rightWidth = '100%';
+    }
+
     return (
       <div>
         {!!currentGuide && (
@@ -795,22 +815,30 @@ class Guide extends React.Component {
             <div
               style={{...styles.guide, ...styles[`guide${currentGuide.style}`]}}
             >
-              <div style={styles.guideTypingText}>
-                <Typist
-                  avgTypingDelay={35}
-                  stdTypingDelay={15}
-                  cursor={{show: false}}
-                  onTypingDone={this.onShowing}
-                >
+              {currentGuide.image && (
+                <div style={{...styles.guideLeft, width: leftWidth}}>
+                  <img src={currentGuide.image} style={styles.guideImage} />
+                </div>
+              )}
+
+              <div style={{...styles.guideRight, width: rightWidth}}>
+                <div style={styles.guideTypingText}>
+                  <Typist
+                    avgTypingDelay={35}
+                    stdTypingDelay={15}
+                    cursor={{show: false}}
+                    onTypingDone={this.onShowing}
+                  >
+                    {currentGuide.textFn
+                      ? currentGuide.textFn(getState())
+                      : currentGuide.text}
+                  </Typist>
+                </div>
+                <div style={styles.guideFinalText}>
                   {currentGuide.textFn
                     ? currentGuide.textFn(getState())
                     : currentGuide.text}
-                </Typist>
-              </div>
-              <div style={styles.guideFinalText}>
-                {currentGuide.textFn
-                  ? currentGuide.textFn(getState())
-                  : currentGuide.text}
+                </div>
               </div>
               {getState().guideShowing && currentGuide.arrow !== 'none' && (
                 <div>
