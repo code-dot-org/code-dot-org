@@ -45,7 +45,7 @@ class ScaryChangeDetector
     puts red <<-EOS
 
         Looks like you are creating a table or adding a column.
-#{changes.join("\n")}
+        #{changes.join("\n")}
         Do you have all the indexes needed for this change?
 
     EOS
