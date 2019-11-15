@@ -3628,11 +3628,6 @@ is-IS:
           -   Eftir 6 takta verður dansarinn að vera að dansa öðruvísi en hann gerði eftir 4 takta.
 
           -   Borðið endar eftir 11 takta.\*
-      Dance_2019_07:
-        challenges: |-
-          **Valfrjáls áskorun**
-
-          -   Prófaðu að breyta öðrum eiginleikum (breidd, hæð, snúningi, ...)
       Dance_Party_01:
         validation: |-
           **Hvernig klára ég þetta borð?**

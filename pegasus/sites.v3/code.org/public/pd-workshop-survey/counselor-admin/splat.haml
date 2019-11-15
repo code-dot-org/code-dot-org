@@ -25,11 +25,6 @@ title: "Workshop Survey for Counselors and Administrators"
   # We can't access workshop.course_name here, but follow the same pattern anyway for consistency.
   course_name = course == 'Admin' ? 'Administrator' : 'Counselor'
 
-  def local_view(name, options = {})
-    options[:form] = PdWorkshopSurveyCounselorAdmin
-    view "pd_survey_controls/#{name.to_s}", options
-  end
-
 :javascript
   window.pdWorkshopSurvey = {
     enrollmentCode: "#{enrollment_code}"
@@ -65,7 +60,8 @@ title: "Workshop Survey for Counselors and Administrators"
 
     .main-section
       .form-group
-        = local_view :multi_select,
+        = view "pd_survey_controls/multi_select",
+          form: PdWorkshopSurveyCounselorAdmin,
           name: 'how_heard_ss[]',
           label: 'How did you hear about this workshop? (select all that apply)'
       .form-group{id: 'how-heard-other-wrapper', style: 'display: none;'}
@@ -76,7 +72,8 @@ title: "Workshop Survey for Counselors and Administrators"
           %input.form-control{name: 'how_heard_other_s', placeholder: 'Other', type: 'text'}
 
       .form-group
-        = local_view :single_select,
+        = view "pd_survey_controls/single_select",
+          form: PdWorkshopSurveyCounselorAdmin,
           name: 'received_clear_communication_s',
           label: 'I received clear communication about when and where the workshop would take place.'
 
@@ -104,7 +101,9 @@ title: "Workshop Survey for Counselors and Administrators"
           label: 'This professional development has changed my opinion about the value of computer science.'
         }]
 
-      = local_view :agree_scale_select_table, items: agree_scale_questions
+      = view "pd_survey_controls/agree_scale_select_table",
+          form: PdWorkshopSurveyCounselorAdmin,
+          items: agree_scale_questions
 
       .form-group
         :ruby
@@ -112,17 +111,20 @@ title: "Workshop Survey for Counselors and Administrators"
             On a scale from 1-6, with 1 being not at all interested and 6 being extremely interested,
             how interested were you in participating in this PD session prior to arriving?
           )
-        = local_view :single_select,
+        = view "pd_survey_controls/single_select",
+          form: PdWorkshopSurveyCounselorAdmin,
           name: 'how_interested_before_s',
           label: how_interested_before_label
 
       .form-group
-        = local_view :single_select,
+        = view "pd_survey_controls/single_select",
+          form: PdWorkshopSurveyCounselorAdmin,
           name: 'pacing_s',
           label: 'The pacing for this workshop was…'
 
       .form-group
-        = local_view :single_select,
+        = view "pd_survey_controls/single_select",
+          form: PdWorkshopSurveyCounselorAdmin,
           name: 'attendee_type_s',
           label: 'I am an:'
 
@@ -152,17 +154,22 @@ title: "Workshop Survey for Counselors and Administrators"
       }]
 
     .admin-section{style: 'display: none;'}
-      = local_view :agree_scale_select_table, items: admin_agree_scale_questions + all_agree_scale_questions
+      = view "pd_survey_controls/agree_scale_select_table",
+          form: PdWorkshopSurveyCounselorAdmin,
+          items: admin_agree_scale_questions + all_agree_scale_questions
 
     .counselor-section{style: 'display: none;'}
-      = local_view :agree_scale_select_table, items: counselor_agree_scale_questions + all_agree_scale_questions
+      = view "pd_survey_controls/agree_scale_select_table",
+          form: PdWorkshopSurveyCounselorAdmin,
+          items: counselor_agree_scale_questions + all_agree_scale_questions
 
     .main-section
       .form-group
-      = local_view :multi_select,
-        name: 'interested_in_offering_ss[]',
-        label: 'I’m interested in offering the following programs at my school site/district next year (check all that apply):',
-        required: false
+      = view "pd_survey_controls/multi_select",
+          form: PdWorkshopSurveyCounselorAdmin,
+          name: 'interested_in_offering_ss[]',
+          label: 'I’m interested in offering the following programs at my school site/district next year (check all that apply):',
+          required: false
 
       .form-group
         %label.control-label{for: 'things_facilitator_did_well_s'}

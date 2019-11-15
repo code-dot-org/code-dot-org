@@ -147,7 +147,7 @@ class UserPermissionGranteeTest < ActiveSupport::TestCase
   end
 
   test 'grant admin permission logs to infrasecurity' do
-    teacher = create :teacher
+    teacher = create :teacher, :google_sso_provider
 
     UserPermissionGrantee.stubs(:should_log?).returns(true)
     ChatClient.
