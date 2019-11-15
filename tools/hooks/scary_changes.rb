@@ -38,6 +38,16 @@ class ScaryChangeDetector
       "the code that adds it to scripts."
   end
 
+  def detect_new_table_or_new_column
+    puts @added
+    changes = @added.grep(/^dashboard\/db\/migrate\//) # add_column or create_table
+    return if changes.empty?
+
+    puts "Looks like you are creating a table or adding a column."
+    puts changes.join("\n")
+    puts "Do you have all the indexes needed for this change?"
+  end
+
   def detect_missing_yarn_lock
     changed_package_json = @all.include? 'apps/package.json'
     changed_yarn_lock = @all.include? 'apps/yarn.lock'
