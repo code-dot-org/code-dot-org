@@ -266,6 +266,10 @@ class RegistrationsController < Devise::RegistrationsController
       notice: I18n.t('auth.demigration_success')
   end
 
+  def email_conflict
+    render 'email_conflict', params: email_conflict_params
+  end
+
   private
 
   def update_user_email
@@ -420,6 +424,11 @@ class RegistrationsController < Devise::RegistrationsController
         :email_preference_source,
         :email_preference_form_kind,
       )
+  end
+
+  def email_conflict_params
+    params.require(:email)
+    params.require(:provider)
   end
 
   def log_account_deletion_to_firehose(current_user, dependent_users)

@@ -155,6 +155,7 @@ Dashboard::Application.routes.draw do
     get '/users/demigrate_from_multi_auth', to: 'registrations#demigrate_from_multi_auth'
     get '/users/to_destroy', to: 'registrations#users_to_destroy'
     get '/reset_session', to: 'sessions#reset'
+    get '/users/email_conflict', to: 'registrations#email_conflict'
   end
   devise_for :users, controllers: {
     omniauth_callbacks: 'omniauth_callbacks',
