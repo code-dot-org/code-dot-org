@@ -756,6 +756,24 @@ bs:
             '"bass"': basovi
             '"mid"': mid
             '"treble"': trebl
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"hearts_colorful"': Srca
+            '"diamond"': dijamant
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"z"': z
       Dancelab_whenKey:
         text: kada je pritisnuta {KEY} tipka
         options:

@@ -73,8 +73,6 @@ hi-IN:
       CourseD_Dance_Party_11:
         dance_callout_11_a: नई ब्लॉक
         dance_callout_11_b: नई ब्लॉक
-      Dance_2019_01:
-        dance_callout_01: यह ब्लॉक अपने प्रोग्राम में शामिल करें!
       Dance_2019_04:
         dance_callout_02: यह ब्लॉक अपने प्रोग्राम में शामिल करें!
       Dance_2019_06:
@@ -82,7 +80,8 @@ hi-IN:
       Dance_2019_07:
         setprop_hint: नई ब्लॉक
       Dance_2019_09:
-        new_block_1: नई ब्लॉक
+        new_block_3: नई ब्लॉक
+        new_block_4: नई ब्लॉक
       Dance_Party_01:
         dance_callout_01: यह ब्लॉक अपने प्रोग्राम में शामिल करें!
       Dance_Party_02:

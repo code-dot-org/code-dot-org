@@ -237,6 +237,12 @@ az:
           PROPERTY:
             '"scale"': ölçü
             '"height"': hündürlük
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': almaz
+            '"x"': x
+            '"y"': y
       Dancelab_whenKey:
         options:
           KEY:

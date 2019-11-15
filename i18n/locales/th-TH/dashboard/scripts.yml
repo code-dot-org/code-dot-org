@@ -1007,6 +1007,10 @@ th:
             Spelling Bee:
               name: ผึ้งนักสะกดคำ
           description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
+        subgoal-labels-opt-in:
+          stages:
+            Thanks:
+              name: ขอบคุณ
         e-f-ramp:
           stages:
             Building a Foundation:

@@ -768,6 +768,24 @@ sk:
             '"bass"': basy
             '"mid"': stredy
             '"treble"': výšky
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"hearts_colorful"': Srdiečka
+            '"diamond"': diamant
+            '"l"': l
+            '"m"': m
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
       Dancelab_whenKey:
         text: pri stlačení {KEY}
         options:

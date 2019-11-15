@@ -741,6 +741,24 @@ cs:
             '"bass"': basy
             '"mid"': středy
             '"treble"': výšky
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"hearts_colorful"': Srdce
+            '"diamond"': diamant
+            '"l"': l
+            '"m"': m
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
       Dancelab_whenKey:
         text: když je stisknuta {KEY}
         options:

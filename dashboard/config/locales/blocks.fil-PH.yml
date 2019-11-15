@@ -237,6 +237,11 @@ fil:
           PROPERTY:
             '"scale"': sukat
             '"height"': taas
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': diyamante
+            '"x"': x
       Dancelab_whenKey:
         options:
           KEY:

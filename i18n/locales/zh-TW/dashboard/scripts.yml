@@ -5721,3 +5721,11 @@ zh-TW:
           stages:
             new stage:
               name: 新的階段
+        csp4-preview:
+          stages:
+            new stage:
+              name: 新的階段
+            Variables Make:
+              name: 變數的建立
+            Functions Make:
+              name: 函式的建立
