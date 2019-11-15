@@ -793,7 +793,7 @@ class Guide extends React.Component {
     // We migth show an image on the left and text on the right.  If there's
     // no image, it's all right.
     let leftWidth, rightWidth;
-    if (currentGuide.image) {
+    if (currentGuide && currentGuide.image) {
       leftWidth = '30%';
       rightWidth = '70%';
     } else {
