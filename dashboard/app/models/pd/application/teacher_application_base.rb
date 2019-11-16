@@ -201,11 +201,6 @@ module Pd::Application
           TEXT_FIELDS[:other_please_list]
         ],
 
-        taught_in_past: SUBJECTS_TAUGHT_IN_PAST + [
-          TEXT_FIELDS[:other_please_list],
-          "I don't have experience teaching any of these courses"
-        ],
-
         previous_yearlong_cdo_pd: [
           'CS Discoveries',
           'CS Principles',

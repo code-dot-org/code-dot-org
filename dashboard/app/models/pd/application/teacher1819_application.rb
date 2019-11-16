@@ -62,6 +62,18 @@ module Pd::Application
       Pd::Teachercon1819Registration.find_by_pd_application_id(id)
     end
 
+    # @override
+    def self.options
+      super.merge(
+        {
+          taught_in_past: SUBJECTS_TAUGHT_IN_PAST + [
+            TEXT_FIELDS[:other_please_list],
+            "I don't have experience teaching any of these courses"
+          ]
+        }
+      )
+    end
+
     def self.cohort_csv_header(optional_columns)
       columns = [
         'Date Accepted',
