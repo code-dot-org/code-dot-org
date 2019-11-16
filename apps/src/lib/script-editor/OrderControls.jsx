@@ -15,7 +15,7 @@ const styles = {
   }
 };
 
-class OrderControls extends Component {
+export class UnconnectedOrderControls extends Component {
   static propTypes = {
     move: PropTypes.func.isRequired,
     remove: PropTypes.func.isRequired,
@@ -92,7 +92,7 @@ class OrderControls extends Component {
   }
 }
 
-export default connect(
+const OrderControls = connect(
   state => ({}),
   dispatch => ({
     move(type, position, direction) {
@@ -106,4 +106,6 @@ export default connect(
         : dispatch(removeStage(position));
     }
   })
-)(OrderControls);
+)(UnconnectedOrderControls);
+
+export default OrderControls;
