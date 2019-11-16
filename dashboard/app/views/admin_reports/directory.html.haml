@@ -20,7 +20,6 @@
 = link_to t('crud.new_model', model: RegionalPartner.model_name.human), new_regional_partner_path
 
 %h3 Pilot Experiments
-%p
-  = link_to 'CSD Piloters', show_pilot_path(pilot_name: 'csd-piloters')
-%p
-  = link_to 'CSP Piloters', show_pilot_path(pilot_name: 'csp-piloters')
+- Experiment::PILOT_EXPERIMENTS.each do |pilot|
+  %p
+    = link_to pilot[:label], show_pilot_path(pilot_name: pilot[:name])

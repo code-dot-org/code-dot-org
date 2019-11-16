@@ -254,6 +254,7 @@ class CourseOverview extends Component {
             description={script.description}
             assignedSectionId={script.assigned_section_id}
             courseId={id}
+            showAssignButton={showAssignButton}
           />
         ))}
       </div>
