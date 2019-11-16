@@ -7,6 +7,7 @@ import {borderRadius, levelTokenMargin} from './constants';
 import LevelTokenDetails from './LevelTokenDetails';
 import {toggleExpand, removeLevel} from './editorRedux';
 import {levelShape} from './shapes';
+import Dialog from '../../templates/Dialog';
 
 const styles = {
   levelToken: {
@@ -87,6 +88,10 @@ class LevelToken extends Component {
     handleDragStart: PropTypes.func.isRequired
   };
 
+  state = {
+    showConfirm: false
+  };
+
   handleDragStart = e => {
     this.props.handleDragStart(this.props.level.position, e);
   };
@@ -99,12 +104,23 @@ class LevelToken extends Component {
   };
 
   handleRemove = () => {
+    this.setState({showConfirm: true});
+  };
+
+  handleConfirm = () => {
     this.props.removeLevel(this.props.stagePosition, this.props.level.position);
+    this.setState({showConfirm: false});
+  };
+
+  handleClose = () => {
+    this.setState({showConfirm: false});
   };
 
   render() {
     const {draggedLevelPos} = this.props;
     const levelName = this.props.levelKeyList[this.props.level.activeId];
+    const confirmText = `Are you sure you want to delete the level named "${levelName}"?`;
+    const {showConfirm} = this.state;
     const springConfig = {stiffness: 1000, damping: 80};
     return (
       <div>
@@ -177,6 +193,18 @@ class LevelToken extends Component {
             </div>
           )}
         </Motion>
+        {showConfirm && (
+          <Dialog
+            body={confirmText}
+            cancelText="Cancel"
+            confirmText="Delete"
+            confirmType="danger"
+            isOpen={true}
+            handleClose={this.handleClose}
+            onCancel={this.handleClose}
+            onConfirm={this.handleConfirm}
+          />
+        )}
       </div>
     );
   }
