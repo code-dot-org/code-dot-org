@@ -45,10 +45,28 @@ class Experiment < ApplicationRecord
     platformization-partners
   )
 
-  PILOT_EXPERIMENTS = %w(
-    csd-piloters
-    csp-piloters
-  )
+  PILOT_EXPERIMENTS = [
+    {
+      name: 'csd-piloters',
+      label: 'CSD Pilot',
+      allow_joining_via_url: true
+    },
+    {
+      name: 'csp-piloters',
+      label: 'CSP Pilot',
+      allow_joining_via_url: false
+    },
+    {
+      name: 'csp-preview',
+      label: 'CSP Preview',
+      allow_joining_via_url: true
+    },
+    {
+      name: 'denny-science-piloters',
+      label: 'Denny Science Pilot',
+      allow_joining_via_url: true
+    }
+  ]
 
   def self.get_editor_experiment(user)
     LEVEL_EDITOR_EXPERIMENTS.find do |experiment|
