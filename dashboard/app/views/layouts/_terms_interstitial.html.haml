@@ -24,6 +24,7 @@
         = render partial: 'home/privacy_notice'
 
       %br
+      / FND-893 - Stop using markdown in <Label>s
       .left
         = form_for(current_user, url: registration_url('user'), html: {id: 'edit_user'}) do |f|
           .form-group
