@@ -314,6 +314,23 @@ class ContactRollupsV2
     prepare_data_to_sync new_contact_config[:table], new_contact_config[:where_clause]
     Pardot.sync_contacts_with_pardot new_contact_config
 
+    updated_contact_conditions = <<-SQL.squish
+      pardot_id is not null and pardot_sync_at < updated_at
+      and not(email_malformed <=> 1)
+      and not(opt_out <=> 1)
+    SQL
+
+    updated_contact_config = {
+      operation_name: "update",
+      table: :crv2_all,
+      where_clause: updated_contact_conditions,
+      create_prospect_func: :extract_prospect,  # a public class method in Pardot
+      pardot_url: Pardot::PARDOT_BATCH_UPDATE_URL
+    }
+
+    prepare_data_to_sync updated_contact_config[:table], updated_contact_config[:where_clause]
+    Pardot.sync_contacts_with_pardot updated_contact_config
+
     # Get pardot id for the new inserted emails
     Pardot.update_pardot_ids(:crv2_all, max_pardot_id)
   end
@@ -321,6 +338,7 @@ class ContactRollupsV2
   def self.prepare_data_to_sync(table, where_clause)
     PEGASUS_DB_WRITER[table].where(where_clause).each do |row|
       data_to_sync = convert_db_row_to_prospect row
+      p "data_to_sync = #{data_to_sync}"
       PEGASUS_DB_WRITER[:crv2_all].where(email: row[:email]).update(data_to_sync: data_to_sync.to_json)
     end
   end
