@@ -128,17 +128,6 @@ module UsersHelper
     session[ACCT_TAKEOVER_EXPIRATION]&.future?
   end
 
-  def takeover_manager_options_json
-    return {}.to_json unless account_takeover_in_progress?
-
-    {
-      cleverLinkFlag: session[ACCT_TAKEOVER_PROVIDER],
-      userIDToMerge: session[ACCT_TAKEOVER_UID],
-      mergeAuthToken: session[ACCT_TAKEOVER_OAUTH_TOKEN],
-      forceConnect: session[ACCT_TAKEOVER_FORCE_TAKEOVER],
-    }.to_json
-  end
-
   def sign_out_but_preserve_takeover_state
     expiration = session[ACCT_TAKEOVER_EXPIRATION]
     provider = session[ACCT_TAKEOVER_PROVIDER]
