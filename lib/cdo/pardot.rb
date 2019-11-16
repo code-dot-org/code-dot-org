@@ -279,7 +279,9 @@ class Pardot
   # Do special transformation of some fields from database to Pardot
   # @param src [Hash] Hash of database fields we are reading from
   # @param dst [Hash] Hash of Pardot fields we are writing to
-  def self.apply_special_fields(src, dest)
+  def self.apply_special_fields(src_input, dest)
+    src = src_input.symbolize_keys
+
     # special case: if contact has opted out, set the two different Pardot
     # flavors of opted out to true. Also, only ever set this to true, otherwise
     # set no value; never set it back to false. Pardot is the authority on
