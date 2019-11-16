@@ -302,6 +302,8 @@ export class UnconnectedStageCard extends Component {
             />
           )}
         </div>
+        {/* This dialog lives outside LevelToken because moving it inside can
+           interfere with drag and drop or fail to show the modal backdrop. */}
         <RemoveLevelDialog
           stage={stage}
           levelPosToRemove={levelPosToRemove}
