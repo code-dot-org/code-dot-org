@@ -104,6 +104,7 @@ class LevelToken extends Component {
 
   render() {
     const {draggedLevelPos} = this.props;
+    const levelName = this.props.levelKeyList[this.props.level.activeId];
     const springConfig = {stiffness: 1000, damping: 80};
     return (
       <Motion
@@ -138,7 +139,7 @@ class LevelToken extends Component {
               <i className="fa fa-arrows-v" />
             </div>
             <span style={styles.levelTokenName} onMouseDown={this.toggleExpand}>
-              {this.props.levelKeyList[this.props.level.activeId]}
+              {levelName}
               {this.props.level.ids.length > 1 && (
                 <span style={styles.tag}>
                   {this.props.level.ids.length} variants
