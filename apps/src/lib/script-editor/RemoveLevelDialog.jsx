@@ -28,15 +28,15 @@ class RemoveLevelDialog extends Component {
 
   render() {
     const {stage, handleClose, levelPosToRemove} = this.props;
-    let confirmText;
+    let bodyText;
     if (levelPosToRemove) {
       const levelId = stage.levels[levelPosToRemove - 1].activeId;
       const levelName = this.props.levelKeyList[levelId];
-      confirmText = `Are you sure you want to remove the level named "${levelName}" from the script?`;
+      bodyText = `Are you sure you want to remove the level named "${levelName}" from the script?`;
     }
     return (
       <Dialog
-        body={confirmText}
+        body={bodyText}
         cancelText="Cancel"
         confirmText="Delete"
         confirmType="danger"
