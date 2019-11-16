@@ -30,7 +30,7 @@ module.exports = {
       }]
     },
     {
-      test: /\.png$/,
+      test: /\.(png|bin)$/,
       loader: "url-loader",
       options: {
         limit: true, // everything
