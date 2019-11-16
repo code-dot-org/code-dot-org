@@ -161,6 +161,10 @@ module Pd::Application
     def self.options
       super.merge(
         {
+          taught_in_past: SUBJECTS_TAUGHT_IN_PAST + [
+            TEXT_FIELDS[:other_please_list],
+            "I don't have experience teaching any of these courses"
+          ],
           completing_on_behalf_of_someone_else: [YES, NO],
           replace_existing: [
             YES,
