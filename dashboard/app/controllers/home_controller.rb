@@ -88,7 +88,6 @@ class HomeController < ApplicationController
 
   def should_redirect_to_script_overview?
     current_user.student? &&
-    !account_takeover_in_progress? &&
     current_user.can_access_most_recently_assigned_script? &&
     (
       !current_user.user_script_with_most_recent_progress ||
