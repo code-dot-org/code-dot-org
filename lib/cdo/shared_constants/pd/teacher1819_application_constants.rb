@@ -223,5 +223,23 @@ module Pd
       no_explain: "No (Please Explain):".freeze,
       no_pay_fee: "No, my school or I will not be able to pay the summer workshop program fee.".freeze,
     }.freeze
+
+    SUBJECTS_TAUGHT_IN_PAST = [
+      'CS Fundamentals',
+      'CS in Algebra',
+      'CS in Science',
+      'CS Discoveries',
+      'CS Principles (intro or AP-level)',
+      'AP CS A',
+      'Beauty and Joy of Computing',
+      'Code HS',
+      'Edhesive',
+      'Exploring Computer Science',
+      'Mobile CSP',
+      'NMSI',
+      'Project Lead the Way',
+      'Robotics',
+      'ScratchEd'
+    ].freeze
   end
 end
