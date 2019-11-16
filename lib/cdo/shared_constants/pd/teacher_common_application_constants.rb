@@ -7,15 +7,6 @@ module Pd
       string.gsub(/\n\s*/, ' ')
     end
 
-    BASE_SECTION_HEADERS = {
-      section_1_about_you: 'About You',
-      section_2_your_school: 'Your School',
-      section_3_choose_your_program: 'Choose Your Program',
-      section_4_summer_workshop: 'Summer Workshop',
-      section_5_submission: 'Submission',
-      detail_view_principal_approval: 'Principal Approval'
-    }.freeze
-
     BASE_PAGE_LABELS = {
       section_1_about_you: {
         country: 'Country',
