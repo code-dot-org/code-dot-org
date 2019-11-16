@@ -3,7 +3,7 @@
 
 #signin
 
-  - link_authentication_path = omniauth_authorize_path(User, params[:provider])
+  - link_authentication_path = connect_authentication_option_path(provider: params[:provider])
 
   %p
     = I18n.t('auth.email_conflict.sign_in', provider: I18n.t(params[:provider], scope: "auth"))
