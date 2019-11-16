@@ -131,6 +131,11 @@ module Pd
       }
     }.freeze
 
+    LABEL_OVERRIDES = {
+      program: 'Which professional learning program would you like to join for the 2020-21 school year?',
+      cs_how_many_minutes: 'How many minutes will your class last?'
+    }.freeze
+
     CSV_LABELS = {
       teacher: {
         date_applied: "Date Applied",
@@ -212,11 +217,6 @@ module Pd
         student_tr_count: "Percentage of student enrollment by race - Two or more races (NCES data)",
       }
     }
-
-    LABEL_OVERRIDES = {
-      program: 'Which professional learning program would you like to join for the 2020-21 school year?',
-      cs_how_many_minutes: 'How many minutes will your class last?'
-    }.freeze
 
     MULTI_ANSWER_QUESTION_FIELDS = {
       school_name: {principal: :principal_school_name},
