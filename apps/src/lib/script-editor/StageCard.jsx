@@ -9,6 +9,7 @@ import {
   reorderLevel,
   moveLevelToStage,
   addLevel,
+  removeLevel,
   setStageLockable,
   setFlexCategory
 } from './editorRedux';
@@ -61,6 +62,7 @@ export class UnconnectedStageCard extends Component {
     reorderLevel: PropTypes.func.isRequired,
     moveLevelToStage: PropTypes.func.isRequired,
     addLevel: PropTypes.func.isRequired,
+    removeLevel: PropTypes.func.isRequired,
     setStageLockable: PropTypes.func.isRequired,
     stagesCount: PropTypes.number.isRequired,
     stage: PropTypes.object.isRequired,
@@ -183,6 +185,10 @@ export class UnconnectedStageCard extends Component {
     this.props.addLevel(this.props.stage.position);
   };
 
+  handleRemoveLevel = levelPos => {
+    this.props.removeLevel(this.props.stage.position, levelPos);
+  };
+
   handleEditFlexCategory = () => {
     this.setState({
       editingFlexCategory: true
@@ -256,6 +262,7 @@ export class UnconnectedStageCard extends Component {
             draggedLevelPos={level.position === draggedLevelPos}
             delta={this.state.currentPositions[level.position - 1] || 0}
             handleDragStart={this.handleDragStart}
+            removeLevel={this.handleRemoveLevel}
           />
         ))}
         <div style={styles.bottomControls}>
@@ -301,6 +308,7 @@ export default connect(
     reorderLevel,
     moveLevelToStage,
     addLevel,
+    removeLevel,
     setStageLockable,
     setFlexCategory
   }
