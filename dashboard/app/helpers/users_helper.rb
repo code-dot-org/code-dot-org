@@ -115,14 +115,6 @@ module UsersHelper
     )
   end
 
-  def begin_account_takeover(provider:, uid:, oauth_token:, force_takeover:)
-    session[ACCT_TAKEOVER_EXPIRATION] = 5.minutes.from_now
-    session[ACCT_TAKEOVER_PROVIDER] = provider
-    session[ACCT_TAKEOVER_UID] = uid
-    session[ACCT_TAKEOVER_OAUTH_TOKEN] = oauth_token
-    session[ACCT_TAKEOVER_FORCE_TAKEOVER] = force_takeover
-  end
-
   def clear_takeover_session_variables
     return if session.empty?
     session.delete ACCT_TAKEOVER_EXPIRATION
