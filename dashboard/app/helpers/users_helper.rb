@@ -115,15 +115,6 @@ module UsersHelper
     )
   end
 
-  def clear_takeover_session_variables
-    return if session.empty?
-    session.delete ACCT_TAKEOVER_EXPIRATION
-    session.delete ACCT_TAKEOVER_PROVIDER
-    session.delete ACCT_TAKEOVER_UID
-    session.delete ACCT_TAKEOVER_OAUTH_TOKEN
-    session.delete ACCT_TAKEOVER_FORCE_TAKEOVER
-  end
-
   def account_takeover_in_progress?
     session[ACCT_TAKEOVER_EXPIRATION]&.future?
   end

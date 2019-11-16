@@ -54,7 +54,6 @@ class HomeController < ApplicationController
         redirect_to '/home'
       end
     else
-      clear_takeover_session_variables
       redirect_to '/courses'
     end
   end
