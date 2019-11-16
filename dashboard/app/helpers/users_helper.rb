@@ -7,12 +7,6 @@ module UsersHelper
   include ApplicationHelper
   include SharedConstants
 
-  ACCT_TAKEOVER_EXPIRATION = 'account_takeover_expiration'
-  ACCT_TAKEOVER_PROVIDER = 'clever_link_flag'
-  ACCT_TAKEOVER_UID = 'clever_takeover_id'
-  ACCT_TAKEOVER_OAUTH_TOKEN = 'clever_takeover_token'
-  ACCT_TAKEOVER_FORCE_TAKEOVER = 'force_clever_takeover'
-
   # Summarize a user and their progress within a certain script.
   # Example return value:
   # {
