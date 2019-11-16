@@ -10,6 +10,7 @@
   %h1= @page_title
 
   = form_for(@user, url: registration_path(@user), html: {class: "finish-signup"}) do |f|
+    -# FND-893 - Stop using markdown in <Label>s
     %div#instructions
       - if @user.provider.present?
         - provider = t("auth.#{@user.provider}")
@@ -64,6 +65,7 @@
           = ff.hidden_field :country
           = ff.hidden_field :full_address
 
+    -# FND-893 - Stop using markdown in <Label>s
     .checkbox
       = f.label :terms_of_service_version, {class: 'terms'} do
         = f.check_box :terms_of_service_version, {style: "margin-right: 1em"}, User::TERMS_OF_SERVICE_VERSIONS.last
