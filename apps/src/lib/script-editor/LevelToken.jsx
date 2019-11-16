@@ -140,6 +140,7 @@ class LevelToken extends Component {
                   shadow: 0
                 }
           }
+          key={this.props.level.position}
         >
           {// Use react-motion to interpolate the following values and create
           // smooth transitions.
