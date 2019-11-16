@@ -431,7 +431,7 @@ class Homepage
 
   def self.get_dance_stars
     stars = [
-      "Katy Perry", "Lil Nas X and Billy Ray Cyrus", "Jonas Brothers", "Panic! At the Disco",
+      "Katy Perry", "Lil Nas X (ft. Billy Ray Cyrus)", "Jonas Brothers", "Panic! At The Disco",
       "Shawn Mendes", "Nicki Minaj", "Pedro Capó", "Francesco Gabbani", "Sia",
       "A-ha", "Ariana Grande", "Avicii and Aloe Blacc", "Calvin Harris",
       "Carly Rae Jepsen", "Ciara", "Coldplay", "Ed Sheeran", "Imagine Dragons",
