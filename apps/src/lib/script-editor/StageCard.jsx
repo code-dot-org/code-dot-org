@@ -15,6 +15,7 @@ import {
 } from './editorRedux';
 import FlexCategorySelector from './FlexCategorySelector';
 import color from '../../util/color';
+import Dialog from '../../templates/Dialog';
 
 const styles = {
   checkbox: {
@@ -69,7 +70,8 @@ export class UnconnectedStageCard extends Component {
     stageMetrics: PropTypes.object.isRequired,
     setFlexCategory: PropTypes.func.isRequired,
     setTargetStage: PropTypes.func.isRequired,
-    targetStagePos: PropTypes.number
+    targetStagePos: PropTypes.number,
+    levelKeyList: PropTypes.object.isRequired
   };
 
   /**
@@ -84,7 +86,8 @@ export class UnconnectedStageCard extends Component {
     initialClientY: null,
     newPosition: null,
     startingPositions: null,
-    editingFlexCategory: false
+    editingFlexCategory: false,
+    levelPosToRemove: null
   };
 
   handleDragStart = (position, {clientY}) => {
@@ -186,7 +189,19 @@ export class UnconnectedStageCard extends Component {
   };
 
   handleRemoveLevel = levelPos => {
-    this.props.removeLevel(this.props.stage.position, levelPos);
+    this.setState({levelPosToRemove: levelPos});
+  };
+
+  handleConfirm = () => {
+    this.props.removeLevel(
+      this.props.stage.position,
+      this.state.levelPosToRemove
+    );
+    this.setState({levelPosToRemove: null});
+  };
+
+  handleClose = () => {
+    this.setState({levelPosToRemove: null});
   };
 
   handleEditFlexCategory = () => {
@@ -219,7 +234,13 @@ export class UnconnectedStageCard extends Component {
 
   render() {
     const {stage, targetStagePos} = this.props;
-    const {draggedLevelPos} = this.state;
+    const {draggedLevelPos, levelPosToRemove} = this.state;
+    let confirmText;
+    if (levelPosToRemove) {
+      const levelIdToRemove = stage.levels[levelPosToRemove - 1].activeId;
+      const levelNameToRemove = this.props.levelKeyList[levelIdToRemove];
+      confirmText = `Are you sure you want to remove the level named "${levelNameToRemove}" from the script?`;
+    }
     const isTargetStage = targetStagePos === stage.position;
     return (
       <div style={isTargetStage ? styles.targetStageCard : styles.stageCard}>
@@ -298,13 +319,25 @@ export class UnconnectedStageCard extends Component {
             />
           )}
         </div>
+        <Dialog
+          body={confirmText}
+          cancelText="Cancel"
+          confirmText="Delete"
+          confirmType="danger"
+          isOpen={!!levelPosToRemove}
+          handleClose={this.handleClose}
+          onCancel={this.handleClose}
+          onConfirm={this.handleConfirm}
+        />
       </div>
     );
   }
 }
 
 export default connect(
-  state => ({}),
+  state => ({
+    levelKeyList: state.levelKeyList
+  }),
   {
     reorderLevel,
     moveLevelToStage,
