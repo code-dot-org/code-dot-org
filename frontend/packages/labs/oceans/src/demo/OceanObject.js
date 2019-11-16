@@ -223,6 +223,10 @@ export class FishOceanObject extends OceanObject {
       const tails = Object.values(this.componentOptions.tails);
       this.tail = tails[Math.floor(Math.random() * tails.length)];
     }
+    if (!this.scales) {
+      const scales = Object.values(this.componentOptions.scales);
+      this.scales = scales[Math.floor(Math.random() * scales.length)];
+    }
     if (!this.colorPalette) {
       const colors = Object.values(this.componentOptions.colors);
       this.colorPalette = generateColorPalette(colors);
@@ -234,6 +238,7 @@ export class FishOceanObject extends OceanObject {
       ...this.pectoralFinFront.knnData,
       ...this.dorsalFin.knnData,
       ...this.tail.knnData,
+      ...this.scales.knnData,
       ...this.colorPalette.knnData
     ];
   }
@@ -277,7 +282,11 @@ export class FishOceanObject extends OceanObject {
       intermediateCtx.scale(-1, 1);
       intermediateCtx.drawImage(img, 0, 0);
       intermediateCtx.setTransform(1, 0, 0, 1, 0, 0);
-    } else {
+    } else if (part.type === FishBodyPart.SCALES) {
+      intermediateCtx.globalAlpha = 0.2; 
+      intermediateCtx.drawImage(img, xPos, yPos);
+      intermediateCtx.globalAlpha = 1; 
+    }else {
       intermediateCtx.drawImage(img, xPos, yPos);
     }
 
@@ -327,6 +336,7 @@ export class FishOceanObject extends OceanObject {
     this.drawFishComponent(this.tail, bodyAnchor, ctx);
     this.drawFishComponent(this.pectoralFinBack, bodyAnchor, ctx);
     this.drawFishComponent(this.body, bodyAnchor, ctx);
+    this.drawFishComponent(this.scales, bodyAnchor, ctx);
     this.drawFishComponent(this.pectoralFinFront, bodyAnchor, ctx);
     this.drawFishComponent(this.mouth, bodyAnchor, ctx);
     this.drawFishComponent(this.eye, bodyAnchor, ctx);

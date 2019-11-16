@@ -41,6 +41,8 @@ export const bodyAnchorFromType = (body, type) => {
       return body.pectoralFinBackAnchor;
     case FishBodyPart.TAIL:
       return body.tailAnchor;
+    case FishBodyPart.SCALES:
+      return body.scalesAnchor;
     case FishBodyPart.BODY:
       return body.anchor;
     default:
@@ -57,6 +59,9 @@ export const colorForFishPart = (palette, part) => {
       return palette.finRgb;
     case FishBodyPart.BODY:
       return palette.bodyRgb;
+    case FishBodyPart.SCALES:
+      //return palette.bodyRgb.map(c => c + 20);
+      return [0,0,0];
     default:
       return null;
   }
