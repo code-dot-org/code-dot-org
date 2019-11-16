@@ -22,7 +22,7 @@ def sync_up
         puts line
       end
 
-      raise "Sync up failed"  unless status_thread.value.success?
+      raise "Sync up failed" unless status_thread.value.success?
     end
   end
 
