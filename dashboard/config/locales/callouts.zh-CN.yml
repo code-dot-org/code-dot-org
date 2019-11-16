@@ -153,8 +153,6 @@ zh-CN:
         dance_callout_11_b: 新模块！
       CourseD_Dance_Party_11_5:
         dance_party_11_5_groups: 在这里找到”所有鸭子“模块
-      Dance_2019_01:
-        dance_callout_01: 向程序里增加这个模块！
       Dance_2019_04:
         dance_callout_02: 向程序里增加这个模块！
       Dance_2019_06:
@@ -162,7 +160,8 @@ zh-CN:
       Dance_2019_07:
         setprop_hint: 新模块！
       Dance_2019_09:
-        new_block_1: 新模块！
+        new_block_3: 新模块！
+        new_block_4: 新模块！
       Dance_Party_01:
         dance_callout_01: 向程序里增加这个模块！
       Dance_Party_02:

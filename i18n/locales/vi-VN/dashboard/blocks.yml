@@ -711,6 +711,12 @@ vi:
             '"bass"': âm trầm
             '"mid"': âm trung
             '"treble"': âm cao
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"hearts_colorful"': Trái tim
+            '"diamond"': kim cương
+            '"x"': x
       Dancelab_whenKey:
         text: khi nhấn {KEY}
         options:

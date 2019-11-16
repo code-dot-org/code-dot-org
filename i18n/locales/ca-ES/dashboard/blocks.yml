@@ -676,6 +676,11 @@ ca:
             '"bass"': baix
             '"mid"': mig
             '"treble"': agut
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"hearts_colorful"': Cors
+            '"x"': x
       Dancelab_whenKey:
         text: quan la {KEY} és premuda
         options:

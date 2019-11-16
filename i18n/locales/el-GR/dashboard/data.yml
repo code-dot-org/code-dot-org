@@ -503,9 +503,13 @@ el:
         mc_2018_closing: 'Minecraft: Υδάτινο Ταξίδι Συγχαρητήρια'
         hoc_dance_warmup: Πάρτυ Χορού - Ζέσταμα
         hoc_dance_congrats: Πάρτυ Χορού - Συνέχισε το πάρτυ!
+        what_is_cs: Τι είναι η επιστήμη υπολογιστών;
+        lesson_planning: Σχεδιασμός μαθημάτων
         csd_pair_programming: Προγραμματισμός κατά ζεύγη
         csd_applab_parameters: Συναρτήσεις με παραμέτρους
         CSF_SpriteLab_SpritesInAction_v2: Χαρακτήρες σε Δράση
+        ocean_machine_learning: 'Εκμάθηση μηχανής'
+        ocean_training_data: 'Δεδομένα εκπαίδευσης'
     callout:
       text:
         drag_blocks: Πιάσε ένα μπλοκ "κίνηση" και φέρ'το κάτω από το άλλο μπλοκ
