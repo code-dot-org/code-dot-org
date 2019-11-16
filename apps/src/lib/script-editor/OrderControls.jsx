@@ -58,8 +58,8 @@ export class UnconnectedOrderControls extends Component {
     const {showConfirm} = this.state;
     const {type, name} = this.props;
     const text =
-      `Are you sure you want to delete the ${type} named "${name}" ` +
-      'and all its contents?';
+      `Are you sure you want to remove the ${type} named "${name}" ` +
+      'and all its contents from the script?';
     return (
       <div style={styles.controls}>
         <i

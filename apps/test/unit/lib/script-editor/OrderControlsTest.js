@@ -31,7 +31,7 @@ describe('OrderControls', () => {
     wrapper.find('.fa-trash').simulate('mousedown');
     expect(wrapper.find('.modal-body')).to.have.lengthOf(1);
     expect(wrapper.find('.modal-body').text()).to.include(
-      'Are you sure you want to delete'
+      'Are you sure you want to remove'
     );
     expect(remove).not.to.have.been.called;
 
