@@ -24,13 +24,6 @@ class SessionsController < Devise::SessionsController
     super
   end
 
-  # POST /resource/sign_in
-  def create
-    super do |user|
-      check_and_apply_oauth_takeover(user)
-    end
-  end
-
   # DELETE /resource/sign_out
   def destroy
     redirect_path = after_sign_out_path_for(:user)
