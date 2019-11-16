@@ -1,8 +1,6 @@
 # Test in rails console:
-# load "../lib/cdo/contact_rollups_v2.rb"; ContactRollupsV2.test
+# load "../lib/cdo/contact_rollups_v2.rb"; load "../lib/cdo/pardot.rb"; ContactRollupsV2.test
 # load "../lib/cdo/contact_rollups_v2.rb"; ContactRollupsV2.main
-# load "../lib/cdo/pardot.rb"; Pardot.request_pardot_api_key;
-# load "../lib/cdo/pardot.rb"; Pardot.update_pardot_ids(:crv2_all, 80999343)
 
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require src_dir 'database'
@@ -72,6 +70,12 @@ class ContactRollupsV2
         DateTime :pardot_sync_at
         DateTime :created_at, null: false
         DateTime :updated_at, null: false
+
+        # all the reason why we shouldn't sync an email to externally
+        # opt_out is combination of multiple values such as opted_out and opt_in
+        # Consideration: Combine them in 2 fields [not_sync], [reason]
+        column :email_malformed, 'tinyint(1)'
+        column :opt_out, 'tinyint(1)'
 
         unique :email
       end
@@ -286,51 +290,65 @@ class ContactRollupsV2
     # update crv2_all.data
   end
 
+  # Only this part is specific to Pardot. Everything else should be generic
   def self.sync_to_pardot
     # Get pardot id for new emails
-    # TODO: remove max_pardot_id in function signature
-    Pardot.update_pardot_ids(:crv2_all, 80_999_343)
+    max_pardot_id = 80_999_343    # TODO: remove max_pardot_id in function signature
+    Pardot.update_pardot_ids(:crv2_all, max_pardot_id)
 
-    # Prepare data to sync. A package is a day worth of data?
-    prepare_data_to_sync
-
-    # Sync new changes to pardot
-
-    # Get pardot id for the new inserted emails
-    Pardot.update_pardot_ids(:crv2_all, 80_999_343)
-  end
-
-  def self.prepare_data_to_sync
-    # Read crv2_all, get all rows that should be sent to Pardot.
-    # They are rows that have not been synced (pardot_sync_at is null)
-    # or rows that have been updated since the last sync.
-    rows_to_sync_query = <<-SQL.squish
-      select * from crv2_all
-      where pardot_sync_at IS NULL OR (pardot_sync_at < updated_at)
+    # Sync data to pardot
+    new_contact_conditions = <<-SQL.squish
+      pardot_id is null and pardot_sync_at is null
+      and not(email_malformed <=> 1)
+      and not(opt_out <=> 1)
     SQL
 
-    PEGASUS_DB_WRITER[rows_to_sync_query].each do |row|
-      # Process data column to create data_to_sync
-      collapsed_data = collapse_data JSON.parse(row[:data])
-      prospect_info = convert_data_to_prospect_info(collapsed_data)
-      Pardot.apply_special_fields(collapsed_data, prospect_info)
-      PEGASUS_DB_WRITER[:crv2_all].where(email: row[:email]).update(data_to_sync: prospect_info.to_json)
+    new_contact_config = {
+      operation_name: "insert",
+      table: :crv2_all,
+      where_clause: new_contact_conditions,
+      create_prospect_func: :extract_prospect,  # a public class method in Pardot
+      pardot_url: Pardot::PARDOT_BATCH_CREATE_URL
+    }
+
+    prepare_data_to_sync new_contact_config[:table], new_contact_config[:where_clause]
+    Pardot.sync_contacts_with_pardot new_contact_config
+
+    # Get pardot id for the new inserted emails
+    Pardot.update_pardot_ids(:crv2_all, max_pardot_id)
+  end
+
+  def self.prepare_data_to_sync(table, where_clause)
+    PEGASUS_DB_WRITER[table].where(where_clause).each do |row|
+      data_to_sync = convert_db_row_to_prospect row
+      PEGASUS_DB_WRITER[:crv2_all].where(email: row[:email]).update(data_to_sync: data_to_sync.to_json)
     end
   end
 
-  def self.collapse_data(data)
+  def self.convert_db_row_to_prospect(row)
+    metadata = JSON.parse row[:data]
+    collapsed_metadata = collapse_metadata(metadata)
+    key_fields = row.slice(:email, :pardot_id)
+    prospect_info = convert_metadata_to_prospect(collapsed_metadata.merge(key_fields))
+
+    Pardot.apply_special_fields(collapsed_metadata, prospect_info)
+
+    prospect_info
+  end
+
+  def self.collapse_metadata(metadata)
     # Merge values from all sources
     {}.tap do |collapsed_data|
-      data.values.each do |val|
+      metadata.values.each do |val|
         collapsed_data.merge!(val) {|subkey| ([] << collapsed_data[subkey] << val[subkey]).flatten}
       end
     end
   end
 
-  def self.convert_data_to_prospect_info(data)
+  def self.convert_metadata_to_prospect(metadata)
     # Translate keys and values to Pardot API format
     {}.tap do |prospect|
-      data.each_pair do |key, value|
+      metadata.each_pair do |key, value|
         pardot_info = Pardot::MYSQL_TO_PARDOT_MAP[key.to_sym]
         next unless pardot_info
 
@@ -353,6 +371,7 @@ class ContactRollupsV2
     collect_data_to_crv2_daily
     update_data_to_crv2_all
     sync_to_pardot
+    count_table_rows
   end
 
   def self.test

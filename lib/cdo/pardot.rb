@@ -121,11 +121,11 @@ class Pardot
   # Query Pardot for recently created contacts and retrieve the Pardot-side ID
   # for that contact and store in our DB. We need Pardot's ID to be able to
   # update the contact.
-  def self.update_pardot_ids(table, max_pardot_id = nil)
+  def self.update_pardot_ids(table, max_pardot_id = 0)
     # Find the highest Pardot ID of contacts stored in our database. Any newer
     # contacts are guaranteed to have a higher ID. (Not stated in docs, but
     # confirmed by Pardot support who said this was the best way to do this.)
-    id_max = max_pardot_id || PEGASUS_DB[table].max(:pardot_id) || 0
+    id_max = PEGASUS_DB[table].max(:pardot_id) || max_pardot_id
 
     # Run repeated requests querying for prospects above our highest known
     # Pardot ID. Up to 200 prospects will be returned at a time by Pardot, so
@@ -176,8 +176,10 @@ class Pardot
     # Set up config params to insert new contacts into Pardot.
     config = {
       operation_name: "insert",
+      table: :contact_rollups,
       where_clause: "pardot_sync_at IS NULL AND pardot_id IS NULL AND "\
                     "opted_out IS NULL",
+      create_prospect_func: :convert_db_row_to_prospect,
       pardot_url: PARDOT_BATCH_CREATE_URL
     }
     sync_contacts_with_pardot(config)
@@ -189,10 +191,41 @@ class Pardot
     # Set up config params to update existing contacts in Pardot.
     config = {
       operation_name: "update",
+      table: :contact_rollups,
       where_clause: "pardot_id IS NOT NULL AND pardot_sync_at < updated_at",
+      create_prospect_func: :convert_db_row_to_prospect,
       pardot_url: PARDOT_BATCH_UPDATE_URL
     }
     sync_contacts_with_pardot(config)
+  end
+
+  def self.extract_prospect(row)
+    JSON.parse row[:data_to_sync]
+  end
+
+  def self.convert_db_row_to_prospect(row)
+    # Map database field names and data to Pardot fields
+    prospect = {}
+    MYSQL_TO_PARDOT_MAP.each do |mysql_key, pardot_info|
+      db_value = row[mysql_key]
+      next unless db_value.present?
+      if pardot_info[:multi]
+        # For multi data fields (multiselect,etc.), we set value names as
+        # [fieldname]_0, [fieldname]_1, etc.
+        values = db_value.split(",")
+        values.each_with_index do |value, index|
+          prospect["#{pardot_info[:field]}_#{index}"] = value
+        end
+      else
+        # For single data fields, just set [fieldname] = value.
+        prospect[pardot_info[:field]] = db_value
+      end
+    end
+
+    # Do special handling of a few fields
+    apply_special_fields(row, prospect)
+
+    prospect
   end
 
   # Helper function to either create new Pardot prospects or update existing prospects
@@ -206,35 +239,15 @@ class Pardot
     num_operations_last_print = 0
 
     # Query the contact rollups.
-    PEGASUS_DB[:contact_rollups].where(config[:where_clause]).order(:id).each do |contact_rollup|
+    PEGASUS_DB[config[:table]].where(config[:where_clause]).order(:id).each do |row|
       # Skip if the email has been previously rejected by Pardot as malformed.
       # Since there are just a handful of these, it is more performant to let
       # this small number of records get returned in the results and skip them
       # rather than try to exclude them in the SQL query on a large dataset.
-      next if contact_rollup[:email_malformed]
-
-      # Map database field names and data to Pardot fields
-      prospect = {}
-      MYSQL_TO_PARDOT_MAP.each do |mysql_key, pardot_info|
-        db_value = contact_rollup[mysql_key]
-        next unless db_value.present?
-        if pardot_info[:multi]
-          # For multi data fields (multiselect,etc.), we set value names as
-          # [fieldname]_0, [fieldname]_1, etc.
-          values = db_value.split(",")
-          values.each_with_index do |value, index|
-            prospect["#{pardot_info[:field]}_#{index}"] = value
-          end
-        else
-          # For single data fields, just set [fieldname] = value.
-          prospect[pardot_info[:field]] = db_value
-        end
-      end
-      # Do special handling of a few fields
-      apply_special_fields(contact_rollup, prospect)
+      next if row[:email_malformed]
 
       # Add this prospect to the batch.
-      prospects << prospect
+      prospects << send(config[:create_prospect_func], row)
 
       # As a sniff test, build the URL that would result from our current
       # prospect list so we can see how long it is.
@@ -349,13 +362,13 @@ class Pardot
 
     # Mark Pardot sync time of contacts in our database
     unless prospect_emails.empty?
-      PEGASUS_DB[:contact_rollups].
+      PEGASUS_DB[config[:table]].
         where("email in ?", prospect_emails).
         update(pardot_sync_at: DateTime.now)
     end
     # Mark any email addresses rejected by Pardot as malformed so we don't keep trying to fruitlessly create them forever
     unless malformed_emails.empty?
-      PEGASUS_DB[:contact_rollups].
+      PEGASUS_DB[config[:table]].
         where("email in ?", malformed_emails).
         update(email_malformed: true, pardot_sync_at: DateTime.now)
     end
