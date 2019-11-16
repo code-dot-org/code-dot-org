@@ -1,0 +1,115 @@
+#!/usr/bin/env ruby
+
+require_relative '../../../dashboard/config/environment'
+
+CDO.log = Logger.new(STDOUT)
+
+SURVEY_YEAR = '2017-2018'.freeze
+
+GRADE_MAP = {
+  'Prekindergarten' => 'PK',
+  'Kindergarten' => 'KG',
+  '1st Grade' => '01',
+  '2nd Grade' => '02',
+  '3rd Grade' => '03',
+  '4th Grade' => '04',
+  '5th Grade' => '05',
+  '6th Grade' => '06',
+  '7th Grade' => '07',
+  '8th Grade' => '08',
+  '9th Grade' => '09',
+  '10th Grade' => '10',
+  '11th Grade' => '11',
+  '12th Grade' => '12',
+  '13th Grade' => '13'
+}
+
+VIRTUAL_SCHOOL_MAP = {
+  'A virtual school' => 'Yes',
+  'Not a virtual school' => 'No'
+}
+
+TITLE_I_MAP = {
+  '1-Eligible for Title I TAS provides no program' => '1',
+  '2-Eligible for Title I TAS provides TAS program' => '2',
+  '3-Eligible for Title I SWP provides TAS program' => '3',
+  '4-Eligible for Title I SWP provides no program' => '4',
+  '5-Eligible for Title I SWP provides SWP program' => '5',
+  '6-Not eligible for either TAS or SWP' => '6'
+}
+
+COMMUNITY_TYPE_MAP = {
+  '11-City: Large' => 'city_large',
+  '12-City: Mid-size' => 'city_midsize',
+  '13-City: Small' => 'city_small',
+  '21-Suburb: Large' => 'suburban_large',
+  '22-Suburb: Mid-size' => 'suburban_midsize',
+  '23-Suburb: Small' => 'suburban_small',
+  '31-Town: Fringe' => 'town_fringe',
+  '32-Town: Distant' => 'town_distant',
+  '33-Town: Remote' => 'town_remote',
+  '41-Rural: Fringe' => 'rural_fringe',
+  '42-Rural: Distant' => 'rural_distant',
+  '43-Rural: Remote' => 'rural_remote'
+}.freeze
+
+# @param unsanitized [String, nil] the unsanitized string
+# @returns [String, nil] the sanitized version of the string, with newlines stripped and double
+#   quotations escaped. Returns nil on nil input
+def sanitize_string_for_db(unsanitized)
+  unsanitized&.tr('="', '')
+end
+
+# Context: data from NCES used to be in "wide" format (one row per school),
+# switched to long (one row per school-metric), which would break our import code:
+# https://nces.ed.gov/ccd/pubschuniv.asp
+# Downloaded data this year using their table generator here:
+# https://nces.ed.gov/ccd/elsi/tableGenerator.aspx
+# Required a bit of manual cleaning before importing (deleted top couple of rows that contained metadata about the file)
+AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/school_stats_201718.csv") do |filename|
+  SchoolStatsByYear.transaction do
+    SchoolStatsByYear.merge_from_csv(filename, {col_sep: ",", headers: true, quote_char: "\x00"}) do |row|
+      row = row.to_h.map {|k, v| [k, sanitize_string_for_db(v)]}.to_h
+
+      {
+        school_id:          row['School ID - NCES Assigned [Public School] Latest available year'].to_i.to_s,
+        school_year:        SURVEY_YEAR,
+
+        # Grades offered
+        grades_offered_lo:  GRADE_MAP[row['Lowest Grade Offered [Public School] 2017-18']],
+        grades_offered_hi:  GRADE_MAP[row['Highest Grade Offered [Public School] 2017-18']],
+        grade_pk_offered:   row['Prekindergarten offered [Public School] 2017-18'] == '1-Yes',
+        grade_kg_offered:   row['Kindergarten offered [Public School] 2017-18'] == '1-Yes',
+        grade_01_offered:   row['Grade 1 offered [Public School] 2017-18'] == '1-Yes',
+        grade_02_offered:   row['Grade 2 offered [Public School] 2017-18'] == '1-Yes',
+        grade_03_offered:   row['Grade 3 offered [Public School] 2017-18'] == '1-Yes',
+        grade_04_offered:   row['Grade 4 offered [Public School] 2017-18'] == '1-Yes',
+        grade_05_offered:   row['Grade 5 offered [Public School] 2017-18'] == '1-Yes',
+        grade_06_offered:   row['Grade 6 offered [Public School] 2017-18'] == '1-Yes',
+        grade_07_offered:   row['Grade 7 offered [Public School] 2017-18'] == '1-Yes',
+        grade_08_offered:   row['Grade 8 offered [Public School] 2017-18'] == '1-Yes',
+        grade_09_offered:   row['Grade 9 offered [Public School] 2017-18'] == '1-Yes',
+        grade_10_offered:   row['Grade 10 offered [Public School] 2017-18'] == '1-Yes',
+        grade_11_offered:   row['Grade 11 offered [Public School] 2017-18'] == '1-Yes',
+        grade_12_offered:   row['Grade 12 offered [Public School] 2017-18'] == '1-Yes',
+        grade_13_offered:   row['Grade 13 offered [Public School] 2017-18'] == '1-Yes',
+
+        # Student body race breakdown
+        students_total:     row['Total Students All Grades (Excludes AE) [Public School] 2017-18'].presence.try {|v| v.to_i <= 0 ? nil : v.to_i},
+        student_am_count:   row['American Indian/Alaska Native Students [Public School] 2017-18'].presence.try {|v| v.to_i < 0 ? nil : v.to_i},
+        student_as_count:   row['Asian or Asian/Pacific Islander Students [Public School] 2017-18'].presence.try {|v| v.to_i < 0 ? nil : v.to_i},
+        student_hi_count:   row['Hispanic Students [Public School] 2017-18'].presence.try {|v| v.to_i < 0 ? nil : v.to_i},
+        student_bl_count:   row['Black Students [Public School] 2017-18'].presence.try {|v| v.to_i < 0 ? nil : v.to_i},
+        student_wh_count:   row['White Students [Public School] 2017-18'].presence.try {|v| v.to_i < 0 ? nil : v.to_i},
+        student_hp_count:   row['Hawaiian Nat./Pacific Isl. Students [Public School] 2017-18'].presence.try {|v| v.to_i < 0 ? nil : v.to_i},
+        student_tr_count:   row['Two or More Races Students [Public School] 2017-18'].presence.try {|v| v.to_i < 0 ? nil : v.to_i},
+
+        # Other school demographics
+        title_i_status:     TITLE_I_MAP[row['Title I School Status [Public School] 2017-18']],
+        frl_eligible_total: row['Free and Reduced Lunch Students [Public School] 2017-18'].presence.try {|v| v.to_i < 0 ? nil : v.to_i},
+        community_type:     COMMUNITY_TYPE_MAP[row['Urban-centric Locale [Public School] 2017-18']],
+        virtual_status:     VIRTUAL_SCHOOL_MAP[row['Virtual School Status [Public School] 2017-18']]
+      }
+    end
+  end
+end

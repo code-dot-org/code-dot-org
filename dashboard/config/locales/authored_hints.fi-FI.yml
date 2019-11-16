@@ -235,11 +235,6 @@ fi-FI:
           -   Kuuden tahdin jälkeen, tanssijasi täytyy tanssia eri tanssia, kuin 4 tahtia sitten.
 
           _Tämä taso päättyy 12 tahdin jälkeen._
-      Dance_2019_07:
-        challenges: |-
-          **Vapaaehtoinen haaste**
-
-          -   Kokeile vaihtelemalla muita ominaisuuksia (leveys, pituus, kierto, yms.)
       Dance_Party_01:
         validation: |-
           **Kuinka ylitän tämän tason?**

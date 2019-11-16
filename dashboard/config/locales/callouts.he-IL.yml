@@ -106,8 +106,6 @@ he-IL:
       CourseD_Dance_Party_11:
         dance_callout_11_a: בלוק חדש!
         dance_callout_11_b: בלוק חדש!
-      Dance_2019_01:
-        dance_callout_01: הוסיפו את הבלוק הזה לתוכנה שלכם!
       Dance_2019_04:
         dance_callout_02: הוסיפו את הבלוק הזה לתוכנה שלכם!
       Dance_2019_06:
@@ -115,7 +113,8 @@ he-IL:
       Dance_2019_07:
         setprop_hint: בלוק חדש!
       Dance_2019_09:
-        new_block_1: בלוק חדש!
+        new_block_3: בלוק חדש!
+        new_block_4: בלוק חדש!
       Dance_Party_01:
         dance_callout_01: הוסיפו את הבלוק הזה לתוכנה שלכם!
       Dance_Party_02:

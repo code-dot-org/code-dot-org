@@ -3813,3 +3813,7 @@ es:
           stages:
             new stage:
               name: nueva etapa
+        csp4-preview:
+          stages:
+            new stage:
+              name: nueva etapa

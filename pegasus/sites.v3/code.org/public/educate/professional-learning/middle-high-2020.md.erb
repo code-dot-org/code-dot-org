@@ -10,6 +10,19 @@ theme: responsive
   details summary {
     cursor: pointer;
   }
+
+  a.tertiary-link {
+    color: #00adbc;
+    font-size: 14px;
+    font-family: "Gotham 4r", sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+  }
+    a.tertiary-link .fa {
+      font-size: 12px;
+      font-weight: bold;
+      margin-left: 8px;
+    }
 </style>
 
 
@@ -19,14 +32,14 @@ theme: responsive
 
 <div style="clear: both;">
 
-<div class="col-50" style="padding-right: 30px; padding-top: 20px; padding-bottom: 50px;">
+<div class="col-50" style="padding-right: 30px; padding-top: 20px; padding-bottom: 25px;">
 
 <img src="/images/fit-450/marketing/professional-learning-middle-high.jpg">
 <br><br>
 
 </div>
 
-<div class="col-50" style="padding-right: 30px; padding-top: 20px; padding-bottom: 50px;">
+<div class="col-50" style="padding-right: 30px; padding-top: 20px; padding-bottom: 25px;">
 
 <p>Whether you are new to teaching computer science (CS) or have previous experience, the Code.org Professional Learning Program prepares you to teach with confidence and offers year-round support. No CS experience is needed!</p>
 
@@ -40,12 +53,11 @@ theme: responsive
 
 </div>
 
-<div style="clear: both;"></div> 
+<div style="clear: both;"></div>
 
 <div style="clear: both;">
 <div class="col-100">
-<%= view :regional_partner_zip_form %>
-
+<%= view :regional_partner_zip_form_2020 %>
 </div>
 
 </div>
@@ -63,7 +75,10 @@ theme: responsive
  <li>Access to a cohesive set of resources and trade organization discounts</li>
  <li>Awareness and strategies to recruit and foster a diverse and equitable classroom</li>
 </ul>
-<a href="#">What to Expect ></a>
+<a href="#what-to-expect" class="tertiary-link">
+  What to Expect
+  <i class="fa fa-chevron-right"></i>
+</a>
 </p>
 </center>
 </div>
@@ -79,7 +94,10 @@ theme: responsive
  <li>The student learning experience as they navigate course content</li>
 </ul>
 <br><br>
-<a href="#">Content and Curriculum ></a>
+<a href="#content-and-curriculum" class="tertiary-link">
+  Content and Curriculum
+  <i class="fa fa-chevron-right"></i>
+</a>
 </p>
 </center>
 </div>
@@ -95,7 +113,10 @@ theme: responsive
  <li>Promote diversity in classroom recruitment and enrollment</li>
 </ul>
 <br><br>
-<a href="#">Program Requirements ></a>
+<a href="#program-requirements" class="tertiary-link">
+  Program Requirements
+  <i class="fa fa-chevron-right"></i>
+</a>
 </p>
 </center>
 </div>
@@ -103,7 +124,7 @@ theme: responsive
 <br>
 <br>
 
-<div style="clear: both;"></div> 
+<div style="clear: both;"></div>
 
 <br><br>
 
@@ -126,10 +147,11 @@ theme: responsive
 [clearboth]
 
 [/clearboth]
-   
+
 [/breakoutquote]
 
-<div style="clear: both;"></div> 
+<div style="clear: both;"></div>
+<a name="what-to-expect"></a>
 
 ## What to expect
 
@@ -137,7 +159,7 @@ theme: responsive
 Discuss classroom management and engage in new teaching strategies. Working in small groups, you’ll learn new teaching skills and deepen your understanding of the curriculum content. <br><br>
 
 <h3>Practice classroom teaching and experience student learning</h3>
-You’ll engage with the curriculum both as an instructor and a learner. Becoming an active participant, you’ll gain concrete insight into your students’ perspective, which will aid you in creating strong lesson plans. 
+You’ll engage with the curriculum both as an instructor and a learner. Becoming an active participant, you’ll gain concrete insight into your students’ perspective, which will aid you in creating strong lesson plans.
 
 <h3>Collaborate and share knowledge with fellow educators</h3>
 ​Teachers and facilitators will share their expertise and collaborate on strategies for the classroom, giving you a chance to learn from everyone in the room. Facilitators model pedagogical strategies and participants will share their own approaches by planning and delivering lessons.​
@@ -157,8 +179,10 @@ To help you say connected, we've also partnered with ISTE to offer all Code.org 
 <br><br>
 
 <div style="clear: both;"></div>
+<a name="program-requirements"></a>
 
-<h2>Program requirements</h2>
+## Program requirements
+
 <p>Many teachers are surprised to learn just how feasible it is to expand computer science into their schools! You don’t need a fancy computer lab or previous experience teaching CS.</p>
 
 <div class="col-60" style="padding-right: 30px; padding-bottom: 20px;">
@@ -184,7 +208,8 @@ To help you say connected, we've also partnered with ISTE to offer all Code.org 
 
 </div>
 
-<div style="clear: both;"></div> 
+<div style="clear: both;"></div>
+<a name="content-and-curriculum"></a>
 
 ## Content and curriculum
 Code.org provides a complete CS program combining professional learning and the K-12 curriculum, both of which consistently gets high ratings from teachers.
@@ -228,7 +253,7 @@ Middle and high school teachers will be participating in the Code.org profession
 
 <table style="border-style:hidden; padding-top: 30px; padding-bottom: 30px; padding-right: 20px; padding-left: 20px;">
   <tr>
-    <td colspan="100" style="background-color:#00adbc; color:white; text-align:center; font-style:bold; border-style:hidden; font-size:18px;""> Peer reviewed research shows that school participation in the Code.org program causes an estimated <b>5x increase in students that take and pass the AP CS Principles exam</b>. 
+    <td colspan="100" style="background-color:#00adbc; color:white; text-align:center; font-style:bold; border-style:hidden; font-size:18px;""> Peer reviewed research shows that school participation in the Code.org program causes an estimated <b>5x increase in students that take and pass the AP CS Principles exam</b>.
       </td>
     </tr>
   </table>
