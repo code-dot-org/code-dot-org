@@ -4160,6 +4160,8 @@ class UserTest < ActiveSupport::TestCase
     end
 
     refute unmigrated_teacher_without_password.reload.admin?
+    assert 2, unmigrated_teacher_without_password.errors[:admin].count
+    assert_equal ["Admin must be a migrated user", "Admin must be a code.org account with only google oauth"], unmigrated_teacher_without_password.errors.full_messages
   end
 
   test 'cannot grant admin role with multiple authentication options' do
@@ -4174,6 +4176,7 @@ class UserTest < ActiveSupport::TestCase
     end
 
     refute migrated_teacher.reload.admin?
+    assert_equal ["Admin must be a code.org account with only google oauth"], migrated_teacher.errors.full_messages
   end
 
   test 'cannot grant admin role when google authentication option is not present' do
@@ -4189,6 +4192,7 @@ class UserTest < ActiveSupport::TestCase
     end
 
     refute migrated_teacher.reload.admin?
+    assert_equal ["Admin must be a code.org account with only google oauth"], migrated_teacher.errors.full_messages
   end
 
   test 'cannot grant admin role when not a codeorg account' do
@@ -4202,5 +4206,29 @@ class UserTest < ActiveSupport::TestCase
     end
 
     refute migrated_teacher.reload.admin?
+    assert migrated_teacher.errors[:admin].length == 1
+    assert_equal ["Admin must be a code.org account with only google oauth"], migrated_teacher.errors.full_messages
+  end
+
+  test 'can grant admin role when in development environment' do
+    with_rack_env(:development) do
+      email = 'katherinejohnson@code.org'
+      migrated_teacher = create(:teacher, email: email)
+
+      assert migrated_teacher.update(admin: true)
+
+      assert migrated_teacher.reload.admin?
+    end
+  end
+
+  test 'can grant admin role when in adhoc environment' do
+    with_rack_env(:adhoc) do
+      email = 'dorothyvaughan@code.org'
+      migrated_teacher = create(:teacher, email: email)
+
+      assert migrated_teacher.update(admin: true)
+
+      assert migrated_teacher.reload.admin?
+    end
   end
 end
