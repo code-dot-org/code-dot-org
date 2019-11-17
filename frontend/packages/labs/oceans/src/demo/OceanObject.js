@@ -283,10 +283,10 @@ export class FishOceanObject extends OceanObject {
       intermediateCtx.drawImage(img, 0, 0);
       intermediateCtx.setTransform(1, 0, 0, 1, 0, 0);
     } else if (part.type === FishBodyPart.SCALES) {
-      intermediateCtx.globalAlpha = 0.2; 
+      intermediateCtx.globalAlpha = 0.2;
       intermediateCtx.drawImage(img, xPos, yPos);
-      intermediateCtx.globalAlpha = 1; 
-    }else {
+      intermediateCtx.globalAlpha = 1;
+    } else {
       intermediateCtx.drawImage(img, xPos, yPos);
     }
 

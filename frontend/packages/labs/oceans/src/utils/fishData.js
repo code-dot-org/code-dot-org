@@ -108,7 +108,6 @@ import mouth7_image from '../../public/images/fish/mouth/mouth7.png';
 import mouth8_image from '../../public/images/fish/mouth/mouth8.png';
 import mouth9_image from '../../public/images/fish/mouth/mouth9.png';
 
-import scales1_image from '../../public/images/fish/scales/scales1.png';
 import scales2_image from '../../public/images/fish/scales/scales2.png';
 import scales3_image from '../../public/images/fish/scales/scales3.png';
 import scales4_image from '../../public/images/fish/scales/scales4.png';
