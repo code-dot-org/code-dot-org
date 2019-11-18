@@ -1,5 +1,19 @@
 ---
 zh-TW:
+  tutorial_cityx_name: 'Coding Galaxy : CIty X '
+  tutorial_cityx_longdescription: |-
+    身為 City X 新上任的市長，您的首個任務是幫助一位老農夫管理農場，用創新技術解決他的難題。
+    您將學習智能澆水系統的基本概念，並製作園藝機器人。快來創造人人嚮往的未來城市吧！
+  tutorial_cityx_string_detail_grades: 年級 6-8
+  tutorial_cityx_string_platforms: iOS、Android 手機及平板電腦
+  tutorial_cityx_string_detail_programming_languages: 圖形化編程
+  tutorial_cityx_language: 繁體中文
+  tutorial_mee_name: Minecraft 編碼時刻：永恆 AI
+  tutorial_mee_longdescription: 有一座村莊受到了火災威脅，需要您編碼解決！與您的編碼助手 Minecraft Agent 見面，然後替 Agent 進行編程，探索森林並收集火災發生條件的相關資料。這些資料將幫助 Agent 學習預測火災發生地點。根據收集到的資料進行選擇，是「人工智慧」或「AI」的基本概念。您的指示與 AI 將讓 Agent 能夠識別條件，並清除造成森林火災蔓延的材料。您的最終挑戰是寫入代碼，透過種樹和增生動物讓森林重獲生機。
+  tutorial_mee_string_detail_grades: 年級 2+
+  tutorial_mee_string_platforms: Windows, iPad, MacOS
+  tutorial_mee_string_detail_programming_languages: 積木式
+  tutorial_mee_language: 英語（美國）、英語（英國）、德語、西班牙文（西班牙）、西班牙文（墨西哥）、法語（法國）、法語（加拿大）、義大利文、日語、韓語、葡萄牙文（巴西）、葡萄牙文（葡萄牙）、俄語、中文（簡體）、中文（繁體）、土耳其文、波蘭文、印尼語、烏克蘭文、希臘文、保加利亞文、匈牙利文、芬蘭文、丹麥文、瑞典文、挪威語、斯洛伐克文、捷克文、荷蘭文
   tutorial_ozaria_name: 奧佳睿
   tutorial_ozaria_longdescription: 定制化你的英雄及去天山的旅程，需要闖過15個關卡，設計屬於你自己的遊戲，才能幫助拯救奧佳睿的世界。
   tutorial_ozaria_string_detail_grades: 2年級以上

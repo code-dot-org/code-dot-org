@@ -1,5 +1,11 @@
 ---
 zh-CN:
+  tutorial_mee_name: Minecraft 编程时光：AI 造福人类 
+  tutorial_mee_longdescription: 一座村庄正在遭受火灾的威胁，需要您通过编程提供一个解决方案！认识您的编程助手——Minecraft Agent，然后为 Agent 编程以在森林里导航并收集与导致火灾的条件有关的数据。该数据将帮助 Agent 学会预测可能发生火灾的地点。基于所收集的数据做出选择是人工智能或者说 AI 的基本概念。您的指令将连同 AI 一起使得 Agent 能够识别条件并移除会导致森林火灾蔓延的物质。您面临的最终挑战是通过编写代码来种植树木和生成动物，以使得森林恢复生机。
+  tutorial_mee_string_detail_grades: 二年级以上
+  tutorial_mee_string_platforms: Windows, iPad, MacOS
+  tutorial_mee_string_detail_programming_languages: 方块
+  tutorial_mee_language: 英语（美国）、英语（英国）、德语、西班牙语（西班牙）、西班牙语（墨西哥）、法语（法国）、法语（加拿大）、意大利语、日语、韩语、葡萄牙语（巴西）、葡萄牙语（葡萄牙）、俄语、中文（简体）、中文（繁体）、土耳其语、波兰语、印度尼西亚语、乌克兰语、希腊语、保加利亚语、匈牙利语、芬兰语、丹麦语、瑞典语、挪威语、斯洛伐克语、捷克语、荷兰语
   tutorial_ozaria_name: 奥佳睿
   tutorial_ozaria_longdescription: 定制化你的英雄及去天山的旅程，需要闯过15个关卡，设计属于你自己的游戏，才能帮助拯救奥佳睿的世界。
   tutorial_ozaria_string_detail_grades: 2年级以上

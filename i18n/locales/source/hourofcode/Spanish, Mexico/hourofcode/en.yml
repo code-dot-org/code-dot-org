@@ -1,5 +1,23 @@
 ---
 es-MX:
+  tutorial_googlehero_name: Codifica a tu héroe
+  tutorial_googlehero_longdescription: Convierta a un héroe cotidiano de tu vida o comunidad en un superhéroe al programarlo para volar sobre edificios, girar, trabajar con un compañero o compañera y gana puntos tocando objetos en un juego. En 'Codifica a tu héroe,' muestra los poderes especiales de tu héroe y tu propia creatividad con CS First y Scratch.
+  tutorial_googlehero_string_detail_grades: Grados 2+ 
+  tutorial_googlehero_string_platforms: Todos los navegadores modernos
+  tutorial_googlehero_string_detail_programming_languages: Bloques
+  tutorial_googlehero_language: Español (mexico)
+  tutorial_pbskids_name: PBS KIDS Scratch Jr.
+  tutorial_pbskids_longdescription: Con PBS KIDS Scratch Jr, los niños pueden crear sus propias historias interactivas y juegos con sus personajes favoritos de PBS KIDS. Las posibilidades de contar historias son infinitas con esta aplicación de codificación creativa para niños de 5 a 8 años de edad.
+  tutorial_pbskids_string_detail_grades: Prelectura de grados – 3
+  tutorial_pbskids_string_platforms: iPhone, iPad, teléfono Android, tableta Android
+  tutorial_pbskids_string_detail_programming_languages: Bloques
+  tutorial_pbskids_language: Inglés, español
+  tutorial_mee_name: 'Minecraft la hora del código: AI for Good '
+  tutorial_mee_longdescription: "¡El fuego amenaza una aldea y debes programar una solución! Conoce a tu ayudante programador, el Minecraft Agent, y prográmalo para que navegue por el bosque y reúna datos sobre las condiciones que contribuyen a los incendios. "
+  tutorial_mee_string_detail_grades: Grados 2 + 
+  tutorial_mee_string_platforms: Windows, iPad, MacOS
+  tutorial_mee_string_detail_programming_languages: Bloques
+  tutorial_mee_language: Inglés (Estados Unidos), Inglés (Reino Unido), Alemán, Español (España), Español (México), Francés (Francia), Francés (Canadá), Italiano, Japonés, Coreano, Portugués (Brasil), Portugués (Portugal), Ruso, Chino (Simplificado), Chino (Tradicional), Turco, Polaco, indonesio, ucraniano, griego, búlgaro, húngaro, finlandés, danés, sueco, noruego, eslovaco, checo, holandés
   tutorial_ozaria_name: Ozaria, por CodeCombat
   tutorial_ozaria_longdescription: Personaliza a tu héroe y transita tu propio camino hacia la Montaña del cielo, a través del cual aprenderás a escribir código real, deberás superar 15 niveles y diseñarás tu propio videojuego para ayudar a salvar el mundo de Ozaria.
   tutorial_ozaria_string_detail_grades: Grados 2+

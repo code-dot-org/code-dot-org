@@ -1,5 +1,11 @@
 ---
 es-ES:
+  tutorial_mee_name: 'Minecraft Hora del Código: usa bien la IA'
+  tutorial_mee_longdescription: "¡Hay una aldea amenazada por las llamas y tú tienes que programar una solución! Conoce a tu ayudante de programación, Minecraft Agent, y prográmalo para que vaya al bosque y consiga datos sobre las condiciones que contribuyen a los incendios."
+  tutorial_mee_string_detail_grades: A partir de siete años
+  tutorial_mee_string_platforms: Windows, iPad, MacOS
+  tutorial_mee_string_detail_programming_languages: Bloques
+  tutorial_mee_language: Inglés (Estados Unidos), Inglés (Reino Unido), Alemán, Español (España), Español (México), Francés (Francia), Francés (Canadá), Italiano, Japonés, Coreano, Portugués (Brasil), Portugués (Portugal), Ruso, Chino (Simplificado), Chino (Tradicional), Turco, Polaco, indonesio, ucraniano, griego, búlgaro, húngaro, finlandés, danés, sueco, noruego, eslovaco, checo, holandés
   tutorial_ozaria_name: Ozaria, por CodeCombat
   tutorial_ozaria_longdescription: Personaliza a tu héroe y transita tu propio camino hacia la Montaña del cielo, a través del cual aprenderás a escribir código real, deberás superar 15 niveles y diseñarás tu propio videojuego para ayudar a salvar el mundo de Ozaria.
   tutorial_ozaria_string_detail_grades: Grados 2+

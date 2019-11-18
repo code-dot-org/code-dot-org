@@ -39,6 +39,6 @@ CSV.table(ARGV[0]).each do |translation|
   FileUtils.mkdir_p lang_dir
   translation_file = File.join(lang_dir, "en.yml")
   translation_data = File.exist?(translation_file) ? YAML.load_file(translation_file) : {}
-  translation_data.merge!(new_data)
+  translation_data.deep_merge!(new_data)
   File.write(translation_file, translation_data.to_yaml(line_width: -1))
 end
