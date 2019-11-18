@@ -41,4 +41,14 @@ describe('OrderControls', () => {
     expect(wrapper.find('.modal-body')).to.have.lengthOf(0);
     expect(remove).to.have.been.calledOnce;
   });
+  it('does not delete on confirmation dialog cancel', () => {
+    const wrapper = mount(<OrderControls {...defaultProps} />);
+    wrapper.find('.fa-trash').simulate('mousedown');
+    expect(wrapper.find('.modal-body')).to.have.lengthOf(1);
+    const cancelButton = wrapper.find('button').at(0);
+    expect(cancelButton.text()).to.include('Cancel');
+    cancelButton.simulate('click');
+    expect(remove).not.to.have.been.called;
+    expect(wrapper.find('.modal-body')).to.have.lengthOf(0);
+  });
 });
