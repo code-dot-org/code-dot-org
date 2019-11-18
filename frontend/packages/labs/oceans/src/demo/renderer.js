@@ -587,16 +587,17 @@ const DrawRect = (x, y, w, h, color, filled = true) => {
   h = Math.floor(h / 1);
 
   const canvasCtx = getState().canvas.getContext('2d');
-
-  if (color && filled) {
-    canvasCtx.fillStyle = color;
-  } else if (color) {
-    canvasCtx.strokeStyle = color;
-  }
-
   if (filled) {
+    if (color) {
+      canvasCtx.fillStyle = color;
+    }
+
     canvasCtx.fillRect(x, y, w, h);
   } else {
+    if (color) {
+      canvasCtx.strokeStyle = color;
+    }
+
     canvasCtx.rect(x, y, w, h);
   }
 };
