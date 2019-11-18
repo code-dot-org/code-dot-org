@@ -74,8 +74,6 @@ const styles = {
   }
 };
 
-const scriptLevelOptions = ['assessment', 'named', 'challenge'];
-
 const tooltipText = {
   assessment:
     'Visibly mark this level as an assessment, and show it in the Assessments tab in Teacher Dashboard.',
@@ -110,7 +108,11 @@ export class UnconnectedLevelTokenDetails extends Component {
       // Variants are deprecated. Only show them if they are already in use.
       // If the number of variants is reduced to 1, keep showing the Add
       // Variants button for the rest of this editing session.
-      showAddVariants: props.level.ids.length > 1
+      showAddVariants: props.level.ids.length > 1,
+      // Named levels are deprecated. Only show the checkbox if the level is
+      // already marked as named, otherwise the author can name the level by
+      // specifying a name in the progression field.
+      showNamed: props.level.named
     };
   }
 
@@ -173,6 +175,10 @@ export class UnconnectedLevelTokenDetails extends Component {
     Object.keys(tooltipText).forEach(option => {
       tooltipIds[option] = _.uniqueId();
     });
+    const scriptLevelOptions = ['assessment', 'challenge'];
+    if (this.state.showNamed) {
+      scriptLevelOptions.push('named');
+    }
     return (
       <div style={styles.levelTokenActive}>
         <span className="level-token-checkboxes">
