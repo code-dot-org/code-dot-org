@@ -366,14 +366,16 @@ let Button = class Button extends React.Component {
   };
 
   onClick(event) {
-    if (this.props.sound) {
-      playSound(this.props.sound + "_" + randomInt(1,10));
-    } else {
-      playSound("other_" + randomInt(1,4));
-    }
-
     dismissCurrentGuide();
-    this.props.onClick(event);
+    const clickReturnValue = this.props.onClick(event);
+
+    if (clickReturnValue !== false) {
+      if (this.props.sound && clickReturnValue !== false) {
+        playSound(this.props.sound + '_' + randomInt(1, 10));
+      } else {
+        playSound('other_' + randomInt(1, 4));
+      }
+    }
   }
 
   render() {
@@ -503,15 +505,19 @@ let Train = class Train extends React.Component {
         <div style={styles.trainButtons}>
           <Button
             style={styles.trainButtonNo}
-            onClick={() => onClassifyFish(false)}
-            sound={"no"}
+            onClick={() => {
+              return onClassifyFish(false);
+            }}
+            sound={'no'}
           >
             {noButtonText}
           </Button>
           <Button
             style={styles.trainButtonYes}
-            onClick={() => onClassifyFish(true)}
-            sound={"yes"}
+            onClick={() => {
+              return onClassifyFish(true);
+            }}
+            sound={'yes'}
           >
             {yesButtonText}
           </Button>
@@ -679,7 +685,7 @@ class Pond extends React.Component {
   constructor(props) {
     super(props);
 
-    playSound("ambience");
+    playSound('ambience');
   }
 
   onPondClick(e) {
@@ -807,7 +813,7 @@ class Guide extends React.Component {
   dismissGuideClick() {
     const dismissed = dismissCurrentGuide();
     if (dismissed) {
-      playSound("other_" + randomInt(1,4));
+      playSound('other_' + randomInt(1, 4));
     }
   }
 
