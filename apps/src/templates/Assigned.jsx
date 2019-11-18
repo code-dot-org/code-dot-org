@@ -17,7 +17,7 @@ const styles = {
 export default class Assigned extends Component {
   render() {
     return (
-      <span style={styles.assigned}>
+      <span style={styles.assigned} className={'uitest-assigned'}>
         <FontAwesome icon="check" />
         {i18n.assigned()}
       </span>

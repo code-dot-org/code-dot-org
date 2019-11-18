@@ -148,11 +148,6 @@ sv-SE:
           -   Efter 6 åtgärder måste din dansare göra en annan dans än den som gjordes efter 4 åtgärder.
 
           _Denna nivå slutar efter 12 åtgärder._
-      Dance_2019_07:
-        challenges: |-
-          **Valfri utmaning**
-
-          -   Experimentera genom att ändra andra egenskaper (bredd, längd, rotation osv.)
       Dance_Party_01:
         validation: |-
           **Hur ska man ta sig förbi denna nivå?**

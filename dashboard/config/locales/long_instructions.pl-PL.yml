@@ -2,8 +2,34 @@
 pl-PL:
   data:
     long_instructions:
+      2-3 Artist 1 new: Cześć, jestem artystą. Możesz napisać kod, bym narysował prawie
+        wszystko. Użyj kilku bloków, bym rysował po szarych liniach na obrazku. (Każda
+        linia ma po 100 pikseli)
+      2-3 Artist 2 new: Ten dom ma do połowy skończoną ścianę. Każdy bok ma 100 ale
+        tylko ściana skończona do połowy ma 50. Skończ ścianę.
+      2-3 Artist 3.4: Blok skoku przesuwa artystę bez rysowania. Narysuj przerywaną
+        linię używając bloków 'skocz do przodu' i 'idź do przodu'. Każda linia ma
+        po 50 pikseli.
+      2-3 Artist 3new: |-
+        Czerwony kapelusz jest wysoki na 100 pikseli. Skończ rysować czarny kapelusz, który jest o 70 pikseli niższy.
+        _(Uwaga: Szerokość każdego kapelusza to 50 pikseli.)_
       2-3 Artist 4: Pomóż mi dokończyć domek dla tego kota.
+      2-3 Artist 6: |-
+        Ten dom potrzebuje dachu! Narysuj trójkąt.
+
+        Podpowiedź: wszystkie trzy boki mają taką samą długość.
+
+        <img src="https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif" width="300"/>
+      2-3 Artist 7: "Skończ rysować ostani zestaw okien na szkole, by wszyscy w klasie
+        mogli wyjrzeć na zewnątrz. \nBoki każdego z kwadratowych okienek mają po 25
+        pikseli. "
+      2-3 Artist 8: "Czas zbudować stodołę!\n\nStwórz pokoje dla każdego zwierzęcia,
+        dzieląc stodołę na 2 kwadraty tej samej wielkości. \n\nPodpowiedź: Prostokąt
+        jest szeroki na 200 pikseli i wysoki na 100 pikseli.\n\nIstnieje wiele możliwości
+        rozwiązania tej zagadki."
       2-3 Artist 9 NEW: Dokończ ten latawiec
+      2-3 Artist Assessment 1: "**Szacowanie:** Ukończ rysowanie ostatniego zęba.
+        Jest on szeroki na 25 pikseli i wysoki na 25 pikseli."
       2-3 Artist Free Play: Czas na zabawę! Narysuj cokolwiek chcesz.
       2-3 Artist Nested Loops 10: Powtórz w pętli ten kod 12 razy, aby ukończyć ten
         rysunek.
@@ -554,6 +580,8 @@ pl-PL:
       course2_harvester_loops_challenge1: Zbierz całą kukurydzę.
       course2_harvester_loops_challenge2: Zbierz wszystkie sałaty. Unikaj drzew i
         pól!
+      course2_maze_programming_challenge1: \_"Świnka się chowa! Czy pomożesz mi znaleźć
+        sposób na obejście przeszkód?"
       course2_maze_programming_challenge2: Czasami jest więcej sposobów na rozwiązanie
         tego samego problemu. Czasami szybciej jest się cofnąć niż iść na przód!
       course3_bee_functions_challenge4: Wykorzystaj wszystko czego się nauczyłeś,
@@ -613,6 +641,15 @@ pl-PL:
         Pomóż Laurel dojść do skarbu, a potem użyj klacka <xml><block type="collector_collect" block-text="get treasure"/></xml> aby zebrać kryształ.
 
         Zbierz wszystkie cztery kryształy, aby ukończyć ten poziom.
+      courseB_collector_loops_challenge2a: |-
+        \_ „Zdobądźmy skarb!” \_
+        Pomóż Laurelowi zabrać co najmniej **5** części skarbu, aby ukończyć tę łamigłówkę.
+      courseB_collector_loops_challenge2a_2018: |-
+        \_ „Zdobądźmy skarb!” \_
+        Pomóż Laurelowi zabrać co najmniej **5** części skarbu, aby ukończyć tę łamigłówkę.
+      courseB_collector_loops_challenge2a_2019: |-
+        \_ „Zdobądźmy skarb!” \_
+        Pomóż Laurelowi zabrać co najmniej **5** części skarbu, aby ukończyć tę łamigłówkę.
       courseB_maze_seq3: _"Napraw kod, aby doprowadzić mnie do świnki!"_
       courseB_maze_seq_challenge2_2019: Debuguj ten poziom. Te bloki są poprawne,
         ale w złej kolejności!
