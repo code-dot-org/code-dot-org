@@ -6,7 +6,7 @@
   "jest": {
     "testEnvironment": "node",
     "moduleNameMapper": {
-      ".+\\.(jpg|jpeg|png)$": "identity-obj-proxy"
+      ".+\\.(bin|jpg|jpeg|png)$": "identity-obj-proxy"
     }
   },
   "scripts": {
