@@ -380,14 +380,14 @@ const drawPolaroid = (ctx, x, y) => {
   const yDiff = Math.abs(rectSize - constants.fishCanvasHeight) / 2;
   const adjustedY = y - yDiff;
 
-  DrawFilledRect(
+  DrawRect(
     adjustedX - 10,
     adjustedY - 10,
     rectSize + 20,
     rectSize + 60,
     colors.white
   );
-  DrawFilledRect(adjustedX, adjustedY, rectSize, rectSize, colors.lightGrey);
+  DrawRect(adjustedX, adjustedY, rectSize, rectSize, colors.darkGrey);
 };
 
 // Draws a prediction stamp to the canvas for the given classId.
@@ -402,10 +402,9 @@ const drawPrediction = (ctx, x, y, classId) => {
 
   // Draw square around item
   ctx.beginPath();
+  const color = classId === ClassType.Like ? colors.brightGreen : colors.red;
   ctx.lineWidth = '2';
-  ctx.strokeStyle =
-    classId === ClassType.Like ? colors.brightGreen : colors.red;
-  ctx.rect(adjustedX, adjustedY, rectSize, rectSize);
+  DrawRect(adjustedX, adjustedY, rectSize, rectSize, color, false);
   ctx.stroke();
 
   // Draw icon below square. This code expects predictionImages to be populated
@@ -576,13 +575,12 @@ const DrawFade = (amount, overlayColour) => {
 
   const canvasCtx = getState().canvas.getContext('2d');
   canvasCtx.globalAlpha = amount;
-  canvasCtx.fillStyle = overlayColour;
-  DrawFilledRect(0, 0, constants.canvasWidth, constants.canvasHeight);
+  DrawRect(0, 0, constants.canvasWidth, constants.canvasHeight, overlayColour);
   canvasCtx.globalAlpha = 1;
 };
 
-// Draw a filled rectangle.
-const DrawFilledRect = (x, y, w, h, color) => {
+// Draw a rectangle.
+const DrawRect = (x, y, w, h, color, filled = true) => {
   x = Math.floor(x / 1);
   y = Math.floor(y / 1);
   w = Math.floor(w / 1);
@@ -590,11 +588,18 @@ const DrawFilledRect = (x, y, w, h, color) => {
 
   const canvasCtx = getState().canvas.getContext('2d');
 
-  if (color) {
+  if (color && filled) {
     canvasCtx.fillStyle = color;
+  } else if (color) {
+    canvasCtx.strokeStyle = color;
   }
 
-  canvasCtx.fillRect(x, y, w, h);
+  if (filled) {
+    canvasCtx.fillRect(x, y, w, h);
+  } else {
+    console.log('drawing');
+    canvasCtx.rect(x, y, w, h);
+  }
 };
 
 // A single frame of animation.
