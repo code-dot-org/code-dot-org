@@ -45,7 +45,23 @@ theme: responsive
   =view :dance_videos
 
 - if request.language == 'en'
+
+  %link{href: "/css/full-resource-block.css", rel: "stylesheet"}
+  %link{href: "/css/tools.css", rel: "stylesheet"}
+
   %h2= I18n.t(:hoc2018_dance_amazon_learn_more_future_engineer_subheading_title)
-  =view :dance_amazon_future_engineer
+
+  .full-resource-block{style: "margin-top: 20px;"}
+    %a{href: "https://www.amazonfutureengineer.com", target: "_blank"}
+      %img.full-resource-image{src: "/images/AFE-person-2019.jpg"}
+    .tutorial-info{style: "padding: 30px;"}
+      %span
+        %h2.resource-title Amazon Future Engineer
+        Amazon Future Engineer is a four-part, childhood-to-career program that aims to inspire and educate children and young adults from underserved and underrepresented communities to try computer science. Learn more at
+        %a{href: "https://www.amazonfutureengineer.com", target: "_blank"}
+          www.amazonfutureengineer.com
+
+%br/
+%br/
 
 .amazon-footer= I18n.t(:hoc2018_dance_amazon_future_engineer_footer)

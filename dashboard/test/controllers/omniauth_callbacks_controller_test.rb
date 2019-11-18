@@ -391,7 +391,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test 'login: oauth takeover transfers sections to taken over account' do
-    User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.each do |provider|
+    AuthenticationOption::UNTRUSTED_EMAIL_CREDENTIAL_TYPES.each do |provider|
       teacher = create :teacher
       section = create :section, user: teacher, login_type: 'clever'
       oauth_student = create :student, provider: provider
@@ -412,7 +412,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test 'login: oauth takeover does not happen if takeover is expired' do
-    User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.each do |provider|
+    AuthenticationOption::UNTRUSTED_EMAIL_CREDENTIAL_TYPES.each do |provider|
       teacher = create :teacher
       section = create :section, user: teacher, login_type: 'clever'
       oauth_student = create :student, provider: provider
@@ -435,7 +435,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test 'login: oauth takeover takes over account when account has no activity' do
-    User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.each do |provider|
+    AuthenticationOption::UNTRUSTED_EMAIL_CREDENTIAL_TYPES.each do |provider|
       oauth_student = create :student, provider: provider
       student = create :student
 
@@ -455,7 +455,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test 'login: oauth takeover does nothing if account has activity' do
-    User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.each do |provider|
+    AuthenticationOption::UNTRUSTED_EMAIL_CREDENTIAL_TYPES.each do |provider|
       oauth_student = create :student, provider: provider
       student = create :student
       level = create(:level)

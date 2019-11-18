@@ -389,10 +389,14 @@ hi:
       create: बनाए
       algebra_game: बीज गणित
       applab: ऐप लैब
+      artist: आर्टिस्ट
       artist_k1: कलाकार (आरंभिक-पाठक)
       basketball: बास्केटबॉल
       bounce: उछाल
+      calc: Calc
       dance: डांस पार्टी
+      eval: Eval
+      flappy: फ्लैपी
       frozen: Frozen
       gamelab: गेम लैब
       gamelab_jr: गेम लैब (बीटा)
@@ -405,6 +409,7 @@ hi:
       minecraft_codebuilder: 'Minecraft: कोड कनेक्शन'
       minecraft_designer: Minecraft
       minecraft_hero: Minecraft हीरो
+      playlab: प्ले लैब
       playlab_k1: प्ले लैब (आरंभिक-पाठक)
       scratch: Scratch
       starwars: Star Wars
@@ -722,6 +727,9 @@ hi:
         कोड ट्यूटोरियल आजमाएं!
     20-hour:
       title: त्वरित पाठ्यक्रम
+      body: 20-घंटे के इस कोर्स में मुख्य कंप्यूटर साइंस और कोर्स 2-4 में मौजूद प्रोग्रामिंग
+        अवधारणाओं को शामिल किया गया है। कोर्स 10-18 आयु वर्ग के छात्रों के लिए तैयार
+        किया गया है। अधिक संपूर्ण अनुभव के लिए कोर्स 2-4 देखें!
       body_short: पाठ्यक्रमों 2-4 के त्वरित संस्करण में कंप्यूटर साइंस की बुनियादी
         बातें सीखें।
     hoc2014:
@@ -753,6 +761,8 @@ hi:
       title: Star Wars
     infinity:
       title: Infinity Play Lab
+      body: डिज़्नी इनिफिनिटी के पात्रों की भूमिका में कहानी या गेम तैयार करने के
+        लिए प्ले लैब का उपयोग करें।
     minecraft:
       title: Minecraft
       body: कोड के जरिए Minecraft की दुनिया का पता लगाएँ
@@ -767,6 +777,7 @@ hi:
     sports:
       body: बास्केटबॉल गेम बनाएं या खेलों में मिलाएं व मिलान करें।
     text-compression:
+      title: टेक्सट संक्षिप्तीकरण
       body: इस पाठ में, छात्र चिन्हों के स्थान पर पैटर्नों को रखकर टेक्सट को संक्षिप्त
         करने के लिए कम्प्रेशन विजेट का उपयोग करेंगे।
     unplugged:

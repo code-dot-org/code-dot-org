@@ -24,6 +24,7 @@ def get_social_metadata_for_page(request)
     mc_social_2017: {path: "/images/mc/mc_social_2017.png", width: 1200, height: 630},
     mc_social_2018: {path: "/images/social-media/mc-social-2018.png", width: 1200, height: 630},
     dance_2018: {path: "/images/social-media/dance-social-2018.png", width: 1200, height: 630},
+    dance_2019: {path: "/images/social-media/dance-social-2019.png", width: 1200, height: 630},
     hoc_thanks: {path: "/images/hourofcode-2015-video-thumbnail.png", width: 1440, height: 900},
     hoc_2019_social: {path: "/shared/images/social-media/hoc2019_social.png", width: 1200, height: 630}
   }
@@ -144,7 +145,7 @@ def get_social_metadata_for_page(request)
       "default" => {
         title: hoc_s(:social_hoc2018_dance_party),
         description: hoc_s(:social_hoc2019_dance),
-        image: images[:dance_2018]
+        image: images[:dance_2019]
       }
     },
     "thanks" => {

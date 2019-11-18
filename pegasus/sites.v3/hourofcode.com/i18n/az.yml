@@ -11,13 +11,13 @@ az:
   campaign_date_full: 4-10 dekabr
   campaign_date_year: '2017'
   campaign_date_full_year: 4-10 dekabr 2017
-  hoc2019_header: Learn computer science. Change the world.
-  hoc2019_header_line1_mobile: Learn computer science.
+  hoc2019_header: İnformatikanı öyrənin. Dünyanı dəyişin.
+  hoc2019_header_line1_mobile: İnformatikanı öyrənin.
   hoc2019_header_line2_mobile: Change the world.
   social_hoc2019_every_sudent: 'Every student has the potential to change the world.
     Help them get started. #CSforGood'
-  social_hoc2019_learn_computer_science: 'Learn computer science. Change the world.
-    #CSforGood #HourOfCode'
+  social_hoc2019_learn_computer_science: 'İnformatikanı öyrənin. Dünyanı dəyişin.
+    #CSforGood #HourOfCode #KodSaatı'
   social_hoc_is_coming: The Hour of Code is coming!
   social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
     computer science. Change the world.'
@@ -280,7 +280,7 @@ az:
   front_join_us_code_info: For more information, please visit code.org
   front_join_us_n_students_served: "# nəfər faydalanıb"
   front_join_us_challenge: Win a video chat for your classroom with a celebrity!
-  front_join_us_learn_more: Learn more
+  front_join_us_learn_more: Daha ətraflı
   signup_closed: Registration for the Hour of Code is now closed. Please check again
     in October to sign up for the next Hour of Code.
   signup_registration_not_required: You don't need to register to participate! The
@@ -640,7 +640,7 @@ az:
   highlights_facebook: '"Facebook"da bölüşün'
   highlights_constant_alba_heading: The actress, activist, and entrepreneur hosted
     an Hour of Code with the entire staff at The Honest Company.
-  highlights_constant_alba_short_heading: Jessica Alba learns an Hour of Code
+  highlights_constant_alba_short_heading: Cessika Alba bir Kod Saatı öyrənir
   highlights_constant_obama_heading: President Obama is the first president to write
     a line of code, hosting a historic Hour of Code for students at the White House.
   highlights_constant_obama_short_heading: Coder in Chief
