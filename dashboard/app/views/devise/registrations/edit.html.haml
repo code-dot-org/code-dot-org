@@ -119,8 +119,9 @@
         = form.text_field :username, maxlength: 255
     - else
       .field
+        -# FND-893 - Stop using markdown in <Label>s
         = form.label :personal_email, class: "label-bold" do
-          = t('activerecord.attributes.user.personal_email', url: CDO.studio_url('users/edit/?noEmail=true')).html_safe
+          = t('activerecord.attributes.user.personal_email_markdown', url: CDO.studio_url('users/edit/?noEmail=true'), markdown: true).html_safe
         = form.email_field :email, placeholder: '', autocomplete: 'off', maxlength: 255
     .field
       = form.label :password, maxlength: 255, class: "label-bold"
@@ -138,9 +139,9 @@
       .field
         = form.label t('user.create_personal_login_under_13_parent_email'), class: "label-bold"
         = form.text_field :parent_email, maxlength: 255
-    %p= t('user.create_personal_login_terms', terms_of_service_url: CDO.code_org_url('/tos')).html_safe
+    = t('user.create_personal_login_terms_markdown', terms_of_service_url: CDO.code_org_url('/tos'), markdown: true).html_safe
     - unless no_email
-      %p= t('user.create_personal_login_email_note', privacy_policy_url: CDO.code_org_url('/privacy')).html_safe
+      = t('user.create_personal_login_email_note_markdown', privacy_policy_url: CDO.code_org_url('/privacy'), markdown: true).html_safe
     %div= form.submit t('crud.submit'), id: 'create-personal-login', class: 'btn btn-warning'
 
 -# Separately-submittable form section allowing the user to edit their own
