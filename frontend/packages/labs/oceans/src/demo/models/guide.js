@@ -37,7 +37,7 @@ const guides = [
   },
   {
     id: 'fishvtrash-training-pause1',
-    text: `Did you know an estimated 17 billion pounds of plastic enters into the ocean from land-based sources each year?  Keep training to help A.I. identify what trash looks like.`,
+    text: `Did you know an estimated 17 billion pounds of plastic enters into the ocean from land-based sources each year?  Keep training to help A.I. identify what trash looks like.`,
     when: {
       appMode: AppMode.FishVTrash,
       currentMode: Modes.Training,
@@ -209,7 +209,7 @@ const guides = [
   },
   {
     id: 'creaturesvtrash-training-init2',
-    text: `In the ocean, plastic debris injures and kills fish, seabirds and marine mammals.  Keep training A.I. so we can keep the ocean clean and safe.`,
+    text: `In the ocean, plastic debris injures and kills fish, seabirds and marine mammals.  Keep training A.I. so we can keep the ocean clean and safe.`,
     when: {
       appMode: AppMode.CreaturesVTrash,
       currentMode: Modes.Training,
