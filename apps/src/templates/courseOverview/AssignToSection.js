@@ -8,7 +8,7 @@ import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import ConfirmAssignment from './ConfirmAssignment';
+import {ConfirmHiddenAssignment as ConfirmAssignment} from './ConfirmHiddenAssignment';
 import {
   isScriptHiddenForSection,
   updateHiddenScript
