@@ -250,25 +250,24 @@ export class UnconnectedStageCard extends Component {
           </label>
         </div>
         {stage.levels.map(level => (
-          <div key={level.position + '_' + level.ids[0]}>
-            <LevelToken
-              ref={levelToken => {
-                if (levelToken) {
-                  const metrics = ReactDOM.findDOMNode(
-                    levelToken
-                  ).getBoundingClientRect();
-                  this.metrics[level.position] = metrics;
-                }
-              }}
-              level={level}
-              stagePosition={stage.position}
-              dragging={!!draggedLevelPos}
-              draggedLevelPos={level.position === draggedLevelPos}
-              delta={this.state.currentPositions[level.position - 1] || 0}
-              handleDragStart={this.handleDragStart}
-              removeLevel={this.handleRemoveLevel}
-            />
-          </div>
+          <LevelToken
+            ref={levelToken => {
+              if (levelToken) {
+                const metrics = ReactDOM.findDOMNode(
+                  levelToken
+                ).getBoundingClientRect();
+                this.metrics[level.position] = metrics;
+              }
+            }}
+            key={level.position + '_' + level.ids[0]}
+            level={level}
+            stagePosition={stage.position}
+            dragging={!!draggedLevelPos}
+            draggedLevelPos={level.position === draggedLevelPos}
+            delta={this.state.currentPositions[level.position - 1] || 0}
+            handleDragStart={this.handleDragStart}
+            removeLevel={this.handleRemoveLevel}
+          />
         ))}
         <div style={styles.bottomControls}>
           {!this.state.editingFlexCategory && (
