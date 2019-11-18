@@ -6,24 +6,36 @@ import sinon from 'sinon';
 import {UnconnectedStageCard as StageCard} from '@cdo/apps/lib/script-editor/StageCard';
 
 describe('StageCard', () => {
-  let reorderLevel, addLevel, setStageLockable, setFlexCategory, defaultProps;
+  let reorderLevel,
+    moveLevelToStage,
+    addLevel,
+    setStageLockable,
+    setFlexCategory,
+    setTargetStage,
+    defaultProps;
 
   beforeEach(() => {
     reorderLevel = sinon.spy();
+    moveLevelToStage = sinon.spy();
     addLevel = sinon.spy();
     setStageLockable = sinon.spy();
     setFlexCategory = sinon.spy();
+    setTargetStage = sinon.spy();
     defaultProps = {
       reorderLevel,
+      moveLevelToStage,
       addLevel,
       setStageLockable,
-      setFlexCategory,
       stagesCount: 1,
       stage: {
         levels: [],
         position: 1,
         lockable: false
-      }
+      },
+      stageMetrics: {},
+      setFlexCategory,
+      setTargetStage,
+      targetStagePos: null
     };
   });
 
