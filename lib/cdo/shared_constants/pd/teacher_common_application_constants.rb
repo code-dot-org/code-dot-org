@@ -27,10 +27,6 @@ module Pd
       csp_how_offer: [2, 0]
     }.freeze
 
-    CRITERIA_SCORE_QUESTIONS_CSP = (
-      VALID_SCORES.select {|_, v| v == YES_NO}.keys - [:csd_which_grades, :csd_terms_per_year]
-    ).freeze
-
     TEXT_FIELDS = {
       other_with_text: 'Other:'.freeze,
       other_please_list: 'Other (Please List):'.freeze,
