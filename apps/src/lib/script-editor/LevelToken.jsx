@@ -82,7 +82,7 @@ class LevelToken extends Component {
     level: levelShape.isRequired,
     stagePosition: PropTypes.number.isRequired,
     dragging: PropTypes.bool.isRequired,
-    drag: PropTypes.bool.isRequired,
+    draggedLevelPos: PropTypes.bool.isRequired,
     delta: PropTypes.number,
     handleDragStart: PropTypes.func.isRequired
   };
@@ -103,11 +103,12 @@ class LevelToken extends Component {
   };
 
   render() {
+    const {draggedLevelPos} = this.props;
     const springConfig = {stiffness: 1000, damping: 80};
     return (
       <Motion
         style={
-          this.props.drag
+          draggedLevelPos
             ? {
                 y: this.props.dragging ? this.props.delta : 0,
                 scale: spring(1.02, springConfig),
@@ -130,7 +131,7 @@ class LevelToken extends Component {
             style={Object.assign({}, styles.levelToken, {
               transform: `translate3d(0, ${y}px, 0) scale(${scale})`,
               boxShadow: `${color.shadow} 0 ${shadow}px ${shadow * 3}px`,
-              zIndex: this.props.drag ? 1000 : 500 - this.props.level.position
+              zIndex: draggedLevelPos ? 1000 : 500 - this.props.level.position
             })}
           >
             <div style={styles.reorder} onMouseDown={this.handleDragStart}>

@@ -4,21 +4,21 @@ description 'description here'
 markdown <<MARKDOWN
 # End of course projects: Where are they introduced?
 
-## [Course A](https://curriculum.code.org/csf-19/coursea/)
+## <a href="https://curriculum.code.org/csf-19/coursea/" target="blank">Course A</a>
 - Lesson 12: On the Move with Events
 
-## [Course B](https://curriculum.code.org/csf-19/coursec/)
+## <a href="https://curriculum.code.org/csf-19/courseb/" target="blank">Course B</a>
 - Lesson 12: A Royal Battle with Events
 
-## [Course C](https://curriculum.code.org/csf-19/coursec/)
+## <a href="https://curriculum.code.org/csf-19/coursec/" target="blank">Course C</a>
 - Lesson 18: End of Course Project
 
-## [Course D](https://curriculum.code.org/csf-19/coursed/)
+## <a href="https://curriculum.code.org/csf-19/coursed/" target="blank">Course D</a>
 - Lesson 18: Dance Party
 
-## [Course E](https://curriculum.code.org/csf-19/coursee/)
+## <a href="https://curriculum.code.org/csf-19/coursee/" target="blank">Course E</a>
 - Lesson 18: End of Course Project
 
-## [Course F](https://curriculum.code.org/csf-19/coursef/)
+## <a href="https://curriculum.code.org/csf-19/coursef/" target="blank">Course F</a>
 - Lesson 20: End of Course Project
 MARKDOWN
