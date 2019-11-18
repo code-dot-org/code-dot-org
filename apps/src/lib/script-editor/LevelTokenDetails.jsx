@@ -78,10 +78,10 @@ const tooltipText = {
   assessment:
     'Visibly mark this level as an assessment, and show it in the Assessments tab in Teacher Dashboard.',
   named:
-    'Show this level on a line by itself, with the Display Name of the level as the label.',
+    'Show this level on a line by itself, with the Display Name of the level as the label. This option is deprecated. Please specify a progression name instead.',
   challenge: 'Show students the Challenge dialog when viewing this level.',
   progression:
-    'Group this level with other levels in the same progression, with this text as the label. This overrides the "named" checkbox.'
+    'Group this level with other levels in the same progression, with this text as the label. This overrides the "named" checkbox, which is now deprecated.'
 };
 
 const ArrowRenderer = ({onMouseDown}) => {
