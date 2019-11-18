@@ -559,17 +559,17 @@ export const clearCanvas = canvas => {
 };
 
 // Draw an overlay over the whole scene.  Used for fades.
-function drawOverlays() {
+const drawOverlays = () => {
   const duration = $time() - currentModeStartTime;
   let amount = 1 - duration / 800;
   if (amount < 0) {
     amount = 0;
   }
   DrawFade(amount, '#000');
-}
+};
 
 // Draw a fade over the scene.
-function DrawFade(amount, overlayColour) {
+const DrawFade = (amount, overlayColour) => {
   if (amount === 0) {
     return;
   }
@@ -579,10 +579,10 @@ function DrawFade(amount, overlayColour) {
   canvasCtx.fillStyle = overlayColour;
   DrawFilledRect(0, 0, constants.canvasWidth, constants.canvasHeight);
   canvasCtx.globalAlpha = 1;
-}
+};
 
 // Draw a filled rectangle.
-function DrawFilledRect(x, y, w, h, color) {
+const DrawFilledRect = (x, y, w, h, color) => {
   x = Math.floor(x / 1);
   y = Math.floor(y / 1);
   w = Math.floor(w / 1);
@@ -595,7 +595,7 @@ function DrawFilledRect(x, y, w, h, color) {
   }
 
   canvasCtx.fillRect(x, y, w, h);
-}
+};
 
 // A single frame of animation.
 window.requestAnimFrame = (() => {
