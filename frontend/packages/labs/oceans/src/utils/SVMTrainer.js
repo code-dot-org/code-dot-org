@@ -50,4 +50,44 @@ export default class SVMTrainer {
     result.confidencesByClassId = confidences;
     return result;
   }
+
+  detailedExplanation(fieldInfos) {
+    //console.log(JSON.stringify(this.labeledTrainingData));
+    //const fieldInfos = this.labeledTrainingData[0].example;
+    const fieldsAndValues = [];
+    for (var i = 0; i < this.svm.w.length; i++) {
+      fieldsAndValues.push({
+        fieldInfo: fieldInfos[i],
+        //absWeight: Math.abs(this.svm.w[i]),
+        absWeight: Math.pow(this.svm.w[i], 2),
+        sign: this.svm.w[i] >= 0 ? 1 : -1
+      });
+    }
+    fieldsAndValues.sort((a, b) => b.absWeight - a.absWeight);
+    return fieldsAndValues;
+  }
+
+  summarize(fieldInfos) {
+    const weightData = this.detailedExplanation(fieldInfos);
+    const rawSummary = {};
+    for (const fieldWithWeight of weightData) {
+      const partType = fieldWithWeight.fieldInfo.partType;
+      if (!rawSummary.hasOwnProperty(partType)) {
+        rawSummary[partType] = 0;
+      }
+      rawSummary[partType] += fieldWithWeight.absWeight;
+    }
+
+    const sortedSummary = Object.entries(rawSummary)
+      .map(e => {return {partType: e[0], importance: e[1]}})
+      .sort((a, b) => b.importance - a.importance);
+
+    var denominator = 0;
+    for (const partWithImportance of sortedSummary) {
+      denominator += partWithImportance.importance;
+    }
+    const sortedAndNormalizedSummary = sortedSummary.map(p => {return {partType: p.partType, importance: p.importance / denominator}});
+
+    return sortedAndNormalizedSummary;
+  }
 }

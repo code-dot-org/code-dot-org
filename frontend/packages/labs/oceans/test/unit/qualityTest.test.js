@@ -1,6 +1,7 @@
 const {
   initFishData,
   fishData,
+  fieldInfos,
   MouthExpression,
   BodyShape
 } = require('../../src/utils/fishData');
@@ -29,13 +30,8 @@ const trial = async function(trainSize, testSize, trainer, labelFn) {
   //console.log(trainer.svm.toJSON());
   //console.log(JSON.stringify(trainer.svm.w));
 
-  const fieldsAndValues = [];
-  for (var i = 0; i < trainer.svm.w.length; i++) {
-    fieldsAndValues.push([testOcean[0].dataFields[i], Math.abs(trainer.svm.w[i]), Math.abs(trainer.svm.w[i])/trainer.svm.w[i]]);
-  }
-  fieldsAndValues.sort((a, b) => b[1] - a[1]);
-
-  console.log(JSON.stringify(fieldsAndValues, null, 2));
+  //console.log(JSON.stringify(trainer.detailedExplanation(testOcean[0].dataFields), null, 2));
+  console.log(JSON.stringify(trainer.summarize(testOcean[0].dataFields), null, 2));
 
   return createConfusionMatrix(testOcean, trainSize, labelFn);
 };
@@ -189,7 +185,7 @@ describe('Model quality test', () => {
   //     expect(result.recall).toBeGreaterThanOrEqual(0.6);
   //   }
   // });
-/*
+
   test('Body shape test', async () => {
     const partKey = PartKey.BODY;
     const knnDataIndex = 1;
@@ -213,8 +209,8 @@ describe('Model quality test', () => {
       expect(result.recall).toBeGreaterThanOrEqual(0.6);
     }
   });
-*/
-/*
+
+
   test('test eyes', async () => {
     const partData = fishData.eyes;
     const partKey = PartKey.EYE;
@@ -235,8 +231,8 @@ describe('Model quality test', () => {
       analyzeConfusionMatrix(trainSize, result);
     }
   });
-  */
-/*
+
+
   test('test mouths', async () => {
     const partData = fishData.mouths;
     const partKey = PartKey.MOUTH;
@@ -277,7 +273,7 @@ describe('Model quality test', () => {
       analyzeConfusionMatrix(trainSize, result);
     }
   });
-*/
+
 
   test('test mouth expressions', async () => {
     const partKey = PartKey.MOUTH;
@@ -301,7 +297,8 @@ describe('Model quality test', () => {
       analyzeConfusionMatrix(trainSize, result);
     }
   });
-/*
+
+
   test('test shark teeth', async () => {
     const partData = fishData.mouths;
     const partKey = PartKey.MOUTH;
@@ -324,5 +321,5 @@ describe('Model quality test', () => {
     });
     analyzeConfusionMatrix(trainSize, result);
   });
-*/
+
 });
