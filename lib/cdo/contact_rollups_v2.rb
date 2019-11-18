@@ -143,17 +143,17 @@ class ContactRollupsV2
 
   def self.collect_daily_changes(db_connection, src_db, src_table, columns, date)
     logs = []
-    logs << "src_table = #{src_table}, columns = #{columns}, date = #{date}"
+    logs << "src_db = #{src_db}, src_table = #{src_table}, columns = #{columns}, date = #{date}"
 
     # Find out how many rows we want to insert
-    rows_to_insert_query = <<-SQL.squish
+    count_insertion_query = <<-SQL.squish
       select count(*) as rowcount
       from #{src_table}
       where '#{date}' <= updated_at and updated_at < '#{date + 1.day}'
     SQL
-    logs << "daily_changes_query = #{rows_to_insert_query}"
+    logs << "daily_changes_query = #{count_insertion_query}"
 
-    rows_to_insert = db_connection[rows_to_insert_query].first[:rowcount]
+    rows_to_insert = db_connection[count_insertion_query].first[:rowcount]
     logs << "number of rows to insert = #{rows_to_insert}"
 
     # Construct insertion query
@@ -184,39 +184,47 @@ class ContactRollupsV2
     puts "Caught error: #{e.message}. Will save to tracker table with logs"
     raise e
   ensure
-    puts "_____collect_daily_changes in #{src_db}.#{src_table}_____"
+    puts "_____collect_daily_changes_____"
     logs.each {|log| puts log}
   end
 
   # TODO: generalize to delete_daily_changes_from_table(table_name)
-  def self.delete_daily_changes_from_users(date)
+  def self.delete_daily_changes(date)
     logs = []
     logs << "date = #{date}"
-    src_table = "#{DASHBOARD_DB_NAME}.users_view"
 
-    count_rows_to_delete = <<-SQL.squish
-      select count(*)
+    count_deletion_query = <<-SQL.squish
+      select count(*) as rowcount
       from #{DAILY_TABLE}
-      where source_table = '#{src_table}' and data_date = '#{date}'
+      where data_date = '#{date}'
     SQL
-    logs << "count_rows_to_delete = #{count_rows_to_delete}"
+    logs << "count_rows_to_delete = #{count_deletion_query}"
+
+    rows_to_delete = PEGASUS_DB_WRITER[count_deletion_query].first[:rowcount]
+    logs << "number of rows to delete = #{rows_to_delete}"
 
     delete_query = <<-SQL.squish
       delete from #{DAILY_TABLE}
-      where source_table = '#{src_table}' and data_date = '#{date}'
+      where data_date = '#{date}'
     SQL
     logs << "delete_query = #{delete_query}"
 
-    logs << "row count before delete = #{PEGASUS_DB_WRITER[count_rows_to_delete].first.values}"
+    # Delete data from daily table
+    before_count = PEGASUS_DB_WRITER[DAILY_TABLE].count
+    logs << "#{DAILY_TABLE} row count before insert = #{before_count}"
 
     PEGASUS_DB_WRITER.run(delete_query)
 
-    logs << "row count after delete = #{PEGASUS_DB_WRITER[count_rows_to_delete].first.values}"
+    after_count = PEGASUS_DB_WRITER[DAILY_TABLE].count
+    logs << "#{DAILY_TABLE} row count after insert = #{after_count}"
 
-    # TODO: add assertion/raise
-    # raise "Mismatch number of rows deleted" if row count after delete > 0, or it deletes more than it shoul
+    # Check post condition
+    logs << "Expect to delete #{rows_to_delete} rows. Actual rows deleted = #{before_count - after_count}"
+    if rows_to_delete != before_count - after_count
+      raise "Mismatch number of rows deleted!"
+    end
   ensure
-    puts "_____delete_daily_changes_from_users_____"
+    puts "_____delete_daily_changes_____"
     logs.each {|log| puts log}
   end
 
@@ -405,11 +413,12 @@ class ContactRollupsV2
   end
 
   def self.test
-    drop_tables
-    create_tables
+    # drop_tables
+    # create_tables
     # empty_tables
-    collect_data_to_daily_table
+    # collect_data_to_daily_table
     # update_data_to_main_table
+    # delete_daily_changes('2019-11-11')
     # sync_to_pardot
     count_table_rows
     nil
