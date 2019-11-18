@@ -36,12 +36,15 @@ class ContactRollupsV2
     query_timeout: MAX_EXECUTION_TIME_SEC
   )
 
-  def self.create_tables
-    # Create crv2_daily table that partition by (date + source table). Index on (email + source + date)
-    if PEGASUS_DB_WRITER.table_exists?(:crv2_daily)
-      puts "crv2_daily table already exists"
+  DAILY_TABLE = :crv2_daily
+  MAIN_TABLE = :crv2_all
+
+  def self.create_daily_table
+    # Create daily table that contains daily changes from source tables
+    if PEGASUS_DB_WRITER.table_exists?(DAILY_TABLE)
+      puts "#{DAILY_TABLE} table already exists"
     else
-      PEGASUS_DB_WRITER.create_table :crv2_daily do
+      PEGASUS_DB_WRITER.create_table DAILY_TABLE do
         primary_key :id
         String :email, null: false
         String :source_table, null: false
@@ -53,14 +56,16 @@ class ContactRollupsV2
         index :data_date
         unique [:email, :source_table, :data_date]
       end
-      puts "created crv2_daily table"
+      puts "Created #{DAILY_TABLE} table"
     end
+  end
 
-    # Create crv2_all table, index on email. (optimization: index/partition by data_date)
-    if PEGASUS_DB_WRITER.table_exists?(:crv2_all)
-      puts "crv2_all table already exists"
+  def self.create_main_table
+    # Create main table that contains latest data we have on emails
+    if PEGASUS_DB_WRITER.table_exists?(MAIN_TABLE)
+      puts "#{MAIN_TABLE} table already exists"
     else
-      PEGASUS_DB_WRITER.create_table :crv2_all do
+      PEGASUS_DB_WRITER.create_table MAIN_TABLE do
         primary_key :id
         String :email, null: false
         column :data, 'json'
@@ -70,8 +75,7 @@ class ContactRollupsV2
         DateTime :pardot_sync_at
         DateTime :created_at, null: false
         DateTime :updated_at, null: false
-
-        # all the reason why we shouldn't sync an email to externally
+        # All the reason why we shouldn't try to sync an email externally.
         # opt_out is combination of multiple values such as opted_out and opt_in
         # Consideration: Combine them in 2 fields [not_sync], [reason]
         column :email_malformed, 'tinyint(1)'
@@ -79,8 +83,13 @@ class ContactRollupsV2
 
         unique :email
       end
-      puts "created crv2_all table"
+      puts "created #{MAIN_TABLE} table"
     end
+  end
+
+  def self.create_tables
+    create_daily_table
+    create_main_table
 
     # TODO: Create tracker tables:
     # Job tracker: What runs, when, result
@@ -88,22 +97,22 @@ class ContactRollupsV2
   end
 
   def self.drop_tables
-    PEGASUS_DB_WRITER.drop_table(:crv2_daily)
-    PEGASUS_DB_WRITER.drop_table(:crv2_all)
+    PEGASUS_DB_WRITER.drop_table(DAILY_TABLE)
+    PEGASUS_DB_WRITER.drop_table(MAIN_TABLE)
   end
 
   def self.empty_tables
-    PEGASUS_DB_WRITER.run("delete from crv2_daily")
-    PEGASUS_DB_WRITER.run("delete from crv2_all")
+    PEGASUS_DB_WRITER.run("delete from #{DAILY_TABLE}")
+    PEGASUS_DB_WRITER.run("delete from #{MAIN_TABLE}")
   end
 
   def self.count_table_rows
-    puts "crv2_daily total row count = #{PEGASUS_DB_WRITER[:crv2_daily].count}"
-    puts "crv2_all total row count = #{PEGASUS_DB_WRITER[:crv2_all].count}"
+    puts "#{DAILY_TABLE} total row count = #{PEGASUS_DB_WRITER[DAILY_TABLE].count}"
+    puts "#{MAIN_TABLE} total row count = #{PEGASUS_DB_WRITER[MAIN_TABLE].count}"
   end
 
-  def self.collect_data_to_crv2_daily
-    # Insert daily changes to crv2_daily
+  def self.collect_data_to_daily_table
+    # Insert daily changes to daily table
     #   Get emails from user_view table
     #   Get opted_out from pegasus.contacts
     #   Get opt_in from dashboard.email_preferences
@@ -148,22 +157,22 @@ class ContactRollupsV2
     rows_to_insert = DASHBOARD_DB_READER[daily_changes_query].count
     logs << "number of rows to insert = #{rows_to_insert}"
 
-    # insert daily changes into crv2_daily
+    # insert daily changes into daily table
     insert_daily_changes_query = <<-SQL.squish
-      insert into crv2_daily (email, source_table, data, data_date, created_at)
+      insert into #{DAILY_TABLE} (email, source_table, data, data_date, created_at)
       select email, '#{src_table}', JSON_OBJECT('user_type', user_type, 'school', school), '#{date}', NOW()
       from #{src_table}
       where '#{date}' <= updated_at and updated_at < '#{date + 1.day}'
     SQL
     logs << "insert_daily_changes_query = #{insert_daily_changes_query}"
 
-    before_count = PEGASUS_DB_WRITER[:crv2_daily].count
-    logs << "crv2_daily row count before insert = #{before_count}"
+    before_count = PEGASUS_DB_WRITER[DAILY_TABLE].count
+    logs << "#{DAILY_TABLE} row count before insert = #{before_count}"
 
     PEGASUS_DB_WRITER.run(insert_daily_changes_query)
 
-    after_count = PEGASUS_DB_WRITER[:crv2_daily].count
-    logs << "crv2_daily row count after insert = #{after_count}"
+    after_count = PEGASUS_DB_WRITER[DAILY_TABLE].count
+    logs << "#{DAILY_TABLE} row count after insert = #{after_count}"
     logs << "Expect to insert #{rows_to_insert} rows. Actual rows inserted = #{after_count - before_count}"
 
     if rows_to_insert != after_count - before_count
@@ -184,13 +193,13 @@ class ContactRollupsV2
 
     count_rows_to_delete = <<-SQL.squish
       select count(*)
-      from crv2_daily
+      from #{DAILY_TABLE}
       where source_table = '#{src_table}' and data_date = '#{date}'
     SQL
     logs << "count_rows_to_delete = #{count_rows_to_delete}"
 
     delete_query = <<-SQL.squish
-      delete from crv2_daily
+      delete from #{DAILY_TABLE}
       where source_table = '#{src_table}' and data_date = '#{date}'
     SQL
     logs << "delete_query = #{delete_query}"
@@ -208,56 +217,56 @@ class ContactRollupsV2
     logs.each {|log| puts log}
   end
 
-  def self.update_data_to_crv2_all
-    # Pull 1-day data from crv2_daily to crv2_all
+  def self.update_data_to_main_table
+    # Pull 1-day data from daily table to main table
     # Ruby approach:
     #   Process 1 row in daily table at a time.
-    #   Find the corresponding row in crv2_all and update it or insert it
+    #   Find the corresponding row in main table and update it or insert it
     # SQL approach:
     #   Condense daily changes to an email to 1 row.
-    #   Join condensed table to crv2_all and update crv2_all data
+    #   Join condensed table to main and update main table data
     # Optimization:
     #   Normalize email to id?
 
-    if PEGASUS_DB_WRITER[:crv2_daily].empty?
-      puts "crv2_daily is empty. stop processing"
+    if PEGASUS_DB_WRITER[DAILY_TABLE].empty?
+      puts "#{DAILY_TABLE} is empty. stop processing"
       return
     end
 
     # Each data package is defined only by data_date
     daily_data_query = <<-SQL.squish
       select distinct data_date
-      from crv2_daily
+      from #{DAILY_TABLE}
       order by data_date
     SQL
 
     PEGASUS_DB_WRITER[daily_data_query].each do |row|
-      update_daily_data_to_crv2_all row[:data_date]
+      update_daily_data_to_main_table row[:data_date]
     end
   end
 
-  def self.update_daily_data_to_crv2_all(data_date)
-    puts "_____update_daily_data_to_crv2_all_____"
+  def self.update_daily_data_to_main_table(data_date)
+    puts "_____update_daily_data_to_main_table_____"
     puts "data_date = #{data_date}"
 
     # Collapse daily data
     data_to_insert_query = <<-SQL.squish
       select email, json_objectagg(source_table, data) as data
-      from crv2_daily
+      from #{DAILY_TABLE}
       where data_date = '#{data_date}'
       group by email
     SQL
     p data_to_insert_query
 
     data_to_insert = PEGASUS_DB_WRITER[data_to_insert_query]
-    puts "Inserting/updating #{data_to_insert.count} rows to crv2_all"
+    puts "Inserting/updating #{data_to_insert.count} rows to #{MAIN_TABLE}"
 
     # TODO: add counters for post-condition/assertion
     data_to_insert.each do |row|
       email, data = row.values_at(:email, :data)
       current_time = Time.now
 
-      dest = PEGASUS_DB_WRITER[:crv2_all].where(email: email).first
+      dest = PEGASUS_DB_WRITER[MAIN_TABLE].where(email: email).first
       if dest
         old_data = JSON.parse(dest[:data])
         new_data = old_data.merge(JSON.parse(data))
@@ -266,7 +275,7 @@ class ContactRollupsV2
           puts "No data change for #{email}"
         else
           update_values = {data: new_data.to_json, updated_at: current_time}
-          PEGASUS_DB_WRITER[:crv2_all].where(email: email).update(update_values)
+          PEGASUS_DB_WRITER[MAIN_TABLE].where(email: email).update(update_values)
 
           puts "Updated data for #{email}. Old data: #{dest[:data]}. New data: #{new_data.to_json}"
         end
@@ -278,23 +287,23 @@ class ContactRollupsV2
           created_at: current_time,
           updated_at: current_time
         }
-        PEGASUS_DB_WRITER[:crv2_all].insert(insert_values)
+        PEGASUS_DB_WRITER[MAIN_TABLE].insert(insert_values)
 
-        puts "Inserted #{email} into crv2_all"
+        puts "Inserted #{email} into #{MAIN_TABLE}"
       end
     end
 
     # Consider SQL approach:
-    # crv2_daily left outer join to crv2_all on email
-    # merge crv2_daily.data & crv2_all.data
-    # update crv2_all.data
+    # daily left outer join to main on email
+    # merge daily.data & main.data
+    # update main.data
   end
 
   # Only this part is specific to Pardot. Everything else should be generic
   def self.sync_to_pardot
     # Get pardot id for new emails
     max_pardot_id = 80_999_343    # TODO: remove max_pardot_id in function signature
-    Pardot.update_pardot_ids(:crv2_all, max_pardot_id)
+    Pardot.update_pardot_ids(MAIN_TABLE, max_pardot_id)
 
     # Sync data to pardot
     new_contact_conditions = <<-SQL.squish
@@ -305,7 +314,7 @@ class ContactRollupsV2
 
     new_contact_config = {
       operation_name: "insert",
-      table: :crv2_all,
+      table: MAIN_TABLE,
       where_clause: new_contact_conditions,
       create_prospect_func: :extract_prospect,  # a public class method in Pardot
       pardot_url: Pardot::PARDOT_BATCH_CREATE_URL
@@ -322,7 +331,7 @@ class ContactRollupsV2
 
     updated_contact_config = {
       operation_name: "update",
-      table: :crv2_all,
+      table: MAIN_TABLE,
       where_clause: updated_contact_conditions,
       create_prospect_func: :extract_prospect,  # a public class method in Pardot
       pardot_url: Pardot::PARDOT_BATCH_UPDATE_URL
@@ -332,14 +341,14 @@ class ContactRollupsV2
     Pardot.sync_contacts_with_pardot updated_contact_config
 
     # Get pardot id for the new inserted emails
-    Pardot.update_pardot_ids(:crv2_all, max_pardot_id)
+    Pardot.update_pardot_ids(MAIN_TABLE, max_pardot_id)
   end
 
   def self.prepare_data_to_sync(table, where_clause)
     PEGASUS_DB_WRITER[table].where(where_clause).each do |row|
       data_to_sync = convert_db_row_to_prospect row
       p "data_to_sync = #{data_to_sync}"
-      PEGASUS_DB_WRITER[:crv2_all].where(email: row[:email]).update(data_to_sync: data_to_sync.to_json)
+      PEGASUS_DB_WRITER[MAIN_TABLE].where(email: row[:email]).update(data_to_sync: data_to_sync.to_json)
     end
   end
 
@@ -386,8 +395,8 @@ class ContactRollupsV2
 
   def self.main
     create_tables
-    collect_data_to_crv2_daily
-    update_data_to_crv2_all
+    collect_data_to_daily_table
+    update_data_to_main_table
     sync_to_pardot
     count_table_rows
   end
@@ -396,8 +405,8 @@ class ContactRollupsV2
     # drop_tables
     # create_tables
     # empty_tables
-    # collect_data_to_crv2_daily
-    # update_data_to_crv2_all
+    # collect_data_to_daily_table
+    # update_data_to_main_table
     sync_to_pardot
     # count_table_rows
     nil
