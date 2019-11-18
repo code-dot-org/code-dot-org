@@ -24,7 +24,7 @@ const guides = [
   },
   {
     id: 'fishvtrash-training-init3',
-    text: `A.I. is an artifical inteligence and does not know if an object is a fish or trash, but it can process different images and identify patterns.`,
+    text: `A.I. is an artifical intelligence and does not know if an object is a fish or trash, but it can process different images and identify patterns.`,
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Training},
     style: 'Center',
     arrow: 'none'
@@ -37,7 +37,7 @@ const guides = [
   },
   {
     id: 'fishvtrash-training-pause1',
-    text: `Did you know an estimated 17 billion pounds of plastic enters into the ocean from land-based sources each year?  Keep training to help A.I. identify what trash looks like.`,
+    text: `Did you know an estimated 17 billion pounds of plastic enters the ocean from land-based sources each year?  Keep training to help A.I. identify what trash looks like.`,
     when: {
       appMode: AppMode.FishVTrash,
       currentMode: Modes.Training,
