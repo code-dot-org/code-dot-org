@@ -8,6 +8,8 @@ import {
   generateColorPalette
 } from './helpers';
 import {trashImagePaths, seaCreatureImagePaths} from '../utils/imagePaths';
+import model from './model.json';
+import shard1of1 from './group1-shard1of1.bin';
 
 let fishPartImages = {};
 let trashImages = [];
@@ -63,8 +65,26 @@ export const loadAllFishPartImages = () => {
   });
 };
 
+const loadHandler = {
+  load: async () => {
+    const { weightsManifest, ...modelArtifacts } = model;
+    const [weightsManifestGroupConfig] = weightsManifest;
+    const { weights } = weightsManifestGroupConfig;
+
+    modelArtifacts.weightSpecs = weights;
+
+    // Convert shard1of1 from data URI to ArrayBuffer in two steps:
+    const result = await fetch(shard1of1);
+    modelArtifacts.weightData = await result.arrayBuffer();
+
+    return modelArtifacts;
+  }
+}
+
 export const initMobilenet = () => {
-  return mobilenetModule.load(1, 0.25).then(res => (mobilenet = res));
+  return mobilenetModule
+    .load({version: 1, modelUrl: loadHandler})
+    .then(res => (mobilenet = res));
 };
 
 // Load all of the trash assets and store them
@@ -172,7 +192,7 @@ export class OceanObject {
   // If using mobilenet, generate a tensor that represents the canvas
   generateLogits(canvas) {
     if (mobilenet && !this.logits) {
-      const image = tf.fromPixels(canvas);
+      const image = tf.browser.fromPixels(canvas);
       const infer = () => mobilenet.infer(image, 'conv_preds');
       this.logits = infer();
     }

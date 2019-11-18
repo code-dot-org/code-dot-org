@@ -278,6 +278,11 @@ const styles = {
     maxWidth: '47%',
     transform: 'translateX(-50%)'
   },
+  guideRightCenter: {
+    bottom: '30%',
+    right: '5%',
+    maxWidth: '25%'
+  },
   guideTopRight: {
     top: '15%',
     right: '13%'
