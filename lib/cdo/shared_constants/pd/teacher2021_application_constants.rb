@@ -1,7 +1,5 @@
 module Pd
   module Teacher2021ApplicationConstants
-    include Pd::TeacherCommonApplicationConstants
-
     YES_NO = %w(Yes No).freeze
 
     # Remove newlines and leading whitespace from multiline strings

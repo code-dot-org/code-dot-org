@@ -38,7 +38,6 @@ module Pd::Application
   class TeacherApplicationBase < ApplicationBase
     include PdWorkshopHelper
     include Rails.application.routes.url_helpers
-    include Pd::TeacherCommonApplicationConstants
     include SchoolInfoDeduplicator
 
     serialized_attrs %w(
