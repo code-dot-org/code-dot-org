@@ -1583,14 +1583,13 @@ export const initFishData = () => {
         }
       });
       Object.values(variations).forEach((component, idx) => {
-        component.dataFields = [];
+        component.fieldInfos = [];
         for (var i = 0; i < component.knnData.length; ++i) {
-          component.dataFields.push({
+          component.fieldInfos.push({
             partType: key,
             fieldType: FieldType.ATTRIBUTE,
             index: i
           });
-          //component.dataFields.push(`${key}_field_${i}`);
         };
 
         for (var i = 0; i < component.knnData.length; ++i) {
@@ -1610,12 +1609,11 @@ export const initFishData = () => {
           component.knnData.push(...indexVector);
 
           for (var i = 0; i < indexVector.length; ++i) {
-            component.dataFields.push({
+            component.fieldInfos.push({
               partType: key,
               fieldType: FieldType.ID,
               index: i
             });
-            //component.dataFields.push(`${key}_index_${i}`);
           };
         }
       });

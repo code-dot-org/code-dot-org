@@ -26,12 +26,8 @@ const trial = async function(trainSize, testSize, trainer, labelFn) {
     fish.result = await trainer.predict(fish);
   }
 
-  //console.log(testOcean[0].dataFields);
-  //console.log(trainer.svm.toJSON());
-  //console.log(JSON.stringify(trainer.svm.w));
-
-  //console.log(JSON.stringify(trainer.detailedExplanation(testOcean[0].dataFields), null, 2));
-  console.log(JSON.stringify(trainer.summarize(testOcean[0].dataFields), null, 2));
+  //console.log(JSON.stringify(trainer.detailedExplanation(testOcean[0].fieldInfos), null, 2));
+  console.log(JSON.stringify(trainer.summarize(testOcean[0].fieldInfos), null, 2));
 
   return createConfusionMatrix(testOcean, trainSize, labelFn);
 };
