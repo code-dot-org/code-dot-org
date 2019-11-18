@@ -67,3 +67,4 @@ Feature: (Un)Assign on script and course overview pages
     And I wait until element ".uitest-confirm-assignment-dialog" is visible
     And I wait until element "#confirm-assign" is visible
     And I press the first "#confirm-assign" element
+    And I wait until element ".uitest-unassign-button" is visible
