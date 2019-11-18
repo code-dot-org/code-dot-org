@@ -3,6 +3,7 @@ const constants = {
   canvasHeight: 576,
   fishCanvasWidth: 300,
   fishCanvasHeight: 200,
+  fishFrameSize: 210,
   defaultMoveTime: 1000
 };
 

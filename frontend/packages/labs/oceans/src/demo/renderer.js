@@ -107,7 +107,6 @@ export const render = () => {
 
   switch (state.currentMode) {
     case Modes.Training:
-      drawFrame(state);
       drawMovingFish(state);
       break;
     case Modes.Predicting:
@@ -352,7 +351,8 @@ const drawMovingFish = state => {
       }
     }
 
-    drawSingleFish(fish, x, y, ctx, 1, drawPrediction);
+    const drawPolaroid = state.currentMode === Modes.Training;
+    drawSingleFish(fish, x, y, ctx, 1, drawPrediction, drawPolaroid);
   }
 
   if (state.currentMode === Modes.Predicting) {
@@ -366,11 +366,28 @@ const drawMovingFish = state => {
   }
 };
 
+const drawPolaroid = (ctx, x, y) => {
+  const rectSize = constants.fishFrameSize;
+  const xDiff = Math.abs(rectSize - constants.fishCanvasWidth) / 2;
+  const adjustedX = x + xDiff;
+  const yDiff = Math.abs(rectSize - constants.fishCanvasHeight) / 2;
+  const adjustedY = y - yDiff;
+
+  DrawRect(
+    adjustedX - 10,
+    adjustedY - 10,
+    rectSize + 20,
+    rectSize + 60,
+    colors.white
+  );
+  DrawRect(adjustedX, adjustedY, rectSize, rectSize, colors.darkGrey);
+};
+
 // Draws a prediction stamp to the canvas for the given classId.
 // Note: This method requires icons to be cached in predictionImages.
 // Call loadAllPredictionImages() before this method.
 const drawPrediction = (ctx, x, y, classId) => {
-  const rectSize = 210;
+  const rectSize = constants.fishFrameSize;
   const xDiff = Math.abs(rectSize - constants.fishCanvasWidth) / 2;
   const adjustedX = x + xDiff;
   const yDiff = Math.abs(rectSize - constants.fishCanvasHeight) / 2;
@@ -378,10 +395,9 @@ const drawPrediction = (ctx, x, y, classId) => {
 
   // Draw square around item
   ctx.beginPath();
+  const color = classId === ClassType.Like ? colors.brightGreen : colors.red;
   ctx.lineWidth = '2';
-  ctx.strokeStyle =
-    classId === ClassType.Like ? colors.brightGreen : colors.red;
-  ctx.rect(adjustedX, adjustedY, rectSize, rectSize);
+  DrawRect(adjustedX, adjustedY, rectSize, rectSize, color, false);
   ctx.stroke();
 
   // Draw icon below square. This code expects predictionImages to be populated
@@ -440,23 +456,6 @@ const drawPredictBot = state => {
   ctx.drawImage(botImg, botX, botY);
 };
 
-// Draw frame in the center of the screen.
-const drawFrame = state => {
-  const canvas = state.canvas;
-  const size = constants.fishCanvasWidth;
-  const frameXPos = canvas.width / 2 - size / 2;
-  const frameYPos = canvas.height / 2 - size / 2;
-  drawRoundedFrame(
-    canvas.getContext('2d'),
-    frameXPos,
-    frameYPos,
-    size,
-    size,
-    '#F0F0F0',
-    '#F0F0F0'
-  );
-};
-
 // Draw the fish for pond mode.
 const drawPondFishImages = () => {
   const canvas = getState().canvas;
@@ -505,7 +504,8 @@ const drawSingleFish = (
   fishYPos,
   ctx,
   size = 1,
-  withPrediction = false
+  withPrediction = false,
+  withPolaroid = false
 ) => {
   const [fishCanvas, hit] = canvasCache.getCanvas(fish.id);
   if (!hit) {
@@ -515,13 +515,17 @@ const drawSingleFish = (
   }
 
   // TODO: Does scaling during drawImage have a performance impact on some
-  // devices/browsers?  We migth need to pre-cache scaled images.
+  // devices/browsers?  We might need to pre-cache scaled images.
   const width = fishCanvas.width * size;
   const height = fishCanvas.height * size;
 
   // Maintain the center of the fish.
   const adjustedFishXPos = fishXPos - width / 2 + fishCanvas.width / 2;
   const adjustedFishYPos = fishYPos - height / 2 + fishCanvas.height / 2;
+
+  if (withPolaroid) {
+    drawPolaroid(ctx, adjustedFishXPos, adjustedFishYPos);
+  }
 
   if (withPrediction && fish.getResult()) {
     drawPrediction(
@@ -547,75 +551,49 @@ export const clearCanvas = canvas => {
 };
 
 // Draw an overlay over the whole scene.  Used for fades.
-function drawOverlays() {
+const drawOverlays = () => {
   const duration = $time() - currentModeStartTime;
   let amount = 1 - duration / 800;
   if (amount < 0) {
     amount = 0;
   }
   DrawFade(amount, '#000');
-}
+};
 
 // Draw a fade over the scene.
-function DrawFade(amount, overlayColour) {
+const DrawFade = (amount, overlayColour) => {
   if (amount === 0) {
     return;
   }
 
   const canvasCtx = getState().canvas.getContext('2d');
   canvasCtx.globalAlpha = amount;
-  canvasCtx.fillStyle = overlayColour;
-  DrawFilledRect(0, 0, constants.canvasWidth, constants.canvasHeight);
+  DrawRect(0, 0, constants.canvasWidth, constants.canvasHeight, overlayColour);
   canvasCtx.globalAlpha = 1;
-}
-
-const drawRoundedFrame = (
-  ctx,
-  x,
-  y,
-  w,
-  h,
-  backgroundColor,
-  borderColor,
-  thickness = 2
-) => {
-  const r = 10;
-  ctx.lineJoin = 'round';
-  ctx.lineWidth = r;
-
-  // Outer frame
-  ctx.strokeStyle = borderColor;
-  ctx.strokeRect(x + r / 2, y + r / 2, w - r, h - r);
-  ctx.fillStyle = borderColor;
-  DrawFilledRect(x + r / 2, y + r / 2, w - r, h - r);
-
-  // Inner frame
-  ctx.strokeStyle = backgroundColor;
-  ctx.strokeRect(
-    x + r / 2 + thickness,
-    y + r / 2 + thickness,
-    w - r - thickness * 2,
-    h - r - thickness * 2
-  );
-  ctx.fillStyle = backgroundColor;
-  DrawFilledRect(
-    x + r / 2 + thickness,
-    y + r / 2 + thickness,
-    w - r - thickness * 2,
-    h - r - thickness * 2
-  );
 };
 
-// Draw a filled rectangle.
-function DrawFilledRect(x, y, w, h) {
+// Draw a rectangle.
+const DrawRect = (x, y, w, h, color, filled = true) => {
   x = Math.floor(x / 1);
   y = Math.floor(y / 1);
   w = Math.floor(w / 1);
   h = Math.floor(h / 1);
 
   const canvasCtx = getState().canvas.getContext('2d');
-  canvasCtx.fillRect(x, y, w, h);
-}
+  if (filled) {
+    if (color) {
+      canvasCtx.fillStyle = color;
+    }
+
+    canvasCtx.fillRect(x, y, w, h);
+  } else {
+    if (color) {
+      canvasCtx.strokeStyle = color;
+    }
+
+    canvasCtx.rect(x, y, w, h);
+  }
+};
 
 // A single frame of animation.
 window.requestAnimFrame = (() => {
