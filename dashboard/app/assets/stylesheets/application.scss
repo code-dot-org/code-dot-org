@@ -1579,6 +1579,10 @@ a.download-video {
   .finish-signup {
     width: 800px;
   }
+  /* FND-893 - Stop using markdown in <Label>s*/
+  .finish-signup #instructions p {
+    display: inline;
+  }
 
   .signup, .finish-signup {
     $school-info-background: #f7f7f7;
@@ -1693,7 +1697,7 @@ a.download-video {
 
   // OLD SIGN-UP FORM
   .signupform {
-    padding: 20px;
+    padding: 20px 0;
     margin-bottom: 0;
   }
   .itemblock {
@@ -1703,14 +1707,10 @@ a.download-video {
       margin-top: -4px;
       margin-right: 4px;
     }
-
-    label {
-      display: inline-block;
-    }
   }
   .labelblock {
     display: table-cell;
-    width: 140px;
+    width: 180px;
     vertical-align: middle;
   }
   .labelblock-wide {
@@ -1730,7 +1730,25 @@ a.download-video {
     margin-bottom: 5px;
     margin-top: 5px;
   }
-  .terms-checkbox, .race-checkbox {
+
+  /* FND-893 - Stop using markdown in <Label>s*/
+  label.terms {
+    font-size: inherit;
+    line-height: inherit;
+  }
+  .terms-text {
+    overflow: hidden;
+  }
+  .terms-text p {
+    display: inline;
+    margin: 0;
+  }
+  .terms-checkbox {
+    margin: 0 5px 0 0;
+    float: left;
+  }
+
+  .race-checkbox {
     margin: 0 5px 2px 0;
   }
   .right {
