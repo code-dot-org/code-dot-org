@@ -380,12 +380,14 @@ const drawPolaroid = (ctx, x, y) => {
   const yDiff = Math.abs(rectSize - constants.fishCanvasHeight) / 2;
   const adjustedY = y - yDiff;
 
-  ctx.beginPath();
-  ctx.fillStyle = colors.white;
-  ctx.fillRect(adjustedX - 10, adjustedY - 10, rectSize + 20, rectSize + 60);
-  ctx.fillStyle = colors.lightGrey;
-  ctx.fillRect(adjustedX, adjustedY, rectSize, rectSize);
-  ctx.stroke();
+  DrawFilledRect(
+    adjustedX - 10,
+    adjustedY - 10,
+    rectSize + 20,
+    rectSize + 60,
+    colors.white
+  );
+  DrawFilledRect(adjustedX, adjustedY, rectSize, rectSize, colors.lightGrey);
 };
 
 // Draws a prediction stamp to the canvas for the given classId.
@@ -579,51 +581,19 @@ function DrawFade(amount, overlayColour) {
   canvasCtx.globalAlpha = 1;
 }
 
-const drawRoundedFrame = (
-  ctx,
-  x,
-  y,
-  w,
-  h,
-  backgroundColor,
-  borderColor,
-  thickness = 2
-) => {
-  const r = 10;
-  ctx.lineJoin = 'round';
-  ctx.lineWidth = r;
-
-  // Outer frame
-  ctx.strokeStyle = borderColor;
-  ctx.strokeRect(x + r / 2, y + r / 2, w - r, h - r);
-  ctx.fillStyle = borderColor;
-  DrawFilledRect(x + r / 2, y + r / 2, w - r, h - r);
-
-  // Inner frame
-  ctx.strokeStyle = backgroundColor;
-  ctx.strokeRect(
-    x + r / 2 + thickness,
-    y + r / 2 + thickness,
-    w - r - thickness * 2,
-    h - r - thickness * 2
-  );
-  ctx.fillStyle = backgroundColor;
-  DrawFilledRect(
-    x + r / 2 + thickness,
-    y + r / 2 + thickness,
-    w - r - thickness * 2,
-    h - r - thickness * 2
-  );
-};
-
 // Draw a filled rectangle.
-function DrawFilledRect(x, y, w, h) {
+function DrawFilledRect(x, y, w, h, color) {
   x = Math.floor(x / 1);
   y = Math.floor(y / 1);
   w = Math.floor(w / 1);
   h = Math.floor(h / 1);
 
   const canvasCtx = getState().canvas.getContext('2d');
+
+  if (color) {
+    canvasCtx.fillStyle = color;
+  }
+
   canvasCtx.fillRect(x, y, w, h);
 }
 
