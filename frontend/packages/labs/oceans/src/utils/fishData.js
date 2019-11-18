@@ -87,7 +87,6 @@ import eyes6_image from '../../public/images/fish/eyes/eyes6.png';
 import eyes7_image from '../../public/images/fish/eyes/eyes7.png';
 import eyes8_image from '../../public/images/fish/eyes/eyes8.png';
 import eyes9_image from '../../public/images/fish/eyes/eyes9.png';
-import glasses_1_image from '../../public/images/fish/eyes/glasses_1.png';
 import small_1_image from '../../public/images/fish/eyes/small_1.png';
 
 import mouth1_image from '../../public/images/fish/mouth/mouth1.png';
@@ -586,17 +585,6 @@ const fishComponents = {
     eyes9: {
       src: eyes9_image,
       knnData: [732, 1.6944444444444444],
-      type: FishBodyPart.EYE,
-      exclusions: [
-        AppMode.FishVTrash,
-        AppMode.CreaturesVTrashDemo,
-        AppMode.CreaturesVTrash,
-        AppMode.FishShort
-      ]
-    },
-    glasses_1: {
-      src: glasses_1_image,
-      knnData: [841, 1.8402625820568927],
       type: FishBodyPart.EYE,
       exclusions: [
         AppMode.FishVTrash,
