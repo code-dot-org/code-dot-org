@@ -13355,6 +13355,8 @@ en:
               name: Welcome to the Internet
             'Lesson 9: Assessment Day':
               name: 'Lesson 9: Assessment Day'
+            The Need for Addressing:
+              name: The Need for Addressing
           title: CSP Unit 2 Pilot - The Internet
           description_audience: ''
           description_short: ''
@@ -13447,7 +13449,7 @@ en:
           description_audience: ''
           description_short: ''
           description: Code your own dance party to share with your friends!
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           title: Teaching Computer Science Fundamentals
           description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course!
           description_short: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course.
