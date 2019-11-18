@@ -85,7 +85,10 @@ class FlexGroup extends Component {
   };
 
   handleAddStage = position => {
-    this.props.addStage(position, prompt('Enter new stage name'));
+    const newStageName = prompt('Enter new stage name');
+    if (newStageName) {
+      this.props.addStage(position, newStageName);
+    }
   };
 
   setTargetStage = targetStagePos => {
