@@ -7,26 +7,6 @@ module Pd
       string.gsub(/\n\s*/, ' ')
     end
 
-    VALID_SCORES = {
-      regional_partner_name: YES_NO,
-      previous_yearlong_cdo_pd: YES_NO,
-      committed: YES_NO,
-      able_to_attend_single: YES_NO,
-      able_to_attend_multiple: YES_NO,
-      csp_which_grades: YES_NO,
-      csp_course_hours_per_year: YES_NO,
-      csd_which_grades: YES_NO,
-      csd_terms_per_year: YES_NO,
-      principal_approval: YES_NO,
-      schedule_confirmed: YES_NO,
-      diversity_recruitment: YES_NO,
-      free_lunch_percent: [5, 0],
-      underrepresented_minority_percent: [5, 0],
-      wont_replace_existing_course: [5, 0],
-      taught_in_past: [2, 0],
-      csp_how_offer: [2, 0]
-    }.freeze
-
     TEXT_FIELDS = {
       other_with_text: 'Other:'.freeze,
       other_please_list: 'Other (Please List):'.freeze,
