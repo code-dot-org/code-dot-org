@@ -270,4 +270,4 @@ class I18nSync
   end
 end
 
-I18nSync.new(ARGV).run if __FILE__ == $0 && only_one_running?(__FILE__)
+I18nSync.new(ARGV).run if only_one_running?(__FILE__)
