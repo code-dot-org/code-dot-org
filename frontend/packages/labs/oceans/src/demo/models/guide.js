@@ -2,7 +2,7 @@ import {getState, setState} from '../state';
 import {AppMode, Modes} from '../constants';
 import crabImage from '../../../public/images/seaCreatures/Crab.png';
 import turtleImage from '../../../public/images/seaCreatures/Turtle.png';
-import trash6PackImage from '../../../public/images/trash/Trash_6pack.png';
+import seahorseImage from '../../../public/images/seaCreatures/Seahorse.png';
 import trashBottleImage from '../../../public/images/trash/Trash_Bottle.png';
 import trashCanImage from '../../../public/images/trash/Trash_Can.png';
 import guideFish1 from '../../../public/images/fish/guideFish/guideFish1.png';
@@ -37,7 +37,7 @@ const guides = [
   },
   {
     id: 'fishvtrash-training-pause1',
-    text: `Did you know an estimated 17 billion pounds of plastic enters the ocean from land-based sources each year?  Keep training to help A.I. identify what trash looks like.`,
+    text: `Did you know:  An estimated 17 billion pounds of plastic enters the ocean from land-based sources each year.`,
     when: {
       appMode: AppMode.FishVTrash,
       currentMode: Modes.Training,
@@ -51,7 +51,20 @@ const guides = [
   },
   {
     id: 'fishvtrash-training-pause2',
-    text: `Marine debris comes in many shapes and sizes, ranging from small plastics to glass bottles to rubber tires, and many more.  Keep training to help A.I. learn.`,
+    text: `Keep training to help A.I. identify what trash looks like.`,
+    when: {
+      appMode: AppMode.FishVTrash,
+      currentMode: Modes.Training,
+      fn: state => {
+        return state.yesCount + state.noCount >= 5;
+      }
+    },
+    style: 'RightCenter',
+    arrow: 'none'
+  },
+  {
+    id: 'fishvtrash-training-pause3',
+    text: `Did you know:  Marine debris comes in many shapes and sizes, ranging from small plastics to glass bottles to rubber tires, and many more.`,
     when: {
       appMode: AppMode.FishVTrash,
       currentMode: Modes.Training,
@@ -64,7 +77,20 @@ const guides = [
     image: trashCanImage
   },
   {
-    id: 'fishvtrash-training-pause3',
+    id: 'fishvtrash-training-pause4',
+    text: `Keep training to help A.I. learn.`,
+    when: {
+      appMode: AppMode.FishVTrash,
+      currentMode: Modes.Training,
+      fn: state => {
+        return state.yesCount + state.noCount >= 15;
+      }
+    },
+    style: 'RightCenter',
+    arrow: 'none'
+  },
+  {
+    id: 'fishvtrash-training-pause5',
     text: `Great work!  The more training you provide A.I. the better it will do.  You can keep training A.I. or continue when ready.`,
     when: {
       appMode: AppMode.FishVTrash,
@@ -117,34 +143,34 @@ const guides = [
   },
 //TODO: placeholder for when we add the See More button
 //  {
-//    id: 'fishvtrash-pond-init3',
+//    id: 'fishvtrash-pond-init2',
 //    text: `To see all the objects that A.I. analyzed click See More.`,
 //    when: {appMode: AppMode.FishVTrash, currentMode: Modes.Pond},
 //    style: 'TopLeft',
 //    arrow: 'none'
 //  },
   {
-    id: 'fishvtrash-pond-init4',
+    id: 'fishvtrash-pond-init3',
     text: `You can train A.I. more...`,
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Pond},
     style: 'BottomLeft'
   },
   {
-    id: 'fishvtrash-pond-init5',
+    id: 'fishvtrash-pond-init4',
     text: `...or Continue.`,
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Pond},
     style: 'BottomRight'
   },
   {
     id: 'creaturesvtrash-predicting-init',
-    text: `So far we trained A.I. to identify objects as either "Fish" or "Not Fish".  This training data was used to decide what belonged in the water.`,
+    text: `So far we trained A.I. to identify objects as either "Fish" or "Not Fish".`,
     when: {appMode: AppMode.CreaturesVTrashDemo, currentMode: Modes.Predicting},
     style: 'Center',
     arrow: 'none'
   },
   {
     id: 'creaturesvtrash-predicting-init2',
-    text: `What would happen if we introduced new types of sea creatures?  What unintended consequences might our current training approach lead to?`,
+    text: `What if this training data was used to decide what belonged in the water?`,
     when: {appMode: AppMode.CreaturesVTrashDemo, currentMode: Modes.Predicting},
     style: 'Center',
     arrow: 'none',
@@ -152,6 +178,14 @@ const guides = [
   },
   {
     id: 'creaturesvtrash-predicting-init3',
+    text: `What would happen to other types of sea creatures?  What unintended consequences might our current training approach lead to?`,
+    when: {appMode: AppMode.CreaturesVTrashDemo, currentMode: Modes.Predicting},
+    style: 'Center',
+    arrow: 'none',
+    image: crabImage
+  },
+  {
+    id: 'creaturesvtrash-predicting-init4',
     text: `Let's see.`,
     when: {appMode: AppMode.CreaturesVTrashDemo, currentMode: Modes.Predicting},
     style: 'BottomRight',
@@ -170,7 +204,7 @@ const guides = [
   },
   {
     id: 'creaturesvtrashdemo-predicting-pause2',
-    text: `There are lots of marine life in the ocean that don’t look like fish.  But that doesn’t mean they don't belong in the ocean.`,
+    text: `There are a lot of sea creatures that don't look like fish.  But that doesn’t mean they don't belong in the water.`,
     when: {
       appMode: AppMode.CreaturesVTrashDemo,
       currentMode: Modes.Predicting,
@@ -192,7 +226,7 @@ const guides = [
   },
   {
     id: 'creaturesvtrash-predicting-pause4',
-    text: `Let's train A.I. again`,
+    text: `Let's train A.I. again.`,
     when: {
       appMode: AppMode.CreaturesVTrashDemo,
       currentMode: Modes.Predicting,
@@ -209,7 +243,7 @@ const guides = [
   },
   {
     id: 'creaturesvtrash-training-init2',
-    text: `In the ocean, plastic debris injures and kills fish, seabirds and marine mammals.  Keep training A.I. so we can keep the ocean clean and safe.`,
+    text: `Did you know:  In the ocean, plastic debris can harm fish, seabirds and marine mammals. This is one of many reasons to keep the oceans clean.`,
     when: {
       appMode: AppMode.CreaturesVTrash,
       currentMode: Modes.Training,
@@ -219,11 +253,24 @@ const guides = [
     },
     style: 'RightCenter',
     arrow: 'none',
-    image: trash6PackImage
+    image: seahorseImage
   },
   {
     id: 'creaturesvtrash-training-init3',
-    text: `Marine plastic pollution has impacted at least 267 species worldwide, including 86% of all sea turtle species and 43% of all marine mammal species. Your training of A.I. can make a difference in how well A.I. identifies trash. Keep going.`,
+    text: `Keep training A.I. to identify what should be in the water.`,
+    when: {
+      appMode: AppMode.CreaturesVTrash,
+      currentMode: Modes.Training,
+      fn: state => {
+        return state.yesCount + state.noCount >= 5;
+      }
+    },
+    style: 'RightCenter',
+    arrow: 'none',
+  },
+  {
+    id: 'creaturesvtrash-training-init4',
+    text: `Did you know:  Marine plastic pollution has impacted at least 267 species worldwide, including 86% of all sea turtle species.`,
     when: {
       appMode: AppMode.CreaturesVTrash,
       currentMode: Modes.Training,
@@ -236,8 +283,34 @@ const guides = [
     image: turtleImage
   },
   {
+    id: 'creaturesvtrash-training-init5',
+    text: `Keep training to teach A.I. what belongs in the water.`,
+    when: {
+      appMode: AppMode.CreaturesVTrash,
+      currentMode: Modes.Training,
+      fn: state => {
+        return state.yesCount + state.noCount >= 15;
+      }
+    },
+    style: 'RightCenter',
+    arrow: 'none',
+  },
+  {
+    id: 'creaturesvtrash-training-init6',
+    text: `Great work!  The more training you provide A.I. the better it will do.  You can keep training A.I. or continue when ready.`,
+    when: {
+      appMode: AppMode.CreaturesVTrash,
+      currentMode: Modes.Training,
+      fn: state => {
+        return state.yesCount + state.noCount >= 30;
+      }
+    },
+    style: 'BottomRightCenter',
+    arrow: 'none'
+  },
+  {
     id: 'creaturesvtrash-predicting-init',
-    text: `Do you think A.I. will do a better job idenifying what should be in the water? Let's watch.`,
+    text: `Do you think A.I. will now do a better job identifying what should be in the water?  Let's watch.`,
     when: {appMode: AppMode.CreaturesVTrash, currentMode: Modes.Predicting},
     style: 'BottomMiddle',
     arrow: 'none'
