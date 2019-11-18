@@ -29,12 +29,6 @@ import {randomInt} from './helpers';
 import checkmarkIcon from '../../public/images/checkmark-icon.png';
 import banIcon from '../../public/images/ban-icon.png';
 
-var $time =
-  Date.now ||
-  function() {
-    return +new Date();
-  };
-
 let prevState = {};
 let currentModeStartTime = $time();
 let canvasCache;

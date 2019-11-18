@@ -368,6 +368,8 @@ let Button = class Button extends React.Component {
   onClick(event) {
     if (this.props.sound) {
       playSound(this.props.sound + "_" + randomInt(1,10));
+    } else {
+      playSound("other_" + randomInt(1,4));
     }
 
     dismissCurrentGuide();
@@ -803,9 +805,10 @@ class Guide extends React.Component {
   }
 
   dismissGuideClick() {
-    playSound("other_" + randomInt(1,4));
-
-    dismissCurrentGuide();
+    const dismissed = dismissCurrentGuide();
+    if (dismissed) {
+      playSound("other_" + randomInt(1,4));
+    }
   }
 
   render() {
