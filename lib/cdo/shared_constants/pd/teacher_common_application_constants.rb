@@ -2,11 +2,6 @@ module Pd
   module TeacherCommonApplicationConstants
     YES_NO = %w(Yes No).freeze
 
-    # Remove newlines and leading whitespace from multiline strings
-    def self.clean_multiline(string)
-      string.gsub(/\n\s*/, ' ')
-    end
-
     TEXT_FIELDS = {
       other_with_text: 'Other:'.freeze,
       other_please_list: 'Other (Please List):'.freeze,
