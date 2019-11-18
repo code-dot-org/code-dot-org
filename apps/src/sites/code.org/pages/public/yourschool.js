@@ -35,7 +35,6 @@ function showYourSchool() {
         alertText={yourschoolElement.data('parameters-alert-text')}
         alertUrl={yourschoolElement.data('parameters-alert-url')}
         hideMap={yourschoolElement.data('parameters-hide-map')}
-        fusionTableId={yourschoolElement.data('parameters-table-id')}
         prefillData={prefillData}
         currentCensusYear={yourschoolElement.data('parameters-school-year')}
       />
