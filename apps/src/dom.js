@@ -9,7 +9,7 @@ exports.addReadyListener = function(callback) {
 exports.getTouchEventName = function(eventName) {
   var isIE11Touch = window.navigator.pointerEnabled;
   var isIE10Touch = window.navigator.msPointerEnabled;
-  var isStandardTouch = !(isIE11Touch || isIE10Touch);
+  var isStandardTouch = 'ontouchend' in document.documentElement;
 
   var key;
   if (isIE11Touch) {
@@ -66,7 +66,7 @@ var addEvent = function(
       if (suppressTouchDefault) {
         e.preventDefault();
       }
-
+      unbindEvent('click');
       handler.call(this, e);
     });
   }

@@ -13,7 +13,7 @@ stage 'Building a Network'
 level 'CSP U2L2 SFLP 20-21', progression: 'Lesson Overview'
 level 'U2L1 CFU paths', progression: 'Check For Understanding', assessment: true
 
-stage 'IP Addresses'
+stage 'The Need for Addressing'
 level 'CSP U2L3 SFLP 20-21', progression: 'Lesson Overview'
 level 'U2L2 CSP Internet Simulator Broadcast', progression: 'Internet Simulator: Broadcast Mode'
 level 'U2L2 CSP CFU IP Addresses', progression: 'Check For Understanding', assessment: true
