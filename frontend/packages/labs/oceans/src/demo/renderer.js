@@ -107,7 +107,6 @@ export const render = () => {
 
   switch (state.currentMode) {
     case Modes.Training:
-      drawFrame(state);
       drawMovingFish(state);
       break;
     case Modes.Predicting:
@@ -352,7 +351,15 @@ const drawMovingFish = state => {
       }
     }
 
-    drawSingleFish(fish, x, y, ctx, 1, drawPrediction);
+    drawSingleFish(
+      fish,
+      x,
+      y,
+      ctx,
+      1,
+      drawPrediction,
+      state.currentMode === Modes.Training
+    );
   }
 
   if (state.currentMode === Modes.Predicting) {
@@ -366,11 +373,26 @@ const drawMovingFish = state => {
   }
 };
 
+const drawPolaroid = (ctx, x, y) => {
+  const rectSize = constants.fishFrameSize;
+  const xDiff = Math.abs(rectSize - constants.fishCanvasWidth) / 2;
+  const adjustedX = x + xDiff;
+  const yDiff = Math.abs(rectSize - constants.fishCanvasHeight) / 2;
+  const adjustedY = y - yDiff;
+
+  ctx.beginPath();
+  ctx.fillStyle = colors.white;
+  ctx.fillRect(adjustedX - 10, adjustedY - 10, rectSize + 20, rectSize + 60);
+  ctx.fillStyle = colors.lightGrey;
+  ctx.fillRect(adjustedX, adjustedY, rectSize, rectSize);
+  ctx.stroke();
+};
+
 // Draws a prediction stamp to the canvas for the given classId.
 // Note: This method requires icons to be cached in predictionImages.
 // Call loadAllPredictionImages() before this method.
 const drawPrediction = (ctx, x, y, classId) => {
-  const rectSize = 210;
+  const rectSize = constants.fishFrameSize;
   const xDiff = Math.abs(rectSize - constants.fishCanvasWidth) / 2;
   const adjustedX = x + xDiff;
   const yDiff = Math.abs(rectSize - constants.fishCanvasHeight) / 2;
@@ -440,23 +462,6 @@ const drawPredictBot = state => {
   ctx.drawImage(botImg, botX, botY);
 };
 
-// Draw frame in the center of the screen.
-const drawFrame = state => {
-  const canvas = state.canvas;
-  const size = constants.fishCanvasWidth;
-  const frameXPos = canvas.width / 2 - size / 2;
-  const frameYPos = canvas.height / 2 - size / 2;
-  drawRoundedFrame(
-    canvas.getContext('2d'),
-    frameXPos,
-    frameYPos,
-    size,
-    size,
-    '#F0F0F0',
-    '#F0F0F0'
-  );
-};
-
 // Draw the fish for pond mode.
 const drawPondFishImages = () => {
   const canvas = getState().canvas;
@@ -505,7 +510,8 @@ const drawSingleFish = (
   fishYPos,
   ctx,
   size = 1,
-  withPrediction = false
+  withPrediction = false,
+  withPolaroid = false
 ) => {
   const [fishCanvas, hit] = canvasCache.getCanvas(fish.id);
   if (!hit) {
@@ -515,13 +521,17 @@ const drawSingleFish = (
   }
 
   // TODO: Does scaling during drawImage have a performance impact on some
-  // devices/browsers?  We migth need to pre-cache scaled images.
+  // devices/browsers?  We might need to pre-cache scaled images.
   const width = fishCanvas.width * size;
   const height = fishCanvas.height * size;
 
   // Maintain the center of the fish.
   const adjustedFishXPos = fishXPos - width / 2 + fishCanvas.width / 2;
   const adjustedFishYPos = fishYPos - height / 2 + fishCanvas.height / 2;
+
+  if (withPolaroid) {
+    drawPolaroid(ctx, adjustedFishXPos, adjustedFishYPos);
+  }
 
   if (withPrediction && fish.getResult()) {
     drawPrediction(
