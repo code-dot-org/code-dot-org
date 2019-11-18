@@ -1,5 +1,3 @@
-pilot_experiment 'csd-piloters'
-
 stage 'What is a Computer?', flex_category: 'csd1_2'
 level 'CSD U1L04 TFMD_pilot', named: true
 level 'CSD What Makes a Computer a Computer Video_pilot', named: true
@@ -7,6 +5,7 @@ level 'CSD What Makes a Computer a Computer Video_pilot', named: true
 stage 'Input and Output', flex_category: 'csd1_2'
 level 'CSD U1L05 TFMD_pilot', named: true
 level 'csd wiac pet chooser', named: true
+level 'csd wiac mad libs', named: true
 
 stage 'Processing', flex_category: 'csd1_2'
 level 'CSD U1L06 TFMD_pilot', named: true

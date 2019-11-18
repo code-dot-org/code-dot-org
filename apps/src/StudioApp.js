@@ -3207,7 +3207,7 @@ StudioApp.prototype.isNotStartedLevel = function(config) {
     )
   ) {
     return config.readonlyWorkspace && !config.channel;
-  } else if (!config.level.freePlay) {
+  } else {
     return (
       config.readonlyWorkspace &&
       progress.levelProgress[progress.currentLevelId] === undefined

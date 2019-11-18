@@ -11,6 +11,8 @@ question 'Chunk of data and its metadata, used to route and reassemble informati
 answer 'Packet'
 question 'The way in which information travels on the Internet, not as a single piece but in chunks.'
 answer 'Datastream'
+question 'Sends all packets without checking whether they were received or ordered properly'
+answer 'User Datagram Protocol (UDP)'
 
 
 markdown <<MARKDOWN

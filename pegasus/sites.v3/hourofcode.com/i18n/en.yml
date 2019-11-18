@@ -20,7 +20,7 @@
   social_hoc_is_coming: 'The Hour of Code is coming!'
   social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn computer science. Change the world.'
   social_hoc2019_coming_dates: 'The Hour of Code is coming December 9-15, 2019. Computer science is foundational for every student to learn.'
-  social_hoc2019_dance: 'Featuring Katy Perry, Jonas Brothers, Lil Nas X, Panic at the Disco, and many more!'
+  social_hoc2019_dance: 'Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, and 34 more!'
 
   codeorg_homepage_hoc2018_curriculum: 'Go further with <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org courses</a>'
   codeorg_homepage_hoc2018_dance_heading: 'Create your own <span class="highlight-word">Dance&nbsp;Party</span>'
@@ -35,6 +35,8 @@
   hourofcode_homepage_hoc2018_header_line2: 'Ages 4 to 104.'
 
   hoc2018_tutorial_mchoc_description: 'Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code.'
+
+  codeorg_homepage_hoc2019_dance_heading: 'Try the new <span class="highlight-word">Dance&nbsp;Party!</span>'
 
   cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
   cookie_banner_more_information: "See Code.org's Privacy Policy."
@@ -536,6 +538,7 @@
   learn_robotics_banner_heading: 'Robotics and Circuits'
   learn_robotics_banner_blurb: 'Got robots or physical computing kits? Use them with the activities below and make a tangible Hour of Code for students of any age! Some activities even offer a simulator so you can get started without any hardware.'
 
+  tutorial_dance2019_name: "Dance Party 2019"
   tutorial_danceparty_name: "Dance Party"
   tutorial_chibitronics_name: "Chibitronics: Illuminated Story"
   tutorial_athlete_name: "Code your own sports game"
@@ -1696,6 +1699,7 @@
   tutorial_allcancodeapps_shortdescription: "Use the Allcancode Platform to create web and mobile apps from design to delivery."
   tutorial_n2y_shortdescription: "Help Bitt Bott explore Earth using direction arrows."
 
+  tutorial_dance2019_longdescription: "Code a Dance Party to share with your friends. Featuring Katy Perry, Shawn Mendes, Lil Nas X, Panic! At The Disco, Jonas Brothers, and many more!"
   tutorial_danceparty_longdescription: "Code a Dance Party to share with your friends. Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!"
   tutorial_chibitronics_longdescription: "Program a paper circuit to light up your own story."
   tutorial_athlete_longdescription: "Choose between making a basketball game or mix and match across sports!"
@@ -2276,6 +2280,7 @@
   tutorial_allcancodeapps_longdescription: "Use the Allcancode Platform to create web and mobile apps from design to delivery. Application logic is written in Google Blockly, the programming language used in most Code.org activities."
   tutorial_n2y_longdescription: "In these printable activities, students can help a little robot named Bitt Bott explore different landforms on Earth. Students give Bitt Bott simple directions by choosing and circling appropriate directional arrows. Each of the six activities includes simple directions that are supported with symbols from the n2y® SymbolStix PRIME® collection. The symbols help non-readers and beginning readers understand and follow the directions."
 
+  tutorial_dance2019_language: "English, Arabic, Catalan, Chinese, Czech, Danish, Dutch, Finnish, French, German, Greek, Hungarian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese, Russian, Spanish, Swedish, Thai, Turkish, and Vietnamese"
   tutorial_danceparty_language: "English, Arabic, Catalan, Chinese, Czech, Danish, Dutch, Finnish, French, German, Greek, Hungarian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese, Russian, Spanish, Swedish, Thai, Turkish, and Vietnamese"
   tutorial_chibitronics_language: "English"
   tutorial_athlete_language: "English, French, Spanish, Italian, Portuguese (Brazil)"
@@ -2856,6 +2861,7 @@
   tutorial_allcancodeapps_language: "English"
   tutorial_n2y_language: "English"
 
+  tutorial_dance2019_string_detail_grades: "Grades 2+"
   tutorial_danceparty_string_detail_grades: "Grades 2+"
   tutorial_chibitronics_string_detail_grades: "Grades 2-5"
   tutorial_athlete_string_detail_grades: "Grades 2+"
@@ -3436,6 +3442,7 @@
   tutorial_allcancodeapps_string_detail_grades: "Grades 6+"
   tutorial_n2y_string_detail_grades: "Pre-reader+"
 
+  tutorial_dance2019_string_platforms: "All modern browsers, Android tablet, iPad, Unplugged"
   tutorial_danceparty_string_platforms: "All modern browsers, Android tablet, iPad"
   tutorial_chibitronics_string_platforms: "All modern browsers"
   tutorial_athlete_string_platforms: "All modern browsers"
@@ -4016,6 +4023,7 @@
   tutorial_allcancodeapps_string_platforms: "All modern browsers"
   tutorial_n2y_string_platforms: "Unplugged"
 
+  tutorial_dance2019_string_detail_platforms: ""
   tutorial_danceparty_string_detail_platforms: ""
   tutorial_chibitronics_string_detail_platforms: "Chibitronics Chibi Chip and Circuit Sticker LEDs"
   tutorial_athlete_string_detail_platforms: ""
@@ -4596,6 +4604,7 @@
   tutorial_allcancodeapps_string_detail_platforms: ""
   tutorial_n2y_string_detail_platforms: ""
 
+  tutorial_dance2019_string_detail_programming_languages: "Blocks"
   tutorial_danceparty_string_detail_programming_languages: "Blocks"
   tutorial_chibitronics_string_detail_programming_languages: "Blocks"
   tutorial_athlete_string_detail_programming_languages: "Blocks"
