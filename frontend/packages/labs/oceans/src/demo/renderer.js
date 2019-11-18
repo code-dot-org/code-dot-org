@@ -351,15 +351,8 @@ const drawMovingFish = state => {
       }
     }
 
-    drawSingleFish(
-      fish,
-      x,
-      y,
-      ctx,
-      1,
-      drawPrediction,
-      state.currentMode === Modes.Training
-    );
+    const drawPolaroid = state.currentMode === Modes.Training;
+    drawSingleFish(fish, x, y, ctx, 1, drawPrediction, drawPolaroid);
   }
 
   if (state.currentMode === Modes.Predicting) {
