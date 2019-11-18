@@ -30,7 +30,8 @@ class SectionAssigner extends Component {
     forceReload: PropTypes.bool,
     // Redux provided
     selectSection: PropTypes.func.isRequired,
-    selectedSectionId: PropTypes.number
+    selectedSectionId: PropTypes.number,
+    assignmentName: PropTypes.string
   };
 
   onChangeSection = sectionId => {
@@ -44,7 +45,8 @@ class SectionAssigner extends Component {
       courseId,
       scriptId,
       selectedSectionId,
-      forceReload
+      forceReload,
+      assignmentName
     } = this.props;
     const selectedSection = sections.find(
       section => section.id === selectedSectionId
@@ -72,6 +74,8 @@ class SectionAssigner extends Component {
                 sectionId={selectedSection.id}
                 courseId={courseId}
                 scriptId={scriptId}
+                assignmentName={assignmentName}
+                sectionName={selectedSection.name}
               />
             )}
         </div>
