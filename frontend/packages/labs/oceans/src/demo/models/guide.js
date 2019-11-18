@@ -51,7 +51,7 @@ const guides = [
   },
   {
     id: 'fishvtrash-training-pause2',
-    text: `Marine debris comes in many shapes and sizes ranging from small plastics to glass bottles to rubber tires, and much more.  Keep training to help A.I. learn.`,
+    text: `Marine debris comes in many shapes and sizes, ranging from small plastics to glass bottles to rubber tires, and many more.  Keep training to help A.I. learn.`,
     when: {
       appMode: AppMode.FishVTrash,
       currentMode: Modes.Training,
