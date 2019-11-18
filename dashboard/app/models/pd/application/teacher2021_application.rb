@@ -731,7 +731,7 @@ module Pd::Application
     # approval is done. Generates scores for responses, is idempotent and does not
     # override existing scores
     #
-    # Overriding the base class because scores are somewhat different
+    # @override
     def auto_score!
       responses = sanitize_form_data_hash
 
