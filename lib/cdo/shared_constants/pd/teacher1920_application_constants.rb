@@ -335,10 +335,6 @@ module Pd
       VALID_SCORES.select {|_, v| v == YES_NO}.keys -
         [:csd_which_grades] - SCHOLARSHIP_QUESTIONS
     ).freeze
-    CRITERIA_SCORE_QUESTIONS_CSD = (
-      VALID_SCORES.select {|_, v| v == YES_NO}.keys -
-        [:csp_how_offer, :csp_which_grades] - SCHOLARSHIP_QUESTIONS
-    ).freeze
 
     TEXT_FIELDS = {
       other_with_text: 'Other:'.freeze,
