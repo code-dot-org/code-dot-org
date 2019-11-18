@@ -597,7 +597,6 @@ const DrawRect = (x, y, w, h, color, filled = true) => {
   if (filled) {
     canvasCtx.fillRect(x, y, w, h);
   } else {
-    console.log('drawing');
     canvasCtx.rect(x, y, w, h);
   }
 };
