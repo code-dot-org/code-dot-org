@@ -124,6 +124,37 @@ module Pd::Application
     end
 
     # @override
+    def meets_criteria
+      response_scores = response_scores_hash
+      scored_questions =
+        if course == 'csd'
+          CRITERIA_SCORE_QUESTIONS_CSD.dup
+        elsif course == 'csp'
+          CRITERIA_SCORE_QUESTIONS_CSP.dup
+        end
+
+      if response_scores[:able_to_attend_single] && !response_scores[:able_to_attend_multiple]
+        scored_questions.delete(:able_to_attend_multiple)
+      elsif response_scores[:able_to_attend_multiple] && !response_scores[:able_to_attend_single]
+        scored_questions.delete(:able_to_attend_single)
+      end
+
+      responses = scored_questions.map do |key|
+        response_scores[key]
+      end
+
+      if responses.uniq == [YES]
+        # If all resolve to Yes, applicant meets criteria
+        YES
+      elsif responses.include? NO
+        # If any are No, applicant does not meet criteria
+        NO
+      else
+        'Reviewing incomplete'
+      end
+    end
+
+    # @override
     def to_csv_row(user)
       answers = full_answers
       CSV.generate do |csv|
