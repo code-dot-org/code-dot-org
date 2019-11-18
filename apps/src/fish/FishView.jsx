@@ -20,7 +20,7 @@ const styles = {
     minWidth: '770px',
     margin: '0 auto',
     userSelect: 'none',
-    fontFamily: 'arial, sans-serif',
+    fontFamily: '"Gotham 4r", arial, sans-serif',
     fontSize: '18px',
     color: 'rgb(30,30,30)'
   },
