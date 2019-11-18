@@ -1,7 +1,5 @@
 module Pd
   module TeacherCommonApplicationConstants
-    YES_NO = %w(Yes No).freeze
-
     TEXT_FIELDS = {
       other_with_text: 'Other:'.freeze,
       other_please_list: 'Other (Please List):'.freeze,
