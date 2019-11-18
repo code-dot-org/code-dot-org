@@ -224,6 +224,21 @@ module Pd
       no_pay_fee: "No, my school or I will not be able to pay the summer workshop program fee.".freeze,
     }.freeze
 
+    SUBJECTS_THIS_YEAR = [
+      'Computer Science',
+      'Computer Literacy',
+      'Math',
+      'Science',
+      'History',
+      'Social Studies',
+      'English/Language Arts',
+      'Music',
+      'Art',
+      'Multimedia',
+      'Foreign Language',
+      TEXT_FIELDS[:other_please_list]
+    ]
+
     SUBJECTS_TAUGHT_IN_PAST = [
       'CS Fundamentals',
       'CS in Algebra',
