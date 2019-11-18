@@ -2,6 +2,7 @@ require 'csv'
 require 'yaml'
 require_relative './pegasus/src/env'
 require 'cdo/languages'
+require_relative 'bin/i18n/i18n_script_utils'
 
 language_alt = {
   "Spanish (Mexico)" => "Spanish, Mexico",
@@ -40,5 +41,5 @@ CSV.table(ARGV[0]).each do |translation|
   translation_file = File.join(lang_dir, "en.yml")
   translation_data = File.exist?(translation_file) ? YAML.load_file(translation_file) : {}
   translation_data.deep_merge!(new_data)
-  File.write(translation_file, translation_data.to_yaml(line_width: -1))
+  File.write(translation_file, I18nScriptUtils.to_crowdin_yaml(translation_data))
 end
