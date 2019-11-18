@@ -167,8 +167,6 @@ github_webhook_secret:
 google_maps_client_id:    !Secret
 google_maps_api_key:
 google_maps_secret:       !Secret
-hoc_map_account:
-hoc_map_table_id:
 ga_account:               !Secret
 ga_profile_id:            !Secret
 google_safe_browsing_key: !Secret
@@ -280,11 +278,6 @@ netsim_redis_groups:
 netsim_enable_metrics: false
 netsim_max_routers: 20
 netsim_shard_expiry_seconds: 7200
-
-# The Fusion Table ID for the census map shown at code.org/yourschool.  If this
-# is set to the ID for the production site, be careful not to run
-# update_census_map as it will overwrite that table.
-census_map_table_id: '1AUZYRjLMI5NiQsDeDBGFsOIFpL_rLGsnxNpSyR13'
 
 # DynamoDB table names for dcdo/gatekeeper
 dcdo_table_name:       dcdo_<%=env%>
@@ -484,9 +477,6 @@ level_sources_redis_url:
 discourse_sso_url:
 discourse_url:
 pledge_map_table_id:
-hoc_map_service_account_email:
-hoc_map_api_secret:
-hoc_map_api_key:
 
 #### Parameters related to CloudFormation-stack deployment
 stack_name: <%=env%>
