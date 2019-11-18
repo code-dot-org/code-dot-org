@@ -7,11 +7,13 @@ import OrderControls from './OrderControls';
 import LevelToken from './LevelToken';
 import {
   reorderLevel,
+  moveLevelToStage,
   addLevel,
   setStageLockable,
   setFlexCategory
 } from './editorRedux';
 import FlexCategorySelector from './FlexCategorySelector';
+import color from '../../util/color';
 
 const styles = {
   checkbox: {
@@ -20,7 +22,9 @@ const styles = {
   stageCard: {
     fontSize: 18,
     background: 'white',
-    border: '1px solid #ccc',
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: '#ccc',
     borderRadius: borderRadius,
     padding: 20,
     margin: 10
@@ -45,14 +49,25 @@ const styles = {
   }
 };
 
+styles.targetStageCard = {
+  ...styles.stageCard,
+  borderWidth: 5,
+  borderColor: color.cyan,
+  padding: 16
+};
+
 export class UnconnectedStageCard extends Component {
   static propTypes = {
     reorderLevel: PropTypes.func.isRequired,
+    moveLevelToStage: PropTypes.func.isRequired,
     addLevel: PropTypes.func.isRequired,
     setStageLockable: PropTypes.func.isRequired,
     stagesCount: PropTypes.number.isRequired,
     stage: PropTypes.object.isRequired,
-    setFlexCategory: PropTypes.func.isRequired
+    stageMetrics: PropTypes.object.isRequired,
+    setFlexCategory: PropTypes.func.isRequired,
+    setTargetStage: PropTypes.func.isRequired,
+    targetStagePos: PropTypes.number
   };
 
   /**
@@ -62,50 +77,52 @@ export class UnconnectedStageCard extends Component {
 
   state = {
     currentPositions: [],
-    drag: null,
+    draggedLevelPos: null,
     dragHeight: null,
-    initialPageY: null,
-    initialScroll: null,
+    initialClientY: null,
     newPosition: null,
     startingPositions: null,
     editingFlexCategory: false
   };
 
-  handleDragStart = (position, {pageY}) => {
-    const startingPositions = this.props.stage.levels.map(level => {
-      const metrics = this.metrics[level.position];
-      return metrics.top + metrics.height / 2;
+  handleDragStart = (position, {clientY}) => {
+    // The bounding boxes in this.metrics will be stale if the user scrolled the
+    // page since the last time this component was updated. Therefore, force the
+    // component to rerender so that this.metrics will be up to date.
+    this.forceUpdate(() => {
+      const startingPositions = this.props.stage.levels.map(level => {
+        const metrics = this.metrics[level.position];
+        return metrics.top + metrics.height / 2;
+      });
+      this.setState({
+        draggedLevelPos: position,
+        dragHeight: this.metrics[position].height + levelTokenMargin,
+        initialClientY: clientY,
+        newPosition: position,
+        startingPositions
+      });
+      window.addEventListener('selectstart', this.preventSelect);
+      window.addEventListener('mousemove', this.handleDrag);
+      window.addEventListener('mouseup', this.handleDragStop);
     });
-    this.setState({
-      drag: position,
-      dragHeight: this.metrics[position].height + levelTokenMargin,
-      initialPageY: pageY,
-      initialScroll: document.body.scrollTop,
-      newPosition: position,
-      startingPositions
-    });
-    window.addEventListener('selectstart', this.preventSelect);
-    window.addEventListener('mousemove', this.handleDrag);
-    window.addEventListener('mouseup', this.handleDragStop);
   };
 
-  handleDrag = ({pageY}) => {
-    const scrollDelta = document.body.scrollTop - this.state.initialScroll;
-    const delta = pageY - this.state.initialPageY;
-    const dragPosition = this.metrics[this.state.drag].top + scrollDelta;
-    let newPosition = this.state.drag;
+  handleDrag = ({clientY}) => {
+    const delta = clientY - this.state.initialClientY;
+    const dragPosition = this.metrics[this.state.draggedLevelPos].top;
+    let newPosition = this.state.draggedLevelPos;
     const currentPositions = this.state.startingPositions.map(
       (midpoint, index) => {
         const position = index + 1;
-        if (position === this.state.drag) {
+        if (position === this.state.draggedLevelPos) {
           return delta;
         }
-        if (position < this.state.drag && dragPosition < midpoint) {
+        if (position < this.state.draggedLevelPos && dragPosition < midpoint) {
           newPosition--;
           return this.state.dragHeight;
         }
         if (
-          position > this.state.drag &&
+          position > this.state.draggedLevelPos &&
           dragPosition + this.state.dragHeight > midpoint
         ) {
           newPosition++;
@@ -115,17 +132,48 @@ export class UnconnectedStageCard extends Component {
       }
     );
     this.setState({currentPositions, newPosition});
+    const targetStagePos = this.getTargetStage(clientY);
+    this.props.setTargetStage(targetStagePos);
+  };
+
+  // Given a clientY value of a location on the screen, find the StageCard
+  // corresponding to that location, and return the position of the
+  // corresponding stage within the script.
+  getTargetStage = y => {
+    const {stageMetrics} = this.props;
+    const stagePos = Object.keys(stageMetrics).find(stagePos => {
+      const stageRect = stageMetrics[stagePos];
+      return y > stageRect.top && y < stageRect.top + stageRect.height;
+    });
+    return stagePos ? Number(stagePos) : null;
   };
 
   handleDragStop = () => {
-    if (this.state.drag !== this.state.newPosition) {
-      this.props.reorderLevel(
-        this.props.stage.position,
-        this.state.drag,
-        this.state.newPosition
+    const {stage, targetStagePos} = this.props;
+    if (targetStagePos === stage.position) {
+      // When dragging within a stage, reorder the level within that stage.
+      if (this.state.draggedLevelPos !== this.state.newPosition) {
+        this.props.reorderLevel(
+          stage.position,
+          this.state.draggedLevelPos,
+          this.state.newPosition
+        );
+      }
+    } else if (targetStagePos) {
+      // When dragging between stages, move it to the end of the new stage.
+      this.props.moveLevelToStage(
+        stage.position,
+        this.state.draggedLevelPos,
+        targetStagePos
       );
     }
-    this.setState({drag: null, newPosition: null, currentPositions: []});
+    this.props.setTargetStage(null);
+
+    this.setState({
+      draggedLevelPos: null,
+      newPosition: null,
+      currentPositions: []
+    });
     window.removeEventListener('selectstart', this.preventSelect);
     window.removeEventListener('mousemove', this.handleDrag);
     window.removeEventListener('mouseup', this.handleDragStop);
@@ -164,30 +212,33 @@ export class UnconnectedStageCard extends Component {
   }
 
   render() {
+    const {stage, targetStagePos} = this.props;
+    const {draggedLevelPos} = this.state;
+    const isTargetStage = targetStagePos === stage.position;
     return (
-      <div style={styles.stageCard}>
+      <div style={isTargetStage ? styles.targetStageCard : styles.stageCard}>
         <div style={styles.stageCardHeader}>
-          {!this.props.stage.lockable && (
-            <span>Stage {this.props.stage.relativePosition}:&nbsp;</span>
+          {!stage.lockable && (
+            <span>Stage {stage.relativePosition}:&nbsp;</span>
           )}
-          {this.props.stage.name}
+          {stage.name}
           <OrderControls
             type={ControlTypes.Stage}
-            position={this.props.stage.position}
+            position={stage.position}
             total={this.props.stagesCount}
           />
           <label style={styles.stageLockable}>
             Require teachers to unlock this stage before students in their
             section can access it
             <input
-              checked={this.props.stage.lockable}
+              checked={stage.lockable}
               onChange={this.toggleLockable}
               type="checkbox"
               style={styles.checkbox}
             />
           </label>
         </div>
-        {this.props.stage.levels.map(level => (
+        {stage.levels.map(level => (
           <LevelToken
             ref={levelToken => {
               if (levelToken) {
@@ -199,9 +250,9 @@ export class UnconnectedStageCard extends Component {
             }}
             key={level.position + '_' + level.ids[0]}
             level={level}
-            stagePosition={this.props.stage.position}
-            dragging={!!this.state.drag}
-            drag={level.position === this.state.drag}
+            stagePosition={stage.position}
+            dragging={!!draggedLevelPos}
+            draggedLevelPos={level.position === draggedLevelPos}
             delta={this.state.currentPositions[level.position - 1] || 0}
             handleDragStart={this.handleDragStart}
           />
@@ -245,18 +296,11 @@ export class UnconnectedStageCard extends Component {
 
 export default connect(
   state => ({}),
-  dispatch => ({
-    reorderLevel(stage, originalPosition, newPosition) {
-      dispatch(reorderLevel(stage, originalPosition, newPosition));
-    },
-    addLevel(stage) {
-      dispatch(addLevel(stage));
-    },
-    setStageLockable(stage, lockable) {
-      dispatch(setStageLockable(stage, lockable));
-    },
-    setFlexCategory(stage, flexCategory) {
-      dispatch(setFlexCategory(stage, flexCategory));
-    }
-  })
+  {
+    reorderLevel,
+    moveLevelToStage,
+    addLevel,
+    setStageLockable,
+    setFlexCategory
+  }
 )(UnconnectedStageCard);
