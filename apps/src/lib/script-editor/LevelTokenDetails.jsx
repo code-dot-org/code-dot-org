@@ -81,7 +81,7 @@ const tooltipText = {
     'Show this level on a line by itself, with the Display Name of the level as the label. This option is deprecated. Please specify a progression name instead.',
   challenge: 'Show students the Challenge dialog when viewing this level.',
   progression:
-    'Group this level with other levels in the same progression, with this text as the label. This overrides the "named" checkbox, which is now deprecated.'
+    'Group this level with other levels in the same progression, with this text as the label.'
 };
 
 const ArrowRenderer = ({onMouseDown}) => {
