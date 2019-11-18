@@ -1579,7 +1579,7 @@ a.download-video {
   .finish-signup {
     width: 800px;
   }
-
+  /* FND-893 - Stop using markdown in <Label>s*/
   .finish-signup #instructions p {
     display: inline;
   }
