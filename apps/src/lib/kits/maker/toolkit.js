@@ -16,6 +16,8 @@ import MakerError, {
 import {findPortWithViableDevice} from './portScanning';
 import * as redux from './redux';
 import {isChrome, gtChrome33, isCodeOrgBrowser} from './util/browserChecks';
+import MicroBitBoard from './MicroBitBoard';
+import experiments from '@cdo/apps/util/experiments';
 
 // Re-export some modules so consumers only need this 'toolkit' module
 export {dropletConfig, MakerError};
@@ -90,12 +92,17 @@ export function connect({interpreter, onDisconnect}) {
         return Promise.reject(new ConnectionCanceledError());
       }
       commands.injectBoardController(currentBoard);
-      currentBoard.installOnInterpreter(interpreter);
-      if (typeof onDisconnect === 'function') {
-        currentBoard.once('disconnect', () => {
-          onDisconnect();
-          disconnect();
-        });
+
+      if (!experiments.isEnabled('microbit')) {
+        currentBoard.installOnInterpreter(interpreter);
+        if (typeof onDisconnect === 'function') {
+          currentBoard.once('disconnect', () => {
+            onDisconnect();
+            disconnect();
+          });
+        }
+      } else {
+        // ToDo
       }
       dispatch(redux.reportConnected());
       trackEvent('Maker', 'ConnectionSuccess');
@@ -156,9 +163,13 @@ function getBoard() {
   if (shouldRunWithFakeBoard()) {
     return Promise.resolve(new FakeBoard());
   } else {
-    return findPortWithViableDevice().then(
-      port => new CircuitPlaygroundBoard(port)
-    );
+    if (experiments.isEnabled('microbit')) {
+      return findPortWithViableDevice().then(port => new MicroBitBoard(port));
+    } else {
+      return findPortWithViableDevice().then(
+        port => new CircuitPlaygroundBoard(port)
+      );
+    }
   }
 }
 
@@ -175,7 +186,7 @@ function shouldRunWithFakeBoard() {
  * Resets the board state and puts maker UI back in a default state.
  */
 export function reset() {
-  if (currentBoard) {
+  if (currentBoard && !experiments.isEnabled('microbit')) {
     currentBoard.reset();
   }
 }
