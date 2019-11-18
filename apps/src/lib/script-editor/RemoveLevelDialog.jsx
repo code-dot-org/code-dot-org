@@ -8,7 +8,7 @@ import Dialog from '../../templates/Dialog';
  * Dialog which confirms removal of the level in the specified position
  * within the stage.
  */
-class RemoveLevelDialog extends Component {
+export class UnconnectedRemoveLevelDialog extends Component {
   static propTypes = {
     stage: PropTypes.object.isRequired,
     // Position of level to remove. Dialog opens when this is set.
@@ -49,11 +49,12 @@ class RemoveLevelDialog extends Component {
   }
 }
 
-export default connect(
+const RemoveLevelDialog = connect(
   state => ({
     levelKeyList: state.levelKeyList
   }),
   {
     removeLevel
   }
-)(RemoveLevelDialog);
+)(UnconnectedRemoveLevelDialog);
+export default RemoveLevelDialog;
