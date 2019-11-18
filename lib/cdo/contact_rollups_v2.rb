@@ -97,8 +97,8 @@ class ContactRollupsV2
   end
 
   def self.drop_tables
-    PEGASUS_DB_WRITER.drop_table(DAILY_TABLE)
-    PEGASUS_DB_WRITER.drop_table(MAIN_TABLE)
+    PEGASUS_DB_WRITER.drop_table(DAILY_TABLE) if PEGASUS_DB_WRITER.table_exists?(DAILY_TABLE)
+    PEGASUS_DB_WRITER.drop_table(MAIN_TABLE) if PEGASUS_DB_WRITER.table_exists?(MAIN_TABLE)
   end
 
   def self.empty_tables
@@ -116,56 +116,57 @@ class ContactRollupsV2
     #   Get emails from user_view table
     #   Get opted_out from pegasus.contacts
     #   Get opt_in from dashboard.email_preferences
-    collect_changes_in_users
+    collect_all_changes(DASHBOARD_DB_READER, DASHBOARD_DB_NAME, :users_view, [:user_type, :school])
   end
 
-  # TODO: generalize this function to collect_changes_in_table(table_name)
-  def self.collect_changes_in_users
+  def self.collect_all_changes(db_connection, src_db, src_table, columns)
     updated_date_query = <<-SQL.squish
       select distinct DATE(updated_at) as updated_date
-      from users_view
+      from #{src_db}.#{src_table}
       order by updated_date
     SQL
 
-    # get latest processed date. save it to tracker table to retrieve later
+    # TODO: get latest processed date from tracker table
     processed_date = Date.new(2019, 9, 15)
     puts "last processed_date = #{processed_date}"
 
-    DASHBOARD_DB_READER[updated_date_query].each do |row|
+    db_connection[updated_date_query].each do |row|
       date = row[:updated_date]
       next if date < processed_date
 
-      collect_daily_changes_in_users(date)
+      collect_daily_changes(db_connection, src_db, src_table, columns, date)
       processed_date = date
-      # update trackers
+
+      # TODO: update trackers
     end
   end
 
-  # TODO: generalize this to collect_daily_changes_in_table(table_name)
-  def self.collect_daily_changes_in_users(date)
+  def self.collect_daily_changes(db_connection, src_db, src_table, columns, date)
     logs = []
-    src_table = "#{DASHBOARD_DB_NAME}.users_view"
-    logs << "date = #{date}"
+    logs << "src_table = #{src_table}, columns = #{columns}, date = #{date}"
 
-    # select daily data from users table. Can use temporary table
-    daily_changes_query = <<-SQL.squish
-      select email, user_type, school
+    # Find out how many rows we want to insert
+    rows_to_insert_query = <<-SQL.squish
+      select count(*) as rowcount
       from #{src_table}
       where '#{date}' <= updated_at and updated_at < '#{date + 1.day}'
     SQL
-    logs << "daily_changes_query = #{daily_changes_query}"
-    rows_to_insert = DASHBOARD_DB_READER[daily_changes_query].count
+    logs << "daily_changes_query = #{rows_to_insert_query}"
+
+    rows_to_insert = db_connection[rows_to_insert_query].first[:rowcount]
     logs << "number of rows to insert = #{rows_to_insert}"
 
-    # insert daily changes into daily table
+    # Construct insertion query
+    json_object_params = columns.map {|col| %W('#{col}' #{col})}.flatten.join(', ')
     insert_daily_changes_query = <<-SQL.squish
       insert into #{DAILY_TABLE} (email, source_table, data, data_date, created_at)
-      select email, '#{src_table}', JSON_OBJECT('user_type', user_type, 'school', school), '#{date}', NOW()
-      from #{src_table}
+      select email, '#{src_db}.#{src_table}', JSON_OBJECT(#{json_object_params}), '#{date}', NOW()
+      from #{src_db}.#{src_table}
       where '#{date}' <= updated_at and updated_at < '#{date + 1.day}'
     SQL
     logs << "insert_daily_changes_query = #{insert_daily_changes_query}"
 
+    # Insert the changes into daily table
     before_count = PEGASUS_DB_WRITER[DAILY_TABLE].count
     logs << "#{DAILY_TABLE} row count before insert = #{before_count}"
 
@@ -173,15 +174,17 @@ class ContactRollupsV2
 
     after_count = PEGASUS_DB_WRITER[DAILY_TABLE].count
     logs << "#{DAILY_TABLE} row count after insert = #{after_count}"
-    logs << "Expect to insert #{rows_to_insert} rows. Actual rows inserted = #{after_count - before_count}"
 
+    # Check post condition
+    logs << "Expect to insert #{rows_to_insert} rows. Actual rows inserted = #{after_count - before_count}"
     if rows_to_insert != after_count - before_count
       raise "Mismatch number of rows inserted!"
     end
   rescue StandardError => e
     puts "Caught error: #{e.message}. Will save to tracker table with logs"
+    raise e
   ensure
-    puts "_____collect_daily_changes_in_users_____"
+    puts "_____collect_daily_changes in #{src_db}.#{src_table}_____"
     logs.each {|log| puts log}
   end
 
@@ -402,13 +405,13 @@ class ContactRollupsV2
   end
 
   def self.test
-    # drop_tables
-    # create_tables
+    drop_tables
+    create_tables
     # empty_tables
-    # collect_data_to_daily_table
+    collect_data_to_daily_table
     # update_data_to_main_table
-    sync_to_pardot
-    # count_table_rows
+    # sync_to_pardot
+    count_table_rows
     nil
   end
 end
