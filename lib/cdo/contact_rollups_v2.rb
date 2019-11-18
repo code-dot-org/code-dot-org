@@ -116,7 +116,7 @@ class ContactRollupsV2
     #   Get emails from user_view table
     #   Get opted_out from pegasus.contacts
     #   Get opt_in from dashboard.email_preferences
-    collect_all_changes(DASHBOARD_DB_READER, DASHBOARD_DB_NAME, :users_view, [:user_type, :school])
+    collect_all_changes(DASHBOARD_DB_READER, DASHBOARD_DB_NAME, :users_view, [])
   end
 
   def self.collect_all_changes(db_connection, src_db, src_table, columns)
@@ -147,13 +147,13 @@ class ContactRollupsV2
 
     # Find out how many rows we want to insert
     count_insertion_query = <<-SQL.squish
-      select count(*) as rowcount
+      select count(*) as row_count
       from #{src_table}
       where '#{date}' <= updated_at and updated_at < '#{date + 1.day}'
     SQL
     logs << "daily_changes_query = #{count_insertion_query}"
 
-    rows_to_insert = db_connection[count_insertion_query].first[:rowcount]
+    rows_to_insert = db_connection[count_insertion_query].first[:row_count]
     logs << "number of rows to insert = #{rows_to_insert}"
 
     # Construct insertion query
@@ -188,15 +188,14 @@ class ContactRollupsV2
     logs.each {|log| puts log}
   end
 
-  # TODO: generalize to delete_daily_changes_from_table(table_name)
-  def self.delete_daily_changes(date)
+  def self.delete_daily_changes(data_date)
     logs = []
-    logs << "date = #{date}"
+    logs << "date = #{data_date}"
 
     count_deletion_query = <<-SQL.squish
       select count(*) as rowcount
       from #{DAILY_TABLE}
-      where data_date = '#{date}'
+      where data_date = '#{data_date}'
     SQL
     logs << "count_rows_to_delete = #{count_deletion_query}"
 
@@ -205,7 +204,7 @@ class ContactRollupsV2
 
     delete_query = <<-SQL.squish
       delete from #{DAILY_TABLE}
-      where data_date = '#{date}'
+      where data_date = '#{data_date}'
     SQL
     logs << "delete_query = #{delete_query}"
 
@@ -260,20 +259,29 @@ class ContactRollupsV2
     puts "_____update_daily_data_to_main_table_____"
     puts "data_date = #{data_date}"
 
+    # Count number of rows to update/insert to main table
+    count_updates_query = <<-SQL.squish
+      select count(distinct email) as email_count
+      from #{DAILY_TABLE}
+      where data_date = '#{data_date}'
+    SQL
+    rows_to_update = PEGASUS_DB_WRITER[count_updates_query].first[:email_count]
+    puts "rows_to_update = #{rows_to_update}"
+
     # Collapse daily data
-    data_to_insert_query = <<-SQL.squish
+    data_to_update = <<-SQL.squish
       select email, json_objectagg(source_table, data) as data
       from #{DAILY_TABLE}
       where data_date = '#{data_date}'
       group by email
     SQL
-    p data_to_insert_query
+    p "#{data_to_update} = data_to_insert_query"
 
-    data_to_insert = PEGASUS_DB_WRITER[data_to_insert_query]
-    puts "Inserting/updating #{data_to_insert.count} rows to #{MAIN_TABLE}"
-
-    # TODO: add counters for post-condition/assertion
-    data_to_insert.each do |row|
+    # Update/insert data in main table
+    insert_count = 0
+    update_count = 0
+    no_change_count = 0
+    PEGASUS_DB_WRITER[data_to_update].each do |row|
       email, data = row.values_at(:email, :data)
       current_time = Time.now
 
@@ -283,10 +291,12 @@ class ContactRollupsV2
         new_data = old_data.merge(JSON.parse(data))
 
         if old_data == new_data
+          no_change_count += 1
           puts "No data change for #{email}"
         else
           update_values = {data: new_data.to_json, updated_at: current_time}
           PEGASUS_DB_WRITER[MAIN_TABLE].where(email: email).update(update_values)
+          update_count += 1
 
           puts "Updated data for #{email}. Old data: #{dest[:data]}. New data: #{new_data.to_json}"
         end
@@ -299,15 +309,16 @@ class ContactRollupsV2
           updated_at: current_time
         }
         PEGASUS_DB_WRITER[MAIN_TABLE].insert(insert_values)
+        insert_count += 1
 
         puts "Inserted #{email} into #{MAIN_TABLE}"
       end
     end
 
-    # Consider SQL approach:
-    # daily left outer join to main on email
-    # merge daily.data & main.data
-    # update main.data
+    p "Expect to process #{rows_to_update} rows. Actual rows processed = #{insert_count + update_count + no_change_count}"
+    if rows_to_update != insert_count + update_count + no_change_count
+      raise 'Mismatch number of rows processed'
+    end
   end
 
   # Only this part is specific to Pardot. Everything else should be generic
@@ -413,11 +424,11 @@ class ContactRollupsV2
   end
 
   def self.test
-    # drop_tables
-    # create_tables
+    drop_tables
+    create_tables
     # empty_tables
-    # collect_data_to_daily_table
-    # update_data_to_main_table
+    collect_data_to_daily_table
+    update_data_to_main_table
     # delete_daily_changes('2019-11-11')
     # sync_to_pardot
     count_table_rows
