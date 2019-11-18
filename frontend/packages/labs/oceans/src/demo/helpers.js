@@ -1,8 +1,15 @@
+import _ from 'lodash';
 import queryString from 'query-string';
 import {FishBodyPart} from '../utils/fishData';
-import _ from 'lodash';
+import {setState} from './state';
 // import {Modes} from './constants';
 // import underwaterBackground from '../../public/images/underwater-background.png';
+
+export const $time =
+  Date.now ||
+  function() {
+    return +new Date();
+  };
 
 export const backgroundPathForMode = mode => {
   // Temporarily disable background everywhere.
@@ -34,6 +41,8 @@ export const bodyAnchorFromType = (body, type) => {
       return body.pectoralFinBackAnchor;
     case FishBodyPart.TAIL:
       return body.tailAnchor;
+    case FishBodyPart.SCALES:
+      return body.scalesAnchor;
     case FishBodyPart.BODY:
       return body.anchor;
     default:
@@ -50,6 +59,9 @@ export const colorForFishPart = (palette, part) => {
       return palette.finRgb;
     case FishBodyPart.BODY:
       return palette.bodyRgb;
+    case FishBodyPart.SCALES:
+      //return palette.bodyRgb.map(c => c + 20);
+      return [0,0,0];
     default:
       return null;
   }
@@ -136,4 +148,29 @@ export const generateColorPalette = (colors, bodyIndex = null) => {
     finRgb: colors[finIndex].rgb,
     knnData: bodyColor.knnData
   };
+};
+
+// If the app is running, returns the amount of time that has passed since state.lastStartTime.
+// If the app is not currently running, 0 is returned.
+export const currentRunTime = (state, clampTime = false) => {
+  let t = 0;
+  if (state.isRunning) {
+    t = $time() - state.lastStartTime;
+    if (clampTime && t > state.moveTime) {
+      t = state.moveTime;
+    }
+  }
+
+  return t;
+};
+
+// Sets the necessary state to stop fish movement at any time, t.
+// Pausing is optional, but defaults to true.
+export const finishMovement = (t, pause = true) => {
+  setState({
+    isRunning: false,
+    isPaused: pause,
+    lastPauseTime: t,
+    lastStartTime: null
+  });
 };

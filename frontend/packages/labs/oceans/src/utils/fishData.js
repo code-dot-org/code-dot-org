@@ -108,6 +108,18 @@ import mouth7_image from '../../public/images/fish/mouth/mouth7.png';
 import mouth8_image from '../../public/images/fish/mouth/mouth8.png';
 import mouth9_image from '../../public/images/fish/mouth/mouth9.png';
 
+import scales2_image from '../../public/images/fish/scales/scales2.png';
+import scales3_image from '../../public/images/fish/scales/scales3.png';
+import scales4_image from '../../public/images/fish/scales/scales4.png';
+import scales5_image from '../../public/images/fish/scales/scales5.png';
+import scales6_image from '../../public/images/fish/scales/scales6.png';
+import scales7_image from '../../public/images/fish/scales/scales7.png';
+import scales8_image from '../../public/images/fish/scales/scales8.png';
+import scales9_image from '../../public/images/fish/scales/scales9.png';
+import scales10_image from '../../public/images/fish/scales/scales10.png';
+import scales11_image from '../../public/images/fish/scales/scales11.png';
+import scales12_image from '../../public/images/fish/scales/scales12.png';
+
 // Describe the different body parts of the fish. The object
 // is ordered by its render dependency (i.e., dorsalFin should be rendered
 // before body).
@@ -116,9 +128,10 @@ export const FishBodyPart = Object.freeze({
   TAIL: 1,
   PECTORAL_FIN_BACK: 2,
   BODY: 3,
-  PECTORAL_FIN_FRONT: 4,
-  MOUTH: 5,
-  EYE: 6
+  SCALES: 4,
+  PECTORAL_FIN_FRONT: 5,
+  MOUTH: 6,
+  EYE: 7
 });
 
 export const MouthExpression = Object.freeze({
@@ -147,6 +160,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [56, 82],
       dorsalFinAnchor: [50, 14],
       tailAnchor: [92, 50],
+      scalesAnchor: [65, 20],
       knnData: [8004, BodyShape.CIRCLE],
       type: FishBodyPart.BODY
     },
@@ -159,6 +173,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [70, 72],
       dorsalFinAnchor: [54, 14],
       tailAnchor: [100, 45],
+      scalesAnchor: [68, 20],
       knnData: [7892, BodyShape.OVAL],
       type: FishBodyPart.BODY
     },
@@ -171,6 +186,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [80, 60],
       dorsalFinAnchor: [69, 15],
       tailAnchor: [130, 15],
+      scalesAnchor: [76, 17],
       knnData: [7150, BodyShape.OTHER],
       type: FishBodyPart.BODY,
       exclusions: [
@@ -189,6 +205,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [80, 100],
       dorsalFinAnchor: [71, 15],
       tailAnchor: [135, 71],
+      scalesAnchor: [95, 55],
       knnData: [10223, BodyShape.SQUARE],
       type: FishBodyPart.BODY,
       exclusions: [
@@ -207,6 +224,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [50, 72],
       dorsalFinAnchor: [48, 14],
       tailAnchor: [85, 40],
+      scalesAnchor: [61, 20],
       knnData: [5782, BodyShape.OTHER],
       type: FishBodyPart.BODY,
       exclusions: [
@@ -225,6 +243,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [68, 88],
       dorsalFinAnchor: [57, 13],
       tailAnchor: [103, 57],
+      scalesAnchor: [66, 20],
       knnData: [9524, BodyShape.OTHER],
       type: FishBodyPart.BODY,
       exclusions: [
@@ -243,6 +262,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [65, 78],
       dorsalFinAnchor: [65, 14],
       tailAnchor: [115, 50],
+      scalesAnchor: [70, 20],
       knnData: [9338, BodyShape.OTHER],
       type: FishBodyPart.BODY,
       exclusions: [
@@ -261,6 +281,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [70, 78],
       dorsalFinAnchor: [60, 17],
       tailAnchor: [110, 50],
+      scalesAnchor: [71, 20],
       knnData: [9344, BodyShape.OVAL],
       type: FishBodyPart.BODY,
       exclusions: [
@@ -279,6 +300,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [60, 53],
       dorsalFinAnchor: [58, 15],
       tailAnchor: [105, 48],
+      scalesAnchor: [66, 20],
       knnData: [5985, BodyShape.OVAL],
       type: FishBodyPart.BODY,
       exclusions: [
@@ -297,6 +319,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [60, 60],
       dorsalFinAnchor: [68, 10],
       tailAnchor: [130, 39],
+      scalesAnchor: [75, 18],
       knnData: [7642, BodyShape.OVAL],
       type: FishBodyPart.BODY,
       exclusions: [
@@ -315,6 +338,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [70, 60],
       dorsalFinAnchor: [64, 10],
       tailAnchor: [118, 40],
+      scalesAnchor: [75, 17],
       knnData: [7129, BodyShape.OVAL],
       type: FishBodyPart.BODY,
       exclusions: [
@@ -333,6 +357,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [62, 60],
       dorsalFinAnchor: [65, 10],
       tailAnchor: [126, 37],
+      scalesAnchor: [86, 18],
       knnData: [9588, BodyShape.SQUARE],
       type: FishBodyPart.BODY
     },
@@ -345,6 +370,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [60, 78],
       dorsalFinAnchor: [53, 10],
       tailAnchor: [100, 45],
+      scalesAnchor: [69, 20],
       knnData: [9224, BodyShape.SQUARE],
       type: FishBodyPart.BODY
     },
@@ -357,6 +383,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [59, 32],
       dorsalFinAnchor: [53, 10],
       tailAnchor: [100, 21],
+      scalesAnchor: [66, 12],
       knnData: [4243, BodyShape.OVAL],
       type: FishBodyPart.BODY,
       exclusions: [
@@ -375,6 +402,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [54, 126],
       dorsalFinAnchor: [80, 14],
       tailAnchor: [70, 79],
+      scalesAnchor: [60, 26],
       knnData: [6902, BodyShape.TRIANGLE],
       type: FishBodyPart.BODY
     },
@@ -387,6 +415,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [62, 94],
       dorsalFinAnchor: [88, 10],
       tailAnchor: [80, 60],
+      scalesAnchor: [60, 5],
       knnData: [6743, BodyShape.TRIANGLE],
       type: FishBodyPart.BODY,
       exclusions: [
@@ -405,6 +434,7 @@ const fishComponents = {
       pectoralFinFrontAnchor: [80, 100],
       dorsalFinAnchor: [80, 10],
       tailAnchor: [105, 66],
+      scalesAnchor: [66, 20],
       knnData: [8285, BodyShape.TRIANGLE],
       type: FishBodyPart.BODY
     }
@@ -1448,23 +1478,96 @@ const fishComponents = {
       ]
     }
   },
+  scales: {
+    scales2: {
+      src: scales2_image,
+      knnData: [],
+      type: FishBodyPart.SCALES
+    },
+    scales3: {
+      src: scales3_image,
+      knnData: [],
+      type: FishBodyPart.SCALES
+    },
+    scales4: {
+      src: scales4_image,
+      knnData: [],
+      type: FishBodyPart.SCALES
+    },
+    scales5: {
+      src: scales5_image,
+      knnData: [],
+      type: FishBodyPart.SCALES
+    },
+    scales6: {
+      src: scales6_image,
+      knnData: [],
+      type: FishBodyPart.SCALES
+    },
+    scales7: {
+      src: scales7_image,
+      knnData: [],
+      type: FishBodyPart.SCALES
+    },
+    scales8: {
+      src: scales8_image,
+      knnData: [],
+      type: FishBodyPart.SCALES
+    },
+    scales9: {
+      src: scales9_image,
+      knnData: [],
+      type: FishBodyPart.SCALES
+    },
+    scales10: {
+      src: scales10_image,
+      knnData: [],
+      type: FishBodyPart.SCALES
+    },
+    scales11: {
+      src: scales11_image,
+      knnData: [],
+      type: FishBodyPart.SCALES
+    },
+    scales12: {
+      src: scales12_image,
+      knnData: [],
+      type: FishBodyPart.SCALES
+    }
+  },
   // COLOR KNN DATA: [red, green, blue]
   colors: {
     yellow: {
-      rgb: [255, 203, 72],
-      knnData: [255, 203, 72]
+      rgb: [255, 226, 100],
+      knnData: [255, 226, 100]
+    },
+    darkYellow: {
+      rgb: [249, 197, 0],
+      knnData: [249, 197, 0]
     },
     green: {
       rgb: [143, 194, 63],
       knnData: [143, 194, 63]
     },
+    darkGreen: {
+      rgb: [34, 151, 109],
+      knnData: [34, 151, 109]
+    },
     blue: {
-      rgb: [94, 121, 188],
-      knnData: [94, 121, 188]
+      rgb: [92, 144, 222],
+      knnData: [92, 144, 222]
+    },
+    darkBlue: {
+      rgb: [96, 94, 188],
+      knnData: [96, 94, 188]
     },
     red: {
       rgb: [227, 72, 44],
       knnData: [227, 72, 44]
+    },
+    darkRed: {
+      rgb: [217, 65, 98],
+      knnData: [217, 65, 98]
     },
     orange: {
       rgb: [248, 151, 36],
@@ -1476,9 +1579,29 @@ const fishComponents = {
         AppMode.FishShort
       ]
     },
+    darkOrange: {
+      rgb: [251, 123, 96],
+      knnData: [251, 123, 96],
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
+    },
     purple: {
-      rgb: [187, 115, 188],
-      knnData: [187, 115, 188],
+      rgb: [199, 119, 181],
+      knnData: [199, 119, 181],
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
+    },
+    darkPurple: {
+      rgb: [168, 87, 181],
+      knnData: [168, 87, 181],
       exclusions: [
         AppMode.FishVTrash,
         AppMode.CreaturesVTrashDemo,
@@ -1487,8 +1610,18 @@ const fishComponents = {
       ]
     },
     pink: {
-      rgb: [238, 142, 180],
-      knnData: [238, 142, 180],
+      rgb: [255, 153, 220],
+      knnData: [255, 153, 220],
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
+    },
+    darkPink: {
+      rgb: [255, 109, 172],
+      knnData: [255, 109, 172],
       exclusions: [
         AppMode.FishVTrash,
         AppMode.CreaturesVTrashDemo,
