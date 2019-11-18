@@ -37,6 +37,7 @@ class AuthenticationOption < ApplicationRecord
 
   after_create :set_primary_contact_info
 
+  # Powerschool note: the Powerschool plugin lives at https://github.com/code-dot-org/powerschool
   OAUTH_CREDENTIAL_TYPES = [
     CLEVER = 'clever',
     FACEBOOK = 'facebook',
@@ -48,6 +49,11 @@ class AuthenticationOption < ApplicationRecord
     WINDOWS_LIVE = 'windowslive',
     MICROSOFT = 'microsoft_v2_auth',
   ]
+
+  UNTRUSTED_EMAIL_CREDENTIAL_TYPES = [
+    CLEVER,
+    POWERSCHOOL
+  ].freeze
 
   CREDENTIAL_TYPES = [
     EMAIL = 'email',
