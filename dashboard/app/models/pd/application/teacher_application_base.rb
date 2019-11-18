@@ -113,21 +113,6 @@ module Pd::Application
       *(1..12).map {|n| "Grade #{n}".freeze}
     ].freeze
 
-    SUBJECTS_THIS_YEAR = [
-      'Computer Science',
-      'Computer Literacy',
-      'Math',
-      'Science',
-      'History',
-      'Social Studies',
-      'English/Language Arts',
-      'Music',
-      'Art',
-      'Multimedia',
-      'Foreign Language',
-      TEXT_FIELDS[:other_please_list]
-    ]
-
     def self.options
       raise 'Abstract method must be overridden by inheriting class'
     end
