@@ -26,8 +26,8 @@ const trial = async function(trainSize, testSize, trainer, labelFn) {
     fish.result = await trainer.predict(fish);
   }
 
-  //console.log(JSON.stringify(trainer.detailedExplanation(testOcean[0].fieldInfos), null, 2));
-  console.log(JSON.stringify(trainer.summarize(testOcean[0].fieldInfos), null, 2));
+  //console.log(trainer.detailedExplanation(testOcean[0].fieldInfos));
+  console.log(trainer.summarize(testOcean[0].fieldInfos));
 
   return createConfusionMatrix(testOcean, trainSize, labelFn);
 };
@@ -149,7 +149,7 @@ const PartKey = Object.freeze({
   COLOR: 'colorPalette'
 });
 
-const NUM_TRIALS = 5;
+const NUM_TRIALS = 1;
 const TRAIN_SIZE = 100;
 
 describe('Model quality test', () => {
