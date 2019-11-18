@@ -387,49 +387,7 @@ module Pd::Application
     # principal approval application. It is idempotent, and will not override existing
     # scores on this application
     def auto_score!
-      responses = sanitize_form_data_hash
-
-      scores = {
-        regional_partner_name: regional_partner ? YES : NO,
-        committed: responses[:committed] == YES ? YES : NO
-      }
-
-      if responses[:able_to_attend_single]
-        scores[:able_to_attend_single] = able_attend_single_to_yes_no_score(responses[:able_to_attend_single])
-      elsif responses[:able_to_attend_multiple]
-        scores[:able_to_attend_multiple] = able_attend_multiple_to_yes_no_score(responses[:able_to_attend_multiple])
-      end
-
-      if responses[:principal_approval] == YES
-        scores.merge!(
-          {
-            principal_approval: YES,
-            schedule_confirmed: yes_no_response_to_yes_no_score(responses[:schedule_confirmed]),
-            diversity_recruitment: yes_no_response_to_yes_no_score(responses[:diversity_recruitment]),
-            free_lunch_percent: responses[:free_lunch_percent].to_f >= 50 ? 5 : 0,
-            underrepresented_minority_percent:  responses[:underrepresented_minority_percent].to_f >= 50 ? 5 : 0,
-            wont_replace_existing_course: responses[:wont_replace_existing_course].try(:start_with?, NO) ? 5 : nil,
-          }
-        )
-      elsif responses[:principal_approval] == NO
-        scores[:principal_approval] = NO
-      end
-
-      if course == 'csp'
-        scores[:csp_which_grades] = responses[:csp_which_grades].any? ? YES : NO
-        scores[:csp_course_hours_per_year] = responses[:csp_course_hours_per_year] == COMMON_OPTIONS[:course_hours_per_year].first ? YES : NO
-        scores[:previous_yearlong_cdo_pd] = responses[:previous_yearlong_cdo_pd].exclude?('CS Principles') ? YES : NO
-        scores[:csp_how_offer] = responses[:csp_how_offer] != self.class.options[:csp_how_offer].first ? 2 : 0
-        scores[:taught_in_past] = responses[:taught_in_past].none? {|x| x.include? 'AP'} ? 2 : 0
-      elsif course == 'csd'
-        scores[:csd_which_grades] = (responses[:csd_which_grades].map(&:to_i) & (6..10).to_a).any? ? YES : NO
-        scores[:csd_course_hours_per_year] = responses[:csd_course_hours_per_year] != COMMON_OPTIONS[:course_hours_per_year].last ? YES : NO
-        scores[:previous_yearlong_cdo_pd] = (responses[:previous_yearlong_cdo_pd] & ['CS Discoveries', 'Exploring Computer Science']).empty? ? YES : NO
-        scores[:taught_in_past] = responses[:taught_in_past].include?(self.class.options[:taught_in_past].last) ? 2 : 0
-      end
-
-      # Update the hash, but don't override existing scores
-      update(response_scores: response_scores_hash.merge(scores) {|_, old_value, _| old_value}.to_json)
+      raise 'Abstract method must be overridden by inheriting class'
     end
 
     # Called after the application is created. Do any manipulation needed for the form data
@@ -445,37 +403,6 @@ module Pd::Application
     end
 
     protected
-
-    def yes_no_response_to_yes_no_score(response)
-      if response == YES
-        YES
-      elsif response == NO
-        NO
-      else
-        nil
-      end
-    end
-
-    def able_attend_multiple_to_yes_no_score(response)
-      response = response.join
-      if response.start_with?(TEXT_FIELDS[:no_explain])
-        NO
-      elsif response && !response.include?(TEXT_FIELDS[:no_explain])
-        YES
-      else
-        nil
-      end
-    end
-
-    def able_attend_single_to_yes_no_score(response)
-      if response == TEXT_FIELDS[:able_to_attend_single]
-        YES
-      elsif response && !response.include?(TEXT_FIELDS[:unable_to_attend])
-        NO
-      else
-        nil
-      end
-    end
 
     def school
       school_id = self.school_id
