@@ -116,7 +116,9 @@ class ContactRollupsV2
     #   Get emails from user_view table
     #   Get opted_out from pegasus.contacts
     #   Get opt_in from dashboard.email_preferences
-    collect_all_changes(DASHBOARD_DB_READER, DASHBOARD_DB_NAME, :users_view, [])
+    # collect_all_changes(DASHBOARD_DB_READER, DASHBOARD_DB_NAME, :users_view, [])
+    collect_all_changes(PEGASUS_DB_READER, PEGASUS_DB_NAME, :contact_location, [:city, :state, :country])
+    collect_all_changes(PEGASUS_DB_READER, PEGASUS_DB_NAME, :contact_multi, [:roles, :ages_taught, :grades_taught])
   end
 
   def self.collect_all_changes(db_connection, src_db, src_table, columns)
@@ -176,7 +178,8 @@ class ContactRollupsV2
     logs << "#{DAILY_TABLE} row count after insert = #{after_count}"
 
     # Check post condition
-    logs << "Expect to insert #{rows_to_insert} rows. Actual rows inserted = #{after_count - before_count}"
+    logs << "Expect to insert #{rows_to_insert} rows. "\
+      "Actual rows inserted = #{after_count - before_count}"
     if rows_to_insert != after_count - before_count
       raise "Mismatch number of rows inserted!"
     end
@@ -218,7 +221,8 @@ class ContactRollupsV2
     logs << "#{DAILY_TABLE} row count after insert = #{after_count}"
 
     # Check post condition
-    logs << "Expect to delete #{rows_to_delete} rows. Actual rows deleted = #{before_count - after_count}"
+    logs << "Expect to delete #{rows_to_delete} rows. "\
+      "Actual rows deleted = #{before_count - after_count}"
     if rows_to_delete != before_count - after_count
       raise "Mismatch number of rows deleted!"
     end
@@ -275,19 +279,21 @@ class ContactRollupsV2
       where data_date = '#{data_date}'
       group by email
     SQL
-    p "#{data_to_update} = data_to_insert_query"
+    puts "#{data_to_update} = data_to_insert_query"
 
     # Update/insert data in main table
     insert_count = 0
     update_count = 0
     no_change_count = 0
     PEGASUS_DB_WRITER[data_to_update].each do |row|
-      email, data = row.values_at(:email, :data)
+      # All strings in main table are in lower case.
+      # Always downcase strings before making comparison.
+      email, data = row.values_at(:email, :data).map(&:downcase)
       current_time = Time.now
 
       dest = PEGASUS_DB_WRITER[MAIN_TABLE].where(email: email).first
       if dest
-        old_data = JSON.parse(dest[:data])
+        old_data = JSON.parse(dest[:data].downcase)
         new_data = old_data.merge(JSON.parse(data))
 
         if old_data == new_data
@@ -315,7 +321,10 @@ class ContactRollupsV2
       end
     end
 
-    p "Expect to process #{rows_to_update} rows. Actual rows processed = #{insert_count + update_count + no_change_count}"
+    puts "Expect to process #{rows_to_update} rows. "\
+      "Actual rows processed = #{insert_count + update_count + no_change_count}. "\
+      "insert_count = #{insert_count}, update_count = #{update_count}, no_change_count = #{no_change_count}."
+
     if rows_to_update != insert_count + update_count + no_change_count
       raise 'Mismatch number of rows processed'
     end
@@ -327,6 +336,14 @@ class ContactRollupsV2
     max_pardot_id = 80_999_343    # TODO: remove max_pardot_id in function signature
     Pardot.update_pardot_ids(MAIN_TABLE, max_pardot_id)
 
+    sync_new_contacts_to_pardot
+    sync_updated_contacts_to_pardot
+
+    # Get pardot id for the new inserted emails
+    Pardot.update_pardot_ids(MAIN_TABLE, max_pardot_id)
+  end
+
+  def self.sync_new_contacts_to_pardot
     # Sync data to pardot
     new_contact_conditions = <<-SQL.squish
       pardot_id is null and pardot_sync_at is null
@@ -344,7 +361,9 @@ class ContactRollupsV2
 
     prepare_data_to_sync new_contact_config[:table], new_contact_config[:where_clause]
     Pardot.sync_contacts_with_pardot new_contact_config
+  end
 
+  def self.sync_updated_contacts_to_pardot
     updated_contact_conditions = <<-SQL.squish
       pardot_id is not null and pardot_sync_at < updated_at
       and not(email_malformed <=> 1)
@@ -361,15 +380,12 @@ class ContactRollupsV2
 
     prepare_data_to_sync updated_contact_config[:table], updated_contact_config[:where_clause]
     Pardot.sync_contacts_with_pardot updated_contact_config
-
-    # Get pardot id for the new inserted emails
-    Pardot.update_pardot_ids(MAIN_TABLE, max_pardot_id)
   end
 
   def self.prepare_data_to_sync(table, where_clause)
     PEGASUS_DB_WRITER[table].where(where_clause).each do |row|
       data_to_sync = convert_db_row_to_prospect row
-      p "data_to_sync = #{data_to_sync}"
+      puts "data_to_sync = #{data_to_sync}"
       PEGASUS_DB_WRITER[MAIN_TABLE].where(email: row[:email]).update(data_to_sync: data_to_sync.to_json)
     end
   end
@@ -377,10 +393,12 @@ class ContactRollupsV2
   def self.convert_db_row_to_prospect(row)
     metadata = JSON.parse row[:data]
     collapsed_metadata = collapse_metadata(metadata)
-    key_fields = row.slice(:email, :pardot_id)
-    prospect_info = convert_metadata_to_prospect(collapsed_metadata.merge(key_fields))
+    deduplicated_metadata = deduplicate_metadata(collapsed_metadata)
 
-    Pardot.apply_special_fields(collapsed_metadata, prospect_info)
+    key_fields = row.slice(:email, :pardot_id)
+    prospect_info = convert_metadata_to_prospect(deduplicated_metadata.merge(key_fields))
+
+    Pardot.apply_special_fields(deduplicated_metadata, prospect_info)
 
     prospect_info
   end
@@ -388,9 +406,24 @@ class ContactRollupsV2
   def self.collapse_metadata(metadata)
     # Merge values from all sources
     {}.tap do |collapsed_data|
-      metadata.values.each do |val|
-        collapsed_data.merge!(val) {|subkey| ([] << collapsed_data[subkey] << val[subkey]).flatten}
+      metadata.values.each do |data_from_src_table|
+        # If data from 2 source tables have the same key, merge their values into an array
+        collapsed_data.merge!(data_from_src_table) do |key|
+          ([] << collapsed_data[key] << data_from_src_table[key]).flatten
+        end
       end
+    end
+  end
+
+  def self.deduplicate_metadata(metadata)
+    metadata.transform_values do |val|
+      # val could be a single value (e.g. 1), a single string of multiple values (e.g. "1,2,3")
+      # or an array of values (e.g. [1, 2] or ["1", "2,3"]).
+      # We want to take out all the individual values and deduplicate them.
+      # For example, if val = [1, "1,2", "2", "3,2,1"], we want to reduce it to ['1','2','3'].
+      val_str = val.is_a?(Array) ? val.flatten.join(',') : val.to_s
+      val_items = val_str.split(',')
+      Set.new(val_items).to_a.join(',')
     end
   end
 
@@ -404,8 +437,8 @@ class ContactRollupsV2
         # For single data fields, set [field_name] = value.
         # For multi data fields (e.g. multi-select), set keys as [field_name]_0, [field_name]_1, etc.
         if pardot_info[:multi]
-          value_array = [value].flatten
-          value_array.each_with_index do |item, index|
+          value_items = value.split(',')
+          value_items.each_with_index do |item, index|
             prospect["#{pardot_info[:field]}_#{index}"] = item
           end
         else
@@ -424,13 +457,13 @@ class ContactRollupsV2
   end
 
   def self.test
-    drop_tables
-    create_tables
-    # empty_tables
+    # drop_tables
+    # create_tables
+    empty_tables
     collect_data_to_daily_table
     update_data_to_main_table
     # delete_daily_changes('2019-11-11')
-    # sync_to_pardot
+    sync_to_pardot
     count_table_rows
     nil
   end
