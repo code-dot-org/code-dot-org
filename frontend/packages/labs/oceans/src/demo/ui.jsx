@@ -754,6 +754,19 @@ class Pond extends React.Component {
       }
     }
 
+    const nextButtonText =
+      state.appMode === AppMode.FishLong ? 'Play Again' : 'Continue';
+    const nextButtonOnClick = () => {
+      if (state.appMode === AppMode.FishLong) {
+        setState({trainer: null});
+        toMode(Modes.Words);
+      } else {
+        if (state.onContinue) {
+          state.onContinue();
+        }
+      }
+    };
+
     return (
       <Body onClick={this.onPondClick}>
         <img style={styles.pondBot} src={aiBotClosed} />
@@ -762,15 +775,8 @@ class Pond extends React.Component {
         )}
         {state.canSkipPond && (
           <div>
-            <Button
-              style={styles.continueButton}
-              onClick={() => {
-                if (state.onContinue) {
-                  state.onContinue();
-                }
-              }}
-            >
-              Continue
+            <Button style={styles.continueButton} onClick={nextButtonOnClick}>
+              {nextButtonText}
             </Button>
             <Button
               style={styles.backButton}
