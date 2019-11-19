@@ -20,6 +20,7 @@ def sync_up
         next if line.start_with?("File ") && line.end_with?("OK\n", "SKIPPED\n")
 
         puts line
+        $stdout.flush
       end
 
       raise "Sync up failed" unless status_thread.value.success?

@@ -30,6 +30,7 @@ def sync_down
         next if line.start_with? "Extracting: "
 
         puts line
+        $stdout.flush
       end
 
       raise "Sync down failed"  unless status_thread.value.success?
