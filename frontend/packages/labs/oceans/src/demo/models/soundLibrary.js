@@ -1,31 +1,53 @@
-import Sounds from '../Sounds';
 import {randomInt} from '../helpers';
 
-let mySounds = null;
+let registerSoundAPI, playSoundAPI;
 
-let soundCategories = {
-  yes: 10,
-  no: 10,
-  other: 4,
-  ambience: 1
+const soundLibrary = {
+  yes: [
+    require('../../../public/sounds/yes/yes_1.mp3'),
+    require('../../../public/sounds/yes/yes_2.mp3'),
+    require('../../../public/sounds/yes/yes_3.mp3'),
+    require('../../../public/sounds/yes/yes_4.mp3'),
+    require('../../../public/sounds/yes/yes_5.mp3'),
+    require('../../../public/sounds/yes/yes_6.mp3'),
+    require('../../../public/sounds/yes/yes_7.mp3'),
+    require('../../../public/sounds/yes/yes_8.mp3'),
+    require('../../../public/sounds/yes/yes_9.mp3'),
+  ],
+  no: [
+    require('../../../public/sounds/no/no_1.mp3'),
+    require('../../../public/sounds/no/no_2.mp3'),
+    require('../../../public/sounds/no/no_3.mp3'),
+    require('../../../public/sounds/no/no_4.mp3'),
+    require('../../../public/sounds/no/no_5.mp3'),
+    require('../../../public/sounds/no/no_6.mp3'),
+    require('../../../public/sounds/no/no_7.mp3'),
+    require('../../../public/sounds/no/no_8.mp3'),
+    require('../../../public/sounds/no/no_9.mp3'),
+  ],
+  other: [
+    require('../../../public/sounds/other/other_1.mp3'),
+    require('../../../public/sounds/other/other_2.mp3'),
+    require('../../../public/sounds/other/other_3.mp3'),
+    require('../../../public/sounds/other/other_4.mp3'),
+  ],
+  ambience: [
+    require('../../../public/sounds/ambience/ambience_1.mp3'),
+  ],
+}
+
+export const injectSoundAPIs = ({registerSound, playSound}) => {
+  registerSoundAPI = registerSound;
+  playSoundAPI = playSound;
 };
 
 export const loadSounds = () => {
-  mySounds = new Sounds();
-
-  Object.keys(soundCategories).forEach(categoryName => {
-    for (var i = 1; i <= soundCategories[categoryName]; i++) {
-      const baseFilename = `sounds/${categoryName}/${categoryName}_${i}`;
-      mySounds.register({
-        id: categoryName + '_' + i,
-        ogg: baseFilename + '.ogg',
-        mp3: baseFilename + '.mp3'
-      });
-    }
-  });
+  Object.entries(soundLibrary).forEach(([_, category]) => (
+    category.forEach(sound => registerSoundAPI({id: sound, mp3: sound}))
+  ));
 };
 
 export const playSound = (categoryName, specificIndex = undefined) => {
-  const index = specificIndex || randomInt(1, soundCategories[categoryName]);
-  mySounds.play(categoryName + '_' + index);
+  const index = specificIndex || randomInt(0, soundLibrary[categoryName].length - 1);
+  playSoundAPI(soundLibrary[categoryName][index]);
 };
