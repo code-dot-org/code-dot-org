@@ -176,6 +176,12 @@ describe('entry tests', () => {
         },
         {
           expand: true,
+          cwd: 'node_modules/@code-dot-org/ml-activities/dist/assets',
+          src: ['**'],
+          dest: 'build/package/media/skins/fish'
+        },
+        {
+          expand: true,
           cwd: 'node_modules/scratch-blocks/media',
           src: ['**'],
           dest: 'build/package/media/scratch-blocks'
