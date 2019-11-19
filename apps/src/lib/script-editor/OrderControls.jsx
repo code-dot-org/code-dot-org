@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {ControlTypes} from './constants';
 import {moveGroup, moveStage, removeGroup, removeStage} from './editorRedux';
+import Dialog from '../../templates/Dialog';
 
 const styles = {
   controls: {
@@ -14,13 +15,18 @@ const styles = {
   }
 };
 
-class OrderControls extends Component {
+export class UnconnectedOrderControls extends Component {
   static propTypes = {
     move: PropTypes.func.isRequired,
     remove: PropTypes.func.isRequired,
     type: PropTypes.oneOf(Object.keys(ControlTypes)).isRequired,
     position: PropTypes.number.isRequired,
-    total: PropTypes.number.isRequired
+    total: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired
+  };
+
+  state = {
+    showConfirm: false
   };
 
   handleMoveUp = () => {
@@ -36,10 +42,24 @@ class OrderControls extends Component {
   };
 
   handleRemove = () => {
+    this.setState({showConfirm: true});
+  };
+
+  handleConfirm = () => {
+    this.setState({showConfirm: false});
     this.props.remove(this.props.type, this.props.position);
   };
 
+  handleClose = () => {
+    this.setState({showConfirm: false});
+  };
+
   render() {
+    const {showConfirm} = this.state;
+    const {type, name} = this.props;
+    const text =
+      `Are you sure you want to remove the ${type} named "${name}" ` +
+      'and all its contents from the script?';
     return (
       <div style={styles.controls}>
         <i
@@ -57,12 +77,22 @@ class OrderControls extends Component {
           style={styles.controlIcon}
           className="fa fa-trash"
         />
+        <Dialog
+          body={text}
+          cancelText="Cancel"
+          confirmText="Delete"
+          confirmType="danger"
+          isOpen={showConfirm}
+          handleClose={this.handleClose}
+          onCancel={this.handleClose}
+          onConfirm={this.handleConfirm}
+        />
       </div>
     );
   }
 }
 
-export default connect(
+const OrderControls = connect(
   state => ({}),
   dispatch => ({
     move(type, position, direction) {
@@ -76,4 +106,6 @@ export default connect(
         : dispatch(removeStage(position));
     }
   })
-)(OrderControls);
+)(UnconnectedOrderControls);
+
+export default OrderControls;

@@ -138,7 +138,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     prepare_locale_cookie user
 
-    if User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(provider) && user.persisted?
+    if AuthenticationOption::UNTRUSTED_EMAIL_CREDENTIAL_TYPES.include?(provider) && user.persisted?
       handle_untrusted_email_signin user, provider
     elsif allows_silent_takeover(user, auth_hash)
       user = silent_takeover user, auth_hash
