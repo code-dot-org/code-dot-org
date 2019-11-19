@@ -222,7 +222,7 @@ class Game < ActiveRecord::Base
   end
 
   def has_i18n?
-    !([NETSIM, APPLAB, GAMELAB, WEBLAB, SPRITELAB, FISH].include? app)
+    !([NETSIM, APPLAB, GAMELAB, WEBLAB, FISH].include? app)
   end
 
   def use_firebase?
