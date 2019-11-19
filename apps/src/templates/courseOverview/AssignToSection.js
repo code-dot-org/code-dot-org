@@ -8,7 +8,7 @@ import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import {ConfirmHiddenAssignment as ConfirmAssignment} from './ConfirmHiddenAssignment';
+import ConfirmHiddenAssignment from './ConfirmHiddenAssignment';
 import {
   isScriptHiddenForSection,
   updateHiddenScript
@@ -146,7 +146,7 @@ class AssignToSection extends Component {
           </DropdownButton>
         </div>
         {sectionIndexToAssign !== null && (
-          <ConfirmAssignment
+          <ConfirmHiddenAssignment
             sectionName={section.name}
             assignmentName={assignmentName}
             onClose={this.onCloseDialog}
