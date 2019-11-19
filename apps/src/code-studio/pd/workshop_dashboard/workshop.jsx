@@ -19,6 +19,7 @@ import WorkshopEnrollment from './components/workshop_enrollment';
 import Spinner from '../components/spinner';
 import {PermissionPropType, WorkshopAdmin} from './permission';
 import WorkshopPanel from './WorkshopPanel';
+import SignUpPanel from './SignUpPanel';
 import IntroPanel from './IntroPanel';
 
 const styles = {
@@ -681,26 +682,3 @@ const METADATA_FOOTER_STYLE = {
   fontSize: 'smaller',
   fontStyle: 'italic'
 };
-
-class SignUpPanel extends React.Component {
-  static propTypes = {
-    workshopId: PropTypes.string
-  };
-
-  render() {
-    const signupUrl = `${location.origin}/pd/workshops/${
-      this.props.workshopId
-    }/enroll`;
-
-    return (
-      <WorkshopPanel header="Your workshop sign-up link:">
-        <p>
-          Share this link with teachers who need to sign up for your workshop.
-        </p>
-        <a href={signupUrl} target="_blank">
-          {signupUrl}
-        </a>
-      </WorkshopPanel>
-    );
-  }
-}
