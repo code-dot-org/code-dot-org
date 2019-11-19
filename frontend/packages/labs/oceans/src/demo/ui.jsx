@@ -40,7 +40,7 @@ const styles = {
     borderRadius: 8,
     minWidth: 160,
     outline: 'none',
-    border: `2px solid ${colors.black}`,
+    border: 'none',
     ':focus': {
       outline: `${colors.white} auto 5px`
     }
