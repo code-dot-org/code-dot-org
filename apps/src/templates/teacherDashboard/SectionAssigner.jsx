@@ -24,12 +24,13 @@ const styles = {
 class SectionAssigner extends Component {
   static propTypes = {
     sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
-    selectSection: PropTypes.func.isRequired,
     showAssignButton: PropTypes.bool,
     courseId: PropTypes.number,
     scriptId: PropTypes.number,
-    selectedSectionId: PropTypes.number,
     forceReload: PropTypes.bool,
+    // Redux provided
+    selectSection: PropTypes.func.isRequired,
+    selectedSectionId: PropTypes.number,
     assignmentName: PropTypes.string
   };
 
