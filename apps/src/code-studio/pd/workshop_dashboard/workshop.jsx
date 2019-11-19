@@ -527,26 +527,27 @@ export class Workshop extends React.Component {
       return <p>No workshop found</p>;
     }
 
+    const {workshopId} = this.props.params;
+    const {workshop} = this.state;
+    const {sessions, state: workshopState} = workshop;
+
     return (
       <Grid>
-        {this.state.workshop.state === 'Not Started' && (
+        {workshopState === 'Not Started' && (
           <SignUpPanel workshopId={this.props.params.workshopId} />
         )}
         <IntroPanel
-          workshopId={this.props.params.workshopId}
-          workshopState={this.state.workshop.state}
-          sessions={this.state.workshop.sessions}
+          workshopId={workshopId}
+          workshopState={workshopState}
+          sessions={sessions}
           isAccountRequiredForAttendance={
             this.state.workshop['account_required_for_attendance?']
           }
           isWorkshopAdmin={this.props.permission.has(WorkshopAdmin)}
           loadWorkshop={this.loadWorkshop.bind(this)}
         />
-        {this.state.workshop.state !== 'Not Started' && (
-          <AttendancePanel
-            workshopId={this.props.params.workshopId}
-            sessions={this.state.workshop.sessions}
-          />
+        {workshopState !== 'Not Started' && (
+          <AttendancePanel workshopId={workshopId} sessions={sessions} />
         )}
         {this.renderEndWorkshopPanel()}
         {this.renderEnrollmentsPanel()}
