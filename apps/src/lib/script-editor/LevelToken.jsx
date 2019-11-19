@@ -5,7 +5,7 @@ import {Motion, spring} from 'react-motion';
 import color from '../../util/color';
 import {borderRadius, levelTokenMargin} from './constants';
 import LevelTokenDetails from './LevelTokenDetails';
-import {toggleExpand, removeLevel} from './editorRedux';
+import {toggleExpand} from './editorRedux';
 import {levelShape} from './shapes';
 
 const styles = {
@@ -99,7 +99,7 @@ class LevelToken extends Component {
   };
 
   handleRemove = () => {
-    this.props.removeLevel(this.props.stagePosition, this.props.level.position);
+    this.props.removeLevel(this.props.level.position);
   };
 
   render() {
@@ -184,9 +184,6 @@ export default connect(
   dispatch => ({
     toggleExpand(stage, level) {
       dispatch(toggleExpand(stage, level));
-    },
-    removeLevel(stage, level) {
-      dispatch(removeLevel(stage, level));
     }
   })
 )(LevelToken);
