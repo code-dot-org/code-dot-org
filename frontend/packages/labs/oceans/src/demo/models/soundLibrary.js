@@ -1,29 +1,31 @@
 import Sounds from '../Sounds';
+import {randomInt} from '../helpers';
 
 let mySounds = null;
+
+let soundCategories = {
+  yes: 10,
+  no: 10,
+  other: 4,
+  ambience: 1
+};
 
 export const loadSounds = () => {
   mySounds = new Sounds();
 
-  for (var i = 1; i <= 10; i++) {
-    mySounds.register({id: 'voice_' + i, ogg: 'sounds/mysound.ogg', mp3: `/sounds/ai_voice/ai_voice_${i}.mp3`});
-  }
+  Object.keys(soundCategories).forEach(categoryName => {
+    for (var i = 1; i <= soundCategories[categoryName]; i++) {
+      const baseFilename = `sounds/${categoryName}/${categoryName}_${i}`;
+      mySounds.register({
+        id: categoryName + '_' + i,
+        ogg: baseFilename + '.ogg',
+        mp3: baseFilename + '.mp3'
+      });
+    }
+  });
+};
 
-  for (var i = 1; i <= 10; i++) {
-    mySounds.register({id: 'yes_' + i, ogg: 'sounds/mysound.ogg', mp3: `/sounds/item_select_buttons/yes/yes_${i}.mp3`});
-  }
-
-  for (var i = 1; i <= 10; i++) {
-    mySounds.register({id: 'no_' + i, ogg: 'sounds/mysound.ogg', mp3: `/sounds/item_select_buttons/no/no_${i}.mp3`});
-  }
-
-  for (var i = 1; i <= 4; i++) {
-    mySounds.register({id: 'other_' + i, ogg: 'sounds/mysound.ogg', mp3: `/sounds/item_select_buttons/other/button_${i}.mp3`});
-  }
-
-  mySounds.register({id: 'ambience', ogg: '', mp3: 'sounds/ambience/underwater_ambience_loopable.mp3'});
-}
-
-export const playSound = (name) => {
-  mySounds.play(name);
-}
+export const playSound = (categoryName, specificIndex = undefined) => {
+  const index = specificIndex || randomInt(1, soundCategories[categoryName]);
+  mySounds.play(categoryName + '_' + index);
+};

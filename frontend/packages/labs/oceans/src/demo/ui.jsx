@@ -12,7 +12,6 @@ import aiBotClosed from '../../public/images/ai-bot/ai-bot-closed.png';
 import Typist from 'react-typist';
 import {getCurrentGuide, dismissCurrentGuide} from './models/guide';
 import {loadSounds, playSound} from './models/soundLibrary';
-import {randomInt} from './helpers';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {
   faPlay,
@@ -376,9 +375,9 @@ let Button = class Button extends React.Component {
 
     if (clickReturnValue !== false) {
       if (this.props.sound && clickReturnValue !== false) {
-        playSound(this.props.sound + '_' + randomInt(1, 10));
+        playSound(this.props.sound);
       } else {
-        playSound('other_' + randomInt(1, 4));
+        playSound('other');
       }
     }
   }
@@ -818,7 +817,7 @@ class Guide extends React.Component {
   dismissGuideClick() {
     const dismissed = dismissCurrentGuide();
     if (dismissed) {
-      playSound('other_' + randomInt(1, 4));
+      playSound('other');
     }
   }
 

@@ -415,8 +415,6 @@ const drawPrediction = (ctx, x, y, classId) => {
   }
 };
 
-let lastScannerImg = null;
-let scannerImageChangeCount = 0;
 
 // Draw AI bot + scanner to canvas for predict mode.
 // *Note:* This will no-op if the expected bot/scanner is not present
@@ -436,13 +434,6 @@ const drawPredictBot = state => {
 
   if (!botImg || !scannerImg) {
     return;
-  }
-
-  if (scannerImg !== lastScannerImg) {
-    if (scannerImageChangeCount++ % 4 === 0) {
-      playSound("voice_" + randomInt(1, 10));
-    }
-    lastScannerImg = scannerImg;
   }
 
   let botX = state.canvas.width / 2 - botImg.width / 2;
