@@ -6,7 +6,7 @@ import constants, {Modes} from './constants';
 import {setInitialState, setSetStateCallback} from './state';
 import {render as renderCanvas} from './renderer';
 import {toMode} from './toMode';
-import {injectSoundAPIs} from './models/soundLibrary';
+import {loadSounds, injectSoundAPIs} from './models/soundLibrary';
 
 //
 // Required in options:
@@ -23,6 +23,8 @@ export const initAll = function(options) {
 
   // Pass registerSound and playSound from options to soundLibrary.
   injectSoundAPIs(options);
+
+  loadSounds();
 
   // Set initial state for UI elements.
   setInitialState({
