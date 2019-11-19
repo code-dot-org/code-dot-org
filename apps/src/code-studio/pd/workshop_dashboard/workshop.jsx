@@ -245,9 +245,6 @@ export class Workshop extends React.Component {
     if (this.deleteEnrollmentRequest) {
       this.deleteEnrollmentRequest.abort();
     }
-    if (this.endRequest) {
-      this.endRequest.abort();
-    }
   }
 
   handleAdminEditClick = () => this.setState({showAdminEditConfirmation: true});
@@ -256,39 +253,6 @@ export class Workshop extends React.Component {
   handleAdminEditConfirmed = () => {
     this.setState({showAdminEditConfirmation: false});
     this.handleEditClick();
-  };
-
-  handleEndWorkshopClick = () => {
-    this.setState({showEndWorkshopConfirmation: true});
-  };
-
-  handleEndWorkshopCancel = () => {
-    this.setState({showEndWorkshopConfirmation: false});
-  };
-
-  handleEndWorkshopConfirmed = () => {
-    this.endRequest = $.ajax({
-      method: 'POST',
-      url: `/api/v1/pd/workshops/${this.props.params.workshopId}/end`,
-      dataType: 'json'
-    })
-      .done(() => {
-        this.setState({showEndWorkshopConfirmation: false});
-        this.loadWorkshop();
-      })
-      .fail(data => {
-        if (data.statusText !== 'abort') {
-          console.log(
-            `Failed to end workshop: ${this.props.params.workshopId}`
-          );
-          alert(
-            "We're sorry, we were unable to end the workshop. Please try again."
-          );
-        }
-      })
-      .always(() => {
-        this.endRequest = null;
-      });
   };
 
   handleEditClick = () => {
@@ -323,44 +287,6 @@ export class Workshop extends React.Component {
   handleEnrollmentActiveTabSelect = enrollmentActiveTab => {
     this.setState({enrollmentActiveTab});
   };
-
-  renderEndWorkshopPanel() {
-    const header = <div>End Workshop:</div>;
-
-    const contents = (
-      <div>
-        <p>
-          After the last day of your workshop, you must end the workshop. This
-          will generate a report to Code.org as well as email teachers a survey
-          regarding the workshop.
-        </p>
-        <Button onClick={this.handleEndWorkshopClick}>
-          End Workshop and Send Survey
-        </Button>
-        <ConfirmationDialog
-          show={this.state.showEndWorkshopConfirmation}
-          onOk={this.handleEndWorkshopConfirmed}
-          okText={
-            this.state.workshop['ready_to_close?']
-              ? 'OK'
-              : 'Yes, end this workshop'
-          }
-          onCancel={this.handleEndWorkshopCancel}
-          headerText="End Workshop and Send Survey"
-          bodyText={
-            this.state.workshop['ready_to_close?']
-              ? 'Are you sure? Once ended, the workshop cannot be restarted.'
-              : 'There are still sessions remaining in this workshop. ' +
-                'Once a workshop is ended, attendees can no longer mark themselves as attended for the remaining sessions. ' +
-                'Are you sure you want to end this workshop?'
-          }
-          width={this.state.workshop['ready_to_close?'] ? 500 : 800}
-        />
-      </div>
-    );
-
-    return <WorkshopPanel header={header}>{contents}</WorkshopPanel>;
-  }
 
   renderDetailsPanelHeader() {
     let button = null;
@@ -530,7 +456,7 @@ export class Workshop extends React.Component {
     return (
       <Grid>
         {workshopState === 'Not Started' && (
-          <SignUpPanel workshopId={this.props.params.workshopId} />
+          <SignUpPanel workshopId={workshopId} />
         )}
         <IntroPanel
           workshopId={workshopId}
@@ -545,7 +471,13 @@ export class Workshop extends React.Component {
         {workshopState !== 'Not Started' && (
           <AttendancePanel workshopId={workshopId} sessions={sessions} />
         )}
-        {workshopState === 'In Progress' && this.renderEndWorkshopPanel()}
+        {workshopState === 'In Progress' && (
+          <EndWorkshopPanel
+            workshopId={workshopId}
+            isReadyToClose={this.state.workshop['ready_to_close?']}
+            loadWorkshop={this.loadWorkshop.bind(this)}
+          />
+        )}
         {this.renderEnrollmentsPanel()}
         {this.renderDetailsPanel()}
         <MetadataFooter createdAt={this.state.workshop.created_at} />
@@ -582,3 +514,87 @@ const METADATA_FOOTER_STYLE = {
   fontSize: 'smaller',
   fontStyle: 'italic'
 };
+
+class EndWorkshopPanel extends React.Component {
+  static propTypes = {
+    workshopId: PropTypes.string,
+    isReadyToClose: PropTypes.bool,
+    loadWorkshop: PropTypes.func.isRequired
+  };
+
+  state = {
+    showEndWorkshopConfirmation: false
+  };
+
+  componentWillUnmount() {
+    if (this.endRequest) {
+      this.endRequest.abort();
+    }
+  }
+
+  handleEndWorkshopClick = () => {
+    this.setState({showEndWorkshopConfirmation: true});
+  };
+
+  handleEndWorkshopCancel = () => {
+    this.setState({showEndWorkshopConfirmation: false});
+  };
+
+  handleEndWorkshopConfirmed = () => {
+    const {workshopId, loadWorkshop} = this.props;
+
+    this.endRequest = $.ajax({
+      method: 'POST',
+      url: `/api/v1/pd/workshops/${workshopId}/end`,
+      dataType: 'json'
+    })
+      .done(() => {
+        this.setState({showEndWorkshopConfirmation: false});
+        loadWorkshop();
+      })
+      .fail(data => {
+        if (data.statusText !== 'abort') {
+          console.log(`Failed to end workshop: ${workshopId}`);
+          alert(
+            "We're sorry, we were unable to end the workshop. Please try again."
+          );
+        }
+      })
+      .always(() => {
+        this.endRequest = null;
+      });
+  };
+
+  render() {
+    const {isReadyToClose} = this.props;
+    return (
+      <WorkshopPanel header="End Workshop:">
+        <div>
+          <p>
+            After the last day of your workshop, you must end the workshop. This
+            will generate a report to Code.org as well as email teachers a
+            survey regarding the workshop.
+          </p>
+          <Button onClick={this.handleEndWorkshopClick}>
+            End Workshop and Send Survey
+          </Button>
+          <ConfirmationDialog
+            show={this.state.showEndWorkshopConfirmation}
+            onOk={this.handleEndWorkshopConfirmed}
+            okText={isReadyToClose ? 'OK' : 'Yes, end this workshop'}
+            onCancel={this.handleEndWorkshopCancel}
+            headerText="End Workshop and Send Survey"
+            bodyText={
+              isReadyToClose
+                ? 'Are you sure? Once ended, the workshop cannot be restarted.'
+                : 'There are still sessions remaining in this workshop. ' +
+                  'Once a workshop is ended, attendees can no longer mark themselves as attended for the remaining sessions. ' +
+                  'Are you sure you want to end this workshop?'
+            }
+            width={isReadyToClose ? 500 : 800}
+          />
+        </div>
+      </WorkshopPanel>
+    );
+  }
+}
