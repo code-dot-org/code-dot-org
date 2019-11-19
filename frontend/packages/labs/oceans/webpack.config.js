@@ -72,7 +72,7 @@ module.exports = {
   },
   performance: {
     assetFilter: function (assetFilename) {
-      return (/^(images|models|sounds)/.test(assetFilename));
+      return (/^assets\//.test(assetFilename));
     },
     maxAssetSize: 300000,
     maxEntrypointSize: 10500000,
