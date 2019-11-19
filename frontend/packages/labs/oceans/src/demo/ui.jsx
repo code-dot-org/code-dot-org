@@ -99,6 +99,11 @@ const styles = {
     lineHeight: '26px',
     color: colors.white
   },
+  resetTrainingButton: {
+    position: 'absolute',
+    top: 10,
+    right: 10
+  },
   trainQuestionText: {
     position: 'absolute',
     top: '15%',
@@ -496,6 +501,15 @@ let Train = class Train extends React.Component {
       state.appMode === AppMode.CreaturesVTrash ? 'No' : `Not ${state.word}`;
     return (
       <Body>
+        <Button
+          style={styles.resetTrainingButton}
+          onClick={() => {
+            resetTraining();
+            toMode(Modes.Loading);
+          }}
+        >
+          Reset Training
+        </Button>
         <div style={styles.trainQuestionText}>{state.trainingQuestion}</div>
         <img style={styles.trainBot} src={aiBotClosed} />
         <div style={styles.trainButtons}>
