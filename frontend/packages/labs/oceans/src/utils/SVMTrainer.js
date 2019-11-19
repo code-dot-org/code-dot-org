@@ -20,7 +20,7 @@ export default class SVMTrainer {
   }
 
   train() {
-    if (this.labeledTrainingData.length > 0) {
+    if (this.labeledTrainingData.length > 1) {
       const trainingData = this.labeledTrainingData.map(ld => ld.example);
       const trainingLabels = this.labeledTrainingData.map(ld => ld.label);
       this.svm.train(trainingData, trainingLabels, this.svmParams);
