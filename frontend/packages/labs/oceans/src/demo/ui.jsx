@@ -245,8 +245,7 @@ const styles = {
     left: 0,
     width: '100%',
     height: '100%',
-    borderRadius: 10,
-    border: '2px solid transparent'
+    borderRadius: 10
   },
   guideBackgroundHidden: {
     position: 'absolute',
