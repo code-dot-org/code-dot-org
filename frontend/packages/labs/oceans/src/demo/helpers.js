@@ -169,3 +169,11 @@ export const finishMovement = (t, pause = true) => {
     lastStartTime: null
   });
 };
+
+export const resetTraining = () => {
+  setState({
+    trainer: null,
+    yesCount: 0,
+    noCount: 0
+  });
+};

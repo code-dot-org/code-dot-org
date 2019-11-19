@@ -452,7 +452,7 @@ const guides = [
   },
   {
     id: 'fishlong-pond-init4',
-    text: '...or Continue.',
+    text: '...or Play Again.',
     when: {appMode: AppMode.FishLong, currentMode: Modes.Pond},
     style: 'BottomRight'
   }
@@ -493,5 +493,9 @@ export function dismissCurrentGuide() {
     let newGuideDismissals = [...currentGuideDismissals];
     newGuideDismissals.push(currentGuide.id);
     setState({guideDismissals: newGuideDismissals, guideShowing: false});
+
+    return true;
   }
+
+  return false;
 }
