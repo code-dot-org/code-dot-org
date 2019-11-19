@@ -87,13 +87,16 @@ class ContactRollupsV2
     end
   end
 
-  def self.create_tables
-    create_daily_table
-    create_main_table
-
+  def self.create_tracker_tables
     # TODO: Create tracker tables:
     # Job tracker: What runs, when, result
     # Data tracker: table, data_package, date added, date last updated, number of updates
+  end
+
+  def self.create_tables
+    create_daily_table
+    create_main_table
+    create_tracker_tables
   end
 
   def self.drop_tables
@@ -123,15 +126,17 @@ class ContactRollupsV2
   end
 
   def self.collect_all_changes(db_connection, src_db, src_table, columns)
-    updated_date_query = <<-SQL.squish
-      select distinct DATE(updated_at) as updated_date
-      from #{src_db}.#{src_table}
-      order by updated_date
-    SQL
-
     # TODO: get latest processed date from tracker table
     processed_date = Date.new(2019, 9, 15)
     puts "last processed_date = #{processed_date}"
+
+    updated_date_query = <<-SQL.squish
+      select distinct DATE(updated_at) as updated_date
+      from #{src_db}.#{src_table}
+      where updated_at > '#{processed_date}'
+      order by updated_date
+    SQL
+    puts "updated_date_query = #{updated_date_query}"
 
     db_connection[updated_date_query].each do |row|
       date = row[:updated_date]
@@ -482,15 +487,15 @@ class ContactRollupsV2
   end
 
   def self.test
-    # drop_tables
-    # create_tables
+    drop_tables
+    create_tables
     # empty_tables
-    # collect_data_to_daily_table
-    # update_data_to_main_table
+    collect_data_to_daily_table
+    update_data_to_main_table
     # delete_daily_changes('2019-11-11')
     # sync_to_pardot
-    # count_table_rows
-    build_pardot_lookup_table
+    count_table_rows
+    # build_pardot_lookup_table
     nil
   end
 end
