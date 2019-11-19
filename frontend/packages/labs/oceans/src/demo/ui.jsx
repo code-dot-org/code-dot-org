@@ -11,7 +11,7 @@ import colors from './colors';
 import aiBotClosed from '../../public/images/ai-bot/ai-bot-closed.png';
 import Typist from 'react-typist';
 import {getCurrentGuide, dismissCurrentGuide} from './models/guide';
-import {loadSounds, playSound} from './models/soundLibrary';
+import {playSound} from './models/soundLibrary';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {
   faPlay,
@@ -892,8 +892,6 @@ class Guide extends React.Component {
 export default class UI extends React.Component {
   constructor(props) {
     super(props);
-
-    loadSounds();
   }
 
   render() {

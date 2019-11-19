@@ -25,6 +25,14 @@ const soundLibrary = {
     require('../../../public/sounds/no/no_8.mp3'),
     require('../../../public/sounds/no/no_9.mp3'),
   ],
+  sortyes: [
+    require('../../../public/sounds/sortyes/sortyes_1.mp3'),
+    require('../../../public/sounds/sortyes/sortyes_2.mp3'),
+    require('../../../public/sounds/sortyes/sortyes_3.mp3'),
+  ],
+  sortno: [
+    require('../../../public/sounds/sortno/sortno_1.mp3'),
+  ],
   other: [
     require('../../../public/sounds/other/other_1.mp3'),
     require('../../../public/sounds/other/other_2.mp3'),

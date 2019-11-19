@@ -4,6 +4,7 @@ import './assetPath';
 import {queryStrFor} from './helpers';
 import {initAll} from './init';
 import Sounds from './Sounds';
+import {loadSounds} from './models/soundLibrary';
 
 let currentAppMode = queryStrFor('mode') || 'fishvtrash';
 let canvas, backgroundCanvas;
@@ -24,6 +25,8 @@ function initDemoPage() {
     playSound: sounds.play.bind(sounds),
     registerSound: sounds.register.bind(sounds),
   });
+
+  loadSounds();
 }
 
 function onContinue() {

@@ -416,6 +416,8 @@ const drawPrediction = (ctx, x, y, classId) => {
 };
 
 
+let lastScannerImg = null;
+
 // Draw AI bot + scanner to canvas for predict mode.
 // *Note:* This will no-op if the expected bot/scanner is not present
 // in the botImages cache. Call loadAllBotImages() to populate the botImages cache.
@@ -434,6 +436,15 @@ const drawPredictBot = state => {
 
   if (!botImg || !scannerImg) {
     return;
+  }
+
+  if (scannerImg !== lastScannerImg) {
+    if (scannerImg === botImages.likeScanner) {
+      playSound("sortyes");
+    } else if (scannerImg === botImages.dislikeScanner) {
+      playSound("sortno");
+    }
+    lastScannerImg = scannerImg;
   }
 
   let botX = state.canvas.width / 2 - botImg.width / 2;
