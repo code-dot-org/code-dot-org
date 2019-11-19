@@ -631,10 +631,9 @@ export class Workshop extends React.Component {
 
     return (
       <Grid>
-        <SignUpPanel
-          workshopId={this.props.params.workshopId}
-          workshopState={this.state.workshop.state}
-        />
+        {this.state.workshop.state === 'Not Started' && (
+          <SignUpPanel workshopId={this.props.params.workshopId} />
+        )}
         <IntroPanel
           workshopId={this.props.params.workshopId}
           workshopState={this.state.workshop.state}
@@ -703,15 +702,10 @@ WorkshopPanel.propTypes = {
 
 class SignUpPanel extends React.Component {
   static propTypes = {
-    workshopId: PropTypes.string,
-    workshopState: PropTypes.string
+    workshopId: PropTypes.string
   };
 
   render() {
-    if (this.props.workshopState !== 'Not Started') {
-      return null;
-    }
-
     const signupUrl = `${location.origin}/pd/workshops/${
       this.props.workshopId
     }/enroll`;
