@@ -932,22 +932,19 @@ class SignUpPanel extends React.Component {
       return null;
     }
 
-    const header = <div>Your workshop sign-up link:</div>;
-
     const signupUrl = `${location.origin}/pd/workshops/${
       this.props.workshopId
     }/enroll`;
-    const content = (
-      <div>
+
+    return (
+      <WorkshopPanel header="Your workshop sign-up link:">
         <p>
           Share this link with teachers who need to sign up for your workshop.
         </p>
         <a href={signupUrl} target="_blank">
           {signupUrl}
         </a>
-      </div>
+      </WorkshopPanel>
     );
-
-    return <WorkshopPanel header={header}>{content}</WorkshopPanel>;
   }
 }
