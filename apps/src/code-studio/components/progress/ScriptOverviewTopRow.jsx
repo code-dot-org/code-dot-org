@@ -144,9 +144,11 @@ class ScriptOverviewTopRow extends React.Component {
             <SectionAssigner
               sections={sectionsForDropdown}
               selectedSectionId={selectedSectionId}
+              assignmentName={scriptTitle}
               showAssignButton={showAssignButton}
               courseId={currentCourseId}
               scriptId={scriptId}
+              forceReload={true}
             />
           )}
         {!experiments.isEnabled(experiments.ASSIGNMENT_UPDATES) &&
