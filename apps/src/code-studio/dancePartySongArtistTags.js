@@ -36,15 +36,15 @@ export const SongTitlesToArtistTwitterHandle = {
   ymca_villagepeople: 'VillagePeople',
   firework_katyperry: 'KatyPerry',
   //2019 Songs
-  calma_pedrocapo: 'Pedrocapo',
+  calma_pedrocapo: 'PedroCapo',
   highhopes_panicatthedisco: 'PanicAtTheDisco',
   ificanthaveyou_shawnmendes: 'ShawnMendes',
   introtoshamstep_47SOUL: '47soulofficial',
-  kidzbop_ificanthaveyou_shawnmendes: 'KidzBop',
+  kidzbop_ificanthaveyou_shawnmendes: 'KIDZBOP',
   neverreallyover_katyperry: 'KatyPerry',
   occidentalview_francescogabbani: 'FrankGabbani',
   oldtownroadremix_lilnasx: 'LilNasX',
-  starships_nickiminaj: 'NickiMinaj',
+  starships_nickiminaj: 'NICKIMINAJ',
   sucker_jonasbrothers: 'JonasBrothers',
   // These tracks available locally, tweet @codeorg to avoid spamming anyone.
   jazzy_beats: 'codeorg',
