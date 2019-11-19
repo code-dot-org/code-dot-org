@@ -42,6 +42,14 @@
             "\"fireworks\""
           ],
           [
+            "Flowers",
+            "\"flowers\""
+          ],
+          [
+            "Growing Stars",
+            "\"growing_stars\""
+          ],
+          [
             "Hypno",
             "\"swirl\""
           ],
@@ -62,12 +70,24 @@
             "\"rainbow\""
           ],
           [
+            "Random Ripples",
+            "\"ripples_random\""
+          ],
+          [
+            "Ripples",
+            "\"ripples\""
+          ],
+          [
             "Snow",
             "\"snowflakes\""
           ],
           [
             "Song Names",
             "\"text\""
+          ],
+          [
+            "Squiggles",
+            "\"squiggles\""
           ],
           [
             "Space",
@@ -88,6 +108,10 @@
           [
             "Stars",
             "\"stars\""
+          ],
+          [
+            "Waves",
+            "\"music_wave\""
           ]
         ]
       },

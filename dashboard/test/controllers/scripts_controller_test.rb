@@ -296,15 +296,7 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test 'create' do
-    expected_contents = <<-TEXT.strip_heredoc
-      hidden false
-      login_required true
-      hideable_stages true
-      wrapup_video 'hoc_wrapup'
-      project_sharing true
-      curriculum_umbrella 'CSP'
-
-    TEXT
+    expected_contents = ''
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
     File.stubs(:write).with('config/scripts/test-script-create.script', expected_contents).once
     Rails.application.config.stubs(:levelbuilder_mode).returns true
@@ -312,23 +304,11 @@ class ScriptsControllerTest < ActionController::TestCase
 
     post :create, params: {
       script: {name: 'test-script-create'},
-      script_text: '',
-      visible_to_teachers: true,
-      login_required: true,
-      hideable_stages: true,
-      wrapup_video: 'hoc_wrapup',
-      project_sharing: 'on',
-      curriculum_umbrella: 'CSP'
     }
-    assert_redirected_to script_path id: 'test-script-create'
+    assert_redirected_to edit_script_path id: 'test-script-create'
 
     script = Script.find_by_name('test-script-create')
     assert_equal 'test-script-create', script.name
-    refute script.hidden
-    assert script.login_required
-    assert script.hideable_stages
-    assert script.project_sharing
-    assert_equal "CSP", script.curriculum_umbrella
   end
 
   test 'destroy raises exception for evil filenames' do

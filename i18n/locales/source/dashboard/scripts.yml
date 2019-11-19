@@ -1160,6 +1160,8 @@ en:
               name: Bubble Choice
             Contained Levels:
               name: Contained Levels
+            ML Fish:
+              name: ML Fish
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1881,6 +1883,14 @@ en:
           stages:
             Hour of Code 2015:
               name: Hour of Code 2015
+          description_audience: ''
+        ocean:
+          title: Ocean Hour of Code
+          description: Description TBD.
+          description_short: Short Description TBD.
+          stages:
+            Ocean:
+              name: Ocean
           description_audience: ''
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'
@@ -12658,6 +12668,8 @@ en:
               name: Semester Hackathon Part 5
             Unit 5 Assessment:
               name: Unit 5 Assessment
+            Semester Exam:
+              name: Semester Exam
           title: CSP Unit 5 Pilot - Lists, Loops, and Traversals
           description_audience: ''
           description_short: ''
@@ -13513,3 +13525,79 @@ en:
               name: End-of-course projects
             Who is this section for?:
               name: Who is this section for?
+            Reviewing reflections:
+              name: Reviewing reflections
+            Reviewing your reflections:
+              name: Reviewing your reflections
+            End of Course projects:
+              name: End of Course projects
+        dance-extras-2019:
+          title: Keep On Dancing
+          description: Go beyond the first hour with extended project ideas.
+          description_short: Go beyond the Hour of Code with this follow-up activity to Code.org's Dance Party tutorial.
+          description_audience: ''
+          stages:
+            Dance Party - Go Further:
+              name: Dance Party - Go Further
+              description_student: ''
+              description_teacher: ''
+        csp10-pilot:
+          stages:
+            new stage:
+              name: new stage
+            'Project: Innovation Simulation Part 1':
+              name: 'Project: Innovation Simulation Part 1'
+            'Project: Innovation Simulation Part 2':
+              name: 'Project: Innovation Simulation Part 2'
+            Security Risks Part 1:
+              name: Security Risks Part 1
+            Security Risks Part 2:
+              name: Security Risks Part 2
+            Data Policies and Privacy:
+              name: Data Policies and Privacy
+            The Value of Privacy:
+              name: The Value of Privacy
+            'Project: Innovation Simulation Part 3':
+              name: 'Project: Innovation Simulation Part 3'
+          title: Cybersecurity and Global Impacts
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp4-preview:
+          stages:
+            new stage:
+              name: new stage
+            Variables Explore:
+              name: Variables Explore
+            Variables Investigate:
+              name: Variables Investigate
+            Variables Practice:
+              name: Variables Practice
+            Variables Make:
+              name: Variables Make
+            Conditionals Explore:
+              name: Conditionals Explore
+            Conditionals Investigate:
+              name: Conditionals Investigate
+            Conditionals Practice:
+              name: Conditionals Practice
+            Conditional Make:
+              name: Conditional Make
+            Functions Explore / Investigate:
+              name: Functions Explore / Investigate
+            Functions Practice:
+              name: Functions Practice
+            Functions Make:
+              name: Functions Make
+            Practice PT Part 1:
+              name: Practice PT Part 1
+            Practice PT Part 2:
+              name: Practice PT Part 2
+            Practice PT Part 3:
+              name: Practice PT Part 3
+            'Lesson 15: Unit 4 Assessment':
+              name: 'Lesson 15: Unit 4 Assessment'
+          title: Variables, Conditionals, and Functions
+          description_audience: ''
+          description_short: ''
+          description: ''

@@ -10,17 +10,17 @@ const styles = {
   container: {
     position: 'relative',
     width: '100%',
-    maxWidth: '970px',
+    minWidth: '770px',
     margin: '0 auto',
     userSelect: 'none'
   },
   containerReact: {
     position: 'absolute',
     width: '100%',
-    maxWidth: '970px',
+    minWidth: '770px',
     margin: '0 auto',
     userSelect: 'none',
-    fontFamily: 'arial, sans-serif',
+    fontFamily: '"Gotham 4r", arial, sans-serif',
     fontSize: '18px',
     color: 'rgb(30,30,30)'
   },
@@ -33,7 +33,9 @@ const styles = {
   },
   activityCanvas: {
     width: '100%',
-    borderRadius: '10px'
+    borderRadius: '10px',
+    border: '2px solid black',
+    backgroundColor: 'white'
   }
 };
 

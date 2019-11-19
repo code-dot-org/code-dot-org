@@ -73,7 +73,7 @@ class StageLock extends React.Component {
 export const UnconnectedStageLock = StageLock;
 export default connect(
   state => ({
-    sectionId: state.teacherSections.selectedSectionId,
+    sectionId: state.teacherSections.selectedSectionId.toString(),
     sectionsAreLoaded: state.teacherSections.sectionsAreLoaded,
     saving: state.stageLock.saving
   }),

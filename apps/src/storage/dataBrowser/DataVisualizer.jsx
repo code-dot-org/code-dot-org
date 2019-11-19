@@ -8,6 +8,7 @@ import DropdownField from './DropdownField';
 import * as dataStyles from './dataStyles';
 import * as rowStyle from '@cdo/apps/applab/designElements/rowStyle';
 import GoogleChart from '@cdo/apps/applab/GoogleChart';
+import CrossTabChart from './CrossTabChart';
 
 const INITIAL_STATE = {
   isVisualizerOpen: false,
@@ -42,41 +43,6 @@ class DataVisualizer extends React.Component {
 
   handleClose = () => {
     this.setState({...INITIAL_STATE});
-  };
-
-  /**
-   * @param {Array.<Object>} records
-   * @param {string} rowName
-   * @param {string} columnName
-   */
-  createPivotTable = (records, rowName, columnName) => {
-    let countMap = {};
-
-    // Find all values in columnName - these will be the columns of the pivot table
-    const pivotedColumns = new Set(records.map(record => record[columnName]));
-
-    // Count occurrences of each row/column pair
-    records.forEach(record => {
-      let key = record[rowName];
-      let value = record[columnName];
-      if (!countMap[key]) {
-        countMap[key] = {[rowName]: key};
-        pivotedColumns.forEach(column => (countMap[key][column] = 0));
-      }
-      countMap[key][value]++;
-    });
-
-    // Sort columns
-    let columns;
-    if (this.state.numericColumns.includes(columnName)) {
-      columns = [...pivotedColumns].sort(function(a, b) {
-        return a - b;
-      });
-    } else {
-      columns = [...pivotedColumns].sort();
-    }
-    columns.unshift(rowName);
-    return {chartData: Object.values(countMap), columns: columns};
   };
 
   aggregateRecordsByColumn = (records, columnName) => {
@@ -115,14 +81,7 @@ class DataVisualizer extends React.Component {
         }
         break;
       case 'Cross Tab':
-        if (this.state.xValues && this.state.yValues) {
-          chart = new GoogleChart.CrossTab(targetDiv);
-          ({chartData, columns} = this.createPivotTable(
-            this.state.parsedRecords,
-            this.state.xValues,
-            this.state.yValues
-          ));
-        }
+        // Cross Tab is rendered by React, so no Google Chart is required.
         break;
       case 'Scatter Plot':
         if (this.state.xValues && this.state.yValues) {
@@ -272,7 +231,16 @@ class DataVisualizer extends React.Component {
             </div>
           )}
         </div>
-        <div id="chart-area" />
+        {this.state.chartType === 'Cross Tab' ? (
+          <CrossTabChart
+            parsedRecords={this.state.parsedRecords}
+            numericColumns={this.state.numericColumns}
+            rowName={this.state.xValues}
+            columnName={this.state.yValues}
+          />
+        ) : (
+          <div id="chart-area" />
+        )}
       </div>
     );
 

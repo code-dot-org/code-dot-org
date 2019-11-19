@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import FishView from './FishView';
 import {Provider} from 'react-redux';
 import {getStore} from '../redux';
-import {initAll} from '@code-dot-org/ml-activities';
+import {setAssetPath} from '@code-dot-org/ml-activities/dist/assetPath';
 import {TestResults} from '@cdo/apps/constants';
 
 /**
@@ -98,6 +98,10 @@ Fish.prototype.initMLActivities = function() {
   // Set up initial state
   const canvas = document.getElementById('activity-canvas');
   const backgroundCanvas = document.getElementById('background-canvas');
+
+  setAssetPath('/blockly/media/skins/fish/');
+
+  const {initAll} = require('@code-dot-org/ml-activities');
 
   // Set initial state for UI elements.
   initAll({

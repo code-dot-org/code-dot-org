@@ -95,18 +95,6 @@ button.tutorial-gray {
   color: #5b6770;
 }
 
-.bold-text {
-  font-family: 'Gotham 7r', sans-serif;
-}
-
-.set-margin {
-  margin-top: 0px;
-}
-
-.set-container-padding {
-  padding: 5px;
-}
-
 .pl-callout {
   border: 1px solid #0094ca;
   height: 72px;

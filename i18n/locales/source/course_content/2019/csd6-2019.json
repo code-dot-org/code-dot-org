@@ -433,7 +433,8 @@
           "text": "<img src=\"https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00 PM.png\" width=\"200px\"",
           "correct": true
         }
-      ]
+      ],
+      "markdown": "![](https://images.code.org/134a993836c148f64a7045d489ec58dc-image-1512686800350.45.08 PM.png)\n"
     }
   },
   "https://studio.code.org/s/csd6-2019/stage/10/puzzle/10": {

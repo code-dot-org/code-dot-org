@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import color from '../../../util/color';
-import {PLATFORM_ANDROID, PLATFORM_IOS} from '../../../util/exporter';
+import {PLATFORM_ANDROID, PLATFORM_IOS} from '../../../util/exporterConstants';
 import experiments from '../../../util/experiments';
 import commonStyles from './styles';
 

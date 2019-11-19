@@ -153,11 +153,11 @@ def certificate_template_for(course)
         'MC_Hour_Of_Code_Certificate_Hero.png'
       elsif course == ScriptConstants::MINECRAFT_AQUATIC_NAME
         'MC_Hour_Of_Code_Certificate_Aquatic.png'
-      elsif course == 'mee'
-        'MC_Hour_Of_Code_Certificate_mee.png'
       else
         'MC_Hour_Of_Code_Certificate.png'
       end
+    elsif course == 'mee'
+      'MC_Hour_Of_Code_Certificate_mee.png'
     else
       'hour_of_code_certificate.jpg'
     end

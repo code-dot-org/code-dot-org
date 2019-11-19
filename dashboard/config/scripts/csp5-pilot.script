@@ -26,7 +26,6 @@ stage 'Lists Practice', flex_category: 'csp_lists'
 level 'CSP U5L3 SFLP 20-21', progression: 'Lesson Overview'
 level 'U5 L03 Lists Practice 1', progression: 'Setting up Lists'
 level 'U5 L03 Lists Practice 2', progression: 'Setting up Lists'
-level 'U5 L03 Lists Practice 3', progression: 'Accessing Elements in a List'
 level 'U5 L03 Lists Practice 3.75', progression: 'Accessing Elements in a List'
 level 'U5 L03 Lists Practice 3.5', progression: 'Accessing Elements in a List'
 level 'U5 L03 Lists Practice 4', progression: 'List Operations'
@@ -120,6 +119,9 @@ level 'U5 Traversals Make Project Step 4', progression: 'Build the Poem Personal
 level 'U5 Traversals Make Project Step 5', progression: 'Build the Poem Personalizer'
 level 'U5 Traversals Make Project Step 6', progression: 'Build the Poem Personalizer', assessment: true
 
+stage 'Unit 5 Assessment'
+level 'CSP U5L18 SFLP 20-21', progression: 'Lesson Overview'
+
 stage 'Semester Hackathon Part 1', flex_category: 'csp_project'
 level 'CSP U5L13 SFLP 20-21', progression: 'Lesson Overview'
 
@@ -134,6 +136,3 @@ level 'CSP U5L16 SFLP 20-21', progression: 'Lesson Overview'
 
 stage 'Semester Hackathon Part 5', flex_category: 'csp_project'
 level 'CSP U5L17 SFLP 20-21', progression: 'Lesson Overview'
-
-stage 'Unit 5 Assessment'
-level 'CSP U5L18 SFLP 20-21', progression: 'Lesson Overview'

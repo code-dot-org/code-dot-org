@@ -6,7 +6,9 @@
   "user_id": 106,
   "properties": {
     "video_key": "ocean_machine_learning",
-    "display_name": "Video: Machine Learning"
+    "display_name": "Video: Machine Learning",
+    "video_rounded_corners": true,
+    "video_full_width": true
   },
   "published": true,
   "notes": "",

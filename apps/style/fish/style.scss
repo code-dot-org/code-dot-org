@@ -6,23 +6,71 @@ button {
   background-color: white;
   font-size: 120%;
   border-radius: 5px;
-  padding: 1%;
   border: none;
   width: 17%;
+  padding: 16px 30px;
 }
 button:focus {
   outline: white auto 5px;
 }
-@media screen and (max-width: 800px) {
-  button {
-    font-size: 90%;
-  }
-  #activity-intro-text {
-    font-size: 14px;
+@media screen and (max-width: 970px) {
+  .words-button {
+    font-size: 70%;
+    padding: 10px 20px;
   }
 }
-@media screen and (max-width: 600px) {
-  button {
+@media screen and (max-width: 830px) {
+  .words-button {
     font-size: 60%;
+  }
+}
+
+@media screen and (max-height: 1350px) {
+  #container {
+    max-width: 2050px;
+  }
+}
+@media screen and (max-height: 1260px) {
+  #container {
+    max-width: 1890px;
+  }
+}
+@media screen and (max-height: 1170px) {
+  #container {
+    max-width: 1730px;
+  }
+}
+@media screen and (max-height: 1080px) {
+  #container {
+    max-width: 1570px;
+  }
+}
+@media screen and (max-height: 990px) {
+  #container {
+    max-width: 1410px;
+  }
+}
+@media screen and (max-height: 900px) {
+  #container {
+    max-width: 1250px;
+  }
+}
+@media screen and (max-height: 810px) {
+  #container {
+    max-width: 1090px;
+  }
+}
+@media screen and (max-height: 720px) {
+  #container {
+    max-width: 930px;
+  }
+}
+@media screen and (max-height: 630px) {
+  #container {
+    max-width: 770px;
+  }
+  .words-button {
+    font-size: 70%;
+    padding: 10px 20px;
   }
 }
