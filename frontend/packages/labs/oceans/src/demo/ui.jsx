@@ -96,7 +96,8 @@ const styles = {
     textAlign: 'center',
     marginTop: 20,
     fontSize: 22,
-    lineHeight: '26px'
+    lineHeight: '26px',
+    color: colors.white
   },
   trainQuestionText: {
     position: 'absolute',
@@ -104,7 +105,8 @@ const styles = {
     left: '50%',
     transform: 'translateX(-50%)',
     fontSize: 32,
-    lineHeight: '35px'
+    lineHeight: '35px',
+    color: colors.white
   },
   trainButtons: {
     position: 'absolute',
