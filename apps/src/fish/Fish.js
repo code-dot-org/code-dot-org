@@ -108,7 +108,9 @@ Fish.prototype.initMLActivities = function() {
     canvas,
     backgroundCanvas,
     appMode: mode,
-    onContinue
+    onContinue,
+    registerSound: this.studioApp_.registerAudio.bind(this.studioApp_),
+    playSound: this.studioApp_.playAudio.bind(this.studioApp_)
   });
 };
 
