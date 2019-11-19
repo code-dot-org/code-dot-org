@@ -1,12 +1,12 @@
 {
   "name": "@code-dot-org/ml-activities",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "",
   "main": "dist/main.js",
   "jest": {
     "testEnvironment": "node",
     "moduleNameMapper": {
-      ".+\\.(bin|jpg|jpeg|png)$": "identity-obj-proxy"
+      ".+\\.(bin|jpg|jpeg|png|mp3|ogg|wav)$": "identity-obj-proxy"
     }
   },
   "scripts": {
@@ -45,9 +45,12 @@
     "babel-preset-react": "^6.5.0",
     "babelify": "^10.0.0",
     "canvas": "^2.6.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.0.5",
     "css-loader": "^3.2.0",
     "eslint": ">=4.18.2",
     "eslint-plugin-react": "^7.11.0",
+    "file-loader": "^4.2.0",
     "idempotent-babel-polyfill": "6.26.0-1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^15.0.0",
@@ -82,5 +85,8 @@
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/react-fontawesome": "^0.1.7",
     "react-typist": "^2.0.5"
-  }
+  },
+  "files": [
+    "dist/**/!(demo.js)"
+  ]
 }
