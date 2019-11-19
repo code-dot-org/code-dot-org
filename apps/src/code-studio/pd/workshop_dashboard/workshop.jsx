@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import moment from 'moment';
-import {Grid, Row, Col, Panel, ButtonToolbar, Button} from 'react-bootstrap';
+import {Grid, Row, Col, ButtonToolbar, Button} from 'react-bootstrap';
 import {DATE_FORMAT} from './workshopConstants';
 import ConfirmationDialog from '../components/confirmation_dialog';
 import MoveEnrollmentsDialog from './components/move_enrollments_dialog';
@@ -18,6 +18,7 @@ import WorkshopForm from './components/workshop_form';
 import WorkshopEnrollment from './components/workshop_enrollment';
 import Spinner from '../components/spinner';
 import {PermissionPropType, WorkshopAdmin} from './permission';
+import WorkshopPanel from './WorkshopPanel';
 
 const styles = {
   linkButton: {
@@ -681,23 +682,6 @@ const METADATA_FOOTER_STYLE = {
   textAlign: 'right',
   fontSize: 'smaller',
   fontStyle: 'italic'
-};
-
-const WorkshopPanel = ({header, children}) => (
-  <Row>
-    <Col sm={12}>
-      <Panel>
-        <Panel.Heading>
-          <Panel.Title>{header}</Panel.Title>
-        </Panel.Heading>
-        <Panel.Body>{children}</Panel.Body>
-      </Panel>
-    </Col>
-  </Row>
-);
-WorkshopPanel.propTypes = {
-  header: PropTypes.node,
-  children: PropTypes.node
 };
 
 class SignUpPanel extends React.Component {
