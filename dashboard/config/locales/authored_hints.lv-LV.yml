@@ -13,9 +13,14 @@ lv-LV:
       2-3 Artist 12:
         2-3_Artist_12_a: Riņķī ir 360 grādu. Ja mākslinieks ciklā katru reizi pagriežas
           par 1 grādu, tad viņam vajadzēs to atkārtot 360 reizes.
+      2-3 Artist 2 new:
+        2-3_Artist_2_new_a: Šķiet, mākslinieks neskatās uz pareizo pusi. Vai vari
+          viņu pagriezt, pirms zīmēt līniju?
       2-3 Artist 3new:
         2-3_Artist_3new_a: Cik ir 100-70? Izpētot stāsta problēmu, tik augstai jābūt
           cepurei!
+        2-3_Artist_3new_b: Šķiet, mākslinieks neskatās uz pareizo pusi. Vai vari viņu
+          pagriezt, pirms zīmēt līniju?
       2-3 Artist 4:
         2-3_Artist_4_a: Lai pabeigtu māju, mums tikai ir jāuzzīmē kvadrāts!
       2-3 Artist 6:
@@ -88,6 +93,9 @@ lv-LV:
         2-3_Bee_Loops_3B_a: Vajadzīgi divi dažādi 'atkārtot' cikli, viens aiz otra.
       2-3 Bee Loops 4:
         2-3_Bee_Loops_4_a: Beigās ciklā jābūt pieciem blokiem.
+      2-3 Maze 1:
+        2-3_Maze_1_a: Lai izmantotu "pārvietot uz priekšu" bloku, pārvelc to no rīku
+          joslas uz darba virsmu un pievieno to "kad izpilda" blokam.
       4-5 Artist 7:
         4-5_Artist_7_a: 'Kurš leņķis ir pats mazākais? Uz kura leņķa stāv mākslinieks? '
       4-5 Artist 8:
@@ -113,6 +121,9 @@ lv-LV:
         Course_4_SCF_2_a: Katram astoņstūrim mala ir 40 punktus gara.
         Course_4_SCF_2_b: Katrā horizontālajā līnijā ir 136 punktu lēciens starp katru
           astoņstūri.
+      course2_maze_programming_challenge2:
+        courseC_maze_programming_challenge2_b: Īsākais risinājums iespējams ar tikai
+          5 blokiem, bet tas izmanto "atkārtot" bloku!
       courseD_artist_nestedLoops3:
         courseD_artist_nestedLoops3_a: |-
           Mēģini izmantot 'lekt uz priekšu' bloku, lai no kvadrāta virsotnes nokļūtu uz vietu, kur sāksi nākamo.

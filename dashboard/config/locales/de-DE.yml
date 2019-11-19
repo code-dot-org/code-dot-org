@@ -24,10 +24,11 @@ de:
     attributes:
       user:
         name: Name anzeigen
-        name_example: Angezeigter Name<br/>(z.B. Cooler Codierer oder Jana B.)
+        name_example: Angezeigter Name (z.B. Cooler Codierer oder Jana B.)
         email: E-Mail
         parent_email: Eltern / Erziehungsberechtigten E-Mail-Adresse
         personal_email: Persönliche E-Mail-Adresse
+        personal_email_markdown: Persönliche E-Mail-Adresse
         username: Benutzername
         password: Passwort
         password_confirmation: Passwort Bestätigung
@@ -39,9 +40,13 @@ de:
         finish_sign_up_header: Kontoerstellung abschließen
         finish_sign_up_subheader: Gib folgende Informationen ein um dein Code.org-Konto
           für <strong>%{email}</strong> fertigzustellen.
+        finish_sign_up_subheader_markdown: Gib folgende Informationen ein um dein
+          Code.org-Konto für **%{email}** fertigzustellen.
         finish_sign_up_subheader_provider: Gib folgende Informationen ein um dein
           Code.org-Konto mit <strong>%{provider}</strong> für <strong>%{email}</strong>
           fertigzustellen.
+        finish_sign_up_subheader_provider_markdown: Gib folgende Informationen ein
+          um dein Code.org-Konto mit **%{provider}** für **%{email}** fertigzustellen.
         error:
           future: darf nicht in der Zukunft liegen
   beta: Beta
@@ -130,6 +135,10 @@ de:
       verfolgen und Ihre Klasse zu verwalten. <a href="/">Die verschiedenen Stufen
       und Rätsel</a> können Sie auch ohne Benutzerkennung ansehen; zum Speichern Ihrer
       Projekte und Fortschritte benötigen Sie jedoch ein Benutzerkonto.
+    overview_markdown: Erstellen Sie ein persönliches Benutzerkonto, um Ihre Fortschritte
+      zu verfolgen und Ihre Klasse zu verwalten. [Die verschiedenen Stufen und Rätsel](/)
+      können Sie auch ohne Benutzerkennung ansehen; zum Speichern Ihrer Projekte und
+      Fortschritte benötigen Sie jedoch ein Benutzerkonto.
     hoc_already_signed_up_heading: Starte ohne dich einzuloggen
     hoc_already_signed_up_content: "Sie haben sich angemeldet, eine 'Hour of Code'
       zu unterrichten. \n<br/> <br/>\nUm an diesem Event teilzunehmen, müssen weder
@@ -145,6 +154,12 @@ de:
       Klasse verwalten. Sie werden damit Ihren Schülerinnen und Schülern Kurse zuweisen
       und ihren Fortschritt verfolgen. Sie können aber auch ohne Login <a href="%{studio_url}">
       die Stufen und Aufgaben ansehen</a>.
+    hoc_already_signed_up_content_post_hoc_markdown: Vielen Dank, dass Sie einen 'Hour
+      of Code' Anlass begleiten. Um sich im Code-Studio anzumelden, müssen Sie ein
+      Passwort für Ihr Konto einrichten. So können Sie Ihren Fortschritt speichern
+      und Ihre Klasse verwalten. Sie werden damit Ihren Schülerinnen und Schülern
+      Kurse zuweisen und ihren Fortschritt verfolgen. Sie können aber auch ohne Login
+      [die Stufen und Aufgaben ansehen](%{studio_url}).
     teacher_educator_guide: Siehe Lehrer-Handbuch
     title: Anmelden bei Code.org
     school_name: Name der Schule (optional)
@@ -778,7 +793,7 @@ de:
     want_to_make_your_own: Möchtest du dein eigenes Programm machen?
     how_to_save: Eine der letzten Stufe dieser Tutorials klicken Sie auf "Fertig stellen"
       und "Speichern", um Ihre Arbeit in der Galerie speichern.
-    more: Mehr &rarr;
+    more: Mehr →
     caption_by_name_age: Von %{name}, Alter %{age}
     caption_time_ago: vor %{time_ago}
     header: Galerie
@@ -870,6 +885,12 @@ de:
       Wir empfinden das als eine wichtige Änderung und hoffen, damit einen neuen Standard
       im Umgang mit Schülerdaten in Bildungstechnologie zu setzen. Eine Zusammenfassung
       der Änderungen haben wir Dir per E-Mail  geschickt.'
+    intro_desc_markdown: 'Wir haben unsere Nutzungs- und Datenschutzbestimmungen aktualisiert.
+      Die Änderungen treten ab dem 24. August 2016 in Kraft. Die größte Veränderung:
+      Wir werden _E-Mail Adressen für Schülerkonten nicht mehr auf Code Studio speichern_.
+      Wir empfinden das als eine wichtige Änderung und hoffen, damit einen neuen Standard
+      im Umgang mit Schülerdaten in Bildungstechnologie zu setzen. Eine Zusammenfassung
+      der Änderungen haben wir Dir per E-Mail geschickt.'
     intro_instructions: Sie müssen diese neuen Bedingungen akzeptieren, um ihren Schülern
       unter 13 Jahren uneingeschränkten Zugriff auf die neuesten Funktionen von Code
       Studio zu geben. Bei der Registrierung eines Accounts für einen Schüler unter
@@ -882,6 +903,8 @@ de:
     accept_label: Ich stimme den aktualisierten <a href="%{tos_url}" target="_blank">Nutzungsbedingungen</a>
       und der aktualisierten <a href="%{privacy_url}" target="_blank">Datenschutzerklärung</a>
       zu
+    accept_label_markdown: Ich stimme den aktualisierten [Nutzungsbedingungen](%{tos_url})
+      und der aktualisierten [Datenschutzerklärung](%{privacy_url}) zu
     accept: Akzeptieren
     print: Drucken
     reminder_desc: Wir haben unsere <a href="%{tos_url}" target="_blank">Allgemeinen
@@ -890,6 +913,12 @@ de:
       Beachten Sie bitte, dass unsere Werkzeuge zum Lehren von JavaScript möglicherweise
       nicht für Ihre Studenten zur Verfügung stehen, bevor Sie die aktualisierten
       Bedingungen nicht explizit akzeptieren.
+    reminder_desc_markdown: Wir haben unsere [Allgemeinen Geschäftsbedingungen](%{tos_url})
+      und [Datenschutzerklärung](%{privacy_url}) aktualisiert. Bitte lesen Sie diese
+      sorgfältig durch, bevor Sie sie akzeptieren. Beachten Sie bitte, dass unsere
+      Werkzeuge zum Lehren von JavaScript möglicherweise nicht für Ihre Studenten
+      zur Verfügung stehen, bevor Sie die aktualisierten Bedingungen nicht explizit
+      akzeptieren.
     review_terms: Aktualisierte Bedingungen ansehen
   school_info_interstitial:
     save: Speichern
@@ -910,6 +939,10 @@ de:
     decline: Schließen
   zendesk_too_young_message: Tut uns leid, jüngere Benutzer dürfen sich für unsere
     Hilfeseite nicht anmelden. Du kannst <a href="http://support.code.org">support.code.org</a>
+    durchsuchen, ohne dich anzumelden, oder deine Eltern oder Lehrer bitten, uns zu
+    kontaktieren.
+  zendesk_too_young_message_markdown: Tut uns leid, jüngere Benutzer dürfen sich für
+    unsere Hilfeseite nicht anmelden. Du kannst [support.code.org](http://support.code.org)
     durchsuchen, ohne dich anzumelden, oder deine Eltern oder Lehrer bitten, uns zu
     kontaktieren.
   progress:

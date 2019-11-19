@@ -517,6 +517,7 @@ et:
             '"rotation"': pööramine
             '"x"': horisontaalne asend
             '"y"': vertikaalne asend
+            '"tint"': toon
       Dancelab_setPropRandom:
         text: juhusliku valiku alusel {SPRITE} {PROPERTY}
         options:
@@ -698,6 +699,22 @@ et:
             '"bass"': bass
             '"mid"': keskel
             '"treble"': kõrged helid
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': teemant
+            '"l"': l
+            '"m"': m
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"z"': z
       Dancelab_whenKey:
         text: kui vajutad {KEY}
         options:
@@ -734,6 +751,8 @@ et:
             '1': keskel
             '2': kõrged helid
       Dancelab_whenSetup:
+        text: seadistus
+      Dancelab_whenSetup2:
         text: seadistus
       gamelab_changePropBy:
         text: muuda {SPRITE} {PROPERTY} {VAL} võrra

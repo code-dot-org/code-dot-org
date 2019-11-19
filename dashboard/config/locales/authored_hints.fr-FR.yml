@@ -25,6 +25,8 @@ fr-FR:
         2-3_Artist_4_a: Pour finir la maison, tout ce qu'on a besoin de faire est
           tracer un carré!
       2-3 Artist 6:
+        2-3_Artist_6_a: 'Pour faire ces petits angles, tu dois tourner _plus_ chaque
+          fois que tu as fait un carré.   '
         2-3_Artist_6_b: Étant donné que je suis déjà orienté vers la droite, il est
           plus simple de commencer par avancer, puis de tourner à gauche pour créer
           le triangle.
@@ -40,6 +42,9 @@ fr-FR:
       2-3 Artist 9 NEW:
         2-3_Artist_9_a: Ce losange n’est vraiment qu’un carré sur le côté
       2-3 Artist Debugging 10:
+        2-3_Artist_Debugging_10_a: Souviens-toi, tu veux que le panneau de contrôle
+          soit 10 pixels _plus large_...alors sois sûr **d'ajouter** 10 à chaque nombre
+          que tu modifies.
         2-3_Artist_Debugging_10_b: "**On peut procéder par essai et erreur ici !**
           \ \n\nCommence par changer un nombre à la fois. \n\nQuels nombres font quoi
           ?  \n\nSi tu es perdu, clique sur « Recommencer » et ton code sera réinitialisé."
@@ -52,6 +57,11 @@ fr-FR:
       2-3 Artist Debugging 7:
         2-3_Artist_Debugging_7_a: Que se passe-t-il si l’artiste recule ou saute en
           arrière après qu’il dessine la première ligne ?
+      2-3 Artist Debugging 8:
+        2-3_Artist_Debugging_8_a: |-
+          Combien de fois est-ce que ma forme se répète ?
+          Combien de fois est-ce que ma forme _devrait_ se répéter ?
+          Où peux-tu changer cela dans le programme ?
       2-3 Artist Debugging 9:
         2-3_Artist_Debugging_9_a: L'artiste doit tourner à 60 degrés plus loin à gauche
           avant de commencer à dessiner!
@@ -264,6 +274,11 @@ fr-FR:
         4-5_Artist_4_a: "Il y a 360 degrés dans un cercle ! \n\nC’est le nombre de
           fois que tu dois répéter ce code (en tournant d’un degré à la fois) avant
           que le cercle soit terminé !"
+      4-5 Artist 5:
+        4-5_Artist_5_a: |-
+          La méthode par essai et erreur et bien, mais tu peux aussi résoudre le problème en divisant l’angle de 90 degrés en trois.
+
+          **90 / 3 = **\_****
       4-5 Artist 7:
         4-5_Artist_7_a: 'Quel angle est le plus petit ?  À quel angle l’artiste est-il
           debout ? '
@@ -271,7 +286,13 @@ fr-FR:
         4-5_Artist_8_a: "Les côtés longs font chacun 240 pixels. Cela signifie que
           les deux côtés courts doivent être égaux à :\n\n**800 - 240 - 240 = 320**\n\nCombien
           font **320 / 2** ? "
+        4-5_Artist_8_b: "Cette image peut être réalisée de deux façons ! \n\n-   Dessiner
+          deux rectangles de **120** de long et **160** de haut avec un côté qui se
+          chevauche\n\n-   Dessiner un rectangle de **240** de long et **160** de
+          haut, puis ajouter une ligne au milieu."
       4-5 Artist 9:
+        4-5_Artist_9_a: Quand un triangle est équilatéral, tous ses côtés et angles
+          sont identiques.
         4-5_Artist_9_b: Tu devras dessiner trois triangles de la même taille. N’oublie
           pas de changer de position après chaque triangle.
       4-5 Artist Assessment 1:
@@ -364,6 +385,9 @@ fr-FR:
           d’un hexagone** suivie de **2/3 d’un triangle**. '
         Course_4_Artist_12_b: 'La forme est presque la même que dans le casse-tête
           précédent, sauf que le demi-hexagone est un peu plus grand. '
+        Course_4_Artist_12_c: "1.  Les trois premières lignes font 60 pixels de long
+          et tu dois tourner de 60 degrés.  \n2.  Les deux lignes suivantes font 80
+          pixels de long et tu dois tourner de 120 degrés "
         Course_4_Artist_12_d: |-
           **Solution :**
 
@@ -1879,6 +1903,11 @@ fr-FR:
           zag est mauve (rvb = 100, 50, 150).
         Course_4_SCV_6_d: 'Pour faire un zig, tourne à gauche de ˋ360`/`côtés`. Pour
           faire un zag, tourne à droite de ˋ360` / ˋcôtés\`. '
+        Course_4_SCV_6_e: 'Le reste du programme est plutôt habituel pour faire une
+          rotation de 360 degrés depuis une forme, sauf que l’on fait chevaucher les
+          formes de moitié, donc on doit tourner à droite de ˋ180`/ ˋcôtés`, ce qui
+          signifie qu’on doit en faire deux fois plus que d’habitude (`côtés` \* ˋ2\`
+          répétitions). '
         Course_4_SCV_6_f: |-
           **Solution :**
 
@@ -2038,6 +2067,26 @@ fr-FR:
       CourseE_HOC 2018 Level_9b:
         voyage_aquatic_9a: Quel manifique récif de corail ! Si le corail bleu est
           dans son bon **droit**, le corail rouge n'est pas non plus très **gauche** !
+      Dance_2019_01:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+          \*Assure-toi qu'un danseur apparaît à l'écran.
+
+          _Ce niveau se termine après 4 mesures._
+      Dance_2019_04:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          -   Le danseur doit passer à un nouveau mouvement après 4 mesures.
+
+          _Le niveau se termine après 7 mesures._
+      Dance_2019_05:
+        validation: |-
+          **Comment puis-je réussir ce niveau ?**
+
+          -   Après 6 mesures, ton danseur doit faire une danse différente de ce qu'il faisait après 4 mesures.
+
+          _Le niveau se termine après 11 mesures._
       Dance_Party_01:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
@@ -2310,10 +2359,17 @@ fr-FR:
       NEW Course 4 Artist Params 11:
         NEW_Course_4_Artist_Params_11_a: Il y a plus d’un nombre qui doit être remplacé
           par une variable à l’intérieur de la fonction.
+      NEW Course 4 Artist Params 13:
+        NEW_Course_4_Artist_Params_13_a: 'Tu devras diviser le _périmètre_ par le
+          nombre de côtés pour que les formes gardent la même taille. '
       NEW Course 4 Artist Params inspire:
         brush_width: Nous avons défini la largeur du pinceau à 1 puis la couleur à
           bleu avant tout.
         double_loop: Essaie de mettre une boucle ˋpourˋ dans une boucle ˋrépéterˋ.
+        specifics: |-
+          La boucle ˋpourˋ s’exécute de trois à dix-sept pour chacune des six « pétales » avant de créer la suivante, en dessinant des formes ayant uniquement un nombre impair de côtés.
+
+          Le bloc ˋdéfinis alphaˋ utilise la division pour faire s’effacer la couleur au fur et à mesure que le compteur augmente.
         after: Quand tu as fini chaque « pétale », assure-toi d’ˋavancerˋ de 20 pixels
           avant de tourner de 60 degrés.
       NEW Course 4 Bee For Loops 8:
@@ -2474,9 +2530,18 @@ fr-FR:
         courseC_maze_programming4_b: 'Ajoute un commentaire quand tu changes de direction
           : que se serait-il passé si tu t’étais tourné de l’autre côté ?'
       course1_artist_loops_challenge1:
+        courseA_artist_loops_challenge1_a: |-
+          Tu peux utiliser des boucles comme ceci pour créer les murs et le toit. Essaie de répéter différents blocs.
+
+          ![](https://images.code.org/1581a2f599b501103064fc9864aa964d-image-1491863694560.png)
+
+          Crée la tienne ou clique sur ![](https://images.code.org/53090194cea5dbf35ce9e35205156f5d-image-1491864793265.png) pour des idées !
         courseA_artist_loops_challenge1_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseA_artist_loops_challenge1_c: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseA_artist_loops_challenge1_d: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      course1_artist_loops_challenge2:
+        harvey_tictactoe: Tu peux utiliser des blocs `sauter` pour te déplacer sur
+          les autres espaces.
       course1_artist_loops_challenge3:
         courseA_artist_loops_challenge2_a: 'Les blocs comme ceux-ci : <xml>  <block
           type="simple_move_up_left"/></xml> feront bouger ton artiste en oblique
@@ -2781,7 +2846,12 @@ fr-FR:
           Le modèle spirale peut être codé avec juste 18 blocs!
 
           ![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)
+      course2_maze_loops_challenge1:
+        courseC_maze_loops_challenge1_a: Pense à ce chemin comme étant 2 différente
+          parties. Chacune d'elles à un modèle qui se répète.
       course2_maze_programming_challenge2:
+        courseC_maze_programming_challenge2_a: _"Si tu me fais aller en arrière, fais
+          très attention de me faire tourner dans le bon sens!"_
         courseC_maze_programming_challenge2_b: La solution la plus courte n’utilise
           que 5 blocs, mais elle utilise le bloc ˋrépéter\` !
       course3_artist_functions_challenge2:
@@ -3084,6 +3154,9 @@ fr-FR:
           </statement>
           </block></xml>
       course4_bee_fwp_challenge2:
+        courseF_bee_fwp_challenge2_b: "Tu es à court de blocs ˋavancer`? Essaie d’utiliser
+          une *deuxième* boucle ˋpour` dans ton programme principal. \n\n**Remarque
+          :** Attention à ne pas confondre ˋcompteur`et ˋcompteur2` dans ton code."
         courseF_bee_fwp_challenge2_c: |-
           **Voici à quoi ta fonction devrait ressembler :**
 
@@ -3697,6 +3770,11 @@ fr-FR:
           </block>
           </next>
           </block></xml>
+      courseA_collector_loops_challenge2:
+        courseA_collector_loops_challenge2_b: Tu n’as besoin que d’1 bloc pour résoudre
+          ce problème.
+        courseA_collector_loops_challenge2_a: Tu peux retourner sur le chemin une
+          deuxième fois avant de te déplacer vers le Sud.
       courseA_collector_loops_challenge2kp:
         courseA_collector_loops_challenge2kp_b: Essaie ce chemin pour trouver une
           solution.
@@ -3712,6 +3790,9 @@ fr-FR:
           solution.
         courseA_collector_loops_challenge2kp_a: Peux-tu utiliser des boucles pour
           résoudre ce casse-tête ?
+      courseA_collector_preLoops5:
+        courseA_collector_preLoops5_a: Tu devras aller dans deux directions pour obtenir
+          ne serait-ce qu’une gemme !
       courseA_collector_preLoops7:
         courseA_collector_loops2_b: |-
           Après t’être déplacé sur une case avec un diamant, utilise ce bloc pour le ramasser.
@@ -9512,6 +9593,17 @@ fr-FR:
       courseD_bee_conditionals5_2018:
         courseD_bee_conditionals5_hintVid1: Besoin d'aide pour démarrer? Regarde la
           vidéo!
+        courseD_bee_conditionals5_a: Pense à chaque côté du rectangle comme un chemin.
+          Configure une boucle imbriquée avec un bloc `répète` à l 'extérieur et une
+          boucle `tant que chemin devant` à l'intérieur. Sur combien de chemins l'abeille
+          a-t-elle besoin de bourdonner si elle a besoin de bourdonner sur chaque
+          côté avec une fleur?
+        courseD_bee_conditionals5_c: Il y a 3 côtés du rectangle avec une fleur, donc
+          le code a besoin de `Répéter 3 fois`. Dans chaque répétition, l'abeille
+          devra continuer sur le chemin `tant que chemin devant`. Pour continuer vers
+          le bas, l'abeille devra `avancer`. Tant que sur le chemin, l 'abeille doit
+          vérifier s'il y a une fleur. `si à la fleur`, l'abeille doit `obtenir du
+          nectar`.
         courseD_bee_conditionals5_hintVid2: Regarde cette vidéo pour t'aider à résoudre
           ce puzzle.
       courseD_bee_conditionals6:
@@ -10286,6 +10378,9 @@ fr-FR:
       courseD_farmer_condLoops7_2018:
         courseD_farmer_condLoops7_b: Essaie d’utiliser ˋquand chemin devant\` pour
           que le moissonneur continue d’avancer le bon nombre de fois.
+      courseD_farmer_condLoops7_2019:
+        courseD_farmer_condLoops7_b: Essaie d’utiliser ˋquand chemin devant\` pour
+          que le moissonneur continue d’avancer le bon nombre de fois.
       courseD_farmer_while1:
         courseD_farmer_while1_a: Tu auras besoin d'avancer 4 fois pour aller jusqu'au
           tas. Peux-tu utiliser une boucle `répéter` pour ça ?
@@ -10551,13 +10646,23 @@ fr-FR:
 
           <title name="TIMES" config="3-10">5</title>
           </block></xml>
+      courseD_iceage_loops3_2019:
+        courseB_iceage_loops3_a: |-
+          Utilise ce nouveau bloc !
+           <xml><block type="controls_repeat_dropdown">
+              <title name="TIMES" config="2-10">5</title>
+            </block></xml>
       courseD_iceage_loops4:
         courseD_iceage_loops4_a: N’aie pas peur d’exécuter ton code pour voir ce qui
           se passe !
+        courseD_iceage_loops4_b: Essaie d’écrire les étapes que Scrat devrait suivre
+          pour arriver au gland. Vois-tu un motif ?
         courseD_iceage_loops4_c: Voici le chemin que Scrat devrait emprunter.
       courseD_iceage_loops4_2019:
         courseD_iceage_loops4_a: N’aie pas peur d’exécuter ton code pour voir ce qui
           se passe !
+        courseD_iceage_loops4_b: Essaie d’écrire les étapes que Scrat devrait suivre
+          pour arriver au gland. Vois-tu un motif ?
         courseD_iceage_loops4_c: Voici le chemin que Scrat devrait emprunter.
       courseD_iceage_loops6:
         courseD_iceage_loops6_b: Tu n’as besoin d’ajouter qu’**une** boucle !
@@ -10599,6 +10704,13 @@ fr-FR:
           processus !
         courseD_iceage_loops9_b: Ton code final devrait avoir **4** boucles.
         courseD_iceage_loops9_c: Scrat devrait suivre ce chemin pour obtenir le gland.
+      courseD_maze_intro4_2019:
+        courseC_maze_programming4_a: Tu peux tourner à gauche ou à droite du point
+          de vue de l'oiseau. Si tu te diriges à droite, tourner à droite te fera
+          aller vers le bas.
+        courseC_maze_programming4_b: Pour suive le chemin, avance et tourne dans un
+          sens, puis avance à nouveau et tourne dans le sens opposé. Avance une fois
+          de plus pour atteindre le cochon.
       courseD_maze_intro5a_2019:
         courseC_maze_programming5_a: Essaie d'utiliser le bouton "Etape" pour exécuter
           ton code ligne par ligne. Peux-tu deviner ce que tu dois faire ensuite ?
@@ -10766,6 +10878,10 @@ fr-FR:
         courseC_maze_programming4_a: Tu peux tourner à gauche ou à droite du point
           de vue de l'oiseau. Si tu te diriges à droite, tourner à droite te fera
           aller vers le bas.
+        courseC_maze_programming4_b: Pour suive le chemin, avance et tourne dans un
+          sens, puis avance à nouveau et tourne dans le sens opposé. Avance une fois
+          de plus pour atteindre le cochon.
+      courseD_maze_ramp4_2019:
         courseC_maze_programming4_b: Pour suive le chemin, avance et tourne dans un
           sens, puis avance à nouveau et tourne dans le sens opposé. Avance une fois
           de plus pour atteindre le cochon.
@@ -11114,6 +11230,9 @@ fr-FR:
         courseC_maze_programming3_b: Souviens toi que tourner à droite et à gauche,
           c'est du point de vue de Scrat.
       courseD_scrat_ramp4:
+        courseC_maze_programming4_b: Pour suive le chemin, avance et tourne dans un
+          sens, puis avance à nouveau et tourne dans le sens opposé. Avance une fois
+          de plus pour atteindre le cochon.
         courseC_maze_programming4_c: N'aie pas peur de faire des erreurs! Essaie d'ajouter
           des blocs et d'exécuter ton code pour voie ce qui va se passer, même si
           tu penses que tu n'as pas résolu encore le puzzle.
@@ -12522,20 +12641,47 @@ fr-FR:
       courseF_artist_variables4:
         courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_artist_variables_challenge2:
+        courseF_artist_variables_challenge2_a: 'Les variables sont utiles car tu peux
+          les modifier à chaque fois avec une boucle. '
+        courseF_artist_variables_challenge2_c: Utiliser une variable pour ˋcôtés`et
+          une pour ˋlongueur` rend le code plus propre car tu peux boucler le même
+          code plusieurs fois au lieu de créer une nouvelle copie pour chaque ensemble
+          de nombres.
         courseF_artist_variables_challenge2_d: |-
           **Solution :**
 
           ![Solution](https://images.code.org/311b4a946cb8f3b4144b5075be6460a3-image-1469641878222.png)
       courseF_artist_variables_challenge2_2018:
+        courseF_artist_variables_challenge2_a: 'Les variables sont utiles car tu peux
+          les modifier à chaque fois avec une boucle. '
+        courseF_artist_variables_challenge2_c: Utiliser une variable pour ˋcôtés`et
+          une pour ˋlongueur` rend le code plus propre car tu peux boucler le même
+          code plusieurs fois au lieu de créer une nouvelle copie pour chaque ensemble
+          de nombres.
         courseF_artist_variables_challenge2_d: |-
           **Solution :**
 
           ![Solution](https://images.code.org/311b4a946cb8f3b4144b5075be6460a3-image-1469641878222.png)
       courseF_artist_variables_challenge2_2019:
+        courseF_artist_variables_challenge2_a: 'Les variables sont utiles car tu peux
+          les modifier à chaque fois avec une boucle. '
+        courseF_artist_variables_challenge2_c: Utiliser une variable pour ˋcôtés`et
+          une pour ˋlongueur` rend le code plus propre car tu peux boucler le même
+          code plusieurs fois au lieu de créer une nouvelle copie pour chaque ensemble
+          de nombres.
         courseF_artist_variables_challenge2_d: |-
           **Solution :**
 
           ![Solution](https://images.code.org/311b4a946cb8f3b4144b5075be6460a3-image-1469641878222.png)
+      courseF_bee_conditionals5:
+        courseF_bee_conditionals5_a: Pense à chaque côté du rectangle comme un chemin.
+          Configure une boucle imbriquée avec un bloc `répète` à l 'extérieur et une
+          boucle `tant que chemin devant` à l'intérieur. Sur combien de chemins l'abeille
+          a-t-elle besoin de bourdonner si elle a besoin de bourdonner sur chaque
+          côté avec une fleur?
+        courseF_bee_conditionals5_b: A l'intérieur du bloc `tant que chemin devant`,
+          tu devras avancer et vérifier qu'il ya une fleur. Comment tu vérifies qu'il
+          y a une fleur ? Qu'est ce que tu fais s'il y a une fleur?
       courseF_bee_conditionals8:
         courseF_bee_conditionals8_a: "**Souviens-toi :** Ce casse-tête change à chaque
           fois qu’il est exécuté. \n\nTu devras utiliser un bloc conditionnel (ˋsiˋ

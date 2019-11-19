@@ -38,6 +38,13 @@ es-MX:
       2-3 Artist Debugging 10: "El panel de dirección en mi dispositivo de juego es
         demasiado estrecho. \n\n¿Puedes aumentar el ancho en 10 pixeles? \n\nIntenta
         ejecutar el código primero para ver cuál es el error."
+      2-3 Artist Debugging 2: 'El código para los tres bigotes que ves es incorrecto.
+        Sugerencia: cada bigote tiene 75 píxeles de largo. Repara este código para
+        dibujar los bigotes.'
+      2-3 Artist Debugging 8: Mi molinillo de viento no está terminado. ¿Cuántas veces
+        necesito repetir para terminarlo?
+      2-3 Artist Debugging 9: 'El código de este tallo es incorrecto. Sugerencia:
+        El ángulo está fuera por 60 grados'
       2-3 Artist Debugging Assessment 1: "**Evaluación:** \n¿Por qué este cuadrado
         es 75 pixeles más corto en cada lado? \n\n¿Dónde está el error en el código?"
       2-3 Artist Free Play: "¡Juego libre! Dibuja lo que quieras."
@@ -54,6 +61,15 @@ es-MX:
       2-3 Artist Functions 11.5: "Esta es la misma función `dibujar un hexágono`.
         \n\n¿Qué pasa si creas un bucle 6 veces en el programa principal y giras 60
         grados cada vez que aplicas ese bucle?"
+      2-3 Artist Functions 12: 'Las funciones son geniales para dibujar las cosas
+        complejas varias veces. Puedes utilizar la función "dibujar una flor" para
+        llenar el resto de la caja del jardinero. (Pista: las plantas están separadas
+        por una longitud de 100 píxeles)  '
+      2-3 Artist Functions 2: "¡Las funciones te permiten definir nuevos bloques!\\\r\n\\\r\nHemos
+        trasladado los bloques necesarios para dibujar un cuadrado a la función llamada
+        'dibujar cuadrado'. Esta vez usa la función 'dibujar cuadrado' para crear
+        los anteojos.\\\r\n\\_\\_\\_\\\r\n\\\r\nLos cuadrados están separados por
+        75 pixeles."
       2-3 Artist Functions 3: Edita la función para dibujar un cuadrado con una longitud
         lateral de 115 y dibuja los lentes más grandes. Los cuadrados están ahora
         separados 45 píxeles.
@@ -72,7 +88,9 @@ es-MX:
         ¡Es hora de crear algo elegante!
 
         Vuelve a crear el código del último desafío pero, esta vez, agrega un giro a la izquierda de 30 grados dentro del bucle. Ahora, repítelo 24 veces en lugar de 8.
-      2-3 Artist Loops New 12: 'Dibuja un diamante con lados de 100 píxeles. '
+      2-3 Artist Loops New 12: Dibuja un diamante con lados de 100 píxeles.
+      2-3 Artist Loops New 13: "Vamos a comenzar con\n algo de código para hacer un
+        diamante \\\r\n\\\r el código gris para crear \nun patrón divertido!"
       2-3 Artist Loops New 14: "Juega con el código para el diamante y mira qué otros
         patrones puedes crear. \n\nIntenta cambiar cuántos grados giras y cuántas
         veces usas el bucle."
@@ -103,13 +121,24 @@ es-MX:
         veces para dibujar este patrón.\\\r\n\\\r\nDivide el número de grados \nde
         un círculo(360) entre el número de figuras que debes dibujar (12) para saber
         cuantos grados debes girar antes de repetir cada triangulo."
+      2-3 Artist Nested Loops 5: Llenar en las ventanas del edificio con un bucle
+        anidado. Las ventanas son 20 píxeles largos y 20 píxeles aparte.
       2-3 Artist Nested Loops 6: "Este dinosaurio tiene 4 picos a lo largo de su cola.\\\r\n\\\r\nCada
         pico tiene 30 pixels de largo. \\\r\n\\\r\nHaz un enlace que repita el triangulo
         8 veces, pero asegúrate de saltar hacia delante entre cada repetición!"
+      2-3 Artist Nested Loops 7: Bucle este triángulo 10 veces para dibujar el sol,
+        necesitarás moverte y girar después de cada triángulo. Puedes averiguar cuánto
+        girar dividiendo la cantidad de grados en un círculo por la cantidad de figuras
+        que lo componen.
+      2-3 Artist Nested Loops 8: Ahora vamos a agregar un poco de pasto a nuestra
+        imagen. Cada manojo de pasto esta separado 50 pixeles.
       2-3 Artist Nested Loops Free Play: juego libre, dibujar algo fascinante con
         bucles anidados.
       2-3 Bee Conditionals 11: "¡Me pregunto qué hay allí afuera!\n\nAyúdame a volar
         por el patio y recoger el néctar solo de aquellas flores que tengan. "
+      2-3 Bee Conditionals 13: 'Recoge néctar y haz miel. Pista: ¿Qué ocurre si usas
+        el condicional "Si néctar" en una flor roja? ¿Puedes completar esto con un
+        bucle (loop)?'
       2-3 Bee Conditionals 14: "¡Ahora hagamos todo junto!\n\nUsa lo que aprendiste
         para ayudarme a recoger el néctar solo de aquellas flores que tengan, con
         el menor número de bloques posible. \n\nNo olvides hacer miel al final."
@@ -138,6 +167,8 @@ es-MX:
       2-3 Bee Debugging 5: "¡Esa flor se ve sabrosa! \n\nCorrige los errores para
         recoger todo el néctar.\\\nPuedes utilizar la función de correr o de dar un
         paso."
+      2-3 Bee Debugging 9: Estos bloques realmente me molestan. Corregir el (los)
+        error(es) para recoger todo el néctar y hacer todo de la miel.
       2-3 Bee Debugging Assessment 1: |-
         **Evaluación:** ¡es el momento de mostrar lo que sabes!
 
@@ -151,6 +182,9 @@ es-MX:
       2-3 Bee Functions 2: Las funciones son bloques de código que realizan una tarea.
         Utilice la función "get 5" para obtener 5 néctares a cada momento. Asegúrese
         de utilizar un bucle para obtener un recuento ideal de bloque, también.
+      2-3 Bee Functions 4: La función "mover y obtener néctar" realizada por la abeja,
+        recoge néctar, y entonces devuelve a la abeja al principio. Usa la función
+        para recoger todo el néctar.
       2-3 Bee Functions Assessment 1: "**Evaluación:** usa la función dada para recoger
         el néctar de cada flor."
       2-3 Bee Functions Assessment 2: "**Evaluación:** crea una función para girar,
@@ -166,6 +200,8 @@ es-MX:
         ¡La abeja está muy ocupada!
 
         Ayuda a la abeja a recoger todo el néctar y hacer toda la miel con el menor número de bloques posible.
+      2-3 Bee Loops 4A: "¿Qué pasa si haces un ciclo con esta secuencia 3 veces? ¡No
+        olvides hacer la miel al final!"
       2-3 Bee Loops 5: |-
         La forma de este camino es diferente a la de los demás.
 
@@ -176,6 +212,10 @@ es-MX:
         Ayuda a la abeja a visitar cada una de ellas.
 
         ¿Puedes encontrar cómo hacerlo con menos de 7 bloques?
+      2-3 Bee Loops 8: Estas flores moradas tienen una cantidad desconocida de néctar.
+        Utiliza el ciclo "while nectar" para recolectar todo el néctar. Este ciclo
+        va a ejecutarse mientras la condición sea verdadera, en este caso Néctar >
+        0.
       2-3 Bee Loops Assessment 1: "**Evaluación:** usa el bucle `mientras` para recoger
         todo el néctar de esas flores."
       2-3 Maze 1: "¿Puedes ayudarme a atrapar a este cerdo travieso?\n\nApila un par
@@ -186,6 +226,7 @@ es-MX:
         ¿Puedes crear un bucle que utilice un solo bloque `avanzar` dentro de un bloque `repetir` para llegar hasta el cerdo?
       2-3 Maze 13: "¡Llévame hasta el cerdo! Puedes usar un solo bloque `avanzar`
         esta vez"
+      2-3 Maze 15: Usa dos ciclos para hacer que el cerdo use menos bloques.
       2-3 Maze Loops 18: |-
         ¡Llévame hasta el girasol con la menor cantidad de bloques posible!
 
@@ -200,6 +241,7 @@ es-MX:
         de largo).
       4-5 Artist 11: "Completa las líneas verdes. \n\nLas líneas tienen 300 pixeles
         de largo y están separadas por 15 pixeles."
+      4-5 Artist 2: "¿Puedes crear un bucle de código para completar el cuadrado?"
       4-5 Artist 3: "Esta cama rectangular de flores tiene un perímetro de 600. \nEl
         lado más largo tiene una longitud de 200. \n\nDibuja un rectángulo con el
         menor número de bloques posible."
@@ -232,9 +274,19 @@ es-MX:
         más externo para asegurarte de que el artista no dibuje fuera de la pantalla."
       4-5 Artist Patterns 11: "¿Cuántas veces necesitas repetir esto para dibujar
         un medio círculo?"
+      4-5 Artist Patterns 12: Si copia ese bucle y gira a la izquierda en lugar de
+        la derecha, ¿qué pasa? ¿Puedes repetir eso para dibujar esta ola?
+      4-5 Artist Patterns 13: Ahora repitamos todo eso cuatro veces para crear este
+        cuadro. Cuidado con las esquinas - ¡simplemente no puedes girar 90 grados!
+        Si se repite 60 veces un giro de 3 grados hace un semicírculo, ¿cuál de estos
+        bloques de código hará un cuarto de círculo para las esquinas?
       4-5 Artist Patterns 2: "Cuando pones tu bucle cuadrado dentro de otro bucle,
         lo llamamos bucle anidado. \n\n¿Qué necesitas agregar a tu bucle externo para
         asegurarte de que los 15 cuadrados se alineen uno al lado del otro?"
+      4-5 Artist Patterns 3: Ahora vamos a un nivel más profundo. Hemos anidado todo
+        el bloque de código en otro bucle, pero tienes que poner al artista en su
+        lugar para dibujar la línea siguiente. ¿Cuál de estos bloques de código puede
+        usted colocar al final del bucle exterior para dibujar la red entera?
       4-5 Artist Patterns 4: "Este diamante tiene lados de 50 pixeles y ángulos de
         120 y 60 grados. \n\nUtiliza un bucle para dibujarlo."
       4-5 Artist Patterns 5: "Repite este código para crear una fila de 6 diamantes.
@@ -246,8 +298,15 @@ es-MX:
         el patrón sea más complejo. Ten en cuenta que los diamantes se superponen.
         Intenta cambiar el primer "saltar hacia atrás" de 100 a 50 (la mitad de distancia).
         ¿Qué tan lejos llegará el artista en el segundo "saltar hacia atrás"?
+      4-5 Artist Patterns 8: Utilice un bucle para dibujar este hexágono con 40 píxeles
+        y lados y ángulos de 60 grados.
+      4-5 Artist Patterns 9: Ahora repite el código 3 veces para dibujar toda la fila.
+        Sugerencia, cada hexágono es de 80 píxeles de ancho desde los puntos más lejanos
+        de izquierda a derecha.
       4-5 Artist Patterns 9.5: "Ahora repitamos este código para dibujar dos filas
         de hexágonos. \n\nObserva cómo la segunda fila se desplaza hacia la derecha."
+      4-5 Artist Patterns Free Play: Juego libre - ¡prueba tu destreza en la fabricación
+        de un patrón propio!
       4-5 Bee Conditionals 1: |-
         ¡Esta nube bloquea mi visión!
 
@@ -258,10 +317,16 @@ es-MX:
 
         Usa el bloque `si/si no` para recoger el néctar solo si hay una flor.\
         De lo contrario, haz miel (porque hay un panal).
+      4-5 Bee Conditionals 5: Puede haber una flor o un panal bajo esas nubes. Usa
+        el bloque if/else para recoger néctar si hay una flor, si no haz miel (porque
+        hay un panal de abejas).
       4-5 Bee Conditionals 6: Esta flor púrpura puede tener 3, 2 o 1 néctar. Aquí
         un bloque if-else se combina con otro bloque if-else para crear un bloque
         if,else-if, else. Completa la solución para recoger la cantidad desconocida
         de néctar.
+      4-5 Bee Conditionals 7: Recuerda que las flores púrpura pueden tener 1, 2 o
+        3 néctares. Completa la función "revisar flor púrpura" y úsala para recoger
+        todo el néctar de las flores.
       4-5 Bee Conditionals 8: "Escribe la función para `comprobar flor hacer miel`.
         \n\nTu función debe comprobar si la flor púrpura tiene 3, 2 o 1 néctares y
         recoger todo el néctar. Luego, debe avanzar y hacer miel."
@@ -269,6 +334,8 @@ es-MX:
         con un néctar o un panal que necesita una miel.\n\nCompleta la función `recoger
         néctar o hacer miel`, y llámala para recoger todo el néctar o la miel. "
       4-5 Bee Debugging 1: "Estos bloques me molestan. \n\n¿Puedes corregirlos?"
+      4-5 Bee Debugging 6: La flor púrpura contiene una cantidad desconocida de néctar.
+        Arregla los bloques, para obtener todo el néctar de la flor.
       4-5 Bee Debugging Assessment 1: "**Evaluación:** corrige el código."
       4-5 Bee Nested Loops 2: "Recoge todo el néctar de cada flor. \n\nUsa un bucle
         anidado. "
@@ -286,14 +353,26 @@ es-MX:
         comandos posible."
       4-5 Maze Assessment 1: "**Evaluación:** llega hasta el girasol con la menor
         cantidad de bloques posible."
+      4-5 Maze Conditionals 1: Utiliza el bloque repetir hasta para llevar al zombie
+        hasta el girasol.
       4-5 Maze Conditionals 10: "¿Puedes añadir solo 3 bloques para ayudar al zombie
         a resolver un laberinto más complejo? \n\nSi lo haces bien, ¡podrá recorrer
         cualquier camino con curvas sin importar la longitud!"
+      4-5 Maze Conditionals 2: Utiliza el bloque repetir hasta para llevar al zombie
+        hasta el girasol.
       4-5 Maze Conditionals 3: 'Utiliza el bloque `si` para ayudarme a decidir cuándo
         girar. '
+      4-5 Maze Conditionals 4: Ok, esto es como con el rompecabezas pasado, pero recuerda
+        como utilizaste el bloque "if" y el bloque "repeat" juntos.
+      4-5 Maze Conditionals 6: ¡Yo quiero girasol! Utiliza in bloque "if" para llevarme
+        allá, con el menor número de bloques.
+      4-5 Maze Conditionals 7: Ok, hagámoslo de nuevo para practicar - esto no es
+        muy diferente, pero hay que estar pendiente de los ¡chompers!
       4-5 Maze Conditionals 8: "El bloque `si/si no` comprueba una condición, y luego
         realiza una cosa o la otra. \n\nUsa este nuevo bloque para llevarme hasta
         al girasol."
+      4-5 Maze Conditionals 9: Una práctica más con el bloque "if-else", ¿Puedes hacerlo
+        correctamente en el primer intento?
       4-5 Maze Conditionals Assessment 1: "**Evaluación:** utiliza un bloque `repetir
         hasta` y un bloque `si/si no` para llevarme hasta el girasol con la menor
         cantidad de bloques posible."
@@ -304,6 +383,8 @@ es-MX:
       4-5 Nested Loops 12: "¿Puedes dibujar estos 36 triángulos con un bucle anidado?"
       4-5 Nested Loops 2: "Ahora anida este bucle dentro de otro para dibujar 10 triángulos.
         \nA esta acción se la llama bucle \"anidado\".  "
+      4-5 Nested Loops 3: Crea un sol anidando el código de arranque en otro bucle.
+        Esto se llama un bucle anidado.
       4-5 Nested Loops 5: haz un bucle con el código dado para crear un molino de
         viento.
       4-5 Nested Loops 6: "¿Puedes repetir el código del triángulo para dibujar un
@@ -313,6 +394,13 @@ es-MX:
       4-5 Nested Loops 9: "¡Dibuja los dientes en la boca de cocodrilo!"
       4-5 Nested Loops Assessment 1: "**Evaluación:** usa un bucle anidado para completar
         el diseño."
+      4-5 While Loops 1: Muéveme al agujero y rellena con dos palas de tierra, usando
+        el bloque de "relleno".
+      4-5 While Loops 2: Muéveme a la pila de tierra y remueve con 5 palos, usando
+        el bloque 'remover'.
+      4-5 While Loops 3: 'Muéveme a la pila y remueve todo, después muéveme hacia
+        el agujero y llénalo completamente. Sugerencia: Utiliza tan pocos bloques
+        como sea posible.'
       Alien Defender: "**Idea para un proyecto**: ¡crea un juego de defensa en el
         Laboratorio de juegos!"
       AppLab Intro 7 - Change Screen Color: "<div style=\"float:right\">\n\\t<img
@@ -454,10 +542,93 @@ es-MX:
         -   Usa todos los eventos del panel relacionados con los botones (arriba, abajo) para reproducir un sonido o canción específico con cada evento.
         -   ¿Hay algún otro evento que puedes usar para reproducir aún más sonidos/canciones?
       CSD Problem Solving Process Video: |-
-        ## Preguntas a considerar
+        ## Preguntas a tener en cuenta
 
-        -   ¿Cómo siguió el proceso de resolución de problemas en la última lección?
-        -   ¿Cómo podría utilizar este proceso en un problema en su vida cotidiana?
+        -   ¿Cómo seguiste el proceso de resolución de problemas en la última lección?
+        -   ¿Cómo podrías utilizar este proceso en un problema cotidiano?
+      CSD U1 - PixFilter 1x1 intro: |-
+        # Colores de 3 bits
+
+        Cada pixel es un cuadrado en una pantalla que emite luz. Cada pixel puede tener un cierto número de bits asignados, y los bits por pixel determinan los colores que se pueden representar.
+
+        En esta herramienta estamos usando 3 bits para definir el único pixel negro grande. El primer bit afecta el tono rojo. El segundo bit afecta al tono verde. El tercer bit afecta al tono azul.
+
+        # Haz esto
+
+        -   Haz clic en el botón "Ejecutar" para iniciar el widget
+        -   Haz clic en las bombillas para encender o apagar cada color y mira qué ocurre con el pixel
+        -   Mira cuántos colores diferentes puedes crear con solo tres bits
+        -   Escribe los binarios asociados con cada color que creaste
+      CSD U1 - PixFilter Filter Intro: |-
+        # Filtrar pixeles
+
+        Si alguna vez has usado Instagram, entonces conoces los filtros para las imágenes. Estos filtros leen cada pixel, lo procesan de alguna manera y lo devuelven filtrado. En esta herramienta, comenzaremos por filtrar un solo pixel antes de pasar a una imagen completa.
+
+        # Haz esto
+
+        -   Intenta cambiar los menús desplegables de colores en la sección Filtrar
+        -   Haz clic en la fila superior de bombillas en la sección Diagrama para ver cómo el filtro convierte la entrada (bombillas superiores) en la salida (bombillas inferiores)
+        -   Mira cómo los números en la sección Binario reflejan los cambios en los colores
+        -   En función de cómo cambian los bits, ¿puedes formular qué está haciendo reemplazar? Habla con tu compañero para ver si pueden resolverlo.
+        -   Completa la tabla del Nivel 2 en tu Guía de Actividades
+      CSD U1 - PixFilter Filter Revisit: |-
+        # Combinar filtros
+
+        Ahora que has jugado con el filtro de un único canal de color, es hora de ver qué sucede si filtramos más de un color.
+
+        # Haz esto
+
+        -   Crea un filtro que cambie el valor de más de un canal de color a través de los menús desplegables de colores en la sección Filtrar
+        -   Haz clic en la fila superior de bombillas en la sección Diagrama para ver cómo el filtro convierte la entrada (bombillas superiores) en la salida (bombillas inferiores)
+        -   Mira cómo los números en la sección Binario reflejan los cambios en los colores
+        -   Completa la tabla del Nivel 4 en tu Guía de Actividades
+      CSD U1 - PixFilter FreePlay: |-
+        # Juego libre
+
+        Haz lo que quieras, crea algo genial
+      CSD U1 - PixFilter Mario: |-
+        # Combinar filtros
+
+        A veces necesitarás filtrar más de un pixel para obtener el cambio de color que quieres.
+
+        # Haz esto
+
+        Mira a Mario, se ve bastante bien con su sombrero rojo y su overol. Tu trabajo es configurar el filtro para que se parezca a Luigi, con un sombrero verde y un overol.
+
+        -   Primero, determina qué bits necesitas modificar para lograr el cambio
+        -   Una vez que lo hayas determinado, configura el menú desplegable de filtros de manera adecuada
+        -   Una vez que el filtro esté en funcionamiento, intenta encontrar otros filtros que cambien _únicamente_ su sombrero y su overol. ¿Cuántos colores de ropa diferentes puedes proponer?
+
+        _¿Cuántos intentos necesitaste para encontrar el filtro correcto?_
+      CSD U1 - PixFilter Mushroom: |-
+        # Filtrar imágenes
+
+        Ahora que hemos visto cómo se puede filtrar un solo pixel para cambiar su color, intentemos aplicar un filtro a una imagen compuesta por varios pixeles. El filtro que crees se aplicará a cada pixel en la imagen, y aún tiene las bombillas disponibles para experimentar cómo funcionará tu filtro con colores individuales.
+
+        # Haz esto
+
+        Esta es una foto de un hongo rojo; intenta convertirlo en un hongo amarillo.
+
+        -   Primero, determina qué bit debes cambiar para que pase de rojo a amarillo.
+        -   Una vez que lo hayas determinado, usa los menús desplegables de filtros para que todas las áreas rojas se vuelvan amarillas.
+        -   Una vez que el filtro esté en funcionamiento y el rojo se vuelva amarillo, mira si puedes proponer filtros para otros colores.
+
+        _¿Cuántos intentos necesitaste para encontrar el filtro correcto?_
+      CSD U1 - PixFilter UnFilter: |-
+        # Deshacer filtros
+
+        Los filtros de bits también se pueden utilizar para _deshacer_ filtros. Esta es una imagen de un pájaro a la que se le aplicaron filtros que cambiaron sus colores originales. ¿Puedes volverla a la normalidad?
+
+        # Haz esto
+
+        <img src="https://images.code.org/c15636bda16e8792c59ac955332e37a5-image-1471372091393.22.56.png" style="float:right; width: 200px"/>
+        Así es como debe verse nuestro pájaro. Usa el filtro para volverlo a la normalidad.
+
+        -   Decide qué colores (y qué bits) necesitas cambiar. Es posible que tengas que escribir tus ideas en un papel.
+        -   Una vez que sepas qué bits deben cambiarse, configura el menú desplegable de filtros de forma adecuada para probar tu respuesta
+        -   Después de haber corregido la imagen, anota tu proceso y tu filtro final en la sección del Nivel 6 de tu Guía de Actividades
+
+        _¿Cuántos intentos necesitaste para encontrar el filtro correcto?_
       CSD U2 CSS explore CSS: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
 
@@ -1526,6 +1697,47 @@ es-MX:
         por ti una página web de Perro vs. Gato. La imagen del perro ya se ha agregado
         a la página web a continuación. Usa una etiqueta de imagen para agregar la
         imagen `gato.jpeg` a la página debajo con el título 'gato'."
+      CSD U2 Image Tag 1_2018: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>¿Cómo puedo agregar imágenes?</strong>
+        </summary>
+
+        La etiqueta `<img>` te permite mostrar imágenes en tu página web. <br><br>
+
+        Por ejemplo:
+
+        <pre>&lt;img src="perro.png" alt="perro saltando"/&gt;</pre><br><br>
+
+        Para que el navegador sepa qué archivo usar, se agrega información adicional, llamada **atributo**, a la etiqueta \<img> dentro de los corchetes. El atributo `src` hace referencia a **s**ou**rc**e y describe el nombre de la imagen. Los nombres de los archivos de imágenes tienen extensiones que le dicen a la computadora con qué tipo de imagen está trabajando. Las extensiones más comunes son .jpg, .jpeg, .png. <br><br>
+
+        Además del atributo src, los elementos de imagen incluyen el atributo `alt` que describe la imagen. Esto es importante en caso de que la imagen no se cargue o para las personas que tienen problemas con la vista. <br><br>
+
+        Una etiqueta `<img>` es un ejemplo de una **etiqueta que se cierra sola** porque comienza y se cierra en una misma etiqueta. Para marcar esto, ponemos el `/`, que normalmente va en la etiqueta de cierre al final de la etiqueta de imagen.
+
+        </details>
+        <details>
+        <summary><strong>¿Por qué la etiqueta de imagen no tiene una etiqueta de cierre?</strong></summary>
+        La etiqueta de imagen no necesita una etiqueta de cierre porque no incluye contenido de texto que deba estar encerrado en etiquetas. El contenido que se muestra en la pantalla se especifica a través de los atributos de las etiquetas.
+
+        </details>
+        <details>
+        <summary>
+        <strong>¿Qué es un atributo?</strong>
+        </summary>
+
+        Los atributos son información adicional que se incluye en una etiqueta. Los atributos tienen nombres y valores. El nombre indica qué tipo de información se proporciona y, luego, el valor proporciona la información específica para esa etiqueta.
+
+        Por ejemplo, las etiquetas \<img> tienen dos atributos, src y alt. El primero especifica el nombre de archivo de la imagen y, el segundo, le dice al navegador, en texto legible, de qué se trata la imagen.
+
+        </details>
+        </div>
+
+        # Imágenes
+
+        Hemos preparado por ti una página web de Perro vs. Gato. La imagen del perro ya se ha agregado a la página web a continuación. Usa una etiqueta de imagen para agregar la imagen `gato.jpeg` a la página debajo con el título 'gato'.
       CSD U2 Image Tag 2: "<div style=\"float: right; height: 250px; width: 40%; overflow-y:
         scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary><strong>¿Cómo
         puedo agregar imágenes?</strong></summary>\n\nLa etiqueta `<img>` te permite
@@ -3180,6 +3392,24 @@ es-MX:
 
         -   Crea una nueva página HTML y renómbrala. (Mira <a href="/s/csd2/stage/6/puzzle/8" target="_new">Lección 6 Nivel 8</a> si has olvidado cómo hacerlo)
         -   Repite este proceso para cualquier otra página que quieras agregar.
+      CSD U2 create page_2018: |-
+        # Crea tu nueva página y dale un nombre
+
+        Antes de que empieces a programar, debes asegurarte de que tienes todas las páginas que necesitas en tu proyecto.
+
+        # Hacer esto
+
+        -   Crea una nueva página HTML y renómbrala. (Mira <a href="/s/csd2/stage/6/puzzle/8" target="_new">Lección 6 Nivel 8</a> si has olvidado cómo hacerlo)
+        -   Repite este proceso para cualquier otra página que quieras agregar.
+      CSD U2 create page_2019: |-
+        # Crea tu nueva página y dale un nombre
+
+        Antes de que empieces a programar, debes asegurarte de que tienes todas las páginas que necesitas en tu proyecto.
+
+        # Hacer esto
+
+        -   Crea una nueva página HTML y renómbrala. (Mira <a href="/s/csd2/stage/6/puzzle/8" target="_new">Lección 6 Nivel 8</a> si has olvidado cómo hacerlo)
+        -   Repite este proceso para cualquier otra página que quieras agregar.
       CSD U2 header footer: |-
         # Barra de navegación y pie de página
 
@@ -3426,6 +3656,35 @@ es-MX:
         -   Mira la propiedad `float` dentro de tu conjunto de reglas `img`
         -   Charla con tu compañero sobre lo que crees que hace.
         -   Cambia el valor de `left` a `right`.
+      CSD U2 layout style float_2018: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+
+        <details>
+
+        <summary><strong>¿Cómo funciona el código?</strong></summary>
+
+        Este es el código que hace que la imagen flote del lado izquierdo de la página:
+
+        <pre>img {
+          float: left;
+        }</pre>
+
+        -   `img` es el _selector_.  Especifica qué elementos tendrán que seguir las reglas contenidas en las llaves, en este caso, las imágenes.
+        -   `float: left;` es la regla que hace que la imagen flote a la izquierda.
+            </details>
+            <details>
+            <summary><strong>¿Qué hace la propiedad <code>float</code>?</strong></summary>
+
+        La propiedad `float` hace que un elemento "flote", es decir, todos los elementos que vienen después de él flotan alrededor de él. Si el valor `float` es `left`, el elemento flotará a la izquierda, y los elementos que vienen después de él se mostrarán a su derecha. Si el valor `float` es `right`, el elemento flotará a la derecha, y los elementos que vienen después de él se mostrarán a su izquierda. Puedes leer más sobre esta propiedad en <a href="http://www.w3schools.com/cssref/pr_class_float.asp">W3Schools - Propiedad de flotación de CSS</a>
+
+        </details>
+        </div>
+
+        # Flotación
+
+        -   Mira la propiedad `float` dentro de tu conjunto de reglas `img`
+        -   Charla con tu compañero sobre lo que crees que hace.
+        -   Cambia el valor de `left` a `right`.
       CSD U2 layout style freeplay: |-
         # Sitio web personal
 
@@ -3491,6 +3750,25 @@ es-MX:
         Sin embargo, ¡los alentamos a usar más de tres! Explora otras propiedades de CSS y agrégalas a tu página.
       CSD U2 layout style margin: "<div style=\"float: right; height: 250px; width:
         40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary><strong>¿Cómo
+        funciona el código?</strong></summary>\n\nEste es el código que coloca espacio
+        adicional alrededor de las imágenes:\n\n<pre>img {\n\tmargin: 10px;\n}</pre>\n\n-
+        \  `img` es el _selector_. Especifica qué elementos tendrán que seguir las
+        reglas contenidas en las llaves, en este caso, las imágenes.\n-   `margin:
+        10px;` es la regla que coloca 10 pixeles de espacio alrededor de la imagen.\n
+        \   </details>\n    <details>\n    <summary><strong>¿Qué hace la propiedad
+        `margin`?</strong></summary>\n\nLa propiedad `margin` determina cuánto espacio
+        habrá alrededor de la imagen. La mayoría de las veces, definirás el margen
+        en pixeles. Puedes leer más sobre esta propiedad en <a href=\"http://www.w3schools.com/cssref/pr_margin.asp\">W3Schools
+        - Propiedad de margen de CSS</a>\n\n</details>\n<details>\n<summary><strong>¿Qué
+        significa `px`?/¿Qué es un pixel?</strong></summary>\n\nPixel, que se abrevia
+        `px`, es la forma de medir los elementos en CSS. Es el tamaño de un único
+        punto de luz en la pantalla.\n\n</details>\n</div>\n\n# Margen\n\nLos márgenes
+        especifican cuánto espacio debería haber alrededor de un elemento.\n\n-   Encuentra
+        la propiedad `margin` en el conjunto de reglas `img`.\n-   Cambia el margen
+        para que sea más grande y charla sobre el efecto de esto con un compañero.\n-
+        \  Elige otro tipo de elemento y otórgale un margen, también."
+      CSD U2 layout style margin_2018: "<div style=\"float: right; height: 250px;
+        width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary><strong>¿Cómo
         funciona el código?</strong></summary>\n\nEste es el código que coloca espacio
         adicional alrededor de las imágenes:\n\n<pre>img {\n\tmargin: 10px;\n}</pre>\n\n-
         \  `img` es el _selector_. Especifica qué elementos tendrán que seguir las
@@ -4232,6 +4510,28 @@ es-MX:
             -   Asegúrate de que tienes el derecho de usar estas imágenes.
             -   Escribe toda la información de atribución que necesitas.
             -   Carga todas las imágenes en tu proyecto. Visita <a href="/s/csd2-2017/stage/7/puzzle/5" target="_new">Lección 7 Nivel 5</a> si has olvidado cómo hacerlo.
+      CSD U2 upload images_2018: |-
+        # Subir imágenes
+
+        A continuación, deberás cargar todas tus imágenes en tu proyecto.
+
+        # Hacer esto
+
+        -   Descarga todas las imágenes que quieras en tu computadora. Visita <a href="/s/csd2-2017/stage/7/puzzle/5" target="_new">Lección 7 Nivel 5</a> para obtener ayuda si la necesitas.
+            -   Asegúrate de que tienes el derecho de usar estas imágenes.
+            -   Escribe toda la información de atribución que necesitas.
+            -   Carga todas las imágenes en tu proyecto. Visita <a href="/s/csd2-2017/stage/7/puzzle/5" target="_new">Lección 7 Nivel 5</a> si has olvidado cómo hacerlo.
+      CSD U2 upload images_2019: |-
+        # Subir imágenes
+
+        A continuación, deberás cargar todas tus imágenes en tu proyecto.
+
+        # Hacer esto
+
+        -   Descarga todas las imágenes que quieras en tu computadora. Visita <a href="/s/csd2-2017/stage/7/puzzle/5" target="_new">Lección 7 Nivel 5</a> para obtener ayuda si la necesitas.
+            -   Asegúrate de que tienes el derecho de usar estas imágenes.
+            -   Escribe toda la información de atribución que necesitas.
+            -   Carga todas las imágenes en tu proyecto. Visita <a href="/s/csd2-2017/stage/7/puzzle/5" target="_new">Lección 7 Nivel 5</a> si has olvidado cómo hacerlo.
       CSD U3 - Booleans Video: "# Video sobre expresiones booleanas"
       CSD U3 - Simple Counter Predict: |-
         # El patrón del contador
@@ -4483,18 +4783,6 @@ es-MX:
         -   Agrega una expresión booleana dentro de `registro.consola` que pregunte: "¿La posición x del coche de carreras es menor que la posición x de la línea de meta?".
         -   Observa el resultado que genera el programa a medida que el coche se mueve. ¿Cuándo cambia? ¿Por qué?
       CSD U3 - conditionals - transition_2018: |-
-        # Expresiones booleanas
-
-        En los últimos niveles, hemos comparado valores de sprites para descubrir si algo es verdadero o falso. Vamos a empezar a poner esto en el contexto de una animación.
-
-        # Haz esto
-
-        El programa dibuja un coche de carreras y una línea de meta. Vamos a descubrir cuándo el coche de carreras cruza la línea de meta. Los sprites han sido creados para ti.
-
-        -   Agrega una sentencia `console.log` dentro del bucle dibujar. ( [Muéstrame dónde](#triggercallout=callout) )
-        -   Agrega una expresión booleana dentro de `registro.consola` que pregunte: "¿La posición x del coche de carreras es menor que la posición x de la línea de meta?".
-        -   Observa el resultado que genera el programa a medida que el coche se mueve. ¿Cuándo cambia? ¿Por qué?
-      CSD U3 - conditionals - transition_2019: |-
         # Expresiones booleanas
 
         En los últimos niveles, hemos comparado valores de sprites para descubrir si algo es verdadero o falso. Vamos a empezar a poner esto en el contexto de una animación.
@@ -4928,6 +5216,34 @@ es-MX:
         -   Usa otro bloque `si` para mover al jugador hacia abajo cuando se presiona la flecha "abajo".
 
         Prueba tu código. Tu personaje ahora debería moverse en las 4 direcciones.
+      CSD U3 AnimationsMulti defender move up down_2018: |-
+        # Mover arriba y abajo
+
+        También querrás que el sprite de tu jugador se mueva hacia arriba y hacia abajo.
+
+        # Haz esto
+
+        Para este nivel, escribirás código dentro de la función `moverJugador`.
+
+        -   Usa un bloque `si` junto con `teclaAbajo` para detectar cuando se presiona la flecha "arriba".
+        -   Usa `sprite.x` para aumentar la posición y del jugador en 3 con el patrón del contador.
+        -   Usa otro bloque `si` para mover al jugador hacia abajo cuando se presiona la flecha "abajo".
+
+        Prueba tu código. Tu personaje ahora debería moverse en las 4 direcciones.
+      CSD U3 AnimationsMulti defender move up down_2019: |-
+        # Mover arriba y abajo
+
+        También querrás que el sprite de tu jugador se mueva hacia arriba y hacia abajo.
+
+        # Haz esto
+
+        Para este nivel, escribirás código dentro de la función `moverJugador`.
+
+        -   Usa un bloque `si` junto con `teclaAbajo` para detectar cuando se presiona la flecha "arriba".
+        -   Usa `sprite.x` para aumentar la posición y del jugador en 3 con el patrón del contador.
+        -   Usa otro bloque `si` para mover al jugador hacia abajo cuando se presiona la flecha "abajo".
+
+        Prueba tu código. Tu personaje ahora debería moverse en las 4 direcciones.
       CSD U3 AnimationsMulti defender touch water: |-
         # Tocar el agua
 
@@ -5152,6 +5468,44 @@ es-MX:
         -   \*\* Exploren\*\* la caja de herramientas en busca de bloques que podrían ayudar (presten especial atención a los cajones de Matemáticas y Control).
         -   \*\* Programen\*\* la solución propuesta.
         -   \*\* Prueben\*\* su programa para asegurarse de que realmente esté verificando todas las condiciones que desean.
+      CSD U3 Compound Nested Challenge_2018: |-
+        # Desafío: verificar varias condiciones
+
+        _Consulta con tu docente antes de comenzar este desafío._
+
+        Hasta ahora hemos examinado muchas maneras de verificar si una condición única es verdadera, pero, a menudo, un programa necesita verificar el estado de muchas condiciones a la vez antes de tomar una decisión. Para este desafío, contamos con el siguiente escenario:
+
+        -   El sprite debe moverse hacia arriba, hacia abajo, a la izquierda y a la derecha si se presiona la tecla de flecha correspondiente.
+        -   El sprite _no_ debe salir completamente de la pantalla en ninguna dirección.
+
+        # Hagan esto en conjunto
+
+        Antes de comenzar a escribir este programa, deberán averiguar cómo verificar varias condiciones a la vez.
+
+        -   **Piensen ideas** con sus compañeros de al lado sobre las formas en que podrían verificar más de una condición.
+        -   **Compartan** de nuevo con toda la clase para que puedan ver otros enfoques.
+        -   \*\* Exploren\*\* la caja de herramientas en busca de bloques que podrían ayudar (presten especial atención a los cajones de Matemáticas y Control).
+        -   \*\* Programen\*\* la solución propuesta.
+        -   \*\* Prueben\*\* su programa para asegurarse de que realmente esté verificando todas las condiciones que desean.
+      CSD U3 Compound Nested Challenge_2019: |-
+        # Desafío: verificar varias condiciones
+
+        _Consulta con tu docente antes de comenzar este desafío._
+
+        Hasta ahora hemos examinado muchas maneras de verificar si una condición única es verdadera, pero, a menudo, un programa necesita verificar el estado de muchas condiciones a la vez antes de tomar una decisión. Para este desafío, contamos con el siguiente escenario:
+
+        -   El sprite debe moverse hacia arriba, hacia abajo, a la izquierda y a la derecha si se presiona la tecla de flecha correspondiente.
+        -   El sprite _no_ debe salir completamente de la pantalla en ninguna dirección.
+
+        # Hagan esto en conjunto
+
+        Antes de comenzar a escribir este programa, deberán averiguar cómo verificar varias condiciones a la vez.
+
+        -   **Piensen ideas** con sus compañeros de al lado sobre las formas en que podrían verificar más de una condición.
+        -   **Compartan** de nuevo con toda la clase para que puedan ver otros enfoques.
+        -   \*\* Exploren\*\* la caja de herramientas en busca de bloques que podrían ayudar (presten especial atención a los cajones de Matemáticas y Control).
+        -   \*\* Programen\*\* la solución propuesta.
+        -   \*\* Prueben\*\* su programa para asegurarse de que realmente esté verificando todas las condiciones que desean.
       CSD U3 Conditionals Apple: |-
         # Más práctica con las expresiones booleanas
 
@@ -5222,6 +5576,26 @@ es-MX:
         -   **Ejecuta el programa** para comprobar tu predicción.
         -   **Habla con un compañero**. ¿Puedes explicar lo que observaste?
       CSD U3 Diagonal Movement: |-
+        <img src="https://images.code.org/f92774863b17074adc85b8f6bbd017f2-image-1492726926884.gif" style="float: right; margin-left: 20px;">
+
+        # Movimiento en diagonal
+
+        Si solo actualizas las propiedades `x` o `y` de un sprite, este se moverá únicamente hacia arriba y hacia abajo o hacia la izquierda y la derecha. Si quieres que un sprite se mueva en diagonal, deberás actualizar _ambas_ propiedades.
+
+        Este programa hace que el ratón se mueva hacia abajo en la pantalla. ¿Puedes actualizarlo para que se mueva en diagonal por la pantalla como en la imagen de la derecha?
+
+        _Desafío: ¿puedes hacer que el ratón apunte en la misma dirección que la imagen?_
+      CSD U3 Diagonal Movement_2018: |-
+        <img src="https://images.code.org/f92774863b17074adc85b8f6bbd017f2-image-1492726926884.gif" style="float: right; margin-left: 20px;">
+
+        # Movimiento en diagonal
+
+        Si solo actualizas las propiedades `x` o `y` de un sprite, este se moverá únicamente hacia arriba y hacia abajo o hacia la izquierda y la derecha. Si quieres que un sprite se mueva en diagonal, deberás actualizar _ambas_ propiedades.
+
+        Este programa hace que el ratón se mueva hacia abajo en la pantalla. ¿Puedes actualizarlo para que se mueva en diagonal por la pantalla como en la imagen de la derecha?
+
+        _Desafío: ¿puedes hacer que el ratón apunte en la misma dirección que la imagen?_
+      CSD U3 Diagonal Movement_2019: |-
         <img src="https://images.code.org/f92774863b17074adc85b8f6bbd017f2-image-1492726926884.gif" style="float: right; margin-left: 20px;">
 
         # Movimiento en diagonal
@@ -5391,6 +5765,18 @@ es-MX:
         -   Agrega un bucle dibujar a tu programa (solo debes tener uno).
         -   Usa el selector de lazo (hacer clic, presionar y arrastrar) para seleccionar todo tu código y colocarlo dentro de tu bucle dibujar. Puedes presionar Ctrl-Z para volver atrás si cometes un error.
         -   Agrega código a tu programa para actualizar las propiedades `sprite.x`, `sprite.y` o `sprite.rotación`de tus sprites y hacer que se muevan. Tendrás que actualizarlas con `númeroAleatorio()`.
+      CSD U3 Draw Loop Plugged update your scene_2019: |-
+        # Ampliar tu escena
+
+        Esta es la escena de sprites que creaste en la última lección. Ahora la actualizarás un poco para usar  el bucle dibujar y las propiedades del sprite.
+
+        <img src="https://images.code.org/ce257c4d91da460c9c2add1733873769-image-1492209174198.32.29 PM.png" style="float:right;height:100px">
+
+        # Haz esto
+
+        -   Agrega un bucle dibujar a tu programa (solo debes tener uno).
+        -   Usa el selector de lazo (hacer clic, presionar y arrastrar) para seleccionar todo tu código y colocarlo dentro de tu bucle dibujar. Puedes presionar Ctrl-Z para volver atrás si cometes un error.
+        -   Agrega código a tu programa para actualizar las propiedades `sprite.x`, `sprite.y` o `sprite.rotación`de tus sprites y hacer que se muevan. Tendrás que actualizarlas con `númeroAleatorio()`.
       CSD U3 Draw Loop Plugged wiggle sprite rotation: |-
         <img src="https://images.code.org/03f98fedbe59ceb5ef0a8530cb81c367-image-1492040405357.gif" style="float:right;height:150px">
 
@@ -5522,6 +5908,20 @@ es-MX:
 
         -   Ubica dos rectángulos exactamente en las esquinas de la pantalla, tal como se ve en la imagen.
       CSD U3 Else: |-
+        # ¿Qué ocurre si mi condición no es verdadera?
+
+        <img src="https://images.code.org/1a997d78fcd88efeb9e6dc5a02aa88e8-image-1464706463138.53.58.png" width="125px" style="float:right">
+
+        A veces queremos decirle a nuestro programa qué hacer si una condición es `verdadera`, pero también qué hacer si es `falsa`. Si presionas el botón más en la parte inferior de tu bloque condicional, verás otra sección llamada `si no`. Esta sección `si no` es una alternativa: se llamará siempre que la condición en la sentencia `si` antes de ella sea `falsa`.
+
+        # Haz esto
+
+        Los engranajes están de vuelta. La última vez que trabajaste con ellos, los hiciste girar si se presionaba la barra espaciadora. Ahora, queremos que giren hacia un lado si se presiona la tecla de espacio y hacia el otro si no se presiona.
+        <img src="https://images.code.org/b074d47ca8dfa5ab3bfd08344b4f4e42-image-1464706389475.gif" style="float:right">
+
+        -   Haz clic en el botón _más_ en la parte inferior del bloque si para agregar un si no.
+        -   Agrega comandos para que los engranajes giren en sentido opuesto al que lo hacen cuando se presiona la barra espaciadora.
+      CSD U3 Else_2018: |-
         # ¿Qué ocurre si mi condición no es verdadera?
 
         <img src="https://images.code.org/1a997d78fcd88efeb9e6dc5a02aa88e8-image-1464706463138.53.58.png" width="125px" style="float:right">
@@ -6068,6 +6468,34 @@ es-MX:
         -   Una animación sutil en el fondo
         -   Efectos de sonido (¿puedes descubrir ahora cómo hacer esto?)
         -   Más maneras de que un usuario interactúe con tu tarjeta
+      CSD U3 Interactive Card Final_2018: |-
+        # Toques finales
+
+        Ahora es tu oportunidad de dar algunos toques finales a tu tarjeta. Hemos incluido algunos bloques nuevos que no has visto antes, así que tómate un tiempo para probarlos.
+
+        # Haz esto
+
+        Considera agregar cualquiera de las siguientes opciones para terminar tu tarjeta:
+
+        -   Texto
+        -   Otras imágenes para tus sprites
+        -   Una animación sutil en el fondo
+        -   Efectos de sonido (¿puedes descubrir ahora cómo hacer esto?)
+        -   Más maneras de que un usuario interactúe con tu tarjeta
+      CSD U3 Interactive Card Final_2019: |-
+        # Toques finales
+
+        Ahora es tu oportunidad de dar algunos toques finales a tu tarjeta. Hemos incluido algunos bloques nuevos que no has visto antes, así que tómate un tiempo para probarlos.
+
+        # Haz esto
+
+        Considera agregar cualquiera de las siguientes opciones para terminar tu tarjeta:
+
+        -   Texto
+        -   Otras imágenes para tus sprites
+        -   Una animación sutil en el fondo
+        -   Efectos de sonido (¿puedes descubrir ahora cómo hacer esto?)
+        -   Más maneras de que un usuario interactúe con tu tarjeta
       CSD U3 Interactive Card Other Conditionals: |-
         # Otros condicionales
 
@@ -6234,6 +6662,30 @@ es-MX:
         -   Mientras se ejecuta el programa, presiona la flecha hacia arriba en tu teclado.
         -   ¿Estabas en lo correcto? ¿Te sorprendió lo que ocurrió? Debate con un compañero de clase.
       CSD U3 Keypress Boolean embed: |-
+        # Predicción: teclaAbajo()
+
+        El bloque `teclaAbajo()` es el primero de un nuevo conjunto de bloques que nos permitirá obtener información del usuario. ¡Este es el primer paso en nuestro camino para crear juegos! Observa si puedes predecir cómo funciona el bloque `teclaAbajo()`. **No es necesario escribir código**.
+
+        # Haz esto
+
+        -   Lee el programa con atención.
+        -   **Haz una predicción sobre cómo se ejecutará el código** y escríbela en la casilla a continuación. ¡Sé específico!
+        -   Ejecuta el programa.
+        -   Mientras se ejecuta el programa, presiona la flecha hacia arriba en tu teclado.
+        -   ¿Estabas en lo correcto? ¿Te sorprendió lo que ocurrió? Debate con un compañero de clase.
+      CSD U3 Keypress Boolean embed-2018: |-
+        # Predicción: teclaAbajo()
+
+        El bloque `teclaAbajo()` es el primero de un nuevo conjunto de bloques que nos permitirá obtener información del usuario. ¡Este es el primer paso en nuestro camino para crear juegos! Observa si puedes predecir cómo funciona el bloque `teclaAbajo()`. **No es necesario escribir código**.
+
+        # Haz esto
+
+        -   Lee el programa con atención.
+        -   **Haz una predicción sobre cómo se ejecutará el código** y escríbela en la casilla a continuación. ¡Sé específico!
+        -   Ejecuta el programa.
+        -   Mientras se ejecuta el programa, presiona la flecha hacia arriba en tu teclado.
+        -   ¿Estabas en lo correcto? ¿Te sorprendió lo que ocurrió? Debate con un compañero de clase.
+      CSD U3 Keypress Boolean embed-2018_2019: |-
         # Predicción: teclaAbajo()
 
         El bloque `teclaAbajo()` es el primero de un nuevo conjunto de bloques que nos permitirá obtener información del usuario. ¡Este es el primer paso en nuestro camino para crear juegos! Observa si puedes predecir cómo funciona el bloque `teclaAbajo()`. **No es necesario escribir código**.
@@ -6867,6 +7319,14 @@ es-MX:
         ## Haz un bosquejo
 
         Antes de continuar, tómate un segundo para esbozar un escenario que te gustaría crear al final de esta lección. Considera las figuras simples que has usado en el pasado, los sprites para tus personajes y el texto que quieres que aparezca en la pantalla. Una vez que hayas esbozado una idea, aprenderás sobre `texto` y cómo componer una escena.
+      CSD U3 Scene Example_2018: |-
+        # Escenas de sprites
+
+        Al combinar figuras, sprites y un nuevo bloque llamado `texto`, puedes crear escenas, historias o historietas simples. Si bien este ejemplo es bastante simple, puedes combinar tantos sprites y figuras como desees para crear escenas más complejas o detalladas.
+
+        ## Haz un bosquejo
+
+        Antes de continuar, tómate un segundo para esbozar un escenario que te gustaría crear al final de esta lección. Considera las figuras simples que has usado en el pasado, los sprites para tus personajes y el texto que quieres que aparezca en la pantalla. Una vez que hayas esbozado una idea, aprenderás sobre `texto` y cómo componer una escena.
       CSD U3 Sprite Movement Left: |-
         <img src="https://images.code.org/9f9162cb94a02d9b3aba9b6067d0281a-image-1491862771496.gif" style="float: right; margin-left: 20px">
 
@@ -7278,20 +7738,18 @@ es-MX:
         # Depuración
 
         El código de esta escena está bien, pero su orden es incorrecto. La escena debe verse como la imagen a la derecha. ¿Puedes cambiar el orden de los bloques para que cada parte de la escena se dibuje en el orden correcto?
-      CSD U3 Sprites text_2018: "# Agregar texto\\\r\n\n\\\r\nPuedes poner\ntexto
-        en cualquier lugar que desee en la pantalla usando `text`. Cambiar el texto
-        \nvisualizado en el código provisto, luego agregue un segundo `texto` para
-        escribir en un\nparte diferente de la pantalla.\\\r\n\\\r\n\\_ Sugerencia:
-        el tamaño del texto predeterminado es bastante pequeño, pero\npuedes usar
-        el bloque `textSize` para cambiar eso. También puede usar `fill` para\ncambia
-        el color de tu texto.\\_"
-      CSD U3 Sprites text_2019: "# Agregar texto\\\r\n\n\\\r\nPuedes poner\ntexto
-        en cualquier lugar que desee en la pantalla usando `text`. Cambiar el texto
-        \nvisualizado en el código provisto, luego agregue un segundo `texto` para
-        escribir en un\nparte diferente de la pantalla.\\\r\n\\\r\n\\_ Sugerencia:
-        el tamaño del texto predeterminado es bastante pequeño, pero\npuedes usar
-        el bloque `textSize` para cambiar eso. También puede usar `fill` para\ncambia
-        el color de tu texto.\\_"
+      CSD U3 Sprites text_2018: |-
+        # Agregar texto
+
+        Con `texto` puedes poner texto en cualquier lugar de la pantalla. Cambia el texto que se ve en el código provisto y luego agrega un segundo `texto` para escribir en un parte diferente de la pantalla.
+
+        _Te damos una pista: el tamaño del texto predeterminado es bastante pequeño, pero puedes usar el bloque `tamañoTexto` para cambiarlo. También puedes usar `rellenar` para cambia el color de tu texto._
+      CSD U3 Sprites text_2019: |-
+        # Agregar texto
+
+        Con `texto` puedes poner texto en cualquier lugar de la pantalla. Cambia el texto que se ve en el código provisto y luego agrega un segundo `texto` para escribir en un parte diferente de la pantalla.
+
+        _Te damos una pista: el tamaño del texto predeterminado es bastante pequeño, pero puedes usar el bloque `tamañoTexto` para cambiarlo. También puedes usar `rellenar` para cambia el color de tu texto._
       CSD U3 UP_ARROW: |-
         # Mover sprites
 
@@ -7710,6 +8168,32 @@ es-MX:
 
         Prueba tu código antes de continuar. Cuando ejecutes el juego, debería aparecer el sprite de la moneda en algún lugar al azar de la pantalla.
       CSD U3 abstraction decelerateX: |-
+        # Bajar la velocidad
+
+        Ahora que has practicado cómo acelerar las cosas, ¿puedes usar el patrón del contador para bajar la velocidad de los sprites?
+
+        # Haz esto
+
+        ¡El coche va a terminar en el agua! Tendrás que usar el patrón del contador para reducir la velocidad.
+
+        -   Usa el bloque `sprite.velocidadX` con un patrón del contador para reducir la velocidad del coche en 0.25 a medida que se desplaza por la pantalla.
+        -   Habla con tu compañero: ¿qué crees que sucederá cuando el auto finalmente se detenga?
+
+        _Desafío: agrega el código que hace que el coche disminuya la velocidad solo si su velocidadX es mayor que 0._
+      CSD U3 abstraction decelerateX_2018: |-
+        # Bajar la velocidad
+
+        Ahora que has practicado cómo acelerar las cosas, ¿puedes usar el patrón del contador para bajar la velocidad de los sprites?
+
+        # Haz esto
+
+        ¡El coche va a terminar en el agua! Tendrás que usar el patrón del contador para reducir la velocidad.
+
+        -   Usa el bloque `sprite.velocidadX` con un patrón del contador para reducir la velocidad del coche en 0.25 a medida que se desplaza por la pantalla.
+        -   Habla con tu compañero: ¿qué crees que sucederá cuando el auto finalmente se detenga?
+
+        _Desafío: agrega el código que hace que el coche disminuya la velocidad solo si su velocidadX es mayor que 0._
+      CSD U3 abstraction decelerateX_2019: |-
         # Bajar la velocidad
 
         Ahora que has practicado cómo acelerar las cosas, ¿puedes usar el patrón del contador para bajar la velocidad de los sprites?
@@ -8919,6 +9403,32 @@ es-MX:
         -   Agrega plataformas al juego para que tu personaje se mueva.
         -   Añade otro obstáculo a tu juego.
         -   Crea otra idea propia.
+      CSD U3 collisions flyman make it your own_2018: |-
+        # Juego del aviador - Personalizar
+
+        Es hora de aplicar lo que has aprendido sobre las interacciones con sprites para personalizar este juego.
+
+        # Haz esto
+
+        Agrega al menos un aspecto más a tu juego que use interacciones con los sprites. Debajo verás algunas ideas o puedes agregar características propias. Asegúrate de estar listo para compartir tus ideas con tus compañeros de clase.
+
+        -   Crea sprites de "bordes" para evitar que tu personaje rebote.
+        -   Agrega plataformas al juego para que tu personaje se mueva.
+        -   Añade otro obstáculo a tu juego.
+        -   Crea otra idea propia.
+      CSD U3 collisions flyman make it your own_2019: |-
+        # Juego del aviador - Personalizar
+
+        Es hora de aplicar lo que has aprendido sobre las interacciones con sprites para personalizar este juego.
+
+        # Haz esto
+
+        Agrega al menos un aspecto más a tu juego que use interacciones con los sprites. Debajo verás algunas ideas o puedes agregar características propias. Asegúrate de estar listo para compartir tus ideas con tus compañeros de clase.
+
+        -   Crea sprites de "bordes" para evitar que tu personaje rebote.
+        -   Agrega plataformas al juego para que tu personaje se mueva.
+        -   Añade otro obstáculo a tu juego.
+        -   Crea otra idea propia.
       CSD U3 collisions horse: |-
         # Unicornio
 
@@ -9570,6 +10080,32 @@ es-MX:
         Después de crear cada sprite, pruébalo antes de crear el siguiente. Si tu sprite comienza fuera de la pantalla, primero colócalo en la pantalla para probarlo y, una vez que sepas que se ve bien, vuelve a moverlo fuera de la pantalla.
 
         Si debes restablecer la posición de tus sprites más adelante en tu juego, es una buena idea crear una función que establezca la posición de este sprite que puedas usar más adelante.
+      CSD U3 game create sprites_2018: |-
+        # Crear tus sprites
+
+        A continuación, crearás tus sprites y les asignarás las propiedades de inicio en el área "Crear sprites" de tu código. Para cada sprite, deberías:
+
+        -   Crear el sprite en el lugar correcto de la pantalla.
+        -   Establecer tu animación (o color y tamaño).
+        -   Ajustar tu velocidad y velocidad de rotación, si es necesario
+        -   Ajustar tu colisionador y rebote, si es necesario.
+
+        Después de crear cada sprite, pruébalo antes de crear el siguiente. Si tu sprite comienza fuera de la pantalla, primero colócalo en la pantalla para probarlo y, una vez que sepas que se ve bien, vuelve a moverlo fuera de la pantalla.
+
+        Si debes restablecer la posición de tus sprites más adelante en tu juego, es una buena idea crear una función que establezca la posición de este sprite que puedas usar más adelante.
+      CSD U3 game create sprites_2019: |-
+        # Crear tus sprites
+
+        A continuación, crearás tus sprites y les asignarás las propiedades de inicio en el área "Crear sprites" de tu código. Para cada sprite, deberías:
+
+        -   Crear el sprite en el lugar correcto de la pantalla.
+        -   Establecer tu animación (o color y tamaño).
+        -   Ajustar tu velocidad y velocidad de rotación, si es necesario
+        -   Ajustar tu colisionador y rebote, si es necesario.
+
+        Después de crear cada sprite, pruébalo antes de crear el siguiente. Si tu sprite comienza fuera de la pantalla, primero colócalo en la pantalla para probarlo y, una vez que sepas que se ve bien, vuelve a moverlo fuera de la pantalla.
+
+        Si debes restablecer la posición de tus sprites más adelante en tu juego, es una buena idea crear una función que establezca la posición de este sprite que puedas usar más adelante.
       CSD U3 game display boards: |-
         # Tablero de información
 
@@ -9797,6 +10333,17 @@ es-MX:
         # Elegir tu fondo
 
         Ahora que tienes tu variable de puntuación, puedes usarla para elegir el fondo adecuado para tu juego. Puedes ver un ejemplo de cómo cambiar tu fondo de acuerdo con la puntuación en [Lección 19 Nivel 11](/s/csd3-2018/stage/19/puzzle/11)
+
+        # Haz esto
+
+        -   Usa una sentencia `si` y sus dos funciones de fondo dentro del bucle dibujar para dibujar tu fondo de acuerdo con el nivel de puntuación.
+        -   Cambia la puntuación de inicio a 100 y luego ejecuta el código para probar tu código y ver si el fondo cambia.
+
+        _Desafío: si tienes un tercer fondo, puedes hacer clic en el signo más en la parte inferior del bloque `si`. Aparecerá otro espacio para la función de tu tercer fondo, así como un lugar para verificar la puntuación nuevamente._
+      CSD U3 platform background2_2019: |-
+        # Elegir tu fondo
+
+        Ahora que tienes tu variable de puntuación, puedes usarla para elegir el fondo adecuado para tu juego. Puedes ver un ejemplo de cómo cambiar tu fondo de acuerdo con la puntuación en [Lesson 19 Level 11](../../19/puzzle/12)
 
         # Haz esto
 
@@ -10163,6 +10710,30 @@ es-MX:
         -   Dentro de la función `controlarJugador`, usa los bloques `si`, `teclaAbajo` y `velocidadY` para que tu jugador salte cuando se presiona la flecha "arriba". Mira un ejemplo en <a href="/s/csd3-2017/stage/15/puzzle/11" target="_blank"> Lección 15 Desafío 11</a>.
         -   Llama a la función `controlarJugador` dentro del bucle dibujar.
         -   Ejecuta el juego y prueba tu código.
+      CSD U3 platform player2_2018: |-
+        # Controles de usuario
+
+        A continuación, debes agregar controles de usuario para mover a tu jugador. Tu jugador debe moverse hacia la izquierda cuando se presiona la tecla de flecha izquierda, y hacia la derecha cuando se presiona la tecla de flecha derecha, y saltar cuando se presiona la barra espaciadora.
+
+        # Haz esto
+
+        -   Crea una nueva función `controlarJugador` en el área de "funciones" de tu código.
+        -   Dentro de la función `controlarJugador`, usa los bloques `si`, `teclaAbajo` y `sprite.x` para que tu jugador se mueva hacia la izquierda y la derecha según las teclas de flecha que se presionen. Mira ejemplos en <a href="/s/csd3-2017/stage/12/puzzle/7" target="_blank"> Lección 12 Desafío 7</a>.
+        -   Dentro de la función `controlarJugador`, usa los bloques `si`, `teclaAbajo` y `velocidadY` para que tu jugador salte cuando se presiona la flecha "arriba". Mira un ejemplo en <a href="/s/csd3-2017/stage/15/puzzle/11" target="_blank"> Lección 15 Desafío 11</a>.
+        -   Llama a la función `controlarJugador` dentro del bucle dibujar.
+        -   Ejecuta el juego y prueba tu código.
+      CSD U3 platform player2_2019: |-
+        # Controles de usuario
+
+        A continuación, debes agregar controles de usuario para mover a tu jugador. Tu jugador debe moverse hacia la izquierda cuando se presiona la tecla de flecha izquierda, y hacia la derecha cuando se presiona la tecla de flecha derecha, y saltar cuando se presiona la barra espaciadora.
+
+        # Haz esto
+
+        -   Crea una nueva función `controlarJugador` en el área de "funciones" de tu código.
+        -   Dentro de la función `controlarJugador`, usa los bloques `si`, `teclaAbajo` y `sprite.x` para que tu jugador se mueva hacia la izquierda y la derecha según las teclas de flecha que se presionen. Mira ejemplos en <a href="/s/csd3-2017/stage/12/puzzle/7" target="_blank"> Lección 12 Desafío 7</a>.
+        -   Dentro de la función `controlarJugador`, usa los bloques `si`, `teclaAbajo` y `velocidadY` para que tu jugador salte cuando se presiona la flecha "arriba". Mira un ejemplo en <a href="/s/csd3-2017/stage/15/puzzle/11" target="_blank"> Lección 15 Desafío 11</a>.
+        -   Llama a la función `controlarJugador` dentro del bucle dibujar.
+        -   Ejecuta el juego y prueba tu código.
       CSD U3 platform player3: |-
         # Interacciones del jugador
 
@@ -10394,6 +10965,30 @@ es-MX:
         dónde](#triggercallout=run_trigger) )\n-   Cambia los números dentro del bloque
         y, luego, intenta volver a ejecutar el programa.\n-   Prueba ubicar el rectángulo
         cerca de la parte inferior derecha de la pantalla."
+      CSD U3 rect_2018: "# Explorar el Laboratorio de juegos\n\n¡Bienvenido al Laboratorio
+        de juegos, donde puedes crear animaciones y juegos interactivos!   \n\nYa
+        has practicado cómo poner figuras en una cuadrícula. Harás lo mismo en el
+        Laboratorio de juegos con el área de visualización que se encuentra a la izquierda.\n\n#
+        Haz esto\n\n-   Busca la línea de código en el espacio de trabajo debajo de
+        estas instrucciones ( [Show me where](#triggercallout=block_trigger) ) y habla
+        con tu compañero acerca de dónde crees que se dibujará la figura en esta cuadrícula.\n-
+        \  Haz clic <img src=\"https://images.code.org/9e963203e9cafd558b760730d13537ca-image-1461783998310.06.20
+        PM.png\" width=100> para ejecutar el programa y observa qué ocurre. ( [Show
+        me where][1] )\n-   Cambia los números dentro del bloque y, luego, intenta
+        volver a ejecutar el programa.\n-   Prueba ubicar el rectángulo cerca de la
+        parte inferior derecha de la pantalla."
+      CSD U3 rect_2019: "# Explorar el Laboratorio de juegos\n\n¡Bienvenido al Laboratorio
+        de juegos, donde puedes crear animaciones y juegos interactivos!   \n\nYa
+        has practicado cómo poner figuras en una cuadrícula. Harás lo mismo en el
+        Laboratorio de juegos con el área de visualización que se encuentra a la izquierda.\n\n#
+        Haz esto\n\n-   Busca la línea de código en el espacio de trabajo debajo de
+        estas instrucciones ( [Show me where](#triggercallout=block_trigger) ) y habla
+        con tu compañero acerca de dónde crees que se dibujará la figura en esta cuadrícula.\n-
+        \  Haz clic <img src=\"https://images.code.org/9e963203e9cafd558b760730d13537ca-image-1461783998310.06.20
+        PM.png\" width=100> para ejecutar el programa y observa qué ocurre. ( [Show
+        me where][1] )\n-   Cambia los números dentro del bloque y, luego, intenta
+        volver a ejecutar el programa.\n-   Prueba ubicar el rectángulo cerca de la
+        parte inferior derecha de la pantalla."
       CSD U3 sequence: |-
         <img src="https://images.code.org/30d68fb30db5b61187f104f46292e052-image-1493060980724.08.05 PM.png" style="float:right">
 
@@ -10430,6 +11025,21 @@ es-MX:
         -   Observa el código que dibuja los dos rectángulos. El primero es rojo y el segundo, azul.
         -   Cambia el color del rectángulo rojo a verde.
         -   Cambia el orden del código para que el rectángulo verde aparezca primero.
+      CSD U4 - Design Mode Input Widgets: |-
+        # Elementos de entrada
+
+        <img src="https://images.code.org/108fcc6fc89bf88edde00353afb33d75-image-1469814642375.49.23.png" style="float: right; width: 150px"/>
+
+        Los botones son una excelente forma de navegar por tu aplicación, y las etiquetas de texto son la principal manera de mostrar contenido en ella. Cuando se trata de recibir información de tus usuarios, a veces necesitas un lugar para que escriban o casillas que pueden seleccionar. Los elementos **Entrada de texto**, **Menú desplegable**, **Botón de opción** y **Casilla** permiten que los usuarios ingresen información en tu aplicación.
+
+        # Haz esto
+
+        Elige al menos dos de los elementos de entrada y haz esto con cada uno:
+
+        -   Arrástralo y ubícalo en la pantalla
+        -   Cambia el id a algo más específico
+        -   Lee las propiedades y experimenta con ellas
+        -   Agrega un elemento de etiqueta junto a cada uno para describir lo que hacen (¡recuerda que también debes asignarles un id!)
       CSD U4 - Design Mode Project: |-
         # Hacer una maqueta de tu aplicación
 
@@ -10448,6 +11058,21 @@ es-MX:
             -   Buscar una imagen para utilizar en lugar de tu elemento
             -   Dibujar el elemento usando tu editor de imágenes preferido
         -   Compartir tu diseño regularmente con tus compañeros de equipo para garantizar un estilo uniforme
+      CSD U4 - Design Mode Text: |-
+        # Agregar texto
+
+        <img src="https://images.code.org/86ba633e04f90f3ca47dff3dcd064847-image-1469812708683.15.36.png" style="float: right; width: 75px"/>
+        El elemento de etiqueta te permite agregar texto a tu aplicación. Solo tienes que arrastrar un bloque de etiqueta y establecer su propiedad de "texto".
+
+        # Haz esto
+
+        Usa un elemento de etiqueta para crear un título para esta aplicación.
+
+        -   Arrastra una etiqueta y ubícala en la parte superior de la pantalla
+        -   Cambia el id a "etiquetaTítulo"
+        -   Cambia el texto a "Mi aplicación"
+        -   Aumenta el tamaño de la fuente
+        -   Elige un color para el título
       CSD U5 Amazon Data Video: Mira este video para aprender cómo Amazon resuelve
         este problema. Mientras lo mires, piensa en qué datos se recopilan y de dónde
         vienen.
@@ -11423,6 +12048,34 @@ es-MX:
         controlador de evento para leer el sensor de temperatura y exhibir el valor
         en pantalla"
       CSD U6 analog threshold: |-
+        # Umbral de cambio
+
+        En forma predeterminada, el evento "change" de un sensor se dispara cada vez que el valor del sensor cambia, incluso por uno. Los sensores de luz y sonido están constantemente fluctuando, de modo que, probablemente, quieras que el evento "change" sea un poco menos sensible. La propiedad `threshold` te permite establecer cuánto debería cambiar un sensor antes de considerarlo un evento "change", de modo que establecer `soundSensor.threshold = 100` haría que el evento "change" del sensor de sonido solo se dispare si su valor se incrementa o disminuye, al menos, en un valor de 100.
+
+        # Haz esto
+
+        Esta aplicación cambia el color del fondo de la pantalla cuando el valor del sensor de sonido cambia, pero solo queremos responder a grandes cambios en el volumen (como un sonido fuerte). Usa el bloque `soundSensor.threshold` para arreglarlo.
+
+        -   Agrega un bloque `soundSensor.threshold` antes del controlador de eventos
+        -   Prueba cómo los diferentes valores de umbral impactan en el evento "change"
+        -   Elige el valor de umbral que hace que el fondo de la pantalla cambie solamente cuando se detecte un sonido alto.
+
+        _Sugerencia: tu umbral depende de cuánto ruido ambiente haya en la habitación y cuánto cambia. Puede que un umbral que funciona en una habitación silenciosa no funcione en un aula más ruidosa._
+      CSD U6 analog threshold_2018: |-
+        # Umbral de cambio
+
+        En forma predeterminada, el evento "change" de un sensor se dispara cada vez que el valor del sensor cambia, incluso por uno. Los sensores de luz y sonido están constantemente fluctuando, de modo que, probablemente, quieras que el evento "change" sea un poco menos sensible. La propiedad `threshold` te permite establecer cuánto debería cambiar un sensor antes de considerarlo un evento "change", de modo que establecer `soundSensor.threshold = 100` haría que el evento "change" del sensor de sonido solo se dispare si su valor se incrementa o disminuye, al menos, en un valor de 100.
+
+        # Haz esto
+
+        Esta aplicación cambia el color del fondo de la pantalla cuando el valor del sensor de sonido cambia, pero solo queremos responder a grandes cambios en el volumen (como un sonido fuerte). Usa el bloque `soundSensor.threshold` para arreglarlo.
+
+        -   Agrega un bloque `soundSensor.threshold` antes del controlador de eventos
+        -   Prueba cómo los diferentes valores de umbral impactan en el evento "change"
+        -   Elige el valor de umbral que hace que el fondo de la pantalla cambie solamente cuando se detecte un sonido alto.
+
+        _Sugerencia: tu umbral depende de cuánto ruido ambiente haya en la habitación y cuánto cambia. Puede que un umbral que funciona en una habitación silenciosa no funcione en un aula más ruidosa._
+      CSD U6 analog threshold_2019: |-
         # Umbral de cambio
 
         En forma predeterminada, el evento "change" de un sensor se dispara cada vez que el valor del sensor cambia, incluso por uno. Los sensores de luz y sonido están constantemente fluctuando, de modo que, probablemente, quieras que el evento "change" sea un poco menos sensible. La propiedad `threshold` te permite establecer cuánto debería cambiar un sensor antes de considerarlo un evento "change", de modo que establecer `soundSensor.threshold = 100` haría que el evento "change" del sensor de sonido solo se dispare si su valor se incrementa o disminuye, al menos, en un valor de 100.
@@ -12752,6 +13405,24 @@ es-MX:
 
         -   Lee la función `updateLED` para ver qué hace.
         -   Agrega código a `updateBuzzer` para hacer que el timbre solamente se encienda cuando el interruptor de alternar está abierto.
+      CSD U6 get toggle_2018: |-
+        # cambio
+
+        Este programa tiene eventos que detectan tres cambios diferentes: el interruptor de alternar, el deslizador de intervalo y el deslizador de duración. Dado que hay muchas cosas diferentes que hacen que el LED y el timbre se reinicien, el programa usa funciones para organizar el código.
+
+        # Haz esto
+
+        -   Lee la función `updateLED` para ver qué hace.
+        -   Agrega código a `updateBuzzer` para hacer que el timbre solamente se encienda cuando el interruptor de alternar está abierto.
+      CSD U6 get toggle_2019: |-
+        # cambio
+
+        Este programa tiene eventos que detectan tres cambios diferentes: el interruptor de alternar, el deslizador de intervalo y el deslizador de duración. Dado que hay muchas cosas diferentes que hacen que el LED y el timbre se reinicien, el programa usa funciones para organizar el código.
+
+        # Haz esto
+
+        -   Lee la función `updateLED` para ver qué hace.
+        -   Agrega código a `updateBuzzer` para hacer que el timbre solamente se encienda cuando el interruptor de alternar está abierto.
       CSD U6 getProperty Demo: |-
         # Actualizar propiedades
 
@@ -13062,6 +13733,11 @@ es-MX:
         a apagar las luces.\n\n# Haz esto\n\nCrea una función que apague todos los
         LEDs, y luego agrega un botón \"Apagado\" a tu aplicación y haz que apague
         todos los LEDs de colores. "
+      CSD U6 light pattern off_2019: "# Apagado\n\nCuando inicias tu aplicación, las
+        luces están apagadas, pero cuando eliges un patrón, no hay forma de volver
+        a apagar las luces.\n\n# Haz esto\n\nCrea una función que apague todos los
+        LEDs, y luego agrega un botón \"Apagado\" a tu aplicación y haz que apague
+        todos los LEDs de colores. "
       CSD U6 light show predict: |-
         # Crear un espectáculo de luces
 
@@ -13146,6 +13822,17 @@ es-MX:
 
         -   Crea una función `seleccionarColor(color)` que cambia cada una de las imágenes y los LEDs de colores al color dado.
         -   Llama a tu función en los bloques de eventos para que todos los botones funcionen.
+      CSD U6 params modify clouds_2019: |-
+        # Nubes
+
+        Este programa hace que las nubes se mueven cuando soplas en el sensor de sonido, pero no está terminado.
+
+        # Hacer esto
+
+        -   Crea una nueva función `moverNube(nombre)` que moverá cualquier nube.
+        -   (Sugerencia: usarás casi todo el mismo código como la función `moverNube0`)
+        -   Llama a su nueva función de `moverNube(nombre)` dentro del bloque del evento, una vez para cada nombre de nube.
+        -   (Sugerencia: esto es similar a cómo la función `bucleNube(nombre)` se llama muchas veces.
       CSD U6 params predict contained: |-
         # Rastreo de errores
 
@@ -13906,6 +14593,22 @@ es-MX:
         # Haz esto
 
         Antes de llamar a `configurarPantalla`, agrega un bloque `configurarPropiedad` para cambiar la propiedad "texto" de "ganador" para mostrar el ganador real.
+      CSD U6 tugowar setProperty_2018: |-
+        # Mostrar el ganador
+
+        La pantalla ganadora de hecho no sabe _quién_ ganó el juego. Arreglemos eso ahora.
+
+        # Haz esto
+
+        Antes de llamar a `configurarPantalla`, agrega un bloque `configurarPropiedad` para cambiar la propiedad "texto" de "ganador" para mostrar el ganador real.
+      CSD U6 tugowar setProperty_2019: |-
+        # Mostrar el ganador
+
+        La pantalla ganadora de hecho no sabe _quién_ ganó el juego. Arreglemos eso ahora.
+
+        # Haz esto
+
+        Antes de llamar a `configurarPantalla`, agrega un bloque `configurarPropiedad` para cambiar la propiedad "texto" de "ganador" para mostrar el ganador real.
       CSD U6 tugowar setScreen: |-
         # Cambiar a la pantalla de triunfo
 
@@ -14193,6 +14896,55 @@ es-MX:
 
         -   Intenta escribir algo en el espacio de trabajo.
         -   Presiona <img src="https://images.code.org/678619085e37ea6ce904ac8abd0df2f2-image-1493226906609.14.45 AM.png" style="width:150px"> para verlo en el área de vista previa.
+      CSDU4 - Design Mode - 15: "# Modo Diseño\n\n¡Bienvenido al Modo Diseño del Laboratorio
+        de aplicaciones, que te permitirá agregar elementos de la interfaz de usuario
+        desde la caja de herramientas y diseñarlos de la forma que quieras para crear
+        una versión digital de tus esquemas de wireframes fácilmente!\n\n**Objetivo:**
+        agregar un botón rojo grande a tu aplicación mediante el Modo Diseño.\n\n#
+        Haz esto:\n\n-   **Encuentra<img src=\"https://images.code.org/278f146396c80c97d0b5d73f24d48aec-image-1444335461720.png\">
+        en la caja de herramientas de Diseño**, arrastra un botón y cambia su tamaño.
+        \n\n-   **Cambia el texto del botón** para que diga \"Presióname\".\n\n-   **Define
+        el color del botón** para que sea rojo.\n\n<img src=\"https://images.code.org/4cab6a5233cf07df0d8e312932762012-image-1444314797615.gif\"
+        style=\"width: 500px; float: middle\">"
+      CSDU4 - Design Mode - 4: |-
+        # ID
+
+        El `id` (que se suele escribir **ID**) es un **identificador único** para cada elemento de la aplicación.
+
+        Cada elemento que aparece en la aplicación debe tener un **ID único**. De hecho, si intentas ejecutar un programa que tiene dos botones con el mismo ID, recibirás un mensaje de advertencia en la consola.
+
+        # Haz esto
+
+        Si bien cada elemento que arrastras en el Modo Diseño tiene un ID predeterminado, en realidad no son tan útiles (por ejemplo, `botón1` y `botón2`), por lo que debes adquirir el hábito de crear tus propios ID.
+
+        -   Cambia el ID de tu botón "presióname" a algo más útil (como `botónRojo`)
+        -   Arrastra un segundo botón
+        -   Haz que el segundo botón sea azul y asígnale el ID `botónAzul`
+      CSDU4 Connecting Screens: |-
+        # Navegar
+
+        Una vez que comiences a agregar varias pantallas a una aplicación, debes asegurarse de que los usuarios siempre puedan llegar a donde quieren ir. En los siguientes dos niveles, aprenderás cómo asegurarte de que un usuario siempre pueda volver a la "página de inicio" de tu aplicación.
+
+        # Haz esto
+
+        Esta es una aplicación con cuatro páginas diferentes, pero solamente la pantalla "roja" tiene un enlace. En este nivel podrás crear otros dos botones para llevar al usuario a la pantalla correcta.
+
+        -   Agrega dos bloques `onEvent()`, uno para el "greenButton" y el otro para el "blueButton".
+        -   Usa el bloque `setScreen()` para que cada botón lleve a la pantalla apropiada.
+        -   Prueba tu aplicación para asegurarte de que ambos botones funcionen. Por ejemplo, si haces clic en el botón verde, deberías ir a la pantalla verde.
+      CSDU4 Connecting Screens Getting Back: |-
+        # Volver
+
+        Quienes usen tu aplicación ahora pueden acceder a cada una de las páginas roja, verde y azul, pero no pueden volver a la página de inicio. Puedes agregar botones y controladores de eventos para ayudarlos.
+
+        # Haz esto
+
+        Crea botones y controladores de eventos para ayudar a los usuarios a volver a la página de "inicio"
+
+        -   Usa el Modo Diseño para crear un botón dentro de cada una de pantallas "roja", "verde" y "azul". Asegúrate de que tengan ID descriptivos.
+        -   De vuelta en tu código, arrastra tres bloques `onEvent()`, uno por cada uno de los tres botones que creaste.
+        -   Dentro de cada bloque `onEvent()`, usa el bloque `setScreen()` que vuelve a tu página de "inicio".
+        -   Prueba tu aplicación. Deberías poder volver a la pantalla de inicio de cada una de las otras tres pantallas.
       CSDU4 Crowdsource App Demo: |-
         # Colaboración abierta
 
@@ -15091,6 +15843,15 @@ es-MX:
 
         -   Crea un nuevo arreglo con las notas que quieras. Pueden estar en diferentes octavas, dispuestas en cierta clave, etc. ¡Lo que quieras!
         -   Haz que el timbre reproduzca una nota aleatoria de tu arreglo cuando se presione el botón **derecho**.
+      CSDU6 making new arrays_2019: |-
+        # Hacer nuevos arreglos
+
+        Sabes cómo cambiar arreglos; ahora llegó el momento de hacer los tuyos.
+
+        # Haz esto
+
+        -   Crea un nuevo arreglo con las notas que quieras. Pueden estar en diferentes octavas, dispuestas en cierta clave, etc. ¡Lo que quieras!
+        -   Haz que el timbre reproduzca una nota aleatoria de tu arreglo cuando se presione el botón **derecho**.
       CSDU6 piano with notes: "# Notas de piano\n\nEste es el mismo piano que viste
         en el comienzo de la lección, pero hay algunos errores.\n\n# Haz esto\n\n-
         \  Edita el código para que todas las teclas usen un bloque `timbre.nota()`
@@ -15217,14 +15978,140 @@ es-MX:
         puedes verificar si el interruptor de alternar está en la posición `open`
         o `close` en otra parte de tu programa. \n\n¿Qué cosas diferentes hace el
         botón cuando el interruptor de alternar está en `open` o `close`?"
+      Course 4 Artist 13: "¿Aún jugando? ¡Aquí hay un lienzo en blanco en donde usted
+        podrá diseñar lo que quiera!"
+      Course 4 Artist 2: "¿Puedes enlazar este código para que dibuje de gris el cuadrado?"
+      Course 4 Artist 20: "¿Aún jugando? ¡Aquí hay un lienzo en blanco donde usted
+        podrá crear lo que quiera!"
+      Course 4 Artist 3: Muy bien, trate de averiguar qué sucede si ejecuta este código
+        (o presiona "Run" para comprobarlo). Entonces repítelo varias veces hasta
+        completar el dibujo.
+      Course 4 Artist 4: "¿Cúantos grados tiene un círculo? Rellena el bloque de repetición
+        con ese número para crear un círculo de colores."
+      Course 4 Artist 5: Dibuja la otra mitad de este diseño de tal manera que sea
+        simétrico. Los triángulos son equiláteros y tienen 50 píxeles de longitud.
+      Course 4 Artist 6: 'Completa el código para dibujar estos triángulos. Sugerencia:
+        3 triángulos en una rotación de 360 grados.'
+      Course 4 Artist 8: Dibuje este sol enlazando este bloque de código íntegramente
+        12 veces.
+      Course 4 Artist 8a: "¿Recuerdas esta forma? ¡Ahora vamos a dejarte construirla
+        sin darte ningún bloque para empezar! Sugerencia: hay 3 triángulos dentro
+        de la rotación de 360 grados... ¿Cuántas veces 3 va en 360?"
+      Course 4 Artist 9: 'Continúe con este diseño 10 veces y asegúrese de que cada
+        forma que dibuja apunte hacia adentro. Aquí hay una sugerencia de cuánto más
+        debe apuntar: ¿Cuánto es 360 dividido entre 10?'
+      Course 4 Artist Binary 1: "Esta es una función que toma un hilo binario de 1
+        y 0 e instruye al artista para que los siga de izquierda a derecha, y de arriba
+        hacia abajo.  \n\n* * *\n\nEl artista llenará los cuadrados cuando vea un
+        1 y los ignorará cuando vea un 0. \n\n* * *\n\n**Ejecuta este código para
+        ver cómo el artista usa el sistema binario para dibujar este patrón.**"
+      Course 4 Artist For Loops 1: 'Dibuje este triángulo que tiene un tamaño de 50
+        píxeles. Sugerencia: Use un bloque de repetición.'
+      Course 4 Artist For Loops 11a: ¡Vamos a poner todo junto! Usando tu conocimiento
+        de "ciclos for" y del "contador", crea este dibujo donde cada forma tiene
+        dos partes más que la anterior. Asegúrate de que cada lado sea 10 veces más
+        largo que el número de lados del polígono. Muy poco del código se ha proporcionado
+        para ti.
+      Course 4 Artist For Loops 14: |-
+        Si giras un poco más o menos de lo que lo harías normalmente para una forma, crearás un efecto nítido.
+
+        Prueba usar una parte del código del último nivel, pero gira 89 grados para crear esta espiral cuadrada torcida.
+      Course 4 Artist For Loops 3: El triángulo más pequeño tiene 20 píxeles de lado,
+        el más grande tiene 200 píxeles de lado y cada triángulo es 20 píxeles más
+        grande que el anterior. Actualiza el bucle "for" para dibujar estos triángulos.
+      Course 4 Artist For Loops 4: Usa un bucle "FOR" para dibujar estos cuadrados.
+        Empiezan a 15 píxeles de largo, el más grande es de 300 píxeles de largos,
+        y cada cuadrado es 15 píxeles más grande que el anterior. Te he dado casi
+        todo el código que vas a necesitar - haz perdido un bloque, ¿cuál es?
       Course 4 Artist For Loops 6a: "¡Haz 3 pequeños cambios al código desde el último
         nivel para obtener esto!"
+      Course 4 Artist For Loops 8: "Sólo un pequeño cambio al código de la última
+        imagen puede crear este dibujo. ¿Puedes descifrar cuál es el cambio?\\\r\n\\_\\_\\_\\\r\nPista:
+        ¡Necesitas remover algo!"
+      Course 4 Artist Vars 14: 'Juego Gratis: revísalo, ahora tu algoritmo está anidado
+        dentro de otro circuito. Experimenta cambiando los valores de tus dos variables
+        para dibujar patrones asombrosos.'
+      Course 4 Artist Vars 4: Ahora quiero hacer un rectángulo que es dos veces tan
+        alto como ancho. Tenemos una variable llamada "ancho" que se encuentra a 100.
+        ¿Puedes usar los bloques de matemáticas para completar el código?
+      Course 4 Artist Vars 7: Utiliza lo que aprendiste en el rompecabezas anterior
+        para crear el hexágono usando la variable "lados". Vé cómo puedes cambiar
+        solo una variable para dibujar un triángulo, cuadrado, pentágono u octágono?
+      Course 4 Bee 2: Utiliza el bloque "Si/de lo contrario" para revisar cada objeto
+        para ver si es una flor o un panal...de lo contrario, ¡haz miel!
+      Course 4 Bee Params 1: Use la función "obtener néctar 3" que gira, mueve para
+        recoger el néctar y luego regresa a su ubicación original. Escriba una secuencia
+        para recoger todo el néctar usando "obtener néctar 3".
+      Course 4 Bee Params 2: Modifique la función "obtener néctar 3" de tal manera
+        que me haga girar a la derecha hacia las flores en vez de a la izquierda.
       Course 4 Bee Params 5: Vamos a empezar desde cero. ¿Puedes crear una nueva función
         llamada `recoger 5 néctares` con un parámetro de dirección?
+      Course 4 Bee Params 6: ¿No sería genial si pudiéramos recolectar todo este néctar
+        con una sola función? Intenta agregar un nuevo parámetro a tu función "nectars"
+        para controlar la cantidad de néctar para recolectar. ¡Probablemente quieras
+        renombrar la función también!
+      Course 4 Bee Params 8: 'Desafío: ¡Ahora hay que ocuparse de la miel! Vuelve
+        a escribir tu función para usar las dos el número de unidades de miel y el
+        número de unidades de néctar. ¿Cómo utilizarías esos números para decidir
+        qué puedes hacer?'
+      Course 4 EC 1a: "**Reto Extremo:** No hay reglas. No hay pistas. ¡Sólo el reto!"
+      Course 4 EC 1b: "**Reto Extremo:** No hay reglas. No hay pistas. ¡Sólo el reto!"
+      Course 4 EC 2a: "**Reto Extremo:** No hay reglas. No hay pistas. ¡Sólo el reto!"
+      Course 4 EC 2b: "**Reto Extremo:** No hay reglas. No hay pistas. ¡Sólo el reto!"
+      Course 4 EC 2c: "**Reto Extremo:** No hay reglas. No hay pistas. ¡Sólo el reto!"
+      Course 4 Maze 4: Intenta usar un bloque de "repetición" para utilizar menos
+        bloques cuando resuelvas el rompecabezas...
+      Course 4 Play Lab Params 1: Aquí está la función denominada "salto" que permite
+        que tu personaje principal salte hasta 100 píxeles. Use la función salto para
+        recoger todas las banderas.
+      Course 4 Play Lab Params 3: Añadimos otro parámetro a la función salto para
+        poder usar otros actores. Cada actor es representado por un número, empezando
+        por uno. Edita la función de "salto" para que utilice el parámetro "actor"
+        hacer el correcto salto del personaje.
+      Course 4 Play Lab Params 4: Aquí hay una función denominada "patrulla". Edítela
+        para mover el Gato hacia arriba 400 píxeles y luego hacia abajo 400 píxeles.
+      Course 4 Play Lab Params 5: Llene el parámetro de entrada "actor" de tal manera
+        que podamos llamar la función "patrulla" para cada uno de los actores. Recuerde,
+        los actores corresponden a los números 1, 2 y 3.
+      Course 4 Play Lab Params 7: "¡Vamos a divertirnos! Mira el código dado para
+        ver si puedes averiguar qué es lo que hace cada bloque. Cuando termines, usa
+        las flechas de tu teclado para controlar el Perro y colecta todas las banderas."
+      Course 4 Play Lab Params 8: Use un bloque "cuando el actor toque" para enviar
+        al Perro de regreso al lado superior izquierdo SOLAMENTE si el Perro toca
+        a alguno de los otros actores.
+      Course 4 Play Lab Vars 1: ¡Ahora no tienes que escribir nada de código, sólo
+        presiona "ejecutar" para jugar el juego! En este juego, tú eres el perro que
+        está tratando de recoger más banderas que el Gato. Use la flecha abajo para
+        controlar al Perro. Presiona "Finalizar" cuando terminaste de jugar.
+      Course 4 Play Lab Vars 2: ¡Esa carrera en ese último problema no fue justa!
+        Cambie la variable de "velocidad\_perro" para asegurarse de que puede recoger
+        más banderas que el Gato. ¡El primero en recoger 10 banderas gana!
       Course 4 Play Lab Vars 4: "Ahora estamos utilizando una variable llamada `altura`
         para controlar cuán alto puede saltar el perro. Actaliza la variable `altura`
         para que así el perro pueda saltar lo suficiente para alcanzar las banderas.
         \n "
+      Course 4 Play Lab Vars 7: Bien, ahora asegurémonos que este juego no sea muy
+        fácil - cada vez que el Perro (actor 1) es golpeado por una bola de fuego
+        usted debe perder un punto. Empiece con 10 puntos de tal manera que no sea
+        muy difícil. Deje que su calificación caiga de 10 a 0 para pasar de nivel.
+      Course 4 Play Lab Vars 9: "¡Momento de juego gratis! Aquí están todas las variables
+        con las  que hemos jugado hasta ahora, así como unas pocas más en caso que
+        las quieras. \\\r\n\\\r\n¡Observa ahora que hay tantos bloques en nuestra
+        caja de herramientas que necesitan ser organizadas Aquí hemos puesto cada
+        pieza en una categoría apropiada. Tómate un tiempo para explorar todo lo que
+        hay disponible. Cuando hayas terminado de navegar, haz un juego o historia
+        usando repeticiones, variables y eventos.  \\\r\n\\\r\n_Sugerencia: desplázate
+        hacia abajo para ver todos los comandos en el espacio de trabajo._"
+      Course 4 Play Labs For Loops 1: Vamos a hacer que el perro diga todos los números
+        desde el 1 hasta el 100. Usa un ciclo y un bloque contador para decir la variable
+        contador cada vez que se ejecute el ciclo.
+      Course 4 Playlab For Loops 4b: "¡Ahora, estos dos personajes van a correr! \\\r
+        \\\r cada uno de ellos se moverá 'contador' pasos en un momento, pero sus
+        contadores tendrán diferentes valores debido a los bucles 'for'.\\\r \\\r
+        ¿Puede cambiar el valor del incremento en uno de los bucles para que la carrera
+        sea un empate?"
+      Course 4 Playlab For Loops 5b: Ajusta el intervalo de los bucles 'for' para
+        que ambos personajes terminen exactamente en el mismo lugar.
       Course 4 SCFL 1a: "**Súper desafío de bucles 'desde':** ¿Puedes hacer que Scrat
         llegue hasta su bellota con la menor cantidad de bloques posible?"
       Course 4 SCFL 1b: "**Súper desafío de bucles 'desde':** ¿Puedes hacer que Scrat
@@ -15381,6 +16268,24 @@ es-MX:
         ¡Observa cuánto tiempo te lleva descifrar el código! ¿Es un buen método para cifrar datos secretos?
 
         <img src="http://code.org/api/hour/begin_encryption.png">
+      Dance_2019_01: |-
+        Arrastra el bloque [blockly block] [0] al espacio de trabajo y conéctalo dentro del bloque [blockly block] [1].
+
+         Elige `gato` o`perezoso` para crear tu primer bailarín.
+
+        -   _También puedes hacer clic en la bombilla de la izquierda si quieres más información o desafíos adicionales._
+      Dance_2019_02: |-
+        El bloque <xml><block type="Dancelab_whenKey" block-text="when up pressed"></block></xml> te permite ejecutar código cuando presionas los botones de flecha.
+        ¡Usa el bloque <xml><block type="Dancelab_doMoveEachLR" block-text="do once"><title name="GROUP">"CAT"</title><title name="MOVE">MOVES.XClapSide</title><title name="DIR">-1</title></block></xml> para hacer que el gato aplauda!
+
+        _¡Asegúrate de presionar la tecla "flecha arriba" o ![](<https://images.code.org/419e704e6841c0b696016bf5029b8cb9-image-1571864825506.06.45 PM.png>) después de hacer clic en el botón Ejecutar!_
+      Dance_2019_05: |-
+        _¡Ya estamos entrando en ritmo!_
+
+        Añade un bloque <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> a tu espacio de trabajo. Haz que el bailarín empiece a moverse después de 6 compases.
+      Dance_2019_10: |-
+        ¡Vamos baila! Crea tu propio baile para compartir con tus
+        amigos.
       Dance_Party_01: |-
         _¡Hagamos una fiesta!_
 
@@ -15458,6 +16363,14 @@ es-MX:
         -   Agrega más teclas para controlar los bailes
         -   Haz que los bailarines que acompañan también respondan a la pulsación de teclas
         -   Define la visibilidad de cada bailarín para alternarlos cada 4 compases
+      Dance_Party_extras_battle_2019: |-
+        # Equipos de baile
+
+        Esta es una competencia de baile entre dos equipos. Las teclas de flechas controlan a uno de los bailarines y las teclas "w,a,s,d" controlan al otro. Compite contra un amigo y luego trata de mejorar este baile.
+
+        -   Agrega más teclas para controlar los bailes
+        -   Haz que los bailarines que acompañan también respondan a la pulsación de teclas
+        -   Define la visibilidad de cada bailarín para alternarlos cada 4 compases
       Dance_Party_extras_every_beat: |-
         # Negras
 
@@ -15480,6 +16393,10 @@ es-MX:
         # Graves, medios y agudos
 
         Este baile utiliza eventos "pico" para activar un código cada vez que sube el volumen de diferentes partes de la música. Prueba con diferentes canciones para ver cómo cambian el baile.
+      Dance_Party_extras_on_beat_2019: |-
+        # Graves, medios y agudos
+
+        Este baile utiliza eventos "pico" para activar un código cada vez que sube el volumen de diferentes partes de la música. Prueba con diferentes canciones para ver cómo cambian el baile.
       Dance_Party_extras_speed: |-
         # Más rápido, más lento
 
@@ -15492,6 +16409,23 @@ es-MX:
         -   Añade otro grupo de bailarines
         -   Muestra y oculta a los bailarines con las teclas de flechas
         -   Oculta todos los bailarines y cambia a un emocionante efecto de fondo
+      Dance_Party_extras_visible_2019: |-
+        # ¿Dónde habrán ido?
+
+        Este baile muestra y oculta dos diferentes grupos de bailarines. Echa un vistazo y luego intenta agregar tu propio estilo.
+
+        -   Añade otro grupo de bailarines
+        -   Muestra y oculta a los bailarines con las teclas de flechas
+        -   Oculta todos los bailarines y cambia a un emocionante efecto de fondo
+      Escape Room Example: |-
+        # Juego de escape
+
+        ¡En el taller de hoy trabajarás para crear una aplicación de juego de escape! Este nivel tiene una aplicación de ejemplo con la que deberías jugar para experimentar lo que estarás creando.
+
+        # Haz esto
+
+        -   Haz clic en EJECUTAR para iniciar la aplicación.
+        -   Intenta encontrar la llave que abrirá la puerta.
       Final Personal Website: |-
         # Sitio web personal
 
@@ -15505,6 +16439,37 @@ es-MX:
         -   Reflexionar: obtén comentarios de un compañero de clase y decide sobre qué parte de esos comentarios actuar.
 
         No olvides tomar una captura de pantalla de tu página de inicio y guárdala en alguna parte de tu computadora para que la puedas encontrar más adelante. (_¿Necesitas ayuda para hacer una captura de pantalla? Mira esto <a href="http://www.take-a-screenshot.org/">website </a>._)
+      Final Personal Website_2018: |-
+        # Sitio web personal
+
+        ¡Llegó el momento! Has estado trabajando en tu sitio web personal durante toda la unidad. Dale los toques finales y envíaselo a tus profesores. Recuerda usar el proceso de resolución de problemas como guía para preparar tu producto final.
+
+        # Hacer esto
+
+        -   Definir: lee la rúbrica para saber qué debes esperar
+        -   Planificar: decide en qué debes seguir trabajando y coloca todo eso en orden de prioridad
+        -   Probar: implementa tus mejorar en tu sitio web personal.
+        -   Reflexionar: obtén comentarios de un compañero de clase y decide sobre qué parte de esos comentarios actuar.
+
+        No olvides tomar una captura de pantalla de tu página de inicio y guárdala en alguna parte de tu computadora para que la puedas encontrar más adelante. (_¿Necesitas ayuda para hacer una captura de pantalla? Mira esto <a href="http://www.take-a-screenshot.org/">website </a>._)
+      Final Personal Website_2019: |-
+        # Sitio web personal
+
+        ¡Llegó el momento! Has estado trabajando en tu sitio web personal durante toda la unidad. Dale los toques finales y envíaselo a tus profesores. Recuerda usar el proceso de resolución de problemas como guía para preparar tu producto final.
+
+        # Hacer esto
+
+        -   Definir: lee la rúbrica para saber qué debes esperar
+        -   Planificar: decide en qué debes seguir trabajando y coloca todo eso en orden de prioridad
+        -   Probar: implementa tus mejorar en tu sitio web personal.
+        -   Reflexionar: obtén comentarios de un compañero de clase y decide sobre qué parte de esos comentarios actuar.
+
+        No olvides tomar una captura de pantalla de tu página de inicio y guárdala en alguna parte de tu computadora para que la puedas encontrar más adelante. (_¿Necesitas ayuda para hacer una captura de pantalla? Mira esto <a href="http://www.take-a-screenshot.org/">website </a>._)
+      Final Room Escape App: "# ¡Lo has logrado!\n\n¡Has creado un juego de escape!
+        Ahora es el momento de personalizarlo. \n\nConsidera:\n\n-   Agregar más estilo
+        a la sala\n-   Agregar más cosas con las que los usuarios pueden interactuar
+        en la sala\n-   Hacer que tu código secreto sea aleatorio\n-   Agregar más
+        salas"
       Function intro Ryan: "Una **función** llamada \"Construye puente\" se encuentra
         en tu área de trabajo.  ¡Incluye todo el código que necesitas para cruzar
         el río! \\\r\n \\\r\nAjusta el pequeño bloque verde en tu área de trabajo
@@ -15697,17 +16662,85 @@ es-MX:
         que usas, o llamas, para ejecutar la función que creaste.\n\\-xml de llamada
         de función-\n\nPrepárate para familiarizarte con las funciones, aprender cómo
         editarlas y crear las tuyas."
+      NEW Course 4 Artist Functions 1: "¿Puedes dibujar un cuadrado de 100 píxeles
+        de largo usando un ciclo?"
+      NEW Course 4 Artist Functions 12: Utiliza la función "trazar una línea de cuadrados"
+        del rompecabezas anterior para trazar este patrón.
+      NEW Course 4 Artist Functions 2: "¿Puedes dibujar 3 cuadrados de 20 píxeles
+        separado uno del otro? Sugerencia: cada cuadrado es de una medida de 100 píxeles "
+      NEW Course 4 Artist Functions 3: Aquí está el nuevo tipo de Bloque. Es llamado
+        "Bloque función". Haga clic en "Ejecutar" para ver qué pasa.
+      NEW Course 4 Artist Functions 4: 'Utiliza la función "dibujar un cuadrado" para
+        dibujar este patrón. Pista: tendrás que usar un bloque "girar a la derecha
+        120 grados" después de cada cuadrado.'
+      NEW Course 4 Artist Functions 8: Te hemos dado la mayoría del código para crear
+        una función. Sin embargo, parece que falta algo. ¿Puedes editar la definición
+        de la función para dibujar el triángulo?
+      NEW Course 4 Artist Functions 9: "¿Qué bloque necesitas añadir para conseguir
+        que el triángulo se ponga encima del cuadrado?"
+      NEW Course 4 Artist Params 1: Vamos a definir esta función para dibujar un cuadrado
+        con lados de 50 píxeles. Haz clic en "editar" para empezar.
+      NEW Course 4 Artist Params 10: 'Crea un bloque de función "dibujar un hexágono"
+        con un parámetro de longitud. Pista: este hexágono tiene 100 píxeles de tamaño. '
+      NEW Course 4 Artist Params 12: "¿Puedes completar este dibujo? Los lados de
+        todas las formas son 100 píxeles de largo."
+      NEW Course 4 Artist Params 12a: Esta imagen es similar a la última. ¿Se puede
+        utilizar un "ciclo for" con tu función para hacer este diseño?
+      NEW Course 4 Artist Params 15: 'Juego libre: estas son las funciones que has
+        escrito, y algunas más con las que podrás jugar. ¡Experimenta con el ancho
+        del lápiz para crear dibujos diferentes!'
       NEW Course 4 Artist Params 2: Crea una función `dibujar triángulo` desde cero
         para crear un triángulo con lados de 50 pixeles.
+      NEW Course 4 Artist Params 4: ¿Notas algo diferente en estos bloques de función?
+        Haz clic en "Ejecutar" para ver qué pasa.
+      NEW Course 4 Artist Params 5: 'Llena en el ??? en el bloque de entrada del parámetro
+        de longitud. Sugerencia: El Pentágono es de 100 píxeles de tamaño. '
+      NEW Course 4 Artist Params 7: "¿Puedes completar este dibujo? Sugerencia: cada
+        triángulo es 25 píxeles más grande que el último. El primer triángulo es de
+        25 píxeles de tamaño."
+      NEW Course 4 Artist Params 8: '¿Puedes dibujar cada uno de estos triángulos
+        con esa nueva función? El primero es de 25 píxeles de largo, el segundo es
+        de 50 y el tercero es de 75. Sugerencia: comienza haciendo clic en "Editar"
+        en tu bloque de función.'
       NEW Course 4 Artist Params inspire: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\"
         width=\"250px\"/>\n\n**Inspiración para juego libre:** ¡has aprendido todo
         lo que necesitas saber para crear un patrón como este! \n\nSi esta imagen
         te sirve de inspiración, intenta crear algo similar. De lo contrario, crea
         algo que sea tuyo.\n\nTen en cuenta que utilizamos el bloque `establecer alfa`
         para que los \"pétalos\" se orienten hacia afuera."
+      NEW Course 4 Artist Vars 12: Modifica este algoritmo para que utilice la variable
+        "lados" en lugar de un número fijo para dibujar un pentágono. Reemplaza el
+        número 5 con la variable "lados" y usa el bloque "establecer lados".
+      NEW Course 4 Artist Vars 4: Vamos a intentarlo otra vez. Ahora, vamos a hacer
+        este diseño cool con un hexágono de 60 píxeles.
+      NEW Course 4 Artist Vars 6: ¿Me puedes ayudar a dibujar este patrón cool dejando
+        caer el bloque de variable "longitud" en los lugares correctos?
+      NEW Course 4 Bee For Loops 10a: "¿Listo para un desafío? Toma lo que has aprendido
+        sobre ciclos y trata de solucionar este problema. Recuerda: puedes tener que
+        ejecutar la solución varias veces antes de averiguar todos los pasos."
+      NEW Course 4 Bee For Loops 2: Agrega el código necesario para asegurarte de
+        que la abeja recolecta todo el néctar. ¡Mira cuánto código necesitas para
+        este puzzle! (Aprenderemos una manera más simple en el siguiente puzzle).
+      NEW Course 4 Bee For Loops 3: '¡Ah, el de bucle for hace esto mucho más fácil!
+        Todo el código que necesitas está allí, echa un vistazo a cómo se colocan
+        juntos, luego haz clic en "Ejecutar" para ver cómo funciona. '
+      NEW Course 4 Bee For Loops 4: 'Reemplaza el ??? en el bucle for con la mayor
+        cantidad de néctar que la abeja debe recoger. '
       NEW Course 4 Bee For Loops 5: También puedes utilizar un 'loop para' para la
         cuenta regresiva. Intenta juntar este néctar haciendo cuenta regresiva de
         5 a 1 de a 1.
+      NEW Course 4 Bee For Loops 6: El último número en tu bucle for se llama el "incremento",
+        y cada vez que el bucle se ejecuta la variable contador cambia al incrementarse.
+        Trata de recoger estas flores con un incremento de 2.
+      NEW Course 4 Bee For Loops 7: "¿Estás comprendiendo el truco a los bucles? Esto
+        es parecido al último puzzle, pero tienes que conseguir 2, 4, 6, 8,10 de néctar.
+        Ya tienes el código de arranque, excepto los números en los bucles del contador.
+        ¡Vamos a recoger algo de néctar!"
+      NEW Course 4 Bee For Loops 8: "¡Lo tienes! \n\n¿Cuál debería ser tu **incremento**
+        para recoger 3, 6, 9, 12 y 15 néctares?"
+      OPD-K5 FirstProgram: Mira el siguiente video, que explica el primer programa
+        que los estudiantes más jóvenes escribirán en [Course A](https://studio.code.org/s/coursea-2018?section_id=2042045).
+        ¡En la página siguiente podrás escribir un programa similar!
       Overworld Chop Tree: La madera es un recurso muy importante. Muchas cosas están
         hechas de madera. Camina hacia el árbol y usa el comando del bloque `destruir`
         para talarlo.
@@ -15732,6 +16765,18 @@ es-MX:
         obtener lana de ambas ovejas."
       Overworld Shear Sheep_2019: "¡Es hora de esquilar! Usa el comando `esquilar`
         para obtener lana de ambas ovejas."
+      Pixelation - Lesson 15 - Color Shades 4x4: "# Pixelación: tarea 3\n\n<img src
+        = \"https://code.org/images/cspunit1/ColorTask3.png\" style=\"float:right;
+        margin:0 20px\" width=200>\n**Instrucciones:**\nComenzamos con la imagen 4x4
+        que Maddie creó en el video.\n\nTu tarea es utilizar _12 bits por pixel_ para
+        completar la cuadrícula 4x4 con colores. El resultado debería ser similar
+        (pero no igual) a la imagen de la derecha.  \n\nEstos son los requisitos:\n\n-
+        \  Fila 1: completar con tonos de rojo. \n-   Fila 2: tonos de verde. \n-
+        \  Fila 3: tonos de azul. \n-   Fila 4: tonos de gris."
+      Pixelation - Lesson 15 - Complete 3-bit color: "# Pixelación de color: tarea
+        1\n\n**Instrucciones:**\n\n-   Comenzaremos con la imagen 4x2 que creó Maddie,
+        pero excluiremos los últimos dos cuadrados. \n-   Averigua qué dos colores
+        faltan y codifícalos para terminar la imagen."
       Predict Loop I: |-
         # Predicción
 
@@ -15769,6 +16814,128 @@ es-MX:
         del mundo real. ¡Esto requiere persistencia y planificación!"
       Robot Doodle_2018: "**Idea para un proyecto:** crear una imagen de algo conocido
         del mundo real. ¡Esto requiere persistencia y planificación!"
+      Room Escape Workshop - 1: |-
+        # Preparar la sala
+
+        <img src="https://images.code.org/9d103d74f7c2da05aeccd5fc317e6ab6-image-1490368234432.08.44 AM.png" style="width:200px; float:right">
+
+        Para crear tu juego de escape, tendrás que preparar la sala para que el usuario pueda aventurarse en ella. Ya hemos hecho una parte del trabajo por ti. ¡Solo tienes que seleccionar imágenes para decidir cómo se verán las diferentes partes de la sala!
+
+        # Haz esto
+
+        -   El nivel comienza en el Modo Diseño
+        -   Agrega una imagen adecuada para cada elemento de imagen que esté en blanco (rectángulo gris). Por ejemplo, necesitarás la imagen de una puerta para el elemento de imagen etiquetado como puerta.
+        -   A la derecha hay un ejemplo de cómo podría verse la sala.
+      Room Escape Workshop - 10: |-
+        # Abrir la puerta
+
+        <img src="https://images.code.org/3651f7d5306bdcfd2d9a3d9bb842626e-image-1491066778787.12.36 PM.png" style="width:200px;float:right">
+
+        ¡Nos estamos acercando! Vamos a configurar la puerta para que se pueda abrir.
+
+        # Haz esto
+
+        -   Agrega una imagen para el exterior
+        -   Asígnale un buen ID (por ejemplo, _exterior_)
+        -   Oculta la imagen para el exterior (se mostrará cuando se abra la puerta)
+      Room Escape Workshop - 10 - 2: |-
+        # Abrir la puerta
+
+        <img src="https://images.code.org/57407cb51f50e08ecddb8ce7d2d89157-image-1491065952915.58.58 PM.png" style="width:200px;float:right">
+
+        ¡Abre la puerta si tienen la llave!
+
+        # Haz esto
+
+        -   Agrega un bloque `enEvento` para el momento en que hacen clic en la puerta
+        -   Agrega una sentencia `si` dentro de `enEvento` para verificar si la llave se movió a la parte inferior de la pantalla
+            -   Agrega una sentencia `si`
+            -   Agrega `==` en la sentencia `si`
+            -   De un lado de `==`, pon la posición x a la que se moverá la llave cuando se hace clic en ella
+            -   Del otro lado, agrega el bloque `obtenerPosiciónX()`; ¡el ID debería ser igual al de tu llave!
+        -   Usa `mostrarElemento` dentro de la sentencia `si` para mostrar la imagen oculta del exterior si obtienen la llave
+      Room Escape Workshop - 3: |-
+        # Ocultar el código
+
+        <img src="https://images.code.org/6fa80456a39d9b6417545f5f66ec83a5-image-1490368827625.png" style="width:400px;float:right">
+
+        1.  Haz clic en el cuadrado blanco donde dice "CÓDIGO" en el Modo Diseño. Cámbialo para mostrar el código secreto que elijas.
+        2.  Arrastra la imagen hacia abajo para cubrir el código secreto.
+
+        ![](<>)
+      Room Escape Workshop - 3-2: |-
+        # Mover la imagen
+
+        Ahora es momento de que el usuario haga clic en la imagen para encontrar el código secreto. Al hacer clic, la imagen debe moverse hacia arriba y hacerse a un lado.
+
+        # Haz esto
+
+        -   Quita un bloque `enEvento`
+        -   Cambia el lugar del "id" en el bloque `enEvento` para la imagen (que es el ID del elemento imagen)
+        -   Agrega un bloque `establecerPosición` dentro del bloque `enEvento` con la siguiente información:
+            -   ID: imagen
+            -   Las dos entradas siguientes son los valores x e y; prueba algunos números para intentar que la imagen se mueva como en las imágenes de la derecha
+      Room Escape Workshop - 4: |-
+        # Preparar la caja fuerte
+
+        Has generado un código secreto para que los usuarios puedan pasar a la segunda sala. Podrán ingresar el código secreto cuando hagan clic en la caja fuerte.
+
+        # Haz esto
+
+        -   Agrega un bloque `enEvento`
+            -   Elige el ID para la caja fuerte
+        -   Agrega un bloque <img src="https://images.code.org/c0964a8543728d018d5d9583319e22b9-image-1491060910093.34.36 AM.png" style="width:300px"> dentro del bloque `enEvento`
+            -   Cambia la _x_ (el nombre de la variable) a _adivinar_ en el lado izquierdo
+            -   Cambia _"Ingresar un valor_ (la instrucción para el usuario) a _"Ingresar el código"_ en el lado derecho
+      Room Escape Workshop - 5: "# Verificar el código secreto\n\nAhora que tu usuario
+        ha intentado adivinar el código secreto, ¡tendrás que verificar si es correcto!
+        Podemos hacer esto mediante una sentencia `si`, que comprueba si una condición
+        es verdadera. En ese caso, verificará si el número que ingresó el usuario
+        es igual al código secreto.\n\n# Haz esto\n\n-   Agrega una sentencia <img
+        src=\"https://images.code.org/5e9a434b1ad6b8f010db928b668127a5-image-1491061131564.37.01
+        AM.png\" style=\"width:100px\"> dentro del bloque `enEvento` para la caja
+        fuerte, que está debajo del comando de instrucción \n-   Quita el bloque <img
+        src=\"https://images.code.org/f0680979704c30975550211b03ed222e-image-1491061134985.37.08
+        AM.png\" style=\"width:100px\">, que comprobará si dos cosas son iguales,
+        para crear la condición\n-   De un lado de <img src=\"https://images.code.org/f0680979704c30975550211b03ed222e-image-1491061134985.37.08
+        AM.png\" style=\"width:100px\">, pon _adivinar_ (el nombre del valor que usamos
+        para almacenar las suposiciones de los usuarios)\n-   Del otro lado, pon el
+        valor de tu código secreto"
+      Room Escape Workshop - 7: "# Mostrar dentro de la caja fuerte\n\n<img src=\"https://images.code.org/71e74305187a46d0badeb29a9a69ac56-image-1490371014841.55.37
+        AM.png\" style=\"width:200px;float:right\">\n\nUna vez que tengas el programa
+        para verificar el código secreto, querrás \"abrir\" la caja fuerte y mostrar
+        la llave en el interior. Primero, deberás crear estos elementos en el Modo
+        Diseño.\n\n# Haz esto\n\n-   Ve al Modo Diseño y agrega la imagen de un cuadrado
+        gris\n    -   Haz clic y arrastra un elemento de imagen <img src=\"https://images.code.org/8f4bc108415d83e5c528c9204502efc2-image-1491059181186.06.13
+        AM.png\" style=\"width:75px\"> a la pantalla\n    -   Asígnale un buen ID
+        (por ejemplo, _interiorCajaFuerte_)\n    -   Encuentra un cuadrado gris que
+        puedas usar como imagen\n    -   Esto será el interior de la caja fuerte,
+        ya que ocultará el frente de la caja fuerte cuando se muestre\n-   Agrega
+        la imagen de una llave\n    -   Haz clic y arrastra un elemento de imagen
+        <img src=\"https://images.code.org/8f4bc108415d83e5c528c9204502efc2-image-1491059181186.06.13
+        AM.png\" style=\"width:75px\"> a la pantalla\n    -   Asígnale un buen ID
+        (por ejemplo _llave_)\n    -   Encuentra una imagen de una llave que puedas
+        usar \n-   Haz clic en la propiedad oculta en el Modo Diseño para el cuadrado
+        gris y la llave. Cuando estén ocultos, se verán así en el Modo Diseño.\n\n<img
+        src=\"https://images.code.org/2c2c7e9996515f2b30d416b558fd1360-image-1489605526794.17.55
+        PM.png\" style=\"width:200px\">"
+      Room Escape Workshop - 8: |-
+        # Mostrar dentro de la caja fuerte
+
+        Ahora prepara el código para mostrar la llave y el cuadrado gris si el usuario ingresa el código correcto.
+
+        # Haz esto
+
+        -   Dentro de la sentencia `si` que creaste en el comando `enEvento` para la caja fuerte, agrega:
+            -   El bloque `mostrarElemento` para mostrar el cuadrado gris
+            -   El bloque `mostrarElemento` para mostrar la llave
+      Room Escape Workshop - 9-2: "# Hacer clic en la llave\n\n<img src=\"https://images.code.org/1a736d2774860bebc5072b8ae8b38f34-image-1491066638078.10.00
+        PM.png\" style=\"width:170px;float:right\">\n\nUna vez que un usuario hace
+        clic en la llave, querrás mostrar que está en su poder. Para ello, puedes
+        mover la llave a la esquina inferior de la sala.\n\n# Haz esto\n\n-   Agrega
+        un bloque `enEvento` para el momento en que el usuario hace clic en la llave.
+        \n-   Dentro del bloque `enEvento`:\n    -   Usa `establecerPosición` para
+        mover la llave hacia la esquina inferior de la pantalla"
       Standalone_Artist_2: Dibuja este diamante con ángulos de 120 y 60 grados, y
         lados de 150 pixeles de largo.
       Standalone_Artist_3: "¿Puedes dibujar este hexágono con lados de 100 pixeles
@@ -16343,6 +17510,26 @@ es-MX:
 
         -   **Completa la pantalla Acerca de** usando el prototipo ubicado en la derecha.
         -   **Usa el menú desplegable de la pantalla** para alternar entre las pantallas Inicio y Acerca de.
+      U4 Model Program 1_2018: |-
+        # Agregar una nueva pantalla
+
+        Para completar tu aplicación, vas a necesitar más de una pantalla de inicio solamente. Cada carta que has creado en tu prototipo de papel está representada por una "pantalla" en el Laboratorio de aplicaciones. Para crear más pantallas, simplemente haz clic en el menú desplegable, en la parte superior de la pantalla de la aplicación, y selecciona "Nueva pantalla..."
+
+        <img src="https://images.code.org/2b49c36a57fb904d4fcf219ca498647d-image-1504714832027.png" style="width: 200px">
+
+        # Haz esto
+
+        -   **Crea una nueva pantalla** y dale la ID "Acerca de".
+      U4 Model Program 1_2019: |-
+        # Agregar una nueva pantalla
+
+        Para completar tu aplicación, vas a necesitar más de una pantalla de inicio solamente. Cada carta que has creado en tu prototipo de papel está representada por una "pantalla" en el Laboratorio de aplicaciones. Para crear más pantallas, simplemente haz clic en el menú desplegable, en la parte superior de la pantalla de la aplicación, y selecciona "Nueva pantalla..."
+
+        <img src="https://images.code.org/2b49c36a57fb904d4fcf219ca498647d-image-1504714832027.png" style="width: 200px">
+
+        # Haz esto
+
+        -   **Crea una nueva pantalla** y dale la ID "Acerca de".
       U4 Model Program 2: |-
         <div markdown="1" style="float: right; margin: 20px;">
 
@@ -16473,7 +17660,63 @@ es-MX:
         -   **Arrastra un bloque `console.log`** de la bandeja de variables.
         -   **Ejecuta tu aplicación**.
         -   **Haz clic en el botón Buscar** y busca mensajes en la consola.
+      U4 Model Program 3_2018: |-
+        # Botón Eventos
+
+        Cuando las pantallas estén en su lugar, será hora de comenzar a _programar_ la aplicación, para que responda a los clics de los botones. Para cada botón en cada pantalla, agregarás un bloque `onEvent` que controla que se le haga clic al botón y que responda apropiadamente. Para comenzar, observaremos el botón "home\_search\_btn" e imprimiremos algo en la consola cuando se le haga clic.
+
+        # Haz esto
+
+        Ahora estás en Modo Código (puedes usar los botones ubicados arriba de tu aplicación para alternar entre el Modo Código y el Modo Diseño). Este es el lugar en donde puedes escribir el código que responderá a los usuarios interactuando con tu aplicación.
+
+        ![](https://images.code.org/278b27dd31b6ca014c0dd32c5f964a54-image-1505764431751.png)
+
+        -   **Arrastra un bloque `onEvent`** del código de la caja de herramientas.
+        -   **Selecciona "home\_search\_btn"** del menú desplegable de la "id".
+        -   **Arrastra un bloque `console.log`** de la bandeja de variables.
+        -   **Ejecuta tu aplicación**.
+        -   **Haz clic en el botón Buscar** y busca mensajes en la consola.
+      U4 Model Program 3_2019: |-
+        # Botón Eventos
+
+        Cuando las pantallas estén en su lugar, será hora de comenzar a _programar_ la aplicación, para que responda a los clics de los botones. Para cada botón en cada pantalla, agregarás un bloque `onEvent` que controla que se le haga clic al botón y que responda apropiadamente. Para comenzar, observaremos el botón "home\_search\_btn" e imprimiremos algo en la consola cuando se le haga clic.
+
+        # Haz esto
+
+        Ahora estás en Modo Código (puedes usar los botones ubicados arriba de tu aplicación para alternar entre el Modo Código y el Modo Diseño). Este es el lugar en donde puedes escribir el código que responderá a los usuarios interactuando con tu aplicación.
+
+        ![](https://images.code.org/278b27dd31b6ca014c0dd32c5f964a54-image-1505764431751.png)
+
+        -   **Arrastra un bloque `onEvent`** del código de la caja de herramientas.
+        -   **Selecciona "home\_search\_btn"** del menú desplegable de la "id".
+        -   **Arrastra un bloque `console.log`** de la bandeja de variables.
+        -   **Ejecuta tu aplicación**.
+        -   **Haz clic en el botón Buscar** y busca mensajes en la consola.
       U4 Model Program 4: |-
+        # Cambiar pantallas al hacer clic
+
+        El bloque `setScreen` cambiará tu aplicación a la pantalla que especifiques. Si colocas un bloque `setScreen` _dentro_ de un bloque `onEvent`, puedes programar tus botones para cambiar a la pantalla correcta.
+
+        # Haz esto
+
+        Usando el bloque `onEvent` que has creado, haz que tu programa cambie a la pantalla "buscar" cuando se le haga clic a "home\_search\_btn".
+
+        -   **Arrastra un bloque `setScreen`** y colócalo dentro de un bloque `onEvent`.
+        -   **Selecciona "buscar"** del menú desplegable `setScreen`.
+        -   **Ejecuta tu aplicación** y prueba el botón "home\_search\_btn".
+      U4 Model Program 4_2018: |-
+        # Cambiar pantallas al hacer clic
+
+        El bloque `setScreen` cambiará tu aplicación a la pantalla que especifiques. Si colocas un bloque `setScreen` _dentro_ de un bloque `onEvent`, puedes programar tus botones para cambiar a la pantalla correcta.
+
+        # Haz esto
+
+        Usando el bloque `onEvent` que has creado, haz que tu programa cambie a la pantalla "buscar" cuando se le haga clic a "home\_search\_btn".
+
+        -   **Arrastra un bloque `setScreen`** y colócalo dentro de un bloque `onEvent`.
+        -   **Selecciona "buscar"** del menú desplegable `setScreen`.
+        -   **Ejecuta tu aplicación** y prueba el botón "home\_search\_btn".
+      U4 Model Program 4_2019: |-
         # Cambiar pantallas al hacer clic
 
         El bloque `setScreen` cambiará tu aplicación a la pantalla que especifiques. Si colocas un bloque `setScreen` _dentro_ de un bloque `onEvent`, puedes programar tus botones para cambiar a la pantalla correcta.
@@ -16593,6 +17836,8 @@ es-MX:
         -   Ambas formas tienen **lados de 50 pixeles**.
         -   Los _octágonos_ se crean a partir de giros de **45 grados**.
         -   Los _triángulos_ se crean a partir de giros de **120 grados**.
+      course2_artist_prog_challenge2: _¡Ayúdame a pintar de amarillo las líneas en
+        este camino!_
       course2_bee_conditionals_challenge2: Recoge todo el néctar y haz toda la miel.
         Puedes recoger todo el néctar de una flor con el bucle `mientras néctar >
         0`.
@@ -16615,6 +17860,9 @@ es-MX:
             <title name="XPOS">???</title>
             <title name="YPOS">???</title>
             </block></xml>
+      course3_bee_debugging_challenge1: Observa como las abejas obtinen el néctar.
+        ¿Puedes usar el mismo tipo de patrón para ayduar a la abeja a hacer toda la
+        miel?
       course3_bee_functions_challenge1: De ti depende este desafío.  ¡Puede ser más
         difícil de lo que parece!
       course3_bee_functions_challenge3: Crea una función para recoger todo el néctar
@@ -16657,9 +17905,17 @@ es-MX:
       course4_artist_fwp_challenge1: Intente ejecutar este programa y haga cambios
         para ver que ocurre. ¿Puedes averiguar cómo funciona? (o elimínalo y reemplázalo
         con algo totalmente diferente)
+      course4_bee_for_challenge1: Usa este 'bucle para' para recoger todo el néctar.
+        Hay unas pocas acciones que querrás repetir 'contador' veces.
       course4_bee_fwp_challenge1: Usa un bucle `desde` en una función para recoger
         todo el maíz. El mismo bucle `desde` puede contar valores máximos diferentes
         mediante el parámetro `longitud`.
+      course4_bee_fwp_challenge2: "_\"**Lechuga** ¡ve si puedes manejar esta prueba
+        final! ¡Dale todo lo que tienes!\"_\\\r\n\\\r\nUsa un 'loop para' en una función
+        para recoger todos los vegetales en la fila. Haz que el 'loop para' cuente
+        valores máximos diferentes usando el parámetro 'longitud'. Haz tu programa
+        tan corto como sea posible usando el segundo 'loop para' fuera de la función.\\\r\n\\\r\n¡Mucha
+        suerte!"
       course4_collector_nested_loops_challenge2: "_\"¡Vamos a cazar tesoros con los
         bucles!\"_ \n\nUsa los bloques de tu caja de herramientas para ayudar a la
         recolectora a alcanzar al menos dos pilas del tesoro. Es posible recolectar
@@ -16901,6 +18157,13 @@ es-MX:
       courseA_collector_loops_challenge1_2019: _"¿Puedes ayudarme a detectar algunos
         errores? Sé por qué camino quiero ir, pero no estoy segura de cuántos pasos
         dar"._
+      courseA_collector_preLoops1: |-
+        ¡Ella es Laurel la Aventurera!
+
+        Presiona el botón "Ejecutar" para verla caminar hasta el tesoro y recogerlo.
+      courseA_collector_preLoops2: "¡Genial! ¡Ahora puedes agregar el código tú mismo!
+        \n\nColoca un bloque ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
+        en la parte inferior del programa y haz clic en \"Ejecutar\"."
       courseA_collector_preLoops7: |-
         ¡Consigue los tres montones! Acerca a Laurel a cada pieza del tesoro y, luego, usa este bloque:
           <xml><block type="collector_collect"/></xml>
@@ -17106,9 +18369,9 @@ es-MX:
         sobran y agrega los que faltan. ¡Haz que el pájaro llegue hasta el cerdo!
       courseA_maze_seq_challenge2_2019: Traza el camino para que el pájaro llegue
         hasta el cerdo. ¡Evita el TNT o volarán plumas!
-      courseA_playLab_events1_2019: Este es un Play Lab nivel. Mueva bloques al area
-        de trabajo y observe que sucede!
-      courseA_playLab_events2_2019: Jorge el Perro quiere decir "Hola." Puede ayudarle?
+      courseA_playLab_events1_2019: Este es un nivel de Laboratorio de juegos. ¡Mueve
+        los bloques al espacio de trabajo y mira lo que ocurre!
+      courseA_playLab_events2_2019: Jorge el Perro quiere decir "Hola". ¿Puedes ayudarlo?
       courseA_playLab_events3: |-
         Ayuda a Jorge el Perro a moverse. Conecta el bloque <xml><block type="studio_move">
             <title name="SPRITE">1</title>
@@ -17264,6 +18527,8 @@ es-MX:
         veces, pero no puede hacerlo bien. ¿Puedes ayudarlo?
       courseB_artist_loops3_2019: Ayuda al artista a dibujar una línea 7 veces para
         crear un muro en el jardín.
+      courseB_artist_loops4_2019: 'Ahora tenemos que preparar el suelo para plantar.
+        Encuentra los errores en el código y ayuda al artista a preparar el terreno. '
       courseB_artist_loops5_2019: "¡Es hora de arreglar las escaleras! Repite este
         patrón **5** veces para que el artista pueda alcanzar la parte superior de
         los arbustos."
@@ -19510,8 +20775,11 @@ es-MX:
         para ayudar a Scrat a llegar hasta allí?"
       courseD_iceage_loops9_2019: "¡La bellota está muy lejos! ¿Puedes utilizar los
         bucles para ayudar a Scrat a llegar hasta allí?"
+      courseD_maze_intro4_2019: '_"Traza la ruta y llevarme al cerdo."_ '
       courseD_maze_intro5a_2019: Pon atención a la secuencia y ve si puedes descifrar
         ¡cómo llegar a ese cerdo!
+      courseD_maze_intro5c_2019: "¡Ten cuidado con el TNT! Ayuda a que Red llegue
+        hasta el cerdo."
       courseD_maze_nestedLoops3: |-
         _"¡Zombi hambriento!"_
 

@@ -552,7 +552,8 @@ describe('teacherSectionsRedux', () => {
         code: '',
         courseId: null,
         scriptId: null,
-        hidden: false
+        hidden: false,
+        isAssigned: undefined
       });
     });
   });
@@ -576,7 +577,8 @@ describe('teacherSectionsRedux', () => {
         courseId: null,
         createdAt: createdAt,
         studentCount: 1,
-        hidden: false
+        hidden: false,
+        isAssigned: undefined
       });
     });
   });
@@ -834,7 +836,8 @@ describe('teacherSectionsRedux', () => {
           courseId: undefined,
           scriptId: null,
           createdAt: createdAt,
-          hidden: false
+          hidden: false,
+          isAssigned: undefined
         }
       });
     });

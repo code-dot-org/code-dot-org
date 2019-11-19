@@ -27,10 +27,11 @@ vi:
     attributes:
       user:
         name: 'Tên hiển thị'
-        name_example: 'Tên hiển thị<br/>(ví dụ như Cool Coder hoặc Jane S.)'
+        name_example: 'Tên hiển thị (ví dụ như Cool Coder hoặc Jane S.)'
         email: 'Thư điện tử'
         parent_email: 'Email của phụ huynh/người giám hộ'
         personal_email: "Địa chỉ email cá nhân <a href=\"%{url}\">(nhấp vào đây nếu bạn không có địa chỉ email)</a>"
+        personal_email_markdown: "Địa chỉ email cá nhân [(nhấp vào đây nếu bạn không có địa chỉ email)](%{url})"
         username: 'tài khoản'
         password: 'Mật khẩu'
         password_confirmation: 'Xác nhận mật khẩu'
@@ -41,7 +42,9 @@ vi:
         edit_header: 'Chỉnh sửa thông tin tài khoản'
         finish_sign_up_header: 'Hoàn thành tạo tài khoản'
         finish_sign_up_subheader: 'Điền thông tin sau để hoàn thành tạo tài khoản Code.org cho <strong>%{email}</strong>.'
+        finish_sign_up_subheader_markdown: 'Điền thông tin sau để hoàn thành tạo tài khoản Code.org cho **%{email}**.'
         finish_sign_up_subheader_provider: 'Điền thông tin sau để hoàn thành tạo tài khoản Code.org với <strong>%{provider}</strong> cho <strong>%{email}</strong>.'
+        finish_sign_up_subheader_provider_markdown: 'Điền thông tin sau để hoàn thành tạo tài khoản Code.org với **%{provider}** cho **%{email}**.'
         error:
           future: không thể trong tương lai
   beta: "phiên bản thử nghiệm"
@@ -113,9 +116,11 @@ vi:
     student_count: '%{count} sinh viên đã đăng ký.'
     teacher_count: '%{count} giáo viên đã đăng ký.'
     overview: 'Đăng ký một tài khoản để theo dõi quá trình học của bạn, hoặc để quản lý các lớp học của bạn. <a href="/">Bạn có thể xem qua các giai đoạn khác nhau và các câu đố</a> mà không có một tài khoản, nhưng bạn sẽ cần phải đăng ký tài khoản để lưu lại quá trình học và các đồ án.'
+    overview_markdown: 'Đăng ký một tài khoản để theo dõi quá trình học của bạn, hoặc để quản lý các lớp học của bạn. [Bạn có thể xem qua các giai đoạn khác nhau và các câu đố](/) mà không có một tài khoản, nhưng bạn sẽ cần phải đăng ký tài khoản để lưu lại quá trình học và các đồ án.'
     hoc_already_signed_up_heading: 'Bắt đầu mà không cần đăng nhập'
     hoc_already_signed_up_content: 'Bạn đã đăng ký để dạy Hour of Code! Bạn và học sinh của bạn không cần phải đăng nhập vào Code Stdio để tham gia sự kiện này. Để bắt đầu, <a href="https://code.org/learn">chọn bài hướng dẫn</a> cho lớp học của bạn và chia sẻ link này với học sinh của bạn, <br/><br/>Nếu bạn yêu thích Hour of Code và muốn tiếp tục, bạn có thể tạo mật khẩu và tạo một tài khoản Code Studio để ghi danh cho học sinh của bạn tham gia các<a href="https://code.org/educate">khoá học dài hạn</a>.'
     hoc_already_signed_up_content_post_hoc: 'Cảm ơn bản đã tổ chức Giờ Lập Trình. Để đăng nhập vào Code Studio, bạn cần phải thiết lập mật khẩu cho tài khoản của bạn. Điều này sẽ giúp bạn lưu lại tiến trình và quản lý lớp học của mình. Bạn có thể giao các khóa học cho học sinh và kiểm tra tiến độc của các em. <a href="%{studio_url}">Bạn cũng có thể tiếp tục tham gia vào các nội dung và câu đố</a> mà không cần tạo tài khoản.'
+    hoc_already_signed_up_content_post_hoc_markdown: 'Cảm ơn bản đã tổ chức Giờ Lập Trình. Để đăng nhập vào Code Studio, bạn cần phải thiết lập mật khẩu cho tài khoản của bạn. Điều này sẽ giúp bạn lưu lại tiến trình và quản lý lớp học của mình. Bạn có thể giao các khóa học cho học sinh và kiểm tra tiến độc của các em. [Bạn cũng có thể tiếp tục tham gia vào các nội dung và câu đố](%{studio_url}) mà không cần tạo tài khoản.'
     teacher_educator_guide: 'Hãy xem chỉ dẫn'
     title: "Ghi danh cho Code.org"
     school_name: 'Tên trường (tùy chọn)'
@@ -407,7 +412,9 @@ vi:
     create_personal_login_under_13_parent_email: 'Địa chỉ email của bố mẹ / người giám hộ'
     create_personal_login_info: 'Nếu bạn muốn tiếp tục sử dụng tài khoản Code.org của bạn sau khi kết thúc năm học, bạn có thể tạo đăng nhập của mình bên dưới.'
     create_personal_login_terms: "Bằng cách tạo đăng nhập cá nhân, Tôi đồng ý với <a href='%{terms_of_service_url}', target='_blank'>điều khoản dịch vụ</a> của Code.org. Nếu tôi dưới 13 tuổi, tôi chấp nhận rằng tôi có ba mẹ hoặc người giám hộ hợp pháp để sử dụng dịch vụ Code.org mặc dù không có giáo viên."
+    create_personal_login_terms_markdown: "Bằng cách tạo đăng nhập cá nhân, Tôi đồng ý với [điều khoản dịch vụ](%{terms_of_service_url}) của Code.org. Nếu tôi dưới 13 tuổi, tôi chấp nhận rằng tôi có ba mẹ hoặc người giám hộ hợp pháp để sử dụng dịch vụ Code.org mặc dù không có giáo viên."
     create_personal_login_email_note: "Chú ý: Địa chỉ email không được lưu trữ dưới mọi hình thức mà cho phép chúng tôi liên hệ với hssv. Hssv sẽ không bao giờ nhận email từ Code.org ngoại trừ email khôi phục mật khẩu. Xem <a href='%{privacy_policy_url}', target='_blank'>chính sách riêng tư</a> để biết thêm thì tin."
+    create_personal_login_email_note_markdown: 'Chú ý: Địa chỉ email không được lưu trữ dưới mọi hình thức mà cho phép chúng tôi liên hệ với hssv. Hssv sẽ không bao giờ nhận email từ Code.org ngoại trừ email khôi phục mật khẩu. Xem [chính sách riêng tư](%{privacy_policy_url}) để biết thêm thì tin.'
     enter_new_login_info: 'Nhập thông tin đăng nhập mới của bạn'
     confirm_secret_words: 'Xác minh đó là bạn bằng cách nhập những từ ngữ bí mật của mình'
     enter_parent_email: "Nhập địa chỉ email của bố mẹ hoặc người giám hộ (dành cho việc khôi phục mật khẩu)"
@@ -697,11 +704,13 @@ vi:
   terms_interstitial:
     title: "Cập nhật các điều khoản của dịch vụ và chính sách bảo mật"
     intro_desc: "Chúng tôi đã cập nhật Điều khoản Dịch vụ và Chính sách Bảo mật của chúng tôi, như được hiển thị bên dưới. Những thay đổi này có hiệu lực từ ngày 24 tháng 8 năm 2016. Sự thay đổi lớn nhất: chúng tôi sẽ<i>không còn lưu trữ địa chỉ email cho các tài khoản sinh viên trên Code Studio.</i> Đây là một vấn đề lớn đối với chúng tôi và chúng tôi hy vọng nó đặt ra một tiêu chuẩn mới cho sự riêng tư của sinh viên trong công nghệ giáo dục. Chúng tôi đã gửi cho bạn bản tóm tắt các thay đổi khác qua email."
+    intro_desc_markdown: "Chúng tôi đã cập nhật Điều khoản Dịch vụ và Chính sách Bảo mật của chúng tôi, như được hiển thị bên dưới. Những thay đổi này có hiệu lực từ ngày 24 tháng 8 năm 2016. Sự thay đổi lớn nhất: chúng tôi sẽ_không còn lưu trữ địa chỉ email cho các tài khoản sinh viên trên Code Studio._ Đây là một vấn đề lớn đối với chúng tôi và chúng tôi hy vọng nó đặt ra một tiêu chuẩn mới cho sự riêng tư của sinh viên trong công nghệ giáo dục. Chúng tôi đã gửi cho bạn bản tóm tắt các thay đổi khác qua email."
     intro_instructions: "Bạn cần chấp nhận những điều khoản mới này cho học sinh dưới 13 tuổi trong lớp học của mình để có quyền truy cập đầy đủ vào tất cả các tính năng mới nhất trong Code Studio. Khi đăng ký một tài khoản cho một học sinh dưới 13, bạn sẽ được yêu cầu xác nhận rằng trường của bạn có sự đồng ý của cha mẹ về việc thu thập thông tin cá nhân của học sinh cho việc sử dụng và lợi ích của nhà trường, bao gồm các chương trình giáo dục như Code Studio."
     tos: "Các điều khoản của Code.org"
     privacy: "Chính sách riêng tư"
     privacy_notice: "Thông tin bảo mật"
     accept_label: 'Tôi đồng ý với cập nhật <a href="%{tos_url}" target="_blank">Điều khoản dịch vụ</a>và <a href="%{privacy_url}" target="_blank">Chính sách bảo mật</a>'
+    accept_label_markdown: Tôi đồng ý với cập nhật [Điều khoản dịch vụ](%{tos_url})và [Chính sách bảo mật](%{privacy_url})
     accept: "Đồng ý"
     print: "In"
     review_terms: "Xem những điều khoản mới"
@@ -725,6 +734,7 @@ vi:
     submit: "Gửi"
     decline: "Đóng"
   zendesk_too_young_message: 'Rất tiếc, người dùng trẻ em không thể đăng nhập vào trang web hỗ trợ của chúng tôi, ban có thể duyệt<a href="http://support.code.org">support.code.org</a> mà không cần đăng nhập cùng hay yêu cầu phụ huynh hoặc giáo viên của ban liên hệ với chúng tôi .'
+  zendesk_too_young_message_markdown: 'Rất tiếc, người dùng trẻ em không thể đăng nhập vào trang web hỗ trợ của chúng tôi, ban có thể duyệt[support.code.org](http://support.code.org) mà không cần đăng nhập cùng hay yêu cầu phụ huynh hoặc giáo viên của ban liên hệ với chúng tôi .'
   progress:
     not_started: chưa bắt đầu
     in_progress: đang thực hiện

@@ -3317,6 +3317,27 @@ sk-SK:
       CourseE_HOC 2018 Level_9b:
         voyage_aquatic_9a: Vidíš červené a modré koralové bloky? Použi ich ako ukazovatele
           cesty v útese na otočenie doprava a doľava.
+      Dance_2019_01:
+        validation: |-
+          **Ako prejdem túto úroveň?**
+
+          -   Zabezpeč, aby sa na obrazovke objavil tanečník.
+
+          _Táto úroveň končí po 4 taktoch._
+      Dance_2019_04:
+        validation: |-
+          **Ako prejdem túto úroveň?**
+
+          -   Tanečník musí po 4 taktoch zmeniť kroky.
+
+          _Úroveň končí po 7 taktoch._
+      Dance_2019_05:
+        validation: |-
+          **Ako prejdem túto úroveň?**
+
+          -   Po 6 taktoch musí tvoj tanečník robiť iný krok ako robil po 4 taktoch.
+
+          _Úroveň končí po 11 taktoch._
       Dance_Party_01:
         validation: |-
           **Ako prejdem túto úroveň?**

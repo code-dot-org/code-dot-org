@@ -4,7 +4,10 @@ import {connect} from 'react-redux';
 import BaseDialog from '../../../templates/BaseDialog';
 import AbuseError from '../AbuseError';
 import color from '../../../util/color';
-import {PLATFORM_ANDROID, DEFAULT_PLATFORM} from '../../../util/exporter';
+import {
+  PLATFORM_ANDROID,
+  DEFAULT_PLATFORM
+} from '../../../util/exporterConstants';
 import {hideExportDialog} from '../exportDialogRedux';
 import i18n from '@cdo/locale';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';

@@ -118,6 +118,12 @@ ur:
         options:
           EFFECT:
             '"none"': کوئی بھی نہیں
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': ہیرے
+            '"x"': x
+            '"y"': وائے
       Dancelab_whenKey:
         options:
           KEY:

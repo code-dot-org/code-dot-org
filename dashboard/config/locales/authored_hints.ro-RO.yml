@@ -883,6 +883,27 @@ ro-RO:
           -   Foloseşte blocul `când săgeata stângă este apăsată` pentru a face Robotul să facă o mişcare de dans când apeşi pe ea.
 
           _Nivelul se termină după 7 măsuri._
+      Dance_2019_01:
+        validation: |-
+          **Cum trec de acest nivel?**
+
+          -   Fi sigur că un dansator apare pe ecran.
+
+          _Nivelul se termină după 4 măsuri._
+      Dance_2019_04:
+        validation: |-
+          **Cum trec de acest nivel?**
+
+          -   Dansatorul trebuie să treacă la o nouă mişcare după 4 măsuri.
+
+          _Nivelul se termină după 7 măsuri._
+      Dance_2019_05:
+        validation: |-
+          **Cum trec de acest nivel?**
+
+          -   După 6 măsuri, dansatorul trebuie să facă alt dans decât cel cel făcut după 4 măsuri.
+
+          _Nivelul se termină după 11 măsuri._
       Dance_Party_01:
         validation: |-
           **Cum trec de acest nivel?**
@@ -1229,7 +1250,7 @@ ro-RO:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">&gt;</title>
+              <title name="OP">></title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -1316,7 +1337,7 @@ ro-RO:
           \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
           name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
           \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
-          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
       course3_farmer_condLoops_challenge1:
         courseD_farmer_condLoops_challenge1_a: Butonul `PAS` ar putea fi foarte util
           pentru această problemă.

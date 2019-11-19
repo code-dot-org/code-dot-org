@@ -3,38 +3,17 @@ skip_dialog true
 markdown <<MARKDOWN
 # Unplugged Lesson: Getting Loopy
 
-**1. Review "[Getting Loopy](https://curriculum.code.org/csf-19/courseb/6/)" Lesson Plan from Course B:**
-<br/>Course B is meant for Grade 1 students. Loops comes up in other courses, as well, and you can find examples of those lessons at the bottom of this page.
+> A **loop** is the action of doing something over and over again.
+****
 
-<br/>
+## **1. Review "<a href="https://curriculum.code.org/csf-19/courseb/6/" target="blank">Getting Loopy</a>" Lesson Plan from Course B:**
+Course B is meant for Grade 1 students. Loops comes up in other courses, as well, and you can find examples of those lessons at the bottom of this page.
 
-**2. Watch the student video: Getting Loopy**
-<br/>
+## **2. Watch the student video: Getting Loopy (found in the lesson plan)**
 This is a video that you would show your students to help introduce the concept of loops and kick off the unplugged lesson.
 
-[![](https://images.code.org/eb585fcc71f5f1d2fa4d3bcddcf74b8b-image-1571253274522.14.26 PM.png)](https://www.youtube.com/watch?v=JoKTqHCni0M)
-
-[Can't see the video? Click here](http://videos.code.org/2014/C1-getting-loopy.mp4)
-
-<br/>
-
-**3. Watch the teacher video: How to teach "Getting Loopy"**
-<br/>
-This video is meant to be support for you as the teacher, if you are looking for tips on how to run this lesson. 
-[![](https://images.code.org/fc594434f8b6869b1db1872fc85ca309-image-1571253220717.13.14 PM.png)](https://www.youtube.com/watch?v=Vo2woYRRogA)
-
-
-<br/>
-
-**4. Review other unplugged lessons that introduce loops:**
-
-- Course A (Kindergarten): [Happy Loops](https://curriculum.code.org/csf-19/coursea/7/)
-- Course C (Grade 2): [My Loopy Robotic Friends, Jr.](https://curriculum.code.org/csf-19/coursec/9/)
-
 ***
-
-> ## Reflect
-> How would you explain the concept of loops to your students?
+<a href="https://curriculum.code.org/csf-19/courseb/6/" target="blank">![](https://images.code.org/74f963b452dbba7eb260d6b9e1fa2b4c-image-1573079606451.33.05 PM.png)</a>
 
 MARKDOWN
 

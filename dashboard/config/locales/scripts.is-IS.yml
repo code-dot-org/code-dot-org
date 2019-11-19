@@ -5421,3 +5421,15 @@ is:
               name: Breytur
             For Loops:
               name: Frá lykkjur
+        dance-extras-2019:
+          title: Halda áfram að dansa
+          description: Halda áfram eftir fyrstu klukkustundina með fleiri hugmyndir
+            að verkefnum.
+        csp10-pilot:
+          stages:
+            new stage:
+              name: nýr áfangi
+        csp4-preview:
+          stages:
+            new stage:
+              name: nýr áfangi

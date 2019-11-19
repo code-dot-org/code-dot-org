@@ -39,6 +39,7 @@ zh-TW:
         Custom: 藝術家
         CustomStudio: Play Lab
         Gamelab: Game Lab
+        Spritelab: Sprite Lab
     trophy:
       name:
         Bronze: 銅牌
@@ -374,6 +375,7 @@ zh-TW:
         CSF_EF_cs_matters: 計算機科學很重要
         CSF_maze_intro_k1_blocks: Code Studio 介紹
         CSF_maze_intro_text_blocks: Code Studio 介紹
+        CSF_my_robotic_friends: 我的機器人朋友
         CSF_Super_Digital_Citizen: 超級數位公民
         CSF_stevie_big_project: Stevie 和 Big Project
         CSF_unspotted_bugs: 沒被發現的蟲蟲

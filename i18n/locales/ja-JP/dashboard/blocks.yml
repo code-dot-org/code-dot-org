@@ -549,6 +549,7 @@ ja:
             '"rotation"': 回転
             '"x"': 水平方向の位置
             '"y"': 垂直方向の位置
+            '"tint"': 色合い
       Dancelab_setPropRandom:
         text: ランダムにする {SPRITE} {PROPERTY}
         options:
@@ -728,6 +729,13 @@ ja:
             '"bass"': ベース
             '"mid"': ミドル
             '"treble"': トレブル
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"hearts_colorful"': ハート
+            '"diamond"': ダイヤモンド
+            '"x"': x
+            '"y"': 'y'
       Dancelab_whenKey:
         text: "{KEY} が押されたとき"
         options:
@@ -747,6 +755,8 @@ ja:
             '1': ミドル
             '2': トレブル
       Dancelab_whenSetup:
+        text: セットアップ
+      Dancelab_whenSetup2:
         text: セットアップ
       gamelab_changePropBy:
         text: "{SPRITE} {PROPERTY} を {VAL} 変更"

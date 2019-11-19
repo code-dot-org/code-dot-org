@@ -2243,6 +2243,71 @@ pt-BR:
         voyage_aquatic_9a: Que recife de corais bonito! O coral azul parece ser o
           caminho **direito**, e lembre-se também de deixar o coral vermelho no caminho
           **esquerdo**.
+      Dance_2019_01:
+        validation: |-
+          **Como passar desta fase?**
+          \*Certifique-se de um(a) dançarino(a) apareça na tela.
+
+          _Esta fase termina após quatro compassos._
+      Dance_2019_02:
+        validation: |-
+          **Como é que eu passo este nível?**
+
+          -   O dançarino tem que realizar um movimento.
+          -   Precisas de premir um botão de direção.
+
+          _Este nível termina após 4 compassos._
+        challenges: |-
+          **Desafio Opcional**
+
+          -   Usa mais que um bloco <xml><block type="Dancelab_whenKey"><title name="KEY">"up"</title></block></xml>.
+      Dance_2019_03:
+        validation: |-
+          **Como é que eu passo este nível?**
+
+          -   Ambos os dançarinos têm que realizar um movimento.
+          -   Precisas de premir os botões de direção.
+
+          _Este nível termina após 4 compassos._
+      Dance_2019_04:
+        validation: |-
+          **Como passar desta fase?**
+          \*O(a) dançarino(a) precisa fazer um novo passo após quatro compassos.
+
+          _A fase termina após oito compassos._
+      Dance_2019_05:
+        validation: |-
+          **Como passar desta fase?**
+
+          \*Após seis compassos, seu(sua) dançarino(a) precisa executar uma dança diferente da que estava fazendo após o quarto compasso.
+
+          _Esta fase termina após doze compassos._
+      Dance_2019_06:
+        validation: |-
+          **Como é que eu passo este nível?**
+
+          -   Cria um dançarino principal e um grupo de dançarinos secundários.
+
+          _Este nível termina após 7 compassos._
+      Dance_2019_07:
+        validation: |-
+          **Como é que eu passo este nível?**
+
+          -   Altera o tamanho de pelo menos um dançarino após a música começar.
+
+          _Este nível termina após 6 compassos._
+      Dance_2019_08:
+        validation: |-
+          **Como é que eu passo este nível?**
+
+          -   Troca a matiz da cor de pelo menos um dançarino.
+
+          _Este nível termina após 6 compassos._
+      Dance_2019_09:
+        validation: |-
+          **Como é que eu passo este nível?**
+
+          -   Apenas prime o botão "Terminar"!
       Dance_Party_01:
         validation: |-
           **Como passar desta fase?**
@@ -2278,6 +2343,13 @@ pt-BR:
           **Desafio opcional**
 
           Altere o efeito do plano de fundo em diversas partes da música, conectando o novo bloco aos eventos <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      Dance_Party_05:
+        validation: |-
+          **Como é que eu passo este nível?**
+
+          -   O teu dançarino precisa de deslocar-se ciclicamente no mínimo em 4 movimentos de dança diferentes antes do nível acabar.
+
+          _Este nível termina após 12 compassos._
       Dance_Party_06:
         validation: |-
           **Como passar desta fase?**
@@ -3366,7 +3438,7 @@ pt-BR:
           \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
           name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
           \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
-          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
         courseD_collector_debugging_challenge2_b: |-
           Em seguida, colete as gemas restantes nessa linha.
 

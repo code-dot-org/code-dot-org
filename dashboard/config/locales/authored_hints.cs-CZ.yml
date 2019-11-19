@@ -411,6 +411,27 @@ cs-CZ:
       CourseE_HOC 2018 Level_9b:
         voyage_aquatic_9a: Vidíš červené a modré korálové bloky? Použij je jako orientační
           body pro otočení doprava nebo doleva.
+      Dance_2019_01:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          -   Zajisti, aby se tanečník zobrazil na obrazovce.
+
+          _Tato úroveň končí po 4 taktech._
+      Dance_2019_04:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          -   Tanečník musí po 4 taktech přejít na nový pohyb.
+
+          _Tato úroveň končí po 8 taktech._
+      Dance_2019_05:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          -   Po 6 taktech musí tanečník tančit jiný tanec než po 4 taktech.
+
+          _Tato úroveň končí po 12 taktech._
       Dance_Party_01:
         validation: |-
           **Jak splním tuto úroveň?**

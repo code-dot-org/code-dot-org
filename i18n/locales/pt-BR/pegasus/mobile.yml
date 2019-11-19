@@ -1150,21 +1150,25 @@
   course4_shortdescription_congrats: "Vamos mais longe? Os alunos vão se aprofundar nos tópicos de programação apresentados em cursos anteriores para encontrar soluções flexíveis para problemas mais complexos. No final deste curso, os alunos criarão histórias interativas e jogos que podem ser compartilhados com outras pessoas. Recomendado para alunos do 4º ao 8º ano."
   coursea_shortdescription_congrats: "Uma introdução à ciência da computação para pré-leitores."
   courseb_shortdescription_congrats: "Uma introdução à ciência da computação para pré-leitores. (Similar ao Curso A, mas com mais variedade para os alunos mais velhos.)"
+  coursec_shortdescription_congrats: "Aprenda o básico da ciência da computação e crie sua própria arte, histórias e jogos."
   coursed_shortdescription_congrats: "Abrange rapidamente conceitos do Curso C e, em seguida, vá mais longe com algoritmos, laços aninhados, condicionais e muito mais."
   coursee_shortdescription_congrats: "Rapidamente cobrem conceitos de curso C e D e vai mais longe com funções."
   coursef_shortdescription_congrats: "Aprenda todos os conceitos Fundamentais da Ciência da Computação e crie sua própria arte, história ou jogo."
   coursea-2017_shortdescription_congrats: Uma introdução à ciência da computação para pré-leitores.
   courseb-2017_shortdescription_congrats: Uma introdução à ciência da computação para pré-leitores. (Similar ao Curso A, mas com mais variedade para os alunos mais velhos.)
+  coursec-2017_shortdescription_congrats: Aprenda o básico da ciência da computação e crie sua própria arte, histórias e jogos.
   coursed-2017_shortdescription_congrats: Abrange rapidamente conceitos do Curso C e, em seguida, vá mais longe com algoritmos, laços aninhados, condicionais e muito mais.
   coursee-2017_shortdescription_congrats: Rapidamente cobrem conceitos de curso C e D e vai mais longe com funções.
   coursef-2017_shortdescription_congrats: Aprenda todos os conceitos Fundamentais da Ciência da Computação e crie sua própria arte, história ou jogo.
   coursea-2018_shortdescription_congrats: Uma introdução à ciência da computação para pré-leitores.
   courseb-2018_shortdescription_congrats: Uma introdução à ciência da computação para pré-leitores. (Similar ao Curso A, mas com mais variedade para os alunos mais velhos.)
+  coursec-2018_shortdescription_congrats: Aprenda o básico da ciência da computação e crie sua própria arte, histórias e jogos.
   coursed-2018_shortdescription_congrats: Abrange rapidamente conceitos do Curso C e, em seguida, vá mais longe com algoritmos, laços aninhados, condicionais e muito mais.
   coursee-2018_shortdescription_congrats: Rapidamente cobrem conceitos de curso C e D e vai mais longe com funções.
   coursef-2018_shortdescription_congrats: Aprenda todos os conceitos Fundamentais da Ciência da Computação e crie sua própria arte, história ou jogo.
   coursea-2019_shortdescription_congrats: Uma introdução à ciência da computação para pré-leitores.
   courseb-2019_shortdescription_congrats: Uma introdução à ciência da computação para pré-leitores. (Similar ao Curso A, mas com mais variedade para os alunos mais velhos.)
+  coursec-2019_shortdescription_congrats: Aprenda o básico da ciência da computação e crie sua própria arte, histórias e jogos.
   coursed-2019_shortdescription_congrats: Abrange rapidamente conceitos do Curso C e, em seguida, vá mais longe com algoritmos, laços aninhados, condicionais e muito mais.
   coursee-2019_shortdescription_congrats: Rapidamente cobrem conceitos de curso C e D e vai mais longe com funções.
   coursef-2019_shortdescription_congrats: Aprenda todos os conceitos Fundamentais da Ciência da Computação e crie sua própria arte, história ou jogo.
@@ -1564,6 +1568,7 @@
   hoc2018_mc_homepage_watch_video: "Assista ao nosso vídeo"
   hoc2018_mc_homepage_join_us: "Participe"
   hoc2018_mc_homepage_try_it: "Experimente"
+  hoc2018_mc_back: "O Minecraft está de volta com uma nova atividade para a Hora do Código!"
   hoc2018_mc_back_journey: "O Minecraft está de volta para a Hora do Código com uma nova atividade! Viaje através de Minecraft com código."
   hoc2018_mc_teacher_guide: "Exibir Guia do Professor"
   hoc2018_mc_minecraft_education: "Minecraft Educação"

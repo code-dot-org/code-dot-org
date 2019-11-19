@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import i18n from '@cdo/locale';
 import color from '../../../util/color';
-import {PLATFORM_ANDROID, PLATFORM_IOS} from '../../../util/exporter';
+import {PLATFORM_ANDROID, PLATFORM_IOS} from '../../../util/exporterConstants';
 import SendToPhone from '../SendToPhone';
 import commonStyles from './styles';
 

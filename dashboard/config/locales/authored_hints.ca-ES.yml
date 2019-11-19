@@ -109,6 +109,27 @@ ca-ES:
       CourseE_HOC 2018 Level_9b:
         voyage_aquatic_9a: Quin escull de corall més preciós! El corall blau està
           bé si és a la **dreta**, i assegura-te'n que el corall vermell queda a l'**esquerra**!
+      Dance_2019_01:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          -   Assegura-te'n que el ballarí aparegui a la pantalla.
+
+          _Aquest nivell acaba després de quatre mesures._
+      Dance_2019_04:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          -   El ballarí ha de canviar a un nou moviment després de 4 mesures.
+
+          _Aquest nivell acaba després de 8 mesures._
+      Dance_2019_05:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          -   Després de 6 mesures, el teu ballarí necessita estar fent una dansa diferent a la que feia 4 mesures abans.
+
+          _Aquest nivell acaba després de 12 mesures._
       Dance_Party_01:
         validation: |-
           **Com passo aquest nivell?**

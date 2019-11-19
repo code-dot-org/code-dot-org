@@ -21,6 +21,7 @@ zh-TW:
         email: 電子信箱
         parent_email: 家長/監護人的電子郵件
         personal_email: 個人電子郵件位址 <a href="%{url}"> (如果您沒有電子郵件位址請按這裡)</a>
+        personal_email_markdown: 個人電子郵件位址 [(如果您沒有電子郵件位址請按這裡)](%{url})
         username: 用戶名稱
         password: 密碼
         password_confirmation: 密碼確認
@@ -31,6 +32,7 @@ zh-TW:
         edit_header: 編輯帳戶資料
         finish_sign_up_header: 已成功創建你的帳戶
         finish_sign_up_subheader: 填妥下面的資料以完成 <strong>%{email}</strong> 的帳戶申請。
+        finish_sign_up_subheader_markdown: 填妥下面的資料以完成 **%{email}** 的帳戶申請。
         error:
           future: 不能選擇將來的時間
   beta: 測試版
@@ -50,6 +52,7 @@ zh-TW:
   join_section:
     code:
       placeholder: 學習小組代碼 (ABCDEF)
+      instructions_short: 輸入您的學習小組代碼（6字元）
   add_hint_form:
     placeholder: 請在此處輸入您的提示
     submit: 添加提示
@@ -101,12 +104,15 @@ zh-TW:
     student_count: "%{count} 名學生已經註冊。"
     teacher_count: "%{count} 名教師已經註冊。"
     overview: 註冊一個帳號來追蹤你的進度或管理你的班級。<a href="/">你可以瀏覽不同的階段與關卡</a>而不用註冊，但需要註冊帳號來儲存你的專案與進度。
+    overview_markdown: 註冊一個帳號來追蹤你的進度或管理你的班級。[你可以瀏覽不同的階段與關卡](/)而不用註冊，但需要註冊帳號來儲存你的專案與進度。
     hoc_already_signed_up_heading: 開始但不登入
     hoc_already_signed_up_content: 您已註冊指導一小時玩程式活動！你與學生不用登入 Code Studio 就可以參與課程，一開始，可以在您的課堂上<a
       href="%{learn_url}">選擇一個課程</a>並和學生分享這個連結。<br/><br/>如果您覺得一小時玩程式的內容很棒，想要更進一步使用時，你可以在下方申請一個
       Code Studio 帳戶，這樣你就可以替學生註冊參加<a href="%{educate_url}">較長期的課程</a>。
     hoc_already_signed_up_content_post_hoc: 感謝你舉辦了「一小時玩程式」活動。您需要設定一組密碼來註冊 Code Studio。這樣你就能儲存進度和管理班級，並為學生分配課程並追蹤他們的進度。在沒有註冊帳戶之前，<a
       href="%{studio_url}">你還是可以繼續使用</a>。
+    hoc_already_signed_up_content_post_hoc_markdown: 感謝你舉辦了「一小時玩程式」活動。您需要設定一組密碼來註冊
+      Code Studio。這樣你就能儲存進度和管理班級，並為學生分配課程並追蹤他們的進度。在沒有註冊帳戶之前，[你還是可以繼續使用](%{studio_url})。
     teacher_educator_guide: 參閱教師指引
     title: 在 Code.org 上註冊
     school_name: 學校名稱 （選填）
@@ -340,6 +346,7 @@ zh-TW:
       playlab: Play Lab
       scratch: Scratch
       sports: 運動
+      spritelab: Sprite Lab
       starwars: 星際大戰
       starwarsblocks: 星際大戰（程式積木）
       starwarsblocks_hour: 星際大戰（程式積木）
@@ -406,9 +413,13 @@ zh-TW:
     create_personal_login_link_account: 你也可以在「管理連接的帳戶」處連接到個人帳戶。
     create_personal_login_terms: 通過創建個人帳戶，我同意接受 Code.org 的<a href='%{terms_of_service_url}',
       target='_blank'>服務條款</a>。我確認我的父母或監護人已經允許我在沒有老師指導情況下使用 Code.org 的服務。
+    create_personal_login_terms_markdown: 通過創建個人帳戶，我同意接受 Code.org 的[服務條款](%{terms_of_service_url})。我確認我的父母或監護人已經允許我在沒有老師指導情況下使用
+      Code.org 的服務。
     create_personal_login_email_note: 注意： 電子郵件位址的儲存形式並不允許我們聯繫學生。學生將永遠不會為收到來自 Code.org
       的電子郵件，除了密碼恢復。請參閱我們的 <a href='%{privacy_policy_url}', target='_blank'> 隱私政策</a>
       的詳細資訊。
+    create_personal_login_email_note_markdown: 注意： 電子郵件位址的儲存形式並不允許我們聯繫學生。學生將永遠不會為收到來自
+      Code.org 的電子郵件，除了密碼恢復。請參閱我們的 [隱私政策](%{privacy_policy_url}) 的詳細資訊。
     enter_new_login_info: 輸入你新的登入資訊
     confirm_secret_words: 為了確認是你本人請輸入目前的通關密語
     parent_email_label: 監護人信箱（非必填）
@@ -727,6 +738,8 @@ zh-TW:
     title: 更新後的服務條款和隱私政策
     intro_desc: 我們已更新了服務條款和隱私政策，如下所示。這些改更自 2016 年 8 月 24 日起生效。最大的變化是：我們將<strong>不再把學生帳戶使用的電子信箱儲存在
       Code Studio。</strong>這對我們來說是一大改變，我們希望它在教育技術中為學生隱私起個新的標準。我們已經通過電子郵件給你發送了其他的修改摘要。
+    intro_desc_markdown: 我們已更新了服務條款和隱私政策，如下所示。這些改更自 2016 年 8 月 24 日起生效。最大的變化是：我們將**不再把學生帳戶使用的電子信箱儲存在
+      Code Studio。**這對我們來說是一大改變，我們希望它在教育技術中為學生隱私起個新的標準。我們已經通過電子郵件給你發送了其他的修改摘要。
     intro_instructions: 若你要小於 13 歲的學生能使用 Code Studio 上的完整功能，你必須接受這些新的條款。若要為 13 歲以下的學生註冊一個帳戶，則需要確認你的學校是否有其父母的同意學校收集並使用學生個人資訊，以利用在包括像
       Code Studio 這樣的教育計劃。
     tos: 服務條款
@@ -734,9 +747,12 @@ zh-TW:
     privacy_notice: 隱私聲明
     accept_label: 我同意 <a href="%{tos_url}"target="_blank"> 服務條款</a> 和 <a href="%{privacy_url}"target="_blank">
       隱私政策</a>
+    accept_label_markdown: 我同意 [服務條款](%{tos_url}) 和 [隱私政策](%{privacy_url})
     accept: 接受
     print: 列印
     reminder_desc: 我們已經更新了<a href="%{tos_url}"target="_blank"> 服務條款</a>和<a href="%{privacy_url}"target="_blank">隱私政策</a>。同意前請仔細閱讀。注意，在你的學生接受更新的條款之前，可能無法使用我們教授
+      JavaScript 的工具。
+    reminder_desc_markdown: 我們已經更新了[服務條款](%{tos_url})和[隱私政策](%{privacy_url})。同意前請仔細閱讀。注意，在你的學生接受更新的條款之前，可能無法使用我們教授
       JavaScript 的工具。
     review_terms: 查看更新後的條款
   school_info_interstitial:
@@ -759,6 +775,7 @@ zh-TW:
     submit: 提交
     decline: 關閉
   zendesk_too_young_message: 抱歉，年紀較小的用戶不能登入到我們的站台，詳情請參見<a href="http://support.code.org">support.code.org</a>，你可以請你的家長或是老師幫忙。
+  zendesk_too_young_message_markdown: 抱歉，年紀較小的用戶不能登入到我們的站台，詳情請參見[support.code.org](http://support.code.org)，你可以請你的家長或是老師幫忙。
   progress:
     not_started: 未開始
     in_progress: 正在進行
@@ -850,6 +867,7 @@ zh-TW:
     csf_data: 數據
     csf_conditionals: 條件判斷（Conditionals）
     csf_sprites: 角色
+    csf_spritelab: Sprite Lab
     csf_nested_loops: 巢狀迴圈
     csf_functions: 函式
     csf_variables: 變數
@@ -1002,11 +1020,13 @@ zh-TW:
         codecademy: CodeCademy
         csfirst: Google CS First
         khan: Khan Academy
+        kodable: Kodable
         scratch: Scratch
         tynker: Tynker
         other: 其它：
       robotics:
         grok: Grok Learning
+        kodable: Kodable
         lego: LEGO Education
         microbit: Microbit
         ozobot: Ozobot

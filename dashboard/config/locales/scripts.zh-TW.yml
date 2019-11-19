@@ -879,6 +879,8 @@ zh-TW:
               name: 獨立影片
             Curriculum Reference:
               name: 課程參考
+            Sprite Lab:
+              name: Sprite Lab
         algebraPD2b:
           description: 階段 2 暑假的線上混合式學習
           description_short: 階段 2 暑假的線上混合式學習
@@ -1221,6 +1223,12 @@ zh-TW:
           description: 階段 3 學年發展
           description_short: 階段 3 學年發展
           stages:
+            Earth Science Challenges:
+              name: 地球科學挑戰
+            Life Science Challenges:
+              name: 生命科學挑戰
+            Physical Science Challenges:
+              name: 物理科學挑戰
             Welcome!:
               name: 歡迎！
             Wrap-Up:
@@ -1403,10 +1411,14 @@ zh-TW:
               name: Javascript 物件的創建
             Deleting Records:
               name: 紀綠的刪除
+            Importing and Exporting Data:
+              name: 匯入和匯出資料
             Permanent Data Storage:
               name: 永久資料儲存
             Reading Records:
               name: 紀錄的讀取
+            Sample Apps:
+              name: 應用程式範例
             Updating Records:
               name: 紀錄的更新
             Visualizing Data:
@@ -1428,10 +1440,14 @@ zh-TW:
               name: Javascript 物件的創建
             Deleting Records:
               name: 紀綠的刪除
+            Importing and Exporting Data:
+              name: 匯入和匯出資料
             Permanent Data Storage:
               name: 永久資料儲存
             Reading Records:
               name: 紀錄的讀取
+            Sample Apps:
+              name: 應用程式範例
             Updating Records:
               name: 紀錄的更新
             Visualizing Data:
@@ -1548,6 +1564,8 @@ zh-TW:
               name: 建立函式
             Using Simple Commands:
               name: 簡單指令的使用
+            Unit 3 Chapter 1 Assessment:
+              name: 單元 1 第 1 節 評量
         csp4-2017:
           title: CSP 單元 4 - 大數據與隱私 ('17-'18)
           stages:
@@ -1557,6 +1575,8 @@ zh-TW:
               name: 簡單加密
             What is Big Data?:
               name: 大數據是什麼？
+            Unit 4 Chapter 1 Assessment:
+              name: 單元 1 第 1 節 評量
             Student Post-Course Survey:
               name: 課後問卷調查
         csp5-2017:
@@ -1584,8 +1604,12 @@ zh-TW:
               name: 單元 5 評量 1
             Unit 5 Assessment 2:
               name: 單元 5 評量 2
+            "'If' Statements Unplugged":
+              name: "「如果」陳述式不插電教程"
             '"If" Statements Unplugged':
               name: "「如果」陳述式不插電教程"
+            Unit 3 Chapter 1 Assessment 3:
+              name: 單元 3 第 1 節 評量 3
             Unit 5 Assessment 3:
               name: 單元 5 評量 3
             Unit 5 Assessment 4:
@@ -1598,10 +1622,16 @@ zh-TW:
               name: 創建一個 App - 帆布畫家
             Unit 5 Assessment 5 - Practice AP questions:
               name: 單元 5 評量 5 - 實踐 AP 問題
+            '"if" Statements Unplugged':
+              name: "「如果」陳述式不插電教程"
         CSDU3-Draft:
           title: " TEMP CSD 單元 3 - 互動遊戲與動畫"
           description_short: 程式設計
           stages:
+            Booleans and Conditionals:
+              name: 布林值和條件判斷
+            Collision Detection:
+              name: 碰撞檢測
             Collisions:
               name: 碰撞
             Complex Conditionals:
@@ -1610,12 +1640,18 @@ zh-TW:
               name: 複合角色動作
             Conditionals and Keyboard Input:
               name: 條件判斷與鍵盤輸入
+            Draw Loop and Randomization:
+              name: 繪圖迴圈和隨機取值
             Drawing in Game Lab:
               name: 用 Game Lab 繪圖
+            'Project: Interactive Card':
+              name: 專案：互動式卡片
             Sprites and Images:
               name: 角色和圖像
             Sprites and Properties:
               name: 角色與屬性
+            Variables and Animation:
+              name: 變數與動畫
             Functions:
               name: 函式
             'Project: Build a Game':
@@ -1810,6 +1846,8 @@ zh-TW:
               name: 外部樣式表
             Peer Review:
               name: 同儕審查
+            Describing Web Pages:
+              name: 網頁描述
         CSDU5-Draft:
           title: " TEMP CSD 單元 5"
           description_short: 數據
@@ -2029,18 +2067,28 @@ zh-TW:
           title: CSD 單元 3 -互動式遊戲和動畫
           description_short: Game Lab 編程環境介紹
           stages:
+            Booleans and Conditionals:
+              name: 布林值和條件判斷
             Complex Conditionals:
               name: 複合條件判斷
             Conditionals and Keyboard Input:
               name: 條件判斷與鍵盤輸入
+            Draw Loop and Randomization:
+              name: 繪圖迴圈和隨機取值
             Drawing in Game Lab:
               name: 用 Game Lab 繪圖
+            'Project: Interactive Card':
+              name: 專案：互動式卡片
             Sprites and Images:
               name: 角色和圖像
             Sprites and Properties:
               name: 角色與屬性
+            Variables and Animation:
+              name: 變數與動畫
             Velocity:
               name: 速度
+            Collision Detection:
+              name: 碰撞檢測
             Complex Sprite Movement:
               name: 複合角色動作
             Collisions:
@@ -2067,6 +2115,8 @@ zh-TW:
               name: 角色動作
             Conditionals:
               name: 條件判斷（Conditionals）
+            Keyboard Input:
+              name: 鍵盤輸入
             Project - Interactive Card:
               name: 專案 - 互動式卡片
             Project - Design a Game:
@@ -2150,6 +2200,10 @@ zh-TW:
               name: 匿名學生課前調查
             Unit 1 Chapter 1 Assessment:
               name: 單元 1 第 1 節 評量
+            Unit 3 Chapter 1 Assessment:
+              name: 單元 1 第 1 節 評量
+            Unit 4 Chapter 1 Assessment:
+              name: 單元 1 第 1 節 評量
         csd1-2017:
           title: CSD 單元 1 - 問題解決 ('17-'18)
           stages:
@@ -2173,6 +2227,8 @@ zh-TW:
               name: 單元 1 概覽
             Discovery Learning:
               name: 發現學習
+            'Lessons 4-6: Encoding and Sending Numbers':
+              name: 課程  4 - 6：編碼和發送數字訊息
             'Lessons 4 - 6: Encoding and Sending Numbers':
               name: 課程  4 - 6：編碼和發送數字訊息
             'Lessons 1 - 2: Bytes, File Sizes, and Text Compression':
@@ -2181,6 +2237,10 @@ zh-TW:
               name: 單元 2 概覽
             Unit 3 Overview:
               name: 單元 5 概覽
+            Event Driven Programming:
+              name: 事件驅動的程式設計
+            Variables and Strings:
+              name: 變數與字串
             Unit 5 Overview:
               name: 單元 5 概覽
         csp1-support:
@@ -2280,6 +2340,8 @@ zh-TW:
               name: 以使用者為中心採訪
             Analyzing Interviews:
               name: 訪談中分析
+            Redesigning a Space:
+              name: 重新設計一個空間
             Presenting Your Design:
               name: 展示您的設計
             Designing Apps for Good:
@@ -2292,6 +2354,8 @@ zh-TW:
               name: 原型測試
             Digital Design:
               name: 數位設計
+            Event Driven Programming:
+              name: 事件驅動的程式設計
             Basic App Functionality:
               name: 基本的 App 函式
             Testing the App:
@@ -2405,6 +2469,8 @@ zh-TW:
           stages:
             Digital Citizenship:
               name: 數位公民
+            Build a Star Wars Game:
+              name: 創建一個星際大戰遊戲！
             Explore Project Ideas:
               name: 找些專案靈感
             Build Your Project:
@@ -2447,6 +2513,8 @@ zh-TW:
               name: 介紹
             Ice Age Play Lab:
               name: 冰原歷險記 Play Lab
+            'Algorithms: Tangrams':
+              name: '演算法: 七巧板'
         classic-hoc-impact-study:
           title: 一小時玩程式 問卷調查
           description_short: 和許多有趣的角色一塊兒學學計算機科學基礎！
@@ -2539,6 +2607,12 @@ zh-TW:
           stages:
             Welcome!:
               name: 歡迎！
+            Earth Science Challenges:
+              name: 地球科學挑戰
+            Life Science Challenges:
+              name: 生命科學挑戰
+            Physical Science Challenges:
+              name: 物理科學挑戰
             Wrap-Up:
               name: 總結
         csf2harvey:
@@ -2551,6 +2625,12 @@ zh-TW:
           stages:
             Welcome!:
               name: 歡迎！
+            Earth Science Challenges:
+              name: 地球科學挑戰
+            Life Science Challenges:
+              name: 生命科學挑戰
+            Physical Science Challenges:
+              name: 物理科學挑戰
             Wrap-Up:
               name: 總結
         csp5-support:
@@ -2560,6 +2640,10 @@ zh-TW:
           stages:
             Unit 5 Overview:
               name: 單元 5 概覽
+            Event Driven Programming:
+              name: 事件驅動的程式設計
+            Variables and Strings:
+              name: 變數與字串
             Discovery Learning:
               name: 發現學習
         csp6-support:
@@ -2577,8 +2661,12 @@ zh-TW:
               name: 紀綠的刪除
             Updating Records:
               name: 紀錄的更新
+            Importing and Exporting Data:
+              name: 匯入和匯出資料
             Visualizing Data:
               name: 資料視覺化
+            Sample Apps:
+              name: 應用程式範例
         unit6-csd-draft:
           stages:
             UI and Input:
@@ -2608,6 +2696,8 @@ zh-TW:
               name: 清單
             Lights:
               name: 燈光
+            Event Types:
+              name: 事件類型
             Input Unplugged:
               name: 不插電介紹輸入（Input）
             Timed Loop:
@@ -2645,6 +2735,8 @@ zh-TW:
               name: 角色
             Input:
               name: 輸入
+            'Project: Interactive Card':
+              name: 專案：互動式卡片
         csd5-draft:
           stages:
             new stage:
@@ -2692,8 +2784,12 @@ zh-TW:
               name: App Lab 工作坊
             Digital Design:
               name: 數位設計
+            Event Driven Programming:
+              name: 事件驅動的程式設計
             Basic App Functionality:
               name: 基本的 App 函式
+            Event Types:
+              name: 事件類型
             Room Escape:
               name: 逃出房間
             Extra:
@@ -2707,8 +2803,12 @@ zh-TW:
               name: 新的階段
             Digital Design:
               name: 數位設計
+            Event Driven Programming:
+              name: 事件驅動的程式設計
             Basic App Functionality:
               name: 基本的 App 函式
+            Event Types:
+              name: 事件類型
         coursed-ramp:
           title: CS 基本原理：課程 D
           stages:
@@ -2745,6 +2845,8 @@ zh-TW:
               name: 計算創新（Computing Innovations）
             Input Unplugged:
               name: 不插電介紹輸入（Input）
+            Event Types:
+              name: 事件類型
             The Circuit Playground:
               name: 電路（Circuit ）遊樂場
             Lists:
@@ -2803,12 +2905,20 @@ zh-TW:
               name: 幾何繪圖
             Sprite Movement:
               name: 角色動作
+            Booleans and Conditionals:
+              name: 布林值和條件判斷
             Conditionals:
               name: 條件判斷（Conditionals）
             Complex Conditionals:
               name: 複合條件判斷
+            'Project: Interactive Card':
+              name: 專案：互動式卡片
+            Keyboard Input:
+              name: 鍵盤輸入
             Velocity:
               name: 速度
+            Collision Detection:
+              name: 碰撞檢測
             Complex Sprite Movement:
               name: 複合角色動作
             Collisions:
@@ -2860,16 +2970,26 @@ zh-TW:
           stages:
             Drawing in Game Lab:
               name: 用 Game Lab 繪圖
+            Draw Loop and Randomization:
+              name: 繪圖迴圈和隨機取值
+            Variables and Animation:
+              name: 變數與動畫
             Sprites and Properties:
               name: 角色與屬性
             Sprites and Images:
               name: 角色和圖像
+            Booleans and Conditionals:
+              name: 布林值和條件判斷
             Conditionals and Keyboard Input:
               name: 條件判斷與鍵盤輸入
             Complex Conditionals:
               name: 複合條件判斷
+            'Project: Interactive Card':
+              name: 專案：互動式卡片
             Velocity:
               name: 速度
+            Collision Detection:
+              name: 碰撞檢測
             Complex Sprite Movement:
               name: 複合角色動作
             Collisions:
@@ -2944,10 +3064,18 @@ zh-TW:
               name: 角色
             Sprite Movement:
               name: 角色動作
+            Booleans and Conditionals:
+              name: 布林值和條件判斷
             Conditionals:
               name: 條件判斷（Conditionals）
+            Keyboard Input:
+              name: 鍵盤輸入
+            'Project: Interactive Card':
+              name: 專案：互動式卡片
             Velocity:
               name: 速度
+            Collision Detection:
+              name: 碰撞檢測
             Complex Sprite Movement:
               name: 複合角色動作
             Collisions:
@@ -2958,12 +3086,16 @@ zh-TW:
               name: 使用遊戲設計流程
             'Project: Design a Game':
               name: 專案：設計一個遊戲
+            'Chapter 1: Images and Animation':
+              name: 第 1 章：圖像和動畫
             'null':
               name: 'null'
             temp:
               name: temp
         coursef-ramp:
           stages:
+            'Algorithms: Tangrams':
+              name: '演算法: 七巧板'
             Introduction:
               name: 介紹
             Ice Age Play Lab:
@@ -3096,6 +3228,8 @@ zh-TW:
           assignment_family_title: 課程 C
         coursed-2017:
           stages:
+            'Algorithms: Graph Paper Programming':
+              description_teacher: 藉由一個又一個的繪圖編程活動，學生會愈來愈了解程式設計的面貌。這個課程將會在學生的相互引導下，模仿現有圖片，在圖上塗上顏色。如果時間允許，可以讓學生有自我創作的活動。
             Nested Loops:
               name: 巢狀迴圈
             Nested Loops in Artist:
@@ -3111,6 +3245,8 @@ zh-TW:
           description: 學習新的編程概念，包括演算法、巢狀迴圈、當迴圈、條件以及事件。在創建和分享自己的遊戲或故事之前，會先做個數位公民的介紹。
         coursee-2017:
           stages:
+            'Algorithms: Tangrams':
+              name: '演算法: 七巧板'
             Ice Age Play Lab:
               name: 冰原歷險記 Play Lab
             Envelope Variables:
@@ -3131,6 +3267,10 @@ zh-TW:
               name: 建立你的專案
             Private and Personal Information:
               name: 數位公民 - 隱私和個人資訊
+            Build a Star Wars Game:
+              name: 創建一個星際大戰遊戲！
+            'Functions: Songwriting':
+              description_teacher: 在計算機科學世界中，函式（function）可以說是最壯觀的建築物之一。函式，有時候稱為程序，是在龐大的程式中，可以被不斷重複利用的一些程式小片段。這個課程將會幫助學生直觀的了解，把這麼多零碎的代碼組合成函式是非常有用的。
             Present Your Project:
               name: 說明你的專案
             Building a Foundation:
@@ -3144,6 +3284,8 @@ zh-TW:
           description_short: 快速地導覽在課程 C 和課程 D 的概念，進一步的介紹函式的使用。
         coursef-2017:
           stages:
+            'Algorithms: Tangrams':
+              name: '演算法: 七巧板'
             The Power of Words:
               name: 數位公民 - 語言的力量
             Ice Age Play Lab:
@@ -3174,10 +3316,14 @@ zh-TW:
           stages:
             Tuesday:
               name: 週二
+            Welcome:
+              name: 歡迎
             Wrap Up:
               name: 總結
         cspnovice:
           stages:
+            Welcome:
+              name: 歡迎
             Tuesday:
               name: 週二
             Wrap Up:
@@ -3274,6 +3420,8 @@ zh-TW:
               name: 網際網路 Internet
             Digital Citizenship:
               name: 數位公民
+            Build a Star Wars Game:
+              name: 創建一個星際大戰遊戲！
             Conditionals with Cards:
               name: 用撲克牌學習條件判斷（Conditionals）
             Conditionals in Minecraft:
@@ -3302,6 +3450,8 @@ zh-TW:
               name: 打好基礎
             Nested Loops:
               name: 巢狀迴圈
+          title: 速學課程
+          assignment_family_title: 速學課程
           description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
         pre-express-2017:
           stages:
@@ -3346,6 +3496,8 @@ zh-TW:
               name: 建立函式
             APIs and Function Parameters:
               name: API 和函式參數
+            Unit 3 Chapter 1 Assessment:
+              name: 單元 1 第 1 節 評量
             foo:
               name: foo
         csd4-draft:
@@ -3368,6 +3520,8 @@ zh-TW:
               name: 原型測試
             Digital Design:
               name: 數位設計
+            Event Driven Programming:
+              name: 事件驅動的程式設計
             Basic App Functionality:
               name: 基本的 App 函式
             Testing the App:
@@ -3403,6 +3557,8 @@ zh-TW:
               name: 巢狀迴圈
             Conditionals:
               name: 條件判斷（Conditionals）
+            Build a Star Wars Game:
+              name: 創建一個星際大戰遊戲！
             Explore Project Ideas:
               name: 找些專案靈感
             Build Your Project:
@@ -3489,6 +3645,8 @@ zh-TW:
               name: 藝術家中的迴圈（Loops）
             Conditionals:
               name: 條件判斷（Conditionals）
+            Build a Star Wars Game:
+              name: 創建一個星際大戰遊戲！
             Explore Project Ideas:
               name: 找些專案靈感
             Build Your Project:
@@ -3505,6 +3663,8 @@ zh-TW:
               name: 打好基礎
             Loops in Artist:
               name: 藝術家中的迴圈（Loops）
+            'Algorithms: Tangrams':
+              name: '演算法: 七巧板'
             Ice Age Play Lab:
               name: 冰原歷險記 Play Lab
             Conditionals in Minecraft:
@@ -3586,6 +3746,8 @@ zh-TW:
               name: 原型測試
             Digital Design:
               name: 數位設計
+            Event Driven Programming:
+              name: 事件驅動的程式設計
             Basic App Functionality:
               name: 基本的 App 函式
             Testing the App:
@@ -3598,6 +3760,8 @@ zh-TW:
               name: 建立函式
             APIs and Function Parameters:
               name: API 和函式參數
+            Unit 3 Chapter 1 Assessment:
+              name: 單元 1 第 1 節 評量
         pwc:
           stages:
             new stage:
@@ -3655,6 +3819,8 @@ zh-TW:
           stages:
             new stage:
               name: 新的階段
+        csp-create-2017:
+          title: 創建 - AP 效能任務準備 ('18-'19)
         aws-demo:
           stages:
             new stage:
@@ -3687,12 +3853,16 @@ zh-TW:
               name: 網際網路 Internet
             Crowdsourcing:
               name: 群眾外包（Crowdsourcing）
+            Build a Star Wars Game:
+              name: 創建一個星際大戰遊戲！
         course-f-2018:
           stages:
             Building a Foundation:
               name: 打好基礎
             Loops in Artist:
               name: 藝術家中的迴圈（Loops）
+            'Algorithms: Tangrams':
+              name: '演算法: 七巧板'
             Introduction:
               name: 介紹
             Ice Age Play Lab:
@@ -3723,6 +3893,8 @@ zh-TW:
               name: 計算創新（Computing Innovations）
             Input Unplugged:
               name: 不插電介紹輸入（Input）
+            Event Types:
+              name: 事件類型
             The Circuit Playground:
               name: 電路（Circuit ）遊樂場
             Lists:
@@ -3757,10 +3929,14 @@ zh-TW:
               name: 角色動作
             Conditionals:
               name: 條件判斷（Conditionals）
+            Keyboard Input:
+              name: 鍵盤輸入
             Project - Interactive Card:
               name: 專案 - 互動式卡片
             Velocity:
               name: 速度
+            Collision Detection:
+              name: 碰撞檢測
             Complex Sprite Movement:
               name: 複合角色動作
             Collisions:
@@ -3799,10 +3975,14 @@ zh-TW:
               name: 角色動作
             Conditionals:
               name: 條件判斷（Conditionals）
+            Keyboard Input:
+              name: 鍵盤輸入
             Project - Interactive Card:
               name: 專案 - 互動式卡片
             Velocity:
               name: 速度
+            Collision Detection:
+              name: 碰撞檢測
             Complex Sprite Movement:
               name: 複合角色動作
             Collisions:
@@ -3871,6 +4051,7 @@ zh-TW:
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie 和 Big Project
         express-2018:
+          title: 速學課程
           assignment_family_title: 速學課程
           description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
           stages:
@@ -3994,6 +4175,8 @@ zh-TW:
               name: 方格紙編程
             Relay Programming:
               name: 接力編程
+            Nested Loops in Bees:
+              name: 蜜蜂裡的巢狀迴圈（Nested Loops）
             Nested Loops in Maze:
               name: 迷宮裡的巢狀迴圈（Nested Loops）
         jr-test:
@@ -4029,8 +4212,14 @@ zh-TW:
           description: 計算機科學探索的 6 個單位，學生使用 App Lab 還有 Maker Toolkit 與實體的電路板溝通，開發出一些程式。
           description_short: 在實體裝置上開發程式
           stages:
+            The Circuit Playground_:
+              name: 電路（Circuit ）遊樂場
             'Project: Make a Game__':
               name: 專案：創建一個遊戲__
+            Functions with Parameters_:
+              name: 函式帶參數
+            'Project: Prototype an Innovation_':
+              name: 專案：原型創新
             The Circuit Playground:
               name: 電路（Circuit ）遊樂場
             Input Unplugged:
@@ -4047,14 +4236,19 @@ zh-TW:
           title: 課程 E（2018）
           assignment_family_title: 課程 E
           stages:
+            'Programming: My Robotic Friends':
+              name: 我的機器人朋友
             Building a Foundation:
               name: 打好基礎
             Nested Loops:
               name: 迷宮裡的巢狀迴圈（Nested Loops）
             Introduction:
               name: 介紹
+            Build a Star Wars Game:
+              name: 創建一個星際大戰遊戲！
             'Functions: Songwriting':
               name: 歌曲創作
+              description_teacher: 在計算機科學世界中，函式（function）可以說是最壯觀的建築物之一。函式，有時候稱為程序，是在龐大的程式中，可以被不斷重複利用的一些程式小片段。這個課程將會幫助學生直觀的了解，把這麼多零碎的代碼組合成函式是非常有用的。
             Explore Project Ideas:
               name: 找些專案靈感
             Build Your Project:
@@ -4078,10 +4272,14 @@ zh-TW:
           assignment_family_title: 課程 F
           description_short: 學習計算機科學的基礎概念，並創建自己的藝術、故事、遊戲作品。
           stages:
+            'Programming: My Robotic Friends':
+              name: 我的機器人朋友
             Building a Foundation:
               name: 打好基礎
             Nested Loops in Bee/Zombie:
               name: 迷宮裡的巢狀迴圈（Nested Loops）
+            'Algorithms: Tangrams':
+              name: '演算法: 七巧板'
             Introduction:
               name: 介紹
             Ice Age Play Lab:
@@ -4234,6 +4432,8 @@ zh-TW:
               name: 建立函式
             APIs and Function Parameters:
               name: API 和函式參數
+            Unit 3 Chapter 1 Assessment:
+              name: 單元 1 第 1 節 評量
             Mid-Year Survey:
               name: 中年級問卷
         csp-explore-2018:
@@ -4249,6 +4449,8 @@ zh-TW:
               name: 大數據是什麼？
             Simple Encryption:
               name: 簡單加密
+            Unit 4 Chapter 1 Assessment:
+              name: 單元 1 第 1 節 評量
             Mid-Year Survey:
               name: 中年級問卷
         csp5-2018:
@@ -4296,8 +4498,12 @@ zh-TW:
               name: 紀綠的刪除
             Updating Records:
               name: 紀錄的更新
+            Importing and Exporting Data:
+              name: 匯入和匯出資料
             Visualizing Data:
               name: 資料視覺化
+            Sample Apps:
+              name: 應用程式範例
             Intro to Data:
               name: 數據的介紹
             Discover a Data Story:
@@ -4661,6 +4867,8 @@ zh-TW:
               name: 二進制圖像
             Artist Binary:
               name: 小藝術家 - 二進制（Binary）
+            Build a Star Wars Game:
+              name: 創建一個星際大戰遊戲！
             Dance Party:
               name: 舞蹈派對
         coursee-2019:
@@ -4674,8 +4882,11 @@ zh-TW:
               name: 巢狀迴圈
             Conditionals with Cards:
               name: 用撲克牌學習條件判斷（Conditionals）
+            Build a Star Wars Game:
+              name: 創建一個星際大戰遊戲！
             'Functions: Songwriting':
               name: 歌曲創作
+              description_teacher: 在計算機科學世界中，函式（function）可以說是最壯觀的建築物之一。函式，有時候稱為程序，是在龐大的程式中，可以被不斷重複利用的一些程式小片段。這個課程將會幫助學生直觀的了解，把這麼多零碎的代碼組合成函式是非常有用的。
             Functions in Minecraft:
               name: Minecraft 中的函式
             Alien Dance Party with Sprite Lab:
@@ -4703,6 +4914,7 @@ zh-TW:
             Songwriting:
               name: 歌曲創作
         express-2019:
+          title: 速學課程（2017）
           description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
           stages:
             Programming in Maze:
@@ -4812,6 +5024,8 @@ zh-TW:
             Programming in Maze:
               name: 在迷宮中編程（Programming ）
               description_teacher: 在這一系列的線上關卡中，學生將建立演算法、除錯、一般計算機理論的知識。登場的是「憤怒鳥」遊戲中的角色，學生將開發循序演算法，讓憤怒鳥不會撞牆或碰上炸藥。關卡的除錯也被混合到這個階段，以增加解決問題和批判性思維的練習。
+            Programming in Harvester:
+              name: 和農夫一起學程式
             Going Places Safely:
               name: 安全的到達地點
             'Loops: Happy Loops':
@@ -4942,6 +5156,8 @@ zh-TW:
               name: 專案 - 互動式卡片
             Velocity:
               name: 速度
+            Collision Detection:
+              name: 碰撞檢測
             Complex Sprite Movement:
               name: 複合角色動作
             Collisions:
@@ -5079,6 +5295,8 @@ zh-TW:
               name: 建立函式
             APIs and Function Parameters:
               name: API 和函式參數
+            Unit 3 Chapter 1 Assessment:
+              name: 單元 1 第 1 節 評量
             Mid-Year Survey:
               name: 中年級問卷
         csp4-2019:
@@ -5147,8 +5365,12 @@ zh-TW:
               name: 紀綠的刪除
             Updating Records:
               name: 紀錄的更新
+            Importing and Exporting Data:
+              name: 匯入和匯出資料
             Visualizing Data:
               name: 資料視覺化
+            Sample Apps:
+              name: 應用程式範例
         csp1-pilot:
           stages:
             new stage:
@@ -5187,6 +5409,8 @@ zh-TW:
               name: 藝術家中的迴圈（Loops）
             Alien Dance Party with Sprite Lab:
               name: 用 Sprite Lab 創作外星人舞蹈派對
+            Build a Star Wars Game:
+              name: 創建一個星際大戰遊戲！
             Functions in Minecraft:
               name: Minecraft 中的函式
         csp1-pilot-staging:
@@ -5201,6 +5425,7 @@ zh-TW:
               name: 變數的建立
             Functions Make:
               name: 函式的建立
+          title: "（舊）單元 2：網際網路"
         csp3-pilot-staging:
           stages:
             Variables Make:
@@ -5345,10 +5570,14 @@ zh-TW:
               name: 角色動作
             Conditionals:
               name: 條件判斷（Conditionals）
+            Keyboard Input:
+              name: 鍵盤輸入
             Project - Interactive Card:
               name: 專案 - 互動式卡片
             Velocity:
               name: 速度
+            Collision Detection:
+              name: 碰撞檢測
             Complex Sprite Movement:
               name: 複合角色動作
             Collisions:
@@ -5476,7 +5705,27 @@ zh-TW:
               name: 事件
             Functions:
               name: 函式
+            Sprite Lab:
+              name: Sprite Lab
             Variables:
               name: 變數
             For Loops:
               name: 計數迴圈（For Loops）
+        dance-extras-2019:
+          title: 繼續跳舞
+          description: 在一小時之後嘗試更多奇思妙想。
+          stages:
+            Dance Party - Go Further:
+              name: 舞蹈派對 - 深入學習
+        csp10-pilot:
+          stages:
+            new stage:
+              name: 新的階段
+        csp4-preview:
+          stages:
+            new stage:
+              name: 新的階段
+            Variables Make:
+              name: 變數的建立
+            Functions Make:
+              name: 函式的建立

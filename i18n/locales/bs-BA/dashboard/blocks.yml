@@ -580,6 +580,7 @@ bs:
             '"rotation"': rotacija
             '"x"': vodoravna pozicija
             '"y"': uspravna pozicija
+            '"tint"': nijanse
       Dancelab_setPropRandom:
         text: nasumično {SPRITE} {PROPERTY}
         options:
@@ -755,6 +756,24 @@ bs:
             '"bass"': basovi
             '"mid"': mid
             '"treble"': trebl
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"hearts_colorful"': Srca
+            '"diamond"': dijamant
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"z"': z
       Dancelab_whenKey:
         text: kada je pritisnuta {KEY} tipka
         options:
@@ -792,6 +811,8 @@ bs:
             '1': mid
             '2': trebl
       Dancelab_whenSetup:
+        text: postavka
+      Dancelab_whenSetup2:
         text: postavka
       gamelab_changePropBy:
         text: izmjeni {SPRITE} {PROPERTY} za {VAL}

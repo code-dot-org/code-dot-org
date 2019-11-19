@@ -173,6 +173,15 @@ pl-PL:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Nowy blok!
         dance_callout_11_b: Nowy blok!
+      Dance_2019_04:
+        dance_callout_02: Dodaj ten blok do swojego programu!
+      Dance_2019_06:
+        dance_party_11_5_groups: Nowy blok!
+      Dance_2019_07:
+        setprop_hint: Nowy blok!
+      Dance_2019_09:
+        new_block_3: Nowy blok!
+        new_block_4: Nowy blok!
       Dance_Party_01:
         dance_callout_01: Dodaj ten blok do swojego programu!
       Dance_Party_02:

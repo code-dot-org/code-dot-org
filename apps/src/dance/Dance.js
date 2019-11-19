@@ -40,7 +40,6 @@ import {
 } from './songs';
 import {SongTitlesToArtistTwitterHandle} from '../code-studio/dancePartySongArtistTags';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import experiments from '@cdo/apps/util/experiments';
 
 const ButtonState = {
   UP: 0,
@@ -182,12 +181,7 @@ Dance.prototype.awaitTimingMetrics = function() {
 };
 
 Dance.prototype.initSongs = async function(config) {
-  let is2019Script =
-    config.scriptName === 'dance-2019' && experiments.isEnabled('newSongs');
-  const songManifest = await getSongManifest(
-    config.useRestrictedSongs,
-    is2019Script
-  );
+  const songManifest = await getSongManifest(config.useRestrictedSongs);
   const songData = parseSongOptions(songManifest);
   const selectedSong = getSelectedSong(songManifest, config);
 
@@ -399,7 +393,7 @@ Dance.prototype.afterInject_ = function() {
     container: 'divDance',
     i18n: danceMsg,
     resourceLoader: new ResourceLoader(
-      'https://curriculum.code.org/images/sprites/dance_20181127/'
+      'https://curriculum.code.org/images/sprites/dance_20191106/'
     )
   });
 
@@ -539,7 +533,7 @@ Dance.prototype.runButtonClick = async function() {
   await this.danceReadyPromise;
 
   //Log song count in Dance Lab
-  trackEvent('HoC_Song', 'Play', getStore().getState().songs.selectedSong);
+  trackEvent('HoC_Song', 'Play-2019', getStore().getState().songs.selectedSong);
 
   Blockly.mainBlockSpace.traceOn(true);
   this.studioApp_.attempts++;

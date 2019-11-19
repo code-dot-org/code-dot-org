@@ -176,6 +176,12 @@ describe('entry tests', () => {
         },
         {
           expand: true,
+          cwd: 'node_modules/@code-dot-org/ml-activities/dist/assets',
+          src: ['**'],
+          dest: 'build/package/media/skins/fish'
+        },
+        {
+          expand: true,
           cwd: 'node_modules/scratch-blocks/media',
           src: ['**'],
           dest: 'build/package/media/scratch-blocks'
@@ -590,12 +596,14 @@ describe('entry tests', () => {
     'levels/editors/_dsl': './src/sites/studio/pages/levels/editors/_dsl.js',
     'levels/editors/_gamelab':
       './src/sites/studio/pages/levels/editors/_gamelab.js',
+    'levels/editors/_grid': './src/sites/studio/pages/levels/editors/_grid.js',
     'levels/editors/_pixelation':
       './src/sites/studio/pages/levels/editors/_pixelation.js',
     'levels/editors/_studio':
       './src/sites/studio/pages/levels/editors/_studio.js',
     'libraries/edit': './src/sites/studio/pages/libraries/edit.js',
-    'scripts/_form': './src/sites/studio/pages/scripts/_form.js',
+    'scripts/edit': './src/sites/studio/pages/scripts/edit.js',
+    'scripts/new': './src/sites/studio/pages/scripts/new.js',
     'shared_blockly_functions/edit':
       './src/sites/studio/pages/shared_blockly_functions/edit.js'
   };
@@ -641,6 +649,8 @@ describe('entry tests', () => {
   var professionalDevelopmentEntries = {
     'code.org/public/pd-workshop-survey/splat':
       './src/sites/code.org/pages/public/pd-workshop-survey/splat.js',
+    'code.org/public/learn/local':
+      './src/sites/code.org/pages/public/learn/local.js',
 
     'pd/_jotform_loader': './src/sites/studio/pages/pd/_jotform_loader.js',
     'pd/_jotform_embed': './src/sites/studio/pages/pd/_jotform_embed.js',

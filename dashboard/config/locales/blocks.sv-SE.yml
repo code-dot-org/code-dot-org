@@ -571,6 +571,7 @@ sv:
             '"rotation"': rotation
             '"x"': horisontellt läge
             '"y"': vertikalt läge
+            '"tint"': färgton
       Dancelab_setPropRandom:
         text: slumpa {SPRITE} {PROPERTY}
         options:
@@ -750,6 +751,12 @@ sv:
             '"bass"': bas
             '"mid"': mellan
             '"treble"': diskant
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"hearts_colorful"': Hjärtan
+            '"diamond"': diamant
+            '"x"': x
       Dancelab_whenKey:
         text: när {KEY} är intryckt
         options:
@@ -768,6 +775,8 @@ sv:
             '1': mellan
             '2': diskant
       Dancelab_whenSetup:
+        text: ställ in
+      Dancelab_whenSetup2:
         text: ställ in
       gamelab_changePropBy:
         text: ändra {SPRITE} {PROPERTY} via {VAL}

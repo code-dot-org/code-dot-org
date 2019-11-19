@@ -1255,6 +1255,8 @@ ro:
             Hour of Code 2015:
               name: Ora de cod 2015
           description_audience: "[șir gol]"
+        ocean:
+          description_audience: "[șir gol]"
         CSPPD3-Unit3-pt2:
           stages:
             Challenge Overview:
@@ -4852,3 +4854,19 @@ ro:
               name: Variabile
             For Loops:
               name: Bucle Pentru
+        dance-extras-2019:
+          title: Continuă să dansezi
+          description: Mergi mai departe de prima oră cu ideile de extindere a proiectelor.
+          description_audience: "[șir gol]"
+          stages:
+            Dance Party - Go Further:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+        csp10-pilot:
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+        csp4-preview:
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"

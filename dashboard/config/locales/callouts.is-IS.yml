@@ -176,6 +176,15 @@ is-IS:
         dance_callout_11_b: Nýr kubbur!
       CourseD_Dance_Party_11_5:
         dance_party_11_5_groups: Hérna eru "allt endur" kubbar
+      Dance_2019_04:
+        dance_callout_02: Bættu þessum kubb í forritið þitt!
+      Dance_2019_06:
+        dance_party_11_5_groups: Nýr kubbur!
+      Dance_2019_07:
+        setprop_hint: Nýr kubbur!
+      Dance_2019_09:
+        new_block_3: Nýr kubbur!
+        new_block_4: Nýr kubbur!
       Dance_Party_01:
         dance_callout_01: Bættu þessum kubb í forritið þitt!
       Dance_Party_02:

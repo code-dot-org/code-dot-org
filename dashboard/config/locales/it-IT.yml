@@ -31,11 +31,13 @@ it:
     attributes:
       user:
         name: Nome da visualizzare
-        name_example: Mostra Nome <br/>(es. Cool Coder o Jane S.)
+        name_example: Mostra Nome (es. Cool Coder o Jane S.)
         email: Indirizzo email
         parent_email: E-mail del genitore/tutore
         personal_email: E-mail personale<a href="%{url}">(clicca qui se non hai un
           indirizzo e-mail)</a>
+        personal_email_markdown: E-mail personale[(clicca qui se non hai un indirizzo
+          e-mail)](%{url})
         username: Nome utente
         password: password
         password_confirmation: Conferma della password
@@ -47,9 +49,13 @@ it:
         finish_sign_up_header: Completa la creazione del tuo account
         finish_sign_up_subheader: Compila i seguenti dati per terminare la creazione
           del tuo account Code.org per <strong>%{email}</strong>.
+        finish_sign_up_subheader_markdown: Compila i seguenti dati per terminare la
+          creazione del tuo account Code.org per **%{email}**.
         finish_sign_up_subheader_provider: Compila i seguenti dati per terminare la
           creazione del tuo account Code.org con <strong>%{provider}</strong> per
           <strong>%{email}</strong>.
+        finish_sign_up_subheader_provider_markdown: Compila i seguenti dati per terminare
+          la creazione del tuo account Code.org con **%{provider}** per **%{email}**.
         reset_password_token: Il link per la reimpostazione della password che hai
           usato
         error:
@@ -141,6 +147,12 @@ it:
       Crea un account per tenere traccia dei tuoi progressi o gestire la tua classe. <a href="/"> Puoi anche svolgere gli esercizi senza un account</a>, ma dovrai iscriverti per controllare i tuoi progressi e salvare i progetti che realizzerai.<br>
       <br>
       <b>Se sei in Italia, crea il tuo profilo attraverso il sito italiano <a href="https://programmailfuturo.it/chi/chi-puo-partecipare" target="_blank">Programma il Futuro</a>, sarà tutto più semplice!</b>
+    overview_markdown: Crea un account per tenere traccia dei tuoi progressi o gestire
+      la tua classe. [Puoi anche svolgere gli esercizi senza un account](/), ma dovrai
+      iscriverti per controllare i tuoi progressi e salvare i progetti che realizzerai.
+      **Se sei in Italia, crea il tuo profilo attraverso il sito italiano [Programma
+      il Futuro](https://programmailfuturo.it/chi/chi-puo-partecipare), sarà tutto
+      più semplice!**
     hoc_already_signed_up_heading: Iniziare senza effettuare il login
     hoc_already_signed_up_content: Ti sei iscritto per insegnare un'Ora del Codice!
       Tu e i tuoi studenti non avete bisogno di accedere a Code Studio per partecipare
@@ -154,6 +166,11 @@ it:
       Questo ti permetterà di salvare i tuoi progressi e gestire le tue classi. Potrai
       assegnare corsi agli studenti e tenere traccia dei loro progressi. <a href="%{studio_url}">Puoi
       anche esplorare corsi e lezioni disponibili</a>senza creare un account.
+    hoc_already_signed_up_content_post_hoc_markdown: Grazie per organizzare l'Ora
+      del Codice. Per accedere a Code Studio, devi impostare una password per il tuo
+      account. Questo ti permetterà di salvare i tuoi progressi e gestire le tue classi.
+      Potrai assegnare corsi agli studenti e tenere traccia dei loro progressi. [Puoi
+      anche esplorare corsi e lezioni disponibili](%{studio_url})senza creare un account.
     teacher_educator_guide: Vedi la guida per l'insegnante
     title: Iscriviti a Code.org
     school_name: Nome della scuola (facoltativo)
@@ -498,11 +515,20 @@ it:
       accetto di essere vincolato dalle <a href='%{terms_of_service_url}', target='_blank'>condizioni
       d'uso</a>di Code.org. Se ho meno 13 anni, confermo di avere il permesso del
       mio genitore o tutore di usare i servizi di Code.org anche senza insegnante.
+    create_personal_login_terms_markdown: Creando le mie informazioni d'accesso personali,
+      accetto di essere vincolato dalle [condizioni d'uso](%{terms_of_service_url})di
+      Code.org. Se ho meno 13 anni, confermo di avere il permesso del mio genitore
+      o tutore di usare i servizi di Code.org anche senza insegnante.
     create_personal_login_email_note: 'Nota: Gli indirizzi email non sono memorizzati
       in una forma tale da permetterci di contattare gli studenti. Gli studenti non
       riceveranno mai email da Code.org tranne per il recupero della password. Consulta
       le nostre <a href=''%{privacy_policy_url}'', target=''_blank''>politiche per
       il rispetto della privacy</a> per ulteriori informazioni.'
+    create_personal_login_email_note_markdown: 'Nota: Gli indirizzi email non sono
+      memorizzati in una forma tale da permetterci di contattare gli studenti. Gli
+      studenti non riceveranno mai email da Code.org tranne per il recupero della
+      password. Consulta le nostre [politiche per il rispetto della privacy](%{privacy_policy_url})
+      per ulteriori informazioni.'
     enter_new_login_info: Inserisci le nuove informazioni di accesso
     confirm_secret_words: Conferma la tua identità inserendo le tue parole segrete
     parent_email_label: Email del genitore o tutore (facoltativo)
@@ -924,6 +950,13 @@ it:
       per noi e speriamo che stabilisca un nuovo standard per la privacy degli studenti
       nella tecnologia di formazione. Ti abbiamo inviato un riassunto delle altre
       modifiche via e-mail.'
+    intro_desc_markdown: 'Abbiamo aggiornato i nostri Termini di Servizio e la nostra
+      Informativa sulla Privacy, come mostrato di seguito. I cambiamenti saranno effettivi
+      a partire dal 24 agosto 2016. La modifica più importante: noi _non memorizzeremo
+      più le e-mail degli account degli studenti su Code studio._ Questo è molto importante
+      per noi e speriamo che stabilisca un nuovo standard per la privacy degli studenti
+      nella tecnologia di formazione. Ti abbiamo inviato un riassunto delle altre
+      modifiche via e-mail.'
     intro_instructions: È necessario accettare questi nuovi termini per gli studenti
       con un'età minore di 13 anni nella tua classe per avere accesso completo alle
       ultime caratteristiche di Code studio. Registrando uno studente con un'età minore
@@ -935,6 +968,8 @@ it:
     privacy_notice: Informativa sulla privacy
     accept_label: Accetto i <a href="%{tos_url}" target="_blank"> Termini di servizio</a>
       e <a href="%{privacy_url}" target="_blank"> Privacy Policy</a> aggiornati
+    accept_label_markdown: Accetto i [Termini di servizio](%{tos_url}) e [Privacy
+      Policy](%{privacy_url}) aggiornati
     accept: Accetto
     print: Stampa
     reminder_desc: Abbiamo aggiornato i nostri <a href="%{tos_url}" target="_blank">Termini
@@ -942,6 +977,11 @@ it:
       Privacy</a>. Si prega di leggerli attentamente prima di accettarli. Sii noti
       che i nostri strumenti per l'insegnamento di JavaScript potrebbero essere inaccessibili
       ai tuoi studenti prima di accettare esplicitamente i termini aggiornati.
+    reminder_desc_markdown: Abbiamo aggiornato i nostri [Termini di Servizio](%{tos_url})
+      e l'[Informativa sulla Privacy](%{privacy_url}). Si prega di leggerli attentamente
+      prima di accettarli. Sii noti che i nostri strumenti per l'insegnamento di JavaScript
+      potrebbero essere inaccessibili ai tuoi studenti prima di accettare esplicitamente
+      i termini aggiornati.
     review_terms: Rivedi i termini dell'aggiornamento
   school_info_interstitial:
     title: Vogliamo portare l'Informatica ad ogni studente - aiutaci a tenere traccia
@@ -969,6 +1009,10 @@ it:
     al nostro sito di supporto.<a href="http://support.code.org"></a> Contattaci su
     <a href="http://programmailfuturo.it">programmailfuturo.it</a> oppure chiedi ai
     tuoi genitori o insegnanti di contattarci al posto tuo.
+  zendesk_too_young_message_markdown: Siamo spiacenti, gli utenti più giovani non
+    possono accedere al nostro sito di supporto.[](http://support.code.org) Contattaci
+    su [programmailfuturo.it](http://programmailfuturo.it) oppure chiedi ai tuoi genitori
+    o insegnanti di contattarci al posto tuo.
   progress:
     not_started: non avviato
     in_progress: in corso

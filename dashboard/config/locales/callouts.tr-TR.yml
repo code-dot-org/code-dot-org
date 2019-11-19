@@ -236,6 +236,15 @@ tr-TR:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Yeni blok!
         dance_callout_11_b: Yeni blok!
+      Dance_2019_04:
+        dance_callout_02: Bu bloğu programınıza ekleyin!
+      Dance_2019_06:
+        dance_party_11_5_groups: Yeni blok!
+      Dance_2019_07:
+        setprop_hint: Yeni blok!
+      Dance_2019_09:
+        new_block_3: Yeni blok!
+        new_block_4: Yeni blok!
       Dance_Party_01:
         dance_callout_01: Bu bloğu programınıza ekleyin!
       Dance_Party_02:
@@ -429,6 +438,8 @@ tr-TR:
       courseA_collector_loops3_2019:
         gradek_adventurer_loops2_1: Bu sayı her bloktan kaç tane kullanabileceğini
           söylüyor.
+      courseA_collector_preLoops1:
+        courseA_collector_preLoops1_1: Kodun çalışmasını izlemek için buraya tıklayın!
       courseA_collector_preLoops2:
         courseA_collector_loops1_1: Yeni blokları gördün mü? Merak etme daha sonraki
           aşamalarda bunları nasıl kullanacağını göstereceğiz.

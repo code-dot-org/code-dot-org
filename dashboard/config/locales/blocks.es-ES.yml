@@ -595,6 +595,7 @@ es:
             '"rotation"': rotación
             '"x"': posición horizontal
             '"y"': posición vertical
+            '"tint"': tonalidad
       Dancelab_setPropRandom:
         text: aleatorizar {SPRITE} {PROPERTY}
         options:
@@ -776,6 +777,26 @@ es:
             '"bass"': bajo
             '"mid"': medio
             '"treble"': tiple
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"hearts_colorful"': Corazones
+            '"diamond"': diamante
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
+            '"6"': '6'
       Dancelab_whenKey:
         text: al pulsar {KEY}
         options:
@@ -788,6 +809,7 @@ es:
             '"enter"': intro
             '"a"': a
             '"d"': d
+            '"g"': g
             '"h"': h
             '"i"': i
             '"j"': j
@@ -806,6 +828,7 @@ es:
             '"x"': x
             '"y"': y
             '"z"': z
+            '"6"': '6'
       Dancelab_whenPeak:
         text: cuando {RANGE} llega al punto máximo
         options:
@@ -814,6 +837,8 @@ es:
             '1': medio
             '2': tiple
       Dancelab_whenSetup:
+        text: establecer
+      Dancelab_whenSetup2:
         text: establecer
       gamelab_addBehaviorSimple:
         text: gráfico {SPRITE} inicia {BEHAVIOR}
@@ -884,6 +909,7 @@ es:
             '"space"': espacio
             '"a"': a
             '"d"': d
+            '"g"': g
             '"h"': h
             '"i"': i
             '"j"': j

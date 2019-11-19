@@ -1011,6 +1011,11 @@ sk-SK:
         -   Prikáž mimozemšťanom robiť nový tanečný krok vždy keď sa navzájom dotknú
       Dance Party Predict: "**Skús predvídať:** Tu je sprite s menom `alien1`! \n\nČo
         myslíš, že sa stane, keď na neho klikneš?  "
+      Dance_2019_05: "_Teraz sme to roztočili!_ \n\nPridaj blok <xml><block type=\"Dancelab_atTimestamp\"><title
+        name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"takty\"</title></block></xml>
+        na tvoju pracovnú plochu. Prikáž tanečníkovi spustiť nový krok po 6 taktoch."
+      Dance_2019_10: Roztoč to na parkete! Vytvor svoj vlastný tanec, ktorý môžeš
+        zdieľať s kamarátmi.
       Dance_Party_01: |-
         _Spravme si tanečnú párty!_
 
@@ -1080,6 +1085,14 @@ sk-SK:
         -   Pridaj viac kláves na ovládanie tanečníkov
         -   Uprav tanečníkov na pozadí tak, aby aj oni reagovali na stlačenia kláves
         -   Vymeň tanečníkov každé 4 takty nastavením ich viditeľnosti
+      Dance_Party_extras_battle_2019: |-
+        # Tanečné skupiny
+
+        Máme tu tanečný súboj medzi dvomi tanečnými skupinami. Šípky ovládajú jedného z tanečníkov a klávesy "w,a,s,d" ovládajú druhého. Daj si tanečný súboj s kamarátmi a potom skús tento súboj vylepšiť.
+
+        -   Pridaj viac kláves na ovládanie tanečníkov
+        -   Uprav tanečníkov na pozadí tak, aby aj oni reagovali na stlačenia kláves
+        -   Vymeň tanečníkov každé 4 takty nastavením ich viditeľnosti
       Dance_Party_extras_every_beat: |-
         # Štvrťové noty
 
@@ -1102,11 +1115,23 @@ sk-SK:
         # Basy, Stredy a Výšky
 
         Tento tanec používa udalosti s "vrcholmi" na spustenie kódu v momente, keď rôzne časti pesničky znejú hlasnejšie. Skús sa pohrať s rôznymi pesničkami, aby si videl ako menia priebeh tanca.
+      Dance_Party_extras_on_beat_2019: |-
+        # Basy, Stredy a Výšky
+
+        Tento tanec používa udalosti s "vrcholmi" na spustenie kódu v momente, keď rôzne časti pesničky znejú hlasnejšie. Skús sa pohrať s rôznymi pesničkami, aby si videl ako menia priebeh tanca.
       Dance_Party_extras_speed: |-
         # Zrýchli, spomaľ
 
         Tento finálny tanec využíva blok `nastav rýchlosť` na kontrolovanie toho, ako rýchlo sa tanečníci hýbu. Skús experimentovať s rôznymi rýchlosťami v rôznych momentoch pesničky. Neváhaj ďalej upravovať tento tanec, alebo sa vráť na ktorýkoľvek predchádzajúci tanec a sprav ho ešte viac cool.
       Dance_Party_extras_visible: |-
+        # Kam zmizli?
+
+        Tento tanec ukazuje a skrýva dve rôzne skupiny tanečníkov. Pozri si to a potom si uprav tanec podľa vlastného vkusu.
+
+        -   Pridaj ďalšiu skupinu tanečníkov
+        -   Ukáž a skry tanečníkov so stlačením šípky
+        -   Skry všetkých tanečníkov a nastav nejaký zaujímavý efekt pozadia
+      Dance_Party_extras_visible_2019: |-
         # Kam zmizli?
 
         Tento tanec ukazuje a skrýva dve rôzne skupiny tanečníkov. Pozri si to a potom si uprav tanec podľa vlastného vkusu.

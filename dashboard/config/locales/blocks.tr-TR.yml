@@ -523,6 +523,7 @@ tr:
             '"rotation"': yön
             '"x"': yatay konum
             '"y"': dikey konum
+            '"tint"': renk tonu
       Dancelab_setPropRandom:
         text: "{SPRITE} {PROPERTY}’i rastgele yap"
         options:
@@ -702,6 +703,19 @@ tr:
             '"bass"': bas
             '"mid"': orta
             '"treble"': tiz
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"hearts_colorful"': Kalpler
+            '"diamond"': elmas
+            '"q"': q
+            '"x"': x
+            '"y"': y
+            '"1"': '1'
+            '"3"': '3'
+            '"5"': '5'
+            '"6"': '6'
+            '"8"': '8'
       Dancelab_whenKey:
         text: "{KEY} basıldığında"
         options:
@@ -711,8 +725,16 @@ tr:
             '"down"': aşağı
             '"right"': sağ
             '"space"': uzay
+            '"f"': f
+            '"g"': g
+            '"q"': q
             '"x"': x
             '"y"': y
+            '"1"': '1'
+            '"3"': '3'
+            '"5"': '5'
+            '"6"': '6'
+            '"8"': '8'
       Dancelab_whenPeak:
         text: "{RANGE} en üst seviyedeyken"
         options:
@@ -721,6 +743,8 @@ tr:
             '1': orta
             '2': tiz
       Dancelab_whenSetup:
+        text: kurulum
+      Dancelab_whenSetup2:
         text: kurulum
       gamelab_changePropBy:
         text: "{SPRITE} {PROPERTY}’i {VAL} kadar değiştir"
@@ -762,6 +786,9 @@ tr:
             '"left"': sol
             '"right"': sağ
             '"space"': uzay
+            '"f"': f
+            '"g"': g
+            '"q"': q
             '"x"': x
             '"y"': y
       gamelab_mirrorSprite:
@@ -802,6 +829,7 @@ tr:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': Sualtı
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': kış
       gamelab_setProp:
+        text: "{SPRITE} {PROPERTY}’i {VAL} olarak ayarla "
         options:
           PROPERTY:
             '"scale"': boyut

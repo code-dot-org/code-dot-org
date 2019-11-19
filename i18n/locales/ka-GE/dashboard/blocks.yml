@@ -255,6 +255,7 @@ ka:
             '"width"': სიგრძე
             '"height"': სიმაღლე
             '"rotation"': შებრუნება
+            '"tint"': შეფერადება
       Dancelab_setPropRandom:
         options:
           PROPERTY:
@@ -339,6 +340,14 @@ ka:
             '"bass"': დაბალი
             '"mid"': საშუალო
             '"treble"': მაღალი
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': ბრილიანტი
+            '"s"': s
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
       Dancelab_whenKey:
         options:
           KEY:
@@ -360,6 +369,8 @@ ka:
             '1': საშუალო
             '2': მაღალი
       Dancelab_whenSetup:
+        text: დაყენება
+      Dancelab_whenSetup2:
         text: დაყენება
       gamelab_changePropBy:
         options:

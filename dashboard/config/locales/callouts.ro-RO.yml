@@ -80,6 +80,15 @@ ro-RO:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Bloc nou!
         dance_callout_11_b: Bloc nou!
+      Dance_2019_04:
+        dance_callout_02: Adaugă acest bloc la programul tău!
+      Dance_2019_06:
+        dance_party_11_5_groups: Bloc nou!
+      Dance_2019_07:
+        setprop_hint: Bloc nou!
+      Dance_2019_09:
+        new_block_3: Bloc nou!
+        new_block_4: Bloc nou!
       Dance_Party_01:
         dance_callout_01: Adaugă acest bloc la programul tău!
       Dance_Party_02:

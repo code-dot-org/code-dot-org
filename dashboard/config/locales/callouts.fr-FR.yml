@@ -69,6 +69,9 @@ fr-FR:
       Course 4 Artist Vars 6:
         degrees_per_side: Divise 360 par le nombre de côtés pour obtenir la taille
           de chaque angle en degrés.
+      Course 4 Bee 3:
+        if_else_bee: Utilise le bloc «Si/Sinon» pour que l'abeille butine le nectar
+          d'une fleur, ou fasse du miel si ce n'est pas une fleur
       Course 4 Bee Params 2:
         edit_get_nectar: Utilise ce bouton pour modifier la fonction et changer la
           direction dans laquelle l'abeille va tourner pour butiner le nectar.
@@ -92,6 +95,15 @@ fr-FR:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Nouveau bloc !
         dance_callout_11_b: Nouveau bloc !
+      Dance_2019_04:
+        dance_callout_02: Ajoutez ce bloc à votre programme!
+      Dance_2019_06:
+        dance_party_11_5_groups: Nouveau bloc !
+      Dance_2019_07:
+        setprop_hint: Nouveau bloc !
+      Dance_2019_09:
+        new_block_3: Nouveau bloc !
+        new_block_4: Nouveau bloc !
       Dance_Party_01:
         dance_callout_01: Ajoutez ce bloc à votre programme!
       Dance_Party_02:

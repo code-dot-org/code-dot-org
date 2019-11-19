@@ -595,6 +595,7 @@ el:
             '"rotation"': περιστροφή
             '"x"': οριζόντια θέση
             '"y"': κάθετη θέση
+            '"tint"': απόχρωση
       Dancelab_setPropRandom:
         text: κάνε τυχαίο του {SPRITE} το {PROPERTY}
         options:
@@ -776,6 +777,35 @@ el:
             '"bass"': μπάσα
             '"mid"': μεσαία
             '"treble"': πρίμα
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"hearts_colorful"': Καρδιές
+            '"diamond"': διαμάντι
+            '"l"': λ
+            '"m"': μ
+            '"n"': ν
+            '"o"': ο
+            '"p"': π
+            '"q"': q
+            '"r"': ρ
+            '"s"': σ
+            '"t"': τ
+            '"u"': θ
+            '"v"': ω
+            '"w"': ς
+            '"x"': x
+            '"z"': ζ
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenKey:
         text: όταν πατηθεί το {KEY}
         options:
@@ -787,7 +817,12 @@ el:
             '"space"': διάστημα
             '"enter"': έντερ
             '"a"': α
+            '"b"': b
+            '"c"': c
             '"d"': β
+            '"e"': e
+            '"f"': f
+            '"g"': g
             '"h"': η
             '"i"': ι
             '"j"': ξ
@@ -797,6 +832,7 @@ el:
             '"n"': ν
             '"o"': ο
             '"p"': π
+            '"q"': q
             '"r"': ρ
             '"s"': σ
             '"t"': τ
@@ -805,6 +841,16 @@ el:
             '"w"': ς
             '"x"': x
             '"z"': ζ
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenPeak:
         text: όταν τα {RANGE} κορυφώνονται
         options:
@@ -813,6 +859,8 @@ el:
             '1': μεσαία
             '2': πρίμα
       Dancelab_whenSetup:
+        text: αρχικοποίηση
+      Dancelab_whenSetup2:
         text: αρχικοποίηση
       gamelab_addBehaviorSimple:
         text: χαρακτήρας {SPRITE} ξεκινάει {BEHAVIOR}
@@ -834,6 +882,8 @@ el:
             '"while"': όσο
       gamelab_clickedOn:
         text: όταν {SPRITE} πατηθεί
+      gamelab_clickedSpritePointer:
+        text: έγινε κλικ στο {SPRITE}
       gamelab_comment:
         text: 'σχόλιο: {COMMENT}'
       gamelab_createNewSprite:
@@ -877,7 +927,12 @@ el:
             '"right"': δεξιά
             '"space"': διάστημα
             '"a"': α
+            '"b"': b
+            '"c"': c
             '"d"': β
+            '"e"': e
+            '"f"': f
+            '"g"': g
             '"h"': η
             '"i"': ι
             '"j"': ξ
@@ -887,6 +942,7 @@ el:
             '"n"': ν
             '"o"': ο
             '"p"': π
+            '"q"': q
             '"r"': ρ
             '"s"': σ
             '"t"': τ
@@ -933,6 +989,8 @@ el:
             '"East"': Ανατολή
             '"South"': Νότος
             '"West"': Δυτικά
+      gamelab_printText:
+        text: εκτύπωσε {TEXT}
       gamelab_randColor:
         text: τυχαίο χρώμα
       gamelab_randomColor:
@@ -955,8 +1013,10 @@ el:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': σπηλιά
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': πόλη
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': έρημος
+            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': γαλαξίας
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': πλέγμα
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': ουράνιο τόξο
+            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': αστέρια
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': υποβρύχια
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': χειμώνας
       gamelab_setProp:
@@ -1043,6 +1103,13 @@ el:
         text: y συντεταγμένη του {SPRITE}
       Mikelab_addBehaviorSimple:
         text: χαρακτήρας {SPRITE} ξεκινάει {BEHAVIOR}
+      Mikelab_addTrainingData:
+        options:
+          NAME:
+            "{x: 201, y: 100}": αντικείμενο
+            "{x: 200, y: 100}": ψάρι
+          LOCATION:
+            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": ψάρι
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1172,6 +1239,11 @@ el:
           {STATEMENT}
       Mikelab_hasBehavior:
         text: "{SPRITE} αυτή τη στιγμή κάνει {BEHAVIOR}"
+      Mikelab_hideFish:
+        options:
+          TRASH:
+            object: αντικείμενο
+            fish: ψάρι
       Mikelab_ifDanceIs:
         text: |-
           αν {SPRITE} κάνει {DANCE}
@@ -1189,6 +1261,18 @@ el:
             MOVES.Kick: Αστέρι
             MOVES.ThisOrThat: Αυτό ή Εκείνο
             MOVES.Rest: Κανένα
+      Mikelab_ifLabel:
+        options:
+          DANCE:
+            MOVES.ClapHigh: ψάρι
+      Mikelab_ifRecognizeLabel:
+        options:
+          DANCE:
+            MOVES.ClapHigh: ψάρι
+      Mikelab_ifRecognizeLabelOnly:
+        options:
+          DANCE:
+            MOVES.ClapHigh: ψάρι
       Mikelab_locationAt:
         text: 'θέση x: {X} y: {Y}'
       Mikelab_location_picker:
@@ -1256,6 +1340,11 @@ el:
             '"d"': Δ
       Mikelab_whenMouseClicked:
         text: όταν πατηθεί το ποντίκι
+      Mikelab_whenYesNoClicked:
+        options:
+          KEY:
+            '"yes"': ναι
+            '"no"': όχι
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -1313,6 +1402,7 @@ el:
       aalab_prompt:
         text: κάνε ερώτηση {MESSAGE}
       aalab_scene:
+        text: σκηνή {SCENE}
         options:
           SCENE:
             '1': '1'

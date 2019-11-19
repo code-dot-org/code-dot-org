@@ -902,6 +902,9 @@ ro-RO:
         în sus. Fă secvenţa "cădere"-"bate din palme" cât de repede poţi!
       Crack Random Substitution: Instrucţiuni
       Crack a Caesar Cipher: Instrucţiuni
+      Dance_2019_05: Acum fă dansatorul să înceapă o nouă mişcare dup 6 măsuri!
+      Dance_2019_08: Utilizează blocul `setează nuanţă` pentru a schimba culoarea
+        dansatorului.
       Dance_Party_01: Trage blocul `crează un nou` în spaţiul de lucru, şi conectează-l
         în interiorul blocului `configurare`.
       Dance_Party_02: Fă elanul să înceapă o nouă mişcare după 4 măsuri!
@@ -925,14 +928,25 @@ ro-RO:
         în dreapta, şi să facă "bated din palme" atunci când apeşi tasta săgeată în
         sus. Fă secvenţa "cădere"-"bate din palme" cât de repede poţi!
       Dance_Party_extras_battle: Dans pe echipe (apasă "Mai mult" pentru detalii)
+      Dance_Party_extras_battle_2019: Dans pe echipe (apasă "Mai mult" pentru detalii)
       Dance_Party_extras_every_beat: Sfert de note (apasă pe "Mai mult" pentru detalii)
+      Dance_Party_extras_every_beat_2019: Sfert de note (apasă pe "Mai mult" pentru
+        detalii)
       Dance_Party_extras_layout: Hai să trecem în formaţie! (apasă pe "Mai mult" pentru
         detalii)
+      Dance_Party_extras_layout_2019: Hai să trecem în formaţie! (apasă pe "Mai mult"
+        pentru detalii)
       Dance_Party_extras_on_beat: Sunete joase, medii şi înalte (apasă pe "Mai mult"
         pentru detalii)
+      Dance_Party_extras_on_beat_2019: Sunete joase, medii şi înalte (apasă pe "Mai
+        mult" pentru detalii)
       Dance_Party_extras_speed: Măreşte viteza, Micşorează viteza (apasă pe "Mai mult"
         pentru detalii)
+      Dance_Party_extras_speed_2019: Măreşte viteza, Micşorează viteza (apasă pe "Mai
+        mult" pentru detalii)
       Dance_Party_extras_visible: Unde au dispărut? (apasă pe "Mai mult" pentru detalii)
+      Dance_Party_extras_visible_2019: Unde au dispărut? (apasă pe "Mai mult" pentru
+        detalii)
       Frequency Analysis: Test
       HOC 2018 Level_12: Proiectează propriul tău mediu acvatic, aşa cum vrei tu!
       Infinity_catch: Poţi s-o faci pe Elsa ("actorul 2") să o ajungă pe Anna folosind

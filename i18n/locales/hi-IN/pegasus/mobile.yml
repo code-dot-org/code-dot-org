@@ -296,6 +296,7 @@
   homepage_slot_text_frozen: "ऐना और एल्सा के साथ फ्रोज़न"
   homepage_slot_text_teacher: "अध्यापक डैशबोर्ड"
   homepage_slot_text_studio: "हमारे सभी ट्यूटोरियल्स"
+  homepage_slot_text_course4: "कोर्स 4"
   homepage_slot_text_shop: "दुकान"
   homepage_slot_text_flappy: "फ्लैपी कोड"
   homepage_action_text_hoc: "प्रत्येक छात्र के लिए एक आवर ऑफ़ कोड"
@@ -852,6 +853,7 @@
   older_systems: "साझेदार ट्यूटोरियल्स, जो पुराने सिस्टमों पर काम करते हैं"
   older_systems_subheading: "इन्हें पुराने वेब ब्राउजरों पर काम करना चाहिए। सभी टयूटोरियल्स तक पहुंच के लिए, <a href=\"http://browsehappy.com/\" target=\"_blank\">आधुनिक वेब ब्राउजर पर अपग्रेड करें।</a>"
   mobile_devices: "मोबाइल डिवाइसों के लिए साझेदार ट्यूटोरियल्स"
+  frozen_name: "ऐना और एल्सा के साथ कूटलेखन"
   starwars_name: 'Star Wars: कोड से तारा समूह बनाना'
   codeorg_name: "क्लासिक भूलभुलैया"
   codeintl_name: "क्लासिक भूलभुलैया"
@@ -883,7 +885,9 @@
   blockly_name: "ब्लॉक्ली"
   projguts_name: "चट्टान, कागज़, कैंची"
   hourofcode_name: "क्लासिक भूलभुलैया"
+  playlab_name: "प्ले लैब"
   infinity_name: "Infinity Play Lab"
+  artist_name: "आर्टिस्ट"
   monstercoding_name: "रहस्यमयी आइलैंड कोडिंग खोज"
   allcancode_name: "मार्को भागो!"
   csfirst_name: "CS फर्स्ट"
@@ -893,6 +897,7 @@
   course1_name: "कोर्स 1"
   course2_name: "कोर्स 2"
   course3_name: "कोर्स 3"
+  course4_name: "कोर्स 4"
   coursea-draft_name: कोर्स A
   coursea_name: "कोर्स A"
   courseb-draft_name: कोर्स B
@@ -926,6 +931,7 @@
   minecraft_name: "Minecraft"
   starwarsblocks_name: "Star Wars (ब्लॉक्स)"
   hoc-encryption_name: साधारण कूटलेखन
+  text-compression_name: टेक्सट संक्षिप्तीकरण
   applab_name: "ऐप लैब"
   gamelab_name: "गेम लैब"
   basketball_name: "बास्केटबॉल गेम बनाएं"
@@ -982,7 +988,7 @@
   teacherled_gradelevel: "आयु 5+"
   course1_gradelevel: "आयु 4-6"
   course2_gradelevel: "आयु 6-18"
-  course3_gradelevel: "उम्र 8-18"
+  course3_gradelevel: "आयु 8-18"
   course4_gradelevel: "आयु 10-18"
   coursea_gradelevel: "आयु 4-7"
   courseb_gradelevel: "आयु 5-8"
@@ -1094,6 +1100,9 @@
   projguts_shortdescription: "चट्टान/कागज़/कैंचियों का उपयोग करते हुए मॉडलिंग और अनुकरण आजमाएं"
   hourofcode_shortdescription: "मार्क ज़ुकरबर्ग (Mark Zuckerberg) और एंग्री बर्ड्स के साथ कोड करना सीखें"
   frozen_shortdescription: "आइए ऐना और एल्सा से जुड़ने के लिए कोड का उपयोग करें, जब वे बर्फ के जादू और सुंदरता की पड़ताल करती हैं।"
+  playlab_shortdescription: "प्ले लैब के साथ कहानी तैयार करें या गेम बनाएं!"
+  infinity_shortdescription: "डिज़्नी इनिफिनिटी के पात्रों की भूमिका में कहानी या गेम तैयार करने के लिए प्ले लैब का उपयोग करें।"
+  artist_shortdescription: "आर्टिस्ट के साथ बढ़िया तस्वीरें खींचें और डिज़ाइन बनाएं!"
   monsterocding_shortdescription: "बच्चों के लिए रंगदार स्व-निर्देशित प्रोग्रामिंग एडवेंचर।"
   allcancode_shortdescription: "दृश्य प्रोग्रामिंग भाषा के साथ मार्को का मार्गदर्शन करने के लिए तन्मयता वाली गेम।"
   csfirst_shortdescription: "समुद्र में दो पात्रों के बारे में कहानी ऐनिमेट करें। अपनी खुद की शैली शामिल करें!"
@@ -1161,6 +1170,7 @@
   kodableunplugged_longdescription: 'सादे कागज़ के साथ उपयोग के लिए डिज़ाइन किया गया, fuzzFamily Frenzy 5 वर्ष और इससे अधिक आयु के बच्चों ते लिए प्रोग्रामिंग तर्क का परिचय है। अध्यापक गेम के बारे में विस्तार से बताएगा, उसके बाद छात्र सरल बाधा कोर्स पूरा करने के लिए साझेदार को प्रोग्राम करते हैं। '
   projguts_longdescription: "यह \"अनप्लग्ड\" गतिविधि यह सीखने में कि जब छात्रों का समूह चट्टान / कागज़ / कैंची गेम के अलग-अलग संस्करण खेलता है तो मॉडलिंग और अनुकरण कैसे काम करता है, और परिणामों को विभिन्न मॉडलिंग प्रयोगों के तौर पर देखने में छात्रों की मदद करती है।"
   hourofcode_longdescription: "नए code.org/hoc के लिए प्लेसहोल्डर"
+  frozen_longdescription: "आइए ऐना और एल्सा के साथ जुड़ें, जब वे बर्फ के जादू और सुंदरता की पड़ताल करती हैं। आप आइस-स्केटिंग करते समय हिम-पक्षी व पैटर्न और सर्दी का परीलोक बनाएंगे, जिसे आप तब अपने दोस्तों के साथ साझा कर सकते हैं।"
   playlab_longdescription: "प्ले लैब के साथ कहानी तैयार करें या गेम बनाएं! जानवरों, समुद्री डाकुओं, ज़ोम्बीज, निंजा और कई अन्य पात्रों को मूव करने, आवाजें करने, अंक हासिल करने और यहां तक कि आग के गोले फेंकने के लिए सक्रिय करें!"
   monstercoding_longdescription: "मोन्स्टर कोडिंग द्वारा मिस्टरी आईलैंड कोडिंग क्वेस्ट मज़ेदार स्व निर्देशित एडवेंचर पेश करता है, जो बच्चों को कई मुख्य प्रोग्रामिंग अवधारणाएं सिखाता है। प्रत्येक ब्लॉक आधारित गतिविधि पिछली पर आधारित है, जो रंगदार ऐनिमेटेड ग्राफिक्स, ऑडियो निर्देशों का उपयोग करते हुए फंक्शन्स, बूलियन वैल्यूज, लूप्स, इफ/एल्स स्टेटमेंट्स और ऐरेज से बच्चों का परिचय कराती है।"
   allcancode_longdescription: "छात्र वास्तविक कहानी पर आधारित एडवेंचर गेम खेलते हैं। वे मुख्य पात्र मार्कों - को आवर ऑफ़ कोड - द्वारा उपयोग की जाने वाली दृश्य प्रोग्रामिंग भाषा के रूप में कदम-दर-कदम निर्देश देकर प्रत्येक स्तर पर उसका मार्गदर्शन करते हैं। वे बिना इस पर ध्यान दिए ही अनुक्रमण कमांड्स, पुनरावृत्ति और प्रतिबंधों का परिचय प्राप्त करते हैं।"
@@ -1388,8 +1398,10 @@
   user_header_applab: 'ऐप लैब '
   user_header_artist: 'कलाकार '
   user_header_gamelab: "गेम लैब"
+  user_header_playlab: "प्ले लैब"
   user_header_dance: "डांस पार्टी"
   user_header_minecraft: "Minecraft"
+  user_header_flappy: "फ्लैपी"
   user_header_view_all: "सभी प्रोजेक्ट देखें..."
   user_header_view_project_gallery: "प्रोजेक्ट गैलरी देखें"
   user_header_view_my_projects: "मेरे प्रोजेक्ट देखें"
@@ -1425,6 +1437,7 @@
   applab_tile_subtitle: "ब्लॉक आधारित प्रोग्रामिंग का उपयोग करते हुए JavaScript में अपना खुद का ऐप बनाएं। या अपने कौशलों को टेक्सट-आधारित प्रोग्रामिंग के साथ अगले स्तर तक ले जाएं। (केवल अंग्रेजी)"
   applab_tile_start_tutorial: "शुरू करें"
   applab_tile_teacher_guide: "अध्यापक गाइड देखें"
+  aquatic_name: 'Minecraft: समुद्री यात्रा जलचर'
   account_sign_up_email_opt_in: "क्या हम आपको हमारे पाठ्यक्रमों में अद्यतन, स्थानीय अवसरों या अन्य कंप्यूटर साइंस के बारे में ईमेल भेज सकते हैं? (मोटे तौर पर माह में एक बार)"
   account_sign_up_child_accept_terms: "मैं पुष्टि करता हूं कि मैं अपने माता पिता या कानूनी है गार्जियन Code.org सेवाओं का उपयोग करने की अनुमति है ।"
   hoc_overview_dance_title: "डांस पार्टी"

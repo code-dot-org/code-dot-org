@@ -55,6 +55,8 @@ de-DE:
         CSD_U3_rect_c1: Hier ist der Code
       CSD U3 sequence_2019:
         CSD_U3_rect_c1: Hier ist der Code
+      CSDU4 - Design Mode - 3:
+        '': Verwende den setText-Baustein, um den Text von titleLabel zu ändern
       Course 4 Artist 4:
         repeat_full_circle: Füge die Anzahl der Bewegungen ein, die der Zombie machen
           muss, um eine volle Runde zu laufen
@@ -102,6 +104,15 @@ de-DE:
         dance_callout_11_b: Neuer Block!
       CourseD_Dance_Party_11_5:
         dance_party_11_5_groups: Schaue hier für "alle Enten" Bausteine
+      Dance_2019_04:
+        dance_callout_02: Fügen Sie diesen Block Ihrem Programm hinzu!
+      Dance_2019_06:
+        dance_party_11_5_groups: Neuer Block!
+      Dance_2019_07:
+        setprop_hint: Neuer Block!
+      Dance_2019_09:
+        new_block_3: Neuer Block!
+        new_block_4: Neuer Block!
       Dance_Party_01:
         dance_callout_01: Fügen Sie diesen Block Ihrem Programm hinzu!
       Dance_Party_02:

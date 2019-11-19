@@ -11,7 +11,7 @@ class HocSyncUtils
   # source files from pegasus/sites.v3/hourofcode.com and collects them to a
   # single source folder i18n/locales/source.
   def self.sync_in
-    puts "Localizing Hour of Code content"
+    puts "Preparing Hour of Code content"
     orig_dir = "pegasus/sites.v3/hourofcode.com/public"
     dest_dir = File.join(I18N_SOURCE_DIR, "hourofcode")
 
@@ -61,7 +61,19 @@ class HocSyncUtils
       # rename yml file from en.yml to code
       new_path = File.join(dest_dir, "hourofcode/#{prop[:unique_language_s]}.yml")
       File.write(new_path, new_translation_data.to_yaml)
+      FileUtils.rm old_path
     end
+
+    # Now, any remaining directories named after the language name (rather than
+    # the four-letter language code) represent languages downloaded from
+    # crowdin that aren't in our system. We expect this to happen whenever a
+    # language has been enabled for our project on crowdin before it gets added
+    # to our system; we do this pretty often because that allows us to start
+    # collecting translations for a language in advance of enabling it.
+    #
+    # So although these directories are neither bad nor unexpected, they're
+    # still unwanted. So we remove them.
+    FileUtils.rm_r(Dir.glob(File.join(I18N_SOURCE_DIR, "hourofcode", "[A-Z]*")))
   end
 
   def self.copy_from_i18n_source_to_hoc

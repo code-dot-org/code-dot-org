@@ -3607,6 +3607,27 @@ is-IS:
       CourseE_HOC 2018 Level_9b:
         voyage_aquatic_9a: Sérðu rauðu og bláu kóralkubbana? Þeir sýna þér hvenær
           á að snúa til hægri og vinstri í gegnum rifið.
+      Dance_2019_01:
+        validation: |-
+          **Hvernig klára ég þetta borð?**
+
+          -   Láttu dansara birtast á skjánum.
+
+          _Þetta borð endar eftir 4 takta._
+      Dance_2019_04:
+        validation: |-
+          **Hvernig klára ég þetta borð?**
+
+          -   Dansarinn þarf að skipta um hreyfingu eftir 4 takta.
+
+          _Borðið endar eftir 7 takta._
+      Dance_2019_05:
+        validation: |-
+          **Hvernig klára ég þetta borð?**
+
+          -   Eftir 6 takta verður dansarinn að vera að dansa öðruvísi en hann gerði eftir 4 takta.
+
+          -   Borðið endar eftir 11 takta.\*
       Dance_Party_01:
         validation: |-
           **Hvernig klára ég þetta borð?**

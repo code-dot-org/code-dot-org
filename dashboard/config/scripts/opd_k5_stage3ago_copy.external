@@ -9,47 +9,27 @@ We like to introduce computer science topics with unplugged lessons. Then, we us
 For these programming stages that you will be going through, we will also start with examples of unplugged lessons. Read through the following lesson plan and watch the accompanying videos, thinking about how you would implement this in your classroom with your students.
 
 ***
+CS Fundamentals primarily teaches students how to write computer programs. In order to do so, we will begin with **sequencing**. 
+> **Sequencing** describes the simple process of ordering steps in a linear manner. 
 
-CS Fundamentals primarily teaches students how to write computer programs. In order to do so, we will begin with **sequencing**. Sequencing describes the simple process of ordering steps in a linear manner. For example:
+For example:
 - Step 1: Boil the egg 
 - Step 2: Crack the egg
 - Step 3: Eat the egg
 
-Sequences are the foundation of **algorithms**, which are lists of steps to complete a task. Programs, then, are algorithms transcribed into code for a computer to execute.
+Sequences are the foundation of **algorithms**.
+> **Algorithms**  are lists of steps to complete a task. Programs, then, are algorithms transcribed into code for a computer to execute.
 
-**1. Review the "[Happy Maps](https://curriculum.code.org/csf-19/coursea/3/)" Lesson Plan from Course A.**
+***
+## **1. Review the "<a href="https://curriculum.code.org/csf-19/coursea/3/" target="blank">Happy Maps</a>" Lesson Plan from Course A.**
 
 Course A is meant for Kindergarten students. Sequencing comes up in other courses, as well, and you can find examples of those lessons at the bottom of this page.
 
-**2. Watch the student video: Happy Maps**
-
+## **2. Watch the student video: Happy Maps (found in lesson plan)**
 This is a video that you would show your students to help introduce the concept of sequencing and kick off the unplugged lesson.
 
-[![](https://images.code.org/f00fb02e8f24d57e88d396eb0f2c5cce-image-1571253011379.09.54 PM.png)](https://youtube.com/watch?v=hrnhiKAQ1_k)
-
-[Can't see the video? Click here](http://videos.code.org/2014/C1-happy-maps-unplugged.mp4)  
-
-<br/>
-
-**3. Watch the teacher video: How to facilitate "Happy Maps"**
-<br/>
-
-[![](https://images.code.org/ab93b99493bfe68acc24aaaaf66d4129-image-1571253013543.10.01 PM.png)](https://youtube.com/watch?v=En6Bshuqljg)
-
-<br/>
-
-
-**4. Review other unplugged lessons that introduce sequencing:**
-
-- Course B (Grade 1): [Move It, Move It](https://curriculum.code.org/csf-19/courseb/2/)
-- Course C (Grade 2): [My Robotic Friends, Jr.](https://curriculum.code.org/csf-19/coursec/3/)
-- Course D (Grade 3): [Graph Paper Programming](https://curriculum.code.org/csf-19/coursed/1/)
-
----
-
-
-> ## Reflect
-> How would you explain the concept of programming (including sequencing and algorithms) to your students?
+***
+<a href="https://curriculum.code.org/csf-19/coursea/3/" target="blank">![](https://images.code.org/8871ce7afb8fa81eb805d4640e1b9a95-image-1573079151706.25.15 PM.png)</a>
 MARKDOWN
 
 teacher_markdown <<MARKDOWN

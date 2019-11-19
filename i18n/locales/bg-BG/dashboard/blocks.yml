@@ -437,6 +437,7 @@ bg:
             '"rotation"': въртене
             '"x"': хоризонтално положение
             '"y"': вертикално положение
+            '"tint"': оттенък
       Dancelab_setPropRandom:
         options:
           PROPERTY:
@@ -597,6 +598,14 @@ bg:
           RANGE:
             '"bass"': бас
             '"treble"': сопрано
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': диамант
+            '"s"': s
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
       Dancelab_whenKey:
         text: когато {KEY} е натиснат
         options:

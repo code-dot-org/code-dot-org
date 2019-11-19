@@ -23,11 +23,13 @@ id:
     attributes:
       user:
         name: Nama Tampilan
-        name_example: Tampilan Nama<br/>(e.g. Cool Coder or Jane S.)
+        name_example: Tampilan Nama (e.g. Cool Coder or Jane S.)
         email: email
         parent_email: Email orang tua/wali
         personal_email: Alamat email pribadi <a href="%{url}">(klik di sini jika Anda
           tidak memiliki sebuah alamat email)</a>
+        personal_email_markdown: Alamat email pribadi [(klik di sini jika Anda tidak
+          memiliki sebuah alamat email)](%{url})
         username: nama pengguna
         password: Kata sandi
         password_confirmation: Konfirmasi sandi
@@ -39,8 +41,12 @@ id:
         finish_sign_up_header: Profil Anda selesai dibuat
         finish_sign_up_subheader: Mengisi informasi berikut untuk menyelesaikan membuat
           akun Code.org untuk <strong>%{email}</strong>.
+        finish_sign_up_subheader_markdown: Mengisi informasi berikut untuk menyelesaikan
+          membuat akun Code.org untuk **%{email}**.
         finish_sign_up_subheader_provider: Mengisi informasi berikut untuk menyelesaikan
           membuat akun Code.org dengan <strong>%{provider}</strong> untuk <strong>%{email}</strong>.
+        finish_sign_up_subheader_provider_markdown: Mengisi informasi berikut untuk
+          menyelesaikan membuat akun Code.org dengan **%{provider}** untuk **%{email}**.
         error:
           future: tidak mungkin di masa depan
   beta: Percobaan
@@ -119,6 +125,9 @@ id:
     overview: Mendaftar akun untuk melacak kemajuan Anda atau mengelola kelas Anda.
       <a href="/">Anda dapat menelusuri berbagai tahap dan teka-teki</a> tanpa akun,
       namun Anda perlu mendaftar untuk menyimpan kemajuan dan proyek Anda.
+    overview_markdown: Mendaftar akun untuk melacak kemajuan Anda atau mengelola kelas
+      Anda. [Anda dapat menelusuri berbagai tahap dan teka-teki](/) tanpa akun, namun
+      Anda perlu mendaftar untuk menyimpan kemajuan dan proyek Anda.
     hoc_already_signed_up_heading: Mulai tanpa masuk
     hoc_already_signed_up_content: Anda mendaftar untuk mengajarkan kode selama satu
       jam! Anda dan siswa Anda tidak perlu masuk ke studio kode untuk berpartisipasi
@@ -133,6 +142,12 @@ id:
       akan dapat memberikan kursus kepada siswa dan melacak kemajuan mereka. <a href="%{studio_url}">
       Anda juga dapat terus menjelajahi berbagai tahap dan teka-teki </a> tanpa membuat
       akun.
+    hoc_already_signed_up_content_post_hoc_markdown: Terima kasih telah hosting Jam
+      Kode. Untuk masuk ke Studio code, Anda harus menyiapkan kata sandi untuk akun
+      Anda. Ini akan membiarkan Anda menyimpan kemajuan Anda dan mengelola kelas Anda.
+      Anda akan dapat memberikan kursus kepada siswa dan melacak kemajuan mereka.
+      [Anda juga dapat terus menjelajahi berbagai tahap dan teka-teki](%{studio_url})
+      tanpa membuat akun.
     teacher_educator_guide: Lihat panduan guru
     title: Mendaftar ke Code.org
     school_name: Nama sekolah (opsional)
@@ -469,11 +484,21 @@ id:
       Code.org</a>. Jika saya berusia dibawah 13 tahun, Saya mengkonfirmasi bahwa
       saya sudah mendapatkan persetujuan dari orang tua atau wali sah saya untuk menggunakan
       layanan-layanan Code.org meskipun tanpa kehadiran seorang guru-pembimbing.
+    create_personal_login_terms_markdown: Dengan membuat login pribadi, Saya setuju
+      untuk terikat dengan[syarat-syarat layanan Code.org](%{terms_of_service_url}).
+      Jika saya berusia dibawah 13 tahun, Saya mengkonfirmasi bahwa saya sudah mendapatkan
+      persetujuan dari orang tua atau wali sah saya untuk menggunakan layanan-layanan
+      Code.org meskipun tanpa kehadiran seorang guru-pembimbing.
     create_personal_login_email_note: 'Catatan: Alamat surel tidak disimpan didalam
       bentuk yang memungkinkan kami untuk menghubungi pelajar-pelajar tersebut. Pelajar-pelajar
       tersebut tidak akan pernah menerima surel dari Code.org kecuali hanya untuk
       pemulihan sandi. Lihat <a href=''%{privacy_policy_url}'', target=''_blank''>kebijakan
       kerahasian kami</a> untuk informasi lebih lanjut.'
+    create_personal_login_email_note_markdown: 'Catatan: Alamat surel tidak disimpan
+      didalam bentuk yang memungkinkan kami untuk menghubungi pelajar-pelajar tersebut.
+      Pelajar-pelajar tersebut tidak akan pernah menerima surel dari Code.org kecuali
+      hanya untuk pemulihan sandi. Lihat [kebijakan kerahasian kami](%{privacy_policy_url})
+      untuk informasi lebih lanjut.'
     enter_new_login_info: Masukkan informasi login baru anda
     confirm_secret_words: Konfirmasi bahwa ini adalah anda dengan memasukkan kata-kata
       rahasia yang anda miliki sekarang
@@ -877,6 +902,13 @@ id:
       kami, dan kami berharap ini akan menjadi standar baru untuk privasi siswa dalam
       teknologi pendidikan. Kami sudah mengirimkan ringkasan perubahan lainnya melalui
       surel.'
+    intro_desc_markdown: 'Kami memperbarui Syarat dan Ketentuan dan Kebijakan Pribadi
+      kami, seperti yang ditunjukkan di bawah ini. Perubahan tersebut berlaku efektif
+      pada tanggal 24 Agustus 2016. Perubahan terbesar: kami akan _tidak lagi menyimpan
+      alamat surel untuk akun siswa di Code Studio._ Ini adalah masalah besar bagi
+      kami, dan kami berharap ini akan menjadi standar baru untuk privasi siswa dalam
+      teknologi pendidikan. Kami sudah mengirimkan ringkasan perubahan lainnya melalui
+      surel.'
     intro_instructions: Anda harus menerima persyaratan baru untuk siswa yang berusia
       di bawah 13 tahun di kelas agar memiliki akses penuh ke semua fitur terbaru
       di Code Studio. Ketika mendaftar  sebuah  akun untuk mahasiswa di bawah 13 tahun,
@@ -888,6 +920,8 @@ id:
     privacy_notice: Pemberitahuan Privasi
     accept_label: Saya menyetujui <a href="%{tos_url}" target="_blank">Syarat dan
       Ketentuan</a> dan <a href="%{privacy_url}" target="_blank">Kebijakan Pribadi</a>
+    accept_label_markdown: Saya menyetujui [Syarat dan Ketentuan](%{tos_url}) dan
+      [Kebijakan Pribadi](%{privacy_url})
     accept: Terima
     print: Cetak
     reminder_desc: Kami sudah memperbarui <a href="%{tos_url}" target="_blank">Syarat
@@ -895,6 +929,11 @@ id:
       kami. Silahkan baca ini dengan seksama sebelum menyetujuinya. Catatan bahwa
       alat kami yang mengajarkan JavaScript mungkin tidak tersedia bagi siswa anda
       sebelum secara eksplisit menerima persyaratan yang diperbarui.
+    reminder_desc_markdown: Kami sudah memperbarui [Syarat dan Ketentuan](%{tos_url})
+      dan [Kebijakan Pribadi](%{privacy_url}) kami. Silahkan baca ini dengan seksama
+      sebelum menyetujuinya. Catatan bahwa alat kami yang mengajarkan JavaScript mungkin
+      tidak tersedia bagi siswa anda sebelum secara eksplisit menerima persyaratan
+      yang diperbarui.
     review_terms: Tinjau ketentuan yang diperbarui
   school_info_interstitial:
     title: Kami ingin membawa ilmu komputer untuk setiap siswa - bantu kami memantau
@@ -922,6 +961,9 @@ id:
     pendukung kami. Anda dapat mengakses  <a href="http://support.code.org">support.code.org</a>
     tanpa masuk atau minta orang tua anda  atau guru anda untuk menghubungi kami.
     u.
+  zendesk_too_young_message_markdown: Maaf Pengguna lebih muda tidak bisa masuk ke
+    dalam situs pendukung kami. Anda dapat mengakses [support.code.org](http://support.code.org)
+    tanpa masuk atau minta orang tua anda atau guru anda untuk menghubungi kami. u.
   progress:
     not_started: belum dimulai
     in_progress: sedang berlangsung

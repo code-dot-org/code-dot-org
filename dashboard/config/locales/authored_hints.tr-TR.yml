@@ -24,6 +24,8 @@ tr-TR:
       2-3 Artist 4:
         2-3_Artist_4_a: Evi bitirmek için tek yapmamız gereken bir kare çizmek!
       2-3 Artist 6:
+        2-3_Artist_6_a: 'Bu minik perileri yapmak için her seferinde karede olduğundan
+          daha fazla dön.   '
         2-3_Artist_6_b: " Zaten sağa dönük durduğum için ileri hareket ettirerek başlamanız
           en kolayı, sonra üçgen oluşturmak için sol dönüşler yapın."
         2-3_Artist_6_c: Üçgenin her kenarı karenin bir kenarı ile aynı uzunlukta ...
@@ -37,6 +39,8 @@ tr-TR:
       2-3 Artist 9 NEW:
         2-3_Artist_9_a: Bu elmas aslında yana eğilmiş bir kare.
       2-3 Artist Debugging 10:
+        2-3_Artist_Debugging_10_a: Unutmayın, kontrol panelini 10 piksel daha _geniş_
+          istiyorsunuz bu yüzden her değiştirdiğiniz sayıya 10 **eklemeyi** unutmayın.
         2-3_Artist_Debugging_10_b: "\\*\\* Burada deneme yanılma serbest! \\*\\* \nHer
           defasında bir sayıyı değiştirerek başla.\\\nHangi numaralar ne yapıyor?\\\nİpin
           ucu kaçarsa, \"baştan başla\"  tuşu ile kodunuzu sıfırlayabilirsiniz."
@@ -49,6 +53,9 @@ tr-TR:
       2-3 Artist Debugging 7:
         2-3_Artist_Debugging_7_a: Sanatçı ilk satırı çizdikten sonra İlerlese yada
           geriye doğru atlasa ne olur?
+      2-3 Artist Debugging 8:
+        2-3_Artist_Debugging_8_a: Şekil kaç kere tekrar ediyor? Şekil kaç kez tekrar
+          _etmeli_? Programda bunu nerede değiştirebilirim?
       2-3 Artist Debugging 9:
         2-3_Artist_Debugging_9_a: Sanatçı çizmeye başlamadan önce 60 derece daha sola
           dönmesi lazım!
@@ -219,12 +226,20 @@ tr-TR:
       4-5 Artist 4:
         4-5_Artist_4_a: Bir daire içinde 360 derece vardır! Bir daire çizebilmek için
           bu kodu 360 kere (1 derece dönerek) tekrarlaman gerekir!
+      4-5 Artist 5:
+        4-5_Artist_5_a: Deneme yanılma iyi bir yöntemdir, ancak 90 derecelik açıyı
+          üçe bölerek de sorun çözebilir. \*\* 90 / 3 **\_** \*\* =
       4-5 Artist 7:
         4-5_Artist_7_a: 'Hangi açı en küçüktür? Sanatçı hangi açıda duruyor? '
       4-5 Artist 8:
         4-5_Artist_8_a: "Uzun kenarlar 240 piksel uzunluğundadır.  Yani 2 Kısa taraf
           toplamı : \\*\\* 800-240 - 240 = 320 \\*\\*  \\*\\*\n 320/2  kaç eder\\*\\*? "
+        4-5_Artist_8_b: |-
+          Bu görüntü 2 şekilde yapılabilir!   -
+          \-Bir kenarı çakışan İki dikdörtgen çiz: \*\* 120 \*\* uzunlukta ve \*\* 160 \*\* yükseklikte,\
+          -Bir dikdörtgen çiz \*\* 240 \*\* uzunlukta ve \*\* 160 \*\* yükseklikte, sonra  ortaya bir satır ekleyin.
       4-5 Artist 9:
+        4-5_Artist_9_a: 'Bir eşkenar üçgenin tüm kenarları ve açıları eşittir. '
         4-5_Artist_9_b: Aynı boyutta üç üçgen çizmek gerekir. Her birinin ardından
           yeni konuma atlamayı unutma.
       4-5 Artist Assessment 1:
@@ -1898,6 +1913,9 @@ tr-TR:
           kadar zig deniz mavisi (rgb 0,175,200 ) ve zag mor (rgb = 100, 50, 150).
         Course_4_SCV_6_d: 'Zig için ''360'' / ''kenarlar'' kadar sola dönün.  Zag
           için ''360 ''/''kenarlar'' kadar sağa dönün. '
+        Course_4_SCV_6_e: 'Şekilden 360 derece dönüş yapma kısmı standart. Şekiller
+          yarı yarıya kesişiyor. Bu sebeple 180/kenar kadar dönmelisin. (Bu durumda
+          sides\*2 kadar tekrarlaman gerekecek). '
         Course_4_SCV_6_f: |-
           **Çözüm:**
           <xml>
@@ -2059,6 +2077,27 @@ tr-TR:
       CourseE_HOC 2018 Level_9b:
         voyage_aquatic_9a: Ne kadar güzel bir mercan resifi! Mavi mercan gidilecek
           **sağ** yoldur, kırmızı mercanın **solda** olmadığına emin ol!
+      Dance_2019_01:
+        validation: |-
+          **Bu seviyeyi nasıl geçerim?**
+
+          -   Ekranda bir dansçının göründüğünden emin olun.
+
+          _Bu seviye 4 ölçüden sonra biter._
+      Dance_2019_04:
+        validation: |-
+          **Bu seviyeyi nasıl geçerim?**
+
+          -   Dansçının 4 ölçü sonra yeni bir harekete geçmesi gerekiyor.
+
+          _Seviye 8 ölçüden sonra biter._
+      Dance_2019_05:
+        validation: |-
+          **Bu seviyeyi nasıl geçerim?**
+
+          -   Dansçınızın 6 ölçü sonra, 4 ölçü sonraki dansından farklı dans etmesi gerekiyor.
+
+          _Seviye 12 ölçüden sonra biter._
       Dance_Party_01:
         validation: |-
           **Bu seviyeyi nasıl geçerim?**
@@ -2324,6 +2363,9 @@ tr-TR:
       NEW Course 4 Artist Params 11:
         NEW_Course_4_Artist_Params_11_a: Fonksiyonun içinde değişkenler ile değişmesi
           gereken birden fazla sayı var.
+      NEW Course 4 Artist Params 13:
+        NEW_Course_4_Artist_Params_13_a: 'Çevre uzunluğunu kenar sayısına bölerek
+          bütün şekillerin aynı boyutta olmasını sağlayabilirsin. '
       NEW Course 4 Artist Params 14:
         NEW_Course_4_Artist_Params_14_a: Fonksiyonun farklı parametrelerle nasıl çalıştığını
           anlamak için birkaç kere programı normaldir.
@@ -2331,6 +2373,9 @@ tr-TR:
         brush_width: Fırça kalınlığını 1 yap ve başka bir hamle yapmadan rengini maviye
           ayarla.
         double_loop: "'Tekrarla' bloğu içine 'for döngüsü' koymayı dene."
+        specifics: |-
+          'For döngüsü' altı 'taç yaprağın' her biri için 3 ten 17 ye kadar sayıyor ve sonraki şekle geçmeden önce sadece tek sayıda kenarı olan çokgenler çiziyor.\
+          'alfa\_ayarla' bloğu sayaç değeri arttıkça bölme işlemini kullanarak rengin soluklaşmasını sağlıyor.
         after: Her "taç yaprak" ile işiniz bittiğinde, 60 derece dönmeden önce 20
           piksel 'ilerle' komutu kullandığınızdan emin olun.
       NEW Course 4 Bee For Loops 8:
@@ -2758,6 +2803,8 @@ tr-TR:
           her tekrarla bloğunun arasında  'sağa dön' veya 'sola dön' komutuna ihtiyacın
           var.
       course2_maze_programming_challenge2:
+        courseC_maze_programming_challenge2_a: _Eğer beni geri göndermek istersen,
+          doğru yöne döndüğüne daha fazla dikkat et!_
         courseC_maze_programming_challenge2_b: En kısa çözüm yalnızca 5 bloktan oluşur,
           fakat 'tekrarla' bloğu kullanılır!
       course3_artist_functions_challenge1:
@@ -3358,6 +3405,11 @@ tr-TR:
           Bu işlevin nasıl çalışması gerektiğini anladığınızdan emin olarak başlayın. Çiftçi her bir yoldan aşağı indiğinde, yalnızca mısır toplamaya çalışacaktır. Bunun yerine, 3 sebzenin her birini ona kontrol ettirip sadece bulduğu birini almasını nasıl sağlarsın?
 
           Mısır, balkabakları ve marulları kontrol etmek için fonksiyona koşullu ifadeler ekleyin.
+        courseF_bee_fwp_challenge2_b: |-
+          "İleriye git" bloklarının bittiğini mi düşünüyorsun?
+          Programınızda bir \* ikinci \* \`for döngüsü 'kullanmayı deneyin.
+
+          **Not:** Kodunuzda`Sayaç` ı `sayaç2` ile  karıştırmamaya özen gösterin.
         courseF_bee_fwp_challenge2_c: |-
           \*\* İşte işlevi şöyle görünmelidir: \*\*
 
@@ -3655,6 +3707,8 @@ tr-TR:
         courseA_artist_loops6_b: Bu bulmacayı çözmek için iki farklı yönde iki blok
           gerekecek.
       courseA_artist_loops7:
+        courseA_artist_loops7_a: Döngüleri nereye koyacağınızı bulamıyor musunuz?
+          Kodu adım adım yazmayı ve bir desen bulmayı deneyin.
         courseA_artist_loops7_b: Önce bir dalga için gereken kodu yaz, sonra bunu
           tekrarlayarak diğer ikisini çizebilirsin.
         courseA_artist_loops7_c: |-
@@ -3663,6 +3717,8 @@ tr-TR:
           <title name="TIMES">???</title>
           </block></xml>döngüsü içine birden fazla blok yerleştirebileceğinizi unutmayın.
       courseA_artist_loops7_2018:
+        courseA_artist_loops7_a: Döngüleri nereye koyacağınızı bulamıyor musunuz?
+          Kodu adım adım yazmayı ve bir desen bulmayı deneyin.
         courseA_artist_loops7_b: Önce bir dalga için gereken kodu yaz, sonra bunu
           tekrarlayarak diğer ikisini çizebilirsin.
         courseA_artist_loops7_c: |-
@@ -3671,6 +3727,8 @@ tr-TR:
           <title name="TIMES">???</title>
           </block></xml>döngüsü içine birden fazla blok yerleştirebileceğinizi unutmayın.
       courseA_artist_loops7_2019:
+        courseA_artist_loops7_a: Döngüleri nereye koyacağınızı bulamıyor musunuz?
+          Kodu adım adım yazmayı ve bir desen bulmayı deneyin.
         courseA_artist_loops7_b: Önce bir dalga için gereken kodu yaz, sonra bunu
           tekrarlayarak diğer ikisini çizebilirsin.
         courseA_artist_loops7_c: |-
@@ -3915,6 +3973,11 @@ tr-TR:
           </block>
           </next>
           </block></xml>
+      courseA_collector_loops_challenge2:
+        courseA_collector_loops_challenge2_b: Bunu çözmek için yalnızca bir tane blok
+          kullanmanız gerekir.
+        courseA_collector_loops_challenge2_a: "Güney'e ilerlemeden önce patikada bir
+          kez daha geriye gidebilirsin.\n "
       courseA_collector_loops_challenge2kp:
         courseA_collector_loops_challenge2kp_b: Sonuca ulaşmak için bu yolu deneyin.
         courseA_collector_loops_challenge2kp_a: Bu bulmacayı çözmek için döngüleri
@@ -3927,6 +3990,9 @@ tr-TR:
         courseA_collector_loops_challenge2kp_b: Sonuca ulaşmak için bu yolu deneyin.
         courseA_collector_loops_challenge2kp_a: Bu bulmacayı çözmek için döngüleri
           kullanabilir misiniz?
+      courseA_collector_preLoops5:
+        courseA_collector_preLoops5_a: Bir elmas bile alabilmek için iki farklı yönde
+          gitmeniz gerekiyor!
       courseA_collector_preLoops7:
         courseA_collector_loops2_b: Bir Hazineye ulaşıldığında, onu almak için 'Hazineyi
           Al' bloğunu kullanmayı unutmayın.
@@ -4284,14 +4350,20 @@ tr-TR:
         courseB_artist_loops9_a: Çizgi çizmeden ilerlemek için atlama bloklarını kullanabileceğini
           unutma.
         courseB_artist_loops9_b: 'Bu bulmacayı çözmek için B bloğunu kullanacaksın. '
+        courseB_artist_loops9_c: Döngüleri nereye koyacağınızı bulamıyor musunuz?
+          Kodu adım adım yazmayı ve bir desen bulmayı deneyin.
       courseB_artist_loops9_2018:
         courseB_artist_loops9_a: Çizgi çizmeden ilerlemek için atlama bloklarını kullanabileceğini
           unutma.
         courseB_artist_loops9_b: 'Bu bulmacayı çözmek için B bloğunu kullanacaksın. '
+        courseB_artist_loops9_c: Döngüleri nereye koyacağınızı bulamıyor musunuz?
+          Kodu adım adım yazmayı ve bir desen bulmayı deneyin.
       courseB_artist_loops9_2019:
         courseB_artist_loops9_a: Çizgi çizmeden ilerlemek için atlama bloklarını kullanabileceğini
           unutma.
         courseB_artist_loops9_b: 'Bu bulmacayı çözmek için B bloğunu kullanacaksın. '
+        courseB_artist_loops9_c: Döngüleri nereye koyacağınızı bulamıyor musunuz?
+          Kodu adım adım yazmayı ve bir desen bulmayı deneyin.
       courseB_artist_loops_challenge1:
         courseB_artist_loops_challenge1_a: 'Bunun gibi bloklar: <xml><block type="simple_move_up_left"/></xml>
           sanatçının bir eğimde hareket etmesine izin verir!'
@@ -4416,12 +4488,18 @@ tr-TR:
         courseB_collector_loops7_b: Bulmacayı çözmek için 3 tekrarla döngüsüne ihtiyacın
           olacak ve sonundaki ekstra hazineyi unutma!
       courseB_collector_loops9:
+        courseB_collector_loops9_a: Bu çok mu zor görünüyor? Daha kolay hissettirmek
+          için 4 küçük probleme ayırın.
         courseB_collector_loops9_b: Bu çözüm için birbiri ardına 3 tekrarla döngüsüne
           ihtiyacınız olacaktır.
       courseB_collector_loops9_2018:
+        courseB_collector_loops9_a: Bu çok mu zor görünüyor? Daha kolay hissettirmek
+          için 4 küçük probleme ayırın.
         courseB_collector_loops9_b: Bu çözüm için birbiri ardına 3 tekrarla döngüsüne
           ihtiyacınız olacaktır.
       courseB_collector_loops9_2019:
+        courseB_collector_loops9_a: Bu çok mu zor görünüyor? Daha kolay hissettirmek
+          için 4 küçük probleme ayırın.
         courseB_collector_loops9_b: Bu çözüm için birbiri ardına 3 tekrarla döngüsüne
           ihtiyacınız olacaktır.
       courseB_collector_loops_challenge1:
@@ -8181,6 +8259,8 @@ tr-TR:
         courseD_harvester_nested_loops_challenge1_c: Bu bulmacayı çözmek için ana
           döngünüzün içine küçük bir döngü koymanız gerekir!
       courseD_maze_intro4_2019:
+        courseC_maze_programming4_a: Sağa veya sola Scrat'in bakış açısından dönebilirsiniz.
+          Eğer yüzünüz sağa dönükse, sağa dönmek sizi aşağıya döndürecektir.
         courseC_maze_programming4_b: Yolu takip etmek için, ileri gidin ve bir yöne
           dönün, sonra yeniden hareket edin ve zıt yöne dönün. Palamuda ulaşmak için
           bir kez daha ileri gidin.
@@ -8212,12 +8292,18 @@ tr-TR:
         courseD_maze_nestedLoops5_b: Döngüleri nereye koyacağınızı bulamıyor musunuz?
           Kodu adım adım yazmayı ve bir desen bulmayı deneyin.
       courseD_maze_ramp1:
+        courseC_maze_programming1_a: Eğer Kuş domuza doğru gitmiyorsa, tüm blokların
+          tam olarak birleştiğinden emin olun, sonra tekrar "Çalıştır" ı tıklayın.
         courseC_maze_programming1_b: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
           düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
       courseD_maze_ramp1_2018:
+        courseC_maze_programming1_a: Eğer Kuş domuza doğru gitmiyorsa, tüm blokların
+          tam olarak birleştiğinden emin olun, sonra tekrar "Çalıştır" ı tıklayın.
         courseC_maze_programming1_b: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
           düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
       courseD_maze_ramp1_2019:
+        courseC_maze_programming1_a: Eğer Kuş domuza doğru gitmiyorsa, tüm blokların
+          tam olarak birleştiğinden emin olun, sonra tekrar "Çalıştır" ı tıklayın.
         courseC_maze_programming1_b: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
           düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
       courseD_maze_ramp2:
@@ -8229,6 +8315,14 @@ tr-TR:
       courseD_maze_ramp2_2019:
         courseC_maze_programming2_b: 3 bloğun beraber tıklandığından ve 'çalıştığı
           zaman' bloğuna bağlı olduğundan emin olun.
+      courseD_maze_ramp4:
+        courseC_maze_programming4_b: Yolu takip etmek için, ileri gidin ve bir yöne
+          dönün, sonra yeniden hareket edin ve zıt yöne dönün. Palamuda ulaşmak için
+          bir kez daha ileri gidin.
+      courseD_maze_ramp4_2018:
+        courseC_maze_programming4_b: Yolu takip etmek için, ileri gidin ve bir yöne
+          dönün, sonra yeniden hareket edin ve zıt yöne dönün. Palamuda ulaşmak için
+          bir kez daha ileri gidin.
       courseD_maze_ramp4_2019:
         courseC_maze_programming4_a: Sağa veya sola Scrat'in bakış açısından dönebilirsiniz.
           Eğer yüzünüz sağa dönükse, sağa dönmek sizi aşağıya döndürecektir.
@@ -8406,6 +8500,8 @@ tr-TR:
         courseD_playLab_cond5_b: Çalışma alanında birden fazla 'sürekli tekrarla'
           döngüsü olabilir.
       courseD_scrat_ramp1:
+        courseC_maze_programming1_a: Scrat palamuda ulaşamıyorsa, üç karenin tümünün
+          tam olarak yapıştığından emin olun, sonra tekrar "Çalıştır"a tıklayın.
         courseC_maze_programming1_b: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
           düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
       courseD_scrat_ramp2:
@@ -8424,8 +8520,13 @@ tr-TR:
       courseD_scrat_ramp5:
         courseC_maze_programming5_b: Köşeye ulaşmak için ne kadar hareket etmek gerekir?
         courseC_maze_programming5_c: Domuzu almak için köşeden sola dönmen gerekir.
+      courseD_scrat_ramp6:
+        courseC_maze_programming6a_a: Scrat'i hareket ettirmek için bir 'tekrar' döngüsü
+          kullanın!
       courseD_scrat_ramp7:
         courseD_scrat_programming6_a: Bu bulmacayı çözmek için iki yol vardır!
+        courseD_scrat_programming6_b: Scrat yanlış yöne dönük olduğu için, hareket
+          etmeden önce dönmeyi unutmayın.
         courseD_scrat_programming6_c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
           düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
       courseD_scrat_ramp8:
@@ -11568,6 +11669,12 @@ tr-TR:
           </next>
           </block>
           </xml>
+      coursea_maze_ramp1_2018:
+        courseC_maze_programming1_a: Eğer Kuş domuza doğru gitmiyorsa, tüm blokların
+          tam olarak birleştiğinden emin olun, sonra tekrar "Çalıştır" ı tıklayın.
+      coursea_maze_ramp1_2019:
+        courseC_maze_programming1_a: Eğer Kuş domuza doğru gitmiyorsa, tüm blokların
+          tam olarak birleştiğinden emin olun, sonra tekrar "Çalıştır" ı tıklayın.
       grade5_artist_variables_triangles1:
         grade5_artist_variables_triangles1_a: Bu üçgende iç açıyı 60 derece yapmak
           için sanatçıyı 120 derece döndürmeyi unutmayın.

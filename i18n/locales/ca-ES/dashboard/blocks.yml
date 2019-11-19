@@ -676,6 +676,11 @@ ca:
             '"bass"': baix
             '"mid"': mig
             '"treble"': agut
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"hearts_colorful"': Cors
+            '"x"': x
       Dancelab_whenKey:
         text: quan la {KEY} és premuda
         options:
@@ -694,6 +699,8 @@ ca:
             '1': mig
             '2': agut
       Dancelab_whenSetup:
+        text: configuració
+      Dancelab_whenSetup2:
         text: configuració
       gamelab_changePropBy:
         text: canvi {SPRITE} {PROPERTY} per {VAL}

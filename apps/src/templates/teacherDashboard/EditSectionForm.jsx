@@ -19,7 +19,7 @@ import {
   isScriptHiddenForSection,
   updateHiddenScript
 } from '@cdo/apps/code-studio/hiddenStageRedux';
-import ConfirmAssignment from '../courseOverview/ConfirmAssignment';
+import ConfirmHiddenAssignment from '../courseOverview/ConfirmHiddenAssignment';
 
 const style = {
   root: {
@@ -187,12 +187,11 @@ class EditSectionForm extends Component {
           />
         </DialogFooter>
         {this.state.showHiddenUnitWarning && (
-          <ConfirmAssignment
+          <ConfirmHiddenAssignment
             sectionName={section.name}
             assignmentName={assignedScriptName}
             onClose={handleClose}
             onConfirm={this.handleConfirmAssign}
-            isHiddenFromSection={true}
           />
         )}
       </div>
@@ -240,6 +239,7 @@ const SectionNameField = ({value, onChange, disabled}) => (
       onChange={event => onChange(event.target.value)}
       style={style.sectionNameInput}
       disabled={disabled}
+      id="uitest-section-name"
     />
   </div>
 );

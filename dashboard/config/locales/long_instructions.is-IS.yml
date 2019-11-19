@@ -6475,6 +6475,11 @@ is-IS:
       Dance Party Predict_2019: "**Spáðu hvað mun gerast:** Hér er vera sem virðist
         vera utan úr geimnum!     \n\nHvað heldur þú að muni gerast þegar þú smellir
         á hana?  "
+      Dance_2019_05: "_Nú erum við að dansa!_ \n\nBættu <xml><block type=\"Dancelab_atTimestamp\"><title
+        name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml>
+        kubbi við vinnusvæðið þitt. Láttu dansarann byrja nýjan dans eftir 6 takta."
+      Dance_2019_10: Finndu taktinn! Búðu til eigin dans sem þú getur deilt með vinum
+        þínum.
       Dance_Party_01: |-
         \*Nú skulum við halda danspartý!
 
@@ -6544,6 +6549,14 @@ is-IS:
         -   Bættu við fleiri lyklum til að stjórna dansinum
         -   Láttu aukadansarana líka bregðast við þegar ýtt er á lykla
         -   Skiptu um dansara eftir hverja 4 takta með því að stilla sýnileika þeirra
+      Dance_Party_extras_battle_2019: |-
+        # Danshópar
+
+        Hér er danskeppni tveggja hópa. Örvarnar stjórna öðrum hópnum og "w,a,s,d" lyklarnir stjórna hinum. Fáðu félaga til að fara í danskeppni við þig og reyndu svo að gera keppnina betri.
+
+        -   Bættu við fleiri lyklum til að stjórna dansinum
+        -   Láttu aukadansarana líka bregðast við þegar ýtt er á lykla
+        -   Skiptu um dansara eftir hverja 4 takta með því að stilla sýnileika þeirra
       Dance_Party_extras_every_beat: |-
         # Fjórðapartsnótur
 
@@ -6566,11 +6579,23 @@ is-IS:
         # Bassa-, mið- og háir tónar
 
         Þessi dans notar "toppa" sem atvik til að keyra kóða þegar hinir ýmsu hlutar tónlistarinnar hljóma sterkt. Prófaðu mismunandi lög til að sjá hvernig þau breyta dansinum.
+      Dance_Party_extras_on_beat_2019: |-
+        # Bassa-, mið- og háir tónar
+
+        Þessi dans notar "toppa" sem atvik til að keyra kóða þegar hinir ýmsu hlutar tónlistarinnar hljóma sterkt. Prófaðu mismunandi lög til að sjá hvernig þau breyta dansinum.
       Dance_Party_extras_speed: |-
         # Hraðar, hægar
 
         Þessi síðasti dans notar `stilla hraða` kubbinn til að stjórna hve hratt hver dansari hreyfir sig. Gerðu tilraunir með mismunandi hraða á mismunandi stöðum í laginu. Haltu áfram að gera breytingar á þessum dansi eða farðu til baka í einhvern af hinum dönsunum til að gera þá enn flottari.
       Dance_Party_extras_visible: |-
+        # Hvert fóru þeir?
+
+        Þessi dans sýnir og felur tvo hópa af dönsurum. Prófaðu hann og reyndu svo að bæta hann með þínum hugmyndum.
+
+        -   Bættu við enn einum hópi dansara
+        -   Láttu dansarana birtast og hverfa með örvarlyklunum
+        -   Feldu alla dansarana og skiptu yfir í einhver flott bakgrunnshrif
+      Dance_Party_extras_visible_2019: |-
         # Hvert fóru þeir?
 
         Þessi dans sýnir og felur tvo hópa af dönsurum. Prófaðu hann og reyndu svo að bæta hann með þínum hugmyndum.

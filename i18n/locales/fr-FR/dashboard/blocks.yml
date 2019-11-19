@@ -595,6 +595,7 @@ fr:
             '"rotation"': orientation
             '"x"': position horizontale
             '"y"': position verticale
+            '"tint"': nuance
       Dancelab_setPropRandom:
         text: randomiser {SPRITE} {PROPERTY}
         options:
@@ -776,6 +777,35 @@ fr:
             '"bass"': grave
             '"mid"': médium
             '"treble"': aigu
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"hearts_colorful"': Cœurs
+            '"diamond"': diamant
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
+            '"0"': '1'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenKey:
         text: En appuyant sur {KEY}
         options:
@@ -829,6 +859,8 @@ fr:
             '1': médium
             '2': aigu
       Dancelab_whenSetup:
+        text: configuration
+      Dancelab_whenSetup2:
         text: configuration
       gamelab_addBehaviorSimple:
         text: le sprite {SPRITE} commence {BEHAVIOR}
@@ -1296,6 +1328,10 @@ fr:
         text: lieu aléatoire
       Vector_vectorNorth:
         text: nord
+      Vector_where:
+        options:
+          PROPERTY:
+            "'shapeColor'": couleur
       aalab_goToScene:
         options:
           SCENE:

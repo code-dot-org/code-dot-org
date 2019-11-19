@@ -5,39 +5,302 @@ tr-TR:
       2-3 Artist 1 new: Merhaba, ben bir sanatçıyım. Bana neredeyse her şeyi çizdirebilecek
         kodlar yazabilirsin. Birkaç blok kullanarak resimdeki gri çizgilerin üstünü
         çizmemi sağla.(Her çizgi 100 piksel uzunluğunda)
+      2-3 Artist 11: Her bir kenarı 100 piksel olan bir sekizgen çizerek dur levhasını
+        oluştur
+      2-3 Artist 12: "Gözü tamamlamak için daire çiz. \n\\\r \n\\\r\nSanatçı her döngüde
+        1 derece dönüyorsa, daire çizmek için kodu kaç defa tekrarlamam gerekiyor? "
+      2-3 Artist 2 new: Bu evin bir duvarı yarım. Her kenar 100 ancak yarım duvar
+        sadece 50. Duvarı tamamla.
+      2-3 Artist 3.4: |-
+        Zıpla bloğu sanatçıyı çizim yapmadan ilerletir.
+        Hem zıpla hem de çiz bloğunu kullanarak çizgileri birleştirin. Her çizgi 50 piksel uzunluğunda.
       2-3 Artist 3new: Kırmızı şapka 100 piksel uzunluğundadır. 70 piksel daha kısa
         olan siyah bir şapka çizerek tamamla. (Siyah şapkanın genişliği 50 pikseldir)
       2-3 Artist 4: Kedi için bu evi tamamlamama yardım et.
+      2-3 Artist 6: "Bu evin bir çatıya ihtiyacı var! Üçgeni çizin.  \\\r \\\r İpucu:
+        tüm üç kenarı aynı uzunlukta. \\\r \\\r  <img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"
+        width=\"300\"/>"
+      2-3 Artist 7: "Okulun son kalan pencerelerini çizerek sınıfın dışarıyı görmesini
+        sağlayın.\nHer bir kare pencerenin kenarı 25 pikseldir. "
       2-3 Artist 9 NEW: Uçurtmayı bitirin.
+      2-3 Artist Assessment 1: "**Değerlendirme:** 25 piksel genişliğinde ve 25 piksel
+        uzunluğunda olan son dişi çizin."
+      2-3 Artist Debugging 2: "Kedinin bıyıkları için bu kod yanlış.\n\\\r\n\\\r\nHer
+        biri eşit uzunlukta kedi bıyıkları çizmek için bu kodu düzelt. "
+      2-3 Artist Debugging 8: "Öğretmenim başladığım işi bitirmem gerektiğini söylüyor!
+        \\\r\n\\\r \nRüzgar gülümü bitirmeme yardım et. Nerenin hatalı olduğunu görebiliyor
+        musun?"
+      2-3 Artist Debugging 9: "Birşey kapalı!\\\r\n\\\r\nBu kök için bu kod yanlış.
+        Sanatçının kökü doğru şekilde çizmesi için ne yapmalı?"
       2-3 Artist Free Play: Serbest çizim! İstediğiniz herhangi bir şey çizin.
+      2-3 Artist Functions 10: "**Serbest zaman:** Burada iki fonksiyon var, biri
+        büyük ve diğeri küçük çark çizmek için.\\\r\n\\\r Bunları kullanarak bir makinenin
+        içini çiz!"
+      2-3 Artist Functions 11: "\"Kare çiz\" fonksiyonunu \"Altıgen çiz\" olarak yeniden
+        adlandırdık, fakat kareler çizmeye devam ediyor! \"Altıgen çiz\" fonksiyonunu
+        50 piksel kenarlı altıgen çizmek için düzenleyebilir misin?\\\r\n\\\r \nResmi
+        yeni fonksiyonu kullanarak çiz!"
+      2-3 Artist Functions 11.5: "İşte bir \"altıgen çiz\" fonksiyonu daha. \\\r\n\\\r\nAna
+        programı 6 kere döngüleyip her döngüde 60 derece dönersen ne olur?"
+      2-3 Artist Functions 12: "Fonksiyonlar karmaşık şeyleri birçok kez çizmek için
+        mükemmeldir. \\\r\n\\\r\n\"Çiçek çiz\" fonksiyonunu kullanarak saksının geri
+        kalanını doldurabilir misin?\\\r\n\\\r (İpucu: Tüm bitkiler birbirinden 100
+        piksel uzaktadır)  "
+      2-3 Artist Functions 2: "Fonksiyonlar yeni bloklar tanımlamanı sağlar! \\\r\n\\\r\nKare
+        çizmek için gerekli blokları \"Kare çiz\" fonksiyonuna taşıdık. \"Kare çiz\"
+        fonksiyonunu kullanarak gözlükleri çizebilir misin? \\\r\n\\\r\nKareler birbirlerinden
+        75 piksel uzaklıktadır."
+      2-3 Artist Functions 3: "Fonksiyonu 115 piksel kenar uzunluğunda\nbir kare çizmek
+        için düzenle ve daha büyük bir gözlük çiz.\\\r\n\\\r Kareler bu sefer birbirlerine
+        45 piksel uzaklıktadır. "
+      2-3 Artist Functions 4: Bu 3 kareyi çizmek için "tekrarla" bloğunu kullan.
+      2-3 Artist Functions 9: "**Serbest Oyun:** İşte bir kartanesi fonksiyonu. Bir
+        kış\nsahnesi oluşturmak için onunla denemeler yap. \\\r\n\\\r\nBu bir serbest
+        oyun bölümü, yani çözmen gereken bir bilmece yok. İyi eğlenceler!"
+      2-3 Artist Loops New 10: Hadi, şimdi birkaç V'yi onları bir döngüde çizerek
+        birbirine bağlayalım.
+      2-3 Artist Loops New 11: "Güzel bir şey yapmanın zamanı geldi!\n\\\r\n\\\r\nSon
+        bulmacada yaptığınız kodu tekrar yapın, fakat bu kez döngü içinde en sona
+        sola 30 derece dönüş ekleyin. Şimdi 8 yerine 24 kez tekrarlatın."
       2-3 Artist Loops New 12: Kenarları 100 piksel olan bir elmas çizin.
+      2-3 Artist Loops New 13: "Bir adet baklava şekli çizmek için (gri olan) kodu
+        biz size verdik.  \\\r\n\\\r\nGri kodu döngüleyerek çok eğlenceli bir desen
+        oluşturabilirsiniz!"
+      2-3 Artist Loops New 14: Baklava şekli için gereken kodla oyna ve başka ne gibi
+        desenler çıkıyor bir bak. Mesela kaç derece döneceğini ve kaç kere döngü yapacağını
+        değiştirmeyi dene.
+      2-3 Artist Loops New 2: |-
+        Biraz önce çözdüğün bulmacanın bir benzeri, fakat bu sefer sadece bir tane 'ileriye taşı' ve 'dön' bloğu kullanabilirsin.
+        'Tekrarla' bloğunu kullanarak bulmacayı çözebilir misin?
+      2-3 Artist Loops New 9: Oku tamamlamak için iki kenarı da 50 piksel olan basit
+        bir V çiz.
       2-3 Artist Nested Loops 10: 'Kodu 12 kez döngüleyerek motifi tamamlayın. '
+      2-3 Artist Nested Loops 11: Örneği tamamlamak için bu kodu 4 kez tekrarlayın,her
+        daireden sonra 90 derece döndürün.
       2-3 Artist Nested Loops 12: 'Bukleleri tamamlamak için bu kodu 12 kez döngüle. '
+      2-3 Artist Nested Loops 2: 'Şimdi, üçgeni 6 kez döngüle. Her üçgenden sonra,
+        yeni bir tane çizmeden önce 60 derece dönmen gerek. '
+      2-3 Artist Nested Loops 3: "Bu motifi çizmek için üçgeni 12 kez döngülemen gerekecek.
+        \\\r\n\\\r\nHer şekilden sonra kaç derece döneceğini anlamak için bir çemberin
+        içindeki derecelerin sayısını (360), çizdiğin şekillerin sayısına (12) böl."
+      2-3 Artist Nested Loops 5: "Bu binan pencerelerini içiçe döngü kullanarak doldur.
+        \\\r\n\\\r\nPencereler 20 piksel uzunluğunda ve birbirlerine 20 piksel uzaklıktalar. "
+      2-3 Artist Nested Loops 6: "Bu dinazorun kuyruğu boyunca 8 boynuzu var. \\\r\nHer
+        boynuz 30 piksel uzunluğunda. Üçgenleri 8 kez döngüle ve her seferinde ileri
+        atlamayı unutma!"
+      2-3 Artist Nested Loops 7: "Güneş çizmek için üçgeni 10 kez döngüle. \\\r\n\\\r\nHer
+        üçgenden sonra hareket edip dönmen gerekecek. \\\r\n\\\r\nNe kadar dönmen
+        gerektiğini bir çemberdeki derecelerin sayısını şekli oluşturmak için gereken
+        üçgen sayısına bölerek bulabilirsin."
+      2-3 Artist Nested Loops 8: 'Şimdi, resmimize biraz da çimen ekleyelim. Her tutam
+        çimen birbirinden 50 piksel uzaklıktadır. '
       2-3 Artist Nested Loops Free Play: Serbest oyun, içiçe döngülerle havalı bir
         şeyler çiz.
+      2-3 Bee Conditionals 13: "Buralarda ne çok şey oluyor!\\\r\n\\\r\nÖğrendiklerinizi
+        kullanarak tüm nektarı toplayın ve bal yapın."
+      2-3 Bee Conditionals 14: "Haydi öğrendiklerimizi bir araya getirelim!\\\r\n\\\r\nÖğrendiklerini
+        kullanarak en az blokla sadece nektar olan çiçeklerden nektar topla. Sonunda
+        bal yapmayı da unutma."
+      2-3 Bee Conditionals 15: "Bu merdiven basamağı deseni tanıdık gelmiş olmalı.\\\r\n\\\r\nEn
+        az sayıda blokla sadece nektar olan çiçeklerden nektar toplayabilir misiniz?"
+      2-3 Bee Conditionals 2: "Merhaba! Ben aç bir arıyım. \\\r\nBana en az sayıda
+        blokla çiçeklerden nektar toplamak için yardım et."
+      2-3 Bee Conditionals 3: "Tüm şu nektara bak!\\\r\n\\\r\nEn az sayıda blokla
+        çiçekteki tüm nektarı toplayıp bal yapmama yardım et.  "
+      2-3 Bee Conditionals 5: "Bu sihirli mor çiçekler değişiyor! \\\r \\\r Bulmacayı
+        her çalıştırdığında mor çiçeklerde 1 veya 0 nektar olabilir.. Ama kodu çalıştırmadan
+        bilemezsin! \\\r \\\r Eğer nektar yoksa nektar toplamamalısın. \\\r\n 'Eğer'
+        bloğu kullanarak nektar miktarının 1 e eşit olup olmadığını gör."
+      2-3 Bee Conditionals Assessment 1: "**Değerlendirme:** Tüm nektarları topla.
+        \ \\\r\nNektarı olmayan mor çiçeklerden nektar toplamamaya dikkat et."
+      2-3 Bee Debugging 1: Bu bloklar gerçekten beni dinlemiyor. Bütün nektarları
+        toplamak için hata(ları) düzelt.
+      2-3 Bee Debugging 10: "Bu bloklar gerçekten beni dinlemiyor.\\\r\n Tüm nektarları
+        toplamak ve balları yapmak için hata(lar)'ı düzelt."
+      2-3 Bee Debugging 2: "Buradaki hatayı bulabilir misin? \\\r\nTüm nektarları
+        toplamak ve balları yapmak için hata(lar)'ı düzelt."
+      2-3 Bee Debugging 9: "Burada \"sabırlı\" olmalısın!\\\r\n\\\r\nTüm nektarları
+        toplamak ve balları yapmak için bu programdaki bazı şeyleri düzeltmen gerekiyor."
+      2-3 Bee Debugging Assessment 1: "\\*\\* Değerlendirme: \\*\\* Şimdi bildiklerini
+        gösterme zamanı! \\\r \\\r Tüm nektarı toplamak ve tüm balları yapmak için
+        hataları düzelt."
       2-3 Bee Functions 1: "Fonksiyonlar, bir görevi gerçekleştiren kod bloklarıdır.
         \ \\\r\n\\\r\n'2 nektar al' fonksiyonunu kullanarak tüm çiçeklerden nektarları
         topla."
+      2-3 Bee Functions 10: "Bulmacayı her çalıştırdığında mor çiçeklerdeki nektar
+        sayıları 1 ya da 0 nektar olarak değişmektedir.  \\\r\n\\\r\nSadece nektar
+        bulunan mor çiçeklerden nektar toplayan bir fonksiyon oluştur."
+      2-3 Bee Functions 2: "Fonksiyonlar, bir görevi gerçekleştiren kod bloklarıdır.\\\r\n\\\r\nBir
+        seferde 5 nektar almak için ''5 al' fonksiyonunu kullan."
+      2-3 Bee Functions 4: "''taşı ve nektarı al'' arıyı döndürür ve nektarı toplar,
+        sonra arıyı başladığı noktaya döndürür. \\\r\n\\\r\nTüm nektarları toplamak
+        için fonksiyonu kullan."
+      2-3 Bee Functions Assessment 1: "**Değerlendirme:** Her bir çiçekten bal toplamak
+        için verilen fonksiyonu kullanın."
+      2-3 Bee Functions Assessment 2: "\\*\\* Değerlendirme: \\*\\* ilerleyen ve 3
+        bal toplayan sonra da başladığı yere dönen bir fonksiyon yaz."
+      2-3 Bee Loops 1: "Bu çiçekler iştah açıcı! \\\r\n\\\r\nEn az blokla her çiçekten
+        nektar toplayın."
+      2-3 Bee Loops 13: "\\*\\* Değerlendirme: \\*\\* mümkün olan en az sayıda blok
+        kullanarak nektarı topla."
       2-3 Bee Loops 3A: Tüm nektarları toplamak için bir döngü kullanabilir misin?
+      2-3 Bee Loops 3B: Şimdi tüm nektarları toplamak ve balları yapmak için 'Tekrarla'
+        bloğunu kullan.
+      2-3 Bee Loops 4: "Çalışkan bir arı! \\\r \\\r \nArının en az sayıda blok ile
+        tüm nektarı toplamasını ve bal yapmasını sağlayın."
+      2-3 Bee Loops 4A: "Bu bulmacada kaç kere döngü kullanabilirsin? \\\r\n\\\r\nDöngüler
+        senin sağ kolun! Bu bulmacayı en az blokla bitirmek için birkaç tane döngü
+        kullan."
+      2-3 Bee Loops 5: "Bu yolun şekli diğerlerinden farklıdır. \\\r \\\r Mümkün olduğunca
+        az blok kullanarak tüm nektarı topla?"
+      2-3 Bee Loops 7: Ne kadar harikulade bir çiçek tarlası! Arının her bir çiçeğe
+        gitmesini sağla. 7 bloktan daha az blokla gidebilir mi?
+      2-3 Bee Loops 8: "Bu mor çiçekler her bulmacayı yeniden başlattığınızda farklı
+        nektarlara sahip. \\\r\n\\\r\n Tüm nektarları toplamak için 'nektar süresince'
+        (while nectar) döngüsünü kullan. \\\r\n\\\r\nBu döngü'' nektar>0'' şartını
+        sağladığı sürece çalışacak."
+      2-3 Bee Loops Assessment 1: "**Değerlendirme:** - Bir 'süresince' döngüsü kullanarak
+        bu çiçekteki tüm nektarları toplayın."
+      2-3 Maze 1: 'Yaramaz domuzu yakalamak için bana yardım edebilir misin? Birkaç
+        ''ilerle'' bloğunu ''çalıştığı zaman'' bloğunun altına sıralayın ve ''çalıştır''
+        a basın. '
+      2-3 Maze 12: "Aniden, büyülü bir blok göründü!  'Tekrarla' bloğu ile içindeki
+        kodu tekrar tekrar çalıştırabilirsiniz. \\\r\n \\\r 'Tekrarla' bloğu içine
+        sadece bir 'İlerle' bloğu koyarak domuza ulaşabilir misin?"
+      2-3 Maze 13: Domuza ulaştır. Sadece bir adet 'İlerle' bloğu kullanabilirsin
+      2-3 Maze 15: Domuza ulaşmak için daha az blok kullanarak iki döngü kullanın.
+      2-3 Maze Loops 18: "Beni en az blokla ayçiçeğine götür! \\\r\n\\\r\nGerekli
+        olan kodu azaltmak için bir tekrar döngüsü içine bir tane daha yerleştir."
+      2-3 Maze Loops 19: " Haydi bunu bir başka seviyeye taşıyalım! \\\r\nEn az blokla
+        beni ayçiçeğine götürmek için döngüleri kullan."
+      2-3 Maze Loops Assessment 1: "**Değerlendirme:** Beni ayçiçeğine sadece 5 blok
+        kullanarak götür! "
       4-5 Artist 1: 'Kutumu çizmemi tamamlamak için yardım et.(Her doğru parçası 300
         piksel uzunluğundadır) '
       4-5 Artist 2: Kareyi tamamlamak için döngü kullanabilir misiniz?
+      4-5 Artist 3: Bu dikdörtgen çiçekliğin çevresi 600 birim.  Uzun kenar 200 birim.
+        En az komutla bu dikdörtgeni çizin.
       4-5 Artist 3.5: "Bu kodu çalıştırsan ne olacağını dene (\"Çalıştır\" düğmesi
         ile deneyebilirsin). \\\r\n\\\r\nSonra bu kodu çizimi tamamlamak için gerektiği
         kadar tekrarla!"
       4-5 Artist 4: "Bir çemberde kaç derece vardır? \\\r\n\\\r\nBlokları tekrarlayarak
         bir renk çemberi oluşturun."
+      4-5 Artist 5: Zombinin çizimi tamamlaması için önceden hazırlanmış döngüde "???"
+        yerine ne kullanabiliriz?
+      4-5 Artist 6: Eşkenar üçgenin açıları 60, 60, 60 derecedir. Her kenarı 200 pikseldir.
+        Çizimi tamamlayın.
+      4-5 Artist 7: Bu dik üçgenin açıları, 30, 60 ve 90 derecedir. Eğimli tarafının(hipotenüsün)
+        uzunluğu 200 piksel yüksekliğindedir. Çizimi tamamlayın.
+      4-5 Artist 9: Tasarımın simetrik olması için diğer yarsını çizin. Üçgenler eşkenar
+        ve kenar uzunlukları 50 piksel uzunluğunda.
+      4-5 Artist Assessment 1: "**Değerlendirme:**Döngü kullanarak bir eşkenar üçgen
+        çizin. Her kenarı 300 piksel olsun."
       4-5 Artist Free Draw 1: Serbest çizim! Hayal gücünüzü kullanarak çizin.
+      4-5 Artist Patterns 10: "Bu kod altıgenin iki satırını çizer - bütün bir balpeteği
+        çizmek için tüm kodu 4 kere döndür. \\\r\n\\\r\nSanatçının ekranın dışına
+        çıkmasına engel olmak için en dıştaki döngüde 120 piksel geri atlamalı."
+      4-5 Artist Patterns 11: Yarım daire çizmek için bu döngüyü kaç kez tekrarlaman
+        lazım?
+      4-5 Artist Patterns 12: "Bu döngüyü kopyalayıp sağa dön yerine sola dön seçerseniz
+        ne olur?\\\r\n\\\r Bu dalgayı çizmek için işlemleri tekrarlayabilir misiniz?"
+      4-5 Artist Patterns 13: "Şimdi fotoğraf çerçevesini tamamlamak için bütün kodu
+        dört kere döndür. Köşelere dikkat et - sadece 90 derece dönmek yetmez!\\\r
+        \\\r\nEğer 60 kere 3 derece dönüş yarım daire yapıyorsa, hangi kod blokları
+        köşeler için gereken çeyrek daireyi yapar?"
+      4-5 Artist Patterns 2: Eğer kare döngünüzü bir başka döngünün içerisine yerleştirirseniz,
+        biz buna iç içe döngü diyoruz. 15 karenin yan yana hizalandığından emin olmak
+        için dış döngüye ne eklemen gerekir?
+      4-5 Artist Patterns 3: Şimdi bir düzey daha derin gidelim! Biz bütün bu kod
+        bloğunu bir döngü içine koyun fakat artist tekrar başa dönsün. Hangi kod bloklarını
+        en dıştaki döngü sonunda yerleştirmeliyim?
+      4-5 Artist Patterns 4: Bu elmasın 50 piksel kenarları ve 120 ve 60 derece açıları
+        vardır. Döngü kullanarak çiziniz.
+      4-5 Artist Patterns 5: "Döngü ile 6 baklava şekli çizin. \\\r\n \\\r \nBaklava
+        şekli kodunu değiştirerek 3 kere tekrarlayacağımıza 2 defa tekrarladık. Sizce
+        neden?"
+      4-5 Artist Patterns 6: Bu elması tam çizmek için kaç kere tekrar etmen gerekiyor?
       4-5 Artist Patterns 7: Şimdi bir önceki bulmacayı değiştirerek bu karmaşık deseni
         oluşturalım. Elmasların nasıl kesiştiğine dikkat edelim. "geriye atla" bloğunu
         100 yerine 50 piksel yap. Şimdi artist ikinci ileri atla bloğunda ne kadar
         ilerlemeli?
+      4-5 Artist Patterns 8: Bu altıgeni 40 piksellik kenarlar ile 60 derecelik dönüşler
+        kullanarak çizebilir misin.
+      4-5 Artist Patterns 9: "Şimdi kodu 3 kez tekrarla ve bütün satırı çiz.\\\r\n\\\r\nHer
+        bir altıgen en sol noktadan en sağ noktaya 80 piksel genişliğindedir."
+      4-5 Artist Patterns 9.5: Şimdi döngü kullanarak iki altıgen çizelim. İkinci
+        satırın sağa doğru kayık olduğuna dikkat et.
+      4-5 Artist Patterns Free Play: Eğlence zamanı - kendi kendine desen yapmayı
+        dene!
+      4-5 Bee Conditionals 5: Bulutların altında çiçek yada petek olabilir. Eğer/değilse
+        bloğu kullan. Eğer çiçek ise polen topla değilse bal yap (çünkü çiçek değilse
+        petektir).
+      4-5 Bee Conditionals 6: "Bu çiçekte ne kadar nektar var emin değilim ama 1,
+        2 veya 3 nektar olduğunu biliyorum. \\\r \\\r koşullu blok ('eğer' ve/veya
+        ' Eğer/değilse') kullanarak olduğu kadar nektar al. \\\r \\\r, Nektar miktarı
+        bulmacayı her çalıştırdığınızda değiştirebilir!"
+      4-5 Bee Conditionals 7: Mor çiçeklerde, 2, 3 veya 1 nektar olabilir. "mor çiçeği
+        kontrol et" fonksiyonunu kullanarak nektarları toparla.
       4-5 Bee Conditionals 8: "'çiçeğe bak bal yap' için fonksiyonu yaz. \\\r\n\\\r\nYazdığın
         fonksiyon, mor çiçeğin 1,2 veya 3 nektara sahip olup olmadığını kontrol etmeli
         ve bütün nektarları toplamalı.\\\r\nSonra, ilerle ve bal yap."
+      4-5 Bee Conditionals Assessment 1: "**Değerlendirme:** Bu bulut ya bir nektarı
+        olan bir çiçek ya da bir bala ihtiyacı olan bir bal peteği saklıyor..  \\\r\n\\\r\n`nektar
+        al veya bal yap` fonksiyonunu tamamla, sonra nektar ya da bal toplamak için
+        bu fonksiyonu kullan.. \\\r"
+      4-5 Bee Debugging 1: "Bu bloklar kafamı karıştırıyor.  \\\r\n\\\r\nDüzeltmeme
+        yardımcı olabilir misin?"
+      4-5 Bee Debugging 6: "Mor çiçekteki nektarı miktarı bulmaca her çalıştırıldığında
+        değişir. \\\r \\\r Tüm çiçeklerden tüm nektarı almak için blokları düzelt."
+      4-5 Bee Debugging Assessment 1: 'Değerlendirme: Kodu Düzelt.'
+      4-5 Bee Nested Loops 2: 'Her çiçekteki bütün nektarı topla. İç içe döngü kullan. '
+      4-5 Bee Nested Loops 4: 'Tüm çiçeklerdeki nektarları topla ve peteklere bal
+        yap. İç içe döngü kullan. '
+      4-5 Bee Nested Loops Assessment 1: Değerlendirme - Döngü kullanarak tüm nektarı
+        topla ve tüm balları yap.
+      4-5 Maze 7: Değerli kişi. Ben zombi. Ay... çiçeğine... ulaşmalıyım. Bulmacayı
+        11 bloktan daha az blokla tamamlayabilir misin?
+      4-5 Maze 9: Kadar tekrarla bloğu ile döngü oluştur.
+      4-5 Maze Assessment 1: "\\*\\* Değerlendirme: \\*\\* mümkün olduğunca az blokları
+        kullanarak ayçiçeği al."
+      4-5 Maze Conditionals 1: Zombi ayçiçeğine ulaşana kadar tekrarla bloğunu kullan.
+      4-5 Maze Conditionals 10: Daha karmaşık bir labirenti sadece 3 blok ekleyerek
+        çözmeme yardımcı olur musun? Eğer doğru yaptıysan, bu kıvrımlı yolda uzunluğu
+        ne olursa olsun yürüyebilirim!
+      4-5 Maze Conditionals 2: Zombi ayçiçeğine ulaşana kadar tekrarla bloğunu kullan.
+      4-5 Maze Conditionals 4: Tamam, bu sadece son bulmaca gibi ama "Eğer" bloğu
+        ile "Tekrarla" bloğunu nasıl birlikte kullandığını hatırlaman gerekiyor.
+      4-5 Maze Conditionals 6: Ayçiçeğini istiyorum! Sadece bir "Eğer" bloğu kullanarak,
+        en az sayıda blok ile oraya ulaşmamı sağla.
+      4-5 Maze Conditionals 7: Bu bulmaca çözümü çok farklı değil, Zombilerden lerden
+        uzak dur!
+      4-5 Maze Conditionals 8: "' eğer/değilse' bloğu bir koşulu denetler ve bir işi
+        yada ötekini yapar. \\\r \\\r bu yeni bloğu bana ayçiçeği almak için kullanın."
+      4-5 Maze Conditionals 9: "Pratik için bir bulmaca daha if/else' bloklu! \\\r
+        \\\r parmak ile üzerinden geçerek  ilk denemede çözebilecekmisin."
+      4-5 Maze Conditionals Assessment 1: 'Değerlendirme: Kadar tekrarla ve Eğer/değilse
+        bloklarını kullanarak beni ayçiçeğine ulaştır.'
+      4-5 Nested Loops 1: 'Bu üçgenleri çizmek için kodu tamamlayın. İlki sizin için
+        yapıldı. İpucu: 3 üçgeni toplam 360 derece dönerek yapılır.'
+      4-5 Nested Loops 11: İç içe döngü kullanarak 10 kareyi tamamlayın. Her bir kare
+        30 pikseldir.
+      4-5 Nested Loops 12: İç içe döngü kullanarak 36 tane üçgen çizebilir misin?
+      4-5 Nested Loops 2: 'Bu döngüyü başka bir döngü içine koyarak 10 üçgen çizin.
+        Buna iç içe döngü denir.  '
+      4-5 Nested Loops 3: Verilen kodu başka bir döngü içine koyarak bir güneş oluştur.
+        Bu güzel şekli oluşturmak için, her dönüşten önce üçgenin kenar uzunluğu kadar
+        ileri atlamalısın.
       4-5 Nested Loops 5: Bir yel değirmeni oluşturmak için verilen kodu döngü içinde
         kullan.
+      4-5 Nested Loops 6: Üçgen kodunu döngüde kullanarak altıgen çizebilir misin?
       4-5 Nested Loops 9: Timsahın ağzına dişleri çiz!
+      4-5 Nested Loops Assessment 1: 'Değerlendirme: Tasarımı tamamlamak için iç içe
+        döngüler kullan.'
+      4-5 While Loops 1: Beni deliğe götür ve "doldur" bloğunu kullanarak, deliği
+        iki kürek dolusu toprak ile doldur.
+      4-5 While Loops 2: Beni toprak yığınına ulaştır ve "kaldır" bloğu ile 5 kürek
+        toprak at.
+      4-5 While Loops 3: "Bu bulmacayı tamamlamak için mümkün olduğunca az blok kullanın!
+        \ \\\r \\\r beni yığına götür, toprağı al ve çukura götür ve çukuru doldur."
       Alien Defender: "\\*\\* Proje Fikri \\*\\*: Play Lab'da bir savunma oyunu yap!"
       AppLab Intro 7 - Change Screen Color: "<div style=\"float:right\">\r\n\\t<img\nsrc=\"https://images.code.org/bf9b1fb57751fa90c9b786339914ad70-image-1508521068798.34.54\nAM.png\"
         style=\"height:150px\"> \r\n</div>\r\n\r\n**Hedef:** Ekranı yeşil yapın.\r\n\r\n**Nasıl:**
@@ -1326,7 +1589,7 @@ tr-TR:
       CSD U2 new page: "# Web siteniz için yeni bir sayfa oluşturun.\\\r\n\n\\\r\nİşte
         önceki projen.  Yeni bir sayfa daha ekliyor olacaksın. Yeni sayfan listenin
         en iyi 10'u, yemek tarifi veya hoşlandığın herhangi bir şey olabilir.\\\r\n\\\r\n\n#
-        Bunu Yap\\\r\n\n\\*\nBağlantıya tıklayarak yeni bir HTML dosya ekle \n![](<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38\nPM.png>).
+        Bunu Yap\\\r\n\n\\*\nBağlantıya tıklayarak yeni bir HTML dosya ekle \n\\!\\[](\\<<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38>\nPM.png>).
         Yeni sayfa çalışma alanının solunda dosyaların listesinin içinde gözükecek.
         .\\\r\n\n-   Dosyayı yeniden adlandır, sağ tıklayarak ve Yeniden Adlandır'
         ı seçerek veya seçili iken üzerine tıklayarak.   **İsmin diğerlerinden farklı
@@ -1336,7 +1599,7 @@ tr-TR:
       CSD U2 new page_2018: "# Web siteniz için yeni bir sayfa oluşturun.\\\r\n\n\\\r\nİşte
         önceki projen.  Yeni bir sayfa daha ekliyor olacaksın. Yeni sayfan listenin
         en iyi 10'u, yemek tarifi veya hoşlandığın herhangi bir şey olabilir.\\\r\n\\\r\n\n#
-        Bunu Yap\\\r\n\n\\*\nBağlantıya tıklayarak yeni bir HTML dosya ekle \n![](<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38\nPM.png>).
+        Bunu Yap\\\r\n\n\\*\nBağlantıya tıklayarak yeni bir HTML dosya ekle \n\\!\\[](\\<<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38>\nPM.png>).
         Yeni sayfa çalışma alanının solunda dosyaların listesinin içinde gözükecek.
         .\\\r\n\n-   Dosyayı yeniden adlandır, sağ tıklayarak ve Yeniden Adlandır'
         ı seçerek veya seçili iken üzerine tıklayarak.   **İsmin diğerlerinden farklı
@@ -1346,7 +1609,7 @@ tr-TR:
       CSD U2 new page_2019: "# Web siteniz için yeni bir sayfa oluşturun.\\\r\n\n\\\r\nİşte
         önceki projen.  Yeni bir sayfa daha ekliyor olacaksın. Yeni sayfan listenin
         en iyi 10'u, yemek tarifi veya hoşlandığın herhangi bir şey olabilir.\\\r\n\\\r\n\n#
-        Bunu Yap\\\r\n\n\\*\nBağlantıya tıklayarak yeni bir HTML dosya ekle \n![](<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38\nPM.png>).
+        Bunu Yap\\\r\n\n\\*\nBağlantıya tıklayarak yeni bir HTML dosya ekle \n\\!\\[](\\<<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38>\nPM.png>).
         Yeni sayfa çalışma alanının solunda dosyaların listesinin içinde gözükecek.
         .\\\r\n\n-   Dosyayı yeniden adlandır, sağ tıklayarak ve Yeniden Adlandır'
         ı seçerek veya seçili iken üzerine tıklayarak.   **İsmin diğerlerinden farklı
@@ -1459,19 +1722,19 @@ tr-TR:
         yapmak için yorumları ve beyaz alanları kullanın.\\\r\n-   Ortağınızdan, site
         ile ilgili olası problemleri bulmanızda size yardımcı olmasını isteyin.\\\r"
       CSD U2 project share: "# Projeni Paylaş\\\r\n\n\\\r\nProjenizi dünya ile paylaşmanın
-        zamanı!\\\r\n\\\r\n\n# Bunu Yapın\\\r\n\n-   Sayfanın üstündeki\n    ![](<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27\n
+        zamanı!\\\r\n\\\r\n\n# Bunu Yapın\\\r\n\n-   Sayfanın üstündeki\n    \\!\\[](\\<<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27>\n
         \   AM.png>) butonuna tıklayın.\\\r\n-   Üretilen URL' yi kopyalayın, sayfanızı
         görmesini istediğiniz kişilere bağlantıyı e-posta olarak gönderin. .\\\r\n
         \   \\\r"
       CSD U2 project share_2018: "# Projeni Paylaş\\\r\n\n\\\r\nProjenizi dünya ile
         paylaşmanın zamanı!\\\r\n\\\r\n\n# Bunu Yapın\\\r\n\n-   Sayfanın üstündeki\n
-        \   ![](<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27\n
+        \   \\!\\[](\\<<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27>\n
         \   AM.png>) butonuna tıklayın.\\\r\n-   Üretilen URL' yi kopyalayın, sayfanızı
         görmesini istediğiniz kişilere bağlantıyı e-posta olarak gönderin. .\\\r\n
         \   \\\r"
       CSD U2 project share_2019: "# Projeni Paylaş\\\r\n\n\\\r\nProjenizi dünya ile
         paylaşmanın zamanı!\\\r\n\\\r\n\n# Bunu Yapın\\\r\n\n-   Sayfanın üstündeki\n
-        \   ![](<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27\n
+        \   \\!\\[](\\<<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27>\n
         \   AM.png>) butonuna tıklayın.\\\r\n-   Üretilen URL' yi kopyalayın, sayfanızı
         görmesini istediğiniz kişilere bağlantıyı e-posta olarak gönderin. .\\\r\n
         \   \\\r"
@@ -1509,6 +1772,22 @@ tr-TR:
         program şimdilik fare imlecini düz aşağıya hareket ettirir - sağdaki resimdeki
         gibi ekran boyunca çapraz hareket etmesi için güncelleyebilir misiniz?\\\r\n\\\r\n_Büyük
         Zorluk:\nFare imlecini resimdeki gibi aynı yönde yapabilir misin?_"
+      CSD U3 Diagonal Movement_2018: "<img src=\"https://images.code.org/f92774863b17074adc85b8f6bbd017f2-image-1492726926884.gif\"\nstyle=\"float:
+        right; margin-left: 20px;\">\\\r\n\\\r\n\n# Çapraz Hareket\\\r\n\n\\\r\nHareketli
+        nesnenin sadece 'x' veya 'y' değerlerini değiştirerek onları sadece düz yukarı
+        ve aşağı ya da sola ve sağa hareket ettirebilirsiniz. Eğer çapraz hareket
+        ettirmek istiyorsanız _iki_ özelliğin de değerini değiştirmelisiniz.\\\r\n\\\r\nBu
+        program şimdilik fare imlecini düz aşağıya hareket ettirir - sağdaki resimdeki
+        gibi ekran boyunca çapraz hareket etmesi için güncelleyebilir misiniz?\\\r\n\\\r\n_Büyük
+        Zorluk:\nFare imlecini resimdeki gibi aynı yönde yapabilir misin?_"
+      CSD U3 Diagonal Movement_2019: "<img src=\"https://images.code.org/f92774863b17074adc85b8f6bbd017f2-image-1492726926884.gif\"\nstyle=\"float:
+        right; margin-left: 20px;\">\\\r\n\\\r\n\n# Çapraz Hareket\\\r\n\n\\\r\nHareketli
+        nesnenin sadece 'x' veya 'y' değerlerini değiştirerek onları sadece düz yukarı
+        ve aşağı ya da sola ve sağa hareket ettirebilirsiniz. Eğer çapraz hareket
+        ettirmek istiyorsanız _iki_ özelliğin de değerini değiştirmelisiniz.\\\r\n\\\r\nBu
+        program şimdilik fare imlecini düz aşağıya hareket ettirir - sağdaki resimdeki
+        gibi ekran boyunca çapraz hareket etmesi için güncelleyebilir misiniz?\\\r\n\\\r\n_Büyük
+        Zorluk:\nFare imlecini resimdeki gibi aynı yönde yapabilir misin?_"
       CSD U3 Draw Loop Plugged orange and green: "<img src=\"https://images.code.org/2b5b2ce029e2f1d7377db7dcd7760cf0-image-1492031771047.15.45\nPM.png\"
         style=\"float:right;width:150px\">\\\r\n\\\r\n\n# Çizme Döngüsünü Kullanma\\\r\n\n\\\r\nŞimdi
         çizme döngüsüyle bir kaç iş yapma sırası sende. Game Lab tarafından tekrar
@@ -1539,6 +1818,23 @@ tr-TR:
         çalışmada çizme döngüsü örneği var.\\\r\n\\\r\n\n# Bunu Yap\\\r\n\n-   Kodu
         çalıştır ve nasıl işlediğini gör.\\\r\n-   Ortağın ile videoda gördüğün çevirmeli
         deftere benzeyip benzemediğini tartış. Niçin ve ya niçin değil?"
+      CSD U3 Draw Loop Plugged predict 2 embed: "# Tahmin Et\\\r\n\n\\\r\nBu program
+        onu farklı bir şekilde çalıştıracak küçük bir farka sahip. \nYine zorlu, hatırla:\\\r\n\\\r\n\\*\nİlk
+        olarak çizme döngüsü dışındaki tüm kodlarınız bir defa çalıştırılır\\\r\n\n-
+        \  Çizme döngüsü dışındaki tüm kodlarınız sonsuza kadar tekrar tekrar çalıştırılır\\\r\n
+        \   \\\r\n    Bu program ne yapar? Tahminini aşağıya yaz."
+      CSD U3 Draw Loop Plugged predict 2 embed_2018: "# Tahmin Et\\\r\n\n\\\r\nBu
+        program onu farklı bir şekilde çalıştıracak küçük bir farka sahip. \nYine
+        zorlu, hatırla:\\\r\n\\\r\n\\*\nİlk olarak çizme döngüsü dışındaki tüm kodlarınız
+        bir defa çalıştırılır\\\r\n\n-   Çizme döngüsü dışındaki tüm kodlarınız sonsuza
+        kadar tekrar tekrar çalıştırılır\\\r\n    \\\r\n    Bu program ne yapar? Tahminini
+        aşağıya yaz."
+      CSD U3 Draw Loop Plugged predict 2 embed_2019: "# Tahmin Et\\\r\n\n\\\r\nBu
+        program onu farklı bir şekilde çalıştıracak küçük bir farka sahip. \nYine
+        zorlu, hatırla:\\\r\n\\\r\n\\*\nİlk olarak çizme döngüsü dışındaki tüm kodlarınız
+        bir defa çalıştırılır\\\r\n\n-   Çizme döngüsü dışındaki tüm kodlarınız sonsuza
+        kadar tekrar tekrar çalıştırılır\\\r\n    \\\r\n    Bu program ne yapar? Tahminini
+        aşağıya yaz."
       CSD U3 Draw Loop Plugged update your scene: "# Sahneni Genişlet\\\r\n\n\\\r\nBu
         son derste yaptığınız hareketli nesne sahnesi. Şimdi çizme döngüsünü ve hareketli
         nesne özelliklerini kullanarak küçük bir değişiklik yapıyorsun.\\\r\n\\\r\n<img\nsrc=\"https://images.code.org/ce257c4d91da460c9c2add1733873769-image-1492209174198.32.29\nPM.png\"
@@ -1767,216 +2063,239 @@ tr-TR:
         bir hareketli nesne ekleyin ve bir dizi tuş farklı ile kontrol edin(\"w\",
         \"a\", \"s\" ve\"d\" yaygın olan seçeneklerdir).\\\r\n-   Sahnenin daha ilginç
         olması için arka plana bir kaç şekil ekleyin."
+      CSD U3 Keypress Watchers Predict: "# Bir tahmin yap: kullanıcı ile ilk 'Aşağı
+        oka basıldığında' bloğu ile etkileştin. Ama bu sadece birçok yöntemden sadece
+        birisi. Tuşa basıldığında ne tepki vereceğinizi istediğinize bağlı olarak
+        belirleyin. \\\r \\\r Aşağı, sağ ve sol tuşa basıldığında ne olacağını tahmin
+        edin \\\r \\* Tahmini yaptıktan sonra kodu çalıştırın?\n\n\"Aşağı oka basılğında\"
+        ile \"ok yukarı gittiğinde\" ve \"ok aşağı gittiğinde\" arasında ne fark var?
+        10 satırdaki! işareti ne iş yapıyor?\nDiğer tuşları programında nasıl kullanırsın?"
+      CSD U3 Keypress Watchers Predict_2018: "# Bir tahmin yap: kullanıcı ile ilk
+        'Aşağı oka basıldığında' bloğu ile etkileştin. Ama bu sadece birçok yöntemden
+        sadece birisi. Tuşa basıldığında ne tepki vereceğinizi istediğinize bağlı
+        olarak belirleyin. \\\r \\\r Aşağı, sağ ve sol tuşa basıldığında ne olacağını
+        tahmin edin \\\r \\* Tahmini yaptıktan sonra kodu çalıştırın?\n\n\"Aşağı oka
+        basılğında\" ile \"ok yukarı gittiğinde\" ve \"ok aşağı gittiğinde\" arasında
+        ne fark var? 10 satırdaki! işareti ne iş yapıyor?\nDiğer tuşları programında
+        nasıl kullanırsın?"
+      CSD U3 Keypress Watchers Predict_2019: "# Bir tahmin yap: kullanıcı ile ilk
+        'Aşağı oka basıldığında' bloğu ile etkileştin. Ama bu sadece birçok yöntemden
+        sadece birisi. Tuşa basıldığında ne tepki vereceğinizi istediğinize bağlı
+        olarak belirleyin. \\\r \\\r Aşağı, sağ ve sol tuşa basıldığında ne olacağını
+        tahmin edin \\\r \\* Tahmini yaptıktan sonra kodu çalıştırın?\n\n\"Aşağı oka
+        basılğında\" ile \"ok yukarı gittiğinde\" ve \"ok aşağı gittiğinde\" arasında
+        ne fark var? 10 satırdaki! işareti ne iş yapıyor?\nDiğer tuşları programında
+        nasıl kullanırsın?"
       CSD U3 L11 Freeplay: "# Serbest Oyun\\\r\n\n\\\r\nİstediğin herhangi bir şeyi
         oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek
-        için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        için buna tıklayabilirsin  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
         , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin.
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)."
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)."
       CSD U3 L11 Freeplay_2018: "# Serbest Oyun\\\r\n\n\\\r\nİstediğin herhangi bir
         şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına
-        göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        göndermek için buna tıklayabilirsin  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
         , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin.
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)."
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)."
       CSD U3 L11 Freeplay_2019: "# Serbest Oyun\\\r\n\n\\\r\nİstediğin herhangi bir
         şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına
-        göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        göndermek için buna tıklayabilirsin  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
         , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin.
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)."
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)."
       CSD U3 L12 Freeplay: "# Serbest Oyun\\\r\n\n\\\r\nİstediğin herhangi bir şeyi
         oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek
-        için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        için buna tıklayabilirsin  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
         , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin.
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)."
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)."
       CSD U3 L12 Freeplay_2018: "# Serbest Oyun\\\r\n\n\\\r\nİstediğin herhangi bir
         şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına
-        göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        göndermek için buna tıklayabilirsin  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
         , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin.
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)."
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)."
       CSD U3 L12 Freeplay_2019: "# Serbest Oyun\\\r\n\n\\\r\nİstediğin herhangi bir
         şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına
-        göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        göndermek için buna tıklayabilirsin  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
         , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin.
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)."
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)."
       CSD U3 L13 Freeplay: "# Serbest Oyun\\\r\n\n\\\r\nİstediğin herhangi bir şeyi
         oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek
-        için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        için buna tıklayabilirsin  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
         , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin.
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)."
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)."
       CSD U3 L13 Freeplay_2018: "# Serbest Oyun\\\r\n\n\\\r\nİstediğin herhangi bir
         şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına
-        göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        göndermek için buna tıklayabilirsin  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
         , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin.
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)."
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)."
       CSD U3 L13 Freeplay_2019: "# Serbest Oyun\\\r\n\n\\\r\nİstediğin herhangi bir
         şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına
-        göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        göndermek için buna tıklayabilirsin  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
         , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin.
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)."
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)."
       CSD U3 L15 Freeplay: "# Serbest Oyun\\\r\n\n\\\r\nİstediğin herhangi bir şeyi
         oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek
-        için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        için buna tıklayabilirsin  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
         , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin.
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)."
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)."
       CSD U3 L15 Freeplay_2018: "# Serbest Oyun\\\r\n\n\\\r\nİstediğin herhangi bir
         şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına
-        göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        göndermek için buna tıklayabilirsin  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
         , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin.
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)."
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)."
       CSD U3 L15 Freeplay_2019: "# Serbest Oyun\\\r\n\n\\\r\nİstediğin herhangi bir
         şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına
-        göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        göndermek için buna tıklayabilirsin  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
         , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin.
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)."
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)."
       CSD U3 L16 Freeplay: "# Serbest Oyun\\\r\n\n\\\r\nİstediğin herhangi bir şeyi
         oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek
-        için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        için buna tıklayabilirsin  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
         , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin.
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)."
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)."
       CSD U3 L16 Freeplay_2018: "# Serbest Oyun\\\r\n\n\\\r\nİstediğin herhangi bir
         şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına
-        göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        göndermek için buna tıklayabilirsin  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
         , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin.
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)."
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)."
       CSD U3 L16 Freeplay_2019: "# Serbest Oyun\\\r\n\n\\\r\nİstediğin herhangi bir
         şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına
-        göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        göndermek için buna tıklayabilirsin  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
         , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin.
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)."
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)."
       CSD U3 L17 Freeplay: "# Serbest Oyun\\\r\n\n\\\r\nİstediğin herhangi bir şeyi
         oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek
-        için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        için buna tıklayabilirsin  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
         , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin.
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)."
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)."
       CSD U3 L17 Freeplay_2018: "# Serbest Oyun\\\r\n\n\\\r\nİstediğin herhangi bir
         şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına
-        göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        göndermek için buna tıklayabilirsin  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
         , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin.
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)."
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)."
       CSD U3 L17 Freeplay_2019: "# Serbest Oyun\\\r\n\n\\\r\nİstediğin herhangi bir
         şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına
-        göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        göndermek için buna tıklayabilirsin  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
         , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin.
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)."
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)."
       CSD U3 L18 Freeplay: "# Serbest Oyun\\\r\n\n\\\r\nİstediğin herhangi bir şeyi
         oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek
-        için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        için buna tıklayabilirsin  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
         , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin.
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)."
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)."
       CSD U3 L18 Freeplay_2018: "# Serbest Oyun\\\r\n\n\\\r\nİstediğin herhangi bir
         şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına
-        göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        göndermek için buna tıklayabilirsin  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
         , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin.
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)."
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)."
       CSD U3 L18 Freeplay_2019: "# Serbest Oyun\\\r\n\n\\\r\nİstediğin herhangi bir
         şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına
-        göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        göndermek için buna tıklayabilirsin  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
         , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin.
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)."
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)."
       CSD U3 L19 Freeplay: "# Serbest Oyun\\\r\n\n\\\r\nİstediğin herhangi bir şeyi
         oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek
-        için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        için buna tıklayabilirsin  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
         , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin.
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)."
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)."
       CSD U3 L19 Freeplay_2018: "# Serbest Oyun\\\r\n\n\\\r\nİstediğin herhangi bir
         şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına
-        göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        göndermek için buna tıklayabilirsin  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
         , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin.
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)."
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)."
       CSD U3 L19 Freeplay_2019: "# Serbest Oyun\\\r\n\n\\\r\nİstediğin herhangi bir
         şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına
-        göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        göndermek için buna tıklayabilirsin  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
         , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin.
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)."
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)."
       CSD U3 L3 Freeplay: "# Serbest Oyun\\\r\n\n\\\r\nİstediğin herhangi bir şeyi
         oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek
-        için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        için buna tıklayabilirsin  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
         , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin.
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)."
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)."
       CSD U3 L3 Freeplay_2018: "# Serbest Oyun\\\r\n\n\\\r\nİstediğin herhangi bir
         şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına
-        göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        göndermek için buna tıklayabilirsin  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
         , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin.
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)."
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)."
       CSD U3 L3 Freeplay_2019: "# Serbest Oyun\\\r\n\n\\\r\nİstediğin herhangi bir
         şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına
-        göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        göndermek için buna tıklayabilirsin  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
         , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin.
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)."
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)."
       CSD U3 L4 Freeplay: "# Serbest Oyun\\\r\n\n\\\r\nİstediğin herhangi bir şeyi
         oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek
-        için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        için buna tıklayabilirsin  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
         , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin.
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)."
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)."
       CSD U3 L4 Freeplay_2018: "# Serbest Oyun\\\r\n\n\\\r\nİstediğin herhangi bir
         şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına
-        göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        göndermek için buna tıklayabilirsin  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
         , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin.
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)."
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)."
       CSD U3 L4 Freeplay_2019: "# Serbest Oyun\\\r\n\n\\\r\nİstediğin herhangi bir
         şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına
-        göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        göndermek için buna tıklayabilirsin  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
         , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin.
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)."
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)."
       CSD U3 L5 Freeplay: "# Serbest Oyun\\\r\n\n\\\r\nİstediğin herhangi bir şeyi
         oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek
-        için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        için buna tıklayabilirsin  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
         , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin.
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)."
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)."
       CSD U3 L5 Freeplay_2018: "# Serbest Oyun\\\r\n\n\\\r\nİstediğin herhangi bir
         şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına
-        göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        göndermek için buna tıklayabilirsin  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
         , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin.
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)."
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)."
       CSD U3 L5 Freeplay_2019: "# Serbest Oyun\\\r\n\n\\\r\nİstediğin herhangi bir
         şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına
-        göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        göndermek için buna tıklayabilirsin  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
         , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin.
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)."
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)."
       CSD U3 L6 Freeplay: "# Serbest Oyun\\\r\n\n\\\r\nİstediğin herhangi bir şeyi
         oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek
-        için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        için buna tıklayabilirsin  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
         , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin.
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)."
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)."
       CSD U3 L6 Freeplay_2018: "# Serbest Oyun\\\r\n\n\\\r\nİstediğin herhangi bir
         şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına
-        göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        göndermek için buna tıklayabilirsin  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
         , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin.
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)."
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)."
       CSD U3 L6 Freeplay_2019: "# Serbest Oyun\\\r\n\n\\\r\nİstediğin herhangi bir
         şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına
-        göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        göndermek için buna tıklayabilirsin  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
         , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin.
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)."
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)."
       CSD U3 L7 Freeplay: "# Serbest Oyun\\\r\n\n\\\r\nİstediğin herhangi bir şeyi
         oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek
-        için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        için buna tıklayabilirsin  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
         , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin.
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)."
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)."
       CSD U3 L7 Freeplay_2018: "# Serbest Oyun\\\r\n\n\\\r\nİstediğin herhangi bir
         şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına
-        göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        göndermek için buna tıklayabilirsin  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
         , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin.
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)."
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)."
       CSD U3 L7 Freeplay_2019: "# Serbest Oyun\\\r\n\n\\\r\nİstediğin herhangi bir
         şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına
-        göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        göndermek için buna tıklayabilirsin  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
         , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin.
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)."
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)."
       CSD U3 L9 Freeplay: "# Serbest Oyun\\\r\n\n\\\r\nİstediğin herhangi bir şeyi
         oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek
-        için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        için buna tıklayabilirsin  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
         , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin.
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)."
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)."
       CSD U3 L9 Freeplay_2018: "# Serbest Oyun\\\r\n\n\\\r\nİstediğin herhangi bir
         şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına
-        göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        göndermek için buna tıklayabilirsin  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
         , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin.
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)."
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)."
       CSD U3 L9 Freeplay_2019: "# Serbest Oyun\\\r\n\n\\\r\nİstediğin herhangi bir
         şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına
-        göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        göndermek için buna tıklayabilirsin  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
         , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin.
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)."
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)."
       CSD U3 Mouse Input Bee 1: "<img src=\"https://images.code.org/d2092b4f2debc336f963d48bd6cf4973-image-1477681020928.gif\"\nstyle=\"float:right\">\\\r\n\\\r\n\n#
         Fare X ve Y\\\r\n\n\\\r\nGiriş almanın basit yollarından birisi de kullanıcının
         fare imleci konumudur. **'World.mouseX' ve World.mouseY' özelliklerini kullanarak
@@ -2142,11 +2461,11 @@ tr-TR:
       CSD U3 Plotting Shapes Shape Lab: "# Şekiller Çizme\\\r\n\n\\\r\nBu aracı keşfetmek
         farklı renklerde şekiller çizmenizi sağlar. \\\r\n\\\r\nŞekilleri tam olarak
         yerleştirmenize yardımcı olması için, \"Çalıştır\" butonuna bastığınızdan
-        ve ızgarayı görünür yaptığınızdan emin olun.\\\r\n\\\r\n![](<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59\nPM.png>)"
+        ve ızgarayı görünür yaptığınızdan emin olun.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59>\nPM.png>)"
       CSD U3 Plotting Shapes Shape Lab_2018: "# Şekiller Çizme\\\r\n\n\\\r\nBu aracı
         keşfetmek farklı renklerde şekiller çizmenizi sağlar. \\\r\n\\\r\nŞekilleri
         tam olarak yerleştirmenize yardımcı olması için, \"Çalıştır\" butonuna bastığınızdan
-        ve ızgarayı görünür yaptığınızdan emin olun.\\\r\n\\\r\n![](<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59\nPM.png>)"
+        ve ızgarayı görünür yaptığınızdan emin olun.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59>\nPM.png>)"
       CSD U3 Random Debug Cloud: "<img src=\"https://images.code.org/529b7e5ddda4683e6a0cc5b3028e4dbf-image-1490824752133.58.50\nPM.png\"
         style=\"float:right;height:150px\">\\\r\n\\\r\n\n# Hata Ayıklama - 4 Parametre
         Kullanma\\\r\n\n\\\r\nÇimen artık çalışıyor, gökyüzüne bir bulut ekleyelim.
@@ -2739,6 +3058,33 @@ tr-TR:
         motosiklet neyin yanlış gittiğini göremeden ekrandan kayboluyor.\\\r\n\\\r\nSize
         sağlanan izleyiciyi 'cycly.x' ve 'cycle.y' için kullanarak hangisinin yanlış
         yönde gittiğini bul ve programı düzelt."
+      CSD U3 abstraction velocityX if-statements predict: "# \n\nKonum ile Hızı Değiştirme\\\r\n\\\r\nEğer
+        ('if') blokları içerisinde hız bloklarını kullanmanın bir faydası şartın doğruluğu
+        devam etmese de nesnenizin yer değiştirmeye devam etmesidir. Örneğin siz sadece
+        uçan kayığınızı çalıştırmak için bir kere tuşa basarsınız ve o sonsuza kadar
+        dönmeye devam eder. Aşağıdaki kullanılan kodlar farklı yönlerde hareket eden
+        balık nesne yapma ifadeleridir.\\\r\n\\\r\n\n# \n\nBunu Yap\\\r\n\\\r\n\\*Eğer
+        ('if') ifadesine bak, hareketli nesnenin konumunu ve hızını kontrol et.\\\r\n\n-
+        \  Ortağın ile birlikte, kodun ne yapacağını tartış ve cevabını aşağıya yaz.\\\r\n-
+        \  Cevabını sunduğunda kodu çalıştır."
+      CSD U3 abstraction velocityX if-statements predict_2018: "# \n\nKonum ile Hızı
+        Değiştirme\\\r\n\\\r\nEğer ('if') blokları içerisinde hız bloklarını kullanmanın
+        bir faydası şartın doğruluğu devam etmese de nesnenizin yer değiştirmeye devam
+        etmesidir. Örneğin siz sadece uçan kayığınızı çalıştırmak için bir kere tuşa
+        basarsınız ve o sonsuza kadar dönmeye devam eder. Aşağıdaki kullanılan kodlar
+        farklı yönlerde hareket eden balık nesne yapma ifadeleridir.\\\r\n\\\r\n\n#
+        \n\nBunu Yap\\\r\n\\\r\n\\*Eğer ('if') ifadesine bak, hareketli nesnenin konumunu
+        ve hızını kontrol et.\\\r\n\n-   Ortağın ile birlikte, kodun ne yapacağını
+        tartış ve cevabını aşağıya yaz.\\\r\n-   Cevabını sunduğunda kodu çalıştır."
+      CSD U3 abstraction velocityX if-statements predict_2019: "# \n\nKonum ile Hızı
+        Değiştirme\\\r\n\\\r\nEğer ('if') blokları içerisinde hız bloklarını kullanmanın
+        bir faydası şartın doğruluğu devam etmese de nesnenizin yer değiştirmeye devam
+        etmesidir. Örneğin siz sadece uçan kayığınızı çalıştırmak için bir kere tuşa
+        basarsınız ve o sonsuza kadar dönmeye devam eder. Aşağıdaki kullanılan kodlar
+        farklı yönlerde hareket eden balık nesne yapma ifadeleridir.\\\r\n\\\r\n\n#
+        \n\nBunu Yap\\\r\n\\\r\n\\*Eğer ('if') ifadesine bak, hareketli nesnenin konumunu
+        ve hızını kontrol et.\\\r\n\n-   Ortağın ile birlikte, kodun ne yapacağını
+        tartış ve cevabını aşağıya yaz.\\\r\n-   Cevabını sunduğunda kodu çalıştır."
       CSD U3 challenge face: "<img src=\"https://images.code.org/aa5aedbcfec082c2886d88b565e5fc09-image-1495732712591.png\"\nstyle=\"float:
         right; max-width: 200px; border: 1px solid grey\">\\\r\n\n# Meydan Okuma:\n\nYüz\\\r\n\\\r\n_Herhangi
         bir meydan okumaya başlamadan önce öğretmeninin ile beraber kontrol et._\\\r\n\\\r\nSağ
@@ -3112,21 +3458,21 @@ tr-TR:
         32, 41, 63"
       CSD U5 binary 4-new: "# Birden fazla sayıyı çözme\\\r\n\n\\\r\nİşte 4, 5 veya
         6 bitlik sayıları hesaplayabilen bir widget. Bunu, aşağıdaki \nikili dizgide
-        kodlanan iki dünya rekorunu bulmak için kullanabilirsiniz.\\\r\n\\\r\n![](<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06\nPM.png>)\\\r\n\\\r\n\n1.
+        kodlanan iki dünya rekorunu bulmak için kullanabilirsiniz.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06>\nPM.png>)\\\r\n\\\r\n\n1.
         \ Çoğu kişi kaldırdı ve iki dakika içinde atıldı.\n    (4 bits)\\\r\n2.  Bir
         dakika içinde bir papağan tarafından açılan konserve içeceklerin çoğu. (6
         bits)\\\r\n    \\\r\n    # \n    Bunu Yapın\\\r\n3.  İkili dizedeki iki sayıyı
         çözer."
       CSD U5 binary 4-new_2018: "# Birden fazla sayıyı çözme\\\r\n\n\\\r\nİşte 4,
         5 veya 6 bitlik sayıları hesaplayabilen bir widget. Bunu, aşağıdaki \nikili
-        dizgide kodlanan iki dünya rekorunu bulmak için kullanabilirsiniz.\\\r\n\\\r\n![](<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06\nPM.png>)\\\r\n\\\r\n\n1.
+        dizgide kodlanan iki dünya rekorunu bulmak için kullanabilirsiniz.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06>\nPM.png>)\\\r\n\\\r\n\n1.
         \ Çoğu kişi kaldırdı ve iki dakika içinde atıldı.\n    (4 bits)\\\r\n2.  Bir
         dakika içinde bir papağan tarafından açılan konserve içeceklerin çoğu. (6
         bits)\\\r\n    \\\r\n    # \n    Bunu Yapın\\\r\n3.  İkili dizedeki iki sayıyı
         çözer."
       CSD U5 binary 4-new_2019: "# Birden fazla sayıyı çözme\\\r\n\n\\\r\nİşte 4,
         5 veya 6 bitlik sayıları hesaplayabilen bir widget. Bunu, aşağıdaki \nikili
-        dizgide kodlanan iki dünya rekorunu bulmak için kullanabilirsiniz.\\\r\n\\\r\n![](<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06\nPM.png>)\\\r\n\\\r\n\n1.
+        dizgide kodlanan iki dünya rekorunu bulmak için kullanabilirsiniz.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06>\nPM.png>)\\\r\n\\\r\n\n1.
         \ Çoğu kişi kaldırdı ve iki dakika içinde atıldı.\n    (4 bits)\\\r\n2.  Bir
         dakika içinde bir papağan tarafından açılan konserve içeceklerin çoğu. (6
         bits)\\\r\n    \\\r\n    # \n    Bunu Yapın\\\r\n3.  İkili dizedeki iki sayıyı
@@ -3135,7 +3481,7 @@ tr-TR:
         kadar olan sayıları hesaplayabilen bir araç. Aşağıdaki dünya rekorlarının
         değerlerini bulmak için bunu kullanabilirsiniz.\\\r\n\\\r\n\"1\" bitinin her
         zaman en sağdaki bit olduğundan emin olmayı unutmayın. Eğer aracın solunda
-        fazladan bit var ise, onları kapalı tutun.\\\r\n\\\r \n![](<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14\nPM.png>)\\\r\n\\\r\n\n1.
+        fazladan bit var ise, onları kapalı tutun.\\\r\n\\\r \n\\!\\[](\\<<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14>\nPM.png>)\\\r\n\\\r\n\n1.
         \ Bir köpekteki en uzun kuyruk (inç cinsinden) (5 bit)\\\r\n2.  Birinin yüzünde\n
         \   dengede duran en fazla kaşık (5 bit)\\\r\n    \\\r\n    # Bunu Yap\\\r\n3.
         \ İkili dizedeki \n    iki sayıyı çözün."
@@ -3143,7 +3489,7 @@ tr-TR:
         bite kadar olan sayıları hesaplayabilen bir araç. Aşağıdaki dünya rekorlarının
         değerlerini bulmak için bunu kullanabilirsiniz.\\\r\n\\\r\n\"1\" bitinin her
         zaman en sağdaki bit olduğundan emin olmayı unutmayın. Eğer aracın solunda
-        fazladan bit var ise, onları kapalı tutun.\\\r\n\\\r \n![](<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14\nPM.png>)\\\r\n\\\r\n\n1.
+        fazladan bit var ise, onları kapalı tutun.\\\r\n\\\r \n\\!\\[](\\<<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14>\nPM.png>)\\\r\n\\\r\n\n1.
         \ Bir köpekteki en uzun kuyruk (inç cinsinden) (5 bit)\\\r\n2.  Birinin yüzünde\n
         \   dengede duran en fazla kaşık (5 bit)\\\r\n    \\\r\n    # Bunu Yap\\\r\n3.
         \ İkili dizedeki \n    iki sayıyı çözün."
@@ -3151,67 +3497,67 @@ tr-TR:
         bite kadar olan sayıları hesaplayabilen bir araç. Aşağıdaki dünya rekorlarının
         değerlerini bulmak için bunu kullanabilirsiniz.\\\r\n\\\r\n\"1\" bitinin her
         zaman en sağdaki bit olduğundan emin olmayı unutmayın. Eğer aracın solunda
-        fazladan bit var ise, onları kapalı tutun.\\\r\n\\\r \n![](<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14\nPM.png>)\\\r\n\\\r\n\n1.
+        fazladan bit var ise, onları kapalı tutun.\\\r\n\\\r \n\\!\\[](\\<<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14>\nPM.png>)\\\r\n\\\r\n\n1.
         \ Bir köpekteki en uzun kuyruk (inç cinsinden) (5 bit)\\\r\n2.  Birinin yüzünde\n
         \   dengede duran en fazla kaşık (5 bit)\\\r\n    \\\r\n    # Bunu Yap\\\r\n3.
         \ İkili dizedeki \n    iki sayıyı çözün."
       CSD U5 binary 6-new: "# Birden fazla sayıyı çözmek\\\r\n\n\\\r\nİşte\nyeni bir
         bit dizesi. Bu sefer, iki sayının bit uzunluğunu bilmiyorsunuz. Bit uzunluğunu
-        bilmeden sayıları çözmeye çalışın.\\\r\n\\\r\n![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46\nPM.png>)\\\r\n\\\r\n\n1.
+        bilmeden sayıları çözmeye çalışın.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>\nPM.png>)\\\r\n\\\r\n\n1.
         \ En büyük rüzgar çanı, fit cinsinden (? bit)\\\r\n2.  Birinin ayakla\n    en
         uzağa attığı ok (fit cinsinden) (? bit)\\\r\n    \\\r\n    # Bunu Yap\\\r\n3.
         \ İkili dizedeki\n    iki sayıyı çözmeyi deneyin.\\\r\n4.  Cevabınızın doğru
         olup olmadığını neden kesin olarak bilemeyeceğinizi takım arkadaşınızla tartışın."
       CSD U5 binary 6-new_2018: "# Birden fazla sayıyı çözmek\\\r\n\n\\\r\nİşte\nyeni
         bir bit dizesi. Bu sefer, iki sayının bit uzunluğunu bilmiyorsunuz. Bit uzunluğunu
-        bilmeden sayıları çözmeye çalışın.\\\r\n\\\r\n![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46\nPM.png>)\\\r\n\\\r\n\n1.
+        bilmeden sayıları çözmeye çalışın.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>\nPM.png>)\\\r\n\\\r\n\n1.
         \ En büyük rüzgar çanı, fit cinsinden (? bit)\\\r\n2.  Birinin ayakla\n    en
         uzağa attığı ok (fit cinsinden) (? bit)\\\r\n    \\\r\n    # Bunu Yap\\\r\n3.
         \ İkili dizedeki\n    iki sayıyı çözmeyi deneyin.\\\r\n4.  Cevabınızın doğru
         olup olmadığını neden kesin olarak bilemeyeceğinizi takım arkadaşınızla tartışın."
       CSD U5 binary 6-new_2019: "# Birden fazla sayıyı çözmek\\\r\n\n\\\r\nİşte\nyeni
         bir bit dizesi. Bu sefer, iki sayının bit uzunluğunu bilmiyorsunuz. Bit uzunluğunu
-        bilmeden sayıları çözmeye çalışın.\\\r\n\\\r\n![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46\nPM.png>)\\\r\n\\\r\n\n1.
+        bilmeden sayıları çözmeye çalışın.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>\nPM.png>)\\\r\n\\\r\n\n1.
         \ En büyük rüzgar çanı, fit cinsinden (? bit)\\\r\n2.  Birinin ayakla\n    en
         uzağa attığı ok (fit cinsinden) (? bit)\\\r\n    \\\r\n    # Bunu Yap\\\r\n3.
         \ İkili dizedeki\n    iki sayıyı çözmeyi deneyin.\\\r\n4.  Cevabınızın doğru
         olup olmadığını neden kesin olarak bilemeyeceğinizi takım arkadaşınızla tartışın."
       CSD U5 binary 7-new: "# Bit Uzunluğu\\\r\n\n\\\r\nHer bir numaranın kaç bit
         uzunluğunu bilmiyorsanız, bir dizi sayıdaki kodu çözemezsiniz.\\\r\n\\\r\nÖrneğin,
-        aşağıdaki ikili dize birçok farklı şekilde çözülebilir.\\\r\n\\\r\n![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46\nPM.png>)\\\r\n\\\r\nDizi
-        bu şekilde bölünürse, dize 10, 84'ü okur.\\\r\n\\\r\n![](<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01\nPM.png>)
-        ![](<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08\nPM.png>)\\\r\n\\\r\n\\\r\nEğer
-        böyle bölüyorsanız, dize 42, 20 okur.\\\r\n\\\r\n![](<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13\nPM.png>)
-        ![](<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19\nPM.png>)\\\r\n\\\r\nBu
+        aşağıdaki ikili dize birçok farklı şekilde çözülebilir.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>\nPM.png>)\\\r\n\\\r\nDizi
+        bu şekilde bölünürse, dize 10, 84'ü okur.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01>\nPM.png>)
+        \\!\\[](\\<<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08>\nPM.png>)\\\r\n\\\r\n\\\r\nEğer
+        böyle bölüyorsanız, dize 42, 20 okur.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13>\nPM.png>)
+        \\!\\[](\\<<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19>\nPM.png>)\\\r\n\\\r\nBu
         sorunu çözmek için, insanlar her sayı için sabit bir uzunluğu kabul ediyorlar.
         \nAşağıdaki dize aynı iki sayıyı kullanır, ancak her bir numara \ngerçekte
-        kaç bit olursa olsun tam olarak sekiz bit alır.\\\r\n\\\r\n![](<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26\nPM.png>)\\\r\n\\\r\n\n#
+        kaç bit olursa olsun tam olarak sekiz bit alır.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26>\nPM.png>)\\\r\n\\\r\n\n#
         Bunu Yapın\\\r\n\n\\\r\n\n-   Sekiz bitlik sayıyı kullanan dizgeyi çözmek
         için ikili widget'i kullanın.\\\r\n-   Aynı cevaba sahip olup olmadığınızı
         görmek için bir takım arkadaşı ile cevaplarınızı kontrol edin."
       CSD U5 binary 7-new_2018: "# Bit Uzunluğu\\\r\n\n\\\r\nHer bir numaranın kaç
         bit uzunluğunu bilmiyorsanız, bir dizi sayıdaki kodu çözemezsiniz.\\\r\n\\\r\nÖrneğin,
-        aşağıdaki ikili dize birçok farklı şekilde çözülebilir.\\\r\n\\\r\n![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46\nPM.png>)\\\r\n\\\r\nDizi
-        bu şekilde bölünürse, dize 10, 84'ü okur.\\\r\n\\\r\n![](<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01\nPM.png>)
-        ![](<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08\nPM.png>)\\\r\n\\\r\n\\\r\nEğer
-        böyle bölüyorsanız, dize 42, 20 okur.\\\r\n\\\r\n![](<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13\nPM.png>)
-        ![](<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19\nPM.png>)\\\r\n\\\r\nBu
+        aşağıdaki ikili dize birçok farklı şekilde çözülebilir.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>\nPM.png>)\\\r\n\\\r\nDizi
+        bu şekilde bölünürse, dize 10, 84'ü okur.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01>\nPM.png>)
+        \\!\\[](\\<<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08>\nPM.png>)\\\r\n\\\r\n\\\r\nEğer
+        böyle bölüyorsanız, dize 42, 20 okur.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13>\nPM.png>)
+        \\!\\[](\\<<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19>\nPM.png>)\\\r\n\\\r\nBu
         sorunu çözmek için, insanlar her sayı için sabit bir uzunluğu kabul ediyorlar.
         \nAşağıdaki dize aynı iki sayıyı kullanır, ancak her bir numara \ngerçekte
-        kaç bit olursa olsun tam olarak sekiz bit alır.\\\r\n\\\r\n![](<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26\nPM.png>)\\\r\n\\\r\n\n#
+        kaç bit olursa olsun tam olarak sekiz bit alır.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26>\nPM.png>)\\\r\n\\\r\n\n#
         Bunu Yapın\\\r\n\n\\\r\n\n-   Sekiz bitlik sayıyı kullanan dizgeyi çözmek
         için ikili widget'i kullanın.\\\r\n-   Aynı cevaba sahip olup olmadığınızı
         görmek için bir takım arkadaşı ile cevaplarınızı kontrol edin."
       CSD U5 binary 7-new_2019: "# Bit Uzunluğu\\\r\n\n\\\r\nHer bir numaranın kaç
         bit uzunluğunu bilmiyorsanız, bir dizi sayıdaki kodu çözemezsiniz.\\\r\n\\\r\nÖrneğin,
-        aşağıdaki ikili dize birçok farklı şekilde çözülebilir.\\\r\n\\\r\n![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46\nPM.png>)\\\r\n\\\r\nDizi
-        bu şekilde bölünürse, dize 10, 84'ü okur.\\\r\n\\\r\n![](<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01\nPM.png>)
-        ![](<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08\nPM.png>)\\\r\n\\\r\n\\\r\nEğer
-        böyle bölüyorsanız, dize 42, 20 okur.\\\r\n\\\r\n![](<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13\nPM.png>)
-        ![](<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19\nPM.png>)\\\r\n\\\r\nBu
+        aşağıdaki ikili dize birçok farklı şekilde çözülebilir.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>\nPM.png>)\\\r\n\\\r\nDizi
+        bu şekilde bölünürse, dize 10, 84'ü okur.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01>\nPM.png>)
+        \\!\\[](\\<<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08>\nPM.png>)\\\r\n\\\r\n\\\r\nEğer
+        böyle bölüyorsanız, dize 42, 20 okur.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13>\nPM.png>)
+        \\!\\[](\\<<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19>\nPM.png>)\\\r\n\\\r\nBu
         sorunu çözmek için, insanlar her sayı için sabit bir uzunluğu kabul ediyorlar.
         \nAşağıdaki dize aynı iki sayıyı kullanır, ancak her bir numara \ngerçekte
-        kaç bit olursa olsun tam olarak sekiz bit alır.\\\r\n\\\r\n![](<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26\nPM.png>)\\\r\n\\\r\n\n#
+        kaç bit olursa olsun tam olarak sekiz bit alır.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26>\nPM.png>)\\\r\n\\\r\n\n#
         Bunu Yapın\\\r\n\n\\\r\n\n-   Sekiz bitlik sayıyı kullanan dizgeyi çözmek
         için ikili widget'i kullanın.\\\r\n-   Aynı cevaba sahip olup olmadığınızı
         görmek için bir takım arkadaşı ile cevaplarınızı kontrol edin."
@@ -3219,26 +3565,26 @@ tr-TR:
         birleri kullanrak \"X\" şeklini tamamla. İşlerini toparlamak için \"Okunabilir
         Biçim\"e istediğin zaman tıklayabilirsin."
       CSD U5 black white images pixelation 2: "# Bunu Yap\\\r\n\n\\\r\nPikselleme
-        aracını kullanarak gülen yüz çizin.\\\r\n\\\r\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47\nPM.png>)"
+        aracını kullanarak gülen yüz çizin.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>\nPM.png>)"
       CSD U5 black white images pixelation 2_2018: "# Bunu Yap\\\r\n\n\\\r\nPikselleme
-        aracını kullanarak gülen yüz çizin.\\\r\n\\\r\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47\nPM.png>)"
+        aracını kullanarak gülen yüz çizin.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>\nPM.png>)"
       CSD U5 black white images pixelation 2_2019: "# Bunu Yap\\\r\n\n\\\r\nPikselleme
-        aracını kullanarak gülen yüz çizin.\\\r\n\\\r\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47\nPM.png>)"
+        aracını kullanarak gülen yüz çizin.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>\nPM.png>)"
       CSD U5 black white images pixelation 3: "# Bunu Yap\\\r\n\n\\\r\nBu resmin genişlik
         ve yükseklik kaydırma çubuğu doğru ayarlanmadığı için hiçbir şeye benzemiyor.
-        Resmi bulana kadar onları değiştirin.\\\r\n\\\r\n![](<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17\nPM.png>)"
+        Resmi bulana kadar onları değiştirin.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17>\nPM.png>)"
       CSD U5 black white images pixelation 3_2018: "# Bunu Yap\\\r\n\n\\\r\nBu resmin
         genişlik ve yükseklik kaydırma çubuğu doğru ayarlanmadığı için hiçbir şeye
-        benzemiyor. Resmi bulana kadar onları değiştirin.\\\r\n\\\r\n![](<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17\nPM.png>)"
+        benzemiyor. Resmi bulana kadar onları değiştirin.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17>\nPM.png>)"
       CSD U5 black white images pixelation 3_2019: "# Bunu Yap\\\r\n\n\\\r\nBu resmin
         genişlik ve yükseklik kaydırma çubuğu doğru ayarlanmadığı için hiçbir şeye
-        benzemiyor. Resmi bulana kadar onları değiştirin.\\\r\n\\\r\n![](<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17\nPM.png>)"
+        benzemiyor. Resmi bulana kadar onları değiştirin.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17>\nPM.png>)"
       CSD U5 black white images pixelation 4: "# Bunu Yap\\\r\n\n\\\r\nBu gülen yüze
-        kaşlarını ekleyin. Eğer takılırsan \"Okunabilir Biçim\"i kullanmayı hatırla.\\\r\n\\\r\n![](<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37\nPM.png>)"
+        kaşlarını ekleyin. Eğer takılırsan \"Okunabilir Biçim\"i kullanmayı hatırla.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37>\nPM.png>)"
       CSD U5 black white images pixelation 4_2018: "# Bunu Yap\\\r\n\n\\\r\nBu gülen
-        yüze kaşlarını ekleyin. Eğer takılırsan \"Okunabilir Biçim\"i kullanmayı hatırla.\\\r\n\\\r\n![](<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37\nPM.png>)"
+        yüze kaşlarını ekleyin. Eğer takılırsan \"Okunabilir Biçim\"i kullanmayı hatırla.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37>\nPM.png>)"
       CSD U5 black white images pixelation 4_2019: "# Bunu Yap\\\r\n\n\\\r\nBu gülen
-        yüze kaşlarını ekleyin. Eğer takılırsan \"Okunabilir Biçim\"i kullanmayı hatırla.\\\r\n\\\r\n![](<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37\nPM.png>)"
+        yüze kaşlarını ekleyin. Eğer takılırsan \"Okunabilir Biçim\"i kullanmayı hatırla.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37>\nPM.png>)"
       CSD U5 black white images pixelation 5: "# Bunu Yap\\\r\n\n\\\r\nŞimdi senin
         sıran. Pikselleme aracını kullanarak istediğini çiz. Resmin genişliğini ve
         yüksekliğini istediğin gibi değiştirme konusunda rahat ol."
@@ -3255,6 +3601,21 @@ tr-TR:
         ve birleri kullanrak \"X\" şeklini tamamla. İşlerini toparlamak için \"Okunabilir
         Biçim\"e istediğin zaman tıklayabilirsin."
       CSD U6 Catch the Mouse: Gömülü Tahmin
+      CSD U6 Catch the Mouse prediction: "# Fareyi Yakala\\\r\n\n\\\r\nBu\nbir tıklama
+        oyunu, son derste yaptığınıza benzer bir oyun.\\\r\n\\\r\nTakım \narkadaşınızla
+        birlikte koda bakın ve aşağıdaki soruları cevaplayın:\\\r\n\\\r\n\\*\nLED
+        yanıp sönmeye başlamadan önce kaç kere fareye tıklamanız gerekiyor?\\\r\n\\\r\nCevabınızı\naşağıdaki
+        kutuya yazın sonra kodu çalıştırın ve ne olacağını görün."
+      CSD U6 Catch the Mouse prediction_2018: "# Fareyi Yakala\\\r\n\n\\\r\nBu\nbir
+        tıklama oyunu, son derste yaptığınıza benzer bir oyun.\\\r\n\\\r\nTakım \narkadaşınızla
+        birlikte koda bakın ve aşağıdaki soruları cevaplayın:\\\r\n\\\r\n\\*\nLED
+        yanıp sönmeye başlamadan önce kaç kere fareye tıklamanız gerekiyor?\\\r\n\\\r\nCevabınızı\naşağıdaki
+        kutuya yazın sonra kodu çalıştırın ve ne olacağını görün."
+      CSD U6 Catch the Mouse prediction_2019: "# Fareyi Yakala\\\r\n\n\\\r\nBu\nbir
+        tıklama oyunu, son derste yaptığınıza benzer bir oyun.\\\r\n\\\r\nTakım \narkadaşınızla
+        birlikte koda bakın ve aşağıdaki soruları cevaplayın:\\\r\n\\\r\n\\*\nLED
+        yanıp sönmeye başlamadan önce kaç kere fareye tıklamanız gerekiyor?\\\r\n\\\r\nCevabınızı\naşağıdaki
+        kutuya yazın sonra kodu çalıştırın ve ne olacağını görün."
       CSD U6 Catch the Mouse_2018: Gömülü Tahmin
       CSD U6 Catch the Mouse_2019: Gömülü Tahmin
       CSD U6 Driver pt 2: "# Sınırlayıcı Dönüş\\\r\n\n\\\r\nEğer ellerinizi \nçok
@@ -3344,6 +3705,21 @@ tr-TR:
         yaptığını görmek için deneyin.\\\r\n-   Butonun bir ışık düğmesi gibi çalışması
         için \n    bloklardan birini kullanın.\\\r\n-   Eğer LED kapalıysa, buton
         onu açmalıdır.\\\r\n\n\\*Eğer LED açıksa, buton onu kapamalıdır."
+      CSD U6 LEDbutton predict embed: "# Etkinlikler Kullanma\\\r\n\n\\\r\nBu program
+        etkinlikleri kullanır. Bir takım arkadaşı ile birlikte kodu inceleyin ve ne
+        yapacağını tartışın. \nSoruları cevapladıktan sonra, cevabınızı kontrol etmek
+        için \"Çalıştır\" ı tıklayın.\\\r\n\\\r\n\n-   Program \"Çalıştır\" durumundayken
+        ışık yanar mı? Neden ya da neden değil?"
+      CSD U6 LEDbutton predict embed_2018: "# Etkinlikler Kullanma\\\r\n\n\\\r\nBu
+        program etkinlikleri kullanır. Bir takım arkadaşı ile birlikte kodu inceleyin
+        ve ne yapacağını tartışın. \nSoruları cevapladıktan sonra, cevabınızı kontrol
+        etmek için \"Çalıştır\" ı tıklayın.\\\r\n\\\r\n\n-   Program \"Çalıştır\"
+        durumundayken ışık yanar mı? Neden ya da neden değil?"
+      CSD U6 LEDbutton predict embed_2019: "# Etkinlikler Kullanma\\\r\n\n\\\r\nBu
+        program etkinlikleri kullanır. Bir takım arkadaşı ile birlikte kodu inceleyin
+        ve ne yapacağını tartışın. \nSoruları cevapladıktan sonra, cevabınızı kontrol
+        etmek için \"Çalıştır\" ı tıklayın.\\\r\n\\\r\n\n-   Program \"Çalıştır\"
+        durumundayken ışık yanar mı? Neden ya da neden değil?"
       CSD U6 LEDs color: "# Biraz Renk Ekleme\\\r\n\n\\\r\nMuhtemelen, son seviyede
         `colorLeds[0].on()` kullanıldığında LED'lerin beyaz renkte olduğunu fark ettiniz.
         \nBir renk belirtmezseniz, beyaz üretmek için `on()` LED'in üç parçasını da
@@ -3434,6 +3810,30 @@ tr-TR:
         \  Bir kullanıcı arayüzü öğesinin genişliğini, yüksekliğini veya konumunu
         değiştirin\\\r\n-   Sensör değerlerine dayalı farklı görüntüler görüntülemek
         için koşullu ifadeleri kullanın"
+      CSD U6 analog change: "# Etkinlik Değiştirin\\\r\n\n\\\r\nVeri olayı, kodunuzun
+        sürekli çalışmasına aldırmazsanız iyidir, ancak bazen bu, sorununuza en etkili
+        çözüm değildir. Sensör \"change\" olayı, sensör değeri son okumadan bu yana
+        değişirse gerek duyulmadığında programınızın çalışmadığından emin olabilirsiniz.\\\r\n\\\r\n\n#
+        \n\nBunu Yapın\\\r\n\\\r\nSağlanan olay işleyicisini kullanarak, zil sesini
+        duyuran ve sıcaklık sensörü okuması değiştiğinde \"temp\\_value\" değerlerini
+        güncelleyen bir program yazın. Değiştirmek ve programınızın nasıl tepki verdiğini
+        görmek için baş parmağınızı sıcaklık sensörünün üzerine getirin."
+      CSD U6 analog change_2018: "# Etkinlik Değiştirin\\\r\n\n\\\r\nVeri olayı, kodunuzun
+        sürekli çalışmasına aldırmazsanız iyidir, ancak bazen bu, sorununuza en etkili
+        çözüm değildir. Sensör \"change\" olayı, sensör değeri son okumadan bu yana
+        değişirse gerek duyulmadığında programınızın çalışmadığından emin olabilirsiniz.\\\r\n\\\r\n\n#
+        \n\nBunu Yapın\\\r\n\\\r\nSağlanan olay işleyicisini kullanarak, zil sesini
+        duyuran ve sıcaklık sensörü okuması değiştiğinde \"temp\\_value\" değerlerini
+        güncelleyen bir program yazın. Değiştirmek ve programınızın nasıl tepki verdiğini
+        görmek için baş parmağınızı sıcaklık sensörünün üzerine getirin."
+      CSD U6 analog change_2019: "# Etkinlik Değiştirin\\\r\n\n\\\r\nVeri olayı, kodunuzun
+        sürekli çalışmasına aldırmazsanız iyidir, ancak bazen bu, sorununuza en etkili
+        çözüm değildir. Sensör \"change\" olayı, sensör değeri son okumadan bu yana
+        değişirse gerek duyulmadığında programınızın çalışmadığından emin olabilirsiniz.\\\r\n\\\r\n\n#
+        \n\nBunu Yapın\\\r\n\\\r\nSağlanan olay işleyicisini kullanarak, zil sesini
+        duyuran ve sıcaklık sensörü okuması değiştiğinde \"temp\\_value\" değerlerini
+        güncelleyen bir program yazın. Değiştirmek ve programınızın nasıl tepki verdiğini
+        görmek için baş parmağınızı sıcaklık sensörünün üzerine getirin."
       CSD U6 analog data: "# Veri Olayı\\\r\n\n\\\r\nBu benzer sensörlerin her biri
         sensörden her seferimde yeni veri geldiğinde meydana gelen \"veri\" diye adlandırılan
         özel bir olayı yayarlar. Bu olayı kullanrak, sürekli güncellenen programlar
@@ -3587,6 +3987,18 @@ tr-TR:
         'keskinNotalar' (C#, D#, F#, G#, A#).\\\r\n\\\r\n\n# Bunu Yap\\\r\n\n\\\r\nŞu
         anda 'keskinNotalar' dizisi yanlızca bir öğeye sahip.\\\r\n\\\r\n\n-   Diziyi
         düzeltin böylece piyanodaki keskin tuşlar doğru notayı çalabilir."
+      CSD U6 board getters: "# Devre Oyun Alanını Kullanmak\\\r\n\n\\\r\nAlıcıları
+        ve Ayarlayıcıları Devre Oyun Alanı ile de kullanabilirsiniz. Bu seviye için,\nkartınızı
+        fişe takmanız gerekecek.\\\r\n\\\r\nKodu okuyun ve programın ne yapacağını
+        tahmin edin, sonra tahminizi test etmek için \"Çalıştır'a\" basın."
+      CSD U6 board getters_2018: "# Devre Oyun Alanını Kullanmak\\\r\n\n\\\r\nAlıcıları
+        ve Ayarlayıcıları Devre Oyun Alanı ile de kullanabilirsiniz. Bu seviye için,\nkartınızı
+        fişe takmanız gerekecek.\\\r\n\\\r\nKodu okuyun ve programın ne yapacağını
+        tahmin edin, sonra tahminizi test etmek için \"Çalıştır'a\" basın."
+      CSD U6 board getters_2019: "# Devre Oyun Alanını Kullanmak\\\r\n\n\\\r\nAlıcıları
+        ve Ayarlayıcıları Devre Oyun Alanı ile de kullanabilirsiniz. Bu seviye için,\nkartınızı
+        fişe takmanız gerekecek.\\\r\n\\\r\nKodu okuyun ve programın ne yapacağını
+        tahmin edin, sonra tahminizi test etmek için \"Çalıştır'a\" basın."
       CSD U6 challenge motorcycle_2018: "# Zor Görev\\\r\n\n\\\r\nBu programı\nkullanarak,
         özellikleri alma ve ayarlama ile biraz daha deneme yapın. Deneyebileceğiniz
         bazı fikirler:\\\r\n\\\r\n\n-   Motosikletin hareketini aşağı ve yukarı doğru
@@ -3712,6 +4124,21 @@ tr-TR:
         blok modunda olmadığından emin olun.\\\r\n-   'led.yanıpsöndür()' bloğunu
         yorumun altına sürükleyin '// benimLedimi Yanıp söndür'.\\\r\n-   Yazı 'led'ini
         'benimLedim'le değiştir.\\\r\n-   Kodunu test et."
+      CSD U6 circuit predict multi: "# Bir Tahminde Bulunun\\\r\n\n\\\r\nŞimdiye \nkadar
+        kullandığınız tüm cihazlar aslında numaralı pinlere bağlı devrelerdir. Hangi
+        devrenin 13 numaralı pine bağlı olduğunu görmek için kartınızda **#13'ü**
+        arayın, sonra bu kodun tamamını okuyun ve program çalıştığında ne olacağını
+        tahmin edin."
+      CSD U6 circuit predict multi_2018: "# Bir Tahminde Bulunun\\\r\n\n\\\r\nŞimdiye
+        \nkadar kullandığınız tüm cihazlar aslında numaralı pinlere bağlı devrelerdir.
+        Hangi devrenin 13 numaralı pine bağlı olduğunu görmek için kartınızda **#13'ü**
+        arayın, sonra bu kodun tamamını okuyun ve program çalıştığında ne olacağını
+        tahmin edin."
+      CSD U6 circuit predict multi_2019: "# Bir Tahminde Bulunun\\\r\n\n\\\r\nŞimdiye
+        \nkadar kullandığınız tüm cihazlar aslında numaralı pinlere bağlı devrelerdir.
+        Hangi devrenin 13 numaralı pine bağlı olduğunu görmek için kartınızda **#13'ü**
+        arayın, sonra bu kodun tamamını okuyun ve program çalıştığında ne olacağını
+        tahmin edin."
       CSD U6 circuit smart bike blinker buttons: "# Akıllı Bisiklet\n\n-   Sinyal
         Lambası Kontrolleri\\\r\n    \\\r\n    Dönüş sinyali LED'leri bağlandığında,
         onları kontrol etmek için sadece bazı butonları programlamanız gerekiyor.
@@ -4028,6 +4455,11 @@ tr-TR:
         tekrar kapatmanın imkanı yoktur!\\\r\n\\\r\n\n# Bunu Yap\\\r\n\n\\\r\nTüm
         LED'leri kapayan\nbir fonksiyon oluşturun ve sonra uygulamanıza bir \"Kapalı\"
         butonu ekleyin ve tüm renkli LED'leri kapatmasını sağlayın."
+      CSD U6 light pattern off_2019: "# Işığı Kapamak\\\r\n\n\\\r\nBu\nuygulamayı
+        başlattığınızda ışıklar kapalıdır ama siz bir desen seçer seçmez, ışıkları
+        tekrar kapatmanın imkanı yoktur!\\\r\n\\\r\n\n# Bunu Yap\\\r\n\n\\\r\nTüm
+        LED'leri kapayan\nbir fonksiyon oluşturun ve sonra uygulamanıza bir \"Kapalı\"
+        butonu ekleyin ve tüm renkli LED'leri kapatmasını sağlayın."
       CSD U6 params starchaser intro: "# Yıldız Kovalayan\\\r\n\n\\\r\nBu\noyunda,
         kullanıcı yıldızları LED'lerin rengine göre yakalamaya çalışır.\\\r\n\\\r\n\n#
         Bunu Yap\\\r\n\n-   Oyunu oynayın ve aşağıdakileri bir takım arkadaşınızla
@@ -4201,10 +4633,237 @@ tr-TR:
       CSDU6 circuit playground piano_2019: "# Devre Piyanosu\\\r\n\n\\\r\nAşağıdaki\nkoda
         bakın. Kodu değiştirmeyeceksiniz ama onun ne yaptığını anlamaya \nçalışın.\\\r\n\\\r\n\n#
         Bunu Yap\\\r\n\n\\\r\n\n-   Programı çalıştırın ve ekrandaki piyanoyu çalın."
+      Course 4 Artist 11: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\"
+        width=\"200px\"/> \\\r \\\r şimdi bir meydan okuma!  \\\r \\\r burada sadece
+        gösterilmiş olan blokları kullanan bir tasarımdır.  Deneme yanılma kullanmaktan
+        çekinmeyin. \\\r \\\r tekrarlanan şekilson Bulmaca ile aynı,  İlk döngüde
+        kullanılan uzunluk biraz daha küçük. "
+      Course 4 Artist 12: "<img src=\"https://images.code.org/70795d84048767ae7fb65883f476b27c-image-1440050836837.01.09.png\"\nwidth=\"250px\"/>\\\r\n\\\r\nSerbest
+        ilham zamanı. Bu deseni oluşturmak için gerekli herşeyi öğrendin. Eğer bu
+        resim ilham veriyorsa benzer birşeyler yapmaya çalış. Yoksa kendi tasarımını
+        yap.\\\r"
+      Course 4 Artist 13: Oynamaya devam ediyor musun? Burada istediğin şekilde bir
+        şeyler yarata bileceğin boş tuval var!
+      Course 4 Artist 20: Oynamaya devam ediyor musun? Boş alana istediğin şekilde
+        bir şeyler çizebilirsin!
+      Course 4 Artist 3: Bu kodu çalıştırdığında ne olacak anlamaya çalış (Çalıştır
+        tuşu ile test edebilirsin). Aynı kodu Tekrarla bloğu ile yeterince tekrarlayarak
+        çizimi tamamla.
+      Course 4 Artist 4: Dairede kaç derece var? Tekrarla  bloğu içini doldur ve renk
+        çemberi oluşturun.
+      Course 4 Artist 5: 'Simetrik olacak şekilde diğer yarısını çizin. Üçgenler eşkenar
+        ve 50 piksel uzunluğunda. İpucu: Kullanmanız gereken bütün bloklara karar
+        vermek için birkaç kez çalıştırmanız gerekebilir.'
+      Course 4 Artist 6: Üç adet eşkenar üçgen çizmek için kodu tamamla.
+      Course 4 Artist 7: 'Şimdi içiçe döngü ile 10 üçgen çiz. '
+      Course 4 Artist 8: Bütün kodu döngüleyerek güneş çizebilr misin.
+      Course 4 Artist 8a: Bu şekli hatırlıyor musun?  Şimdi herhangi bir blok vermeden
+        sizin baştan oluşturmanıza izin vereceğiz!
+      Course 4 Artist 9: "Bu tasarımı 10 kes tekrarlayın ve her çizimde dönmeyi unutmayın
+        \\\r"
+      Course 4 Artist Binary 1: "Bu fonksiyon 1 ve 0 dan oluşan ikili diziyi alır
+        ve sanatçının bunu soldan sağa ve üstten alta  doğru uygulamasını sağlar.
+        Sanatçı 1 görünce kareyi doldurur ve 0 görünce boş bırakır. \\\r\n\\\r\nBu
+        kodu çalıştırın ve nasıl bir desen çizdiğini görün."
+      Course 4 Artist Binary Free Play 2b: "<img src=\"https://images.code.org/0a30f23ff6138828d053267719d34fa8-image-1444435986654.00.22.png\"\nwidth=\"250px\"/>\\\r
+        \\\r\nSerbest ilham zamanı. Bu deseni oluşturmak için gerekli herşeyi öğrendin.
+        Eğer bu resim ilham veriyorsa benzer birşeyler yapmaya çalış. Yoksa kendi
+        tasarımını yap.\\\r"
+      Course 4 Artist Binary pre1: "İkili sadece iki seçeneği kullanarak bilgileri
+        gösteren bir yoldur.  Burada,  \"kapalı\" seçeneğini (sayı 0 ile gösterilir)
+        ve \"açık\" (sayı 1 ile gösterilir) seçeneğini kullanacağız.  \\\r \\\r  Yalnızca
+        belirli kareleri üzerinde çevirerek tasarımlar yapmak için bir kılavuz ile
+        sağladık.  \"01010101\" ikili diziyi ilk satırda çizebilr miyim?"
+      Course 4 Artist For Loops 11: 'Bir önceki aşamada şeklin kenar sayısını kontrol
+        etmek için değişken kullanmıştık. Şimdi aynıo şeyi "sayaç" değişkeni ile yapacağız.
+        Bu desen üçgen ile başlıyor ve her seferinde bir kenar daha ekleyerek ongen
+        ile bitiyor. İpucu: 360 bölü kenar sayısı kaç derece dönmen gerektiğini verecektir.'
+      Course 4 Artist For Loops 11a: "Hepsini biraraya koyalım. Kere tekrarla döngüsü
+        ve sayaç kullanarak her seferinde iki fazla kenarı olan şekil çizin. \nBir
+        miktar kod hazır olarak size verildi."
+      Course 4 Artist For Loops 14: Eğer her seferinde biraz daha fazla yada az dönerseniz
+        hoş bir etki oluşturur. Önceki seviyedeki aynı kodu kullanın fakat bu sefer
+        89 derece dönün ve bu sarmal kareyi çizin.
+      Course 4 Artist For Loops 15: 'Serbest oyun: Şununla say (for) döngüsü kullanarak
+        kendi çizimini yap. Kullanışlı birkaç değişken ekledik.'
+      Course 4 Artist For Loops 3: Son bulmaca bunu tamamlamak için bir başvuru olarak
+        kullanın.  En küçük üçgenin 20 piksel kenarı vardır, en büyük 200 piksel kenarı
+        vardır ve her üçgen öncekinden 20 piksel daha büyüktür.
+      Course 4 Artist For Loops 4: 'Bu kareleri çizmek için nasıl değişiklikler yaparsın.
+        15 piksel uzunluğunda kenarla başlar ve en büyüğü 300 piksel olan üçgenlerden
+        oluşur. Her üçgen bir öncekinden 15 piksel daha büyük. '
       Course 4 Artist For Loops 6a: Bir önceki aşamadaki koda üç ufak değişiklik yaparak
         bu çizimi yapabilirsin!
+      Course 4 Artist For Loops 8: |-
+        Sadece küçük bir kod değişikliğiyle bu çizimi oluşturmak mümkün. Neyin değişeceğini görebildin mi?
+        İpucu: Bir şeyleri çıkartman gerekiyor!
+      Course 4 Artist For Loops Challenge: "\\*\\* Meydan okumna: \\*\\* Öğrendiğin
+        şeyleri kullan ve  bu 40 piksel kenarları olan Çokgenleri oluştur.? \\\r \\\r
+        bir spiral oluşturmak için çokgeni kapatamazsınız.  Bu demek oluyor ki her
+        şeklin her zamankinden bir tane daha az tarafı olması gerekir."
+      Course 4 Artist For Loops inspire: "<br/><br/>\\\r <img\nsrc=\"https://images.code.org/9b5897e059bb29bd2faf8504659a3cfc-image-1440719685627.49.33.png\"\nwidth=\"250px\"/>
+        \\\r <br/><br/>\\\r\nSerbest ilham zamanı. Bu deseni oluşturmak için gerekli
+        herşeyi öğrendin. Eğer bu resim ilham veriyorsa benzer birşeyler yapmaya çalış.
+        Yoksa kendi tasarımını yap.\\\r."
+      Course 4 Artist Functions Inspiration: "<img src=\"https://images.code.org/cf373e03bede480ae54aec72ce823454-image-1442951867535.54.11.png\"\nwidth=\"250px\"/>\\\r\n\nSerbest
+        ilham zamanı. Bu deseni oluşturmak için gerekli herşeyi öğrendin. Eğer bu
+        resim ilham veriyorsa benzer birşeyler yapmaya çalış. Yoksa kendi tasarımını
+        yap.\\\r."
+      Course 4 Artist Functions challenge: "<img src=\"https://images.code.org/69f1c2b415f907c86aaa6ed2534c3682-image-1442870371171.13.38.png\"
+        width=\"250px\"/> \\\r \\\r \\*\\* meydan okuma düzeyi: \\*\\* Bu aşamada
+        yukarıdaki çizimi yapmak için öğrendikleribi kullanın.  "
+      Course 4 Artist Inspire: "<img src=\"https://images.code.org/b5e28b084cb331ee030ea3853ed921bd-image-1440060815818.51.21.png\"\nwidth=\"250px\"/>\\\r
+        \\\r\nSerbest ilham zamanı. Bu deseni oluşturmak için gerekli herşeyi öğrendin.
+        Eğer bu resim ilham veriyorsa benzer birşeyler yapmaya çalış. Yoksa kendi
+        tasarımını yap.\\\r. "
+      Course 4 Artist Vars 11: "Burada son bulmacadaki ile aynı anlayışa sahip daha
+        karışık kodlar var - Bu resmin karelerden oluşması için 'sides' değişkenini
+        kaç yapmalısın?\\\r\n\\\r\n\n<p\nstyle=\"font-size:small; padding: 15px 15px
+        15px 40px; background-color:#dcf3f3;\nborder-radius:10px;\">\r\n\\tTadını
+        çıkar: Kalıba ne olduğunu görmek için bir kaç farklı sayı kullanarak dene!\r\n</p>"
+      Course 4 Artist Vars 13: "Çok kenarlı bir şekilse şeklin ekrana sığması için
+        kenarlarının daha kısa olması lazım.\nBu harika desen için algoritma oluşturalım.
+        Length değişkenine sabit bir değer atayacağımıza sides değişkeni üzerinde
+        işlem yapıp hesaplayalım. Çokgenin etrafı 300 piksel olmalı. "
+      Course 4 Artist Vars 14: "Serbest oyun: Kontrol et! Şimdi algoritman bir döngüye
+        daha sokulmuş. Değişkenlerinin değerlerini değiştirerek güzel bir şekil çizmeye
+        çalış..\\\r\n\\\r\nDaha fazla etki için renklerle rastgele oynamayı dene."
+      Course 4 Artist Vars 2: '"İleriye taşı 150" yerine "ileriye taşı" bloğu uzunluk
+        "length" değişkeni kullanıyor. uzunluk "length" değişkenine 150 atayıp bu
+        üçgeni çizebilir misin?'
+      Course 4 Artist Vars 4: Şimdi iki kat geniş kadar uzun bir dikdörtgen yapmak
+        istiyorum. Genişlik "width" değişkeninine 100 atanmış olması gerekiyor. Kodu
+        tamamlayabilmek için matematik bloklarını kullanabilir misin?
+      Course 4 Artist Vars 6: Düzenli bir poligon çizen bir kod parçası. Kenar "sides"
+        değişkenine 4 atanmış. sides değişkenini ve matematik bloklarını kullanarak
+        her bir çokgen de ne kadar döneceğini hesaplayabilir misin?
+      Course 4 Artist Vars 7: Bir önceki bulmacada öğrendiklerini kullanarak ve kenar
+        sayısı"sides" değişkenine değer atayarak altıgeni oluştur?
+      Course 4 Artist Vars 8: "\\*\\* Serbestoyun: \\*\\* Bu şeklin kenar sayısını
+        ile değiştirmeyi. Kenar sayisi ne olursa olsun eklin toplam çevre boyutunun
+        ayni kalmasını sağlayabilir misin?"
       Course 4 Bee 2: Eğer/değilse bloklarını kullanarak nesnenin çiçek yada petek
         olduğunu kontrol et. Çiçek ise nektar al değilse bal yap!
+      Course 4 Bee 3: Bilinmeyen nesne çiçek yada petek. B sefer eğer/değilse bloğunu
+        kullanarak, eğer Çiçek ise nektar al değilse bal yap (çünkü bu durumda petektir).
+      Course 4 Bee Params 1: '"3 nektar al" komutunu kullanarak nektarın tamamını
+        toplamak için bir sıralama oluştur ki böylelikle döner, nektarları toplamak
+        için ilerler ve ardından ilk konumuna geri döner.'
+      Course 4 Bee Params 2: ' "3 nektar al" işlevini değiştirin ve sağa döneceğime
+        sola dönmemi sağlayın.'
+      Course 4 Bee Params 3: 'Şimdi her iki tarafta çiçekler var. Sol "Left" ve Sağ
+        "Right" isimli iki değişken tanımladık. Ayrıca "Get 3 nectar" fonksiyonu için
+        yön"direction" parametresi ekledik. Fonksiyonu güncelleyin ve arı left ve
+        rigth değişkenine göre dönüp nektarı alsın.  '
+      Course 4 Bee Params 5: Sıfırdan başlayalım - "5 nektar kazan" isminde ve yön
+        parametreli bir fonksiyon yazabilir misin?
+      Course 4 Bee Params 6: Bütün nektarları tek bir fonksiyonla alsak iyi olmaz
+        mıydı? Nektar miktarı "nectars" parametresi ekleyerek toplanacak nektar miktarını
+        kontrol edin. Fonksiyonun adını da değiştirebilirsiniz!
+      Course 4 Bee Params 8: Balda yapmak gerekiyor. Fonksiyonu değiştirerek parametre
+        kadar nektar al yada bal yap şekline getir?
+      Course 4 EC 1a: "\\*\\*Sana meydan okunuyor. İpucu yok. Haydi bakalım!"
+      Course 4 EC 1b: "\\*\\*Sana meydan okunuyor. İpucu yok. Haydi bakalım!"
+      Course 4 EC 2a: "\\*\\*Sana meydan okunuyor. İpucu yok. Haydi bakalım!"
+      Course 4 EC 2b: "\\*\\*Sana meydan okunuyor. İpucu yok. Haydi bakalım!"
+      Course 4 EC 2c: "\\*\\*Sana meydan okunuyor. İpucu yok. Haydi bakalım!"
+      Course 4 Maze 4: '"Tekrar" bloğunu kullanarak daha az sayıda blokla bulmacayı
+        çöz...'
+      Course 4 Play Lab Params 1: Burada tanımlanan 'zıpla' (jump) fonksiyonu ana
+        oyuncuyu 100 piksel zıplatıyor. Bu fonksiyonu kullan ve köpeği ok tuşlarıyla
+        hareket ettirip bütün bayrakları toplamasını sağla.
+      Course 4 Play Lab Params 2: |-
+        Bizim atlayacağımızdan daha yüksek bayraklar var. Yukarı ve aşağı  ok tuşlarını kullanalım ve birden fazla seviye zıplama yapalım.
+        Yükseklik "height" parametresini zıpla "jump" fonksiyonuna ekleyelim. Yukarı ok köpeğin 200 piksel, aşağı ok 100 piksel zıplamasını sağlasın.
+      Course 4 Play Lab Params 3: 'Zıpla "Jump" fonkssiyonuna hangi oyuncunun zıplamasını
+        belirten bir parametre daha ekledik. Her bir oyuncu bir sayı ile belirtiliyor.
+        Düzenle ile fonksiyonu ilgili aktörün zıplamasını sağlayacak şekilde değiştir. '
+      Course 4 Play Lab Params 5: Devriye "patrol" fonksiyonunu düzenle ve oyuncu
+        "actor" parametresi ekle. Böylece her bir oyuncuyu için kullanabiliriz. Oyuncular
+        1, 2, 3 diye numaralandırılmış.
+      Course 4 Play Lab Params 6: Devriye "patrol" fonkisyonuna hız "speed" parametresi
+        ekle. "ayarla hız" bloğunu kullanarak penguenin diğerlerinden önce her iki
+        bayrağı almasını sağla.
+      Course 4 Play Lab Params 7: Eğlence zamanı. kodu incele ve her bir bloğun ne
+        yaptığına bak. bitirdiğinde ok tuşları ile köpeğin bütün bayrakları toplamasını
+        sağla.
+      Course 4 Play Lab Params 8: '"aktör zamanında dokunur" bloğunu kullan ve köpeği
+        başka bir oyuncuya dokunursa sol üst köşeye gönder.'
+      Course 4 Play Lab Vars 1: Bu sefer kod yazman gerekmiyor. Sadece çalıştır düğmesine
+        bas ve oyunu oyna! Bu oyunda köpek kediden fazla bayrak toplamak istiyor.
+        aşağı tuşu ile köpeği kontrol et. Oyunun bitince bitiş tuşuna bas.
+      Course 4 Play Lab Vars 2: Önceki oyundaki bulmaca adil değildi. dog\_speed değişkeni
+        ile hızı değiştirerek köpeğin kediden fazla bayrak toplamasını sağla. Önce
+        10 bayrak toplayan kazanır!
+      Course 4 Play Lab Vars 4: 'Şimdi köpeğin atabileceği yüksekliği kontrol etmek
+        için ''yükseklik'' adlı bir değişkeni kullanıyoruz. Köpeğin tüm bayraklara
+        erişmek için yeterince yüksek atlayabilmesi için `height` değişkenini güncelleyin. '
+      Course 4 Play Lab Vars 7: "Güzel, şimdi bu oyunu oynamanın kolay olmadığından
+        emin olalım! \\\r\n\\\r\nKöpek (aktör 1) Cat'den bir sandviç (aktör 2) tarafından
+        vurulduğu zaman, bir noktayı kaybetmelisiniz.\\\r\n\\\r\n10 puanla başlayın,
+        bu da zor değil. Seviyeyi geçmek için puanınızın 10'dan 0'a düşmesine izin
+        verin."
+      Course 4 Play Lab Vars 9: "Serbest Oyun Zamanı! İşte burada bu bölümde oynadığımız
+        bütün değişkenlerle birlikte birkaç fazlalık var ihtiyacın olursa diye.\\\r\n\\\r\nŞu
+        anda alet çantamızda düzenlenmesi gereken çok kare var olduğunun farkına varın!
+        İşte, biz her parçayı uygun kategoriye koyduk. Mevcut olan her şeyi keşfetmeye
+        biraz zaman ayırın. Göz atmayı bitirdiğinde, tekrarları, değişkenleri, ve
+        olayları kullanarak bir oyun veya hikaye yapın.\\\r\n\\\r\nÇalışma alanındaki
+        bütün komutları görmek için aşağı kaydırın."
+      Course 4 Play Labs For Loops 1: Köpeğin 1 den 100 e kadar bütün sayıları saymasını
+        sağlayalım. For döngüsü kullanalım ve köpek her döngüde sayaç "counter" değişkenini
+        söylesin.
+      Course 4 Playlab For Loop Freeplay: 'Serbest oyun: Öğrendiğin herşeyi kullan
+        ve oyunu yapmak için for döngüsüde kullan!'
+      Course 4 Playlab For Loops 4b: "Şimdi, bu iki karakter yarışa giriyor!  her
+        biri sayaç kadar ilerleyecek, ama bunların sayaçları farklı değerde olacak
+        \ \\\r \\\r döngülerden birisinin artışını değiştirerek yarışı berabere bitire
+        bilirmisin?"
+      Course 4 Playlab For Loops 5b: Yarıştaki aralığı ayarla ve iki karakterin aynı
+        yere ulaşmasını sağla.
+      Course 4 SCF 1: 'Meydan Okuma: Önerilen fonksiyonları kullanarak 4 satır altıgen
+        çiz. Çift sayılı satırların sağa kayık olduğuna dikkat edin?'
+      Course 4 SCF 1a: "\\*\\* Fonksiyonlar süper meydan okuma: \\*\\* mümkün olan
+        en az sayıda blok ile bu nektarları toplayabilr misin? \\\r"
+      Course 4 SCF 2: 'Meydan Okuma: Bir önceki seviyede öğrendiklerini kullanarak
+        bu görüntüyü çiz. Parametre kullanırsan kod daha basit hale gelir. '
+      Course 4 SCF 3: "\\*\\* Fonksiyonlar süper meydan okuma: 1\\*\\*\n böyle resim
+        çizmek için önceki düzeyde öğrendiklerini kullanın. \\\r \\\r \\* Not: kod
+        parametreleri kullanarak daha basit hale gelir \\* \\\r \\\r <br/> \\\r <img
+        src=\"https://images.code.org/d3d6a51fafdcc0a09a5c6b0e0f3c2b92-image-1446239805818.08.59.png\"
+        width=\"300px\"/> \\\r <br/>  "
+      Course 4 SCFL 1: "\\*\\* Şununla say döngüsü- süper meydan okuma: \\*\\* En
+        az sayıda blok ile bu bulmacayı çöz. \\\r <br/> \\\r."
+      Course 4 SCFL 1a: "\\*\\* Şununla say döngüsü- süper meydan okuma: \\*\\* En
+        az sayıda blok ile buScaktı pslsmuta götür. \\\r <br/> \\\r"
+      Course 4 SCFL 1b: "\\*\\* Şununla say döngüsü- süper meydan okuma: \\*\\* En
+        az sayıda blok ile buScaktı pslsmuta götür. \\\r <br/> \\\r"
+      Course 4 SCFL 3: "\\*\\*Şununla say döngüsü- süper meydan okuma: \\*\\* Bu çizimi
+        yeniden nasıl oluşturabilirsin? \\\r \\\r <img src=\"https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png\"
+        width=\"350px\"/> \\\r"
+      Course 4 SCFL 4: "\\*\\*Şununla say döngüsü- süper meydan okuma: \\*\\* Bu çizimi
+        yeniden nasıl oluşturabilirsin? \n<img src=\"https://images.code.org/407f502735beec686187451bdf67aada-image-1446002848700.59.34.png\"\nwidth=\"350px\"/>"
+      Course 4 SCFL 6: "\\*\\*Şununla say döngüsü- süper meydan okuma: \\*\\* Bu çizimi
+        bir döngü ile yeniden nasıl oluşturabilirsin? \n<img src=\"https://images.code.org/407f502735beec686187451bdf67aada-image-1446002848700.59.34.png\"\nwidth=\"350px\"/>"
+      Course 4 SCFL 7: "\\*\\*Şununla say süper meydan okuma: \\*\\* sanatçı dalgaları
+        yakalamak istiyor! Bu çizimi yeniden oluşturabilirmisin? \\\r \\\r <img src=\"https://images.code.org/fba3423f2e9a405d4d3859de32cdb0f3-image-1446102880655.13.36.png\"
+        width=\"350px\"/>"
+      Course 4 SCV 1: "<img src=\"https://images.code.org/7469d6b9aaaae532d864caecb65bd2cc-image-1444706295435.54.39.png\"
+        width=\"250px\"/> \\\r \\\r \\*\\* değişkenler Super Meydan Okuma: \\*\\*
+        Şimdi böyle bir model yapmak için bilmeniz gereken her şeyi öğrendin! Bu bulmacanın
+        zor olması gerekiyordu.  çözmek kiçin çabalayabilir misin?"
+      Course 4 SCV 2: "<img src=\"https://images.code.org/85f0b27009edd86eff78692004b9ed52-image-1444712655590.02.32.png\"\nwidth=\"250px\"/>\\\r
+        \\\r\\*\\* değişkenler Super Meydan Okuma: \\*\\* Şimdi böyle bir model yapmak
+        için bilmeniz gereken her şeyi öğrendin! Bu bulmacanın zor olması gerekiyordu.
+        \ çözmek kiçin çabalayabilir misin?"
+      Course 4 SCV 4: "\\*\\* Değişkenler- süper meydan okuma: \\*\\* En az sayıda
+        blok ile bu bulmacayı çöz. \\\r <br/> \\\r"
+      Course 4 SCV 5: "\\*\\* Değişkenler- süper meydan okuma: \\*\\* En az sayıda
+        blok ile bu bulmacayı çöz. \\\r <br/> \\\r"
+      Course 4 SCV 6: "<img src=\"https://images.code.org/499fc71a0a06bacb68a9789ad57f8148-image-1445574373673.16.44.png\"\nwidth=\"250px\"/>\\\r
+        \\\r\\*\\* değişkenler Super Meydan Okuma: \\*\\* Şimdi böyle bir model yapmak
+        için bilmeniz gereken her şeyi öğrendin! Bu bulmacanın zor olması gerekiyordu.
+        \ çözmek kiçin çabalayabilir misin?  "
       CourseD_Dance_Party_01: |-
         _Dans partisi yapalım!_
 
@@ -4303,6 +4962,11 @@ tr-TR:
       CourseE_HOC 2018 Level_9b: Resife geldin, şimdi de **Denizin Kalbini** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
         ara! Hazine **sandığına** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png)
         ulaşmak için mavi ve kırmızı mercanları kullan.
+      Dance_2019_05: |-
+        _Şimdi hareketleniyoruz!_
+
+        Çalışma alanına bir <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> bloğu ekleyin. Dansçının 6 ölçü sonra yeni bir harekete başlamasını sağlayın.
+      Dance_2019_10: Havaya girin! Kendi dansınızı yaratın ve arkadaşlarınızla paylaşın.
       Dance_Party_01: |-
         _Dans partisi yapalım!_
 
@@ -4378,6 +5042,14 @@ tr-TR:
         -   Dansları kontrol etmek için daha fazla tuş ekleyin
         -   Tuşlara basıldığında arka plan dansçılarının da tepki vermesini sağlayın
         -   Görünürlüklerini ayarlayarak dansçının dört ölçüde bir değişmesini sağlayın
+      Dance_Party_extras_battle_2019: |-
+        # Dans Ekipleri
+
+        İşte iki ekibin kıyasıya dansı Ok tuşları dansçılardan birini, "w,a,s,d" tuşları diğerini kontrol eder. Bir arkadaşınızla kıyasıya dans edin ve sonra bu dansı geliştirmeye çalışın
+
+        -   Dansları kontrol etmek için daha fazla tuş ekleyin
+        -   Tuşlara basıldığında arka plan dansçılarının da tepki vermesini sağlayın
+        -   Görünürlüklerini ayarlayarak dansçının dört ölçüde bir değişmesini sağlayın
       Dance_Party_extras_every_beat: |-
         # Çeyrek Notalar
 
@@ -4400,11 +5072,23 @@ tr-TR:
         # Bas, Orta ve Tizler
 
         Bu dans, müziğin farklı bölümlerinde ses seviyesi yükseldiğinde kodu başlatmak için "zirve" etkinliklerini kullanır. Farklı şarkıların dansı nasıl değiştirdiğini görmek için şarkıyı değiştirin.
+      Dance_Party_extras_on_beat_2019: |-
+        # Bas, Orta ve Tizler
+
+        Bu dans, müziğin farklı bölümlerinde ses seviyesi yükseldiğinde kodu başlatmak için "zirve" etkinliklerini kullanır. Farklı şarkıların dansı nasıl değiştirdiğini görmek için şarkıyı değiştirin.
       Dance_Party_extras_speed: |-
         # Hızlandır, Yavaşlat
 
         Bu son dans dansçıların hızını belirlemek için `hız ayarla` bloğunu kullanır. Şarkının farklı yerlerinde farklı hızlarla denemeler yapın. Bu dansta özgürce denemeler yapın veya daha önceki danslara dönerek onları daha da güzelleştirin.
       Dance_Party_extras_visible: |-
+        # Nereye gittiler?
+
+        Bu dans iki farklı dansçı grubunu görünür yapar ve gizler. Deneyin ve sonra kendi yaratıcılığınızı ekleyin.
+
+        -   Başka bir dansçı grubu ekleyin
+        -   Ok tuşlarını kullanarak dansçıları görünür yapın ve gizleyin
+        -   Tüm dansçıları gizleyin ve heyecan veren bir arka plan efektine geçiş yapın
+      Dance_Party_extras_visible_2019: |-
         # Nereye gittiler?
 
         Bu dans iki farklı dansçı grubunu görünür yapar ve gizler. Deneyin ve sonra kendi yaratıcılığınızı ekleyin.
@@ -4464,8 +5148,18 @@ tr-TR:
         gerekli herşeyi öğrendin. Eğer bu resim ilham veriyorsa benzer birşeyler yapmaya
         çalış. Yoksa kendi tasarımını yap.\\\r\n\\\r\nİlham alınan tasarımın kodunu
         görmek ister misin? "
+      K-1 Bee Loops 2: '"Tekrarla" bloğu kullanarak ilerleyip nektar ve balı alalım!'
+      K-1 Bee Loops 3: Nektar almak ve bal yapmak için 3 'tekrarla' döngüsünü kullan!
+      K-1 Bee Loops 4: '"Tekrarla" bloğu kullanarak ilerleyip nektar ve balı alalım
+        ve ilerleyelim!'
       K-1 Bee Loops 5: '"Tekrarla" bloğu kullanarak ilerleyip nektar ve balı alalım!'
+      K-1 Bee Loops 6: '"Tekrarla" bloğu kullanarak ilerleyip nektar ve balı alalım
+        ve ilerleyelim!'
+      K-1 Maze Loops 10: Beni domuza götür! Tekrarla döngüsünü kullan.
       K-1 Maze Loops 2: Tekrar bloğu kullanarak beni domuza götür!
+      K-1 Maze Loops 8: Domuzcuğa ulaşmak için 'tekrarla' döngüsünü kullanın!
+      K-1 Maze Loops Assessment 1: Bak neler öğrendik! Bana domuzcuğa ulaşmak için
+        'tekrarla' döngüsünü kullanın!
       MC_HOC_2017_01_RETRY: "{currentPlayerName} evin içinde sıkışıp kaldı, ama Agent
         yardım etmek için burada!   \\\r\n \\\r\n   \\\r\nÇalışma alanında `koştuğunda`
         bloğunun üzerine bir `ileri taşı` bloğu tutturarak Agent'ı baskı plakasına
@@ -4543,8 +5237,94 @@ tr-TR:
       MC_HOC_2017_FP20x20_2019: |-
         **Serbest Oyun** Şimdi her şey sana bağlı!
         Bu dünyayı keşfetmene yardımcı olması için Ajan'ın kodunu kullan.
+      NEW Course 4 Artist Functions 1: '"Tekrarla" döngüsü kullanarak 100 piksel uzunluğunda
+        olan bir kare çizebilir misin?'
+      NEW Course 4 Artist Functions 11: 'Şimdi karelerden çizgi çiz "draw a line of
+        square" isimli 6 tane kare çizen bir fonksiyon yazalım. Bu fonksiyonu "draw
+        a square 20" fonksiyonunu kullanarak yapabilir misin? Not: düzenle tuşuna
+        bas ve kalemi daha ince yaptığımızı gör'
+      NEW Course 4 Artist Functions 12: '"Kareden çizgi çiz " fonksiyonunu kullanarak
+        şekildeki deseni çiz'
+      NEW Course 4 Artist Functions 14: Serbest zaman-İstediğini çiz!
+      NEW Course 4 Artist Functions 3: Burada fonksiyon isimli yeni bir blok var.
+        "Düzenle" yi tıklayın sonra 100 piksel kenarlara sahip bir kare çizmek için
+        kodu ile doldurun. Bittiğinde programına gitmek için "Kapat"'ı tıklatın.
+      NEW Course 4 Artist Functions 4: '"Kare Çiz" fonksiyonunu kullanarak bu deseni
+        oluştur.'
+      NEW Course 4 Artist Functions 7: 'Fonksiyon bloklarının nasıl kullanılacağına
+        alıştın mı? Hadi bu kareyi 200 piksel boyutunda olacak şekilde değiştirin.
+        İpucu: Kare çiz "draw a square" fonksiyonu üzerindeki "Düzenle" bağlantısını
+        tıklayın. Bittiğinde kapat düğmesine basmayı unutmayın. '
+      NEW Course 4 Artist Functions 8: Sizin için "draw a triangle adı verilen yeni
+        bir fonksiyon oluşturduk.  100 piksel kenarları olacak bir üçgen çizmek için
+        fonksiyonu düzenleyebilir misin?
+      NEW Course 4 Artist Functions 9: Bu sadece bir blok ekleyerek çözebilir misiniz?
+      NEW Course 4 Artist Params 1: Hadi 50 piksel kenarlara sahip bir kare çizmek
+        için bu fonksiyon tanımlayın. Başlamak için "Düzenle" seçeneğini tıklatın.
+      NEW Course 4 Artist Params 10: '"Draw a hexagon" fonksiyonunu uzunluk "length"
+        parametresi ile yaratalım. İpucu: Bu altıgen 100 piksel uzunluğunda kenarları
+        vardır. '
+      NEW Course 4 Artist Params 12: Bu çizim tamamlayabilirsiniz? Tüm şekillerin
+        kenarları 100 pikseldir.
+      NEW Course 4 Artist Params 14: "'length' (uzunluk) ve 'sides' (kenarlar) parametresini
+        kullanmak için 'draw a spiral edge' (sarmal bir kenar çiz) komutunu düzenle,
+        sonra bu şekilleri yeniden oluştur.\\\r\n\\\r\n\\-\nKarenin en küçük kenarın
+        uzunluğu 5 piksel.\\\r\n\n-   Üçgenin en küçük kenarın uzunluğu 10 piksel.\\\r\n-
+        \  Altıgenin en küçük kenarın uzunluğu 2 piksel.\\\r\n-   Hepsi 100 piksele
+        kadar artacak.  "
+      NEW Course 4 Artist Params 15: 'Serbest Zaman: Yazdığınız fonksiyonlar ve ektra
+        birkaç tanesi burada. Harika bir şeyler çiz! Kalem ucu ile oyna be çizimin
+        ne kadar farklı olabildiğini gör!'
       NEW Course 4 Artist Params 2: 50 piksel kenarlı bir üçgen yapan çiziklerden
         bir 'üçgen çiz' fonksiyonu oluşturun.
+      NEW Course 4 Artist Params 4: Bu fonksiyon bloklarında farklılık gördünüz mü?
+        Çalıştırın ve ne olacağını görün.
+      NEW Course 4 Artist Params 8: Bu üçgen çizme fonksiyonu hatalıdır. Bu fonksiyonu
+        düzenleyerek düzeltebilir misin? Sonra kenar uzunluğu 25, 50 ve 75 olan üçgen
+        çizebilir misin?
+      NEW Course 4 Artist Params 9: Kare çiz "draw a square" fonksiyonunu düzenle
+        ve parametre ekle. Uzunluk "Length" parametresi alsın. Bu defa 25, 50 ve 75
+        piksel uzunluğunda 3 üçgen çiz. Aralarında 100 piksel mesafe olsun.
+      NEW Course 4 Artist Params inspire: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\"
+        width=\"250px\"/> \\\r \\\r \\*\\* Serbest ilham: \\*\\* Şimdi böyle bir model
+        yapmak için bilmeniz gereken her şeyi öğrendin! \\\r \\\r bu resimden ilham
+        almayı deneyin ve benzer bir şey yapın. Aksi takdirde, kendiniz birşey yaratın.
+        \\\r \\\r dikkat: 'set Alfa' bloğu kullandım."
+      NEW Course 4 Artist Vars 12: Şimdi bir önceki algoritmayı tekrar yaratarak kenar
+        uzunlukları 150 olan beşgen çiz.
+      NEW Course 4 Artist Vars 2: Sayı bloğunu çekerek uzunluğu ayarla "set length"
+        ve tekrarla "repeat\_times" değerlerine değer aktar ve 50 piksel uzunluğunda
+        üçgenler çiz.
+      NEW Course 4 Artist Vars 4: Tekrar dene!. Uzunluk "length" değerini 60 yapıp
+        hoş bir altıgen çizebilir misin?
+      NEW Course 4 Artist Vars 6: |-
+        Beşgenlerden oluşan bir desen oluşturabilir misiniz. Kenarları için length değişkenini 100 piksele ayarla. Sonra length değişkenini bütün gerekli yerlerde kullan.
+        Değişkenin değerinin bir defa ayarlandıktan sonra defalarca nasıl kullanıldığını gör.
+      NEW Course 4 Bee For Loops 10a: 'Hazır mısın? Döngüler hakkından öğrendiklerini
+        kullanarak bu problemi çöz. Unutma: Sonuca ulaşmak için çözümünü birkaç defa
+        çalıştırman gerekebilir.'
+      NEW Course 4 Bee For Loops 2: Nekrar toplamak için gerekli kodları ekle. Bu
+        bulmaca için ne kadar kod yazman gerektiğini gör. (Bir sonraki bulmacada daha
+        basit yöntemi öğreneceğiz)
+      NEW Course 4 Bee For Loops 3: For döngüsü bu işe çok daha kolay yapar! Bütün
+        kod burada bak ve incele. Sonra Çalıştır tuşuna bas ve nasıl çalıştığını gör.
+      NEW Course 4 Bee For Loops 4: "?? ifadesini değiştirerek en çok sayıda nektarı
+        toplamasını sağla. "
+      NEW Course 4 Bee For Loops 4 4: Şimdi sayaç (counter) kadar ilerlemeliyiz. Sonra
+        sayaç (counter) kadar nektar alalım. Problemi çözmek için "tekrarla" döngüsü
+        kullanabilir misin?
+      NEW Course 4 Bee For Loops 5: Bununla tekrarla "For" döngülerinde geriye doğruda
+        sayabilirsiniz. 5 ten geriye doğru 1 e kadar sayarak nektarları toplayın.
+      NEW Course 4 Bee For Loops 6: Döngüdeki son sayı artış "increment" olarak adlandırılır.
+        Her döngüde sayaç değeri bu miktarda değiştirilir. Bu çiçekleri sayacı ikişer
+        artırarak toplayın.
+      NEW Course 4 Bee For Loops 7: "Şimdi counter değişkeninin matematik blokları
+        ile birleştirelim! Counter değişkeninin kullanarak ve en az sayıda blok kullanarak
+        bahçede dolaşabilir misin? Yapman gereken 3, 6, 9, 12 ve 15 nektar toplamak.
+        İşin sırrı sayaç \"counter\" değişkeninde dir. \nUnutma: Sayaç değeri artıyorsa,
+        her döngüde artış miktarı counter değişkenine eklenir."
+      NEW Course 4 Bee For Loops 8: Bunu anladın! 3, 6, 9, 12, ve 15 nektar toplamak
+        için ne kadar arttırmak gerekir?
       Overworld Chop Tree: |-
         Odun çok önemli bir kaynaktır.
         Birçok şey odundan yapılır. Ağaca doğru yürü ve devirmek için 'yok et' bloğunu kullan.
@@ -4568,10 +5348,55 @@ tr-TR:
         'Kırp' komutunu kullan.
       Overworld Shear Sheep_2019: Koyun kırpma zamanı! İki koyundan da yün toplamak
         için 'Kırp' komutunu kullan.
+      Pixelation - Lesson 15 - Complete 3-bit color: "# \n\nRenk Pikselasyonu: Görev
+        1\n**Yol tarifi:**\n\n-   Seni oluşturulmuş 4x2 Maddie resmi ile başlatıyoruz
+        ancak son iki kareyi bıraktık.\n-   Resmi, hangi iki rengin eksik olduğunu
+        bularak ve onları kodlayarak bitirmelisin."
       Robot Doodle: "**Proje Fikri:** Gerçek dünyadan tanıdık bir şeyin resmini oluşturun.
         Bu biraz sabır ve planlama gerektirir!"
       Robot Doodle_2018: "**Proje Fikri:** Gerçek dünyadan tanıdık bir şeyin resmini
         oluşturun. Bu biraz sabır ve planlama gerektirir!"
+      Room Escape Workshop - 1: "# Odayı Kur\\\r\n\n\\\r\n<img\nsrc=\"https://images.code.org/9d103d74f7c2da05aeccd5fc317e6ab6-image-1490368234432.08.44\nAM.png\"
+        style=\"width:200px; float:right\">\\\r\n\\\r\nOdadan kaçış oyununu yapmak
+        için kullanıcının içerisinde macera yaşayabileceği bir şekilde odayı kurmalısın.
+        Bazı işle senin için yapıldı. Sadece  resim seçerek odanın farklı bölümlerinin
+        neye benzeyeceğine karar vermelisin!\\\r\n\\\r\n\n# \n\nBunu Yap\\\r\n\\\r\n\n-
+        \  Oyun Tasarım Görünümünde başlar\\\r\n-   Boş olan ögelerden her biri(gri
+        dikdörtgen) için uygun resim ekle. Örneğin kapı etiketli nesne için kapı resmine
+        ihtiycın var.\\\r\n-   Odanın neye benzeyecebileceği sağdaki resimde var."
+      Room Escape Workshop - 3: "# Kodu Gizle\\\r\n\n\\\r\n<img\nsrc=\"https://images.code.org/6fa80456a39d9b6417545f5f66ec83a5-image-1490368827625.png\"\nstyle=\"width:400px;float:right\">\\\r\n\\\r\n\n1.
+        \ Tasarım Görünümünde \"CODE\" diyen beyaz kareye tıklayın. Seçiminizin gizli
+        kodunu göstermesi için değiştirin.\\\r\n2.  2.\n    Kodu kaplamak için resmi
+        aşağıya çekin\\\r\n    \\\r\n    ![](<>)"
+      Room Escape Workshop - 5: "# Gizli Kodu Kontrol Etme\\\r\n\n\\\r\nŞimdi kullanıcıdan
+        gizli kod tahminlerini topladınız, kodların doğruluğunu kontrol etmeye ihtiyacınız
+        var! Eğer (if) ifadesini kullanabiliriz. Bir eğer(if) ifadesi şartın doğruluğunu
+        kontrol eder, bu durumda kullanıcının girdiği numaranın gizli koda eşit olup
+        olmadığını kontrol edecek.\\\r\n\\\r\n\n# Bunu Yap\\\r\n\n\\\r\n\\*\nKasa
+        için 'onEvent' bloku içerisinde aşağıda yer alan sor(prompt) komutuna <img\nsrc=\"https://images.code.org/5e9a434b1ad6b8f010db928b668127a5-image-1491061131564.37.01\nAM.png\"
+        style=\"width:100px\"> durumu ekle\\\r\n\n-   Bloku çıkartarak <img src=\"https://images.code.org/f0680979704c30975550211b03ed222e-image-1491061134985.37.08\n
+        \   AM.png\" style=\"width:100px\"> iki şeyin birbirine eşitliğini kontrol
+        edecek şartı oluştur\\\r\n-   \\*\n    Bir tarafa <img src=\"https://images.code.org/f0680979704c30975550211b03ed222e-image-1491061134985.37.08\n
+        \   AM.png\" style=\"width:100px\"> _tahmin_ yerleştir (bizim depoladığımız
+        kullanıcıların tahmin ettiği değerin adı)\\\rı\n-   Diğer tarafa gizli kodu
+        yerleştirin"
+      Room Escape Workshop - 7: "# Kasanın içini gösterme\\\r\n\n\\\r\n<img\nsrc=\"https://images.code.org/71e74305187a46d0badeb29a9a69ac56-image-1490371014841.55.37\nAM.png\"
+        style=\"width:200px;float:right\">\\\r\n\\\r\nGizli kodu kontrol ederek programa
+        başlattınız, kasayı \"açmak\" ve içindeki anahtarı göstermek isteyeceksiniz.
+        Öncelikle tasarım görünümünde bu ögeleri oluşturmalısınız.\\\r\n\\\r\n\n#
+        Bunu Yap\\\r\n\n\\\r\n\n-   Tasarım Görünüme geçin ve gri kare resmi ekleyin\\\r\n
+        \   \\\\t\\*\n    Resim ögesini ekranda <img src=\"https://images.code.org/8f4bc108415d83e5c528c9204502efc2-image-1491059181186.06.13\n
+        \   AM.png\" style=\"width:75px\"> tıklayın ve sürükleyin\\\r\n    -   İyi
+        bir ID verin\n        (belki _kasaİçi_)\\\r\n    -   Resim olarak kullanmak
+        için gri kareyi bulun\\\r\n    -   \\*\n        Bu kasanın önünü gizleyeceği
+        için gösterildiğinde kasanın içindeymiş gibi davranacaktır. \\\r\n-   Anahtar
+        resm ekleyin\\\r\n    \\\\t\\* Resim ögesini sürükleyip bırakın<img\n    src=\"https://images.code.org/8f4bc108415d83e5c528c9204502efc2-image-1491059181186.06.13\n
+        \   AM.png\" style=\"width:75px\"> onto the screen\\\r\n    -   İyi bir ID
+        verin\n        (belki_anahtar_)\\\r\n    -   Kullanmak üzere bir anahtar resmi
+        bulun \\\r\n-   Gri kare ve anahtar için Tasarım Görünümünde gizli özelliğine
+        tıklayın. Tasarım Görünümünde onlar gizli olduğunda aşağıdaki gibi görünecektir.\\\r\n
+        \   \\\r\n    <img src=\"https://images.code.org/2c2c7e9996515f2b30d416b558fd1360-image-1489605526794.17.55\n
+        \   PM.png\" style=\"width:200px\">"
       Standalone_Artist_2: 120 ve 60 derecelik açılar ile 150 piksellik uzun kenarları
         kullanarak bu elması çiz.
       Standalone_Artist_3: Bu altıgeni 100 piksellik kenarlar ile 60 derecelik dönüşler
@@ -4618,6 +5443,8 @@ tr-TR:
         Fazla blokları çıkar ve eksik blokları ekle. Kuşu domuza ulaştır!
       course1_maze_debugging_challenge2: Bu bölümün hatalarını ayıkla. Bunlar doğru
         bloklar, ama yanlış sıradalar!
+      course1_maze_seq_challenge2: Her yönde yalnızca 4 kez ilerleyebilirsin. Kod
+        bloklarını bitirmeden bir çözüm yolu bulabilir misin?
       course2_artist_nestedLoops_challenge1: "Bunun gibi bir resmin nasıl yapılacağını
         çözebilir misin?\\\r\n\\\r\n\n-   Her iki şeklin **50 piksel yan alanı var.**\\\r\n-
         \  _sekizgenler_ **45 derecelik** dönüşlerle yapılmış.\\\r\n-   _üçgenler_
@@ -4626,6 +5453,8 @@ tr-TR:
         çözebilir misin?\\\r\n\\\r\n\n-   Birinci iç döngü bir sekizgen oluşturmalı.\\\r\n-
         \  İkinci iç döngü bir altıgen oluşturmalı.\\\r\n-   Üçüncü iç döngü bir kare
         oluşturmalı."
+      course2_artist_prog_challenge1: Hayvanların her biri için odalar çiz. Bu bulmacayı
+        çözmek için birçok farklı yol var, bol bol eğlen!
       course2_bee_conditionals_challenge1: Bütün nektarı topla veya hepsini bal yap.
         Nektarı sadece çiçeklerden toplayabilirsin ve peteklerden bal yapabilirsin.
         Çiçek veya petek var mı diye herhangi alanı bir kontrol et.
@@ -4633,6 +5462,8 @@ tr-TR:
         Bir çiçekteki bütün nektarı 'While nectar > 0' döngüsünü kullanarak tamamlayabilirsin.
       course2_collector_prog_challenge1: Dikkatli bak! Hazinenin **10** parçasının
         tamamını toplayabilir misin?
+      course2_collector_prog_challenge2: Bu mağarada **20** parça hazine var. Meydan
+        okumayı tamamlamak için en az yarısını toplayın!
       course2_harvester_loops_challenge1: Bütün mısırları topla.
       course2_harvester_loops_challenge2: Tüm marulları topla. Ağaçlardan ve tarlalardan
         sakın!
@@ -4648,15 +5479,26 @@ tr-TR:
         kodu dene, sonra kendi programını yap!\\\r\n<xml>\\\r\n  <block\ntype=\"jump_to_xy\">\\\r\n
         \   <title name=\"XPOS\">???</title>\\\r\n    <title\nname=\"YPOS\">???</title>\\\r\n
         \   </block></xml>"
+      course3_bee_debugging_challenge1: Arıların nasıl nektar topladığını izle. Benzer
+        deseni kullanarak arıların bütün balı yapmasına yardım edebilir misin?
       course3_bee_functions_challenge1: Bu meydan okumada tek başınasın. Göründüğünden
         daha zor olabilir!
+      course3_bee_functions_challenge2: Bu mücadelede tamamen kendi başınasın!
       course3_bee_functions_challenge3: Bir yol var iken nektar ve bal toplayan yeni
         bir fonksiyon oluşturun. Fonksiyonu bulmacayı tamamlamak için kullanın!
       course3_bee_functions_challenge4: Bulmacayı tamamlamak için öğrendiğin her şeyi
         kullan!
+      course3_collector_debugging_challenge2: İç içe döngülerin uzmanı mısınız? Hazinenin
+        tümünü toplamak öğrendiklerinizi kullanın!
+      course3_farmer_condLoops_challenge1: "Kabaklar nereden dönmen gerektiğini belirliyor.
+        _Kabaklardan sağa dön._ Aksi halde düz gitmeye devam et ama yol boyunca bütün
+        marul ve mısırları toplamayı unutma. \\\r\n\\\r\n**Her gizli ürün bir mısır
+        ya da marula sahip.**"
       course3_farmer_until_challenge2: Kıvrımlı yolu takip etmek için eğer/değilse
         (if/else) bloklarını kullan. Her köşede ürünleri silmek amacıyla bir döngü
         içerisinde 'remove1' komutunu kullan.
+      course3_maze_debugging_challenge2: '-   "Çok sık dönersem, başım dönebilir!
+        Sadece dört dönüş komutu ile domuza ulaşmama yardım et." \*'
       course3_maze_until_challenge1: Hiçbir ipuçları yok sadece meydan okuma. Zombiyi
         ayçiçeğine ulaştır.
       course3_playLab_challenge1: "-   **Sincaplar** **dinozorların** şehre indiğini
@@ -4683,9 +5525,19 @@ tr-TR:
       course4_artist_fwp_challenge1: Bu programı çalıştırmayı deneyin ve ne olacağını
         görmek için değişiklikler yapın. Nasıl çalıştığını tahmin edebiliyor musun?
         (Ya da silin ve tamamen farklı bir şey ile değiştirin)
+      course4_artist_variables_challenge1: Uzunluk (length) değişkeni oluşturup bu
+        ilginç deseni oluşturmak için kullanabilir misin?
+      course4_bee_for_challenge1: Bütün nektarı toplamak için bu döngüyü kullan. Sayaç
+        kadar tekrar ettirmek için bir kaç aksiyon(actions) var.
       course4_bee_fwp_challenge1: Tüm Mısır toplamak için fonksiyon içinde bununla
         say döngüsü kullanın. Aynı bununla say döngüsünü 'uzunluk' parametresini kullanarak
         farklı maksimum değerler için kullanabilirsiniz.
+      course4_bee_fwp_challenge2: "Son bir final testinin üstesinden gelebilecek misin
+        görelim! Elindeki her şeyi ver!\\\r\n\\\r\nSatırdaki tüm sebzeleri toplamak
+        için şununla say(for) döngüsünü fonksiyon içinde kullanın. Bununla say döngüsü
+        uzunluk(length) parametresini kullanarak farklı en büyük değerleri saymasını
+        sağla. Programınızı olabildiğince kısa tutmak için fonksiyon dışına da bir
+        bununla say(for) döngüsü yerleştirin.\\\r\n\\\r\nİyi Şanslar!"
       course4_collector_nested_loops_challenge2: Hazine için avlanalım - döngüleri
         kullanarak! Sadece araç kutundaki blokları kullanarak toplayıcının en az 2
         yığın hazineye ulaşmasına yardım et. 4'ünün tamamını toplamak mümkün.
@@ -4894,17 +5746,17 @@ tr-TR:
         her birine, onlara tıkladığında ya da dokunduğunda yapabilecekleri bir şeyler
         ver. Hayvanlar nasıl ses çıkarır? Ya da neler gerçekleşir?\\\r\n\\\r\n\\\r\n\\\r\nBu
         bulmacada, ipuçlarına tıkladığından emin ol! İpuçları, denemen için sana eğlenceli
-        şeyler sunacak!\\\r\n\\\r\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png>)"
+        şeyler sunacak!\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>\nPM.png>)"
       courseA_playlab_events_challenge2_2018: "Hadi bir parti verelim!\nArkadaşlarımın
         her birine, onlara tıkladığında ya da dokunduğunda yapabilecekleri bir şeyler
         ver. Hayvanlar nasıl ses çıkarır? Ya da neler gerçekleşir?\\\r\n\\\r\n\\\r\n\\\r\nBu
         bulmacada, ipuçlarına tıkladığından emin ol! İpuçları, denemen için sana eğlenceli
-        şeyler sunacak!\\\r\n\\\r\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png>)"
+        şeyler sunacak!\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>\nPM.png>)"
       courseA_playlab_events_challenge2_2019: "Hadi bir parti verelim!\nArkadaşlarımın
         her birine, onlara tıkladığında ya da dokunduğunda yapabilecekleri bir şeyler
         ver. Hayvanlar nasıl ses çıkarır? Ya da neler gerçekleşir?\\\r\n\\\r\n\\\r\n\\\r\nBu
         bulmacada, ipuçlarına tıkladığından emin ol! İpuçları, denemen için sana eğlenceli
-        şeyler sunacak!\\\r\n\\\r\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png>)"
+        şeyler sunacak!\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>\nPM.png>)"
       courseB_artist_loops10: "Öğrendiklerini kullan ve resmi çiz. Sizce sanatçı eve
         gittiğinde ne gördü.\\\r\n\\\r\n\n<hr/>\r\n<h3>Ideas</h3>\r\n<table>\r\n<tr>\r\n<td>\r\n<img\nsrc=\"https://images.code.org/8f4f2a68dae2cf0aa82cc0a49ea4df04-image-1466787750475.gif\"\nwidth=\"150\"/><br/>\r\n<h4>A
         Singing Snail</h4><br/><br/>\r\n</td>\r\n\r\n<td>\r\n<img\nsrc=\"https://images.code.org/732ce5dd91c7f49f06e88da1a9f664f3-image-1466794904255.gif\"\nwidth=\"150\"/><br/>\r\n<h4>A
@@ -5544,6 +6396,18 @@ tr-TR:
         arasında dönüşler kullanarak bir merdiven deseni çiz -- fakat sola ve sağa
         dönüşlerde aynı açıyı kullandığından emin ol.  \\\r\n(Sebebini daha sonra
         göreceksin)"
+      courseD_artist_binary2: "Bu fonksiyon 1 ve 0 dan oluşan ikili diziyi alır ve
+        sanatçının bunu soldan sağa ve üstten alta  doğru uygulamasını sağlar. Sanatçı
+        1 görünce kareyi doldurur ve 0 görünce boş bırakır. \\\r\n\\\r\nBu kodu çalıştırın
+        ve nasıl bir desen çizdiğini görün."
+      courseD_artist_binary2_2018: "Bu fonksiyon 1 ve 0 dan oluşan ikili diziyi alır
+        ve sanatçının bunu soldan sağa ve üstten alta  doğru uygulamasını sağlar.
+        Sanatçı 1 görünce kareyi doldurur ve 0 görünce boş bırakır. \\\r\n\\\r\nBu
+        kodu çalıştırın ve nasıl bir desen çizdiğini görün."
+      courseD_artist_binary2_2019: "Bu fonksiyon 1 ve 0 dan oluşan ikili diziyi alır
+        ve sanatçının bunu soldan sağa ve üstten alta  doğru uygulamasını sağlar.
+        Sanatçı 1 görünce kareyi doldurur ve 0 görünce boş bırakır. \\\r\n\\\r\nBu
+        kodu çalıştırın ve nasıl bir desen çizdiğini görün."
       courseD_artist_binary_challenge1_2018: Bulmaca içinde her ikili değeri (0 veya
         1) yalnızca bir kez kullanabilirsiniz. Bu çizimi tamamlamak için iç içe döngüleri
         kullanmayı deneyin.
@@ -5556,6 +6420,12 @@ tr-TR:
       courseD_artist_binary_challenge2_2019: "Bu ızgarada temsil edilen 256 bit var
         - bu, küçük bir değişikliğin kolayca büyük problemlere sebep olacağı anlamına
         gelir. Bu logoyu normal haline çevirmekte yeterince ısrarcı mısın?\\\r\n\\\r\n![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)"
+      courseD_artist_nestedLoops1a: 'Şimdi, üçgeni 6 kez döngüle. Her üçgenden sonra,
+        yeni bir tane çizmeden önce 60 derece dönmen gerek. '
+      courseD_artist_nestedLoops1a_2018: 'Şimdi, üçgeni 6 kez döngüle. Her üçgenden
+        sonra, yeni bir tane çizmeden önce 60 derece dönmen gerek. '
+      courseD_artist_nestedLoops1a_2019: 'Şimdi, üçgeni 6 kez döngüle. Her üçgenden
+        sonra, yeni bir tane çizmeden önce 60 derece dönmen gerek. '
       courseD_artist_nestedLoops9_predict1: "\\*\\* Meydan Okuma: \\*\\* nasıl böyle
         bir resim yapılalir? \\\r \\\r - Her iki şeklinde 50 piksel kenar uzunluğu
         vardır"
@@ -5724,6 +6594,10 @@ tr-TR:
       courseD_artist_ramp12: "Öğrendiklerini kullan ve karenin içine üçgen çiz <hr/>
         \\\r her kenar 200 piksel uzunluktadırr. Kare için 90 ve üçgen için 120 derece
         yapmak döndürmek gerekir."
+      courseD_autorun_binary2_2019: "Bu fonksiyon 1 ve 0 dan oluşan ikili diziyi alır
+        ve sanatçının bunu soldan sağa ve üstten alta  doğru uygulamasını sağlar.
+        Sanatçı 1 görünce kareyi doldurur ve 0 görünce boş bırakır. \\\r\n\\\r\nBu
+        kodu çalıştırın ve nasıl bir desen çizdiğini görün."
       courseD_bee_conditionals10: "Her bir noktada ne olduğunu tam olarak bilebildiğinizde
         bile, şartlılar yardımcı olabilir!\\\r\n\\\r\nTüm nektarı toplayın ve balın
         tamamını yapın."
@@ -5742,6 +6616,18 @@ tr-TR:
       courseD_bee_conditionals1_predict1_2019: "-   \"Bu bulut görüşümü engelliyor!\"
         \\* \\\r \\\r bir çiçek bulut altında olup olmadığını kontrol edin. Eğer çiçek
         ise, nektar al."
+      courseD_bee_conditionals3: Sadece çiçeklerden nektar toplayabilirsiniz, ancak
+        bir çiçek olup olmadığını görmek için herhangi bir alanı kontrol edebilirsiniz.
+        Bu bulutların herhangi birinin altında bir çiçek varsa, arı nektarı toplamaya
+        **ilk defasında** ihtiyaç duyacaktır.
+      courseD_bee_conditionals3_2018: Sadece çiçeklerden nektar toplayabilirsiniz,
+        ancak bir çiçek olup olmadığını görmek için herhangi bir alanı kontrol edebilirsiniz.
+        Bu bulutların herhangi birinin altında bir çiçek varsa, arı nektarı toplamaya
+        **ilk defasında** ihtiyaç duyacaktır.
+      courseD_bee_conditionals3_2019: Sadece çiçeklerden nektar toplayabilirsiniz,
+        ancak bir çiçek olup olmadığını görmek için herhangi bir alanı kontrol edebilirsiniz.
+        Bu bulutların herhangi birinin altında bir çiçek varsa, arı nektarı toplamaya
+        **ilk defasında** ihtiyaç duyacaktır.
       courseD_bee_conditionals7_predict2: Bazen bulut çiçeği saklar bazende peteği.
         Eğer/değilse bloğu kullanarak çiçek ise nektar al değilse bal yap( bu durumda
         petektir).
@@ -5751,6 +6637,15 @@ tr-TR:
       courseD_bee_conditionals7_predict2_2019: Bazen bulut çiçeği saklar bazende peteği.
         Eğer/değilse bloğu kullanarak çiçek ise nektar al değilse bal yap( bu durumda
         petektir).
+      courseD_bee_conditionals8: "**Meydan Okuma:** Bu bulutların altında çiçek ya
+        da petek olacak!\\\r\n\\\r\nEğer çiçek varsa bir defa nektarları topla. Yoksa,
+        bir defa bal yap(çünkü petek var)."
+      courseD_bee_conditionals8_2018: "**Meydan Okuma:** Bu bulutların altında çiçek
+        ya da petek olacak!\\\r\n\\\r\nEğer çiçek varsa bir defa nektarları topla.
+        Yoksa, bir defa bal yap(çünkü petek var)."
+      courseD_bee_conditionals8_2019: "**Meydan Okuma:** Bu bulutların altında çiçek
+        ya da petek olacak!\\\r\n\\\r\nEğer çiçek varsa bir defa nektarları topla.
+        Yoksa, bir defa bal yap(çünkü petek var)."
       courseD_bee_conditionals9: Bütün nektarı topla veya hepsini bal yap. Nektarı
         sadece çiçeklerden toplayabilirsin ve peteklerden bal yapabilirsin. Çiçek
         veya petek var mı diye herhangi alanı bir kontrol et. Her bir bulutun altında
@@ -6068,6 +6963,7 @@ tr-TR:
       courseD_scrat_ramp3: "-   \"Bu domuz benim tüylerini  diken d\n    iken ediyor.\"
         \\* \\\r \\\r orada kuşun parçalanmasına sebep olacak bir blok var.  \\\r
         Onu geri araç kutusuna geri sürükle."
+      courseD_scrat_ramp4: Scrat'in güvende olması için onu çatlak buzdan koru!
       courseD_scrat_ramp5: "-   Domuza ulaşmak için yolu takip edin!\" \\* \\\r \\\r
         TNT den kaçının."
       courseD_scrat_ramp6: "-   \"Sakin ol ve kötü domuzu bulmama yardım et. Aksi
@@ -6266,6 +7162,12 @@ tr-TR:
       courseF_artist_for5_2019: "Son görüntünün kodundaki sadece küçük bir değişiklik
         bu çizimi yaratabilir. Bu değişikliğin ne olduğunu öğrenebilir misin?\\\r\n\\_\\_\\_\\\r\nİpucu:
         Bir şeyi kaldırmanız gerekiyor!"
+      courseF_artist_for7: Bir önceki aşamadaki koda üç ufak değişiklik yaparak bu
+        çizimi yapabilirsin!
+      courseF_artist_for7_2018: Bir önceki aşamadaki koda üç ufak değişiklik yaparak
+        bu çizimi yapabilirsin!
+      courseF_artist_for7_2019: Bir önceki aşamadaki koda üç ufak değişiklik yaparak
+        bu çizimi yapabilirsin!
       courseF_artist_for_challenge1: "Bu çizimi nasıl yeniden oluşturabileceğini kestirebiliyor
         musun?\\\r\n\\\r\n<img src=\"https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png\"\nwidth=\"350px\"/>\\\r"
       courseF_artist_for_challenge1_2018: "Bu çizimi nasıl yeniden oluşturabileceğini
@@ -6431,6 +7333,9 @@ tr-TR:
       courseF_playlab_variables2b: "Metin parçalarıyla değişkenleri karıştırarak cümleleri
         daha ilginç hale getirebiliriz.\\\r\n\\\r\n'join' blokunun içinde boş bir
         yuvaya yerleştirerek cümlenin ortasına 'color' (renk) değişkeni ekle."
+      courseF_playlab_variables3b_josh: 'Yaşın ''12'' olarak kullanılması gereken
+        her yerde ''A1'' değişkenini kullanarak Kiki''nin Brian ile sohbetine yardım
+        et. '
       courseF_playlab_variables5c: "'ask' (sor) blokuyla eğer (if) ifadesini birleştirerek
         bir oyun yapalım!\\\r\n\\\r\nKorsan Pegleg sana bir soru soracak. Doğru rengi
         girdiğini kontrol etmek için 'answer' (cevap) değişkeninin bir kopyası eğer(if)

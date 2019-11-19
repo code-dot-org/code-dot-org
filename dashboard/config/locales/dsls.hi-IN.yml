@@ -73,7 +73,7 @@ hi-IN:
         - correct: true
         - {}
       2-3 Maze Match 2:
-        pre_title: निर्देश
+        pre_title: அறிவுறுத்துதல்கள்
         questions:
         - {}
         - {}
@@ -357,7 +357,7 @@ hi-IN:
         - {}
         - {}
       4-5 maze match 1:
-        pre_title: निर्देश
+        pre_title: அறிவுறுத்துதல்கள்
         questions:
         - {}
         - {}
@@ -785,6 +785,76 @@ hi-IN:
           <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
 
           </div>
+      Dance_Party_extras_intro_2019:
+        markdown: |
+          #डांस करते रहें!
+
+          भाग 2 के लिए, आप अपना खुद का प्रोजेक्ट बनाने वाले हैं। यहां कोई पहेलियां नहीं हैं - इसकी बजाय कुछेक प्रोजेक्ट हैं, जो अधिक जटिल डांस पार्टियां बनाने के विभिन्न तरीके दिखाते हैं।
+
+          आप इन स्तरों को _किसी भी क्रम_में कर सकते हैं।यह देखने के लिए कूदते हुए मूव करें कि पिछले स्तर में कुछ कैसे किया गया था, या प्रोजेक्ट्स के बीच अवधारणों को मिलाएं।उन सभी को आजमाएं, अपना पसंदीदा चुनें, और उस प्रोजेक्ट को शामिल करके अपना खुद का बनाने पर काम करते हुए अपना समय बिताएं।
+
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Continue</a>
+
+          <div class="clearfix"></div>
+
+          <div style="float: left; margin: 10px">
+          <a href="2">
+          <h2>
+          सुव्यवस्थित क्रम में प्रवेश करें!
+          </h2>
+
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="3">
+          <h2>
+          वे कहां जाएंगे?
+          </h2>
+
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="4">
+          <h2>
+          डांस कर्मीदल
+          </h2>
+
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="5">
+          <h2>
+          क्वार्टर नोट्स
+          </h2>
+
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="6">
+          <h2>
+          धीमी, मध्यम, व तेज़
+          </h2>
+
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="7">
+          <h2>
+          इसकी गति तेज़ करें, इसकी गति धीमी करें
+          </h2>
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
+
+          </div>
       Internet Simulator Setup 2:
         title: शीर्षक
       K-1 Artist 1 Multi 1:
@@ -902,7 +972,7 @@ hi-IN:
         - {}
         - correct: true
       K-1 Maze Match 1:
-        pre_title: निर्देश
+        pre_title: அறிவுறுத்துதல்கள்
         questions:
         - {}
         - {}
@@ -955,7 +1025,7 @@ hi-IN:
         questions:
         - {}
         answers:
-        - {}
+        - text: सेट करें
         - correct: true
         - {}
       Multi-Screen Apps:

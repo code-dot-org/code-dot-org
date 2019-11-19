@@ -549,6 +549,7 @@ th:
             '"rotation"': การหมุน
             '"x"': ตำแหน่งแนวนอน
             '"y"': ตำแหน่งแนวตั้ง
+            '"tint"': ระดับอ่อนสี
       Dancelab_setPropRandom:
         text: การสุ่ม {SPRITE} {PROPERTY}
         options:
@@ -728,6 +729,12 @@ th:
             '"bass"': เสียงต่ำ
             '"mid"': เสียงกลาง
             '"treble"': เสียงสูง
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"hearts_colorful"': หัวใจ
+            '"diamond"': เพชร
+            '"x"': x
       Dancelab_whenKey:
         text: เมื่อ {KEY} ถูกกด
         options:
@@ -746,6 +753,8 @@ th:
             '1': เสียงกลาง
             '2': เสียงสูง
       Dancelab_whenSetup:
+        text: การตั้งค่า
+      Dancelab_whenSetup2:
         text: การตั้งค่า
       gamelab_changePropBy:
         text: เปลี่ยน {SPRITE} {PROPERTY} โดย {VAL}

@@ -20,16 +20,16 @@ es-MX:
         options:
           GROUP:
             sprites: todo
-            '"ALIEN"': todos los extraterrestres
-            '"BEAR"': todos los osos
-            '"CAT"': todos los gatos
-            '"DOG"': todos los perros
-            '"DUCK"': todos los patos
-            '"FROG"': todas las ranas
-            '"MOOSE"': todos los alces
-            '"PINEAPPLE"': todas las piñas
-            '"ROBOT"': todos los robots
-            '"SHARK"': todos los tiburones
+            '"ALIEN"': extraterrestres
+            '"BEAR"': osos
+            '"CAT"': gatos
+            '"DOG"': perros
+            '"DUCK"': patos
+            '"FROG"': ranas
+            '"MOOSE"': alces
+            '"PINEAPPLE"': piñas
+            '"ROBOT"': robots
+            '"SHARK"': tiburones
             '"UNICORN"': todos los unicornios
           MOVE:
             '"next"': "(Siguiente)"
@@ -82,19 +82,20 @@ es-MX:
             '"x"': posición horizontal
             '"y"': posición vertical
       Dancelab_changePropEachBy:
+        text: cambiar {GROUP} {PROPERTY} por {VAL}
         options:
           GROUP:
             sprites: todo
-            '"ALIEN"': todos los extraterrestres
-            '"BEAR"': todos los osos
-            '"CAT"': todos los gatos
-            '"DOG"': todos los perros
-            '"DUCK"': todos los patos
-            '"FROG"': todas las ranas
-            '"MOOSE"': todos los alces
-            '"PINEAPPLE"': todas las piñas
-            '"ROBOT"': todos los robots
-            '"SHARK"': todos los tiburones
+            '"ALIEN"': extraterrestres
+            '"BEAR"': osos
+            '"CAT"': gatos
+            '"DOG"': perros
+            '"DUCK"': patos
+            '"FROG"': ranas
+            '"MOOSE"': alces
+            '"PINEAPPLE"': piñas
+            '"ROBOT"': robots
+            '"SHARK"': tiburones
             '"UNICORN"': Unicornios
           PROPERTY:
             '"scale"': tamaño
@@ -108,16 +109,16 @@ es-MX:
         options:
           GROUP:
             sprites: todo
-            '"ALIEN"': todos los extraterrestres
-            '"BEAR"': todos los osos
-            '"CAT"': todos los gatos
-            '"DOG"': todos los perros
-            '"DUCK"': todos los patos
-            '"FROG"': todas las ranas
-            '"MOOSE"': todos los alces
-            '"PINEAPPLE"': todas las piñas
-            '"ROBOT"': todos los robots
-            '"SHARK"': todos los tiburones
+            '"ALIEN"': extraterrestres
+            '"BEAR"': osos
+            '"CAT"': gatos
+            '"DOG"': perros
+            '"DUCK"': patos
+            '"FROG"': ranas
+            '"MOOSE"': alces
+            '"PINEAPPLE"': piñas
+            '"ROBOT"': robots
+            '"SHARK"': tiburones
             '"UNICORN"': Unicornios
           MOVE:
             '"rand"': "(Al azar)"
@@ -178,8 +179,10 @@ es-MX:
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_everyMeasuresRange:
+        text: 'repetir cada {N} medidas después de {START} '
       Dancelab_everySeconds:
-        text: 'cada {N} {UNIT} '
+        text: 'repetir cada {N} {UNIT} '
         options:
           UNIT:
             '"measures"': medidas
@@ -222,7 +225,7 @@ es-MX:
             '"seconds"': segundos
       Dancelab_ifDanceIs:
         text: |-
-          Si {SPRITE} está haciendo {DANCE}
+          si {SPRITE} está haciendo {DANCE}
           {DO1} {DO2}
         options:
           DANCE:
@@ -264,19 +267,20 @@ es-MX:
             "{x: 300, y: 300}": abajo a la derecha
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": al azar
       Dancelab_jumpToEach:
+        text: saltar de {GROUP} a {LOCATION}
         options:
           GROUP:
             sprites: todo
-            '"ALIEN"': todos los extraterrestres
-            '"BEAR"': todos los osos
-            '"CAT"': todos los gatos
-            '"DOG"': todos los perros
-            '"DUCK"': todos los patos
-            '"FROG"': todas las ranas
-            '"MOOSE"': todos los alces
-            '"PINEAPPLE"': todas las piñas
-            '"ROBOT"': todos los robots
-            '"SHARK"': todos los tiburones
+            '"ALIEN"': extraterrestres
+            '"BEAR"': osos
+            '"CAT"': gatos
+            '"DOG"': perros
+            '"DUCK"': patos
+            '"FROG"': ranas
+            '"MOOSE"': alces
+            '"PINEAPPLE"': piñas
+            '"ROBOT"': robots
+            '"SHARK"': tiburones
             '"UNICORN"': Unicornios
           LOCATION:
             "{x: 200, y: 100}": arriba
@@ -294,16 +298,16 @@ es-MX:
         options:
           GROUP:
             sprites: todo
-            '"ALIEN"': todos los extraterrestres
-            '"BEAR"': todos los osos
-            '"CAT"': todos los gatos
-            '"DOG"': todos los perros
-            '"DUCK"': todos los patos
-            '"FROG"': todas las ranas
-            '"MOOSE"': todos los alces
-            '"PINEAPPLE"': todas las piñas
-            '"ROBOT"': todos los robots
-            '"SHARK"': todos los tiburones
+            '"ALIEN"': extraterrestres
+            '"BEAR"': osos
+            '"CAT"': gatos
+            '"DOG"': perros
+            '"DUCK"': patos
+            '"FROG"': ranas
+            '"MOOSE"': alces
+            '"PINEAPPLE"': piñas
+            '"ROBOT"': robots
+            '"SHARK"': tiburones
             '"UNICORN"': Unicornios
           FORMAT:
             '"border"': borde
@@ -320,16 +324,17 @@ es-MX:
         options:
           COSTUME:
             '"ALIEN"': alien
-            '"BEAR"': Oso
+            '"BEAR"': oso
             '"CAT"': gato
             '"DOG"': perro
             '"DUCK"': pato
-            '"FROG"': Rana
-            '"MOOSE"': todos los alces
-            '"PINEAPPLE"': Piña
+            '"FROG"': rana
+            '"MOOSE"': alces
+            '"PINEAPPLE"': piña
             '"ROBOT"': robot
-            '"SHARK"': Tiburón
+            '"SHARK"': tiburón
             '"UNICORN"': unicornio
+            '"SLOTH"': pereza
           LOCATION:
             "{x: 200, y: 100}": arriba
             "{x: 200, y: 300}": abajo
@@ -343,20 +348,20 @@ es-MX:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": al azar
       Dancelab_makeNewDanceSprite:
         text: |-
-          Haz un nuevo {COSTUME}
+          hacer un nuevo {COSTUME}
           llamado {NAME} en {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': Extraterrestre
-            '"BEAR"': Oso
+            '"BEAR"': oso
             '"CAT"': Gato
-            '"DOG"': Perro
+            '"DOG"': perro
             '"DUCK"': Pato
-            '"FROG"': Rana
+            '"FROG"': rana
             '"MOOSE"': Alce
-            '"PINEAPPLE"': Piña
+            '"PINEAPPLE"': piña
             '"ROBOT"': Robot
-            '"SHARK"': Tiburón
+            '"SHARK"': tiburón
             '"UNICORN"': Unicornio
           LOCATION:
             "{x: 200, y: 100}": arriba
@@ -371,7 +376,7 @@ es-MX:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": al azar
       Dancelab_makeNewDanceSpriteGroup:
         text: |-
-          Hacer {N} nuevo {COSTUME}
+          hacer {N} nuevo {COSTUME}
           en un {LAYOUT}
         options:
           N:
@@ -485,6 +490,9 @@ es-MX:
             '"spiral"': Espiral
             '"disco"': Cuadrados
             '"stars"': Estrellas
+            '"music_wave"': Olas
+            '"quads"': Ángulos
+            '"flowers"': Flores
           PALETTE:
             '"rave"': Blanco y negro
             '"cool"': Frío
@@ -509,16 +517,16 @@ es-MX:
         options:
           GROUP:
             sprites: todo
-            '"ALIEN"': todos los extraterrestres
-            '"BEAR"': todos los osos
-            '"CAT"': todos los gatos
-            '"DOG"': todos los perros
-            '"DUCK"': todos los patos
-            '"FROG"': todas las ranas
-            '"MOOSE"': todos los alces
-            '"PINEAPPLE"': todas las piñas
-            '"ROBOT"': todos los robots
-            '"SHARK"': todos los tiburones
+            '"ALIEN"': extraterrestres
+            '"BEAR"': osos
+            '"CAT"': gatos
+            '"DOG"': perros
+            '"DUCK"': patos
+            '"FROG"': ranas
+            '"MOOSE"': alces
+            '"PINEAPPLE"': piñas
+            '"ROBOT"': robots
+            '"SHARK"': tiburones
             '"UNICORN"': Unicornios
           SPEED:
             '1': normal
@@ -578,16 +586,16 @@ es-MX:
         options:
           GROUP:
             sprites: todo
-            '"ALIEN"': todos los extraterrestres
-            '"BEAR"': todos los osos
-            '"CAT"': todos los gatos
-            '"DOG"': todos los perros
-            '"DUCK"': todos los patos
-            '"FROG"': todas las ranas
-            '"MOOSE"': todos los alces
-            '"PINEAPPLE"': todas las piñas
-            '"ROBOT"': todos los robots
-            '"SHARK"': todos los tiburones
+            '"ALIEN"': extraterrestres
+            '"BEAR"': osos
+            '"CAT"': gatos
+            '"DOG"': perros
+            '"DUCK"': patos
+            '"FROG"': ranas
+            '"MOOSE"': alces
+            '"PINEAPPLE"': piñas
+            '"ROBOT"': robots
+            '"SHARK"': tiburones
             '"UNICORN"': Unicornios
           PROPERTY:
             '"scale"': tamaño
@@ -596,6 +604,7 @@ es-MX:
             '"rotation"': rotación
             '"x"': posición horizontal
             '"y"': posición vertical
+            '"tint"': tinte
       Dancelab_setPropRandom:
         text: distribuye aleatoriamente {SPRITE} {PROPERTY}
         options:
@@ -608,20 +617,22 @@ es-MX:
             '"y"': posición vertical
             '"tint"': tinte
       Dancelab_setPropRandomEach:
+        text: distribuir {GROUP} {PROPERTY} aleatoriamente
         options:
           GROUP:
             sprites: todo
-            '"ALIEN"': todos los extraterrestres
-            '"BEAR"': todos los osos
-            '"CAT"': todos los gatos
-            '"DOG"': todos los perros
-            '"DUCK"': todos los patos
-            '"FROG"': todas las ranas
-            '"MOOSE"': todos los alces
-            '"PINEAPPLE"': todas las piñas
-            '"ROBOT"': todos los robots
-            '"SHARK"': todos los tiburones
+            '"ALIEN"': extraterrestres
+            '"BEAR"': osos
+            '"CAT"': gatos
+            '"DOG"': perros
+            '"DUCK"': patos
+            '"FROG"': ranas
+            '"MOOSE"': alces
+            '"PINEAPPLE"': piñas
+            '"ROBOT"': robots
+            '"SHARK"': tiburones
             '"UNICORN"': Unicornios
+            '"SLOTH"': perezas
           PROPERTY:
             '"scale"': tamaño
             '"width"': ancho
@@ -637,32 +648,32 @@ es-MX:
         options:
           THIS:
             sprites: todo
-            '"ALIEN"': todos los extraterrestres
-            '"BEAR"': todos los osos
-            '"CAT"': todos los gatos
-            '"DOG"': todos los perros
-            '"DUCK"': todos los patos
-            '"FROG"': todas las ranas
-            '"MOOSE"': todos los alces
-            '"PINEAPPLE"': todas las piñas
-            '"ROBOT"': todos los robots
-            '"SHARK"': todos los tiburones
+            '"ALIEN"': extraterrestres
+            '"BEAR"': osos
+            '"CAT"': gatos
+            '"DOG"': perros
+            '"DUCK"': patos
+            '"FROG"': ranas
+            '"MOOSE"': alces
+            '"PINEAPPLE"': piñas
+            '"ROBOT"': robots
+            '"SHARK"': tiburones
             '"UNICORN"': Unicornios
       Dancelab_setTintEachInline:
         text: establecer tonalidad {THIS} a {VAL}
         options:
           THIS:
             sprites: todo
-            '"ALIEN"': todos los extraterrestres
-            '"BEAR"': todos los osos
-            '"CAT"': todos los gatos
-            '"DOG"': todos los perros
-            '"DUCK"': todos los patos
-            '"FROG"': todas las ranas
-            '"MOOSE"': todos los alces
-            '"PINEAPPLE"': todas las piñas
-            '"ROBOT"': todos los robots
-            '"SHARK"': todos los tiburones
+            '"ALIEN"': extraterrestres
+            '"BEAR"': osos
+            '"CAT"': gatos
+            '"DOG"': perros
+            '"DUCK"': patos
+            '"FROG"': ranas
+            '"MOOSE"': alces
+            '"PINEAPPLE"': piñas
+            '"ROBOT"': robots
+            '"SHARK"': tiburones
             '"UNICORN"': Unicornios
       Dancelab_setTintInline:
         text: definir tinte {SPRITE} a {VAL}
@@ -677,16 +688,16 @@ es-MX:
         options:
           THIS:
             sprites: todo
-            '"ALIEN"': todos los extraterrestres
-            '"BEAR"': todos los osos
-            '"CAT"': todos los gatos
-            '"DOG"': todos los perros
-            '"DUCK"': todos los patos
-            '"FROG"': todas las ranas
-            '"MOOSE"': todos los alces
-            '"PINEAPPLE"': todas las piñas
-            '"ROBOT"': todos los robots
-            '"SHARK"': todos los tiburones
+            '"ALIEN"': extraterrestres
+            '"BEAR"': osos
+            '"CAT"': gatos
+            '"DOG"': perros
+            '"DUCK"': patos
+            '"FROG"': ranas
+            '"MOOSE"': alces
+            '"PINEAPPLE"': piñas
+            '"ROBOT"': robots
+            '"SHARK"': tiburones
             '"UNICORN"': Unicornios
           VISIBILITY:
             'true': visible
@@ -707,19 +718,20 @@ es-MX:
             '"mid"': medio
             '"treble"': agudos
       Dancelab_startMappingEach:
+        text: "{GROUP} comienza {PROPERTY} siguiendo {RANGE}"
         options:
           GROUP:
             sprites: todo
-            '"ALIEN"': todos los extraterrestres
-            '"BEAR"': todos los osos
-            '"CAT"': todos los gatos
-            '"DOG"': todos los perros
-            '"DUCK"': todos los patos
-            '"FROG"': todas las ranas
-            '"MOOSE"': todos los alces
-            '"PINEAPPLE"': todas las piñas
-            '"ROBOT"': todos los robots
-            '"SHARK"': todos los tiburones
+            '"ALIEN"': extraterrestres
+            '"BEAR"': osos
+            '"CAT"': gatos
+            '"DOG"': perros
+            '"DUCK"': patos
+            '"FROG"': ranas
+            '"MOOSE"': alces
+            '"PINEAPPLE"': piñas
+            '"ROBOT"': robots
+            '"SHARK"': tiburones
             '"UNICORN"': Unicornios
           PROPERTY:
             '"scale"': tamaño
@@ -750,19 +762,20 @@ es-MX:
             '"mid"': medio
             '"treble"': agudos
       Dancelab_stopMappingEach:
+        text: "{GROUP} se detiene {PROPERTY} siguiendo {RANGE}"
         options:
           GROUP:
             sprites: todo
-            '"ALIEN"': todos los extraterrestres
-            '"BEAR"': todos los osos
-            '"CAT"': todos los gatos
-            '"DOG"': todos los perros
-            '"DUCK"': todos los patos
-            '"FROG"': todas las ranas
-            '"MOOSE"': todos los alces
-            '"PINEAPPLE"': todas las piñas
-            '"ROBOT"': todos los robots
-            '"SHARK"': todos los tiburones
+            '"ALIEN"': extraterrestres
+            '"BEAR"': osos
+            '"CAT"': gatos
+            '"DOG"': perros
+            '"DUCK"': patos
+            '"FROG"': ranas
+            '"MOOSE"': alces
+            '"PINEAPPLE"': piñas
+            '"ROBOT"': robots
+            '"SHARK"': tiburones
             '"UNICORN"': Unicornios
           PROPERTY:
             '"scale"': tamaño
@@ -777,6 +790,52 @@ es-MX:
             '"bass"': bajo
             '"mid"': medio
             '"treble"': agudos
+      Dancelab_translateStrings:
+        text: traducir {STRING}
+        options:
+          STRING:
+            '"music_wave"': Olas
+            '"ripples"': Ondas
+            '"ripples_random"': Ondas aleatorias
+            '"quads"': Ángulos
+            '"flowers"': Flores
+            '"popsicles"': Paletas
+            '"squiggles"': Garabatos
+            '"growing_stars"': Estrellas crecientes
+            '"emojis"': Emojis
+            '"hearts_colorful"': Corazones
+            '"paint_drio"': Gotas de pintura
+            '"exploding_stars"': Explosión de estrellas
+            '"row_top"': fila superior
+            '"row_bottom"': fila inferior
+            '"column_left"': columna izquierda
+            '"column_right"': columna derecha
+            '"diamond"': diamante
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenKey:
         text: al pulsar {KEY}
         options:
@@ -831,6 +890,8 @@ es-MX:
             '1': medio
             '2': agudos
       Dancelab_whenSetup:
+        text: establecer
+      Dancelab_whenSetup2:
         text: establecer
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} comienza {BEHAVIOR}
@@ -1094,6 +1155,17 @@ es-MX:
         text: coordenada y de {SPRITE}
       Mikelab_addBehaviorSimple:
         text: sprite {SPRITE} comienza {BEHAVIOR}
+      Mikelab_addTrainingData:
+        text: 'añadir datos de entrenamiento: {NAME},{LOCATION}'
+        options:
+          NAME:
+            "{x: 201, y: 100}": objeto
+            "{x: 200, y: 100}": pez
+          LOCATION:
+            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": pez
+            "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": sin pez
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": mi-etiqueta
+            "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": no es mi-etiqueta
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1114,6 +1186,8 @@ es-MX:
             "{x: 300, y: 100}": arriba a la derecha
             "{x: 100, y: 300}": abajo a la izquierda
             "{x: 300, y: 300}": abajo a la derecha
+      Mikelab_getNext:
+        text: obtener siguiente objeto
       Mikelab_getProp:
         options:
           PROPERTY:
@@ -1223,9 +1297,15 @@ es-MX:
           {STATEMENT}
       Mikelab_hasBehavior:
         text: "{SPRITE} actualmente es {BEHAVIOR}"
+      Mikelab_hideFish:
+        text: eliminar {TRASH}
+        options:
+          TRASH:
+            object: objeto
+            fish: pez
       Mikelab_ifDanceIs:
         text: |-
-          Si {SPRITE} está haciendo {DANCE}
+          si {SPRITE} está haciendo {DANCE}
           {DO1} {DO2}
         options:
           DANCE:
@@ -1240,6 +1320,30 @@ es-MX:
             MOVES.Kick: Estrella
             MOVES.ThisOrThat: Esto o aquello
             MOVES.Rest: Ninguna
+      Mikelab_ifLabel:
+        text: |-
+          si {DANCE}
+          hacer {DO1} si no {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: pez
+            MOVES.Clown: mi-etiqueta
+      Mikelab_ifRecognizeLabel:
+        text: |-
+          si reconoce objeto como {DANCE}
+          hacer {DO1} si no {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: pez
+            MOVES.Clown: mi-etiqueta
+      Mikelab_ifRecognizeLabelOnly:
+        text: |-
+          si reconoce objeto como {DANCE}
+          hacer {DO1}
+        options:
+          DANCE:
+            MOVES.ClapHigh: pez
+            MOVES.Clown: no es mi-etiqueta
       Mikelab_locationAt:
         text: 'ubicación x: {X} y: {Y}'
       Mikelab_location_picker:
@@ -1250,6 +1354,10 @@ es-MX:
         text: sprite {SPRITE} detiene {BEHAVIOR}
       Mikelab_repeatUntilComplete:
         text: Repetir para siempre
+      Mikelab_sendBad:
+        text: mover objeto a la izquierda
+      Mikelab_sendGood:
+        text: mover objeto a la derecha
       Mikelab_setBG:
         options:
           BG:
@@ -1307,6 +1415,12 @@ es-MX:
             '"d"': D
       Mikelab_whenMouseClicked:
         text: cuando se hace clic con el ratón
+      Mikelab_whenYesNoClicked:
+        text: cuando se hace clic en {KEY}
+        options:
+          KEY:
+            '"yes"': sí
+            '"no"': 'no'
       Mikelab_whileKeyPressed:
         options:
           KEY:

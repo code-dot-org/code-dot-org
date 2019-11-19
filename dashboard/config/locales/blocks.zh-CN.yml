@@ -596,6 +596,7 @@ zh-CN:
             '"rotation"': 旋转
             '"x"': 水平位置
             '"y"': 垂直位置
+            '"tint"': 色调
       Dancelab_setPropRandom:
         text: 随机 {SPRITE} {PROPERTY}
         options:
@@ -777,6 +778,36 @@ zh-CN:
             '"bass"': 低音
             '"mid"': 中音音量
             '"treble"': 高音音量
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"hearts_colorful"': 心
+            '"diamond"': 钻石
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenKey:
         text: 当 {KEY} 按下时
         options:
@@ -831,6 +862,8 @@ zh-CN:
             '1': 中音音量
             '2': 高音音量
       Dancelab_whenSetup:
+        text: 设置
+      Dancelab_whenSetup2:
         text: 设置
       Dancelab_whenSetupSong:
         options:

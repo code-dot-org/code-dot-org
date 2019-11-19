@@ -20,11 +20,13 @@ cs:
     attributes:
       user:
         name: Zobrazit jméno
-        name_example: Zobrazované jméno <br/> (např. Cool kodér nebo Jana S.)
+        name_example: Zobrazované jméno (např. Cool kodér nebo Jana S.)
         email: E-mail
         parent_email: E-mail rodiče/zákonného zástupce
         personal_email: Osobní e-mailová adresa <a href="%{url}">(klikněte zde pokud
           nemáte e-mailovou adresu)</a>
+        personal_email_markdown: Osobní e-mailová adresa [(klikněte zde pokud nemáte
+          e-mailovou adresu)](%{url})
         username: uživatelské jméno
         password: Heslo
         password_confirmation: Potvrzení hesla
@@ -36,9 +38,14 @@ cs:
         finish_sign_up_header: Dokončete vytvoření účtu
         finish_sign_up_subheader: Vyplňte následující informace pro vytvoření účtu
           Code.org <strong>%{email}</strong>.
+        finish_sign_up_subheader_markdown: Vyplňte následující informace pro vytvoření
+          účtu Code.org **%{email}**.
         finish_sign_up_subheader_provider: Vyplňte následující informace pro vytvoření
           účtu Code.org prostřednictvím poskytovatele <strong>%{provider}</strong>
           pro <strong>%{email}</strong>.
+        finish_sign_up_subheader_provider_markdown: Vyplňte následující informace
+          pro vytvoření účtu Code.org prostřednictvím poskytovatele **%{provider}**
+          pro **%{email}**.
         error:
           future: nemůže být v budoucnosti
   beta: beta
@@ -115,6 +122,9 @@ cs:
     overview: Přihlaš se na účet, aby jsi mohl/a sledovat svůj pokrok nebo spravovat
       svoji třídu <a href="/">Můžeš procházet jednotlivé stupně a puzzle</a> i bez
       účtu, ale pokud chceš uložit svoje pokroky a projekty musíš se přihlásit.
+    overview_markdown: Přihlaš se na účet, aby jsi mohl/a sledovat svůj pokrok nebo
+      spravovat svoji třídu [Můžeš procházet jednotlivé stupně a puzzle](/) i bez
+      účtu, ale pokud chceš uložit svoje pokroky a projekty musíš se přihlásit.
     hoc_already_signed_up_heading: Začít bez přihlášení
     hoc_already_signed_up_content: Jsi přihlášen/a jako učitel Hodiny kódu! Není třeba
       se přihlašovat do Studia kódu, aby jste se mohli zúčastnit této akce. Začněte
@@ -127,6 +137,11 @@ cs:
       vaše řešení a spravovat vaši třídu. Budete moci přiřazovat kurzy studentům a
       sledovat jejich průběh. <a href="%{studio_url}">Můžete také i nadále procházet
       různé fáze a hádanky</a> bez vytvoření účtu.
+    hoc_already_signed_up_content_post_hoc_markdown: Díky za hostování hodiny kódu.
+      Pro přihlášení do Code Studio si musíte nastavit heslo pro svůj účet. To vám
+      umožní ukládat vaše řešení a spravovat vaši třídu. Budete moci přiřazovat kurzy
+      studentům a sledovat jejich průběh. [Můžete také i nadále procházet různé fáze
+      a hádanky](%{studio_url}) bez vytvoření účtu.
     teacher_educator_guide: Viz přiručka pedagoga
     title: Registrace na Code.org
     school_name: Název školy (volitelné)
@@ -449,10 +464,18 @@ cs:
       s tím, že budu vázán <a href='%{terms_of_service_url}', target='_blank'> smluvními
       podmínkami </a> Code.org. Potvrzuji, že mám oprávnění od svých rodičů nebo právního
       zástupce používat Code.org i bez učitele.
+    create_personal_login_terms_markdown: Vytvořením osobních přihlašovacích údajů
+      souhlasím s tím, že budu vázán [smluvními podmínkami](%{terms_of_service_url})
+      Code.org. Potvrzuji, že mám oprávnění od svých rodičů nebo právního zástupce
+      používat Code.org i bez učitele.
     create_personal_login_email_note: 'Poznámka: E-mailové adresy nejsou uloženy ve
       formě, která by nám umožnila kontaktovat studenty. Studenti nikdy dostávají
       e-maily od Code.org kromě obnovení hesla. Viz naše <a href=''%{privacy_policy_url}'',
       target=''_blank''>Zásady ochrany osobních údajů</a>.'
+    create_personal_login_email_note_markdown: 'Poznámka: E-mailové adresy nejsou
+      uloženy ve formě, která by nám umožnila kontaktovat studenty. Studenti nikdy
+      dostávají e-maily od Code.org kromě obnovení hesla. Viz naše [Zásady ochrany
+      osobních údajů](%{privacy_policy_url}).'
     enter_new_login_info: Zadejte své nové přihlašovací údaje
     confirm_secret_words: Potvrďte že jste to vy zadáním vaší bezpečnostní fráze
     parent_email_label: E-mail rodiče/zákonného zástupce (volitelné)
@@ -810,6 +833,11 @@ cs:
       uchovávat e-mailové adresy studentských účtů na Studiu kódu. </i> Je to pro
       nás velký krok a doufáme, že jsme nastavili nový standard pro soukromí studentů
       v technologiích ve vzdělávání. Souhrn změn sme vám poslali e-mailem.
+    intro_desc_markdown: Aktualizovali jsme naše smluvní podmínky a ochranu osobních
+      údajů. Změny jsou platné od 24. srpna 2016. Největší změnou je, že _už více
+      nebudeme uchovávat e-mailové adresy studentských účtů na Studiu kódu._ Je to
+      pro nás velký krok a doufáme, že jsme nastavili nový standard pro soukromí studentů
+      v technologiích ve vzdělávání. Souhrn změn sme vám poslali e-mailem.
     intro_instructions: Je třeba, aby jste potvrdili tyto podmínky u studentů mladších
       13 let ve vaší třídě, aby získali plný přístup ke všem nejnovějším funkcím ve
       Studiu kódu. Při registraci účtu pro tyto studenty, je potřeba potvrdit, že
@@ -821,6 +849,8 @@ cs:
     accept_label: Souhlasím s aktualizací <a href="%{tos_url}" target="_blank">Podmínek
       poskytování služeb</a> and <a href="%{privacy_url}" target="_blank">Ochranou
       osobních údajů</a>
+    accept_label_markdown: Souhlasím s aktualizací [Podmínek poskytování služeb](%{tos_url})
+      and [Ochranou osobních údajů](%{privacy_url})
     accept: Přijmout
     print: Tisk
     reminder_desc: Aktualizovali jsme naše <a href="%{tos_url}" target="_blank">Smluvní
@@ -828,6 +858,10 @@ cs:
       </a>. Prosím čtěte pečlivě, než je potvrdíte. Berte v úvahu, že pokud studenti
       neřijmnou aktualizované podmínky, naše nástroje vyučující JavaScript jim mohou
       být nedostupné.
+    reminder_desc_markdown: Aktualizovali jsme naše [Smluvní podmínky](%{tos_url})a[Ochranu
+      osobních údajů](%{privacy_url}). Prosím čtěte pečlivě, než je potvrdíte. Berte
+      v úvahu, že pokud studenti neřijmnou aktualizované podmínky, naše nástroje vyučující
+      JavaScript jim mohou být nedostupné.
     review_terms: Zkontrolujte aktualizované podmínky
   school_info_interstitial:
     save: Uložit
@@ -847,6 +881,9 @@ cs:
     decline: Zavřít
   zendesk_too_young_message: Promiň, mladší uživatelé se nemohou přihlásit do našeho
     webového serveru podpory. Můžeš procházet <a href="http://support.code.org"> support.code.org</a>
+    bez přihlášení nebo požádat rodiče nebo učitele, aby nás kontaktovali.
+  zendesk_too_young_message_markdown: Promiň, mladší uživatelé se nemohou přihlásit
+    do našeho webového serveru podpory. Můžeš procházet [support.code.org](http://support.code.org)
     bez přihlášení nebo požádat rodiče nebo učitele, aby nás kontaktovali.
   progress:
     not_started: není zahájeno

@@ -595,6 +595,7 @@ hu:
             '"rotation"': forgás
             '"x"': vízszintes helyzet
             '"y"': függőleges helyzet
+            '"tint"': árnyalat
       Dancelab_setPropRandom:
         text: "{SPRITE} {PROPERTY} legyen véletlenszerű"
         options:
@@ -776,6 +777,25 @@ hu:
             '"bass"': basszus
             '"mid"': közepes
             '"treble"': magas
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"hearts_colorful"': Szívek
+            '"diamond"': gyémánt
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
       Dancelab_whenKey:
         text: "{KEY} lenyomásakor"
         options:
@@ -814,6 +834,8 @@ hu:
             '1': közepes
             '2': magas
       Dancelab_whenSetup:
+        text: beállítás
+      Dancelab_whenSetup2:
         text: beállítás
       gamelab_addBehaviorSimple:
         text: szereplő {SPRITE} elkezd {BEHAVIOR}

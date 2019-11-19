@@ -127,6 +127,27 @@ sv-SE:
       CourseE_HOC 2018 Level_9b:
         voyage_aquatic_9a: Vilket vackert korallrev! Blå korall är den **rätta** vägen
           att gå och kontrollera att röd korall inte är till **vänster**!
+      Dance_2019_01:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          -   Kontrollera att en dansare visas på skärmen.
+
+          _Denna nivå slutar efter 4 åtgärder._
+      Dance_2019_04:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          -   Dansaren måste växla till en ny rörelse efter 4 åtgärder.
+
+          _Denna nivå slutar efter 8 åtgärder._
+      Dance_2019_05:
+        validation: |-
+          **Hur ska man ta sig förbi denna nivå?**
+
+          -   Efter 6 åtgärder måste din dansare göra en annan dans än den som gjordes efter 4 åtgärder.
+
+          _Denna nivå slutar efter 12 åtgärder._
       Dance_Party_01:
         validation: |-
           **Hur ska man ta sig förbi denna nivå?**

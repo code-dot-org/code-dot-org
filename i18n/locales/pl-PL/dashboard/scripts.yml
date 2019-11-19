@@ -4751,6 +4751,8 @@ pl:
               name: Własność intelektualna
             Images:
               name: Obrazki
+            CSS Classes:
+              name: Klasy CSS
         csd3-pilot:
           description_short: "Programowanie"
           stages:
@@ -4869,3 +4871,14 @@ pl:
               name: Zmienne
             For Loops:
               name: Pętle dla (for)
+        dance-extras-2019:
+          title: Nie przestawaj tańczyć
+          description: Wyjdź poza pierwszą godzinę dzięki rozszerzonym pomysłom na projekt.
+        csp10-pilot:
+          stages:
+            new stage:
+              name: nowy etap
+        csp4-preview:
+          stages:
+            new stage:
+              name: nowy etap

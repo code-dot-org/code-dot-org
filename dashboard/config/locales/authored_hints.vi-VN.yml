@@ -299,6 +299,27 @@ vi-VN:
       CourseE_HOC 2018 Level_9b:
         voyage_aquatic_9a: Hãy xem các khối lệnh san hô màu đỏ và màu xanh? Sử dụng
           chúng như điểm chỉ dẫn để rẽ phải hoặc trái qua các rạn san hô.
+      Dance_2019_01:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+
+          -   Hãy đảm bảo rằng một vũ công xuất hiện trên màn hình.
+
+          _Cấp độ này kết thúc sau 4 nhịp._
+      Dance_2019_04:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+
+          -   Vũ công cần chuyển sang động tác mới sau 4 nhịp.
+
+          _Cấp độ này kết thúc sau 8 nhịp._
+      Dance_2019_05:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+
+          -   Sau 6 nhịp, vũ công cần làm một vũ điệu khác ngoài vũ điệu sau 4 nhịp.
+
+          _Cấp độ này kết thúc sau 12 nhịp._
       Dance_Party_01:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**

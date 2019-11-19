@@ -24,7 +24,7 @@ lt:
     attributes:
       user:
         name: 'Tavo vardas'
-        name_example: 'Tavo vardas<br/>(jį matys tavo mokytoja(-s))'
+        name_example: 'Tavo vardas (jį matys tavo mokytoja(-s))'
         email: 'El. paštas'
         username: 'Naudotojo vardas'
         password: 'Slaptažodis'
@@ -93,6 +93,7 @@ lt:
     student_count: 'Jau užsiregistravo %{count} mokinių(-iai).'
     teacher_count: 'Jau užsiregistravo %{count} mokytojų(-ai).'
     overview: 'Užsiregistruokite paskyrą, kad galėtumėte sekti savo pažangą arba valdyti savo klasę. <a href="/">Galite naršyti įvairius etapus ir galvosūkius</a> be paskyros, tačiau reikės užsiregistruoti, jei norėsite išsaugoti savo progresą ir projektus.'
+    overview_markdown: 'Užsiregistruokite paskyrą, kad galėtumėte sekti savo pažangą arba valdyti savo klasę. [Galite naršyti įvairius etapus ir galvosūkius](/) be paskyros, tačiau reikės užsiregistruoti, jei norėsite išsaugoti savo progresą ir projektus.'
     hoc_already_signed_up_heading: 'Naudotis neprisijungus'
     teacher_educator_guide: 'Peržiūrėti pedagogo vadovą'
     title: "Užsiregistruokite Code.org"
@@ -576,6 +577,7 @@ lt:
     submit: "Pateikti"
     decline: "Užverti"
   zendesk_too_young_message: 'Atsiprašome, jaunesnio amžiaus naudotojai negali prisijungti prie mūsų palaikymo svetainės. Galite peržiūrėti <a href="http://support.code.org"> support.code.org</a> nesiregistruojant arba paklausti savo tėvų ar mokytojų, kad susisiektų su mumis už jus.'
+  zendesk_too_young_message_markdown: 'Atsiprašome, jaunesnio amžiaus naudotojai negali prisijungti prie mūsų palaikymo svetainės. Galite peržiūrėti [support.code.org](http://support.code.org) nesiregistruojant arba paklausti savo tėvų ar mokytojų, kad susisiektų su mumis už jus.'
   progress:
     not_started: nepradėta
     in_progress: pradėta

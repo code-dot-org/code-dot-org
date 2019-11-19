@@ -25,6 +25,8 @@ es-ES:
         2-3_Artist_4_a: Para terminar la casa, ¡todo lo que tenemos que hacer es dibujar
           un cuadrado!
       2-3 Artist 6:
+        2-3_Artist_6_a: 'Para hacer esos pequeños ángulos, tienes que girar _más lejos_
+          cada vez que hecho con la Plaza.   '
         2-3_Artist_6_b: Como ya estoy mirando hacia la derecha, es más fácil empezar
           por avanzar, y luego hacer vueltas a la izquierda para crear el triángulo.
         2-3_Artist_6_c: Cada lado del triángulo es de la misma longitud que cada lado
@@ -39,6 +41,9 @@ es-ES:
       2-3 Artist 9 NEW:
         2-3_Artist_9_a: Este diamante es realmente sólo un cuadrado de lado
       2-3 Artist Debugging 10:
+        2-3_Artist_Debugging_10_a: Recuerda, quieres que el panel de control sea 10
+          píxeles \* mayor \*... así que no olvides \*\* añadir \*\* 10 a cualquier
+          número que cambies.
         2-3_Artist_Debugging_10_b: "\\*\\* ¡Está bien usar ensayo y error aquí! \\*\\*\n\nComienza
           por cambiar un número a la vez.    \n\n ¿Que números de hacen qué?\n\nSi
           te pierdes, simplemente haz clic en \"Comenzar nuevamente\"."
@@ -51,6 +56,13 @@ es-ES:
       2-3 Artist Debugging 7:
         2-3_Artist_Debugging_7_a: "¿Qué pasa si haces que el artista se mueva o salte
           hacia atrás después de que dibuje la primera línea?"
+      2-3 Artist Debugging 8:
+        2-3_Artist_Debugging_8_a: |-
+          ¿Cuántas veces se repitió mi forma?
+
+          ¿Cuantas veces _debería_ repetirse la forma?
+
+          ¿Donde se puede cambiar eso en el programa?
       2-3 Artist Debugging 9:
         2-3_Artist_Debugging_9_a: "¡El artista necesita girar 60 grados más a la izquierda
           antes de comenzar a dibujar!"
@@ -110,6 +122,8 @@ es-ES:
         2-3_Artist_Nested_Loops_3_a: |-
           ¿Necesitas ayuda con los ángulos?
           **360/12 = 30**
+        2-3_Artist_Nested_Loops_3_b: Recuerda poner todo el código gris y tu bloque
+          de girar dentro de un bucle.
       2-3 Artist Nested Loops 4:
         2-3_Artist_Nested_Loops_3_a: |-
           ¿Necesitas ayuda con los ángulos?
@@ -243,6 +257,11 @@ es-ES:
         4-5_Artist_4_a: |-
           ¡Hay 360 grados en un círculo!
           ¡Esa es la cantidad de veces que necesitas repetir este código (convirtiendo 1 grado por vez) antes de que termine el círculo!
+      4-5 Artist 5:
+        4-5_Artist_5_a: |-
+          Prueba y error es un gran método, pero también puede resolver el problema dividiendo el ángulo de 90 grados en tercios.
+
+          \*\* 90/3 = **\_** \*\*
       4-5 Artist 7:
         4-5_Artist_7_a: "¿Qué ángulo es el más pequeño? ¿En qué ángulo está parado
           el artista? "
@@ -250,7 +269,15 @@ es-ES:
         4-5_Artist_8_a: "Los lados largos son 240 píxeles cada uno. Eso significa
           que los 2 lados cortos deben sumar:\n\n\\*\\* 800 - 240 - 240 = 320 \\*\\*\n\n¿Qué
           es \\*\\* 320/2 \\*\\*? "
+        4-5_Artist_8_b: |-
+          ¡Esta imagen se puede hacer de 2 maneras!
+
+          -   Dibuja dos rectángulos que son \*\* 120 \*\* de largo y \*\* 160 \*\* de alto, con un lado superpuesto
+
+          -   Dibuja un rectángulo que sea \*\* 240 \*\* de largo y \*\* 160 \*\* alto, luego agregua una línea en el medio.
       4-5 Artist 9:
+        4-5_Artist_9_a: Cuando un triángulo es un equilátero, los lados y ángulos
+          son iguales.
         4-5_Artist_9_b: Necesitarás dibujar tres triángulos del mismo tamaño. No olvides
           pasar a tu nueva posición tras cada uno.
       4-5 Artist Assessment 1:
@@ -347,6 +374,9 @@ es-ES:
           de un hexágono \*\*, seguida de \*\* 2/3 de un triángulo \*\*. '
         Course_4_Artist_12_b: 'La forma de la unidad es casi la misma que en el último
           puzzle, excepto que el medio hexágono es un poco más grande. '
+        Course_4_Artist_12_c: "1.  Las primeras tres líneas tienen 60 píxeles de largo
+          y necesitas girar 60 grados.\n     2) Las siguientes dos líneas tienen 80
+          píxeles de largo y necesitas girar 120 grados "
       Course 4 Artist 6:
         Course_4_Artist_6_a: Hay 3 triángulos dentro de la rotación de 360 grados...
           ¿Cuántas veces 3 entra en 360?
@@ -529,6 +559,8 @@ es-ES:
         Course_4_Artist_Functions_challenge_d: Tendras que girar a la izquierda 90
           grados fuera de tu `repetir`, pero aún dentro del bucle `para`.
       Course 4 Artist Inspire:
+        Course_4_Artist_Inspire_a: Después de completar un cuadrado, intente saltar
+          la mitad de su longitud antes de girar y hacer otro.
         Course_4_Artist_Inspire_b: Cada cuadrado y salto se repite cuatro veces (usando
           un giro a la izquierda en el medio) para formar una unidad completa similar
           a un molinete.
@@ -740,6 +772,11 @@ es-ES:
           zag es morado (rgb = 100, 50, 150).
         Course_4_SCV_6_d: 'Para zig, gire a la izquierda en `360` /`lados`. Para zag,
           gire a la derecha en `360` /`lados`. '
+        Course_4_SCV_6_e: 'El resto del programa es muy estándar para hacer una rotación
+          completa de 360 grados de esa forma, excepto que estamos superponiendo las
+          formas a la mitad, por lo que tenemos que girar a la derecha por `180` /`lados`,
+          lo que significa que necesitamos dos veces tantos de ellos como de costumbre
+          (repeticiones `lados` \*`2`). '
       CourseD_Dance_Party_01:
         validation: |-
           **¿Cómo paso este nivel?**
@@ -846,6 +883,27 @@ es-ES:
       CourseE_HOC 2018 Level_9b:
         voyage_aquatic_9a: "¡Qué arrecife de coral más bonito! ¡Estás en tu **derecho**
           de usar coral azul, pero asegúrate de que el coral rojo quede a la **izquierda**!"
+      Dance_2019_01:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          -   Asegúrate de que el bailarín aparezca en la pantalla.
+
+          _Este nivel termina después de 4 compases._
+      Dance_2019_04:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          -   El bailarín tiene que cambiar a un movimiento nuevo después de 4 compases.
+
+          _El nivel termina después de 8 compases._
+      Dance_2019_05:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          -   Después de 6 compases, tu bailarín tiene que hacer un baile diferente del que hacía después de 4 compases.
+
+          _El nivel termina después de 12 compases._
       Dance_Party_01:
         validation: |-
           **¿Cómo paso este nivel?**
@@ -1121,10 +1179,18 @@ es-ES:
       NEW Course 4 Artist Params 11:
         NEW_Course_4_Artist_Params_11_a: Hay más de un número que necesita ser reemplazado
           por una variable dentro de la función.
+      NEW Course 4 Artist Params 13:
+        NEW_Course_4_Artist_Params_13_a: 'Vas a necesitar dividir el _perímetro_ por
+          el número de lados para mantener las formas en el mismo tamaño a pesar de
+          todo. '
       NEW Course 4 Artist Params inspire:
         brush_width: Establecemos el grosor del pincel a 1, luego el color a azul
           antes de hacer cualquier otra cosa.
         double_loop: Intenta colocar un 'bucle para' dentro de un bucle 'repetir '.
+        specifics: |-
+          El `bucle para` se ejecuta de tres a diecisiete para cada uno de los seis" pétalos "antes de pasar a crear el siguiente, dibujando formas con solo un número impar de lados.
+
+          El bloque `establecer alfa` usa la división para atenuar el color a medida que el contador aumenta.
         after: Cuando hayas terminado con cada "pétalo", asegúrate de "avanzar" 20
           píxeles antes de hacer una rotación de 60 grados.
       NEW Course 4 Bee For Loops 8:
@@ -1158,10 +1224,14 @@ es-ES:
       Overworld House Frame Chosen:
         mc_6_a: Haga click en la flecha sobre el bloque 'colocar' para escoger lo
           que quiere colocar.
+        mc_6_b: "¡No tengas miedo de cometer un error! Ejecuta el código para ver
+          que pasa, aunque aun no hayas resuelto el rompecabezas.  "
         mc_6_c: Usted puede poner más de un bloque dentro de un lazo 'repetir'.
       Overworld House Frame Chosen_2019:
         mc_6_a: Haga click en la flecha sobre el bloque 'colocar' para escoger lo
           que quiere colocar.
+        mc_6_b: "¡No tengas miedo de cometer un error! Ejecuta el código para ver
+          que pasa, aunque aun no hayas resuelto el rompecabezas.  "
         mc_6_c: Usted puede poner más de un bloque dentro de un lazo 'repetir'.
       Overworld Move to Sheep:
         mc_1_a: El bloque 'avanzar' está en la parte superior del cuadro de herramientas.
@@ -1175,10 +1245,14 @@ es-ES:
         mc_5_a: Use primero el bloque 'colocar', y luego el bloque 'mover'.
         mc_5_b: Asegúrese de que ambos bloques están dentro del lazo 'repetir' para
           ejecutar el código más de una vez.
+        mc_5_c: "¡No tengas miedo de cometer un error! Ejecuta el código para ver
+          que pasa, aunque aun no hayas resuelto el rompecabezas.  "
       Overworld Place Wall_2019:
         mc_5_a: Use primero el bloque 'colocar', y luego el bloque 'mover'.
         mc_5_b: Asegúrese de que ambos bloques están dentro del lazo 'repetir' para
           ejecutar el código más de una vez.
+        mc_5_c: "¡No tengas miedo de cometer un error! Ejecuta el código para ver
+          que pasa, aunque aun no hayas resuelto el rompecabezas.  "
       Overworld Plant Crops:
         mc_7_a: Use el bloque 'cultivo de plantas' para plantar un cultivo en el espacio
           donde está parado.
@@ -1204,11 +1278,15 @@ es-ES:
           a la oveja?
         mc_3_b: Si necesita cambiar la dirección en la que mira, utilice un bloque
           de 'girar'.
+        mc_3_c: "¡No tengas miedo de cometer un error! Ejecuta el código para ver
+          que pasa, aunque aun no hayas resuelto el rompecabezas.  "
       Overworld Shear Sheep_2019:
         mc_3_a: El bloque 'esquilar ' obtiene la oveja en frente de usted. ¿Está frente
           a la oveja?
         mc_3_b: Si necesita cambiar la dirección en la que mira, utilice un bloque
           de 'girar'.
+        mc_3_c: "¡No tengas miedo de cometer un error! Ejecuta el código para ver
+          que pasa, aunque aun no hayas resuelto el rompecabezas.  "
       Underground Avoiding Lava:
         mc_11_a: Todo el código está en su lugar para asegurarse de la lava y enfrentarla.
           Todo lo que necesitas hacer es agregar un bloque para moverte.
@@ -1234,11 +1312,15 @@ es-ES:
           ¿Cómo va a llegar allá?"
         mc_10_b: Cuando está parado el borde de la lava, utilice 'colocar adoquín
           adelante' para un camino seguro.¡Luego, podrá caminar sobre el!
+        mc_10_c: "¡No tengas miedo de cometer un error! Ejecuta el código para ver
+          que pasa, aunque aun no hayas resuelto el rompecabezas.  "
       Underground Iron_2019:
         mc_10_a: "¡Los bloques de hierro son los espacios punteados detrás de la antorcha!
           ¿Cómo va a llegar allá?"
         mc_10_b: Cuando está parado el borde de la lava, utilice 'colocar adoquín
           adelante' para un camino seguro.¡Luego, podrá caminar sobre el!
+        mc_10_c: "¡No tengas miedo de cometer un error! Ejecuta el código para ver
+          que pasa, aunque aun no hayas resuelto el rompecabezas.  "
       Underground Mining Coal:
         mc_9_a: "¿Está frente al camino correcto? El 'bloque destruir' explota el
           bloque en frente de usted."
@@ -1501,7 +1583,12 @@ es-ES:
           El patrón en espiral puede ser programado ¡sólo con 18 bloques!
 
           ![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)
+      course2_maze_loops_challenge1:
+        courseC_maze_loops_challenge1_a: Piensa que este camino está formado por dos
+          trozos diferentes. Cada uno tiene un patrón que puedes repetir.
       course2_maze_programming_challenge2:
+        courseC_maze_programming_challenge2_a: _"Si me mandas hacia atrás, ¡ten especial
+          cuidado para que gire en el sentido correcto!"_
         courseC_maze_programming_challenge2_b: "¡La solución más corta usa solo 5
           bloques, pero usa el bloque de \\`repetir!"
       course3_bee_functions_challenge1:
@@ -1992,6 +2079,11 @@ es-ES:
           </block>
           </next>
           </block></xml>
+      courseA_collector_loops_challenge2:
+        courseA_collector_loops_challenge2_b: Solo necesitas usar 1 bloque para resolver
+          esto.
+        courseA_collector_loops_challenge2_a: Puedes moverte hacia atrás el camino
+          por una segunda vez antes de moverte al sur.
       courseA_collector_loops_challenge2kp:
         courseA_collector_loops_challenge2kp_b: Intenta este camino para buscar una
           solución.
@@ -2007,6 +2099,9 @@ es-ES:
           solución.
         courseA_collector_loops_challenge2kp_a: "¿Puedes usar bucles para solucionar
           el problema?"
+      courseA_collector_preLoops5:
+        courseA_collector_preLoops5_a: "¡Necesitarás ir a dos direcciones distintas
+          para obtener una sola gema!"
       courseA_collector_preLoops7:
         courseA_collector_loops2_b: |-
           Después de haber pasado a un cuadrado con tesoro, usa este bloque para recoger el tesoro.
@@ -2047,6 +2142,10 @@ es-ES:
 
           <title name="TIMES" config="2-10">4</title>
           </block></xml>
+        courseA_harvester_loops3_b: |-
+          Para repetir código, arrastre un `repeat` <xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="2-10">4</title>
+            </block></xml> bucle, luego ponga el bloque que prefiera dentro del bucle.
       courseA_harvester_loops3_2019:
         courseA_harvester_loops3_a: |-
           Para ayudarte, usa un bloque de repetición como este:
@@ -2054,6 +2153,10 @@ es-ES:
 
           <title name="TIMES" config="2-10">4</title>
           </block></xml>
+        courseA_harvester_loops3_b: |-
+          Para repetir código, arrastre un `repeat` <xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="2-10">4</title>
+            </block></xml> bucle, luego ponga el bloque que prefiera dentro del bucle.
       courseA_harvester_loops4:
         courseA_harvester_loops4_a: "¡No tengas miedo de presionar `Adelante` para
           ver qué ocurre!"
@@ -3164,6 +3267,15 @@ es-ES:
           al siguiente lugar.
         courseB_artist_loops_challenge2_b: Puedes usar bloques `saltar` para moverte
           a otros espacios.
+      courseB_collector_loops10:
+        courseB_collector_loops10_b: Intenta escribir tus movimientos en un pedazo
+          de papel y buscar un patrón.
+      courseB_collector_loops10_2018:
+        courseB_collector_loops10_b: Intenta escribir tus movimientos en un pedazo
+          de papel y buscar un patrón.
+      courseB_collector_loops10_2019:
+        courseB_collector_loops10_b: Intenta escribir tus movimientos en un pedazo
+          de papel y buscar un patrón.
       courseB_collector_loops2:
         courseB_collector_loops2_a: Tendrás que moverte antes de coleccionar algún
           tesoro.
@@ -3218,12 +3330,18 @@ es-ES:
         courseB_collector_loops6_d: Si estás confundido, intenta separar este puzzle
           en 3 partes.
       courseB_collector_loops9:
+        courseB_collector_loops9_a: "¿Esto parece demasiado difícil? Divídelo en 4
+          pequeños problemas para que se sienta más fácil."
         courseB_collector_loops9_b: Necesitarás 3 bucles de repetición, uno después
           del otro, para esta solución.
       courseB_collector_loops9_2018:
+        courseB_collector_loops9_a: "¿Esto parece demasiado difícil? Divídelo en 4
+          pequeños problemas para que se sienta más fácil."
         courseB_collector_loops9_b: Necesitarás 3 bucles de repetición, uno después
           del otro, para esta solución.
       courseB_collector_loops9_2019:
+        courseB_collector_loops9_a: "¿Esto parece demasiado difícil? Divídelo en 4
+          pequeños problemas para que se sienta más fácil."
         courseB_collector_loops9_b: Necesitarás 3 bucles de repetición, uno después
           del otro, para esta solución.
       courseB_collector_loops_challenge1:
@@ -3576,6 +3694,12 @@ es-ES:
           esquina, y otra después de la esquina.
         courseB_iceage_loops2_b: Si te atascas, intenta decir los pasos en voz alta.
         courseB_iceage_loops2_c: Sigue esta ruta para llevar a Scrat a la bellota.
+      courseB_iceage_loops3:
+        courseB_iceage_loops3_a: |-
+          Use este nuevo bloque!
+          <xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="3-10">5</title>
+              </block></xml>
       courseB_iceage_loops3_2019:
         courseB_iceage_loops3_a: |-
           Use este nuevo bloque!
@@ -3586,7 +3710,12 @@ es-ES:
           Para repetir código, arrastre un `repeat` <xml><block type="controls_repeat_simplified">
               <title name="TIMES">???</title>
             </block></xml> bucle, luego ponga el bloque que prefiera dentro del bucle.
+      courseB_maze_seq2:
+        courseB_maze_seq2_a: A este programa le falta 1 bloque. ¿Puedes averiguar
+          cuál es?
       courseB_maze_seq3:
+        courseB_maze_seq3_a: Uno de los bloques está moviendo al pájaro en la dirección
+          equivocada. ¿Puedes averiguar cuál es y sustituirlo con el bloque correcto?
         courseB_maze_seq3_b: Intenta usar el botón de pasos para ver dónde está el
           problema del programa. ¿Es el primer paso? ¿El segundo, quizás?
         courseB_maze_seq3_c: El bloque <xml><block type="maze_moveWest"/></xml> no
@@ -4109,6 +4238,18 @@ es-ES:
       courseB_playlab_events_challenge2_2019:
         courseB_playlab_events_challenge2_a: Cada animal del juego debería desaparecer
           al hacer click sobre él. ¡También debería volver pasados uno o dos segundos!
+      courseB_starWars_prog9:
+        courseB_starWars_prog9_a: "¡No tengas miedo de cometer un error! Ejecuta el
+          código para ver que pasa, aunque aun no hayas resuelto el rompecabezas.
+          \ "
+      courseB_starWars_prog9_2018:
+        courseB_starWars_prog9_a: "¡No tengas miedo de cometer un error! Ejecuta el
+          código para ver que pasa, aunque aun no hayas resuelto el rompecabezas.
+          \ "
+      courseB_starWars_prog9_2019:
+        courseB_starWars_prog9_a: "¡No tengas miedo de cometer un error! Ejecuta el
+          código para ver que pasa, aunque aun no hayas resuelto el rompecabezas.
+          \ "
       courseC_PlayLab_events1:
         courseC_PlayLab_events1_a: "Añade este bloque al bloque `al ejecutar`:\n\n<xml>
           \  \n  <block type=\"studio_saySpriteChoices\">     \n     <title name=\"SPRITE\">0</title>\n
@@ -5236,6 +5377,9 @@ es-ES:
       courseC_starWars_loops1:
         courseC_starWars_loops1_a: Cuando BB-8 pasa por encima de la chatarra, la
           recoge automáticamente.
+        courseC_starWars_loops1_b: "¡No tengas miedo de cometer un error! Ejecuta
+          el código para ver que pasa, aunque aun no hayas resuelto el rompecabezas.
+          \ "
         courseC_starWars_loops1_c: Tienes que `avanzar` cinco veces para resolver
           este puzle.
       courseC_starWars_loops10:
@@ -5244,26 +5388,41 @@ es-ES:
           para hacer todos los giros."
         courseC_starWars_loops10_b: "¡Si quieres usar menos código, puedes meter un
           bucle `repetir` dentro de otro!\\\\A esto se le llama **bucles anidados**."
+        courseC_starWars_loops10_c: "¡No tengas miedo de cometer un error! Ejecuta
+          el código para ver que pasa, aunque aun no hayas resuelto el rompecabezas.
+          \ "
       courseC_starWars_loops10_2018:
         courseC_starWars_loops10_a: "¿No te parece esto un conjunto gigante de escaleras?
           Mira a ver si puedes usar lo que has aprendido en los puzles anteriores
           para hacer todos los giros."
         courseC_starWars_loops10_b: "¡Si quieres usar menos código, puedes meter un
           bucle `repetir` dentro de otro!\\\\A esto se le llama **bucles anidados**."
+        courseC_starWars_loops10_c: "¡No tengas miedo de cometer un error! Ejecuta
+          el código para ver que pasa, aunque aun no hayas resuelto el rompecabezas.
+          \ "
       courseC_starWars_loops10_2019:
         courseC_starWars_loops10_a: "¿No te parece esto un conjunto gigante de escaleras?
           Mira a ver si puedes usar lo que has aprendido en los puzles anteriores
           para hacer todos los giros."
         courseC_starWars_loops10_b: "¡Si quieres usar menos código, puedes meter un
           bucle `repetir` dentro de otro!\\\\A esto se le llama **bucles anidados**."
+        courseC_starWars_loops10_c: "¡No tengas miedo de cometer un error! Ejecuta
+          el código para ver que pasa, aunque aun no hayas resuelto el rompecabezas.
+          \ "
       courseC_starWars_loops1_2018:
         courseC_starWars_loops1_a: Cuando BB-8 pasa por encima de la chatarra, la
           recoge automáticamente.
+        courseC_starWars_loops1_b: "¡No tengas miedo de cometer un error! Ejecuta
+          el código para ver que pasa, aunque aun no hayas resuelto el rompecabezas.
+          \ "
         courseC_starWars_loops1_c: Tienes que `avanzar` cinco veces para resolver
           este puzle.
       courseC_starWars_loops1_2019:
         courseC_starWars_loops1_a: Cuando BB-8 pasa por encima de la chatarra, la
           recoge automáticamente.
+        courseC_starWars_loops1_b: "¡No tengas miedo de cometer un error! Ejecuta
+          el código para ver que pasa, aunque aun no hayas resuelto el rompecabezas.
+          \ "
         courseC_starWars_loops1_c: Tienes que `avanzar` cinco veces para resolver
           este puzle.
       courseC_starWars_loops2:
@@ -5315,16 +5474,25 @@ es-ES:
           Prueba con un paso de escalera. ¿Cubre eso toda la chatarra?"
         courseC_starWars_loops7_b: Si tienes problemas con este puzle, prueba a escribir
           todos los pasos en un trozo de papel y busca un patrón.
+        courseC_starWars_loops7_c: "¡No tengas miedo de cometer un error! Ejecuta
+          el código para ver que pasa, aunque aun no hayas resuelto el rompecabezas.
+          \ "
       courseC_starWars_loops7_2018:
         courseC_starWars_loops7_a: "¡Este patrón parece más difícil de lo que es!
           Prueba con un paso de escalera. ¿Cubre eso toda la chatarra?"
         courseC_starWars_loops7_b: Si tienes problemas con este puzle, prueba a escribir
           todos los pasos en un trozo de papel y busca un patrón.
+        courseC_starWars_loops7_c: "¡No tengas miedo de cometer un error! Ejecuta
+          el código para ver que pasa, aunque aun no hayas resuelto el rompecabezas.
+          \ "
       courseC_starWars_loops7_2019:
         courseC_starWars_loops7_a: "¡Este patrón parece más difícil de lo que es!
           Prueba con un paso de escalera. ¿Cubre eso toda la chatarra?"
         courseC_starWars_loops7_b: Si tienes problemas con este puzle, prueba a escribir
           todos los pasos en un trozo de papel y busca un patrón.
+        courseC_starWars_loops7_c: "¡No tengas miedo de cometer un error! Ejecuta
+          el código para ver que pasa, aunque aun no hayas resuelto el rompecabezas.
+          \ "
       courseC_starWars_loops8:
         course_starWars_loops8_a: Prueba dividiendo el problema en trozos más pequeños.
           Tómate tu tiempo. ¡No tienes que resolverlo todo en el primer intento!
@@ -5440,6 +5608,18 @@ es-ES:
           esquina, y otra después de la esquina.
         courseD_iceage_loops2_b: Si te atascas, intenta decir los pasos en voz alta.
         courseD_iceage_loops2_c: Sigue esta ruta para llevar a Scrat a la bellota.
+      courseD_iceage_loops3:
+        courseB_iceage_loops3_a: |-
+          Use este nuevo bloque!
+          <xml><block type="controls_repeat_dropdown">
+              <title name="TIMES" config="2-10">5</title>
+            </block></xml>
+      courseD_iceage_loops3_2019:
+        courseB_iceage_loops3_a: |-
+          Use este nuevo bloque!
+          <xml><block type="controls_repeat_dropdown">
+              <title name="TIMES" config="2-10">5</title>
+            </block></xml>
       courseD_maze_intro5a_2019:
         courseC_maze_programming5_a: Prueba a usar el botón "Paso" para ejecutar tu
           código línea a línea. ¿Puedes averiguar qué tienes que hacer después?
@@ -5650,6 +5830,12 @@ es-ES:
         courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseE_artist_functions8_2019:
         courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseE_bee_concept3:
+        courseE_bee_concept3a_b: Si no puedes averiguar en dónde poner el bucle, intenta
+          escribiendo tu código paso por paso y mira los patrones.
+      courseE_bee_concept3_2018:
+        courseE_bee_concept3a_b: Si no puedes averiguar en dónde poner el bucle, intenta
+          escribiendo tu código paso por paso y mira los patrones.
       courseE_bee_functions6:
         courseE_bee_functions6_a: |-
           Si el rompecabezas parece desafiante, intenta construir tu función de poco a poco

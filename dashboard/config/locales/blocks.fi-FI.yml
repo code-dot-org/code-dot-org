@@ -525,6 +525,7 @@ fi:
             '"rotation"': kierto
             '"x"': vaaka-asento
             '"y"': pystyasento
+            '"tint"': sävy
       Dancelab_setPropRandom:
         text: satunnaista {SPRITE} {PROPERTY}
         options:
@@ -704,6 +705,23 @@ fi:
             '"bass"': basso
             '"mid"': midi
             '"treble"': diskantti
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': timantti
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"z"': z
       Dancelab_whenKey:
         text: kun {KEY} painettuna
         options:
@@ -740,6 +758,8 @@ fi:
             '1': midi
             '2': diskantti
       Dancelab_whenSetup:
+        text: asetukset
+      Dancelab_whenSetup2:
         text: asetukset
       gamelab_changePropBy:
         text: muuta {SPRITE} {PROPERTY} {VAL}

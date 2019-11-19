@@ -20,11 +20,13 @@ pl:
     attributes:
       user:
         name: Wyświetl Nazwisko
-        name_example: Wyświetlane Imię<br/>(np. Super Koder albo Ania S.)
+        name_example: Wyświetlane Imię (np. Super Koder albo Ania S.)
         email: e-mail
         parent_email: Adres e-mail rodzica/opiekuna
         personal_email: Osobisty adres e-mail <a href="%{url}">(kliknij tutaj jeśli
           nie masz adresu e-mail)</a>
+        personal_email_markdown: Osobisty adres e-mail [(kliknij tutaj jeśli nie masz
+          adresu e-mail)](%{url})
         username: Nazwa użytkownika
         password: Hasło
         password_confirmation: Potwierdzenie hasła
@@ -35,6 +37,8 @@ pl:
         edit_header: Edytuj dane konta
         finish_sign_up_subheader_provider: Wypełnij poniższe informacje, aby zakończyć
           tworzenie konta Code.org z <strong>%{provider}</strong> <strong>%{email}</strong>.
+        finish_sign_up_subheader_provider_markdown: Wypełnij poniższe informacje,
+          aby zakończyć tworzenie konta Code.org z **%{provider}** **%{email}**.
         error:
           future: nie może być w przyszłości
   beta: beta
@@ -102,6 +106,9 @@ pl:
     overview: Zarejestruj się na konto, aby śledzić swoje postępy lub zarządzać swoją
       klasą. <a href="/"> Możesz przeglądać różne etapy i łamigłówki</a> bez konta,
       ale będziesz musiał zarejestrować się, aby zapisać swoje postępy i projekty.
+    overview_markdown: Zarejestruj się na konto, aby śledzić swoje postępy lub zarządzać
+      swoją klasą. [Możesz przeglądać różne etapy i łamigłówki](/) bez konta, ale
+      będziesz musiał zarejestrować się, aby zapisać swoje postępy i projekty.
     hoc_already_signed_up_heading: Rozpocznij bez logowania się
     hoc_already_signed_up_content: Jesteś zarejestrowany, aby uczestniczyć w Godzinie
       Kodowania! Ty i Twoi uczniowie nie musicie być zalogowani do Code Studio, aby
@@ -116,6 +123,12 @@ pl:
       w stanie przypisywać kursy do studentów i sprawdzać ich postępy. <a href="%{studio_url}">Możesz
       także kontynuować przeglądanie różnorodnych poziomów i zagadek</a> bez tworzenia
       konta.
+    hoc_already_signed_up_content_post_hoc_markdown: Dziękujemy Ci za bycie gospodarzem
+      Godziny Kodowania. Aby zalogować się do Code Studio, będziesz musiał ustawić
+      hasło dla Twojego konta. Umożliwi Ci to zapisywanie postępów i zarządzanie klasą.
+      Będziesz w stanie przypisywać kursy do studentów i sprawdzać ich postępy. [Możesz
+      także kontynuować przeglądanie różnorodnych poziomów i zagadek](%{studio_url})
+      bez tworzenia konta.
     teacher_educator_guide: Patrz podręcznik nauczyciela
     title: Zarejestruj się na Code.org
     school_name: Nazwa szkoły (opcjonalnie)
@@ -437,11 +450,19 @@ pl:
       <a href='%{terms_of_service_url}', target='_blank'>regulaminu</a> Code.org.
       Jeśli mam poniżej 13 lat, potwierdzam, że otrzymałem zgodę moich rodziców lub
       prawnych opiekunów na korzystanie z usług Code.org nawet bez nadzoru nauczyciela.
+    create_personal_login_terms_markdown: Tworząc swój osobisty login, zobowiązuję
+      się do przestrzegania [regulaminu](%{terms_of_service_url}) Code.org. Jeśli
+      mam poniżej 13 lat, potwierdzam, że otrzymałem zgodę moich rodziców lub prawnych
+      opiekunów na korzystanie z usług Code.org nawet bez nadzoru nauczyciela.
     create_personal_login_email_note: 'Uwaga: Adresy e-mail nie są przechowywane w
       formie, która pozwalałaby nam kontaktować się z uczniami. Uczniowie nigdy nie
       będą otrzymywać e-maili od Code.org, z wyjątkiem odzyskiwania hasła. Aby uzyskać
       więcej informacji, zobacz naszą <a href=''%{privacy_policy_url}'', target=''_blank''>politykę
       prywatności</a>.'
+    create_personal_login_email_note_markdown: 'Uwaga: Adresy e-mail nie są przechowywane
+      w formie, która pozwalałaby nam kontaktować się z uczniami. Uczniowie nigdy
+      nie będą otrzymywać e-maili od Code.org, z wyjątkiem odzyskiwania hasła. Aby
+      uzyskać więcej informacji, zobacz naszą [politykę prywatności](%{privacy_policy_url}).'
     enter_new_login_info: Wprowadź swoje nowe dane logowania
     confirm_secret_words: Potwierdź, że to ty, wprowadzając swoje aktualne sekretne
       słowa
@@ -835,6 +856,12 @@ pl:
       Code Studio.</i> Jest to wielka sprawa dla nas, i mamy nadzieję, że to wyznacza
       nowy standard dla prywatność uczniów w technologii kształcenia. Wysłaliśmy Ci
       podsumowanie innych zmian za pośrednictwem poczty elektronicznej.'
+    intro_desc_markdown: 'Zaktualizowaliśmy nasze Warunki Użytkowania i Politykę Prywatności,
+      jak pokazano poniżej. Zmiany wchodzą w życie z dniem 24 sierpnia 2016 r. Największa
+      zmiana: nie będziemy _przechowywać adresów e-mail dla kont uczniowskich na Code
+      Studio._ Jest to wielka sprawa dla nas, i mamy nadzieję, że to wyznacza nowy
+      standard dla prywatność uczniów w technologii kształcenia. Wysłaliśmy Ci podsumowanie
+      innych zmian za pośrednictwem poczty elektronicznej.'
     intro_instructions: Najpierw musisz zaakceptować te nowe warunki dla uczniów w
       wieku poniżej 13 lat w swojej klasie, aby mieć pełny dostęp do wszystkich najnowszych
       funkcji w Code Studio.  Podczas rejestracji kont dla uczniów poniżej 13 roku
@@ -846,6 +873,8 @@ pl:
     privacy_notice: Polityka prywatności
     accept_label: Akceptuję zaktualizowane <a href="%{tos_url}" target="_blank"> Warunki
       użytkowania</a> i <a href="%{privacy_url}" target="_blank"> Politykę prywatności</a>
+    accept_label_markdown: Akceptuję zaktualizowane [Warunki użytkowania](%{tos_url})
+      i [Politykę prywatności](%{privacy_url})
     accept: Zaakceptuj
     print: Drukuj
     reminder_desc: Zaktualizowaliśmy nasze <a href="%{tos_url}" target="_blank"> Warunki
@@ -853,6 +882,11 @@ pl:
       Prosimy przeczytać je uważnie przed ich zaakceptowaniem. Należy zauważyć, że
       nasze narzędzia do nauki języka JavaScript mogą być niedostępny dla Twoich uczniów
       przed zaakceptowaniem zaktualizowanych postanowień.
+    reminder_desc_markdown: Zaktualizowaliśmy nasze [Warunki użytkowania](%{tos_url})
+      i [Politykę prywatności](%{privacy_url}). Prosimy przeczytać je uważnie przed
+      ich zaakceptowaniem. Należy zauważyć, że nasze narzędzia do nauki języka JavaScript
+      mogą być niedostępny dla Twoich uczniów przed zaakceptowaniem zaktualizowanych
+      postanowień.
     review_terms: Wyświetl zaktualizowane Warunki korzystania
   school_info_interstitial:
     title: Chcemy przybliżyć Informatykę każdemu uczniowi - pomóż nam śledzić nasze
@@ -880,6 +914,10 @@ pl:
     na naszej stronie pomocy. Możesz przejrzeć <a href="http://support.code.org">
     support.code.org</a> bez logowania się lub poprosić rodziców lub nauczyciela,
     by skontaktowali się z nami  w Twoim imieniu.
+  zendesk_too_young_message_markdown: Przepraszamy, młodsi użytkownicy nie mogą logować
+    się na naszej stronie pomocy. Możesz przejrzeć [support.code.org](http://support.code.org)
+    bez logowania się lub poprosić rodziców lub nauczyciela, by skontaktowali się
+    z nami w Twoim imieniu.
   progress:
     not_started: nierozpoczęte
     in_progress: w toku
@@ -1144,3 +1182,6 @@ pl:
     message: Dane gromadzone podczas korzystania przez Ciebie z tej witryny mogą być
       wysyłane i przechowywane lub przetwarzane w Stanach Zjednoczonych.
     true: Tak
+  page_not_found_title: Strona nie została znaleziona
+  page_not_found_header: '404: Strona nie została znaleziona'
+  page_not_found_button: Powrót do strony domowej

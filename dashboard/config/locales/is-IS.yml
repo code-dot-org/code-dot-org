@@ -29,11 +29,12 @@ is:
     attributes:
       user:
         name: Sýnilegt nafn
-        name_example: Birtingarnafn<br/>(t.d. Kalli kóðari eða Anna J.)
+        name_example: Birtingarnafn (t.d. Kalli kóðari eða Anna J.)
         email: Netfang
         parent_email: Netfang foreldris/forráðamanns
         personal_email: Einkanetfang <a href="%{url}">(smelltu hér ef þú hefur ekki
           netfang)</a>
+        personal_email_markdown: Einkanetfang [(smelltu hér ef þú hefur ekki netfang)](%{url})
         username: notandanafn
         password: Lykilorð
         password_confirmation: Staðfesting lykilorðs
@@ -45,9 +46,13 @@ is:
         finish_sign_up_header: Ljúka við að stofna aðgang
         finish_sign_up_subheader: Færðu inn eftirfarandi upplýsingar til að ljúka
           við að stofna Code.org aðgang fyrir <strong>%{email}</strong>.
+        finish_sign_up_subheader_markdown: Færðu inn eftirfarandi upplýsingar til
+          að ljúka við að stofna Code.org aðgang fyrir **%{email}**.
         finish_sign_up_subheader_provider: Færðu inn eftirfarandi upplýsingar til
           að ljúka við að stofna Code.org aðgang hjá <strong>%{provider}</strong>
           fyrir <strong>%{email}</strong>.
+        finish_sign_up_subheader_provider_markdown: Færðu inn eftirfarandi upplýsingar
+          til að ljúka við að stofna Code.org aðgang hjá **%{provider}** fyrir **%{email}**.
         reset_password_token: Tengillinn sem þú hefur notað til að endurstilla lykilorðið
         error:
           future: má ekki vera í framtíð
@@ -135,6 +140,9 @@ is:
     overview: Skráðu þig til að geta fylgst með framvindu þinni eða haft umsjón með
       nemendum. <a href="/">Þú getur prófað hin ýmsu borð og þrautir</a> án þess að
       skrá þig, en þú verður að skrá þig ef þú vilt vista það sem þú gerir.
+    overview_markdown: Skráðu þig til að geta fylgst með framvindu þinni eða haft
+      umsjón með nemendum. [Þú getur prófað hin ýmsu borð og þrautir](/) án þess að
+      skrá þig, en þú verður að skrá þig ef þú vilt vista það sem þú gerir.
     hoc_already_signed_up_heading: Byrja án þess að skrá inn
     hoc_already_signed_up_content: Þú hefur skráð þig til að kenna Klukkustund kóðunar!
       Þú og nemendur þínir þurfa ekki að skrá ykkur inn í Kóðastúdíóið til að taka
@@ -148,6 +156,11 @@ is:
       Þá getur þú vistað framvindu þína og haft umsjón með bekknum. Þú getur skráð
       nemendur á námskeið og fylgst með framvindu þeirra. <a href="%{studio_url}">En
       þú getur líka skoðað hina ýmsu áfanga og þrautir</a> án þess að stofna aðgang.
+    hoc_already_signed_up_content_post_hoc_markdown: Þakka þér fyrir að hýsa Klukkustund
+      kóðunar. Til að skrá þig inn í Kóðastúdíóið þarft þú að stofna aðgang með lykilorði.
+      Þá getur þú vistað framvindu þína og haft umsjón með bekknum. Þú getur skráð
+      nemendur á námskeið og fylgst með framvindu þeirra. [En þú getur líka skoðað
+      hina ýmsu áfanga og þrautir](%{studio_url}) án þess að stofna aðgang.
     teacher_educator_guide: Sjá leiðarvísi kennara
     title: Nýskrá á Code.org
     school_name: Nafn skóla (valfrjálst)
@@ -485,11 +498,19 @@ is:
       að undirgangast <a href='%{terms_of_service_url}', target='_blank'>þjónustuskilmála</a>
       Code.org. Ég staðfesti að ég hef leyfi foreldris eða löglegs forráðamanns til
       að nota þjónustu Code.org án kennara.
+    create_personal_login_terms_markdown: Með því að stofna minn eigin aðgang, samþykki
+      ég að undirgangast [þjónustuskilmála](%{terms_of_service_url}) Code.org. Ég
+      staðfesti að ég hef leyfi foreldris eða löglegs forráðamanns til að nota þjónustu
+      Code.org án kennara.
     create_personal_login_email_note: 'Athugið: Netföng eru ekki vistuð þannig að
       við getum haft samband við nemendur. Nemendur munu aldrei fá tölvupósta frá
       Code.org nema þegar þeir þurfa að endurheimta aðgangsorð. Nánari upplýsingar
       má finna í <a href=''%{privacy_policy_url}'', target=''_blank''>persónuverndarstefnu</a>
       okkar.'
+    create_personal_login_email_note_markdown: 'Athugið: Netföng eru ekki vistuð þannig
+      að við getum haft samband við nemendur. Nemendur munu aldrei fá tölvupósta frá
+      Code.org nema þegar þeir þurfa að endurheimta aðgangsorð. Nánari upplýsingar
+      má finna í [persónuverndarstefnu](%{privacy_policy_url}) okkar.'
     enter_new_login_info: Færðu inn nýju innskráningarupplýsingarnar þínar
     confirm_secret_words: Staðfestu að þetta sért þú með því að slá inn núverandi
       leyniorð
@@ -897,6 +918,12 @@ is:
       er þetta stórmál og við vonum að þetta verði nýtt viðmið í persónuverndun nemenda
       þar sem tölvutækni er notuð við kennslu. Við höfum sent þér yfirlit annarra
       breytinga í tölvupósti.
+    intro_desc_markdown: Frá og með 24. ágúst 2016 hafa gilt nýir þjónustuskilmálar
+      og persónuverndarstefna hjá okkur, sbr. hér fyrir neðan. Stærsta breytingin
+      er að við munum _ekki lengur geyma netföng nemenda sem skráðir eru í Kóðastúdíóið._
+      Fyrir okkur er þetta stórmál og við vonum að þetta verði nýtt viðmið í persónuverndun
+      nemenda þar sem tölvutækni er notuð við kennslu. Við höfum sent þér yfirlit
+      annarra breytinga í tölvupósti.
     intro_instructions: Þú þarft að samþykkja þessa nýju skilmála fyrir nemendur þína
       yngri en 13 ára til að þeir fái fullan aðgang að því allra nýjasta í Kóðastúdíóinu.
       Þegar aðgangur er skráður fyrir nemanda undir 13 ára aldri, verður þú beðin/n
@@ -908,6 +935,7 @@ is:
     privacy_notice: Tilkynning um persónuvernd
     accept_label: Ég samþykki <a href="%{tos_url}" target="_blank">þjónustuskilmálana</a>
       og <a href="%{privacy_url}" target="_blank">persónuverndarstefnuna</a>.
+    accept_label_markdown: Ég samþykki [þjónustuskilmálana](%{tos_url}) og [persónuverndarstefnuna](%{privacy_url}).
     accept: Samþykkja
     print: Prenta
     reminder_desc: Við höfum uppfært <a href="%{tos_url}" target="_blank">þjónustuskilmála</a>
@@ -915,6 +943,10 @@ is:
       Vinsamlegast lestu þetta áður en þú samþykkir. Athugaðu að verkfærin okkar til
       að kenna JavaScript kunna að verða óaðgengileg nemendum þínum þangað hinir uppfærðu
       skilmálar eru samþykktir.
+    reminder_desc_markdown: Við höfum uppfært [þjónustuskilmála](%{tos_url}) og [persónuverndarstefnu](%{privacy_url})
+      okkar. Vinsamlegast lestu þetta áður en þú samþykkir. Athugaðu að verkfærin
+      okkar til að kenna JavaScript kunna að verða óaðgengileg nemendum þínum þangað
+      hinir uppfærðu skilmálar eru samþykktir.
     review_terms: Skoða uppfærða skilmála
   school_info_interstitial:
     title: Við viljum koma tölvunarfræði á framfæri við hvern nemanda - hjálpaðu okkur
@@ -942,6 +974,10 @@ is:
     Þú getur skoðað <a href="http://support.code.org">support.code.org</a> án þess
     að skrá þig inn eða beðið foreldri eða kennara að hafa samband við okkur fyrir
     þig.
+  zendesk_too_young_message_markdown: Því miður mega yngri notendur ekki skrá sig
+    á hjálparvefinn. Þú getur skoðað [support.code.org](http://support.code.org) án
+    þess að skrá þig inn eða beðið foreldri eða kennara að hafa samband við okkur
+    fyrir þig.
   progress:
     not_started: ekki byrjað
     in_progress: í vinnslu

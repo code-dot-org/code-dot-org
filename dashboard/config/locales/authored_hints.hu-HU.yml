@@ -271,6 +271,27 @@ hu-HU:
       CourseE_HOC 2018 Level_9b:
         voyage_aquatic_9a: Micsoda gyönyörű korallzátony! A kék korall jelzi a **jobb**
           utat, de nehogy **balszerencsét** hozzon az itt hagyott vörös korall!
+      Dance_2019_01:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+
+          -   Gondoskodj róla, hogy egy táncos megjelenjen a képernyőn.
+
+          _Ez a szint 4 ütem után ér véget._
+      Dance_2019_04:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+
+          -   A táncosnak 4 ütem után új mozdulatra kell váltania.
+
+          _A szint 8 ütem után ér véget._
+      Dance_2019_05:
+        validation: |-
+          **Hogyan csinálhatom meg ezt a szintet?**
+
+          -   6 ütem után a táncosodnak másfajta táncot kell járnia, mint amit 4 ütem után járt.
+
+          _A szint 12 ütem után ér véget._
       Dance_Party_01:
         validation: |-
           **Hogyan csinálhatom meg ezt a szintet?**

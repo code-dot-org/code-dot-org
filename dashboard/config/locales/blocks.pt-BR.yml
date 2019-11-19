@@ -81,6 +81,7 @@ pt-BR:
             '"x"': posição horizontal
             '"y"': posição vertical
       Dancelab_changePropEachBy:
+        text: alterar {GROUP} {PROPERTY} por {VAL}
         options:
           GROUP:
             sprites: todos
@@ -263,6 +264,7 @@ pt-BR:
             "{x: 300, y: 300}": canto inferior direito
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aleatório
       Dancelab_jumpToEach:
+        text: pular {GROUP} para {LOCATION}
         options:
           GROUP:
             sprites: todos
@@ -595,6 +597,7 @@ pt-BR:
             '"rotation"': rotação
             '"x"': posição horizontal
             '"y"': posição vertical
+            '"tint"': tonalidade
       Dancelab_setPropRandom:
         text: aleatorizar {SPRITE} {PROPERTY}
         options:
@@ -607,6 +610,7 @@ pt-BR:
             '"y"': posição vertical
             '"tint"': tonalidade
       Dancelab_setPropRandomEach:
+        text: aleatorizar {GROUP} {PROPERTY}
         options:
           GROUP:
             sprites: todos
@@ -706,6 +710,7 @@ pt-BR:
             '"mid"': médio
             '"treble"': agudo
       Dancelab_startMappingEach:
+        text: "{GROUP} começa a {PROPERTY} seguindo {RANGE}"
         options:
           GROUP:
             sprites: todos
@@ -749,6 +754,7 @@ pt-BR:
             '"mid"': médio
             '"treble"': agudo
       Dancelab_stopMappingEach:
+        text: "{GROUP} para a {PROPERTY} seguindo {RANGE}"
         options:
           GROUP:
             sprites: todos
@@ -776,6 +782,36 @@ pt-BR:
             '"bass"': grave
             '"mid"': médio
             '"treble"': agudo
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"hearts_colorful"': Corações
+            '"diamond"': diamante
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenKey:
         text: quando {KEY} for pressionado
         options:
@@ -831,6 +867,8 @@ pt-BR:
             '2': agudo
       Dancelab_whenSetup:
         text: configuração
+      Dancelab_whenSetup2:
+        text: configuração
       Dancelab_whenSetupSong:
         options:
           SONG:
@@ -857,6 +895,8 @@ pt-BR:
             '"while"': enquanto
       gamelab_clickedOn:
         text: quando {SPRITE} for clicado
+      gamelab_clickedSpritePointer:
+        text: clique {SPRITE}
       gamelab_comment:
         text: 'comentário: {COMMENT}'
       gamelab_createNewSprite:
@@ -991,6 +1031,7 @@ pt-BR:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': caverna
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': cidade
+            '"https://studio.code.org/blockly/media/skins/studio/background.png"': tribunal
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': deserto
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': galáxia
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': grade
@@ -1093,6 +1134,16 @@ pt-BR:
         text: coordenada y do {SPRITE}
       Mikelab_addBehaviorSimple:
         text: sprite {SPRITE} começa a {BEHAVIOR}
+      Mikelab_addTrainingData:
+        text: 'adicionar dados de treinamento: {NAME},{LOCATION}'
+        options:
+          NAME:
+            "{x: 201, y: 100}": objeto
+            "{x: 200, y: 100}": peixe
+          LOCATION:
+            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": peixe
+            "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": não peixe
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": meu-rotulo
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1116,6 +1167,8 @@ pt-BR:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Aleatório
       Mikelab_destroy:
         text: remover {SPRITE}
+      Mikelab_getNext:
+        text: obter o próximo objeto
       Mikelab_getProp:
         options:
           PROPERTY:
@@ -1162,6 +1215,8 @@ pt-BR:
           SELECT:
             '"all"': todos
             '"this"': este
+      Mikelab_groupDisplace:
+        text: todos {COSTUME} bloqueia {COSTUME2} de se mover
       Mikelab_groupEdgesDisplace:
         text: bordas bloqueiam {COSTUME} de se mover
       Mikelab_groupGetProp:
@@ -1224,6 +1279,12 @@ pt-BR:
           {STATEMENT}
       Mikelab_hasBehavior:
         text: "{SPRITE} está {BEHAVIOR}"
+      Mikelab_hideFish:
+        text: remover {TRASH}
+        options:
+          TRASH:
+            object: objeto
+            fish: peixe
       Mikelab_ifDanceIs:
         text: |-
           se {SPRITE} está fazendo {DANCE}
@@ -1241,6 +1302,29 @@ pt-BR:
             MOVES.Kick: Estrela
             MOVES.ThisOrThat: Isso ou Aquilo
             MOVES.Rest: Nenhum
+      Mikelab_ifLabel:
+        text: |-
+          se {DANCE}
+          faça {DO1} senão {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: peixe
+            MOVES.Clown: meu-rotulo
+      Mikelab_ifRecognizeLabel:
+        text: |-
+          se reconhecer o objeto como {DANCE}
+          faça {DO1} senão {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: peixe
+            MOVES.Clown: meu-rotulo
+      Mikelab_ifRecognizeLabelOnly:
+        text: |-
+          se reconhecer o objeto como {DANCE}
+          faça {DO1}
+        options:
+          DANCE:
+            MOVES.ClapHigh: peixe
       Mikelab_locationAt:
         text: 'localização x: {X} y: {Y}'
       Mikelab_location_picker:
@@ -1251,6 +1335,10 @@ pt-BR:
         text: personagem {SPRITE} para {BEHAVIOR}
       Mikelab_repeatUntilComplete:
         text: repita infinitamente
+      Mikelab_sendBad:
+        text: mover objeto para esquerda
+      Mikelab_sendGood:
+        text: mover objeto para direita
       Mikelab_setBG:
         options:
           BG:
@@ -1309,6 +1397,12 @@ pt-BR:
             '"d"': D
       Mikelab_whenMouseClicked:
         text: quando o personagem for clicado
+      Mikelab_whenYesNoClicked:
+        text: quando {KEY} for clicado
+        options:
+          KEY:
+            '"yes"': sim
+            '"no"': não
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -1358,6 +1452,7 @@ pt-BR:
       aalab_addBehaviorUntilBoolean:
         text: aalab sprite {SPRITE} começa a {BEHAVIOR} até {CONDITION}
       aalab_goToScene:
+        text: vai para cena {SCENE}
         options:
           SCENE:
             '1': '1'
@@ -1366,12 +1461,16 @@ pt-BR:
       aalab_prompt:
         text: perguntar {MESSAGE}
       aalab_scene:
+        text: cena {SCENE}
         options:
           SCENE:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_setupStory:
+        text: configurar estória
       aalab_showHideSprite:
+        text: "{OPTION} {SPRITE}"
         options:
           OPTION:
             '"show"': mostre

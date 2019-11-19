@@ -214,23 +214,6 @@ class Histogram extends GoogleChart {
 }
 GoogleChart.Histogram = Histogram;
 
-class CrossTab extends GoogleChart {
-  render_(dataTable, options) {
-    const apiChart = new GoogleChart.lib.visualization.Table(this.targetDiv_);
-    apiChart.draw(dataTable, options);
-  }
-
-  /**
-   * Array of packages the chart needs to load to render.
-   * @returns {string[]}
-   * @override
-   */
-  getDependencies() {
-    return ['table'];
-  }
-}
-GoogleChart.CrossTab = CrossTab;
-
 /**
  * Google Charts API Bar Chart
  *

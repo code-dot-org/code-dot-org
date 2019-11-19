@@ -86,7 +86,7 @@ def get_i18n_strings(level)
 end
 
 def localize_level_content
-  puts "Localizing level content"
+  puts "Preparing level content"
 
   block_category_strings = {}
 
@@ -137,7 +137,7 @@ end
 # Pull in various fields for custom blocks from .json files and save them to
 # blocks.en.yml.
 def localize_block_content
-  puts "Localizing block content"
+  puts "Preparing block content"
 
   blocks = {}
 

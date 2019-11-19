@@ -2,13 +2,32 @@
 pl-PL:
   data:
     short_instructions:
+      2-3 Artist 1 new: Cześć, jestem artystą. Możesz napisać kod, bym narysował prawie
+        wszystko. Użyj kilku bloków, bym rysował po szarych liniach na obrazku. (Każda
+        linia ma po 100 pikseli)
       2-3 Artist 12: "Utwórz okrąg, aby ukończyć gałkę oczną! \\\r \\\r Jeśli artysta
         obraza się o 1 stopień w każdej pętli, to ile razy musisz powtórzyć kod, aby
         narysować okrąg? 180? 360? 500?"
       2-3 Artist 2 new: 'Ten dom ma ścianę wybudowaną w połowie. Każdy bok ma długość
         100, ale ściana w połowie ukończona ma 50. Ukończ tę ścianę. '
+      2-3 Artist 3.4: Blok skoku przesuwa artystę bez rysowania. Narysuj przerywaną
+        linię używając bloków 'skocz do przodu' i 'idź do przodu'. Każda linia ma
+        po 50 pikseli.
+      2-3 Artist 3new: 'Czerwony kapelusz jest wysoki na 100 pikseli. Skończ rysować
+        czarny kapelusz, który jest o 70 pikseli niższy. (Uwaga: Szerokość każdego
+        kapelusza to 50 pikseli.)'
       2-3 Artist 4: Pomóż mi dokończyć domek dla tego kota.
+      2-3 Artist 6: 'Ten dom potrzebuje dachu! Narysuj trójkąt. Podpowiedź: wszystkie
+        trzy boki mają taką samą długość.'
+      2-3 Artist 7: 'Skończ rysować ostani zestaw okien na szkole, by wszyscy w klasie
+        mogli wyjrzeć na zewnątrz. Boki każdego z kwadratowych okienek mają po 25
+        pikseli. '
+      2-3 Artist 8: Utwórz pokoje dla każdego zwierzęcia, dzieląc prostokąt na 2 kwadraty
+        tej samej wielkości. Prostokąt jest szeroki na 200 pikseli i wysoki na 100
+        pikseli. Istnieje wiele możliwości rozwiązania tej zagadki, więc baw się dobrze!
       2-3 Artist 9 NEW: Dokończ ten latawiec
+      2-3 Artist Assessment 1: 'Szacowanie: Ukończ rysowanie ostatniego zęba. Jest
+        on szeroki na 25 pikseli i wysoki na 25 pikseli.'
       2-3 Artist Free Play: Czas na zabawę! Narysuj cokolwiek chcesz.
       2-3 Artist Loops New 15: Teraz narysuj coś, co Ci się spodoba!
       2-3 Artist Nested Loops 10: Powtórz w pętli ten kod 12 razy, aby ukończyć ten
@@ -269,6 +288,9 @@ pl-PL:
         do skarbu.
       Crack Random Substitution: Instrukcje
       Crack a Caesar Cipher: Instrukcje
+      Dance_2019_05: Teraz spraw, aby tancerz rozpoczął nowy ruch po 6 taktach!
+      Dance_2019_08: Użyj bloku "ustaw odcień", aby zmienić kolor tancerza.
+      Dance_2019_10: Dobrej zabawy! Utwórz własny taniec i udostępnij go przyjaciołom.
       Dance_Party_01: Przeciągnij blok "utwórz nowego" do obszaru roboczego i podłącz
         go w bloku "układ".
       Dance_Party_02: Spraw, aby łoś rozpoczął nowy ruch po 4 taktach!
@@ -290,11 +312,18 @@ pl-PL:
         w górę. Wykonuj tupnij-klaśnij tak szybko, jak potrafisz!
       Dance_Party_12: Dobrej zabawy! Utwórz własny taniec i udostępnij go przyjaciołom.
       Dance_Party_extras_battle: Zespoły taneczne (Kliknij Więcej po szczegóły)
+      Dance_Party_extras_battle_2019: Zespoły taneczne (Kliknij Więcej po szczegóły)
       Dance_Party_extras_every_beat: Ćwierćnuty (Kliknij Więcej po szczegóły)
+      Dance_Party_extras_every_beat_2019: Ćwierćnuty (Kliknij Więcej po szczegóły)
       Dance_Party_extras_layout: Twórzmy formację (Kliknij Więcej po szczegóły)
+      Dance_Party_extras_layout_2019: Twórzmy formację (Kliknij Więcej po szczegóły)
       Dance_Party_extras_on_beat: Bas, średni i wysoki ton (Kliknij Więcej po szczegóły)
+      Dance_Party_extras_on_beat_2019: Bas, średni i wysoki ton (Kliknij Więcej po
+        szczegóły)
       Dance_Party_extras_speed: Przyspiesz, spowolnij (Kliknij Więcej po szczegóły)
+      Dance_Party_extras_speed_2019: Przyspiesz, spowolnij (Kliknij Więcej po szczegóły)
       Dance_Party_extras_visible: Gdzie oni poszli? (Kliknij Więcej po szczegóły)
+      Dance_Party_extras_visible_2019: Gdzie oni poszli? (Kliknij Więcej po szczegóły)
       Find the Wizard: |-
         Buduj, co chcesz. To jest przykład
         gry w zgadywanie numeru!
@@ -564,6 +593,10 @@ pl-PL:
       Underground Mining Coal_2019: Najcenniejsze surowce znajdują się pod ziemią,
         ale robi się ciemno. Umieść co najmniej 2 pochodnie i wydobądź węgiel z co
         najmniej 2 bloków.
+      'Widget: Text Compression': Poszukaj wzorców (powtarzające się słowa lub frazy)
+        w tekście. Wprowadź do słownika po prawej stronie wzorce, które widzisz. Podczas
+        ich wpisywania do słownika, symbol wpisu jest wstawiany do tekstu zamiast
+        wzorca.
       bounce_1: Dołącz blok do bloku "kiedy strzałka w lewo" i naciśnij "Uruchom".
         Przesuń paletkę używając lewej strzałki, aby osiągnąć ostateczny cel.
       bounce_10: Cel teraz jest u góry. Dołącz bloki "punkt wyniku" i "punkt wyniku
@@ -593,9 +626,9 @@ pl-PL:
       bounce_12: Utwórz własną grę w odbijanie. Możesz zmienić wszystkie efekty wizualne
         i zasady. Kiedy skończysz, kliknij przycisk "Zakończ", aby Twoi znajomi mogli
         zagrać na swoich telefonach.
-      bounce_12_basketball: Utwórz własną grę w odbijanie. Możesz zmienić wszystkie
-        zasady. Kiedy skończysz, kliknij przycisk "Zakończ", aby Twoi znajomi mogli
-        zagrać w Twoją grę na swoich telefonach.
+      bounce_12_basketball: Stwórz swoją własną grę w Koszykówkę. Możesz zmienić wszystkie
+        zasady. Kiedy skończysz naciśnij "Zakończ", aby Twoi znajomi mogli w nią zagrać
+        na swoich telefonach.
       bounce_12_sports: Utwórz własną grę w odbijanie. Możesz zmienić wszystkie zasady
         i pomieszać różne zawody - bądź kreatywny. Kiedy skończysz, kliknij przycisk
         "Zakończ", aby Twoi znajomi mogli zagrać w Twoją grę na swoich telefonach.
@@ -644,6 +677,8 @@ pl-PL:
       course2_harvester_loops_challenge1: Zbierz całą kukurydzę.
       course2_harvester_loops_challenge2: Zbierz wszystkie sałaty. Unikaj drzew i
         pól!
+      course2_maze_programming_challenge1: \_"Świnka się chowa! Czy pomożesz mi znaleźć
+        sposób na obejście przeszkód?"
       course2_maze_programming_challenge2: Czasami jest więcej sposobów na rozwiązanie
         tego samego problemu. Czasami szybciej jest się cofnąć niż iść na przód!
       course3_bee_functions_challenge4: Wykorzystaj wszystko czego się nauczyłeś,
@@ -699,6 +734,12 @@ pl-PL:
       courseB_artist_loops_challenge2_2019: |-
         Zagrajmy w grę!
         Narysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?
+      courseB_collector_loops_challenge2a: Pomóż Laurelowi zabrać co najmniej **5**
+        części skarbu, aby ukończyć tę łamigłówkę.
+      courseB_collector_loops_challenge2a_2018: Pomóż Laurelowi zabrać co najmniej
+        **5** części skarbu, aby ukończyć tę łamigłówkę.
+      courseB_collector_loops_challenge2a_2019: Pomóż Laurelowi zabrać co najmniej
+        **5** części skarbu, aby ukończyć tę łamigłówkę.
       courseB_maze_seq_challenge2: Debuguj ten poziom. Te bloki są poprawne, ale w
         złej kolejności!
       courseB_maze_seq_challenge2_2018: Debuguj ten poziom. Te bloki są poprawne,

@@ -249,6 +249,27 @@ de-DE:
         voyage_aquatic_9a: Was für ein wunderschönes Korallenriff! Die blaue Koralle
           ist der **rechte** Weg. Pass auf, dass die rote Koralle nicht **links**
           ist!
+      Dance_2019_01:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+
+          -   Sorgen Sie dafür, dass ein Tänzer auf dem Bildschirm erscheint.
+
+          _Dieser Level endet nach 4 Takten._
+      Dance_2019_04:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+
+          -   Der Tänzer muss nach 4 Takten in einen neuen Tanzschritt wechseln.
+
+          _Dieser Level endet nach 8 Takten._
+      Dance_2019_05:
+        validation: |-
+          **Wie schaffe ich diesen Level?**
+
+          -   Nach 6 Takten muss Ihr Tänzer einen anderen Tanz tun als nach 4 Takten.
+
+          _Dieser Level endet nach 12 Takten._
       Dance_Party_01:
         validation: |-
           **Wie schaffe ich diesen Level?**

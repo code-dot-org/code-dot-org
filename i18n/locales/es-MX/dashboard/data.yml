@@ -538,6 +538,16 @@ es-MX:
         CSF_SpriteLab_SpritesInAction_v2: Sprites en acción
         csd_debugging: Depuración
         csd_applab_designmode_short: Modo de diseño del Laboratorio de aplicaciones
+        csp-pd-welcome: '¡Bienvenido a la Familia!'
+        CSF-Teaching-Problem-Solving: Resolución de problemas en la enseñanza de CSF
+        u5-traversals-get-list-explanation: Code.org [levelbuilder] - Video piloto - Bloque de datos
+        u7-libraries-explanation: 'Laboratorio de aplicaciones: crea tus propios bloques - Cómo usar bibliotecas'
+        how-to-k5-workshops: 'Fundamentos de Ciencias de la Computación de Code.org: probado por los niños, aprobado por los docentes'
+        why-should-teach-unplugged-activities: 'Preguntas frecuentes: ¿por qué debo enseñar las actividades "sin conexión"?'
+        cs-principles-intro-to-objects: 'Principios de Ciencias de la Computación: introducción a objetos'
+        ocean_machine_learning: 'Aprendizaje automático'
+        ocean_training_data: 'Datos de entrenamiento'
+        ocean_societal_implications: 'Implicaciones para la sociedad'
     callout:
       text:
         drag_blocks: Arrastra un bloque "mover" y colócalo debajo del otro bloque

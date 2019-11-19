@@ -17,6 +17,7 @@ zh-TW:
       2-3 Artist 4:
         2-3_Artist_4_a: 要蓋出這個房子的話，我們需要畫個正方形！
       2-3 Artist 6:
+        2-3_Artist_6_a: '如果要做出這些小小的角度，我們必須讓每次畫完正方形之後的轉向角度大一些。   '
         2-3_Artist_6_b: 因為我們已經面向右邊，所以最簡單的方式，就是先往前移動，再向左轉，就可以製作出這個三角形。
         2-3_Artist_6_c: 三角形的每個邊長和正方形的邊長一樣，都是 100 像素！
       2-3 Artist 7:
@@ -26,6 +27,7 @@ zh-TW:
       2-3 Artist 9 NEW:
         2-3_Artist_9_a: 這個菱形的邊實際上和正方形的邊一樣。
       2-3 Artist Debugging 10:
+        2-3_Artist_Debugging_10_a: 記得，你想要讓控制面板 _寬_ 10 像素......所以確保要 **增加** 10 到任何你想要改變的數字。
         2-3_Artist_Debugging_10_b: "**錯誤嘗試在這裡完全沒關係！**  \n\n可以從一次改變一個數字開始。\n\n每個數字會有什麼效果？\n\n如果你有點混淆了，只要按下「重新開始」，然後你的程式碼就會被重置。"
       2-3 Artist Debugging 2:
         2-3_Artist_Debugging_2_a: 提示：每個鬚鬚都是 75 像素長。
@@ -34,6 +36,13 @@ zh-TW:
         2-3_Artist_Debugging_3_b: 如果程式運行太快，看不清楚發生了什麼，可以嘗試使用滑桿來降低運行的速度。
       2-3 Artist Debugging 7:
         2-3_Artist_Debugging_7_a: 如果你讓藝術家畫完第一條線之後就向後移動或跳躍的話，會發生什麼？
+      2-3 Artist Debugging 8:
+        2-3_Artist_Debugging_8_a: |-
+          我的形狀重複了幾次？
+
+          形狀 _應該_ 要重複幾次？
+
+          怎樣在你的程式裡做出對應的改變？
       2-3 Artist Debugging 9:
         2-3_Artist_Debugging_9_a: 藝術家必須要向左再轉 60 度之後才能開始繪畫！
         2-3_Artist_Debugging_9_b: 你不需要添加另一個積木才能轉整圈，只要在`轉向-左方`積木上增加 60 度就行了！
@@ -191,12 +200,24 @@ zh-TW:
           一圈共有 360 度！
 
           這就是你要重複這個程式的次數（因為每次只轉 1 度）！
+      4-5 Artist 5:
+        4-5_Artist_5_a: |-
+          錯中學、學中錯…要解決這個問題的話，可以把 90 度除以 3。
+
+          **90 / 3 = **\_****
       4-5 Artist 7:
         4-5_Artist_7_a: '哪個角度最小？小藝術家面對的角度是多少？ '
       4-5 Artist 8:
         4-5_Artist_8_a: "每個長邊為 240 像素，也就是說其他的 2 個短邊計算方式為：\n\n**800 - 240 - 240 = 320**\n\n**320/2**
           是多少呢？ "
+        4-5_Artist_8_b: |-
+          這個圖案可以用 2 個方式畫出來！
+
+          -   畫出二個長方形，長是 **120** 高是 **160**，然後部分重疊在一塊。
+
+          -   畫出一個長方式，長是 **240** 高是 **160** ，接著在中間加上一條線。
       4-5 Artist 9:
+        4-5_Artist_9_a: 當一個三角形是等邊時，所有的邊的長度和所有角的角度都會一樣。
         4-5_Artist_9_b: 你需要畫出三相同尺寸的三角形，別忘了每畫完一個就要跳到下一個新的位置。
       4-5 Artist Assessment 1:
         4-5_Artist_Assessment_1_a: 你只要畫出外部的三角形就可以完成這關。
@@ -275,6 +296,8 @@ zh-TW:
       Course 4 Artist 12:
         Course_4_Artist_12_a: '每個重複的圖形都是**半六邊形**的組合，跟著**2/3 三角形**。 '
         Course_4_Artist_12_b: '部分圖形和上個關卡有些類似，除了半六邊形大了一點以外。 '
+        Course_4_Artist_12_c: "1.  開始的三個線段為 60 像素長，你需要轉向 60 度。\n\n2.  接著的二個線段為 80
+          像素長，你需要轉向 120 度。 "
       Course 4 Artist 6:
         Course_4_Artist_6_a: 在一圈 360 度中共有 3 個三角形…360 除以 3 是多少？
       Course 4 Artist 8a:
@@ -474,6 +497,8 @@ zh-TW:
         Course_4_SCV_6_c: 每個形狀的五個邊被分成`length`/`sides`，向左曲折的是青藍色 (rgb = 0,175,200)
           以及向右曲折的是紫色 (rgb = 100, 50, 150)。
         Course_4_SCV_6_d: 要向左曲折的話，向左轉`360`/`sides`。要向右曲折的話，向右轉`360`/`sides`。
+        Course_4_SCV_6_e: '程式的其它部分很基礎，就是要在一個形狀上製作出一個 360 的迴轉，不同之處在於我們將這些形狀重疊一半，所以我們要向右轉
+          180 ÷ sides（邊數）度，意思是我們必須要比平常還要多 2 倍（sides\*2 重複） '
       CourseD_Dance_Party_01:
         validation: |-
           **我要怎麼過關？**
@@ -574,6 +599,27 @@ zh-TW:
           了嗎？如何有條件地使用它們以穿越海洋遺址？
       CourseE_HOC 2018 Level_9b:
         voyage_aquatic_9a: 真是美麗的珊瑚礁！藍色珊瑚應該要在**右**，還有紅色珊瑚應該要在**左**！
+      Dance_2019_01:
+        validation: |-
+          **我要怎麼過關？**
+
+          -   確定有個舞者在畫面。
+
+          _這個關卡會在 4 個小節後結束。_
+      Dance_2019_04:
+        validation: |-
+          **我要怎麼通過這個關卡？**
+
+          -   舞者要在 4 小節後換個新的舞姿。
+
+          _這個關卡會在 7 小節後結束。_
+      Dance_2019_05:
+        validation: |-
+          **我要怎麼通過這個關卡？**
+
+          -   在 6 小節後，你的舞者必須做個不同的舞姿並持續 4 小節。
+
+          _這個關卡會在 11 小節後結束。_
       Dance_Party_01:
         validation: |-
           **我要怎麼過關？**
@@ -766,9 +812,15 @@ zh-TW:
         NEW_Course_4_Artist_Functions_9_b: 如果你不能明確的指出錯誤的地方，試著把滑桿往左調，讓程式的運行速度變慢。
       NEW Course 4 Artist Params 11:
         NEW_Course_4_Artist_Params_11_a: 只需要把函式裡頭的數字換成一個變數就可以了。
+      NEW Course 4 Artist Params 13:
+        NEW_Course_4_Artist_Params_13_a: '用 perimeter 除以 sides（周長除以邊數）的方式，就可以讓每個形狀都能有相同的尺寸。 '
       NEW Course 4 Artist Params inspire:
         brush_width: 在我們開始前，先將筆刷的寬度設為 1，顏色設為藍色。
         double_loop: 試著放置一個`計數迴圈`到`重複`積木裡頭。
+        specifics: |-
+          畫出 6 個「花瓣」的這個`計數迴圈`，每一次都會從 3 開始執行到 17，而畫出的形狀的邊數都會是奇數。
+
+          `設置透明度`的積木中用了計數器，當計數器的值愈高時，顏色會變得愈淡。
         after: 當你完成每個「花瓣」時，請檢查是否在你轉彎 60 度之前`移動-向前`了 20 像素。
       NEW Course 4 Bee For Loops 8:
         NEW_Course_4_Bee_For_Loops_8_a: |-
@@ -1053,6 +1105,7 @@ zh-TW:
       course2_harvester_loops_challenge2:
         courseC_harvester_loops_challenge2_b: 你可以重複執行`移動-向前`和`收集生菜`到你想要的次數，然後在每次要轉向時使用轉向積木。
       course2_maze_programming_challenge2:
+        courseC_maze_programming_challenge2_a: _如果你把我倒過來，要格外小心我的方向是否是正確的！_
         courseC_maze_programming_challenge2_b: 最短的解決方案只使用5個程式積木，但它使用的是“重複”程式積木！
       course3_bee_functions_challenge1:
         courseE_bee_functions_challenge1_a: |-
@@ -1067,6 +1120,7 @@ zh-TW:
       course3_maze_debugging_challenge1:
         courseC_maze_debugging_challenge1_a: 左邊還是右邊？你決定就好！
         courseC_maze_debugging_challenge1_b: 鼠奎特走的路徑是個四邊形！所以每次都轉向同要是同一邊！
+        courseC_maze_debugging_challenge1_c: 如果你卡關了，你可以重頭開始，或者移除所有的程式碼後再試試別的方法！
       course3_maze_debugging_challenge2:
         courseC_maze_debugging_challenge2_a: 有個解法，就是在每次轉向時添加更多的移動積木。
         courseC_maze_debugging_challenge2_b: 如果你卡關了，你可以重頭開始，或者移除所有的程式碼後再試試別的方法！
@@ -1208,6 +1262,12 @@ zh-TW:
         courseA_collector_loops_challenge1_a: 如果出錯了，可以試試修改每個迴圈裡的數值。
         courseA_collector_loops_challenge1_b: 如果你只要執行某段指令一次，就不需要用到迴圈。
         courseA_collector_loops_challenge1_c: 右邊的洞穴有 6 個寶石，而你只需移動並收集 5 次，你知道怎麼做嗎？
+      courseA_collector_loops_challenge2:
+        courseA_collector_loops_challenge2_b: 只需要 1 個積木就可以解決囉。
+        courseA_collector_loops_challenge2_a: |-
+          在往南移動之前，你可以重複移動到相同路徑。
+
+          ![](<https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png>)
       courseA_collector_loops_challenge2kp:
         courseA_collector_loops_challenge2kp_b: 試試用這條路解決問題。
         courseA_collector_loops_challenge2kp_a: 你能用迴圈過關嗎？
@@ -1222,6 +1282,16 @@ zh-TW:
       courseA_harvester_loops2_2019:
         courseA_harvester_loops2_a: "你的程式碼將會有 **四個** `往西移動`\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\n程式積木和
           **四個** <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml> 程式積木. "
+      courseA_harvester_loops3:
+        courseA_harvester_loops3_b: |-
+          要讓程式碼重複, 把一個`repeat` <xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="2-10">4</title>
+            </block></xml>迴圈拖拉出來, 然後將你想要的程式積木放進去.
+      courseA_harvester_loops3_2019:
+        courseA_harvester_loops3_b: |-
+          要讓程式碼重複, 把一個`repeat` <xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="2-10">4</title>
+            </block></xml>迴圈拖拉出來, 然後將你想要的程式積木放進去.
       courseA_harvester_loops5:
         courseA_harvester_loops5_c: 從這條路來摘取所有玉米！
       courseA_harvester_loops5_2019:
@@ -1254,6 +1324,20 @@ zh-TW:
         courseA_harvester_seq9_c: 你應該按照這個路徑才能拿到所有玉米。
       courseA_harvester_seq9_2019:
         courseA_harvester_seq9_c: 你應該按照這個路徑才能拿到所有玉米。
+      courseA_maze_seq13:
+        courseA_maze_seq13_c: |-
+          這些 <xml><block type="maze_moveNorth"/></xml>
+
+          <xml><block type="maze_moveEast"/></xml>
+
+           程式積木將會幫助移動更靠近豬，
+      courseA_maze_seq13_2018:
+        courseA_maze_seq13_c: |-
+          這些 <xml><block type="maze_moveNorth"/></xml>
+
+          <xml><block type="maze_moveEast"/></xml>
+
+           程式積木將會幫助移動更靠近豬，
       courseA_maze_seq13_2019:
         courseA_maze_seq13_c: |-
           這些 <xml><block type="maze_moveNorth"/></xml>
@@ -1754,6 +1838,12 @@ zh-TW:
       courseB_iceage_loops2_2019:
         courseB_iceage_loops2_b: 如果你卡關了，試試邊觀察邊念出每個步驟。
         courseB_iceage_loops2_c: 按著這個路徑讓鼠奎特拿到橡樹果實。
+      courseB_iceage_loops3:
+        courseB_iceage_loops3_a: |-
+          使用這個新的程式積木！
+           <xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="3-10">5</title>
+              </block></xml>
       courseB_iceage_loops3_2019:
         courseB_iceage_loops3_a: |-
           使用這個新的程式積木！
@@ -1810,8 +1900,10 @@ zh-TW:
         courseB_maze_seq5_c: 不確定要怎麼抓到豬？試試這個路徑。
       courseB_maze_seq5_2018:
         courseB_maze_seq5_b: 有 2 個方法可以完成這個關卡！
+        courseB_maze_seq5_c: 不確定要怎麼拿到橡樹果實？試試這個路徑！
       courseB_maze_seq5_2019:
         courseB_maze_seq5_b: 有 2 個方法可以完成這個關卡！
+        courseB_maze_seq5_c: 不確定要怎麼拿到橡樹果實？試試這個路徑！
       courseB_maze_seq6:
         courseB_maze_seq5_c: 有 2 個方法可以完成這個關卡。
         courseB_maze_seq5_d: 不確定要怎麼抓到豬？試試這個路徑！
@@ -2082,10 +2174,13 @@ zh-TW:
         courseB_starWars_prog9_b: 有很多方法可以完成這個關卡。
       courseC_PlayLab_events_challenge1:
         courseC_PlayLab_events_challenge_a: 試試當它碰到其他的角色時，使用`設置角色 1 到左中方`。這會將遊戲重置，玩家就可以繼續嘗試用其他的方法。
+        courseC_PlayLab_events_challenge_b: 試試當它碰到其他的角色時，使用`設置角色 1 到左中方`。這會將遊戲重置，玩家就可以繼續嘗試用其他的方法。
       courseC_PlayLab_events_challenge1_2018:
         courseC_PlayLab_events_challenge_a: 試試當它碰到其他的角色時，使用`設置角色 1 到左中方`。這會將遊戲重置，玩家就可以繼續嘗試用其他的方法。
+        courseC_PlayLab_events_challenge_b: 試試當它碰到其他的角色時，使用`設置角色 1 到左中方`。這會將遊戲重置，玩家就可以繼續嘗試用其他的方法。
       courseC_PlayLab_events_challenge1_2019:
         courseC_PlayLab_events_challenge_a: 試試當它碰到其他的角色時，使用`設置角色 1 到左中方`。這會將遊戲重置，玩家就可以繼續嘗試用其他的方法。
+        courseC_PlayLab_events_challenge_b: 試試當它碰到其他的角色時，使用`設置角色 1 到左中方`。這會將遊戲重置，玩家就可以繼續嘗試用其他的方法。
       courseC_artist_loopsPrePre1a:
         courseC_artist_loopsPrePre1a_b: |-
           要向前移動 50 像素，請使用這個積木：
@@ -2470,6 +2565,18 @@ zh-TW:
       courseD_iceage_loops2_2019:
         courseD_iceage_loops2_b: 如果你卡關了，試試邊觀察邊念出每個步驟。
         courseD_iceage_loops2_c: 按著這個路徑讓鼠奎特拿到橡樹果實。
+      courseD_iceage_loops3:
+        courseB_iceage_loops3_a: |-
+          使用這個新的程式積木！
+           <xml><block type="controls_repeat_dropdown">
+              <title name="TIMES" config="2-10">5</title>
+            </block></xml>
+      courseD_iceage_loops3_2019:
+        courseB_iceage_loops3_a: |-
+          使用這個新的程式積木！
+           <xml><block type="controls_repeat_dropdown">
+              <title name="TIMES" config="2-10">5</title>
+            </block></xml>
       courseD_iceage_loops4:
         courseD_iceage_loops4_c: 這是鼠奎特應該走的路徑。
       courseD_iceage_loops4_2019:
@@ -2490,6 +2597,18 @@ zh-TW:
       courseD_iceage_loops9_2019:
         courseD_iceage_loops9_b: 最後的程式應該要有 **4個**迴圈。
         courseD_iceage_loops9_c: 鼠奎特應該按照這個路徑才能拿到所有橡樹果實。
+      courseD_maze_nestedLoops3:
+        courseD_maze_nestedLoops3_b: 不知道該把這個環放在哪裡？嘗試一步一步地編寫代碼，並尋找模式。
+      courseD_maze_nestedLoops3_2018:
+        courseD_maze_nestedLoops3_b: 不知道該把這個環放在哪裡？嘗試一步一步地編寫代碼，並尋找模式。
+      courseD_maze_nestedLoops3_2019:
+        courseD_maze_nestedLoops3_b: 不知道該把這個環放在哪裡？嘗試一步一步地編寫代碼，並尋找模式。
+      courseD_maze_nestedLoops5:
+        courseD_maze_nestedLoops5_b: 不知道該把這個環放在哪裡？嘗試一步一步地編寫代碼，並尋找模式。
+      courseD_maze_nestedLoops5_2018:
+        courseD_maze_nestedLoops5_b: 不知道該把這個環放在哪裡？嘗試一步一步地編寫代碼，並尋找模式。
+      courseD_maze_nestedLoops5_2019:
+        courseD_maze_nestedLoops5_b: 不知道該把這個環放在哪裡？嘗試一步一步地編寫代碼，並尋找模式。
       courseD_maze_nestedLoops6:
         courseD_maze_nestedLoops6_c: 這個難題需要用到 2 組巢狀的`重複`迴圈才能解決。
       courseD_maze_nestedLoops6_2018:
@@ -2510,6 +2629,8 @@ zh-TW:
         courseD_maze_until1_b: 試著用巢狀迴圈來完成這個關卡。
       courseD_scrat_ramp5:
         courseC_maze_programming5_b: 要走多遠才能到達轉角處？
+      courseD_scrat_ramp6:
+        courseC_maze_programming6a_a: 使用`重複`迴圈讓鼠奎特移動！
       courseD_scrat_ramp7:
         courseD_scrat_programming6_a: 有 2 個方法可以完成這個關卡！
       courseD_scrat_ramp8:
@@ -2591,6 +2712,10 @@ zh-TW:
       courseE_bee_concept2_2018:
         courseE_bee_concept2_a: 看看`當條件為`迴圈在這會不會有幫助？
         courseE_bee_concept2_c: 在每個路徑的最後，蜜蜂應該轉哪個方向？
+      courseE_bee_concept3:
+        courseE_bee_concept3a_b: 如果你不知道把迴圈放在哪裡，試試一步一步地寫你的程式碼並留意重複出現的模式。
+      courseE_bee_concept3_2018:
+        courseE_bee_concept3a_b: 如果你不知道把迴圈放在哪裡，試試一步一步地寫你的程式碼並留意重複出現的模式。
       courseE_bee_functions3:
         courseE_bee_functions3_d: 試試用這個路徑通過。
       courseE_bee_functions6:

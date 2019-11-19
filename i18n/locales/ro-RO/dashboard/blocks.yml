@@ -601,6 +601,7 @@ ro:
             '"rotation"': rotație
             '"x"': poziţie orizontală
             '"y"': poziţie verticală
+            '"tint"': tentă
       Dancelab_setPropRandom:
         text: alege aleatoriu {SPRITE} {PROPERTY}
         options:
@@ -785,6 +786,36 @@ ro:
             '"bass"': sunet jos
             '"mid"': sunet mediu
             '"treble"': sunet înalt
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"hearts_colorful"': Inimi
+            '"diamond"': diamant
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenKey:
         text: când {KEY} apăsat(ă)
         options:
@@ -839,6 +870,8 @@ ro:
             '1': sunet mediu
             '2': sunet înalt
       Dancelab_whenSetup:
+        text: configurare
+      Dancelab_whenSetup2:
         text: configurare
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"

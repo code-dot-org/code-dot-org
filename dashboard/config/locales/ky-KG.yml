@@ -13,7 +13,7 @@ ky:
     attributes:
       user:
         name: Атын көрсөт
-        name_example: Атын көрсөт<br/>(м. Мыкты кодер же Жаңыл)
+        name_example: Атын көрсөт (м. Мыкты кодер же Жаңыл)
         email: Эмейл
         username: Колдонуучунун аты
         password: Сырсөз

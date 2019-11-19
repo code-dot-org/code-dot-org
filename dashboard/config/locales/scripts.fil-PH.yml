@@ -14650,3 +14650,11 @@ fil:
               name: Mga variable
             For Loops:
               name: For Loops
+        csp10-pilot:
+          stages:
+            new stage:
+              name: bagong yugto
+        csp4-preview:
+          stages:
+            new stage:
+              name: bagong yugto

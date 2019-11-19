@@ -133,6 +133,9 @@ zh-TW:
       CSD U3 Variables Map: 變數
       CSD U3 Variables Map_2018: 變數
       CSD U3 Variables Map_2019: 變數
+      CSD U3 collisions build isTouching: 碰撞檢測
+      CSD U3 collisions build isTouching_2018: 碰撞檢測
+      CSD U3 collisions build isTouching_2019: 碰撞檢測
       CSD U3 collisions predict set velocity code: 角色的互動
       CSD U3 collisions predict set velocity code_2018: 角色的互動
       CSD U3 collisions predict set velocity code_2019: 角色的互動
@@ -250,6 +253,9 @@ zh-TW:
       CSD U5L14 autoSFLP_2019: 教學內容概覽
       CSD U5L15 autoSFLP_2018: 教學內容概覽
       CSD U5L15 autoSFLP_2019: 教學內容概覽
+      CSD U6 Event Types: 事件類型
+      CSD U6 Event Types_2018: 事件類型
+      CSD U6 Event Types_2019: 事件類型
       CSD U6 arrays intro: 陣列（Arrays）的介紹
       CSD U6 arrays intro_2018: 陣列（Arrays）的介紹
       CSD U6 arrays intro_2019: 陣列
@@ -334,11 +340,19 @@ zh-TW:
       CourseEF_video_MakeSprite: 如何建立一個角色
       CourseEF_video_MakeSprite_2019: 如何建立一個角色
       Dance_Party_extras_battle: 舞蹈團隊
+      Dance_Party_extras_battle_2019: 舞蹈團隊
       Dance_Party_extras_every_beat: 四分音符
+      Dance_Party_extras_every_beat_2019: 四分音符
       Dance_Party_extras_layout: 加入陣形
+      Dance_Party_extras_layout_2019: 加入陣形
       Dance_Party_extras_on_beat: 低音、中音和高音
+      Dance_Party_extras_on_beat_2019: 低音、中音和高音
       Dance_Party_extras_speed: 加速、減速
+      Dance_Party_extras_speed_2019: 加速、減速
       Dance_Party_extras_visible: 他們要去哪？
+      Dance_Party_extras_visible_2019: 他們要去哪？
+      MC_HOC_2017_FP20x20: 自由發揮
+      MC_HOC_2017_FP20x20_2019: 自由發揮
       courseA_video_Stevie: Stevie 和 Big Project
       courseA_video_Stevie_2018: Stevie 和 Big Project
       courseB_video_Unspotted: 沒被發現的蟲蟲

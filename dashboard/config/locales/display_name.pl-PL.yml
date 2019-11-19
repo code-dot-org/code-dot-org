@@ -4,12 +4,24 @@ pl-PL:
     display_name:
       AB_Debug_Artist1: 'Debugowanie Artysty #1 (AB)'
       CSD Problem Solving Process Video: 'Nagranie: Proces Rozwiązywania Problemów'
+      CSD U2 CSS Classes Map: Klasy CSS
+      CSD U2 CSS Classes Map_2018: Klasy CSS
+      CSD U2 CSS Classes Map_2019: Klasy CSS
       CSD U2 HTML Tags Map: Tagi HTML
       CSD U2 HTML Tags Map_2018: Tagi HTML
       CSD U2 HTML Tags Map_2019: Tagi HTML
       CSD U2 Headers map: Nagłówki w HTML
       CSD U2 Headers map_2018: Nagłówki w HTML
       CSD U2 Headers map_2019: Nagłówki w HTML
+      CSD U2 Heading Demo: Wprowadzenie do nagłówków
+      CSD U2 Heading Demo_2018: Wprowadzenie do nagłówków
+      CSD U2 Heading Demo_2019: Wprowadzenie do nagłówków
+      CSD U2 Heading Sizes: Wielkości nagłówków
+      CSD U2 Heading Sizes_2018: Wielkości nagłówków
+      CSD U2 Heading Sizes_2019: Wielkości nagłówków
+      CSD U2 Heading Test: Nagłówki i akapity
+      CSD U2 Heading Test_2018: Nagłówki i akapity
+      CSD U2 Heading Test_2019: Nagłówki i akapity
       CSD U2 Inspector Warm Up: Poznaj HTML
       CSD U2 Inspector Warm Up_2018: Poznaj HTML
       CSD U2 Inspector Warm Up_2019: Poznaj HTML
@@ -22,6 +34,9 @@ pl-PL:
       CSD U2 images map: Obrazy w HTML
       CSD U2 images map_2018: Obrazy w HTML
       CSD U2 images map_2019: Obrazy w HTML
+      CSD U2 lists map: Listy w HTML
+      CSD U2 lists map_2018: Listy w HTML
+      CSD U2 lists map_2019: Listy w HTML
       CSD U3 Animation Tab Map: Karta Animacji
       CSD U3 Animation Tab Map_2018: Karta Animacji
       CSD U3 Animation Tab Map_2019: Karta Animacji
@@ -97,11 +112,23 @@ pl-PL:
       CourseEF_video_IntroSpriteLab: To jest Laboratorium Duszków
       CourseEF_video_IntroSpriteLab_2019: To jest Laboratorium Duszków
       Dance_Party_extras_battle: Zespoły taneczne
+      Dance_Party_extras_battle_2019: Zespoły taneczne
       Dance_Party_extras_every_beat: Ćwierć nuty
+      Dance_Party_extras_every_beat_2019: Ćwierć nuty
       Dance_Party_extras_layout: Twórzmy formację
+      Dance_Party_extras_layout_2019: Twórzmy formację
       Dance_Party_extras_on_beat: Bas, średni i wysoki ton
+      Dance_Party_extras_on_beat_2019: Bas, średni i wysoki ton
       Dance_Party_extras_speed: Przyspiesz, spowolnij
+      Dance_Party_extras_speed_2019: Przyspiesz, spowolnij
       Dance_Party_extras_visible: Gdzie oni poszli?
+      Dance_Party_extras_visible_2019: Gdzie oni poszli?
+      Intro to Web Lab - Part 1: 'Wideo: Wprowadzenie do Web Lab - Część 1'
+      Intro to Web Lab - Part 1_2018: 'Wideo: Wprowadzenie do Web Lab - Część 1'
+      Intro to Web Lab - Part 1_2019: 'Wideo: Wprowadzenie do Web Lab - Część 1'
+      Intro to Web Lab - Part 2: 'Wideo: Wprowadzenie do Web Lab - Część 2'
+      Intro to Web Lab - Part 2_2018: 'Wideo: Wprowadzenie do Web Lab - Część 2'
+      Intro to Web Lab - Part 2_2019: 'Wideo: Wprowadzenie do Web Lab - Część 2'
       Making Music_2018: Tworzenie muzyki
       Making Music_2019: Tworzenie muzyki
       courseA_video_Stevie: Stevie i Duży Projekt (the Big Project)

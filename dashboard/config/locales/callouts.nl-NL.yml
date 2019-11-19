@@ -131,6 +131,15 @@ nl-NL:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Nieuw blok!
         dance_callout_11_b: Nieuw blok!
+      Dance_2019_04:
+        dance_callout_02: Voeg dit blok toe aan je programma!
+      Dance_2019_06:
+        dance_party_11_5_groups: Nieuw blok!
+      Dance_2019_07:
+        setprop_hint: Nieuw blok!
+      Dance_2019_09:
+        new_block_3: Nieuw blok!
+        new_block_4: Nieuw blok!
       Dance_Party_01:
         dance_callout_01: Voeg dit blok toe aan je programma!
       Dance_Party_02:

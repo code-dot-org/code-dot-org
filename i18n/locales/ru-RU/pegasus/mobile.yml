@@ -889,7 +889,10 @@
   coursed-2017_name: Курс D (2017)
   coursee-2017_name: Курс E (2017)
   coursef-2017_name: Курс F (2017)
+  express-2018_name: Экспресс-курс (2017)
+  express-2019_name: Экспресс-курс (2017)
   accelerated_name: "Ускоренный курс"
+  express_name: "Экспресс-курс"
   20-hour_name: Ускоренный курс
   algebra_name: "Информатика в алгебре"
   AlgebraA_name: "Информатика в алгебре: курс A"
@@ -1336,9 +1339,11 @@
   header_help_support: 'Помощь и поддержка '
   header_report_bug: "Сообщить об ошибке"
   header_tutorials: "Обучающие материалы"
+  sprite_lab_tutorials: "Лаборатория спрайтов: учебники"
   header_documentation: "Документация"
   user_header_label: "Привет, %{username}"
   user_header_team: "Команда"
+  user_header_my_projects: "Мои проекты"
   user_header_settings: "Настройки аккаунта"
   user_header_logout: "Выйти"
   user_header_signin: "Вход"
@@ -1346,12 +1351,15 @@
   user_header_gamelab: "Лаборатория игр"
   user_header_playlab: "Лаборатория игр"
   user_header_dance: "Танцевальная вечеринка"
+  user_header_spritelab: "Лаборатория Спрайтов"
   user_header_minecraft: "Minecraft"
   user_header_flappy: "Порхающий код"
   user_header_view_all: "Смотреть все проекты..."
+  user_header_view_project_gallery: "Показать проекты"
   user_header_view_my_projects: "Показать мои проекты"
   view_all_sections: "Показать все классы"
   sign_in_instruct_website: "Перейти к %{code_org_url}."
+  joining_section_overview: "Если ваши ученики ещё не присоединились к вашему разделу, им следует выполнить инструкции ниже. Их достаточно проделать один раз. Присоединившись, ученики смогут увидеть назначенные им курсы, а вы сможете следить за их работой."
   hero_name: 'Майнкрафт: Путешествие Героя'
   applab_tile_start_tutorial: "Начать"
   applab_tile_teacher_guide: "Посмотреть руководство для учителей"
@@ -1365,6 +1373,7 @@
   hoc_overview_start_tutorial: "Начать"
   hoc_overview_view_teacher_guide: "Посмотреть руководство для учителей"
   hoc2018_creativity_create: "Создать"
+  hoc2018_creativity_hoc_coming: "Час кода настал…"
   hoc2018_creativity_what_will_you_create: "Что вы будете создавать?"
   hoc2018_mc_page_title: "Руководства к часу кода c Minecraft"
   hoc2018_mc_details: "Доступно на разных языках| на всех современных браузерах и планшетах| c 8 лет"

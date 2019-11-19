@@ -10,6 +10,7 @@ el:
         csp_category_name: "Αρχές της Επιστήμης των Υπολογιστών ' 15-'16"
         cspexams_category_name: Τεστ στις Βασικές Αρχές της Επιστήμης των Υπολογιστών
         csp17_category_name: Βασικές Αρχές της Επιστήμης των Υπολογιστών ' 16-'17
+        full_course_category_name: Πλήρη μαθήματα
         hoc_category_name: Η Ώρα του Κώδικα
         math_category_name: Μαθηματικά
       name:
@@ -1716,6 +1717,10 @@ el:
               name: Υποθέσεις με Κάρτες
             Building a Foundation:
               name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
+        csp7-pilot-staging:
+          stages:
+            Libraries:
+              name: Βιβλιοθήκες
         express-2018-vn:
           stages:
             Graph Paper Programming:
@@ -1772,3 +1777,6 @@ el:
               name: Μεταβλητές
             For Loops:
               name: Βρόχοι Για
+        dance-extras-2019:
+          title: Συνεχίστε να Χορεύετε
+          description: Πηγαίνετε πέρα από την πρώτη ώρα με εκτενείς ιδέες για πρότζεκτ.

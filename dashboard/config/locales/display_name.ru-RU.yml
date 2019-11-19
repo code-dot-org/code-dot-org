@@ -2,7 +2,7 @@
 ru-RU:
   data:
     display_name:
-      AB_Debug_Artist1: 'Artist Debugging #1 (AB)'
+      AB_Debug_Artist1: 'Художник: Отладка #1 (AB)'
       App Lab Intro 8 - Video Images and Sounds: 'Видео: Изображения и звуки'
       App Lab Intro 8 - Video Share Your App: 'Видео: Поделись своим приложением'
       AppLab Intro 7 - Change Screen Color: Изменить цвет окна
@@ -167,6 +167,9 @@ ru-RU:
       CSD U3 Variables Map: переменные
       CSD U3 Variables Map_2018: переменные
       CSD U3 Variables Map_2019: переменные
+      CSD U3 collisions build isTouching: Обнаружение столкновений
+      CSD U3 collisions build isTouching_2018: Обнаружение столкновений
+      CSD U3 collisions build isTouching_2019: Обнаружение столкновений
       CSD U3 collisions car intro: Пример игры
       CSD U3 collisions car intro_2018: Пример игры
       CSD U3 collisions car intro_2019: Пример игры
@@ -353,12 +356,20 @@ ru-RU:
       CSS U2 Body Map: Элемент body
       CSS U2 Body Map_2018: Элемент body
       CSS U2 Body Map_2019: Элемент body
+      CourseEF_video_IntroSpriteLab: Это лаборатория спрайтов
+      CourseEF_video_IntroSpriteLab_2019: Это лаборатория спрайтов
       Dance_Party_extras_battle: Танцевальные коллективы
+      Dance_Party_extras_battle_2019: Танцевальные коллективы
       Dance_Party_extras_every_beat: Четвертные ноты
+      Dance_Party_extras_every_beat_2019: Четвертные ноты
       Dance_Party_extras_layout: Давайте установим порядок
+      Dance_Party_extras_layout_2019: Давайте установим порядок
       Dance_Party_extras_on_beat: Басовые, средние и высокие
+      Dance_Party_extras_on_beat_2019: Басовые, средние и высокие
       Dance_Party_extras_speed: Ускорить, замедлить
+      Dance_Party_extras_speed_2019: Ускорить, замедлить
       Dance_Party_extras_visible: Куда они исчезли?
+      Dance_Party_extras_visible_2019: Куда они исчезли?
       Final Personal Website: Персональный веб-сайт
       Final Personal Website_2018: Персональный веб-сайт
       Final Personal Website_2019: Персональный веб-сайт

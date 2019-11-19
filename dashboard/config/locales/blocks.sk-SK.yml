@@ -586,6 +586,7 @@ sk:
             '"rotation"': otočenie
             '"x"': horizontálna pozícia
             '"y"': vertikálna pozícia
+            '"tint"': sfarbenie
       Dancelab_setPropRandom:
         text: nastav náhodne {SPRITE} {PROPERTY}
         options:
@@ -767,6 +768,24 @@ sk:
             '"bass"': basy
             '"mid"': stredy
             '"treble"': výšky
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"hearts_colorful"': Srdiečka
+            '"diamond"': diamant
+            '"l"': l
+            '"m"': m
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
       Dancelab_whenKey:
         text: pri stlačení {KEY}
         options:
@@ -804,6 +823,8 @@ sk:
             '1': stredy
             '2': výšky
       Dancelab_whenSetup:
+        text: nastavenie
+      Dancelab_whenSetup2:
         text: nastavenie
       gamelab_changePropBy:
         text: zmeň {SPRITE} {PROPERTY} o {VAL}

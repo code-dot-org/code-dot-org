@@ -27,10 +27,11 @@ ko:
     attributes:
       user:
         name: '사용자 이름'
-        name_example: '보여질 이름<br/>(예: 멋진 코더 또는 제인)'
+        name_example: '보여질 이름 (예: 멋진 코더 또는 제인)'
         email: '이메일'
         parent_email: '부모/보호자 이메일'
         personal_email: "개인 이메일 주소 <a href=\"%{url}\">(만약 이메일 주소가 없다면 여기를 클릭하십시오)</a>"
+        personal_email_markdown: "개인 이메일 주소 [(만약 이메일 주소가 없다면 여기를 클릭하십시오)](%{url})"
         username: 'username'
         password: '비밀번호'
         password_confirmation: '비밀번호 재확인'
@@ -41,6 +42,7 @@ ko:
         edit_header: '계정 정보 수정'
         finish_sign_up_header: '계정 만들기를 마칩니다.'
         finish_sign_up_subheader: '<strong>%{email}</strong>을 위해 Code.org 계정을 만들려면 밑에 있는 빈 곳에 정보들을 입력 하세요.'
+        finish_sign_up_subheader_markdown: '**%{email}**을 위해 Code.org 계정을 만들려면 밑에 있는 빈 곳에 정보들을 입력 하세요.'
         error:
           future: 오늘 이전 날짜만 가능합니다.
   beta: "베타"
@@ -60,6 +62,7 @@ ko:
   join_section:
     code:
       placeholder: "섹션 코드(ABCDEF)"
+      instructions_short: "6자리의 섹션 코드를 입력하세요."
   add_hint_form:
     placeholder: '도움내용을 입력하세요.'
     submit: '도움말 추가하기'
@@ -106,9 +109,11 @@ ko:
     student_count: '%{count} 학생 들은 이미 가입했습니다.'
     teacher_count: '%{count} 선생님들은 이미 가입했습니다.'
     overview: '진행상황을 확인하거나 강의을 관리하기 위해 회원으로 가입하세요. 회원가입을 하지 않아도 <a href="/">다양한 스테이지와 퍼즐을 검색</a>할 수는 있지만 진행상황이나 프로젝트를 관리하기 위해서는 회원 가입을 해야합니다.'
+    overview_markdown: '진행상황을 확인하거나 강의을 관리하기 위해 회원으로 가입하세요. 회원가입을 하지 않아도 [다양한 스테이지와 퍼즐을 검색](/)할 수는 있지만 진행상황이나 프로젝트를 관리하기 위해서는 회원 가입을 해야합니다.'
     hoc_already_signed_up_heading: '로그인 없이 시작하기'
     hoc_already_signed_up_content: "귀하는 Hour of Code 를 가르치기 위해 등록되었습니다! 귀하와 귀하의 학생들은 이 이벤트에 참여하기 위해 로그인 할 필요는 없습니다. \n시작하려면, 강의를 위한 <a href=\"%{learn_url}\">튜토리얼을 선택</a> 하고 링크를 공유하세요.<br/>\n<br/>Hour of Code와 함께 즐거운 시간을 되셨다면, 나아가서 <a href=\"%{educate_url}\">더 긴과정</a>에 학생을 등록하기 위해 아래에서 Code Studio 계정을 생성하고 비밀번호를 설정할수 있습니다."
     hoc_already_signed_up_content_post_hoc: 'Hour of Code에 호스팅을 감사합니다. Code Studio에 로그인 하려면 비밀번호를 설정해야만 합니다. 이를 통해 진행상황을 관리하고 강의를 관리할 수 있습니다. 학생들에게 강의를 배정하고 진행상황을 확인할 수 있습니다. 물론 계정을 만들지 않고도 <a href="%{studio_url}">다양한 스테이지와 퍼즐을 탐색할 수 있습니다</a>.'
+    hoc_already_signed_up_content_post_hoc_markdown: 'Hour of Code에 호스팅을 감사합니다. Code Studio에 로그인 하려면 비밀번호를 설정해야만 합니다. 이를 통해 진행상황을 관리하고 강의를 관리할 수 있습니다. 학생들에게 강의를 배정하고 진행상황을 확인할 수 있습니다. 물론 계정을 만들지 않고도 [다양한 스테이지와 퍼즐을 탐색할 수 있습니다](%{studio_url}).'
     teacher_educator_guide: '교육자 가이드'
     title: "회원가입"
     school_name: '학교 이름 (옵션)'
@@ -222,6 +227,7 @@ ko:
       picture: '사진 암호'
       word: '비밀단어'
       email: '이메일'
+      clever: '영리 계정'
   follower:
     invite_sent: '초대 메일을 발송하였습니다'
     added_teacher: '%{name} 가 선생님으로 추가되었습니다'
@@ -394,6 +400,7 @@ ko:
     create_personal_login_under_13_parent_email: '부모/보호자 이메일'
     create_personal_login_info: '만약 학년도의 끝 후에도 Code.org 계정을 계속 사용하고 싶으시다면 아래에서 개인계정을 만들 수 있습니다.'
     create_personal_login_terms: "Code.org 의 <a herf='%{terms_of_service_url}',target='_blank'>서비스 약관</a>을 준수할 것에 동의합니다. 13세 미만의 경우, 부모님 또는 보호자의 허락을 얻어 Code.org 사이트의 서비스를 사용하는 것임을 확인합니다."
+    create_personal_login_terms_markdown: "Code.org 의 [서비스 약관](<>)을 준수할 것에 동의합니다. 13세 미만의 경우, 부모님 또는 보호자의 허락을 얻어 Code.org 사이트의 서비스를 사용하는 것임을 확인합니다."
     update_email: "업데이트"
   user_level:
     completed: '완료'
@@ -676,14 +683,17 @@ ko:
   terms_interstitial:
     title: "업데이트 된 서비스약관 및 개인정보 보호정책"
     intro_desc: "아래와 같이 서비스 약관과 개인보호 보호정책을 업데이트 했습니다. 업데이트 내역은 2016년 8월 24일 부터 적용됩니다. 가장 큰 변경사항: <i>Code Studio의 학생계정은 이제 이메일을 저장하지 않습니다.</i> 이것은 교육기술이 학생 개인정보 보호를 위한 새로운 기준을 수립하는것으로 큰 의미가 있습니다. 이메일을 통해 다른 변경사항에 대한 내용을 발송했습니다."
+    intro_desc_markdown: "아래와 같이 서비스 약관과 개인보호 보호정책을 업데이트 했습니다. 업데이트 내역은 2016년 8월 24일 부터 적용됩니다. 가장 큰 변경사항: _Code Studio의 학생계정은 이제 이메일을 저장하지 않습니다._ 이것은 교육기술이 학생 개인정보 보호를 위한 새로운 기준을 수립하는것으로 큰 의미가 있습니다. 이메일을 통해 다른 변경사항에 대한 내용을 발송했습니다."
     intro_instructions: "강의에서 13세 미만의 학생들이 코드스튜디오의 모든 최신기능에 접근하기 위해 새로운 조건들을 수락해야 합니다. 13세 미만의 학생계정을 등록 할 때, Code Studio 같은 교육프로그램들과 학교의 사용 및 혜택에 대한 학생 개인정보 수집을 위해 학부모가 승인하였음을 확인하는 메시지가 표시됩니다."
     tos: "이용 약관"
     privacy: "개인정보보호 정책"
     privacy_notice: "개인정보 보호정책"
     accept_label: '업데이트 된 <a href="%{tos_url}" target="_blank">서비스 약관</a> 과 <a href="%{privacy_url}" target="_blank">개인정보 보호정책</a>에 동의합니다.'
+    accept_label_markdown: 업데이트 된 [서비스 약관](%{tos_url}) 과 [개인정보 보호정책](%{privacy_url})에 동의합니다.
     accept: "수락"
     print: "인쇄"
     reminder_desc: '<a href="%{tos_url}" target="_blank">서비스 약관</a>과 <a href="%{privacy_url}" target="_blank">개인정보 보호정책</a>을 업데이트 하였습니다. 수락하기 전에 다시한번 확인해 주시기 바랍니다. 업데이트 된 약관을 명시적으로 수락하기 전에는 JavaScript 교육 도구를 학생들에게 제공하지 못할수도 있습니다.'
+    reminder_desc_markdown: '[서비스 약관](%{tos_url})과 [개인정보 보호정책](%{privacy_url})을 업데이트 하였습니다. 수락하기 전에 다시한번 확인해 주시기 바랍니다. 업데이트 된 약관을 명시적으로 수락하기 전에는 JavaScript 교육 도구를 학생들에게 제공하지 못할수도 있습니다.'
     review_terms: "약관 업데이트 검토"
   school_info_interstitial:
     title: "모든 학생들에게 컴퓨터 과학을 전해주고 싶습니다! - 지켜봐주시고 도움을 주세요!"
@@ -705,6 +715,7 @@ ko:
     submit: "제출하기"
     decline: "닫기"
   zendesk_too_young_message: '어린 학생들은 도움 사이트에 가입할 수 없습니다. 대신 가입하거나 부모나 보호자의 동의 없이  <a href="http://support.code.org">support.code.org</a> 를 사용할 수 있습니다.'
+  zendesk_too_young_message_markdown: '어린 학생들은 도움 사이트에 가입할 수 없습니다. 대신 가입하거나 부모나 보호자의 동의 없이 [support.code.org](http://support.code.org) 를 사용할 수 있습니다.'
   progress:
     not_started: 시작 안됨
     in_progress: 진행 중
@@ -870,6 +881,7 @@ ko:
     mac: '맥 OS X'
   locked_stage: '현재 스테이지가 잠겨있기 때문에 해당 컨텐츠가 보이지 않습니다. 담당교사는 해당 스테이지에 대한 작업이 필요하거나 당신의 답을 검토하기 위해서 잠금을 해제할 수 있습니다.'
   hidden_stage: "이 수업을 수강하는 것을 담당교사는 모릅니다. 어떤 수업을 수강해야 하는지 담당교사에게 문의하세요"
+  return_unit_overview: '단위별 개요로 이동'
   return_course_overview: '단위별 개요로 이동'
   view_teacher_guide: '선생님 가이드 보기'
   pd:
@@ -888,6 +900,7 @@ ko:
         science: '과학'
         la: '언어 교과'
       resources:
+        khan: '칸 아카데미(Khan Academy)'
         kodable: 'Kodable'
         lightbot: '라이트봇'
       robotics:
@@ -900,5 +913,7 @@ ko:
   cookie_banner:
     accept: '동의합니다'
   gdpr_dialog:
+    heading: '미국에 기반을 두고 있는 웹사이트 사용에 동의하십니까?'
     message: '귀하의 본 사이트 사용에 따른 데이터는 미국으로 전송되어 보관 또는 처리될 수 있습니다.'
     yes: '예'
+  page_not_found_title: "페이지를 찾을 수 없습니다."

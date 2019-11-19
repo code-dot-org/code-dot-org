@@ -360,6 +360,7 @@ eu:
             '"rotation"': itzulikapena
             '"x"': posizio horizontala
             '"y"': posizio bertikala
+            '"tint"': tinta
       Dancelab_setPropRandom:
         options:
           PROPERTY:
@@ -504,6 +505,13 @@ eu:
             '"tint"': tinta
           RANGE:
             '"mid"': erdi
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': diamantea
+            '"s"': s
+            '"w"': w
+            '"x"': x
       Dancelab_whenKey:
         text: "{KEY} zapaltzean"
         options:

@@ -44,6 +44,7 @@ const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
 const SET_STAGE_EXTRAS_SCRIPT_IDS =
   'teacherDashboard/SET_STAGE_EXTRAS_SCRIPT_IDS';
 const SET_STUDENT_SECTION = 'teacherDashboard/SET_STUDENT_SECTION';
+const SET_PAGE_TYPE = 'teacherDashboard/SET_PAGE_TYPE';
 /** Sets teacher's current authentication providers */
 const SET_AUTH_PROVIDERS = 'teacherDashboard/SET_AUTH_PROVIDERS';
 const SET_SECTIONS = 'teacherDashboard/SET_SECTIONS';
@@ -119,6 +120,17 @@ export const setStudentsForCurrentSection = (sectionId, studentInfo) => ({
   sectionId: sectionId,
   students: studentInfo
 });
+export const setPageType = pageType => ({type: SET_PAGE_TYPE, pageType});
+
+// pageType describes the current route the user is on. Used only for logging.
+// Enum of allowed values:
+export const pageTypes = {
+  level: 'level',
+  scriptOverview: 'script_overview',
+  courseOverview: 'course_overview',
+  stageExtras: 'stage_extras',
+  homepage: 'homepage'
+};
 
 /**
  * Set the list of sections to display.
@@ -148,18 +160,17 @@ export const toggleSectionHidden = sectionId => (dispatch, getState) => {
  * @param {number} courseId
  * @param {number} scriptId
  */
-export const assignToSection = (sectionId, courseId, scriptId) => (
-  dispatch,
-  getState
-) => {
-  dispatch(beginEditingSection(sectionId, true));
-  dispatch(
-    editSectionProperties({
-      courseId: courseId,
-      scriptId: scriptId
-    })
-  );
-  return dispatch(finishEditingSection());
+export const assignToSection = (sectionId, courseId, scriptId, pageType) => {
+  return (dispatch, getState) => {
+    dispatch(beginEditingSection(sectionId, true));
+    dispatch(
+      editSectionProperties({
+        courseId: courseId,
+        scriptId: scriptId
+      })
+    );
+    return dispatch(finishEditingSection(pageType));
+  };
 };
 
 /**
@@ -417,7 +428,9 @@ const initialState = {
   // Not populated until the RosterDialog is opened.
   classrooms: null,
   // Error that occurred while loading oauth classrooms
-  loadError: null
+  loadError: null,
+  // The page where the action is occurring
+  pageType: ''
 };
 
 /**
@@ -442,7 +455,8 @@ function newSectionData(id, courseId, scriptId, loginType) {
     code: '',
     courseId: courseId || null,
     scriptId: scriptId || null,
-    hidden: false
+    hidden: false,
+    isAssigned: undefined
   };
 }
 
@@ -490,6 +504,13 @@ export default function teacherSections(state = initialState, action) {
     return {
       ...state,
       validGrades: action.grades
+    };
+  }
+
+  if (action.type === SET_PAGE_TYPE) {
+    return {
+      ...state,
+      pageType: action.pageType
     };
   }
 
@@ -594,7 +615,7 @@ export default function teacherSections(state = initialState, action) {
 
     sections.forEach(section => {
       // SET_SECTIONS is called in two different contexts. On some pages it is called
-      // in a way that only provides name/id per section, in other places (homepage)
+      // in a way that only provides name/id per section, in other places (homepage, script overview)
       // it provides more detailed information. There are currently no pages where
       // it should be called in both manners, but we want to make sure that if it
       // were it will throw an error rather than destroy data.
@@ -754,7 +775,8 @@ export default function teacherSections(state = initialState, action) {
 
     let assignmentData = {
       section_id: section.id,
-      section_creation_timestamp: section.createdAt
+      section_creation_timestamp: section.createdAt,
+      page_name: state.pageType
     };
     if (section.scriptId !== state.initialScriptId) {
       assignmentData.script_id = section.scriptId;
@@ -762,7 +784,11 @@ export default function teacherSections(state = initialState, action) {
     if (section.courseId !== state.initialCourseId) {
       assignmentData.course_id = section.courseId;
     }
-    if (assignmentData.script_id || assignmentData.course_id) {
+    if (
+      // If either of these is not undefined, then assignment changed and should be logged
+      !(typeof assignmentData.script_id === 'undefined') ||
+      !(typeof assignmentData.course_id === 'undefined')
+    ) {
       firehoseClient.putRecord({
         study: 'assignment',
         study_group: 'v0',
@@ -981,7 +1007,8 @@ export const sectionFromServerSection = serverSection => ({
   scriptId: serverSection.script
     ? serverSection.script.id
     : serverSection.script_id || null,
-  hidden: serverSection.hidden
+  hidden: serverSection.hidden,
+  isAssigned: serverSection.isAssigned
 });
 
 /**
@@ -1096,7 +1123,12 @@ export function sectionsNameAndId(state) {
   }));
 }
 
-export function sectionsForDropdown(state, scriptId, courseId) {
+export function sectionsForDropdown(
+  state,
+  scriptId,
+  courseId,
+  onCourseOverview
+) {
   return state.sectionIds.map(id => ({
     id: parseInt(id, 10),
     name: state.sections[id].name,
@@ -1104,7 +1136,9 @@ export function sectionsForDropdown(state, scriptId, courseId) {
     courseId: state.sections[id].courseId,
     isAssigned:
       (scriptId !== null && state.sections[id].scriptId === scriptId) ||
-      (courseId !== null && state.sections[id].courseId === courseId)
+      (courseId !== null &&
+        state.sections[id].courseId === courseId &&
+        onCourseOverview)
   }));
 }
 

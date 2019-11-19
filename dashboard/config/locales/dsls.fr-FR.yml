@@ -9,7 +9,9 @@ fr-FR:
         answers:
         - text: Commence par un carré<br/>Mets un triangle au-dessus du carré<br/>Mets
             un triangle au-dessous du carré
-        - correct: true
+        - text: Commence par un carré<br/>Mets un triangle à droite du carré<br/>Mets
+            un parallélogramme sous le carré<br/>Mets un triangle à droite du parallélogramme
+          correct: true
         - text: Commence par un carré<br/>Dessine un parallélogramme au-dessus du
             carré<br/>Place un triangle à droite du parallélogramme
         - text: Commence par un carré<br/>Place un triangle sous le carré<br/>Mets
@@ -103,7 +105,7 @@ fr-FR:
       2-3 Maze Multi 2:
         title: Choix multiple du labyrinthe
         questions:
-        - {}
+        - text: Quel ensemble de blocs m'amènera au cochon ?
         answers:
         - {}
         - correct: true
@@ -129,10 +131,11 @@ fr-FR:
         questions:
         - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
       2-3 artist functions multi 1:
         title: Choix multiple des fonctions d’artistes 1
         questions:
@@ -265,12 +268,15 @@ fr-FR:
         - text: "<h3>Roues/côté : 2<br/>Fenêtres/côté : 6</h3>"
         - text: "<h3>Roues/côté : 3<br/>Fenêtres/côté : 2</h3>"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png"
       4-5 Computational Thinking Multi 1:
         title: Choix multiple
+        content1: "? Voici trois phrases. Parmi les modèles ci-dessous, lequel fait
+          la bonne abstraction pour que chacune des phrases corresponde à ce modèle
+          ?"
         questions:
         - text: Seattle est une grande ville.<br/>Eugene est une ville moyenne<br/>
             Hillview est une petite ville.
@@ -286,8 +292,9 @@ fr-FR:
         - text: Laquelle de ces images représente le mieux la production participative
             ?
         answers:
-        - {}
-        - correct: true
+        - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png"
+          correct: true
       4-5 Crowdsourcing Multi 2:
         title: Choix multiple
         questions:
@@ -312,6 +319,7 @@ fr-FR:
         - text: Le numéro de carte bancaire de tes parents
       4-5 Internet Multi 1:
         title: Choix multiple
+        content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
         questions:
         - text: Quand tu essaies de te connecter à code.org, vers quelle adresse IP
             le DNS a-t-il le plus de chances de t'orienter ?
@@ -322,6 +330,7 @@ fr-FR:
         - correct: true
       4-5 Internet Multi 2:
         title: Choix multiple
+        content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
         questions:
         - text: Si le DNS t'a dirigé ver la page à l'adresse IP 100.42.50.110, sur
             quel site es-tu ?
@@ -332,24 +341,32 @@ fr-FR:
         - {}
       4-5 Songwriting Multi 1:
         title: Choix multiple
+        content1: "/script_assets/4-5_images/unplugged/songwriting_1_q.png"
         questions:
-        - {}
+        - text: Quelle est la plus grande portion de cette chanson qui puisse être
+            définie comme le refrain, de façon à ce que le refrain se répète exactement
+            à chaque fois qu'il est chanté?
         answers:
         - text: Lou, Lou, skip to my Lou,
         - text: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou,
             Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.
           correct: true
-        - {}
-        - {}
+        - text: "? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou,
+            Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's
+            in the buttermilk, <br/>Shoo, fly, shoo,"
+        - text: "? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the
+            buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo,
+            fly, shoo, <br/>Skip to my Lou, my darlin."
       4-5 Suncatchers Match 1:
         title: Correspondance
         content1: Fais correspondre chaque programme à son mot, à l'aide des groupes
           de compétences fournies.
+        content2: "/script_assets/4-5_images/unplugged/suncatchers_1.png"
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a2.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a3.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png"
         answers:
         - text: "<h4>STACK</h4>"
         - text: "<h4>STAMP</h4>"
@@ -357,13 +374,15 @@ fr-FR:
         - text: "<h4>RAMP</h4>"
       4-5 Suncatchers Multi 1:
         title: Choix multiple
+        content1: "/script_assets/4-5_images/unplugged/suncatchers_2_q.png"
         questions:
         - text: Lequel des programmes ci-dessous <em>ne fais pas</em> exactement la
             même séquence que le programme 1 ?
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png"
+          correct: true
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png"
       4-5 artist loops multi 1:
         title: Choix multiple des boucles d’artistes
         questions:
@@ -393,6 +412,9 @@ fr-FR:
         - {}
       4-5 bee conditionals multi 1:
         title: Choix multiple des instructions conditionnelles de l’abeille
+        content2: "? Une fleur pourpre peut avoir 1, 2 ou 3 nectar(s), mais vous ne
+          savez pas combien. Quel bloc correspondant recueille l'ensemble du nectar
+          de la fleur pourpre ?"
         questions:
         - text: Choisis les meilleurs blocs.
         answers:
@@ -943,6 +965,78 @@ fr-FR:
           <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
 
           </div>
+      Dance_Party_extras_intro_2019:
+        markdown: |
+          # Continuer de dancer!
+
+          Pour la 2ème partie, tu vas créer ton projet. Il n'y a pas de puzzle ici - A la place, il y a un ensemble de projets qui présente différentes façons de faire des soirées dansantes.
+
+          Tu peux faire ces niveaux dans _n'importe quel ordre_. Navigue un peu partout pour comprendre comment les choses sont effectuées dans un niveau précédent, ou combine les concepts entre les projets. Essaie les tous, choisis ton favori, et passe du temps pour ajouter à ce projet tes idées pour qu'il devienne le tien
+
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Continuer</a>
+
+          <div class="clearfix"></div>
+
+          <div style="float: left; margin: 10px">
+          <a href="2">
+          <h2>
+          Soyez informé
+          </h2>
+
+
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="3">
+          <h2>
+          Où iraient-ils ?
+          </h2>
+
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="4">
+          <h2>
+          Équipes de danse
+          </h2>
+
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="5">
+          <h2>
+          Noires
+          </h2>
+
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="6">
+          <h2>
+          Basse, Médium, Aïgu
+          </h2>
+
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="7">
+          <h2>
+          Accélérer, Ralentir
+          </h2>
+
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
+
+          </div>
       DigitalFootprint-Unplugged:
         markdown: |
           # Votre Empreinte Digital
@@ -1073,7 +1167,8 @@ fr-FR:
         - text: Quelle flèche amène le Flurb au trésor ?
         answers:
         - {}
-        - correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/down.png"
+          correct: true
         - {}
         - {}
       K-1 Keep it Private Multi 1:
@@ -1112,7 +1207,7 @@ fr-FR:
         - correct: true
       K-1 Maze Match 1:
         title: Correspondance
-        content2: Fais correspondre les puzzles et les blocs
+        content2: Fais correspondre les situations et les blocs
         pre_title: Consignes
         questions:
         - {}
@@ -1172,7 +1267,8 @@ fr-FR:
         - text: Quel mot est épelé\_?
         answers:
         - text: ENSEMBLE
-        - correct: true
+        - text: CARRÉ
+          correct: true
         - text: SUD
       MoveItMoveIt-Unplugged:
         markdown: |
@@ -1795,7 +1891,9 @@ fr-FR:
             chaque fleur et le miel à chaque nid d'abeilles.
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         questions:
-        - {}
+        - text: 'Regarde attentivement le code suivant. Que penses-tu qu''il se passera
+            après avoir cliquer sur "Démarrer"? Souviens toi: il y aura toujours seulement
+            pour une abeille *un* nid d''abeilles ou *une* fleur derrière chaque nuage.'
         answers:
         - text: L'abeille ramassera le nectar de chaque fleur et le miel de chaque
             nid d'abeilles.
@@ -1968,20 +2066,30 @@ fr-FR:
             sur "Démarrer"?
         answers:
         - text: Le cuilleur ramassera toute les plantes.
-        - {}
+        - feedback: Incorrect. Le code verra le cueilleur répéter le modèle des marches
+            d'escalier et ramasser autant de laitues et plantes qu'il croise. Il ne
+            ramassera pas la citrouille.
         - correct: true
           feedback: Correct!
         - text: Je ne sais pas.
+          feedback: Le code verra le cueilleur répéter le modèle des marches d'escalier
+            et ramasser autant de laitues et plantes qu'il croise. Il ne ramassera
+            pas la citrouille.
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         questions:
         - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyer
             sur "Démarrer"?
         answers:
         - text: Le cuilleur ramassera toute les plantes.
-        - {}
+        - feedback: Incorrect. Le code verra le cueilleur répéter le modèle des marches
+            d'escalier et ramasser autant de laitues et plantes qu'il croise. Il ne
+            ramassera pas la citrouille.
         - correct: true
           feedback: Correct!
         - text: Je ne sais pas.
+          feedback: Le code verra le cueilleur répéter le modèle des marches d'escalier
+            et ramasser autant de laitues et plantes qu'il croise. Il ne ramassera
+            pas la citrouille.
       courseD_multi_farmer_ramp13:
         questions:
         - {}

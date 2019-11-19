@@ -454,6 +454,7 @@ uk:
             '"rotation"': поворот
             '"x"': горизонтальне положення
             '"y"': вертикальне положення
+            '"tint"': відтінок
       Dancelab_setPropRandom:
         text: випадково {SPRITE} {PROPERTY}
         options:
@@ -635,6 +636,14 @@ uk:
             '"bass"': низькі тони
             '"mid"': середні тони
             '"treble"': високі тони
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': діамант
+            '"x"': x
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
       Dancelab_whenKey:
         text: коли натиснуто {KEY}
         options:
@@ -656,6 +665,8 @@ uk:
             '1': середні тони
             '2': високі тони
       Dancelab_whenSetup:
+        text: налаштування
+      Dancelab_whenSetup2:
         text: налаштування
       gamelab_changePropBy:
         text: змінити {SPRITE} {PROPERTY} на {VAL}

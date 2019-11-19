@@ -126,24 +126,6 @@ class User < ActiveRecord::Base
   PROVIDER_MIGRATED = 'migrated'.freeze
   after_create_commit :migrate_to_multi_auth
 
-  # Powerschool note: the Powerschool plugin lives at https://github.com/code-dot-org/powerschool
-  OAUTH_PROVIDERS = %w(
-    clever
-    facebook
-    google_oauth2
-    lti_lti_prod_kids.qwikcamps.com
-    the_school_project
-    twitter
-    windowslive
-    microsoft_v2_auth
-    powerschool
-  ).freeze
-
-  OAUTH_PROVIDERS_UNTRUSTED_EMAIL = %w(
-    clever
-    powerschool
-  ).freeze
-
   SYSTEM_DELETED_USERNAME = 'sys_deleted'
 
   # constants for resetting user secret words/picture
@@ -467,6 +449,7 @@ class User < ActiveRecord::Base
     :hash_email,
     :sanitize_race_data_set_urm,
     :fix_by_user_type
+
   before_save :remove_cleartext_emails, if: -> {student? && migrated? && user_type_changed?}
 
   before_validation :update_share_setting, unless: :under_13?
@@ -500,6 +483,25 @@ class User < ActiveRecord::Base
     # Make sure we explicitly return true here so Rails doesn't interpret a
     # potential `self.urm = false` as us trying to halt the callback chain
     true
+  end
+
+  # Implement validation that refuses to set admin:true attribute unless
+  # there's a Code.org google sso option present.  Unmigrated users are
+  # not allowed to be admins.
+  validate :enforce_google_sso_for_admin
+  def enforce_google_sso_for_admin
+    return unless admin
+
+    errors.add(:admin, 'must be a migrated user') unless migrated?
+
+    google_oauth = google_oauth_authentications
+    errors.add(:admin, 'must have Google OAuth') unless google_oauth&.present?
+
+    errors.add(:admin, 'email must have code.org domain') unless google_oauth.any?(&:codeorg_email?)
+  end
+
+  def google_oauth_authentications
+    authentication_options&.where(credential_type: AuthenticationOption::GOOGLE)
   end
 
   def fix_by_user_type
@@ -674,9 +676,9 @@ class User < ActiveRecord::Base
     user.user_type = 'teacher' if user.user_type == 'staff' # Powerschool sends through 'staff' instead of 'teacher'
 
     # Store emails, except when using Clever
-    user.email = auth.info.email unless user.user_type == 'student' && OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(auth.provider)
+    user.email = auth.info.email unless user.user_type == 'student' && AuthenticationOption::UNTRUSTED_EMAIL_CREDENTIAL_TYPES.include?(auth.provider)
 
-    if OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(auth.provider) && User.find_by_email_or_hashed_email(user.email)
+    if AuthenticationOption::UNTRUSTED_EMAIL_CREDENTIAL_TYPES.include?(auth.provider) && User.find_by_email_or_hashed_email(user.email)
       user.email = user.email + '.oauthemailalreadytaken'
     end
 
@@ -712,7 +714,7 @@ class User < ActiveRecord::Base
     if migrated?
       authentication_options.any?(&:oauth?)
     else
-      OAUTH_PROVIDERS.include? provider
+      AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include? provider
     end
   end
 
@@ -720,7 +722,7 @@ class User < ActiveRecord::Base
     if migrated?
       authentication_options.all?(&:oauth?) && encrypted_password.blank?
     else
-      OAUTH_PROVIDERS.include?(provider) && encrypted_password.blank?
+      AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include?(provider) && encrypted_password.blank?
     end
   end
 

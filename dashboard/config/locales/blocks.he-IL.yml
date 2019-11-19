@@ -594,6 +594,7 @@ he:
             '"rotation"': סיבוב
             '"x"': מיקום אופקי
             '"y"': מיקום אנכי
+            '"tint"': גוון
       Dancelab_setPropRandom:
         text: קבע באקראי את {PROPERTY} של {SPRITE}
         options:
@@ -775,6 +776,36 @@ he:
             '"bass"': באס
             '"mid"': אמצע
             '"treble"': טְרֶבֶּל
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"hearts_colorful"': לבבות
+            '"diamond"': יהלום
+            '"l"': l
+            '"m"': m
+            '"n"': מ
+            '"o"': o
+            '"p"': p
+            '"q"': "/"
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenKey:
         text: כשמקש {KEY} לחוץ
         options:
@@ -829,6 +860,8 @@ he:
             '1': אמצע
             '2': טְרֶבֶּל
       Dancelab_whenSetup:
+        text: הגדרה
+      Dancelab_whenSetup2:
         text: הגדרה
       gamelab_addBehaviorSimple:
         text: דמות {SPRITE} מתחילה {BEHAVIOR}
