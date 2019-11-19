@@ -48,17 +48,21 @@ class AuthenticationOption < ApplicationRecord
     TWITTER = 'twitter',
     WINDOWS_LIVE = 'windowslive',
     MICROSOFT = 'microsoft_v2_auth',
-  ]
+  ].freeze
+
+  CREDENTIAL_TYPES = [
+    EMAIL = 'email',
+    OAUTH_CREDENTIAL_TYPES,
+  ].flatten.freeze
 
   UNTRUSTED_EMAIL_CREDENTIAL_TYPES = [
     CLEVER,
     POWERSCHOOL
   ].freeze
 
-  CREDENTIAL_TYPES = [
-    EMAIL = 'email',
-    OAUTH_CREDENTIAL_TYPES,
-  ].flatten
+  TRUSTED_EMAIL_CREDENTIAL_TYPES = (
+    CREDENTIAL_TYPES - UNTRUSTED_EMAIL_CREDENTIAL_TYPES
+  ).freeze
 
   SILENT_TAKEOVER_CREDENTIAL_TYPES = [
     FACEBOOK,
@@ -66,7 +70,9 @@ class AuthenticationOption < ApplicationRecord
     # TODO: (madelynkasula) Remove once we are sure users are no longer logging in via windowslive.
     WINDOWS_LIVE,
     MICROSOFT
-  ]
+  ].freeze
+
+  scope :trusted_email, -> {where(credential_type: TRUSTED_EMAIL_CREDENTIAL_TYPES)}
 
   def codeorg_email?
     Mail::Address.new(email).domain == 'code.org'
