@@ -55,6 +55,18 @@ class AuthenticationOption < ApplicationRecord
     OAUTH_CREDENTIAL_TYPES,
   ].flatten.freeze
 
+  # "untrusted" emails are a somewhat subtle concept.
+  #
+  # They specifically refer to emails we receive from a provider that
+  #
+  # A) Does not themselves enforce uniqueness and/or
+  # B) Does not allow the user to change the email they have been assigned.
+  #
+  # In this case, we cannot ourselves enforce uniqueness because we don't want
+  # to punish users who were assigned an email that might not be theirs (and
+  # which might conflict with a "trusted" email already in our system). We have
+  # to be careful in these cases to not use the email as an identifier for
+  # user, and instead to rely exclusively on authentication_id
   UNTRUSTED_EMAIL_CREDENTIAL_TYPES = [
     CLEVER,
     POWERSCHOOL
