@@ -40,8 +40,17 @@ export default class SVMTrainer {
     if (this.labeledTrainingData.length === 0) {
       return result;
     }
-
-    const res = this.svm.predict([this.converterFn(example)]);
+  
+    let res;
+    /*
+     * To keep SVM behaviour consistent with KNN, if there was only one
+     * data point given, force all predictions to have that label.
+     */
+    if (this.labeledTrainingData.length === 1) {
+      res = [this.labeledTrainingData[0].label];
+    } else {
+      res = this.svm.predict([this.converterFn(example)]);
+    }
 
     // This SVM library uses 1 and -1 as labels; convert back to our 0/1 labeling scheme
     result.predictedClassId = res[0] === 1 ? 1 : 0;
