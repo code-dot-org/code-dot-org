@@ -70,6 +70,34 @@ const styles = {
     marginRight: '6%',
     marginTop: '2%'
   },
+  confirmationDialog: {
+    position: 'absolute',
+    margin: '9%',
+    width: '80%',
+    height: '70%',
+    zIndex: 1,
+    backgroundColor: colors.white,
+    borderRadius: 8,
+    border: `2px solid ${colors.black}`,
+  },
+  confirmationText: {
+    position: 'absolute',
+    fontSize: 32,
+    lineHeight: '26px',
+    marginTop: '10%',
+    left: '50%',
+    transform: 'translateX(-50%)',
+  },
+  confirmationYesButton: {
+    marginLeft: '20%',
+    marginTop: '35%',
+    backgroundColor: colors.green,
+  },
+  confirmationNoButton: {
+    marginLeft: '20%',
+    marginTop: '35%',
+    backgroundColor: colors.red,
+  },
   activityIntroText: {
     position: 'absolute',
     fontSize: 22,
@@ -394,6 +422,34 @@ let Button = class Button extends React.Component {
 };
 Button = Radium(Button);
 
+let ConfirmationDialog = class ConfirmationDialog extends React.Component {
+  static propTypes = {
+    onYesClick: PropTypes.func,
+    onNoClick: PropTypes.func
+  };
+
+  render() {
+    return (
+      <div style={styles.confirmationDialog}>
+        <div style={styles.confirmationText}>Are you sure?</div>
+        <Button
+          onClick={this.props.onYesClick}
+          style={styles.confirmationYesButton}
+        >
+          Yes
+        </Button>
+        <Button
+          onClick={this.props.onNoClick}
+          style={styles.confirmationNoButton}
+        >
+          No
+        </Button>
+      </div>
+    );
+  }
+};
+ConfirmationDialog = Radium(ConfirmationDialog);
+
 const wordSet = {
   short: {
     text: ['What type of fish do you want to train A.I. to detect?'],
@@ -504,8 +560,15 @@ let Train = class Train extends React.Component {
         <Button
           style={styles.resetTrainingButton}
           onClick={() => {
-            resetTraining();
-            toMode(Modes.Loading);
+            const resetTrainingFunction = () => {
+              resetTraining();
+              toMode(Modes.Loading);
+              setState({showConfirmationDialog: false});
+            };
+            setState({
+              showConfirmationDialog: true,
+              confirmationDialogOnYes: resetTrainingFunction
+            });
           }}
         >
           Reset Training
@@ -882,10 +945,17 @@ class Guide extends React.Component {
 
 export default class UI extends React.Component {
   render() {
+    const state = getState();
     const currentMode = getState().currentMode;
 
     return (
       <div>
+        {state.showConfirmationDialog && (
+          <ConfirmationDialog
+            onYesClick={state.confirmationDialogOnYes}
+            onNoClick={() => setState({showConfirmationDialog: false})}
+          />
+        )}
         {currentMode === Modes.Words && <Words />}
         {currentMode === Modes.Training && <Train />}
         {currentMode === Modes.Predicting && <Predict />}
