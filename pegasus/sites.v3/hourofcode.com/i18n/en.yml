@@ -538,6 +538,7 @@
   learn_robotics_banner_heading: 'Robotics and Circuits'
   learn_robotics_banner_blurb: 'Got robots or physical computing kits? Use them with the activities below and make a tangible Hour of Code for students of any age! Some activities even offer a simulator so you can get started without any hardware.'
 
+  tutorial_dance2019_name: "Dance Party 2019"
   tutorial_danceparty_name: "Dance Party"
   tutorial_chibitronics_name: "Chibitronics: Illuminated Story"
   tutorial_athlete_name: "Code your own sports game"
@@ -1698,6 +1699,7 @@
   tutorial_allcancodeapps_shortdescription: "Use the Allcancode Platform to create web and mobile apps from design to delivery."
   tutorial_n2y_shortdescription: "Help Bitt Bott explore Earth using direction arrows."
 
+  tutorial_dance2019_longdescription: "Code a Dance Party to share with your friends. Featuring Katy Perry, Shawn Mendes, Lil Nas X, Panic! At The Disco, Jonas Brothers, and many more!"
   tutorial_danceparty_longdescription: "Code a Dance Party to share with your friends. Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!"
   tutorial_chibitronics_longdescription: "Program a paper circuit to light up your own story."
   tutorial_athlete_longdescription: "Choose between making a basketball game or mix and match across sports!"
@@ -2278,6 +2280,7 @@
   tutorial_allcancodeapps_longdescription: "Use the Allcancode Platform to create web and mobile apps from design to delivery. Application logic is written in Google Blockly, the programming language used in most Code.org activities."
   tutorial_n2y_longdescription: "In these printable activities, students can help a little robot named Bitt Bott explore different landforms on Earth. Students give Bitt Bott simple directions by choosing and circling appropriate directional arrows. Each of the six activities includes simple directions that are supported with symbols from the n2y® SymbolStix PRIME® collection. The symbols help non-readers and beginning readers understand and follow the directions."
 
+  tutorial_dance2019_language: "Arabic, Chinese, Czech, Danish, Dutch, English, Finnish, French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean, Malay, Polish, Portuguese, and 10 more!"
   tutorial_danceparty_language: "English, Arabic, Catalan, Chinese, Czech, Danish, Dutch, Finnish, French, German, Greek, Hungarian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese, Russian, Spanish, Swedish, Thai, Turkish, and Vietnamese"
   tutorial_chibitronics_language: "English"
   tutorial_athlete_language: "English, French, Spanish, Italian, Portuguese (Brazil)"
@@ -2858,6 +2861,7 @@
   tutorial_allcancodeapps_language: "English"
   tutorial_n2y_language: "English"
 
+  tutorial_dance2019_string_detail_grades: "Grades 2+"
   tutorial_danceparty_string_detail_grades: "Grades 2+"
   tutorial_chibitronics_string_detail_grades: "Grades 2-5"
   tutorial_athlete_string_detail_grades: "Grades 2+"
@@ -3438,6 +3442,7 @@
   tutorial_allcancodeapps_string_detail_grades: "Grades 6+"
   tutorial_n2y_string_detail_grades: "Pre-reader+"
 
+  tutorial_dance2019_string_platforms: "All modern browsers, Android tablet, iPad, Unplugged"
   tutorial_danceparty_string_platforms: "All modern browsers, Android tablet, iPad"
   tutorial_chibitronics_string_platforms: "All modern browsers"
   tutorial_athlete_string_platforms: "All modern browsers"
@@ -4018,6 +4023,7 @@
   tutorial_allcancodeapps_string_platforms: "All modern browsers"
   tutorial_n2y_string_platforms: "Unplugged"
 
+  tutorial_dance2019_string_detail_platforms: ""
   tutorial_danceparty_string_detail_platforms: ""
   tutorial_chibitronics_string_detail_platforms: "Chibitronics Chibi Chip and Circuit Sticker LEDs"
   tutorial_athlete_string_detail_platforms: ""
@@ -4598,6 +4604,7 @@
   tutorial_allcancodeapps_string_detail_platforms: ""
   tutorial_n2y_string_detail_platforms: ""
 
+  tutorial_dance2019_string_detail_programming_languages: "Blocks"
   tutorial_danceparty_string_detail_programming_languages: "Blocks"
   tutorial_chibitronics_string_detail_programming_languages: "Blocks"
   tutorial_athlete_string_detail_programming_languages: "Blocks"
