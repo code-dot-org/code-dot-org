@@ -6,23 +6,21 @@ button {
   background-color: white;
   font-size: 120%;
   border-radius: 5px;
-  padding: 1%;
   border: none;
   width: 17%;
+  padding: 16px 30px;
 }
 button:focus {
   outline: white auto 5px;
 }
-@media screen and (max-width: 800px) {
-  button {
-    font-size: 90%;
-  }
-  #activity-intro-text {
-    font-size: 14px;
+@media screen and (max-width: 970px) {
+  .words-button {
+    font-size: 70%;
+    padding: 10px 20px;
   }
 }
-@media screen and (max-width: 600px) {
-  button {
+@media screen and (max-width: 830px) {
+  .words-button {
     font-size: 60%;
   }
 }
@@ -70,5 +68,9 @@ button:focus {
 @media screen and (max-height: 630px) {
   #container {
     max-width: 770px;
+  }
+  .words-button {
+    font-size: 70%;
+    padding: 10px 20px;
   }
 }

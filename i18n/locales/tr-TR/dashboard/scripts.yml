@@ -8797,3 +8797,7 @@ tr:
           stages:
             new stage:
               name: yeni kademe
+        csp4-preview:
+          stages:
+            new stage:
+              name: yeni kademe

@@ -1,5 +1,5 @@
 {
-  "backward": "",
+  "backward": "πίσω",
   "blocksUsed": "Μπλοκ χρησιμοποιημένα: %1",
   "branches": "διακλαδώσεις",
   "catColour": "Χρώμα",
@@ -47,8 +47,8 @@
   "jumpBackward": "κάνε άλμα προς τα πίσω κατά",
   "jumpForward": "κάνε άλμα προς τα εμπρός κατά",
   "jumpToOverDown": "",
-  "jumpToPosition": "",
-  "jumpByDirection": "",
+  "jumpToPosition": "μετάβαση στη θέση %1",
+  "jumpByDirection": "μετάβαση %1 κατά %2 pixels",
   "jumpTooltip": "Μετακινεί τον καλλιτέχνη χωρίς να αφήνει ίχνη.",
   "jumpEastTooltip": "Μετακινεί τον καλλιτέχνη ανατολικά χωρίς να αφήνει σημάδια.",
   "jumpNorthTooltip": "Μετακινεί τον καλλιτέχνη βόρεια χωρίς να αφήνει σημάδια.",

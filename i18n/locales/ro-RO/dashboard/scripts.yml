@@ -4758,3 +4758,7 @@ ro:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
+        csp4-preview:
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
