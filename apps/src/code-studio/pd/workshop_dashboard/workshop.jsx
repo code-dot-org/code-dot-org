@@ -431,30 +431,6 @@ export class Workshop extends React.Component {
     }`;
   }
 
-  renderSignupPanel() {
-    if (this.state.workshop.state !== 'Not Started') {
-      return null;
-    }
-
-    const header = <div>Your workshop sign-up link:</div>;
-
-    const signupUrl = `${location.origin}/pd/workshops/${
-      this.props.params.workshopId
-    }/enroll`;
-    const content = (
-      <div>
-        <p>
-          Share this link with teachers who need to sign up for your workshop.
-        </p>
-        <a href={signupUrl} target="_blank">
-          {signupUrl}
-        </a>
-      </div>
-    );
-
-    return <WorkshopPanel header={header}>{content}</WorkshopPanel>;
-  }
-
   renderIntroPanel() {
     const header = (
       <div>
@@ -884,7 +860,10 @@ export class Workshop extends React.Component {
 
     return (
       <Grid>
-        {this.renderSignupPanel()}
+        <SignUpPanel
+          workshopId={this.props.params.workshopId}
+          workshopState={this.state.workshop.state}
+        />
         {this.renderIntroPanel()}
         {this.renderAttendancePanel()}
         {this.renderEndWorkshopPanel()}
@@ -941,3 +920,34 @@ WorkshopPanel.propTypes = {
   header: PropTypes.node,
   children: PropTypes.node
 };
+
+class SignUpPanel extends React.Component {
+  static propTypes = {
+    workshopId: PropTypes.string,
+    workshopState: PropTypes.string
+  };
+
+  render() {
+    if (this.props.workshopState !== 'Not Started') {
+      return null;
+    }
+
+    const header = <div>Your workshop sign-up link:</div>;
+
+    const signupUrl = `${location.origin}/pd/workshops/${
+      this.props.workshopId
+    }/enroll`;
+    const content = (
+      <div>
+        <p>
+          Share this link with teachers who need to sign up for your workshop.
+        </p>
+        <a href={signupUrl} target="_blank">
+          {signupUrl}
+        </a>
+      </div>
+    );
+
+    return <WorkshopPanel header={header}>{content}</WorkshopPanel>;
+  }
+}
