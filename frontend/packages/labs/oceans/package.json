@@ -1,6 +1,6 @@
 {
   "name": "@code-dot-org/ml-activities",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "",
   "main": "dist/main.js",
   "jest": {
