@@ -13,6 +13,7 @@ export default storybook => {
           courseId={100}
           scriptId={20}
           assignToSection={action('assignToSection')}
+          updateHiddenScript={action('updateHiddenScript')}
         />
       )
     }

@@ -236,8 +236,7 @@ class AuthenticationOptionTest < ActiveSupport::TestCase
     #
     # Therefore, we enforce that a credential with that email can only be
     # associated with a user account that has that email.
-    AuthenticationOption::CREDENTIAL_TYPES.each do |credential_type|
-      next if AuthenticationOption::UNTRUSTED_EMAIL_CREDENTIAL_TYPES.include? credential_type
+    AuthenticationOption::TRUSTED_EMAIL_CREDENTIAL_TYPES.each do |credential_type|
       option = build :authentication_option, credential_type: credential_type
       create(:user, email: option.email)
       refute option.valid?
@@ -254,11 +253,22 @@ class AuthenticationOptionTest < ActiveSupport::TestCase
     # Therefore, we allow a user account to use a credential with that email
     # even if there already exists a different user account with that same
     # email.
-    AuthenticationOption::CREDENTIAL_TYPES.each do |credential_type|
-      next unless AuthenticationOption::UNTRUSTED_EMAIL_CREDENTIAL_TYPES.include? credential_type
+    AuthenticationOption::UNTRUSTED_EMAIL_CREDENTIAL_TYPES.each do |credential_type|
       option = build :authentication_option, credential_type: credential_type
       create(:user, email: option.email)
       assert option.valid?
     end
+  end
+
+  test "untrusted emails do not violate uniqueness for trusted emails" do
+    untrusted = create :authentication_option,
+      credential_type: AuthenticationOption::UNTRUSTED_EMAIL_CREDENTIAL_TYPES.sample
+    assert untrusted.valid?
+
+    trusted = create :authentication_option,
+      email: untrusted.email,
+      hashed_email: untrusted.hashed_email,
+      credential_type: AuthenticationOption::TRUSTED_EMAIL_CREDENTIAL_TYPES.sample
+    assert trusted.valid?
   end
 end

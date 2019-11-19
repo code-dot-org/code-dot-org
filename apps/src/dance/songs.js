@@ -6,19 +6,12 @@ import Sounds from '../Sounds';
  * @param useRestrictedSongs {boolean} if true, request signed cloudfront
  * cookies in parallel with the request for the manifest, and use /restricted/
  * urls instead of curriculum.code.org urls for music files.
- * @param is2019Script {boolean} if true, request the songs from the 2019 Dance Party
- * Otherwise, use the songs from the Dance Party in 2018.
  * @returns {Promise<*>} The song manifest.
  */
-export async function getSongManifest(useRestrictedSongs, is2019Script) {
-  let manifestFilename = 'testManifest.json';
-  if (useRestrictedSongs) {
-    if (is2019Script) {
-      manifestFilename = 'songManifest2019.json';
-    } else {
-      manifestFilename = 'songManifest.json';
-    }
-  }
+export async function getSongManifest(useRestrictedSongs) {
+  let manifestFilename = useRestrictedSongs
+    ? 'songManifest2019.json'
+    : 'testManifest.json';
 
   const songManifestPromise = fetch(
     `/api/v1/sound-library/hoc_song_meta/${manifestFilename}`
