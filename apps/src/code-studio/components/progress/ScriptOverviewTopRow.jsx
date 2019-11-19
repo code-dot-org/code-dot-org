@@ -115,19 +115,17 @@ class ScriptOverviewTopRow extends React.Component {
               </DropdownButton>
             </div>
           )}
-        {!professionalLearningCourse &&
-          viewAs === ViewType.Teacher &&
-          showAssignButton && (
-            <SectionAssigner
-              sections={sectionsForDropdown}
-              selectedSectionId={selectedSectionId}
-              assignmentName={scriptTitle}
-              showAssignButton={showAssignButton}
-              courseId={currentCourseId}
-              scriptId={scriptId}
-              forceReload={true}
-            />
-          )}
+        {!professionalLearningCourse && viewAs === ViewType.Teacher && (
+          <SectionAssigner
+            sections={sectionsForDropdown}
+            selectedSectionId={selectedSectionId}
+            assignmentName={scriptTitle}
+            showAssignButton={showAssignButton}
+            courseId={currentCourseId}
+            scriptId={scriptId}
+            forceReload={true}
+          />
+        )}
         <div style={isRtl ? styles.left : styles.right}>
           <span>
             <ProgressDetailToggle />
