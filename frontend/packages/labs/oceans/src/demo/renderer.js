@@ -493,16 +493,12 @@ const drawPondFishImages = () => {
 
     const size = pondClickedFishUs ? 1 : 0.5;
 
-    drawSingleFish(fish, finalX, finalY, ctx, size);
+    const fishBound = drawSingleFish(fish, finalX, finalY, ctx, size);
 
     // Record this screen location so that we can separately check for clicks on it.
     fishBounds.push({
       fishId: fish.id,
-      x: finalX,
-      y: finalY,
-      w: constants.fishCanvasWidth / 2,
-      h: constants.fishCanvasHeight / 2,
-      confidence: fish.result
+      ...fishBound
     });
     setState({pondFishBounds: fishBounds}, {skipCallback: true});
   });
@@ -511,6 +507,7 @@ const drawPondFishImages = () => {
 // Draw a single fish, preferably from cached canvas.
 // Used by drawMovingFish and drawPondFishImages.
 // Takes an optional size multipler, where 0.5 means fish are half size.
+// Returns an object with x, y, width and height of actual draw.
 const drawSingleFish = (
   fish,
   fishXPos,
@@ -549,13 +546,12 @@ const drawSingleFish = (
     );
   }
 
-  ctx.drawImage(
-    fishCanvas,
-    Math.round(adjustedFishXPos),
-    Math.round(adjustedFishYPos),
-    width,
-    height
-  );
+  const finalX = Math.round(adjustedFishXPos);
+  const finalY = Math.round(adjustedFishYPos);
+
+  ctx.drawImage(fishCanvas, finalX, finalY, width, height);
+
+  return {x: finalX, y: finalY, w: width, h: height};
 };
 
 // Clear the sprite canvas.
