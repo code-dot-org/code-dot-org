@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 106,
   "properties": {
-    "video_key": "ocean_training_data",
+    "video_key": "oceans_training_data",
     "display_name": "Video: Training Data",
     "video_rounded_corners": true,
     "video_full_width": true
