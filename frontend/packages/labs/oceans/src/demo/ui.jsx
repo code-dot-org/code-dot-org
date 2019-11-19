@@ -78,7 +78,7 @@ const styles = {
     zIndex: 1,
     backgroundColor: colors.white,
     borderRadius: 8,
-    border: `2px solid ${colors.black}`,
+    border: `2px solid ${colors.black}`
   },
   confirmationText: {
     position: 'absolute',
@@ -86,17 +86,17 @@ const styles = {
     lineHeight: '26px',
     marginTop: '10%',
     left: '50%',
-    transform: 'translateX(-50%)',
+    transform: 'translateX(-50%)'
   },
   confirmationYesButton: {
     marginLeft: '20%',
     marginTop: '35%',
-    backgroundColor: colors.green,
+    backgroundColor: colors.green
   },
   confirmationNoButton: {
     marginLeft: '20%',
     marginTop: '35%',
-    backgroundColor: colors.red,
+    backgroundColor: colors.red
   },
   activityIntroText: {
     position: 'absolute',
@@ -130,7 +130,7 @@ const styles = {
   resetTrainingButton: {
     position: 'absolute',
     top: 10,
-    right: 10
+    left: 10
   },
   trainQuestionText: {
     position: 'absolute',
@@ -433,16 +433,16 @@ let ConfirmationDialog = class ConfirmationDialog extends React.Component {
       <div style={styles.confirmationDialog}>
         <div style={styles.confirmationText}>Are you sure?</div>
         <Button
-          onClick={this.props.onYesClick}
-          style={styles.confirmationYesButton}
-        >
-          Yes
-        </Button>
-        <Button
           onClick={this.props.onNoClick}
           style={styles.confirmationNoButton}
         >
           No
+        </Button>
+        <Button
+          onClick={this.props.onYesClick}
+          style={styles.confirmationYesButton}
+        >
+          Yes
         </Button>
       </div>
     );
