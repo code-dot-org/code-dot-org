@@ -673,9 +673,22 @@ Predict = Radium(Predict);
 
 class Pond extends React.Component {
   onPondClick(e) {
+    // Don't allow pond clicks if a Guide is currently showing.
+    if (getCurrentGuide()) {
+      return;
+    }
+
     const state = getState();
     const clickX = e.nativeEvent.offsetX;
     const clickY = e.nativeEvent.offsetY;
+
+    const boundingRect = e.target.getBoundingClientRect();
+    const pondWidth = boundingRect.width;
+    const pondHeight = boundingRect.height;
+
+    // Scale the click to the pond canvas dimensions.
+    const normalizedClickX = clickX / pondWidth * constants.canvasWidth;
+    const normalizedClickY = clickY / pondHeight * constants.canvasHeight;
 
     if (state.pondFishBounds) {
       let fishClicked = false;
@@ -696,8 +709,8 @@ class Pond extends React.Component {
             fishBound.y,
             fishBound.w,
             fishBound.h,
-            clickX,
-            clickY,
+            normalizedClickX,
+            normalizedClickY,
             1,
             1
           )
@@ -706,11 +719,9 @@ class Pond extends React.Component {
             pondClickedFish: {
               id: fishBound.fishId,
               x: fishBound.x,
-              y: fishBound.y,
-              confidence: fishBound.confidence
+              y: fishBound.y
             }
           });
-          console.log('Fish clicked confidence: ', fishBound.confidence);
           fishClicked = true;
         }
       });
@@ -724,44 +735,9 @@ class Pond extends React.Component {
   render() {
     const state = getState();
 
-    const showFishDetails = !!state.pondClickedFish;
-    let pondFishDetailsStyle;
-    let confidence;
-    if (showFishDetails) {
-      const fish = state.pondClickedFish;
-
-      const leftX = Math.min(
-        Math.max(state.pondClickedFish.x + 200, 20),
-        constants.canvasWidth - 210
-      );
-      const topY = Math.min(
-        Math.max(state.pondClickedFish.y, 20),
-        constants.canvasHeight - 50
-      );
-
-      pondFishDetailsStyle = {
-        ...styles.pondFishDetails,
-        left: leftX,
-        top: topY
-      };
-
-      if (!fish.confidence || !fish.confidence.confidencesByClassId) {
-        confidence = 'Not confident';
-      } else if (fish.confidence.confidencesByClassId[0] > 0.99) {
-        confidence = 'Very confident';
-      } else if (fish.confidence.confidencesByClassId[0] > 0.5) {
-        confidence = 'Fairly confident';
-      } else {
-        confidence = 'Not very confident';
-      }
-    }
-
     return (
-      <Body onClick={this.onPondClick}>
+      <Body onClick={(e) => this.onPondClick(e)}>
         <img style={styles.pondBot} src={aiBotClosed} />
-        {showFishDetails && (
-          <div style={pondFishDetailsStyle}>{confidence}</div>
-        )}
         {state.canSkipPond && (
           <div>
             <Button
