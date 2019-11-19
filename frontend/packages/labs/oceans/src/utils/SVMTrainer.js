@@ -15,7 +15,7 @@ export default class SVMTrainer {
   addTrainingExample(example, classId) {
     // This SVM library only accepts 1 and -1 as labels; convert from our 0/1 labeling scheme
     const convertedExample = this.converterFn(example);
-    const svmLabel = (classId === 1 ? 1 : -1);
+    const svmLabel = classId === 1 ? 1 : -1;
     this.labeledTrainingData.push({example: convertedExample, label: svmLabel});
   }
 
@@ -40,7 +40,7 @@ export default class SVMTrainer {
     if (this.labeledTrainingData.length === 0) {
       return result;
     }
-  
+
     let res;
     /*
      * To keep SVM behaviour consistent with KNN, if there was only one
