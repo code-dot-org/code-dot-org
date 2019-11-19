@@ -15,12 +15,12 @@ export default class SVMTrainer {
   addTrainingExample(example, classId) {
     // This SVM library only accepts 1 and -1 as labels; convert from our 0/1 labeling scheme
     const convertedExample = this.converterFn(example);
-    const svmLabel = (classId === 1 ? 1 : -1);
+    const svmLabel = classId === 1 ? 1 : -1;
     this.labeledTrainingData.push({example: convertedExample, label: svmLabel});
   }
 
   train() {
-    if (this.labeledTrainingData.length > 0) {
+    if (this.labeledTrainingData.length > 1) {
       const trainingData = this.labeledTrainingData.map(ld => ld.example);
       const trainingLabels = this.labeledTrainingData.map(ld => ld.label);
       this.svm.train(trainingData, trainingLabels, this.svmParams);
@@ -41,7 +41,16 @@ export default class SVMTrainer {
       return result;
     }
 
-    const res = this.svm.predict([this.converterFn(example)]);
+    let res;
+    /*
+     * To keep SVM behaviour consistent with KNN, if there was only one
+     * data point given, force all predictions to have that label.
+     */
+    if (this.labeledTrainingData.length === 1) {
+      res = [this.labeledTrainingData[0].label];
+    } else {
+      res = this.svm.predict([this.converterFn(example)]);
+    }
 
     // This SVM library uses 1 and -1 as labels; convert back to our 0/1 labeling scheme
     result.predictedClassId = res[0] === 1 ? 1 : 0;
