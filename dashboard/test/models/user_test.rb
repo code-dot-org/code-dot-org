@@ -4140,43 +4140,51 @@ class UserTest < ActiveSupport::TestCase
     assert_equal teacher.user_school_infos.count, 2
   end
 
-  test 'does set admin to true when google oauth codeorg account' do
+  test 'can grant admin role with google oauth, codeorg account' do
     email = 'fernhunt@code.org'
     migrated_teacher = create(:teacher, :with_google_authentication_option, email: email)
 
-    migrated_teacher.admin = true
-    migrated_teacher.save!
+    migrated_teacher.update!(admin: true)
 
-    assert migrated_teacher.admin
+    assert migrated_teacher.valid?
+    assert migrated_teacher.errors[:admin].empty?
   end
 
-  test 'does set admin to false when it is not a google oauth codeorg account' do
+  test 'cannot grant admin role when google authentication option not does exist' do
     email = 'annieeasley@code.org'
     migrated_teacher = create(:teacher, email: email)
 
-    migrated_teacher.admin = true
-    migrated_teacher.save!
+    assert_raises(ActiveRecord::RecordInvalid) do
+      migrated_teacher.update!(admin: true)
+    end
 
-    refute migrated_teacher.admin
+    refute migrated_teacher.reload.admin?
+    assert migrated_teacher.errors[:admin].length == 2
+    assert_equal ["Admin must have Google OAuth", "Admin email must have code.org domain"], migrated_teacher.errors.full_messages
   end
 
-  test 'does set admin to false when it is not a codeorg account' do
+  test 'cannot grant admin role when not a codeorg account' do
     email = 'milesmorales@gmail.com'
     migrated_teacher = create(:teacher, :with_google_authentication_option, email: email)
+    assert_raises(ActiveRecord::RecordInvalid) do
+      migrated_teacher.update!(admin: true)
+    end
 
-    migrated_teacher.admin = true
-    migrated_teacher.save!
-
-    refute migrated_teacher.admin
+    refute migrated_teacher.reload.admin?
+    assert migrated_teacher.errors[:admin].length == 1
+    assert_equal ["Admin email must have code.org domain"], migrated_teacher.errors.full_messages
   end
 
-  test 'does set admin to false when unmigrated teacher account' do
+  test 'cannot grant admin role when unmigrated teacher account' do
     unmigrated_teacher_without_password = create :teacher, :demigrated
     unmigrated_teacher_without_password.update_attribute(:encrypted_password, '')
 
-    unmigrated_teacher_without_password.admin = true
-    unmigrated_teacher_without_password.save!
+    assert_raises(ActiveRecord::RecordInvalid) do
+      unmigrated_teacher_without_password.update!(admin: true)
+    end
 
-    refute unmigrated_teacher_without_password.admin
+    refute unmigrated_teacher_without_password.reload.admin?
+    assert unmigrated_teacher_without_password.errors[:admin].length == 3
+    assert_equal ["Admin must be a migrated user", "Admin must have Google OAuth", "Admin email must have code.org domain"], unmigrated_teacher_without_password.errors.full_messages
   end
 end

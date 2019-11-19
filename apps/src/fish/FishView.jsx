@@ -34,8 +34,7 @@ const styles = {
   activityCanvas: {
     width: '100%',
     borderRadius: '10px',
-    border: '2px solid black',
-    backgroundColor: 'white'
+    border: '2px solid black'
   }
 };
 
