@@ -5,7 +5,7 @@ import _ from 'lodash';
 import {getState, setState} from './state';
 import constants, {AppMode, Modes} from './constants';
 import {toMode} from './toMode';
-import {$time, currentRunTime, finishMovement} from './helpers';
+import {$time, currentRunTime, finishMovement, resetTraining} from './helpers';
 import {onClassifyFish} from './models/train';
 import colors from './colors';
 import aiBotClosed from '../../public/images/ai-bot/ai-bot-closed.png';
@@ -756,6 +756,19 @@ class Pond extends React.Component {
       }
     }
 
+    const nextButtonText =
+      state.appMode === AppMode.FishLong ? 'Play Again' : 'Continue';
+    const nextButtonOnClick = () => {
+      if (state.appMode === AppMode.FishLong) {
+        resetTraining();
+        toMode(Modes.Words);
+      } else {
+        if (state.onContinue) {
+          state.onContinue();
+        }
+      }
+    };
+
     return (
       <Body onClick={this.onPondClick}>
         <img style={styles.pondBot} src={aiBotClosed} />
@@ -764,15 +777,8 @@ class Pond extends React.Component {
         )}
         {state.canSkipPond && (
           <div>
-            <Button
-              style={styles.continueButton}
-              onClick={() => {
-                if (state.onContinue) {
-                  state.onContinue();
-                }
-              }}
-            >
-              Continue
+            <Button style={styles.continueButton} onClick={nextButtonOnClick}>
+              {nextButtonText}
             </Button>
             <Button
               style={styles.backButton}
