@@ -11,6 +11,7 @@ import colors from './colors';
 import aiBotClosed from '../../public/images/ai-bot/ai-bot-closed.png';
 import Typist from 'react-typist';
 import {getCurrentGuide, dismissCurrentGuide} from './models/guide';
+import {playSound} from './models/soundLibrary';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {
   faPlay,
@@ -366,12 +367,21 @@ let Button = class Button extends React.Component {
     className: PropTypes.string,
     style: PropTypes.object,
     children: PropTypes.node,
-    onClick: PropTypes.func
+    onClick: PropTypes.func,
+    sound: PropTypes.string
   };
 
   onClick(event) {
     dismissCurrentGuide();
-    this.props.onClick(event);
+    const clickReturnValue = this.props.onClick(event);
+
+    if (clickReturnValue !== false) {
+      if (this.props.sound && clickReturnValue !== false) {
+        playSound(this.props.sound);
+      } else {
+        playSound('other');
+      }
+    }
   }
 
   render() {
@@ -501,13 +511,19 @@ let Train = class Train extends React.Component {
         <div style={styles.trainButtons}>
           <Button
             style={styles.trainButtonNo}
-            onClick={() => onClassifyFish(false)}
+            onClick={() => {
+              return onClassifyFish(false);
+            }}
+            sound={'no'}
           >
             {noButtonText}
           </Button>
           <Button
             style={styles.trainButtonYes}
-            onClick={() => onClassifyFish(true)}
+            onClick={() => {
+              return onClassifyFish(true);
+            }}
+            sound={'yes'}
           >
             {yesButtonText}
           </Button>
@@ -672,6 +688,10 @@ let Predict = class Predict extends React.Component {
 Predict = Radium(Predict);
 
 class Pond extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   onPondClick(e) {
     const state = getState();
     const clickX = e.nativeEvent.offsetX;
@@ -800,6 +820,13 @@ class Guide extends React.Component {
     setState({guideShowing: true});
   }
 
+  dismissGuideClick() {
+    const dismissed = dismissCurrentGuide();
+    if (dismissed) {
+      playSound('other');
+    }
+  }
+
   render() {
     const currentGuide = getCurrentGuide();
 
@@ -823,7 +850,7 @@ class Guide extends React.Component {
                 ? styles.guideBackgroundHidden
                 : styles.guideBackground
             }
-            onClick={dismissCurrentGuide}
+            onClick={this.dismissGuideClick}
           >
             <div
               style={{...styles.guide, ...styles[`guide${currentGuide.style}`]}}
@@ -867,6 +894,10 @@ class Guide extends React.Component {
 }
 
 export default class UI extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     const currentMode = getState().currentMode;
 

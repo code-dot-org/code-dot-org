@@ -493,5 +493,9 @@ export function dismissCurrentGuide() {
     let newGuideDismissals = [...currentGuideDismissals];
     newGuideDismissals.push(currentGuide.id);
     setState({guideDismissals: newGuideDismissals, guideShowing: false});
+
+    return true;
   }
+
+  return false;
 }
