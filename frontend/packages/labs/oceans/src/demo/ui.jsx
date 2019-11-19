@@ -690,8 +690,6 @@ Predict = Radium(Predict);
 class Pond extends React.Component {
   constructor(props) {
     super(props);
-
-    playSound('ambience');
   }
 
   onPondClick(e) {
