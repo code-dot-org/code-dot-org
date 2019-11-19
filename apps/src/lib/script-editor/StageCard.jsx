@@ -14,6 +14,7 @@ import {
 } from './editorRedux';
 import FlexCategorySelector from './FlexCategorySelector';
 import color from '../../util/color';
+import RemoveLevelDialog from './RemoveLevelDialog';
 
 const styles = {
   checkbox: {
@@ -82,7 +83,8 @@ export class UnconnectedStageCard extends Component {
     initialClientY: null,
     newPosition: null,
     startingPositions: null,
-    editingFlexCategory: false
+    editingFlexCategory: false,
+    levelPosToRemove: null
   };
 
   handleDragStart = (position, {clientY}) => {
@@ -183,6 +185,14 @@ export class UnconnectedStageCard extends Component {
     this.props.addLevel(this.props.stage.position);
   };
 
+  handleRemoveLevel = levelPos => {
+    this.setState({levelPosToRemove: levelPos});
+  };
+
+  handleClose = () => {
+    this.setState({levelPosToRemove: null});
+  };
+
   handleEditFlexCategory = () => {
     this.setState({
       editingFlexCategory: true
@@ -213,7 +223,7 @@ export class UnconnectedStageCard extends Component {
 
   render() {
     const {stage, targetStagePos} = this.props;
-    const {draggedLevelPos} = this.state;
+    const {draggedLevelPos, levelPosToRemove} = this.state;
     const isTargetStage = targetStagePos === stage.position;
     return (
       <div style={isTargetStage ? styles.targetStageCard : styles.stageCard}>
@@ -226,6 +236,7 @@ export class UnconnectedStageCard extends Component {
             type={ControlTypes.Stage}
             position={stage.position}
             total={this.props.stagesCount}
+            name={this.props.stage.name}
           />
           <label style={styles.stageLockable}>
             Require teachers to unlock this stage before students in their
@@ -255,6 +266,7 @@ export class UnconnectedStageCard extends Component {
             draggedLevelPos={level.position === draggedLevelPos}
             delta={this.state.currentPositions[level.position - 1] || 0}
             handleDragStart={this.handleDragStart}
+            removeLevel={this.handleRemoveLevel}
           />
         ))}
         <div style={styles.bottomControls}>
@@ -289,6 +301,13 @@ export class UnconnectedStageCard extends Component {
             />
           )}
         </div>
+        {/* This dialog lives outside LevelToken because moving it inside can
+           interfere with drag and drop or fail to show the modal backdrop. */}
+        <RemoveLevelDialog
+          stage={stage}
+          levelPosToRemove={levelPosToRemove}
+          handleClose={this.handleClose}
+        />
       </div>
     );
   }
