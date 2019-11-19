@@ -35,13 +35,23 @@ export const SongTitlesToArtistTwitterHandle = {
   wenospeakamericano_yolandabecool: 'YolandaBeCool',
   ymca_villagepeople: 'VillagePeople',
   firework_katyperry: 'KatyPerry',
+  //2019 Songs
+  calma_pedrocapo: 'Pedrocapo',
+  highhopes_panicatthedisco: 'PanicAtTheDisco',
+  ificanthaveyou_shawnmendes: 'ShawnMendes',
+  introtoshamstep_47SOUL: '47soulofficial',
+  kidzbop_ificanthaveyou_shawnmendes: 'KidzBop',
+  neverreallyover_katyperry: 'KatyPerry',
+  occidentalview_francescogabbani: 'FrankGabbani',
+  oldtownroadremix_lilnasx: 'LilNasX',
+  starships_nickiminaj: 'NickiMinaj',
+  sucker_jonasbrothers: 'JonasBrothers',
   // These tracks available locally, tweet @codeorg to avoid spamming anyone.
   jazzy_beats: 'codeorg',
   synthesize: 'codeorg',
   // These tracks are currently only potential. If we get licensing, we'll be
   // able to tweet the artist without an additional DTP.
   onedance_drake: 'Drake',
-  starships_nickiminaj: 'NickiMinaj',
   elprestamo_maluma: 'Maluma',
   despacito_luisfonsi: 'LuisFonsi',
   tunaktunaktun_dalermehndi: 'DalerMehndi',
