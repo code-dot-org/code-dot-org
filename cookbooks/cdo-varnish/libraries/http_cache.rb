@@ -38,6 +38,7 @@ class HttpCache
     basketball
     dance
     dance-2019
+    oceans
   ).map do |script_name|
     # Most scripts use the default route pattern.
     [script_name, "/s/#{script_name}/stage/*"]
