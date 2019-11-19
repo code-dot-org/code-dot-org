@@ -119,6 +119,7 @@ class ContactRollupsV2
     # collect_all_changes(DASHBOARD_DB_READER, DASHBOARD_DB_NAME, :users_view, [])
     collect_all_changes(PEGASUS_DB_READER, PEGASUS_DB_NAME, :contact_location, [:city, :state, :country])
     collect_all_changes(PEGASUS_DB_READER, PEGASUS_DB_NAME, :contact_multi, [:roles, :ages_taught, :grades_taught])
+    collect_all_changes(PEGASUS_DB_READER, PEGASUS_DB_NAME, :contact_mixed, [:country, :roles, :hoc_organizer_years])
   end
 
   def self.collect_all_changes(db_connection, src_db, src_table, columns)
@@ -407,7 +408,8 @@ class ContactRollupsV2
     # Merge values from all sources
     {}.tap do |collapsed_data|
       metadata.values.each do |data_from_src_table|
-        # If data from 2 source tables have the same key, merge their values into an array
+        # If a key appears in 2 or more source tables, merge its values from all tables into an array.
+        # There is no logic to prefer data from one table over others.
         collapsed_data.merge!(data_from_src_table) do |key|
           ([] << collapsed_data[key] << data_from_src_table[key]).flatten
         end
@@ -448,6 +450,29 @@ class ContactRollupsV2
     end
   end
 
+  PARDOT_LOOKUP_TABLE = :pardot_lookup
+
+  def self.build_pardot_lookup_table
+    # Create table
+    # This table can be the seed for any new contact rollups table if we decide to rebuild it.
+    if PEGASUS_DB_WRITER.table_exists?(PARDOT_LOOKUP_TABLE)
+      puts "#{PARDOT_LOOKUP_TABLE} table already exists"
+    else
+      PEGASUS_DB_WRITER.create_table PARDOT_LOOKUP_TABLE do
+        primary_key :id
+        String :email, null: false
+        Integer :pardot_id, null: false
+
+        index :email
+        unique [:email, :pardot_id]
+      end
+      puts "created #{PARDOT_LOOKUP_TABLE} table"
+    end
+
+    # Query Pardot to get data
+    Pardot.download_pardot_ids PARDOT_LOOKUP_TABLE
+  end
+
   def self.main
     create_tables
     collect_data_to_daily_table
@@ -459,12 +484,13 @@ class ContactRollupsV2
   def self.test
     # drop_tables
     # create_tables
-    empty_tables
-    collect_data_to_daily_table
-    update_data_to_main_table
+    # empty_tables
+    # collect_data_to_daily_table
+    # update_data_to_main_table
     # delete_daily_changes('2019-11-11')
-    sync_to_pardot
-    count_table_rows
+    # sync_to_pardot
+    # count_table_rows
+    build_pardot_lookup_table
     nil
   end
 end
