@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 /* global AudioContext */
 import Sound from './Sound';
 

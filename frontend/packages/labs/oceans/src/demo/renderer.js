@@ -6,7 +6,7 @@ import {
   backgroundPathForMode,
   finishMovement,
   currentRunTime,
-  $time
+  $time,
 } from './helpers';
 import colors from './colors';
 import {predictFish} from './models/predict';
@@ -25,7 +25,6 @@ import redScanner from '../../public/images/ai-bot/red-scanner.png';
 import greenScanner from '../../public/images/ai-bot/green-scanner.png';
 import blueScanner from '../../public/images/ai-bot/blue-scanner.png';
 import {playSound} from './models/soundLibrary';
-import {randomInt} from './helpers';
 import checkmarkIcon from '../../public/images/checkmark-icon.png';
 import banIcon from '../../public/images/ban-icon.png';
 
