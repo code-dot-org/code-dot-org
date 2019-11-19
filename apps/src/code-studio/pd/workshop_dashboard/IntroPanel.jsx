@@ -38,7 +38,7 @@ export default class IntroPanel extends React.Component {
   handleAdminActionCancel = () => this.setState({pendingAdminAction: null});
 
   handleAdminActionConfirmed = () => {
-    const {workshopId} = this.props;
+    const {workshopId, loadWorkshop} = this.props;
     const action = this.state.pendingAdminAction;
     this.setState({pendingAdminAction: null});
     this.adminActionRequest = $.ajax({
@@ -46,9 +46,7 @@ export default class IntroPanel extends React.Component {
       url: `/api/v1/pd/workshops/${workshopId}/${action}`,
       dataType: 'json'
     })
-      .done(() => {
-        this.loadWorkshop();
-      })
+      .done(loadWorkshop)
       .fail(data => {
         if (data.statusText !== 'abort') {
           console.log(`Failed to ${action} workshop: ${workshopId}`);
