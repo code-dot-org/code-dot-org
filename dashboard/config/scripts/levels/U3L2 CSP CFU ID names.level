@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "long_instructions": "## Naming Element IDs\r\n\r\nWhy is it important for element IDs to have meanintful names? ",
+    "long_instructions": "## Naming Element IDs\r\n\r\nWhy is it important for element IDs to have meaningful names? ",
     "encrypted_solution": "91PmasBGuZSmiGilha6nfJBFpM/fLcNPv6bxFRQOYA1OUQ0fif5NhHu3bxd6\nHEfICfsLPxxBRByXZSVoJhO3KFX8fOFVKfkJapNkcNfDdPeA3NVW8FA//GBo\ni57MQLfPjvZHyoNws7Wumz/eXmqDk1xmrt/suahLk/DzjDZoLm4pV3Z0GZ/s\n4/k4fUN9TGCW1fmKxBOBjiyAK0YmcFI6byYvx4IcwhIyODWsS+c/oDupV7Gk\n5u6vhSdv4Wpecqb+VhB6YjooMn1Zxbh/lt1ZX5sD1rRgm1C41791ZWywR1l2\nU+bg0WHd+NUNrhm/voi5\n",
     "skip_dialog": true,
     "skip_sound": true,
@@ -20,7 +20,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-08-19 16:02:07 +0000\",\"changed\":[\"notes\",\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-19 16:37:18 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-19 16:58:58 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-26 15:38:01 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-08-19 16:02:07 +0000\",\"changed\":[\"notes\",\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-19 16:37:18 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-19 16:58:58 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-26 15:38:01 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-11-19 15:10:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
