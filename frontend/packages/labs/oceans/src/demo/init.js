@@ -6,6 +6,7 @@ import constants, {Modes} from './constants';
 import {setInitialState, setSetStateCallback} from './state';
 import {render as renderCanvas} from './renderer';
 import {toMode} from './toMode';
+import {injectSoundAPIs} from './models/soundLibrary';
 
 //
 // Required in options:
@@ -19,6 +20,9 @@ export const initAll = function(options) {
 
   canvas.width = backgroundCanvas.width = constants.canvasWidth;
   canvas.height = backgroundCanvas.height = constants.canvasHeight;
+
+  // Pass registerSound and playSound from options to soundLibrary.
+  injectSoundAPIs(options);
 
   // Set initial state for UI elements.
   setInitialState({
