@@ -215,12 +215,12 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     # sign in as that user.
     return sign_in_user user if user.persisted?
 
-    # if a user account with a conflicting email (that could not be
-    # authenticated with the given registration credentals) exists, display an
-    # interim page prompting the user to either log in to that account or
-    # create a new one with a manually-provided email.
-    email_conflict = User.find_by_email_or_hashed_email(user.email).present?
-    return redirect_to users_email_conflict_path({provider: auth_hash.provider, email: user.email}) if email_conflict
+    # if a user account with the same email (that could not be authenticated
+    # with the given registration credentals) exists, display an interim page
+    # prompting the user to either log in to that account or create a new one
+    # with a manually-provided email.
+    existing_account = User.find_by_email_or_hashed_email(user.email).present?
+    return redirect_to users_existing_account_path({provider: auth_hash.provider, email: user.email}) if existing_account
 
     # otherwise, this is a new registration
     register_new_user user
