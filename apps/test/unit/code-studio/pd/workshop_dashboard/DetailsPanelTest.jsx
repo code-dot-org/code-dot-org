@@ -15,17 +15,6 @@ Factory.define('workshop')
   .attr('state', States[0]);
 
 describe('DetailsPanel', () => {
-  function shallowDetailsPanel(props = {}) {
-    return shallow(
-      <DetailsPanel
-        workshop={props.workshop || Factory.build('workshop')}
-        onWorkshopSaved={sinon.spy()}
-        {...props}
-      />,
-      {context: {router: {push: sinon.spy()}}}
-    );
-  }
-
   it('shows a readonly WorkshopForm by default', () => {
     const wrapper = shallowDetailsPanel();
     const workshopForm = wrapper.find('Connect(WorkshopForm)');
@@ -70,11 +59,7 @@ describe('DetailsPanel', () => {
     const wrapper = shallowDetailsPanel({
       view: 'edit'
     });
-    // Also shallow-render the panel header so we can check for controls
-    const headerWrapper = shallow(wrapper.prop('header'));
-    const headerSaveButton = headerWrapper
-      .find('HeaderButton')
-      .filterWhere(n => n.prop('text').includes('Save'));
+    const headerSaveButton = findHeaderButton(wrapper, 'Save');
     assert.isTrue(headerSaveButton.exists(), 'Save button is present');
   });
 
@@ -84,12 +69,28 @@ describe('DetailsPanel', () => {
         workshop: Factory.build('workshop', {state}),
         isWorkshopAdmin: true
       });
-      // Also shallow-render the panel header so we can check for controls
-      const headerWrapper = shallow(wrapper.prop('header'));
-      const headerEditButton = headerWrapper
-        .find('HeaderButton')
-        .filterWhere(n => n.prop('text').includes('Edit'));
+      const headerEditButton = findHeaderButton(wrapper, 'Edit');
       assert.isTrue(headerEditButton.exists(), 'Edit button is present');
     });
   });
+
+  function shallowDetailsPanel(props = {}) {
+    return shallow(
+      <DetailsPanel
+        workshop={Factory.build('workshop')}
+        onWorkshopSaved={sinon.spy()}
+        {...props}
+      />,
+      {context: {router: {push: sinon.spy()}}}
+    );
+  }
+
+  function findHeaderButton(wrapper, buttonText) {
+    // We have to shallow-render the panel header separately so we can check
+    // for controls it contains.
+    const headerWrapper = shallow(wrapper.prop('header'));
+    return headerWrapper
+      .find('HeaderButton')
+      .filterWhere(n => n.prop('text').includes(buttonText));
+  }
 });
