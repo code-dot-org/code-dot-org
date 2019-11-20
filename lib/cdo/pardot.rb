@@ -170,39 +170,6 @@ class Pardot
       update(pardot_sync_at: Time.utc(1970, 1, 1, 0, 0))
   end
 
-  def self.download_pardot_ids(table, max_pardot_id = 0)
-    id_max = PEGASUS_DB[table].max(:pardot_id) || max_pardot_id
-
-    loop do
-      url = "#{PARDOT_PROSPECT_QUERY_URL}?id_greater_than=#{id_max}&fields=email,id,opted_out&sort_by=id"
-      doc = post_with_auth_retry(url)
-
-      raise_if_response_error(doc)
-
-      total_results = doc.xpath('/rsp/result/total_results').text.to_i
-      results_in_response = 0
-
-      # Process every prospect in the response.
-      doc.xpath('/rsp/result/prospect').each do |node|
-        id = node.xpath("id").text.to_i
-        email = node.xpath("email").text
-        results_in_response += 1
-        id_max = id
-
-        if PEGASUS_DB[table].where(email: email).first
-          PEGASUS_DB[table].where(email: email).update(pardot_id: id)
-        else
-          PEGASUS_DB[table].insert({email: email, pardot_id: id})
-        end
-      end
-
-      log "Updated/added Pardot IDs in our database for #{results_in_response} contacts."
-
-      # Stop if all the remaining results were in this response - we're done. Otherwise, keep repeating.
-      break if results_in_response == total_results
-    end
-  end
-
   # Inserts newly added contacts from contact rollups into Pardot
   # @return [Integer] number of contacts inserted
   def self.sync_new_contacts_with_pardot

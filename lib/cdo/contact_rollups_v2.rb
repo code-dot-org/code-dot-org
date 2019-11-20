@@ -118,27 +118,6 @@ class ContactRollupsV2
     end
   end
 
-  def self.create_pardot_lookup_table
-    # This table can be the seed for any new contact rollups table if we decide to rebuild it.
-    if PEGASUS_DB_WRITER.table_exists?(PARDOT_LOOKUP_TABLE)
-      puts "#{PARDOT_LOOKUP_TABLE} table already exists"
-    else
-      PEGASUS_DB_WRITER.create_table PARDOT_LOOKUP_TABLE do
-        primary_key :id
-        String :email, null: false
-        Integer :pardot_id, null: false
-
-        index :email
-        unique [:email, :pardot_id]
-      end
-
-      puts "Created #{PARDOT_LOOKUP_TABLE} table"
-    end
-
-    # Query Pardot to get data
-    Pardot.download_pardot_ids PARDOT_LOOKUP_TABLE
-  end
-
   def self.drop_tables
     PEGASUS_DB_WRITER.drop_table(DAILY_TABLE) if PEGASUS_DB_WRITER.table_exists?(DAILY_TABLE)
     PEGASUS_DB_WRITER.drop_table(MAIN_TABLE) if PEGASUS_DB_WRITER.table_exists?(MAIN_TABLE)
@@ -555,12 +534,6 @@ class ContactRollupsV2
     end
   end
 
-  def self.bootstrap
-    drop_tables
-    create_tables
-    seed_contacts :contact_rollups, MAIN_TABLE
-  end
-
   def self.seed_contacts(src_table, dest_table)
     insert_query = <<-SQL.squish
       insert into #{dest_table}
@@ -577,6 +550,14 @@ class ContactRollupsV2
     raise "Mismatch number of rows inserted into #{dest_table}!" if rows_inserted != rows_to_insert
   end
 
+  # Run once at the very beginning
+  def self.bootstrap
+    drop_tables
+    create_tables
+    seed_contacts :contact_rollups, MAIN_TABLE
+  end
+
+  # Run daily
   def self.main
     collect_data_to_daily_table
     merge_data_to_main_table
@@ -584,14 +565,15 @@ class ContactRollupsV2
   end
 
   def self.test
-    bootstrap
-    # empty_tables
-    # collect_data_to_daily_table
-    # merge_data_to_main_table
-    # sync_to_pardot
+    # Run once
+    # bootstrap
+
+    # Run daily
+    collect_data_to_daily_table
+    merge_data_to_main_table
+    sync_to_pardot
     count_table_rows
 
-    # build_pardot_lookup_table
     nil
   end
 end
