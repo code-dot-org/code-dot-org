@@ -37,6 +37,7 @@ class ContactRollupsV2
   )
 
   DAILY_TABLE = :crv2_daily
+  DAILY_TABLE_REDUCED = :crv2_daily_reduced
   MAIN_TABLE = :crv2_all
 
   def self.create_daily_table
@@ -187,7 +188,7 @@ class ContactRollupsV2
     logs << "Expect to insert #{rows_to_insert} rows. "\
       "Actual rows inserted = #{after_count - before_count}"
     if rows_to_insert != after_count - before_count
-      raise "Mismatch number of rows inserted!"
+      raise "Mismatch number of rows inserted into #{DAILY_TABLE}!"
     end
   rescue StandardError => e
     puts "Caught error: #{e.message}. Will save to tracker table with logs"
@@ -230,14 +231,14 @@ class ContactRollupsV2
     logs << "Expect to delete #{rows_to_delete} rows. "\
       "Actual rows deleted = #{before_count - after_count}"
     if rows_to_delete != before_count - after_count
-      raise "Mismatch number of rows deleted!"
+      raise "Mismatch number of rows deleted from #{DAILY_TABLE}!"
     end
   ensure
     puts "_____delete_daily_changes_____"
     logs.each {|log| puts log}
   end
 
-  def self.update_data_to_main_table
+  def self.merge_data_to_main_table
     # Pull 1-day data from daily table to main table
     # Ruby approach:
     #   Process 1 row in daily table at a time.
@@ -261,37 +262,65 @@ class ContactRollupsV2
     SQL
 
     PEGASUS_DB_WRITER[daily_data_query].each do |row|
-      update_daily_data_to_main_table row[:data_date]
+      reduce_daily_data row[:data_date]
+      merge_daily_data_to_main_table row[:data_date]
     end
   end
 
-  def self.update_daily_data_to_main_table(data_date)
-    puts "_____update_daily_data_to_main_table_____"
+  def self.reduce_daily_data(data_date)
+    puts "_____reduce_daily_data_____"
     puts "data_date = #{data_date}"
 
-    # Count number of rows to update/insert to main table
-    count_updates_query = <<-SQL.squish
+    # Re-create this table every time, drop existing one
+    PEGASUS_DB_WRITER.create_table! DAILY_TABLE_REDUCED do
+      primary_key :id
+      String :email, null: false
+      column :data, 'json'
+      Date :data_date, null: false
+      DateTime :created_at, null: false
+    end
+
+    # Count number of rows to insert into daily reduced table
+    emails_to_insert_query = <<-SQL.squish
       select count(distinct email) as email_count
       from #{DAILY_TABLE}
       where data_date = '#{data_date}'
     SQL
-    rows_to_update = PEGASUS_DB_WRITER[count_updates_query].first[:email_count]
-    puts "rows_to_update = #{rows_to_update}"
+    emails_to_insert_count = PEGASUS_DB_WRITER[emails_to_insert_query].first[:email_count]
+    puts "emails_to_insert_count = #{emails_to_insert_count}"
 
     # Collapse daily data
-    data_to_update = <<-SQL.squish
-      select email, json_objectagg(source_table, data) as data
+    insert_data_query = <<-SQL.squish
+      insert into #{DAILY_TABLE_REDUCED}(email, data, data_date, created_at)
+      select
+        email,
+        json_objectagg(source_table, data),
+        '#{data_date}',
+        now()
       from #{DAILY_TABLE}
       where data_date = '#{data_date}'
       group by email
     SQL
-    puts "#{data_to_update} = data_to_insert_query"
+    puts "#{insert_data_query} = data_to_insert_query"
+
+    PEGASUS_DB_WRITER.run insert_data_query
+
+    row_count = PEGASUS_DB_WRITER[DAILY_TABLE_REDUCED].count
+    puts "Expect to insert #{emails_to_insert_count} rows. Actual rows inserted = #{row_count}."
+    if row_count != emails_to_insert_count
+      raise "Mismatch number of rows inserted into #{DAILY_TABLE_REDUCED}!"
+    end
+  end
+
+  def self.merge_daily_data_to_main_table(data_date)
+    puts "_____merge_daily_data_to_main_table_____"
+    puts "data_date = #{data_date}"
 
     # Update/insert data in main table
     insert_count = 0
     update_count = 0
     no_change_count = 0
-    PEGASUS_DB_WRITER[data_to_update].each do |row|
+    PEGASUS_DB_WRITER[DAILY_TABLE_REDUCED].each do |row|
       # All strings in main table are in lower case.
       # Always downcase strings before making comparison.
       email, data = row.values_at(:email, :data).map(&:downcase)
@@ -306,7 +335,7 @@ class ContactRollupsV2
           no_change_count += 1
           puts "No data change for #{email}"
         else
-          update_values = {data: new_data.to_json, updated_at: current_time}
+          update_values = {data: new_data.to_json, data_date: data_date, updated_at: current_time}
           PEGASUS_DB_WRITER[MAIN_TABLE].where(email: email).update(update_values)
           update_count += 1
 
@@ -327,12 +356,14 @@ class ContactRollupsV2
       end
     end
 
-    puts "Expect to process #{rows_to_update} rows. "\
-      "Actual rows processed = #{insert_count + update_count + no_change_count}. "\
+    rows_to_merge = PEGASUS_DB_WRITER[DAILY_TABLE_REDUCED].count
+
+    puts "Expect to merge #{rows_to_merge} rows. "\
+      "Actual rows merged = #{insert_count + update_count + no_change_count}. "\
       "insert_count = #{insert_count}, update_count = #{update_count}, no_change_count = #{no_change_count}."
 
-    if rows_to_update != insert_count + update_count + no_change_count
-      raise 'Mismatch number of rows processed'
+    if rows_to_merge != insert_count + update_count + no_change_count
+      raise "Mismatch number of rows merged into #{MAIN_TABLE}!"
     end
   end
 
@@ -350,7 +381,8 @@ class ContactRollupsV2
   end
 
   def self.sync_new_contacts_to_pardot
-    # Sync data to pardot
+    puts "_____sync_new_contacts_to_pardot_____"
+
     new_contact_conditions = <<-SQL.squish
       pardot_id is null and pardot_sync_at is null
       and not(email_malformed <=> 1)
@@ -370,6 +402,8 @@ class ContactRollupsV2
   end
 
   def self.sync_updated_contacts_to_pardot
+    puts "_____sync_updated_contacts_to_pardot_____"
+
     updated_contact_conditions = <<-SQL.squish
       pardot_id is not null and pardot_sync_at < updated_at
       and not(email_malformed <=> 1)
@@ -481,20 +515,20 @@ class ContactRollupsV2
   def self.main
     create_tables
     collect_data_to_daily_table
-    update_data_to_main_table
+    merge_data_to_main_table
     sync_to_pardot
     count_table_rows
   end
 
   def self.test
-    drop_tables
-    create_tables
+    # drop_tables
+    # create_tables
     # empty_tables
-    collect_data_to_daily_table
-    update_data_to_main_table
+    # collect_data_to_daily_table
+    merge_data_to_main_table
     # delete_daily_changes('2019-11-11')
-    # sync_to_pardot
-    count_table_rows
+    sync_to_pardot
+    # count_table_rows
     # build_pardot_lookup_table
     nil
   end
