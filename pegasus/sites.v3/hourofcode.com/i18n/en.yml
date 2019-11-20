@@ -5478,7 +5478,7 @@
   tutorial_rpisensehat_language: "English"
   tutorial_modtraits_language: "English"
   tutorial_mee_language: "Bulgarian, Chinese (Simplified), Chinese (Traditional), Czech, Danish, Dutch, English (UK), English (United States), Finnish, French (Canada), French (France), German, Greek, Hungarian, Indonesian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese (Brazil), Portuguese (Portugal), Russian, Slovak, Spanish (Spain), Spanish (Mexico), Swedish, Turkish, Ukrainian"
-  tutorial_kuborobo_language: "Danish, Dutch, English, French, Italian, Norwegian (Nynorsk), Russian, Spanish, Swedish"
+  tutorial_kuborobo_language: "English, Spanish"
   tutorial_scratchimagine_string_detail_grades: "Grades 2+"
   tutorial_codesterspsa_string_detail_grades: "Grades 6+"
   tutorial_googlehero_string_detail_grades: "Grades 2-8"
