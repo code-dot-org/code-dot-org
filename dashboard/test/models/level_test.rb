@@ -831,6 +831,20 @@ EOS
     assert_equal 'your_level_1_3', level_3.name
   end
 
+  test 'clone with suffix truncates long names' do
+    # make old name long enough that we'll exceed the 70 character limit on
+    # level names if we don't truncate it before adding the suffix
+    old_name = 'x' * 67
+    suffix = '_long_suffix'
+    assert_equal(12, suffix.length)
+    new_name = 'x' * 58 + suffix
+
+    old_level = create :level, name: old_name, start_blocks: '<xml>foo</xml>'
+    new_level = old_level.clone_with_suffix(suffix)
+    assert_equal new_name, new_level.name
+    assert_equal suffix, new_level.name_suffix
+  end
+
   test 'clone with same suffix copies and shares project template level' do
     template_level = create :level, name: 'template level', start_blocks: '<xml>template</xml>'
     level_1 = create :level, name: 'level 1'
