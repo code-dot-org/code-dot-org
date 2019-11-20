@@ -222,14 +222,24 @@ describe('DataVisualizer', () => {
 
     it('ignores blank cells', () => {
       wrapper.setProps({
-        tableColumns: ['id', 'name', 'age', 'male'],
+        tableColumns: [
+          'id',
+          'numericWithBlank',
+          'numericWithNull',
+          'numericWithEmptyString'
+        ],
         tableRecords: [
-          '{"id":1,"name":"alice","age":7,"male":"false"}',
-          '{"id":2,"name":"bob","male":"true"}',
-          '{"id":3,"name":"charlie","age":9,"male":"true"}'
+          '{"id":1, "numericWithBlank": 1, "numericWithNull": 2, "numericWithEmptyString": 3}',
+          '{"id":2, "numericWithNull": null, "numericWithEmptyString": ""}',
+          '{"id":1, "numericWithBlank": 4, "numericWithNull": 5, "numericWithEmptyString": 6}'
         ]
       });
-      let expectedNumericColumns = ['id', 'age'];
+      let expectedNumericColumns = [
+        'id',
+        'numericWithBlank',
+        'numericWithNull',
+        'numericWithEmptyString'
+      ];
       expect(wrapper.instance().state.numericColumns).to.deep.equal(
         expectedNumericColumns
       );
