@@ -15,28 +15,28 @@ Factory.define('workshop')
   .attr('state', States[0]);
 
 describe('DetailsPanel', () => {
-  it('shows a readonly WorkshopForm by default', () => {
-    const wrapper = shallow(
+  function shallowDetailsPanel(props = {}) {
+    return shallow(
       <DetailsPanel
         workshop={Factory.build('workshop')}
         onWorkshopSaved={sinon.spy()}
+        {...props}
       />,
       {context: {router: {push: sinon.spy()}}}
     );
+  }
 
+  it('shows a readonly WorkshopForm by default', () => {
+    const wrapper = shallowDetailsPanel();
     const workshopForm = wrapper.find('Connect(WorkshopForm)');
     assert.isOk(workshopForm, 'WorkshopForm was rendered');
     assert.isTrue(workshopForm.prop('readOnly'), 'WorkshopForm is readonly');
   });
 
   it('shows an edit button when the workshop is in "Not Started" state', () => {
-    const wrapper = shallow(
-      <DetailsPanel
-        workshop={Factory.build('workshop', {state: 'Not Started'})}
-        onWorkshopSaved={sinon.spy()}
-      />,
-      {context: {router: {push: sinon.spy()}}}
-    );
+    const wrapper = shallowDetailsPanel({
+      workshop: Factory.build('workshop', {state: 'Not Started'})
+    });
     const editButton = wrapper
       .find('Connect(WorkshopForm)')
       .find('Button')
@@ -46,13 +46,9 @@ describe('DetailsPanel', () => {
 
   it('does not show an edit button when the workshop is not in "Not Started" state', () => {
     States.filter(s => 'Not Started' !== s).forEach(state => {
-      const wrapper = shallow(
-        <DetailsPanel
-          workshop={Factory.build('workshop', {state})}
-          onWorkshopSaved={sinon.spy()}
-        />,
-        {context: {router: {push: sinon.spy()}}}
-      );
+      const wrapper = shallowDetailsPanel({
+        workshop: Factory.build('workshop', {state})
+      });
       const editButton = wrapper
         .find('Connect(WorkshopForm)')
         .find('Button')
