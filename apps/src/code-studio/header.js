@@ -18,6 +18,7 @@ import {
 
 import progress from './progress';
 import {getStore} from '../redux';
+import firehoseClient from '../../../apps/src/lib/util/firehose';
 
 /**
  * Dynamic header generation and event bindings for header actions.
@@ -246,6 +247,22 @@ header.showTryAgainDialog = () => {
 
 header.hideTryAgainDialog = () => {
   getStore().dispatch(setShowTryAgainDialog(false));
+};
+
+header.logToFirehose = detail => {
+  console.log(detail);
+  console.log('hello world');
+  firehoseClient.putRecord(
+    {
+      study: 'nav_bar_menu',
+      study_group: 'projects',
+      event: 'number_of_clicks',
+      data_json: JSON.stringify({
+        detail: detail
+      })
+    },
+    {includeUserId: true}
+  );
 };
 
 export default header;

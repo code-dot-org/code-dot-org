@@ -85,7 +85,7 @@
             - else
               .headerlinks.hide_on_tablet
                 - Hamburger.get_header_contents(header_contents_options).each do |entry|
-                  %a.headerlink{id: entry[:id], href: entry[:url]}= entry[:title]
+                  %a.headerlink{id: entry[:id], onclick: "logToFirehose({nav_menu_clicked: '#{entry[:title]}', user_id: 2})",  href: entry[:url]}= entry[:title]
 
           .header_right
             - if !@hide_sign_in_option && signin_button_enabled
@@ -137,3 +137,9 @@
 
 - content_for(:body_scripts) do
   %script{type: "text/javascript", src: webpack_asset_path('js/layouts/_header.js')}
+
+
+:javascript
+   function logToFirehose(detail) {
+      dashboard.header.logToFirehose(detail);
+    }
