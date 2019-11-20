@@ -183,8 +183,15 @@ const styles = {
     top: '23%',
     left: '50%',
     bottom: 0,
-    transform: 'translateX(-45%)',
-    pointerEvents: 'none'
+    transform: 'translateX(-45%)'
+  },
+  pondPanel: {
+    position: 'absolute',
+    height: '70%',
+    width: '30%',
+    backgroundColor: 'white',
+    left: '3%',
+    top: '10%'
   },
   pill: {
     display: 'flex',
@@ -707,8 +714,8 @@ class Pond extends React.Component {
     const pondHeight = boundingRect.height;
 
     // Scale the click to the pond canvas dimensions.
-    const normalizedClickX = clickX / pondWidth * constants.canvasWidth;
-    const normalizedClickY = clickY / pondHeight * constants.canvasHeight;
+    const normalizedClickX = (clickX / pondWidth) * constants.canvasWidth;
+    const normalizedClickY = (clickY / pondHeight) * constants.canvasHeight;
 
     if (state.pondFishBounds) {
       let fishClicked = false;
@@ -754,6 +761,11 @@ class Pond extends React.Component {
     }
   }
 
+  onBotClick() {
+    const state = getState();
+    setState({pondPanelShowing: !state.pondPanelShowing});
+  }
+
   render() {
     const state = getState();
     const nextButtonText =
@@ -770,8 +782,36 @@ class Pond extends React.Component {
     };
 
     return (
-      <Body onClick={(e) => this.onPondClick(e)}>
-        <img style={styles.pondBot} src={aiBotClosed} />
+      <Body onClick={e => this.onPondClick(e)}>
+        <img
+          style={styles.pondBot}
+          src={aiBotClosed}
+          onClick={this.onBotClick}
+        />
+        {state.pondPanelShowing && (
+          <div style={styles.pondPanel}>
+            <div>
+              Most important features:
+            </div>
+            <div>
+              Dorsal
+            </div>
+            <div style={{height: '2%', width: '23%', backgroundColor: 'green'}}>
+              &nbsp;
+            </div>
+            <div>
+              Body color
+            </div>
+            <div style={{height: '2%', width: '47%', backgroundColor: 'green'}}>
+              &nbsp;
+            </div>
+            {state.pondClickedFish && (
+              <div>
+                The current fish is very confident!
+              </div>
+            )}
+          </div>
+        )}
         {state.canSkipPond && (
           <div>
             <Button style={styles.continueButton} onClick={nextButtonOnClick}>

@@ -30,7 +30,8 @@ const initialState = {
   pondFishBounds: null,
   pondClickedFish: null,
   guideDismissals: [],
-  guideShowing: false
+  guideShowing: false,
+  pondPanelShowing: false
 };
 let state = {...initialState};
 
