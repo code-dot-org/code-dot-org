@@ -1,3 +1,5 @@
+login_required true
+
 stage 'Welcome to "Teaching Computer Science Fundamentals"', flex_category: 'k5_getting_started'
 level 'OPD-K5 About_copy'
 level 'OPD-K5 WhatIsCS_copy'

@@ -28,11 +28,13 @@ level 'U5 L03 Lists Practice 1', progression: 'Setting up Lists'
 level 'U5 L03 Lists Practice 2', progression: 'Setting up Lists'
 level 'U5 L03 Lists Practice 3.75', progression: 'Accessing Elements in a List'
 level 'U5 L03 Lists Practice 3.5', progression: 'Accessing Elements in a List'
+level 'U5 L03 Lists Practice 10', progression: 'Accessing Elements in a List'
+level 'U5 L03 Lists Practice Strings 2', progression: 'Strings and Indexes'
+level 'U5 L03 Lists Practice Strings 3', progression: 'Strings and Indexes'
 level 'U5 L03 Lists Practice 4', progression: 'List Operations'
 level 'U5 L03 Lists Practice 5', progression: 'List Operations'
 level 'U5 L03 Lists Practice 9', progression: 'List Operations'
 level 'U5 L03 Lists Practice 6', progression: 'List Operations'
-level 'U5 L03 Lists Practice 10', progression: 'List Operations'
 level 'U5L3 CFU Lists Psuedocode', progression: 'Check For Understanding: AP Practice', assessment: true
 level 'U5L3 CFU Lists Psuedocode 2', progression: 'Check For Understanding: AP Practice', assessment: true
 
@@ -119,7 +121,7 @@ level 'U5 Traversals Make Project Step 4', progression: 'Build the Poem Personal
 level 'U5 Traversals Make Project Step 5', progression: 'Build the Poem Personalizer'
 level 'U5 Traversals Make Project Step 6', progression: 'Build the Poem Personalizer', assessment: true
 
-stage 'Unit 5 Assessment'
+stage 'Lesson 13: Assessment Day'
 level 'CSP U5L18 SFLP 20-21', progression: 'Lesson Overview'
 
 stage 'Semester Hackathon Part 1', flex_category: 'csp_project'
