@@ -179,4 +179,31 @@ DSL
     assert_equal 'visible to teachers only', new_level.properties['teacher_markdown']
     assert new_level.encrypted
   end
+
+  test 'editor_experiment set on new markdown level' do
+    old_dsl_text = <<EOS
+name 'new_partner_markdown'
+title 'title'
+description 'description here'
+EOS
+
+    expected_new_dsl_text = <<EOS
+name 'new_partner_markdown'
+editor_experiment 'platformization-partners'
+title 'title'
+description 'description here'
+EOS
+
+    Rails.application.config.stubs(:levelbuilder_mode).returns(true)
+    File.expects(:write).once.with do |_pathname, new_dsl_text|
+      new_dsl_text == expected_new_dsl_text
+    end
+
+    level_params = {
+      dsl_text: old_dsl_text,
+      editor_experiment: 'platformization-partners'
+    }
+    level = External.create_from_level_builder({}, level_params)
+    assert_equal level.editor_experiment, 'platformization-partners'
+  end
 end
