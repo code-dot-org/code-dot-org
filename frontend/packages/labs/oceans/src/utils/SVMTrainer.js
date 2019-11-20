@@ -97,6 +97,7 @@ export default class SVMTrainer {
      * to influence its weight.
      * Aggregate by picking the maximum value per part, since only one of these fields can be "used" for a particular input.
      * This is a heuristic from experimenting and seeing what "looks right", may not be ideal in all cases. - @winter */
+    const idFieldsSummary = {};
     for (const fieldWithWeight of idFields) {
       const partType = fieldWithWeight.fieldInfo.partType;
       if (!idFieldsSummary.hasOwnProperty(partType) || fieldWithWeight.absWeight > idFieldsSummary[partType]) {
@@ -187,7 +188,7 @@ export default class SVMTrainer {
     for (var i = 0; i < translatedVector.length; i++) {
       margin += this.svm.w[i] * translatedVector[i];
     }
-    return margin > 0 ? 1 : -1;
+    return margin > 0 ? 1 : 0;
   }
 }
 

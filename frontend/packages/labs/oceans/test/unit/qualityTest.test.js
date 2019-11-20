@@ -25,13 +25,13 @@ const trial = async function(trainSize, testSize, trainer, labelFn) {
 
   for (const fish of testOcean) {
     fish.result = await trainer.predict(fish);
-    console.log(`${fish.result.predictedClassId === ClassType.Like ? 'Like' : 'Dislike'} Confidence: ${fish.result.confidencesByClassId[fish.result.predictedClassId]}`);
-    console.log(trainer.explainFish(fish));
+    //console.log(`${fish.result.predictedClassId === ClassType.Like ? 'Like' : 'Dislike'} Confidence: ${fish.result.confidencesByClassId[fish.result.predictedClassId]}`);
+    //console.log(trainer.explainFish(fish));
   }
 
   //console.log(trainer.detailedExplanation(testOcean[0].fieldInfos));
-  console.log('Model summary:');
-  console.log(trainer.summarize(testOcean[0].fieldInfos));
+  //console.log('Model summary:');
+  //console.log(trainer.summarize(testOcean[0].fieldInfos));
 
   return createConfusionMatrix(testOcean, trainSize, labelFn);
 };
@@ -173,7 +173,7 @@ describe('Model quality test', () => {
   //
   //   for (const [color, ids] of Object.entries(idsByColor)) {
   //     console.log(`${color}`);
-  //     const labelFn = (fish) => ids.includes(fish.colorPalette.index) ? 1 : 0;
+  //     const labelFn = (fish) => ids.includes(fish.colorPalette.index) ? ClassType.Like : ClassType.Dislike;
   //     const result = await performTrials({
   //       numTrials: NUM_TRIALS,
   //       trainSize: trainSize,
@@ -185,7 +185,7 @@ describe('Model quality test', () => {
   //     expect(result.recall).toBeGreaterThanOrEqual(0.6);
   //   }
   // });
-/*
+
   test('Body shape test', async () => {
     const partKey = PartKey.BODY;
     const knnDataIndex = 1;
@@ -231,8 +231,8 @@ describe('Model quality test', () => {
       analyzeConfusionMatrix(trainSize, result);
     }
   });
-*/
-/*
+
+
   test('test mouths', async () => {
     const partData = fishData.mouths;
     const partKey = PartKey.MOUTH;
@@ -251,8 +251,8 @@ describe('Model quality test', () => {
       analyzeConfusionMatrix(trainSize, result);
     }
   });
-  */
-/*
+
+
   test('test tails', async () => {
     const partData = fishData.tails;
     const partKey = PartKey.TAIL;
@@ -274,7 +274,7 @@ describe('Model quality test', () => {
       analyzeConfusionMatrix(trainSize, result);
     }
   });
-*/
+
 
   test('test mouth expressions', async () => {
     const partKey = PartKey.MOUTH;
@@ -299,7 +299,7 @@ describe('Model quality test', () => {
     }
   });
 
-/*
+
   test('test shark teeth', async () => {
     const partData = fishData.mouths;
     const partKey = PartKey.MOUTH;
@@ -322,5 +322,49 @@ describe('Model quality test', () => {
     });
     analyzeConfusionMatrix(trainSize, result);
   });
-*/
+
+
+  test('test SVM explanation', async () => {
+    const partKey = PartKey.MOUTH;
+    const knnDataIndex = 2;
+    const expression = MouthExpression.SMILE;
+
+    const trainer = new SVMTrainer(fish => fish.getKnnData());
+    const normalizedId =
+      (1.0 * expression) / (Object.keys(MouthExpression).length - 1);
+    const labelFn = fish =>
+      floatEquals(fish[partKey].knnData[knnDataIndex], normalizedId) ? ClassType.Like : ClassType.Dislike;
+
+    const trainingOcean = generateOcean(TRAIN_SIZE);
+    const trainingLabels = trainingOcean.map(fish => labelFn(fish));
+
+    const testOcean = generateOcean(TRAIN_SIZE);
+
+    for (const fish of trainingOcean) {
+      const label = labelFn(fish);
+      trainer.addTrainingExample(fish, label);
+    }
+
+    trainer.train();
+
+    const summary = trainer.summarize(trainingOcean[0].fieldInfos);
+    console.log(summary);
+    expect(summary[0].partType).toEqual('mouths'); // mouths should be most important since we're selecting for smiling fish
+    var sum = 0;
+    for (const entry of summary) {
+      sum += entry.importance;
+    }
+    expect(sum).toBeCloseTo(1, 3) // Should add up to 1, allowing for floating point error
+
+    for (const fish of testOcean) {
+      // Sanity check our translation logic for removing bias term - should generate same predictions
+      const predictResult = (await trainer.predict(fish)).predictedClassId;
+      const translatedPredictResult = trainer.translatedPredict(fish.getKnnData());
+      expect(predictResult).toEqual(translatedPredictResult);
+
+      // Mouths should have highest impact since we're selecting for smiling fish
+      const predictionExplanation = trainer.explainFish(fish);
+      expect(predictionExplanation[0].partType).toEqual('mouths');
+    }
+  });
 });
