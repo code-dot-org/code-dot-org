@@ -9,17 +9,18 @@ class LevelDslTest < ActiveSupport::TestCase
   end
 
   test 'test Multi DSL' do
-    input_dsl = "
-name 'name1'
-title 'title1'
-description 'desc1'
-editor_experiment 'my-editors'
-question 'q1'
-wrong 'w1'
-wrong 'w2'
-right 'r1'
-wrong 'w3'
-"
+    input_dsl = <<~DSL
+      name 'name1'
+      title 'title1'
+      description 'desc1'
+      editor_experiment 'my-editors'
+      question 'q1'
+      wrong 'w1'
+      wrong 'w2'
+      right 'r1'
+      wrong 'w3'
+    DSL
+
     output, i18n = MultiDSL.parse(input_dsl, 'test')
     expected = {
       name: 'name1', properties: {
@@ -53,10 +54,10 @@ wrong 'w3'
 
   test 'test empty i18n' do
     # Ensure nil entries are filtered from i18n files
-    input_dsl = <<DSL
-name 'name1'
-title nil
-DSL
+    input_dsl = <<~DSL
+      name 'name1'
+      title nil
+    DSL
     _, i18n = MultiDSL.parse(input_dsl, 'test')
     i18n_expected = {}
     assert_equal i18n_expected, i18n
@@ -66,14 +67,14 @@ DSL
     script = create :script
     stage1 = create(:stage, name: 'Stage1', script: script)
     stage2 = create(:stage, name: 'Stage2', script: script)
-    input_dsl = <<DSL
-name 'Test question'
-display_name 'Test override question'
-question 'Question text'
-answer 'answer 1'
-answer 'answer 2', weight: 2, stage_name: '#{stage1.name}'
-answer 'answer 3', stage_name: '#{stage2.name}'
-DSL
+    input_dsl = <<~DSL
+      name 'Test question'
+      display_name 'Test override question'
+      question 'Question text'
+      answer 'answer 1'
+      answer 'answer 2', weight: 2, stage_name: '#{stage1.name}'
+      answer 'answer 3', stage_name: '#{stage2.name}'
+    DSL
 
     output, _ = EvaluationMulti.parse(input_dsl, 'test')
     expected = {
@@ -95,23 +96,23 @@ DSL
 
   test 'remove property' do
     # mock file so we don't actually write a file, 2x for each "create_from_level_builder"
-    input_dsl = "
-  name 'my_multi'
-  title 'g(y) = y + 2'
-  question 'What is the name of this function?'
-  content1 'content1'
-  right 'g'
-  wrong 'y'
-  wrong '2'
-  "
-    input_dsl_without_content = "
-  name 'my_multi'
-  title 'g(y) = y + 2'
-  question 'What is the name of this function?'
-  right 'g'
-  wrong 'y'
-  wrong '2'
-  "
+    input_dsl = <<~DSL
+      name 'my_multi'
+      title 'g(y) = y + 2'
+      question 'What is the name of this function?'
+      content1 'content1'
+      right 'g'
+      wrong 'y'
+      wrong '2'
+    DSL
+    input_dsl_without_content = <<~DSL
+      name 'my_multi'
+      title 'g(y) = y + 2'
+      question 'What is the name of this function?'
+      right 'g'
+      wrong 'y'
+      wrong '2'
+    DSL
     level = Multi.create_from_level_builder({}, {name: 'my_multi', dsl_text: input_dsl})
 
     level_modified = Multi.create_from_level_builder({}, {name: 'my_multi', dsl_text: input_dsl_without_content})
@@ -153,11 +154,11 @@ DSL
     end
 
     # first, create it in levelbuilder
-    dsl_text = <<DSL
-name 'test external 3'
-markdown 'regular old markdown'
-teacher_markdown 'visible to teachers only'
-DSL
+    dsl_text = <<~DSL
+      name 'test external 3'
+      markdown 'regular old markdown'
+      teacher_markdown 'visible to teachers only'
+    DSL
     level = External.create_from_level_builder({}, {encrypted: '1', dsl_text: dsl_text})
     assert level.properties['encrypted']
     assert level.encrypted
@@ -178,5 +179,32 @@ DSL
     assert new_level.properties['encrypted']
     assert_equal 'visible to teachers only', new_level.properties['teacher_markdown']
     assert new_level.encrypted
+  end
+
+  test 'editor_experiment set on new markdown level' do
+    old_dsl_text = <<~DSL
+      name 'new_partner_markdown'
+      title 'title'
+      description 'description here'
+    DSL
+
+    expected_new_dsl_text = <<~DSL
+      name 'new_partner_markdown'
+      editor_experiment 'platformization-partners'
+      title 'title'
+      description 'description here'
+    DSL
+
+    Rails.application.config.stubs(:levelbuilder_mode).returns(true)
+    File.expects(:write).once.with do |_pathname, new_dsl_text|
+      new_dsl_text == expected_new_dsl_text
+    end
+
+    level_params = {
+      dsl_text: old_dsl_text,
+      editor_experiment: 'platformization-partners'
+    }
+    level = External.create_from_level_builder({}, level_params)
+    assert_equal level.editor_experiment, 'platformization-partners'
   end
 end
