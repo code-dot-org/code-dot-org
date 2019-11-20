@@ -42,6 +42,10 @@ class ContactRollupsV2
   SUCCESS_TRACKER_TABLE = :crv2_success_tracker
   PARDOT_LOOKUP_TABLE = :pardot_lookup
 
+  TASK_ID_UPDATE_DAILY_TABLE = 1
+  TASK_ID_UPDATE_MAIN_TABLE = 2
+  TASK_ID_DELETE_IN_DAILY_TABLE = 3
+
   def self.create_tables
     create_daily_table
     create_main_table
@@ -102,14 +106,15 @@ class ContactRollupsV2
     else
       PEGASUS_DB_WRITER.create_table SUCCESS_TRACKER_TABLE do
         primary_key :id
-        String :task
+        Integer :task_id
+        String :task_name
         String :input_table
         Date :data_date
         DateTime :ended_at
 
-        index :task
+        index :task_id
         index :data_date
-        unique [:task, :input_table, :data_date]
+        unique [:task_id, :input_table, :data_date]
       end
 
       puts "Created #{SUCCESS_TRACKER_TABLE} table"
@@ -168,28 +173,27 @@ class ContactRollupsV2
   end
 
   def self.collect_all_changes(db_connection, src_db, src_table, columns)
-    # TODO: use different task name instead of using method name
-    # TODO: having processed_date as date (start at 0am) instead of time will cause reprocessing data from the same date
-    processed_date =
+    # Get the last successfully processed date
+    last_data_date =
       PEGASUS_DB_WRITER[SUCCESS_TRACKER_TABLE].where(
-        task: 'collect_daily_changes', input_table: "#{src_db}.#{src_table}"
+        task_id: TASK_ID_UPDATE_DAILY_TABLE,
+        input_table: "#{src_db}.#{src_table}"
       ).max(:data_date) || Time.utc(1970, 1, 1, 0, 0)
-    puts "last processed_date = #{processed_date}"
+    puts "last_data_date = #{last_data_date}"
 
+    # Only select changes happened after the last processed date and before today.
+    # This is to guarantee that we always process full-day data.
     updated_date_query = <<-SQL.squish
       select distinct DATE(updated_at) as updated_date
       from #{src_db}.#{src_table}
-      where updated_at > '#{processed_date}'
+      where DATE(updated_at) > '#{last_data_date}' and updated_at < CURDATE()
       order by updated_date
     SQL
     puts "updated_date_query = #{updated_date_query}"
 
     db_connection[updated_date_query].each do |row|
-      date = row[:updated_date]
-      next if date < processed_date
-
-      collect_daily_changes(db_connection, src_db, src_table, columns, date)
-      processed_date = date
+      collect_daily_changes(db_connection, src_db, src_table, columns, row[:updated_date])
+      last_data_date = row[:updated_date]
     end
   end
 
@@ -234,8 +238,7 @@ class ContactRollupsV2
       raise "Mismatch number of rows inserted into #{DAILY_TABLE}!"
     end
 
-    # TODO: use another task name instead of method name to avoid issue when changing method name
-    save_to_tracker(__method__.to_s, "#{src_db}.#{src_table}", date)
+    save_to_tracker(TASK_ID_UPDATE_DAILY_TABLE, __method__.to_s, "#{src_db}.#{src_table}", date)
   rescue StandardError => e
     puts "Caught error: #{e.message}. Will save to tracker table with logs"
     raise e
@@ -280,7 +283,7 @@ class ContactRollupsV2
       raise "Mismatch number of rows deleted from #{DAILY_TABLE}!"
     end
 
-    save_to_tracker(__method__.to_s, nil, data_date)
+    save_to_tracker(TASK_ID_DELETE_IN_DAILY_TABLE, __method__.to_s, nil, data_date)
   ensure
     puts "_____#{__method__}_____"
     logs.each {|log| puts log}
@@ -417,7 +420,7 @@ class ContactRollupsV2
       raise "Mismatch number of rows merged into #{MAIN_TABLE}!"
     end
 
-    save_to_tracker(__method__.to_s, nil, data_date)
+    save_to_tracker(TASK_ID_UPDATE_MAIN_TABLE, __method__.to_s, nil, data_date)
   end
 
   # Only this part is specific to Pardot. Everything else should be generic
@@ -542,17 +545,19 @@ class ContactRollupsV2
     end
   end
 
-  def self.save_to_tracker(task, input_table, data_date)
+  def self.save_to_tracker(task_id, task_name, input_table, data_date)
     lookup_info = {
-      task: task,
+      task_id: task_id,
       input_table: input_table,
       data_date: data_date
     }
 
+    update_info = {task_name: task_name, ended_at: Time.now}
+
     if PEGASUS_DB_WRITER[SUCCESS_TRACKER_TABLE].where(lookup_info).first
-      PEGASUS_DB_WRITER[SUCCESS_TRACKER_TABLE].where(lookup_info).update(ended_at: Time.now)
+      PEGASUS_DB_WRITER[SUCCESS_TRACKER_TABLE].where(lookup_info).update(update_info)
     else
-      PEGASUS_DB_WRITER[SUCCESS_TRACKER_TABLE].insert(lookup_info.merge({ended_at: Time.now}))
+      PEGASUS_DB_WRITER[SUCCESS_TRACKER_TABLE].insert(lookup_info.merge(update_info))
     end
   end
 
@@ -565,8 +570,8 @@ class ContactRollupsV2
   end
 
   def self.test
-    # drop_tables
-    # create_tables
+    drop_tables
+    create_tables
     # empty_tables
     collect_data_to_daily_table
     merge_data_to_main_table
