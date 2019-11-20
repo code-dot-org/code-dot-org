@@ -196,7 +196,7 @@ describe('Model quality test', () => {
       console.log(`${shape}`);
       const normalizedId = (1.0 * id) / (Object.keys(attribute).length - 1);
       const labelFn = fish =>
-        floatEquals(fish[partKey].knnData[knnDataIndex], normalizedId) ? 1 : 0;
+        floatEquals(fish[partKey].knnData[knnDataIndex], normalizedId) ? ClassType.Like : ClassType.Dislike;
 
       const result = await performTrials({
         numTrials: NUM_TRIALS,
@@ -221,7 +221,7 @@ describe('Model quality test', () => {
     for (const [name, data] of Object.entries(partData)) {
       console.log(`${partKey} ${name}`);
       const id = data.index;
-      const labelFn = fish => (fish[partKey].index === id ? 1 : 0);
+      const labelFn = fish => (fish[partKey].index === id ? ClassType.Like : ClassType.Dislike);
       const result = await performTrials({
         numTrials: 1,
         trainSize: trainSize,
@@ -241,8 +241,7 @@ describe('Model quality test', () => {
     for (const [name, data] of Object.entries(partData)) {
       console.log(`${partKey} ${name}`);
       const id = data.index;
-      //const labelFn = fish => (fish[partKey].index === id ? ClassType.Like : ClassType.Dislike);
-      const labelFn = fish => (fish[partKey].index === id ? ClassType.Dislike : ClassType.Like);
+      const labelFn = fish => (fish[partKey].index === id ? ClassType.Like : ClassType.Dislike);
       const result = await performTrials({
         numTrials: NUM_TRIALS,
         trainSize: trainSize,
@@ -250,7 +249,6 @@ describe('Model quality test', () => {
         labelFn: labelFn
       });
       analyzeConfusionMatrix(trainSize, result);
-      break;
     }
   });
   */
@@ -265,7 +263,7 @@ describe('Model quality test', () => {
       const id = data.index;
       const labelFn = fish => {
         //console.log(JSON.stringify(fish, null, 2));
-        return fish[partKey].index === id ? 1 : 0;
+        return fish[partKey].index === id ? ClassType.Like : ClassType.Dislike;
       };
       const result = await performTrials({
         numTrials: NUM_TRIALS,
@@ -290,7 +288,7 @@ describe('Model quality test', () => {
       const normalizedId =
         (1.0 * expressionId) / (Object.keys(MouthExpression).length - 1);
       const labelFn = fish =>
-        floatEquals(fish[partKey].knnData[knnDataIndex], normalizedId) ? 1 : 0;
+        floatEquals(fish[partKey].knnData[knnDataIndex], normalizedId) ? ClassType.Like : ClassType.Dislike;
       const result = await performTrials({
         numTrials: NUM_TRIALS,
         trainSize: trainSize,
@@ -315,7 +313,7 @@ describe('Model quality test', () => {
       `mouth names: ${JSON.stringify(mouthNames)} ids: ${JSON.stringify(ids)}`
     );
 
-    const labelFn = fish => (ids.includes(fish[partKey].index) ? 1 : 0);
+    const labelFn = fish => (ids.includes(fish[partKey].index) ? ClassType.Like : ClassType.Dislike);
     const result = await performTrials({
       numTrials: NUM_TRIALS,
       trainSize: trainSize,
