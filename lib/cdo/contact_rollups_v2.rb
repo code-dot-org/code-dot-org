@@ -306,6 +306,7 @@ class ContactRollupsV2
     PEGASUS_DB_WRITER[daily_data_query].each do |row|
       reduce_daily_data row[:data_date]
       merge_daily_data_to_main_table row[:data_date]
+      delete_daily_changes row[:data_date]
     end
   end
 
@@ -563,9 +564,9 @@ class ContactRollupsV2
     # empty_tables
     collect_data_to_daily_table
     merge_data_to_main_table
-    # delete_daily_changes('2019-11-11')
     # sync_to_pardot
     count_table_rows
+
     # build_pardot_lookup_table
     nil
   end
