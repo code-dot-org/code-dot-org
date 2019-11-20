@@ -41,6 +41,12 @@ class ContactRollupsV2
   MAIN_TABLE = :crv2_all
   SUCCESS_TRACKER_TABLE = :crv2_success_tracker
 
+  def self.create_tables
+    create_daily_table
+    create_main_table
+    create_tracker_tables
+  end
+
   def self.create_daily_table
     # Create daily table that contains daily changes from source tables
     if PEGASUS_DB_WRITER.table_exists? DAILY_TABLE
@@ -105,12 +111,6 @@ class ContactRollupsV2
         unique [:task, :input_table, :data_date]
       end
     end
-  end
-
-  def self.create_tables
-    create_daily_table
-    create_main_table
-    create_tracker_tables
   end
 
   def self.drop_tables
@@ -203,11 +203,14 @@ class ContactRollupsV2
     if rows_to_insert != after_count - before_count
       raise "Mismatch number of rows inserted into #{DAILY_TABLE}!"
     end
+
+    # TODO: use another task name instead of method name to avoid issue when changing method name
+    save_to_tracker(__method__.to_s, "#{src_db}.#{src_table}", date)
   rescue StandardError => e
     puts "Caught error: #{e.message}. Will save to tracker table with logs"
     raise e
   ensure
-    puts "_____collect_daily_changes_____"
+    puts "_____#{__method__}_____"
     logs.each {|log| puts log}
   end
 
@@ -246,8 +249,10 @@ class ContactRollupsV2
     if rows_to_delete != before_count - after_count
       raise "Mismatch number of rows deleted from #{DAILY_TABLE}!"
     end
+
+    save_to_tracker(__method__.to_s, nil, data_date)
   ensure
-    puts "_____delete_daily_changes_____"
+    puts "_____#{__method__}_____"
     logs.each {|log| puts log}
   end
 
@@ -281,7 +286,7 @@ class ContactRollupsV2
   end
 
   def self.reduce_daily_data(data_date)
-    puts "_____reduce_daily_data_____"
+    puts "_____#{__method__}_____"
     puts "data_date = #{data_date}"
 
     # Re-create this table every time, drop existing one
@@ -318,6 +323,7 @@ class ContactRollupsV2
 
     PEGASUS_DB_WRITER.run insert_data_query
 
+    # Post condition
     row_count = PEGASUS_DB_WRITER[DAILY_TABLE_REDUCED].count
     puts "Expect to insert #{emails_to_insert_count} rows. Actual rows inserted = #{row_count}."
     if row_count != emails_to_insert_count
@@ -326,7 +332,7 @@ class ContactRollupsV2
   end
 
   def self.merge_daily_data_to_main_table(data_date)
-    puts "_____merge_daily_data_to_main_table_____"
+    puts "_____#{__method__}_____"
     puts "data_date = #{data_date}"
 
     # Update/insert data in main table
@@ -371,6 +377,7 @@ class ContactRollupsV2
 
     rows_to_merge = PEGASUS_DB_WRITER[DAILY_TABLE_REDUCED].count
 
+    # Post condition
     puts "Expect to merge #{rows_to_merge} rows. "\
       "Actual rows merged = #{insert_count + update_count + no_change_count}. "\
       "insert_count = #{insert_count}, update_count = #{update_count}, no_change_count = #{no_change_count}."
@@ -378,6 +385,8 @@ class ContactRollupsV2
     if rows_to_merge != insert_count + update_count + no_change_count
       raise "Mismatch number of rows merged into #{MAIN_TABLE}!"
     end
+
+    save_to_tracker(__method__.to_s, nil, data_date)
   end
 
   # Only this part is specific to Pardot. Everything else should be generic
@@ -394,7 +403,7 @@ class ContactRollupsV2
   end
 
   def self.sync_new_contacts_to_pardot
-    puts "_____sync_new_contacts_to_pardot_____"
+    puts "_____#{__method__}_____"
 
     new_contact_conditions = <<-SQL.squish
       pardot_id is null and pardot_sync_at is null
@@ -415,7 +424,7 @@ class ContactRollupsV2
   end
 
   def self.sync_updated_contacts_to_pardot
-    puts "_____sync_updated_contacts_to_pardot_____"
+    puts "_____#{__method__}_____"
 
     updated_contact_conditions = <<-SQL.squish
       pardot_id is not null and pardot_sync_at < updated_at
@@ -502,6 +511,20 @@ class ContactRollupsV2
     end
   end
 
+  def self.save_to_tracker(task, input_table, data_date)
+    lookup_info = {
+      task: task,
+      input_table: input_table,
+      data_date: data_date
+    }
+
+    if PEGASUS_DB_WRITER[SUCCESS_TRACKER_TABLE].where(lookup_info).first
+      PEGASUS_DB_WRITER[SUCCESS_TRACKER_TABLE].where(lookup_info).update(ended_at: Time.now)
+    else
+      PEGASUS_DB_WRITER[SUCCESS_TRACKER_TABLE].insert(lookup_info.merge({ended_at: Time.now}))
+    end
+  end
+
   PARDOT_LOOKUP_TABLE = :pardot_lookup
 
   def self.build_pardot_lookup_table
@@ -534,14 +557,14 @@ class ContactRollupsV2
   end
 
   def self.test
-    # drop_tables
-    # create_tables
+    drop_tables
+    create_tables
     # empty_tables
-    # collect_data_to_daily_table
+    collect_data_to_daily_table
     merge_data_to_main_table
     # delete_daily_changes('2019-11-11')
-    sync_to_pardot
-    # count_table_rows
+    # sync_to_pardot
+    count_table_rows
     # build_pardot_lookup_table
     nil
   end
