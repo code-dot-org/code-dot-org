@@ -47,15 +47,15 @@ const styles = {
   },
   continueButton: {
     position: 'absolute',
-    bottom: 10,
-    right: 10,
+    bottom: '4%',
+    right: '2.25%',
     backgroundColor: colors.orange,
     color: colors.white
   },
   backButton: {
     position: 'absolute',
-    bottom: 10,
-    left: 10,
+    bottom: '4%',
+    left: '2.25%',
     backgroundColor: colors.blue,
     color: colors.white
   },
@@ -213,10 +213,14 @@ const styles = {
   },
   guide: {
     position: 'absolute',
-    backgroundColor: colors.black,
+    backgroundColor: colors.transparentBlack,
     color: colors.white,
-    textAlign: 'center',
-    lineHeight: '140%'
+    lineHeight: '140%',
+    borderRadius: 5,
+    maxWidth: '80%',
+    bottom: '4%',
+    left: '50%',
+    transform: 'translateX(-50%)'
   },
   guideLeft: {
     float: 'left'
@@ -225,19 +229,17 @@ const styles = {
     float: 'right'
   },
   guideImage: {
-    width: '70%',
-    paddingTop: 15
+    _width: '70%',
+    paddingTop: 20,
+    paddingLeft: 20
   },
   guideTypingText: {
     position: 'absolute',
-    padding: 15
+    padding: 20
   },
   guideFinalText: {
-    padding: 15,
-    color: colors.white,
-    textAlign: 'center',
-    lineHeight: '140%',
-    opacity: 0
+    padding: 20,
+    opacity: 0.3
   },
   guideBackground: {
     backgroundColor: 'rgba(0,0,0,0.3)',
@@ -267,57 +269,52 @@ const styles = {
     borderColor: 'none',
     borderTopColor: colors.black,
     borderWidth: 30,
-    marginLeft: -30
+    marginLeft: -30,
+    display: 'none'
   },
-  guideTopLeft: {
+  _guideTopLeft: {
     top: '5%',
     left: '5%'
   },
-  guideCenter: {
+  _guideCenter: {
     bottom: '40%',
     left: '50%',
     maxWidth: '47%',
     transform: 'translateX(-50%)'
   },
-  guideRightCenter: {
+  _guideRightCenter: {
     bottom: '30%',
     right: '5%',
     maxWidth: '25%'
   },
-  guideTopRight: {
+  _guideTopRight: {
     top: '15%',
     right: '13%'
   },
-  guideTopRightNarrow: {
+  _guideTopRightNarrow: {
     top: '15%',
     right: '2%',
     maxWidth: '40%'
   },
-  guideBottomMiddle: {
+  _guideBottomMiddle: {
     bottom: '25%',
     left: '50%',
     transform: 'translateX(-50%)'
   },
-  guideBottomRight: {
+  _guideBottomRight: {
     bottom: '18%',
     right: '2%',
     maxWidth: '25%'
   },
-  guideBottomLeft: {
+  _guideBottomLeft: {
     bottom: '18%',
     left: '2%',
     maxWidth: '25%'
   },
-  guideBottomRightCenter: {
+  _guideBottomRightCenter: {
     bottom: '20%',
     right: '5%',
     maxWidth: '25%'
-  },
-  guideButton: {
-    padding: 5,
-    minWidth: 100,
-    marginTop: 20,
-    right: 0
   }
 };
 
