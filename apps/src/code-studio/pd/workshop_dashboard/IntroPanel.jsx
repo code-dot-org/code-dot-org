@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
@@ -11,7 +12,7 @@ import WorkshopPanel from './WorkshopPanel';
  */
 export default class IntroPanel extends React.Component {
   static propTypes = {
-    workshopId: PropTypes.string,
+    workshopId: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     workshopState: PropTypes.string,
     sessions: PropTypes.array,
     isAccountRequiredForAttendance: PropTypes.bool,
