@@ -69,7 +69,7 @@ export class Workshop extends React.Component {
     return true;
   }
 
-  loadWorkshop() {
+  loadWorkshop = () => {
     this.loadWorkshopRequest = $.ajax({
       method: 'GET',
       url: `/api/v1/pd/workshops/${this.props.params.workshopId}`,
@@ -115,9 +115,9 @@ export class Workshop extends React.Component {
       .always(() => {
         this.loadWorkshopRequest = null;
       });
-  }
+  };
 
-  loadEnrollments() {
+  loadEnrollments = () => {
     this.setState({loadingEnrollments: true});
     this.loadEnrollmentsRequest = $.ajax({
       method: 'GET',
@@ -133,7 +133,7 @@ export class Workshop extends React.Component {
       });
       this.loadEnrollmentsRequest = null;
     });
-  }
+  };
 
   componentWillUnmount() {
     if (this.loadWorkshopRequest) {
@@ -175,7 +175,7 @@ export class Workshop extends React.Component {
             workshop['account_required_for_attendance?']
           }
           isWorkshopAdmin={isWorkshopAdmin}
-          loadWorkshop={this.loadWorkshop.bind(this)}
+          loadWorkshop={this.loadWorkshop}
         />
         {workshopState !== 'Not Started' && (
           <AttendancePanel workshopId={workshopId} sessions={sessions} />
@@ -184,7 +184,7 @@ export class Workshop extends React.Component {
           <EndWorkshopPanel
             workshopId={workshopId}
             isReadyToClose={workshop['ready_to_close?']}
-            loadWorkshop={this.loadWorkshop.bind(this)}
+            loadWorkshop={this.loadWorkshop}
           />
         )}
         <EnrollmentsPanel
@@ -193,7 +193,7 @@ export class Workshop extends React.Component {
           enrollments={this.state.enrollments}
           isLoadingEnrollments={this.state.loadingEnrollments}
           isWorkshopAdmin={isWorkshopAdmin}
-          loadEnrollments={this.loadEnrollments.bind(this)}
+          loadEnrollments={this.loadEnrollments}
         />
         <DetailsPanel
           view={route.view}
