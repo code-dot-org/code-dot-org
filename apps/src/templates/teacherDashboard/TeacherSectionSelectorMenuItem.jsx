@@ -16,10 +16,6 @@ const styles = {
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     paddingLeft: 10
-  },
-  assigned: {
-    marginRight: 5,
-    color: color.level_perfect
   }
 };
 
@@ -31,11 +27,16 @@ export default class TeacherSectionSelectorMenuItem extends Component {
 
   render() {
     const {section, onClick} = this.props;
+    const checkMarkStyle = {
+      marginRight: 5,
+      color: color.level_perfect,
+      visibility: section.isAssigned ? 'visible' : 'hidden'
+    };
+
     return (
       <PopUpMenu.Item onClick={onClick} style={styles.item}>
-        <span style={styles.assigned}>
-          {section.isAssigned && <FontAwesome icon="check" />}
-          {!section.isAssigned && <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>}
+        <span style={checkMarkStyle}>
+          <FontAwesome icon="check" />
         </span>
         <span>{section.name}</span>
       </PopUpMenu.Item>
