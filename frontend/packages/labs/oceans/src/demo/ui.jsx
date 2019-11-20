@@ -135,6 +135,19 @@ const styles = {
     top: '28%',
     left: '76%'
   },
+  counter: {
+    position: 'absolute',
+    bottom: '27%',
+    left: '74%',
+    backgroundColor: colors.black,
+    opacity: '90%',
+    color: '#3CFFF8',
+    borderRadius: 33,
+    padding: '10px 0px',
+    width: '16%',
+    textAlign: 'center',
+    fontSize: 16
+  },
   mediaControls: {
     position: 'absolute',
     width: '100%',
@@ -508,6 +521,10 @@ let Train = class Train extends React.Component {
       <Body>
         <div style={styles.trainQuestionText}>{state.trainingQuestion}</div>
         <img style={styles.trainBot} src={aiBotClosed} />
+        <div style={styles.counter}>{`Data Inputs: ${Math.min(
+          999,
+          state.yesCount + state.noCount
+        )}`}</div>
         <div style={styles.trainButtons}>
           <Button
             style={styles.trainButtonNo}
@@ -707,8 +724,8 @@ class Pond extends React.Component {
     const pondHeight = boundingRect.height;
 
     // Scale the click to the pond canvas dimensions.
-    const normalizedClickX = clickX / pondWidth * constants.canvasWidth;
-    const normalizedClickY = clickY / pondHeight * constants.canvasHeight;
+    const normalizedClickX = (clickX / pondWidth) * constants.canvasWidth;
+    const normalizedClickY = (clickY / pondHeight) * constants.canvasHeight;
 
     if (state.pondFishBounds) {
       let fishClicked = false;
@@ -770,7 +787,7 @@ class Pond extends React.Component {
     };
 
     return (
-      <Body onClick={(e) => this.onPondClick(e)}>
+      <Body onClick={e => this.onPondClick(e)}>
         <img style={styles.pondBot} src={aiBotClosed} />
         {state.canSkipPond && (
           <div>
