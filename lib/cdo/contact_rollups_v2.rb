@@ -39,10 +39,11 @@ class ContactRollupsV2
   DAILY_TABLE = :crv2_daily
   DAILY_TABLE_REDUCED = :crv2_daily_reduced
   MAIN_TABLE = :crv2_all
+  SUCCESS_TRACKER_TABLE = :crv2_success_tracker
 
   def self.create_daily_table
     # Create daily table that contains daily changes from source tables
-    if PEGASUS_DB_WRITER.table_exists?(DAILY_TABLE)
+    if PEGASUS_DB_WRITER.table_exists? DAILY_TABLE
       puts "#{DAILY_TABLE} table already exists"
     else
       PEGASUS_DB_WRITER.create_table DAILY_TABLE do
@@ -63,7 +64,7 @@ class ContactRollupsV2
 
   def self.create_main_table
     # Create main table that contains latest data we have on emails
-    if PEGASUS_DB_WRITER.table_exists?(MAIN_TABLE)
+    if PEGASUS_DB_WRITER.table_exists? MAIN_TABLE
       puts "#{MAIN_TABLE} table already exists"
     else
       PEGASUS_DB_WRITER.create_table MAIN_TABLE do
@@ -89,9 +90,21 @@ class ContactRollupsV2
   end
 
   def self.create_tracker_tables
-    # TODO: Create tracker tables:
-    # Job tracker: What runs, when, result
-    # Data tracker: table, data_package, date added, date last updated, number of updates
+    if PEGASUS_DB_WRITER.table_exists? SUCCESS_TRACKER_TABLE
+      puts "#{SUCCESS_TRACKER_TABLE} table already exists"
+    else
+      PEGASUS_DB_WRITER.create_table SUCCESS_TRACKER_TABLE do
+        primary_key :id
+        String :task
+        String :input_table
+        Date :data_date
+        DateTime :ended_at
+
+        index :task
+        index :data_date
+        unique [:task, :input_table, :data_date]
+      end
+    end
   end
 
   def self.create_tables
