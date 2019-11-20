@@ -124,11 +124,6 @@ class ContactRollupsV2
     PEGASUS_DB_WRITER.drop_table(SUCCESS_TRACKER_TABLE) if PEGASUS_DB_WRITER.table_exists?(SUCCESS_TRACKER_TABLE)
   end
 
-  def self.empty_tables
-    PEGASUS_DB_WRITER.run("delete from #{DAILY_TABLE}")
-    PEGASUS_DB_WRITER.run("delete from #{MAIN_TABLE}")
-  end
-
   def self.count_table_rows
     puts "_____#{__method__}_____"
     puts "#{MAIN_TABLE} row count = #{PEGASUS_DB_WRITER[MAIN_TABLE].count}"
@@ -183,10 +178,7 @@ class ContactRollupsV2
       from #{src_table}
       where '#{date}' <= updated_at and updated_at < '#{date + 1.day}'
     SQL
-    logs << "daily_changes_query = #{count_insertion_query}"
-
     rows_to_insert = db_connection[count_insertion_query].first[:row_count]
-    logs << "number of rows to insert = #{rows_to_insert}"
 
     # Construct insertion query
     json_object_params = columns.map {|col| %W('#{col}' #{col})}.flatten.join(', ')
@@ -215,9 +207,6 @@ class ContactRollupsV2
     end
 
     save_to_tracker(TASK_ID_UPDATE_DAILY_TABLE, __method__.to_s, "#{src_db}.#{src_table}", date)
-  rescue StandardError => e
-    puts "Caught error: #{e.message}. Will save to tracker table with logs"
-    raise e
   ensure
     puts "_____#{__method__}_____"
     logs.each {|log| puts log}
@@ -232,10 +221,7 @@ class ContactRollupsV2
       from #{DAILY_TABLE}
       where data_date = '#{data_date}'
     SQL
-    logs << "count_rows_to_delete = #{count_deletion_query}"
-
     rows_to_delete = PEGASUS_DB_WRITER[count_deletion_query].first[:rowcount]
-    logs << "number of rows to delete = #{rows_to_delete}"
 
     delete_query = <<-SQL.squish
       delete from #{DAILY_TABLE}
@@ -266,16 +252,6 @@ class ContactRollupsV2
   end
 
   def self.merge_data_to_main_table
-    # Pull 1-day data from daily table to main table
-    # Ruby approach:
-    #   Process 1 row in daily table at a time.
-    #   Find the corresponding row in main table and update it or insert it
-    # SQL approach:
-    #   Condense daily changes to an email to 1 row.
-    #   Join condensed table to main and update main table data
-    # Optimization:
-    #   Normalize email to id?
-
     if PEGASUS_DB_WRITER[DAILY_TABLE].empty?
       puts "#{DAILY_TABLE} is empty. stop processing"
       return
@@ -288,6 +264,7 @@ class ContactRollupsV2
       order by data_date
     SQL
 
+    # Move data from daily table to main table. Delete data in daily table after the merge.
     PEGASUS_DB_WRITER[daily_data_query].each do |row|
       reduce_daily_data row[:data_date]
       merge_daily_data_to_main_table row[:data_date]
@@ -315,7 +292,6 @@ class ContactRollupsV2
       where data_date = '#{data_date}'
     SQL
     emails_to_insert_count = PEGASUS_DB_WRITER[emails_to_insert_query].first[:email_count]
-    puts "emails_to_insert_count = #{emails_to_insert_count}"
 
     # Collapse daily data
     insert_data_query = <<-SQL.squish
@@ -385,9 +361,8 @@ class ContactRollupsV2
       end
     end
 
-    rows_to_merge = PEGASUS_DB_WRITER[DAILY_TABLE_REDUCED].count
-
     # Post condition
+    rows_to_merge = PEGASUS_DB_WRITER[DAILY_TABLE_REDUCED].count
     puts "Expect to merge #{rows_to_merge} rows. "\
       "Actual rows merged = #{insert_count + update_count + no_change_count}. "\
       "insert_count = #{insert_count}, update_count = #{update_count}, no_change_count = #{no_change_count}."
@@ -407,7 +382,7 @@ class ContactRollupsV2
     sync_new_contacts_to_pardot
     sync_updated_contacts_to_pardot
 
-    # Get pardot id for the new inserted emails
+    # Get pardot id for the recently synced emails
     Pardot.update_pardot_ids MAIN_TABLE
   end
 
