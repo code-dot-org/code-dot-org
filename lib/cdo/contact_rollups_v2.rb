@@ -83,7 +83,7 @@ class ContactRollupsV2
         String :email, null: false
         column :data, 'json'
         column :data_to_sync, 'json'
-        DateTime :data_date, null: false
+        DateTime :data_date
         Integer :pardot_id
         DateTime :pardot_sync_at
         DateTime :created_at, null: false
@@ -426,14 +426,13 @@ class ContactRollupsV2
   # Only this part is specific to Pardot. Everything else should be generic
   def self.sync_to_pardot
     # Get pardot id for new emails
-    max_pardot_id = 80_999_343    # TODO: remove max_pardot_id in function signature
-    Pardot.update_pardot_ids(MAIN_TABLE, max_pardot_id)
+    Pardot.update_pardot_ids MAIN_TABLE
 
     sync_new_contacts_to_pardot
     sync_updated_contacts_to_pardot
 
     # Get pardot id for the new inserted emails
-    Pardot.update_pardot_ids(MAIN_TABLE, max_pardot_id)
+    Pardot.update_pardot_ids MAIN_TABLE
   end
 
   def self.sync_new_contacts_to_pardot
@@ -561,20 +560,39 @@ class ContactRollupsV2
     end
   end
 
-  def self.main
+  def self.bootstrap
+    drop_tables
     create_tables
+    seed_contacts :contact_rollups, MAIN_TABLE
+  end
+
+  def self.seed_contacts(src_table, dest_table)
+    # TODO: synthesize do_not_email field from opt_in and opted_out
+    insert_query = <<-SQL.squish
+      insert into #{dest_table}(email, pardot_id, pardot_sync_at, updated_at, created_at, email_malformed)
+      select email, pardot_id, pardot_sync_at, updated_at, updated_at, email_malformed
+      from #{src_table}
+    SQL
+
+    PEGASUS_DB_WRITER.run insert_query
+
+    rows_to_insert = PEGASUS_DB_WRITER[src_table].count
+    rows_inserted = PEGASUS_DB_WRITER[dest_table].count
+    puts "Expect to insert #{rows_to_insert} rows. Actual rows inserted = #{rows_inserted}."
+    raise "Mismatch number of rows inserted into #{dest_table}!" if rows_inserted != rows_to_insert
+  end
+
+  def self.main
     collect_data_to_daily_table
     merge_data_to_main_table
     sync_to_pardot
-    count_table_rows
   end
 
   def self.test
-    drop_tables
-    create_tables
+    bootstrap
     # empty_tables
-    collect_data_to_daily_table
-    merge_data_to_main_table
+    # collect_data_to_daily_table
+    # merge_data_to_main_table
     # sync_to_pardot
     count_table_rows
 
