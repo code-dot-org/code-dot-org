@@ -266,9 +266,9 @@ class RegistrationsController < Devise::RegistrationsController
       notice: I18n.t('auth.demigration_success')
   end
 
-  def email_conflict
+  def existing_account
     params.require([:email, :provider])
-    render 'email_conflict'
+    render 'existing_account'
   end
 
   private
