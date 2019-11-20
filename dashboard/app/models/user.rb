@@ -448,8 +448,7 @@ class User < ActiveRecord::Base
     :normalize_email,
     :hash_email,
     :sanitize_race_data_set_urm,
-    :fix_by_user_type,
-    :enforce_google_sso_for_admin
+    :fix_by_user_type
 
   before_save :remove_cleartext_emails, if: -> {student? && migrated? && user_type_changed?}
 
@@ -489,22 +488,16 @@ class User < ActiveRecord::Base
   # Implement validation that refuses to set admin:true attribute unless
   # there's a Code.org google sso option present.  Unmigrated users are
   # not allowed to be admins.
+  validate :enforce_google_sso_for_admin
   def enforce_google_sso_for_admin
-    unless migrated?
-      self.admin = false
-      return
-    end
+    return unless admin
+
+    errors.add(:admin, 'must be a migrated user') unless migrated?
 
     google_oauth = google_oauth_authentications
-    if google_oauth&.empty?
-      self.admin = false
-      return
-    end
+    errors.add(:admin, 'must have Google OAuth') unless google_oauth&.present?
 
-    if google_oauth.none?(&:codeorg_email?)
-      self.admin = false
-      return
-    end
+    errors.add(:admin, 'email must have code.org domain') unless google_oauth.any?(&:codeorg_email?)
   end
 
   def google_oauth_authentications
@@ -551,7 +544,7 @@ class User < ActiveRecord::Base
   # @return [User|nil]
   def self.find_by_email(email)
     return nil if email.blank?
-    migrated_user = AuthenticationOption.find_by(email: email)&.user
+    migrated_user = AuthenticationOption.trusted_email.find_by(email: email)&.user
     migrated_user || User.find_by(email: email)
   end
 
@@ -560,7 +553,7 @@ class User < ActiveRecord::Base
   # @return [User|nil]
   def self.find_by_hashed_email(hashed_email)
     return nil if hashed_email.blank?
-    migrated_user = AuthenticationOption.find_by(hashed_email: hashed_email)&.user
+    migrated_user = AuthenticationOption.trusted_email.find_by(hashed_email: hashed_email)&.user
     migrated_user || User.find_by(hashed_email: hashed_email)
   end
 

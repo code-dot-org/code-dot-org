@@ -1884,13 +1884,13 @@ en:
             Hour of Code 2015:
               name: Hour of Code 2015
           description_audience: ''
-        ocean:
-          title: Ocean Hour of Code
+        oceans:
+          title: AI for Oceans
           description: Description TBD.
           description_short: Short Description TBD.
           stages:
-            Ocean:
-              name: Ocean
+            Oceans:
+              name: Oceans
           description_audience: ''
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'
