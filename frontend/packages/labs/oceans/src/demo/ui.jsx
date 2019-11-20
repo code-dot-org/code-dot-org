@@ -5,11 +5,20 @@ import _ from 'lodash';
 import {getState, setState} from './state';
 import constants, {AppMode, Modes} from './constants';
 import {toMode} from './toMode';
+import {$time, currentRunTime, finishMovement, resetTraining} from './helpers';
 import {onClassifyFish} from './models/train';
 import colors from './colors';
 import aiBotClosed from '../../public/images/ai-bot/ai-bot-closed.png';
 import Typist from 'react-typist';
 import {getCurrentGuide, dismissCurrentGuide} from './models/guide';
+import {playSound} from './models/soundLibrary';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {
+  faPlay,
+  faPause,
+  faBackward,
+  faForward
+} from '@fortawesome/free-solid-svg-icons';
 
 const styles = {
   body: {
@@ -31,7 +40,7 @@ const styles = {
     borderRadius: 8,
     minWidth: 160,
     outline: 'none',
-    border: `2px solid ${colors.black}`,
+    border: 'none',
     ':focus': {
       outline: `${colors.white} auto 5px`
     }
@@ -88,7 +97,8 @@ const styles = {
     textAlign: 'center',
     marginTop: 20,
     fontSize: 22,
-    lineHeight: '26px'
+    lineHeight: '26px',
+    color: colors.white
   },
   trainQuestionText: {
     position: 'absolute',
@@ -96,7 +106,8 @@ const styles = {
     left: '50%',
     transform: 'translateX(-50%)',
     fontSize: 32,
-    lineHeight: '35px'
+    lineHeight: '35px',
+    color: colors.white
   },
   trainButtons: {
     position: 'absolute',
@@ -124,6 +135,35 @@ const styles = {
     top: '28%',
     left: '76%'
   },
+  mediaControls: {
+    position: 'absolute',
+    width: '100%',
+    bottom: 25,
+    display: 'flex',
+    justifyContent: 'center'
+  },
+  mediaControl: {
+    cursor: 'pointer',
+    margin: '0 20px',
+    fontSize: 42,
+    color: colors.grey,
+    display: 'flex',
+    alignItems: 'center',
+    ':hover': {
+      color: colors.orange
+    },
+    ':active': {
+      color: colors.black
+    }
+  },
+  selectedControl: {
+    color: colors.black
+  },
+  timeScale: {
+    width: 40,
+    fontSize: 24,
+    textAlign: 'center'
+  },
   predictSpeech: {
     top: '88%',
     left: '12%',
@@ -143,7 +183,8 @@ const styles = {
     top: '23%',
     left: '50%',
     bottom: 0,
-    transform: 'translateX(-45%)'
+    transform: 'translateX(-45%)',
+    pointerEvents: 'none'
   },
   pill: {
     display: 'flex',
@@ -177,6 +218,16 @@ const styles = {
     textAlign: 'center',
     lineHeight: '140%'
   },
+  guideLeft: {
+    float: 'left'
+  },
+  guideRight: {
+    float: 'right'
+  },
+  guideImage: {
+    width: '70%',
+    paddingTop: 15
+  },
   guideTypingText: {
     position: 'absolute',
     padding: 15
@@ -195,8 +246,7 @@ const styles = {
     left: 0,
     width: '100%',
     height: '100%',
-    borderRadius: 10,
-    border: '2px solid transparent'
+    borderRadius: 10
   },
   guideBackgroundHidden: {
     position: 'absolute',
@@ -229,9 +279,14 @@ const styles = {
     maxWidth: '47%',
     transform: 'translateX(-50%)'
   },
+  guideRightCenter: {
+    bottom: '30%',
+    right: '5%',
+    maxWidth: '25%'
+  },
   guideTopRight: {
     top: '15%',
-    right: '13%',
+    right: '13%'
   },
   guideTopRightNarrow: {
     top: '15%',
@@ -281,12 +336,6 @@ function Collide(x1, y1, w1, h1, x2, y2, w2, h2) {
   return true;
 }
 
-var $time =
-  Date.now ||
-  function() {
-    return +new Date();
-  };
-
 class Body extends React.Component {
   static propTypes = {
     children: PropTypes.node,
@@ -318,12 +367,21 @@ let Button = class Button extends React.Component {
     className: PropTypes.string,
     style: PropTypes.object,
     children: PropTypes.node,
-    onClick: PropTypes.func
+    onClick: PropTypes.func,
+    sound: PropTypes.string
   };
 
   onClick(event) {
     dismissCurrentGuide();
-    this.props.onClick(event);
+    const clickReturnValue = this.props.onClick(event);
+
+    if (clickReturnValue !== false) {
+      if (this.props.sound && clickReturnValue !== false) {
+        playSound(this.props.sound);
+      } else {
+        playSound('other');
+      }
+    }
   }
 
   render() {
@@ -351,21 +409,21 @@ const wordSet = {
     text: ['Choose a new word to teach A.I.'],
     choices: [
       [
-        'Friendly',
-        'Funny',
-        'Bizarre',
-        'Shy',
-        'Glitchy',
-        'Delicious',
-        'Fun',
-        'Angry',
-        'Fast',
-        'Smart',
-        'Brave',
-        'Scary',
-        'Wild',
         'Fierce',
-        'Tropical'
+        'Fresh',
+        'Glitchy',
+        'Glossy',
+        'Hungry',
+        'Playful',
+        'Scaly',
+        'Scrappy',
+        'Silly',
+        'Sparkly',
+        'Spiky',
+        'Squirmy',
+        'Tropical',
+        'Wacky',
+        'Wild'
       ]
     ],
     style: styles.button3col
@@ -453,13 +511,19 @@ let Train = class Train extends React.Component {
         <div style={styles.trainButtons}>
           <Button
             style={styles.trainButtonNo}
-            onClick={() => onClassifyFish(false)}
+            onClick={() => {
+              return onClassifyFish(false);
+            }}
+            sound={'no'}
           >
             {noButtonText}
           </Button>
           <Button
             style={styles.trainButtonYes}
-            onClick={() => onClassifyFish(true)}
+            onClick={() => {
+              return onClassifyFish(true);
+            }}
+            sound={'yes'}
           >
             {yesButtonText}
           </Button>
@@ -476,46 +540,175 @@ let Train = class Train extends React.Component {
 };
 Train = Radium(Train);
 
-class Predict extends React.Component {
+const defaultTimeScale = 1;
+const timeScales = [1, 2];
+const MediaControl = Object.freeze({
+  Rewind: 'rewind',
+  Play: 'play',
+  FastForward: 'fast-forward'
+});
+
+let Predict = class Predict extends React.Component {
+  state = {
+    displayControls: false,
+    timeScale: defaultTimeScale
+  };
+
+  onRun = () => {
+    const state = setState({isRunning: true, runStartTime: $time()});
+    if (state.appMode !== AppMode.CreaturesVTrashDemo) {
+      this.setState({displayControls: true});
+    }
+  };
+
+  onContinue = () => {
+    const state = getState();
+    if (state.appMode === AppMode.CreaturesVTrashDemo && state.onContinue) {
+      state.onContinue();
+    } else {
+      toMode(Modes.Pond);
+    }
+  };
+
+  finishMovement = () => {
+    const state = getState();
+
+    const t = currentRunTime(state);
+    if (state.rewind) {
+      finishMovement(state.lastPauseTime - t);
+    } else {
+      finishMovement(state.lastPauseTime + t);
+    }
+  };
+
+  onPressPlay = () => {
+    const state = getState();
+    this.finishMovement();
+    setState({
+      isRunning: !state.isRunning,
+      isPaused: !state.isPaused,
+      rewind: false,
+      moveTime: constants.defaultMoveTime / defaultTimeScale
+    });
+    this.setState({timeScale: defaultTimeScale});
+  };
+
+  onScaleTime = rewind => {
+    this.finishMovement();
+    const nextIdx = timeScales.indexOf(this.state.timeScale) + 1;
+    const timeScale =
+      nextIdx > timeScales.length - 1 ? timeScales[0] : timeScales[nextIdx];
+
+    setState({
+      rewind,
+      isRunning: true,
+      isPaused: false,
+      moveTime: constants.defaultMoveTime / timeScale
+    });
+    this.setState({timeScale});
+  };
+
   render() {
     const state = getState();
+    let selectedControl;
+    if (state.isRunning && state.rewind) {
+      selectedControl = MediaControl.Rewind;
+    } else if (
+      state.isRunning &&
+      !state.rewind &&
+      this.state.timeScale !== defaultTimeScale
+    ) {
+      selectedControl = MediaControl.FastForward;
+    } else {
+      selectedControl = MediaControl.Play;
+    }
 
     return (
       <Body>
-        {!state.isRunning && !state.showBiasText && (
-          <Button
-            style={styles.continueButton}
-            onClick={() => setState({isRunning: true, runStartTime: $time()})}
-          >
+        {this.state.displayControls && (
+          <div style={styles.mediaControls}>
+            <span
+              onClick={() => this.onScaleTime(true)}
+              style={[
+                styles.mediaControl,
+                selectedControl === MediaControl.Rewind &&
+                  styles.selectedControl
+              ]}
+              key={MediaControl.Rewind}
+            >
+              <span style={styles.timeScale}>
+                {selectedControl === MediaControl.Rewind &&
+                  this.state.timeScale !== defaultTimeScale &&
+                  `x${this.state.timeScale}`}
+              </span>
+              <FontAwesomeIcon icon={faBackward} />
+            </span>
+            <span
+              onClick={this.onPressPlay}
+              style={[
+                styles.mediaControl,
+                selectedControl === MediaControl.Play && styles.selectedControl
+              ]}
+              key={MediaControl.Play}
+            >
+              <FontAwesomeIcon icon={state.isRunning ? faPause : faPlay} />
+            </span>
+            <span
+              onClick={() => this.onScaleTime(false)}
+              style={[
+                styles.mediaControl,
+                selectedControl === MediaControl.FastForward &&
+                  styles.selectedControl
+              ]}
+              key={MediaControl.FastForward}
+            >
+              <FontAwesomeIcon icon={faForward} />
+              <span style={styles.timeScale}>
+                {selectedControl === MediaControl.FastForward &&
+                  this.state.timeScale !== defaultTimeScale &&
+                  `x${this.state.timeScale}`}
+              </span>
+            </span>
+          </div>
+        )}
+        {!state.isRunning && !state.isPaused && (
+          <Button style={styles.continueButton} onClick={this.onRun}>
             Run
           </Button>
         )}
         {(state.isRunning || state.isPaused) && state.canSkipPredict && (
-          <Button
-            style={styles.continueButton}
-            onClick={() => {
-              if (state.showBiasText) {
-                if (state.onContinue) {
-                  state.onContinue();
-                }
-              } else {
-                toMode(Modes.Pond);
-              }
-            }}
-          >
+          <Button style={styles.continueButton} onClick={this.onContinue}>
             Continue
           </Button>
         )}
       </Body>
     );
   }
-}
+};
+Predict = Radium(Predict);
 
 class Pond extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   onPondClick(e) {
+    // Don't allow pond clicks if a Guide is currently showing.
+    if (getCurrentGuide()) {
+      return;
+    }
+
     const state = getState();
     const clickX = e.nativeEvent.offsetX;
     const clickY = e.nativeEvent.offsetY;
+
+    const boundingRect = e.target.getBoundingClientRect();
+    const pondWidth = boundingRect.width;
+    const pondHeight = boundingRect.height;
+
+    // Scale the click to the pond canvas dimensions.
+    const normalizedClickX = clickX / pondWidth * constants.canvasWidth;
+    const normalizedClickY = clickY / pondHeight * constants.canvasHeight;
 
     if (state.pondFishBounds) {
       let fishClicked = false;
@@ -536,8 +729,8 @@ class Pond extends React.Component {
             fishBound.y,
             fishBound.w,
             fishBound.h,
-            clickX,
-            clickY,
+            normalizedClickX,
+            normalizedClickY,
             1,
             1
           )
@@ -546,73 +739,43 @@ class Pond extends React.Component {
             pondClickedFish: {
               id: fishBound.fishId,
               x: fishBound.x,
-              y: fishBound.y,
-              confidence: fishBound.confidence
+              y: fishBound.y
             }
           });
-          console.log('Fish clicked confidence: ', fishBound.confidence);
           fishClicked = true;
+          playSound('yes');
         }
       });
 
       if (!fishClicked) {
         setState({pondClickedFish: null});
+        playSound('no');
       }
     }
   }
 
   render() {
     const state = getState();
-
-    const showFishDetails = !!state.pondClickedFish;
-    let pondFishDetailsStyle;
-    let confidence;
-    if (showFishDetails) {
-      const fish = state.pondClickedFish;
-
-      const leftX = Math.min(
-        Math.max(state.pondClickedFish.x + 200, 20),
-        constants.canvasWidth - 210
-      );
-      const topY = Math.min(
-        Math.max(state.pondClickedFish.y, 20),
-        constants.canvasHeight - 50
-      );
-
-      pondFishDetailsStyle = {
-        ...styles.pondFishDetails,
-        left: leftX,
-        top: topY
-      };
-
-      if (!fish.confidence || !fish.confidence.confidencesByClassId) {
-        confidence = 'Not confident';
-      } else if (fish.confidence.confidencesByClassId[0] > 0.99) {
-        confidence = 'Very confident';
-      } else if (fish.confidence.confidencesByClassId[0] > 0.5) {
-        confidence = 'Fairly confident';
+    const nextButtonText =
+      state.appMode === AppMode.FishLong ? 'Play Again' : 'Continue';
+    const nextButtonOnClick = () => {
+      if (state.appMode === AppMode.FishLong) {
+        resetTraining();
+        toMode(Modes.Words);
       } else {
-        confidence = 'Not very confident';
+        if (state.onContinue) {
+          state.onContinue();
+        }
       }
-    }
+    };
 
     return (
-      <Body onClick={this.onPondClick}>
+      <Body onClick={(e) => this.onPondClick(e)}>
         <img style={styles.pondBot} src={aiBotClosed} />
-        {showFishDetails && (
-          <div style={pondFishDetailsStyle}>{confidence}</div>
-        )}
         {state.canSkipPond && (
           <div>
-            <Button
-              style={styles.continueButton}
-              onClick={() => {
-                if (state.onContinue) {
-                  state.onContinue();
-                }
-              }}
-            >
-              Continue
+            <Button style={styles.continueButton} onClick={nextButtonOnClick}>
+              {nextButtonText}
             </Button>
             <Button
               style={styles.backButton}
@@ -634,8 +797,25 @@ class Guide extends React.Component {
     setState({guideShowing: true});
   }
 
+  dismissGuideClick() {
+    const dismissed = dismissCurrentGuide();
+    if (dismissed) {
+      playSound('other');
+    }
+  }
+
   render() {
     const currentGuide = getCurrentGuide();
+
+    // We migth show an image on the left and text on the right.  If there's
+    // no image, it's all right.
+    let leftWidth, rightWidth;
+    if (currentGuide && currentGuide.image) {
+      leftWidth = '30%';
+      rightWidth = '70%';
+    } else {
+      rightWidth = '100%';
+    }
 
     return (
       <div>
@@ -647,27 +827,35 @@ class Guide extends React.Component {
                 ? styles.guideBackgroundHidden
                 : styles.guideBackground
             }
-            onClick={dismissCurrentGuide}
+            onClick={this.dismissGuideClick}
           >
             <div
               style={{...styles.guide, ...styles[`guide${currentGuide.style}`]}}
             >
-              <div style={styles.guideTypingText}>
-                <Typist
-                  avgTypingDelay={35}
-                  stdTypingDelay={15}
-                  cursor={{show: false}}
-                  onTypingDone={this.onShowing}
-                >
+              {currentGuide.image && (
+                <div style={{...styles.guideLeft, width: leftWidth}}>
+                  <img src={currentGuide.image} style={styles.guideImage} />
+                </div>
+              )}
+
+              <div style={{...styles.guideRight, width: rightWidth}}>
+                <div style={styles.guideTypingText}>
+                  <Typist
+                    avgTypingDelay={35}
+                    stdTypingDelay={15}
+                    cursor={{show: false}}
+                    onTypingDone={this.onShowing}
+                  >
+                    {currentGuide.textFn
+                      ? currentGuide.textFn(getState())
+                      : currentGuide.text}
+                  </Typist>
+                </div>
+                <div style={styles.guideFinalText}>
                   {currentGuide.textFn
                     ? currentGuide.textFn(getState())
                     : currentGuide.text}
-                </Typist>
-              </div>
-              <div style={styles.guideFinalText}>
-                {currentGuide.textFn
-                  ? currentGuide.textFn(getState())
-                  : currentGuide.text}
+                </div>
               </div>
               {getState().guideShowing && currentGuide.arrow !== 'none' && (
                 <div>
@@ -683,6 +871,10 @@ class Guide extends React.Component {
 }
 
 export default class UI extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     const currentMode = getState().currentMode;
 

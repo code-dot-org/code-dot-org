@@ -1,7 +1,9 @@
 import 'babel-polyfill';
 import $ from 'jquery';
+import './assetPath';
 import {queryStrFor} from './helpers';
 import {initAll} from './init';
+import Sounds from './Sounds';
 
 let currentAppMode = queryStrFor('mode') || 'fishvtrash';
 let canvas, backgroundCanvas;
@@ -12,11 +14,15 @@ function onLevelChange(event) {
 }
 
 function initDemoPage() {
+  const sounds = new Sounds();
+
   initAll({
     appMode: currentAppMode,
     onContinue,
     canvas,
-    backgroundCanvas
+    backgroundCanvas,
+    playSound: sounds.play.bind(sounds),
+    registerSound: sounds.register.bind(sounds),
   });
 }
 

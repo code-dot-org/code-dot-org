@@ -43,7 +43,7 @@ export const onClassifyFish = doesLike => {
 
   // No-op if animation is currently in progress.
   if (state.isRunning) {
-    return;
+    return false;
   }
 
   const classId = doesLike ? ClassType.Like : ClassType.Dislike;
@@ -70,4 +70,6 @@ export const onClassifyFish = doesLike => {
     fishData,
     isRunning: true
   });
+
+  return true;
 };
