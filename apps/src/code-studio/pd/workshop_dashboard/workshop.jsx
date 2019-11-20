@@ -56,10 +56,7 @@ export class Workshop extends React.Component {
       this.state = {
         loadingWorkshop: true,
         loadingEnrollments: true,
-        enrollmentActiveTab: 0,
-        showAdminEditConfirmation: false,
-        selectedEnrollments: [],
-        isMoveEnrollmentsDialogOpen: false
+        showAdminEditConfirmation: false
       };
     }
   }
@@ -153,98 +150,12 @@ export class Workshop extends React.Component {
     });
   }
 
-  handleDeleteEnrollment = id => {
-    this.deleteEnrollmentRequest = $.ajax({
-      method: 'DELETE',
-      url: `/api/v1/pd/workshops/${
-        this.props.params.workshopId
-      }/enrollments/${id}`,
-      dataType: 'json'
-    }).done(() => {
-      // reload
-      this.loadEnrollments();
-      this.deleteEnrollmentRequest = null;
-    });
-  };
-
-  handleMoveEnrollments = (destinationWorkshopId, selectedEnrollments) => {
-    const enrollmentIds = selectedEnrollments.map(enrollment => {
-      return enrollment.id;
-    });
-    const urlParams = `destination_workshop_id=${destinationWorkshopId}&enrollment_ids[]=${enrollmentIds.join(
-      '&enrollment_ids[]='
-    )}`;
-    this.moveEnrollmentRequest = $.ajax({
-      method: 'POST',
-      url: `/api/v1/pd/enrollments/move?${urlParams}`,
-      traditional: true
-    })
-      .done(() => {
-        // reload
-        this.loadEnrollments();
-        this.moveEnrollmentRequest = null;
-      })
-      .fail(() => {
-        this.setState({
-          error: 'Error: unable to move enrollments'
-        });
-        this.loadEnrollments();
-        this.moveEnrollmentRequest = null;
-      });
-  };
-
-  handleClickSelect = enrollment => {
-    if (
-      this.state.selectedEnrollments.findIndex(e => e.id === enrollment.id) >= 0
-    ) {
-      this.setState(state => {
-        const selectedEnrollments = state.selectedEnrollments.filter(e => {
-          return e.id !== enrollment.id;
-        });
-        return {selectedEnrollments};
-      });
-    } else {
-      this.setState(state => {
-        state.selectedEnrollments.push({
-          id: enrollment.id,
-          email: enrollment.email,
-          first_name: enrollment.first_name,
-          last_name: enrollment.last_name
-        });
-      });
-    }
-  };
-
-  handleClickMove = () => {
-    this.setState({isMoveEnrollmentsDialogOpen: true});
-  };
-
-  handleMoveEnrollmentsCanceled = () => {
-    this.setState({
-      isMoveEnrollmentsDialogOpen: false
-    });
-  };
-
-  handleMoveEnrollmentsConfirmed = destinationWorkshopId => {
-    this.setState({
-      isMoveEnrollmentsDialogOpen: false,
-      selectedEnrollments: []
-    });
-    this.handleMoveEnrollments(
-      destinationWorkshopId,
-      this.state.selectedEnrollments
-    );
-  };
-
   componentWillUnmount() {
     if (this.loadWorkshopRequest) {
       this.loadWorkshopRequest.abort();
     }
     if (this.loadEnrollmentsRequest) {
       this.loadEnrollmentsRequest.abort();
-    }
-    if (this.deleteEnrollmentRequest) {
-      this.deleteEnrollmentRequest.abort();
     }
   }
 
@@ -273,20 +184,6 @@ export class Workshop extends React.Component {
     // This button is just a shortcut to click the Save button in the form component,
     // which will handle the logic.
     $('#workshop-form-save-btn').trigger('click');
-  };
-
-  handleEnrollmentRefreshClick = () => {
-    this.loadEnrollments();
-  };
-
-  handleEnrollmentDownloadClick = () => {
-    window.open(
-      `/api/v1/pd/workshops/${this.props.params.workshopId}/enrollments.csv`
-    );
-  };
-
-  handleEnrollmentActiveTabSelect = enrollmentActiveTab => {
-    this.setState({enrollmentActiveTab});
   };
 
   renderDetailsPanelHeader() {
@@ -374,11 +271,204 @@ export class Workshop extends React.Component {
     );
   }
 
-  renderEnrollmentsPanel() {
+  render() {
+    if (this.state.loadingWorkshop) {
+      return <Spinner />;
+    } else if (!this.state.workshop) {
+      return <p>No workshop found</p>;
+    }
+
+    const {params, permission} = this.props;
+    const {workshopId} = params;
+    const isWorkshopAdmin = permission.has(WorkshopAdmin);
+    const {workshop} = this.state;
+    const {sessions, state: workshopState} = workshop;
+
+    return (
+      <Grid>
+        {workshopState === 'Not Started' && (
+          <SignUpPanel workshopId={workshopId} />
+        )}
+        <IntroPanel
+          workshopId={workshopId}
+          workshopState={workshopState}
+          sessions={sessions}
+          isAccountRequiredForAttendance={
+            this.state.workshop['account_required_for_attendance?']
+          }
+          isWorkshopAdmin={isWorkshopAdmin}
+          loadWorkshop={this.loadWorkshop.bind(this)}
+        />
+        {workshopState !== 'Not Started' && (
+          <AttendancePanel workshopId={workshopId} sessions={sessions} />
+        )}
+        {workshopState === 'In Progress' && (
+          <EndWorkshopPanel
+            workshopId={workshopId}
+            isReadyToClose={this.state.workshop['ready_to_close?']}
+            loadWorkshop={this.loadWorkshop.bind(this)}
+          />
+        )}
+        <EnrollmentsPanel
+          workshopId={workshopId}
+          workshop={this.state.workshop}
+          enrollments={this.state.enrollments}
+          isLoadingEnrollments={this.state.loadingEnrollments}
+          isWorkshopAdmin={isWorkshopAdmin}
+          loadEnrollments={this.loadEnrollments.bind(this)}
+        />
+        {this.renderDetailsPanel()}
+      </Grid>
+    );
+  }
+}
+
+export default connect(state => ({
+  permission: state.workshopDashboard.permission
+}))(Workshop);
+
+class EnrollmentsPanel extends React.Component {
+  static propTypes = {
+    workshopId: PropTypes.string,
+    workshop: PropTypes.shape({
+      ['account_required_for_attendance?']: PropTypes.bool,
+      capacity: PropTypes.number,
+      course: PropTypes.string,
+      enrolled_teacher_count: PropTypes.number,
+      ['scholarship_workshop?']: PropTypes.bool,
+      sessions: PropTypes.array,
+      subject: PropTypes.string
+    }),
+    enrollments: PropTypes.array,
+    isLoadingEnrollments: PropTypes.bool,
+    isWorkshopAdmin: PropTypes.bool,
+    loadEnrollments: PropTypes.func.isRequired
+  };
+
+  state = {
+    enrollmentActiveTab: 0,
+    selectedEnrollments: [],
+    isMoveEnrollmentsDialogOpen: false,
+    error: null
+  };
+
+  componentWillUnmount() {
+    if (this.deleteEnrollmentRequest) {
+      this.deleteEnrollmentRequest.abort();
+    }
+    if (this.moveEnrollmentRequest) {
+      this.moveEnrollmentRequest.abort();
+    }
+  }
+
+  handleEnrollmentRefreshClick = () => {
+    this.props.loadEnrollments();
+  };
+
+  handleEnrollmentDownloadClick = () => {
+    const {workshopId} = this.props;
+    window.open(`/api/v1/pd/workshops/${workshopId}/enrollments.csv`);
+  };
+
+  handleClickMove = () => {
+    this.setState({isMoveEnrollmentsDialogOpen: true});
+  };
+
+  handleMoveEnrollmentsCanceled = () => {
+    this.setState({
+      isMoveEnrollmentsDialogOpen: false
+    });
+  };
+
+  handleMoveEnrollmentsConfirmed = destinationWorkshopId => {
+    this.setState({
+      isMoveEnrollmentsDialogOpen: false,
+      selectedEnrollments: []
+    });
+    this.handleMoveEnrollments(
+      destinationWorkshopId,
+      this.state.selectedEnrollments
+    );
+  };
+
+  handleMoveEnrollments = (destinationWorkshopId, selectedEnrollments) => {
+    const {loadEnrollments} = this.props;
+    const enrollmentIds = selectedEnrollments.map(enrollment => {
+      return enrollment.id;
+    });
+    const urlParams = `destination_workshop_id=${destinationWorkshopId}&enrollment_ids[]=${enrollmentIds.join(
+      '&enrollment_ids[]='
+    )}`;
+    this.moveEnrollmentRequest = $.ajax({
+      method: 'POST',
+      url: `/api/v1/pd/enrollments/move?${urlParams}`,
+      traditional: true
+    })
+      .done(() => {
+        // reload
+        loadEnrollments();
+        this.moveEnrollmentRequest = null;
+      })
+      .fail(() => {
+        this.setState({
+          error: 'Error: unable to move enrollments'
+        });
+        loadEnrollments();
+        this.moveEnrollmentRequest = null;
+      });
+  };
+
+  handleClickSelect = enrollment => {
+    if (
+      this.state.selectedEnrollments.findIndex(e => e.id === enrollment.id) >= 0
+    ) {
+      this.setState(state => {
+        const selectedEnrollments = state.selectedEnrollments.filter(e => {
+          return e.id !== enrollment.id;
+        });
+        return {selectedEnrollments};
+      });
+    } else {
+      this.setState(state => {
+        state.selectedEnrollments.push({
+          id: enrollment.id,
+          email: enrollment.email,
+          first_name: enrollment.first_name,
+          last_name: enrollment.last_name
+        });
+      });
+    }
+  };
+
+  handleEnrollmentActiveTabSelect = enrollmentActiveTab => {
+    this.setState({enrollmentActiveTab});
+  };
+
+  handleDeleteEnrollment = id => {
+    const {workshopId, loadEnrollments} = this.props;
+    this.deleteEnrollmentRequest = $.ajax({
+      method: 'DELETE',
+      url: `/api/v1/pd/workshops/${workshopId}/enrollments/${id}`,
+      dataType: 'json'
+    }).done(() => {
+      // reload
+      loadEnrollments();
+      this.deleteEnrollmentRequest = null;
+    });
+  };
+
+  render() {
+    const {
+      workshopId,
+      workshop,
+      enrollments,
+      isLoadingEnrollments,
+      isWorkshopAdmin
+    } = this.props;
     const header = (
       <div>
-        Workshop Enrollment: {this.state.workshop.enrolled_teacher_count}/
-        {this.state.workshop.capacity}
+        Workshop Enrollment: {workshop.enrolled_teacher_count}/
+        {workshop.capacity}
         <Button
           bsStyle="link"
           style={styles.linkButton}
@@ -393,7 +483,7 @@ export class Workshop extends React.Component {
         >
           <i className="fa fa-arrow-circle-down" />
         </Button>
-        {this.props.permission.has(WorkshopAdmin) && (
+        {isWorkshopAdmin && (
           <Button
             bsSize="xsmall"
             disabled={this.state.selectedEnrollments.length === 0}
@@ -413,26 +503,26 @@ export class Workshop extends React.Component {
     );
 
     let contents = null;
-    if (this.state.loadingEnrollments) {
+    if (isLoadingEnrollments) {
       contents = <Spinner />;
     } else {
       const firstSessionDate = moment
-        .utc(this.state.workshop.sessions[0].start)
+        .utc(workshop.sessions[0].start)
         .format('MMMM Do');
       contents = (
         <WorkshopEnrollment
-          workshopId={this.props.params.workshopId}
-          workshopCourse={this.state.workshop.course}
-          workshopSubject={this.state.workshop.subject}
+          workshopId={workshopId}
+          workshopCourse={workshop.course}
+          workshopSubject={workshop.subject}
           workshopDate={firstSessionDate}
-          numSessions={this.state.workshop.sessions.length}
-          enrollments={this.state.enrollments}
+          numSessions={workshop.sessions.length}
+          enrollments={enrollments}
           onDelete={this.handleDeleteEnrollment}
           onClickSelect={this.handleClickSelect}
           accountRequiredForAttendance={
-            this.state.workshop['account_required_for_attendance?']
+            workshop['account_required_for_attendance?']
           }
-          scholarshipWorkshop={this.state.workshop['scholarship_workshop?']}
+          scholarshipWorkshop={workshop['scholarship_workshop?']}
           activeTab={this.state.enrollmentActiveTab}
           onTabSelect={this.handleEnrollmentActiveTabSelect}
           selectedEnrollments={this.state.selectedEnrollments}
@@ -442,54 +532,7 @@ export class Workshop extends React.Component {
 
     return <WorkshopPanel header={header}>{contents}</WorkshopPanel>;
   }
-
-  render() {
-    if (this.state.loadingWorkshop) {
-      return <Spinner />;
-    } else if (!this.state.workshop) {
-      return <p>No workshop found</p>;
-    }
-
-    const {workshopId} = this.props.params;
-    const {workshop} = this.state;
-    const {sessions, state: workshopState} = workshop;
-
-    return (
-      <Grid>
-        {workshopState === 'Not Started' && (
-          <SignUpPanel workshopId={workshopId} />
-        )}
-        <IntroPanel
-          workshopId={workshopId}
-          workshopState={workshopState}
-          sessions={sessions}
-          isAccountRequiredForAttendance={
-            this.state.workshop['account_required_for_attendance?']
-          }
-          isWorkshopAdmin={this.props.permission.has(WorkshopAdmin)}
-          loadWorkshop={this.loadWorkshop.bind(this)}
-        />
-        {workshopState !== 'Not Started' && (
-          <AttendancePanel workshopId={workshopId} sessions={sessions} />
-        )}
-        {workshopState === 'In Progress' && (
-          <EndWorkshopPanel
-            workshopId={workshopId}
-            isReadyToClose={this.state.workshop['ready_to_close?']}
-            loadWorkshop={this.loadWorkshop.bind(this)}
-          />
-        )}
-        {this.renderEnrollmentsPanel()}
-        {this.renderDetailsPanel()}
-        <MetadataFooter createdAt={this.state.workshop.created_at} />
-      </Grid>
-    );
-  }
 }
-
-export default connect(state => ({
-  permission: state.workshopDashboard.permission
-}))(Workshop);
 
 /**
  * A small, right-aligned section at the end of the workshop dashboard showing
