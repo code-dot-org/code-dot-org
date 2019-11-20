@@ -34,6 +34,7 @@ class Level < ActiveRecord::Base
   has_many :hint_view_requests
 
   before_validation :strip_name
+  before_validation :replace_illegal_chars
   before_destroy :remove_empty_script_levels
 
   validates_length_of :name, within: 1..70
@@ -422,6 +423,10 @@ class Level < ActiveRecord::Base
 
   def strip_name
     self.name = name.to_s.strip unless name.nil?
+  end
+
+  def replace_illegal_chars
+    self.name = name.gsub(/[^A-Za-z0-9 !"#&'()+,\-.:=?@_|]/, '-')
   end
 
   def log_changes(user=nil)

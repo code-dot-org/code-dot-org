@@ -97,6 +97,14 @@ class LevelTest < ActiveSupport::TestCase
     end
   end
 
+  test "replace bad chars in custom level name" do
+    assert_creates(Level) do
+      level = Level.create(@custom_maze_data.merge(name: 'bad <chars>'))
+      assert level.valid?
+      assert_equal 'bad -chars-', level.name
+    end
+  end
+
   test "get custom levels" do
     custom_levels = Level.custom_levels
     assert custom_levels.include?(@custom_level)
@@ -822,7 +830,7 @@ class LevelTest < ActiveSupport::TestCase
   test 'clone with suffix properly escapes suffixes' do
     level_1 = create :level, name: 'your_level_1'
 
-    tricky_suffix = '[(.\\'
+    tricky_suffix = '!(."'
 
     level_2 = level_1.clone_with_suffix(tricky_suffix)
     assert_equal "your_level_1#{tricky_suffix}", level_2.name
