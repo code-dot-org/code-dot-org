@@ -237,6 +237,12 @@ ky:
           PROPERTY:
             '"scale"': өлчөмү
             '"height"': бийиктиги
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': алмаз
+            '"x"': x
+            '"y"': 'y'
       Dancelab_whenKey:
         options:
           KEY:

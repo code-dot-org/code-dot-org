@@ -219,10 +219,21 @@ class ContactRollups
     # MySQL use the email index to sort by email.
 
     # Query all of the contacts in the latest daily contact rollup table (contact_rollups_daily) sorted by email.
-    contact_rollups_src = PEGASUS_REPORTING_DB_READER['SELECT * FROM contact_rollups_daily FORCE INDEX(contact_rollups_email_index) ORDER BY email']
+    src_query = <<-SQL.squish
+      SELECT * FROM contact_rollups_daily
+      FORCE INDEX(contact_rollups_email_index)
+      ORDER BY email
+    SQL
+    contact_rollups_src = PEGASUS_REPORTING_DB_READER[src_query]
+
     # Query all of the contacts in the master contact rollup table (contact_rollups_daily) sorted by email.
     # Use MYSQL 5.7 MAX_EXECUTION_TIME optimizer hint to override the production database global query timeout.
-    contact_rollups_dest = PEGASUS_DB_READER["SELECT /*+ MAX_EXECUTION_TIME(#{MAX_EXECUTION_TIME}) */ * FROM contact_rollups FORCE INDEX(contact_rollups_email_index) ORDER BY email"]
+    dest_query = <<-SQL.squish
+      SELECT /*+ MAX_EXECUTION_TIME(#{MAX_EXECUTION_TIME}) */ * FROM contact_rollups
+      FORCE INDEX(contact_rollups_email_index)
+      ORDER BY email
+    SQL
+    contact_rollups_dest = PEGASUS_DB_READER[dest_query]
 
     # Create iterators for both queries using the #stream method so we stream the results back rather than
     # trying to load everything in memory
@@ -284,14 +295,14 @@ class ContactRollups
         else
           # Update the destination record
           # log("#{Time.now} Update #{email_src} (src id: #{contact_rollup_src[:id]}; updated: #{output_row})")
-          PEGASUS_DB_WRITER[:contact_rollups].where(email: email_src).update(output_row)
+          PEGASUS_DB_WRITER[:contact_rollups].where(email: email_dest).update(output_row)
           num_updates += 1
         end
       end
 
       num_total = num_inserts + num_updates + num_unchanged
       if Time.now - time_last_output > LOG_OUTPUT_INTERVAL
-        log "Total source rows processed: #{num_total}"
+        log "#{Time.now} Total source rows processed: #{num_total}. #{num_inserts} insert(s), #{num_updates} update(s), #{num_unchanged} unchanged."
         time_last_output = Time.now
       end
 
@@ -301,6 +312,15 @@ class ContactRollups
 
     log("#{Time.now} Completed. #{num_total} source rows processed. #{num_inserts} insert(s), #{num_updates} update(s), #{num_unchanged} unchanged.")
     log_collector.info("#{num_total} source rows processed. #{num_inserts} insert(s), #{num_updates} update(s), #{num_unchanged} unchanged.")
+  rescue StandardError => error
+    log "#{Time.now} Error caught and re-raised: #{error.message}"
+    log "Current Source Record - #{contact_rollup_src}"
+    log "Current Destination Record - #{contact_rollup_dest}"
+
+    log_collector.info("Current source record = #{contact_rollup_src}")
+    log_collector.info("Current destination record = #{contact_rollup_dest}")
+
+    raise error
   end
 
   def self.create_destination_table
@@ -960,7 +980,5 @@ class ContactRollups
     s.next
   rescue StopIteration
     nil
-  rescue StandardError => error
-    log "Error iterating over stream #{s} - #{error}"
   end
 end

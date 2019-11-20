@@ -95,8 +95,6 @@ fr-FR:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Nouveau bloc !
         dance_callout_11_b: Nouveau bloc !
-      Dance_2019_01:
-        dance_callout_01: Ajoutez ce bloc à votre programme!
       Dance_2019_04:
         dance_callout_02: Ajoutez ce bloc à votre programme!
       Dance_2019_06:
@@ -104,7 +102,8 @@ fr-FR:
       Dance_2019_07:
         setprop_hint: Nouveau bloc !
       Dance_2019_09:
-        new_block_1: Nouveau bloc !
+        new_block_3: Nouveau bloc !
+        new_block_4: Nouveau bloc !
       Dance_Party_01:
         dance_callout_01: Ajoutez ce bloc à votre programme!
       Dance_Party_02:

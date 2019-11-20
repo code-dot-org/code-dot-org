@@ -154,9 +154,11 @@ class CourseScript extends Component {
               showAssignButton &&
               selectedSectionId && (
                 <AssignButton
-                  sectionId={selectedSectionId}
+                  sectionId={selectedSection.id}
                   scriptId={id}
                   courseId={courseId}
+                  assignmentName={title}
+                  sectionName={selectedSection.name}
                 />
               )}
           </span>

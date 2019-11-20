@@ -60,6 +60,7 @@ th:
   join_section:
     code:
       placeholder: "ส่วนรหัส (ABCDEF)"
+      submit: 'เข้าร่วม'
   add_hint_form:
     placeholder: 'กรุณาป้อนคำแนะนำของคุณที่นี่'
     submit: 'เพิ่มคำแนะนำ'
@@ -126,6 +127,7 @@ th:
     invalid_password: "รหัสผ่านต้องมีอย่างน้อย 6 ตัวอักษร"
     mismatch_password: "รหัสผ่านที่คุณป้อนไม่ตรงกัน"
     under_13_consent: "ถ้าฉันมีอายุต่ำกว่า 13 ปี ฉันยืนยันว่าฉันได้รับอนุญาตจากผู้ปกครองหรือผู้พิทักษ์ตามกฏหมายเพื่อใช้บริการของ Code.org แล้ว"
+    student_consent: "ฉันยืนยันว่าฉันได้รับอนุญาตจากผู้ปกครองหรือผู้พิทักษ์ตามกฏหมายให้ใช้บริการของ Code.org ได้"
     additional_information: "เราต้องการข้อมูลบางอย่างเพิ่มเติมเพื่อดำเนินการสมัครต่อ"
     user_type_label: "ประเภทบัญชี"
     user_type_teacher: "ครู"
@@ -138,6 +140,7 @@ th:
     title: 'ข้อมูลโรงเรียน (ไม่บังคับ)'
     school_country: 'ประเทศของโรงเรียน'
     select_school_type: 'ประเภทโรงเรียน'
+    homeschool: 'เรียนหนังสืออยู่บ้าน'
     other: 'อาชีพอื่น ๆ'
     school: 'โรงเรียน'
     school_name: 'ชื่อโรงเรียน'
@@ -238,6 +241,7 @@ th:
       about_donors: "ผู้บริจาค"
       about_jobs: "งาน"
       about_contact: "ติดต่อเรา"
+      about_faqs: "ถามตอบ"
       learn: "เรียนรู้"
       stats: "สถิติ"
       help_us: "ช่วยเรา"
@@ -260,12 +264,14 @@ th:
       artist: 'ศิลปิน'
       bounce: 'กระเด้ง'
       dance: 'งานเต้นรำ'
+      frozen: 'Frozen'
       gamelab: 'เกมแล๊บ (Game Lab)'
       gumball: 'โลกมหัศจรรย์ของ Gumball'
       iceage: 'ยุคน้ำแข็ง (Ice Age)'
       infinity: 'ไม่จำกัด'
       minecraft_adventurer: 'การผจญภัยในไมน์คราฟท์'
       minecraft_designer: 'ไมน์คราฟท์'
+      starwars: 'Star Wars'
       starwarsblocks: 'สตาร์วอร์ส (บล็อก)'
       starwarsblocks_hour: 'สตาร์วอร์ส (บล็อก)'
     popup:
@@ -395,6 +401,7 @@ th:
   lesson_plan: 'แผนการเรียนการสอน'
   view_lesson_plan: 'มาดูแผนการเรียนการสอน'
   pdf_download: 'ดาวน์โหลด PDF'
+  video_coming_soon: 'วีดีโอจะมาในเร็ว ๆ นี้!'
   share_code:
     studio_og_title: "มาลองแอปเพลย์แลป ของฉัน"
   builder:
@@ -404,6 +411,7 @@ th:
   upsell:
     applab:
       title: 'แอ๊ปแล็บ'
+      audience: 'อายุ 13+'
     dance:
       title: 'งานเต้นรำ'
     20-hour:
@@ -413,6 +421,13 @@ th:
     gamelab:
       title: "เกมแล๊บ (Game Lab)"
       body: "เกมแลป(Game Lab) เป็นสภาพแวดล้อมในการเขียนโปรแกรมที่คุณสามารถสร้างภาพเคลื่อนไหวหรือที่เรียกกันว่าแอนนิเมชั่นแบบง่ายๆ หรือเกมที่มีวัตถุและตัวแสดงต่างๆ ที่สามารถโต้ตอบซึ่งกันและกันได้"
+      audience: "อายุ 13+"
+    weblab:
+      audience: "อายุ 13+"
+    frozen:
+      title: "Frozen"
+    starwars:
+      title: "Star Wars"
     infinity:
       title: "เรื่องราวและเกม"
     minecraft:
@@ -426,8 +441,12 @@ th:
     hero:
       title: "ไมน์คราฟท์"
       body: "การกลับมาของไมน์คราฟท์ในชั่วโมงแห่งโค้ด ที่มาพร้อมกิจกรรมใหม่ล่าสุด! มาผจญภัยไปกับไมน์คราฟท์ด้วยการใช้โค้ดเป็นเครื่องมือ"
+    unplugged:
+      audience: "อายุ 4+"
     unplugged_conditionals:
       title: "เงื่อนไข "
+    widgets:
+      audience: "อายุ 14+"
   gallery:
     header: "แกลเลอรี่"
     header_playlab: "เรื่องราวและเกม"
@@ -437,7 +456,9 @@ th:
     support: "ขอความช่วยเหลือ"
     help_support: "การช่วยเหลือและสนับสนุน"
   multi:
+    wrong_title: "คำตอบไม่ถูกต้อง"
     wrong_body: "คำตอบที่คุณเลือก ไม่ถูกต้อง โปรดลองใหม่อีกครั้ง!"
+    correct_title: "ถูกต้อง"
     correct_body: "เป็นคำตอบที่ถูกต้อง"
   multi-submittable:
     wrong_title: "ขอบคุณ"
@@ -446,10 +467,14 @@ th:
     correct_body: "ขอบคุณที่ส่งคำตอบ"
   level_group:
     wrong_title: "ขอบคุณ"
+    wrong_body: "ขอบคุณที่ได้ส่งคำตอบมา"
     correct_title: "ขอบคุณ"
+    correct_body: "ขอบคุณที่ได้ส่งคำตอบมา"
   level_group-submittable:
     wrong_title: "ขอบคุณ"
+    wrong_body: "ขอบคุณที่ได้ส่งคำตอบมา"
     correct_title: "ขอบคุณ"
+    correct_body: "ขอบคุณที่ได้ส่งคำตอบมา"
     unsubmit-title: "ถอนการส่งการประเมินผล"
     unsubmit-body: "การถอนการประเมินผลของท่านจะกำหนดวันและเวลาการส่งขึ้นมาใหม่ ท่านต้องการเช่นนั้นหรือไม่?"
     submit-incomplete-title: "ส่งการประเมินผลของท่าน"
@@ -457,8 +482,14 @@ th:
   match:
     wrong_title: "คำตอบไม่ถูกต้อง"
     wrong_body: "โซลูชันที่คุณใส่ไม่ถูกต้อง กรุณาลองอีกครั้ง"
+    correct_title: "ถูกต้อง"
     correct_body: "เป็นคำตอบที่ถูกต้อง"
+  contract_match:
+    wrong_title: "คำตอบไม่ถูกต้อง"
   text_match:
+    placeholder: "กรอกคำตอบของคุณที่นี่"
+    open_response_title: "ขอบคุณ"
+    correct_title: "ถูกต้อง"
     correct_body: "เป็นคำตอบที่ถูกต้อง"
   dialog:
     ok: "ตกลง"
@@ -468,11 +499,14 @@ th:
   terms_interstitial:
     tos: "เงื่อนไขการให้บริการ"
     privacy: "นโยบายความเป็นส่วนตัว"
+    accept: "ยอมรับ"
     print: "พิมพ์"
   school_info_interstitial:
     save: "บันทึก"
   race_interstitial:
     races:
+      white: "ผิวขาว"
+      asian: "ชาวเอเชีย"
       other: "อาชีพอื่น ๆ"
     submit: "ส่งคำตอบ"
     decline: "ปิด"
@@ -509,9 +543,14 @@ th:
     csf_variables: 'ตัวแปร'
     csf_for_loops: 'การวนรอบ'
     csf_internet: 'อินเทอร์เน็ต'
+    csf_warmup: 'อุ่นเครื่อง'
+    csd3_1: 'บทที่ 1: ภาพและการเคลื่อนไหว'
+    csd3_2: 'บทที่ 2: การสร้างเกม'
+    cspSurvey: 'แบบสำรวจ'
     csp_variables: 'ตัวแปร'
     csp_conditionals: 'เงื่อนไข '
     csp_functions: 'ฟังก์ชัน'
+    csp_project: 'โปรเจกต์'
     csp_lists: 'รายการ'
     csp_loops: 'ลูป'
   hoc_download:
@@ -527,6 +566,17 @@ th:
         male: 'ชาย'
         female: 'หญิง'
         none: 'ไม่ต้องการตอบ'
+      school_country:
+        thailand: 'ประเทศไทย'
+      ages:
+        ages_under_6: 'น้อยกว่า 6 ปี'
+        ages_7_8: '7-8 ปี'
+        ages_9_10: '9-10 ปี'
+        ages_11_12: '11-12 ปี'
+        ages_13_14: '13-14 ปี'
+        ages_15_16: '15-16 ปี'
+        ages_17_18: '17-18 ปี'
+        ages_19_over: '19 ขึ้นไป'
       subjects:
         cs: 'วิทยาการคอมพิวเตอร์'
         math: 'คำนวณ'

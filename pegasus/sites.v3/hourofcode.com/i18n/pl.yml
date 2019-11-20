@@ -14,27 +14,28 @@ pl:
   hoc2019_header: Ucz się informatyki. Zmieniaj świat!
   hoc2019_header_line1_mobile: Ucz się informatyki.
   hoc2019_header_line2_mobile: Zmieniaj świat!
-  social_hoc2019_every_sudent: 'Every student has the potential to change the world.
-    Help them get started. #CSforGood'
-  social_hoc2019_learn_computer_science: 'Learn computer science. Change the world.
-    #CSforGood #HourOfCode'
-  social_hoc_is_coming: The Hour of Code is coming!
-  social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
-    computer science. Change the world.'
-  social_hoc2019_coming_dates: The Hour of Code is coming December 9-15, 2019. Computer
-    science is foundational for every student to learn.
-  social_hoc2019_dance: Featuring Katy Perry, Jonas Brothers, Lil Nas X, Panic at
-    the Disco, and many more!
-  codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
-    class="hoc2018-curriculum-link">Code.org courses</a>
-  codeorg_homepage_hoc2018_dance_heading: Create your own <span class="highlight-word">Dance&nbsp;Party</span>
-  codeorg_homepage_hoc2018_header_line1: The Hour of Code is coming...
-  codeorg_homepage_hoc2018_header_line2_desktop: What will you <span class="hoc2018-highlight-word">create?</span>
+  social_hoc2019_every_sudent: 'Każdy uczeń może zmieniać świat. Pomóż im zacząć.
+    #CSforGood'
+  social_hoc2019_learn_computer_science: 'Ucz się informatyki. Zmieniaj świat. #CSforGood
+    #HourOfCode'
+  social_hoc_is_coming: Zbliża się Godzina Kodowania!
+  social_hoc2019_hoc_is_about_csforgood: "#HourOfCode dotyczy #CSforGood. Ucz się
+    informatyki. Zmieniaj świat."
+  social_hoc2019_coming_dates: Godzina Kodowania będzie miała miejsce w dniach 9-15
+    grudnia 2019 r. Informatyka jest podstawą w kształceniu każdego ucznia.
+  social_hoc2019_dance: Wystąpią Katy Perry, Jonas Brothers, Lil Nas X, Panic at the
+    Disco i wielu innych!
+  codeorg_homepage_hoc2018_curriculum: Przejdź dalej dzięki <a href="%{studio_url}/courses"
+    class="hoc2018-curriculum-link"> Kursom Code.org </a>
+  codeorg_homepage_hoc2018_dance_heading: Utwórz własną <span class="highlight-word">Potańcówkę</span>
+  codeorg_homepage_hoc2018_header_line1: Zbliża się Godzina Kodowania...
+  codeorg_homepage_hoc2018_header_line2_desktop: Co będziesz <span class="hoc2018-highlight-word">tworzyć?</span>
   codeorg_homepage_hoc2018_header_line2_mobile: Co dziś stworzysz?
-  codeorg_homepage_hoc2018_header_line3: Give flight to imagination and birth to innovation.
-    Start with an Hour of Code and your own brand of creativity, whatever it may be.
-  codeorg_homepage_hoc2018_musician_before: Featuring
-  codeorg_homepage_hoc2018_musician_after: and more!
+  codeorg_homepage_hoc2018_header_line3: Uwolnij wyobraźnię i rodzące się pomysły.
+    Zacznij z Godziną Kodowania i z własnym pomysłem na kreatywność, cokolwiek by
+    to nie było.
+  codeorg_homepage_hoc2018_musician_before: Gościnnie
+  codeorg_homepage_hoc2018_musician_after: i więcej!
   codeorg_homepage_hoc2018_video: Obejrzyj nasze wideo
   hourofcode_homepage_hoc2018_header_line1: Każdy i wszędzie może zorganizować Godzinę
     Kodowania. Godzinne samouczki w ponad 45 językach. Nie musisz mieć doświadczenia.
@@ -51,7 +52,7 @@ pl:
     każdy może zostać organizatorem Godziny Kodowania. Jednogodzinne samouczki są
     dostępne w ponad 40 językach. Nie jest wymagane wcześniejsze doświadczenie. <strong>Godzina
     kodowania jest dostępna dla wszystkich w wieku od 4 do 104 lat.</strong>
-  front_intro_default_2: A global movement in 180+ countries.
+  front_intro_default_2: Globalny ruch w 180+ krajach.
   front_watch_video: Obejrzyj nowy film
   front_watch_regular_video: Obejrzyj wideo
   front_volunteers: Potrzebni są wolontariusze techniczni
@@ -348,28 +349,28 @@ pl:
   signup_thank_you_header: Dziękujemy za rejestrację jako organizator Godziny Kodowania.
   signup_thank_you_message: Wysłaliśmy do Ciebie e-mail z potwierdzeniem oraz informacjami,
     które pomogą Ci zacząć.
-  social_hoc2018_code_org_what_create: 'Code.org: What will you create?'
-  social_hoc2018_creativity_in_are_you: 'The #HourOfCode is about creativity. I’m
-    in! Are you?'
-  social_hoc2018_dance_party: 'Hour of Code: Dance Party'
-  social_hoc2018_dance_what_create: Featuring Katy Perry, Madonna, J. Balvin, Sia,
-    Keith Urban, Ciara, and 25 more!
-  social_hoc2018_every_student: Every student deserves the opportunity to express
-    their creativity with computer science.
-  social_hoc2018_every_student_try_what_create: Every student deserves the opportunity
-    to express their creativity with computer science. Try your hand at the new tutorials.
-    What will you create?
-  social_hoc2018_hoc_coming_create: The Hour of Code is coming. What will you create?
-  social_hoc2018_hoc_here: The Hour of Code is here!
+  social_hoc2018_code_org_what_create: 'Code.org: Co będziesz tworzyć?'
+  social_hoc2018_creativity_in_are_you: 'Tegoroczna #HourOfCode jest o kreatywności.
+    Jestem już, a Ty?'
+  social_hoc2018_dance_party: 'Godzina Kodowania: Potańcówka'
+  social_hoc2018_dance_what_create: 'Będą występować: Katy Perry, Madonny, J. Balvina,
+    Sia, Keitha Urbana, Ciary i 25 innych gwiazd!'
+  social_hoc2018_every_student: Każdy uczeń zasługuje, by umożliwić mu wyrażenie swojej
+    kreatywności z wykorzystaniem informatyki.
+  social_hoc2018_every_student_try_what_create: Każdy uczeń zasługuje, by umożliwić
+    mu wyrażenie swojej kreatywności z wykorzystaniem informatyki. Spróbuj swoich
+    sił w nowych samouczkach. Co utworzysz?
+  social_hoc2018_hoc_coming_create: Zbliża się Godzina Kodowania. Co będziesz tworzyć?
+  social_hoc2018_hoc_here: Oto Godzina Kodowania!
   social_hoc2018_join: Zbliża się Godzina Kodowania
-  social_hoc2018_mc: Minecraft is back for the Hour of Code, and you’re the hero!
-    Write code to journey through Minecraft biomes.
-  social_hoc2018_mc_creativity: Use your creativity and problem solving skills to
-    explore and build underwater worlds with code.
+  social_hoc2018_mc: Minecraft powraca na Godzinę Kodowania, a ty jesteś bohaterem!
+    Napisz kod, by podróżować poprzez biomy Minecrafu.
+  social_hoc2018_mc_creativity: Użyj swojej kreatywności i umiejętności rozwiązywania
+    problemów, aby odkrywać i budować podwodne światy za pomocą kodu.
   social_hoc2018_what_create: Co dziś stworzysz?
-  social_hoc2018_global_movement: The Hour of Code is a global movement reaching tens
-    of millions of students. One-hour tutorials are available in 45+ languages for
-    all ages.
+  social_hoc2018_global_movement: Godzina Kodowania to globalny ruch docierający do
+    dziesiątek milionów uczniów. Jednogodzinne samouczki są dostępne w 45+ językach
+    dla uczniów w każdym wieku.
   map_title: Mapa Godziny Kodowania
   map_header: "# wydarzeń Hour of Code na całym świecie"
   map_header_count_year: "%{event_count} wydarzenia zarejestrowane dla Godziny Kodowania
@@ -395,10 +396,10 @@ pl:
     milionów uczniów w ponad 180 krajach, posługujących się ponad 30 językami. Wiek
     od 4 do 104 lat.
   twitter_default_text: 'Biorę udział w tegorocznym #HourOfCode, a Ty? @codeorg'
-  twitter_donor_text: 'This year''s #HourOfCode is about creativity. I’m in! Are you?
-    (Thanks %{random_donor} for supporting @codeorg)'
-  twitter_donor_text_2019: 'This year''s #HourOfCode is about #CSforGood. I’m in!
-    Are you? (Thanks %{random_donor} for supporting @codeorg)'
+  twitter_donor_text: 'Tegoroczna #HourOfCode jest związana z kreatywnością. Jestem
+    za! Jesteś? (Dzięki %{random_donor} za wsparcie @codeorg)'
+  twitter_donor_text_2019: 'Tegoroczna #HourOfCode jest związana z kreatywnością.
+    Jestem za! Jesteś? (Dzięki %{random_donor} za wsparcie @codeorg)'
   hoc_faq_title: FAQ - Najczęściej zadawane pytania
   hoc_faq_what_is_hoc_q: Czym jest Godzina kodowania?
   hoc_faq_what_is_hoc_a: Godzina kodowania to jednogodzinne wprowadzenie do informatyki,
@@ -605,11 +606,13 @@ pl:
   videos_hoc_2014: Już jest Godzina Kodowania - każdy może się uczyć
   videos_obama_cs: Prezydent Obama o informatyce
   videos_anybody_can_learn: Każdy może się nauczyć (1 min.)
-  videos_creativity: What is Creativity?
+  videos_creativity: Czym jest kreatywność?
   videos_creativity_series: Czym jest kreatywność? Obejrzyj pełną serię.
   title_country_resources: Zasoby dla konkretnych krajów
-  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
-  title_hoc_review_committee: Hour of Code and CSEdWeek Review Committee
+  title_hoc_advisory_committee: Komitet Doradczy Godziny Kodowania i Tygodnia Edukacji
+    Informatycznej
+  title_hoc_review_committee: Komitet Doradczy Godziny Kodowania i Tygodnia Edukacji
+    Informatycznej
   title_how_to_promote: Podaj dalej
   title_how_to_districts: Poradnik Godziny Kodowania dla jednostek
   title_how_to_events: Poradnik wydarzenia Godziny Kodowania
@@ -619,7 +622,7 @@ pl:
   title_how_to_volunteers: Przewodnik Godziny Kodowania dla wolontariuszy
   title_how_to_parents: Poradnik dla rodziców
   title_how_to: Porady
-  title_international_partners: Contact International Partners
+  title_international_partners: Kontaktuj się z Międzynarodowymi Partnerami
   title_press_release: Komunikat prasowy Godziny Kodowania dla urzędników publicznych
   title_op_ed: Przykładowy artykuł wspierający Tydzień Edukacji Informatycznej oraz
     Godzinę Kodowania
@@ -824,7 +827,7 @@ pl:
   tutorial_ozo_name: Samouczek Ozobota
   tutorial_bbcla_name: Bitsbox Coding + Language Arts
   tutorial_bbcsci_name: Kodowanie z Bitsbox + przyroda
-  tutorial_tlctour_name: Tour Guide Activity
+  tutorial_tlctour_name: Aktywność przewodnika
   tutorial_codesterstj_name: CS Tech Jam
   tutorial_tlclocked_name: Zablokowany
   tutorial_baubles_name: Binarne bombki
@@ -841,8 +844,8 @@ pl:
   tutorial_bbcmathii_name: Kodowanie z Bitsbox + matematyka (K-2)
   tutorial_bbcphys_name: Kodowanie z Bitsbox + fizyka
   tutorial_bitsbox_name: Tworzenie zwariowanych aplikacji z Bitsbox
-  tutorial_tlcemo_name: 'Emotion Machine: Create-a-Face Card'
-  tutorial_crd_name: Conditionals with Cards
+  tutorial_tlcemo_name: 'Maszyna emocji: karta Utwórz twarz'
+  tutorial_crd_name: Instrukcje warunkowe z kartami
   tutorial_bbcbio_name: Kodowanie z Bitsbox + biologia
   tutorial_ticklebb8_name: BB-8 Swing
   tutorial_grok_name: Grok Learning
@@ -866,7 +869,7 @@ pl:
   tutorial_tlcinvis_name: Invisible Palming Activity
   tutorial_tlcjflap_name: 'JFLAP: Creating Finite State Machines'
   tutorial_procolor_name: Programowanie za pomocą kolorów
-  tutorial_spiralsfinch_name: Spirals with the Finch
+  tutorial_spiralsfinch_name: Spirale z Finchem
   tutorial_ozoi_name: Wprowadzenie do programowania i Ozobot
   tutorial_ticklel_name: LEGO Bricker
   tutorial_spiralsdash_name: Rysuj spirale z Dashem
@@ -943,9 +946,9 @@ pl:
   tutorial_tap_name: Tynker na tabletach
   tutorial_cintl_name: Napisz swój pierwszy program komputerowy
   tutorial_itchstop_name: ITCH Stop Frame Animation (Scratch)
-  tutorial_tynkerpn_name: 'Peep: Nature Walk'
-  tutorial_tynkerpd_name: 'Peep: Dance with Friends'
-  tutorial_persistence_name: 'Persistence: Building a Foundation'
+  tutorial_tynkerpn_name: 'Peep: Naturalny spacer'
+  tutorial_tynkerpd_name: 'Peep: Taniec z przyjaciółmi'
+  tutorial_persistence_name: 'Trwałość: budowanie fundamentów'
   tutorial_getloopy_name: W Pętli
   tutorial_createface_name: Twórz twarz
   tutorial_happymaps_name: Wesołe Mapy
@@ -957,7 +960,7 @@ pl:
   tutorial_kodableint_name: Wprowadzenie do programowania
   tutorial_kodableadv_name: Zaawansowane pojęcia z zakresu programowania
   tutorial_tynkertj_name: Toksyczna dżungla
-  tutorial_wolframa_name: Age in Days
+  tutorial_wolframa_name: Wiek w dniach
   tutorial_wolframm_name: Losowe melodie
   tutorial_wolframspi_name: Sound of PI
   tutorial_wolframsph_name: Narysuj sferę
@@ -1095,10 +1098,10 @@ pl:
   tutorial_legorobust_name: Robust Structures – LEGO® Education WeDo 2.0
   tutorial_legoplants_name: Plants and Pollinators – LEGO® Education WeDo 2.0
   tutorial_legopark_name: Autonomous Parking – LEGO® MINDSTORMS® Education EV3
-  tutorial_legodetect_name: Object Detection – LEGO® MINDSTORMS® Education EV3
-  tutorial_legolight_name: Automatic Headlights – LEGO® MINDSTORMS® Education EV3
+  tutorial_legodetect_name: Wykrywanie obiektów – LEGO® MINDSTORMS® Education EV3
+  tutorial_legolight_name: Automatyczne reflektory – LEGO® MINDSTORMS® Education EV3
   tutorial_alexa_name: 'Amazon Alexa Fact Skill Tutorial: My School Facts'
-  tutorial_grokpetmicro_name: Virtual Pet (micro:bit MicroPython)
+  tutorial_grokpetmicro_name: Wirtualne zwierzątko (micro:bit MicroPython)
   tutorial_pirateplunder_name: Drapieżny Pirat
   tutorial_cadj_name: DR DJ Device
   tutorial_cacrazy_name: Code Crazy Creatures
@@ -1108,41 +1111,42 @@ pl:
   tutorial_vceclipse_name: Code the Eclipse
   tutorial_pmzero_name: Pac-Man ZERO
   tutorial_hsela_name: 'Telling stories: ELA + coding'
-  tutorial_ticklear_name: What's AR?
+  tutorial_ticklear_name: Co to jest AR?
   tutorial_bcrobot_name: BlocksCAD Robot
-  tutorial_bcsnow_name: BlocksCAD Snowflake
+  tutorial_bcsnow_name: BlocksCAD płatek śniegu
   tutorial_ifly_name: iFly
   tutorial_idowedo_name: Moje WeDo
   tutorial_diggindwarf_name: Diggin' Dwarf
-  tutorial_rmedr_name: Program a simulated VEX EDR V5 robot using Google Blockly
-  tutorial_spheroit_name: 'Blocks 2: If/Then Else'
-  tutorial_gameofcodes_name: Game Of Codes
-  tutorial_blocklygames_name: Blockly Games
-  tutorial_spherohello_name: 'Text 1: Hello World'
-  tutorial_spheroarcade_name: Sphero Arcade Playground
-  tutorial_bcpy1_name: World of Python
-  tutorial_bcpy2_name: World of Python 2
-  tutorial_bcjs1_name: World of JavaScript
-  tutorial_bcjs2_name: World of JavaScript 2
+  tutorial_rmedr_name: Zaprogramuj symulowanego robota VEX EDR V5 za pomocą Google
+    Blockly
+  tutorial_spheroit_name: 'Bloki 2: If/Then Else'
+  tutorial_gameofcodes_name: Gra kodów
+  tutorial_blocklygames_name: Gry w Blockly
+  tutorial_spherohello_name: 'Tekst 1: Hello World'
+  tutorial_spheroarcade_name: Plac zabaw Arcade Sphero
+  tutorial_bcpy1_name: Świat Pythona
+  tutorial_bcpy2_name: Świat Pythona 2
+  tutorial_bcjs1_name: Świat JavaScript
+  tutorial_bcjs2_name: Świat JavaScript 2
   tutorial_3dbearmars_name: The Mars Pioneers
   tutorial_alexaskill_name: 'Alexa Blueprints: Create an Alexa Skill'
   tutorial_bitsboxyak_name: Yak Attack! Make a Card with Typed Code
   tutorial_blockscadbargraphs_name: Bar Graphs
-  tutorial_blockscadbirdhouses_name: Birdhouses
-  tutorial_blockscadclock_name: Analog Clock
+  tutorial_blockscadbirdhouses_name: Domki dla ptaków
+  tutorial_blockscadclock_name: Zegar analogowy
   tutorial_blockscaddinner_name: Dinner Robot
-  tutorial_blockscadicecream_name: Ice Cream Machine
+  tutorial_blockscadicecream_name: Maszyna do lodów
   tutorial_blockscadpizza_name: Pizza Printer
-  tutorial_blockscadsugar_name: Sugar Cubes
+  tutorial_blockscadsugar_name: Kostki cukru
   tutorial_bsgridlight_name: 'GridLight: Hello World'
-  tutorial_bpartscratch_name: 'Art & Music: Color (Scratch)'
-  tutorial_bpartvid_name: 'Art & Music: Color (Vidcode)'
-  tutorial_bpenglishscratch_name: 'English: Biography (Scratch)'
-  tutorial_bpenglishvid_name: 'English: Biography (Vidcode)'
-  tutorial_bphealthscratch_name: 'Health: DNA (Scratch)'
-  tutorial_bphealthvid_name: 'Health: DNA (Vidcode)'
-  tutorial_bpmathscratch_name: 'Math: Multiplication (Scratch)'
-  tutorial_bpmathvid_name: 'Math: Multiplication (Vidcode)'
+  tutorial_bpartscratch_name: 'Art & Music: Kolor (Scratch)'
+  tutorial_bpartvid_name: 'Art & Music: Kolor (Vidcode)'
+  tutorial_bpenglishscratch_name: 'Angielski: Biografia (Scratch)'
+  tutorial_bpenglishvid_name: 'Angielski: Biografia (Vidcode)'
+  tutorial_bphealthscratch_name: 'Zdrowie: DNA (Scratch)'
+  tutorial_bphealthvid_name: 'Zdrowie: DNA (Vidcode)'
+  tutorial_bpmathscratch_name: 'Matematyka: Mnożenie (Scratch)'
+  tutorial_bpmathvid_name: 'Matematyka: Mnożenie (Vidcode)'
   tutorial_bpmlkscratch_name: 'Social Studies: Martin Luther King Jr. (Scratch)'
   tutorial_bpmlkvid_name: 'Social Studies: Martin Luther King Jr. (Vidcode)'
   tutorial_bpsafetyscratch_name: 'Digital Citizenship: Online Safety (Scratch)'

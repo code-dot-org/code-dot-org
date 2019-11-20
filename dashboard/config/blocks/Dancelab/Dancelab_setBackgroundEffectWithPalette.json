@@ -26,6 +26,10 @@
             "\"circles\""
           ],
           [
+            "Angles",
+            "\"quads\""
+          ],
+          [
             "Colors",
             "\"color_cycle\""
           ],
@@ -40,6 +44,14 @@
           [
             "Fireworks",
             "\"fireworks\""
+          ],
+          [
+            "Flowers",
+            "\"flowers\""
+          ],
+          [
+            "Growing Stars",
+            "\"growing_stars\""
           ],
           [
             "Hypno",
@@ -62,12 +74,24 @@
             "\"rainbow\""
           ],
           [
+            "Random Ripples",
+            "\"ripples_random\""
+          ],
+          [
+            "Ripples",
+            "\"ripples\""
+          ],
+          [
             "Snow",
             "\"snowflakes\""
           ],
           [
             "Song Names",
             "\"text\""
+          ],
+          [
+            "Squiggles",
+            "\"squiggles\""
           ],
           [
             "Space",
@@ -92,14 +116,6 @@
           [
             "Waves",
             "\"music_wave\""
-          ],
-          [
-            "Angles",
-            "\"quads\""
-          ],
-          [
-            "Flowers",
-            "\"flowers\""
           ]
         ]
       },

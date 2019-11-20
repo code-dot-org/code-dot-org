@@ -50,6 +50,7 @@ class ScriptOverview extends React.Component {
     scriptCompleted: PropTypes.bool.isRequired,
     scriptId: PropTypes.number.isRequired,
     scriptName: PropTypes.string.isRequired,
+    scriptTitle: PropTypes.string.isRequired,
     professionalLearningCourse: PropTypes.bool,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isRtl: PropTypes.bool.isRequired,
@@ -85,6 +86,7 @@ class ScriptOverview extends React.Component {
       scriptCompleted,
       scriptId,
       scriptName,
+      scriptTitle,
       professionalLearningCourse,
       viewAs,
       isRtl,
@@ -149,6 +151,7 @@ class ScriptOverview extends React.Component {
               scriptProgress={scriptProgress}
               scriptId={scriptId}
               scriptName={scriptName}
+              scriptTitle={scriptTitle}
               currentCourseId={currentCourseId}
               viewAs={viewAs}
               isRtl={isRtl}
