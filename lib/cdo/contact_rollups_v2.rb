@@ -140,6 +140,7 @@ class ContactRollupsV2
   def self.drop_tables
     PEGASUS_DB_WRITER.drop_table(DAILY_TABLE) if PEGASUS_DB_WRITER.table_exists?(DAILY_TABLE)
     PEGASUS_DB_WRITER.drop_table(MAIN_TABLE) if PEGASUS_DB_WRITER.table_exists?(MAIN_TABLE)
+    PEGASUS_DB_WRITER.drop_table(SUCCESS_TRACKER_TABLE) if PEGASUS_DB_WRITER.table_exists?(SUCCESS_TRACKER_TABLE)
   end
 
   def self.empty_tables
@@ -148,8 +149,11 @@ class ContactRollupsV2
   end
 
   def self.count_table_rows
-    puts "#{DAILY_TABLE} total row count = #{PEGASUS_DB_WRITER[DAILY_TABLE].count}"
-    puts "#{MAIN_TABLE} total row count = #{PEGASUS_DB_WRITER[MAIN_TABLE].count}"
+    puts "_____#{__method__}_____"
+    puts "#{MAIN_TABLE} row count = #{PEGASUS_DB_WRITER[MAIN_TABLE].count}"
+    puts "#{DAILY_TABLE} row count = #{PEGASUS_DB_WRITER[DAILY_TABLE].count}"
+    puts "#{DAILY_TABLE_REDUCED} row count = #{PEGASUS_DB_WRITER[DAILY_TABLE_REDUCED].count}"
+    puts "#{SUCCESS_TRACKER_TABLE} row count = #{PEGASUS_DB_WRITER[SUCCESS_TRACKER_TABLE].count}"
   end
 
   def self.collect_data_to_daily_table
@@ -164,8 +168,12 @@ class ContactRollupsV2
   end
 
   def self.collect_all_changes(db_connection, src_db, src_table, columns)
-    # TODO: get latest processed date from tracker table
-    processed_date = Date.new(2019, 9, 15)
+    # TODO: use different task name instead of using method name
+    # TODO: having processed_date as date (start at 0am) instead of time will cause reprocessing data from the same date
+    processed_date =
+      PEGASUS_DB_WRITER[SUCCESS_TRACKER_TABLE].where(
+        task: 'collect_daily_changes', input_table: "#{src_db}.#{src_table}"
+      ).max(:data_date) || Time.utc(1970, 1, 1, 0, 0)
     puts "last processed_date = #{processed_date}"
 
     updated_date_query = <<-SQL.squish
@@ -182,8 +190,6 @@ class ContactRollupsV2
 
       collect_daily_changes(db_connection, src_db, src_table, columns, date)
       processed_date = date
-
-      # TODO: update trackers
     end
   end
 
@@ -559,8 +565,8 @@ class ContactRollupsV2
   end
 
   def self.test
-    drop_tables
-    create_tables
+    # drop_tables
+    # create_tables
     # empty_tables
     collect_data_to_daily_table
     merge_data_to_main_table
