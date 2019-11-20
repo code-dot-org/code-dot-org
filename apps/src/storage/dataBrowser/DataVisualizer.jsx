@@ -51,6 +51,26 @@ class DataVisualizer extends React.Component {
     return _.map(counts, (count, key) => ({[columnName]: key, count}));
   };
 
+  isCellEmpty = value => {
+    return value === undefined || value === '' || value === null;
+  };
+
+  ignoreMissingValues = (records, column1, column2) => {
+    let filteredRecords = records;
+    if (column1) {
+      filteredRecords = filteredRecords.filter(
+        record => !this.isCellEmpty(record[column1])
+      );
+    }
+
+    if (column2) {
+      filteredRecords = filteredRecords.filter(
+        record => !this.isCellEmpty(record[column2])
+      );
+    }
+    return filteredRecords;
+  };
+
   updateChart = () => {
     const targetDiv = document.getElementById('chart-area');
     if (!targetDiv) {
@@ -65,10 +85,11 @@ class DataVisualizer extends React.Component {
       case 'Bar Chart':
         if (this.state.values) {
           chart = new GoogleChart.MaterialBarChart(targetDiv);
-          chartData = this.aggregateRecordsByColumn(
+          let records = this.ignoreMissingValues(
             this.state.parsedRecords,
             this.state.values
           );
+          chartData = this.aggregateRecordsByColumn(records, this.state.values);
           columns = [this.state.values, 'count'];
         }
         break;
@@ -76,7 +97,10 @@ class DataVisualizer extends React.Component {
         if (this.state.values && this.state.bucketSize) {
           options.histogram = {bucketSize: this.state.bucketSize};
           chart = new GoogleChart.Histogram(targetDiv);
-          chartData = this.state.parsedRecords;
+          chartData = this.ignoreMissingValues(
+            this.state.parsedRecords,
+            this.state.values
+          );
           columns = [this.state.values];
         }
         break;
@@ -86,7 +110,11 @@ class DataVisualizer extends React.Component {
       case 'Scatter Plot':
         if (this.state.xValues && this.state.yValues) {
           chart = new GoogleChart.MaterialScatterChart(targetDiv);
-          chartData = this.state.parsedRecords;
+          chartData = this.ignoreMissingValues(
+            this.state.parsedRecords,
+            this.state.xValues,
+            this.state.yValues
+          );
           columns = [this.state.xValues, this.state.yValues];
         }
         break;
@@ -118,7 +146,7 @@ class DataVisualizer extends React.Component {
       column =>
         records.filter(
           record =>
-            typeof record[column] === 'undefined' ||
+            this.isCellEmpty(record[column]) ||
             typeof record[column] === 'number'
         ).length === records.length
     );
@@ -233,7 +261,11 @@ class DataVisualizer extends React.Component {
         </div>
         {this.state.chartType === 'Cross Tab' ? (
           <CrossTabChart
-            parsedRecords={this.state.parsedRecords}
+            parsedRecords={this.ignoreMissingValues(
+              this.state.parsedRecords,
+              this.state.xValues,
+              this.state.yValues
+            )}
             numericColumns={this.state.numericColumns}
             rowName={this.state.xValues}
             columnName={this.state.yValues}
