@@ -49,6 +49,7 @@ export default class SVMTrainer {
       return result;
     }
 
+    const inputVector = this.converterFn(example);
     let res;
     /*
      * To keep SVM behaviour consistent with KNN, if there was only one
@@ -57,15 +58,15 @@ export default class SVMTrainer {
     if (this.labeledTrainingData.length === 1) {
       res = [this.labeledTrainingData[0].label];
     } else {
-      res = this.svm.predict([this.converterFn(example)]);
+      res = this.svm.predict([inputVector]);
       // Sanity check on removeBiasTranslate logic; should be removed in final version / moved to unit tests
-      console.assert(res[0] === this.unbiasedPredict(this.converterFn(example)));
+      console.assert(res[0] === this.unbiasedPredict(inputVector));
     }
 
     // This SVM library uses 1 and -1 as labels; convert back to our 0/1 labeling scheme
     result.predictedClassId = res[0] === 1 ? 1 : 0;
     const confidences = {};
-    confidences[result.predictedClassId] = 1; // TODO: Not sure if SVM has a concept of confidence (distance from boundary?)
+    confidences[result.predictedClassId] = Math.abs(this.svm.marginOne(inputVector));
     result.confidencesByClassId = confidences;
     return result;
   }

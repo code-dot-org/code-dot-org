@@ -25,7 +25,7 @@ const trial = async function(trainSize, testSize, trainer, labelFn) {
 
   for (const fish of testOcean) {
     fish.result = await trainer.predict(fish);
-    console.log(fish.result.predictedClassId === ClassType.Like ? 'Like' : 'Dislike');
+    console.log(`${fish.result.predictedClassId === ClassType.Like ? 'Like' : 'Dislike'} Confidence: ${fish.result.confidencesByClassId[fish.result.predictedClassId]}`);
     console.log(trainer.explainFish(fish));
   }
 
