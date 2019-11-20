@@ -5,14 +5,7 @@ import sinon from 'sinon';
 import {Factory} from 'rosie';
 import DetailsPanel from '@cdo/apps/code-studio/pd/workshop_dashboard/DetailsPanel';
 import {States} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
-
-/**
- * Create a factory for the workshop object passed around by workshop dashboard components,
- * as retrieved from /api/v1/pd/workshops/<workshop-id>
- */
-Factory.define('workshop')
-  .sequence('id')
-  .attr('state', States[0]);
+import './workshopFactory';
 
 describe('DetailsPanel', () => {
   it('shows a readonly WorkshopForm by default', () => {
