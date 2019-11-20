@@ -40,7 +40,7 @@ const styles = {
     borderRadius: 8,
     minWidth: 160,
     outline: 'none',
-    border: `2px solid ${colors.black}`,
+    border: 'none',
     ':focus': {
       outline: `${colors.white} auto 5px`
     }
@@ -245,8 +245,7 @@ const styles = {
     left: 0,
     width: '100%',
     height: '100%',
-    borderRadius: 10,
-    border: '2px solid transparent'
+    borderRadius: 10
   },
   guideBackgroundHidden: {
     position: 'absolute',
