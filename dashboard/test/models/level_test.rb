@@ -273,13 +273,13 @@ class LevelTest < ActiveSupport::TestCase
 
   def update_contract_match
     name = 'contract match test'
-    dsl_text = <<EOS
-name 'Eval Contracts 1 B'
-title 'Eval Contracts 1 B'
-content1 'Write a contract for the star function'
-content2 'Eval Contracts 1 A.solution_blocks, 300'
-answer 'star|image|color:string|radius:Number|style:string'
-EOS
+    dsl_text = <<~DSL
+      name 'Eval Contracts 1 B'
+      title 'Eval Contracts 1 B'
+      content1 'Write a contract for the star function'
+      content2 'Eval Contracts 1 A.solution_blocks, 300'
+      answer 'star|image|color:string|radius:Number|style:string'
+    DSL
     cm = ContractMatch.create_from_level_builder({}, {name: name, type: 'ContractMatch', dsl_text: dsl_text})
 
     # update the same level with different dsl text
@@ -761,14 +761,14 @@ EOS
   end
 
   test 'can clone multi level and preserve encrypted flag' do
-    dsl_text = <<EOS
-name 'old multi level'
-title 'Multiple Choice'
-question 'What is your favorite color?'
-wrong 'Red'
-wrong 'Green'
-right 'Blue'
-EOS
+    dsl_text = <<~DSL
+      name 'old multi level'
+      title 'Multiple Choice'
+      question 'What is your favorite color?'
+      wrong 'Red'
+      wrong 'Green'
+      right 'Blue'
+    DSL
 
     old_level = create :multi, name: 'old multi level'
     old_level.stubs(:dsl_text).returns(dsl_text)
@@ -896,24 +896,24 @@ EOS
   end
 
   test 'cloning multi level sets editor experiment' do
-    old_dsl_text = <<EOS
-name 'old multi level'
-title 'Multiple Choice'
-question 'What is your favorite color?'
-wrong 'Red'
-wrong 'Green'
-right 'Blue'
-EOS
+    old_dsl_text = <<~DSL
+      name 'old multi level'
+      title 'Multiple Choice'
+      question 'What is your favorite color?'
+      wrong 'Red'
+      wrong 'Green'
+      right 'Blue'
+    DSL
 
-    expected_new_dsl_text = <<EOS
-name 'old multi level copy'
-editor_experiment 'level-editors'
-title 'Multiple Choice'
-question 'What is your favorite color?'
-wrong 'Red'
-wrong 'Green'
-right 'Blue'
-EOS
+    expected_new_dsl_text = <<~DSL
+      name 'old multi level copy'
+      editor_experiment 'level-editors'
+      title 'Multiple Choice'
+      question 'What is your favorite color?'
+      wrong 'Red'
+      wrong 'Green'
+      right 'Blue'
+    DSL
 
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     File.expects(:write).once.with do |_pathname, new_dsl_text|
@@ -929,26 +929,26 @@ EOS
   end
 
   test 'cloning multi level overwrites existing editor experiment' do
-    old_dsl_text = <<EOS
-name 'old multi level'
-title 'Multiple Choice'
-editor_experiment 'old-level-editors'
-question 'What is your favorite color?'
-wrong 'Red'
-wrong 'Green'
-right 'Blue'
-EOS
+    old_dsl_text = <<~DSL
+      name 'old multi level'
+      title 'Multiple Choice'
+      editor_experiment 'old-level-editors'
+      question 'What is your favorite color?'
+      wrong 'Red'
+      wrong 'Green'
+      right 'Blue'
+    DSL
 
-    expected_new_dsl_text = <<EOS
-name 'old multi level copy'
-editor_experiment 'new-level-editors'
-title 'Multiple Choice'
+    expected_new_dsl_text = <<~DSL
+      name 'old multi level copy'
+      editor_experiment 'new-level-editors'
+      title 'Multiple Choice'
 
-question 'What is your favorite color?'
-wrong 'Red'
-wrong 'Green'
-right 'Blue'
-EOS
+      question 'What is your favorite color?'
+      wrong 'Red'
+      wrong 'Green'
+      right 'Blue'
+    DSL
 
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     File.expects(:write).once.with do |_pathname, new_dsl_text|
