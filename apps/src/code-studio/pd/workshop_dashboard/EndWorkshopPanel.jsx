@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Button} from 'react-bootstrap';
@@ -6,7 +7,8 @@ import ConfirmationDialog from '../components/confirmation_dialog';
 
 export default class EndWorkshopPanel extends React.Component {
   static propTypes = {
-    workshopId: PropTypes.string,
+    workshopId: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+      .isRequired,
     isReadyToClose: PropTypes.bool,
     loadWorkshop: PropTypes.func.isRequired
   };
