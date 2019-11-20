@@ -101,6 +101,7 @@ class DSLDefined < Level
 
   def self.create_from_level_builder(params, level_params, old_name = nil)
     text = level_params[:dsl_text] || params[:dsl_text]
+    text = set_editor_experiment(text, level_params[:editor_experiment])
     transaction do
       # Parse data, save updated level data to database
       data, _ = dsl_class.parse(text, '')
@@ -166,7 +167,7 @@ class DSLDefined < Level
     raise "name not formatted correctly in dsl text for level: '#{name}'" if old_dsl && old_dsl == new_dsl
 
     if new_dsl && editor_experiment
-      new_dsl = set_editor_experiment(new_dsl, editor_experiment)
+      new_dsl = self.class.set_editor_experiment(new_dsl, editor_experiment)
     end
 
     level_params = {}
@@ -201,9 +202,7 @@ class DSLDefined < Level
     false
   end
 
-  private
-
-  def set_editor_experiment(dsl_text, editor_experiment)
+  def self.set_editor_experiment(dsl_text, editor_experiment)
     return dsl_text unless editor_experiment
 
     # remove previous editor experiment
@@ -215,6 +214,8 @@ class DSLDefined < Level
 
     dsl_text
   end
+
+  private
 
   def delete_level_file
     File.delete(file_path) if File.exist?(file_path)
