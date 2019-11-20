@@ -426,7 +426,7 @@ class Level < ActiveRecord::Base
   end
 
   def replace_illegal_chars
-    self.name = name.gsub(/[^A-Za-z0-9 !"#&'()+,\-.:=?@_|]/, '-')
+    self.name = name&.gsub(/[^A-Za-z0-9 !"#&'()+,\-.:=?@_|]/, '-')
   end
 
   def log_changes(user=nil)
