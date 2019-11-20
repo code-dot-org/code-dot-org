@@ -146,25 +146,96 @@ export class Workshop extends React.Component {
     }
   }
 
-  handleAdminEditClick = () => this.setState({showAdminEditConfirmation: true});
-  handleAdminEditCancel = () =>
-    this.setState({showAdminEditConfirmation: false});
-  handleAdminEditConfirmed = () => {
-    this.setState({showAdminEditConfirmation: false});
-    this.handleEditClick();
-  };
-
-  handleEditClick = () => {
-    this.context.router.push(`/workshops/${this.props.params.workshopId}/edit`);
-  };
-
-  handleBackClick = () => {
-    this.context.router.push('/workshops');
-  };
-
   handleWorkshopSaved = workshop => {
     this.setState({workshop: workshop});
     this.context.router.replace(`/workshops/${this.props.params.workshopId}`);
+  };
+
+  render() {
+    if (this.state.loadingWorkshop) {
+      return <Spinner />;
+    } else if (!this.state.workshop) {
+      return <p>No workshop found</p>;
+    }
+
+    const {params, permission, route} = this.props;
+    const {workshopId} = params;
+    const isWorkshopAdmin = permission.has(WorkshopAdmin);
+    const {workshop} = this.state;
+    const {sessions, state: workshopState} = workshop;
+
+    return (
+      <Grid>
+        {workshopState === 'Not Started' && (
+          <SignUpPanel workshopId={workshopId} />
+        )}
+        <IntroPanel
+          workshopId={workshopId}
+          workshopState={workshopState}
+          sessions={sessions}
+          isAccountRequiredForAttendance={
+            workshop['account_required_for_attendance?']
+          }
+          isWorkshopAdmin={isWorkshopAdmin}
+          loadWorkshop={this.loadWorkshop.bind(this)}
+        />
+        {workshopState !== 'Not Started' && (
+          <AttendancePanel workshopId={workshopId} sessions={sessions} />
+        )}
+        {workshopState === 'In Progress' && (
+          <EndWorkshopPanel
+            workshopId={workshopId}
+            isReadyToClose={workshop['ready_to_close?']}
+            loadWorkshop={this.loadWorkshop.bind(this)}
+          />
+        )}
+        <EnrollmentsPanel
+          workshopId={workshopId}
+          workshop={this.state.workshop}
+          enrollments={this.state.enrollments}
+          isLoadingEnrollments={this.state.loadingEnrollments}
+          isWorkshopAdmin={isWorkshopAdmin}
+          loadEnrollments={this.loadEnrollments.bind(this)}
+        />
+        <DetailsPanel
+          view={route.view}
+          workshopId={workshopId}
+          workshop={this.state.workshop}
+          workshopState={workshopState}
+          isWorkshopAdmin={isWorkshopAdmin}
+          onWorkshopSaved={this.handleWorkshopSaved}
+        />
+      </Grid>
+    );
+  }
+}
+
+export default connect(state => ({
+  permission: state.workshopDashboard.permission
+}))(Workshop);
+
+class DetailsPanel extends React.Component {
+  static propTypes = {
+    view: PropTypes.string,
+    workshopId: PropTypes.string,
+    workshop: PropTypes.shape({
+      state: PropTypes.string
+    }),
+    isWorkshopAdmin: PropTypes.bool,
+    onWorkshopSaved: PropTypes.func.isRequired
+  };
+
+  static contextTypes = {
+    router: PropTypes.object.isRequired
+  };
+
+  state = {
+    showAdminEditConfirmation: false
+  };
+
+  handleEditClick = () => {
+    const {workshopId} = this.props;
+    this.context.router.push(`/workshops/${workshopId}/edit`);
   };
 
   handleSaveClick = () => {
@@ -173,10 +244,25 @@ export class Workshop extends React.Component {
     $('#workshop-form-save-btn').trigger('click');
   };
 
+  handleAdminEditClick = () => this.setState({showAdminEditConfirmation: true});
+
+  handleAdminEditCancel = () =>
+    this.setState({showAdminEditConfirmation: false});
+
+  handleAdminEditConfirmed = () => {
+    this.setState({showAdminEditConfirmation: false});
+    this.handleEditClick();
+  };
+
+  handleBackClick = () => {
+    this.context.router.push('/workshops');
+  };
+
   renderDetailsPanelHeader() {
+    const {view, workshop, isWorkshopAdmin} = this.props;
     let button = null;
 
-    if (this.props.route.view === 'edit') {
+    if (view === 'edit') {
       button = (
         <Button
           bsSize="xsmall"
@@ -186,21 +272,21 @@ export class Workshop extends React.Component {
           Save
         </Button>
       );
-    } else if (this.state.workshop.state === 'Not Started') {
+    } else if (workshop.state === 'Not Started') {
       button = (
         <Button bsSize="xsmall" onClick={this.handleEditClick}>
           Edit
         </Button>
       );
-    } else if (this.props.permission.has(WorkshopAdmin)) {
+    } else if (isWorkshopAdmin) {
       if (this.state.showAdminEditConfirmation) {
         return (
           <ConfirmationDialog
             show={true}
             onOk={this.handleAdminEditConfirmed}
             onCancel={this.handleAdminEditCancel}
-            headerText={`Edit ${this.state.workshop.state} Workshop?`}
-            bodyText={`Are you sure you want to edit this ${this.state.workshop.state.toLowerCase()} workshop?
+            headerText={`Edit ${workshop.state} Workshop?`}
+            bodyText={`Are you sure you want to edit this ${workshop.state.toLowerCase()} workshop?
             Use caution! Note that deleting a session (day)
             will also delete all associated attendance records.
             `}
@@ -218,25 +304,23 @@ export class Workshop extends React.Component {
   }
 
   renderDetailsPanelContent() {
-    if (this.props.route.view === 'edit') {
+    const {view, workshop, onWorkshopSaved} = this.props;
+    if (view === 'edit') {
       return (
         <div>
-          <WorkshopForm
-            workshop={this.state.workshop}
-            onSaved={this.handleWorkshopSaved}
-          />
+          <WorkshopForm workshop={workshop} onSaved={onWorkshopSaved} />
         </div>
       );
     }
 
     let editButton = null;
-    if (this.state.workshop.state === 'Not Started') {
+    if (workshop.state === 'Not Started') {
       editButton = <Button onClick={this.handleEditClick}>Edit</Button>;
     }
 
     return (
       <div>
-        <WorkshopForm workshop={this.state.workshop} readOnly>
+        <WorkshopForm workshop={workshop} readOnly>
           <Row>
             <Col sm={4}>
               <ButtonToolbar>
@@ -250,69 +334,14 @@ export class Workshop extends React.Component {
     );
   }
 
-  renderDetailsPanel() {
+  render() {
     return (
       <WorkshopPanel header={this.renderDetailsPanelHeader()}>
         {this.renderDetailsPanelContent()}
       </WorkshopPanel>
     );
   }
-
-  render() {
-    if (this.state.loadingWorkshop) {
-      return <Spinner />;
-    } else if (!this.state.workshop) {
-      return <p>No workshop found</p>;
-    }
-
-    const {params, permission} = this.props;
-    const {workshopId} = params;
-    const isWorkshopAdmin = permission.has(WorkshopAdmin);
-    const {workshop} = this.state;
-    const {sessions, state: workshopState} = workshop;
-
-    return (
-      <Grid>
-        {workshopState === 'Not Started' && (
-          <SignUpPanel workshopId={workshopId} />
-        )}
-        <IntroPanel
-          workshopId={workshopId}
-          workshopState={workshopState}
-          sessions={sessions}
-          isAccountRequiredForAttendance={
-            this.state.workshop['account_required_for_attendance?']
-          }
-          isWorkshopAdmin={isWorkshopAdmin}
-          loadWorkshop={this.loadWorkshop.bind(this)}
-        />
-        {workshopState !== 'Not Started' && (
-          <AttendancePanel workshopId={workshopId} sessions={sessions} />
-        )}
-        {workshopState === 'In Progress' && (
-          <EndWorkshopPanel
-            workshopId={workshopId}
-            isReadyToClose={this.state.workshop['ready_to_close?']}
-            loadWorkshop={this.loadWorkshop.bind(this)}
-          />
-        )}
-        <EnrollmentsPanel
-          workshopId={workshopId}
-          workshop={this.state.workshop}
-          enrollments={this.state.enrollments}
-          isLoadingEnrollments={this.state.loadingEnrollments}
-          isWorkshopAdmin={isWorkshopAdmin}
-          loadEnrollments={this.loadEnrollments.bind(this)}
-        />
-        {this.renderDetailsPanel()}
-      </Grid>
-    );
-  }
 }
-
-export default connect(state => ({
-  permission: state.workshopDashboard.permission
-}))(Workshop);
 
 /**
  * A small, right-aligned section at the end of the workshop dashboard showing
