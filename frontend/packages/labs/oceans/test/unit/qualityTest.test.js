@@ -153,7 +153,7 @@ const PartKey = Object.freeze({
   COLOR: 'colorPalette'
 });
 
-const NUM_TRIALS = 3;
+const NUM_TRIALS = 5;
 const TRAIN_SIZE = 100;
 
 describe('Model quality test', () => {
