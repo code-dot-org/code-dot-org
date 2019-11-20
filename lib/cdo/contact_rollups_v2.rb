@@ -40,6 +40,7 @@ class ContactRollupsV2
   DAILY_TABLE_REDUCED = :crv2_daily_reduced
   MAIN_TABLE = :crv2_all
   SUCCESS_TRACKER_TABLE = :crv2_success_tracker
+  PARDOT_LOOKUP_TABLE = :pardot_lookup
 
   def self.create_tables
     create_daily_table
@@ -91,7 +92,7 @@ class ContactRollupsV2
 
         unique :email
       end
-      puts "created #{MAIN_TABLE} table"
+      puts "Created #{MAIN_TABLE} table"
     end
   end
 
@@ -110,7 +111,30 @@ class ContactRollupsV2
         index :data_date
         unique [:task, :input_table, :data_date]
       end
+
+      puts "Created #{SUCCESS_TRACKER_TABLE} table"
     end
+  end
+
+  def self.create_pardot_lookup_table
+    # This table can be the seed for any new contact rollups table if we decide to rebuild it.
+    if PEGASUS_DB_WRITER.table_exists?(PARDOT_LOOKUP_TABLE)
+      puts "#{PARDOT_LOOKUP_TABLE} table already exists"
+    else
+      PEGASUS_DB_WRITER.create_table PARDOT_LOOKUP_TABLE do
+        primary_key :id
+        String :email, null: false
+        Integer :pardot_id, null: false
+
+        index :email
+        unique [:email, :pardot_id]
+      end
+
+      puts "Created #{PARDOT_LOOKUP_TABLE} table"
+    end
+
+    # Query Pardot to get data
+    Pardot.download_pardot_ids PARDOT_LOOKUP_TABLE
   end
 
   def self.drop_tables
@@ -523,29 +547,6 @@ class ContactRollupsV2
     else
       PEGASUS_DB_WRITER[SUCCESS_TRACKER_TABLE].insert(lookup_info.merge({ended_at: Time.now}))
     end
-  end
-
-  PARDOT_LOOKUP_TABLE = :pardot_lookup
-
-  def self.build_pardot_lookup_table
-    # Create table
-    # This table can be the seed for any new contact rollups table if we decide to rebuild it.
-    if PEGASUS_DB_WRITER.table_exists?(PARDOT_LOOKUP_TABLE)
-      puts "#{PARDOT_LOOKUP_TABLE} table already exists"
-    else
-      PEGASUS_DB_WRITER.create_table PARDOT_LOOKUP_TABLE do
-        primary_key :id
-        String :email, null: false
-        Integer :pardot_id, null: false
-
-        index :email
-        unique [:email, :pardot_id]
-      end
-      puts "created #{PARDOT_LOOKUP_TABLE} table"
-    end
-
-    # Query Pardot to get data
-    Pardot.download_pardot_ids PARDOT_LOOKUP_TABLE
   end
 
   def self.main
