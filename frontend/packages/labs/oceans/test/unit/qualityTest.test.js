@@ -153,7 +153,7 @@ const PartKey = Object.freeze({
   COLOR: 'colorPalette'
 });
 
-const NUM_TRIALS = 1;
+const NUM_TRIALS = 3;
 const TRAIN_SIZE = 100;
 
 describe('Model quality test', () => {
@@ -216,14 +216,12 @@ describe('Model quality test', () => {
     const partKey = PartKey.EYE;
     const trainSize = TRAIN_SIZE;
 
-    //console.log(JSON.stringify(partData));
-
     for (const [name, data] of Object.entries(partData)) {
       console.log(`${partKey} ${name}`);
       const id = data.index;
       const labelFn = fish => (fish[partKey].index === id ? ClassType.Like : ClassType.Dislike);
       const result = await performTrials({
-        numTrials: 1,
+        numTrials: NUM_TRIALS,
         trainSize: trainSize,
         testSize: 100,
         labelFn: labelFn
