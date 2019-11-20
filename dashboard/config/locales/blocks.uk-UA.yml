@@ -636,6 +636,14 @@ uk:
             '"bass"': низькі тони
             '"mid"': середні тони
             '"treble"': високі тони
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': діамант
+            '"x"': x
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
       Dancelab_whenKey:
         text: коли натиснуто {KEY}
         options:

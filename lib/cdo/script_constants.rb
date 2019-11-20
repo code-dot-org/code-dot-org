@@ -87,6 +87,7 @@ module ScriptConstants
       BASKETBALL_NAME = 'basketball'.freeze,
       SPORTS_NAME = 'sports'.freeze,
       HOC_NAME = 'hourofcode'.freeze, # 2014 hour of code
+      OCEANS_NAME = 'oceans'.freeze,
     ],
     csf_international: [
       COURSE1_NAME = 'course1'.freeze,

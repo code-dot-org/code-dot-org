@@ -463,6 +463,12 @@ id:
             '"bass"': Kecil
             '"mid"': Sedang
             '"treble"': Besar
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': berlian
+            '"x"': x
+            '"y"': 'y'
       Dancelab_whenKey:
         options:
           KEY:

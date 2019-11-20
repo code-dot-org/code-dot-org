@@ -1,0 +1,80 @@
+login_required true
+hideable_stages true
+
+stage 'Introduction to the Problem', flex_category: 'csf_conditionals'
+level 'BrowardTestMarkdownLevel'
+
+stage 'Crowdsourcing (Integrated lesson)', flex_category: 'csf_conditionals'
+level 'BrowardTestMarkdownLevel'
+
+stage 'Everglades Habitats', flex_category: 'csf_conditionals'
+level 'BrowardTestMarkdownLevel'
+
+stage 'Evaluating a Project in Sprite Lab', flex_category: 'csf_conditionals'
+level 'BrowardTestMarkdownLevel'
+
+stage 'Food Chains', flex_category: 'csf_nested_loops'
+level 'BrowardTestMarkdownLevel'
+
+stage 'Conditionals with Cards (Integrated Lesson)- Part 1', flex_category: 'csf_nested_loops'
+level 'BrowardTestMarkdownLevel'
+
+stage 'Alligator Holes', flex_category: 'csf_nested_loops'
+level 'BrowardTestMarkdownLevel'
+
+stage 'Food Chain Game', flex_category: 'csf_nested_loops'
+level 'BrowardTestMarkdownLevel'
+
+stage 'Invasive Species', flex_category: 'csf_functions'
+level 'BrowardTestMarkdownLevel'
+
+stage 'Conditionals with Cards (Integrated Lesson)- Part 2', flex_category: 'csf_functions'
+level 'BrowardTestMarkdownLevel'
+
+stage 'I am in Big Trouble', flex_category: 'csf_functions'
+level 'BrowardTestMarkdownLevel'
+
+stage 'Conditionals in Sprite Lab', flex_category: 'csf_functions'
+level 'BrowardTestMarkdownLevel'
+
+stage 'Nested Loops in Maze', flex_category: 'csf_functions'
+level 'BrowardTestMarkdownLevel'
+
+stage 'Fancy Shapes using Nested Loops', flex_category: 'csf_functions'
+level 'BrowardTestMarkdownLevel'
+
+stage 'Nested Loops with Frozen', flex_category: 'csf_functions'
+level 'BrowardTestMarkdownLevel'
+
+stage 'Fishy Business', flex_category: 'csf_sprites'
+level 'BrowardTestMarkdownLevel'
+
+stage 'Songwriting (Integrated Lesson)', flex_category: 'csf_sprites'
+level 'BrowardTestMarkdownLevel'
+
+stage 'Functions in Minecraft', flex_category: 'csf_sprites'
+level 'BrowardTestMarkdownLevel'
+
+stage 'Functions with Harvester', flex_category: 'csf_sprites'
+level 'BrowardTestMarkdownLevel'
+
+stage 'Functions with Artist', flex_category: 'csf_sprites'
+level 'BrowardTestMarkdownLevel'
+
+stage 'Pythons impacting native populations', flex_category: 'end_of_course_project'
+level 'BrowardTestMarkdownLevel'
+
+stage 'Functions in Sprite Lab', flex_category: 'end_of_course_project'
+level 'BrowardTestMarkdownLevel'
+
+stage 'Python Problem- Current Solutions', flex_category: 'end_of_course_project'
+level 'BrowardTestMarkdownLevel'
+
+stage 'End of Course Project (integrated- project planning lesson)', flex_category: 'end_of_course_project'
+level 'BrowardTestMarkdownLevel'
+
+stage 'Debate- Pythons impacting native populations', flex_category: 'end_of_course_project'
+level 'BrowardTestMarkdownLevel'
+
+stage 'Work on Project', flex_category: 'end_of_course_project'
+level 'BrowardTestMarkdownLevel'

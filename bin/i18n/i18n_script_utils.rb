@@ -54,7 +54,7 @@ class I18nScriptUtils
 
   def self.git_add_and_commit(paths, commit_message)
     paths.each do |path|
-      `git add -u #{path}`
+      `git add #{path}`
     end
     `git commit -m "#{commit_message}"`
   end

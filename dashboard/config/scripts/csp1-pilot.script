@@ -17,7 +17,7 @@ stage 'Representing Information'
 level 'CSP U1L2 SFLP 20-21', progression: 'Lesson Overview'
 level 'U1L3 CFU Sending Complex Messages', progression: 'Check For Understanding', assessment: true
 
-stage 'AB Patterns'
+stage 'Circle Square Patterns'
 level 'CSP U1L4 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP U1L4 CYU3', progression: 'Check For Understanding', assessment: true
 
@@ -33,9 +33,8 @@ level 'Widget: Binary Odometer_2020', progression: 'Widget: Binary Odometer'
 level 'U1L6 CFU beyond odometer', progression: 'Check For Understanding', assessment: true
 level 'U1L6 CFU representing fractions', progression: 'Check For Understanding', assessment: true
 
-stage 'Sending Text'
+stage 'Representing Text'
 level 'CSP U1L7 SFLP 20-21', progression: 'Lesson Overview'
-level 'Internet Simulator: Sending Text CSP U1', progression: 'Widget: Internet Simulator'
 level 'U1L8 Reflection Multiple Representations CSP', progression: 'Check For Understanding', assessment: true
 
 stage 'Black and White Images'
@@ -88,8 +87,8 @@ stage 'Project: Digital Information Dilemmas, pt 2'
 level 'CSP U1L14 SFLP 20-21', progression: 'Lesson Overview'
 level 'U1L14 CSP CFU digital information', progression: 'Check For Understanding', assessment: true
 
-stage 'Lesson 14: Unit Assessment', lockable: true
-level 'CSP Unit 1 AP-Style Assessment _2020', assessment: true
+stage 'Lesson 14: Assessment Day', lockable: true
+level 'CSP Unit 1 AP-Style Assessment _2020', progression: 'Unit 1 Exam', assessment: true
 
 stage 'Unit 1 STUDENT Survey', lockable: true, flex_category: 'required'
 level 'CSP U1 20-21 Student Pilot Survey', progression: 'Unit 1 STUDENT Survey', assessment: true

@@ -739,6 +739,13 @@ ar:
             '"bass"': جهير
             '"mid"': أوسط
             '"treble"': طنين ثلاثي
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"hearts_colorful"': قلوب
+            '"diamond"': ماسة
+            '"x"': x
+            '"y"': 'y'
       Dancelab_whenKey:
         text: عند الضغط على {KEY}
         options:

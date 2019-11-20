@@ -2928,15 +2928,6 @@ it-IT:
           feedback: La variabile viene impostata nuovamente a 0 prima delle ultime
             due chiamate della funzione, in cui viene aggiunto 1 ogni volta. Quindi
             poi l'ape raccoglie 2 dosi di nettare.
-      courseF_external_variableConstant:
-        markdown: "<h2>Qualcosa in più sulle variabili</h2>\n\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
-          style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>Hai appena
-          imparato un ottimo modo per usare una variabile: in questo caso viene chiamata
-          \"costante\"!  \nQuando usi una variabile come \"costante\", imposti il
-          suo valore una sola volta e poi lo utilizzi più volte nel programma senza
-          più modificarlo dopo aver fatto clic su \"Esegui\".\n</h3>\n<br/><hr/>\n<h3>Nella
-          prossima lezione scriverai del codice con variabili che *cambieranno valore*
-          durante l'esecuzione del programma.</h3>\n\n"
       courseF_external_variableConstant_2018:
         markdown: "<h2>Qualcosa in più sulle variabili</h2>\n\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
           style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>Hai appena

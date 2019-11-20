@@ -1,12 +1,12 @@
 ---
-title: Blurbs and useful stats
+title: Kurzinfos und hilfreiche Statistiken
 ---
 
 <a id="blurb"></a>
 
 {{ signup_button }}
 
-# Blurbs and useful stats
+# Kurzinfos und hilfreiche Statistiken
 
 ### Use the following messaging if you're looking for ways to promote the Hour of Code in your newsletters and communications.
 
@@ -36,17 +36,17 @@ Technology is transforming every industry on the planet. In 2015, 7 million open
 
 "The Hour of Code is designed to demystify code and show that computer science is not rocket science—anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st-century computer science education crosses all borders and knows no boundaries." <br /> <br />
 
-#### About Code.org
+#### Über Code.org
 
 Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school has the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
 
-## Share these on social media and in emails
+## Teilen Sie diese auf Social Media und in E-Mails
 
 [![image](/images/social-media//fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="infographics"></a>
 
-## Infographics
+## Infografiken
 
 {{ stats_carousel }}
 

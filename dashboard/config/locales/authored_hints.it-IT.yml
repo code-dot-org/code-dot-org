@@ -3857,11 +3857,6 @@ it-IT:
           -   Dopo 6 battute, il tuo ballerino dovrà ballare in modo diverso rispetto a come ballava dopo 4 battute.
 
           _L'esercizio terminerà dopo 12 battute._
-      Dance_2019_07:
-        challenges: |-
-          **Sfida supplementare**
-
-          -   Fai qualche esperimento modificando le altre proprietà (larghezza, altezza, rotazione e così via)
       Dance_Party_01:
         validation: |-
           **Come faccio a completare questo esercizio?**

@@ -20,6 +20,11 @@ sl-SI:
           potem uporabi ta gumb za urejanje funkcije.
       Course 4 Maze 4:
         repeat: Dodaj bloke v zanko, da bi ponavljal ukaze
+      MC HOC 2016 Level 2-2:
+        craft2_run_button_callout: Ko si pripravljen/a, pritisni "Zaženi", da preizkusiš
+          svoj program.
+      MC HOC 2016 New Walk:
+        MC_HOC_2016_New_Walk_callout2: Klikni "Zaženi" in preizkusi.
       NEW Course 4 Artist Params 10:
         create_function: Klikni tukaj, če želiš delati s funkcijami; nato klikni na
           "ustvari funkcijo".
