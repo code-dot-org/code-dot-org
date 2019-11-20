@@ -88,11 +88,8 @@ class ContactRollupsV2
         DateTime :pardot_sync_at
         DateTime :created_at, null: false
         DateTime :updated_at, null: false
-        # All the reason why we shouldn't try to sync an email externally.
-        # opt_out is combination of multiple values such as opted_out and opt_in
-        # Consideration: Combine them in 2 fields [not_sync], [reason]
+        # Why we shouldn't try to sync an email externally
         column :email_malformed, 'tinyint(1)'
-        column :opt_out, 'tinyint(1)'
 
         unique :email
       end
@@ -441,7 +438,6 @@ class ContactRollupsV2
     new_contact_conditions = <<-SQL.squish
       pardot_id is null and pardot_sync_at is null
       and not(email_malformed <=> 1)
-      and not(opt_out <=> 1)
     SQL
 
     new_contact_config = {
@@ -462,7 +458,6 @@ class ContactRollupsV2
     updated_contact_conditions = <<-SQL.squish
       pardot_id is not null and pardot_sync_at < updated_at
       and not(email_malformed <=> 1)
-      and not(opt_out <=> 1)
     SQL
 
     updated_contact_config = {
@@ -567,9 +562,9 @@ class ContactRollupsV2
   end
 
   def self.seed_contacts(src_table, dest_table)
-    # TODO: synthesize do_not_email field from opt_in and opted_out
     insert_query = <<-SQL.squish
-      insert into #{dest_table}(email, pardot_id, pardot_sync_at, updated_at, created_at, email_malformed)
+      insert into #{dest_table}
+        (email, pardot_id, pardot_sync_at, updated_at, created_at, email_malformed)
       select email, pardot_id, pardot_sync_at, updated_at, updated_at, email_malformed
       from #{src_table}
     SQL
