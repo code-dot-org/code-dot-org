@@ -11,6 +11,7 @@ import colors from './colors';
 import aiBotClosed from '../../public/images/ai-bot/ai-bot-closed.png';
 import Typist from 'react-typist';
 import {getCurrentGuide, dismissCurrentGuide} from './models/guide';
+import {playSound} from './models/soundLibrary';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {
   faPlay,
@@ -39,7 +40,7 @@ const styles = {
     borderRadius: 8,
     minWidth: 160,
     outline: 'none',
-    border: `2px solid ${colors.black}`,
+    border: 'none',
     ':focus': {
       outline: `${colors.white} auto 5px`
     }
@@ -173,6 +174,19 @@ const styles = {
     top: '28%',
     left: '76%'
   },
+  counter: {
+    position: 'absolute',
+    bottom: '27%',
+    left: '74%',
+    backgroundColor: colors.black,
+    opacity: '90%',
+    color: '#3CFFF8',
+    borderRadius: 33,
+    padding: '10px 0px',
+    width: '16%',
+    textAlign: 'center',
+    fontSize: 16
+  },
   mediaControls: {
     position: 'absolute',
     width: '100%',
@@ -221,7 +235,8 @@ const styles = {
     top: '23%',
     left: '50%',
     bottom: 0,
-    transform: 'translateX(-45%)'
+    transform: 'translateX(-45%)',
+    pointerEvents: 'none'
   },
   pill: {
     display: 'flex',
@@ -283,8 +298,7 @@ const styles = {
     left: 0,
     width: '100%',
     height: '100%',
-    borderRadius: 10,
-    border: '2px solid transparent'
+    borderRadius: 10
   },
   guideBackgroundHidden: {
     position: 'absolute',
@@ -405,12 +419,21 @@ let Button = class Button extends React.Component {
     className: PropTypes.string,
     style: PropTypes.object,
     children: PropTypes.node,
-    onClick: PropTypes.func
+    onClick: PropTypes.func,
+    sound: PropTypes.string
   };
 
   onClick(event) {
     dismissCurrentGuide();
-    this.props.onClick(event);
+    const clickReturnValue = this.props.onClick(event);
+
+    if (clickReturnValue !== false) {
+      if (this.props.sound && clickReturnValue !== false) {
+        playSound(this.props.sound);
+      } else {
+        playSound('other');
+      }
+    }
   }
 
   render() {
@@ -587,16 +610,26 @@ let Train = class Train extends React.Component {
         </Button>
         <div style={styles.trainQuestionText}>{state.trainingQuestion}</div>
         <img style={styles.trainBot} src={aiBotClosed} />
+        <div style={styles.counter}>{`Data Inputs: ${Math.min(
+          999,
+          state.yesCount + state.noCount
+        )}`}</div>
         <div style={styles.trainButtons}>
           <Button
             style={styles.trainButtonNo}
-            onClick={() => onClassifyFish(false)}
+            onClick={() => {
+              return onClassifyFish(false);
+            }}
+            sound={'no'}
           >
             {noButtonText}
           </Button>
           <Button
             style={styles.trainButtonYes}
-            onClick={() => onClassifyFish(true)}
+            onClick={() => {
+              return onClassifyFish(true);
+            }}
+            sound={'yes'}
           >
             {yesButtonText}
           </Button>
@@ -761,10 +794,27 @@ let Predict = class Predict extends React.Component {
 Predict = Radium(Predict);
 
 class Pond extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   onPondClick(e) {
+    // Don't allow pond clicks if a Guide is currently showing.
+    if (getCurrentGuide()) {
+      return;
+    }
+
     const state = getState();
     const clickX = e.nativeEvent.offsetX;
     const clickY = e.nativeEvent.offsetY;
+
+    const boundingRect = e.target.getBoundingClientRect();
+    const pondWidth = boundingRect.width;
+    const pondHeight = boundingRect.height;
+
+    // Scale the click to the pond canvas dimensions.
+    const normalizedClickX = (clickX / pondWidth) * constants.canvasWidth;
+    const normalizedClickY = (clickY / pondHeight) * constants.canvasHeight;
 
     if (state.pondFishBounds) {
       let fishClicked = false;
@@ -785,8 +835,8 @@ class Pond extends React.Component {
             fishBound.y,
             fishBound.w,
             fishBound.h,
-            clickX,
-            clickY,
+            normalizedClickX,
+            normalizedClickY,
             1,
             1
           )
@@ -795,56 +845,23 @@ class Pond extends React.Component {
             pondClickedFish: {
               id: fishBound.fishId,
               x: fishBound.x,
-              y: fishBound.y,
-              confidence: fishBound.confidence
+              y: fishBound.y
             }
           });
-          console.log('Fish clicked confidence: ', fishBound.confidence);
           fishClicked = true;
+          playSound('yes');
         }
       });
 
       if (!fishClicked) {
         setState({pondClickedFish: null});
+        playSound('no');
       }
     }
   }
 
   render() {
     const state = getState();
-
-    const showFishDetails = !!state.pondClickedFish;
-    let pondFishDetailsStyle;
-    let confidence;
-    if (showFishDetails) {
-      const fish = state.pondClickedFish;
-
-      const leftX = Math.min(
-        Math.max(state.pondClickedFish.x + 200, 20),
-        constants.canvasWidth - 210
-      );
-      const topY = Math.min(
-        Math.max(state.pondClickedFish.y, 20),
-        constants.canvasHeight - 50
-      );
-
-      pondFishDetailsStyle = {
-        ...styles.pondFishDetails,
-        left: leftX,
-        top: topY
-      };
-
-      if (!fish.confidence || !fish.confidence.confidencesByClassId) {
-        confidence = 'Not confident';
-      } else if (fish.confidence.confidencesByClassId[0] > 0.99) {
-        confidence = 'Very confident';
-      } else if (fish.confidence.confidencesByClassId[0] > 0.5) {
-        confidence = 'Fairly confident';
-      } else {
-        confidence = 'Not very confident';
-      }
-    }
-
     const nextButtonText =
       state.appMode === AppMode.FishLong ? 'Play Again' : 'Continue';
     const nextButtonOnClick = () => {
@@ -859,11 +876,8 @@ class Pond extends React.Component {
     };
 
     return (
-      <Body onClick={this.onPondClick}>
+      <Body onClick={e => this.onPondClick(e)}>
         <img style={styles.pondBot} src={aiBotClosed} />
-        {showFishDetails && (
-          <div style={pondFishDetailsStyle}>{confidence}</div>
-        )}
         {state.canSkipPond && (
           <div>
             <Button style={styles.continueButton} onClick={nextButtonOnClick}>
@@ -889,6 +903,13 @@ class Guide extends React.Component {
     setState({guideShowing: true});
   }
 
+  dismissGuideClick() {
+    const dismissed = dismissCurrentGuide();
+    if (dismissed) {
+      playSound('other');
+    }
+  }
+
   render() {
     const currentGuide = getCurrentGuide();
 
@@ -912,7 +933,7 @@ class Guide extends React.Component {
                 ? styles.guideBackgroundHidden
                 : styles.guideBackground
             }
-            onClick={dismissCurrentGuide}
+            onClick={this.dismissGuideClick}
           >
             <div
               style={{...styles.guide, ...styles[`guide${currentGuide.style}`]}}
@@ -956,6 +977,10 @@ class Guide extends React.Component {
 }
 
 export default class UI extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     const state = getState();
     const currentMode = getState().currentMode;

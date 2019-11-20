@@ -6,7 +6,7 @@ import {
   backgroundPathForMode,
   finishMovement,
   currentRunTime,
-  $time
+  $time,
 } from './helpers';
 import colors from './colors';
 import {predictFish} from './models/predict';
@@ -24,6 +24,7 @@ import aiBotX from '../../public/images/ai-bot/ai-bot-x.png';
 import redScanner from '../../public/images/ai-bot/red-scanner.png';
 import greenScanner from '../../public/images/ai-bot/green-scanner.png';
 import blueScanner from '../../public/images/ai-bot/blue-scanner.png';
+import {playSound} from './models/soundLibrary';
 import checkmarkIcon from '../../public/images/checkmark-icon.png';
 import banIcon from '../../public/images/ban-icon.png';
 
@@ -413,6 +414,9 @@ const drawPrediction = (ctx, x, y, classId) => {
   }
 };
 
+
+let lastScannerImg = null;
+
 // Draw AI bot + scanner to canvas for predict mode.
 // *Note:* This will no-op if the expected bot/scanner is not present
 // in the botImages cache. Call loadAllBotImages() to populate the botImages cache.
@@ -431,6 +435,15 @@ const drawPredictBot = state => {
 
   if (!botImg || !scannerImg) {
     return;
+  }
+
+  if (scannerImg !== lastScannerImg) {
+    if (scannerImg === botImages.likeScanner) {
+      playSound("sortyes");
+    } else if (scannerImg === botImages.dislikeScanner) {
+      playSound("sortno");
+    }
+    lastScannerImg = scannerImg;
   }
 
   let botX = state.canvas.width / 2 - botImg.width / 2;
@@ -480,16 +493,12 @@ const drawPondFishImages = () => {
 
     const size = pondClickedFishUs ? 1 : 0.5;
 
-    drawSingleFish(fish, finalX, finalY, ctx, size);
+    const fishBound = drawSingleFish(fish, finalX, finalY, ctx, size);
 
     // Record this screen location so that we can separately check for clicks on it.
     fishBounds.push({
       fishId: fish.id,
-      x: finalX,
-      y: finalY,
-      w: constants.fishCanvasWidth / 2,
-      h: constants.fishCanvasHeight / 2,
-      confidence: fish.result
+      ...fishBound
     });
     setState({pondFishBounds: fishBounds}, {skipCallback: true});
   });
@@ -498,6 +507,7 @@ const drawPondFishImages = () => {
 // Draw a single fish, preferably from cached canvas.
 // Used by drawMovingFish and drawPondFishImages.
 // Takes an optional size multipler, where 0.5 means fish are half size.
+// Returns an object with x, y, width and height of actual draw.
 const drawSingleFish = (
   fish,
   fishXPos,
@@ -536,13 +546,12 @@ const drawSingleFish = (
     );
   }
 
-  ctx.drawImage(
-    fishCanvas,
-    Math.round(adjustedFishXPos),
-    Math.round(adjustedFishYPos),
-    width,
-    height
-  );
+  const finalX = Math.round(adjustedFishXPos);
+  const finalY = Math.round(adjustedFishYPos);
+
+  ctx.drawImage(fishCanvas, finalX, finalY, width, height);
+
+  return {x: finalX, y: finalY, w: width, h: height};
 };
 
 // Clear the sprite canvas.
