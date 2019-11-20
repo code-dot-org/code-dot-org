@@ -4,7 +4,7 @@ theme: responsive
 ---
 
 :ruby
-  launch_ai_landing = DCDO.get('launch_ai_landing', nil)
+  launch_ai = DCDO.get('launch_ai', nil)
   tutorial = {
     heading: "AI for Oceans",
     background_image: "/images/fit-1940/sw_landingpage.jpg",
@@ -37,7 +37,7 @@ theme: responsive
     }
   }
 
-%div{style: "display: #{launch_ai_landing ? 'block' : 'none'}"}
+%div{style: "display: #{launch_ai ? 'block' : 'none'}"}
 
   = view :tutorial_promo, tutorial: tutorial
 
