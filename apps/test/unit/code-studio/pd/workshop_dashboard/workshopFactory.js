@@ -18,4 +18,6 @@ Factory.define('session')
   .sequence('id')
   .attr('code', 'TEST')
   .attr('start', new Date().toISOString())
-  .attr('end', new Date().toISOString());
+  .attr('end', new Date().toISOString())
+  .attr('attendance_count', 0)
+  .attr('show_link?', false);
