@@ -836,8 +836,8 @@ EOS
     # level names if we don't truncate it before adding the suffix
     old_name = 'x' * 67
     suffix = '_long_suffix'
-    assert_equal(12, suffix.length)
     new_name = 'x' * 58 + suffix
+    assert_equal(70, new_name.length)
 
     old_level = create :level, name: old_name, start_blocks: '<xml>foo</xml>'
     new_level = old_level.clone_with_suffix(suffix)
