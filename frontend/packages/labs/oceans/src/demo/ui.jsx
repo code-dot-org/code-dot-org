@@ -183,7 +183,8 @@ const styles = {
     top: '23%',
     left: '50%',
     bottom: 0,
-    transform: 'translateX(-45%)'
+    transform: 'translateX(-45%)',
+    pointerEvents: 'none'
   },
   pill: {
     display: 'flex',
@@ -742,11 +743,13 @@ class Pond extends React.Component {
             }
           });
           fishClicked = true;
+          playSound('yes');
         }
       });
 
       if (!fishClicked) {
         setState({pondClickedFish: null});
+        playSound('no');
       }
     }
   }
