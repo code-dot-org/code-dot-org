@@ -9,15 +9,16 @@ const styles = {
   item: {
     height: 28,
     lineHeight: '28px',
-    width: 250,
+    width: 270,
     fontSize: 14,
     fontFamily: '"Gotham 4r", sans-serif',
     whiteSpace: 'nowrap',
     overflow: 'hidden',
-    textOverflow: 'ellipsis'
+    textOverflow: 'ellipsis',
+    paddingLeft: 10
   },
   assigned: {
-    marginLeft: 20,
+    marginRight: 5,
     color: color.level_perfect
   }
 };
@@ -32,10 +33,11 @@ export default class TeacherSectionSelectorMenuItem extends Component {
     const {section, onClick} = this.props;
     return (
       <PopUpMenu.Item onClick={onClick} style={styles.item}>
-        <span>{section.name}</span>
         <span style={styles.assigned}>
           {section.isAssigned && <FontAwesome icon="check" />}
+          {!section.isAssigned && <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>}
         </span>
+        <span>{section.name}</span>
       </PopUpMenu.Item>
     );
   }
