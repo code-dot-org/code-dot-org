@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import LabeledSectionSelector from './LabeledSectionSelector';
 import ScriptOverviewTopRow, {
   NOT_STARTED,
   IN_PROGRESS,
@@ -11,14 +10,10 @@ import ScriptOverviewTopRow, {
 } from './ScriptOverviewTopRow';
 import RedirectDialog from '@cdo/apps/code-studio/components/RedirectDialog';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {
-  sectionsNameAndId,
-  sectionsForDropdown
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import {resourceShape} from '@cdo/apps/templates/courseOverview/resourceType';
-import {hasLockableStages} from '@cdo/apps/code-studio/progressRedux';
 import ScriptOverviewHeader from './ScriptOverviewHeader';
 import {isScriptHiddenForSection} from '@cdo/apps/code-studio/hiddenStageRedux';
 import {
@@ -29,7 +24,6 @@ import {
   assignmentVersionShape,
   sectionForDropdownShape
 } from '@cdo/apps/templates/teacherDashboard/shapes';
-import experiments from '@cdo/apps/util/experiments';
 
 /**
  * Stage progress component used in level header and script overview.
@@ -60,16 +54,8 @@ class ScriptOverview extends React.Component {
     professionalLearningCourse: PropTypes.bool,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isRtl: PropTypes.bool.isRequired,
-    sectionsInfo: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.number.isRequired,
-        name: PropTypes.string.isRequired
-      })
-    ).isRequired,
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
     currentCourseId: PropTypes.number,
-    scriptHasLockableStages: PropTypes.bool.isRequired,
-    scriptAllowsHiddenStages: PropTypes.bool.isRequired,
     hiddenStageState: PropTypes.object,
     selectedSectionId: PropTypes.number,
     userId: PropTypes.number
@@ -104,11 +90,8 @@ class ScriptOverview extends React.Component {
       professionalLearningCourse,
       viewAs,
       isRtl,
-      sectionsInfo,
       sectionsForDropdown,
       currentCourseId,
-      scriptHasLockableStages,
-      scriptAllowsHiddenStages,
       showCourseUnitVersionWarning,
       showScriptVersionWarning,
       showRedirectWarning,
@@ -161,14 +144,7 @@ class ScriptOverview extends React.Component {
               locale={locale}
               userId={userId}
             />
-            {!professionalLearningCourse &&
-              viewAs === ViewType.Teacher &&
-              (scriptHasLockableStages || scriptAllowsHiddenStages) &&
-              !experiments.isEnabled(experiments.ASSIGNMENT_UPDATES) && (
-                <LabeledSectionSelector reloadOnSectionChange={true} />
-              )}
             <ScriptOverviewTopRow
-              sectionsInfo={sectionsInfo}
               sectionsForDropdown={sectionsForDropdown}
               selectedSectionId={parseInt(selectedSectionId)}
               professionalLearningCourse={professionalLearningCourse}
@@ -185,7 +161,6 @@ class ScriptOverview extends React.Component {
             />
           </div>
         )}
-
         <ProgressTable />
         {onOverviewPage && (
           <ProgressLegend excludeCsfColumn={excludeCsfColumnInLegend} />
@@ -205,11 +180,7 @@ export default connect((state, ownProps) => ({
   professionalLearningCourse: state.progress.professionalLearningCourse,
   viewAs: state.viewAs,
   isRtl: state.isRtl,
-  sectionsInfo: sectionsNameAndId(state.teacherSections),
   currentCourseId: state.progress.courseId,
-  scriptHasLockableStages:
-    state.stageLock.lockableAuthorized && hasLockableStages(state.progress),
-  scriptAllowsHiddenStages: state.hiddenStage.hideableStagesAllowed,
   hiddenStageState: state.hiddenStage,
   selectedSectionId: parseInt(state.teacherSections.selectedSectionId),
   sectionsForDropdown: sectionsForDropdown(

@@ -165,7 +165,7 @@ end
 def main
   fb = FirebaseHelper.new('shared')
   records, columns = get_weather_data
-  fb.upload_shared_table('openweathermap', records, columns)
+  fb.upload_shared_table('weather', records, columns)
 end
 
 main if only_one_running?(__FILE__)
