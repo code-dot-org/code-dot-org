@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Row, Col, ButtonToolbar, Button} from 'react-bootstrap';
