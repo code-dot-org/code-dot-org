@@ -7,7 +7,10 @@ import DetailsPanel from '@cdo/apps/code-studio/pd/workshop_dashboard/DetailsPan
 describe('DetailsPanel', () => {
   it('renders in readonly view', () => {
     const wrapper = shallow(
-      <DetailsPanel workshop={{}} onWorkshopSaved={sinon.spy()} />,
+      <DetailsPanel
+        workshop={{state: 'In Progress'}}
+        onWorkshopSaved={sinon.spy()}
+      />,
       {context: {router: {push: sinon.spy()}}}
     );
     assert.equal(
@@ -25,6 +28,7 @@ describe('DetailsPanel', () => {
       </Row>
     </Connect(WorkshopForm)>
   </div>
+  <ConfirmationDialog show={[undefined]} onOk={[Function]} onCancel={[Function]} headerText="Edit In Progress Workshop?" bodyText="Are you sure you want to edit this in progress workshop?\\n              Use caution! Note that deleting a session (day)\\n              will also delete all associated attendance records.\\n              " okText="OK" cancelText="Cancel" width={500} />
 </WorkshopPanel>`,
       wrapper.debug(),
       wrapper.debug()
@@ -57,6 +61,7 @@ describe('DetailsPanel', () => {
       </Row>
     </Connect(WorkshopForm)>
   </div>
+  <ConfirmationDialog show={[undefined]} onOk={[Function]} onCancel={[Function]} headerText="Edit Not Started Workshop?" bodyText="Are you sure you want to edit this not started workshop?\\n              Use caution! Note that deleting a session (day)\\n              will also delete all associated attendance records.\\n              " okText="OK" cancelText="Cancel" width={500} />
 </WorkshopPanel>`,
       wrapper.debug(),
       wrapper.debug()
@@ -82,7 +87,7 @@ describe('DetailsPanel', () => {
   it('Admin can edit in other workshop states', () => {
     const wrapper = shallow(
       <DetailsPanel
-        workshop={{}}
+        workshop={{state: 'In Progress'}}
         isWorkshopAdmin
         onWorkshopSaved={sinon.spy()}
       />,
@@ -103,6 +108,7 @@ describe('DetailsPanel', () => {
       </Row>
     </Connect(WorkshopForm)>
   </div>
+  <ConfirmationDialog show={false} onOk={[Function]} onCancel={[Function]} headerText="Edit In Progress Workshop?" bodyText="Are you sure you want to edit this in progress workshop?\\n              Use caution! Note that deleting a session (day)\\n              will also delete all associated attendance records.\\n              " okText="OK" cancelText="Cancel" width={500} />
 </WorkshopPanel>`,
       wrapper.debug(),
       wrapper.debug()
@@ -136,6 +142,7 @@ describe('DetailsPanel', () => {
       </Row>
     </Connect(WorkshopForm)>
   </div>
+  <ConfirmationDialog show={true} onOk={[Function]} onCancel={[Function]} headerText="Edit In Progress Workshop?" bodyText="Are you sure you want to edit this in progress workshop?\\n              Use caution! Note that deleting a session (day)\\n              will also delete all associated attendance records.\\n              " okText="OK" cancelText="Cancel" width={500} />
 </WorkshopPanel>`,
       wrapper.debug(),
       wrapper.debug()
