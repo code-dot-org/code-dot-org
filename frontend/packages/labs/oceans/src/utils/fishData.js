@@ -1663,9 +1663,9 @@ export const initFishData = () => {
             fieldType: FieldType.ATTRIBUTE,
             index: i
           });
-        };
+        }
 
-        for (var i = 0; i < component.knnData.length; ++i) {
+        for (i = 0; i < component.knnData.length; ++i) {
           if (maxArray[i] === minArray[i]) {
             component.knnData[i] = 0;
           } else {
@@ -1681,13 +1681,13 @@ export const initFishData = () => {
           const indexVector = oneHotEncode(idx, numVariations);
           component.knnData.push(...indexVector);
 
-          for (var i = 0; i < indexVector.length; ++i) {
+          for (i = 0; i < indexVector.length; ++i) {
             component.fieldInfos.push({
               partType: key,
               fieldType: FieldType.ID,
               index: i
             });
-          };
+          }
         }
       });
     });
