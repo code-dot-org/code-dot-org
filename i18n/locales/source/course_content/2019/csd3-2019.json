@@ -779,7 +779,7 @@
     }
   },
   "https://studio.code.org/s/csd3-2019/stage/15/puzzle/6": {
-    "long_instructions": "# Controlling Speed\n\nYou used `rotatationSpeed` outside the draw loop to make your sprite rotate when your program started.  You can also use `rotationSpeed` **inside** the draw loop to change the speed of the sprite during the game.  For example, a sprite can start rotating when the user presses the space bar, and it will keep rotating until it's told to stop.\n\n# Do This\n\n-   Look at the `if` statement inside the draw loop that checks whether the space bar has been pressed. ( [Show me where][0] )\n-   Use the `rotationSpeed` block to make the color wheel start spinning when the user presses the space bar.",
+    "long_instructions": "# Controlling Speed\n\nYou used `rotationSpeed` outside the draw loop to make your sprite rotate when your program started.  You can also use `rotationSpeed` **inside** the draw loop to change the speed of the sprite during the game.  For example, a sprite can start rotating when the user presses the space bar, and it will keep rotating until it's told to stop.\n\n# Do This\n\n-   Look at the `if` statement inside the draw loop that checks whether the space bar has been pressed. ( [Show me where][0] )\n-   Use the `rotationSpeed` block to make the color wheel start spinning when the user presses the space bar.",
     "callouts": {
       "CSD_U3_L11_S5_C1": "Look at this code."
     }
