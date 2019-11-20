@@ -6,6 +6,9 @@ import ConfirmationDialog from '../components/confirmation_dialog';
 import WorkshopForm from './components/workshop_form';
 import WorkshopPanel from './WorkshopPanel';
 
+/**
+ * UI to view and edit workshop details.
+ */
 export default class DetailsPanel extends React.Component {
   static propTypes = {
     view: PropTypes.string,
