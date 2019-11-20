@@ -72,12 +72,12 @@ const styles = {
   },
   confirmationDialog: {
     position: 'absolute',
-    margin: '9%',
-    width: '80%',
-    height: '70%',
+    margin: '15%',
+    width: '70%',
+    height: '60%',
     zIndex: 1,
     backgroundColor: colors.white,
-    borderRadius: 8,
+    borderRadius: 10,
     border: `2px solid ${colors.black}`
   },
   confirmationText: {
@@ -88,14 +88,20 @@ const styles = {
     left: '50%',
     transform: 'translateX(-50%)'
   },
+  confirmationButtons: {
+    position: 'absolute',
+    top: '80%',
+    bottom: 10,
+    width: '100%',
+    display: 'flex',
+    justifyContent: 'center'
+  },
+
   confirmationYesButton: {
-    marginLeft: '20%',
-    marginTop: '35%',
+    marginLeft: 10,
     backgroundColor: colors.green
   },
   confirmationNoButton: {
-    marginLeft: '20%',
-    marginTop: '35%',
     backgroundColor: colors.red
   },
   activityIntroText: {
@@ -431,19 +437,25 @@ let ConfirmationDialog = class ConfirmationDialog extends React.Component {
   render() {
     return (
       <div style={styles.confirmationDialog}>
-        <div style={styles.confirmationText}>Are you sure?</div>
-        <Button
-          onClick={this.props.onNoClick}
-          style={styles.confirmationNoButton}
-        >
-          No
-        </Button>
-        <Button
-          onClick={this.props.onYesClick}
-          style={styles.confirmationYesButton}
-        >
-          Yes
-        </Button>
+        <div style={styles.confirmationText} className="confirmation-text">
+          Are you sure?
+        </div>
+        <div style={styles.confirmationButtons}>
+          <Button
+            onClick={this.props.onNoClick}
+            style={styles.confirmationNoButton}
+            className="dialog-button"
+          >
+            No
+          </Button>
+          <Button
+            onClick={this.props.onYesClick}
+            style={styles.confirmationYesButton}
+            className="dialog-button"
+          >
+            Yes
+          </Button>
+        </div>
       </div>
     );
   }
@@ -555,16 +567,16 @@ let Train = class Train extends React.Component {
       state.appMode === AppMode.CreaturesVTrash ? 'Yes' : state.word;
     const noButtonText =
       state.appMode === AppMode.CreaturesVTrash ? 'No' : `Not ${state.word}`;
+    const resetTrainingFunction = () => {
+      resetTraining();
+      setState({showConfirmationDialog: false});
+    };
+
     return (
       <Body>
         <Button
           style={styles.resetTrainingButton}
           onClick={() => {
-            const resetTrainingFunction = () => {
-              resetTraining();
-              toMode(Modes.Loading);
-              setState({showConfirmationDialog: false});
-            };
             setState({
               showConfirmationDialog: true,
               confirmationDialogOnYes: resetTrainingFunction

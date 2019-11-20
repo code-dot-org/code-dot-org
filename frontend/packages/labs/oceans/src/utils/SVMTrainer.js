@@ -15,7 +15,7 @@ export default class SVMTrainer {
   addTrainingExample(example, classId) {
     // This SVM library only accepts 1 and -1 as labels; convert from our 0/1 labeling scheme
     const convertedExample = this.converterFn(example);
-    const svmLabel = (classId === 1 ? 1 : -1);
+    const svmLabel = classId === 1 ? 1 : -1;
     this.labeledTrainingData.push({example: convertedExample, label: svmLabel});
   }
 
@@ -49,5 +49,11 @@ export default class SVMTrainer {
     confidences[result.predictedClassId] = 1; // TODO: Not sure if SVM has a concept of confidence (distance from boundary?)
     result.confidencesByClassId = confidences;
     return result;
+  }
+
+  clearAll() {
+    this.svm = new svmjs.SVM();
+    this.svmParams = {};
+    this.labeledTrainingData = [];
   }
 }

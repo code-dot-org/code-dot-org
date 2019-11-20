@@ -170,9 +170,11 @@ export const finishMovement = (t, pause = true) => {
   });
 };
 
-export const resetTraining = () => {
+export const resetTraining = state => {
+  const trainer = state.trainer;
+  trainer.clearAll();
   setState({
-    trainer: null,
+    trainer,
     yesCount: 0,
     noCount: 0
   });
