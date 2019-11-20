@@ -30,6 +30,7 @@ const trial = async function(trainSize, testSize, trainer, labelFn) {
   }
 
   //console.log(trainer.detailedExplanation(testOcean[0].fieldInfos));
+  console.log('Model summary:');
   console.log(trainer.summarize(testOcean[0].fieldInfos));
 
   return createConfusionMatrix(testOcean, trainSize, labelFn);
@@ -231,7 +232,7 @@ describe('Model quality test', () => {
     }
   });
 */
-
+/*
   test('test mouths', async () => {
     const partData = fishData.mouths;
     const partKey = PartKey.MOUTH;
@@ -252,6 +253,7 @@ describe('Model quality test', () => {
       break;
     }
   });
+  */
 /*
   test('test tails', async () => {
     const partData = fishData.tails;
@@ -275,7 +277,7 @@ describe('Model quality test', () => {
     }
   });
 */
-/*
+
   test('test mouth expressions', async () => {
     const partKey = PartKey.MOUTH;
     const knnDataIndex = 2;
@@ -298,7 +300,7 @@ describe('Model quality test', () => {
       analyzeConfusionMatrix(trainSize, result);
     }
   });
-*/
+
 /*
   test('test shark teeth', async () => {
     const partData = fishData.mouths;

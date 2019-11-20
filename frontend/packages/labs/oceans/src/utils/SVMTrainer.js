@@ -1,5 +1,13 @@
 const svmjs = require('svm'); // https://github.com/karpathy/svmjs
 
+const magnitude_squared = (vector) => {
+  var sum = 0;
+  for (const x of vector) {
+    sum += Math.pow(x, 2);
+  }
+  return sum;
+};
+
 export default class SVMTrainer {
   constructor(converterFn) {
     this.converterFn = converterFn || (input => input); // Default to returning example as-is
@@ -50,6 +58,8 @@ export default class SVMTrainer {
       res = [this.labeledTrainingData[0].label];
     } else {
       res = this.svm.predict([this.converterFn(example)]);
+      // Sanity check on removeBiasTranslate logic; should be removed in final version / moved to unit tests
+      console.assert(res[0] === this.unbiasedPredict(this.converterFn(example)));
     }
 
     // This SVM library uses 1 and -1 as labels; convert back to our 0/1 labeling scheme
@@ -126,21 +136,43 @@ export default class SVMTrainer {
   }
 
   explainFish(fish) {
-    const impactByPart = {bias: this.svm.b};
+    const translatedVector = this.removeBiasTranslate(fish.knnData);
+
+    const impactByPart = {};
     for (var i = 0; i < this.svm.w.length; i++) {
       const partType = fish.fieldInfos[i].partType;
       if (!impactByPart.hasOwnProperty(partType)) {
         impactByPart[partType] = 0;
       }
 
-      impactByPart[partType] += this.svm.w[i] * fish.knnData[i];
+      impactByPart[partType] += this.svm.w[i] * translatedVector[i];
     }
 
     const sortedImpact = Object.entries(impactByPart)
       .map(e => {return {partType: e[0], impact: e[1]}})
-      //.filter(e => Math.abs(e.impact) >= Math.abs(this.svm.b))
       .sort((a, b) => Math.abs(b.impact) - Math.abs(a.impact));
 
     return sortedImpact;
+  }
+
+  removeBiasTranslate(vector) {
+    const translationConstant = this.svm.b / magnitude_squared(this.svm.w); 
+    const translationVector = this.svm.w.map(x => x * translationConstant);    
+
+    const result = [];
+    for (var i = 0; i < vector.length; i++) {
+      result[i] = vector[i] + translationVector[i];
+    }
+    return result;
+  }
+
+  // Only needed for validation of removeBiasTranslate
+  unbiasedPredict(vector) {
+    const translatedVector = this.removeBiasTranslate(vector);
+    var margin = 0;
+    for (var i = 0; i < translatedVector.length; i++) {
+      margin += this.svm.w[i] * translatedVector[i];
+    }
+    return margin > 0 ? 1 : -1;
   }
 }
