@@ -18,7 +18,7 @@ describe('DetailsPanel', () => {
   function shallowDetailsPanel(props = {}) {
     return shallow(
       <DetailsPanel
-        workshop={Factory.build('workshop')}
+        workshop={props.workshop || Factory.build('workshop')}
         onWorkshopSaved={sinon.spy()}
         {...props}
       />,
@@ -57,84 +57,39 @@ describe('DetailsPanel', () => {
     });
   });
 
-  it('renders an edit view', () => {
-    const wrapper = shallow(
-      <DetailsPanel view="edit" workshop={{}} onWorkshopSaved={sinon.spy()} />,
-      {context: {router: {push: sinon.spy()}}}
-    );
-    assert.equal(
-      `<WorkshopPanel header={{...}}>
-  <div>
-    <Connect(WorkshopForm) workshop={{...}} onSaved={[Function: proxy]} />
-  </div>
-</WorkshopPanel>`,
-      wrapper.debug(),
-      wrapper.debug()
-    );
+  it('shows an editable WorkshopForm in edit mode', () => {
+    const wrapper = shallowDetailsPanel({
+      view: 'edit'
+    });
+    const workshopForm = wrapper.find('Connect(WorkshopForm)');
+    assert.isOk(workshopForm, 'WorkshopForm was rendered');
+    assert.isFalse(!!workshopForm.prop('readOnly'), 'WorkshopForm is editable');
   });
 
-  it('Admin can edit in other workshop states', () => {
-    const wrapper = shallow(
-      <DetailsPanel
-        workshop={{state: 'In Progress'}}
-        isWorkshopAdmin
-        onWorkshopSaved={sinon.spy()}
-      />,
-      {context: {router: {push: sinon.spy()}}}
-    );
-    assert.equal(
-      `<WorkshopPanel header={{...}}>
-  <div>
-    <Connect(WorkshopForm) workshop={{...}} readOnly={true}>
-      <Row componentClass="div" bsClass="row">
-        <Col sm={4} componentClass="div" bsClass="col">
-          <ButtonToolbar bsClass="btn-toolbar">
-            <Button onClick={[Function]} active={false} block={false} disabled={false} bsStyle="default" bsClass="btn">
-              Back
-            </Button>
-          </ButtonToolbar>
-        </Col>
-      </Row>
-    </Connect(WorkshopForm)>
-  </div>
-  <ConfirmationDialog show={false} onOk={[Function]} onCancel={[Function]} headerText="Edit In Progress Workshop?" bodyText="Are you sure you want to edit this in progress workshop?\\n              Use caution! Note that deleting a session (day)\\n              will also delete all associated attendance records.\\n              " okText="OK" cancelText="Cancel" width={500} />
-</WorkshopPanel>`,
-      wrapper.debug(),
-      wrapper.debug()
-    );
+  it('edit mode includes a save button in the header', () => {
+    const wrapper = shallowDetailsPanel({
+      view: 'edit'
+    });
+    // Also shallow-render the panel header so we can check for controls
+    const headerWrapper = shallow(wrapper.prop('header'));
+    const headerSaveButton = headerWrapper
+      .find('HeaderButton')
+      .filterWhere(n => n.prop('text').includes('Save'));
+    assert.isTrue(headerSaveButton.exists(), 'Save button is present');
   });
 
-  it('Admin edit confirmation dialog', () => {
-    const wrapper = shallow(
-      <DetailsPanel
-        workshop={{state: 'In Progress'}}
-        isWorkshopAdmin
-        onWorkshopSaved={sinon.spy()}
-      />,
-      {
-        context: {router: {push: sinon.spy()}}
-      }
-    );
-    wrapper.setState({showAdminEditConfirmation: true});
-    assert.equal(
-      `<WorkshopPanel header={{...}}>
-  <div>
-    <Connect(WorkshopForm) workshop={{...}} readOnly={true}>
-      <Row componentClass="div" bsClass="row">
-        <Col sm={4} componentClass="div" bsClass="col">
-          <ButtonToolbar bsClass="btn-toolbar">
-            <Button onClick={[Function]} active={false} block={false} disabled={false} bsStyle="default" bsClass="btn">
-              Back
-            </Button>
-          </ButtonToolbar>
-        </Col>
-      </Row>
-    </Connect(WorkshopForm)>
-  </div>
-  <ConfirmationDialog show={true} onOk={[Function]} onCancel={[Function]} headerText="Edit In Progress Workshop?" bodyText="Are you sure you want to edit this in progress workshop?\\n              Use caution! Note that deleting a session (day)\\n              will also delete all associated attendance records.\\n              " okText="OK" cancelText="Cancel" width={500} />
-</WorkshopPanel>`,
-      wrapper.debug(),
-      wrapper.debug()
-    );
+  it('Admin has an edit button in all workshop states', () => {
+    States.forEach(state => {
+      const wrapper = shallowDetailsPanel({
+        workshop: Factory.build('workshop', {state}),
+        isWorkshopAdmin: true
+      });
+      // Also shallow-render the panel header so we can check for controls
+      const headerWrapper = shallow(wrapper.prop('header'));
+      const headerEditButton = headerWrapper
+        .find('HeaderButton')
+        .filterWhere(n => n.prop('text').includes('Edit'));
+      assert.isTrue(headerEditButton.exists(), 'Edit button is present');
+    });
   });
 });
