@@ -166,6 +166,9 @@ class DSLDefined < Level
     raise "name not formatted correctly in dsl text for level: '#{name}'" if old_dsl && old_dsl == new_dsl
 
     if new_dsl && editor_experiment
+      # remove previous editor experiment
+      new_dsl = new_dsl.sub(/^editor_experiment.*/, '')
+
       # define editor_experiment on the second line of the dsl file.
       index = new_dsl.index("\n")
       new_dsl = new_dsl.insert(index, "\neditor_experiment '#{editor_experiment}'") if index
