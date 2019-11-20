@@ -56,6 +56,7 @@ class ScriptOverviewTopRow extends React.Component {
     scriptProgress: PropTypes.oneOf([NOT_STARTED, IN_PROGRESS, COMPLETED]),
     scriptId: PropTypes.number.isRequired,
     scriptName: PropTypes.string.isRequired,
+    scriptTitle: PropTypes.string.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isRtl: PropTypes.bool.isRequired,
     resources: PropTypes.arrayOf(resourceShape).isRequired,
@@ -71,6 +72,7 @@ class ScriptOverviewTopRow extends React.Component {
       scriptProgress,
       scriptId,
       scriptName,
+      scriptTitle,
       viewAs,
       isRtl,
       resources,
@@ -113,18 +115,17 @@ class ScriptOverviewTopRow extends React.Component {
               </DropdownButton>
             </div>
           )}
-        {!professionalLearningCourse &&
-          viewAs === ViewType.Teacher &&
-          showAssignButton && (
-            <SectionAssigner
-              sections={sectionsForDropdown}
-              selectedSectionId={selectedSectionId}
-              showAssignButton={showAssignButton}
-              courseId={currentCourseId}
-              scriptId={scriptId}
-              forceReload={true}
-            />
-          )}
+        {!professionalLearningCourse && viewAs === ViewType.Teacher && (
+          <SectionAssigner
+            sections={sectionsForDropdown}
+            selectedSectionId={selectedSectionId}
+            assignmentName={scriptTitle}
+            showAssignButton={showAssignButton}
+            courseId={currentCourseId}
+            scriptId={scriptId}
+            forceReload={true}
+          />
+        )}
         <div style={isRtl ? styles.left : styles.right}>
           <span>
             <ProgressDetailToggle />

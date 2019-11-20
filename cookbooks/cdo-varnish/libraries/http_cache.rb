@@ -20,7 +20,8 @@ class HttpCache
   # A list of script levels that should not be cached, even though they are
   # in a cacheable script, because they are project-backed.
   UNCACHED_SCRIPT_LEVEL_PATHS = [
-    '/s/dance/stage/1/puzzle/13'
+    '/s/dance/stage/1/puzzle/13',
+    '/s/dance-2019/stage/1/puzzle/10'
   ]
 
   # A map from script name to script level URL pattern.
@@ -36,6 +37,8 @@ class HttpCache
     sports
     basketball
     dance
+    dance-2019
+    oceans
   ).map do |script_name|
     # Most scripts use the default route pattern.
     [script_name, "/s/#{script_name}/stage/*"]
