@@ -72,6 +72,7 @@ class PegasusTest < Minitest::Test
     code.org/starwars
     code.org/leaderboards
     code.org/page_mode
+    code.org/oceans
   ]
 
   def test_render_pegasus_documents
