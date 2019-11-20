@@ -124,4 +124,23 @@ export default class SVMTrainer {
     const sortedAndNormalizedSummary = sortedSummary.map(p => {return {partType: p.partType, importance: p.importance / denominator}});
     return sortedAndNormalizedSummary;
   }
+
+  explainFish(fish) {
+    const impactByPart = {bias: this.svm.b};
+    for (var i = 0; i < this.svm.w.length; i++) {
+      const partType = fish.fieldInfos[i].partType;
+      if (!impactByPart.hasOwnProperty(partType)) {
+        impactByPart[partType] = 0;
+      }
+
+      impactByPart[partType] += this.svm.w[i] * fish.knnData[i];
+    }
+
+    const sortedImpact = Object.entries(impactByPart)
+      .map(e => {return {partType: e[0], impact: e[1]}})
+      //.filter(e => Math.abs(e.impact) >= Math.abs(this.svm.b))
+      .sort((a, b) => Math.abs(b.impact) - Math.abs(a.impact));
+
+    return sortedImpact;
+  }
 }

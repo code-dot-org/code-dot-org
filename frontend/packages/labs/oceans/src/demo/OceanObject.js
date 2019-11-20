@@ -251,6 +251,7 @@ export class FishOceanObject extends OceanObject {
       ...this.pectoralFinFront.fieldInfos,
       ...this.dorsalFin.fieldInfos,
       ...this.tail.fieldInfos,
+      ...this.scales.fieldInfos,
       ...this.colorPalette.fieldInfos
     ];
   }

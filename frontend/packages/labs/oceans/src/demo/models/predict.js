@@ -13,6 +13,7 @@ export const init = () => {
   } else {
     fishData = generateOcean(100);
   }
+  console.log(state.trainer.summarize(fishData[0].fieldInfos));
   setState({fishData});
 };
 
@@ -20,7 +21,10 @@ export const predictFish = (state, idx) => {
   return new Promise(resolve => {
     const fish = state.fishData[idx];
 
+
     state.trainer.predict(fish).then(prediction => {
+      const explanation = state.trainer.explainFish(fish);
+      console.log(`prediction: ${prediction.predictedClassId} explanation: ${JSON.stringify(explanation)}`);
       fish.setResult(prediction);
       resolve(prediction);
     });

@@ -1633,8 +1633,6 @@ const oneHotEncode = (index, numCategories) => {
   return result;
 };
 
-const fieldInfos = [];
-
 // Normalize the KNN data for all components.
 let initialized = false;
 export const initFishData = () => {
