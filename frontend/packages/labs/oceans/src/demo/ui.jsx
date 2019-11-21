@@ -523,7 +523,7 @@ let ConfirmationDialog = class ConfirmationDialog extends React.Component {
             </div>
           </div>
           <div style={styles.confirmationButtons}>
-          <Button
+            <Button
               onClick={this.props.onYesClick}
               style={styles.confirmationYesButton}
               className="dialog-button"
