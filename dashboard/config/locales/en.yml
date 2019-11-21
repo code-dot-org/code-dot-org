@@ -134,6 +134,10 @@ en:
     unable_to_connect_provider: "Unable to connect your Code.org account to your %{provider} account. Please try again."
     already_in_use: "Your %{provider} account is already connected to another Code.org account."
     already_linked: "Your %{provider} account is already linked to your Code.org account."
+    existing_account:
+      account_exists: "Good news! You already have a Code.org account that uses %{email}"
+      sign_in: "Please sign in and we'll link your %{provider} profile."
+      sign_up: "Not your email? Want to create a new account with a different email? We will also link your %{provider} profile if you choose to create a new account."
   signup_form:
     email_signup: 'Sign up with your email address'
     student_count: '%{count} students have already signed up.'
