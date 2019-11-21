@@ -42,8 +42,15 @@ ar-SA:
       CourseD_Dance_Party_11:
         dance_callout_11_a: مربع برمجي جديد!
         dance_callout_11_b: مربع برمجي جديد!
+      Dance_2019_01:
+        dance_callout_01: أضف هذا المربع البرمجي إلى برنامجك!
+      Dance_2019_02:
+        dance_callout_11_a: أضف هذا المربع البرمجي إلى البرنامج الخاص بك.
+        arrow_buttons: اضغط أزرار الأسهم للتحكم في الراقص الخاص بك.
       Dance_2019_04:
         dance_callout_02: أضف هذا المربع البرمجي إلى برنامجك!
+      Dance_2019_05:
+        dance_callout_05: إضافة حدث جديد إلى البرنامج.
       Dance_2019_06:
         dance_party_11_5_groups: مربع برمجي جديد!
       Dance_2019_07:
