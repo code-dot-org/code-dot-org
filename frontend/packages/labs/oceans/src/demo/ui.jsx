@@ -52,6 +52,24 @@ const styles = {
     backgroundColor: colors.orange,
     color: colors.white
   },
+  finishButton: {
+    backgroundColor: colors.orange,
+    color: colors.white
+  },
+  playAgainButton: {
+    backgroundColor: colors.yellowGreen,
+    color: colors.white,
+    marginBottom: 10
+  },
+  rightButtons: {
+    position: 'absolute',
+    bottom: 10,
+    right: 10,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'right',
+    minWidth: 160
+  },
   backButton: {
     position: 'absolute',
     bottom: 10,
@@ -762,35 +780,48 @@ class Pond extends React.Component {
 
   render() {
     const state = getState();
-    const nextButtonText =
-      state.appMode === AppMode.FishLong ? 'Play Again' : 'Continue';
-    const nextButtonOnClick = () => {
-      if (state.appMode === AppMode.FishLong) {
-        resetTraining();
-        toMode(Modes.Words);
-      } else {
-        if (state.onContinue) {
-          state.onContinue();
-        }
-      }
-    };
 
     return (
       <Body onClick={e => this.onPondClick(e)}>
         <img style={styles.pondBot} src={aiBotClosed} />
         {state.canSkipPond && (
           <div>
-            <Button style={styles.continueButton} onClick={nextButtonOnClick}>
-              {nextButtonText}
-            </Button>
-            <Button
-              style={styles.backButton}
-              onClick={() => {
-                toMode(Modes.Training);
-              }}
-            >
-              Train More
-            </Button>
+            {state.appMode === AppMode.FishLong ? (
+              <div style={styles.rightButtons}>
+                <Button
+                  style={styles.playAgainButton}
+                  onClick={() => {
+                    resetTraining();
+                    toMode(Modes.Words);
+                  }}
+                >
+                  Play Again
+                </Button>
+                <Button
+                  style={styles.finishButton}
+                  onClick={state.onContinue()}
+                >
+                  Finish
+                </Button>
+              </div>
+            ) : (
+              <Button
+                style={styles.continueButton}
+                onClick={() => toMode(Modes.Predicting)}
+              >
+                Continue
+              </Button>
+            )}
+            <div>
+              <Button
+                style={styles.backButton}
+                onClick={() => {
+                  toMode(Modes.Training);
+                }}
+              >
+                Train More
+              </Button>
+            </div>
           </div>
         )}
       </Body>
