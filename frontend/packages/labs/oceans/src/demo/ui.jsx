@@ -94,50 +94,44 @@ const styles = {
     marginTop: '2%'
   },
   confirmationDialogBackground: {
-    backgroundColor: 'rgba(0,0,0,0.3)',
+    backgroundColor: colors.transparentBlack,
     position: 'absolute',
     top: 0,
     left: 0,
     width: '100%',
     height: '100%',
-    borderRadius: 10
+    borderRadius: 10,
+    zPosition: 1
   },
   confirmationDialog: {
     position: 'absolute',
-    margin: '15%',
-    width: '70%',
-    height: '60%',
-    zIndex: 1,
     backgroundColor: colors.white,
-    borderRadius: 5
+    color: colors.darkGrey,
+    transform: 'translate(-50%, -50%)',
+    top: '50%',
+    bottom: 'initial',
+    left: '50%',
+    padding: 20
+    //minWidth: '40%',
+    //minHeight: '40%'
   },
   confirmationHeader: {
-    position: 'absolute',
-    fontSize: 32,
-    lineHeight: '26px',
-    top: '5%',
-    left: '50%',
-    transform: 'translateX(-50%)'
+    fontSize: 40,
+    lineHeight: '40px',
+    color: colors.darkGrey,
+    padding: 10,
+    textAlign: 'center'
   },
   confirmationText: {
-    position: 'absolute',
     textAlign: 'center',
-    top: '25%',
-    height: '40%',
-    paddingTop: '5px',
     backgroundColor: colors.lightGrey,
-    width: '80%',
-    left: '10%',
-    padding: '5px',
+    padding: '15px',
     borderRadius: '5px'
   },
   confirmationButtons: {
-    position: 'absolute',
-    top: '80%',
-    bottom: 10,
-    width: '100%',
     display: 'flex',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    padding: '15px'
   },
   confirmationYesButton: {
     marginLeft: 10,
@@ -663,7 +657,7 @@ let Train = class Train extends React.Component {
         <div style={styles.counter}>
           <img src={counterIcon} />
           <span style={styles.counterNum}>
-            {Math.min(999, state.yesCount + state.noCount) * 10}
+            {Math.min(999, state.yesCount + state.noCount)}
           </span>
         </div>
         <div style={styles.trainButtons}>
@@ -1074,16 +1068,16 @@ export default class UI extends React.Component {
 
     return (
       <div>
+        {currentMode === Modes.Words && <Words />}
+        {currentMode === Modes.Training && <Train />}
+        {currentMode === Modes.Predicting && <Predict />}
+        {currentMode === Modes.Pond && <Pond />}
         {state.showConfirmationDialog && (
           <ConfirmationDialog
             onYesClick={state.confirmationDialogOnYes}
             onNoClick={() => setState({showConfirmationDialog: false})}
           />
         )}
-        {currentMode === Modes.Words && <Words />}
-        {currentMode === Modes.Training && <Train />}
-        {currentMode === Modes.Predicting && <Predict />}
-        {currentMode === Modes.Pond && <Pond />}
       </div>
     );
   }
