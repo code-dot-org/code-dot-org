@@ -1,7 +1,5 @@
 require 'singleton'
-require 'cdo/buffer'
 require 'aws-sdk-firehose'
-require 'active_support/core_ext/module/attribute_accessors'
 
 # A wrapper client to the AWS Firehose service.
 # @example
@@ -21,48 +19,48 @@ require 'active_support/core_ext/module/attribute_accessors'
 #     }
 #   )
 
-class FirehoseClient < Cdo::Buffer
-  STREAM_NAME = 'analysis-events'.freeze
+STREAM_NAME = 'analysis-events'.freeze
 
+class FirehoseClient
   include Singleton
-  cattr_accessor :client
 
-  # Ref: https://docs.aws.amazon.com/firehose/latest/APIReference/API_PutRecordBatch.html
-  ITEMS_PER_REQUEST = 500
-
-  # Ref: https://docs.aws.amazon.com/firehose/latest/APIReference/API_PutRecordBatch.html
-  BYTES_PER_REQUEST = 1024 * 1024 * 4
+  REGION = 'us-east-1'.freeze
 
   # Initializes the @firehose to an AWS Firehose client.
   def initialize
-    super(
-      batch_events: ITEMS_PER_REQUEST,
-      batch_size: BYTES_PER_REQUEST,
-      batch_interval: 10,
-      min_interval: 0.1
-    )
-    unless [:development, :test].include? rack_env
-      self.client = Aws::Firehose::Client.new
+    if [:development, :test].include? rack_env
+      return
     end
+    @firehose = Aws::Firehose::Client.new(region: REGION)
   end
 
   # Posts a record to the analytics stream.
   # @param data [hash] The data to insert into the stream.
   def put_record(data)
-    buffer({data: add_common_values(data).to_json})
-  end
+    data_with_common_values = add_common_values(data)
 
-  def flush(events)
-    if client
-      client.put_record_batch(
-        {
-          delivery_stream_name: STREAM_NAME,
-          records: events
-        }
-      )
-    else
-      CDO.log.info "Skipped sending records to #{STREAM_NAME}:\n#{events}"
+    if [:development, :test].include? rack_env
+      CDO.log.info "Skipped sending record to #{STREAM_NAME}: "
+      CDO.log.info data
+      return
     end
+
+    # TODO(asher): Determine whether these should be cached and batched via
+    # put_record_batch. See
+    #   http://docs.aws.amazon.com/sdkforruby/api/Aws/Firehose/Client.html#put_record_batch-instance_method
+    # for documentation.
+    @firehose.put_record(
+      {
+        delivery_stream_name: STREAM_NAME,
+        record: {data: data_with_common_values.to_json}
+      }
+    )
+  # Swallow and log all errors because an issue sending analytics should not prevent the caller from continuing.
+  rescue StandardError => error
+    # TODO(suresh): if the exception is Firehose ServiceUnavailableException, we should consider
+    # backing off and retrying.
+    # See http://docs.aws.amazon.com/sdkforruby/api/Aws/Firehose/Client.html#put_record-instance_method.
+    Honeybadger.notify(error)
   end
 
   private
@@ -71,10 +69,12 @@ class FirehoseClient < Cdo::Buffer
   # @param data [hash] The data to add the key-value pairs to.
   # @return [hash] The data, including the newly added key-value pairs.
   def add_common_values(data)
-    data.merge(
+    data_with_common_values = data.merge(
       created_at: DateTime.now,
       environment: rack_env,
       device: 'server-side'.to_json
     )
+    data_with_common_values[user_id] ||= current_user.id if current_user
+    data_with_common_values
   end
 end
