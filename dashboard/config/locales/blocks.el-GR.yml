@@ -2,6 +2,45 @@
 el:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: όλα
+            '"ALIEN"': όλοι οι εξωγήινοι
+            '"BEAR"': όλες οι αρκούδες
+            '"CAT"': όλες οι γάτες
+            '"DOG"': όλοι οι σκύλοι
+            '"DUCK"': όλες οι πάπιες
+            '"FROG"': όλοι οι βάτραχοι
+            '"MOOSE"': όλα τα ελάφια
+            '"PINEAPPLE"': όλοι οι ανανάδες
+            '"ROBOT"': όλα τα ρομπότ
+            '"SHARK"': όλοι οι καρχαρίες
+            '"UNICORN"': Μονόκεροι
+          MOVE1:
+            MOVES.Roll: Κύλιση σώματος
+            MOVES.ClapHigh: Παλαμάκια Ψηλά
+            MOVES.Dab: Νταμπ
+            MOVES.DoubleJam: Διπλό κάτω
+            MOVES.Drop: Πέσιμο
+            MOVES.Floss: Φλος
+            MOVES.Fresh: Φρέσκο
+            MOVES.Clown: Γκάνγκαμ στάιλ
+            MOVES.Kick: Αστέρι
+            MOVES.ThisOrThat: Αυτό ή Εκείνο
+            MOVES.Rest: Κανένα
+          MOVE2:
+            MOVES.Roll: Κύλιση σώματος
+            MOVES.ClapHigh: Παλαμάκια Ψηλά
+            MOVES.Dab: Νταμπ
+            MOVES.DoubleJam: Διπλό κάτω
+            MOVES.Drop: Πέσιμο
+            MOVES.Floss: Φλος
+            MOVES.Fresh: Φρέσκο
+            MOVES.Clown: Γκάνγκαμ στάιλ
+            MOVES.Kick: Αστέρι
+            MOVES.ThisOrThat: Αυτό ή Εκείνο
+            MOVES.Rest: Κανένα
       Dancelab_atTimestamp:
         text: μετά από {TIMESTAMP} {UNIT}
         options:
@@ -782,13 +821,6 @@ el:
           STRING:
             '"hearts_colorful"': Καρδιές
             '"diamond"': διαμάντι
-            '"l"': λ
-            '"m"': μ
-            '"n"': ν
-            '"o"': ο
-            '"p"': π
-            '"q"': q
-            '"r"': ρ
             '"s"': σ
             '"t"': τ
             '"u"': θ

@@ -517,6 +517,8 @@ hu:
       cta: 'Ismerd meg hogyan'
     dance:
       title: 'Táncos buli'
+    dance-2019:
+      title: 'Táncos buli'
     hoc:
       title: 'Hagyományos Útvesztö'
       body: 'Ismerkedj meg a számítógép-tudomány alapjaival. Milliók kezdték már el.'

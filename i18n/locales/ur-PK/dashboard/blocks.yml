@@ -2,6 +2,12 @@
 ur:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          MOVE1:
+            MOVES.Rest: کوئی بھی نہیں
+          MOVE2:
+            MOVES.Rest: کوئی بھی نہیں
       Dancelab_changeMoveEachLR:
         options:
           MOVE:

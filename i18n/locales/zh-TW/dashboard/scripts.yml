@@ -5675,7 +5675,7 @@ zh-TW:
             Dance Party:
               name: 舞蹈派對
           description: 寫個你自己的舞蹈程式，並分享給朋友們！
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Getting Started:
               name: 新手上路
@@ -5729,3 +5729,31 @@ zh-TW:
               name: 變數的建立
             Functions Make:
               name: 函式的建立
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: 條件判斷（Conditionals）
+            Alien Dance Party with Sprite Lab:
+              name: 用 Sprite Lab 創作外星人舞蹈派對
+            Access Ability:
+              name: 輔助功能
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: 群眾外包（Crowdsourcing）
+            Conditionals with Cards:
+              name: 用撲克牌學習條件判斷（Conditionals）
+            Nested Loops in Bee:
+              name: 蜜蜂裡的巢狀迴圈（Nested Loops）
+            Nested Loops in Artist:
+              name: 小藝術家裡的巢狀迴圈（Nested Loops）
+            Functions in Minecraft:
+              name: Minecraft 中的函式
+        time4cs-experiment-unit-2:
+          stages:
+            Nested Loops in Maze:
+              name: 迷宮裡的巢狀迴圈（Nested Loops）
+            Fancy Shapes using Nested Loops:
+              name: 小藝術家裡的巢狀迴圈（Nested Loops）
+            Functions in Minecraft:
+              name: Minecraft 中的函式

@@ -1753,7 +1753,7 @@ ja:
             Dance Party:
               name: ダンスパーティー
           description: 自分だけのダンスパーティーをプログラムして友達と共有しましょう。
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Computer Science Fundamentals:
               name: コンピュータ サイエンス入門
@@ -1774,3 +1774,15 @@ ja:
         dance-extras-2019:
           title: ダンスを続ける
           description: 最初の 1 時間を越えて、応用編のプロジェクトのアイデアを活用しよう。
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: 条件
+            'Events: The Big Event':
+              name: 'イベント: おおきなイベント'
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: クラウドソーシング
+            Conditionals with Cards:
+              name: カードと条件

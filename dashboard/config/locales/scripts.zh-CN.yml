@@ -10447,6 +10447,8 @@ zh-CN:
               name: 计算机科学原理预调查
             Binary Numbers:
               name: 二进制数
+            Representing Information:
+              name: 代表信息
           title: 计算机科学原理 单元1 试验
         csd-tests:
           stages:
@@ -11364,6 +11366,8 @@ zh-CN:
               name: 路由和冗余
             Unit 2 Assessment:
               name: 第2单元评估
+            The Need for Addressing:
+              name: 寻址的需要
         peru-2019:
           stages:
             new stage:
@@ -11391,7 +11395,7 @@ zh-CN:
             Dance Party:
               name: 舞蹈派对
           description: 写出你自己的舞会代码，分享给你的朋友们！
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Getting Started:
               name: 开始
@@ -11468,3 +11472,67 @@ zh-CN:
               name: 练习 PT 第2部分
             Practice PT Part 3:
               name: 练习 PT 第3部分
+        time4cs-control-unit-1:
+          stages:
+            Sequencing in Maze:
+              name: 迷宫中的序列
+            Programming and Loops with the Artist:
+              name: 艺术家的编程和循环
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: "《我的世界：水上航行》的条件"
+            Conditionals:
+              name: 条件语句
+            'Events: The Big Event':
+              name: '事件: 大事件'
+            Learning Sprites with Sprite Lab:
+              name: 在精灵实验室学习精灵
+            Alien Dance Party with Sprite Lab:
+              name: 精灵实验室中的外星人舞蹈派对
+            Private and Personal Information:
+              name: 私人和个人信息
+            Drawing with Loops:
+              name: 艺术家的编程和循环
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: 众包
+            Conditionals with Cards:
+              name: 用 扑克牌 的 条件子句
+            Nested Loops in Bee:
+              name: 蜜蜂里的嵌套循环
+            Nested Loops in Artist:
+              name: 艺术家中的嵌套循环
+            Nested Loops in Frozen:
+              name: 冰雪奇缘里的嵌套循环
+            'Functions: Songwriting':
+              name: '功能: 作曲'
+            Functions in Minecraft:
+              name: "《我的世界》中的函数"
+            Functions in Harvester:
+              name: 收割者中的函数
+            Functions in Artist:
+              name: 艺术家之间的功能
+        time4cs-experiment-unit-2:
+          stages:
+            Introduction to the Problem:
+              name: 问题介绍
+            Everglades Habitats:
+              name: 湿地栖息环境
+            Food Chains:
+              name: 食物链
+            Alligator Holes:
+              name: 鳄鱼洞穴
+            Conditionals in Sprite Lab:
+              name: 精灵实验室的条件
+            Nested Loops in Maze:
+              name: 迷宫里的嵌套循环
+            Fancy Shapes using Nested Loops:
+              name: 艺术家中的嵌套循环
+            Nested Loops with Frozen:
+              name: 冰雪奇缘和嵌套循环
+            Functions in Minecraft:
+              name: "《我的世界》中的函数"
+            Functions with Harvester:
+              name: 收割者中的函数
+            Functions with Artist:
+              name: 艺术家之间的功能

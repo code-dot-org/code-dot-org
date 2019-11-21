@@ -1945,6 +1945,36 @@ ko-KR:
           -   댄서가 화면에 나타나도록 하세요.
 
           \*이 단계는 4번째 마디 이후에 끝납니다.
+        challenges: |-
+          **선택 과제**
+
+          -   다른 노래를 골라 재생하세요.
+          -   댄서를 다른 위치로 옮기세요.
+          -   댄서를 한 명 이상 만드세요.
+      Dance_2019_02:
+        validation: |-
+          **이 레벨은 어떻게 통과하죠?**
+
+          -   댄서가 동작을 수행해야 합니다.
+          -   화살표 키를 눌러야 합니다.
+
+          _이 레벨은 4마디 이후에 끝납니다._
+        challenges: |-
+          **선택 과제**
+
+          -   <xml><block type="Dancelab_whenKey"><title name="KEY"></title></block></xml> 블록을 한 개 이상 사용하세요.
+      Dance_2019_03:
+        validation: |-
+          **이 레벨은 어떻게 통과하죠?**
+
+          -   두 댄서 모두 동작을 수행해야 합니다.
+          -   화살표 키를 눌러야 합니다.
+
+          _이 레벨은 4마디 이후에 끝납니다._
+        challenges: |-
+          **선택 과제**
+
+          -   댄서가 왼쪽, 오른쪽 화살표 키에 반응하게 하세요.
       Dance_2019_04:
         validation: |-
           **이 단계를 어떻게 통과하나요?**
@@ -1959,6 +1989,63 @@ ko-KR:
           -   6번째 마디 후 댄서는 4번째 마디 후와는 다른 춤을 추고 있어야 합니다.
 
           _이 단계는 12번째 마디 후에 끝납니다._
+        challenges: |-
+          **선택 과제**
+
+          -   댄서들이 동작을 전환할 때마다 배경을 바꿉니다.
+      Dance_2019_06:
+        validation: |-
+          **이 레벨은 어떻게 통과하죠?**
+
+          -   리드 댄서 한 명과 백업 댄서 여럿을 생성해세요.
+
+          _이 레벨은 7마디 이후에 끝납니다._
+        challenges: |-
+          **선택 과제**
+
+          -   다수의 백업 댄서 그룹을 생성하세요.
+      Dance_2019_07:
+        validation: |-
+          **이 레벨은 어떻게 통과하죠?**
+
+          -   음악이 시작되고 최소 한 댄서의 크기를 변경하세요.
+
+          _이 레벨은 6마디 이후에 끝납니다._
+        challenges: |-
+          **선택 과제**
+
+          -   다른 속성(너비, 높이, 회전 등)을 변경하여 실험해보세요.
+      Dance_2019_08:
+        validation: |-
+          **이 레벨은 어떻게 통과하죠?**
+
+          -   최소 한 댄서의 색조를 변경하세요.
+
+          _이 레벨은 6마디 이후에 끝납니다._
+        tint_hint: 고른 색과 똑같이 댄서의 색이 바뀌지 않는 거 눈치채셨나요? **색조**는 사용자가 고른 색과 댄서의 색을 혼합하기
+          때문입니다.
+      Dance_2019_09:
+        validation: |-
+          **이 레벨은 어떻게 통과하죠?**
+
+          -   “마침” 단추를 누르면 됩니다!
+        repeat_every_ideas: |-
+          **아이디어가 필요하세요?**
+
+          -   댄서가 커지도록 계속 크기를 변경하세요.
+          -   댄서가 돌 수 있도록 계속 회전을 변경하세요.
+          -   댄서가 화면을 가로질러 움직이도록 수평 또는 수직 위치를 계속 변경하세요.
+
+          _반대되는 효과가 나타나도록 음수를 사용할 수도 있습니다!_
+        next_previous: |-
+          **선택 과제**
+
+          -   이 새 이벤트 블록을 사용하면 `(Random)`, `(Next)`, `(Previous)`으로 동작을 설정하는 식으로 댄스 동작 목록을 반복하게 할 수도 있습니다.
+              <xml><block type="Dancelab_changeMoveEachLR">
+              <title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;">???</title>
+              <title name="MOVE">"rand"</title>
+              <title name="DIR">-1</title>
+              </block></xml>
       Dance_Party_01:
         validation: |-
           **이 단계를 어떻게 통과하나요?**

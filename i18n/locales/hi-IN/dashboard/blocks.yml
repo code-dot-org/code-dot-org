@@ -2,6 +2,44 @@
 hi:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            '"ALIEN"': सभी एलियन्स
+            '"BEAR"': सभी भालू
+            '"CAT"': सभी बिल्लियां
+            '"DOG"': सभी कुत्ते
+            '"DUCK"': सभी बत्तखें
+            '"FROG"': सभी मेंढक
+            '"MOOSE"': सभी अमरीकी हिरण
+            '"PINEAPPLE"': सभी अनानास
+            '"ROBOT"': सभी रोबोट
+            '"SHARK"': सभी शार्क्स
+            '"UNICORN"': गेंडा
+          MOVE1:
+            MOVES.Roll: बॉडी रोल
+            MOVES.ClapHigh: ज़ोर से ताली बजाएं
+            MOVES.Dab: हाथ फेरें
+            MOVES.DoubleJam: डबल डाउन
+            MOVES.Drop: ड्रॉप
+            MOVES.Floss: फ्लॉस
+            MOVES.Fresh: ताजा
+            MOVES.Clown: गंगनम
+            MOVES.Kick: स्टार
+            MOVES.ThisOrThat: यह या वह
+            MOVES.Rest: कोई नहीं
+          MOVE2:
+            MOVES.Roll: बॉडी रोल
+            MOVES.ClapHigh: ज़ोर से ताली बजाएं
+            MOVES.Dab: हाथ फेरें
+            MOVES.DoubleJam: डबल डाउन
+            MOVES.Drop: ड्रॉप
+            MOVES.Floss: फ्लॉस
+            MOVES.Fresh: ताजा
+            MOVES.Clown: गंगनम
+            MOVES.Kick: स्टार
+            MOVES.ThisOrThat: यह या वह
+            MOVES.Rest: कोई नहीं
       Dancelab_atTimestamp:
         text: "{TIMESTAMP} {UNIT} के बाद"
         options:
@@ -765,13 +803,6 @@ hi:
           STRING:
             '"hearts_colorful"': दिल
             '"diamond"': हीरा
-            '"l"': l
-            '"m"': m
-            '"n"': 'n'
-            '"o"': o
-            '"p"': p
-            '"q"': q
-            '"r"': r
             '"s"': s
             '"t"': t
             '"u"': u
@@ -895,6 +926,7 @@ hi:
         options:
           CHOICE:
             '"this"': यह
+            '"other"': अन्य
       gamelab_hideTitleScreen:
         text: शीर्षक स्क्रीन छुपाएं
       gamelab_isTouchingEdges:

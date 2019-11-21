@@ -256,6 +256,22 @@ de-DE:
           -   Sorgen Sie dafür, dass ein Tänzer auf dem Bildschirm erscheint.
 
           _Dieser Level endet nach 4 Takten._
+        challenges: "**Optionale Herausforderungen** \n\n-   Wählen Sie das Abspielen
+          eines anderen Songs aus.\n-   Bringen Sie Ihre Tänzer an einen neuen Ort.
+          \n-   Erstellen Sie mehr als einen Tänzer."
+      Dance_2019_02:
+        validation: "**Wie schaffe ich diesen Level?**\n\n-   Der Tänzer muss einen
+          Tanzschritt ausführen. \n-   Sie müssen eine Pfeiltaste drücken.\n\n_Dieser
+          Level endet nach 4 Takten._"
+        challenges: "**Optionale Herausforderung** \n\n-   Verwenden Sie mehr als
+          einen <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>
+          Block."
+      Dance_2019_03:
+        validation: "**Wie schaffe ich diesen Level?**\n\n-   Beide Tänzer müssen
+          eine Bewegung ausführen. \n-   Sie müssen die Pfeiltasten drücken. \n\n_Dieser
+          Level endet nach 4 Takten._"
+        challenges: "**Optionale Herausforderung** \n\n-   Lassen Sie eine Tänzerin
+          auf die Pfeiltasten links und rechts reagieren."
       Dance_2019_04:
         validation: |-
           **Wie schaffe ich diesen Level?**
@@ -270,6 +286,46 @@ de-DE:
           -   Nach 6 Takten muss Ihr Tänzer einen anderen Tanz tun als nach 4 Takten.
 
           _Dieser Level endet nach 12 Takten._
+        challenges: "**Optionale Herausforderung** \n\n-   Änderen Sie den Hintergrund,
+          wenn die Tänzer eine andere Bewegung durchführen."
+      Dance_2019_06:
+        validation: "**Wie schaffe ich diesen Level?**\n\n-   Erstellen Sie einen
+          Leadtänzer und eine Gruppe von Backuptänzern. \n    _Diese Stufe endet nach
+          7 Takten._"
+        challenges: "**Optionale Herausforderung** \n\n-   Erstellen Sie mehrere Gruppen
+          von Backup-Tänzern."
+      Dance_2019_07:
+        validation: "**Wie bestehe ich diesen Level?** - \n\n-   Ändern Sie die Größe
+          von mindestens einem Tänzer nach Einsetzen der Musik. \n\n_Dieser Level
+          endet nach 6 Takten_"
+        challenges: |-
+          **Optionale Herausforderung**
+
+          -   Experimentieren Sie, indem Sie weitere Eigenschaften (Breite, Höhe, Rotation etc.) ändern
+      Dance_2019_08:
+        validation: "**Wie bestehe ich diesen Level?** \n\n-   Ändern Sie den Farbton
+          von mindestens einem Tänzer.\n\n_Dieser Level endet nach 6 Takten_"
+        tint_hint: Haben Sie bemerkt, dass  Ihre Tänzer nicht genau die Farbe annehmen,
+          die Sie ausgewählt hatten? Dass liegt daran, dass **färben** die von Ihnen
+          gewählte Farbe mit den Farben des Tänzers mischen.
+      Dance_2019_09:
+        validation: "**Wie bestehe ich diesen Level?** \n\n-   Drücken Sie einfach
+          die Taste \"Beenden\"!"
+        repeat_every_ideas: "**Brauchen Sie Ideen?**\n\n-   Ändern Sie die Größe eines
+          Tänzers mehrfach, um ihn wachsen zu lassen. \n-   Ändern Sie die Drehung
+          eines Tänzers mehrfach, damit er sich dreht. \n-   Ändern Sie die horizontale
+          oder vertikale Position eines Tänzers, mehrfach, damit er sich über den
+          Bildschirm bewegt.\n    _Sie können auch negative Zahlen verwenden, um einen
+          gegenteiligen Effekt zu bewirken!_"
+        next_previous: |-
+          **Optionale Herausforderung**
+
+          -   Sie können diesen neuen Ereignis-Block auch verwenden, um  durch eine Liste von Tanzschritten zu gehen, indem Sie bei den Schritten `(Zufall)`, `(Nächster)` oder `(Vorheriger)` auswählen.
+              <xml><block type="Dancelab_changeMoveEachLR">
+              <title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;">???</title>
+              <title name="MOVE">"rand"</title>
+              <title name="DIR">-1</title>
+              </block></xml>
       Dance_Party_01:
         validation: |-
           **Wie schaffe ich diesen Level?**
@@ -612,6 +668,9 @@ de-DE:
                 </block>
               </next>
             </block></xml>
+      course2_collector_loops_challenge2:
+        courseC_maze_loops_challenge2_b: Benutze Schleifen, damit du nicht zu viele
+          ˋSammelnˋ Blöcke verwenden musst!
       course2_maze_programming_challenge2:
         courseC_maze_programming_challenge2_a: _Pass sehr gut auf, dass ich mich in
           die richtige Richtung drehe, wenn du mich rückwärts laufen lässt!_
@@ -1978,6 +2037,15 @@ de-DE:
               </next>
             </block>
           </xml>
+      courseC_artist_loopsPrePre1a:
+        courseC_artist_loopsPrePre1a_a: |-
+          Den ersten Block, den du brauchen wirst, ist:
+
+          ![](<https://images.code.org/60e3354a2e7dd37b64833eac1e8694be-image-1499710228373.08.14 AM.png>)
+        courseC_artist_loopsPrePre1a_b: |-
+          Um 50 Pixel vorwärts zu gehen, benutze diesen Block:
+
+          ![](<https://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png>)
       courseC_artist_prog5:
         courseC_artist_prog5_b: Hab keine Angst, einen Fehler zu machen! Versuche
           weitere Blöcke hinzuzufügen und den Code auszuführen. Manchmal hilft es
@@ -2008,6 +2076,15 @@ de-DE:
           weitere Blöcke hinzuzufügen und den Code auszuführen. Manchmal hilft es
           zu sehen was passiert, auch wenn du der Meinung bist, dass das Rätsel noch
           nicht gelöst ist.
+      courseC_collector_loops_challenge2:
+        courseC_maze_loops_challenge2_b: Benutze Schleifen, damit du nicht zu viele
+          ˋSammelnˋ Blöcke verwenden musst!
+      courseC_collector_loops_challenge2_2018:
+        courseC_maze_loops_challenge2_b: Benutze Schleifen, damit du nicht zu viele
+          ˋSammelnˋ Blöcke verwenden musst!
+      courseC_collector_loops_challenge2_2019:
+        courseC_maze_loops_challenge2_b: Benutze Schleifen, damit du nicht zu viele
+          ˋSammelnˋ Blöcke verwenden musst!
       courseC_collector_prog1:
         courseC_collector_prog1_a: Wenn du auf einem Feld stehst, wo ein Schatz liegt,
           dann benutze einen <xml><block type="collector_collect"/></xml> Block um
@@ -2218,6 +2295,21 @@ de-DE:
       courseC_maze_debugging3_2019:
         courseC_maze_debugging3_b: Du findest nicht heraus, was schief läuft? Führe
           den Code ein paar mal aus um zu sehen, was passiert.
+      courseC_maze_loops_challenge1a:
+        courseC_maze_loops_challenge1_a: Stell dir diesen Weg aufgeteilt in zwei verschiedene
+          Teilstücke vor. Jedes hat ein Muster, welches du wiederholen kannst.
+        courseC_maze_loops_challenge1_b: Kannst du dich erinnern, wie du Schleifen
+          verwendet hast um das Treppenmuster zu wiederholen?
+      courseC_maze_loops_challenge1a_2018:
+        courseC_maze_loops_challenge1_a: Stell dir diesen Weg aufgeteilt in zwei verschiedene
+          Teilstücke vor. Jedes hat ein Muster, welches du wiederholen kannst.
+        courseC_maze_loops_challenge1_b: Kannst du dich erinnern, wie du Schleifen
+          verwendet hast um das Treppenmuster zu wiederholen?
+      courseC_maze_loops_challenge1a_2019:
+        courseC_maze_loops_challenge1_a: Stell dir diesen Weg aufgeteilt in zwei verschiedene
+          Teilstücke vor. Jedes hat ein Muster, welches du wiederholen kannst.
+        courseC_maze_loops_challenge1_b: Kannst du dich erinnern, wie du Schleifen
+          verwendet hast um das Treppenmuster zu wiederholen?
       courseC_maze_programming1:
         courseC_maze_programming1_0: Überprüfe, ob alle Blöcke richtig zusammengeschnappt
           sind und klicke dann nochmals auf 'Ausführen'.
@@ -2585,6 +2677,9 @@ de-DE:
         courseD_farmer_condLoops6_a: Verwende eine `Solange ein Weg vor Dir liegt`
           Schleife oder einen `Wenn Weg voraus / sonst` Baustein, um den Farmer jedes
           Stück der Spirale nach unten zu bewegen.
+      courseD_farmer_condLoops7_2019:
+        courseD_farmer_condLoops7_b: Versuche ˋSo lange ein Weg vor dir liegtˋ zu
+          benutzen um den Gärtner die richtige Anzahl von Schritten gehen zu lassen.
       courseD_iceage_loops10:
         courseB_iceage_loops10_c: Das ist ein langes Rätsel! Folge diesem Weg.
       courseD_iceage_loops10_2019:

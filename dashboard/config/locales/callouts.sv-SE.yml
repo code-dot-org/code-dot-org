@@ -84,8 +84,15 @@ sv-SE:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Nytt Block!
         dance_callout_11_b: Nytt Block!
+      Dance_2019_01:
+        dance_callout_01: Lägg till detta block till ditt program!
+      Dance_2019_02:
+        dance_callout_11_a: Lägg till det här blocket i ditt program.
+        arrow_buttons: Tryck på piltangenterna för att kontrollera din dansare.
       Dance_2019_04:
         dance_callout_02: Lägg till detta block till ditt program!
+      Dance_2019_05:
+        dance_callout_05: Lägg till en ny händelse i ditt program.
       Dance_2019_06:
         dance_party_11_5_groups: Nytt Block!
       Dance_2019_07:

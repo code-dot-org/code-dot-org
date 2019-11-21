@@ -29,6 +29,13 @@ da-DK:
         edit_add_parameter: Klik Redigér for at tilføje en parameter i din funktion
       Course 4 Play Lab Vars 1:
         arrows_move_actor: Brug pilene til at flytte figuren
+      Dance_2019_01:
+        dance_callout_01: Add this block to your program!
+      Dance_2019_02:
+        dance_callout_11_a: Føj denne blok til dit program.
+        arrow_buttons: Tryk på piletasterne for at kontrollere din danser.
+      Dance_2019_05:
+        dance_callout_05: Føj en ny begivenhed til dit program.
       Function intro Ryan:
         Function_intro_Ryan_1: Denne lille instruktion fortæller computeren, at den
           skal køre et STORT kodestykke med det samme navn i arbejdsområdet.

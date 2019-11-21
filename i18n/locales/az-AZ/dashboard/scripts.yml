@@ -856,7 +856,7 @@ az:
           stages:
             Introduction:
               name: Giriş
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Loops:
               name: dövrlər
@@ -870,3 +870,7 @@ az:
               name: dəyişənlər
         dance-extras-2019:
           title: Rəqs etməyə davam edin
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Şərti ifadələr
