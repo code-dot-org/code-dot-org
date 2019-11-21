@@ -887,10 +887,54 @@ de-DE:
       Dance Party Predict_2019: "**Mache eine Vorhersage:** Hier ist ein Sprite, das
         wie ein blauer Außerirdischer aussieht!   \n\nWas wird deiner Meinung nach
         passieren, wenn du darauf klickst?  "
+      Dance_2019_01: "_Lassen Sie uns eine Tanzparty veranstalten!_\n\nZiehen Sie
+        den <xml><block type=\"Dancelab_makeAnonymousDanceSprite\" block-text=\"make
+        a new dancer\"><title name=\"COSTUME\" config=\"&quot;CAT&quot;, &quot;PINEAPPLE&quot;\">\"CAT\"</title><title
+        name=\"LOCATION\">{x: 200, y: 200}</title></block></xml> in den Arbeitsbereich
+        und verbinden Sie ihn innerhalb des <xml><block type=\"Dancelab_whenSetup2\"
+        next_connection_disabled=\"true\" block-text=\"setup\"></block></xml> Blocks,
+        um Ihren ersten Tänzer zu erstellen. \n\n-   Sie können auch auf die Glühbirne
+        auf der linken Seite klicken, wenn Sie weitere Informationen benötigen oder
+        zusätzliche Herausforderungen hinzufügen möchten.\\_"
+      Dance_2019_02: |-
+        Mit dem Block <xml><block type="Dancelab_whenKey" block-text="when up pressed"></block></xml> können Sie Code ausführen, wenn Sie den Pfeil nach oben drücken. Verwenden Sie den <xml><block type="Dancelab_doMoveEachLR" block-text="do once"><title name="GROUP">"CAT"</title><title name="MOVE">MOVES.XClapSide</title><title name="DIR">-1</title></block></xml> Block, um die Tänzerin klatschen zu lassen, wenn Sie den Pfeil nach oben drücken, oder probieren Sie eine andere Bewegung aus!
+        _Achten Sie darauf, Ihren Pfeil nach oben oder ![](<https://images.code.org/419e704e6841c0b696016bf5029b8cb9-image-1571864825506.06.45 PM.png>) zu drücken, nachdem Sie die Schaltfläche Ausführen angeklickt haben!_
+      Dance_2019_03: Es ist Zeit für einen Tanzwettbewerb!  Programmieren Sie jeden
+        Tänzer so, dass er sich bewegt, wenn Sie verschiedene Tasten drücken. Wählen
+        Sie für jeden Tänzer Ihre Lieblingsbewegung aus oder stellen Sie ihn für etwas
+        völlig Unvorhersehbares auf stellen Sie für etwas völlig Unvorhersehbares
+        "(Random)“ ein!
+      Dance_2019_04: "Bringen Sie die Tänzer dazu, sich im Takt der Musik zu bewegen!
+        \n\nZiehen Sie den<xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">4</title><title
+        name=\"UNIT\">\"measures\"</title></block></xml> Block auf den Arbeitsbereich.
+        Verbinden Sie ihn unter dem <xml><block type=\"Dancelab_changeMoveEachLR\"><title
+        name=\"GROUP\">\"SHARK\"</title><title name=\"MOVE\">MOVES.ThisOrThat</title><title
+        name=\"DIR\">-1</title></block></xml> block. Ihr Tänzer sollte nach dem vierten
+        Takt eine neue Bewegung beginnen. \n\n**Takte** werden verwendet, um die Zeit
+        in der Musik zu zählen. In diesem Tutorial besteht ein Takt aus vier Schlägen."
       Dance_2019_05: |-
         _Jetzt grooven wir!_
 
         Füge einen <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> Baustein zu Deienem Arbeitsbereich hinzu. Lasse den Tänzer nach 6 Takten einen neuen Tanzschritt beginnen.
+      Dance_2019_06: "Verwenden Sie diesen neuen Block, um eine Gruppe kleinerer Ersatztänzer
+        um einen Lead-Tänzer in der Mitte herum zu erstellen.\n  <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\">\n
+        \   <title name=\"N\">???</title>\n    <title name=\"COSTUME\" config=\"&quot;BEAR&quot;,
+        &quot;CAT&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;,
+        &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title>\n    <title name=\"LAYOUT\">\"circle\"</title>\n
+        \ </block></xml> \nJetzt können Sie mehrere Tänzer auf einmal erstellen!"
+      Dance_2019_07: |-
+        Jeder Tänzer hat eine Reihe von _Eigenschaften_, die steuern, wie er aussieht.
+
+        Sie können  es so aussehen lassen, als sei ein Tänzer näher oder weiter weg, indem Sie seine Größe ändern. Ändern Sie die Größe einer Gruppe von Tänzern irgendwann nach dem Einsetzen der Musik.
+      Dance_2019_08: Tänzer haben eine "Farb"-Eigenschaft, mit der eine Farbschicht
+        hinzufügt werden kann. Versuchen Sie, den Farbton eines Ihrer Tänzer (oder
+        einer ganzen Gruppe) zu ändern!
+      Dance_2019_09: "Dies ist eine besondere Art von Ereignis, das immer wieder ausgelöst
+        wird.\n\n <xml><block type=\"Dancelab_everySeconds\"><title name=\"N\">2</title><title
+        name=\"UNIT\">\"measures\"</title></block></xml> \n\nDie anderen neuen Blöcke
+        in Ihrer Toolbox ermöglichen es Ihnen, die Eigenschaften der Tänzer im Laufe
+        der Zeit schrittweise (oder zufällig!) zu ändern. \n_Seien kreativ und haben
+        Sie Spaß dabei!_"
       Dance_2019_10: Grooven Sie los! Erstellen Sie einen eigenen Tanz und teilen
         Sie ihn mit Ihren Freunden.
       Dance_Party_01: |-
@@ -902,7 +946,7 @@ de-DE:
       Dance_Party_02: |-
         Lasse den Elch tanzen!
 
-        Ziehe den Baustein <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> in den Arbeitsbereich. Verbinde ihn unterhalb des Bausteins <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Dein Tänzer sollte nach dem vierten Takt mit einem neuen Tanzschritt beginnen.
+        Ziehe den Baustein <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> in den Arbeitsbereich. Verbinde ihn unterhalb des Bausteins <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Dein Tänzer sollte nach dem vierten Takt mit einem neuen Tanzschritt beginnen.
 
         **Takte** sind die zeitliche Struktur von Musik. In diesem Tutorial ist ein Takt vier Schläge lang.
       Dance_Party_03: |-
@@ -988,6 +1032,14 @@ de-DE:
         -   Erstelle eine zweite Gruppe von Tänzern in einem anderen Layout
         -   Ändere das Layout, wenn eine Taste gedrückt wird
         -   Ändere eine Eigenschaft, wenn die Tänzer ihre Formation ändern
+      Dance_Party_extras_layout_2019: "# Stellen wir uns in Formation!\n\nSchauen
+        Sie sich diesen Tanz an, bei dem der <xml><block type=\"Dancelab_layoutSprites\"
+        block-text=\"layout\"><title name=\"GROUP\">\"MOOSE\"</title><title name=\"FORMAT\">???</title></block></xml>
+        Block verwendet wird, um die Formation der Backup-Tänzer während des gesamten
+        Tanzes zu ändern. Probieren Sie eine dieser Ideen aus, um die Formation zu
+        erweitern: \n\n-   Eine zweite Gruppe von Tänzern in einer anderen Anordnung
+        erstellen \n-   Anordnung ändern, wenn eine Taste gedrückt wird \n-   eine
+        Eigenschaft ändern, wenn die Tänzer ihre Formation wechseln"
       Dance_Party_extras_on_beat: |-
         # Bass, Mitten und Höhen
 
@@ -1000,6 +1052,10 @@ de-DE:
         # Beschleunigen, verlangsamen
 
         Dieser letzte Tanz nutzt den Block „festgelegte Geschwindigkeit“, um zu kontrollieren, wie schnell sich jeder Tänzer bewegt. Versuche, an verschiedenen Stellen im Lied mit unterschiedlichen Geschwindigkeiten zu experimentieren. Zögere nicht, bei diesem Tanz herumzuexperimentieren oder kehre zu einem der bisherigen Tänze zurück, um ihn noch cooler zu machen.
+      Dance_Party_extras_speed_2019: |-
+        # Mal schnell, mal langsam
+
+        Dieser letzte Tanz verwendet den <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> Block, um zu steuern, wie schnell sich jeder Tänzer bewegt. Versuchen Sie, mit unterschiedlichen Geschwindigkeiten an verschiedenen Stellen in einem Stück zu experimentieren. Sie können weiter an diesem Tanz arbeiten oder zu einem der vorherigen Tänze zurückkehren, um sie noch cooler zu gestalten.
       Dance_Party_extras_visible: |-
         # Wo würden sie hingehen?
 
@@ -2125,6 +2181,21 @@ de-DE:
         ![expandable](https://images.code.org/9f28cb9b434b914846c3846bc6652f66-image-1560982666379.png)
         ![expandable](https://images.code.org/e9128684956504b0172708d63b65f93a-image-1560982686482.png)
         ![expandable](https://images.code.org/8e9cf52ecaf72678c65558f18f3e0d3e-image-1560982695632.png)
+      courseC_artist_loopsPre1a: |-
+        Und jetzt, setze diesen Code in eine ˋWiederholenˋ Schleife und wiederhole sie **6** mal.
+
+        -   Siehst du, wir haben am Schluss des zu wiederholenden Codes ein 60 Grad Drehung eingesetzt, um eine volle Drehung zu erhalten.
+      courseC_artist_loopsPre1a_2018: |-
+        Und jetzt, setze diesen Code in eine ˋWiederholenˋ Schleife und wiederhole sie **6** mal.
+
+        -   Siehst du, wir haben am Schluss des zu wiederholenden Codes ein 60 Grad Drehung eingesetzt, um eine volle Drehung zu erhalten.
+      courseC_artist_loopsPre1a_2019: |-
+        Und jetzt, setze diesen Code in eine ˋWiederholenˋ Schleife und wiederhole sie **6** mal.
+
+        -   Siehst du, wir haben am Schluss des zu wiederholenden Codes ein 60 Grad Drehung eingesetzt, um eine volle Drehung zu erhalten.
+      courseC_artist_loopsPrePre1a: |-
+        Benutze den <xml><block type="jump_to_xy" id="callMe"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml> Block um den Künstler in die Mitte des Spielbereichs zu bringen.\
+        Male dann eine 50 Pixel lange Linie mit dem <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">50</title></block></xml> Block.
       courseC_artist_loopsPrePre1a_2019: "Der Künstler ist an der falschen Stelle!
         \ \n\nBenutzen Sie den <xml><block type=\"jump_to_xy\" id=\"callMe\" block-text=\"jump
         to 200 over 200 down\"><title name=\"XPOS\">200</title><title name=\"YPOS\">200</title></block></xml>
@@ -2132,6 +2203,18 @@ de-DE:
         dann eine 50 Pixel lange Linie mit dem <xml><block type=\"draw_move_by_constant\"
         block-text=\"move forward\"><title name=\"DIR\">moveForward</title><title
         name=\"VALUE\">50</title></block></xml> Baustein."
+      courseC_collector_loops_challenge2: |-
+        _„Lass uns zusammen nach Schätzen suchen!“_
+
+        Hilf der Sammlerin mindestens **5** Schätze zu sammeln.
+      courseC_collector_loops_challenge2_2018: |-
+        _„Lass uns zusammen nach Schätzen suchen!“_
+
+        Hilf der Sammlerin mindestens **5** Schätze zu sammeln.
+      courseC_collector_loops_challenge2_2019: |-
+        _„Lass uns zusammen nach Schätzen suchen!“_
+
+        Hilf der Sammlerin mindestens **5** Schätze zu sammeln.
       courseC_collector_prog1: |-
         **Freies Spiel:** Das ist Laurel, die Abenteurerin! Bewege sie und sammle soviel Schätze wie möglich ein. Benutze den 'sammle' Block um die Schätze aufzuheben!
 

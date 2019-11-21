@@ -8366,6 +8366,8 @@ fil:
               name: Bago ang Surbey sa mga Prinsipyo sa CS
             Binary Numbers:
               name: Binary na mga Numero
+            Representing Information:
+              name: Pagrepresenta ng Impormasyon
         csd-videos:
           stages:
             new stage:
@@ -8695,6 +8697,8 @@ fil:
               name: bagong yugto
             Routers and Redundancy:
               name: Mga Routers at Redundancy
+            The Need for Addressing:
+              name: Ang Pangangailangan ng Addressing
         peru-2019:
           stages:
             new stage:
@@ -8713,7 +8717,7 @@ fil:
               name: Mga Pangyayari sa Star Wars
             Nested Loops in Frozen:
               name: Naka-nest na mga Loop sa Frozen
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Getting Started:
               name: Pagsisimula
@@ -8757,3 +8761,35 @@ fil:
           stages:
             new stage:
               name: bagong yugto
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Mga conditional
+            Private and Personal Information:
+              name: Pribado at Personal na Impormasyon
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Pag-crowdsourcing
+            Conditionals with Cards:
+              name: Mga Conditional gamit ang mga Card
+            Nested Loops in Bee:
+              name: Mga Naka-Nest na mga Loop sa Bee
+            Nested Loops in Artist:
+              name: Naka--nest na mga Loops sa Artist
+            Nested Loops in Frozen:
+              name: Naka-nest na mga Loop sa Frozen
+            'Functions: Songwriting':
+              name: 'Mga Function: Pagsusulat ng Awit'
+            Functions in Artist:
+              name: Mga Function sa Artist
+        time4cs-experiment-unit-2:
+          stages:
+            Nested Loops in Maze:
+              name: Naka-nest na mga Loops sa Maze
+            Fancy Shapes using Nested Loops:
+              name: Naka--nest na mga Loops sa Artist
+            Nested Loops with Frozen:
+              name: Naka-Nest na mga Loops sa Frozen
+            Functions with Artist:
+              name: Mga Function sa Artist

@@ -5540,6 +5540,8 @@ vi:
               name: Nguyên lý KHMT trước khi khảo sát
             Binary Numbers:
               name: Số nhị phân
+            Representing Information:
+              name: Miêu tả thông tin
         csd-videos:
           stages:
             new stage:
@@ -5797,6 +5799,8 @@ vi:
               name: giai đoạn mới
             Routers and Redundancy:
               name: Bộ định tuyến và dự phòng
+            The Need for Addressing:
+              name: Sự cần thiết cho các địa chỉ
         peru-2019:
           stages:
             new stage:
@@ -5813,7 +5817,7 @@ vi:
               name: Bữa tiệc khiêu vũ
           description: Viết mã bữa tiệc khiêu vũ của riêng bạn để chia sẻ với bạn
             bè của mình!
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Getting Started:
               name: Bắt đầu
@@ -5863,3 +5867,17 @@ vi:
           stages:
             new stage:
               name: giai đoạn mới
+        time4cs-control-unit-1:
+          stages:
+            Sequencing in Maze:
+              name: Chuỗi tuần tự trong mê cung
+            Conditionals:
+              name: Điều kiện
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Đa nguồn
+        time4cs-experiment-unit-2:
+          stages:
+            Nested Loops with Frozen:
+              name: Vòng lặp lồng với Frozen

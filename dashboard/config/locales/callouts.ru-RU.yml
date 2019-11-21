@@ -159,8 +159,15 @@ ru-RU:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Новый блок!
         dance_callout_11_b: Новый блок!
+      Dance_2019_01:
+        dance_callout_01: Добавьте этот блок в вашу программу!
+      Dance_2019_02:
+        dance_callout_11_a: Добавьте этот блок в свою программу.
+        arrow_buttons: Нажимайте на кнопки со стрелками для управления танцором.
       Dance_2019_04:
         dance_callout_02: Добавьте этот блок в вашу программу!
+      Dance_2019_05:
+        dance_callout_05: Добавьте новое событие в вашу программу.
       Dance_2019_06:
         dance_party_11_5_groups: Новый блок!
       Dance_2019_07:

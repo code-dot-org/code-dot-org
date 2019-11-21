@@ -2,6 +2,14 @@
 ky:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: баары
+          MOVE1:
+            MOVES.Rest: Жок
+          MOVE2:
+            MOVES.Rest: Жок
       Dancelab_atTimestamp:
         options:
           UNIT:

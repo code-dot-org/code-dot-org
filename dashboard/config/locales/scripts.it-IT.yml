@@ -1697,10 +1697,18 @@ it:
               name: Variabili e Buste
             Variables in Play Lab:
               name: 'Laboratorio: Variabili'
+            Variables in Artist:
+              name: Variabili con l'Artista
             For Loop Fun:
               name: Divertiti usando i cicli con contatore
+            For Loops in Bee:
+              name: Cicli con contatore con l'ape
+            For Loops in Artist:
+              name: Cicli con contatore con l'artista
             Functions with Parameters in Artist:
               name: Funzioni con parametri con l'artista
+            Functions with Parameters in Bee:
+              name: Funzioni con parametri con l'ape
             Explore Project Ideas:
               name: Idee di progetto
             The Design Process:
@@ -2007,7 +2015,7 @@ it:
             ancora.
           description: 'Impara le basi dell''informatica e della sicurezza su Internet.
             Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai
-            condividere. ATTENZIONE: qui a destra scegli la versione 2018 è la più
+            condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più
             aggiornata in italiano ==>'
         courseb-2017:
           stages:
@@ -2047,7 +2055,7 @@ it:
             leggermente più grandi.)
           description: 'Impara le basi dell''informatica e della sicurezza su Internet.
             Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai
-            condividere. ATTENZIONE: qui a destra scegli la versione 2018 è la più
+            condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più
             aggiornata in italiano ==>'
         coursec-2017:
           stages:
@@ -2090,7 +2098,7 @@ it:
             Traduci le tue iniziali in binario, indaga sulle diverse tecniche di risoluzione
             dei problemi e impara a reagire correttamente al cyberbullismo. Alla fine
             del corso, puoi creare e condividere un gioco interattivo o una storia
-            animata! ATTENZIONE: qui a destra scegli la versione 2018 è la più aggiornata
+            animata! ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata
             in italiano ==>'
         coursed-2017:
           stages:
@@ -2222,7 +2230,7 @@ it:
                 su tutti e tre, gli studenti impareranno a scrivere codice complesso
                 e flessibile.
             Digital Citizenship:
-              name: Cittadinanza digitale - Metti in pratica la cittadinanza digitale
+              name: Cittadinanza digitale - Super cittadino digitale
               description_student: Non è sicuro condividere alcuni dati in rete. In
                 questa lezione imparerai la differenza tra sicurezza e dati personali.
               description_teacher: 'In collaborazione con Common Sense Education,
@@ -2292,27 +2300,43 @@ it:
             ed eventi. Vengono introdotti alcuni concetti di cittadinanza digitale
             ed è possibile creare il proprio gioco o la propria storia che è poi possibile
             condividere con gli amici. ATTENZIONE: qui a destra scegli la versione
-            2018 è la più aggiornata in italiano ==>'
+            2018, è la più aggiornata in italiano ==>'
         coursee-2017:
           stages:
             'Algorithms: Tangrams':
               name: 'Algoritmi: Tangram'
             Introduction:
               name: Introduzione agli esercizi online
+              description_teacher: In questa lezione, gli studenti inizieranno con
+                un'introduzione (o un ripasso, a seconda dell'esperienza della classe)
+                dell'ambiente di programmazione di Code.org. Gli studenti impareranno
+                le funzionalità di base dell'interfaccia, inclusi i pulsanti "Esegui",
+                "Ricomincia" e "Fai un passo". I meccanismi di trascinamento, cancellazione
+                e collegamento dei blocchi di istruzioni (Blockly) sono anche introdotti
+                nel video introduttivo. Gli studenti si alleneranno nel labirinto
+                e nell'artista con sequenze di istruzioni e attività di debugging.
             The Power of Words:
               name: Cittadinanza digitale - Il potere delle parole
             Ice Age Play Lab:
               name: Laboratorio con L'Era Glaciale
             Envelope Variables:
               name: Variabili e Buste
+            Variables in Artist:
+              name: Variabili con l'Artista
             Variables in Play Lab:
               name: 'Laboratorio: Variabili'
             For Loop Fun:
               name: Divertiti usando i cicli con contatore
+            For Loops in Bee:
+              name: Cicli con contatore con l'ape
+            For Loops in Artist:
+              name: Cicli con contatore con l'artista
             Songwriting with Parameters:
               name: Composizione di Canzoni - Parametri
             Functions with Parameters in Artist:
               name: Funzioni con parametri con l'artista
+            Functions with Parameters in Bee:
+              name: Funzioni con parametri con l'ape
             Explore Project Ideas:
               name: Idee di progetto
               description_teacher: "Le prossime quattro lezioni forniscono agli studenti
@@ -2357,6 +2381,11 @@ it:
               name: Presenta il tuo progetto
             'Algorithms: Dice Race':
               name: 'Algoritmi: Gara con i Dadi'
+              description_teacher: In questa lezione, gli studenti metteranno in relazione
+                il concetto di algoritmo con le attività di ogni giorno, nella vita
+                reale, facendo una gara con i dadi. L'obiettivo è quello di iniziare
+                a costruire le competenze per tradurre le situazioni del mondo reale
+                in algoritmi e viceversa.
             Conditionals:
               name: Istruzioni condizionali con la contadina
               description_teacher: Questa lezione introduce gli studenti allo studio
@@ -2405,6 +2434,9 @@ it:
                 richiamando una funzione dall'interno di un'altra.
             Functions in Bee:
               name: Funzioni con l'Ape
+              description_teacher: In questa seconda lezione sulle funzioni, gli studenti
+                percorreranno percorsi complessi, raccoglieranno molto nettare e produrranno
+                molto miele.
             Determine the Concept:
               name: Fissare i concetti
               description_teacher: Questa lezione riunisce i concetti delle lezioni
@@ -2415,6 +2447,12 @@ it:
                 e funzioni.
             Build a Play Lab Game:
               name: Realizzare un gioco col laboratorio
+              description_teacher: Questa lezione presenta il Laboratorio, un ambiente
+                in cui gli studenti possono creare i propri giochi facendo interagire
+                personaggi e input dell'utente. Gli studenti lavoreranno con gli eventi
+                per ricevere comandi dai tasti freccia. Questo insieme di esercizi
+                guiderà gli studenti attraverso lo sviluppo di un gioco, ma lasciando
+                anche un certo margine di libertà per aggiungere le proprie idee.
             Present Your Project:
               name: Presenta il tuo progetto
               description_teacher: Nel corso delle quattro lezioni, gli studenti si
@@ -2470,7 +2508,7 @@ it:
             eventi per poi introdurre le funzioni. Nella seconda parte di questo corso,
             puoi progettare e creare un progetto finale che potrai condividere con
             i tuoi amici e familiari. ATTENZIONE: qui a destra scegli la versione
-            2018 è la più aggiornata in italiano ==>'
+            2018, è la più aggiornata in italiano ==>'
         coursef-2017:
           stages:
             'Algorithms: Tangrams':
@@ -2490,6 +2528,8 @@ it:
                 le somiglianze e le differenze tra la comunicazione di persona e quella
                 online. Gli studenti quindi discutono diversi modi per reagire al
                 cyberbullismo. "
+            Ice Age Play Lab:
+              name: Eventi con l'Era Glaciale
             Envelope Variables:
               name: Variabili e Buste
               description_student: 'Buste e variabili hanno qualcosa in comune: entrambe
@@ -2503,9 +2543,12 @@ it:
                 e come possiamo usarle in molti modi differenti. Il concetto di "variabile"
                 non è facile da comprendere, pertanto raccomandiamo di assegnare parecchio
                 tempo per la discussione alla fine della lezione.
+            Variables in Artist:
+              name: Variabili con l'Artista
             Variables in Play Lab:
               name: 'Laboratorio: Variabili'
             For Loop Fun:
+              name: Divertiti usando i cicli con contatore
               description_student: Ti divertirai moltissimo imparando i cicli con
                 contatore!
               description_teacher: 'Sappiamo che i cicli ci permettono di ripetere
@@ -2513,6 +2556,7 @@ it:
                 con strutture aggiuntive. Queste nuove strutture permetteranno agli
                 studenti di creare un codice più potente e dinamico. '
             For Loops in Bee:
+              name: Cicli con contatore con l'ape
               description_student: Zzz Zzz. In questi esercizi guiderai l'ape fino
                 al nettare e al miele usando i cicli con contatore!
               description_teacher: Questa lezione con l'Ape è dedicata ai cicli con
@@ -2521,6 +2565,7 @@ it:
                 lezioni precedenti, poi proseguiranno usando i cicli con contatore
                 per risolvere più efficacemente problemi più complicati.
             For Loops in Artist:
+              name: Cicli con contatore con l'artista
               description_student: Preparati a creare il tuo prossimo capolavoro.
                 Qui userai i cicli con contatore per creare immagini sbalorditive.
               description_teacher: In questa lezione, gli studenti continuano ad esercitarsi
@@ -2532,6 +2577,8 @@ it:
               name: 'Funzioni: Composizione di Canzoni con Parametri'
             Functions with Parameters in Artist:
               name: Funzioni con parametri con l'artista
+            Functions with Parameters in Bee:
+              name: Funzioni con parametri con l'ape
             Explore Project Ideas:
               name: Idee di progetto
               description_student: È tempo di trovare l'ispirazione! Questi esercizi
@@ -2588,6 +2635,8 @@ it:
                 i lavori completati ai loro compagni o di condividerli con amici e
                 parenti con un apposito link. La guida alle lezioni che descrive tutte
                 e cinque le fasi del processo si trova all'inizio del percorso, [here](https://curriculum.code.org/csf-18/coursef/24/).
+            Conditionals in Minecraft:
+              name: Istruzioni Condizionali con Minecraft
             Functions in Bee:
               name: Funzioni con l'Ape
             'Programming: My Robotic Friends':
@@ -2618,7 +2667,7 @@ it:
             dei problemi e discuti sull''impatto sociale dell''informatica e di Internet.
             Nella seconda parte di questo corso, pianifica e crea un progetto di fine
             corso che puoi condividere con amici ed familiari. ATTENZIONE: qui a destra
-            scegli la versione 2018 è la più aggiornata in italiano ==>'
+            scegli la versione 2018, è la più aggiornata in italiano ==>'
         express-2017:
           stages:
             Introduction:
@@ -2653,18 +2702,28 @@ it:
               name: Cicli "mentre" con la contadina
             Conditionals & Loops in Maze:
               name: Istruzioni Condizionali & Cicli nel Labirinto
+            Conditionals in Minecraft:
+              name: Istruzioni Condizionali con Minecraft
             Envelope Variables:
               name: Variabili e Buste
+            Variables in Artist:
+              name: Variabili con l'Artista
             Variables in Play Lab:
               name: 'Laboratorio: Variabili'
             For Loop Fun:
               name: Divertiti usando i cicli con contatore
+            For Loops in Bee:
+              name: Cicli con contatore con l'ape
+            For Loops in Artist:
+              name: Cicli con contatore con l'artista
             Songwriting with Parameters:
               name: Composizione di Canzoni - Parametri
             Functions in Bee:
               name: Funzioni con l'Ape
             Functions with Parameters in Artist:
               name: Funzioni con parametri con l'artista
+            Functions with Parameters in Bee:
+              name: Funzioni con parametri con l'ape
             Explore Project Ideas:
               name: Idee di progetto
             The Design Process:
@@ -2680,13 +2739,15 @@ it:
             'How it Works: The Internet':
               name: 'Oltre la Programmazione: Internet'
             'Common Sense Education: Digital Citizenship':
-              name: Cittadinanza digitale - Metti in pratica la cittadinanza digitale
+              name: Cittadinanza digitale - Super cittadino digitale
             'Common Sense Education: Screen Out the Mean':
               name: Cittadinanza digitale - Caccia via le cattiverie dallo schermo
             Conditional Loops in Maze:
               name: Istruzioni Condizionali & Cicli nel Labirinto
             'Variables: Envelope Variables':
               name: Variabili e Buste
+            'For Loops: For Loop Fun':
+              name: Divertiti usando i cicli con contatore
             'Functions: Songwriting with Parameters':
               name: 'Funzioni: Composizione di Canzoni con Parametri'
             Building a Foundation:
@@ -2704,7 +2765,7 @@ it:
             primaria.'
           description: 'Impara le basi dell''informatica e della sicurezza su Internet.
             Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai
-            condividere. ATTENZIONE: qui a destra scegli la versione 2018 è la più
+            condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più
             aggiornata in italiano ==>'
         pre-express-2017:
           stages:
@@ -2741,7 +2802,7 @@ it:
             e per la prima classe della scuola primaria.'
           description: 'Impara le basi dell''informatica e della sicurezza su Internet.
             Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai
-            condividere. ATTENZIONE: qui a destra scegli la versione 2018 è la più
+            condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più
             aggiornata in italiano ==>'
         subgoal-labels-opt-in:
           stages:
@@ -2884,16 +2945,28 @@ it:
               name: Eventi con Ping-Pong
             While Loops in Farmer:
               name: Cicli "mentre" con la contadina
+            Conditionals in Minecraft:
+              name: Istruzioni Condizionali con Minecraft
             'Variables: Envelope Variables':
               name: Variabili e Buste
+            Variables in Artist:
+              name: Variabili con l'Artista
             Variables in Play Lab:
               name: 'Laboratorio: Variabili'
+            'For Loops: For Loop Fun':
+              name: Divertiti usando i cicli con contatore
+            For Loops in Bee:
+              name: Cicli con contatore con l'ape
+            For Loops in Artist:
+              name: Cicli con contatore con l'artista
             'Functions: Songwriting with Parameters':
               name: 'Funzioni: Composizione di Canzoni con Parametri'
             Functions in Bee:
               name: Funzioni con l'Ape
             Functions with Parameters in Artist:
               name: Funzioni con parametri con l'artista
+            Functions with Parameters in Bee:
+              name: Funzioni con parametri con l'ape
             Explore Project Ideas:
               name: Idee di progetto
             The Design Process:
@@ -2990,18 +3063,28 @@ it:
               name: Cittadinanza digitale - Il potere delle parole
             Ice Age Play Lab:
               name: Laboratorio con L'Era Glaciale
+            Conditionals in Minecraft:
+              name: Istruzioni Condizionali con Minecraft
             Envelope Variables:
               name: Variabili e Buste
+            Variables in Artist:
+              name: Variabili con l'Artista
             Variables in Play Lab:
               name: 'Laboratorio: Variabili'
             For Loop Fun:
               name: Divertiti usando i cicli con contatore
+            For Loops in Bee:
+              name: Cicli con contatore con l'ape
+            For Loops in Artist:
+              name: Cicli con contatore con l'artista
             Songwriting with Parameters:
               name: Composizione di Canzoni - Parametri
             Functions in Bee:
               name: Funzioni con l'Ape
             Functions with Parameters in Artist:
               name: Funzioni con parametri con l'artista
+            Functions with Parameters in Bee:
+              name: Funzioni con parametri con l'ape
             Explore Project Ideas:
               name: Idee di progetto
             The Design Process:
@@ -3139,18 +3222,28 @@ it:
               name: Cittadinanza digitale - Il potere delle parole
             Ice Age Play Lab:
               name: Laboratorio con L'Era Glaciale
+            Conditionals in Minecraft:
+              name: Istruzioni Condizionali con Minecraft
             Envelope Variables:
               name: Variabili e Buste
+            Variables in Artist:
+              name: Variabili con l'Artista
             Variables in Play Lab:
               name: 'Laboratorio: Variabili'
             For Loop Fun:
               name: Divertiti usando i cicli con contatore
+            For Loops in Bee:
+              name: Cicli con contatore con l'ape
+            For Loops in Artist:
+              name: Cicli con contatore con l'artista
             Songwriting with Parameters:
               name: Composizione di Canzoni - Parametri
             Functions in Bee:
               name: Funzioni con l'Ape
             Functions with Parameters in Artist:
               name: Funzioni con parametri con l'artista
+            Functions with Parameters in Bee:
+              name: Funzioni con parametri con l'ape
             Explore Project Ideas:
               name: Idee di progetto
             The Design Process:
@@ -3214,7 +3307,7 @@ it:
           assignment_family_title: Corso A
           description: 'Impara le basi dell''informatica e della sicurezza su Internet.
             Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai
-            condividere. ATTENZIONE: qui a destra scegli la versione 2018 è la più
+            condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più
             aggiornata in italiano ==>'
           description_short: Introduzione all'informatica per bambini che non leggono
             ancora.
@@ -3323,7 +3416,7 @@ it:
           assignment_family_title: Corso Rapido
           description: 'Impara le basi dell''informatica e della sicurezza su Internet.
             Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai
-            condividere. ATTENZIONE: qui a destra scegli la versione 2018 è la più
+            condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più
             aggiornata in italiano ==>'
           description_short: 'Introduzione all''informatica: mette a disposizione
             di studenti più grandi, il meglio del nostro curriculum per la scuola
@@ -3351,10 +3444,16 @@ it:
               name: Eventi con Ping-Pong
             While Loops in Farmer:
               name: Cicli "mentre" con la contadina
+            Conditionals in Minecraft:
+              name: Istruzioni Condizionali con Minecraft
             'Variables: Envelope Variables':
               name: Variabili e Buste
+            Variables in Artist:
+              name: Variabili con l'Artista
             Variables in Play Lab:
               name: 'Laboratorio: Variabili'
+            'For Loops: For Loop Fun':
+              name: Divertiti usando i cicli con contatore
             For Loops in Bee:
               name: Cicli con contatore con l'ape
             For Loops in Artist:
@@ -3365,6 +3464,8 @@ it:
               name: Funzioni con l'Ape
             Functions with Parameters in Artist:
               name: Funzioni con parametri con l'artista
+            Functions with Parameters in Bee:
+              name: Funzioni con parametri con l'ape
             Explore Project Ideas:
               name: Idee di progetto
             The Design Process:
@@ -3454,7 +3555,7 @@ it:
           assignment_family_title: Corso B
           description: 'Impara le basi dell''informatica e della sicurezza su Internet.
             Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai
-            condividere. ATTENZIONE: qui a destra scegli la versione 2018 è la più
+            condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più
             aggiornata in italiano ==>'
           description_short: Introduzione all'informatica per alunni che devono imparare
             a leggere. Simile al Corso A, ma con maggior approfondimento dei concetti.
@@ -3570,7 +3671,7 @@ it:
             Traduci le tue iniziali in binario, indaga sulle diverse tecniche di risoluzione
             dei problemi e impara a reagire correttamente al cyberbullismo. Alla fine
             del corso, puoi creare e condividere un gioco interattivo o una storia
-            animata! ATTENZIONE: qui a destra scegli la versione 2018 è la più aggiornata
+            animata! ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata
             in italiano ==>'
           description_short: Impara le basi dell'informatica e crea disegni, storie
             animate o giochi interattivi.
@@ -3621,7 +3722,7 @@ it:
             eventi per poi introdurre le funzioni. Nella seconda parte di questo corso,
             puoi progettare e creare un progetto finale che potrai condividere con
             i tuoi amici e familiari. ATTENZIONE: qui a destra scegli la versione
-            2018 è la più aggiornata in italiano ==>'
+            2018, è la più aggiornata in italiano ==>'
           description_audience: Da 8 a 12 anni
           stages:
             'Programming: My Robotic Friends':
@@ -3644,8 +3745,21 @@ it:
               name: Cicli annidati con Frozen
             'Algorithms: Dice Race':
               name: 'Algoritmi: Gara con i Dadi'
+              description_teacher: In questa lezione, gli studenti metteranno in relazione
+                il concetto di algoritmo con le attività di ogni giorno, nella vita
+                reale, facendo una gara con i dadi. L'obiettivo è quello di iniziare
+                a costruire le competenze per tradurre le situazioni del mondo reale
+                in algoritmi e viceversa.
             Introduction:
               name: Introduzione
+              description_teacher: In questa lezione, gli studenti inizieranno con
+                un'introduzione (o un ripasso, a seconda dell'esperienza della classe)
+                dell'ambiente di programmazione di Code.org. Gli studenti impareranno
+                le funzionalità di base dell'interfaccia, inclusi i pulsanti "Esegui",
+                "Ricomincia" e "Fai un passo". I meccanismi di trascinamento, cancellazione
+                e collegamento dei blocchi di istruzioni (Blockly) sono anche introdotti
+                nel video introduttivo. Gli studenti si alleneranno nel labirinto
+                e nell'artista con sequenze di istruzioni e attività di debugging.
             Conditionals:
               name: Istruzioni condizionali con la contadina
               description_teacher: Questa lezione introduce gli studenti allo studio
@@ -3692,6 +3806,10 @@ it:
                 figure magnifiche sfruttando la potenza delle funzioni. Per schemi
                 più complessi, gli studenti impareranno ad usare le funzioni annidate,
                 richiamando una funzione dall'interno di un'altra.
+            Functions in Bee:
+              description_teacher: In questa seconda lezione sulle funzioni, gli studenti
+                percorreranno percorsi complessi, raccoglieranno molto nettare e produrranno
+                molto miele.
             Functions in Harvester:
               name: Funzioni con la contadina
             Determine the Concept:
@@ -3704,6 +3822,12 @@ it:
                 e funzioni.
             Build a Play Lab Game:
               name: Realizzare un gioco col laboratorio
+              description_teacher: Questa lezione presenta il Laboratorio, un ambiente
+                in cui gli studenti possono creare i propri giochi facendo interagire
+                personaggi e input dell'utente. Gli studenti lavoreranno con gli eventi
+                per ricevere comandi dai tasti freccia. Questo insieme di esercizi
+                guiderà gli studenti attraverso lo sviluppo di un gioco, ma lasciando
+                anche un certo margine di libertà per aggiungere le proprie idee.
             Explore Project Ideas:
               name: Idee di progetto
               description_teacher: "Le prossime quattro lezioni forniscono agli studenti
@@ -3788,7 +3912,7 @@ it:
             dei problemi e discuti sull''impatto sociale dell''informatica e di Internet.
             Nella seconda parte di questo corso, pianifica e crea un progetto di fine
             corso che puoi condividere con amici ed familiari. ATTENZIONE: qui a destra
-            scegli la versione 2018 è la più aggiornata in italiano ==>'
+            scegli la versione 2018, è la più aggiornata in italiano ==>'
           description_short: Impara tutti i concetti dei corsi di fondamenti di informatica
             e crea disegni, storie o giochi interattivi.
           description_audience: Da 9 a 13 anni
@@ -3830,6 +3954,8 @@ it:
                 cyberbullismo. "
             Ice Age Play Lab:
               name: Laboratorio con L'Era Glaciale
+            Conditionals in Minecraft:
+              name: Istruzioni Condizionali con Minecraft
             Envelope Variables:
               name: Variabili e Buste
               description_student: 'Buste e variabili hanno qualcosa in comune: entrambe
@@ -3843,6 +3969,8 @@ it:
                 e come possiamo usarle in molti modi differenti. Il concetto di "variabile"
                 non è facile da comprendere, pertanto raccomandiamo di assegnare parecchio
                 tempo per la discussione alla fine della lezione.
+            Variables in Artist:
+              name: Variabili con l'Artista
             Variables in Play Lab:
               name: 'Laboratorio: Variabili'
             For Loop Fun:
@@ -3877,6 +4005,8 @@ it:
               name: Funzioni con l'Ape
             Functions with Parameters in Artist:
               name: Funzioni con parametri con l'artista
+            Functions with Parameters in Bee:
+              name: Funzioni con parametri con l'ape
             Explore Project Ideas:
               name: Idee di progetto
               description_student: È tempo di trovare l'ispirazione! Questi esercizi
@@ -4019,7 +4149,7 @@ it:
           assignment_family_title: Corso rapido pre-scolare
           description: 'Impara le basi dell''informatica e della sicurezza su Internet.
             Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai
-            condividere. ATTENZIONE: qui a destra scegli la versione 2018 è la più
+            condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più
             aggiornata in italiano ==>'
           description_short: 'Introduzione all''informatica per studenti pre-scolari:
             mette insieme il meglio dei nostri corsi per la scuola dell''infanzia
@@ -4139,7 +4269,7 @@ it:
             dei problemi e discuti sull''impatto sociale dell''informatica e di Internet.
             Nella seconda parte di questo corso, pianifica e crea un progetto di fine
             corso che puoi condividere con amici ed familiari. ATTENZIONE: qui a destra
-            scegli la versione 2018 è la più aggiornata in italiano ==>'
+            scegli la versione 2018, è la più aggiornata in italiano ==>'
           description_short: Impara tutti i concetti dei corsi di fondamenti di informatica
             e crea disegni, storie o giochi interattivi.
           description_audience: Da 9 a 13 anni
@@ -4502,7 +4632,7 @@ it:
             eventi per poi introdurre le funzioni. Nella seconda parte di questo corso,
             puoi progettare e creare un progetto finale che potrai condividere con
             i tuoi amici e familiari. ATTENZIONE: qui a destra scegli la versione
-            2018 è la più aggiornata in italiano ==>'
+            2018, è la più aggiornata in italiano ==>'
           description_audience: Da 8 a 12 anni
           stages:
             'Programming: My Robotic Friends':
@@ -4674,6 +4804,8 @@ it:
               name: Cicli annidati con Frozen
             End of Course Project:
               name: Progetto di fine corso
+            Conditionals in Minecraft:
+              name: Istruzioni Condizionali con Minecraft
             Digital Sharing:
               name: Condivisione digitale
             'Conditionals in Minecraft: Voyage Aquatic':
@@ -4684,7 +4816,7 @@ it:
           title: Corso Rapido (2017)
           description: 'Impara le basi dell''informatica e della sicurezza su Internet.
             Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai
-            condividere. ATTENZIONE: qui a destra scegli la versione 2018 è la più
+            condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più
             aggiornata in italiano ==>'
           description_short: 'Introduzione all''informatica: mette a disposizione
             di studenti più grandi, il meglio del nostro curriculum per la scuola
@@ -4814,7 +4946,7 @@ it:
             Traduci le tue iniziali in binario, indaga sulle diverse tecniche di risoluzione
             dei problemi e impara a reagire correttamente al cyberbullismo. Alla fine
             del corso, puoi creare e condividere un gioco interattivo o una storia
-            animata! ATTENZIONE: qui a destra scegli la versione 2018 è la più aggiornata
+            animata! ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata
             in italiano ==>'
           description_short: Impara le basi dell'informatica e crea disegni, storie
             animate o giochi interattivi.
@@ -4868,7 +5000,7 @@ it:
         coursea-2019:
           description: 'Impara le basi dell''informatica e della sicurezza su Internet.
             Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai
-            condividere. ATTENZIONE: qui a destra scegli la versione 2018 è la più
+            condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più
             aggiornata in italiano ==>'
           description_short: Introduzione all'informatica per bambini che non leggono
             ancora.
@@ -4964,7 +5096,7 @@ it:
         courseb-2019:
           description: 'Impara le basi dell''informatica e della sicurezza su Internet.
             Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai
-            condividere. ATTENZIONE: qui a destra scegli la versione 2018 è la più
+            condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più
             aggiornata in italiano ==>'
           description_short: Introduzione all'informatica per alunni che devono imparare
             a leggere. Simile al Corso A, ma con maggior approfondimento dei concetti.
@@ -5030,7 +5162,7 @@ it:
           title: Corso Rapido pre-scolare (2019)
           description: 'Impara le basi dell''informatica e della sicurezza su Internet.
             Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai
-            condividere. ATTENZIONE: qui a destra scegli la versione 2018 è la più
+            condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più
             aggiornata in italiano ==>'
           description_short: 'Introduzione all''informatica per studenti pre-scolari:
             mette insieme il meglio dei nostri corsi per la scuola dell''infanzia
@@ -5410,10 +5542,8 @@ it:
               name: Ballando col codice
           title: Ballando col codice (versione 2019)
           description: Crea un ballo tutto tuo e condividilo con i tuoi amici!
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           title: Fondamenti di Informatica - Corso per insegnanti
-          description: Guida online gratuita per imparare autonomamente come insegnare
-            l'informatica usando il corso di Code.org "Fondamenti di informatica".
           description_short: Guida online gratuita per imparare autonomamente come
             insegnare l'informatica usando il corso di Code.org "Fondamenti di informatica".
           stages:
@@ -5460,3 +5590,51 @@ it:
           stages:
             Dance Party - Go Further:
               name: Ballando col codice - Spingiti oltre
+        time4cs-control-unit-1:
+          stages:
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: Istruzioni condizionali in Minecraft - Viaggio acquatico
+            Conditionals:
+              name: Istruzioni condizionali
+            'Events: The Big Event':
+              name: Il grande evento
+            Alien Dance Party with Sprite Lab:
+              name: La festa degli alieni con il Laboratorio dei personaggi
+            Private and Personal Information:
+              name: Cittadinanza digitale - Dati personali e altri dati
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Intelligenza collettiva
+            Conditionals with Cards:
+              name: Istruzioni condizionali con le carte da gioco
+            Nested Loops in Bee:
+              name: Cicli Annidati con l'Ape
+            Nested Loops in Artist:
+              name: Cicli annidati con l'artista
+            Nested Loops in Frozen:
+              name: Cicli annidati con Frozen
+            'Functions: Songwriting':
+              name: 'Funzioni: Composizione di Canzoni'
+            Functions in Minecraft:
+              name: Funzioni con Minecraft
+            Functions in Harvester:
+              name: Funzioni con la Contadina
+            Functions in Artist:
+              name: Funzioni con l'artista
+            End of Course Project:
+              name: Progetto di fine corso
+        time4cs-experiment-unit-2:
+          stages:
+            Nested Loops in Maze:
+              name: Cicli annidati nel labirinto
+            Fancy Shapes using Nested Loops:
+              name: Cicli annidati con l'artista
+            Nested Loops with Frozen:
+              name: Cicli annidati con Frozen
+            Functions in Minecraft:
+              name: Funzioni con Minecraft
+            Functions with Harvester:
+              name: Funzioni con la contadina
+            Functions with Artist:
+              name: Funzioni con l'artista

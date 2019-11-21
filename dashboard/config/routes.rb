@@ -149,12 +149,13 @@ Dashboard::Application.routes.draw do
     get '/users/cancel', to: 'registrations#cancel'
     get '/users/clever_takeover', to: 'sessions#clever_takeover'
     get '/users/clever_modal_dismissed', to: 'sessions#clever_modal_dismissed'
-    get '/users/auth/:provider/connect', to: 'authentication_options#connect'
+    get '/users/auth/:provider/connect', to: 'authentication_options#connect', as: :connect_authentication_option
     delete '/users/auth/:id/disconnect', to: 'authentication_options#disconnect'
     get '/users/migrate_to_multi_auth', to: 'registrations#migrate_to_multi_auth'
     get '/users/demigrate_from_multi_auth', to: 'registrations#demigrate_from_multi_auth'
     get '/users/to_destroy', to: 'registrations#users_to_destroy'
     get '/reset_session', to: 'sessions#reset'
+    get '/users/existing_account', to: 'registrations#existing_account'
   end
   devise_for :users, controllers: {
     omniauth_callbacks: 'omniauth_callbacks',

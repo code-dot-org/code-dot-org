@@ -2,6 +2,44 @@
 ta:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            '"ALIEN"': ஏலியன்கள்
+            '"BEAR"': கரடிகள்
+            '"CAT"': பூனைகள்
+            '"DOG"': நாய்கள்
+            '"DUCK"': வாத்துகள்
+            '"FROG"': தவளைகள்
+            '"MOOSE"': மூஸ்
+            '"PINEAPPLE"': பைன் ஆப்பிள்கள்
+            '"ROBOT"': ரோபோக்கள்
+            '"SHARK"': சுறாமீன்கள்
+            '"UNICORN"': யூனிகார்ன்கள்
+          MOVE1:
+            MOVES.Roll: பாடி ரோல்
+            MOVES.ClapHigh: உயரே கைதட்டுக
+            MOVES.Dab: டாப்
+            MOVES.DoubleJam: டபுள் டவுன்
+            MOVES.Drop: ட்ராப்
+            MOVES.Floss: ஃப்ளாஸ்
+            MOVES.Fresh: ஃப்ரெஷ்
+            MOVES.Clown: கங்கனம்
+            MOVES.Kick: ஸ்டார்
+            MOVES.ThisOrThat: இது அல்லது அது
+            MOVES.Rest: எதுவுமில்லை
+          MOVE2:
+            MOVES.Roll: பாடி ரோல்
+            MOVES.ClapHigh: உயரே கைதட்டுக
+            MOVES.Dab: டாப்
+            MOVES.DoubleJam: டபுள் டவுன்
+            MOVES.Drop: ட்ராப்
+            MOVES.Floss: ஃப்ளாஸ்
+            MOVES.Fresh: ஃப்ரெஷ்
+            MOVES.Clown: கங்கனம்
+            MOVES.Kick: ஸ்டார்
+            MOVES.ThisOrThat: இது அல்லது அது
+            MOVES.Rest: எதுவுமில்லை
       Dancelab_atTimestamp:
         text: இதற்குப்பின் {TIMESTAMP} [UNIT]
         options:
@@ -742,13 +780,6 @@ ta:
         options:
           STRING:
             '"hearts_colorful"': இதயங்கள்
-            '"l"': l
-            '"m"': m
-            '"n"': 'n'
-            '"o"': o
-            '"p"': p
-            '"q"': q
-            '"r"': r
             '"s"': s
             '"t"': t
             '"u"': u

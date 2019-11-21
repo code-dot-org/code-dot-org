@@ -4820,6 +4820,8 @@ pl:
               name: nowy etap
             Routers and Redundancy:
               name: Routery i nadmiarowość
+            The Need for Addressing:
+              name: Potrzeba adresowania
         peru-2019:
           stages:
             new stage:
@@ -4835,7 +4837,7 @@ pl:
             Dance Party:
               name: Potańcówka
           description: Stwórz kod swojej własnej imprezy tanecznej i udostępnij ją swoim znajomym.
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Getting Started:
               name: Pierwsze kroki
@@ -4882,3 +4884,19 @@ pl:
           stages:
             new stage:
               name: nowy etap
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Zdania z warunkami
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Praca w grupie (Crowdsourcing)
+            Conditionals with Cards:
+              name: Warunkowe z kartami
+            Nested Loops in Bee:
+              name: Zagnieżdżone pętle w pszczole
+        time4cs-experiment-unit-2:
+          stages:
+            Nested Loops in Maze:
+              name: Zagnieżdżone pętle w labiryncie

@@ -1,1 +1,73 @@
+#Files in the config/locales directory are used for internationalization
+#and are automatically loaded by Rails. If you want to use locales other
+#than English, add the necessary files in this directory.
+#To use the locales, use `I18n.t`:
+#I18n.t 'hello'
+#In views, this is aliased to just `t`:
+#<%= t('hello') %>
+#To use a different locale, set it with `I18n.locale`:
+#I18n.locale = :es
+#This would use the information in config/locales/es.yml.
+#To learn more, please read the Rails Internationalization guide
+#available at http://guides.rubyonrails.org/i18n.html.
 te:
+  continue: 'కొనసాగు'
+  signup_form:
+    email_preference_yes: "అవును"
+    email_preference_no: "లేదు"
+  signin_form:
+    submit: 'సైన్ ఇన్'
+  signinsection:
+    login: 'సైన్ ఇన్'
+  nav:
+    header:
+      finished_hoc: "నేను పూర్తి చేశాను!"
+      course_catalog: "కోర్సు కేటలాగ్"
+      project_gallery: "ప్రాజెక్టులు"
+      help_support: "సహాయం మరియు మద్దతు"
+      report_bug: "ఒక సమస్యను రిపోర్టు చేయండి"
+      about: "పరియచం"
+    user:
+      signin: 'సైన్ ఇన్'
+      signup: 'ఒక అకౌంట్ సృష్టించండి'
+      dance: 'డాన్స్ పార్టీ'
+  footer:
+    copyright: 'కాపీరైట్'
+    more: 'ఎక్కువ'
+    translate: 'మా కంటెంట్ అనువదించడనికి వాలెంటీర్ చేయండి'
+    tos: 'సర్వీసు నిబంధనలు'
+    privacy: 'గోప్యతా పాలసీ'
+    report_abuse: 'దుర్భాషను రిపోర్టు చేయండి'
+  reference_area:
+    title: 'సహాయం కావాలా?'
+    subtitle: 'ఈ వీడియోలు మరియు హింట్స్ చూడండి'
+  video:
+    tab: 'వీడియో.'
+    notes: 'వీడియో లేదా? నోట్స్ చూపించు.'
+  upsell:
+    dance:
+      title: 'డాన్స్ పార్టీ'
+    dance-2019:
+      title: 'డాన్స్ పార్టీ'
+  gallery:
+    report_abuse: "దుర్భాషను రిపోర్టు చేయండి"
+  landing:
+    help_support: "సహాయం మరియు మద్దతు"
+  dialog:
+    startover_ok: "ప్రారంభించు"
+  terms_interstitial:
+    tos: "సర్వీసు నిబంధనలు"
+    privacy: "గోప్యతా పాలసీ"
+    print: "ప్రింట్"
+  project:
+    projects: "ప్రాజెక్టులు"
+    project_gallery: "ప్రాజెక్టులు"
+  flex_category:
+    csf_events: 'ఈవెంట్లు'
+  pd:
+    form_entries:
+      email_opt_in:
+        opt_in_yes: 'అవును'
+        opt_in_no: 'లేదు'
+  gdpr_dialog:
+    yes: 'అవును'

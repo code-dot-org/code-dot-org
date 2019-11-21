@@ -2,6 +2,21 @@
 uk:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: усі
+            '"ALIEN"': всі прибульці
+            '"BEAR"': всі ведмеді
+            '"CAT"': всі коти
+            '"DOG"': всі собаки
+            '"DUCK"': всі качки
+            '"FROG"': всі жаби
+            '"MOOSE"': всі лосі
+            '"PINEAPPLE"': всі ананаси
+            '"ROBOT"': всі роботи
+            '"SHARK"': всі акули
+            '"UNICORN"': Єдинороги
       Dancelab_atTimestamp:
         text: після {TIMESTAMP} {UNIT}
         options:

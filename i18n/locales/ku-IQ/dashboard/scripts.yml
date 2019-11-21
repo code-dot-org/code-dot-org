@@ -386,7 +386,7 @@ ku:
               name: مەرجیەکان
             Functions:
               name: فرمانەکان
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Loops:
               name: گرێکان
@@ -396,3 +396,7 @@ ku:
               name: فرمانەکان
             Variables:
               name: گۆڕاوەکان
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: مەرجیەکان

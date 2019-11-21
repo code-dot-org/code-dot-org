@@ -2,6 +2,45 @@
 zh-CN:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: 所有
+            '"ALIEN"': 所有外星人
+            '"BEAR"': 所有熊
+            '"CAT"': 所有猫
+            '"DOG"': 所有狗
+            '"DUCK"': 所有鸭子
+            '"FROG"': 所有青蛙
+            '"MOOSE"': 所有驼鹿
+            '"PINEAPPLE"': 所有菠萝
+            '"ROBOT"': 所有机器人
+            '"SHARK"': 所有鲨鱼
+            '"UNICORN"': 独角兽
+          MOVE1:
+            MOVES.Roll: 身体转动
+            MOVES.ClapHigh: 用力鼓掌
+            MOVES.Dab: 轻拍
+            MOVES.DoubleJam: 两倍下降
+            MOVES.Drop: 丢掉
+            MOVES.Floss: 丝线
+            MOVES.Fresh: 双手画圈
+            MOVES.Clown: 江南
+            MOVES.Kick: 踢腿
+            MOVES.ThisOrThat: 交替摆臂
+            MOVES.Rest: 没有
+          MOVE2:
+            MOVES.Roll: 身体转动
+            MOVES.ClapHigh: 用力鼓掌
+            MOVES.Dab: 轻拍
+            MOVES.DoubleJam: 两倍下降
+            MOVES.Drop: 丢掉
+            MOVES.Floss: 丝线
+            MOVES.Fresh: 双手画圈
+            MOVES.Clown: 江南
+            MOVES.Kick: 踢腿
+            MOVES.ThisOrThat: 交替摆臂
+            MOVES.Rest: 没有
       Dancelab_atTimestamp:
         text: 在 {TIMESTAMP} {UNIT} 后
         options:
@@ -783,13 +822,6 @@ zh-CN:
           STRING:
             '"hearts_colorful"': 心
             '"diamond"': 钻石
-            '"l"': l
-            '"m"': m
-            '"n"': n
-            '"o"': o
-            '"p"': p
-            '"q"': q
-            '"r"': r
             '"s"': s
             '"t"': t
             '"u"': u

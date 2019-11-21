@@ -1767,7 +1767,7 @@ cs:
             Dance Party:
               name: Taneční večírek
           description: Vytvoř si svůj vlastní taneční večírek a sdílej ho s kamarády!
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Loops:
               name: Smyčky
@@ -1784,3 +1784,13 @@ cs:
         dance-extras-2019:
           title: Nepřestávej tančit
           description: Pokračuj i po první hodině kódu rozšířením nápadů ve svém projektu.
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Podmínky
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Podmínky s kartami

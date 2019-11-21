@@ -73,8 +73,15 @@ hi-IN:
       CourseD_Dance_Party_11:
         dance_callout_11_a: नई ब्लॉक
         dance_callout_11_b: नई ब्लॉक
+      Dance_2019_01:
+        dance_callout_01: यह ब्लॉक अपने प्रोग्राम में शामिल करें!
+      Dance_2019_02:
+        dance_callout_11_a: यह ब्लॉक अपने प्रोग्राम में शामिल करें।
+        arrow_buttons: तीर के बटन दबाकर अपने डांसर को नियंत्रित करें।
       Dance_2019_04:
         dance_callout_02: यह ब्लॉक अपने प्रोग्राम में शामिल करें!
+      Dance_2019_05:
+        dance_callout_05: अपने कार्यक्रम में एक नई इवेंट जोड़ें।
       Dance_2019_06:
         dance_party_11_5_groups: नई ब्लॉक
       Dance_2019_07:

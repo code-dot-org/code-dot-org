@@ -487,6 +487,8 @@ sv:
       cta: 'Läs mer'
     dance:
       title: 'Dansparty'
+    dance-2019:
+      title: 'Dansparty'
     hoc:
       title: 'Klassisk labyrint'
       body: 'Lär dig grunderna i programmering. Miljoner har provat denna.'

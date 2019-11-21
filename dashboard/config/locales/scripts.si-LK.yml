@@ -1626,7 +1626,7 @@ si:
               name: හැදින්වීම
             Nested Loops:
               name: නැවත නැවත සිදුවන ලුප
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Next Steps:
               name: ඉදිරි පියවර
@@ -1642,3 +1642,13 @@ si:
               name: විචල්‍යන්
             For Loops:
               name: ලූපයන් සඳහා
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: කන්ඩිෂනලස්
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Crowdsourcing වැඩසටහන
+            Conditionals with Cards:
+              name: කාඩ්පත් සමඟ කොන්දේසික
