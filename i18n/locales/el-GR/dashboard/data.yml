@@ -508,8 +508,6 @@ el:
         csd_pair_programming: Προγραμματισμός κατά ζεύγη
         csd_applab_parameters: Συναρτήσεις με παραμέτρους
         CSF_SpriteLab_SpritesInAction_v2: Χαρακτήρες σε Δράση
-        ocean_machine_learning: 'Εκμάθηση μηχανής'
-        ocean_training_data: 'Δεδομένα εκπαίδευσης'
     callout:
       text:
         drag_blocks: Πιάσε ένα μπλοκ "κίνηση" και φέρ'το κάτω από το άλλο μπλοκ
