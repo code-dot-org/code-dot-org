@@ -1,5 +1,6 @@
-# We need "press keys" to type into the React form's fields, but that doesn't work on IE.
+# We need "press keys" to type into the React form's fields, but that doesn't work on IE or iPhone.
 @no_ie
+@no_mobile
 
 Feature: Regional partner mini-contact
 
