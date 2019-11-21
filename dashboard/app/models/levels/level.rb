@@ -34,10 +34,10 @@ class Level < ActiveRecord::Base
   has_many :hint_view_requests
 
   before_validation :strip_name
-  before_validation :replace_illegal_chars
   before_destroy :remove_empty_script_levels
 
   validates_length_of :name, within: 1..70
+  validate :reject_illegal_chars
   validates_uniqueness_of :name, case_sensitive: false, conditions: -> {where.not(user_id: nil)}
 
   after_save :write_custom_level_file
@@ -425,8 +425,12 @@ class Level < ActiveRecord::Base
     self.name = name.to_s.strip unless name.nil?
   end
 
-  def replace_illegal_chars
-    self.name = name&.gsub(/[^A-Za-z0-9 !"&'()+,\-.:=?_|]/, '-')
+  def reject_illegal_chars
+    if name&.match /[^A-Za-z0-9 !"&'()+,\-.:=?_|]/
+      msg = "level name \"#{name}\" must only contain letters, numbers, "\
+      "spaces, and the following characters: !\"&'()+,\-.:=?_|"
+      errors.add(:name, msg)
+    end
   end
 
   def log_changes(user=nil)
