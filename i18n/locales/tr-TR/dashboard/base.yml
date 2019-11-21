@@ -551,6 +551,8 @@ tr:
       cta: 'Nasıl olduğunu öğren'
     dance:
       title: 'Dans Partisi'
+    dance-2019:
+      title: 'Dans Partisi'
     hoc:
       title: 'Klasik Labirent'
       body: 'Temel bilgisayar bilimlerine milyonlar bir şans verdi, sen de dene.'

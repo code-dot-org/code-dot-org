@@ -2,6 +2,37 @@
 tr:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: tüm
+            '"ALIEN"': tüm uzaylılar
+            '"BEAR"': tüm ayılar
+            '"CAT"': tüm kediler
+            '"DOG"': tüm köpekler
+            '"DUCK"': tüm ördekler
+            '"FROG"': tüm kurbağalar
+            '"MOOSE"': tüm geyikler
+            '"PINEAPPLE"': tüm ananaslar
+            '"ROBOT"': tüm robotlar
+            '"SHARK"': tüm köpekbalıkları
+            '"UNICORN"': Tek boynuzlu atlar
+          MOVE1:
+            MOVES.Roll: Yuvarlanma
+            MOVES.ClapHigh: Yüksek Alkış
+            MOVES.DoubleJam: Çift Aşağı
+            MOVES.Clown: Palyaço
+            MOVES.Kick: Yıldız
+            MOVES.ThisOrThat: Şu ya da Bu
+            MOVES.Rest: Hiçbiri
+          MOVE2:
+            MOVES.Roll: Yuvarlanma
+            MOVES.ClapHigh: Yüksek Alkış
+            MOVES.DoubleJam: Çift Aşağı
+            MOVES.Clown: Palyaço
+            MOVES.Kick: Yıldız
+            MOVES.ThisOrThat: Şu ya da Bu
+            MOVES.Rest: Hiçbiri
       Dancelab_atTimestamp:
         text: "{TIMESTAMP} {UNIT} sonra"
         options:
@@ -708,7 +739,6 @@ tr:
           STRING:
             '"hearts_colorful"': Kalpler
             '"diamond"': elmas
-            '"q"': q
             '"x"': x
             '"y"': 'y'
             '"1"': '1'
