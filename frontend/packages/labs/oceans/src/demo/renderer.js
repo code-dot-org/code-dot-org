@@ -453,17 +453,9 @@ let lastScannerImg = null;
 // *Note:* This will no-op if the expected bot/scanner is not present
 // in the botImages cache. Call loadAllBotImages() to populate the botImages cache.
 const drawPredictBot = state => {
-  let botImg, scannerImg;
-  if (currentPredictedClassId === ClassType.Like) {
-    botImg = botImages.likeBot;
-    scannerImg = botImages.likeScanner;
-  } else if (currentPredictedClassId === ClassType.Dislike) {
-    botImg = botImages.dislikeBot;
-    scannerImg = botImages.dislikeScanner;
-  } else {
-    botImg = botImages.defaultBot;
-    scannerImg = botImages.defaultScanner;
-  }
+  const classKey = keyForClassId(currentPredictedClassId);
+  const botImg = botImages[`${classKey}Bot`];
+  const scannerImg = botImages[`${classKey}Scanner`];
 
   if (!botImg || !scannerImg) {
     return;
