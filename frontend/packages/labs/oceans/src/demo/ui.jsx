@@ -9,6 +9,7 @@ import {$time, currentRunTime, finishMovement, resetTraining} from './helpers';
 import {onClassifyFish} from './models/train';
 import colors from './colors';
 import aiBotClosed from '../../public/images/ai-bot/ai-bot-closed.png';
+import arrowDownImage from '../../public/images/arrow-down.png';
 import Typist from 'react-typist';
 import {getCurrentGuide, dismissCurrentGuide} from './models/guide';
 import {playSound} from './models/soundLibrary';
@@ -47,8 +48,8 @@ const styles = {
   },
   continueButton: {
     position: 'absolute',
-    bottom: 10,
-    right: 10,
+    bottom: '4%',
+    right: '2.25%',
     backgroundColor: colors.orange,
     color: colors.white
   },
@@ -72,8 +73,8 @@ const styles = {
   },
   backButton: {
     position: 'absolute',
-    bottom: 10,
-    left: 10,
+    bottom: '4%',
+    left: '2.25%',
     backgroundColor: colors.blue,
     color: colors.white
   },
@@ -237,30 +238,44 @@ const styles = {
   },
   guide: {
     position: 'absolute',
-    backgroundColor: colors.black,
+    backgroundColor: colors.transparentBlack,
     color: colors.white,
-    textAlign: 'center',
-    lineHeight: '140%'
+    lineHeight: '140%',
+    borderRadius: 5,
+    maxWidth: '80%',
+    bottom: '4%',
+    left: '50%',
+    transform: 'translateX(-50%)'
   },
   guideLeft: {
     float: 'left'
   },
   guideRight: {
-    float: 'right'
+    float: 'right',
+    position: 'relative'
   },
   guideImage: {
-    width: '70%',
-    paddingTop: 15
+    paddingTop: 20,
+    paddingLeft: 20,
+    maxWidth: '90%'
+  },
+  guideHeading: {
+    fontSize: 40,
+    lineHeight: '40px',
+    color: colors.darkGrey,
+    padding: 20
   },
   guideTypingText: {
     position: 'absolute',
-    padding: 15
+    padding: 20
+  },
+  guideFinalTextContainer: {},
+  guideFinalTextInfoContainer: {
+    backgroundColor: colors.lightGrey,
+    borderRadius: 10
   },
   guideFinalText: {
-    padding: 15,
-    color: colors.white,
-    textAlign: 'center',
-    lineHeight: '140%',
+    padding: 20,
     opacity: 0
   },
   guideBackground: {
@@ -281,67 +296,44 @@ const styles = {
     pointerEvents: 'none'
   },
   guideArrow: {
-    top: '100%',
-    left: '50%',
-    border: 'solid transparent',
-    height: 0,
-    width: 0,
-    position: 'absolute',
-    pointerEvents: 'none',
-    borderColor: 'none',
-    borderTopColor: colors.black,
-    borderWidth: 30,
-    marginLeft: -30
+    position: 'absolute'
   },
-  guideTopLeft: {
-    top: '5%',
-    left: '5%'
+  guideInfo: {
+    backgroundColor: colors.white,
+    color: colors.darkGrey,
+    transform: 'translate(-50%, -50%)',
+    top: '50%',
+    bottom: 'initial',
+    left: '50%',
+    padding: 20
   },
   guideCenter: {
-    bottom: '40%',
+    top: '50%',
     left: '50%',
+    bottom: 'initial',
     maxWidth: '47%',
-    transform: 'translateX(-50%)'
+    transform: 'translate(-50%, -50%)'
   },
-  guideRightCenter: {
-    bottom: '30%',
-    right: '5%',
-    maxWidth: '25%'
-  },
-  guideTopRight: {
+  arrowBotRight: {
     top: '15%',
-    right: '13%'
+    right: '14.5%'
   },
-  guideTopRightNarrow: {
-    top: '15%',
-    right: '2%',
-    maxWidth: '40%'
+  arrowLowerLeft: {
+    bottom: '17%',
+    left: '6%'
   },
-  guideBottomMiddle: {
+  arrowLowerRight: {
+    bottom: '17%',
+    right: '6%'
+  },
+  arrowLowishRight: {
+    bottom: '25%',
+    right: '5%'
+  },
+  arrowLowerCenter: {
     bottom: '25%',
     left: '50%',
     transform: 'translateX(-50%)'
-  },
-  guideBottomRight: {
-    bottom: '18%',
-    right: '2%',
-    maxWidth: '25%'
-  },
-  guideBottomLeft: {
-    bottom: '18%',
-    left: '2%',
-    maxWidth: '25%'
-  },
-  guideBottomRightCenter: {
-    bottom: '20%',
-    right: '5%',
-    maxWidth: '25%'
-  },
-  guideButton: {
-    padding: 5,
-    minWidth: 100,
-    marginTop: 20,
-    right: 0
   }
 };
 
@@ -857,49 +849,71 @@ class Guide extends React.Component {
     return (
       <div>
         {!!currentGuide && (
-          <div
-            key={currentGuide.id}
-            style={
-              currentGuide.hideBackground
-                ? styles.guideBackgroundHidden
-                : styles.guideBackground
-            }
-            onClick={this.dismissGuideClick}
-          >
+          <div>
             <div
-              style={{...styles.guide, ...styles[`guide${currentGuide.style}`]}}
+              key={currentGuide.id}
+              style={
+                currentGuide.noDimBackground
+                  ? styles.guideBackgroundHidden
+                  : styles.guideBackground
+              }
+              onClick={this.dismissGuideClick}
             >
-              {currentGuide.image && (
-                <div style={{...styles.guideLeft, width: leftWidth}}>
-                  <img src={currentGuide.image} style={styles.guideImage} />
-                </div>
-              )}
+              <div
+                style={{
+                  ...styles.guide,
+                  ...styles[`guide${currentGuide.style}`]
+                }}
+              >
+                {currentGuide.image && (
+                  <div style={{...styles.guideLeft, width: leftWidth}}>
+                    <img src={currentGuide.image} style={styles.guideImage} />
+                  </div>
+                )}
 
-              <div style={{...styles.guideRight, width: rightWidth}}>
-                <div style={styles.guideTypingText}>
-                  <Typist
-                    avgTypingDelay={35}
-                    stdTypingDelay={15}
-                    cursor={{show: false}}
-                    onTypingDone={this.onShowing}
+                <div style={{...styles.guideRight, width: rightWidth}}>
+                  {currentGuide.heading && (
+                    <div style={styles.guideHeading}>
+                      {currentGuide.heading}
+                    </div>
+                  )}
+                  <div style={styles.guideTypingText}>
+                    <Typist
+                      avgTypingDelay={35}
+                      stdTypingDelay={15}
+                      cursor={{show: false}}
+                      onTypingDone={this.onShowing}
+                    >
+                      {currentGuide.textFn
+                        ? currentGuide.textFn(getState())
+                        : currentGuide.text}
+                    </Typist>
+                  </div>
+                  <div
+                    style={
+                      currentGuide.style === 'Info'
+                        ? styles.guideFinalTextInfoContainer
+                        : styles.guideFinalTextContainer
+                    }
                   >
-                    {currentGuide.textFn
-                      ? currentGuide.textFn(getState())
-                      : currentGuide.text}
-                  </Typist>
-                </div>
-                <div style={styles.guideFinalText}>
-                  {currentGuide.textFn
-                    ? currentGuide.textFn(getState())
-                    : currentGuide.text}
+                    <div style={styles.guideFinalText}>
+                      {currentGuide.textFn
+                        ? currentGuide.textFn(getState())
+                        : currentGuide.text}
+                    </div>
+                  </div>
                 </div>
               </div>
-              {getState().guideShowing && currentGuide.arrow !== 'none' && (
-                <div>
-                  <div style={styles.guideArrow}> </div>
-                </div>
-              )}
             </div>
+            {currentGuide.arrow && (
+              <img
+                src={arrowDownImage}
+                style={{
+                  ...styles.guideArrow,
+                  ...styles[`arrow${currentGuide.arrow}`]
+                }}
+              />
+            )}
           </div>
         )}
       </div>
