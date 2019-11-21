@@ -33,23 +33,43 @@ const predictAllFish = state => {
 };
 
 const arrangeFish = fishes => {
+  let fishArrangement = formatArrangement();
+
   fishes.forEach(fish => {
-    // Pick a random side of the bot UI.
-    const side = randomInt(0, 1);
+    const pos = fishArrangement.shift();
+    const x = pos[0] * 140 - 50;
+    const y = pos[1] * 150;
 
-    // Generate a location for the fish on that side.
-    const xBounds = [
-      {minX: 0, maxX: 360 - constants.fishCanvasWidth / 2},
-      {minX: 510, maxX: constants.canvasWidth - constants.fishCanvasWidth}
-    ];
-    const x = randomInt(xBounds[side].minX, xBounds[side].maxX);
-
-    // Don't put fish at the very bottom of the pond because of UI.
-    const bottomAreaHeight = 80;
-    const y = randomInt(
-      0,
-      constants.canvasHeight - constants.fishCanvasHeight / 2 - bottomAreaHeight
-    );
     fish.setXY({x, y});
   });
+};
+
+const arrangement = [
+  [2, 1, 0, 0, 0, 1, 2],
+  [2, 1, 0, 0, 0, 1, 2],
+  [2, 1, 0, , 0, 1, 2]
+];
+
+const formatArrangement = () => {
+  let intermediateArr = [];
+  arrangement.forEach((row, rowIdx) => {
+    row.forEach((col, colIdx) => {
+      if (typeof col !== 'number') {
+        return;
+      }
+
+      if (!intermediateArr[col]) {
+        intermediateArr[col] = [];
+      }
+
+      intermediateArr[col].push([colIdx, rowIdx]);
+    });
+  });
+
+  let formattedArrangement = [];
+  intermediateArr.forEach(
+    a => (formattedArrangement = formattedArrangement.concat(a))
+  );
+
+  return formattedArrangement;
 };

@@ -506,10 +506,8 @@ const drawPondFishImages = () => {
 
     const swayValue =
       (($time() * 360) / (20 * 1000) + (fish.getId() + 1) * 10) % 360;
-    const swayMultipleX = 120;
-    const swayOffsetX =
-      Math.sin(((swayValue * Math.PI) / 180) * 2) * swayMultipleX;
-    const swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 6) * 8;
+    const swayOffsetX = Math.sin(((swayValue * Math.PI) / 180) * 2) * 25;
+    const swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 6) * 2;
 
     const xy = fish.getXY();
     const finalX = xy.x + swayOffsetX;

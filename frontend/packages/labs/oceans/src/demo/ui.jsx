@@ -204,8 +204,8 @@ const styles = {
   },
   pondBot: {
     position: 'absolute',
-    height: '40%',
-    top: '23%',
+    height: '27%',
+    top: '59%',
     left: '50%',
     bottom: 0,
     transform: 'translateX(-45%)',
