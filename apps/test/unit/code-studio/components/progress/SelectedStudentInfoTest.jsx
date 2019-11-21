@@ -61,7 +61,8 @@ describe('SelectedStudentInfo', () => {
     );
 
     expect(wrapper.contains('Last Updated:')).to.equal(true);
-    expect(wrapper.find('Button')).to.have.length(1);
+    /* Button is hidden currently. See SelectedStudentInfo for details
+    expect(wrapper.find('Button')).to.have.length(1); */
   });
 
   it('displays time and who they worked with as navigator if paired as driver on level', () => {
