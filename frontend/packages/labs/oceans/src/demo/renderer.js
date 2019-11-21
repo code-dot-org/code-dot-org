@@ -113,6 +113,9 @@ export const render = () => {
   const timeBeforeCanSkipPond = 5000;
 
   switch (state.currentMode) {
+    case Modes.Words:
+      drawWordFishImages();
+      break;
     case Modes.Training:
       drawPolaroidFrame(state.canvas);
       drawMovingFish(state);
@@ -492,6 +495,37 @@ const drawPredictBot = state => {
   // Draw bot.
   ctx.drawImage(botImg, botX, botY);
 };
+
+const drawWordFishImages = () => {
+  const canvas = getState().canvas;
+  const ctx = canvas.getContext('2d');
+
+  const fishBounds = [];
+
+  getState().wordFish.forEach(fish => {
+
+    const swayValue =
+      (($time() * 360) / (20 * 1000) + (fish.getId() + 1) * 10) % 360;
+    const swayMultipleX = 120;
+    const swayOffsetX =
+      Math.sin(((swayValue * Math.PI) / 180) * 2) * swayMultipleX;
+    const swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 6) * 8;
+
+    const xy = fish.getXY();
+    const finalX = xy.x + swayOffsetX;
+    const finalY = xy.y + swayOffsetY;
+
+    const fishBound = drawSingleFish(fish, finalX, finalY, ctx, 0.75);
+
+    // Record this screen location so that we can separately check for clicks on it.
+    fishBounds.push({
+      fishId: fish.id,
+      ...fishBound
+    });
+    setState({wordFishBounds: fishBounds}, {skipCallback: true});
+  });
+
+}
 
 // Draw the fish for pond mode.
 const drawPondFishImages = () => {

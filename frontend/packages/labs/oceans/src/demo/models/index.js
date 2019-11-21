@@ -1,4 +1,5 @@
 import {init as initLoading} from './loading';
+import {init as initWords} from './words';
 import {init as initTraining} from './train';
 import {init as initPredicting} from './predict';
 import {init as initPond} from './pond';
@@ -10,6 +11,9 @@ export const init = state => {
   switch (state.currentMode) {
     case Modes.Loading:
       initLoading();
+      break;
+    case Modes.Words:
+      initWords();
       break;
     case Modes.Training:
       initTraining();
