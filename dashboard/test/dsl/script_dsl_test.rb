@@ -774,4 +774,32 @@ level 'Level 3'
     assert_equal expected, output
     assert_equal i18n_expected, i18n
   end
+
+  test 'reject script DSL with duplicate stage name' do
+    input_dsl = <<~DSL
+      stage 'duplicate'
+      level 'Level 1'
+      stage 'duplicate'
+      level 'Level 2'
+    DSL
+
+    error = assert_raises do
+      ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    end
+    assert_equal 'a stage named "duplicate" already exists', error.message
+  end
+
+  test 'reject duplicate stage with extra space' do
+    input_dsl = <<~DSL
+      stage 'duplicate'
+      level 'Level 1'
+      stage ' duplicate '
+      level 'Level 2'
+    DSL
+
+    error = assert_raises do
+      ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    end
+    assert_equal 'a stage named "duplicate" already exists', error.message
+  end
 end
