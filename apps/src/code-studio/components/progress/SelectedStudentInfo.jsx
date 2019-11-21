@@ -167,20 +167,6 @@ export class SelectedStudentInfo extends React.Component {
               />
             </div>
           )}
-          {/* Hidden because currently we are deleting UserLevels when
-          some clicks this button which means we lose all record of the
-          student working on that level.
-          TODO: Once a system is implemented for users to
-          reset progress uncomment this code to bring back this
-          button to reset a contained level for a student.
-          {level.contained && (
-            <Button
-              text={i18n.clearResponse()}
-              color="blue"
-              onClick={this.onClearResponse}
-              disabled={level.status === LevelStatus.not_tried}
-            />
-          )}*/}
         </div>
         <RadiumFontAwesome
           icon="caret-right"
