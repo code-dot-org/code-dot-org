@@ -748,4 +748,30 @@ level 'Level 3'
     assert_equal expected, output
     assert_equal i18n_expected, i18n
   end
+
+  test 'script DSL with trailing space in stage name' do
+    input_dsl = <<~DSL
+      stage 'trailing space '
+      level 'Level 1'
+    DSL
+    output, i18n = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    expected = DEFAULT_PROPS.merge(
+      {
+        stages: [
+          {
+            stage: "trailing space",
+            scriptlevels: [
+              {stage: "trailing space", levels: [{name: 'Level 1'}]},
+            ]
+          }
+        ],
+      }
+    )
+
+    i18n_expected = {'test' => {'stages' => {
+      "trailing space" => {'name' => "trailing space"},
+    }}}
+    assert_equal expected, output
+    assert_equal i18n_expected, i18n
+  end
 end
