@@ -47,7 +47,6 @@ The server for [the **Code.org** website](https://code.org/), a [Sinatra](http:/
 * [code.org](https://code.org)
 * [hourofcode.com](https://hourofcode.com)
 * [csedweek.org](https://csedweek.org)
-* [Teacher Dashboard](http://code.org/teacher-dashboard)
 
 ### [apps](./apps)
 

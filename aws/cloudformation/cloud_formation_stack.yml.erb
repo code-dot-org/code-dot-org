@@ -133,7 +133,9 @@ Resources:
           # Write analysis events to Firehose.
           # TODO: Import resources into stack.
           - Effect: Allow
-            Action: 'firehose:PutRecord'
+            Action:
+            - 'firehose:PutRecord'
+            - 'firehose:PutRecordBatch'
             Resource: !Sub "arn:aws:firehose:${AWS::Region}:${AWS::AccountId}:deliverystream/analysis-events"
           # S3 access for student-libraries bucket
           - Effect: Allow

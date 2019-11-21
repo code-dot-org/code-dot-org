@@ -94,6 +94,19 @@ uz-UZ:
   view_unit: Mavzuni ko'rish
   make_app: Dastur yaratish
   congrats_guest_speaker_title: Sinfingiz uchun mehmon ma'ruzachi topish
+  third_party_gradelevel_kto8: K-8 sinflar
+  third_party_gradelevel_kto2: K-2 sinflar
+  third_party_gradelevel_2to8: 2-8-sinflar
+  third_party_gradelevel_4to12: 4-12-sinflar
+  third_party_gradelevel_5to12: 5-12-sinflar
+  third_party_gradelevel_6plus: 6+ sinflar
+  third_party_gradelevel_8plus: 8+ sinflar
+  third_party_platform_all: 'Platforma: Veb, iPad va Android'
+  third_party_platform_mobile: 'Platforma: iPad va Android'
+  third_party_platform_web: 'Platforma: Veb'
+  third_party_price_varies: 'Narx: har xil'
+  third_party_price_free: 'Narx: bepul'
+  third_party_price_299: 'Narx: 2,99$/yuklab olish'
   enter_valid_age: Iltimos, yoshingzni to‘g‘ri ko‘rsating
   enter_valid_email: Iltimos, pochtangizni to‘g‘ri ko‘rsating
   get_a_certificate_message: Biz sizga sertifikat bilan birga qanday <a href='/learn/beyond'>ko‘proq

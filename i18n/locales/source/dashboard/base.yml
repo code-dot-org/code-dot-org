@@ -620,6 +620,8 @@ en:
       cta: 'Learn how'
     dance:
       title: 'Dance Party'
+    dance-2019:
+      title: 'Dance Party'
     hoc:
       title: 'Classic Maze'
       body: 'Try the basics of computer science. Millions have given it a shot.'
