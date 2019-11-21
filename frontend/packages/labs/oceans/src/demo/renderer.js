@@ -19,8 +19,8 @@ import {
   SeaCreatureOceanObject
 } from './OceanObject';
 import aiBotClosed from '../../public/images/ai-bot/ai-bot-closed.png';
-import aiBotCheckmark from '../../public/images/ai-bot/ai-bot-checkmark.png';
-import aiBotX from '../../public/images/ai-bot/ai-bot-x.png';
+import aiBotYes from '../../public/images/ai-bot/ai-bot-yes.png';
+import aiBotNo from '../../public/images/ai-bot/ai-bot-no.png';
 import redScanner from '../../public/images/ai-bot/red-scanner.png';
 import greenScanner from '../../public/images/ai-bot/green-scanner.png';
 import blueScanner from '../../public/images/ai-bot/blue-scanner.png';
@@ -185,9 +185,9 @@ const loadAllBotImages = async () => {
   const imagesToLoad = {
     defaultBot: aiBotClosed,
     defaultScanner: blueScanner,
-    likeBot: aiBotCheckmark,
+    likeBot: aiBotYes,
     likeScanner: greenScanner,
-    dislikeBot: aiBotX,
+    dislikeBot: aiBotNo,
     dislikeScanner: redScanner
   };
   let imagePromises = [];
