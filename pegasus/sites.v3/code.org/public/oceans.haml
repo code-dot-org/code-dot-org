@@ -8,8 +8,8 @@ theme: responsive
   tutorial = {
     heading: "AI for Oceans",
     background_image: "/images/fit-1940/sw_landingpage.jpg",
-    left_heading: I18n.t(:starwars_javascript_title),
-    left_description: I18n.t(:starwars_javascript_description),
+    left_heading: "AI for Oceans",
+    left_description: "Provide training data to teach “A.I.” to recognize fish.",
     left_specs: I18n.t(:starwars_javascript_specs),
     left_button_link: '/api/hour/begin/starwars',
     left_button_text: I18n.t(:try_now),
@@ -20,14 +20,14 @@ theme: responsive
   resources = {
     left_link: "https://www.microsoft.com/en-us/store/locations/events-for-students",
     left_image: CDO.code_org_url("/images/fill-485x260/mc/minecraft_teacher_small1.jpg"),
-    left_heading: I18n.t(:hoc2018_mc_educators_box3_title),
-    left_description: I18n.t(:hoc2018_mc_educators_box3_desc),
-    left_button_text: I18n.t(:hoc2018_mc_educators_box3_button),
+    left_heading: "Teacher Resources",
+    left_description: "Lesson plans and activities to help you teach AI, machine learning, training data, and bias, while exploring ethical issues.",
+    left_button_text: "View Resources",
     right_link: "https://www.microsoft.com/en-us/store/locations/events-for-students",
     right_image: CDO.code_org_url("/images/fill-485x260/mc/minecraft_teacher_small1.jpg"),
-    right_heading: I18n.t(:hoc2018_mc_educators_box3_title),
-    right_description:  I18n.t(:hoc2018_mc_educators_box3_desc),
-    right_button_text: I18n.t(:hoc2018_mc_educators_box3_button),
+    right_heading: "CS For Good",
+    right_description:  "Resources to help students understand the role of  computer science in creating a more equitable and sustainable world.",
+    right_button_text: "View Resources",
   }
 
 :css
@@ -45,4 +45,4 @@ theme: responsive
 
   = view :resource_boxes, resources: resources
 
-  .clear
+.clear
