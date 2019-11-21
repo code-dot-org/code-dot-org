@@ -982,7 +982,7 @@ bn:
               name: ভূমিকা
             Nested Loops:
               name: নেষ্টেড লুপ
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Loops:
               name: চক্র
@@ -996,3 +996,11 @@ bn:
               name: চলকগুলো
             For Loops:
               name: ফর লুপ
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: শর্তযুক্ত
+        time4cs-control-unit-2:
+          stages:
+            Conditionals with Cards:
+              name: কার্ড সঙ্গে শর্ত
