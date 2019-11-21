@@ -21,7 +21,8 @@ import {
   faPlay,
   faPause,
   faBackward,
-  faForward
+  faForward,
+  faEraser
 } from '@fortawesome/free-solid-svg-icons';
 
 const styles = {
@@ -136,16 +137,18 @@ const styles = {
   },
   confirmationButtons: {
     display: 'inline-flex',
-    justifyContent: 'center',
-    padding: '15px',
+    justifyContent: 'space-between',
+    padding: '10px 0px',
     width: '100%'
   },
   confirmationYesButton: {
     marginLeft: 10,
-    backgroundColor: colors.green
+    backgroundColor: colors.red,
+    color: colors.white
   },
   confirmationNoButton: {
-    backgroundColor: colors.red
+    backgroundColor: colors.orange,
+    color: colors.white
   },
   activityIntroText: {
     position: 'absolute',
@@ -520,19 +523,19 @@ let ConfirmationDialog = class ConfirmationDialog extends React.Component {
             </div>
           </div>
           <div style={styles.confirmationButtons}>
+          <Button
+              onClick={this.props.onYesClick}
+              style={styles.confirmationYesButton}
+              className="dialog-button"
+            >
+              <FontAwesomeIcon icon={faEraser} /> Erase
+            </Button>
             <Button
               onClick={this.props.onNoClick}
               style={styles.confirmationNoButton}
               className="dialog-button"
             >
-              No
-            </Button>
-            <Button
-              onClick={this.props.onYesClick}
-              style={styles.confirmationYesButton}
-              className="dialog-button"
-            >
-              Yes
+              Cancel
             </Button>
           </div>
         </div>
