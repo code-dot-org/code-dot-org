@@ -262,10 +262,24 @@ de-DE:
       Dance Party 7_2019: Lasse den blauen Außerirdischen einen neuen Tanz beginnen,
         wenn der rosa Außerirdische ihn berührt. Verwenden Sie das Ereignis `wenn
         berührt`.
+      Dance_2019_01: Ziehen Sie den Block "Neuen Block erstellen" in den Arbeitsbereich,
+        und verbinden Sie ihn innerhalb des "Setup" -Blocks.
+      Dance_2019_02: Mit dem Block `wenn Pfeil nach oben  gedrückt ist` können Sie
+        Code ausführen, wenn Sie Pfeil nach oben drücken. Lassen Sie die  Tänzerin
+        klatschen, wenn Sie den Pfeil nach oben drücken, oder probieren Sie eine andere
+        Bewegung aus!
+      Dance_2019_03: Es ist Zeit für einen Tanzwettbewerb! Programmieren Sie jeden
+        Tänzer so, dass er sich bewegt, wenn Sie verschiedene Tasten drücken. Wählen
+        Sie für jeden Tänzer Ihre Lieblingsbewegung aus oder stellen Sie für etwas
+        völlig Unvorhersehbares "(Random)“ ein!
+      Dance_2019_04: Lassen Sie Ihren Tänzer nach dem vierten Takt mit einer neue
+        Bewegung beginnen.
       Dance_2019_05: Lassen Sie jetzt den Tänzer nach 6 Takten einen neuen Tanzschritt
         beginnen.
-      Dance_2019_08: Verwenden Sie den Block "Farbton einstellen", um den Farbton
-        eines Tänzers zu verändern.
+      Dance_2019_06: Erstellen Sie eine Gruppe von Ersatztänzern um den Haupttänzer
+        in der Mitte.
+      Dance_2019_07: Ändern Sie die Größe der Gruppe der Backup-Tänzer.
+      Dance_2019_09: Seien Sie bei diesen neuen Blöcken kreativ!
       Dance_2019_10: Grooven Sie los! Erstellen Sie einen eigenen Tanz und teilen
         Sie ihn mit Ihren Freunden.
       Dance_Party_01: Ziehen Sie den Block "Neuen Block erstellen" in den Arbeitsbereich,
@@ -798,6 +812,8 @@ de-DE:
         verschiedene Möglichkeiten, dieses Rätsel zu lösen, also viel Spaß. Die kürzest
         mögliche Lösung benötigt 6 Bausteine, aber verwende ruhig so viel du magst!
       course2_collector_loops_challenge2: Hole alle Schätze!
+      course2_maze_loops_challenge1: 'Versuche Schleifen zu verwenden, damit Scrat
+        seine Eicheln findet! '
       course2_maze_programming_challenge1: '"Das Schwein versteckt sich! Kannst du
         mir helfen, mich zurechtzufinden?"\_'
       course2_maze_programming_challenge2: Manchmal gibt es mehr als eine Lösung für
@@ -1185,12 +1201,24 @@ de-DE:
       courseC_artist_loops3a_2019: Jetzt füge eine zweiten Aufkleber hinzu!
       courseC_artist_loops4a_2019: Bearbeite Deinen Code so, dass du zwischen den
         beiden Aufklebern vorwärts springst.
+      courseC_artist_loopsPre1a: Zeit, die Linie abzuknicken!
+      courseC_artist_loopsPre1a_2018: Zeit, die Linie abzuknicken!
+      courseC_artist_loopsPre1a_2019: Zeit, die Linie abzuknicken!
+      courseC_artist_loopsPrePre1a: 'Bring den Künstler in die Mitte des Spielbereichs
+        und male dann eine Linie. '
+      courseC_artist_loopsPrePre1a_2018: 'Bring den Künstler in die Mitte des Spielbereichs
+        und male dann eine Linie. '
+      courseC_artist_loopsPrePre1a_2019: 'Bring den Künstler in die Mitte des Spielbereichs
+        und male dann eine Linie. '
       courseC_artist_prog5: 'Dieses Haus braucht ein Dach! Zeichne das Dreieck.  Hinweis:
         alle drei Seiten sind gleich lang.'
       courseC_artist_prog5_2018: 'Dieses Haus braucht ein Dach! Zeichne das Dreieck.  Hinweis:
         alle drei Seiten sind gleich lang.'
       courseC_artist_prog5_2019: 'Dieses Haus braucht ein Dach! Zeichne das Dreieck.  Hinweis:
         alle drei Seiten sind gleich lang.'
+      courseC_collector_loops_challenge2: Sammle mindestens **5** Schätze!
+      courseC_collector_loops_challenge2_2018: Sammle mindestens **5** Schätze!
+      courseC_collector_loops_challenge2_2019: Sammle mindestens **5** Schätze!
       courseC_collector_prog1: Spiel mit den Blöcken und schau, ob du Laurel helfen
         kannst, die Schätze einzusammeln.
       courseC_collector_prog1_2018: Spiel mit den Blöcken und schau, ob du Laurel
@@ -1254,6 +1282,12 @@ de-DE:
         \n\nZähle sie. \nWas fällt dir auf?"
       courseC_maze_debugging9_2019: Verwende die Bausteine in der Toolbox, um Ihr
         Programm zu erstellen. Bring den Vogel zum Schwein.
+      courseC_maze_loops_challenge1a: 'Versuche Schleifen zu verwenden, damit Scrat
+        seine Eicheln findet! '
+      courseC_maze_loops_challenge1a_2018: 'Versuche Schleifen zu verwenden, damit
+        Scrat seine Eicheln findet! '
+      courseC_maze_loops_challenge1a_2019: 'Versuche Schleifen zu verwenden, damit
+        Scrat seine Eicheln findet! '
       courseC_maze_programming1: Für diese Aufgabe musst du alle Blöcke zusammensetzen,
         auf 'Ausführen' klicken und zusehen, wie es läuft!
       courseC_maze_programming1_2018: Für diese Aufgabe musst du alle Blöcke zusammensetzen,
