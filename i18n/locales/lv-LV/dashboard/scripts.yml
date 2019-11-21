@@ -1379,7 +1379,7 @@ lv:
               name: Ievads
             Nested Loops:
               name: Cikls ciklā
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Loops:
               name: Cikli
@@ -1393,3 +1393,13 @@ lv:
               name: Mainīgie
             For Loops:
               name: '"par" cikli'
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Sazarojumi
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Pūļa ieguve
+            Conditionals with Cards:
+              name: nosacījumi ar kārtēm
