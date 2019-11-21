@@ -17,7 +17,8 @@ import {
   faPlay,
   faPause,
   faBackward,
-  faForward
+  faForward,
+  faTrash
 } from '@fortawesome/free-solid-svg-icons';
 
 const styles = {
@@ -71,6 +72,15 @@ const styles = {
     marginRight: '6%',
     marginTop: '2%'
   },
+  confirmationDialogBackground: {
+    backgroundColor: 'rgba(0,0,0,0.3)',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    borderRadius: 10
+  },
   confirmationDialog: {
     position: 'absolute',
     margin: '15%',
@@ -78,16 +88,27 @@ const styles = {
     height: '60%',
     zIndex: 1,
     backgroundColor: colors.white,
-    borderRadius: 10,
-    border: `2px solid ${colors.black}`
+    borderRadius: 5
   },
-  confirmationText: {
+  confirmationHeader: {
     position: 'absolute',
     fontSize: 32,
     lineHeight: '26px',
-    marginTop: '10%',
+    top: '5%',
     left: '50%',
     transform: 'translateX(-50%)'
+  },
+  confirmationText: {
+    position: 'absolute',
+    textAlign: 'center',
+    top: '25%',
+    height: '40%',
+    paddingTop: '5px',
+    backgroundColor: colors.lightGrey,
+    width: '80%',
+    left: '10%',
+    padding: '5px',
+    borderRadius: '5px'
   },
   confirmationButtons: {
     position: 'absolute',
@@ -137,7 +158,12 @@ const styles = {
   resetTrainingButton: {
     position: 'absolute',
     top: 10,
-    left: 10
+    right: 20,
+    cursor: 'pointer',
+    padding: '5px 7px',
+    borderRadius: '50%',
+    border: `2px solid ${colors.white}`,
+    color: colors.white
   },
   trainQuestionText: {
     position: 'absolute',
@@ -459,25 +485,31 @@ let ConfirmationDialog = class ConfirmationDialog extends React.Component {
 
   render() {
     return (
-      <div style={styles.confirmationDialog}>
-        <div style={styles.confirmationText} className="confirmation-text">
-          Are you sure?
-        </div>
-        <div style={styles.confirmationButtons}>
-          <Button
-            onClick={this.props.onNoClick}
-            style={styles.confirmationNoButton}
-            className="dialog-button"
-          >
-            No
-          </Button>
-          <Button
-            onClick={this.props.onYesClick}
-            style={styles.confirmationYesButton}
-            className="dialog-button"
-          >
-            Yes
-          </Button>
+      <div style={styles.confirmationDialogBackground}>
+        <div style={styles.confirmationDialog}>
+          <div style={styles.confirmationHeader} className="confirmation-text">
+            Are you sure?
+          </div>
+          <div style={styles.confirmationText}>
+            Erasing AI's data will permanently delete all training. Is that what
+            you want to do?
+          </div>
+          <div style={styles.confirmationButtons}>
+            <Button
+              onClick={this.props.onNoClick}
+              style={styles.confirmationNoButton}
+              className="dialog-button"
+            >
+              No
+            </Button>
+            <Button
+              onClick={this.props.onYesClick}
+              style={styles.confirmationYesButton}
+              className="dialog-button"
+            >
+              Yes
+            </Button>
+          </div>
         </div>
       </div>
     );
@@ -591,13 +623,13 @@ let Train = class Train extends React.Component {
     const noButtonText =
       state.appMode === AppMode.CreaturesVTrash ? 'No' : `Not ${state.word}`;
     const resetTrainingFunction = () => {
-      resetTraining();
+      resetTraining(state);
       setState({showConfirmationDialog: false});
     };
 
     return (
       <Body>
-        <Button
+        <span
           style={styles.resetTrainingButton}
           onClick={() => {
             setState({
@@ -606,8 +638,8 @@ let Train = class Train extends React.Component {
             });
           }}
         >
-          Reset Training
-        </Button>
+          <FontAwesomeIcon icon={faTrash} />
+        </span>
         <div style={styles.trainQuestionText}>{state.trainingQuestion}</div>
         <img style={styles.trainBot} src={aiBotClosed} />
         <div style={styles.counter}>{`Data Inputs: ${Math.min(
@@ -866,7 +898,7 @@ class Pond extends React.Component {
       state.appMode === AppMode.FishLong ? 'Play Again' : 'Continue';
     const nextButtonOnClick = () => {
       if (state.appMode === AppMode.FishLong) {
-        resetTraining();
+        resetTraining(state);
         toMode(Modes.Words);
       } else {
         if (state.onContinue) {
