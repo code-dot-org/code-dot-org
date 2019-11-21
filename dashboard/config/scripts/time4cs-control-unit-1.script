@@ -16,8 +16,20 @@ level 'courseC_maze_debugging7_2019', progression: 'Challenge', challenge: true
 level 'courseD_maze_ramp5a_2019', progression: 'Practice'
 level 'courseD_maze_ramp5c_2019', progression: 'Practice'
 
-stage 'Drawing with Loops', flex_category: 'csf_loops'
-level 'BrowardTestMarkdownLevel', progression: 'Test'
+stage 'Programming and Loops with the Artist', flex_category: 'csf_loops'
+level 'courseC_video_artist_2019', progression: 'Artist Intro with JR Hildebrande'
+level 'courseC_artist_prog1_2019', progression: 'Practice'
+level 'courseC_artist_prog2_2019', progression: 'Practice'
+level 'ramp_video_loopsArtist_2019', progression: 'Loops with the Artist'
+level 'courseC_artist_prog3_2019', progression: 'Practice'
+level 'courseC_artist_prog4_2019', progression: 'Practice'
+level 'courseC_artist_prog7_2019', progression: 'Challenge', challenge: true
+level 'ramp_artist_loops4_2019', progression: 'Practice'
+level 'ramp_artist_loops5_2019', progression: 'Practice'
+level 'ramp_artist_loops6_2019', progression: 'Practice'
+level 'ramp_artist_loops8_2019', progression: 'Challenge', challenge: true
+bonus 'courseC_artist_prog_challenge1_2019'
+bonus 'courseC_artist_prog_challenge2a_2019'
 
 stage 'Conditionals in Minecraft: Voyage Aquatic', flex_category: 'csf_conditionals'
 level 'CourseE_HOC 2018 Level_1', progression: 'Practice'
