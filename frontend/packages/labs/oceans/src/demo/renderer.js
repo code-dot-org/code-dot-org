@@ -6,7 +6,7 @@ import {
   backgroundPathForMode,
   finishMovement,
   currentRunTime,
-  $time,
+  $time
 } from './helpers';
 import colors from './colors';
 import {predictFish} from './models/predict';
@@ -27,6 +27,7 @@ import blueScanner from '../../public/images/ai-bot/blue-scanner.png';
 import {playSound} from './models/soundLibrary';
 import checkmarkIcon from '../../public/images/checkmark-icon.png';
 import banIcon from '../../public/images/ban-icon.png';
+import polaroidFrame from '../../public/images/polaroid-frame.png';
 
 let prevState = {};
 let currentModeStartTime = $time();
@@ -36,6 +37,7 @@ let botVelocity = 10;
 let botY, botYDestination;
 let currentPredictedClassId;
 let predictionImages = {};
+let polaroidFrameImage;
 
 /**
  * currentRawXOffset & lastRawXOffset track fish movement.
@@ -108,6 +110,7 @@ export const render = () => {
 
   switch (state.currentMode) {
     case Modes.Training:
+      drawPolaroidFrame(state.canvas);
       drawMovingFish(state);
       break;
     case Modes.Predicting:
@@ -367,6 +370,20 @@ const drawMovingFish = state => {
   }
 };
 
+const drawPolaroidFrame = canvas => {
+  if (polaroidFrameImage) {
+    const x = canvas.width / 2 - polaroidFrameImage.width / 2;
+    const y = canvas.height / 2 - polaroidFrameImage.height / 2 + 20;
+
+    canvas.getContext('2d').drawImage(polaroidFrameImage, x, y);
+  } else {
+    loadImage(polaroidFrame).then(img => {
+      polaroidFrameImage = img;
+      drawPolaroidFrame(canvas);
+    });
+  }
+};
+
 const drawPolaroid = (ctx, x, y) => {
   const rectSize = constants.fishFrameSize;
   const xDiff = Math.abs(rectSize - constants.fishCanvasWidth) / 2;
@@ -374,6 +391,7 @@ const drawPolaroid = (ctx, x, y) => {
   const yDiff = Math.abs(rectSize - constants.fishCanvasHeight) / 2;
   const adjustedY = y - yDiff;
 
+  // White outer polaroid frame
   DrawRect(
     adjustedX - 10,
     adjustedY - 10,
@@ -381,6 +399,7 @@ const drawPolaroid = (ctx, x, y) => {
     rectSize + 60,
     colors.white
   );
+  // Dark grey inner polaroid frame (where item is displayed)
   DrawRect(adjustedX, adjustedY, rectSize, rectSize, colors.darkGrey);
 };
 
@@ -414,7 +433,6 @@ const drawPrediction = (ctx, x, y, classId) => {
   }
 };
 
-
 let lastScannerImg = null;
 
 // Draw AI bot + scanner to canvas for predict mode.
@@ -439,9 +457,9 @@ const drawPredictBot = state => {
 
   if (scannerImg !== lastScannerImg) {
     if (scannerImg === botImages.likeScanner) {
-      playSound("sortyes");
+      playSound('sortyes');
     } else if (scannerImg === botImages.dislikeScanner) {
-      playSound("sortno");
+      playSound('sortno');
     }
     lastScannerImg = scannerImg;
   }
