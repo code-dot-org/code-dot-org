@@ -80,6 +80,9 @@ class ScriptDSL < BaseDSL
 
   def stage(name, properties = {})
     if @stage
+      if @stages.any? {|s| s[:stage] == @stage}
+        raise "a stage named \"#{@stage}\" already exists"
+      end
       @stages << {
         stage: @stage,
         scriptlevels: @scriptlevels,
