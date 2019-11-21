@@ -3,7 +3,7 @@ pt-PT:
   data:
     dsls:
       2-3 Algorithms Multi 1:
-        title: Múltipla Escolha
+        title: Escolha múltipla
         content1: "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
         questions:
         - text: Escolha um algoritmo para a imagem fornecida.
@@ -19,7 +19,7 @@ pt-PT:
         - text: Comece com um quadrado<br/>Coloque um triângulo abaixo do quadrado<br/>Coloque
             um paralelogramo à direita do triângulo
       2-3 Algorithms Multi 2:
-        title: Múltipla Escolha
+        title: Escolha múltipla
         content1: Comece com um triângulo<br/>Coloque um quadrado abaixo do triângulo<br/>Coloque
           outro triângulo abaixo do quadrado
         questions:
@@ -60,7 +60,7 @@ pt-PT:
         - text: "/script_assets/2-3_images/unplugged/binary_1_a2.png"
         - text: "/script_assets/2-3_images/unplugged/binary_1_a4.png"
       2-3 Conditionals Multi 1:
-        title: Múltipla Escolha
+        title: Escolha múltipla
         content1: "/script_assets/2-3_images/unplugged/conditionals_1_q.png"
         questions:
         - text: De acordo com as regras do jogo, qual conjunto de cartas foi marcado
@@ -72,7 +72,7 @@ pt-PT:
           correct: true
         - text: "/script_assets/2-3_images/unplugged/conditionals_1_a4.png"
       2-3 Getting Loopy Multi 1:
-        title: Múltipla Escolha
+        title: Escolha múltipla
         content1: "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png"
         questions:
         - text: Como simplificarias esta sequência sem usares ciclos?
@@ -94,7 +94,7 @@ pt-PT:
         - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
         - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
       2-3 Graph Paper Multi 1:
-        title: Múltipla Escolha
+        title: Escolha múltipla
         content1: "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
         questions:
         - text: Que programa cria esta imagem?
@@ -119,7 +119,7 @@ pt-PT:
         title: Labirinto - Pergunta de escolha múltipla
         content1: "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500"
         questions:
-        - {}
+        - text: Que conjunto de blocos me leva ao porco?
         answers:
         - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png"
         - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png"
@@ -127,7 +127,7 @@ pt-PT:
         - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png"
         - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png"
       2-3 Relay Programming Multi 1:
-        title: Múltipla Escolha
+        title: Escolha múltipla
         content1: "/script_assets/2-3_images/unplugged/relay_programming_1_q.png"
         questions:
         - {}
@@ -137,7 +137,7 @@ pt-PT:
         - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png"
           correct: true
       2-3 Relay Programming Multi 2:
-        title: Múltipla Escolha
+        title: Escolha múltipla
         questions:
         - text: Qual combinação entre imagem e programa não contém erros?
         answers:
@@ -169,6 +169,7 @@ pt-PT:
         - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png"
         - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png"
       2-3 artist loops match 1:
+        title: Repetições do Artista Associação 1
         content2: Associe o loop à forma
         questions:
         - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png"
@@ -285,7 +286,7 @@ pt-PT:
         - text: "<h4>Adiciona o resultado do jogador 1 à pontuação total</h4>"
         - text: "<h4>Compara a pontuação dos jogadores para ver quem vence</h4>"
       4-5 Algorithms Multi 1:
-        title: Múltipla Escolha
+        title: Escolha múltipla
         questions:
         - text: Qual desses itens é o mais difícil para ser descrito com um algoritmo?
         answers:
@@ -309,7 +310,7 @@ pt-PT:
         - {}
         - {}
       4-5 Computational Thinking Multi 1:
-        title: Múltipla Escolha
+        title: Escolha múltipla
         content1: "? Apresentamos aqui três frases. Qual dos modelos abaixo é a abstração
           correta para que as três aceitem o mesmo padrão do modelo?"
         questions:
@@ -322,7 +323,7 @@ pt-PT:
         - text: _____ é uma _____ _____.
         - text: Eugene é uma cidade _____.
       4-5 Crowdsourcing Multi 1:
-        title: Múltipla Escolha
+        title: Escolha múltipla
         questions:
         - text: Qual dessas figuras representa melhor o crowdsourcing?
         answers:
@@ -330,7 +331,7 @@ pt-PT:
         - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png"
           correct: true
       4-5 Crowdsourcing Multi 2:
-        title: Múltipla Escolha
+        title: Escolha múltipla
         questions:
         - text: Qual dessas atividades seria melhor para praticar crowdsourcing?
         answers:
@@ -340,7 +341,7 @@ pt-PT:
         - text: Penteando o cabelo
         - text: Lavando o rosto
       4-5 Digital Footprint Multi 1:
-        title: Múltipla Escolha
+        title: Escolha múltipla
         questions:
         - text: Qual é a única informação, de entre as seguintes, que podes partilhar
             na Internet?
@@ -351,7 +352,7 @@ pt-PT:
         - text: A tua morada
         - text: O número do cartão de crédito dos teus pais
       4-5 Internet Multi 1:
-        title: Múltipla Escolha
+        title: Escolha múltipla
         content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
         questions:
         - text: Quando você tenta se conectar à code.org, para qual endereço IP o
@@ -363,7 +364,7 @@ pt-PT:
         - text: 54.243.71.82
           correct: true
       4-5 Internet Multi 2:
-        title: Múltipla Escolha
+        title: Escolha múltipla
         content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
         questions:
         - text: Se o DNS o mandou para a página com endereço IP 100.42.50.110, em
@@ -374,7 +375,7 @@ pt-PT:
         - {}
         - {}
       4-5 Songwriting Multi 1:
-        title: Múltipla Escolha
+        title: Escolha múltipla
         questions:
         - text: Qual é a maior parte desta música que consegues definir como sendo
             o refrão de forma a que se repita cada vez que a música for chamada?
@@ -404,7 +405,7 @@ pt-PT:
         - text: "<h4>STAR</h4>"
         - text: "<h4>RAMP</h4>"
       4-5 Suncatchers Multi 1:
-        title: Múltipla Escolha
+        title: Escolha múltipla
         questions:
         - text: Qual dos programas abaixo <em>não</em> realiza a mesma sequência exata
             do Programa 1?
@@ -1000,27 +1001,6 @@ pt-PT:
           e Agudo\n</h2>\n\n<img src=\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\">\n\n</div>\n\n<div
           style=\"float: left; margin: 10px\">\n<a href=\"7\">\n<h2>\nAcelera-a, Abranda-a\n</h2>\n\n<img
           src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\">\n\n</div>\n"
-      Dance_Party_extras_intro_2019:
-        markdown: "# Continua a dançar!\n\nPara a parte 2, tu vais criar o teu próprio
-          projeto. Não há quebra-cabeças aqui - em vez disso, há vários projetos que
-          mostram maneiras diferentes de fazer festas de dança mais complexas. \n\nPodes
-          fazer esses níveis em qualquer _ordem_. Dá uma vista de olhos de como é
-          que algo foi feito num nível anterior ou combina conceitos entre os projetos.
-          Experimenta-os a todos, escolhe o teu favorito e dedica o teu tempo a trabalhar
-          a esse projeto para que se torne teu.\n\n<a class=\"btn btn-large btn-primary
-          next-stage submitButton pull-right\">Continuar</a>\n\n<div class=\"clearfix\">\n\n<div
-          style=\"float: left; margin: 10px\">\n<a href=\"2\">\n<h2>\nPonham-se em
-          formação\n</h2>\n\n<img src=\"https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif\">\n\n</div>\n\n<div
-          style=\"float: left; margin: 10px\">\n<a href=\"3\">\n<h2>\nPara onde é
-          que eles foram?\n</h2>\n\n<img src=\"https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif\">\n\n</div>\n\n<div
-          style=\"float: left; margin: 10px\">\n<a href=\"4\">\n<h2>\nMaltas da Dança\n</h2>\n\n<img
-          src=\"https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif\">\n\n</div>\n\n<div
-          style=\"float: left; margin: 10px\">\n<a href=\"5\">\n<h2>\nSemínimas\n</h2>\n\n<img
-          src=\"https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif\">\n\n</div>\n\n<div
-          style=\"float: left; margin: 10px\">\n<a href=\"6\">\n<h2>\nGrave, Médio
-          e Agudo\n</h2>\n\n<img src=\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\">\n\n</div>\n\n<div
-          style=\"float: left; margin: 10px\">\n<a href=\"7\">\n<h2>\nAcelera-a, Abranda-a\n</h2>\n\n<img
-          src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\">\n\n</div>\n"
       Internet Simulator Setup:
         content1: descrição
       Internet Simulator Setup 2:
@@ -1029,7 +1009,7 @@ pt-PT:
       Internet Simulator Setup 3:
         content1: descrição
       K-1 Artist 1 Multi 1:
-        title: Múltipla Escolha
+        title: Escolha múltipla
         questions:
         - text: Quais blocos resolvem o desafio?
         answers:
@@ -1038,7 +1018,7 @@ pt-PT:
         - {}
         - {}
       K-1 Artist 1 Multi 2:
-        title: Múltipla Escolha
+        title: Escolha múltipla
         questions:
         - text: Quais blocos formam o quadrado?
         answers:
@@ -1060,7 +1040,7 @@ pt-PT:
         - text: "/script_assets/k_1_images/artist_images/large_rectangle.png"
         - text: "/script_assets/k_1_images/artist_images/large_triangle.png"
       K-1 Bee 1 Multi 1:
-        title: Múltipla Escolha
+        title: Escolha múltipla
         questions:
         - text: Quanto néctar isso representa?
         answers:
@@ -1069,7 +1049,7 @@ pt-PT:
         - {}
         - text: "/script_assets/k_1_images/bee_images/4_gnectar.png"
       K-1 Bee 1 Multi 2:
-        title: Múltipla Escolha
+        title: Escolha múltipla
         questions:
         - text: Quanto néctar isso representa?
         answers:
@@ -1105,7 +1085,7 @@ pt-PT:
         - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
         - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
       K-1 Digital Footprint Multi 1:
-        title: Múltipla Escolha
+        title: Escolha múltipla
         questions:
         - text: Qual animal tem o rastro digital que o coloca <strong>mais em risco</strong>?
         answers:
@@ -1113,7 +1093,7 @@ pt-PT:
         - {}
         - correct: true
       K-1 Getting Loopy Multi 1:
-        title: Múltipla Escolha
+        title: Escolha múltipla
         questions:
         - text: Como simplificarias esta sequência sem usares ciclos?
         answers:
@@ -1121,7 +1101,7 @@ pt-PT:
         - {}
         - {}
       K-1 Happy Maps Multi 1:
-        title: Múltipla Escolha
+        title: Escolha múltipla
         content1: "/script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png"
         questions:
         - text: Qual seta leva o Flurb ao tesouro?
@@ -1131,7 +1111,7 @@ pt-PT:
         - text: "/script_assets/k_1_images/unplugged_images/left.png"
         - text: "/script_assets/k_1_images/unplugged_images/right.png"
       K-1 Keep it Private Multi 1:
-        title: Múltipla Escolha
+        title: Escolha múltipla
         questions:
         - text: Quais informações você <strong>não</strong> deve compartilhar online?
         answers:
@@ -1139,7 +1119,7 @@ pt-PT:
         - {}
         - {}
       K-1 Maze Debugging Multi 1:
-        title: Múltipla Escolha
+        title: Escolha múltipla
         questions:
         - text: Qual opção deve ser o bloco final?
         answers:
@@ -1149,7 +1129,7 @@ pt-PT:
         - text: "/script_assets/k_1_images/move_blocks/EN.png"
         - text: "/script_assets/k_1_images/move_blocks/WW.png"
       K-1 Maze Loops Multi 1:
-        title: Múltipla Escolha
+        title: Escolha múltipla
         questions:
         - text: Qual bloco repetir é o mesmo?
         answers:
@@ -1158,7 +1138,7 @@ pt-PT:
         - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
         - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
       K-1 Maze Loops Multi 2:
-        title: Múltipla Escolha
+        title: Escolha múltipla
         questions:
         - text: Escolha o bloco de repetição correto.
         answers:
@@ -1191,7 +1171,7 @@ pt-PT:
           correct: true
         - text: "/script_assets/k_1_images/move_blocks/EN.png"
       K-1 Move It Multi 1:
-        title: Múltipla Escolha
+        title: Escolha múltipla
         content1: "/script_assets/k_1_images/unplugged_images/move_it_2_q1.png"
         questions:
         - text: Qual algoritmo leva o Flurb até as flores?
@@ -1201,7 +1181,7 @@ pt-PT:
         - text: "/script_assets/k_1_images/unplugged_images/left.png"
         - {}
       K-1 Plant a Seed Multi 1:
-        title: Múltipla Escolha
+        title: Escolha múltipla
         content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png"
         questions:
         - text: Qual passo deve ficar no começo desse algoritmo?
@@ -1211,7 +1191,7 @@ pt-PT:
         - text: "/script_assets/k_1_images/unplugged_images/dirty-teeth.png"
           correct: true
       K-1 Plant a Seed Multi 2:
-        title: Múltipla Escolha
+        title: Escolha múltipla
         content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png"
         questions:
         - text: Qual passo deve preencher o espaço em branco para esse algoritmo?
@@ -1221,7 +1201,7 @@ pt-PT:
           correct: true
         - text: "/script_assets/k_1_images/unplugged_images/water-pot.png"
       K-1 Word Search Multi 1:
-        title: Múltipla Escolha
+        title: Escolha múltipla
         content1: "/script_assets/k_1_images/search_images/move.png, 450"
         questions:
         - text: Quais blocos formam a palavra "MOVE"?
@@ -1231,7 +1211,7 @@ pt-PT:
           correct: true
         - text: "/script_assets/k_1_images/move_blocks/ESSS.png"
       K-1 Word Search Multi 3:
-        title: Múltipla Escolha
+        title: Escolha múltipla
         content1: "/script_assets/k_1_images/search_images/square.png, 700"
         questions:
         - text: Qual palavra é formada?

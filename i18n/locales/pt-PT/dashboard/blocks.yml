@@ -2,6 +2,14 @@
 pt:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: tudo
+          MOVE1:
+            MOVES.Rest: Nenhum
+          MOVE2:
+            MOVES.Rest: Nenhum
       Dancelab_atTimestamp:
         options:
           UNIT:
@@ -243,7 +251,6 @@ pt:
         options:
           STRING:
             '"diamond"': diamante
-            '"q"': q
             '"x"': x
             '"y"': 'y'
             '"1"': '1'
