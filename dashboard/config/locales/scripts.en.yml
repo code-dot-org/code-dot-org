@@ -9701,7 +9701,7 @@ en:
               name: new stage
             Dance Party:
               name: Dance Party
-          title: Dance Party
+          title: Dance Party (2018)
           description_audience: ''
           description_short: Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!
           description: Code your own dance party to share with your friends!
@@ -9817,7 +9817,7 @@ en:
           stages:
             Dance Party - Go Further:
               name: Dance Party - Go Further
-          title: Keep On Dancing
+          title: Keep On Dancing (2018)
           description_audience: ''
           description_short: Go beyond the Hour of Code with this follow-up activity to Code.org's Dance Party tutorial.
           description: Go beyond the first hour with extended project ideas.
@@ -13451,7 +13451,7 @@ en:
           stages:
             Dance Party:
               name: Dance Party
-          title: Dance Party (2019 Remix)
+          title: Dance Party (2019)
           description_audience: ''
           description_short: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
           description: Code your own dance party to share with your friends!
@@ -13556,7 +13556,7 @@ en:
             End of Course projects:
               name: End of Course projects
         dance-extras-2019:
-          title: Keep On Dancing
+          title: Keep On Dancing (2019)
           description: Go beyond the first hour with extended project ideas.
           description_short: Go beyond the Hour of Code with this follow-up activity to Code.org's Dance Party tutorial.
           description_audience: ''
@@ -13583,6 +13583,8 @@ en:
               name: The Value of Privacy
             'Project: Innovation Simulation Part 3':
               name: 'Project: Innovation Simulation Part 3'
+            Protecting Data Part 1:
+              name: Protecting Data Part 1
           title: Cybersecurity and Global Impacts
           description_audience: ''
           description_short: ''
