@@ -141,7 +141,8 @@ export const generateColorPalette = (colors, bodyIndex = null) => {
   return {
     bodyRgb: bodyColor.rgb,
     finRgb: colors[finIndex].rgb,
-    knnData: bodyColor.knnData
+    knnData: bodyColor.knnData,
+    fieldInfos: bodyColor.fieldInfos
   };
 };
 
