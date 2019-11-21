@@ -169,7 +169,7 @@ const styles = {
   mediaControl: {
     cursor: 'pointer',
     margin: '0 20px',
-    fontSize: 42,
+    fontSize: 30,
     color: colors.white,
     display: 'flex',
     alignItems: 'center',
