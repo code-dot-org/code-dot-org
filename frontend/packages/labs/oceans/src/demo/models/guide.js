@@ -392,7 +392,7 @@ const guides = [
     id: 'fishlong-pond-init4',
     text: '...or Play Again.',
     when: {appMode: AppMode.FishLong, currentMode: Modes.Pond},
-    arrow: 'LowerRight'
+    arrow: 'LowishRight'
   }
 ];
 
