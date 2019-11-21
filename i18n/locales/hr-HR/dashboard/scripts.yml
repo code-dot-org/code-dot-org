@@ -1486,7 +1486,7 @@ hr:
               name: Uvod
             Nested Loops:
               name: Ugniježđene petlje
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Loops:
               name: Petlje
@@ -1500,3 +1500,13 @@ hr:
               name: Varijable
             For Loops:
               name: Petlja brojača
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Uvjeti
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Uvjeti s kartama
