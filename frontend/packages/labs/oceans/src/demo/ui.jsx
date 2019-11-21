@@ -111,7 +111,7 @@ const styles = {
   },
   trainButtons: {
     position: 'absolute',
-    top: '80%',
+    top: '83%',
     width: '100%',
     display: 'flex',
     justifyContent: 'center'
@@ -121,12 +121,18 @@ const styles = {
     ':hover': {
       backgroundColor: colors.green,
       color: colors.white
+    },
+    ':focus': {
+      outline: 'none'
     }
   },
   trainButtonNo: {
     ':hover': {
       backgroundColor: colors.red,
       color: colors.white
+    },
+    ':focus': {
+      outline: 'none'
     }
   },
   trainBot: {
@@ -707,8 +713,8 @@ class Pond extends React.Component {
     const pondHeight = boundingRect.height;
 
     // Scale the click to the pond canvas dimensions.
-    const normalizedClickX = clickX / pondWidth * constants.canvasWidth;
-    const normalizedClickY = clickY / pondHeight * constants.canvasHeight;
+    const normalizedClickX = (clickX / pondWidth) * constants.canvasWidth;
+    const normalizedClickY = (clickY / pondHeight) * constants.canvasHeight;
 
     if (state.pondFishBounds) {
       let fishClicked = false;
@@ -770,7 +776,7 @@ class Pond extends React.Component {
     };
 
     return (
-      <Body onClick={(e) => this.onPondClick(e)}>
+      <Body onClick={e => this.onPondClick(e)}>
         <img style={styles.pondBot} src={aiBotClosed} />
         {state.canSkipPond && (
           <div>
