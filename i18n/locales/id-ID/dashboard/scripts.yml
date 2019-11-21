@@ -4972,6 +4972,8 @@ id:
               name: Hak milik intelektual
             Binary Numbers:
               name: Bilangan Biner
+            Representing Information:
+              name: Menunjukkan informasi
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -5092,13 +5094,15 @@ id:
           stages:
             Routers and Redundancy:
               name: Router dan Kualitas
+            The Need for Addressing:
+              name: Dibutuhkan untuk Pengalamatan
         peru-2019:
           stages:
             Introduction:
               name: Pendahuluan
             Nested Loops:
               name: Perulangan bercabang
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Getting Started:
               name: Dapat Dimulai
@@ -5139,3 +5143,13 @@ id:
         dance-extras-2019:
           title: Tetaplah berdansa
           description: Lewatilah jam pertama dengan ide ide proyek yang luas.
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Kondisi
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Sumber kerumunan
+            Conditionals with Cards:
+              name: Bersyarat dengan kartu
