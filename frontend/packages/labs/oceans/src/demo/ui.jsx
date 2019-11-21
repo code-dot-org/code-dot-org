@@ -52,6 +52,24 @@ const styles = {
     backgroundColor: colors.orange,
     color: colors.white
   },
+  finishButton: {
+    backgroundColor: colors.orange,
+    color: colors.white
+  },
+  playAgainButton: {
+    backgroundColor: colors.yellowGreen,
+    color: colors.white,
+    marginBottom: 10
+  },
+  rightButtons: {
+    position: 'absolute',
+    bottom: 10,
+    right: 10,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'right',
+    minWidth: 160
+  },
   backButton: {
     position: 'absolute',
     bottom: 10,
@@ -111,7 +129,7 @@ const styles = {
   },
   trainButtons: {
     position: 'absolute',
-    top: '80%',
+    top: '83%',
     width: '100%',
     display: 'flex',
     justifyContent: 'center'
@@ -121,12 +139,18 @@ const styles = {
     ':hover': {
       backgroundColor: colors.green,
       color: colors.white
+    },
+    ':focus': {
+      outline: 'none'
     }
   },
   trainButtonNo: {
     ':hover': {
       backgroundColor: colors.red,
       color: colors.white
+    },
+    ':focus': {
+      outline: 'none'
     }
   },
   trainBot: {
@@ -145,19 +169,19 @@ const styles = {
   mediaControl: {
     cursor: 'pointer',
     margin: '0 20px',
-    fontSize: 42,
-    color: colors.grey,
+    fontSize: 30,
+    color: colors.white,
     display: 'flex',
     alignItems: 'center',
     ':hover': {
       color: colors.orange
     },
     ':active': {
-      color: colors.black
+      color: colors.orange
     }
   },
   selectedControl: {
-    color: colors.black
+    color: colors.orange
   },
   timeScale: {
     width: 40,
@@ -768,18 +792,6 @@ class Pond extends React.Component {
 
   render() {
     const state = getState();
-    const nextButtonText =
-      state.appMode === AppMode.FishLong ? 'Play Again' : 'Continue';
-    const nextButtonOnClick = () => {
-      if (state.appMode === AppMode.FishLong) {
-        resetTraining();
-        toMode(Modes.Words);
-      } else {
-        if (state.onContinue) {
-          state.onContinue();
-        }
-      }
-    };
 
     return (
       <Body onClick={e => this.onPondClick(e)}>
@@ -814,17 +826,42 @@ class Pond extends React.Component {
         )}
         {state.canSkipPond && (
           <div>
-            <Button style={styles.continueButton} onClick={nextButtonOnClick}>
-              {nextButtonText}
-            </Button>
-            <Button
-              style={styles.backButton}
-              onClick={() => {
-                toMode(Modes.Training);
-              }}
-            >
-              Train More
-            </Button>
+            {state.appMode === AppMode.FishLong ? (
+              <div style={styles.rightButtons}>
+                <Button
+                  style={styles.playAgainButton}
+                  onClick={() => {
+                    resetTraining();
+                    toMode(Modes.Words);
+                  }}
+                >
+                  Play Again
+                </Button>
+                <Button
+                  style={styles.finishButton}
+                  onClick={state.onContinue()}
+                >
+                  Finish
+                </Button>
+              </div>
+            ) : (
+              <Button
+                style={styles.continueButton}
+                onClick={() => toMode(Modes.Predicting)}
+              >
+                Continue
+              </Button>
+            )}
+            <div>
+              <Button
+                style={styles.backButton}
+                onClick={() => {
+                  toMode(Modes.Training);
+                }}
+              >
+                Train More
+              </Button>
+            </div>
           </div>
         )}
       </Body>
