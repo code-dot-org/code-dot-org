@@ -16,6 +16,8 @@ social:
   @header["social"]["og:description"] = hoc_s(:social_hoc2018_global_movement)
   @header["social"]["og:image"] = 'https://' + request.host + '/images/social-media/code-2018-creativity.png'
 
+  launch_ai = DCDO.get('launch_ai', nil)
+
 %link{href: "/css/student.css", rel: "stylesheet"}
 %link{href: "/css/tools.css", rel: "stylesheet"}
 %link{href: "/shared/css/course-blocks.css", rel: "stylesheet", type: "text/css"}
@@ -25,21 +27,52 @@ social:
 
 = I18n.t(:hoc_overview_subtitle)
 
-.full-resource-block{style: "margin-top: 20px;"}
-  %a{href: "/dance"}
-    %img.full-resource-image{src: "/images/dance_party_2019.gif"}
-  .tutorial-info{style: "padding: 30px;"}
-    %span
-      %h2.resource-title= I18n.t(:hoc_overview_dance_title)
-      = I18n.t(:hoc_overview_dance_2019_subtitle)
-    %span
-      %a{href: "/dance"}
-        %button.tutorial-info-start.tutorial-gray= I18n.t(:go)
-      .tutorial-info-guide
-        %a{href: "https://curriculum.code.org/hoc/plugged/8/"}
-          = I18n.t(:hoc_overview_view_teacher_guide)
+- if launch_ai && request.language == 'en'
+  .tile-container-responsive{style: "margin-top: 20px;"}
+    .col-50
+      .tutorial-tile
+        %a{href: CDO.studio_url("/s/applab-intro/reset")}
+          %img.tutorial-tile-img{src: "/images/dance_party_2019.gif"}
+        .tutorial-info
+          %span
+            %h3.tutorial-info-h= I18n.t(:applab_tile_title)
+            .smalltext= I18n.t(:applab_tile_subtitle)
+          %span
+            %a{href: CDO.studio_url("/s/applab-intro/reset")}
+              %button.tutorial-info-start.tutorial-gray= I18n.t(:go)
+            .tutorial-info-guide
+              %a{href: "https://curriculum.code.org/hoc/plugged/7/"}= I18n.t(:applab_tile_teacher_guide)
 
-.tile-container-responsive{style: "margin-top: 20px;"}
+    .col-50
+      .tutorial-tile
+        %a{href: "/dance"}
+          %img.tutorial-tile-img{src: "/images/dance_party_2019.gif"}
+        .tutorial-info
+          %span
+            %h3.tutorial-info-h= I18n.t(:hoc_overview_dance_title)
+            .smalltext= I18n.t(:hoc_overview_dance_2019_subtitle)
+          %span
+            %a{href: "/dance"}
+              %button.tutorial-info-start.tutorial-gray= I18n.t(:go)
+            .tutorial-info-guide
+              %a{href: "https://curriculum.code.org/hoc/plugged/8/"}
+                = I18n.t(:hoc_overview_view_teacher_guide)
+- else
+  .full-resource-block{style: "margin-top: 20px; margin-bottom: 20px;"}
+    %a{href: "/dance"}
+      %img.full-resource-image{src: "/images/dance_party_2019.gif"}
+    .tutorial-info{style: "padding: 30px;"}
+      %span
+        %h2.resource-title= I18n.t(:hoc_overview_dance_title)
+        = I18n.t(:hoc_overview_dance_2019_subtitle)
+      %span
+        %a{href: "/dance"}
+          %button.tutorial-info-start.tutorial-gray= I18n.t(:go)
+        .tutorial-info-guide
+          %a{href: "https://curriculum.code.org/hoc/plugged/8/"}
+            = I18n.t(:hoc_overview_view_teacher_guide)
+
+.tile-container-responsive
   = view :top_hoc_tutorials
 .clear
 
