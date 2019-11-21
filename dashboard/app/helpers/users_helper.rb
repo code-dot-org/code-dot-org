@@ -7,6 +7,64 @@ module UsersHelper
   include ApplicationHelper
   include SharedConstants
 
+  # Move section membership and (for teachers) section ownership from source_user to
+  # destination_user and destroy source_user.
+  # Returns a boolean - true if all steps were successful, false otherwise.
+  def move_sections_and_destroy_source_user(source_user:, destination_user:, takeover_type:, provider:)
+    # No-op if source_user is nil
+    return true unless source_user.present?
+
+    firehose_params = {
+      source_user: source_user,
+      destination_user: destination_user,
+      type: takeover_type,
+      provider: provider,
+    }
+
+    if source_user.has_activity?
+      # We don't want to destroy an account with progress. Log to Redshift and return false.
+      firehose_params[:type] = "cancelled-#{takeover_type}"
+      firehose_params[:error] = "Attempted takeover for account with progress."
+      log_account_takeover_to_firehose(firehose_params)
+      return false
+    end
+
+    ActiveRecord::Base.transaction do
+      # Move over sections that source_user follows
+      Follower.where(student_user_id: source_user.id).each do |followed|
+        followed.update!(student_user_id: destination_user.id)
+      end
+
+      # If both users are teachers, transfer ownership of sections
+      if source_user.teacher? && destination_user.teacher?
+        Section.where(user: source_user).each do |owned_section|
+          owned_section.update! user: destination_user
+        end
+      end
+
+      source_user.destroy!
+    end
+
+    log_account_takeover_to_firehose(firehose_params)
+    true
+  rescue
+    false
+  end
+
+  def log_account_takeover_to_firehose(source_user:, destination_user:, type:, provider:, error: nil)
+    FirehoseClient.instance.put_record(
+      study: 'user-soft-delete-audit-v2',
+      event: "#{type}-account-takeover", # Silent or OAuth takeover
+      user_id: source_user.id, # User account being "taken over" (deleted)
+      data_int: destination_user.id, # User account after takeover
+      data_string: provider, # OAuth provider
+      data_json: {
+        user_type: destination_user.user_type,
+        error: error,
+      }.to_json
+    )
+  end
+
   # Summarize a user and their progress within a certain script.
   # Example return value:
   # {
