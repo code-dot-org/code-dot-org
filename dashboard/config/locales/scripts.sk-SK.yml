@@ -4946,7 +4946,7 @@ sk:
             Dance Party:
               name: Tanečná Párty
           description: Nakóduj si vlastnú Tanečnú párty a zdieľaj ju s kamarátmi!
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Getting Started:
               name: Začíname
@@ -4978,3 +4978,49 @@ sk:
           stages:
             Dance Party - Go Further:
               name: Tanečná párty - Pokračuj ďalej
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Podmienky
+            'Events: The Big Event':
+              name: 'Udalosti: Veľká udalosť'
+            Alien Dance Party with Sprite Lab:
+              name: Mimozemská tanečná párty so Sprite Labom
+            Private and Personal Information:
+              name: Súkromné a osobné údaje
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Podmienky s kartami
+            Nested Loops in Bee:
+              name: Vnorené cykly s včelou
+            Nested Loops in Artist:
+              name: Vnorené cykly s Umelcom
+            Nested Loops in Frozen:
+              name: Vnorené cykly vo Frozen
+            'Functions: Songwriting':
+              name: 'Funkcie: Písanie pesničiek'
+            Functions in Minecraft:
+              name: Funkcie v Minecrafte
+            Functions in Harvester:
+              name: Funkcie so Záhradníčkou
+            Functions in Artist:
+              name: Funkcie s Umelcom
+            End of Course Project:
+              name: Záverečný projekt
+        time4cs-experiment-unit-2:
+          stages:
+            Nested Loops in Maze:
+              name: Vnorené cykly v bludisku
+            Fancy Shapes using Nested Loops:
+              name: Ornamenty pomocou vnorených cyklov
+            Nested Loops with Frozen:
+              name: Vnorené cykly s Frozen
+            Functions in Minecraft:
+              name: Funkcie v Minecrafte
+            Functions with Harvester:
+              name: Funkcie so Záhradníčkou
+            Functions with Artist:
+              name: Funkcie s Umelcom
