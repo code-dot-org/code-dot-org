@@ -19,13 +19,17 @@ import {
   SeaCreatureOceanObject
 } from './OceanObject';
 import aiBotClosed from '../../public/images/ai-bot/ai-bot-closed.png';
-import aiBotCheckmark from '../../public/images/ai-bot/ai-bot-checkmark.png';
-import aiBotX from '../../public/images/ai-bot/ai-bot-x.png';
+import aiBotYes from '../../public/images/ai-bot/ai-bot-yes.png';
+import aiBotNo from '../../public/images/ai-bot/ai-bot-no.png';
 import redScanner from '../../public/images/ai-bot/red-scanner.png';
 import greenScanner from '../../public/images/ai-bot/green-scanner.png';
 import blueScanner from '../../public/images/ai-bot/blue-scanner.png';
 import {playSound} from './models/soundLibrary';
+import bluePredictionFrame from '../../public/images/blue-prediction-frame.png';
+import questionIcon from '../../public/images/question-icon.png';
+import greenPredictionFrame from '../../public/images/green-prediction-frame.png';
 import checkmarkIcon from '../../public/images/checkmark-icon.png';
+import redPredictionFrame from '../../public/images/red-prediction-frame.png';
 import banIcon from '../../public/images/ban-icon.png';
 import polaroidFrame from '../../public/images/polaroid-frame.png';
 
@@ -185,9 +189,9 @@ const loadAllBotImages = async () => {
   const imagesToLoad = {
     defaultBot: aiBotClosed,
     defaultScanner: blueScanner,
-    likeBot: aiBotCheckmark,
+    likeBot: aiBotYes,
     likeScanner: greenScanner,
-    dislikeBot: aiBotX,
+    dislikeBot: aiBotNo,
     dislikeScanner: redScanner
   };
   let imagePromises = [];
@@ -207,8 +211,12 @@ const loadAllBotImages = async () => {
 const loadAllPredictionImages = async () => {
   predictionImages = {}; // Empty previous cache
   const imagesToLoad = {
-    like: checkmarkIcon,
-    dislike: banIcon
+    defaultFrame: bluePredictionFrame,
+    defaultIcon: questionIcon,
+    likeFrame: greenPredictionFrame,
+    likeIcon: checkmarkIcon,
+    dislikeFrame: redPredictionFrame,
+    dislikeIcon: banIcon
   };
   let imagePromises = [];
 
@@ -403,32 +411,38 @@ const drawPolaroid = (ctx, x, y) => {
   DrawRect(adjustedX, adjustedY, rectSize, rectSize, colors.darkGrey);
 };
 
+const keyForClassId = classId => {
+  let classKey = 'default';
+  if (classId === ClassType.Like) {
+    classKey = 'like';
+  } else if (classId === ClassType.Dislike) {
+    classKey = 'dislike';
+  }
+
+  return classKey;
+};
+
 // Draws a prediction stamp to the canvas for the given classId.
-// Note: This method requires icons to be cached in predictionImages.
-// Call loadAllPredictionImages() before this method.
+// *Note:* This will no-op if the expected frame/icon is not present
+// in the predictionImages cache. Call loadAllPredictionImages() to populate the predictionImages cache.
 const drawPrediction = (ctx, x, y, classId) => {
-  const rectSize = constants.fishFrameSize;
-  const xDiff = Math.abs(rectSize - constants.fishCanvasWidth) / 2;
-  const adjustedX = x + xDiff;
-  const yDiff = Math.abs(rectSize - constants.fishCanvasHeight) / 2;
-  const adjustedY = y - yDiff;
+  const classKey = keyForClassId(classId);
+  const frame = predictionImages[`${classKey}Frame`];
+  const icon = predictionImages[`${classKey}Icon`];
+  const w = (frame && frame.width) || constants.fishFrameSize;
+  const h = (frame && frame.height) || constants.fishFrameSize;
+  const adjustedX = x + Math.abs(w - constants.fishCanvasWidth) / 2;
+  const adjustedY = y - Math.abs(h - constants.fishCanvasHeight) / 2;
 
-  // Draw square around item
-  ctx.beginPath();
-  const color = classId === ClassType.Like ? colors.brightGreen : colors.red;
-  ctx.lineWidth = '2';
-  DrawRect(adjustedX, adjustedY, rectSize, rectSize, color, false);
-  ctx.stroke();
+  // Draw frame
+  if (frame) {
+    ctx.drawImage(frame, adjustedX, adjustedY);
+  }
 
-  // Draw icon below square. This code expects predictionImages to be populated
-  // with cached like/dislike icons.
-  const icon =
-    classId === ClassType.Like
-      ? predictionImages.like
-      : predictionImages.dislike;
+  // Draw icon below frame.
   if (icon) {
-    const iconX = adjustedX + rectSize / 2 - icon.width / 2;
-    const iconY = adjustedY + rectSize + 10;
+    const iconX = adjustedX + w / 2 - icon.width / 2;
+    const iconY = adjustedY + h + 15;
     ctx.drawImage(icon, iconX, iconY);
   }
 };
@@ -439,17 +453,9 @@ let lastScannerImg = null;
 // *Note:* This will no-op if the expected bot/scanner is not present
 // in the botImages cache. Call loadAllBotImages() to populate the botImages cache.
 const drawPredictBot = state => {
-  let botImg, scannerImg;
-  if (currentPredictedClassId === ClassType.Like) {
-    botImg = botImages.likeBot;
-    scannerImg = botImages.likeScanner;
-  } else if (currentPredictedClassId === ClassType.Dislike) {
-    botImg = botImages.dislikeBot;
-    scannerImg = botImages.dislikeScanner;
-  } else {
-    botImg = botImages.defaultBot;
-    scannerImg = botImages.defaultScanner;
-  }
+  const classKey = keyForClassId(currentPredictedClassId);
+  const botImg = botImages[`${classKey}Bot`];
+  const scannerImg = botImages[`${classKey}Scanner`];
 
   if (!botImg || !scannerImg) {
     return;
