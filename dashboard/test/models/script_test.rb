@@ -1485,6 +1485,28 @@ endvariants
     end
   end
 
+  test 'clone script with suffix when stage name contains trailing space' do
+    script_dsl = <<~DSL
+      stage 'trailing space '
+      level 'Level 1'
+    DSL
+    scripts, _ = Script.setup([@script_file])
+    script = scripts[0]
+
+    Script.stubs(:script_directory).returns('')
+    File.stubs(:read).returns(script_dsl)
+    script_copy = script.clone_with_suffix('copy')
+    assert_equal 'test-fixture-copy', script_copy.name
+
+    assert_equal 1, script_copy.stages.count
+    stage = script_copy.stages.first
+    assert_equal 'trailing space', stage.name
+    assert_equal(
+      'Level 1_copy',
+      stage.script_levels.map(&:levels).flatten.map(&:name).join(',')
+    )
+  end
+
   test "assignable_info: returns assignable info for a script" do
     script = create(:script, name: 'fake-script', hidden: true, stage_extras_available: true)
     assignable_info = script.assignable_info
