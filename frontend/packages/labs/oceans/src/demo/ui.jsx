@@ -302,6 +302,7 @@ const styles = {
     color: colors.darkGrey,
     transform: 'translate(-50%, -50%)',
     top: '50%',
+    bottom: 'initial',
     left: '50%',
     padding: 20
   },
