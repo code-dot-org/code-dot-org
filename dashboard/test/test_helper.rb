@@ -69,9 +69,6 @@ class ActiveSupport::TestCase
     UserHelpers.stubs(:random_donor).returns(name_s: 'Someone')
     AWS::S3.stubs(:upload_to_bucket).raises("Don't actually upload anything to S3 in tests... mock it if you want to test it")
     AWS::S3.stubs(:download_from_bucket).raises("Don't actually download anything to S3 in tests... mock it if you want to test it")
-
-    Cdo::Metrics.client ||= Aws::CloudWatch::Client.new(stub_responses: true)
-
     CDO.stubs(override_pegasus: nil)
     CDO.stubs(override_dashboard: nil)
 
