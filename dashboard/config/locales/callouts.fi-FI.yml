@@ -81,8 +81,15 @@ fi-FI:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Uusi blokki!
         dance_callout_11_b: Uusi blokki!
+      Dance_2019_01:
+        dance_callout_01: Lisää tämä blokki ohjelmaasi!
+      Dance_2019_02:
+        dance_callout_11_a: Lisää tämä blokki ohjelmaasi.
+        arrow_buttons: Paina nuolinäppäimiä, jotta voit hallita tanssijaasi.
       Dance_2019_04:
         dance_callout_02: Lisää tämä blokki ohjelmaasi!
+      Dance_2019_05:
+        dance_callout_05: Lisää uusi tapahtuma ohjelmaan.
       Dance_2019_06:
         dance_party_11_5_groups: Uusi blokki!
       Dance_2019_07:
