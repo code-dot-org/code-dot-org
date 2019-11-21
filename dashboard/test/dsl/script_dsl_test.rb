@@ -749,9 +749,9 @@ level 'Level 3'
     assert_equal i18n_expected, i18n
   end
 
-  test 'script DSL with trailing space in stage name' do
+  test 'script DSL with extra space in stage name' do
     input_dsl = <<~DSL
-      stage 'trailing space '
+      stage ' extra space '
       level 'Level 1'
     DSL
     output, i18n = ScriptDSL.parse(input_dsl, 'test.script', 'test')
@@ -759,9 +759,9 @@ level 'Level 3'
       {
         stages: [
           {
-            stage: "trailing space",
+            stage: "extra space",
             scriptlevels: [
-              {stage: "trailing space", levels: [{name: 'Level 1'}]},
+              {stage: "extra space", levels: [{name: 'Level 1'}]},
             ]
           }
         ],
@@ -769,7 +769,7 @@ level 'Level 3'
     )
 
     i18n_expected = {'test' => {'stages' => {
-      "trailing space" => {'name' => "trailing space"},
+      "extra space" => {'name' => "extra space"},
     }}}
     assert_equal expected, output
     assert_equal i18n_expected, i18n
