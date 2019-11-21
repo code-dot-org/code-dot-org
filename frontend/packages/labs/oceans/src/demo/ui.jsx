@@ -170,18 +170,18 @@ const styles = {
     cursor: 'pointer',
     margin: '0 20px',
     fontSize: 42,
-    color: colors.grey,
+    color: colors.white,
     display: 'flex',
     alignItems: 'center',
     ':hover': {
       color: colors.orange
     },
     ':active': {
-      color: colors.black
+      color: colors.orange
     }
   },
   selectedControl: {
-    color: colors.black
+    color: colors.orange
   },
   timeScale: {
     width: 40,
