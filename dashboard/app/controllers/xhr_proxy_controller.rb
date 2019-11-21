@@ -41,6 +41,7 @@ class XhrProxyController < ApplicationController
     api.pegelalarm.at
     api.randomuser.me
     api.rebrandly.com
+    api.spacexdata.com
     api.spotify.com
     api.themoviedb.org
     api.thingspeak.com
