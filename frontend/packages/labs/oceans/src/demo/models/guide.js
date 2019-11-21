@@ -37,7 +37,8 @@ const guides = [
   },
   {
     id: 'fishvtrash-training-pause1',
-    text: `Did you know:  An estimated 17 billion pounds of plastic enters the ocean from land-based sources each year.`,
+    heading: 'Did you know?',
+    text: `An estimated 17 billion pounds of plastic enters the ocean from land-based sources each year.`,
     when: {
       appMode: AppMode.FishVTrash,
       currentMode: Modes.Training,
@@ -45,7 +46,7 @@ const guides = [
         return state.yesCount + state.noCount >= 5;
       }
     },
-    style: 'RightCenter',
+    style: 'Info',
     arrow: 'none',
     image: trashBottleImage
   },
@@ -64,7 +65,8 @@ const guides = [
   },
   {
     id: 'fishvtrash-training-pause3',
-    text: `Did you know:  Marine debris comes in many shapes and sizes, ranging from small plastics to glass bottles to rubber tires, and many more.`,
+    heading: 'Did you know?',
+    text: `Marine debris comes in many shapes and sizes, ranging from small plastics to glass bottles to rubber tires, and many more.`,
     when: {
       appMode: AppMode.FishVTrash,
       currentMode: Modes.Training,
@@ -72,7 +74,7 @@ const guides = [
         return state.yesCount + state.noCount >= 15;
       }
     },
-    style: 'RightCenter',
+    style: 'Info',
     arrow: 'none',
     image: trashCanImage
   },
@@ -243,7 +245,8 @@ const guides = [
   },
   {
     id: 'creaturesvtrash-training-init2',
-    text: `Did you know:  In the ocean, plastic debris can harm fish, seabirds and marine mammals. This is one of many reasons to keep the oceans clean.`,
+    heading: 'Did you know?',
+    text: `In the ocean, plastic debris can harm fish, seabirds and marine mammals. This is one of many reasons to keep the oceans clean.`,
     when: {
       appMode: AppMode.CreaturesVTrash,
       currentMode: Modes.Training,
@@ -251,7 +254,7 @@ const guides = [
         return state.yesCount + state.noCount >= 5;
       }
     },
-    style: 'RightCenter',
+    style: 'Info',
     arrow: 'none',
     image: seahorseImage
   },
@@ -270,7 +273,8 @@ const guides = [
   },
   {
     id: 'creaturesvtrash-training-init4',
-    text: `Did you know:  Marine plastic pollution has impacted at least 267 species worldwide, including 86% of all sea turtle species.`,
+    heading: 'Did you know?',
+    text: `Marine plastic pollution has impacted at least 267 species worldwide, including 86% of all sea turtle species.`,
     when: {
       appMode: AppMode.CreaturesVTrash,
       currentMode: Modes.Training,
@@ -278,7 +282,7 @@ const guides = [
         return state.yesCount + state.noCount >= 15;
       }
     },
-    style: 'RightCenter',
+    style: 'Info',
     arrow: 'none',
     image: turtleImage
   },

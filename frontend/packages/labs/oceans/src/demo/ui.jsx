@@ -226,16 +226,29 @@ const styles = {
     float: 'left'
   },
   guideRight: {
-    float: 'right'
+    float: 'right',
+    position: 'relative'
   },
   guideImage: {
     _width: '70%',
     paddingTop: 20,
     paddingLeft: 20
   },
+  guideHeading: {
+    fontSize: 40,
+    lineHeight: '40px',
+    color: colors.darkGrey,
+    padding: 20
+  },
   guideTypingText: {
     position: 'absolute',
     padding: 20
+  },
+  guideFinalTextContainer: {
+  },
+  guideFinalTextInfoContainer: {
+    backgroundColor: colors.lightGrey,
+    borderRadius: 10
   },
   guideFinalText: {
     padding: 20,
@@ -271,6 +284,14 @@ const styles = {
     borderWidth: 30,
     marginLeft: -30,
     display: 'none'
+  },
+  guideInfo: {
+    backgroundColor: colors.white,
+    color: colors.darkGrey,
+    transform: 'translate(-50%, -50%)',
+    top: '50%',
+    left: '50%',
+    padding: 20
   },
   _guideTopLeft: {
     top: '5%',
@@ -704,8 +725,8 @@ class Pond extends React.Component {
     const pondHeight = boundingRect.height;
 
     // Scale the click to the pond canvas dimensions.
-    const normalizedClickX = clickX / pondWidth * constants.canvasWidth;
-    const normalizedClickY = clickY / pondHeight * constants.canvasHeight;
+    const normalizedClickX = (clickX / pondWidth) * constants.canvasWidth;
+    const normalizedClickY = (clickY / pondHeight) * constants.canvasHeight;
 
     if (state.pondFishBounds) {
       let fishClicked = false;
@@ -767,7 +788,7 @@ class Pond extends React.Component {
     };
 
     return (
-      <Body onClick={(e) => this.onPondClick(e)}>
+      <Body onClick={e => this.onPondClick(e)}>
         <img style={styles.pondBot} src={aiBotClosed} />
         {state.canSkipPond && (
           <div>
@@ -836,10 +857,15 @@ class Guide extends React.Component {
               )}
 
               <div style={{...styles.guideRight, width: rightWidth}}>
+                {currentGuide.heading && (
+                  <div style={styles.guideHeading}>{currentGuide.heading}</div>
+                )}
                 <div style={styles.guideTypingText}>
                   <Typist
-                    avgTypingDelay={35}
-                    stdTypingDelay={15}
+                    //avgTypingDelay={35}
+                    //stdTypingDelay={15}
+                    avgTypingDelay={0}
+                    stdTypingDelay={0}
                     cursor={{show: false}}
                     onTypingDone={this.onShowing}
                   >
@@ -848,10 +874,18 @@ class Guide extends React.Component {
                       : currentGuide.text}
                   </Typist>
                 </div>
-                <div style={styles.guideFinalText}>
-                  {currentGuide.textFn
-                    ? currentGuide.textFn(getState())
-                    : currentGuide.text}
+                <div
+                  style={
+                    currentGuide.style === 'Info'
+                      ? styles.guideFinalTextInfoContainer
+                      : styles.guideFinalTextContainer
+                  }
+                >
+                  <div style={styles.guideFinalText}>
+                    {currentGuide.textFn
+                      ? currentGuide.textFn(getState())
+                      : currentGuide.text}
+                  </div>
                 </div>
               </div>
               {getState().guideShowing && currentGuide.arrow !== 'none' && (
