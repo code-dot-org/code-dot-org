@@ -423,8 +423,8 @@ const keyForClassId = classId => {
 };
 
 // Draws a prediction stamp to the canvas for the given classId.
-// Note: This method requires frames & icons to be cached in predictionImages.
-// Call loadAllPredictionImages() before this method.
+// *Note:* This will no-op if the expected frame/icon is not present
+// in the predictionImages cache. Call loadAllPredictionImages() to populate the predictionImages cache.
 const drawPrediction = (ctx, x, y, classId) => {
   const classKey = keyForClassId(classId);
   const frame = predictionImages[`${classKey}Frame`];
