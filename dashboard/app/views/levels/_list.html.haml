@@ -101,7 +101,7 @@
 
 = paginate @levels
 %br/
-#validation-error.validation-error{style: 'background-color: yellow'}
+#validation-error.validation-error{style: 'background-color: yellow; white-space: pre-wrap;'}
 :javascript
   window.levelbuilder.ajaxSubmit('.clone_level');
   $('.clone_level').on('ajax:beforeSend', function (e, xhr) {
