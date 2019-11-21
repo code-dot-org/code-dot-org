@@ -905,7 +905,7 @@ zh-CN:
         Course_4_SCFL_1_a: |-
           看看这个移动选项:
 
-          !\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
+          \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         Course_4_SCFL_1_b: '试着用两个 "计数" 循环: 一个用于攀爬和抓取花蜜, 另一种用于攀爬和制作蜂蜜。'
         Course_4_SCFL_1_c: |-
           注意，一个`计数循环`里需要几个普通的循环来重复`counter`（计数器）次数来增加楼梯图案。
@@ -972,7 +972,7 @@ zh-CN:
         Course_4_SCFL_1a_b: |-
           看看这个移动选项:
 
-          !\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
+          \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         Course_4_SCFL_1a_c: "`计数循环` 将帮助您执行相同的模式，但步骤数不断变化。请注意，所需步骤的数量从7开始，每次减1，直到 5。"
         Course_4_SCFL_1a_d: |-
           \*\* 解决方案: \*
@@ -1035,7 +1035,7 @@ zh-CN:
         Course_4_SCFL_1b_b: |-
           看看这个移动选项:
 
-          !\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
+          \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         Course_4_SCFL_1b_c: |-
           \*\* 解决方案: \*
 
@@ -1096,7 +1096,7 @@ zh-CN:
         Course_4_SCFL_2_a: |-
           看看这个移动选项:
 
-          !\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
+          \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         Course_4_SCFL_2_b: 请注意，在`计数循环` 的每次迭代中，在你停止与目标互动后，都有3个点。
         Course_4_SCFL_2_c: 在`计数循环`的每次迭代中，每个对象的数字都与 `counter`（计数器）变量有某种关联。
         Course_4_SCFL_2_d: |-
@@ -1581,7 +1581,7 @@ zh-CN:
         Course_4_SCV_4_c: |-
           看看这个移动选项:
 
-          !\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
+          \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         Course_4_SCV_4_d: |-
           \*\* 解决方案: \*
 
@@ -1863,6 +1863,36 @@ zh-CN:
           \*确保屏幕上出现一个舞者。
 
           _此关在 4 个小节后结束。_
+        challenges: |-
+          **可选挑战**
+
+          -   选择另一首歌曲播放。
+          -   将舞者移到新位置。
+          -   创建多个舞者。
+      Dance_2019_02:
+        validation: |-
+          **我如何通过这一关？**
+
+          -   舞者必须做出一个动作。
+          -   您必须按一个箭头键。
+
+          _此关在4个小节后结束。_
+        challenges: |-
+          **可选挑战**
+
+          -   使用多个<xml><block type="Dancelab_whenKey"><title name="KEY"></title></block></xml>模块。
+      Dance_2019_03:
+        validation: |-
+          **我如何通过这一关？**
+
+          -   两个舞者都必须做出动作。
+          -   您必须按箭头键。
+
+          _此关在4个小节后结束。_
+        challenges: |-
+          **可选挑战**
+
+          -   让舞者对左右箭头键做出回应。
       Dance_2019_04:
         validation: |-
           **我如何通过此关？**
@@ -1876,6 +1906,61 @@ zh-CN:
           \*6 个小节后，舞者需要跳与 4 个小节后不同的舞蹈。
 
           _此关在 12 个小节后结束。_
+        challenges: |-
+          **可选挑战**
+
+          -   每当舞者切换动作时，更换背景。
+      Dance_2019_06:
+        validation: |-
+          **如何通过这一关？**
+
+          -   创建一个领舞者和一组伴舞演员。
+
+          _此关在7个小节后结束。_
+        challenges: |-
+          **可选挑战**
+
+          -   创建多组伴舞演员。
+      Dance_2019_07:
+        validation: |-
+          **我如何通过这一关？**
+
+          -   音乐开始后，更改至少一个舞者的大小。
+
+          _此关在6个小节后结束。_
+        challenges: |-
+          **可选挑战**
+
+          \*通过更改其他属性（宽度、高度、旋转等）来尝试
+      Dance_2019_08:
+        validation: |-
+          **我如何通过这一关？**
+
+          -   更改至少一个舞者的色彩。
+
+          _此关在6个小节后结束。_
+        tint_hint: 您是否注意到舞者没有完全变为您选择的那种颜色？这是因为**色彩**会将您选择的颜色与舞者本身的颜色混合在一起。
+      Dance_2019_09:
+        validation: |-
+          **我如何通过这一关？**
+
+          -   只需按“完成”按钮即可！
+        repeat_every_ideas: |-
+          **需要新点子吗？**
+
+          -   反复更改舞者的大小可以使其成长。
+          -   反复更改舞者的旋转角度可以使其旋转。
+          -   反复更改舞者的水平或垂直位置，可以使其在屏幕上移动。
+
+          _您还可以使用负数来产生相反的效果！_
+        next_previous: |-
+          \*可选挑战\*\*
+
+          -   您还可以使用此新事件模块，将动作设置为`（随机）`、`（下一个）或`（上一个）\`，这样就可以循环整个舞蹈动作列表。    <xml><block type="Dancelab_changeMoveEachLR">
+              <title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;">???</title>
+              <title name="MOVE">"rand"</title>
+              <title name="DIR">-1</title>
+              </block></xml>
       Dance_Party_01:
         validation: |-
           **我如何通过此关？**
@@ -12269,7 +12354,7 @@ zh-CN:
         courseF_bee_for_challenge2_a: |-
           看看这个移动选项:
 
-          !\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
+          \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         courseF_bee_for_challenge2_b: '试着用两个 "计数" 循环: 一个用于攀爬和抓取花蜜, 另一种用于攀爬和制作蜂蜜。'
         courseF_bee_for_challenge2_c: |-
           注意，一个`计数循环`里需要几个普通的循环来重复`counter`（计数器）次数来增加楼梯图案。
@@ -12412,7 +12497,7 @@ zh-CN:
         courseF_bee_for_challenge2_a: |-
           看看这个移动选项:
 
-          !\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
+          \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         courseF_bee_for_challenge2_b: '试着用两个 "计数" 循环: 一个用于攀爬和抓取花蜜, 另一种用于攀爬和制作蜂蜜。'
         courseF_bee_for_challenge2_c: |-
           注意，一个`计数循环`里需要几个普通的循环来重复`counter`（计数器）次数来增加楼梯图案。
@@ -12478,7 +12563,7 @@ zh-CN:
         courseF_bee_for_challenge2_a: |-
           看看这个移动选项:
 
-          !\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
+          \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         courseF_bee_for_challenge2_b: '试着用两个 "计数" 循环: 一个用于攀爬和抓取花蜜, 另一种用于攀爬和制作蜂蜜。'
         courseF_bee_for_challenge2_c: |-
           注意，一个`计数循环`里需要几个普通的循环来重复`counter`（计数器）次数来增加楼梯图案。
