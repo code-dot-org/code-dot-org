@@ -2,6 +2,45 @@
 ru:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: все
+            '"ALIEN"': все инопланетяне
+            '"BEAR"': все медведи
+            '"CAT"': все кошки
+            '"DOG"': все собаки
+            '"DUCK"': все утки
+            '"FROG"': все лягушки
+            '"MOOSE"': все лоси
+            '"PINEAPPLE"': все ананасы
+            '"ROBOT"': все роботы
+            '"SHARK"': все акулы
+            '"UNICORN"': Единороги
+          MOVE1:
+            MOVES.Roll: Движение «волна»
+            MOVES.ClapHigh: Высокий хлопок
+            MOVES.Dab: Дэб
+            MOVES.DoubleJam: Удвоить усилия
+            MOVES.Drop: Дроп
+            MOVES.Floss: Флосс
+            MOVES.Fresh: Свежий
+            MOVES.Clown: Клоун
+            MOVES.Kick: Звезда
+            MOVES.ThisOrThat: То или это
+            MOVES.Rest: Нет
+          MOVE2:
+            MOVES.Roll: Движение «волна»
+            MOVES.ClapHigh: Высокий хлопок
+            MOVES.Dab: Дэб
+            MOVES.DoubleJam: Удвоить усилия
+            MOVES.Drop: Дроп
+            MOVES.Floss: Флосс
+            MOVES.Fresh: Свежий
+            MOVES.Clown: Клоун
+            MOVES.Kick: Звезда
+            MOVES.ThisOrThat: То или это
+            MOVES.Rest: Нет
       Dancelab_atTimestamp:
         text: после {TIMESTAMP} {UNIT}
         options:
@@ -739,7 +778,6 @@ ru:
           STRING:
             '"hearts_colorful"': Сердечки
             '"diamond"': алмаз
-            '"q"': q
             '"x"': x
             '"y"': у
             '"1"': '1'
