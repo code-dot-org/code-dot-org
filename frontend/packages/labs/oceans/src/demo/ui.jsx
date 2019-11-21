@@ -807,7 +807,7 @@ class Pond extends React.Component {
             ) : (
               <Button
                 style={styles.continueButton}
-                onClick={() => toMode(Modes.Predicting)}
+                onClick={() => state.onContinue()}
               >
                 Continue
               </Button>
