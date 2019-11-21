@@ -12,6 +12,7 @@ import aiBotClosed from '../../public/images/ai-bot/ai-bot-closed.png';
 import counterIcon from '../../public/images/data.png';
 import eraseButton from '../../public/images/erase.png';
 import arrowDownImage from '../../public/images/arrow-down.png';
+import snail from '../../public/images/seaCreatures/Snail.png';
 import Typist from 'react-typist';
 import {getCurrentGuide, dismissCurrentGuide} from './models/guide';
 import {playSound} from './models/soundLibrary';
@@ -20,7 +21,7 @@ import {
   faPlay,
   faPause,
   faBackward,
-  faForward,
+  faForward
 } from '@fortawesome/free-solid-svg-icons';
 
 const styles = {
@@ -112,6 +113,14 @@ const styles = {
     left: '50%',
     padding: 20
   },
+  confirmationDialogLeft: {
+    float: 'left',
+    width: '30%'
+  },
+  confirmationDialogRight: {
+    float: 'right',
+    width: '70%'
+  },
   confirmationHeader: {
     fontSize: 40,
     lineHeight: '40px',
@@ -126,9 +135,10 @@ const styles = {
     borderRadius: '5px'
   },
   confirmationButtons: {
-    display: 'flex',
+    display: 'inline-flex',
     justifyContent: 'center',
-    padding: '15px'
+    padding: '15px',
+    width: '100%'
   },
   confirmationYesButton: {
     marginLeft: 10,
@@ -496,12 +506,18 @@ let ConfirmationDialog = class ConfirmationDialog extends React.Component {
     return (
       <div style={styles.confirmationDialogBackground}>
         <div style={styles.confirmationDialog}>
-          <div style={styles.confirmationHeader} className="confirmation-text">
-            Are you sure?
-          </div>
-          <div style={styles.confirmationText}>
-            Erasing AI's data will permanently delete all training. Is that what
-            you want to do?
+          <img src={snail} style={styles.confirmationDialogLeft} />
+          <div style={styles.confirmationDialogRight}>
+            <div
+              style={styles.confirmationHeader}
+              className="confirmation-text"
+            >
+              Are you sure?
+            </div>
+            <div style={styles.confirmationText}>
+              Erasing AI's data will permanently delete all training. Is that
+              what you want to do?
+            </div>
           </div>
           <div style={styles.confirmationButtons}>
             <Button
