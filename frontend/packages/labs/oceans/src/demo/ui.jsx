@@ -256,7 +256,8 @@ const styles = {
   },
   guideImage: {
     paddingTop: 20,
-    paddingLeft: 20
+    paddingLeft: 20,
+    maxWidth: '90%'
   },
   guideHeading: {
     fontSize: 40,
