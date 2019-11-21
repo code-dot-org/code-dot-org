@@ -120,7 +120,6 @@ const styles = {
     display: 'flex',
     justifyContent: 'center'
   },
-
   confirmationYesButton: {
     marginLeft: 10,
     backgroundColor: colors.green
@@ -159,7 +158,7 @@ const styles = {
   },
   eraseButton: {
     position: 'absolute',
-    top: 26,
+    top: 24,
     right: 22,
     cursor: 'pointer'
   },
@@ -200,16 +199,21 @@ const styles = {
   },
   counter: {
     position: 'absolute',
+    display: 'flex',
+    justifyContent: 'space-between',
     right: 53,
     top: 24,
     backgroundColor: colors.black,
     opacity: '90%',
-    color: '#3CFFF8',
+    color: colors.neonBlue,
     borderRadius: 33,
-    padding: '10px 0px',
-    width: '16%',
-    textAlign: 'center',
-    fontSize: 16
+    padding: 0,
+    width: '8%',
+    height: 25
+  },
+  counterNum: {
+    fontSize: 14,
+    margin: '4px 7px'
   },
   mediaControls: {
     position: 'absolute',
@@ -639,13 +643,13 @@ let Train = class Train extends React.Component {
         />
         <div style={styles.trainQuestionText}>{state.trainingQuestion}</div>
         <img style={styles.trainBot} src={aiBotClosed} />
-        
+
         <div style={styles.counter}>
-        <img src={counterIcon}/>
-      {Math.min(
-          999,
-          state.yesCount + state.noCount
-        )}</div>
+          <img src={counterIcon} />
+          <span style={styles.counterNum}>
+            {Math.min(999, state.yesCount + state.noCount) * 10}
+          </span>
+        </div>
         <div style={styles.trainButtons}>
           <Button
             style={styles.trainButtonNo}
