@@ -54,8 +54,15 @@ hu-HU:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Új blokk!
         dance_callout_11_b: Új blokk!
+      Dance_2019_01:
+        dance_callout_01: Add hozzá ezt a blokkot a programodhoz!
+      Dance_2019_02:
+        dance_callout_11_a: Add hozzá ezt a blokkot a programodhoz.
+        arrow_buttons: A nyílgombok megnyomásával vezéreld a táncosodat.
       Dance_2019_04:
         dance_callout_02: Add hozzá ezt a blokkot a programodhoz!
+      Dance_2019_05:
+        dance_callout_05: Vegyen fel új eseményeket a programjába.
       Dance_2019_06:
         dance_party_11_5_groups: Új blokk!
       Dance_2019_07:

@@ -2,6 +2,10 @@
 mi:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: katoa
       Dancelab_atTimestamp:
         options:
           UNIT:

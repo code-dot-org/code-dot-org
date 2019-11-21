@@ -601,6 +601,8 @@ es-MX:
       cta: 'Aprende cómo'
     dance:
       title: 'Fiesta de baile'
+    dance-2019:
+      title: 'Fiesta de baile'
     hoc:
       title: 'Laberinto clásico'
       body: 'Prueba los fundamentos de la ciencia de la computación. Millones ya lo han intentado.'

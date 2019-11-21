@@ -2,6 +2,14 @@
 ka:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: ყველა
+          MOVE1:
+            MOVES.Rest: არცერთი
+          MOVE2:
+            MOVES.Rest: არცერთი
       Dancelab_atTimestamp:
         options:
           UNIT:

@@ -1563,7 +1563,7 @@ eu:
               name: Sarrera
             Nested Loops:
               name: Kabiatutako begiztak
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Loops:
               name: Itzuliak
@@ -1577,3 +1577,13 @@ eu:
               name: Aldagaiak
             For Loops:
               name: For begiztak
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Baldintzak
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Baldintzak Txartelekin

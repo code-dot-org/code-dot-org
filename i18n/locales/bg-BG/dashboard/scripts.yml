@@ -2369,7 +2369,7 @@ bg:
               name: Въведение
             Nested Loops:
               name: Вмъкнати цикли
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Computer Science Fundamentals:
               name: Основи на компютърните науки
@@ -2387,3 +2387,13 @@ bg:
               name: Променливи
             For Loops:
               name: За циклите
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Условия
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Crowdsourcing кампания
+            Conditionals with Cards:
+              name: Условия с карти

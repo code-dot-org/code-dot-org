@@ -306,6 +306,36 @@ vi-VN:
           -   Hãy đảm bảo rằng một vũ công xuất hiện trên màn hình.
 
           _Cấp độ này kết thúc sau 4 nhịp._
+        challenges: |-
+          **Thử thách tùy chọn**
+
+          -   Chọn một bài hát khác để chơi.
+          -   Di chuyển vũ công của bạn đến một vị trí mới.
+          -   Tạo nhiều hơn một vũ công.
+      Dance_2019_02:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+
+          -   Vũ công phải thực hiện một động tác.
+          -   Bạn phải nhấn một phím mũi tên.
+
+          _Cấp độ này kết thúc sau 4 nhịp._
+        challenges: |-
+          **Thử thách tùy chọn**
+
+          Sử dụng nhiều hơn một khối <xml><block type="Dancelab_whenKey"><title name="KEY"></title></block></xml>.
+      Dance_2019_03:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+
+          -   Cả hai vũ công phải thực hiện một động tác.
+          -   Bạn phải nhấn các phím mũi tên.
+
+          _Cấp độ này kết thúc sau 4 nhịp._
+        challenges: |-
+          **Thử thách tùy chọn**
+
+          -   Làm cho một vũ công phản hồi khi bạn nhấn phím mũi tên sang trái và sang phải.
       Dance_2019_04:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
@@ -320,6 +350,64 @@ vi-VN:
           -   Sau 6 nhịp, vũ công cần làm một vũ điệu khác ngoài vũ điệu sau 4 nhịp.
 
           _Cấp độ này kết thúc sau 12 nhịp._
+        challenges: |-
+          **Thử thách tùy chọn**
+
+          -   Thay đổi nền bất cứ khi nào các vũ công chuyển động tác.
+      Dance_2019_06:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+
+          -   Tạo một vũ công chính và một nhóm các vũ công phụ họa trong vòng 4 nhịp đầu tiên của bài hát.
+
+          _Cấp độ này kết thúc sau 7 nhịp._
+        challenges: |-
+          **Thử thách tùy chọn**
+
+          -   Tạo nhiều nhóm vũ công phụ họa.
+      Dance_2019_07:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+
+          -   Thay đổi kích thước của ít nhất một vũ công sau khi âm nhạc bắt đầu.
+
+          _Cấp độ này kết thúc sau 6 nhịp._
+        challenges: |-
+          **Thử thách tùy chọn**
+
+          -   Thử nghiệm bằng cách thay đổi các thuộc tính khác như chiều rộng hoặc góc xoay.
+      Dance_2019_08:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+
+          -   Thay đổi màu sắc của ít nhất một vũ công.
+
+          _Cấp độ này kết thúc sau 6 nhịp._
+        tint_hint: Bạn có nhận thấy rằng các vũ công của bạn không thay đổi thành
+          màu chính xác mà bạn đã chọn hay không? Điều này là do **tint** trộn màu
+          mà bạn đã chọn với màu vốn có của vũ công.
+      Dance_2019_09:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+
+          -   Chỉ cần nhấn nút "Finish"!
+        repeat_every_ideas: |-
+          **Bạn cần một số ý tưởng?**
+
+          -   Liên tục thay đổi kích thước của một vũ công để làm cho họ lớn lên.
+          -   Liên tục thay đổi góc xoay của vũ công để làm cho họ xoay tròn.
+          -   Liên tục thay đổi vị trí ngang hoặc dọc của một vũ công để làm cho họ di chuyển khắp màn hình.
+
+          _Bạn cũng có thể sử dụng số âm để tạo hiệu ứng ngược lại!_
+        next_previous: |-
+          **Thử thách tùy chọn**
+
+          -   Bạn cũng có thể sử dụng khối sự kiện mới này để duyệt qua danh sách các động tác nhảy bằng cách thiết lập động tác thành `(Random)`, `(Next)`, hoặc `(Previous)`.
+              <xml><block type="Dancelab_changeMoveEachLR">
+              <title name="GROUP">???</title>
+              <title name="MOVE">"rand"</title>
+              <title name="DIR">-1</title>
+              </block></xml>
       Dance_Party_01:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**

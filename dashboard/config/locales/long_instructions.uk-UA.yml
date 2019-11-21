@@ -205,9 +205,54 @@ uk-UA:
       CourseE_HOC 2018 Level_9b: Тобі вдалося дістатися рифу. Тепер шукай **Серце
         Моря** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
         ! Використай сині та червоні корали, щоб дістатися **скрині** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
+      Dance_2019_01: |-
+        Перетягніть блок <xml><block type="Dancelab_makeAnonymousDanceSprite" block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;, &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml> на робочу область та з'єднайте його з блоком <xml><block type="Dancelab_whenSetup2" next_connection_disabled="true" block-text="setup"></block></xml>.
+
+         Оберіть "кіт" або "лінивець", щоб створити свого першого танцівника.
+
+        -   _Якщо ви хочете отримати додаткову інформацію або більше завдань, клацніть лампочку зліва._
+      Dance_2019_02: "Блок <xml><block type=\"Dancelab_whenKey\" block-text=\"when
+        up pressed\"></block></xml> дозволяє виконувати код, коли ви натискаєте на
+        клавіші зі стрілками. \nВикористайте блок <xml><block type=\"Dancelab_doMoveEachLR\"
+        block-text=\"do once\"><title name=\"GROUP\">\"CAT\"</title><title name=\"MOVE\">MOVES.XClapSide</title><title
+        name=\"DIR\">-1</title></block></xml>, щоб змусити кота плескати!\n\n_Обов'язково
+        натискайте клавішу \"стрілка вгору\" або ![](<https://images.code.org/419e704e6841c0b696016bf5029b8cb9-image-1571864825506.06.45
+        PM.png>) після натискання кнопки \"Запустити\"!_"
+      Dance_2019_03: Час для танцювального змагання! Запрограмуйте кожного танцівника
+        так, щоб він рухався, коли ви натискаєте різні клавіші. Оберіть улюблений
+        рух для кожного танцівника або налаштуйте його як `(Випадковий)` для чогось
+        абсолютно непередбачуваного!
+      Dance_2019_04: "Давайте зробимо так, щоб танцівники рухалися під музику!\n\nЗ'єднайте
+        блок <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">4</title><title
+        name=\"UNIT\">\"measures\"</title></block></xml> з блоком <xml><block type=\"Dancelab_changeMoveEachLR\"><title
+        name=\"GROUP\">\"SHARK\"</title><title name=\"MOVE\">MOVES.ThisOrThat</title><title
+        name=\"DIR\">-1</title></block></xml> з панелі інструментів. \n\nВаш танцівник
+        має починати новий рух після четвертого такту.\n\n**Такти** використовуються
+        для відліку часу в музиці. У цьому уроці такт складається з чотирьох бітів."
       Dance_2019_05: "_Ось тепер ми танцюємо!_ \n\nДодай блок <xml><block type=\"Dancelab_atTimestamp\"><title
         name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml>
         на робочу область. Нехай танцівник розпочинає новий рух після 6 кроків."
+      Dance_2019_06: "Використайте цей новий блок, щоб створити групу менших другорядних
+        танцівників навколо головного танцівника посередині. \n\n  <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\">\n
+        \   <title name=\"N\">???</title>\n    <title name=\"COSTUME\" config=\"&quot;BEAR&quot;,
+        &quot;CAT&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;,
+        &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title>\n    <title name=\"LAYOUT\">\"circle\"</title>\n
+        \ </block></xml>\n\nТепер ви можете відразу створити багато танцівників!"
+      Dance_2019_07: |-
+        Кожен танцівник має набір _властивостей_, за допомогою якого можна керувати його виглядом.
+
+        Використайте блок <xml><block type="Dancelab_setPropEach" block-text="the set block"><title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title><title name="PROPERTY">"scale"</title><title name="VAL">???</title></block></xml> під зеленим блоком події, щоб після початку музики танцівники здавалися наближеними чи віддаленими.
+      Dance_2019_08: Танцівники мають властивість "відтінок", за допомогою якої можна
+        додати шар кольору. Спробуйте змінити відтінок одного з танцівників (або цілої
+        групи)!
+      Dance_2019_09: |-
+        Це особливий вид події, яка активується знову і знову.
+
+        <xml><block type="Dancelab_everySeconds"><title name="N">2</title><title name="UNIT">"measures"</title></block></xml>
+
+        Інші нові блоки на панелі інструментів дозволяють вам з часом випадково змінювати властивості танцівників.
+
+        _Будьте творчими та повеселіться!_
       Dance_2019_10: Відриваємось далі! Створи власного танцівника і поділись з друзями.
       Dance_Party_01: |-
         _Влаштуємо вечірку!_
@@ -294,10 +339,22 @@ uk-UA:
         одну з наступних ідей розширення проекту:\n\n-   Створи другу групу танцівників
         в іншому розташуванні\n-   Зміни розташування при натисненні клавіші \n-   Зміни
         властивість, коли танцівники змінюють розташування"
+      Dance_Party_extras_layout_2019: |-
+        # Шикуймося!
+
+        Подивіться цей танець, у якому блок <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> використовується для зміни розташування другорядних танцівників під час танцю. Використайте одну з наступних ідей, щоб ускладнити танець:
+
+        -   Створіть другу групу танцівників з іншим розташуванням
+        -   Змінюйте розташування при натисканні клавіші
+        -   Змінюйте властивість, коли танцівники змінюють розташування
       Dance_Party_extras_speed: |-
         # Прискорення, сповільнення
 
         Останній танець використовує блок `встановити швидкість` для керування того, як швидко рухається кожен з танцівників. Спробуй експериментувати з різними швидкостями у різні моменти пісні. Не стримуйся в майструванні цього танцю, або ж повернись до попередніх проектів, щоб зробити їх ще крутішими.
+      Dance_Party_extras_speed_2019: |-
+        # Пришвидшення та сповільнення
+
+        У цьому фінальному танці блок <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> використовується для управління швидкістю руху кожного танцівника. Спробуйте поекспериментувати з різною швидкістю на різних відрізках пісні. Ви можете змінити цей танець або повернутися до будь-якого з попередніх танців, щоб зробити їх ще крутішими.
       Dance_Party_extras_visible: "# Куди їм рухатись?\n\nЦей танець показує і ховає
         дві різні групи танцівників. Переглянь його, а тоді додай власні нотки.\n\n-
         \  Додай ще одну групу танцівників \n-   Показуй і ховай танцівників за допомогою

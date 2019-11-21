@@ -405,18 +405,37 @@ ms:
           stages:
             Spelling Bee:
               name: Lebah Ejaan
+        dance:
+          stages:
+            Dance Party:
+              name: Majlis Tari-Menari
+          title: Majlis Tari-Menari
+        dance--draft:
+          stages:
+            Dance Party:
+              name: Majlis Tari-Menari
+        dance-draft:
+          stages:
+            Dance Party:
+              name: Majlis Tari-Menari
         coursef-2019:
           stages:
             The Artist:
               name: Pelukis
             Internet:
               name: Internet
+        dance-low:
+          stages:
+            Dance Party:
+              name: Majlis Tari-Menari
         coursed-2019:
           stages:
             'Algorithms: Graph Paper Programming':
               name: Pengaturcaraan kertas graf
             Relay Programming:
               name: Pengaturcaraan penyampai
+            Dance Party:
+              name: Majlis Tari-Menari
         coursee-2019:
           stages:
             Internet:
@@ -427,6 +446,8 @@ ms:
               name: Pengaturcaraan penyampai
             Internet:
               name: Internet
+            Dance Party:
+              name: Majlis Tari-Menari
         andrea-test:
           stages:
             'null':
@@ -473,7 +494,11 @@ ms:
               name: Bersyarat
             Functions:
               name: Fungsi
-        k5-onlinepd-copy:
+        dance-2019:
+          stages:
+            Dance Party:
+              name: Majlis Tari-Menari
+        k5-onlinepd-2019:
           stages:
             Loops:
               name: Gelung
@@ -485,3 +510,7 @@ ms:
               name: Fungsi
             Variables:
               name: Pembolehubah
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Bersyarat

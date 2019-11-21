@@ -34,7 +34,7 @@ hi:
         password_confirmation: पासवर्ड पुष्टिकरण
         current_password: वर्तमान पासवर्ड
         locale: भाषा
-        age: आयु
+        age: उम्र
         gender: लिंग
         edit_header: खाता विवरण संपादित करें
         finish_sign_up_header: अपना खाता बनाना समाप्त करें
@@ -77,8 +77,8 @@ hi:
   courses: पाठ्यक्रम
   courses_page:
     title_student: कंप्यूटर विज्ञान सीखो
-    title_teacher: कंप्यूटर विज्ञान सिखाओ
-  unplugged_activity: अनप्लग की गई गतिविधि
+    title_teacher: कंप्यूटर साइंस
+  unplugged_activity: अनप्लग्ड एक्टिविटी
   of: की
   more: अधिक
   less: कम
@@ -158,7 +158,7 @@ hi:
     address_placeholder: पता, शहर, राज्य, पिन
     gender: लिंग (यदि आप चाहते हैं)
     birthday: जन्मदिन (यदि आप चाहते हैं)
-    age: आयु
+    age: उम्र
     user_type: आप एक छात्र या शिक्षक हैं?
     submit: साइन अप
     go_to_account: मेरा खाता पर जाएं
@@ -389,7 +389,7 @@ hi:
       create: बनाए
       algebra_game: बीज गणित
       applab: ऐप लैब
-      artist: आर्टिस्ट
+      artist: कलाकार
       artist_k1: कलाकार (आरंभिक-पाठक)
       basketball: बास्केटबॉल
       bounce: उछाल
@@ -397,7 +397,7 @@ hi:
       dance: डांस पार्टी
       eval: Eval
       flappy: फ्लैपी
-      frozen: Frozen
+      frozen: फ्रोजन
       gamelab: गेम लैब
       gamelab_jr: गेम लैब (बीटा)
       gumball: गम्बॉल की अद्भुत दुनिया
@@ -407,12 +407,14 @@ hi:
       minecraft_adventurer: Minecraft एडवेंचरर
       minecraft_aquatic: Minecraft जलचर
       minecraft_codebuilder: 'Minecraft: कोड कनेक्शन'
-      minecraft_designer: Minecraft
+      minecraft_designer: माइनक्राफ्ट
       minecraft_hero: Minecraft हीरो
       playlab: प्ले लैब
       playlab_k1: प्ले लैब (आरंभिक-पाठक)
       scratch: Scratch
-      starwars: Star Wars
+      sports: खेल
+      spritelab: स्प्राइट लैब
+      starwars: स्टार वॉर्स
       starwarsblocks: Star Wars (ब्लॉक्स)
       starwarsblocks_hour: Star Wars (ब्लॉक्स)
       weblab: वेब लैब
@@ -599,8 +601,8 @@ hi:
       सलाहकारों</a> का उनके सहयोग के लिए धन्यवाद करते हैं।
     help_from_html: विशेष रूप से हम Amazon, Google, और Microsoft के इंजीनियरों को
       मान्यता देना चाहते हैं, जिन्होंने इन सामग्रियों को तैयार करने में मदद की।
-    help_from_html_old: Amazon, Google, और Microsoft के इंजीनियरों ने इन सामग्रियों
-      को तैयार करने में मदद की।
+    help_from_html_old: अमेज़न, गूगल, माइक्रोसॉफ्ट के इंजीनियरों ने इन सामग्रियों
+      बनाने में मदद की है।
     art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. सभी अधिकार सुरक्षित
       हैं।<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. सभी
       अधिकार सुरक्षित हैं।<br />Frozen&#8482; &copy; %{current_year} Disney. सभी अधिकार
@@ -619,19 +621,19 @@ hi:
       है और &copy; %{current_year} Cartoon Network.
     code_from_html: Code.org, p5.play का उपयोग करती है, जिसका <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
       LGPL 2.1</a> के अंतर्गत लाइसेंस है।
-    powered_by_aws: Amazon Web Services द्वारा प्रायोजित
+    powered_by_aws: अमेज़ॅन वेब सर्विसेज द्वारा संचालित
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE लोगो और आवर
       ऑफ़ कोड&reg; Code.org के ट्रेडमार्क हैं।"
     copyright: कॉपीराइट
     more: अधिक
     feedback: प्रतिक्रिया प्रदान करें
-    translate: हमारी सामग्री का अनुवाद करने के लिए स्वयंसेवक
+    translate: हमारी सामग्री को अनुवाद करने के लिए स्वेच्छा से आए
     support: सहयोग
     tos_short: शर्तें
     tos: सेवा की शर्तें
     privacy: गोपनीयता नीति
     secure: सुरक्षित संस्करण
-    report_abuse: दुरुपयोग होने की सूचना दें
+    report_abuse: दुर्व्यवहार रिपोर्ट करें
     built_on_code_studio: कोड स्टूडियो पर आधारित
     make_my_own_app: मेरा खुद का ऐप बनाएं
     how_it_works: यह कैसे काम करता है (कोड देखें)
@@ -709,18 +711,20 @@ hi:
   upsell:
     applab:
       title: ऐप लैब
-      body: ऐप लैब ऐसा प्रोग्रामिंग परिवेश है, जहां आप साधारण ऐप्स बना सकते हैं। ऐप
-        डिजाइन करें, इसे लाभदायक बनाने के लिए ब्लॉक्स या JavaScript के साथ कोड बनाएं,
-        फिर सेकंडों में अपना ऐप साझा करें।
+      body: ऐप लैब एक प्रोग्रामिंग वातावरण है जहां आप सरल ऐप बना सकते हैं। एक ऐप डिज़ाइन
+        करें, इसे काम करने के लिए ब्लॉक या जावास्क्रिप्ट के साथ कोड करें, फिर सेकंडो
+        में अपना ऐप साझा करें।
       body_short: ऐप डिजाइन करें, इसे लाभदायक बनाने के लिए ब्लॉक्स या JavaScript के
         साथ कोड बनाएं, फिर सेकंडों में अपना ऐप साझा करें।
       audience: आयु 13+
       cta: जानें कैसे
     dance:
       title: डांस पार्टी
+    dance-2019:
+      title: डांस पार्टी
     hoc:
-      title: क्लासिक भूलभुलैया
-      body: कंप्यूटर साइंस की बुनियादी बातें आजमाएं। लाखों ने इसे आजमाया है।
+      title: क्लासिक मेज़ (Classic Maze)
+      body: कंप्यूटर विज्ञान की मूल बातें आज़माएं। लाखों ने इसे ट्राई किया है।
     flappy:
       title: फ्लैपी कोड
       body: क्या आप 10 मिनट से कम समय में अपनी खुद की गेम लिख सकते हैं? हमारा फ्लैपी
@@ -740,46 +744,48 @@ hi:
       body: ऐप की गैलरी और हमारे उपयोगकर्ताओं द्वारा बनाए कलाकार चित्र देखें
     gamelab:
       title: गेम लैब
-      body: गेम लैब ऐसा प्रोग्रामिंग परिवेश है, जहां आप ऐसी वस्तुओं और चरित्रों के
-        साथ साधारण एनिमेशन व गेम्स बना सकते हैं, जो एक-दूसरे के साथ अंतःक्रिया करते
-        हैं।
+      body: गेम लैब एक प्रोग्रामिंग वातावरण है जहां आप वस्तुओं और पात्रों के साथ सरल
+        एनिमेशन और गेम बना सकते हैं जो एक दूसरे के साथ बातचीत करते हैं।
       audience: आयु 13+
       cta: जानें कैसे
     hoc-encryption:
-      title: साधारण कूटलेखन
-      body: छात्र कूट किए गए संदेश बनाने और उन्हें सुलझाने की तकनीकें सीखेंगे।
+      title: सरल एन्क्रिप्शन
+      body: छात्र एन्क्रिप्टेड संदेशों को बनाने और तोड़ने के तकनीक सीखेंगे।
     weblab:
       title: वेब लैब (बीटा)
-      body: वेब लैब ऐसा प्रोग्रामिंग परिवेश है, जहां आप HTML और CSS का उपयोग करते
-        हुए साधारण वेब पृष्ठ बना सकते हैं। अपने वेब पृष्ठ डिजाइन करें और सेकंडों में
-        अपनी साइट को साझा करें।
+      body: वेब लैब एक प्रोग्रामिंग वातावरण है जहां आप HTML और CSS का उपयोग करके सरल
+        वेब पेज बना सकते हैं। अपने वेब पेज डिज़ाइन करें और सेकंडो में अपनी साइट साझा
+        करें।
       audience: आयु 13+
       cta: जानें कैसे
     frozen:
-      title: Frozen
+      title: फ्रोजन
     starwars:
-      title: Star Wars
+      title: स्टार वॉर्स
     infinity:
-      title: Infinity Play Lab
-      body: डिज़्नी इनिफिनिटी के पात्रों की भूमिका में कहानी या गेम तैयार करने के
-        लिए प्ले लैब का उपयोग करें।
+      title: इन्फिनिटी प्ले लैब
+      body: डिज्नी इन्फिनिटी पात्रों द्वारा अभिनीत एक कहानी या गेम बनाने के लिए उपयोग
+        करें।
     minecraft:
-      title: Minecraft
+      title: माइनक्राफ्ट
       body: कोड के जरिए Minecraft की दुनिया का पता लगाएँ
     minecraft2016:
-      title: Minecraft
+      title: माइनक्राफ्ट
       body: Minecraft के आपके खुद के संस्करण में जानवरों और अन्य Minecraft प्राणियों
         को प्रोग्राम करें।
     aquatic:
-      title: Minecraft
+      title: माइनक्राफ्ट
     hero:
-      title: Minecraft
+      title: माइनक्राफ्ट
+      body: Minecraft बिल्कुल नई गतिविधि के साथ आवर ऑफ़ कोड के लिए लौट आया है! कोड
+        के साथ Minecraft के माध्यम से सफर।
     sports:
+      title: खेल
       body: बास्केटबॉल गेम बनाएं या खेलों में मिलाएं व मिलान करें।
     text-compression:
-      title: टेक्सट संक्षिप्तीकरण
-      body: इस पाठ में, छात्र चिन्हों के स्थान पर पैटर्नों को रखकर टेक्सट को संक्षिप्त
-        करने के लिए कम्प्रेशन विजेट का उपयोग करेंगे।
+      title: टेक्स्ट कम्प्रेशन
+      body: इस पाठ में, छात्र प्रतीकों के साथ पैटर्न को प्रतिस्थापित करके टेक्स्ट
+        को कम्प्रेश करने के लिए टेक्स्ट कम्प्रेशन विजेट (widget) का उपयोग करेंगे।
     unplugged:
       title: अनप्लग किए गए पाठ
       audience: आयु 4+
@@ -791,11 +797,11 @@ hi:
       body_short: यदि आपके पास कंप्यूटर नहीं हैं, तो अपनी कक्षा में इन अनप्लग किए
         पाठों को आजमाएं।
     unplugged_conditionals:
-      title: शर्तें
-      body: कार्डों के डेक का उपयोग करते हुए इस “अनप्लग की गई” गतिविधि में कलन गणित
-        और नियमबद्ध कथनों के बारे में जानें।
+      title: कंडीशनल्स
+      body: कार्ड के डेक का उपयोग करके इस "अनप्लग्ड" गतिविधि में एल्गोरिदम और कंडीशनल
+        स्टेटमेंट के बारे में जानें।
     widgets:
-      title: विजेट
+      title: विजेट (Widgets)
       body: छात्र इन डिजीटल टूल्स का उपयोग करते हुए हमारे प्रायोगिक कंप्यूटर साइंस
         सिद्धांत पाठ्यक्रम से अवधारणाओं की पड़ताल कर सकते हैं। उनके खुद के विजेट का
         उपयोग करें, या अपनी कक्षा के लिए एकल-अवधारणा वाला पाठ तैयार करें।
@@ -819,7 +825,7 @@ hi:
     header: गैलरी
     header_playlab: कहानियां और गेम्स
     header_artist: कोड आर्ट
-    report_abuse: दुरुपयोग होने की सूचना दें
+    report_abuse: दुर्व्यवहार रिपोर्ट करें
   landing:
     report_bug: बग की रिपोर्ट करें
     support: मदद प्राप्त करें
@@ -1081,12 +1087,15 @@ hi:
     csf_events: घटनाएँ
     csf_online_safety: ऑनलाइन सुरक्षा
     csf_binary: युग्मक
-    csf_conditionals: शर्तें
+    csf_conditionals: कंडीशनल्स
+    csf_sprites: स्प्राइट्स
+    csf_spritelab: स्प्राइट लैब
     csf_nested_loops: नेस्टड लूप्स
     csf_functions: कार्य
     csf_variables: चर
     csf_for_loops: फॉर लूप्स
     csf_internet: इंटरनेट
+    csf_impacts: कंप्यूटिंग के प्रभाव
     csf_warmup: तैयारी करें
     csd1_1: 'अध्याय 1: प्रश्न हल करने की प्रक्रिया'
     csd1_2: 'अध्याय 2: कंप्यूटर और प्रश्न हल करना'
@@ -1120,7 +1129,7 @@ hi:
     csp3_1_2018: 'इकाई 3: प्रोग्रामिंग का परिचय'
     csp4_1_2018: 'Unit 4: Big Data and Privacy'
     csp_variables: चर
-    csp_conditionals: शर्तें
+    csp_conditionals: कंडीशनल्स
     csp_functions: कार्य
     csp_project: प्रोजेक्ट
     csp_lists: सूचियाँ
@@ -1136,6 +1145,7 @@ hi:
     time4cs_c5: घासी कच्छ में नागरिकों पर प्रभाव डालने वाला बदलाव
     k5_getting_started: शुरू करें
     k5_next_steps: अगले चरण
+    k5_diving_deeper: 'गहन अध्ययन करना: कोर्स E और F के लिए'
   external_links:
     disclaimer: अस्वीकरण
     leaving_domain: अब आप इस डोमेन को ऐसी साइट पर छोड़ रहे हैं, जो Code.org द्वारा

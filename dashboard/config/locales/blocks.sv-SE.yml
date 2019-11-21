@@ -2,6 +2,45 @@
 sv:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: alla
+            '"ALIEN"': alla aliens
+            '"BEAR"': alla björnar
+            '"CAT"': alla katter
+            '"DOG"': alla hundar
+            '"DUCK"': alla ankor
+            '"FROG"': alla grodor
+            '"MOOSE"': alla älgar
+            '"PINEAPPLE"': alla ananaser
+            '"ROBOT"': alla robotar
+            '"SHARK"': alla hajar
+            '"UNICORN"': Enhörningar
+          MOVE1:
+            MOVES.Roll: Kroppsrullning
+            MOVES.ClapHigh: Klappa högt
+            MOVES.Dab: Badda
+            MOVES.DoubleJam: Dubbelt ner
+            MOVES.Drop: Släpp
+            MOVES.Floss: Res dig
+            MOVES.Fresh: Färsk
+            MOVES.Clown: Clown
+            MOVES.Kick: Stjärna
+            MOVES.ThisOrThat: Det här eller det där
+            MOVES.Rest: Ingen
+          MOVE2:
+            MOVES.Roll: Kroppsrullning
+            MOVES.ClapHigh: Klappa högt
+            MOVES.Dab: Badda
+            MOVES.DoubleJam: Dubbelt ner
+            MOVES.Drop: Släpp
+            MOVES.Floss: Res dig
+            MOVES.Fresh: Färsk
+            MOVES.Clown: Clown
+            MOVES.Kick: Stjärna
+            MOVES.ThisOrThat: Det här eller det där
+            MOVES.Rest: Ingen
       Dancelab_atTimestamp:
         text: efter {TIMESTAMP} {UNIT}
         options:

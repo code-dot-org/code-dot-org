@@ -2107,6 +2107,10 @@ nl:
               name: Snelheid
             Functions:
               name: Functies
+        csp2-pilot:
+          stages:
+            The Need for Addressing:
+              name: De Nood aan Adressering
         peru-2019:
           stages:
             Introduction:
@@ -2118,7 +2122,7 @@ nl:
             Dance Party:
               name: Dansfeest
           description: Programmeer je eigen dansfeest om te delen met je vrienden!
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Computer Science Fundamentals:
               name: Basisbegrippen Computer Wetenschappen
@@ -2139,3 +2143,13 @@ nl:
         dance-extras-2019:
           title: Blijf dansen
           description: Breid de kennis van het eerste uur uit met uitgebreide projectideeën.
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Voorwaardelijke instructies
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Statements met Kaarten

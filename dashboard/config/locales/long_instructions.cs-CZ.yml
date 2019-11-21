@@ -177,10 +177,49 @@ cs-CZ:
       CourseE_HOC 2018 Level_9b: Dostal(a) jsi se k útesu, nyní hledej **Srdce moře**
         ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
         ! Dostaň se pomocí modrého a červeného korálu k **truhle** s pokladem ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
+      Dance_2019_01: |-
+        _Pojďte si udělat taneční párty!_
+
+        Do pracovního prostoru přetáhni blok <xml><block type="Dancelab_makeAnonymousDanceSprite" block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;, &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml> a připoj ho dovnitř bloku <xml><block type="Dancelab_whenSetup2" next_connection_disabled="true" block-text="setup"></block></xml>, abys vytvořil(a) svého prvního tanečníka.
+
+        -   _Pokud chceš více informací nebo další výzvy, můžeš také kliknout na žárovku vlevo._
+      Dance_2019_02: |-
+        Blok <xml><block type="Dancelab_whenKey" block-text="when up pressed"></block></xml> ti umožňuje spustit kód, když dojde ke stisknutí šipky nahoru. Použij blok <xml><block type="Dancelab_doMoveEachLR" block-text="do once"><title name="GROUP">"CAT"</title><title name="MOVE">MOVES.XClapSide</title><title name="DIR">-1</title></block></xml>, aby tanečník tlesknul, když stiskneš šipku nahoru, nebo vyzkoušej jiný pohyb!
+
+        _Nezapomeň po kliknutí na tlačítko Spustit stisknout šipku nahoru nebo ![](<https://images.code.org/419e704e6841c0b696016bf5029b8cb9-image-1571864825506.06.45 PM.png>)!_
+      Dance_2019_03: Je čas na souboj tanečníků! Naprogramuj každého tanečníka, aby
+        předváděl pohyby, když mačkáš různé klávesy. Vyber pro každého tanečníka svůj
+        oblíbený pohyb, nebo je nastav na `(Náhodný)`, aby předvedli něco zcela nečekaného!
+      Dance_2019_04: |-
+        Ať se tanečníci pohybují podle hudby!
+
+        Do pracovního prostoru přetáhni blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Připoj ho pod blok <xml><block type="Dancelab_changeMoveEachLR"><title name="GROUP">"SHARK"</title><title name="MOVE">MOVES.ThisOrThat</title><title name="DIR">-1</title></block></xml>. Tvůj tanečník by měl po čtvrtém taktu začít nový pohyb.
+
+        **Takty** se používají v hudbě k počítání času. V tomto kurzu má jeden takt čtyři doby.
       Dance_2019_05: |-
         _Nyní to rozhýbeme!_
 
         Do pracovního prostoru přidej blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">takty</title></block></xml>. Po 6 taktech přiměj tanečníka začít nový pohyb.
+      Dance_2019_06: "Pomocí tohoto bloku vytvoř skupinu menších doprovodných tanečníků
+        kolem hlavního tanečníka uprostřed. \n  <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\">\n
+        \   <title name=\"N\">???</title>\n    <title name=\"COSTUME\" config=\"&quot;BEAR&quot;,
+        &quot;CAT&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;,
+        &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title>\n    <title name=\"LAYOUT\">\"circle\"</title>\n
+        \ </block></xml>\nNyní můžeš vytvořit celou skupinu tanečníků najednou!"
+      Dance_2019_07: |-
+        Každý tanečník má sadu _vlastností_, které řídí, jak tanečník vypadá.
+
+        Změnou velikosti tanečníka můžeš zařídit, aby vypadal, že je blíž nebo dál. Změň velikost skupiny tanečníků chvíli poté, co začne hrát hudba.
+      Dance_2019_08: Tanečníci mají vlastnost „odstín“, která může přidat vrstvu barvy.
+        Zkus změnit odstín jednoho z tanečníků (nebo celé skupiny)!
+      Dance_2019_09: |-
+        Toto je zvláštní druh události, která se spouští stále znovu.
+
+        <xml><block type="Dancelab_everySeconds"><title name="N">2</title><title name="UNIT">"measures"</title></block></xml>
+
+        Další nové bloky z tvé sady nástrojů umožňují postupně (nebo náhodně!) v průběhu času měnit vlastnosti tanečníků.
+
+        _Buď kreativní a užij si to!_
       Dance_2019_10: Roztoč to! Vytvoř si svůj vlastní tanec a sdílej ho s kamarády.
       Dance_Party_01: |-
         _Pojďme uspořádat taneční večírek!_
@@ -285,6 +324,14 @@ cs-CZ:
         -   Vytvoř druhou skupinu tanečníků v rozdílném rozvržení
         -   Změň rozvržení, když stiskneš klávesu
         -   Změň vlastnost, když tanečníci změní sestavy
+      Dance_Party_extras_layout_2019: |-
+        # Utvoř sestavu!
+
+        Podívej se na tento tanec, který používá blok <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> ke změně sestavy doprovodných tanečníků během tance. Vyzkoušej jeden z těchto nápadů k vylepšení:
+
+        -   Vytvoř druhou skupinu tanečníků s jiným rozložením
+        -   Změň rozložení při stisknutí klávesy
+        -   Změň vlastnost, když tanečníci změní sestavu
       Dance_Party_extras_on_beat: |-
         # Basy, středy a výšky
 
@@ -297,6 +344,10 @@ cs-CZ:
         # Zrychli to, zpomal to
 
         Tento závěrečný tanec používá blok „nastavit rychlost“ k ovládání, jak rychle se každý tanečník pohybuje. Zkus během různých bodů písně experimentovat s různými rychlostmi. Neboj se pohrát si s tímto tancem nebo se vrátit k předchozím tancům, aby byly ještě skvělejší.
+      Dance_Party_extras_speed_2019: |-
+        # Zrychli to, zpomal to
+
+        Tento poslední tanec používá blok <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> k řízení rychlosti pohybu jednotlivých tanečníků. Zkus experimentovat s různými rychlostmi v různých místech písničky. Neboj se si s tímto tancem pořádně pohrát nebo se vrať k libovolnému z předchozích tanců a zkus je ještě vylepšit.
       Dance_Party_extras_visible: |-
         # Kam by šli?
 
