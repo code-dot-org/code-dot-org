@@ -97,11 +97,11 @@ class LevelTest < ActiveSupport::TestCase
     end
   end
 
-  test "replace bad chars in custom level name" do
-    assert_creates(Level) do
+  test "reject bad chars in custom level name" do
+    assert_does_not_create(Level) do
       level = Level.create(@custom_maze_data.merge(name: 'bad <chars>'))
-      assert level.valid?
-      assert_equal 'bad -chars-', level.name
+      assert_not level.valid?
+      assert level.errors.include?(:name)
     end
   end
 
