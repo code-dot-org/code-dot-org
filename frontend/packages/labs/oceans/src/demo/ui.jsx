@@ -9,6 +9,8 @@ import {$time, currentRunTime, finishMovement, resetTraining} from './helpers';
 import {onClassifyFish} from './models/train';
 import colors from './colors';
 import aiBotClosed from '../../public/images/ai-bot/ai-bot-closed.png';
+import counterIcon from '../../public/images/data.png';
+import eraseButton from '../../public/images/erase.png';
 import Typist from 'react-typist';
 import {getCurrentGuide, dismissCurrentGuide} from './models/guide';
 import {playSound} from './models/soundLibrary';
@@ -155,15 +157,11 @@ const styles = {
     lineHeight: '26px',
     color: colors.white
   },
-  resetTrainingButton: {
+  eraseButton: {
     position: 'absolute',
-    top: 10,
-    right: 20,
-    cursor: 'pointer',
-    padding: '5px 7px',
-    borderRadius: '50%',
-    border: `2px solid ${colors.white}`,
-    color: colors.white
+    top: 26,
+    right: 22,
+    cursor: 'pointer'
   },
   trainQuestionText: {
     position: 'absolute',
@@ -202,8 +200,8 @@ const styles = {
   },
   counter: {
     position: 'absolute',
-    bottom: '27%',
-    left: '74%',
+    right: 53,
+    top: 24,
     backgroundColor: colors.black,
     opacity: '90%',
     color: '#3CFFF8',
@@ -629,23 +627,25 @@ let Train = class Train extends React.Component {
 
     return (
       <Body>
-        <span
-          style={styles.resetTrainingButton}
+        <img
+          src={eraseButton}
+          style={styles.eraseButton}
           onClick={() => {
             setState({
               showConfirmationDialog: true,
               confirmationDialogOnYes: resetTrainingFunction
             });
           }}
-        >
-          <FontAwesomeIcon icon={faTrash} />
-        </span>
+        />
         <div style={styles.trainQuestionText}>{state.trainingQuestion}</div>
         <img style={styles.trainBot} src={aiBotClosed} />
-        <div style={styles.counter}>{`Data Inputs: ${Math.min(
+        
+        <div style={styles.counter}>
+        <img src={counterIcon}/>
+      {Math.min(
           999,
           state.yesCount + state.noCount
-        )}`}</div>
+        )}</div>
         <div style={styles.trainButtons}>
           <Button
             style={styles.trainButtonNo}
