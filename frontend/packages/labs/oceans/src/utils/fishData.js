@@ -147,6 +147,11 @@ export const BodyShape = Object.freeze({
   OTHER: 4
 });
 
+export const FieldType = Object.freeze({
+  ATTRIBUTE: 'attribute', // Means the field came from the "knnData"
+  ID: 'id', // Means the field is a one-hot encoded boolean value corresponding to an ID for a part variation
+});
+
 const fishComponents = {
   // BODY KNN DATA: [area, BodyShape]
   bodies: {
@@ -1651,7 +1656,16 @@ export const initFishData = () => {
         }
       });
       Object.values(variations).forEach((component, idx) => {
+        component.fieldInfos = [];
         for (var i = 0; i < component.knnData.length; ++i) {
+          component.fieldInfos.push({
+            partType: key,
+            fieldType: FieldType.ATTRIBUTE,
+            index: i
+          });
+        }
+
+        for (i = 0; i < component.knnData.length; ++i) {
           if (maxArray[i] === minArray[i]) {
             component.knnData[i] = 0;
           } else {
@@ -1664,7 +1678,16 @@ export const initFishData = () => {
         // Add an "id" to each component to train on
         const numVariations = Object.keys(variations).length;
         if (numVariations > 1) {
-          component.knnData.push(...oneHotEncode(idx, numVariations));
+          const indexVector = oneHotEncode(idx, numVariations);
+          component.knnData.push(...indexVector);
+
+          for (i = 0; i < indexVector.length; ++i) {
+            component.fieldInfos.push({
+              partType: key,
+              fieldType: FieldType.ID,
+              index: i
+            });
+          }
         }
       });
     });
