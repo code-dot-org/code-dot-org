@@ -2,6 +2,45 @@
 th:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: ทั้งหมด
+            '"ALIEN"': มนุษย์ต่างดาวทั้งหมด
+            '"BEAR"': หมีทั้งหมด
+            '"CAT"': แมวทั้งหมด
+            '"DOG"': สุนัขทั้งหมด
+            '"DUCK"': เป็ดทั้งหมด
+            '"FROG"': กบทั้งหมด
+            '"MOOSE"': กวางมูสทั้งหมด
+            '"PINEAPPLE"': สับปะรดทั้งหมด
+            '"ROBOT"': หุ่นยนต์ทั้งหมด
+            '"SHARK"': ฉลามทั้งหมด
+            '"UNICORN"': ยูนิคอร์น
+          MOVE1:
+            MOVES.Roll: บอดี้โรล
+            MOVES.ClapHigh: ปรบมือสูง
+            MOVES.Dab: ตบเบา ๆ
+            MOVES.DoubleJam: ดับเบิ้ลดาวน์
+            MOVES.Drop: ทิ้งตัว
+            MOVES.Floss: ท่าฟลอส
+            MOVES.Fresh: ท่าเต้นเฟรช
+            MOVES.Clown: กังนัม
+            MOVES.Kick: สตาร์
+            MOVES.ThisOrThat: ท่าเต้น This or That
+            MOVES.Rest: ไม่มี
+          MOVE2:
+            MOVES.Roll: บอดี้โรล
+            MOVES.ClapHigh: ปรบมือสูง
+            MOVES.Dab: ตบเบา ๆ
+            MOVES.DoubleJam: ดับเบิ้ลดาวน์
+            MOVES.Drop: ทิ้งตัว
+            MOVES.Floss: ท่าฟลอส
+            MOVES.Fresh: ท่าเต้นเฟรช
+            MOVES.Clown: กังนัม
+            MOVES.Kick: สตาร์
+            MOVES.ThisOrThat: ท่าเต้น This or That
+            MOVES.Rest: ไม่มี
       Dancelab_atTimestamp:
         text: หลังจาก {TIMESTAMP} {UNIT}
         options:

@@ -1,0 +1,48 @@
+---
+title: AI Oceans
+theme: responsive
+---
+
+:ruby
+  launch_ai = DCDO.get('launch_ai', nil)
+  tutorial = {
+    heading: "AI for Oceans",
+    background_image: "/images/fit-1940/sw_landingpage.jpg",
+    left_heading: I18n.t(:starwars_javascript_title),
+    left_description: I18n.t(:starwars_javascript_description),
+    left_specs: I18n.t(:starwars_javascript_specs),
+    left_button_link: '/api/hour/begin/starwars',
+    left_button_text: I18n.t(:try_now),
+    id_for_mobile_image: "ocean-mobile-image",
+    skip_right_box: true
+  }
+
+  resources = {
+    left_link: "https://www.microsoft.com/en-us/store/locations/events-for-students",
+    left_image: CDO.code_org_url("/images/fill-485x260/mc/minecraft_teacher_small1.jpg"),
+    left_heading: I18n.t(:hoc2018_mc_educators_box3_title),
+    left_description: I18n.t(:hoc2018_mc_educators_box3_desc),
+    left_button_text: I18n.t(:hoc2018_mc_educators_box3_button),
+    right_link: "https://www.microsoft.com/en-us/store/locations/events-for-students",
+    right_image: CDO.code_org_url("/images/fill-485x260/mc/minecraft_teacher_small1.jpg"),
+    right_heading: I18n.t(:hoc2018_mc_educators_box3_title),
+    right_description:  I18n.t(:hoc2018_mc_educators_box3_desc),
+    right_button_text: I18n.t(:hoc2018_mc_educators_box3_button),
+  }
+
+:css
+  @media screen and (min-width: 0px) and (max-width: 970px) {
+    #ocean-mobile-image {
+      background-image: url(/images/fit-520/starwars_carousel_background.jpg);
+    }
+  }
+
+%div{style: "display: #{launch_ai ? 'block' : 'none'}"}
+
+  = view :tutorial_promo, tutorial: tutorial
+
+  %div{style: "clear: both; margin-top: 20px;"}
+
+  = view :resource_boxes, resources: resources
+
+  .clear

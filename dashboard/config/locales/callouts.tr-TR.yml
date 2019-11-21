@@ -236,8 +236,15 @@ tr-TR:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Yeni blok!
         dance_callout_11_b: Yeni blok!
+      Dance_2019_01:
+        dance_callout_01: Burada dansçı türünü seçin.
+      Dance_2019_02:
+        dance_callout_11_a: Bu bloğu programınıza ekleyin.
+        arrow_buttons: Dansçınızı kontrol etmek için ok düğmelerine basın.
       Dance_2019_04:
         dance_callout_02: Bu bloğu programınıza ekleyin!
+      Dance_2019_05:
+        dance_callout_05: Programınıza yeni bir etkinlik ekleyin.
       Dance_2019_06:
         dance_party_11_5_groups: Yeni blok!
       Dance_2019_07:

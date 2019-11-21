@@ -510,6 +510,8 @@ da:
       audience: 'Alder 13+'
     dance:
       title: 'Dansefest'
+    dance-2019:
+      title: 'Dansefest'
     hoc:
       title: 'Klassisk labyrint'
       body: 'Prøv grundlæggende kodning. Millioner har allerede gjort det.'

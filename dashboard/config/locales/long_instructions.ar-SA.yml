@@ -107,10 +107,46 @@ ar-SA:
       CourseE_HOC 2018 Level_9b: لقد تمكنت من بلوغ الشعاب المرجانية، ابحث الآن عن
         \* \* قلب البحر \* \* ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)!
         استخدم المرجان الأزرق والأحمر للبحث عن صندوق **الكنز** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
+      Dance_2019_01: |-
+        _دعونا نقيم حفلة رقص!_
+
+        اسحب المربع البرمجي إلى  <xml><block type="Dancelab_makeAnonymousDanceSprite" block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;, &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml> مساحة العمل، وصله داخل المربع البرمجي <xml><block type="Dancelab_whenSetup2" next_connection_disabled="true" block-text="setup"></block></xml> لإنشاء أول راقص خاص بك.
+
+        -   _يمكنك أيضاً النقر فوق مصباح الإضاءة الموجود  في اليسار إذا كنت ترغب في الحصول على مزيد من المعلومات، أو  مزيد من التحديات._
+      Dance_2019_02: |-
+        يتيح لك المربع البرمجي <xml><block type="Dancelab_whenKey" block-text="when up pressed"></block></xml> تشغيل الكود البرمجي عند الضغط على السهم لأعلى. استخدم المربع البرمجي لجعل الراقص يصفق عند الضغط عليه، أو جرب حركة أخرى!
+
+        _تأكد من الضغط على السهم لأعلى، أو   ![](<https://images.code.org/419e704e6841c0b696016bf5029b8cb9-image-1571864825506.06.45 PM.png>) بعد النقر على زر التشغيل!_
+      Dance_2019_03: حان الوقت للرقص! قم ببرمجة كل راقص للتحرك عند الضغط على المفاتيح
+        المختلفة. اختر الحركة المفضلة لديك لكل راقص، أو تعيينها على (عشوائي) للحصول
+        على حركات غير متوقعة تماماً!
+      Dance_2019_04: |-
+        دعونا نحرك الراقصين في الوقت المناسب بالتناغم مع الموسيقى!
+
+        اسحب للخارج المربع البرمجي  <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> في مساحة العمل. صله أسفل المربع البرمجي <xml><block type="Dancelab_changeMoveEachLR"><title name="GROUP">"SHARK"</title><title name="MOVE">MOVES.ThisOrThat</title><title name="DIR">-1</title></block></xml> . يجب أن يبدأ الراقص الخاص بك حركة جديدة بعد الإجراء الرابع.
+
+        **الإجراءات** يتم استخدامها لحساب الوقت في الموسيقى. في هذه الدورة التعليمية، يكون الإجراء هو  لأربعة إيقاعات موسيقية.
       Dance_2019_05: |-
         -   الآن نحن نرقص ونستمتع بذلك!\*
 
         أضف المربع البرمجي <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> إلى مساحة عملك. اجعل الراقص يبدأ بحركة جديدة بعد 6 إجراءات.
+      Dance_2019_06: "استتخدم هذا المربع البرمجي الجديد لتعيين مجموعة من الراقصيين
+        الاحتياطيين الأصغر حول الراقص الرئيسي في المنتصف. \n  <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\">\n
+        \   <title name=\"N\">???</title>\n    <title name=\"COSTUME\" config=\"&quot;BEAR&quot;,
+        &quot;CAT&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;,
+        &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title>\n    <title name=\"LAYOUT\">\"circle\"</title>\n
+        \ </block></xml>\nيمكنك الآن إنشاء حزمة من الراقصيين في نفس الوقت!"
+      Dance_2019_08: يجب أن يكون لدى الراقصين خاصية "اللون الخفيف" التي يمكن من خلالها
+        إضافة طبقة لون. جرب أن تغيير من اللون الخفيف لراقص واحد من الراقصين لدك (أو
+        المجموعة بأكملها)!
+      Dance_2019_09: |-
+        هذا نوع خاص من الأحداث التي تنطلق مراراً وتكراراً.
+
+        <xml><block type="Dancelab_everySeconds"><title name="N">2</title><title name="UNIT">"measures"</title></block></xml>
+
+        تتيح لك المربعات البرمجية الجديدة الأخرى في مربع الأدوات الخاص بك إلى القيام بتغيير خصائص الراقصين بشكل تدريجي (أو عشوائياً) بمرور الوقت.
+
+        _كن مبدعًأ وتمتع!_
       Dance_Party_01: |-
         _دعونا نقِم حفلة رقص!_
 
@@ -197,6 +233,14 @@ ar-SA:
         -   إنشاء مجموعة ثانية من الراقصين في مخطط توزيع مختلف
         -   تغيير مخطط التوزيع عند الضغط على أي مفتاح
         -   تغيير الوظائف عند تغيير الراقصين للتشكيل
+      Dance_Party_extras_layout_2019: |-
+        # دعونا نخوض في التشكيلة!
+
+        تحقق من هذه الرقصة التي تستخدم  <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml>  لتغيير تشكيلة الراقصين الاحتياطيين طيلة الرقصة. جرب واحدة من هذه الأفكار للتوسع:
+
+        -   قم بإنشاء مجموعة ثانية من الراقصين في تخطيط مختلف
+        -   قم بتغيير التخطيط عندما يكون المفتاح مضغوطاَ
+        -   قم بتغيير الخاصية عند قيام الراقصون بتغيير التشكيلة
       Dance_Party_extras_on_beat: |-
         # الجهير والنغمة متوسطة الطبقة والطنين الثلاثي
 
@@ -209,6 +253,10 @@ ar-SA:
         # التسريع والإبطاء
 
         تستخدم هذه الرقصة النهائية الكتلة "ضبط السرعة" للتحكم في سرعة حركة جميع الراقصين. جرب استخدام سرعات مختلفة خلال نقاط مختلفة من الأغنية. لا تتردد في تصليح هذه الرقصة أو العودة إلى أي من الرقصات السابقة لجعلها أكثر روعة.
+      Dance_Party_extras_speed_2019: |-
+        # زيادة سرعة الراقص، وخفضها
+
+        تستخدم هذه الرقصة النهائية المربع البرمجي <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> للتحكم في مدى السعة التي يتحرك بها كل راقص. حاول التجربة مع سرعات مختلفة أثناء النقاط المتفاوتة في الأغنية. يجوز لك الحفاظ على الحركة غير المنتظمة في هذه الرقصة، أو العودة إلى أي رقصات سابقة لجعلها أكثر روعة.
       Dance_Party_extras_visible: |-
         # أغنية Where'd They Go؟
 

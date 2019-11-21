@@ -2,6 +2,45 @@
 ko:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: 모두
+            '"ALIEN"': 모든 외계인
+            '"BEAR"': 모든 곰
+            '"CAT"': 모든 고양이
+            '"DOG"': 모든 개
+            '"DUCK"': 모든 오리
+            '"FROG"': 모든 개구리
+            '"MOOSE"': 모든 사슴
+            '"PINEAPPLE"': 모든 파인애플
+            '"ROBOT"': 모든 로봇
+            '"SHARK"': 모든 상어
+            '"UNICORN"': 유니콘
+          MOVE1:
+            MOVES.Roll: 바디롤
+            MOVES.ClapHigh: 높이 손뼉치기
+            MOVES.Dab: 댑
+            MOVES.DoubleJam: 더블 다운
+            MOVES.Drop: 드롭
+            MOVES.Floss: 플로스
+            MOVES.Fresh: 프레시
+            MOVES.Clown: 강남
+            MOVES.Kick: 별
+            MOVES.ThisOrThat: 이것저것
+            MOVES.Rest: 없음
+          MOVE2:
+            MOVES.Roll: 바디롤
+            MOVES.ClapHigh: 높이 손뼉치기
+            MOVES.Dab: 댑
+            MOVES.DoubleJam: 더블 다운
+            MOVES.Drop: 드롭
+            MOVES.Floss: 플로스
+            MOVES.Fresh: 프레시
+            MOVES.Clown: 강남
+            MOVES.Kick: 별
+            MOVES.ThisOrThat: 이것저것
+            MOVES.Rest: 없음
       Dancelab_atTimestamp:
         text: "{TIMESTAMP} {UNIT} 이후"
         options:

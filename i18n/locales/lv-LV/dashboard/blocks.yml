@@ -2,6 +2,10 @@
 lv:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            '"UNICORN"': Vienradži
       Dancelab_atTimestamp:
         options:
           UNIT:

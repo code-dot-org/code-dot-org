@@ -2,6 +2,30 @@
 id:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: semua
+            '"ALIEN"': semua aliens
+            '"BEAR"': semua beruang
+            '"CAT"': semua kucing
+            '"DOG"': semua anjing
+            '"DUCK"': semua bebek
+            '"FROG"': semua katak
+            '"MOOSE"': semua rusa
+            '"PINEAPPLE"': semua nanas
+            '"ROBOT"': semua robot
+            '"SHARK"': semua hiu
+          MOVE1:
+            MOVES.ClapHigh: Tepuk tangan di atas
+            MOVES.Dab: Oleskan
+            MOVES.Clown: Badut
+            MOVES.Rest: Tidak ada
+          MOVE2:
+            MOVES.ClapHigh: Tepuk tangan di atas
+            MOVES.Dab: Oleskan
+            MOVES.Clown: Badut
+            MOVES.Rest: Tidak ada
       Dancelab_atTimestamp:
         text: setelah {TIMESTAMP}{UNIT}
         options:

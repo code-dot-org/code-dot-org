@@ -1699,13 +1699,6 @@ es-MX:
           stages:
             Hour of Code 2015:
               name: Hora del código 2015
-        ocean:
-          title: Hora del Código en el océano
-          description: Descripción a definir.
-          description_short: Descripción corta a definir.
-          stages:
-            Ocean:
-              name: Océano
         CSPPD3-Unit3-pt2:
           stages:
             Challenge Overview:
@@ -10169,6 +10162,8 @@ es-MX:
               name: Encuesta de la Unidad 1 para ESTUDIANTES
             Unit 1 TEACHER Survey:
               name: Encuesta de la Unidad 1 para DOCENTES
+            Representing Information:
+              name: Representación de la información
           title: Piloto de la Unidad 1 de CSP
         csd-tests:
           stages:
@@ -11505,6 +11500,8 @@ es-MX:
               name: Encuesta de la Unidad 2 para ESTUDIANTES
             Unit 2 TEACHER Survey:
               name: Encuesta de la Unidad 2 para DOCENTES
+            The Need for Addressing:
+              name: La necesidad de direccionamiento
         denny-science:
           stages:
             Earthquake Detector:
@@ -11574,8 +11571,7 @@ es-MX:
               name: Fiesta de baile
           title: Fiesta de baile (remix 2019)
           description: '¡Programa tu propia fiesta de baile para compartir con tus amigos!'
-        k5-onlinepd-copy:
-          description: '¡Aprende a enseñar ciencias de la computación con este curso en línea gratuito y autodidacta de Fundamentos de Ciencias de la Computación!'
+        k5-onlinepd-2019:
           stages:
             Getting Started:
               name: Primeros pasos
@@ -11599,16 +11595,6 @@ es-MX:
               name: Planificación
             Next Steps:
               name: Próximos pasos
-            Understanding the Computer Science Fundamentals Courses:
-              name: Cursos de comprensión de los Fundamentos de Ciencias de la Computación
-            extra:
-              name: extra
-            Welcome to this online course:
-              name: Bienvenido a este curso en línea
-            Understanding the Computer Science Fundamentals courses:
-              name: Cursos de comprensión de los Fundamentos de Ciencias de la Computación
-            Best practices for teaching computer science:
-              name: Mejores prácticas para la enseñanza de ciencias de la computación
             Sequencing:
               name: Secuencias
             Loops:
@@ -11619,18 +11605,6 @@ es-MX:
               name: Eventos
             Functions:
               name: Funciones
-            Diving Deeper:
-              name: Profundizar
-            Next steps:
-              name: Próximos pasos
-            Diving deeper:
-              name: Profundizar
-            Diving deeper (for Courses E and F):
-              name: Profundizar (para cursos E y F)
-            Welcome to "Teaching Computer Science Fundamentals":
-              name: Bienvenido a "Cómo enseñar los Fundamentos de Ciencias de la Computación"
-            Diving Deeper (for Courses E and F):
-              name: Profundizar (para cursos E y F)
             'Diving Deeper: Courses E and F':
               name: 'Profundizar: cursos E y F'
             Sprite Lab:
@@ -11639,16 +11613,6 @@ es-MX:
               name: Variables
             For Loops:
               name: Bucles Para
-            End-of-course projects:
-              name: Proyectos de fin de curso
-            Who is this section for?:
-              name: '¿Para quién es esta sección?'
-            Reviewing reflections:
-              name: Revisión de reflexiones
-            Reviewing your reflections:
-              name: Revisión de tus reflexiones
-            End of Course projects:
-              name: Proyectos de fin de curso
         dance-extras-2019:
           title: Sigue bailando
           description: Motívate con más ideas de proyectos.
@@ -11709,4 +11673,80 @@ es-MX:
               name: PT de práctica Parte 3
             'Lesson 15: Unit 4 Assessment':
               name: 'Lección 15: evaluación de la unidad 4'
-          title: Variables, condicionales y funciones
+          title: 'Variables, condicionales y funciones'
+        time4cs-control-unit-1:
+          stages:
+            Sequencing in Maze:
+              name: Secuencias en Laberinto
+            Programming and Loops with the Artist:
+              name: Programación y bucles con el Artista
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Condicionales en Minecraft: Voyage Aquatic'
+            Conditionals:
+              name: Condicionales
+            'Events: The Big Event':
+              name: 'Eventos: El Gran Evento'
+            Simon Says:
+              name: Simón dice
+            Learning Sprites with Sprite Lab:
+              name: Aprender sprites con Laboratorio de Sprite
+            Alien Dance Party with Sprite Lab:
+              name: Fiesta de baile extraterrestre con Laboratorio de Sprite
+            Private and Personal Information:
+              name: Información privada y personal
+            Access Ability:
+              name: Habilidad de acceso
+            Drawing with Loops:
+              name: Dibujar con bucles
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Colaboración abierta
+            Conditionals with Cards:
+              name: Condicionales con tarjetas
+            Nested Loops in Bee:
+              name: Bucles anidados en Abeja
+            Nested Loops in Artist:
+              name: Bucles anidados en Artista
+            Nested Loops in Frozen:
+              name: Bucles anidados en Frozen
+            'Functions: Songwriting':
+              name: 'Funciones: composición musical'
+            Functions in Minecraft:
+              name: Funciones en Minecraft
+            Functions in Harvester:
+              name: Funciones en la Cosechadora
+            Functions in Artist:
+              name: Funciones de Artista
+        time4cs-experiment-unit-2:
+          stages:
+            Introduction to the Problem:
+              name: Introducción al problema
+            Everglades Habitats:
+              name: Hábitats de Everglades
+            Food Chains:
+              name: Cadenas alimentarias
+            Alligator Holes:
+              name: Hoyos de cocodrilo
+            Invasive Species:
+              name: Especies invasoras
+            I am in Big Trouble:
+              name: Estoy en un gran problema
+            Conditionals in Sprite Lab:
+              name: Condicionales en el Laboratorio de sprites
+            Nested Loops in Maze:
+              name: Bucles anidados en Laberinto
+            Fancy Shapes using Nested Loops:
+              name: Formas elegantes con bucles anidados
+            Nested Loops with Frozen:
+              name: Bucles anidados con Frozen
+            Fishy Business:
+              name: Un negocio que huele mal
+            Functions in Minecraft:
+              name: Funciones en Minecraft
+            Functions with Harvester:
+              name: Funciones en Cosechadora
+            Functions with Artist:
+              name: Funciones de Artista
+            Functions in Sprite Lab:
+              name: Funciones en el Laboratorio de sprites

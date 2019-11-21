@@ -400,6 +400,7 @@ ru:
       algebra_game: Алгебра
       applab: Лаборатория приложений
       artist: Художник
+      artist_k1: Мастер (Осуществляет предпросмотр)
       basketball: Баскетбол
       bounce: Прыжок
       calc: Калькулятор
@@ -414,9 +415,12 @@ ru:
       infinity: Бесконечность
       makerlab: Maker Toolkit
       minecraft_adventurer: Приключение c Minecraft
+      minecraft_aquatic: Майнкрафт Под Водой
       minecraft_codebuilder: 'Майнкрафт: Кодовое соединение'
       minecraft_designer: Minecraft
+      minecraft_hero: Майнкрафт Герой
       playlab: Лаборатория игр
+      playlab_k1: Play Lab (Предпросмотр)
       spritelab: Лаборатория Спрайтов
       starwars: Звездные войны
       starwarsblocks: Звездные войны (блоки)
@@ -723,6 +727,8 @@ ru:
       audience: Возраст 13+
       cta: Узнать подробности
     dance:
+      title: Танцевальная вечеринка
+    dance-2019:
       title: Танцевальная вечеринка
     hoc:
       title: Классический лабиринт
@@ -1234,6 +1240,7 @@ ru:
       email_alternate: Дополнительный адрес электронной почты
       gender: Гендерная принадлежность
       school_name: Название школы
+      school_city: Город твоей Школы
       school_country: Страна твоей школы
       ages: Какие возраста вы обучали в этом году?
       subjects: Каким предметам вы обучали в этом году?

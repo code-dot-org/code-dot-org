@@ -50,8 +50,15 @@ cs-CZ:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Nový blok!
         dance_callout_11_b: Nový blok!
+      Dance_2019_01:
+        dance_callout_01: Přidej do svého programu tento blok!
+      Dance_2019_02:
+        dance_callout_11_a: Přidej tento blok do svého programu.
+        arrow_buttons: Mačkej klávesy se šipkami a ovládej tak svého tanečníka.
       Dance_2019_04:
         dance_callout_02: Přidej do svého programu tento blok!
+      Dance_2019_05:
+        dance_callout_05: Přidejte do svého programu novou událost.
       Dance_2019_06:
         dance_party_11_5_groups: Nový blok!
       Dance_2019_07:

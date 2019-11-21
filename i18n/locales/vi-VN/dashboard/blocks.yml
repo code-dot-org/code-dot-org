@@ -2,6 +2,39 @@
 vi:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: tất cả
+            '"ALIEN"': tất cả người ngoài hành tinh
+            '"BEAR"': tất cả gấu
+            '"CAT"': tất cả mèo
+            '"DOG"': tất cả chó
+            '"DUCK"': tất cả vịt
+            '"FROG"': tất cả ếch
+            '"MOOSE"': tất cả nai sừng tấm
+            '"PINEAPPLE"': tất cả trái dứa
+            '"ROBOT"': tất cả robot
+            '"SHARK"': tất cả cá mập
+            '"UNICORN"': Kỳ lân
+          MOVE1:
+            MOVES.Roll: Cuộn cơ thể
+            MOVES.ClapHigh: Vỗ tay cao
+            MOVES.DoubleJam: Giảm gấp đôi
+            MOVES.Fresh: Tươi
+            MOVES.Clown: Chú hề
+            MOVES.Kick: Ngôi sao
+            MOVES.ThisOrThat: Đây hoặc đó
+            MOVES.Rest: Không có
+          MOVE2:
+            MOVES.Roll: Cuộn cơ thể
+            MOVES.ClapHigh: Vỗ tay cao
+            MOVES.DoubleJam: Giảm gấp đôi
+            MOVES.Fresh: Tươi
+            MOVES.Clown: Chú hề
+            MOVES.Kick: Ngôi sao
+            MOVES.ThisOrThat: Đây hoặc đó
+            MOVES.Rest: Không có
       Dancelab_atTimestamp:
         text: sau {TIMESTAMP} {UNIT}
         options:

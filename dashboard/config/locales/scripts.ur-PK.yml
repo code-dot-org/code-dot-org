@@ -280,7 +280,7 @@ ur:
               name: متغیرات
             Conditionals:
               name: شرائط
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Loops:
               name: لوپس
@@ -290,3 +290,7 @@ ur:
               name: موقعے
             Variables:
               name: متغیرات
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: شرائط

@@ -158,7 +158,7 @@ my:
           stages:
             Variables:
               name: Variables
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Computer Science Fundamentals:
               name: ကွန်ပျူတာသိပ္ပံအခြေခံ။
