@@ -1713,7 +1713,7 @@ lt:
               name: Įvadas
             Nested Loops:
               name: Kartojimas kartojime
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Next Steps:
               name: Kiti žingsniai
@@ -1729,3 +1729,13 @@ lt:
               name: Kintamieji
             For Loops:
               name: Kartojimas
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Sąlyginiai sakiniai
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Komandinis programavimas
+            Conditionals with Cards:
+              name: Sąlyginiai sakiniai su kortomis
