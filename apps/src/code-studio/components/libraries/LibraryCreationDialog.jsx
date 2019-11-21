@@ -101,11 +101,12 @@ class LibraryCreationDialog extends React.Component {
         return;
       }
       let librarySource = response.source;
-      response.libraries &&
+      if (response.libraries) {
         response.libraries.forEach(library => {
           librarySource =
             libraryParser.createLibraryClosure(library) + librarySource;
         });
+      }
       this.setState({
         libraryName: libraryParser.sanitizeName(
           dashboard.project.getLevelName()
