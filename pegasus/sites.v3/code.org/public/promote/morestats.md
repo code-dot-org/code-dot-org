@@ -7,7 +7,7 @@ theme: responsive
 Do you need to create a slide deck or one-pager to advocate for computer science in your state or city? The blog posts and links below contain resources and statistics that you can use to make your own custom materials!
 
 ## Code.org Policy Resources
-* See [state-by-state data](https://docs.google.com/spreadsheets/d/1YtTVcpQXoZz0IchihwGOihaCNeqCz2HyLwaXYpyb2SQ/pubhtml) on our 9 model policies for computer science education.
+* See [state-by-state data](https://docs.google.com/spreadsheets/d/e/2PACX-1vSntgonHS7gQ-QI7hcwNq0ssLt99IcwoUZMRZ2uksOkdxlvPi5yuY3GjdxzfELwaOZC4eZoLLnhsSxE/pubhtml) on our 9 model policies for computer science education.
 * Code.org partnered with CSTA and ECEP to create the [2019 State of Computer Science Education](https://advocacy.code.org/2019_state_of_cs.pdf) report on state-level policies that support equitable K-12 computer science education. You can also view the 2018 report [here](https://code.org/files/2018_state_of_cs.pdf), and the 2017 report (authored by Code.org, MassCAN, EDC, ECEP, SageFox, and ECS) [here](http://code.org/files/State_of_the_states.pdf).
 * [Computer science and ESSA](http://code.org/files/CS_and_ESSA.pdf): Read our recommendations for how states can add computer science to their state ESSA plans.
 * Download a [master slide deck](https://docs.google.com/presentation/d/1SUGh9QdyXoXPepD1vC5YXRnicxp-th_yWX8dNM_vywc/edit?usp=sharing) that you can use to create your own presentations.

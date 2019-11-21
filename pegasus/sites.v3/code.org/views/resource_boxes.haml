@@ -1,0 +1,24 @@
+%link{href: "/css/tools.css", rel: "stylesheet"}
+
+.tile-container-responsive{style: "padding-left: 5px"}
+  .col-50{style: "margin-right: 20px"}
+    .tutorial-tile
+      %a{href: resources[:left_link], target: '_blank'}
+        %img.tutorial-tile-img{src: resources[:left_image]}
+      .tutorial-info
+        %h3{style: "margin-top: 0px;"}=resources[:left_heading]
+        .smalltext=resources[:left_description]
+        %a{href: resources[:left_link], target: '_blank'}
+          %button.tutorial-info-start.tutorial-gray=resources[:left_button_text]
+        .clear
+
+  .col-50
+    .tutorial-tile
+      %a{href: resources[:right_link], target: '_blank'}
+        %img.tutorial-tile-img{src: resources[:right_image]}
+      .tutorial-info
+        %h3{style: "margin-top: 0px;"}=resources[:right_heading]
+        .smalltext=resources[:right_description]
+        %a{href: resources[:right_link], target: '_blank'}
+          %button.tutorial-info-start.tutorial-gray=resources[:right_button_text]
+        .clear

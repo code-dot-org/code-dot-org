@@ -44,6 +44,7 @@ export const SongTitlesToArtistTwitterHandle = {
   neverreallyover_katyperry: 'KatyPerry',
   occidentalview_francescogabbani: 'FrankGabbani',
   oldtownroadremix_lilnasx: 'LilNasX',
+  oldtownroadremix_lilnasx_long: 'LilNasX',
   starships_nickiminaj: 'NICKIMINAJ',
   sucker_jonasbrothers: 'JonasBrothers',
   // These tracks available locally, tweet @codeorg to avoid spamming anyone.
