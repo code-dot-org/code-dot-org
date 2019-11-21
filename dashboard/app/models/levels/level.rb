@@ -427,8 +427,8 @@ class Level < ActiveRecord::Base
 
   def reject_illegal_chars
     if name&.match /[^A-Za-z0-9 !"&'()+,\-.:=?_|]/
-      msg = "level name \"#{name}\" must only contain letters, numbers, "\
-      "spaces, and the following characters: !\"&'()+,\-.:=?_|"
+      msg = "\"#{name}\" may only contain letters, numbers, spaces, "\
+      "and the following characters: !\"&'()+,\-.:=?_|"
       errors.add(:name, msg)
     end
   end
