@@ -78,6 +78,18 @@ class ScriptDSL < BaseDSL
     @pilot_experiment = experiment
   end
 
+  # This method gets called whenever `stage '...'` is called in the script DSL,
+  # then must be called once again after the entire script DSL has been parsed.
+  #
+  # The first time `stage` is called, set @stage and other instance variables to
+  # represent an empty stage. Subsequent calls to `level '...'` will add levels
+  # to this stage.
+  #
+  # On subsequent calls to `stage`, push the previous stage and its levels onto
+  # the list of @stages, then reset the state to represent another empty stage.
+  #
+  # When called after the entire script DSL has been processed, simply push
+  # the last stage from the script DSL onto the list of @stages.
   def stage(name, properties = {})
     if @stage
       if @stages.any? {|s| s[:stage] == @stage}
