@@ -21,7 +21,6 @@ import {
   faPause,
   faBackward,
   faForward,
-  faTrash
 } from '@fortawesome/free-solid-svg-icons';
 
 const styles = {
@@ -112,8 +111,6 @@ const styles = {
     bottom: 'initial',
     left: '50%',
     padding: 20
-    //minWidth: '40%',
-    //minHeight: '40%'
   },
   confirmationHeader: {
     fontSize: 40,
