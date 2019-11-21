@@ -330,7 +330,7 @@ ro:
       project_gallery: Proiecte
       sections: Secțiuni
       help_support: Ajutor şi suport
-      report_bug: Raporteazã eroare
+      report_bug: Raportare problemă
       teacher_community: Comunitate profesori
       professional_learning: Dezvoltare profesională
       documentation: Documentație
@@ -382,7 +382,7 @@ ro:
       basketball: Baschet
       bounce: Săritură
       calc: Calculează
-      dance: Petrecere cu dans
+      dance: Petrecere dansantă
       eval: Evaluează
       flappy: Flappy
       frozen: Frozen
@@ -710,7 +710,9 @@ ro:
       audience: Vârste 13 +
       cta: Află cum
     dance:
-      title: Petrecere cu dans
+      title: Petrecere dansantă
+    dance-2019:
+      title: Petrecere dansantă
     hoc:
       title: Labirint Clasic
       body: Încearcă bazele programarii. Milioane de oameni au încercat.

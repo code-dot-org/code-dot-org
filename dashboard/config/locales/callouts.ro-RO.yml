@@ -76,12 +76,19 @@ ro-RO:
       CourseD_Dance_Party_04:
         dance_callout_04: Adaugă acest bloc la programul tău!
       CourseD_Dance_Party_06:
-        dance_callout_06: Adaugă un nou dansator aici
+        dance_callout_06: Adaugă noul dansator aici
       CourseD_Dance_Party_11:
         dance_callout_11_a: Bloc nou!
         dance_callout_11_b: Bloc nou!
+      Dance_2019_01:
+        dance_callout_01: Adaugă acest bloc la programul tău!
+      Dance_2019_02:
+        dance_callout_11_a: Adaugă acest bloc la programul tău.
+        arrow_buttons: Apasă butoanele cu săgeată pentru a-l controla pe dansator.
       Dance_2019_04:
         dance_callout_02: Adaugă acest bloc la programul tău!
+      Dance_2019_05:
+        dance_callout_05: Adăugați un nou eveniment în program.
       Dance_2019_06:
         dance_party_11_5_groups: Bloc nou!
       Dance_2019_07:
@@ -96,7 +103,7 @@ ro-RO:
       Dance_Party_04:
         dance_callout_04: Adaugă acest bloc la programul tău!
       Dance_Party_06:
-        dance_callout_06: Adaugă un nou dansator aici
+        dance_callout_06: Adaugă noul dansator aici
       Dance_Party_11:
         dance_callout_11_a: Bloc nou!
         dance_callout_11_b: Bloc nou!
