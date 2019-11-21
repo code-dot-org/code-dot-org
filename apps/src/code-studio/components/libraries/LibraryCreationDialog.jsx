@@ -100,11 +100,18 @@ class LibraryCreationDialog extends React.Component {
         this.setState({publishState: PublishState.NO_FUNCTIONS});
         return;
       }
+      let librarySource = response.source;
+      if (response.libraries) {
+        response.libraries.forEach(library => {
+          librarySource =
+            libraryParser.createLibraryClosure(library) + librarySource;
+        });
+      }
       this.setState({
         libraryName: libraryParser.sanitizeName(
           dashboard.project.getLevelName()
         ),
-        librarySource: response.source,
+        librarySource: librarySource,
         publishState: PublishState.DONE_LOADING,
         sourceFunctionList: functionsList
       });
