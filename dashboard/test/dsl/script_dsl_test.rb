@@ -190,28 +190,28 @@ endvariants
       script: script
     )
     script_text = ScriptDSL.serialize_to_string(script_level.script)
-    expected = <<-SCRIPT
-stage 'stage 1'
-variants
-  level 'maze 1'
-  level 'maze 2', experiments: ["testExperiment"]
-  level 'maze 3', experiments: ["testExperiment2","testExperiment3"]
-endvariants
-SCRIPT
+    expected = <<~SCRIPT
+      stage 'stage 1'
+      variants
+        level 'maze 1'
+        level 'maze 2', experiments: ["testExperiment"]
+        level 'maze 3', experiments: ["testExperiment2","testExperiment3"]
+      endvariants
+    SCRIPT
     assert_equal expected, script_text
   end
 
   test 'test Script DSL flex category as property hash' do
-    input_dsl = <<DSL
-stage 'Stage1',
-  flex_category: 'Content'
-level 'Level 1'
-stage 'Stage2',
-  flex_category: 'Practice'
-level 'Level 2'
-stage 'Stage3'
-level 'Level 3'
-DSL
+    input_dsl = <<~DSL
+      stage 'Stage1',
+        flex_category: 'Content'
+      level 'Level 1'
+      stage 'Stage2',
+        flex_category: 'Practice'
+      level 'Level 2'
+      stage 'Stage3'
+      level 'Level 3'
+    DSL
     expected = DEFAULT_PROPS.merge(
       {
         stages: [
@@ -242,14 +242,14 @@ DSL
   end
 
   test 'test Script DSL property lockable as property hash' do
-    input_dsl = <<DSL
-stage 'Stage1',
-  flex_category: 'Content',
-  lockable: true
-level 'Level 1'
-stage 'Stage2'
-level 'Level 2'
-DSL
+    input_dsl = <<~DSL
+      stage 'Stage1',
+        flex_category: 'Content',
+        lockable: true
+      level 'Level 1'
+      stage 'Stage2'
+      level 'Level 2'
+    DSL
     expected = DEFAULT_PROPS.merge(
       {
         stages: [
@@ -274,110 +274,110 @@ DSL
   end
 
   test 'can set hideable_stages' do
-    input_dsl = <<DSL
-hideable_stages 'true'
+    input_dsl = <<~DSL
+      hideable_stages 'true'
 
-stage 'Stage1'
-level 'Level 1'
-stage 'Stage2'
-level 'Level 2'
-DSL
+      stage 'Stage1'
+      level 'Level 1'
+      stage 'Stage2'
+      level 'Level 2'
+    DSL
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal true, output[:hideable_stages]
   end
 
   test 'can set exclude_csf_column_in_legend' do
-    input_dsl = <<DSL
-exclude_csf_column_in_legend 'true'
+    input_dsl = <<~DSL
+      exclude_csf_column_in_legend 'true'
 
-stage 'Stage1'
-level 'Level 1'
-stage 'Stage2'
-level 'Level 2'
-DSL
+      stage 'Stage1'
+      level 'Level 1'
+      stage 'Stage2'
+      level 'Level 2'
+    DSL
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal true, output[:exclude_csf_column_in_legend]
   end
 
   test 'can set student_detail_progress_view' do
-    input_dsl = <<DSL
-student_detail_progress_view 'true'
+    input_dsl = <<~DSL
+      student_detail_progress_view 'true'
 
-stage 'Stage1'
-level 'Level 1'
-stage 'Stage2'
-level 'Level 2'
-DSL
+      stage 'Stage1'
+      level 'Level 1'
+      stage 'Stage2'
+      level 'Level 2'
+    DSL
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal true, output[:student_detail_progress_view]
   end
 
   test 'can set has_verified_resources' do
-    input_dsl = <<DSL
-has_verified_resources 'true'
+    input_dsl = <<~DSL
+      has_verified_resources 'true'
 
-stage 'Stage1'
-level 'Level 1'
-stage 'Stage2'
-level 'Level 2'
-DSL
+      stage 'Stage1'
+      level 'Level 1'
+      stage 'Stage2'
+      level 'Level 2'
+    DSL
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal true, output[:has_verified_resources]
   end
 
   test 'can set has_lesson_plan' do
-    input_dsl = <<DSL
-has_lesson_plan 'true'
+    input_dsl = <<~DSL
+      has_lesson_plan 'true'
 
-stage 'Stage1'
-level 'Level 1'
-stage 'Stage2'
-level 'Level 2'
-DSL
+      stage 'Stage1'
+      level 'Level 1'
+      stage 'Stage2'
+      level 'Level 2'
+    DSL
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal true, output[:has_lesson_plan]
   end
 
   test 'can set teacher_resources' do
-    input_dsl = <<DSL
-teacher_resources [['curriculum', '/link/to/curriculum'], ['vocabulary', '/link/to/vocab']]
+    input_dsl = <<~DSL
+      teacher_resources [['curriculum', '/link/to/curriculum'], ['vocabulary', '/link/to/vocab']]
 
-stage 'Stage1'
-level 'Level 1'
-DSL
+      stage 'Stage1'
+      level 'Level 1'
+    DSL
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal [['curriculum', '/link/to/curriculum'], ['vocabulary', '/link/to/vocab']], output[:teacher_resources]
   end
 
   test 'can set script_announcements' do
-    input_dsl = <<DSL
-script_announcements [{"notice": "NoticeHere", "details": "DetailsHere", "link": "/foo/bar", "type": "information"}]
+    input_dsl = <<~DSL
+      script_announcements [{"notice": "NoticeHere", "details": "DetailsHere", "link": "/foo/bar", "type": "information"}]
 
-stage 'Stage1'
-level 'Level 1'
-DSL
+      stage 'Stage1'
+      level 'Level 1'
+    DSL
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal [{"notice": "NoticeHere", "details": "DetailsHere", "link": "/foo/bar", "type": "information"}], output[:script_announcements]
   end
 
   test 'can set pilot_experiment' do
-    input_dsl = <<DSL
-pilot_experiment 'science-experiment'
+    input_dsl = <<~DSL
+      pilot_experiment 'science-experiment'
 
-stage 'Stage1'
-level 'Level 1'
-DSL
+      stage 'Stage1'
+      level 'Level 1'
+    DSL
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal 'science-experiment', output[:pilot_experiment]
   end
 
   test 'can set editor_experiment' do
-    input_dsl = <<DSL
-editor_experiment 'script-editors'
+    input_dsl = <<~DSL
+      editor_experiment 'script-editors'
 
-stage 'Stage1'
-level 'Level 1'
-DSL
+      stage 'Stage1'
+      level 'Level 1'
+    DSL
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal 'script-editors', output[:editor_experiment]
   end
@@ -385,21 +385,21 @@ DSL
   test 'serialize editor_experiment' do
     script = create :script, editor_experiment: 'editors'
     script_text = ScriptDSL.serialize_to_string(script)
-    expected = <<-SCRIPT
-hidden false
-editor_experiment 'editors'
+    expected = <<~SCRIPT
+      hidden false
+      editor_experiment 'editors'
 
     SCRIPT
     assert_equal expected, script_text
   end
 
   test 'Script DSL with level progressions' do
-    input_dsl = <<DSL
-stage 'Stage1'
-level 'Level 1'
-level 'Level 2', progression: 'Foo'
-level 'Level 3', progression: 'Foo'
-DSL
+    input_dsl = <<~DSL
+      stage 'Stage1'
+      level 'Level 1'
+      level 'Level 2', progression: 'Foo'
+      level 'Level 3', progression: 'Foo'
+    DSL
     expected = DEFAULT_PROPS.merge(
       {
         stages: [
@@ -471,17 +471,17 @@ level 'Level 3'
   end
 
   test 'Script DSL with level challenge' do
-    input_dsl = <<DSL
-stage 'Stage1'
-level 'Level 1'
-level 'Level 2'
-level 'Level 3', challenge: true
-level 'Level 4'
-variants
-  level 'Level 5', challenge: true
-  level 'Level 5.1', active: false
-endvariants
-DSL
+    input_dsl = <<~DSL
+      stage 'Stage1'
+      level 'Level 1'
+      level 'Level 2'
+      level 'Level 3', challenge: true
+      level 'Level 4'
+      variants
+        level 'Level 5', challenge: true
+        level 'Level 5.1', active: false
+      endvariants
+    DSL
     expected = DEFAULT_PROPS.merge(
       {
         stages: [
@@ -514,12 +514,12 @@ DSL
   end
 
   test 'Script DSL with skipped extras' do
-    input_dsl = <<DSL
-stage 'Stage1'
-level 'Level 1'
-level 'Level 2'
-no_extras
-DSL
+    input_dsl = <<~DSL
+      stage 'Stage1'
+      level 'Level 1'
+      level 'Level 2'
+      no_extras
+    DSL
     expected = DEFAULT_PROPS.merge(
       {
         stages: [
@@ -555,11 +555,11 @@ DSL
   test 'serialize project_sharing' do
     script = create :script, project_sharing: true
     script_text = ScriptDSL.serialize_to_string(script)
-    expected = <<-SCRIPT
-hidden false
-project_sharing true
+    expected = <<~SCRIPT
+      hidden false
+      project_sharing true
 
-SCRIPT
+    SCRIPT
 
     assert_equal expected, script_text
   end
@@ -580,25 +580,25 @@ SCRIPT
   test 'serialize curriculum_umbrella' do
     script = create :script, curriculum_umbrella: 'CSP'
     script_text = ScriptDSL.serialize_to_string(script)
-    expected = <<-SCRIPT
-hidden false
-curriculum_umbrella 'CSP'
+    expected = <<~SCRIPT
+      hidden false
+      curriculum_umbrella 'CSP'
 
-SCRIPT
+    SCRIPT
 
     assert_equal expected, script_text
   end
 
   test 'Script DSL with new_name, family_name, version_year and is_stable' do
-    input_dsl = <<DSL
-new_name 'new name'
-family_name 'family name'
-version_year '3035'
-is_stable true
-stage 'Stage1'
-level 'Level 1'
-level 'Level 2'
-DSL
+    input_dsl = <<~DSL
+      new_name 'new name'
+      family_name 'family name'
+      version_year '3035'
+      is_stable true
+      stage 'Stage1'
+      level 'Level 1'
+      level 'Level 2'
+    DSL
     expected = DEFAULT_PROPS.merge(
       {
         new_name: "new name",
@@ -630,14 +630,14 @@ DSL
         is_stable: true
       }
     script_text = ScriptDSL.serialize_to_string(script)
-    expected = <<-SCRIPT
-hidden false
-new_name 'new name'
-family_name 'family name'
-version_year '2001'
-is_stable true
+    expected = <<~SCRIPT
+      hidden false
+      new_name 'new name'
+      family_name 'family name'
+      version_year '2001'
+      is_stable true
 
-SCRIPT
+    SCRIPT
     assert_equal expected, script_text
   end
 
@@ -653,18 +653,18 @@ SCRIPT
       script: script
     )
     script_text = ScriptDSL.serialize_to_string(script_level.script)
-    expected = <<-SCRIPT
-stage 'stage 1'
-level 'maze 1', named: true
+    expected = <<~SCRIPT
+      stage 'stage 1'
+      level 'maze 1', named: true
     SCRIPT
     assert_equal expected, script_text
   end
 
   test 'Script DSL with named: true' do
-    input_dsl = <<DSL
-stage 'stage 1'
-level 'maze 1', named: true
-DSL
+    input_dsl = <<~DSL
+      stage 'stage 1'
+      level 'maze 1', named: true
+    DSL
     expected = DEFAULT_PROPS.merge(
       {
         stages: [
@@ -692,18 +692,18 @@ DSL
       script: script
     )
     script_text = ScriptDSL.serialize_to_string(script_level.script)
-    expected = <<-SCRIPT
-stage 'stage 1'
-level 'maze 1', assessment: true
+    expected = <<~SCRIPT
+      stage 'stage 1'
+      level 'maze 1', assessment: true
     SCRIPT
     assert_equal expected, script_text
   end
 
   test 'Script DSL with assessment: true' do
-    input_dsl = <<DSL
-stage 'stage 1'
-level 'maze 1', assessment: true
-DSL
+    input_dsl = <<~DSL
+      stage 'stage 1'
+      level 'maze 1', assessment: true
+    DSL
     expected = DEFAULT_PROPS.merge(
       {
         stages: [
@@ -747,5 +747,59 @@ DSL
     }}}
     assert_equal expected, output
     assert_equal i18n_expected, i18n
+  end
+
+  test 'script DSL with extra space in stage name' do
+    input_dsl = <<~DSL
+      stage ' extra space '
+      level 'Level 1'
+    DSL
+    output, i18n = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    expected = DEFAULT_PROPS.merge(
+      {
+        stages: [
+          {
+            stage: "extra space",
+            scriptlevels: [
+              {stage: "extra space", levels: [{name: 'Level 1'}]},
+            ]
+          }
+        ],
+      }
+    )
+
+    i18n_expected = {'test' => {'stages' => {
+      "extra space" => {'name' => "extra space"},
+    }}}
+    assert_equal expected, output
+    assert_equal i18n_expected, i18n
+  end
+
+  test 'reject script DSL with duplicate stage name' do
+    input_dsl = <<~DSL
+      stage 'duplicate'
+      level 'Level 1'
+      stage 'duplicate'
+      level 'Level 2'
+    DSL
+
+    error = assert_raises do
+      ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    end
+    assert_equal 'a stage named "duplicate" already exists', error.message
+  end
+
+  test 'reject duplicate stage with extra space' do
+    input_dsl = <<~DSL
+      stage 'duplicate'
+      level 'Level 1'
+      stage ' duplicate '
+      level 'Level 2'
+    DSL
+
+    error = assert_raises do
+      ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    end
+    assert_equal 'a stage named "duplicate" already exists', error.message
   end
 end
