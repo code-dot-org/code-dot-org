@@ -774,8 +774,6 @@ class Pond extends React.Component {
 
   render() {
     const state = getState();
-    const nextButtonText =
-      state.appMode === AppMode.FishLong ? 'Finish' : 'Continue';
 
     return (
       <Body onClick={e => this.onPondClick(e)}>
@@ -797,7 +795,7 @@ class Pond extends React.Component {
                   style={styles.finishButton}
                   onClick={state.onContinue()}
                 >
-                  {nextButtonText}
+                  Finish
                 </Button>
               </div>
             ) : (
