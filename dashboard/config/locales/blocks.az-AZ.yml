@@ -2,6 +2,14 @@
 az:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: bütün
+          MOVE1:
+            MOVES.Rest: Heç biri
+          MOVE2:
+            MOVES.Rest: Heç biri
       Dancelab_atTimestamp:
         options:
           UNIT:
