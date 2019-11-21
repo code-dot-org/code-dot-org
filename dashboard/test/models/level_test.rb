@@ -107,7 +107,7 @@ class LevelTest < ActiveSupport::TestCase
 
   test "allow whitelisted chars in custom level name" do
     assert_creates(Level) do
-      name = '+-=_#&"\''
+      name = '+-=_(&"\''
       level = Level.create(@custom_maze_data.merge(name: name))
       assert level.valid?
       assert_equal name, level.name
