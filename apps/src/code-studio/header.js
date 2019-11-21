@@ -261,7 +261,7 @@ header.logToFirehose = detail => {
         detail: detail
       })
     },
-    {includeUserId: true}
+    {alwaysPut: true}
   );
 };
 
