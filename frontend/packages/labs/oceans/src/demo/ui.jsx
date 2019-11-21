@@ -9,6 +9,7 @@ import {$time, currentRunTime, finishMovement, resetTraining} from './helpers';
 import {onClassifyFish} from './models/train';
 import colors from './colors';
 import aiBotClosed from '../../public/images/ai-bot/ai-bot-closed.png';
+import arrowDownImage from '../../public/images/arrow-down.png';
 import Typist from 'react-typist';
 import {getCurrentGuide, dismissCurrentGuide} from './models/guide';
 import {playSound} from './models/soundLibrary';
@@ -230,7 +231,6 @@ const styles = {
     position: 'relative'
   },
   guideImage: {
-    _width: '70%',
     paddingTop: 20,
     paddingLeft: 20
   },
@@ -244,15 +244,14 @@ const styles = {
     position: 'absolute',
     padding: 20
   },
-  guideFinalTextContainer: {
-  },
+  guideFinalTextContainer: {},
   guideFinalTextInfoContainer: {
     backgroundColor: colors.lightGrey,
     borderRadius: 10
   },
   guideFinalText: {
     padding: 20,
-    opacity: 0.3
+    opacity: 0
   },
   guideBackground: {
     backgroundColor: 'rgba(0,0,0,0.3)',
@@ -272,18 +271,7 @@ const styles = {
     pointerEvents: 'none'
   },
   guideArrow: {
-    top: '100%',
-    left: '50%',
-    border: 'solid transparent',
-    height: 0,
-    width: 0,
-    position: 'absolute',
-    pointerEvents: 'none',
-    borderColor: 'none',
-    borderTopColor: colors.black,
-    borderWidth: 30,
-    marginLeft: -30,
-    display: 'none'
+    position: 'absolute'
   },
   guideInfo: {
     backgroundColor: colors.white,
@@ -293,49 +281,29 @@ const styles = {
     left: '50%',
     padding: 20
   },
-  _guideTopLeft: {
-    top: '5%',
-    left: '5%'
-  },
-  _guideCenter: {
-    bottom: '40%',
+  guideCenter: {
+    top: '50%',
     left: '50%',
+    bottom: 'initial',
     maxWidth: '47%',
-    transform: 'translateX(-50%)'
+    transform: 'translate(-50%, -50%)'
   },
-  _guideRightCenter: {
-    bottom: '30%',
-    right: '5%',
-    maxWidth: '25%'
-  },
-  _guideTopRight: {
+  arrowBotRight: {
     top: '15%',
-    right: '13%'
+    right: '14.5%'
   },
-  _guideTopRightNarrow: {
-    top: '15%',
-    right: '2%',
-    maxWidth: '40%'
+  arrowLowerLeft: {
+    bottom: '17%',
+    left: '6%'
   },
-  _guideBottomMiddle: {
+  arrowLowerRight: {
+    bottom: '17%',
+    right: '6%'
+  },
+  arrowLowerCenter: {
     bottom: '25%',
     left: '50%',
     transform: 'translateX(-50%)'
-  },
-  _guideBottomRight: {
-    bottom: '18%',
-    right: '2%',
-    maxWidth: '25%'
-  },
-  _guideBottomLeft: {
-    bottom: '18%',
-    left: '2%',
-    maxWidth: '25%'
-  },
-  _guideBottomRightCenter: {
-    bottom: '20%',
-    right: '5%',
-    maxWidth: '25%'
   }
 };
 
@@ -838,62 +806,71 @@ class Guide extends React.Component {
     return (
       <div>
         {!!currentGuide && (
-          <div
-            key={currentGuide.id}
-            style={
-              currentGuide.hideBackground
-                ? styles.guideBackgroundHidden
-                : styles.guideBackground
-            }
-            onClick={this.dismissGuideClick}
-          >
+          <div>
             <div
-              style={{...styles.guide, ...styles[`guide${currentGuide.style}`]}}
+              key={currentGuide.id}
+              style={
+                currentGuide.noDimBackground
+                  ? styles.guideBackgroundHidden
+                  : styles.guideBackground
+              }
+              onClick={this.dismissGuideClick}
             >
-              {currentGuide.image && (
-                <div style={{...styles.guideLeft, width: leftWidth}}>
-                  <img src={currentGuide.image} style={styles.guideImage} />
-                </div>
-              )}
-
-              <div style={{...styles.guideRight, width: rightWidth}}>
-                {currentGuide.heading && (
-                  <div style={styles.guideHeading}>{currentGuide.heading}</div>
+              <div
+                style={{
+                  ...styles.guide,
+                  ...styles[`guide${currentGuide.style}`]
+                }}
+              >
+                {currentGuide.image && (
+                  <div style={{...styles.guideLeft, width: leftWidth}}>
+                    <img src={currentGuide.image} style={styles.guideImage} />
+                  </div>
                 )}
-                <div style={styles.guideTypingText}>
-                  <Typist
-                    //avgTypingDelay={35}
-                    //stdTypingDelay={15}
-                    avgTypingDelay={0}
-                    stdTypingDelay={0}
-                    cursor={{show: false}}
-                    onTypingDone={this.onShowing}
+
+                <div style={{...styles.guideRight, width: rightWidth}}>
+                  {currentGuide.heading && (
+                    <div style={styles.guideHeading}>
+                      {currentGuide.heading}
+                    </div>
+                  )}
+                  <div style={styles.guideTypingText}>
+                    <Typist
+                      avgTypingDelay={35}
+                      stdTypingDelay={15}
+                      cursor={{show: false}}
+                      onTypingDone={this.onShowing}
+                    >
+                      {currentGuide.textFn
+                        ? currentGuide.textFn(getState())
+                        : currentGuide.text}
+                    </Typist>
+                  </div>
+                  <div
+                    style={
+                      currentGuide.style === 'Info'
+                        ? styles.guideFinalTextInfoContainer
+                        : styles.guideFinalTextContainer
+                    }
                   >
-                    {currentGuide.textFn
-                      ? currentGuide.textFn(getState())
-                      : currentGuide.text}
-                  </Typist>
-                </div>
-                <div
-                  style={
-                    currentGuide.style === 'Info'
-                      ? styles.guideFinalTextInfoContainer
-                      : styles.guideFinalTextContainer
-                  }
-                >
-                  <div style={styles.guideFinalText}>
-                    {currentGuide.textFn
-                      ? currentGuide.textFn(getState())
-                      : currentGuide.text}
+                    <div style={styles.guideFinalText}>
+                      {currentGuide.textFn
+                        ? currentGuide.textFn(getState())
+                        : currentGuide.text}
+                    </div>
                   </div>
                 </div>
               </div>
-              {getState().guideShowing && currentGuide.arrow !== 'none' && (
-                <div>
-                  <div style={styles.guideArrow}> </div>
-                </div>
-              )}
             </div>
+            {currentGuide.arrow && (
+              <img
+                src={arrowDownImage}
+                style={{
+                  ...styles.guideArrow,
+                  ...styles[`arrow${currentGuide.arrow}`]
+                }}
+              />
+            )}
           </div>
         )}
       </div>

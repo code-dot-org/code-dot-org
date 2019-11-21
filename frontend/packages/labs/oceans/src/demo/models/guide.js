@@ -12,28 +12,25 @@ const guides = [
     id: 'fishvtrash-training-init',
     text: `Garbage dumped in the ocean and rivers affects water health and marine life.  In this activity you will "program" or "train" an artificial intelligence (AI) to identify fish or trash.  Let's clean up the ocean!`,
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Training},
-    style: 'Center',
-    arrow: 'none',
     image: guideFish1
   },
   {
     id: 'fishvtrash-training-init2',
     text: `Let's meet A.I.`,
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Training},
-    style: 'TopRight',
+    arrow: 'BotRight'
   },
   {
     id: 'fishvtrash-training-init3',
     text: `A.I. is an artifical intelligence and does not know if an object is a fish or trash, but it can process different images and identify patterns.`,
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Training},
-    style: 'Center',
-    arrow: 'none'
   },
   {
     id: 'fishvtrash-training-init4',
     text: `To program A.I., use the buttons to label an image as either "fish" or "not fish".  This will teach A.I. to do it on its own.  Let's get started!`,
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Training},
-    style: 'BottomMiddle',
+    style: 'Center',
+    arrow: 'LowerCenter'
   },
   {
     id: 'fishvtrash-training-pause1',
@@ -47,7 +44,6 @@ const guides = [
       }
     },
     style: 'Info',
-    arrow: 'none',
     image: trashBottleImage
   },
   {
@@ -60,8 +56,6 @@ const guides = [
         return state.yesCount + state.noCount >= 5;
       }
     },
-    style: 'RightCenter',
-    arrow: 'none'
   },
   {
     id: 'fishvtrash-training-pause3',
@@ -75,7 +69,6 @@ const guides = [
       }
     },
     style: 'Info',
-    arrow: 'none',
     image: trashCanImage
   },
   {
@@ -88,8 +81,6 @@ const guides = [
         return state.yesCount + state.noCount >= 15;
       }
     },
-    style: 'RightCenter',
-    arrow: 'none'
   },
   {
     id: 'fishvtrash-training-pause5',
@@ -101,29 +92,23 @@ const guides = [
         return state.yesCount + state.noCount >= 30;
       }
     },
-    style: 'BottomRightCenter',
-    arrow: 'none'
   },
   {
     id: 'fishvtrash-predicting-init',
     text: `Now let's see if A.I. knows what a "fish" looks like.`,
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Predicting},
-    style: 'RightCenter',
-    arrow: 'none'
   },
   {
     id: 'fishvtrash-predicting-init2',
     text: `A.I. will analyze 100 random objects and label each one based on your training.`,
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Predicting},
-    style: 'RightCenter',
-    arrow: 'none'
   },
   {
     id: 'fishvtrash-predicting-init3',
     text: `Let's go!`,
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Predicting},
-    style: 'BottomRight',
-    hideBackground: true
+    noDimBackground: true,
+    arrow: 'LowerRight'
   },
   {
     id: 'fishvtrash-pond-init',
@@ -140,8 +125,6 @@ const guides = [
         return state.fishData && state.totalPondFish !== null;
       }
     },
-    style: 'BottomMiddle',
-    arrow: 'none'
   },
 //TODO: placeholder for when we add the See More button
 //  {
@@ -155,43 +138,37 @@ const guides = [
     id: 'fishvtrash-pond-init3',
     text: `You can train A.I. more...`,
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Pond},
-    style: 'BottomLeft'
+    arrow: 'LowerLeft'
   },
   {
     id: 'fishvtrash-pond-init4',
     text: `...or Continue.`,
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Pond},
-    style: 'BottomRight'
+    arrow: 'LowerRight'
   },
   {
     id: 'creaturesvtrash-predicting-init',
     text: `So far we trained A.I. to identify objects as either "Fish" or "Not Fish".`,
     when: {appMode: AppMode.CreaturesVTrashDemo, currentMode: Modes.Predicting},
-    style: 'Center',
-    arrow: 'none'
   },
   {
     id: 'creaturesvtrash-predicting-init2',
     text: `What if this training data was used to decide what belonged in the water?`,
     when: {appMode: AppMode.CreaturesVTrashDemo, currentMode: Modes.Predicting},
-    style: 'Center',
-    arrow: 'none',
     image: crabImage
   },
   {
     id: 'creaturesvtrash-predicting-init3',
     text: `What would happen to other types of sea creatures?  What unintended consequences might our current training approach lead to?`,
     when: {appMode: AppMode.CreaturesVTrashDemo, currentMode: Modes.Predicting},
-    style: 'Center',
-    arrow: 'none',
     image: crabImage
   },
   {
     id: 'creaturesvtrash-predicting-init4',
     text: `Let's see.`,
     when: {appMode: AppMode.CreaturesVTrashDemo, currentMode: Modes.Predicting},
-    style: 'BottomRight',
-    hideBackground: true
+    noDimBackground: true,
+    arrow: 'LowerRight'
   },
   {
     id: 'creaturesvtrashdemo-predicting-pause1',
@@ -201,8 +178,6 @@ const guides = [
       currentMode: Modes.Predicting,
       isPaused: true
     },
-    style: 'BottomMiddle',
-    arrow: 'none'
   },
   {
     id: 'creaturesvtrashdemo-predicting-pause2',
@@ -212,8 +187,6 @@ const guides = [
       currentMode: Modes.Predicting,
       isPaused: true
     },
-    style: 'BottomMiddle',
-    arrow: 'none'
   },
   {
     id: 'creaturesvtrash-predicting-pause3',
@@ -223,8 +196,6 @@ const guides = [
       currentMode: Modes.Predicting,
       isPaused: true
     },
-    style: 'BottomMiddle',
-    arrow: 'none'
   },
   {
     id: 'creaturesvtrash-predicting-pause4',
@@ -234,14 +205,13 @@ const guides = [
       currentMode: Modes.Predicting,
       isPaused: true,
     },
-    style: 'BottomRight',
-    hideBackground: true
+    noDimBackground: true,
+    arrow: 'LowerRight'
   },
   {
     id: 'creaturesvtrash-training-init',
     text: `Now let’s teach A.I. to learn which objects should be in the water.`,
     when: {appMode: AppMode.CreaturesVTrash, currentMode: Modes.Training},
-    style: 'BottomMiddle',
   },
   {
     id: 'creaturesvtrash-training-init2',
@@ -255,7 +225,6 @@ const guides = [
       }
     },
     style: 'Info',
-    arrow: 'none',
     image: seahorseImage
   },
   {
@@ -268,8 +237,6 @@ const guides = [
         return state.yesCount + state.noCount >= 5;
       }
     },
-    style: 'RightCenter',
-    arrow: 'none',
   },
   {
     id: 'creaturesvtrash-training-init4',
@@ -283,7 +250,6 @@ const guides = [
       }
     },
     style: 'Info',
-    arrow: 'none',
     image: turtleImage
   },
   {
@@ -296,8 +262,6 @@ const guides = [
         return state.yesCount + state.noCount >= 15;
       }
     },
-    style: 'RightCenter',
-    arrow: 'none',
   },
   {
     id: 'creaturesvtrash-training-init6',
@@ -309,15 +273,11 @@ const guides = [
         return state.yesCount + state.noCount >= 30;
       }
     },
-    style: 'BottomRightCenter',
-    arrow: 'none'
   },
   {
     id: 'creaturesvtrash-predicting-init',
     text: `Do you think A.I. will now do a better job identifying what should be in the water?  Let's watch.`,
     when: {appMode: AppMode.CreaturesVTrash, currentMode: Modes.Predicting},
-    style: 'BottomMiddle',
-    arrow: 'none'
   },
   {
     id: 'creaturesvtrash-pond-init',
@@ -333,29 +293,21 @@ const guides = [
         return state.fishData && state.totalPondFish !== null;
       }
     },
-    style: 'BottomMiddle',
-    arrow: 'none'
   },
   {
     id: 'fishshort-words-init',
     text: 'AI and machine learning can be used to teach a computer new things.',
     when: {appMode: AppMode.FishShort, currentMode: Modes.Words},
-    style: 'BottomMiddle',
-    arrow: 'none'
   },
   {
     id: 'fishshort-words-init2',
     text: 'What else can we program a computer to learn?',
     when: {appMode: AppMode.FishShort, currentMode: Modes.Words},
-    style: 'BottomMiddle',
-    arrow: 'none'
   },
   {
     id: 'fishshort-words-init3',
     text: "Next, let's teach A.I. a new word by showing it examples of that type of fish.",
     when: {appMode: AppMode.FishShort, currentMode: Modes.Words},
-    style: 'BottomMiddle',
-    arrow: 'none'
   },
   {
     id: 'fishshort-predicting-init',
@@ -363,8 +315,6 @@ const guides = [
       return `Nice work! Your training data programmed A.I. to recognize '${state.word.toLowerCase()}' fish.`;
     },
     when: {appMode: AppMode.FishShort, currentMode: Modes.Predicting},
-    style: 'BottomMiddle',
-    arrow: 'none'
   },
   {
     id: 'fishshort-predicting-init2',
@@ -372,8 +322,6 @@ const guides = [
       return `Let’s see A.I. identify '${state.word.toLowerCase()}' fish.`;
     },
     when: {appMode: AppMode.FishShort, currentMode: Modes.Predicting},
-    style: 'BottomMiddle',
-    arrow: 'none'
   },
   {
     id: 'fishshort-pond-init',
@@ -389,22 +337,16 @@ const guides = [
         return state.fishData && state.totalPondFish !== null;
       }
     },
-    style: 'BottomMiddle',
-    arrow: 'none'
   },
   {
     id: 'fishshort-pond-init2',
     text: 'How did A.I do?',
     when: {appMode: AppMode.FishShort, currentMode: Modes.Pond},
-    style: 'BottomMiddle',
-    arrow: 'none'
   },
   {
     id: 'fishlong-words-init',
     text: 'What if the words are more subjective? Can A.I. still learn the word?',
     when: {appMode: AppMode.FishLong, currentMode: Modes.Words},
-    style: 'BottomMiddle',
-    arrow: 'none'
   },
   {
     id: 'fishlong-predicting-init',
@@ -412,8 +354,6 @@ const guides = [
       return `Nice work! Your training data programmed A.I. to recognize '${state.word.toLowerCase()}' fish.`;
     },
     when: {appMode: AppMode.FishLong, currentMode: Modes.Predicting},
-    style: 'BottomMiddle',
-    arrow: 'none'
   },
   {
     id: 'fishlong-predicting-init2',
@@ -421,8 +361,6 @@ const guides = [
       return `Let’s see A.I. identify '${state.word.toLowerCase()}' fish.`;
     },
     when: {appMode: AppMode.FishLong, currentMode: Modes.Predicting},
-    style: 'BottomMiddle',
-    arrow: 'none'
   },
   {
     id: 'fishlong-pond-init',
@@ -438,27 +376,23 @@ const guides = [
         return state.fishData && state.totalPondFish !== null;
       }
     },
-    style: 'BottomMiddle',
-    arrow: 'none'
   },
   {
     id: 'fishlong-pond-init2',
     text: 'How did A.I do?',
     when: {appMode: AppMode.FishLong, currentMode: Modes.Pond},
-    style: 'BottomMiddle',
-    arrow: 'none'
   },
   {
     id: 'fishlong-pond-init3',
     text: 'You can train A.I. more...',
     when: {appMode: AppMode.FishLong, currentMode: Modes.Pond},
-    style: 'BottomLeft'
+    arrow: 'LowerLeft'
   },
   {
     id: 'fishlong-pond-init4',
     text: '...or Play Again.',
     when: {appMode: AppMode.FishLong, currentMode: Modes.Pond},
-    style: 'BottomRight'
+    arrow: 'LowerRight'
   }
 ];
 
