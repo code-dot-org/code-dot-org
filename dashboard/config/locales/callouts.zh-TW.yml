@@ -186,8 +186,15 @@ zh-TW:
       CourseD_Dance_Party_11:
         dance_callout_11_a: 新的程式積木！
         dance_callout_11_b: 新的程式積木！
+      Dance_2019_01:
+        dance_callout_01: 在這裡選擇舞者的類型。
+      Dance_2019_02:
+        dance_callout_11_a: 將此程式積木添加到您的程式中。
+        arrow_buttons: 按箭頭按鈕控制舞者。
       Dance_2019_04:
         dance_callout_02: 將此程式積木新增至您的程式！
+      Dance_2019_05:
+        dance_callout_05: 將新事件添加到程式中。
       Dance_2019_06:
         dance_party_11_5_groups: 新的程式積木！
       Dance_2019_07:

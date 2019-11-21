@@ -11,10 +11,9 @@ level 'U2L1 CFU how use internet', progression: 'Check For Understanding', asses
 
 stage 'Building a Network'
 level 'CSP U2L2 SFLP 20-21', progression: 'Lesson Overview'
-level 'U2L2 CFU terms', progression: 'Check For Understanding', assessment: true
 level 'U2L1 CFU paths', progression: 'Check For Understanding', assessment: true
 
-stage 'IP Addresses'
+stage 'The Need for Addressing'
 level 'CSP U2L3 SFLP 20-21', progression: 'Lesson Overview'
 level 'U2L2 CSP Internet Simulator Broadcast', progression: 'Internet Simulator: Broadcast Mode'
 level 'U2L2 CSP CFU IP Addresses', progression: 'Check For Understanding', assessment: true
@@ -44,8 +43,8 @@ level 'CSP U2L7 SFLP 20-21', progression: 'Lesson Overview'
 stage 'Internet Dilemmas, pt 2'
 level 'CSP U2L9 SFLP 20-21', progression: 'Lesson Overview'
 
-stage 'Lesson 8: Unit Assessment', lockable: true
-level 'CSP Unit 2 MC Assessment _2020', assessment: true
+stage 'Lesson 9: Assessment Day', lockable: true
+level 'CSP Unit 2 MC Assessment _2020', progression: 'Unit 2 Exam', assessment: true
 
 stage 'Unit 2 STUDENT Survey', lockable: true, flex_category: 'required'
 level 'CSP U2 20-21 Student Pilot Survey', progression: 'Unit 2 STUDENT Survey', assessment: true

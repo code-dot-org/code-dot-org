@@ -176,6 +176,12 @@ describe('entry tests', () => {
         },
         {
           expand: true,
+          cwd: 'node_modules/@code-dot-org/ml-activities/dist/assets',
+          src: ['**'],
+          dest: 'build/package/media/skins/fish'
+        },
+        {
+          expand: true,
           cwd: 'node_modules/scratch-blocks/media',
           src: ['**'],
           dest: 'build/package/media/scratch-blocks'
@@ -522,6 +528,7 @@ describe('entry tests', () => {
       './src/sites/studio/pages/devise/registrations/_old_sign_up_form.js',
     'devise/registrations/edit':
       './src/sites/studio/pages/devise/registrations/edit.js',
+    essential: './src/sites/studio/pages/essential.js',
     'home/_homepage': './src/sites/studio/pages/home/_homepage.js',
     'layouts/_header': './src/sites/studio/pages/layouts/_header.js',
     'layouts/_race_interstitial':
@@ -598,6 +605,7 @@ describe('entry tests', () => {
     'libraries/edit': './src/sites/studio/pages/libraries/edit.js',
     'scripts/edit': './src/sites/studio/pages/scripts/edit.js',
     'scripts/new': './src/sites/studio/pages/scripts/new.js',
+    'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
     'shared_blockly_functions/edit':
       './src/sites/studio/pages/shared_blockly_functions/edit.js'
   };
@@ -687,9 +695,13 @@ describe('entry tests', () => {
     'peer_reviews/show': './src/sites/studio/pages/peer_reviews/show.js'
   };
 
-  var otherEntries = {
-    essential: './src/sites/studio/pages/essential.js',
+  // Entries which are shared between dashboard and pegasus, which are included
+  // by haml partials in the shared/haml/ directory.
+  const sharedEntries = {
+    cookieBanner: './src/cookieBanner/cookieBanner.js'
+  };
 
+  var otherEntries = {
     // Build embedVideo.js in its own step (skipping factor-bundle) so that
     // we don't have to include the large code-studio-common file in the
     // embedded video page, keeping it fairly lightweight.
@@ -709,17 +721,13 @@ describe('entry tests', () => {
     'applab-api': './src/applab/api-entry.js',
     'gamelab-api': './src/p5lab/gamelab/api-entry.js',
 
-    'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
-
     'census_reviewers/review_reported_inaccuracies':
       './src/sites/studio/pages/census_reviewers/review_reported_inaccuracies.js',
 
     regionalPartnerMiniContact:
       './src/regionalPartnerMiniContact/regionalPartnerMiniContact',
 
-    donorTeacherBanner: './src/donorTeacherBanner/donorTeacherBanner',
-
-    cookieBanner: './src/cookieBanner/cookieBanner.js'
+    donorTeacherBanner: './src/donorTeacherBanner/donorTeacherBanner'
   };
 
   // Create a config for each of our bundles
@@ -737,6 +745,7 @@ describe('entry tests', () => {
           internalEntries,
           pegasusEntries,
           professionalDevelopmentEntries,
+          sharedEntries,
           otherEntries
         ),
         function(val) {
@@ -864,7 +873,8 @@ describe('entry tests', () => {
                   Object.keys(appsEntries),
                   Object.keys(pegasusEntries),
                   Object.keys(professionalDevelopmentEntries),
-                  Object.keys(internalEntries)
+                  Object.keys(internalEntries),
+                  Object.keys(sharedEntries)
                 );
                 return chunkNames.includes(chunk.name);
               },

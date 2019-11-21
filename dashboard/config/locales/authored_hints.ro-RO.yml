@@ -790,215 +790,301 @@ ro-RO:
           de `laturi`\*`2`). '
       CourseD_Dance_Party_01:
         validation: |-
-          **Cum trec de acest nivel?**
+          "**Cum trec de acest nivel?**
 
-          -   Fi sigur că un dansator apare pe ecran.
+          -   Asigură-te că pe ecran apare un dansator.
 
-          _Nivelul se termină după 4 măsuri._
+          _Acest nivel se termină după 4 măsuri._"
         challenges: |-
-          **Provocări suplimentare**
+          "**Provocări opționale**
 
-          -   Alege să se audă un alt song.
-          -   Redenumeşte-ţi dansatorul.
+          -   Alege un alt cântec.
+          -   Redenumește-ți dansatorul.".
       CourseD_Dance_Party_02:
         validation: |-
-          **Cum trec de acest nivel?**
+          "**Cum trec de acest nivel?**
 
-          -   Dansatorul trebuie să treacă la o nouă mişcare după 4 măsuri.
+          -   Dansatorul trebuie să înceapă o nouă mişcare după 4 măsuri.
 
-          _Nivelul se termină după 7 măsuri._
+          _Acest nivel se termină după 7 măsuri._"
       CourseD_Dance_Party_03:
         validation: |-
-          **Cum trec de acest nivel?**
+          "**Cum trec de acest nivel?**
 
-          -   După 6 măsuri, dansatorul trebuie să facă alt dans decât cel cel făcut după 4 măsuri.
+          -   După 6 măsuri, dansatorul tău trebuie să execute un alt dans decât cel de după 4 măsuri.
 
-          _Nivelul se termină după 11 măsuri._
+          _Acest nivel se termină după 11 măsuri._"
       CourseD_Dance_Party_04:
         validation: |-
-          **Cum trec de acest nivel?**
+          "**Cum trec de acest nivel?**
 
-          -   Trebuie să faci să se schimbe efectul de fundal cândva înainte de măsura 7 a cântecului.
+          -   Trebuie să faci ca efectul de fundal să se schimbe înainte de a șaptea măsură din cântec.
 
-          _Nivelul se termină după 9 măsuri._
+          _Acest nivel se termină după 9 măsuri._"
         challenges: |-
           **Provocări suplimentare**
 
           Schimbă efectul de fundal la diferite momente din timpul cântecului conectând noul bloc sub evenimentele <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"măsuri"</title></block></xml>.
       CourseD_Dance_Party_06:
         validation: |-
-          **Cum trec de acest nivel?**
+          "**Cum trec de acest nivel?**
 
-          -   Trebuie să ai cel puţin doi dansatori.
+          -   Trebuie să ai cel puțin doi dansatori.
 
-          _Nivelul se termină după 5 măsuri._
+          _Acest nivel se termină după 5 măsuri._"
         challenges: |-
-          **Optional Challenge**
+          "**Provocare opțională**
 
-          -   Adaugă un al treilea dansator (sau cât de mulţi vrei!)
-          -   Fă ca dansatorii tăi să realizeze diferite mişcări la diferite momente din cântec.
+          -   Adaugă un al treilea dansator (sau cât de mulți dorești!)
+          -   Fă ca toți dansatorii tăi să execute diferite mișcări în momente diferite ale cântecului.".
       CourseD_Dance_Party_08:
         validation: |-
-          **Cum trec de acest nivel?**
+          "**Cum trec de acest nivel?**
 
-          -   Doi dansatori trebuie să aibă o dimensiune diferită de 100.
+          -   Doi dansatori trebuie să aibă altă dimensiune decât 100.
 
-          _Nivelul se termină după 5 măsuri._
+          _Acest nivel se termină după 5 măsuri._"
         challenges: |-
-          **Optional Challenge**
+          "**Provocare opțională**
 
-          -   Experimentează schimbând alte proprietăţi (lăţimea, înălţimea, rotaţie, etc)
+          -   Experimentează schimbând alte proprietăţi (lăţimea, înălţimea, rotaţia, etc)"
       CourseD_Dance_Party_09:
         validation: |-
-          **Cum trec de acest nivel?**
+          "**Cum trec de acest nivel?**
 
-          -   Schimbă nuanţa a cel puţin un caracter.
+          -   Schimbă culoarea a cel puțin un dansator.
 
-          _Nivelul se termină după 7 măsuri._
+          _Acest nivel se termină după 7 măsuri._"
       CourseD_Dance_Party_10:
         validation: |-
-          **Cum trec de acest nivel?**
+          "**Cum trec de acest nivel?**
 
-          -   Proprietăţile a doi sau mai mulţi dansatori trebuie să fie schimbate.
+          -   Proprietățile a doi sau ale mai multor dansatori trebuie schimbate.
 
-          _Nivelul se termină după 7 măsuri._
+          _Acest nivel se termină după 7 măsuri._"
       CourseD_Dance_Party_11:
         validation: |-
-          **Cum trec de acest nivel?**
+          "**Cum trec de acest nivel?**
 
-          -   Fi creativ!
+          -   Fii creativ!
 
-          _Nivelul se termină după 7 măsuri._
+          _Acest nivel se termină după 7 măsuri._"
       CourseD_Dance_Party_11_5:
         validation: |-
-          **Cum trec de acest nivel?**
+          "**Cum trec de acest nivel?**
 
-          -   Fi creativ!
+          -   Fii creativ!
 
-          _Nivelul se termină după 7 măsuri._
+          _Acest nivel se termină după 7 măsuri._"
       CourseD_Dance_Party_11b:
         validation: |-
-          **Cum trec de acest nivel?**
+          "**Cum trec de acest nivel?**
 
-          -   Foloseşte blocul `când săgeata stângă este apăsată` pentru a face Robotul să facă o mişcare de dans când apeşi pe ea.
+          -   Folosește blocul `când se apasă săgeata stânga` pentru a-l face pe Robot să execute o mișcare de dans când îl apeși.
 
-          _Nivelul se termină după 7 măsuri._
+          _Acest nivel se termină după 7 măsuri._"
       Dance_2019_01:
         validation: |-
+          "**Cum trec de acest nivel?**
+
+          -   Asigură-te că pe ecran apare un dansator.
+
+          _Acest nivel se termină după 4 măsuri._"
+        challenges: |-
+          **Provocări opționale**
+
+          -   Alege un alt cântec.
+          -   Mută-ți dansatorul într-un alt loc.
+          -   Creează mai mult de un dansator.
+      Dance_2019_02:
+        validation: |-
           **Cum trec de acest nivel?**
 
-          -   Fi sigur că un dansator apare pe ecran.
+          -   Dansatorul trebuie să execute o mișcare.
+          -   Trebuie să apeși o tastă cu săgeată.
 
-          _Nivelul se termină după 4 măsuri._
+          _Acest nivel se termină după 4 măsuri._
+        challenges: |-
+          **Provocare opțională**
+
+          -   Folosește mai mult de un bloc <xml><block type="Dancelab_whenKey"><title name="KEY"></title></block></xml>.
+      Dance_2019_03:
+        validation: |-
+          **Cum trec de acest nivel?**
+
+          -   Ambii dansatori trebuie să execute o mișcare.
+          -   Trebuie să apeși tastele cu săgeată.
+
+          _Acest nivel se termină după 4 măsuri._
+        challenges: |-
+          **Provocare opțională**
+
+          -   Fă-l pe dansator să răspundă la tastele cu săgeată stânga și dreapta.
       Dance_2019_04:
         validation: |-
-          **Cum trec de acest nivel?**
+          "**Cum trec de acest nivel?**
 
-          -   Dansatorul trebuie să treacă la o nouă mişcare după 4 măsuri.
+          -   Dansatorul trebuie să înceapă o nouă mişcare după 4 măsuri.
 
-          _Nivelul se termină după 7 măsuri._
+          _Acest nivel se termină după 7 măsuri._"
       Dance_2019_05:
         validation: |-
-          **Cum trec de acest nivel?**
+          "**Cum trec de acest nivel?**
 
-          -   După 6 măsuri, dansatorul trebuie să facă alt dans decât cel cel făcut după 4 măsuri.
+          -   După 6 măsuri, dansatorul tău trebuie să execute un alt dans decât cel de după 4 măsuri.
 
-          _Nivelul se termină după 11 măsuri._
-      Dance_Party_01:
-        validation: |-
-          **Cum trec de acest nivel?**
-
-          -   Fi sigur că un dansator apare pe ecran.
-
-          _Nivelul se termină după 4 măsuri._
+          _Acest nivel se termină după 11 măsuri._"
         challenges: |-
-          **Provocări suplimentare**
+          **Provocare opțională**
 
-          -   Alege să se audă un alt song.
-          -   Redenumeşte-ţi dansatorul.
-      Dance_Party_02:
+          -   Modifică acompaniamentul când dansatorii schimbă mișcările.
+      Dance_2019_06:
         validation: |-
           **Cum trec de acest nivel?**
 
-          -   Dansatorul trebuie să treacă la o nouă mişcare după 4 măsuri.
-
-          _Nivelul se termină după 7 măsuri._
-      Dance_Party_03:
-        validation: |-
-          **Cum trec de acest nivel?**
-
-          -   După 6 măsuri, dansatorul trebuie să facă alt dans decât cel cel făcut după 4 măsuri.
-
-          _Nivelul se termină după 11 măsuri._
-      Dance_Party_04:
-        validation: |-
-          **Cum trec de acest nivel?**
-
-          -   Trebuie să faci să se schimbe efectul de fundal cândva înainte de măsura 7 a cântecului.
-
-          _Nivelul se termină după 9 măsuri._
+          -   Creează un dansator principal și un grup de dansatori de rezervă.
+              _Nivelul se termină după 7 măsuri._
         challenges: |-
-          **Provocări suplimentare**
+          **Provocare opțională**
 
-          Schimbă efectul de fundal la diferite momente din timpul cântecului conectând noul bloc sub evenimentele <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"măsuri"</title></block></xml>.
-      Dance_Party_06:
+          -   Creează mai multe grupuri de dansatori de rezervă.
+      Dance_2019_07:
         validation: |-
           **Cum trec de acest nivel?**
 
-          -   Trebuie să ai cel puţin doi dansatori.
+          -   Modifică dimensiunea a cel puțin un dansator după ce începe muzica.
 
-          _Nivelul se termină după 5 măsuri._
-        challenges: |-
-          **Optional Challenge**
-
-          -   Adaugă un al treilea dansator (sau cât de mulţi vrei!)
-          -   Fă ca dansatorii tăi să realizeze diferite mişcări la diferite momente din cântec.
-      Dance_Party_08:
-        validation: |-
-          **Cum trec de acest nivel?**
-
-          -   Doi dansatori trebuie să aibă o dimensiune diferită de 100.
-
-          _Nivelul se termină după 5 măsuri._
+          _Acest nivel se termină după 6 măsuri._
         challenges: |-
           **Optional Challenge**
 
           -   Experimentează schimbând alte proprietăţi (lăţimea, înălţimea, rotaţie, etc)
+      Dance_2019_08:
+        validation: |-
+          **Cum trec de acest nivel?**
+
+          -   Modifică culoarea a cel puțin un dansator.
+
+          _Acest nivel se termină după 6 măsuri._
+        tint_hint: Ai observat că dansatorii tăi nu se schimbă exact în culoarea aleasă
+          de tine? Acest lucru se întâmplă deoarece **nuanțele** amestecă culoarea
+          aleasă de tine cu cele a dansatorului.
+      Dance_2019_09:
+        validation: |-
+          **Cum trec de acest nivel?**
+
+          -   Apasă butonul „Final"!
+        repeat_every_ideas: |-
+          **Ai nevoie de niște idei?**
+
+          -   Modifică în mod repetat dimensiunea unui dansator pentru a-l face să crească.
+          -   Modifică în mod repetat rotația unui dansator pentru a-l face să se rotească.
+          -   Modifică în mod repetat poziția orizontală și verticală a unui dansator pentru a-l face să se deplaseze pe ecran.
+              _Poți folosi și numere negative pentru a crea un efect contrariu!_
+        next_previous: |-
+          **Provocare opțională**
+
+          -   Poți folosi și acest bloc de evenimente noi pentru a baleia o listă cu mișcări de dans, prin setarea mișcării pe `(Aleatoriu)`, `(Următoare)`, sau `(Anterioară)`.
+              <xml><block type="Dancelab_changeMoveEachLR">
+              <title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;">???</title>
+              <title name="MOVE">"rand"</title>
+              <title name="DIR">-1</title>
+              </block></xml>
+      Dance_Party_01:
+        validation: |-
+          "**Cum trec de acest nivel?**
+
+          -   Asigură-te că pe ecran apare un dansator.
+
+          _Acest nivel se termină după 4 măsuri._"
+        challenges: |-
+          "**Provocări opționale**
+
+          -   Alege un alt cântec.
+          -   Redenumește-ți dansatorul.".
+      Dance_Party_02:
+        validation: |-
+          "**Cum trec de acest nivel?**
+
+          -   Dansatorul trebuie să înceapă o nouă mişcare după 4 măsuri.
+
+          _Acest nivel se termină după 7 măsuri._"
+      Dance_Party_03:
+        validation: |-
+          "**Cum trec de acest nivel?**
+
+          -   După 6 măsuri, dansatorul tău trebuie să execute un alt dans decât cel de după 4 măsuri.
+
+          _Acest nivel se termină după 11 măsuri._"
+      Dance_Party_04:
+        validation: |-
+          "**Cum trec de acest nivel?**
+
+          -   Trebuie să faci ca efectul de fundal să se schimbe înainte de a șaptea măsură din cântec.
+
+          _Acest nivel se termină după 9 măsuri._"
+        challenges: |-
+          "**Provocare opțională**
+
+          Modifică efectul de fundal în diferite momente ale cântecului conectând blocul nou sub evenimentele <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.".
+      Dance_Party_06:
+        validation: |-
+          "**Cum trec de acest nivel?**
+
+          -   Trebuie să ai cel puțin doi dansatori.
+
+          _Acest nivel se termină după 5 măsuri._"
+        challenges: |-
+          "**Provocare opțională**
+
+          -   Adaugă un al treilea dansator (sau cât de mulți dorești!)
+          -   Fă ca toți dansatorii tăi să execute diferite mișcări în momente diferite ale cântecului.".
+      Dance_Party_08:
+        validation: |-
+          "**Cum trec de acest nivel?**
+
+          -   Doi dansatori trebuie să aibă altă dimensiune decât 100.
+
+          _Acest nivel se termină după 5 măsuri._"
+        challenges: |-
+          "**Provocare opțională**
+
+          -   Experimentează schimbând alte proprietăţi (lăţimea, înălţimea, rotaţia, etc)"
       Dance_Party_09:
         validation: |-
-          **Cum trec de acest nivel?**
+          "**Cum trec de acest nivel?**
 
-          -   Schimbă nuanţa a cel puţin un caracter.
+          -   Schimbă culoarea a cel puțin un dansator.
 
-          _Nivelul se termină după 7 măsuri._
+          _Acest nivel se termină după 7 măsuri._"
       Dance_Party_10:
         validation: |-
-          **Cum trec de acest nivel?**
+          "**Cum trec de acest nivel?**
 
-          -   Proprietăţile a doi sau mai mulţi dansatori trebuie să fie schimbate.
+          -   Proprietățile a doi sau ale mai multor dansatori trebuie schimbate.
 
-          _Nivelul se termină după 7 măsuri._
+          _Acest nivel se termină după 7 măsuri._"
       Dance_Party_11:
         validation: |-
-          **Cum trec de acest nivel?**
+          "**Cum trec de acest nivel?**
 
-          -   Fi creativ!
+          -   Fii creativ!
 
-          _Nivelul se termină după 7 măsuri._
+          _Acest nivel se termină după 7 măsuri._"
       Dance_Party_11_5:
         validation: |-
-          **Cum trec de acest nivel?**
+          "**Cum trec de acest nivel?**
 
-          -   Fi creativ!
+          -   Fii creativ!
 
-          _Nivelul se termină după 7 măsuri._
+          _Acest nivel se termină după 7 măsuri._"
       Dance_Party_11b:
         validation: |-
-          **Cum trec de acest nivel?**
+          "**Cum trec de acest nivel?**
 
-          -   Foloseşte blocul `când săgeata stângă este apăsată` pentru a face Robotul să facă o mişcare de dans când apeşi pe ea.
+          -   Folosește blocul `când se apasă săgeata stânga` pentru a-l face pe Robot să execute o mișcare de dans când îl apeși.
 
-          _Nivelul se termină după 7 măsuri._
+          _Acest nivel se termină după 7 măsuri._"
       NEW Course 4 Artist Functions 13:
         NEW_Course_4_Artist_Functions_13_a: Încearcă să editezi funcţia `desenează
           o linie de pătrate` pentru a nu fi nevoie să o apelezi de două ori.
@@ -1250,7 +1336,7 @@ ro-RO:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">></title>
+              <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -1337,7 +1423,7 @@ ro-RO:
           \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
           name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
           \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
-          \   <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
       course3_farmer_condLoops_challenge1:
         courseD_farmer_condLoops_challenge1_a: Butonul `PAS` ar putea fi foarte util
           pentru această problemă.

@@ -450,6 +450,8 @@ ca:
       body: "El Laboratori d'aplicacions és un entorn de programació on podeu crear aplicacions simples. Dissenyeu una aplicació, programeu-la amb blocs o JavaScript per fer-la funcionar i compartiu-la en pocs segons."
     dance:
       title: 'Festa de ball'
+    dance-2019:
+      title: 'Festa de ball'
     hoc:
       title: 'Laberint clàssic'
       body: 'Prova els conceptes bàsics de la informàtica. Ja ho han fet milions d''usuaris.'

@@ -24,12 +24,14 @@ const styles = {
 class SectionAssigner extends Component {
   static propTypes = {
     sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
-    selectSection: PropTypes.func.isRequired,
     showAssignButton: PropTypes.bool,
     courseId: PropTypes.number,
     scriptId: PropTypes.number,
+    forceReload: PropTypes.bool,
+    // Redux provided
+    selectSection: PropTypes.func.isRequired,
     selectedSectionId: PropTypes.number,
-    forceReload: PropTypes.bool
+    assignmentName: PropTypes.string
   };
 
   onChangeSection = sectionId => {
@@ -43,7 +45,8 @@ class SectionAssigner extends Component {
       courseId,
       scriptId,
       selectedSectionId,
-      forceReload
+      forceReload,
+      assignmentName
     } = this.props;
     const selectedSection = sections.find(
       section => section.id === selectedSectionId
@@ -71,6 +74,8 @@ class SectionAssigner extends Component {
                 sectionId={selectedSection.id}
                 courseId={courseId}
                 scriptId={scriptId}
+                assignmentName={assignmentName}
+                sectionName={selectedSection.name}
               />
             )}
         </div>

@@ -2,6 +2,45 @@
 he:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: כולם
+            '"ALIEN"': כל החייזרים
+            '"BEAR"': כל הדובים
+            '"CAT"': כל החתולים
+            '"DOG"': כל הכלבים
+            '"DUCK"': כל הברווזים
+            '"FROG"': כל הצפרדעים
+            '"MOOSE"': כל המוּסים
+            '"PINEAPPLE"': כל האננסים
+            '"ROBOT"': כל הרובוטים
+            '"SHARK"': כל הכרישים
+            '"UNICORN"': חדי-קרן
+          MOVE1:
+            MOVES.Roll: בָּאדִי רוֹל / גלגול גוף
+            MOVES.ClapHigh: קלאפ היי
+            MOVES.Dab: דֶאבּ
+            MOVES.DoubleJam: דָאבֵּל דָאוּן
+            MOVES.Drop: דְרוֹפּ
+            MOVES.Floss: פְלוֹס
+            MOVES.Fresh: פְרֶשׁ
+            MOVES.Clown: גאנגם
+            MOVES.Kick: כוכב
+            MOVES.ThisOrThat: זה או ההוא
+            MOVES.Rest: כלום
+          MOVE2:
+            MOVES.Roll: בָּאדִי רוֹל / גלגול גוף
+            MOVES.ClapHigh: קלאפ היי
+            MOVES.Dab: דֶאבּ
+            MOVES.DoubleJam: דָאבֵּל דָאוּן
+            MOVES.Drop: דְרוֹפּ
+            MOVES.Floss: פְלוֹס
+            MOVES.Fresh: פְרֶשׁ
+            MOVES.Clown: גאנגם
+            MOVES.Kick: כוכב
+            MOVES.ThisOrThat: זה או ההוא
+            MOVES.Rest: כלום
       Dancelab_atTimestamp:
         text: אחרי {TIMESTAMP} {UNIT}
         options:
@@ -781,13 +820,6 @@ he:
           STRING:
             '"hearts_colorful"': לבבות
             '"diamond"': יהלום
-            '"l"': l
-            '"m"': m
-            '"n"': מ
-            '"o"': o
-            '"p"': p
-            '"q"': "/"
-            '"r"': r
             '"s"': s
             '"t"': t
             '"u"': u

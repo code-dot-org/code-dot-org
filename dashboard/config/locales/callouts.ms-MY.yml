@@ -1,1 +1,29 @@
---- {}
+---
+ms-MY:
+  data:
+    callouts:
+      CourseD_Dance_Party_01:
+        dance_callout_01: Tambah blok ini kepada atur cara anda!
+      CourseD_Dance_Party_02:
+        dance_callout_02: Tambah blok ini kepada atur cara anda!
+      CourseD_Dance_Party_04:
+        dance_callout_04: Tambah blok ini kepada atur cara anda!
+      CourseD_Dance_Party_06:
+        dance_callout_06: Tambah penari baharu anda di sini
+      Dance_2019_01:
+        dance_callout_01: Tambah blok ini kepada atur cara anda!
+      Dance_2019_02:
+        dance_callout_11_a: Tambah blok ini kepada atur cara anda.
+        arrow_buttons: Tekan butang anak panah untuk mengawal penari anda.
+      Dance_2019_04:
+        dance_callout_02: Tambah blok ini kepada atur cara anda!
+      Dance_2019_05:
+        dance_callout_05: Tambah acara baru ke program.
+      Dance_Party_01:
+        dance_callout_01: Tambah blok ini kepada atur cara anda!
+      Dance_Party_02:
+        dance_callout_02: Tambah blok ini kepada atur cara anda!
+      Dance_Party_04:
+        dance_callout_04: Tambah blok ini kepada atur cara anda!
+      Dance_Party_06:
+        dance_callout_06: Tambah penari baharu anda di sini

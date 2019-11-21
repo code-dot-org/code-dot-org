@@ -13,7 +13,8 @@ fr-FR:
       AppLab Intro 7 - Change Text 2: Modifie le texte
       AppLab Intro 7 - Full Text: Deux boutons
       AppLab Intro 7 - onEvent intro: Fais fonctionner les boutons
-      AppLab Intro 7 - onEvent twoButtons: Plus d’entraînement onEvent
+      AppLab Intro 7 - onEvent twoButtons: Plus d’entraînement avec les évènements
+        "onEvent"
       AppLab Intro 7 - playSound: Utiliser playSound
       AppLab Intro 7 - thisOrThatAddButton: Ceci ou cela
       AppLab Intro 7 - thisOrThatAddScreen: Ceci ou cela

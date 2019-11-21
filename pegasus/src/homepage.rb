@@ -351,12 +351,16 @@ class Homepage
   end
 
   def self.show_single_hero
-    "hoc2019"
+    "dance2019"
   end
 
   def self.get_heroes_arranged(request)
     hero_create = [{text: "homepage_hero_text_stat_students", centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/announcement.jpg"}]
     hero_hoc2019 = [{text: "homepage_hero_text_stat_students", centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2019.jpg"}]
+    hero_dance2019 = [
+      {text: "homepage_hero_text_stat_students", classname: "desktop-feature", centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2019_dance.jpg"},
+      {text: "homepage_hero_text_stat_students", classname: "mobile-feature", centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2019_dance_narrow.jpg"}
+    ]
 
     # Generate a random set of hero images alternating between non-celeb and celeb.
     heroes = get_heroes
@@ -366,6 +370,8 @@ class Homepage
       heroes_arranged = hero_hoc2019
     elsif show_single_hero == "create"
       heroes_arranged = hero_create
+    elsif show_single_hero == "dance2019"
+      heroes_arranged = hero_dance2019
     else
       # The order alternates person & stat.  Person alternates non-celeb and
       # celeb.  Non-celeb is student or teacher. We open with a celeb, i.e.,
@@ -425,13 +431,14 @@ class Homepage
 
   def self.get_dance_stars
     stars = [
-      "Ace of Base", "A-ha", "Ariana Grande", "Avicii and Aloe Blacc", "Bruce Springsteen", "Calvin Harris",
+      "Katy Perry", "Lil Nas X (ft. Billy Ray Cyrus)", "Jonas Brothers", "Panic! At The Disco",
+      "Shawn Mendes", "Nicki Minaj", "Pedro Capó", "Francesco Gabbani", "Sia",
+      "A-ha", "Ariana Grande", "Avicii and Aloe Blacc", "Calvin Harris",
       "Carly Rae Jepsen", "Ciara", "Coldplay", "Ed Sheeran", "Imagine Dragons",
-      "J Balvin and Willy William", "Justin Bieber", "Katy Perry", "Keith Urban", "Lady Antebellum", "Lady Gaga",
-      "Los del Río", "Luke Bryan", "Macklemore and Ryan Lewis", "Madonna", "Mark Ronson (ft. Bruno Mars)",
-      "MC Hammer", "Miley Cyrus", "OutKast", "Selena Gomez", "Sia", "Village People", "The Weeknd", "will.i.am",
-      "Yolanda Be Cool"
+      "J Balvin and Willy William", "Justin Bieber", "Keith Urban", "Lady Gaga",
+      "Los del Río", "Madonna", "Mark Ronson (ft. Bruno Mars)", "MC Hammer",
+      "Miley Cyrus", "Selena Gomez", "The Weeknd", "Yolanda Be Cool"
     ]
-    DCDO.get("hoc2018_dance_stars", stars)
+    DCDO.get("hoc2019_dance_stars", stars)
   end
 end

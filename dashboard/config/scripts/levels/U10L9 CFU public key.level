@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2019-11-19T20:28:24.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Reflection: Frequency Analysis",
+    "long_instructions": "# Public Key Encryption\r\n\r\nHow does asymmetric (public key) encryption keep data secure?",
+    "encrypted_solution": "YKPHLAd9STAv+lOeOi2kxMihhH60g3ShJy5R/4MwHT3YnhaKEtr/5SS4zmmg\n6kS2fwxVBW3yvpA0lplC6hgURPRwMOp8zAgH20MUJV6EP/Gls3flsZVEzIYZ\nE3q8k9lkIZaQ8CKV8KW+xQEAtIWo1EUoEImxiBvxN5P1m8rSJkwvuoeALYgB\n9SfWlwCOpfFUsdhwRGcKCtQCmAcD2qrGaJqvIHk8rhNVV+0dbOjxP449IUvg\n0CSE4STtEyw3Ywu9Juw501gucvbrQqBif43hk8OYtKgXoRJHd0tAFaSvPIoV\nWypTaQez9zDlopQdRVhMGGbKfJUsedNnkhj4QzolFdnc3fFRTABaNcEkmaI1\nchc=\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "parent_level_id": 17038,
+    "name_suffix": "_2019",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "optional": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-11-19 20:30:10 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

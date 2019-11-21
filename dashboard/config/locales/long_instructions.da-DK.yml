@@ -70,6 +70,46 @@ da-DK:
       CourseE_HOC 2018 Level_9b: Du har nået koralrevet, led nu efter **Havets hjerte**
         ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
         ! Brug den blå og røde koral til at nå hen til **skattekisten** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
+      Dance_2019_01: |-
+        _Lad os holde en dansefest!_
+
+        Træk blokken <xml><block type="Dancelab_makeAnonymousDanceSprite" block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;, &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml> til arbejdsområdet, og tilslut den inde i blokken <xml><block type="Dancelab_whenSetup2" next_connection_disabled="true" block-text="setup"></block></xml> for at oprette din første danser.
+
+        -   _Du kan også klikke på lyspæren til venstre, hvis du ønsker mere information eller ekstra udfordringer._
+      Dance_2019_02: |-
+        Blokken <xml><block type="Dancelab_whenKey" block-text="when up pressed"></block></xml> giver dig mulighed for at køre kode, når pil trykkes op. Brug blokken <xml><block type="Dancelab_doMoveEachLR" block-text="do once"><title name="GROUP">"CAT"</title><title name="MOVE">MOVES.XClapSide</title><title name="DIR">-1</title></block></xml> til at få danseren til at klappe, når du trykker op, eller prøv en anden bevægelse!
+
+        \_Sørg for at trykke på din pil op eller ![](<https://images.code.org/419e704e6841c0b696016bf5029b8cb9-image-1571864825506.06.45 PM.png>) efter at have klikket på knappen Kør!
+      Dance_2019_03: Det er tid til at få danset! Programmér hver danser til at bevæge
+        sig, når du trykker på forskellige taster. Vælg dit foretrukne træk for hver
+        danser, eller indstil det til `(Tilfældig)` for at opnå noget helt uforudsigeligt!
+      Dance_2019_04: |-
+        Lad os få danserne til at bevæge sig i takt med musikken!
+
+        Træk blokken <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> ud på arbejdsområdet. Tilslut den under blokken <xml><block type="Dancelab_changeMoveEachLR"><title name="GROUP">"SHARK"</title><title name="MOVE">MOVES.ThisOrThat</title><title name="DIR">-1</title></block></xml>. Din danser bør starte en ny bevægelse efter den fjerde handling.
+        .
+
+        **Handlinger** bruges til at tælle takten i musikken. I denne tutorial er en handling fire takter lang.
+      Dance_2019_06: "Brug denne nye blok til at oprette en gruppe mindre backup-dansere
+        omkring en solodanser i midten. \n  <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\">\n
+        \   <title name=\"N\">???</title>\n    <title name=\"COSTUME\" config=\"&quot;BEAR&quot;,
+        &quot;CAT&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;,
+        &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title>\n    <title name=\"LAYOUT\">\"circle\"</title>\n
+        \ </block></xml>\nNu kan du oprette en gruppe dansere på én gang!"
+      Dance_2019_07: |-
+        Hver danser har et sæt _egenskaber_, der styrer, hvordan det ser ud.
+
+        Du kan få det til at se ud som om en danser er tættere eller længere væk ved at ændre størrelsen. Skift størrelsen på en gruppe dansere efter, at musikken starter.
+      Dance_2019_08: Dansere har en ”farvenuance”-egenskab, der kan tilføje et lag
+        farve. Prøv at ændre farven for en af dine dansere (eller en hel gruppe)!
+      Dance_2019_09: |-
+        Dette er en speciel type begivenhed, der udløses igen og igen.
+
+        <xml><block type="Dancelab_everySeconds"><title name="N">2</title><title name="UNIT">"measures"</title></block></xml>
+
+        De andre nye blokke i din værktøjskasse giver dig mulighed for gradvist (eller tilfældigt!) at ændre dansernes egenskaber over tid.
+
+        _Vær kreativ og hav det sjovt!_
       Dance_Party_extras_battle: |-
         # Dansegrupper
 
@@ -104,6 +144,14 @@ da-DK:
         \*Opret en anden gruppe dansere i et andet layout
         \*Skift layout, når der trykkes på en tast
         \*Skift en egenskab, når danserne ændrer stilling
+      Dance_Party_extras_layout_2019: |-
+        # Lad os stille op i formation!
+
+        Tjek denne dans, der bruger blokken <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> til at ændre backup-dansernes formation under hele dansen. Prøv en af disse ideer for at udvide den:
+
+        -   Opret en anden gruppe dansere i et andet layout
+        -   Skift layout, når der trykkes på en tast
+        -   Skift en egenskab, når danserne skifter formation
       Dance_Party_extras_on_beat: |-
         # Lav, medio og høj
 
@@ -116,6 +164,10 @@ da-DK:
         # Sæt fart på, sænk farten
 
         Denne sidste dans bruger blokken 'sæt hastighed' til at styre, hvor hurtigt hver danser bevæger sig. Prøv at eksperimentere med forskellige hastigheder på forskellige steder i sangen. Det er helt i orden at prøve sig lidt frem i denne dans, eller vend tilbage til en af de tidligere danse for at gøre dem endnu sejere.
+      Dance_Party_extras_speed_2019: |-
+        # Speed op, sæt farten ned
+
+        Denne sidste dans bruger blokken <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> til at kontrollere, hvor hurtigt hver danser bevæger sig. Prøv at eksperimentere med forskellige hastigheder på forskellige punkter i sangen. Du er velkommen til at fortsætte med at flikke rundt på denne dans, eller vende tilbage til nogen af de tidligere danse for at gøre dem endnu mere cool.
       Dance_Party_extras_visible: |-
         # Hvor forsvandt de hen?
 

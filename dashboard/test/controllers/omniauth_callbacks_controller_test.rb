@@ -1029,7 +1029,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     refute_creates(User) do
       get :clever
     end
-    assert_redirected_to users_email_conflict_path({provider: "clever", email: email})
+    assert_redirected_to users_existing_account_path({provider: "clever", email: email})
   end
 
   test 'connect_provider: can connect multiple auth options with the same email to the same user' do

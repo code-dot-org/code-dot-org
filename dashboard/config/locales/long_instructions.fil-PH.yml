@@ -112,6 +112,61 @@ fil-PH:
       CSD U6 iter predict bubbles_2019: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       Course 4 Artist For Loops 6a: Gumawa ng tatlong maliliit na pagbabago sa code
         mula sa huling antas para makuha ito!
+      Dance_2019_01: |-
+        _Mag-dance party tayo!_
+
+        Hilahin ang <xml><block type="Dancelab_makeAnonymousDanceSprite" block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;, &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml> block papunta sa workspace, at ikonekta ito sa loob ng <xml><block type="Dancelab_whenSetup2" next_connection_disabled="true" block-text="setup"></block></xml> block para likhain ang iyong unang dancer.
+
+        -   _Pwede mo ring i-click ang bombilya sa kaliwa kung gusto mo ng mas maraming impormasyon o ekstrang mga hamon._
+      Dance_2019_02: |-
+        Ang <xml><block type="Dancelab_whenKey" block-text="when up pressed"></block></xml> block ay nagpapahintulot sa iyo na i-run ang code kapag pinindot ang paitaas na arrow. Gamitin ang l<xml><block type="Dancelab_doMoveEachLR" block-text="do once"><title name="GROUP">"CAT"</title><title name="MOVE">MOVES.XClapSide</title><title name="DIR">-1</title></block></xml> block para papalakpakin ang dancer kapag nagpindot ka paitaas, o sumubok ng ibang galaw!
+
+        _Tiyakin na pinindot mo ang paitaas na arrow o ![](<https://images.code.org/419e704e6841c0b696016bf5029b8cb9-image-1571864825506.06.45 PM.png>) matapos i-click ang Run button!_
+      Dance_2019_03: 'Oras na para sa dance-off! I-program ang bawat dancer na gumalaw
+        kapag pinindot mo ang iba-ibang key. Piliin ang iyong paboritong galaw para
+        sa bawat dancer o itakda ito sa "(Random)" para sa isang bagay na lubos na
+        hindi mahuhulaan! '
+      Dance_2019_04: |-
+        Pagalawin natin ang mga dancer na sabay sa musika!
+
+        Hilahin ang <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> block sa workspace. Ikonekta ito sa ilalim ng <xml><block type="Dancelab_changeMoveEachLR"><title name="GROUP">"SHARK"</title><title name="MOVE">MOVES.ThisOrThat</title><title name="DIR">-1</title></block></xml> block. Dapat mag-umpisa ng bagong galaw ang iyong dancer matapos ang ikaapat na measure.
+
+        Ginagamit ang **mga measure** para magbilang ng oras sa musika. Sa tutorial na ito, ang isang measure ay apat na beat ang haba.
+      Dance_2019_06: "Gamitin ang bagong block na ito para mag-set up ng isang grupo
+        ng mas maliit na mga backup dancer sa paligid ng nangungunang dancer na nasa
+        gitna. \n  <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\">\n    <title
+        name=\"N\">???</title>\n    <title name=\"COSTUME\" config=\"&quot;BEAR&quot;,
+        &quot;CAT&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;,
+        &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title>\n    <title name=\"LAYOUT\">\"circle\"</title>\n
+        \ </block></xml>\nNgayon pwede ka  nang lumikha ng pangkat ng mga dancer nang
+        sabay-sabay lahat!"
+      Dance_2019_07: |-
+        Ang bawat dancer ay may set ng _properties_ na kumokontrol kung ano ang hitsura nito.
+
+        Pwede mong gawin na mas malapit o mas malayong tingnan ang isang dancer sa pamamagitan ng pagpapalit sa laki nito. Palitan ang laki ng isang pangkat ng mga dancer minsan makalipas makapag-umpisa ang musika.
+      Dance_2019_08: Ang mga dancer ay may "tint" property na makapagdagdag ng layer
+        sa kulay. Subukang palitan ang tint ng isa sa iyong mga dancer (o ang buong
+        pangkat)!
+      Dance_2019_09: |-
+        Ito ay isang espesyal na uri ng event na napapasimulan nang paulit-ulit.
+
+        <xml><block type="Dancelab_everySeconds"><title name="N">2</title><title name="UNIT">"measures"</title></block></xml>
+
+        Ang ibang mga bagong block sa iyong toolbox ay magpapahintulot sa iyo na dahan-dahan (o random) na palitan ang mga property ng dancer paglipas ng panahon.
+
+        _Maging mapanlikha at magsaya!_
+      Dance_Party_extras_layout_2019: |-
+        # Mag-formation Tayo!
+
+        Tingnan ang sayaw na ito na gumagamit ng <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> block para baguhin ang formation ng mga backup dancer sa buong sayaw. Subukan ang isa sa mga ideyang ito para i-extend ito:
+
+        -   Lumikha ng ikalawang grupo ng mga dancer sa iba’t ibang layout
+        -   Palitan ang layout kapag pinindot ang key
+        -   Palitan ang property kapag nagbago ng formation ang mga dancer
+      Dance_Party_extras_speed_2019: |-
+        # Bilisin Ito, Bagalan Ito
+
+        Ang pinal na sayaw na ito ay gumagamit ng <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> block para kontrolin kung gaano kabilis gumagalaw ang bawat dancer. Subukang mag-eksperimento sa iba’t ibang bilis sa iba’t ibang punto ng awit. Malaya kang magti-tinker sa sayaw na ito, o bumalik sa alinmang naunang mga sayaw para mas gawing cool ang mga ito.
       K-1 Bee Loops 5: Gumamit ng `repeat` na mga loop para makakuha ng nektar at
         pulot!
       K-1 Maze Loops 2: Gamitin ang `repeat` na bloke para mapapunta ako sa baboy!

@@ -2084,6 +2084,19 @@ tr-TR:
           -   Ekranda bir dansçının göründüğünden emin olun.
 
           _Bu seviye 4 ölçüden sonra biter._
+        challenges: "**İsteğe Bağlı Zorluks**  -   Choose a different song to play.
+          -   Move your dancer to a new location. -   Make more than one dancer."
+      Dance_2019_02:
+        validation: "**Bu seviyeyi nasıl geçerim?** - Dansçı bir hareket yapmak zorundadır.
+          - Bir ok tuşuna basmalısınız. _Bu seviye 4 ölçütten sonra sona erer._"
+        challenges: '**İsteğe Bağlı Zorluk**  Birden fazla <xml><block type="Dancelab_whenKey"><title
+          name="KEY"></title></block></xml> bloğu kullanın.'
+      Dance_2019_03:
+        validation: "**Bu seviyeyi nasıl geçerim?**  -   Her iki dansçı bir hareket
+          yapmak zorundadır. -   Ok tuşlarına basmalısınız.  _Bu seviye 4 ölçütten
+          sonra sona erer._"
+        challenges: "**İsteğe Bağlı Zorluk**  -   Bir dansçının sol ve sağ ok tuşlarına
+          tepki vermesini sağlayın."
       Dance_2019_04:
         validation: |-
           **Bu seviyeyi nasıl geçerim?**
@@ -2098,6 +2111,39 @@ tr-TR:
           -   Dansçınızın 6 ölçü sonra, 4 ölçü sonraki dansından farklı dans etmesi gerekiyor.
 
           _Seviye 12 ölçüden sonra biter._
+        challenges: "**İsteğe Bağlı Zorluk**  -   Dansçılar her hareket ettiğinde
+          arka planı değiştirin."
+      Dance_2019_06:
+        validation: "**Bu seviyeyi nasıl geçerim?**  -   Şarkının ilk 4 ölçütünde
+          bir baş dansçı ve bir grup yedek dansçı oluşturun.  _Bu seviye 7 ölçütten
+          sonra sona erer._"
+        challenges: "**İsteğe Bağlı Zorluk**  -   Birden fazla yedek dansçı grubu
+          oluşturun."
+      Dance_2019_07:
+        validation: "**Bu seviyeyi nasıl geçerim?**  -   Müzik başladıktan sonra en
+          az bir dansçının boyutunu değiştirin.  _Bu seviye 6 ölçütten sonra sona
+          erer._"
+        challenges: "**İsteğe Bağlı Zorluk**  -   Genişlik veya döndürme gibi diğer
+          özellikleri değiştirerek deneme yapın."
+      Dance_2019_08:
+        validation: "**Bu seviyeyi nasıl geçerim?**  -   En az bir dansçının renk
+          tonunu değiştirin. _Bu seviye 6 ölçütten sonra sona erer._"
+        tint_hint: Dansçılarınızın seçtiğiniz tam renge değişmediğini fark ettiniz
+          mi? Bunun nedeni **renk tonlarının** seçtiğiniz rengin dansçının renkleri
+          ile karıştırmasıdır.
+      Dance_2019_09:
+        validation: '**Bu seviyeyi nasıl geçerim?**  -   Sadece "Son" düğmesine basın!'
+        repeat_every_ideas: "**Bazı fikirlere mi ihtiyacınız var?**  -   Büyümesini
+          sağlamak için dansçının boyutunu tekrar tekrar değiştirin. -   Bir dansçının
+          dönüşünü sağlamak için art arda bir dansçının dönüşünü değiştirin. -   Bir
+          dansçının ekran boyunca hareket etmesi için art arda bir dansçının yatay
+          veya dikey konumunu değiştirin.  _Ters etki yaratmak için negatif sayıları
+          da kullanabilirsiniz!_"
+        next_previous: '**İsteğe Bağlı Zorluk**  -   Bu yeni etkinlik bloğunu, dansı
+          `(Rastgele)`, `(Sonraki)` ya da `(Önceki)` olarak ayarlayarak bir dans hareketleri
+          listesinde dolaşmak için de kullanabilirsiniz..     <xml><block type="Dancelab_changeMoveEachLR">     <title
+          name="GROUP">???</title>     <title name="MOVE">"rand"</title>     <title
+          name="DIR">-1</title>     </block></xml>'
       Dance_Party_01:
         validation: |-
           **Bu seviyeyi nasıl geçerim?**

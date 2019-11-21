@@ -1627,7 +1627,7 @@ fa:
               name: مقدمه
             Nested Loops:
               name: حلقه های تو در تو
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Computer Science Fundamentals:
               name: مقدمات علم کامپیوتر
@@ -1643,3 +1643,13 @@ fa:
               name: متغیرها
             For Loops:
               name: حلقه های "برای"
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: شرطی ها
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: کمک گیری جمعی
+            Conditionals with Cards:
+              name: شرطی ها با کارتها

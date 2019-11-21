@@ -5,17 +5,39 @@ pt-PT:
       2-3 Artist 1 new: Oi, eu sou um artista. Você pode escrever códigos para me
         fazer desenhar quase qualquer coisa. Use alguns blocos para me fazer desenhar
         sobre as linhas cinzas na imagem. (Cada linha tem o comprimento de 100 pixels)
+      2-3 Artist 11: 'Faz uma borda no sinal de stop usando um octágono com lados
+        de 100 píxeis. '
+      2-3 Artist 12: "Cria um círculo para acabar o olho!\n\nSe o artista virar 1
+        grau a cada volta da repetição, quantas vezes precisa de repetir o código
+        para desenhar um círculo? "
       2-3 Artist 2 new: |-
         Esta casa tem uma parede inacabada. Cada lado
         tem 100 pixels de comprimento, mas a parede inacabada tem apenas 50. Complete a parede.
+      2-3 Artist 3.4: O bloco `saltar para` move o artista sem desenhar. Desenha a
+        linha tracejada usando blocos `saltar para` e `mover para`. Cada linha tem
+        50 píxeis.
       2-3 Artist 3new: |-
         O chapéu vermelho tem 100 pixels de altura. Termine o desenho
         de um chapéu preto que seja 70 pixels menor. A largura do chapéu preto é de 50 pixels.
       2-3 Artist 4: Ajude-me a completar a casa para o gato.
+      2-3 Artist 6: |-
+        Esta casa precisa de um telhado! Desenha um triângulo.
+
+        Pista: os três lados têm o mesmo comprimento.
       2-3 Artist 7: |-
         Termine de desenhar a metade direita da última janela.
         Cada quadrado da janela tem 25 pixels.
+      2-3 Artist 8: |-
+        Vamos construir um celeiro!
+
+        Faz as divisões para cada animal dividindo o celeiro em dois quadrados do mesmo tamanho.
+
+        Pista: O rectângulo tem 200 píxeis de largura e 100 píxeis de altura.
+
+        Há várias maneiras diferentes de resolver este enigma.
       2-3 Artist 9 NEW: Terminar este papagaio
+      2-3 Artist Assessment 1: "**Avaliação:** Acaba de desenhar o último dente. Tem
+        25 píxeis de largura e 25 píxeis de altura."
       2-3 Artist Debugging 2: 'O código para os três bigodes que você vê está errado.
         Dica: cada bigode tem o comprimento de 75 pixels. Corrija esse código para
         desenhar os bigodes.'
@@ -50,14 +72,27 @@ pt-PT:
       2-3 Artist Functions 4: |-
         Use o bloco "repita" para desenhar esses
         3 quadrados.
+      2-3 Artist Loops New 1: |-
+        Vamos desenhar a cabeça do robô! Consegues
+        fazer um quadrado com lados de 100 píxeis?
       2-3 Artist Loops New 10: |-
         Agora vamos conectar um monte de V's,
         desenhando-os em um laço.
+      2-3 Artist Loops New 11: |-
+        Vamos fazer uma coisa com estilo!
+
+        Reconstrói o código do último enigma, mas esta vez, adiciona uma viragem à esquerda de 30 graus dentro da repetição.
+        E desta vez, repete 24 vezes em vez de 8.
       2-3 Artist Loops New 12: Desenhe um diamante com lados de 100 pixels.
       2-3 Artist Loops New 13: Agora, desenhe o diamante 3 vezes em um laço.
       2-3 Artist Loops New 14: |-
         Agora, vamos desenhar o diamante 10 vezes,
         mas vamos rotacionar 90 graus entre cada diamante.
+      2-3 Artist Loops New 15: Agora, desenha o que te apetecer!
+      2-3 Artist Loops New 2: |-
+        Este é o mesmo enigma que acabámos de resolver, mas desta vez, só podemos usar um bloco `mover para a frente` e um bloco `virar à`.
+
+        Consegues usar um bloco `repita` para resolver este enigma?
       2-3 Artist Loops New 9: |-
         Desenhe um V simples com ambos os lados com 50
         pixels para completar a seta.
@@ -143,7 +178,21 @@ pt-PT:
       2-3 Maze 1: "Consegues ajudar-me a apanhar o porquinho malvado?\nEmpilha alguns
         blocos `mover para a frente` por baixo do bloco `quando executar` e depois
         clica em \"Executar\". "
+      2-3 Maze 12: |-
+        De repente, um bloco mágico aparece! Com o bloco `repita`, podes repetir código várias vezes.
+
+        Consegues chegar ao porco criando uma repetição que usa apenas um bloco `mover para` dentro de um bloco `repita`?
+      2-3 Maze 13: Leva-me ao porco! Esta vez, só podes usar um bloco `mover para`
       2-3 Maze 15: Use dois laços para chegar até o porco usando menos blocos.
+      2-3 Maze Loops 18: "Leva-me até ao girassol usando o menor número de blocos
+        possível! \n\nTenta usar um bloco `repita`dentro de outro para reduzir a quantidade
+        de código que precisas."
+      2-3 Maze Loops 19: |-
+        Vamos levar isto ao próximo nível!
+
+        Usa repetições para me levar ao girassol com o menor número de blocos possível.
+      2-3 Maze Loops Assessment 1: "**Avaliação:** Leva-me ao girassol usando apenas
+        5 blocos! "
       4-5 Artist 1: |-
         Ajude-me a terminar de desenhar minha caixa. (Cada linha
         tem 300 pixels de comprimento)
@@ -455,7 +504,7 @@ pt-PT:
       Dance_Party_02: |-
         Vamos pôr este alce a dançar!
 
-        Arrasta o bloco <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> para a área de trabalho e conecta-lo por debaixo do bloco <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. O teu dançarino deverá iniciar um novo movimento após o quarto compasso.
+        Arrasta o bloco <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> para a área de trabalho e conecta-lo por debaixo do bloco <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. O teu dançarino deverá iniciar um novo movimento após o quarto compasso.
 
         Os **Compassos** são usados para contar o tempo na música. Neste tutorial, um compasso tem quatro batidas.
       Dance_Party_03: "_Agora já estamos a curtir!_ \n\nAdiciona um bloco <xml><block
@@ -504,15 +553,6 @@ pt-PT:
         -   Experimenta com outras durações de notas (como 0,5 para uma mínima ou 0,125 para uma colcheia).
         -   Adiciona alguns eventos "após o compasso".
         -   Troca "compassos" por "segundos" e tenta sincronizar as tuas danças dessa maneira.
-      Dance_Party_extras_every_beat_2019: |-
-        # Semínimas
-
-        A maioria das nossas danças usou compassos inteiros mas cada compasso é composto por 4 semínimas. Esta dança usa <xml><block type="Dancelab_everyMeasuresRange" block-text="a new repeat block"><title name="N">0.25</title><title name="START">5</title><statement name="DO"></statement></block></xml> para fazer o dançarino aplaudir a cada semínima.
-
-        Experimenta mudar os números no bloco para ver como é que altera a dança.
-
-        -   Experimenta com outras durações de notas (como 0,5 para uma mínima ou 0,125 para uma colcheia)
-        -   Adiciona outros eventos
       Dance_Party_extras_layout: |-
         # Ponham-se em formação!
 
@@ -793,6 +833,16 @@ pt-PT:
       Underground If Statements_2019: Agora as coisas começam a ficar difíceis. Escava
         3 redstone, mas não caias na lava. Utiliza um comando "se" para colocares
         empedrado sobre qualquer lava que destapares.
+      course2_artist_prog_challenge1: Desenha quartos para cada um dos animais. Há
+        várias maneiras possíveis de resolver este enigma, por isso diverte-te!
+      course2_artist_prog_challenge2: _Ajuda-me a pintar as linhas amarelas nesta
+        estrada!_
+      course2_collector_loops_challenge2: |-
+        _"Vamos caçar tesouros - usando repetições!"_
+
+        Ajuda o coleccionador corrigindo os erros no código. Apanha todos os tesouros!
+      course2_maze_programming_challenge1: '"O porco está escondido! Podes ajudar-me
+        a encontrá-lo?"'
       course4_artist_fwp_challenge1: Tenta executar este programa e faz as alterações
         para ver o que acontece. Podes descobrir como funciona? (Ou apagá-lo e substituí-lo
         por algo totalmente diferente)

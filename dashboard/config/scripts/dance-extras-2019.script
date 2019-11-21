@@ -1,4 +1,4 @@
-version_year '2019'
+hidden false
 
 stage 'Dance Party - Go Further'
 level 'Dance_Party_extras_intro_2019', named: true

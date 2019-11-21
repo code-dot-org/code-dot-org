@@ -4206,7 +4206,7 @@ fr:
               name: Fête dansante
           description: Codez votre propre soirée dansante à partager avec vos amis
             !
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Computer Science Fundamentals:
               name: Fondamentaux de l'informatique
@@ -4252,3 +4252,13 @@ fr:
           stages:
             new stage:
               name: nouvelle étape
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Instructions conditionnelles
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Financement participatif
+            Conditionals with Cards:
+              name: Instructions conditionnelles avec des cartes

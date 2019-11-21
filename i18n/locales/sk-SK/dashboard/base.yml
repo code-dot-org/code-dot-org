@@ -585,6 +585,8 @@ sk:
       cta: 'Nauč sa ako'
     dance:
       title: 'Tanečná Párty'
+    dance-2019:
+      title: 'Tanečná Párty'
     hoc:
       title: 'Klasické bludisko'
       body: 'Vyskúšaj si základy informatiky. Milióny študentov jej dali šancu.'

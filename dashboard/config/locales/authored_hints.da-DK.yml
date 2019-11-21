@@ -33,6 +33,96 @@ da-DK:
       CourseE_HOC 2018 Level_9b:
         voyage_aquatic_9a: Hvor er dette koralrev flot! Blå koral er at gå til **højre**,
           sørg for, at rød koral ikke er **venstre**!
+      Dance_2019_01:
+        challenges: |-
+          **Valgfri udfordringer**
+
+          -   Vælg en anden sang, der skal afspilles.
+          -   Flyt din danser til et nyt sted.
+          -   Skab mere end en danser.
+      Dance_2019_02:
+        validation: |-
+          **Hvordan passerer jeg dette niveau?**
+
+          -   Danseren skal udføre en bevægelse.
+          -   Du skal trykke på en piletast.
+
+          _Dette niveau slutter efter 4 handlinger._
+        challenges: |-
+          **Valgfri udfordringer**
+
+          -   Brug mere end en <xml><block type="Dancelab_whenKey"><title name="KEY"></title></block></xml> blok.
+      Dance_2019_03:
+        validation: |-
+          **Hvordan passerer jeg dette niveau?**
+
+          -   Begge dansere skal udføre en bevægelse.
+          -   Du skal trykke på en piletast.
+
+          _Dette niveau slutter efter 4 handlinger._
+        challenges: |-
+          **Valgfri udfordringer**
+
+          -   Få en danser til at reagere på venstre og højre piletaster.
+      Dance_2019_05:
+        challenges: |-
+          **Valgfri udfordringer**
+
+          -   Skift baggrund, hver gang danseren skifter bevægelse.
+      Dance_2019_06:
+        validation: |-
+          **Hvordan passerer jeg dette niveau?**
+
+          -   Opret en solodanser og en gruppe backup-dansere.
+
+          _Dette niveau slutter efter 7 handlinger._
+        challenges: |-
+          **Valgfri udfordringer**
+
+          -   Opret flere grupper af backup-dansere.
+      Dance_2019_07:
+        validation: |-
+          **Hvordan passerer jeg dette niveau?**
+
+          -   Skift størrelsen på mindst en danser, når musikken starter.
+
+          _Dette niveau slutter efter 6 handlinger._
+        challenges: |-
+          **Optional Challenge**
+
+          -   Experiment by changing other properties (width, height, rotation, etc.)
+      Dance_2019_08:
+        validation: |-
+          **Hvordan passerer jeg dette niveau?**
+
+          -   Skift farvenuancen på mindst en danser.
+
+          _Dette niveau slutter efter 6 handlinger._
+        tint_hint: Bemærkede du, at dine dansere ikke skifter til den nøjagtige farve,
+          du vælger? Dette skyldes, at **farvenuancer** blander den farve, du vælger,
+          med danserens farver.
+      Dance_2019_09:
+        validation: |-
+          **Hvordan passerer jeg dette niveau?**
+
+          -   Tryk blot på knappen "Færdig"!
+        repeat_every_ideas: |-
+          **Brug for nogle ideer?**
+
+          -   Skift gentagne gange en dansers størrelse for at få denne til at vokse.
+          -   Skift gentagne gange en dansers rotation for at få denne til at dreje.
+          -   Skift gentagne gange en dansers vandrette eller lodrette position for at få denne til at bevæge sig hen over skærmen.
+
+          _Du kan også bruge negative tal til at skabe en modsat effekt!_
+        next_previous: |-
+          **Valgfri udfordringer**
+
+          -   Du kan også bruge denne nye begivenhedsblok til at gennemse en liste over dansebevægelser ved at indstille flytningen til  `(Tilfældig)`, `(Næste)`, eller `(Forrige)`.
+              <xml><block type="Dancelab_changeMoveEachLR">
+              <title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;">???</title>
+              <title name="MOVE">"rand"</title>
+              <title name="DIR">-1</title>
+              </block></xml>
       Function intro Ryan:
         Function_intro_Ryan_a: Du kan kalde en funktion mange gange i dit program!  Prøv
           at kalde den to gange for at løse opgaven.

@@ -1884,13 +1884,13 @@ en:
             Hour of Code 2015:
               name: Hour of Code 2015
           description_audience: ''
-        ocean:
-          title: Ocean Hour of Code
+        oceans:
+          title: AI for Oceans
           description: Description TBD.
           description_short: Short Description TBD.
           stages:
-            Ocean:
-              name: Ocean
+            Oceans:
+              name: Oceans
           description_audience: ''
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'
@@ -9701,7 +9701,7 @@ en:
               name: new stage
             Dance Party:
               name: Dance Party
-          title: Dance Party
+          title: Dance Party (2018)
           description_audience: ''
           description_short: Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!
           description: Code your own dance party to share with your friends!
@@ -9817,7 +9817,7 @@ en:
           stages:
             Dance Party - Go Further:
               name: Dance Party - Go Further
-          title: Keep On Dancing
+          title: Keep On Dancing (2018)
           description_audience: ''
           description_short: Go beyond the Hour of Code with this follow-up activity to Code.org's Dance Party tutorial.
           description: Go beyond the first hour with extended project ideas.
@@ -11372,6 +11372,8 @@ en:
               name: Unit 4 STUDENT Survey
             Unit 4 TEACHER Survey:
               name: Unit 4 TEACHER Survey
+            'Lesson 15: Assessment Day':
+              name: 'Lesson 15: Assessment Day'
           title: CSP Unit 4 Pilot - Variables, Conditionals, and Functions
           description_audience: ''
           description_short: ''
@@ -11894,6 +11896,8 @@ en:
               name: Representing Text
             Circle Square Patterns:
               name: Circle Square Patterns
+            'Lesson 14: Assessment Day':
+              name: 'Lesson 14: Assessment Day'
           title: CSP Unit 1 Pilot - Digital Information
           description_audience: ''
           description_short: ''
@@ -12678,6 +12682,8 @@ en:
               name: Unit 5 Assessment
             Semester Exam:
               name: Semester Exam
+            'Lesson 13: Assessment Day':
+              name: 'Lesson 13: Assessment Day'
           title: CSP Unit 5 Pilot - Lists, Loops, and Traversals
           description_audience: ''
           description_short: ''
@@ -13063,6 +13069,8 @@ en:
               name: Unit 3 TEACHER Survey
             'Lesson 11: Unit Assessment':
               name: 'Lesson 11: Unit Assessment'
+            'Lesson 11: Assessment Day':
+              name: 'Lesson 11: Assessment Day'
           title: CSP Unit 3 Pilot - Intro to App Design
           description_audience: ''
           description_short: ''
@@ -13351,6 +13359,10 @@ en:
               name: DNS and HTTP
             Welcome to the Internet:
               name: Welcome to the Internet
+            'Lesson 9: Assessment Day':
+              name: 'Lesson 9: Assessment Day'
+            The Need for Addressing:
+              name: The Need for Addressing
           title: CSP Unit 2 Pilot - The Internet
           description_audience: ''
           description_short: ''
@@ -13439,11 +13451,11 @@ en:
           stages:
             Dance Party:
               name: Dance Party
-          title: Dance Party (2019 Remix)
+          title: Dance Party (2019)
           description_audience: ''
-          description_short: ''
+          description_short: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
           description: Code your own dance party to share with your friends!
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           title: Teaching Computer Science Fundamentals
           description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course!
           description_short: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course.
@@ -13544,7 +13556,7 @@ en:
             End of Course projects:
               name: End of Course projects
         dance-extras-2019:
-          title: Keep On Dancing
+          title: Keep On Dancing (2019)
           description: Go beyond the first hour with extended project ideas.
           description_short: Go beyond the Hour of Code with this follow-up activity to Code.org's Dance Party tutorial.
           description_audience: ''
@@ -13571,6 +13583,10 @@ en:
               name: The Value of Privacy
             'Project: Innovation Simulation Part 3':
               name: 'Project: Innovation Simulation Part 3'
+            Protecting Data Part 1:
+              name: Protecting Data Part 1
+            Protecting Data Part 2:
+              name: Protecting Data Part 2
           title: Cybersecurity and Global Impacts
           description_audience: ''
           description_short: ''
@@ -13609,7 +13625,9 @@ en:
               name: Practice PT Part 3
             'Lesson 15: Unit 4 Assessment':
               name: 'Lesson 15: Unit 4 Assessment'
-          title: Variables, Conditionals, and Functions
+            'Lesson 15: Assessment Day':
+              name: 'Lesson 15: Assessment Day'
+          title: 'CSP Preview: Variables, Conditionals, and Functions'
           description_audience: ''
           description_short: ''
           description: ''

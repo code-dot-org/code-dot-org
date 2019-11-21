@@ -109,8 +109,15 @@ vi-VN:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Khối mới!
         dance_callout_11_b: Khối mới!
+      Dance_2019_01:
+        dance_callout_01: Chọn loại vũ công ở đây.
+      Dance_2019_02:
+        dance_callout_11_a: Thêm khối này vào chương trình của bạn.
+        arrow_buttons: Nhấn các nút mũi tên để điều khiển vũ công của bạn.
       Dance_2019_04:
         dance_callout_02: Thêm khối này vào chương trình của bạn!
+      Dance_2019_05:
+        dance_callout_05: Thêm một sự kiện mới vào chương trình của bạn.
       Dance_2019_06:
         dance_party_11_5_groups: Khối mới!
       Dance_2019_07:

@@ -2,6 +2,45 @@
 fr:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: tout
+            '"ALIEN"': tous les extraterrestres
+            '"BEAR"': tous les ours
+            '"CAT"': tous les chats
+            '"DOG"': tous les chiens
+            '"DUCK"': tous les canards
+            '"FROG"': toutes les grenouilles
+            '"MOOSE"': tous les orignaux
+            '"PINEAPPLE"': tous les ananas
+            '"ROBOT"': tous les robots
+            '"SHARK"': tous les requins
+            '"UNICORN"': Licornes
+          MOVE1:
+            MOVES.Roll: Roulis de caisse
+            MOVES.ClapHigh: Tapez des mains en haut
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Doubler la mise
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss dance
+            MOVES.Fresh: Fresh dance
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Étoile
+            MOVES.ThisOrThat: Ceci ou cela
+            MOVES.Rest: Aucun
+          MOVE2:
+            MOVES.Roll: Roulis de caisse
+            MOVES.ClapHigh: Tapez des mains en haut
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Doubler la mise
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss dance
+            MOVES.Fresh: Fresh dance
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Étoile
+            MOVES.ThisOrThat: Ceci ou cela
+            MOVES.Rest: Aucun
       Dancelab_atTimestamp:
         text: après {TIMESTAMP} {UNIT}
         options:
@@ -782,12 +821,6 @@ fr:
           STRING:
             '"hearts_colorful"': Cœurs
             '"diamond"': diamant
-            '"l"': l
-            '"m"': m
-            '"n"': n
-            '"o"': o
-            '"p"': p
-            '"r"': r
             '"s"': s
             '"t"': t
             '"u"': u

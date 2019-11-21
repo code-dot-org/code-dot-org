@@ -14,7 +14,7 @@ hi:
         Artist2: कलाकार 2
         Unplug5: कार्य
         Farmer: किसान
-        Unplug6: शर्तें
+        Unplug6: कंडीशनल्स
         Artist3: कलाकार 3
         Unplug7: गीत लेखन
         Farmer2: किसान 2
@@ -37,9 +37,10 @@ hi:
         StudioEC: प्ले लैब
         Applab: ऐप लैब
         NetSim: इंटरनेट अनुकारक
-        Custom: आर्टिस्ट
+        Custom: कलाकार
         CustomStudio: प्ले लैब
         Gamelab: गेम लैब
+        Spritelab: स्प्राइट लैब
     trophy:
       name:
         Bronze: कांसा
@@ -346,18 +347,21 @@ hi:
         C4_function_edit: फंक्शन्स का संपादन करना
         C4_function_create: फंक्शन्स बनाना
         C4_function_parameters: मापदंडों के साथ फंक्शन
-        C4_conditionals: शर्तें
+        C4_conditionals: कंडीशनल्स
         C4_unplugged_algorithms: टैन्ग्राम्स के साथ कलन विधियां
         C4_unplugged_madlibs: मैड लिब्स
         C4_unplugged_variables: एनवलोप्स में वेरिएबल्स
         C4_unplugged_forloops: फॉर लूप्स
         C4_unplugged_parameters: मापदंडों के साथ गीत लिखना
         C4_unplugged_binary: युग्मक
+        CSF_a_b_artist_loops: आर्टिस्ट में लूप्स
         CSF_artist_angles: आर्टिस्ट में कोण
         CSF_collector_k1_blocks: 'CS मूल सिद्धांत: कलेक्टर'
         CSF_collector_repeat_loops: क्लेक्टर दोहराएं लूप्स
         CSF_collector_text_blocks: 'CS मूल सिद्धांत: कलेक्टर'
         CSF_create_functions: फंक्शन्स बनाएं
+        CSF_debugging_k1_blocks: डीबगिंग
+        CSF_debugging_text_blocks: डीबगिंग
         CSF_EF_cs_matters: कंप्यूटर साइंस महत्वपूर्ण है
         CSF_maze_intro_k1_blocks: कोड स्टूडियो का परिचय
         CSF_maze_intro_text_blocks: कोड स्टूडियो का परिचय
@@ -397,7 +401,7 @@ hi:
         csp_applab_functions: फंक्शन्स का परिचय
         csp_applab_functions_parameters: मापदंडों के साथ फंक्शन
         csp_applab_loops: फंदे
-        csp_cs_is_changing_everything: कंप्यूटर साइंस सबकुछ बदल रही है
+        csp_cs_is_changing_everything: कंप्यूटर साइंस सब कुछ बदल रहा है
         starwars_intro: 'Star Wars: कोड से तारा समूह बनाना - परिचय'
         starwars_typing: 'Star Wars: कोड से तारा समूह बनाना - JavaScript'
         starwars_events: 'Star Wars: कोड से तारा समूह बनाना - इवेंट्स'
@@ -457,7 +461,9 @@ hi:
         CSF_skinOverview_Harvester: कटाई मशीन
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: BB-8 के साथ लूप्स
         CSF_harvester_skinOverview_K-1: कटाई मशीन
+        CSF_harvester_loops_K1: कटाई मशीन में लूप्स
         CSF_scrat_loops_K1: हिमयुग में लूप्स
         CSF_scrat_loops_CF: हिमयुग में लूप्स
         CSF_if_allskins: इफ ब्लॉक
@@ -500,10 +506,12 @@ hi:
         csd_gamelab_functions: फंक्शन बोलना और परिभाषित करना
         csd_applab_parameters: मापदंडों के साथ फंक्शन
         csd_applab_loops: ऐप लैब में लूप्स
+        csd_problem_solving_process: सवाल हल करने की प्रक्रिया
         CSF_Going_Places_Safely: मेरा ऑनलाइन पड़ोस
         CSF_SpriteLab_Intro_v2: स्प्राइट लैब का परिचय
         CSF_Spritelab_MakeSprite_v2: स्प्राइट कैसे बनाएं
         CSF_SpriteLab_SpritesInAction_v2: क्रिया में स्प्राइट्स
+        csd_debugging: डीबगिंग
         csd_applab_designmode_short: ऐप लैब डिज़ाइन मोड
     callout:
       text:
