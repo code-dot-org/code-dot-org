@@ -86,7 +86,7 @@ class ScriptDSL < BaseDSL
         stage_extras_disabled: @stage_extras_disabled,
       }.compact
     end
-    @stage = name
+    @stage = name&.strip
     @stage_flex_category = properties[:flex_category]
     @stage_lockable = properties[:lockable]
     @scriptlevels = []
