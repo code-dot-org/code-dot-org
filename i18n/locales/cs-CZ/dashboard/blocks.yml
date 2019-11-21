@@ -2,6 +2,45 @@
 cs:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: vše
+            '"ALIEN"': všichni vetřelci
+            '"BEAR"': všichni medvědi
+            '"CAT"': všechny kočky
+            '"DOG"': všichni psi
+            '"DUCK"': všechny kachny
+            '"FROG"': všechny žáby
+            '"MOOSE"': všichni losi
+            '"PINEAPPLE"': všechny ananasy
+            '"ROBOT"': všichni roboti
+            '"SHARK"': všichni žraloci
+            '"UNICORN"': Jednorožci
+          MOVE1:
+            MOVES.Roll: Naklánění
+            MOVES.ClapHigh: Clap High
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Dvojitě dolů
+            MOVES.Drop: Roznožka
+            MOVES.Floss: Tančí floss
+            MOVES.Fresh: Tančí fresh
+            MOVES.Clown: Šaškují
+            MOVES.Kick: Kopou
+            MOVES.ThisOrThat: Toto nebo ono
+            MOVES.Rest: Žádný
+          MOVE2:
+            MOVES.Roll: Naklánění
+            MOVES.ClapHigh: Clap High
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Dvojitě dolů
+            MOVES.Drop: Roznožka
+            MOVES.Floss: Tančí floss
+            MOVES.Fresh: Tančí fresh
+            MOVES.Clown: Šaškují
+            MOVES.Kick: Kopou
+            MOVES.ThisOrThat: Toto nebo ono
+            MOVES.Rest: Žádný
       Dancelab_atTimestamp:
         text: po {TIMESTAMP} {UNIT}
         options:
@@ -746,11 +785,6 @@ cs:
           STRING:
             '"hearts_colorful"': Srdce
             '"diamond"': diamant
-            '"l"': l
-            '"m"': m
-            '"o"': o
-            '"p"': p
-            '"r"': r
             '"s"': s
             '"t"': t
             '"u"': u
