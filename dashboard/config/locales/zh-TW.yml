@@ -327,6 +327,7 @@ zh-TW:
       algebra_game: 代數
       applab: App Lab
       artist: 藝術家
+      artist_k1: 小藝術家（學齡前學生）
       basketball: 籃球
       bounce: 彈跳
       calc: 計算
@@ -589,6 +590,8 @@ zh-TW:
       audience: 年齡 13+
       cta: 學習如何做
     dance:
+      title: 舞蹈派對
+    dance-2019:
       title: 舞蹈派對
     hoc:
       title: 經典迷宮

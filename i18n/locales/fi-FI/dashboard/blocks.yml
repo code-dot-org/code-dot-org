@@ -2,6 +2,41 @@
 fi:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: kaikki
+            '"ALIEN"': kaikki alienit
+            '"BEAR"': kaikki karhut
+            '"CAT"': kaikki kissat
+            '"DOG"': kaikki koirat
+            '"DUCK"': kaikki ankat
+            '"FROG"': kaikki sammakot
+            '"MOOSE"': kaikki hirvet
+            '"PINEAPPLE"': kaikki ananakset
+            '"ROBOT"': kaikki robotit
+            '"SHARK"': kaikki hait
+            '"UNICORN"': Yksisarviset
+          MOVE1:
+            MOVES.ClapHigh: Taputa korkealle
+            MOVES.Dab: Nokare
+            MOVES.DoubleJam: Panoksen tuplaus
+            MOVES.Drop: Pudota
+            MOVES.Floss: Flossaa
+            MOVES.Fresh: Fressaa
+            MOVES.Kick: Tähti
+            MOVES.ThisOrThat: Sitä tai tätä
+            MOVES.Rest: Ei mitään
+          MOVE2:
+            MOVES.ClapHigh: Taputa korkealle
+            MOVES.Dab: Nokare
+            MOVES.DoubleJam: Panoksen tuplaus
+            MOVES.Drop: Pudota
+            MOVES.Floss: Flossaa
+            MOVES.Fresh: Fressaa
+            MOVES.Kick: Tähti
+            MOVES.ThisOrThat: Sitä tai tätä
+            MOVES.Rest: Ei mitään
       Dancelab_atTimestamp:
         text: jälkeen {TIMESTAMP} {UNIT}
         options:
@@ -709,12 +744,6 @@ fi:
         options:
           STRING:
             '"diamond"': timantti
-            '"l"': l
-            '"m"': m
-            '"n"': 'n'
-            '"o"': o
-            '"p"': p
-            '"r"': r
             '"s"': s
             '"t"': t
             '"u"': u

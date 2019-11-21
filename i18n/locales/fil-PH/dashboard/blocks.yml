@@ -2,6 +2,14 @@
 fil:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: lahat
+          MOVE1:
+            MOVES.Rest: Wala
+          MOVE2:
+            MOVES.Rest: Wala
       Dancelab_atTimestamp:
         options:
           UNIT:

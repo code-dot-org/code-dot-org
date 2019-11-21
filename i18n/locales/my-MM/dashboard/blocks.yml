@@ -2,6 +2,14 @@
 my:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: အားလုံး
+          MOVE1:
+            MOVES.Rest: ဘာမှမရှိ
+          MOVE2:
+            MOVES.Rest: ဘာမှမရှိ
       Dancelab_changeMoveEachLR:
         options:
           GROUP:

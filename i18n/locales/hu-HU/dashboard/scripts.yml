@@ -1902,6 +1902,10 @@ hu:
           stages:
             While Loops:
               name: Elől tesztelős ciklusok
+        csp1-pilot:
+          stages:
+            Representing Information:
+              name: Az információ ábrázolása
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -1966,7 +1970,7 @@ hu:
             Dance Party:
               name: Táncos buli
           description: Kódold le saját táncos bulidat, és oszd meg az ismerőseiddel!
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Getting Started:
               name: Első lépések
@@ -1989,3 +1993,13 @@ hu:
         dance-extras-2019:
           title: Táncolj tovább
           description: Egy óra elteltével is folytathatod a bulit további projektötletekkel.
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Feltételek
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Csoportos megoldás
+            Conditionals with Cards:
+              name: Feltételek kártyákkal

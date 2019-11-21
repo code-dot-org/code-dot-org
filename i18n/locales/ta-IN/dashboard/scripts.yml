@@ -293,7 +293,7 @@ ta:
               name: மாறிலிகள்
             Functions:
               name: செயல்பாடுகள்
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Loops:
               name: சுழற்சிகள்

@@ -298,6 +298,19 @@ id-ID:
         acara yang membuat alien berhenti menari saat diklik.
       Dance Party 7_2019: Buat alien biru memulai sebuah tarian baru saat alien pink
         menyentuhnya. Gunakan acara 'saat menyentuh'.
+      Dance_2019_01: Drag the `make a new` block into the workspace, and connect it
+        inside the `setup` block.
+      Dance_2019_02: Blok `ketika atas ditekan` memungkinkan Anda menjalankan kode
+        saat panah atas ditekan. Buatlah penari bertepuk tangan saat Anda menekan
+        ke atas atau cobalah gerakan lain!
+      Dance_2019_03: Kini saatnya untuk kompetisi tari! Program setiap penari untuk
+        bergerak ketika Anda menekan tombol berbeda. Pilihlah gerakan favorit Anda
+        untuk setiap penari atau aturlah ke "(Acak)" untuk sesuatu yang sama sekali
+        tidak dapat diprediksi!
+      Dance_2019_04: Buatlah penari Anda memulai gerakan baru setelah birama keempat.
+      Dance_2019_06: Buatlah kelompok penari cadangan di sekitar penari utama di tengah.
+      Dance_2019_07: Ubah ukuran kelompok penari cadangan.
+      Dance_2019_09: Berkreasilah dengan blok-blok baru ini!
       Dance_Party_extras_battle: Kru menari ( klik"lainnya" untuk rincian)
       Dance_Party_extras_battle_2019: Kru menari ( klik"lainnya" untuk rincian)
       Dance_Party_extras_every_beat: Seperempat not ( klik" lainnya" untuk rincian)

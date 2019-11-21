@@ -93,10 +93,50 @@ hi-IN:
         **रोबोट को ड्रॉप-क्लैप-ड्रॉप-क्लैप करने के लिए सक्रिय करने हेतु अधिक से अधिक तेज़ी से कुंजियों का उपयोग करें!**
       CourseD_Dance_Party_12: अपने ग्रूव को आगे बढ़ाएं! अपने दोस्तों के साथ साझा करने
         के लिए अपना खुद का डांस बनाएं।
+      Dance_2019_01: |-
+        _आइए, डांस पार्टी करें!_
+
+        <xml><block type="Dancelab_makeAnonymousDanceSprite" block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;, &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml> ब्लॉक को खींच कर वर्कस्पेस में लाएं और इसे <xml><block type="Dancelab_whenSetup2" next_connection_disabled="true" block-text="setup"></block></xml> ब्लॉक के अंदर जोड़ कर अपना पहला डांसर बनाएं।
+
+        -   _अगर आपको ज़्यादा जानकारी या कुछ अतिरिक्त चुनौतियां चाहिए हों तो आप बाईं ओर दिए हुए लाइटबल्ब पर क्लिक कर सकते हैं।_
+      Dance_2019_02: |-
+        <xml><block type="Dancelab_whenKey" block-text="when up pressed"></block></xml> ब्लॉक के इस्तेमाल से आप ऊपर के तीर का बटन दबाकर अपना कोड चला सकते हैं। अब <xml><block type="Dancelab_doMoveEachLR" block-text="do once"><title name="GROUP">"CAT"</title><title name="MOVE">MOVES.XClapSide</title><title name="DIR">-1</title></block></xml> ब्लॉक के इस्तेमाल से ऊपर के तीर का बटन दबाने पर अपने डांसर से ताली बजवाएं, या कुछ और करवाएं!
+
+        _"रन” बटन क्लिक करने के बाद ऊपर के तीर का बटन या ![](<https://images.code.org/419e704e6841c0b696016bf5029b8cb9-image-1571864825506.06.45 PM.png>) दबाना न भूलें!_
+      Dance_2019_03: अब बारी है डांस प्रतियोगिता की! जब आप अलक-अलग बटन दबाएं तब डांसर
+        को अलग-अलग मूव करने के लिए प्रोग्राम करें। हर डांसर के लिए अपनी पसंदीदा मूव
+        चुनें या फिर इसे '(Random)' पर सेट करके कुछ एकदम नया पाएं!
+      Dance_2019_04: |-
+        आओ, संगीत की धुन पर डांसरों को थिरकने पर मजबूर करें!
+
+        <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> ब्लॉक को वर्कस्पेस पर खींच लाएं। इसे <xml><block type="Dancelab_changeMoveEachLR"><title name="GROUP">"SHARK"</title><title name="MOVE">MOVES.ThisOrThat</title><title name="DIR">-1</title></block></xml> ब्लॉक के नीचे जोड़ें। अब आपका डांसर चौथी संगीत प्रविधि के बाद नई मूव करने लगेगा।
+
+        **संगीत प्रविधि** से संगीत में समय गिना जाता है। इस ट्यूटोरियल में एक संगीत प्रविधि में चार बीट होती हैं।
       Dance_2019_05: "_अब हम संगीत सुन (ग्रूव) रहे हैं!_ \n\nअपने वर्कस्पेस में एक
         <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title
         name=\"UNIT\">\"measures\"</title></block></xml> ब्लॉक शामिल करें। डांसर को
         6 संगीत प्रविधियों के बाद नया मूव शुरू करने के लिए सक्रिय करें।"
+      Dance_2019_06: "इस नए ब्लॉक की मदद से पीछे डांस करने वाले छोटे डांसरों का समूह
+        बनाएं जो मुख्य डांसर को बीच में रख कर उसके चारों ओर रहें। \n  <xml><block
+        type=\"Dancelab_makeNewDanceSpriteGroup\">\n    <title name=\"N\">???</title>\n
+        \   <title name=\"COSTUME\" config=\"&quot;BEAR&quot;, &quot;CAT&quot;, &quot;FROG&quot;,
+        &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title>\n
+        \   <title name=\"LAYOUT\">\"circle\"</title>\n  </block></xml>\nअब आप एक
+        साथ कई डांसर बना सकते हैं!"
+      Dance_2019_07: |-
+        हर डांसर के कुछ _properties_ यानि _लक्षण_ होते हैं जिनसे उसकी दिखावट पर नियंत्रण होता है।
+
+        आप किसी डांसर का आकार बदल कर वह ज़्यादा पास या ज़्यादा दूर होने का एहसास करा सकते हैं। संगीत शुरू होने के बाद डांसरों के एक समूह का आकार बदलें।
+      Dance_2019_08: डांसरों की एक "tint” यानि रंग की प्रॉपर्टी होती है जो रंग की
+        एक परत चढ़ाती है। अपने किसी एक डांसर (या पूरे समूह) का रंग बदल कर देखें!
+      Dance_2019_09: |-
+        एक एक खास तरह का इवेंट है जो बार-बार होता है।
+
+        <xml><block type="Dancelab_everySeconds"><title name="N">2</title><title name="UNIT">"measures"</title></block></xml>
+
+        आपके टूलबॉक्स के दूसरे ब्लॉक आपको अपने डांसरों की प्रॉपर्टी को समय के साथ धीरे-धीरे (या अचानक) बदलने देते हैं।
+
+        _सृजनशील हो जाएं और मज़े करें!_
       Dance_2019_10: अपने ग्रूव को आगे बढ़ाएं! अपने दोस्तों के साथ साझा करने के लिए
         अपना खुद का डांस बनाएं।
       Dance_Party_01: |-
@@ -195,6 +235,14 @@ hi-IN:
         -   एक अलग लेआउट में डांसरों का दूसरा समूह बनाएं
         -   जब कुंजी दबाई जाए तो लेआउट बदलें
         -   जब डांसर फॉरमेशन बदलें तो विशेषता बदलें
+      Dance_Party_extras_layout_2019: |-
+        # आइए रचना में शामिल हों!
+
+        इस डांस को देखिए जिसमें <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> ब्लॉक के इस्तेमाल से पीछे वाले डांसरों की जमावट सारे डांस के दौरान बदली गई है। इनमें से कोई विचार आज़माएं और इसे आगे बढ़ाएं :
+
+        -   किसी और तरह से जमाए हुए डांसरों का एक दूसरा समूह बनाएं
+        -   कोई बटन दबाए जाने पर जमावट बदलें
+        -   जब डांसर अपनी जमावट बदलें तब कोई प्रॉपर्टी यानि गुण बदलें
       Dance_Party_extras_on_beat: |-
         # मंद, मध्य, ऊंची ध्वनि
 
@@ -207,6 +255,10 @@ hi-IN:
         # इसे तेज़ करें, इसे धीमा करें
 
         यह अंतिम डांस हर डांसर के मूव्स की तेज़ी को नियंत्रित करने के लिए `गति तय करें` ब्लॉक उपयोग करता है। गाने के विभिन्न बिंदुओं के दौरान विभिन्न गतियों के साथ प्रयोग करने का प्रयास करें। बेझिझक इस डांस पर थिरकते रहें या किसी पिछले डांस को और भी अच्छा बनाने के लिए उस पर वापस जाएं।
+      Dance_Party_extras_speed_2019: |-
+        # इसे तेज करें, इसे धीमा करें
+
+        इस आखिरी डांस में <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> ब्लॉक के इस्तेमाल से हर डांसर कितनी तेज़ी से हिलता है इसपर नियंत्रण किया गया है। गीत के अलग-अलग हिस्सों में अलग-अलग तेज़ी के लिए प्रयोग करके देखें। इस डांस में बदलाव करते रहें, या फिर पिछले किसी डांस पर लौटें और उन्हें और भी मज़ेदार बनाने की कोशिश करें।
       Dance_Party_extras_visible: |-
         # वे कहां गए?
 
