@@ -12,15 +12,15 @@ import queryString from 'query-string';
 
 const styles = {
   select: {
-    height: 34
+    height: 34,
+    width: 300
   },
   addNewSection: {
     borderTop: `1px solid ${color.charcoal}`,
     paddingTop: 16,
     paddingBottom: 8,
-    paddingLeft: 12,
-    paddingRight: 12,
-    width: 196
+    paddingLeft: 20,
+    paddingRight: 12
   }
 };
 
