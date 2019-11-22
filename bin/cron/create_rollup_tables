@@ -149,59 +149,53 @@ def main
   batch_size = 2000
 
   # Write the data to the DB tables.
-  ActiveRecord::Base.transaction do
-    ActiveRecord::Base.connection.execute 'TRUNCATE contained_levels'
-    contained_levels.each_slice(batch_size) do |batch|
-      ActiveRecord::Base.connection.execute <<~SQL
-        INSERT INTO contained_levels (
-          created_at,
-          updated_at,
-          level_group_level_id,
-          contained_level_id,
-          contained_level_type,
-          contained_level_page,
-          contained_level_position,
-          contained_level_text
-        )
-        VALUES
-        #{batch.map {|row| contained_levels_row(row)}.join(",\n")}
-      SQL
-    end
+  ActiveRecord::Base.connection.execute 'TRUNCATE contained_levels'
+  contained_levels.each_slice(batch_size) do |batch|
+    ActiveRecord::Base.connection.execute <<~SQL
+      INSERT INTO contained_levels (
+        created_at,
+        updated_at,
+        level_group_level_id,
+        contained_level_id,
+        contained_level_type,
+        contained_level_page,
+        contained_level_position,
+        contained_level_text
+      )
+      VALUES
+      #{batch.map {|row| contained_levels_row(row)}.join(",\n")}
+    SQL
   end
 
-  ActiveRecord::Base.transaction do
-    ActiveRecord::Base.connection.execute 'TRUNCATE contained_level_answers'
-    contained_level_answers.each_slice(batch_size) do |batch|
-      ActiveRecord::Base.connection.execute <<~SQL
-        INSERT INTO contained_level_answers (
-          created_at,
-          updated_at,
-          level_id,
-          answer_number,
-          answer_text,
-          correct
-        )
-        VALUES
-        #{batch.map {|row| contained_level_answers_row(row)}.join(",\n")}
-      SQL
-    end
+  ActiveRecord::Base.connection.execute 'TRUNCATE contained_level_answers'
+  contained_level_answers.each_slice(batch_size) do |batch|
+    ActiveRecord::Base.connection.execute <<~SQL
+      INSERT INTO contained_level_answers (
+        created_at,
+        updated_at,
+        level_id,
+        answer_number,
+        answer_text,
+        correct
+      )
+      VALUES
+      #{batch.map {|row| contained_level_answers_row(row)}.join(",\n")}
+    SQL
   end
 
-  ActiveRecord::Base.transaction do
-    ActiveRecord::Base.connection.execute 'TRUNCATE level_sources_multi_types'
-    level_sources_multi_types.each_slice(batch_size) do |batch|
-      ActiveRecord::Base.connection.execute <<~SQL
-        INSERT INTO level_sources_multi_types (
-          level_source_id,
-          level_id,
-          data,
-          md5,
-          hidden
-        )
-        VALUES
-        #{batch.map {|row| level_sources_multi_types_row(row)}.join(",\n")}
-      SQL
-    end
+  ActiveRecord::Base.connection.execute 'TRUNCATE level_sources_multi_types'
+  level_sources_multi_types.each_slice(batch_size) do |batch|
+    ActiveRecord::Base.connection.execute <<~SQL
+      INSERT INTO level_sources_multi_types (
+        level_source_id,
+        level_id,
+        data,
+        md5,
+        hidden
+      )
+      VALUES
+      #{batch.map {|row| level_sources_multi_types_row(row)}.join(",\n")}
+    SQL
   end
 end
 
