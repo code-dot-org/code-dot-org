@@ -17,6 +17,7 @@ import colors from './colors';
 import aiBotClosed from '../../public/images/ai-bot/ai-bot-closed.png';
 import counterIcon from '../../public/images/data.png';
 import eraseButton from '../../public/images/erase.png';
+import pondPanelButton from '../../public/images/pond-panel-button.png';
 import arrowDownImage from '../../public/images/arrow-down.png';
 import snail from '../../public/images/seaCreatures/Snail.png';
 import Typist from 'react-typist';
@@ -300,7 +301,13 @@ const styles = {
     bottom: 0,
     transform: 'translateX(-45%)'
   },
-  pondPanel: {
+  pondPanelButton: {
+    position: 'absolute',
+    top: 24,
+    left: 22,
+    cursor: 'pointer'
+  },
+  pondPanelLeft: {
     position: 'absolute',
     height: '50%',
     width: '30%',
@@ -308,6 +315,17 @@ const styles = {
     color: colors.white,
     borderRadius: 10,
     left: '3%',
+    top: '10%',
+    padding: 10
+  },
+  pondPanelRight: {
+    position: 'absolute',
+    height: '50%',
+    width: '30%',
+    backgroundColor: colors.transparentBlack,
+    color: colors.white,
+    borderRadius: 10,
+    right: '3%',
     top: '10%',
     padding: 10
   },
@@ -939,6 +957,11 @@ class Pond extends React.Component {
               f => f.id === fishBound.fishId
             );
             this.fishSummary = state.trainer.explainFish(clickedFish);
+            if (normalizedClickX < constants.canvasWidth / 2) {
+              setState({pondPanelSide: 'right'});
+            } else {
+              setState({pondPanelSide: 'left'});
+            }
             console.log(this.fishSummary);
           }
         }
@@ -951,7 +974,7 @@ class Pond extends React.Component {
     }
   }
 
-  onBotClick() {
+  onPondPanelButtonClick() {
     const state = getState();
     if (
       state.appMode === AppMode.FishShort ||
@@ -961,7 +984,7 @@ class Pond extends React.Component {
 
       const firstFishFieldInfos = state.pondFish[0].fieldInfos;
       this.summary = state.trainer.summarize(firstFishFieldInfos);
-      console.log("summary", this.summary);
+      console.log('summary', this.summary);
     }
   }
 
@@ -971,12 +994,13 @@ class Pond extends React.Component {
     return (
       <Body onClick={e => this.onPondClick(e)}>
         <img
-          style={styles.pondBot}
-          src={aiBotClosed}
-          onClick={e => this.onBotClick(e)}
+          src={pondPanelButton}
+          style={styles.pondPanelButton}
+          onClick={e => this.onPondPanelButtonClick(e)}
         />
+        <img style={styles.pondBot} src={aiBotClosed} />
         {state.pondPanelShowing && !state.pondClickedFish && (
-           <div style={styles.pondPanel}>
+          <div style={styles.pondPanelRight}>
             {this.summary && (
               <div>
                 {this.summary.slice(0, 5).map((f, i) => (
@@ -990,9 +1014,9 @@ class Pond extends React.Component {
                             top: 0,
                             left: '0%',
                             width:
-                              ((Math.abs(f.importance) /
+                              (Math.abs(f.importance) /
                                 this.summary[0].importance) *
-                                100) +
+                                100 +
                               '%',
                             height: 30,
                             backgroundColor: colors.green
@@ -1016,10 +1040,16 @@ class Pond extends React.Component {
                 ))}
               </div>
             )}
-           </div>
+          </div>
         )}
         {state.pondPanelShowing && state.pondClickedFish && (
-          <div style={styles.pondPanel}>
+          <div
+            style={
+              state.pondPanelSide === 'left'
+                ? styles.pondPanelLeft
+                : styles.pondPanelRight
+            }
+          >
             {this.fishSummary && (
               <div>
                 {this.fishSummary.slice(0, 4).map((f, i) => (
