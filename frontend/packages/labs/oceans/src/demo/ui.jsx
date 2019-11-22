@@ -7,6 +7,7 @@ import constants, {AppMode, Modes} from './constants';
 import {toMode} from './toMode';
 import {$time, currentRunTime, finishMovement, resetTraining} from './helpers';
 import {onClassifyFish} from './models/train';
+import {arrangeFish} from './models/pond';
 import colors from './colors';
 import aiBotClosed from '../../public/images/ai-bot/ai-bot-closed.png';
 import counterIcon from '../../public/images/data.png';
@@ -927,6 +928,15 @@ class Pond extends React.Component {
 
     return (
       <Body onClick={e => this.onPondClick(e)}>
+        <Button
+          onClick={() => {
+            let showRecallFish = !state.showRecallFish;
+            arrangeFish(showRecallFish ? state.recallFish : state.pondFish);
+            setState({showRecallFish});
+          }}
+        >
+          Recall
+        </Button>
         <img style={styles.pondBot} src={aiBotClosed} />
         {state.canSkipPond && (
           <div>

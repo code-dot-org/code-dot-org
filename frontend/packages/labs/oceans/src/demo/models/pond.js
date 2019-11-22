@@ -39,7 +39,7 @@ const predictAllFish = state => {
   });
 };
 
-const arrangeFish = fishes => {
+export const arrangeFish = fishes => {
   let fishPositions = formatArrangement();
 
   fishes.forEach(fish => {
