@@ -85,7 +85,6 @@ import eyes4_image from '../../public/images/fish/eyes/eyes4.png';
 import eyes5_image from '../../public/images/fish/eyes/eyes5.png';
 import eyes6_image from '../../public/images/fish/eyes/eyes6.png';
 import eyes7_image from '../../public/images/fish/eyes/eyes7.png';
-import eyes8_image from '../../public/images/fish/eyes/eyes8.png';
 import eyes9_image from '../../public/images/fish/eyes/eyes9.png';
 import small_1_image from '../../public/images/fish/eyes/small_1.png';
 
@@ -149,7 +148,7 @@ export const BodyShape = Object.freeze({
 
 export const FieldType = Object.freeze({
   ATTRIBUTE: 'attribute', // Means the field came from the "knnData"
-  ID: 'id', // Means the field is a one-hot encoded boolean value corresponding to an ID for a part variation
+  ID: 'id' // Means the field is a one-hot encoded boolean value corresponding to an ID for a part variation
 });
 
 const fishComponents = {
@@ -568,17 +567,6 @@ const fishComponents = {
     eyes7: {
       src: eyes7_image,
       knnData: [374, 1],
-      type: FishBodyPart.EYE,
-      exclusions: [
-        AppMode.FishVTrash,
-        AppMode.CreaturesVTrashDemo,
-        AppMode.CreaturesVTrash,
-        AppMode.FishShort
-      ]
-    },
-    eyes8: {
-      src: eyes8_image,
-      knnData: [899, 1.4453376205787782],
       type: FishBodyPart.EYE,
       exclusions: [
         AppMode.FishVTrash,
