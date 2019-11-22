@@ -48,6 +48,36 @@
   border-radius: 5px;
 }
 
+/**
+ * New style of row for tutorials that uses display:flex instead of float:left so
+ * that all boxes will be the same height, but can grow when international text is
+ * too long.
+ */
+.tutorial-row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.tutorial-block {
+  flex: 0 0 auto;
+  min-height: 300px;
+  border: solid 1px #bbb;
+  border-radius: 5px;
+  margin: 30px 0 0 20px;
+}
+
+/**
+ * This overrides styles in the courseblock-tall class below. When all uses have
+ * migrated to use tutorial-row and tutorial-block, then these styles can be removed
+ * here and from .courseblock-tall below.
+ */
+.tutorial-block .courseblock-tall {
+  float: none;
+  height: 100%;
+  border: 0;
+  margin: 0;
+}
+
 /* COURSEBLOCKS */
 
 .courseblock-span1 {  width: 60px;  }

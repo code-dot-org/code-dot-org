@@ -179,11 +179,11 @@ export class CourseBlocksHoc extends Component {
 
   render() {
     return (
-      <div className="row">
-        <ProtectedStatefulDiv ref="0" />
-        <ProtectedStatefulDiv ref="1" />
-        <ProtectedStatefulDiv ref="2" />
-        <ProtectedStatefulDiv ref="3" />
+      <div className="tutorial-row">
+        <ProtectedStatefulDiv className="tutorial-block" ref="0" />
+        <ProtectedStatefulDiv className="tutorial-block" ref="1" />
+        <ProtectedStatefulDiv className="tutorial-block" ref="2" />
+        <ProtectedStatefulDiv className="tutorial-block" ref="3" />
       </div>
     );
   }
