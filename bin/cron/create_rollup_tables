@@ -3,8 +3,10 @@
 # This script populates (after truncating) the contained_levels,
 # contained_level_answers, and the level_sources_multi_type tables.
 
-require_relative '../../dashboard/config/environment'
 require 'cdo/only_one'
+exit unless only_one_running?(__FILE__)
+
+require_relative '../../dashboard/config/environment'
 
 TIME_NOW = DateTime.now.strftime('%F %T').freeze
 
@@ -242,5 +244,3 @@ def level_sources_multi_types_row(row_hash)
     )
   ROW
 end
-
-main if only_one_running?(__FILE__)
