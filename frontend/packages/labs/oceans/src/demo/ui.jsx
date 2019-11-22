@@ -5,7 +5,13 @@ import _ from 'lodash';
 import {getState, setState} from './state';
 import constants, {AppMode, Modes} from './constants';
 import {toMode} from './toMode';
-import {$time, currentRunTime, finishMovement, resetTraining} from './helpers';
+import {
+  $time,
+  currentRunTime,
+  finishMovement,
+  resetTraining,
+  friendlyNameForFishPart
+} from './helpers';
 import {onClassifyFish} from './models/train';
 import colors from './colors';
 import aiBotClosed from '../../public/images/ai-bot/ai-bot-closed.png';
@@ -955,7 +961,7 @@ class Pond extends React.Component {
 
       const firstFishFieldInfos = state.pondFish[0].fieldInfos;
       this.summary = state.trainer.summarize(firstFishFieldInfos);
-      console.log(this.summary);
+      console.log("summary", this.summary);
     }
   }
 
@@ -969,6 +975,49 @@ class Pond extends React.Component {
           src={aiBotClosed}
           onClick={e => this.onBotClick(e)}
         />
+        {state.pondPanelShowing && !state.pondClickedFish && (
+           <div style={styles.pondPanel}>
+            {this.summary && (
+              <div>
+                {this.summary.slice(0, 5).map((f, i) => (
+                  <div key={i}>
+                    {f.importance > 0 && (
+                      <div style={{position: 'relative', height: 40}}>
+                        &nbsp;
+                        <div
+                          style={{
+                            position: 'absolute',
+                            top: 0,
+                            left: '0%',
+                            width:
+                              ((Math.abs(f.importance) /
+                                this.summary[0].importance) *
+                                100) +
+                              '%',
+                            height: 30,
+                            backgroundColor: colors.green
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          style={{
+                            position: 'absolute',
+                            top: 4,
+                            left: '3%',
+                            textAlign: 'right'
+                          }}
+                        >
+                          {friendlyNameForFishPart(f.partType)}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
+           </div>
+        )}
         {state.pondPanelShowing && state.pondClickedFish && (
           <div style={styles.pondPanel}>
             {this.fishSummary && (
@@ -990,7 +1039,7 @@ class Pond extends React.Component {
                                 2 +
                               '%',
                             height: 30,
-                            backgroundColor: 'green'
+                            backgroundColor: colors.green
                           }}
                         >
                           &nbsp;
@@ -1002,7 +1051,7 @@ class Pond extends React.Component {
                             left: '53%'
                           }}
                         >
-                          {f.partType}
+                          {friendlyNameForFishPart(f.partType)}
                         </div>
                       </div>
                     )}
@@ -1021,7 +1070,7 @@ class Pond extends React.Component {
                                 2 +
                               '%',
                             height: 30,
-                            backgroundColor: 'red'
+                            backgroundColor: colors.red
                           }}
                         >
                           &nbsp;
@@ -1034,7 +1083,7 @@ class Pond extends React.Component {
                             textAlign: 'right'
                           }}
                         >
-                          {f.partType}
+                          {friendlyNameForFishPart(f.partType)}
                         </div>
                       </div>
                     )}
