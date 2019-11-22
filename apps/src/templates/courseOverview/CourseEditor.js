@@ -4,8 +4,6 @@ import CourseScriptsEditor from './CourseScriptsEditor';
 import ResourcesEditor from './ResourcesEditor';
 import CourseOverviewTopRow from './CourseOverviewTopRow';
 import {resourceShape} from './resourceType';
-import {Provider} from 'react-redux';
-import {getStore} from '@cdo/apps/code-studio/redux';
 
 const styles = {
   input: {
@@ -142,7 +140,7 @@ export default class CourseEditor extends Component {
         <label>
           <h4>Scripts</h4>
           <div>
-            The dropdown(s) below represent the orded set of scripts in this
+            The dropdown(s) below represent the ordered set of scripts in this
             course. To remove a script, just set the dropdown to the default
             (first) value.
           </div>
@@ -163,14 +161,12 @@ export default class CourseEditor extends Component {
             resources={teacherResources}
             maxResources={3}
             renderPreview={resources => (
-              <Provider store={getStore()}>
-                <CourseOverviewTopRow
-                  sectionsForDropdown={[]}
-                  id={-1}
-                  resources={resources}
-                  showAssignButton={false}
-                />
-              </Provider>
+              <CourseOverviewTopRow
+                sectionsForDropdown={[]}
+                id={-1}
+                resources={resources}
+                showAssignButton={false}
+              />
             )}
           />
         </div>
