@@ -955,6 +955,8 @@ let Pond = class Pond extends React.Component {
     const normalizedClickX = (clickX / pondWidth) * constants.canvasWidth;
     const normalizedClickY = (clickY / pondHeight) * constants.canvasHeight;
 
+    const fishCollection = state.showRecallFish ? state.recallFish : state.pondFish;
+
     if (state.pondFishBounds) {
       let fishClicked = false;
       // Look through the array in reverse so that we click on a fish that
@@ -994,7 +996,7 @@ let Pond = class Pond extends React.Component {
             state.appMode === AppMode.FishShort ||
             state.appMode === AppMode.FishLong
           ) {
-            const clickedFish = state.pondFish.find(
+            const clickedFish = fishCollection.find(
               f => f.id === fishBound.fishId
             );
             this.fishSummary = state.trainer.explainFish(clickedFish);
@@ -1031,6 +1033,9 @@ let Pond = class Pond extends React.Component {
 
   render() {
     const state = getState();
+    const maxExplainValue = state.showRecallFish
+      ? state.pondRecallFishMaxExplainValue
+      : state.pondFishMaxExplainValue;
 
     return (
       <Body onClick={e => this.onPondClick(e)}>
@@ -1120,15 +1125,9 @@ let Pond = class Pond extends React.Component {
               <div>
                 <div style={{marginBottom: 20}}>
                   These were the most important fish parts in determining
-                  whether this fish was
-                  {' '}
-                  <span style={{color: colors.green}}>
-                    {state.word}
-                  </span> or
-                  {' '}
-                  <span style={{color: colors.red}}>
-                    not {state.word}
-                  </span>.
+                  whether this fish was{' '}
+                  <span style={{color: colors.green}}>{state.word}</span> or{' '}
+                  <span style={{color: colors.red}}>not {state.word}</span>.
                 </div>
                 {this.fishSummary.slice(0, 4).map((f, i) => (
                   <div key={i}>
@@ -1142,7 +1141,7 @@ let Pond = class Pond extends React.Component {
                             left: '50%',
                             width:
                               ((Math.abs(f.impact) /
-                                state.pondFishMaxExplainValue) *
+                                maxExplainValue) *
                                 100) /
                                 2 +
                               '%',
@@ -1173,7 +1172,7 @@ let Pond = class Pond extends React.Component {
                             right: '50%',
                             width:
                               ((Math.abs(f.impact) /
-                                state.pondFishMaxExplainValue) *
+                                maxExplainValue) *
                                 100) /
                                 2 +
                               '%',

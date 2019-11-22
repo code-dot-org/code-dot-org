@@ -21,12 +21,14 @@ export const init = async () => {
   );
   arrangeFish(pondFish);
   setState({pondFish, recallFish});
-  setState({pondFish: pondFishWithConfidence});
   if (
     state.appMode === AppMode.FishShort ||
     state.appMode === AppMode.FishLong
   ) {
-    setState({pondFishMaxExplainValue: getMaxExplainValue()});
+    setState({
+      pondFishMaxExplainValue: getMaxExplainValue(pondFish),
+      pondRecallFishMaxExplainValue: getMaxExplainValue(recallFish)
+    });
   }
 };
 
@@ -58,15 +60,14 @@ export const arrangeFish = fishes => {
   });
 };
 
-
 // For the fish in the pond, find the maximum explain value.  This will allow
 // us to show charts normalized to the highest value.
-const getMaxExplainValue = () => {
+const getMaxExplainValue = fishCollection => {
   const state = getState();
 
   let maxValue = 0;
 
-  state.pondFish.forEach(fish => {
+  fishCollection.forEach(fish => {
     const summary = state.trainer.explainFish(fish);
     if (summary.length > 0) {
       const value = Math.abs(summary[0].impact);
