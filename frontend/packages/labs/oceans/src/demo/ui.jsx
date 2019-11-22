@@ -296,11 +296,14 @@ const styles = {
   },
   pondPanel: {
     position: 'absolute',
-    height: '70%',
+    height: '50%',
     width: '30%',
-    backgroundColor: 'white',
+    backgroundColor: colors.transparentBlack,
+    color: colors.white,
+    borderRadius: 10,
     left: '3%',
-    top: '10%'
+    top: '10%',
+    padding: 10
   },
   pill: {
     display: 'flex',
@@ -971,13 +974,14 @@ class Pond extends React.Component {
             {this.fishSummary && (
               <div>
                 {this.fishSummary.slice(0, 4).map((f, i) => (
-                  <div key={i} style={{height: '10%', width: '100%'}}>
-                    {f.impact > 0 && (
-                      <div style={{lineHeight: '30px'}}>
+                  <div key={i}>
+                    {f.impact < 0 && (
+                      <div style={{position: 'relative', height: 40}}>
                         &nbsp;
                         <div
                           style={{
                             position: 'absolute',
+                            top: 0,
                             left: '50%',
                             width:
                               ((Math.abs(f.impact) /
@@ -985,6 +989,7 @@ class Pond extends React.Component {
                                 100) /
                                 2 +
                               '%',
+                            height: 30,
                             backgroundColor: 'green'
                           }}
                         >
@@ -993,19 +998,21 @@ class Pond extends React.Component {
                         <div
                           style={{
                             position: 'absolute',
-                            left: '50%'
+                            top: 4,
+                            left: '53%'
                           }}
                         >
                           {f.partType}
                         </div>
                       </div>
                     )}
-                    {f.impact < 0 && (
-                      <div style={{lineHeight: '30px'}}>
+                    {f.impact > 0 && (
+                      <div style={{position: 'relative', height: 40}}>
                         &nbsp;
                         <div
                           style={{
                             position: 'absolute',
+                            top: 0,
                             right: '50%',
                             width:
                               ((Math.abs(f.impact) /
@@ -1013,6 +1020,7 @@ class Pond extends React.Component {
                                 100) /
                                 2 +
                               '%',
+                            height: 30,
                             backgroundColor: 'red'
                           }}
                         >
@@ -1021,7 +1029,8 @@ class Pond extends React.Component {
                         <div
                           style={{
                             position: 'absolute',
-                            width: '50%',
+                            top: 4,
+                            width: '47%',
                             textAlign: 'right'
                           }}
                         >
