@@ -2,14 +2,16 @@ import 'idempotent-babel-polyfill';
 import _ from 'lodash';
 import {setState, getState} from '../state';
 import constants, {ClassType} from '../constants';
-import {randomInt} from '../helpers';
 
 export const init = async () => {
   const state = getState();
   let fishWithConfidence = await predictAllFish(state);
   setState({totalPondFish: fishWithConfidence.length});
   fishWithConfidence = _.sortBy(fishWithConfidence, ['confidence']);
-  const pondFishWithConfidence = fishWithConfidence.splice(0, 20);
+  const pondFishWithConfidence = fishWithConfidence.splice(
+    0,
+    constants.maxPondFish
+  );
   arrangeFish(pondFishWithConfidence);
   setState({pondFish: pondFishWithConfidence});
 };
@@ -33,23 +35,48 @@ const predictAllFish = state => {
 };
 
 const arrangeFish = fishes => {
+  let fishPositions = formatArrangement();
+
   fishes.forEach(fish => {
-    // Pick a random side of the bot UI.
-    const side = randomInt(0, 1);
+    const pos = fishPositions.shift();
+    const x = pos[0] * 140 - 50;
+    const y = pos[1] * 150;
 
-    // Generate a location for the fish on that side.
-    const xBounds = [
-      {minX: 0, maxX: 360 - constants.fishCanvasWidth / 2},
-      {minX: 510, maxX: constants.canvasWidth - constants.fishCanvasWidth}
-    ];
-    const x = randomInt(xBounds[side].minX, xBounds[side].maxX);
-
-    // Don't put fish at the very bottom of the pond because of UI.
-    const bottomAreaHeight = 80;
-    const y = randomInt(
-      0,
-      constants.canvasHeight - constants.fishCanvasHeight / 2 - bottomAreaHeight
-    );
     fish.setXY({x, y});
   });
+};
+
+// Describes the 20 possible fish positions on the screen, where the value describes
+// that position's priority. 0 will be filled first, then 1, etc.
+const arrangement = [
+  [2, 1, 0, 0, 0, 1, 2],
+  [2, 1, 0, 0, 0, 1, 2],
+  [2, 1, 0, null, 0, 1, 2]
+];
+
+// Reformats the arrangement constant into a 1-dimensional array of x-y coordinates,
+// ordered in priority order (e.g., the spots to fill first appear first in the array).
+const formatArrangement = () => {
+  let intermediateArr = [];
+  arrangement.forEach((row, rowIdx) => {
+    row.forEach((col, colIdx) => {
+      if (typeof col !== 'number') {
+        return;
+      }
+
+      if (!intermediateArr[col]) {
+        intermediateArr[col] = [];
+      }
+
+      intermediateArr[col].push([colIdx, rowIdx]);
+    });
+  });
+
+  // Flatten nested intermediateArr into a 1-dimensional array of x-y coordinates.
+  let formattedArrangement = [];
+  intermediateArr.forEach(a => {
+    formattedArrangement = formattedArrangement.concat(_.shuffle(a));
+  });
+
+  return formattedArrangement;
 };
