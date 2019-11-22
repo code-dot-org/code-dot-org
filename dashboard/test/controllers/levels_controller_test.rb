@@ -475,6 +475,13 @@ class LevelsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "should show level group" do
+    level_group = create :level_group, :with_sublevels, name: 'lg'
+    level_group.save!
+    get :show, params: {id: level_group.id}
+    assert_response :success
+  end
+
   test "should show level on test env" do
     Rails.env = "test"
     get :show, params: {id: @level}

@@ -23,7 +23,7 @@ Using the United Nations’ Sustainable Development Goals (SDGs) as a guide, we 
 
 <a id="prompts"></a>
 # Example #CSforGood discussion prompts
-Here are some themes and questions to spark discussion in your classroom about the role of technology in creating positive social change. 
+Here are some themes and questions to spark discussion in your classroom about the role of technology in creating positive social change. For a deeper discussion, pair these  prompts with <a href="#articles">stories of CS for Good in the real-world</a>. 
 
 ## **Technology can be part of the solution.** 
 While large, systemic challenges like poverty and environmental sustainability often require attitude shifts, wide-scale cooperation, and in some cases, personal or collective sacrifice, technology can help jumpstart efforts, detect problems, and ease barriers.
@@ -66,6 +66,7 @@ The more accessible CS education is, the more students we can reach and the more
 If you're looking for an engaging way to introduce your students to the concept of CS for Good, there are countless tutorials and activities to choose from!
 
 ## Beginner Activities
+For students who are new to computer science, these activities will help them develop a basic understanding of CS concepts. 
 
 | Activity                                                                                                                                      | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Grades                                                      |
 | ----------------------------------------------------------------------------------------------------------------------------------------------| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
@@ -92,6 +93,7 @@ If you're looking for an engaging way to introduce your students to the concept 
 
 
 ## Comfortable Activities
+These activities are best for students who have already developed a basic understanding of computer science concepts. Comfortable activities are great for students looking to deepen their knowledge!
 
 | Activity                                                                                                                                             | Description                                                                                                                                                                                                                                                             | Grades                                                      |
 | -----------------------------------------------------------------------------------------------------------------------------------------------------| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| ----------------------------------------------------------- |
@@ -106,17 +108,20 @@ If you're looking for an engaging way to introduce your students to the concept 
 
 
 ##  Robotics Activities
+Built around various robotics or physical computing sets, these tutorials are great for a hands-on computer science experience. 
 
 | Activity                                                                                                                                             | Description                                                                                                                                                                                                                                                                                                                                                                           | Grades               |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------|
 | [KIBO Snowplow - Important Jobs in the Community](https://kinderlabrobotics.com/hour-of-code-the-kibo-snowplow/)                                     | The city is covered in snow, and we need to design a KIBO snowplow to help clean up! Students will engage in the engineering design process as they design, test, and improve snowplow robots that can help clean up the cotton-ball snow. Students will also learn more about the many important jobs that make a community function.                                                | Pre-reader to Grade 5|
 | [micro:bit: coding towards Global Goal 14, Life Below Water](https://microbit.org/do-your-bit/goal-14-life-below-water/)                             | Code your way to preserving the oceans using micro:bit. Find out more about Global Goal 14, Life Below Water and learn to code a sea turtle beach light.                                                                                                                                                                                                                              | Grades 2-8           | 
 | [micro:bit: coding towards Global Goal 14, Life on Land](https://microbit.org/do-your-bit/goal-15-life-on-land/)                                     | Code your way to protecting local wildlife using micro:bit. Find out more about Global Goal 15, Life on Land and learn to code a wildlife species counter.                                                                                                                                                                                                                            | Grades 2-8           |      
-| [Sphero Goes Green](https://edu.sphero.com/cwists/preview/38663-sphero-goes-greenx)                                                                  | Learn how to use a counting number variable to keep track of all your classrooms recycling.                                                                                                                                                                                                                                                                                           | Grades 2-8           |
+| [Sphero Goes Green](https://edu.sphero.com/cwists/preview/38663-sphero-goes-greenx)                                                                  | Once you've learned the basics of computer science, take your understanding a step further. In this activity, learn how to use a counting number variable to keep track of all your classrooms recycling.                                                                                                                                                                             | Grades 2-8           |
 
 <a id="articles"></a>
 #  Using CS for Good in the Real World
-Every day, organizations and individuals are finding new ways to use computer science to help solve the world's challenges. Here are some real-world examples to take a look at with your classroom. For a deeper conversation, try using the <a href="#prompts">Example Discussion Prompts</a> to investigate how these solutions are using CS for Good, and if there's room for improvement. 
+Every day, organizations and individuals are finding new ways to use computer science to help solve the world's challenges. Here are some real-world examples to take a look at with your classroom. 
+
+Try using the <a href="#prompts">Example Discussion Prompts</a> with your classroom to investigate how these solutions are using CS for Good, and if there's room for improvement. 
 
 ## Environment
 - [Could a network of sensors give first responders more time to control wildfires?](https://www.fastcompany.com/90424260/could-a-network-of-sensors-give-first-responders-more-time-to-control-wildfires)
