@@ -1003,6 +1003,9 @@ class Pond extends React.Component {
           <div style={styles.pondPanelRight}>
             {this.summary && (
               <div>
+                <div style={{marginBottom: 20}}>
+                  These were the most important fish parts:
+                </div>
                 {this.summary.slice(0, 5).map((f, i) => (
                   <div key={i}>
                     {f.importance > 0 && (
@@ -1038,6 +1041,9 @@ class Pond extends React.Component {
                     )}
                   </div>
                 ))}
+                <div style={{marginTop: 20}}>
+                  Click individual fish to see their information.
+                </div>
               </div>
             )}
           </div>
@@ -1052,6 +1058,18 @@ class Pond extends React.Component {
           >
             {this.fishSummary && (
               <div>
+                <div style={{marginBottom: 20}}>
+                  These were the most important fish parts in determining
+                  whether this fish was
+                  {' '}
+                  <span style={{color: colors.green}}>
+                    {state.word}
+                  </span> or
+                  {' '}
+                  <span style={{color: colors.red}}>
+                    not {state.word}
+                  </span>.
+                </div>
                 {this.fishSummary.slice(0, 4).map((f, i) => (
                   <div key={i}>
                     {f.impact < 0 && (
@@ -1156,6 +1174,7 @@ class Pond extends React.Component {
                 style={styles.backButton}
                 onClick={() => {
                   toMode(Modes.Training);
+                  setState({pondClickedFish: null, pondPanelShowing: false});
                 }}
               >
                 Train More

@@ -32,7 +32,7 @@ const initialState = {
   guideDismissals: [],
   guideShowing: false,
   pondPanelShowing: false,
-  pondClickedFishSide: null,
+  pondPanelSide: null,
   pondFishMaxExplainValue: 1,
 };
 let state = {...initialState};

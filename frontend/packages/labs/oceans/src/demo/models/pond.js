@@ -61,9 +61,9 @@ const getMaxExplainValue = () => {
   let maxValue = 0;
 
   state.pondFish.forEach(fish => {
-    const summary = state.trainer.summarize(fish.fieldInfos);
+    const summary = state.trainer.explainFish(fish);
     if (summary.length > 0) {
-      const value = Math.abs(summary[0].importance);
+      const value = Math.abs(summary[0].impact);
       if (value > maxValue) {
         maxValue = value;
       }
