@@ -165,10 +165,10 @@ export default class CourseEditor extends Component {
             renderPreview={resources => (
               <Provider store={getStore()}>
                 <CourseOverviewTopRow
-                  sectionsInfo={[]}
+                  sectionsForDropdown={[]}
                   id={-1}
-                  title="Unused title"
                   resources={resources}
+                  showAssignButton={false}
                 />
               </Provider>
             )}
