@@ -45,6 +45,7 @@ const styles = {
   button: {
     cursor: 'pointer',
     backgroundColor: colors.white,
+    color: colors.grey,
     borderRadius: 8,
     minWidth: 160,
     outline: 'none',
