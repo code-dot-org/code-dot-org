@@ -894,7 +894,7 @@ let Pond = class Pond extends React.Component {
     const fish = showRecallFish ? state.recallFish : state.pondFish;
 
     // Don't call arrangeFish if fish have already been arranged.
-    if (!fish[0].getXY()) {
+    if (fish.length > 0 && !fish[0].getXY()) {
       arrangeFish(fish);
     }
 
