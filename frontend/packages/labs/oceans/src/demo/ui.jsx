@@ -9,7 +9,10 @@ import {$time, currentRunTime, finishMovement, resetTraining} from './helpers';
 import {onClassifyFish} from './models/train';
 import colors from './colors';
 import aiBotClosed from '../../public/images/ai-bot/ai-bot-closed.png';
+import counterIcon from '../../public/images/data.png';
+import eraseButton from '../../public/images/erase.png';
 import arrowDownImage from '../../public/images/arrow-down.png';
+import snail from '../../public/images/seaCreatures/Snail.png';
 import Typist from 'react-typist';
 import {getCurrentGuide, dismissCurrentGuide} from './models/guide';
 import {playSound} from './models/soundLibrary';
@@ -18,7 +21,8 @@ import {
   faPlay,
   faPause,
   faBackward,
-  faForward
+  faForward,
+  faEraser
 } from '@fortawesome/free-solid-svg-icons';
 
 const styles = {
@@ -90,6 +94,62 @@ const styles = {
     marginRight: '6%',
     marginTop: '2%'
   },
+  confirmationDialogBackground: {
+    backgroundColor: colors.transparentBlack,
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    borderRadius: 10,
+    zPosition: 1
+  },
+  confirmationDialog: {
+    position: 'absolute',
+    backgroundColor: colors.white,
+    color: colors.darkGrey,
+    transform: 'translate(-50%, -50%)',
+    top: '50%',
+    bottom: 'initial',
+    left: '50%',
+    padding: 20
+  },
+  confirmationDialogLeft: {
+    float: 'left',
+    width: '30%'
+  },
+  confirmationDialogRight: {
+    float: 'right',
+    width: '70%'
+  },
+  confirmationHeader: {
+    fontSize: 40,
+    lineHeight: '40px',
+    color: colors.darkGrey,
+    padding: 10,
+    textAlign: 'center'
+  },
+  confirmationText: {
+    textAlign: 'center',
+    backgroundColor: colors.lightGrey,
+    padding: '15px',
+    borderRadius: '5px'
+  },
+  confirmationButtons: {
+    display: 'inline-flex',
+    justifyContent: 'space-between',
+    padding: '10px 0px',
+    width: '100%'
+  },
+  confirmationYesButton: {
+    marginLeft: 10,
+    backgroundColor: colors.red,
+    color: colors.white
+  },
+  confirmationNoButton: {
+    backgroundColor: colors.orange,
+    color: colors.white
+  },
   activityIntroText: {
     position: 'absolute',
     fontSize: 22,
@@ -118,6 +178,12 @@ const styles = {
     fontSize: 22,
     lineHeight: '26px',
     color: colors.white
+  },
+  eraseButton: {
+    position: 'absolute',
+    top: 24,
+    right: 22,
+    cursor: 'pointer'
   },
   trainQuestionText: {
     position: 'absolute',
@@ -159,6 +225,24 @@ const styles = {
     height: '40%',
     top: '28%',
     left: '76%'
+  },
+  counter: {
+    position: 'absolute',
+    display: 'flex',
+    justifyContent: 'space-between',
+    right: 53,
+    top: 24,
+    backgroundColor: colors.black,
+    opacity: '90%',
+    color: colors.neonBlue,
+    borderRadius: 33,
+    padding: 0,
+    width: '8%',
+    height: 25
+  },
+  counterNum: {
+    fontSize: 14,
+    margin: '4px 7px'
   },
   mediaControls: {
     position: 'absolute',
@@ -204,8 +288,8 @@ const styles = {
   },
   pondBot: {
     position: 'absolute',
-    height: '40%',
-    top: '23%',
+    height: '27%',
+    top: '59%',
     left: '50%',
     bottom: 0,
     transform: 'translateX(-45%)'
@@ -422,6 +506,52 @@ let Button = class Button extends React.Component {
 };
 Button = Radium(Button);
 
+let ConfirmationDialog = class ConfirmationDialog extends React.Component {
+  static propTypes = {
+    onYesClick: PropTypes.func,
+    onNoClick: PropTypes.func
+  };
+
+  render() {
+    return (
+      <div style={styles.confirmationDialogBackground}>
+        <div style={styles.confirmationDialog}>
+          <img src={snail} style={styles.confirmationDialogLeft} />
+          <div style={styles.confirmationDialogRight}>
+            <div
+              style={styles.confirmationHeader}
+              className="confirmation-text"
+            >
+              Are you sure?
+            </div>
+            <div style={styles.confirmationText}>
+              Erasing AI's data will permanently delete all training. Is that
+              what you want to do?
+            </div>
+          </div>
+          <div style={styles.confirmationButtons}>
+            <Button
+              onClick={this.props.onYesClick}
+              style={styles.confirmationYesButton}
+              className="dialog-button"
+            >
+              <FontAwesomeIcon icon={faEraser} /> Erase
+            </Button>
+            <Button
+              onClick={this.props.onNoClick}
+              style={styles.confirmationNoButton}
+              className="dialog-button"
+            >
+              Cancel
+            </Button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+};
+ConfirmationDialog = Radium(ConfirmationDialog);
+
 const wordSet = {
   short: {
     text: ['What type of fish do you want to train A.I. to detect?'],
@@ -527,10 +657,32 @@ let Train = class Train extends React.Component {
       state.appMode === AppMode.CreaturesVTrash ? 'Yes' : state.word;
     const noButtonText =
       state.appMode === AppMode.CreaturesVTrash ? 'No' : `Not ${state.word}`;
+    const resetTrainingFunction = () => {
+      resetTraining(state);
+      setState({showConfirmationDialog: false});
+    };
+
     return (
       <Body>
+        <img
+          src={eraseButton}
+          style={styles.eraseButton}
+          onClick={() => {
+            setState({
+              showConfirmationDialog: true,
+              confirmationDialogOnYes: resetTrainingFunction
+            });
+          }}
+        />
         <div style={styles.trainQuestionText}>{state.trainingQuestion}</div>
         <img style={styles.trainBot} src={aiBotClosed} />
+
+        <div style={styles.counter}>
+          <img src={counterIcon} />
+          <span style={styles.counterNum}>
+            {Math.min(999, state.yesCount + state.noCount)}
+          </span>
+        </div>
         <div style={styles.trainButtons}>
           <Button
             style={styles.trainButtonNo}
@@ -1036,6 +1188,7 @@ export default class UI extends React.Component {
   }
 
   render() {
+    const state = getState();
     const currentMode = getState().currentMode;
 
     return (
@@ -1044,6 +1197,12 @@ export default class UI extends React.Component {
         {currentMode === Modes.Training && <Train />}
         {currentMode === Modes.Predicting && <Predict />}
         {currentMode === Modes.Pond && <Pond />}
+        {state.showConfirmationDialog && (
+          <ConfirmationDialog
+            onYesClick={state.confirmationDialogOnYes}
+            onNoClick={() => setState({showConfirmationDialog: false})}
+          />
+        )}
       </div>
     );
   }

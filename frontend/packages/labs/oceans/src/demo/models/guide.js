@@ -1,5 +1,6 @@
 import {getState, setState} from '../state';
 import {AppMode, Modes} from '../constants';
+import {queryStrFor} from '../helpers';
 import crabImage from '../../../public/images/seaCreatures/Crab.png';
 import turtleImage from '../../../public/images/seaCreatures/Turtle.png';
 import seahorseImage from '../../../public/images/seaCreatures/Seahorse.png';
@@ -23,7 +24,7 @@ const guides = [
   {
     id: 'fishvtrash-training-init3',
     text: `A.I. is an artifical intelligence and does not know if an object is a fish or trash, but it can process different images and identify patterns.`,
-    when: {appMode: AppMode.FishVTrash, currentMode: Modes.Training},
+    when: {appMode: AppMode.FishVTrash, currentMode: Modes.Training}
   },
   {
     id: 'fishvtrash-training-init4',
@@ -55,7 +56,7 @@ const guides = [
       fn: state => {
         return state.yesCount + state.noCount >= 5;
       }
-    },
+    }
   },
   {
     id: 'fishvtrash-training-pause3',
@@ -80,7 +81,7 @@ const guides = [
       fn: state => {
         return state.yesCount + state.noCount >= 15;
       }
-    },
+    }
   },
   {
     id: 'fishvtrash-training-pause5',
@@ -91,17 +92,17 @@ const guides = [
       fn: state => {
         return state.yesCount + state.noCount >= 30;
       }
-    },
+    }
   },
   {
     id: 'fishvtrash-predicting-init',
     text: `Now let's see if A.I. knows what a "fish" looks like.`,
-    when: {appMode: AppMode.FishVTrash, currentMode: Modes.Predicting},
+    when: {appMode: AppMode.FishVTrash, currentMode: Modes.Predicting}
   },
   {
     id: 'fishvtrash-predicting-init2',
     text: `A.I. will analyze 100 random objects and label each one based on your training.`,
-    when: {appMode: AppMode.FishVTrash, currentMode: Modes.Predicting},
+    when: {appMode: AppMode.FishVTrash, currentMode: Modes.Predicting}
   },
   {
     id: 'fishvtrash-predicting-init3',
@@ -124,16 +125,16 @@ const guides = [
       fn: state => {
         return state.fishData && state.totalPondFish !== null;
       }
-    },
+    }
   },
-//TODO: placeholder for when we add the See More button
-//  {
-//    id: 'fishvtrash-pond-init2',
-//    text: `To see all the objects that A.I. analyzed click See More.`,
-//    when: {appMode: AppMode.FishVTrash, currentMode: Modes.Pond},
-//    style: 'TopLeft',
-//    arrow: 'none'
-//  },
+  //TODO: placeholder for when we add the See More button
+  //  {
+  //    id: 'fishvtrash-pond-init2',
+  //    text: `To see all the objects that A.I. analyzed click See More.`,
+  //    when: {appMode: AppMode.FishVTrash, currentMode: Modes.Pond},
+  //    style: 'TopLeft',
+  //    arrow: 'none'
+  //  },
   {
     id: 'fishvtrash-pond-init3',
     text: `You can train A.I. more...`,
@@ -149,7 +150,7 @@ const guides = [
   {
     id: 'creaturesvtrash-predicting-init',
     text: `So far we trained A.I. to identify objects as either "Fish" or "Not Fish".`,
-    when: {appMode: AppMode.CreaturesVTrashDemo, currentMode: Modes.Predicting},
+    when: {appMode: AppMode.CreaturesVTrashDemo, currentMode: Modes.Predicting}
   },
   {
     id: 'creaturesvtrash-predicting-init2',
@@ -177,7 +178,7 @@ const guides = [
       appMode: AppMode.CreaturesVTrashDemo,
       currentMode: Modes.Predicting,
       isPaused: true
-    },
+    }
   },
   {
     id: 'creaturesvtrashdemo-predicting-pause2',
@@ -186,7 +187,7 @@ const guides = [
       appMode: AppMode.CreaturesVTrashDemo,
       currentMode: Modes.Predicting,
       isPaused: true
-    },
+    }
   },
   {
     id: 'creaturesvtrash-predicting-pause3',
@@ -195,7 +196,7 @@ const guides = [
       appMode: AppMode.CreaturesVTrashDemo,
       currentMode: Modes.Predicting,
       isPaused: true
-    },
+    }
   },
   {
     id: 'creaturesvtrash-predicting-pause4',
@@ -203,7 +204,7 @@ const guides = [
     when: {
       appMode: AppMode.CreaturesVTrashDemo,
       currentMode: Modes.Predicting,
-      isPaused: true,
+      isPaused: true
     },
     noDimBackground: true,
     arrow: 'LowerRight'
@@ -211,7 +212,7 @@ const guides = [
   {
     id: 'creaturesvtrash-training-init',
     text: `Now let’s teach A.I. to learn which objects should be in the water.`,
-    when: {appMode: AppMode.CreaturesVTrash, currentMode: Modes.Training},
+    when: {appMode: AppMode.CreaturesVTrash, currentMode: Modes.Training}
   },
   {
     id: 'creaturesvtrash-training-init2',
@@ -236,7 +237,7 @@ const guides = [
       fn: state => {
         return state.yesCount + state.noCount >= 5;
       }
-    },
+    }
   },
   {
     id: 'creaturesvtrash-training-init4',
@@ -261,7 +262,7 @@ const guides = [
       fn: state => {
         return state.yesCount + state.noCount >= 15;
       }
-    },
+    }
   },
   {
     id: 'creaturesvtrash-training-init6',
@@ -272,12 +273,12 @@ const guides = [
       fn: state => {
         return state.yesCount + state.noCount >= 30;
       }
-    },
+    }
   },
   {
     id: 'creaturesvtrash-predicting-init',
     text: `Do you think A.I. will now do a better job identifying what should be in the water?  Let's watch.`,
-    when: {appMode: AppMode.CreaturesVTrash, currentMode: Modes.Predicting},
+    when: {appMode: AppMode.CreaturesVTrash, currentMode: Modes.Predicting}
   },
   {
     id: 'creaturesvtrash-pond-init',
@@ -292,43 +293,46 @@ const guides = [
       fn: state => {
         return state.fishData && state.totalPondFish !== null;
       }
-    },
+    }
   },
   {
     id: 'fishshort-words-init',
     text: 'AI and machine learning can be used to teach a computer new things.',
-    when: {appMode: AppMode.FishShort, currentMode: Modes.Words},
+    when: {appMode: AppMode.FishShort, currentMode: Modes.Words}
   },
   {
     id: 'fishshort-words-init2',
     text: 'What else can we program a computer to learn?',
-    when: {appMode: AppMode.FishShort, currentMode: Modes.Words},
+    when: {appMode: AppMode.FishShort, currentMode: Modes.Words}
   },
   {
     id: 'fishshort-words-init3',
-    text: "Next, let's teach A.I. a new word by showing it examples of that type of fish.",
-    when: {appMode: AppMode.FishShort, currentMode: Modes.Words},
+    text:
+      "Next, let's teach A.I. a new word by showing it examples of that type of fish.",
+    when: {appMode: AppMode.FishShort, currentMode: Modes.Words}
   },
   {
     id: 'fishshort-predicting-init',
     textFn: state => {
       return `Nice work! Your training data programmed A.I. to recognize '${state.word.toLowerCase()}' fish.`;
     },
-    when: {appMode: AppMode.FishShort, currentMode: Modes.Predicting},
+    when: {appMode: AppMode.FishShort, currentMode: Modes.Predicting}
   },
   {
     id: 'fishshort-predicting-init2',
     textFn: state => {
       return `Let’s see A.I. identify '${state.word.toLowerCase()}' fish.`;
     },
-    when: {appMode: AppMode.FishShort, currentMode: Modes.Predicting},
+    when: {appMode: AppMode.FishShort, currentMode: Modes.Predicting}
   },
   {
     id: 'fishshort-pond-init',
     textFn: state => {
       return `Out of ${state.fishData.length} random fish, A.I. identified ${
         state.totalPondFish
-      } that ${state.fishData.length === 1 ? 'is' : 'are'} '${state.word.toLowerCase()}'.`;
+      } that ${
+        state.fishData.length === 1 ? 'is' : 'are'
+      } '${state.word.toLowerCase()}'.`;
     },
     when: {
       appMode: AppMode.FishShort,
@@ -336,38 +340,41 @@ const guides = [
       fn: state => {
         return state.fishData && state.totalPondFish !== null;
       }
-    },
+    }
   },
   {
     id: 'fishshort-pond-init2',
     text: 'How did A.I do?',
-    when: {appMode: AppMode.FishShort, currentMode: Modes.Pond},
+    when: {appMode: AppMode.FishShort, currentMode: Modes.Pond}
   },
   {
     id: 'fishlong-words-init',
-    text: 'What if the words are more subjective? Can A.I. still learn the word?',
-    when: {appMode: AppMode.FishLong, currentMode: Modes.Words},
+    text:
+      'What if the words are more subjective? Can A.I. still learn the word?',
+    when: {appMode: AppMode.FishLong, currentMode: Modes.Words}
   },
   {
     id: 'fishlong-predicting-init',
     textFn: state => {
       return `Nice work! Your training data programmed A.I. to recognize '${state.word.toLowerCase()}' fish.`;
     },
-    when: {appMode: AppMode.FishLong, currentMode: Modes.Predicting},
+    when: {appMode: AppMode.FishLong, currentMode: Modes.Predicting}
   },
   {
     id: 'fishlong-predicting-init2',
     textFn: state => {
       return `Let’s see A.I. identify '${state.word.toLowerCase()}' fish.`;
     },
-    when: {appMode: AppMode.FishLong, currentMode: Modes.Predicting},
+    when: {appMode: AppMode.FishLong, currentMode: Modes.Predicting}
   },
   {
     id: 'fishlong-pond-init',
     textFn: state => {
       return `Out of ${state.fishData.length} random fish, A.I. identified ${
         state.totalPondFish
-      } that ${state.fishData.length === 1 ? 'is' : 'are'} '${state.word.toLowerCase()}'.`;
+      } that ${
+        state.fishData.length === 1 ? 'is' : 'are'
+      } '${state.word.toLowerCase()}'.`;
     },
     when: {
       appMode: AppMode.FishLong,
@@ -375,12 +382,12 @@ const guides = [
       fn: state => {
         return state.fishData && state.totalPondFish !== null;
       }
-    },
+    }
   },
   {
     id: 'fishlong-pond-init2',
     text: 'How did A.I do?',
-    when: {appMode: AppMode.FishLong, currentMode: Modes.Pond},
+    when: {appMode: AppMode.FishLong, currentMode: Modes.Pond}
   },
   {
     id: 'fishlong-pond-init3',
@@ -397,6 +404,10 @@ const guides = [
 ];
 
 export function getCurrentGuide() {
+  if (queryStrFor('guide') === 'off') {
+    return null;
+  }
+
   const state = getState();
 
   for (const guide of guides) {
