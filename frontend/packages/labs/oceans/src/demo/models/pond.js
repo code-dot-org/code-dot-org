@@ -72,7 +72,7 @@ const formatArrangement = () => {
     });
   });
 
-  // Flatten nested intermediateArr into a 1-dimensional array.
+  // Flatten nested intermediateArr into a 1-dimensional array of x-y coordinates.
   let formattedArrangement = [];
   intermediateArr.forEach(a => {
     formattedArrangement = formattedArrangement.concat(_.shuffle(a));
