@@ -713,6 +713,8 @@ Predict = Radium(Predict);
 class Pond extends React.Component {
   constructor(props) {
     super(props);
+    this.summary = null;
+    this.fishSummary = null;
   }
 
   onPondClick(e) {
@@ -767,6 +769,17 @@ class Pond extends React.Component {
           });
           fishClicked = true;
           playSound('yes');
+
+          if (
+            state.appMode === AppMode.FishShort ||
+            state.appMode === AppMode.FishLong
+          ) {
+            const clickedFish = state.pondFish.find(
+              f => f.id === fishBound.fishId
+            );
+            this.fishSummary = state.trainer.explainFish(clickedFish);
+            console.log(this.fishSummary);
+          }
         }
       });
 
@@ -779,7 +792,16 @@ class Pond extends React.Component {
 
   onBotClick() {
     const state = getState();
-    setState({pondPanelShowing: !state.pondPanelShowing});
+    if (
+      state.appMode === AppMode.FishShort ||
+      state.appMode === AppMode.FishLong
+    ) {
+      setState({pondPanelShowing: !state.pondPanelShowing});
+
+      const firstFishFieldInfos = state.pondFish[0].fieldInfos;
+      this.summary = state.trainer.summarize(firstFishFieldInfos);
+      console.log(this.summary);
+    }
   }
 
   render() {
@@ -790,28 +812,73 @@ class Pond extends React.Component {
         <img
           style={styles.pondBot}
           src={aiBotClosed}
-          onClick={this.onBotClick}
+          onClick={e => this.onBotClick(e)}
         />
-        {state.pondPanelShowing && (
+        {state.pondPanelShowing && state.pondClickedFish && (
           <div style={styles.pondPanel}>
-            <div>
-              Most important features:
-            </div>
-            <div>
-              Dorsal
-            </div>
-            <div style={{height: '2%', width: '23%', backgroundColor: 'green'}}>
-              &nbsp;
-            </div>
-            <div>
-              Body color
-            </div>
-            <div style={{height: '2%', width: '47%', backgroundColor: 'green'}}>
-              &nbsp;
-            </div>
-            {state.pondClickedFish && (
+            {this.fishSummary && (
               <div>
-                The current fish is very confident!
+                {this.fishSummary.slice(0, 4).map((f, i) => (
+                  <div key={i} style={{height: '10%', width: '100%'}}>
+                    {f.impact > 0 && (
+                      <div style={{lineHeight: '30px'}}>
+                        &nbsp;
+                        <div
+                          style={{
+                            position: 'absolute',
+                            left: '50%',
+                            width:
+                              ((Math.abs(f.impact) /
+                                state.pondFishMaxExplainValue) *
+                                100) /
+                                2 +
+                              '%',
+                            backgroundColor: 'green'
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          style={{
+                            position: 'absolute',
+                            left: '50%'
+                          }}
+                        >
+                          {f.partType}
+                        </div>
+                      </div>
+                    )}
+                    {f.impact < 0 && (
+                      <div style={{lineHeight: '30px'}}>
+                        &nbsp;
+                        <div
+                          style={{
+                            position: 'absolute',
+                            right: '50%',
+                            width:
+                              ((Math.abs(f.impact) /
+                                state.pondFishMaxExplainValue) *
+                                100) /
+                                2 +
+                              '%',
+                            backgroundColor: 'red'
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          style={{
+                            position: 'absolute',
+                            width: '50%',
+                            textAlign: 'right'
+                          }}
+                        >
+                          {f.partType}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                ))}
               </div>
             )}
           </div>
@@ -919,8 +986,10 @@ class Guide extends React.Component {
                   )}
                   <div style={styles.guideTypingText}>
                     <Typist
-                      avgTypingDelay={35}
-                      stdTypingDelay={15}
+                      avgTypingDelay={0}
+                      stdTypingDelay={0}
+                      //avgTypingDelay={35}
+                      //stdTypingDelay={15}
                       cursor={{show: false}}
                       onTypingDone={this.onShowing}
                     >

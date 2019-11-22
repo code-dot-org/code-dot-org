@@ -1,7 +1,7 @@
 import 'idempotent-babel-polyfill';
 import _ from 'lodash';
 import {setState, getState} from '../state';
-import constants, {ClassType} from '../constants';
+import constants, {ClassType, AppMode} from '../constants';
 import {randomInt} from '../helpers';
 
 export const init = async () => {
@@ -12,6 +12,12 @@ export const init = async () => {
   const pondFishWithConfidence = fishWithConfidence.splice(0, 20);
   arrangeFish(pondFishWithConfidence);
   setState({pondFish: pondFishWithConfidence});
+  if (
+    state.appMode === AppMode.FishShort ||
+    state.appMode === AppMode.FishLong
+  ) {
+    setState({pondFishMaxExplainValue: getMaxExplainValue()});
+  }
 };
 
 const predictAllFish = state => {
@@ -52,4 +58,24 @@ const arrangeFish = fishes => {
     );
     fish.setXY({x, y});
   });
+};
+
+// For the fish in the pond, find the maximum explain value.  This will allow
+// us to show charts normalized to the highest value.
+const getMaxExplainValue = () => {
+  const state = getState();
+
+  let maxValue = 0;
+
+  state.pondFish.forEach(fish => {
+    const summary = state.trainer.summarize(fish.fieldInfos);
+    if (summary.length > 0) {
+      const value = Math.abs(summary[0].importance);
+      if (value > maxValue) {
+        maxValue = value;
+      }
+    }
+  });
+
+  return maxValue;
 };
