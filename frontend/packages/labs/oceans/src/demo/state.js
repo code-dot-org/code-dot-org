@@ -5,6 +5,8 @@ const initialState = {
   currentMode: null,
   fishData: [],
   pondFish: [],
+  recallFish: [],
+  showRecallFish: false,
   totalPondFish: null,
   backgroundCanvas: null,
   canvas: null,
