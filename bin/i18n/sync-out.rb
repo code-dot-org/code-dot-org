@@ -34,9 +34,12 @@ def rename_from_crowdin_name_to_locale
   # Move directories like `i18n/locales/Italian` to `i18n/locales/it-it` for
   # all languages in our system
   Languages.get_crowdin_name_and_locale.each do |prop|
-    if File.directory?("i18n/locales/#{prop[:crowdin_name_s]}/")
-      FileUtils.mv "i18n/locales/#{prop[:crowdin_name_s]}/.", "i18n/locales/#{prop[:locale_s]}"
-    end
+    next unless File.directory?("i18n/locales/#{prop[:crowdin_name_s]}/")
+
+    # copy and remove rather than moving so we can easily and recursively deal
+    # with existing files
+    FileUtils.cp_r "i18n/locales/#{prop[:crowdin_name_s]}/.", "i18n/locales/#{prop[:locale_s]}"
+    FileUtils.rm_r "i18n/locales/#{prop[:crowdin_name_s]}"
   end
 
   # Now, any remaining directories named after the language name (rather than
