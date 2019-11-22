@@ -1,11 +1,9 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import {expect} from '../../../util/reconfiguredChai';
-import {enforceDocumentBodyCleanup} from '../../../util/testUtils';
+import {expect} from '../../../../util/reconfiguredChai';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import GoogleChart from '@cdo/apps/applab/GoogleChart';
-import {UnconnectedDataVisualizer as DataVisualizer} from '@cdo/apps/storage/dataBrowser/DataVisualizer';
+import {UnconnectedVisualizerModal as VisualizerModal} from '@cdo/apps/storage/dataBrowser/dataVisualizer/VisualizerModal';
 
 const DEFAULT_PROPS = {
   tableColumns: [],
@@ -13,123 +11,24 @@ const DEFAULT_PROPS = {
   tableRecords: []
 };
 
-describe('DataVisualizer', () => {
+describe('VisualizerModal', () => {
   it('The modal starts closed', () => {
-    let wrapper = shallow(<DataVisualizer {...DEFAULT_PROPS} />);
+    let wrapper = shallow(<VisualizerModal {...DEFAULT_PROPS} />);
     expect(wrapper.find(BaseDialog).prop('isOpen')).to.be.false;
   });
 
   it('The modal opens when the button is clicked', () => {
-    let wrapper = shallow(<DataVisualizer {...DEFAULT_PROPS} />);
+    let wrapper = shallow(<VisualizerModal {...DEFAULT_PROPS} />);
     expect(wrapper.find(BaseDialog).prop('isOpen')).to.be.false;
 
     wrapper.instance().handleOpen();
     expect(wrapper.find(BaseDialog).prop('isOpen')).to.be.true;
   });
 
-  describe('updateChart', () => {
-    enforceDocumentBodyCleanup({checkEveryTest: false}, () => {
-      let wrapper;
-      let spy;
-      let chartArea;
-      beforeEach(() => {
-        GoogleChart.lib = {};
-        spy = sinon.stub(GoogleChart.prototype, 'drawChart');
-        const STARTING_PROPS = {
-          tableColumns: ['category1', 'category2'],
-          tableName: 'testTable',
-          tableRecords: [
-            '{"category1" : "red", "category2": 1}',
-            '{"category1" : "blue", "category2": 1}',
-            '{"category1" : "red", "category2": 3}',
-            '{"category1" : "green", "category2": 4}'
-          ]
-        };
-        wrapper = shallow(<DataVisualizer {...STARTING_PROPS} />);
-        wrapper.instance().handleOpen();
-        chartArea = document.createElement('div');
-        chartArea.setAttribute('id', 'chart-area');
-        document.body.appendChild(chartArea);
-      });
-
-      afterEach(() => {
-        document.body.removeChild(chartArea);
-        spy.restore();
-      });
-
-      it('can show a scatter plot', () => {
-        wrapper.setProps({
-          tableRecords: [
-            '{"category1": "red", "category2": 1, "category3": 10}',
-            '{"category1": "blue", "category2": 1, "category3": 20}',
-            '{"category1": "red", "category2": 3, "category3": 10}',
-            '{"category1": "green", "category2": 4, "category3": 10}'
-          ],
-          tableColumns: ['category1', 'category2', 'category3']
-        });
-        const expectedChartData = [
-          {category1: 'red', category2: 1, category3: 10},
-          {category1: 'blue', category2: 1, category3: 20},
-          {category1: 'red', category2: 3, category3: 10},
-          {category1: 'green', category2: 4, category3: 10}
-        ];
-        wrapper.instance().setState({
-          chartType: 'Scatter Plot',
-          xValues: 'category2',
-          yValues: 'category3'
-        });
-        expect(spy).to.have.been.calledOnce;
-        expect(spy.getCalls()[0].args).to.deep.equal([
-          expectedChartData,
-          ['category2', 'category3'],
-          {}
-        ]);
-      });
-
-      it('can show a bar chart', () => {
-        wrapper
-          .instance()
-          .setState({chartType: 'Bar Chart', values: 'category1'});
-        const expectedChartData = [
-          {category1: 'red', count: 2},
-          {category1: 'blue', count: 1},
-          {category1: 'green', count: 1}
-        ];
-        expect(spy).to.have.been.calledOnce;
-        expect(spy.getCalls()[0].args).to.deep.equal([
-          expectedChartData,
-          ['category1', 'count'],
-          {}
-        ]);
-      });
-
-      it('can show a histogram', () => {
-        wrapper.instance().setState({
-          chartType: 'Histogram',
-          values: 'category2',
-          bucketSize: 2
-        });
-
-        const expectedChartData = [
-          {category1: 'red', category2: 1},
-          {category1: 'blue', category2: 1},
-          {category1: 'red', category2: 3},
-          {category1: 'green', category2: 4}
-        ];
-        expect(spy).to.have.been.calledOnce;
-        expect(spy.getCalls()[0].args).to.deep.equal([
-          expectedChartData,
-          ['category2'],
-          {histogram: {bucketSize: 2}}
-        ]);
-      });
-    });
-  });
-
   describe('parseRecords', () => {
     let wrapper;
     beforeEach(() => {
-      wrapper = shallow(<DataVisualizer {...DEFAULT_PROPS} />);
+      wrapper = shallow(<VisualizerModal {...DEFAULT_PROPS} />);
       sinon.spy(wrapper.instance(), 'parseRecords');
     });
 
@@ -201,7 +100,7 @@ describe('DataVisualizer', () => {
   describe('findNumericColumns', () => {
     let wrapper;
     beforeEach(() => {
-      wrapper = shallow(<DataVisualizer {...DEFAULT_PROPS} />);
+      wrapper = shallow(<VisualizerModal {...DEFAULT_PROPS} />);
       wrapper.instance().handleOpen();
     });
 

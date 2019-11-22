@@ -8,7 +8,7 @@ class GoogleChartWrapper extends React.Component {
   static propTypes = {
     parsedRecords: PropTypes.array,
     numericColumns: PropTypes.arrayOf(PropTypes.string),
-    bucketSize: PropTypes.number,
+    bucketSize: PropTypes.string,
     chartType: PropTypes.string.isRequired,
     chartTitle: PropTypes.string,
     column1: PropTypes.string,
