@@ -13,6 +13,8 @@ import aiBotClosed from '../../public/images/ai-bot/ai-bot-closed.png';
 import counterIcon from '../../public/images/data.png';
 import eraseButton from '../../public/images/erase.png';
 import arrowDownImage from '../../public/images/arrow-down.png';
+import banIcon from '../../public/images/ban-icon.png';
+import checkmarkIcon from '../../public/images/checkmark-icon.png';
 import snail from '../../public/images/seaCreatures/Snail.png';
 import Typist from 'react-typist';
 import {getCurrentGuide, dismissCurrentGuide} from './models/guide';
@@ -295,6 +297,25 @@ const styles = {
     bottom: 0,
     transform: 'translateX(-45%)',
     pointerEvents: 'none'
+  },
+  recallButton: {
+    position: 'absolute',
+    top: '4%',
+    left: '2.25%',
+    minWidth: 175,
+    ':focus': {
+      outline: 'none'
+    }
+  },
+  recallContainer: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between'
+  },
+  recallIcon: {
+    width: 24,
+    height: 24,
+    marginRight: 10
   },
   pill: {
     display: 'flex',
@@ -941,7 +962,20 @@ class Pond extends React.Component {
 
     return (
       <Body onClick={this.onPondClick}>
-        <Button onClick={this.toggleRecall}>Recall</Button>
+        <Button onClick={this.toggleRecall} style={styles.recallButton}>
+          {state.showRecallFish && (
+            <span style={styles.recallContainer}>
+              <img src={banIcon} style={styles.recallIcon} />
+              <span>{`Not ${state.word}`}</span>
+            </span>
+          )}
+          {!state.showRecallFish && (
+            <span style={styles.recallContainer}>
+              <img src={checkmarkIcon} style={styles.recallIcon} />
+              <span>{state.word}</span>
+            </span>
+          )}
+        </Button>
         <img style={styles.pondBot} src={aiBotClosed} />
         {state.canSkipPond && (
           <div>
