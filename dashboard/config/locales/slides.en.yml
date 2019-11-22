@@ -2582,10 +2582,10 @@ en:
         text: "Here we’re going to program a dancer to perform a move when you press the arrow buttons on the screen, or the keys on your keyboard."
       6:
         image: 'notes/hoc_dance_events_2019_6.png'
-        text: "We can use the \"when up arrow\"" event block and connect a \"do once\"" block to it. When someone press the up arrow key, the code attached to the \"when up arrow\" block is run. Which dance move will you choose?"
+        text: "We can use the \"when up arrow\" event block and connect a \"do once\" block to it. When someone press the up arrow key, the code attached to the \"when up arrow\" block is run. Which dance move will you choose?"
       7:
         image: 'notes/hoc_dance_events_2019_7.png'
-        text: "Make sure the type of dancer you choose matches one of the dancers you created inside the \“setup\” block, or you might not see anything happen."
+        text: "Make sure the type of dancer you choose matches one of the dancers you created inside the \"setup\" block, or you might not see anything happen."
       8:
         image: 'notes/hoc_dance_events_2019_8.png'
         text: "Eventually, you can create more events like this to make your dancers perform different moves with each key. Give it a try, and with a few lines of code you can make your own interactive dance."
@@ -2635,12 +2635,12 @@ en:
         text: "Not only can you change your dancer's moves, you can also change a dancer's properties. Properties describe things like the dancer's position on the screen, the dancer's size, and the dancer's color."
       7:
         image: 'notes/hoc_dance_properties_2019_7.png'
-        text: "To change the properties of a dancer you'll use a set block.  Let’s use a set block to make our dancers look smaller. First, drag the set block into your program.
+        text: "To change the properties of a dancer you'll use a set block.  Let’s use a set block to make our dancers look smaller. First, drag the set block into your program."
       8:
         image: 'notes/hoc_dance_properties_2019_8.png'
         text: "Then, select a dancer you’d like to change, and type in the size they will appear on screen. Full size is 100. If you choose a lower number, that will make the dancer smaller. The smaller the dancer is, the further away it looks."
       9:
-        image: notes/hoc_dance_properties_2019_9.png'
+        image: 'notes/hoc_dance_properties_2019_9.png'
         text: "Using the set block, you can also change a dancer's dimensions, rotation, position and color. By playing around with these properties you can make all kinds of changes and link them to different parts of the song."
       10:
         image: 'notes/hoc_dance_properties_2019_10.png'
