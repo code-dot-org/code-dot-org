@@ -143,92 +143,104 @@ def main
   raise "contained_level_answers too big: #{contained_levels_answers.size} rows exceeds limit of 100000" if contained_level_answers.size > 100_000
   raise "level_sources too big: #{level_sources_multi_types.size} rows exceeds limit of 100000" if level_sources_multi_types.size > 100_000
 
-  # Truncate the existing tables.
-  %w(
-    contained_levels
-    contained_level_answers
-    level_sources_multi_types
-  ).each do |table_name|
-    ActiveRecord::Base.connection.execute(
-      "TRUNCATE #{table_name}"
-    )
-  end
+  # Maximum rows to insert per query
+  batch_size = 2000
 
   # Write the data to the DB tables.
   ActiveRecord::Base.transaction do
-    contained_levels.each do |contained_level_row|
-      ActiveRecord::Base.connection.execute(
-        <<SQL
-          INSERT INTO contained_levels (
-            created_at,
-            updated_at,
-            level_group_level_id,
-            contained_level_id,
-            contained_level_type,
-            contained_level_page,
-            contained_level_position,
-            contained_level_text
-          )
-          VALUES (
-            "#{TIME_NOW}",
-            "#{TIME_NOW}",
-            #{contained_level_row[:level_id]},
-            #{contained_level_row[:contained_level_id]},
-            "#{contained_level_row[:contained_level_type]}",
-            #{contained_level_row[:contained_level_page]},
-            #{contained_level_row[:contained_level_position]},
-            "#{contained_level_row[:contained_level_text]}"
-          )
-SQL
-      )
+    ActiveRecord::Base.connection.execute 'TRUNCATE contained_levels'
+    contained_levels.each_slice(batch_size) do |batch|
+      ActiveRecord::Base.connection.execute <<~SQL
+        INSERT INTO contained_levels (
+          created_at,
+          updated_at,
+          level_group_level_id,
+          contained_level_id,
+          contained_level_type,
+          contained_level_page,
+          contained_level_position,
+          contained_level_text
+        )
+        VALUES
+        #{batch.map {|row| contained_levels_row(row)}.join(",\n")}
+      SQL
     end
   end
+
   ActiveRecord::Base.transaction do
-    contained_level_answers.each do |contained_level_answer_row|
-      ActiveRecord::Base.connection.execute(
-        <<SQL
-          INSERT INTO contained_level_answers (
-            created_at,
-            updated_at,
-            level_id,
-            answer_number,
-            answer_text,
-            correct
-          )
-          VALUES (
-            "#{TIME_NOW}",
-            "#{TIME_NOW}",
-            #{contained_level_answer_row[:contained_level_id]},
-            #{contained_level_answer_row[:answer_number]},
-            "#{contained_level_answer_row[:answer_text]}",
-            #{contained_level_answer_row[:correct]}
-          )
-SQL
-      )
+    ActiveRecord::Base.connection.execute 'TRUNCATE contained_level_answers'
+    contained_level_answers.each_slice(batch_size) do |batch|
+      ActiveRecord::Base.connection.execute <<~SQL
+        INSERT INTO contained_level_answers (
+          created_at,
+          updated_at,
+          level_id,
+          answer_number,
+          answer_text,
+          correct
+        )
+        VALUES
+        #{batch.map {|row| contained_level_answers_row(row)}.join(",\n")}
+      SQL
     end
   end
+
   ActiveRecord::Base.transaction do
-    level_sources_multi_types.each do |level_sources_multi_types_row|
-      ActiveRecord::Base.connection.execute(
-        <<SQL
-          INSERT INTO level_sources_multi_types (
-            level_source_id,
-            level_id,
-            data,
-            md5,
-            hidden
-          )
-          VALUES (
-            #{level_sources_multi_types_row[:level_source_id]},
-            #{level_sources_multi_types_row[:level_id]},
-            "#{level_sources_multi_types_row[:data]}",
-            "#{level_sources_multi_types_row[:md5]}",
-            #{level_sources_multi_types_row[:hidden]}
-          )
-SQL
-      )
+    ActiveRecord::Base.connection.execute 'TRUNCATE level_sources_multi_types'
+    level_sources_multi_types.each_slice(batch_size) do |batch|
+      ActiveRecord::Base.connection.execute <<~SQL
+        INSERT INTO level_sources_multi_types (
+          level_source_id,
+          level_id,
+          data,
+          md5,
+          hidden
+        )
+        VALUES
+        #{batch.map {|row| level_sources_multi_types_row(row)}.join(",\n")}
+      SQL
     end
   end
+end
+
+def contained_levels_row(row_hash)
+  <<~ROW
+    (
+      "#{TIME_NOW}",
+      "#{TIME_NOW}",
+      #{row_hash[:level_id]},
+      #{row_hash[:contained_level_id]},
+      "#{row_hash[:contained_level_type]}",
+      #{row_hash[:contained_level_page]},
+      #{row_hash[:contained_level_position]},
+      "#{row_hash[:contained_level_text]}"
+    )
+  ROW
+end
+
+def contained_level_answers_row(row_hash)
+  <<~ROW
+    (
+      "#{TIME_NOW}",
+      "#{TIME_NOW}",
+      #{row_hash[:contained_level_id]},
+      #{row_hash[:answer_number]},
+      "#{row_hash[:answer_text]}",
+      #{row_hash[:correct]}
+    )
+  ROW
+end
+
+def level_sources_multi_types_row(row_hash)
+  <<~ROW
+    (
+      #{row_hash[:level_source_id]},
+      #{row_hash[:level_id]},
+      "#{row_hash[:data]}",
+      "#{row_hash[:md5]}",
+      #{row_hash[:hidden]}
+    )
+  ROW
 end
 
 main if only_one_running?(__FILE__)
