@@ -2635,7 +2635,7 @@ en:
         text: "Not only can you change your dancer's moves, you can also change a dancer's properties. Properties describe things like the dancer's position on the screen, the dancer's size, and the dancer's color."
       7:
         image: 'notes/hoc_dance_properties_2019_7.png'
-        text: "To change the properties of a dancer you'll use a set block.  Let’s use a set block to make our dancers look smaller. First, drag the set block into your program."
+        text: "To change the properties of a dancer you'll use a set block.  Let's use a set block to make our dancers look smaller. First, drag the set block into your program."
       8:
         image: 'notes/hoc_dance_properties_2019_8.png'
         text: "Then, select a dancer you’d like to change, and type in the size they will appear on screen. Full size is 100. If you choose a lower number, that will make the dancer smaller. The smaller the dancer is, the further away it looks."
