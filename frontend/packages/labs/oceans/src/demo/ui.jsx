@@ -13,8 +13,6 @@ import aiBotClosed from '../../public/images/ai-bot/ai-bot-closed.png';
 import counterIcon from '../../public/images/data.png';
 import eraseButton from '../../public/images/erase.png';
 import arrowDownImage from '../../public/images/arrow-down.png';
-import banIcon from '../../public/images/ban-icon.png';
-import checkmarkIcon from '../../public/images/checkmark-icon.png';
 import snail from '../../public/images/seaCreatures/Snail.png';
 import Typist from 'react-typist';
 import {getCurrentGuide, dismissCurrentGuide} from './models/guide';
@@ -25,7 +23,9 @@ import {
   faPause,
   faBackward,
   faForward,
-  faEraser
+  faEraser,
+  faCheck,
+  faBan
 } from '@fortawesome/free-solid-svg-icons';
 
 const styles = {
@@ -309,14 +309,28 @@ const styles = {
     }
   },
   recallContainer: {
+    position: 'absolute',
+    top: '4%',
+    right: '2.25%',
+    color: colors.white,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between'
   },
   recallIcon: {
-    width: 24,
-    height: 24,
-    marginRight: 10
+    width: 30,
+    height: 30,
+    border: `5px solid ${colors.white}`,
+    borderRadius: 50,
+    padding: 6,
+    marginLeft: 8,
+    backgroundColor: colors.lightGrey
+  },
+  bgRed: {
+    backgroundColor: colors.red
+  },
+  bgGreen: {
+    backgroundColor: colors.green
   },
   pill: {
     display: 'flex',
@@ -878,7 +892,7 @@ let Predict = class Predict extends React.Component {
 };
 Predict = Radium(Predict);
 
-class Pond extends React.Component {
+let Pond = class Pond extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -963,20 +977,25 @@ class Pond extends React.Component {
 
     return (
       <Body onClick={this.onPondClick}>
-        <Button onClick={this.toggleRecall} style={styles.recallButton}>
-          {state.showRecallFish && (
-            <span style={styles.recallContainer}>
-              <img src={banIcon} style={styles.recallIcon} />
-              <span>{`Not ${state.word}`}</span>
-            </span>
-          )}
-          {!state.showRecallFish && (
-            <span style={styles.recallContainer}>
-              <img src={checkmarkIcon} style={styles.recallIcon} />
-              <span>{state.word}</span>
-            </span>
-          )}
-        </Button>
+        <div style={styles.recallContainer}>
+          Show
+          <FontAwesomeIcon
+            icon={faCheck}
+            style={{
+              ...styles.recallIcon,
+              ...(!state.showRecallFish ? styles.bgGreen : {})
+            }}
+            onClick={this.toggleRecall}
+          />
+          <FontAwesomeIcon
+            icon={faBan}
+            style={{
+              ...styles.recallIcon,
+              ...(state.showRecallFish ? styles.bgRed : {})
+            }}
+            onClick={this.toggleRecall}
+          />
+        </div>
         <img style={styles.pondBot} src={aiBotClosed} />
         {state.canSkipPond && (
           <div>
@@ -1021,7 +1040,8 @@ class Pond extends React.Component {
       </Body>
     );
   }
-}
+};
+Pond = Radium(Pond);
 
 class Guide extends React.Component {
   onShowing() {
