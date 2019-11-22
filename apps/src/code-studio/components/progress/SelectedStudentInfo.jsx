@@ -167,14 +167,6 @@ export class SelectedStudentInfo extends React.Component {
               />
             </div>
           )}
-          {level.contained && (
-            <Button
-              text={i18n.clearResponse()}
-              color="blue"
-              onClick={this.onClearResponse}
-              disabled={level.status === LevelStatus.not_tried}
-            />
-          )}
         </div>
         <RadiumFontAwesome
           icon="caret-right"

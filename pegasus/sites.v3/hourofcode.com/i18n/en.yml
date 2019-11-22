@@ -22,6 +22,18 @@
   social_hoc2019_coming_dates: 'The Hour of Code is coming December 9-15, 2019. Computer science is foundational for every student to learn.'
   social_hoc2019_dance: 'Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, and 34 more!'
 
+  oceans_landing_title: 'AI for Oceans'
+  oceans_landing_description: 'Explore machine learning by teaching “A.I.” to recognize fish. #CSforGood'
+  oceans_landing_specs: 'English only | Ages 11+'
+  oceans_landing_teacher_resources: 'Teacher Resources'
+  oceans_landing_teacher_resources_desc: 'Lesson plans and activities to help you teach AI, machine learning, training data, and bias, while exploring ethical issues.'
+  oceans_landing_resource_button: 'View Resources'
+  oceans_landing_cs_for_good: 'CS For Good'
+  oceans_landing_cs_for_good_desc: 'Resources to help students understand the role computer science could play in creating a more equitable world.'
+
+  hoc_overview_oceans_tutorial_header: 'AI Oceans'
+  hoc_overview_oceans_tutorial_desc: "Teach \"A.I.\" to sort between fish and trash while exploring broader artificial intelligence concepts."
+
   codeorg_homepage_hoc2018_curriculum: 'Go further with <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org courses</a>'
   codeorg_homepage_hoc2018_dance_heading: 'Create your own <span class="highlight-word">Dance&nbsp;Party</span>'
   codeorg_homepage_hoc2018_header_line1: 'The Hour of Code is coming...'
@@ -5916,4 +5928,3 @@
   some: "Some"
   all: "All"
   dont_know: "I don't know"
-
