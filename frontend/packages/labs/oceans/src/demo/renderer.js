@@ -7,8 +7,10 @@ import {
   finishMovement,
   currentRunTime,
   randomInt,
+  filterFishComponents,
   $time
 } from './helpers';
+import {fishData} from '../utils/fishData';
 import colors from './colors';
 import {predictFish} from './models/predict';
 import {
@@ -501,13 +503,9 @@ const drawWordFishImages = () => {
   const canvas = getState().canvas;
   const ctx = canvas.getContext('2d');
 
-  const speed = randomInt(30000, 50000);
-  const fishBounds = [];
-
   const state = getState();
   state.wordFish.forEach(fish => {
-    const swayValue =
-      (($time() * 360) / (20 * 1000) ) % 360;
+    const swayValue = (($time() * 360) / (20 * 1000)) % 360;
     const swayMultipleX = 120;
     const swayOffsetX =
       Math.sin(((swayValue * Math.PI) / 180) * 2) * swayMultipleX;
@@ -517,41 +515,53 @@ const drawWordFishImages = () => {
     const xy = fish.getXY();
     if (!fish.startTime) {
       fish.startTime = t;
-      fish.speed = randomInt(9000, 10000);
+      fish.speed = randomInt(10000, 15000);
     }
-    const finalX = (constants.canvasWidth / fish.speed) * (t - fish.startTime) - constants.fishCanvasWidth;
-    if (finalX > 0.5 * constants.canvasWidth) {
+    let finalX;
+    if (fish.faceLeft) {
+      finalX =
+        constants.canvasWidth +
+        constants.fishCanvasWidth -
+        (constants.canvasWidth / fish.speed) * (t - fish.startTime);
+    } else {
+      finalX =
+        (constants.canvasWidth / fish.speed) * (t - fish.startTime) -
+        constants.fishCanvasWidth;
     }
-    //console.log(finalX);
     const finalY = xy.y + swayOffsetY;
     fish.setXY({x: finalX, y: finalY});
 
-    const fishBound = drawSingleFish(fish, finalX, finalY, ctx, 0.75);
-
-    // Record this screen location so that we can separately check for clicks on it.
-    fishBounds.push({
-      fishId: fish.id,
-      ...fishBound
-    });
-    setState({wordFishBounds: fishBounds}, {skipCallback: true});
+    drawSingleFish(fish, finalX, finalY, ctx, 0.75);
   });
   const lastFish = state.wordFish[state.wordFish.length - 1];
+  let wordFish = state.wordFish;
+  wordFish = wordFish.filter(
+    f =>
+      f.xy.x < (constants.canvasWidth + constants.fishCanvasWidth) * 1.1 &&
+      f.xy.x > -1.1 * constants.fishCanvasWidth
+  );
   if (
-    lastFish.xy.x > 0.9 * constants.canvasWidth ||
-    randomInt(0, constants.canvasWidth - lastFish.xy.x) === 1
+    state.wordFish.length <= 1 ||
+    (state.wordFish.length <= 10 &&
+      randomInt(0, state.wordFish.length * 500) <= 0)
   ) {
-    let wordFish = state.wordFish;
-    wordFish = wordFish.filter(
-      f => f.xy.x < ((constants.canvasWidth + constants.fishCanvasWidth) * 1.1)
-    );
-    const newFish = new FishOceanObject(state.fishCount);
+    const possibleFishComponents = filterFishComponents(
+    fishData,
+    state.appMode
+  );
+    const newFish = new FishOceanObject(state.fishCount,possibleFishComponents);
     newFish.randomize();
-    const y = constants.canvasHeight - constants.fishCanvasHeight - 20;
+    const lane = randomInt(
+      0,
+      constants.canvasHeight / (0.75 * constants.fishCanvasHeight - 1)
+    );
+    const y = lane * constants.fishCanvasHeight * 0.75;
     newFish.setXY({x: -constants.fishCanvasWidth * 1.5, y});
+    newFish.faceLeft = lane % 2 === 0 ? true : false;
     wordFish.push(newFish);
-    console.log(wordFish);
-    setState({wordFish, fishCount: state.fishCount + 1});
+    setState({fishCount: state.fishCount + 1});
   }
+  setState({wordFish});
 };
 
 // Draw the fish for pond mode.
