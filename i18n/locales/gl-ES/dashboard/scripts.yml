@@ -1521,7 +1521,7 @@ gl:
               name: Introdución
             Nested Loops:
               name: Bucles aniñados
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Computer Science Fundamentals:
               name: Fundamentos de Informática
@@ -1537,3 +1537,13 @@ gl:
               name: Variables
             For Loops:
               name: Bucles "Para" (For)
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Condicionais
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Colaboración Aberta
+            Conditionals with Cards:
+              name: Condicionais con cartas

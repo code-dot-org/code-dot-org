@@ -4538,6 +4538,8 @@ is:
               name: nýr áfangi
             Routers and Redundancy:
               name: Netbeinar og umfremd
+            The Need for Addressing:
+              name: Þörfin fyrir vistföng
         peru-2019:
           stages:
             new stage:
@@ -4550,7 +4552,7 @@ is:
           stages:
             Dance Party:
               name: Danspartý
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Getting Started:
               name: Fyrstu skrefin
@@ -4601,3 +4603,15 @@ is:
           stages:
             new stage:
               name: nýr áfangi
+        time4cs-control-unit-1:
+          stages:
+            Sequencing in Maze:
+              name: Röð aðgerða í Völundarhúsi
+            Conditionals:
+              name: Skilyrði
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Hópvistun
+            Conditionals with Cards:
+              name: Skilyrði með kortum

@@ -444,10 +444,49 @@ ko-KR:
       CourseE_HOC 2018 Level_9b: 산호초에 도달했습니다. 이제 **바다의 심장**![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)을
         찾을 시간이에요! 파란색과 빨간색 산호를 사용해서 보물 **상자**![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png)에
         도달하세요.
+      Dance_2019_01: |-
+        _댄스파티 합시다!_
+
+        <xml><block type="Dancelab_makeAnonymousDanceSprite" block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;, &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml> 블록을 작업 공간으로 드래그한 다음 <xml><block type="Dancelab_whenSetup2" next_connection_disabled="true" block-text="setup"></block></xml> 블록 내에 연결해 첫 번째 댄서를 생성하세요.
+
+        \-..._왼쪽의 전구를 클릭하면 자세한 정보 또는 추가 과제를 볼 수도 있습니다._
+      Dance_2019_02: |-
+        <xml><block type="Dancelab_whenKey" block-text="when up pressed"></block></xml> 블록을 사용하면 위쪽 화살표 키를 눌렀을 때 코드가 실행됩니다. <xml><block type="Dancelab_doMoveEachLR" block-text="do once"><title name="GROUP">"CAT"</title><title name="MOVE">MOVES.XClapSide</title><title name="DIR">-1</title></block></xml> 블록을 사용해 위쪽 화살표 키를 눌렀을 때 댄서가 손뼉을 치게 만들거나 다른 동작을 시험해 보세요!
+
+        _실행 단추를 누른 후 잊지 말고 위쪽 화살표 키나 ![](<https://images.code.org/419e704e6841c0b696016bf5029b8cb9-image-1571864825506.06.45 PM.png>)을(를) 누르세요!_
+      Dance_2019_03: 춤출 시간입니다! 각기 다른 키를 눌렀을 때 각 댄서가 움직이도록 설정하세요. 좋아하는 동작을 골라 각 댄서에게
+        배정하거나 ‘(Random)’으로 설정해 예측 불가한 댄스를 펼치세요!
+      Dance_2019_04: |-
+        댄서들이 음악의 박자에 맞추어 움직이게 합시다!
+
+        <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> 블록을 작업 공간에 끌어다 놓습니다. <xml><block type="Dancelab_changeMoveEachLR"><title name="GROUP">"SHARK"</title><title name="MOVE">MOVES.ThisOrThat</title><title name="DIR">-1</title></block></xml> 블록 아래에 연결합니다. 댄서는 네 번째 마디 이후에 새 동작을 시작해야 합니다.
+
+        **마디**는 음악에서 시간을 재는 데 사용합니다. 이 튜토리얼에서는 네 박자로 되어 있습니다.
       Dance_2019_05: |-
         _이제 춤을 춰볼까요!_
 
         <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> 블록을 작업공간에 추가하세요. 6번째 마디 후 댄서가 새로운 움직임을 시작하도록 하세요.
+      Dance_2019_06: |-
+        이 새 블록을 사용해서 리드 댄서를 가운데 두고 그보다 조금 작은 백업 댄서들을 주변에 배치하세요.
+          <xml><block type="Dancelab_makeNewDanceSpriteGroup">
+            <title name="N">???</title>
+            <title name="COSTUME" config="&quot;BEAR&quot;, &quot;CAT&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title>
+            <title name="LAYOUT">"circle"</title>
+          </block></xml>
+        이제 여러 댄서들을 한번에 생성할 수 있습니다!
+      Dance_2019_07: |-
+        모든 댄서에게는 겉으로 보이는 것을 조정하는 _속성_이 있습니다.
+
+        댄서들의 크기를 변경해 댄서가 가까이 혹은 멀리 있도록 보이게 할 수 있습니다. 음악 시작 이후, 중간에 한 댄서 그룹의 크기를 변경하세요.
+      Dance_2019_08: 댄서들에게는 색상을 덧댈 수 있는 “색조” 속성이 있습니다. 댄서 한 명(혹은 그룹 전체)의 색조를 바꾸어 보세요!
+      Dance_2019_09: |-
+        몇 번씩 트리거된 특별한 이벤트 종류입니다.
+
+        <xml><block type="Dancelab_everySeconds"><title name="N">2</title><title name="UNIT">"measures"</title></block></xml>
+
+        도구 상자에 있는 다른 새 블록들을 사용하면 시간이 지남에 따라 점차적으로(혹은 무작위로!) 댄서들의 속성이 바뀝니다.
+
+        _창의성을 발휘하며 즐기세요!_
       Dance_2019_10: 이제 리듬을 타보세요! 자신만의 댄스를 만들어 친구와 공유하세요.
       Dance_Party_01: |-
         _댄스 파티를 해볼까요!_
@@ -549,6 +588,14 @@ ko-KR:
         -   다른 레이아웃으로 두 번째 댄서 그룹 만들기
         -   키를 누를 때 레이아웃 변경
         -   댄서 대형을 바꿀 때 속성 변경
+      Dance_Party_extras_layout_2019: |-
+        # 대형을 만들어 봅시다!
+
+        이 댄스를 확인하세요. <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> 블록이 사용되어 댄스 내내 백업 댄서들의 대형을 바꿉니다. 다음 아이디어들을 시도하며 확장해 보세요.
+
+        -   다른 레이아웃에 두 번째 댄서 그룹 생성
+        -   키를 누르면 레이아웃 변경
+        -   댄서들이 대형을 바꾸면 속성 변경
       Dance_Party_extras_on_beat: |-
         # 저음, 중간음, 고음
 
@@ -561,6 +608,10 @@ ko-KR:
         # 속도를 높이고 속도를 낮추세요
 
         이 마지막 댄스에서는 '스피드 설정' 블록을 사용하여 댄서 각각이 얼마나 빨리 움직이는지 제어해봅니다. 음악의 다른 지점에서 다른 속도로 실험해보세요. 이 댄스를 다양하게 만들어보거나 이전 댄스 중 원하는 댄스로 돌아가 더욱 멋지게 만들어보세요.
+      Dance_Party_extras_speed_2019: |-
+        # 속도를 높이고 속도를 낮추세요
+
+        이 마지막 댄스는 <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> 블록을 사용해 각 댄서가 얼마나 빨리 움직일지를 조절합니다. 노래 중간중간에 속도를 달리하며 실험해 보세요. 이 댄스를 계속 바꾸어 보거나, 돌아가서 이전 댄스들을 훨씬 더 멋지게 만들어 보세요.
       Dance_Party_extras_visible: |-
         # 그들이 어디로 갔나요?
 

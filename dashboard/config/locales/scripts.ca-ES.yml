@@ -1506,7 +1506,7 @@ ca:
               name: Festa de ball
           description: Crea un codi amb la teva pròpia festa de ball i comparteix-la
             amb els teus amics!
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Computer Science Fundamentals:
               name: Fonaments de la informàtica
@@ -1528,3 +1528,13 @@ ca:
           title: Seguir ballant
           description: Anar més enllà de la primera hora amb idees desenvolupades
             del projecte.
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Condicionals
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Col·laboració oberta
+            Conditionals with Cards:
+              name: Condicionals amb targetes

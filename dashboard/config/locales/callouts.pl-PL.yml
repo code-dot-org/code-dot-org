@@ -173,8 +173,15 @@ pl-PL:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Nowy blok!
         dance_callout_11_b: Nowy blok!
+      Dance_2019_01:
+        dance_callout_01: Wybierz tutaj rodzaj tancerza.
+      Dance_2019_02:
+        dance_callout_11_a: Dodaj ten blok do swojego programu.
+        arrow_buttons: Naciskaj strzałki, by sterować swoim tancerzem.
       Dance_2019_04:
         dance_callout_02: Dodaj ten blok do swojego programu!
+      Dance_2019_05:
+        dance_callout_05: Dodaj nowe zdarzenie do swojego programu.
       Dance_2019_06:
         dance_party_11_5_groups: Nowy blok!
       Dance_2019_07:

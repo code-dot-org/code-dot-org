@@ -148,8 +148,15 @@ it-IT:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Nuovo blocco!
         dance_callout_11_b: Nuovo blocco!
+      Dance_2019_01:
+        dance_callout_01: Aggiungi questo blocco al tuo programma!
+      Dance_2019_02:
+        dance_callout_11_a: Aggiungi questo blocco al tuo programma.
+        arrow_buttons: Premi i pulsanti freccia per controllare il tuo ballerino.
       Dance_2019_04:
         dance_callout_02: Aggiungi questo blocco al tuo programma!
+      Dance_2019_05:
+        dance_callout_05: Aggiungi un nuovo evento al programma.
       Dance_2019_06:
         dance_party_11_5_groups: Nuovo blocco!
       Dance_2019_07:

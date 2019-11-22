@@ -4,8 +4,14 @@ pt-PT:
     function_names:
       2-3 Artist 11:
         x: x
+      2-3 Artist 12:
+        details: detalhes
+        draw eyebrow: desenha a sobrancelha
+        draw pupil: desenha a pupila
       2-3 Artist 3.4:
         draw a circle: desenhar um círculo
+      2-3 Artist 7:
+        draw_rect: desenha_rect
       2-3 Artist Debugging 10:
         draw a circle: desenhar um círculo
       2-3 Artist Functions 11:

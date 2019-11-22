@@ -56,9 +56,16 @@ ja-JP:
         dance_callout_11_a: 新しいブロック！
         dance_callout_11_b: 新しいブロック！
       CourseD_Dance_Party_11_5:
-        dance_party_11_5_groups: '"すべてのアヒル" は、ここにあります。'
+        dance_party_11_5_groups: '"アヒル" は、すべて ここにあります。'
+      Dance_2019_01:
+        dance_callout_01: プログラムにこのブロックを追加！
+      Dance_2019_02:
+        dance_callout_11_a: このブロックをプログラムに追加します。
+        arrow_buttons: 矢印ボタンを押してダンサーをコントロールします。
       Dance_2019_04:
         dance_callout_02: プログラムにこのブロックを追加！
+      Dance_2019_05:
+        dance_callout_05: プログラムに新しいイベントを追加します。
       Dance_2019_06:
         dance_party_11_5_groups: 新しいブロック！
       Dance_2019_07:
@@ -78,7 +85,7 @@ ja-JP:
         dance_callout_11_a: 新しいブロック！
         dance_callout_11_b: 新しいブロック！
       Dance_Party_11_5:
-        dance_party_11_5_groups: '"すべてのアヒル" は、ここにあります。'
+        dance_party_11_5_groups: '"アヒル" は、すべて ここにあります。'
       Fish Tank 3-validated_2019:
         spritelab_comment: このブロックを使って、プログラムがどのように動くか あなたや先生のメモを 残すことができます。
       Function intro Ryan:

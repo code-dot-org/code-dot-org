@@ -2,6 +2,45 @@
 hu:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: összes
+            '"ALIEN"': összes földönkívüli
+            '"BEAR"': összes medve
+            '"CAT"': összes macska
+            '"DOG"': összes kutya
+            '"DUCK"': összes kacsa
+            '"FROG"': összes béka
+            '"MOOSE"': összes jávorszarvas
+            '"PINEAPPLE"': összes ananász
+            '"ROBOT"': összes robot
+            '"SHARK"': összes cápa
+            '"UNICORN"': Egyszarvúak
+          MOVE1:
+            MOVES.Roll: Testforgás
+            MOVES.ClapHigh: Taps fent
+            MOVES.Dab: Legyintés
+            MOVES.DoubleJam: Duplázás
+            MOVES.Drop: Spárga
+            MOVES.Floss: Lenget
+            MOVES.Fresh: Friss
+            MOVES.Clown: Bohóc
+            MOVES.Kick: Csillag
+            MOVES.ThisOrThat: Ez vagy az
+            MOVES.Rest: Egyik sem
+          MOVE2:
+            MOVES.Roll: Testforgás
+            MOVES.ClapHigh: Taps fent
+            MOVES.Dab: Legyintés
+            MOVES.DoubleJam: Duplázás
+            MOVES.Drop: Spárga
+            MOVES.Floss: Lenget
+            MOVES.Fresh: Friss
+            MOVES.Clown: Bohóc
+            MOVES.Kick: Csillag
+            MOVES.ThisOrThat: Ez vagy az
+            MOVES.Rest: Egyik sem
       Dancelab_atTimestamp:
         text: "{TIMESTAMP} {UNIT} után"
         options:
@@ -782,12 +821,6 @@ hu:
           STRING:
             '"hearts_colorful"': Szívek
             '"diamond"': gyémánt
-            '"l"': l
-            '"m"': m
-            '"n"': 'n'
-            '"o"': o
-            '"p"': p
-            '"r"': r
             '"s"': s
             '"t"': t
             '"u"': u

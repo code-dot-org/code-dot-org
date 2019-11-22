@@ -155,6 +155,7 @@ it-IT:
         - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png"
           correct: true
       2-3 artist debug multi 1:
+        title: Esercizio di Verifica (Risposte Multiple)
         questions:
         - {}
         answers:
@@ -174,6 +175,7 @@ it-IT:
         - {}
         - {}
       2-3 artist loops match 1:
+        title: Esercizio di Verifica (Corrispondenza)
         content2: Associa ogni figura con il ciclo che la disegna.
         questions:
         - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png"
@@ -584,23 +586,44 @@ it-IT:
         title: Inizia a pianificare il tuo progetto
         content1: Descrizione qui
       CSD Header Size MC:
+        content1: Guarda il codice sotto e predici come le intestazioni saranno mostrati.
+          Scegli da una delle opzioni a destra.
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
       CSD Header Size MC_2018:
+        content1: Guarda il codice sotto e predici come le intestazioni saranno mostrati.
+          Scegli da una delle opzioni a destra.
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
       CSD Header Size MC_2018_2019:
+        content1: Guarda il codice sotto e predici come le intestazioni saranno mostrati.
+          Scegli da una delle opzioni a destra.
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
       CSD U1 Lesson 5 Overview:
         markdown: |
           # Panoramica
@@ -1222,77 +1245,6 @@ it-IT:
         - correct: true
         - {}
       Dance_Party_extras_intro:
-        markdown: |
-          # Continua a Ballare!
-
-          Per la parte 2, creerai il tuo progetto. Non ci sono rompicapi qui - invece ci sono un sacco di progetti che mostrano differenti modi di fare feste da ballo più complesse.
-
-          Puoi fare questi livelli _in ogni ordine_. Salta intorno per vedere come qualcosa era stato fatto in un livello precedente, o combina un concetto tra i progetti. Provali tutti, scegli il tuo preferito, e passa il tuo tempo a lavorare su aggiungere a quel progetto per renderlo tuo.
-
-          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Continua</a>
-
-          <div class="clearfix">
-
-          <div style="float: left; margin: 10px">
-          <a href="2">
-          <h2>
-          Vai in Formazione
-          </h2>
-
-          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif">
-
-          </div>
-
-          <div style="float: left; margin: 10px">
-          <a href="3">
-          <h2>
-          Dove andranno?
-          </h2>
-
-          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif">
-
-          </div>
-
-          <div style="float: left; margin: 10px">
-          <a href="4">
-          <h2>
-          Crew di Ballo
-          </h2>
-
-          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif">
-
-          </div>
-
-          <div style="float: left; margin: 10px">
-          <a href="5">
-          <h2>
-          Quartine
-          </h2>
-
-          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif">
-
-          </div>
-
-          <div style="float: left; margin: 10px">
-          <a href="6">
-          <h2>
-          Bassi, Medi, Acuti
-          </h2>
-
-          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif">
-
-          </div>
-
-          <div style="float: left; margin: 10px">
-          <a href="7">
-          <h2>
-          Velocizzalo, Rallentalo
-          </h2>
-
-          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif">
-
-          </div>
-      Dance_Party_extras_intro_2019:
         markdown: |
           # Continua a Ballare!
 

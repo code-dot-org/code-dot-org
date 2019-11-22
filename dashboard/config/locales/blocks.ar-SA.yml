@@ -2,6 +2,47 @@
 ar:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: الكل
+            '"ALIEN"': كل الكائنات الفضائية
+            '"BEAR"': كل الدببة
+            '"CAT"': كل القطط
+            '"DOG"': كل الكلاب
+            '"DUCK"': كل البط
+            '"FROG"': كل الضفادع
+            '"MOOSE"': كل الغزلان
+            '"PINEAPPLE"': كل الأناناس
+            '"ROBOT"': كل الروبوتات
+            '"SHARK"': كل أسماك القرش
+            '"UNICORN"': وحيدات القرن
+          MOVE1:
+            MOVES.Roll: الدحرجة
+            MOVES.ClapHigh: التصفيق بصوت عالٍ
+            MOVES.Dab: التربيت
+            MOVES.DoubleJam: الحفلة الموسيقية المزدوجة
+            MOVES.Drop: السقوط
+            MOVES.Floss: أرجحة اليدين
+            MOVES.Fresh: جديد
+            MOVES.Clown: المهرج
+            MOVES.Kick: الركل
+            MOVES.ThisOrThat: هذا أو ذاك
+            MOVES.Thriller: تايلر
+            MOVES.Rest: لا شيء
+          MOVE2:
+            MOVES.Roll: الدحرجة
+            MOVES.ClapHigh: التصفيق بصوت عالٍ
+            MOVES.Dab: التربيت
+            MOVES.DoubleJam: الحفلة الموسيقية المزدوجة
+            MOVES.Drop: السقوط
+            MOVES.Floss: أرجحة اليدين
+            MOVES.Fresh: جديد
+            MOVES.Clown: المهرج
+            MOVES.Kick: الركل
+            MOVES.ThisOrThat: هذا أو ذاك
+            MOVES.Thriller: تايلر
+            MOVES.Rest: لا شيء
       Dancelab_atTimestamp:
         text: بعد {TIMESTAMP} {UNIT}
         options:

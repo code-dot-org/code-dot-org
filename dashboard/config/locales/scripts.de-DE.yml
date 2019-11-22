@@ -3282,6 +3282,8 @@ de:
           stages:
             Routers and Redundancy:
               name: Router und Redundanz
+            The Need for Addressing:
+              name: Die Notwendigkeit von Addressierung
         peru-2019:
           stages:
             Introduction:
@@ -3294,7 +3296,7 @@ de:
               name: Tanzparty
           description: Codiere deine eigene Tanzparty, um sie mit deinen Freunden
             zu teilen!
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Getting Started:
               name: Erste Schritte
@@ -3321,3 +3323,15 @@ de:
         dance-extras-2019:
           title: Tanzt weiter
           description: Überschreite die erste Stunde mit erweiterten Projektideen.
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Bedingungen
+            Simon Says:
+              name: Simon sagt
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Bedingungen mit Karten

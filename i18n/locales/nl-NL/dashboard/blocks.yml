@@ -2,6 +2,39 @@
 nl:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: alles
+            '"ALIEN"': alle buitenaardse wezens
+            '"BEAR"': alle beren
+            '"CAT"': alle katten
+            '"DOG"': alle honden
+            '"DUCK"': alle eenden
+            '"FROG"': alle kikkers
+            '"MOOSE"': alle elanden
+            '"PINEAPPLE"': alle ananassen
+            '"ROBOT"': alle robots
+            '"SHARK"': alle haaien
+            '"UNICORN"': Eenhoorns
+          MOVE1:
+            MOVES.Roll: Bodyroll
+            MOVES.ClapHigh: Hoog klappen
+            MOVES.DoubleJam: Double down
+            MOVES.Drop: Naar de grond
+            MOVES.Clown: Clown
+            MOVES.Kick: Ster
+            MOVES.ThisOrThat: Dit of dat.
+            MOVES.Rest: Geen
+          MOVE2:
+            MOVES.Roll: Bodyroll
+            MOVES.ClapHigh: Hoog klappen
+            MOVES.DoubleJam: Double down
+            MOVES.Drop: Naar de grond
+            MOVES.Clown: Clown
+            MOVES.Kick: Ster
+            MOVES.ThisOrThat: Dit of dat.
+            MOVES.Rest: Geen
       Dancelab_atTimestamp:
         text: na {TIMESTAMP} {UNIT}
         options:

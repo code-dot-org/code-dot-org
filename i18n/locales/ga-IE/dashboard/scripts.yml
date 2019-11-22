@@ -1748,7 +1748,7 @@ ga:
               name: Réamhrá
             Nested Loops:
               name: Lúba Neadaithe
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Computer Science Fundamentals:
               name: Buntús na Ríomheolaíochta
@@ -1764,3 +1764,13 @@ ga:
               name: Athróga
             For Loops:
               name: Lúba "Do Gach"
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Coinníollacha
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Sluafhoinsiú
+            Conditionals with Cards:
+              name: Coinníollacha le Cártaí

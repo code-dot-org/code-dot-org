@@ -1353,7 +1353,7 @@ sr:
               name: Брзина
             Functions:
               name: Функције
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Loops:
               name: Петље
@@ -1367,3 +1367,13 @@ sr:
               name: Променљиве
             For Loops:
               name: Бројачке петље
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Кондиционали
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Услови са картама

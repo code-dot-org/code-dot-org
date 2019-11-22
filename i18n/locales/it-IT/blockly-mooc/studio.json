@@ -5,7 +5,7 @@
   "addCharacter": "aggiungi il personaggio",
   "addCharacterTooltip": "Aggiunge un personaggio alla scena.",
   "addGoal": "aggiunge un obiettivo",
-  "addGoalPosition": "",
+  "addGoalPosition": "aggiungi obiettivo alla posizione %1",
   "addGoalTooltip": "Aggiunge un obiettivo alla scena nella posizione specificata.",
   "addPoints10": "aggiungi 10 punti",
   "addPoints50": "aggiungi 50 punti",

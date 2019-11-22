@@ -48,14 +48,22 @@ pl-PL:
         kwiatów.
       2-3 Bee Loops 2A: Tym razem użyj pętli, by zebrać cały nektar.
       2-3 Bee Loops 3A: Użyj pętli "powtórz", by zebrać cały nektar.
+      2-3 Maze 1: 'Czy pomożesz mi złapać niesforną świnkę? Ustaw parę bloków ''idź
+        naprzód'' pod blokiem ''po uruchomieniu'' i naciśnij ''Uruchom''. '
       2-3 Maze 10: Prowadź mnie do tego zielonego zła! (Uważaj na pola z TNT)
+      2-3 Maze 12: Czy możesz dostać mnie do świnki tworząc pętlę, która używa tylko
+        jednego bloku 'idź naprzód' wewnątrz bloku 'powtórz'?
       2-3 Maze 2: Ta świnka jeży moje piórka. Pomóż mi, by ją dopaść!
+      2-3 Maze 3: Wyznacz ścieżkę i zaprowadź mnie do tej głupiutkiej świnki. Unikaj
+        TNT, bo inaczej piórka będą latały!
       2-3 Maze 4: Prowadź mnie do tego zielonego zła! (Uważaj na pola z TNT)
       2-3 Maze 6: Zachowaj spokój i pomóż mi znaleźć tę złą świnkę. W przeciwnym razie
         mogę się rozgniewać!
       2-3 Maze 7: Prowadź mnie do tego zielonego zła! (Uważaj na pola z TNT)
       2-3 Maze 8: Doprowadź mnie do świnki!
       2-3 Maze 9: Prowadź mnie do tego zielonego zła! (Uważaj na pola z TNT)
+      2-3 Maze Loops 1: Czy możesz dostać mnie do świnki używając 5 bloków tego samego
+        rodzaju?
       2-3 Maze Loops 17: Wykorzystaj to, czego się nauczyłeś dotychczas, aby doprowadzić
         mnie do słonecznika!
       2-3 Maze Loops 20: Czy potrafisz rozwiązać tę łamigłówkę używając możliwie najmniejszej
@@ -288,8 +296,23 @@ pl-PL:
         do skarbu.
       Crack Random Substitution: Instrukcje
       Crack a Caesar Cipher: Instrukcje
+      Dance_2019_01: 'Przeciągnij blok <xml><block type="Dancelab_makeAnonymousDanceSprite"
+        block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;,
+        &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml>
+        do obszaru roboczego i podłącz go w bloku <xml><block type="Dancelab_whenSetup2"
+        next_connection_disabled="true" block-text="setup"></block></xml>.'
+      Dance_2019_02: Spowoduj, że kot zatańczy po naciśnięciu klawisza.
+      Dance_2019_03: Pora na tańce! Zaprogramuj każdego tancerza, aby poruszał się
+        po naciśnięciu różnych klawiszy. Wybierz ulubiony ruch dla każdego tancerza
+        lub ustaw tę opcję na „(Losowo)”, aby stworzyć coś zupełnie nieprzewidywalnego!
+      Dance_2019_04: Upewnij się, że Twój tancerz rozpocznie nowy ruch po czwartym
+        takcie.
       Dance_2019_05: Teraz spraw, aby tancerz rozpoczął nowy ruch po 6 taktach!
-      Dance_2019_08: Użyj bloku "ustaw odcień", aby zmienić kolor tancerza.
+      Dance_2019_06: Ustaw grupę tancerzy pomocniczych wokół głównego tancerza pośrodku.
+      Dance_2019_07: Zmień rozmiar grupy tancerzy pomocniczych.
+      Dance_2019_08: Spróbuj zmienić odcień jednego ze swoich tancerzy (lub całej
+        grupy)!
+      Dance_2019_09: Bądź kreatywny dzięki tym nowym blokom!
       Dance_2019_10: Dobrej zabawy! Utwórz własny taniec i udostępnij go przyjaciołom.
       Dance_Party_01: Przeciągnij blok "utwórz nowego" do obszaru roboczego i podłącz
         go w bloku "układ".
@@ -311,12 +334,14 @@ pl-PL:
         strzałki w prawo, i raz "klasnął" (Clap), gdy naciśniesz klawisz strzałki
         w górę. Wykonuj tupnij-klaśnij tak szybko, jak potrafisz!
       Dance_Party_12: Dobrej zabawy! Utwórz własny taniec i udostępnij go przyjaciołom.
+      Dance_Party_extras_alternate_2019: Tam i z powrotem! (Kliknij Więcej po szczegóły)
       Dance_Party_extras_battle: Zespoły taneczne (Kliknij Więcej po szczegóły)
       Dance_Party_extras_battle_2019: Zespoły taneczne (Kliknij Więcej po szczegóły)
       Dance_Party_extras_every_beat: Ćwierćnuty (Kliknij Więcej po szczegóły)
       Dance_Party_extras_every_beat_2019: Ćwierćnuty (Kliknij Więcej po szczegóły)
       Dance_Party_extras_layout: Twórzmy formację (Kliknij Więcej po szczegóły)
       Dance_Party_extras_layout_2019: Twórzmy formację (Kliknij Więcej po szczegóły)
+      Dance_Party_extras_mixed_2019: Więcej przycisków (Kliknij Więcej po szczegóły)
       Dance_Party_extras_on_beat: Bas, średni i wysoki ton (Kliknij Więcej po szczegóły)
       Dance_Party_extras_on_beat_2019: Bas, średni i wysoki ton (Kliknij Więcej po
         szczegóły)
@@ -672,8 +697,13 @@ pl-PL:
         do tego jak utworzyć obrazek taki jak ten?"
       course2_artist_nestedLoops_challenge2: "\\*\\* Wyzwanie: \\*\\* Czy możesz dojść
         do tego jak utworzyć obrazek taki jak ten?"
+      course2_artist_prog_challenge1: Narysuj pokoje dla każdego ze zwierząt. Jest
+        wiele możliwości rozwiązania tej zagadki, więc baw się dobrze. Najkrótsze
+        rozwiązanie składa się z 6 bloków, lecz użyj tylu ile ci się podoba!
+      course2_artist_prog_challenge2: _Pomóż mi namalować żółte linie na tej drodze!_
       course2_bee_conditionals_challenge1: Zbierz cały nektar i zrób cały miód.
       course2_bee_conditionals_challenge2: Zbierz cały nektar i zrób cały miód.
+      course2_collector_loops_challenge2: Zbierz cały skarb!
       course2_harvester_loops_challenge1: Zbierz całą kukurydzę.
       course2_harvester_loops_challenge2: Zbierz wszystkie sałaty. Unikaj drzew i
         pól!

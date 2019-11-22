@@ -1109,7 +1109,7 @@ ky:
               name: Тоңгондогу салынган циклдар
             Nested Loops in Frozen:
               name: Тоңгондогу салынган циклдар
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Loops:
               name: Циклдер
@@ -1121,3 +1121,23 @@ ky:
               name: Функциялар
             Variables:
               name: Өзгөрмөлөр
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Шартуулар
+        time4cs-control-unit-2:
+          stages:
+            Nested Loops in Artist:
+              name: Сүрөтчүдөгү салынган циклдар
+            Nested Loops in Frozen:
+              name: Тоңгондогу салынган циклдар
+            Functions in Artist:
+              name: Сүрөтчүдөгү функциялар
+        time4cs-experiment-unit-2:
+          stages:
+            Fancy Shapes using Nested Loops:
+              name: Салынган циклдар менен укмуштуу формалар
+            Nested Loops with Frozen:
+              name: Тоңгондогу салынган циклдар
+            Functions with Artist:
+              name: Сүрөтчү менен функциялар

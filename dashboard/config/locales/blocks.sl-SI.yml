@@ -2,6 +2,10 @@
 sl:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: vse
       Dancelab_atTimestamp:
         options:
           UNIT:

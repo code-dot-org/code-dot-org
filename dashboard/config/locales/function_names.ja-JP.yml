@@ -241,11 +241,11 @@ ja-JP:
         fix long path: 長い道を直す
         fix short path: 短い道を直す
       MC_HOC_2017_Ali:
-        build short bridge: 橋をかける
-        build long bridge: 橋をかける
+        build short bridge: 短い橋をかける
+        build long bridge: 長い橋をかける
       MC_HOC_2017_Ali_2019:
-        build short bridge: 橋をかける
-        build long bridge: 橋をかける
+        build short bridge: 短い橋をかける
+        build long bridge: 長い橋をかける
       MC_HOC_2017_FP20x20:
         function 1: 関数1
         function 2: 関数2

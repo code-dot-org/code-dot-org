@@ -292,6 +292,9 @@ zh-TW:
       CSD U3 L5 Freeplay: 改變花瓣尺寸的值數次，你的圖案會有什麼變化呢？
       CSD U3 L5 Freeplay_2018: 改變花瓣尺寸的值數次，你的圖案會有什麼變化呢？
       CSD U3 L5 Freeplay_2019: 改變花瓣尺寸的值數次，你的圖案會有什麼變化呢？
+      CSD U3 Sprites intro sprites: 做這個
+      CSD U3 Sprites intro sprites_2018: 做這個
+      CSD U3 Sprites intro sprites_2019: 做這個
       CSD U3 Variables change circle size: 改變花瓣尺寸的值數次，你的圖案會有什麼變化呢？
       CSD U3 Variables change circle size_2018: 改變花瓣尺寸的值數次，你的圖案會有什麼變化呢？
       CSD U3 Variables change circle size_2019: 改變花瓣尺寸的值數次，你的圖案會有什麼變化呢？
@@ -508,8 +511,17 @@ zh-TW:
       Dance Party Freeplay_2019: 現在就來創造一個外星生物的舞會！
       Dance Party Predict: 預測一下，當你點擊外星生物時會發生什麼事？
       Dance Party Predict_2019: 預測一下，當你點擊外星生物時會發生什麼事？
+      Dance_2019_01: '將<xml><block type="Dancelab_makeAnonymousDanceSprite" block-text="make
+        a new dancer"><title name="COSTUME" config="&quot;CAT&quot;, &quot;PINEAPPLE&quot;">"CAT"</title><title
+        name="LOCATION">{x: 200, y: 200}</title></block></xml>程式積木拖到工作區中，然後將其連接到<xml><block
+        type="Dancelab_whenSetup2" next_connection_disabled="true" block-text="setup"></block></xml>程式積木中以製作您的第一個舞者。'
+      Dance_2019_02: 選擇您按下按鍵時作出的舞蹈動作。
+      Dance_2019_03: 開始跳舞吧！對每個舞者進行程式設計，讓他們在您按下不同按鍵做出相應動作。為每個舞者選擇您喜歡的動作，或者將其設置為「（隨機）」來做出完全出乎您預料的動作！
+      Dance_2019_04: 第四小節之後，讓您的舞者開始新的動作。
       Dance_2019_05: 現在讓舞者在 6 個小節後開始新的動作！
-      Dance_2019_08: 使用「設定色調」積木來變更舞者的顏色。
+      Dance_2019_06: 製作一組伴舞演員將領舞者圍繞在中間。
+      Dance_2019_07: 更改伴舞演員組的大小。
+      Dance_2019_09: 用這些新程式積木發揮創造力！
       Dance_2019_10: 隨著音樂律動！建立一支自己的舞蹈，與朋友分享。
       Dance_Party_01: 將「創建一個新的」積木拖曳至工作區中，並把它放到「設定」積木裡頭。
       Dance_Party_02: 讓麋鹿在 4 個小節後開始新的動作！

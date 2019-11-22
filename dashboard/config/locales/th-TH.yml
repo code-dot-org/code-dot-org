@@ -426,6 +426,8 @@ th:
       audience: อายุ 13+
     dance:
       title: งานเต้นรำ
+    dance-2019:
+      title: งานเต้นรำ
     20-hour:
       body: This 20-hour คอร์ส covers the core computer science and programming concepts
         in คอร์ส 2-4. The คอร์ส is designed for use with ages 10-18. Check out คอร์ส

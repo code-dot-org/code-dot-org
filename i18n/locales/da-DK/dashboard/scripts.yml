@@ -1647,7 +1647,7 @@ da:
             Dance Party:
               name: Dansefest
           description: Lav din egen dansefest sammen med dine venner.
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Loops:
               name: Løkker
@@ -1666,3 +1666,13 @@ da:
         dance-extras-2019:
           title: Bliv ved med at danse
           description: Overskrid den første time med udvidede projektideer.
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Betingelser
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Betingelser med kortspil

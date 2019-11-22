@@ -796,9 +796,21 @@ tr-TR:
         kullan.
       Crack Random Substitution: Talimatlar
       Crack a Caesar Cipher: Talimatlar
+      Dance_2019_01: '<xml><block type="Dancelab_makeAnonymousDanceSprite" block-text="make
+        a new dancer"><title name="COSTUME" config="&quot;CAT&quot;, &quot;PINEAPPLE&quot;">"CAT"</title><title
+        name="LOCATION">{x: 200, y: 200}</title></block></xml> bloğunu çalışma alanına
+        sürükleyin ve <xml><block type="Dancelab_whenSetup2" next_connection_disabled="true"
+        block-text="setup"></block></xml> bloğunun içine bağlayın.'
+      Dance_2019_02: Bir tuşa bastığınızda dans etmeyi yapın.
+      Dance_2019_03: Dansı bitirme zamanı! Her dansçıyı farklı tuşlara bastığınızda
+        hareket etmesi için programlayın. Her dansçı için favori hareketini seçin
+        ya da tamamen tahmin edilemeyecek bir şey için onu "(Rastgele)" olarak ayarlayın!
+      Dance_2019_04: Dansçınızın dördüncü ölçütten sonra yeni bir hareket yapmasını
+        sağlayın.
       Dance_2019_05: Şimdi dansçıyı 6 ölçü sonra yeni bir harekete başlatın!
-      Dance_2019_08: Dansçının rengini değiştirmek için `renk tonu ayarla` bloğunu
-        kullanın.
+      Dance_2019_06: Ortada baş dansçının çevresine bir grup yedek dansçı ayarlayın.
+      Dance_2019_07: Yedek dansçı grubunun boyutunu değiştirin.
+      Dance_2019_09: Bu yeni bloklarla yaratıcı olun!
       Dance_2019_10: Havaya girin! Kendi dansınızı yaratın ve arkadaşlarınızla paylaşın.
       Dance_Party_01: "`Yeni yap` bloğunu çalışma alanına sürükleyin ve `kurulum`
         bloğunun içine bağlayın."
