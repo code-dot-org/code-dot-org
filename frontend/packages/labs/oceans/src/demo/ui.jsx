@@ -299,15 +299,6 @@ const styles = {
     transform: 'translateX(-45%)',
     pointerEvents: 'none'
   },
-  recallButton: {
-    position: 'absolute',
-    top: '4%',
-    left: '2.25%',
-    minWidth: 175,
-    ':focus': {
-      outline: 'none'
-    }
-  },
   recallContainer: {
     position: 'absolute',
     top: '4%',
