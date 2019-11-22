@@ -37,7 +37,7 @@ def get_contained_question(contained_level)
   if contained_question_text.nil?
     return contained_question_markdown
   end
-  return "(TEXT) #{contained_question_text} (MARKDOWN) #{contained_question_markdown}"
+  "(TEXT) #{contained_question_text} (MARKDOWN) #{contained_question_markdown}"
 end
 
 def main
