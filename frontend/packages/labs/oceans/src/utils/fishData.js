@@ -56,6 +56,7 @@ import tail_9_image from '../../public/images/fish/tailFin/tail_9.png';
 
 import circle_1_image from '../../public/images/fish/body/circle_1.png';
 import circle_2_image from '../../public/images/fish/body/circle_2.png';
+import diamond1_image from '../../public/images/fish/body/diamond1.png';
 import other_1_image from '../../public/images/fish/body/other_1.png';
 import other_2_image from '../../public/images/fish/body/other_2.png';
 import other_3_image from '../../public/images/fish/body/other_3.png';
@@ -68,6 +69,9 @@ import oval_4_image from '../../public/images/fish/body/oval_4.png';
 import rectangle_1_image from '../../public/images/fish/body/rectangle_1.png';
 import rectangle_2_image from '../../public/images/fish/body/rectangle_2.png';
 import rectangle_3_image from '../../public/images/fish/body/rectangle_3.png';
+import s1_image from '../../public/images/fish/body/s1.png';
+import s2_image from '../../public/images/fish/body/s2.png';
+import star1_image from '../../public/images/fish/body/star1.png';
 import triangle2_image from '../../public/images/fish/body/triangle2.png';
 import triangle3_image from '../../public/images/fish/body/triangle3.png';
 import triangle_1_image from '../../public/images/fish/body/triangle_1.png';
@@ -179,6 +183,25 @@ const fishComponents = {
       scalesAnchor: [68, 20],
       knnData: [7892, BodyShape.OVAL],
       type: FishBodyPart.BODY
+    },
+    diamond1: {
+      src: diamond1_image,
+      anchor: [80, 100],
+      eyeAnchor: [12, 2],
+      mouthAnchor: [20, 26],
+      pectoralFinBackAnchor: [45, 33],
+      pectoralFinFrontAnchor: [75, 33],
+      dorsalFinAnchor: [75, 15],
+      tailAnchor: [120, 23],
+      scalesAnchor: [78, 10],
+      knnData: [3049, BodyShape.OTHER],
+      type: FishBodyPart.BODY,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     other_1: {
       src: other_1_image,
@@ -395,6 +418,53 @@ const fishComponents = {
         AppMode.CreaturesVTrash,
         AppMode.FishShort
       ]
+    },
+    s1: {
+      src: s1_image,
+      anchor: [70, 50],
+      eyeAnchor: [0, -7],
+      mouthAnchor: [2, 15],
+      pectoralFinBackAnchor: [10, 15],
+      pectoralFinFrontAnchor: [38, 15],
+      //pectoralFinBackAnchor: [30, 55],
+      //pectoralFinFrontAnchor: [52, 58],
+      dorsalFinAnchor: [26, 10],
+      scalesAnchor: [66, 12],
+      tailAnchor: [90, 97],
+      knnData: [6076, BodyShape.OTHER],
+      type: FishBodyPart.BODY,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
+    },
+    s2: {
+      src: s2_image,
+      anchor: [70, 70],
+      eyeAnchor: [0, 27],
+      mouthAnchor: [8, 50],
+      pectoralFinBackAnchor: [13, 54],
+      pectoralFinFrontAnchor: [42, 52],
+      dorsalFinAnchor: [75, 10],
+      tailAnchor: [106, 34],
+      scalesAnchor: [60, 7],
+      knnData: [4626, BodyShape.OTHER],
+      type: FishBodyPart.BODY
+    },
+    star1: {
+      src: star1_image,
+      anchor: [70, 50],
+      eyeAnchor: [11, 27],
+      mouthAnchor: [24, 60],
+      pectoralFinBackAnchor: [30, 89],
+      pectoralFinFrontAnchor: [63, 91],
+      dorsalFinAnchor: [63, 30],
+      tailAnchor: [93, 62],
+      scalesAnchor: [73, 26],
+      knnData: [4965, BodyShape.OTHER],
+      type: FishBodyPart.BODY
     },
     triangle2: {
       src: triangle2_image,
