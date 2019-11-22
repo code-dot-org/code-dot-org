@@ -6,11 +6,11 @@ theme: responsive
 :ruby
   launch_ai = DCDO.get('launch_ai', nil)
   tutorial = {
-    heading: "AI for Oceans",
+    heading: hoc_s(:oceans_landing_title),
     background_image: "/images/fit-1940/sw_landingpage.jpg",
-    left_heading: I18n.t(:starwars_javascript_title),
-    left_description: I18n.t(:starwars_javascript_description),
-    left_specs: I18n.t(:starwars_javascript_specs),
+    left_heading: hoc_s(:oceans_landing_title),
+    left_description: hoc_s(:oceans_landing_description),
+    left_specs: hoc_s(:oceans_landing_specs),
     left_button_link: '/api/hour/begin/starwars',
     left_button_text: I18n.t(:try_now),
     id_for_mobile_image: "ocean-mobile-image",
@@ -20,14 +20,14 @@ theme: responsive
   resources = {
     left_link: "https://www.microsoft.com/en-us/store/locations/events-for-students",
     left_image: CDO.code_org_url("/images/fill-485x260/mc/minecraft_teacher_small1.jpg"),
-    left_heading: I18n.t(:hoc2018_mc_educators_box3_title),
-    left_description: I18n.t(:hoc2018_mc_educators_box3_desc),
-    left_button_text: I18n.t(:hoc2018_mc_educators_box3_button),
-    right_link: "https://www.microsoft.com/en-us/store/locations/events-for-students",
+    left_heading: hoc_s(:oceans_landing_teacher_resources),
+    left_description: hoc_s(:oceans_landing_teacher_resources_desc),
+    left_button_text: hoc_s(:oceans_landing_resource_button),
+    right_link: "/csforgood",
     right_image: CDO.code_org_url("/images/fill-485x260/mc/minecraft_teacher_small1.jpg"),
-    right_heading: I18n.t(:hoc2018_mc_educators_box3_title),
-    right_description:  I18n.t(:hoc2018_mc_educators_box3_desc),
-    right_button_text: I18n.t(:hoc2018_mc_educators_box3_button),
+    right_heading: hoc_s(:oceans_landing_cs_for_good),
+    right_description: hoc_s(:oceans_landing_cs_for_good_desc),
+    right_button_text: hoc_s(:oceans_landing_resource_button)
   }
 
 :css
@@ -45,4 +45,4 @@ theme: responsive
 
   = view :resource_boxes, resources: resources
 
-  .clear
+.clear
