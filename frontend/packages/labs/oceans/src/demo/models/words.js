@@ -5,22 +5,24 @@ import constants, {ClassType} from '../constants';
 
 export const init = () => {
   const wordFish = generateOcean(
-    10,
+    1,
     /* loadFish = */ true,
     /* loadTrashImage = */ false,
     /*loadCreatureImages = */ false
   );
   arrangeFish(wordFish);
   setState({
-    wordFish
+    wordFish,
+    fishCount: 1
   });
 };
 
 const arrangeFish = fishes => {
   fishes.forEach(fish => {
-    const x = randomInt(0, constants.canvasWidth - constants.fishCanvasWidth);
+    const x = randomInt(0, constants.canvasWidth) - constants.canvasWidth;
+    console.log(x);
 
-    const y = randomInt(0, constants.canvasHeight - constants.fishCanvasHeight);
-    fish.setXY({x, y});
+    const y = constants.canvasHeight - constants.fishCanvasHeight - 50;
+    fish.setXY({x:-constants.fishCanvasWidth,y});
   });
 };

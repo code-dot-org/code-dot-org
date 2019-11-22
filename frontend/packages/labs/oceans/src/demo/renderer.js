@@ -6,6 +6,7 @@ import {
   backgroundPathForMode,
   finishMovement,
   currentRunTime,
+  randomInt,
   $time
 } from './helpers';
 import colors from './colors';
@@ -500,20 +501,30 @@ const drawWordFishImages = () => {
   const canvas = getState().canvas;
   const ctx = canvas.getContext('2d');
 
+  const speed = randomInt(30000, 50000);
   const fishBounds = [];
 
-  getState().wordFish.forEach(fish => {
-
+  const state = getState();
+  state.wordFish.forEach(fish => {
     const swayValue =
-      (($time() * 360) / (20 * 1000) + (fish.getId() + 1) * 10) % 360;
+      (($time() * 360) / (20 * 1000) ) % 360;
     const swayMultipleX = 120;
     const swayOffsetX =
       Math.sin(((swayValue * Math.PI) / 180) * 2) * swayMultipleX;
-    const swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 6) * 8;
+    const swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 3) / 3;
 
+    const t = $time();
     const xy = fish.getXY();
-    const finalX = xy.x + swayOffsetX;
+    if (!fish.startTime) {
+      fish.startTime = t;
+      fish.speed = randomInt(9000, 10000);
+    }
+    const finalX = (constants.canvasWidth / fish.speed) * (t - fish.startTime) - constants.fishCanvasWidth;
+    if (finalX > 0.5 * constants.canvasWidth) {
+    }
+    //console.log(finalX);
     const finalY = xy.y + swayOffsetY;
+    fish.setXY({x: finalX, y: finalY});
 
     const fishBound = drawSingleFish(fish, finalX, finalY, ctx, 0.75);
 
@@ -524,8 +535,24 @@ const drawWordFishImages = () => {
     });
     setState({wordFishBounds: fishBounds}, {skipCallback: true});
   });
-
-}
+  const lastFish = state.wordFish[state.wordFish.length - 1];
+  if (
+    lastFish.xy.x > 0.9 * constants.canvasWidth ||
+    randomInt(0, constants.canvasWidth - lastFish.xy.x) === 1
+  ) {
+    let wordFish = state.wordFish;
+    wordFish = wordFish.filter(
+      f => f.xy.x < ((constants.canvasWidth + constants.fishCanvasWidth) * 1.1)
+    );
+    const newFish = new FishOceanObject(state.fishCount);
+    newFish.randomize();
+    const y = constants.canvasHeight - constants.fishCanvasHeight - 20;
+    newFish.setXY({x: -constants.fishCanvasWidth * 1.5, y});
+    wordFish.push(newFish);
+    console.log(wordFish);
+    setState({wordFish, fishCount: state.fishCount + 1});
+  }
+};
 
 // Draw the fish for pond mode.
 const drawPondFishImages = () => {
