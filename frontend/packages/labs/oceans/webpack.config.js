@@ -1,15 +1,10 @@
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
-module.exports = {
+const commonConfig = {
   devtool: 'eval-cheap-module-source-map',
   resolve: {
     extensions: ['.js', '.jsx'],
-  },
-  entry: {
-    assetPath: './src/demo/assetPath.js',
-    main: './src/index.js',
-    demo: './src/demo/index.jsx',
   },
   output: {
     filename: '[name].js',
@@ -76,7 +71,10 @@ module.exports = {
     },
     maxAssetSize: 300000,
     maxEntrypointSize: 10500000,
-  },
+  }
+};
+
+const firstConfigOnly = {
   plugins: [
     new CleanWebpackPlugin(),
     new CopyPlugin([{
@@ -85,4 +83,51 @@ module.exports = {
       flatten: true,
     }]),
   ],
+};
+
+const externalConfig = {
+  externals: {
+    "lodash": "lodash",
+    "radium": "radium",
+    "react": "react",
+    "react-dom": "react-dom",
+  }
+};
+
+const defaultConfig = [
+  {
+    entry: {
+      assetPath: './src/demo/assetPath.js'
+    },
+    ...commonConfig,
+    ...firstConfigOnly,
+    ...externalConfig
+  },
+  {
+    entry: {
+      demo: './src/demo/index.jsx'
+    },
+    ...commonConfig
+  }
+];
+
+const productionConfig = [
+  {
+    entry: {
+      main: './src/index.js'
+    },
+    ...commonConfig,
+    ...externalConfig
+  }
+];
+
+module.exports = (env, argv) => {
+  if (argv.mode === 'production') {
+    return [
+      ...defaultConfig,
+      ...productionConfig,
+    ];
+  }
+
+  return defaultConfig;
 };
