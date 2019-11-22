@@ -9,7 +9,10 @@ export const init = async () => {
   let fishWithConfidence = await predictAllFish(state);
   setState({totalPondFish: fishWithConfidence.length});
   fishWithConfidence = _.sortBy(fishWithConfidence, ['confidence']);
-  const pondFishWithConfidence = fishWithConfidence.splice(0, 20);
+  const pondFishWithConfidence = fishWithConfidence.splice(
+    0,
+    constants.maxPondFish
+  );
   arrangeFish(pondFishWithConfidence);
   setState({pondFish: pondFishWithConfidence});
 };
@@ -72,9 +75,9 @@ const formatArrangement = () => {
 
   // Flatten nested intermediateArr into a 1-dimensional array.
   let formattedArrangement = [];
-  intermediateArr.forEach(
-    a => (formattedArrangement = formattedArrangement.concat(a))
-  );
+  intermediateArr.forEach(a => {
+    formattedArrangement = formattedArrangement.concat(_.shuffle(a));
+  });
 
   return formattedArrangement;
 };
