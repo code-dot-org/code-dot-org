@@ -935,7 +935,7 @@ class Pond extends React.Component {
                 <Button
                   style={styles.playAgainButton}
                   onClick={() => {
-                    resetTraining();
+                    resetTraining(state);
                     toMode(Modes.Words);
                   }}
                 >
