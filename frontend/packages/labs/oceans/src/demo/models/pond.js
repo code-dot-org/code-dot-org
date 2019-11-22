@@ -33,10 +33,10 @@ const predictAllFish = state => {
 };
 
 const arrangeFish = fishes => {
-  let fishArrangement = formatArrangement();
+  let fishPositions = formatArrangement();
 
   fishes.forEach(fish => {
-    const pos = fishArrangement.shift();
+    const pos = fishPositions.shift();
     const x = pos[0] * 140 - 50;
     const y = pos[1] * 150;
 
@@ -44,12 +44,16 @@ const arrangeFish = fishes => {
   });
 };
 
+// Describes the 20 possible fish positions on the screen, where the value describes
+// that position's priority. 0 will be filled first, then 1, etc.
 const arrangement = [
   [2, 1, 0, 0, 0, 1, 2],
   [2, 1, 0, 0, 0, 1, 2],
   [2, 1, 0, , 0, 1, 2]
 ];
 
+// Reformats the arrangement constant into a 1-dimensional array of x-y coordinates,
+// ordered in priority order (e.g., the spots to fill first appear first in the array).
 const formatArrangement = () => {
   let intermediateArr = [];
   arrangement.forEach((row, rowIdx) => {
@@ -66,6 +70,7 @@ const formatArrangement = () => {
     });
   });
 
+  // Flatten nested intermediateArr into a 1-dimensional array.
   let formattedArrangement = [];
   intermediateArr.forEach(
     a => (formattedArrangement = formattedArrangement.concat(a))
