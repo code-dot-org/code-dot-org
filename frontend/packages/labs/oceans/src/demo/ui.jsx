@@ -927,7 +927,7 @@ class Pond extends React.Component {
     const state = getState();
 
     return (
-      <Body onClick={e => this.onPondClick(e)}>
+      <Body onClick={this.onPondClick}>
         <Button
           onClick={() => {
             let showRecallFish = !state.showRecallFish;
