@@ -917,11 +917,161 @@ let Predict = class Predict extends React.Component {
 };
 Predict = Radium(Predict);
 
+class PondPanel extends React.Component {
+  render() {
+    const state = getState();
+
+    const maxExplainValue = state.showRecallFish
+      ? state.pondRecallFishMaxExplainValue
+      : state.pondFishMaxExplainValue;
+
+    return (
+      <div>
+        {!state.pondClickedFish && (
+          <div style={styles.pondPanelRight}>
+            {state.pondExplainGeneralSummary && (
+              <div>
+                <div style={{marginBottom: 20}}>
+                  These were the most important fish parts:
+                </div>
+                {state.pondExplainGeneralSummary.slice(0, 5).map((f, i) => (
+                  <div key={i}>
+                    {f.importance > 0 && (
+                      <div style={{position: 'relative', height: 40}}>
+                        &nbsp;
+                        <div
+                          style={{
+                            position: 'absolute',
+                            top: 0,
+                            left: '0%',
+                            width:
+                              (Math.abs(f.importance) /
+                                state.pondExplainGeneralSummary[0].importance) *
+                                100 +
+                              '%',
+                            height: 30,
+                            backgroundColor: colors.green
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          style={{
+                            position: 'absolute',
+                            top: 4,
+                            left: '3%',
+                            textAlign: 'right'
+                          }}
+                        >
+                          {friendlyNameForFishPart(f.partType)}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                ))}
+                <div style={{marginTop: 20}}>
+                  Click individual fish to see their information.
+                </div>
+              </div>
+            )}
+          </div>
+        )}
+        {state.pondClickedFish && (
+          <div
+            style={
+              state.pondPanelSide === 'left'
+                ? styles.pondPanelLeft
+                : styles.pondPanelRight
+            }
+          >
+            {state.pondExplainFishSummary && (
+              <div>
+                <div style={{marginBottom: 20}}>
+                  These were the most important fish parts in determining
+                  whether this fish was{' '}
+                  <span style={{color: colors.green}}>{state.word}</span> or{' '}
+                  <span style={{color: colors.red}}>not {state.word}</span>.
+                </div>
+                {state.pondExplainFishSummary.slice(0, 4).map((f, i) => (
+                  <div key={i}>
+                    {f.impact < 0 && (
+                      <div style={{position: 'relative', height: 40}}>
+                        &nbsp;
+                        <div
+                          style={{
+                            position: 'absolute',
+                            top: 0,
+                            left: '50%',
+                            width:
+                              ((Math.abs(f.impact) /
+                                maxExplainValue) *
+                                100) /
+                                2 +
+                              '%',
+                            height: 30,
+                            backgroundColor: colors.green
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          style={{
+                            position: 'absolute',
+                            top: 4,
+                            left: '53%'
+                          }}
+                        >
+                          {friendlyNameForFishPart(f.partType)}
+                        </div>
+                      </div>
+                    )}
+                    {f.impact > 0 && (
+                      <div style={{position: 'relative', height: 40}}>
+                        &nbsp;
+                        <div
+                          style={{
+                            position: 'absolute',
+                            top: 0,
+                            right: '50%',
+                            width:
+                              ((Math.abs(f.impact) /
+                                maxExplainValue) *
+                                100) /
+                                2 +
+                              '%',
+                            height: 30,
+                            backgroundColor: colors.red
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div
+                          style={{
+                            position: 'absolute',
+                            top: 4,
+                            width: '47%',
+                            textAlign: 'right'
+                          }}
+                        >
+                          {friendlyNameForFishPart(f.partType)}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+    );
+  }
+}
+
 let Pond = class Pond extends React.Component {
   constructor(props) {
     super(props);
-    this.summary = null;
-    this.fishSummary = null;
+    setState({pondExplainGeneralSummary: null, pondExplainFishSummary: null});
   }
 
   toggleRecall = () => {
@@ -999,13 +1149,12 @@ let Pond = class Pond extends React.Component {
             const clickedFish = fishCollection.find(
               f => f.id === fishBound.fishId
             );
-            this.fishSummary = state.trainer.explainFish(clickedFish);
+            setState({pondExplainFishSummary: state.trainer.explainFish(clickedFish)});
             if (normalizedClickX < constants.canvasWidth / 2) {
               setState({pondPanelSide: 'right'});
             } else {
               setState({pondPanelSide: 'left'});
             }
-            console.log(this.fishSummary);
           }
         }
       });
@@ -1026,16 +1175,12 @@ let Pond = class Pond extends React.Component {
       setState({pondPanelShowing: !state.pondPanelShowing});
 
       const firstFishFieldInfos = state.pondFish[0].fieldInfos;
-      this.summary = state.trainer.summarize(firstFishFieldInfos);
-      console.log('summary', this.summary);
+      setState({pondExplainGeneralSummary: state.trainer.summarize(firstFishFieldInfos)});
     }
   }
 
   render() {
     const state = getState();
-    const maxExplainValue = state.showRecallFish
-      ? state.pondRecallFishMaxExplainValue
-      : state.pondFishMaxExplainValue;
 
     return (
       <Body onClick={e => this.onPondClick(e)}>
@@ -1064,141 +1209,8 @@ let Pond = class Pond extends React.Component {
           />
         </div>
         <img style={styles.pondBot} src={aiBotClosed} />
-        {state.pondPanelShowing && !state.pondClickedFish && (
-          <div style={styles.pondPanelRight}>
-            {this.summary && (
-              <div>
-                <div style={{marginBottom: 20}}>
-                  These were the most important fish parts:
-                </div>
-                {this.summary.slice(0, 5).map((f, i) => (
-                  <div key={i}>
-                    {f.importance > 0 && (
-                      <div style={{position: 'relative', height: 40}}>
-                        &nbsp;
-                        <div
-                          style={{
-                            position: 'absolute',
-                            top: 0,
-                            left: '0%',
-                            width:
-                              (Math.abs(f.importance) /
-                                this.summary[0].importance) *
-                                100 +
-                              '%',
-                            height: 30,
-                            backgroundColor: colors.green
-                          }}
-                        >
-                          &nbsp;
-                        </div>
-                        <div
-                          style={{
-                            position: 'absolute',
-                            top: 4,
-                            left: '3%',
-                            textAlign: 'right'
-                          }}
-                        >
-                          {friendlyNameForFishPart(f.partType)}
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                ))}
-                <div style={{marginTop: 20}}>
-                  Click individual fish to see their information.
-                </div>
-              </div>
-            )}
-          </div>
-        )}
-        {state.pondPanelShowing && state.pondClickedFish && (
-          <div
-            style={
-              state.pondPanelSide === 'left'
-                ? styles.pondPanelLeft
-                : styles.pondPanelRight
-            }
-          >
-            {this.fishSummary && (
-              <div>
-                <div style={{marginBottom: 20}}>
-                  These were the most important fish parts in determining
-                  whether this fish was{' '}
-                  <span style={{color: colors.green}}>{state.word}</span> or{' '}
-                  <span style={{color: colors.red}}>not {state.word}</span>.
-                </div>
-                {this.fishSummary.slice(0, 4).map((f, i) => (
-                  <div key={i}>
-                    {f.impact < 0 && (
-                      <div style={{position: 'relative', height: 40}}>
-                        &nbsp;
-                        <div
-                          style={{
-                            position: 'absolute',
-                            top: 0,
-                            left: '50%',
-                            width:
-                              ((Math.abs(f.impact) /
-                                maxExplainValue) *
-                                100) /
-                                2 +
-                              '%',
-                            height: 30,
-                            backgroundColor: colors.green
-                          }}
-                        >
-                          &nbsp;
-                        </div>
-                        <div
-                          style={{
-                            position: 'absolute',
-                            top: 4,
-                            left: '53%'
-                          }}
-                        >
-                          {friendlyNameForFishPart(f.partType)}
-                        </div>
-                      </div>
-                    )}
-                    {f.impact > 0 && (
-                      <div style={{position: 'relative', height: 40}}>
-                        &nbsp;
-                        <div
-                          style={{
-                            position: 'absolute',
-                            top: 0,
-                            right: '50%',
-                            width:
-                              ((Math.abs(f.impact) /
-                                maxExplainValue) *
-                                100) /
-                                2 +
-                              '%',
-                            height: 30,
-                            backgroundColor: colors.red
-                          }}
-                        >
-                          &nbsp;
-                        </div>
-                        <div
-                          style={{
-                            position: 'absolute',
-                            top: 4,
-                            width: '47%',
-                            textAlign: 'right'
-                          }}
-                        >
-                          {friendlyNameForFishPart(f.partType)}
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
+        {state.pondPanelShowing && (
+          <PondPanel/>
         )}
         {state.canSkipPond && (
           <div>

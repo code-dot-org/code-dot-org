@@ -31,11 +31,12 @@ const initialState = {
   currentInstructionsPage: 0,
   pondFishBounds: null,
   pondClickedFish: null,
-  guideDismissals: [],
-  guideShowing: false,
   pondPanelShowing: false,
   pondPanelSide: null,
   pondFishMaxExplainValue: 1,
+  pondRecallFishMaxExplainValue: 1,
+  guideDismissals: [],
+  guideShowing: false,
 };
 let state = {...initialState};
 
