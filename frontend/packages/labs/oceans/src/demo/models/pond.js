@@ -6,14 +6,21 @@ import constants, {ClassType} from '../constants';
 export const init = async () => {
   const state = getState();
   let fishWithConfidence = await predictAllFish(state);
-  setState({totalPondFish: fishWithConfidence.length});
   fishWithConfidence = _.sortBy(fishWithConfidence, ['confidence']);
-  const pondFishWithConfidence = fishWithConfidence.splice(
+  const fishByClassType = _.groupBy(
+    fishWithConfidence,
+    fish => fish.getResult().predictedClassId
+  );
+
+  let pondFish = fishByClassType[ClassType.Like];
+  setState({totalPondFish: pondFish.length});
+  pondFish = pondFish.splice(0, constants.maxPondFish);
+  const recallFish = fishByClassType[ClassType.Dislike].splice(
     0,
     constants.maxPondFish
   );
-  arrangeFish(pondFishWithConfidence);
-  setState({pondFish: pondFishWithConfidence});
+  arrangeFish(pondFish);
+  setState({pondFish, recallFish});
 };
 
 const predictAllFish = state => {
@@ -21,10 +28,8 @@ const predictAllFish = state => {
     let fishWithConfidence = [];
     state.fishData.map((fish, index) => {
       state.trainer.predict(fish).then(res => {
-        if (res.predictedClassId === ClassType.Like) {
-          fish.setResult(res);
-          fishWithConfidence.push(fish);
-        }
+        fish.setResult(res);
+        fishWithConfidence.push(fish);
 
         if (index === state.fishData.length - 1) {
           resolve(fishWithConfidence);
@@ -34,7 +39,7 @@ const predictAllFish = state => {
   });
 };
 
-const arrangeFish = fishes => {
+export const arrangeFish = fishes => {
   let fishPositions = formatArrangement();
 
   fishes.forEach(fish => {

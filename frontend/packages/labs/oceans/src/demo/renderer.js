@@ -495,12 +495,12 @@ const drawPredictBot = state => {
 
 // Draw the fish for pond mode.
 const drawPondFishImages = () => {
-  const canvas = getState().canvas;
-  const ctx = canvas.getContext('2d');
-
+  const state = getState();
+  const ctx = state.canvas.getContext('2d');
+  const fishes = state.showRecallFish ? state.recallFish : state.pondFish;
   const fishBounds = [];
 
-  getState().pondFish.forEach(fish => {
+  fishes.forEach(fish => {
     const pondClickedFish = getState().pondClickedFish;
     const pondClickedFishUs = pondClickedFish && fish.id === pondClickedFish.id;
 
