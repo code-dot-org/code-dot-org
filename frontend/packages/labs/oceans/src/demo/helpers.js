@@ -171,9 +171,9 @@ export const finishMovement = (t, pause = true) => {
   });
 };
 
-export const resetTraining = () => {
+export const resetTraining = state => {
+  state.trainer.clearAll();
   setState({
-    trainer: null,
     yesCount: 0,
     noCount: 0
   });
