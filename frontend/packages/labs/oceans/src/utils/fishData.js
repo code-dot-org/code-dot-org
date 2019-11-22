@@ -426,6 +426,7 @@ const fishComponents = {
       mouthAnchor: [2, 15],
       pectoralFinBackAnchor: [10, 15],
       pectoralFinFrontAnchor: [38, 15],
+      // Below are anchor points for a different positioning of the pectoral fins
       //pectoralFinBackAnchor: [30, 55],
       //pectoralFinFrontAnchor: [52, 58],
       dorsalFinAnchor: [26, 10],
