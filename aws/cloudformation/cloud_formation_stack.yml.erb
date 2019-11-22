@@ -108,8 +108,7 @@ Resources:
               - 'logs:PutRetentionPolicy'
               - 'logs:PutLogEvents'
             Resource:
-              - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:<%=environment%>-syslog"
-              - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:<%=environment%>-syslog:log-stream:*"
+              - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:<%=environment%>-*"
               - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:${AWS::StackName}"
               - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:${AWS::StackName}:log-stream:*"
           # Put custom metrics to CloudWatch.

@@ -6,5 +6,4 @@ default['cdo-mysql'] = {
     admin: 'mysql2://admin:admin@127.0.0.1:6032'
   }
 }
-default['cdo-secrets'] = {
-}
+default['cdo-secrets'] = {}

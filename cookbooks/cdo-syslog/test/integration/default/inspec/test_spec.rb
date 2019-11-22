@@ -18,13 +18,3 @@ end
 describe file('/var/log/syslog.1') do
   its(:content) {should match 'hello456'}
 end
-
-describe command("service restart cloudwatch-logger") do
-  its(:exit_status) {should eq 0}
-end
-
-describe file('/var/log/upstart/cloudwatch-logger.log') do
-  its(:content) {should match 'hello123'}
-  its(:content) {should match 'hello456'}
-  its(:content) {should match 'cwlogs.push.publisher'}
-end

@@ -26,6 +26,7 @@ rescue Resolv::ResolvError
 end
 
 writer = URI.parse(node['cdo-secrets']['db_writer'] || 'mysql2://root@localhost/')
+writer.hostname = '127.0.0.1' if writer.hostname == 'localhost'
 reader = URI.parse((node['cdo-secrets']['db_reader'] || writer).to_s)
 
 # If this is an Aurora cluster, resolve instance-endpoint hostnames
@@ -105,3 +106,5 @@ end
 node.override['cdo-secrets']['db_writer'] = writer.dup.tap {|r| r.hostname = '127.0.0.1'; r.port = proxy_port}.to_s
 node.override['cdo-secrets']['db_reader'] = reader.dup.tap {|r| r.hostname = '127.0.0.1'; r.port = proxy_port}.to_s
 node.override['cdo-secrets']['db_proxy_admin'] = admin.to_s
+# Send log to CloudWatch.
+node.default['cdo-cloudwatch-agent']['log_files']['proxysql'] = '/var/lib/proxysql/proxysql.log'
