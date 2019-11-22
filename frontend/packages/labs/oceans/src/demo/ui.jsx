@@ -861,7 +861,20 @@ class Pond extends React.Component {
     super(props);
   }
 
-  onPondClick(e) {
+  toggleRecall = () => {
+    const state = getState();
+    const showRecallFish = !state.showRecallFish;
+    const fish = showRecallFish ? state.recallFish : state.pondFish;
+
+    // Don't call arrangeFish if fish have already been arranged.
+    if (!fish[0].getXY()) {
+      arrangeFish(fish);
+    }
+
+    setState({showRecallFish});
+  };
+
+  onPondClick = e => {
     // Don't allow pond clicks if a Guide is currently showing.
     if (getCurrentGuide()) {
       return;
@@ -921,22 +934,14 @@ class Pond extends React.Component {
         playSound('no');
       }
     }
-  }
+  };
 
   render() {
     const state = getState();
 
     return (
       <Body onClick={this.onPondClick}>
-        <Button
-          onClick={() => {
-            let showRecallFish = !state.showRecallFish;
-            arrangeFish(showRecallFish ? state.recallFish : state.pondFish);
-            setState({showRecallFish});
-          }}
-        >
-          Recall
-        </Button>
+        <Button onClick={this.toggleRecall}>Recall</Button>
         <img style={styles.pondBot} src={aiBotClosed} />
         {state.canSkipPond && (
           <div>
