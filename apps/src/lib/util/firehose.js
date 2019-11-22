@@ -368,7 +368,7 @@ function getSingleton() {
 }
 
 function putRecord(data, options) {
-  getSingleton().then(firehoseClient =>
+  return getSingleton().then(firehoseClient =>
     firehoseClient.putRecord(data, options)
   );
 }
