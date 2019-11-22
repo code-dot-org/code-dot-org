@@ -2,7 +2,6 @@ import 'idempotent-babel-polyfill';
 import _ from 'lodash';
 import {setState, getState} from '../state';
 import constants, {ClassType} from '../constants';
-import {randomInt} from '../helpers';
 
 export const init = async () => {
   const state = getState();
@@ -52,7 +51,7 @@ const arrangeFish = fishes => {
 const arrangement = [
   [2, 1, 0, 0, 0, 1, 2],
   [2, 1, 0, 0, 0, 1, 2],
-  [2, 1, 0, , 0, 1, 2]
+  [2, 1, 0, null, 0, 1, 2]
 ];
 
 // Reformats the arrangement constant into a 1-dimensional array of x-y coordinates,
