@@ -1,31 +1,23 @@
 #!/usr/bin/env ruby
-require_relative '../../dashboard/config/environment'
 require_relative '../../lib/cdo/only_one'
-require 'cdo/aws/s3'
-require 'csv'
+exit unless only_one_running?(__FILE__)
 
-def main
-  applications = []
+require_relative '../../dashboard/config/environment'
+require 'cdo/google_drive'
 
-  Pd::Application::Teacher1920Application.find_each do |app|
-    applications.push ([
-      app.course,
-      app.regional_partner.try(:name),
-      app.status,
-      app.scholarship_status,
-      app.school_type,
-      app.sanitize_form_data_hash[:principal_pay_fee],
-      app.email,
-      app.created_at
-    ])
-  end
+applications = [%w(course regional_partner status scholarship_status school_type pay_fee email created_at)]
 
-  output = CSV.generate(col_sep: "\t") do |csv|
-    csv << %w(course regional_partner status scholarship_status school_type pay_fee email created_at)
-    applications.each {|row| csv << row}
-  end
-
-  AWS::S3.upload_to_bucket('cdo-data-sharing-internal', 'pd_applications.tsv', output, no_random: true)
+Pd::Application::Teacher2021Application.find_each do |app|
+  applications << [
+    app.course,
+    app.regional_partner.try(:name),
+    app.status,
+    app.scholarship_status,
+    app.school_type,
+    app.sanitize_form_data_hash[:principal_pay_fee],
+    app.email,
+    app.created_at
+  ]
 end
 
-main if only_one_running?(__FILE__)
+Google::Drive.new.add_sheet_to_spreadsheet(applications, "2019-20 Teacher Applications", "all_apps (auto)")
