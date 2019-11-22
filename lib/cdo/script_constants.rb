@@ -12,7 +12,7 @@ module ScriptConstants
 
   MINECRAFT_TEACHER_DASHBOARD_NAME = 'Minecraft Adventurer'.freeze
   MINECRAFT_DESIGNER_TEACHER_DASHBOARD_NAME = 'Minecraft Designer'.freeze
-  HOC_TEACHER_DASHBOARD_NAME = 'classicmaze'.freeze
+  HOC_TEACHER_DASHBOARD_NAME = 'Classic Maze - Angry Bird'.freeze
 
   # The order here matters. The first category a script appears under will be
   # the category it belongs to in course dropdowns. The order of scripts within
