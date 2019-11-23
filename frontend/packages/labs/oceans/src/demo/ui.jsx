@@ -1365,10 +1365,8 @@ class Guide extends React.Component {
                   )}
                   <div style={styles.guideTypingText}>
                     <Typist
-                      avgTypingDelay={0}
-                      stdTypingDelay={0}
-                      //avgTypingDelay={35}
-                      //stdTypingDelay={15}
+                      avgTypingDelay={35}
+                      stdTypingDelay={15}
                       cursor={{show: false}}
                       onTypingDone={this.onShowing}
                     >
