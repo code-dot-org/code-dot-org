@@ -1222,7 +1222,7 @@ let Pond = class Pond extends React.Component {
               icon={faInfo}
               style={{
                 ...styles.recallIcon,
-                ...styles.bgNeonBlue
+                ...(!state.pondPanelShowing ? styles.bgNeonBlue : {})
               }}
               onClick={this.onPondPanelButtonClick}
             />
