@@ -351,6 +351,31 @@ const styles = {
     left: '3%',
     textAlign: 'right'
   },
+  pondPanelGreenBar: {
+    position: 'absolute',
+    top: 0,
+    left: '50%',
+    height: 30,
+    backgroundColor: colors.green
+  },
+  pondPanelGreenBarText: {
+    position: 'absolute',
+    top: 4,
+    left: '53%'
+  },
+  pondPanelRedBar: {
+    position: 'absolute',
+    top: 0,
+    right: '50%',
+    height: 30,
+    backgroundColor: colors.red
+  },
+  pondPanelRedBarText: {
+    position: 'absolute',
+    top: 4,
+    width: '47%',
+    textAlign: 'right'
+  },
   pondPanelPostText: {
     marginTop: 20
   },
@@ -999,7 +1024,7 @@ class PondPanel extends React.Component {
           >
             {state.pondExplainFishSummary && (
               <div>
-                <div style={{marginBottom: 20}}>
+                <div style={styles.pondPanelPreText}>
                   These were the most important fish parts in determining
                   whether this fish was{' '}
                   <span style={{color: colors.green}}>{state.word}</span> or{' '}
@@ -1008,60 +1033,39 @@ class PondPanel extends React.Component {
                 {state.pondExplainFishSummary.slice(0, 4).map((f, i) => (
                   <div key={i}>
                     {f.impact < 0 && (
-                      <div style={{position: 'relative', height: 40}}>
+                      <div style={styles.pondPanelRow}>
                         &nbsp;
                         <div
                           style={{
-                            position: 'absolute',
-                            top: 0,
-                            left: '50%',
+                            ...styles.pondPanelGreenBar,
                             width:
                               ((Math.abs(f.impact) / maxExplainValue) * 100) /
                                 2 +
-                              '%',
-                            height: 30,
-                            backgroundColor: colors.green
+                              '%'
                           }}
                         >
                           &nbsp;
                         </div>
-                        <div
-                          style={{
-                            position: 'absolute',
-                            top: 4,
-                            left: '53%'
-                          }}
-                        >
+                        <div style={styles.pondPanelGreenBarText}>
                           {friendlyNameForFishPart(f.partType)}
                         </div>
                       </div>
                     )}
                     {f.impact > 0 && (
-                      <div style={{position: 'relative', height: 40}}>
+                      <div style={styles.pondPanelRow}>
                         &nbsp;
                         <div
                           style={{
-                            position: 'absolute',
-                            top: 0,
-                            right: '50%',
+                            ...styles.pondPanelRedBar,
                             width:
                               ((Math.abs(f.impact) / maxExplainValue) * 100) /
                                 2 +
-                              '%',
-                            height: 30,
-                            backgroundColor: colors.red
+                              '%'
                           }}
                         >
                           &nbsp;
                         </div>
-                        <div
-                          style={{
-                            position: 'absolute',
-                            top: 4,
-                            width: '47%',
-                            textAlign: 'right'
-                          }}
-                        >
+                        <div style={styles.pondPanelRedBarText}>
                           {friendlyNameForFishPart(f.partType)}
                         </div>
                       </div>
