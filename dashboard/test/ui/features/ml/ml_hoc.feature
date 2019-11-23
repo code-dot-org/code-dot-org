@@ -1,11 +1,12 @@
 Feature: Oceans ML HoC
 
+  @no_circle @no_mobile @no_safari
   Scenario: Fish vs. Trash
     # Training Screen
     Given I am on "http://studio.code.org/s/oceans/stage/1/puzzle/2?guide=off"
-    And I wait until element "button:contains(Fish)" is visible
-    Then I click selector "button:contains(Fish)" 100 times
-    Then I click selector "button:contains(Not Fish)" 100 times
+    And I wait until element "button:contains(Fish):eq(1)" is visible
+    Then I click selector "button:contains(Fish):eq(1)" 125 times
+    Then I click selector "button:contains(Not Fish)" 125 times
     Then I click selector "button:contains(Continue)" once I see it
 
     # Sorting Screen
@@ -16,6 +17,7 @@ Feature: Oceans ML HoC
     And I wait until element "button:contains(Continue)" is visible
     And I wait for 3 seconds
 
+  @no_circle @no_mobile @no_safari
   Scenario: Sea Creatures
     # Initial Screen
     Given I am on "http://studio.code.org/s/oceans/stage/1/puzzle/3?guide=off"
@@ -26,8 +28,8 @@ Feature: Oceans ML HoC
     # Training Screen
     Given I am on "http://studio.code.org/s/oceans/stage/1/puzzle/4?guide=off"
     And I wait until element "button:contains(Yes)" is visible
-    Then I click selector "button:contains(Yes)" 100 times
-    Then I click selector "button:contains(No)" 100 times
+    Then I click selector "button:contains(Yes)" 125 times
+    Then I click selector "button:contains(No)" 125 times
     Then I click selector "button:contains(Continue)" once I see it
 
     # Sorting Screen
@@ -38,13 +40,14 @@ Feature: Oceans ML HoC
     And I wait until element "button:contains(Continue)" is visible
     And I wait for 3 seconds
 
+  @no_circle @no_mobile @no_safari
   Scenario: Short Word List
     # Training Screen
     Given I am on "http://studio.code.org/s/oceans/stage/1/puzzle/6?guide=off"
     Then I click selector "button:contains(Blue)" once I see it
-    And I wait until element "button:contains(Blue)" is visible
-    Then I click selector "button:contains(Blue)" 100 times
-    Then I click selector "button:contains(Not Blue)" 100 times
+    And I wait until element "button:contains(Blue):eq(1)" is visible
+    Then I click selector "button:contains(Blue):eq(1)" 125 times
+    Then I click selector "button:contains(Not Blue)" 125 times
     Then I click selector "button:contains(Continue)" once I see it
 
     # Sorting Screen
@@ -55,13 +58,14 @@ Feature: Oceans ML HoC
     And I wait until element "button:contains(Continue)" is visible
     And I wait for 3 seconds
 
+  @no_circle @no_mobile @no_safari
   Scenario: Long Word List
     # Training Screen
     Given I am on "http://studio.code.org/s/oceans/stage/1/puzzle/8?guide=off"
     Then I click selector "button:contains(Fierce)" once I see it
-    And I wait until element "button:contains(Fierce)" is visible
-    Then I click selector "button:contains(Fierce)" 100 times
-    Then I click selector "button:contains(Not Fierce)" 100 times
+    And I wait until element "button:contains(Fierce):eq(1)" is visible
+    Then I click selector "button:contains(Fierce):eq(1)" 125 times
+    Then I click selector "button:contains(Not Fierce)" 125 times
     Then I click selector "button:contains(Continue)" once I see it
 
     # Sorting Screen
