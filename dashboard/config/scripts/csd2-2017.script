@@ -17,7 +17,7 @@ stage 'Exploring Websites', flex_category: 'csd2_1'
 level 'CSD U2 L1 Overview', named: true
 level 'CSD U2 Top Websites', named: true
 
-stage 'Websites for Expression ', flex_category: 'csd2_1'
+stage 'Websites for Expression', flex_category: 'csd2_1'
 level 'CSD U2 L2 Overview', named: true
 level 'CSD U2 Expression Exemplars', named: true
 

@@ -143,7 +143,7 @@ level 'courseD_artist_4_2018_2019'
 level 'courseD_artist_5_2018_2019'
 level 'courseD_artist_6_2018_2019'
 
-stage 'Concept Practice with Minecraft ', flex_category: 'csf_loops'
+stage 'Concept Practice with Minecraft', flex_category: 'csf_loops'
 level 'Overworld Move to Sheep_2019'
 level 'Overworld Chop Tree_2019'
 level 'Overworld Shear Sheep_2019'

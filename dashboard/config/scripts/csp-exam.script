@@ -3,7 +3,7 @@ hideable_stages true
 student_detail_progress_view true
 has_verified_resources true
 
-stage 'Unit 1 Assessment 1 - Binary and Ascii ', lockable: true
+stage 'Unit 1 Assessment 1 - Binary and Ascii', lockable: true
 level 'CSP Unit 1 Ch1 Cumulative Assessment MC Group v2_exam_prep', assessment: true
 
 stage 'Unit 1 Assessment 2 - Internet Protocols, TCP/IP, DNS, HTTP, etc', lockable: true

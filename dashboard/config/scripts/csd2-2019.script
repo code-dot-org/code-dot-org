@@ -18,7 +18,7 @@ stage 'Exploring Websites', flex_category: 'csd2_1'
 level 'CSD U2L01 TFMD_2019', named: true
 level 'CSD U2 Top Websites_2018_2019', named: true
 
-stage 'Websites for Expression ', flex_category: 'csd2_1'
+stage 'Websites for Expression', flex_category: 'csd2_1'
 level 'CSD U2L02 TFMD_2019', named: true
 level 'CSD U2 Expression Exemplars_2018_2019', named: true
 
