@@ -22,7 +22,8 @@ affected_users = have_race.
 affected_users.all.each do |user|
   # we can ignore users who have not signed in since
   # https://github.com/code-dot-org/code-dot-org/pull/28635 was merged.
-  old_account = user.current_sign_in_at.present? && user.current_sign_in_at < "2019-05-17T23:39:33Z".to_datetime
+  old_account = user.current_sign_in_at.present? &&
+    user.current_sign_in_at < "2019-05-17T23:39:33Z".to_datetime
   next if old_account
 
   # Of the users (mostly students) with URM data but no geolocation, about 60%
@@ -32,7 +33,8 @@ affected_users.all.each do |user|
   # proportion of students with data we're wiping from 13% to 8%.
   has_us_teacher = user.student? &&
     user.teachers.any? do |teacher|
-      teacher.within_united_states? || teacher.user_school_infos.any? {|usi| usi.school_info.usa?}
+      teacher.within_united_states? ||
+        teacher.user_school_infos.any? {|usi| usi.school_info.usa?}
     end
 
   next if has_us_teacher
