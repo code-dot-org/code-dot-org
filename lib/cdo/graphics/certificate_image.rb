@@ -10,28 +10,23 @@ def create_certificate_image2(image_path, name, params={})
   name = name.to_s.force_8859_to_utf8.gsub(/@/, '\@').strip
   name = ' ' if name.empty?
 
-  # Load the certificate template
   background = Magick::Image.read(image_path).first
 
-  # The user's name will be put into an image with a transparent background.
-  # This uses 'pango', the OS's text layout engine, in order to dynamically
-  # select the correct font. This is important for handling non-latin
-  # languages.
-  pango_markup = "pango:<span foreground='#575757' font_weight='bold' font_family='Times'>#{name}</span>"
-  name_overlay = Magick::Image.read(pango_markup) do
-    self.background_color = 'none'
-    self.pointsize = 68
-  end.first.trim!
-
-  # x,y offsets
   y = params[:y] || 0
   x = params[:x] || 0
-  # Combine the name image on top of the certificate template image
-  background.composite!(name_overlay, Magick::CenterGravity, x, y, Magick::OverCompositeOp)
+  width = params[:width] || background.columns
+  height = params[:height] || background.rows
 
-  # Free the memory in order to avoid memory leaks (images are stored in /tmp
-  # until destroyed)
-  name_overlay.destroy!
+  draw = Magick::Draw.new
+  draw.annotate(background, width, height, x, y, name) do
+    draw.gravity = Magick::CenterGravity
+    self.pointsize = 90
+    self.font_family = 'Times'
+    self.font_weight = Magick::BoldWeight
+    self.stroke = 'none'
+    self.fill = 'rgb(87,87,87)'
+  end
+
   background
 end
 
