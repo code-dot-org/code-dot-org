@@ -132,8 +132,16 @@ def localize_level_content
     end
   end
 
-  File.open(File.join(I18N_SOURCE_DIR, "dashboard/block_categories.json"), 'w') do |file|
-    file.write(JSON.pretty_generate(block_category_strings.sort.to_h))
+  File.open(File.join(I18N_SOURCE_DIR, "dashboard/block_categories.yml"), 'w') do |file|
+    # Format strings for consumption by the rails i18n engine
+    formatted_data = {
+      "en" => {
+        "data" => {
+          "block_categories" => block_category_strings.sort.to_h
+        }
+      }
+    }
+    file.write(I18nScriptUtils.to_crowdin_yaml(formatted_data))
   end
 end
 
