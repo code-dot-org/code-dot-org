@@ -8,7 +8,7 @@ const {
 const {generateOcean, filterOcean} = require('../../src/utils/generateOcean');
 const SimpleTrainer = require('../../src/utils/SimpleTrainer');
 const SVMTrainer = require('../../src/utils/SVMTrainer');
-import { ClassType } from '../../src/demo/constants';
+import {ClassType} from '../../src/demo/constants';
 
 const trial = async function(trainSize, testSize, trainer, labelFn) {
   const trainingOcean = generateOcean(trainSize);
@@ -154,7 +154,7 @@ const PartKey = Object.freeze({
 });
 
 const NUM_TRIALS = 5;
-const TRAIN_SIZE = 100;
+const TRAIN_SIZE = 110;
 
 describe('Model quality test', () => {
   beforeAll(() => {
@@ -196,8 +196,9 @@ describe('Model quality test', () => {
       console.log(`${shape}`);
       const normalizedId = (1.0 * id) / (Object.keys(attribute).length - 1);
       const labelFn = fish =>
-        floatEquals(fish[partKey].knnData[knnDataIndex], normalizedId) ? ClassType.Like : ClassType.Dislike;
-
+        floatEquals(fish[partKey].knnData[knnDataIndex], normalizedId)
+          ? ClassType.Like
+          : ClassType.Dislike;
       const result = await performTrials({
         numTrials: NUM_TRIALS,
         trainSize: trainSize,
@@ -210,7 +211,6 @@ describe('Model quality test', () => {
     }
   });
 
-
   test('test eyes', async () => {
     const partData = fishData.eyes;
     const partKey = PartKey.EYE;
@@ -219,7 +219,8 @@ describe('Model quality test', () => {
     for (const [name, data] of Object.entries(partData)) {
       console.log(`${partKey} ${name}`);
       const id = data.index;
-      const labelFn = fish => (fish[partKey].index === id ? ClassType.Like : ClassType.Dislike);
+      const labelFn = fish =>
+        fish[partKey].index === id ? ClassType.Like : ClassType.Dislike;
       const result = await performTrials({
         numTrials: NUM_TRIALS,
         trainSize: trainSize,
@@ -229,7 +230,6 @@ describe('Model quality test', () => {
       analyzeConfusionMatrix(trainSize, result);
     }
   });
-
 
   test('test mouths', async () => {
     const partData = fishData.mouths;
@@ -239,7 +239,8 @@ describe('Model quality test', () => {
     for (const [name, data] of Object.entries(partData)) {
       console.log(`${partKey} ${name}`);
       const id = data.index;
-      const labelFn = fish => (fish[partKey].index === id ? ClassType.Like : ClassType.Dislike);
+      const labelFn = fish =>
+        fish[partKey].index === id ? ClassType.Like : ClassType.Dislike;
       const result = await performTrials({
         numTrials: NUM_TRIALS,
         trainSize: trainSize,
@@ -249,7 +250,6 @@ describe('Model quality test', () => {
       analyzeConfusionMatrix(trainSize, result);
     }
   });
-
 
   test('test tails', async () => {
     const partData = fishData.tails;
@@ -273,7 +273,6 @@ describe('Model quality test', () => {
     }
   });
 
-
   test('test mouth expressions', async () => {
     const partKey = PartKey.MOUTH;
     const knnDataIndex = 2;
@@ -286,7 +285,9 @@ describe('Model quality test', () => {
       const normalizedId =
         (1.0 * expressionId) / (Object.keys(MouthExpression).length - 1);
       const labelFn = fish =>
-        floatEquals(fish[partKey].knnData[knnDataIndex], normalizedId) ? ClassType.Like : ClassType.Dislike;
+        floatEquals(fish[partKey].knnData[knnDataIndex], normalizedId)
+          ? ClassType.Like
+          : ClassType.Dislike;
       const result = await performTrials({
         numTrials: NUM_TRIALS,
         trainSize: trainSize,
@@ -296,7 +297,6 @@ describe('Model quality test', () => {
       analyzeConfusionMatrix(trainSize, result);
     }
   });
-
 
   test('test shark teeth', async () => {
     const partData = fishData.mouths;
@@ -311,7 +311,8 @@ describe('Model quality test', () => {
       `mouth names: ${JSON.stringify(mouthNames)} ids: ${JSON.stringify(ids)}`
     );
 
-    const labelFn = fish => (ids.includes(fish[partKey].index) ? ClassType.Like : ClassType.Dislike);
+    const labelFn = fish =>
+      ids.includes(fish[partKey].index) ? ClassType.Like : ClassType.Dislike;
     const result = await performTrials({
       numTrials: NUM_TRIALS,
       trainSize: trainSize,
@@ -320,7 +321,6 @@ describe('Model quality test', () => {
     });
     analyzeConfusionMatrix(trainSize, result);
   });
-
 
   test('test SVM explanation', async () => {
     const partKey = PartKey.MOUTH;
@@ -331,7 +331,9 @@ describe('Model quality test', () => {
     const normalizedId =
       (1.0 * expression) / (Object.keys(MouthExpression).length - 1);
     const labelFn = fish =>
-      floatEquals(fish[partKey].knnData[knnDataIndex], normalizedId) ? ClassType.Like : ClassType.Dislike;
+      floatEquals(fish[partKey].knnData[knnDataIndex], normalizedId)
+        ? ClassType.Like
+        : ClassType.Dislike;
 
     const trainingOcean = generateOcean(TRAIN_SIZE);
     const trainingLabels = trainingOcean.map(fish => labelFn(fish));
@@ -352,12 +354,14 @@ describe('Model quality test', () => {
     for (const entry of summary) {
       sum += entry.importance;
     }
-    expect(sum).toBeCloseTo(1, 3) // Should add up to 1, allowing for floating point error
+    expect(sum).toBeCloseTo(1, 3); // Should add up to 1, allowing for floating point error
 
     for (const fish of testOcean) {
       // Sanity check our translation logic for removing bias term - should generate same predictions
       const predictResult = (await trainer.predict(fish)).predictedClassId;
-      const translatedPredictResult = trainer.translatedPredict(fish.getKnnData());
+      const translatedPredictResult = trainer.translatedPredict(
+        fish.getKnnData()
+      );
       expect(predictResult).toEqual(translatedPredictResult);
 
       // Mouths should have highest impact since we're selecting for smiling fish
