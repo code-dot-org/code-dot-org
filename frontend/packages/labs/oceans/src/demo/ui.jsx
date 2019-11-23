@@ -32,7 +32,8 @@ import {
   faForward,
   faEraser,
   faCheck,
-  faBan
+  faBan,
+  faInfo
 } from '@fortawesome/free-solid-svg-icons';
 
 const styles = {
@@ -350,6 +351,9 @@ const styles = {
     padding: 6,
     marginLeft: 8,
     backgroundColor: colors.lightGrey
+  },
+  bgNeonBlue: {
+    backgroundColor: colors.neonBlue
   },
   bgRed: {
     backgroundColor: colors.red
@@ -928,7 +932,7 @@ class PondPanel extends React.Component {
     return (
       <div>
         {!state.pondClickedFish && (
-          <div style={styles.pondPanelRight}>
+          <div style={styles.pondPanelLeft}>
             {state.pondExplainGeneralSummary && (
               <div>
                 <div style={{marginBottom: 20}}>
@@ -1184,13 +1188,15 @@ let Pond = class Pond extends React.Component {
 
     return (
       <Body onClick={e => this.onPondClick(e)}>
-        <img
-          src={pondPanelButton}
-          style={styles.pondPanelButton}
-          onClick={e => this.onPondPanelButtonClick(e)}
-        />
         <div style={styles.recallContainer}>
-          Show
+          <FontAwesomeIcon
+            icon={faInfo}
+            style={{
+              ...styles.recallIcon,
+              ...(!state.showRecallFish ? styles.bgNeonBlue : {})
+            }}
+            onClick={this.onPondPanelButtonClick}
+          />
           <FontAwesomeIcon
             icon={faCheck}
             style={{
