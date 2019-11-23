@@ -3888,6 +3888,8 @@ en:
               description_teacher: In this lesson, students continue to use HTML to structure text on web pages, this time with headings.  Students learn how the different heading elements are displayed by default and practice using them to create page and section titles.  Students then start to decide how they will organize their content on their own personal web pages.  In the last level, students begin the project that they will continue to work on throughout the unit.
             CSD Post-Course Survey:
               name: CSD Post-Course Survey
+            Websites for Expression:
+              name: Websites for Expression
         csp2-support:
           title: Unit 2 Online Professional Learning Course
           description_audience: ''
@@ -7566,6 +7568,8 @@ en:
               description_teacher: "Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\r\n"
             CS Discoveries Post-Course Survey:
               name: CS Discoveries Post-Course Survey
+            Websites for Expression:
+              name: Websites for Expression
         coursea-2018:
           title: Course A (2018)
           assignment_family_title: Course A
@@ -7852,6 +7856,8 @@ en:
               name: Relay Programming
             Graph Paper Programming:
               name: Graph Paper Programming
+            Concept Practice with Minecraft:
+              name: Concept Practice with Minecraft
         courseb-2018:
           title: Course B (2018)
           assignment_family_title: Course B
@@ -8114,6 +8120,8 @@ en:
               name: Unit 5 Assessment 4 - List Algorithms, Functions with Return Values
             Unit 5 Assessment 5 - Practice AP Pseudocode Questions (Variables, Procedures, Loops, Conditionals):
               name: Unit 5 Assessment 5 - Practice AP Pseudocode Questions (Variables, Procedures, Loops, Conditionals)
+            Unit 1 Assessment 1 - Binary and Ascii:
+              name: Unit 1 Assessment 1 - Binary and Ascii
           title: CS Principles AP Exam Prep
           description_audience: ''
           description_short: CS Principles AP Exam Prep
@@ -10991,6 +10999,8 @@ en:
               name: Post-Project Test
             CS Discoveries Post Course survey:
               name: CS Discoveries Post Course survey
+            Websites for Expression:
+              name: Websites for Expression
         csd3-2019:
           title: CSD Unit 3 - Animations and Games ('19-'20)
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
@@ -12898,6 +12908,8 @@ en:
               name: Peer Review and Final Touches
             Project - Website for a Purpose:
               name: Project - Website for a Purpose
+            Websites for Expression:
+              name: Websites for Expression
         csd3-pilot:
           title: CSD Unit 3 - Animations and Games (Pilot Version)
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
