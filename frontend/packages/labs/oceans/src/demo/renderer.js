@@ -502,16 +502,15 @@ const drawPredictBot = state => {
 const drawWordFishImages = () => {
   const canvas = getState().canvas;
   const ctx = canvas.getContext('2d');
-
   const state = getState();
-  state.wordFish.forEach(fish => {
-    const swayValue = (($time() * 360) / (20 * 1000)) % 360;
-    const swayMultipleX = 120;
-    const swayOffsetX =
-      Math.sin(((swayValue * Math.PI) / 180) * 2) * swayMultipleX;
-    const swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 3) / 3;
 
+  const fishScale = 0.7;
+
+  state.wordFish.forEach(fish => {
     const t = $time();
+    const swayValue = ((t * 360) / (20 * 1000)) % 360;
+    const swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 3) / 20;
+
     const xy = fish.getXY();
     if (!fish.startTime) {
       fish.startTime = t;
@@ -531,9 +530,8 @@ const drawWordFishImages = () => {
     const finalY = xy.y + swayOffsetY;
     fish.setXY({x: finalX, y: finalY});
 
-    drawSingleFish(fish, finalX, finalY, ctx, 0.75);
+    drawSingleFish(fish, finalX, finalY, ctx, fishScale);
   });
-  const lastFish = state.wordFish[state.wordFish.length - 1];
   let wordFish = state.wordFish;
   wordFish = wordFish.filter(
     f =>
@@ -553,9 +551,9 @@ const drawWordFishImages = () => {
     newFish.randomize();
     const lane = randomInt(
       0,
-      constants.canvasHeight / (0.75 * constants.fishCanvasHeight - 1)
+      Math.floor(constants.canvasHeight / (fishScale * constants.fishCanvasHeight)) - 1
     );
-    const y = lane * constants.fishCanvasHeight * 0.75;
+    const y = lane * constants.fishCanvasHeight * fishScale;
     newFish.setXY({x: -constants.fishCanvasWidth * 1.5, y});
     newFish.faceLeft = lane % 2 === 0 ? true : false;
     wordFish.push(newFish);
