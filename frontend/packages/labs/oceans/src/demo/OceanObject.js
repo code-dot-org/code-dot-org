@@ -372,8 +372,6 @@ export class FishOceanObject extends OceanObject {
     this.drawFishComponent(this.body, bodyAnchor, ctx);
     this.drawFishComponent(this.scales, bodyAnchor, ctx);
     this.drawFishComponent(this.pectoralFinFront, bodyAnchor, ctx);
-    //this.drawFishComponent(this.mouth, bodyAnchor, ctx);
-    //this.drawFishComponent(this.eye, bodyAnchor, ctx);
     this.drawFishFace(bodyAnchor, ctx);
     if (generateLogits) {
       this.generateLogitsAsync(fishCanvas);
