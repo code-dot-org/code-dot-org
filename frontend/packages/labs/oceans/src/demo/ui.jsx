@@ -1085,7 +1085,6 @@ class PondPanel extends React.Component {
 let Pond = class Pond extends React.Component {
   constructor(props) {
     super(props);
-    setState({pondExplainGeneralSummary: null, pondExplainFishSummary: null});
   }
 
   toggleRecall = e => {
@@ -1202,13 +1201,6 @@ let Pond = class Pond extends React.Component {
         pondPanelShowing: !state.pondPanelShowing,
         pondClickedFish: null
       });
-
-      // Since we aren't guaranteed that pondFish or recallFish will have fish
-      // in them, go to the complete set of 100 fishData.
-      const firstFishFieldInfos = state.fishData[0].fieldInfos; //state.pondFish[0].fieldInfos;
-      setState({
-        pondExplainGeneralSummary: state.trainer.summarize(firstFishFieldInfos)
-      });
     }
 
     e.stopPropagation();
@@ -1217,11 +1209,16 @@ let Pond = class Pond extends React.Component {
   render() {
     const state = getState();
 
+    const showInfoButton =
+      (state.appMode === AppMode.FishShort ||
+        state.appMode === AppMode.FishLong) &&
+      state.pondFish.length > 0 &&
+      state.recallFish.length > 0;
+
     return (
       <Body onClick={e => this.onPondClick(e)}>
         <div style={styles.recallContainer}>
-          {(state.appMode === AppMode.FishShort ||
-            state.appMode === AppMode.FishLong) && (
+          {showInfoButton && (
             <FontAwesomeIcon
               icon={faInfo}
               style={{

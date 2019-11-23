@@ -25,7 +25,9 @@ export const init = async () => {
     state.appMode === AppMode.FishShort ||
     state.appMode === AppMode.FishLong
   ) {
+    const firstFishFieldInfos = state.fishData[0].fieldInfos;
     setState({
+      pondExplainGeneralSummary: state.trainer.summarize(firstFishFieldInfos),
       pondFishMaxExplainValue: getMaxExplainValue(pondFish),
       pondRecallFishMaxExplainValue: getMaxExplainValue(recallFish)
     });
