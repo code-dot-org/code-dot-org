@@ -435,7 +435,13 @@ const fishComponents = {
       tailAnchor: [106, 34],
       scalesAnchor: [60, 7],
       knnData: [4626, BodyShape.OTHER],
-      type: FishBodyPart.BODY
+      type: FishBodyPart.BODY,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     star1: {
       src: star1_image,
@@ -447,7 +453,13 @@ const fishComponents = {
       tailAnchor: [93, 62],
       scalesAnchor: [73, 26],
       knnData: [4965, BodyShape.OTHER],
-      type: FishBodyPart.BODY
+      type: FishBodyPart.BODY,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     triangle2: {
       src: triangle2_image,
