@@ -303,7 +303,8 @@ const styles = {
     top: '59%',
     left: '50%',
     bottom: 0,
-    transform: 'translateX(-45%)'
+    transform: 'translateX(-45%)',
+    pointerEvents: 'none'
   },
   pondPanelButton: {
     position: 'absolute',
@@ -1197,7 +1198,10 @@ let Pond = class Pond extends React.Component {
       state.appMode === AppMode.FishShort ||
       state.appMode === AppMode.FishLong
     ) {
-      setState({pondPanelShowing: !state.pondPanelShowing});
+      setState({
+        pondPanelShowing: !state.pondPanelShowing,
+        pondClickedFish: null
+      });
 
       // Since we aren't guaranteed that pondFish or recallFish will have fish
       // in them, go to the complete set of 100 fishData.
