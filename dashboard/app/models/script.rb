@@ -1057,6 +1057,10 @@ class Script < ActiveRecord::Base
           end
 
         stage.assign_attributes(flex_category: stage_flex_category, lockable: stage_lockable)
+        # Even though stage_name has already been stripped of whitespace,
+        # stage.name might not have been stripped of whitespace, because
+        # find_or_create_by ignores trailing whitespace when comparing.
+        stage.name = stage.name.strip
         stage.save! if stage.changed?
 
         script_level_attributes[:stage_id] = stage.id
