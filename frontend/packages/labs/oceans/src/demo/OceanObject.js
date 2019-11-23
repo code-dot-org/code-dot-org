@@ -260,6 +260,27 @@ export class FishOceanObject extends OceanObject {
     return this.colorPalette;
   }
 
+  drawFishFace(bodyAnchor, ctx) {
+    const anchor = this.body.faceAnchor;
+
+    const eyeImg = fishPartImages[this.eye.type][this.eye.index];
+    const mouthImg = fishPartImages[this.mouth.type][this.mouth.index];
+
+    const maxComponentWidth = Math.max(eyeImg.width, mouthImg.width);
+    const distBetweenEyeAndMouth = 5;
+
+    ctx.drawImage(
+      eyeImg,
+      bodyAnchor[0] + anchor[0] + (maxComponentWidth - eyeImg.width) / 2,
+      bodyAnchor[1] + anchor[1]
+    );
+    ctx.drawImage(
+      mouthImg,
+      bodyAnchor[0] + anchor[0] + (maxComponentWidth - mouthImg.width) / 2,
+      bodyAnchor[1] + anchor[1] + eyeImg.height + distBetweenEyeAndMouth
+    );
+  }
+
   drawFishComponent(part, bodyAnchor, ctx) {
     intermediateCtx.clearRect(
       0,
@@ -351,8 +372,7 @@ export class FishOceanObject extends OceanObject {
     this.drawFishComponent(this.body, bodyAnchor, ctx);
     this.drawFishComponent(this.scales, bodyAnchor, ctx);
     this.drawFishComponent(this.pectoralFinFront, bodyAnchor, ctx);
-    this.drawFishComponent(this.mouth, bodyAnchor, ctx);
-    this.drawFishComponent(this.eye, bodyAnchor, ctx);
+    this.drawFishFace(bodyAnchor, ctx);
     if (generateLogits) {
       this.generateLogitsAsync(fishCanvas);
     }
