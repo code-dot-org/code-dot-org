@@ -12,10 +12,10 @@ export const init = async () => {
     fish => fish.getResult().predictedClassId
   );
 
-  let pondFish = fishByClassType[ClassType.Like];
+  let pondFish = fishByClassType[ClassType.Like] || [];
   setState({totalPondFish: pondFish.length});
   pondFish = pondFish.splice(0, constants.maxPondFish);
-  const recallFish = fishByClassType[ClassType.Dislike].splice(
+  const recallFish = (fishByClassType[ClassType.Dislike] || []).splice(
     0,
     constants.maxPondFish
   );
