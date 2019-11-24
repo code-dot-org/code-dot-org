@@ -1,7 +1,7 @@
 import 'idempotent-babel-polyfill';
 import _ from 'lodash';
 import {setState, getState} from '../state';
-import constants, {ClassType} from '../constants';
+import constants, {ClassType, AppMode} from '../constants';
 
 export const init = async () => {
   const state = getState();
@@ -12,15 +12,26 @@ export const init = async () => {
     fish => fish.getResult().predictedClassId
   );
 
-  let pondFish = fishByClassType[ClassType.Like];
+  let pondFish = fishByClassType[ClassType.Like] || [];
   setState({totalPondFish: pondFish.length});
   pondFish = pondFish.splice(0, constants.maxPondFish);
-  const recallFish = fishByClassType[ClassType.Dislike].splice(
+  const recallFish = (fishByClassType[ClassType.Dislike] || []).splice(
     0,
     constants.maxPondFish
   );
   arrangeFish(pondFish);
   setState({pondFish, recallFish});
+  if (
+    state.appMode === AppMode.FishShort ||
+    state.appMode === AppMode.FishLong
+  ) {
+    const firstFishFieldInfos = state.fishData[0].fieldInfos;
+    setState({
+      pondExplainGeneralSummary: state.trainer.summarize(firstFishFieldInfos),
+      pondFishMaxExplainValue: getMaxExplainValue(pondFish),
+      pondRecallFishMaxExplainValue: getMaxExplainValue(recallFish)
+    });
+  }
 };
 
 const predictAllFish = state => {
@@ -49,6 +60,26 @@ export const arrangeFish = fishes => {
 
     fish.setXY({x, y});
   });
+};
+
+// For the fish in the pond, find the maximum explain value.  This will allow
+// us to show charts normalized to the highest value.
+const getMaxExplainValue = fishCollection => {
+  const state = getState();
+
+  let maxValue = 0;
+
+  fishCollection.forEach(fish => {
+    const summary = state.trainer.explainFish(fish);
+    if (summary.length > 0) {
+      const value = Math.abs(summary[0].impact);
+      if (value > maxValue) {
+        maxValue = value;
+      }
+    }
+  });
+
+  return maxValue;
 };
 
 // Describes the 20 possible fish positions on the screen, where the value describes
