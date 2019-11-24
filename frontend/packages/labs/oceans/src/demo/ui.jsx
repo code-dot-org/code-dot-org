@@ -53,8 +53,9 @@ const styles = {
     cursor: 'pointer',
     backgroundColor: colors.white,
     color: colors.grey,
+    fontSize: '100%',
     borderRadius: 8,
-    minWidth: 160,
+    minWidth: '15%',
     outline: 'none',
     border: 'none',
     ':focus': {
@@ -84,7 +85,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'right',
-    minWidth: 160
+    minWidth: '15%'
   },
   backButton: {
     position: 'absolute',
@@ -134,8 +135,7 @@ const styles = {
     width: '70%'
   },
   confirmationHeader: {
-    fontSize: 40,
-    lineHeight: '40px',
+    fontSize: '220%',
     color: colors.darkGrey,
     padding: 10,
     textAlign: 'center'
@@ -163,8 +163,7 @@ const styles = {
   },
   activityIntroText: {
     position: 'absolute',
-    fontSize: 22,
-    lineHeight: '26px',
+    fontSize: '120%',
     top: '20%',
     left: '50%',
     width: '80%',
@@ -186,8 +185,7 @@ const styles = {
   wordsText: {
     textAlign: 'center',
     marginTop: 20,
-    fontSize: 22,
-    lineHeight: '26px',
+    fontSize: '120%',
     color: colors.white
   },
   eraseButton: {
@@ -201,8 +199,7 @@ const styles = {
     top: '15%',
     left: '50%',
     transform: 'translateX(-50%)',
-    fontSize: 32,
-    lineHeight: '35px',
+    fontSize: '180%',
     color: colors.white
   },
   trainButtons: {
@@ -252,7 +249,7 @@ const styles = {
     height: 25
   },
   counterNum: {
-    fontSize: 14,
+    fontSize: '80%',
     margin: '4px 7px'
   },
   mediaControls: {
@@ -265,7 +262,7 @@ const styles = {
   mediaControl: {
     cursor: 'pointer',
     margin: '0 20px',
-    fontSize: 30,
+    fontSize: '180%',
     color: colors.white,
     display: 'flex',
     alignItems: 'center',
@@ -281,7 +278,7 @@ const styles = {
   },
   timeScale: {
     width: 40,
-    fontSize: 24,
+    fontSize: '120%',
     textAlign: 'center'
   },
   predictSpeech: {
@@ -443,7 +440,6 @@ const styles = {
     position: 'absolute',
     backgroundColor: colors.transparentBlack,
     color: colors.white,
-    lineHeight: '140%',
     borderRadius: 5,
     maxWidth: '80%',
     bottom: '4%',
@@ -463,8 +459,7 @@ const styles = {
     maxWidth: '90%'
   },
   guideHeading: {
-    fontSize: 40,
-    lineHeight: '40px',
+    fontSize: '220%',
     color: colors.darkGrey,
     padding: 20
   },
