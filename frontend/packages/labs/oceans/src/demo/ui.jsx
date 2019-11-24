@@ -71,21 +71,17 @@ const styles = {
   },
   finishButton: {
     backgroundColor: colors.orange,
-    color: colors.white
+    color: colors.white,
+    position: 'absolute',
+    bottom: '4%',
+    right: '2.25%',
   },
   playAgainButton: {
     backgroundColor: colors.yellowGreen,
     color: colors.white,
-    marginBottom: 10
-  },
-  rightButtons: {
     position: 'absolute',
-    bottom: 10,
-    right: 10,
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'right',
-    minWidth: '15%'
+    bottom: '16%',
+    right: '2.25%',
   },
   backButton: {
     position: 'absolute',
@@ -525,12 +521,12 @@ const styles = {
   },
   arrowLowerRight: {
     bottom: '17%',
-    right: '1%',
+    right: '2%',
     transform: 'translateX(-50%)'
   },
   arrowLowishRight: {
-    bottom: '25%',
-    right: '1%',
+    bottom: '28%',
+    right: '2%',
     transform: 'translateX(-50%)'
   },
   arrowLowerCenter: {
@@ -1262,7 +1258,7 @@ let Pond = class Pond extends React.Component {
         {state.canSkipPond && (
           <div>
             {state.appMode === AppMode.FishLong ? (
-              <div style={styles.rightButtons}>
+              <div>
                 <Button
                   style={styles.playAgainButton}
                   onClick={() => {
