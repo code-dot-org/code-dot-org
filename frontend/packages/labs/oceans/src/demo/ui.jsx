@@ -853,6 +853,7 @@ let Predict = class Predict extends React.Component {
     if (state.appMode === AppMode.CreaturesVTrashDemo && state.onContinue) {
       state.onContinue();
     } else {
+      setState({showRecallFish: false});
       toMode(Modes.Pond);
     }
   };
