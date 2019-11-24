@@ -25,13 +25,9 @@
   = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :execute_palette_apis_only, description: "Execute palette APIs only"}
 .field
   = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :beginner_mode, description: "Beginner mode for loops"}
-.field
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :submittable, description: "Submittable"}
-  %p
-    If checked, students with teachers can "submit" a solution for
-    grading. Submitting a solution means that it is marked as
-    submitted and they can no longer edit it (unless a teacher returns
-    it).
+
+= render partial: 'levels/editors/submittable', locals: {f: f}
+
 .field
   = f.label :start_html, 'Starting design mode html'
   %p
@@ -85,20 +81,7 @@
   :javascript
     levelbuilder.initializeCodeMirror('level_data_tables', 'javascript');
 
-.field
-  = f.label 'Key-Value Data'
-  You can copy the data array from the debug view in the Data tab in App Lab.
-  %pre
-    = preserve do
-      :escaped
-        Example:
-        {
-          "click_count": 5,
-          "button_color": "blue"
-        }
-  = f.text_area 'data_properties', placeholder: 'Insert JSON Key-Value Data', rows: 4, value: @level.data_properties or ''
-  :javascript
-    levelbuilder.initializeCodeMirror('level_data_properties', 'javascript');
+= render partial: 'levels/editors/key_value_data', locals: {f: f}
 
 .field
   = f.label :data_library_tables,'Dataset Libraries'
@@ -110,15 +93,7 @@
 .field
   = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :debugger_disabled, description: "Disable code debugger (Console is still enabled)"}
 
-.field
-  = f.label :helper_libraries
-  %p
-    Select
-    %a.select_all{href: '#'} all
-    \/
-    %a.select_none{href: '#'} none
-    (shift-click or cmd-click to select multiple).
-  = f.select :helper_libraries, (Library.distinct.pluck(:name) + (@level.helper_libraries || [])).uniq.sort, {}, {multiple: true}
+= render partial: 'levels/editors/helper_libraries', locals: {f: f}
 
 :ruby
   script_data = {
