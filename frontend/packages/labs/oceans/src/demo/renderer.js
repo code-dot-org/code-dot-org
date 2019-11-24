@@ -69,6 +69,12 @@ export const initRenderer = () => {
 // Render a single frame of the scene.
 // Sometimes performs special rendering actions, such as when mode has changed.
 export const render = () => {
+  // Set up the next call to the renderer.  One advantage of doing it here is
+  // that if any exceptions occur, we will have still scheduled the next render.
+  // Otherwise, any exception that occurs would prevent any more renders from
+  // happening.
+  window.requestAnimFrame(render);
+
   let state = getState();
 
   if (state.currentMode !== prevState.currentMode) {
@@ -156,7 +162,6 @@ export const render = () => {
   drawOverlays();
 
   prevState = {...state};
-  window.requestAnimFrame(render);
 };
 
 // Load and display the background image onto the background canvas.
@@ -566,37 +571,67 @@ const drawWordFishImages = () => {
   setState({wordFish});
 };
 
+const pondFishTransitionTime = 1500;
+const totalPondFishXOffset = 1000;
 // Draw the fish for pond mode.
 const drawPondFishImages = () => {
-  const canvas = getState().canvas;
-  const ctx = canvas.getContext('2d');
+  const state = getState();
+  const ctx = state.canvas.getContext('2d');
+  const fishes = state.showRecallFish ? state.recallFish : state.pondFish;
+
+  let transitionOffset = 0;
+  if (state.pondFishTransitionStartTime) {
+    const t = $time() - state.pondFishTransitionStartTime;
+    transitionOffset = (t / pondFishTransitionTime) * totalPondFishXOffset;
+
+    if (t > pondFishTransitionTime) {
+      setState({
+        showRecallFish: !state.showRecallFish,
+        pondFishTransitionStartTime: null
+      });
+    }
+  }
 
   const fishBounds = [];
 
-  getState().pondFish.forEach(fish => {
-    const pondClickedFish = getState().pondClickedFish;
-    const pondClickedFishUs = pondClickedFish && fish.id === pondClickedFish.id;
+  // Draw all the unclicked fish first, then the clicked fish.
+  [false, true].forEach(drawClickedFish => {
+    fishes.forEach(fish => {
+      const pondClickedFish = getState().pondClickedFish;
+      const pondClickedFishUs = !!(
+        pondClickedFish && fish.id === pondClickedFish.id
+      );
 
-    const swayValue =
-      (($time() * 360) / (20 * 1000) + (fish.getId() + 1) * 10) % 360;
-    const swayOffsetX = Math.sin(((swayValue * Math.PI) / 180) * 2) * 25;
-    const swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 6) * 2;
+      if (drawClickedFish === pondClickedFishUs) {
+        const swayValue =
+          (($time() * 360) / (20 * 1000) + (fish.getId() + 1) * 10) % 360;
+        let swayOffsetX = Math.sin(((swayValue * Math.PI) / 180) * 2) * 25;
+        let swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 6) * 2;
 
-    const xy = fish.getXY();
-    const finalX = xy.x + swayOffsetX;
-    const finalY = xy.y + swayOffsetY;
+        // Add some variation to fish movement if transition is in progress.
+        if (transitionOffset > 0 && fish.getId() % 2 === 0) {
+          swayOffsetX *= 2;
+          swayOffsetY *= 5;
+        }
 
-    const size = pondClickedFishUs ? 1 : 0.5;
+        const xy = fish.getXY();
+        const finalX = xy.x + swayOffsetX + transitionOffset;
+        const finalY = xy.y + swayOffsetY;
 
-    const fishBound = drawSingleFish(fish, finalX, finalY, ctx, size);
+        const size = pondClickedFishUs ? 1 : 0.5;
 
-    // Record this screen location so that we can separately check for clicks on it.
-    fishBounds.push({
-      fishId: fish.id,
-      ...fishBound
+        const fishBound = drawSingleFish(fish, finalX, finalY, ctx, size);
+
+        // Record this screen location so that we can separately check for clicks on it.
+        fishBounds.push({
+          fishId: fish.id,
+          ...fishBound
+        });
+      }
     });
-    setState({pondFishBounds: fishBounds}, {skipCallback: true});
   });
+
+  setState({pondFishBounds: fishBounds}, {skipCallback: true});
 };
 
 // Draw a single fish, preferably from cached canvas.

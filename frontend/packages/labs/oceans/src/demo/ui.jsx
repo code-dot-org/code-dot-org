@@ -5,8 +5,15 @@ import _ from 'lodash';
 import {getState, setState} from './state';
 import constants, {AppMode, Modes} from './constants';
 import {toMode} from './toMode';
-import {$time, currentRunTime, finishMovement, resetTraining} from './helpers';
+import {
+  $time,
+  currentRunTime,
+  finishMovement,
+  resetTraining,
+  friendlyNameForFishPart
+} from './helpers';
 import {onClassifyFish} from './models/train';
+import {arrangeFish} from './models/pond';
 import colors from './colors';
 import aiBotClosed from '../../public/images/ai-bot/ai-bot-closed.png';
 import counterIcon from '../../public/images/data.png';
@@ -22,7 +29,10 @@ import {
   faPause,
   faBackward,
   faForward,
-  faEraser
+  faEraser,
+  faCheck,
+  faBan,
+  faInfo
 } from '@fortawesome/free-solid-svg-icons';
 
 const styles = {
@@ -42,6 +52,7 @@ const styles = {
   button: {
     cursor: 'pointer',
     backgroundColor: colors.white,
+    color: colors.grey,
     borderRadius: 8,
     minWidth: 160,
     outline: 'none',
@@ -279,6 +290,13 @@ const styles = {
     width: '65%',
     height: 38
   },
+  pondSurface: {
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    top: 0,
+    left: 0
+  },
   pondFishDetails: {
     position: 'absolute',
     backgroundColor: colors.transparentWhite,
@@ -294,6 +312,107 @@ const styles = {
     bottom: 0,
     transform: 'translateX(-45%)',
     pointerEvents: 'none'
+  },
+  pondPanelButton: {
+    position: 'absolute',
+    top: 24,
+    left: 22,
+    cursor: 'pointer'
+  },
+  pondPanelLeft: {
+    position: 'absolute',
+    width: '30%',
+    backgroundColor: colors.transparentBlack,
+    color: colors.white,
+    borderRadius: 10,
+    left: '3%',
+    top: '16%',
+    padding: 20
+  },
+  pondPanelRight: {
+    position: 'absolute',
+    width: '30%',
+    backgroundColor: colors.transparentBlack,
+    color: colors.white,
+    borderRadius: 10,
+    right: '3%',
+    top: '16%',
+    padding: 20
+  },
+  pondPanelPreText: {
+    marginBottom: 20
+  },
+  pondPanelRow: {
+    position: 'relative',
+    height: 40
+  },
+  pondPanelGeneralBar: {
+    position: 'absolute',
+    top: 0,
+    left: '0%',
+    height: 30,
+    backgroundColor: colors.green
+  },
+  pondPanelGeneralBarText: {
+    position: 'absolute',
+    top: 4,
+    left: '3%',
+    textAlign: 'right'
+  },
+  pondPanelGreenBar: {
+    position: 'absolute',
+    top: 0,
+    left: '50%',
+    height: 30,
+    backgroundColor: colors.green
+  },
+  pondPanelGreenBarText: {
+    position: 'absolute',
+    top: 4,
+    left: '53%'
+  },
+  pondPanelRedBar: {
+    position: 'absolute',
+    top: 0,
+    right: '50%',
+    height: 30,
+    backgroundColor: colors.red
+  },
+  pondPanelRedBarText: {
+    position: 'absolute',
+    top: 4,
+    width: '47%',
+    textAlign: 'right'
+  },
+  pondPanelPostText: {
+    marginTop: 20
+  },
+  recallContainer: {
+    position: 'absolute',
+    top: '4%',
+    right: '2.25%',
+    color: colors.white,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between'
+  },
+  recallIcon: {
+    width: 30,
+    height: 30,
+    border: `5px solid ${colors.white}`,
+    borderRadius: 50,
+    padding: 6,
+    marginLeft: 8,
+    backgroundColor: colors.lightGrey
+  },
+  bgNeonBlue: {
+    backgroundColor: colors.neonBlue
+  },
+  bgRed: {
+    backgroundColor: colors.red
+  },
+  bgGreen: {
+    backgroundColor: colors.green
   },
   pill: {
     display: 'flex',
@@ -555,20 +674,20 @@ const wordSet = {
     text: ['Choose a new word to teach A.I.'],
     choices: [
       [
+        'Angry',
+        'Awesome',
+        'Delicious',
+        'Endangered',
+        'Fast',
         'Fierce',
-        'Fresh',
+        'Fun',
         'Glitchy',
-        'Glossy',
+        'Happy',
         'Hungry',
         'Playful',
-        'Scaly',
-        'Scrappy',
+        'Scary',
         'Silly',
-        'Sparkly',
-        'Spiky',
-        'Squirmy',
-        'Tropical',
-        'Wacky',
+        'Spooky',
         'Wild'
       ]
     ],
@@ -734,6 +853,7 @@ let Predict = class Predict extends React.Component {
     if (state.appMode === AppMode.CreaturesVTrashDemo && state.onContinue) {
       state.onContinue();
     } else {
+      setState({showRecallFish: false});
       toMode(Modes.Pond);
     }
   };
@@ -855,12 +975,156 @@ let Predict = class Predict extends React.Component {
 };
 Predict = Radium(Predict);
 
-class Pond extends React.Component {
+class PondPanel extends React.Component {
+  onPondPanelClick(e) {
+    setState({pondPanelShowing: false});
+    e.stopPropagation();
+  }
+
+  render() {
+    const state = getState();
+
+    const maxExplainValue = state.showRecallFish
+      ? state.pondRecallFishMaxExplainValue
+      : state.pondFishMaxExplainValue;
+
+    return (
+      <div>
+        {!state.pondClickedFish && (
+          <div
+            style={styles.pondPanelLeft}
+            onClick={e => this.onPondPanelClick(e)}
+          >
+            {state.pondExplainGeneralSummary && (
+              <div>
+                <div style={styles.pondPanelPreText}>
+                  These were the most important fish parts:
+                </div>
+                {state.pondExplainGeneralSummary.slice(0, 5).map((f, i) => (
+                  <div key={i}>
+                    {f.importance > 0 && (
+                      <div style={styles.pondPanelRow}>
+                        &nbsp;
+                        <div
+                          style={{
+                            ...styles.pondPanelGeneralBar,
+                            width:
+                              (Math.abs(f.importance) /
+                                state.pondExplainGeneralSummary[0].importance) *
+                                100 +
+                              '%'
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div style={styles.pondPanelGeneralBarText}>
+                          {friendlyNameForFishPart(f.partType)}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                ))}
+                <div style={styles.pondPanelPostText}>
+                  Click individual fish to see their information.
+                </div>
+              </div>
+            )}
+          </div>
+        )}
+        {state.pondClickedFish && (
+          <div
+            style={
+              state.pondPanelSide === 'left'
+                ? styles.pondPanelLeft
+                : styles.pondPanelRight
+            }
+            onClick={e => this.onPondPanelClick(e)}
+          >
+            {state.pondExplainFishSummary && (
+              <div>
+                <div style={styles.pondPanelPreText}>
+                  These were the most important fish parts in determining
+                  whether this fish was{' '}
+                  <span style={{color: colors.green}}>{state.word}</span> or{' '}
+                  <span style={{color: colors.red}}>not {state.word}</span>.
+                </div>
+                {state.pondExplainFishSummary.slice(0, 4).map((f, i) => (
+                  <div key={i}>
+                    {f.impact < 0 && (
+                      <div style={styles.pondPanelRow}>
+                        &nbsp;
+                        <div
+                          style={{
+                            ...styles.pondPanelGreenBar,
+                            width:
+                              ((Math.abs(f.impact) / maxExplainValue) * 100) /
+                                2 +
+                              '%'
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div style={styles.pondPanelGreenBarText}>
+                          {friendlyNameForFishPart(f.partType)}
+                        </div>
+                      </div>
+                    )}
+                    {f.impact > 0 && (
+                      <div style={styles.pondPanelRow}>
+                        &nbsp;
+                        <div
+                          style={{
+                            ...styles.pondPanelRedBar,
+                            width:
+                              ((Math.abs(f.impact) / maxExplainValue) * 100) /
+                                2 +
+                              '%'
+                          }}
+                        >
+                          &nbsp;
+                        </div>
+                        <div style={styles.pondPanelRedBarText}>
+                          {friendlyNameForFishPart(f.partType)}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+    );
+  }
+}
+
+let Pond = class Pond extends React.Component {
   constructor(props) {
     super(props);
   }
 
-  onPondClick(e) {
+  toggleRecall = e => {
+    const state = getState();
+
+    // No-op if transition is already in progress.
+    if (state.pondFishTransitionStartTime) {
+      return;
+    }
+
+    const showRecallFish = !state.showRecallFish;
+    const fish = showRecallFish ? state.recallFish : state.pondFish;
+
+    // Don't call arrangeFish if fish have already been arranged.
+    if (fish.length > 0 && !fish[0].getXY()) {
+      arrangeFish(fish);
+    }
+
+    setState({pondFishTransitionStartTime: $time(), pondClickedFish: null});
+    e.stopPropagation();
+  };
+
+  onPondClick = e => {
     // Don't allow pond clicks if a Guide is currently showing.
     if (getCurrentGuide()) {
       return;
@@ -877,6 +1141,10 @@ class Pond extends React.Component {
     // Scale the click to the pond canvas dimensions.
     const normalizedClickX = (clickX / pondWidth) * constants.canvasWidth;
     const normalizedClickY = (clickY / pondHeight) * constants.canvasHeight;
+
+    const fishCollection = state.showRecallFish
+      ? state.recallFish
+      : state.pondFish;
 
     if (state.pondFishBounds) {
       let fishClicked = false;
@@ -912,21 +1180,89 @@ class Pond extends React.Component {
           });
           fishClicked = true;
           playSound('yes');
+
+          if (
+            state.appMode === AppMode.FishShort ||
+            state.appMode === AppMode.FishLong
+          ) {
+            const clickedFish = fishCollection.find(
+              f => f.id === fishBound.fishId
+            );
+            setState({
+              pondExplainFishSummary: state.trainer.explainFish(clickedFish)
+            });
+            if (normalizedClickX < constants.canvasWidth / 2) {
+              setState({pondPanelSide: 'right'});
+            } else {
+              setState({pondPanelSide: 'left'});
+            }
+          }
         }
       });
 
       if (!fishClicked) {
-        setState({pondClickedFish: null});
+        setState({pondClickedFish: null, pondPanelShowing: false});
         playSound('no');
       }
     }
+  };
+
+  onPondPanelButtonClick(e) {
+    const state = getState();
+
+    if (
+      state.appMode === AppMode.FishShort ||
+      state.appMode === AppMode.FishLong
+    ) {
+      setState({
+        pondPanelShowing: !state.pondPanelShowing,
+        pondClickedFish: null
+      });
+    }
+
+    e.stopPropagation();
   }
 
   render() {
     const state = getState();
 
+    const showInfoButton =
+      (state.appMode === AppMode.FishShort ||
+        state.appMode === AppMode.FishLong) &&
+      state.pondFish.length > 0 &&
+      state.recallFish.length > 0;
+
     return (
-      <Body onClick={e => this.onPondClick(e)}>
+      <Body>
+        <div onClick={e => this.onPondClick(e)} style={styles.pondSurface}/>
+        <div style={styles.recallContainer}>
+          {showInfoButton && (
+            <FontAwesomeIcon
+              icon={faInfo}
+              style={{
+                ...styles.recallIcon,
+                ...(!state.pondPanelShowing ? styles.bgNeonBlue : {})
+              }}
+              onClick={this.onPondPanelButtonClick}
+            />
+          )}
+          <FontAwesomeIcon
+            icon={faCheck}
+            style={{
+              ...styles.recallIcon,
+              ...(!state.showRecallFish ? styles.bgGreen : {})
+            }}
+            onClick={this.toggleRecall}
+          />
+          <FontAwesomeIcon
+            icon={faBan}
+            style={{
+              ...styles.recallIcon,
+              ...(state.showRecallFish ? styles.bgRed : {})
+            }}
+            onClick={this.toggleRecall}
+          />
+        </div>
         <img style={styles.pondBot} src={aiBotClosed} />
         {state.canSkipPond && (
           <div>
@@ -961,6 +1297,7 @@ class Pond extends React.Component {
                 style={styles.backButton}
                 onClick={() => {
                   toMode(Modes.Training);
+                  setState({pondClickedFish: null, pondPanelShowing: false});
                 }}
               >
                 Train More
@@ -968,10 +1305,12 @@ class Pond extends React.Component {
             </div>
           </div>
         )}
+        {state.pondPanelShowing && <PondPanel />}
       </Body>
     );
   }
-}
+};
+Pond = Radium(Pond);
 
 class Guide extends React.Component {
   onShowing() {

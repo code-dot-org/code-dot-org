@@ -5,6 +5,8 @@ const initialState = {
   currentMode: null,
   fishData: [],
   pondFish: [],
+  recallFish: [],
+  showRecallFish: false,
   totalPondFish: null,
   backgroundCanvas: null,
   canvas: null,
@@ -29,6 +31,10 @@ const initialState = {
   currentInstructionsPage: 0,
   pondFishBounds: null,
   pondClickedFish: null,
+  pondPanelShowing: false,
+  pondPanelSide: null,
+  pondFishMaxExplainValue: 1,
+  pondRecallFishMaxExplainValue: 1,
   guideDismissals: [],
   guideShowing: false
 };
