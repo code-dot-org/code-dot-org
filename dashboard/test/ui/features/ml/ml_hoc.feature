@@ -5,8 +5,8 @@ Feature: Oceans ML HoC
     # Training Screen
     Given I am on "http://studio.code.org/s/oceans/stage/1/puzzle/2?guide=off"
     And I wait until element "button:contains(Fish):eq(1)" is visible
-    Then I click selector "button:contains(Fish):eq(1)" 125 times
-    Then I click selector "button:contains(Not Fish)" 125 times
+    Then I click selector "button:contains(Fish):eq(1)" 5 times
+    Then I click selector "button:contains(Not Fish)" 5 times
     Then I click selector "button:contains(Continue)" once I see it
 
     # Sorting Screen
@@ -28,8 +28,8 @@ Feature: Oceans ML HoC
     # Training Screen
     Given I am on "http://studio.code.org/s/oceans/stage/1/puzzle/4?guide=off"
     And I wait until element "button:contains(Yes)" is visible
-    Then I click selector "button:contains(Yes)" 125 times
-    Then I click selector "button:contains(No)" 125 times
+    Then I click selector "button:contains(Yes)" 5 times
+    Then I click selector "button:contains(No)" 5 times
     Then I click selector "button:contains(Continue)" once I see it
 
     # Sorting Screen
@@ -46,8 +46,8 @@ Feature: Oceans ML HoC
     Given I am on "http://studio.code.org/s/oceans/stage/1/puzzle/6?guide=off"
     Then I click selector "button:contains(Blue)" once I see it
     And I wait until element "button:contains(Blue):eq(1)" is visible
-    Then I click selector "button:contains(Blue):eq(1)" 125 times
-    Then I click selector "button:contains(Not Blue)" 125 times
+    Then I click selector "button:contains(Blue):eq(1)" 5 times
+    Then I click selector "button:contains(Not Blue)" 5 times
     Then I click selector "button:contains(Continue)" once I see it
 
     # Sorting Screen
@@ -64,8 +64,8 @@ Feature: Oceans ML HoC
     Given I am on "http://studio.code.org/s/oceans/stage/1/puzzle/8?guide=off"
     Then I click selector "button:contains(Fierce)" once I see it
     And I wait until element "button:contains(Fierce):eq(1)" is visible
-    Then I click selector "button:contains(Fierce):eq(1)" 125 times
-    Then I click selector "button:contains(Not Fierce)" 125 times
+    Then I click selector "button:contains(Fierce):eq(1)" 5 times
+    Then I click selector "button:contains(Not Fierce)" 5 times
     Then I click selector "button:contains(Continue)" once I see it
 
     # Sorting Screen
