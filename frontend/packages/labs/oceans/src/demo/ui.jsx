@@ -674,20 +674,20 @@ const wordSet = {
     text: ['Choose a new word to teach A.I.'],
     choices: [
       [
+        'Angry',
+        'Awesome',
+        'Delicious',
+        'Endangered',
+        'Fast',
         'Fierce',
-        'Fresh',
+        'Fun',
         'Glitchy',
-        'Glossy',
+        'Happy',
         'Hungry',
         'Playful',
-        'Scaly',
-        'Scrappy',
+        'Scary',
         'Silly',
-        'Sparkly',
-        'Spiky',
-        'Squirmy',
-        'Tropical',
-        'Wacky',
+        'Spooky',
         'Wild'
       ]
     ],
@@ -1234,78 +1234,77 @@ let Pond = class Pond extends React.Component {
 
     return (
       <Body>
-        <div onClick={e => this.onPondClick(e)} style={styles.pondSurface}>
-          <div style={styles.recallContainer}>
-            {showInfoButton && (
-              <FontAwesomeIcon
-                icon={faInfo}
-                style={{
-                  ...styles.recallIcon,
-                  ...(!state.pondPanelShowing ? styles.bgNeonBlue : {})
-                }}
-                onClick={this.onPondPanelButtonClick}
-              />
-            )}
+        <div onClick={e => this.onPondClick(e)} style={styles.pondSurface}/>
+        <div style={styles.recallContainer}>
+          {showInfoButton && (
             <FontAwesomeIcon
-              icon={faCheck}
+              icon={faInfo}
               style={{
                 ...styles.recallIcon,
-                ...(!state.showRecallFish ? styles.bgGreen : {})
+                ...(!state.pondPanelShowing ? styles.bgNeonBlue : {})
               }}
-              onClick={this.toggleRecall}
+              onClick={this.onPondPanelButtonClick}
             />
-            <FontAwesomeIcon
-              icon={faBan}
-              style={{
-                ...styles.recallIcon,
-                ...(state.showRecallFish ? styles.bgRed : {})
-              }}
-              onClick={this.toggleRecall}
-            />
-          </div>
-          <img style={styles.pondBot} src={aiBotClosed} />
-          {state.canSkipPond && (
-            <div>
-              {state.appMode === AppMode.FishLong ? (
-                <div style={styles.rightButtons}>
-                  <Button
-                    style={styles.playAgainButton}
-                    onClick={() => {
-                      resetTraining(state);
-                      toMode(Modes.Words);
-                    }}
-                  >
-                    Play Again
-                  </Button>
-                  <Button
-                    style={styles.finishButton}
-                    onClick={state.onContinue()}
-                  >
-                    Finish
-                  </Button>
-                </div>
-              ) : (
+          )}
+          <FontAwesomeIcon
+            icon={faCheck}
+            style={{
+              ...styles.recallIcon,
+              ...(!state.showRecallFish ? styles.bgGreen : {})
+            }}
+            onClick={this.toggleRecall}
+          />
+          <FontAwesomeIcon
+            icon={faBan}
+            style={{
+              ...styles.recallIcon,
+              ...(state.showRecallFish ? styles.bgRed : {})
+            }}
+            onClick={this.toggleRecall}
+          />
+        </div>
+        <img style={styles.pondBot} src={aiBotClosed} />
+        {state.canSkipPond && (
+          <div>
+            {state.appMode === AppMode.FishLong ? (
+              <div style={styles.rightButtons}>
                 <Button
-                  style={styles.continueButton}
-                  onClick={() => state.onContinue()}
-                >
-                  Continue
-                </Button>
-              )}
-              <div>
-                <Button
-                  style={styles.backButton}
+                  style={styles.playAgainButton}
                   onClick={() => {
-                    toMode(Modes.Training);
-                    setState({pondClickedFish: null, pondPanelShowing: false});
+                    resetTraining(state);
+                    toMode(Modes.Words);
                   }}
                 >
-                  Train More
+                  Play Again
+                </Button>
+                <Button
+                  style={styles.finishButton}
+                  onClick={state.onContinue()}
+                >
+                  Finish
                 </Button>
               </div>
+            ) : (
+              <Button
+                style={styles.continueButton}
+                onClick={() => state.onContinue()}
+              >
+                Continue
+              </Button>
+            )}
+            <div>
+              <Button
+                style={styles.backButton}
+                onClick={() => {
+                  toMode(Modes.Training);
+                  setState({pondClickedFish: null, pondPanelShowing: false});
+                }}
+              >
+                Train More
+              </Button>
             </div>
-          )}
-        </div>
+          </div>
+        )}
         {state.pondPanelShowing && <PondPanel />}
       </Body>
     );
