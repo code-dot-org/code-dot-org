@@ -498,27 +498,52 @@ const drawPredictBot = state => {
   ctx.drawImage(botImg, botX, botY);
 };
 
+const pondFishTransitionTime = 1500;
+const totalPondFishXOffset = 1000;
+
 // Draw the fish for pond mode.
 const drawPondFishImages = () => {
   const state = getState();
   const ctx = state.canvas.getContext('2d');
   const fishes = state.showRecallFish ? state.recallFish : state.pondFish;
+
+  let transitionOffset = 0;
+  if (state.pondFishTransitionStartTime) {
+    const t = $time() - state.pondFishTransitionStartTime;
+    transitionOffset = (t / pondFishTransitionTime) * totalPondFishXOffset;
+
+    if (t > pondFishTransitionTime) {
+      setState({
+        showRecallFish: !state.showRecallFish,
+        pondFishTransitionStartTime: null
+      });
+    }
+  }
+
   const fishBounds = [];
 
   // Draw all the unclicked fish first, then the clicked fish.
   [false, true].forEach(drawClickedFish => {
     fishes.forEach(fish => {
       const pondClickedFish = getState().pondClickedFish;
-      const pondClickedFishUs = !!(pondClickedFish && fish.id === pondClickedFish.id);
+      const pondClickedFishUs = !!(
+        pondClickedFish && fish.id === pondClickedFish.id
+      );
 
       if (drawClickedFish === pondClickedFishUs) {
         const swayValue =
           (($time() * 360) / (20 * 1000) + (fish.getId() + 1) * 10) % 360;
-        const swayOffsetX = Math.sin(((swayValue * Math.PI) / 180) * 2) * 25;
-        const swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 6) * 2;
+        let swayOffsetX = Math.sin(((swayValue * Math.PI) / 180) * 2) * 25;
+        let swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 6) * 2;
+
+        // Add some variation to fish movement if transition is in progress.
+        if (transitionOffset > 0 && fish.getId() % 2 === 0) {
+          swayOffsetX *= 2;
+          swayOffsetY *= 5;
+        }
 
         const xy = fish.getXY();
-        const finalX = xy.x + swayOffsetX;
+        const finalX = xy.x + swayOffsetX + transitionOffset;
         const finalY = xy.y + swayOffsetY;
 
         const size = pondClickedFishUs ? 1 : 0.5;
