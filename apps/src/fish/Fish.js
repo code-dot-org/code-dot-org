@@ -54,6 +54,12 @@ Fish.prototype.init = function(config) {
     bodyElement.className = bodyElement.className + ' pin_bottom';
     container.className = container.className + ' pin_bottom';
 
+    // Fixes viewport for small screens.  Also usually done by studioApp_.init().
+    var viewport = document.querySelector('meta[name="viewport"]');
+    if (viewport) {
+      this.studioApp_.fixViewportForSmallScreens_(viewport, config);
+    }
+
     this.initMLActivities();
   };
 
