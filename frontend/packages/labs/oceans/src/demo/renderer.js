@@ -66,6 +66,12 @@ export const initRenderer = () => {
 // Render a single frame of the scene.
 // Sometimes performs special rendering actions, such as when mode has changed.
 export const render = () => {
+  // Set up the next call to the renderer.  One advantage of doing it here is
+  // that if any exceptions occur, we will have still scheduled the next render.
+  // Otherwise, any exception that occurs would prevent any more renders from
+  // happening.
+  window.requestAnimFrame(render);
+
   let state = getState();
 
   if (state.currentMode !== prevState.currentMode) {
@@ -150,7 +156,6 @@ export const render = () => {
   drawOverlays();
 
   prevState = {...state};
-  window.requestAnimFrame(render);
 };
 
 // Load and display the background image onto the background canvas.
