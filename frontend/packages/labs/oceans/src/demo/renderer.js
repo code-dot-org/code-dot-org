@@ -506,8 +506,8 @@ const drawWordFishImages = () => {
 
   const fishScale = 0.7;
 
+  const t = $time();
   state.wordFish.forEach(fish => {
-    const t = $time();
     const swayValue = ((t * 360) / (20 * 1000)) % 360;
     const swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 3) / 20;
 
@@ -532,16 +532,20 @@ const drawWordFishImages = () => {
 
     drawSingleFish(fish, finalX, finalY, ctx, fishScale);
   });
+
   let wordFish = state.wordFish;
   wordFish = wordFish.filter(
     f =>
-      f.xy.x < (constants.canvasWidth + constants.fishCanvasWidth) * 1.1 &&
-      f.xy.x > -1.1 * constants.fishCanvasWidth
+      f.xy.x <= (constants.canvasWidth + constants.fishCanvasWidth) &&
+      f.xy.x >= -constants.fishCanvasWidth
   );
+  const lastFish = wordFish[wordFish.length - 1];
+
   if (
-    state.wordFish.length <= 1 ||
-    (state.wordFish.length <= 10 &&
-      randomInt(0, state.wordFish.length * 500) <= 0)
+    wordFish.length <= 1 ||
+    (wordFish.length <= 10 &&
+      lastFish.startTime > t &&
+      randomInt(0, wordFish.length * 500) <= 0)
   ) {
     const possibleFishComponents = filterFishComponents(
     fishData,
