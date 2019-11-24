@@ -500,30 +500,36 @@ const drawPondFishImages = () => {
   const fishes = state.showRecallFish ? state.recallFish : state.pondFish;
   const fishBounds = [];
 
-  fishes.forEach(fish => {
-    const pondClickedFish = getState().pondClickedFish;
-    const pondClickedFishUs = pondClickedFish && fish.id === pondClickedFish.id;
+  // Draw all the unclicked fish first, then the clicked fish.
+  [false, true].forEach(drawClickedFish => {
+    fishes.forEach(fish => {
+      const pondClickedFish = getState().pondClickedFish;
+      const pondClickedFishUs = !!(pondClickedFish && fish.id === pondClickedFish.id);
 
-    const swayValue =
-      (($time() * 360) / (20 * 1000) + (fish.getId() + 1) * 10) % 360;
-    const swayOffsetX = Math.sin(((swayValue * Math.PI) / 180) * 2) * 25;
-    const swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 6) * 2;
+      if (drawClickedFish === pondClickedFishUs) {
+        const swayValue =
+          (($time() * 360) / (20 * 1000) + (fish.getId() + 1) * 10) % 360;
+        const swayOffsetX = Math.sin(((swayValue * Math.PI) / 180) * 2) * 25;
+        const swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 6) * 2;
 
-    const xy = fish.getXY();
-    const finalX = xy.x + swayOffsetX;
-    const finalY = xy.y + swayOffsetY;
+        const xy = fish.getXY();
+        const finalX = xy.x + swayOffsetX;
+        const finalY = xy.y + swayOffsetY;
 
-    const size = pondClickedFishUs ? 1 : 0.5;
+        const size = pondClickedFishUs ? 1 : 0.5;
 
-    const fishBound = drawSingleFish(fish, finalX, finalY, ctx, size);
+        const fishBound = drawSingleFish(fish, finalX, finalY, ctx, size);
 
-    // Record this screen location so that we can separately check for clicks on it.
-    fishBounds.push({
-      fishId: fish.id,
-      ...fishBound
+        // Record this screen location so that we can separately check for clicks on it.
+        fishBounds.push({
+          fishId: fish.id,
+          ...fishBound
+        });
+      }
     });
-    setState({pondFishBounds: fishBounds}, {skipCallback: true});
   });
+
+  setState({pondFishBounds: fishBounds}, {skipCallback: true});
 };
 
 // Draw a single fish, preferably from cached canvas.
