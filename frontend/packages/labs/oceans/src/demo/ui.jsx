@@ -494,7 +494,8 @@ const styles = {
     pointerEvents: 'none'
   },
   guideArrow: {
-    position: 'absolute'
+    position: 'absolute',
+    width: '8%'
   },
   guideInfo: {
     backgroundColor: colors.white,
@@ -514,19 +515,23 @@ const styles = {
   },
   arrowBotRight: {
     top: '15%',
-    right: '14.5%'
+    right: '8.9%',
+    transform: 'translateX(-50%)'
   },
   arrowLowerLeft: {
     bottom: '17%',
-    left: '6%'
+    left: '10%',
+    transform: 'translateX(-50%)'
   },
   arrowLowerRight: {
     bottom: '17%',
-    right: '6%'
+    right: '1%',
+    transform: 'translateX(-50%)'
   },
   arrowLowishRight: {
     bottom: '25%',
-    right: '5%'
+    right: '1%',
+    transform: 'translateX(-50%)'
   },
   arrowLowerCenter: {
     bottom: '25%',
