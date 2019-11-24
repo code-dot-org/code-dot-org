@@ -110,7 +110,7 @@ const guides = [
   },
   {
     id: 'fishvtrash-pond-init1',
-    text: `Based on your training here are the objectes that A.I. identified as "Fish".  How did A.I. do?`,
+    text: `Based on your training here are the objects that A.I. identified as "Fish".  How did A.I. do?`,
     //TODO after doing a 2nd training iteration these messages no longer show
     when: {
       appMode: AppMode.FishVTrash,
@@ -266,7 +266,7 @@ const guides = [
   },
   {
     id: 'creaturesvtrash-pond-init1',
-    text: `Based on your training here are the objectes that A.I. identified as "Belongs in water".  How did A.I. do?`,
+    text: `Based on your training here are the objects that A.I. identified as "Belongs in water".  How did A.I. do?`,
     when: {
       appMode: AppMode.CreaturesVTrash,
       currentMode: Modes.Pond,
@@ -282,21 +282,20 @@ const guides = [
   },
   {
     id: 'fishshort-words-init2',
-    text:
-      "Let’s teach A.I. a new word by showing it examples of that type of fish.",
+    text: `Let’s teach A.I. a new word by showing it examples of that type of fish.`,
     when: {appMode: AppMode.FishShort, currentMode: Modes.Words}
   },
   {
     id: 'fishshort-predicting-init1',
     textFn: state => {
-      return `With your training data, you have programmed A.I. to recognize '${state.word.toUpperCase()}' fish.`;
+      return `With your training data, you have programmed A.I. to recognize "${state.word.toUpperCase()}" fish.`;
     },
     when: {appMode: AppMode.FishShort, currentMode: Modes.Predicting}
   },
   {
     id: 'fishshort-predicting-init2',
     textFn: state => {
-      return `Let’s see A.I. identify '${state.word.toUpperCase()}' fish.`;
+      return `Let’s see A.I. identify "${state.word.toUpperCase()}" fish.`;
     },
     when: {appMode: AppMode.FishShort, currentMode: Modes.Predicting}
   },
@@ -305,7 +304,7 @@ const guides = [
     textFn: state => {
       return `Based on your training A.I. identified ${
         state.fishData.length === 1 ? 'this' : 'these'
-      } fish as '${state.word.toUpperCase()}'. How did A.I do?`;
+      } fish as "${state.word.toUpperCase()}". How did A.I do?`;
     },
     when: {
       appMode: AppMode.FishShort,
@@ -328,14 +327,14 @@ const guides = [
   {
     id: 'fishlong-predicting-init1',
     textFn: state => {
-      return `With your training data, you have programmed A.I. to recognize '${state.word.toUpperCase()}' fish.`;
+      return `With your training data, you have programmed A.I. to recognize "${state.word.toUpperCase()}" fish.`;
     },
     when: {appMode: AppMode.FishLong, currentMode: Modes.Predicting}
   },
   {
     id: 'fishlong-predicting-init2',
     textFn: state => {
-      return `Let’s see A.I. identify '${state.word.toUpperCase()}' fish.`;
+      return `Let’s see A.I. identify "${state.word.toUpperCase()}" fish.`;
     },
     when: {appMode: AppMode.FishLong, currentMode: Modes.Predicting}
   },
@@ -344,7 +343,7 @@ const guides = [
     textFn: state => {
       return `Based on your training A.I. identified ${
         state.fishData.length === 1 ? 'this' : 'these'
-      } fish as '${state.word.toUpperCase()}'. How did A.I do?`;
+      } fish as "${state.word.toUpperCase()}". How did A.I do?`;
     },
     when: {
       appMode: AppMode.FishLong,
