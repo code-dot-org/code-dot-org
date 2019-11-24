@@ -493,11 +493,28 @@ const drawPredictBot = state => {
   ctx.drawImage(botImg, botX, botY);
 };
 
+const pondFishTransitionTime = 1000;
+const totalPondFishXOffset = 1000;
+
 // Draw the fish for pond mode.
 const drawPondFishImages = () => {
   const state = getState();
   const ctx = state.canvas.getContext('2d');
   const fishes = state.showRecallFish ? state.recallFish : state.pondFish;
+
+  let xOffset = 0;
+  if (state.pondFishTransitionStartTime) {
+    const t = $time() - state.pondFishTransitionStartTime;
+    xOffset = (t / pondFishTransitionTime) * totalPondFishXOffset;
+
+    if (t > pondFishTransitionTime) {
+      setState({
+        showRecallFish: !state.showRecallFish,
+        pondFishTransitionStartTime: null
+      });
+    }
+  }
+
   const fishBounds = [];
 
   fishes.forEach(fish => {
@@ -510,7 +527,7 @@ const drawPondFishImages = () => {
     const swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 6) * 2;
 
     const xy = fish.getXY();
-    const finalX = xy.x + swayOffsetX;
+    const finalX = xy.x + swayOffsetX + xOffset;
     const finalY = xy.y + swayOffsetY;
 
     const size = pondClickedFishUs ? 1 : 0.5;
