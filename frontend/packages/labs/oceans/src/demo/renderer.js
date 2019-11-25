@@ -308,7 +308,7 @@ const drawMovingFish = state => {
 
   const maxScreenX =
     state.currentMode === Modes.Training
-      ? constants.canvasWidth - 100
+      ? constants.canvasWidth - 65
       : constants.canvasWidth + constants.fishCanvasWidth;
   const startFishIdx = Math.max(
     getFishIdxForLocation(maxScreenX, offsetX, state.fishData.length),
@@ -319,12 +319,13 @@ const drawMovingFish = state => {
     state.fishData.length - 1
   );
   const ctx = state.canvas.getContext('2d');
+  const midScreenX = constants.canvasWidth / 2 - constants.fishCanvasWidth / 2;
 
   let centerFish;
   for (let i = startFishIdx; i <= lastFishIdx; i++) {
     const fish = state.fishData[i];
     const x = getXForFish(state.fishData.length - 1, i, offsetX);
-    const y = getYForFish(
+    let y = getYForFish(
       state.fishData.length - 1,
       i,
       state,
@@ -335,8 +336,6 @@ const drawMovingFish = state => {
     let drawPrediction = false;
     if (state.currentMode === Modes.Predicting) {
       if (fish.getResult()) {
-        const midScreenX =
-          constants.canvasWidth / 2 - constants.fishCanvasWidth / 2;
         drawPrediction = x >= midScreenX;
         const nearCenterX = x - midScreenX <= 50;
 
@@ -369,7 +368,14 @@ const drawMovingFish = state => {
     }
 
     const drawPolaroid = state.currentMode === Modes.Training;
-    drawSingleFish(fish, x, y, ctx, 1, drawPrediction, drawPolaroid);
+    let size = 1;
+    if (drawPolaroid && state.isRunning && x > midScreenX) {
+      size = 0.35;
+      // Apply sine wave to y-value to make item jump into AI bot's head.
+      y -= Math.sin((runtime / state.moveTime) * Math.PI) * 200;
+    }
+
+    drawSingleFish(fish, x, y, ctx, size, drawPrediction, drawPolaroid);
   }
 
   if (state.currentMode === Modes.Predicting) {
@@ -397,19 +403,21 @@ const drawPolaroidFrame = canvas => {
   }
 };
 
-const drawPolaroid = (ctx, x, y) => {
-  const rectSize = constants.fishFrameSize;
-  const xDiff = Math.abs(rectSize - constants.fishCanvasWidth) / 2;
+const drawPolaroid = (ctx, x, y, size = 1) => {
+  const rectSize = constants.fishFrameSize * size;
+  const xDiff = Math.abs(rectSize - constants.fishCanvasWidth * size) / 2;
   const adjustedX = x + xDiff;
-  const yDiff = Math.abs(rectSize - constants.fishCanvasHeight) / 2;
+  const yDiff = Math.abs(rectSize - constants.fishCanvasHeight * size) / 2;
   const adjustedY = y - yDiff;
 
   // White outer polaroid frame
+  const padding = 10 * size;
+  const paddingBottom = 60 * size;
   DrawRect(
-    adjustedX - 10,
-    adjustedY - 10,
-    rectSize + 20,
-    rectSize + 60,
+    adjustedX - padding,
+    adjustedY - padding,
+    rectSize + padding * 2,
+    rectSize + paddingBottom,
     colors.white
   );
   // Dark grey inner polaroid frame (where item is displayed)
@@ -592,7 +600,7 @@ const drawSingleFish = (
   const adjustedFishYPos = fishYPos - height / 2 + fishCanvas.height / 2;
 
   if (withPolaroid) {
-    drawPolaroid(ctx, adjustedFishXPos, adjustedFishYPos);
+    drawPolaroid(ctx, adjustedFishXPos, adjustedFishYPos, size);
   }
 
   if (withPrediction && fish.getResult()) {

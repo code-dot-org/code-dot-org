@@ -15,6 +15,8 @@ import {
 import {onClassifyFish} from './models/train';
 import {arrangeFish} from './models/pond';
 import colors from './colors';
+import aiBotHead from '../../public/images/ai-bot/ai-bot-head.png';
+import aiBotBody from '../../public/images/ai-bot/ai-bot-body.png';
 import aiBotClosed from '../../public/images/ai-bot/ai-bot-closed.png';
 import counterIcon from '../../public/images/data.png';
 import eraseButton from '../../public/images/erase.png';
@@ -230,9 +232,20 @@ const styles = {
   },
   trainBot: {
     position: 'absolute',
-    height: '40%',
-    top: '28%',
-    left: '76%'
+    height: '100%',
+    top: 0,
+    left: '73%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center'
+  },
+  trainBotHead: {
+    transition: 'transform 500ms',
+    padding: '0 12px'
+  },
+  trainBotOpen: {
+    transform: 'rotate(90deg)',
+    transformOrigin: 'bottom right'
   },
   counter: {
     position: 'absolute',
@@ -765,6 +778,10 @@ class Words extends React.Component {
 }
 
 let Train = class Train extends React.Component {
+  state = {
+    headOpen: false
+  };
+
   render() {
     const state = getState();
     const yesButtonText =
@@ -789,7 +806,16 @@ let Train = class Train extends React.Component {
           }}
         />
         <div style={styles.trainQuestionText}>{state.trainingQuestion}</div>
-        <img style={styles.trainBot} src={aiBotClosed} />
+        <div style={styles.trainBot}>
+          <img
+            src={aiBotHead}
+            style={[
+              styles.trainBotHead,
+              this.state.headOpen && styles.trainBotOpen
+            ]}
+          />
+          <img src={aiBotBody} />
+        </div>
 
         <div style={styles.counter}>
           <img src={counterIcon} />
@@ -801,6 +827,7 @@ let Train = class Train extends React.Component {
           <Button
             style={styles.trainButtonNo}
             onClick={() => {
+              this.setState({headOpen: true});
               return onClassifyFish(false);
             }}
             sound={'no'}
@@ -810,6 +837,7 @@ let Train = class Train extends React.Component {
           <Button
             style={styles.trainButtonYes}
             onClick={() => {
+              this.setState({headOpen: true});
               return onClassifyFish(true);
             }}
             sound={'yes'}
@@ -1236,7 +1264,7 @@ let Pond = class Pond extends React.Component {
 
     return (
       <Body>
-        <div onClick={e => this.onPondClick(e)} style={styles.pondSurface}/>
+        <div onClick={e => this.onPondClick(e)} style={styles.pondSurface} />
         <div style={styles.recallContainer}>
           {showInfoButton && (
             <FontAwesomeIcon
