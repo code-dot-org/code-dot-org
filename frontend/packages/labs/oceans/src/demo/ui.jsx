@@ -1309,7 +1309,7 @@ let Pond = class Pond extends React.Component {
                     toMode(Modes.Words);
                   }}
                 >
-                  Play Again
+                  New Word
                 </Button>
                 <Button
                   style={styles.finishButton}
