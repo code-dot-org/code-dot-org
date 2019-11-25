@@ -11,10 +11,6 @@
 
 = render partial: 'levels/editors/submittable', locals: {f: f}
 
-.field.aligned-input-group
-  = boolean_check_box f, :hide_view_data_button
-  = f.label 'Hide View Data Button'
-
 = render partial: 'levels/editors/block_pools', locals: {f: f}
 
 = render partial: 'levels/editors/helper_libraries', locals: {f: f}
