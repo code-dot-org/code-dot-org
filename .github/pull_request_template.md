@@ -14,7 +14,6 @@
 <!-- ### Privacy -->
 <!-- ### Security -->
 <!-- ### Caching -->
-<!-- ### Testing -->
 <!-- ### Deployment strategy -->
 <!-- ### Future work -->
 

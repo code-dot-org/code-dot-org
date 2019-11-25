@@ -113,11 +113,14 @@ def localize_level_content
       script_strings.delete_if {|_, value| value.blank?}
 
       script_i18n_directory = "../#{I18N_SOURCE_DIR}/course_content"
+
+      # We want to make sure to categorize HoC scripts as HoC scripts even if
+      # they have a version year, so this ordering is important
       script_i18n_directory =
-        if script.version_year
-          File.join(script_i18n_directory, script.version_year)
-        elsif ScriptConstants.script_in_category?(:hoc, script.name)
+        if ScriptConstants.script_in_category?(:hoc, script.name)
           File.join(script_i18n_directory, "Hour of Code")
+        elsif script.version_year
+          File.join(script_i18n_directory, script.version_year)
         else
           File.join(script_i18n_directory, "other")
         end
