@@ -1003,6 +1003,7 @@ let Predict = class Predict extends React.Component {
         )}
         {!state.isRunning && !state.isPaused && (
           <Button style={styles.continueButton} onClick={this.onRun}>
+            <FontAwesomeIcon icon={faPlay} style={{marginRight: 10}} />
             Run
           </Button>
         )}
