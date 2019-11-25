@@ -78,11 +78,31 @@ theme: responsive
     height: 40px;
   }
 
+  .bot {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 20px;
+    left: 700px;
+    height: 120px;
+    width: 75px;
+  }
+
+  .beam {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 135px;
+    left: 688px;
+    height: 150px;
+    width: 100px;
+  }
+
 %div{style: "display: #{launch_ai ? 'block' : 'none'}"}
 
   .tutorial-promo-container
     .img-container
-      %img.background-img{src: '/images/fit-1940//ocean-background.png'}
+      %img.background-img{src: '/images/fit-1940/ocean-background.png'}
     .tutorial-details
       %h1.tutorial-heading=hoc_s(:oceans_landing_title)
       %p.tutorial-description= tutorial[:left_description]
@@ -90,6 +110,8 @@ theme: responsive
       %p.tutorial-specs= tutorial[:left_specs]
       %a{href: tutorial[:left_button_link], target: '_self'}
         %button.tutorial-button= tutorial[:left_button_text]
+    %img.bot{src: '/images/ai-bot.png'}
+    %img.beam{src: '/images/ai-beam.png'}
 
   %div{style: "clear: both; margin-top: 20px;"}
 
