@@ -160,7 +160,7 @@ const fishComponents = {
   bodies: {
     circle_1: {
       src: circle_1_image,
-      anchor: [100, 50],
+      anchor: [95, 55],
       faceAnchor: [8, 13],
       pectoralFinBackAnchor: [5, 76],
       pectoralFinFrontAnchor: [56, 82],
@@ -172,7 +172,7 @@ const fishComponents = {
     },
     circle_2: {
       src: circle_2_image,
-      anchor: [96, 55],
+      anchor: [91, 60],
       faceAnchor: [6, 9],
       pectoralFinBackAnchor: [22, 72],
       pectoralFinFrontAnchor: [70, 72],
@@ -184,7 +184,7 @@ const fishComponents = {
     },
     diamond1: {
       src: diamond1_image,
-      anchor: [80, 100],
+      anchor: [80, 82],
       faceAnchor: [12, 2],
       pectoralFinBackAnchor: [45, 33],
       pectoralFinFrontAnchor: [75, 33],
@@ -202,7 +202,7 @@ const fishComponents = {
     },
     other_1: {
       src: other_1_image,
-      anchor: [50, 50],
+      anchor: [71, 69],
       faceAnchor: [8, 0],
       pectoralFinBackAnchor: [32, 58],
       pectoralFinFrontAnchor: [80, 60],
@@ -220,7 +220,7 @@ const fishComponents = {
     },
     other_2: {
       src: other_2_image,
-      anchor: [50, 50],
+      anchor: [77, 43],
       faceAnchor: [25, 29],
       pectoralFinBackAnchor: [22, 100],
       pectoralFinFrontAnchor: [80, 100],
@@ -238,7 +238,7 @@ const fishComponents = {
     },
     other_3: {
       src: other_3_image,
-      anchor: [102, 52],
+      anchor: [97, 58],
       faceAnchor: [4, 12],
       pectoralFinBackAnchor: [2, 69],
       pectoralFinFrontAnchor: [50, 72],
@@ -256,7 +256,7 @@ const fishComponents = {
     },
     other_4: {
       src: other_4_image,
-      anchor: [93, 43],
+      anchor: [88, 48],
       faceAnchor: [15, 17],
       pectoralFinBackAnchor: [22, 87],
       pectoralFinFrontAnchor: [68, 88],
@@ -274,7 +274,7 @@ const fishComponents = {
     },
     other_5: {
       src: other_5_image,
-      anchor: [85, 50],
+      anchor: [80, 55],
       faceAnchor: [8, 22],
       pectoralFinBackAnchor: [20, 75],
       pectoralFinFrontAnchor: [65, 78],
@@ -292,7 +292,7 @@ const fishComponents = {
     },
     oval_1: {
       src: oval_1_image,
-      anchor: [90, 50],
+      anchor: [85,55],
       faceAnchor: [9, 12],
       pectoralFinBackAnchor: [25, 82],
       pectoralFinFrontAnchor: [70, 78],
@@ -310,7 +310,7 @@ const fishComponents = {
     },
     oval_2: {
       src: oval_2_image,
-      anchor: [92, 67],
+      anchor: [87,72],
       faceAnchor: [11, 3],
       pectoralFinBackAnchor: [8, 53],
       pectoralFinFrontAnchor: [60, 53],
@@ -328,7 +328,7 @@ const fishComponents = {
     },
     oval_3: {
       src: oval_3_image,
-      anchor: [82, 61],
+      anchor: [67, 66],
       faceAnchor: [10, 7],
       pectoralFinBackAnchor: [27, 60],
       pectoralFinFrontAnchor: [60, 60],
@@ -346,7 +346,7 @@ const fishComponents = {
     },
     oval_4: {
       src: oval_4_image,
-      anchor: [86, 60],
+      anchor: [82,65],
       faceAnchor: [10, 10],
       pectoralFinBackAnchor: [25, 62],
       pectoralFinFrontAnchor: [70, 60],
@@ -364,7 +364,7 @@ const fishComponents = {
     },
     rectangle_1: {
       src: rectangle_1_image,
-      anchor: [85, 63],
+      anchor: [80, 68],
       faceAnchor: [2, 5],
       pectoralFinBackAnchor: [23, 60],
       pectoralFinFrontAnchor: [62, 60],
@@ -376,7 +376,7 @@ const fishComponents = {
     },
     rectangle_2: {
       src: rectangle_2_image,
-      anchor: [97, 55],
+      anchor: [92,60],
       faceAnchor: [10, 11],
       pectoralFinBackAnchor: [8, 76],
       pectoralFinFrontAnchor: [60, 78],
@@ -388,7 +388,7 @@ const fishComponents = {
     },
     rectangle_3: {
       src: rectangle_3_image,
-      anchor: [97, 79],
+      anchor: [92,84],
       faceAnchor: [2, 1],
       pectoralFinBackAnchor: [15, 28],
       pectoralFinFrontAnchor: [59, 32],
@@ -406,7 +406,7 @@ const fishComponents = {
     },
     s1: {
       src: s1_image,
-      anchor: [70, 50],
+      anchor: [96,49],
       faceAnchor: [0, -7],
       pectoralFinBackAnchor: [10, 15],
       pectoralFinFrontAnchor: [38, 15],
@@ -427,7 +427,7 @@ const fishComponents = {
     },
     s2: {
       src: s2_image,
-      anchor: [70, 70],
+      anchor: [87,71],
       faceAnchor: [0, 27],
       pectoralFinBackAnchor: [13, 54],
       pectoralFinFrontAnchor: [42, 52],
@@ -445,7 +445,7 @@ const fishComponents = {
     },
     star1: {
       src: star1_image,
-      anchor: [70, 50],
+      anchor: [83, 43],
       faceAnchor: [11, 27],
       pectoralFinBackAnchor: [30, 89],
       pectoralFinFrontAnchor: [63, 91],
@@ -463,11 +463,11 @@ const fishComponents = {
     },
     triangle2: {
       src: triangle2_image,
-      anchor: [107, 30],
+      anchor: [102, 32],
       faceAnchor: [7, 70],
       pectoralFinBackAnchor: [20, 110],
       pectoralFinFrontAnchor: [54, 126],
-      dorsalFinAnchor: [80, 14],
+      dorsalFinAnchor: [79, 16],
       tailAnchor: [70, 79],
       scalesAnchor: [60, 26],
       knnData: [6902, BodyShape.TRIANGLE],
@@ -475,7 +475,7 @@ const fishComponents = {
     },
     triangle3: {
       src: triangle3_image,
-      anchor: [103, 46],
+      anchor: [98, 51],
       faceAnchor: [20, 33],
       pectoralFinBackAnchor: [28, 88],
       pectoralFinFrontAnchor: [62, 94],
@@ -493,7 +493,7 @@ const fishComponents = {
     },
     triangle_1: {
       src: triangle_1_image,
-      anchor: [50, 40],
+      anchor: [88, 48],
       faceAnchor: [10, 43],
       pectoralFinBackAnchor: [40, 95],
       pectoralFinFrontAnchor: [80, 100],
