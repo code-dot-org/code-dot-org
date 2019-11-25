@@ -532,7 +532,7 @@ const styles = {
   },
   arrowBotRight: {
     top: '15%',
-    right: '8.9%',
+    right: '14.9%',
     transform: 'translateX(-50%)'
   },
   arrowLowerLeft: {
