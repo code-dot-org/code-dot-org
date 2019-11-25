@@ -12,19 +12,19 @@
 
   - if @level.is_a?(GamelabJr)
     .field
-      = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :use_default_sprites, description: "Use default sprites as starting animation JSON"}
+      = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :use_default_sprites, description: "Use default sprites as starting animation JSON"}
 
   .field
-    = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :hide_animation_mode, description: "Hide the Animation Tab (you can still seed a level with animations)"}
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :hide_animation_mode, description: "Hide the Animation Tab (you can still seed a level with animations)"}
 
   .field
-    = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :start_in_animation_tab, description: "Start in the Animation Tab"}
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :start_in_animation_tab, description: "Start in the Animation Tab"}
 
   .field
-    = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :all_animations_single_frame, description: "All animations should be a single frame. If it has multiple frames, only show the first frame as a still image."}
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :all_animations_single_frame, description: "All animations should be a single frame. If it has multiple frames, only show the first frame as a still image."}
 
   .field
-    = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: 'pause_animations_by_default', description: "Animations are paused by default"}
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: 'pause_animations_by_default', description: "Animations are paused by default"}
 
     %p
       If checked, the sprite animation will always be paused after a <tt>setAnimation</tt> call.
