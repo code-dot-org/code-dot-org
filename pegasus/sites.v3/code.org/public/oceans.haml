@@ -29,6 +29,37 @@ theme: responsive
     right_button_text: hoc_s(:oceans_landing_resource_button)
   }
 
+:javascript
+  $time =
+    Date.now ||
+    function() {
+      return +new Date();
+    };
+  var fishLocations = [
+    // {x: 100, y: 130},
+    {x: 370, y: 180},
+    {x: 550, y: 150},
+    {x: 160, y: 220}
+  ];
+  $(document).ready(function() {
+    setInterval(function() {
+      $(".sea-creature").each(function(index) {
+        var swayValue =
+          (($time() * 360) / (20 * 1000) + (index + 1) * 10) % 360;
+        var swayOffsetX = Math.sin(((swayValue * Math.PI) / 180) * 2) * 25;
+        var swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 6) * 2;
+        var x = fishLocations[index].x + swayOffsetX;
+        var y;
+        if (index == 3) {
+          y = fishLocations[index].y;
+        } else {
+          y = fishLocations[index].y + swayOffsetY;
+        }
+        $(this).css({left: x, top: y, display: 'block'});
+      });
+    }, 1000 / 30);
+  });
+
 :css
   @media screen and (min-width: 0px) and (max-width: 970px) {
     #ocean-mobile-image {
@@ -78,7 +109,16 @@ theme: responsive
     height: 40px;
   }
 
-  .bot {
+  .sea-creature {
+    position: absolute;
+    width: 50px;
+    display: none
+  }
+
+  .blurb {
+    line-height: 1.5
+  }
+  /* .bot {
     margin-top: 0px;
     margin-bottom: 10px;
     position: absolute;
@@ -96,13 +136,16 @@ theme: responsive
     left: 688px;
     height: 150px;
     width: 100px;
-  }
+  } */
 
 %div{style: "display: #{launch_ai ? 'block' : 'none'}"}
 
   .tutorial-promo-container
     .img-container
       %img.background-img{src: '/images/fit-1940/ocean-background.png'}
+      %img.sea-creature{src: 'images/oceans/yellow-fish.png'}
+      %img.sea-creature{src: 'images/oceans/turtle.png'}
+      %img.sea-creature{src: 'images/oceans/orange-fish.png'}
     .tutorial-details
       %h1.tutorial-heading=hoc_s(:oceans_landing_title)
       %p.tutorial-description= tutorial[:left_description]
@@ -110,11 +153,15 @@ theme: responsive
       %p.tutorial-specs= tutorial[:left_specs]
       %a{href: tutorial[:left_button_link], target: '_self'}
         %button.tutorial-button= tutorial[:left_button_text]
-    %img.bot{src: '/images/ai-bot.png'}
-    %img.beam{src: '/images/ai-beam.png'}
+
+
 
   %div{style: "clear: both; margin-top: 20px;"}
 
   = view :resource_boxes, resources: resources
+
+  %h3.blurb="Computer science is about so much more than coding! Learn about AI, machine learning, training data, and bias, while exploring ethical issues and how AI can be used to address world problems. Enjoy Code.org's first step in a new journey to teach more about AI throughout our curriculum."
+
+  %h2="Learn more about AI and Machine Learning"
 
 .clear
