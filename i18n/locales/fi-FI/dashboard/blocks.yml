@@ -3,6 +3,9 @@ fi:
   data:
     blocks:
       Dancelab_alternateMoves:
+        text: |-
+          {GROUP} vuorottelee joka {N} tahti
+          tanssiliikkeiden {MOVE1} ja {MOVE2} välillä
         options:
           GROUP:
             sprites: kaikki
@@ -16,10 +19,10 @@ fi:
             '"PINEAPPLE"': kaikki ananakset
             '"ROBOT"': kaikki robotit
             '"SHARK"': kaikki hait
-            '"UNICORN"': Yksisarviset
+            '"UNICORN"': yksisarviset
           MOVE1:
             MOVES.ClapHigh: Taputa korkealle
-            MOVES.Dab: Nokare
+            MOVES.Dab: Dab
             MOVES.DoubleJam: Panoksen tuplaus
             MOVES.Drop: Pudota
             MOVES.Floss: Flossaa
@@ -29,7 +32,7 @@ fi:
             MOVES.Rest: Ei mitään
           MOVE2:
             MOVES.ClapHigh: Taputa korkealle
-            MOVES.Dab: Nokare
+            MOVES.Dab: Dab
             MOVES.DoubleJam: Panoksen tuplaus
             MOVES.Drop: Pudota
             MOVES.Floss: Flossaa
@@ -71,7 +74,7 @@ fi:
             '"prev"': "(Edellinen)"
             '"rand"': "(Satunnainen)"
             MOVES.ClapHigh: Taputa korkealle
-            MOVES.Dab: Nokare
+            MOVES.Dab: Dab
             MOVES.DoubleJam: Panoksen tuplaus
             MOVES.Drop: Pudota
             MOVES.Floss: Flossaa
@@ -90,7 +93,7 @@ fi:
             '"prev"': "(Edellinen)"
             '"rand"': "(Satunnainen)"
             MOVES.ClapHigh: Taputa korkealle
-            MOVES.Dab: Nokare
+            MOVES.Dab: Dab
             MOVES.DoubleJam: Panoksen tuplaus
             MOVES.Drop: Pudota
             MOVES.Floss: Flossaa
@@ -125,7 +128,7 @@ fi:
             '"PINEAPPLE"': kaikki ananakset
             '"ROBOT"': kaikki robotit
             '"SHARK"': kaikki hait
-            '"UNICORN"': Yksisarviset
+            '"UNICORN"': yksisarviset
           PROPERTY:
             '"scale"': koko
             '"width"': leveys
@@ -148,13 +151,14 @@ fi:
             '"PINEAPPLE"': kaikki ananakset
             '"ROBOT"': kaikki robotit
             '"SHARK"': kaikki hait
-            '"UNICORN"': Yksisarviset
+            '"UNICORN"': yksisarviset
           MOVE:
             '"rand"': "(Satunnainen)"
             MOVES.XBend: Taivuta
             MOVES.XClapSide: Taputa
             MOVES.ClapHigh: Taputa korkealle
-            MOVES.Dab: Nokare
+            MOVES.Dab: Dab
+            MOVES.XFever: Disko
             MOVES.DoubleJam: Panoksen tuplaus
             MOVES.Drop: Pudota
             MOVES.Floss: Flossaa
@@ -182,7 +186,8 @@ fi:
             MOVES.XBend: Taivuta
             MOVES.XClapSide: Taputa
             MOVES.ClapHigh: Taputa korkealle
-            MOVES.Dab: Nokare
+            MOVES.Dab: Dab
+            MOVES.XFever: Disko
             MOVES.DoubleJam: Panoksen tuplaus
             MOVES.Drop: Pudota
             MOVES.Floss: Flossaa
@@ -250,7 +255,7 @@ fi:
         options:
           DANCE:
             MOVES.ClapHigh: Taputa korkealle
-            MOVES.Dab: Nokare
+            MOVES.Dab: Dab
             MOVES.DoubleJam: Panoksen tuplaus
             MOVES.Drop: Pudota
             MOVES.Floss: Flossaa
@@ -295,7 +300,7 @@ fi:
             '"PINEAPPLE"': kaikki ananakset
             '"ROBOT"': kaikki robotit
             '"SHARK"': kaikki hait
-            '"UNICORN"': Yksisarviset
+            '"UNICORN"': yksisarviset
           LOCATION:
             "{x: 200, y: 100}": ylös
             "{x: 200, y: 300}": alas
@@ -322,7 +327,7 @@ fi:
             '"PINEAPPLE"': kaikki ananakset
             '"ROBOT"': kaikki robotit
             '"SHARK"': kaikki hait
-            '"UNICORN"': Yksisarviset
+            '"UNICORN"': yksisarviset
           FORMAT:
             '"border"': raja
             '"inner"': neliön sisällä
@@ -334,18 +339,20 @@ fi:
             '"plus"': risti
             '"random"': satunnainen
       Dancelab_makeAnonymousDanceSprite:
+        text: tee uusi {COSTUME} sijaintiin {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': avaruusolio
-            '"BEAR"': Karhu
+            '"BEAR"': karhu
             '"CAT"': kissa
             '"DOG"': koira
             '"DUCK"': ankka
-            '"FROG"': Sammakko
+            '"FROG"': sammakko
             '"MOOSE"': kaikki hirvet
-            '"PINEAPPLE"': Ananas
+            '"PINEAPPLE"': ananas
             '"ROBOT"': robotti
-            '"SHARK"': Hai
+            '"SHARK"': hai
+            '"SLOTH"': laiskiainen
             '"UNICORN"': yksisarvinen
           LOCATION:
             "{x: 200, y: 100}": ylös
@@ -365,15 +372,16 @@ fi:
         options:
           COSTUME:
             '"ALIEN"': Avaruusolento
-            '"BEAR"': Karhu
+            '"BEAR"': karhu
             '"CAT"': Kissa
-            '"DOG"': Koira
+            '"DOG"': koira
             '"DUCK"': Ankka
-            '"FROG"': Sammakko
+            '"FROG"': sammakko
             '"MOOSE"': Hirvi
-            '"PINEAPPLE"': Ananas
+            '"PINEAPPLE"': ananas
             '"ROBOT"': Robotti
-            '"SHARK"': Hai
+            '"SHARK"': hai
+            '"SLOTH"': laiskiainen
             '"UNICORN"': Yksisarvinen
           LOCATION:
             "{x: 200, y: 100}": ylös
@@ -418,11 +426,11 @@ fi:
             '"DOG"': Koirat
             '"DUCK"': Ankat
             '"FROG"': Sammakot
-            '"MOOSE"': Hirvi
+            '"MOOSE"': hirvi
             '"PINEAPPLE"': Ananakset
             '"ROBOT"': Robotit
             '"SHARK"': Hait
-            '"UNICORN"': Yksisarviset
+            '"UNICORN"': yksisarviset
           LAYOUT:
             '"border"': raja
             '"inner"': neliön sisällä
@@ -501,7 +509,7 @@ fi:
             '"PINEAPPLE"': kaikki ananakset
             '"ROBOT"': kaikki robotit
             '"SHARK"': kaikki hait
-            '"UNICORN"': Yksisarviset
+            '"UNICORN"': yksisarviset
           SPEED:
             '1': normaali
             '2': nopea
@@ -552,7 +560,7 @@ fi:
             '"PINEAPPLE"': kaikki ananakset
             '"ROBOT"': kaikki robotit
             '"SHARK"': kaikki hait
-            '"UNICORN"': Yksisarviset
+            '"UNICORN"': yksisarviset
           PROPERTY:
             '"scale"': koko
             '"width"': leveys
@@ -586,7 +594,7 @@ fi:
             '"PINEAPPLE"': kaikki ananakset
             '"ROBOT"': kaikki robotit
             '"SHARK"': kaikki hait
-            '"UNICORN"': Yksisarviset
+            '"UNICORN"': yksisarviset
           PROPERTY:
             '"scale"': koko
             '"width"': leveys
@@ -611,7 +619,7 @@ fi:
             '"PINEAPPLE"': kaikki ananakset
             '"ROBOT"': kaikki robotit
             '"SHARK"': kaikki hait
-            '"UNICORN"': Yksisarviset
+            '"UNICORN"': yksisarviset
       Dancelab_setTintEachInline:
         options:
           THIS:
@@ -626,7 +634,7 @@ fi:
             '"PINEAPPLE"': kaikki ananakset
             '"ROBOT"': kaikki robotit
             '"SHARK"': kaikki hait
-            '"UNICORN"': Yksisarviset
+            '"UNICORN"': yksisarviset
       Dancelab_setTintInline:
         text: Aseta {SPRITE} sävy {VAL}
       Dancelab_setVisible:
@@ -650,7 +658,7 @@ fi:
             '"PINEAPPLE"': kaikki ananakset
             '"ROBOT"': kaikki robotit
             '"SHARK"': kaikki hait
-            '"UNICORN"': Yksisarviset
+            '"UNICORN"': yksisarviset
           VISIBILITY:
             'true': näkyvissä
             'false': näkymätön
@@ -683,7 +691,7 @@ fi:
             '"PINEAPPLE"': kaikki ananakset
             '"ROBOT"': kaikki robotit
             '"SHARK"': kaikki hait
-            '"UNICORN"': Yksisarviset
+            '"UNICORN"': yksisarviset
           PROPERTY:
             '"scale"': koko
             '"width"': leveys
@@ -726,7 +734,7 @@ fi:
             '"PINEAPPLE"': kaikki ananakset
             '"ROBOT"': kaikki robotit
             '"SHARK"': kaikki hait
-            '"UNICORN"': Yksisarviset
+            '"UNICORN"': yksisarviset
           PROPERTY:
             '"scale"': koko
             '"width"': leveys
@@ -751,6 +759,14 @@ fi:
             '"w"': w
             '"x"': x
             '"z"': z
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenKey:
         text: kun {KEY} painettuna
         options:
@@ -779,6 +795,14 @@ fi:
             '"w"': w
             '"x"': x
             '"z"': z
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenPeak:
         text: Kun {RANGE} piikkaa
         options:
@@ -808,6 +832,8 @@ fi:
         text: kun {SPRITE} klikataan
       gamelab_comment:
         text: 'kommentti: {COMMENT}'
+      gamelab_createNewSprite:
+        text: "tee uusi sprite \n nimeltä {NAME} \n puvussa {COSTUME} \n sijaintiin {LOCATION}"
       gamelab_destroy:
         text: poista {THIS}
       gamelab_getProp:
@@ -851,6 +877,8 @@ fi:
             '"w"': w
             '"x"': x
             '"z"': z
+      gamelab_makeNewSpriteAnon:
+        text: tee uusi {ANIMATION_NAME} sprite sijaintiin {LOCATION}
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -981,6 +1009,7 @@ fi:
             '"y"': y:n paikka
             '"direction"': liikkeen suunta
       Mikelab_groupCreateNewSprite:
+        text: tee uusi {COSTUME} sijaintiin {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": ylös
@@ -1037,7 +1066,7 @@ fi:
         options:
           DANCE:
             MOVES.ClapHigh: Taputa korkealle
-            MOVES.Dab: Nokare
+            MOVES.Dab: Dab
             MOVES.DoubleJam: Panoksen tuplaus
             MOVES.Drop: Pudota
             MOVES.Floss: Flossaa
