@@ -31,6 +31,7 @@ body_image_files.forEach(fileName => {
       pectoralFinFrontAnchor: [null, null],
       dorsalFinAnchor: [null, null],
       tailAnchor: [null, null],
+      scalesAnchor: [null, null],
       knnData: [${numPixels}, null],
       type: FishBodyPart.BODY
     },`;
