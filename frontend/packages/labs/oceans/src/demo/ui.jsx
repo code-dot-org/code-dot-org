@@ -53,8 +53,9 @@ const styles = {
     cursor: 'pointer',
     backgroundColor: colors.white,
     color: colors.grey,
+    fontSize: '100%',
     borderRadius: 8,
-    minWidth: 160,
+    minWidth: '15%',
     outline: 'none',
     border: 'none',
     ':focus': {
@@ -70,21 +71,17 @@ const styles = {
   },
   finishButton: {
     backgroundColor: colors.orange,
-    color: colors.white
+    color: colors.white,
+    position: 'absolute',
+    bottom: '4%',
+    right: '2.25%',
   },
   playAgainButton: {
     backgroundColor: colors.yellowGreen,
     color: colors.white,
-    marginBottom: 10
-  },
-  rightButtons: {
     position: 'absolute',
-    bottom: 10,
-    right: 10,
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'right',
-    minWidth: 160
+    bottom: '16%',
+    right: '2.25%',
   },
   backButton: {
     position: 'absolute',
@@ -123,7 +120,7 @@ const styles = {
     top: '50%',
     bottom: 'initial',
     left: '50%',
-    padding: 20
+    padding: '2%'
   },
   confirmationDialogLeft: {
     float: 'left',
@@ -134,37 +131,39 @@ const styles = {
     width: '70%'
   },
   confirmationHeader: {
-    fontSize: 40,
-    lineHeight: '40px',
+    fontSize: '220%',
     color: colors.darkGrey,
-    padding: 10,
+    paddingBottom: '5%',
     textAlign: 'center'
   },
   confirmationText: {
     textAlign: 'center',
     backgroundColor: colors.lightGrey,
-    padding: '15px',
-    borderRadius: '5px'
+    padding: '5%',
+    borderRadius: 5
   },
   confirmationButtons: {
-    display: 'inline-flex',
-    justifyContent: 'space-between',
-    padding: '10px 0px',
-    width: '100%'
+    paddingTop: '5%',
+    clear: 'both'
   },
   confirmationYesButton: {
-    marginLeft: 10,
     backgroundColor: colors.red,
-    color: colors.white
+    color: colors.white,
+    left: '5%',
+    padding: '3.5% 8%',
+    width: '35%'
   },
   confirmationNoButton: {
     backgroundColor: colors.orange,
-    color: colors.white
+    color: colors.white,
+    float: 'right',
+    right: '5%',
+    padding: '3.5% 8%',
+    width: '35%'
   },
   activityIntroText: {
     position: 'absolute',
-    fontSize: 22,
-    lineHeight: '26px',
+    fontSize: '120%',
     top: '20%',
     left: '50%',
     width: '80%',
@@ -186,8 +185,7 @@ const styles = {
   wordsText: {
     textAlign: 'center',
     marginTop: 20,
-    fontSize: 22,
-    lineHeight: '26px',
+    fontSize: '120%',
     color: colors.white
   },
   eraseButton: {
@@ -201,8 +199,7 @@ const styles = {
     top: '15%',
     left: '50%',
     transform: 'translateX(-50%)',
-    fontSize: 32,
-    lineHeight: '35px',
+    fontSize: '180%',
     color: colors.white
   },
   trainButtons: {
@@ -252,7 +249,7 @@ const styles = {
     height: 25
   },
   counterNum: {
-    fontSize: 14,
+    fontSize: '80%',
     margin: '4px 7px'
   },
   mediaControls: {
@@ -265,7 +262,7 @@ const styles = {
   mediaControl: {
     cursor: 'pointer',
     margin: '0 20px',
-    fontSize: 30,
+    fontSize: '180%',
     color: colors.white,
     display: 'flex',
     alignItems: 'center',
@@ -281,7 +278,7 @@ const styles = {
   },
   timeScale: {
     width: 40,
-    fontSize: 24,
+    fontSize: '120%',
     textAlign: 'center'
   },
   predictSpeech: {
@@ -443,7 +440,6 @@ const styles = {
     position: 'absolute',
     backgroundColor: colors.transparentBlack,
     color: colors.white,
-    lineHeight: '140%',
     borderRadius: 5,
     maxWidth: '80%',
     bottom: '4%',
@@ -458,15 +454,14 @@ const styles = {
     position: 'relative'
   },
   guideImage: {
-    paddingTop: 20,
-    paddingLeft: 20,
-    maxWidth: '90%'
+    maxWidth: '90%',
+    padding: '20%',
+    boxSizing: 'border-box'
   },
   guideHeading: {
-    fontSize: 40,
-    lineHeight: '40px',
+    fontSize: '220%',
     color: colors.darkGrey,
-    padding: 20
+    paddingBottom: '5%'
   },
   guideTypingText: {
     position: 'absolute',
@@ -499,7 +494,8 @@ const styles = {
     pointerEvents: 'none'
   },
   guideArrow: {
-    position: 'absolute'
+    position: 'absolute',
+    width: '8%'
   },
   guideInfo: {
     backgroundColor: colors.white,
@@ -508,7 +504,7 @@ const styles = {
     top: '50%',
     bottom: 'initial',
     left: '50%',
-    padding: 20
+    padding: '2%'
   },
   guideCenter: {
     top: '50%',
@@ -519,19 +515,23 @@ const styles = {
   },
   arrowBotRight: {
     top: '15%',
-    right: '14.5%'
+    right: '8.9%',
+    transform: 'translateX(-50%)'
   },
   arrowLowerLeft: {
     bottom: '17%',
-    left: '6%'
+    left: '10%',
+    transform: 'translateX(-50%)'
   },
   arrowLowerRight: {
     bottom: '17%',
-    right: '6%'
+    right: '2%',
+    transform: 'translateX(-50%)'
   },
   arrowLowishRight: {
-    bottom: '25%',
-    right: '5%'
+    bottom: '28%',
+    right: '2%',
+    transform: 'translateX(-50%)'
   },
   arrowLowerCenter: {
     bottom: '25%',
@@ -628,7 +628,9 @@ let ConfirmationDialog = class ConfirmationDialog extends React.Component {
     return (
       <div style={styles.confirmationDialogBackground}>
         <div style={styles.confirmationDialog}>
-          <img src={snail} style={styles.confirmationDialogLeft} />
+          <div style={styles.confirmationDialogLeft}>
+            <img src={snail} style={styles.guideImage}/>
+          </div>
           <div style={styles.confirmationDialogRight}>
             <div
               style={styles.confirmationHeader}
@@ -1267,7 +1269,7 @@ let Pond = class Pond extends React.Component {
         {state.canSkipPond && (
           <div>
             {state.appMode === AppMode.FishLong ? (
-              <div style={styles.rightButtons}>
+              <div>
                 <Button
                   style={styles.playAgainButton}
                   onClick={() => {
