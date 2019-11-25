@@ -747,7 +747,7 @@ class Words extends React.Component {
     const word = this.state.choices[itemIndex];
     setState({
       word,
-      trainingQuestion: `Is this fish ${word.toUpperCase()}?`
+      trainingQuestion: `Is this fish “${word.toLowerCase()}”?`
     });
     toMode(Modes.Training);
   }
@@ -1078,9 +1078,9 @@ class PondPanel extends React.Component {
               <div>
                 <div style={styles.pondPanelPreText}>
                   These were the most important fish parts in determining
-                  whether this fish was{' '}
-                  <span style={{color: colors.green}}>{state.word}</span> or{' '}
-                  <span style={{color: colors.red}}>not {state.word}</span>.
+                  whether this fish was{' “'}
+                  <span style={{color: colors.green}}>{state.word.toLowerCase()}</span>{'”'} or{' “'}
+                  <span style={{color: colors.red}}>not {state.word.toLowerCase()}</span>{'”'}.
                 </div>
                 {state.pondExplainFishSummary.slice(0, 4).map((f, i) => (
                   <div key={i}>
