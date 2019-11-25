@@ -252,14 +252,13 @@ header.hideTryAgainDialog = () => {
 header.logToFirehose = detail => {
   return firehoseClient.putRecord(
     {
-      study: 'user-interraction-nav',
-      event: 'navigation_bar',
+      study: 'navigation_bar',
+      event: 'nav_menu_clicked',
       data_json: JSON.stringify({
         nav: detail.nav_menu_clicked
-        // user
       })
     },
-    {alwaysPut: true}
+    {alwaysPut: true} // For testing purposes to confirm data is logged to firehose.  Remove before merging PR
   );
 };
 
