@@ -242,7 +242,7 @@ export default class DiscountAdminOverride extends Component {
                       style={styles.radio}
                       type="radio"
                       name="discountAmount"
-                      value="full"
+                      value="partial"
                       checked={this.state.overrideValue === 'partial'}
                       onChange={this.handleOverrideChange}
                     />
@@ -253,7 +253,7 @@ export default class DiscountAdminOverride extends Component {
                       style={styles.radio}
                       type="radio"
                       name="discountAmount"
-                      value="partial"
+                      value="full"
                       checked={this.state.overrideValue === 'full'}
                       onChange={this.handleOverrideChange}
                     />
