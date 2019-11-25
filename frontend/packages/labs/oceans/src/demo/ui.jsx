@@ -238,8 +238,8 @@ const styles = {
   },
   trainBotHead: {
     transition: 'transform 500ms',
-    left: '2%',
-    width: '45%',
+    left: '3%',
+    width: '43%',
     top: '0%',
     position: 'absolute'
   },
@@ -248,8 +248,8 @@ const styles = {
     transformOrigin: 'bottom right'
   },
   trainBotBody: {
-    width: '50%',
-    marginTop: '40%'
+    width: '49%',
+    marginTop: '30%'
   },
   counter: {
     position: 'absolute',
