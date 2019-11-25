@@ -9,9 +9,11 @@ button {
   border: none;
   width: 17%;
   padding: 1.5% 3%;
-
   &:focus {
     outline: white auto 5px;
+  }
+  &:active {
+    border: none !important;
   }
 }
 
