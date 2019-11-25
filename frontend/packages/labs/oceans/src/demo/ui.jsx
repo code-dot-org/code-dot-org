@@ -18,8 +18,7 @@ import colors from './colors';
 import aiBotHead from '../../public/images/ai-bot/ai-bot-head.png';
 import aiBotBody from '../../public/images/ai-bot/ai-bot-body.png';
 import aiBotClosed from '../../public/images/ai-bot/ai-bot-closed.png';
-import counterIcon from '../../public/images/data.png';
-import eraseButton from '../../public/images/erase.png';
+import counterIcon from '../../public/images/polaroid-icon.png';
 import arrowDownImage from '../../public/images/arrow-down.png';
 import snail from '../../public/images/seaCreatures/Snail.png';
 import Typist from 'react-typist';
@@ -34,7 +33,8 @@ import {
   faEraser,
   faCheck,
   faBan,
-  faInfo
+  faInfo,
+  faTrash
 } from '@fortawesome/free-solid-svg-icons';
 
 const styles = {
@@ -190,12 +190,6 @@ const styles = {
     fontSize: '120%',
     color: colors.white
   },
-  eraseButton: {
-    position: 'absolute',
-    top: 24,
-    right: 22,
-    cursor: 'pointer'
-  },
   trainQuestionText: {
     position: 'absolute',
     top: '15%',
@@ -251,23 +245,36 @@ const styles = {
     width: '49%',
     marginTop: '30%'
   },
-  counter: {
+  trainingIcons: {
     position: 'absolute',
+    top: '4%',
+    right: '2.25%',
     display: 'flex',
     justifyContent: 'space-between',
-    right: 53,
-    top: 24,
+    alignItems: 'center'
+  },
+  counter: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
     backgroundColor: colors.black,
     opacity: '90%',
     color: colors.neonBlue,
     borderRadius: 33,
-    padding: 0,
-    width: '8%',
-    height: 25
+    padding: '8px 20px',
+    minWidth: 65
   },
   counterNum: {
     fontSize: '80%',
-    margin: '4px 7px'
+    marginLeft: 12
+  },
+  eraseButton: {
+    cursor: 'pointer',
+    color: colors.white,
+    border: `3px solid ${colors.white}`,
+    borderRadius: 50,
+    padding: '6px 8px',
+    marginLeft: 10
   },
   mediaControls: {
     position: 'absolute',
@@ -413,7 +420,7 @@ const styles = {
   recallIcon: {
     width: 30,
     height: 30,
-    border: `5px solid ${colors.white}`,
+    border: `3px solid ${colors.white}`,
     borderRadius: 50,
     padding: 6,
     marginLeft: 8,
@@ -799,16 +806,6 @@ let Train = class Train extends React.Component {
 
     return (
       <Body>
-        <img
-          src={eraseButton}
-          style={styles.eraseButton}
-          onClick={() => {
-            setState({
-              showConfirmationDialog: true,
-              confirmationDialogOnYes: resetTrainingFunction
-            });
-          }}
-        />
         <div style={styles.trainQuestionText}>{state.trainingQuestion}</div>
         <div style={styles.trainBot}>
           <img
@@ -820,12 +817,23 @@ let Train = class Train extends React.Component {
           />
           <img src={aiBotBody} style={styles.trainBotBody} />
         </div>
-
-        <div style={styles.counter}>
-          <img src={counterIcon} />
-          <span style={styles.counterNum}>
-            {Math.min(999, state.yesCount + state.noCount)}
-          </span>
+        <div style={styles.trainingIcons}>
+          <div style={styles.counter}>
+            <img src={counterIcon} />
+            <span style={styles.counterNum}>
+              {Math.min(999, state.yesCount + state.noCount)}
+            </span>
+          </div>
+          <FontAwesomeIcon
+            icon={faTrash}
+            style={styles.eraseButton}
+            onClick={() => {
+              setState({
+                showConfirmationDialog: true,
+                confirmationDialogOnYes: resetTrainingFunction
+              });
+            }}
+          />
         </div>
         <div style={styles.trainButtons}>
           <Button
