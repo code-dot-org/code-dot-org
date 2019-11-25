@@ -23,12 +23,14 @@
   .field
     = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :all_animations_single_frame, description: "All animations should be a single frame. If it has multiple frames, only show the first frame as a still image."}
 
-  .field
-    = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: 'pause_animations_by_default', description: "Animations are paused by default"}
+  -# Deprecated for Sprite Lab
+  - if !(@level.is_a?(GamelabJr) && !@level.is_a?(Dancelab))
+    .field
+      = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: 'pause_animations_by_default', description: "Animations are paused by default"}
 
-    %p
-      If checked, the sprite animation will always be paused after a <tt>setAnimation</tt> call.
-      Otherwise, it will be playing after a <tt>setAnimation</tt> call.
+      %p
+        If checked, the sprite animation will always be paused after a <tt>setAnimation</tt> call.
+        Otherwise, it will be playing after a <tt>setAnimation</tt> call.
 
   .field
     %p{data: {toggle: "collapse", target: "#animation_json_output"}}

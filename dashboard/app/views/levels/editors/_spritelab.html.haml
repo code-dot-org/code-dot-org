@@ -16,15 +16,10 @@
 
 = render partial: 'levels/editors/animation', locals: {f: f}
 
-%legend.control-legend.levelTypeHeader
-  Sprite Lab Options
-
 = render partial: 'levels/editors/encrypted_examples', locals: {f: f, level_type: 'spritelab'}
 
 .field
   = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :include_shared_functions, description: "Make shared functions and behaviors available"}
-
-= render partial: 'levels/editors/custom_block', locals: {f: f}
 
 
 :javascript

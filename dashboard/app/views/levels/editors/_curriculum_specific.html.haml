@@ -33,10 +33,12 @@
 
 = render partial: 'levels/editors/hide_share_and_remix', locals: {f: f}
 
-.field
-  = f.label :failure_message_override, 'Failure Message Override'
-  %p If specified this error message will be used to replace ALL error messages in the puzzle. Be certain this is what you want before using.
-  = f.text_field :failure_message_override, style: 'width: 600px;', placeholder: 'Type Override Failure Message Here'
+-# Deprecated for Spritelab
+- if !(@level.is_a?(GamelabJr) && !@level.is_a?(Dancelab))
+  .field
+    = f.label :failure_message_override, 'Failure Message Override'
+    %p If specified this error message will be used to replace ALL error messages in the puzzle. Be certain this is what you want before using.
+    = f.text_field :failure_message_override, style: 'width: 600px;', placeholder: 'Type Override Failure Message Here'
 
 .field
   = f.label :preload_asset_list, 'Preload asset list'

@@ -9,7 +9,6 @@
   Blockly Options
 = render partial: 'levels/editors/authored_hints', locals: {f: f}
 
-= render partial: 'levels/editors/ani_gif', locals: {f: f}
 .field
   = f.label :skin
   = f.select :skin, options_for_select(@level.class.skins, @level.skin)
@@ -24,12 +23,18 @@
 .field.aligned-input-group
   = f.check_box :disable_param_editing, {}, 'false', 'true'
   = f.label :disable_param_editing, 'Enable param editing in function blocks'
-.field
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :disable_variable_editing, description: "Disable editing of variable names and creation of new variables"}
+
 .field
   = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :disable_if_else_editing, description: "Don\'t let users mutate (add or remove) branches to if/else blocks"}
-.field
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :show_type_hints, description: "Show a small visual hint for what type of block a connection accepts"}
+
+-# Deprecated for Sprite Lab
+- if !(@level.is_a?(GamelabJr) && !@level.is_a?(Dancelab))
+  .field
+    = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :disable_variable_editing, description: "Disable editing of variable names and creation of new variables"}
+
+  .field
+    = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :show_type_hints, description: "Show a small visual hint for what type of block a connection accepts"}
+
 .field
   = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :disable_procedure_autopopulate, description: "Disable autopopulation of Functions category with default toolbox blocks"}
   %p

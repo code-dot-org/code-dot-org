@@ -18,17 +18,19 @@
     = link_to 'Edit Start Blocks', edit_blocks_level_path(@level, :start_blocks) unless @level.new_record?
     = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'start'}
 
-  .field
-    = link_to 'Edit Required Blocks', edit_blocks_level_path(@level, :required_blocks) unless @level.new_record?
-    = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'required'}
+    -# Deprecated for Sprite Lab
+  - if !(@level.is_a?(GamelabJr) && !@level.is_a?(Dancelab))
+    .field
+      = link_to 'Edit Required Blocks', edit_blocks_level_path(@level, :required_blocks) unless @level.new_record?
+      = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'required'}
 
-  .field
-    = link_to 'Edit Recommended Blocks', edit_blocks_level_path(@level, :recommended_blocks) unless @level.new_record?
-    = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'recommended'}
+    .field
+      = link_to 'Edit Recommended Blocks', edit_blocks_level_path(@level, :recommended_blocks) unless @level.new_record?
+      = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'recommended'}
 
-  .field
-    = link_to 'Edit Initialization Blocks', edit_blocks_level_path(@level, :initialization_blocks) unless @level.new_record?
-    = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'initialization'}
+    .field
+      = link_to 'Edit Initialization Blocks', edit_blocks_level_path(@level, :initialization_blocks) unless @level.new_record?
+      = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'initialization'}
 
   -if @level.respond_to? :solution_blocks
     .field
