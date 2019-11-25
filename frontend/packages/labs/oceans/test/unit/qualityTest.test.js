@@ -181,7 +181,7 @@ describe('Model quality test', () => {
   //       labelFn: labelFn
   //     });
   //     analyzeConfusionMatrix(trainSize, result);
-  //     expect(result.precision).toBeGreaterThanOrEqual(0.9);
+  //     expect(result.precision).toBeGreaterThanOrEqual(0.85);
   //     expect(result.recall).toBeGreaterThanOrEqual(0.6);
   //   }
   // });
@@ -206,7 +206,7 @@ describe('Model quality test', () => {
         labelFn: labelFn
       });
       analyzeConfusionMatrix(trainSize, result);
-      expect(result.precision).toBeGreaterThanOrEqual(0.9);
+      expect(result.precision).toBeGreaterThanOrEqual(0.85);
       expect(result.recall).toBeGreaterThanOrEqual(0.6);
     }
   });
