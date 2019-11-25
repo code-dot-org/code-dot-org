@@ -22,8 +22,9 @@
   social_hoc2019_coming_dates: 'The Hour of Code is coming December 9-15, 2019. Computer science is foundational for every student to learn.'
   social_hoc2019_dance: 'Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, and 34 more!'
 
-  oceans_landing_title: 'AI for Oceans'
-  oceans_landing_description: 'Explore machine learning by teaching “A.I.” to recognize fish. #CSforGood'
+  oceans_landing_title: 'A.I. for Oceans'
+  oceans_landing_description: 'Explore machine learning by teaching “A.I.” to recognize fish.' 
+  cs_for_good_hashtag: '#CSforGood'
   oceans_landing_specs: 'English only | Ages 11+'
   oceans_landing_teacher_resources: 'Teacher Resources'
   oceans_landing_teacher_resources_desc: 'Lesson plans and activities to help you teach AI, machine learning, training data, and bias, while exploring ethical issues.'
