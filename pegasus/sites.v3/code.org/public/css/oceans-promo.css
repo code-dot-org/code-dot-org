@@ -5,6 +5,38 @@
 
 .sea-creature {
   position: absolute;
-  width: 50px;
   display: none;
+}
+
+.crab {
+  position: absolute;
+  width: 80px;
+  top: 245px;
+  left: 450px;
+}
+
+.scanning-bot {
+  position: absolute;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  top: 20px;
+  left: 650px;
+}
+
+.ai-bot {
+  width: 150px;
+}
+
+.ai-light {
+  width: 150px;
+  left: 650px;
+  top: 290px;
+  position: absolute;
+}
+
+.ai-fish {
+  position: absolute;
+  width: 80px;
+  top: 185px;
+  left: 685px;
 }
