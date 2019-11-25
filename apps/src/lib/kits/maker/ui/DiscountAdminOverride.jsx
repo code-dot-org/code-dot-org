@@ -88,8 +88,8 @@ export default class DiscountAdminOverride extends Component {
       applicationSchool: application.application_school,
       adminOverride: application.admin_set_status
         ? application.full_discount
-          ? 'Full Discount'
-          : 'Partial Discount'
+          ? 'Full Discount (with AK/HI shipping)'
+          : 'Full Discount (without AK/HI shipping)'
         : 'None',
       fullDiscount: application.full_discount,
       discountCode: application.discount_code,
@@ -243,11 +243,21 @@ export default class DiscountAdminOverride extends Component {
                       type="radio"
                       name="discountAmount"
                       value="full"
+                      checked={this.state.overrideValue === 'partial'}
+                      onChange={this.handleOverrideChange}
+                    />
+                    Teacher should receive full discount code (without AK/HI shipping)
+                  </label>
+                  <label>
+                    <input
+                      style={styles.radio}
+                      type="radio"
+                      name="discountAmount"
+                      value="partial"
                       checked={this.state.overrideValue === 'full'}
                       onChange={this.handleOverrideChange}
                     />
-                    Teacher should receive 100% discount code (kit price would
-                    become $0)
+                    Teacher should receive full discount code (with AK/HI shipping)
                   </label>
                 </div>
                 <Button
