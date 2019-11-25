@@ -1,83 +1,83 @@
 ---
-title: Computer Science Fundamentals Transition Guide
-theme: responsive
-style_min: true
+title: Компьютерийн Шинжлэх Ухааны Үндэс Хичээлийн Уялдаа Холбооны Гарын Авлага
+theme: хариу үйлдэл
+style_min: үнэн
 ---
 
-# Teaching Courses A-F
+# Хичээлийн Хөтөлбөр A-F
 
-## Table of Contents
+## Агуулга
 
-* [Overview](#overview)
-* [Teaching the new courses](#newcourses)
-* [Circle-Time Stories (Courses A and B)](#circletime)
-* [Lesson Scaffolding & Challenge Puzzles (All Ages)](#scaffolding)
-* [Bridging Activities For Unplugged Lessons (All Ages)](#unplugged)
-* [End of Course Projects (Courses E & F)](#endofcourse)
-* [Conclusion](#conclusion)
-* [FAQs](#faq)
+* [Ерөнхий](#overview)
+* [Шинэ хичээлүүдийг заах](#newcourses)
+* [Үлгэрийн Цаг (Хөтөлбөр A болон B)](#circletime)
+* [Хичээлийн Хязгаарлалт, Дасгалууд (Бүх Нас)](#scaffolding)
+* [Сүлжээнээс Гадна Хичээлүүдийн Уялдааг Холбох (Бүх Нас)](#unplugged)
+* [Хөтөлбөрийн Төгсгөл Хичээлүүд (Хөтөлбөр E, F)](#endofcourse)
+* [Дүгнэлт](#conclusion)
+* [Түгээмэл Асуултууд](#faq)
 
 <a id="overview"></a>
 
-## Overview
-The landscape of computer science education has changed immensely since the creation of the original Computer Science Fundamentals courses. Originally, Courses 1-4 were designed as a starting point to acquire the basics, no matter what the age of the student who was coming to the discipline.  Now that far more districts, cities, and states have implemented computer science courses beginning at Kindergarten, teachers are asking for more content to see students through until middle school/junior high.
+## Ерөнхий
+Компьютерийн шинжлэх ухааны боловсролын төлөв байдал нь хамгийн анхны Компьютерийн Шинжлэх Ухааны Үндэс хөтөлбөр хийгдсэнээс хойш маш их хэмжээнд өөрчлөгдсөн. Анх, Хөтөлбөр 1-4 нь сурагчдын наснаас үл хамааран бүгдэд нь үндсэн ойлголтуудыг зааварлахад чиглэсэн хэлбэртэй байсан.  Харин одоо маш олон дүүрэг, хот, мужууд энэхүү компьютерийн шинжлэх ухааны хөтөлбөрийг Цэцэрлэгийн ангиас нь эхлэн зааж байгаа тул багш нарт бага ангид зориулсан хөтөлбөрүүд хэрэгтэй болсон.
 
-Computer Science Fundamentals Courses A-F, are our answer to that issue.  The creation of a grade-by-grade curriculum allowed us to step back and rethink the way we were presenting material.  It also allowed us the chance to wholeheartedly incorporate feedback from the dedicated teacher community that has supported us on this mission. Designed with the help of some of the best elementary school CS education specialists across the country, Courses A-F should feel familiar enough to run with no extra professional development, but fresh enough to present to students who have done our lessons in the past.
+Сургалтын A-F хөтөлбөрүүд нь тэрхүү хэрэгцээнд тулгуурлан хийгсэн хичээлүүд юм.  Сургалтын хөтөлбөрийг анги ангид зориулан зохиосноор бид хичээлийн материалаа танилцуулах дээр нэмэлт ажлууд хийж эхэлсэн.  Мөн бидний үйл ажиллагааг дэмждэг багш нарын хамт олон бидэнд үнэтэй санал хүсэлт, зөвлөмжүүдийг өгч тэднийг хэрэгжүүлэх боломжийг олгосон. АНУ-н шилдэг КШУ-ны боловсролын мэргэжилтнүүдийн хийсэн энэхүү A-F хөтөлбөрүүдийн уялдаа холбоо нь хангалттай сайн хийгдсэн тул сурагчид хөтөлбөрийг эхлүүлэхэд нэмэлт сургалт авах шаардлагагүйн дээр өмнө манай сургалтыг авч байсан сурагчдад ч шинэлэг санагдах болно.
 
-* Course A: Kindergarten
-* Course B: 1st Grade
-* Course C: 2nd Grade
-* Course D: 3rd Grade
-* Course E: 4th Grade
-* Course F: 5th Grade
-* Pre-reader Express Course: Kindergarten - 1st Grade
-* Express Course: 2nd Grade - 5th Grade
+* Хөтөлбөр A: Цэцэрлэг
+* Хөтөлбөр B: 1-р Анги
+* Хөтөлбөр C: 2-р Анги
+* Хөтөлбөр D: 3-р Анги
+* Хөтөлбөр E: 4-р Анги
+* Хөтөлбөр F: 5-р Анги
+* Уншиж Сураагүй Сурагчдад Зориулсан Түргэвчилсэн Хөтөлбөр: Цэцэрлэгээс 1-р Анги
+* Түргэвчилсэн Хөтөлбөр: 2-р Ангиас 5-р Анги
 
-The biggest update to CS Fundamentals is that content will move from four courses (Courses 1-4) to six courses aligned to each K-5 grade level (Courses A-F).  In doing so, the lessons have become more tailored to the appropriate levels for reading, math, and overall cognitive development.  Note the addition of two different “Express” courses, one for pre-readers and one for all other grades.  These are similar to the previous suite’s “accelerated” version.
+КШУ-ы Үндэс хичээлд орсон хамгийн том өөрчлөлт нь 1-4-р хөтөлбөрийг цэцэрлэгээс 5-р ангиудад зориулсан A-F хөтөлбөрүүдэд шилжүүлэн өөрчилсөн юм.  Ингэснээр хичээлүүд нь унших, тооцоолох, сэтгэн бодох чадварт нь илүү тохирсон болж чадсан.  Унших Сураагүй болон бусад гэж ангилсан "Түргэвчилсэн" гэх хоёр ялгаатай хөтөлбөрүүдийг мөн нэмж оруулсан байгаа.  Энэ нь өмнөх хувилбарын "хурдлуулсан" гэдэгтэй ойролцоо хичээлийн хөтөлбөр юм.
 
 <a id="newcourses"></a>
 
-## Teaching the new courses
-As mentioned earlier, the courses should feel familiar, but different.  If you’ve been to a Code.org professional development workshop, then you’re ready to teach the new courses. There are a small number of changes, but the overall platform, curriculum and pedagogical philosophy is unchanged. If you haven’t yet been, Code.org offers 1 day workshops at no cost to help you learn how to understand the curricula, navigate the Code.org platform, and teach the unplugged lessons.
+## Шинэ хичээлүүдийг заах
+Өмнө дурдсанчлан эдгээр хөтөлбөрүүд нь танил хэдий ч арай өөр санагдах ёстой.  Хэрвээ та өмнө Code.org-н мэргэжлийн хөгжлийн сургалтад хамрагдаж байсан бол та эдгээр шинж хөтөлбөрүүдийг ч заахад бэлэн гэсэн үг юм. Бага хэмжээний өөрчлөлтүүд орсон ч үндсэн платформ, сургалтын хөтөлбөр, сургах арга барилд өөрчлөлт ороогүй. Хэрвээ та Code.org-д өмнө нь орж байгаагүй бол танд хөтөлбөртэй танилцах, Code.org-н платформыг ашиглах, заах аргад сургах нэг өдрийн үнэгүй сургалтад хамрагдах боломжтой.
 
-The main updates to the courses are:
+Хөтөлбөрүүдэд орсон үндсэн өөрчлөлтүүд нь:
 
-* Circle-time stories for the younger learners
-* A new approach to scaffolding and practicing/applying concepts
-* Bridging activities to enhance the transition from unplugged lessons to plugged lessons
-* End of course projects for older students
+* Бага насны сурагчдад зориулсан Үлгэрийн Цаг
+* Хязгааралт, дасгал/ойлголтыг ашиглах аргыг шинэчилсэн
+* Сүлжээнээс гадна хичээл болон сүлжээний хичээлүүдийг хооронд холбосон холбоосуудыг нэмсэн
+* Том сурагчдад зориулсан хөтөлбөрийн төгсгөл хичээлүүд
 
-The rest of this guide will present each idea in more detail, offering tips and tricks for implementing the changes in your classroom.
+Энэхүү гарын авлагын үлдсэн хэсэгт ойлголт бүрийг илүү дэлгэрэнгүй тайлбарлаж, хичээлдээ ашиглаж болох арга аргачлалуудыг санал болгоно.
 
 <a id="circletime"></a>
 
-## Circle-Time Stories (Courses A and B)
-Some concepts are difficult to teach through activities and puzzles alone, especially for young students.  This is why we’ve introduced a small number of circle-time stories in the Kindergarten and First Grade curricula. These stories are intended to be read by the teacher to the entire class, with stops along the way to discuss critical ideas like debugging, persistence, and frustration.  Our hope is that allowing students to experience these tough concepts via story characters will help them to recognize the same notions when they arise in future lessons.
+## Үлгэрийн Цаг (Хөтөлбөр A болон B)
+Зарим ойлголтуудыг зөвхөн дасгал ажиллуулж заах нь ялангуяа бага насны сурагчдад төвөгтэй байдаг.  Тиймээс Цэцэрлэг болон 1-р Ангийн сургалтын хөтөлбөрт үлгэрийн цаг гэсэн хичээлийг оруулж өгсөн. Эдгээр үлгэрүүдийг багш ангийнхандаа уншиж өгөх бөгөөд унших явцдаа алдаа засах, тууштай байх, бухимдах гэх зэрэг чухал санаа, ойлголтуудыг ярилцаж ойлгуулах хэрэгтэй.  Сурагчдад эдгээр ойлголтуудыг үлгэрийн баатрын дүрээр дамжуулан сургаснаар ирээдүйд сурагчдад эдгээр асуудал тулгарах үед эргэн санаж, асуудлыг шийдвэрлэхэд нь туслана гэж зорьж байгаа юм.
 
-Here is how the circle-time stories are intended to be used:
+Үлгэрийн цагийг дараах байдлаар ашиглахад зориулсан:
 
-### Read the appropriate story to your class
-  - Make sure to check for understanding along the way with questions and comments at useful moments during the action.
-  - Discuss the stories afterward. What did your students hear? Are there any ideas that stuck with them?
-  - Try to get students to identify with the characters.  Is there anything that they do in their lives that remind them of one of the characters in the story?
+### Зохих үлгэрийг ангидаа уншиж өг
+  - Хичээлийн явцдаа чухал зүйлсийг ойгуулах зорилгоор асуулт асууж, тайлбар хийж байхыг анхаараарай.
+  - Үлгэрийн талаар дараа нь ярилцаарай. Сурагчид юуг ойлгосон байна вэ? Тэд чухал ойлголтуудыг сурсан байна уу?
+  - Сурагчдыг үлгэрийн баатартай холбохыг хичээ.  Тэдний өдөр тутам хийдэг үйлдэлд нь үлгэрийн баатрын хийж байгаатай адилхан зүйл юм байна вэ?
 
-### Remind students about the story before they begin the next activity.
-  - Do you remember the main ideas we discussed?
-  - How will you know if you see that idea today?
-  - What did the character do to handle that idea? What would you do?
+### Дараагийн хичээлийг эхлэхийн өмнө сурагчдад уншсан үлгэрээ сануулаарай.
+  - Та нар ярилцсан гол ойлголтуудыг санаж байна уу?
+  - Тэрхүү ойлголтуудыг өнөөдөр харвал хэрхэн таних вэ?
+  - Тэрхүү асуудлыг шийдвэрлэхдээ манай баатар юу хийсэн бэ? Чи юу хийх вэ?
 
-### Point out similarities between the story and the student’s situations when they intersect during an activity.
-  - Describe for a student how the position that they are in resembles a situation from the book.
-  - Ask a student to think about the characters and figure out what they might do.  Does that help the student figure out a next step?
+### Дасгалын үед үлгэрт гарсантай төстэй асуудал тулгарах үед тэдэнд тайлбарлаж сануулаарай.
+  - Сурагчдад үүссэн асуудал нь үлгэрт гарсан асуудалтай хэрхэн холбогдож байгааг тайлбарла.
+  - Сурагчдаас баатар юу хийх байсныг асууж өөрсдөө юу хийвэл зохистой болохыг ойлгуул.  Энэ нь сурагчид асуудлыг шийдвэрлэхэд тус болж байна уу?
 
-If you are unable to gather your entire class together, Code.org has provided a video option at the beginning of the appropriate lesson that presents the stories with limited animations. While these videos don’t offer quite the same experience, they will allow students to get exposure to the concepts and characters before continuing on with the rest of the course.
+Хэрвээ та ангийн бүх сурагчаа цуглуулах боломжгүй бол Code.org дээр байгаа видео бичлэгүүдийг ашиглан тэдгээрийг үзүүлэх боломжтой. Эдгээр видеонууд нь хангалттай байж чадахгүй ч сурагчдад тэдгээр ойлголтуудыг танилцуулахад тус болох тул дараа дараагийн хичээл, дасгалуудтай ажиллах үед илүү хялбар болгох болно.
 
 <a id="scaffolding"></a>
 
-## Lesson Scaffolding & Challenge Puzzles (All Ages)
-Courses A-F are less scaffolded overall than our previous courses.  That means that we try to have students create their code from the beginning as often as possible, unless they are specifically learning to debug.  As part of this design, most of our online lessons follow a trend where we present a simple puzzle to begin the lesson, then slowly drill forward with a new concept until the point where students have had a chance to understand the idea underneath.  Next, we present them with a challenge puzzle, which is intended to get students thinking about the concept in a new and complicated way.
+## Хичээлийн Хязгаарлалт, Дасгалууд (Бүх Нас)
+A-F хөтөлбөрүүд нь өмнөх хөтөлбөртэй харьцуулахад хязгаарлалт багатай.  Энэ нь сурагчидад аль болох эрт өөрсдөө кодоо зохиож бичихэд нь туслах бөгөөд алдаа засах зэрэг онцгой тохиолдолд л хязгаарлалт орно.  Энэ хэв маягын дагуу ихэнхи онлайн хичээлүүд нь эхлээд энгийн дасгалыг танилцуулж дараа аажмаар илүү төвөгтэй ойлголтуудыг нэвтрүүлж улмаар сурагчид уг ойлголтыг сууриар нь бүрэн ойлгоход туслана.  Дараа нь сурагчдыг дасгалтай ажиллуулах бөгөөд энэ нь тэдэнд тухайн ойлголтыг шинэ, илүү төвөгтэй өнцгөөр харж ойлгоход нь туслана.
 
-Challenge puzzles are new in Courses A-F.  The intention of challenge puzzles is to expose students to a high bar where they can practice persistence and independent thought.  Challenge puzzles are intentionally hard and designed so that only students who truly understand the concept will pass within a reasonable timeframe.  This means that a good number of students will not be successful on challenges their first time through. This requires a particular attitude from both student and teacher to pull off.
+A-F хөтөлбөрт дасгалууд нь шинэчлэгдсэн байгаа.  Эдгээр дасгалуудын зорилго нь сурагчдыг тууштай байлгаж бие даан сэтгэх чадварт сургах юм.  Дасгалууд нь зориуд хүнд хийгдсэн бөгөөд тухайн ойлголтыг бүрэн ойлгосон сурагчид л эдгээр дасгалуудыг зохих цагт нь хийж дуусахаар хийгдсэн байгаа.  Энэ нь маш олон сурагчид эхэн үедээ дасгалуудыг амжилттай хийж чадахгүй байна гэсэн үг юм. This requires a particular attitude from both student and teacher to pull off.
 
 1. Students should give these challenges a hearty try, then put them aside and carry on.  That practice allows for two very important things to happen:
 2. Students gain a better understanding of when and why to use the concept being studied. The following puzzles feel easier after the challenge, even though they are serious puzzles in their own right.
@@ -97,7 +97,7 @@ Some final notes for this area:
 
 <a id="unplugged"></a>
 
-## Bridging Activities For Unplugged Lessons (All Ages)
+## Сүлжээнээс Гадна Хичээлүүдийн Уялдааг Холбох (Бүх Нас)
 Unplugged activities meet students where they are in terms of pointing out how they already use important CS concepts in their everyday life.  Once students can identify fundamental ideas like loops and conditionals, they get over the mental blocks that can happen when trying to use them for the first time programming online.
 
 Unplugged experiences are so important that we chose to take them one step further and bake in activities that bridge the unplugged lessons to their online counterparts.  In Courses A-F, you will now find that lesson plans provide examples of how to take the offline exercises and translate the lessons to the following set of online puzzles.  Appropriately, we call these "Bridging Activities."
@@ -106,7 +106,7 @@ For the most part, bridging activities can be created either by taking the subje
 
 <a id="endofcourse"></a>
 
-## End of Course Projects (Courses E & F)
+## Хөтөлбөрийн Төгсгөл Хичээлүүд (Хөтөлбөр E, F)
 For older students, we have introduced substantial end of course projects in Courses E & F.  Though Code.org has provided the ability to build “projects” for quite a while, we felt that it would add some much needed perspective for students to be able to plan and execute their projects in a formal context.
 
 The end of course projects are relatively straightforward.  Over the period of four to five weeks students will review project ideas, plan their application, code their program, revise based on feedback (5th grade), then present their completed work.  Each of these steps is guided by a helpful handout, as well as a teacher lesson plan that highlights the big picture.
@@ -125,14 +125,14 @@ No matter how thoroughly students embed themselves in their projects, they are s
 
 <a id="conclusion"></a>
 
-## Conclusion
+## Дүгнэлт
 As you can see, Courses A-F in Computer Science Fundamentals contain exciting enhancements, influenced by feedback from the massive CS Fundamentals teacher & facilitator communities.
 
 We hope this overview has been insightful.  If you have any questions or comments about this change, please visit http://forum.code.org/c/csf and post them on our forum.  We will be sure to get your questions answered as quickly as possible.  Until then, here are some of frequently asked questions about Courses A-F.
 
 <a id="faq"></a>
 
-## FAQs
+## Түгээмэл Асуултууд
 
 | Question                                                                                                                                                    | Answer                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
