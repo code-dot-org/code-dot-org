@@ -520,9 +520,14 @@ const drawWordFishImages = () => {
   const fishScale = 0.7;
   const possibleFishComponents = filterFishComponents(fishData, state.appMode);
   let fishCount = state.fishCount;
+  // To prevent all the fish from being generated at the exact same time, only generate
+  // one per animation cycle.
   let newFishGenerated = false;
 
   const t = $time();
+  // Go through each "lane" on the screen and update the fish's position in that lane.
+  // Each lane should only have one fish and once the fish is completely off the screen,
+  // we should generate a new one.
   Object.keys(state.wordFish).forEach(lane => {
     let fish = state.wordFish[lane];
     if (
@@ -536,7 +541,9 @@ const drawWordFishImages = () => {
       newFish.randomize();
       const y = lane * constants.fishCanvasHeight * fishScale;
       newFish.setXY({x: -constants.fishCanvasWidth, y});
-      newFish.faceLeft = parseInt(lane) % 2 === 0 ? true : false;
+      // As there should never be more than one fish per lane, randomize
+      // which way the fish is swimming.
+      newFish.faceLeft = Math.random() < 0.5 ? true : false;
       state.wordFish[lane] = newFish;
       fish = newFish;
       newFishGenerated = true;
