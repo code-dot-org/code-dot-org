@@ -988,10 +988,7 @@ let Predict = class Predict extends React.Component {
             </span>
             <span
               onClick={this.onPressPlay}
-              style={[
-                styles.mediaControl,
-                selectedControl === MediaControl.Play && styles.selectedControl
-              ]}
+              style={styles.mediaControl}
               key={MediaControl.Play}
             >
               <FontAwesomeIcon icon={state.isRunning ? faPause : faPlay} />
