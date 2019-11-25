@@ -20,10 +20,10 @@ affected_users = have_race.
   or(have_race.where.not(user_geos: {country: "United States"}))
 
 affected_users.all.each do |user|
-  # we can ignore users who have not signed in since
-  # https://github.com/code-dot-org/code-dot-org/pull/28635 was merged.
+  # we can ignore users who have not signed in since the proxies list was
+  # updated prior to https://github.com/code-dot-org/code-dot-org/pull/28635
   old_account = user.current_sign_in_at.present? &&
-    user.current_sign_in_at < "2019-05-17T23:39:33Z".to_datetime
+    user.current_sign_in_at < "2017-11-17 12:25:11 -0800".to_datetime
   next if old_account
 
   # Of the users (mostly students) with URM data but no geolocation, about 60%
