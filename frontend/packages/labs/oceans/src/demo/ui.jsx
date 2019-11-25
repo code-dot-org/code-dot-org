@@ -190,6 +190,16 @@ const styles = {
     fontSize: '120%',
     color: colors.white
   },
+  wordButton: {
+    ':hover': {
+      backgroundColor: colors.orange,
+      color: colors.white
+    },
+    ':focus': {
+      backgroundColor: colors.orange,
+      color: colors.white
+    }
+  },
   trainQuestionText: {
     position: 'absolute',
     top: '15%',
@@ -721,7 +731,7 @@ const wordSet = {
   }
 };
 
-class Words extends React.Component {
+let Words = class Words extends React.Component {
   constructor(props) {
     super(props);
 
@@ -776,7 +786,7 @@ class Words extends React.Component {
             <Button
               key={itemIndex}
               className="words-button"
-              style={wordSet[state.appMode].style}
+              style={[wordSet[state.appMode].style, styles.wordButton]}
               onClick={() => this.onChangeWord(itemIndex)}
             >
               {item}
@@ -786,7 +796,8 @@ class Words extends React.Component {
       </Body>
     );
   }
-}
+};
+Words = Radium(Words);
 
 let Train = class Train extends React.Component {
   state = {
