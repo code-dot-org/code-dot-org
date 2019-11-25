@@ -18,8 +18,8 @@
     = link_to 'Edit Start Blocks', edit_blocks_level_path(@level, :start_blocks) unless @level.new_record?
     = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'start'}
 
-    -# Deprecated for Sprite Lab
-  - if !(@level.is_a?(GamelabJr) && !@level.is_a?(Dancelab))
+  -# Deprecated for Sprite Lab and Dance
+  - if !(@level.is_a?(GamelabJr) || @level.is_a?(Dancelab))
     .field
       = link_to 'Edit Required Blocks', edit_blocks_level_path(@level, :required_blocks) unless @level.new_record?
       = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'required'}

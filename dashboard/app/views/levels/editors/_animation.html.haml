@@ -23,8 +23,8 @@
   .field
     = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :all_animations_single_frame, description: "All animations should be a single frame. If it has multiple frames, only show the first frame as a still image."}
 
-  -# Deprecated for Sprite Lab
-  - if !(@level.is_a?(GamelabJr) && !@level.is_a?(Dancelab))
+  -# Deprecated for Sprite Lab and Dance
+  - if !(@level.is_a?(GamelabJr) || @level.is_a?(Dancelab))
     .field
       = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: 'pause_animations_by_default', description: "Animations are paused by default"}
 

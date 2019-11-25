@@ -27,8 +27,8 @@
 .field
   = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :disable_if_else_editing, description: "Don\'t let users mutate (add or remove) branches to if/else blocks"}
 
--# Deprecated for Sprite Lab
-- if !(@level.is_a?(GamelabJr) && !@level.is_a?(Dancelab))
+-# Deprecated for Sprite Lab and Dance
+- if !(@level.is_a?(GamelabJr) || @level.is_a?(Dancelab))
   .field
     = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :disable_variable_editing, description: "Disable editing of variable names and creation of new variables"}
 
