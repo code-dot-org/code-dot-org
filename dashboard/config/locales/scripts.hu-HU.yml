@@ -1828,7 +1828,6 @@ hu:
             Dance Party:
               name: Táncos buli
         dance-extras:
-          title: Táncolj tovább
           description: Egy óra elteltével is folytathatod a bulit további projektötletekkel.
         coursef-2019:
           stages:
@@ -2132,7 +2131,6 @@ hu:
             For Loops:
               name: Számláló ciklusok
         dance-extras-2019:
-          title: Táncolj tovább
           description: Egy óra elteltével is folytathatod a bulit további projektötletekkel.
         time4cs-control-unit-1:
           stages:
