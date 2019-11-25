@@ -844,6 +844,7 @@ let Train = class Train extends React.Component {
             }}
             sound={'no'}
           >
+            <FontAwesomeIcon icon={faBan} style={{marginRight: 10}} />
             {noButtonText}
           </Button>
           <Button
@@ -854,6 +855,7 @@ let Train = class Train extends React.Component {
             }}
             sound={'yes'}
           >
+            <FontAwesomeIcon icon={faCheck} style={{marginRight: 10}} />
             {yesButtonText}
           </Button>
         </div>
