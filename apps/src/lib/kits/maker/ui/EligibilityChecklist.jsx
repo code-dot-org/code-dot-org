@@ -196,7 +196,7 @@ export default class EligibilityChecklist extends React.Component {
 const discountPageHeader = `Subsidized Circuit Playground Kits`;
 const discountPageDescriptionMd = `
 Code.org is able to offer a 100% subsidy for one Circuit Playground classroom kit to eligible
-teachers at schools with 40% or greater free and reduced-price meals. To learn more about
+teachers at schools with 50% or greater free and reduced-price meals. To learn more about
 the full eligibility requirements, read the overview [here](//code.org/circuitplayground).
 `;
 
@@ -216,7 +216,7 @@ Just use the code \`ADAEDU\` at checkout.
 
 const schoolIsNotEligibleMd = ncesId => `
 Unfortunately, you’re not eligible for the Code.org-provided subsidy for the kit because
-your school has fewer than 40% of students that are eligible for free/reduced-price lunches
+your school has fewer than 50% of students that are eligible for free/reduced-price lunches
 ([source](https://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=${ncesId})).
 However, you are still eligible for a discount! Adafruit has made available a 10% off educator
 discount that this kit is eligible for. Just use the code \`ADAEDU\` at checkout.
@@ -237,5 +237,5 @@ Sorry, it doesn’t look like you have enough students in your sections that hav
 Units 2 and 3. Please check back here once your students have finished the first semester of
 CS Discoveries. If you are using a different account to track the progress of students or if you
 think there has been an error in detecting how much progress your students have made in Units
-2 and 3, please contact us at [teacher@code.org](mailto:teacher@code.org). 
+2 and 3, please contact us at [teacher@code.org](mailto:teacher@code.org).
 `;

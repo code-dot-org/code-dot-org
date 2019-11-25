@@ -221,7 +221,7 @@ export default class DiscountAdminOverride extends Component {
                   <a href="https://studio.code.org/admin/studio_person">
                     Studio Person ID admin page{' '}
                   </a>{' '}
-                  to link this acccount to the account associated with the email
+                  to link this account to the account associated with the email
                   address we have on file.
                 </div>
                 <h4>Option 2: Give teacher a discount code</h4>
