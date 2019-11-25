@@ -8,69 +8,30 @@ button {
   border-radius: 5px;
   border: none;
   width: 17%;
-  padding: 16px 30px;
-}
-button:focus {
-  outline: white auto 5px;
-}
-@media screen and (max-width: 970px) {
-  .words-button {
-    font-size: 70%;
-    padding: 10px 20px;
-  }
-}
-@media screen and (max-width: 830px) {
-  .words-button {
-    font-size: 60%;
+  padding: 1.5% 3%;
+
+  &:focus {
+    outline: white auto 5px;
   }
 }
 
-@media screen and (max-height: 1350px) {
-  #container {
-    max-width: 2050px;
-  }
+#container-react {
+  font-size: 18px;
 }
-@media screen and (max-height: 1260px) {
-  #container {
-    max-width: 1890px;
-  }
+
+@media screen {
+  #container { max-width: 770px; }
+  #container-react { font-size: calc(18px * 770 / 930); }
 }
-@media screen and (max-height: 1170px) {
-  #container {
-    max-width: 1730px;
-  }
+@media screen and (min-width: 1024px) and (min-height: 576px) {
+  #container { max-width: 930px; }
+  #container-react { font-size: calc(18px * 930 / 930); }
 }
-@media screen and (max-height: 1080px) {
-  #container {
-    max-width: 1570px;
-  }
+@media screen and (min-width: 1280px) and (min-height: 720px) {
+  #container { max-width: 1024px; }
+  #container-react { font-size: calc(18px * 1024 / 930); }
 }
-@media screen and (max-height: 990px) {
-  #container {
-    max-width: 1410px;
-  }
-}
-@media screen and (max-height: 900px) {
-  #container {
-    max-width: 1250px;
-  }
-}
-@media screen and (max-height: 810px) {
-  #container {
-    max-width: 1090px;
-  }
-}
-@media screen and (max-height: 720px) {
-  #container {
-    max-width: 930px;
-  }
-}
-@media screen and (max-height: 630px) {
-  #container {
-    max-width: 770px;
-  }
-  .words-button {
-    font-size: 70%;
-    padding: 10px 20px;
-  }
+@media screen and (min-width: 1440px) and (min-height: 810px) {
+  #container { max-width: 1280px; }
+  #container-react { font-size: calc(18px * 1280 / 930); }
 }
