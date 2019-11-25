@@ -157,7 +157,7 @@ it-IT:
       2-3 artist debug multi 1:
         title: Esercizio di Verifica (Risposte Multiple)
         questions:
-        - {}
+        - text: Cosa dovresti modificare per ottenere un cerchio perfetto?
         answers:
         - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
         - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
@@ -361,10 +361,11 @@ it-IT:
         - text: Quando ti colleghi a code.org, a quale indirizzo IP fra quelli elencati
             in questa tabella ti farà arrivare il DNS?
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: 23.23.224.106
+        - text: 54.209.61.132
+        - text: 64.14.68.10
+        - text: 54.243.71.82
+          correct: true
       4-5 Internet Multi 2:
         title: Esercizio di Verifica (Risposte Multiple)
         content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
@@ -372,10 +373,11 @@ it-IT:
         - text: Se il DNS ti ha fatto arrivare ad una pagina con indirizzo IP 100.42.50.110,
             su quale sito web fra quelli elencati in questa tabella sei arrivato?
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: code.org
+        - text: csisfun.com
+          correct: true
+        - text: thinkersmith.org
+        - text: khanacademy.org
       4-5 Songwriting Multi 1:
         title: Esercizio di Verifica (Risposte Multiple)
         content1: "/script_assets/4-5_images/unplugged/songwriting_1_q.png"
@@ -2880,6 +2882,15 @@ it-IT:
           feedback: La variabile viene impostata nuovamente a 0 prima delle ultime
             due chiamate della funzione, in cui viene aggiunto 1 ogni volta. Quindi
             poi l'ape raccoglie 2 dosi di nettare.
+      courseF_external_variableConstant:
+        markdown: "<h2>Qualcosa in più sulle variabili</h2>\n\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
+          style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>Hai appena
+          imparato un ottimo modo per usare una variabile: in questo caso viene chiamata
+          \"costante\"!  \nQuando usi una variabile come \"costante\", imposti il
+          suo valore una sola volta e poi lo utilizzi più volte nel programma senza
+          più modificarlo dopo aver fatto clic su \"Esegui\".\n</h3>\n<br/><hr/>\n<h3>Nella
+          prossima lezione scriverai del codice con variabili che *cambieranno valore*
+          durante l'esecuzione del programma.</h3>\n\n"
       courseF_external_variableConstant_2018:
         markdown: "<h2>Qualcosa in più sulle variabili</h2>\n\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
           style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>Hai appena
@@ -3389,17 +3400,26 @@ it-IT:
             passato attraverso un parametro.
       courseF_multi_playlab_variables4c_predictive1:
         questions:
-        - {}
+        - text: Cosa succederebbe se l'utente inserisse il nome "Ali"?
         answers:
-        - correct: true
+        - text: 'Il pirata direbbe: "Pleasure to meet you, Ali." ("Piacere di conoscerti,
+            Ali.")'
+          correct: true
           feedback: 'Corretto. '
-        - feedback: Sbagliato. Nota che il blocco `unisci` permette di inserire il
+        - text: 'Il pirata direbbe: "Pleasure to meet you." ("Piacere di conoscerti.")'
+          feedback: Sbagliato. Nota che il blocco `unisci` permette di inserire il
             nome fornito nella frase del pirata.
-        - feedback: Sbagliato. Nota che il blocco `unisci` permette di inserire il
+        - text: 'Il pirata direbbe: "Ali."'
+          feedback: Sbagliato. Nota che il blocco `unisci` permette di inserire il
             nome fornito nella frase del pirata.
         - text: Non lo so.
           feedback: 'Sbagliato. Nota che il blocco `unisci` permette di inserire il
             nome fornito nella frase del pirata. '
+        markdown: "**In questo esercizio compare il nuovo blocco `chiedi`.**\n\nIl
+          blocco `chiedi` interrompe l'esecuzione del programma e chiede all'utente
+          di inserire del testo. \n\nQualsiasi testo l'utente inserisca, viene memorizzato
+          nella variabile posizionata alla fine del blocco `chiedi`.  In questo caso,
+          la variabile `name` (\"nome\").\n"
       coursee_prediction_artistfunction2:
         questions:
         - text: Cosa succederà quando cliccherai su "Esegui"?
