@@ -76,14 +76,14 @@ const styles = {
     color: colors.white,
     position: 'absolute',
     bottom: '4%',
-    right: '2.25%',
+    right: '2.25%'
   },
   playAgainButton: {
     backgroundColor: colors.yellowGreen,
     color: colors.white,
     position: 'absolute',
     bottom: '16%',
-    right: '2.25%',
+    right: '2.25%'
   },
   backButton: {
     position: 'absolute',
@@ -232,20 +232,24 @@ const styles = {
   },
   trainBot: {
     position: 'absolute',
-    height: '100%',
-    top: 0,
-    left: '73%',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center'
+    top: '30%',
+    right: '0%',
+    width: '30%'
   },
   trainBotHead: {
     transition: 'transform 500ms',
-    padding: '0 12px'
+    left: '3%',
+    width: '43%',
+    top: '0%',
+    position: 'absolute'
   },
   trainBotOpen: {
     transform: 'rotate(90deg)',
     transformOrigin: 'bottom right'
+  },
+  trainBotBody: {
+    width: '49%',
+    marginTop: '30%'
   },
   counter: {
     position: 'absolute',
@@ -642,7 +646,7 @@ let ConfirmationDialog = class ConfirmationDialog extends React.Component {
       <div style={styles.confirmationDialogBackground}>
         <div style={styles.confirmationDialog}>
           <div style={styles.confirmationDialogLeft}>
-            <img src={snail} style={styles.guideImage}/>
+            <img src={snail} style={styles.guideImage} />
           </div>
           <div style={styles.confirmationDialogRight}>
             <div
@@ -814,7 +818,7 @@ let Train = class Train extends React.Component {
               this.state.headOpen && styles.trainBotOpen
             ]}
           />
-          <img src={aiBotBody} />
+          <img src={aiBotBody} style={styles.trainBotBody} />
         </div>
 
         <div style={styles.counter}>
