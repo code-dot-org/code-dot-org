@@ -5,6 +5,11 @@
   %img.sea-creature{src: 'images/oceans/yellow-fish.png'}
   %img.sea-creature{src: 'images/oceans/orange-fish.png'}
   %img.sea-creature{src: 'images/oceans/turtle.png'}
+  %img.crab{src: 'images/oceans/crab.png'}
+  .scanning-bot
+    %img.ai-bot{src: 'images/oceans/ai-bot.png'}
+  %img.ai-light{src: 'images/oceans/bot-beam-puddle.png'}
+  %img.ai-fish{src: 'images/oceans/fish-in-beam.png'}
 
 :javascript
   $time =
@@ -18,6 +23,7 @@
     {x: 550, y: 150},
     {x: 160, y: 220}
   ];
+  var fishWidths = ['50px', '75px', '100px']
   $(document).ready(function() {
     setInterval(function() {
       $(".sea-creature").each(function(index) {
@@ -32,7 +38,7 @@
         } else {
           y = fishLocations[index].y + swayOffsetY;
         }
-        $(this).css({left: x, top: y, display: 'block'});
+        $(this).css({left: x, top: y, display: 'block', width: fishWidths[index]});
       });
     }, 1000 / 30);
   });
