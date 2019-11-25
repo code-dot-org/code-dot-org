@@ -4,61 +4,19 @@ theme: responsive
 ---
 :ruby
   launch_ai = DCDO.get('launch_ai', nil)
-  tutorial = {
-    heading: hoc_s(:oceans_landing_title),
-    background_image: "/images/fit-1940/sw_landingpage.jpg",
-    left_heading: hoc_s(:oceans_landing_title),
-    left_description: hoc_s(:oceans_landing_description),
-    left_specs: hoc_s(:oceans_landing_specs),
-    left_button_link: '/api/hour/begin/starwars',
-    left_button_text: I18n.t(:try_now),
-    id_for_mobile_image: "ocean-mobile-image",
-    skip_right_box: true
-  }
 
   resources = {
-    left_link: "https://www.microsoft.com/en-us/store/locations/events-for-students",
+    left_link: "https://www.codecurricula.com/hoc/plugged/9/",
     left_image: CDO.code_org_url("/images/fill-485x260/mc/minecraft_teacher_small1.jpg"),
     left_heading: hoc_s(:oceans_landing_teacher_resources),
     left_description: hoc_s(:oceans_landing_teacher_resources_desc),
     left_button_text: hoc_s(:oceans_landing_resource_button),
     right_link: "/csforgood",
-    right_image: CDO.code_org_url("/images/fill-485x260/mc/minecraft_teacher_small1.jpg"),
+    right_image: CDO.code_org_url("/images/fill-485x260/csforgood.jpg"),
     right_heading: hoc_s(:oceans_landing_cs_for_good),
     right_description: hoc_s(:oceans_landing_cs_for_good_desc),
     right_button_text: hoc_s(:oceans_landing_resource_button)
   }
-
-:javascript
-  $time =
-    Date.now ||
-    function() {
-      return +new Date();
-    };
-  var fishLocations = [
-    // {x: 100, y: 130},
-    {x: 370, y: 180},
-    {x: 550, y: 150},
-    {x: 160, y: 220}
-  ];
-  $(document).ready(function() {
-    setInterval(function() {
-      $(".sea-creature").each(function(index) {
-        var swayValue =
-          (($time() * 360) / (20 * 1000) + (index + 1) * 10) % 360;
-        var swayOffsetX = Math.sin(((swayValue * Math.PI) / 180) * 2) * 25;
-        var swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 6) * 2;
-        var x = fishLocations[index].x + swayOffsetX;
-        var y;
-        if (index == 3) {
-          y = fishLocations[index].y;
-        } else {
-          y = fishLocations[index].y + swayOffsetY;
-        }
-        $(this).css({left: x, top: y, display: 'block'});
-      });
-    }, 1000 / 30);
-  });
 
 :css
   @media screen and (min-width: 0px) and (max-width: 970px) {
@@ -73,18 +31,12 @@ theme: responsive
     position: relative;
   }
 
-  .background-img {
-    width: 100%;
-    border-radius: 5px;
-  }
-
   .tutorial-details {
     margin-top: 0px;
     margin-bottom: 10px;
     position: absolute;
     top: 20px;
     left: 80px;
-
   }
 
   .tutorial-heading {
@@ -109,59 +61,31 @@ theme: responsive
     height: 40px;
   }
 
-  .sea-creature {
-    position: absolute;
-    width: 50px;
-    display: none
-  }
-
   .blurb {
-    line-height: 1.5
-  }
-  /* .bot {
+    line-height: 1.5;
+    font-size: 14px;
+    padding: 10px;
     margin-top: 0px;
-    margin-bottom: 10px;
-    position: absolute;
-    top: 20px;
-    left: 700px;
-    height: 120px;
-    width: 75px;
   }
-
-  .beam {
-    margin-top: 0px;
-    margin-bottom: 10px;
-    position: absolute;
-    top: 135px;
-    left: 688px;
-    height: 150px;
-    width: 100px;
-  } */
 
 %div{style: "display: #{launch_ai ? 'block' : 'none'}"}
 
   .tutorial-promo-container
-    .img-container
-      %img.background-img{src: '/images/fit-1940/ocean-background.png'}
-      %img.sea-creature{src: 'images/oceans/yellow-fish.png'}
-      %img.sea-creature{src: 'images/oceans/turtle.png'}
-      %img.sea-creature{src: 'images/oceans/orange-fish.png'}
+    = view :oceans_promo
     .tutorial-details
       %h1.tutorial-heading=hoc_s(:oceans_landing_title)
-      %p.tutorial-description= tutorial[:left_description]
+      %p.tutorial-description=hoc_s(:oceans_landing_description)
       %p.tutorial-description=hoc_s(:cs_for_good_hashtag)
-      %p.tutorial-specs= tutorial[:left_specs]
-      %a{href: tutorial[:left_button_link], target: '_self'}
-        %button.tutorial-button= tutorial[:left_button_text]
-
-
+      %p.tutorial-specs=hoc_s(:oceans_landing_specs)
+      %a{href: CDO.studio_url('/s/oceans'), target: '_self'}
+        %button.tutorial-button=I18n.t(:try_now)
 
   %div{style: "clear: both; margin-top: 20px;"}
 
+  %h3.blurb=hoc_s(:oceans_landing_explanation)
+
   = view :resource_boxes, resources: resources
 
-  %h3.blurb="Computer science is about so much more than coding! Learn about AI, machine learning, training data, and bias, while exploring ethical issues and how AI can be used to address world problems. Enjoy Code.org's first step in a new journey to teach more about AI throughout our curriculum."
-
-  %h2="Learn more about AI and Machine Learning"
+  %h2=hoc_s(:oceans_landing_learn_more)
 
 .clear
