@@ -1,0 +1,10 @@
+.background-img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.sea-creature {
+  position: absolute;
+  width: 50px;
+  display: none;
+}

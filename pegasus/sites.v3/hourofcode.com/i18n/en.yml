@@ -26,14 +26,16 @@
   oceans_landing_description: 'Learn about machine learning and ethical use of AI.'
   cs_for_good_hashtag: '#CSforGood'
   oceans_landing_specs: 'English only | Grades 3rd+'
+  oceans_landing_explanation: "Computer science is about so much more than coding! Learn about AI, machine learning, training data, and bias, while exploring ethical issues and how AI can be used to address world problems. Enjoy Code.org's first step in a new journey to teach more about AI throughout our curriculum."
   oceans_landing_teacher_resources: 'Teacher Resources'
   oceans_landing_teacher_resources_desc: 'Lesson plans and activities to help you teach AI, machine learning, training data, and bias, while exploring ethical issues.'
   oceans_landing_resource_button: 'View Resources'
   oceans_landing_cs_for_good: 'CS For Good'
   oceans_landing_cs_for_good_desc: 'Resources to help students understand the role computer science could play in creating a more equitable world.'
+  oceans_landing_learn_more: 'Learn more about AI and Machine Learning'
 
   hoc_overview_oceans_tutorial_header: 'AI Oceans'
-  hoc_overview_oceans_tutorial_desc: "Teach \"A.I.\" to sort between fish and trash while exploring broader artificial intelligence concepts."
+  hoc_overview_oceans_tutorial_desc: 'Learn about AI, machine learning, training data, and bias, while exploring ethical issues and how AI can be used to address world problems.'
 
   codeorg_homepage_hoc2018_curriculum: 'Go further with <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org courses</a>'
   codeorg_homepage_hoc2018_dance_heading: 'Create your own <span class="highlight-word">Dance&nbsp;Party</span>'
