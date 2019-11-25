@@ -120,7 +120,7 @@ const styles = {
     top: '50%',
     bottom: 'initial',
     left: '50%',
-    padding: 20
+    padding: '2%'
   },
   confirmationDialogLeft: {
     float: 'left',
@@ -133,29 +133,33 @@ const styles = {
   confirmationHeader: {
     fontSize: '220%',
     color: colors.darkGrey,
-    padding: 10,
+    paddingBottom: '5%',
     textAlign: 'center'
   },
   confirmationText: {
     textAlign: 'center',
     backgroundColor: colors.lightGrey,
-    padding: '15px',
-    borderRadius: '5px'
+    padding: '5%',
+    borderRadius: 5
   },
   confirmationButtons: {
-    display: 'inline-flex',
-    justifyContent: 'space-between',
-    padding: '10px 0px',
-    width: '100%'
+    paddingTop: '5%',
+    clear: 'both'
   },
   confirmationYesButton: {
-    marginLeft: 10,
     backgroundColor: colors.red,
-    color: colors.white
+    color: colors.white,
+    left: '5%',
+    padding: '3.5% 8%',
+    width: '35%'
   },
   confirmationNoButton: {
     backgroundColor: colors.orange,
-    color: colors.white
+    color: colors.white,
+    float: 'right',
+    right: '5%',
+    padding: '3.5% 8%',
+    width: '35%'
   },
   activityIntroText: {
     position: 'absolute',
@@ -450,14 +454,14 @@ const styles = {
     position: 'relative'
   },
   guideImage: {
-    paddingTop: 20,
-    paddingLeft: 20,
-    maxWidth: '90%'
+    maxWidth: '90%',
+    padding: '20%',
+    boxSizing: 'border-box'
   },
   guideHeading: {
     fontSize: '220%',
     color: colors.darkGrey,
-    padding: 20
+    paddingBottom: '5%'
   },
   guideTypingText: {
     position: 'absolute',
@@ -500,7 +504,7 @@ const styles = {
     top: '50%',
     bottom: 'initial',
     left: '50%',
-    padding: 20
+    padding: '2%'
   },
   guideCenter: {
     top: '50%',
@@ -624,7 +628,9 @@ let ConfirmationDialog = class ConfirmationDialog extends React.Component {
     return (
       <div style={styles.confirmationDialogBackground}>
         <div style={styles.confirmationDialog}>
-          <img src={snail} style={styles.confirmationDialogLeft} />
+          <div style={styles.confirmationDialogLeft}>
+            <img src={snail} style={styles.guideImage}/>
+          </div>
           <div style={styles.confirmationDialogRight}>
             <div
               style={styles.confirmationHeader}
