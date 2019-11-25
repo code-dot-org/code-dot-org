@@ -110,6 +110,7 @@ const appLoaders = {
   eval: require('@cdo/apps/sites/studio/pages/init/loadEval'),
   flappy: require('@cdo/apps/sites/studio/pages/init/loadFlappy'),
   gamelab: require('../../util/gamelab/loadTestableGamelab'),
+  spritelab: require('../../util/spritelab/loadTestableSpritelab'),
   jigsaw: require('@cdo/apps/sites/studio/pages/init/loadJigsaw'),
   maze: require('@cdo/apps/sites/studio/pages/init/loadMaze'),
   netsim: require('@cdo/apps/sites/studio/pages/init/loadNetSim'),

@@ -93,7 +93,7 @@ module.exports = function(app) {
         }
       };
     };
-  } else if (app === 'gamelab') {
+  } else if (app === 'gamelab' || app === 'spritelab') {
     appCache[app] = function() {
       return {
         skins: require('@cdo/apps/p5lab/skins'),
