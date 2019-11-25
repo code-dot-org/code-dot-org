@@ -312,7 +312,7 @@ const styles = {
   },
   timeScale: {
     width: 40,
-    fontSize: '120%',
+    fontSize: '80%',
     textAlign: 'center'
   },
   predictSpeech: {
