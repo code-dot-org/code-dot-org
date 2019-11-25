@@ -3,6 +3,7 @@ es-MX:
   data:
     blocks:
       Dancelab_alternateMoves:
+        text: "{GROUP} alternar cada {N} compases \nentre {MOVE1} y {MOVE2}"
         options:
           GROUP:
             sprites: todo
@@ -521,6 +522,7 @@ es-MX:
             '"none"': Ninguna
             '"rand"': "(Al azar)"
             '"circles"': Círculos
+            '"quads"': Ángulos
             '"color_cycle"': Colores
             '"diamonds"': Diamantes
             '"disco_ball"': Bola de discoteca
@@ -610,6 +612,7 @@ es-MX:
             '"none"': Ninguna
             '"rand"': "(Al azar)"
             '"bubbles"': Burbujas
+            '"hearts_colorful"': Corazones coloridos
             '"confetti"': Confeti
             '"emojis"': Emojis
             '"hearts_red"': Corazones
@@ -871,6 +874,13 @@ es-MX:
             '"column_left"': columna izquierda
             '"column_right"': columna derecha
             '"diamond"': diamante
+            '"mural"': Mural
+            '"safari"': Safari
+            '"network"': Red
+            '"highway"': Carretera
+            '"stream"': Flujo
+            '"tile"': Mosaico
+            '"shadow"': Sombra
             '"s"': s
             '"t"': t
             '"u"': u
