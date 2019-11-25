@@ -676,7 +676,7 @@ pl-PL:
         challenges: |-
           **Dodatkowe wyzwanie**
 
-          -   Użyj więcej niż jednego bloku <xml><block type="Dancelab_whenKey"><title name="KEY"></title></block></xml>.
+          Użyj więcej niż jednego bloku <xml><block type="Dancelab_whenKey"><title name="KEY"></title></block></xml>.
       Dance_2019_03:
         validation: |-
           **Jak mam przejść ten poziom?**
@@ -762,11 +762,11 @@ pl-PL:
               </block></xml>
       Dance_Party_01:
         validation: |-
-          **Jak przejdę ten poziom?**
+          **Jak mam przejść ten poziom?**
 
           -   Postaraj się, aby na ekranie pojawił się tancerz.
 
-          -   Ten poziom kończy się po 4 taktach.
+          _Ten poziom kończy się po 4 taktach._
         challenges: |-
           **Dodatkowe wyzwania**
 
@@ -774,43 +774,43 @@ pl-PL:
           -   Zmień imię swojego tancerza.
       Dance_Party_02:
         validation: |-
-          **Jak przejdę ten poziom?**
+          **Jak mam przejść ten poziom?**
 
           -   Ten tancerz musi zmienić ruch po 4 taktach.
 
-          -   Ten poziom kończy się po 7 taktach.
+          _Ten poziom kończy się po 7 taktach._
       Dance_Party_03:
         validation: |-
-          **Jak przejdę ten poziom?**
+          **Jak mam przejść ten poziom?**
 
           -   Po 6 taktach Twój tancerz musi tańczyć inny taniec niż po 4 taktach.
 
-          -   Ten poziom kończy się po 11 taktach.
+          _Ten poziom kończy się po 11 taktach._
       Dance_Party_04:
         validation: |-
-          **Jak przejdę ten poziom?**
+          **Jak mam przejść ten poziom?**
 
           -   Musisz zmienić efekt tła w czasie siódmego taktu piosenki.
 
-          -   Ten poziom kończy się po 9 taktach.
+          _Ten poziom kończy się po 9 taktach._
         challenges: |-
           **Dodatkowe wyzwanie**
 
           Zmieniaj efekt tła w różnych momentach piosenki, łącząc nowy blok pod zdarzeniami <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
       Dance_Party_05:
         validation: |-
-          **Jak przejść ten poziom?**
+          **Jak mam przejść ten poziom?**
 
           -   Twój tancerz musi wykonać cykl co najmniej 4 różnych ruchów tanecznych, zanim poziom się skończy.
 
           _Ten poziom kończy się po 12 taktach._
       Dance_Party_06:
         validation: |-
-          **Jak przejdę ten poziom?**
+          **Jak mam przejść ten poziom?**
 
           -   Musisz mieć co najmniej dwóch tancerzy.
 
-          -   Ten poziom kończy się po 5 taktach.
+          _Ten poziom kończy się po 5 taktach._
         challenges: |-
           **Dodatkowe wyzwanie**
 
@@ -818,50 +818,50 @@ pl-PL:
           -   Spraw, aby wszyscy tancerze w różnych momentach piosenki wykonywali różne ruchy.
       Dance_Party_08:
         validation: |-
-          **Jak przejdę ten poziom?**
+          **Jak mam przejść ten poziom?**
 
           -   Dwóch tancerzy musi mieć wielkość inną niż 100.
 
-          -   Ten poziom kończy się po 5 taktach.
+          _Ten poziom kończy się po 5 taktach._
         challenges: |-
           **Dodatkowe wyzwanie**
 
           -   Eksperymentuj, zmieniając inne właściwości (szerokość, wysokość, obrót, itp.)
       Dance_Party_09:
         validation: |-
-          **Jak przejdę ten poziom?**
+          **Jak mam przejść ten poziom?**
 
           -   Zmień odcień przynajmniej jednego tancerza.
 
-          -   Ten poziom kończy się po 7 taktach.
+          _Ten poziom kończy się po 7 taktach._
       Dance_Party_10:
         validation: |-
-          **Jak przejdę ten poziom?**
+          **Jak mam przejść ten poziom?**
 
           -   Należy zmienić właściwości dwóch lub więcej tancerzy.
 
-          -   Ten poziom kończy się po 7 taktach.
+          _Ten poziom kończy się po 7 taktach._
       Dance_Party_11:
         validation: |-
-          **Jak przejdę ten poziom?**
+          **Jak mam przejść ten poziom?**
 
           -   Wystarczy być kreatywnym!
 
-          -   Ten poziom kończy się po 7 taktach.
+          _Ten poziom kończy się po 7 taktach._
       Dance_Party_11_5:
         validation: |-
-          **Jak przejdę ten poziom?**
+          **Jak mam przejść ten poziom?**
 
           -   Wystarczy być kreatywnym!
 
-          -   Ten poziom kończy się po 7 taktach.
+          _Ten poziom kończy się po 7 taktach._
       Dance_Party_11b:
         validation: |-
-          **Jak przejdę ten poziom?**
+          **Jak mam przejść ten poziom?**
 
-          -   Użyj bloku „kiedy strzałka w lewo”, aby sprawić, że Robot będzie tańczył po naciśnięciu tego klawisza.
+          -   Użyj bloku 'kiedy strzałka w lewo', aby sprawić, że Robot będzie tańczył po naciśnięciu tego klawisza.
 
-          -   Ten poziom kończy się po 7 taktach.
+          _Ten poziom kończy się po 7 taktach._
       Dance_Party_extras_alternate_2019:
         alternate: Naprzemienny blok znajduje się w kategorii „Tancerze”.
       Function intro Ryan:
