@@ -1108,6 +1108,12 @@ let Pond = class Pond extends React.Component {
 
   toggleRecall = e => {
     const state = getState();
+
+    // No-op if transition is already in progress.
+    if (state.pondFishTransitionStartTime) {
+      return;
+    }
+
     const showRecallFish = !state.showRecallFish;
     const fish = showRecallFish ? state.recallFish : state.pondFish;
 
@@ -1116,8 +1122,7 @@ let Pond = class Pond extends React.Component {
       arrangeFish(fish);
     }
 
-    setState({showRecallFish, pondClickedFish: null});
-
+    setState({pondFishTransitionStartTime: $time(), pondClickedFish: null});
     e.stopPropagation();
   };
 
