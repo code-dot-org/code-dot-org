@@ -531,7 +531,13 @@ const fishComponents = {
     eyes10: {
       src: eyes10_image,
       knnData: [750, 1.8564356435643565],
-      type: FishBodyPart.EYE
+      type: FishBodyPart.EYE,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     eyes11: {
       src: eyes11_image,
@@ -640,13 +646,7 @@ const fishComponents = {
     eyes9: {
       src: eyes9_image,
       knnData: [732, 1.6944444444444444],
-      type: FishBodyPart.EYE,
-      exclusions: [
-        AppMode.FishVTrash,
-        AppMode.CreaturesVTrashDemo,
-        AppMode.CreaturesVTrash,
-        AppMode.FishShort
-      ]
+      type: FishBodyPart.EYE
     },
     small_1: {
       src: small_1_image,
@@ -681,7 +681,13 @@ const fishComponents = {
     mouth11: {
       src: mouth11_image,
       knnData: [4, 1.2857142857142858, MouthExpression.FROWN],
-      type: FishBodyPart.MOUTH
+      type: FishBodyPart.MOUTH,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
     },
     mouth12: {
       src: mouth12_image,
@@ -785,13 +791,7 @@ const fishComponents = {
     mouth5: {
       src: mouth5_image,
       knnData: [0, 1.8666666666666667, MouthExpression.SMILE],
-      type: FishBodyPart.MOUTH,
-      exclusions: [
-        AppMode.FishVTrash,
-        AppMode.CreaturesVTrashDemo,
-        AppMode.CreaturesVTrash,
-        AppMode.FishShort
-      ]
+      type: FishBodyPart.MOUTH
     },
     mouth6: {
       src: mouth6_image,
