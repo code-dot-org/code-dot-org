@@ -6,7 +6,7 @@ class FeatureModeController < ApplicationController
   before_action :authenticate_user!
 
   # Max time in seconds for settings updates to take effect.
-  MAX_UPDATE_TIME = 30
+  MAX_UPDATE_TIME = 60
 
   PLEASE_WAIT_MESSAGE = "Updating feature mode. Please wait #{MAX_UPDATE_TIME} seconds for " \
       'changes to take effect, then send a CloudFront cache invalidation.'.freeze
