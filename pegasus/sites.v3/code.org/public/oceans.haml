@@ -2,7 +2,6 @@
 title: AI Oceans
 theme: responsive
 ---
-
 :ruby
   launch_ai = DCDO.get('launch_ai', nil)
   tutorial = {
@@ -37,9 +36,60 @@ theme: responsive
     }
   }
 
+  .tutorial-promo-container {
+    width: 100%;
+    padding-left: 5px;
+    position: relative;
+  }
+
+  .background-img {
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .tutorial-details {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 20px;
+    left: 80px;
+
+  }
+
+  .tutorial-heading {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 20px
+  }
+
+  .tutorial-description {
+    color: white;
+    font-size: 14px;
+  }
+
+  .tutorial-specs {
+    color: white;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .tutorial-button {
+    font-size: 18px;
+    height: 40px;
+  }
+
 %div{style: "display: #{launch_ai ? 'block' : 'none'}"}
 
-  = view :tutorial_promo, tutorial: tutorial
+  .tutorial-promo-container
+    .img-container
+      %img.background-img{src: '/images/fit-1940//ocean-background.png'}
+    .tutorial-details
+      %h1.tutorial-heading=hoc_s(:oceans_landing_title)
+      %p.tutorial-description= tutorial[:left_description]
+      %p.tutorial-description=hoc_s(:cs_for_good_hashtag)
+      %p.tutorial-specs= tutorial[:left_specs]
+      %a{href: tutorial[:left_button_link], target: '_self'}
+        %button.tutorial-button= tutorial[:left_button_text]
 
   %div{style: "clear: both; margin-top: 20px;"}
 
