@@ -1,5 +1,5 @@
 ---
-title: How-to guide for parents
+title: తల్లిదండ్రుల కోసం హౌ-టు గైడ్
 ---
 
 {{ signup_button }}

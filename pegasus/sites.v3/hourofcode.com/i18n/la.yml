@@ -2,15 +2,15 @@
 la:
   site_name: HORA del CÓDIGO
   hour_of_code: Hora del Código
-  language: Español (Latinoamérica)
-  front_title: Únete al mayor evento educativo la historia, %{campaign_date}
+  language: Inglés
+  front_title: Únete al mayor evento educativo de la historia, %{campaign_date}
   coming_soon: Próximamente
-  campaign_date_start_short: Dic. 7
-  campaign_date_start_long: 7 de diciembre
-  campaign_date_short: Dic. 7-13
-  campaign_date_full: Del 7 al 13 de diciembre
-  campaign_date_year: '2016'
-  campaign_date_full_year: Del 5 al 11 de diciembre del 2016
+  campaign_date_start_short: 4 dic.
+  campaign_date_start_long: 4 de diciembre
+  campaign_date_short: 4-10 dic.
+  campaign_date_full: Del 4 al 10 de diciembre
+  campaign_date_year: '2017'
+  campaign_date_full_year: Del 4 al 10 de diciembre de 2017
   hoc2019_header: Aprende programación. Cambia el mundo.
   hoc2019_header_line1_mobile: Aprende programación.
   hoc2019_header_line2_mobile: Cambia el mundo.
@@ -25,6 +25,20 @@ la:
     de 2019. Es fundamental que cada estudiante aprenda ciencias de la computación.
   social_hoc2019_dance: "¡Con la presencia de Katy Perry, Jonas Brothers, Lil Nas
     X, Panic at the Disco y muchos más!"
+  oceans_landing_title: AI for Oceans
+  oceans_landing_description: 'Explore machine learning by teaching “A.I.” to recognize
+    fish. #CSforGood'
+  oceans_landing_specs: English only | Ages 11+
+  oceans_landing_teacher_resources: Teacher Resources
+  oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
+    AI, machine learning, training data, and bias, while exploring ethical issues.
+  oceans_landing_resource_button: View Resources
+  oceans_landing_cs_for_good: CS For Good
+  oceans_landing_cs_for_good_desc: Resources to help students understand the role
+    computer science could play in creating a more equitable world.
+  hoc_overview_oceans_tutorial_header: AI Oceans
+  hoc_overview_oceans_tutorial_desc: Teach "A.I." to sort between fish and trash while
+    exploring broader artificial intelligence concepts.
   codeorg_homepage_hoc2018_curriculum: Avanza con los <a href="%{studio_url}/courses"
     class="hoc2018-curriculum-link">cursos de Code.org</a>
   codeorg_homepage_hoc2018_dance_heading: Crea tu propia <span class="highlight-word">Fiesta&nbsp;de
@@ -38,328 +52,328 @@ la:
   codeorg_homepage_hoc2018_musician_before: Destacado
   codeorg_homepage_hoc2018_musician_after: "¡y más!"
   codeorg_homepage_hoc2018_video: Mira nuestro video
-  hourofcode_homepage_hoc2018_header_line1: Cualquiera, en cualquier lugar, puede
-    organizar una “Hora del Código”. Hay tutoriales de una hora en más de 45 idiomas.
-    No se necesita experiencia alguna.
-  hourofcode_homepage_hoc2018_header_line2: Edades de 4 a 104.
+  hourofcode_homepage_hoc2018_header_line1: Cualquier persona, en cualquier lugar,
+    puede organizar una Hora del Código. Hay tutoriales de una hora en más de 45 idiomas.
+    No se necesita experiencia.
+  hourofcode_homepage_hoc2018_header_line2: De 4 a 104 años.
   hoc2018_tutorial_mchoc_description: Usa bloques de código para llevar a Alex o Steve
     en una aventura por este mundo de Minecraft.
-  cookie_banner_message: Continuar navegando en nuestro sitio o seleccionar la opción
-    "Acepto," indica que usted acepta el almacenamiento de cookies en su computadora
-    o dispositivo.
-  cookie_banner_more_information: Ver la política de privacidad de Code.org.
+  codeorg_homepage_hoc2019_dance_heading: Prueba la nueva <span class="highlight-word">Fiesta
+    de&nbsp;Baile!</span>
+  cookie_banner_message: Al navegar en nuestro sitio o seleccionar la opción "Acepto",
+    aceptas que se guarden las cookies en tu computadora o dispositivo.
+  cookie_banner_more_information: Consulta la política de privacidad de Code.org.
   cookie_banner_accept: Acepto
-  front_header_banner: Únete al mayor evento educativo la historia, %{campaign_date}
-  front_intro_default: La Hora de Código es un movimiento global alcanzando decenas
-    de millones de estudiantes en más de 180 países. Cualquiera, en cualquier lugar
-    puede organizar un evento de la Hora de Código. los tutoriales de una-hora están
-    disponibles en más de 45 idiomas. No se requiere tener experiencia. <strong>Edades
-    de 4 a 104.</strong>
+  front_header_banner: Únete al mayor evento educativo de la historia, %{campaign_date}
+  front_intro_default: La Hora del Código es un movimiento global que llega a decenas
+    de millones de estudiantes en más de 180 países. Cualquier persona, en cualquier
+    lugar, puede organizar un evento de la Hora del Código. los tutoriales de una
+    hora están disponibles en más de 45 idiomas. No se necesita experiencia. <strong>de
+    4 a 104 años.</strong>
   front_intro_default_2: Un movimiento global en más de 180 países.
-  front_watch_video: Ve el nueva video
-  front_watch_regular_video: Vee el video
-  front_volunteers: Nosotros necesitamos voluntarios técnicos
-  front_start_learning: 'Comenzar el aprendizaje. '
-  gdpr_dialog_heading: "¿Acepta utilizar un sitio web que esté localizado en Estados
-    Unidos?"
-  gdpr_dialog_message: La información que se utilice en este sitio puede ser enviada,
+  front_watch_video: Mira el nuevo video
+  front_watch_regular_video: Mira el video
+  front_volunteers: Buscamos voluntarios técnicos
+  front_start_learning: Comienza a aprender
+  gdpr_dialog_heading: "¿Aceptas utilizar un sitio web localizado en Estados Unidos?"
+  gdpr_dialog_message: La información que utilices en este sitio puede ser enviada,
     almacenada y procesada en Estados Unidos.
-  gdpr_dialog_link_intro: Para más información vea nuestra
+  gdpr_dialog_link_intro: Para obtener más información, consulta nuestra
   gdpr_dialog_privacy_policy: política de privacidad
   gdpr_dialog_logout: Cerrar sesión
-  gdpr_dialog_yes: Si
+  gdpr_dialog_yes: Sí
   header_menu_resources: Recursos
   header_menu_faq: Preguntas frecuentes
-  header_menu_how_to: "¿Cómo?"
-  header_menu_promote: Promueve
+  header_menu_how_to: Cómo hacerlo
+  header_menu_promote: Promover
   header_menu_activities: Actividades
-  not_found_title: Página no encontrada
-  not_found_desc: La página solicitada no se encontró
-  not_found_instructions: Compruebe la dirección web o elige una dirección de la lista.
-  company_4-H: Desarrollo Juvenil 4-H
-  company_asa: Alianza Extraescolar
+  not_found_title: No se encontró la página
+  not_found_desc: No se encontró la página solicitada
+  not_found_instructions: Comprueba la dirección web y vuelve a intentarlo o elige
+    un enlace de la lista.
+  company_4-H: 4-H Youth Development
+  company_asa: Afterschool Alliance
   company_asos: ASOS
-  company_bgca: Club de Chicos y Chicas de América
+  company_bgca: Boys and Girls Club of America
   company_bsusa: Boy Scouts de Estados Unidos
-  company_cgcs: Consejo de Escuelas de Great City
+  company_cgcs: Council of the Great City Schools
   company_gsusa: Girl Scouts de Estados Unidos
   company_khanacademy: Khan Academy
   company_kipp: KIPP
-  company_mesa: Logro de la ciencia de Ingeniería Matemática
-  company_napcs: Alianza Nacional de Escuelas Públicas
-  company_ngcp: Proyecto colaborativo nacional de niñas
-  company_teachforall: Enseñanza para todos
-  company_teachforamerica: Enseñanza para Estados Unidos
+  company_mesa: Mathematics Engineering Science Achievement
+  company_napcs: National Alliance of Public Charter Schools
+  company_ngcp: National Girls Collaborative Project
+  company_teachforall: Teach for All
+  company_teachforamerica: Teach for America
   company_tntp: TNTP
-  company_abss: Sistema Escolar de Alamance-Burlington
-  company_aldineisd: Distrito Escolar Independiente de Aldine
+  company_abss: Alamance-Burlington School System
+  company_aldineisd: Aldine Independent School District
   company_afterschool: después de la escuela
-  company_laalliance: Alianza para escuelas públicas listas para la universidad
-  company_asd: Escuelas Públicas de Arlington
-  company_arlingtonpublicschools: Escuelas Públicas de Arlington
-  company_bisd303: Distrito Escolar de Bainbridge Island
-  company_beavertonschooldistrict: Distrito Escolar de Beaverton
-  company_bellevuepublicschools: Escuelas Públicas de Bellevue
-  company_blan: Escuelas Locales de Blanchester
-  company_bremertonschools: Distrito Escolar de Bremerton
-  company_browardschools: Escuelas del Condado Broward
-  company_cajonvalley: Distrito Escolar de Cajon Valley
-  company_calistogajointunified: Distrito Escolar de Calistoga Joint
-  company_canalwinchesterschools: Escuelas Locales de Canal Winchester
-  company_canyonsdistrict: Distrito Escolar de Canyons
-  company_centralunified: Distrito Escolar Unificado Central
-  company_cvsd: Distrito Escolar Central Valley
-  company_ccboe: Escuelas Públicas del Condado Charles
-  company_ChathamCountySchools: Escuelas del Condado Chatham
-  company_chelmsfordpublicschooldistrict: Distrito Escolar de Chelmsford
-  company_cheneysd: Distrito Escolar de Cheney
-  company_chesterfieldschools: Escuelas Públicas del Condado Chesterfield
-  company_codebrooklyn: Código Brooklyn
-  company_cps: Escuelas Públicas de Chicago
-  company_ccsd: Distrito Escolar del Condado Clark
-  company_cloverparkschooldistrict: Distrito Escolar de Clover Park
-  company_ccsoh: Distrito Escolar de la Ciudad de Columbus
-  company_cresskillboe: Escuelas Públicas de Cresskill
-  company_dallasisd: Distrito Escolar Independiente de Dallas
+  company_laalliance: Alliance College Ready Public Schools
+  company_asd: Arlington Public Schools
+  company_arlingtonpublicschools: Arlington Public Schools
+  company_bisd303: Bainbridge Island School District
+  company_beavertonschooldistrict: Beaverton School District
+  company_bellevuepublicschools: Bellevue Public Schools
+  company_blan: Blanchester Local Schools
+  company_bremertonschools: Bremerton School District
+  company_browardschools: Broward County Schools
+  company_cajonvalley: Cajon Valley School District
+  company_calistogajointunified: Calistoga Joint Unified School District
+  company_canalwinchesterschools: Canal Winchester Local Schools
+  company_canyonsdistrict: Canyons School District
+  company_centralunified: Central Unified School District
+  company_cvsd: Central Valley School District
+  company_ccboe: Charles County Public Schools
+  company_ChathamCountySchools: Chatham County Schools
+  company_chelmsfordpublicschooldistrict: Chelmsford School District
+  company_cheneysd: Cheney School District
+  company_chesterfieldschools: Chesterfield County Public Schools
+  company_codebrooklyn: Code Brooklyn
+  company_cps: Chicago Public Schools
+  company_ccsd: Clark County School District
+  company_cloverparkschooldistrict: Clover Park School District
+  company_ccsoh: Columbus City School District
+  company_cresskillboe: Cresskill Public Schools
+  company_dallasisd: Dallas Independent School District
   company_disney: Disney
-  company_dpsk12: Escuelas Públicas de Denver
-  company_dcsdk12: Escuelas del Condado Douglas
-  company_dpsnc: Escuelas Públicas del Durham
-  company_evsd: Distrito Escolar de East Valley
-  company_eastonvilleschooldistrict: Distrito Escolar de Eastonville
-  company_enumclawschooldistrict: Distrito Escolar de Enumclaw
-  company_everettsd: Escuelas Públicas de Evarette
-  company_fsusd: Distrito Escolar Unificado de Fairfield-Suisun
-  company_fayettecountypublicschools: Escuelas Públicas del Condado Fayette
-  company_forsythcountyschools: Escuelas del Condado Forsyth
-  company_fcschools: Escuela del Condado Franklin
-  company_fpschools: Distrito Escolar de Franklin Pierce
-  company_frederickcountypublicschools: Escuelas Públicas del Condado Frederick
-  company_fultonschools: Escuelas del Condado Fulton
-  company_vadoe: Programas Escolares del Gobernador
-  company_gcs: Escuelas del Condado Granville
+  company_dpsk12: Denver Public Schools
+  company_dcsdk12: Douglas County Schools
+  company_dpsnc: Durham Public Schools
+  company_evsd: East Valley School District
+  company_eastonvilleschooldistrict: Eatonville School District
+  company_enumclawschooldistrict: Enumclaw School District
+  company_everettsd: Everette Public Schools
+  company_fsusd: Fairfield-Suisun Unified School District
+  company_fayettecountypublicschools: Fayette County Public Schools
+  company_forsythcountyschools: Forsyth County Schools
+  company_fcschools: Franklin County School
+  company_fpschools: Franklin Pierce School District
+  company_frederickcountypublicschools: Frederick County Public Schools
+  company_fultonschools: Fulton County Schools
+  company_vadoe: Governor's School Programs
+  company_gcs: Granville County Schools
   company_gcisd: Grapevine-Colleyville ISD
   company_godaddy: Go Daddy
-  company_greenupcountyschooldistrict: Escuelas del Condado Greenup
-  company_gwinnettcountypublicschools: Escuelas Públicas del Condado Gwinnett
-  company_HamptonCitySchools: Escuelas de la Ciudad de Hampton
-  company_HanoverCountyPublicSchools: Escuelas Públicas del Condado Hanover
-  company_HenricoCountyPublicSchools: Escuelas Públicas del Condado Henrico
-  company_highlineschools: Distrito Escolar de Highline
-  company_houstonisd: Distrito Escolar Independiente de Houston
-  company_hcpss: Escuelas Públicas del Condado Howard
-  company_idla: Academia de Aprendizaje Digital de Idaho
-  company_janesvilleschooldistrict: Distrito Escolar de Janesville
-  company_johnstoncountyschools: Escuelas del Condado Johnston
-  company_lps: Escuela Pública de Lincoln
-  company_littletonpublicschools: Escuelas Públicas de Littleton
-  company_lausd: Distrito Escolar Unificado de Los Angeles
-  company_lcps: Escuelas Públicas del Condado de Louisa
-  company_lcsedu: Escuelas de la Ciudad de Lynchburg
-  company_msvl: Distrito Escolar de Marysville
-  company_dadeschools: Escuelas Públicas de Miami-Dade
-  company_miltonps: Escuelas Públicas de Milton
-  company_montgomeryschoolsmd: Escuelas Públicas del Condado Montgomery
-  company_needhampublicschools: Escuelas Públicas de Needham
-  company_NelsonCountyPublicSchools: Escuelas Públicas del Condado Nelson
-  company_newalbanyschools: Escuelas locales de New Albany Plain
-  company_newkentschools: Escuelas Públicas del Condado de New Kent
-  company_newarkcityschools: Escuelas de la Ciudad de Newark
-  company_nnschools: Escuelas públicas de Newport News
-  company_newtonpublicschools: Escuelas Públicas de Newton
-  company_nps: Escuelas Públicas de Norfolk
+  company_greenupcountyschooldistrict: Greenup County Schools
+  company_gwinnettcountypublicschools: Gwinnett County Public Schools
+  company_HamptonCitySchools: Hampton City Schools
+  company_HanoverCountyPublicSchools: Hanover County Public Schools
+  company_HenricoCountyPublicSchools: Henrico County Public Schools
+  company_highlineschools: Highline School District
+  company_houstonisd: Houston Independent School District
+  company_hcpss: Howard County Public Schools
+  company_idla: Idaho Digital Learning Academy
+  company_janesvilleschooldistrict: Janesville School District
+  company_johnstoncountyschools: Johnston County Schools
+  company_lps: Lincoln Public School
+  company_littletonpublicschools: Littleton Public Schools
+  company_lausd: Los Angeles Unified School District
+  company_lcps: Louisa County Public Schools
+  company_lcsedu: Lynchburg City Schools
+  company_msvl: Marysville School District
+  company_dadeschools: Miami-Dade Public Schools
+  company_miltonps: Milton Public Schools
+  company_montgomeryschoolsmd: Montgomery County Public Schools
+  company_needhampublicschools: Needham Public Schools
+  company_NelsonCountyPublicSchools: Nelson County Public Schools
+  company_newalbanyschools: New Albany Plain Local Schools
+  company_newkentschools: New Kent County Public Schools
+  company_newarkcityschools: Newark City Schools
+  company_nnschools: Newport News Public Schools
+  company_newtonpublicschools: Newton Public Schools
+  company_nps: Norfolk Public Schools
   company_nycdoe: Departamento de Educación de la Ciudad de Nueva York
-  company_ohlsd: Distrito escolar local de Oak Hills
-  company_oneclay: Distrito Escolar del Condado One Clay
-  company_ocps: Escuelas del Condado Naranja
-  company_orangeusd: Distrito Escolar Unificado de Orange
-  company_pbsd: Distrito Escolar de Palm Beach
-  company_pvusd: Distrito Escolar Unificado de Paradise Valley
-  company_PetersburgCityPublicSchools: Escuelas Públicas de la Ciudad de Petersburg
-  company_pylusd: Distrito Escolar Unificado de Placentia-Yorba Linda
-  company_PowhatanCountyPublicSchools: Escuelas Públicas del Condado Powhatan
-  company_pgcps: Escuelas Públicas del Condado Prince Georges
-  company_provocityschooldistrict: Escuelas Públicas de Provo
-  company_reyn: Distrito Escolar de la Ciudad de Reynoldsburg
-  company_RichmondPublicSchools: Escuelas Públicas de Richmond
-  company_RockinghamCountySchools: Escuelas del Condado de Rockingham
-  company_svusd: Distrito Escolar Unificado de Saddleback Valley
-  company_sfusd: Distrito Escolar Unido de San Francisco
-  company_ShenandoahCountyPublicSchools: Escuelas Públicas del Condado Shenandoah
-  company_shorelineschools: Distrito Escolar de Shoreline
-  company_sjusd: Distrito Escolar Unido de San Juan
-  company_sky: Cielo
-  company_spokaneschools: Escuelas Públicas de Spokane
-  company_StaffordCountyPublicSchools: Escuelas Públicas del Condado Stafford
-  company_strongnet: Distrito Escolar de Strangsville
-  company_TukwilaSchoolDistrict: Distrito Escolar de Tukwila
-  company_vermilionschools: Distrito Escolar de Vermilion
+  company_ohlsd: Oak Hills Local School District
+  company_oneclay: One Clay County School District
+  company_ocps: Orange County Schools
+  company_orangeusd: Orange Unified School District
+  company_pbsd: Palm Beach School District
+  company_pvusd: Paradise Valley Unified School District
+  company_PetersburgCityPublicSchools: Petersburg City Public Schools
+  company_pylusd: Placentia-Yorba Linda Union School District
+  company_PowhatanCountyPublicSchools: Powhatan County Public Schools
+  company_pgcps: Prince Georges County Public Schools
+  company_provocityschooldistrict: Provo Public Schools
+  company_reyn: Reynoldsburg City School District
+  company_RichmondPublicSchools: Richmond Public Schools
+  company_RockinghamCountySchools: Rockingham County Schools
+  company_svusd: Saddleback Valley Unified School District
+  company_sfusd: San Francisco Unified School District
+  company_ShenandoahCountyPublicSchools: Shenandoah County Public Schools
+  company_shorelineschools: Shoreline School District
+  company_sjusd: San Juan Unified School District
+  company_sky: Sky
+  company_spokaneschools: Spokane Public Schools
+  company_StaffordCountyPublicSchools: Stafford County Public Schools
+  company_strongnet: Strongsville School District
+  company_TukwilaSchoolDistrict: Tukwila School District
+  company_vermilionschools: Vermilion Local School District
   company_vista-equity-partners: Vista Equity Partners
-  company_walthampublicschools: Escuelas Públicas de Waltham
-  company_warrencountyschools: Escuelas del Condado Warren
-  company_WaynesboroPublicSchools: Escuelas Públicas de Waynesboro
-  company_WellesleyPublicSchools: Escuelas Públicas de Wellesley
-  company_wvsd208: Distrito Escolar de West Valley
-  company_wuhsd: Distrito Escolar de Whittier Union
-  company_wcschools: Escuelas del Condado Wilson
+  company_walthampublicschools: Waltham Public Schools
+  company_warrencountyschools: Warren County Schools
+  company_WaynesboroPublicSchools: Waynesboro Public Schools
+  company_WellesleyPublicSchools: Wellesley Public Schools
+  company_wvsd208: West Valley School District
+  company_wuhsd: Whittier Union High School District
+  company_wcschools: Wilson County Schools
   company_yelp: Yelp
-  nav_back_to_resources: Recursos
-  how_to_nav_educators: Para profesores
+  nav_back_to_resources: Volver a Recursos
+  how_to_nav_educators: Para docentes
   how_to_nav_after_school: Para después de la escuela
-  how_to_nav_parents: Para los padres
+  how_to_nav_parents: Para padres
   how_to_nav_public_officials: Para funcionarios públicos
-  how_to_nav_districts: Para los distritos
+  how_to_nav_districts: Para distritos
   how_to_nav_assemblies: Para asambleas escolares
   how_to_nav_organizations: Para organizaciones
   how_to_nav_companies: Para empresas
-  how_to_nav_afterschool_educators: Para los educadores de extraescolares
-  how_to_nav_volunteers: Para los voluntarios
-  whats_next_header: "¿Qué sigue?"
-  whats_next_description: Le enviaremos los materiales y consejos para su evento.
-    <a href='http://code.org/learn'> prueba tutoriales actuales</a> para cualquier
-    navegador, smartphone ¡o incluso sin ordenador!
+  how_to_nav_afterschool_educators: Para docentes extracurriculares
+  how_to_nav_volunteers: Para voluntarios
+  whats_next_header: Próximos pasos
+  whats_next_description: Te enviaremos materiales y consejos útiles para tu evento.
+    <a href='http://code.org/learn'> Prueba los tutoriales</a> para cualquier navegador
+    o smartphone. ¡Hasta funcionan sin computadora!
   whats_next_how_to: "<a href='/how-to'>Cómo organizar una Hora del Código</a>"
-  whats_next_promote: "<a href='/promote'>Promociona la Hora de Código</a>"
-  whats_next_how_to_promote: "<a href='/resources/promote'> ¿Cómo promover la Hora
-    del Código?</a>"
-  whats_next_how_to_promote_link: "<a href='/resources/promote'> ¿Cómo promover la
-    Hora del Código?</a>"
-  whats_next_try: "<a href='%{learn_url}'> Prueba los tutoriales</a>"
+  whats_next_promote: "<a href='/promote'>Promueve la Hora del Código</a>"
+  whats_next_how_to_promote: "<a href='/promote/resources'>Cómo promover la Hora del
+    Código</a>"
+  whats_next_how_to_promote_link: "<a href='/promote'>Cómo promover la Hora del Código</a>"
+  whats_next_try: "<a href='%{learn_url}'>Prueba los tutoriales</a>"
   whats_next_try_button: Prueba los tutoriales
-  n_have_learned_an_hoc: "<h1>Intenta una</h1><h2>Hora de Código</h2><h3># realizada</h3>"
+  n_have_learned_an_hoc: "<h1>Intenta una</h1><h2>Hora del Código</h2><h3># realizadas</h3>"
   anybody_can_learn: Cualquiera puede aprender.
   get_started: Comenzar
-  beyond_an_hour: Más allá de una hora de código
-  register_now: Registrarse
+  beyond_an_hour: Más allá de una Hora del Código
+  register_now: Inscríbete
   share_on_facebook: Compartir en Facebook
   share_on_twitter: Compartir en Twitter
-  promote_additional_resources: "¡Próximamente recursos adicionales!"
-  front_join_us_heading: Una hora de código para cada estudiante.
-  front_join_us_announcements: Boletín de Anuncios
+  promote_additional_resources: "¡Pronto habrá más recursos!"
+  front_join_us_heading: Una Hora del Código para cada estudiante.
+  front_join_us_announcements: Anuncios
   front_join_us_anybody_can_learn: Cualquiera puede aprender
-  front_join_us_description: Las Ciencias de la Computación son fundamentales para
-    la educación. Ayúdanos a llegar a 100 millones de estudiantes.
-  front_join_us_description_short: Las Ciencias de la Computación son fundamentales
-    para la educación de nuestros estudiantes.
-  front_join_us_button: "¡únete!"
+  front_join_us_description: Las ciencias de la computación son fundamentales para
+    cada estudiante. Ayúdanos a llegar a los 100 millones.
+  front_join_us_description_short: Las ciencias de la computación son fundamentales
+    para cada estudiante.
+  front_join_us_button: Únete
   front_what_is_hoc: "¿Qué es la Hora del Código?"
-  front_join_us_header: Cualquiera puede aprender los conceptos básicos y ¡divertirse
-    haciéndolo!
+  front_join_us_header: Cualquiera puede aprender los conceptos básicos, ¡y divertirse
+    mientras lo hace!
   front_join_us_volunteer_header: Voluntarios para la Hora del Código
-  front_join_us_tutorials: "¡Elige tu tutorial hora de código!"
-  front_join_us_tutorials_link: "¡Filtra y navega por <i>más de 200 tutoriales y lecciones</i>!
-    Encuentra actividades para diferentes áreas, múltiples necesidades de hardware
-    y estudiantes de cualquier nivel de experiencia."
-  front_join_us_robotics: "¿Tienes robots?"
-  front_join_us_robotics_link: Gracias nuestros socios en robótica (que están más
-    abajo) si en tu colegio hay robots, entonces haz clic en los logos y encuentra
-    una lista de actividades relacionadas con robótica.
-  front_join_us_teacher: "¿Eres profesor?"
+  front_join_us_tutorials: "¡Elige tu tutorial de la Hora del Código!"
+  front_join_us_tutorials_link: "¡Filtra y navega por <i>más de 200 tutoriales y planes
+    de lecciones</i>! Encuentra actividades para diferentes áreas, distintas necesidades
+    de hardware y estudiantes con diferentes niveles de experiencia."
+  front_join_us_robotics: "¡Gana robots o circuitos!"
+  front_join_us_robotics_link: "¿Quieres un conjunto de robots o kits de computación
+    física para usarlos con tus estudiantes? ¡Nuestros generosos socios están donando
+    kits a 75 aulas! Inscríbete en la Hora del Código para participar (aulas seleccionadas
+    por Code.org, solo en EE. UU.)."
+  front_join_us_teacher: "¿Eres docente?"
   front_join_us_inspire: Inspira a tus estudiantes con
-  front_join_us_inspire_link: la Hora del Código en el salón de clases.
-  front_join_us_teacher_link: Inspira a tus estudiantes con la Hora del Código en
-    el salón de clases
+  front_join_us_inspire_link: una Hora del Código en el aula.
+  front_join_us_teacher_link: Inspira a tus estudiantes con una Hora del Código en
+    el aula
   front_join_us_teacher_volunteer: Busca voluntarios locales que puedan visitar tu
-    salón de clases o inspirar a tus estudiantes vía remota.
-  front_join_us_parent: "¿Eres padre de familia?"
+    aula o inspirar a tus estudiantes a la distancia.
+  front_join_us_parent: "¿Tienes hijos?"
   front_join_us_ask_link: Pregunta en tu escuela local
-  front_join_us_ask: para que organicen una "Hora de Código".
-  front_join_us_parent_link: Pregunta a tu escuela local para que organicen una "Hora
-    de Código"
-  front_join_us_computer_science: "¿Simplemente amas informática?"
-  front_join_us_cs_volunteer: "¿Te apasiona la eduación de las Ciencias de la Computación?"
-  front_join_us_spread: Difunde la voz.
-  front_join_us_spread_word: Difunde la voz en tu comunidad
-  front_join_us_spread_word_work: Difunde la voz en tu comunidad o trabajo
-  front_join_us_sign_up_volunteer: Regístrate como voluntario para visitar un salón
-    de clases o a travez de una video llamada.
-  front_join_us_organize: O organíza un evento "La Hora del Código" tu mismo.
-  front_join_us_how_to_run: Aquí podrás ver cómo organizar una Hora de Código
-  front_join_us_help_promote: Ayuda a promover "La Hora del Código"
+  front_join_us_ask: si pueden organizar una Hora del Código.
+  front_join_us_parent_link: Pregunta a tu escuela local si pueden organizar una Hora
+    del Código
+  front_join_us_computer_science: "¿Te encantan las ciencias de la computación?"
+  front_join_us_cs_volunteer: "¿Te apasiona enseñar ciencias de la computación?"
+  front_join_us_spread: Haz correr la voz.
+  front_join_us_spread_word: Haz correr la voz en tu comunidad
+  front_join_us_spread_word_work: Haz correr la voz en tu comunidad o lugar de trabajo
+  front_join_us_sign_up_volunteer: Inscríbete como voluntario para visitar un aula
+    o participar por videollamada.
+  front_join_us_organize: También puedes organizar una Hora del Código tú mismo.
+  front_join_us_how_to_run: Aquí podrás ver cómo organizar una Hora del Código
+  front_join_us_help_promote: Ayuda a promover la Hora del Código
   front_join_us_students: Estudiantes
-  front_join_us_teachers: Profesores
+  front_join_us_teachers: Docentes
   front_join_us_everyone: Todos
-  front_join_us_try: Pruébalo
-  front_join_us_sign_up: Regístrate
-  front_join_us_host: Organiza
+  front_join_us_try: Pruébala
+  front_join_us_sign_up: Inscríbete
+  front_join_us_host: Organízala
   front_join_us_support: Apóyala
-  front_join_us_more_info: Para más información, por favor visite <a href='https://code.org'>code.org</a>.
-  front_join_us_code_info: Para más información, por favor visite code.org
-  front_join_us_n_students_served: "# estudiantes que han sido apoyados."
-  front_join_us_challenge: "¡Gane una video conferencias con una celebridad para su
-    clase!"
-  front_join_us_learn_more: Aprender más
-  signup_closed: Registro para Hour of Code está cerrado. Por favor verifique de nuevo
-    en Octubre para inscribirse para el siguiente Hour of Code.
-  signup_registration_not_required: "¡No es necesario registrarse para participar!
-    Las actividades de La Hora del Código están disponibles durante todo el año. <a
-    href='%{hoc_activities_url}'>probar una actividad</a> o leer nuestros <a href='%{howto_guide_url}'>Guía
-    Práctica</a> para planificar un evento para su clase."
-  signup_registration_closed: Y cada año en diciembre, su clase puede unirse a millones
-    de estudiantes alrededor del mundo celebrando La Semana de Educación en Ciencias
-    de la Computación con La Hora del Código. Abriremos la inscripción para la celebración
+  front_join_us_more_info: Para obtener más información, visita <a href='https://code.org'>code.org</a>.
+  front_join_us_code_info: Para obtener más información, visita code.org
+  front_join_us_n_students_served: "# participantes."
+  front_join_us_challenge: "¡Gana una videoconferencia para tu aula con una celebridad!"
+  front_join_us_learn_more: Conoce más
+  signup_closed: La inscripción para la Hora del Código está cerrada. Vuelve a intentarlo
+    en octubre cuando abramos la inscripción para la siguiente Hora del Código.
+  signup_registration_not_required: "¡No es necesario inscribirse para participar!
+    Las actividades de la Hora del Código están disponibles todo el año. <a href='%{hoc_activities_url}'>Prueba
+    una actividad</a> o lee nuestra <a href='%{howto_guide_url}'>Guía práctica</a>
+    para planificar un evento para tu clase."
+  signup_registration_closed: Y cada año, en diciembre, tu clase puede unirse a millones
+    de estudiantes de todo el mundo que celebran La Semana por la Educación en Ciencias
+    de la Computación con la Hora del Código. Abriremos la inscripción para la celebración
     anual en octubre.
   signup_header: Organiza una Hora del Código del %{campaign_date} y regístrate.
-  signup_name_label: Su nombre
+  signup_name_label: Tu nombre
   signup_name_error: El nombre es obligatorio.
-  signup_email_label: Su correo electrónico
+  signup_email_label: Tu correo electrónico
   signup_email_error: El correo electrónico es obligatorio
-  signup_invalid_email_error: La dirección de correo electrónico que ingresó es inválida
+  signup_invalid_email_error: La dirección de correo electrónico que ingresaste no
+    es válida
   signup_organization_name_label: Nombre de la organización
   signup_organization_name_error: El nombre de la organización es obligatorio.
   signup_event_type_label: Tipo de evento
   signup_event_type_error: El tipo de evento es obligatorio.
-  signup_event_entire_school_label: Toma mi escuela está participando
-  signup_event_location_label: Locación del evento
-  signup_event_location_error: La locación del evento es obligatoria.
-  signup_special_event_flag_label: Mi evento involucrará a un distrito completo, miembros
+  signup_event_entire_school_label: Toda mi escuela está participando
+  signup_event_location_label: Ubicación del evento
+  signup_event_location_error: La ubicación del evento es obligatoria.
+  signup_special_event_flag_label: Mi evento abarcará a todo un distrito, miembros
     de la comunidad y/u otros planes especiales para ir más allá de una hora
-  signup_special_event_details_label: Aplicar para ser resaltado como un evento especial
-  signup_send_posters_flag_label: Envía <a href= "/resources/promote#posters">carteles</a>
-    a mi escuela, instituto u organización ( solamente en los Estados Unidos de Norteamerica,
-    disponibles hasta agotar existencia)
+  signup_special_event_details_label: Solicita que se te destaque como un evento especial
+  signup_send_posters_flag_label: Enviar <a href= "/resources/promote#posters">carteles</a>
+    a mi escuela u organización (solamente en EE. UU., disponibles hasta agotar existencias)
   signup_send_posters_address_label: Dirección de la escuela u organización
   signup_whole_school_flag_label: Este evento es para toda una escuela
-  signup_your_event: Registre su evento
+  signup_your_event: Inscribe tu evento
   signup_host_an_hour: Organiza una Hora del Código
-  signup_match_volunteer: Ayúdeme a encontrar un ingeniero de software local para
-    inspirar a mis studiantes
-  signup_email_preference_opt_in: "¿Podemos enviarle correos electrónicos sobre actualizaciones
-    de cursos de Code.org, oportunidades locales u otras noticias de la ciencia de
-    la computación?"
-  signup_email_preference_privacy: "(Ver nuestra política de privacidad)"
-  signup_email_preference_yes: Si
+  signup_match_volunteer: Ayúdame a encontrar un ingeniero de software local que inspire
+    a mis estudiantes
+  signup_email_preference_opt_in: "¿Podemos enviarte actualizaciones de cursos de
+    Code.org, oportunidades locales u otras noticias sobre ciencias de la computación
+    por correo electrónico?"
+  signup_email_preference_privacy: "(consulta nuestra política de privacidad)"
+  signup_email_preference_yes: Sí
   signup_email_preference_no: 'No'
-  signup_email_preference_error: Se requiere preferencia de correo electrónico
-  signup_multiple_event_warning: Pondremos el nombre de su escuela y ciudad en el
-    mapa cuando se registre. Si está alojando eventos múltiples, por favor envíe un
-    nombre único o correo electrónico para cada uno. Sólo podemos contar un evento
-    por la combinación de nombre y correo electrónico.
-  signup_registration_deadline: El registro para la Hora del Código es el 8 de octubre.
-  signup_name_placeholder: Su Nombre
-  signup_email_placeholder: usted@ejemplo.com
-  signup_organization_name_placeholder: Por ejemplo, Colegio Lincoln
+  signup_email_preference_error: Debes elegir el correo electrónico como preferencia
+  signup_multiple_event_warning: Pondremos el nombre de tu escuela y ciudad en el
+    mapa cuando te inscribas. Si organizas varios eventos, envía un nombre o correo
+    electrónico para cada uno. Solo podemos contar un evento por combinación de nombre
+    y correo electrónico.
+  signup_registration_deadline: La inscripción para la Hora del Código cierra el 11
+    de diciembre.
+  signup_name_placeholder: Tu nombre
+  signup_email_placeholder: tu@ejemplo.com
+  signup_organization_name_placeholder: Por ejemplo, escuela Lincoln
   signup_event_country_label: País del evento
   signup_event_country_error: El país es obligatorio.
-  signup_event_location_placeholder: Código postal y país o dirección completa. (usaremos
-    esto para colocar un pin en nuestro mapa)
-  signup_special_event_details_placeholder: Describa qué hace especial a este evento
-  signup_send_posters_address_placeholder: Esta dirección no será compartida en su
+  signup_event_location_placeholder: Código postal y país o dirección completa.
+  signup_special_event_details_placeholder: Describe por qué este evento es especial
+  signup_send_posters_address_placeholder: No compartiremos esta dirección en nuestro
     mapa
   signup_event_type_in_school: En una escuela
-  signup_event_type_out_of_school: Afuera de la escuela
+  signup_event_type_out_of_school: Fuera de la escuela
   signup_submit_census_label: Enviar
-  signup_submit_census_error_message: Lo sentimos. Se ha producido un error. Por favor
-    intente subir el formulario de nuevo.
-  signup_submit_label: Regístrate
-  signup_submit_error_message: Ocurrió un error. Por favor verifique para asegurar
-    de que todos los campos requeridos han sido llenados correctamente.
-  signup_submit_and_continue_label: Subir y Continuar
+  signup_submit_census_error_message: Lo sentimos. Se produjo un error. Intenta enviar
+    el formulario otra vez.
+  signup_submit_label: Inscríbete
+  signup_submit_error_message: Se produjo un error. Asegúrate de que todos los campos
+    obligatorios han sido completados correctamente.
+  signup_submit_and_continue_label: Enviar y continuar
   signup_continue_label: Continuar
-  signup_thank_you_header: "¡Gracias por inscribirte para ser anfitrión de una Hora
-    del Código!"
-  signup_thank_you_message: Le enviamos un correo electrónico de confirmación con
-    información para ayudarlo a comenzar.
+  signup_thank_you_header: Gracias por inscribirte para ser anfitrión de una Hora
+    del Código.
+  signup_thank_you_message: Te enviamos un correo electrónico de confirmación con
+    información para ayudarte a comenzar.
   social_hoc2018_code_org_what_create: 'Code.org: ¿Qué vas a crear?'
   social_hoc2018_creativity_in_are_you: 'La creatividad es la protagonista de la #HoraDelCódigo.
     ¡Yo voy a participar! ¿Y tú?'
@@ -382,141 +396,138 @@ la:
   social_hoc2018_global_movement: La Hora del Código es un movimiento global en el
     que participan decenas de millones de estudiantes. Los tutoriales de una hora
     están disponibles en más de 45 idiomas para todas las edades.
-  map_title: Mapa de Hour of Code
-  map_header: Numero de eventos registrados para hora de codigo en 2017
-  map_header_count_year: "%{event_count} eventos registrados para La Hora del Código
-    %{year}"
+  map_title: Mapa de la Hora del Código
+  map_header: "# eventos registrados para la Hora del Código 2017"
+  map_header_count_year: "%{event_count} eventos registrados en %{year}"
   see_all_events: Ver todos los eventos
-  map_header_company: "# por los organizadores de la compañía"
+  map_header_company: "# por organizadores de la compañía"
   map_header_country: "# en %{country}"
-  map_search_placeholder: Buscar eventos de Hour of Code
+  map_search_placeholder: Buscar eventos de la Hora del Código
   map_search_search: Buscar
   map_search_reset: Restablecer
   map_legend_title: Leyenda
-  map_legend_hoc_events: Evento de Hour of Code
+  map_legend_hoc_events: Evento de la Hora del Código
   map_legend_cs_tech_jam: Evento especial
-  map_warning: El mapa de Hora del Código sólo muestra los primeros 200.000 eventos
-    registrados. Todos los eventos registrados con una dirección válida pueden verse
-    en <a href='%{events_url}'> la página de eventos.</a>
+  map_warning: Puedes ver una lista completa de eventos en la <a href='%{events_url}'>página
+    de eventos.</a>
   meta_tag_og_title: 'Hora del Código: únete al movimiento'
-  meta_tag_og_description: La Hora del Código es un movimiento global, el alcanze
-    es de decenas de millones de estudiantes de todas las edades en más de 180 países
-    y más de 45 idiomas.
+  meta_tag_og_description: La Hora del Código es un movimiento global que llega a
+    decenas de millones de estudiantes de todas las edades, en más de 180 países y
+    45 idiomas.
   meta_tag_twitter_title: 'Hora del Código: únete al movimiento'
-  meta_tag_twitter_description: La Hora del Código es un movimiento global, el alcanze
-    es de decenas de millones de estudiantes de todas las edades en más de 180 países
-    y más de 45 idiomas.
-  twitter_default_text: 'Este año estoy participando en #HourOfCode, ¿Y usted? @codeorg'
-  twitter_donor_text: 'Este año #HourOfCode es sobre la creatividad. ¡Yo voy a participar!
-    ¿Y tú? (Gracias %{random_donor} por apoyar a @codeorg)'
+  meta_tag_twitter_description: La Hora del Código es un movimiento global que llega
+    a decenas de millones de estudiantes de todas las edades, en más de 180 países
+    y 45 idiomas.
+  twitter_default_text: 'Este año participo en #HourOfCode, ¿y tú? @codeorg'
+  twitter_donor_text: 'Este año #HourOfCode se trata de la creatividad. ¡Yo voy a
+    participar! ¿Y tú? (Gracias %{random_donor} por apoyar a @codeorg)'
   twitter_donor_text_2019: 'Este año #HourOfCode se trata de #CSforGood. ¡Yo voy a
     participar! ¿Y tú? (Gracias %{random_donor} por apoyar a @codeorg)'
   hoc_faq_title: Preguntas frecuentes
   hoc_faq_what_is_hoc_q: "¿Qué es la Hora del Código?"
-  hoc_faq_what_is_hoc_a: La Hora del Código comenzó como una hora de introducción
-    a la informática, diseñado para desmitificar el "código", para demostrar que cualquiera
-    puede aprender los conceptos básicos y para ampliar la participación en el campo
-    de la informática. Desde entonces, se ha convertido en un esfuerzo mundial para
-    celebrar las ciencias de la computación, comenzando con las actividades de codificación
-    de una hora pero ampliándose a todo tipo de esfuerzos comunitarios. Conoce los
-    <a href='%{tutorials}'> tutoriales y actividades </a>. Esta campaña comunitaria
-    está respaldada por más de <a href='%{partners}'> 400 socios </a> y 200.000 educadores
-    de todo el mundo.
+  hoc_faq_what_is_hoc_a: 'La Hora del Código comenzó como una introducción de una
+    hora a las ciencias de la computación, diseñada para desmitificar el "código",
+    demostrar que todos pueden aprender los conceptos básicos y ampliar la participación
+    en el campo de las ciencias de la computación. Desde entonces, se ha convertido
+    en una iniciativa mundial que celebra las ciencias de la computación: comenzó
+    con actividades de programación de una hora y se amplió a todo tipo de iniciativas
+    comunitarias. Conoce los <a href=''%{tutorials}''>tutoriales y actividades</a>.
+    Esta campaña comunitaria es apoyada por más de <a href=''%{partners}''>400 socios</a>
+    y 200,000 educadores de todo el mundo.'
   hoc_faq_last_year: Prueba los tutoriales
-  hoc_faq_when_is_hoc_q: "¿Cuándo es La Hora del Código?"
-  hoc_faq_when_is_hoc_a: La Hora del Código tiene lugar cada año durante la <a href='%{csedweek_url}'>
-    Semana de la Educación en Ciencias de la Computación </a>. La semana de educación
-    en informática %{campaign_date_year} será %{campaign_date_full}, pero puede alojar
-    una hora de código durante todo el año. La Semana de la Educación en Ciencias
-    de la Computación se celebra anualmente en reconocimiento al cumpleaños de la
-    <a href='%{grace_hopper}'> pionera de computación, el Almirante Grace Murray Hopper
-    </a> (9 de diciembre de 1906).
-  hoc_faq_why_cs_q: "¿Por qué ciencias de la computación?"
-  hoc_faq_why_cs_a: "<i> Todos </ i> los estudiantes deberían tener la oportunidad
-    de aprender informática. Ayuda a fomentar las habilidades para resolver problemas,
-    la lógica y la creatividad. Al comenzar temprano, los estudiantes tendrán una
-    base para el éxito en cualquier carrera profesional del siglo XXI. Ver más estadísticas
-    <a href='%{stats_url}'> aquí </a>."
+  hoc_faq_when_is_hoc_q: "¿Cuándo es la Hora del Código?"
+  hoc_faq_when_is_hoc_a: La Hora del Código tiene lugar cada año durante la <a href='%{csedweek_url}'>Semana
+    por la Educación en Ciencias de la Computación</a>. La Semana por la Educación
+    en Ciencias de la Computación de %{campaign_date_year} será el %{campaign_date_full},
+    pero puedes organizar una Hora del Código en cualquier momento del año. Semana
+    por la Educación en Ciencias de la Computación se celebra todos los años en reconocimiento
+    al cumpleaños de la <a href='%{grace_hopper}'>almirante Grace Murray Hopper</a>,
+    pionera de computación (9 de diciembre de 1906).
+  hoc_faq_why_cs_q: "¿Por qué las ciencias de la computación?"
+  hoc_faq_why_cs_a: "<i>Todos</i> los estudiantes deberían tener la oportunidad de
+    aprender ciencias de la computación. Ayuda a fomentar las habilidades para resolver
+    problemas, la lógica y la creatividad. Cuanto antes comiencen, los estudiantes
+    tendrán una base para el éxito en cualquier carrera profesional del siglo 21.
+    Consulta más estadísticas <a href='%{stats_url}'>aquí</a>."
   hoc_faq_how_participate_q: "¿Cómo puedo participar en la Hora del Código?"
-  hoc_faq_how_participate_a: "<a href='/how-to'>Comienza a planificar aquí</a> revisando
-    nuestra guía de cómo hacerlo. Podrás organizar un evento de la Hora del Código
-    en tu colegio, instituto o en tu comunidad &mdash; por ejemplo, en un taller extraescolar,
-    en una organización sin ánimo de lucro o en tu lugar de trabajo. Simplemente,
-    pruébalo cuando llegue el %{campaign_date}."
-  hoc_faq_behind_hoc_q: "¿Quién está detrás de La Hora del Código?"
-  hoc_faq_behind_hoc_a: La Hora del Código está impulsada por la Hora del Código y
-    la Semana de Educación en Informática <a href='%{partner_url}'> Comités de Asesoría
-    y Revisión </a>, así como por una coalición de socios sin precedentes que se han
-    unido para apoyar a la Hora del Código &mdash; incluyendo Microsoft, Apple, Amazon,
-    Boys and Girls Clubs of America y el College Board.
+  hoc_faq_how_participate_a: "<a href='/how-to'>Comienza a planificar aquí</a> con
+    nuestra guía práctica. Podrás organizar un evento de la Hora del Código en tu
+    escuela o comunidad, por ejemplo, en un taller extracurricular, una organización
+    sin ánimo de lucro o tu lugar de trabajo. Solo tienes que probarlo por ti mismo
+    cuando llegue el %{campaign_date}."
+  hoc_faq_behind_hoc_q: "¿Quién está detrás de la Hora del Código?"
+  hoc_faq_behind_hoc_a: La Hora del Código es impulsada por los <a href='%{partner_url}'>Comités
+    de Asesoría y Revisión</a> de la Hora del Código y la Semana por la Educación
+    en Ciencias de la Computación, así como por una coalición de socios sin precedentes
+    que se han unido para apoyar la Hora del Código, entre ellos, Microsoft, Apple,
+    Amazon, Boys and Girls Clubs of America y el College Board.
   hoc_faq_host_q: No sé nada acerca de programación. ¿Aún así puedo organizar un evento?
-  hoc_faq_host_a: Por supuesto. Las actividades de la Hora del Cóðigo son autodirigidas.
-    Todo lo que tienes que hacer es <a href='%{codeorg_url}/learn'>intentar con nuestros
-    tutoriales</a>, selecciona el tutorial que tu quieras, y elige una hora &mdash;
-    nosotros nos ocupamos del resto. También tenemos opciones para todas las edades
-    y todos los niveles de experiencia, desde el jardín de niños en adelante. Inicia
-    organizando tu evento leyendo nuestra <a href='/how-to'>guía</a>.
+  hoc_faq_host_a: Por supuesto. Las actividades de la Hora del Código son autoguiadas.
+    Todo lo que tienes que hacer es <a href='%{codeorg_url}/learn'>probar nuestros
+    tutoriales</a>, seleccionar el tutorial que quieras y elegir una hora; nosotros
+    nos ocupamos del resto. También tenemos opciones para todas las edades y niveles
+    de experiencia, desde jardín de infantes en adelante. Lee nuestra <a href='/how-to'>guía</a>
+    y comienza a planificar tu evento.
   hoc_faq_devices_q: "¿Qué dispositivos debería utilizar para mis estudiantes?"
   hoc_faq_devices_a: Los tutoriales de Code.org funcionan en todos los dispositivos
-    y navegadores. Puedes ver más información sobre las necesidades de tecnología
-    de tutorial de Code.org <a href='%{codeorg_url}/educate/it'>aquí</a>. Las necesidades
-    de tecnología para los tutoriales de nonCode.org se pueden encontrar en <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
-    en la descripción específica del tutorial. No olvide que también ofrecemos <a
-    href='%{unplugged_url}'>actividades desconectadas</a> si su escuela no puede acomodar
-    los tutoriales!
+    y navegadores. Puedes ver más información sobre la tecnología compatible con los
+    tutoriales de Code.org <a href='%{codeorg_url}/educate/it'>aquí</a>, y con los
+    tutoriales que no pertenecen a Code.org en <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>la
+    descripción específica del tutorial. ¡No olvides que también ofrecemos <a href='%{unplugged_url}'>actividades
+    sin conexión</a> si tu escuela no puede incorporar los tutoriales!
   hoc_faq_need_computers_q: "¿Necesito computadoras para todos los participantes?"
-  hoc_faq_need_computers_a: 'No. Tenemos tutoriales de la Hora del Código que funcionan
-    en PC, teléfonos inteligentes, tabletas y algunos que no requieren computadora
-    en absoluto. Puedes unirte donde sea que estés, con lo que sea que tengas. <p>
-    <i> Aquí hay algunas opciones: </i> <br> <ul> <li> <b>Trabajar en parejas.</b>
-    <a href=''%{pair_programming_research}''> La investigación muestra que</a> los
-    estudiantes aprenden mejor con <a href=''%{pair_programming_video}''> programación
-    de pares</a>, compartiendo una computadora y trabajando juntos. Anima a tus alumnos
-    a trabajar en pares. <li><b> Usa una pantalla proyectada.</b> Si tienes un proyector
-    y una pantalla con una computadora conectada a la Web, tu grupo entero puede hacer
-    una Hora de Código juntos. Mirar partes de videos juntos y tomar turnos para resolver
-    acertijos o responder preguntas. <li><b> Desconéctate. </b> Ofrecemos <a href=''%{unplugged_url}''>
-    tutoriales que no requieren computadora </a>.</ul>'
-  hoc_faq_international_q: Estoy en Latinoamérica. ¿Cómo puedo participar internacionalmente?
+  hoc_faq_need_computers_a: No. Tenemos tutoriales de la Hora del Código que funcionan
+    en PC, smartphones y tablets, ¡ y algunos que no requieren computadoras! Puedes
+    unirte donde sea que estés, con lo que sea que tengas. <p><i>Estas son algunas
+    opciones:</i> <br> <ul> <li><b>Trabajar en parejas.</b> <a href='%{pair_programming_research}'>La
+    investigación muestra que</a> los estudiantes aprenden mejor con la <a href='%{pair_programming_video}'>programación
+    en parejas</a>, compartiendo una computadora y trabajando juntos. Anima a tus
+    alumnos a que se junten. <li><b>Usa una pantalla proyectada.</b> Si tienes un
+    proyector y una pantalla con una computadora conectada a Internet, todos pueden
+    hacer una Hora del Código juntos. Mirar videos juntos y tomar turnos para resolver
+    desafíos o responder preguntas. <li><b>Desconéctate.</b>Ofrecemos <a href='%{unplugged_url}'>tutoriales
+    que no requieren computadora</a>.</ul>
+  hoc_faq_international_q: Estoy en <country>. ¿Cómo puedo participar?
   hoc_faq_international_a: Todos pueden organizar un evento de la Hora del Código,
     en cualquier parte del mundo. En los últimos años, estudiantes de todo el mundo
     se han unido por la Hora del Código. Encuentra más información <a href='/promote'>aquí</a>.
-  hoc_faq_tutorial_q: "¿Cómo puedo hacer un tutorial para la Hora del Código?"
+  hoc_faq_tutorial_q: "¿Cómo puedo crear un tutorial para la Hora del Código?"
   hoc_faq_tutorial_a: Si estás interesado en convertirte en nuestro socio de tutoriales,
-    mira <a href='/tutorial-guidelines'>nuestra guía e instrucciones</a>. Nos gustaría
-    tener una variedad de atractivas opciones, pero la principal meta es optimizar
-    la experiencia de los estudiantes y profesores que son nuevos en informática.
-  hoc_faq_account_q: "¿Los estudiantes necesitan iniciar sesión con una cuenta registrada?"
+    <a href='/tutorial-guidelines'>consulta nuestra guía e instrucciones</a>. Nos
+    gustaría tener una variedad de opciones atractivas, pero la meta principal es
+    optimizar la experiencia de los estudiantes y docentes que recién comienzan a
+    transitar el camino de las ciencias de la computación.
+  hoc_faq_account_q: "¿Los estudiantes necesitan tener una cuenta para iniciar sesión?"
   hoc_faq_account_a: No. No se requiere registro o iniciar sesión para que los estudiantes
-    prueben la Hora del Código. La mayoría de los <a href='%{codeorg_url}/learn/beyond'>
-    cursos de continuación</a> requieren la creación de una cuenta para guardar el
-    avance del estudiante. Registrarse en la Hora del Código no crea automáticamente
-    una cuenta en Studio Code. Si quieres crear cuentas para tus estudiantes, por
-    favor sigue estas <a href='https://youtu.be/_smelV_KISE'>instrucciones</a>.
-  hoc_faq_high_school_q: "¿Que actividades debería hacer yo con estudiantes de secundaria?"
+    prueben la Hora del Código. La mayoría de los <a href='%{codeorg_url}/learn/beyond'>cursos
+    de seguimiento</a> requieren la creación de una cuenta para guardar el avance
+    del estudiante. Además, registrarse en la Hora del Código NO crea automáticamente
+    una cuenta en Studio Code. Si quieres crear cuentas para tus estudiantes, sigue
+    estas <a href='https://youtu.be/_smelV_KISE'>instrucciones</a>.
+  hoc_faq_high_school_q: "¿Que actividades debería hacer con estudiantes de secundaria?"
   hoc_faq_high_school_a: Nuestros tutoriales de Star Wars y Minecraft son geniales
     para los estudiantes de secundaria, especialmente la versión Javascript de Star
-    Wars y el nivel de juego libre de ambos tutoriales. Alternativamente, le recomendamos
-    intentar uno de los tutoriales para principiantes en <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
-    para empezar, como el tutorial de Angry Birds o con Ana y Elsa. Un estudiante
-    de secundaria será capaz de finalizarlo en 30 minutos y después puede intentar
-    un tutorial más avanzado en Javascript como Khan Academy o CodeHS.
-  hoc_faq_scratch_q: Enseño Scratch para la Hora del Código, pero ¿qué pasa si mis
-    estudiantes usan iPads en lugar de laptops?
-  hoc_faq_scratch_a: Scratch no funciona en tabletas. Si tus estudiantes son jóvenes,
-    pueden utilizar ScratchJR para iPad (para niños que comienzan a leer). Si buscas
-    tutoriales en <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>, puedes
-    encontrar otros tutoriales que funcionen en iPads - de Code.org, Tynker, Lightbot,
-    or CodeSpark.
-  hoc_faq_count_hoc_q: "¿Cómo se cuentan las Hora de Código?"
+    Wars y el nivel de juego libre de ambos tutoriales. Además, para comenzar, te
+    recomendamos probar uno de los tutoriales para principiantes en <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>,
+    como el tutorial de Angry Birds o de Ana y Elsa. Un estudiante de secundaria será
+    capaz de finalizarlo en 30 minutos y después puede probar un tutorial más avanzado
+    en Javascript como Khan Academy o CodeHS.
+  hoc_faq_scratch_q: Enseño Scratch para la Hora del Código. ¿Qué pasa si mis estudiantes
+    usan iPad en lugar de computadoras portátiles?
+  hoc_faq_scratch_a: Scratch no funciona en tablets. Si tus estudiantes son jóvenes
+    y están aprendiendo a leer, pueden utilizar la aplicación ScratchJR para iPad.
+    En <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>, puedes encontrar otros
+    tutoriales de Code.org, Tynker, Lightbot o CodeSpark que funcionan en iPad.
+  hoc_faq_count_hoc_q: "¿Cómo se cuentan las Horas del Código?"
   hoc_faq_map_q: "¿Por qué no puedo ver mi punto en el mapa?"
-  hoc_faq_map_a: Sentimos que no pueda ver su evento en el mapa de la Hora del Código.
+  hoc_faq_map_a: Sentimos que no puedas ver tu evento en el mapa de la Hora del Código.
     Debido a las decenas de miles de organizadores que se inscriben, el mapa agrupa
-    los datos y muestra un punto para varios eventos. Si hace clic en el número de
-    arriba del mapa será dirigido a una lista de todos los eventos por estado y encontrará
-    su evento en la lista. Además, debido a las miles de personas que se registra
-    para la Hora del Código, el mapa y la lista de evento generalmente tarda 48 horas
-    en actualizarse. ¡Compruébalo en unos días!
+    los datos y muestra un punto para varios eventos. Si haces clic en el enlace de
+    la <a href='%{events_url}'>página de eventos</a> debajo del mapa, serás dirigido
+    a una lista de todos los eventos por estado, en la que encontrarás tu evento.
+    Además, debido a las miles de personas que se registran para la Hora del Código,
+    el mapa y la lista de evento suelen tardar 48 horas en actualizarse. ¡Vuelve a
+    consultarlos en unos días!
   hoc_faq_count_hoc_a: El seguimiento de la Hora del Código no es una medición exacta
     del uso. No contamos las identificaciones únicas de los estudiantes con precisión
     cuando hacemos seguimiento de la participación en la Hora del Código, sobre todo
@@ -524,66 +535,65 @@ la:
     no podemos contar la cantidad de participantes que trabajan al mismo tiempo. Conoce
     todos los detalles <a href='%{codeorg_url}/loc'> aquí</a>.
   hoc_faq_one_hour_q: "¿Cuánto se puede aprender en una hora?"
-  hoc_faq_one_hour_a: La meta de la Hora de Código no es enseñar a cualquiera para
-    que se convierta en un científico de computación experto en una hora. Una Hora
-    es suficiente para aprender que la ciencia de la computación es divertida y creativa,,
-    que es accesible a todas las edades, para todos los estudiantes, sin importar
-    su situación. La medida de éxito de esta campaña no es cuántos estudiantes de
-    ciencias de computación aprenden -el éxito se refleja en una amplia participación
-    entre los distintos grupos de género, étnicos y socioeconómicos, y en el consecuente
-    aumento de las inscripciones y participación en cursos de computación en todos
-    los niveles. Millones de maestros participantes y estudiantes han decidido ir
-    más allá de una hora - para aprender durante un día entero, una semana entera,
-    o aún más, y muchos estudiantes han decidido inscribirse en un curso completo
-    (inclusive en una universidad). <br/><br/> Junto a los estudiantes, otro "aprendiz"
-    es el educador que luego de una hora gana la confianza para poder enseñar ciencia
-    de la computación aún cuando no tenga un grado universitario como científico de
-    computación. Decenas de miles de maestros deciden continuar con la ciencia de
-    computación, sea inscribiéndose en un PhD, en cursos en línea, o en ambos. Y esto
-    aplica también a escuelas de administradores, que se dan cuenta de que la ciencia
-    de la computación es algo que sus estudiantes desean y que sus maestros están
-    capacitados para enseñar.<br/><br/>Sobre todas las cosas, lo que todos los participantes
-    aprenden en una hora es que pueden aprender.
+  hoc_faq_one_hour_a: La meta de la Hora del Código no es enseñar a cualquiera para
+    que se convierta en un científico de computación experto en una hora. Una hora
+    es suficiente para aprender que las ciencias de la computación son divertidas
+    y creativas, y accesibles a estudiantes de todas las edades, sin importar su situación.
+    La medida del éxito de esta campaña no es cuántos estudiantes aprenden ciencias
+    de computación, sino la amplia participación entre los distintos grupos de género,
+    étnicos y socioeconómicos, y el consecuente aumento de las inscripciones y la
+    participación en cursos de ciencias de la computación en todos los niveles. Millones
+    de docentes y estudiantes han decidido ir más allá de una hora, para aprender
+    durante un día entero, una semana o más, y muchos estudiantes han decidido inscribirse
+    en un curso completo (inclusive en una universidad). <br/><br/> Junto a los estudiantes,
+    otro "aprendiz" es el educador que, luego de una hora, gana la confianza para
+    enseñar ciencias de la computación aún cuando no tiene un grado universitario
+    como científico de computación. Decenas de miles de docentes deciden continuar
+    con las ciencias de la computación, ya sea inscribiéndose en un doctorado, en
+    cursos en línea, o en ambos. Y esto aplica también a escuelas de administradores,
+    que se dan cuenta de que las ciencias de la computación son algo que sus estudiantes
+    desean y que sus docentes están capacitados para enseñar. <br/><br/> Pero, sobre
+    todo, los participantes aprenden en una hora que son capaces de hacer todo esto.
   hoc_faq_more_questions_q: "¿Aún tienes preguntas?"
-  hoc_faq_more_questions_a: Intenta encontrar respuestas en nuestro <a href='http://support.code.org'>foro
+  hoc_faq_more_questions_a: Intenta encontrar una respuesta en nuestro <a href='http://support.code.org'>foro
     de soporte</a>.
-  hoc_faq_keep_learning_q: "¿Cómo sigo aprendiendo luego de la Hora de Código?"
+  hoc_faq_keep_learning_q: "¿Cómo sigo aprendiendo luego de la Hora del Código?"
   hoc_faq_keep_learning_a: Cualquier persona puede organizar una Hora del Código en
-    cualquier momento. Los tutoriales permanecen durante todo el año. Todos nuestros
-    tutoriales y planes de estudios estarán disponibles en nuestro sitio perpetuamente.
-    Por favor visita <a href='/promote'> nuestros recursos</a> para guías de procedimientos
-    de evento y otros recursos que ayuden a hacer de tu evento de la Hora del Código
-    un éxito.
-  hoc_faq_certificates_q: "¿Donde puedo imprimir certificados para mis alumnos?"
-  hoc_faq_certificates_a: Vaya a nuestra <a href='%{codeorg_url}/certificates'>página
-    de cértificados</a> donde podrá imprimir los certificados para su clase entera.
-    Usted también podrá imprimir <a href='%{codeorg_url}/certificates?course=mc'>certificados
-    especiales</a> para aquellos estudiantes que hayan realizado el tutorial de Minecraft.
-  hoc_faq_logo_q: "¿Existen limitaciones acerca de como puedo usar el logotipo o el
-    nombre de la Hora del Código?"
-  hoc_faq_logo_a: La Hora del Código es una marca registrada. Queremos evitar su uso,
-    pero queremos hacer que su uso quede dentro de unos límites. Consulte <a href='%{logo_url}'>estas
-    directrices para el uso</a>.
-  stats_hoc_2013_image_alt: Estadísticas de la Hora del Código de 2013
-  stats_growth: Fue el más rápido en alcanzar los 15 millones de usuarios.
-  stats_i18n: Los estudiantes están aprendiendo en más de 45 idiomas
-  stats_tumblr: 'Tumblr: 3.5 años'
+    cualquier momento. Los tutoriales están disponibles todo el año. Nuestros tutoriales
+    y planes de estudios estarán en nuestro sitio de forma permanente. Visita <a href='/promote'>nuestros
+    recursos</a> para ver guías prácticas de eventos y otros recursos que te ayudarán
+    a que tu Hora del Código sea un éxito.
+  hoc_faq_certificates_q: "¿Dónde puedo imprimir certificados para mis estudiantes?"
+  hoc_faq_certificates_a: Visita nuestra <a href='%{codeorg_url}/certificates'>página
+    de certificados</a>, donde podrás imprimir los certificados para tu clase. También
+    podrás imprimir <a href='%{codeorg_url}/certificates?course=mc'>certificados especiales</a>
+    para aquellos estudiantes que hayan realizado el tutorial de Minecraft.
+  hoc_faq_logo_q: "¿Existen limitaciones sobre el uso del logotipo o el nombre de
+    la Hora del Código?"
+  hoc_faq_logo_a: La Hora del Código es una marca registrada. No queremos evitar su
+    uso, pero sí asegurarnos de que quede dentro de ciertos límites. Consulta <a href='%{logo_url}'>esta
+    guía de uso</a>.
+  stats_hoc_2013_image_alt: Estadísticas de la Hora del Código 2013
+  stats_growth: Fue la más rápida en alcanzar los 15 millones de usuarios.
+  stats_i18n: Los estudiantes aprenden en más de 45 idiomas
+  stats_tumblr: 'Tumblr: 3,5 años'
   stats_facebook: 'Facebook: 3 años'
-  stats_twitter: 'Twitter: 2.5 años'
+  stats_twitter: 'Twitter: 2,5 años'
   stats_pinterest: 'Pinterest: 2 años'
   stats_instagram: 'Instagram: 14 meses'
-  stats_hoc: 'Hour of Code: 5 días'
-  stats_global: Más de 100M de estudiantes han probado Hour of Code
-  stats_girls_more: Más chicas probaron ciencias de la computación que en los últimos
+  stats_hoc: 'Hora del Código: 5 días'
+  stats_global: Más de 100 millones de estudiantes han probado la Hora del Código
+  stats_girls_more: Más mujeres probaron ciencias de la computación que en los últimos
     70 años
-  stats_females: La participación de mujeres en ciencias de la computación es sólo
-    20% en cursos colegiales, cursos universitarios, y fuerza de trabajo.
-  stats_females_more: Durante la Hora del Código, ¡las mujeres conforman el <b>50%
-    de todos los participantes</ b>!
-  stats_nina: '"Cada día produjo los mismos resultados&mdash; 100% de compromiso."
-    Nina Nichols Peery, Profesora'
-  stats_student: '"Sabía que esto sería una oportunidad de <b>una-vez-en-la-vida</b>."
-    Mariana Alzate, 5to grado'
+  stats_females: La participación de las mujeres en ciencias de la computación es
+    solo del 20-25% en cursos de escuelas secundarias, cursos universitarios y fuerza
+    de trabajo.
+  stats_females_more: Durante la Hora del Código, ¡las mujeres son el <b>50% de todos
+    los participantes</b>!
+  stats_nina: '"Cada día dio el mismo resultado: 100% de participación". - Nina Nichols
+    Peery, docente'
+  stats_student: '"Sabía que esto sería una oportunidad <b>única</b>". - Mariana Alzate,
+    5to grado'
   stats_michael: '"<b>Nunca, jamás</b> había visto a mis estudiantes tan entusiasmados
     por el aprendizaje." - Michael Clark, Profesor'
   resources_how_to: Guía para profesores
@@ -604,11 +614,11 @@ la:
   resources_country_resources: Recursos de Países Específicos
   resources_stickers: Pegatinas
   resources_how_to_guides: Guías explicativas
-  resources_promote: Promueve
+  resources_promote: Promover
   resources_nav_tutorials: Prueba los tutoriales
   resources_nav_promote: Correr la voz
   resources_nav_spread_word: Cómo participar
-  resources_banner_promote_text: Promueve
+  resources_banner_promote_text: Promover
   resources_banner_promote_button: Anime a otros a inscribirse con folletos, carteles
     inspiradores y pancartas en las redes sociales.
   resources_banner_howto_text: Cómo se hace
@@ -674,7 +684,7 @@ la:
     Hora del Código.
   higlights_see_more: Ver más puntos destacados
   highlights_readmore: Leer más
-  highlights_watchvideo: Vee el video
+  highlights_watchvideo: Mira el video
   highlights_facebook: Compartir en Facebook
   highlights_constant_alba_heading: La actriz, activista y emprendedora organizaró
     una Hora de Código con todo el personal en The Honest Company.
@@ -716,6 +726,7 @@ la:
   learn_robotics_banner_blurb: "¿Tienes robots? ¡Utilízalos con las siguientes actividades
     y prepara una tarea tangible de Hora del Código para estudiantes de todas las
     edades!"
+  tutorial_dance2019_name: Fiesta de Baile 2019
   tutorial_danceparty_name: Fiesta de baile
   tutorial_chibitronics_name: 'Chibitronics: Historia ilustrada'
   tutorial_athlete_name: Codifica tu propio juego de deportes
@@ -2614,6 +2625,9 @@ la:
     aplicaciones web y móviles, desde el diseño hasta la entrega.
   tutorial_n2y_shortdescription: Ayuda a Bitt Bott a explorar la Tierra usando flechas
     de dirección.
+  tutorial_dance2019_longdescription: Programa una Fiesta de Baile para compartir
+    con tus amigos. Presentando a Katy Perry, Shawn Mendes, Lil Nas X, Panic! At The
+    Disco, Jonas Brothers, y muchos más!
   tutorial_danceparty_longdescription: Programa una Fiesta de baile y compártela con
     tus amigos. ¡Con Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara y 25
     artistas más!
@@ -5353,10 +5367,13 @@ la:
     actividades incluye instrucciones simples compatibles con símbolos de la colección
     n2y® SymbolStix PRIME®. Los símbolos ayudan a los no lectores y a los lectores
     principiantes a comprender y seguir las instrucciones.
+  tutorial_dance2019_language: Árabe, chino, checo, danés, holandés, inglés, finlandés,
+    francés, alemán, griego, hindi, húngaro, indonesio, italiano, japonés, coreano,
+    malayo, polaco, portugués, ¡y 10 más!
   tutorial_danceparty_language: Inglés, árabe, catalán, chino, checo, danés, holandés,
     finlandés, francés, alemán, griego, húngaro, italiano, japonés, coreano, noruego,
     polaco, portugués, ruso, español, sueco, tailandés, turco y vietnamita
-  tutorial_chibitronics_language: Español (Latinoamérica)
+  tutorial_chibitronics_language: Inglés
   tutorial_athlete_language: Inglés, francés, español, italiano, portugués (Brasil)
   tutorial_moana_language: Inglés, árabe, chino (simplificado), chino (tradicional)
     danés, holandés, finlandés, francés, alemán, indonesio, italiano, japonés, coreano,
@@ -5855,9 +5872,9 @@ la:
   tutorial_bcpy2_language: Sólo en inglés
   tutorial_bcjs1_language: Sólo en inglés
   tutorial_bcjs2_language: Sólo en inglés
-  tutorial_3dbearmars_language: Español (Latinoamérica)
-  tutorial_alexaskill_language: Español (Latinoamérica)
-  tutorial_bitsboxyak_language: Español (Latinoamérica)
+  tutorial_3dbearmars_language: Inglés
+  tutorial_alexaskill_language: Inglés
+  tutorial_bitsboxyak_language: Inglés
   tutorial_blockscadbargraphs_language: Chino (simplificado), inglés, francés, alemán,
     japonés, noruego (Bokmål), serbio (cirílico), español (España), sueco
   tutorial_blockscadbirdhouses_language: Chino (simplificado), inglés, francés, alemán,
@@ -5872,105 +5889,105 @@ la:
     esloveno, español, sueco
   tutorial_blockscadsugar_language: Chino, holandés, inglés, francés, japonés, noruego,
     esloveno, español, sueco
-  tutorial_bsgridlight_language: Español (Latinoamérica)
-  tutorial_bpartscratch_language: Español (Latinoamérica)
-  tutorial_bpartvid_language: Español (Latinoamérica)
-  tutorial_bpenglishscratch_language: Español (Latinoamérica)
-  tutorial_bpenglishvid_language: Español (Latinoamérica)
-  tutorial_bphealthscratch_language: Español (Latinoamérica)
-  tutorial_bphealthvid_language: Español (Latinoamérica)
-  tutorial_bpmathscratch_language: Español (Latinoamérica)
-  tutorial_bpmathvid_language: Español (Latinoamérica)
-  tutorial_bpmlkscratch_language: Español (Latinoamérica)
-  tutorial_bpmlkvid_language: Español (Latinoamérica)
-  tutorial_bpsafetyscratch_language: Español (Latinoamérica)
-  tutorial_bpsafetyvid_language: Español (Latinoamérica)
-  tutorial_bpsciencescratch_language: Español (Latinoamérica)
-  tutorial_bpsciencevid_language: Español (Latinoamérica)
-  tutorial_bptechscratch_language: Español (Latinoamérica)
-  tutorial_bptechvid_language: Español (Latinoamérica)
-  tutorial_caflags_language: Español (Latinoamérica)
-  tutorial_matariki_language: Español (Latinoamérica)
-  tutorial_carestaurant_language: Español (Latinoamérica)
-  tutorial_casea_language: Español (Latinoamérica)
-  tutorial_cashield_language: Español (Latinoamérica)
-  tutorial_ccwslimer_language: Español (Latinoamérica)
+  tutorial_bsgridlight_language: Inglés
+  tutorial_bpartscratch_language: Inglés
+  tutorial_bpartvid_language: Inglés
+  tutorial_bpenglishscratch_language: Inglés
+  tutorial_bpenglishvid_language: Inglés
+  tutorial_bphealthscratch_language: Inglés
+  tutorial_bphealthvid_language: Inglés
+  tutorial_bpmathscratch_language: Inglés
+  tutorial_bpmathvid_language: Inglés
+  tutorial_bpmlkscratch_language: Inglés
+  tutorial_bpmlkvid_language: Inglés
+  tutorial_bpsafetyscratch_language: Inglés
+  tutorial_bpsafetyvid_language: Inglés
+  tutorial_bpsciencescratch_language: Inglés
+  tutorial_bpsciencevid_language: Inglés
+  tutorial_bptechscratch_language: Inglés
+  tutorial_bptechvid_language: Inglés
+  tutorial_caflags_language: Inglés
+  tutorial_matariki_language: Inglés
+  tutorial_carestaurant_language: Inglés
+  tutorial_casea_language: Inglés
+  tutorial_cashield_language: Inglés
+  tutorial_ccwslimer_language: Inglés
   tutorial_codinggalaxy_language: Chino, inglés
   tutorial_boatrace_language: Árabe, chino (simplificado), checo, danés, holandés,
     francés, alemán, griego, hebreo, hindi, italiano, japonés, coreano, otro, polaco,
     rumano, serbio (cirílico), español, ucraniano
-  tutorial_ccplay_language: Español (Latinoamérica)
-  tutorial_grinch_language: Español (Latinoamérica)
-  tutorial_codehsart_language: Español (Latinoamérica)
-  tutorial_codehsbitcoin_language: Español (Latinoamérica)
-  tutorial_codehsblockchain_language: Español (Latinoamérica)
-  tutorial_codehscipher_language: Español (Latinoamérica)
-  tutorial_codehscollision_language: Español (Latinoamérica)
-  tutorial_codehsmath_language: Español (Latinoamérica)
-  tutorial_codehsmusic_language: Español (Latinoamérica)
-  tutorial_codehssports_language: Español (Latinoamérica)
-  tutorial_codemojipizza_language: Español (Latinoamérica)
-  tutorial_moonlander_language: Español (Latinoamérica)
-  tutorial_sushicards_language: Español (Latinoamérica)
+  tutorial_ccplay_language: Inglés
+  tutorial_grinch_language: Inglés
+  tutorial_codehsart_language: Inglés
+  tutorial_codehsbitcoin_language: Inglés
+  tutorial_codehsblockchain_language: Inglés
+  tutorial_codehscipher_language: Inglés
+  tutorial_codehscollision_language: Inglés
+  tutorial_codehsmath_language: Inglés
+  tutorial_codehsmusic_language: Inglés
+  tutorial_codehssports_language: Inglés
+  tutorial_codemojipizza_language: Inglés
+  tutorial_moonlander_language: Inglés
+  tutorial_sushicards_language: Inglés
   tutorial_codesparkcreate_language: Español
-  tutorial_hardvsoft_language: Español (Latinoamérica)
+  tutorial_hardvsoft_language: Inglés
   tutorial_codestersecard_language: chino, inglés, español
   tutorial_codesterslogo_language: chino, inglés, español
   tutorial_codesterstshirt_language: chino, inglés, español
   tutorial_codewards_language: Inglés, francés, ruso, español, turco
   tutorial_olympics_language: Inglés, francés, ruso, español
-  tutorial_codinismhero_language: Español (Latinoamérica)
+  tutorial_codinismhero_language: Inglés
   tutorial_discovery_language: Spanish (ES-419, LatAm aggregate)
   tutorial_csfirstname_language: Spanish (ES-419, LatAm aggregate)
   tutorial_obstaclecourse_language: Chino, inglés, francés, alemán, italiano, español
-  tutorial_edisonmove_language: Español (Latinoamérica)
-  tutorial_edisonspider_language: Español (Latinoamérica)
-  tutorial_edisonspotlight_language: Español (Latinoamérica)
-  tutorial_firiapython_language: Español (Latinoamérica)
-  tutorial_gamefrootsquid_language: Español (Latinoamérica)
-  tutorial_duckpiano_language: Español (Latinoamérica)
-  tutorial_gpsound_language: Español (Latinoamérica)
-  tutorial_groklearningpython_language: Español (Latinoamérica)
-  tutorial_htmltimetravel_language: Español (Latinoamérica)
-  tutorial_hp_flappy_language: Español (Latinoamérica)
-  tutorial_appytappin_language: Español (Latinoamérica)
-  tutorial_icipher_language: Español (Latinoamérica)
-  tutorial_iguess_language: Español (Latinoamérica)
-  tutorial_imake_language: Español (Latinoamérica)
-  tutorial_imorse_language: Español (Latinoamérica)
-  tutorial_kanohp_language: Español (Latinoamérica)
+  tutorial_edisonmove_language: Inglés
+  tutorial_edisonspider_language: Inglés
+  tutorial_edisonspotlight_language: Inglés
+  tutorial_firiapython_language: Inglés
+  tutorial_gamefrootsquid_language: Inglés
+  tutorial_duckpiano_language: Inglés
+  tutorial_gpsound_language: Inglés
+  tutorial_groklearningpython_language: Inglés
+  tutorial_htmltimetravel_language: Inglés
+  tutorial_hp_flappy_language: Inglés
+  tutorial_appytappin_language: Inglés
+  tutorial_icipher_language: Inglés
+  tutorial_iguess_language: Inglés
+  tutorial_imake_language: Inglés
+  tutorial_imorse_language: Inglés
+  tutorial_kanohp_language: Inglés
   tutorial_khanwebpages_language: Inglés, Portugués (Brasil), Español, Serbio, Polaco
-  tutorial_kibobowl_language: Español (Latinoamérica)
-  tutorial_kibodance_language: Español (Latinoamérica)
-  tutorial_buildcharacters_language: Español (Latinoamérica)
-  tutorial_designgames_language: Español (Latinoamérica)
-  tutorial_makelevels_language: Español (Latinoamérica)
-  tutorial_wizard_language: Español (Latinoamérica)
-  tutorial_mbscratchcards_language: Español (Latinoamérica)
-  tutorial_mbswiftplaygrounds_language: Español (Latinoamérica)
-  tutorial_mbbuttons_language: Español (Latinoamérica)
-  tutorial_meteor_language: Español (Latinoamérica)
-  tutorial_ballbounce_language: Español (Latinoamérica)
-  tutorial_mitcodi_language: Español (Latinoamérica)
-  tutorial_mitdoodle_language: Español (Latinoamérica)
-  tutorial_talktome_language: Español (Latinoamérica)
-  tutorial_mobilecspmap_language: Español (Latinoamérica)
-  tutorial_ozorandom_language: Español (Latinoamérica)
-  tutorial_ozotroll_language: Español (Latinoamérica)
-  tutorial_peblioart_language: Español (Latinoamérica)
+  tutorial_kibobowl_language: Inglés
+  tutorial_kibodance_language: Inglés
+  tutorial_buildcharacters_language: Inglés
+  tutorial_designgames_language: Inglés
+  tutorial_makelevels_language: Inglés
+  tutorial_wizard_language: Inglés
+  tutorial_mbscratchcards_language: Inglés
+  tutorial_mbswiftplaygrounds_language: Inglés
+  tutorial_mbbuttons_language: Inglés
+  tutorial_meteor_language: Inglés
+  tutorial_ballbounce_language: Inglés
+  tutorial_mitcodi_language: Inglés
+  tutorial_mitdoodle_language: Inglés
+  tutorial_talktome_language: Inglés
+  tutorial_mobilecspmap_language: Inglés
+  tutorial_ozorandom_language: Inglés
+  tutorial_ozotroll_language: Inglés
+  tutorial_peblioart_language: Inglés
   tutorial_astropi_language: Árabe, danés, holandés, inglés, finlandés, francés, alemán,
     griego, húngaro, italiano, noruego (nynorsk), otros, polaco, español, sueco
-  tutorial_rgart_language: Español (Latinoamérica)
-  tutorial_rgengineer_language: Español (Latinoamérica)
-  tutorial_rgmath_language: Español (Latinoamérica)
-  tutorial_rgscience_language: Español (Latinoamérica)
-  tutorial_rgtech_language: Español (Latinoamérica)
-  tutorial_robotmagic3d_language: Español (Latinoamérica)
-  tutorial_robotmagicflappy_language: Español (Latinoamérica)
+  tutorial_rgart_language: Inglés
+  tutorial_rgengineer_language: Inglés
+  tutorial_rgmath_language: Inglés
+  tutorial_rgscience_language: Inglés
+  tutorial_rgtech_language: Inglés
+  tutorial_robotmagic3d_language: Inglés
+  tutorial_robotmagicflappy_language: Inglés
   tutorial_scratchadventure_language: Inglés, español
   tutorial_scratchtalk_language: Inglés, español
-  tutorial_scratchjrstory_language: Español (Latinoamérica)
-  tutorial_scratchjrtwinkle_language: Español (Latinoamérica)
+  tutorial_scratchjrstory_language: Inglés
+  tutorial_scratchjrtwinkle_language: Inglés
   tutorial_spherocomm_language: Árabe, chino, inglés, francés, alemán, hebreo, italiano,
     japonés, coreano, noruego, español, sueco
   tutorial_spherocommunity_language: Árabe, chino, inglés, francés, alemán, hebreo,
@@ -5993,39 +6010,40 @@ la:
     japonés, coreano, noruego, español, sueco
   tutorial_spheroraptor_language: Árabe, chino, inglés, francés, alemán, hebreo, italiano,
     japonés, coreano, noruego, español, sueco
-  tutorial_stempiday_language: Español (Latinoamérica)
-  tutorial_stemplanetoids_language: Español (Latinoamérica)
-  tutorial_stempong_language: Español (Latinoamérica)
-  tutorial_algobot_language: Español (Latinoamérica)
-  tutorial_thunkableapps_language: Español (Latinoamérica)
+  tutorial_stempiday_language: Inglés
+  tutorial_stemplanetoids_language: Inglés
+  tutorial_stempong_language: Inglés
+  tutorial_algobot_language: Inglés
+  tutorial_thunkableapps_language: Inglés
   tutorial_toxicodedot_language: Inglés, francés, alemán, indonesio, italiano, portugués,
     rumano, español, turco
-  tutorial_gcactions_language: Español (Latinoamérica)
-  tutorial_gccomparators_language: Español (Latinoamérica)
-  tutorial_gcconditions_language: Español (Latinoamérica)
+  tutorial_gcactions_language: Inglés
+  tutorial_gccomparators_language: Inglés
+  tutorial_gcconditions_language: Inglés
   tutorial_gccreate_language: Inglés, francés
-  tutorial_gcevents_language: Español (Latinoamérica)
-  tutorial_gcloops_language: Español (Latinoamérica)
-  tutorial_gcvariables_language: Español (Latinoamérica)
-  tutorial_beanything_language: Español (Latinoamérica)
-  tutorial_change_language: Español (Latinoamérica)
-  tutorial_cooking_language: Español (Latinoamérica)
-  tutorial_crystal_language: Español (Latinoamérica)
-  tutorial_landscape_language: Español (Latinoamérica)
-  tutorial_pets_language: Español (Latinoamérica)
-  tutorial_petvet_language: Español (Latinoamérica)
-  tutorial_superhero_language: Español (Latinoamérica)
-  tutorial_vidcodeplastic_language: Español (Latinoamérica)
-  tutorial_vidcodetypeface_language: Español (Latinoamérica)
-  tutorial_washustorm_language: Español (Latinoamérica)
-  tutorial_activitypackets_language: Español (Latinoamérica)
-  tutorial_googlerookie_language: Español (Latinoamérica)
-  tutorial_tommyturtle_language: Español (Latinoamérica)
+  tutorial_gcevents_language: Inglés
+  tutorial_gcloops_language: Inglés
+  tutorial_gcvariables_language: Inglés
+  tutorial_beanything_language: Inglés
+  tutorial_change_language: Inglés
+  tutorial_cooking_language: Inglés
+  tutorial_crystal_language: Inglés
+  tutorial_landscape_language: Inglés
+  tutorial_pets_language: Inglés
+  tutorial_petvet_language: Inglés
+  tutorial_superhero_language: Inglés
+  tutorial_vidcodeplastic_language: Inglés
+  tutorial_vidcodetypeface_language: Inglés
+  tutorial_washustorm_language: Inglés
+  tutorial_activitypackets_language: Inglés
+  tutorial_googlerookie_language: Inglés
+  tutorial_tommyturtle_language: Inglés
   tutorial_mazyad_language: Árabe, inglés
-  tutorial_gamemaker_language: Español (Latinoamérica)
+  tutorial_gamemaker_language: Inglés
   tutorial_duckrace_language: Inglés, alemán
-  tutorial_allcancodeapps_language: Español (Latinoamérica)
-  tutorial_n2y_language: Español (Latinoamérica)
+  tutorial_allcancodeapps_language: Inglés
+  tutorial_n2y_language: Inglés
+  tutorial_dance2019_string_detail_grades: Grados 2 +
   tutorial_danceparty_string_detail_grades: Grados 2 +
   tutorial_chibitronics_string_detail_grades: Grados 2-5
   tutorial_athlete_string_detail_grades: Grados 2 +
@@ -6379,7 +6397,7 @@ la:
   tutorial_codehsrn_string_detail_grades: Grados 9 +
   tutorial_codehswd_string_detail_grades: Grados 6+
   tutorial_turtlerobot_string_detail_grades: K-5
-  tutorial_ozoevo_string_detail_grades: Todas las edades
+  tutorial_ozoevo_string_detail_grades: Grados 6+
   tutorial_ozoexped_string_detail_grades: Grados 6+
   tutorial_ozojourney_string_detail_grades: Grados 2-8
   tutorial_ozocodes_string_detail_grades: Todas las edades
@@ -6506,7 +6524,7 @@ la:
   tutorial_codesparkcreate_string_detail_grades: K-5
   tutorial_hardvsoft_string_detail_grades: K-5
   tutorial_codestersecard_string_detail_grades: Grados 6-8
-  tutorial_codesterslogo_string_detail_grades: Grados 2-8
+  tutorial_codesterslogo_string_detail_grades: Grados 6+
   tutorial_codesterstshirt_string_detail_grades: Grados 6+
   tutorial_codewards_string_detail_grades: Grados 2-8
   tutorial_olympics_string_detail_grades: Grados 2-8
@@ -6604,6 +6622,7 @@ la:
   tutorial_duckrace_string_detail_grades: Grados 2 +
   tutorial_allcancodeapps_string_detail_grades: Grados 6+
   tutorial_n2y_string_detail_grades: Prelector+
+  tutorial_dance2019_string_platforms: iPad, Todos los navegadores modernos
   tutorial_danceparty_string_platforms: Todos los navegadores modernos, tablets Android,
     iPad
   tutorial_chibitronics_string_platforms: Todos los navegadores modernos
@@ -7382,6 +7401,7 @@ la:
     iPad
   tutorial_allcancodeapps_string_platforms: Todos los navegadores modernos
   tutorial_n2y_string_platforms: Sin conexión
+  tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chip Chibitronics Chibi y LEDs Circuit
     Sticker
@@ -7963,6 +7983,7 @@ la:
   tutorial_duckrace_string_detail_platforms: ''
   tutorial_allcancodeapps_string_detail_platforms: ''
   tutorial_n2y_string_detail_platforms: ''
+  tutorial_dance2019_string_detail_programming_languages: Bloques
   tutorial_danceparty_string_detail_programming_languages: Bloques
   tutorial_chibitronics_string_detail_programming_languages: Bloques
   tutorial_athlete_string_detail_programming_languages: Bloques
@@ -8534,7 +8555,9 @@ la:
   tutorial_codesparkcreate_string_detail_programming_languages: Bloques
   tutorial_hardvsoft_string_detail_programming_languages: ''
   tutorial_codestersecard_string_detail_programming_languages: Python
-  tutorial_codesterslogo_string_detail_programming_languages: Python
+  tutorial_codesterslogo_string_detail_programming_languages: 'Python
+
+'
   tutorial_codesterstshirt_string_detail_programming_languages: Python
   tutorial_codewards_string_detail_programming_languages: CoffeeScript
   tutorial_olympics_string_detail_programming_languages: CoffeeScript
@@ -8665,7 +8688,7 @@ la:
   tutorial_tynkeren_name: Energía limpia y accesible
   tutorial_tynkerjavapro_name: Consumo y producción responsable (JavaScript)
   tutorial_grasshopperhack_name: Resolver un juego
-  tutorial_pbskids_name: PBS KIDS Scratch Jr
+  tutorial_pbskids_name: PBS KIDS Scratch Jr.
   tutorial_nclabdata_name: "¡El poder de los datos!"
   tutorial_grasshopperphoto_name: Filtrar una foto
   tutorial_tynkerpyland_name: La vida en la tierra (Python)
@@ -8690,516 +8713,574 @@ la:
   tutorial_modulo_name: 'Modulo Code: Code E.D.'
   tutorial_codingtown_name: Coding Town
   tutorial_kanoart_name: Art Playground
-  tutorial_dragonscript_name: 'DragonScript Arena: a Javascript coding game with Dragons'
-  tutorial_uwcloud_name: Cloud Constructor
-  tutorial_htmlmuffin_name: Master the Web with Muffin the Cat
-  tutorial_microsoftpizza_name: Chase the Pizza!
-  tutorial_stemc_blckhole_name: Escape Velocity and Black Holes!
+  tutorial_dragonscript_name: 'DragonScript Arena: un juego de programación en Javascript
+    con dragones'
+  tutorial_uwcloud_name: Constructor de nubes
+  tutorial_htmlmuffin_name: Domina la Web con Muffin el Gato
+  tutorial_microsoftpizza_name: "¡Persigue la pizza!"
+  tutorial_stemc_blckhole_name: "¡Velocidad de escape y agujeros negros!"
   tutorial_careconfigure_name: ReconFigure of Speech
-  tutorial_rpiscratch_name: Scratch 3.0 phrasebook
-  tutorial_ozaria_name: Ozaria by CodeCombat
-  tutorial_ttovum_name: Ovum City
-  tutorial_ttpassage_name: The Passage
-  tutorial_tynkerhtmlen_name: Affordable and Clean Energy (HTML)
+  tutorial_rpiscratch_name: Libro de frases de Scratch 3.0
+  tutorial_ozaria_name: Ozaria, por CodeCombat
+  tutorial_ttovum_name: Ciudad Ovum
+  tutorial_ttpassage_name: El pasaje
+  tutorial_tynkerhtmlen_name: Energía limpia y accesible (HTML)
   tutorial_ttfrog_name: Frog Squash
-  tutorial_codemojijava_name: Learn Basic Java
+  tutorial_codemojijava_name: Aprende Java básico
   tutorial_ccfirewall_name: Firewall
-  tutorial_htmljs_name: 'Intro to JavaScript: from variables to your first program'
-  tutorial_ttaqueducts_name: Aqueducts
-  tutorial_vtgame_name: 'Game Changineer: Create with English'
-  tutorial_baroborav_name: Robot Autonomous Vehicle
-  tutorial_baroboobstacle_name: Linkbot Obstacle Course
-  tutorial_pbstorytelling_name: Interactive Storytelling
-  tutorial_kibosnow_name: KIBO Snowplow - Important Jobs in the Community
-  tutorial_kibohappy_name: Expressing Happiness with KIBO
-  tutorial_rubylove_name: 'Hello Ruby: Love Letters for Computers'
-  tutorial_spherosmiles_name: Super Smiles
-  tutorial_spherobaby_name: Sphero Baby Steps
-  tutorial_toxarchitect_name: Utopian Architect
+  tutorial_htmljs_name: 'Introducción a JavaScript: de las variables a tu primer programa'
+  tutorial_ttaqueducts_name: Acueductos
+  tutorial_vtgame_name: 'Game Changineer: crear con inglés'
+  tutorial_baroborav_name: Vehículos robot autónomos
+  tutorial_baroboobstacle_name: Pista de obstáculos de Linkbot
+  tutorial_pbstorytelling_name: Narración interactiva
+  tutorial_kibosnow_name: KIBO Snowplow - Trabajos importantes en la comunidad
+  tutorial_kibohappy_name: Expresar felicidad con KIBO
+  tutorial_rubylove_name: 'Hello Ruby: cartas de amor para computadoras'
+  tutorial_spherosmiles_name: Súper sonrisas
+  tutorial_spherobaby_name: Pequeños pasos de Sphero
+  tutorial_toxarchitect_name: Arquitecto utópico
   tutorial_idodge_name: Ice Cream Dodge
-  tutorial_firiacodebot_name: Intro to Python with CodeBot
-  tutorial_modlighthouse_name: Lighthouse Design Challenge with Cubelets
-  tutorial_spherogreen_name: Sphero Goes Green
-  tutorial_ozopopstar_name: PopStar|Creating Functions With OzoBlockly
-  tutorial_eddesign_name: Edison the designer
-  tutorial_edshapeup_name: Robot shape-up with Edison
-  tutorial_ozocolor_name: Pop Star|Creating Functions With Ozobot Color Codes
-  tutorial_kcjanimals_name: About a Canadian Animal
+  tutorial_firiacodebot_name: Introducción a Python con CodeBot
+  tutorial_modlighthouse_name: Desafío de diseño de un faro con Cubelets
+  tutorial_spherogreen_name: Sphero se vuelve verde
+  tutorial_ozopopstar_name: PopStar|Crear funciones con OzoBlockly
+  tutorial_eddesign_name: Edison el diseñador
+  tutorial_edshapeup_name: Creación de robots con Edison
+  tutorial_ozocolor_name: PopStar|Crear funciones con códigos de color de Ozobot
+  tutorial_kcjanimals_name: Acerca de un animal canadiense
   tutorial_icomputeeggs_name: iHide Eggs
-  tutorial_rootunplugged_name: iRobot Code Break
-  tutorial_rgtreasure_name: RoboGarden Puzzles - Robo Treasure Chest
-  tutorial_peblioportraits_name: 'Computational Portraiture: Art for Good '
-  tutorial_rootcodebreak_name: iRobot Code Break with Root
-  tutorial_microbit14_name: 'micro:bit: coding towards Global Goal 14, Life Below
-    Water'
-  tutorial_barobomoon_name: Moon Base SOS with Arduino
-  tutorial_eddog_name: Code a guard dog with Edison
-  tutorial_microbit15_name: 'micro:bit: coding towards Global Goal 15, Life on Land'
-  tutorial_unity_name: 'Unity Game Development Creator Kit: Beginner Code'
-  tutorial_blockscadtarget_name: Transformation Target Practice
-  tutorial_tcadicicles_name: Designing Icicles With Codeblocks in Tinkercad
-  tutorial_blockscadscale_name: Scale City
-  tutorial_tcadloops_name: Using Loops in Tinkercad to Design a Bursting Star
-  tutorial_phidgets_name: A Phidgets Theremin with Processing
-  tutorial_kcjmerry_name: Merry Micro:bits
-  tutorial_modvariables_name: Investigating Variables & Block Values using Cubelets
-  tutorial_codestersmicro_name: 'Codesters: Create a Micro Ball Game'
-  tutorial_codestersdata_name: 'Codesters: Code & Graph micro:bit Data'
-  tutorial_ikodexmas_name: iKode Xmas
-  tutorial_rpisensehat_name: Sense HAT data logger
-  tutorial_modtraits_name: Character Traits with GoPiGo
-  tutorial_scratchimagine_longdescription: Imagine a world where anything is possible,
-    then bring it to life with Scratch!
-  tutorial_codesterspsa_longdescription: Learn the basics of coding in Python while
-    creating your own Public Service Announcement. Choose a topic you find important
-    and design you own animated or interactive PSA to share critical information about
-    how to make a positive impact on the world.
-  tutorial_googlehero_longdescription: Turn an everyday hero from your life or community
-    into a superhero by programming them to fly over buildings, spin, work with a
-    sidekick, and score points by touching objects in a game. In Code Your Hero, show
-    off your hero's special powers and your own creativity with CS First and Scratch.
-  tutorial_codestersbball_longdescription: Learn the basics of coding in Python while
-    creating your own Basketball game. You'll learn how to add backgrounds and sprites,
-    and how to use events to control the motion of sprites on the stage.
-  tutorial_scratchcartoon_longdescription: Bring some of your favorite Cartoon Network
-    characters to life by coding your own animation. Add more characters and make
-    them jump, fly, and talk.
-  tutorial_codemonkeyjr_longdescription: In a world filled with captivating creatures
-    and bright colors, 4-6 year olds will join a monkey on a mission to collect bananas
-    and unlock treasure chests. All the while, they will explore and learn the basics
-    of code as they use blocks to program a monkey's journey through the world.
-  tutorial_bananatales_longdescription: Teach Python by helping a baby monkey. Twin
-    baby monkeys were separated by an earthquake - leaving one of the monkeys with
-    no way to get bananas! Now, it is up to your students to use code to rebuild the
-    path and feed the baby monkey.
-  tutorial_scratchtales_longdescription: Take characters on a journey and have them
-    speak aloud using Text-to-Speech blocks powered by Amazon. Choose a voice for
-    each character, then type what you want to say. Make your story interactive by
-    coding your characters to ask questions and travel to different scenes. Experiment
-    with creative new ways of making stories come alive!
-  tutorial_msemoji_longdescription: Build a live interactive website that uses a Machine
-    Learning model to recognize your and your friends' hand-drawn emojis! Along the
-    way you'll get hands-on practice with core concepts of Machine Learning - 1) gathering
-    data, 2) cleaning and formatting the data, 3) training the model, and 4) using
-    the trained model to make predictions.
-  tutorial_cacolor_longdescription: Professor Photon is a highly regarded physicist
-    gone rogue. She has eliminated color from all digital devices! In this Escape
-    Room style project, the learner joins Marlee and Tyrell as they learn about binary
-    numbers, light, color, and more to unravel Professor Photon's Color Conundrum,
-    and restore color to the world's devices.
-  tutorial_kodablebeach_longdescription: Learn to program using basic commands and
-    clean up the beach to protect ocean life.
-  tutorial_tynkeren_longdescription: 'Part of the UN Sustainable Development Goals
-    project, this coding prompt shows off projects exploring renewable energy, energy
-    efficiency, and access to energy. Readers can play with working projects and advanced
-    programmers can create their own original projects. '
-  tutorial_tynkerjavapro_longdescription: 'Part of the UN Sustainable Development
-    Goals project, this coding prompt shows off a short project exploring recycling
-    and reuse. Readers can create their own game by expanding the project. '
-  tutorial_grasshopperhack_longdescription: Learn coding skills to hack this game
-    to make it possible to play.
-  tutorial_pbskids_longdescription: With PBS KIDS Scratch Jr, kids can create their
-    own interactive stories and games through programming games and lessons. Learn
-    to code through games and activities featuring characters from Odd Squad, Wild
-    Kratts, Nature Cat, Arthur, WordGirl, Peg + Cat, and Ready Jet Go! The storytelling
-    possibilities are endless with this creative coding app for children ages 5-8.
-  tutorial_nclabdata_longdescription: The world thrives on good data! In this hands-on
-    NCLab tutorial, you will write simple queries, the first step in data analysis.
-    Get acquainted with the power of the PostgreSQL language, used by governments
-    and businesses to manage database systems all over the world. PostgreSQL is written
-    in plain English and is easy to learn. Try it out!
-  tutorial_grasshopperphoto_longdescription: Learn coding skills to create filters
-    to apply to different photos.
-  tutorial_tynkerpyland_longdescription: 'Part of the UN Sustainable Development Goals
-    project, this Python project will have you create your own tree-planting game. '
-  tutorial_codeitimages_longdescription: Learn to program your own amazing images
-    and animations.
-  tutorial_hyperpadenemy_longdescription: 'Learn logical thinking and programming
-    by creating a platformer game enemy AI. '
-  tutorial_tynkerpro_longdescription: 'Part of the UN Sustainable Development Goals
-    project, this coding prompt shows off projects exploring issues surrounding recycling
-    and reuse. Beginners can play with working projects and advanced programmers can
-    create their own projects from scratch. '
-  tutorial_trashtag_longdescription: 'Code your own game and raise awareness for protecting
-    our environment. '
-  tutorial_casiege_longdescription: Join Niko and Sakura on their virtual reality
-    journey to Tubrosos Castle. Learn what it's like to be a gray hat hacker by helping
-    the wizard elf, Cyrena find the Crown of Knowledge. You will expose the poor security
-    systems used at the castle and learn how to avoid becoming the victim of a scam.
-  tutorial_thunkableyeet_longdescription: Learn how to build two apps that will help
-    your city! Yeet!
-  tutorial_vidcodedeal_longdescription: Start coding for good by creating animations
-    featuring notable women leaders and quotes that express their point of view.
-  tutorial_codehsgeno_longdescription: In this hour of code, students will create
-    a program that will solve for allele pairs based on user input. Students will
-    program with Tracy the Turtle in Python to make this happen. Students should have
-    prior knowledge of basic biology concepts and Punnett Squares before beginning
-    this activity.
-  tutorial_hyperpadpong_longdescription: 'Learn to program a pong game with a smart
-    AI opponent. '
-  tutorial_tynkerland_longdescription: 'Part of the UN Sustainable Development Goals
-    project, this coding prompt shows off projects exploring the importance of forests
-    to the world''s ecosystem. Readers can play with working projects and advanced
-    programmers can create their own original projects. '
-  tutorial_trinketgirl_longdescription: Learn to program a big story using Python,
-    and then change it up to create your own story!
-  tutorial_rpimosquito_longdescription: Make a game where you protect people from
-    malaria by making a parrot catch mosquitoes.
-  tutorial_tynkermars_longdescription: Explore NASA's exciting new efforts to reach
-    the Moon and then Mars. Students can design their own animated mission patch,
-    imagine their life as an Artemis astronaut on the Lunar Gateway, and more. Beginners
-    can try step-by-step tutorials, while experienced programmers can create their
-    own original projects with block or text coding.
-  tutorial_cityx_longdescription: Your first quest in City X is to help an old farmer
-    to manage his farm. Let's solve his problem with innovative technology! You will
-    learn the basic concept of watering system and make a gardening robot with incredible
-    fun! Students will apply design thinking concepts to investigate problems while
-    developing their technological awareness, thereby honing their high-level thinking
-    skills.
-  tutorial_vidcodemap_longdescription: Collect and analyze data for community engagement,
-    by coding your own community map!
-  tutorial_robotmagicfarm_longdescription: Code the FarmBot to plant seeds. Start
-    planting simple fields then add complexity.  Finish by growing art of your own
-    design.
-  tutorial_codehstriangle_longdescription: In this hour of code, we'll explore how
-    to create a simulator that will calculate the area of a triangle with dimensions
-    chosen by a user. We'll program with Tracy the Turtle in Python to make this happen.
-    Students should have prior knowledge of basic geometry concepts before beginning
-    this activity.
-  tutorial_ttwhitehouse_longdescription: In this colorful adventure, restore color
-    to a white world through a self-guided first person game. Solve puzzles and complete
-    challenges in order to advance the game and your coding knowledge. After completion,
-    players will be familiarized with color hex values and CSS attributes and comfortable
-    enough to recognize them in real world applications. Don't be afraid to share
-    your creations.
-  tutorial_modulo_longdescription: Out in the deepest of space, the Exploratory Databot,
-    known as E.D. has just discovered a new habitable planet for humankind! Who knows
-    what surprises lay ahead on this remote sandy planet? Unexpectedly while landing,
-    E.D. gets a shock to its motherboard wiping out all its programs. It's up to you
-    to program E.D. to help it through this strange alien's terrain. Are you up for
-    the challenge?
-  tutorial_codingtown_longdescription: Build your own business, code and have fun.
-  tutorial_kanoart_longdescription: Use block code to draw a scene, then bring it
-    to life with animation and mouse interaction. Code your own paintbrushes, add
-    stickers, and get creative!
-  tutorial_dragonscript_longdescription: Welcome to DragonScript Arena – the programming
-    strategy game and coding club. Level up your Javascript & Software Engineering
-    as you play! Build your own Dragon A.I. Imagine Battlebots but with robot Dragons.
-  tutorial_uwcloud_longdescription: Learn the basics of cloud computing by building
-    your own cloud! Build servers, upgrade them, and connect clients to keep up with
-    network demand. Play the role of a Cloud Architect in this interactive game and
-    test your skills in the endless mode.
-  tutorial_htmlmuffin_longdescription: Get ready for a fun and exciting adventure
-    with Muffin the Cat, who will guide you through the basics of HTML and CSS. Together
-    you will make your first landing page and understand the main principles of a
-    website layout.
-  tutorial_microsoftpizza_longdescription: Create a simple Arcade game where your
-    player eats as much pizza as you can before the time runs out!
-  tutorial_stemc_blckhole_longdescription: Did you see the images of the black hole
-    that were released in Spring 2019? Do you want to know more about black holes
-    and how to escape from them? Check out this coding activity on how fast you need
-    to go to escape from a gravitational field and what happens when not even light
-    can escape!
-  tutorial_careconfigure_longdescription: Our story-telling app retells a fairytale,
-    with weird and funny results! But the program is poorly written. Writing good
-    code is vital. Help refine this app into something amazing. Look at word classes
-    in English, and use variables, consonants, lists, and functions to reconfigure
-    this program. If you have written a program before and want some style, this is
-    for you.
-  tutorial_rpiscratch_longdescription: Create an interactive phrasebook that translates
-    useful phrases into different languages.
-  tutorial_ozaria_longdescription: Customize your hero and journey to the Sky Mountain
-    where you learn to type real code, navigate through 15 game levels, and make your
-    own game in order to help save the world of Ozaria.
-  tutorial_ttovum_longdescription: Can you control the chaos? Hack your way into the
-    cyberpunk world of Ovum City. Debug broken code, solve puzzles, and upgrade your
-    hardware as you explore self guided open world. Don't get caught by the drones!
-    It's up to you how Ovum City evolves.
-  tutorial_ttpassage_longdescription: Immerse yourself in an alien world to help Ada
-    escape unknown dangers. Play through this 2D platforming self-guided adventure
-    and learn coding techniques along the way. Players will become familiar with coding
-    techniques and syntax as they solve puzzles, fight monsters and beat the final
-    boss. Some previous familiarity with JavaScript might be useful but isn't required.
-  tutorial_tynkerhtmlen_longdescription: 'Part of the UN Sustainable Development Goals
-    project, this coding project has you create your own webpage exploring renewable
-    energy, energy efficiency, and access to energy. Design your own page showcasing
-    sustainability issues! '
-  tutorial_ttfrog_longdescription: Nostalgia turns educational in this familiar game
-    with a new twist! In an easy-to-understand and self-guided game, you will use
-    codeblocks and programming concepts to help your frog friend safely cross the
-    treacherous lands. Perfect for beginners and experts alike!
-  tutorial_codemojijava_longdescription: This activity introduces students to the
-    basics of Java programming using the Codemoji Terminal. Students learn everything
-    from basic types and variables to functions. Each lesson features an in depth
-    explanation of what each line of code does in order to ensure the students understand
-    what is happening. Each line of code in the lesson is guided for student success.
-  tutorial_ccfirewall_longdescription: Learn how to program your own shareable game!
-    Use code to teach a Hero magic spells to defeat waves and waves of baddies.
-  tutorial_htmljs_longdescription: Meet your new boss, Muffin the Cat, who is getting
-    ready for a CatFashion Expo. He needs a program to track the calories and is asking
-    you to help. In this fun and engaging activity, you will learn the basics of JavaScript
-    by looking at variables, operations, and data types and write MufFit – your first
-    program in JavaScript.
-  tutorial_ttaqueducts_longdescription: In this puzzle game, you're the hero bringing
-    water back to your village! Make your way through the levels in this self-guided
-    isometric experience. Levels will start simple, exposing players to basic coding
-    fundamentals. As you play, you will learn more complex coding techniques. Afterwards,
-    design and build your own levels and puzzles to share.
-  tutorial_vtgame_longdescription: Introduction to computational thinking and programming
-    video games in English. Create your video game in just minutes. Computing concepts
-    of abstraction, object-oriented design, algorithmic thinking, problem solving,
-    debugging, and critical thinking are incorporated. Target students are Grades
-    5 through 12. No prior programming experience necessary.
-  tutorial_baroborav_longdescription: Guide Linkbot as a robotic autonomous vehicle
-    (RAV) through a grid of streets! Students will learn to control a Linkbot robot
-    (virtual or hardware) using a drag-and-drop interface. They will also learn about
-    the important concept of loops and get practice using the Pythagorean theorem
-    to traverse triangular paths.
-  tutorial_baroboobstacle_longdescription: This series of 6 activities will introduce
-    students to basic coding and robotics concepts by using a drag-and-drop interface
-    to maneuver Linkbot robots (virtual and/or hardware) through a variety of obstacle
-    courses.
-  tutorial_pbstorytelling_longdescription: Dive into the world of interactive storytelling.
-    Learn the basics of how to create a story in Twine. Examine different story patterns
-    and structures that are unique to interactive stories. See some ways that interactive
-    storytelling differs from traditional creative writing.
-  tutorial_kibosnow_longdescription: 'The city is covered in snow, and we need to
-    design a KIBO snowplow to help clean up! Students will engage in the engineering
-    design process as they design, test, and improve snowplow robots that can help
-    clean up the cotton-ball snow. Students will also learn more about the many important
-    jobs that make a community function. '
-  tutorial_kibohappy_longdescription: If you're happy and you know it flash your light!
-    In this robotics lesson that also engages with music and social-emotional learning,
-    students collaboratively create a program for KIBO including both input and output
-    that expresses a feeling of happiness. Students learn that robots have output
-    parts that allow them to send information out into the world.
-  tutorial_rubylove_longdescription: 'Love Letters for Computers is a 10 part YouTube
-    series with classroom materials, to help primary school teachers to make computer
-    science more playful, whimsical and gentle for children. '
-  tutorial_spherosmiles_longdescription: Did you know a smile has super powers?! Program
-    your Sphero BOLT to brighten someone's day.
-  tutorial_spherobaby_longdescription: Learn to program "baby steps" to help teach
-    a friend to code.
-  tutorial_toxarchitect_longdescription: Code your builder robot in order to create
-    buildings and landscapes. Utopian Architect is a sandbox designed to facilitate
-    the discovery and the learning of the concept of function. Join us through our
-    activities that quickly raise questions related to the architecture of a program,
-    to the art of organizing thoughts and knowing how to break down big problems into
-    smaller problems.
-  tutorial_idodge_longdescription: This activity, adapted for the Hour of Code, develops
-    children's programming skills by creating apps using text - a simplified JavaScript
-    language. Using the PRIMM approach for teaching programming, the children explore
-    programs and use their computational thinking skills to problem solve, modify
-    and design/develop apps.
-  tutorial_firiacodebot_longdescription: Python fits your brain! Even if you've never
-    used a text-based language before, this activity will teach you everything you
-    need to get your Robot moving, lighting up, and responding to user inputs. CodeBot
-    is a revolutionary platform for authentic real-world coding, combining a real
-    programming language with powerful hardware. Your CODE is in complete control
-    of all the robot's functions!
-  tutorial_modlighthouse_longdescription: 'Students design a lighthouse based on design
-    criteria and constraints.  Then students iterate on that design to make it automatic,
-    and to customize its message. '
-  tutorial_spherogreen_longdescription: 'Learn how to use a counting number variable
-    to keep track of all your classrooms recycling. '
-  tutorial_ozopopstar_longdescription: 'Students will write and call functions, and
-    execute them with the Ozobot. This is the second of two lessons. '
-  tutorial_eddesign_longdescription: Introduce the key computational concepts of loops,
-    nested loops and sequential order using Edison robots and the Scratch-based programming
-    language EdScratch. Students can work through this lesson independently focusing
-    on the idea of patterns, including geometric shapes, and exploring how loops can
-    be used in programs which contain repeating code.
-  tutorial_edshapeup_longdescription: Introduce the key computational concepts of
-    definite loops and variables using Edison robots and EdPy, a text-based programming
-    language based on Python. Students can work through this lesson independently
-    as they practice using definite loops and pattern recognition in order to drive
-    familiar regular polygons before taking on the challenge of less common regular
-    polygons and irregular shapes.
-  tutorial_ozocolor_longdescription: 'Students will be introduced to the concept of
-    functions by using color codes to represent a function. This lesson is an introductory
-    and unplugged lesson to introduce the concept of functions. It is the first lesson
-    of a two lesson series, but either lesson can be taught in isolation. The second
-    lesson utilizes OzoBlockly to build on the concept of functions. '
-  tutorial_kcjanimals_longdescription: Build a simple project to celebrate coding
-    and Canadian wildlife. Kids will choose a Canadian animal, like a bear or a moose,
-    and create an animation that explores the animal's world, such as its habitat,
-    eating habits, migration patterns and so on. The project is simple enough for
-    teachers or parents to facilitate and help the kids follow along.
-  tutorial_icomputeeggs_longdescription: This teacher-led activity, adapted for the
-    Hour of Code, provides pupils with an opportunity to explore physical programming
-    through robotics. Using a drag-and-drop programming environment and a programmable
-    robotic sphere, pupils design algorithms to program a robot to hide Easter eggs.
-    Includes step-by-step lesson plan, teacher/pupil resources and assessment guidance.
-  tutorial_rootunplugged_longdescription: Solve offline printable puzzles using the
-    power of programming, math and more to crack the code to where the Root Robot
-    is hiding!
-  tutorial_rgtreasure_longdescription: Robo Treasure Chest is an unplugged activity
-    that teaches students computational thinking and programming fundamentals in an
-    easy and enjoyable way. Students will learn simple movement commands and new programming
-    expressions like 'Bug' and 'Debug'. This activity also teaches multi-label scenarios
-    concept.
-  tutorial_peblioportraits_longdescription: 'Learn to program animated portraits for
-    a cause you believe in. '
-  tutorial_rootcodebreak_longdescription: Use your Root Robot and the Root Coding
-    app to power through printable puzzles and challenges to crack the code to where
-    Root is hiding.
-  tutorial_microbit14_longdescription: Code your way to preserving the oceans using
-    micro:bit. Find out more about Global Goal 14, Life Below Water and learn to code
-    a sea turtle beach light.
-  tutorial_barobomoon_longdescription: You're one of the pioneer astronauts at the
-    first permanent moon base, and while on an expedition away from base, a malfunction
-    incapacitates your lunar rover and radio. But with a little ingenuity you can
-    create a light-signaling device using an Arduino microcontroller, an LED, and
-    drag-and-drop coding to send an SOS.
-  tutorial_eddog_longdescription: Introduce the key computational concepts of loops
-    and conditionals using Edison robots and the programming language EdBlocks. Students
-    can work through this lesson independently, utilizing the Edison robot's IR light
-    sensors while applying sequential programming and decomposition to a set of progressive
-    programming challenges, exploring how robots can sense and react to the world.
-  tutorial_microbit15_longdescription: Code your way to protecting local wildlife
-    using micro:bit. Find out more about Global Goal 15, Life on Land and learn to
-    code a wildlife species counter.
-  tutorial_unity_longdescription: Create a real video game using C# computer code
-    and Unity, a professional platform for game development! All activity assets and
-    step-by-step tutorials are included. This project can be either teacher-led or
-    student-guided. For efficiency, we recommend that students complete one of the
-    preceding no-code Unity Creator Kits to learn the Unity interface prior to this
-    activity.
-  tutorial_blockscadtarget_longdescription: Test your target-hitting abilities by
-    writing code to move triangles around in three dimensions!
-  tutorial_tcadicicles_longdescription: Combine the power of code and computer-aided
-    design (CAD) to create a 3D icicle design. Then, learn how to print your design
-    if you have access to a 3D printer!
-  tutorial_blockscadscale_longdescription: Write code to create and 3D print scale
-    models of the world's most famous buildings!
-  tutorial_tcadloops_longdescription: Learn how code and computer-aided design (CAD)
-    can be combined to create a 3D model of a bursting star.
-  tutorial_phidgets_longdescription: Create an awesome musical instrument with Phidgets
-    and Processing!
-  tutorial_kcjmerry_longdescription: Build an interactive coding project with the
-    micro:bit to celebrate coding and the holiday season. Kids will use a combination
-    of block coding and physical computing to create a sparkling snow globe animation.
-    The project is simple enough for teachers or parents to facilitate and it comes
-    with activity cards that kids can use on their own for a further challenge.
-  tutorial_modvariables_longdescription: 'Students investigate how data flows through
-    a network using Cubelets robot blocks. This lesson assumes students are already
-    familiar with how Cubelets robot blocks work in general.  Visit modrobotics.com/thehub
-    for free "Meet Your Cubelets" lessons to introduce this computational thinking
-    tool to your students. '
-  tutorial_codestersmicro_longdescription: Connect your micro:bit to Codesters and
-    unlock a world of possibilities. Use your micro:bit as a game controller to help
-    your player head a soccer ball. Don't let the ball hit the ground! Micro Ball
-    is a simple, fun game that even a beginning coder can make.
-  tutorial_codestersdata_longdescription: Connect your micro:bit to Codesters and
-    unlock a world of possibilities. Learn how to collect and store data from micro:bit
-    sensors. Then graph the data as a scatter plot in Codesters. Prior knowledge of
-    loops, lists, and events is encouraged.
-  tutorial_ikodexmas_longdescription: This teacher-led activity, adapted for the Hour
-    of Code, introduces children to using a tile-based programming language to develop
-    coding skills. The children use algorithms, programming and computational thinking
-    skills to program Kodu to deliver presents on Christmas Eve. Includes step-by-step
-    lesson plan, pupil tutorial and assessment guidance.
-  tutorial_rpisensehat_longdescription: Learn how use the Sense HAT hardware to build
-    a data-logging device which can capture a range of information about its immediate
-    environment.
-  tutorial_modtraits_longdescription: 'Students use the steps of computational thinking
-    to analyze character traits and create an algorithm to demonstrate those traits. '
+  tutorial_rootunplugged_name: descifrar el código de iRobot
+  tutorial_rgtreasure_name: Desafíos de RoboGarden - Búsqueda del tesoro de Robo
+  tutorial_peblioportraits_name: 'Retrato computacional: arte para el bien '
+  tutorial_rootcodebreak_name: descifrar el código de iRobot con Root
+  tutorial_microbit14_name: 'micro: bit: programación hacia el Objetivo Global 14,
+    La vida bajo el agua'
+  tutorial_barobomoon_name: SOS de base lunar con Arduino
+  tutorial_eddog_name: Programar un perro guardián con Edison
+  tutorial_microbit15_name: 'micro: bit: programación hacia el Objetivo Global 15,
+    La vida en la tierra'
+  tutorial_unity_name: 'Kit para desarrolladores de juegos de Unity: código para principiantes'
+  tutorial_blockscadtarget_name: Práctica de transformación
+  tutorial_tcadicicles_name: Diseño de carámbanos con bloques de código en Tinkercad
+  tutorial_blockscadscale_name: Ciudad a escala
+  tutorial_tcadloops_name: Uso de bucles en Tinkercad para diseñar una estrella explosiva
+  tutorial_phidgets_name: Un Theremin de Phidgets con procesamiento
+  tutorial_kcjmerry_name: Felices micro:bits
+  tutorial_modvariables_name: Investigación de variables y valores de bloque con Cubelets
+  tutorial_codestersmicro_name: 'Programadores: crear un juego de micro pelota'
+  tutorial_codestersdata_name: 'Programadores: programar y graficar datos de micro:bit'
+  tutorial_ikodexmas_name: Navidad de iKode
+  tutorial_rpisensehat_name: Colector de datos de Sense HAT
+  tutorial_modtraits_name: Rasgos de personajes con GoPiGo
+  tutorial_mee_name: 'Minecraft la hora del código: AI for Good '
+  tutorial_kuborobo_name: Rutas de programación de robótica de KUBO
+  tutorial_scratchimagine_longdescription: Imagina un mundo donde todo es posible,
+    ¡y luego dale vida con Scratch!
+  tutorial_codesterspsa_longdescription: Aprende los conceptos básicos de programación
+    en Python mientras creas tu propio anuncio de servicio público. Elige un tema
+    que consideres importante y diseña tu propio anuncio animado o interactivo para
+    compartir información crítica sobre cómo generar un impacto positivo en el mundo.
+  tutorial_googlehero_longdescription: Convierta a un héroe cotidiano de tu vida o
+    comunidad en un superhéroe al programarlo para volar sobre edificios, girar, trabajar
+    con un compañero o compañera y gana puntos tocando objetos en un juego. En 'Codifica
+    a tu héroe,' muestra los poderes especiales de tu héroe y tu propia creatividad
+    con CS First y Scratch.
+  tutorial_codestersbball_longdescription: Aprende los conceptos básicos de programación
+    en Python mientras creas tu propio juego de baloncesto. Aprenderás a agregar fondos
+    y sprites, y usar eventos para controlar el movimiento de los sprites en el escenario.
+  tutorial_scratchcartoon_longdescription: Programa tu propia animación para dar vida
+    a algunos de tus personajes favoritos de Cartoon Network. Agrega más personajes
+    y haz que salten, vuelen y hablen.
+  tutorial_codemonkeyjr_longdescription: En un mundo lleno de criaturas cautivadoras
+    y colores brillantes, los niños de 4 a 6 años se unirán a un mono en una misión
+    para recolectar bananas y abrir cofres de tesoros. Mientras tanto, explorarán
+    y aprenderán los conceptos básicos de la programación a medida que usan bloques
+    para programar el viaje de un mono por el mundo.
+  tutorial_bananatales_longdescription: Enseña Python mientras ayudas a un mono bebé.
+    Los bebés gemelos fueron separados por un terremoto, ¡y uno de los monos ya no
+    puede conseguir bananas! Ahora, tus estudiantes son los que tienen que usar el
+    código para reconstruir el camino y alimentar al mono bebé.
+  tutorial_scratchtales_longdescription: Lleva de viaje a los personajes y haz que
+    hablen en voz alta mediante bloques de texto a voz, cortesía de Amazon. Elige
+    una voz para cada personaje y, luego, escribe lo que quieres que digan. Programa
+    a tus personajes para que hagan preguntas y viajen a diferentes escenas, y que
+    tu historia sea interactiva. ¡Experimenta con nuevas formas creativas de hacer
+    que las historias cobren vida!
+  tutorial_msemoji_longdescription: "¡Crea un sitio web interactivo en vivo que use
+    un modelo de aprendizaje automático para reconocer tus emojis dibujados a mano
+    y los de tus amigos! En el camino, practicarás con los conceptos básicos del aprendizaje
+    automático: 1) recopilar datos, 2) limpiar y dar formato a los datos, 3) entrenar
+    el modelo y 4) usar el modelo entrenado para hacer predicciones."
+  tutorial_cacolor_longdescription: La profesora Fotón es una física de gran prestigio
+    que comenzó a hacer travesuras. ¡Eliminó el color de todos los dispositivos digitales!
+    En este proyecto al estilo de un juego de escape, el estudiante se une a Marlee
+    y Tyrell mientras aprenden sobre números binarios, luz, color y más para desentrañar
+    el acertijo de color de la profesora Fotón y restaurar el color en los dispositivos
+    del mundo.
+  tutorial_kodablebeach_longdescription: Aprende a programar con comandos básicos
+    y limpia la playa para proteger la vida del océano.
+  tutorial_tynkeren_longdescription: 'Este mensaje de programación, que es parte del
+    proyecto de los Objetivos de Desarrollo Sostenible de la ONU, muestra proyectos
+    que exploran las energías renovables, la eficiencia energética y el acceso a la
+    energía. Los lectores pueden jugar con proyectos de trabajo y los programadores
+    avanzados pueden crear sus propios proyectos originales. '
+  tutorial_tynkerjavapro_longdescription: 'Este mensaje de programación, que es parte
+    del proyecto de los Objetivos de Desarrollo Sostenible de la ONU, muestra un breve
+    proyecto que explora el reciclaje y la reutilización. Los lectores pueden ampliar
+    el proyecto para crear su propio juego. '
+  tutorial_grasshopperhack_longdescription: Aprende habilidades de programación para
+    hacer que este juego sea posible de jugar.
+  tutorial_pbskids_longdescription: Con PBS KIDS Scratch Jr, los niños pueden crear
+    sus propias historias interactivas y juegos con sus personajes favoritos de PBS
+    KIDS. Las posibilidades de contar historias son infinitas con esta aplicación
+    de codificación creativa para niños de 5 a 8 años de edad.
+  tutorial_nclabdata_longdescription: "¡El mundo es mejor si hay buenos datos! En
+    este tutorial práctico de NCLab, escribirás consultas simples, el primer paso
+    en el análisis de datos. Conoce el poder del lenguaje PostgreSQL, utilizado por
+    gobiernos y empresas para administrar sistemas de bases de datos en todo el mundo.
+    PostgreSQL está escrito en inglés simple y es fácil de aprender. ¡Pruébalo!"
+  tutorial_grasshopperphoto_longdescription: Aprende habilidades de programación para
+    crear filtros que puedes aplicar a diferentes fotos.
+  tutorial_tynkerpyland_longdescription: 'Este proyecto de Python, que es parte del
+    proyecto de Objetivos de Desarrollo Sostenible de la ONU, te permitirá crear tu
+    propio juego para plantar árboles. '
+  tutorial_codeitimages_longdescription: Aprende a programar tus propias imágenes
+    y animaciones increíbles.
+  tutorial_hyperpadenemy_longdescription: 'Aprende el pensamiento lógico y la programación
+    mediante la creación de un juego de plataformas con enemigos de IA. '
+  tutorial_tynkerpro_longdescription: 'Este mensaje de programación, que es parte
+    del proyecto de los Objetivos de Desarrollo Sostenible de la ONU, muestra proyectos
+    que exploran problemas relacionados con el reciclaje y la reutilización. Los principiantes
+    pueden jugar con proyectos de trabajo y los programadores avanzados pueden crear
+    sus propios proyectos desde cero. '
+  tutorial_trashtag_longdescription: 'Programa tu propio juego y crea conciencia para
+    proteger nuestro medio ambiente. '
+  tutorial_casiege_longdescription: Únete a Niko y Sakura en su viaje de realidad
+    virtual al Castillo Tubrosos. Aprende lo que es ser un hacker de sombrero gris
+    y ayuda a la elfa maga, Cyrena, a encontrar la Corona del Conocimiento. Expondrás
+    los pobres sistemas de seguridad utilizados en el castillo y aprenderás a evitar
+    ser víctima de una estafa.
+  tutorial_thunkableyeet_longdescription: "¡Aprende a crear dos aplicaciones que ayudarán
+    a tu ciudad! ¡Genial!"
+  tutorial_vidcodedeal_longdescription: Comienza a programar para siempre creando
+    animaciones con mujeres líderes notables y citas que expresen su punto de vista.
+  tutorial_codehsgeno_longdescription: En esta hora del código, los estudiantes crearán
+    un programa que resolverá los pares de alelos según la entrada del usuario. Los
+    estudiantes programarán con Tracy la Tortuga en Python para que esto suceda. Los
+    estudiantes deben tener un conocimiento previo de los conceptos básicos de biología
+    y los tableros de Punnett antes de comenzar esta actividad.
+  tutorial_hyperpadpong_longdescription: 'Aprende a programar un juego Pong con un
+    oponente inteligente basado en AI. '
+  tutorial_tynkerland_longdescription: 'Este mensaje de programación, que es parte
+    del proyecto de los Objetivos de Desarrollo Sostenible de la ONU, muestra proyectos
+    que exploran la importancia de los bosques para el ecosistema del mundo. Los lectores
+    pueden jugar con proyectos de trabajo y los programadores avanzados pueden crear
+    sus propios proyectos originales. '
+  tutorial_trinketgirl_longdescription: "¡Aprende a programar una gran historia mediante
+    Python y luego cámbiala para crear tu propia historia!"
+  tutorial_rpimosquito_longdescription: Crea un juego en el que un loro atrape mosquitos
+    para proteger a las personas de la malaria.
+  tutorial_tynkermars_longdescription: Explora los nuevos y emocionantes esfuerzos
+    de la NASA para llegar a la Luna y, luego, a Marte. Los estudiantes pueden diseñar
+    su propio logo animado de la misión, imaginar sus vidas como astronautas de Artemisa
+    en el Lunar Gateway, y más. Los principiantes pueden probar tutoriales paso a
+    paso, mientras que los programadores experimentados pueden crear sus propios proyectos
+    originales con programación de bloques o texto.
+  tutorial_cityx_longdescription: Tu primera búsqueda en Ciudad X se trata de ayudar
+    a un viejo granjero a administrar su granja. ¡Resolvamos su problema con tecnología
+    innovadora! ¡Aprenderás el concepto básico del sistema de riego y crearás un robot
+    de jardinería de forma muy divertida! Los estudiantes aplicarán conceptos de pensamiento
+    de diseño para investigar problemas mientras desarrollan su conciencia tecnológica
+    y perfeccionan sus habilidades de pensamiento de alto nivel.
+  tutorial_vidcodemap_longdescription: "¡Programa tu propio mapa de la comunidad para
+    recopilar y analizar datos sobre su participación!"
+  tutorial_robotmagicfarm_longdescription: Programa el FarmBot para plantar semillas.
+    Comienza a plantar campos simples y, luego, agrega complejidad. Para terminar,
+    haz crecer el arte de tu propio diseño.
+  tutorial_codehstriangle_longdescription: En esta hora del código, exploraremos cómo
+    crear un simulador que calculará el área de un triángulo con dimensiones elegidas
+    por un usuario. Programaremos con Tracy la Tortuga en Python para que esto suceda.
+    Los estudiantes deben tener un conocimiento previo de los conceptos básicos de
+    geometría antes de comenzar esta actividad.
+  tutorial_ttwhitehouse_longdescription: En esta colorida aventura debes restaurar
+    el color a un mundo blanco a través de un juego autoguiado en primera persona.
+    Resuelve acertijos y completa desafíos para avanzar en el juego y mejorar tus
+    conocimientos de programación. Después de la finalización, los jugadores se familiarizarán
+    con los valores hexadecimales de color y los atributos CSS, y se sentirán lo suficientemente
+    cómodos como para reconocerlos en aplicaciones del mundo real. No tengas miedo
+    de compartir tus creaciones.
+  tutorial_modulo_longdescription: En lo profundo del espacio, el Exploratorio Databot,
+    conocido como E.D., ¡acaba de descubrir un nuevo planeta habitable para la humanidad!
+    ¿Quién sabe qué sorpresas nos esperan en este remoto planeta arenoso? Inesperadamente,
+    al aterrizar, E.D. recibe una descarga en su placa madre, que borra todos sus
+    programas. Depende de ti programar al E.D. para ayudarlo en este extraño terreno
+    alienígena. ¿Estás preparado para el desafío?
+  tutorial_codingtown_longdescription: Crea tu propia empresa, programa y diviértete.
+  tutorial_kanoart_longdescription: Usa el código de bloque para dibujar una escena
+    y, luego, dale vida con animación e interacción con el ratón. ¡Programa tus propios
+    pinceles, agrega pegatinas y sé creativo!
+  tutorial_dragonscript_longdescription: Bienvenido a DragonScript Arena, el juego
+    de estrategia de programación y club de codificación. ¡Mejora tu Ingeniería de
+    Javascript y Software mientras juegas! Construye tu propio Dragon en AI. Imagina
+    Battlebots pero con dragones robot.
+  tutorial_uwcloud_longdescription: "¡Crea tu propia nube y aprende los conceptos
+    básicos de la computación en la nube! Construye servidores, actualízalos y conecta
+    clientes para seguir el ritmo a la demanda de la red. Juega el papel de un arquitecto
+    de la nube en este juego interactivo y prueba tus habilidades en el modo sin fin."
+  tutorial_htmlmuffin_longdescription: Prepárate para una aventura divertida y emocionante
+    con Muffin el Gato, que te guiará a través de los conceptos básicos de HTML y
+    CSS. Juntos, crearán su primera página de destino y comprenderán los principios
+    fundamentales del diseño de un sitio web.
+  tutorial_microsoftpizza_longdescription: "¡Crea un juego Arcade simple donde tu
+    jugador coma tanta pizza como pueda antes de que se acabe el tiempo!"
+  tutorial_stemc_blckhole_longdescription: "¿Viste las imágenes del agujero negro
+    que se publicaron en la primavera de 2019? ¿Quieres saber más sobre los agujeros
+    negros y cómo escapar de ellos? ¡Mira esta actividad de programación sobre qué
+    tan rápido debes ir para escapar de un campo gravitacional y qué sucede cuando
+    ni siquiera la luz puede escapar!"
+  tutorial_careconfigure_longdescription: Nuestra aplicación para contar historias
+    cuenta un cuento de hadas, ¡con resultados extraños y divertidos! Pero el programa
+    está mal escrito. Escribir un buen código es vital. Ayuda a convertir esta aplicación
+    en algo increíble. Mira las clases de palabras en inglés y usa variables, consonantes,
+    listas y funciones para reconfigurar este programa. Si has escrito un programa
+    antes y quieres algo de estilo, esto es para ti.
+  tutorial_rpiscratch_longdescription: Crea un libro de frases interactivo que traduzca
+    frases útiles a diferentes idiomas.
+  tutorial_ozaria_longdescription: Personaliza a tu héroe y transita tu propio camino
+    hacia la Montaña del cielo, a través del cual aprenderás a escribir código real,
+    deberás superar 15 niveles y diseñarás tu propio videojuego para ayudar a salvar
+    el mundo de Ozaria.
+  tutorial_ttovum_longdescription: "¿Puedes controlar el caos? Ábrete camino en el
+    mundo ciberpunk de Ovum City. Depura el código roto, resuelve desafíos y actualiza
+    tu hardware mientras exploras el mundo abierto autoguiado. ¡No te dejes atrapar
+    por los drones! Depende de ti cómo evoluciona Ovum City."
+  tutorial_ttpassage_longdescription: Sumérgete en un mundo extraño para ayudar a
+    Ada a escapar de peligros desconocidos. Juega a esta aventura autoguiada de plataformas
+    en 2D y aprende técnicas de programación en el camino. Los jugadores se familiarizarán
+    con las técnicas de programación y la sintaxis mientras resuelven desafíos, luchan
+    contra monstruos y derrotan al jefe final. Se recomienda tener algún conocimiento
+    previo de JavaScript, aunque no es obligatorio.
+  tutorial_tynkerhtmlen_longdescription: 'Este proyecto de programación, que es parte
+    del proyecto de los Objetivos de Desarrollo Sostenible de las Naciones Unidas,
+    te permite crear tu propia página web para explorar las energías renovables, la
+    eficiencia energética y el acceso a la energía. ¡Diseña tu propia página que muestre
+    problemas de sostenibilidad! '
+  tutorial_ttfrog_longdescription: "¡La nostalgia se vuelve educativa en este juego
+    familiar que tiene un nuevo giro! En un juego autoguiado fácil de entender, usarás
+    bloques de código y conceptos de programación para ayudar a tu amiga la rana a
+    cruzar las tierras traicioneras de forma segura. ¡Es perfecto para principiantes
+    y expertos por igual!"
+  tutorial_codemojijava_longdescription: Esta actividad utiliza Codemoji Terminal
+    para introducir a los estudiantes en los conceptos básicos de la programación
+    Java. Los estudiantes aprenden todo, desde tipos básicos y variables hasta funciones.
+    Cada lección presenta una explicación detallada de lo que hace cada línea de código
+    para garantizar que los estudiantes entiendan lo que está sucediendo. Cada línea
+    de código en la lección está pensada para el éxito del estudiante.
+  tutorial_ccfirewall_longdescription: "¡Aprende a programar tu propio juego para
+    compartir! Usa el código para enseñarle hechizos mágicos a un Héroe y que pueda
+    derrotar oleadas y oleadas de malos."
+  tutorial_htmljs_longdescription: Conoce a tu nuevo jefe, Muffin el Gato, que se
+    está preparando para una Exposición de Moda de Gatos. Necesita un programa para
+    controlar las calorías y te está pidiendo ayuda. En esta actividad divertida y
+    atractiva, aprenderás los conceptos básicos de JavaScript al observar variables,
+    operaciones y tipos de datos, y escribir MufFit, tu primer programa en JavaScript.
+  tutorial_ttaqueducts_longdescription: "¡En este desafío, eres el héroe que trae
+    agua a tu pueblo! Ábrete camino a través de los niveles en esta experiencia isométrica
+    autoguiada. Los niveles comenzarán de manera simple y mostrarán los fundamentos
+    básicos de programación a los jugadores. Mientras juegas, aprenderás técnicas
+    de programación más complejas. Luego, diseña y construye tus propios niveles y
+    desafíos para compartir."
+  tutorial_vtgame_longdescription: Introducción al pensamiento computacional y la
+    programación de videojuegos en inglés. Crea tu videojuego en cuestión de minutos.
+    Se incorporan los conceptos computacionales de abstracción, diseño orientado a
+    objetos, pensamiento algorítmico, resolución de problemas, depuración y pensamiento
+    crítico. Está orientado a estudiantes de 5° a 12° grado. No se necesita experiencia
+    previa en programación.
+  tutorial_baroborav_longdescription: "¡Guía a Linkbot como un vehículo robótico autónomo
+    (VRA) a través de una cuadrícula de calles! Los estudiantes aprenderán a controlar
+    un robot Linkbot (virtual o de hardware) mediante una interfaz del tipo arrastrar
+    y soltar. También aprenderán sobre el importante concepto de bucles y practicarán
+    usando el teorema de Pitágoras para atravesar caminos triangulares."
+  tutorial_baroboobstacle_longdescription: Esta serie de 6 actividades presentará
+    a los estudiantes los conceptos básicos de programación y robótica mediante el
+    uso de una interfaz del tipo arrastrar y soltar para maniobrar robots Linkbot
+    (virtuales o de hardware) a través de diversas pistas de obstáculos.
+  tutorial_pbstorytelling_longdescription: Sumérgete en el mundo de la narración interactiva.
+    Aprende los conceptos básicos de cómo crear una historia en Twine. Examina diferentes
+    patrones y estructuras de historias que son exclusivas de las historias interactivas.
+    Mira algunas formas en que la narración interactiva difiere de la escritura creativa
+    tradicional.
+  tutorial_kibosnow_longdescription: "¡La ciudad está cubierta de nieve y necesitamos
+    diseñar un quitanieves KIBO para ayudar a limpiar! Los estudiantes participarán
+    en el proceso de diseño de ingeniería mientras diseñan, prueban y mejoran los
+    robots quitanieves que pueden ayudar a limpiar la nieve de algodón. Los estudiantes
+    también aprenderán más sobre los muchos trabajos importantes que hacen que una
+    comunidad funcione. "
+  tutorial_kibohappy_longdescription: Si eres feliz y lo sabes, ¡haz destellar tu
+    luz! En esta lección de robótica, que también se relaciona con la música y el
+    aprendizaje socioemocional, los estudiantes crean en conjunto un programa para
+    KIBO que incluye entradas y salidas que expresan un sentimiento de felicidad.
+    Los estudiantes aprenden que los robots tienen componentes de salida que les permiten
+    enviar información al mundo.
+  tutorial_rubylove_longdescription: 'Cartas de amor para computadoras es una serie
+    de 10 partes de YouTube con materiales para el aula, que ayudan a los docentes
+    de primaria a hacer que las ciencias de la computación sean más lúdicas, enigmáticas
+    y simples para los niños. '
+  tutorial_spherosmiles_longdescription: "¿Sabías que una sonrisa tiene superpoderes?
+    Programa tu BOLT Sphero para alegrar el día de alguien."
+  tutorial_spherobaby_longdescription: Aprende a programar "de a pasos pequeños" para
+    ayudar a enseñar a un amigo a programar.
+  tutorial_toxarchitect_longdescription: Programa tu robot constructor para crear
+    edificios y paisajes. Utopian Architect es un sandbox diseñado para facilitar
+    el descubrimiento y el aprendizaje del concepto de función. Únete a nosotros a
+    través de nuestras actividades que rápidamente plantean preguntas relacionadas
+    con la arquitectura de un programa, el arte de organizar pensamientos y cómo dividir
+    los problemas grandes en problemas más pequeños.
+  tutorial_idodge_longdescription: Esta actividad, adaptada para la Hora del Código,
+    desarrolla las habilidades de programación de los niños mediante la creación de
+    aplicaciones que utilizan texto, un lenguaje JavaScript simplificado. Mediante
+    el enfoque PRIMM para enseñar programación, los niños exploran programas y usan
+    sus habilidades de pensamiento computacional para resolver problemas, modificar
+    y diseñar/desarrollar aplicaciones.
+  tutorial_firiacodebot_longdescription: "¡Python se adapta a tu cerebro! Incluso
+    si nunca antes has usado un lenguaje basado en texto, esta actividad te enseñará
+    todo lo que necesitas para que tu Robot se mueva, se ilumine y responda a las
+    entradas del usuario. CodeBot es una plataforma revolucionaria para la programación
+    auténtica del mundo real, que combina un lenguaje de programación real con un
+    hardware potente. ¡Tu CÓDIGO tiene el control completo de todas las funciones
+    del robot!"
+  tutorial_modlighthouse_longdescription: 'Los estudiantes diseñan un faro basado
+    en criterios de diseño y restricciones. Luego, los estudiantes repiten ese diseño
+    para hacerlo automático y personalizar su mensaje. '
+  tutorial_spherogreen_longdescription: 'Aprende a usar una variable numérica de conteo
+    para realizar un seguimiento del reciclaje en todas tus aulas. '
+  tutorial_ozopopstar_longdescription: 'Los estudiantes escribirán y llamarán funciones,
+    y las ejecutarán con el Ozobot. Esta es la segunda de dos lecciones. '
+  tutorial_eddesign_longdescription: Introduce los principales conceptos computacionales
+    de bucles, bucles anidados y orden secuencial mediante robots Edison y el lenguaje
+    de programación EdScratch basado en Scratch. Los estudiantes pueden completar
+    esta lección por su cuenta enfocándose en la idea de patrones, incluidas las formas
+    geométricas, y explorando cómo los bucles se pueden usar en programas que contienen
+    código repetitivo.
+  tutorial_edshapeup_longdescription: Introduce los principales conceptos computacionales
+    de bucles y variables definidas mediante robots Edison y EdPy, un lenguaje de
+    programación de texto basado en Python. Los estudiantes pueden trabajar en esta
+    lección por su cuenta mientras practican el uso de bucles definidos y el reconocimiento
+    de patrones para abordar polígonos regulares familiares antes de enfrentar el
+    desafío de polígonos regulares menos comunes y formas irregulares.
+  tutorial_ozocolor_longdescription: 'Los estudiantes serán introducidos al concepto
+    de funciones mediante códigos de colores para representar una función. Esta lección
+    es una lección introductoria y sin conexión para presentar el concepto de funciones.
+    Es la primera lección de una serie de dos lecciones, pero cualquiera de las lecciones
+    se puede enseñar de forma separada. La segunda lección utiliza OzoBlockly para
+    ampliar el concepto de funciones. '
+  tutorial_kcjanimals_longdescription: Crea un proyecto simple para celebrar la programación
+    y la vida salvaje canadiense. Los niños elegirán un animal canadiense, como un
+    oso o un alce, y crearán una animación que explora el mundo del animal, como su
+    hábitat, hábitos alimenticios, patrones de migración, etc. El proyecto es lo suficientemente
+    simple para que los docentes o padres lo pongan en práctica y ayuden a los niños
+    a completarlo.
+  tutorial_icomputeeggs_longdescription: Esta actividad dirigida por docentes y adaptada
+    para la Hora del Código, brinda a los estudiantes la oportunidad de explorar la
+    programación física a través de la robótica. Mediante un entorno de programación
+    del tipo arrastrar y soltar y una esfera robótica programable, los estudiantes
+    diseñan algoritmos para programar un robot que oculte los huevos de Pascua. Incluye
+    un plan de lecciones paso a paso, recursos para docentes y estudiantes, y orientación
+    para la evaluación.
+  tutorial_rootunplugged_longdescription: Resuelve desafíos sin conexión que se pueden
+    imprimir. ¡Usa el poder de la programación, las matemáticas y más para descifrar
+    el código donde se esconde el Robot Raíz!
+  tutorial_rgtreasure_longdescription: La búsqueda del tesoro de Robo es una actividad
+    sin conexión que enseña a los estudiantes el pensamiento computacional y los fundamentos
+    de programación de una manera fácil y divertida. Los estudiantes aprenderán comandos
+    de movimiento simples y nuevas expresiones de programación como 'error' y 'depurar'.
+    Esta actividad también enseña el concepto de escenarios de etiquetas múltiples.
+  tutorial_peblioportraits_longdescription: 'Aprende a programar retratos animados
+    para una causa en la que crees. '
+  tutorial_rootcodebreak_longdescription: Usa tu Robot Raíz y la aplicación Root Coding
+    para resolver acertijos y desafíos imprimibles en los que tienes que descifrar
+    el código donde se esconde el robot.
+  tutorial_microbit14_longdescription: Programa tu manera de preservar los océanos
+    mediante micro:bit. Obtén más información sobre el Objetivo Global 14, La vida
+    bajo el agua, y aprende a programar una luz de playa para tortugas marinas.
+  tutorial_barobomoon_longdescription: Eres uno de los astronautas pioneros en la
+    primera base lunar permanente y, mientras estás en una expedición fuera de la
+    base, algo sale mal, y tu radio y vehículo lunar dejan de funcionar. Pero, con
+    un poco de ingenio, puedes crear un dispositivo de señalización luminosa con un
+    microcontrolador Arduino, un LED y una programación del tipo arrastrar y soltar
+    para enviar un SOS.
+  tutorial_eddog_longdescription: Presenta los conceptos computacionales de bucles
+    y condicionales mediante robots Edison y el lenguaje de programación EdBlocks.
+    Los estudiantes pueden completar esta lección de forma independiente, utilizando
+    los sensores de luz IR del robot Edison mientras aplican programación secuencial
+    y descomposición a un conjunto de desafíos de programación progresiva, y exploran
+    cómo los robots pueden sentir y reaccionar ante el mundo.
+  tutorial_microbit15_longdescription: Programa tu manera de proteger la vida silvestre
+    local mediante micro:bit. Obtén más información sobre el Objetivo Global 15, La
+    vida en la tierra, y aprende a programar un contador de especies de vida silvestre.
+  tutorial_unity_longdescription: "¡Crea un videojuego real mediante programación
+    C# y Unity, una plataforma profesional para el desarrollo de juegos! Se incluyen
+    todos los materiales de la actividad y tutoriales paso a paso. Este proyecto puede
+    ser dirigido por un docente o guiado por el alumno. Para lograr una mayor eficiencia,
+    recomendamos que los estudiantes completen uno de los kits para desarrolladores
+    de Unity sin programación anteriores para aprender la interfaz de Unity antes
+    de esta actividad."
+  tutorial_blockscadtarget_longdescription: "¡Escribe código para mover triángulos
+    en tres dimensiones y poner a prueba tus habilidades para golpear objetivos!"
+  tutorial_tcadicicles_longdescription: Combina el poder del código y el diseño asistido
+    por computadora (CAD) para crear un diseño de carámbano 3D. Luego, ¡aprende a
+    imprimir tu diseño si tienes acceso a una impresora 3D!
+  tutorial_blockscadscale_longdescription: "¡Escribe código para crear e imprimir
+    modelos a escala en 3D de los edificios más famosos del mundo!"
+  tutorial_tcadloops_longdescription: Aprende cómo el código y el diseño asistido
+    por computadora (CAD) se pueden combinar para crear un modelo 3D de una estrella
+    en explosión.
+  tutorial_phidgets_longdescription: "¡Crea un increíble instrumento musical con Phidgets
+    y Processing!"
+  tutorial_kcjmerry_longdescription: Crea un proyecto de programación interactivo
+    con micro:bit para celebrar la programación y la temporada navideña. Los niños
+    usarán una combinación de programación en bloque y computación física para crear
+    una animación de globos de nieve brillantes. El proyecto es lo suficientemente
+    simple para que los docentes o los padres lo pongan en práctica y viene con tarjetas
+    de actividades que los niños pueden usar solos para aumentar el desafío.
+  tutorial_modvariables_longdescription: 'Los estudiantes investigan cómo fluyen los
+    datos a través de una red mediante bloques de robot Cubelets. Esta lección asume
+    que los estudiantes ya están familiarizados con el funcionamiento general de los
+    bloques robot Cubelets. Visita modrobotics.com/thehub para obtener lecciones gratuitas
+    de "Meet Your Cubelets" que te ayuden a presentar esta herramienta de pensamiento
+    computacional a tus estudiantes. '
+  tutorial_codestersmicro_longdescription: Conecta tu micro:bit a los Codesters y
+    descubre un mundo de posibilidades. Usa tu micro:bit como controlador de juego
+    para ayudar a tu jugador a lanzar un balón de fútbol. ¡No dejes que la pelota
+    toque el suelo! Micro Ball es un juego simple y divertido que hasta un programador
+    principiante puede hacer.
+  tutorial_codestersdata_longdescription: Conecta tu micro:bit a los Codesters y descubre
+    un mundo de posibilidades. Aprende a recopilar y almacenar datos de sensores micro:bit.
+    Luego, grafica los datos como un diagrama de dispersión en Codesters. Se recomienda
+    el conocimiento previo de bucles, listas y eventos.
+  tutorial_ikodexmas_longdescription: Esta actividad dirigida por un docente y adaptada
+    para la Hora del Código, enseña a los niños a usar un lenguaje de programación
+    basado en mosaicos para desarrollar habilidades de programación. Los niños usan
+    algoritmos, habilidades de programación y pensamiento computacional para programar
+    Kodu para entregar regalos en Nochebuena. Incluye un plan de lecciones paso a
+    paso, tutoriales para estudiantes y orientación para la evaluación.
+  tutorial_rpisensehat_longdescription: Aprende a usar el hardware Sense HAT para
+    construir un dispositivo de registro de datos que pueda capturar una variedad
+    de información sobre tu entorno inmediato.
+  tutorial_modtraits_longdescription: 'Los estudiantes usan los pasos del pensamiento
+    computacional para analizar los rasgos de los personajes y crear un algoritmo
+    para demostrar esos rasgos. '
+  tutorial_mee_longdescription: "¡El fuego amenaza una aldea y debes programar una
+    solución! Conoce a tu ayudante programador, el Minecraft Agent, y prográmalo para
+    que navegue por el bosque y reúna datos sobre las condiciones que contribuyen
+    a los incendios. "
+  tutorial_kuborobo_longdescription: Con esta actividad, los estudiantes prueban sus
+    habilidades lógicas y de secuencias mediante el uso de fichas (TagTiles) para
+    programar a su robot KUBO para que viaje a varios lugares en un mapa impreso.
   tutorial_scratchimagine_language: Inglés, español
-  tutorial_codesterspsa_language: Español (Latinoamérica)
+  tutorial_codesterspsa_language: Inglés
   tutorial_googlehero_language: Inglés, español
-  tutorial_codestersbball_language: Español (Latinoamérica)
+  tutorial_codestersbball_language: Inglés
   tutorial_scratchcartoon_language: Inglés, español
-  tutorial_codemonkeyjr_language: Español (Latinoamérica)
-  tutorial_bananatales_language: Español (Latinoamérica)
+  tutorial_codemonkeyjr_language: Inglés
+  tutorial_bananatales_language: Inglés
   tutorial_scratchtales_language: Inglés, español
-  tutorial_msemoji_language: Español (Latinoamérica)
-  tutorial_cacolor_language: Español (Latinoamérica)
-  tutorial_kodablebeach_language: English, Other
-  tutorial_tynkeren_language: Español (Latinoamérica)
-  tutorial_tynkerjavapro_language: Español (Latinoamérica)
-  tutorial_grasshopperhack_language: Español (Latinoamérica)
+  tutorial_msemoji_language: Inglés
+  tutorial_cacolor_language: Inglés
+  tutorial_kodablebeach_language: Inglés, otro
+  tutorial_tynkeren_language: Inglés
+  tutorial_tynkerjavapro_language: Inglés
+  tutorial_grasshopperhack_language: Inglés
   tutorial_pbskids_language: Inglés, español
-  tutorial_nclabdata_language: Español (Latinoamérica)
-  tutorial_grasshopperphoto_language: Español (Latinoamérica)
-  tutorial_tynkerpyland_language: Español (Latinoamérica)
+  tutorial_nclabdata_language: Inglés
+  tutorial_grasshopperphoto_language: Inglés
+  tutorial_tynkerpyland_language: Inglés
   tutorial_codeitimages_language: Inglés, alemán
-  tutorial_hyperpadenemy_language: Español (Latinoamérica)
-  tutorial_tynkerpro_language: Español (Latinoamérica)
-  tutorial_trashtag_language: Español (Latinoamérica)
-  tutorial_casiege_language: Español (Latinoamérica)
-  tutorial_thunkableyeet_language: Español (Latinoamérica)
-  tutorial_vidcodedeal_language: Español (Latinoamérica)
-  tutorial_codehsgeno_language: Español (Latinoamérica)
-  tutorial_hyperpadpong_language: Español (Latinoamérica)
-  tutorial_tynkerland_language: Español (Latinoamérica)
-  tutorial_trinketgirl_language: Español (Latinoamérica)
-  tutorial_rpimosquito_language: Español (Latinoamérica)
-  tutorial_tynkermars_language: Español (Latinoamérica)
-  tutorial_cityx_language: Chinese (Traditional), English
-  tutorial_vidcodemap_language: Español (Latinoamérica)
-  tutorial_robotmagicfarm_language: Español (Latinoamérica)
-  tutorial_codehstriangle_language: Español (Latinoamérica)
-  tutorial_ttwhitehouse_language: Español (Latinoamérica)
-  tutorial_modulo_language: Español (Latinoamérica)
-  tutorial_codingtown_language: Español (Latinoamérica)
-  tutorial_kanoart_language: Español (Latinoamérica)
-  tutorial_dragonscript_language: Español (Latinoamérica)
-  tutorial_uwcloud_language: Español (Latinoamérica)
-  tutorial_htmlmuffin_language: Español (Latinoamérica)
-  tutorial_microsoftpizza_language: Español (Latinoamérica)
-  tutorial_stemc_blckhole_language: Español (Latinoamérica)
-  tutorial_careconfigure_language: Español (Latinoamérica)
-  tutorial_rpiscratch_language: Español (Latinoamérica)
+  tutorial_hyperpadenemy_language: Inglés
+  tutorial_tynkerpro_language: Inglés
+  tutorial_trashtag_language: Inglés
+  tutorial_casiege_language: Inglés
+  tutorial_thunkableyeet_language: Inglés
+  tutorial_vidcodedeal_language: Inglés
+  tutorial_codehsgeno_language: Inglés
+  tutorial_hyperpadpong_language: Inglés
+  tutorial_tynkerland_language: Inglés
+  tutorial_trinketgirl_language: Inglés
+  tutorial_rpimosquito_language: Inglés
+  tutorial_tynkermars_language: Inglés
+  tutorial_cityx_language: Chino (tradicional), inglés
+  tutorial_vidcodemap_language: Inglés
+  tutorial_robotmagicfarm_language: Inglés
+  tutorial_codehstriangle_language: Inglés
+  tutorial_ttwhitehouse_language: Inglés
+  tutorial_modulo_language: Inglés
+  tutorial_codingtown_language: Inglés
+  tutorial_kanoart_language: Inglés
+  tutorial_dragonscript_language: Inglés
+  tutorial_uwcloud_language: Inglés
+  tutorial_htmlmuffin_language: Inglés
+  tutorial_microsoftpizza_language: Inglés
+  tutorial_stemc_blckhole_language: Inglés
+  tutorial_careconfigure_language: Inglés
+  tutorial_rpiscratch_language: Inglés
   tutorial_ozaria_language: Inglés, español
-  tutorial_ttovum_language: Español (Latinoamérica)
-  tutorial_ttpassage_language: Español (Latinoamérica)
-  tutorial_tynkerhtmlen_language: Español (Latinoamérica)
-  tutorial_ttfrog_language: Español (Latinoamérica)
-  tutorial_codemojijava_language: Español (Latinoamérica)
-  tutorial_ccfirewall_language: Español (Latinoamérica)
-  tutorial_htmljs_language: Español (Latinoamérica)
-  tutorial_ttaqueducts_language: Español (Latinoamérica)
-  tutorial_vtgame_language: Español (Latinoamérica)
-  tutorial_baroborav_language: Español (Latinoamérica)
-  tutorial_baroboobstacle_language: Español (Latinoamérica)
-  tutorial_pbstorytelling_language: Español (Latinoamérica)
-  tutorial_kibosnow_language: Español (Latinoamérica)
-  tutorial_kibohappy_language: Español (Latinoamérica)
-  tutorial_rubylove_language: Español (Latinoamérica)
-  tutorial_spherosmiles_language: Español (Latinoamérica)
-  tutorial_spherobaby_language: Español (Latinoamérica)
-  tutorial_toxarchitect_language: Español (Latinoamérica)
-  tutorial_idodge_language: Español (Latinoamérica)
-  tutorial_firiacodebot_language: Español (Latinoamérica)
-  tutorial_modlighthouse_language: Español (Latinoamérica)
-  tutorial_spherogreen_language: Español (Latinoamérica)
-  tutorial_ozopopstar_language: Español (Latinoamérica)
-  tutorial_eddesign_language: Español (Latinoamérica)
-  tutorial_edshapeup_language: Español (Latinoamérica)
-  tutorial_ozocolor_language: Español (Latinoamérica)
-  tutorial_kcjanimals_language: Español (Latinoamérica)
-  tutorial_icomputeeggs_language: Español (Latinoamérica)
-  tutorial_rootunplugged_language: Español (Latinoamérica)
-  tutorial_rgtreasure_language: Español (Latinoamérica)
-  tutorial_peblioportraits_language: Español (Latinoamérica)
-  tutorial_rootcodebreak_language: Español (Latinoamérica)
-  tutorial_microbit14_language: Español (Latinoamérica)
-  tutorial_barobomoon_language: Español (Latinoamérica)
-  tutorial_eddog_language: Español (Latinoamérica)
-  tutorial_microbit15_language: Español (Latinoamérica)
-  tutorial_unity_language: Español (Latinoamérica)
-  tutorial_blockscadtarget_language: Español (Latinoamérica)
-  tutorial_tcadicicles_language: Español (Latinoamérica)
-  tutorial_blockscadscale_language: Español (Latinoamérica)
-  tutorial_tcadloops_language: Español (Latinoamérica)
-  tutorial_phidgets_language: Español (Latinoamérica)
-  tutorial_kcjmerry_language: Español (Latinoamérica)
-  tutorial_modvariables_language: Español (Latinoamérica)
-  tutorial_codestersmicro_language: Español (Latinoamérica)
-  tutorial_codestersdata_language: Español (Latinoamérica)
-  tutorial_ikodexmas_language: Español (Latinoamérica)
-  tutorial_rpisensehat_language: Español (Latinoamérica)
-  tutorial_modtraits_language: Español (Latinoamérica)
+  tutorial_ttovum_language: Inglés
+  tutorial_ttpassage_language: Inglés
+  tutorial_tynkerhtmlen_language: Inglés
+  tutorial_ttfrog_language: Inglés
+  tutorial_codemojijava_language: Inglés
+  tutorial_ccfirewall_language: Inglés
+  tutorial_htmljs_language: Inglés
+  tutorial_ttaqueducts_language: Inglés
+  tutorial_vtgame_language: Inglés
+  tutorial_baroborav_language: Inglés
+  tutorial_baroboobstacle_language: Inglés
+  tutorial_pbstorytelling_language: Inglés
+  tutorial_kibosnow_language: Inglés
+  tutorial_kibohappy_language: Inglés
+  tutorial_rubylove_language: Inglés
+  tutorial_spherosmiles_language: Inglés
+  tutorial_spherobaby_language: Inglés
+  tutorial_toxarchitect_language: Inglés
+  tutorial_idodge_language: Inglés
+  tutorial_firiacodebot_language: Inglés
+  tutorial_modlighthouse_language: Inglés
+  tutorial_spherogreen_language: Inglés
+  tutorial_ozopopstar_language: Inglés
+  tutorial_eddesign_language: Inglés
+  tutorial_edshapeup_language: Inglés
+  tutorial_ozocolor_language: Inglés
+  tutorial_kcjanimals_language: Inglés
+  tutorial_icomputeeggs_language: Inglés
+  tutorial_rootunplugged_language: Inglés
+  tutorial_rgtreasure_language: Inglés
+  tutorial_peblioportraits_language: Inglés
+  tutorial_rootcodebreak_language: Inglés
+  tutorial_microbit14_language: Inglés
+  tutorial_barobomoon_language: Inglés
+  tutorial_eddog_language: Inglés
+  tutorial_microbit15_language: Inglés
+  tutorial_unity_language: Inglés
+  tutorial_blockscadtarget_language: Inglés
+  tutorial_tcadicicles_language: Inglés
+  tutorial_blockscadscale_language: Inglés
+  tutorial_tcadloops_language: Inglés
+  tutorial_phidgets_language: Inglés
+  tutorial_kcjmerry_language: Inglés
+  tutorial_modvariables_language: Inglés
+  tutorial_codestersmicro_language: Inglés
+  tutorial_codestersdata_language: Inglés
+  tutorial_ikodexmas_language: Inglés
+  tutorial_rpisensehat_language: Inglés
+  tutorial_modtraits_language: Inglés
+  tutorial_mee_language: Inglés (Estados Unidos), Inglés (Reino Unido), Alemán, Español
+    (España), Español (México), Francés (Francia), Francés (Canadá), Italiano, Japonés,
+    Coreano, Portugués (Brasil), Portugués (Portugal), Ruso, Chino (Simplificado),
+    Chino (Tradicional), Turco, Polaco, indonesio, ucraniano, griego, búlgaro, húngaro,
+    finlandés, danés, sueco, noruego, eslovaco, checo, holandés
+  tutorial_kuborobo_language: Danés, holandés, inglés, francés, italiano, noruego
+    (Nynorsk), ruso, español, sueco
   tutorial_scratchimagine_string_detail_grades: Grados 2 +
   tutorial_codesterspsa_string_detail_grades: Grados 6+
   tutorial_googlehero_string_detail_grades: Grados 2-8
@@ -9214,7 +9295,7 @@ la:
   tutorial_tynkeren_string_detail_grades: Grados 2-8
   tutorial_tynkerjavapro_string_detail_grades: Grados 6+
   tutorial_grasshopperhack_string_detail_grades: Grados 9 +
-  tutorial_pbskids_string_detail_grades: Pre-reader-Grade 5
+  tutorial_pbskids_string_detail_grades: Prelectura de grados – 3
   tutorial_nclabdata_string_detail_grades: Grados 9 +
   tutorial_grasshopperphoto_string_detail_grades: Grados 9 +
   tutorial_tynkerpyland_string_detail_grades: Grados 6+
@@ -9259,9 +9340,9 @@ la:
   tutorial_baroborav_string_detail_grades: Grados 6+
   tutorial_baroboobstacle_string_detail_grades: Grados 2 +
   tutorial_pbstorytelling_string_detail_grades: Grados 6+
-  tutorial_kibosnow_string_detail_grades: Pre-reader-Grade 5
-  tutorial_kibohappy_string_detail_grades: Pre-reader-Grade 5
-  tutorial_rubylove_string_detail_grades: Pre-reader-Grade 8
+  tutorial_kibosnow_string_detail_grades: Prelectura de grados – 3
+  tutorial_kibohappy_string_detail_grades: Prelectura de grados – 3
+  tutorial_rubylove_string_detail_grades: Prelector - Grado 8
   tutorial_spherosmiles_string_detail_grades: Grados 2 +
   tutorial_spherobaby_string_detail_grades: Prelector - Grado 8
   tutorial_toxarchitect_string_detail_grades: Grados 6+
@@ -9281,7 +9362,7 @@ la:
   tutorial_rootcodebreak_string_detail_grades: Grados 2-8
   tutorial_microbit14_string_detail_grades: Grados 2-8
   tutorial_barobomoon_string_detail_grades: Grados 6+
-  tutorial_eddog_string_detail_grades: Grades 2-6
+  tutorial_eddog_string_detail_grades: Grados 2-6
   tutorial_microbit15_string_detail_grades: Grados 2-8
   tutorial_unity_string_detail_grades: Grados 9 +
   tutorial_blockscadtarget_string_detail_grades: Grados 6+
@@ -9296,6 +9377,8 @@ la:
   tutorial_ikodexmas_string_detail_grades: Grados 2-5
   tutorial_rpisensehat_string_detail_grades: Grados 6+
   tutorial_modtraits_string_detail_grades: Grados 2 +
+  tutorial_mee_string_detail_grades: Grados 2 +
+  tutorial_kuborobo_string_detail_grades: Prelector - Grado 8
   tutorial_scratchimagine_string_platforms: Todos los navegadores modernos, tablets
     Android, iPad
   tutorial_codesterspsa_string_platforms: Todos los navegadores modernos, tablets
@@ -9315,13 +9398,12 @@ la:
   tutorial_cacolor_string_platforms: Todos los navegadores modernos
   tutorial_kodablebeach_string_platforms: Todos los navegadores modernos, iPad, iPhone
   tutorial_tynkeren_string_platforms: Todos los navegadores modernos, iPad, sin conexión.
-  tutorial_tynkerjavapro_string_platforms: 'All modern browsers '
+  tutorial_tynkerjavapro_string_platforms: 'Todos los navegadores modernos '
   tutorial_grasshopperhack_string_platforms: Todos los navegadores modernos
-  tutorial_pbskids_string_platforms: Android tablet, iPad, Windows phone, Android
-    phone, iPhone, Game console app
+  tutorial_pbskids_string_platforms: iPhone, iPad, teléfono Android, tableta Android
   tutorial_nclabdata_string_platforms: Todos los navegadores modernos
   tutorial_grasshopperphoto_string_platforms: Todos los navegadores modernos
-  tutorial_tynkerpyland_string_platforms: 'All modern browsers '
+  tutorial_tynkerpyland_string_platforms: 'Todos los navegadores modernos '
   tutorial_codeitimages_string_platforms: Todos los navegadores modernos, tablets
     Android, iPad
   tutorial_hyperpadenemy_string_platforms: iPad
@@ -9349,7 +9431,7 @@ la:
   tutorial_ttwhitehouse_string_platforms: Chrome, Firefox
   tutorial_modulo_string_platforms: Todos los navegadores modernos
   tutorial_codingtown_string_platforms: Todos los navegadores modernos
-  tutorial_kanoart_string_platforms: Microsoft Edge, Chrome, Android tablet, iPad
+  tutorial_kanoart_string_platforms: Microsoft Edge, Chrome, tablet Android, iPad
   tutorial_dragonscript_string_platforms: Chrome
   tutorial_uwcloud_string_platforms: Todos los navegadores modernos, tablets Android,
     iPad
@@ -9363,7 +9445,7 @@ la:
   tutorial_ozaria_string_platforms: Todos los navegadores modernos
   tutorial_ttovum_string_platforms: Chrome, Firefox
   tutorial_ttpassage_string_platforms: Chrome, Firefox
-  tutorial_tynkerhtmlen_string_platforms: 'All modern browsers '
+  tutorial_tynkerhtmlen_string_platforms: 'Todos los navegadores modernos '
   tutorial_ttfrog_string_platforms: Chrome, Firefox
   tutorial_codemojijava_string_platforms: Todos los navegadores modernos
   tutorial_ccfirewall_string_platforms: Todos los navegadores modernos, iPad, sin
@@ -9376,7 +9458,7 @@ la:
   tutorial_pbstorytelling_string_platforms: Todos los navegadores modernos
   tutorial_kibosnow_string_platforms: KIBO Robot Kit
   tutorial_kibohappy_string_platforms: KIBO Robot Kit
-  tutorial_rubylove_string_platforms: All modern browsers, Unplugged
+  tutorial_rubylove_string_platforms: Todos los navegadores modernos, sin conexión
   tutorial_spherosmiles_string_platforms: Todos los navegadores modernos, tableta
     Android, iPad, teléfono Android, iPhone
   tutorial_spherobaby_string_platforms: Todos los navegadores modernos, tableta Android,
@@ -9394,8 +9476,8 @@ la:
   tutorial_edshapeup_string_platforms: Todos los navegadores modernos
   tutorial_ozocolor_string_platforms: Sin conexión
   tutorial_kcjanimals_string_platforms: Todos los navegadores modernos
-  tutorial_icomputeeggs_string_platforms: All modern browers, Android phone, Android
-    tablet, iPad, iPhone
+  tutorial_icomputeeggs_string_platforms: Todos los navegadores modernos, teléfono
+    Android, tablet Android, iPad, iPhone
   tutorial_rootunplugged_string_platforms: Sin conexión
   tutorial_rgtreasure_string_platforms: Sin conexión
   tutorial_peblioportraits_string_platforms: Chrome
@@ -9413,11 +9495,13 @@ la:
   tutorial_kcjmerry_string_platforms: Todos los navegadores modernos
   tutorial_modvariables_string_platforms: Todos los navegadores modernos, tablets
     Android, iPad, teléfono Android, iPhone
-  tutorial_codestersmicro_string_platforms: 'All modern browsers '
-  tutorial_codestersdata_string_platforms: 'All modern browsers '
+  tutorial_codestersmicro_string_platforms: 'Todos los navegadores modernos '
+  tutorial_codestersdata_string_platforms: 'Todos los navegadores modernos '
   tutorial_ikodexmas_string_platforms: Todos los navegadores modernos
   tutorial_rpisensehat_string_platforms: Todos los navegadores modernos
   tutorial_modtraits_string_platforms: Todos los navegadores modernos
+  tutorial_mee_string_platforms: Windows, iPad, MacOS
+  tutorial_kuborobo_string_platforms: Sin conexión
   tutorial_scratchimagine_string_detail_platforms: ''
   tutorial_codesterspsa_string_detail_platforms: ''
   tutorial_googlehero_string_detail_platforms: ''
@@ -9481,13 +9565,13 @@ la:
   tutorial_kibohappy_string_detail_platforms: KIBO Robot Kit
   tutorial_rubylove_string_detail_platforms: ''
   tutorial_spherosmiles_string_detail_platforms: Sphero BOLT
-  tutorial_spherobaby_string_detail_platforms: Sphero SPRK+, Sphero Mini, or Sphero
+  tutorial_spherobaby_string_detail_platforms: Sphero SPRK+, Sphero Mini o Sphero
     BOLT
   tutorial_toxarchitect_string_detail_platforms: ''
   tutorial_idodge_string_detail_platforms: ''
-  tutorial_firiacodebot_string_detail_platforms: CodeBot robot
-  tutorial_modlighthouse_string_detail_platforms: Cubelets Robot Blocks
-  tutorial_spherogreen_string_detail_platforms: Sphero BOLT, Sphero SPRK+, or Sphero
+  tutorial_firiacodebot_string_detail_platforms: Robot CodeBot
+  tutorial_modlighthouse_string_detail_platforms: Bloques robot Cubelets
+  tutorial_spherogreen_string_detail_platforms: Sphero BOLT, Sphero SPRK+ o Sphero
     Mini
   tutorial_ozopopstar_string_detail_platforms: Ozobot
   tutorial_eddesign_string_detail_platforms: Robot Edison
@@ -9498,25 +9582,27 @@ la:
   tutorial_rootunplugged_string_detail_platforms: ''
   tutorial_rgtreasure_string_detail_platforms: ''
   tutorial_peblioportraits_string_detail_platforms: ''
-  tutorial_rootcodebreak_string_detail_platforms: Root robot
+  tutorial_rootcodebreak_string_detail_platforms: Robot raíz
   tutorial_microbit14_string_detail_platforms: micro:bit
-  tutorial_barobomoon_string_detail_platforms: Barobo Arduino Starter Kit
+  tutorial_barobomoon_string_detail_platforms: Kit de inicio de Barobo Arduino
   tutorial_eddog_string_detail_platforms: Robot Edison
   tutorial_microbit15_string_detail_platforms: micro:bit
-  tutorial_unity_string_detail_platforms: Unity software
+  tutorial_unity_string_detail_platforms: Software Unity
   tutorial_blockscadtarget_string_detail_platforms: ''
   tutorial_tcadicicles_string_detail_platforms: ''
   tutorial_blockscadscale_string_detail_platforms: ''
   tutorial_tcadloops_string_detail_platforms: ''
-  tutorial_phidgets_string_detail_platforms: Phidgets Getting Started Kit, Phidgets
-    Distance Sensors.
+  tutorial_phidgets_string_detail_platforms: Kit de inicio de Phidgets, sensores de
+    distancia de Phidgets.
   tutorial_kcjmerry_string_detail_platforms: BBC micro:bit
-  tutorial_modvariables_string_detail_platforms: Cubelets Robot Blocks
+  tutorial_modvariables_string_detail_platforms: Bloques robot Cubelets
   tutorial_codestersmicro_string_detail_platforms: BBC micro:bit
   tutorial_codestersdata_string_detail_platforms: BBC micro:bit
   tutorial_ikodexmas_string_detail_platforms: Microsoft Kodu
   tutorial_rpisensehat_string_detail_platforms: Raspbian (software), SenseHAT
   tutorial_modtraits_string_detail_platforms: GoPiGo
+  tutorial_mee_string_detail_platforms: ''
+  tutorial_kuborobo_string_detail_platforms: Robot KUBO
   tutorial_scratchimagine_string_detail_programming_languages: Bloques
   tutorial_codesterspsa_string_detail_programming_languages: 'Python
 
@@ -9532,8 +9618,8 @@ la:
 '
   tutorial_scratchtales_string_detail_programming_languages: Bloques
   tutorial_msemoji_string_detail_programming_languages: JavaScript, Python, Lua, CoffeeScript
-  tutorial_cacolor_string_detail_programming_languages: Computational Thinking focused
-    so no language
+  tutorial_cacolor_string_detail_programming_languages: Pensamiento computacional
+    enfocado para que no haya lenguaje
   tutorial_kodablebeach_string_detail_programming_languages: Idioma independiente
     (se puede enseñar en varios idiomas)
   tutorial_tynkeren_string_detail_programming_languages: Bloques
@@ -9541,28 +9627,29 @@ la:
   tutorial_grasshopperhack_string_detail_programming_languages: JavaScript
   tutorial_pbskids_string_detail_programming_languages: Bloques
   tutorial_nclabdata_string_detail_programming_languages: Structured Query Language
-    (SQL), specifically PostgreSQL
+    (SQL), específicamente PostgreSQL
   tutorial_grasshopperphoto_string_detail_programming_languages: JavaScript
   tutorial_tynkerpyland_string_detail_programming_languages: 'Python
 
 '
   tutorial_codeitimages_string_detail_programming_languages: Bloques
-  tutorial_hyperpadenemy_string_detail_programming_languages: hyperPad Visual Programming
+  tutorial_hyperpadenemy_string_detail_programming_languages: programación visual
+    hyperPad
   tutorial_tynkerpro_string_detail_programming_languages: Bloques, JavaScript
   tutorial_trashtag_string_detail_programming_languages: Bloques
-  tutorial_casiege_string_detail_programming_languages: Security theory based
+  tutorial_casiege_string_detail_programming_languages: Basado en la teoría de seguridad
   tutorial_thunkableyeet_string_detail_programming_languages: Bloques
   tutorial_vidcodedeal_string_detail_programming_languages: JavaScript
   tutorial_codehsgeno_string_detail_programming_languages: 'Python
 
 '
-  tutorial_hyperpadpong_string_detail_programming_languages: hyperPad Visual Programming
+  tutorial_hyperpadpong_string_detail_programming_languages: programación visual hyperPad
   tutorial_tynkerland_string_detail_programming_languages: Bloques, JavaScript
   tutorial_trinketgirl_string_detail_programming_languages: 'Python
 
 '
   tutorial_rpimosquito_string_detail_programming_languages: Scratch
-  tutorial_tynkermars_string_detail_programming_languages: Blocks, JavaScript, Python,
+  tutorial_tynkermars_string_detail_programming_languages: Bloques, JavaScript, Python,
     HTML, CSS
   tutorial_cityx_string_detail_programming_languages: 'Python
 
@@ -9595,20 +9682,20 @@ la:
   tutorial_ccfirewall_string_detail_programming_languages: Bloques
   tutorial_htmljs_string_detail_programming_languages: JavaScript
   tutorial_ttaqueducts_string_detail_programming_languages: JavaScript, CoffeeScript
-  tutorial_vtgame_string_detail_programming_languages: Español (Latinoamérica)
+  tutorial_vtgame_string_detail_programming_languages: Inglés
   tutorial_baroborav_string_detail_programming_languages: Bloques, C/C++
   tutorial_baroboobstacle_string_detail_programming_languages: Bloques, C/C++
-  tutorial_pbstorytelling_string_detail_programming_languages: Twine (Harlowe variant)
-  tutorial_kibosnow_string_detail_programming_languages: Blocks, Tangible blocks (no
-    screen use)
-  tutorial_kibohappy_string_detail_programming_languages: Blocks, Tangible blocks
-    (no screen use)
-  tutorial_rubylove_string_detail_programming_languages: Blocks, Language independent
-    (can be taught in multiple languages)
+  tutorial_pbstorytelling_string_detail_programming_languages: Twine (variante Harlowe)
+  tutorial_kibosnow_string_detail_programming_languages: Bloques, bloques tangibles
+    (no utilizan pantalla)
+  tutorial_kibohappy_string_detail_programming_languages: Bloques, bloques tangibles
+    (no utilizan pantalla)
+  tutorial_rubylove_string_detail_programming_languages: Bloques, cualquier idioma
+    (se puede enseñar en varios idiomas)
   tutorial_spherosmiles_string_detail_programming_languages: Bloques, JavaScript
   tutorial_spherobaby_string_detail_programming_languages: Bloques, JavaScript
   tutorial_toxarchitect_string_detail_programming_languages: JavaScript
-  tutorial_idodge_string_detail_programming_languages: Simplified version of JavaScript
+  tutorial_idodge_string_detail_programming_languages: Versión más simple de JavaScript
   tutorial_firiacodebot_string_detail_programming_languages: 'Python
 
 '
@@ -9635,8 +9722,9 @@ la:
   tutorial_tcadicicles_string_detail_programming_languages: Bloques
   tutorial_blockscadscale_string_detail_programming_languages: Bloques
   tutorial_tcadloops_string_detail_programming_languages: Bloques
-  tutorial_phidgets_string_detail_programming_languages: Java, Phidgets support ALL
-    major programming languages. Can easily adapt this project to another language/environment.
+  tutorial_phidgets_string_detail_programming_languages: Java, Phidgets es compatible
+    con TODOS los principales lenguajes de programación. Se puede adaptar fácilmente
+    este proyecto a otro lenguaje o entorno.
   tutorial_kcjmerry_string_detail_programming_languages: Bloques
   tutorial_modvariables_string_detail_programming_languages: Idioma independiente
     (se puede enseñar en varios idiomas)
@@ -9651,6 +9739,9 @@ la:
 
 '
   tutorial_modtraits_string_detail_programming_languages: Bloques
+  tutorial_mee_string_detail_programming_languages: Bloques
+  tutorial_kuborobo_string_detail_programming_languages: Fichas que los estudiantes
+    reconstruyen
   school_not_found_heading: No pudimos encontrar su escuela. Por favor, ingresa más
     información.
   school_name: Nombre de la escuela

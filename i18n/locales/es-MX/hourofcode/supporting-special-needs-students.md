@@ -28,6 +28,6 @@ Si tu estudiante usa otras adaptaciones en las clases de tecnología, también p
 
 Los [tutoriales de Code.org](https://studio.code.org/) se pueden usar con o sin sonido. Todos los videos tienen subtítulos. Algunos estudiantes también pueden usar auriculares con un volumen más alto.
 
-## Aprender más
+## Conoce más
 
 Para saber más sobre la enseñanza de las ciencias de la computación y los estudiantes con necesidades especiales, recomendamos este [libro en línea]({{ supporting-special-needs-students/book }}).
