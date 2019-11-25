@@ -7,9 +7,9 @@
  */
 export const Unit6Intention = {
   NO: 'no',
-  YES_18_19: 'yes1819',
-  YES_19_20: 'yes1920',
-  YES_AFTER: 'yesAfter',
+  YES_SPRING_2020: 'yesSpring2020',
+  YES_FALL_2020: 'yesFall2020',
+  YES_SPRING_2021: 'yesSpring2021',
   UNSURE: 'unsure'
 };
 
