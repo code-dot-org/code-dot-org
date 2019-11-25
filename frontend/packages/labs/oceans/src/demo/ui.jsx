@@ -235,14 +235,16 @@ const styles = {
   },
   trainBot: {
     position: 'absolute',
-    height: '40%',
-    top: '28%',
-    left: '76%',
+    height: '100%',
+    top: 0,
+    left: '73%',
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    justifyContent: 'center'
   },
   trainBotHead: {
-    transition: 'transform 500ms'
+    transition: 'transform 500ms',
+    padding: '0 12px'
   },
   trainBotOpen: {
     transform: 'rotate(90deg)',

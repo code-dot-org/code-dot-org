@@ -370,7 +370,7 @@ const drawMovingFish = state => {
     const drawPolaroid = state.currentMode === Modes.Training;
     let size = 1;
     if (drawPolaroid && state.isRunning && x > midScreenX) {
-      size = 0.5;
+      size = 0.35;
       // Apply sine wave to y-value to make item jump into AI bot's head.
       y -= Math.sin((runtime / state.moveTime) * Math.PI) * 200;
     }
