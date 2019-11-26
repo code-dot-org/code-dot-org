@@ -1,6 +1,6 @@
 -# Gamelab-only fields for level edit page on levelbuilder
 - content_for(:head) do
-  %script{src: webpack_asset_path('js/levels/editors/_gamelab.js')}gi
+  %script{src: webpack_asset_path('js/levels/editors/_gamelab.js')}
 
 = render partial: 'levels/editors/fields/encrypted_examples', locals: {f: f, level_type: 'gamelab'}
 

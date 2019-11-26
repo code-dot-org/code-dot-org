@@ -50,7 +50,7 @@
     = render partial: 'levels/editors/fields/mini_rubric', locals: {f: f} if (@level.uses_droplet?) || @level.is_a?(Blockly) || @level.is_a?(Weblab)
     // Note that many DSL levels also use this partial. See _dsl.html.haml
     = render partial: 'levels/editors/fields/teacher_only_markdown', locals: {f: f} if (@level.uses_droplet?) || @level.is_a?(Blockly) || @level.is_a?(ExternalLink) || @level.is_a?(Weblab) || @level.is_a?(CurriculumReference) || @level.is_a?(StandaloneVideo)
-    = render partial: 'levels/editors/deprecated', locals: {f: f} unless @level.is_a? EvaluationMulti
+    = render partial: 'levels/editors/fields/deprecated', locals: {f: f} unless @level.is_a? EvaluationMulti
   .field
     = f.hidden_field :published
   .actions
