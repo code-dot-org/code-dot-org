@@ -20,7 +20,7 @@ import aiBotBody from '../../public/images/ai-bot/ai-bot-body.png';
 import aiBotClosed from '../../public/images/ai-bot/ai-bot-closed.png';
 import counterIcon from '../../public/images/polaroid-icon.png';
 import arrowDownImage from '../../public/images/arrow-down.png';
-import snail from '../../public/images/seaCreatures/Snail.png';
+import snail from '../../public/images/snail-large.png';
 import Typist from 'react-typist';
 import {getCurrentGuide, dismissCurrentGuide} from './models/guide';
 import {playSound} from './models/soundLibrary';
@@ -120,19 +120,18 @@ const styles = {
     top: '50%',
     bottom: 'initial',
     left: '50%',
-    padding: '2%'
+    padding: '2%',
+    borderRadius: 8
   },
   confirmationDialogContent: {
     display: 'flex',
     justifyContent: 'space-between'
   },
-  confirmationDialogText: {
-    width: '70%'
-  },
   confirmationDialogImg: {
-    maxWidth: '50%',
-    padding: '5%',
-    boxSizing: 'border-box'
+    position: 'absolute',
+    bottom: '-47%',
+    left: '-41%',
+    height: '100%'
   },
   confirmationHeader: {
     fontSize: '220%',
@@ -698,7 +697,7 @@ let ConfirmationDialog = class ConfirmationDialog extends React.Component {
         <div style={styles.confirmationDialog}>
           <div style={styles.confirmationDialogContent}>
             <img src={snail} style={styles.confirmationDialogImg} />
-            <div style={styles.confirmationDialogText}>
+            <div>
               <div
                 style={styles.confirmationHeader}
                 className="confirmation-text"
