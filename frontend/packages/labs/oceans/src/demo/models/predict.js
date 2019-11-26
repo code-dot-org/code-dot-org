@@ -10,9 +10,12 @@ export const init = () => {
   if (state.appMode === AppMode.CreaturesVTrashDemo) {
     fishData = fishData.concat(generateOcean(4, true, true, false));
     fishData = fishData.concat(generateOcean(3, false, false, true, 4));
+  } else if (state.appMode === AppMode.FishLong) {
+    fishData = generateOcean(200);
   } else {
     fishData = generateOcean(100);
   }
+
   setState({fishData});
 };
 
