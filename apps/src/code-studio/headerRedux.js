@@ -9,6 +9,7 @@ const SET_PROJECT_UPDATED_AT = 'header/SET_PROJECT_UPDATED_AT';
 const ENABLE_LEVEL_BUILDER_SAVE_BUTTON =
   'header/ENABLE_LEVEL_BUILDER_SAVE_BUTTON';
 const REFRESH_PROJECT_NAME = 'header/REFRESH_PROJECT_NAME';
+const CHECK_PROJECT_NAME = 'header/CHECK_PROJECT_NAME';
 const SHOW_TRY_AGAIN_DIALOG = 'header/SHOW_TRY_AGAIN_DIALOG';
 
 export const projectUpdatedStatuses = {
@@ -32,6 +33,7 @@ const initialState = {
   projectUpdatedAt: undefined,
   getLevelBuilderChanges: undefined,
   projectName: '',
+  projectNameError: undefined,
   includeExportInProjectHeader: false,
   showTryAgainDialog: false
 };
@@ -94,6 +96,15 @@ export default (state = initialState, action) => {
     };
   }
 
+  if (action.type === CHECK_PROJECT_NAME) {
+    // make ajax call. if name is safe, call REFRESH_PROJECT_NAME (make sure name is in the right place).
+    // if name is not safe...
+    return {
+      ...state,
+      projectNameError: action.nameError
+    };
+  }
+
   if (action.type === SHOW_TRY_AGAIN_DIALOG) {
     return {
       ...state,
@@ -149,6 +160,11 @@ export const setProjectUpdatedAt = updatedAt => ({
 
 export const refreshProjectName = () => ({
   type: REFRESH_PROJECT_NAME
+});
+
+export const checkProjectName = projectName => ({
+  type: CHECK_PROJECT_NAME,
+  projectName
 });
 
 export const setShowTryAgainDialog = visible => ({
