@@ -75,7 +75,7 @@ class GoogleChartWrapper extends React.Component {
         }
         break;
       default:
-        console.warn(`unknown Google Chart type: ${this.state.chartType}`);
+        console.warn(`unknown Google Chart type: ${this.props.chartType}`);
         break;
     }
     if (chart && chartData) {
