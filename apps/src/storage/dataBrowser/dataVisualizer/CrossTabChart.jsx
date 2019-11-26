@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import React from 'react';
 
 const styles = {
@@ -15,10 +14,11 @@ const styles = {
 
 class CrossTabChart extends React.Component {
   static propTypes = {
-    parsedRecords: PropTypes.array.isRequired,
+    records: PropTypes.array.isRequired,
     numericColumns: PropTypes.arrayOf(PropTypes.string).isRequired,
-    rowName: PropTypes.string.isRequired,
-    columnName: PropTypes.string.isRequired
+    chartTitle: PropTypes.string,
+    selectedColumn1: PropTypes.string,
+    selectedColumn2: PropTypes.string
   };
 
   /**
@@ -74,16 +74,16 @@ class CrossTabChart extends React.Component {
 
   render() {
     if (
-      !this.props.parsedRecords ||
-      !this.props.rowName ||
-      !this.props.columnName
+      !this.props.records ||
+      !this.props.selectedColumn1 ||
+      !this.props.selectedColumn2
     ) {
       return null;
     }
     const {chartData, columns} = this.createPivotTable(
-      this.props.parsedRecords,
-      this.props.rowName,
-      this.props.columnName
+      this.props.records,
+      this.props.selectedColumn1,
+      this.props.selectedColumn2
     );
 
     const numericValues = chartData
@@ -125,4 +125,4 @@ class CrossTabChart extends React.Component {
   }
 }
 
-export default Radium(CrossTabChart);
+export default CrossTabChart;
