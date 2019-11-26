@@ -1318,7 +1318,6 @@ ca:
             Dance Party:
               name: Festa de ball
         dance-extras:
-          title: Seguir ballant
           description: Anar més enllà de la primera hora amb idees desenvolupades
             del projecte.
         coursef-2019:
@@ -1525,7 +1524,6 @@ ca:
             For Loops:
               name: Per bucles
         dance-extras-2019:
-          title: Seguir ballant
           description: Anar més enllà de la primera hora amb idees desenvolupades
             del projecte.
         time4cs-control-unit-1:

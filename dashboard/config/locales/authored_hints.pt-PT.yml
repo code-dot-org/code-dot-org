@@ -157,52 +157,90 @@ pt-PT:
       CourseE_HOC 2018 Level_9b:
         voyage_aquatic_9a: Que bonito recife de coral! O coral azul é a maneira **direita**
           e certifica-te de que o coral vermelho não seja **esquerda**!
+      Dance_2019_01:
+        challenges: |-
+          **Desafios Opcionais**
+
+          -   Escolhe uma canção diferente para tocar.
+          -   Move o teu dançarino para uma nova localização.
+          -   Cria mais que um dançarino.
       Dance_2019_02:
         validation: |-
           **Como é que eu passo este nível?**
 
           -   O dançarino tem que realizar um movimento.
-          -   Precisas de premir um botão de direção.
+          -   Precisas de premir uma tecla direcional.
 
           _Este nível termina após 4 compassos._
         challenges: |-
           **Desafio Opcional**
 
-          -   Usa mais que um bloco <xml><block type="Dancelab_whenKey"><title name="KEY"></title></block></xml>.
+          Usa mais que um bloco <xml><block type="Dancelab_whenKey"><title name="KEY"></title></block></xml>.
       Dance_2019_03:
         validation: |-
           **Como é que eu passo este nível?**
 
-          -   Ambos os dançarinos têm que realizar um movimento.
-          -   Precisas de premir os botões de direção.
+          -   Ambos os dançarinos têm que desempenhar um movimento.
+          -   Precisas de premir as teclas direcionais.
 
-          _Este nível termina após 4 compassos._
+          _Este nível termina após 6 compassos._
+        challenges: |-
+          **Desafio Opcional**
+
+          -   Faz com que um dançarino responda às teclas direcionais esquerda e direita.
       Dance_2019_06:
         validation: |-
           **Como é que eu passo este nível?**
 
-          -   Cria um dançarino principal e um grupo de dançarinos secundários.
+          -   Cria um dançarino principal e um grupo de dançarinos secundários dentro dos primeiros 4 compassos da canção.
 
           _Este nível termina após 7 compassos._
+        challenges: |-
+          **Desafio Opcional**
+
+          -   Cria vários grupos de dançarinos secundários.
       Dance_2019_07:
         validation: |-
           **Como é que eu passo este nível?**
 
-          -   Altera o tamanho de pelo menos um dançarino após a música começar.
+          -   Altera o tamanho de pelo menos um dançarino.
 
           _Este nível termina após 6 compassos._
+        challenges: |-
+          **Desafio Opcional**
+
+          -   Faz experiências ao alterar outras propriedades tais como a largura e a rotação.
       Dance_2019_08:
         validation: |-
           **Como é que eu passo este nível?**
 
-          -   Troca a matiz da cor de pelo menos um dançarino.
+          -   Troca o tom da cor de pelo menos um dançarino.
 
           _Este nível termina após 6 compassos._
+        tint_hint: Reparaste que os teus dançarinos não trocam para a cor exata que
+          escolheste? Isto é porque as **tonalidades** misturaram a tua cor com as
+          cores do dançarino.
       Dance_2019_09:
         validation: |-
           **Como é que eu passo este nível?**
 
-          -   Apenas prime o botão "Terminar"!
+          -   Só tens de premir o botão "Terminar"!
+        repeat_every_ideas: |-
+          \*\* Precisas de ideias? \*\*
+
+          -   Muda repetidamente o tamanho dum dançarino para fazê-lo crescer.
+          -   Muda repetidamente a rotação dum dançarino para fazê-lo girar.
+
+          _Também podes usar números negativos para criar um efeito oposto!_
+        next_previous: |-
+          **Desafio Opcional**
+
+          -   Também podes usar este novo bloco de evento para percorrer uma lista de movimentos de dança ao definir o movimento para `(Aleatório)`, `(Avançar)` ou `(Anterior)`.
+              <xml><block type="Dancelab_changeMoveEachLR">
+              <title name="GROUP">???</title>
+              <title name="MOVE">"rand"</title>
+              <title name="DIR">-1</title>
+              </block></xml>
       Dance_Party_05:
         validation: |-
           **Como é que eu passo este nível?**

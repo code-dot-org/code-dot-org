@@ -43,6 +43,16 @@ class CertificateImageTest < Minitest::Test
     assert_image mc_certificate_image, 1754, 1235, 'PNG'
     hoc_certificate_image = create_course_certificate_image('Robot Tester', 'flappy')
     assert_image hoc_certificate_image, 1754, 1235, 'JPEG'
+    hoc_certificate_image_with_ampersand = create_course_certificate_image('Jeffrey & Peter', 'flappy')
+    assert_image hoc_certificate_image_with_ampersand, 1754, 1235, 'JPEG'
+    hoc_certificate_image_with_angle_bracket = create_course_certificate_image('amii <3', 'flappy')
+    assert_image hoc_certificate_image_with_angle_bracket, 1754, 1235, 'JPEG'
+    hoc_certificate_image_with_imagemagick_special_chars = create_course_certificate_image('@\n%', 'flappy')
+    assert_image hoc_certificate_image_with_imagemagick_special_chars, 1754, 1235, 'JPEG'
+    hoc_certificate_image_with_empty_name = create_course_certificate_image('', 'flappy')
+    assert_image hoc_certificate_image_with_empty_name, 1754, 1235, 'JPEG'
+    hoc_certificate_image_with_just_whitespace = create_course_certificate_image(" \n\t", 'flappy')
+    assert_image hoc_certificate_image_with_just_whitespace, 1754, 1235, 'JPEG'
     unspecified_course_image = create_course_certificate_image('Robot Tester', nil)
     assert_image unspecified_course_image, 1754, 1235, 'JPEG'
     blank_named_certificate_image = create_course_certificate_image('Robot Tester', 'course1', nil, 'Course 1')

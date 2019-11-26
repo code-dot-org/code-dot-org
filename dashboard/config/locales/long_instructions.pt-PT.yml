@@ -480,7 +480,14 @@ pt-PT:
       CourseE_HOC 2018 Level_9b: Chegaste ao recife de coral, agora procura o **Heart
         of the Sea** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
         ! Usa o coral azul e vermelho para alcançar o **baú** do tesouro ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
-      Dance_2019_03: Está na hora da dança! Programa cada dançarino de modo a mover-se
+      Dance_2019_02: "O bloco <xml><block type=\"Dancelab_whenKey\" block-text=\"when
+        up pressed\"></block></xml> permite-te executar o código quando primes as
+        teclas direcionais. \nUsa o bloco <xml><block type=\"Dancelab_doMoveEachLR\"
+        block-text=\"do once\"><title name=\"GROUP\">\"CAT\"</title><title name=\"MOVE\">MOVES.XClapSide</title><title
+        name=\"DIR\">-1</title></block></xml> para fazer o gato bater palmas!\n\n_Assegura-te
+        de que primes a tecla direcional para cima ou ![](<https://images.code.org/419e704e6841c0b696016bf5029b8cb9-image-1571864825506.06.45
+        PM.png>) depois de clicares no botão Executar!_"
+      Dance_2019_03: Está na hora da dança! Programa cada dançarino para se mover
         quando premires teclas diferentes. Escolhe o teu movimento preferido para
         cada dançarino ou defini-o para `(Aleatório)` para algo completamente imprevisível!
       Dance_2019_05: "_Agora já estamos a curtir!_ \n\nAdiciona um bloco <xml><block
@@ -493,14 +500,21 @@ pt-PT:
         &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title>\n
         \   <title name=\"LAYOUT\">\"circle\"</title>\n  </block></xml>\n\nAgora podes
         criar um monte de dançarinos secundários duma vez só!"
+      Dance_2019_07: |-
+        Cada dançarino tem um conjunto de _propriedades_ que controla a aparência dele.
+
+        Usa o <xml><block type="Dancelab_setPropEach" block-text="the set block"><title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title><title name="PROPERTY">"scale"</title><title name="VAL">???</title></block></xml> sob um bloco de evento verde para fazer com que os dançarinos apareçam mais próximos ou mais afastados.
+      Dance_2019_08: Os dançarinos têm uma propriedade "tonalidade" que pode adicionar
+        uma camada de cor. Tenta trocar o tom de cor dum dos teus dançarinos (ou dum
+        grupo inteiro)!
       Dance_2019_09: |-
-        Isto é um tipo especial de evento que é acionado repetidamente.
+        Este **novo bloco** é um tipo especial de evento que é acionado repetidamente.
 
         <xml><block type="Dancelab_everySeconds"><title name="N">2</title><title name="UNIT">"measures"</title></block></xml>
 
-        Os outros blocos novos na tua caixa de ferramentas permitem-te trocar progressivamente (ou aleatoriamente!) as propriedades dos dançarinos ao longo do tempo.
+        Ao colocar os outros blocos novos na tua caixa de ferramentas dentro do bloco de repetição, poderás mudar repetidamente as propriedades dos dançarinos ao longo do tempo. Sê criativo e diverte-te!
 
-        _Sê criativo e diverte-te!_
+        _Quando terminares, prime o botão Terminar._
       Dance_Party_02: |-
         Vamos pôr este alce a dançar!
 
@@ -527,6 +541,14 @@ pt-PT:
         Agora podes criar um grupo de dançarinos de uma só vez!
 
         Tenta usar alguns dos blocos "todos patos" para escrever o código que fará com que todos os patos dancem juntos.
+      Dance_Party_extras_alternate_2019: |-
+        # Ponham-se em formação!
+
+        Vê esta dança que usa o bloco [blockly block][0] para mudar a formação dos dançarinos secundários ao longo da dança. Experimenta uma destas ideias para estendê-la:
+
+        -   Cria um segundo grupo de dançarinos numa disposição diferente
+        -   Muda a disposição quando uma tecla é premida
+        -   Altera uma propriedade quando os dançarinos mudarem de formação
       Dance_Party_extras_battle: |-
         # Maltas da Dança
 
@@ -553,18 +575,14 @@ pt-PT:
         -   Experimenta com outras durações de notas (como 0,5 para uma mínima ou 0,125 para uma colcheia).
         -   Adiciona alguns eventos "após o compasso".
         -   Troca "compassos" por "segundos" e tenta sincronizar as tuas danças dessa maneira.
+      Dance_Party_extras_every_beat_2019: |-
+        # Acelera-a, Abranda-a
+
+        Esta dança final usa o bloco [blockly block][0] para controlar o quão rápido cada dançarino se mexe. Tenta experimentar com diferentes velocidades durante pontos diferentes na canção. Põe-te à vontade em mexericar nesta dança ou volta a qualquer uma das danças anteriores para torná-las mais fixes.
       Dance_Party_extras_layout: |-
         # Ponham-se em formação!
 
         Vê esta dança que usa o bloco "disposição" para mudar a formação dos dançarinos secundários ao longo da dança. Experimenta uma destas ideias para estendê-la:
-
-        -   Cria um segundo grupo de dançarinos numa disposição diferente
-        -   Muda a disposição quando uma tecla é premida
-        -   Altera uma propriedade quando os dançarinos mudarem de formação
-      Dance_Party_extras_layout_2019: |-
-        # Ponham-se em formação!
-
-        Vê esta dança que usa o bloco <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> para mudar a formação dos dançarinos secundários ao longo da dança. Experimenta uma destas ideias para estendê-la:
 
         -   Cria um segundo grupo de dançarinos numa disposição diferente
         -   Muda a disposição quando uma tecla é premida
@@ -584,7 +602,7 @@ pt-PT:
       Dance_Party_extras_speed_2019: |-
         # Acelera-a, Abranda-a
 
-        Esta dança final usa o bloco <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> para controlar o quão rápido cada dançarino se mexe. Tenta experimentar com diferentes velocidades durante pontos diferentes na canção. Põe-te à vontade em mexericar nesta dança ou volta a qualquer uma das danças anteriores para torná-las mais fixes.
+        Esta dança final usa o bloco [blockly block][0] para controlar o quão rápido cada dançarino se mexe. Tenta experimentar com diferentes velocidades durante pontos diferentes na canção. Põe-te à vontade em mexericar nesta dança ou volta a qualquer uma das danças anteriores para torná-las mais fixes.
       Dance_Party_extras_visible: |-
         # Para onde é que eles foram?
 

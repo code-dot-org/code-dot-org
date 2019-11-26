@@ -5078,6 +5078,11 @@ tr-TR:
       Dance_Party_11b: Şimdi dans zamanı! Sol ok tuşuna bastığınızda Kedi dab dansı
         yapar. Sağ ok tuşuna bastığınızda Robota "drop" figürü yaptırırsınız.
       Dance_Party_12: Havaya girin! Kendi dansınızı yaratın ve arkadaşlarınızla paylaşın.
+      Dance_Party_extras_alternate_2019: "# Formasyona girelim! Yedek dansçıların
+        dans boyunca formasyonunu değiştirmek için [blockly block][0] bloğunu kullanan
+        bu dansı izleyin. Genişletmek için bu fikirlerden birini deneyin: - Farklı
+        bir düzende ikinci bir dansçı grubu oluşturun - Bir tuşa basıldığında düzeni
+        değiştirin - Dansçılar formasyon değiştirdiğinde özelliği değiştirin"
       Dance_Party_extras_battle: |-
         # Dans Ekipleri
 
@@ -5104,6 +5109,11 @@ tr-TR:
         -   Diğer nota uzunluklarıyla denemeler yapın (örneğin yarım nota için 0,5 veya 1/8’lik nota için 0,125 değeri girin).
         -   Birkaç `ölçüden sonra` etkinliği ekleyin.
         -   "Ölçüler" değerini "saniyeler" ile değiştirerek danslarınızı böyle zamanlamayı deneyin.
+      Dance_Party_extras_every_beat_2019: "# Hızlandırın, Yavaşlatın Bu final dansı,
+        her dansçının ne kadar hızlı hareket ettiğini kontrol etmek için [blockly
+        block][0] bloğunu kullanır. Şarkının farklı noktaları sırasında farklı hızlarla
+        deneme yapmayı deneyin. Bu dansı takip etmeye devam etmekten çekinmeyin ya
+        da daha güzel olmaları için önceki danslardan birine geri dönün."
       Dance_Party_extras_layout: |-
         # Şimdi Giriş Düzeni!
 
@@ -5112,13 +5122,6 @@ tr-TR:
         -   Farklı bir düzende ikinci bir dansçı grubu oluşturun
         -   Bir tuşa basıldığında düzeni değiştirin
         -   Dansçılar dizilimi değiştirdiğinde bir özelliği değiştirin
-      Dance_Party_extras_layout_2019: '# Formasyona girelim! Yedek dansçıların dans
-        boyunca formasyonunu değiştirmek için <xml><block type="Dancelab_layoutSprites"
-        block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml>
-        bloğunu kullanan bu dansı izleyin. Genişletmek için bu fikirlerden birini
-        deneyin: - Farklı bir düzende ikinci bir dansçı grubu oluşturun - Bir tuşa
-        basıldığında düzeni değiştirin - Dansçılar formasyon değiştirdiğinde özelliği
-        değiştirin'
       Dance_Party_extras_on_beat: |-
         # Bas, Orta ve Tizler
 
@@ -5131,12 +5134,11 @@ tr-TR:
         # Hızlandır, Yavaşlat
 
         Bu son dans dansçıların hızını belirlemek için `hız ayarla` bloğunu kullanır. Şarkının farklı yerlerinde farklı hızlarla denemeler yapın. Bu dansta özgürce denemeler yapın veya daha önceki danslara dönerek onları daha da güzelleştirin.
-      Dance_Party_extras_speed_2019: '# Hızlandırın, Yavaşlatın Bu final dansı, her
-        dansçının ne kadar hızlı hareket ettiğini kontrol etmek için <xml><block type="Dancelab_setDanceSpeedEach"><title
-        name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> bloğunu
-        kullanır. Şarkının farklı noktaları sırasında farklı hızlarla deneme yapmayı
-        deneyin. Bu dansı takip etmeye devam etmekten çekinmeyin ya da daha güzel
-        olmaları için önceki danslardan birine geri dönün.'
+      Dance_Party_extras_speed_2019: "# Hızlandırın, Yavaşlatın Bu final dansı, her
+        dansçının ne kadar hızlı hareket ettiğini kontrol etmek için [blockly block][0]
+        bloğunu kullanır. Şarkının farklı noktaları sırasında farklı hızlarla deneme
+        yapmayı deneyin. Bu dansı takip etmeye devam etmekten çekinmeyin ya da daha
+        güzel olmaları için önceki danslardan birine geri dönün."
       Dance_Party_extras_visible: |-
         # Nereye gittiler?
 

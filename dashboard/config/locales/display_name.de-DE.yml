@@ -22,6 +22,9 @@ de-DE:
       CDEF_video_SpritesInAction_2019: Wie man einen Sprite erstellt
       CSD LEDs Map_2019: 'Circuit Playground: Einführung'
       CSD Problem Solving Process Video: 'Video: Ablauf Problemlösung'
+      CSD U2 CC Search Map: Creative Commons Suche
+      CSD U2 CC Search Map_2018: Creative Commons Suche
+      CSD U2 CC Search Map_2019: Creative Commons Suche
       CSD U2 Heading Demo: Einführung in Überschriften
       CSD U2 Heading Demo_2018: Einführung in Überschriften
       CSD U2 Heading Demo_2019: Einführung in Überschriften
@@ -31,6 +34,9 @@ de-DE:
       CSD U2 Pair Programming Video: Paarprogrammierung
       CSD U2 Pair Programming Video_2018: Paarprogrammierung
       CSD U2 Pair Programming Video_2019: Paarprogrammierung
+      CSD U2 a tag map: Hyperlinks
+      CSD U2 a tag map_2018: Hyperlinks
+      CSD U2 a tag map_2019: Hyperlinks
       CSD U2 challenge: Herausforderung
       CSD U2 challenge_2018: Herausforderung
       CSD U2 challenge_2019: Herausforderung
@@ -128,12 +134,14 @@ de-DE:
       CourseEF_video_IntroSpriteLab_2019: Hier ist das Sprite Lab
       CourseEF_video_MakeSprite: Wie man einen Sprite erstellt
       CourseEF_video_MakeSprite_2019: Wie man einen Sprite erstellt
+      Dance_Party_extras_alternate_2019: Hin und her
       Dance_Party_extras_battle: Tanz-Crews
       Dance_Party_extras_battle_2019: Tanz-Crews
       Dance_Party_extras_every_beat: Viertelnoten
       Dance_Party_extras_every_beat_2019: Viertelnoten
       Dance_Party_extras_layout: Formation einnehmen
       Dance_Party_extras_layout_2019: Formation einnehmen
+      Dance_Party_extras_mixed_2019: Mehr Interaktion
       Dance_Party_extras_on_beat: Bass, Mitten und Höhen
       Dance_Party_extras_on_beat_2019: Bass, Mitten und Höhen
       Dance_Party_extras_speed: Beschleunigen, verlangsamen
@@ -152,3 +160,5 @@ de-DE:
       courseB_video_Unspotted_2018: Unentdeckte Bugs
       csd U3 conditional statements video: 'Video: "Wenn/Sonst" Anweisungen'
       csd U3 conditional statements video_2019: 'Video: Bedingte Anweisungen'
+      scrat_loops_C-F_video: Schleifen im Ice Age Video
+      scrat_loops_C-F_video_2019: Schleifen im Ice Age Video

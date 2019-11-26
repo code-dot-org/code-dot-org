@@ -1767,6 +1767,13 @@ pt-BR:
           stages:
             Hour of Code 2015:
               name: Hora do Código 2015
+        oceans:
+          title: IA para oceanos
+          description: Descrição TBD.
+          description_short: Descrição curta TBD.
+          stages:
+            Oceans:
+              name: Oceanos
         CSPPD3-Unit3-pt2:
           stages:
             Challenge Overview:
@@ -2997,6 +3004,8 @@ pt-BR:
               name: Movimento sprite
             Conditionals:
               name: Condições
+            Keyboard Input:
+              name: Entrada do teclado
             Other Forms of Input:
               name: Outras formas de entrada
             Booleans Unplugged:
@@ -3151,6 +3160,8 @@ pt-BR:
               name: 'Projeto: Aplicativos e Resolução de Problemas'
             Human vs Computer Processing:
               name: Processamento humano versus computador
+            Input and Output:
+              name: Entrada e saída
             Processing:
               name: Processando
               description_student: Esta lição se aprofunda no conceito de processamento
@@ -3168,6 +3179,12 @@ pt-BR:
                 classe. Uma discussão de encerramento faz com que os alunos reflitam
                 sobre os diferentes tipos de solução de problemas usados nessas atividades
                 e o valor de produzir um algoritmo para resolver um problema.
+            Storage:
+              name: Armazenamento
+            Apps and Problem Solving:
+              name: Aplicativos e solução de problemas
+            Project - Propose an App:
+              name: Projeto - Propor um Aplicativo
             CS Discoveries Rapid Survey:
               name: Pesquisa rápida do CS Discoveries
         csp-online-test:
@@ -3374,6 +3391,8 @@ pt-BR:
               name: Propriedade intelectual e imagens
             Project - Multi-Page Websites:
               name: Projeto - Sites com várias páginas
+            RGB Colors and Classes:
+              name: Cores e classes RGB
             Project - Personal Portfolio Website:
               name: Projeto - Site do portfólio pessoal
         csp2-support:
@@ -3726,6 +3745,8 @@ pt-BR:
               name: Introdução
             Ice Age Play Lab:
               name: Laboratório da Era do Gelo
+            Conditionals and Functions in Bee:
+              name: Condicionais e funções na abelha
             'Algorithms: Tangrams':
               name: 'Algoritmos: tangrams'
         classic-hoc-impact-study:
@@ -4544,10 +4565,14 @@ pt-BR:
               name: Booleanos e Condicionais
             Conditionals:
               name: Condições
+            Taking Input:
+              name: Recebendo Entrada
             Complex Conditionals:
               name: Condicionais Complexos
             'Project: Interactive Card':
               name: 'Projeto: Cartão Interativo'
+            Keyboard Input:
+              name: Entrada do teclado
             Other Forms of Input:
               name: Outras formas de entrada
             Velocity:
@@ -4604,6 +4629,7 @@ pt-BR:
             Structuring Data:
               name: Estruturação de dados
         csd3-old:
+          title: CSD Unidade 3 (descontinuada)
           description: Este é o rascunho original da Unidade 3 de CSD, lançado no
             outono de 2016. A menos que você tenha estudantes atualmente usando este
             curso, você deve usar a versão atualizada desta unidade em studio.code.org/s/csd3
@@ -4696,6 +4722,8 @@ pt-BR:
               name: Estilizando elementos com CSS
             Sources and Search Engines:
               name: Fontes e mecanismos de pesquisa
+            RGB Colors and Classes:
+              name: Cores e classes RGB
             Project - Personal Portfolio Website:
               name: Projeto - Site do portfólio pessoal
             Headers:
@@ -4718,6 +4746,14 @@ pt-BR:
               name: Entradas e saídas
             Processing:
               name: Processando
+            Storage:
+              name: Armazenamento
+            Apps and Problem Solving:
+              name: Aplicativos e solução de problemas
+            Project - Propose an App:
+              name: Projeto - Propor um Aplicativo
+            Input and Output:
+              name: Entrada e saída
         csd3-chapters:
           stages:
             Programming for Entertainment:
@@ -4742,6 +4778,8 @@ pt-BR:
               name: Booleanos e Condicionais
             Conditionals:
               name: Condições
+            Keyboard Input:
+              name: Entrada do teclado
             Other Forms of Input:
               name: Outras formas de entrada
             'Project: Interactive Card':
@@ -4762,6 +4800,8 @@ pt-BR:
               name: Usando o processo de design de jogos
             'Project: Design a Game':
               name: Projeto - Projetar um Jogo
+            'Chapter 1: Images and Animation':
+              name: 'Capítulo 1: Imagens e Animação'
             'null':
               name: nulo
         coursef-ramp:
@@ -4774,6 +4814,8 @@ pt-BR:
               name: Laboratório da Era do Gelo
             Functions in Farmer:
               name: Funções no Fazendeiro
+            Conditionals and Functions in Bee:
+              name: Condicionais e funções na abelha
         csppostsurvey-staging:
           stages:
             Participate in a longitudinal study!:
@@ -5083,6 +5125,8 @@ pt-BR:
                 verdadeiras sempre que seu código for executado.\n\n"
             Conditionals in Bee:
               name: Estruturas condicionais em abelhas
+              description_student: 'Agora que você entende os condicionais, é hora
+                de programar a Abelha para coletar mel e néctar. '
               description_teacher: Até esse momento, os alunos escreviam um código
                 que é executado exatamente da mesma maneira cada vez que é executado
                 - confiável, mas não muito flexível. Nesta lição, sua classe começará
@@ -5147,6 +5191,8 @@ pt-BR:
               name: Laços Para no Artista
             Songwriting with Parameters:
               name: Composição de música com parâmetros
+            Conditionals and Functions in Bee:
+              name: Condicionais e funções na abelha
             Functions with Parameters in Artist:
               name: Funções com parâmetros no Artista
             Functions with Parameters in Bee:
@@ -5267,6 +5313,8 @@ pt-BR:
               name: Laços Para no Artista
             Songwriting with Parameters:
               name: 'Funções: Composição musical com parâmetros'
+            Conditionals and Functions in Bee:
+              name: Condicionais e funções na abelha
             Functions with Parameters in Artist:
               name: Funções com parâmetros no Artista
             Functions with Parameters in Bee:
@@ -6241,6 +6289,8 @@ pt-BR:
               name: Booleanos off-line
             Conditionals:
               name: Condições
+            Keyboard Input:
+              name: Entrada do teclado
             Other Forms of Input:
               name: Outras formas de entrada
             Project - Interactive Card:
@@ -6295,6 +6345,8 @@ pt-BR:
               name: Booleanos off-line
             Conditionals:
               name: Condições
+            Keyboard Input:
+              name: Entrada do teclado
             Other Forms of Input:
               name: Outras formas de entrada
             Project - Interactive Card:
@@ -6339,6 +6391,8 @@ pt-BR:
               name: Estilizando elementos com CSS
             Sources and Search Engines:
               name: Fontes e mecanismos de pesquisa
+            RGB Colors and Classes:
+              name: Cores e classes RGB
             Project - Personal Portfolio Website:
               name: Projeto - Site do portfólio pessoal
         coursea-2018:
@@ -6887,8 +6941,16 @@ pt-BR:
               name: Explorando a solução de problemas
             What is a Computer?:
               name: O que é um computador?
+            Input and Output:
+              name: Entrada e saída
             Processing:
               name: Processando
+            Storage:
+              name: Armazenamento
+            Apps and Problem Solving:
+              name: Aplicativos e solução de problemas
+            Project - Propose an App:
+              name: Projeto - Propor um Aplicativo
         csd4-2018:
           stages:
             Analysis of Design:
@@ -7368,7 +7430,6 @@ pt-BR:
             Unit 4 Assessment:
               name: Unidade 4 Avaliação
         dance-extras:
-          title: Continue dançando
           description: Vá além da primeira hora com ideias de projeto estendido.
         coursef-2019:
           description_short: Aprenda todos os conceitos Fundamentais da Ciência da
@@ -7482,6 +7543,8 @@ pt-BR:
               description_student: É hora de jogar um jogo em que você ganha pontos
                 apenas sob certas condições!
             Conditionals in Bee:
+              description_student: 'Agora que você entende os condicionais, é hora
+                de programar a Abelha para coletar mel e néctar. '
               description_teacher: Até esse momento, os alunos escreviam um código
                 que é executado exatamente da mesma maneira cada vez que é executado
                 - confiável, mas não muito flexível. Nesta lição, sua classe começará
@@ -7702,8 +7765,12 @@ pt-BR:
               name: Explorando a solução de problemas
             What is a Computer?:
               name: O que é um computador?
+            Input and Output:
+              name: Entrada e saída
             Processing:
               name: Processando
+            Project - Propose an App:
+              name: Projeto - Propor um Aplicativo
             Post-Project Test:
               name: Teste pós-projeto
         andrea-test:
@@ -7993,6 +8060,8 @@ pt-BR:
               name: Estilizando elementos com CSS
             Sources and Search Engines:
               name: Fontes e mecanismos de pesquisa
+            RGB Colors and Classes:
+              name: Cores e classes RGB
             Project - Personal Portfolio Website:
               name: Projeto - Site do portfólio pessoal
             Post-Project Test:
@@ -8022,6 +8091,8 @@ pt-BR:
               name: Booleanos off-line
             Conditionals:
               name: Condições
+            Keyboard Input:
+              name: Entrada do teclado
             Other Forms of Input:
               name: Outras formas de entrada
             Project - Interactive Card:
@@ -8718,8 +8789,12 @@ pt-BR:
               name: Explorando a solução de problemas
             What is a Computer?:
               name: O que é um computador?
+            Input and Output:
+              name: Entrada e saída
             Processing:
               name: Processando
+            Project - Propose an App:
+              name: Projeto - Propor um Aplicativo
             Post-Project Test:
               name: Teste pós-projeto
         csd2-pilot:
@@ -8746,6 +8821,8 @@ pt-BR:
               name: Estilizando elementos com CSS
             Sources and Search Engines:
               name: Fontes e mecanismos de pesquisa
+            RGB Colors and Classes:
+              name: Cores e classes RGB
             Project - Personal Portfolio Website:
               name: Projeto - Site do portfólio pessoal
             Post-Project Test:
@@ -8781,6 +8858,8 @@ pt-BR:
               name: Booleanos off-line
             Conditionals:
               name: Condições
+            Keyboard Input:
+              name: Entrada do teclado
             Other Forms of Input:
               name: Outras formas de entrada
             Project - Interactive Card:
@@ -8833,8 +8912,12 @@ pt-BR:
           stages:
             What is a Computer?:
               name: O que é um computador?
+            Input and Output:
+              name: Entrada e saída
             Processing:
               name: Processando
+            Project - Propose an App:
+              name: Projeto - Propor um Aplicativo
             Post-Project Test:
               name: Teste pós-projeto
         csp2-pilot:
@@ -8911,7 +8994,6 @@ pt-BR:
             For Loops:
               name: Laços para
         dance-extras-2019:
-          title: Continue dançando
           description: Vá além da primeira hora com ideias de projeto estendido.
         csp10-pilot:
           stages:

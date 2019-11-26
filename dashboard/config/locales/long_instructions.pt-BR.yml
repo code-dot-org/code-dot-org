@@ -11139,6 +11139,15 @@ pt-BR:
 
         -   Veja a instrução `if` dentro do loop de desenho que verifica se a barra de espaço foi pressionada. ([Mostre-me onde] [0])
         -   Use o bloco `velocidadeDeRotacao` para que a roda de cor comece a girar quando o usuário pressionar a barra de espaço.
+      CSD U3 abstraction rotation control_2019: |-
+        # Controlando a Velocidade
+
+        Você usou `velocidadeDeRotacao` fora do laço de desenho para fazer sua figura girar quando seu programa foi iniciado. Você também pode usar `velocidadeDeRotacao` **dentro** do laço de desenho para alterar a velocidade da figura durante o jogo. Por exemplo, uma figura pode começar a girar quando o usuário pressionar a barra de espaço, e continuar girando até que receba um comando para parar.
+
+        # Faça isso
+
+        -   Veja a instrução `if` dentro do laço de desenho, que verifica se a barra de espaço foi pressionada. ( [Mostre-me onde](#triggercallout=code_triggered1) )
+        -   Use o bloco `velocidadeDeRotacao` para fazer a roda colorida começar a girar quando o usuário pressionar a barra de espaço.
       CSD U3 abstraction rotation_2018: |-
         # Velocidade de rotação
 
@@ -15744,6 +15753,30 @@ pt-BR:
         -   Adicione um manipulador de eventos para "botao\\ \_on"
         -   Coloque um _laço de repetição for_ no seu manipulador de eventos que se repita até chegar ao final do array `colorLeds`
         -   Dentro do loop for, chame `colorLeds[i].on()` para ativar o LED de cor atual
+      CSD U6 for loop led on_2018: |-
+        # Ligando Todos os LEDs Coloridos
+
+        Agora que você sabe como usar um _laço de repetição for_ para processar todos os elementos em um vetor, você pode ativar todos os LEDs coloridos com muito mais facilidade do que antes.
+
+        # Faça Isto
+
+        Nos próximos níveis, você irá criar um aplicativo que controla todos os LEDs coloridos em sua placa. O primeiro passo é conectar o botão que liga todos os LEDs. (Não se preocupe com o restante dos comentários na área de trabalho. Você irá trabalhar com eles nos próximos níveis.)
+
+        -   Adicione um manipulador de eventos para "botao\\ \_on"
+        -   Coloque um _laço de repetição for_ no seu manipulador de eventos para que se repita até chegar ao final do vetor `ledsColoridos`
+        -   Dentro do laço for, chame `ledsColoridos[i].on()` para ativar o LED corrent
+      CSD U6 for loop led on_2019: |-
+        # Ligando Todos os LEDs Coloridos
+
+        Agora que você sabe como usar um _laço de repetição for_ para processar todos os elementos em um vetor, você pode ativar todos os LEDs coloridos com muito mais facilidade do que antes.
+
+        # Faça Isto
+
+        Nos próximos níveis, você irá criar um aplicativo que controla todos os LEDs coloridos em sua placa. O primeiro passo é conectar o botão que liga todos os LEDs. (Não se preocupe com o restante dos comentários na área de trabalho. Você irá trabalhar com eles nos próximos níveis.)
+
+        -   Adicione um manipulador de eventos para "botao\\ \_on"
+        -   Coloque um _laço de repetição for_ no seu manipulador de eventos para que se repita até chegar ao final do vetor `ledsColoridos`
+        -   Dentro do laço for, chame `ledsColoridos[i].on()` para ativar o LED corrent
       CSD U6 for loop led personalize_2019: |-
         # Faça Você Mesmo
 
@@ -18417,6 +18450,56 @@ pt-BR:
         # Faça isso
 
         -   Altere o código para que o ícone e sua cor sejam escolhidos usando a variável "myIndex".
+      CSDU6 buzzer 2d arrays_2018: |-
+        # Desafio: Vetores 2D
+
+        Vetores podem armazenar qualquer tipo de dados, como números, cadeias de caracteres, e até outros vetores. Quando colocamos um vetor no interior de outro, ele se torna um vetor 2D. O bloco `buzzer.tocarMusica()` pode ser usado para tocar músicas que parecem mais precisas com vetores 2D.
+
+        A estrutura que você tem usado para tocar notas se parece com isto:
+
+        `buzzer.tocarMusica( [vetor de notas para tocar] , duração da música completa);`
+
+        A principal diferença com `buzzer.tocarMusica()` é que cada elemento dentro de `[vetor de notas para tocar]` é um vetor com dois elementos: a nota que você quer tocar, e a duração da nota. Às vezes você irá querer uma semicolcheia na sua música, outras vezes você irá querer uma mínima, ou talvez algo no meio termo. Uma música completa poderia se parecer com isto:
+
+        `buzzer.tocarMusica([
+          ["G3",0.25],
+          ["C4",0.25],
+          ["E4",0.25],
+          ["G4",0.125],
+          [null,0.375],
+          ["E4",0.1875],
+          ["G4",1]
+        ], 120);`
+
+        # Faça isto
+
+        -   Use o bloco `buzzer.tocarMusica()` para criar uma música diferente.
+        -   Quando você estiver confortável com a estrutura, adicione mais notas à música.
+      CSDU6 buzzer 2d arrays_2019: |-
+        # Desafio: Vetores 2D
+
+        Vetores podem armazenar qualquer tipo de dados, como números, cadeias de caracteres, e até outros vetores. Quando colocamos um vetor no interior de outro, ele se torna um vetor 2D. O bloco `buzzer.tocarMusica()` pode ser usado para tocar músicas que parecem mais precisas com vetores 2D.
+
+        A estrutura que você tem usado para tocar notas se parece com isto:
+
+        `buzzer.tocarMusica( [vetor de notas para tocar] , duração da música completa);`
+
+        A principal diferença com `buzzer.tocarMusica()` é que cada elemento dentro de `[vetor de notas para tocar]` é um vetor com dois elementos: a nota que você quer tocar, e a duração da nota. Às vezes você irá querer uma semicolcheia na sua música, outras vezes você irá querer uma mínima, ou talvez algo no meio termo. Uma música completa poderia se parecer com isto:
+
+        `buzzer.tocarMusica([
+          ["G3",0.25],
+          ["C4",0.25],
+          ["E4",0.25],
+          ["G4",0.125],
+          [null,0.375],
+          ["E4",0.1875],
+          ["G4",1]
+        ], 120);`
+
+        # Faça isto
+
+        -   Use o bloco `buzzer.tocarMusica()` para criar uma música diferente.
+        -   Quando você estiver confortável com a estrutura, adicione mais notas à música.
       CSDU6 buzzer.stop_2018: |-
         # Parando a música
 
@@ -19430,6 +19513,14 @@ pt-BR:
         da seta para a direita.
       Dance_Party_12: Entre no ritmo! Crie sua própria dança para compartilhar com
         seus amigos.
+      Dance_Party_extras_alternate_2019: |-
+        # Vamos entrar em formação!
+
+        Veja esta dança que usa o [bloco blockly][0] para alterar a formação dos dançarinos de apoio ao longo da dança. Tente uma destas idéias para estendê-lo:
+
+        -   Crie um segundo grupo de dançarinos em um layout diferente
+        -   Alterar layout quando uma tecla é pressionada
+        -   Alterar uma propriedade quando os dançarinos mudam de formação
       Dance_Party_extras_battle: |-
         # Equipes de dança
 
@@ -19456,6 +19547,10 @@ pt-BR:
         -   Experimente outras durações de notas (como 0,5 para uma mínima ou 0,125 para uma colcheia).
         -   Adicione alguns eventos `após o compasso`.
         -   Troque "compassos" por "segundos" e tente sincronizar suas danças dessa maneira.
+      Dance_Party_extras_every_beat_2019: |-
+        # Acelere, diminua a velocidade
+
+        Essa dança final usa o [bloco blockly][0] para controlar a rapidez com que cada dançarino se move. Tente experimentar velocidades diferentes durante pontos diferentes da música. Sinta-se à vontade para continuar mexendo nessa dança ou retornar a qualquer uma das danças anteriores para torná-las ainda mais legais.
       Dance_Party_extras_layout: |-
         # Vamos entrar em formação!
 
@@ -19465,13 +19560,20 @@ pt-BR:
         -   Mude o layout quando uma tecla é pressionada
         -   Altere uma propriedade quando os dançarinos mudam de formação
       Dance_Party_extras_layout_2019: |-
-        # Vamos entrar em formação!
+        # Vamos Entrar em Formação!
 
-        Veja esta dança que usa o <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> para alterar a formação dos dançarinos de apoio ao longo da dança. Tente uma destas idéias para estendê-lo:
+        Veja esta dança que usa o [bloco blockly][0] para alterar a formação dos participantes de apoio ao longo da dança. Tente uma destas idéias para estendê-lo:
 
         -   Crie um segundo grupo de dançarinos em um layout diferente
-        -   Alterar layout quando uma tecla é pressionada
-        -   Alterar uma propriedade quando os dançarinos mudam de formação
+        -   Altere o layout quando uma tecla é pressionada
+        -   Altere uma propriedade quando os dançarinos trocam de formação
+      Dance_Party_extras_mixed_2019: |-
+        # Mais botões
+
+        Essa dança permite controlar as propriedades dos dançarinos em tempo real enquanto eles dançam automaticamente. Tente fazer outras propriedades mudarem quando você pressiona os botões. Por exemplo:
+
+        -   Aleatorize a tonalidade do dançarino quando você pressiona "para baixo".
+        -   Adicione um grupo de dançarinos com um layout aleatório ao pressionar "espaço".
       Dance_Party_extras_on_beat: |-
         # Grave, médio e agudo
 
@@ -19487,7 +19589,7 @@ pt-BR:
       Dance_Party_extras_speed_2019: |-
         # Acelere, diminua a velocidade
 
-        Essa dança final usa o <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> para controlar a rapidez com que cada dançarino se move. Tente experimentar velocidades diferentes durante pontos diferentes da música. Sinta-se à vontade para continuar mexendo nessa dança ou retornar a qualquer uma das danças anteriores para torná-las ainda mais legais.
+        Essa dança final usa o [bloco blockly][0] para controlar a rapidez com que cada dançarino se move. Tente experimentar velocidades diferentes durante pontos diferentes da música. Sinta-se à vontade para continuar mexendo nessa dança ou retornar a qualquer uma das danças anteriores para torná-las ainda mais legais.
       Dance_Party_extras_visible: |-
         # Onde eles foram?
 

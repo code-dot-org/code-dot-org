@@ -295,6 +295,8 @@ de:
           description: Lerne funktionales Programmieren mithilfe von Algebra
           description_short: Lerne funktionales Programmieren mithilfe von Algebra
           stages:
+            'Calc: Defining Variables':
+              name: Variablen definieren und ersetzen
             'Eval: Boolean Operators':
               name: Boolesche Operatoren
             'Eval: Conditionals':
@@ -588,12 +590,18 @@ de:
               name: Was ist ECS?
         sciencePD:
           stages:
+            Introduction to Complex Adaptive Systems:
+              name: Einführung in komplexe adaptive Systeme
             Introduction to Computational Science:
               name: Einführung in die Informatik
             Introduction to StarLogo Nova:
               name: Einführung in StarLogo Nova
             The Tutorial:
               name: Das Tutorial
+            Using Computer Models in Science:
+              name: Einsatz von Computermodellen in der Wissenschaft
+            Using Models in the Classroom:
+              name: Verwendung von Modellen im Klassenzimmer
             What to Expect:
               name: Was Sie erwartet
         rbo-reference:
@@ -603,22 +611,38 @@ de:
         cspunit3:
           description_short: Programmierung
           stages:
+            Compound Conditional Logic:
+              name: Verbundene bedingte Logik
+            Controlling Memory with Variables:
+              name: Speicher mit Variablen steuern
             Creating Functions:
               name: Funktionen erstellen
             Creating functions with Parameters:
               name: Funktionen mit Parametern erstellen
+            Digital Assistant Project:
+              name: Projekt zu Digitale Assistenten
             Events Unplugged:
               name: Offline-Events
             Functions with Return Values:
               name: Funktion mit Rückgabewerten
             Image Scroller with Key Events:
               name: Bildlaufleiste mit Tastaturereignissen
+            Introducing Design Mode:
+              name: Einführung in den Designmodus
             Introduction to Arrays:
               name: Einführung in Arrays
             Introduction to Conditional Logic:
               name: Einführung in Bedingungslogik
+            Introduction to Digital Assistants:
+              name: Einführung in die digitalen Assistenten
+            Looping and Random Numbers:
+              name: Schleifen- und Zufallszahlen
             Loops and Simulations:
               name: Schleifen und Simulationen
+            User Input and Strings:
+              name: Benutzereingaben und Zeichenketten
+            Using Simple Commands:
+              name: Einfache Befehle verwenden
             While Loops:
               name: Solange-Schleifen
         algebraPD3:
@@ -669,22 +693,34 @@ de:
               name: Warum Informatik zur Algebra gehört
         sciencePD-NexTech:
           stages:
+            Introduction to Complex Adaptive Systems:
+              name: Einführung in komplexe adaptive Systeme
             Introduction to Computational Science:
               name: Einführung in die Informatik
             Introduction to StarLogo Nova:
               name: Einführung in StarLogo Nova
             The Tutorial:
               name: Das Tutorial
+            Using Computer Models in Science:
+              name: Einsatz von Computermodellen in der Wissenschaft
+            Using Models in the Classroom:
+              name: Verwendung von Modellen im Klassenzimmer
             What to Expect:
               name: Was Sie erwartet
         sciencePD-iZone:
           stages:
+            Introduction to Complex Adaptive Systems:
+              name: Einführung in komplexe adaptive Systeme
             Introduction to Computational Science:
               name: Einführung in die Informatik
             Introduction to StarLogo Nova:
               name: Einführung in StarLogo Nova
             The Tutorial:
               name: Das Tutorial
+            Using Computer Models in Science:
+              name: Einsatz von Computermodellen in der Wissenschaft
+            Using Models in the Classroom:
+              name: Verwendung von Modellen im Klassenzimmer
             What to Expect:
               name: Was Sie erwartet
         sciencePD2:
@@ -778,6 +814,8 @@ de:
               name: Video
             Mini Rubric:
               name: Mini Rubrik
+            Contained Levels:
+              name: Enthaltenen Level
         algebraPD2b:
           description: 'Phase 2 Online: Gemischtes Sommerstudium'
           description_short: 'Phase 2 Online: Gemischtes Sommerstudium'
@@ -1054,11 +1092,16 @@ de:
               name: Grundschaltungen
         Special Fun:
           description_audience: 'Alter: 10-18'
+          stages:
+            Halloween 2015:
+              name: Halloween 2015
         SpecialSeries:
           description_audience: 'Alter: 10-18'
           stages:
             Spring 2016:
               name: Frühling 2016
+            Halloween 2015:
+              name: Halloween 2015
         iceage:
           title: Ice Age Spielelabor
           description: Erstelle eine Geschichte oder ein Spiel mit dem Spielelabor!
@@ -1325,6 +1368,10 @@ de:
           stages:
             Creating Functions:
               name: Funktionen erstellen
+            Looping and Random Numbers:
+              name: Schleifen- und Zufallszahlen
+            Using Simple Commands:
+              name: Einfache Befehle verwenden
             Creating Functions with Parameters:
               name: Funktionen mit Parametern erstellen
         csp4-2017:
@@ -1339,18 +1386,30 @@ de:
         csp5-2017:
           title: CSP Lektion 5 - Apps erstellen ('17-'18)
           stages:
+            Compound Conditional Logic:
+              name: Verbundene bedingte Logik
+            Controlling Memory with Variables:
+              name: Speicher mit Variablen steuern
+            Digital Assistant Project:
+              name: Projekt zu Digitale Assistenten
             Events Unplugged:
               name: Offline-Events
             Functions with Return Values:
               name: Funktion mit Rückgabewerten
             Image Scroller with Key Events:
               name: Bildlaufleiste mit Tastaturereignissen
+            Introducing Design Mode:
+              name: Einführung in den Designmodus
             Introduction to Arrays:
               name: Einführung in Arrays
             Introduction to Conditional Logic:
               name: Einführung in Bedingungslogik
+            Introduction to Digital Assistants:
+              name: Einführung in die digitalen Assistenten
             Loops and Simulations:
               name: Schleifen und Simulationen
+            User Input and Strings:
+              name: Benutzereingaben und Zeichenketten
             While Loops:
               name: Solange-Schleifen
             Unit 3 Assessment 3:
@@ -1370,12 +1429,18 @@ de:
               name: Geschwindigkeit
         2016_sciencePD_phase1:
           stages:
+            Introduction to Complex Adaptive Systems:
+              name: Einführung in komplexe adaptive Systeme
             Introduction to Computational Science:
               name: Einführung in die Informatik
             Introduction to StarLogo Nova:
               name: Einführung in StarLogo Nova
             The Tutorial:
               name: Das Tutorial
+            Using Computer Models in Science:
+              name: Einsatz von Computermodellen in der Wissenschaft
+            Using Models in the Classroom:
+              name: Verwendung von Modellen im Klassenzimmer
             What to Expect:
               name: Was Sie erwartet
         TEMP CSD Unit 3:
@@ -1392,12 +1457,18 @@ de:
               name: Warum Informatik zur Algebra gehört
         sciencePD1:
           stages:
+            Introduction to Complex Adaptive Systems:
+              name: Einführung in komplexe adaptive Systeme
             Introduction to Computational Science:
               name: Einführung in die Informatik
             Introduction to StarLogo Nova:
               name: Einführung in StarLogo Nova
             The Tutorial:
               name: Das Tutorial
+            Using Computer Models in Science:
+              name: Einsatz von Computermodellen in der Wissenschaft
+            Using Models in the Classroom:
+              name: Verwendung von Modellen im Klassenzimmer
             What to Expect:
               name: Was Sie erwartet
         cspunit1-support:
@@ -1408,8 +1479,26 @@ de:
               name: Einführung in Einheit
             Sending Binary Messages:
               name: Binäre Nachrichten senden
+        test-teaching-ap-cs-unit-1:
+          stages:
+            test Unit 1 content module Alpha:
+              name: Test für Lerneinheit 1 Inhaltsmodul Alpha
+            test Unit 1 content module Bravo:
+              name: Test für Lerneinheit 1 Inhaltsmodul Bravo
+            test Unit 1 content module Charlie:
+              name: Test für Lerneinheit 1 Inhaltsmodul Charlie
+            test Unit 1 practice module Delta:
+              name: Test für Lerneinheit 1 Inhaltsmodul Delta
+            test Unit 1 practice module Echo:
+              name: testeinheit 1 Inhaltsmodul Echo
+            test Unit 1 practice module Foxtrot:
+              name: Test für Lerneinheit 1 Inhaltsmodul Foxtrott
+            test Unit 1 required reading:
+              name: testeinheit 1 erfordert Lesefähigkeiten
         allthehiddenthings:
           stages:
+            Contained Levels:
+              name: Enthaltenen Level
             Game Lab:
               name: Spielelabor
         cspunit1-support-test:
@@ -1434,6 +1523,8 @@ de:
               name: Digitaler Fußabdruck
             Images on the Web:
               name: Bilder im Web
+            Headers and Lists:
+              name: Überschriften und Listen
             Designing Web Pages:
               name: Webseiten entwerfen
             Holding:
@@ -1454,6 +1545,10 @@ de:
               name: Künstler Funktionen
         artistExemplar:
           description_audience: 'Alter: 8-18'
+        teachercon:
+          stages:
+            Lesson 1,10:
+              name: 'Lektion 1.10: Router und Redundanz'
         kinderTest:
           stages:
             'Bee: Conditionals':
@@ -1732,6 +1827,10 @@ de:
           stages:
             Bounce:
               name: Bounce
+        sample-csp5:
+          stages:
+            Controlling Memory with Variables:
+              name: Speicher mit Variablen steuern
         hoc-encryption:
           stages:
             Simple Encryption:
@@ -1947,8 +2046,12 @@ de:
               name: Kram
             Lists:
               name: Listen
+            Lights:
+              name: Lichter
             For Loops:
               name: '"Zähle mit"-Schleifen'
+            List and For Loops:
+              name: Listen und 'For'-Schleifen
             Functions with Parameters:
               name: Funktionen mit Parametern
         workshop-gamelab:
@@ -1973,6 +2076,8 @@ de:
           stages:
             Lists:
               name: Listen
+            Lights:
+              name: Lichter
             For Loops:
               name: '"Zähle mit"-Schleifen'
             Functions with Parameters:
@@ -2022,6 +2127,8 @@ de:
               name: Digitaler Fußabdruck
             Intro to HTML:
               name: Einführung in HTML
+            Headers and Lists:
+              name: Überschriften und Listen
             Images:
               name: Bilder
             Lists:
@@ -2089,6 +2196,7 @@ de:
           title: Kurs A
           assignment_family_title: Kurs A
           description_audience: 'Alter: 4-7'
+          description_short: Eine Einführung in die Informatik für Leseanfänger.
         courseb-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -2096,6 +2204,8 @@ de:
           title: Kurs B
           assignment_family_title: Kurs B
           description_audience: 'Alter: 5-8'
+          description_short: Eine Einführung in die Informatik für Leseanfänger. (Ähnlich
+            wie Kurs A, aber mit mehr Abwechslung für ältere Schüler.)
         coursec-2017:
           stages:
             'Real-life Algorithms: Paper Planes':
@@ -2110,6 +2220,8 @@ de:
           title: Kurs D
           assignment_family_title: Kurs D
           description_audience: 'Alter: 7-11'
+          description_short: Behandele Konzepte aus Kurs C, und gehe dann weiter mit
+            Algorithmen, verschachtelten Schleifen, Bedingungen und mehr.
         coursee-2017:
           stages:
             Ice Age Play Lab:
@@ -2129,6 +2241,8 @@ de:
           title: Kurs E
           assignment_family_title: Kurs E
           description_audience: 'Alter: 8-12'
+          description_short: Handle Konzepte in Kurs C & D schnell ab und gehe dann
+            mit Funktionen weiter.
         coursef-2017:
           stages:
             Ice Age Play Lab:
@@ -2140,6 +2254,8 @@ de:
           title: Kurs F
           assignment_family_title: Kurs F
           description_audience: 'Alter: 9-13'
+          description_short: Lernen Sie alle Konzepte in den Grundlagen der Informatik
+            und erstellen Sie Ihre eigene Zeichnung, Geschichte oder Ihr eigenes Spiel.
         csdnovice:
           stages:
             Tuesday:
@@ -2222,8 +2338,12 @@ de:
               name: Danke
         csp3-research-mxghyt:
           stages:
+            Using Simple Commands:
+              name: Einfache Befehle verwenden
             Creating Functions:
               name: Funktionen erstellen
+            Looping and Random Numbers:
+              name: Schleifen- und Zufallszahlen
             foo:
               name: foo
           title: CSP Lektion 3 - Einführung in die Programmierung (Teilziele)
@@ -2329,8 +2449,12 @@ de:
               name: Songschreiben mit Parametern
         csp3-staging:
           stages:
+            Using Simple Commands:
+              name: Einfache Befehle verwenden
             Creating Functions:
               name: Funktionen erstellen
+            Looping and Random Numbers:
+              name: Schleifen- und Zufallszahlen
         pwc:
           stages:
             Simple Encryption:
@@ -2401,6 +2525,8 @@ de:
           stages:
             Lists:
               name: Listen
+            Lights:
+              name: Lichter
             For Loops:
               name: '"Zähle mit"-Schleifen'
         csd3-1819draft:
@@ -2448,6 +2574,7 @@ de:
         coursea-2018:
           title: Kurs A (2018)
           assignment_family_title: Kurs A
+          description_short: Eine Einführung in die Informatik für Leseanfänger.
           description_audience: 'Alter: 4-7'
           stages:
             'Debugging: Unspotted Bugs':
@@ -2622,6 +2749,8 @@ de:
         coursef-2018:
           title: Kurs F (2018)
           assignment_family_title: Kurs F
+          description_short: Lernen Sie alle Konzepte in den Grundlagen der Informatik
+            und erstellen Sie Ihre eigene Zeichnung, Geschichte oder Ihr eigenes Spiel.
           description_audience: 'Alter: 9-13'
           stages:
             'Programming: My Robotic Friends':
@@ -2694,8 +2823,12 @@ de:
           title: CSP Lektion 3 - Einführung in die Programmierung ('18-'19)
           description_short: Programmierung
           stages:
+            Using Simple Commands:
+              name: Einfache Befehle verwenden
             Creating Functions:
               name: Funktionen erstellen
+            Looping and Random Numbers:
+              name: Schleifen- und Zufallszahlen
             Creating Functions with Parameters:
               name: Funktionen mit Parametern erstellen
         csp4-2018:
@@ -2710,6 +2843,10 @@ de:
         csp5-2018:
           title: CSP Lektion 5 - Apps erstellen ('18-'19)
           stages:
+            Controlling Memory with Variables:
+              name: Speicher mit Variablen steuern
+            User Input and Strings:
+              name: Benutzereingaben und Zeichenketten
             While Loops:
               name: Solange-Schleifen
             Loops and Simulations:
@@ -2831,10 +2968,11 @@ de:
             Dance Party:
               name: Tanzparty
         dance-extras:
-          title: Tanzt weiter
           description: Überschreite die erste Stunde mit erweiterten Projektideen.
         coursef-2019:
           title: Kurs F (2019)
+          description_short: Lernen Sie alle Konzepte in den Grundlagen der Informatik
+            und erstellen Sie Ihre eigene Zeichnung, Geschichte oder Ihr eigenes Spiel.
           description_audience: 'Alter: 9-13'
           stages:
             Building a Foundation:
@@ -2983,6 +3121,7 @@ de:
           title: Spielelabor
         coursea-2019:
           title: Kurs A (2019)
+          description_short: Eine Einführung in die Informatik für Leseanfänger.
           description_audience: 'Alter: 4-7'
           stages:
             'Programming: Happy Maps':
@@ -3120,8 +3259,12 @@ de:
           title: CSP Lektion 3 - Einführung in die Programmierung ('19-'20)
           description_short: Programmierung
           stages:
+            Using Simple Commands:
+              name: Einfache Befehle verwenden
             Creating Functions:
               name: Funktionen erstellen
+            Looping and Random Numbers:
+              name: Schleifen- und Zufallszahlen
         csp4-2019:
           title: CSP Lektion 4 - Big Data und Privatspäre ('19-'20)
           stages:
@@ -3134,6 +3277,10 @@ de:
         csp5-2019:
           title: CSP Lektion 5 - Apps erstellen ('19-'20)
           stages:
+            Controlling Memory with Variables:
+              name: Speicher mit Variablen steuern
+            User Input and Strings:
+              name: Benutzereingaben und Zeichenketten
             While Loops:
               name: Solange-Schleifen
             Loops and Simulations:
@@ -3321,7 +3468,6 @@ de:
             For Loops:
               name: '"Zähle mit"-Schleifen'
         dance-extras-2019:
-          title: Tanzt weiter
           description: Überschreite die erste Stunde mit erweiterten Projektideen.
         time4cs-control-unit-1:
           stages:

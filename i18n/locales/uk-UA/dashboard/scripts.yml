@@ -1706,7 +1706,6 @@ uk:
             Dance Party:
               name: Танцювальна вечірка
         dance-extras:
-          title: Продовжуємо танцювати
           description: Рухайся далі однієї години з розширеними проектними ідеями.
         coursef-2019:
           description_audience: 'Вік: 9-13'
@@ -1965,7 +1964,6 @@ uk:
             For Loops:
               name: Цикли For
         dance-extras-2019:
-          title: Продовжуємо танцювати
           description: Рухайся далі однієї години з розширеними проектними ідеями.
         time4cs-control-unit-1:
           stages:

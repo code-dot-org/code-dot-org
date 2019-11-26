@@ -1,5 +1,5 @@
 ---
-title: How-to Guide
+title: हाउ-टु गाइड
 ---
 
 {{ signup_button }}

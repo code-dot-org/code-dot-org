@@ -1112,6 +1112,42 @@ ru-RU:
       OPD-K5 Stage3aGo:
         title: название
         content1: Описание здесь
+      'Overview: Design Mode':
+        markdown: |
+          #Добро пожаловать в Режим дизайна Лаборатории приложений.
+          В Режиме дизайна перетаскивайте элементы интерфейса в приложение.
+
+          ###Словарь
+          * **Интерфейс пользователя (UI)** - Как пользователь взаимодействует с компьютером или приложением.
+          * **UI элементы** или объекты - кнопки, картинки, поля ввода текста, выпадающие меню, страницы и тому подобное
+
+          ##Пример
+
+          <div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>Два переключателя над картинкой Телефон нужны для переключения между Режимом дизайна и Режимом кодирования..</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>Для добавления элемента интерфейса в приложение просто перетащи его в Область приложения (на картинку телефона). Там его можно перемещать, изменять его размер и еще много разных свойств этого элемента. </p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span><em>Вкладка Свойства</em> показывает все свойства элемента интерфейса, которые можно изменить для настройки его внешнего вида..</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span><strong>Идентификатор элемента</strong> служит ссылкой на элемент в коде. Мы еще поговорим об идентификаторах позже..</p>
+          </div>
+
+          ![](https://images.code.org/01a31ac3be66deb6d01a92a1edfffd21-image-1476726587662.png)
+
+
+          <div style="column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 66%; float: right">
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span>Можно поменять текст на кнопке на любой, который нужен.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">6.</span><strong>Замечание:</strong>Листайте вниз, чтобы увидеть остальные свойства элемента, "скрытые" ниже.
+          </div>
+
+          <div style="clear: both"></div>
+          <hr>
+
+          **Итак, попробуем!**
       Prepare for your presentation:
         title: название
         content1: Описание здесь
