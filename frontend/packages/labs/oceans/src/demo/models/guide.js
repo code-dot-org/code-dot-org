@@ -10,7 +10,7 @@ const imageStyleOverrides = {
   turtle: {bottom: '-78%', left: '-25%'},
   seahorse: {bottom: '-69%', left: '-24%'},
   bottle: {bottom: '-80%', left: '-10%'},
-  can: {left: '-17%'}
+  can: {bottom: '-80%', left: '-17%'}
 };
 
 const guides = [
