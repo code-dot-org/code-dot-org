@@ -46,6 +46,13 @@ export default class CustomMarshalingInterpreter extends Interpreter {
         opt_initFunc(thisInterpreter, scope);
       }
     });
+    // Program nodes always have end=0 for some reason (acorn related).
+    // Our code likes them to have end=1 for historical reasons, the result
+    // being that unhandled exceptions will highlight the first character
+    // of the program. The logic below preserves that behavior:
+    if (this.ast && this.ast.type === 'Program') {
+      this.ast.end = 1;
+    }
   }
 
   /**
