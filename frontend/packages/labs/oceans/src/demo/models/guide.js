@@ -7,10 +7,10 @@ import trashBottleImage from '../../../public/images/bottle-large.png';
 import trashCanImage from '../../../public/images/can-large.png';
 
 const imageStyleOverrides = {
-  turtle: {bottom: '-78%', left: '-25%'},
-  seahorse: {bottom: '-69%', left: '-24%'},
-  bottle: {bottom: '-80%', left: '-10%'},
-  can: {bottom: '-80%', left: '-17%'}
+  turtle: {bottom: '0%', left: '6%'},
+  seahorse: {bottom: '2%', left: '14%'},
+  bottle: {bottom: '1%', left: '20%'},
+  can: {bottom: '1%', left: '16%'}
 };
 
 const guides = [

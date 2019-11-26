@@ -500,18 +500,13 @@ const styles = {
     left: '50%',
     transform: 'translateX(-50%)'
   },
-  guideLeft: {
-    float: 'left'
-  },
-  guideRight: {
-    float: 'right',
-    position: 'relative'
-  },
   guideImage: {
     position: 'absolute',
-    bottom: '-80%',
-    left: '-10%',
-    zIndex: 2
+    bottom: '1%',
+    left: '15%',
+    zIndex: 2,
+    maxHeight: '45%',
+    maxWidth: '35%'
   },
   guideHeading: {
     fontSize: '220%',
@@ -1433,6 +1428,12 @@ let Guide = class Guide extends React.Component {
 
     return (
       <div>
+        {currentGuide && currentGuide.image && (
+          <img
+            src={currentGuide.image}
+            style={[styles.guideImage, currentGuide.imageStyle || {}]}
+          />
+        )}
         {!!currentGuide && (
           <div>
             <div
@@ -1450,16 +1451,7 @@ let Guide = class Guide extends React.Component {
                   ...styles[`guide${currentGuide.style}`]
                 }}
               >
-                {currentGuide.image && (
-                  <div style={styles.guideLeft}>
-                    <img
-                      src={currentGuide.image}
-                      style={[styles.guideImage, currentGuide.imageStyle || {}]}
-                    />
-                  </div>
-                )}
-
-                <div style={styles.guideRight}>
+                <div>
                   {currentGuide.heading && (
                     <div style={styles.guideHeading}>
                       {currentGuide.heading}
