@@ -874,7 +874,7 @@ let Train = class Train extends React.Component {
         </div>
         <div style={styles.trainingIcons}>
           <div style={styles.counter}>
-            <img src={counterIcon} />
+            <img src={counterIcon} style={{height: 28}} />
             <span style={styles.counterNum}>
               {Math.min(999, state.yesCount + state.noCount)}
             </span>
