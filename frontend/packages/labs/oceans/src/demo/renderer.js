@@ -495,7 +495,7 @@ const drawPredictBot = state => {
 
   // Move AI bot above fish parade.
   if (state.isRunning || state.isPaused) {
-    botYDestination = botYDestination || botY - 170;
+    botYDestination = botYDestination || botY - 179;
 
     const distToDestination = Math.abs(botYDestination - botY);
     if (distToDestination > 1) {
@@ -549,7 +549,7 @@ const drawWordFishImages = () => {
   let wordFish = state.wordFish;
   wordFish = wordFish.filter(
     f =>
-      f.xy.x <= (constants.canvasWidth + constants.fishCanvasWidth) &&
+      f.xy.x <= constants.canvasWidth + constants.fishCanvasWidth &&
       f.xy.x >= -constants.fishCanvasWidth
   );
   const lastFish = wordFish[wordFish.length - 1];
@@ -561,14 +561,19 @@ const drawWordFishImages = () => {
       randomInt(0, wordFish.length * 500) <= 0)
   ) {
     const possibleFishComponents = filterFishComponents(
-    fishData,
-    state.appMode
-  );
-    const newFish = new FishOceanObject(state.fishCount,possibleFishComponents);
+      fishData,
+      state.appMode
+    );
+    const newFish = new FishOceanObject(
+      state.fishCount,
+      possibleFishComponents
+    );
     newFish.randomize();
     const lane = randomInt(
       0,
-      Math.floor(constants.canvasHeight / (fishScale * constants.fishCanvasHeight)) - 1
+      Math.floor(
+        constants.canvasHeight / (fishScale * constants.fishCanvasHeight)
+      ) - 1
     );
     const y = lane * constants.fishCanvasHeight * fishScale;
     newFish.setXY({x: -constants.fishCanvasWidth * 1.5, y});
