@@ -35,24 +35,6 @@
   .field
     = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :show_type_hints, description: "Show a small visual hint for what type of block a connection accepts"}
 
-.field
-  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :disable_procedure_autopopulate, description: "Disable autopopulation of Functions category with default toolbox blocks"}
-  %p
-    By default, Functions categories in Blockly will be automatically populated
-    with blocks for three default procedure definitions (noreturn, return, and
-    ifreturn), as well as the call blocks for any procedures that have already
-    been defined. Any XML manually included in the toolbox category will be ignored.
-  %p
-    With this setting enabled, only the call blocks will be injected into this
-    category and NOT the default definition blocks. Any XML manually included in
-    the toolbox category will be included, allowing you to specify a subset of
-    the definition blocks that you would like to include for this level.
-.field
-  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :top_level_procedure_autopopulate, description: "Autopopulate function call blocks for non-categorized toolboxes"}
-  %p
-    This adds a call block to the end of the toolbox for each function defined
-    in the workspace (including hidden start blocks).
-
 = render partial: 'levels/editors/fields/blockly_xml_editors', locals:{f: f}
 
 .field
