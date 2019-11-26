@@ -238,7 +238,7 @@ const styles = {
   trainBot: {
     position: 'absolute',
     top: '30%',
-    right: '0%',
+    right: '-2%',
     width: '30%'
   },
   trainBotHead: {
@@ -569,7 +569,7 @@ const styles = {
   },
   arrowBotRight: {
     top: '15%',
-    right: '14.5%',
+    right: '12.5%',
     transform: 'translateX(-50%)'
   },
   arrowLowerLeft: {
@@ -593,8 +593,8 @@ const styles = {
     transform: 'translateX(-50%)'
   },
   arrowUpperRight: {
-    top: '15%',
-    right: '-2.5%',
+    top: '13%',
+    right: '-3.5%',
     transform: 'translateX(-50%) rotate(180deg)'
   },
   arrowUpperFarRight: {
