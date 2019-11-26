@@ -82,7 +82,7 @@ const styles = {
     backgroundColor: colors.yellowGreen,
     color: colors.white,
     position: 'absolute',
-    bottom: '16%',
+    bottom: '13.5%',
     right: '1.2%'
   },
   backButton: {
@@ -590,28 +590,38 @@ const styles = {
   },
   arrowBotRight: {
     top: '15%',
-    right: '14.9%',
+    right: '14.5%',
     transform: 'translateX(-50%)'
   },
   arrowLowerLeft: {
     bottom: '17%',
-    left: '10%',
+    left: '8.5%',
     transform: 'translateX(-50%)'
   },
   arrowLowerRight: {
     bottom: '17%',
-    right: '2%',
+    right: '0.75%',
     transform: 'translateX(-50%)'
   },
   arrowLowishRight: {
     bottom: '28%',
-    right: '2%',
+    right: '0.75%',
     transform: 'translateX(-50%)'
   },
   arrowLowerCenter: {
-    bottom: '25%',
-    left: '50%',
+    bottom: '22%',
+    left: '50.5%',
     transform: 'translateX(-50%)'
+  },
+  arrowUpperRight: {
+    top: '15%',
+    right: '-2.5%',
+    transform: 'translateX(-50%) rotate(180deg)'
+  },
+  arrowUpperFarRight: {
+    top: '15%',
+    right: '-4.6%',
+    transform: 'translateX(-50%) rotate(180deg)'
   },
   marginRight: {
     marginRight: 10
@@ -1144,8 +1154,14 @@ class PondPanel extends React.Component {
                 <div style={styles.pondPanelPreText}>
                   These were the most important fish parts in determining
                   whether this fish was{' “'}
-                  <span style={{color: colors.green}}>{state.word.toLowerCase()}</span>{'”'} or{' “'}
-                  <span style={{color: colors.red}}>not {state.word.toLowerCase()}</span>{'”'}.
+                  <span style={{color: colors.green}}>
+                    {state.word.toLowerCase()}
+                  </span>
+                  {'”'} or{' “'}
+                  <span style={{color: colors.red}}>
+                    not {state.word.toLowerCase()}
+                  </span>
+                  {'”'}.
                 </div>
                 {state.pondExplainFishSummary.slice(0, 4).map((f, i) => (
                   <div key={i}>
