@@ -1,10 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
+import memoize from 'memoize-one';
+import _ from 'lodash';
 import * as dataStyles from '../dataStyles';
 import * as rowStyle from '@cdo/apps/applab/designElements/rowStyle';
+import {isBlank} from '../dataUtils';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 import DropdownField from './DropdownField';
+import DataVisualizer from './DataVisualizer';
 
 const INITIAL_STATE = {
   isVisualizerOpen: false,
@@ -34,7 +38,41 @@ class VisualizerModal extends React.Component {
 
   handleClose = () => this.setState({isVisualizerOpen: false});
 
+  parseRecords = memoize(rawRecords => {
+    if (Object.keys(rawRecords).length === 0) {
+      return [];
+    } else {
+      let parsedRecords = [];
+      rawRecords.forEach(record => {
+        if (record) {
+          parsedRecords.push(JSON.parse(record));
+        }
+      });
+      return parsedRecords;
+    }
+  });
+
+  findNumericColumns = memoize((records, columns) => {
+    const isNumericOrBlank = x => isBlank(x) || typeof x === 'number';
+    const isColumnNumeric = (records, column) =>
+      records.every(record => isNumericOrBlank(record[column]));
+    return columns.filter(column => isColumnNumeric(records, column));
+  });
+
   render() {
+    const parsedRecords = this.parseRecords(this.props.tableRecords);
+    const numericColumns = this.findNumericColumns(
+      parsedRecords,
+      this.props.tableColumns
+    );
+
+    let disabledOptions = [];
+    const disableNonNumericColumns = ['Scatter Plot', 'Histogram'].includes(
+      this.state.chartType
+    );
+    if (disableNonNumericColumns) {
+      disabledOptions = _.difference(this.props.tableColumns, numericColumns);
+    }
     const isMultiColumnChart = ['Scatter Plot', 'Cross Tab'].includes(
       this.state.chartType
     );
@@ -94,6 +132,7 @@ class VisualizerModal extends React.Component {
             <DropdownField
               displayName={isMultiColumnChart ? 'X Values' : 'Values'}
               options={this.props.tableColumns}
+              disabledOptions={disabledOptions}
               value={this.state.selectedColumn1}
               onChange={event =>
                 this.setState({selectedColumn1: event.target.value})
@@ -104,6 +143,7 @@ class VisualizerModal extends React.Component {
               <DropdownField
                 displayName="Y Values"
                 options={this.props.tableColumns}
+                disabledOptions={disabledOptions}
                 value={this.state.selectedColumn2}
                 onChange={event =>
                   this.setState({selectedColumn2: event.target.value})
@@ -111,6 +151,17 @@ class VisualizerModal extends React.Component {
               />
             )}
           </div>
+          {this.state.chartType && (
+            <DataVisualizer
+              records={parsedRecords}
+              numericColumns={numericColumns}
+              chartType={this.state.chartType}
+              bucketSize={this.state.bucketSize}
+              chartTitle={this.state.chartTitle}
+              selectedColumn1={this.state.selectedColumn1}
+              selectedColumn2={this.state.selectedColumn2}
+            />
+          )}
         </BaseDialog>
       </span>
     );
