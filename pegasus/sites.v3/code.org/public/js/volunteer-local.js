@@ -138,7 +138,7 @@ function getLocations(results) {
       // 0.01 degree is approximately 1km. randomize within this 1km to avoid showing exact addresses
       var lat = coordinates[0] - 0.005 + 0.01 * Math.random();
       var lon = coordinates[1] - 0.005 + 0.01 * Math.random();
-      var title = volunteers[index].name_s;
+      var title = escapeHTML(volunteers[index].name_s);
       var id = volunteers[index].id;
       var html = compileHTML(index, volunteers[index]);
       var contact_title = compileContact(index, volunteers[index]);
@@ -428,4 +428,26 @@ function i18n(token) {
   };
 
   return labels[token];
+}
+
+/**
+ * Replaces special characters in string by HTML entities.
+ * Special characters are selected from
+ * https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html
+ */
+function escapeHTML(string) {
+  const htmlEscapes = {
+    "&": "&amp",
+    "<": "&lt",
+    ">": "&gt",
+    '"': "&quot",
+    "'": "&#x27",
+    "/": "&#x2F"
+  };
+
+  const searchPattern = /[&<>"'/]/g;
+
+  return string
+    ? string.replace(searchPattern, chr => htmlEscapes[chr])
+    : string;
 }
