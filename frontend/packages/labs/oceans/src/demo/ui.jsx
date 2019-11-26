@@ -88,9 +88,7 @@ const styles = {
   backButton: {
     position: 'absolute',
     bottom: '2%',
-    left: '1.2%',
-    backgroundColor: colors.blue,
-    color: colors.white
+    left: '1.2%'
   },
   button2col: {
     width: '20%',
@@ -327,7 +325,7 @@ const styles = {
   },
   timeScale: {
     width: 40,
-    fontSize: '120%',
+    fontSize: '80%',
     textAlign: 'center'
   },
   predictSpeech: {
@@ -444,22 +442,25 @@ const styles = {
   },
   recallIcon: {
     cursor: 'pointer',
-    width: 30,
-    height: 30,
-    border: `3px solid ${colors.white}`,
+    width: 28,
+    height: 28,
     borderRadius: 50,
-    padding: 6,
+    padding: 7,
     marginLeft: 8,
-    backgroundColor: colors.lightGrey
+    backgroundColor: colors.white,
+    color: colors.grey
   },
   bgNeonBlue: {
-    backgroundColor: colors.neonBlue
+    backgroundColor: colors.neonBlue,
+    color: colors.white
   },
   bgRed: {
-    backgroundColor: colors.red
+    backgroundColor: colors.red,
+    color: colors.white
   },
   bgGreen: {
-    backgroundColor: colors.green
+    backgroundColor: colors.green,
+    color: colors.white
   },
   pill: {
     display: 'flex',
@@ -1310,16 +1311,6 @@ let Pond = class Pond extends React.Component {
       <Body>
         <div onClick={e => this.onPondClick(e)} style={styles.pondSurface} />
         <div style={styles.recallContainer}>
-          {showInfoButton && (
-            <FontAwesomeIcon
-              icon={faInfo}
-              style={{
-                ...styles.recallIcon,
-                ...(!state.pondPanelShowing ? styles.bgNeonBlue : {})
-              }}
-              onClick={this.onPondPanelButtonClick}
-            />
-          )}
           <FontAwesomeIcon
             icon={faCheck}
             style={{
@@ -1336,6 +1327,16 @@ let Pond = class Pond extends React.Component {
             }}
             onClick={this.toggleRecall}
           />
+          {showInfoButton && (
+            <FontAwesomeIcon
+              icon={faInfo}
+              style={{
+                ...styles.recallIcon,
+                ...(!state.pondPanelShowing ? {} : styles.bgNeonBlue)
+              }}
+              onClick={this.onPondPanelButtonClick}
+            />
+          )}
         </div>
         <img style={styles.pondBot} src={aiBotClosed} />
         {state.canSkipPond && (
