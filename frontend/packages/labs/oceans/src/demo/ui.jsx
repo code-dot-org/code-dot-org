@@ -371,7 +371,7 @@ const styles = {
     borderRadius: 10,
     left: '3%',
     top: '16%',
-    padding: 20
+    padding: '2%'
   },
   pondPanelRight: {
     position: 'absolute',
@@ -381,25 +381,25 @@ const styles = {
     borderRadius: 10,
     right: '3%',
     top: '16%',
-    padding: 20
+    padding: '2%'
   },
   pondPanelPreText: {
-    marginBottom: 20
+    marginBottom: '5%'
   },
   pondPanelRow: {
     position: 'relative',
-    height: 40
+    marginBottom: '7%'
   },
   pondPanelGeneralBar: {
     position: 'absolute',
     top: 0,
     left: '0%',
-    height: 30,
+    height: '150%',
     backgroundColor: colors.green
   },
   pondPanelGeneralBarText: {
     position: 'absolute',
-    top: 4,
+    top: '30%',
     left: '3%',
     textAlign: 'right'
   },
@@ -407,29 +407,29 @@ const styles = {
     position: 'absolute',
     top: 0,
     left: '50%',
-    height: 30,
+    height: '150%',
     backgroundColor: colors.green
   },
   pondPanelGreenBarText: {
     position: 'absolute',
-    top: 4,
+    top: '30%',
     left: '53%'
   },
   pondPanelRedBar: {
     position: 'absolute',
     top: 0,
     right: '50%',
-    height: 30,
+    height: '150%',
     backgroundColor: colors.red
   },
   pondPanelRedBarText: {
     position: 'absolute',
-    top: 4,
+    top: '30%',
     width: '47%',
     textAlign: 'right'
   },
   pondPanelPostText: {
-    marginTop: 20
+    marginTop: '3%'
   },
   recallContainer: {
     position: 'absolute',
@@ -808,7 +808,7 @@ let Words = class Words extends React.Component {
     const word = this.state.choices[itemIndex];
     setState({
       word,
-      trainingQuestion: `Is this fish ${word.toUpperCase()}?`
+      trainingQuestion: `Is this fish “${word.toLowerCase()}”?`
     });
     toMode(Modes.Training);
   }
@@ -1143,9 +1143,9 @@ class PondPanel extends React.Component {
               <div>
                 <div style={styles.pondPanelPreText}>
                   These were the most important fish parts in determining
-                  whether this fish was{' '}
-                  <span style={{color: colors.green}}>{state.word}</span> or{' '}
-                  <span style={{color: colors.red}}>not {state.word}</span>.
+                  whether this fish was{' “'}
+                  <span style={{color: colors.green}}>{state.word.toLowerCase()}</span>{'”'} or{' “'}
+                  <span style={{color: colors.red}}>not {state.word.toLowerCase()}</span>{'”'}.
                 </div>
                 {state.pondExplainFishSummary.slice(0, 4).map((f, i) => (
                   <div key={i}>
