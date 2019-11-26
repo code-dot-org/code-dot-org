@@ -2,28 +2,28 @@
   ai_activities = [
     {
       url: "https://teachablemachine.withgoogle.com/",
-      title: "Teachable Machine",
-      description: "Train a computer to recognize your own images, sounds, and poses."
+      title: hoc_s(:ai_video_teachable),
+      description: hoc_s(:ai_video_teachable_desc)
     },
     {
       url: "https://quickdraw.withgoogle.com/",
-      title: "Quick, Draw!",
-      description: "Can a neural network learn to recognize doodling?"
+      title: hoc_s(:ai_video_quick_draw),
+      description: hoc_s(:ai_video_quick_draw_desc)
     },
     {
       url: "https://experiments.withgoogle.com/collection/ai",
-      title: "AI Experiments with Google",
-      description: "Start exploring machine learning through pictures, drawings, language, music, and more."
+      title: hoc_s(:ai_video_experiments)
+      description: hoc_s(:ai_video_experiments_desc)
     },
     {
       url: "https://mixlab.withgoogle.com/",
-      title: "MixLab",
-      description: "Make music using voice commands."
+      title: hoc_s(:ai_video_mixlab),
+      description: hoc_s(:ai_video_mixlab_desc)
     },
     {
       url: "http://nvidia-research-mingyuliu.com/gaugan",
-      title: "GauGAN Beta",
-      description: "Paint photo-realistic landscapes with the help of AI."
+      title: hoc_s(:ai_video_gaugan),
+      description: hoc_s(:ai_video_gaugan_desc)
     }
   ]
 
@@ -61,7 +61,7 @@
   ]
 
 %h2="Activities Powered by AI and ML"
-%table{style: 'border: 1; width: 970px'}
+%table{style: 'border: 1; width: 100%'}
   %tbody
     %tr{style: 'font-size: 16px; font-weight: bold; background: #ececec; color: dark-charcoal'}
       %td Activity
@@ -74,7 +74,7 @@
         %td= activity[:description]
 
 %h2="Teach and Learn about AI"
-%table{style: 'border: 1; width: 970px'}
+%table{style: 'border: 1; width: 100%'}
   %tbody
     %tr{style: 'font-size: 16px; font-weight: bold; background: #ececec; color: dark-charcoal'}
       %td Name
@@ -87,3 +87,5 @@
             =activity[:title]
         %td= activity[:description]
         %td= activity[:audience]
+
+.clear
