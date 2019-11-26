@@ -83,6 +83,10 @@ import eyes11_image from '../../public/images/fish/eyes/eyes11.png';
 import eyes12_image from '../../public/images/fish/eyes/eyes12.png';
 import eyes13_image from '../../public/images/fish/eyes/eyes13.png';
 import eyes14_image from '../../public/images/fish/eyes/eyes14.png';
+import eyes16_image from '../../public/images/fish/eyes/eyes16.png';
+import eyes17_image from '../../public/images/fish/eyes/eyes17.png';
+import eyes18_image from '../../public/images/fish/eyes/eyes18.png';
+import eyes19_image from '../../public/images/fish/eyes/eyes19.png';
 import eyes2_image from '../../public/images/fish/eyes/eyes2.png';
 import eyes3_image from '../../public/images/fish/eyes/eyes3.png';
 import eyes4_image from '../../public/images/fish/eyes/eyes4.png';
@@ -292,7 +296,7 @@ const fishComponents = {
     },
     oval_1: {
       src: oval_1_image,
-      anchor: [85,55],
+      anchor: [85, 55],
       faceAnchor: [9, 12],
       pectoralFinBackAnchor: [25, 82],
       pectoralFinFrontAnchor: [70, 78],
@@ -310,7 +314,7 @@ const fishComponents = {
     },
     oval_2: {
       src: oval_2_image,
-      anchor: [87,72],
+      anchor: [87, 72],
       faceAnchor: [11, 3],
       pectoralFinBackAnchor: [8, 53],
       pectoralFinFrontAnchor: [60, 53],
@@ -346,7 +350,7 @@ const fishComponents = {
     },
     oval_4: {
       src: oval_4_image,
-      anchor: [82,65],
+      anchor: [82, 65],
       faceAnchor: [10, 10],
       pectoralFinBackAnchor: [25, 62],
       pectoralFinFrontAnchor: [70, 60],
@@ -376,7 +380,7 @@ const fishComponents = {
     },
     rectangle_2: {
       src: rectangle_2_image,
-      anchor: [92,60],
+      anchor: [92, 60],
       faceAnchor: [10, 11],
       pectoralFinBackAnchor: [8, 76],
       pectoralFinFrontAnchor: [60, 78],
@@ -388,7 +392,7 @@ const fishComponents = {
     },
     rectangle_3: {
       src: rectangle_3_image,
-      anchor: [92,84],
+      anchor: [92, 84],
       faceAnchor: [2, 1],
       pectoralFinBackAnchor: [15, 28],
       pectoralFinFrontAnchor: [59, 32],
@@ -406,7 +410,7 @@ const fishComponents = {
     },
     s1: {
       src: s1_image,
-      anchor: [96,49],
+      anchor: [96, 49],
       faceAnchor: [0, -7],
       pectoralFinBackAnchor: [10, 15],
       pectoralFinFrontAnchor: [38, 15],
@@ -427,7 +431,7 @@ const fishComponents = {
     },
     s2: {
       src: s2_image,
-      anchor: [87,71],
+      anchor: [87, 71],
       faceAnchor: [0, 27],
       pectoralFinBackAnchor: [13, 54],
       pectoralFinFrontAnchor: [42, 52],
@@ -575,6 +579,50 @@ const fishComponents = {
     eyes14: {
       src: eyes14_image,
       knnData: [496, 1.6533333333333333],
+      type: FishBodyPart.EYE,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
+    },
+    eyes16: {
+      src: eyes16_image,
+      knnData: [674, 1.856749311294766],
+      type: FishBodyPart.EYE,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
+    },
+    eyes17: {
+      src: eyes17_image,
+      knnData: [475, 1.85546875],
+      type: FishBodyPart.EYE,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
+    },
+    eyes18: {
+      src: eyes18_image,
+      knnData: [1147, 5.052863436123348],
+      type: FishBodyPart.EYE,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
+    },
+    eyes19: {
+      src: eyes19_image,
+      knnData: [1075, 1.2920673076923077],
       type: FishBodyPart.EYE,
       exclusions: [
         AppMode.FishVTrash,
