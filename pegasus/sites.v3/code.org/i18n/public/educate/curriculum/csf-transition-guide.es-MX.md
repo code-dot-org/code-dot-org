@@ -1,5 +1,5 @@
 ---
-title: Computer Science Fundamentals Transition Guide
+title: Guía de transición para Fundamentos de Ciencias de la Computación
 theme: responsive
 style_min: true
 ---
@@ -111,15 +111,15 @@ Para estudiantes mayores, hemos introducido proyectos de fin de curso sustancial
 
 Los proyectos de fin de curso son relativamente simples.  Durante un período de cuatro a cinco semanas, los estudiantes revisan las ideas de proyectos, planifican sus aplicaciones, crean el código de sus programas, los revisan en base a la retroalimentación (quinto grado) y, luego, presentan su trabajo terminado.  Cada uno de estos pasos está guiado por una guía útil, así como por un plan de lección para el docente que destaca lo más importante.
 
-**Review:** Students will take a look at a handful of aspirational projects, built to showcase the amazing things that can be done with the skills that they have learned up to this point.  Estos proyectos se crearon en el Laboratorio de juegos o el Artista, pero los estudiantes pueden revisar proyectos de Tynker, Scratch o, incluso, de lenguajes de texto si el docente lo considera apropiado.
+**Análisis:** los estudiantes darán un vistazo a algunos proyectos aspiracionales, creados para mostrar las cosas asombrosas que se pueden hacer con las habilidades que han aprendido hasta este punto.  Estos proyectos se crearon en el Laboratorio de juegos o el Artista, pero los estudiantes pueden revisar proyectos de Tynker, Scratch o, incluso, de lenguajes de texto si el docente lo considera apropiado.
 
-**Plan:** The intention here is for students to sit back and think about what is really possible.  Tendrán que pensar en los juegos que vieron y en las limitaciones que enfrentaron al editarlos.  Luego, esbozarán un plan para crear algo único.  Puede ser necesario recordar a los estudiantes que deben ser realistas, ya que tendrán tiempo y recursos limitados a la hora de hacer realidad sus ideas.  Los materiales aquí asumen el uso del Artista o del Laboratorio de juegos, pero los proyectos se pueden mover a cualquier plataforma que funcione para cada aula en particular.
+**Planificación:** la intención aquí es que los estudiantes piensen acerca de lo que es realmente posible.  Tendrán que pensar en los juegos que vieron y en las limitaciones que enfrentaron al editarlos.  Luego, esbozarán un plan para crear algo único.  Puede ser necesario recordar a los estudiantes que deben ser realistas, ya que tendrán tiempo y recursos limitados a la hora de hacer realidad sus ideas.  Los materiales aquí asumen el uso del Artista o del Laboratorio de juegos, pero los proyectos se pueden mover a cualquier plataforma que funcione para cada aula en particular.
 
-**Build:** One day is not a whole lot of time to execute a plan that has been laid out on paper.  Los estudiantes enfrentarán decisiones difíciles a la hora de hacer que las cosas funcionen y se encontrarán con varios obstáculos.  Aprenderán a editar y adaptar a medida que los errores y las limitaciones del programa cambien sus percepciones de lo que se puede lograrse fácilmente en un tiempo específico.
+**Desarrollo:** un día no es tanto tiempo para ejecutar un plan que se ha trazado en papel.  Los estudiantes enfrentarán decisiones difíciles a la hora de hacer que las cosas funcionen y se encontrarán con varios obstáculos.  Aprenderán a editar y adaptar a medida que los errores y las limitaciones del programa cambien sus percepciones de lo que se puede lograrse fácilmente en un tiempo específico.
 
-**Revise:** For older students, a day of revising their programs based on the feedback of classmates can help them improve their final product, and lets them inspire others with the things that they have achieved.  Los estudiantes practicarán la crítica constructiva, así como el intercambio grupal de ideas y la perseverancia.
+**Revisión:** para estudiantes mayores, un día de revisión de sus programas sobre la base de la retroalimentación de los compañeros puede ser muy útil para mejorar su producto final e inspirar a otros con las cosas que han logrado.  Los estudiantes practicarán la crítica constructiva, así como el intercambio grupal de ideas y la perseverancia.
 
-**Present:** Nearly a month in the making, this is the chance for students to stand-up and be proud of how far they have come.  Nuestro plan se basa en una presentación oral, pero los docentes tienen la opción de sugerir presentaciones escritas o multimedia.
+**Presentación:** luego de casi un mes de preparación, llega la oportunidad de que los estudiantes presenten su trabajo y estén orgullosos de lo lejos que han llegado.  Nuestro plan se basa en una presentación oral, pero los docentes tienen la opción de sugerir presentaciones escritas o multimedia.
 
 No importa cuánto se involucren los estudiantes en sus proyectos, es seguro que aprenderán algo útil acerca de los procesos de creatividad y resolución de problemas en las ciencias de la computación.
 

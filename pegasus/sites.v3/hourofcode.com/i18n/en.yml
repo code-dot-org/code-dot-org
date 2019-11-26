@@ -31,8 +31,8 @@
   oceans_landing_cs_for_good: 'CS For Good'
   oceans_landing_cs_for_good_desc: 'Resources to help students understand the role computer science could play in creating a more equitable world.'
 
-  hoc_overview_oceans_tutorial_header: 'AI Oceans'
-  hoc_overview_oceans_tutorial_desc: "Teach \"A.I.\" to sort between fish and trash while exploring broader artificial intelligence concepts."
+  hoc_overview_oceans_tutorial_header: 'AI For Oceans'
+  hoc_overview_oceans_tutorial_desc: 'Learn about AI, machine learning, training data, and bias, while exploring ethical issues and how AI can be used to address world problems.'
 
   codeorg_homepage_hoc2018_curriculum: 'Go further with <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org courses</a>'
   codeorg_homepage_hoc2018_dance_heading: 'Create your own <span class="highlight-word">Dance&nbsp;Party</span>'
