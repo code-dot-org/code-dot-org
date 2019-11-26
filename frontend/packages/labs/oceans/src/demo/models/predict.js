@@ -8,8 +8,8 @@ export const init = () => {
   state.trainer.train();
   let fishData = [];
   if (state.appMode === AppMode.CreaturesVTrashDemo) {
-    fishData = fishData.concat(generateOcean(4, true, true, false));
-    fishData = fishData.concat(generateOcean(3, false, false, true, 4));
+    fishData = fishData.concat(generateOcean(4, 0, true, true, false));
+    fishData = fishData.concat(generateOcean(3, 4, false, false, true));
   } else if (state.appMode === AppMode.FishLong) {
     fishData = generateOcean(200);
   } else {

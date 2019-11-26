@@ -17,10 +17,10 @@ import _ from 'lodash';
  */
 export const generateOcean = (
   numFish,
+  idStart = 0,
   loadFish = true,
   loadTrashImages,
-  loadCreatureImages,
-  idStart = 0
+  loadCreatureImages
 ) => {
   const state = getState();
   let ocean = [];
