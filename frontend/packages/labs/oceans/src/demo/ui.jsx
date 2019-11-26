@@ -282,13 +282,24 @@ const styles = {
     fontSize: '80%',
     marginLeft: 12
   },
-  eraseButton: {
+  eraseButtonContainer: {
     cursor: 'pointer',
-    color: colors.white,
-    border: `3px solid ${colors.white}`,
     borderRadius: 50,
-    padding: '6px 8px',
-    marginLeft: 10
+    padding: 8,
+    marginLeft: 10,
+    backgroundColor: colors.white,
+    color: colors.grey,
+    ':hover': {
+      backgroundColor: colors.red,
+      color: colors.white
+    },
+    ':focus': {
+      backgroundColor: colors.red,
+      color: colors.white
+    }
+  },
+  eraseButton: {
+    padding: '0 3px'
   },
   mediaControls: {
     position: 'absolute',
@@ -843,16 +854,18 @@ let Train = class Train extends React.Component {
               {Math.min(999, state.yesCount + state.noCount)}
             </span>
           </div>
-          <FontAwesomeIcon
-            icon={faTrash}
-            style={styles.eraseButton}
-            onClick={() => {
-              setState({
-                showConfirmationDialog: true,
-                confirmationDialogOnYes: resetTrainingFunction
-              });
-            }}
-          />
+          <span style={styles.eraseButtonContainer}>
+            <FontAwesomeIcon
+              icon={faTrash}
+              style={styles.eraseButton}
+              onClick={() => {
+                setState({
+                  showConfirmationDialog: true,
+                  confirmationDialogOnYes: resetTrainingFunction
+                });
+              }}
+            />
+          </span>
         </div>
         <div style={styles.trainButtons}>
           <Button
