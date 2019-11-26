@@ -220,7 +220,7 @@ const guides = [
   },
   {
     id: 'creaturesvtrash-training-init3',
-    text: `The more training data you provide, the more A.I. learns.`,
+    text: `The more training data you provide, the more A.I. learns.  Keep training.`,
     when: {
       appMode: AppMode.CreaturesVTrash,
       currentMode: Modes.Training,
@@ -311,7 +311,7 @@ const guides = [
     textFn: state => {
       return `Based on your training, A.I. identified ${
         state.fishData.length === 1 ? 'this' : 'these'
-      } fish as “${state.word.toLowerCase()}”. How did A.I do?`;
+      } fish as “${state.word.toLowerCase()}”. How did A.I. do?`;
     },
     when: {
       appMode: AppMode.FishShort,
@@ -337,6 +337,17 @@ const guides = [
     text:
       'Let’s teach A.I. a word that depends on your opinion.  It’s up to you to pick fish that match your word.',
     when: {appMode: AppMode.FishLong, currentMode: Modes.Words}
+  },
+  {
+    id: 'fishlong-training-question',
+    text: `It is worth asking whether it’s fair to use A.I. to judge a fish by its looks.  A.I. might seem fair and neutral, but all of its analysis is based on its training.`,
+    when: {
+      appMode: AppMode.FishLong,
+      currentMode: Modes.Training,
+      fn: state => {
+        return state.yesCount + state.noCount > 5;
+      }
+    }
   },
   {
     id: 'fishlong-training-many',
