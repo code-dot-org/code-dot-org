@@ -127,6 +127,7 @@ class LevelsController < ApplicationController
 
   # GET /levels/1/edit
   def edit
+    @visible = @level.script_levels.map(&:script).reject(&:hidden).any?
   end
 
   # GET /levels/:id/get_rubric
