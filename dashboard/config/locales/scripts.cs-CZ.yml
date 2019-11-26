@@ -1564,7 +1564,6 @@ cs:
             Dance Party:
               name: Taneční večírek
         dance-extras:
-          title: Nepřestávej tančit
           description: Pokračuj i po první hodině kódu rozšířením nápadů ve svém projektu.
         coursef-2019:
           stages:
@@ -1782,7 +1781,6 @@ cs:
             For Loops:
               name: For cykly
         dance-extras-2019:
-          title: Nepřestávej tančit
           description: Pokračuj i po první hodině kódu rozšířením nápadů ve svém projektu.
         time4cs-control-unit-1:
           stages:

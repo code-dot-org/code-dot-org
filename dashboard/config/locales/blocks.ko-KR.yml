@@ -601,6 +601,7 @@ ko:
             '"y"': 수직 위치
             '"tint"': 색조
       Dancelab_setPropRandomEach:
+        text: "{GROUP} {PROPERTY} 무작위로 하기"
         options:
           GROUP:
             sprites: 모두
@@ -773,8 +774,11 @@ ko:
           STRING:
             '"hearts_colorful"': 하트
             '"diamond"': 다이아몬드
+            '"s"': s
+            '"t"': t
+            '"w"': w
             '"x"': x
-            '"y"': 예
+            '"y"': y
       Dancelab_whenKey:
         text: "{KEY} 누를 때"
         options:
@@ -784,8 +788,28 @@ ko:
             '"down"': 아래로
             '"right"': 오른쪽으로
             '"space"': 우주
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"w"': w
             '"x"': x
-            '"y"': 예
+            '"y"': y
       Dancelab_whenPeak:
         text: "{RANGE} 피크일 때"
         options:
@@ -833,8 +857,28 @@ ko:
             '"left"': 왼쪽으로
             '"right"': 오른쪽으로
             '"space"': 우주
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"w"': w
             '"x"': x
-            '"y"': 예
+            '"y"': y
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -892,6 +936,10 @@ ko:
             '"left"': 왼쪽으로
             '"right"': 오른쪽으로
             '"space"': 우주
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       gamelab_whileKey:
         options:
           KEY:
@@ -900,6 +948,10 @@ ko:
             '"left"': 왼쪽으로
             '"right"': 오른쪽으로
             '"space"': 우주
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1117,6 +1169,10 @@ ko:
             '"left"': 왼쪽으로
             '"right"': 오른쪽으로
             '"space"': 우주
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       craft_ifPath:
         text: |-
           {DIR}에 길이 있을 경우

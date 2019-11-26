@@ -14897,6 +14897,38 @@ es-MX:
         \n\n-   **Cambia el texto del botón** para que diga \"Presióname\".\n\n-   **Define
         el color del botón** para que sea rojo.\n\n<img src=\"https://images.code.org/4cab6a5233cf07df0d8e312932762012-image-1444314797615.gif\"
         style=\"width: 500px; float: middle\">"
+      CSDU4 - Design Mode - 18: "# Capas y eliminación\n\n<img src=\"https://images.code.org/9e620f70869de438c4f0c66663686876-image-1444678130772.gif\"
+        style=\"width: 200px; float: right\">Los elementos de la interfaz de usuario
+        pueden superponerse entre sí, por lo que querrás la posibilidad de cambiar
+        el orden o la **profundidad** a la que se representa cada uno.\n\nSi **te
+        desplazas hacia la parte inferior de la pestaña Propiedades**, encontrarás
+        botones que te permiten **eliminar o cambiar fácilmente la profundidad** de
+        un elemento.\n\n-   **Elimina un Elemento** seleccionándolo (haciendo clic
+        en él) en la vista de diseño y luego haciendo clic en **Eliminar** en la pestaña
+        de propiedades.\n-   **Cambia la profundidad** de los elementos usando las
+        flechas dobles o simples.\n    -   Haz clic en la flecha doble para enviar
+        todo al frente o atrás.\n    -   Haz clic en la flecha única para subir o
+        bajar una capa.\n\n# Hacer esto:\n\nUsa las herramientas **eliminar** y **profundidad**
+        para **crear la imagen \"Después\"**\n\n<table>\n<tr>\n\t<th style=\"text-align:center\">Antes</th>\n
+        \   <th style=\"text-align:center\">Después</th>\n</tr>\n<tr>\n\t<td align=center><img
+        src=\"https://images.code.org/023f749ecb58c91869a4eacab6701203-image-1444685187662.png\"
+        style=\"width:200px ; border: solid 1px black\"></td>\n    <td style=\"text-align:center\"><img
+        src=\"https://images.code.org/e45fc7d451c071683fd3b59466b106b0-image-1444684677212.png\"
+        style=\"width:200px; border: solid 1px black\"></td>\n</tr>\n</table>"
+      CSDU4 - Design Mode - 21: |-
+        # Agregar imágenes
+
+        A veces, la funcionalidad que deseas representar en tu prototipo es demasiado complicada para lograrlo solo con los botones y campos predeterminados. Si deseas simular interfaces más avanzadas (como un mapa), la forma más fácil de hacerlo es con una imagen
+
+        # Hacer esto
+
+        -   Encuentra y descarga una imagen de un mapa que te gusta
+        -   Arrastra un elemento de imagen a tu aplicación \[] [0]
+        -   Elige tu imagen ![](<https://images.code.org/e5b9571ae54af60a3ae597b787e741ea-image-1444667688762.34.42 AM.png>)
+            -   **Las URL** se pueden agregar directamente al campo "imagen".
+            -   \*\*Sube imágenes \*\* haciendo clic en "Elegir".
+            -   **Nota:** Siempre puedes ver todos los archivos que has subido haciendo clic en el engranaje en la parte superior de la caja de herramientas. ![](<https://images.code.org/53b405b771bc11bf5d24c84c878c80dd-image-1444668067826.35.10 AM.png>)
+        -   ¡Asegúrate de darle a tu imagen una buena ID!
       CSDU4 - Design Mode - 4: |-
         # ID
 
@@ -14911,6 +14943,21 @@ es-MX:
         -   Cambia el ID de tu botón "presióname" a algo más útil (como `botónRojo`)
         -   Arrastra un segundo botón
         -   Haz que el segundo botón sea azul y asígnale el ID `botónAzul`
+      CSDU4 - Design Mode Icons: |-
+        <img src="https://images.code.org/2b405319f597910b1563ae607958171c-image-1475866226306.49.51.png" style="width: 200px; float:right">
+
+        # Iconos
+
+        Los íconos ayudan a los usuarios a encontrar la funcionalidad correcta y, al mismo tiempo, hacen que su aplicación se sienta más pulida.
+
+        # Hacer esto
+
+        Agrega algunos íconos a tu aplicación. Para cada ícono:
+
+        -   Arrastra un elemento de imagen
+        -   Junto al campo "Imagen", haz clic en "Elegir..."
+        -   Haz clic en la pestaña "Íconos" y selecciona uno
+        -   ¡Asegúrate de darle a tu imagen una buena ID! (¿Aún tenemos que decirlo?)
       CSDU4 Connecting Screens: |-
         # Navegar
 
@@ -16382,6 +16429,17 @@ es-MX:
       Dance_Party_12: |-
         ¡Vamos baila! Crea tu propio baile para compartir con tus
         amigos.
+      Dance_Party_extras_alternate_2019: |-
+        # ¡Ida y vuelta!
+
+        A veces es posible que desees crear un patrón de movimientos de baile que elijas. Este nuevo bloque te permite hacer exactamente eso.
+
+        [blockly block][0]
+
+        Los movimientos que elijas arriba se repetirán en secuencia para siempre.
+
+        -   ¡Crea una rutina alterna para el bailarín principal al frente!
+        -   Usa diferentes números para cambiar la velocidad a la que se alternan los movimientos. ¡Prueba `1` o`0.5` para alternar más rápidamente!
       Dance_Party_extras_battle: |-
         # Equipos de baile
 
@@ -16408,6 +16466,15 @@ es-MX:
         -   Experimenta con otras duraciones de notas (como 0,5 para una semicorchea o 0,125 para una corchea).
         -   Añade algunos eventos `después del compás`
         -   Cambia "compases" por "segundos" y prueba sincronizar tus bailes de esa manera.
+      Dance_Party_extras_every_beat_2019: |-
+        # Negras
+
+        La mayoría de nuestros bailes utilizaron compases completos, pero cada compás está formado por 4 negras. Este baile usa [blockly block][0] para que el bailarín aplauda en cada negra, pero solamente luego de los primeros cuarto compases.
+
+        Intenta cambiar los números en los bloque para ver cómo cambia el baile.
+
+        -   Experimenta con otras duraciones de notas (como 0,5 para una blanca o 0,125 para una corchea).
+        -   Añade algunos otros eventos.
       Dance_Party_extras_layout: |-
         # ¡Vamos a organizarnos!
 
@@ -16416,14 +16483,13 @@ es-MX:
         -   Crea un segundo grupo de bailarines en una disposición diferente
         -   Cambia la disposición cuando se presiona una tecla
         -   Cambia una propiedad cuando los bailarines cambian la formación
-      Dance_Party_extras_layout_2019: |-
-        # ¡Vamos a organizarnos!
+      Dance_Party_extras_mixed_2019: |-
+        # Más botones
 
-        Echa un vistazo a este baile que utiliza el bloque <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> para cambiar la formación de los bailarines que acompañan. Prueba una de estas ideas para ampliarlo:
+        Este baile te permite controlar las propiedades de los bailarines en tiempo real mientras bailan automáticamente. Intenta cambiar otras propiedades cuando presiones los botones. Por ejemplo:
 
-        -   Crea un segundo grupo de bailarines en una disposición diferente
-        -   Cambia la disposición cuando se presiona una tecla
-        -   Cambia una propiedad cuando los bailarines cambian la formación
+        -   Aleatoriza el matiz del bailarín cuando presiones "abajo".
+        -   Agrega un grupo de bailarines con un diseño aleatorio cuando presionas "espacio".
       Dance_Party_extras_on_beat: |-
         # Graves, medios y agudos
 
@@ -16439,7 +16505,7 @@ es-MX:
       Dance_Party_extras_speed_2019: |-
         # Acelera, reduce la velocidad
 
-        El baile final utiliza el bloque <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> para controlar que tan rápido se mueve cada bailarín. Experimenta con diferentes velocidades en diferentes puntos de la canción. No dudes en seguir experimentando con este baile o regresa a cualquiera de los bailes anteriores para mejorarlos.
+        El baile final utiliza el bloque [bloque blockly][0] para controlar que tan rápido se mueve cada bailarín. Experimenta con diferentes velocidades en diferentes puntos de la canción. No dudes en seguir experimentando con este baile o regresa a cualquiera de los bailes anteriores para mejorarlos.
       Dance_Party_extras_visible: |-
         # ¿Dónde habrán ido?
 

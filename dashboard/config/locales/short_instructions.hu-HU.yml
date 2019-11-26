@@ -711,6 +711,8 @@ hu-HU:
       courseF_bee_functions4: A "menj és gyűjts nektárt" függvény hatására a méh elfordul,
         nektárt gyűjt, majd visszatér a kiindulási pontra. Használd a függvényt, hogy
         az összes nektárt összegyűjtsd.
+      express_maze_debugging9_2019: Használd az eszköztár blokkjait a programhoz.
+        Vidd a madarat a malachoz.
       flappy_1: Csatolj egy blokkot a "kattintáskor" blokkhoz, majd nyomd meg a "Futtatás"-t.
         Kattints vagy érintsd meg a képernyőt, hogy Flappy-t a célba segítsd.
       flappy_11: Hozz létre egy saját Flappy játékot! Meg tudod változtatni a kinézetet

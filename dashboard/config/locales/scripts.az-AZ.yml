@@ -792,8 +792,6 @@ az:
           stages:
             Artist:
               name: Rəssam
-        dance-extras:
-          title: Rəqs etməyə davam edin
         coursef-2019:
           stages:
             The Artist:
@@ -892,8 +890,6 @@ az:
               name: funksiyalar
             Variables:
               name: dəyişənlər
-        dance-extras-2019:
-          title: Rəqs etməyə davam edin
         time4cs-control-unit-1:
           stages:
             Conditionals:

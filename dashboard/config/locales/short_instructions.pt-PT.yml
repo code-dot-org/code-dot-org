@@ -765,14 +765,17 @@ pt-PT:
         ao tesouro.
       Crack Random Substitution: Instruções
       Crack a Caesar Cipher: Instruções
-      Dance_2019_02: O bloco `quando premido`, permite-te executar código quando o
-        botão da seta para cima é premida. Faz com que o teu dançarino aplauda quando
-        primes o botão ou experimenta outro movimento!
-      Dance_2019_03: 'Está na hora da dança! Programa cada dançarino de modo a mover-se
+      Dance_2019_02: Faz com que o gato realize um movimento de dança quando primes
+        uma tecla.
+      Dance_2019_03: 'Está na hora da dança! Programa cada dançarino para se mover
         quando premires teclas diferentes. Escolhe o teu movimento preferido para
         cada dançarino ou defini-o para "(Aleatório)" para algo completamente imprevisível! '
+      Dance_2019_04: Faz o teu dançarino iniciar um novo movimento após o quarto compasso.
       Dance_2019_06: Forma um grupo de dançarinos secundários à volta do dançarino
         principal que está no meio.
+      Dance_2019_07: Altera o tamanho do grupo de dançarinos secundários.
+      Dance_2019_08: Experimenta trocar o tom de cor dum dos teus dançarinos (ou dum
+        grupo inteiro)!
       Dance_2019_09: Sê criativo com estes blocos novos!
       Dance_Party_extras_battle: Maltas da Dança (Clica em "Mais" para veres os detalhes)
       Dance_Party_extras_battle_2019: Maltas da Dança (Clica em "Mais" para veres

@@ -39,8 +39,8 @@ www.program.ar                                                 |
 hello@kidsandcode.org                                                  |
 | Canada                                | Kids Code Jeunesse                                                | Bry LeBlanc                        | http://kidscodejeunesse.org   
 contact@kidscodejeunesse.org                                   |
-| Canada                                | Nova Scotia Department of Education & Early Childhood Development | Peter Oldreive                     | http://ednet.ns.ca   
-Peter.Oldreive@novascotia.ca                                            |
+| Canada                                | Nova Scotia Department of Education & Early Childhood Development | Nick Baskwill                      | http://ednet.ns.ca   
+nicholas.baskwill@novascotia.ca                                         |
 | Canada                                | Partners In Research Canada                                       | Stacey Joyce                       | www.pirweb.org/en   
 sjoyce@pirweb.org                                                        |
 | Canada                                | Sault Ste. Marie innovation Centre                                |                                    | https://ssmic.com/                                                                            |

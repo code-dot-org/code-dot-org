@@ -1117,25 +1117,25 @@ fi-FI:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+        - text: '15'
         - {}
       courseC_multi_harvester_loops11_predict1_2018:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+        - text: '15'
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+        - text: '15'
         - {}
       courseC_multi_maze_debugging8_predict1:
         questions:
@@ -1357,25 +1357,25 @@ fi-FI:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+        - text: '12'
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+        - text: '12'
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+        - text: '12'
         - {}
       courseD_multi_collector_debugging10_predict1:
         questions:

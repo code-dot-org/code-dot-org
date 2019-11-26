@@ -326,8 +326,8 @@ uk:
       course_catalog: Каталог курсів
       project_gallery: Проекти
       sections: Секції
-      help_support: Допомога і підтримка
-      report_bug: Повідомити про помилку
+      help_support: Допомога та підтримка
+      report_bug: Сповістити про проблему
       teacher_community: Спільнота вчителів
       documentation: Документація
       tutorials: Навчальні матеріали
@@ -795,7 +795,7 @@ uk:
     support: Отримати допомогу
     support_url: "//support.code.org"
     help_resources: Довідки та ресурси
-    help_support: Допомога і підтримка
+    help_support: Допомога та підтримка
     documentation: Документація
     tutorials: Навчальні матеріали
   multi:

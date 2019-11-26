@@ -2933,7 +2933,1287 @@ de:
           um auf Ereignisse zu reagieren, wie z. B. die Wiedergabe eines Sounds, wenn
           ich auf diese Schaltfläche klicke. Um dies in App Lab zu tun, müssen Sie
           einen neuen Block namens 'onEvent' verwenden.
+      3:
+        text: Dieses Programm setzt den Bildschirm auf blau. Ich möchte, dass der
+          Bildschirm grün wird, wenn ich auf diese Schaltfläche klicke. Zuerst muss
+          ich einen onEvent Baustein hineinziehen. Wenn ich mit der Maus darüber fahre,
+          weiß ich, dass die ID der Schaltfläche "bigButton" ist, also werde ich sie
+          im ersten Dropdown-Menü auswählen.
+      4:
+        text: Als nächstes wähle ich die Art des Events. Es gibt viele Optionen, aus
+          denen man wählen kann, aber im Moment belasse ich es bei einem normalen
+          Klick.
+      5:
+        text: 'Schließlich ergänze ich den Code innerhalb des on-Events, der die Hintergrundfarbe
+          des Bildschirms ändert. Du kannst diesen Block wie einen Satz lesen: "Für
+          den Fall, dass auf die Schaltfläche geklickt wird, führe diesen ganzen Code
+          aus."'
+      6:
+        text: Lasst es uns ausprobieren. Bausteine außerhalb eines onEvent laufen
+          immer noch sofort ab, so dass der Bildschirm blau beginnt.
+      7:
+        text: Und wenn ich auf die große Schaltfläche klicke, läuft der Code in meinem
+          onEvent und mein Bildschirm wird grün.
+      8:
+        text: Wenn du nach dem Ereignis noch mehr ändern möchtest, wie z. B. den Text
+          auf dem Bildschirm, füge einfach mehr Code zum onEvent hinzu
+      9:
+        text: Damit das Programm auf mehr Ereignisse reagiert, füge weitere onEvent
+          Bausteine hinzu. Achte nur darauf, dass du sie nicht ineinander steckst.
+          Jetzt ist es an der Zeit, es selbst auszuprobieren. Viel Spaß dabei!
+    applab_intro_sounds:
+      1:
+        text: Als nächstes erfähst du, wie Bilder und Sounds zur App hinzugefügt werden
+          können. Beginnen wir mit dem Ausprobieren der Soundoptionen.
+      2:
+        text: In der Toolbox findest du einen neuen Baustein namens "playSound". Ziehe
+          ihn in den Arbeitsbereich. Du kannst einen Sound zur Wiedergabe auswählen,
+          indem du auf das Dropdown-Menü klickst und dann auf "Auswählen" klickst.
+      3:
+        text: Von hier aus kannst du entweder eine Audiodatei von Deinem Computer
+          hochladen oder nach einem Sound aus der Soundbibliothek suchen. Die Klangbibliothek
+          hat viele verschiedene Kategorien wie Instrumente, Hintergrundmusik oder
+          Tiere.
+      4:
+        text: Sobald du den gewünschten Sound erhalten hast, klicke auf "Auswählen".
+          Wenn dieser Block ausgeführt wird gibt er den von Dir gewählten Sound wieder.
+      5:
+        text: Um Bilder zu deinen Elementen hinzuzufügen, kannst du einfach den setProperty-Baustein
+          verwenden. Wähle die Bildeigenschaft in der zweiten Dropdown-Liste aus
+      6:
+        text: Wähle dann aus dem dritten Dropdown-Menü "Auswählen".
+      7:
+        text: Von hier aus kannst du ein Bild von Deinem Computer hochladen oder durch
+          eine riesige Bibliothek von Symbolen in der Symbolbibliothek schauen.
+      8:
+        text: Zurück im Codemodus kannst du mit dem Baustein "setProperty" die Symbolfarbe
+          des Symbols ändern. Sobald du ausgewählt hast, welches Bild dein Symbol
+          verwenden sollst, klicke auf "Ausführen", um zu sehen, wie es aussieht.
+      9:
+        text: Das ist alles, was es gibt! Jetzt kannst du anfangen, Bilder und Sounds
+          hinzuzufügen, um Deine Apps noch unterhaltsamer und dynamischer zu gestalten.
+    applab_intro_designmode:
+      1:
+        text: Um eigene Apps zu erstellen, musst du mit dem Design von Bildschirmen
+          und Elementen von Grund auf neu beginnen. App Lab macht dies mit dem Designmodus
+          einfach.
+      2:
+        text: Verwend den Schalter oben in Deiner App, um in den Designmodus zu gelangen.
+      3:
+        text: Du kannst neue Elemente hinzufügen, indem du sie auf den Bildschirm
+          ziehst. Du kannst sie an verschiedene Positionen verschieben und ihre Größe
+          ändern, indem du die untere rechte Ecke ziehst.
+      4:
+        text: Um die Eigenschaften eines Elements zu ändern, verwende die Steuerelemente
+          auf der rechten Seite. So ist es beispielsweise sehr einfach, Text, Farbe
+          und Schriftgröße dieser Schaltfläche zu ändern.
+      5:
+        text: Wenn du ein neues Element zu Deinem Bildschirm hinzufügst, erhält es
+          eine generische ID wie button1. Es ist eine gute Idee, die ID dieser Schaltfläche
+          in etwas Aussagekräftigeres wie "rightButton" zu ändern. Damit du weißt
+          welches es ist, wenn du zum Programm gehst.
+      6:
+        text: Wenn du versehentlich ein Element zur App hinzugefügt hast, ziehe es
+          einfach heraus oder klicke auf Löschen.
+      7:
+        text: Du kannst Deiner App völlig neue Bildschirme hinzufügen, indem du ein
+          Bildschirmelement per Drag & Drop in die App ziehst
+      8:
+        text: Über das Dropdown-Menü oben kannst du schnell zwischen den von Dir erstellten
+          Bildschirmen hin und her wechseln.
+      9:
+        text: Innerhalb der App benötigst du eine Möglichkeit, zwischen all diesen
+          Bildschirmen zu wechseln, so dass der setScreen-Baustein der Toolbox hinzugefügt
+          wurde. Verwende "setScreen" innerhalb des Blocks "onEvent", um die Bildschirme
+          per Knopfdruck zu wechseln.
+      10:
+        text: In den nächsten Stufen wirst du an einem einzelnen Projekt arbeiten.
+          Zuerst füge eine Schaltfläche hinzu, dann füge einen neuen Bildschirm hinzu
+          und schließlich schreibe den Code so, dass die Schaltfläche auf den neuen
+          Bildschirm wechselt.
+    applab_intro_share:
+      1:
+        text: Jetzt, da du einige der Grundlagen von App Lab gelernt hast, wie das
+          Hinzufügen von Schaltflächen, Sounds, Bildern, Text und neuen Bildschirmen,
+          kannst u alle Arten von Anwendungen erstellen.
+      2:
+        text: Im nächsten Level findest du die App, die du gerade gebaut hast. Mit
+          ein wenig Kreativität kannst du daraus ein Persönlichkeitsquiz für deine
+          Freunde machen, eine Grußkarte, die du mit deiner Familie teilen kannst,
+          oder ein Abenteuerspiel nach deinem Geschmack. Alle diese Apps sind nur
+          eine Kombination aus den Fähigkeiten, die du bereits gelernt hast, und ich
+          wette, du kannst dir noch mehr einfallen lassen.
+      3:
+        text: Sobald du mit Deiner App fertig bist, kannst du diese ganz einfach an
+          Dein Handy senden, um zu sehen, wie sie aussieht. Klicke einfach auf "Teilen"
+          und gib hier Deine Telefonnummer ein.
+      4:
+        text: Du erhältst eine Sms, mit der du die App sofort öffnen kannst.
+      5:
+        text: Du kannst auch einen Link zur App über Social Media teilen oder ihn
+          in der öffentlichen Galerie von code.org veröffentlichen, damit andere Personen
+          ihn spielen und teilen können.
+      6:
+        text: Du hast gerade die Oberfläche dessen, was App Lab kann, zerkratzt. Full
+          App Lab bietet erweiterte Benutzerinteraktionen, neue Bildschirmelemente
+          und sogar eine integrierte Datenbank, so dass du schnell vollwertige Anwendungen
+          erstellen kannst. Unter "code.org/applab" findest du das komplette Tool
+          und viele Ideen, wenn du weitermachen willst.
+      7:
+        text: Danke, dass du die Fahrt mitgenommen hast. Jetzt kannst du deine erste
+          App erstellen und freigeben und mit App Lab weiter Apps erstellen!
     mc_2017_agent_intro:
+      1:
+        text: 'Stacy: Stampy, Lizzy, Preston - danke, dass du mit mir gekommen bist.
+          Was ich dir zeigen möchte, ist direkt über diesem Plateau. Ich denke, du
+          wirst es lieben!'
+      2:
+        text: Moment mal - da ist ein Loch in der Schiene! (kreisch)
+      3:
+        text: 'Geht es allen gut? Stampy: Ah, ich sehe das Problem. Seht mal! Da war
+          ein Loch in der Schiene. Stacy: Wirklich, Stampy? Lizzy: Vielleicht sollten
+          wir Blöcke sammeln, um es zu reparieren. Preston: Lasst es uns zu einem
+          Rennen machen. Der erste, der wieder an die Spitze kommt, gewinnt. Stacy:
+          Ok, auf die Plätze, fertig, los! Ok, ich werde nur etwas von diesem Terrakotta
+          sammeln. Warte. Leute, ich kann nicht graben! Preston: Das Gleiche. Lizzy:
+          Ich kann es auch nicht. Stacy: Ok, das ist wirklich seltsam. Stampy, kannst
+          du graben? Stampy: Ich kann auch nicht graben! Stacy: Ok, alle bleiben ruhig.
+          Stampy: Ist das Spiel unterbrochen? Stacy: Wenn ja, wie können wir es beheben?
+          Lizzy: Ich weiß es nicht. Stampy: Weiß jemand, wie man Minecraft-Code schreibt?'
+      4:
+        text: "(puff) Preston: Was ist das denn? Stampy: Ich habe so etwas noch nie
+          zuvor gesehen. Lizzy: Es ist so bezaubernd! Stacy: Ist es....ist es zähmbar?
+          Preston: Okay, was ist los? Jemand muss in die reale Welt zurückkehren und
+          das in Ordnung bringen.  Alle: Nicht doch! Stacy: Nicht ich-(ach) Ok, ich
+          gehe."
+      5:
+        text: Oh, okay, hey, also bin ich jetzt in der realen Welt. Ich werde versuchen,
+          die Büros von Minecraft zu finden.
+      6:
+        text: Aber ich werde deine Hilfe brauchen. Beginne das Tutorial zu machen,
+          fange an zu lernen, wie man kodiert, und ich werde euch nach ein paar Levels
+          einholen, okay? Wünsch mir Glück! Ich glaube, es geht hier entlang. Au!
+          Kaktus! Mir geht es gut!
+      7:
+        text: Um die Herausforderung "Stunde des Codes" abzuschließen, musst du Code
+          schreiben, um den Agenten zu programmieren. Du wirst mit dem Agenten zusammenarbeiten,
+          um alle Hindernisse auf deinem Weg zu beseitigen, damit du die Gegenstände,
+          die du für deine Reise benötigst, abholen kannst. Nur der Agent kann Blöcke
+          platzieren und auflösen, und nur du kannst Gegenstände sammeln. Dein Bildschirm
+          ist in drei Hauptteile gegliedert. Auf der linken Seite befindet sich Minecraft.
+      8:
+        text: Der mittlere Bereich ist die Toolbox mit Befehlen, die der Agent verstehen
+          kann.
+      9:
+        text: Und auf der rechten Seite befindet sich der Arbeitsbereich. Dort stapelst
+          du die Befehle, um dein Programm zur Steuerung des Agenten zu erstellen.
+      10:
+        text: Der Agent kann gehen, drehen und Druckplatten aktivieren. Er kann auch
+          Blöcke zerstören und Blöcke platzieren. Wenn er den Block wie diese Minecartschienen
+          platziert, legt er ihn unter sich selbst.
       11:
         text: Hast du vergessen, was du in einem Level tun musst, findest du oben
           die nötigen Anweisungen.
+      12:
+        text: Wenn du es noch einmal versuchen möchtest, kannst du die blaue Reset-Taste
+          drücken, um alles auf den Ausgangspunkt zurückzusetzen. Und wenn du einen
+          Codeblock löschen möchtest, ziehe ihn von deinem Arbeitsbereich in die Toolbox.
+          Denke daran, auf Run zu drücken, um den Agenten in Bewegung zu bringen.
+          Okay, mach weiter und probiere die ersten Level aus. Viel Glück!
+    mc_2017_repeat:
+      1:
+        text: 'Stampy: Ich frage mich, was Stacy vorhat?'
+      2:
+        text: 'Stacy: Woah, ich denke, ich bin am richtigen Ort. Das ist unglaublich!'
+      3:
+        text: Ich fühle mich, als wäre ich wieder bei Minecraft! Hallo. Wie geht es
+          dir? Hallo?
+      4:
+        text: 'Oh, da ist eine Kriechpflanze. Du tust nichts, oder? Katie: Stacy?
+          Stacy:Hi, Katie? Katie: Ja, willkommen bei Minecraft!'
+      5:
+        text: 'Stacy: Das ist unglaublich. Also arbeitest du hier jeden Tag als Entwickler,
+          richtig? Katie: Ja, es ist ziemlich fantastisch. Ich bin Entwickler im Minecraft-Marktplatz-Team.
+          Stacy: Wie viele Programmiersprachen kennst du? Katie: In meiner Karriere
+          habe ich wahrscheinlich mit über einem Dutzend gearbeitet. Stacy: Ein Dutzend?
+          Katie: Ja. Stacy: Also weißt du zufällig nichts über diesen kleinen Golem-Typen,
+          der sich selbst den Agenten nennt? Katie: Wir benutzen den Agenten, um Dinge
+          zu tun, die Steve oder Alex nicht können, wie z. B. über die Lava zu gehen.
+          Stacy: Nun, ich will lernen, wie man programmiert, und sie wollen lernen,
+          wie man programmiert, also was ist eines der ersten Dinge, die man wissen
+          muss, wenn man lernt?'
+      6:
+        text: 'Katie: Nun, du musst lernen, wie man Schleifen benutzt. Schleifen sind
+          Dinge, die Entwickler schreiben, um einem Computer Befehle zu geben, die
+          immer wieder ausgeführt werden können. Stacy: Verstanden, also denke ich,
+          dass es tatsächlich einige davon gibt, die in den nächsten Levels auftauchen,
+          also mach weiter und versuche es mit Schleifen.'
+      7:
+        text: Im nächsten Level kannst du eine Schleife verwenden, um den Agenten
+          auf dem Pfad zu bewegen. Ziehe den Wiederholungsblock in den Arbeitsbereich
+          und plaziere den Vorwärtsbewegungsblock innerhalb des Wiederholungsblocks.
+          Dadurch wird der Computer angewiesen, dasselbe mehrmals hintereinander zu
+          tun, ohne einen ganzen Haufen Blöcke in den Arbeitsbereich ziehen zu müssen.
+          Du kannst wählen, wie oft du wiederholen möchtest, indem du eine Zahl in
+          den Wiederholungsblock einträgst.
+      8:
+        text: Du kannst auch Abbiegungen und mehrere Befehle in den Wiederholungsblock
+          einfügen, aber versuche vorerst, eine Wiederholung zu verwenden, um den
+          Agenten ein paar Schritte vorwärts zu bewegen. Denke daran, wenn du an einem
+          Puzzle hängen bleibst, kannst du immer auf den blauen Reset-Knopf drücken
+          und es erneut versuchen.
+      9:
+        text: 'Wenn du darüber nachdenkst, einen coolen Job wie Katie''s zu haben,
+          dann klicke einfach auf den Showcode Knopf, wenn du jedes Level beendet
+          hast. Das wird dir tatsächlich den Javascript-Code zeigen, den jemand wie
+          Katie benutzt, wenn sie Minecraft programmiert. Katie: Ja, viel Glück für
+          alle!'
+    mc_2017_functions:
+      1:
+        text: 'Preston: Ich versuche nicht zu prahlen, aber ich bin ziemlich gut im
+          Parkour. Lizzy: Lass uns schlafen, damit es Tag ist, an dem Stacy zurückkommt.'
+      2:
+        text: 'Stacy: Ok Leute, ich bin zurück von den Minecraft Büros, und ich denke,
+          ich weiß, wie ich das Problem, das ich in meinem Spiel habe, lösen kann.
+          Ich denke, ich kann eine Funktion benutzen. Lass mich das nur öffnen.'
+      3:
+        text: Eine Funktion ist also ein bestimmter Satz von Anweisungen, um eine
+          bestimmte Aufgabe zu erfüllen, ähnlich wie ein Rezept. In den nächsten Stufen
+          hast du Zugriff auf Funktionen, mit denen du die Rätsel lösen kannst.
+      4:
+        text: Sieh dir den Code in der Funktion an, wenn er sich im Arbeitsbereich
+          befindet, um zu sehen, was er tut.
+      5:
+        text: Dann suche den Baustein mit diesem Namen in der Toolbox und ziehe ihn
+          von der Toolbox auf den 'wenn Ausführen' Baustein.
+      6:
+        text: Denke daran, dass du die gleiche Funktion jedes Mal verwenden kannst,
+          wenn du den gleichen Satz von Anweisungen ausführen musst, um etwas zu tun,
+          wie zum Beispiel eine Brücke zu bauen. Viel Glück, ich weiß, dass du es
+          schaffst!
+    mc_2017_congratulations:
+      1:
+        text: 'Preston: Herzlichen Glückwunsch!'
+      2:
+        text: 'Lizzy: Herzlichen Glückwunsch!'
+      3:
+        text: 'Stampy: Herzlichen Glückwunsch, du hast es geschafft!'
+      4:
+        text: 'Stacy: Herzlichen Glückwunsch Jungs, du hast das total gerockt! Und
+          jetzt, da du die Stunde des Codes abgeschlossen hast, kannst du mit der
+          Programmierung in Minecraft beginnen. Du hast mehr über Schleifen, Funktionen
+          und was ein Software-Agent macht gelernt.'
+      5:
+        text: Jetzt ist es Zeit für die Freispielstufe, in der du der Entwickler bist.
+          Nutze die verbleibende Zeit, um deine eigenen Funktionen zum Erkunden, Bergbau
+          und Bauen zu schreiben.
+      6:
+        text: 'Du kannst den Code, den du in dieser Stufe schreibst, in deine Minecraft-Welt
+          auf Minecraft aufnehmen: Education Edition. Klick einfach auf ''Fertig stellen''
+          und folge den Anweisungen, um den Link in deiner Welt zu verwenden. Viel
+          Spaß und gute Arbeit!'
+      7:
+        text: 'Stacy: Und ich bin wieder da! Okay, Leute, hier ist der Agent! Ich
+          zeige dir, was es kann. Schau, es tut es! Ich habe ihm gesagt, dass er eine
+          Treppe aus diesen Terrakotta-Blöcken bauen soll, jetzt können wir das einfach
+          benutzen, um hier rauszukommen. Und Leute, es sind nicht nur Treppen. Ich
+          kann dem Agenten sagen, er soll alles tun, was ich will, und er wird es
+          für mich tun.'
+      8:
+        text: 'Stampy: Wie hast du das gemacht? Stacy: Es war eigentlich ganz einfach.
+          Ich habe nur den Code benutzt!'
+    csd_concept_how_computers_work:
+      1:
+        text: 'Überall, wo du hinschaust, verändern Computer die Welt. Egal, ob sie
+          auf unseren Desktops, in unseren Häusern, in unseren Taschen oder einfach
+          nur irgendwo anders sind. Aber während die meisten von uns diese revolutionäre
+          Technologie täglich nutzen, fragen wir nicht oft: "Wie funktionieren Computer?"
+          In dieser Serie werden Sie lernen, wie Computer wirklich funktionieren,
+          beginnend mit dem, was einen Computer zu einem Computer macht. Dann werden
+          Sie sich ansehen, wie Informationen im Computer mit winzigen elektrischen
+          Signalen dargestellt werden, die mit unglaublicher Geschwindigkeit ein-
+          und ausgehen.'
+      2:
+        text: Danach erfährst du, wie Computer Schaltkreise verwenden, um alles zu
+          tun, von einfacher Mathematik bis hin zur Simulation ganzer virtueller Welten.
+          Als nächstes zoome Dich heraus und schau Dir die verschiedenen Teile eines
+          Computers an, die tatsächlich alle diese Informationen eingeben, ausgeben
+          und speichern. Schließlich wirf einen Blick darauf, was Code eigentlich
+          ist und wie Software die Hardware steuert. Egal, ob du nur neugierig auf
+          die Geräte bist, die du jeden Tag benutzt, oder ob du die Innovationen der
+          Zukunft gestalten willst, der erste Schritt ist, zu lernen, wie Computer
+          funktionieren.
+    csd_concept_computer:
+      1:
+        text: Mein Name ist May-Li Khoe und ich bin Designer und Erfinder. Einige
+          der Dinge, die ich entworfen habe, waren also bei Apple, und jetzt entwerfe
+          ich Produkte für Kinder, die sie verwenden können, damit sie eine leichtere
+          Zeit in der Schule haben. Zu meinen weiteren Aufgaben gehören DJing und
+          Tanz.
+      2:
+        text: Computer sind überall! Sie sind in den Taschen der Leute, sie sind in
+          den Autos der Leute, die Leute haben sie an den Handgelenken. Sie könnten
+          gerade in deinem Rucksack sein. Aber was macht einen Computer zu einem Computer?
+          Was macht einen Computer überhaupt zu einem Computer? Und wie funktioniert
+          es überhaupt?
+      3:
+        text: Hi, ich bin Nat! Ich war einer der ursprünglichen Designer der Xbox.
+          Ich arbeite mit Computern, seit ich vielleicht sieben Jahre alt bin, und
+          jetzt arbeite ich an Virtual Reality. Als Menschen haben wir immer Werkzeuge
+          entwickelt, die uns helfen, Probleme zu lösen. Werkzeuge wie eine Schubkarre,
+          ein Hammer, eine Druckmaschine oder ein Sattelzug.
+      4:
+        text: Alle diese Erfindungen halfen uns bei der manuellen Arbeit. Im Laufe
+          der Zeit begannen die Menschen sich zu fragen, ob eine Maschine entworfen
+          und gebaut werden könnte, um uns bei der Denkarbeit zu helfen, die wir leisten,
+          wie das Lösen von Gleichungen oder das Verfolgen der Sterne am Himmel. Anstatt
+          physische Dinge wie Schmutz und Stein zu bewegen oder zu manipulieren, müssten
+          diese Maschinen so konzipiert sein, dass sie Informationen manipulieren.
+          Als die Pioniere der Informatik erforschten, wie man eine Denkmaschine entwirft,
+          wurde ihnen klar, dass sie vier verschiedene Aufgaben erfüllen muss.
+      5:
+        text: Man muss Eingaben vornehmen, Informationen speichern, diese verarbeiten
+          und dann die Ergebnisse ausgeben. Nun, das mag einfach klingen, aber diese
+          vier Dinge sind allen Computern gemeinsam. Das ist es, was einen Computer
+          zu einem Computer macht.
+      6:
+        text: Computer begannen als einfache Taschenrechner, was zu dieser Zeit schon
+          wirklich fantastisch war, und sie manipulierten damals nur Zahlen. Aber
+          jetzt können wir sie benutzen, um miteinander zu reden, wir können sie benutzen,
+          um Spiele zu spielen, Roboter zu steuern und jede verrückte Sache zu tun,
+          die du dir wahrscheinlich vorstellen kannst. Moderne Computer sehen nicht
+          aus wie diese klobigen alten Maschinen, aber sie tun immer noch die gleichen
+          vier Dinge.
+      7:
+        text: Zuerst werden wir über Input sprechen. Du kannst Computern sagen, was
+          sie mit der Tastatur machen sollen, du kannst ihnen sagen, was sie mit der
+          Maus, dem Mikrofon, der Kamera machen sollen. Alle diese verschiedenen Eingaben
+          ergeben eine Computerinformation, die dann im Speicher abgelegt wird.
+      8:
+        text: Der Prozessor eines Computers nimmt Informationen aus dem Speicher auf.
+          Es manipuliert es oder ändert es mit einem Algorithmus, der nur eine Reihe
+          von Befehlen ist. Und dann sendet es die verarbeiteten Informationen zurück,
+          um sie wieder im Speicher zu speichern. Dies wird fortgesetzt, bis die verarbeiteten
+          Informationen zur Ausgabe bereit sind.
+      9:
+        text: Wie ein Computer Informationen ausgibt, hängt davon ab, wofür der Computer
+          ausgelegt ist. Ein Computerbildschirm kann Text, Fotos, Videos oder interaktive
+          Spiele anzeigen - sogar virtuelle Realität! Die Ausgabe eines Computers
+          kann sogar Signale zur Steuerung eines Roboters beinhalten.
+      10:
+        text: Und wer weiß, wie die Computer von morgen aussehen werden? Meine Hoffnung
+          ist, dass du helfen kannst, zu entscheiden, wie die Computer von morgen
+          aussehen sollen. Aber auf allen Computern, unabhängig von den verschiedenen
+          Arten von Technologien, die sie verwenden, tun sie immer die gleichen vier
+          Dinge. Sie nehmen Informationen auf, speichern sie als Daten, verarbeiten
+          sie und geben dann die Ergebnisse aus.
+    csd_concept_binary_data:
+      1:
+        text: Hallo! Mein Name ist Limor Fried, und ich bin Ingenieur hier bei Adafruit
+          Industries. Und hier mache ich Engineering und Design, und ich entwerfe
+          Schaltungen für Mode und Musik und Technologie.
+      2:
+        text: Mein Name ist Federico Gomez Suarez, und ich bin Softwareentwickler
+          bei Microsoft Hack for Good. Und ich beschäftige mich mit dem Einsatz von
+          Technologie, um einige der großen sozialen Probleme unserer Zeit zu lösen.
+      3:
+        text: Du hast vielleicht gehört, dass Computer mit Einsen und Nullen arbeiten.
+          Aber fast niemand beschäftigt sich heute wirklich direkt mit diesen Einsen
+          und Nullen. Aber Einsen und Nullen spielen eine große Rolle bei der Funktionsweise
+          von Computern im Inneren.
+      4:
+        text: In einem Computer befinden sich elektrische Leitungen und Schaltungen,
+          die alle Informationen in einem Computer übertragen. Wie speichert oder
+          präsentiert man Informationen mit Hilfe von Strom?
+      5:
+        text: Nun, wenn du einen einzelnen Draht hast, durch den Strom fließt, könnte
+          das Signal entweder ein- oder ausgeschaltet sein. Das sind nicht viele Entscheidungen,
+          aber es ist ein wirklich wichtiger Anfang. Mit einem Draht können wir ein
+          Ja oder Nein, wahr oder falsch, ein Eins oder Null oder etwas anderes mit
+          nur zwei Optionen darstellen. Dieser Ein/Aus-Zustand eines einzelnen Kabels
+          wird als Bit bezeichnet und ist die kleinste Information, die ein Computer
+          speichern kann.
+      6:
+        text: 'Wenn du mehr Drähte verwendest, bekommst du mehr Bits: mehr Einsen
+          und Nullen. Mit mehr Bits kannst du komplexere Informationen darstellen.
+          Aber um das zu verstehen, müssen wir etwas über das sogenannte Binärzahlensystem
+          lernen.'
+      7:
+        text: 'Im Dezimalsystem haben wir zehn Ziffern von Null bis neun, und so haben
+          wir alle gelernt zu zählen. Im Binärzahlensystem haben wir nur zwei Ziffern:
+          Null und Eins. Mit diesen beiden Ziffern können wir bis zu einer beliebigen
+          Zahl zählen.'
+      8:
+        text: 'Und so funktionierts. Im dezimalen Zahlensystem, an das wir alle gewöhnt
+          sind, hat jede Position in einer Zahl einen anderen Wert. Es gibt eine 1
+          Position, die 10 Position, die 100 Position, und so weiter. Zum Beispiel
+          ist eine 9 in der Position 100 eine 900. Im Binärbetrieb trägt jede Position
+          auch einen Wert. Aber anstatt jedes Mal mit 10 zu multiplizieren, multiplizieren
+          wir mit 2: Es gibt also die 1 Position, die 2 Position, die 4 Position,
+          die 8 Position, und so weiter. Zum Beispiel ist die Zahl 9 im Binärformat
+          1001. Um den Wert zu berechnen, addieren wir 1 mal 8, plus 0 mal 4, plus
+          0 mal 2, plus 1 mal 1. Fast niemand macht diese Rechnung, weil Computer
+          es für uns tun. Wichtig ist, dass jede Zahl nur mit Einsen und Nullen dargestellt
+          werden kann, oder durch einen Haufen von Drähten, die ein- oder ausgeschaltet
+          sind. Je mehr Kabel du verwendest, desto größer sind die Zahlen, die du
+          speichern kannst. Mit 8 Drähten kannst du Zahlen zwischen 0 und 255 speichern.
+          Das sind acht. Mit nur 32 Drähten kannst du den ganzen Weg von 0 bis über
+          4 Milliarden speichern. Mit dem Binärzahlensystem kannst du jede beliebige
+          Zahl darstellen.'
+      9:
+        text: Aber was ist mit anderen Arten von Informationen? Wie Text, Bilder oder
+          Ton? Es stellt sich heraus, dass all diese Dinge auch mit Zahlen dargestellt
+          werden können. Denke an alle Buchstaben im Alphabet. Du kannst jedem Buchstaben
+          eine Nummer zuweisen. A könnte 1 sein, B könnte 2 sein, und so weiter. Du
+          kannst dann jedes Wort oder jeden Absatz als eine Folge von Zahlen darstellen.
+          Und wie wir gesehen haben, können diese Zahlen als Ein- oder Ausschaltsignale
+          gespeichert werden. Jedes Wort, das du auf jeder Webseite oder deinem Handy
+          siehst, wird mit einem System wie diesem dargestellt.
+      10:
+        text: Betrachten wir nun Fotos, Videos und alle Grafiken, die Sie auf einem
+          Bildschirm sehen.
+      11:
+        text: Alle diese Bilder bestehen aus winzigen Punkten, die Pixel genannt werden,
+          und jedes Pixel hat eine Farbe. Jede der Farben kann mit Zahlen dargestellt
+          werden. Wenn man bedenkt, dass das typische Bild Millionen dieser Pixel
+          hat und das typische Video 30 Bilder pro Sekunde zeigt, dann sprechen wir
+          hier über eine Menge Daten.
+      12:
+        text: Jeder Klang ist im Grunde genommen eine Reihe von Schwingungen in der
+          Luft. Vibrationen können grafisch als Wellenform dargestellt werden. Jeder
+          Punkt dieser Wellenform kann durch eine Zahl dargestellt werden. Und so
+          kann jeder Klang in eine Reihe von Zahlen zerlegt werden. Wenn Sie eine
+          höhere Klangqualität wünschen, wählen Sie 32-Bit-Audio oder ein 8-Bit-Audio.
+          Mehr Bits bedeuten einen größeren Zahlenbereich.
+      13:
+        text: Wenn du einen Computer benutzt, um Code zu schreiben oder deine eigene
+          App zu erstellen, hast du es nicht direkt mit diesen Einsen und Nullen zu
+          tun. Aber du wirst es mit Bildern, Ton oder Video zu tun haben. Wenn du
+          also verstehen willst, wie Computer im Inneren funktionieren, kommt alles
+          von diesen einfachen Einsen und Nullen und den elektrischen Signalen in
+          den Schaltkreisen dahinter.
+    csd_concept_circuits_logic:
+      1:
+        text: Eines der coolsten Dinge, die ich über Schaltkreise entdeckt habe, ist,
+          dass Schaltkreise eine Kunstform sein können, wie wenn ich eine kreative
+          Idee habe, ich kann diese kreative Idee mit Schaltkreisen herausbringen.
+          Wenn Du also Ideen hast, kannst du die Technologie nutzen, um diese Ideen
+          zum Leben zu erwecken.
+      2:
+        text: Jeder Ein- oder Ausgang eines Computers ist im Grunde genommen eine
+          Art von Information, die durch ein- oder ausgeschaltete elektrische Signale
+          oder Einsen und Nullen dargestellt werden kann.
+      3:
+        text: Um die Informationen, die als Input eingehen, zu verarbeiten und die
+          Informationen, die ausgegeben werden, zu erzeugen, muss ein Computer die
+          Eingangssignale ändern und kombinieren. Dazu verwendet ein Computer Millionen
+          von winzigen elektronischen Komponenten, die sich zu Schaltungen zusammenfügen.
+      4:
+        text: Lasst uns einen genaueren Blick darauf werfen, wie Schaltkreise Informationen,
+          die in Einsen und Nullen dargestellt werden, ändern und verarbeiten können.
+          Dies ist eine unglaublich einfache Schaltung. Es nimmt ein elektrisches
+          Signal, ein- oder ausgeschaltet, und dreht es um. Wenn also das Signal,
+          das du eingibst, eine 1 ist, gibt die Schaltung dir eine 0, und wenn du
+          der Schaltung eine 0 gibst, gibt sie dir eine 1. Das Signal, das hineingeht,
+          ist nicht das gleiche wie das Signal, das herauskommt, und so nennen wir
+          diese Schaltung NICHT.
+      5:
+        text: Komplexere Schaltungen können mehrere Signale aufnehmen und kombinieren
+          und Ihnen ein anderes Ergebnis liefern. In diesem Beispiel nimmt eine Schaltung
+          zwei elektrische Signale auf, jetzt könnte jedes eine 1 oder eine 0 sein.
+          Wenn eines der eingehenden Signale eine 0 ist, dann ist das Ergebnis auch
+          eine 0. Diese Schaltung gibt dir nur dann eine 1, wenn das erste Signal
+          und das zweite Signal beide eine 1 sind, und so nennen wir die Schaltung
+          UND.
+      6:
+        text: Es gibt viele kleine Schaltungen wie diese, die einfache logische Berechnungen
+          durchführen. Wenn wir diese Schaltungen miteinander verbinden, können wir
+          komplexere Schaltungen erstellen, die komplexere Berechnungen durchführen.
+      7:
+        text: Zum Beispiel kannst du eine Schaltung erstellen, die 2 Bits zusammen
+          addiert, die als Addierer bezeichnet wird. Diese Schaltung nimmt 2 einzelne
+          Bits, jedes eine 1 oder eine 0, auf und addiert sie zur Berechnung der Summe.
+          Die Summe kann 0 plus 0 gleich 0 sein, 0 plus 1 gleich 1, oder 1 plus 1
+          gleich 2. Du brauchst zwei Drähte als Ausgabe, weil es bis zu zwei Binärziffern
+          braucht um die Summe darzustellen. Sobald du einen einzelnen Addierer hast,
+          um zwei Bits Informationen hinzuzufügen, kannst du Vielfache dieser Addierer-Schaltungen
+          nebeneinander zusammensetzen, um viel größere Zahlen zusammenzufügen.
+      8:
+        text: Zum Beispiel kannst du hier sehen wie ein 8-Bit-Addierer die Zahlen
+          25 und 50 addiert. Jede Zahl wird durch 8 Bit dargestellt, was zu 16 verschiedenen
+          elektrischen Signalen führt, die in den Stromkreis gelangen. Die Schaltung
+          für einen 8-Bit-Addierer hat viele kleine Addierer im Inneren, die zusammen
+          die Summe berechnen.
+      9:
+        text: Verschiedene Stromkreise können andere einfache Berechnungen wie Subtraktion
+          oder Multiplikation durchführen. Tatsächlich ist die gesamte Informationsverarbeitung,
+          die Ihr Computer durchführt, nur eine Menge und viele kleine einfache Operationen
+          zusammengesetzt. Jede einzelne Operation, die von einem Computer durchgeführt
+          wird, ist so einfach, dass sie von einem Menschen durchgeführt werden könnte,
+          aber diese Schaltungen in Computern sind viel schneller.
+      10:
+        text: Damals waren diese Schaltkreise groß und klobig, und ein 8-Bit-Addierer
+          könnte so groß wie ein Kühlschrank sein, und es würde Minuten dauern, bis
+          sie eine einfache Berechnung durchgeführt hätten. Heute sind Computerschaltungen
+          mikroskopisch klein und viel schneller. Warum sind kleinere Computer auch
+          schneller? Nun, denn je kleiner die Schaltung ist, desto weniger Entfernung
+          muss das elektrische Signal zurücklegen. Die Elektrizität bewegt sich fast
+          so schnell wie das Licht, weshalb moderne Schaltungen Milliarden von Berechnungen
+          pro Sekunde durchführen können.
+      11:
+        text: Egal, ob du ein Spiel spielst, ein Video aufnimmst oder den Kosmos erkundest,
+          alles, was du mit Technologie machen kannst, erfordert eine extrem schnelle
+          Verarbeitung vieler Informationen. Unter all dieser Komplexität befinden
+          sich nur viele winzige kleine Schaltkreise, die binäre Signale in Websites,
+          Videos, Musik und Spiele verwandeln. Diese Schaltkreise können uns sogar
+          helfen, die DNA zu entschlüsseln, um Krankheiten zu diagnostizieren und
+          zu heilen. Also, was möchtest du mit all diesen Schaltungen machen?
+    csd_concept_memory_cpu_input_output:
+      1:
+        text: Hallo, mein Name ist Madison Maxey. Ich habe eine Firma namens Loomia,
+          und wir konzentrieren uns auf die Herstellung von Smart Fabrics für Smart
+          Clothing und Smart Soft Good Products. Bei Textilien sind der Fantasie keine
+          Grenzen gesetzt.
+      2:
+        text: Mein Name ist Danielle Applestone, und ich bin CEO der Othermachine
+          Company. Wir bauen eine Tischfräse. Eine Fräsmaschine nimmt ein rotierendes
+          Schneidwerkzeug und bewegt es durch das Material, um ein 3D-Objekt zu erzeugen.
+      3:
+        text: Unter der Haube tun alle Computer die gleichen vier grundlegenden Dinge.
+          Sie geben Informationen ein, speichern und verarbeiten die Informationen
+          und geben dann Informationen aus. Jedes dieser Dinge wird von einem anderen
+          Teil des Computers erledigt.
+      4:
+        text: Es gibt Eingabegeräte, die Eingaben aus der Außenwelt übernehmen und
+          in binäre Informationen umwandeln. Es gibt Speicher, um diese Informationen
+          zu speichern. Es gibt eine zentrale Verarbeitungseinheit oder CPU, in der
+          alle Berechnungen durchgeführt werden. Und schließlich gibt es Ausgabegeräte,
+          die Informationen aufnehmen und in eine physische Ausgabe umwandeln.
+      5:
+        text: Lasst uns zuerst über den Input sprechen. Computer können viele verschiedene
+          Arten von Eingaben vornehmen, wie die Tastatur eines Computers, das Touchpad
+          eines Telefons, eine Kamera, ein Mikrofon oder ein GPS. Aber auch die Sensoren
+          an einem Auto, einem Thermostat oder einer Drohne sind unterschiedliche
+          Eingabegeräte.
+      6:
+        text: Betrachten wir nun ein einfaches Beispiel dafür, wie Input durch einen
+          Computer läuft und zu Output wird. Wenn Sie eine Taste auf Ihrer Tastatur
+          drücken - sagen wir den Buchstaben "B". Die Tastatur wandelt den Buchstaben
+          in eine Zahl um. Diese Zahl wird als Binärwert, Einsen und Nullen, an den
+          Computer gesendet.
+      7:
+        text: Ausgehend von dieser Zahl berechnet die CPU, wie der Buchstabe "B" Pixel
+          für Pixel dargestellt wird. Die CPU fordert vom Speicher eine Schritt-für-Schritt-Anleitung
+          an, die ihr sagt, wie man den Buchstaben "B" zeichnet. Die CPU führt diese
+          Anweisungen aus und speichert die Ergebnisse als Pixel im Speicher.
+      8:
+        text: Schließlich werden diese Pixelinformationen binär an den Bildschirm
+          gesendet. Der Bildschirm ist ein Ausgabegerät, das die binären Signale in
+          die winzigen Lichter und Farben umwandelt, die das bilden, was du siehst.
+      9:
+        text: Dies alles geschieht so schnell, dass es sich sofort anfühlt, aber um
+          jeden Buchstaben anzuzeigen, führt ein Computer Tausende von Anweisungen
+          aus, beginnend mit dem Moment, in dem der Finger den Schlüsselpunkt drückt.
+      10:
+        text: In diesem Beispiel war das Ausgabegerät der Bildschirm, aber es gibt
+          viele verschiedene Arten von Ausgängen, die ein binäres Signal vom Computer
+          nehmen und etwas in der physikalischen Welt tun. So gibt beispielsweise
+          ein Lautsprecher einen Ton wieder, und ein 3D-Drucker druckt ein Objekt.
+          Ausgabegeräte können auch physische Bewegungen steuern, wie z. B. ein Roboterarm,
+          der Motor eines Autos oder das Schneidwerkzeug der Fräsmaschine, die mein
+          Unternehmen herstellt. Neue Arten von Ein- und Ausgängen lassen Computer
+          auf völlig neue Weise mit der Welt interagieren. Dies wurde durch Verbesserungen
+          bei der Geschwindigkeit und Größe von Speicher und CPU unterstützt.
+      11:
+        text: Je komplizierter eine Aufgabe ist und je mehr Informationen eingegeben
+          oder ausgegeben werden, desto mehr Rechenleistung und Speicherplatz benötigt
+          ein Computer. Die Eingabe von Buchstaben auf einem Bildschirm kann einfach
+          sein, aber um komplizierte 3D-Grafiken zu erstellen oder einen hochauflösenden
+          Film aufzunehmen, haben moderne Computer oft mehrere CPUs, um all diese
+          Informationen zu verarbeiten, und viele Gigabyte Speicher, um sie zu speichern.
+      12:
+        text: 'Egal, was du mit dem Computer machen willst, jede einzelne Aktion dreht
+          sich darum: Informationen aus der physischen Welt einzugeben, diese Informationen
+          zu speichern und zu verarbeiten und etwas Output in die physische Welt zurückzubringen.'
+    csd_concept_hardware_software:
+      1:
+        text: Hallo, mein Name ist Erica Gomez und ich bin technische Leiterin bei
+          Amazon.com. Eines der besten Dinge an der Arbeit in der Technik, und insbesondere
+          bei Amazon, ist, dass ich meinen Hund jeden Tag mit zur Arbeit nehmen kann.
+          Mein Job ist es, dafür zu sorgen, dass Software veröffentlicht wird, und
+          ihr Job ist es, unter meinem Schreibtisch zu schlafen und sehr laut zu schnarchen.
+      2:
+        text: 'Mein Name ist Jerome Holman, und ich bin Programm-Manager bei Team
+          Xbox und ich habe einen wirklich lustigen Job: Im Grunde genommen bringen
+          ich Hardware und Software zusammen, um euch alle Spiele zu geben, die ihr
+          auf eurer Xbox liebt.'
+      3:
+        text: Wenn du in ein Computergerät schaust, siehst du eine Menge Schaltungen,
+          Chips, Kabel, Lautsprecher, Stecker und alle möglichen anderen Dinge. Das
+          ist die Hardware.
+      4:
+        text: Aber was du nicht siehst, ist die Software. Software sind alle Computerprogramme
+          oder Codes, die auf diesem System ausgeführt werden. Software kann alles
+          sein, von Apps und Spielen bis hin zu Webseiten und der Data-Science-Software,
+          die ich und meine Teams bei Amazon verwenden, um zu verstehen, wie sich
+          Kunden verhalten.
+      5:
+        text: Aber wie interagieren die Hardware und die Software miteinander? Beginnen
+          wir mit der Betrachtung der zentralen Verarbeitungseinheit oder CPU eines
+          Computers.
+      6:
+        text: Die CPU ist der Master-Chip, der alle anderen Teile des Computers steuert.
+          Eine CPU muss verschiedene Dinge tun, so dass sie kleinere, einfachere Teile
+          hat, die bestimmte Aufgaben erledigen. Es hat Schaltungen, um einfache Mathematik
+          und Logik zu machen. Es hat andere Schaltungen zum Senden und Empfangen
+          von Informationen zu und von verschiedenen Teilen des Computers.
+      7:
+        text: Die eigentliche Magie der CPU besteht darin, woher sie weiß, welche
+          Schaltungen sie verwenden muss und wann sie diese verwenden muss. Die CPU
+          erhält einfache Befehle, die ihr sagen, welche Schaltung sie verwenden soll,
+          um eine bestimmte Aufgabe zu erfüllen. Ein Befehl "add" weist die CPU beispielsweise
+          an, ihre äußere Schaltung zu verwenden, um eine neue Zahl zu berechnen.
+          Und dann sagt der Befehl "store" der CPU, dass sie eine andere Schaltung
+          verwenden soll, um dieses Ergebnis im Speicher zu speichern.
+      8:
+        text: Genau wie Zahlen können alle diese einfachen Befehle in binären Einsen
+          und Nullen oder elektrischen Signalen ein- und ausgeschaltet werden. Die
+          binären Befehle werden im Speicher abgelegt und die CPU holt und führt sie
+          nacheinander aus. Diese Befehlsfolge ist in der Tat ein sehr einfaches Computerprogramm.
+      9:
+        text: Binärcode ist die grundlegendste Form der Software und steuert die gesamte
+          Hardware eines Computers. Heutzutage schreibt niemand mehr Software im Binärformat.
+          Es würde ewig dauern!
+      10:
+        text: Heute sieht die Software, die wir schreiben, eher so aus (Python), oder
+          so (Rubin), oder sogar so (Blockly). Programmiersprachen wie diese ermöglichen
+          es Dir, Befehle in etwas einzugeben, das ähnlich wie einfache Sprache aussieht.
+      11:
+        text: Um ein Rechteck auf dem Bildschirm zu zeichnen, benötigen Sie nur einen
+          einzigen Befehl. Dieser High-Level-Befehl wird in Hunderte oder Tausende
+          von einfacheren binären Befehlen umgewandelt, die die CPU versteht. Die
+          Software sagt der CPU, was sie tun soll, aber wenn Sie Musik hören, im Internet
+          surfen und mit einem Freund chatten, führt Ihr Computer mehrere Softwarekomponenten
+          auf einmal aus.
+      12:
+        text: Wie kommen also alle diese Programme überhaupt auf den Computer, und
+          wie kann die CPU sie alle auf einmal ausführen? Um das herauszufinden, müssen
+          wir einen Blick auf das Betriebssystem werfen.
+      13:
+        text: Das Betriebssystem des Computers ist das Masterprogramm, das verwaltet,
+          wie Software die Hardware des Computers nutzen kann. Zum Beispiel habe ich
+          geholfen, das Windows-Betriebssystem zu entwickeln, das auf den meisten
+          PCs läuft.
+      14:
+        text: Das Betriebssystem ist ein Programm mit speziellen Fähigkeiten, mit
+          denen es die andere Software auf dem Computer steuern kann. Du kannst neue
+          Programme installieren, indem du sie in den Speicher deines Computers ladest.
+          Es entscheidet, wann ein Programm von der zentralen Verarbeitungseinheit
+          ausgeführt wird und ob dieses Programm auf die Ein- und Ausgabegeräte des
+          Computers zugreifen kann. Und wenn du denkst, dass dein Computer viele Programme
+          gleichzeitig ausführt, ist es in Wirklichkeit das Betriebssystem, das schnell
+          zwischen Programmen wechselt, die diese CPU für Bruchteile von Sekunden
+          teilen.
+      15:
+        text: In jedem Computer befindet sich ein Betriebssystem, das Software verwaltet,
+          die die Hardware des Computers steuert.
+      16:
+        text: In jedem Computer befindet sich ein Betriebssystem, das Software verwaltet,
+          die die Hardware des Computers steuert.
+      17:
+        text: Computer haben das Potenzial, alle möglichen erstaunlichen Dinge zu
+          tun. Aber das Einzige, was den Computer intelligent oder nützlich macht,
+          bist du. Wenn du lernst zu programmieren, kannst du das Problem definieren,
+          das du lösen willst, und die Software schreiben, die diese Ideen in die
+          Realität umsetzt.
+    hoc_dance_warmup:
+      1:
+        text: 'Hour of Code | Tanzparty: Aufwärmübung'
+      2:
+        text: Hallo, mein Name ist Miral Kotb und ich bin Tänzer, Softwareentwickler
+          und Entwickler von iLuminate.
+      3:
+        text: Die Informatik bezieht sich also auf Kreativität in vielfältiger Weise.
+          Unermesslich, wirklich. Ich meine, sobald man die Fähigkeit hat, Software
+          zu schreiben, kann man Ideen in alles umsetzen. Ich mache es mit leichten
+          Anzügen. Es gibt so viel, was man tun kann, wenn man die Werkzeuge hat,
+          um Software zu schreiben, und die Möglichkeiten sind wirklich endlos.
+      4:
+        text: In der nächsten Stunde wirst du mit der Informatik beginnen, indem du
+          deine eigene Tanzparty programmierst! Wir haben einige Hits und ein Team
+          von großartigen Tänzern zusammengestellt, mit denen du spielen kannst.
+      5:
+        text: Du wirst Codeblöcke verwenden, um verschiedene Tänzer auszuwählen, ihre
+          Tanzbewegungen zu ändern, sie auf die Musik reagieren zu lassen und sie
+          interaktiv zu machen.
+      6:
+        text: Du wirst sehen, dass dein Bildschirm in drei Hauptteile aufgeteilt ist.
+          Auf der linken Seite befindet sich der Spielraum. Hier werden deine Tänzerinnen
+          und Tänzer auftauchen.
+      7:
+        text: Dieser mittlere Bereich ist die Toolbox. Neue Codeblöcke werden in diesem
+          Bereich verfügbar sein, während du durch die Lektionen gehst.
+      8:
+        text: Der Raum auf der rechten Seite ist der Arbeitsbereich. Du kannst Blöcke
+          aus der Toolbox in den Arbeitsbereich ziehen, um dein Programm zu erstellen.
+      9:
+        text: Die Anweisungen für jede Ebene findest du hier oben am oberen Bildschirmrand.
+          Wenn du einen Hinweis brauchst, klicke einfach auf die Glühbirne.
+      10:
+        text: Um zu beginnen, lasst uns mit diesem roten Block eine neue Tänzerin
+          machen. Zuerst ziehe es aus der Toolbox und raste es unter diesen orangefarbenen
+          "Setup" Baustein ein. Diese Tänzerin ist eine Katze und ihr Name ist "my_first_dancer".
+          Du kannst den Namen in einen beliebigen Namen ändern, indem du hier klickst.
+      11:
+        text: Damit kannst du auch ändern, wo die Tänzerin in deinem Spielraum erscheint.
+      12:
+        text: Über dem Abspielbereich befindet sich ein Menü zum Auswählen von Musik.
+          Es gibt eine Vielzahl von Songs zur Auswahl, also viel Spaß beim Finden
+          deiner Favoriten. Unter dem Abspielfeld befindet sich die Run-Taste. Wenn
+          du auf Ausführen drückst, siehst du die Tänzer aus deinem Programm im Wiedergaberaum
+          erscheinen und die Musik wird abgespielt.
+      13:
+        text: Probiere es selbst aus! Und wenn du dich festgefahren fühlst, ist es
+          okay! Steh einfach auf und beweg dich, und bevor du dich versiehst, hast
+          du deine eigene Tanzparty gemacht. Also, was wirst du erschaffen?
+    hoc_dance_events:
+      1:
+        text: 'Hour of Code | Tanzparty: Ereignisse (Events)'
+      2:
+        text: Ich bin Aloe Blacc. Ich bin Sänger, Songwriter und Entertainer. Ich
+          denke, dass die Informatik wirklich wichtig ist, denn die Informatik ist
+          die Zukunft, und ich denke es ist wichtig für die Menschen, die Kontrolle
+          über die Technologie zu haben, die buchstäblich ihr Leben kontrolliert.
+      3:
+        text: Um verschiedene Tanzbewegungen zur richtigen Zeit mit der Musik durchzuführen,
+          kannst du so genannte Events verwenden. Ein Event sagt deinem Programm,
+          dass es darauf achten soll, dass etwas passiert und dann sofort reagiert.
+      4:
+        text: Einige Beispiele für Ereignisse sind das Achten auf einen Mausklick,
+          eine Pfeiltaste oder ein Antippen des Bildschirms. Das Ereignis, das wir
+          jetzt verwenden werden, wird auf eine Änderung des Songs hören. Die Änderung
+          veranlasst deine Tänzerin, einen neuen Tanz zu machen.
+      5:
+        text: Professionelle Tänzer üben ihre Choreographie, indem sie die Beats des
+          Songs zählen.
+      6:
+        text: In der Musik bezieht sich ein Takt auf eine bestimmte Anzahl von Beats.
+          In den meisten populären Songs ist ein Takt vier Schläge lang.
+      7:
+        text: Damit deine Tänzer loslegen zu lassen, brauchst du einen grünen Ereignisbaustein.
+          Dieser Ereignisbaustein besagt, "nach 4 Takten".
+      8:
+        text: Wenn du einen lilafarbenen "do forever"-Block herausziehst, kannst du
+          einen Tanz für deine Tänzerin auswählen. Da es sich unter dem Eventblock
+          "nach 4 Takten" befindet, wartet deine Tänzerin auf 4 Takten des Songs,
+          bevor sie mit ihrem Tanz beginnt.
+      9:
+        text: Achte auf den Taktgeber oben im Anzeigebereich.
+      10:
+        text: Achte und höre auf das Ereignis, das den Tanzcode auslöst. Und genau
+          zur richtigen Zeit beginnt unsere Tänzerin zu tanzen.
+    hoc_dance_properties:
+      1:
+        text: 'Hour of Code | Tanzparty: Eigenschaften'
+      2:
+        text: Mein Name ist Maria, ich bin Junior an der University of Washington
+          und ich bin Amazon Future Engineer.
+      3:
+        text: Ich liebe die Informatik, weil sie Problemlösung und kritisches Denken
+          beinhaltet und nachdem man Stunden der Arbeit in etwas investiert hat, kann
+          man etwas wirklich Cooles und Belohnendes daraus machen.
+      4:
+        text: Bisher hattest du die Möglichkeit, mit verschiedenen Arten von Tänzern
+          zu spielen, und du hast sie so programmiert, dass sie verschiedene Arten
+          von Tanzbewegungen ausführen. Aber wie funktionieren diese Bewegungen wirklich?
+      5:
+        text: Jede Tanzbewegung besteht aus einer Reihe von Bildern, die als Frames
+          bezeichnet werden. Jedes Bild unterscheidet sich leicht von dem davor. Wenn
+          dein Programm ausgeführt wird, zeigt der Computer ein Bild nach dem anderen
+          an. Die Bilder werden so schnell gezeigt, dass es so aussieht, als würde
+          sich die Tänzerin bewegen. Das ist das Geheimnis hinter jeder Animation.
+      6:
+        text: Du kannst nicht nur die Bewegungen deiner Tänzerin ändern, du kannst
+          auch die Eigenschaften einer Tänzerin ändern. Eigenschaften beschreiben
+          Dinge wie die Position der Tänzerin auf dem Bildschirm, die Größe der Tänzerin
+          und die Farbe der Tänzerin.
+      7:
+        text: Um die Eigenschaften einer Tänzerin zu ändern, verwende einen festen
+          Block. Lasst uns einen festen Block verwenden, damit unsere Tänzer kleiner
+          aussehen. Zuerst ziehe den gesetzten Satz in dein Programm. Dann wähle die
+          Tänzerin aus, die du ändern möchtest, und gib die Größe ein, die auf dem
+          Bildschirm angezeigt wird.
+      8:
+        text: Die volle Größe ist 100. Wenn du eine niedrigere Zahl wählst, wird die
+          Tänzerin kleiner. Je kleiner die Tänzerin ist, desto weiter entfernt sieht
+          sie aus. Dies ist eine großartige Möglichkeit, Background-Tänzer zu werden.
+      9:
+        text: Mit dem eingestellten Bausteinen kannst du auch die Abmessungen, die
+          Drehung, die Position und die Farbe der Tänzerin ändern. Indem du mit diesen
+          Eigenschaften herumspielst, kannst du alle möglichen Änderungen vornehmen
+          und sie mit verschiedenen Teilen des Songs verknüpfen.
+      10:
+        text: Denke daran, dass du nur die Eigenschaften einer Tänzerin einstellen
+          kannst, die bereits existiert. Achte darauf, dass dein Set-Block nach dem
+          Block "Make a new dancer" kommt. Zögere nicht zu experimentieren, sei kreativ
+          und habe Spaß.
+    hoc_dance_congrats:
+      1:
+        text: 'Hour of Code | Tanzparty: Party!'
+      2:
+        text: Herzlichen Glückwunsch! Du hast gerade die Grundlagen der Informatik
+          gelernt. Jetzt kannst du diese Bausteine verwenden, um eine Tanzparty nach
+          deinem eigenen Design zu gestalten, die du mit deinen Freunden teilen kannst.
+      3:
+        text: Wenn du in der Toolbox nachschaust, wirst du einige brandneue Blöcke
+          finden, die du noch nie zuvor gesehen hast. So kannst du beispielsweise
+          mit dem Layoutblock die Tänzer auf dem Bildschirm unterschiedlich anordnen.
+      4:
+        text: Sieh dich um und versuche, mit diesen neuen Bausteinen und Funktionen
+          zu experimentieren. Schaffst du es einen sorgfältig choreographierten Tanz
+          zu deinem Lieblingslied kreieren?
+      5:
+        text: Oder ein Tanzwettbewerb mit deinen Freunden?
+      6:
+        text: Oder etwas ganz anderes?
+      7:
+        text: Am Ende des Tutorials kannst du einen Link zu deiner Kreation mit deinen
+          Freunden teilen. Öffne deine Vorstellungskraft und habe einfach Spaß!
+    mc_2018_intro:
+      1:
+        text: Hallo! Du kommst gerade richtig. Willkommen auf der Voyage Aquatic.
+          Ich bin dabei, mich auf die Suche nach versteckten Unterwasserschätzen zu
+          begeben und bin sehr froh, dass Sie mir geholfen haben. Wer weiß, was uns
+          entlang dieser mysteriösen Wasserwege begegnen wird? Wir sind dazu bestimmt,
+          unseren ersten Reiseleiter irgendwo auf diesem Dock zu treffen.
+      2:
+        text: Willkommen, Abenteurer! Um das Voyage Aquatic zu vervollständigen, musst
+          du eine Reihe von Rätseln mit Code lösen. So funktioniert es. Dein Bildschirm
+          ist in drei Hauptteile gegliedert.
+      3:
+        text: Auf der linken Seite siehst du die Welt der Minecraft.
+      4:
+        text: Der mittlere Bereich ist Ihre Toolbox, in der Du Codierbefehle finden
+          kannst.
+      5:
+        text: Und der große Bereich auf der rechten Seite ist dein Arbeitsplatz. Hier
+          kannst du Befehle stapeln, um dein Programm zu erstellen und deine Bewegungen
+          zu kontrollieren.
+      6:
+        text: Die Anweisungen der einzelnen Levels findest du oben auf der Seite.
+          Klicke auf das Pluszeichen, um zwischen Lang- und Kurzanleitung zu wechseln.
+      7:
+        text: Zieh Bausteine aus der Toolbox in den Arbeitsbereich, stapel sie, und
+          klicke dann auf die Schaltfläche Ausführen, um deine Befehle auszuführen.
+      8:
+        text: Du musst es vielleicht ein paar Mal versuchen, um es richtig zu machen,
+          und einige der Rätsel haben mehr als eine Lösung, also experimentiere, um
+          zu sehen, was funktioniert.
+      9:
+        text: Wenn du es noch einmal versuchen möchtest, klicke auf die Reset-Taste,
+          um dorthin zurückzukehren, wo du angefangen hast.
+      10:
+        text: Wenn du einen Befehl löschen möchtest, ziehe einfach den Block aus deinem
+          Arbeitsbereich zurück in die Toolbox. Denke daran auf "Ausführen" zu klicken,
+          um zu sehen, wie dein Code in Aktion aussieht.
+      11:
+        text: Okay, genug herumgealbert, Abenteurerfreund. Lasst uns anfangen zu programmieren,
+          um einen Unterwasserschatz zu finden.
+    MC_2018_loops:
+      1:
+        text: Großartig! Wir haben einen Kabeljau gefangen! Wusstest du, dass, wenn
+          du einen Kabeljau an einen Delfin verfütterst, der Delfin dich zu einem
+          Schiffbruch führen wird, wo es Schätze geben kann? Wir müssen näher kommen.
+          Die nächsten Rätsel werden sicherlich komplizierter sein, also sollten wir
+          besser mehr Programmierkenntnisse erlernen. Was ist das denn? Eine Höhle?
+      2:
+        text: Willkommen, Abenteurer! Mein Name ist Squid. Ich bemerkte, dass du in
+          einigen der letzten Rätsel immer wieder den gleichen Befehlssatz benutzt
+          hast. Muss ein bisschen lästig gewesen sein. Wünschst du dir jemals, du
+          hättest eine Möglichkeit, etwas immer und immer wieder zu tun, wie, du weißt
+          schon, Geschirr spülen oder deine Zähne putzen, ohne müde oder gelangweilt
+          zu werden? Das wäre schön.
+      3:
+        text: Computer sind wirklich gut darin, das Gleiche immer und immer wieder
+          mit Hilfe von Codeschleifen zu tun. Wenn du willst, dass dein Programm die
+          gleichen Anweisungen mehrmals wiederholt, kannst du eine Schleife verwenden!
+      4:
+        text: Der Schleifenblock enthält Anweisungen, die wiederholt werden, bis das
+          Ziel erreicht ist. Sobald dein Programm eine "Repeat until goal"-Schleife
+          startet, wiederholt es die Anweisungen darin, bis es zum Ziel kommt.
+      5:
+        text: Versuche das selbst! Plaziere die Befehle, die du wiederholen möchtest,
+          innerhalb des Blocks "Wiederholen bis zum Ziel", klicke auf "Ausführen"
+          und beobachte, wie es losgeht!
+      6:
+        text: Nun, das war ein bisschen seltsam. Wer hätte gedacht, dass Tintenfische
+          programmieren können? Ich dachte nicht mal, dass sie Finger haben. Jetzt
+          wissen wir also von Schleifen. Lasst sie uns benutzen, um uns noch mehr
+          Schätze zu sammeln.
+    mc_2018_conditionals:
+      1:
+        text: Wow! Weitere drei Rätsel gelöst! Und wir haben.... einen Lachs gefangen.
+          Nicht ganz so aufregend wie Goldhaufen, aber wir nehmen, was wir kriegen
+          können. Und ich habe das Gefühl, dass die Nautilusmuschel später nützlich
+          sein wird. Ich frage mich, was in diesen Ruinen lauert. Vielleicht noch
+          ein Hinweis! Lasst uns einen Blick hinein werfen.
+      2:
+        text: Mein Name ist Netty und willkommen in meinen Ruinen. Wir treffen Entscheidungen
+          immer auf der Grundlage von Bedingungen. Wenn es nach Regen aussieht, dann
+          holen wir uns einen Regenschirm. Wenn wir Hunger haben, dann essen wir einen
+          Snack.
+      3:
+        text: Wenn wir eine Kletterpflanze sehen, dann laufen wir in die andere Richtung.
+          Computer treffen auch diese Art von Entscheidungen. Sie können tatsächlich
+          mit Code auf Bedingungen reagieren.
+      4:
+        text: Um eine solche Antwort mit Ihren Codebefehlen zu programmieren, wähle
+          einen if-path Baustein.
+      5:
+        text: Wähle das Dropdown-Menü, um den Befehl zu erstellen.
+      6:
+        text: Wenn du zum Beispiel den Befehl "if path to the right" schreibst und
+          platzierst, biege rechts innerhalb der Bedingung ab, dann wird Steve, wenn
+          er einen offenen Pfad nach rechts erreicht, immer rechts abbiegen. Wenn
+          es keine Öffnung nach rechts gibt, wird er sich nicht nach rechts wenden.
+          Diese bedingten if Befehle sind hilfreich, wenn du Code in unvorhersehbaren
+          Situationen ausführst, wie z. B. mysteriösen Ruinen in Unterwasserhöhlen.
+      7:
+        text: Versuche die if-Blöcke zu verwenden und nimm deinen Code für einen Spin.
+      8:
+        text: Wow! Netty's Ruinen waren fantastisch. Ich muss wirklich aus dem Haus
+          meiner Eltern ausziehen. Also, was denkst du? Sind die Bedingungen für uns
+          richtig, um die letzten Rätsel zu lösen? Lasst es uns versuchen.
+    mc_2018_closing:
+      1:
+        text: 'Amy Lee33: Herzlichen Glückwunsch! Du hast es geschafft!'
+      2:
+        text: 'Tintenfisch: Herzlichen Glückwunsch!'
+      3:
+        text: 'Netty: Du hast es geschafft! Herzlichen Glückwunsch!'
+      4:
+        text: 'Tomohawk: Herzlichen Glückwunsch!'
+      5:
+        text: Was für ein toller Tag! Die ganze Schatzsuche führte uns dazu, eine
+          Leitung für Minecraft zu bauen, Nautilusmuscheln zu finden und Schatzkisten
+          zu entdecken. Ich liebe einfach die Farbe von Prismarin. Wir haben auch
+          gelernt, wie man mit Schleifen und Bedingunge programmiert.
+      6:
+        text: Apropos Programmierung, es gibt noch ein weiteres Level für diese Aufgabe.
+          Seid ihr bereit, Abenteurer?
+      7:
+        text: Es ist ein Freispiel-Level und du kannst deine Programmierkenntnisse
+          einsetzen und etwas Unglaubliches aufbauen.
+      8:
+        text: Hmmm.... ein Ort, um deinen Schatz zu verstecken, ein Unterwasserdenkmal,
+          eine Korallenburg? Ahhhh....so viele Ideen. Versuche Schleifen zu verwenden,
+          um eine Wiederholungsaktion zu erstellen, und Bedingungen, um dich auf all
+          diese unvorhersehbaren Szenarien vorzubereiten.
+      9:
+        text: Du hast dich inzwischen sicherlich als unerschrockener Programmierer
+          erwiesen, und ich kann es kaum erwarten zu sehen, was du baust. Und hoffentlich
+          Deine Ihre Programmierungs-Abenteuer nicht hier. Bon Voyage!
+    teaching_csf_how_it_works:
+      1:
+        image: notes/teaching_cs_fundamentals_1.png
+        text: Dieser Kurs ist in Etappen unterteilt.
+      2:
+        image: notes/teaching_cs_fundamentals_2.png
+        text: In den ersten Phasen wird vorgestellt, was Informatik ist, sowie einige
+          Schlüsselwörter.
+      3:
+        image: notes/teaching_cs_fundamentals_3.png
+        text: Als nächstes werden Sie lernen, wie man so programmiert, wie es Ihre
+          Schüler tun. Die letzten Phasen des Kurses helfen Ihnen, einen Plan für
+          den Informatikunterricht in Ihrem Klassenzimmer zu erstellen. Während des
+          gesamten Kurses sehen Sie Beispiele für sowohl Plugged - oder Online - Lektionen,
+          als auch Unplugged Lektionen, die ohne Computer durchgeführt werden.
+      4:
+        image: notes/teaching_cs_fundamentals_4.png
+        text: Die Lernplattform verfolgt deinen Fortschritt, so dass du jederzeit
+          dort weitermachen kannst, wo du aufgehört hast.
+    what_is_cs:
+      1:
+        image: notes/what_is_cs.png
+        text: |-
+          Die Programmierung ist der Satz von Anweisungen, die du einem Computer gibst. Die Informatik ist ein Bereich, in dem Menschen die Kraft des Computers nutzen, um große Probleme zu lösen. Die Informatik umfasst die Kodierung, aber auch andere Dinge, wie z. B. wie das Internet funktioniert und die Gesellschaft beeinflusst, was man mit großen Datenmengen macht und wie man große Probleme löst. In der Informatik geht es um Problemlösung, kritisches Denken und Beharrlichkeit.
+
+          Übersetzt mit www. DeepL. com/Translator.
+    writing_first_program:
+      1:
+        image: notes/writing_first_program_1.png
+        text: Code.org verwendet eine visuelle, Drag & Drop-Programmiersprache namens
+          Blockly. Blockly verwendet bunte Anweisungen, die Bausteine genannt werden,
+          um Programme zu erstellen und Rätsel zu lösen.
+      2:
+        image: notes/writing_first_program_2.png
+        text: Jedes Puzzle besteht aus vier Teilen.
+      3:
+        image: notes/writing_first_program_3.png
+        text: Der Spielarena befindet sich auf der linken Seite, wo Ihr Programm läuft.
+      4:
+        image: notes/writing_first_program_4.png
+        text: Die Mitte hat den Toolbox-Bereich, der alle benötigten Blöcke enthält.
+      5:
+        image: notes/writing_first_program_5.png
+        text: Auf der rechten Seite befindet sich der Arbeitsbereich, in dem du Blöcke
+          ziehen kannst, um dein Programm zu erstellen.
+      6:
+        image: notes/writing_first_program_6.png
+        text: Über dem Arbeitsbereich befinden sich die Anweisungen für jedes Puzzle.
+      7:
+        image: notes/writing_first_program_7.png
+        text: Wenn du zu viele Bausteine aus der Toolbox herausgezogen hast, ziehe
+          einfach den überflüssigen Block zurück in die Toolbox.  Klicke auf Ausführen,
+          um Dein Programm auszuprobieren, und auf Zurücksetzen, um es erneut zu versuchen.
+    repeat_block:
+      1:
+        image: notes/repeat_block.png
+        text: Ein Wiederholungsblock ermöglicht es dir, den Code innerhalb des Blocks
+          so oft zu wiederholen, wie du es ihm sagst.
+    what_is_an_event:
+      1:
+        image: notes/what_is_an_event.png
+        text: Ein Ereignis sagt deinem Programm, dass es darauf achten soll, dass
+          etwas passiert. Wenn diese Sache passiert, führt das Programm eine Aktion
+          aus. Ein Computer kann auf einen Mausklick warten, eine Pfeiltaste drücken
+          oder auf den Bildschirm tippen.
+    lesson_planning:
+      1:
+        image: notes/lesson_planning_1.png
+        text: Informatik Grundlagen Lektionen beginnen mit Übersichten, um Ihnen mitzuteilen,
+          was die Lektion abdecken wird.
+      2:
+        image: notes/lesson_planning_2.png
+        text: Der Unterricht umfasst Aufwärmübungen, Aktivitäten und Nachbereitungen.
+          Wenn Sie Ihre eigenen Unterrichtspläne erstellen möchten, sollten Sie diese
+          Tipps im Hinterkopf behalten.
+      3:
+        image: notes/lesson_planning_3.png
+        text: 1. Versuchen Sie, ein spiralförmiges Curriculum-Design zu verwenden.
+          Führen Sie Konzepte einmal ein und besuchen Sie sie dann erneut.
+      4:
+        image: notes/lesson_planning_4.png
+        text: 2. Erstellen Sie eine Blended Learning Erfahrung, indem Sie Online-Lektionen
+          mit unplugged Lektionen kombinieren.
+      5:
+        image: notes/lesson_planning_5.png
+        text: 3. Unterteilen Sie Ihren Lehrplan in kleinere Teile.
+      6:
+        image: notes/lesson_planning_6.png
+        text: 4. Stellen Sie sicher, dass Sie sich an die lokalen Standards sowie
+          an die Fähigkeiten im Bereich der Hochschul- und Berufsbereitschaft halten.
+    opd_closing:
+      1:
+        image: notes/opd_closing_1.png
+        text: Herzlichen Glückwunsch! Sie haben den Online-Kurs Teaching Computer
+          Science Fundamentals abgeschlossen. Sie sind jetzt Teil der wachsenden Gemeinschaft
+          von Lehrern, die ihre Schüler auf die Zukunft vorbereiten.
+      2:
+        image: notes/opd_closing_2.png
+        text: 'Schaue Dir diese Ressourcen an, wenn du mehr Unterstützung benötigen:
+          1. forum.code.org 2. @teachcode auf Twitter 3. studio.code.org '
+    hoc_dance_warmup_2019:
+      1:
+        text: 'Hour of Code | Tanzparty: Aufwärmübung'
+      2:
+        text: Hallo, mein Name ist Miral Kotb und ich bin Tänzer, Softwareentwickler
+          und Entwickler von iLuminate.
+      3:
+        text: Die Informatik bezieht sich auf die Kreativität in vielfältiger Weise.
+          Unermesslich, wirklich. Sobald man die Fähigkeit hat, Software zu schreiben,
+          kann man Ideen in alles umsetzen. Ich mache es mit leichten Anzügen. Es
+          gibt so viel, was man tun kann, wenn man die Werkzeuge hat, um Software
+          zu schreiben, und die Möglichkeiten sind wirklich endlos.
+      4:
+        text: In der nächsten Stunde wirst du mit der Informatik beginnen, indem du
+          deine eigene Tanzparty programmierst! Wir haben einige Hits und ein Team
+          von großartigen Tänzern zusammengestellt, mit denen du spielen kannst.
+      5:
+        image: notes/hoc_dance_warmup_2019_5.png
+        text: Du wirst Codeblöcke verwenden, um verschiedene Tänzer auszuwählen, ihre
+          Tanzbewegungen zu ändern, sie auf die Musik reagieren zu lassen und sie
+          interaktiv zu machen.
+      6:
+        image: notes/hoc_dance_warmup_2019_6.png
+        text: Du wirst sehen, dass dein Bildschirm in drei Hauptteile aufgeteilt ist.
+          Auf der linken Seite befindet sich der Spielraum. Hier werden deine Tänzerinnen
+          und Tänzer auftauchen.
+      7:
+        image: notes/hoc_dance_warmup_2019_7.png
+        text: Der mittlere Bereich ist die Toolbox. Neue Bausteine werden in diesem
+          Bereich verfügbar sein, während du durch die Lektionen gehst.
+      8:
+        image: notes/hoc_dance_warmup_2019_8.png
+        text: Der Raum auf der rechten Seite ist der Arbeitsbereich. Du kannst Blöcke
+          aus der Toolbox in den Arbeitsbereich ziehen, um dein Programm zu erstellen.
+      9:
+        image: notes/hoc_dance_warmup_2019_9.png
+        text: Die Anweisungen für jede Ebene findest du hier oben am oberen Bildschirmrand.
+          Wenn du einen Hinweis brauchst, klicke einfach auf die Glühbirne.
+      10:
+        image: notes/hoc_dance_warmup_2019_10.png
+        text: Um zu beginnen, lasst uns mit diesem roten Baustein eine neue Tänzerin
+          machen. Zuerst ziehst du diesen aus der Toolbox und rastest ihn unter diesen
+          orangefarbenen "Setup"-Baustein ein. Diese Tänzerin ist eine Katze.
+      11:
+        image: notes/hoc_dance_warmup_2019_11.png
+        text: Damit kannst du auch ändern, wo die Tänzerin in deinem Spielraum erscheint.
+      12:
+        image: notes/hoc_dance_warmup_2019_12.png
+        text: Über dem Abspielbereich befindet sich ein Menü zum Auswählen von Musik.
+          Es gibt eine Vielzahl von Songs zur Auswahl, also viel Spaß beim Finden
+          deiner Favoriten. Unter dem Abspielfeld befindet sich die Run-Taste. Wenn
+          du auf Ausführen drückst, siehst du die Tänzer aus deinem Programm im Wiedergaberaum
+          erscheinen und die Musik wird abgespielt.
+      13:
+        text: Probiere es selbst aus! Und wenn du dich festgefahren fühlst, ist es
+          okay, steh einfach auf und beweg dich! Und bevor du dich versiehst, hast
+          du deine eigene Tanzparty gemacht. Also, was wirst du erschaffen?
+    hoc_dance_events_2019:
+      1:
+        text: 'Hour of Code | Tanzparty: Ereignisse (Events)'
+      2:
+        image: notes/hoc_dance_events_2019_2.png
+        text: Mein Name ist Erin, und ich bin Software-Ingenieur hier bei Code.org,
+          und ich habe beim Aufbau der Dance Party mitgewirkt.
+      3:
+        image: notes/hoc_dance_events_2019_3.png
+        text: Um verschiedene Tanzbewegungen zur richtigen Zeit mit der Musik durchzuführen,
+          kannst du so genannte Events (Ereignisse) verwenden. Ein Event / Ereignis
+          sagt deinem Programm, dass es "zuhören" soll, damit etwas passiert, und
+          dann sofort reagieren soll.
+      4:
+        image: notes/hoc_dance_events_2019_4.png
+        text: Einige Beispiele für Ereignisse sind etwa, auf Mausklicks, Pfeiltasten
+          oder ein Antippen den Bildschirms zu achten.
+      5:
+        image: notes/hoc_dance_events_2019_5.png
+        text: Hier werden wir eine Tänzerin programmieren, um eine Bewegung auszuführen,
+          wenn du die Pfeiltasten auf dem Bildschirm oder die Tasten auf deiner Tastatur
+          drückst.
+      6:
+        image: notes/hoc_dance_events_2019_6.png
+        text: Wir können den Ereignisblock "when arrow up" verwenden und einen "do
+          once"-Block mit ihm verbinden. Wenn jemand die Pfeiltaste nach oben drückt,
+          wird der Code ausgeführt, der dem Block "Wenn Pfeil nach oben" zugeordnet
+          ist. Welche Tanzbewegung wirst du wählen?
+      7:
+        image: notes/hoc_dance_events_2019_7.png
+        text: Stelle sicher, dass die Art der Tänzerin, die du wählst, mit einer der
+          Tänzerinnen übereinstimmt, die du im Baustein "Setup" erstellt hast, sonst
+          siehst du vielleicht nicht, dass etwas passiert.
+      8:
+        image: notes/hoc_dance_events_2019_8.png
+        text: Schließlich kannst du mehr Events wie diese erstellen, damit deine Tänzer
+          mit jeder Taste verschiedene Bewegungen ausführen können. Probiere es aus,
+          und mit ein paar Zeilen Code kannst du deinen eigenen interaktiven Tanz
+          machen.
+    hoc_dance_measures_2019:
+      1:
+        image: notes/hoc_dance_measures_2019_1.png
+        text: 'Hour of Code | Tanzparty: Takte'
+      2:
+        image: notes/hoc_dance_measures_2019_2.png
+        text: Ich bin Aloe Blacc. Ich bin Sänger, Songwriter und Entertainer. Ich
+          denke, dass die Informatik wirklich wichtig ist, denn die Informatik ist
+          die Zukunft, und ich denke es ist wichtig für die Menschen, die Kontrolle
+          über die Technologie zu haben, die buchstäblich ihr Leben kontrolliert.
+      3:
+        image: notes/hoc_dance_measures_2019_3.png
+        text: Das Ereignis, das wir jetzt verwenden werden, wird auf eine Änderung
+          des Songs hören. Diese Veränderung wird deine Tänzerin dazu bringen, einen
+          neuen Tanz zu machen.
+      4:
+        image: notes/hoc_dance_measures_2019_4.png
+        text: Professionelle Tänzer üben ihre Choreographie, indem sie die Beats des
+          Songs zählen. In der Musik bezieht sich ein Takt auf eine bestimmte Anzahl
+          von Beats. In den meisten populären Songs ist ein Takt vier Schläge lang.
+      5:
+        image: notes/hoc_dance_measures_2019_5.png
+        text: Damit deine Tänzer loslegen zu lassen, brauchst du einen grünen Ereignisbaustein.
+          Dieser Ereignisbaustein besagt, "nach 4 Takten".
+      6:
+        image: notes/hoc_dance_measures_2019_6.png
+        text: Wenn du einen lilafarbenen "do forever"-Block herausziehst, kannst du
+          einen Tanz für deine Tänzerin auswählen. Da es sich unter dem Eventblock
+          "nach 4 Takten" befindet, wartet deine Tänzerin auf 4 Takten des Songs,
+          bevor sie mit ihrem Tanz beginnt.
+      7:
+        image: notes/hoc_dance_measures_2019_7.png
+        text: Achte auf den Taktgeber oben im Anzeigebereich.
+      8:
+        image: notes/hoc_dance_measures_2019_8.png
+        text: Achte und höre auf das Ereignis, das den Tanzcode auslöst. Und genau
+          zur richtigen Zeit beginnt unsere Tänzerin zu tanzen.
+    hoc_dance_properties_2019:
+      1:
+        text: 'Hour of Code | Tanzparty: Eigenschaften'
+      2:
+        text: Mein Name ist Maria, ich bin Junior an der University of Washington
+          und ich bin Amazon Future Engineer.
+      3:
+        text: Ich liebe die Informatik, weil sie Problemlösung und kritisches Denken
+          beinhaltet und nachdem man Stunden der Arbeit in etwas investiert hat, kann
+          man etwas wirklich Cooles und Belohnendes daraus machen.
+      4:
+        text: Bisher hattest du die Möglichkeit, mit verschiedenen Arten von Tänzern
+          zu spielen, und du hast sie so programmiert, dass sie verschiedene Arten
+          von Tanzbewegungen ausführen. Aber wie funktionieren diese Bewegungen wirklich?
+      5:
+        text: Jede Tanzbewegung besteht aus einer Reihe von Bildern, die als Frames
+          bezeichnet werden. Jedes Bild unterscheidet sich leicht von dem davor. Wenn
+          dein Programm ausgeführt wird, zeigt der Computer ein Bild nach dem anderen
+          an. Die Bilder werden so schnell gezeigt, dass es so aussieht, als würde
+          sich die Tänzerin bewegen. Das ist das Geheimnis hinter jeder Animation.
+      6:
+        text: Du kannst nicht nur die Bewegungen deiner Tänzerin ändern, du kannst
+          auch die Eigenschaften einer Tänzerin ändern. Eigenschaften beschreiben
+          Dinge wie die Position der Tänzerin auf dem Bildschirm, die Größe der Tänzerin
+          und die Farbe der Tänzerin.
+      7:
+        image: notes/hoc_dance_properties_2019_7.png
+        text: Um die Eigenschaften einer Tänzerin zu ändern, verwende einen festen
+          Block.  Lasst uns einen festen Block verwenden, damit unsere Tänzer kleiner
+          aussehen. Ziehe zuerst den gesetzten Satz in Dein Programm.
+      8:
+        image: notes/hoc_dance_properties_2019_8.png
+        text: Dann wähle eine Tänzerin aus, die du ändern möchtest. Gib die Größe
+          ein, in der sie auf dem Bildschirm erscheinen soll. Die volle Größe ist
+          100. Wenn du eine niedrigere Zahl wählst, wird die Tänzerin kleiner. Je
+          kleiner die Tänzerin ist, desto weiter entfernt sieht sie aus.
+      9:
+        image: notes/hoc_dance_properties_2019_9.png
+        text: Mit dem Set-Block kannst du auch die Maße, die Drehung, die Position
+          und die Farbe einer Tänzerin ändern. Indem du mit diesen Eigenschaften herumspielst,
+          kannst du alle möglichen Änderungen vornehmen und sie mit verschiedenen
+          Teilen des Songs verknüpfen.
+      10:
+        image: notes/hoc_dance_properties_2019_10.png
+        text: Beachte, dass du nur die Eigenschaften einer Tänzerin einstellen kannst,
+          die bereits existiert. Achte darauf, dass dein Set-Block nach dem Block
+          "Make a new dancer" kommt. Zögere nicht zu experimentieren, sei kreativ
+          und habe Spaß!
+    hoc_dance_congrats_2019:
+      1:
+        text: 'Hour of Code | Tanzparty: Party!'
+      2:
+        text: Herzlichen Glückwunsch! Du hast gerade die Grundlagen der Informatik
+          gelernt. Jetzt kannst du diese Bausteine verwenden, um eine Tanzparty nach
+          deinem eigenen Design zu gestalten, die du mit deinen Freunden teilen kannst.
+      3:
+        text: Wenn du in der Toolbox nachschaust, wirst du einige brandneue Blöcke
+          finden, die du noch nie zuvor gesehen hast. So kannst du beispielsweise
+          mit dem Layoutblock die Tänzer auf dem Bildschirm unterschiedlich anordnen.
+      4:
+        text: Sieh dich um und versuche, mit diesen neuen Bausteinen und Funktionen
+          zu experimentieren. Schaffst du es einen sorgfältig choreographierten Tanz
+          zu deinem Lieblingslied kreieren?
+      5:
+        text: Oder ein Tanzwettbewerb mit deinen Freunden?
+      6:
+        text: Oder etwas ganz anderes?
+      7:
+        image: notes/hoc_dance_congrats_7.png
+        text: Am Ende des Tutorials kannst du einen Link zu deiner Kreation mit deinen
+          Freunden teilen. Öffne deine Vorstellungskraft und habe einfach Spaß!

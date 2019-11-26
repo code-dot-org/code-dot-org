@@ -10823,10 +10823,6 @@ zh-CN:
             <title name="LAYOUT">"circle"</title>
           </block></xml>
         现在，您可以一次创建一批舞者！
-      Dance_2019_07: |-
-        每个舞者都有一组_属性_来控制其外观。
-
-        您可以通过更改其大小来让舞者看起来距离更近或更远。音乐开始后的某个时间可更改一组舞者的大小。
       Dance_2019_08: 舞者具有“色彩”属性，可以用来添加一层颜色。尝试更改其中一位舞者（或整个舞者）的色彩！
       Dance_2019_09: |-
         这是一种反复触发的特殊事件。
@@ -10906,6 +10902,14 @@ zh-CN:
 
         \*\* 使用这些键来做出 蹲下-拍手-蹲下-拍手 的动作，看你能做多快！ \*\*
       Dance_Party_12: 随着节奏律动吧！创建自己的舞蹈，并与朋友分享。
+      Dance_Party_extras_alternate_2019: |-
+        # 进入阵型！
+
+        使用[blockly block][0]模块来改变伴舞演员在整个舞蹈中的阵型。尝试以下任意创意来扩展：
+
+        -   创建采用不同布局的另一组舞者
+        -   按下按键时更改布局
+        -   舞者改变阵型时更改属性
       Dance_Party_extras_battle: |-
         # 舞蹈团队
 
@@ -10932,6 +10936,10 @@ zh-CN:
         -   试着使用其他持续时间（如0.5为半个小节，或0.125为1/8小节)。
         -   添加一些`小节后`的事件。
         -   将"小节"切换为"秒"，并试着以这种方式给舞蹈安排节奏。
+      Dance_Party_extras_every_beat_2019: |-
+        # 加速、减速
+
+        最后这段舞蹈采用[blockly block][0]模块来控制每个舞者的动作速度。尝试在曲子的不同位置采用不同的速度看看。您可以在这段舞蹈里面随意调节，或者返回之前任意舞蹈，来让效果变得更精彩一些。
       Dance_Party_extras_layout: |-
         # 开始编队！
 
@@ -10940,14 +10948,6 @@ zh-CN:
         -   在另一个布局中创建第二组舞者
         -   按下键时更改布局
         -   当舞者改变阵型时更改属性
-      Dance_Party_extras_layout_2019: |-
-        # 进入阵型！
-
-        使用<xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml>模块来改变伴舞演员在整个舞蹈中的阵型。尝试以下任意创意来扩展：
-
-        -   创建采用不同布局的另一组舞者
-        -   按下按键时更改布局
-        -   舞者改变阵型时更改属性
       Dance_Party_extras_on_beat: |-
         # 低音、中音和高音
 
@@ -10963,7 +10963,7 @@ zh-CN:
       Dance_Party_extras_speed_2019: |-
         # 加速、减速
 
-        最后这段舞蹈采用<xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml>模块来控制每个舞者的动作速度。尝试在曲子的不同位置采用不同的速度看看。您可以在这段舞蹈里面随意调节，或者返回之前任意舞蹈，来让效果变得更精彩一些。
+        最后这段舞蹈采用[blockly block][0]模块来控制每个舞者的动作速度。尝试在曲子的不同位置采用不同的速度看看。您可以在这段舞蹈里面随意调节，或者返回之前任意舞蹈，来让效果变得更精彩一些。
       Dance_Party_extras_visible: |-
         # 让他们去哪儿？
 

@@ -4,69 +4,376 @@ ur:
     blocks:
       Dancelab_alternateMoves:
         options:
+          GROUP:
+            '"ALIEN"': خلائی مخلوق
+            '"BEAR"': ریچھ
+            '"CAT"': بلیاں
+            '"DOG"': کتے
+            '"DUCK"': بطخیں
+            '"FROG"': مینڈک
+            '"MOOSE"': موس بارہ سنگا
+            '"PINEAPPLE"': انناس
+            '"ROBOT"': روبوٹس
+            '"SHARK"': شارک
+            '"UNICORN"': یونیکارنز
           MOVE1:
-            MOVES.Rest: کوئی بھی نہیں
+            MOVES.Roll: جسم گول کرنا
+            MOVES.ClapHigh: اوپر ہاتھ تالی بجانا
+            MOVES.Dab: ڈیب
+            MOVES.DoubleJam: دوگنا کریں
+            MOVES.Drop: چھوڑیں
+            MOVES.Floss: فلاس
+            MOVES.Fresh: تازہ
+            MOVES.Clown: گنگنم
+            MOVES.Kick: ستارہ
+            MOVES.ThisOrThat: یہ یا وہ
+            MOVES.Rest: کوئی نہيں
           MOVE2:
-            MOVES.Rest: کوئی بھی نہیں
-      Dancelab_changeMoveEachLR:
+            MOVES.Roll: جسم گول کرنا
+            MOVES.ClapHigh: اوپر ہاتھ تالی بجانا
+            MOVES.Dab: ڈیب
+            MOVES.DoubleJam: دوگنا کریں
+            MOVES.Drop: چھوڑیں
+            MOVES.Floss: فلاس
+            MOVES.Fresh: تازہ
+            MOVES.Clown: گنگنم
+            MOVES.Kick: ستارہ
+            MOVES.ThisOrThat: یہ یا وہ
+            MOVES.Rest: کوئی نہيں
+      Dancelab_atTimestamp:
+        text: "{TIMESTAMP} {UNIT} کے بعد"
         options:
+          UNIT:
+            '"measures"': پیمائشیں
+            '"seconds"': سیکنڈز
+      Dancelab_changeColorBy:
+        text: "{COLOR} {METHOD} کو {AMOUNT} سے تبدیل کریں"
+        options:
+          METHOD:
+            '"hue"': رنگ
+            '"saturation"': سيرابی
+            '"brightness"': چمکیلا پن
+      Dancelab_changeMoveEachLR:
+        text: "{GROUP} {MOVE} {DIR} ہمیشہ کیلئے کریں"
+        options:
+          GROUP:
+            '"ALIEN"': خلائی مخلوق
+            '"BEAR"': ریچھ
+            '"CAT"': بلیاں
+            '"DOG"': کتے
+            '"DUCK"': بطخیں
+            '"FROG"': مینڈک
+            '"MOOSE"': موس بارہ سنگا
+            '"PINEAPPLE"': انناس
+            '"ROBOT"': روبوٹس
+            '"SHARK"': شارک
+            '"UNICORN"': یونیکارنز
           MOVE:
-            MOVES.Rest: کوئی بھی نہیں
+            '"next"': "(اگلا)"
+            '"prev"': "(پچھلا)"
+            '"rand"': "(بے ترتیبانہ)"
+            MOVES.Roll: جسم گول کرنا
+            MOVES.ClapHigh: اوپر ہاتھ تالی بجانا
+            MOVES.Dab: ڈیب
+            MOVES.DoubleJam: دوگنا کریں
+            MOVES.Drop: چھوڑیں
+            MOVES.Floss: فلاس
+            MOVES.Fresh: تازہ
+            MOVES.Clown: گنگنم
+            MOVES.Kick: ستارہ
+            MOVES.ThisOrThat: یہ یا وہ
+            MOVES.Rest: کوئی نہيں
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
+        text: "{SPRITE} {MOVE} {DIR} کو ہمیشہ کیلئے کریں"
         options:
           MOVE:
-            MOVES.Rest: کوئی بھی نہیں
+            '"next"': "(اگلا)"
+            '"prev"': "(پچھلا)"
+            '"rand"': "(بے ترتیبانہ)"
+            MOVES.Roll: جسم گول کرنا
+            MOVES.ClapHigh: اوپر ہاتھ تالی بجانا
+            MOVES.Dab: ڈیب
+            MOVES.DoubleJam: دوگنا کریں
+            MOVES.Drop: چھوڑیں
+            MOVES.Floss: فلاس
+            MOVES.Fresh: تازہ
+            MOVES.Clown: گنگنم
+            MOVES.Kick: ستارہ
+            MOVES.ThisOrThat: یہ یا وہ
+            MOVES.Rest: کوئی نہيں
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveEachLR:
+      Dancelab_changePropBy:
+        text: "{SPRITE} {PROPERTY} کو بذریعہ {VAL} تبدیل کریں"
         options:
+          PROPERTY:
+            '"scale"': سائز
+            '"width"': چوڑائی
+            '"height"': اونچائی
+            '"rotation"': گردش
+            '"x"': افقی پوزیشن
+            '"y"': عمودی پوزیشن
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            '"ALIEN"': خلائی مخلوق
+            '"BEAR"': ریچھ
+            '"CAT"': بلیاں
+            '"DOG"': کتے
+            '"DUCK"': بطخیں
+            '"FROG"': مینڈک
+            '"MOOSE"': موس بارہ سنگا
+            '"PINEAPPLE"': انناس
+            '"ROBOT"': روبوٹس
+            '"SHARK"': شارک
+            '"UNICORN"': یونیکارنز
+          PROPERTY:
+            '"scale"': سائز
+            '"width"': چوڑائی
+            '"height"': اونچائی
+            '"rotation"': گردش
+            '"x"': افقی پوزیشن
+            '"y"': عمودی پوزیشن
+      Dancelab_doMoveEachLR:
+        text: "{GROUP} {MOVE} {DIR} کو ایک مرتبہ کریں"
+        options:
+          GROUP:
+            '"ALIEN"': خلائی مخلوق
+            '"BEAR"': ریچھ
+            '"CAT"': بلیاں
+            '"DOG"': کتے
+            '"DUCK"': بطخیں
+            '"FROG"': مینڈک
+            '"MOOSE"': موس بارہ سنگا
+            '"PINEAPPLE"': انناس
+            '"ROBOT"': روبوٹس
+            '"SHARK"': شارک
+            '"UNICORN"': یونیکارنز
           MOVE:
-            MOVES.Rest: کوئی بھی نہیں
+            '"rand"': "(بے ترتیبانہ)"
+            MOVES.XBend: جھکائیں
+            MOVES.Roll: جسم گول کرنا
+            MOVES.XClapSide: تالیاں بجائیں
+            MOVES.ClapHigh: اوپر ہاتھ تالی بجانا
+            MOVES.Dab: ڈیب
+            MOVES.XFever: ڈسکو
+            MOVES.DoubleJam: دوگنا کریں
+            MOVES.Drop: چھوڑیں
+            MOVES.Floss: فلاس
+            MOVES.Fresh: تازہ
+            MOVES.Clown: گنگنم
+            MOVES.XHeadHips: سر + کولہے
+            MOVES.XHop: ہاپ
+            MOVES.XHighKick: کک
+            MOVES.XKnee: گھٹنا
+            MOVES.XKneel: گھٹنے ٹیکنا
+            MOVES.XOle: اوول
+            MOVES.XArmsSide: رسائی
+            MOVES.XSlide: سلائیڈ
+            MOVES.Kick: ستارہ
+            MOVES.XArmsUp: کھینچائی
+            MOVES.ThisOrThat: یہ یا وہ
+            MOVES.Rest: کوئی نہيں
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
+        text: "{SPRITE} {MOVE} {DIR} کو ایک مرتبہ"
         options:
           MOVE:
-            MOVES.Rest: کوئی بھی نہیں
+            '"rand"': "(بے ترتیبانہ)"
+            MOVES.XBend: جھکائیں
+            MOVES.Roll: جسم گول کرنا
+            MOVES.XClapSide: تالیاں بجائیں
+            MOVES.ClapHigh: اوپر ہاتھ تالی بجانا
+            MOVES.Dab: ڈیب
+            MOVES.XFever: ڈسکو
+            MOVES.DoubleJam: دوگنا کریں
+            MOVES.Drop: چھوڑیں
+            MOVES.Floss: فلاس
+            MOVES.Fresh: تازہ
+            MOVES.Clown: گنگنم
+            MOVES.XHeadHips: سر + کولہے
+            MOVES.XHop: ہاپ
+            MOVES.XHighKick: کک
+            MOVES.XKnee: گھٹنا
+            MOVES.XKneel: گھٹنے ٹیکنا
+            MOVES.XOle: اوول
+            MOVES.XArmsSide: رسائی
+            MOVES.XSlide: سلائیڈ
+            MOVES.Kick: ستارہ
+            MOVES.XArmsUp: کھینچائی
+            MOVES.ThisOrThat: یہ یا وہ
+            MOVES.Rest: کوئی نہيں
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"measures"': پیمائشیں
+            '"seconds"': سیکنڈز
+      Dancelab_everySecondsRange:
+        text: "{N} {UNIT} ہر {START} سے {STOP} تک "
+        options:
+          UNIT:
+            measures: اقدامات
+            seconds: سیکنڈز
+      Dancelab_everyVerseChorus:
+        text: 'ہر {UNIT} '
+        options:
+          UNIT:
+            '"verse"': مصرعہ
+            '"chorus"': کورس
+      Dancelab_getEnergy:
+        text: "{RANGE} حاصل کریں"
+        options:
+          RANGE:
+            '"low"': باس
+            '"mid"': مڈ
+            '"high"': آواز کا چَڑھاؤ
+      Dancelab_getProp:
+        text: "{SPRITE} {PROPERTY}"
+        options:
+          PROPERTY:
+            '"scale"': سائز
+            '"width"': چوڑائی
+            '"height"': اونچائی
+            '"rotation"': گردش
+            '"x"': افقی پوزیشن
+            '"y"': عمودی پوزیشن
+            '"tint"': رنگت
+      Dancelab_getTime:
+        text: "{UNIT} میں موجودہ وقت"
+        options:
+          UNIT:
+            '"measures"': پیمائشیں
+            '"seconds"': سیکنڈز
       Dancelab_ifDanceIs:
+        text: |-
+          "اگر {SPRITE} {DANCE}
+          {DO1} {DO2} کر رہا ہے"
         options:
           DANCE:
-            MOVES.Rest: کوئی بھی نہیں
+            MOVES.ClapHigh: اوپر ہاتھ تالی بجانا
+            MOVES.Clown: گنگنم
+            MOVES.Dab: ڈیب
+            MOVES.DoubleJam: دوگنا کریں
+            MOVES.Drop: چھوڑیں
+            MOVES.Floss: فلاس
+            MOVES.Fresh: تازہ
+            MOVES.Roll: جسم گول کرنا
+            MOVES.Kick: ستارہ
+            MOVES.ThisOrThat: یہ یا وہ
+            MOVES.Rest: کوئی نہيں
+      Dancelab_ifTime:
+        text: |-
+          "اگر {UNIT} {OP} {N}
+          {DO1} {DO2} ہے"
+        options:
+          UNIT:
+            '"measures"': پیمائشیں
+            '"seconds"': سیکنڈز
+          OP:
+            '">"': ">"
+            '"<"': "<"
+            '"="': "="
       Dancelab_jumpTo:
+        text: "{SPRITE} نے {LOCATION} پر جست لگائی"
         options:
           LOCATION:
+            "{x: 200, y: 100}": اوپر
+            "{x: 200, y: 300}": زيريں
+            "{x: 100, y: 200}": بائیں
+            "{x: 300, y: 200}": درست
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": بےترتیب
       Dancelab_jumpToEach:
         options:
+          GROUP:
+            '"ALIEN"': خلائی مخلوق
+            '"BEAR"': ریچھ
+            '"CAT"': بلیاں
+            '"DOG"': کتے
+            '"DUCK"': بطخیں
+            '"FROG"': مینڈک
+            '"MOOSE"': موس بارہ سنگا
+            '"PINEAPPLE"': انناس
+            '"ROBOT"': روبوٹس
+            '"SHARK"': شارک
+            '"UNICORN"': یونیکارنز
           LOCATION:
+            "{x: 200, y: 100}": اوپر
+            "{x: 200, y: 300}": زيريں
+            "{x: 100, y: 200}": بائیں
+            "{x: 300, y: 200}": درست
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": بےترتیب
       Dancelab_layoutSprites:
+        text: لے آؤٹ {GROUP} بطور ایک {FORMAT}
         options:
+          GROUP:
+            '"ALIEN"': خلائی مخلوق
+            '"BEAR"': ریچھ
+            '"CAT"': بلیاں
+            '"DOG"': کتے
+            '"DUCK"': بطخیں
+            '"FROG"': مینڈک
+            '"MOOSE"': موس بارہ سنگا
+            '"PINEAPPLE"': انناس
+            '"ROBOT"': روبوٹس
+            '"SHARK"': شارک
+            '"UNICORN"': یونیکارنز
           FORMAT:
+            '"border"': بارڈر
+            '"inner"': مربع کے اندر
+            '"circle"': دائرہ بنائیں
+            '"grid"': گرڈ
+            '"row"': قطار
+            '"column"': کالم
+            '"x"': متقاطع
+            '"plus"': جمع کریں
             '"random"': بےترتیب
       Dancelab_makeAnonymousDanceSprite:
         options:
           COSTUME:
             '"ALIEN"': اجنبی(Alien)
+            '"BEAR"': ریچھ
             '"CAT"': بلی
+            '"FROG"': مینڈک
+            '"MOOSE"': موس بارہ سنگا
+            '"PINEAPPLE"': پائن ایپل
+            '"SHARK"': شارک
           LOCATION:
+            "{x: 200, y: 100}": اوپر
+            "{x: 200, y: 300}": زيريں
+            "{x: 100, y: 200}": بائیں
+            "{x: 300, y: 200}": درست
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": بےترتیب
       Dancelab_makeNewDanceSprite:
+        text: ایک نیا {COSTUME} {NAME} کہلانے والا {LOCATION} پر بنائیں
         options:
           COSTUME:
             '"ALIEN"': اجنبی(Alien)
+            '"BEAR"': ریچھ
             '"CAT"': بلی
+            '"DOG"': کتا
+            '"FROG"': مینڈک
+            '"MOOSE"': موس بارہ سنگا
+            '"PINEAPPLE"': پائن ایپل
+            '"SHARK"': شارک
           LOCATION:
+            "{x: 200, y: 100}": اوپر
+            "{x: 200, y: 300}": زيريں
+            "{x: 100, y: 200}": بائیں
+            "{x: 300, y: 200}": درست
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": بےترتیب
       Dancelab_makeNewDanceSpriteGroup:
+        text: |-
+          "{N} نیا {COSTUME}
+          ایک {LAYOUT} میں بنائیں"
         options:
           N:
             '2': '2'
@@ -88,106 +395,676 @@ ur:
             '18': '18'
             '19': '19'
             '20': '20'
+          COSTUME:
+            '"ALIEN"': خلائی مخلوق
+            '"BEAR"': ریچھ
+            '"CAT"': بلیاں
+            '"DOG"': کتے
+            '"DUCK"': بطخیں
+            '"FROG"': مینڈک
+            '"MOOSE"': موس بارہ سنگا
+            '"PINEAPPLE"': انناس
+            '"ROBOT"': روبوٹس
+            '"SHARK"': شارک
+            '"UNICORN"': یونیکارنز
           LAYOUT:
+            '"border"': بارڈر
+            '"inner"': مربع کے اندر
+            '"circle"': دائرہ بنائیں
+            '"grid"': گرڈ
+            '"row"': قطار
+            '"column"': کالم
+            '"x"': متقاطع
+            '"plus"': جمع کریں
             '"random"': بےترتیب
+      Dancelab_mixColors:
+        text: "{COLOR1} اور {COLOR2} کو ملائیں"
+      Dancelab_nMeasures:
+        text: "{N} پیمائشیں"
+      Dancelab_onPointerDown:
+        text: پوائنٹر نیچے پر
+      Dancelab_onPointerDrag:
+        text: پوائنٹر گھسیٹنے پر
+      Dancelab_onPointerUp:
+        text: پوائنٹر اوپر پر
       Dancelab_randomColor:
         text: بے ترتیب رنگ
+      Dancelab_setBackground:
+        text: پس منظر رنگ {COLOR} سیٹ کریں
       Dancelab_setBackgroundEffect:
+        text: پس منظر اثر {EFFECT} {PALETTE} سیٹ کریں
         options:
           EFFECT:
-            '"none"': کوئی بھی نہیں
+            '"none"': کوئی نہيں
+            '"circles"': دائرے
+            '"color_cycle"': رنگ
+            '"diamonds"': ہیرے
+            '"disco_ball"': ڈسکو بال
+            '"fireworks"': آتش بازی
+            '"swirl"': نیند آور
+            '"kaleidoscope"': کیلیڈواسکوپ
+            '"lasers"': لیزر ڈانس فلور
+            '"splatter"': پینٹ سپلیٹر
+            '"rainbow"': قوس قزح
+            '"snowflakes"': برف
+            '"text"': گانا کے نام
+            '"galaxy"': جگہ
+            '"sparkles"': پھلجھڑیاں
+            '"spiral"': مرغولہ
+            '"disco"': مربعے
+            '"stars"': ستارہ
+          PALETTE:
+            '"rave"': ستارہ
+            '"cool"': زبردست
+            '"electronic"': الیکٹرونک
+            '"iceCream"': آئس کریم
+            '"default"': روشنی
+            '"neon"': نیون
+            '"tropical"': منطقہ حارہ
+            '"vintage"': ونٹیج
+            '"warm"': گرم
       Dancelab_setBackgroundEffectWithPalette:
         options:
           EFFECT:
-            '"none"': کوئی بھی نہیں
+            '"none"': کوئی نہيں
+            '"rand"': "(بے ترتیبانہ)"
+            '"circles"': دائرے
+            '"color_cycle"': رنگ
+            '"diamonds"': ہیرے
+            '"disco_ball"': ڈسکو بال
+            '"fireworks"': آتش بازی
+            '"swirl"': نیند آور
+            '"kaleidoscope"': کیلیڈواسکوپ
+            '"lasers"': لیزر ڈانس فلور
+            '"splatter"': پینٹ سپلیٹر
+            '"rainbow"': قوس قزح
+            '"snowflakes"': برف
+            '"text"': گانا کے نام
+            '"galaxy"': جگہ
+            '"sparkles"': پھلجھڑیاں
+            '"spiral"': مرغولہ
+            '"disco"': مربعے
+            '"stars"': ستارہ
+          PALETTE:
+            '"rave"': ستارہ
+            '"cool"': زبردست
+            '"electronic"': الیکٹرونک
+            '"iceCream"': آئس کریم
+            '"default"': روشنی
+            '"neon"': نیون
+            '"tropical"': منطقہ حارہ
+            '"vintage"': ونٹیج
+            '"warm"': گرم
       Dancelab_setDanceSpeed:
+        text: "{SPRITE} کی ڈانس رفتار کو {SPEED} پر سیٹ کریں"
         options:
           SPEED:
             '1': عام
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
+            '2': تیز
+            '4': بہت تیز
+            '0.5': سست
+            '0.25': بہت سست
       Dancelab_setDanceSpeedEach:
+        text: "{GROUP} کی ڈانس رفتار کو {SPEED} پر سیٹ کریں"
         options:
+          GROUP:
+            '"ALIEN"': خلائی مخلوق
+            '"BEAR"': ریچھ
+            '"CAT"': بلیاں
+            '"DOG"': کتے
+            '"DUCK"': بطخیں
+            '"FROG"': مینڈک
+            '"MOOSE"': موس بارہ سنگا
+            '"PINEAPPLE"': انناس
+            '"ROBOT"': روبوٹس
+            '"SHARK"': شارک
+            '"UNICORN"': یونیکارنز
           SPEED:
             '1': عام
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
+            '2': تیز
+            '4': بہت تیز
+            '0.5': سست
+            '0.25': بہت سست
       Dancelab_setForegroundEffect:
+        text: پس منظر اثر {EFFECT} سیٹ کریں
         options:
           EFFECT:
-            '"none"': کوئی بھی نہیں
+            '"none"': کوئی نہيں
+            '"bubbles"': بُلبُلے
+            '"confetti"': کاغذی لیریاں
+            '"hearts_red"': دل
+            '"music_notes"': میوزک نوٹس
+            '"pineapples"': انناس
+            '"pizzas"': پیزا
+            '"smiling_poop"': پیزاپوپ
+            '"rain"': بارش
+            '"floating_rainbows"': قوس قزح
+            '"smile_face"': مسکراہٹیں
+            '"spotlight"': اسپاٹ لائٹ
+            '"color_lights"': اسٹیج کی روشنیاں
+            '"raining_tacos"': ٹیکوز
       Dancelab_setForegroundEffectExtended:
+        text: پس منظر اثر {EFFECT} سیٹ کریں
         options:
           EFFECT:
-            '"none"': کوئی بھی نہیں
+            '"none"': کوئی نہيں
+            '"rand"': "(بے ترتیبانہ)"
+            '"bubbles"': بُلبُلے
+            '"confetti"': کاغذی لیریاں
+            '"hearts_red"': دل
+            '"music_notes"': میوزک نوٹس
+            '"pineapples"': انناس
+            '"pizzas"': پیزا
+            '"smiling_poop"': پیزاپوپ
+            '"rain"': بارش
+            '"floating_rainbows"': قوس قزح
+            '"smile_face"': مسکراہٹیں
+            '"spotlight"': اسپاٹ لائٹ
+            '"color_lights"': اسٹیج کی روشنیاں
+            '"raining_tacos"': ٹیکوز
+      Dancelab_setProp:
+        text: "{SPRITE} {PROPERTY} کو {VAL} سیٹ کریں "
+        options:
+          PROPERTY:
+            '"scale"': سائز
+            '"width"': چوڑائی
+            '"height"': اونچائی
+            '"rotation"': گردش
+            '"x"': افقی پوزیشن
+            '"y"': عمودی پوزیشن
+      Dancelab_setPropEach:
+        text: "{GROUP} {PROPERTY} کو {VAL} سیٹ کریں"
+        options:
+          GROUP:
+            '"ALIEN"': خلائی مخلوق
+            '"BEAR"': ریچھ
+            '"CAT"': بلیاں
+            '"DOG"': کتے
+            '"DUCK"': بطخیں
+            '"FROG"': مینڈک
+            '"MOOSE"': موس بارہ سنگا
+            '"PINEAPPLE"': انناس
+            '"ROBOT"': روبوٹس
+            '"SHARK"': شارک
+            '"UNICORN"': یونیکارنز
+          PROPERTY:
+            '"scale"': سائز
+            '"width"': چوڑائی
+            '"height"': اونچائی
+            '"rotation"': گردش
+            '"x"': افقی پوزیشن
+            '"y"': عمودی پوزیشن
+            '"tint"': رنگت
+      Dancelab_setPropRandom:
+        text: "{SPRITE} {PROPERTY} کو بے برتیبانہ بنائیں"
+        options:
+          PROPERTY:
+            '"scale"': سائز
+            '"width"': چوڑائی
+            '"height"': اونچائی
+            '"rotation"': گردش
+            '"x"': افقی پوزیشن
+            '"y"': عمودی پوزیشن
+            '"tint"': رنگت
+      Dancelab_setPropRandomEach:
+        options:
+          GROUP:
+            '"ALIEN"': خلائی مخلوق
+            '"BEAR"': ریچھ
+            '"CAT"': بلیاں
+            '"DOG"': کتے
+            '"DUCK"': بطخیں
+            '"FROG"': مینڈک
+            '"MOOSE"': موس بارہ سنگا
+            '"PINEAPPLE"': انناس
+            '"ROBOT"': روبوٹس
+            '"SHARK"': شارک
+            '"UNICORN"': یونیکارنز
+          PROPERTY:
+            '"scale"': سائز
+            '"width"': چوڑائی
+            '"height"': اونچائی
+            '"rotation"': گردش
+            '"x"': افقی پوزیشن
+            '"y"': عمودی پوزیشن
+            '"tint"': رنگت
+      Dancelab_setTint:
+        text: "{SPRITE} رنگت کو {VAL} پر سیٹ کریں"
+      Dancelab_setTintEach:
+        text: "{THIS} رنگت کو {VAL} پر سیٹ کریں"
+        options:
+          THIS:
+            '"ALIEN"': خلائی مخلوق
+            '"BEAR"': ریچھ
+            '"CAT"': بلیاں
+            '"DOG"': کتے
+            '"DUCK"': بطخیں
+            '"FROG"': مینڈک
+            '"MOOSE"': موس بارہ سنگا
+            '"PINEAPPLE"': انناس
+            '"ROBOT"': روبوٹس
+            '"SHARK"': شارک
+            '"UNICORN"': یونیکارنز
+      Dancelab_setTintEachInline:
+        text: "{THIS} رنگت کو {VAL} پر سیٹ کریں"
+        options:
+          THIS:
+            '"ALIEN"': خلائی مخلوق
+            '"BEAR"': ریچھ
+            '"CAT"': بلیاں
+            '"DOG"': کتے
+            '"DUCK"': بطخیں
+            '"FROG"': مینڈک
+            '"MOOSE"': موس بارہ سنگا
+            '"PINEAPPLE"': انناس
+            '"ROBOT"': روبوٹس
+            '"SHARK"': شارک
+            '"UNICORN"': یونیکارنز
+      Dancelab_setTintInline:
+        text: "{SPRITE} رنگت کو {VAL} پر سیٹ کریں"
+      Dancelab_setVisible:
+        text: "{SPRITE} کو {VISIBILITY} سے مرئی سیٹ کریں"
+        options:
+          VISIBILITY:
+            'true': مرئی
+            'false': غیر مرئی
+      Dancelab_setVisibleEach:
+        text: "{THIS} مرئیت کو {VISIBILITY} پر سیٹ کریں"
+        options:
+          THIS:
+            '"ALIEN"': خلائی مخلوق
+            '"BEAR"': ریچھ
+            '"CAT"': بلیاں
+            '"DOG"': کتے
+            '"DUCK"': بطخیں
+            '"FROG"': مینڈک
+            '"MOOSE"': موس بارہ سنگا
+            '"PINEAPPLE"': انناس
+            '"ROBOT"': روبوٹس
+            '"SHARK"': شارک
+            '"UNICORN"': یونیکارنز
+          VISIBILITY:
+            'true': مرئی
+            'false': غیر مرئی
+      Dancelab_startMapping:
+        text: "{SPRITE} کو {PROPERTY} اس {RANGE} کے بعد شروع کرتا ہے"
+        options:
+          PROPERTY:
+            '"scale"': سائز
+            '"width"': چوڑائی
+            '"height"': اونچائی
+            '"rotation"': گردش
+            '"x"': افقی پوزیشن
+            '"y"': عمودی پوزیشن
+            '"tint"': رنگت
+          RANGE:
+            '"bass"': باس
+            '"mid"': مڈ
+            '"treble"': آواز کا چَڑھاؤ
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            '"ALIEN"': خلائی مخلوق
+            '"BEAR"': ریچھ
+            '"CAT"': بلیاں
+            '"DOG"': کتے
+            '"DUCK"': بطخیں
+            '"FROG"': مینڈک
+            '"MOOSE"': موس بارہ سنگا
+            '"PINEAPPLE"': انناس
+            '"ROBOT"': روبوٹس
+            '"SHARK"': شارک
+            '"UNICORN"': یونیکارنز
+          PROPERTY:
+            '"scale"': سائز
+            '"width"': چوڑائی
+            '"height"': اونچائی
+            '"rotation"': گردش
+            '"x"': افقی پوزیشن
+            '"y"': عمودی پوزیشن
+            '"tint"': رنگت
+          RANGE:
+            '"bass"': باس
+            '"mid"': مڈ
+            '"treble"': آواز کا چَڑھاؤ
+      Dancelab_stopMapping:
+        text: "{SPRITE} کو {PROPERTY} اس {RANGE} کے بعد روک دیتا ہے"
+        options:
+          PROPERTY:
+            '"scale"': سائز
+            '"width"': چوڑائی
+            '"height"': اونچائی
+            '"rotation"': گردش
+            '"x"': افقی پوزیشن
+            '"y"': عمودی پوزیشن
+            '"direction"': حرکت کی سمت
+            '"tint"': رنگت
+          RANGE:
+            '"bass"': باس
+            '"mid"': مڈ
+            '"treble"': آواز کا چَڑھاؤ
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            '"ALIEN"': خلائی مخلوق
+            '"BEAR"': ریچھ
+            '"CAT"': بلیاں
+            '"DOG"': کتے
+            '"DUCK"': بطخیں
+            '"FROG"': مینڈک
+            '"MOOSE"': موس بارہ سنگا
+            '"PINEAPPLE"': انناس
+            '"ROBOT"': روبوٹس
+            '"SHARK"': شارک
+            '"UNICORN"': یونیکارنز
+          PROPERTY:
+            '"scale"': سائز
+            '"width"': چوڑائی
+            '"height"': اونچائی
+            '"rotation"': گردش
+            '"x"': افقی پوزیشن
+            '"y"': عمودی پوزیشن
+            '"direction"': حرکت کی سمت
+            '"tint"': رنگت
+          RANGE:
+            '"bass"': باس
+            '"mid"': مڈ
+            '"treble"': آواز کا چَڑھاؤ
       Dancelab_translateStrings:
         options:
           STRING:
+            '"hearts_colorful"': دل
             '"diamond"': ہیرے
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
             '"y"': وائے
+            '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenKey:
+        text: جب {KEY} کو دبایا جاتا ہے
         options:
           KEY:
+            '"up"': اوپر
+            '"left"': بائیں
+            '"down"': نیچے
+            '"right"': درست
             '"space"': خلاء
+            '"enter"': داخل کریں
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
             '"y"': وائے
+            '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
+      Dancelab_whenPeak:
+        text: جب {RANGE} چوٹی
+        options:
+          RANGE:
+            '0': باس
+            '1': مڈ
+            '2': آواز کا چَڑھاؤ
+      Dancelab_whenSetup:
+        text: سیٹ اپ
+      Dancelab_whenSetup2:
+        text: سیٹ اپ
+      gamelab_changePropBy:
+        text: "{SPRITE} {PROPERTY} کو بذریعہ {VAL} تبدیل کریں"
+        options:
+          PROPERTY:
+            '"scale"': سائز
+            '"rotation"': گردش
+            '"direction"': حرکت کی سمت
       gamelab_checkTouching:
         options:
           CONDITION:
             '"when"': کب
             '"while"': جب تک
+      gamelab_getProp:
+        text: "{SPRITE} {PROPERTY}"
+        options:
+          PROPERTY:
+            '"scale"': سائز
+            '"rotation"': گردش
+            '"direction"': حرکت کی سمت
+            '"tint"': رنگت
+      gamelab_jumpTo:
+        text: "{SPRITE} نے {LOCATION} پر جست لگائی"
       gamelab_keyPressed:
         options:
           CONDITION:
             '"when"': کب
             '"while"': جب تک
           KEY:
+            '"up"': اوپر
+            '"down"': نیچے
+            '"left"': بائیں
+            '"right"': درست
             '"space"': خلاء
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
             '"y"': وائے
+            '"z"': z
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': درست
+            '"left"': بائیں
       gamelab_randColor:
         text: بے ترتیب رنگ
       gamelab_randomColor:
         text: بے ترتیب رنگ
+      gamelab_setBackground:
+        text: پس منظر رنگ {COLOR} سیٹ کریں
       gamelab_setBackgroundImage:
         options:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': غار
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': شہر
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': صحرا
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': گرڈ
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': دھنک
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': پانی
               کے اندر
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': سردیاں
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': سائز
+            '"rotation"': گردش
+            '"direction"': حرکت کی سمت
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': سائز
+            '"width"': چوڑائی
+            '"height"': اونچائی
       gamelab_spriteClicked:
         options:
           CONDITION:
             '"when"': کب
             '"while"': جب تک
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': درست
+            '"left"': بائیں
       gamelab_whenKey:
+        text: جب {KEY} کو دبایا جاتا ہے
         options:
           KEY:
+            '"up"': اوپر
+            '"down"': نیچے
+            '"left"': بائیں
+            '"right"': درست
             '"space"': خلاء
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       gamelab_whileKey:
         options:
           KEY:
+            '"up"': اوپر
+            '"down"': نیچے
+            '"left"': بائیں
+            '"right"': درست
             '"space"': خلاء
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': سائز
+            '"rotation"': گردش
+            '"direction"': حرکت کی سمت
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": اوپر
+            "{x: 200, y: 300}": زيريں
+            "{x: 100, y: 200}": بائیں
+            "{x: 300, y: 200}": درست
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': سائز
+            '"rotation"': گردش
+            '"direction"': حرکت کی سمت
+      Mikelab_groupChangePropBy:
+        options:
+          PROPERTY:
+            '"scale"': سائز
+            '"rotation"': گردش
+            '"direction"': حرکت کی سمت
+      Mikelab_groupCreateNewSprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": اوپر
+            "{x: 200, y: 300}": زيريں
+            "{x: 100, y: 200}": بائیں
+            "{x: 300, y: 200}": درست
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': سائز
+            '"rotation"': گردش
+            '"direction"': حرکت کی سمت
+      Mikelab_groupSetProp:
+        options:
+          PROPERTY:
+            '"scale"': سائز
+            '"rotation"': گردش
+            '"direction"': حرکت کی سمت
       Mikelab_ifDanceIs:
+        text: |-
+          "اگر {SPRITE} {DANCE}
+          {DO1} {DO2} کر رہا ہے"
         options:
           DANCE:
-            MOVES.Rest: کوئی بھی نہیں
+            MOVES.ClapHigh: اوپر ہاتھ تالی بجانا
+            MOVES.Clown: گنگنم
+            MOVES.Dab: ڈیب
+            MOVES.DoubleJam: دوگنا کریں
+            MOVES.Drop: چھوڑیں
+            MOVES.Floss: فلاس
+            MOVES.Fresh: تازہ
+            MOVES.Roll: جسم گول کرنا
+            MOVES.Kick: ستارہ
+            MOVES.ThisOrThat: یہ یا وہ
+            MOVES.Rest: کوئی نہيں
       Mikelab_randomColor:
         text: بے ترتیب رنگ
       Mikelab_setBG:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': شہر
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': سائز
+            '"rotation"': گردش
+            '"direction"': حرکت کی سمت
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': درست
+            '"left"': بائیں
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": اوپر
+            "{x: 200, y: 300}": زيريں
+            "{x: 100, y: 200}": بائیں
+            "{x: 300, y: 200}": درست
       Mikelab_whenKeyPressed:
+        text: جب {KEY} کو دبایا جاتا ہے
         options:
           KEY:
             '"w"': مغرب
@@ -219,10 +1096,26 @@ ur:
             '1': '1'
             '2': '2'
             '3': '3'
+      binary_move:
+        options:
+          DIR:
+            '"up"': اوپر
+            '"down"': نیچے
+            '"left"': بائیں
+            '"right"': درست
       binary_whenKey:
+        text: جب {KEY} کو دبایا جاتا ہے
         options:
           KEY:
+            '"up"': اوپر
+            '"down"': نیچے
+            '"left"': بائیں
+            '"right"': درست
             '"space"': خلاء
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       craft_ifPath:
         options:
           DIR:
