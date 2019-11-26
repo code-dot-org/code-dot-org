@@ -241,7 +241,6 @@ export class FishOceanObject extends OceanObject {
       ...this.pectoralFinFront.knnData,
       ...this.dorsalFin.knnData,
       ...this.tail.knnData,
-      ...this.scales.knnData,
       ...this.colorPalette.knnData
     ];
     this.fieldInfos = [
@@ -251,7 +250,6 @@ export class FishOceanObject extends OceanObject {
       ...this.pectoralFinFront.fieldInfos,
       ...this.dorsalFin.fieldInfos,
       ...this.tail.fieldInfos,
-      ...this.scales.fieldInfos,
       ...this.colorPalette.fieldInfos
     ];
   }
