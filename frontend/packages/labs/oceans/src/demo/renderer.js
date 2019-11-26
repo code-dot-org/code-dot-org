@@ -495,7 +495,7 @@ const drawPredictBot = state => {
 
   // Move AI bot above fish parade.
   if (state.isRunning || state.isPaused) {
-    botYDestination = botYDestination || botY - 170;
+    botYDestination = botYDestination || botY - 179;
 
     const distToDestination = Math.abs(botYDestination - botY);
     if (distToDestination > 1) {
@@ -573,6 +573,7 @@ const drawWordFishImages = () => {
       drawSingleFish(fish, finalX, finalY, ctx, fishScale);
     }
   });
+
   setState({fishCount});
 };
 
