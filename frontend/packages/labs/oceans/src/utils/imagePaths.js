@@ -15,8 +15,10 @@ import Trash_TrashBag from '../../public/images/trash/Trash_TrashBag.png';
 import Trash_Wing from '../../public/images/trash/Trash_Wing.png';
 
 import Crab from '../../public/images/seaCreatures/Crab.png';
+import Dolphin from '../../public/images/seaCreatures/Dolphin.png';
 import Jellyfish from '../../public/images/seaCreatures/Jellyfish.png';
 import Octopus from '../../public/images/seaCreatures/Octopus.png';
+import Otter from '../../public/images/seaCreatures/Otter.png';
 import Seahorse from '../../public/images/seaCreatures/Seahorse.png';
 import Snail from '../../public/images/seaCreatures/Snail.png';
 import Starfish from '../../public/images/seaCreatures/Starfish.png';
@@ -43,8 +45,10 @@ export const trashImagePaths = [
 
 export const seaCreatureImagePaths = [
   Crab,
+  Dolphin,
   Jellyfish,
   Octopus,
+  Otter,
   Seahorse,
   Snail,
   Starfish,
