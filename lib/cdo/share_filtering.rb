@@ -29,6 +29,18 @@ module ShareFiltering
   def self.find_share_failure(program, locale)
     return nil unless should_filter_program(program)
 
+    find_failure(program, locale)
+  end
+
+  def self.should_filter_program(program)
+    Gatekeeper.allows('webpurify', default: true) &&
+      program =~ /#{PLAYLAB_APP_INDICATOR}/ &&
+          program =~ /(#{USER_ENTERED_TEXT_INDICATORS.join('|')})/
+  end
+
+  private
+
+  def find_failure(program, locale)
     xml_tag_regexp = /<[^>]*>/
     program_tags_removed = program.gsub(xml_tag_regexp, "\n")
 
@@ -45,11 +57,5 @@ module ShareFiltering
     return ShareFailure.new(FailureType::PROFANITY, expletive) if expletive
 
     nil
-  end
-
-  def self.should_filter_program(program)
-    Gatekeeper.allows('webpurify', default: true) &&
-      program =~ /#{PLAYLAB_APP_INDICATOR}/ &&
-          program =~ /(#{USER_ENTERED_TEXT_INDICATORS.join('|')})/
   end
 end
