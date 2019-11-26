@@ -3,32 +3,27 @@
     {
       url: "https://teachablemachine.withgoogle.com/",
       title: "Teachable Machine",
-      description: "Train a computer to recognize your own images, sounds, and poses.",
-      audience: "K-12"
+      description: "Train a computer to recognize your own images, sounds, and poses."
     },
     {
       url: "https://quickdraw.withgoogle.com/",
       title: "Quick, Draw!",
-      description: "Can a neural network learn to recognize doodling?",
-      audience: "K-12"
+      description: "Can a neural network learn to recognize doodling?"
     },
     {
       url: "https://experiments.withgoogle.com/collection/ai",
       title: "AI Experiments with Google",
-      description: "Start exploring machine learning through pictures, drawings, language, music, and more.",
-      audience: "K-12"
+      description: "Start exploring machine learning through pictures, drawings, language, music, and more."
     },
     {
       url: "https://mixlab.withgoogle.com/",
       title: "MixLab",
-      description: "Make music using voice commands.",
-      audience: "K-12"
+      description: "Make music using voice commands."
     },
     {
       url: "http://nvidia-research-mingyuliu.com/gaugan",
       title: "GauGAN Beta",
-      description: "Paint photo-realistic landscapes with the help of AI.",
-      audience: "K-12"
+      description: "Paint photo-realistic landscapes with the help of AI."
     }
   ]
 
@@ -71,14 +66,12 @@
     %tr{style: 'font-size: 16px; font-weight: bold; background: #ececec; color: dark-charcoal'}
       %td Activity
       %td Description
-      %td Audience
     - ai_activities.each do |activity|
       %tr
         %td
           %a{href: activity[:url]}
             =activity[:title]
         %td= activity[:description]
-        %td= activity[:audience]
 
 %h2="Teach and Learn about AI"
 %table{style: 'border: 1; width: 970px'}
