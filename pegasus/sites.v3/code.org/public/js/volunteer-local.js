@@ -436,13 +436,18 @@ function i18n(token) {
  * https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html
  *
  * This is a copy of the same function from @cdo/apps/src/utils.js.
+ *
+ * @param {string} unsafe - The string to escape.
+ * @returns {string} Escaped string. Returns an empty string if input is null or undefined.
  */
-export function escapeHtml(unsafe) {
+function escapeHtml(unsafe) {
   return unsafe
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#39;")
-    .replace(/\//g, "&#47;");
+    ? unsafe
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;")
+        .replace(/\//g, "&#47;")
+    : "";
 }
