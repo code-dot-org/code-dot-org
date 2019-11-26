@@ -7,6 +7,7 @@ import Trash_Bulb from '../../public/images/trash/Trash_Bulb.png';
 import Trash_Can from '../../public/images/trash/Trash_Can.png';
 import Trash_Coffee from '../../public/images/trash/Trash_Coffee.png';
 import Trash_Fork from '../../public/images/trash/Trash_Fork.png';
+import Trash_Laundry from '../../public/images/trash/Trash_Laundry.png';
 import Trash_Sock from '../../public/images/trash/Trash_Sock.png';
 import Trash_Soda from '../../public/images/trash/Trash_Soda.png';
 import Trash_Tire from '../../public/images/trash/Trash_Tire.png';
@@ -32,6 +33,7 @@ export const trashImagePaths = [
   Trash_Can,
   Trash_Coffee,
   Trash_Fork,
+  Trash_Laundry,
   Trash_Sock,
   Trash_Soda,
   Trash_Tire,
