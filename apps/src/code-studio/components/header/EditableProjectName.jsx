@@ -6,7 +6,7 @@ import i18n from '@cdo/locale';
 import {connect} from 'react-redux';
 
 import ProjectUpdatedAt from './ProjectUpdatedAt';
-import {refreshProjectName} from '../../headerRedux';
+import {refreshProjectName, checkProjectName} from '../../headerRedux';
 
 const styles = {
   buttonWrapper: {
@@ -17,7 +17,8 @@ const styles = {
 class UnconnectedDisplayProjectName extends React.Component {
   static propTypes = {
     beginEdit: PropTypes.func.isRequired,
-    projectName: PropTypes.string.isRequired
+    projectName: PropTypes.string.isRequired,
+    projectNameError: PropTypes.string
   };
 
   render() {
@@ -47,7 +48,9 @@ class UnconnectedEditProjectName extends React.Component {
   static propTypes = {
     finishEdit: PropTypes.func.isRequired,
     projectName: PropTypes.string.isRequired,
-    refreshProjectName: PropTypes.func.isRequired
+    refreshProjectName: PropTypes.func.isRequired,
+    checkProjectName: PropTypes.func.isRequired,
+    projectNameError: PropTypes.string
   };
 
   state = {
@@ -64,18 +67,24 @@ class UnconnectedEditProjectName extends React.Component {
       return;
     }
 
-    dashboard.project.rename(newName, () => {
-      dashboard.header.updateTimestamp();
-      this.props.refreshProjectName();
-      this.setState({
-        savingName: false
+    this.props.checkProjectName(newName);
+    if (this.props.projectNameError) {
+      console.log('NAME ERROR');
+      return;
+    } else {
+      dashboard.project.rename(newName, () => {
+        dashboard.header.updateTimestamp();
+        this.props.refreshProjectName();
+        this.setState({
+          savingName: false
+        });
+        this.props.finishEdit();
       });
-      this.props.finishEdit();
-    });
 
-    this.setState({
-      savingName: true
-    });
+      this.setState({
+        savingName: true
+      });
+    }
   };
 
   render() {
@@ -107,10 +116,12 @@ class UnconnectedEditProjectName extends React.Component {
 }
 const EditProjectName = connect(
   state => ({
-    projectName: state.header.projectName
+    projectName: state.header.projectName,
+    projectNameError: state.header.projectNameError
   }),
   {
-    refreshProjectName
+    refreshProjectName,
+    checkProjectName
   }
 )(UnconnectedEditProjectName);
 

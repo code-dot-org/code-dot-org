@@ -97,11 +97,11 @@ export default (state = initialState, action) => {
   }
 
   if (action.type === CHECK_PROJECT_NAME) {
-    // make ajax call. if name is safe, call REFRESH_PROJECT_NAME (make sure name is in the right place).
+    // make ajax call.
     // if name is not safe...
     return {
       ...state,
-      projectNameError: action.nameError
+      projectNameError: action.nameError // this error is actually ocimng from the ajax call
     };
   }
 
