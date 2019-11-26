@@ -54,7 +54,7 @@ export const onClassifyFish = doesLike => {
 
   let fishData = [...state.fishData];
   if (state.trainingIndex > state.fishData.length - 5) {
-    fishData = fishData.concat(generateOcean(100));
+    fishData = fishData.concat(generateOcean(100, fishData.length));
   }
 
   if (doesLike) {
