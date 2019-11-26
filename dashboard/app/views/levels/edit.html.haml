@@ -3,6 +3,7 @@
 - content_for(:head) do
   %script{src: webpack_asset_path('js/levelbuilder.js')}
 
+%pre#validation-error.validation-error{style: 'background-color: yellow; display: none'}
 = form_for [@level], method: @level.new_record? ? :post : :patch, remote: true do |f|
   = f.hidden_field :type, value: @type_class.to_s.presence || @level.type
   .field
@@ -10,10 +11,6 @@
     - unless @level.is_a? DSLDefined
       = f.label :name
       = f.text_field :name, placeholder: 'Level Name', disabled: @visible || @standalone
-      - if @visible
-        %p the level cannot be renamed because it appears in a visible script.
-      - if @standalone
-        %p the level cannot be renamed because it is a standalone project level.
       .field
         = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :encrypted, description: "Encrypt this level's properties"}
 
