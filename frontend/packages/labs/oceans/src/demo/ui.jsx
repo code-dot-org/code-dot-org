@@ -508,14 +508,16 @@ const styles = {
     position: 'relative'
   },
   guideImage: {
-    maxWidth: '90%',
-    padding: '20%',
-    boxSizing: 'border-box'
+    position: 'absolute',
+    bottom: '-80%',
+    left: '-10%',
+    zIndex: 2
   },
   guideHeading: {
     fontSize: '220%',
     color: colors.darkGrey,
-    paddingBottom: '5%'
+    paddingBottom: '5%',
+    textAlign: 'center'
   },
   guideTypingText: {
     position: 'absolute',
@@ -1414,7 +1416,7 @@ let Pond = class Pond extends React.Component {
 };
 Pond = Radium(Pond);
 
-class Guide extends React.Component {
+let Guide = class Guide extends React.Component {
   onShowing() {
     setState({guideShowing: true});
   }
@@ -1428,16 +1430,6 @@ class Guide extends React.Component {
 
   render() {
     const currentGuide = getCurrentGuide();
-
-    // We migth show an image on the left and text on the right.  If there's
-    // no image, it's all right.
-    let leftWidth, rightWidth;
-    if (currentGuide && currentGuide.image) {
-      leftWidth = '30%';
-      rightWidth = '70%';
-    } else {
-      rightWidth = '100%';
-    }
 
     return (
       <div>
@@ -1459,12 +1451,15 @@ class Guide extends React.Component {
                 }}
               >
                 {currentGuide.image && (
-                  <div style={{...styles.guideLeft, width: leftWidth}}>
-                    <img src={currentGuide.image} style={styles.guideImage} />
+                  <div style={styles.guideLeft}>
+                    <img
+                      src={currentGuide.image}
+                      style={[styles.guideImage, currentGuide.imageStyle || {}]}
+                    />
                   </div>
                 )}
 
-                <div style={{...styles.guideRight, width: rightWidth}}>
+                <div style={styles.guideRight}>
                   {currentGuide.heading && (
                     <div style={styles.guideHeading}>
                       {currentGuide.heading}
@@ -1512,7 +1507,8 @@ class Guide extends React.Component {
       </div>
     );
   }
-}
+};
+Guide = Radium(Guide);
 
 export default class UI extends React.Component {
   constructor(props) {
