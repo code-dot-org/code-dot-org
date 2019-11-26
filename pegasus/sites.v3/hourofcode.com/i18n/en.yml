@@ -34,6 +34,17 @@
   hoc_overview_oceans_tutorial_header: 'AI For Oceans'
   hoc_overview_oceans_tutorial_desc: 'Learn about AI, machine learning, training data, and bias, while exploring ethical issues and how AI can be used to address world problems.'
 
+  ai_video_teachable: 'Teachable Machine'
+  ai_video_teachable_desc: 'Train a computer to recognize your own images, sounds, and poses.'
+  ai_video_quick_draw: 'Quick, Draw!'
+  ai_video_quick_draw_desc: 'Cana neural network learn to recognize doodling?'
+  ai_video_experiments: 'AI Experiments with Google'
+  ai_video_experiments_desc: 'Start exploring machine learning through pictures, drawings, language, music, and more.'
+  ai_video_mixlab: 'MixLab'
+  ai_video_mixlab_desc: 'Make music using voice commands.'
+  ai_video_gaugan: 'GauGAN Beta'
+  ai_video_gaugan_desc: 'Paint photo-realistic landscapes with the help of AI.'
+
   codeorg_homepage_hoc2018_curriculum: 'Go further with <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org courses</a>'
   codeorg_homepage_hoc2018_dance_heading: 'Create your own <span class="highlight-word">Dance&nbsp;Party</span>'
   codeorg_homepage_hoc2018_header_line1: 'The Hour of Code is coming...'
