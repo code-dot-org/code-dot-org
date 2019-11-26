@@ -111,7 +111,6 @@ const guides = [
   {
     id: 'fishvtrash-pond-init1',
     text: `Based on your training, here are the objects that A.I. identified as “fish”.  How did A.I. do?`,
-    //TODO after doing a 2nd training iteration these messages no longer show
     when: {
       appMode: AppMode.FishVTrash,
       currentMode: Modes.Pond,
@@ -122,11 +121,10 @@ const guides = [
   },
   {
     id: 'fishvtrash-pond-recall',
-    text: `Switch between “fish” and “not fish” here.`,
+    text: `Click here to switch between objects labeled as “fish” and “not fish”.`,
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Pond},
     arrow: 'UpperRight'
   },
-  //TODO consider not shwoing the train more and continue guide until the buttons are present on the screen
   {
     id: 'fishvtrash-pond-init2',
     text: `You can train A.I. more...`,
@@ -293,6 +291,28 @@ const guides = [
     when: {appMode: AppMode.FishShort, currentMode: Modes.Words}
   },
   {
+    id: 'fishshort-words-training-pause1',
+    text: `Nice work.  Keep training.`,
+    when: {
+      appMode: AppMode.FishShort,
+      currentMode: Modes.Training,
+      fn: state => {
+        return state.yesCount + state.noCount >= 15;
+      }
+    }
+  },
+  {
+    id: 'fishshort-words-training-pause2',
+    text: `Great work!  Keep training A.I. or continue when ready.`,
+    when: {
+      appMode: AppMode.FishShort,
+      currentMode: Modes.Training,
+      fn: state => {
+        return state.yesCount + state.noCount >= 30;
+      }
+    }
+  },
+  {
     id: 'fishshort-predicting-init1',
     textFn: state => {
       return `With your training data, you have programmed A.I. to recognize “${state.word.toLowerCase()}” fish.`;
@@ -339,8 +359,8 @@ const guides = [
     when: {appMode: AppMode.FishLong, currentMode: Modes.Words}
   },
   {
-    id: 'fishlong-training-question',
-    text: `It is worth asking whether it’s fair to use A.I. to judge a fish by its looks.  A.I. might seem fair and neutral, but all of its analysis is based on its training.`,
+    id: 'fishlong-training-pause1',
+    text: `Is it fair to use AI to judge a fish by its looks?  AI might seem fair and neutral, but all of its analysis is based on its training.  What unintended bias could this cause?`,
     when: {
       appMode: AppMode.FishLong,
       currentMode: Modes.Training,
@@ -350,8 +370,41 @@ const guides = [
     }
   },
   {
+    id: 'fishlong-training-pause2',
+    text: `More training data will help A.I. learn your word.  Keep training.`,
+    when: {
+      appMode: AppMode.FishLong,
+      currentMode: Modes.Training,
+      fn: state => {
+        return state.yesCount + state.noCount >= 30;
+      }
+    }
+  },
+  {
+    id: 'fishlong-training-pause3',
+    text: `Each choice you make can help A.I. learn.  Keep training.`,
+    when: {
+      appMode: AppMode.FishLong,
+      currentMode: Modes.Training,
+      fn: state => {
+        return state.yesCount + state.noCount >= 50;
+      }
+    }
+  },
+  {
+    id: 'fishlong-training-pause4',
+    text: `Great work!  Keep training A.I. or continue when ready.`,
+    when: {
+      appMode: AppMode.FishLong,
+      currentMode: Modes.Training,
+      fn: state => {
+        return state.yesCount + state.noCount >= 100;
+      }
+    }
+  },
+  {
     id: 'fishlong-training-many',
-    text: `Wow.  That’s a lot of fish.`,
+    text: `Wow.  That’s a lot of fish!`,
     when: {
       appMode: AppMode.FishLong,
       currentMode: Modes.Training,
@@ -389,7 +442,6 @@ const guides = [
       }
     }
   },
-  //TODO add guides to introduce the pond info and AI results functionality
   {
     id: 'fishlong-pond-init2',
     text: 'Try out a new word by clicking New Word.',
