@@ -432,17 +432,17 @@ function i18n(token) {
 
 /**
  * Replaces special characters in string by HTML entities.
- * Special characters are selected from
+ * List of special characters is taken from
  * https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html
  */
 function escapeHTML(string) {
   const htmlEscapes = {
-    "&": "&amp",
-    "<": "&lt",
-    ">": "&gt",
-    '"': "&quot",
-    "'": "&#x27",
-    "/": "&#x2F"
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#x27;",
+    "/": "&#x2F;"
   };
 
   const searchPattern = /[&<>"'/]/g;
