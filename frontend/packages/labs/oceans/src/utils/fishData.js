@@ -114,9 +114,6 @@ import mouth7_image from '../../public/images/fish/mouth/mouth7.png';
 import mouth8_image from '../../public/images/fish/mouth/mouth8.png';
 import mouth9_image from '../../public/images/fish/mouth/mouth9.png';
 
-import scales2_image from '../../public/images/fish/scales/scales2.png';
-import scales3_image from '../../public/images/fish/scales/scales3.png';
-import scales4_image from '../../public/images/fish/scales/scales4.png';
 import scales5_image from '../../public/images/fish/scales/scales5.png';
 import scales6_image from '../../public/images/fish/scales/scales6.png';
 import scales7_image from '../../public/images/fish/scales/scales7.png';
@@ -165,7 +162,7 @@ const fishComponents = {
     circle_1: {
       src: circle_1_image,
       anchor: [95, 55],
-      faceAnchor: [8, 13],
+      faceAnchor: [8, 15],
       pectoralFinBackAnchor: [5, 76],
       pectoralFinFrontAnchor: [56, 82],
       dorsalFinAnchor: [50, 14],
@@ -177,7 +174,7 @@ const fishComponents = {
     circle_2: {
       src: circle_2_image,
       anchor: [91, 60],
-      faceAnchor: [6, 9],
+      faceAnchor: [9, 10],
       pectoralFinBackAnchor: [22, 72],
       pectoralFinFrontAnchor: [70, 72],
       dorsalFinAnchor: [54, 14],
@@ -189,8 +186,8 @@ const fishComponents = {
     diamond1: {
       src: diamond1_image,
       anchor: [80, 82],
-      faceAnchor: [12, 2],
-      pectoralFinBackAnchor: [45, 33],
+      faceAnchor: [15, 2],
+      pectoralFinBackAnchor: [40, 31],
       pectoralFinFrontAnchor: [75, 33],
       dorsalFinAnchor: [75, 15],
       tailAnchor: [120, 23],
@@ -207,7 +204,7 @@ const fishComponents = {
     other_1: {
       src: other_1_image,
       anchor: [71, 69],
-      faceAnchor: [8, 0],
+      faceAnchor: [10, 5],
       pectoralFinBackAnchor: [32, 58],
       pectoralFinFrontAnchor: [80, 60],
       dorsalFinAnchor: [69, 15],
@@ -225,7 +222,7 @@ const fishComponents = {
     other_2: {
       src: other_2_image,
       anchor: [77, 43],
-      faceAnchor: [25, 29],
+      faceAnchor: [29, 34],
       pectoralFinBackAnchor: [22, 100],
       pectoralFinFrontAnchor: [80, 100],
       dorsalFinAnchor: [71, 15],
@@ -243,12 +240,12 @@ const fishComponents = {
     other_3: {
       src: other_3_image,
       anchor: [97, 58],
-      faceAnchor: [4, 12],
+      faceAnchor: [7, 20],
       pectoralFinBackAnchor: [2, 69],
       pectoralFinFrontAnchor: [50, 72],
       dorsalFinAnchor: [48, 14],
       tailAnchor: [85, 40],
-      scalesAnchor: [61, 20],
+      scalesAnchor: [61, 21],
       knnData: [5782, BodyShape.OTHER],
       type: FishBodyPart.BODY,
       exclusions: [
@@ -261,7 +258,7 @@ const fishComponents = {
     other_4: {
       src: other_4_image,
       anchor: [88, 48],
-      faceAnchor: [15, 17],
+      faceAnchor: [15, 21],
       pectoralFinBackAnchor: [22, 87],
       pectoralFinFrontAnchor: [68, 88],
       dorsalFinAnchor: [57, 13],
@@ -279,7 +276,7 @@ const fishComponents = {
     other_5: {
       src: other_5_image,
       anchor: [80, 55],
-      faceAnchor: [8, 22],
+      faceAnchor: [9, 21],
       pectoralFinBackAnchor: [20, 75],
       pectoralFinFrontAnchor: [65, 78],
       dorsalFinAnchor: [65, 14],
@@ -297,7 +294,7 @@ const fishComponents = {
     oval_1: {
       src: oval_1_image,
       anchor: [85, 55],
-      faceAnchor: [9, 12],
+      faceAnchor: [9, 15],
       pectoralFinBackAnchor: [25, 82],
       pectoralFinFrontAnchor: [70, 78],
       dorsalFinAnchor: [60, 17],
@@ -315,7 +312,7 @@ const fishComponents = {
     oval_2: {
       src: oval_2_image,
       anchor: [87, 72],
-      faceAnchor: [11, 3],
+      faceAnchor: [11, 5],
       pectoralFinBackAnchor: [8, 53],
       pectoralFinFrontAnchor: [60, 53],
       dorsalFinAnchor: [58, 15],
@@ -333,7 +330,7 @@ const fishComponents = {
     oval_3: {
       src: oval_3_image,
       anchor: [67, 66],
-      faceAnchor: [10, 7],
+      faceAnchor: [10, 11],
       pectoralFinBackAnchor: [27, 60],
       pectoralFinFrontAnchor: [60, 60],
       dorsalFinAnchor: [68, 10],
@@ -381,7 +378,7 @@ const fishComponents = {
     rectangle_2: {
       src: rectangle_2_image,
       anchor: [92, 60],
-      faceAnchor: [10, 11],
+      faceAnchor: [5, 11],
       pectoralFinBackAnchor: [8, 76],
       pectoralFinFrontAnchor: [60, 78],
       dorsalFinAnchor: [53, 10],
@@ -393,7 +390,7 @@ const fishComponents = {
     rectangle_3: {
       src: rectangle_3_image,
       anchor: [92, 84],
-      faceAnchor: [2, 1],
+      faceAnchor: [1, 1],
       pectoralFinBackAnchor: [15, 28],
       pectoralFinFrontAnchor: [59, 32],
       dorsalFinAnchor: [53, 10],
@@ -450,9 +447,9 @@ const fishComponents = {
     star1: {
       src: star1_image,
       anchor: [83, 43],
-      faceAnchor: [11, 27],
-      pectoralFinBackAnchor: [30, 89],
-      pectoralFinFrontAnchor: [63, 91],
+      faceAnchor: [18, 29],
+      pectoralFinBackAnchor: [28, 87],
+      pectoralFinFrontAnchor: [63, 89],
       dorsalFinAnchor: [63, 30],
       tailAnchor: [93, 62],
       scalesAnchor: [73, 26],
@@ -467,20 +464,20 @@ const fishComponents = {
     },
     triangle2: {
       src: triangle2_image,
-      anchor: [102, 32],
-      faceAnchor: [7, 70],
-      pectoralFinBackAnchor: [20, 110],
-      pectoralFinFrontAnchor: [54, 126],
-      dorsalFinAnchor: [79, 16],
-      tailAnchor: [70, 79],
-      scalesAnchor: [60, 26],
-      knnData: [6902, BodyShape.TRIANGLE],
+      anchor: [102, 40],
+      faceAnchor: [13, 58],
+      pectoralFinBackAnchor: [18, 100],
+      pectoralFinFrontAnchor: [47, 110],
+      dorsalFinAnchor: [70, 12],
+      tailAnchor: [68, 79],
+      scalesAnchor: [51, 26],
+      knnData: [5380, BodyShape.TRIANGLE],
       type: FishBodyPart.BODY
     },
     triangle3: {
       src: triangle3_image,
       anchor: [98, 51],
-      faceAnchor: [20, 33],
+      faceAnchor: [20, 31],
       pectoralFinBackAnchor: [28, 88],
       pectoralFinFrontAnchor: [62, 94],
       dorsalFinAnchor: [88, 10],
@@ -498,7 +495,7 @@ const fishComponents = {
     triangle_1: {
       src: triangle_1_image,
       anchor: [88, 48],
-      faceAnchor: [10, 43],
+      faceAnchor: [16, 40],
       pectoralFinBackAnchor: [40, 95],
       pectoralFinFrontAnchor: [80, 100],
       dorsalFinAnchor: [80, 10],
@@ -1570,21 +1567,6 @@ const fishComponents = {
     }
   },
   scales: {
-    scales2: {
-      src: scales2_image,
-      knnData: [],
-      type: FishBodyPart.SCALES
-    },
-    scales3: {
-      src: scales3_image,
-      knnData: [],
-      type: FishBodyPart.SCALES
-    },
-    scales4: {
-      src: scales4_image,
-      knnData: [],
-      type: FishBodyPart.SCALES
-    },
     scales5: {
       src: scales5_image,
       knnData: [],
