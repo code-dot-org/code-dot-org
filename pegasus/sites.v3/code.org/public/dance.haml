@@ -25,8 +25,8 @@ theme: responsive
 
 =view :dance_teacher_resources
 
-.dance-text-icon-container.desktop-only
-  =I18n.t(:hoc2019_dance_previous_versions, dance_2018_link: CDO.studio_url('/s/dance/reset'), dance_extras_2018_link: CDO.studio_url('/s/dance-extras/reset'))
+.dance-text-icon-container
+  =I18n.t(:hoc2019_dance_previous_versions, dance_2018_link: CDO.studio_url('/s/dance/reset'), dance_extras_2018_link: CDO.studio_url('/s/dance-extras/reset'), markdown: true)
 
 =view :dance_sponsor_logo
 
