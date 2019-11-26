@@ -106,10 +106,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     )
 
     if auth_option.save
-      provider = I18n.t(auth_option.credential_type, scope: "auth", default: "")
-      flash.notice = auth_option.email.blank? ?
-        I18n.t('user.auth_option_saved_no_email', provider: provider) :
-        I18n.t('user.auth_option_saved', provider: provider, email: auth_option.email)
+      flash.notice = I18n.t('user.account_successfully_updated')
     else
       flash.alert = get_connect_provider_errors(auth_option)
     end
