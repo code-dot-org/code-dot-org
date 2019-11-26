@@ -521,7 +521,7 @@ class LevelsControllerTest < ActionController::TestCase
     assert_not_includes @response.body, 'level cannot be renamed'
   end
 
-  test "should prevent rename of level in visible script" do
+  test "should prevent rename of level in visible or pilot script" do
     script_level = create :script_level
     script = script_level.script
     level = script_level.level
@@ -538,6 +538,13 @@ class LevelsControllerTest < ActionController::TestCase
     assert_response :success
     assert_includes @response.body, level.name
     assert_not_includes @response.body, 'level cannot be renamed'
+
+    script.pilot_experiment = Experiment.LEVEL_EDITOR_EXPERIMENTS.last
+    script.save!
+    get :edit, params: {id: level.id}
+    assert_response :success
+    assert_includes @response.body, level.name
+    assert_includes @response.body, 'level cannot be renamed'
   end
 
   test "should prevent rename of stanadalone project level" do

@@ -127,7 +127,9 @@ class LevelsController < ApplicationController
 
   # GET /levels/1/edit
   def edit
-    @visible = @level.script_levels.map(&:script).reject(&:hidden).any?
+    scripts = @level.script_levels.map(&:script)
+    @visible = scripts.reject(&:hidden).any?
+    @pilot = scripts.select(&:pilot_experiment).any?
     @standalone = ProjectsController::STANDALONE_PROJECTS.values.map {|h| h[:name]}.include?(@level.name)
   end
 
