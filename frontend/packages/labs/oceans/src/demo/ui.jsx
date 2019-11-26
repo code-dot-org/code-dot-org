@@ -613,6 +613,16 @@ const styles = {
     left: '50.5%',
     transform: 'translateX(-50%)'
   },
+  arrowUpperRight: {
+    top: '15%',
+    right: '-2.5%',
+    transform: 'translateX(-50%) rotate(180deg)'
+  },
+  arrowUpperFarRight: {
+    top: '15%',
+    right: '-4.6%',
+    transform: 'translateX(-50%) rotate(180deg)'
+  },
   marginRight: {
     marginRight: 10
   }
