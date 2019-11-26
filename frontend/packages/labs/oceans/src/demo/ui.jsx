@@ -66,8 +66,8 @@ const styles = {
   },
   continueButton: {
     position: 'absolute',
-    bottom: '4%',
-    right: '2.25%',
+    bottom: '2%',
+    right: '1.2%',
     backgroundColor: colors.orange,
     color: colors.white
   },
@@ -75,20 +75,20 @@ const styles = {
     backgroundColor: colors.orange,
     color: colors.white,
     position: 'absolute',
-    bottom: '4%',
-    right: '2.25%'
+    bottom: '2%',
+    right: '1.2%'
   },
   playAgainButton: {
     backgroundColor: colors.yellowGreen,
     color: colors.white,
     position: 'absolute',
     bottom: '16%',
-    right: '2.25%'
+    right: '1.2%'
   },
   backButton: {
     position: 'absolute',
-    bottom: '4%',
-    left: '2.25%',
+    bottom: '2%',
+    left: '1.2%',
     backgroundColor: colors.blue,
     color: colors.white
   },
@@ -124,13 +124,17 @@ const styles = {
     left: '50%',
     padding: '2%'
   },
-  confirmationDialogLeft: {
-    float: 'left',
-    width: '30%'
+  confirmationDialogContent: {
+    display: 'flex',
+    justifyContent: 'space-between'
   },
-  confirmationDialogRight: {
-    float: 'right',
+  confirmationDialogText: {
     width: '70%'
+  },
+  confirmationDialogImg: {
+    maxWidth: '50%',
+    padding: '5%',
+    boxSizing: 'border-box'
   },
   confirmationHeader: {
     fontSize: '220%',
@@ -257,8 +261,8 @@ const styles = {
   },
   trainingIcons: {
     position: 'absolute',
-    top: '4%',
-    right: '2.25%',
+    top: '2%',
+    right: '1.2%',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center'
@@ -289,7 +293,7 @@ const styles = {
   mediaControls: {
     position: 'absolute',
     width: '100%',
-    bottom: 25,
+    bottom: '3.5%',
     display: 'flex',
     justifyContent: 'center'
   },
@@ -420,14 +424,15 @@ const styles = {
   },
   recallContainer: {
     position: 'absolute',
-    top: '4%',
-    right: '2.25%',
+    top: '2%',
+    right: '1.2%',
     color: colors.white,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between'
   },
   recallIcon: {
+    cursor: 'pointer',
     width: 30,
     height: 30,
     border: `3px solid ${colors.white}`,
@@ -476,7 +481,7 @@ const styles = {
     color: colors.white,
     borderRadius: 5,
     maxWidth: '80%',
-    bottom: '4%',
+    bottom: '2%',
     left: '50%',
     transform: 'translateX(-50%)'
   },
@@ -665,19 +670,19 @@ let ConfirmationDialog = class ConfirmationDialog extends React.Component {
     return (
       <div style={styles.confirmationDialogBackground}>
         <div style={styles.confirmationDialog}>
-          <div style={styles.confirmationDialogLeft}>
-            <img src={snail} style={styles.guideImage} />
-          </div>
-          <div style={styles.confirmationDialogRight}>
-            <div
-              style={styles.confirmationHeader}
-              className="confirmation-text"
-            >
-              Are you sure?
-            </div>
-            <div style={styles.confirmationText}>
-              Erasing AI's data will permanently delete all training. Is that
-              what you want to do?
+          <div style={styles.confirmationDialogContent}>
+            <img src={snail} style={styles.confirmationDialogImg} />
+            <div style={styles.confirmationDialogText}>
+              <div
+                style={styles.confirmationHeader}
+                className="confirmation-text"
+              >
+                Are you sure?
+              </div>
+              <div style={styles.confirmationText}>
+                Erasing AI's data will permanently delete all training. Is that
+                what you want to do?
+              </div>
             </div>
           </div>
           <div style={styles.confirmationButtons}>
