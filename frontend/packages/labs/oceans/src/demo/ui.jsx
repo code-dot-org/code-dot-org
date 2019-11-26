@@ -66,8 +66,8 @@ const styles = {
   },
   continueButton: {
     position: 'absolute',
-    bottom: '4%',
-    right: '2.25%',
+    bottom: '2%',
+    right: '1.2%',
     backgroundColor: colors.orange,
     color: colors.white
   },
@@ -75,22 +75,20 @@ const styles = {
     backgroundColor: colors.orange,
     color: colors.white,
     position: 'absolute',
-    bottom: '4%',
-    right: '2.25%'
+    bottom: '2%',
+    right: '1.2%'
   },
   playAgainButton: {
     backgroundColor: colors.yellowGreen,
     color: colors.white,
     position: 'absolute',
     bottom: '16%',
-    right: '2.25%'
+    right: '1.2%'
   },
   backButton: {
     position: 'absolute',
-    bottom: '4%',
-    left: '2.25%',
-    backgroundColor: colors.blue,
-    color: colors.white
+    bottom: '2%',
+    left: '1.2%'
   },
   button2col: {
     width: '20%',
@@ -124,13 +122,17 @@ const styles = {
     left: '50%',
     padding: '2%'
   },
-  confirmationDialogLeft: {
-    float: 'left',
-    width: '30%'
+  confirmationDialogContent: {
+    display: 'flex',
+    justifyContent: 'space-between'
   },
-  confirmationDialogRight: {
-    float: 'right',
+  confirmationDialogText: {
     width: '70%'
+  },
+  confirmationDialogImg: {
+    maxWidth: '50%',
+    padding: '5%',
+    boxSizing: 'border-box'
   },
   confirmationHeader: {
     fontSize: '220%',
@@ -257,8 +259,8 @@ const styles = {
   },
   trainingIcons: {
     position: 'absolute',
-    top: '4%',
-    right: '2.25%',
+    top: '2%',
+    right: '1.2%',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center'
@@ -278,18 +280,29 @@ const styles = {
     fontSize: '80%',
     marginLeft: 12
   },
-  eraseButton: {
+  eraseButtonContainer: {
     cursor: 'pointer',
-    color: colors.white,
-    border: `3px solid ${colors.white}`,
     borderRadius: 50,
-    padding: '6px 8px',
-    marginLeft: 10
+    padding: 8,
+    marginLeft: 10,
+    backgroundColor: colors.white,
+    color: colors.grey,
+    ':hover': {
+      backgroundColor: colors.red,
+      color: colors.white
+    },
+    ':focus': {
+      backgroundColor: colors.red,
+      color: colors.white
+    }
+  },
+  eraseButton: {
+    padding: '0 3px'
   },
   mediaControls: {
     position: 'absolute',
     width: '100%',
-    bottom: 25,
+    bottom: '3.5%',
     display: 'flex',
     justifyContent: 'center'
   },
@@ -312,7 +325,7 @@ const styles = {
   },
   timeScale: {
     width: 40,
-    fontSize: '120%',
+    fontSize: '80%',
     textAlign: 'center'
   },
   predictSpeech: {
@@ -358,7 +371,7 @@ const styles = {
     borderRadius: 10,
     left: '3%',
     top: '16%',
-    padding: 20
+    padding: '2%'
   },
   pondPanelRight: {
     position: 'absolute',
@@ -368,25 +381,25 @@ const styles = {
     borderRadius: 10,
     right: '3%',
     top: '16%',
-    padding: 20
+    padding: '2%'
   },
   pondPanelPreText: {
-    marginBottom: 20
+    marginBottom: '5%'
   },
   pondPanelRow: {
     position: 'relative',
-    height: 40
+    marginBottom: '7%'
   },
   pondPanelGeneralBar: {
     position: 'absolute',
     top: 0,
     left: '0%',
-    height: 30,
+    height: '150%',
     backgroundColor: colors.green
   },
   pondPanelGeneralBarText: {
     position: 'absolute',
-    top: 4,
+    top: '30%',
     left: '3%',
     textAlign: 'right'
   },
@@ -394,56 +407,84 @@ const styles = {
     position: 'absolute',
     top: 0,
     left: '50%',
-    height: 30,
+    height: '150%',
     backgroundColor: colors.green
   },
   pondPanelGreenBarText: {
     position: 'absolute',
-    top: 4,
+    top: '30%',
     left: '53%'
   },
   pondPanelRedBar: {
     position: 'absolute',
     top: 0,
     right: '50%',
-    height: 30,
+    height: '150%',
     backgroundColor: colors.red
   },
   pondPanelRedBarText: {
     position: 'absolute',
-    top: 4,
+    top: '30%',
     width: '47%',
     textAlign: 'right'
   },
   pondPanelPostText: {
-    marginTop: 20
+    marginTop: '3%'
   },
   recallContainer: {
     position: 'absolute',
-    top: '4%',
-    right: '2.25%',
+    top: '2%',
+    right: '1.2%',
     color: colors.white,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between'
   },
+  recallIcons: {
+    backgroundColor: colors.white,
+    color: colors.grey,
+    maxHeight: 42,
+    borderRadius: 8
+  },
   recallIcon: {
-    width: 30,
-    height: 30,
-    border: `3px solid ${colors.white}`,
+    cursor: 'pointer',
+    width: 28,
+    height: 28,
+    padding: 7
+  },
+  infoIconContainer: {
+    cursor: 'pointer',
     borderRadius: 50,
-    padding: 6,
+    padding: 7,
     marginLeft: 8,
-    backgroundColor: colors.lightGrey
+    width: 28,
+    height: 28,
+    backgroundColor: colors.white,
+    color: colors.grey,
+    ':hover': {
+      backgroundColor: colors.neonBlue,
+      color: colors.white
+    },
+    ':focus': {
+      backgroundColor: colors.neonBlue,
+      color: colors.white
+    }
+  },
+  infoIcon: {
+    width: 28,
+    height: 28
   },
   bgNeonBlue: {
-    backgroundColor: colors.neonBlue
+    backgroundColor: colors.neonBlue,
+    color: colors.white
   },
   bgRed: {
-    backgroundColor: colors.red
+    backgroundColor: colors.red,
+    color: colors.white
   },
   bgGreen: {
-    backgroundColor: colors.green
+    backgroundColor: colors.green,
+    color: colors.white
   },
   pill: {
     display: 'flex',
@@ -476,7 +517,7 @@ const styles = {
     color: colors.white,
     borderRadius: 5,
     maxWidth: '80%',
-    bottom: '4%',
+    bottom: '2%',
     left: '50%',
     transform: 'translateX(-50%)'
   },
@@ -665,19 +706,19 @@ let ConfirmationDialog = class ConfirmationDialog extends React.Component {
     return (
       <div style={styles.confirmationDialogBackground}>
         <div style={styles.confirmationDialog}>
-          <div style={styles.confirmationDialogLeft}>
-            <img src={snail} style={styles.guideImage} />
-          </div>
-          <div style={styles.confirmationDialogRight}>
-            <div
-              style={styles.confirmationHeader}
-              className="confirmation-text"
-            >
-              Are you sure?
-            </div>
-            <div style={styles.confirmationText}>
-              Erasing AI's data will permanently delete all training. Is that
-              what you want to do?
+          <div style={styles.confirmationDialogContent}>
+            <img src={snail} style={styles.confirmationDialogImg} />
+            <div style={styles.confirmationDialogText}>
+              <div
+                style={styles.confirmationHeader}
+                className="confirmation-text"
+              >
+                Are you sure?
+              </div>
+              <div style={styles.confirmationText}>
+                Erasing AI's data will permanently delete all training. Is that
+                what you want to do?
+              </div>
             </div>
           </div>
           <div style={styles.confirmationButtons}>
@@ -767,7 +808,7 @@ let Words = class Words extends React.Component {
     const word = this.state.choices[itemIndex];
     setState({
       word,
-      trainingQuestion: `Is this fish ${word.toUpperCase()}?`
+      trainingQuestion: `Is this fish “${word.toLowerCase()}”?`
     });
     toMode(Modes.Training);
   }
@@ -833,21 +874,23 @@ let Train = class Train extends React.Component {
         </div>
         <div style={styles.trainingIcons}>
           <div style={styles.counter}>
-            <img src={counterIcon} />
+            <img src={counterIcon} style={{height: 28}} />
             <span style={styles.counterNum}>
               {Math.min(999, state.yesCount + state.noCount)}
             </span>
           </div>
-          <FontAwesomeIcon
-            icon={faTrash}
-            style={styles.eraseButton}
-            onClick={() => {
-              setState({
-                showConfirmationDialog: true,
-                confirmationDialogOnYes: resetTrainingFunction
-              });
-            }}
-          />
+          <span style={styles.eraseButtonContainer}>
+            <FontAwesomeIcon
+              icon={faTrash}
+              style={styles.eraseButton}
+              onClick={() => {
+                setState({
+                  showConfirmationDialog: true,
+                  confirmationDialogOnYes: resetTrainingFunction
+                });
+              }}
+            />
+          </span>
         </div>
         <div style={styles.trainButtons}>
           <Button
@@ -1100,9 +1143,9 @@ class PondPanel extends React.Component {
               <div>
                 <div style={styles.pondPanelPreText}>
                   These were the most important fish parts in determining
-                  whether this fish was{' '}
-                  <span style={{color: colors.green}}>{state.word}</span> or{' '}
-                  <span style={{color: colors.red}}>not {state.word}</span>.
+                  whether this fish was{' “'}
+                  <span style={{color: colors.green}}>{state.word.toLowerCase()}</span>{'”'} or{' “'}
+                  <span style={{color: colors.red}}>not {state.word.toLowerCase()}</span>{'”'}.
                 </div>
                 {state.pondExplainFishSummary.slice(0, 4).map((f, i) => (
                   <div key={i}>
@@ -1292,32 +1335,40 @@ let Pond = class Pond extends React.Component {
       <Body>
         <div onClick={e => this.onPondClick(e)} style={styles.pondSurface} />
         <div style={styles.recallContainer}>
-          {showInfoButton && (
+          <div style={styles.recallIcons}>
             <FontAwesomeIcon
-              icon={faInfo}
+              icon={faCheck}
               style={{
                 ...styles.recallIcon,
-                ...(!state.pondPanelShowing ? styles.bgNeonBlue : {})
+                ...{borderTopLeftRadius: 8, borderBottomLeftRadius: 8},
+                ...(!state.showRecallFish ? styles.bgGreen : {})
               }}
-              onClick={this.onPondPanelButtonClick}
+              onClick={this.toggleRecall}
             />
+            <FontAwesomeIcon
+              icon={faBan}
+              style={{
+                ...styles.recallIcon,
+                ...{borderTopRightRadius: 8, borderBottomRightRadius: 8},
+                ...(state.showRecallFish ? styles.bgRed : {})
+              }}
+              onClick={this.toggleRecall}
+            />
+          </div>
+          {showInfoButton && (
+            <span
+              style={{
+                ...styles.infoIconContainer,
+                ...(!state.pondPanelShowing ? {} : styles.bgNeonBlue)
+              }}
+            >
+              <FontAwesomeIcon
+                icon={faInfo}
+                style={styles.infoIcon}
+                onClick={this.onPondPanelButtonClick}
+              />
+            </span>
           )}
-          <FontAwesomeIcon
-            icon={faCheck}
-            style={{
-              ...styles.recallIcon,
-              ...(!state.showRecallFish ? styles.bgGreen : {})
-            }}
-            onClick={this.toggleRecall}
-          />
-          <FontAwesomeIcon
-            icon={faBan}
-            style={{
-              ...styles.recallIcon,
-              ...(state.showRecallFish ? styles.bgRed : {})
-            }}
-            onClick={this.toggleRecall}
-          />
         </div>
         <img style={styles.pondBot} src={aiBotClosed} />
         {state.canSkipPond && (
@@ -1335,7 +1386,7 @@ let Pond = class Pond extends React.Component {
                 </Button>
                 <Button
                   style={styles.finishButton}
-                  onClick={state.onContinue()}
+                  onClick={() => state.onContinue()}
                 >
                   Finish
                 </Button>
