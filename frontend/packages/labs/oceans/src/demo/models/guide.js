@@ -325,6 +325,17 @@ const guides = [
     when: {appMode: AppMode.FishLong, currentMode: Modes.Words}
   },
   {
+    id: 'fishlong-training-many',
+    text: `Wow.  That’s a lot of fish.`,
+    when: {
+      appMode: AppMode.FishLong,
+      currentMode: Modes.Training,
+      fn: state => {
+        return state.yesCount + state.noCount >= 300;
+      }
+    }
+  },
+  {
     id: 'fishlong-predicting-init1',
     textFn: state => {
       return `With your training data, you have programmed A.I. to recognize “${state.word.toLowerCase()}” fish.`;
