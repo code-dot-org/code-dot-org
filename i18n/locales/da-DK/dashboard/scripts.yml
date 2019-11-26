@@ -1454,7 +1454,6 @@ da:
             Dance Party:
               name: Dansefest
         dance-extras:
-          title: Bliv ved med at danse
           description: Overskrid den første time med udvidede projektideer.
         coursef-2019:
           stages:
@@ -1664,7 +1663,6 @@ da:
             For Loops:
               name: For Loops
         dance-extras-2019:
-          title: Bliv ved med at danse
           description: Overskrid den første time med udvidede projektideer.
         time4cs-control-unit-1:
           stages:

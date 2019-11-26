@@ -1,5 +1,5 @@
 ---
-title: How to host an Hour of Code - Companies
+title: कोडचा तास आयोजित कसा करावा - कंपनी
 ---
 
 {{ signup_button }}

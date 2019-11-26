@@ -23,8 +23,22 @@ et:
     computer science. Change the world.'
   social_hoc2019_coming_dates: The Hour of Code is coming December 9-15, 2019. Computer
     science is foundational for every student to learn.
-  social_hoc2019_dance: Featuring Katy Perry, Jonas Brothers, Lil Nas X, Panic at
-    the Disco, and many more!
+  social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
+    Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
+  oceans_landing_title: AI for Oceans
+  oceans_landing_description: 'Explore machine learning by teaching “A.I.” to recognize
+    fish. #CSforGood'
+  oceans_landing_specs: English only | Ages 11+
+  oceans_landing_teacher_resources: Teacher Resources
+  oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
+    AI, machine learning, training data, and bias, while exploring ethical issues.
+  oceans_landing_resource_button: View Resources
+  oceans_landing_cs_for_good: CS For Good
+  oceans_landing_cs_for_good_desc: Resources to help students understand the role
+    computer science could play in creating a more equitable world.
+  hoc_overview_oceans_tutorial_header: AI Oceans
+  hoc_overview_oceans_tutorial_desc: Teach "A.I." to sort between fish and trash while
+    exploring broader artificial intelligence concepts.
   codeorg_homepage_hoc2018_curriculum: Õpi edasi<a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org
     kursustega</a>
   codeorg_homepage_hoc2018_dance_heading: Loo oma <span class="highlight-word"> Tantsu&nbsp;õhtu</span>
@@ -42,6 +56,7 @@ et:
   hourofcode_homepage_hoc2018_header_line2: Vanus 4–104 eluaastat.
   hoc2018_tutorial_mchoc_description: Minecraft on KoodiTund raames tagasi uhiuue
     tegevusega! Läbi teekond läbi Minecrafti programmeerides.
+  codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>
   cookie_banner_message: Meie kodulehe külastamise jätkamise või "Nõustun" nupul klikkimisega
     nõustud "küpsiste" salvestamisega Sinu arvutis või muus seadmes.
   cookie_banner_more_information: Loe lähemalt Code.org Privaatsuse reeglitest.
@@ -655,6 +670,7 @@ et:
   learn_robotics_banner_blurb: Saad kasutada robootika vahendeid? Kasuta neid alljärgnevate
     tegevuste puhul ning muuda KoodiTund reaalsuseks mistahes vanuses õpilastele!
     Mõnedel tegevuste juures on ka simulaator, nii et sa ei vaja mingit riistvara.
+  tutorial_dance2019_name: Dance Party 2019
   tutorial_danceparty_name: Tantsuõhtu
   tutorial_chibitronics_name: 'Chibitronics: Illuminated Story'
   tutorial_athlete_name: Programmeeri oma spordimäng
@@ -2419,6 +2435,9 @@ et:
   tutorial_allcancodeapps_shortdescription: Use the Allcancode Platform to create
     web and mobile apps from design to delivery.
   tutorial_n2y_shortdescription: Help Bitt Bott explore Earth using direction arrows.
+  tutorial_dance2019_longdescription: Code a Dance Party to share with your friends.
+    Featuring Katy Perry, Shawn Mendes, Lil Nas X, Panic! At The Disco, Jonas Brothers,
+    and many more!
   tutorial_danceparty_longdescription: Programmeeri tantsuõhu ja jaga seda oma sõpradega.
     Osalevad Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara ja veel 25 artisti!
   tutorial_chibitronics_longdescription: Program a paper circuit to light up your
@@ -4866,6 +4885,9 @@ et:
     Each of the six activities includes simple directions that are supported with
     symbols from the n2y® SymbolStix PRIME® collection. The symbols help non-readers
     and beginning readers understand and follow the directions.
+  tutorial_dance2019_language: Arabic, Chinese, Czech, Danish, Dutch, English, Finnish,
+    French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean,
+    Malay, Polish, Portuguese, and 10 more!
   tutorial_danceparty_language: English, Arabic, Catalan, Chinese, Czech, Danish,
     Dutch, Finnish, French, German, Greek, Hungarian, Italian, Japanese, Korean, Norwegian,
     Polish, Portuguese, Russian, Spanish, Swedish, Thai, Turkish, and Vietnamese
@@ -5551,6 +5573,7 @@ et:
   tutorial_duckrace_language: English, German
   tutorial_allcancodeapps_language: Inglise keel
   tutorial_n2y_language: Inglise keel
+  tutorial_dance2019_string_detail_grades: Grades 2+
   tutorial_danceparty_string_detail_grades: Grades 2+
   tutorial_chibitronics_string_detail_grades: Lapsed vanuses 7–11 eluaastat
   tutorial_athlete_string_detail_grades: Grades 2+
@@ -5908,7 +5931,7 @@ et:
   tutorial_codehsrn_string_detail_grades: Lastele vanuses 14+ eluaastat
   tutorial_codehswd_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_turtlerobot_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
-  tutorial_ozoevo_string_detail_grades: Kõigile vanustele
+  tutorial_ozoevo_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_ozoexped_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_ozojourney_string_detail_grades: 7–13 eluaastat
   tutorial_ozocodes_string_detail_grades: Kõigile vanustele
@@ -6037,7 +6060,7 @@ et:
   tutorial_codesparkcreate_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_hardvsoft_string_detail_grades: 'Lapsed, kes veel ei oska lugeda '
   tutorial_codestersecard_string_detail_grades: Grades 6-8
-  tutorial_codesterslogo_string_detail_grades: 7–13 eluaastat
+  tutorial_codesterslogo_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_codesterstshirt_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_codewards_string_detail_grades: 7–13 eluaastat
   tutorial_olympics_string_detail_grades: 7–13 eluaastat
@@ -6136,6 +6159,8 @@ et:
   tutorial_duckrace_string_detail_grades: Grades 2+
   tutorial_allcancodeapps_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_n2y_string_detail_grades: Lapsed, kes veel ei oska lugeda+
+  tutorial_dance2019_string_platforms: Kõik tänapäevased veebilehitsejad, Android
+    tahvelarvuti, iPad, arvutivaba tegevus
   tutorial_danceparty_string_platforms: Kõik tänapäevased veebilehitsejad, Android
     tahvelarvuti, iPad
   tutorial_chibitronics_string_platforms: Kõik tänapäevased veebilehitsejad
@@ -6924,6 +6949,7 @@ et:
     iPad
   tutorial_allcancodeapps_string_platforms: Kõik tänapäevased veebilehitsejad
   tutorial_n2y_string_platforms: Arvutivaba tegevus
+  tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chibitronics Chibi Chip and Circuit
     Sticker LEDs
@@ -7505,6 +7531,7 @@ et:
   tutorial_duckrace_string_detail_platforms: ''
   tutorial_allcancodeapps_string_detail_platforms: ''
   tutorial_n2y_string_detail_platforms: ''
+  tutorial_dance2019_string_detail_programming_languages: Blocks
   tutorial_danceparty_string_detail_programming_languages: Blocks
   tutorial_chibitronics_string_detail_programming_languages: Blocks
   tutorial_athlete_string_detail_programming_languages: Blocks
@@ -8008,7 +8035,7 @@ et:
   tutorial_codesparkcreate_string_detail_programming_languages: Blocks
   tutorial_hardvsoft_string_detail_programming_languages: ''
   tutorial_codestersecard_string_detail_programming_languages: Blocks, Python
-  tutorial_codesterslogo_string_detail_programming_languages: Blocks, Python
+  tutorial_codesterslogo_string_detail_programming_languages: Python
   tutorial_codesterstshirt_string_detail_programming_languages: Blocks, Python
   tutorial_codewards_string_detail_programming_languages: CoffeeScript
   tutorial_olympics_string_detail_programming_languages: CoffeeScript
@@ -8212,6 +8239,8 @@ et:
   tutorial_ikodexmas_name: iKode Xmas
   tutorial_rpisensehat_name: Sense HAT data logger
   tutorial_modtraits_name: Character Traits with GoPiGo
+  tutorial_mee_name: 'Minecraft Hour of Code: AI for Good'
+  tutorial_kuborobo_name: KUBO Robotics Coding Routes
   tutorial_scratchimagine_longdescription: Imagine a world where anything is possible,
     then bring it to life with Scratch!
   tutorial_codesterspsa_longdescription: Learn the basics of coding in Python while
@@ -8568,6 +8597,13 @@ et:
     environment.
   tutorial_modtraits_longdescription: 'Students use the steps of computational thinking
     to analyze character traits and create an algorithm to demonstrate those traits. '
+  tutorial_mee_longdescription: Program the Minecraft Agent to collect data about
+    forest fires. Then write code to help prevent the spread of fire, save the village,
+    and bring life back to the forest. Learn coding basics and explore a real-world
+    example of artificial intelligence.
+  tutorial_kuborobo_longdescription: In this activity, students put their logic and
+    sequencing skills to the test as they use the Tagtiles to program their KUBO robot
+    to travel to various locations on a printed map.
   tutorial_scratchimagine_language: English, Spanish
   tutorial_codesterspsa_language: Inglise keel
   tutorial_googlehero_language: English, Spanish
@@ -8664,6 +8700,12 @@ et:
   tutorial_ikodexmas_language: Inglise keel
   tutorial_rpisensehat_language: Inglise keel
   tutorial_modtraits_language: Inglise keel
+  tutorial_mee_language: Bulgarian, Chinese (Simplified), Chinese (Traditional), Czech,
+    Danish, Dutch, English (UK), English (United States), Finnish, French (Canada),
+    French (France), German, Greek, Hungarian, Indonesian, Italian, Japanese, Korean,
+    Norwegian, Polish, Portuguese (Brazil), Portuguese (Portugal), Russian, Slovak,
+    Spanish (Spain), Spanish (Mexico), Swedish, Turkish, Ukrainian
+  tutorial_kuborobo_language: English, Spanish
   tutorial_scratchimagine_string_detail_grades: Grades 2+
   tutorial_codesterspsa_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_googlehero_string_detail_grades: 7–13 eluaastat
@@ -8750,9 +8792,9 @@ et:
   tutorial_microbit15_string_detail_grades: 7–13 eluaastat
   tutorial_unity_string_detail_grades: Lastele vanuses 14+ eluaastat
   tutorial_blockscadtarget_string_detail_grades: Õpilastele vanuses 11+ eluaastat
-  tutorial_tcadicicles_string_detail_grades: Grades 6-8
+  tutorial_tcadicicles_string_detail_grades: Grades 7-8
   tutorial_blockscadscale_string_detail_grades: Õpilastele vanuses 11+ eluaastat
-  tutorial_tcadloops_string_detail_grades: Grades 6-8
+  tutorial_tcadloops_string_detail_grades: Grades 5-6
   tutorial_phidgets_string_detail_grades: Lastele vanuses 14+ eluaastat
   tutorial_kcjmerry_string_detail_grades: 7–13 eluaastat
   tutorial_modvariables_string_detail_grades: Õpilastele vanuses 11+ eluaastat
@@ -8761,6 +8803,8 @@ et:
   tutorial_ikodexmas_string_detail_grades: Lapsed vanuses 7–11 eluaastat
   tutorial_rpisensehat_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_modtraits_string_detail_grades: Grades 2+
+  tutorial_mee_string_detail_grades: Grades 2+
+  tutorial_kuborobo_string_detail_grades: Pre-reader - Grades 8
   tutorial_scratchimagine_string_platforms: Kõik tänapäevased veebilehitsejad, Android
     tahvelarvuti, iPad
   tutorial_codesterspsa_string_platforms: Kõik tänapäevased veebilehitsejad, Android
@@ -8881,6 +8925,8 @@ et:
   tutorial_ikodexmas_string_platforms: Kõik tänapäevased veebilehitsejad
   tutorial_rpisensehat_string_platforms: Kõik tänapäevased veebilehitsejad
   tutorial_modtraits_string_platforms: Kõik tänapäevased veebilehitsejad
+  tutorial_mee_string_platforms: iPad, Computers (Windows PC, Mac)
+  tutorial_kuborobo_string_platforms: Arvutivaba tegevus
   tutorial_scratchimagine_string_detail_platforms: ''
   tutorial_codesterspsa_string_detail_platforms: ''
   tutorial_googlehero_string_detail_platforms: ''
@@ -8980,6 +9026,8 @@ et:
   tutorial_ikodexmas_string_detail_platforms: Microsoft Kodu
   tutorial_rpisensehat_string_detail_platforms: Raspbian (software), SenseHAT
   tutorial_modtraits_string_detail_platforms: GoPiGo
+  tutorial_mee_string_detail_platforms: ''
+  tutorial_kuborobo_string_detail_platforms: KUBO robot
   tutorial_scratchimagine_string_detail_programming_languages: Blocks
   tutorial_codesterspsa_string_detail_programming_languages: Python
   tutorial_googlehero_string_detail_programming_languages: Blocks
@@ -9088,6 +9136,9 @@ et:
   tutorial_ikodexmas_string_detail_programming_languages: Microsoft Kodu
   tutorial_rpisensehat_string_detail_programming_languages: Python
   tutorial_modtraits_string_detail_programming_languages: Blocks
+  tutorial_mee_string_detail_programming_languages: Blocks
+  tutorial_kuborobo_string_detail_programming_languages: Tagtiles that students piece
+    together
   school_not_found_heading: Me ei leidnud sinu kooli. Palun sisesta rohkem infot.
   school_name: Kooli nimi
   school_name_error: Kooli nimi on kohustuslik.

@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import ContentContainer from '../ContentContainer';
 import {LocalClassActionBlock} from './TwoColumnActionBlock';
 import {CourseBlocksHoc} from './CourseBlocks';
@@ -11,6 +12,10 @@ import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
  * as well as the default for a signed-out user using English.
  */
 class CoursesStudentEnglish extends Component {
+  static propTypes = {
+    showOceans: PropTypes.bool
+  };
+
   render() {
     return (
       <div>
@@ -25,7 +30,7 @@ class CoursesStudentEnglish extends Component {
           linkText={i18n.teacherCourseHocLinkText()}
           link={pegasus('/hourofcode/overview')}
         >
-          <CourseBlocksHoc />
+          <CourseBlocksHoc showOceans={this.props.showOceans} />
         </ContentContainer>
 
         <LocalClassActionBlock showHeading={true} />

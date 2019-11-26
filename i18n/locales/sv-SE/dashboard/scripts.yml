@@ -1799,7 +1799,6 @@ sv:
             Dance Party:
               name: Dansparty
         dance-extras:
-          title: Fortsätt att dansa
           description: Med ytterligare projektidéer kan du fortsätta efter den första timmen.
         coursef-2019:
           stages:
@@ -2032,7 +2031,6 @@ sv:
             For Loops:
               name: '''För'' loopar'
         dance-extras-2019:
-          title: Fortsätt att dansa
           description: Med ytterligare projektidéer kan du fortsätta efter den första timmen.
         time4cs-control-unit-1:
           stages:

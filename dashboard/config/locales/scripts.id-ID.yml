@@ -4855,12 +4855,24 @@ id:
           stages:
             Artist:
               name: Artis
+        dance:
+          stages:
+            Dance Party:
+              name: Pesta Tari
+          title: Pesta Tari
         frozen-2018-test-b:
           stages:
             Artist:
               name: Artis
+        dance--draft:
+          stages:
+            Dance Party:
+              name: Pesta Tari
+        dance-draft:
+          stages:
+            Dance Party:
+              name: Pesta Tari
         dance-extras:
-          title: Tetaplah berdansa
           description: Lewatilah jam pertama dengan ide ide proyek yang luas.
         coursef-2019:
           description_short: Pelajari seluruh konsep dalam dasar dasar ilmu komputer
@@ -4897,6 +4909,10 @@ id:
               name: Internet
             Crowdsourcing:
               name: Sumber kerumunan
+        dance-low:
+          stages:
+            Dance Party:
+              name: Pesta Tari
         coursed-2019:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -4916,6 +4932,8 @@ id:
             Build a Star Wars Game:
               description_student: Merasakan kekuatan seperti yang anda membangun
                 anda sendiri Peran Bintang Permainan dalam pelajaran ini.
+            Dance Party:
+              name: Pesta Tari
         coursee-2019:
           stages:
             Building a Foundation:
@@ -4989,6 +5007,8 @@ id:
               name: Internet
             Crowdsourcing:
               name: Sumber kerumunan
+            Dance Party:
+              name: Pesta Tari
             Concept Practice with Minecraft:
               name: Melihat ke depan
         csd1-2019:
@@ -5703,6 +5723,10 @@ id:
               name: Pendahuluan
             Nested Loops:
               name: Perulangan bercabang
+        dance-2019:
+          stages:
+            Dance Party:
+              name: Pesta Tari
         k5-onlinepd-2019:
           stages:
             Getting Started:
@@ -5742,7 +5766,6 @@ id:
             For Loops:
               name: Untuk Pengulangan
         dance-extras-2019:
-          title: Tetaplah berdansa
           description: Lewatilah jam pertama dengan ide ide proyek yang luas.
         time4cs-control-unit-1:
           stages:

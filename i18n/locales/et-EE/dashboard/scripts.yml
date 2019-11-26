@@ -1666,7 +1666,6 @@ et:
             Dance Party:
               name: Tantsuõhtu
         dance-extras:
-          title: Tantsi edasi
           description: Mine põhjalikumate projjektiideedega esimesest tunnist edasi.
         coursef-2019:
           stages:
@@ -1886,7 +1885,6 @@ et:
             For Loops:
               name: For tsükkel
         dance-extras-2019:
-          title: Tantsi edasi
           description: Mine põhjalikumate projjektiideedega esimesest tunnist edasi.
         time4cs-control-unit-1:
           stages:
