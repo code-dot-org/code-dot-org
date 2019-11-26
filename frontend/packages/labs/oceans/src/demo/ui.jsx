@@ -269,15 +269,14 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    backgroundColor: colors.black,
-    opacity: '90%',
+    backgroundColor: colors.transparentBlack,
     color: colors.neonBlue,
     borderRadius: 33,
     padding: '8px 20px',
     minWidth: 65
   },
   counterNum: {
-    fontSize: '80%',
+    fontSize: '90%',
     marginLeft: 12
   },
   eraseButtonContainer: {
@@ -444,12 +443,12 @@ const styles = {
     backgroundColor: colors.white,
     color: colors.grey,
     maxHeight: 42,
-    borderRadius: 8
+    borderRadius: 8,
+    display: 'flex',
+    alignItems: 'center'
   },
   recallIcon: {
     cursor: 'pointer',
-    width: 28,
-    height: 28,
     padding: 7
   },
   infoIconContainer: {
