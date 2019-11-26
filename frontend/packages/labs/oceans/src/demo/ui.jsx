@@ -358,7 +358,7 @@ const styles = {
     borderRadius: 10,
     left: '3%',
     top: '16%',
-    padding: 20
+    padding: '2%'
   },
   pondPanelRight: {
     position: 'absolute',
@@ -368,25 +368,25 @@ const styles = {
     borderRadius: 10,
     right: '3%',
     top: '16%',
-    padding: 20
+    padding: '2%'
   },
   pondPanelPreText: {
-    marginBottom: 20
+    marginBottom: '5%'
   },
   pondPanelRow: {
     position: 'relative',
-    height: 40
+    marginBottom: '7%'
   },
   pondPanelGeneralBar: {
     position: 'absolute',
     top: 0,
     left: '0%',
-    height: 30,
+    height: '150%',
     backgroundColor: colors.green
   },
   pondPanelGeneralBarText: {
     position: 'absolute',
-    top: 4,
+    top: '30%',
     left: '3%',
     textAlign: 'right'
   },
@@ -394,29 +394,29 @@ const styles = {
     position: 'absolute',
     top: 0,
     left: '50%',
-    height: 30,
+    height: '150%',
     backgroundColor: colors.green
   },
   pondPanelGreenBarText: {
     position: 'absolute',
-    top: 4,
+    top: '30%',
     left: '53%'
   },
   pondPanelRedBar: {
     position: 'absolute',
     top: 0,
     right: '50%',
-    height: 30,
+    height: '150%',
     backgroundColor: colors.red
   },
   pondPanelRedBarText: {
     position: 'absolute',
-    top: 4,
+    top: '30%',
     width: '47%',
     textAlign: 'right'
   },
   pondPanelPostText: {
-    marginTop: 20
+    marginTop: '3%'
   },
   recallContainer: {
     position: 'absolute',
