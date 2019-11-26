@@ -1,22 +1,21 @@
-= render partial: 'levels/editors/debugger', locals: {f: f}
+= render partial: 'levels/editors/fields/debugger', locals: {f: f}
 
-= render partial: 'levels/editors/control_buttons', locals: {f: f}
+= render partial: 'levels/editors/fields/control_buttons', locals: {f: f}
 
-= render partial: 'levels/editors/submittable', locals: {f: f}
+= render partial: 'levels/editors/fields/submittable', locals: {f: f}
 
-= render partial: 'levels/editors/block_pools', locals: {f: f}
+= render partial: 'levels/editors/fields/block_pools', locals: {f: f}
 
-= render partial: 'levels/editors/helper_libraries', locals: {f: f}
+= render partial: 'levels/editors/fields/helper_libraries', locals: {f: f}
 
-= render partial: 'levels/editors/validation_code', locals: {f: f}
+= render partial: 'levels/editors/fields/validation_code', locals: {f: f}
 
-= render partial: 'levels/editors/animation', locals: {f: f}
+= render partial: 'levels/editors/fields/fields/animation', locals: {f: f}
 
-= render partial: 'levels/editors/encrypted_examples', locals: {f: f, level_type: 'spritelab'}
+= render partial: 'levels/editors/fields/encrypted_examples', locals: {f: f, level_type: 'spritelab'}
 
 .field
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :include_shared_functions, description: "Make shared functions and behaviors available"}
-
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :include_shared_functions, description: "Make shared functions and behaviors available"}
 
 :javascript
   window.toggleBlock = function (elementId) {

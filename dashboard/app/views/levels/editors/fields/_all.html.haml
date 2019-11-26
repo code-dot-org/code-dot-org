@@ -33,7 +33,7 @@
     Audit Log
   %p A log of the people who most recently edited this level (up to the last 10 people)
   #audit_log_info.collapse
-    = render partial: 'levels/editors/audit_log', locals: {f: f}
+    = render partial: 'levels/editors/fields/audit_log', locals: {f: f}
 
 .field
   = f.label :video_key, 'Level Video'
@@ -64,27 +64,32 @@
         - @level.reference_links = [''] unless @level.reference_links.try(:present?)
         = text_area_tag 'level[reference_links]', @level.reference_links.join("\r\n"), rows: 6, class: "input-block-level", placeholder: 'Additional Reference Link'
 
-=render partial: 'levels/editors/callouts', locals: {f: f}
+=render partial: 'levels/editors/fields/callouts', locals: {f: f}
 - if @level.respond_to? :free_play
   .field
-    = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :free_play, description: "Free Play"}
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :free_play, description: "Free Play"}
     %p Free Play levels are not checked for correctness (any solution is accepted), can be shared, and can be saved to the public and private gallery
 
     .field
-      = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :embed, description: "Embed"}
+      = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :embed, description: "Embed"}
       %p Embedded levels hide the Blockly workspace, only showing the visualization area (and the 'finish' button, if 'freeplay' is also set).
 
 - if @level.respond_to? :disable_sharing
   .field
-    = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :disable_sharing, description: "Disable sharing"}
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :disable_sharing, description: "Disable sharing"}
     %p If set, this level cannot be shared or saved to galleries even if it's free play.
 
 - if @level.respond_to? :coordinate_grid_background
   .field
-    = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :coordinate_grid_background, description: "Coordinate grid background"}
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :coordinate_grid_background, description: "Coordinate grid background"}
 
 -if current_user.levelbuilder?
   .field
     = f.label :editor_experiment, 'Editor Experiment'
     %p If specified, users with this experiment on the levelbuilder machine will be able to edit this level.
     = f.text_field :editor_experiment, placeholder: 'Editor Experiment'
+
+= render partial: 'levels/editors/fields/instructions', locals: {f: f} unless @level.is_a?(DSLDefined) || @level.is_a?(Unplugged)
+= render partial: 'levels/editors/fields/droplet', locals: {f: f} if @level.uses_droplet?
+= render partial: 'levels/editors/fields/curriculum_specific', locals: {f: f} if (@level.uses_droplet?) || @level.is_a?(Blockly)
+= render partial: 'levels/editors/fields/blockly', locals: {f: f} if !(@level.uses_droplet?) && @level.is_a?(Blockly)
