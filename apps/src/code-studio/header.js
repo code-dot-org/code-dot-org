@@ -250,7 +250,6 @@ header.hideTryAgainDialog = () => {
 };
 
 header.logToFirehose = detail => {
-  console.log('detail', detail);
   return firehoseClient.putRecord(
     {
       study: 'navigation_bar',
