@@ -26,13 +26,7 @@ theme: responsive
 =view :dance_teacher_resources
 
 .dance-text-icon-container.desktop-only
-  Looking for a previous version of Dance Party?
-  %br
-    Click here to start
-    %a{href: CDO.studio_url('/s/dance/reset')} Part 1
-    and
-    %a{href: CDO.studio_url('/s/dance-extras/reset')} Part 2
-    from last year.
+  =I18n.t(:hoc2019_dance_previous_versions, dance_2018_link: CDO.studio_url('/s/dance/reset'), dance_extras_2018_link: CDO.studio_url('/s/dance-extras/reset'))
 
 =view :dance_sponsor_logo
 
