@@ -83,6 +83,10 @@ import eyes11_image from '../../public/images/fish/eyes/eyes11.png';
 import eyes12_image from '../../public/images/fish/eyes/eyes12.png';
 import eyes13_image from '../../public/images/fish/eyes/eyes13.png';
 import eyes14_image from '../../public/images/fish/eyes/eyes14.png';
+import eyes16_image from '../../public/images/fish/eyes/eyes16.png';
+import eyes17_image from '../../public/images/fish/eyes/eyes17.png';
+import eyes18_image from '../../public/images/fish/eyes/eyes18.png';
+import eyes19_image from '../../public/images/fish/eyes/eyes19.png';
 import eyes2_image from '../../public/images/fish/eyes/eyes2.png';
 import eyes3_image from '../../public/images/fish/eyes/eyes3.png';
 import eyes4_image from '../../public/images/fish/eyes/eyes4.png';
@@ -575,6 +579,50 @@ const fishComponents = {
     eyes14: {
       src: eyes14_image,
       knnData: [496, 1.6533333333333333],
+      type: FishBodyPart.EYE,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
+    },
+    eyes16: {
+      src: eyes16_image,
+      knnData: [674, 1.856749311294766],
+      type: FishBodyPart.EYE,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
+    },
+    eyes17: {
+      src: eyes17_image,
+      knnData: [475, 1.85546875],
+      type: FishBodyPart.EYE,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
+    },
+    eyes18: {
+      src: eyes18_image,
+      knnData: [1147, 5.052863436123348],
+      type: FishBodyPart.EYE,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
+    },
+    eyes19: {
+      src: eyes19_image,
+      knnData: [1075, 1.2920673076923077],
       type: FishBodyPart.EYE,
       exclusions: [
         AppMode.FishVTrash,
