@@ -440,15 +440,39 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'space-between'
   },
+  recallIcons: {
+    backgroundColor: colors.white,
+    color: colors.grey,
+    maxHeight: 42,
+    borderRadius: 8
+  },
   recallIcon: {
     cursor: 'pointer',
     width: 28,
     height: 28,
+    padding: 7
+  },
+  infoIconContainer: {
+    cursor: 'pointer',
     borderRadius: 50,
     padding: 7,
     marginLeft: 8,
+    width: 28,
+    height: 28,
     backgroundColor: colors.white,
-    color: colors.grey
+    color: colors.grey,
+    ':hover': {
+      backgroundColor: colors.neonBlue,
+      color: colors.white
+    },
+    ':focus': {
+      backgroundColor: colors.neonBlue,
+      color: colors.white
+    }
+  },
+  infoIcon: {
+    width: 28,
+    height: 28
   },
   bgNeonBlue: {
     backgroundColor: colors.neonBlue,
@@ -1311,31 +1335,39 @@ let Pond = class Pond extends React.Component {
       <Body>
         <div onClick={e => this.onPondClick(e)} style={styles.pondSurface} />
         <div style={styles.recallContainer}>
-          <FontAwesomeIcon
-            icon={faCheck}
-            style={{
-              ...styles.recallIcon,
-              ...(!state.showRecallFish ? styles.bgGreen : {})
-            }}
-            onClick={this.toggleRecall}
-          />
-          <FontAwesomeIcon
-            icon={faBan}
-            style={{
-              ...styles.recallIcon,
-              ...(state.showRecallFish ? styles.bgRed : {})
-            }}
-            onClick={this.toggleRecall}
-          />
-          {showInfoButton && (
+          <div style={styles.recallIcons}>
             <FontAwesomeIcon
-              icon={faInfo}
+              icon={faCheck}
               style={{
                 ...styles.recallIcon,
+                ...{borderTopLeftRadius: 8, borderBottomLeftRadius: 8},
+                ...(!state.showRecallFish ? styles.bgGreen : {})
+              }}
+              onClick={this.toggleRecall}
+            />
+            <FontAwesomeIcon
+              icon={faBan}
+              style={{
+                ...styles.recallIcon,
+                ...{borderTopRightRadius: 8, borderBottomRightRadius: 8},
+                ...(state.showRecallFish ? styles.bgRed : {})
+              }}
+              onClick={this.toggleRecall}
+            />
+          </div>
+          {showInfoButton && (
+            <span
+              style={{
+                ...styles.infoIconContainer,
                 ...(!state.pondPanelShowing ? {} : styles.bgNeonBlue)
               }}
-              onClick={this.onPondPanelButtonClick}
-            />
+            >
+              <FontAwesomeIcon
+                icon={faInfo}
+                style={styles.infoIcon}
+                onClick={this.onPondPanelButtonClick}
+              />
+            </span>
           )}
         </div>
         <img style={styles.pondBot} src={aiBotClosed} />
