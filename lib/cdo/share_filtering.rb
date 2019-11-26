@@ -29,7 +29,10 @@ module ShareFiltering
   def self.find_share_failure(program, locale)
     return nil unless should_filter_program(program)
 
-    find_failure(program, locale)
+    xml_tag_regexp = /<[^>]*>/
+    program_tags_removed = program.gsub(xml_tag_regexp, "\n")
+
+    find_failure(program_tags_removed, locale)
   end
 
   def self.should_filter_program(program)
@@ -38,12 +41,23 @@ module ShareFiltering
           program =~ /(#{USER_ENTERED_TEXT_INDICATORS.join('|')})/
   end
 
+  # Searches for a sharing failure given a program name and locale.
+  # Returns both the error type and the offending text snippet.
+  #
+  # May throw OpenURI::HTTPError, IO::EAGAINWaitReadable depending on
+  # service availability.
+  #
+  # @param [String] program_name the student's program's name
+  # @param [String] locale a two-character ISO 639-1 language code
+  def self.find_name_failure(program_name, locale)
+    return nil unless Gatekeeper.allows('webpurify', default: true)
+
+    find_failure(program_name, locale)
+  end
+
   private
 
-  def find_failure(program, locale)
-    xml_tag_regexp = /<[^>]*>/
-    program_tags_removed = program.gsub(xml_tag_regexp, "\n")
-
+  def find_failure(text, locale)
     email = RegexpUtils.find_potential_email(program_tags_removed)
     return ShareFailure.new(FailureType::EMAIL, email) if email
 
