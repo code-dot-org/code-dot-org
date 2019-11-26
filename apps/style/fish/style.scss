@@ -13,6 +13,10 @@ button {
   &:focus {
     outline: white auto 5px;
   }
+
+  &:active {
+    border: none !important;
+  }
 }
 
 #container-react {
