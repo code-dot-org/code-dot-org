@@ -203,7 +203,7 @@ const fishComponents = {
     other_1: {
       src: other_1_image,
       anchor: [71, 69],
-      faceAnchor: [9, 5],
+      faceAnchor: [10, 5],
       pectoralFinBackAnchor: [32, 58],
       pectoralFinFrontAnchor: [80, 60],
       dorsalFinAnchor: [69, 15],
@@ -221,7 +221,7 @@ const fishComponents = {
     other_2: {
       src: other_2_image,
       anchor: [77, 43],
-      faceAnchor: [29, 30],
+      faceAnchor: [29, 34],
       pectoralFinBackAnchor: [22, 100],
       pectoralFinFrontAnchor: [80, 100],
       dorsalFinAnchor: [71, 15],
@@ -239,12 +239,12 @@ const fishComponents = {
     other_3: {
       src: other_3_image,
       anchor: [97, 58],
-      faceAnchor: [7, 18],
+      faceAnchor: [7, 20],
       pectoralFinBackAnchor: [2, 69],
       pectoralFinFrontAnchor: [50, 72],
       dorsalFinAnchor: [48, 14],
       tailAnchor: [85, 40],
-      scalesAnchor: [61, 20],
+      scalesAnchor: [61, 21],
       knnData: [5782, BodyShape.OTHER],
       type: FishBodyPart.BODY,
       exclusions: [
@@ -292,7 +292,7 @@ const fishComponents = {
     },
     oval_1: {
       src: oval_1_image,
-      anchor: [85,55],
+      anchor: [85, 55],
       faceAnchor: [9, 15],
       pectoralFinBackAnchor: [25, 82],
       pectoralFinFrontAnchor: [70, 78],
@@ -310,8 +310,8 @@ const fishComponents = {
     },
     oval_2: {
       src: oval_2_image,
-      anchor: [87,72],
-      faceAnchor: [11, 6],
+      anchor: [87, 72],
+      faceAnchor: [11, 5],
       pectoralFinBackAnchor: [8, 53],
       pectoralFinFrontAnchor: [60, 53],
       dorsalFinAnchor: [58, 15],
@@ -329,7 +329,7 @@ const fishComponents = {
     oval_3: {
       src: oval_3_image,
       anchor: [67, 66],
-      faceAnchor: [10, 13],
+      faceAnchor: [10, 11],
       pectoralFinBackAnchor: [27, 60],
       pectoralFinFrontAnchor: [60, 60],
       dorsalFinAnchor: [68, 10],
@@ -346,7 +346,7 @@ const fishComponents = {
     },
     oval_4: {
       src: oval_4_image,
-      anchor: [82,65],
+      anchor: [82, 65],
       faceAnchor: [10, 10],
       pectoralFinBackAnchor: [25, 62],
       pectoralFinFrontAnchor: [70, 60],
@@ -376,7 +376,7 @@ const fishComponents = {
     },
     rectangle_2: {
       src: rectangle_2_image,
-      anchor: [92,60],
+      anchor: [92, 60],
       faceAnchor: [5, 11],
       pectoralFinBackAnchor: [8, 76],
       pectoralFinFrontAnchor: [60, 78],
@@ -388,8 +388,8 @@ const fishComponents = {
     },
     rectangle_3: {
       src: rectangle_3_image,
-      anchor: [92,84],
-      faceAnchor: [2, 1],
+      anchor: [92, 84],
+      faceAnchor: [1, 1],
       pectoralFinBackAnchor: [15, 28],
       pectoralFinFrontAnchor: [59, 32],
       dorsalFinAnchor: [53, 10],
@@ -406,7 +406,7 @@ const fishComponents = {
     },
     s1: {
       src: s1_image,
-      anchor: [96,49],
+      anchor: [96, 49],
       faceAnchor: [0, -7],
       pectoralFinBackAnchor: [10, 15],
       pectoralFinFrontAnchor: [38, 15],
@@ -427,7 +427,7 @@ const fishComponents = {
     },
     s2: {
       src: s2_image,
-      anchor: [87,71],
+      anchor: [87, 71],
       faceAnchor: [0, 27],
       pectoralFinBackAnchor: [13, 54],
       pectoralFinFrontAnchor: [42, 52],
@@ -447,8 +447,8 @@ const fishComponents = {
       src: star1_image,
       anchor: [83, 43],
       faceAnchor: [18, 29],
-      pectoralFinBackAnchor: [30, 89],
-      pectoralFinFrontAnchor: [63, 91],
+      pectoralFinBackAnchor: [28, 87],
+      pectoralFinFrontAnchor: [63, 89],
       dorsalFinAnchor: [63, 30],
       tailAnchor: [93, 62],
       scalesAnchor: [73, 26],
@@ -463,14 +463,14 @@ const fishComponents = {
     },
     triangle2: {
       src: triangle2_image,
-      anchor: [102, 32],
-      faceAnchor: [10, 70],
-      pectoralFinBackAnchor: [20, 110],
-      pectoralFinFrontAnchor: [54, 126],
-      dorsalFinAnchor: [79, 16],
-      tailAnchor: [70, 79],
-      scalesAnchor: [60, 26],
-      knnData: [6902, BodyShape.TRIANGLE],
+      anchor: [102, 40],
+      faceAnchor: [13, 58],
+      pectoralFinBackAnchor: [18, 100],
+      pectoralFinFrontAnchor: [47, 110],
+      dorsalFinAnchor: [70, 12],
+      tailAnchor: [68, 79],
+      scalesAnchor: [51, 26],
+      knnData: [5380, BodyShape.TRIANGLE],
       type: FishBodyPart.BODY
     },
     triangle3: {
@@ -1522,21 +1522,6 @@ const fishComponents = {
     }
   },
   scales: {
-    scales2: {
-      src: scales2_image,
-      knnData: [],
-      type: FishBodyPart.SCALES
-    },
-    scales3: {
-      src: scales3_image,
-      knnData: [],
-      type: FishBodyPart.SCALES
-    },
-    scales4: {
-      src: scales4_image,
-      knnData: [],
-      type: FishBodyPart.SCALES
-    },
     scales5: {
       src: scales5_image,
       knnData: [],
