@@ -7,16 +7,16 @@
 
 %legend.control-legend.levelTypeHeader
   Blockly Options
-= render partial: 'levels/editors/authored_hints', locals: {f: f}
+= render partial: 'levels/editors/fields/authored_hints', locals: {f: f}
 
 .field
   = f.label :skin
   = f.select :skin, options_for_select(@level.class.skins, @level.skin)
 - unless @level.is_a? GamelabJr
   .field
-    = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :is_k1, description: "Is K1 level"}
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :is_k1, description: "Is K1 level"}
 .field
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :use_modal_function_editor, description: "Use modal function editor"}
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :use_modal_function_editor, description: "Use modal function editor"}
 .field
   = f.label :open_function_definition, 'Auto-open function definition'
   = f.text_field :open_function_definition, placeholder: 'name of function to open'
@@ -25,18 +25,18 @@
   = f.label :disable_param_editing, 'Enable param editing in function blocks'
 
 .field
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :disable_if_else_editing, description: "Don\'t let users mutate (add or remove) branches to if/else blocks"}
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :disable_if_else_editing, description: "Don\'t let users mutate (add or remove) branches to if/else blocks"}
 
 -# Deprecated for Sprite Lab and Dance
 - if !(@level.is_a?(GamelabJr) || @level.is_a?(Dancelab))
   .field
-    = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :disable_variable_editing, description: "Disable editing of variable names and creation of new variables"}
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :disable_variable_editing, description: "Disable editing of variable names and creation of new variables"}
 
   .field
-    = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :show_type_hints, description: "Show a small visual hint for what type of block a connection accepts"}
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :show_type_hints, description: "Show a small visual hint for what type of block a connection accepts"}
 
 .field
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :disable_procedure_autopopulate, description: "Disable autopopulation of Functions category with default toolbox blocks"}
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :disable_procedure_autopopulate, description: "Disable autopopulation of Functions category with default toolbox blocks"}
   %p
     By default, Functions categories in Blockly will be automatically populated
     with blocks for three default procedure definitions (noreturn, return, and
@@ -48,12 +48,12 @@
     the toolbox category will be included, allowing you to specify a subset of
     the definition blocks that you would like to include for this level.
 .field
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :top_level_procedure_autopopulate, description: "Autopopulate function call blocks for non-categorized toolboxes"}
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :top_level_procedure_autopopulate, description: "Autopopulate function call blocks for non-categorized toolboxes"}
   %p
     This adds a call block to the end of the toolbox for each function defined
     in the workspace (including hidden start blocks).
 
-= render partial: 'levels/editors/blockly_xml_editors', locals:{f: f}
+= render partial: 'levels/editors/fields/blockly_xml_editors', locals:{f: f}
 
 .field
   = f.label :ideal, 'Ideal block number'
