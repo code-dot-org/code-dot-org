@@ -9,12 +9,12 @@ import trashCanImage from '../../../public/images/trash/Trash_Can.png';
 const guides = [
   {
     id: 'fishvtrash-training-init1',
-    text: `Garbage dumped in the water affects marine life.  In this activity you will "program" or "train" A.I. (artificial intelligence) to identify fish or trash.  Let's clean up the ocean!`,
+    text: `Garbage dumped in the water affects marine life.  In this activity you will “program” or “train” A.I. (artificial intelligence) to identify fish or trash.  Let’s clean up the ocean!`,
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Training},
   },
   {
     id: 'fishvtrash-training-init2',
-    text: `Let's meet A.I.`,
+    text: `Let’s meet A.I.`,
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Training},
     arrow: 'BotRight'
   },
@@ -25,7 +25,7 @@ const guides = [
   },
   {
     id: 'fishvtrash-training-init4',
-    text: `To program A.I., use the buttons to label an image as "Fish" or "Not Fish".  This will teach A.I. to recognize patterns on its own.  Let's get started!`,
+    text: `To program A.I., use the buttons to label an image as “Fish” or “Not Fish”.  This will teach A.I. to recognize patterns on its own.  Let’s get started!`,
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Training},
     style: 'Center',
     arrow: 'LowerCenter'
@@ -33,7 +33,7 @@ const guides = [
   {
     id: 'fishvtrash-training-pause1',
     heading: 'Did you know?',
-    text: `17 billion pounds of plastic enters the ocean each year.`,
+    text: `17 billion pounds of plastic enter the ocean each year.`,
     when: {
       appMode: AppMode.FishVTrash,
       currentMode: Modes.Training,
@@ -46,7 +46,7 @@ const guides = [
   },
   {
     id: 'fishvtrash-training-pause2',
-    text: `You are programming or “training” A.I. with each click. Keep going. `,
+    text: `You are programming or “training” A.I. with each click. Keep going.`,
     when: {
       appMode: AppMode.FishVTrash,
       currentMode: Modes.Training,
@@ -93,7 +93,7 @@ const guides = [
   },
   {
     id: 'fishvtrash-predicting-init1',
-    text: `Now let's see if A.I. knows what a "Fish" looks like.`,
+    text: `Now let’s see if A.I. knows what a “fish” looks like.`,
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Predicting}
   },
   {
@@ -103,14 +103,14 @@ const guides = [
   },
   {
     id: 'fishvtrash-predicting-init3',
-    text: `Let's go!`,
+    text: `Let’s go!`,
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Predicting},
     noDimBackground: true,
     arrow: 'LowerRight'
   },
   {
     id: 'fishvtrash-pond-init1',
-    text: `Based on your training here are the objects that A.I. identified as "Fish".  How did A.I. do?`,
+    text: `Based on your training, here are the objects that A.I. identified as “fish”.  How did A.I. do?`,
     //TODO after doing a 2nd training iteration these messages no longer show
     when: {
       appMode: AppMode.FishVTrash,
@@ -135,7 +135,7 @@ const guides = [
   },
   {
     id: 'creaturesvtrash-predicting-init1',
-    text: `So far we trained A.I. to identify objects as either "Fish" or "Not Fish".`,
+    text: `So far we trained A.I. to identify objects as either “fish” or “not fish”.`,
     when: {appMode: AppMode.CreaturesVTrashDemo, currentMode: Modes.Predicting}
   },
   {
@@ -150,14 +150,14 @@ const guides = [
   },
   {
     id: 'creaturesvtrash-predicting-init4',
-    text: `Let's see.`,
+    text: `Let’s see.`,
     when: {appMode: AppMode.CreaturesVTrashDemo, currentMode: Modes.Predicting},
     noDimBackground: true,
     arrow: 'LowerRight'
   },
   {
     id: 'creaturesvtrashdemo-predicting-pause1',
-    text: `Did you notice that some sea creatures were unintentionally identified as "Not Fish"?`,
+    text: `Did you notice that some sea creatures were unintentionally identified as “not fish”?`,
     when: {
       appMode: AppMode.CreaturesVTrashDemo,
       currentMode: Modes.Predicting,
@@ -184,7 +184,7 @@ const guides = [
   },
   {
     id: 'creaturesvtrash-predicting-pause4',
-    text: `Let's train A.I. again.`,
+    text: `Let’s train A.I. again.`,
     when: {
       appMode: AppMode.CreaturesVTrashDemo,
       currentMode: Modes.Predicting,
@@ -261,12 +261,12 @@ const guides = [
   },
   {
     id: 'creaturesvtrash-predicting-init1',
-    text: `Do you think A.I. will now do a better job identifying what should be in the water?  Let's watch.`,
+    text: `Do you think A.I. will now do a better job identifying what should be in the water?  Let’s watch.`,
     when: {appMode: AppMode.CreaturesVTrash, currentMode: Modes.Predicting}
   },
   {
     id: 'creaturesvtrash-pond-init1',
-    text: `Based on your training here are the objects that A.I. identified as "Belongs in water".  How did A.I. do?`,
+    text: `Based on your training, here are the objects that A.I. identified as “belongs in water”.  How did A.I. do?`,
     when: {
       appMode: AppMode.CreaturesVTrash,
       currentMode: Modes.Pond,
@@ -288,23 +288,23 @@ const guides = [
   {
     id: 'fishshort-predicting-init1',
     textFn: state => {
-      return `With your training data, you have programmed A.I. to recognize "${state.word.toUpperCase()}" fish.`;
+      return `With your training data, you have programmed A.I. to recognize “${state.word.toLowerCase()}” fish.`;
     },
     when: {appMode: AppMode.FishShort, currentMode: Modes.Predicting}
   },
   {
     id: 'fishshort-predicting-init2',
     textFn: state => {
-      return `Let’s see A.I. identify "${state.word.toUpperCase()}" fish.`;
+      return `Let’s see A.I. identify “${state.word.toLowerCase()}” fish.`;
     },
     when: {appMode: AppMode.FishShort, currentMode: Modes.Predicting}
   },
   {
     id: 'fishshort-pond-init1',
     textFn: state => {
-      return `Based on your training A.I. identified ${
+      return `Based on your training, A.I. identified ${
         state.fishData.length === 1 ? 'this' : 'these'
-      } fish as "${state.word.toUpperCase()}". How did A.I do?`;
+      } fish as “${state.word.toLowerCase()}”. How did A.I do?`;
     },
     when: {
       appMode: AppMode.FishShort,
@@ -327,23 +327,23 @@ const guides = [
   {
     id: 'fishlong-predicting-init1',
     textFn: state => {
-      return `With your training data, you have programmed A.I. to recognize "${state.word.toUpperCase()}" fish.`;
+      return `With your training data, you have programmed A.I. to recognize “${state.word.toLowerCase()}” fish.`;
     },
     when: {appMode: AppMode.FishLong, currentMode: Modes.Predicting}
   },
   {
     id: 'fishlong-predicting-init2',
     textFn: state => {
-      return `Let’s see A.I. identify "${state.word.toUpperCase()}" fish.`;
+      return `Let’s see A.I. identify “${state.word.toLowerCase()}” fish.`;
     },
     when: {appMode: AppMode.FishLong, currentMode: Modes.Predicting}
   },
   {
     id: 'fishlong-pond-init1',
     textFn: state => {
-      return `Based on your training A.I. identified ${
+      return `Based on your training, A.I. identified ${
         state.fishData.length === 1 ? 'this' : 'these'
-      } fish as "${state.word.toUpperCase()}". How did A.I do?`;
+      } fish as “${state.word.toLowerCase()}”. How did A.I do?`;
     },
     when: {
       appMode: AppMode.FishLong,
