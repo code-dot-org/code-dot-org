@@ -15,18 +15,14 @@
       - if @standalone
         %p the level cannot be renamed because it is a standalone project level.
       .field
-        = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :encrypted, description: "Encrypt this level's properties"}
+        = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :encrypted, description: "Encrypt this level's properties"}
 
   / Only enter name to create new records of certain level types.
   - unless @level.new_record? && @level.is_a?(Blockly)
-    = render partial: 'levels/editors/all', locals: {f: f} unless @level.is_a? EvaluationMulti
-    = render partial: 'levels/editors/instructions', locals: {f: f} unless @level.is_a?(DSLDefined) || @level.is_a?(Unplugged)
-    = render partial: 'levels/editors/droplet', locals: {f: f} if @level.uses_droplet?
+    = render partial: 'levels/editors/fields/all', locals: {f: f} unless @level.is_a? EvaluationMulti
     = render partial: 'levels/editors/flappy', locals: {f: f} if @level.is_a? Flappy
     = render partial: 'levels/editors/bounce', locals: {f: f} if @level.is_a? Bounce
     = render partial: 'levels/editors/unplugged', locals: {f: f} if @level.is_a? Unplugged
-    = render partial: 'levels/editors/curriculum_specific', locals: {f: f} if (@level.uses_droplet?) || @level.is_a?(Blockly)
-    = render partial: 'levels/editors/blockly', locals: {f: f} if !(@level.uses_droplet?) && @level.is_a?(Blockly)
     = render partial: 'levels/editors/studio', locals: {f: f} if @level.is_a? Studio
     = render partial: 'levels/editors/maze', locals: {f: f} if @level.is_a? Maze
     = render partial: 'levels/editors/grid', locals: {f: f} if @level.is_a? Grid
@@ -35,10 +31,10 @@
     = render partial: 'levels/editors/artist', locals: {f: f} if @level.is_a? Artist
     = render partial: 'levels/editors/cs_in_a', locals: {f: f} if (@level.is_a?(Calc) || @level.is_a?(Eval))
     = render partial: 'levels/editors/applab', locals: {f: f} if @level.is_a? Applab
-    = render partial: 'levels/editors/gamelab', locals: {f: f} if @level.is_a? Gamelab
-    = render partial: 'levels/editors/gamelab_jr', locals: {f: f} if @level.is_a? GamelabJr
+    = render partial: 'levels/editors/gamelab', locals: {f: f} if @level.is_a?(Gamelab) && !@level.is_a?(GamelabJr)
+    = render partial: 'levels/editors/spritelab', locals: {f: f} if @level.is_a?(GamelabJr) && !@level.is_a?(Dancelab)
+    = render partial: 'levels/editors/dance', locals: {f: f} if @level.is_a?(Dancelab)
     = render partial: 'levels/editors/weblab', locals: {f: f} if @level.is_a? Weblab
-    = render partial: 'levels/editors/mini_rubric', locals: {f: f} if (@level.uses_droplet?) || @level.is_a?(Blockly) || @level.is_a?(Weblab)
     = render partial: 'levels/editors/dsl', locals: {f: f} if (@level.is_a?(DSLDefined) && !(@level.is_a?(EvaluationMulti)))
     = render partial: 'levels/editors/evaluation_multi', locals: {f: f} if @level.is_a? EvaluationMulti
     = render partial: 'levels/editors/netsim', locals: {f: f} if @level.is_a? NetSim
@@ -51,8 +47,9 @@
     = render partial: 'levels/editors/frequency_analysis', locals: {f: f} if @level.is_a? FrequencyAnalysis
     = render partial: 'levels/editors/public_key_cryptography', locals: {f: f} if @level.is_a? PublicKeyCryptography
     = render partial: 'levels/editors/curriculum_reference', locals: {f: f} if @level.is_a? CurriculumReference
+    = render partial: 'levels/editors/fields/mini_rubric', locals: {f: f} if (@level.uses_droplet?) || @level.is_a?(Blockly) || @level.is_a?(Weblab)
     // Note that many DSL levels also use this partial. See _dsl.html.haml
-    = render partial: 'levels/editors/teacher_only_markdown', locals: {f: f} if (@level.uses_droplet?) || @level.is_a?(Blockly) || @level.is_a?(ExternalLink) || @level.is_a?(Weblab) || @level.is_a?(CurriculumReference) || @level.is_a?(StandaloneVideo)
+    = render partial: 'levels/editors/fields/teacher_only_markdown', locals: {f: f} if (@level.uses_droplet?) || @level.is_a?(Blockly) || @level.is_a?(ExternalLink) || @level.is_a?(Weblab) || @level.is_a?(CurriculumReference) || @level.is_a?(StandaloneVideo)
   .field
     = f.hidden_field :published
   .actions
