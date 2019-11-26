@@ -272,7 +272,7 @@ const styles = {
     backgroundColor: colors.transparentBlack,
     color: colors.neonBlue,
     borderRadius: 33,
-    padding: '8px 20px',
+    padding: '9px 20px',
     minWidth: 65
   },
   counterNum: {
@@ -454,10 +454,7 @@ const styles = {
   infoIconContainer: {
     cursor: 'pointer',
     borderRadius: 50,
-    padding: 7,
-    marginLeft: 8,
-    width: 28,
-    height: 28,
+    marginLeft: 10,
     backgroundColor: colors.white,
     color: colors.grey,
     ':hover': {
@@ -470,8 +467,7 @@ const styles = {
     }
   },
   infoIcon: {
-    width: 28,
-    height: 28
+    padding: '5px 12px'
   },
   bgNeonBlue: {
     backgroundColor: colors.neonBlue,
@@ -484,21 +480,6 @@ const styles = {
   bgGreen: {
     backgroundColor: colors.green,
     color: colors.white
-  },
-  pill: {
-    display: 'flex',
-    alignItems: 'center'
-  },
-  pillIcon: {
-    width: 19,
-    padding: 10,
-    borderRadius: 33
-  },
-  pillText: {
-    color: colors.black,
-    padding: '10px 30px',
-    borderRadius: 33,
-    marginLeft: -18
   },
   count: {
     position: 'absolute',
@@ -883,7 +864,7 @@ let Train = class Train extends React.Component {
         </div>
         <div style={styles.trainingIcons}>
           <div style={styles.counter}>
-            <img src={counterIcon} style={{height: 28}} />
+            <img src={counterIcon} />
             <span style={styles.counterNum}>
               {Math.min(999, state.yesCount + state.noCount)}
             </span>
@@ -1371,7 +1352,7 @@ let Pond = class Pond extends React.Component {
             />
           </div>
           {showInfoButton && (
-            <span
+            <div
               style={{
                 ...styles.infoIconContainer,
                 ...(!state.pondPanelShowing ? {} : styles.bgNeonBlue)
@@ -1382,7 +1363,7 @@ let Pond = class Pond extends React.Component {
                 style={styles.infoIcon}
                 onClick={this.onPondPanelButtonClick}
               />
-            </span>
+            </div>
           )}
         </div>
         <img style={styles.pondBot} src={aiBotClosed} />
