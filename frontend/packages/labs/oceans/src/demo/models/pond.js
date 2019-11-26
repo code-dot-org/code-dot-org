@@ -5,10 +5,9 @@ import constants, {ClassType, AppMode} from '../constants';
 
 export const init = async () => {
   const state = getState();
-  let fishWithConfidence = await predictAllFish(state);
-  fishWithConfidence = _.sortBy(fishWithConfidence, ['confidence']);
+  let fishWithPredictions = await predictAllFish(state);
   const fishByClassType = _.groupBy(
-    fishWithConfidence,
+    fishWithPredictions,
     fish => fish.getResult().predictedClassId
   );
 
