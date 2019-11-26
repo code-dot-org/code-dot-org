@@ -23,8 +23,22 @@ zh:
     computer science. Change the world.'
   social_hoc2019_coming_dates: The Hour of Code is coming December 9-15, 2019. Computer
     science is foundational for every student to learn.
-  social_hoc2019_dance: Featuring Katy Perry, Jonas Brothers, Lil Nas X, Panic at
-    the Disco, and many more!
+  social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
+    Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
+  oceans_landing_title: AI for Oceans
+  oceans_landing_description: 'Explore machine learning by teaching “A.I.” to recognize
+    fish. #CSforGood'
+  oceans_landing_specs: English only | Ages 11+
+  oceans_landing_teacher_resources: Teacher Resources
+  oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
+    AI, machine learning, training data, and bias, while exploring ethical issues.
+  oceans_landing_resource_button: View Resources
+  oceans_landing_cs_for_good: CS For Good
+  oceans_landing_cs_for_good_desc: Resources to help students understand the role
+    computer science could play in creating a more equitable world.
+  hoc_overview_oceans_tutorial_header: AI Oceans
+  hoc_overview_oceans_tutorial_desc: Teach "A.I." to sort between fish and trash while
+    exploring broader artificial intelligence concepts.
   codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
     class="hoc2018-curriculum-link">Code.org courses</a>
   codeorg_homepage_hoc2018_dance_heading: Create your own <span class="highlight-word">Dance&nbsp;Party</span>
@@ -39,6 +53,7 @@ zh:
   hourofcode_homepage_hoc2018_header_line1: 任何人都可以在任何地方組織一小時編程活動。一小時教學課程提供超過 45 種語言。無需經驗。
   hourofcode_homepage_hoc2018_header_line2: 年齡 4 - 104。
   hoc2018_tutorial_mchoc_description: 用程式積木帶著 Alex 或 Steve 在 Minecraft 遊戲世界中四處冒險。
+  codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>
   cookie_banner_message: By continuing to browse our site or clicking "I agree," you
     agree to the storing of cookies on your computer or device.
   cookie_banner_more_information: See Code.org's Privacy Policy.
@@ -553,6 +568,7 @@ zh:
   learn_banner_teachers: 教師： <a id='teacher_banner_host'>辦理一小時的活動</a>或<a id='teacher_banner_howto'>觀看活動指引</a>
   learn_robotics_banner_heading: 機器人與電路
   learn_robotics_banner_blurb: 用過機器人技術嗎？透過以下活動使用機器人技術，提供任何年紀的學生一堂實際的「一小時程式設計課程」！
+  tutorial_dance2019_name: Dance Party 2019
   tutorial_danceparty_name: 舞蹈派對
   tutorial_chibitronics_name: 'Chibitronics: Illuminated Story'
   tutorial_athlete_name: 編寫自己的運動遊戲
@@ -1034,7 +1050,7 @@ zh:
   tutorial_hardvsoft_name: Team Hardware vs. Team Software
   tutorial_codestersecard_name: 創作電子卡片
   tutorial_codesterslogo_name: 你的公司的 Logo
-  tutorial_codesterstshirt_name: Monogrammed T-Shirt Design
+  tutorial_codesterstshirt_name: Code Your Initials
   tutorial_codewards_name: Rescue the underwater city!
   tutorial_olympics_name: C.A.T.S. go for Robot Olympics
   tutorial_codinismhero_name: Programming Hero
@@ -1988,6 +2004,9 @@ zh:
   tutorial_allcancodeapps_shortdescription: Use the Allcancode Platform to create
     web and mobile apps from design to delivery.
   tutorial_n2y_shortdescription: Help Bitt Bott explore Earth using direction arrows.
+  tutorial_dance2019_longdescription: Code a Dance Party to share with your friends.
+    Featuring Katy Perry, Shawn Mendes, Lil Nas X, Panic! At The Disco, Jonas Brothers,
+    and many more!
   tutorial_danceparty_longdescription: Code a Dance Party to share with your friends.
     Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!
   tutorial_chibitronics_longdescription: Program a paper circuit to light up your
@@ -3352,6 +3371,9 @@ zh:
     Each of the six activities includes simple directions that are supported with
     symbols from the n2y® SymbolStix PRIME® collection. The symbols help non-readers
     and beginning readers understand and follow the directions.
+  tutorial_dance2019_language: Arabic, Chinese, Czech, Danish, Dutch, English, Finnish,
+    French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean,
+    Malay, Polish, Portuguese, and 10 more!
   tutorial_danceparty_language: 多個
   tutorial_chibitronics_language: English
   tutorial_athlete_language: 英文、法文、西班牙文、義大利文、葡萄牙文 (巴西)
@@ -3974,6 +3996,7 @@ zh:
   tutorial_duckrace_language: English, German
   tutorial_allcancodeapps_language: English
   tutorial_n2y_language: English
+  tutorial_dance2019_string_detail_grades: 年級 2+
   tutorial_danceparty_string_detail_grades: 年級 2+
   tutorial_chibitronics_string_detail_grades: 年級 2-5
   tutorial_athlete_string_detail_grades: 年級 2+
@@ -4327,7 +4350,7 @@ zh:
   tutorial_codehsrn_string_detail_grades: 年級 9+
   tutorial_codehswd_string_detail_grades: 年級 6+
   tutorial_turtlerobot_string_detail_grades: 學前 - 年級 5
-  tutorial_ozoevo_string_detail_grades: 所有年齡
+  tutorial_ozoevo_string_detail_grades: 年級 6+
   tutorial_ozoexped_string_detail_grades: 年級 6+
   tutorial_ozojourney_string_detail_grades: 年級 2-8
   tutorial_ozocodes_string_detail_grades: 所有年齡
@@ -4454,7 +4477,7 @@ zh:
   tutorial_codesparkcreate_string_detail_grades: 學前 - 年級 5
   tutorial_hardvsoft_string_detail_grades: 學前 - 年級 5
   tutorial_codestersecard_string_detail_grades: 年級 6-8
-  tutorial_codesterslogo_string_detail_grades: 年級 2-8
+  tutorial_codesterslogo_string_detail_grades: 年級 6+
   tutorial_codesterstshirt_string_detail_grades: 年級 6+
   tutorial_codewards_string_detail_grades: 年級 2-8
   tutorial_olympics_string_detail_grades: 年級 2-8
@@ -4552,6 +4575,7 @@ zh:
   tutorial_duckrace_string_detail_grades: 年級 2+
   tutorial_allcancodeapps_string_detail_grades: 年級 6+
   tutorial_n2y_string_detail_grades: 學前+
+  tutorial_dance2019_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, 不插電
   tutorial_danceparty_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
   tutorial_chibitronics_string_platforms: 所有的主流瀏覽器
   tutorial_athlete_string_platforms: 所有的主流瀏覽器
@@ -5216,6 +5240,7 @@ zh:
   tutorial_duckrace_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
   tutorial_allcancodeapps_string_platforms: 所有的主流瀏覽器
   tutorial_n2y_string_platforms: 不插電活動
+  tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chibitronics Chibi Chip and Circuit
     Sticker LEDs
@@ -5795,6 +5820,7 @@ zh:
   tutorial_duckrace_string_detail_platforms: ''
   tutorial_allcancodeapps_string_detail_platforms: ''
   tutorial_n2y_string_detail_platforms: ''
+  tutorial_dance2019_string_detail_programming_languages: 積木式
   tutorial_danceparty_string_detail_programming_languages: 積木式
   tutorial_chibitronics_string_detail_programming_languages: 積木式
   tutorial_athlete_string_detail_programming_languages: 積木式
@@ -6279,7 +6305,7 @@ zh:
   tutorial_codesparkcreate_string_detail_programming_languages: 積木式
   tutorial_hardvsoft_string_detail_programming_languages: ''
   tutorial_codestersecard_string_detail_programming_languages: 積木式, Python
-  tutorial_codesterslogo_string_detail_programming_languages: 積木式, Python
+  tutorial_codesterslogo_string_detail_programming_languages: Python
   tutorial_codesterstshirt_string_detail_programming_languages: 積木式, Python
   tutorial_codewards_string_detail_programming_languages: CoffeeScript
   tutorial_olympics_string_detail_programming_languages: CoffeeScript
@@ -6412,7 +6438,7 @@ zh:
   tutorial_trinketgirl_name: 'Code Like a Girl: A Storyteller'
   tutorial_rpimosquito_name: Mosquito patrol
   tutorial_tynkermars_name: NASA Moon 2 Mars
-  tutorial_cityx_name: 'Coding Galaxy: City X'
+  tutorial_cityx_name: 'Coding Galaxy : CIty X '
   tutorial_vidcodemap_name: 'Vidcode: Map Your Community'
   tutorial_robotmagicfarm_name: 'FarmBot: Plant with Code'
   tutorial_codehstriangle_name: Triangle Computations with CodeHS
@@ -6427,7 +6453,7 @@ zh:
   tutorial_stemc_blckhole_name: Escape Velocity and Black Holes!
   tutorial_careconfigure_name: ReconFigure of Speech
   tutorial_rpiscratch_name: Scratch 3.0 phrasebook
-  tutorial_ozaria_name: Ozaria by CodeCombat
+  tutorial_ozaria_name: 奧佳睿
   tutorial_ttovum_name: Ovum City
   tutorial_ttpassage_name: The Passage
   tutorial_tynkerhtmlen_name: Affordable and Clean Energy (HTML)
@@ -6478,6 +6504,8 @@ zh:
   tutorial_ikodexmas_name: iKode Xmas
   tutorial_rpisensehat_name: Sense HAT data logger
   tutorial_modtraits_name: Character Traits with GoPiGo
+  tutorial_mee_name: Minecraft 編碼時刻：永恆 AI
+  tutorial_kuborobo_name: KUBO Robotics Coding Routes
   tutorial_scratchimagine_longdescription: Imagine a world where anything is possible,
     then bring it to life with Scratch!
   tutorial_codesterspsa_longdescription: Learn the basics of coding in Python while
@@ -6580,12 +6608,9 @@ zh:
     imagine their life as an Artemis astronaut on the Lunar Gateway, and more. Beginners
     can try step-by-step tutorials, while experienced programmers can create their
     own original projects with block or text coding.
-  tutorial_cityx_longdescription: Your first quest in City X is to help an old farmer
-    to manage his farm. Let's solve his problem with innovative technology! You will
-    learn the basic concept of watering system and make a gardening robot with incredible
-    fun! Students will apply design thinking concepts to investigate problems while
-    developing their technological awareness, thereby honing their high-level thinking
-    skills.
+  tutorial_cityx_longdescription: |-
+    身為 City X 新上任的市長，您的首個任務是幫助一位老農夫管理農場，用創新技術解決他的難題。
+    您將學習智能澆水系統的基本概念，並製作園藝機器人。快來創造人人嚮往的未來城市吧！
   tutorial_vidcodemap_longdescription: Collect and analyze data for community engagement,
     by coding your own community map!
   tutorial_robotmagicfarm_longdescription: Code the FarmBot to plant seeds. Start
@@ -6638,9 +6663,7 @@ zh:
     for you.
   tutorial_rpiscratch_longdescription: Create an interactive phrasebook that translates
     useful phrases into different languages.
-  tutorial_ozaria_longdescription: Customize your hero and journey to the Sky Mountain
-    where you learn to type real code, navigate through 15 game levels, and make your
-    own game in order to help save the world of Ozaria.
+  tutorial_ozaria_longdescription: 定制化你的英雄及去天山的旅程，需要闖過15個關卡，設計屬於你自己的遊戲，才能幫助拯救奧佳睿的世界。
   tutorial_ttovum_longdescription: Can you control the chaos? Hack your way into the
     cyberpunk world of Ovum City. Debug broken code, solve puzzles, and upgrade your
     hardware as you explore self guided open world. Don't get caught by the drones!
@@ -6834,6 +6857,12 @@ zh:
     environment.
   tutorial_modtraits_longdescription: 'Students use the steps of computational thinking
     to analyze character traits and create an algorithm to demonstrate those traits. '
+  tutorial_mee_longdescription: 有一座村莊受到了火災威脅，需要您編碼解決！與您的編碼助手 Minecraft Agent 見面，然後替
+    Agent 進行編程，探索森林並收集火災發生條件的相關資料。這些資料將幫助 Agent 學習預測火災發生地點。根據收集到的資料進行選擇，是「人工智慧」或「AI」的基本概念。您的指示與
+    AI 將讓 Agent 能夠識別條件，並清除造成森林火災蔓延的材料。您的最終挑戰是寫入代碼，透過種樹和增生動物讓森林重獲生機。
+  tutorial_kuborobo_longdescription: In this activity, students put their logic and
+    sequencing skills to the test as they use the Tagtiles to program their KUBO robot
+    to travel to various locations on a printed map.
   tutorial_scratchimagine_language: English, Spanish
   tutorial_codesterspsa_language: English
   tutorial_googlehero_language: English, Spanish
@@ -6865,7 +6894,7 @@ zh:
   tutorial_trinketgirl_language: English
   tutorial_rpimosquito_language: English
   tutorial_tynkermars_language: English
-  tutorial_cityx_language: Chinese (Traditional), English
+  tutorial_cityx_language: 繁體中文
   tutorial_vidcodemap_language: English
   tutorial_robotmagicfarm_language: English
   tutorial_codehstriangle_language: English
@@ -6930,6 +6959,8 @@ zh:
   tutorial_ikodexmas_language: English
   tutorial_rpisensehat_language: English
   tutorial_modtraits_language: English
+  tutorial_mee_language: 英語（美國）、英語（英國）、德語、西班牙文（西班牙）、西班牙文（墨西哥）、法語（法國）、法語（加拿大）、義大利文、日語、韓語、葡萄牙文（巴西）、葡萄牙文（葡萄牙）、俄語、中文（簡體）、中文（繁體）、土耳其文、波蘭文、印尼語、烏克蘭文、希臘文、保加利亞文、匈牙利文、芬蘭文、丹麥文、瑞典文、挪威語、斯洛伐克文、捷克文、荷蘭文
+  tutorial_kuborobo_language: English, Spanish
   tutorial_scratchimagine_string_detail_grades: 年級 2+
   tutorial_codesterspsa_string_detail_grades: 年級 6+
   tutorial_googlehero_string_detail_grades: 年級 2-8
@@ -7026,6 +7057,8 @@ zh:
   tutorial_ikodexmas_string_detail_grades: 年級 2-5
   tutorial_rpisensehat_string_detail_grades: 年級 6+
   tutorial_modtraits_string_detail_grades: 年級 2+
+  tutorial_mee_string_detail_grades: 年級 2+
+  tutorial_kuborobo_string_detail_grades: Pre-reader - Grades 8
   tutorial_scratchimagine_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
   tutorial_codesterspsa_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
   tutorial_googlehero_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
@@ -7126,6 +7159,8 @@ zh:
   tutorial_ikodexmas_string_platforms: 所有的主流瀏覽器
   tutorial_rpisensehat_string_platforms: 所有的主流瀏覽器
   tutorial_modtraits_string_platforms: 所有的主流瀏覽器
+  tutorial_mee_string_platforms: Windows, iPad, MacOS
+  tutorial_kuborobo_string_platforms: 不插電活動
   tutorial_scratchimagine_string_detail_platforms: ''
   tutorial_codesterspsa_string_detail_platforms: ''
   tutorial_googlehero_string_detail_platforms: ''
@@ -7225,6 +7260,8 @@ zh:
   tutorial_ikodexmas_string_detail_platforms: Microsoft Kodu
   tutorial_rpisensehat_string_detail_platforms: Raspbian (software), SenseHAT
   tutorial_modtraits_string_detail_platforms: GoPiGo
+  tutorial_mee_string_detail_platforms: ''
+  tutorial_kuborobo_string_detail_platforms: KUBO robot
   tutorial_scratchimagine_string_detail_programming_languages: 積木式
   tutorial_codesterspsa_string_detail_programming_languages: Python
   tutorial_googlehero_string_detail_programming_languages: 積木式
@@ -7329,6 +7366,9 @@ zh:
   tutorial_ikodexmas_string_detail_programming_languages: Microsoft Kodu
   tutorial_rpisensehat_string_detail_programming_languages: Python
   tutorial_modtraits_string_detail_programming_languages: 積木式
+  tutorial_mee_string_detail_programming_languages: 積木式
+  tutorial_kuborobo_string_detail_programming_languages: Tagtiles that students piece
+    together
   school_not_found_heading: 我們找不到你的學校。請輸入更多資訊。
   school_name: 學校名稱
   school_name_error: 需填寫學校名稱。

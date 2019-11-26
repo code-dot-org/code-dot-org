@@ -1,5 +1,5 @@
 ---
-title: How-to Guide
+title: '"कसे करावे” मार्गदर्शिका'
 ---
 
 {{ signup_button }}

@@ -58,6 +58,8 @@ de-DE:
         sorge dafür, dass es sich nach jedem Durchlauf vorwärts bewegt!
       2-3 Artist Nested Loops Free Play: Freies Spiel, zeichne irgendetwas Cooles
         mit verschachtelten Schleifen.
+      2-3 Bee Conditionals 2: "Ich bin eine hungrige Biene! \nHilf mir, den gesamten
+        Nektar der Blumen mit der geringsten Anzahl von Bausteinen zu sammeln."
       2-3 Bee Functions Assessment 2: "**Prüfung:** Erzeuge eine Funktion, mit der
         man sich drehen, vorwärts bewegen und 3 mal Honig erzeugen kann. Anschließend
         lasse die Biene dahin zurückkehren wo sie angefangen hat und drehe um."
@@ -281,6 +283,168 @@ de-DE:
         -   Nachdem du das Bild korrigiert hast, notieren Dir sowohl Ihren Prozess als auch Deinen endgültigen Filter im Bereich Level 6 Deines Activitätsleitfadens.
 
         _Wie viele Versuche hat es gedauert, bis du den richtigen Filter gefunden hast?_
+      CSD U2 HTML Adding Paragraphs pt 2_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+
+        ::: details [**Was ist ein Absatzelement?**]
+
+        Absätze werden durch Öffnen (`<p>`) und Schließen (`</p>`) von Tags gekennzeichnet. Absätze in HTML können eine beliebige Länge des Textes von einem Wort bis zu einer Reihe von Sätzen sein. Absätze gruppieren Sätze und setzen etwas Abstand zwischen dieser Textgruppe und der nächsten Textgruppe.
+
+        :::
+
+        ::: details [**Wie mache ich mehrere Absätze?**]
+
+        Hier ist ein Beispiel für mehrere Absatz-Tags in einer Reihe. Dieser Code wird in den Body der Webseite eingefügt.
+
+            <p>This is a paragraph. It has two sentences.</p>
+            <p>This is another paragraph.</p>
+
+        :::
+
+        </div>
+
+        # Absatz Tags verwenden
+
+        Die `<p>` `</p>` Tags oder "paragraph" Start- und End-Tags werden um den Text herum platziert, um anzuzeigen, dass er Teil eines Absatzes ist. Das Platzieren von Text zwischen Absatz- und End-Tags lässt den Computer wissen, dass er anders behandelt werden sollte, oft nur mit einem Abstand zu anderen Texten.
+
+        # Mache Folgendes
+
+        -   Platziere den Text, den du gerade geschrieben hast, in mindestens zwei separaten Absätzen, indem du ihn mit `<p>` und `</p>` Tags umgibst.
+        -   Vergleiche die Ergebnisse mit einem Nachbarn. Was hat sich an der Art und Weise, wie der Text angezeigt wird, geändert?
+      CSD U2 HTML Debug Paragraphs_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+
+        ::: details [**Was ist ein Absatzelement?**]
+
+        Absätze werden durch öffnende ( `<p>` ) und schließende ( `</p>`) Tags gekennzeichnet. Absätze in HTML können eine beliebige Länge des Textes von einem Wort bis zu einer Reihe von Sätzen sein. Absätze gruppieren Sätze und setzen etwas Abstand zwischen dieser Textgruppe und der nächsten Textgruppe.
+
+        :::
+
+        Details[**Warum scheint HTML zu funktionieren, auch wenn es kaputt ist?**]
+
+        HTML wird von Ihrem Webbrowser gelesen, um Webseiten zu generieren. Da Menschen beim Schreiben ihrer Webseiten oft kleine Fehler machen, sind Browser so programmiert, dass sie genau erraten, was Sie vorhaben. Manchmal sind sogar verschiedene Browser programmiert, um unterschiedliche Vermutungen anstellen zu können! Der einzige Weg, um sicherzustellen, dass Ihr Code so aussieht, wie Sie es beabsichtigen, ist sicherzustellen, dass Sie immer die richtigen Tags verwenden.
+
+        :::
+
+        :::: details [**Warum wird der Code manchmal rosa?**]
+
+        Web Lab ist so programmiert, dass es automatisch einige Fehler in HTML erkennt.  Wenn es einen Fehler bemerkt, wird dieser Code rosa.  Der Fehler kann in rosa sein, oder er kann irgendwo vor dem rosa Code liegen.  Sie müssen sorgfältig debuggen, um Ihren Fehler zu finden.
+
+        :::
+
+        </div>
+
+        # Debuggen: Reparieren der beschädigten Tags
+
+        Diese einfache Webseite hat einige Probleme, die verhindern, dass der Inhalt korrekt angezeigt wird. Identifizieren und beheben Sie die Probleme. Diese Vorgehensweise wird auch als "Debugging" Ihres Codes bezeichnet.
+
+        # Mache Folgendes
+
+        -   Behebe den defekten Code, damit die Webseite korrekt angezeigt wird.
+        -   Vergleiche die Probleme die du behoben hast mit deinem Nachbarn
+      CSD U2 Heading Demo_2019: "# Überschriften\n\n<div class=\"no-pullthrough\"
+        style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:
+        20px; font-size:14px\">\n\n::: Details [**Was sind Überschriften?**]\nÜberschriften
+        sind die unterschiedlich großen Abschnittsüberschriften auf einer Webseite.
+        Überschriften fügen Deiner Webseite Struktur hinzu, indem der Text aufgebrochen
+        wird, so dass dieser für einen Benutzer einfacher zu lesen ist.\n:::\n\n::::
+        details [**Wie mache ich unterschiedlich große Überschriften?**]\nDie Überschriften
+        sind in 6 verschiedenen Größen erhältlich. Bisher hast du in erster Linie
+        die Größte verwendet: `<h1>`. Die Zahl '1' im HTML-Tag gibt an, dass dies
+        die größte Überschrift ist. Die kleinste Überschrift ist `<h6>`. Du kannst
+        auch die Tags `<h2>`, `<h3>`, `<h4>` und `<h5>` ausprobieren, die kleiner
+        werden, wenn die Zahl größer wird.\n:::\n\n:::: details [**Was ist HTML?**]\nHTML
+        steht für Hypertext Markup Language. HTML wird verwendet, um den Inhalt einer
+        Webseite zu strukturieren. HTML verwendet Tags, um anzugeben, wo bestimmte
+        Strukturen beginnen und enden. Diese Tags sind Zeichensätze, die nicht in
+        der englischen Sprache vorkommen, so dass Inhalt und Struktur unterschieden
+        werden können. \n:::\n\n::: details [**Was ist ein HTML-Element?**]\nEin HTML-Element
+        ist ein Teil einer Website, das durch ein Start-Tag gekennzeichnet ist und
+        manchmal mit einem End-Tag geschlossen wird. Das Element beinhaltet auch den
+        Inhalt innerhalb der Tags. Zum Beispiel: \n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"
+        style=\"width:500px\">\n:::\n\n:::: details [**Was ist ein HTML-Tag?**]\n\nEin
+        HTML-Tag ist der spezielle Zeichensatz, der der Maschine mitteilt, wo der
+        Anfang oder das Ende eines HTML-Elements ist und welcher Typ es ist.\n\n:::\n\n</div>\n\nBisher
+        hast Du Deine Inhalte in Absätze unterteilt.  Eine weitere Möglichkeit, wie
+        HTML es Dir ermöglicht, den Code zu organisieren, ist die Verwendung von **Überschriften**.
+        \ Eine Überschrift ist ein kurzer Text, der wie ein Titel an den Anfang eines
+        Inhaltsabschnitts gestellt wird.\n\n# Mache Folgendes:\n\n-   Finde die Überschriften
+        auf der Webseite unten und verwende das Inspektor-Tool, um den Code zu sehen,
+        aus dem sie bestehen.\n-   Stelle sicher, dass du und Dein Partner sich darüber
+        einig seid, was die Tags bewirken.\n-   Ändere den Code so, dass \"Zeichnung\"
+        und \"2 Jahre\" mit den Überschriften auf der restlichen Seite übereinstimmen."
+      CSD U2 Heading Sizes_2019: "# Überschriftengrößen\n\n<div class=\"no-pullthrough\"
+        style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:
+        20px; font-size:14px\">\n\n::: Details [**Was sind Überschriften?**]\nÜberschriften
+        sind die unterschiedlich großen Abschnittsüberschriften auf einer Webseite.
+        Überschriften fügen Ihrer Webseite Struktur hinzu, indem sie den Text aufbrechen,
+        so dass dieser für einen Benutzer einfacher zu lesen ist.\n:::\n\n:::: details
+        [**Wie mache ich unterschiedlich große Überschriften?**]\nDie Überschriften
+        sind in 6 verschiedenen Größen erhältlich.  Die häufigste Überschrift ist
+        `<h1>` Die Zahl 1 im HTML-Tag bezeichnet, dass es sich um die größte Überschrift
+        handelt. Die kleinste Überschrift ist `<h6>`. Du kannst auch die Tags `<h2>`,
+        `<h3>`, `<h4>`, `<h4>` und `<h5>` versuchen, die mit zunehmender Anzahl kleiner
+        werden.\n:::\n\n:::: details [**Was ist HTML?**]\nHTML steht für Hypertext
+        Markup Language. HTML wird verwendet, um den Inhalt einer Webseite zu strukturieren.
+        HTML verwendet Tags, um anzugeben, wo bestimmte Strukturen beginnen und enden.
+        Diese Tags sind Zeichensätze, die nicht in der englischen Sprache vorkommen,
+        so dass Inhalt und Struktur unterschieden werden können. \n:::\n\n::: details
+        [**Was ist ein HTML-Element?**]\nEin HTML-Element ist ein Teil einer Website,
+        das durch ein Start-Tag gekennzeichnet ist und manchmal mit einem End-Tag
+        geschlossen wird. Das Element beinhaltet auch den Inhalt innerhalb der Tags.
+        Zum Beispiel: \n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"
+        style=\"width:500px\">\n:::\n\n:::: details [**Was ist ein HTML-Tag?**]\n\nEin
+        HTML-Tag ist der spezielle Zeichensatz, der der Maschine mitteilt, wo der
+        Anfang oder das Ende eines HTML-Elements ist und welcher Typ es ist.\n\n:::\n\n</div>\n\nÜberschriften
+        können in verschiedenen Größen erhältlich sein.  Auf dieser Seite gibt es
+        sechs unterschiedlich große Überschriften, die jedoch alle vertauscht sind.
+        \ Kannst du und dein Partner herausfinden, wie man sie repariert?\n\nMache
+        Folgendes:\n\n-   Verwende das Inspektorwerkzeug, um herauszufinden, was die
+        Überschriften zu unterschiedlichen Größen macht.\n-   Stelle sicher, dass
+        du und Dein Partner sich darüber einig sind, was die verschiedenen Header-Tags
+        bewirken.\n-   Ändere die Tags so, dass die Überschriften in der Reihenfolge
+        von groß nach klein sind, und der Text sagt die richtige Größe, wie im Bild
+        unten. \n\n<img src=\"https://images.code.org/762022f97a355dd63dce5ecc8d0127aa-image-1493161154608.58.15
+        PM.png\" style=\"width:100px; float:left\">"
+      CSD U2 Heading Test_2019: "# Überschriften und Absätze\n\n<div class=\"no-pullthrough\"
+        style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:
+        20px; font-size:14px\">\n\n::: details [**Was ist ein Absatzelement?**]\n\nAbsätze
+        werden auch durch öffnende (`<p>`) und schließende (`</p>`) Tags gekennzeichnet.
+        Absätze in HTML können eine beliebige Länge des Textes von einem Wort bis
+        zu einer Reihe von Sätzen sein. Der gesamte Text auf einer Webseite sollte
+        in einem HTML-Element (Überschriften oder Absätze) enthalten sein. Absätze
+        gruppieren Sätze und setzen etwas Abstand zwischen dieser Textgruppe und der
+        nächsten Textgruppe.\n\n:::\n\ndetails [**Wie erstelle ich mehrere Absätze?**]\n\nAbsätze
+        werden durch Öffnen (`<p>`) und Schließen (`</p>`) von Tags gekennzeichnet.
+        Um mehr als einen Absatz zu erstellen, benötigen Sie mehrere Sätze von öffnenden
+        und schließenden `<p>` Tags. Zum Beispiel:\n\n        <p>\n            Dies
+        ist ein Absatz.\n        </p>\n        <p>\n            Dies ist ein weiterer
+        Absatz.\n        </p>\n\n:::\n\n::: Details [**Was sind Überschriften?**]\nÜberschriften
+        sind die unterschiedlich großen Abschnittsüberschriften auf einer Webseite.
+        Überschriften fügen Ihrer Webseite Struktur hinzu, indem sie den Text aufbrechen,
+        so dass dieser für einen Benutzer einfacher zu lesen ist.\n:::\n\n:::: details
+        [**Wie mache ich unterschiedlich große Überschriften?**]\nDie Überschriften
+        sind in 6 verschiedenen Größen erhältlich. Bisher hast du in erster Linie
+        das größte \\<h1> verwendet. Die Zahl 1 im HTML-Tag gibt an, dass dies die
+        größte Überschrift ist. Die kleinste Überschrift ist \\<h6>. Du kannst auch
+        die \\<h2>, \\<h3>, \\<h4>, \\<h4> und \\<h5> Tags ausprobieren, die kleiner
+        werden, wenn die Zahl größer wird.\n:::\n\n:::: details [**Was ist HTML?**]\nHTML
+        steht für Hypertext Markup Language. HTML wird verwendet, um den Inhalt einer
+        Webseite zu strukturieren. HTML verwendet Tags, um anzugeben, wo bestimmte
+        Strukturen beginnen und enden. Diese Tags sind Zeichensätze, die nicht in
+        der englischen Sprache vorkommen, so dass Inhalt und Struktur unterschieden
+        werden können. \n:::\n\n::: details [**Was ist ein HTML-Element?**]\nEin HTML-Element
+        ist ein Teil einer Website, das durch ein Start-Tag gekennzeichnet ist und
+        manchmal mit einem End-Tag geschlossen wird. Das Element beinhaltet auch den
+        Inhalt innerhalb der Tags. Zum Beispiel: \n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"
+        style=\"width:500px\">\n:::\n\n:::: details [**Was ist ein HTML-Tag?**]\n\nEin
+        HTML-Tag ist der spezielle Zeichensatz, der der Maschine mitteilt, wo der
+        Anfang oder das Ende eines HTML-Elements ist und welcher Typ es ist.\n\n:::\n\n</div>\n\nDer
+        Autor dieser Seite hat eine Menge Inhalt hinzugefügt, aber nicht an die Struktur
+        gedacht.  Der gesamte Text wird zusammengefügt.\n\nMache Folgendes:\n\n-   Schaue
+        Dir den Inhalt mit Deinem Partner an und entscheide, was Deiner Meinung nach
+        die beste Struktur sein sollte.\n-   Verwende Deine Überschriften- und Absatz-Tags,
+        um die Struktur in die Seite zu kodieren."
       CSD U2 Inspector Warm Up_2019: |-
         <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
         <details>
@@ -390,6 +554,11 @@ de-DE:
         \  Suche die Eigenschaft `margin` im Regelsatz `img`.\n-   Vergrößere 'margin'
         und besprechen die Wirkung mit einem Partner.\n-   Wählen einen anderen Elementtyp
         und gib ihm ebenfalls einen Rand."
+      CSD U2 publish video: |-
+        ## Zu berücksichtigende Fragen
+
+        -   Was sind Deiner Meinung nach die Aufgaben eines Website-Publishers?
+        -   Warum möchtest du den Code sehen oder die Website einer anderen Person remixen?
       CSD U3 - Booleans Video_2019: |-
         ## Zu berücksichtigende Fragen
 
@@ -400,6 +569,18 @@ de-DE:
         ## Zu berücksichtigende Fragen
 
         -   Was ist ein Beispiel dafür, wann Sie eine "wenn/ansonsten"-Anweisung benötigen würden?
+      CSD U3 - conditionals - transition_2019: |-
+        # Booleans
+
+        In den letzten paar Leveln haben wir die Werte von Sprites verglichen, um herauszufinden, ob etwas wahr oder falsch ist. Beginnen wir damit, das in den Kontext einer Animation zu stellen.
+
+        # Mache Folgendes
+
+        Das Programm zeichnet einen Rennwagen und eine Ziellinie. Wir werden herausfinden, wann der Rennwagen die Ziellinie überquert. Die Sprites sind alle für dich eingerichtet.
+
+        -   Füge eine `console.log`-Anweisung innerhalb der Zeichenschleife hinzu. ( [Zeige mir, wo](#triggercallout=callout) )
+        -   Füge einen booleschen Ausdruck in die `console.log` ein, der fragt: "Ist die x-Position des Rennwagens kleiner als die x-Position der Ziellinie"?
+        -   Betrachte die Ausgabe des Programms, während sich das Fahrzeug bewegt. Wann ändert sich der Ausgang? Warum?
       CSD U3 Boolean Modify_2019: "# Boolesche Ausdrücke\n\nDie einfachsten booleschen
         Ausdrücke sind Fragen, die der Computer mit wahr oder falsch beantworten kann.
         \nMan kann dabei auch sagen, dass es sich um boolesche Ausdrücke handelt,
@@ -501,6 +682,15 @@ de-DE:
         <li>Label können nicht mit einer Zahl beginnen. </li>
         <li>Groß- und Kleinschreibung müssen exakt gleich sein.</li>
         </ul></details></summary>
+      CSD U3 abstraction rotation control_2019: |-
+        # Geschwindigkeit kontrollieren
+
+        Du hast `Rotationsgeschwindigkeit` außerhalb der Zeichenschleife verwendet, um dein Sprite beim Start des Programms drehen zu lassen.  Du kannst auch `Rotationsgeschwindigkeit` **innerhalb der Schleife** verwenden, um die Geschwindigkeit des Sprites während des Spiels zu ändern.  Zum Beispiel kann sich ein Sprite drehen, wenn der Benutzer die Leertaste drückt, und es dreht sich weiter, bis ihm gesagt wird, dass es anhalten soll.
+
+        # Mach Folgendes
+
+        -   Schaue Dir die `if` -Anweisung innerhalb der Zeichenschleife an, die überprüft, ob die Leertaste gedrückt wurde. ( [Zeige mir, wo](#triggercallout=code_triggered1) )
+        -   Verwende den Block `Rotationsgeschwindigkeit`, damit sich das Farbrad dreht, wenn der Benutzer die Leertaste drückt.
       CSD U3 collisions types_2019: |-
         # Kollisionsarten
 
@@ -599,6 +789,14 @@ de-DE:
 
         -   Worin besteht der Unterschied zwischen Hard- und Software?
         -   Was macht das Betriebssystem eines Computers?
+      CSD U6 light pattern off_2019: |-
+        # Ausschalten
+
+        Wenn du diese App startest, sind die Lichter aus, aber sobald du ein Muster wählst, gibt es keine Möglichkeit, die Lichter wieder auszuschalten!
+
+        # Mache Folgendes
+
+        Erstelle eine Funktion, die alle LEDs ausschaltet, und füge dann eine "Off"-Schaltfläche zur App hinzu, damit diese alle farbigen LEDs ausschaltet.
       CSD U6 params modify clouds_2019: |-
         # Wolken
 
@@ -922,10 +1120,6 @@ de-DE:
         &quot;CAT&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;,
         &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title>\n    <title name=\"LAYOUT\">\"circle\"</title>\n
         \ </block></xml> \nJetzt können Sie mehrere Tänzer auf einmal erstellen!"
-      Dance_2019_07: |-
-        Jeder Tänzer hat eine Reihe von _Eigenschaften_, die steuern, wie er aussieht.
-
-        Sie können  es so aussehen lassen, als sei ein Tänzer näher oder weiter weg, indem Sie seine Größe ändern. Ändern Sie die Größe einer Gruppe von Tänzern irgendwann nach dem Einsetzen der Musik.
       Dance_2019_08: Tänzer haben eine "Farb"-Eigenschaft, mit der eine Farbschicht
         hinzufügt werden kann. Versuchen Sie, den Farbton eines Ihrer Tänzer (oder
         einer ganzen Gruppe) zu ändern!
@@ -998,6 +1192,17 @@ de-DE:
         Sie die rechte Pfeiltaste drücken.
       Dance_Party_12: Grooven Sie los! Erstellen Sie einen eigenen Tanz und teilen
         Sie ihn mit Ihren Freunden.
+      Dance_Party_extras_alternate_2019: |-
+        # Hin und her!
+
+        Manchmal möchtest du vielleicht ein Muster von Tanzbewegungen erstellen, die du wählst. Mit diesem neuen Baustein kannst du genau das tun.
+
+        [blockly block][0]
+
+        Die oben gewählten Züge werden sich für immer wiederholen.
+
+        -   Erstelle eine abwechselnde Routine für die Leadtänzerin an der Front!
+        -   Verwende verschiedene Zahlen, um die Geschwindigkeit zu ändern, mit der sich die Bewegungen abwechseln. Versuche `1` oder `0.5`, um schneller zu wechseln!
       Dance_Party_extras_battle: |-
         # Tanz-Crews
 
@@ -1024,6 +1229,15 @@ de-DE:
         -   Experimentiere mit anderen Tondauern (wie 0,5 für eine halbe Note oder 0,125 für eine Achtelnote).
         -   Füge einige Events „nach dem Takt“ hinzu.
         -   Tausche „Takte“ und „Sekunden“ und versuche, deine Tänze auf diese Weise zeitlich abzustimmen.
+      Dance_Party_extras_every_beat_2019: |-
+        # Viertelnoten
+
+        Die meisten unserer Tänze haben ganze Takte verwendet, aber jeder Takt besteht aus 4 Viertelnoten. Dieser Tanz verwendet [blockly block][0], um die Tänzerin auf jede Viertelnote klatschen zu lassen, aber nur für die ersten 4 Takte.
+
+        Versuche, die Zahlen in den Blöcken zu ändern, um zu sehen, wie es den Tanz verändert.
+
+        -   Experimentiere mit anderen Notenlängen (z. B. 0,5 für eine Halbe Note oder 0,125 für eine Achtelnote).
+        -   Füge weitere Ereignisse hinzu.
       Dance_Party_extras_layout: |-
         # Nehmen wir die Formation ein!
 
@@ -1032,14 +1246,13 @@ de-DE:
         -   Erstelle eine zweite Gruppe von Tänzern in einem anderen Layout
         -   Ändere das Layout, wenn eine Taste gedrückt wird
         -   Ändere eine Eigenschaft, wenn die Tänzer ihre Formation ändern
-      Dance_Party_extras_layout_2019: "# Stellen wir uns in Formation!\n\nSchauen
-        Sie sich diesen Tanz an, bei dem der <xml><block type=\"Dancelab_layoutSprites\"
-        block-text=\"layout\"><title name=\"GROUP\">\"MOOSE\"</title><title name=\"FORMAT\">???</title></block></xml>
-        Block verwendet wird, um die Formation der Backup-Tänzer während des gesamten
-        Tanzes zu ändern. Probieren Sie eine dieser Ideen aus, um die Formation zu
-        erweitern: \n\n-   Eine zweite Gruppe von Tänzern in einer anderen Anordnung
-        erstellen \n-   Anordnung ändern, wenn eine Taste gedrückt wird \n-   eine
-        Eigenschaft ändern, wenn die Tänzer ihre Formation wechseln"
+      Dance_Party_extras_mixed_2019: |-
+        # Mehr Interaktion
+
+        Mit diesem Tanz kannst du die Eigenschaften der Tänzer in Echtzeit steuern, während sie automatisch tanzen. Versuche, andere Eigenschaften zu ändern, wenn du die Tasten drückst. Zum Beispiel:
+
+        -   Randomisiere den Farbton der Tänzerin, wenn du "runter" drückst.
+        -   Füge eine Gruppe von Tänzern mit einem zufälligen Layout hinzu, wenn du "space" drückst.
       Dance_Party_extras_on_beat: |-
         # Bass, Mitten und Höhen
 
@@ -1055,7 +1268,7 @@ de-DE:
       Dance_Party_extras_speed_2019: |-
         # Mal schnell, mal langsam
 
-        Dieser letzte Tanz verwendet den <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> Block, um zu steuern, wie schnell sich jeder Tänzer bewegt. Versuchen Sie, mit unterschiedlichen Geschwindigkeiten an verschiedenen Stellen in einem Stück zu experimentieren. Sie können weiter an diesem Tanz arbeiten oder zu einem der vorherigen Tänze zurückkehren, um sie noch cooler zu gestalten.
+        Dieser letzte Tanz verwendet den [blockly block][0] Block, um zu steuern, wie schnell sich jeder Tänzer bewegt. Versuchen Sie, mit unterschiedlichen Geschwindigkeiten an verschiedenen Stellen in einem Stück zu experimentieren. Sie können weiter an diesem Tanz arbeiten oder zu einem der vorherigen Tänze zurückkehren, um sie noch cooler zu gestalten.
       Dance_Party_extras_visible: |-
         # Wo würden sie hingehen?
 
@@ -1197,8 +1410,16 @@ de-DE:
         -   Wozu werden Variablen verwendet?
         -   Wie erstellt man eine Variable und weist ihr einen Wert zu?
         -   Was kann in eine Variable aufnehmen?
+      K-1 Bee Loops 2: Benutze eine `wiederhole`-schleife, um dich zu bewegen, und
+        dann nimm den Nektar und mache Honig!
+      K-1 Bee Loops 3: Verwenden Sie drei `wiederhole`-Schleifen, um den Nektar zu
+        erhalten und Honig zu machen!
+      K-1 Bee Loops 4: Verwende `wiederholen` Schleifen, um den Nektar zu erhalten,
+        Honig zu machen und sich zu bewegen!
       K-1 Bee Loops 5: Verwende „Wiederhole"-Schleifen, um den Nektar und den Honig
         zu sammeln.
+      K-1 Bee Loops 6: Benutze eine `wiederhole`-Schleife, um den Nektar zu bekommen,
+        Honig zu bekommen und dich zu bewegen!
       K-1 Maze Loops 11: |-
         Bring mich zum Schwein!\
         Mit der „Wiederholen“-Schleife geht es leichter.
@@ -1480,6 +1701,11 @@ de-DE:
         ## Zu berücksichtigend Frage
 
         -   Woher weiß die Webseite, welches Stylesheet sie verwenden soll?
+      'Video: Intro to CSS_2019': |-
+        ## Zu berücksichtigende Fragen
+
+        -   Inwiefern unterscheidet sich der Stil einer Webseite von der Struktur?
+        -   Warum möchtest du, dass die Webseite einen bestimmten Stil hat?
       Vigenere: "# Verschlüsseln und Entschlüsseln einer Nachricht mit der Vigenère-Chiffre\n\nDies
         ist eine interaktive Version der Vigenère-Chiffre, die die Ver- und Entschlüsselung
         animiert, während sie stattfindet, mit einem Stück Text zum Ver- und Entschlüsseln
@@ -1630,6 +1856,9 @@ de-DE:
       course2_maze_programming_challenge2: Manchmal gibt es mehr als eine Lösung für
         ein Problem. Manchmal ist es schneller, rückwärts zu gehen, als vorwärts!
       course3_maze_debugging_challenge1: _"Gehe ich hier nur immer im Kreis herum?"_
+      course4_artist_binary_challenge2: |-
+        Auf diesem Gitter sind 256 Bits dargestellt - das bedeutet, dass es für eine kleine Änderung leicht ist, große Probleme zu verursachen. Bist du emsig genug, um dieses Logo wiederherzustellen?
+        ![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)
       course4_artist_fwp_challenge1: Versuche, dieses Programm auszuführen und verändere
         es, um zu sehen, was passiert. Kannst du herausfinden, wie es funktioniert?
         (Oder lösche es und ersetze es durch etwas ganz anderes)
@@ -2112,6 +2341,28 @@ de-DE:
         klicke "Fertig"!
       courseC_PlayLab_eventsA_embed_2019: Lasst uns ein Spiel spielen. Erreiche 5
         Punkte, indem du den Pinguin auf den Oktopus bewegst!
+      courseC_PlayLab_events_challenge1_2018: |-
+        Benutze einen neuen Baustein, damit sich die Waddles automatisch zum Start zurückbewegen, wenn er in den Dinosaurier läuft und einen Punkt erzielt. Dies wird dein Spiel herausfordernder und unterhaltsamer machen!
+
+        Spiele das Spiel und bewege die Waddles mit den Pfeilen, bis du 5 oder mehr Punkte bekommst. Um diese Herausforderung zu meistern, muss Waddles in die Position "Mitte links" des Bildschirms gebracht werden.
+      courseC_PlayLab_events_challenge1_2019: |-
+        Benutze einen neuen Baustein, damit sich die Waddles automatisch zum Start zurückbewegen, wenn er in den Dinosaurier läuft und einen Punkt erzielt. Dies wird dein Spiel herausfordernder und unterhaltsamer machen!
+
+        Spiele das Spiel und bewege die Waddles mit den Pfeilen, bis du 5 oder mehr Punkte bekommst. Um diese Herausforderung zu meistern, muss Waddles in die Position "Mitte links" des Bildschirms gebracht werden.
+      courseC_artist_loop1_2018: "_\"Fantastisch!\"\"_ \n\nLasst uns etwas Stil hinzufügen,
+        indem wir den Pinsel mit dem<xml><block type=\"draw_line_style_pattern\">
+        <title name=\"VALUE\">DEFAULT</title></block></xml> Baustein ändern, bevor
+        unsere Schleife beginnt."
+      courseC_artist_loop1_2019: "_\"Fantastisch!\"\"_ \n\nLasst uns etwas Stil hinzufügen,
+        indem wir den Pinsel mit dem<xml><block type=\"draw_line_style_pattern\" block-text=\"set
+        pattern\"> <title name=\"VALUE\">DEFAULT</title></block></xml> Baustein ändern,
+        bevor unsere Schleife beginnt."
+      courseC_artist_loops1a_2018: "**Freispiel:** Lasst uns etwas Größeres bauen,
+        einen Schritt nach dem anderen!  \n\nBenutze den `springe zu 200 über 200
+        runter` Baustein, um den Zeichner in die Mitte des Spielbereichs zu bringen,
+        und benutze dann den Baustein `Zeichne einen Aufkleber`, um einen Vogel erscheinen
+        zu lassen.  \n\n* * *\n\nDrücke \"Fertig stellen\", wenn du mit dem, was du
+        gemacht hast, zufrieden bist."
       courseC_artist_loops1a_2019: |-
         **Freispiel:** Lasst uns etwas Größeres bauen, einen Schritt nach dem anderen!
 
@@ -2141,6 +2392,12 @@ de-DE:
         direkt über dem ersten hinzu, um ein Bild wie das untenstehende zu erstellen.\n\n*
         * *\n\nDrücke \"Fertig stellen\", wenn du mit dem, was du gemacht hast, zufrieden
         bist.\n\n![expandable](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)\n![expandable](https://images.code.org/dd0e0eee69d37493c5ba584164316a9f-image-1553098351969.png)\n![expandable](https://images.code.org/880908899d8e6ceac8a8ce1bd0bf47eb-image-1553098355311.png)"
+      courseC_artist_loops4a_2018: |-
+        Editiere deinen Code so, dass du um 75 Pixel nach vorne springst, zwischen dem Stempeln des Vogels und des Schlägers. In diesem Rätsel stelle sicher, dass du innerhalb deiner Schleife zu 200 über 200 nach unten gesprungen bist, damit du in der Mitte bleibst!
+
+        * * *
+
+        ![expandable](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)
       courseC_artist_loops4a_2019: |-
         Bearbeite Deinen Code so, dass du zwischen den beiden Aufklebern vorwärts springst. In diesem Puzzle stelle sicher, dass du innerhalb der Schleife an Mitte gesprungen bist, um in der Mitte zu bleiben!
 
@@ -2196,6 +2453,11 @@ de-DE:
       courseC_artist_loopsPrePre1a: |-
         Benutze den <xml><block type="jump_to_xy" id="callMe"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml> Block um den Künstler in die Mitte des Spielbereichs zu bringen.\
         Male dann eine 50 Pixel lange Linie mit dem <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">50</title></block></xml> Block.
+      courseC_artist_loopsPrePre1a_2018: |-
+        ### Der Zeichner ist an der falschen Stelle!
+
+        Benutze den Baustein <xml><block type="jump_to_xy" id="callMe"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml>, um den Zeichner in die Mitte des Spielbereichs zu bringen.
+        Zeichne dann eine 50 Pixel lange Linie mit dem Baustein <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">50</title></block></xml>.
       courseC_artist_loopsPrePre1a_2019: "Der Künstler ist an der falschen Stelle!
         \ \n\nBenutzen Sie den <xml><block type=\"jump_to_xy\" id=\"callMe\" block-text=\"jump
         to 200 over 200 down\"><title name=\"XPOS\">200</title><title name=\"YPOS\">200</title></block></xml>
@@ -2203,6 +2465,14 @@ de-DE:
         dann eine 50 Pixel lange Linie mit dem <xml><block type=\"draw_move_by_constant\"
         block-text=\"move forward\"><title name=\"DIR\">moveForward</title><title
         name=\"VALUE\">50</title></block></xml> Baustein."
+      courseC_artist_prog6_2018: |-
+        _"Jetzt ein Schild für Belle!"_
+
+        Zeichne dieses Quadrat mit 200 Pixel Seiten.
+      courseC_artist_prog6_2019: |-
+        _"Jetzt ein Schild für Belle!"_
+
+        Zeichne dieses Quadrat mit 200 Pixel Seiten.
       courseC_collector_loops_challenge2: |-
         _„Lass uns zusammen nach Schätzen suchen!“_
 
@@ -2527,12 +2797,44 @@ de-DE:
         kannst deine Zeichnung beliebig ändern, aber hier ist eine Idee:\n\n-   Versuche,
         die Formen in der Mitte der Schneeflocke mit denen am Ende jeder Linie zu
         tauschen!"
+      courseD_artist_binary_challenge2_2018: |-
+        Auf diesem Gitter sind 256 Bits dargestellt - das bedeutet, dass es für eine kleine Änderung leicht ist, große Probleme zu verursachen. Bist du emsig genug, um dieses Logo wiederherzustellen?
+        ![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)
+      courseD_artist_binary_challenge2_2019: |-
+        Auf diesem Gitter sind 256 Bits dargestellt - das bedeutet, dass es für eine kleine Änderung leicht ist, große Probleme zu verursachen. Bist du emsig genug, um dieses Logo wiederherzustellen?
+        ![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)
       courseD_bee_nestedLoops8: Sammle den gesamten Nektar jeder Blüte und erzeuge
         Honig bei jeder Honigwabe. Benutze eine verschachtelte Schleife.
       courseD_bee_nestedLoops8_2018: Sammle den gesamten Nektar jeder Blüte und erzeuge
         Honig bei jeder Honigwabe. Benutze eine verschachtelte Schleife.
       courseD_bee_nestedLoops8_2019: Sammle den gesamten Nektar jeder Blüte und erzeuge
         Honig bei jeder Honigwabe. Benutze eine verschachtelte Schleife.
+      courseD_bounce_events1s_2018: "Auf zum Reifen!     \n\nHänge einen Block an
+        das Ereignis `Wenn der linke Pfeil` an und drücke auf \"Ausführen \", um den
+        Spieler ins Netz zu bringen."
+      courseD_bounce_events1s_2019: "Auf zum Reifen!     \n\nHänge einen Block an
+        das Ereignis `Wenn der linke Pfeil` an und drücke auf \"Ausführen \", um den
+        Spieler ins Netz zu bringen."
+      courseD_bounce_events2s_2018: Nun hänge einen Baustein an das "when right event"
+        an, so dass die Hand zu beiden Körben gelangen kann.
+      courseD_bounce_events2s_2019: Nun hänge einen Baustein an das "when right event"
+        an, so dass die Hand zu beiden Körben gelangen kann.
+      courseD_bounce_events5s_2018: Wir werden einen Basketball schicken, der zur
+        Hand hinunterfliegt.  Hänge einen Baustein ans Ereignis "When ball hits hand"
+        an, um sicherzustellen, dass der Ball den Korb erreicht.
+      courseD_bounce_events5s_2019: Wir werden einen Basketball schicken, der zur
+        Hand hinunterfliegt.  Hänge einen Baustein ans Ereignis "When ball hits hand"
+        an, um sicherzustellen, dass der Ball den Korb erreicht.
+      courseD_bounce_events6s_2018: "Nun befindet sich der Korb oben.  \n\nFüge Code
+        hinzu, damit der Ball springt, wenn er auf die Wand trifft um dieses Rätsel
+        zu lösen."
+      courseD_bounce_events6s_2019: "Nun befindet sich der Korb oben.  \n\nFüge Code
+        hinzu, damit der Ball springt, wenn er auf die Wand trifft um dieses Rätsel
+        zu lösen."
+      courseD_collector_debugging6a_2018: 'Herausforderung: Verwende den Code im Arbeitsbereich,
+        um mindestens **6** Schätze zu erreichen!'
+      courseD_collector_debugging6a_2019: 'Herausforderung: Verwende den Code im Arbeitsbereich,
+        um mindestens **6** Schätze zu erreichen!'
       courseD_iceage_loops7: 'Scrat möchte wirklich gern zur Eichel kommen! '
       courseD_iceage_loops7_2019: 'Scrat möchte wirklich gern zur Eichel kommen! '
       courseD_maze_intro4_2019: '\_"Verfolge den Weg und führe mich zum Schwein."

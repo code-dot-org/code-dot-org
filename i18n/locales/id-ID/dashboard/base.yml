@@ -64,6 +64,7 @@ id:
   join_section:
     code:
       placeholder: "Kode Bagian (ABCDEF)"
+      submit: 'Bergabung'
   add_hint_form:
     placeholder: 'Masukkan pentunjuk anda disini'
     submit: 'tambah petunjuk'
@@ -74,7 +75,7 @@ id:
   trophies: "Piala"
   courses: 'Kursus'
   courses_page:
-    title_student: "Belajar di Code Studio"
+    title_student: "Belajar Ilmu Komputer"
     title_teacher: "Ajarin dengan kode studio"
   unplugged_activity: 'Kegiatan tanpa komputer'
   of: "dari"
@@ -279,14 +280,14 @@ id:
         personal_login_created_username: 'Anda berhasil membuat sebuah login pribadi. Anda sekarang dapat masuk ke akun Anda dengan username (%{username}) dan password Anda'
   nav:
     header:
-      finished_hoc: "Saya telah menyelesaikan jam kode!"
+      finished_hoc: "Saya selesai!"
       sign_in_to_save: 'Masuk untuk mencatat kemajuan belajar'
       my_dashboard: "Dasbor saya"
       course_catalog: "Katalog kursus"
       project_gallery: "Proyek"
       sections: "Sesi"
       help_support: "Bantuan dan dukungan"
-      report_bug: "Laporkan bug"
+      report_bug: "Laporkan masalah"
       teacher_community: "Komunitas guru"
       professional_learning: "Belajar profesional"
       documentation: "Dokumentasi"
@@ -343,6 +344,7 @@ id:
       basketball: 'Bola basket'
       bounce: 'Terpental'
       calc: 'Calc'
+      dance: 'Pesta Tari'
       eval: 'Eval'
       flappy: 'Flappy'
       frozen: 'Frozen'
@@ -505,16 +507,16 @@ id:
     powered_by_aws: 'Didukung oleh Amazon Web Services'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; adalah merk dagang dari Code.org.'
     copyright: 'Hak cipta'
-    more: 'Lebih'
+    more: 'Selengkapnya'
     feedback: 'Berikan pendapat'
     translate: 'Bantu kami menerjemahkan ke bahasa anda'
     support: 'Bantuan dan komunitas'
     support_url: 'http://support.code.org'
     tos_short: 'Ketentuan'
-    tos: 'Syarat'
+    tos: 'Ketentuan Layanan'
     privacy: 'Kebijakan privasi'
     secure: 'Versi yang aman'
-    report_abuse: 'Laporkan penyalahgunaan'
+    report_abuse: 'Laporkan Penyalahgunaan'
     built_on_code_studio: 'Dibuat di Studio Kode'
     make_my_own_app: 'Membuat aplikasiku sendiri'
     how_it_works: 'Bagaimana hal tersebut bekerja'
@@ -538,7 +540,7 @@ id:
   compatibility:
     upgrade:
       unsupported_message: "Peramban kamu tidak didukung. Harap tingkatkan Peramban kamu ke <a href='%{supported_browsers_url}', target='_blank'> salah satu peramban yang didukung</a> kami. kamu bisa mencoba melihat halaman, akan tetapi beberapa fungsi tidak dapat bekerja."
-      link: "Pelajari lebih banyak"
+      link: "Pelajari lebih lanjut"
       applab_unsupported_tablet: "Aplikasi Labotarium bekerja paling baik di komputer atau laptop dengan mouse dan papan ketik. Anda mungkin mengalami masalah dengan menggunakan alat ini pada perangkat Anda pada saat ini."
       gamelab_unsupported_tablet: "Aplikasi Labotarium bekerja paling baik di komputer atau laptop dengan menggunakan mouse dan keyboard. Anda mungkin mengalami masalah dengan menggunakan alat ini pada perangkat Anda pada saat ini."
       weblab_unsupported_browser: "Sayangnya, kami sedang mengalami masalah dalam memuat Web Lab pada peramban ini. Anda mungkin ingin menggunankan sebuah peramban yang lain sampai masalah ini diselesaikan. Maaf atas ketidaknyamanannya."
@@ -581,6 +583,10 @@ id:
       body_short: "Desain sebuah aplikasi, kode dengan blok atau JavaScript agar aplikasi tersebut dapat bekerja, kemudian bagikan aplikasimu dalam hitungan detik."
       audience: 'Usia 13+'
       cta: 'Pelajari caranya'
+    dance:
+      title: 'Pesta Tari'
+    dance-2019:
+      title: 'Pesta Tari'
     hoc:
       title: 'Labirin klasik'
       body: 'Coba dasar-dasar ilmu komputer. Jutaan orang telah mencobanya.'
@@ -658,7 +664,7 @@ id:
     header: "Galeri"
     header_playlab: "Play Lab/Lab Permainan"
     header_artist: "Artis"
-    report_abuse: "Laporkan penyalahgunaan"
+    report_abuse: "Laporkan Penyalahgunaan"
   landing:
     report_bug: "Laporkan kesalahan"
     support: "Dapatkan bantuan"
@@ -732,7 +738,7 @@ id:
     intro_desc: "Kami memperbarui Syarat dan Ketentuan dan Kebijakan Pribadi kami, seperti yang ditunjukkan di bawah ini. Perubahan tersebut berlaku efektif pada tanggal 24 Agustus 2016. Perubahan terbesar: kami akan <i>tidak lagi menyimpan alamat surel untuk akun siswa di Code Studio.</i> Ini adalah masalah besar bagi kami, dan kami berharap ini akan menjadi standar baru untuk privasi siswa dalam teknologi pendidikan. Kami sudah mengirimkan ringkasan perubahan lainnya melalui surel."
     intro_desc_markdown: "Kami memperbarui Syarat dan Ketentuan dan Kebijakan Pribadi kami, seperti yang ditunjukkan di bawah ini. Perubahan tersebut berlaku efektif pada tanggal 24 Agustus 2016. Perubahan terbesar: kami akan _tidak lagi menyimpan alamat surel untuk akun siswa di Code Studio._ Ini adalah masalah besar bagi kami, dan kami berharap ini akan menjadi standar baru untuk privasi siswa dalam teknologi pendidikan. Kami sudah mengirimkan ringkasan perubahan lainnya melalui surel."
     intro_instructions: "Anda harus menerima persyaratan baru untuk siswa yang berusia di bawah 13 tahun di kelas agar memiliki akses penuh ke semua fitur terbaru di Code Studio. Ketika mendaftar  sebuah  akun untuk mahasiswa di bawah 13 tahun, Anda akan diminta untuk mengkonfirmasi bahwa sekolah Anda memiliki izin orang tua untuk pengumpulan informasi pribadi siswa untuk penggunaan dan manfaat dari sekolah, termasuk program-program pendidikan seperti Kode Studio."
-    tos: "Syarat"
+    tos: "Ketentuan Layanan"
     privacy: "Kebijakan privasi"
     privacy_notice: "Pemberitahuan Privasi"
     accept_label: 'Saya menyetujui <a href="%{tos_url}" target="_blank">Syarat dan Ketentuan</a> dan <a href="%{privacy_url}" target="_blank">Kebijakan Pribadi</a>'
@@ -1014,11 +1020,16 @@ id:
         ages_11_12: '11-12 tahun'
         ages_13_14: '13-14 tahun'
         ages_15_16: '15-16 tahun'
+        ages_17_18: '17-18 tahun'
+        ages_19_over: '19+ tahun'
       subjects:
         cs: 'Ilmu komputer'
+        ict: 'ICT'
         math: 'Matematika'
         science: 'Ilmu pengetahuan'
         la: 'Seni Bahasa'
+        music: 'Musik'
+        art: 'Seni'
       resources:
         kodable: 'Kodable'
         lightbot: 'Lightbot'

@@ -94,6 +94,49 @@ it-IT:
         2-3_Artist_Functions_4_a: L'artista deve girare di 120 gradi prima di disegnare
           il successivo quadrato.
       2-3 Artist Loops New 11:
+        2-3_Artist_Loops_New_11_a: |-
+          Ti ricordi il codice dell'ultimo esercizio?
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">8</title>
+                  <statement name="DO">
+                    <block type="draw_colour" inline="true">
+                      <value name="COLOUR">
+                        <block type="colour_random"/>
+                      </value>
+                      <next>
+                        <block type="draw_turn_by_constant_dropdown">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE" config="45,60,90,120,180">45</title>
+                          <next>
+                            <block type="draw_move_by_constant">
+                              <title name="DIR">moveForward</title>
+                              <title name="VALUE">50</title>
+                              <next>
+                                <block type="draw_turn_by_constant_dropdown">
+                                  <title name="DIR">turnLeft</title>
+                                  <title name="VALUE" config="45,60,90,120,180">90</title>
+                                  <next>
+                                    <block type="draw_move_by_constant">
+                                      <title name="DIR">moveForward</title>
+                                      <title name="VALUE">50</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </xml>
         2-3_Artist_Loops_New_11_b: Devi aggiungere Il blocco `gira a sinistra di 30
           gradi` <b>dopo</b> le altre istruzioni all'interno del ciclo.
       2-3 Artist Loops New 12:
@@ -4791,6 +4834,17 @@ it-IT:
       course2_artist_prog_challenge1:
         courseC_artist_prog_challenge1_a: 'Il rettangolo è largo 200 pixel e alto
           100. '
+      course2_artist_prog_challenge2:
+        courseC_artist_prog_challenge2_a: "Puoi mettere le istruzioni all'interno
+          del blocco `ripeti ... volte` per farle eseguire più e più volte. Provaci!\n\n<xml>\n
+          \ \n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">6</title>\n
+          \           <statement name=\"DO\">\n              <block type=\"draw_move_by_constant_dropdown\">\n
+          \               <title name=\"DIR\">moveForward</title>\n                <title
+          name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                <next>\n
+          \                 <block type=\"jump_by_constant_dropdown\">\n                    <title
+          name=\"DIR\">jumpForward</title>\n                    <title name=\"VALUE\"
+          config=\"25,50,100,150,200,300\">25</title>\n                  </block>\n
+          \               </next>\n              </block>\n              </statement></block></xml>"
       course2_bee_conditionals_challenge1:
         courseD_bee_conditionals_challenge1_a: |-
           Riesci a trovare un percorso che raggiunga tutti i fiori e i favi senza colpire nessun albero? Il percorso migliore è a spirale.
@@ -4799,7 +4853,20 @@ it-IT:
         courseD_bee_conditionals_challenge1_b: In questo esercizio, conviene immaginare
           che ogni casella possa avere un fiore, un favo o nulla. In questo modo portai
           ripetere l'istruzione condizionale `se/altrimenti` ad ogni passo.
+      course2_bee_conditionals_challenge2:
+        courseD_bee_conditionals_challenge1_b: |-
+          Proprio come i blocchi `se c'è un fiore`, il codice all'interno del ciclo `mentre nettare > 0` viene eseguito solo se l'ape è su un fiore. La differenza principale è che il codice all'interno verrà ripetuto più volte fino a quando non ci sarà più nettare.  Prova questo schema:
+
+          <xml>  <block type="bee_whileNectarAmount">
+              <title name="ARG1">nectarRemaining</title>
+              <title name="OP">&gt;</title>
+              <title name="ARG2">0</title>                    <statement name="DO">
+                                <block type="maze_nectar"/>
+                              </statement>
+            </block></xml>
       course2_collector_loops_challenge2:
+        courseC_maze_loops_challenge2_a: Il programma proposto funzionerebbe benissimo...
+          se ci fosse un solo diamante in ogni casella!
         courseC_maze_loops_challenge2_b: Usa dei cicli per non superare il numero
           massimo di blocchi `raccogli`!
       course2_collector_prog_challenge1:
@@ -4809,9 +4876,38 @@ it-IT:
         courseC_collector_prog_challenge1_a: Puoi usare più volte il blocco `raccogli`
           per raccogliere i diamanti supplementari.
       course2_harvester_loops_challenge1:
+        courseC_harvester_loops_challenge1_a: Non pensarci nemmeno a cercare una soluzione
+          senza cicli!
         courseC_harvester_loops_challenge1_b: Puoi ripetere i blocchi `vai avanti`
           e `prendi pannocchia` tutte le volte che ti serve, poi `gira a destra` ad
           ogni angolo.
+        courseC_harvester_loops_challenge1_c: |-
+          Il modo migliore per raccogliere le prime quattro pannocchie sfrutta un blocco `ripeti ... volte` all'interno di un altro blocco `ripeti ... volte`. Puoi usare questo schema anche per il resto dell'esercizio!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">2</title>
+                      <statement name="DO">
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                          <next>
+                            <block type="harvester_corn"/>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  </block></next></block></xml>
       course2_harvester_loops_challenge2:
         courseC_harvester_loops_challenge2_a: Un modo per risolvere questo esercizio
           assomiglia a uno zig-zag. Un altro modo ricorda una spirale! Ci sono tante
@@ -4829,6 +4925,13 @@ it-IT:
       course2_maze_loops_challenge1:
         courseC_maze_loops_challenge1_a: Considera questo percorso diviso in due parti
           diverse. Ognuna ha un suo schema che si ripete.
+        courseC_maze_loops_challenge1_b: Tra un blocco `ripeti ... volte` e l'altro,
+          sarà necessario girare a sinistra o a destra per predisporre Scrat al prossimo
+          schema.
+        courseC_maze_loops_challenge1_c: |-
+          Arrivati a questo punto, bastano alcun blocchi `gira a sinistra` e `vai avanti`. Non mollare!
+
+          ![](<https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34 PM.png>)
       course2_maze_programming_challenge2:
         courseC_maze_programming_challenge2_a: _"Se mi fai muovere all'indietro, stai
           particolarmente attento a farmi girare dalla parte giusta!"_
@@ -17601,6 +17704,34 @@ it-IT:
                                 </block>
                               </value>
                             </block></xml>
+      courseF_playlab_variables1a:
+        courseF_playlab_variables1a_a: Dovrai sostituire le parole "What should I
+          shout?" ("Cosa devo urlare?"), che intravedi nel blocco verde, con "Goal!"
+      courseF_playlab_variables2b:
+        courseF_playlab_variables2b_a: Cosa pensi che dirà Kiki quando premerai il
+          pulsante "Esegui"?
+      courseF_playlab_variables3b_josh:
+        courseF_playlab_variables3b_a: 'Ci sono due blocchi con spazi vuoti: uno nel  blocco
+          `il personaggio dice` ed uno nel blocco `unisci`. Aggiungi lì la variabile
+          `age`!'
+      courseF_playlab_variables4b:
+        courseF_playlab_variables4b_a: Non hai bisogno di prendere alcun blocco dalla
+          cassetta degli attrezzi.
+        courseF_playlab_variables4b_b: Posiziona due volte la variabile `age` ("età")
+          e una volta la variabile `name` ("nome") in modo che la conversazione abbia
+          senso.
+      courseF_playlab_variables5c:
+        courseF_playlab_variables5c_a: Cerca il blocco della variabile `answer` ("risposta")
+          nella categoria “Variabili” della cassetta degli attrezzi.
+        courseF_playlab_variables5c_b: Verifica il funzionamento del programma! Per
+          vedere come si comporta, prova ad inserire sia il colore "red" ("rosso"),
+          sia altri colori.
+      courseF_playlab_variables6c:
+        courseF_playlab_variables6c_a: Il blocco `chiedi` lo trovi all'interno della
+          categoria "Input" della cassetta degli attrezzi.
+      courseF_playlab_variables7c:
+        courseF_playlab_variables7c_a: Ricordati di mettere il nuovo blocco `chiedi`
+          prima dell'istruzione condizionale `se/altrimenti`.
       courseF_playlab_variables_challenge2:
         courseF_playlab_variables_challenge2_b: Se vuoi, puoi modificare il parametro
           che cambia la velocità alla quale si muove il cane ogni volta che premi

@@ -664,6 +664,101 @@ id-ID:
           = 100, 50, 150).
         Course_4_SCV_6_d: 'Zig, belok kiri oleh `360` /`sisi`. Untuk zag, belok kanan
           oleh `360` /`sisi`. '
+      CourseD_Dance_Party_01:
+        validation: |-
+          **Bagaimana cara lulus dari level ini?**
+
+          -   Pastikan seorang penari muncul di layar.
+
+          _Level ini akan berakhir setelah 4 birama._
+        challenges: |-
+          "**Tantangan pilihan**
+
+          -   Pilih lagu yang lain untuk diputar.
+          -   Ganti nama penari Anda.".
+      CourseD_Dance_Party_02:
+        validation: |-
+          **Bagaimana cara lulus dari level ini?**
+
+          -   Penari mesti beralih ke gerakan baru setelah 4 birama.
+
+          _Level ini akan berakhir setelah 7 birama._
+      CourseD_Dance_Party_03:
+        validation: |-
+          **Bagaimana cara lulus dari level ini?**
+
+          -   Setelah 6 birama, penari Anda mesti melakukan gerakan yang berbeda dari yang dilakukan setelah 4 birama.
+
+          _Level ini akan berakhir setelah 11 birama._
+      CourseD_Dance_Party_04:
+        validation: |-
+          **Bagaimana cara lulus dari level ini?**
+
+          -   Anda mesti mengubah efek latar belakang sebelum birama ketujuh pada lagu.
+
+          _Level ini akan berakhir setelah 9 birama._
+        challenges: |-
+          "**Tantangan opsional**
+
+          Ubah efek latar belakang pada berbagai titik berbeda selama pemutaran lagu dengan menghubungkan blok baru <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> acara.".
+      CourseD_Dance_Party_06:
+        validation: |-
+          **Bagaimana cara lulus dari level ini?**
+
+          -   Anda mesti memiliki minimal dua penari.
+
+          _Level ini akan berakhir setelah 5 birama._
+        challenges: |-
+          "**Tantangan Opsional**
+
+          -   Tambahkan penari ketiga (atau sebanyak yang Anda inginkan!)
+          -   Buat seluruh penari Anda melakukan berbagai gerakan berbeda pada berbagai saat pada lagu.".
+      CourseD_Dance_Party_08:
+        validation: |-
+          **Bagaimana cara lulus dari level ini?**
+
+          -   Dua penari mesti memiliki ukuran selain dari 100.
+
+          _Level ini akan berakhir setelah 5 birama._
+        challenges: |-
+          **Tantangan opsional**
+
+          -   Lakukan eksperimen dengan mengubah properti lain (lebar, tinggi, rotasi, dll.)
+      CourseD_Dance_Party_09:
+        validation: |-
+          **Bagaimana cara lulus dari level ini?**
+
+          -   Ubah warna minimal satu penari.
+
+          _Level ini akan berakhir setelah 7 birama._
+      CourseD_Dance_Party_10:
+        validation: |-
+          **Bagaimana cara lulus dari level ini?**
+
+          -   Properti untuk dua penari atau lebih harus berubah.
+
+          _Level ini akan berakhir setelah 7 birama._
+      CourseD_Dance_Party_11:
+        validation: |-
+          **Bagaimana cara lulus dari level ini?**
+
+          -   Silakan berkreasi!
+
+          _Level ini akan berakhir setelah 7 birama._
+      CourseD_Dance_Party_11_5:
+        validation: |-
+          **Bagaimana cara lulus dari level ini?**
+
+          -   Silakan berkreasi!
+
+          _Level ini akan berakhir setelah 7 birama._
+      CourseD_Dance_Party_11b:
+        validation: |-
+          **Bagaimana cara lulus dari level ini?**
+
+          -   Gunakan blok `ketika panah kiri ditekan` untuk membuat Robot melakukan gerakan tari ketika Anda menekannya.
+
+          _Level ini akan berakhir setelah 7 birama._
       CourseE_HOC 2018 Level_10:
         voyage_aquatic_10a: Lihat\*\* mercusuar\*\*![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
           Bagaimana caranya kamu bisa menggunakannya untuk melewati Ocean Monument?
@@ -673,6 +768,12 @@ id-ID:
         voyage_aquatic_9a: Lihat blok karang merah dan biru? Gunakan mereka sebagai
           tongkat penunjuk jalan untuk belok kiri atau kanan melalui batu karang.
       Dance_2019_01:
+        validation: |-
+          **Bagaimana cara lulus dari level ini?**
+
+          -   Pastikan seorang penari muncul di layar.
+
+          _Level ini akan berakhir setelah 4 birama._
         challenges: |-
           **Tantangan Opsional**
 
@@ -703,7 +804,20 @@ id-ID:
           **Tantangan Opsional**
 
           -   Buatlah penari merespons tombol panah kiri dan kanan.
+      Dance_2019_04:
+        validation: |-
+          **Bagaimana cara lulus dari level ini?**
+
+          -   Penari mesti beralih ke gerakan baru setelah 4 birama.
+
+          _Level ini akan berakhir setelah 7 birama._
       Dance_2019_05:
+        validation: |-
+          **Bagaimana cara lulus dari level ini?**
+
+          -   Setelah 6 birama, penari Anda mesti melakukan gerakan yang berbeda dari yang dilakukan setelah 4 birama.
+
+          _Level ini akan berakhir setelah 11 birama._
         challenges: |-
           **Tantangan Opsional**
 
@@ -727,9 +841,9 @@ id-ID:
 
           _Level ini akan berakhir setelah 6 birama._
         challenges: |-
-          **Optional Challenge**
+          **Tantangan opsional**
 
-          -   Experiment by changing other properties (width, height, rotation, etc.)
+          -   Lakukan eksperimen dengan mengubah properti lain seperti lebar atau tinggi.
       Dance_2019_08:
         validation: |-
           **Bagaimana cara lulus dari level ini?**
@@ -742,7 +856,7 @@ id-ID:
           Anda pilih dengan warna penari.
       Dance_2019_09:
         validation: |-
-          \***\*Bagaimana cara lulus dari level ini?**
+          **Bagaimana cara lulus dari level ini?**
 
           -   Cukup tekan tombol "Selesai"!
         repeat_every_ideas: |-
@@ -762,6 +876,101 @@ id-ID:
               <title name="MOVE">"rand"</title>
               <title name="DIR">-1</title>
               </block></xml>
+      Dance_Party_01:
+        validation: |-
+          **Bagaimana cara lulus dari level ini?**
+
+          -   Pastikan seorang penari muncul di layar.
+
+          _Level ini akan berakhir setelah 4 birama._
+        challenges: |-
+          "**Tantangan pilihan**
+
+          -   Pilih lagu yang lain untuk diputar.
+          -   Ganti nama penari Anda.".
+      Dance_Party_02:
+        validation: |-
+          **Bagaimana cara lulus dari level ini?**
+
+          -   Penari mesti beralih ke gerakan baru setelah 4 birama.
+
+          _Level ini akan berakhir setelah 7 birama._
+      Dance_Party_03:
+        validation: |-
+          **Bagaimana cara lulus dari level ini?**
+
+          -   Setelah 6 birama, penari Anda mesti melakukan gerakan yang berbeda dari yang dilakukan setelah 4 birama.
+
+          _Level ini akan berakhir setelah 11 birama._
+      Dance_Party_04:
+        validation: |-
+          **Bagaimana cara lulus dari level ini?**
+
+          -   Anda mesti mengubah efek latar belakang sebelum birama ketujuh pada lagu.
+
+          _Level ini akan berakhir setelah 9 birama._
+        challenges: |-
+          "**Tantangan opsional**
+
+          Ubah efek latar belakang pada berbagai titik berbeda selama pemutaran lagu dengan menghubungkan blok baru <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> acara.".
+      Dance_Party_06:
+        validation: |-
+          **Bagaimana cara lulus dari level ini?**
+
+          -   Anda mesti memiliki minimal dua penari.
+
+          _Level ini akan berakhir setelah 5 birama._
+        challenges: |-
+          "**Tantangan Opsional**
+
+          -   Tambahkan penari ketiga (atau sebanyak yang Anda inginkan!)
+          -   Buat seluruh penari Anda melakukan berbagai gerakan berbeda pada berbagai saat pada lagu.".
+      Dance_Party_08:
+        validation: |-
+          **Bagaimana cara lulus dari level ini?**
+
+          -   Dua penari mesti memiliki ukuran selain dari 100.
+
+          _Level ini akan berakhir setelah 5 birama._
+        challenges: |-
+          **Tantangan opsional**
+
+          -   Lakukan eksperimen dengan mengubah properti lain (lebar, tinggi, rotasi, dll.)
+      Dance_Party_09:
+        validation: |-
+          **Bagaimana cara lulus dari level ini?**
+
+          -   Ubah warna minimal satu penari.
+
+          _Level ini akan berakhir setelah 7 birama._
+      Dance_Party_10:
+        validation: |-
+          **Bagaimana cara lulus dari level ini?**
+
+          -   Properti untuk dua penari atau lebih harus berubah.
+
+          _Level ini akan berakhir setelah 7 birama._
+      Dance_Party_11:
+        validation: |-
+          **Bagaimana cara lulus dari level ini?**
+
+          -   Silakan berkreasi!
+
+          _Level ini akan berakhir setelah 7 birama._
+      Dance_Party_11_5:
+        validation: |-
+          **Bagaimana cara lulus dari level ini?**
+
+          -   Silakan berkreasi!
+
+          _Level ini akan berakhir setelah 7 birama._
+      Dance_Party_11b:
+        validation: |-
+          **Bagaimana cara lulus dari level ini?**
+
+          -   Gunakan blok `ketika panah kiri ditekan` untuk membuat Robot melakukan gerakan tari ketika Anda menekannya.
+
+          _Level ini akan berakhir setelah 7 birama._
       Function intro Ryan:
         Function_intro_Ryan_b: Jika anda menyebut fungsi dengan benar, ini adalah
           jalan yang akan anda tempuh...

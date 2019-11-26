@@ -3685,7 +3685,6 @@ ro:
           description_short: "[șir gol]"
           description: "[șir gol]"
         dance-extras:
-          title: Continuă să dansezi
           description_audience: "[șir gol]"
           description: Mergi mai departe de prima oră cu ideile de extindere a proiectelor.
         coursef-2019:
@@ -4856,7 +4855,6 @@ ro:
             For Loops:
               name: Bucle Pentru
         dance-extras-2019:
-          title: Continuă să dansezi
           description: Mergi mai departe de prima oră cu ideile de extindere a proiectelor.
           description_audience: "[șir gol]"
           stages:

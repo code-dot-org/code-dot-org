@@ -1664,7 +1664,6 @@ ko:
             Dance Party:
               name: 댄스 파티
         dance-extras:
-          title: 계속 춤추기
           description: 확장된 프로젝트 아이디어로 첫 번째 시간을 뛰어넘으세요.
         coursef-2019:
           stages:
@@ -1889,7 +1888,6 @@ ko:
             For Loops:
               name: 반복을 위한
         dance-extras-2019:
-          title: 계속 춤추기
           description: 확장된 프로젝트 아이디어로 첫 번째 시간을 뛰어넘으세요.
         time4cs-control-unit-1:
           stages:

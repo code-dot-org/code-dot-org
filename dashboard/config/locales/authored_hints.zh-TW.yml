@@ -2607,8 +2607,38 @@ zh-TW:
           這關卡有點難喔，因為你無法只用一個條件來檢查雲底下是空的還是有花蜜或蜂蜜。
 
           只要在路徑的最後查找花蜜與蜂蜜。
+      courseD_collector_debugging2a_2018:
+        courseD_collector_debugging2a_c: |-
+          發生了什麼？
+
+          應該發生了什麼？
+
+          這告訴了你什麼？
+      courseD_collector_debugging2a_2019:
+        courseD_collector_debugging2a_c: |-
+          發生了什麼？
+
+          應該發生了什麼？
+
+          這告訴了你什麼？
       courseD_collector_debugging3:
         courseD_collector_debugging3_b: 試著用巢狀迴圈簡化程式。
+      courseD_collector_debugging5a_2018:
+        courseD_collector_debugging5a_a: |-
+          它有什麼作用？
+
+          應該怎麼辦？
+
+          這告訴了你什麼？
+        courseD_collector_debugging5a_b: 一旦收集到了第一行寶藏之後，代碼中還剩下什麼？
+      courseD_collector_debugging5a_2019:
+        courseD_collector_debugging5a_a: |-
+          它有什麼作用？
+
+          應該怎麼辦？
+
+          這告訴了你什麼？
+        courseD_collector_debugging5a_b: 一旦收集到了第一行寶藏之後，代碼中還剩下什麼？
       courseD_collector_debugging8:
         courseD_collector_debugging8_b: 試試用巢狀迴圈來讓程式更精簡。
       courseD_collector_ramp10:
@@ -2966,6 +2996,8 @@ zh-TW:
           ![Solution Blocks](https://images.code.org/d64a0e22c1db1d98c35b243bca6460ab-image-1469727090121.png)
       courseF_artist_variables4:
         courseF_artist_variables4_b: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
+      courseF_artist_variables4_2018:
+        courseF_artist_variables4_a: 讓他準備去畫下一個三角形。
       courseF_artist_variables7:
         courseF_artist_variables7_c: 要左轉 120 度才能做出三角形的角。
       courseF_artist_variables7_2018:
