@@ -9,7 +9,9 @@
     / dsl-defined levels specify a name directly in the DSL text
     - unless @level.is_a? DSLDefined
       = f.label :name
-      = f.text_field :name, placeholder: 'Level Name'
+      = f.text_field :name, placeholder: 'Level Name', disabled: @visible
+      - if @visible
+        %p the level cannot be renamed because it appears in a visible script.
       .field
         = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :encrypted, description: "Encrypt this level's properties"}
 
