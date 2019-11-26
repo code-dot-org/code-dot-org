@@ -11,7 +11,7 @@ const colors = {
   orange: '#febe40',
   blue: '#3fa2f7',
   neonBlue: '#3cfff8',
-  transparentBlack: 'rgba(0,0,0,0.7)',
+  transparentBlack: 'rgba(0,0,0,0.85)',
   transparentWhite: 'rgba(255,255,255,0.8)'
 };
 
