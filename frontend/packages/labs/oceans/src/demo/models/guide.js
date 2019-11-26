@@ -121,7 +121,7 @@ const guides = [
   },
   {
     id: 'fishvtrash-pond-recall',
-    text: `Click here to switch between objects labeled as “Fish” and “Not Fish”.`,
+    text: `Click here to switch between objects labeled as “fish” and “not fish”.`,
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Pond},
     arrow: 'UpperRight'
   },
