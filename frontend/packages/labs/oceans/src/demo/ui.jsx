@@ -1340,7 +1340,7 @@ let Pond = class Pond extends React.Component {
                 </Button>
                 <Button
                   style={styles.finishButton}
-                  onClick={state.onContinue()}
+                  onClick={() => state.onContinue()}
                 >
                   Finish
                 </Button>
