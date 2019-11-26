@@ -539,7 +539,7 @@ class LevelsControllerTest < ActionController::TestCase
     assert_includes @response.body, level.name
     assert_not_includes @response.body, 'level cannot be renamed'
 
-    script.pilot_experiment = Experiment.LEVEL_EDITOR_EXPERIMENTS.last
+    script.pilot_experiment = 'platformization-partners'
     script.save!
     get :edit, params: {id: level.id}
     assert_response :success
