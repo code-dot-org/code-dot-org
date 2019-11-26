@@ -3,7 +3,6 @@
 - content_for(:head) do
   %script{src: webpack_asset_path('js/levelbuilder.js')}
 
-%pre#validation-error.validation-error{style: 'background-color: yellow; display: none'}
 = form_for [@level], method: @level.new_record? ? :post : :patch, remote: true do |f|
   = f.hidden_field :type, value: @type_class.to_s.presence || @level.type
   .field
