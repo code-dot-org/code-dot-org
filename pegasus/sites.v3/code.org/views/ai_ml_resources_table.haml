@@ -1,0 +1,96 @@
+:ruby
+  ai_activities = [
+    {
+      url: "https://teachablemachine.withgoogle.com/",
+      title: "Teachable Machine",
+      description: "Train a computer to recognize your own images, sounds, and poses.",
+      audience: "K-12"
+    },
+    {
+      url: "https://quickdraw.withgoogle.com/",
+      title: "Quick, Draw!",
+      description: "Can a neural network learn to recognize doodling?",
+      audience: "K-12"
+    },
+    {
+      url: "https://experiments.withgoogle.com/collection/ai",
+      title: "AI Experiments with Google",
+      description: "Start exploring machine learning through pictures, drawings, language, music, and more.",
+      audience: "K-12"
+    },
+    {
+      url: "https://mixlab.withgoogle.com/",
+      title: "MixLab",
+      description: "Make music using voice commands.",
+      audience: "K-12"
+    },
+    {
+      url: "http://nvidia-research-mingyuliu.com/gaugan",
+      title: "GauGAN Beta",
+      description: "Paint photo-realistic landscapes with the help of AI.",
+      audience: "K-12"
+    }
+  ]
+
+  ai_ml_resources = [
+    {
+      url: "https://machinelearningforkids.co.uk/",
+      title: "Machine Learning for Kids",
+      description: "Train a machine learning model with text, numbers, or images, and use it to make games in Scratch.",
+      audience: "K-12 (Reading required)"
+    },
+    {
+      url: "https://www.ibm.com/ibm/responsibility/initiatives/activitykits/machine-learning-for-kids/",
+      title: "IBM: Machine Learning for Kids",
+      description: "Hands-on activities to introduce simple machine learning models to students through games and interactive projects.",
+      audience: "K-12 (Reading required)"
+    },
+    {
+      url: "http://www.exploringcs.org/for-teachers-districts/artificial-intelligence",
+      title: "ECS: Artificial Intelligence (AI)",
+      description: "A new alternate curriculum unit for the Exploring Computer Science (ECS) curriculum.",
+      audience: "High school"
+    },
+    {
+      url: "https://course.elementsofai.com/",
+      title: "Elements of AI",
+      description: "A series of free online courses created by Reaktor and the University of Helsinki.",
+      audience: "High school"
+    },
+    {
+      url: "http://cognimates.me/home/",
+      title: "Cognimates",
+      description: "An AI education platform for building games, programming robots and training.",
+      audience: "K-12 (reading required)"
+    },
+  ]
+
+%h2="Activities Powered by AI and ML"
+%table{style: 'border: 1; width: 970px'}
+  %tbody
+    %tr{style: 'font-size: 16px; font-weight: bold; background: #ececec; color: dark-charcoal'}
+      %td Activity
+      %td Description
+      %td Audience
+    - ai_activities.each do |activity|
+      %tr
+        %td
+          %a{href: activity[:url]}
+            =activity[:title]
+        %td= activity[:description]
+        %td= activity[:audience]
+
+%h2="Teach and Learn about AI"
+%table{style: 'border: 1; width: 970px'}
+  %tbody
+    %tr{style: 'font-size: 16px; font-weight: bold; background: #ececec; color: dark-charcoal'}
+      %td Name
+      %td Description
+      %td Audience
+    - ai_ml_resources.each do |activity|
+      %tr
+        %td
+          %a{href: activity[:url]}
+            =activity[:title]
+        %td= activity[:description]
+        %td= activity[:audience]
