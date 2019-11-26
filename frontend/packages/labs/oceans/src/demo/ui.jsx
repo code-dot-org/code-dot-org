@@ -208,7 +208,8 @@ const styles = {
     left: '50%',
     transform: 'translateX(-50%)',
     fontSize: '180%',
-    color: colors.white
+    color: colors.white,
+    whiteSpace: 'nowrap'
   },
   trainButtons: {
     position: 'absolute',
