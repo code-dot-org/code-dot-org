@@ -28,7 +28,8 @@ class Courses extends Component {
     isSignedOut: PropTypes.bool.isRequired,
     linesCount: PropTypes.string.isRequired,
     studentsCount: PropTypes.string.isRequired,
-    modernElementaryCoursesAvailable: PropTypes.bool.isRequired
+    modernElementaryCoursesAvailable: PropTypes.bool.isRequired,
+    showOceans: PropTypes.bool
   };
 
   componentDidMount() {
@@ -43,7 +44,8 @@ class Courses extends Component {
       isEnglish,
       isTeacher,
       isSignedOut,
-      modernElementaryCoursesAvailable
+      modernElementaryCoursesAvailable,
+      showOceans
     } = this.props;
     const headingText = isTeacher
       ? i18n.coursesHeadingTeacher()
@@ -82,12 +84,14 @@ class Courses extends Component {
             {showSpecialTeacherAnnouncement && (
               <SpecialAnnouncementActionBlock />
             )}
-            <CoursesTeacherEnglish />
+            <CoursesTeacherEnglish showOceans={showOceans} />
           </div>
         )}
 
         {/* English, student.  (Also the default to be shown when signed out.) */}
-        {isEnglish && !isTeacher && <CoursesStudentEnglish />}
+        {isEnglish && !isTeacher && (
+          <CoursesStudentEnglish showOceans={showOceans} />
+        )}
 
         {/* Non-English */}
         {!isEnglish && (
