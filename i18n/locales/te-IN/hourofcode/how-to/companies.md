@@ -1,5 +1,5 @@
 ---
-title: How to host an Hour of Code - Companies
+title: ఒక అవర్ ఆఫ్ కోడ్ హోస్ట్ చేయడం ఎలా - కంపెనీలు
 ---
 
 {{ signup_button }}

@@ -857,6 +857,7 @@ zh-TW:
   carousel_heading_beyond_languages: 學習其他編程語言的教程
   carousel_heading_apps_games: 建立自己的應用程式或遊戲
   carousel_heading_university: 大學的線上課程
+  carousel_heading_online_university: 提供網上大學課程
   carousel_heading_webpages: 學習如何製作網頁
   carousel_heading_robots: 學習機器人編程
   carousel_heading_ide: 教師愛用的平台
@@ -1499,6 +1500,7 @@ zh-TW:
   header_documentation: 說明文件
   user_header_label: 嗨，%{username}
   user_header_team: 團隊
+  user_header_my_projects: 我的專案
   user_header_settings: 帳戶設定
   user_header_logout: 登出
   user_header_signin: 登入
@@ -1584,6 +1586,7 @@ zh-TW:
     150 個的主題活動，其中推薦你試試我們在 2018 年推出的全新一小時玩  Minecraft  - 水上巡航。快來註冊你的班級吧！
   hoc2018_mc_aquatic_title: Minecraft 水世界
   hoc2018_mc_aquatic_description: 全新的一小時玩 Minecraft 活動來了！用程式暢遊 Minecraft 世界吧。
+  hoc2019_mc_aquatic_description: 使用代碼來探索並構建水底世界。
   hoc2018_mc_hero_title: Minecraft 英雄之旅
   hoc2018_mc_hero_description: 全新的一小時玩 Minecraft 活動來了！用程式暢遊 Minecraft 世界吧。
   hoc2018_mc_designer_title: Minecraft 設計師
@@ -1594,7 +1597,13 @@ zh-TW:
   hoc2018_mc_no_internet: 沒有網路嗎？
   hoc2018_mc_download_adventurer: 下載離線版的 Minecraft 探險家。
   hoc2018_mc_educators_box1_title: 在 Minecraft 裡寫程式
+  hoc2018_mc_educators_box1_desc: Minecraft：教育版提供符合標準的Minecraft課程、培訓與編碼。
+  hoc2018_mc_educators_box1_button: 這就啟動
+  hoc2018_mc_educators_box2_title: 下載主持人指南
   hoc2018_mc_educators_box2_button: 下載
+  hoc2018_mc_educators_box4_title: 查看更多電腦科學資源
+  hoc2018_mc_educators_box4_desc: 利用Microsoft的數位技能與電腦科學教育資源，為你的社區帶來變化。
+  hoc2018_mc_educators_box4_button: 探索資源
   hoc2018_mc_watch_videos: 開始前不妨先看個勵志影片
   hoc2018_mc_videos_more: 更多來自模特兒及知名人士的<a href='%{inspiring_videos_playlist}'>啟發影片</a>
   hoc2018_mc_careers_more: 更多來自科技領域專業人士的<a href='%{careers_url}' target='_blank'>啟發影片</a>
@@ -1644,8 +1653,22 @@ zh-TW:
   hoc2018_dance_teacher_resources_tile2_title: 舞蹈派對不插電活動
   hoc2018_dance_teacher_resources_tile2_description: 不用電腦！從舞蹈派對裡一邊跳舞，一邊學習寫程式的概念。
   hoc2018_dance_teacher_resources_tile2_button: 不插電活動
+  hoc2018_dance_videos_section_heading: 獲得啟發
+  hoc2018_dance_video_title_what_is_creativity: 什麼是創意？
+  hoc2018_dance_view_creativity_video_playlist: 什麼是創意？觀看完整系列影片（5分鐘）
+  hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: 了解有關亞馬遜未來工程師 (Amazon
+    Future Engineer) 的更多資訊
+  hoc2018_dance_amazon_about_future_engineer_title: 有關亞馬遜未來工程師計畫 (Amazon Future Engineer)
   hoc2018_dance_amazon_about_future_engineer_button: 進一步了解
+  hoc2018_dance_amazon_try_coding_this_summer_title: 今年夏天試試學習編碼
+  hoc2018_dance_amazon_try_coding_this_summer_description: 參與Amazon Future Engineer所舉辦的免費、有趣且包羅萬象的電腦科學營！2019年夏天，居住在美國多個地區的學生（從幼兒園到8年級）都可參加夏令營。
+  hoc2018_dance_amazon_try_coding_this_summer_button: 加入夏令營
+  hoc2018_dance_amazon_scholarship_programs_title: 獎學金計劃
   hoc2018_dance_amazon_scholarship_programs_button: 立即申請
+  hoc2018_dance_amazon_internships_title: 來亞馬遜實習
+  hoc2018_dance_amazon_internships_button: 尋找一個實習機會
+  hoc2018_dance_amazon_k8_programs_title: 幼稚園到8年級的計畫課程
+  hoc2018_dance_amazon_funding_title: 為你的電腦科學學位獲取資金
   hoc2018_dance_measure: 小節
   hoc2018_dance_measure_colon: 小節：
   hoc2018_aquatic_video1: 'Minecraft: 水上巡航 - 介紹'
@@ -1658,3 +1681,10 @@ zh-TW:
   hoc2018_dance_video4: 舞蹈派對 - 恭喜
   page_not_found_title: 找不到頁面
   page_not_found_header: " 404：找不到頁面"
+  page_not_found_description: 你要查找的頁面在該地址不存在。檢查網址並重新提交。或者，返回我們的主頁。
+  page_not_found_button: 返回主頁
+  hoc2018_mc_thank_microsoft: 感謝Microsoft支持我們的願景與使命，以確保每位孩童都有機會學習電腦科學及掌握在21世紀獲得成功的技能。
+  hoc2019_mc_mee_title: Minecraft AI for Good
+  hoc2019_mc_mee_description1: 新的《Minecraft Hour of Code》教程現已在Minecraft上線：適用於Windows、Mac與iPad教育版。這就學習編碼的基礎知識，並與學生們一起探索人工智慧！
+  hoc2019_mc_mee_description2: 免費獲得資源，包括課程計劃、影片、電腦科學課程及教師培訓。
+  hoc2019_mc_more_coding_resources: 更多編碼資源

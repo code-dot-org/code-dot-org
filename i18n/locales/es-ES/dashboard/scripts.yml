@@ -3236,7 +3236,6 @@ es:
             Dance Party:
               name: Fiesta para bailar
         dance-extras:
-          title: Sigue bailando
           description: Ve más allá de la primera hora con más ideas para proyectos.
         coursef-2019:
           description_short: Aprende todos los conceptos de Fundamentos de Informática y crea tu propio arte, historia o juego.
@@ -3809,7 +3808,6 @@ es:
             For Loops:
               name: Bucles Para
         dance-extras-2019:
-          title: Sigue bailando
           description: Ve más allá de la primera hora con más ideas para proyectos.
         csp10-pilot:
           stages:

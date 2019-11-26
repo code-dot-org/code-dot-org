@@ -24,8 +24,22 @@ de:
     computer science. Change the world.'
   social_hoc2019_coming_dates: The Hour of Code is coming December 9-15, 2019. Computer
     science is foundational for every student to learn.
-  social_hoc2019_dance: Featuring Katy Perry, Jonas Brothers, Lil Nas X, Panic at
-    the Disco, and many more!
+  social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
+    Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
+  oceans_landing_title: AI for Oceans
+  oceans_landing_description: 'Explore machine learning by teaching “A.I.” to recognize
+    fish. #CSforGood'
+  oceans_landing_specs: English only | Ages 11+
+  oceans_landing_teacher_resources: Teacher Resources
+  oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
+    AI, machine learning, training data, and bias, while exploring ethical issues.
+  oceans_landing_resource_button: View Resources
+  oceans_landing_cs_for_good: CS For Good
+  oceans_landing_cs_for_good_desc: Resources to help students understand the role
+    computer science could play in creating a more equitable world.
+  hoc_overview_oceans_tutorial_header: AI Oceans
+  hoc_overview_oceans_tutorial_desc: Teach "A.I." to sort between fish and trash while
+    exploring broader artificial intelligence concepts.
   codeorg_homepage_hoc2018_curriculum: Mache weiter mit <a href="%{studio_url}/courses"
     class="hoc2018-curriculum-link">Code.org-Kursen</a>.
   codeorg_homepage_hoc2018_dance_heading: Erstelle Deine eigene <span class="highlight-word">Tanz&nbsp;Party</span>.
@@ -43,6 +57,7 @@ de:
   hourofcode_homepage_hoc2018_header_line2: Altersgruppe 4 bis 104.
   hoc2018_tutorial_mchoc_description: Verwende Code-Blöcke, um Steve oder Alex in
     ein Abenteuer durch die Minecraft-Welt zu schicken.
+  codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>
   cookie_banner_message: Indem Sie unsere Website weiter benutzen oder auf "Ich stimme
     zu" klicken, stimmen Sie der Speicherung von Cookies auf Ihrem Computer oder Gerät
     zu.
@@ -703,6 +718,7 @@ de:
   learn_robotics_banner_blurb: Haben Sie Roboter? Dann kombinieren Sie sie mit den
     folgenden Aktivitäten, um Schülern jeden Alters eine Stunde des Codes zum Anfassen
     anzubieten!
+  tutorial_dance2019_name: Dance Party 2019
   tutorial_danceparty_name: Tanzparty
   tutorial_chibitronics_name: 'Chibitronics: Erleuchtete Geschichte'
   tutorial_athlete_name: Programmiere dein eigenes Sportspiel
@@ -1183,9 +1199,9 @@ de:
   tutorial_sushicards_name: Beginner Scratch Sushi Cards
   tutorial_codesparkcreate_name: 'codeSpark Akademie: Spiele erstellen'
   tutorial_hardvsoft_name: Team Hardware vs. Team Software
-  tutorial_codestersecard_name: Making an E-Card
-  tutorial_codesterslogo_name: Your Company Logo
-  tutorial_codesterstshirt_name: Monogrammed T-Shirt Design
+  tutorial_codestersecard_name: Code an Interactive eCard
+  tutorial_codesterslogo_name: Design Your Own Logo
+  tutorial_codesterstshirt_name: Code Your Initials
   tutorial_codewards_name: Rescue the underwater city!
   tutorial_olympics_name: C.A.T.S. go for Robot Olympics
   tutorial_codinismhero_name: Programming Hero
@@ -1279,7 +1295,7 @@ de:
   tutorial_tommyturtle_name: 'Tommy the Turtle: Learn to Code'
   tutorial_mazyad_name: Mazyad's Adventures
   tutorial_gamemaker_name: Game Maker
-  tutorial_duckrace_name: The Big Duck Race
+  tutorial_duckrace_name: Das Große Entenrennen
   tutorial_allcancodeapps_name: 'Allcancode Platform: Build web and mobile apps in
     Blockly'
   tutorial_n2y_name: Bitt Bott Explores Earth
@@ -2488,6 +2504,9 @@ de:
   tutorial_allcancodeapps_shortdescription: Use the Allcancode Platform to create
     web and mobile apps from design to delivery.
   tutorial_n2y_shortdescription: Help Bitt Bott explore Earth using direction arrows.
+  tutorial_dance2019_longdescription: Code a Dance Party to share with your friends.
+    Featuring Katy Perry, Shawn Mendes, Lil Nas X, Panic! At The Disco, Jonas Brothers,
+    and many more!
   tutorial_danceparty_longdescription: Code a Dance Party to share with your friends.
     Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!
   tutorial_chibitronics_longdescription: Program a paper circuit to light up your
@@ -4958,6 +4977,9 @@ de:
     Each of the six activities includes simple directions that are supported with
     symbols from the n2y® SymbolStix PRIME® collection. The symbols help non-readers
     and beginning readers understand and follow the directions.
+  tutorial_dance2019_language: Arabic, Chinese, Czech, Danish, Dutch, English, Finnish,
+    French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean,
+    Malay, Polish, Portuguese, and 10 more!
   tutorial_danceparty_language: Mehrere
   tutorial_chibitronics_language: Deutsch
   tutorial_athlete_language: Englisch, Französisch, Spanisch, Italienisch, Portugiesisch
@@ -5652,6 +5674,7 @@ de:
   tutorial_duckrace_language: Englisch, Deutsch
   tutorial_allcancodeapps_language: Deutsch
   tutorial_n2y_language: Deutsch
+  tutorial_dance2019_string_detail_grades: Ab der 2. Klasse
   tutorial_danceparty_string_detail_grades: Ab der 2. Klasse
   tutorial_chibitronics_string_detail_grades: 2. - 5. Klasse
   tutorial_athlete_string_detail_grades: Ab der 2. Klasse
@@ -6005,7 +6028,7 @@ de:
   tutorial_codehsrn_string_detail_grades: Ab Klasse 9
   tutorial_codehswd_string_detail_grades: Ab der 6. Klasse
   tutorial_turtlerobot_string_detail_grades: K-5
-  tutorial_ozoevo_string_detail_grades: All ages
+  tutorial_ozoevo_string_detail_grades: Ab der 6. Klasse
   tutorial_ozoexped_string_detail_grades: Ab der 6. Klasse
   tutorial_ozojourney_string_detail_grades: 2. - 8. Klasse
   tutorial_ozocodes_string_detail_grades: All ages
@@ -6132,7 +6155,7 @@ de:
   tutorial_codesparkcreate_string_detail_grades: K-5
   tutorial_hardvsoft_string_detail_grades: K-5
   tutorial_codestersecard_string_detail_grades: 6. - 8. Klasse
-  tutorial_codesterslogo_string_detail_grades: 2. - 8. Klasse
+  tutorial_codesterslogo_string_detail_grades: Ab der 6. Klasse
   tutorial_codesterstshirt_string_detail_grades: Ab der 6. Klasse
   tutorial_codewards_string_detail_grades: 2. - 8. Klasse
   tutorial_olympics_string_detail_grades: 2. - 8. Klasse
@@ -6230,6 +6253,7 @@ de:
   tutorial_duckrace_string_detail_grades: Ab der 2. Klasse
   tutorial_allcancodeapps_string_detail_grades: Ab der 6. Klasse
   tutorial_n2y_string_detail_grades: Vorschulalter
+  tutorial_dance2019_string_platforms: Alle modernen Browser, iPad
   tutorial_danceparty_string_platforms: Alle modernen Browser, Android-Tablet, iPad
   tutorial_chibitronics_string_platforms: Alle modernen Browser
   tutorial_athlete_string_platforms: Alle modernen Browser
@@ -6949,6 +6973,7 @@ de:
   tutorial_duckrace_string_platforms: Alle modernen Browser, Android-Tablet, iPad
   tutorial_allcancodeapps_string_platforms: Alle modernen Browser
   tutorial_n2y_string_platforms: Unplugged
+  tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chibitronics Chibi Chip and Circuit
     Sticker LEDs
@@ -7529,6 +7554,7 @@ de:
   tutorial_duckrace_string_detail_platforms: ''
   tutorial_allcancodeapps_string_detail_platforms: ''
   tutorial_n2y_string_detail_platforms: ''
+  tutorial_dance2019_string_detail_programming_languages: Blöcke
   tutorial_danceparty_string_detail_programming_languages: Blöcke
   tutorial_chibitronics_string_detail_programming_languages: Blöcke
   tutorial_athlete_string_detail_programming_languages: Blöcke
@@ -8033,7 +8059,7 @@ de:
   tutorial_codesparkcreate_string_detail_programming_languages: Blöcke
   tutorial_hardvsoft_string_detail_programming_languages: ''
   tutorial_codestersecard_string_detail_programming_languages: Blocks, Python
-  tutorial_codesterslogo_string_detail_programming_languages: Blocks, Python
+  tutorial_codesterslogo_string_detail_programming_languages: Python
   tutorial_codesterstshirt_string_detail_programming_languages: Blocks, Python
   tutorial_codewards_string_detail_programming_languages: CoffeeScript
   tutorial_olympics_string_detail_programming_languages: CoffeeScript
@@ -8158,7 +8184,7 @@ de:
   tutorial_nclabdata_name: Data Power!
   tutorial_grasshopperphoto_name: Filter a Photo
   tutorial_tynkerpyland_name: Life on Land (Python)
-  tutorial_codeitimages_name: Code it! - Images and Animations
+  tutorial_codeitimages_name: Code it! - Animationen und Bilder
   tutorial_hyperpadenemy_name: Create a Smarter Enemy AI in hyperPad
   tutorial_tynkerpro_name: Responsible Consumption and Production
   tutorial_trashtag_name: 'Eco Warriors #Trashtag'
@@ -8237,6 +8263,8 @@ de:
   tutorial_ikodexmas_name: iKode Xmas
   tutorial_rpisensehat_name: Sense HAT data logger
   tutorial_modtraits_name: Character Traits with GoPiGo
+  tutorial_mee_name: 'Minecraft "Stunde des Codes": KI für einen guten Zweck '
+  tutorial_kuborobo_name: KUBO Robotics Coding Routes
   tutorial_scratchimagine_longdescription: Imagine a world where anything is possible,
     then bring it to life with Scratch!
   tutorial_codesterspsa_longdescription: Learn the basics of coding in Python while
@@ -8301,8 +8329,8 @@ de:
     to apply to different photos.
   tutorial_tynkerpyland_longdescription: 'Part of the UN Sustainable Development Goals
     project, this Python project will have you create your own tree-planting game. '
-  tutorial_codeitimages_longdescription: Learn to program your own amazing images
-    and animations.
+  tutorial_codeitimages_longdescription: In diesem Kurs lernst du, wie du deine eigenen
+    Bilder und Animationen programmierst.
   tutorial_hyperpadenemy_longdescription: 'Learn logical thinking and programming
     by creating a platformer game enemy AI. '
   tutorial_tynkerpro_longdescription: 'Part of the UN Sustainable Development Goals
@@ -8593,6 +8621,13 @@ de:
     environment.
   tutorial_modtraits_longdescription: 'Students use the steps of computational thinking
     to analyze character traits and create an algorithm to demonstrate those traits. '
+  tutorial_mee_longdescription: "Ein Dorf wird von einem Feuer bedroht und du musst
+    einen Code schreiben, um es zu retten! Triff deinen Code-Helfer, den Minecraft-Agenten,
+    und programmiere ihn so, dass er durch den Wald navigiert und Daten darüber sammelt,
+    was zu den Waldbränden führt. \n"
+  tutorial_kuborobo_longdescription: In this activity, students put their logic and
+    sequencing skills to the test as they use the Tagtiles to program their KUBO robot
+    to travel to various locations on a printed map.
   tutorial_scratchimagine_language: Nur Englisch
   tutorial_codesterspsa_language: Deutsch
   tutorial_googlehero_language: Nur Englisch
@@ -8689,6 +8724,13 @@ de:
   tutorial_ikodexmas_language: Deutsch
   tutorial_rpisensehat_language: Deutsch
   tutorial_modtraits_language: Deutsch
+  tutorial_mee_language: Englisch (USA), Englisch (UK), Deutsch, Spanisch (Spanien),
+    Spanisch (Mexiko), Französisch (Frankreich), Französisch (Kanada), Italienisch,
+    Japanisch, Koreanisch, Portugiesisch (Brasilien), Portugiesisch (Portugal), Russisch
+    , Chinesisch (vereinfacht), Chinesisch (traditionell), Türkisch, Polnisch, Indonesisch,
+    Ukrainisch, Griechisch, Bulgarisch, Ungarisch, Finnisch, Dänisch, Schwedisch,
+    Norwegisch, Slowakisch, Tschechisch, Niederländisch
+  tutorial_kuborobo_language: Nur Englisch
   tutorial_scratchimagine_string_detail_grades: Ab der 2. Klasse
   tutorial_codesterspsa_string_detail_grades: Ab der 6. Klasse
   tutorial_googlehero_string_detail_grades: 2. - 8. Klasse
@@ -8785,6 +8827,8 @@ de:
   tutorial_ikodexmas_string_detail_grades: 2. - 5. Klasse
   tutorial_rpisensehat_string_detail_grades: Ab der 6. Klasse
   tutorial_modtraits_string_detail_grades: Ab der 2. Klasse
+  tutorial_mee_string_detail_grades: Ab der 2. Klasse
+  tutorial_kuborobo_string_detail_grades: Pre-reader - Grades 8
   tutorial_scratchimagine_string_platforms: Alle modernen Browser, Android-Tablet,
     iPad
   tutorial_codesterspsa_string_platforms: Alle modernen Browser, Android-Tablet, iPad
@@ -8893,6 +8937,8 @@ de:
   tutorial_ikodexmas_string_platforms: Alle modernen Browser
   tutorial_rpisensehat_string_platforms: Alle modernen Browser
   tutorial_modtraits_string_platforms: Alle modernen Browser
+  tutorial_mee_string_platforms: Windows, iPad, MacOS
+  tutorial_kuborobo_string_platforms: Unplugged
   tutorial_scratchimagine_string_detail_platforms: ''
   tutorial_codesterspsa_string_detail_platforms: ''
   tutorial_googlehero_string_detail_platforms: ''
@@ -8992,6 +9038,8 @@ de:
   tutorial_ikodexmas_string_detail_platforms: Microsoft Kodu
   tutorial_rpisensehat_string_detail_platforms: Raspbian (software), SenseHAT
   tutorial_modtraits_string_detail_platforms: GoPiGo
+  tutorial_mee_string_detail_platforms: ''
+  tutorial_kuborobo_string_detail_platforms: KUBO robot
   tutorial_scratchimagine_string_detail_programming_languages: Blöcke
   tutorial_codesterspsa_string_detail_programming_languages: Python
   tutorial_googlehero_string_detail_programming_languages: Blöcke
@@ -9100,6 +9148,9 @@ de:
   tutorial_ikodexmas_string_detail_programming_languages: Microsoft Kodu
   tutorial_rpisensehat_string_detail_programming_languages: Python
   tutorial_modtraits_string_detail_programming_languages: Blöcke
+  tutorial_mee_string_detail_programming_languages: Blöcke
+  tutorial_kuborobo_string_detail_programming_languages: Tagtiles that students piece
+    together
   school_not_found_heading: We couldn't find your school. Please enter more information.
   school_name: School name
   school_name_error: School name is required.

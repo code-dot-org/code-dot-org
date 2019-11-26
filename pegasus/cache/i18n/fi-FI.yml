@@ -5,14 +5,14 @@ fi-FI:
   'yes': Kyllä
   'no': Ei
   select_language: Valitse kieli
-  upgrade_ie_message: Code.org poistaa pian tuen Internet Explorer 8, 9 ja 10 -selaimiin.
-    Ole hyvä ja päivitä uusimpaan selaimeen.
+  upgrade_ie_message: Code.org poistaa pian Internet Explorer 8, 9 ja 10 selaimien
+    tuen. Ole hyvä ja päivitä nykyaikaiseen selaimeen.
   upgrade_ie_message_csedweek: CSEdWeek.org poistaa pian tuen Internet Explorer 8,
     9 ja 10 -selaimiin. Ole hyvä ja päivitä uusimpaan selaimeen.
   upgrade_ie_link: Lue lisää
   en: Tietojenkäsittelytiede
   computer_science_edweek: Tietotekniikan koulutusviikko
-  csedweek_dates: 8. -14. Joulukuuta 2014
+  csedweek_dates: 3.-9. joulukuuta 2018
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Koodaustunti</a> on tulossa. Kaikki opettajat ja järjestäjät,
     <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -41,6 +41,8 @@ fi-FI:
   csedweek_og_title: Koodaustunti on täällä
   csedweek_og_description: Koodaustunti on maailmanlaajuinen liike, joka tavoittaa
     kymmeniä miljoonia eri ikäisiä oppilaita yli 180:ssä maassa ja yli 45 eri kielellä.
+  csedweek_og_description_here: Koodaustunti on saapunut. Jokainen oppilas jokaisessa
+    koulussa ansaitsee mahdollisuuden opiskella tietotekniikkaa. Se muuttaa kaiken.
   hoc2014_heading: Tule mukaan <a href="http://hourofcode.com">Koodaustuntiin</a><br/>8.–14.
     joulukuuta 2014<br/>
   hoc2014_students: Oppilaat
@@ -87,6 +89,7 @@ fi-FI:
   congratulations_volunteer: 'Onnittelut: Nyt kun olet kokeillut Koodaustuntia itse,
     <a href="https://code.org/volunteer">voit kirjautua vapaaehtoiseksi avustajaksi
     johonkin koululuokkaan</a> ja auttaa oppilaita oppimaan Koodaustunnilla!'
+  congratulations_on_completing_course: Onnittelut! Läpäisit kurssin %{course}
   congrats_next_tutorials_title: Kokeile näitä johdantoja seuraavaksi
   congrats_next_tutorials_desc: Kokeile näitä lyhyempiä, yhden tunnin oppitunteja,
     tai kokeile <a href="%{current_path}/next">kumppaneidemme oppitunteja</a>.
@@ -243,6 +246,8 @@ fi-FI:
   just_did_accelerated: Suoritin juuri nopeutetun kurssin - tsekkaa tämä! @codeorg
   just_did_hoc_donor: 'Suoritin juuri #Koodaustunnin - Tarkista tämä! (Kiitos %{donor_twitter}
     tukemisesta @codeorg)'
+  just_did_course_donor: Suoritin juuri kurssin %{course} - käy katsomassa! Kiitos
+    %{donor_twitter} @codeorg tuestasi
   twitter_teach_cs: Yhdeksän kymmenestä haluaisi että kouluissa opettaisiin tietojenkäsittelyä.
     http://youtu.be/nKIu9yen5nc. Käy katsomassa https://code.org/.
   twitter_cs_foundational: Tietojenkäsittelytiede on perustavaa opintoa jokaiselle
@@ -1464,6 +1469,11 @@ fi-FI:
   applab_tile_start_tutorial: Aloita
   applab_tile_teacher_guide: Katso opettajan opas
   aquatic_name: 'Minecraft: Merellinen matka'
+  account_sign_up_email_opt_in: Saammeko lähettää ilmoituksia kursseistamme, paikallisista
+    tapahtumista tai muista tietojenkäsittelytekniikan uutisista sähköpostiisi? (noin
+    kerran kuussa)
+  account_sign_up_child_accept_terms: Vahvistan että minulla on huoltajani lupa käyttää
+    Code.org palveluita.
   hoc_overview_partner_activities_title: Enemmän toimintoja yhteistyökumppaneilta
   hoc_overview_partner_activities_body: Hour of Code-sivustolla on yli 100 tietojenkäsittelyn
     aktiviteettia kaikenikäisille ja kaikille osaamistasoille. Sivuston on kehittänyt

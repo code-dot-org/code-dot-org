@@ -8896,7 +8896,6 @@ zh-CN:
           stages:
             Dance Party - Go Further:
               name: 舞会 - 继续
-          title: 继续跳舞
           description_short: 结束代码一小时活动后，请参照 Code.org 的舞蹈聚会教程完成后续练习。
           description: 通过扩展项目创意，超越第一个小时。
         coursef-2019:
@@ -11436,7 +11435,6 @@ zh-CN:
             For Loops:
               name: 计数循环
         dance-extras-2019:
-          title: 继续跳舞
           description: 通过扩展项目创意，超越第一个小时。
           description_short: 结束代码一小时活动后，请参照 Code.org 的舞蹈聚会教程完成后续练习。
           stages:
