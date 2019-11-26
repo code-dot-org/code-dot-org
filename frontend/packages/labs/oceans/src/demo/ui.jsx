@@ -88,9 +88,7 @@ const styles = {
   backButton: {
     position: 'absolute',
     bottom: '2%',
-    left: '1.2%',
-    backgroundColor: colors.blue,
-    color: colors.white
+    left: '1.2%'
   },
   button2col: {
     width: '20%',
@@ -282,13 +280,24 @@ const styles = {
     fontSize: '80%',
     marginLeft: 12
   },
-  eraseButton: {
+  eraseButtonContainer: {
     cursor: 'pointer',
-    color: colors.white,
-    border: `3px solid ${colors.white}`,
     borderRadius: 50,
-    padding: '6px 8px',
-    marginLeft: 10
+    padding: 8,
+    marginLeft: 10,
+    backgroundColor: colors.white,
+    color: colors.grey,
+    ':hover': {
+      backgroundColor: colors.red,
+      color: colors.white
+    },
+    ':focus': {
+      backgroundColor: colors.red,
+      color: colors.white
+    }
+  },
+  eraseButton: {
+    padding: '0 3px'
   },
   mediaControls: {
     position: 'absolute',
@@ -431,24 +440,51 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'space-between'
   },
+  recallIcons: {
+    backgroundColor: colors.white,
+    color: colors.grey,
+    maxHeight: 42,
+    borderRadius: 8
+  },
   recallIcon: {
     cursor: 'pointer',
-    width: 30,
-    height: 30,
-    border: `3px solid ${colors.white}`,
+    width: 28,
+    height: 28,
+    padding: 7
+  },
+  infoIconContainer: {
+    cursor: 'pointer',
     borderRadius: 50,
-    padding: 6,
+    padding: 7,
     marginLeft: 8,
-    backgroundColor: colors.lightGrey
+    width: 28,
+    height: 28,
+    backgroundColor: colors.white,
+    color: colors.grey,
+    ':hover': {
+      backgroundColor: colors.neonBlue,
+      color: colors.white
+    },
+    ':focus': {
+      backgroundColor: colors.neonBlue,
+      color: colors.white
+    }
+  },
+  infoIcon: {
+    width: 28,
+    height: 28
   },
   bgNeonBlue: {
-    backgroundColor: colors.neonBlue
+    backgroundColor: colors.neonBlue,
+    color: colors.white
   },
   bgRed: {
-    backgroundColor: colors.red
+    backgroundColor: colors.red,
+    color: colors.white
   },
   bgGreen: {
-    backgroundColor: colors.green
+    backgroundColor: colors.green,
+    color: colors.white
   },
   pill: {
     display: 'flex',
@@ -838,21 +874,23 @@ let Train = class Train extends React.Component {
         </div>
         <div style={styles.trainingIcons}>
           <div style={styles.counter}>
-            <img src={counterIcon} />
+            <img src={counterIcon} style={{height: 28}} />
             <span style={styles.counterNum}>
               {Math.min(999, state.yesCount + state.noCount)}
             </span>
           </div>
-          <FontAwesomeIcon
-            icon={faTrash}
-            style={styles.eraseButton}
-            onClick={() => {
-              setState({
-                showConfirmationDialog: true,
-                confirmationDialogOnYes: resetTrainingFunction
-              });
-            }}
-          />
+          <span style={styles.eraseButtonContainer}>
+            <FontAwesomeIcon
+              icon={faTrash}
+              style={styles.eraseButton}
+              onClick={() => {
+                setState({
+                  showConfirmationDialog: true,
+                  confirmationDialogOnYes: resetTrainingFunction
+                });
+              }}
+            />
+          </span>
         </div>
         <div style={styles.trainButtons}>
           <Button
@@ -1297,32 +1335,40 @@ let Pond = class Pond extends React.Component {
       <Body>
         <div onClick={e => this.onPondClick(e)} style={styles.pondSurface} />
         <div style={styles.recallContainer}>
-          {showInfoButton && (
+          <div style={styles.recallIcons}>
             <FontAwesomeIcon
-              icon={faInfo}
+              icon={faCheck}
               style={{
                 ...styles.recallIcon,
-                ...(!state.pondPanelShowing ? styles.bgNeonBlue : {})
+                ...{borderTopLeftRadius: 8, borderBottomLeftRadius: 8},
+                ...(!state.showRecallFish ? styles.bgGreen : {})
               }}
-              onClick={this.onPondPanelButtonClick}
+              onClick={this.toggleRecall}
             />
+            <FontAwesomeIcon
+              icon={faBan}
+              style={{
+                ...styles.recallIcon,
+                ...{borderTopRightRadius: 8, borderBottomRightRadius: 8},
+                ...(state.showRecallFish ? styles.bgRed : {})
+              }}
+              onClick={this.toggleRecall}
+            />
+          </div>
+          {showInfoButton && (
+            <span
+              style={{
+                ...styles.infoIconContainer,
+                ...(!state.pondPanelShowing ? {} : styles.bgNeonBlue)
+              }}
+            >
+              <FontAwesomeIcon
+                icon={faInfo}
+                style={styles.infoIcon}
+                onClick={this.onPondPanelButtonClick}
+              />
+            </span>
           )}
-          <FontAwesomeIcon
-            icon={faCheck}
-            style={{
-              ...styles.recallIcon,
-              ...(!state.showRecallFish ? styles.bgGreen : {})
-            }}
-            onClick={this.toggleRecall}
-          />
-          <FontAwesomeIcon
-            icon={faBan}
-            style={{
-              ...styles.recallIcon,
-              ...(state.showRecallFish ? styles.bgRed : {})
-            }}
-            onClick={this.toggleRecall}
-          />
         </div>
         <img style={styles.pondBot} src={aiBotClosed} />
         {state.canSkipPond && (
