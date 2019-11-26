@@ -87,10 +87,10 @@ export function renameColumnName(tableName, oldName, newName) {
 }
 
 /**
- * @param {string} tableName
- * @returns {Promise} Promise containing an array of column names.
  * Gets a one-time snapshot of the column names for the given table at
  * /<channelId>/metadata/tables/<tableName>/columns
+ * @param {string} tableName
+ * @returns {Promise} Promise containing an array of column names.
  */
 export function getColumnNamesSnapshot(tableName) {
   const columnsRef = getColumnsRef(getProjectDatabase(), tableName);
@@ -101,11 +101,11 @@ export function getColumnNamesSnapshot(tableName) {
 }
 
 /**
+ * Sets up a listener on /<channelId>/metadata/tables/<tableName>/columns and calls the
+ * provided callback whenever the columns change.
  * @param database
  * @param {string} tableName
  * @param callback
- * Sets up a listener on /<channelId>/metadata/tables/<tableName>/columns and calls the
- * provided callback whenever the columns change.
  */
 export function onColumnsChange(database, tableName, callback) {
   getColumnsRef(database, tableName).on('value', snapshot => {
