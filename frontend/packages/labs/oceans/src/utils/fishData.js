@@ -162,7 +162,7 @@ const fishComponents = {
     circle_1: {
       src: circle_1_image,
       anchor: [95, 55],
-      faceAnchor: [8, 15],
+      faceAnchor: [8, 17],
       pectoralFinBackAnchor: [5, 76],
       pectoralFinFrontAnchor: [56, 82],
       dorsalFinAnchor: [50, 14],
@@ -174,7 +174,7 @@ const fishComponents = {
     circle_2: {
       src: circle_2_image,
       anchor: [91, 60],
-      faceAnchor: [9, 10],
+      faceAnchor: [8, 12],
       pectoralFinBackAnchor: [22, 72],
       pectoralFinFrontAnchor: [70, 72],
       dorsalFinAnchor: [54, 14],
@@ -186,7 +186,7 @@ const fishComponents = {
     diamond1: {
       src: diamond1_image,
       anchor: [80, 82],
-      faceAnchor: [15, 2],
+      faceAnchor: [15, 1],
       pectoralFinBackAnchor: [40, 31],
       pectoralFinFrontAnchor: [75, 33],
       dorsalFinAnchor: [75, 15],
@@ -204,12 +204,12 @@ const fishComponents = {
     other_1: {
       src: other_1_image,
       anchor: [71, 69],
-      faceAnchor: [10, 5],
-      pectoralFinBackAnchor: [32, 58],
-      pectoralFinFrontAnchor: [80, 60],
+      faceAnchor: [12, 6],
+      pectoralFinBackAnchor: [32, 56],
+      pectoralFinFrontAnchor: [80, 58],
       dorsalFinAnchor: [69, 15],
       tailAnchor: [130, 15],
-      scalesAnchor: [76, 17],
+      scalesAnchor: [76, 18],
       knnData: [7150, BodyShape.OTHER],
       type: FishBodyPart.BODY,
       exclusions: [
@@ -221,8 +221,8 @@ const fishComponents = {
     },
     other_2: {
       src: other_2_image,
-      anchor: [77, 43],
-      faceAnchor: [29, 34],
+      anchor: [69, 44],
+      faceAnchor: [28, 36],
       pectoralFinBackAnchor: [22, 100],
       pectoralFinFrontAnchor: [80, 100],
       dorsalFinAnchor: [71, 15],
@@ -276,7 +276,7 @@ const fishComponents = {
     other_5: {
       src: other_5_image,
       anchor: [80, 55],
-      faceAnchor: [9, 21],
+      faceAnchor: [9, 22],
       pectoralFinBackAnchor: [20, 75],
       pectoralFinFrontAnchor: [65, 78],
       dorsalFinAnchor: [65, 14],
@@ -390,7 +390,7 @@ const fishComponents = {
     rectangle_3: {
       src: rectangle_3_image,
       anchor: [92, 84],
-      faceAnchor: [1, 1],
+      faceAnchor: [1, 0],
       pectoralFinBackAnchor: [15, 28],
       pectoralFinFrontAnchor: [59, 32],
       dorsalFinAnchor: [53, 10],
@@ -429,7 +429,7 @@ const fishComponents = {
     s2: {
       src: s2_image,
       anchor: [87, 71],
-      faceAnchor: [0, 27],
+      faceAnchor: [0, 26],
       pectoralFinBackAnchor: [13, 54],
       pectoralFinFrontAnchor: [42, 52],
       dorsalFinAnchor: [75, 10],
