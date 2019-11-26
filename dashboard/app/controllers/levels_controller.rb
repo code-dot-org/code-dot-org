@@ -127,6 +127,8 @@ class LevelsController < ApplicationController
 
   # GET /levels/1/edit
   def edit
+    @visible = @level.script_levels.map(&:script).reject(&:hidden).any?
+    @standalone = ProjectsController::STANDALONE_PROJECTS.values.map {|h| h[:name]}.include?(@level.name)
   end
 
   # GET /levels/:id/get_rubric
