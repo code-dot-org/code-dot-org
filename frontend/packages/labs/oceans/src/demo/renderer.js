@@ -314,7 +314,7 @@ const drawMovingFish = state => {
 
   const maxScreenX =
     state.currentMode === Modes.Training
-      ? constants.canvasWidth - 65
+      ? constants.canvasWidth - 63
       : constants.canvasWidth + constants.fishCanvasWidth;
   const startFishIdx = Math.max(
     getFishIdxForLocation(maxScreenX, offsetX, state.fishData.length),
