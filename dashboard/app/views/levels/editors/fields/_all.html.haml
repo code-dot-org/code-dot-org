@@ -29,7 +29,7 @@
   = f.text_area :bubble_choice_description, rows: 3, class: "input-block-level"
 
 .field
-  %legend.control-legend{data: {toggle: "collapse", target: "#audit_log_info"}}
+  %legend.control-legend.collapsed{data: {toggle: "collapse", target: "#audit_log_info"}}
     Audit Log
   %p A log of the people who most recently edited this level (up to the last 10 people)
   #audit_log_info.collapse
