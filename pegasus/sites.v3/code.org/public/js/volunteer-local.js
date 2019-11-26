@@ -138,7 +138,7 @@ function getLocations(results) {
       // 0.01 degree is approximately 1km. randomize within this 1km to avoid showing exact addresses
       var lat = coordinates[0] - 0.005 + 0.01 * Math.random();
       var lon = coordinates[1] - 0.005 + 0.01 * Math.random();
-      var title = escapeHTML(volunteers[index].name_s);
+      var title = escapeHtml(volunteers[index].name_s);
       var id = volunteers[index].id;
       var html = compileHTML(index, volunteers[index]);
       var contact_title = compileContact(index, volunteers[index]);
@@ -434,20 +434,15 @@ function i18n(token) {
  * Replaces special characters in string by HTML entities.
  * List of special characters is taken from
  * https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html
+ *
+ * This is a copy of the same function from @cdo/apps/src/utils.js.
  */
-function escapeHTML(string) {
-  const htmlEscapes = {
-    "&": "&amp;",
-    "<": "&lt;",
-    ">": "&gt;",
-    '"': "&quot;",
-    "'": "&#x27;",
-    "/": "&#x2F;"
-  };
-
-  const searchPattern = /[&<>"'/]/g;
-
-  return string
-    ? string.replace(searchPattern, chr => htmlEscapes[chr])
-    : string;
+export function escapeHtml(unsafe) {
+  return unsafe
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;")
+    .replace(/\//g, "&#47;");
 }
