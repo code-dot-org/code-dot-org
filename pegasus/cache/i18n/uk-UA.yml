@@ -1895,7 +1895,8 @@ uk-UA:
   header_help_us: Допомога нам
   header_about: Про
   header_teacher_community: Спільнота вчителів
-  header_report_bug: Повідомити про помилку
+  header_help_support: 'Допомога та підтримка '
+  header_report_bug: Сповістити про проблему
   header_tutorials: Навчальні матеріали
   header_documentation: Документація
   user_header_label: Привіт %{username}

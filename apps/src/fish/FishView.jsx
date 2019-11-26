@@ -10,14 +10,14 @@ const styles = {
   container: {
     position: 'relative',
     width: '100%',
-    minWidth: '770px',
+    minWidth: '480px',
     margin: '0 auto',
     userSelect: 'none'
   },
   containerReact: {
     position: 'absolute',
     width: '100%',
-    minWidth: '770px',
+    minWidth: '480px',
     margin: '0 auto',
     userSelect: 'none',
     fontFamily: '"Gotham 4r", arial, sans-serif',
