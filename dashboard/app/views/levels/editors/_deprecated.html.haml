@@ -42,13 +42,13 @@
 
   -# Deprecated for all blockly levels
   - if !(@level.uses_droplet?) && @level.is_a?(Blockly)
-    = render partial: 'levels/editors/ani_gif', locals: {f: f}
+    = render partial: 'levels/editors/fields/ani_gif', locals: {f: f}
 
   -# Deprecated only for Sprite Lab and Dance
   - if @level.is_a?(GamelabJr) || @level.is_a?(Dancelab)
-    = render partial: 'levels/editors/custom_block', locals: {f: f}
+    = render partial: 'levels/editors/fields/custom_block', locals: {f: f}
 
-    = render partial: 'levels/editors/custom_helper_library', locals: {f: f}
+    = render partial: 'levels/editors/fields/custom_helper_library', locals: {f: f}
 
     .field
       = f.label :map_reference, 'Map Reference'
@@ -73,7 +73,7 @@
       = f.text_field :failure_message_override, style: 'width: 600px;', placeholder: 'Type Override Failure Message Here'
 
     .field
-      = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: 'pause_animations_by_default', description: "Animations are paused by default"}
+      = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: 'pause_animations_by_default', description: "Animations are paused by default"}
 
       %p
         If checked, the sprite animation will always be paused after a <tt>setAnimation</tt> call.
@@ -81,18 +81,18 @@
 
     .field
       = link_to 'Edit Required Blocks', edit_blocks_level_path(@level, :required_blocks) unless @level.new_record?
-      = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'required'}
+      = render partial: 'levels/editors/fields/collapsible_block_editor', locals: {f: f, xml_id: 'required'}
 
     .field
       = link_to 'Edit Recommended Blocks', edit_blocks_level_path(@level, :recommended_blocks) unless @level.new_record?
-      = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'recommended'}
+      = render partial: 'levels/editors/fields/collapsible_block_editor', locals: {f: f, xml_id: 'recommended'}
 
     .field
       = link_to 'Edit Initialization Blocks', edit_blocks_level_path(@level, :initialization_blocks) unless @level.new_record?
-      = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'initialization'}
+      = render partial: 'levels/editors/fields/collapsible_block_editor', locals: {f: f, xml_id: 'initialization'}
 
     .field
-      = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :show_type_hints, description: "Show a small visual hint for what type of block a connection accepts"}
+      = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :show_type_hints, description: "Show a small visual hint for what type of block a connection accepts"}
 
     .field
-      = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :disable_variable_editing, description: "Disable editing of variable names and creation of new variables"}
+      = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :disable_variable_editing, description: "Disable editing of variable names and creation of new variables"}
