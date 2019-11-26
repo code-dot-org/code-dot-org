@@ -1,7 +1,7 @@
 ---
 title: Guía de transición para Fundamentos de Ciencias de la Computación
 theme: responsive
-style_min: verdadero
+style_min: true
 ---
 
 # Cursos de enseñanza A-F
