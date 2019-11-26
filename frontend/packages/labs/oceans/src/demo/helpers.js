@@ -14,9 +14,13 @@ export const $time =
 
 export const backgroundPathForMode = mode => {
   let img;
-  if (mode === Modes.Pond || mode === Modes.Predicting) {
+  if (
+    mode === Modes.Words ||
+    mode === Modes.Pond ||
+    mode === Modes.Predicting
+  ) {
     img = waterBackground;
-  } else if (mode === Modes.Words || mode === Modes.Training) {
+  } else if (mode === Modes.Training) {
     img = labBackground;
   }
   return img ? img : null;

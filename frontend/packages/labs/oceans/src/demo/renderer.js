@@ -518,70 +518,63 @@ const drawWordFishImages = () => {
   const state = getState();
 
   const fishScale = 0.7;
+  const possibleFishComponents = filterFishComponents(fishData, state.appMode);
+  let fishCount = state.fishCount;
+  // To prevent all the fish from being generated at the exact same time, only generate
+  // one per animation cycle.
+  let newFishGenerated = false;
 
   const t = $time();
-  state.wordFish.forEach(fish => {
-    const swayValue = ((t * 360) / (20 * 1000)) % 360;
-    const swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 3) / 20;
+  // Go through each "lane" on the screen and update the fish's position in that lane.
+  // Each lane should only have one fish and once the fish is completely off the screen,
+  // we should generate a new one.
+  Object.keys(state.wordFish).forEach(lane => {
+    let fish = state.wordFish[lane];
+    if (
+      !newFishGenerated &&
+      (!fish ||
+        fish.xy.x > constants.canvasWidth + constants.fishCanvasWidth ||
+        fish.xy.x < -constants.fishCanvasWidth)
+    ) {
+      const newFish = new FishOceanObject(fishCount, possibleFishComponents);
+      fishCount++;
+      newFish.randomize();
+      const y = lane * constants.fishCanvasHeight * fishScale;
+      newFish.setXY({x: -constants.fishCanvasWidth, y});
+      // As there should never be more than one fish per lane, randomize
+      // which way the fish is swimming.
+      newFish.faceLeft = Math.random() < 0.5 ? true : false;
+      state.wordFish[lane] = newFish;
+      fish = newFish;
+      newFishGenerated = true;
+    } else if (fish) {
+      const swayValue = ((t * 360) / (20 * 1000)) % 360;
+      const swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 3) / 20;
 
-    const xy = fish.getXY();
-    if (!fish.startTime) {
-      fish.startTime = t;
-      fish.speed = randomInt(10000, 15000);
-    }
-    let finalX;
-    if (fish.faceLeft) {
-      finalX =
-        constants.canvasWidth +
-        constants.fishCanvasWidth -
-        (constants.canvasWidth / fish.speed) * (t - fish.startTime);
-    } else {
-      finalX =
-        (constants.canvasWidth / fish.speed) * (t - fish.startTime) -
-        constants.fishCanvasWidth;
-    }
-    const finalY = xy.y + swayOffsetY;
-    fish.setXY({x: finalX, y: finalY});
+      const xy = fish.getXY();
+      if (!fish.startTime) {
+        fish.startTime = t;
+        fish.speed = randomInt(10, 15) * 1000;
+      }
+      let finalX;
+      if (fish.faceLeft) {
+        finalX =
+          constants.canvasWidth +
+          constants.fishCanvasWidth -
+          (constants.canvasWidth / fish.speed) * (t - fish.startTime);
+      } else {
+        finalX =
+          (constants.canvasWidth / fish.speed) * (t - fish.startTime) -
+          constants.fishCanvasWidth;
+      }
+      const finalY = xy.y + swayOffsetY;
+      fish.setXY({x: finalX, y: finalY});
 
-    drawSingleFish(fish, finalX, finalY, ctx, fishScale);
+      drawSingleFish(fish, finalX, finalY, ctx, fishScale);
+    }
   });
 
-  let wordFish = state.wordFish;
-  wordFish = wordFish.filter(
-    f =>
-      f.xy.x <= constants.canvasWidth + constants.fishCanvasWidth &&
-      f.xy.x >= -constants.fishCanvasWidth
-  );
-  const lastFish = wordFish[wordFish.length - 1];
-
-  if (
-    wordFish.length <= 1 ||
-    (wordFish.length <= 10 &&
-      lastFish.startTime > t &&
-      randomInt(0, wordFish.length * 500) <= 0)
-  ) {
-    const possibleFishComponents = filterFishComponents(
-      fishData,
-      state.appMode
-    );
-    const newFish = new FishOceanObject(
-      state.fishCount,
-      possibleFishComponents
-    );
-    newFish.randomize();
-    const lane = randomInt(
-      0,
-      Math.floor(
-        constants.canvasHeight / (fishScale * constants.fishCanvasHeight)
-      ) - 1
-    );
-    const y = lane * constants.fishCanvasHeight * fishScale;
-    newFish.setXY({x: -constants.fishCanvasWidth * 1.5, y});
-    newFish.faceLeft = lane % 2 === 0 ? true : false;
-    wordFish.push(newFish);
-    setState({fishCount: state.fishCount + 1});
-  }
-  setState({wordFish});
+  setState({fishCount});
 };
 
 const pondFishTransitionTime = 1500;
