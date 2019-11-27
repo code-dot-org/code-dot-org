@@ -15,19 +15,24 @@ def create_certificate_image2(image_path, name, params={})
   name = name.strip
   return background if name.empty?
 
-  # The user's name will be put into an image with a transparent background.
-  # This uses 'pango', the OS's text layout engine, in order to dynamically
-  # select the correct font. This is important for handling non-latin
-  # languages.
-  name_overlay = Magick::Image.read("pango:#{name}") do
-    # pango:markup is set to false in order to easily prevent pango markup injection
-    # from student names.
-    define('pango', 'markup', false)
-    self.background_color = 'none'
-    self.pointsize = 68
-    self.font = "Times bold"
-    self.fill = "#575757"
-  end.first.trim!
+  begin
+    # The user's name will be put into an image with a transparent background.
+    # This uses 'pango', the OS's text layout engine, in order to dynamically
+    # select the correct font. This is important for handling non-latin
+    # languages.
+    name_overlay = Magick::Image.read("pango:#{name}") do
+      # pango:markup is set to false in order to easily prevent pango markup injection
+      # from student names.
+      define('pango', 'markup', false)
+      self.background_color = 'none'
+      self.pointsize = 68
+      self.font = "Times bold"
+      self.fill = "#575757"
+    end.first.trim!
+  rescue Magick::ImageMagickError
+    # The student gave us a name we can't render, so leave the name blank.
+    return background
+  end
 
   # x,y offsets
   y = params[:y] || 0
