@@ -19,7 +19,7 @@ affected_users = have_race.
   where(user_geos: {id: nil}).
   or(have_race.where.not(user_geos: {country: "United States"}))
 
-affected_users.all.each do |user|
+affected_users.find_each do |user|
   # we can ignore users who have not signed in since the proxies list was
   # updated prior to https://github.com/code-dot-org/code-dot-org/pull/28635
   old_account = user.current_sign_in_at.present? &&
