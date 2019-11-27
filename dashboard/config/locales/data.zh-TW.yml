@@ -492,6 +492,8 @@ zh-TW:
         csd_problem_solving_process: 問題解決流程
         CSF_Spritelab_MakeSprite_v2: 如何建立一個角色
         CSF_SpriteLab_SpritesInAction_v2: 運行中的角色
+        oceans_machine_learning: 機器學習
+        oceans_training_data: 訓練數據
     callout:
       text:
         drag_blocks: 拖曳一個「移動」積木並將它放到其他積木下方

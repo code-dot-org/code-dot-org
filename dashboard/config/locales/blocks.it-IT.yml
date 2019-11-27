@@ -3,6 +3,7 @@ it:
   data:
     blocks:
       Dancelab_alternateMoves:
+        text: "{GROUP} alternano ogni {N} battute \ntra {MOVE1} e {MOVE2}"
         options:
           GROUP:
             sprites: tutto
@@ -18,7 +19,7 @@ it:
             '"SHARK"': tutti gli squali
             '"UNICORN"': Unicorni
           MOVE1:
-            MOVES.Roll: Ruota il corpo
+            MOVES.Roll: Piroetta
             MOVES.ClapHigh: Applauso alto
             MOVES.Dab: Dab
             MOVES.DoubleJam: Doppio giù
@@ -31,7 +32,7 @@ it:
             MOVES.Thriller: Zombie
             MOVES.Rest: Nessuno
           MOVE2:
-            MOVES.Roll: Ruota il corpo
+            MOVES.Roll: Piroetta
             MOVES.ClapHigh: Applauso alto
             MOVES.Dab: Dab
             MOVES.DoubleJam: Doppio giù
@@ -76,7 +77,7 @@ it:
             '"next"': "(Successiva)"
             '"prev"': "(Precedente)"
             '"rand"': "(Casuale)"
-            MOVES.Roll: Ruota il corpo
+            MOVES.Roll: Piroetta
             MOVES.ClapHigh: Applauso alto
             MOVES.Dab: Dab
             MOVES.DoubleJam: Doppio giù
@@ -98,7 +99,7 @@ it:
             '"next"': "(Successiva)"
             '"prev"': "(Precedente)"
             '"rand"': "(Casuale)"
-            MOVES.Roll: Ruota il corpo
+            MOVES.Roll: Piroetta
             MOVES.ClapHigh: Applauso alto
             MOVES.Dab: Dab
             MOVES.DoubleJam: Doppio giù
@@ -165,7 +166,7 @@ it:
           MOVE:
             '"rand"': "(Casuale)"
             MOVES.XBend: Butta dietro
-            MOVES.Roll: Ruota il corpo
+            MOVES.Roll: Piroetta
             MOVES.XClapSide: Applauso
             MOVES.ClapHigh: Applauso alto
             MOVES.Dab: Dab
@@ -197,7 +198,7 @@ it:
           MOVE:
             '"rand"': "(Casuale)"
             MOVES.XBend: Butta dietro
-            MOVES.Roll: Ruota il corpo
+            MOVES.Roll: Piroetta
             MOVES.XClapSide: Applauso
             MOVES.ClapHigh: Applauso alto
             MOVES.Dab: Dab
@@ -226,7 +227,7 @@ it:
       Dancelab_everyMeasuresRange:
         text: 'ripeti ogni {N} battute dopo {START} '
       Dancelab_everySeconds:
-        text: 'ogni {N} {UNIT} '
+        text: 'ripeti ogni {N} {UNIT} '
         options:
           UNIT:
             '"measures"': battute
@@ -280,7 +281,7 @@ it:
             MOVES.Drop: Spaccata
             MOVES.Floss: Floss
             MOVES.Fresh: Fresh
-            MOVES.Roll: Ruota il corpo
+            MOVES.Roll: Piroetta
             MOVES.Kick: Stella
             MOVES.ThisOrThat: Questo o quello
             MOVES.Thriller: Zombie
@@ -452,7 +453,7 @@ it:
             '"DOG"': Cani
             '"DUCK"': Paperi
             '"FROG"': Ranocchi
-            '"MOOSE"': Alci
+            '"MOOSE"': Alce
             '"PINEAPPLE"': Ananas
             '"ROBOT"': Robot
             '"SHARK"': Squali
@@ -1318,7 +1319,7 @@ it:
             MOVES.Drop: Spaccata
             MOVES.Floss: Floss
             MOVES.Fresh: Fresh
-            MOVES.Roll: Ruota il corpo
+            MOVES.Roll: Piroetta
             MOVES.Kick: Stella
             MOVES.ThisOrThat: Questo o quello
             MOVES.Thriller: Zombie

@@ -2,6 +2,9 @@
 da-DK:
   data:
     callouts:
+      AppLab Intro 7 - Change Screen Color:
+        applab_hoc_finish: Skiftede skærmen til grøn? Hvis det skete, så tryk på Færdig.
+          Hvis ikke, så tryk på Nulstil, ændre på koden og tryk igen på Kør.
       Course 4 Artist 4:
         repeat_full_circle: Angiv antallet af gange zombien skal bevæge sig for at
           have gennemført en fuld cirkel
@@ -30,7 +33,7 @@ da-DK:
       Course 4 Play Lab Vars 1:
         arrows_move_actor: Brug pilene til at flytte figuren
       Dance_2019_01:
-        dance_callout_01: Add this block to your program!
+        dance_callout_01: Her vælger du typen af danser.
       Dance_2019_02:
         dance_callout_11_a: Føj denne blok til dit program.
         arrow_buttons: Tryk på piletasterne for at kontrollere din danser.
@@ -146,6 +149,7 @@ da-DK:
       frozen freeplay:
         snowflake_dropdown: Brug denne drop-down menu til at oprette forskellige snefnug!
       frozen line:
+        run: Tryk på "Kør" for at prøve dit program!
         move_elsa_forward: Træk i en "flyt fremad"-blok og fastgør den under "når
           programmet kører"-blokken for at få Elsa til at bevæge sig fremad
       frozen perpendicular:

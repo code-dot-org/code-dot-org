@@ -461,6 +461,8 @@ ja:
         csd_gamelab_if_else: If/Else 文
         CSF_SpriteLabIntro_CDEF: スプライトラボ
         CSF_Spritelab_MakeSprite_CDEF: スプライトラボでスプライトを作成する方法
+        hoc_dance_events: ダンスパーティー - イベント
+        hoc_dance_properties: ダンスパーティー - プロパティ
         csd_pair_programming: ペアプログラミング
         csd_applab_parameters: パラメーター付き関数
     callout:

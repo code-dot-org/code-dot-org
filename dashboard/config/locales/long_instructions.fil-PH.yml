@@ -140,10 +140,6 @@ fil-PH:
         &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title>\n    <title name=\"LAYOUT\">\"circle\"</title>\n
         \ </block></xml>\nNgayon pwede ka  nang lumikha ng pangkat ng mga dancer nang
         sabay-sabay lahat!"
-      Dance_2019_07: |-
-        Ang bawat dancer ay may set ng _properties_ na kumokontrol kung ano ang hitsura nito.
-
-        Pwede mong gawin na mas malapit o mas malayong tingnan ang isang dancer sa pamamagitan ng pagpapalit sa laki nito. Palitan ang laki ng isang pangkat ng mga dancer minsan makalipas makapag-umpisa ang musika.
       Dance_2019_08: Ang mga dancer ay may "tint" property na makapagdagdag ng layer
         sa kulay. Subukang palitan ang tint ng isa sa iyong mga dancer (o ang buong
         pangkat)!
@@ -155,18 +151,86 @@ fil-PH:
         Ang ibang mga bagong block sa iyong toolbox ay magpapahintulot sa iyo na dahan-dahan (o random) na palitan ang mga property ng dancer paglipas ng panahon.
 
         _Maging mapanlikha at magsaya!_
-      Dance_Party_extras_layout_2019: |-
+      Dance_Party_extras_alternate_2019: |-
         # Mag-formation Tayo!
 
-        Tingnan ang sayaw na ito na gumagamit ng <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> block para baguhin ang formation ng mga backup dancer sa buong sayaw. Subukan ang isa sa mga ideyang ito para i-extend ito:
+        Tingnan ang sayaw na ito na gumagamit ng [blockly block][0] block para baguhin ang formation ng mga backup dancer sa buong sayaw. Subukan ang isa sa mga ideyang ito para i-extend ito:
 
         -   Lumikha ng ikalawang grupo ng mga dancer sa iba’t ibang layout
         -   Palitan ang layout kapag pinindot ang key
         -   Palitan ang property kapag nagbago ng formation ang mga dancer
+      Dance_Party_extras_battle: |-
+        "# Mga Dance Crew
+
+        Narito ang sayaw sa pagitan ng dalawang crew. Ang mga arrow key ay kumukontrol sa isa sa mga dancer at ang mga key na ""w,a,s,d"" ay kumukontrol sa iba. Makipagsayaw sa isang kaibigan, at subukan na pahusayin ang sayaw na ito.
+
+        \*Magdagdag ng mas maraming key para kontrolin ang mga sayaw
+
+        -   Patugunin din ang mga backup dancer kapag pinindot ang mga key
+        -   Pagpalit-palitin ang dancer kada 4 na measure sa pamamagitan ng pagtakda ng kanilang visibility"
+      Dance_Party_extras_battle_2019: |-
+        "# Mga Dance Crew
+
+        Narito ang sayaw sa pagitan ng dalawang crew. Ang mga arrow key ay kumukontrol sa isa sa mga dancer at ang mga key na ""w,a,s,d"" ay kumukontrol sa iba. Makipagsayaw sa isang kaibigan, at subukan na pahusayin ang sayaw na ito.
+
+        \*Magdagdag ng mas maraming key para kontrolin ang mga sayaw
+
+        -   Patugunin din ang mga backup dancer kapag pinindot ang mga key
+        -   Pagpalit-palitin ang dancer kada 4 na measure sa pamamagitan ng pagtakda ng kanilang visibility"
+      Dance_Party_extras_every_beat: |-
+        "# Quarter Notes
+
+        Karamihan sa ating mga sayaw ay gumagamit ng buong mga measure, ngunit ang bawat measure ay binubuo ng hanggang 4 na quarter notes. Ang sayaw na ito ay gumagamit ng `bawat 0.25 measures` para papalakpakin ang dancer sa bawat quarter note.
+
+        Ang sayaw na ito ay gumagamit ng _conditional_ block para kontrolin kapag binabago ng `bawat 0.25 measures` block ang sayaw. Subukang palitan ang mga numero sa conditional block para makita kung paano nito binabago ang sayaw.
+
+        -   Mag-eksperimento sa ibang tagal ng nota (tulad ng 0.5 para sa half note o 0.125 para sa ika-8 nota).
+        -   Magdagdag ng ilang event `matapos ang measure`.
+        -   Baguhin ang ""measures"" sa ""seconds"" at subukang orasan ang iyong mga sayaw sa paraang iyon.".
+      Dance_Party_extras_every_beat_2019: |-
+        # Bilisin Ito, Bagalan Ito
+
+        Ang pinal na sayaw na ito ay gumagamit ng [blockly block][0] block para kontrolin kung gaano kabilis gumagalaw ang bawat dancer. Subukang mag-eksperimento sa iba’t ibang bilis sa iba’t ibang punto ng awit. Malaya kang magti-tinker sa sayaw na ito, o bumalik sa alinmang naunang mga sayaw para mas gawing cool ang mga ito.
+      Dance_Party_extras_layout: |-
+        "# Mag-formation Tayo!
+
+        Tingnan ang sayaw na ito na gumagamit ng `layout` block para palitan ang formation ng mga backup dancer' sa buong sayaw. Subukan ang isa sa mga ideyang ito para pahabain ito:
+
+        -   Lumikha ng ikalawang pangkat ng mga dancer sa naiibang layout
+        -   Palitan ang layout kapag pinindot ang key
+        -   Palitan amg property kapag nagbago ng formation ang mga dancer"
+      Dance_Party_extras_on_beat: |-
+        "# Bass, Mid, at Treble
+
+        Ang sayaw na ito ay gumagamit ng mga ""peak"" event para pasimulan ang code kapag umingay ang iba't ibang parte ng musika. Subukang pahusayin ang iba't ibang awit para maita kung paano nila binabago ang sayaw.".
+      Dance_Party_extras_on_beat_2019: |-
+        "# Bass, Mid, at Treble
+
+        Ang sayaw na ito ay gumagamit ng mga ""peak"" event para pasimulan ang code kapag umingay ang iba't ibang parte ng musika. Subukang pahusayin ang iba't ibang awit para maita kung paano nila binabago ang sayaw.".
+      Dance_Party_extras_speed: |-
+        "# Bilisan Ito, Bagalan Ito
+
+        Ang huling sayaw na ito ay gumagamit ng `set speed` block para kontrolin kung gaano kabilis gumagalaw ang bawat dancer. Subukang mag-eksperimento sa iba't ibang bilis sa panahon ng iba't ibang punto ng awit. Malaya kang pahusayin ang sayaw na ito, o bumalik sa alinmang naunang mga sayaw para gawing mas cool ang mga ito.".
       Dance_Party_extras_speed_2019: |-
         # Bilisin Ito, Bagalan Ito
 
-        Ang pinal na sayaw na ito ay gumagamit ng <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> block para kontrolin kung gaano kabilis gumagalaw ang bawat dancer. Subukang mag-eksperimento sa iba’t ibang bilis sa iba’t ibang punto ng awit. Malaya kang magti-tinker sa sayaw na ito, o bumalik sa alinmang naunang mga sayaw para mas gawing cool ang mga ito.
+        Ang pinal na sayaw na ito ay gumagamit ng [blockly block][0] block para kontrolin kung gaano kabilis gumagalaw ang bawat dancer. Subukang mag-eksperimento sa iba’t ibang bilis sa iba’t ibang punto ng awit. Malaya kang magti-tinker sa sayaw na ito, o bumalik sa alinmang naunang mga sayaw para mas gawing cool ang mga ito.
+      Dance_Party_extras_visible: |-
+        "# Saan Sila Pumunta?
+
+        Ang sayaw na ito ay nagpapakita at itinatago ang dalawang magkaibang pangkat ng mga dancer. Tingnan ito, at subukang idagdag ang iyong sariling flair.
+
+        -   Idagdag ang ibang pangkat ng mga dancer
+        -   Ipakita at itago ang mga dancer gamit ang mga arrow key
+        -   Itago ang lahat ng dancer at lumipat sa isang kapana-panabik na background effect"
+      Dance_Party_extras_visible_2019: |-
+        "# Saan Sila Pumunta?
+
+        Ang sayaw na ito ay nagpapakita at itinatago ang dalawang magkaibang pangkat ng mga dancer. Tingnan ito, at subukang idagdag ang iyong sariling flair.
+
+        -   Idagdag ang ibang pangkat ng mga dancer
+        -   Ipakita at itago ang mga dancer gamit ang mga arrow key
+        -   Itago ang lahat ng dancer at lumipat sa isang kapana-panabik na background effect"
       K-1 Bee Loops 5: Gumamit ng `repeat` na mga loop para makakuha ng nektar at
         pulot!
       K-1 Maze Loops 2: Gamitin ang `repeat` na bloke para mapapunta ako sa baboy!

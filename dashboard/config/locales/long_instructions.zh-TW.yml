@@ -686,6 +686,14 @@ zh-TW:
 
         **連續按下按鍵讓機器人做出 drop-clap-drop-clap 的動作，看看你能做多快！**
       Dance_Party_12: 隨著音樂律動！建立一支自己的舞蹈，與朋友分享。
+      Dance_Party_extras_alternate_2019: |-
+        # 進入陣型！
+
+        使用[blockly block][0]程式積木來改變伴舞演員在整個舞蹈中的陣型。嘗試以下任意創意來擴展：
+
+        -   製作採用不同佈局的另一組舞者
+        -   按下按鍵時更改佈局
+        -   舞者改變陣型時更改屬性
       Dance_Party_extras_battle: |-
         # 舞蹈團隊
 
@@ -712,6 +720,10 @@ zh-TW:
         -   嘗試使用其它節奏（1/2 拍或 1/8 拍）。
         -   在`每次經過_小節後`積木之後添加其它事件。
         -   用「秒」替換「節拍」，並嘗試以這種方式為舞蹈計時。
+      Dance_Party_extras_every_beat_2019: |-
+        # 加速、減速
+
+        最後這段舞蹈採用[blockly block][0]程式積木來控制每個舞者的動作速度。嘗試在曲子的不同位置採用不同的速度看看。您可以在這段舞蹈裡面隨意調節，或者返回之前任意舞蹈，來讓效果變得更精彩一些。
       Dance_Party_extras_layout: |-
         # 讓我們加入陣形！
 
@@ -720,14 +732,6 @@ zh-TW:
         -   創建第二組舞者，讓他們使用不同的隊形。
         -   用事件來重新分佈舞者，比方說按下按鍵時更改隊形。
         -   在舞者變換隊形後，接著改變屬性。
-      Dance_Party_extras_layout_2019: |-
-        # 進入陣型！
-
-        使用<xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml>程式積木來改變伴舞演員在整個舞蹈中的陣型。嘗試以下任意創意來擴展：
-
-        -   製作採用不同佈局的另一組舞者
-        -   按下按鍵時更改佈局
-        -   舞者改變陣型時更改屬性
       Dance_Party_extras_on_beat: |-
         # 低音、中音和高音
 
@@ -743,7 +747,7 @@ zh-TW:
       Dance_Party_extras_speed_2019: |-
         # 加速、減速
 
-        最後這段舞蹈採用<xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml>程式積木來控制每個舞者的動作速度。嘗試在曲子的不同位置採用不同的速度看看。您可以在這段舞蹈裡面隨意調節，或者返回之前任意舞蹈，來讓效果變得更精彩一些。
+        最後這段舞蹈採用[blockly block][0]程式積木來控制每個舞者的動作速度。嘗試在曲子的不同位置採用不同的速度看看。您可以在這段舞蹈裡面隨意調節，或者返回之前任意舞蹈，來讓效果變得更精彩一些。
       Dance_Party_extras_visible: |-
         # 他們要去哪？
 
@@ -1340,6 +1344,8 @@ zh-TW:
       courseD_bee_nestedLoops9_predict2: 釀造全部的蜂蜜。
       courseD_bee_nestedLoops9_predict2_2018: 釀造全部的蜂蜜。
       courseD_bee_nestedLoops9_predict2_2019: 釀造全部的蜂蜜。
+      courseD_collector_debugging6a_2018: 挑戰：使用工作區中的代碼，可至少獲得**6**件寶物！
+      courseD_collector_debugging6a_2019: 挑戰：使用工作區中的代碼，可至少獲得**6**件寶物！
       courseD_collector_ramp10: "和之前的路徑一樣，不過這次要沿路收集到發現到的寶藏。\\\r"
       courseD_collector_ramp8: "這關很像上一關，不過現在我們是要幫 Laurel 完成探險！\\\r\n\n<hr/>\r\n\r\n和之前的走法相同，不過這次試試改用一個重複迴圈來收集到寶藏。\r"
       courseD_collector_ramp9: 有更多寶藏了，你可以幫 Laurel 收集到所有的寶藏嗎？

@@ -34,7 +34,7 @@ var blocksToDisplayText = {
   planksOak: i18n.blockTypePlanksOak(),
   planksSpruce: i18n.blockTypePlanksSpruce(),
   oreRedstone: i18n.blockTypeOreRedstone(),
-  rails: i18n.blockTypeRail(),
+  rail: i18n.blockTypeRail(),
   sand: i18n.blockTypeSand(),
   sandstone: i18n.blockTypeSandstone(),
   stone: i18n.blockTypeStone(),

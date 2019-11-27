@@ -1579,7 +1579,6 @@ fi:
           description_short: Minecraft on palannut takaisin Hour of Code -tunnille
             täysin uudella toiminnolla!
         dance-extras:
-          title: Jatka tanssimista
           description: Syvennä ensimmäisen oppitunnin osaamistasi laajennetuilla projekti-ideoilla.
         coursef-2019:
           stages:
@@ -1775,7 +1774,6 @@ fi:
             For Loops:
               name: Silmukat
         dance-extras-2019:
-          title: Jatka tanssimista
           description: Syvennä ensimmäisen oppitunnin osaamistasi laajennetuilla projekti-ideoilla.
         time4cs-control-unit-1:
           stages:
