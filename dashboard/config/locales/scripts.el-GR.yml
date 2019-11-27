@@ -1599,7 +1599,6 @@ el:
             Dance Party:
               name: Πάρτι Χορού
         dance-extras:
-          title: Συνεχίστε να Χορεύετε
           description: Πηγαίνετε πέρα από την πρώτη ώρα με εκτενείς ιδέες για πρότζεκτ.
         coursef-2019:
           stages:
@@ -1832,7 +1831,6 @@ el:
             For Loops:
               name: Βρόχοι Για
         dance-extras-2019:
-          title: Συνεχίστε να Χορεύετε
           description: Πηγαίνετε πέρα από την πρώτη ώρα με εκτενείς ιδέες για πρότζεκτ.
         time4cs-control-unit-1:
           stages:

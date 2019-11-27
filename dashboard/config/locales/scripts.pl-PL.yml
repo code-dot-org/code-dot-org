@@ -4254,7 +4254,6 @@ pl:
             Dance Party:
               name: Potańcówka
         dance-extras:
-          title: Nie przestawaj tańczyć
           description: Wyjdź poza pierwszą godzinę dzięki rozszerzonym pomysłom na
             projekt.
         coursef-2019:
@@ -4936,7 +4935,6 @@ pl:
             For Loops:
               name: Pętle dla (for)
         dance-extras-2019:
-          title: Nie przestawaj tańczyć
           description: Wyjdź poza pierwszą godzinę dzięki rozszerzonym pomysłom na
             projekt.
         csp10-pilot:

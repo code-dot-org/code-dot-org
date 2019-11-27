@@ -3967,7 +3967,6 @@ sk:
           stages:
             Dance Party - Go Further:
               name: Tanečná párty - Pokračuj ďalej
-          title: Pokračuj v tancovaní
           description_short: Pokračuj za hranice Hodiny Kódu s touto aktivitou nadväzujúcou
             na Code.org Tanečnú Párty.
           description: Pokračuj za hranice prvej hodiny s nápadmi na ďalšie projekty.
@@ -4971,7 +4970,6 @@ sk:
             For Loops:
               name: Cykly "For"
         dance-extras-2019:
-          title: Pokračuj v tancovaní
           description: Pokračuj za hranice prvej hodiny s nápadmi na ďalšie projekty.
           description_short: Pokračuj za hranice Hodiny Kódu s touto aktivitou nadväzujúcou
             na Code.org Tanečnú Párty.

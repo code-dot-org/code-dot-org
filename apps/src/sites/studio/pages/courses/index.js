@@ -22,6 +22,7 @@ function showCourses() {
   const signedOut = coursesData.signedout;
   const modernElementaryCoursesAvailable =
     coursesData.modernelementarycoursesavailable;
+  const showOceans = coursesData.launch_ai;
 
   ReactDOM.render(
     <Provider store={getStore()}>
@@ -33,6 +34,7 @@ function showCourses() {
         codeOrgUrlPrefix={codeOrgUrlPrefix}
         isSignedOut={signedOut}
         modernElementaryCoursesAvailable={modernElementaryCoursesAvailable}
+        showOceans={showOceans}
       />
     </Provider>,
     document.getElementById('courses-container')

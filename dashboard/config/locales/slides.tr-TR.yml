@@ -3210,3 +3210,6 @@ tr:
           Ancak bilgisayarın akıllı ya da faydalı olmasını sağlayan tek şey sizsiniz.
           Kodlama öğrendiğinizde çözmek istediğiniz sorunu tanımlar ve bu fikirleri
           gerçeğe dönüştüren yazılımı yazarsınız.
+    hoc_dance_events_2019:
+      4:
+        text: Olay;  fare tıklama, yön tuşuna basma yada ekrana tıklama gibi aktivitelerdir.

@@ -4058,6 +4058,8 @@ es-MX:
           -   Utiliza el bloque 'cuando presiona la flecha izquierda' para hacer que el Robot haga un movimiento de baile cuando lo pulses.
 
           _Este nivel termina después de 8 medidas._
+      Dance_Party_extras_alternate_2019:
+        alternate: El bloque alternativo está en la categoría "Bailarines".
       Function intro Ryan:
         Function_intro_Ryan_b: Si llama a las funciones correctamente, este es el
           camino por el que viajará...

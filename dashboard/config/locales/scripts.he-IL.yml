@@ -1653,7 +1653,6 @@ he:
             Dance Party:
               name: מסיבת ריקודים
         dance-extras:
-          title: המשיכו לרקוד
           description: המשיכו מעבר לשעה הראשונה עם רעיונות לפרויקטים נוספים.
         coursef-2019:
           stages:
@@ -1974,7 +1973,6 @@ he:
             For Loops:
               name: בשביל לולאות
         dance-extras-2019:
-          title: המשיכו לרקוד
           description: המשיכו מעבר לשעה הראשונה עם רעיונות לפרויקטים נוספים.
         time4cs-control-unit-1:
           stages:

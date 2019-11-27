@@ -3627,7 +3627,6 @@ fr:
             Dance Party:
               name: Fête dansante
         dance-extras:
-          title: Continuez à danser
           description: Allez au-delà de la première heure avec de longues idées de
             projets.
         coursef-2019:
@@ -4241,7 +4240,6 @@ fr:
             For Loops:
               name: Boucles « Pour »
         dance-extras-2019:
-          title: Continuez à danser
           description: Allez au-delà de la première heure avec de longues idées de
             projets.
         csp10-pilot:

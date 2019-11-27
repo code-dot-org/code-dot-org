@@ -109,19 +109,37 @@ da-DK:
         til skatten.
       Crack Random Substitution: Instruktioner
       Crack a Caesar Cipher: Instruktioner
-      Dance_2019_01: Drag the `make a new` block into the workspace, and connect it
-        inside the `setup` block.
-      Dance_2019_02: Blokken ’når trykket op’ giver dig mulighed for at køre kode,
-        når pilen trykkes op. Få danseren til at klappe, når du trykker op, eller
-        prøv en anden bevægelse!
-      Dance_2019_03: Det er tid til at få danset! Programmér hver danser til at bevæge
-        sig, når du trykker på forskellige taster. Vælg dit foretrukne træk for hver
-        danser, eller indstil det til ”(Tilfældig)” for at opnå noget helt uforudsigeligt!
+      Dance_2019_01: 'Træk blokken <xml><block type="Dancelab_makeAnonymousDanceSprite"
+        block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;,
+        &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml>
+        ind på arbejdsområdet, og sæt den ind i <xml><block type="Dancelab_whenSetup2"
+        next_connection_disabled="true" block-text="setup"></block></xml> blokken.'
+      Dance_2019_02: Få katten til at lave nogle dansetrin når du trykker på en tast.
+      Dance_2019_03: 'Det er tid til at få danset! Programmér hver danser til at bevæge
+        sig, når du trykker på forskellige taster. Vælg dit foretrukne dansetrin for
+        hver danser, eller indstil det til ”(Tilfældig)” for at opnå noget helt uforudsigeligt! '
       Dance_2019_04: Få din danser til at starte en ny bevægelse efter den fjerde
         handling.
       Dance_2019_06: Opret en gruppe af backup-dansere omkring solodanseren i midten.
       Dance_2019_07: Skift størrelsen på gruppen af backup-dansere.
+      Dance_2019_08: Prøv at ændre farven på en af dine dansere, eller hele gruppen!
       Dance_2019_09: Vær kreativ med disse nye blokke!
+      Dance_Party_extras_alternate_2019: Frem og tilbage (Klik 'Mere' for forklaring)
+      Dance_Party_extras_battle: Dansegruppe (Klik 'Mere' for forklaring)
+      Dance_Party_extras_battle_2019: Dansegruppe (Klik 'Mere' for forklaring)
+      Dance_Party_extras_every_beat: Fjerdedels node (Klik 'Mere' for forklaring)
+      Dance_Party_extras_every_beat_2019: Fjerdedels node (Klik 'Mere' for forklaring)
+      Dance_Party_extras_layout: Lad os komme i gang! (Klik "Mere" for at få detaljerne)
+      Dance_Party_extras_layout_2019: Lad os komme i gang! (Klik "Mere" for at få
+        detaljerne)
+      Dance_Party_extras_mixed_2019: Flere knapper (Klik 'Mere' for forklaring)
+      Dance_Party_extras_on_beat: Bas, midt, og diskant (Klik 'Mere' for forklaring)
+      Dance_Party_extras_on_beat_2019: Bas, midt, og diskant (Klik 'Mere' for forklaring)
+      Dance_Party_extras_speed: Sæt tempo op, sæt tempo ned (Klik 'Mere' for forklaring)
+      Dance_Party_extras_speed_2019: Sæt tempo op, sæt tempo ned (Klik 'Mere' for
+        forklaring)
+      Dance_Party_extras_visible: Hvor blev de af? (klik på 'Mere' for forklaring)
+      Dance_Party_extras_visible_2019: Hvor blev de af? (klik på 'Mere' for forklaring)
       Function intro Ryan: Brug "byg bro" funktionen to gange for at bygge en vej
         hen til faklen.
       Function intro Ryan_2019: Brug "byg bro" funktionen to gange for at bygge en
@@ -280,6 +298,10 @@ da-DK:
       Underground Mining Coal_2019: Du finder de mest værdifulde ressourcer under
         jorden, men der kan være mørkt. Placér mindst to fakler, og udvind mindst
         to stykker kul.
+      'Widget: Text Compression': Kig efter mønstre (gentagede ord eller vendinger)
+        i teksten. Tilføj det mønster, som du finder til ordlisten til højre. Når
+        du skriver ordet eller vendingen ind i ordlisten, vil et symbol for dette
+        blive indsat i teksten i stedet for 'mønstret'.
       bounce_1: Vedhæft en blok til "når venstre pil"-blokken og tryk på "Kør Program".
         Flyt battet ved hjælp af venstre pil for at nå slut-målet.
       bounce_10: Der er nu et mål på toppen. Vedhæft "score point" og "score modstander-point"-blokke

@@ -53,6 +53,10 @@ it-IT:
         Mi sembra di star seduto su una sedia senza una gamba.
 
         Modifica i blocchi per disegnare la gamba mancante.
+      2-3 Artist Debugging 7: |-
+        Questo codice disegna la C al contrario nella parola "CODE".
+
+        Riesci a farla disegnare correttamente?
       2-3 Artist Debugging 8: La mia girandola non è finita. Riesci ad aiutarmi?
       2-3 Artist Debugging 9: Il codice per disegnare questo gambo non è corretto!
         Riesci a capire come aiutare l'artista?
@@ -331,6 +335,8 @@ it-IT:
       2-3 Maze 8: Fammi arrivare al maialino!
       2-3 Maze 9: Guidami verso quel cattivone verde! Fai attenzione alla dinamite
         (TNT)
+      2-3 Maze Loops 1: Puoi farmi arrivare fino al maiale usando 5 blocchi dello
+        stesso tipo?
       2-3 Maze Loops 17: Fammi arrivare al girasole, usando quello che hai imparato!
       2-3 Maze Loops 18: Fammi arrivare al girasole usando il minor numero possibile
         di blocchi!
@@ -367,6 +373,10 @@ it-IT:
         disegnare un triangolo equilatero. Ogni lato ha 300 pixel.
       4-5 Artist Free Draw 1: Disegna liberamente!  Disegna qualunque cosa ti venga
         l'ispirazione di creare.
+      4-5 Artist Patterns 1: |-
+        Riesci a disegnare questo quadrato usando un ciclo?
+
+        Ogni lato è lungo 20 pixel.
       4-5 Artist Patterns 10: |-
         Questo codice disegna due righe di esagoni. Per disegnare tutto il favo devi eseguire l'intero codice 4 volte.<br>
         Suggerimento: per essere sicuro che l'artista non disegni fuori dallo schermo, assicurati di saltare indietro di 120 pixel nel ciclo più esterno.
@@ -1863,6 +1873,10 @@ it-IT:
         come questa?
       course2_artist_nestedLoops_challenge2: Riesci a scoprire come realizzare un'immagine
         come questa?
+      course2_artist_prog_challenge1: Disegna una stanza per ogni animale. Ci sono
+        molti modi diversi per risolvere questo esercizio, quindi cerca di divertirti.
+        La soluzione più breve possibile è di 6 blocchi, ma tu usane pure quanti ne
+        vuoi!
       course2_artist_prog_challenge2: _"Aiutami a disegnare la linea gialla di questa
         strada!"_
       course2_bee_conditionals_challenge1: Raccogli tutto il nettare e fai tutto il
@@ -4660,6 +4674,22 @@ it-IT:
         fiore?
       courseF_bee_variables_8_2019: Quante dosi di nettare raccoglierà l'ape da questo
         fiore?
+      courseF_playlab_variables1a: Le variabili possono servire per memorizzare del
+        testo che si desidera utilizzare in seguito.  Chiedi a Kiki, la ragazzina
+        che gioca a calcio, di urlare "Goal!" assegnando quel testo alla variabile
+        `shout` ("urlo").
+      courseF_playlab_variables2b: Inserisci la variabile `color` nel mezzo di una
+        frase, inserendola nella posizione vuota del blocco `unisci`.
+      courseF_playlab_variables3b_josh: 'Aiuta Kiki a chiacchierare con Brian usando
+        la variabile `age` ("età") in tutti i punti del discorso in cui è necessario. '
+      courseF_playlab_variables4b: Metti le variabili nelle posizioni corrette per
+        creare questa conversazione.
+      courseF_playlab_variables5c: Divertiti un po' combinando il blocco `chiedi`
+        con un'istruzione condizionale `se/altrimenti`.
+      courseF_playlab_variables6c: Nel resto di questa lezione, costruirai un gioco
+        che potrai controllare direttamente!
+      courseF_playlab_variables7c: Fai in modo che il programma faccia qualcosa di
+        particolare dopo aver chiesto all'utente di indovinare un colore.
       coursea_maze_ramp1_2018: Per risolvere questo esercizio, aggancia insieme i
         due blocchi e clicca su "▶ Esegui"!
       coursea_maze_ramp1_2019: Per risolvere questo esercizio, aggancia insieme i

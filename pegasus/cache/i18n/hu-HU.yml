@@ -92,6 +92,7 @@ hu-HU:
   congratulations_volunteer: Gratulálunk, most, hogy kipróbáltad a Kódolás óráját,
     <a href="https://code.org/volunteer">regisztrálj be egy osztállyal</a> és segíts
     a tanulóknak egy órán át a kódolásról tanulni!
+  congratulations_on_completing_course: Gratulálunk a tanfolyam %{course}-nak elvégzéséhez!
   congrats_next_tutorials_title: Ezután próbálja meg ezeket a tanfolyamokat
   congrats_next_tutorials_desc: Próbáld ki ezeket a rövidebb, egy órás gyakorlatokat,
     vagy próbáld ki <a href="%{current_path}/next">egy partnerünk gyakorlatát</a>.
@@ -99,6 +100,8 @@ hu-HU:
   view_course: Tanfolyam megtekintése
   view_unit: Egység megtekintése
   make_app: Egy alkalmazás létrehozása
+  congrats_guest_speaker_title: Találj vendégelőadót a tanórádra
+  congrats_guest_speaker_cta: Találj vendégelőadót
   third_party_gradelevel_2to8: 2-8. évfolyam
   third_party_gradelevel_4to12: 4-12. évfolyam
   third_party_gradelevel_5to12: 5-12. évfolyam

@@ -206,10 +206,6 @@ cs-CZ:
         &quot;CAT&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;,
         &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title>\n    <title name=\"LAYOUT\">\"circle\"</title>\n
         \ </block></xml>\nNyní můžeš vytvořit celou skupinu tanečníků najednou!"
-      Dance_2019_07: |-
-        Každý tanečník má sadu _vlastností_, které řídí, jak tanečník vypadá.
-
-        Změnou velikosti tanečníka můžeš zařídit, aby vypadal, že je blíž nebo dál. Změň velikost skupiny tanečníků chvíli poté, co začne hrát hudba.
       Dance_2019_08: Tanečníci mají vlastnost „odstín“, která může přidat vrstvu barvy.
         Zkus změnit odstín jednoho z tanečníků (nebo celé skupiny)!
       Dance_2019_09: |-
@@ -290,6 +286,14 @@ cs-CZ:
 
         **Použij klávesy k rozhejbání robota klesnout-zatleskat-klesnout-zatleskat co nejrychleji!**
       Dance_Party_12: Roztoč to! Vytvoř si svůj vlastní tanec a sdílej ho s kamarády.
+      Dance_Party_extras_alternate_2019: |-
+        # Utvoř sestavu!
+
+        Podívej se na tento tanec, který používá blok [blockly block][0] ke změně sestavy doprovodných tanečníků během tance. Vyzkoušej jeden z těchto nápadů k vylepšení:
+
+        -   Vytvoř druhou skupinu tanečníků s jiným rozložením
+        -   Změň rozložení při stisknutí klávesy
+        -   Změň vlastnost, když tanečníci změní sestavu
       Dance_Party_extras_battle: |-
         # Taneční skupiny
 
@@ -316,6 +320,10 @@ cs-CZ:
         -   Experimentuj s dalšími délkami not (jako např. 0,5 pro poloviční notu nebo 0,125 pro osminovou notu).
         -   Přidej nějaké události „po taktu“.
         -   Přepni „takty“ za „sekundy“ a zkus časovat tance tímto způsobem.
+      Dance_Party_extras_every_beat_2019: |-
+        # Zrychli to, zpomal to
+
+        Tento poslední tanec používá blok [blockly block][0] k řízení rychlosti pohybu jednotlivých tanečníků. Zkus experimentovat s různými rychlostmi v různých místech písničky. Neboj se si s tímto tancem pořádně pohrát nebo se vrať k libovolnému z předchozích tanců a zkus je ještě vylepšit.
       Dance_Party_extras_layout: |-
         # Pojďme utvořit sestavu!
 
@@ -324,14 +332,6 @@ cs-CZ:
         -   Vytvoř druhou skupinu tanečníků v rozdílném rozvržení
         -   Změň rozvržení, když stiskneš klávesu
         -   Změň vlastnost, když tanečníci změní sestavy
-      Dance_Party_extras_layout_2019: |-
-        # Utvoř sestavu!
-
-        Podívej se na tento tanec, který používá blok <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> ke změně sestavy doprovodných tanečníků během tance. Vyzkoušej jeden z těchto nápadů k vylepšení:
-
-        -   Vytvoř druhou skupinu tanečníků s jiným rozložením
-        -   Změň rozložení při stisknutí klávesy
-        -   Změň vlastnost, když tanečníci změní sestavu
       Dance_Party_extras_on_beat: |-
         # Basy, středy a výšky
 
@@ -347,7 +347,7 @@ cs-CZ:
       Dance_Party_extras_speed_2019: |-
         # Zrychli to, zpomal to
 
-        Tento poslední tanec používá blok <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> k řízení rychlosti pohybu jednotlivých tanečníků. Zkus experimentovat s různými rychlostmi v různých místech písničky. Neboj se si s tímto tancem pořádně pohrát nebo se vrať k libovolnému z předchozích tanců a zkus je ještě vylepšit.
+        Tento poslední tanec používá blok [blockly block][0] k řízení rychlosti pohybu jednotlivých tanečníků. Zkus experimentovat s různými rychlostmi v různých místech písničky. Neboj se si s tímto tancem pořádně pohrát nebo se vrať k libovolnému z předchozích tanců a zkus je ještě vylepšit.
       Dance_Party_extras_visible: |-
         # Kam by šli?
 

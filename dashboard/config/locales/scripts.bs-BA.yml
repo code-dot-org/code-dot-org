@@ -1989,7 +1989,6 @@ bs:
             Dance Party:
               name: Plesna zabava
         dance-extras:
-          title: Nastavite plesati
           description: Izađite iz okvira prvog sata sa proširenim idejama o projektu.
         coursef-2019:
           stages:
@@ -2260,7 +2259,6 @@ bs:
             For Loops:
               name: Od-Do-Za Petlje
         dance-extras-2019:
-          title: Nastavite plesati
           description: Izađite iz okvira prvog sata sa proširenim idejama o projektu.
         time4cs-control-unit-1:
           stages:

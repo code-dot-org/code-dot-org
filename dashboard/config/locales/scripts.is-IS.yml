@@ -4475,7 +4475,6 @@ is:
             Dance Party:
               name: Danspartý
         dance-extras:
-          title: Halda áfram að dansa
           description: Halda áfram eftir fyrstu klukkustundina með fleiri hugmyndir
             að verkefnum.
         coursef-2019:
@@ -5424,7 +5423,6 @@ is:
             For Loops:
               name: Frá lykkjur
         dance-extras-2019:
-          title: Halda áfram að dansa
           description: Halda áfram eftir fyrstu klukkustundina með fleiri hugmyndir
             að verkefnum.
         csp10-pilot:

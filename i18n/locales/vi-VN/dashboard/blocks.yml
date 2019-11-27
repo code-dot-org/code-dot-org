@@ -313,7 +313,7 @@ vi:
             '"PINEAPPLE"': Trái dứa
             '"ROBOT"': robot
             '"SHARK"': Cá mập
-            '"UNICORN"': unicorn
+            '"UNICORN"': kỳ lân
           LOCATION:
             "{x: 200, y: 100}": trên
             "{x: 200, y: 300}": dưới
@@ -341,7 +341,7 @@ vi:
             '"PINEAPPLE"': Trái dứa
             '"ROBOT"': robot
             '"SHARK"': Cá mập
-            '"UNICORN"': Kỳ lân
+            '"UNICORN"': kỳ lân
           LOCATION:
             "{x: 200, y: 100}": trên
             "{x: 200, y: 300}": dưới
