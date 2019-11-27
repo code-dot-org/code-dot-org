@@ -220,6 +220,7 @@ FirebaseStorage.createRecord = function(tableName, record, onSuccess, onError) {
       );
       return recordRef.set(JSON.stringify(record));
     })
+    .then(() => addMissingColumns(tableName))
     .then(() => onSuccess(record), onError);
 };
 
@@ -377,6 +378,7 @@ FirebaseStorage.updateRecord = function(
         incrementRateLimitCounters()
           .then(() => updateTableCounters(tableName, 0))
           .then(() => recordRef.set(recordJson))
+          .then(() => addMissingColumns(tableName))
           .then(() => onComplete(record, true), onError);
       }
     });
@@ -547,6 +549,7 @@ FirebaseStorage.copyStaticTable = function(tableName, onSuccess, onError) {
     .then(snapshot => {
       getRecordsRef(tableName).set(snapshot.val());
     })
+    .then(() => addMissingColumns(tableName))
     .then(onSuccess, onError);
 };
 
@@ -605,6 +608,7 @@ FirebaseStorage.createTable = function(tableName, onSuccess, onError) {
           return Promise.resolve();
         });
     })
+    .then(() => addColumnName(tableName, 'id'))
     .then(onSuccess, onError);
 };
 
