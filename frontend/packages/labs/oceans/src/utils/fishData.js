@@ -365,7 +365,7 @@ const fishComponents = {
     },
     rectangle_1: {
       src: rectangle_1_image,
-      anchor: [80, 68],
+      anchor: [70, 68],
       faceAnchor: [2, 5],
       pectoralFinBackAnchor: [23, 60],
       pectoralFinFrontAnchor: [62, 60],
