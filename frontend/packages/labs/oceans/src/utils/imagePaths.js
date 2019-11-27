@@ -11,7 +11,6 @@ import Trash_Laundry from '../../public/images/trash/Trash_Laundry.png';
 import Trash_Sock from '../../public/images/trash/Trash_Sock.png';
 import Trash_Soda from '../../public/images/trash/Trash_Soda.png';
 import Trash_Tire from '../../public/images/trash/Trash_Tire.png';
-import Trash_TrashBag from '../../public/images/trash/Trash_TrashBag.png';
 import Trash_Wing from '../../public/images/trash/Trash_Wing.png';
 
 import Crab from '../../public/images/seaCreatures/Crab.png';
@@ -39,7 +38,6 @@ export const trashImagePaths = [
   Trash_Sock,
   Trash_Soda,
   Trash_Tire,
-  Trash_TrashBag,
   Trash_Wing
 ];
 
