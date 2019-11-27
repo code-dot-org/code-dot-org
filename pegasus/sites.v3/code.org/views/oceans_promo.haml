@@ -2,9 +2,12 @@
 
 .img-container
   %img.background-img{src: '/images/fit-1940/oceans/oceans-background.png'}
-  %img.sea-creature{src: 'images/oceans/yellow-fish.png'}
-  %img.sea-creature{src: 'images/oceans/orange-fish.png'}
+  %img.sea-creature{src: 'images/oceans/big-sunfish.png'}
+  %img.sea-creature{src: 'images/oceans/small-sunfish.png'}
   %img.sea-creature{src: 'images/oceans/turtle.png'}
+  %img.sea-creature{src: 'images/oceans/gorgon-fish.png'}
+  %img.sea-creature{src: 'images/oceans/shark.png'}
+  %img.sea-creature{src: 'images/oceans/orange-fish.png'}
   %img.crab{src: 'images/oceans/crab.png'}
   .scanning-bot
     %img.ai-bot{src: 'images/oceans/ai-bot.png'}
@@ -18,12 +21,14 @@
       return +new Date();
     };
   var fishLocations = [
-    // {x: 100, y: 130},
-    {x: 370, y: 180},
-    {x: 550, y: 150},
-    {x: 160, y: 220}
+    {x: 520, y: 90},
+    {x: 570, y: 70},
+    {x: 820, y: 110},
+    {x: 560, y: 215},
+    {x: 300, y: 180},
+    {x: 300, y: 30}
   ];
-  var fishWidths = ['50px', '75px', '100px']
+  var fishWidths = ['45px', '30px', '100px', '80px', '100px', '30px']
   $(document).ready(function() {
     setInterval(function() {
       $(".sea-creature").each(function(index) {
