@@ -1886,8 +1886,8 @@ en:
           description_audience: ''
         oceans:
           title: AI for Oceans
-          description: Description TBD.
-          description_short: Short Description TBD.
+          description: Learn how AI and machine learning can be used to address world problems.
+          description_short: Learn how AI and machine learning can be used to address world problems.
           stages:
             Oceans:
               name: Oceans
