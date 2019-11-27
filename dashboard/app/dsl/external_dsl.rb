@@ -3,9 +3,7 @@ class ExternalDSL < ContentDSL
     @hash = {href: '', options: {skip_dialog: true}}
   end
 
-  def i18n_strings
-    strings = super
-    strings['markdown'] = @hash[:markdown] unless @hash[:markdown].blank?
-    strings
+  def self.non_i18n_fieldnames
+    super + %w(href)
   end
 end

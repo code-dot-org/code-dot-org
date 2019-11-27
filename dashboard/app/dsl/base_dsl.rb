@@ -22,7 +22,7 @@ class BaseDSL
     object.name(name) if name.present?
     ascii = str ? str.to_ascii : ''
     object.instance_eval(ascii, filename)
-    [object.parse_output, object.i18n_hash]
+    [object.parse_output, object.i18n_strings]
   end
 
   # override in subclass
@@ -30,14 +30,21 @@ class BaseDSL
     @hash
   end
 
-  # after parse has been done, this function returns a hash of all the user-visible strings from this instance
-  def i18n_hash
-    # Filter out any entries with nil key or value
-    i18n_strings.select {|key, value| key && value}
+  # after parse has been done, this function returns a hash of all the
+  # user-visible strings from this instance
+  def i18n_strings
+    @hash.
+      # filter out any entries with nil key or value
+      select {|key, value| key.present? && value.present?}.
+      # always stringify, for consistency
+      deep_stringify_keys.
+      # each DSL type may define some fields that should not be translated
+      except(*self.class.non_i18n_fieldnames)
   end
 
-  # Implement in subclass
-  def i18n_strings
+  # can be extended by subclasses
+  def self.non_i18n_fieldnames
+    []
   end
 
   def self.boolean(name)

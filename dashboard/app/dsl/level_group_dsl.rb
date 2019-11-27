@@ -10,7 +10,10 @@ class LevelGroupDSL < LevelDSL
     @hash[:options] = {skip_dialog: true, skip_sound: true}
     @current_page_level_names = []
     @level_names = []
-    @i18n_strings = Hash.new({})
+  end
+
+  def self.non_i18n_fieldnames
+    super + %w(options pages texts submittable anonymous)
   end
 
   integer :id
@@ -73,13 +76,6 @@ class LevelGroupDSL < LevelDSL
   # students' submissions for such levels.
   def anonymous(text)
     @hash[:anonymous] = text
-  end
-
-  def i18n_strings
-    @i18n_strings['title'] = @title if @title
-    @i18n_strings['description_short'] = @description_short if @description_short
-    @i18n_strings['description'] = @description if @description
-    @i18n_strings
   end
 
   def self.serialize(level)

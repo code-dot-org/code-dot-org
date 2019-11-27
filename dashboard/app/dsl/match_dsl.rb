@@ -17,15 +17,7 @@ class MatchDSL < ContentDSL
 
   def layout(text) @hash[:layout] = text end
 
-  def i18n_strings
-    strings = super
-    %i(
-      questions
-      answers
-      markdown
-    ).each do |property|
-      strings[property] = @hash[property] unless @hash[property].blank?
-    end
-    strings.deep_stringify_keys
+  def self.non_i18n_fieldnames
+    super + %w(height layout)
   end
 end
