@@ -36,6 +36,14 @@ describe('ignoreMissingValues', () => {
     {category1: '', category2: 3, category3: 10},
     {category1: '', category2: null, category3: undefined}
   ];
+  it('returns [] if there are no records', () => {
+    expect(ignoreMissingValues([], [])).to.deep.equal([]);
+    expect(ignoreMissingValues(undefined, undefined)).to.deep.equal([]);
+  });
+  it('returns all records if there are no columns to filter by', () => {
+    expect(ignoreMissingValues(records, [])).to.deep.equal(records);
+    expect(ignoreMissingValues(records, undefined)).to.deep.equal(records);
+  });
   it('filters out records missing value for one column', () => {
     expect(ignoreMissingValues(records, ['category1'])).to.deep.equal([
       {category1: 'red', category2: 1, category3: 10},
