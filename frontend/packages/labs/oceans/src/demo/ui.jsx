@@ -1205,15 +1205,27 @@ let Pond = class Pond extends React.Component {
       return;
     }
 
-    const showRecallFish = !state.showRecallFish;
-    const fish = showRecallFish ? state.recallFish : state.pondFish;
-
-    // Don't call arrangeFish if fish have already been arranged.
-    if (fish.length > 0 && !fish[0].getXY()) {
-      arrangeFish(fish);
+    let currentFishSet, nextFishSet;
+    if (state.showRecallFish) {
+      currentFishSet = state.recallFish;
+      nextFishSet = state.pondFish;
+    } else {
+      currentFishSet = state.pondFish;
+      nextFishSet = state.recallFish;
     }
 
-    setState({pondFishTransitionStartTime: $time(), pondClickedFish: null});
+    // Don't call arrangeFish if fish have already been arranged.
+    if (nextFishSet.length > 0 && !nextFishSet[0].getXY()) {
+      arrangeFish(nextFishSet);
+    }
+
+    if (currentFishSet.length === 0) {
+      // Immediately transition to nextFishSet rather than waiting for empty animation.
+      setState({showRecallFish: !state.showRecallFish, pondClickedFish: null});
+    } else {
+      setState({pondFishTransitionStartTime: $time(), pondClickedFish: null});
+    }
+
     e.stopPropagation();
   };
 
