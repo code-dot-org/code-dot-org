@@ -1432,6 +1432,7 @@ let Guide = class Guide extends React.Component {
   }
 
   render() {
+    const state = getState();
     const currentGuide = getCurrentGuide();
 
     let guideBgStyle = [styles.guideBackground];
@@ -1446,7 +1447,8 @@ let Guide = class Guide extends React.Component {
       }
     }
 
-    if (!getState().guideShowing && !getState().guideTypingTimer && currentGuide) {
+    // Start playing the typing sounds.
+    if (!state.guideShowing && !state.guideTypingTimer && currentGuide) {
       const guideTypingTimer = setInterval(() => {
         playSound('no', 0.5);
       }, 1000/10);
