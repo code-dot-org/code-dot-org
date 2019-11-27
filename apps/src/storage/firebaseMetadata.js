@@ -27,22 +27,8 @@ export function getColumnRefByName(tableName, columnName) {
     });
 }
 
-// TODO: De-dupe this function with getColumnNamesFromRecords() below
-export function parseColumnsFromRecords(records) {
+function getColumnNamesFromRecords(records) {
   const columnNames = [];
-  Object.keys(records).forEach(id => {
-    const record = JSON.parse(records[id]);
-    Object.keys(record).forEach(column => {
-      if (columnNames.indexOf(column) === -1) {
-        columnNames.push(column);
-      }
-    });
-  });
-  return columnNames;
-}
-
-export function getColumnNamesFromRecords(records) {
-  const columnNames = ['id'];
   Object.keys(records).forEach(id => {
     const record = JSON.parse(records[id]);
     Object.keys(record).forEach(columnName => {
