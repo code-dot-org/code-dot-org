@@ -60,10 +60,7 @@ const styles = {
     minWidth: '15%',
     outline: 'none',
     border: 'none',
-    whiteSpace: 'nowrap',
-    ':focus': {
-      outline: `${colors.white} auto 5px`
-    }
+    whiteSpace: 'nowrap'
   },
   continueButton: {
     position: 'absolute',
@@ -223,18 +220,12 @@ const styles = {
     ':hover': {
       backgroundColor: colors.green,
       color: colors.white
-    },
-    ':focus': {
-      outline: 'none'
     }
   },
   trainButtonNo: {
     ':hover': {
       backgroundColor: colors.red,
       color: colors.white
-    },
-    ':focus': {
-      outline: 'none'
     }
   },
   trainBot: {
