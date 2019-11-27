@@ -78,7 +78,6 @@ import eyebrow_raise_1_image from '../../public/images/fish/eyes/eyebrow_raise_1
 import eyes1_image from '../../public/images/fish/eyes/eyes1.png';
 import eyes10_image from '../../public/images/fish/eyes/eyes10.png';
 import eyes11_image from '../../public/images/fish/eyes/eyes11.png';
-import eyes12_image from '../../public/images/fish/eyes/eyes12.png';
 import eyes13_image from '../../public/images/fish/eyes/eyes13.png';
 import eyes14_image from '../../public/images/fish/eyes/eyes14.png';
 import eyes16_image from '../../public/images/fish/eyes/eyes16.png';
@@ -92,7 +91,6 @@ import eyes5_image from '../../public/images/fish/eyes/eyes5.png';
 import eyes6_image from '../../public/images/fish/eyes/eyes6.png';
 import eyes7_image from '../../public/images/fish/eyes/eyes7.png';
 import eyes9_image from '../../public/images/fish/eyes/eyes9.png';
-import small_1_image from '../../public/images/fish/eyes/small_1.png';
 
 import mouth1_image from '../../public/images/fish/mouth/mouth1.png';
 import mouth10_image from '../../public/images/fish/mouth/mouth10.png';
@@ -520,17 +518,6 @@ const fishComponents = {
         AppMode.FishShort
       ]
     },
-    eyes12: {
-      src: eyes12_image,
-      knnData: [717, 4.910958904109589],
-      type: FishBodyPart.EYE,
-      exclusions: [
-        AppMode.FishVTrash,
-        AppMode.CreaturesVTrashDemo,
-        AppMode.CreaturesVTrash,
-        AppMode.FishShort
-      ]
-    },
     eyes13: {
       src: eyes13_image,
       knnData: [301, 4.703125],
@@ -661,17 +648,6 @@ const fishComponents = {
       src: eyes9_image,
       knnData: [732, 1.6944444444444444],
       type: FishBodyPart.EYE
-    },
-    small_1: {
-      src: small_1_image,
-      knnData: [112, 1.018181818181818],
-      type: FishBodyPart.EYE,
-      exclusions: [
-        AppMode.FishVTrash,
-        AppMode.CreaturesVTrashDemo,
-        AppMode.CreaturesVTrash,
-        AppMode.FishShort
-      ]
     }
   },
   // MOUTH KNN DATA: [numTeeth, ratio of height:width, MouthExpression]
