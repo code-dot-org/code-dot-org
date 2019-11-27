@@ -89,13 +89,9 @@ level 'U5 L09 Traversals Exit Ticket', progression: 'Check For Understanding', a
 
 stage 'Traversals Investigate', flex_category: 'csp_traversals'
 level 'CSP U5L10 SFLP 20-21', progression: 'Lesson Overview'
-level 'U5 Traversals Investigate Mile Tracker', progression: 'App Investigation'
-level 'U5 Traversals Investigate Word Guess - clone', progression: 'App Investigation'
-level 'U5 Traversals Investigate Dog Finder - clone', progression: 'App Investigation'
-level 'U5 Traversals Investigate Mile Tracker Modify', progression: 'Code Investigation'
-level 'U5 Traversals Get List Explanation Video', progression: 'The getList() Block'
-level 'U5 Traversals Investigate Word Guess Modify', progression: 'Code Investigation'
-level 'U5 Traversals Investigate Dog Finder Modify', progression: 'Code Investigation'
+level 'U5 Traversals Investigate Mile Tracker Modify', progression: 'Mile Tracker Investigation'
+level 'CSP U5L10 Traversals Investigate', progression: 'Intro to Datasets'
+level 'U5 Traversals Investigate Dog Finder Modify', progression: 'Dog Finder Investigation'
 level 'List Filter Pattern', progression: 'Traversal Patterns'
 level 'List Reduce Pattern', progression: 'Traversal Patterns'
 
