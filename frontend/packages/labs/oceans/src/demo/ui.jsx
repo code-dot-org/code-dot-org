@@ -1415,8 +1415,13 @@ let Pond = class Pond extends React.Component {
 Pond = Radium(Pond);
 
 let Guide = class Guide extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   onShowing() {
-    setState({guideShowing: true});
+    clearInterval(getState().guideTypingTimer);
+    setState({guideShowing: true, guideTypingTimer: null});
   }
 
   dismissGuideClick() {
@@ -1439,6 +1444,13 @@ let Guide = class Guide extends React.Component {
       if (currentGuide.style === 'Info') {
         guideBgStyle.push({backgroundColor: colors.transparentBlack});
       }
+    }
+
+    if (!getState().guideShowing && !getState().guideTypingTimer && currentGuide) {
+      const guideTypingTimer = setInterval(() => {
+        playSound('no');
+      }, 1000/10);
+      setState({guideTypingTimer});
     }
 
     return (
@@ -1471,7 +1483,7 @@ let Guide = class Guide extends React.Component {
                   <div style={styles.guideTypingText}>
                     <Typist
                       avgTypingDelay={35}
-                      stdTypingDelay={15}
+                      stdTypingDelay={0}
                       cursor={{show: false}}
                       onTypingDone={this.onShowing}
                     >
