@@ -137,10 +137,6 @@ fi-FI:
         &quot;CAT&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;,
         &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title>\n    <title name=\"LAYOUT\">\"circle\"</title>\n
         \ </block></xml>\nNyt voit luoda joukon tanssijoita kerralla!"
-      Dance_2019_07: |-
-        Jokaisella tanssijalla on joukko _ominaisuuksia_ , jotka hallitsevat sen ulkonäköä.
-
-        Voit saada tanssijan näyttämään siltä, että se on lähellä tai kaukana muuttamalla sen kokoa. Muuta tanssijaryhmän kokoa jonkin aikaa musiikin alkamisen jälkeen.
       Dance_2019_08: Tanssijoilla on "sävy"-ominaisuus, joilla voidaan lisätä värikerrosta.
         Kokeile muuttaa yhden tanssijasi sävyä (tai koko ryhmän)!
       Dance_2019_09: |-
@@ -203,6 +199,14 @@ fi-FI:
         Voit muuttaa tanssiliikettä, muuttaa tanssijan ominaisuuksia, tai tehdä yhden nopean liikkeen kerran. Ole luova, ja etsi uusia blokkeja!
       Dance_Party_11b: On tanssikisan aika! Kissa napauttaa, kun painat vasenta nuolinäppäintä.
         Laita Robotti “droppaamaan”, kun painat oikeaa nuolinäppäintä.
+      Dance_Party_extras_alternate_2019: |-
+        # Mennään muodostelmaan!
+
+        Tutustu tähän tanssiin, joka käyttää [blockly block][0] -blokkia muuttaakseen taustatanssijoiden muodostelmaa tanssin aikana. Kokeile yhtä näistä ideoista, jotta voit jatkaa sitä:
+
+        -   Luo toinen ryhmä tanssijoita eri asettelussa
+        -   Muuta asettelua, kun näppäintä painetaan
+        -   Muuta ominaisuutta, kun tanssijat muuttavat muodostelmaa
       Dance_Party_extras_battle: |-
         # Tanssiryhmät
 
@@ -229,6 +233,10 @@ fi-FI:
         -   Kokeile muita nuotinkestoja (kuten 0,5 puolinuotille tai 0,125 kahdeksasosanuotille)
         -   Lisää joitain `tahdin jälkeen`-tapahtumia.
         -   Vaihda “tahdit” “sekuntien” kanssa ja yritä ajoittaa tanssejasi siten.
+      Dance_Party_extras_every_beat_2019: |-
+        # Pistä vauhtia, himmaa ja hidasta
+
+        Tämä viimeinen tanssi käyttää [blockly block][0] -blokkia hallitakseen jokaisen tanssijan liikkeen nopeutta. Kokeile eri nopeuksia kappaleen eri aikoina. Voit leikitellä tämän tanssin aikana tai palata edellisiin tansseihin tehdäksesi ne entistä siisteimmiksi.
       Dance_Party_extras_layout: |-
         # Mennään muodostelmaan!
 
@@ -237,14 +245,6 @@ fi-FI:
         -   Luo toinen ryhmä tanssijoita eri asettelussa.
         -   Muuta asettelua, kun näppäintä painetaan
         -   Muuta ominaisuutta, kun tanssijat muuttavat muodostelmaa.
-      Dance_Party_extras_layout_2019: |-
-        # Mennään muodostelmaan!
-
-        Tutustu tähän tanssiin, joka käyttää <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> -blokkia muuttaakseen taustatanssijoiden muodostelmaa tanssin aikana. Kokeile yhtä näistä ideoista, jotta voit jatkaa sitä:
-
-        -   Luo toinen ryhmä tanssijoita eri asettelussa
-        -   Muuta asettelua, kun näppäintä painetaan
-        -   Muuta ominaisuutta, kun tanssijat muuttavat muodostelmaa
       Dance_Party_extras_on_beat: |-
         Basso, midi ja diskantti
 
@@ -260,7 +260,7 @@ fi-FI:
       Dance_Party_extras_speed_2019: |-
         # Pistä vauhtia, himmaa ja hidasta
 
-        Tämä viimeinen tanssi käyttää <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> -blokkia hallitakseen jokaisen tanssijan liikkeen nopeutta. Kokeile eri nopeuksia kappaleen eri aikoina. Voit leikitellä tämän tanssin aikana tai palata edellisiin tansseihin tehdäksesi ne entistä siisteimmiksi.
+        Tämä viimeinen tanssi käyttää [blockly block][0] -blokkia hallitakseen jokaisen tanssijan liikkeen nopeutta. Kokeile eri nopeuksia kappaleen eri aikoina. Voit leikitellä tämän tanssin aikana tai palata edellisiin tansseihin tehdäksesi ne entistä siisteimmiksi.
       Dance_Party_extras_visible: |-
         # Mihin he menivät?
 

@@ -1885,7 +1885,6 @@ nl:
             Dance Party:
               name: Dansfeest
         dance-extras:
-          title: Blijf dansen
           description: Breid de kennis van het eerste uur uit met uitgebreide projectideeën.
         coursef-2019:
           stages:
@@ -2141,7 +2140,6 @@ nl:
             For Loops:
               name: For-lussen
         dance-extras-2019:
-          title: Blijf dansen
           description: Breid de kennis van het eerste uur uit met uitgebreide projectideeën.
         time4cs-control-unit-1:
           stages:

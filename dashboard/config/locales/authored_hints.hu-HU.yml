@@ -168,6 +168,10 @@ hu-HU:
       Course 4 Artist 6:
         Course_4_Artist_6_a: Itt van három háromszög egy körben egyenlően elforgatva...
           mennyi 360-ban a 3?
+      Course 4 SCF 1:
+        Course_4_SCF_1_a: Minden hatszög 40 képpont hosszú oldalakból áll.
+      Course 4 SCF 2:
+        Course_4_SCF_2_a: Minden nyolcszög 40 képpont hosszú oldalakból áll.
       CourseD_Dance_Party_01:
         validation: |-
           **Hogyan csinálhatom meg ezt a szintet?**

@@ -95,10 +95,6 @@ ms-MY:
         &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title>\n
         \   <title name=\"LAYOUT\">\"circle\"</title>\n  </block></xml>\nSekarang
         anda boleh cipta kumpulan semua penari sekaligus!"
-      Dance_2019_07: |-
-        Setiap penari mempunyai kumpulan _sifat_ yang mengawal rupa bentuknya.
-
-        Anda boleh buatkan penari kelihatan lebih dekat atau jauh dengan hanya menukar saiznya. Kadang-kadang, tukar saiz kumpulan penari selepas muzik bermula.
       Dance_2019_08: Penari mempunyai sifat "warna" yang boleh menambah lapisan warna.
         Cuba tukar warna seorang daripada penari anda (atau seluruh kumpulan)!
       Dance_2019_09: |-
@@ -180,6 +176,14 @@ ms-MY:
         **Gunakan kekunci untuk memastikan Robot melakukan gerakan jatuh-tepuk-jatuh-tepuk secepat yang anda boleh!**
       Dance_Party_12: Rasakan kegirangannya! Cipta tarian anda sendiri untuk berkongsi
         dengan rakan anda.
+      Dance_Party_extras_alternate_2019: |-
+        # Mari Kita Berada dalam Formasi!
+
+        Lihat tarian ini yang menggunakan blok [blockly block][0] bagi menukar formasi penari sandaran sepanjang tarian. Cuba satu daripada idea ini untuk melanjutkannya:
+
+        -   Cipta kumpulan kedua penari dalam susun atur berbeza
+        -   Tukar susun atur apabila kekunci ditekan
+        -   Tukar sifat apabila penari menukar formasi
       Dance_Party_extras_battle: |-
         # Kru Tarian
 
@@ -206,18 +210,14 @@ ms-MY:
         -   Eksperimen dengan tempoh not lain (seperti 0.5 untuk not perdua atau 0.125 untuk not perlapan).
         -   Tambahkan beberapa acara `selepas corak berirama`.
         -   Tukar "corak berirama" kepada "saat" dan cuba tentukan masa tarian anda dengan kaedah itu.
+      Dance_Party_extras_every_beat_2019: |-
+        # Percepatkannya, Perlahankannya
+
+        Tarian akhir ini menggunakan blok [blockly block][0] untuk mengawal kepantasan setiap penari bergerak. Cuba bereksperimen dengan kelajuan berbeza semasa sudut berlainan dalam lagu. Jangan bimbang untuk terus bermain-main terhadap tarian ini, atau kembali kepada mana-mana tarian sebelumnya untuk menjadikannya lebih hebat.
       Dance_Party_extras_layout: |-
         # Mari Kita Berada dalam Formasi!
 
         Lihat tarian ini yang menggunakan blok `susun atur` bagi menukar formasi penari sandaran sepanjang tarian. Cuba satu daripada idea ini untuk melanjutkannya:
-
-        -   Cipta kumpulan kedua penari dalam susun atur berbeza
-        -   Tukar susun atur apabila kekunci ditekan
-        -   Tukar sifat apabila penari menukar formasi
-      Dance_Party_extras_layout_2019: |-
-        # Mari Kita Berada dalam Formasi!
-
-        Lihat tarian ini yang menggunakan blok <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> bagi menukar formasi penari sandaran sepanjang tarian. Cuba satu daripada idea ini untuk melanjutkannya:
 
         -   Cipta kumpulan kedua penari dalam susun atur berbeza
         -   Tukar susun atur apabila kekunci ditekan
@@ -237,7 +237,7 @@ ms-MY:
       Dance_Party_extras_speed_2019: |-
         # Percepatkannya, Perlahankannya
 
-        Tarian akhir ini menggunakan blok <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> untuk mengawal kepantasan setiap penari bergerak. Cuba bereksperimen dengan kelajuan berbeza semasa sudut berlainan dalam lagu. Jangan bimbang untuk terus bermain-main terhadap tarian ini, atau kembali kepada mana-mana tarian sebelumnya untuk menjadikannya lebih hebat.
+        Tarian akhir ini menggunakan blok [blockly block][0] untuk mengawal kepantasan setiap penari bergerak. Cuba bereksperimen dengan kelajuan berbeza semasa sudut berlainan dalam lagu. Jangan bimbang untuk terus bermain-main terhadap tarian ini, atau kembali kepada mana-mana tarian sebelumnya untuk menjadikannya lebih hebat.
       Dance_Party_extras_visible: |-
         # Ke Manakah Mereka Akan Pergi?
 

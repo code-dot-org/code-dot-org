@@ -95,8 +95,15 @@ fr-FR:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Nouveau bloc !
         dance_callout_11_b: Nouveau bloc !
+      Dance_2019_01:
+        dance_callout_01: Ajoutez ce bloc à votre programme!
+      Dance_2019_02:
+        dance_callout_11_a: Ajoute ce bloc à ton programme.
+        arrow_buttons: Appuies sur les boutons fléchés pour contrôler ton danseur.
       Dance_2019_04:
         dance_callout_02: Ajoutez ce bloc à votre programme!
+      Dance_2019_05:
+        dance_callout_05: Ajouter un nouvel événement à votre programme.
       Dance_2019_06:
         dance_party_11_5_groups: Nouveau bloc !
       Dance_2019_07:

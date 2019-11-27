@@ -422,6 +422,8 @@ de-DE:
           -   Verwenden Sie den Block "Wenn Pfeiltaste nach links gedrückt", um den Roboter einen Tanzschritt tun zu lassen, wenn Sie sie drücken.
 
           _Dieser Level endet nach 8 Takten._
+      Dance_Party_extras_alternate_2019:
+        alternate: Der 'alterniere' Baustein befindet sich in der Kategorie "Tänzer".
       Function intro Ryan:
         Function_intro_Ryan_a: Du kannst eine Funktion mehrmals in deinem Programm
           aufrufen.  Versuche, sie zweimal aufzurufen, um diese Aufgabe zu lösen.
@@ -591,11 +593,35 @@ de-DE:
         courseA_artist_loops_challenge2_c: Du brauchst eine große Anzahl von Bausteinen
           innerhalb der Schleife für diese Herausforderung.
       course1_collector_loops_challenge1:
+        courseA_collector_loops_challenge1_a: Versuche die Zahlen in jeder Schleife
+          zu ändern, wenn etwas schief geht.
         courseA_collector_loops_challenge1_b: Du brauchst keine Schleife verwenden,
           wenn du etwas nur einmal machst.
+        courseA_collector_loops_challenge1_c: Es gibt 6 Edelsteine auf der rechten
+          Seite der Höhle, aber du musst dich nur 5 Mal bewegen und sammeln. Weißt
+          du, warum?
       course1_collector_loops_challenge2:
         courseA_collector_loops_challenge2_b: Zum Lösen benötigst du nur einen ![](<https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34
           PM.png>) Baustein.
+        courseA_collector_loops_challenge2_a: |-
+          Du kannst dich ein zweites Mal über den Pfad bewegen, bevor du nach Süden gehst.
+
+          ![](<https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png>)
+      course1_collector_loops_challenge3:
+        courseB_collector_loops_challenge1_b: |-
+          Beginnen Sie, indem Sie die Befehle `bewege nach Süden` und `Schatz sammeln` wiederholen.
+
+          <xml>
+            <block type="maze_moveSouth"/><next>
+            <block type="collector_collect"/></next>
+            </xml>
+        courseB_collector_loops_challenge1_a: |-
+          Das Nordmuster ist etwas anders als das Südmuster.
+
+          <xml>
+            <block type="collector_collect"/><next>
+            <block type="maze_moveNorth"/></next>next>
+            </xml>
       course1_maze_debugging_challenge1:
         courseA_maze_seq_challenge1_a: Einige Pfade führen zu TNT, wenn du mich zu
           weit bewegst.
@@ -2046,6 +2072,36 @@ de-DE:
           Um 50 Pixel vorwärts zu gehen, benutze diesen Block:
 
           ![](<https://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png>)
+      courseC_artist_loopsPrePre1a_2018:
+        courseC_artist_loopsPrePre1a_a: |-
+          Der erste Block, den du brauchst, ist:
+
+          <xml>  <block type="jump_to_xy" id="callMe">
+              <title name="XPOS">200</title>
+              <title name="YPOS">200</title>
+            </block></xml>
+        courseC_artist_loopsPrePre1a_b: |-
+          Um 50 Pixel vorwärts zu bewegen, verwende diesen Baustein:
+
+          <xml><block type="draw_move_by_constant">
+              <title name="DIR">moveForward</title>
+              <title name="VALUE">50</title>
+            </block></xml>
+      courseC_artist_loopsPrePre1a_2019:
+        courseC_artist_loopsPrePre1a_a: |-
+          Der erste Block, den du brauchst, ist:
+
+          <xml>  <block type="jump_to_xy" id="callMe">
+              <title name="XPOS">200</title>
+              <title name="YPOS">200</title>
+            </block></xml>
+        courseC_artist_loopsPrePre1a_b: |-
+          Um 50 Pixel vorwärts zu bewegen, verwende diesen Baustein:
+
+          <xml><block type="draw_move_by_constant">
+              <title name="DIR">moveForward</title>
+              <title name="VALUE">50</title>
+            </block></xml>
       courseC_artist_prog5:
         courseC_artist_prog5_b: Hab keine Angst, einen Fehler zu machen! Versuche
           weitere Blöcke hinzuzufügen und den Code auszuführen. Manchmal hilft es
@@ -2056,11 +2112,15 @@ de-DE:
           weitere Blöcke hinzuzufügen und den Code auszuführen. Manchmal hilft es
           zu sehen was passiert, auch wenn du der Meinung bist, dass das Rätsel noch
           nicht gelöst ist.
+        courseC_artist_prog5_c: Du kannst die Dropdown-Menüs in den Bausteien verwenden,
+          um zu ändern, was diese tun!
       courseC_artist_prog5_2019:
         courseC_artist_prog5_b: Hab keine Angst, einen Fehler zu machen! Versuche
           weitere Blöcke hinzuzufügen und den Code auszuführen. Manchmal hilft es
           zu sehen was passiert, auch wenn du der Meinung bist, dass das Rätsel noch
           nicht gelöst ist.
+        courseC_artist_prog5_c: Du kannst die Dropdown-Menüs in den Bausteien verwenden,
+          um zu ändern, was diese tun!
       courseC_artist_prog7:
         courseC_artist_prog7_e: Hab keine Angst, einen Fehler zu machen! Versuche
           weitere Blöcke hinzuzufügen und den Code auszuführen. Manchmal hilft es
@@ -2277,6 +2337,31 @@ de-DE:
           auf jedem Feld verwenden.
         courseC_collector_prog_challenge1_b: Hast du dich verlaufen? Versuche diesen
           Weg zu nehmen um die Aufgabe zu lösen!
+      courseC_harvester_loops_challenge1a_2018:
+        courseC_harvester_loops_challenge1_c: |-
+          Nachdem du die ersten beiden Male Mais gepflückt hast, kannst du eine verschachtelte Schlaufe verwenden, um die nächsten acht Stücke auszuwählen.
+
+          <xml><block type="controls_repeat">
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                          <next>
+                            <block type="harvester_corn"/>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  </block></xml>
       courseC_maze_debugging2:
         courseC_maze_debugging2_c: Du findest nicht heraus, was schief läuft? Führe
           den Code ein paar mal aus um zu sehen, was passiert.
@@ -2295,6 +2380,12 @@ de-DE:
       courseC_maze_debugging3_2019:
         courseC_maze_debugging3_b: Du findest nicht heraus, was schief läuft? Führe
           den Code ein paar mal aus um zu sehen, was passiert.
+      courseC_maze_debugging5_2018:
+        courseC_maze_debugging5_c: Du kannst die Richtung des Kurvenblocks ändern,
+          indem du auf die Dropdown-Liste klickst.
+      courseC_maze_debugging5_2019:
+        courseC_maze_debugging5_c: Du kannst die Richtung des Kurvenblocks ändern,
+          indem du auf die Dropdown-Liste klickst.
       courseC_maze_loops_challenge1a:
         courseC_maze_loops_challenge1_a: Stell dir diesen Weg aufgeteilt in zwei verschiedene
           Teilstücke vor. Jedes hat ein Muster, welches du wiederholen kannst.
@@ -2582,6 +2673,12 @@ de-DE:
           die Richtung drehen und dann wieder vorwärts gehen.
         courseC_starWars_loops5_a: Die beste Lösung benutzt eine Drehung, dann ein
           einzelnes 'vorwärts bewegen', nochmal eine Drehung und dann eine Schleife.
+      courseC_starWars_loops5_2018:
+        courseC_starWars_loops5_a: Die beste Lösung besteht aus einem einzigen "bewege
+          vorwärts", dann einer Kurve und dann einer Schleife.
+      courseC_starWars_loops5_2019:
+        courseC_starWars_loops5_a: Die beste Lösung besteht aus einem einzigen "bewege
+          vorwärts", dann einer Kurve und dann einer Schleife.
       courseC_starWars_loops6:
         courseC_starWars_loops6_a: Versuche einmal alle nötigen Bewegungen auf ein
           Papier zu zeichnen und suche dann nach einem Muster.
@@ -2666,6 +2763,18 @@ de-DE:
           Du musst dich nicht nach links drehen um dieses Rätsel zu lösen. Alle deine Drehungen können nach rechts gehen.
 
           ![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
+      courseD_artist_binary_challenge2_2018:
+        courseD_artist_binary_challenge2_a: Im Originalprogramm sind nur wenige Zeilen
+          falsch.
+      courseD_artist_binary_challenge2_2019:
+        courseD_artist_binary_challenge2_a: Im Originalprogramm sind nur wenige Zeilen
+          falsch.
+      courseD_bee_conditionals5_2018:
+        courseD_bee_conditionals5_a: Betrachte jede Seite des rechteckigen Pfades
+          als einen Weg für sich. Richte eine verschachtelte Schleife mit einem `Wiederholungsblock`
+          auf der Außenseite und einer `währenden Weg vorwärts` Schleife auf der Innenseite
+          ein. Wie viele Wege muss die Biene zurücklegen, wenn die Biene auf jeder
+          Seite mit einer Blume zurückschlagen muss?
       courseD_bee_conditionals5_2019:
         courseD_bee_conditionals5_a: Wenn Sie einen \`wenn an der Blume'-Baustein
           verwenden, kannst du dies mit einer verschachtelten Schleife lösen. Schreibe
@@ -2673,10 +2782,153 @@ de-DE:
         courseD_bee_conditionals5_c: Um den Weg weiterzugehen, muss die Biene `vorwärts`
           gehen. Wenn sie sich bewegt, muss die Biene nach einer Blume suchen. `Wenn
           an der Blume`, sollte die Biene `Nektar sammeln`.
+      courseD_bounce_events11s_2018:
+        courseD_bounce_events11s_a: Du musst einen Ball werfen, wenn das Spiel beginnt,
+          wenn du den Korb triffst und wenn die Hand den Ball verfehlt.
+      courseD_bounce_events11s_2019:
+        courseD_bounce_events11s_a: Du musst einen Ball werfen, wenn das Spiel beginnt,
+          wenn du den Korb triffst und wenn die Hand den Ball verfehlt.
+      courseD_bounce_events1s_2018:
+        courseD_bounce_events1s_a: |-
+          Du musst den Block `move left` zum Ereignis `when arrow` hinzufügen, damit dieses Spiel funktioniert:
+
+           <xml>
+            <block type="bounce_whenLeft" deletable="false" x="20" y="20">
+              <next>
+                <block type="bounce_moveLeft"/>
+              </next>
+            </block>
+          </xml>
+        courseD_bounce_events1s_b: Vergiss nicht, "Ausführen" zu drücken und die Hand
+          in den Korb zu legen, um dieses Rätsel zu lösen.
+      courseD_bounce_events1s_2019:
+        courseD_bounce_events1s_a: |-
+          Du musst den Block `move left` zum Ereignis `when arrow` hinzufügen, damit dieses Spiel funktioniert:
+
+           <xml>
+            <block type="bounce_whenLeft" deletable="false" x="20" y="20">
+              <next>
+                <block type="bounce_moveLeft"/>
+              </next>
+            </block>
+          </xml>
+        courseD_bounce_events1s_b: Vergiss nicht, "Ausführen" zu drücken und die Hand
+          in den Korb zu legen, um dieses Rätsel zu lösen.
+      courseD_bounce_events2s_2018:
+        courseD_bounce_events2s_a: |-
+          Du musst zweimal das`move` Ereignissen verwenden, damit dies funktioniert:
+
+          <xml>
+            <block type="bounce_whenLeft" deletable="false" x="20" y="20">
+              <next>
+                <block type="bounce_moveLeft"/>
+              </next>
+            </block>
+            <block type="bounce_whenRight" deletable="false" x="180" y="20">
+              <next>
+                <block type="bounce_moveRight"/>
+              </next>
+            </block>
+          </xml>
+      courseD_bounce_events2s_2019:
+        courseD_bounce_events2s_a: |-
+          Du musst zweimal das`move` Ereignissen verwenden, damit dies funktioniert:
+
+          <xml>
+            <block type="bounce_whenLeft" deletable="false" x="20" y="20">
+              <next>
+                <block type="bounce_moveLeft"/>
+              </next>
+            </block>
+            <block type="bounce_whenRight" deletable="false" x="180" y="20">
+              <next>
+                <block type="bounce_moveRight"/>
+              </next>
+            </block>
+          </xml>
+      courseD_bounce_events5s_2018:
+        courseD_bounce_events5s_a: Sie müssen die Hand nicht bewegen, um dieses Rätsel
+          zu lösen.
+        courseD_bounce_events5s_b: |-
+          Stelle sicher, dass du diesen Code in deinem Arbeitsbereich hinzugefügt hast:
+
+          <xml>  <block type="bounce_whenPaddleCollided" deletable="false"> <next> <block type="bounce_bounceBall"/></next></block></xml>
+      courseD_bounce_events5s_2019:
+        courseD_bounce_events5s_a: Sie müssen die Hand nicht bewegen, um dieses Rätsel
+          zu lösen.
+        courseD_bounce_events5s_b: |-
+          Stelle sicher, dass du diesen Code in deinem Arbeitsbereich hinzugefügt hast:
+
+          <xml>  <block type="bounce_whenPaddleCollided" deletable="false"> <next> <block type="bounce_bounceBall"/></next></block></xml>
+      courseD_bounce_events6s_2018:
+        courseD_bounce_events6s_a: |-
+          Hast du eine Ereignis, das so aussieht?
+
+          <xml><block type="bounce_whenWallCollided" deletable="false"><next><block type="bounce_bounceBall"></block></next></block></block></xml>
+        courseD_bounce_events6s_b: Wenn du den Code richtig geschrieben hast, musst
+          du nicht die Hand bewegen, um zu gewinnen.
+      courseD_bounce_events6s_2019:
+        courseD_bounce_events6s_a: |-
+          Hast du eine Ereignis, das so aussieht?
+
+          <xml><block type="bounce_whenWallCollided" deletable="false"><next><block type="bounce_bounceBall"></block></next></block></block></xml>
+        courseD_bounce_events6s_b: Wenn du den Code richtig geschrieben hast, musst
+          du nicht die Hand bewegen, um zu gewinnen.
+      courseD_bounce_events7s_2018:
+        courseD_bounce_events7s_a: Du kannst Sounds an mehreren Stellen hinzufügen,
+          wenn du Lust dazu hast!
+      courseD_bounce_events7s_2019:
+        courseD_bounce_events7s_a: Du kannst Sounds an mehreren Stellen hinzufügen,
+          wenn du Lust dazu hast!
+      courseD_collector_debugging2a_2018:
+        courseD_collector_debugging2a_c: |-
+          Was passiert dann?
+
+          Was soll passieren?
+
+          Was sagt dir das?
+      courseD_collector_debugging2a_2019:
+        courseD_collector_debugging2a_c: |-
+          Was passiert dann?
+
+          Was soll passieren?
+
+          Was sagt dir das?
+      courseD_collector_debugging5a_2018:
+        courseD_collector_debugging5a_a: |-
+          Was bewirkt es?
+
+          Was soll es bewirken?
+
+          Was sagt dir das?
+        courseD_collector_debugging5a_b: Sobald du die erste Reihe an Schätzen gesammelt
+          hast, was bleibt in deinem Code übrig?
+      courseD_collector_debugging5a_2019:
+        courseD_collector_debugging5a_a: |-
+          Was bewirkt es?
+
+          Was soll es bewirken?
+
+          Was sagt dir das?
+        courseD_collector_debugging5a_b: Sobald du die erste Reihe an Schätzen gesammelt
+          hast, was bleibt in deinem Code übrig?
+      courseD_collector_debugging6a_2018:
+        courseD_collector_debugging6_b: Es sieht so aus, als ob sich alle benötigten
+          Bausteine im Arbeitsbereich befinden. Versuche auf "Neuanfang" zu klicken,
+          wenn es zu verwirrend wird.
+      courseD_collector_debugging6a_2019:
+        courseD_collector_debugging6_b: Es sieht so aus, als ob sich alle benötigten
+          Bausteine im Arbeitsbereich befinden. Versuche auf "Neuanfang" zu klicken,
+          wenn es zu verwirrend wird.
+      courseD_farmer_condLoops6_2018:
+        courseD_farmer_condLoops6_b: Du musst nur während der meiste Zeit der Ernte
+          nach Mais suchen.  Wähle einfach einen Kürbis am Ende deines Programms.
       courseD_farmer_condLoops6_2019:
         courseD_farmer_condLoops6_a: Verwende eine `Solange ein Weg vor Dir liegt`
           Schleife oder einen `Wenn Weg voraus / sonst` Baustein, um den Farmer jedes
           Stück der Spirale nach unten zu bewegen.
+        courseD_farmer_condLoops6_b: Du musst nur während der meiste Zeit der Ernte
+          nach Mais suchen.  Wähle einfach einen Kürbis am Ende deines Programms.
       courseD_farmer_condLoops7_2019:
         courseD_farmer_condLoops7_b: Versuche ˋSo lange ein Weg vor dir liegtˋ zu
           benutzen um den Gärtner die richtige Anzahl von Schritten gehen zu lassen.

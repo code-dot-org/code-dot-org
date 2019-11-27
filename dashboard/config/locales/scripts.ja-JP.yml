@@ -1491,7 +1491,6 @@ ja:
             Dance Party:
               name: ダンスパーティー
         dance-extras:
-          title: ダンスを続ける
           description: 最初の 1 時間を越えて、応用編のプロジェクトのアイデアを活用しよう。
         coursef-2019:
           description_short: コンピューターサイエンスの基本のすべてを学び、自分だけのアート・物語・ゲームを創りましょう。
@@ -1772,7 +1771,6 @@ ja:
             For Loops:
               name: ループ用
         dance-extras-2019:
-          title: ダンスを続ける
           description: 最初の 1 時間を越えて、応用編のプロジェクトのアイデアを活用しよう。
         time4cs-control-unit-1:
           stages:

@@ -2520,6 +2520,8 @@ pt-BR:
           -   Use o bloco 'com a seta para a esquerda pressionada' para fazer o robô executar um movimento de dança ao pressioná-la.
 
           _Esta fase termina após oito compassos._
+      Dance_Party_extras_alternate_2019:
+        alternate: O bloco alternativo está na categoria "Dançarinos".
       Function intro Ryan:
         Function_intro_Ryan_b: Se você chamar as funções corretamente, este é o caminho
           que você vai viajar...

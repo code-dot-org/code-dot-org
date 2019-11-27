@@ -37,7 +37,7 @@ var blocksToDisplayText = {
   planksSpruce: i18n.blockTypePlanksSpruce(),
   pressurePlateUp: i18n.blockTypePressurePlateUp(),
   oreRedstone: i18n.blockTypeOreRedstone(),
-  rails: i18n.blockTypeRail(),
+  rail: i18n.blockTypeRail(),
   railsRedstoneTorch: i18n.blockTypeRailsRedstoneTorch(),
   redstoneWire: i18n.blockTypeRedstoneWire(),
   sand: i18n.blockTypeSand(),

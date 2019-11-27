@@ -27,6 +27,20 @@ el:
     Η πληροφορική είναι μια από τις θεμελιώδεις γνώσεις κάθε μαθητή.
   social_hoc2019_dance: Με ονόματα όπως Katy Perry, Jonas Brothers, Lil Nas X, Panic
     at the Disco και πολλούς άλλους!
+  oceans_landing_title: AI for Oceans
+  oceans_landing_description: 'Explore machine learning by teaching “A.I.” to recognize
+    fish. #CSforGood'
+  oceans_landing_specs: English only | Ages 11+
+  oceans_landing_teacher_resources: Teacher Resources
+  oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
+    AI, machine learning, training data, and bias, while exploring ethical issues.
+  oceans_landing_resource_button: View Resources
+  oceans_landing_cs_for_good: CS For Good
+  oceans_landing_cs_for_good_desc: Resources to help students understand the role
+    computer science could play in creating a more equitable world.
+  hoc_overview_oceans_tutorial_header: AI Oceans
+  hoc_overview_oceans_tutorial_desc: Teach "A.I." to sort between fish and trash while
+    exploring broader artificial intelligence concepts.
   codeorg_homepage_hoc2018_curriculum: Προχωρήστε παραπέρα με <a href="%{studio_url}/courses"
     class="hoc2018-curriculum-link">μαθήματα Code.org</a>
   codeorg_homepage_hoc2018_dance_heading: Δημιουργήστε το δικό σας <span class="highlight-word">χορευτικό&nbsp;πάρτυ</span>
@@ -45,6 +59,7 @@ el:
   hourofcode_homepage_hoc2018_header_line2: Ηλικίες από 4 έως 104.
   hoc2018_tutorial_mchoc_description: Χρησιμοποιήστε μπλοκ κώδικα για να οδηγήσετε
     την Alex ή τον Steve σε μία περιπέτεια μέσα από αυτόν τον κόσμο του Minecraft
+  codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>
   cookie_banner_message: Συνεχίζοντας την περιήγηση στην ιστοσελίδα μας ή κάνοντας
     κλικ στο "Συμφωνώ", συμφωνείτε με την αποθήκευση cookies στον υπολογιστή ή τη
     συσκευή σας.
@@ -732,6 +747,7 @@ el:
   learn_robotics_banner_blurb: Έχετε ρομπότ; Χρησιμοποιήστε τα στις παρακάτω δραστηριότητες
     και προσφέρετε μια απτή ώρα κώδικα για σπουδαστές κάθε ηλικίας! Κάποιες δραστηριότητες
     προσφέρουν επιπλέον εξομοιωτή ώστε να μην χρειάζεστε υλικό υπολογιστή.
+  tutorial_dance2019_name: Dance Party 2019
   tutorial_danceparty_name: Πάρτυ χορού
   tutorial_chibitronics_name: 'Chibitronics: Φωτισμένη Ιστορία'
   tutorial_athlete_name: Κωδικοποιήστε το δικό σας αθλητικό παιχνίδι
@@ -1215,9 +1231,9 @@ el:
   tutorial_sushicards_name: Beginner Scratch Sushi Cards
   tutorial_codesparkcreate_name: 'codeSpark Academy with The Foos: Create Games'
   tutorial_hardvsoft_name: Team Hardware vs. Team Software
-  tutorial_codestersecard_name: Making an E-Card
-  tutorial_codesterslogo_name: Your Company Logo
-  tutorial_codesterstshirt_name: Monogrammed T-Shirt Design
+  tutorial_codestersecard_name: Code an Interactive eCard
+  tutorial_codesterslogo_name: Design Your Own Logo
+  tutorial_codesterstshirt_name: Code Your Initials
   tutorial_codewards_name: Rescue the underwater city!
   tutorial_olympics_name: C.A.T.S. go for Robot Olympics
   tutorial_codinismhero_name: Programming Hero
@@ -2513,6 +2529,9 @@ el:
   tutorial_allcancodeapps_shortdescription: Use the Allcancode Platform to create
     web and mobile apps from design to delivery.
   tutorial_n2y_shortdescription: Help Bitt Bott explore Earth using direction arrows.
+  tutorial_dance2019_longdescription: Code a Dance Party to share with your friends.
+    Featuring Katy Perry, Shawn Mendes, Lil Nas X, Panic! At The Disco, Jonas Brothers,
+    and many more!
   tutorial_danceparty_longdescription: Code a Dance Party to share with your friends.
     Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!
   tutorial_chibitronics_longdescription: Program a paper circuit to light up your
@@ -5013,6 +5032,9 @@ el:
     Each of the six activities includes simple directions that are supported with
     symbols from the n2y® SymbolStix PRIME® collection. The symbols help non-readers
     and beginning readers understand and follow the directions.
+  tutorial_dance2019_language: Arabic, Chinese, Czech, Danish, Dutch, English, Finnish,
+    French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean,
+    Malay, Polish, Portuguese, and 10 more!
   tutorial_danceparty_language: English, Arabic, Catalan, Chinese, Czech, Danish,
     Dutch, Finnish, French, German, Greek, Hungarian, Italian, Japanese, Korean, Norwegian,
     Polish, Portuguese, Russian, Spanish, Swedish, Thai, Turkish, and Vietnamese
@@ -5693,6 +5715,7 @@ el:
   tutorial_duckrace_language: English, German
   tutorial_allcancodeapps_language: ελληνικά
   tutorial_n2y_language: ελληνικά
+  tutorial_dance2019_string_detail_grades: 'Τάξεις: από Δευτέρα Δημοτικού και άνω'
   tutorial_danceparty_string_detail_grades: 'Τάξεις: από Δευτέρα Δημοτικού και άνω'
   tutorial_chibitronics_string_detail_grades: Grades 2-5
   tutorial_athlete_string_detail_grades: 'Τάξεις: από Δευτέρα Δημοτικού και άνω'
@@ -6048,7 +6071,7 @@ el:
   tutorial_codehsrn_string_detail_grades: 'Τάξεις: από Τρίτη Γυμνασίου και άνω'
   tutorial_codehswd_string_detail_grades: Grades 6+
   tutorial_turtlerobot_string_detail_grades: Pre-reader - Grade 5
-  tutorial_ozoevo_string_detail_grades: All ages
+  tutorial_ozoevo_string_detail_grades: Grades 6+
   tutorial_ozoexped_string_detail_grades: Grades 6+
   tutorial_ozojourney_string_detail_grades: Grades 2-8
   tutorial_ozocodes_string_detail_grades: All ages
@@ -6178,7 +6201,7 @@ el:
   tutorial_codesparkcreate_string_detail_grades: Pre-reader - Grade 5
   tutorial_hardvsoft_string_detail_grades: Pre-reader - Grade 5
   tutorial_codestersecard_string_detail_grades: Grades 6-8
-  tutorial_codesterslogo_string_detail_grades: Grades 2-8
+  tutorial_codesterslogo_string_detail_grades: Grades 6+
   tutorial_codesterstshirt_string_detail_grades: Grades 6+
   tutorial_codewards_string_detail_grades: Grades 2-8
   tutorial_olympics_string_detail_grades: Grades 2-8
@@ -6282,6 +6305,8 @@ el:
   tutorial_duckrace_string_detail_grades: 'Τάξεις: από Δευτέρα Δημοτικού και άνω'
   tutorial_allcancodeapps_string_detail_grades: Grades 6+
   tutorial_n2y_string_detail_grades: Πριν την ανάγνωση +
+  tutorial_dance2019_string_platforms: All modern browsers, Android tablet, iPad,
+    Unplugged
   tutorial_danceparty_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_chibitronics_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης
   tutorial_athlete_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης
@@ -7007,6 +7032,7 @@ el:
   tutorial_duckrace_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_allcancodeapps_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης
   tutorial_n2y_string_platforms: Unplugged
+  tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chibitronics Chibi Chip and Circuit
     Sticker LEDs
@@ -7587,6 +7613,7 @@ el:
   tutorial_duckrace_string_detail_platforms: ''
   tutorial_allcancodeapps_string_detail_platforms: ''
   tutorial_n2y_string_detail_platforms: ''
+  tutorial_dance2019_string_detail_programming_languages: Μπλοκ
   tutorial_danceparty_string_detail_programming_languages: Μπλοκ
   tutorial_chibitronics_string_detail_programming_languages: Μπλοκ
   tutorial_athlete_string_detail_programming_languages: Μπλοκ
@@ -8091,7 +8118,7 @@ el:
   tutorial_codesparkcreate_string_detail_programming_languages: Μπλοκ
   tutorial_hardvsoft_string_detail_programming_languages: ''
   tutorial_codestersecard_string_detail_programming_languages: Blocks, Python
-  tutorial_codesterslogo_string_detail_programming_languages: Blocks, Python
+  tutorial_codesterslogo_string_detail_programming_languages: Python
   tutorial_codesterstshirt_string_detail_programming_languages: Blocks, Python
   tutorial_codewards_string_detail_programming_languages: CoffeeScript
   tutorial_olympics_string_detail_programming_languages: CoffeeScript
@@ -8295,6 +8322,8 @@ el:
   tutorial_ikodexmas_name: iKode Xmas
   tutorial_rpisensehat_name: Sense HAT data logger
   tutorial_modtraits_name: Character Traits with GoPiGo
+  tutorial_mee_name: 'Minecraft: Ώρα του Κώδικα: Τεχνητή νοημοσύνη για τα καλά'
+  tutorial_kuborobo_name: KUBO Robotics Coding Routes
   tutorial_scratchimagine_longdescription: Imagine a world where anything is possible,
     then bring it to life with Scratch!
   tutorial_codesterspsa_longdescription: Learn the basics of coding in Python while
@@ -8651,6 +8680,13 @@ el:
     environment.
   tutorial_modtraits_longdescription: 'Students use the steps of computational thinking
     to analyze character traits and create an algorithm to demonstrate those traits. '
+  tutorial_mee_longdescription: "Ένα χωριό απειλείται από φωτιά και πρέπει να βρεις
+    μια λύση γράφοντας κώδικα! Γνώρισε τον βοηθό κωδικοποίησης, τον Agent του Minecraft,
+    και, στη συνέχεια, προγραμμάτισέ τον να εξερευνήσει το δάσος και να συλλέξει δεδομένα
+    σχετικά με τις συνθήκες που προκάλεσαν τις πυρκαγιές. \n"
+  tutorial_kuborobo_longdescription: In this activity, students put their logic and
+    sequencing skills to the test as they use the Tagtiles to program their KUBO robot
+    to travel to various locations on a printed map.
   tutorial_scratchimagine_language: English, Spanish
   tutorial_codesterspsa_language: ελληνικά
   tutorial_googlehero_language: English, Spanish
@@ -8747,6 +8783,13 @@ el:
   tutorial_ikodexmas_language: ελληνικά
   tutorial_rpisensehat_language: ελληνικά
   tutorial_modtraits_language: ελληνικά
+  tutorial_mee_language: Αγγλικά (Ηνωμένων Πολιτειών), Αγγλικά (ΗΒ), Γερμανικά, Ισπανικά
+    (Ισπανίας), Ισπανικά (Μεξικού), Γαλλικά (Γαλλίας), Γαλλικά (Καναδάς), Ιταλικά,
+    Ιαπωνικά, Κορεατικά, Πορτογαλικά (Βραζιλίας), Πορτογαλικά (Πορτογαλίας), Ρωσικά,
+    Κινέζικα (απλοποιημένα), Κινέζικα (παραδοσιακά), Τουρκικά, Πολωνικά, Ινδονησιακά,
+    Ουκρανικά, Ελληνικά, Βουλγαρικά, Ουγγρικά, Φινλανδικά, Δανέζικα, Σουηδικά, Νορβηγικά,
+    Σλοβακικά, Τσέχικα, Ολλανδικά
+  tutorial_kuborobo_language: English, Spanish
   tutorial_scratchimagine_string_detail_grades: 'Τάξεις: από Δευτέρα Δημοτικού και
     άνω'
   tutorial_codesterspsa_string_detail_grades: Grades 6+
@@ -8838,9 +8881,9 @@ el:
   tutorial_microbit15_string_detail_grades: Grades 2-8
   tutorial_unity_string_detail_grades: 'Τάξεις: από Τρίτη Γυμνασίου και άνω'
   tutorial_blockscadtarget_string_detail_grades: Grades 6+
-  tutorial_tcadicicles_string_detail_grades: Grades 6-8
+  tutorial_tcadicicles_string_detail_grades: Grades 7-8
   tutorial_blockscadscale_string_detail_grades: Grades 6+
-  tutorial_tcadloops_string_detail_grades: Grades 6-8
+  tutorial_tcadloops_string_detail_grades: Grades 5-6
   tutorial_phidgets_string_detail_grades: 'Τάξεις: από Τρίτη Γυμνασίου και άνω'
   tutorial_kcjmerry_string_detail_grades: Grades 2-8
   tutorial_modvariables_string_detail_grades: Grades 6+
@@ -8849,6 +8892,8 @@ el:
   tutorial_ikodexmas_string_detail_grades: Grades 2-5
   tutorial_rpisensehat_string_detail_grades: Grades 6+
   tutorial_modtraits_string_detail_grades: 'Τάξεις: από Δευτέρα Δημοτικού και άνω'
+  tutorial_mee_string_detail_grades: 'Τάξεις: από Δευτέρα Δημοτικού και άνω'
+  tutorial_kuborobo_string_detail_grades: Pre-reader - Grades 8
   tutorial_scratchimagine_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_codesterspsa_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_googlehero_string_platforms: All modern browsers, Android tablet, iPad
@@ -8954,6 +8999,8 @@ el:
   tutorial_ikodexmas_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης
   tutorial_rpisensehat_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης
   tutorial_modtraits_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης
+  tutorial_mee_string_platforms: Windows, iPad, MacOS
+  tutorial_kuborobo_string_platforms: Unplugged
   tutorial_scratchimagine_string_detail_platforms: ''
   tutorial_codesterspsa_string_detail_platforms: ''
   tutorial_googlehero_string_detail_platforms: ''
@@ -9053,6 +9100,8 @@ el:
   tutorial_ikodexmas_string_detail_platforms: Microsoft Kodu
   tutorial_rpisensehat_string_detail_platforms: Raspbian (software), SenseHAT
   tutorial_modtraits_string_detail_platforms: GoPiGo
+  tutorial_mee_string_detail_platforms: ''
+  tutorial_kuborobo_string_detail_platforms: KUBO robot
   tutorial_scratchimagine_string_detail_programming_languages: Μπλοκ
   tutorial_codesterspsa_string_detail_programming_languages: Python
   tutorial_googlehero_string_detail_programming_languages: Μπλοκ
@@ -9161,6 +9210,9 @@ el:
   tutorial_ikodexmas_string_detail_programming_languages: Microsoft Kodu
   tutorial_rpisensehat_string_detail_programming_languages: Python
   tutorial_modtraits_string_detail_programming_languages: Μπλοκ
+  tutorial_mee_string_detail_programming_languages: Μπλοκ
+  tutorial_kuborobo_string_detail_programming_languages: Tagtiles that students piece
+    together
   school_not_found_heading: We couldn't find your school. Please enter more information.
   school_name: School name
   school_name_error: School name is required.

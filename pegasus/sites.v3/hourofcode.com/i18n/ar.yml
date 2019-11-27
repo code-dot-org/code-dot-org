@@ -25,6 +25,20 @@ ar:
     ليتعلمها كل طالب.
   social_hoc2019_dance: يضم Katy Perry، Jonas Brothers، Lil Nas X، Panic at the Disco،
     وmany more!
+  oceans_landing_title: AI for Oceans
+  oceans_landing_description: 'Explore machine learning by teaching “A.I.” to recognize
+    fish. #CSforGood'
+  oceans_landing_specs: English only | Ages 11+
+  oceans_landing_teacher_resources: Teacher Resources
+  oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
+    AI, machine learning, training data, and bias, while exploring ethical issues.
+  oceans_landing_resource_button: View Resources
+  oceans_landing_cs_for_good: CS For Good
+  oceans_landing_cs_for_good_desc: Resources to help students understand the role
+    computer science could play in creating a more equitable world.
+  hoc_overview_oceans_tutorial_header: AI Oceans
+  hoc_overview_oceans_tutorial_desc: Teach "A.I." to sort between fish and trash while
+    exploring broader artificial intelligence concepts.
   codeorg_homepage_hoc2018_curriculum: واصل مع <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">دورات
     code.org</a>
   codeorg_homepage_hoc2018_dance_heading: أنشئ <span class="highlight-word">رقصة&nbsp;
@@ -42,6 +56,7 @@ ar:
   hourofcode_homepage_hoc2018_header_line2: تتراوح الأعمار من 4 إلى 104.
   hoc2018_tutorial_mchoc_description: استخدم القطع البرمجية لأخذ أليكس وستيف في مغامرة
     من خلال عالم ماين كرافت
+  codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>
   cookie_banner_message: بالاستمرار في تصفح موقعنا أو النقر فوق "أوافق"، فأنت توافق
     على تخزين cookies على الكمبيوتر أو الجهاز الخاص بك.
   cookie_banner_more_information: انظر سياسة الخصوصية في Code.org.
@@ -646,6 +661,7 @@ ar:
   learn_robotics_banner_heading: الروبوتات
   learn_robotics_banner_blurb: هل لديك روبوتات؟ استخدمها في الأنشطة وخطط لساعة ملموسة
     من البرمجة للطلاب من أي عمر!
+  tutorial_dance2019_name: Dance Party 2019
   tutorial_danceparty_name: حفلة رقص
   tutorial_chibitronics_name: 'القصة المضيئة: Chibitronics'
   tutorial_athlete_name: اكتب التعليمات البرمجية للعبتك الرياضية الخاصة
@@ -2315,6 +2331,9 @@ ar:
   tutorial_allcancodeapps_shortdescription: استعمل منصة (Allcancode) لإنشاء تطبيقات
     الهاتف والويب من التصميم الى التسليم.
   tutorial_n2y_shortdescription: ساعد (Bitt Bott) لاستكشاف الأرض باستعمال أسهم الاتجاهات.
+  tutorial_dance2019_longdescription: Code a Dance Party to share with your friends.
+    Featuring Katy Perry, Shawn Mendes, Lil Nas X, Panic! At The Disco, Jonas Brothers,
+    and many more!
   tutorial_danceparty_longdescription: برمج حفلة رقص مع (Katy Perry)، و(Madonna)،
     و(J. Balvin)، و(Keith Urban)، و(Ciara)، و25 آخرين لتقاسمها مع أصدقائك!
   tutorial_chibitronics_longdescription: برمج دارة ورقية لإضاءة قصتك.
@@ -4404,6 +4423,9 @@ ar:
     (Bitt Bott) بعض التعليمات البسيطة عن طريق اختيار وإدارة أسهم اتجاه مناسبة. يتضمن
     كل نشاط من الأنشطة الستة تعليمات بسيطة مدعومة من مجموعة (n2y® SymbolStix PRIME®).
     تساعد الرموز المبتدئين في تعلم القراءة ومن لم يتعلموها بعد على فهم واتباع التعليمات.
+  tutorial_dance2019_language: Arabic, Chinese, Czech, Danish, Dutch, English, Finnish,
+    French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean,
+    Malay, Polish, Portuguese, and 10 more!
   tutorial_danceparty_language: انجليزية، عربية، كاتالانية، صينية، تشيكية، دانماركية،
     هولندية، فنلندية، فرنسية، ألمانية، يونانية، هنغارية،إيطالية، يابانية، كورية،نرويجية،
     بولونية، برتغالية، روسية، اسبانية، سويدية،تايلاندية، تركية فيتنامية
@@ -5079,6 +5101,7 @@ ar:
   tutorial_duckrace_language: انجليوية، ألمانية
   tutorial_allcancodeapps_language: الانجليزية
   tutorial_n2y_language: الانجليزية
+  tutorial_dance2019_string_detail_grades: بدايةً من الصف 2
   tutorial_danceparty_string_detail_grades: بدايةً من الصف 2
   tutorial_chibitronics_string_detail_grades: المستويات 2-5
   tutorial_athlete_string_detail_grades: بدايةً من الصف 2
@@ -5432,7 +5455,7 @@ ar:
   tutorial_codehsrn_string_detail_grades: بدايةً من الصف 9
   tutorial_codehswd_string_detail_grades: المستوى 6+
   tutorial_turtlerobot_string_detail_grades: قبل تعلم القراءة - المستوى 5
-  tutorial_ozoevo_string_detail_grades: جميع الأعمار
+  tutorial_ozoevo_string_detail_grades: المستوى 6+
   tutorial_ozoexped_string_detail_grades: المستوى 6+
   tutorial_ozojourney_string_detail_grades: المستويات 2-8
   tutorial_ozocodes_string_detail_grades: جميع الأعمار
@@ -5559,7 +5582,7 @@ ar:
   tutorial_codesparkcreate_string_detail_grades: قبل تعلم القراءة - المستوى 5
   tutorial_hardvsoft_string_detail_grades: قبل تعلم القراءة - المستوى 5
   tutorial_codestersecard_string_detail_grades: المستويات 6-8
-  tutorial_codesterslogo_string_detail_grades: المستويات 2-8
+  tutorial_codesterslogo_string_detail_grades: المستوى 6+
   tutorial_codesterstshirt_string_detail_grades: المستوى 6+
   tutorial_codewards_string_detail_grades: المستويات 2-8
   tutorial_olympics_string_detail_grades: المستويات 2-8
@@ -5657,6 +5680,8 @@ ar:
   tutorial_duckrace_string_detail_grades: بدايةً من الصف 2
   tutorial_allcancodeapps_string_detail_grades: المستوى 6+
   tutorial_n2y_string_detail_grades: بدايةً من المبتدئين في القراءة
+  tutorial_dance2019_string_platforms: المتصفحات الحديثة، أندرويد اللوحات، آي باد،
+    المستقلة
   tutorial_danceparty_string_platforms: المتصفحات الحديثة، لوحات الأندرويد، آي باد،
     المستقلة
   tutorial_chibitronics_string_platforms: المتصفحات الحديثة كافة
@@ -6403,6 +6428,7 @@ ar:
     المستقلة
   tutorial_allcancodeapps_string_platforms: المتصفحات الحديثة كافة
   tutorial_n2y_string_platforms: مستقلة
+  tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: رقاقات (Chibitronics Chibi) وملصقات
     دارات الصمام الثناي الكهرابائي (LEDs)
@@ -6983,6 +7009,7 @@ ar:
   tutorial_duckrace_string_detail_platforms: ''
   tutorial_allcancodeapps_string_detail_platforms: ''
   tutorial_n2y_string_detail_platforms: ''
+  tutorial_dance2019_string_detail_programming_languages: مربعات برمجية
   tutorial_danceparty_string_detail_programming_languages: مربعات برمجية
   tutorial_chibitronics_string_detail_programming_languages: مربعات برمجية
   tutorial_athlete_string_detail_programming_languages: مربعات برمجية
@@ -7513,7 +7540,7 @@ ar:
   tutorial_codesparkcreate_string_detail_programming_languages: مربعات برمجية
   tutorial_hardvsoft_string_detail_programming_languages: ''
   tutorial_codestersecard_string_detail_programming_languages: الكتل البرمجية، بايتون
-  tutorial_codesterslogo_string_detail_programming_languages: الكتل البرمجية، بايتون
+  tutorial_codesterslogo_string_detail_programming_languages: بايثون (Python)
   tutorial_codesterstshirt_string_detail_programming_languages: الكتل البرمجية، بايتون
   tutorial_codewards_string_detail_programming_languages: لغة البرمجة CoffeeScript
   tutorial_olympics_string_detail_programming_languages: لغة البرمجة CoffeeScript
@@ -7720,6 +7747,8 @@ ar:
   tutorial_ikodexmas_name: iKode Xmas
   tutorial_rpisensehat_name: Sense HAT data logger
   tutorial_modtraits_name: Character Traits with GoPiGo
+  tutorial_mee_name: 'Minecraft Hour of Code: AI for Good'
+  tutorial_kuborobo_name: KUBO Robotics Coding Routes
   tutorial_scratchimagine_longdescription: Imagine a world where anything is possible,
     then bring it to life with Scratch!
   tutorial_codesterspsa_longdescription: Learn the basics of coding in Python while
@@ -8076,6 +8105,13 @@ ar:
     environment.
   tutorial_modtraits_longdescription: 'Students use the steps of computational thinking
     to analyze character traits and create an algorithm to demonstrate those traits. '
+  tutorial_mee_longdescription: Program the Minecraft Agent to collect data about
+    forest fires. Then write code to help prevent the spread of fire, save the village,
+    and bring life back to the forest. Learn coding basics and explore a real-world
+    example of artificial intelligence.
+  tutorial_kuborobo_longdescription: In this activity, students put their logic and
+    sequencing skills to the test as they use the Tagtiles to program their KUBO robot
+    to travel to various locations on a printed map.
   tutorial_scratchimagine_language: انجليزية، اسبانية
   tutorial_codesterspsa_language: الانجليزية
   tutorial_googlehero_language: انجليزية، اسبانية
@@ -8172,6 +8208,12 @@ ar:
   tutorial_ikodexmas_language: الانجليزية
   tutorial_rpisensehat_language: الانجليزية
   tutorial_modtraits_language: الانجليزية
+  tutorial_mee_language: Bulgarian, Chinese (Simplified), Chinese (Traditional), Czech,
+    Danish, Dutch, English (UK), English (United States), Finnish, French (Canada),
+    French (France), German, Greek, Hungarian, Indonesian, Italian, Japanese, Korean,
+    Norwegian, Polish, Portuguese (Brazil), Portuguese (Portugal), Russian, Slovak,
+    Spanish (Spain), Spanish (Mexico), Swedish, Turkish, Ukrainian
+  tutorial_kuborobo_language: انجليزية، اسبانية
   tutorial_scratchimagine_string_detail_grades: بدايةً من الصف 2
   tutorial_codesterspsa_string_detail_grades: المستوى 6+
   tutorial_googlehero_string_detail_grades: المستويات 2-8
@@ -8268,6 +8310,8 @@ ar:
   tutorial_ikodexmas_string_detail_grades: المستويات 2-5
   tutorial_rpisensehat_string_detail_grades: المستوى 6+
   tutorial_modtraits_string_detail_grades: بدايةً من الصف 2
+  tutorial_mee_string_detail_grades: بدايةً من الصف 2
+  tutorial_kuborobo_string_detail_grades: Pre-reader - Grades 8
   tutorial_scratchimagine_string_platforms: المتصفحات الحديثة، لوحات الأندرويد، آي
     باد، المستقلة
   tutorial_codesterspsa_string_platforms: المتصفحات الحديثة، لوحات الأندرويد، آي باد،
@@ -8383,6 +8427,8 @@ ar:
   tutorial_ikodexmas_string_platforms: المتصفحات الحديثة كافة
   tutorial_rpisensehat_string_platforms: المتصفحات الحديثة كافة
   tutorial_modtraits_string_platforms: المتصفحات الحديثة كافة
+  tutorial_mee_string_platforms: iPad, Computers (Windows PC, Mac)
+  tutorial_kuborobo_string_platforms: مستقلة
   tutorial_scratchimagine_string_detail_platforms: ''
   tutorial_codesterspsa_string_detail_platforms: ''
   tutorial_googlehero_string_detail_platforms: ''
@@ -8482,6 +8528,8 @@ ar:
   tutorial_ikodexmas_string_detail_platforms: Microsoft Kodu
   tutorial_rpisensehat_string_detail_platforms: Raspbian (software), SenseHAT
   tutorial_modtraits_string_detail_platforms: GoPiGo
+  tutorial_mee_string_detail_platforms: ''
+  tutorial_kuborobo_string_detail_platforms: KUBO robot
   tutorial_scratchimagine_string_detail_programming_languages: مربعات برمجية
   tutorial_codesterspsa_string_detail_programming_languages: بايثون (Python)
   tutorial_googlehero_string_detail_programming_languages: مربعات برمجية
@@ -8598,6 +8646,9 @@ ar:
   tutorial_ikodexmas_string_detail_programming_languages: Microsoft Kodu
   tutorial_rpisensehat_string_detail_programming_languages: بايثون (Python)
   tutorial_modtraits_string_detail_programming_languages: مربعات برمجية
+  tutorial_mee_string_detail_programming_languages: مربعات برمجية
+  tutorial_kuborobo_string_detail_programming_languages: Tagtiles that students piece
+    together
   school_not_found_heading: لم نستطع إيجاد مدرستك، المرجو إدخال معلومات أكثر.
   school_name: اسم المدرسة
   school_name_error: اسم المدرسة مطلوب.

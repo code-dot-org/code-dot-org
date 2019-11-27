@@ -5502,10 +5502,49 @@ fr-FR:
         Regarde combien de temps il t'a fallu pour casser ce chiffrement! Est ce que c'est le bon moyen de crypter des données sensibles ?
 
         <img src="http://code.org/api/hour/begin_encryption.png">
+      Dance_2019_01: |-
+        \_Faisons une soirée dansante! \_
+
+        Fais glisser le bloc <xml><block type="Dancelab_makeAnonymousDanceSprite" block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;, &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml> dans l'espace de travail et connecte-le à l'intérieur du bloc <xml><block type="Dancelab_whenSetup2" next_connection_disabled="true" block-text="setup"></block></xml> pour créer ton premier danseur.
+
+        -   _Tu peux également cliquer sur l'ampoule située à gauche si tu souhaites plus d'informations ou des défis supplémentaires._
+      Dance_2019_02: |-
+        Le bloc <xml><block type="Dancelab_whenKey" block-text="when up pressed"></block></xml> te permet d'exécuter du code lorsque tu appuies sur la flèche vers le haut. Utilise le bloc <xml><block type="Dancelab_doMoveEachLR" block-text="do once"><title name="GROUP">"CAT"</title><title name="MOVE">MOVES.XClapSide</title><title name="DIR">-1</title></block></xml> pour faire taper du danseur lorsque tu appuies sur la flèche vers le haut ou essaye un autre coup!
+
+        _Assure-toi d’appuyer sur ta flèche vers le haut ou sur ![](<https://images.code.org/419e704e6841c0b696016bf5029b8cb9-image-1571864825506.06.45 PM.png>) après avoir cliqué sur le bouton Exécuter!_
+      Dance_2019_03: Il est temps de danser! Programme chaque danseur pour qu'il bouge
+        lorsque tu appuies sur des touches différentes. Choisis ton coup préféré pour
+        chaque danseur ou règle-le sur `(Aléatoire)` pour quelque chose de totalement
+        imprévisible!
+      Dance_2019_04: |-
+        Faisons bouger les danseurs au rythme de la musique!
+
+        Faites glisser le bloc <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> vers l'espace de travail. Connecte-le sous le bloc <xml><block type="Dancelab_changeMoveEachLR"><title name="GROUP">"SHARK"</title><title name="MOVE">MOVES.ThisOrThat</title><title name="DIR">-1</title></block></xml>. Ton danseur devrait commencer un nouveau mouvement après la quatrième mesure.
+
+        **Les mesures** sont utilisées pour compter le temps passé en musique. Dans ce tutoriel, une mesure dure quatre temps.
       Dance_2019_05: |-
         _Voilà qu'on danse !_
 
         Ajoutez un bloc <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> à votre espace de travail. Faites en sorte que le danseur commence un nouveau mouvement après 6 mesures.
+      Dance_2019_06: |-
+        Utilise ce nouveau bloc pour configurer un groupe de danseurs de secours plus petits autour d’un danseur principal au milieu.
+           <xml><block type="Dancelab_makeNewDanceSpriteGroup">
+            <title name="N">???</title>
+            <title name="COSTUME" config="&quot;BEAR&quot;, &quot;CAT&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title>
+            <title name="LAYOUT">"circle"</title>
+          </block></xml>
+        Maintenant, tu peux créer un groupe de danseurs en même temps!
+      Dance_2019_08: Les danseurs ont une propriété "teinte" qui peut ajouter une
+        couche de couleur. Essaye de changer la teinte de l'un de tes danseurs (ou
+        d'un groupe entier)!
+      Dance_2019_09: |-
+        Ce **nouveau bloc** est un type spécial d'événement qui se déclenche encore et encore.
+
+        <xml><block type="Dancelab_everySeconds"><title name="N">2</title><title name="UNIT">"measures"</title></block></xml>
+
+        Les autres nouveaux blocs de ta boîte à outils te permettent de modifier progressivement (ou de manière aléatoire!) les propriétés des danseurs au fil du temps.
+
+        \_Soit créatif et amuse-toi! \_
       Dance_2019_10: Prends ton rythme ! Créez votre propre danse à partager avec
         vos amis.
       Dance_Party_01: |-
@@ -5576,6 +5615,14 @@ fr-FR:
         appuyez sur la touche fléchée droite.
       Dance_Party_12: Prends ton rythme ! Créez votre propre danse à partager avec
         vos amis.
+      Dance_Party_extras_alternate_2019: |-
+        # Entrons en formation!
+
+        Découvrez cette danse qui utilise le bloc [blockly block][0] pour modifier la formation des danseurs de secours tout au long de la danse. Essayez l'une de ces idées pour l'étendre:
+
+        -   Créer un deuxième groupe de danseurs dans une mise en page différente
+        -   Changer la disposition quand on appuie sur une touche
+        -   Changer une propriété quand les danseurs changent de formation
       Dance_Party_extras_battle: |-
         # Équipes de danse
 
@@ -5602,6 +5649,10 @@ fr-FR:
         -   Expérimente avec d'autres durées de notes (tel que 0,5 pour une blanche ou 0,125 pour une croche).
         -   Ajoute certains événements « après la mesure ».
         -   Change les « mesures » en « secondes » et essaie de chronométrer tes danses de cette façon.
+      Dance_Party_extras_every_beat_2019: |-
+        # Accélère, ralentis
+
+        Cette danse finale utilise le bloc [blockly block][0] pour contrôler la vitesse de déplacement de chaque danseur. Essaye d’expérimenter avec différentes vitesses à différents moments de la chanson. N'hésite pas à continuer à bricoler sur cette danse, ou à revenir à l'une des danses précédentes pour les rendre encore plus amusantes.
       Dance_Party_extras_layout: |-
         # Restons en formation !
 
@@ -5622,6 +5673,10 @@ fr-FR:
         # Accélére la, ralenti la
 
         Cette danse finale utilise le bloc « vitesse définie » pour contrôler la rapidité avec laquelle chaque danseur se déplace. Essaie d’expérimenter avec différentes vitesses à différents moments de la chanson. N'hésite pas à continuer à bricoler sur cette danse, ou à revenir à l'une des danses précédentes pour les rendre encore plus cool.
+      Dance_Party_extras_speed_2019: |-
+        # Accélère, ralentis
+
+        Cette danse finale utilise le bloc [blockly block][0] pour contrôler la vitesse de déplacement de chaque danseur. Essaye d’expérimenter avec différentes vitesses à différents moments de la chanson. N'hésite pas à continuer à bricoler sur cette danse, ou à revenir à l'une des danses précédentes pour les rendre encore plus amusantes.
       Dance_Party_extras_visible: |-
         # Où iraient-ils ?
 
