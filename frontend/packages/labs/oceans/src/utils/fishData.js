@@ -97,9 +97,7 @@ import mouth10_image from '../../public/images/fish/mouth/mouth10.png';
 import mouth11_image from '../../public/images/fish/mouth/mouth11.png';
 import mouth12_image from '../../public/images/fish/mouth/mouth12.png';
 import mouth13_image from '../../public/images/fish/mouth/mouth13.png';
-import mouth14_image from '../../public/images/fish/mouth/mouth14.png';
 import mouth15_image from '../../public/images/fish/mouth/mouth15.png';
-import mouth16_image from '../../public/images/fish/mouth/mouth16.png';
 import mouth17_image from '../../public/images/fish/mouth/mouth17.png';
 import mouth2_image from '../../public/images/fish/mouth/mouth2.png';
 import mouth3_image from '../../public/images/fish/mouth/mouth3.png';
@@ -701,31 +699,9 @@ const fishComponents = {
         AppMode.FishShort
       ]
     },
-    mouth14: {
-      src: mouth14_image,
-      knnData: [1, 2, MouthExpression.NEUTRAL],
-      type: FishBodyPart.MOUTH,
-      exclusions: [
-        AppMode.FishVTrash,
-        AppMode.CreaturesVTrashDemo,
-        AppMode.CreaturesVTrash,
-        AppMode.FishShort
-      ]
-    },
     mouth15: {
       src: mouth15_image,
       knnData: [1, 1.263157894736842, MouthExpression.SMILE],
-      type: FishBodyPart.MOUTH,
-      exclusions: [
-        AppMode.FishVTrash,
-        AppMode.CreaturesVTrashDemo,
-        AppMode.CreaturesVTrash,
-        AppMode.FishShort
-      ]
-    },
-    mouth16: {
-      src: mouth16_image,
-      knnData: [0, 0.6666666666666666, MouthExpression.NEUTRAL],
       type: FishBodyPart.MOUTH,
       exclusions: [
         AppMode.FishVTrash,
