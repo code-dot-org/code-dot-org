@@ -1,5 +1,3 @@
-- launch_ai = DCDO.get('launch_ai', nil)
-
 %h1= t('signin_form.title')
 
 .flex-container
@@ -44,9 +42,7 @@
 %h3= t('signin.try_heading')
 
 .row
-  - if @is_english && launch_ai
-    - course_blocks = [Script::DANCE_PARTY_2019_NAME, Script::MINECRAFT_AQUATIC_NAME, Script::OCEANS_NAME, Script::FLAPPY_NAME]
-  - elsif @is_english
+  - if @is_english
     - course_blocks = [Script::DANCE_PARTY_2019_NAME, Script::MINECRAFT_AQUATIC_NAME, Script::APPLAB_INTRO, Script::FLAPPY_NAME]
   - else
     - course_blocks = [Script::DANCE_PARTY_2019_NAME, Script::MINECRAFT_AQUATIC_NAME, Script::FROZEN_NAME, Script::HOC_NAME]
