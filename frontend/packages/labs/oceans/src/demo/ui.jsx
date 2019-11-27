@@ -702,8 +702,8 @@ let ConfirmationDialog = class ConfirmationDialog extends React.Component {
                 Are you sure?
               </div>
               <div style={styles.confirmationText}>
-                Erasing AI's data will permanently delete all training. Is that
-                what you want to do?
+                {`Erasing A.I.'s data will permanently delete all training. Is
+                that what you want to do?`}
               </div>
             </div>
           </div>
@@ -1426,6 +1426,18 @@ let Guide = class Guide extends React.Component {
   render() {
     const currentGuide = getCurrentGuide();
 
+    let guideBgStyle = [styles.guideBackground];
+    if (currentGuide) {
+      if (currentGuide.noDimBackground) {
+        guideBgStyle = [styles.guideBackgroundHidden];
+      }
+
+      // Info guides should have a darker background color.
+      if (currentGuide.style === 'Info') {
+        guideBgStyle.push({backgroundColor: colors.transparentBlack});
+      }
+    }
+
     return (
       <div>
         {currentGuide && currentGuide.image && (
@@ -1438,11 +1450,7 @@ let Guide = class Guide extends React.Component {
           <div>
             <div
               key={currentGuide.id}
-              style={
-                currentGuide.noDimBackground
-                  ? styles.guideBackgroundHidden
-                  : styles.guideBackground
-              }
+              style={guideBgStyle}
               onClick={this.dismissGuideClick}
             >
               <div
