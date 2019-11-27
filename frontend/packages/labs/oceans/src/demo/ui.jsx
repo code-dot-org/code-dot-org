@@ -371,7 +371,8 @@ const styles = {
     borderRadius: 10,
     left: '3%',
     top: '16%',
-    padding: '2%'
+    padding: '2%',
+    pointerEvents: 'none'
   },
   pondPanelRight: {
     position: 'absolute',
@@ -381,7 +382,8 @@ const styles = {
     borderRadius: 10,
     right: '3%',
     top: '16%',
-    padding: '2%'
+    padding: '2%',
+    pointerEvents: 'none'
   },
   pondPanelPreText: {
     marginBottom: '5%'
@@ -1294,7 +1296,7 @@ let Pond = class Pond extends React.Component {
       });
 
       if (!fishClicked) {
-        setState({pondClickedFish: null, pondPanelShowing: false});
+        setState({pondClickedFish: null});
         playSound('no');
       }
     }
@@ -1308,8 +1310,7 @@ let Pond = class Pond extends React.Component {
       state.appMode === AppMode.FishLong
     ) {
       setState({
-        pondPanelShowing: !state.pondPanelShowing,
-        pondClickedFish: null
+        pondPanelShowing: !state.pondPanelShowing
       });
     }
 
