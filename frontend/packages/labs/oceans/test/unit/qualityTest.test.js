@@ -305,7 +305,6 @@ describe('Model quality test', () => {
     }
   });
 
-
   test('test tails', async () => {
     const partData = fishData.tails;
     const partKey = PartKey.TAIL;
@@ -315,7 +314,6 @@ describe('Model quality test', () => {
       console.log(`${partKey} ${name}`);
       const id = data.index;
       const labelFn = fish => {
-        //console.log(JSON.stringify(fish, null, 2));
         return fish[partKey].index === id ? ClassType.Like : ClassType.Dislike;
       };
       const result = await performTrials({
@@ -329,7 +327,6 @@ describe('Model quality test', () => {
       expect(result.recall).toBeGreaterThanOrEqual(0.4);
     }
   });
-
 
   test('test dorsal fins', async () => {
     const partData = fishData.dorsalFins;
@@ -340,7 +337,6 @@ describe('Model quality test', () => {
       console.log(`${partKey} ${name}`);
       const id = data.index;
       const labelFn = fish => {
-        //console.log(JSON.stringify(fish, null, 2));
         return fish[partKey].index === id ? ClassType.Like : ClassType.Dislike;
       };
       const result = await performTrials({
@@ -354,7 +350,6 @@ describe('Model quality test', () => {
       expect(result.recall).toBeGreaterThanOrEqual(0.4);
     }
   });
-
 
   test('test mouth expressions', async () => {
     const partKey = PartKey.MOUTH;
@@ -536,5 +531,4 @@ describe('Model quality test', () => {
     expect(top_two).toContain('bodies');
     expect(top_two).toContain('dorsalFins');
   });
-
 });
