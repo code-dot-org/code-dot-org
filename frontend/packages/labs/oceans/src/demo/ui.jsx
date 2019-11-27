@@ -1415,10 +1415,6 @@ let Pond = class Pond extends React.Component {
 Pond = Radium(Pond);
 
 let Guide = class Guide extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   onShowing() {
     clearInterval(getState().guideTypingTimer);
     setState({guideShowing: true, guideTypingTimer: null});
