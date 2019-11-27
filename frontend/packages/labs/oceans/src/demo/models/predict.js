@@ -11,7 +11,7 @@ export const init = () => {
     fishData = fishData.concat(generateOcean(4, 0, true, true, false));
     fishData = fishData.concat(generateOcean(3, 4, false, false, true));
   } else if (state.appMode === AppMode.FishLong) {
-    fishData = generateOcean(200);
+    fishData = generateOcean(500);
   } else {
     fishData = generateOcean(100);
   }
