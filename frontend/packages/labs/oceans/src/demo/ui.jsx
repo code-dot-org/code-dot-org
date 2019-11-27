@@ -568,6 +568,14 @@ const styles = {
     maxWidth: '47%',
     transform: 'translate(-50%, -50%)'
   },
+  infoGuideButton: {
+    backgroundColor: colors.orange,
+    color: colors.white,
+    transform: 'translate(-50%)',
+    marginLeft: '50%',
+    marginTop: '2%',
+    padding: '3% 7%'
+  },
   arrowBotRight: {
     top: '15%',
     right: '12.5%',
@@ -1505,6 +1513,11 @@ let Guide = class Guide extends React.Component {
                         : currentGuide.text}
                     </div>
                   </div>
+                  {currentGuide.style === 'Info' && (
+                    <Button style={styles.infoGuideButton} onClick={() => {}}>
+                      Continue
+                    </Button>
+                  )}
                 </div>
               </div>
             </div>
