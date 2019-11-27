@@ -28,7 +28,8 @@ export const trashImagePaths = [
   Trash_6pack,
   Trash_Apple,
   Trash_Banana,
-  Trash_Battery,
+  // TODO: Re-enable battery once asset has been updated.
+  // Trash_Battery,
   Trash_Bottle,
   Trash_Bulb,
   Trash_Can,
