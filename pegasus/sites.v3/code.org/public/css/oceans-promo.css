@@ -10,9 +10,9 @@
 
 .crab {
   position: absolute;
-  width: 80px;
+  width: 60px;
   top: 245px;
-  left: 450px;
+  left: 200px;
 }
 
 .scanning-bot {
@@ -20,7 +20,7 @@
   margin-top: 0px;
   margin-bottom: 10px;
   top: 20px;
-  left: 650px;
+  left: 670px;
 }
 
 .ai-bot {
@@ -29,7 +29,7 @@
 
 .ai-light {
   width: 150px;
-  left: 650px;
+  left: 670px;
   top: 290px;
   position: absolute;
 }
@@ -38,5 +38,5 @@
   position: absolute;
   width: 80px;
   top: 185px;
-  left: 685px;
+  left: 705px;
 }
