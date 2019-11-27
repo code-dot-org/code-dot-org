@@ -38,10 +38,7 @@ const soundLibrary = {
     require('../../../public/sounds/other/other_2.mp3'),
     require('../../../public/sounds/other/other_3.mp3'),
     require('../../../public/sounds/other/other_4.mp3'),
-  ],
-  ambience: [
-    require('../../../public/sounds/ambience/ambience_1.mp3'),
-  ],
+  ]
 }
 
 export const injectSoundAPIs = ({registerSound, playSound}) => {
@@ -55,7 +52,7 @@ export const loadSounds = () => {
   ));
 };
 
-export const playSound = (categoryName, specificIndex = undefined) => {
-  const index = specificIndex || randomInt(0, soundLibrary[categoryName].length - 1);
-  playSoundAPI(soundLibrary[categoryName][index]);
+export const playSound = (categoryName, volume = undefined) => {
+  const index = randomInt(0, soundLibrary[categoryName].length - 1);
+  playSoundAPI(soundLibrary[categoryName][index], {volume: volume || 1.0});
 };

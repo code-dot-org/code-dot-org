@@ -1448,7 +1448,7 @@ let Guide = class Guide extends React.Component {
 
     if (!getState().guideShowing && !getState().guideTypingTimer && currentGuide) {
       const guideTypingTimer = setInterval(() => {
-        playSound('no');
+        playSound('no', 0.5);
       }, 1000/10);
       setState({guideTypingTimer});
     }
@@ -1483,7 +1483,7 @@ let Guide = class Guide extends React.Component {
                   <div style={styles.guideTypingText}>
                     <Typist
                       avgTypingDelay={35}
-                      stdTypingDelay={0}
+                      stdTypingDelay={15}
                       cursor={{show: false}}
                       onTypingDone={this.onShowing}
                     >
