@@ -67,20 +67,22 @@ theme: responsive
   .tutorial-promo-container
     = view :oceans_promo
     .tutorial-details.desktop-feature
-      %h1.tutorial-heading=hoc_s(:oceans_landing_title)
-      %p.tutorial-description=hoc_s(:oceans_landing_description)
-      %p.tutorial-description=hoc_s(:cs_for_good_hashtag)
-      %p.tutorial-specs=hoc_s(:oceans_landing_specs)
+      %h1.tutorial-heading= hoc_s(:oceans_landing_title)
+      %p.tutorial-description= hoc_s(:oceans_landing_description)
+      %p.tutorial-description= hoc_s(:cs_for_good_hashtag)
+      %p.tutorial-specs= hoc_s(:oceans_landing_specs)
       %a{href: CDO.studio_url('/s/oceans'), target: '_self'}
         %button.tutorial-button=I18n.t(:try_now)
 
   %div{style: "clear: both; margin-top: 20px;"}
 
-  %h3.blurb=hoc_s(:oceans_landing_explanation)
+  %h3.blurb= hoc_s(:oceans_landing_explanation)
 
   = view :resource_boxes, resources: resources
 
-  %h2=hoc_s(:oceans_landing_learn_more)
+  %h2= hoc_s(:oceans_landing_learn_more)
+
+  = view :ai_videos
 
   = view :ai_ml_resources_table
 
