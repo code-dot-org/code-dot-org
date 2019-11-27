@@ -245,15 +245,6 @@ class ScriptDSL < BaseDSL
     @stage_extras_disabled = true
   end
 
-  def i18n_strings
-    i18n_strings = {}
-    @stages.each do |stage|
-      i18n_strings[stage[:stage]] = {'name' => stage[:stage]}
-    end
-
-    {@name => {'stages' => i18n_strings}}
-  end
-
   def self.parse_file(filename, name = nil)
     super(filename, name || File.basename(filename, '.script'))
   end
