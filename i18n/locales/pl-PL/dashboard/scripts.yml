@@ -4197,7 +4197,6 @@ pl:
             Dance Party:
               name: Potańcówka
         dance-extras:
-          title: Nie przestawaj tańczyć
           description: Wyjdź poza pierwszą godzinę dzięki rozszerzonym pomysłom na projekt.
         coursef-2019:
           description_short: Poznaj wszystkie pojęcia z podstaw informatyki i stwórz własne dzieło sztuki, historyjkę lub grę.
@@ -4874,7 +4873,6 @@ pl:
             For Loops:
               name: Pętle dla (for)
         dance-extras-2019:
-          title: Nie przestawaj tańczyć
           description: Wyjdź poza pierwszą godzinę dzięki rozszerzonym pomysłom na projekt.
         csp10-pilot:
           stages:

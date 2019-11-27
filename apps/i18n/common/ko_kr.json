@@ -424,7 +424,7 @@
   "dropletBlock_lessThanOrEqualOperator_signatureOverride": "작거나 같은지 평가하는 연산자",
   "dropletBlock_mathAbs_param0": "x",
   "dropletBlock_mathPow_param0": "x",
-  "dropletBlock_mathPow_param1": "예",
+  "dropletBlock_mathPow_param1": "y",
   "dropletBlock_mathRandom_description": "0부터 1보다 작은 범위의 랜덤 수를 만들어 줍니다.",
   "dropletBlock_mathRandom_signatureOverride": "Math.random()",
   "dropletBlock_mathRound_param0": "x",

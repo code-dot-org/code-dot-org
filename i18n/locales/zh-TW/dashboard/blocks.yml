@@ -511,15 +511,19 @@ zh-TW:
             '"none"': 無
             '"rand"': 隨機
             '"circles"': 圓形
+            '"quads"': 角度
             '"color_cycle"': 色塊
             '"diamonds"': 菱形
             '"disco_ball"': 迪斯科球
             '"fireworks"': 煙火
+            '"flowers"': 花朵
             '"swirl"': 催眠
             '"kaleidoscope"': 萬花筒
             '"lasers"': 鐳射舞池
             '"splatter"': 飛濺油漆
             '"rainbow"': 彩虹
+            '"ripples_random"': 隨機生成的漣漪
+            '"ripples"': 漣漪
             '"snowflakes"': 雪球
             '"text"': 歌曲標題
             '"galaxy"': 太空
@@ -527,6 +531,7 @@ zh-TW:
             '"spiral"': 螺旋
             '"disco"': 正方形
             '"stars"': 星星
+            '"music_wave"': 海浪
           PALETTE:
             '"rave"': 黑與白
             '"cool"': 冷色系
@@ -593,6 +598,7 @@ zh-TW:
             '"none"': 無
             '"rand"': 隨機
             '"bubbles"': 氣泡
+            '"hearts_colorful"': 五彩繽紛的心
             '"confetti"': 紙花
             '"hearts_red"': 愛心
             '"music_notes"': 音符
@@ -651,6 +657,7 @@ zh-TW:
             '"y"': 垂直位置
             '"tint"': 色調
       Dancelab_setPropRandomEach:
+        text: 隨機化 {GROUP} {PROPERTY}
         options:
           GROUP:
             sprites: 全部
@@ -821,8 +828,15 @@ zh-TW:
             '"mid"': 中音
             '"treble"': 高音
       Dancelab_translateStrings:
+        text: 翻譯 {STRING}
         options:
           STRING:
+            '"music_wave"': 海浪
+            '"ripples"': 漣漪
+            '"ripples_random"': 隨機生成的漣漪
+            '"quads"': 角度
+            '"flowers"': 花朵
+            '"popsicles"': 冰棒
             '"hearts_colorful"': 愛心
             '"diamond"': 鑽石
             '"s"': s
@@ -1538,7 +1552,9 @@ zh-TW:
             '"cod"': cod
             '"dolphin"': 海豚
             '"salmon"': 鮭魚
+            '"seaTurtle"': 海龜
             '"squid"': 烏賊
+            '"tropicalFish"': 熱帶魚
       craft_turn:
         text: 轉向{DIR}
         options:

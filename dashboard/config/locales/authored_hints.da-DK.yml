@@ -123,6 +123,13 @@ da-DK:
               <title name="MOVE">"rand"</title>
               <title name="DIR">-1</title>
               </block></xml>
+      Dance_Party_05:
+        validation: |-
+          **Hvordan kommer jeg gennem dette level?**
+
+          -   Din danser må gennem mindst 4 forskellige danse moves før dette level er slut.
+
+          _Dette level slutter efter 12 takter._
       Function intro Ryan:
         Function_intro_Ryan_a: Du kan kalde en funktion mange gange i dit program!  Prøv
           at kalde den to gange for at løse opgaven.
