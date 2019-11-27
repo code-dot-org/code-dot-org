@@ -238,7 +238,6 @@ export class FishOceanObject extends OceanObject {
       ...this.body.knnData,
       ...this.eye.knnData,
       ...this.mouth.knnData,
-      ...this.pectoralFinFront.knnData,
       ...this.dorsalFin.knnData,
       ...this.tail.knnData,
       ...this.colorPalette.knnData
@@ -247,7 +246,6 @@ export class FishOceanObject extends OceanObject {
       ...this.body.fieldInfos,
       ...this.eye.fieldInfos,
       ...this.mouth.fieldInfos,
-      ...this.pectoralFinFront.fieldInfos,
       ...this.dorsalFin.fieldInfos,
       ...this.tail.fieldInfos,
       ...this.colorPalette.fieldInfos
