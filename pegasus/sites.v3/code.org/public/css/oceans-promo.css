@@ -1,6 +1,6 @@
-.background-img {
+.background-img,
+.mobile {
   width: 100%;
-  border-radius: 5px;
 }
 
 .sea-creature {
