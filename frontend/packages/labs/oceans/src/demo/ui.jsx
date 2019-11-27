@@ -737,7 +737,7 @@ ConfirmationDialog = Radium(ConfirmationDialog);
 const wordSet = {
   short: {
     text: ['What type of fish do you want to train A.I. to detect?'],
-    choices: [['Blue', 'Green', 'Red'], ['Triangle', 'Round', 'Square']],
+    choices: [['Blue', 'Green', 'Red'], ['Circular', 'Rectangular', 'Triangular']],
     style: styles.button2col
   },
   long: {

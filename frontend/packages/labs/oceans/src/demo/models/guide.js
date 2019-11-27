@@ -16,7 +16,7 @@ const imageStyleOverrides = {
 const guides = [
   {
     id: 'fishvtrash-training-init1',
-    text: `Garbage dumped in the water affects marine life.  In this activity you will “program” or “train” A.I. (artificial intelligence) to identify fish or trash.  Let’s clean up the ocean!`,
+    text: `Garbage dumped in the water affects marine life.  In this activity you will program or train A.I. (artificial intelligence) to identify fish or trash.  Let’s clean up the ocean!  Click anywhere on the screen to continue.`,
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Training}
   },
   {
@@ -54,7 +54,7 @@ const guides = [
   },
   {
     id: 'fishvtrash-training-pause2',
-    text: `You are programming or “training” A.I. with each click. Keep going.`,
+    text: `You are programming or training A.I. with each click.  Keep going.`,
     when: {
       appMode: AppMode.FishVTrash,
       currentMode: Modes.Training,
@@ -80,7 +80,7 @@ const guides = [
   },
   {
     id: 'fishvtrash-training-pause4',
-    text: `A.I. learns from your choices. If you make “wrong” choices, A.I. will learn to repeat your mistakes.`,
+    text: `A.I. learns from your choices.  If you make “wrong” choices, A.I. will learn to repeat your mistakes.`,
     when: {
       appMode: AppMode.FishVTrash,
       currentMode: Modes.Training,
@@ -107,7 +107,7 @@ const guides = [
   },
   {
     id: 'fishvtrash-predicting-init2',
-    text: `A.I. will analyze 100 objects and label them based on your training.`,
+    text: `A.I. will analyze a random set of objects and label them based on your training.`,
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Predicting}
   },
   {
@@ -119,7 +119,7 @@ const guides = [
   },
   {
     id: 'fishvtrash-pond-init1',
-    text: `Based on your training, here are the objects that A.I. identified as “fish”.  How did A.I. do?`,
+    text: `Based on your training, here are some objects that A.I. identified as “fish”.  How did A.I. do?`,
     when: {
       appMode: AppMode.FishVTrash,
       currentMode: Modes.Pond,
@@ -130,7 +130,7 @@ const guides = [
   },
   {
     id: 'fishvtrash-pond-recall',
-    text: `Click here to switch between objects labeled as “fish” and “not fish”.`,
+    text: `Click here to switch between objects identified as “fish” and “not fish”.`,
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Pond},
     arrow: 'UpperRight'
   },
@@ -170,7 +170,7 @@ const guides = [
   },
   {
     id: 'creaturesvtrashdemo-predicting-pause1',
-    text: `Did you notice that some sea creatures were unintentionally identified as “not fish”?`,
+    text: `Did you notice that some sea creatures were identified as "not fish"?`,
     when: {
       appMode: AppMode.CreaturesVTrashDemo,
       currentMode: Modes.Predicting,
@@ -179,7 +179,7 @@ const guides = [
   },
   {
     id: 'creaturesvtrashdemo-predicting-pause2',
-    text: `Many sea creatures don't look like fish.  That doesn’t mean they don't belong in the water.`,
+    text: `While these sea creatures are not fish, they do belong in the water.`,
     when: {
       appMode: AppMode.CreaturesVTrashDemo,
       currentMode: Modes.Predicting,
@@ -214,7 +214,7 @@ const guides = [
   {
     id: 'creaturesvtrash-training-init2',
     heading: 'Did you know?',
-    text: `In the ocean, plastic debris can harm fish, seabirds and marine mammals. This is one of many reasons to keep the oceans clean.`,
+    text: `In the ocean, plastic debris can harm fish, seabirds, and marine mammals. This is one of many reasons to keep the oceans clean.`,
     when: {
       appMode: AppMode.CreaturesVTrash,
       currentMode: Modes.Training,
@@ -281,7 +281,7 @@ const guides = [
   },
   {
     id: 'creaturesvtrash-pond-init1',
-    text: `Based on your training, here are the objects that A.I. identified as “belongs in water”.  How did A.I. do?`,
+    text: `Based on your training, here are some objects that A.I. identified as “belongs in water”.  How did A.I. do?`,
     when: {
       appMode: AppMode.CreaturesVTrash,
       currentMode: Modes.Pond,
@@ -342,7 +342,7 @@ const guides = [
     textFn: state => {
       return `Based on your training, A.I. identified ${
         state.fishData.length === 1 ? 'this' : 'these'
-      } fish as “${state.word.toLowerCase()}”. How did A.I. do?`;
+      } fish as “${state.word.toLowerCase()}”.  How did A.I. do?`;
     },
     when: {
       appMode: AppMode.FishShort,
@@ -366,7 +366,7 @@ const guides = [
   {
     id: 'fishlong-words-init2',
     text:
-      'Let’s teach A.I. a word that depends on your opinion.  It’s up to you to pick fish that match your word.',
+      'Let’s teach A.I. a word that depends on your opinion.  It is up to you to pick fish that match your word.',
     when: {appMode: AppMode.FishLong, currentMode: Modes.Words}
   },
   {
@@ -443,7 +443,7 @@ const guides = [
     textFn: state => {
       return `Based on your training, A.I. identified ${
         state.fishData.length === 1 ? 'this' : 'these'
-      } fish as “${state.word.toLowerCase()}”. How did A.I do?`;
+      } fish as “${state.word.toLowerCase()}”.  How did A.I do?`;
     },
     when: {
       appMode: AppMode.FishLong,
@@ -455,7 +455,7 @@ const guides = [
   },
   {
     id: 'fishlong-pond-init2',
-    text: 'Try out a new word by clicking New Word.',
+    text: 'Try out a new word by clicking the New Word button.',
     when: {appMode: AppMode.FishLong, currentMode: Modes.Pond},
     arrow: 'LowishRight'
   }
