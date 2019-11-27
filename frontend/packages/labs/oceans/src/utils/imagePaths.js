@@ -1,7 +1,7 @@
 import Trash_6pack from '../../public/images/trash/Trash_6pack.png';
 import Trash_Apple from '../../public/images/trash/Trash_Apple.png';
 import Trash_Banana from '../../public/images/trash/Trash_Banana.png';
-import Trash_Battery from '../../public/images/trash/Trash_Battery.png';
+// import Trash_Battery from '../../public/images/trash/Trash_Battery.png';
 import Trash_Bottle from '../../public/images/trash/Trash_Bottle.png';
 import Trash_Bulb from '../../public/images/trash/Trash_Bulb.png';
 import Trash_Can from '../../public/images/trash/Trash_Can.png';
@@ -28,7 +28,8 @@ export const trashImagePaths = [
   Trash_6pack,
   Trash_Apple,
   Trash_Banana,
-  Trash_Battery,
+  // TODO: Re-enable battery once asset has been updated.
+  // Trash_Battery,
   Trash_Bottle,
   Trash_Bulb,
   Trash_Can,

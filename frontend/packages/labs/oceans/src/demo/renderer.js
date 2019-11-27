@@ -119,7 +119,7 @@ export const render = () => {
   const timeBeforeCanSkipPredict = 5000;
   const timeBeforeCanSkipBiasText = 2000;
   const timeBeforeCanSeePondText = 3000;
-  const timeBeforeCanSkipPond = 5000;
+  const timeBeforeCanSkipPond = 3000;
 
   switch (state.currentMode) {
     case Modes.Words:
