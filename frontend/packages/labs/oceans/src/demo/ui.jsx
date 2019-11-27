@@ -60,6 +60,7 @@ const styles = {
     minWidth: '15%',
     outline: 'none',
     border: 'none',
+    whiteSpace: 'nowrap',
     ':focus': {
       outline: `${colors.white} auto 5px`
     }
@@ -625,7 +626,7 @@ const styles = {
     transform: 'translateX(-50%) rotate(180deg)'
   },
   marginRight: {
-    marginRight: 10
+    marginRight: '12%'
   }
 };
 
