@@ -130,7 +130,7 @@ const guides = [
   },
   {
     id: 'fishvtrash-pond-recall',
-    text: `Click here to switch between objects labeled as “fish” and “not fish”.`,
+    text: `Click here to switch between objects identified as “fish” and “not fish”.`,
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Pond},
     arrow: 'UpperRight'
   },
@@ -170,7 +170,7 @@ const guides = [
   },
   {
     id: 'creaturesvtrashdemo-predicting-pause1',
-    text: `Did you notice that some sea creatures were identifies as "not fish"?`,
+    text: `Did you notice that some sea creatures were identified as "not fish"?`,
     when: {
       appMode: AppMode.CreaturesVTrashDemo,
       currentMode: Modes.Predicting,
@@ -179,7 +179,7 @@ const guides = [
   },
   {
     id: 'creaturesvtrashdemo-predicting-pause2',
-    text: `Right now A.I. only knows what "fish" look like.  Other sea creatures also belong in the water.`,
+    text: `While these sea creatures are not fish, they do belong in the water.`,
     when: {
       appMode: AppMode.CreaturesVTrashDemo,
       currentMode: Modes.Predicting,
