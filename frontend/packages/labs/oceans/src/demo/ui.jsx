@@ -20,7 +20,7 @@ import aiBotBody from '../../public/images/ai-bot/ai-bot-body.png';
 import aiBotClosed from '../../public/images/ai-bot/ai-bot-closed.png';
 import counterIcon from '../../public/images/polaroid-icon.png';
 import arrowDownImage from '../../public/images/arrow-down.png';
-import snail from '../../public/images/seaCreatures/Snail.png';
+import snail from '../../public/images/snail-large.png';
 import Typist from 'react-typist';
 import {getCurrentGuide, dismissCurrentGuide} from './models/guide';
 import {playSound} from './models/soundLibrary';
@@ -121,19 +121,18 @@ const styles = {
     top: '50%',
     bottom: 'initial',
     left: '50%',
-    padding: '2%'
+    padding: '2%',
+    borderRadius: 8
   },
   confirmationDialogContent: {
     display: 'flex',
     justifyContent: 'space-between'
   },
-  confirmationDialogText: {
-    width: '70%'
-  },
   confirmationDialogImg: {
-    maxWidth: '50%',
-    padding: '5%',
-    boxSizing: 'border-box'
+    position: 'absolute',
+    bottom: '-47%',
+    left: '-41%',
+    height: '100%'
   },
   confirmationHeader: {
     fontSize: '220%',
@@ -241,7 +240,7 @@ const styles = {
   trainBot: {
     position: 'absolute',
     top: '30%',
-    right: '0%',
+    right: '-2%',
     width: '30%'
   },
   trainBotHead: {
@@ -271,15 +270,14 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    backgroundColor: colors.black,
-    opacity: '90%',
+    backgroundColor: colors.transparentBlack,
     color: colors.neonBlue,
     borderRadius: 33,
-    padding: '8px 20px',
+    padding: '9px 20px',
     minWidth: 65
   },
   counterNum: {
-    fontSize: '80%',
+    fontSize: '90%',
     marginLeft: 12
   },
   eraseButtonContainer: {
@@ -446,21 +444,18 @@ const styles = {
     backgroundColor: colors.white,
     color: colors.grey,
     maxHeight: 42,
-    borderRadius: 8
+    borderRadius: 8,
+    display: 'flex',
+    alignItems: 'center'
   },
   recallIcon: {
     cursor: 'pointer',
-    width: 28,
-    height: 28,
     padding: 7
   },
   infoIconContainer: {
     cursor: 'pointer',
     borderRadius: 50,
-    padding: 7,
-    marginLeft: 8,
-    width: 28,
-    height: 28,
+    marginLeft: 10,
     backgroundColor: colors.white,
     color: colors.grey,
     ':hover': {
@@ -473,8 +468,7 @@ const styles = {
     }
   },
   infoIcon: {
-    width: 28,
-    height: 28
+    padding: '5px 12px'
   },
   bgNeonBlue: {
     backgroundColor: colors.neonBlue,
@@ -487,21 +481,6 @@ const styles = {
   bgGreen: {
     backgroundColor: colors.green,
     color: colors.white
-  },
-  pill: {
-    display: 'flex',
-    alignItems: 'center'
-  },
-  pillIcon: {
-    width: 19,
-    padding: 10,
-    borderRadius: 33
-  },
-  pillText: {
-    color: colors.black,
-    padding: '10px 30px',
-    borderRadius: 33,
-    marginLeft: -18
   },
   count: {
     position: 'absolute',
@@ -523,22 +502,19 @@ const styles = {
     left: '50%',
     transform: 'translateX(-50%)'
   },
-  guideLeft: {
-    float: 'left'
-  },
-  guideRight: {
-    float: 'right',
-    position: 'relative'
-  },
   guideImage: {
-    maxWidth: '90%',
-    padding: '20%',
-    boxSizing: 'border-box'
+    position: 'absolute',
+    bottom: '1%',
+    left: '15%',
+    zIndex: 2,
+    maxHeight: '45%',
+    maxWidth: '35%'
   },
   guideHeading: {
     fontSize: '220%',
     color: colors.darkGrey,
-    paddingBottom: '5%'
+    paddingBottom: '5%',
+    textAlign: 'center'
   },
   guideTypingText: {
     position: 'absolute',
@@ -592,7 +568,7 @@ const styles = {
   },
   arrowBotRight: {
     top: '15%',
-    right: '14.5%',
+    right: '12.5%',
     transform: 'translateX(-50%)'
   },
   arrowLowerLeft: {
@@ -616,8 +592,8 @@ const styles = {
     transform: 'translateX(-50%)'
   },
   arrowUpperRight: {
-    top: '15%',
-    right: '-2.5%',
+    top: '13%',
+    right: '-3.5%',
     transform: 'translateX(-50%) rotate(180deg)'
   },
   arrowUpperFarRight: {
@@ -720,7 +696,7 @@ let ConfirmationDialog = class ConfirmationDialog extends React.Component {
         <div style={styles.confirmationDialog}>
           <div style={styles.confirmationDialogContent}>
             <img src={snail} style={styles.confirmationDialogImg} />
-            <div style={styles.confirmationDialogText}>
+            <div>
               <div
                 style={styles.confirmationHeader}
                 className="confirmation-text"
@@ -728,8 +704,8 @@ let ConfirmationDialog = class ConfirmationDialog extends React.Component {
                 Are you sure?
               </div>
               <div style={styles.confirmationText}>
-                Erasing AI's data will permanently delete all training. Is that
-                what you want to do?
+                {`Erasing A.I.'s data will permanently delete all training. Is
+                that what you want to do?`}
               </div>
             </div>
           </div>
@@ -886,7 +862,7 @@ let Train = class Train extends React.Component {
         </div>
         <div style={styles.trainingIcons}>
           <div style={styles.counter}>
-            <img src={counterIcon} style={{height: 28}} />
+            <img src={counterIcon} />
             <span style={styles.counterNum}>
               {Math.min(999, state.yesCount + state.noCount)}
             </span>
@@ -1374,7 +1350,7 @@ let Pond = class Pond extends React.Component {
             />
           </div>
           {showInfoButton && (
-            <span
+            <div
               style={{
                 ...styles.infoIconContainer,
                 ...(!state.pondPanelShowing ? {} : styles.bgNeonBlue)
@@ -1385,7 +1361,7 @@ let Pond = class Pond extends React.Component {
                 style={styles.infoIcon}
                 onClick={this.onPondPanelButtonClick}
               />
-            </span>
+            </div>
           )}
         </div>
         <img style={styles.pondBot} src={aiBotClosed} />
@@ -1437,7 +1413,7 @@ let Pond = class Pond extends React.Component {
 };
 Pond = Radium(Pond);
 
-class Guide extends React.Component {
+let Guide = class Guide extends React.Component {
   onShowing() {
     setState({guideShowing: true});
   }
@@ -1452,27 +1428,31 @@ class Guide extends React.Component {
   render() {
     const currentGuide = getCurrentGuide();
 
-    // We migth show an image on the left and text on the right.  If there's
-    // no image, it's all right.
-    let leftWidth, rightWidth;
-    if (currentGuide && currentGuide.image) {
-      leftWidth = '30%';
-      rightWidth = '70%';
-    } else {
-      rightWidth = '100%';
+    let guideBgStyle = [styles.guideBackground];
+    if (currentGuide) {
+      if (currentGuide.noDimBackground) {
+        guideBgStyle = [styles.guideBackgroundHidden];
+      }
+
+      // Info guides should have a darker background color.
+      if (currentGuide.style === 'Info') {
+        guideBgStyle.push({backgroundColor: colors.transparentBlack});
+      }
     }
 
     return (
       <div>
+        {currentGuide && currentGuide.image && (
+          <img
+            src={currentGuide.image}
+            style={[styles.guideImage, currentGuide.imageStyle || {}]}
+          />
+        )}
         {!!currentGuide && (
           <div>
             <div
               key={currentGuide.id}
-              style={
-                currentGuide.noDimBackground
-                  ? styles.guideBackgroundHidden
-                  : styles.guideBackground
-              }
+              style={guideBgStyle}
               onClick={this.dismissGuideClick}
             >
               <div
@@ -1481,13 +1461,7 @@ class Guide extends React.Component {
                   ...styles[`guide${currentGuide.style}`]
                 }}
               >
-                {currentGuide.image && (
-                  <div style={{...styles.guideLeft, width: leftWidth}}>
-                    <img src={currentGuide.image} style={styles.guideImage} />
-                  </div>
-                )}
-
-                <div style={{...styles.guideRight, width: rightWidth}}>
+                <div>
                   {currentGuide.heading && (
                     <div style={styles.guideHeading}>
                       {currentGuide.heading}
@@ -1535,7 +1509,8 @@ class Guide extends React.Component {
       </div>
     );
   }
-}
+};
+Guide = Radium(Guide);
 
 export default class UI extends React.Component {
   constructor(props) {

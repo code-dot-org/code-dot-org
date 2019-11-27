@@ -1,10 +1,17 @@
 import {getState, setState} from '../state';
 import {AppMode, Modes} from '../constants';
 import {queryStrFor} from '../helpers';
-import turtleImage from '../../../public/images/seaCreatures/Turtle.png';
-import seahorseImage from '../../../public/images/seaCreatures/Seahorse.png';
-import trashBottleImage from '../../../public/images/trash/Trash_Bottle.png';
-import trashCanImage from '../../../public/images/trash/Trash_Can.png';
+import turtleImage from '../../../public/images/turtle-large.png';
+import seahorseImage from '../../../public/images/seahorse-large.png';
+import trashBottleImage from '../../../public/images/bottle-large.png';
+import trashCanImage from '../../../public/images/can-large.png';
+
+const imageStyleOverrides = {
+  turtle: {bottom: '1%', left: '6%'},
+  seahorse: {bottom: '2%', left: '14%'},
+  bottle: {bottom: '1%', left: '20%'},
+  can: {bottom: '2%', left: '16%'}
+};
 
 const guides = [
   {
@@ -42,7 +49,8 @@ const guides = [
       }
     },
     style: 'Info',
-    image: trashBottleImage
+    image: trashBottleImage,
+    imageStyle: imageStyleOverrides.bottle
   },
   {
     id: 'fishvtrash-training-pause2',
@@ -67,7 +75,8 @@ const guides = [
       }
     },
     style: 'Info',
-    image: trashCanImage
+    image: trashCanImage,
+    imageStyle: imageStyleOverrides.can
   },
   {
     id: 'fishvtrash-training-pause4',
@@ -214,7 +223,8 @@ const guides = [
       }
     },
     style: 'Info',
-    image: seahorseImage
+    image: seahorseImage,
+    imageStyle: imageStyleOverrides.seahorse
   },
   {
     id: 'creaturesvtrash-training-init3',
@@ -239,7 +249,8 @@ const guides = [
       }
     },
     style: 'Info',
-    image: turtleImage
+    image: turtleImage,
+    imageStyle: imageStyleOverrides.turtle
   },
   {
     id: 'creaturesvtrash-training-init5',
