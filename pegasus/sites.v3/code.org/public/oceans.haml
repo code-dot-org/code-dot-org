@@ -33,10 +33,20 @@ theme: responsive
     left: 80px;
   }
 
+  .tutorial-details-mobile {
+    background-color: rgba(0, 35, 82, 0.9);
+    color: white;
+    padding: 20px;
+  }
+
   .tutorial-heading {
     color: white;
     font-size: 30px;
     margin-bottom: 20px
+  }
+
+  .tutorial-heading-mobile {
+    margin-top: 0px
   }
 
   .tutorial-description {
@@ -63,11 +73,18 @@ theme: responsive
   }
 
 %div{style: "display: #{launch_ai ? 'block' : 'none'}"}
-
   .tutorial-promo-container
     = view :oceans_promo
     .tutorial-details.desktop-feature
       %h1.tutorial-heading= hoc_s(:oceans_landing_title)
+      %p.tutorial-description= hoc_s(:oceans_landing_description)
+      %p.tutorial-description= hoc_s(:cs_for_good_hashtag)
+      %p.tutorial-specs= hoc_s(:oceans_landing_specs)
+      %a{href: CDO.studio_url('/s/oceans'), target: '_self'}
+        %button.tutorial-button=I18n.t(:try_now)
+
+    .tutorial-details-mobile.mobile-feature
+      %h1.tutorial-heading.tutorial-heading-mobile= hoc_s(:oceans_landing_title)
       %p.tutorial-description= hoc_s(:oceans_landing_description)
       %p.tutorial-description= hoc_s(:cs_for_good_hashtag)
       %p.tutorial-specs= hoc_s(:oceans_landing_specs)
