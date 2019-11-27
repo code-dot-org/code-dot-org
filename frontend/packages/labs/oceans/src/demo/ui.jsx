@@ -736,7 +736,7 @@ ConfirmationDialog = Radium(ConfirmationDialog);
 const wordSet = {
   short: {
     text: ['What type of fish do you want to train A.I. to detect?'],
-    choices: [['Blue', 'Green', 'Red'], ['Triangle', 'Round', 'Square']],
+    choices: [['Blue', 'Green', 'Red'], ['Circular', 'Rectangular', 'Triangular']],
     style: styles.button2col
   },
   long: {
@@ -1427,7 +1427,8 @@ Pond = Radium(Pond);
 
 let Guide = class Guide extends React.Component {
   onShowing() {
-    setState({guideShowing: true});
+    clearInterval(getState().guideTypingTimer);
+    setState({guideShowing: true, guideTypingTimer: null});
   }
 
   dismissGuideClick() {
@@ -1438,6 +1439,7 @@ let Guide = class Guide extends React.Component {
   }
 
   render() {
+    const state = getState();
     const currentGuide = getCurrentGuide();
 
     let guideBgStyle = [styles.guideBackground];
@@ -1450,6 +1452,14 @@ let Guide = class Guide extends React.Component {
       if (currentGuide.style === 'Info') {
         guideBgStyle.push({backgroundColor: colors.transparentBlack});
       }
+    }
+
+    // Start playing the typing sounds.
+    if (!state.guideShowing && !state.guideTypingTimer && currentGuide) {
+      const guideTypingTimer = setInterval(() => {
+        playSound('no', 0.5);
+      }, 1000/10);
+      setState({guideTypingTimer});
     }
 
     return (

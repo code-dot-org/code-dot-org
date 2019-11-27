@@ -199,15 +199,15 @@ describe('Model quality test', () => {
   //   }
   // });
 
-  test('test eels with sharp teeth', async () => {
+  test('test eels with smiling mouths', async () => {
     const trainSize = 300; // Need more fish to hit enough to train on
     const mouthData = fishData.mouths;
     const mouthKey = PartKey.MOUTH;
-    const mouthNames = ['mouth3', 'mouth7', 'mouth8'];
+    const mouthNames = ['mouth15', 'mouth4', 'mouth5', 'mouth7', 'mouth8'];
 
     const bodyData = fishData.bodies;
     const bodyKey = PartKey.BODY;
-    const bodyNames = ['s1', 's2'];
+    const bodyNames = ['s1'];
 
     const mouthIds = Object.entries(mouthData)
       .filter(entry => mouthNames.includes(entry[0]))
