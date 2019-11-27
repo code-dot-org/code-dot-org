@@ -8,7 +8,8 @@
     "@babel/plugin-proposal-class-properties",
     ["@babel/plugin-transform-regenerator", {"async": true, "asyncGenerators": true}],
     // needed for IE 9/10 support
-    ["@babel/plugin-transform-classes", {"loose": true}]
+    ["@babel/plugin-transform-classes", {"loose": true}],
+    "@babel/plugin-transform-modules-commonjs"
   ],
   "sourceType": "unambiguous",
   "env": {
