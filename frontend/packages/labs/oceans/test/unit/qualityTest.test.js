@@ -175,6 +175,10 @@ describe('Model quality test', () => {
     initFishData();
   });
 
+  beforeEach(() => {
+    setState({appMode: AppMode.FishLong});
+  });
+
   // TODO: (maddie) fix this test to work with new fishData.colors setup + re-enable
   // test('Color test', async () => {
   //   const trainSize = TRAIN_SIZE;
@@ -201,7 +205,6 @@ describe('Model quality test', () => {
   // });
 
   test('test eels with smiling mouths', async () => {
-    setState({appMode: AppMode.FishLong});
     const trainSize = 300; // Need more fish to hit enough to train on
     const mouthData = fishData.mouths;
     const mouthKey = PartKey.MOUTH;
@@ -246,6 +249,7 @@ describe('Model quality test', () => {
   });
 
   test('Body shape test', async () => {
+    setState({appMode: AppMode.FishShort});
     const partKey = PartKey.BODY;
     const knnDataIndex = 1;
     const attribute = BodyShape;
