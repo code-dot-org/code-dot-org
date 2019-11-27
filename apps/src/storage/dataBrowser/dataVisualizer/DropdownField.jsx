@@ -9,7 +9,7 @@ class DropdownField extends React.Component {
     onChange: PropTypes.func.isRequired,
     options: PropTypes.array.isRequired,
     disabledOptions: PropTypes.array,
-    value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired
+    value: PropTypes.string
   };
 
   render() {
