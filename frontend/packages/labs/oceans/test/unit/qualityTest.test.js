@@ -187,13 +187,12 @@ describe('Model quality test', () => {
       const rgbs = Object.values(fishData.colors).map(color => color.rgb);
 
       let match = false;
-      colorIds.forEach(id => {
-        if (match) return;
-
+      for (const id of colorIds) {
         if (rgbs[id] === rgb) {
           match = true;
+          break;
         }
-      });
+      }
 
       return match;
     };
