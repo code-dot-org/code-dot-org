@@ -13641,7 +13641,7 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Sequencing in Maze:
               name: Sequencing in Maze
@@ -13669,7 +13669,7 @@ en:
               name: Conditionals Review
             Drawing with Loops:
               name: Drawing with Loops
-          title: Time4CS Control Unit 1
+          title: Time4CS Original Unit 1
           description_audience: ''
           description_short: ''
           description: ''
@@ -13759,3 +13759,111 @@ en:
           description_audience: ''
           description_short: "[Add description]"
           description: "[Add description]"
+        time4cs-control-unit-1:
+          title: Time4CS Control Unit 1
+          description: ''
+          description_short: ''
+          description_audience: ''
+          stages:
+            Sequencing in Maze:
+              name: Sequencing in Maze
+              description_student: ''
+              description_teacher: ''
+            Programming and Loops with the Artist:
+              name: Programming and Loops with the Artist
+              description_student: ''
+              description_teacher: ''
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Conditionals in Minecraft: Voyage Aquatic'
+              description_student: ''
+              description_teacher: ''
+            Conditionals:
+              name: Conditionals
+              description_student: ''
+              description_teacher: ''
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+              description_student: ''
+              description_teacher: ''
+            Simon Says:
+              name: Simon Says
+              description_student: ''
+              description_teacher: ''
+            Learning Sprites with Sprite Lab:
+              name: Learning Sprites with Sprite Lab
+              description_student: ''
+              description_teacher: ''
+            Alien Dance Party with Sprite Lab:
+              name: Alien Dance Party with Sprite Lab
+              description_student: ''
+              description_teacher: ''
+            Private and Personal Information:
+              name: Private and Personal Information
+              description_student: ''
+              description_teacher: ''
+            About Me:
+              name: About Me
+              description_student: ''
+              description_teacher: ''
+            Access Ability:
+              name: Access Ability
+              description_student: ''
+              description_teacher: ''
+            Conditionals Review:
+              name: Conditionals Review
+              description_student: ''
+              description_teacher: ''
+        time4cs-experiment-unit-1:
+          title: Time4CS Experiment Unit 1
+          description: ''
+          description_short: ''
+          description_audience: ''
+          stages:
+            Sequencing in Maze:
+              name: Sequencing in Maze
+              description_student: ''
+              description_teacher: ''
+            Programming and Loops with the Artist:
+              name: Programming and Loops with the Artist
+              description_student: ''
+              description_teacher: ''
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Conditionals in Minecraft: Voyage Aquatic'
+              description_student: ''
+              description_teacher: ''
+            Conditionals:
+              name: Conditionals
+              description_student: ''
+              description_teacher: ''
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+              description_student: ''
+              description_teacher: ''
+            Simon Says:
+              name: Simon Says
+              description_student: ''
+              description_teacher: ''
+            Learning Sprites with Sprite Lab:
+              name: Learning Sprites with Sprite Lab
+              description_student: ''
+              description_teacher: ''
+            Alien Dance Party with Sprite Lab:
+              name: Alien Dance Party with Sprite Lab
+              description_student: ''
+              description_teacher: ''
+            Private and Personal Information:
+              name: Private and Personal Information
+              description_student: ''
+              description_teacher: ''
+            About Me:
+              name: About Me
+              description_student: ''
+              description_teacher: ''
+            Access Ability:
+              name: Access Ability
+              description_student: ''
+              description_teacher: ''
+            Conditionals Review:
+              name: Conditionals Review
+              description_student: ''
+              description_teacher: ''
