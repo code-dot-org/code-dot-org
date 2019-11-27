@@ -7,12 +7,7 @@ button {
   font-size: 120%;
   border-radius: 5px;
   border: none;
-  width: 17%;
   padding: 1.5% 3%;
-
-  &:focus {
-    outline: white auto 5px;
-  }
 
   &:active {
     border: none !important;
@@ -51,4 +46,3 @@ button {
   #container { max-width: 1024px; }
   #container-react { font-size: calc(18px * 1024 / 930); }
 }
-

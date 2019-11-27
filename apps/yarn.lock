@@ -954,10 +954,10 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@code-dot-org/maze/-/maze-1.1.0.tgz#7c8185adf06a9172e3bde4ccd6f6738a787b2a7c"
 
-"@code-dot-org/ml-activities@0.0.17":
-  version "0.0.17"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/ml-activities/-/ml-activities-0.0.17.tgz#eab35e2613e55fd859d9d9db3356ed2afbdf9d35"
-  integrity sha512-Fd2Aa1yOaLzokngakK5MbyLHWbjtKh8juOApenGu8u63dk5XJbw2EGpM5Vy9qdDZevvEK8HDwcpPIkDk9nWE+Q==
+"@code-dot-org/ml-activities@0.0.18":
+  version "0.0.18"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/ml-activities/-/ml-activities-0.0.18.tgz#d240b697690572d69776304d04d89a87f5b4298a"
+  integrity sha512-z80OwGTIVTzJA01GS2uaV7xyygbL1JgATpxPbqduIoUQrRlgtASNv5D0ethy3Jbc2eWrWMuREwEs8ILapbLXog==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.25"
     "@fortawesome/free-solid-svg-icons" "^5.11.2"
