@@ -8,12 +8,13 @@ const {
 const {generateOcean, filterOcean} = require('../../src/utils/generateOcean');
 const SimpleTrainer = require('../../src/utils/SimpleTrainer');
 const SVMTrainer = require('../../src/utils/SVMTrainer');
-import {ClassType} from '../../src/demo/constants';
+import {AppMode, ClassType} from '../../src/demo/constants';
+import {setState} from '../../src/demo/state';
 
 function clock(start) {
-  if ( !start ) return process.hrtime();
+  if (!start) return process.hrtime();
   var end = process.hrtime(start);
-  return Math.round((end[0]*1000) + (end[1]/1000000));
+  return Math.round(end[0] * 1000 + end[1] / 1000000);
 }
 
 function getRandomInt(max) {
@@ -200,6 +201,7 @@ describe('Model quality test', () => {
   // });
 
   test('test eels with smiling mouths', async () => {
+    setState({appMode: AppMode.FishLong});
     const trainSize = 300; // Need more fish to hit enough to train on
     const mouthData = fishData.mouths;
     const mouthKey = PartKey.MOUTH;
@@ -216,14 +218,21 @@ describe('Model quality test', () => {
       .filter(entry => bodyNames.includes(entry[0]))
       .map(entry => entry[1].index);
     console.log(
-      `mouth names: ${JSON.stringify(mouthNames)} mouthIds: ${JSON.stringify(mouthIds)}`
+      `mouth names: ${JSON.stringify(mouthNames)} mouthIds: ${JSON.stringify(
+        mouthIds
+      )}`
     );
     console.log(
-      `body names: ${JSON.stringify(bodyNames)} bodyIds: ${JSON.stringify(bodyIds)}`
+      `body names: ${JSON.stringify(bodyNames)} bodyIds: ${JSON.stringify(
+        bodyIds
+      )}`
     );
 
     const labelFn = fish =>
-      mouthIds.includes(fish[mouthKey].index) && bodyIds.includes(fish[bodyKey].index) ? ClassType.Like : ClassType.Dislike;
+      mouthIds.includes(fish[mouthKey].index) &&
+      bodyIds.includes(fish[bodyKey].index)
+        ? ClassType.Like
+        : ClassType.Dislike;
 
     const result = await performTrials({
       numTrials: 1,
@@ -431,5 +440,4 @@ describe('Model quality test', () => {
       expect(predictionExplanation[0].partType).toEqual('mouths');
     }
   });
-
 });
