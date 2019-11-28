@@ -128,7 +128,7 @@ const styles = {
   },
   confirmationDialogImg: {
     position: 'absolute',
-    bottom: '-47%',
+    bottom: '-46%',
     left: '-41%',
     height: '100%'
   },
@@ -603,7 +603,7 @@ const styles = {
   },
   arrowUpperRight: {
     top: '13%',
-    right: '-3.5%',
+    right: '-2%',
     transform: 'translateX(-50%) rotate(180deg)'
   },
   arrowUpperFarRight: {
@@ -1354,11 +1354,14 @@ let Pond = class Pond extends React.Component {
         state.appMode === AppMode.FishLong) &&
       state.pondFish.length > 0 &&
       state.recallFish.length > 0;
+    const recallIconsStyle = showInfoButton
+      ? styles.recallIcons
+      : {...styles.recallIcons, right: '1.2%'};
 
     return (
       <Body>
         <div onClick={e => this.onPondClick(e)} style={styles.pondSurface} />
-        <div style={styles.recallIcons}>
+        <div style={recallIconsStyle}>
           <FontAwesomeIcon
             icon={faCheck}
             style={{
