@@ -146,8 +146,8 @@ describe('Enroll Form', () => {
       enrollForm.find('#submit').simulate('click');
 
       expect(jQuery.ajax.calledOnce).to.be.true;
-      expect(jQuery.ajax.getCall(0).args[0].data).to.equal(
-        JSON.stringify(expectedData)
+      expect(JSON.parse(jQuery.ajax.getCall(0).args[0].data)).to.deep.equal(
+        expectedData
       );
     });
 
@@ -172,8 +172,8 @@ describe('Enroll Form', () => {
       enrollForm.find('#submit').simulate('click');
 
       expect(jQuery.ajax.calledOnce).to.be.true;
-      expect(jQuery.ajax.getCall(0).args[0].data).to.equal(
-        JSON.stringify(expectedData)
+      expect(JSON.parse(jQuery.ajax.getCall(0).args[0].data)).to.deep.equal(
+        expectedData
       );
     });
   });
