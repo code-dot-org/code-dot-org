@@ -5,5 +5,5 @@
  * to true when it loads, so we can check that to avoid loading it again.
  */
 if (!global._babelPolyfill) {
-  require('babel-polyfill');
+  require('@babel/polyfill');
 }
