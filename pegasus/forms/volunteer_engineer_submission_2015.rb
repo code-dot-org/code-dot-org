@@ -9,7 +9,8 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
   # and after each Hour of Code.
   UNSUBSCRIBE_HOC = "untilhoc".freeze
   UNSUBSCRIBE_FOREVER = "forever".freeze
-  DEFAULT_DISTANCE = 40 # kilometers
+  DEFAULT_DISTANCE_KM = 40
+  DEFAULT_DISTANCE_MILES = 25
   DEFAULT_NUM_VOLUNTEERS = 100
 
   def self.normalize(data)
@@ -140,7 +141,7 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
     end
 
     coordinates = params['coordinates']
-    distance = params['distance'] || DEFAULT_DISTANCE
+    distance = params['distance'] || DEFAULT_DISTANCE_KM
     rows = params['num_volunteers'] || DEFAULT_NUM_VOLUNTEERS
 
     unless params['location_flexibility_ss'].nil_or_empty?
