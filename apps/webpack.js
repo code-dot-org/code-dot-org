@@ -137,7 +137,23 @@ var baseConfig = {
         ].concat(toTranspileWithinNodeModules),
         exclude: [path.resolve(__dirname, 'src', 'lodash.js')],
         loader: 'babel-loader',
-        query: {
+        options: {
+          presets: ['@babel/preset-env'],
+          plugins: [
+            'add-module-exports',
+            'syntax-async-functions',
+            '@babel/plugin-syntax-dynamic-import',
+            '@babel/plugin-proposal-object-rest-spread',
+            '@babel/plugin-proposal-class-properties',
+            [
+              '@babel/plugin-transform-regenerator',
+              {async: true, asyncGenerators: true}
+            ],
+            // needed for IE 9/10 support
+            ['@babel/plugin-transform-classes', {loose: true}],
+            '@babel/plugin-transform-modules-commonjs'
+          ],
+          sourceType: 'unambiguous',
           cacheDirectory: path.resolve(__dirname, '.babel-cache'),
           compact: false
         }
