@@ -749,7 +749,7 @@ describe('entry tests', () => {
           otherEntries
         ),
         function(val) {
-          return ['@babel/polyfill', 'whatwg-fetch'].concat(val);
+          return ['@babel/polyfill/noConflict', 'whatwg-fetch'].concat(val);
         }
       ),
       externals: [
