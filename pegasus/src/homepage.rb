@@ -351,7 +351,8 @@ class Homepage
   end
 
   def self.show_single_hero
-    "dance2019"
+    launch_ai = DCDO.get('launch_ai', nil)
+    launch_ai ? "oceans2019" : "dance2019"
   end
 
   def self.get_heroes_arranged(request)
