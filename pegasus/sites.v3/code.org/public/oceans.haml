@@ -1,5 +1,5 @@
 ---
-title: AI Oceans
+title: AI for Oceans
 theme: responsive
 ---
 :ruby
@@ -33,10 +33,20 @@ theme: responsive
     left: 80px;
   }
 
+  .tutorial-details-mobile {
+    background-color: rgba(0, 35, 82, 0.9);
+    color: white;
+    padding: 20px;
+  }
+
   .tutorial-heading {
     color: white;
     font-size: 30px;
     margin-bottom: 20px
+  }
+
+  .tutorial-heading-mobile {
+    margin-top: 0px
   }
 
   .tutorial-description {
@@ -63,23 +73,34 @@ theme: responsive
   }
 
 %div{style: "display: #{launch_ai ? 'block' : 'none'}"}
-
   .tutorial-promo-container
     = view :oceans_promo
-    .tutorial-details
-      %h1.tutorial-heading=hoc_s(:oceans_landing_title)
-      %p.tutorial-description=hoc_s(:oceans_landing_description)
-      %p.tutorial-description=hoc_s(:cs_for_good_hashtag)
-      %p.tutorial-specs=hoc_s(:oceans_landing_specs)
+    .tutorial-details.desktop-feature
+      %h1.tutorial-heading= hoc_s(:oceans_landing_title)
+      %p.tutorial-description= hoc_s(:oceans_landing_description)
+      %p.tutorial-description= hoc_s(:cs_for_good_hashtag)
+      %p.tutorial-specs= hoc_s(:oceans_landing_specs)
+      %a{href: CDO.studio_url('/s/oceans'), target: '_self'}
+        %button.tutorial-button=I18n.t(:try_now)
+
+    .tutorial-details-mobile.mobile-feature
+      %h1.tutorial-heading.tutorial-heading-mobile= hoc_s(:oceans_landing_title)
+      %p.tutorial-description= hoc_s(:oceans_landing_description)
+      %p.tutorial-description= hoc_s(:cs_for_good_hashtag)
+      %p.tutorial-specs= hoc_s(:oceans_landing_specs)
       %a{href: CDO.studio_url('/s/oceans'), target: '_self'}
         %button.tutorial-button=I18n.t(:try_now)
 
   %div{style: "clear: both; margin-top: 20px;"}
 
-  %h3.blurb=hoc_s(:oceans_landing_explanation)
+  %h3.blurb= hoc_s(:oceans_landing_explanation)
 
   = view :resource_boxes, resources: resources
 
-  %h2=hoc_s(:oceans_landing_learn_more)
+  %h2= hoc_s(:oceans_landing_learn_more)
+
+  = view :ai_videos
+
+  = view :ai_ml_resources_table
 
 .clear
