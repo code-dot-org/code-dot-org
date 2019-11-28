@@ -80,7 +80,7 @@ const guides = [
   },
   {
     id: 'fishvtrash-training-pause4',
-    text: `A.I. learns from your choices.  If you make “wrong” choices, A.I. will learn to repeat your mistakes. Keep training.`,
+    text: `A.I. learns from your choices.  If you make “wrong” choices, A.I. will learn to repeat your mistakes.  Keep training.`,
     when: {
       appMode: AppMode.FishVTrash,
       currentMode: Modes.Training,
