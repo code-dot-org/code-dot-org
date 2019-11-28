@@ -165,7 +165,7 @@ describe('loadApp.js', () => {
     });
   });
 
-  describe('project level share images', () => {
+  describe.skip('project level share images', () => {
     const BLANK_PNG_PIXEL =
       'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=';
 

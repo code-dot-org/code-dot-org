@@ -9,7 +9,7 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import * as makerRedux from '@cdo/apps/lib/kits/maker/redux';
 import * as assets from '@cdo/apps/code-studio/assets';
 
-describe('SettingsCog', () => {
+describe.skip('SettingsCog', () => {
   it('renders as a FontAwesome icon', () => {
     const wrapper = mount(<SettingsCog />);
     expect(wrapper.find(FontAwesome)).to.have.length(1);

@@ -102,7 +102,7 @@ describe('Enroll Form', () => {
     });
   });
 
-  describe('Enroll Form', () => {
+  describe.skip('Enroll Form', () => {
     let enrollForm;
     beforeEach(() => {
       sinon.spy(jQuery, 'ajax');
