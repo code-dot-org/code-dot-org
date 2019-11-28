@@ -60,7 +60,8 @@ const styles = {
     minWidth: '15%',
     outline: 'none',
     border: 'none',
-    whiteSpace: 'nowrap'
+    whiteSpace: 'nowrap',
+    lineHeight: 1.3
   },
   continueButton: {
     position: 'absolute',
