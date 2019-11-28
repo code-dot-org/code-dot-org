@@ -252,17 +252,18 @@ const styles = {
   counter: {
     position: 'absolute',
     top: '2%',
-    right: '9%',
+    right: '7%',
     backgroundColor: colors.transparentBlack,
     color: colors.neonBlue,
     borderRadius: 33,
     textAlign: 'right',
-    minWidth: '9%',
-    height: '6%',
-    padding: '1% 3%'
+    minWidth: '7%',
+    height: '5%',
+    padding: '1% 2.5%'
   },
   counterImg: {
-    float: 'left'
+    float: 'left',
+    height: '100%'
   },
   counterNum: {
     fontSize: '90%'
@@ -274,7 +275,6 @@ const styles = {
     cursor: 'pointer',
     borderRadius: 50,
     padding: '0.75% 1.2%',
-    marginLeft: '2%',
     fontSize: '120%',
     backgroundColor: colors.white,
     color: colors.grey,
