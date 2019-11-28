@@ -9,8 +9,8 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
   # and after each Hour of Code.
   UNSUBSCRIBE_HOC = "untilhoc".freeze
   UNSUBSCRIBE_FOREVER = "forever".freeze
-  DEFAULT_DISTANCE = 24 # kilometers
-  DEFAULT_NUM_VOLUNTEERS = 10
+  DEFAULT_DISTANCE = 40 # kilometers
+  DEFAULT_NUM_VOLUNTEERS = 100
 
   def self.normalize(data)
     result = {}
