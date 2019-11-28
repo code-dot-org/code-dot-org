@@ -36,7 +36,7 @@ module.exports = function(grunt) {
       : `require('${path.resolve(process.env.mocha_entry)}');`;
     const file = `/* eslint-disable */
 // Auto-generated from Gruntfile.js
-import 'babel-polyfill';
+import '@babel/polyfill';
 import 'whatwg-fetch';
 import Adapter from 'enzyme-adapter-react-15.4';
 import enzyme from 'enzyme';
@@ -880,7 +880,7 @@ describe('entry tests', () => {
               },
               test(module) {
                 return [
-                  'babel-polyfill',
+                  '@babel/polyfill',
                   'immutable',
                   'lodash',
                   'moment',
