@@ -428,33 +428,35 @@ const styles = {
   pondPanelPostText: {
     marginTop: '3%'
   },
-  recallContainer: {
+  recallIcons: {
     position: 'absolute',
     top: '2%',
-    right: '1.2%',
-    color: colors.white,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between'
-  },
-  recallIcons: {
+    right: '7%',
     backgroundColor: colors.white,
     color: colors.grey,
-    maxHeight: 42,
+    height: '8.5%',
+    width: '9.5%',
     borderRadius: 8,
     display: 'flex',
     alignItems: 'center'
   },
   recallIcon: {
     cursor: 'pointer',
-    padding: 7
+    padding: '0 15%',
+    height: '100%'
   },
   infoIconContainer: {
+    position: 'absolute',
+    top: '2%',
+    right: '1.2%',
     cursor: 'pointer',
     borderRadius: 50,
-    marginLeft: 10,
+    padding: '0.75% 1.2%',
+    fontSize: '120%',
     backgroundColor: colors.white,
     color: colors.grey,
+    height: '6%',
+    width: '2.5%',
     ':hover': {
       backgroundColor: colors.neonBlue,
       color: colors.white
@@ -465,7 +467,9 @@ const styles = {
     }
   },
   infoIcon: {
-    padding: '5px 12px'
+    display: 'block',
+    margin: 'auto',
+    height: '100%'
   },
   bgNeonBlue: {
     backgroundColor: colors.neonBlue,
@@ -1345,42 +1349,40 @@ let Pond = class Pond extends React.Component {
     return (
       <Body>
         <div onClick={e => this.onPondClick(e)} style={styles.pondSurface} />
-        <div style={styles.recallContainer}>
-          <div style={styles.recallIcons}>
+        <div style={styles.recallIcons}>
+          <FontAwesomeIcon
+            icon={faCheck}
+            style={{
+              ...styles.recallIcon,
+              ...{borderTopLeftRadius: 8, borderBottomLeftRadius: 8},
+              ...(!state.showRecallFish ? styles.bgGreen : {})
+            }}
+            onClick={this.toggleRecall}
+          />
+          <FontAwesomeIcon
+            icon={faBan}
+            style={{
+              ...styles.recallIcon,
+              ...{borderTopRightRadius: 8, borderBottomRightRadius: 8},
+              ...(state.showRecallFish ? styles.bgRed : {})
+            }}
+            onClick={this.toggleRecall}
+          />
+        </div>
+        {showInfoButton && (
+          <div
+            style={{
+              ...styles.infoIconContainer,
+              ...(!state.pondPanelShowing ? {} : styles.bgNeonBlue)
+            }}
+          >
             <FontAwesomeIcon
-              icon={faCheck}
-              style={{
-                ...styles.recallIcon,
-                ...{borderTopLeftRadius: 8, borderBottomLeftRadius: 8},
-                ...(!state.showRecallFish ? styles.bgGreen : {})
-              }}
-              onClick={this.toggleRecall}
-            />
-            <FontAwesomeIcon
-              icon={faBan}
-              style={{
-                ...styles.recallIcon,
-                ...{borderTopRightRadius: 8, borderBottomRightRadius: 8},
-                ...(state.showRecallFish ? styles.bgRed : {})
-              }}
-              onClick={this.toggleRecall}
+              icon={faInfo}
+              style={styles.infoIcon}
+              onClick={this.onPondPanelButtonClick}
             />
           </div>
-          {showInfoButton && (
-            <div
-              style={{
-                ...styles.infoIconContainer,
-                ...(!state.pondPanelShowing ? {} : styles.bgNeonBlue)
-              }}
-            >
-              <FontAwesomeIcon
-                icon={faInfo}
-                style={styles.infoIcon}
-                onClick={this.onPondPanelButtonClick}
-              />
-            </div>
-          )}
-        </div>
+        )}
         <img style={styles.pondBot} src={aiBotClosed} />
         {state.canSkipPond && (
           <div>
