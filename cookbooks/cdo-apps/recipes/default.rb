@@ -21,6 +21,7 @@ apt_package %w(
   imagemagick
   libmagickcore-dev
   libmagickwand-dev
+  fonts-noto
 )
 
 # Used by lesson plan generator.
