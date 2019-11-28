@@ -610,9 +610,6 @@ const styles = {
     top: '15%',
     right: '-4.6%',
     transform: 'translateX(-50%) rotate(180deg)'
-  },
-  marginRight: {
-    marginRight: '12%'
   }
 };
 
@@ -900,7 +897,9 @@ let Train = class Train extends React.Component {
             }}
             sound={'no'}
           >
-            <FontAwesomeIcon icon={faBan} style={styles.marginRight} />
+            <FontAwesomeIcon icon={faBan} />
+            &nbsp;
+            &nbsp;
             {noButtonText}
           </Button>
           <Button
@@ -911,7 +910,9 @@ let Train = class Train extends React.Component {
             }}
             sound={'yes'}
           >
-            <FontAwesomeIcon icon={faCheck} style={styles.marginRight} />
+            <FontAwesomeIcon icon={faCheck} />
+            &nbsp;
+            &nbsp;
             {yesButtonText}
           </Button>
         </div>
@@ -1058,7 +1059,9 @@ let Predict = class Predict extends React.Component {
         )}
         {!state.isRunning && !state.isPaused && (
           <Button style={styles.continueButton} onClick={this.onRun}>
-            <FontAwesomeIcon icon={faPlay} style={styles.marginRight} />
+            <FontAwesomeIcon icon={faPlay} />
+            &nbsp;
+            &nbsp;
             Run
           </Button>
         )}
@@ -1389,10 +1392,7 @@ let Pond = class Pond extends React.Component {
             }}
             onClick={this.onPondPanelButtonClick}
           >
-            <FontAwesomeIcon
-              icon={faInfo}
-              style={styles.infoIcon}
-            />
+            <FontAwesomeIcon icon={faInfo} style={styles.infoIcon} />
           </div>
         )}
         <img style={styles.pondBot} src={aiBotClosed} />
