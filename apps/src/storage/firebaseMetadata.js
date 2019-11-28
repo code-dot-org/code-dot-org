@@ -33,7 +33,12 @@ function getColumnNamesFromRecords(records) {
     const record = JSON.parse(records[id]);
     Object.keys(record).forEach(columnName => {
       if (columnNames.indexOf(columnName) === -1) {
-        columnNames.push(columnName);
+        if (columnName === 'id') {
+          // Make sure 'id' is first column
+          columnNames.unshift(columnName);
+        } else {
+          columnNames.push(columnName);
+        }
       }
     });
   });
