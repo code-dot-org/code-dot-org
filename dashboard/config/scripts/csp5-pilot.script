@@ -94,6 +94,7 @@ level 'CSP U5L10 Traversals Investigate', progression: 'Intro to Datasets'
 level 'U5 Traversals Investigate Dog Finder Modify', progression: 'Dog Finder Investigation'
 level 'List Filter Pattern', progression: 'Traversal Patterns'
 level 'List Reduce Pattern', progression: 'Traversal Patterns'
+level 'CSP U5L10 CFU Traversals', progression: 'Check For Understanding', assessment: true
 
 stage 'Traversals Practice', flex_category: 'csp_traversals'
 level 'CSP U5L11 SFLP 20-21', progression: 'Lesson Overview'
@@ -104,7 +105,6 @@ level 'U5 Traversals Practice Part 4', progression: 'Filter and Reduce Practice'
 level 'U5 Traversals Practice Part 5', progression: 'Filter and Reduce Practice'
 level 'U5 Traversals Practice Part 6', progression: 'Filter and Reduce Practice'
 level 'U5 Traversals Practice Part 7', progression: 'App Practice'
-level 'U5 Traversals Practice Part 8', progression: 'App Practice'
 level 'U5L11 CFU For Each Psuedocode', progression: 'Check For Understanding: AP Practice', assessment: true
 
 stage 'Traversals Make', flex_category: 'csp_traversals'
