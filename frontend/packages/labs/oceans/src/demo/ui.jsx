@@ -249,35 +249,37 @@ const styles = {
     width: '49%',
     marginTop: '30%'
   },
-  trainingIcons: {
+  counter: {
     position: 'absolute',
     top: '2%',
-    right: '1.2%',
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center'
-  },
-  counter: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    right: '9%',
     backgroundColor: colors.transparentBlack,
     color: colors.neonBlue,
     borderRadius: 33,
-    padding: '9px 20px',
-    minWidth: 65
+    textAlign: 'right',
+    minWidth: '9%',
+    height: '6%',
+    padding: '1% 3%'
+  },
+  counterImg: {
+    float: 'left'
   },
   counterNum: {
-    fontSize: '90%',
-    marginLeft: 12
+    fontSize: '90%'
   },
   eraseButtonContainer: {
+    position: 'absolute',
+    top: '2%',
+    right: '1.2%',
     cursor: 'pointer',
     borderRadius: 50,
-    padding: 8,
-    marginLeft: 10,
+    padding: '0.75% 1.2%',
+    marginLeft: '2%',
+    fontSize: '120%',
     backgroundColor: colors.white,
     color: colors.grey,
+    height: '6%',
+    width: '2.4%',
     ':hover': {
       backgroundColor: colors.red,
       color: colors.white
@@ -288,7 +290,9 @@ const styles = {
     }
   },
   eraseButton: {
-    padding: '0 3px'
+    display: 'block',
+    margin: 'auto',
+    height: '100%'
   },
   mediaControls: {
     position: 'absolute',
@@ -736,7 +740,10 @@ ConfirmationDialog = Radium(ConfirmationDialog);
 const wordSet = {
   short: {
     text: ['What type of fish do you want to train A.I. to detect?'],
-    choices: [['Blue', 'Green', 'Red'], ['Circular', 'Rectangular', 'Triangular']],
+    choices: [
+      ['Blue', 'Green', 'Red'],
+      ['Circular', 'Rectangular', 'Triangular']
+    ],
     style: styles.button2col
   },
   long: {
@@ -861,25 +868,23 @@ let Train = class Train extends React.Component {
           />
           <img src={aiBotBody} style={styles.trainBotBody} />
         </div>
-        <div style={styles.trainingIcons}>
-          <div style={styles.counter}>
-            <img src={counterIcon} />
-            <span style={styles.counterNum}>
-              {Math.min(999, state.yesCount + state.noCount)}
-            </span>
-          </div>
-          <span style={styles.eraseButtonContainer}>
-            <FontAwesomeIcon
-              icon={faTrash}
-              style={styles.eraseButton}
-              onClick={() => {
-                setState({
-                  showConfirmationDialog: true,
-                  confirmationDialogOnYes: resetTrainingFunction
-                });
-              }}
-            />
+        <div style={styles.counter}>
+          <img src={counterIcon} style={styles.counterImg} />
+          <span style={styles.counterNum}>
+            {Math.min(999, state.yesCount + state.noCount)}
           </span>
+        </div>
+        <div style={styles.eraseButtonContainer}>
+          <FontAwesomeIcon
+            icon={faTrash}
+            style={styles.eraseButton}
+            onClick={() => {
+              setState({
+                showConfirmationDialog: true,
+                confirmationDialogOnYes: resetTrainingFunction
+              });
+            }}
+          />
         </div>
         <div style={styles.trainButtons}>
           <Button
@@ -1458,7 +1463,7 @@ let Guide = class Guide extends React.Component {
     if (!state.guideShowing && !state.guideTypingTimer && currentGuide) {
       const guideTypingTimer = setInterval(() => {
         playSound('no', 0.5);
-      }, 1000/10);
+      }, 1000 / 10);
       setState({guideTypingTimer});
     }
 
