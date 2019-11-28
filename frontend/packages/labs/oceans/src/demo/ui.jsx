@@ -1220,9 +1220,11 @@ let Pond = class Pond extends React.Component {
     if (state.showRecallFish) {
       currentFishSet = state.recallFish;
       nextFishSet = state.pondFish;
+      playSound('yes');
     } else {
       currentFishSet = state.pondFish;
       nextFishSet = state.recallFish;
+      playSound('no');
     }
 
     // Don't call arrangeFish if fish have already been arranged.
@@ -1333,6 +1335,12 @@ let Pond = class Pond extends React.Component {
       setState({
         pondPanelShowing: !state.pondPanelShowing
       });
+
+      if (state.pondPanelShowing) {
+        playSound('sortno');
+      } else {
+        playSound('sortyes');
+      }
     }
 
     e.stopPropagation();
