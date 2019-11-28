@@ -1384,11 +1384,11 @@ let Pond = class Pond extends React.Component {
               ...styles.infoIconContainer,
               ...(!state.pondPanelShowing ? {} : styles.bgNeonBlue)
             }}
+            onClick={this.onPondPanelButtonClick}
           >
             <FontAwesomeIcon
               icon={faInfo}
               style={styles.infoIcon}
-              onClick={this.onPondPanelButtonClick}
             />
           </div>
         )}
