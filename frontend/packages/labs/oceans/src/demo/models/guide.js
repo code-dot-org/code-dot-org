@@ -16,7 +16,7 @@ const imageStyleOverrides = {
 const guides = [
   {
     id: 'fishvtrash-training-init1',
-    text: `Garbage dumped in the water affects marine life.  In this activity you will program or train A.I. (artificial intelligence) to identify fish or trash.  Let’s clean up the ocean!  Click anywhere on the screen to continue.`,
+    text: `Garbage dumped in the water affects marine life.  In this activity, you will program or train A.I. (artificial intelligence) to identify fish or trash.  Let’s clean up the ocean!  Click anywhere on the screen to continue.`,
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Training}
   },
   {
@@ -32,7 +32,7 @@ const guides = [
   },
   {
     id: 'fishvtrash-training-init4',
-    text: `To program A.I., use the buttons to label an image as “Fish” or “Not Fish”.  This will teach A.I. to recognize patterns on its own.  Let’s get started!`,
+    text: `To program A.I., use the buttons to label an image as “Fish” or “Not Fish”.  The training you provide will teach A.I. to recognize patterns on its own.  Let’s get started!`,
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Training},
     style: 'Center',
     arrow: 'LowerCenter'
@@ -40,7 +40,7 @@ const guides = [
   {
     id: 'fishvtrash-training-pause1',
     heading: 'Did you know?',
-    text: `17 billion pounds of plastic enter the ocean each year.`,
+    text: `Seventeen billion pounds of plastic enter the ocean each year.`,
     when: {
       appMode: AppMode.FishVTrash,
       currentMode: Modes.Training,
@@ -66,7 +66,7 @@ const guides = [
   {
     id: 'fishvtrash-training-pause3',
     heading: 'Did you know?',
-    text: `80% of ocean pollution comes from land debris, and is estimated to cost $13 billion per year.`,
+    text: `80% of ocean pollution comes from land debris and is estimated to cost $13 billion per year.`,
     when: {
       appMode: AppMode.FishVTrash,
       currentMode: Modes.Training,
@@ -80,7 +80,7 @@ const guides = [
   },
   {
     id: 'fishvtrash-training-pause4',
-    text: `A.I. learns from your choices.  If you make “wrong” choices, A.I. will learn to repeat your mistakes.  Keep training.`,
+    text: `A.I. learns from your choices.  If you make “wrong” choices, A.I. will repeat your mistakes.  Keep training.`,
     when: {
       appMode: AppMode.FishVTrash,
       currentMode: Modes.Training,
@@ -91,7 +91,7 @@ const guides = [
   },
   {
     id: 'fishvtrash-training-pause5',
-    text: `Great work!  The more data you provide A.I. the more it learns.  Keep training A.I. or continue when ready.`,
+    text: `Great work!  The more data you provide A.I., the more it learns.  Keep training A.I. or continue when ready.`,
     when: {
       appMode: AppMode.FishVTrash,
       currentMode: Modes.Training,
@@ -148,7 +148,7 @@ const guides = [
   },
   {
     id: 'creaturesvtrash-predicting-init1',
-    text: `So far we trained A.I. to identify objects as either “fish” or “not fish”.`,
+    text: `So far, we trained A.I. to identify objects as either “fish” or “not fish”.`,
     when: {appMode: AppMode.CreaturesVTrashDemo, currentMode: Modes.Predicting}
   },
   {
@@ -170,7 +170,7 @@ const guides = [
   },
   {
     id: 'creaturesvtrashdemo-predicting-pause1',
-    text: `Did you notice that some sea creatures were identified as "not fish"?`,
+    text: `Did you notice that A.I. identified some sea creatures as “not fish”?`,
     when: {
       appMode: AppMode.CreaturesVTrashDemo,
       currentMode: Modes.Predicting,
@@ -214,7 +214,7 @@ const guides = [
   {
     id: 'creaturesvtrash-training-init2',
     heading: 'Did you know?',
-    text: `In the ocean, plastic debris can harm fish, seabirds, and marine mammals. This is one of many reasons to keep the oceans clean.`,
+    text: `In the ocean, plastic debris can harm fish, seabirds, and marine mammals. Protecting seabirds and marine life is one of many reasons to keep the oceans clean.`,
     when: {
       appMode: AppMode.CreaturesVTrash,
       currentMode: Modes.Training,
@@ -293,7 +293,7 @@ const guides = [
   {
     id: 'fishshort-words-init1',
     text:
-      'AI and machine learning can be used to teach a computer new patterns.',
+      'Artificial intelligence and machine learning can be used to teach a computer new patterns.',
     when: {appMode: AppMode.FishShort, currentMode: Modes.Words}
   },
   {
@@ -371,7 +371,7 @@ const guides = [
   },
   {
     id: 'fishlong-training-pause1',
-    text: `Is it fair to use AI to judge a fish by its looks?  AI might seem fair and neutral, but all of its analysis is based on its training.  What unintended bias could this cause?`,
+    text: `Is it fair to use artificial intelligence to judge a fish by its looks?  While AI might seem fair and neutral, its analysis comes from the training we provide.  What unintended bias could this cause?`,
     when: {
       appMode: AppMode.FishLong,
       currentMode: Modes.Training,
