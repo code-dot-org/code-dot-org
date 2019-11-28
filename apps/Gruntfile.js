@@ -749,10 +749,7 @@ describe('entry tests', () => {
           otherEntries
         ),
         function(val) {
-          return [
-            './src/util/idempotent-babel-polyfill',
-            'whatwg-fetch'
-          ].concat(val);
+          return ['@babel/polyfill/noConflict', 'whatwg-fetch'].concat(val);
         }
       ),
       externals: [
