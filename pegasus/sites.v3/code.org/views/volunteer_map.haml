@@ -42,16 +42,16 @@
         %label.control-label.small{for: "distance"} Within
         %div
           %select#distance.form-control{name: "distance", type: "select"}
-            %option{selected: distance.nil_or_empty?, value: ""}= "15 miles"
+            %option{selected: distance.nil_or_empty?, value: ""}= "25 miles"
             -VolunteerEngineerSubmission2015.distances.each do |key, value|
               %option{value: key, selected: (distance||[]).include?(key.to_s)}= value
       .form-group.col-xs-2
         %label.control-label.small{for: "num_volunteers"} Show no more than
         %div
           %select#num_volunteers.form-control{name: "num_volunteers", type: "select"}
-            %option{selected: num_volunteers.nil_or_empty?, value: ""}= "10 volunteers"
+            %option{selected: num_volunteers.nil_or_empty?, value: ""}= "100 volunteers"
             -VolunteerEngineerSubmission2015.num_volunteers.each do |key, value|
-              %option{value: key, selected: (num_volunteers||[]).include?(key.to_s)}= value
+              %option{value: key, selected: (num_volunteers || []).include?(key.to_s)}= value
 
 
 #volunteer-search-results.row.top-margin
