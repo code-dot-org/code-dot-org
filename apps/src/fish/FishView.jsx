@@ -58,7 +58,7 @@ class FishView extends React.Component {
 
   render() {
     return (
-      <StudioAppWrapper>
+      <StudioAppWrapper rotateContainerWidth={600}>
         <CodeWorkspaceContainer topMargin={0}>
           <ProtectedStatefulDiv id="container" style={styles.container}>
             <div id="container-react" style={styles.containerReact} />
