@@ -57,7 +57,10 @@ Fish.prototype.init = function(config) {
     // Fixes viewport for small screens.  Also usually done by studioApp_.init().
     var viewport = document.querySelector('meta[name="viewport"]');
     if (viewport) {
-      this.studioApp_.fixViewportForSmallScreens_(viewport, config);
+      this.studioApp_.fixViewportForSpecificWidthForSmallScreens_(
+        viewport,
+        600
+      );
     }
 
     this.initMLActivities();
