@@ -49,7 +49,8 @@ class FishView extends React.Component {
   static propTypes = {
     isProjectLevel: PropTypes.bool.isRequired,
     isReadOnlyWorkspace: PropTypes.bool.isRequired,
-    onMount: PropTypes.func.isRequired
+    onMount: PropTypes.func.isRequired,
+    mobilePortraitWidth: PropTypes.number.isRequired
   };
 
   componentDidMount() {
@@ -58,7 +59,7 @@ class FishView extends React.Component {
 
   render() {
     return (
-      <StudioAppWrapper rotateContainerWidth={600}>
+      <StudioAppWrapper rotateContainerWidth={this.props.mobilePortraitWidth}>
         <CodeWorkspaceContainer topMargin={0}>
           <ProtectedStatefulDiv id="container" style={styles.container}>
             <div id="container-react" style={styles.containerReact} />
