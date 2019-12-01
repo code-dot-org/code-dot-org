@@ -817,7 +817,7 @@ let Words = class Words extends React.Component {
         [AppMode.FishLong]: 'words-long'
       };
 
-      trackEvent(
+      window.trackEvent(
         'oceans',
         appModeToString[getState().appMode],
         word.toLowerCase()
