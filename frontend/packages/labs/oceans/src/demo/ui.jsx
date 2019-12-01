@@ -809,6 +809,20 @@ let Words = class Words extends React.Component {
       trainingQuestion: `Is this fish “${word.toLowerCase()}”?`
     });
     toMode(Modes.Training);
+
+    // Report an analytics event for the word chosen.
+    if (window.trackEvent) {
+      const appModeToString = {
+        [AppMode.FishShort]: 'words-short',
+        [AppMode.FishLong]: 'words-long'
+      };
+
+      window.trackEvent(
+        'oceans',
+        appModeToString[getState().appMode],
+        word.toLowerCase()
+      );
+    }
   }
 
   render() {
@@ -898,8 +912,7 @@ let Train = class Train extends React.Component {
             sound={'no'}
           >
             <FontAwesomeIcon icon={faBan} />
-            &nbsp;
-            &nbsp;
+            &nbsp; &nbsp;
             {noButtonText}
           </Button>
           <Button
@@ -911,8 +924,7 @@ let Train = class Train extends React.Component {
             sound={'yes'}
           >
             <FontAwesomeIcon icon={faCheck} />
-            &nbsp;
-            &nbsp;
+            &nbsp; &nbsp;
             {yesButtonText}
           </Button>
         </div>
@@ -1060,9 +1072,7 @@ let Predict = class Predict extends React.Component {
         {!state.isRunning && !state.isPaused && (
           <Button style={styles.continueButton} onClick={this.onRun}>
             <FontAwesomeIcon icon={faPlay} />
-            &nbsp;
-            &nbsp;
-            Run
+            &nbsp; &nbsp; Run
           </Button>
         )}
         {(state.isRunning || state.isPaused) && state.canSkipPredict && (
