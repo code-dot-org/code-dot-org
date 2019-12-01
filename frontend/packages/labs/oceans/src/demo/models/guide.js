@@ -303,7 +303,7 @@ const guides = [
   },
   {
     id: 'fishshort-words-training-pause1',
-    text: `Do you think A.I. has enough training data?  You could click Continue to find out.`,
+    text: `Do you think A.I. has enough training data?  You can click Continue to find out.`,
     when: {
       appMode: AppMode.FishShort,
       currentMode: Modes.Training,
