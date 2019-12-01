@@ -65,9 +65,12 @@ theme: responsive
     height: 40px;
   }
 
-  .blurb {
+  h3 {
     line-height: 1.5;
     font-size: 14px;
+  }
+
+  .blurb {
     padding: 10px;
     margin-top: 0px;
   }
@@ -91,16 +94,21 @@ theme: responsive
       %a{href: CDO.studio_url('/s/oceans'), target: '_self'}
         %button.tutorial-button=I18n.t(:try_now)
 
-  %div{style: "clear: both; margin-top: 20px;"}
+  %div{style: "clear: both; margin-top: 10px;"}
 
   %h3.blurb= hoc_s(:oceans_landing_explanation)
 
   = view :resource_boxes, resources: resources
 
-  %h2= hoc_s(:oceans_landing_learn_more)
-
   = view :ai_videos
 
   = view :ai_ml_resources_table
+
+  #behind-the-scenes
+    %h2= hoc_s(:oceans_behind_the_scenes)
+
+    %h3= hoc_s(:oceans_behind_the_scenes_1)
+
+    %h3= hoc_s(:oceans_behind_the_scenes_2)
 
 .clear
