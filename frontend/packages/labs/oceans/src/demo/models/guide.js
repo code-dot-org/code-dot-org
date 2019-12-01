@@ -303,12 +303,12 @@ const guides = [
   },
   {
     id: 'fishshort-words-training-pause1',
-    text: `Nice work.  Keep training.`,
+    text: `Do you think A.I. has enough training data?  You could click Continue to find out.`,
     when: {
       appMode: AppMode.FishShort,
       currentMode: Modes.Training,
       fn: state => {
-        return state.yesCount + state.noCount >= 15;
+        return state.yesCount + state.noCount >= 5;
       }
     }
   },
@@ -404,7 +404,7 @@ const guides = [
   },
   {
     id: 'fishlong-training-pause4',
-    text: `Great work!  Keep training A.I. or continue when ready.`,
+    text: `Do you think A.I. has enough training data?  A.I. will do better with a lot of data.  Continue when you think A.I. is ready.`,
     when: {
       appMode: AppMode.FishLong,
       currentMode: Modes.Training,
@@ -455,7 +455,13 @@ const guides = [
   },
   {
     id: 'fishlong-pond-init2',
-    text: 'Try out a new word by clicking the New Word button.',
+    text: `You can choose to Train More if you want to improve the results.`,
+    when: {appMode: AppMode.FishLong, currentMode: Modes.Pond},
+    arrow: 'LowerLeft'
+  },
+  {
+    id: 'fishlong-pond-init3',
+    text: `Or you can teach A.I. a new word by choosing New Word.`,
     when: {appMode: AppMode.FishLong, currentMode: Modes.Pond},
     arrow: 'LowishRight'
   }
