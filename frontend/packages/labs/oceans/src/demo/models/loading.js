@@ -3,11 +3,13 @@ import {initRenderer} from '../renderer';
 import {getState, setState} from '../state';
 import {AppMode, Modes} from '../constants';
 import {initFishData} from '../../utils/fishData';
-import {getAppMode} from '../helpers';
+import {getAppMode, $time} from '../helpers';
 import {toMode} from '../toMode';
 import SimpleTrainer from '../../utils/SimpleTrainer';
 
 export const init = async () => {
+  const startTime = $time();
+
   const [appModeBase] = getAppMode(getState());
 
   const loadTrashImages = [
@@ -42,5 +44,17 @@ export const init = async () => {
   } else {
     mode = Modes.Words;
   }
-  toMode(mode);
+
+  // Ensure that we show the loading UI for at least 2 seconds, to avoid a flash.
+  const minimumEndTime = startTime + 2000;
+  const currentTime = $time();
+  let delayTime;
+  if (currentTime >= minimumEndTime) {
+    // We are already past the minimumEndTime, so don't wait any more.
+    delayTime = 0;
+  } else {
+    // We are at less than the minimumEndTime, so just wait the remainder of time.
+    delayTime = minimumEndTime - currentTime;
+  }
+  setTimeout(() => toMode(mode), delayTime);
 };
