@@ -11124,20 +11124,20 @@ pt-BR:
       CSD U3 abstraction rotation control: |-
         # Velocidade de controle
 
-        Você usou `velocidadeDeRotacao` fora do loop de desenho para fazer seu sprite girar quando seu programa foi iniciado. Você também pode usar `velocidadeDeRotacao` \*\* dentro \*\* do laço de repetição de desenhar para mudar a velocidade do sprite durante o jogo. Por exemplo, um sprite pode começar a girar quando o usuário pressiona a barra de espaço, e vai continuar girando até que seja ordenado que pare.
+        Você usou `velocidadeDeRotacao` fora do loop de desenho para fazer seu sprite girar quando seu programa foi iniciado. Você também pode usar `velocidadeDeRotacao` **dentro** do laço de repetição de desenhar para mudar a velocidade do sprite durante o jogo. Por exemplo, um sprite pode começar a girar quando o usuário pressiona a barra de espaço, e vai continuar girando até que seja ordenado que pare.
 
         # Faça isso
 
-        -   Veja a instrução `if` dentro do loop de desenho que verifica se a barra de espaço foi pressionada. ([Mostre-me onde] [0])
+        -   Veja a instrução `if` dentro do loop de desenho que verifica se a barra de espaço foi pressionada. ([Mostre-me onde](#triggercallout=code_triggered1))
         -   Use o bloco `velocidadeDeRotacao` para que a roda de cor comece a girar quando o usuário pressionar a barra de espaço.
       CSD U3 abstraction rotation control_2018: |-
         # Velocidade de controle
 
-        Você usou `velocidadeDeRotacao` fora do loop de desenho para fazer seu sprite girar quando seu programa foi iniciado. Você também pode usar `velocidadeDeRotacao` \*\* dentro \*\* do laço de repetição de desenhar para mudar a velocidade do sprite durante o jogo. Por exemplo, um sprite pode começar a girar quando o usuário pressiona a barra de espaço, e vai continuar girando até que seja ordenado que pare.
+        Você usou `velocidadeDeRotacao` fora do loop de desenho para fazer seu sprite girar quando seu programa foi iniciado. Você também pode usar `velocidadeDeRotacao` **dentro** do laço de repetição de desenhar para mudar a velocidade do sprite durante o jogo. Por exemplo, um sprite pode começar a girar quando o usuário pressiona a barra de espaço, e vai continuar girando até que seja ordenado que pare.
 
         # Faça isso
 
-        -   Veja a instrução `if` dentro do loop de desenho que verifica se a barra de espaço foi pressionada. ([Mostre-me onde] [0])
+        -   Veja a instrução `if` dentro do loop de desenho que verifica se a barra de espaço foi pressionada. ([Mostre-me onde](#triggercallout=code_triggered1))
         -   Use o bloco `velocidadeDeRotacao` para que a roda de cor comece a girar quando o usuário pressionar a barra de espaço.
       CSD U3 abstraction rotation control_2019: |-
         # Controlando a Velocidade
@@ -11146,7 +11146,7 @@ pt-BR:
 
         # Faça isso
 
-        -   Veja a instrução `if` dentro do laço de desenho, que verifica se a barra de espaço foi pressionada. ( [Mostre-me onde](#triggercallout=code_triggered1) )
+        -   Veja a instrução `if` dentro do laço de desenho, que verifica se a barra de espaço foi pressionada. ([Mostre-me onde](#triggercallout=code_triggered1))
         -   Use o bloco `velocidadeDeRotacao` para fazer a roda colorida começar a girar quando o usuário pressionar a barra de espaço.
       CSD U3 abstraction rotation_2018: |-
         # Velocidade de rotação
