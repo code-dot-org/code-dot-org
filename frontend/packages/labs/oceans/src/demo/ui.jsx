@@ -401,7 +401,7 @@ const styles = {
     top: 0,
     left: '0%',
     height: '150%',
-    backgroundColor: colors.green
+    backgroundColor: colors.teal
   },
   pondPanelGeneralBarText: {
     position: 'absolute',
@@ -467,11 +467,11 @@ const styles = {
     height: '6%',
     width: '2.5%',
     ':hover': {
-      backgroundColor: colors.neonBlue,
+      backgroundColor: colors.teal,
       color: colors.white
     },
     ':focus': {
-      backgroundColor: colors.neonBlue,
+      backgroundColor: colors.teal,
       color: colors.white
     }
   },
@@ -480,8 +480,8 @@ const styles = {
     margin: 'auto',
     height: '100%'
   },
-  bgNeonBlue: {
-    backgroundColor: colors.neonBlue,
+  bgTeal: {
+    backgroundColor: colors.teal,
     color: colors.white
   },
   bgRed: {
@@ -1416,7 +1416,7 @@ let Pond = class Pond extends React.Component {
           <div
             style={{
               ...styles.infoIconContainer,
-              ...(!state.pondPanelShowing ? {} : styles.bgNeonBlue)
+              ...(!state.pondPanelShowing ? {} : styles.bgTeal)
             }}
             onClick={this.onPondPanelButtonClick}
           >
