@@ -10823,6 +10823,10 @@ zh-CN:
             <title name="LAYOUT">"circle"</title>
           </block></xml>
         现在，您可以一次创建一批舞者！
+      Dance_2019_07: |-
+        每个舞者都有一组_属性_来控制其外观。使用绿色事件模块
+
+        下面的 <xml><block type="Dancelab_setPropEach" block-text="the set block"><title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title><title name="PROPERTY">"scale"</title><title name="VAL">???</title></block></xml> 来调节舞者在音乐开始之后的距离远近。
       Dance_2019_08: 舞者具有“色彩”属性，可以用来添加一层颜色。尝试更改其中一位舞者（或整个舞者）的色彩！
       Dance_2019_09: |-
         这是一种反复触发的特殊事件。
@@ -11123,7 +11127,7 @@ zh-CN:
 
         -   添加一张门外的图片
         -   设置 ID （比如 _outside_）
-        -   隐藏这张图片（门开始它会自动显示）
+        -   隐藏这张图片（门开时它会自动显示）
       Standalone_Artist_2: 用 120 度和 60 度的角度，再加上长达150像素的边来画个钻石型。
       Standalone_Artist_3: 能够用100 像素的边和 60度的转度来绘制一个六边形吗？
       Standalone_Artist_4: 现在你已获得一个新的块—循环，该块可以重复执行一连串的指令。如果你循环这些指令6次，看看会发生什么？

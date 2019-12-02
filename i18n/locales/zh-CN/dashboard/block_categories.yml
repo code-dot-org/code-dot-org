@@ -1,4 +1,3 @@
----
 zh-CN:
   data:
     block_categories:
@@ -14,7 +13,7 @@ zh-CN:
       Default: 默认
       Events: 事件
       Functions: 函数
-      'Functions ': 函数
+      'Functions ': '函数'
       Game/Score: 游戏/得分
       Games/Score: 游戏/得分
       Groups: 小组
