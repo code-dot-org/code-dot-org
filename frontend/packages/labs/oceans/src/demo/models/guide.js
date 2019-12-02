@@ -308,7 +308,7 @@ const guides = [
       appMode: AppMode.FishShort,
       currentMode: Modes.Training,
       fn: state => {
-        return state.yesCount + state.noCount >= 5;
+        return state.yesCount + state.noCount >= 10;
       }
     }
   },
