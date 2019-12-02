@@ -351,12 +351,34 @@ no-NO:
         med vennene dine.
       Crack Random Substitution: Instruksjoner
       Crack a Caesar Cipher: Instruksjoner
+      Dance_2019_01: 'Dra <xml><block type="Dancelab_makeAnonymousDanceSprite" block-text="make
+        a new dancer"><title name="COSTUME" config="&quot;CAT&quot;, &quot;PINEAPPLE&quot;">"CAT"</title><title
+        name="LOCATION">{x: 200, y: 200}</title></block></xml>-blokken inn på arbeidsområdet,
+        og koble den inni <xml><block type="Dancelab_whenSetup2" next_connection_disabled="true"
+        block-text="setup"></block></xml>-blokken.'
+      Dance_2019_02: Få katten til å bevege seg når du trykker på en tast.
+      Dance_2019_03: 'Det er klart for dansekonkurranse! Programmer hver danser til
+        å bevege seg når du bruker ulike taster. Velg din favorittbevegelse for hver
+        danser og sett den til "(Tilfeldig)" for noe helt uforutsett! '
+      Dance_2019_04: Få danseren din til å starte en ny bevegekse etter den fjerde
+        takten.
+      Dance_2019_06: Sett sammen en gruppe med bakgrunnsdansere rundt danseren i midten.
+      Dance_2019_07: Endre størrelsen på gruppen med bakgrunnsdansere.
+      Dance_2019_08: Prøv å endre fargetone på minst en av danserne dine (eller hele
+        gruppen)!
+      Dance_2019_09: Vær kreativ med de nye blokkene!
       Dance_2019_10: Ta på deg danseskoene! Lag din egen dans og del den med vennene
         dine.
       Dance_Party_05: Bruk en annen ny blokk for å få danseren til å bytte bevegelse
         hver 2. takt.
       Dance_Party_12: Ta på deg danseskoene! Lag din egen dans og del den med vennene
         dine.
+      Dance_Party_extras_battle: Dansegruppe (Klikk «Mer» for informasjon)
+      Dance_Party_extras_every_beat: Fjerdedelsnoter (Klikk «Mer» for informasojo)
+      Dance_Party_extras_layout: La oss komme i formasjon! (Klikk «Mer» for detaljer)
+      Dance_Party_extras_on_beat: Bass, Mellomtone og Diskant (Klikk «Mer» informasjon)
+      Dance_Party_extras_speed: Raskere, saktere (Klikk «Mer» for informasjon)
+      Dance_Party_extras_visible: Hvor ble det av dem? (Klikk «Mer» for informasjon)
       Find the Wizard: Bygg hva enn du vil. Dette er et eksempel på et siffergjettingsspill!
       FoodFight: Dette er et eksempel på hva du kan lage i laben.
       Function intro Ryan: Bruk funksjonen `build bridge` to ganger for å lage en
@@ -613,10 +635,32 @@ no-NO:
       Standalone_Artist_1: Velkommen til Kunstner! Først, la oss prøve å lage en enkelt
         firkant ved å bruke brikkene for å snu til høyre og flytte framover. Hver
         side burde være 100 piksler lange.
+      Standalone_Artist_2: Tegn denne diamanten med 120 og 60 graders vinkler og 150
+        piksler lange sider.
+      Standalone_Artist_3: Kan du tegne denne sekskanten med lange sider på 100 piksler
+        og vinkler på 60 grader?
+      Standalone_Artist_4: Nå har du fått en ny brikke som du kan bruke; gjenta-løkken.
+        Den vil repetere et sett med kommandoer. Hva skjer hvis du gjentar disse kommandoene
+        6 ganger?
+      Standalone_Artist_5: Hvor mange ganger må du å repetere denne diamanten for
+        å tegne blomsten?
+      Standalone_Artist_5.5: 'Legg merke til hvordan vi har forenklet diamantkoden
+        ved å legge inn en løkke. Du kan kjøre en sekvens i en løkke 12 ganger for
+        å tegne blomsten. Hint: Du vil trenge å snu 30 grader etter at diamanten har
+        kjørt i en løkke for å ikke fortsette å tegne over den samme diamanten.'
+      Standalone_Artist_6: 'Kjør denne sekskant-koden 6 ganger i en løkke for å lage
+        designet. Hvor mange grader må du snu hver gang? Hint: del antall grader i
+        en sirkel på antall ganger du skal kjøre løkka.'
+      Standalone_Artist_7: 'En funksjon er en annet programmeringsverktøy for å hjelpe
+        deg med å unngå å gjenta deg selv. Denne funksjonen tegner en blomst så du
+        kan bruke den hver gang du vil tegne en blomst. Bruk denne og den nye hoppe-blokken
+        til å tegne disse blomstene. Hint: Blomstene er 150 piksler fra hverandre'
       Standalone_Artist_8: Her er en funksjon kalt "Tegn en figur" som vi har programmert
         til å tegne sekskanter. Kjør koden for å se hva den gjør og så kan du eksperimentere
         med den og se hva som skjer hvis du endrer på den. Kan du få den til å tegne
         et mønster av firkanter, trekanter og åttekanter?
+      Standalone_Artist_9: Gå videre og lag det bildet du ønsker! Du har til og med
+        en tom funksjon som kan du få til å gjøre hva du vil!
       Underground Avoiding Lava: Under noen av blokkene skjuler det seg lava, som
         du må dekke til før du går videre. Her hjelper det med en "hvis"-kommando.
         Legg til en "flytt fremover"-kommando på riktig sted for å utvinne disse blokkene.
