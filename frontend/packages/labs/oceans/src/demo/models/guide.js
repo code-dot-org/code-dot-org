@@ -342,7 +342,7 @@ const guides = [
     textFn: state => {
       return `Based on your training, A.I. identified ${
         state.fishData.length === 1 ? 'this' : 'these'
-      } fish as “${state.word.toLowerCase()}”.  How did A.I. do?`;
+      } fish as “${state.word.toLowerCase()}”.  How did A.I. do?  You can Train More if you want to improve the results.`;
     },
     when: {
       appMode: AppMode.FishShort,
@@ -455,7 +455,7 @@ const guides = [
   },
   {
     id: 'fishlong-pond-init2',
-    text: `You can choose to Train More if you want to improve the results.`,
+    text: `You can Train More if you want to improve the results.`,
     when: {appMode: AppMode.FishLong, currentMode: Modes.Pond},
     arrow: 'LowerLeft'
   },
