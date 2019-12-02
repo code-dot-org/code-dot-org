@@ -34,6 +34,9 @@ stage 'Security Risks Part 2'
 level 'CSP U10L7 SFLP 20-21', progression: 'Lesson Overview'
 level 'U10 L08 CFU security risks', progression: 'Check For Understanding', assessment: true
 
+stage 'Project: Innovation Simulation Part 4'
+level 'CSP U10L8 SFLP 20-21', progression: 'Lesson Overview'
+
 stage 'Protecting Data Part 1'
 level 'CSP U10L9 SFLP 20-21', progression: 'Lesson Overview'
 level 'Crack a Caesar Cipher_2020', progression: 'Encryption Widgets'
@@ -43,3 +46,16 @@ level 'U10L9 CFU public key', progression: 'Check For Understanding', assessment
 stage 'Protecting Data Part 2'
 level 'CSP U10L10 SFLP 20-21', progression: 'Lesson Overview'
 level 'U10L10 CFU MFA', progression: 'Check For Understanding', assessment: true
+
+stage 'Project: Innovation Simulation Part 5'
+level 'CSP U10L11 SFLP 20-21', progression: 'Lesson Overview'
+
+stage 'Project: Innovation Simulation Part 6'
+level 'CSP U10L12 SFLP 20-21', progression: 'Lesson Overview'
+
+stage 'Project: Innovation Simulation Part 7'
+level 'CSP U10L13 SFLP 20-21', progression: 'Lesson Overview'
+
+stage 'Lesson 14: Unit Assessment Day'
+level 'CSP U10L14 SFLP 20-21', progression: 'Lesson Overview'
+level 'CSP 20-21 Unit 10 Assessment', progression: 'Unit 10 Exam', assessment: true
