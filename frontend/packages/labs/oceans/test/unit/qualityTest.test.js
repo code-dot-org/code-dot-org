@@ -332,7 +332,7 @@ describe('Model quality test', () => {
   test('test tails', async () => {
     const partData = fishData.tails;
     const partKey = PartKey.TAIL;
-    const trainSize = TRAIN_SIZE;
+    const trainSize = 150;
 
     for (const [name, data] of Object.entries(partData)) {
       console.log(`${partKey} ${name}`);
