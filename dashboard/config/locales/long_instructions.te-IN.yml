@@ -205,3 +205,20 @@ te-IN:
         -   మరొక గ్రూపు డాన్సర్లను జోడించండి
         -   బాణం గుర్తు కీలను ఉపయోగించి డాన్సర్లను చూపించండి మరియు దాచిపెట్టండి
         -   డాన్సర్లు అందరినీ దాచిపెట్టండి మరియు ఒక ఉత్సాహకరమైన బ్యాక్‌గ్రౌండ్ ఎఫెక్ట్‌కు స్విఛ్ అవ్వండి"
+      courseA_artist_loops7_2019: |-
+        Use the <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="3-10">???</title></block></xml> loop to add waves to the water.
+
+        ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
+      courseA_collector_loops2_2019: 'Get all three piles! Move Laurel to each piece
+        of treasure, then use the <xml><block type="collector_collect" block-text="get
+        treasure"/></xml> block. '
+      courseA_maze_ramp3a_2019: Grab a <xml><block type="maze_moveNorth" block-text="move
+        north"/></xml> block from the toolbox and add it to the bottom of the other
+        blocks to finish this code, then click "▶ Run".
+      courseA_playLab_events1_2019: This is a Play Lab level. Move blocks to the workspace
+        and see what happens!
+      courseA_playLab_events2_2019: Jorge the Dog wants to say "Hi there." Can you
+        help him?
+      courseB_Scrat_ramp3a_2019: Grab a <xml><block type="maze_moveNorth" block-text="move
+        north"/></xml> block from the toolbox and add it to the bottom of the other
+        blocks to finish this code, then click "▶ Run".
