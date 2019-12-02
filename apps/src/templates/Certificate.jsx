@@ -42,7 +42,7 @@ const styles = {
 
 const blankCertificates = {
   hourOfCode: require('@cdo/static/hour_of_code_certificate.jpg'),
-  oceans: require('@cdo/static/Oceans_Hour_Of_Code_Certificate.png'),
+  oceans: require('@cdo/static/oceans_hoc_certificate.png'),
   mc: require('@cdo/static/MC_Hour_Of_Code_Certificate.png'),
   minecraft: require('@cdo/static/MC_Hour_Of_Code_Certificate.png'),
   hero: require('@cdo/static/MC_Hour_Of_Code_Certificate_Hero.png'),
