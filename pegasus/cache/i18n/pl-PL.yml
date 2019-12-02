@@ -2164,14 +2164,17 @@ pl-PL:
   hoc_overview_dance_title: Potańcówka
   hoc_overview_dance_subtitle: Zakoduj potańcówkę, aby podzielić się nią ze znajomymi.
     Występują Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara i 25 innych!
+  hoc_overview_dance_2019_subtitle: 'Koduj Potańcówkę, aby podzielić się ze znajomymi.
+    Występują: Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers,
+    Nicki Minaj i 34 innych!'
   hoc_overview_title: Aktywności Godziny Kodowania z Code.org
   hoc_overview_subtitle: <a href="https://hourofcode.com"> Godzina Kodowania (Hour
-    of Code) </a> to globalna inicjatywa docierająca do dziesiątek milionów studentów
+    of Code) </a> to globalna inicjatywa docierająca do dziesiątek milionów uczniów
     w ponad 180 krajach. Każdy, gdziekolwiek, może zorganizować wydarzenie Godziny
-    Kodowania lub wypróbować ponad 200 godzinnych samouczków dostępnych w ponad 45
+    Kodowania lub wypróbować ponad 500 godzinnych samouczków dostępnych w ponad 45
     językach.
   hoc_overview_partner_activities_title: Więcej aktywności od naszych partnerów
-  hoc_overview_partner_activities_body: Strona Godziny Kodowania zawiera ponad 100
+  hoc_overview_partner_activities_body: Strona Godziny Kodowania zawiera ponad 500
     aktywności informatycznych opracowanych przez Code.org i naszych partnerów dla
     osób w każdym wieku i na każdym poziomie.
   hoc_overview_partner_activities_link: Zobacz aktywności
@@ -2192,6 +2195,8 @@ pl-PL:
   hoc2018_creativity_courses: Przejdź dalej z kursami Code.org
   hoc2018_creativity_courses_link: Przejdź dalej z kursami <a href="https://studio.code.org/courses">Code.org
     courses</a>
+  hoc2018_homepage: Zapisz swoją klasę, aby wypróbować jedną z ponad 150 NOWYCH aktywności
+    w Godzinie Kodowania (3-9 grudnia)!
   hoc2018_mc_page_title: Samouczki Minecrafta w Godzinie Kodowania
   hoc2018_mc_details: Wiele języków | Nowoczesne przeglądarki i tablety | Klasy 2
     +
@@ -2202,6 +2207,7 @@ pl-PL:
   hoc2018_mc_aquatic_title: 'Minecraft: Wodna podróż'
   hoc2018_mc_aquatic_description: Minecraft powraca na Godzinę Kodowania z najnowszą
     serią zadań! Koduj podróżując po świecie Minecraftu.
+  hoc2019_mc_aquatic_description: Eksploruj i buduj podwodne światy za pomocą kodu.
   hoc2018_mc_hero_title: 'Minecraft: Podróż Bohatera'
   hoc2018_mc_hero_description: Minecraft powraca na Godzinę Kodowania z najnowszą
     serią zadań! Koduj podróżując po świecie Minecraftu.
@@ -2335,6 +2341,9 @@ pl-PL:
     wykorzystania ich muzyki przez Code.org.\n\n"
   hoc2018_dance_measure: Takt
   hoc2018_dance_measure_colon: 'Takt:'
+  hoc2018_aquatic_video1: Wodna Podróż z Minecraftem - Wprowadzenie
+  hoc2018_aquatic_video2: Wodna podróż z Minecraftem - Pętle
+  hoc2018_aquatic_video3: Wodna Podróż z Minecraftem - Warunki
   hoc2018_aquatic_video4: Wodna Podróż Minecrafta - Gratulacje
   hoc2018_dance_video1: Potańcówka - Wprowadzenie
   hoc2018_dance_video2: Potańcówka - Zdarzenia
@@ -2344,3 +2353,16 @@ pl-PL:
   page_not_found_header: '404: Strona nie została znaleziona'
   page_not_found_button: Powrót do strony domowej
   hoc2018_mc_with_microsoft: 'W partnerstwie z: '
+  hoc2018_mc_thank_microsoft: Dziękujemy Microsoft za wspieranie naszej wizji i misji,
+    aby zapewnić, że każde dziecko ma możliwość nauki informatyki i umiejętności,
+    by odnieść sukces w XXI wieku.
+  hoc2019_mc_mee_title: Sztuczna inteligencja z Minecraftem na dobre
+  hoc2019_mc_mee_description1: 'Nowy samouczek dla Minecraftu w ramach Godziny Kodowania
+    jest teraz dostępny w Minecraft: Education Edition dla Windows, Mac i iPad. Naucz
+    się podstaw programowania i odkrywaj sztuczną inteligencję ze swoimi uczniami!'
+  hoc2019_mc_mee_description2: 'Uzyskaj dostęp do bezpłatnych zasobów, w tym: planu
+    lekcji, filmów, programu informatyki i szkoleń dla nauczycieli.'
+  hoc2019_mc_more_coding_resources: Więcej zasobów do kodowania
+  hoc2019_dance_previous_versions: "Czy szukasz poprzedniej wersji Potańcówki?  \nKliknij
+    tutaj, aby zacząć [Część 1](%{dance_2018_link}) i [Część  2](%{dance_extras_2018_link})
+    z ostatniego roku."
