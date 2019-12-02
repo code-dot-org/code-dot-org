@@ -138,10 +138,7 @@
 - content_for(:body_scripts) do
   %script{type: "text/javascript", src: webpack_asset_path('js/layouts/_header.js')}
 
-
 :javascript
-   function logToFirehose(detail, url) {
-      dashboard.header.logToFirehose(detail)
-      .then(function() { window.location.href = url })
-      .catch(function() { window.location.href = url })
-    }
+  dashboard.header.logToFirehose(detail).finally(function() {
+    window.location.href = url;
+  });
