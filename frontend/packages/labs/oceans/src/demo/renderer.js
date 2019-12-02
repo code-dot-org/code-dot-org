@@ -159,7 +159,10 @@ export const render = () => {
       break;
   }
 
-  drawOverlays();
+  // Don't draw overlays on loading screens.
+  if (![Modes.Loading, Modes.IntermediateLoading].includes(state.currentMode)) {
+    drawOverlays();
+  }
 
   prevState = {...state};
 };
