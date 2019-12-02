@@ -11,11 +11,11 @@ vi-VN:
         với các vòng lặp lồng vào nhau.
       2-3 Bee Loops 3A: Dùng một vòng lặp `repeat`để thu thập tất cả phấn hoa.
       CourseD_Dance_Party_01: |-
-        _Hãy mở tiệc khiêu vũ nào!_
+        \_Hãy mở tiệc khiêu vũ nào!\*
 
         Kéo khối `make a new` vào trong không gian làm việc và kết nối nó với bên trong khối `setup` để tạo ra vũ công đầu tiên của bạn.
 
-        -   _Bạn cũng có thể nhấn vào bóng đèn ở bên trái nếu muốn xem thêm thông tin hoặc thử thách phụ._
+        -   \*Bạn cũng có thể nhấn vào bóng đèn ở bên trái nếu muốn xem thêm thông tin hoặc thử thách phụ.\_
       CourseD_Dance_Party_02: |-
         Hãy làm con nai sừng tấm này nhảy múa nào!
 
@@ -162,11 +162,11 @@ vi-VN:
       Dance_2019_10: Bắt đầu quẩy thôi! Tạo ra điệu nhảy của riêng bạn để chia sẻ
         với bạn bè.
       Dance_Party_01: |-
-        _Hãy mở tiệc khiêu vũ nào!_
+        \_Hãy mở tiệc khiêu vũ nào!\*
 
         Kéo khối `make a new` vào trong không gian làm việc và kết nối nó với bên trong khối `setup` để tạo ra vũ công đầu tiên của bạn.
 
-        -   _Bạn cũng có thể nhấn vào bóng đèn ở bên trái nếu muốn xem thêm thông tin hoặc thử thách phụ._
+        -   \*Bạn cũng có thể nhấn vào bóng đèn ở bên trái nếu muốn xem thêm thông tin hoặc thử thách phụ.\_
       Dance_Party_02: |-
         Hãy làm con nai sừng tấm này nhảy múa nào!
 
@@ -627,6 +627,8 @@ vi-VN:
         lợn!
       courseA_maze_seq8_2019: Bạn hãy giải câu đố này và đưa chú chim đến chỗ chú
         lợn!
+      courseA_playLab_events1_2019: Đây là cấp độ Phòng Thí Nghiệm trò chơi. Di chuyển
+        các khối tới khu vực làm việc và xem điều gì sẽ xảy ra!
       courseA_playLab_events3_2019: |-
         Giúp chú chó Jorge di chuyển bằng cách nối khối <xml><block type="studio_move" block-text="move dog west">
             <title name="SPRITE">1</title>
@@ -742,6 +744,35 @@ vi-VN:
         Thêm khối sự kiện để chàng kỵ sĩ di chuyển khi ấn phím mũi tên.
 
         Di chuyển chàng kỵ sĩ về bên phải để hoàn thành câu đố này.
+      courseB_playlab_events6: |-
+        Giúp hiệp sĩ của bạn lấy tất cả lá cờ!
+        Để làm điều này, bạn cần tạo các sự kiện để giúp hiệp sĩ đi lên, xuống, sang trái và sang phải.
+      courseB_playlab_events6_2018: |-
+        Giúp hiệp sĩ của bạn lấy tất cả lá cờ!
+        Để làm điều này, bạn cần tạo các sự kiện để giúp hiệp sĩ đi lên, xuống, sang trái và sang phải.
+      courseB_playlab_events6_2019: |-
+        Giúp hiệp sĩ của bạn lấy tất cả lá cờ!
+        Để làm điều này, bạn cần tạo các sự kiện để giúp hiệp sĩ đi lên, xuống, sang trái và sang phải.
+      courseB_playlab_events7_2018: |-
+        Làm cho trò chơi vui hơn bằng cách thêm vào nhiều khối lệnh!
+
+        1.  Cài đặt để hiệp sĩ biến mất khi anh ấy đâm vào con rồng.
+        2.  Tạo ra tiếng động khi họ chạm vào nhau để trò chơi thêm chân thực.
+
+        * * *
+
+        Đi qua tất cả các mục tiêu, rồi chạm vào con rồng để vượt qua thử thách.
+      courseB_playlab_events7_2019: |-
+        Làm cho trò chơi vui hơn bằng cách thêm vào nhiều khối lệnh!
+
+        1.  Cài đặt để hiệp sĩ biến mất khi anh ấy đâm vào con rồng.
+        2.  Tạo ra tiếng động khi họ chạm vào nhau để trò chơi thêm chân thực.
+
+        * * *
+
+        Đi qua tất cả các mục tiêu, rồi chạm vào con rồng để vượt qua thử thách.
+      courseB_playlab_eventsFP_2019: "**Chơi tự do:**Sử dụng trí tưởng tượng của bạn.
+        Bạn có thể làm gì để trò chơi này thú vị hơn?"
       courseB_starWars_prog1: |-
         ![Rey](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_"Hãy đi lấy mảnh kim loại nào, BB-8!"_
 
