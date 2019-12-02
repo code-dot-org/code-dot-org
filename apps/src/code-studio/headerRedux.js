@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 /* globals dashboard */
 
 const SHOW_PROJECT_HEADER = 'header/SHOW_PROJECT_HEADER';
@@ -33,7 +35,7 @@ const initialState = {
   projectUpdatedAt: undefined,
   getLevelBuilderChanges: undefined,
   projectName: '',
-  projectNameError: undefined,
+  projectNameFailure: undefined,
   includeExportInProjectHeader: false,
   showTryAgainDialog: false
 };
@@ -98,11 +100,22 @@ export default (state = initialState, action) => {
 
   if (action.type === CHECK_PROJECT_NAME) {
     // make ajax call.
-    // if name is not safe...
-    return {
-      ...state,
-      projectNameError: action.nameError // this error is actually ocimng from the ajax call
-    };
+    $.get({
+      url: `/api/v1/projects/personal/check_name?new_name=${
+        action.projectName
+      }`,
+      dataType: 'json'
+    }).done(data => {
+      if (data.nameFailure) {
+        return {
+          ...state,
+          projectNameFailure: data.nameFailure
+        };
+      } else {
+        // name is safe or call to check it failed (current plan is to save anyway)
+        //save name in correct place
+      }
+    });
   }
 
   if (action.type === SHOW_TRY_AGAIN_DIALOG) {

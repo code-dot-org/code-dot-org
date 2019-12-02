@@ -18,7 +18,7 @@ class UnconnectedDisplayProjectName extends React.Component {
   static propTypes = {
     beginEdit: PropTypes.func.isRequired,
     projectName: PropTypes.string.isRequired,
-    projectNameError: PropTypes.string
+    projectNameFailure: PropTypes.string
   };
 
   render() {
@@ -50,7 +50,7 @@ class UnconnectedEditProjectName extends React.Component {
     projectName: PropTypes.string.isRequired,
     refreshProjectName: PropTypes.func.isRequired,
     checkProjectName: PropTypes.func.isRequired,
-    projectNameError: PropTypes.string
+    projectNameFailure: PropTypes.string
   };
 
   state = {
@@ -68,7 +68,8 @@ class UnconnectedEditProjectName extends React.Component {
     }
 
     this.props.checkProjectName(newName);
-    if (this.props.projectNameError) {
+
+    if (this.props.projectNameFailure) {
       console.log('NAME ERROR');
       return;
     } else {
@@ -117,7 +118,7 @@ class UnconnectedEditProjectName extends React.Component {
 const EditProjectName = connect(
   state => ({
     projectName: state.header.projectName,
-    projectNameError: state.header.projectNameError
+    projectNameFailure: state.header.projectNameFailure
   }),
   {
     refreshProjectName,
