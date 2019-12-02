@@ -17,12 +17,19 @@
     left: 200px;
   }
 
+  .snail {
+    position: absolute;
+    width: 60px;
+    top: 270px;
+    left: 1020px;
+  }
+
   .scanning-bot {
     position: absolute;
     margin-top: 0px;
     margin-bottom: 10px;
     top: 20px;
-    left: 670px;
+    left: 700px;
   }
 
   .ai-bot {
@@ -31,7 +38,7 @@
 
   .ai-light {
     width: 150px;
-    left: 670px;
+    left: 700px;
     top: 290px;
     position: absolute;
   }
@@ -40,7 +47,7 @@
     position: absolute;
     width: 80px;
     top: 185px;
-    left: 705px;
+    left: 737px;
   }
 
 .img-container.desktop-feature
@@ -49,14 +56,15 @@
     %img.ai-bot{src: 'images/oceans/ai-bot.png'}
   %img.ai-light{src: 'images/oceans/bot-beam-puddle.png'}
   %img.ai-fish{src: 'images/oceans/fish-in-beam.png'}
+  %img.snail{src: 'images/oceans/snail.png'}
 
 .img-container
   %img.sea-creature{src: 'images/oceans/big-sunfish.png'}
   %img.sea-creature{src: 'images/oceans/small-sunfish.png'}
   %img.sea-creature{src: 'images/oceans/gorgon-fish.png'}
-  %img.sea-creature{src: 'images/oceans/shark.png'}
   %img.sea-creature{src: 'images/oceans/orange-fish.png'}
 .img-container.tablet-feature
+  %img.sea-creature{src: 'images/oceans/shark.png'}
   %img.sea-creature.crab{src: 'images/oceans/crab.png'}
 
 :javascript
@@ -66,15 +74,23 @@
       return +new Date();
     };
   var fishLocations = [
-    {x: 820, y: 110},   // turtle
-    {x: 520, y: 90},    // big-sunfish
-    {x: 570, y: 70},    // small-sunfish
-    {x: 560, y: 215},   // gorgon-fish
-    {x: 300, y: 180},   // shark
-    {x: 380, y: 85},    // orange-fish,
-    {x: 150, y: 220}    // crab
+    {x: 1120, y: 160},   // turtle
+    {x: 920, y: 90},     // big-sunfish
+    {x: 970, y: 70},     // small-sunfish
+    {x: 560, y: 215},    // gorgon-fish
+    {x: 495, y: 85},     // orange-fish
+    {x: 300, y: 180},    // shark
+    {x: 235, y: 277}     // crab
   ];
-  var fishWidths = ['45px', '30px', '100px', '80px', '100px', '30px']
+  var fishWidths = [
+    '85px',  // turtle
+    '45px',   // big-sunfish
+    '30px',   // small-sunfish
+    '80px',   // gorgon-fish
+    '45px',   // orange-fish
+    '100px',  // shark
+    '80px'    // crab
+  ]
   $(document).ready(function() {
     setInterval(function() {
       $(".sea-creature").each(function(index) {
