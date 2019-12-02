@@ -60,7 +60,8 @@ const styles = {
     minWidth: '15%',
     outline: 'none',
     border: 'none',
-    whiteSpace: 'nowrap'
+    whiteSpace: 'nowrap',
+    lineHeight: 1.3
   },
   continueButton: {
     position: 'absolute',
@@ -127,7 +128,7 @@ const styles = {
   },
   confirmationDialogImg: {
     position: 'absolute',
-    bottom: '-47%',
+    bottom: '-46%',
     left: '-41%',
     height: '100%'
   },
@@ -161,6 +162,14 @@ const styles = {
     right: '5%',
     padding: '3.5% 8%',
     width: '35%'
+  },
+  loading: {
+    position: 'absolute',
+    transform: 'translate(-50%, -50%)',
+    top: '50%',
+    left: '50%',
+    color: colors.darkGrey,
+    fontSize: '180%'
   },
   activityIntroText: {
     position: 'absolute',
@@ -249,35 +258,37 @@ const styles = {
     width: '49%',
     marginTop: '30%'
   },
-  trainingIcons: {
+  counter: {
     position: 'absolute',
     top: '2%',
-    right: '1.2%',
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center'
-  },
-  counter: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    right: '7%',
     backgroundColor: colors.transparentBlack,
     color: colors.neonBlue,
     borderRadius: 33,
-    padding: '9px 20px',
-    minWidth: 65
+    textAlign: 'right',
+    minWidth: '7%',
+    height: '5%',
+    padding: '1% 2.5%'
+  },
+  counterImg: {
+    float: 'left',
+    height: '100%'
   },
   counterNum: {
-    fontSize: '90%',
-    marginLeft: 12
+    fontSize: '90%'
   },
   eraseButtonContainer: {
+    position: 'absolute',
+    top: '2%',
+    right: '1.2%',
     cursor: 'pointer',
     borderRadius: 50,
-    padding: 8,
-    marginLeft: 10,
+    padding: '0.75% 1.2%',
+    fontSize: '120%',
     backgroundColor: colors.white,
     color: colors.grey,
+    height: '6%',
+    width: '2.4%',
     ':hover': {
       backgroundColor: colors.red,
       color: colors.white
@@ -288,7 +299,9 @@ const styles = {
     }
   },
   eraseButton: {
-    padding: '0 3px'
+    display: 'block',
+    margin: 'auto',
+    height: '100%'
   },
   mediaControls: {
     position: 'absolute',
@@ -424,33 +437,35 @@ const styles = {
   pondPanelPostText: {
     marginTop: '3%'
   },
-  recallContainer: {
+  recallIcons: {
     position: 'absolute',
     top: '2%',
-    right: '1.2%',
-    color: colors.white,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between'
-  },
-  recallIcons: {
+    right: '7%',
     backgroundColor: colors.white,
     color: colors.grey,
-    maxHeight: 42,
+    height: '8.5%',
+    width: '9.5%',
     borderRadius: 8,
     display: 'flex',
     alignItems: 'center'
   },
   recallIcon: {
     cursor: 'pointer',
-    padding: 7
+    padding: '0 15%',
+    height: '100%'
   },
   infoIconContainer: {
+    position: 'absolute',
+    top: '2%',
+    right: '1.2%',
     cursor: 'pointer',
     borderRadius: 50,
-    marginLeft: 10,
+    padding: '0.75% 1.2%',
+    fontSize: '120%',
     backgroundColor: colors.white,
     color: colors.grey,
+    height: '6%',
+    width: '2.5%',
     ':hover': {
       backgroundColor: colors.neonBlue,
       color: colors.white
@@ -461,7 +476,9 @@ const styles = {
     }
   },
   infoIcon: {
-    padding: '5px 12px'
+    display: 'block',
+    margin: 'auto',
+    height: '100%'
   },
   bgNeonBlue: {
     backgroundColor: colors.neonBlue,
@@ -594,16 +611,13 @@ const styles = {
   },
   arrowUpperRight: {
     top: '13%',
-    right: '-3.5%',
+    right: '-2%',
     transform: 'translateX(-50%) rotate(180deg)'
   },
   arrowUpperFarRight: {
     top: '15%',
     right: '-4.6%',
     transform: 'translateX(-50%) rotate(180deg)'
-  },
-  marginRight: {
-    marginRight: '12%'
   }
 };
 
@@ -733,10 +747,23 @@ let ConfirmationDialog = class ConfirmationDialog extends React.Component {
 };
 ConfirmationDialog = Radium(ConfirmationDialog);
 
+let Loading = class Loading extends React.Component {
+  render() {
+    return (
+      <Body>
+        <div style={styles.loading}>Loading...</div>
+      </Body>
+    );
+  }
+};
+
 const wordSet = {
   short: {
     text: ['What type of fish do you want to train A.I. to detect?'],
-    choices: [['Blue', 'Green', 'Red'], ['Circular', 'Rectangular', 'Triangular']],
+    choices: [
+      ['Blue', 'Green', 'Red'],
+      ['Circular', 'Rectangular', 'Triangular']
+    ],
     style: styles.button2col
   },
   long: {
@@ -800,6 +827,20 @@ let Words = class Words extends React.Component {
       trainingQuestion: `Is this fish “${word.toLowerCase()}”?`
     });
     toMode(Modes.Training);
+
+    // Report an analytics event for the word chosen.
+    if (window.trackEvent) {
+      const appModeToString = {
+        [AppMode.FishShort]: 'words-short',
+        [AppMode.FishLong]: 'words-long'
+      };
+
+      window.trackEvent(
+        'oceans',
+        appModeToString[getState().appMode],
+        word.toLowerCase()
+      );
+    }
   }
 
   render() {
@@ -861,25 +902,23 @@ let Train = class Train extends React.Component {
           />
           <img src={aiBotBody} style={styles.trainBotBody} />
         </div>
-        <div style={styles.trainingIcons}>
-          <div style={styles.counter}>
-            <img src={counterIcon} />
-            <span style={styles.counterNum}>
-              {Math.min(999, state.yesCount + state.noCount)}
-            </span>
-          </div>
-          <span style={styles.eraseButtonContainer}>
-            <FontAwesomeIcon
-              icon={faTrash}
-              style={styles.eraseButton}
-              onClick={() => {
-                setState({
-                  showConfirmationDialog: true,
-                  confirmationDialogOnYes: resetTrainingFunction
-                });
-              }}
-            />
+        <div style={styles.counter}>
+          <img src={counterIcon} style={styles.counterImg} />
+          <span style={styles.counterNum}>
+            {Math.min(999, state.yesCount + state.noCount)}
           </span>
+        </div>
+        <div style={styles.eraseButtonContainer}>
+          <FontAwesomeIcon
+            icon={faTrash}
+            style={styles.eraseButton}
+            onClick={() => {
+              setState({
+                showConfirmationDialog: true,
+                confirmationDialogOnYes: resetTrainingFunction
+              });
+            }}
+          />
         </div>
         <div style={styles.trainButtons}>
           <Button
@@ -890,7 +929,8 @@ let Train = class Train extends React.Component {
             }}
             sound={'no'}
           >
-            <FontAwesomeIcon icon={faBan} style={styles.marginRight} />
+            <FontAwesomeIcon icon={faBan} />
+            &nbsp; &nbsp;
             {noButtonText}
           </Button>
           <Button
@@ -901,7 +941,8 @@ let Train = class Train extends React.Component {
             }}
             sound={'yes'}
           >
-            <FontAwesomeIcon icon={faCheck} style={styles.marginRight} />
+            <FontAwesomeIcon icon={faCheck} />
+            &nbsp; &nbsp;
             {yesButtonText}
           </Button>
         </div>
@@ -1048,8 +1089,8 @@ let Predict = class Predict extends React.Component {
         )}
         {!state.isRunning && !state.isPaused && (
           <Button style={styles.continueButton} onClick={this.onRun}>
-            <FontAwesomeIcon icon={faPlay} style={styles.marginRight} />
-            Run
+            <FontAwesomeIcon icon={faPlay} />
+            &nbsp; &nbsp; Run
           </Button>
         )}
         {(state.isRunning || state.isPaused) && state.canSkipPredict && (
@@ -1210,9 +1251,11 @@ let Pond = class Pond extends React.Component {
     if (state.showRecallFish) {
       currentFishSet = state.recallFish;
       nextFishSet = state.pondFish;
+      playSound('yes');
     } else {
       currentFishSet = state.pondFish;
       nextFishSet = state.recallFish;
+      playSound('no');
     }
 
     // Don't call arrangeFish if fish have already been arranged.
@@ -1323,6 +1366,12 @@ let Pond = class Pond extends React.Component {
       setState({
         pondPanelShowing: !state.pondPanelShowing
       });
+
+      if (state.pondPanelShowing) {
+        playSound('sortno');
+      } else {
+        playSound('sortyes');
+      }
     }
 
     e.stopPropagation();
@@ -1336,46 +1385,44 @@ let Pond = class Pond extends React.Component {
         state.appMode === AppMode.FishLong) &&
       state.pondFish.length > 0 &&
       state.recallFish.length > 0;
+    const recallIconsStyle = showInfoButton
+      ? styles.recallIcons
+      : {...styles.recallIcons, right: '1.2%'};
 
     return (
       <Body>
         <div onClick={e => this.onPondClick(e)} style={styles.pondSurface} />
-        <div style={styles.recallContainer}>
-          <div style={styles.recallIcons}>
-            <FontAwesomeIcon
-              icon={faCheck}
-              style={{
-                ...styles.recallIcon,
-                ...{borderTopLeftRadius: 8, borderBottomLeftRadius: 8},
-                ...(!state.showRecallFish ? styles.bgGreen : {})
-              }}
-              onClick={this.toggleRecall}
-            />
-            <FontAwesomeIcon
-              icon={faBan}
-              style={{
-                ...styles.recallIcon,
-                ...{borderTopRightRadius: 8, borderBottomRightRadius: 8},
-                ...(state.showRecallFish ? styles.bgRed : {})
-              }}
-              onClick={this.toggleRecall}
-            />
-          </div>
-          {showInfoButton && (
-            <div
-              style={{
-                ...styles.infoIconContainer,
-                ...(!state.pondPanelShowing ? {} : styles.bgNeonBlue)
-              }}
-            >
-              <FontAwesomeIcon
-                icon={faInfo}
-                style={styles.infoIcon}
-                onClick={this.onPondPanelButtonClick}
-              />
-            </div>
-          )}
+        <div style={recallIconsStyle}>
+          <FontAwesomeIcon
+            icon={faCheck}
+            style={{
+              ...styles.recallIcon,
+              ...{borderTopLeftRadius: 8, borderBottomLeftRadius: 8},
+              ...(!state.showRecallFish ? styles.bgGreen : {})
+            }}
+            onClick={this.toggleRecall}
+          />
+          <FontAwesomeIcon
+            icon={faBan}
+            style={{
+              ...styles.recallIcon,
+              ...{borderTopRightRadius: 8, borderBottomRightRadius: 8},
+              ...(state.showRecallFish ? styles.bgRed : {})
+            }}
+            onClick={this.toggleRecall}
+          />
         </div>
+        {showInfoButton && (
+          <div
+            style={{
+              ...styles.infoIconContainer,
+              ...(!state.pondPanelShowing ? {} : styles.bgNeonBlue)
+            }}
+            onClick={this.onPondPanelButtonClick}
+          >
+            <FontAwesomeIcon icon={faInfo} style={styles.infoIcon} />
+          </div>
+        )}
         <img style={styles.pondBot} src={aiBotClosed} />
         {state.canSkipPond && (
           <div>
@@ -1458,7 +1505,7 @@ let Guide = class Guide extends React.Component {
     if (!state.guideShowing && !state.guideTypingTimer && currentGuide) {
       const guideTypingTimer = setInterval(() => {
         playSound('no', 0.5);
-      }, 1000/10);
+      }, 1000 / 10);
       setState({guideTypingTimer});
     }
 
@@ -1547,9 +1594,13 @@ export default class UI extends React.Component {
   render() {
     const state = getState();
     const currentMode = getState().currentMode;
+    const isLoading = [Modes.Loading, Modes.IntermediateLoading].includes(
+      currentMode
+    );
 
     return (
       <div>
+        {isLoading && <Loading />}
         {currentMode === Modes.Words && <Words />}
         {currentMode === Modes.Training && <Train />}
         {currentMode === Modes.Predicting && <Predict />}

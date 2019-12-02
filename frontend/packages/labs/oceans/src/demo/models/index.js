@@ -25,4 +25,22 @@ export const init = state => {
       initPond();
       break;
   }
+
+  // Report a synthetic pageview to Google Analytics.
+  if (window.ga) {
+    const modeToPage = {
+      [Modes.Loading]: 'loading',
+      [Modes.Words]: 'words',
+      [Modes.Training]: 'training',
+      [Modes.Predicting]: 'predicting',
+      [Modes.Pond]: 'pond',
+      [Modes.Instructions]: 'instructions',
+      [Modes.IntermediateLoading]: 'intermediateLoading'
+    };
+
+    const syntheticPagePath =
+      window.location.pathname + '/' + modeToPage[state.currentMode];
+    window.ga('set', 'page', syntheticPagePath);
+    window.ga('send', 'pageview');
+  }
 };

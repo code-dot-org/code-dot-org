@@ -121,7 +121,7 @@ export default class SVMTrainer {
     for (const fieldWithWeight of idFields) {
       const partType = fieldWithWeight.fieldInfo.partType;
       if (
-        !Object.prototype.hasOwnProperty.call(idFields, partType) ||
+        !Object.prototype.hasOwnProperty.call(idFieldsSummary, partType) ||
         fieldWithWeight.absWeight > idFieldsSummary[partType]
       ) {
         idFieldsSummary[partType] = fieldWithWeight.absWeight;
