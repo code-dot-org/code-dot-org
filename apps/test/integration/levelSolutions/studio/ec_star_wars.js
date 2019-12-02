@@ -21,22 +21,21 @@ export default {
   skinId: 'hoc2015',
   levelDefinition: levelDef,
   tests: [
-    // temporarily disabled for babel 7 upgrade
-    // {
-    //   description: 'Droplet Star Wars map collision: Endor circle',
-    //   xml: `
-    //     setMap("circle");
-    //     for (var i = 0; i < 100; i++) goRight();
-    //   `,
-    //   customValidator: function(assert) {
-    //     assert.equal(Studio.sprite[0].x, 245);
-    //     return true;
-    //   },
-    //   expected: {
-    //     result: true,
-    //     testResult: TestResults.FREE_PLAY
-    //   }
-    // },
+    {
+      description: 'Droplet Star Wars map collision: Endor circle',
+      xml: `
+        setMap("circle");
+        for (var i = 0; i < 100; i++) goRight();
+      `,
+      customValidator: function(assert) {
+        assert.equal(Studio.sprite[0].x, 245);
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
+    },
     {
       description: 'Droplet Star Wars map collision: Hoth circle',
       xml: `
