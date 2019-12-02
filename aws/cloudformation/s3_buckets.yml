@@ -20,7 +20,6 @@ Resources:
         BlockPublicPolicy: true
         IgnorePublicAcls: true
         RestrictPublicBuckets: true
-        
   SpritelabAnimationBucket:
     Type: 'AWS::S3::Bucket'
     Properties:
