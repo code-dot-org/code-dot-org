@@ -979,6 +979,13 @@ ro-RO:
         &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title>\n
         \   <title name=\"LAYOUT\">\"circle\"</title>\n  </block></xml>\nAcum poți
         crea imediat un grup de dansatori!"
+      Dance_2019_07: "Fiecare dansator are un set de _proprietăți_ care controlează
+        modul în care arată acesta. \n\nFolosește <xml><block type=\"Dancelab_setPropEach\"
+        block-text=\"the set block\"><title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;,
+        &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;,
+        &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title><title
+        name=\"PROPERTY\">\"scale\"</title><title name=\"VAL\">???</title></block></xml>
+        sub un bloc eveniment verde pentru a apropia sau a depărta dansatorii."
       Dance_2019_08: Dansatorii au o proprietate de „colorație" care poate adăuga
         un strat de culoare. Încearcă să schimbi culoarea unuia dintre dansatorii
         tăi (sau a unui grup întreg)!
