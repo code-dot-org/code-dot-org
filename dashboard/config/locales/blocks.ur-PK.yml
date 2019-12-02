@@ -3,6 +3,9 @@ ur:
   data:
     blocks:
       Dancelab_alternateMoves:
+        text: |-
+          {GROUP} ہر {N} پیمائشوں
+           کو {MOVE1} اور {MOVE2} کے درمیان متبادل بناتا ہے
         options:
           GROUP:
             '"ALIEN"': خلائی مخلوق
@@ -15,6 +18,7 @@ ur:
             '"PINEAPPLE"': انناس
             '"ROBOT"': روبوٹس
             '"SHARK"': شارک
+            '"SLOTH"': سلاتھ
             '"UNICORN"': یونیکارنز
           MOVE1:
             MOVES.Roll: جسم گول کرنا
@@ -67,6 +71,7 @@ ur:
             '"PINEAPPLE"': انناس
             '"ROBOT"': روبوٹس
             '"SHARK"': شارک
+            '"SLOTH"': سلاتھ
             '"UNICORN"': یونیکارنز
           MOVE:
             '"next"': "(اگلا)"
@@ -118,6 +123,7 @@ ur:
             '"x"': افقی پوزیشن
             '"y"': عمودی پوزیشن
       Dancelab_changePropEachBy:
+        text: "{GROUP} {PROPERTY} کو بذریعہ {VAL} تبدیل کریں"
         options:
           GROUP:
             '"ALIEN"': خلائی مخلوق
@@ -130,6 +136,7 @@ ur:
             '"PINEAPPLE"': انناس
             '"ROBOT"': روبوٹس
             '"SHARK"': شارک
+            '"SLOTH"': سلاتھ
             '"UNICORN"': یونیکارنز
           PROPERTY:
             '"scale"': سائز
@@ -152,6 +159,7 @@ ur:
             '"PINEAPPLE"': انناس
             '"ROBOT"': روبوٹس
             '"SHARK"': شارک
+            '"SLOTH"': سلاتھ
             '"UNICORN"': یونیکارنز
           MOVE:
             '"rand"': "(بے ترتیبانہ)"
@@ -212,6 +220,8 @@ ur:
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_everyMeasuresRange:
+        text: 'ہر {N} پیمائشوں کو {START} کے بعد دہرائیں '
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -292,6 +302,7 @@ ur:
             "{x: 300, y: 200}": درست
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": بےترتیب
       Dancelab_jumpToEach:
+        text: "{GROUP} گروپ {LOCATION} پر جست لگائیں"
         options:
           GROUP:
             '"ALIEN"': خلائی مخلوق
@@ -304,6 +315,7 @@ ur:
             '"PINEAPPLE"': انناس
             '"ROBOT"': روبوٹس
             '"SHARK"': شارک
+            '"SLOTH"': سلاتھ
             '"UNICORN"': یونیکارنز
           LOCATION:
             "{x: 200, y: 100}": اوپر
@@ -325,6 +337,7 @@ ur:
             '"PINEAPPLE"': انناس
             '"ROBOT"': روبوٹس
             '"SHARK"': شارک
+            '"SLOTH"': سلاتھ
             '"UNICORN"': یونیکارنز
           FORMAT:
             '"border"': بارڈر
@@ -337,6 +350,7 @@ ur:
             '"plus"': جمع کریں
             '"random"': بےترتیب
       Dancelab_makeAnonymousDanceSprite:
+        text: ایک نیا {COSTUME} کہلانے والا {LOCATION} پر بنائیں
         options:
           COSTUME:
             '"ALIEN"': اجنبی(Alien)
@@ -346,6 +360,7 @@ ur:
             '"MOOSE"': موس بارہ سنگا
             '"PINEAPPLE"': پائن ایپل
             '"SHARK"': شارک
+            '"SLOTH"': سلاتھ
           LOCATION:
             "{x: 200, y: 100}": اوپر
             "{x: 200, y: 300}": زيريں
@@ -364,6 +379,7 @@ ur:
             '"MOOSE"': موس بارہ سنگا
             '"PINEAPPLE"': پائن ایپل
             '"SHARK"': شارک
+            '"SLOTH"': سلاتھ
           LOCATION:
             "{x: 200, y: 100}": اوپر
             "{x: 200, y: 300}": زيريں
@@ -406,14 +422,20 @@ ur:
             '"PINEAPPLE"': انناس
             '"ROBOT"': روبوٹس
             '"SHARK"': شارک
+            '"SLOTH"': سلاتھ
             '"UNICORN"': یونیکارنز
           LAYOUT:
             '"border"': بارڈر
             '"inner"': مربع کے اندر
+            '"diamond"': ہیرے
             '"circle"': دائرہ بنائیں
             '"grid"': گرڈ
+            '"top"': بالائی قطار
             '"row"': قطار
+            '"bottom"': زیریں قطار
+            '"left"': بایاں کالم
             '"column"': کالم
+            '"right"': دایاں کالم
             '"x"': متقاطع
             '"plus"': جمع کریں
             '"random"': بےترتیب
@@ -469,22 +491,29 @@ ur:
             '"none"': کوئی نہيں
             '"rand"': "(بے ترتیبانہ)"
             '"circles"': دائرے
+            '"quads"': زاویے
             '"color_cycle"': رنگ
             '"diamonds"': ہیرے
             '"disco_ball"': ڈسکو بال
             '"fireworks"': آتش بازی
+            '"flowers"': پھول
+            '"growing_stars"': ابھرتے ستارے
             '"swirl"': نیند آور
             '"kaleidoscope"': کیلیڈواسکوپ
             '"lasers"': لیزر ڈانس فلور
             '"splatter"': پینٹ سپلیٹر
             '"rainbow"': قوس قزح
+            '"ripples_random"': بے ترتیبانہ ریپلز
+            '"ripples"': ریپلز
             '"snowflakes"': برف
             '"text"': گانا کے نام
+            '"squiggles"': سکویگلز
             '"galaxy"': جگہ
             '"sparkles"': پھلجھڑیاں
             '"spiral"': مرغولہ
             '"disco"': مربعے
             '"stars"': ستارہ
+            '"music_wave"': لہریں
           PALETTE:
             '"rave"': ستارہ
             '"cool"': زبردست
@@ -518,6 +547,7 @@ ur:
             '"PINEAPPLE"': انناس
             '"ROBOT"': روبوٹس
             '"SHARK"': شارک
+            '"SLOTH"': سلاتھ
             '"UNICORN"': یونیکارنز
           SPEED:
             '1': عام
@@ -550,9 +580,12 @@ ur:
             '"none"': کوئی نہيں
             '"rand"': "(بے ترتیبانہ)"
             '"bubbles"': بُلبُلے
+            '"hearts_colorful"': رنگین دل
             '"confetti"': کاغذی لیریاں
+            '"emojis"': ایموجیز
             '"hearts_red"': دل
             '"music_notes"': میوزک نوٹس
+            '"paint_drip"': پینٹ ڈرپ
             '"pineapples"': انناس
             '"pizzas"': پیزا
             '"smiling_poop"': پیزاپوپ
@@ -561,6 +594,7 @@ ur:
             '"smile_face"': مسکراہٹیں
             '"spotlight"': اسپاٹ لائٹ
             '"color_lights"': اسٹیج کی روشنیاں
+            '"exploding_stars"': اسٹاربسٹ
             '"raining_tacos"': ٹیکوز
       Dancelab_setProp:
         text: "{SPRITE} {PROPERTY} کو {VAL} سیٹ کریں "
@@ -586,6 +620,7 @@ ur:
             '"PINEAPPLE"': انناس
             '"ROBOT"': روبوٹس
             '"SHARK"': شارک
+            '"SLOTH"': سلاتھ
             '"UNICORN"': یونیکارنز
           PROPERTY:
             '"scale"': سائز
@@ -607,6 +642,7 @@ ur:
             '"y"': عمودی پوزیشن
             '"tint"': رنگت
       Dancelab_setPropRandomEach:
+        text: "{GROUP} {PROPERTY} کو بے برتیبانہ بنائیں"
         options:
           GROUP:
             '"ALIEN"': خلائی مخلوق
@@ -619,6 +655,7 @@ ur:
             '"PINEAPPLE"': انناس
             '"ROBOT"': روبوٹس
             '"SHARK"': شارک
+            '"SLOTH"': سلاتھ
             '"UNICORN"': یونیکارنز
           PROPERTY:
             '"scale"': سائز
@@ -644,6 +681,7 @@ ur:
             '"PINEAPPLE"': انناس
             '"ROBOT"': روبوٹس
             '"SHARK"': شارک
+            '"SLOTH"': سلاتھ
             '"UNICORN"': یونیکارنز
       Dancelab_setTintEachInline:
         text: "{THIS} رنگت کو {VAL} پر سیٹ کریں"
@@ -659,6 +697,7 @@ ur:
             '"PINEAPPLE"': انناس
             '"ROBOT"': روبوٹس
             '"SHARK"': شارک
+            '"SLOTH"': سلاتھ
             '"UNICORN"': یونیکارنز
       Dancelab_setTintInline:
         text: "{SPRITE} رنگت کو {VAL} پر سیٹ کریں"
@@ -682,6 +721,7 @@ ur:
             '"PINEAPPLE"': انناس
             '"ROBOT"': روبوٹس
             '"SHARK"': شارک
+            '"SLOTH"': سلاتھ
             '"UNICORN"': یونیکارنز
           VISIBILITY:
             'true': مرئی
@@ -702,6 +742,7 @@ ur:
             '"mid"': مڈ
             '"treble"': آواز کا چَڑھاؤ
       Dancelab_startMappingEach:
+        text: "{GROUP} اس {PROPERTY} کو {RANGE} کے بعد شروع کرتا ہے"
         options:
           GROUP:
             '"ALIEN"': خلائی مخلوق
@@ -714,6 +755,7 @@ ur:
             '"PINEAPPLE"': انناس
             '"ROBOT"': روبوٹس
             '"SHARK"': شارک
+            '"SLOTH"': سلاتھ
             '"UNICORN"': یونیکارنز
           PROPERTY:
             '"scale"': سائز
@@ -744,6 +786,7 @@ ur:
             '"mid"': مڈ
             '"treble"': آواز کا چَڑھاؤ
       Dancelab_stopMappingEach:
+        text: "{GROUP} کو {PROPERTY} اس {RANGE} کے بعد روک دیتا ہے"
         options:
           GROUP:
             '"ALIEN"': خلائی مخلوق
@@ -756,6 +799,7 @@ ur:
             '"PINEAPPLE"': انناس
             '"ROBOT"': روبوٹس
             '"SHARK"': شارک
+            '"SLOTH"': سلاتھ
             '"UNICORN"': یونیکارنز
           PROPERTY:
             '"scale"': سائز
@@ -771,10 +815,33 @@ ur:
             '"mid"': مڈ
             '"treble"': آواز کا چَڑھاؤ
       Dancelab_translateStrings:
+        text: ترجمہ کریں {STRING}
         options:
           STRING:
+            '"music_wave"': لہریں
+            '"ripples"': ریپلز
+            '"ripples_random"': بے ترتیبانہ ریپلز
+            '"quads"': زاویے
+            '"flowers"': پھول
+            '"popsicles"': پوپسیکلز
+            '"squiggles"': سکویگلز
+            '"growing_stars"': ابھرتے ستارے
+            '"emojis"': ایموجیز
             '"hearts_colorful"': دل
+            '"paint_drio"': پینٹ ڈرپ
+            '"exploding_stars"': اسٹاربسٹ
+            '"row_top"': بالائی قطار
+            '"row_bottom"': زیریں قطار
+            '"column_left"': بایاں کالم
+            '"column_right"': دایاں کالم
             '"diamond"': ہیرے
+            '"mural"': دیوار
+            '"safari"': سفاری
+            '"network"': نیٹ ورک
+            '"highway"': ہائی وے
+            '"stream"': ندی
+            '"tile"': ٹائل
+            '"shadow"': سایہ
             '"s"': s
             '"t"': t
             '"u"': u
@@ -997,6 +1064,8 @@ ur:
             '"scale"': سائز
             '"rotation"': گردش
             '"direction"': حرکت کی سمت
+      Mikelab_groupChangeAnim:
+        text: "{SELECT} {COSTUME} کو {COSTUME2} میں تبدیل کریں"
       Mikelab_groupChangePropBy:
         options:
           PROPERTY:
@@ -1004,6 +1073,7 @@ ur:
             '"rotation"': گردش
             '"direction"': حرکت کی سمت
       Mikelab_groupCreateNewSprite:
+        text: ایک نیا {COSTUME} کہلانے والا {LOCATION} پر بنائیں
         options:
           LOCATION:
             "{x: 200, y: 100}": اوپر
