@@ -23,8 +23,10 @@
   social_hoc2019_dance: 'Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, and 34 more!'
 
   oceans_landing_title: 'AI for Oceans'
-  oceans_landing_description: 'Explore machine learning by teaching “A.I.” to recognize fish. #CSforGood'
-  oceans_landing_specs: 'English only | Ages 11+'
+  oceans_landing_description: 'Learn about machine learning and ethical use of AI.'
+  cs_for_good_hashtag: '#CSforGood'
+  oceans_landing_specs: 'English only | Grades 3rd+'
+  oceans_landing_explanation: "Computer science is about so much more than coding! Learn about AI, machine learning, training data, and bias, while exploring ethical issues and how AI can be used to address world problems. Enjoy Code.org's first step in a new journey to teach more about AI throughout our curriculum."
   oceans_landing_teacher_resources: 'Teacher Resources'
   oceans_landing_teacher_resources_desc: 'Lesson plans and activities to help you teach AI, machine learning, training data, and bias, while exploring ethical issues.'
   oceans_landing_resource_button: 'View Resources'
