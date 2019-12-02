@@ -129,14 +129,6 @@ class Homepage
           url: "/hourofcode/overview"
         }
       ]
-    elsif hoc_mode == "soon-hoc" && show_single_hero(request) == "oceans2019"
-      [
-        {
-          text: "homepage_action_text_try_it",
-          type: "cta_button_hollow_white",
-          url: "/hourofcode/overview"
-        }
-      ]
     elsif hoc_mode == "soon-hoc"
       [
         {
@@ -370,7 +362,7 @@ class Homepage
       {text: "homepage_hero_text_stat_students", classname: "desktop-feature", centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2019_dance.jpg"},
       {text: "homepage_hero_text_stat_students", classname: "mobile-feature", centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2019_dance_narrow.jpg"}
     ]
-    hero_oceans2019 = [{text: "homepage_hero_text_stat_students", centering: "0% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2019_oceans.png"}]
+    hero_oceans2019 = [{text: "homepage_hero_text_stat_students", centering: "0% 70%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2019_oceans.png"}]
 
     # Generate a random set of hero images alternating between non-celeb and celeb.
     heroes = get_heroes
