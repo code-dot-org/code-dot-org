@@ -1,4 +1,3 @@
----
 tr:
   data:
     block_categories:
@@ -14,7 +13,7 @@ tr:
       Default: Varsayılan
       Events: Olaylar
       Functions: Fonksiyonlar
-      'Functions ': Fonksiyonlar
+      'Functions ': 'Fonksiyonlar'
       Game/Score: Oyun/Skor
       Games/Score: Oyunlar/skor
       Groups: Gruplar
@@ -27,5 +26,5 @@ tr:
       Sprites: Hareketli Nesneler
       Text: yazı
       Variables: Değişkenler
-      'Variables ': Değişkenler
+      'Variables ': 'Değişkenler'
       World: Dünya

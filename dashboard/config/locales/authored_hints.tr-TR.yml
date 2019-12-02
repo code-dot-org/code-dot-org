@@ -2182,6 +2182,13 @@ tr-TR:
           **İsteğe Bağlı Görev**
 
           Şarkının farklı yerlerinde <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> etkinliklerinin altına yeni blok ekleyerek arka plan efektini değiştirin.
+      Dance_Party_05:
+        validation: |-
+          **Bu seviyeyi nasıl geçerim?**
+
+          -   Dansçınızın, seviye sona ermeden en az 4 farklı dans hareketi boyunca hareket etmesi gerekir.
+
+          _Bu seviye 12 ölçütten sonra biter._
       Dance_Party_06:
         validation: |-
           **Bu seviyeyi nasıl geçerim?**
