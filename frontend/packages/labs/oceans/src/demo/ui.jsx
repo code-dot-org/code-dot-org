@@ -749,13 +749,9 @@ ConfirmationDialog = Radium(ConfirmationDialog);
 
 let Loading = class Loading extends React.Component {
   render() {
-    const state = getState();
-
     return (
       <Body>
-        <div style={styles.loading}>
-          Loading...
-        </div>
+        <div style={styles.loading}>Loading...</div>
       </Body>
     );
   }
@@ -920,8 +916,7 @@ let Train = class Train extends React.Component {
             sound={'no'}
           >
             <FontAwesomeIcon icon={faBan} />
-            &nbsp;
-            &nbsp;
+            &nbsp; &nbsp;
             {noButtonText}
           </Button>
           <Button
@@ -933,8 +928,7 @@ let Train = class Train extends React.Component {
             sound={'yes'}
           >
             <FontAwesomeIcon icon={faCheck} />
-            &nbsp;
-            &nbsp;
+            &nbsp; &nbsp;
             {yesButtonText}
           </Button>
         </div>
@@ -1082,9 +1076,7 @@ let Predict = class Predict extends React.Component {
         {!state.isRunning && !state.isPaused && (
           <Button style={styles.continueButton} onClick={this.onRun}>
             <FontAwesomeIcon icon={faPlay} />
-            &nbsp;
-            &nbsp;
-            Run
+            &nbsp; &nbsp; Run
           </Button>
         )}
         {(state.isRunning || state.isPaused) && state.canSkipPredict && (
@@ -1588,10 +1580,13 @@ export default class UI extends React.Component {
   render() {
     const state = getState();
     const currentMode = getState().currentMode;
+    const isLoading = [Modes.Loading, Modes.IntermediateLoading].includes(
+      currentMode
+    );
 
     return (
       <div>
-        {currentMode === Modes.Loading && <Loading />}
+        {isLoading && <Loading />}
         {currentMode === Modes.Words && <Words />}
         {currentMode === Modes.Training && <Train />}
         {currentMode === Modes.Predicting && <Predict />}

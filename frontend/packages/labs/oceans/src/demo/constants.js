@@ -5,7 +5,8 @@ const constants = {
   fishCanvasHeight: 200,
   fishFrameSize: 210,
   defaultMoveTime: 1000,
-  maxPondFish: 20
+  maxPondFish: 20,
+  minLoadingTime: 2000
 };
 
 export default constants;
@@ -24,7 +25,8 @@ export const Modes = Object.freeze({
   Training: 2,
   Predicting: 3,
   Pond: 4,
-  Instructions: 5
+  Instructions: 5,
+  IntermediateLoading: 6
 });
 
 export const ClassType = Object.freeze({
