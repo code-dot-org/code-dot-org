@@ -6,7 +6,7 @@ const constants = {
   fishFrameSize: 210,
   defaultMoveTime: 1000,
   maxPondFish: 20,
-  minLoadingTime: 2000
+  minLoadingTime: 1500
 };
 
 export default constants;
