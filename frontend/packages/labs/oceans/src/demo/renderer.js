@@ -290,7 +290,7 @@ const getYForFish = (numFish, fishIdx, state, offsetX, predictedClassId) => {
         constants.canvasWidth / 2 - constants.fishCanvasWidth / 2;
       const screenX = getXForFish(numFish, fishIdx, offsetX);
       if (screenX > midScreenX) {
-        y += screenX - midScreenX;
+        y += 1.2 * (screenX - midScreenX);
       }
     }
 
