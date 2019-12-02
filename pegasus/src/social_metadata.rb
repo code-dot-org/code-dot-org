@@ -27,7 +27,7 @@ def get_social_metadata_for_page(request)
     dance_2019: {path: "/images/social-media/dance-social-2019.png", width: 1200, height: 630},
     hoc_thanks: {path: "/images/hourofcode-2015-video-thumbnail.png", width: 1440, height: 900},
     hoc_2019_social: {path: "/shared/images/social-media/hoc2019_social.png", width: 1200, height: 630},
-    oceans: {path: "images/social-media/oceans_social.png", width: 1200, height: 630}
+    oceans: {path: "/shared/images/social-media/oceans_social.png", width: 1200, height: 630}
   }
 
   # Important:
