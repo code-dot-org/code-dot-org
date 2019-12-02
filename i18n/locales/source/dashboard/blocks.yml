@@ -536,6 +536,7 @@ en:
             '"none"': None
             '"rand"': "(Random)"
             '"circles"': Circles
+            '"quads"': Angles
             '"color_cycle"': Colors
             '"diamonds"': Diamonds
             '"disco_ball"': Disco Ball

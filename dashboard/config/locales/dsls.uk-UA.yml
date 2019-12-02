@@ -1329,7 +1329,7 @@ uk-UA:
         questions:
         - {}
         answers:
-        - {}
+        - text: '4'
         - text: '12'
           correct: true
         - text: '15'
@@ -1338,7 +1338,7 @@ uk-UA:
         questions:
         - {}
         answers:
-        - {}
+        - text: '4'
         - text: '12'
           correct: true
         - text: '15'
@@ -1347,7 +1347,7 @@ uk-UA:
         questions:
         - {}
         answers:
-        - {}
+        - text: '4'
         - text: '12'
           correct: true
         - text: '15'
@@ -1584,24 +1584,27 @@ uk-UA:
         questions:
         - {}
         answers:
-        - {}
-        - correct: true
+        - text: '4'
+        - text: '8'
+          correct: true
         - text: '12'
         - text: Не знаю.
       courseD_multi_bee_nestedLoops9_predict2_2018:
         questions:
         - {}
         answers:
-        - {}
-        - correct: true
+        - text: '4'
+        - text: '8'
+          correct: true
         - text: '12'
         - text: Не знаю.
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         questions:
         - {}
         answers:
-        - {}
-        - correct: true
+        - text: '4'
+        - text: '8'
+          correct: true
         - text: '12'
         - text: Не знаю.
       courseD_multi_collector_debugging10_predict1:

@@ -1479,7 +1479,6 @@ th:
             Dance Party:
               name: งานเต้นรำ
         dance-extras:
-          title: สร้างโค้ดเต้นรำกันต่อไป
           description: ศึกษาต่อเนื่องจากขั้นพื้นฐานด้วยการใส่ไอเดียเพิ่มเติมให้กับโครงงาน
         coursef-2019:
           stages:
@@ -1831,7 +1830,6 @@ th:
             For Loops:
               name: การวนรอบ
         dance-extras-2019:
-          title: สร้างโค้ดเต้นรำกันต่อไป
           description: ศึกษาต่อเนื่องจากขั้นพื้นฐานด้วยการใส่ไอเดียเพิ่มเติมให้กับโครงงาน
         time4cs-control-unit-1:
           stages:

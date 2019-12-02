@@ -3980,3 +3980,95 @@ es:
     what_is_an_event:
       1:
         image: notas/que_es_un_evento.png
+    hoc_dance_warmup_2019:
+      1:
+        text: 'Hora de Codificar | Fiesta de baile: Calentamiento'
+      2:
+        text: "¡Hola! Mi nombre es Miral Kotb y soy bailarín, desarrollador de software
+          y creador de iLuminate."
+      4:
+        text: Durante la próxima hora, ¡comenzarás con la informática programando
+          tu propia fiesta de baile! Hemos reunido algunos éxitos musicales y un equipo
+          de grandes bailarines para que juegues.
+      5:
+        text: Utilizarás bloques de código para elegir diferentes bailarines, cambiar
+          sus movimientos de baile, hacer que respondan a la música y hacerlos interactivos.
+      6:
+        text: Verás que tu pantalla está dividida en tres partes principales. A la
+          izquierda está el espacio de juego. Aquí es donde aparecerán tus bailarines.
+      8:
+        text: El espacio a la derecha es el espacio de trabajo. Puede arrastrar bloques
+          fuera de la caja de herramientas y al espacio de trabajo para construir
+          su programa.
+      9:
+        text: Las instrucciones para cada nivel estarán aquí arriba en la parte superior
+          de la pantalla. Si necesita una pista, simplemente haga clic en la bombilla.
+      11:
+        text: También puedes cambiar dónde aparece el bailarín en tu espacio de juego
+          con esto.
+      12:
+        text: Sobre el espacio de juego hay un menú para elegir música. Hay un montón
+          de canciones para elegir, así que diviértete encontrando tus favoritas.
+          Debajo del espacio de juego está el botón de ejecución. Cuando presione
+          ejecutar, verá que los bailarines de su programa aparecen en el espacio
+          de reproducción y se reproducirá la música.
+    hoc_dance_events_2019:
+      1:
+        text: 'Hora de Codificar | Fiesta de baile: Eventos'
+      4:
+        text: Algunos ejemplos de eventos son esperar a un clic del ratón, un botón
+          de flecha o pulsar en la pantalla.
+    hoc_dance_measures_2019:
+      2:
+        text: Soy Aloe Blacc Soy cantante, compositor y animador. Creo que la informática
+          es realmente importante de aprender porque la informática es el futuro,
+          y creo que es importante que las personas controlen la tecnología que literalmente
+          controla sus vidas.
+      5:
+        text: Para que tus bailarines se suelten, necesitarás un bloque de evento
+          verde. Este bloque de eventos dice "después de 4 medidas".
+      6:
+        text: Si arrastra un bloque púrpura de "hacer para siempre", puede elegir
+          un baile para que lo haga su bailarín. Debido a que está bajo el bloque
+          de eventos "después de 4 medidas", su bailarín esperará cuatro compases
+          de la canción antes de comenzar su baile.
+      7:
+        text: Vigile el contador de medidas en la parte superior del área de visualización.
+      8:
+        text: Mire y escuche el evento que activará el código de baile. Y en el momento
+          justo, nuestro bailarín comienza a ir.
+    hoc_dance_properties_2019:
+      1:
+        text: 'Hora de codificar | Fiesta de baile: Propiedades'
+      2:
+        text: Mi nombre es Maria, soy estudiante de tercer año en la Universidad de
+          Washington y soy ingeniero de Amazon Future.
+      3:
+        text: Me encanta la informática porque incorpora la resolución de problemas
+          y el pensamiento crítico y después de dedicar horas de trabajo a algo, puedes
+          obtener algo realmente genial y gratificante.
+      5:
+        text: Cada movimiento de baile se compone de una serie de imágenes llamadas
+          cuadros. Cada cuadro es ligeramente diferente del anterior. Cuando se ejecuta
+          su programa, la computadora muestra un cuadro tras otro. Se muestran tan
+          rápido que parece que el bailarín se está moviendo. Este es el secreto detrás
+          de toda animación.
+      6:
+        text: No solo puedes cambiar los movimientos de tu bailarín, también puedes
+          cambiar las propiedades de un bailarín. Las propiedades describen cosas
+          como la posición del bailarín en la pantalla, el tamaño del bailarín y el
+          color del bailarín.
+    hoc_dance_congrats_2019:
+      1:
+        text: 'Hora de Codificar | Fiesta de Baile: Festejando!'
+      2:
+        text: "¡Felicidades! Acabas de aprender los conceptos básicos de la informática.
+          Ahora puedes usar estos bloques para crear una fiesta de baile de tu propio
+          diseño para compartir con tus amigos."
+      3:
+        text: Si miras en la caja de herramientas, encontrarás algunos bloques nuevos
+          que no has visto antes. Por ejemplo, puede usar el bloque de diseño para
+          organizar a los bailarines de diferentes maneras en la pantalla.
+      4:
+        text: Eche un vistazo e intente experimentar con estos nuevos bloques y características.
+          ¿Crearás un baile cuidadosamente coreografiado para tu canción favorita?

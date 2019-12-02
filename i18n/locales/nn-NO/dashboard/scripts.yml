@@ -2148,7 +2148,6 @@ nn:
             Dance Party:
               name: Dansefest
         dance-extras:
-          title: Fortsett å danse
           description: Fortsett etter den første timen med større prosjektideer.
         coursef-2019:
           description_short: Lær alle konspta i grunnleggande informatikk og skap din eigen kunst, historie eller spel.
@@ -2415,7 +2414,6 @@ nn:
             For Loops:
               name: For-løkker
         dance-extras-2019:
-          title: Fortsett å danse
           description: Fortsett etter den første timen med større prosjektideer.
         time4cs-control-unit-1:
           stages:

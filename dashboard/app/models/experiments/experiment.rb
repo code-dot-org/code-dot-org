@@ -65,6 +65,16 @@ class Experiment < ApplicationRecord
       name: 'denny-science-piloters',
       label: 'Denny Science Pilot',
       allow_joining_via_url: true
+    },
+    {
+      name: 'time4cs-control',
+      label: 'Broward Time4CS control group',
+      allow_joining_via_url: true
+    },
+    {
+      name: 'time4cs-experiment',
+      label: 'Broward Time4CS experiment group',
+      allow_joining_via_url: true
     }
   ]
 

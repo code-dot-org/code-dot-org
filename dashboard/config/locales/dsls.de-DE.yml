@@ -4,12 +4,16 @@ de-DE:
     dsls:
       2-3 Algorithms Multi 1:
         title: Multiple-Choice
+        content1: "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
         questions:
         - text: Wähle einen Algorithmus für das gezeigte Bild.
         answers:
         - text: Beginne mit einem Quadrat<br/>Setze ein Dreieck auf das Quadrat<br/>Setze
             ein Dreieck unter das Quadrat
-        - correct: true
+        - text: Beginne mit einem Quadrat<br/>Setze ein Dreieck rechts vom Quadrat<br/>Setze
+            ein Parallelogramm unter das Quadrat<br/>Setze ein Dreieck rechts vom
+            Parallelogramm
+          correct: true
         - text: Beginne mit einem Quadrat.<br/> Setze ein Parallelogramm über das
             Quadrat.<br/> Setze nun noch ein Dreieck rechts neben das Parallelogramm.
         - text: Beginne mit einem Quadrat.<br/> Setze ein Dreieck unter das Quadrat.
@@ -21,25 +25,28 @@ de-DE:
         questions:
         - text: Welches Bild folgt <em>nicht</em> diesem Algorithmus?
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a4.png"
       2-3 Big Event Match 1:
         title: Passend
+        content1: "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
         content2: Weise die Tastenkombination den richtigen Tanzbewegungen zu.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a4.png"
       2-3 Binary Match 1:
         title: Passend
+        content1: "/script_assets/2-3_images/unplugged/binary_1_q.png, 250"
         content2: Nutze den Schlüssel, um jedem Code einen Buchstaben zuzuweisen
         questions:
         - text: "<strong>N</strong>"
@@ -47,41 +54,46 @@ de-DE:
         - text: "<strong>P</strong>"
         - text: "<strong>Q</strong>"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a4.png"
       2-3 Conditionals Multi 1:
         title: Multiple-Choice
+        content1: "/script_assets/2-3_images/unplugged/conditionals_1_q.png"
         questions:
         - text: Welcher Kartensatz ist nach den Regeln des Spiels richtig ausgewertet?
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a4.png"
       2-3 Getting Loopy Multi 1:
         title: Multiple-Choice
+        content1: "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png"
         questions:
         - text: Wie kann man diese Sequenz mit Schleifen vereinfachen?
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a4.png"
       2-3 Graph Paper Match 1:
         title: Passend
         content1: Passe das Raster dem Programm an.
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
         answers:
         - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png"
         - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
       2-3 Graph Paper Multi 1:
         title: Multiple-Choice
+        content1: "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
         questions:
         - text: Welches Programm erzeugt dieses Bild?
         answers:
@@ -94,46 +106,54 @@ de-DE:
         content1: Weise die Puzzle den Blöcken zu.
         pre_title: Anweisungen
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png"
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a3.png"
       2-3 Maze Multi 2:
         title: Labyrinth Multiple-Choice
+        content1: "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500"
         questions:
         - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png"
       2-3 Relay Programming Multi 1:
         title: Multiple-Choice
+        content1: "/script_assets/2-3_images/unplugged/relay_programming_1_q.png"
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png"
+          correct: true
       2-3 Relay Programming Multi 2:
         title: Multiple-Choice
         questions:
         - text: Welche Bild-Programm-Kombination enthält keine Fehler?
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png"
+          correct: true
       2-3 artist debug multi 1:
+        content1: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
+          700"
         questions:
         - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
       2-3 artist functions multi 1:
         title: 'Der Künstler: Funktionen Multiple-Choice Eins'
         questions:
@@ -146,71 +166,83 @@ de-DE:
       2-3 artist loops match 1:
         content2: Weise die Schleife der Form zu.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png"
       2-3 artist loops multi 1:
         title: Künstler Schleifen Multiple-Choice
+        content1: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png,
+          500"
         questions:
         - text: Welche Form wird durch diese Schleife erzeugt?
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
       2-3 artist loops multi 2:
         title: Künstler Schleifen Multiple-Choice
+        content1: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png,
+          500"
         questions:
         - text: Welche Form wird durch dieses Programm erzeugt?
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
+          correct: true
       2-3 artist match 1:
         title: Künstler Übereinstimmung
         content1: Weise die Form den Bausteinen zu, die sie fertig zeichnen.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q4.png"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a4.png"
       2-3 bee conditionals multi 1:
         questions:
         - text: Welcher Vergleich unten ist wahr?
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png"
       2-3 bee conditionals multi 3:
+        content1: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png,
+          500"
         questions:
         - text: Wähle die besten Bausteine.
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png"
       2-3 bee loops multi 1:
         title: Biene Schleifen Multiple-Choice Eins
+        content1: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500"
         questions:
         - text: Welche Bausteine sammeln den gesamten Nektar?
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png"
       2-3 maze match 1:
         title: Labyrinth Übereinstimmung Eins
         content1: Weise die Puzzle den Blöcken zu.
@@ -224,13 +256,15 @@ de-DE:
         - {}
       2-3 maze multi 1:
         title: Multiple-Choice Labyrinth Eins
+        content1: "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500"
         questions:
         - text: Welche Gruppe von Bausteinen ist richtig?
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png"
       4-5 Algorithms Match 1:
         title: Passend
         content1: Weise die Schritte des Würfel-Rennspiels der Ordnung zu, in der
@@ -699,11 +733,16 @@ de-DE:
         - text: Die Bildadresse wird nicht als `src`-Attribut angegeben
         - text: Im Dateinamen ist ein Leerzeichen vorhanden
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: <img src="https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34
+            PM.png">
+        - text: <img src="https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01
+            PM.png">
+        - text: <img src="https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47
+            PM.png">
+        - text: <img src="https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40
+            PM.png">
+        - text: <img src="https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24
+            PM.png">
       CSD U2 lists match:
         questions:
         - {}
@@ -1160,6 +1199,97 @@ de-DE:
           <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
 
           </div>
+      Dance_Party_extras_intro_2019:
+        markdown: |
+          # Tanze weiter!
+
+          Für Teil 2 wirst du Dein eigenes Projekt erstellen. Es gibt hier keine Rätsel - stattdessen gibt es eine Reihe von Projekten, die verschiedene Wege aufzeigen, komplexere Tanzpartys zu gestalten.
+
+          Du kannst diese Stufen _in beliebiger Reihenfolge_ durchführen. Springe herum, um zu sehen, wie etwas in einer früheren Ebene gemacht wurde, oder kombiniere Konzepte zwischen den Projekten. Probiere alle aus, wähle Deine Favoriten und verbringe Deine Zeit damit, dieses Projekt zu ergänzen, um es zu Deinem eigenen zu machen.
+
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Weiter</a>
+
+          <div class="clearfix"></div>
+
+
+          <div style="float: left; margin: 10px">
+          <a href="2">
+          <h2>
+          Hin und Her
+          </h2>
+
+          <img src="https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="3">
+          <h2>
+          Mehr Interaktion
+          </h2>
+
+          <img src="https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif"></a>
+
+          </div>
+          <div style="float: left; margin: 10px">
+          <a href="4">
+          <h2>
+          In Formation bringen
+          </h2>
+
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="5">
+          <h2>
+          Wo sind sie hin?
+          </h2>
+
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="6">
+          <h2>
+          Tanz-Crews
+          </h2>
+
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="7">
+          <h2>
+          Viertel Noten
+          </h2>
+
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="8">
+          <h2>
+          Bass, Mitten, Höhen
+          </h2>
+
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="9">
+          <h2>
+          Beschleunigen und verlangsamen
+          </h2>
+
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
+
+          </div>
       DesigningForAccessibilityMarkdownLevel_2019:
         markdown: |
           # Entwerfen für Barrierefreiheit
@@ -1287,193 +1417,226 @@ de-DE:
           Baue Dein eigenes Internet im Klassenzimmer auf, nur mit Papier.
       K-1 Artist 1 Multi 1:
         title: Multiple-Choice
+        content1: "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500"
         questions:
         - text: Welche Bausteine lösen dieses Rätsel?
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/W-S-S.png"
+        - text: "/script_assets/k_1_images/artist_images/E-S-S.png"
+          correct: true
+        - text: "/script_assets/k_1_images/artist_images/S-E-E.png"
+        - text: "/script_assets/k_1_images/artist_images/E-S.png"
       K-1 Artist 1 Multi 2:
         title: Multiple-Choice
+        content1: "/script_assets/k_1_images/artist_images/square.png, 500"
         questions:
         - text: Welcher Baustein zeichnet das Quadrat?
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/N-E-S-W.png"
+          correct: true
+        - text: "/script_assets/k_1_images/artist_images/E-S-W-N.png"
+        - text: "/script_assets/k_1_images/artist_images/N-S-E-W.png"
+        - text: "/script_assets/k_1_images/artist_images/N-W-S-E.png"
       K-1 Artist 2 Match 2:
         title: Passend
         content2: Weise die Formen je nach Typ zu.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/small_circle.png"
+        - text: "/script_assets/k_1_images/artist_images/large_square.png"
+        - text: "/script_assets/k_1_images/artist_images/medium_rectangle.png"
+        - text: "/script_assets/k_1_images/artist_images/small_triangle.png"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/medium_circle.png"
+        - text: "/script_assets/k_1_images/artist_images/small_square.png"
+        - text: "/script_assets/k_1_images/artist_images/large_rectangle.png"
+        - text: "/script_assets/k_1_images/artist_images/large_triangle.png"
       K-1 Bee 1 Multi 1:
         title: Multiple-Choice
+        content1: "/script_assets/k_1_images/bee_images/1nectar+2nectar.png"
         questions:
         - text: Wie viele Portionen Nektar sind das?
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+          correct: true
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/4nectar.png"
       K-1 Bee 1 Multi 2:
         title: Multiple-Choice
+        content1: "/script_assets/k_1_images/bee_images/2nectar+2nectar.png"
         questions:
         - text: Wie viele Portionen Nektar sind das?
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/k_1_images/bee_images/nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/4nectar.png"
+          correct: true
       K-1 Bee Loops Match 1:
         title: Passend
         content2: Ordne die Blöcke zu
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/r4_gnectar.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+        - text: "/script_assets/k_1_images/bee_images/r5_ghoney.png"
+        - text: "/script_assets/k_1_images/move_blocks/r5_E.png"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/4_gnectar.png"
+        - text: "/script_assets/k_1_images/move_blocks/NNN.png"
+        - text: "/script_assets/k_1_images/bee_images/5_ghoney.png"
+        - text: "/script_assets/k_1_images/move_blocks/EEEEE.png"
       K-1 Big Event Match 1:
         title: Passend
+        content1: "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
         content2: Weise die Tastenkombination den richtigen Tanzbewegungen zu.
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
       K-1 Digital Footprint Multi 1:
         title: Multiple-Choice
+        content1: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png"
         questions:
         - text: Welches Tier hat den <strong>unsichersten</strong> digitalen Fußabdruck?
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png"
+          correct: true
       K-1 Getting Loopy Multi 1:
         title: Multiple-Choice
+        content1: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png"
         questions:
         - text: Wie kann man diese Sequenz mit Schleifen vereinfachen?
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png"
       K-1 Happy Maps Multi 1:
         title: Multiple-Choice
+        content1: "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
         questions:
         - text: Welcher Pfeil bringt den Flurb zum Schatz?
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/up.png"
+        - text: "/script_assets/k_1_images/unplugged_images/down.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/left.png"
+        - text: "/script_assets/k_1_images/unplugged_images/right.png"
       K-1 Keep it Private Multi 1:
         title: Multiple-Choice
         questions:
         - text: Welche Informationen sollte man <strong>nicht</strong> online teilen?
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png"
       K-1 Maze Debugging Multi 1:
         title: Multiple-Choice
+        content1: "/script_assets/k_1_images/maze_images/EESq.png, 700"
         questions:
         - text: Welche Wahl sollte der letzte Baustein sein?
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/N.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/S.png"
+        - text: "/script_assets/k_1_images/move_blocks/E.png"
+        - text: "/script_assets/k_1_images/move_blocks/W.png"
       K-1 Maze Loops Multi 1:
         title: Multiple-Choice
+        content1: "/script_assets/k_1_images/move_blocks/NNNequals.png, 300"
         questions:
         - text: Welcher Wiederhole-Baustein ist derselbe?
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/r3_NN.png"
+        - text: "/script_assets/k_1_images/move_blocks/r4_N.png"
       K-1 Maze Loops Multi 2:
         title: Multiple-Choice
+        content1: "/script_assets/k_1_images/move_blocks/SESESEequals.png, 240"
         questions:
         - text: Wähle den richtigen Wiederhole-Baustein.
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/k_1_images/move_blocks/r3_S.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_ES.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_SE.png"
+          correct: true
       K-1 Maze Match 1:
         title: Passend
         content2: Ordne die Puzzle den Blöcken zu
         pre_title: Anweisungen
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/maze_images/maze_EN.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_ENE.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_WW.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_WSS.png"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/EN.png"
+        - text: "/script_assets/k_1_images/move_blocks/ENE.png"
+        - text: "/script_assets/k_1_images/move_blocks/WW.png"
+        - text: "/script_assets/k_1_images/move_blocks/WSS.png"
       K-1 Maze Multiple Choice 2:
         title: Labyrinth
+        content1: "/script_assets/k_1_images/maze_images/maze_WS.png, 500"
         questions:
         - text: Welche Antwort löst das Problem?
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/EN.png"
+        - text: "/script_assets/k_1_images/move_blocks/ES.png"
+        - text: "/script_assets/k_1_images/move_blocks/WS.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/WN.png"
       K-1 Move It Multi 1:
         title: Multiple-Choice
+        content1: "/script_assets/k_1_images/unplugged_images/move_it_1_q.png"
         questions:
         - text: Welcher Algorithmus bringt den Flurb zu den Blumen?
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/rightright.png"
+        - text: "/script_assets/k_1_images/unplugged_images/leftleft.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/upleft.png"
+        - text: "/script_assets/k_1_images/unplugged_images/leftdown.png"
       K-1 Plant a Seed Multi 1:
         title: Multiple-Choice
+        content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png"
         questions:
         - text: Welcher Schritt gehört an den Anfang dieses Algorithmus?
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/poke-hole.png"
+        - text: "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png"
+        - text: "/script_assets/k_1_images/unplugged_images/dirty-teeth.png"
+          correct: true
       K-1 Plant a Seed Multi 2:
         title: Multiple-Choice
+        content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png"
         questions:
         - text: Welcher Schritt sollte die Lücke in diesem Algorithmus füllen?
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/brush-teeth.png"
+        - text: "/script_assets/k_1_images/unplugged_images/cover-seed.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/water-pot.png"
       K-1 Word Search Multi 1:
         title: Multiple-Choice
+        content1: "/script_assets/k_1_images/search_images/move.png, 450"
         questions:
         - text: Welche Bausteine schreiben "MOVE" (bewegen)?
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/EEES.png"
+        - text: "/script_assets/k_1_images/move_blocks/EESS.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/ESSS.png"
       K-1 Word Search Multi 3:
         title: Multiple-Choice
+        content1: "/script_assets/k_1_images/search_images/square.png, 700"
         questions:
         - text: Welches Wort wird geschrieben?
         answers:
@@ -1868,7 +2031,8 @@ de-DE:
           feedback: Falsch. Der Künstler zeichnet ein Quadrat.
         - text: Der Künstler wird eine einzelne Linie zeichnen.
           feedback: Falsch. Der Künstler zeichnet ein Quadrat.
-        - correct: true
+        - text: Der Zeichner zeichnet ein Quadrat.
+          correct: true
           feedback: Richtig!
         - text: Ich weiß es nicht.
           feedback: Der Künstler zeichnet ein Quadrat.
@@ -1881,7 +2045,8 @@ de-DE:
           feedback: Falsch. Der Künstler zeichnet ein Quadrat.
         - text: Der Künstler wird eine einzelne Linie zeichnen.
           feedback: Falsch. Der Künstler zeichnet ein Quadrat.
-        - correct: true
+        - text: Der Zeichner zeichnet ein Quadrat.
+          correct: true
           feedback: Richtig!
         - text: Ich weiß es nicht.
           feedback: Der Künstler zeichnet ein Quadrat.
@@ -2344,8 +2509,8 @@ de-DE:
         questions:
         - {}
         answers:
-        - {}
-        - {}
+        - feedback: Falsch. Es gibt hier keinen Code für die Auswahl des Kürbisses.
+        - text: Der Erntemaschine wird keine Pflanze auf dem aktuellen Weg ernten.
         - correct: true
           feedback: Richtig!
         - text: Ich weiß es nicht.
@@ -2353,8 +2518,8 @@ de-DE:
         questions:
         - {}
         answers:
-        - {}
-        - {}
+        - feedback: Falsch. Es gibt hier keinen Code für die Auswahl des Kürbisses.
+        - text: Der Erntemaschine wird keine Pflanze auf dem aktuellen Weg ernten.
         - correct: true
           feedback: Richtig!
         - text: Ich weiß es nicht.
@@ -2436,18 +2601,26 @@ de-DE:
         answers:
         - correct: true
           feedback: Richtig!
-        - {}
-        - {}
+        - feedback: Falsch. Der Zombie wird den richtigen Weg gehen und am Ende für
+            immer hin und her gehen.
+        - feedback: Falsch. Der Zombie wird den richtigen Weg gehen und am Ende für
+            immer hin und her gehen.
         - text: Ich weiß es nicht.
+          feedback: In diesem Code wird der Zombie den richtigen Weg gehen und am
+            Ende für immer hin und her gehen.
       courseD_multi_maze_until10_predict2_2018_2019:
         questions:
         - {}
         answers:
         - correct: true
           feedback: Richtig!
-        - {}
-        - {}
+        - feedback: Falsch. Der Zombie wird den richtigen Weg gehen und am Ende für
+            immer hin und her gehen.
+        - feedback: Falsch. Der Zombie wird den richtigen Weg gehen und am Ende für
+            immer hin und her gehen.
         - text: Ich weiß es nicht.
+          feedback: In diesem Code wird der Zombie den richtigen Weg gehen und am
+            Ende für immer hin und her gehen.
       courseD_multi_maze_until2_predict1:
         questions:
         - {}
@@ -2788,7 +2961,8 @@ de-DE:
             ist, und das verursacht einen Fehler.
       grade2_multi_collector_A_predict1_2018:
         questions:
-        - {}
+        - text: Sieh dir diesen Code genau an. Was wird deiner Meinung nach passieren,
+            wenn das Programm läuft?
         answers:
         - text: Mit diesem Code wird Laurel 4 Schätze einsammeln.
           feedback: Falsch. Laurel versucht Schätze einzusammeln an Stellen, wo kein
@@ -2805,7 +2979,8 @@ de-DE:
             ist, und das verursacht einen Fehler.
       grade2_multi_collector_A_predict1_2018_2019:
         questions:
-        - {}
+        - text: Sieh dir diesen Code genau an. Was wird deiner Meinung nach passieren,
+            wenn das Programm läuft?
         answers:
         - text: Mit diesem Code wird Laurel 4 Schätze einsammeln.
           feedback: Falsch. Laurel versucht Schätze einzusammeln an Stellen, wo kein

@@ -1,5 +1,26 @@
 {
   "errorLoadingAnimation": "好像是在加載動畫“{animationName}”時遇到了問題。確保互聯網連接良好，然後嘗試重新加載頁面。如果問題仍然存在，則可能是該動畫已經損壞。在此情況下，你可能需要通過刪除該動畫來繼續。",
   "reinfFeedbackMsg": "大功告成！ 點擊“繼續”進入下一個關卡。",
-  "shareGame": "分享你的遊戲："
+  "shareGame": "分享你的遊戲：",
+  "spritelabFeedbackCreateFishWithBehavior": "需要製作出至少一個魚精靈並給予它行為動作。",
+  "spritelabFeedbackMoveFishLeftRight": "你的魚精靈需要能夠向左或向右移動。嘗試更改它的行為動作。",
+  "spritelabFeedbackChangeBackgroundColor": "你需要將背景更改為除了白色以外的顏色。",
+  "spritelabFeedbackCreateTwoSprites": "你需要精確地製作出兩個精靈來。",
+  "spritelabFeedbackTwoSpritesWithCostumes": "你的這兩個精靈需要身著不同的服裝。",
+  "spritelabFeedbackTwoSpritesWithCostumesAndBehaviors": "你需要製作出兩個身著不同服裝的精靈，而且每個精靈都有自己的行為動作。",
+  "spritelabFeedbackClickSprite": "一定要在按下`Run`後點擊你的精靈。",
+  "spritelabFeedbackUseSpinningBehavior": "你的精靈需要能夠開始旋轉。嘗試更改它的行為動作。",
+  "spritelabFeedbackPinkAlienBehavior": "你的粉紅色外星精靈在啟動時並未表現出任何行為動作。",
+  "spritelabFeedbackCreateThreeAliens": "你需要製作出一個藍色外星人、一個粉色外星人以及一個黃色外星人。",
+  "spritelabFeedbackAliensNotInLine": "你需要將三個外星精靈排列成一條水平線 (在50像素以內)。",
+  "spritelabFeedbackYellowAlienBehavior": "黃色外星人沒有啟動它的行為動作。",
+  "spritelabFeedbackNoAlienColor": "至少有一個外星人沒有變色。",
+  "spritelabFeedbackNeedAlienStopBehavior": "你的外星精靈需要停止所有行為動作。",
+  "spritelabFeedbackBlueAlienBehavior": "你的藍色外星人需要啟動一種新的行為動作。",
+  "spritelabFeedbackUseCostume": "你需要至少使用一件服裝。",
+  "spritelabFeedbackThreeSpritesWithCostumes": "你需要製作出三個身穿不同服裝的精靈。",
+  "spritelabFeedbackMoveUpNotDown": "你的精靈需要向上  (北) 而不是向下 (南) 移動。",
+  "spritelabFeedbackRobotFasterThanRover": "機器人在漫遊者之前到達了屏幕的右側。",
+  "spritelabFeedbackDifferentStarRotation": "兩個身穿星星裝的精靈需要具備相同的旋轉次數。",
+  "spritelabFeedbackAstronautMoveToCorner": "太空精靈需要能夠移動到四個角落之中的一角。"
 }

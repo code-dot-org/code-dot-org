@@ -1164,3 +1164,15 @@ pl:
     hoc_dance_events:
       1:
         text: 'Godzina Kodowania | Potańcówka: Zdarzenia'
+    hoc_dance_warmup_2019:
+      1:
+        text: 'Godzina Kodowania | Potańcówka: Rozgrzewka'
+      2:
+        text: Cześć! Nazywam się Miral Kotb i jestem tancerzem, programistą i twórcą
+          iLuminate.
+    hoc_dance_events_2019:
+      1:
+        text: 'Godzina Kodowania | Potańcówka: Zdarzenia'
+      4:
+        text: 'Przykładowe zdarzenia oczekują na: kliknięcie myszy, naciśnięcie przycisku
+          strzałki lub dotknięcie ekranu.'

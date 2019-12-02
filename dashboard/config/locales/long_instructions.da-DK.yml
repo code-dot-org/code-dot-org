@@ -42,6 +42,44 @@ da-DK:
         at ændre, den første "hop baglæns" fra 100 til 50 (halvt så langt) - hvor
         langt bør kunstneren nu gå i den anden "hop baglæns"?
       4-5 Nested Loops 9: Tegn tænderne i alligatorens mund!
+      AppLab Intro 7 - Change Screen Color: "<div style=\"float:right\">\n\t<img src=\"https://images.code.org/bf9b1fb57751fa90c9b786339914ad70-image-1508521068798.34.54
+        AM.png\" style=\"height:150px\"> \n</div>\n\n**Mål:** Skift skærmfarven til
+        grøn. \n\n**Hvordan?** Træk en `setProperty()` blok over. Brug dropdown pilen
+        for at indstille skærmens farve `\"background-color\"` til`\"green\"`. Tryk
+        på \"Køre\".\n\n**Hjælp? Klik her:** ![expandable](https://images.code.org/3b5e70522b02867a1df1d5b5e481785e-image-1511279858395.gif)"
+      AppLab Intro 7 - Change Text 2: |-
+        <div style="float:right">
+        <img src="https://images.code.org/39ead723fbd2b047aa2d1e401cbfec8a-image-1506545619076.34.29 PM.png" style="height:200px;">
+        </div>
+
+        **Mål:** Gør teksten større og blå.
+
+        **Hvordan?**  Du skal bruge to linjer kode. Giv `"label1"` en `"font-size"` på `80` og`"text-color"` som `"blue"`.
+
+        **Hjælp? Klik her:** ![expandable](https://images.code.org/2d5d46a03082af3b01847aad6602e2ea-image-1511280140482.gif)
+      AppLab Intro 7 - Full Text: "<div style=\"float:right\">\n<img src=\"https://images.code.org/1e81d5bcdd69172f4127de55d045225f-image-1507565161167.05.19
+        AM.png\" style=\"height:200px\">\n</div>\n\n**Mål:** Opret kapperne `\"red\"`
+        og `\"blue\"`. Ændr derefter teksten i det store orange flet.\n\n**Hvordan?**
+        \n\n-   Husk at du kan føre musepilen hen over et element, for at se elementets
+        `\"id\"`.\n-   Indstil knappernes `\"background-color\"` til `\"red\"` og
+        `\"blue\"`.\n-   Sæt `\"text\"` indstillinger for feltet, til den tekst som
+        du ønsker, f.eks: `\"Velkommen til min app!\"`.\n\n**Hjælp? Klik her:** ![expandable](https://images.code.org/4bf99e7352e7c17a5bf73ced80171f6a-image-1511280628092.gif)"
+      AppLab Intro 7 - onEvent intro: |-
+        <img src="https://images.code.org/3d8c8487ea669563d3401c0009cd9462-image-1511281194897.gif" style="float:right;height:200px">
+
+        **Mål:** Skærmen skal i begyndelsen være blå. Tilføj kode, så den skifter til grøn ved tryk på "Green-ify" knappen.
+
+        **Hvordan?** Tilføj kode inden i `onEvent()` som ændre skærmens `"background-color"` til `"green"`.
+
+        **Hjælp? Klik her:** ![expandable](https://images.code.org/5ddf6b129bc04b79839b3661ccef788b-image-1511281012076.gif)
+      AppLab Intro 7 - onEvent twoButtons: |-
+        <img src="https://images.code.org/158c9258bfff18c2177440f201446c47-image-1507566793890.gif" style="float:right;height:200px">
+
+        **Mål:** Færdiggør denne lommelygte app. "On" knappen kan allerede få skærmen til at blive hvid. Tryk på Kør og prøv. Skriv nu koden til "Off" knappen, så skærmen skifter til sort igen.
+
+        **Hvordan?** Tilføj kode i den tomme `onEvent()` som sætter `"background-color"` til `"black"` og `"text-color"` for label1 til `"white"`.
+
+        **Hjælp? Klik her:** ![expandable](https://images.code.org/020b1d9b465aaf35967a528a92961c13-image-1511281772276.gif)
       CourseE_HOC 2018 Level_1: Du har brug for forsyninger til rejsen. Indsaml en
         **båd** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
         fra **kisten** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
@@ -79,7 +117,7 @@ da-DK:
       Dance_2019_02: |-
         Blokken <xml><block type="Dancelab_whenKey" block-text="when up pressed"></block></xml> giver dig mulighed for at køre kode, når pil trykkes op. Brug blokken <xml><block type="Dancelab_doMoveEachLR" block-text="do once"><title name="GROUP">"CAT"</title><title name="MOVE">MOVES.XClapSide</title><title name="DIR">-1</title></block></xml> til at få danseren til at klappe, når du trykker op, eller prøv en anden bevægelse!
 
-        \_Sørg for at trykke på din pil op eller ![](<https://images.code.org/419e704e6841c0b696016bf5029b8cb9-image-1571864825506.06.45 PM.png>) efter at have klikket på knappen Kør!
+        \_Sørg for at trykke på din pil op eller ![](<https://images.code.org/419e704e6841c0b696016bf5029b8cb9-image-1571864825506.06.45 PM.png>) efter at have klikket på knappen Kør
       Dance_2019_03: Det er tid til at få danset! Programmér hver danser til at bevæge
         sig, når du trykker på forskellige taster. Vælg dit foretrukne træk for hver
         danser, eller indstil det til `(Tilfældig)` for at opnå noget helt uforudsigeligt!
@@ -90,6 +128,10 @@ da-DK:
         .
 
         **Handlinger** bruges til at tælle takten i musikken. I denne tutorial er en handling fire takter lang.
+      Dance_2019_05: "_Nu skal vi lave rytmen!_ \n\nTilføj <xml><block type=\"Dancelab_atTimestamp\"><title
+        name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml>
+        blokken til dit arbejdsområde. Få danseren til at begynde et nyt move efter
+        6 takter."
       Dance_2019_06: "Brug denne nye blok til at oprette en gruppe mindre backup-dansere
         omkring en solodanser i midten. \n  <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\">\n
         \   <title name=\"N\">???</title>\n    <title name=\"COSTUME\" config=\"&quot;BEAR&quot;,
@@ -97,9 +139,9 @@ da-DK:
         &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title>\n    <title name=\"LAYOUT\">\"circle\"</title>\n
         \ </block></xml>\nNu kan du oprette en gruppe dansere på én gang!"
       Dance_2019_07: |-
-        Hver danser har et sæt _egenskaber_, der styrer, hvordan det ser ud.
+        Hver danser har forskellige indstillinger, som styrer hvordan de ser ud.
 
-        Du kan få det til at se ud som om en danser er tættere eller længere væk ved at ændre størrelsen. Skift størrelsen på en gruppe dansere efter, at musikken starter.
+        Brug <xml><block type="Dancelab_setPropEach" block-text="the set block"><title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title><title name="PROPERTY">"scale"</title><title name="VAL">???</title></block></xml> under den grønne blok til få danseren til at komme nærmere eller rykke bag ud.
       Dance_2019_08: Dansere har en ”farvenuance”-egenskab, der kan tilføje et lag
         farve. Prøv at ændre farven for en af dine dansere (eller en hel gruppe)!
       Dance_2019_09: |-
@@ -110,6 +152,41 @@ da-DK:
         De andre nye blokke i din værktøjskasse giver dig mulighed for gradvist (eller tilfældigt!) at ændre dansernes egenskaber over tid.
 
         _Vær kreativ og hav det sjovt!_
+      Dance_Party_02: |-
+        Lad os få denne elg til at danse
+
+        Træk blokken <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> ind på. Sæt den under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> blokken. Din danser skal begynde et nyt move efter 4 takter.
+
+        **Takter** bliver brugt til at måle tiden i musik. I denne vejledning er en takt på fire slag.
+      Dance_Party_03: "_Nu skal vi lave rytmen!_ \n\nTilføj <xml><block type=\"Dancelab_atTimestamp\"><title
+        name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml>
+        blokken til dit arbejdsområde. Få danseren til at begynde et nyt move efter
+        6 takter."
+      Dance_Party_11: |-
+        Blokken <xml><block type="Dancelab_whenKey"></block></xml> gør at du kan køre koden når du trykker på pil op.
+
+        Du kan ændre dansetrinene, ændre danserenes egenskaber, eller gøre et hurtigt dansetrin én gang. Vær kreativ og kig efter nye blokke!
+      Dance_Party_11_5: |-
+        Kig på denne blok:
+
+        <xml>
+          <block type="Dancelab_makeNewDanceSpriteGroup">
+            <title name="N">6</title>
+            <title name="COSTUME">"DUCK"</title>
+            <title name="LAYOUT">"circle"</title>
+          </block></xml>
+
+        Nu kan du oprette en masse dansere på en gang!
+
+        Prøv at bruge nogle af "alle ænderne" -blokkene til at skrive koden, som vil få alle ænderne til at danse sammen.
+      Dance_Party_extras_alternate_2019: |-
+        # Lad os stille op i formation!
+
+        Tjek denne dans, der bruger blokken [blockly block][0] til at ændre backup-dansernes formation under hele dansen. Prøv en af disse ideer for at udvide den:
+
+        -   Opret en anden gruppe dansere i et andet layout
+        -   Skift layout, når der trykkes på en tast
+        -   Skift en egenskab, når danserne skifter formation
       Dance_Party_extras_battle: |-
         # Dansegrupper
 
@@ -136,8 +213,12 @@ da-DK:
         \*Eksperimentér med andre noder (såsom 0,5 for en halvnode eller 0,125 for en ottendedelsnode).
         \*Tilføj nogle 'eftertakt'-hændelser.
         \*Skift takter ud med sekunder, og prøv at time dine danse på den måde.
+      Dance_Party_extras_every_beat_2019: |-
+        # Speed op, sæt farten ned
+
+        Denne sidste dans bruger blokken [blockly block][0] til at kontrollere, hvor hurtigt hver danser bevæger sig. Prøv at eksperimentere med forskellige hastigheder på forskellige punkter i sangen. Du er velkommen til at fortsætte med at flikke rundt på denne dans, eller vende tilbage til nogen af de tidligere danse for at gøre dem endnu mere cool.
       Dance_Party_extras_layout: |-
-        # Lad os tage stilling!
+        # Lad os tage opstilling!
 
         Tjek denne dans, der bruger blokken 'layout' til at ændre baggrundsdansernes stilling igennem dansen. Prøv en af disse ideer til at udvidde projektet:
 
@@ -145,13 +226,23 @@ da-DK:
         \*Skift layout, når der trykkes på en tast
         \*Skift en egenskab, når danserne ændrer stilling
       Dance_Party_extras_layout_2019: |-
-        # Lad os stille op i formation!
+        # Let's Get in Formation!
 
-        Tjek denne dans, der bruger blokken <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> til at ændre backup-dansernes formation under hele dansen. Prøv en af disse ideer for at udvide den:
+        Tjek denne dans, der bruger blokken [blockly block][0] til at ændre baggrundsdansernes stilling igennem dansen. Prøv en af disse ideer til at udvidde projektet:
 
-        -   Opret en anden gruppe dansere i et andet layout
-        -   Skift layout, når der trykkes på en tast
-        -   Skift en egenskab, når danserne skifter formation
+        # Lad os tage opstilling!
+
+        \*Opret en anden gruppe dansere i et andet layout
+        \*Skift layout, når der trykkes på en tast
+        \*Skift en egenskab, når danserne ændrer stilling
+      Dance_Party_extras_mixed_2019: |-
+        # Flere knapper
+
+        I denne dans kan du kontrollere dansernes indstillinger i 'real time' når de danser automatisk. Prøv at ændre indstillinger ved at trykke på knapperne.
+        Du kan for eksempel:
+
+        -   Tilfældig tone af danseren ved at trykke på 'ned'
+        -   Tilføje en gruppe dansere, med tilfældigt udseende, ved at trykke på 'mellemrum'.
       Dance_Party_extras_on_beat: |-
         # Lav, medio og høj
 
@@ -167,7 +258,7 @@ da-DK:
       Dance_Party_extras_speed_2019: |-
         # Speed op, sæt farten ned
 
-        Denne sidste dans bruger blokken <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> til at kontrollere, hvor hurtigt hver danser bevæger sig. Prøv at eksperimentere med forskellige hastigheder på forskellige punkter i sangen. Du er velkommen til at fortsætte med at flikke rundt på denne dans, eller vende tilbage til nogen af de tidligere danse for at gøre dem endnu mere cool.
+        Denne sidste dans bruger blokken [blockly block][0] til at kontrollere, hvor hurtigt hver danser bevæger sig. Prøv at eksperimentere med forskellige hastigheder på forskellige punkter i sangen. Du er velkommen til at fortsætte med at flikke rundt på denne dans, eller vende tilbage til nogen af de tidligere danse for at gøre dem endnu mere cool.
       Dance_Party_extras_visible: |-
         # Hvor forsvandt de hen?
 
@@ -299,6 +390,10 @@ da-DK:
         til fårene.
       Overworld Move to Sheep_2019: Tilføje en "flyt fremad"-blok mere for at komme
         hen til fårene.
+      'Widget: Text Compression': Kig efter mønstre (gentagede ord eller vendinger)
+        i teksten. Tilføj det mønster, som du finder til ordlisten til højre. Når
+        du skriver ordet eller vendingen ind i ordlisten, vil et symbol for dette
+        blive indsat i teksten i stedet for 'mønstret'.
       course2_maze_programming_challenge1: '"Grisen gemmer sig! Kan du hjælpe mig
         med at finde vej?"'
       course4_artist_fwp_challenge1: Prøv at køre dette program, og foretag ændringer

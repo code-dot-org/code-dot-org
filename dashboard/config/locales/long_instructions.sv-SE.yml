@@ -151,10 +151,6 @@ sv-SE:
             <title name="COSTUME" config="&quot;BEAR&quot;, &quot;CAT&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title>
             <title name="LAYOUT">"circle"</title>
           </block></xml>Nu kan du skapa många dansare på en gång!
-      Dance_2019_07: Varje dansare har ett set med _egenskaper_ som avgör hur de ser
-        ut. Du kan få det att se ut som att en dansare är närmre eller längre bort
-        genom att ändra deras storlek. Ändra storleken på en grupp dansare någon gång
-        efter att musiken har börjat.
       Dance_2019_08: Dansare har en ”färgtons”-egenskap som kan lägga till färg. Prova
         att ändra färgton på en av dina dansare (eller en hel grupp)!
       Dance_2019_09: Det här är en särskild sorts händelse som utlöses upprepade gånger.<xml><block
@@ -231,6 +227,11 @@ sv-SE:
         vänsterpilen. Gör så att roboten ”faller” när du trycker på högerpilen.
       Dance_Party_12: Dags att svänga på höfterna! Skapa en egen dans att dela med
         dina vänner.
+      Dance_Party_extras_alternate_2019: "# Det är dags för uppställning!Kolla in
+        den här dansen som använder [blockly block][0]-blocket för att förändra bakgrundsdansarnas
+        formation under dansen. Prova en av de här idéerna för att utveckla den:-
+        \  Skapa en andra grupp dansare i en annan gruppering-   Ändra gruppering
+        med en knapptryckning-   Ändra en egenskap när dansarna ändrar formation"
       Dance_Party_extras_battle: |-
         # Dansgrupper
 
@@ -257,6 +258,11 @@ sv-SE:
         -   Experimentera med andra notlängder (som 0,5 för en halvnot eller 0,125 för en åttondelsnot).
         -   Lägg till några händelser med ”efteråtgärder”.
         -   Byt ”åtgärder” mot ”sekunder” och försök att på så sätt tajma dina danser.
+      Dance_Party_extras_every_beat_2019: "# Öka takten, sakta nerI den här sista
+        dansen använder vi [blockly block][0]-blocket för att kontrollera hur snabbt
+        varje dansare rör sig. Experimentera med olika hastigheter vid olika tillfällen
+        i sången. Knåpa gärna vidare på den här dansen eller gå tillbaka till någon
+        av de tidigare danserna och gör dom ännu coolare."
       Dance_Party_extras_layout: |-
         # Uppställning!
 
@@ -265,13 +271,6 @@ sv-SE:
         -   Skapa en andra grupp av dansare i en annan utformning
         -   Ändra utformning när en tangent trycks in
         -   Ändra en egenskap när dansarna ändrar formation
-      Dance_Party_extras_layout_2019: '# Det är dags för uppställning!Kolla in den
-        här dansen som använder <xml><block type="Dancelab_layoutSprites" block-text="layout"><title
-        name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml>-blocket
-        för att förändra bakgrundsdansarnas formation under dansen. Prova en av de
-        här idéerna för att utveckla den:-   Skapa en andra grupp dansare i en annan
-        gruppering-   Ändra gruppering med en knapptryckning-   Ändra en egenskap
-        när dansarna ändrar formation'
       Dance_Party_extras_on_beat: |-
         # Bas, mellanregister och diskant
 
@@ -284,12 +283,11 @@ sv-SE:
         # Öka takten, sakta ner
 
         Denna sista dans använder blocket ”ange hastighet” för att styra hur snabbt varje dansare rör sig. Testa att experimentera med olika hastigheter under olika tidpunkter i låten. Fortsätt gärna mixtra med denna dans eller återgå till någon av de tidigare danserna för att göra dem ännu coolare.
-      Dance_Party_extras_speed_2019: '# Öka takten, sakta nerI den här sista dansen
-        använder vi <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title
-        name="SPEED">2</title></block></xml>-blocket för att kontrollera hur snabbt
-        varje dansare rör sig. Experimentera med olika hastigheter vid olika tillfällen
+      Dance_Party_extras_speed_2019: "# Öka takten, sakta nerI den här sista dansen
+        använder vi [blockly block][0]-blocket för att kontrollera hur snabbt varje
+        dansare rör sig. Experimentera med olika hastigheter vid olika tillfällen
         i sången. Knåpa gärna vidare på den här dansen eller gå tillbaka till någon
-        av de tidigare danserna och gör dom ännu coolare.'
+        av de tidigare danserna och gör dom ännu coolare."
       Dance_Party_extras_visible: |-
         # Vart tog de vägen?
 

@@ -1459,7 +1459,6 @@ ar:
             Dance Party:
               name: حفلة رقص
         dance-extras:
-          title: استمر في الرقص
           description: تجاوز الساعة الأولى بأفكار مشاريع موسعة.
         coursef-2019:
           stages:
@@ -1689,7 +1688,6 @@ ar:
             For Loops:
               name: للحلقات
         dance-extras-2019:
-          title: استمر في الرقص
           description: تجاوز الساعة الأولى بأفكار مشاريع موسعة.
         time4cs-control-unit-1:
           stages:

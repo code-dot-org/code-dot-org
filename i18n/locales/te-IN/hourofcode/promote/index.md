@@ -1,5 +1,5 @@
 ---
-title: Spread the word
+title: ఈ విషయాన్ని ప్రచారం చేయండి
 ---
 
 {{ signup_button }}

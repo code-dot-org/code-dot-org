@@ -2073,6 +2073,36 @@ fr-FR:
           \*Assure-toi qu'un danseur apparaît à l'écran.
 
           _Ce niveau se termine après 4 mesures._
+        challenges: |-
+          **Défis optionnels**
+
+          -   Choisis une chanson différente à jouer.
+          -   Déplace ton danseur vers un nouvel emplacement.
+          -   Crée plus d'un danseur.
+      Dance_2019_02:
+        validation: |-
+          **Comment puis-je passer ce niveau?**
+
+          -   Le danseur doit effectuer un mouvement.
+          -   Tu dois appuyer sur une touche fléchée.
+
+          _Ce niveau se termine après 4 mesures._
+        challenges: |-
+          **Défi facultatif**
+
+          -   Utilise plusieurs blocs <xml><block type="Dancelab_whenKey"><title name="KEY"></title></block></xml>.
+      Dance_2019_03:
+        validation: |-
+          **Comment puis-je passer ce niveau?**
+
+          -   Les deux danseurs doivent effectuer un mouvement.
+          -   Tu dois appuyer sur les touches fléchées.
+
+          _Ce niveau se termine après 6 mesures._
+        challenges: |-
+          **Défi facultatif**
+
+          -   Demande à un danseur de répondre aux touches fléchées gauche et droite.
       Dance_2019_04:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
@@ -2087,6 +2117,64 @@ fr-FR:
           -   Après 6 mesures, ton danseur doit faire une danse différente de ce qu'il faisait après 4 mesures.
 
           _Le niveau se termine après 11 mesures._
+        challenges: |-
+          **Défi facultatif**
+
+          -   Change l’arrière-plan à chaque changement de danseur.
+      Dance_2019_06:
+        validation: |-
+          **Comment puis-je passer ce niveau?**
+
+          -   Crée un danseur principal et un groupe de danseurs de secours.
+
+          _Ce niveau se termine après 7 mesures._
+        challenges: |-
+          **Défi facultatif**
+
+          -   Crée plusieurs groupes de danseurs de secours.
+      Dance_2019_07:
+        validation: |-
+          **Comment puis-je passer ce niveau?**
+
+          -   Modifie la taille d'au moins un danseur après le début de la musique.
+
+          _Ce niveau se termine après 6 mesures._
+        challenges: |-
+          **Défi optionnel**
+
+          -   Expérimente en changeant d'autres propriétés (largeur, hauteur, rotation, etc.).
+      Dance_2019_08:
+        validation: |-
+          **Comment puis-je passer ce niveau?**
+
+          -   Change la teinte d'au moins un danseur.
+
+          _Ce niveau se termine après 6 mesures._
+        tint_hint: As-tu remarqué que tes danseurs ne changent pas pour la couleur
+          exacte que tu choisis? En effet, **les teintes** mélangent la couleur que
+          tu choisis avec les couleurs du danseur.
+      Dance_2019_09:
+        validation: |-
+          **Comment puis-je passer ce niveau?**
+
+          -   Appuie simplement sur le bouton "Terminer"!
+        repeat_every_ideas: |-
+          **Besoin d'idées?**
+
+          -   Change à plusieurs reprises la taille d'un danseur pour le faire grandir.
+          -   Modifie à plusieurs reprises la rotation d'un danseur pour le faire tourner.
+          -   Modifie à plusieurs reprises la position horizontale ou verticale d'un danseur pour le déplacer sur l'écran.
+
+          _Tu peux également utiliser des nombres négatifs pour créer un effet opposé!_
+        next_previous: |-
+          **Défi facultatif**
+
+          -   Tu peux également utiliser ce nouveau bloc d'événements pour parcourir une liste de mouvements de danse en définissant le déplacement sur `(Aléatoire)`, `(Suivant)` ou `(Précédent)`.
+              <xml><block type="Dancelab_changeMoveEachLR">
+              <title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;">???</title>
+              <title name="MOVE">"rand"</title>
+              <title name="DIR">-1</title>
+              </block></xml>
       Dance_Party_01:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
