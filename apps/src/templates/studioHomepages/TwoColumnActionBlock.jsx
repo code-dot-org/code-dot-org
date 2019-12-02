@@ -257,7 +257,7 @@ export class OceansAnnouncement extends Component {
             text: i18n.joinUs()
           },
           {
-            url: pegasus('/oceans'),
+            url: pegasus('/hourofcode/overview'),
             text: i18n.tryIt()
           }
         ]}
