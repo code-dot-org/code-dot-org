@@ -1,4 +1,3 @@
----
 th:
   data:
     block_categories:
@@ -7,7 +6,7 @@ th:
       Color: สี
       Comment: หมายเหตุ (Comment)
       Comments: หมายเหตุ (Comment)
-      Conditionals: เงื่อนไข
+      Conditionals: เงื่อนไข 
       Dancers: นักเต้น
       Events: เหตุการณ์
       Functions: ฟังก์ชัน
