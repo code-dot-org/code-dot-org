@@ -4,7 +4,7 @@
 #mini_rubric.in.collapse
   %p
     These levels may contain an optional mini-rubric that teachers can use to evaluate student learning.
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :mini_rubric, description: "Show a mini-rubric on this level"}
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :mini_rubric, description: "Show a mini-rubric on this level"}
 
   .rubric-concept
     = f.label :rubric_key_concept, 'Mini-rubric key concept'

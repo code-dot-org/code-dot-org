@@ -1,8 +1,5 @@
--# Gamelab-only fields for level edit page on levelbuilder
-- content_for(:head) do
-  %script{src: webpack_asset_path('js/levels/editors/_gamelab.js')}
-
-= render partial: 'levels/editors/fields/encrypted_examples', locals: {f: f, level_type: 'gamelab'}
+.field
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :include_shared_functions, description: "Make shared functions and behaviors available"}
 
 = render partial: 'levels/editors/fields/debugger', locals: {f: f}
 
@@ -10,17 +7,15 @@
 
 = render partial: 'levels/editors/fields/submittable', locals: {f: f}
 
-= render partial: 'levels/editors/fields/key_value_data', locals: {f: f}
-
-.field.aligned-input-group
-  = boolean_check_box f, :hide_view_data_button
-  = f.label 'Hide View Data Button'
+= render partial: 'levels/editors/fields/block_pools', locals: {f: f}
 
 = render partial: 'levels/editors/fields/helper_libraries', locals: {f: f}
 
 = render partial: 'levels/editors/fields/validation_code', locals: {f: f}
 
 = render partial: 'levels/editors/fields/animation', locals: {f: f}
+
+= render partial: 'levels/editors/fields/encrypted_examples', locals: {f: f, level_type: 'spritelab'}
 
 :javascript
   window.toggleBlock = function (elementId) {
