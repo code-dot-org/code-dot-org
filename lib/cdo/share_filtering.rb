@@ -55,19 +55,17 @@ module ShareFiltering
     find_failure(program_name, locale)
   end
 
-  private
-
-  def find_failure(text, locale)
-    email = RegexpUtils.find_potential_email(program_tags_removed)
+  def self.find_failure(text, locale)
+    email = RegexpUtils.find_potential_email(text)
     return ShareFailure.new(FailureType::EMAIL, email) if email
 
-    street_address = Geocoder.find_potential_street_address(program_tags_removed)
+    street_address = Geocoder.find_potential_street_address(text)
     return ShareFailure.new(FailureType::ADDRESS, street_address) if street_address
 
-    phone_number = RegexpUtils.find_potential_phone_number(program_tags_removed)
+    phone_number = RegexpUtils.find_potential_phone_number(text)
     return ShareFailure.new(FailureType::PHONE, phone_number) if phone_number
 
-    expletive = ProfanityFilter.find_potential_profanity(program_tags_removed, locale)
+    expletive = ProfanityFilter.find_potential_profanity(text, locale)
     return ShareFailure.new(FailureType::PROFANITY, expletive) if expletive
 
     nil
