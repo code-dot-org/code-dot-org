@@ -312,6 +312,8 @@ es-MX:
         CSD_U6_checkWin: Verifica si el jugador ha ganado
       CSD U6 tugowar variables 3_2019:
         CSD_U6_checkWin: Verifica si el jugador ha ganado
+      CSDU4 - Design Mode - 3:
+        '': Usa el bloque configurarTexto para cambiar el texto de EtiquetaDeTítulo
       Course 4 Artist 4:
         repeat_full_circle: Ingresa el número de veces que el zombie debe moverse
           para hacer un círculo completo
