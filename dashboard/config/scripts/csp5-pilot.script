@@ -117,20 +117,31 @@ level 'U5 Traversals Make Project Step 4', progression: 'Build the Poem Personal
 level 'U5 Traversals Make Project Step 5', progression: 'Build the Poem Personalizer'
 level 'U5 Traversals Make Project Step 6', progression: 'Build the Poem Personalizer', assessment: true
 
-stage 'Lesson 13: Assessment Day'
-level 'CSP U5L18 SFLP 20-21', progression: 'Lesson Overview'
-
 stage 'Semester Hackathon Part 1', flex_category: 'csp_project'
 level 'CSP U5L13 SFLP 20-21', progression: 'Lesson Overview'
 
 stage 'Semester Hackathon Part 2', flex_category: 'csp_project'
 level 'CSP U5L14 SFLP 20-21', progression: 'Lesson Overview'
+level 'U5 Hackathon Project Day 2', progression: 'Hackathon Project'
 
 stage 'Semester Hackathon Part 3', flex_category: 'csp_project'
 level 'CSP U5L15 SFLP 20-21', progression: 'Lesson Overview'
+level 'U5 Hackathon Project Day 3', progression: 'Hackathon Project'
 
 stage 'Semester Hackathon Part 4', flex_category: 'csp_project'
 level 'CSP U5L16 SFLP 20-21', progression: 'Lesson Overview'
+level 'U5 Hackathon Project Day 4', progression: 'Hackathon Project'
 
 stage 'Semester Hackathon Part 5', flex_category: 'csp_project'
 level 'CSP U5L17 SFLP 20-21', progression: 'Lesson Overview'
+level 'U5 Hackathon Project Day 5', progression: 'Hackathon Project', assessment: true
+
+stage 'Lesson 18: Assessment Day', lockable: true
+level 'CSP U5L18 SFLP 20-21', progression: 'Lesson Overview'
+level 'CSP Unit 5 AP-Style Assessment _2020', progression: 'Unit 5 Exam', assessment: true
+
+stage 'Unit 5 STUDENT Survey', lockable: true, flex_category: 'required'
+level 'CSP U5 20-21 Student Pilot Survey', progression: 'Unit 5 STUDENT Survey', assessment: true
+
+stage 'Unit 5 TEACHER Survey', lockable: true, flex_category: 'required'
+level 'CSP U5 20-21 Teacher Pilot Survey', progression: 'Unit 5 TEACHER Survey', assessment: true
