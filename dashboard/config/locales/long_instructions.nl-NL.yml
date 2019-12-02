@@ -161,6 +161,10 @@ nl-NL:
         &quot;CAT&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;,
         &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title>\n    <title name=\"LAYOUT\">\"circle\"</title>\n
         \ </block></xml>\nNu kun je in één keer een stel dansers maken!"
+      Dance_2019_07: |-
+        Elke danser heeft een set_eigenschappen_ die bepaalt hoe het eruit ziet.
+
+         Gebruik <xml><block type="Dancelab_setPropEach" block-text="the set block"><title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title><title name="PROPERTY">"scale"</title><title name="VAL">???</title></block></xml> onder een groen eventblok om de dansers dichter of verder weg te laten lijken.
       Dance_2019_08: Dansers hebben een "tint"-eigenschap die een laagje kleur kan
         toevoegen. Probeer de tint van een van je dansers (of een hele groep) te veranderen!
       Dance_2019_09: "Dit is een speciaal soort gebeurtenis dat steeds opnieuw wordt
