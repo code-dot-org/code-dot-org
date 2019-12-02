@@ -21,6 +21,7 @@ import aiBotClosed from '../../public/images/ai-bot/ai-bot-closed.png';
 import counterIcon from '../../public/images/polaroid-icon.png';
 import arrowDownImage from '../../public/images/arrow-down.png';
 import snail from '../../public/images/snail-large.png';
+import loadingGif from '../../public/images/loading.gif';
 import Typist from 'react-typist';
 import {getCurrentGuide, dismissCurrentGuide} from './models/guide';
 import {playSound} from './models/soundLibrary';
@@ -168,8 +169,7 @@ const styles = {
     transform: 'translate(-50%, -50%)',
     top: '50%',
     left: '50%',
-    color: colors.darkGrey,
-    fontSize: '180%'
+    maxWidth: '30%'
   },
   activityIntroText: {
     position: 'absolute',
@@ -751,7 +751,7 @@ let Loading = class Loading extends React.Component {
   render() {
     return (
       <Body>
-        <div style={styles.loading}>Loading...</div>
+        <img src={loadingGif} style={styles.loading} />
       </Body>
     );
   }
