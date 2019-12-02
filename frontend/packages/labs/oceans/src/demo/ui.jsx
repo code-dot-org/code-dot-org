@@ -169,8 +169,7 @@ const styles = {
     transform: 'translate(-50%, -50%)',
     top: '50%',
     left: '50%',
-    color: colors.darkGrey,
-    fontSize: '180%'
+    maxWidth: '50%'
   },
   activityIntroText: {
     position: 'absolute',
@@ -752,9 +751,7 @@ let Loading = class Loading extends React.Component {
   render() {
     return (
       <Body>
-        <div style={styles.loading}>
-          <img src={loadingGif} style={{maxWidth: 300}} />
-        </div>
+        <img src={loadingGif} style={styles.loading} />
       </Body>
     );
   }
