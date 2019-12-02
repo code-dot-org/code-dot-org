@@ -188,6 +188,11 @@ pt-PT:
           **Desafio Opcional**
 
           -   Faz com que um dançarino responda às teclas direcionais esquerda e direita.
+      Dance_2019_05:
+        challenges: |-
+          **Desafio Opcional**
+
+          -   Altera o fundo sempre que os dançarinos troquem de movimento.
       Dance_2019_06:
         validation: |-
           **Como é que eu passo este nível?**
