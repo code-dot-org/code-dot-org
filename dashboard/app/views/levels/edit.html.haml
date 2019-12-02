@@ -15,7 +15,7 @@
 
   / Only enter name to create new records of certain level types.
   - unless @level.new_record? && @level.is_a?(Blockly)
-    = render partial: 'levels/editors/fields/all', locals: {f: f} unless @level.is_a? EvaluationMulti
+    = render partial: 'levels/editors/all', locals: {f: f} unless @level.is_a? EvaluationMulti
     = render partial: 'levels/editors/flappy', locals: {f: f} if @level.is_a? Flappy
     = render partial: 'levels/editors/bounce', locals: {f: f} if @level.is_a? Bounce
     = render partial: 'levels/editors/unplugged', locals: {f: f} if @level.is_a? Unplugged
