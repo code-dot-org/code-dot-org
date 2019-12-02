@@ -169,7 +169,7 @@ const styles = {
     transform: 'translate(-50%, -50%)',
     top: '50%',
     left: '50%',
-    maxWidth: '50%'
+    maxWidth: '30%'
   },
   activityIntroText: {
     position: 'absolute',
