@@ -2,7 +2,7 @@ language: node_js
 dist: xenial
 
 node_js:
-- 8.12.0
+  - 8.12.0
 
 cache:
   yarn: true
@@ -12,6 +12,9 @@ cache:
 before_install:
   - sudo apt-get -qq update
   - sudo apt-get install build-essential g++
+
+install:
+  - travis_wait mvn install
 
 script:
   - yarn test
