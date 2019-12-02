@@ -25,12 +25,12 @@
   oceans_landing_title: 'AI for Oceans'
   oceans_landing_description: 'Learn about machine learning and ethical use of AI.'
   cs_for_good_hashtag: '#CSforGood'
-  oceans_landing_specs: 'English only | Grades 3rd+'
-  oceans_landing_explanation: "Computer science is about so much more than coding! Learn about AI, machine learning, training data, and bias, while exploring ethical issues and how AI can be used to address world problems. Enjoy Code.org's first step in a new journey to teach more about AI throughout our curriculum. When you use the AI for Oceans activity you are training real machine learning models. <a href='#behind-the-scenes'>Learn more</a>."
+  oceans_landing_specs: 'English only | Grades 3+'
+  oceans_landing_explanation: "Computer science is about so much more than coding! Learn about AI, machine learning, training data, and bias, while exploring ethical issues and how AI can be used to address world problems. Enjoy Code.org's first step in a new journey to teach more about AI. When you use the AI for Oceans activity you are training real machine learning models. <a href='#behind-the-scenes'>Learn more</a>."
   oceans_landing_teacher_resources: 'Teacher Resources'
   oceans_landing_teacher_resources_desc: 'Lesson plans and activities to help you teach AI, machine learning, training data, and bias, while exploring ethical issues.'
   oceans_landing_resource_button: 'View Resources'
-  oceans_landing_cs_for_good: 'CS For Good'
+  oceans_landing_cs_for_good: 'CS for Good'
   oceans_landing_cs_for_good_desc: 'Resources to help students understand the role computer science could play in creating a more equitable world.'
   oceans_landing_videos: 'Videos about AI and Machine Learning'
   oceans_behind_the_scenes: 'AI for Oceans: Behind the Scenes'
@@ -40,7 +40,7 @@
   social_hoc2019_oceans_title: 'AI for Oceans #CSforGood'
   social_hoc2019_oceans_desc: "Learn about AI, machine learning, training data, and bias, while exploring ethical issues and how AI can be used to address world problems. Computer science is about so much more than coding! Enjoy Code.org's first step in a new journey to teach more about AI throughout our curriculum."
 
-  hoc_overview_oceans_tutorial_header: 'AI For Oceans'
+  hoc_overview_oceans_tutorial_header: 'AI for Oceans'
   hoc_overview_oceans_tutorial_desc: 'Learn about AI, machine learning, training data, and bias, while exploring ethical issues and how AI can be used to address world problems.'
 
   ai_video_title_what_is_ai: 'What is AI?'
