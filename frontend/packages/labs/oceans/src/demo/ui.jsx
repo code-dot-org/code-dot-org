@@ -827,6 +827,20 @@ let Words = class Words extends React.Component {
       trainingQuestion: `Is this fish “${word.toLowerCase()}”?`
     });
     toMode(Modes.Training);
+
+    // Report an analytics event for the word chosen.
+    if (window.trackEvent) {
+      const appModeToString = {
+        [AppMode.FishShort]: 'words-short',
+        [AppMode.FishLong]: 'words-long'
+      };
+
+      window.trackEvent(
+        'oceans',
+        appModeToString[getState().appMode],
+        word.toLowerCase()
+      );
+    }
   }
 
   render() {
