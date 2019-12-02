@@ -32,6 +32,8 @@
     }
   ]
 
+%h2= hoc_s(:oceans_landing_videos)
+
 - videos.each do |video|
   .col-50{style: "padding:10px"}
     - url = "https://www.youtube.com/watch?v=#{video[:code]}"

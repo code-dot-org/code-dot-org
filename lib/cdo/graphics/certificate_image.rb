@@ -1,12 +1,16 @@
 # Utility methods for generating certificate images.
 # Note: requires pegasus_dir to be in scope.
 
+require 'honeybadger/ruby'
 require 'rmagick'
 require_relative '../script_constants'
 
 # This method returns a newly-allocated Magick::Image object.
 # NOTE: the caller MUST ensure image#destroy! is called on the returned image object to avoid memory leaks.
 def create_certificate_image2(image_path, name, params={})
+  # The unmodified user input so we can document it error logs.
+  original_name = name
+
   # Load the certificate template
   background = Magick::Image.read(image_path).first
 
@@ -15,19 +19,38 @@ def create_certificate_image2(image_path, name, params={})
   name = name.strip
   return background if name.empty?
 
-  # The user's name will be put into an image with a transparent background.
-  # This uses 'pango', the OS's text layout engine, in order to dynamically
-  # select the correct font. This is important for handling non-latin
-  # languages.
-  name_overlay = Magick::Image.read("pango:#{name}") do
-    # pango:markup is set to false in order to easily prevent pango markup injection
-    # from student names.
-    define('pango', 'markup', false)
-    self.background_color = 'none'
-    self.pointsize = 68
-    self.font = "Times bold"
-    self.fill = "#575757"
-  end.first.trim!
+  # Limit the name length to prevent attacks where students send names hundreds
+  # of characters long and our system wastes memory trying to render a huge
+  # image.
+  name = name[0, 50] if name.size > 50
+
+  begin
+    # The user's name will be put into an image with a transparent background.
+    # This uses 'pango', the OS's text layout engine, in order to dynamically
+    # select the correct font. This is important for handling non-latin
+    # languages.
+    name_overlay = Magick::Image.read("pango:#{name}") do
+      # pango:markup is set to false in order to easily prevent pango markup injection
+      # from student names.
+      define('pango', 'markup', false)
+      self.background_color = 'none'
+      self.pointsize = 68
+      self.font = "Times bold"
+      self.fill = "#575757"
+    end.first.trim!
+  rescue Magick::ImageMagickError => exception
+    # We want to know what kinds of names we are failing to render.
+    Honeybadger.notify(
+      exception,
+      context: {
+        image_path: image_path,
+        name: name,
+        original_name: original_name,
+      }
+    )
+    # The student gave us a name we can't render, so leave the name blank.
+    return background
+  end
 
   # x,y offsets
   y = params[:y] || 0
@@ -179,6 +202,8 @@ def certificate_template_for(course)
       end
     elsif course == 'mee'
       'MC_Hour_Of_Code_Certificate_mee.png'
+    elsif course == ScriptConstants::OCEANS_NAME
+      'oceans_hoc_certificate.png'
     else
       'hour_of_code_certificate.jpg'
     end
