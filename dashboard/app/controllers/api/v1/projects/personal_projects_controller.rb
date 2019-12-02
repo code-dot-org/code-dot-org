@@ -19,11 +19,11 @@ class Api::V1::Projects::PersonalProjectsController < ApplicationController
     end
 
     if name_checking_error
-        # slog(
-        #   tag: 'name_checking_error',
-        #   error: "#{name_checking_error.class.name}: #{name_checking_error}",
-        #   level_source_id: @level_source.id <-- what to use for a project? do I even need to log this?
-        # )
+      # slog(
+      #   tag: 'name_checking_error',
+      #   error: "#{name_checking_error.class.name}: #{name_checking_error}",
+      #   level_source_id: @level_source.id <-- what to use for a project? do I even need to log this?
+      # )
     end
 
     if name_failure
