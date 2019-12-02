@@ -216,6 +216,48 @@ describe('Model quality test', () => {
     }
   });
 
+  test('Fin color test', async () => {
+    const trainSize = TRAIN_SIZE;
+
+    const idsByColor = {
+      red: [6, 7],
+      green: [2, 3],
+      blue: [4, 5]
+    };
+
+    const colorMatch = (rgb, colorIds) => {
+      const rgbs = Object.values(fishData.colors).map(color => color.rgb);
+
+      let match = false;
+      for (const id of colorIds) {
+        if (rgbs[id] === rgb) {
+          match = true;
+          break;
+        }
+      }
+
+      return match;
+    };
+
+    for (const [color, ids] of Object.entries(idsByColor)) {
+      console.log(`${color}`);
+      const labelFn = fish => {
+        return colorMatch(fish.colorPalette.finRgb, ids)
+          ? ClassType.Like
+          : ClassType.Dislike;
+      };
+      const result = await performTrials({
+        numTrials: NUM_TRIALS,
+        trainSize: trainSize,
+        testSize: 100,
+        labelFn: labelFn
+      });
+      analyzeConfusionMatrix(trainSize, result);
+      expect(result.precision).toBeGreaterThanOrEqual(0.85);
+      expect(result.recall).toBeGreaterThanOrEqual(0.5);
+    }
+  });
+
   test('test eels with smiling mouths', async () => {
     const trainSize = 300; // Need more fish to hit enough to train on
     const mouthData = fishData.mouths;
