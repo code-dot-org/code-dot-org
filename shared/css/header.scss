@@ -5,7 +5,7 @@
  *= require user-menu
  */
 
-@import "color";
+@import 'color';
 
 #pageheader-wrapper {
   padding-top: 0;
@@ -76,18 +76,16 @@
         display: inline-block;
         font-size: 14px;
         margin: 14px 0 0 30px;
-        font-family: "Gotham 4r", sans-serif;
+        font-family: 'Gotham 4r', sans-serif;
         color: $white;
         text-decoration: none;
 
-        &:link,
-        &:visited {
+        &:link, &:visited {
           color: $white;
           text-decoration: none;
         }
 
-        &:hover,
-        &:active {
+        &:hover, &:active {
           color: $white;
           border-bottom: solid 2px $orange;
         }
@@ -123,21 +121,16 @@
     }
   }
 
-  .user_menu,
-  .create_menu {
+  .user_menu, .create_menu {
     color: $white;
     background-color: transparent;
     border: 2px solid $white;
 
-    .pairing_name,
-    .display_name,
-    .create_button {
-      font-family: "Gotham 4r", sans-serif;
+    .pairing_name, .display_name, .create_button {
+      font-family: 'Gotham 4r', sans-serif;
     }
 
-    .user_options,
-    .create_options,
-    .help_contents {
+    .user_options, .create_options, .help_contents {
       font-size: 14px;
     }
   }
