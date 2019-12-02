@@ -1,6 +1,5 @@
 require_relative '../../lib/cdo/graphics/certificate_image'
 require_relative 'fixtures/mock_pegasus'
-require 'honeybadger/ruby'
 require 'minitest/autorun'
 
 class CertificateImageTest < Minitest::Test
