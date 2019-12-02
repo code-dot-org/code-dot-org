@@ -163,6 +163,14 @@ const styles = {
     padding: '3.5% 8%',
     width: '35%'
   },
+  loading: {
+    position: 'absolute',
+    transform: 'translate(-50%, -50%)',
+    top: '50%',
+    left: '50%',
+    color: colors.darkGrey,
+    fontSize: '180%'
+  },
   activityIntroText: {
     position: 'absolute',
     fontSize: '120%',
@@ -738,6 +746,16 @@ let ConfirmationDialog = class ConfirmationDialog extends React.Component {
   }
 };
 ConfirmationDialog = Radium(ConfirmationDialog);
+
+let Loading = class Loading extends React.Component {
+  render() {
+    return (
+      <Body>
+        <div style={styles.loading}>Loading...</div>
+      </Body>
+    );
+  }
+};
 
 const wordSet = {
   short: {
@@ -1576,9 +1594,13 @@ export default class UI extends React.Component {
   render() {
     const state = getState();
     const currentMode = getState().currentMode;
+    const isLoading = [Modes.Loading, Modes.IntermediateLoading].includes(
+      currentMode
+    );
 
     return (
       <div>
+        {isLoading && <Loading />}
         {currentMode === Modes.Words && <Words />}
         {currentMode === Modes.Training && <Train />}
         {currentMode === Modes.Predicting && <Predict />}
