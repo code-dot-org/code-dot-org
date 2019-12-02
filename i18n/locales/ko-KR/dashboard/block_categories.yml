@@ -1,4 +1,3 @@
----
 ko:
   data:
     block_categories:
@@ -14,9 +13,7 @@ ko:
       Default: 기본값
       Events: 이벤트
       Functions: 함수
-      'Functions ': '함수
-
-'
+      'Functions ': "함수\n"
       Game/Score: 게임/점수
       Games/Score: 게임/점수
       Groups: 그룹
