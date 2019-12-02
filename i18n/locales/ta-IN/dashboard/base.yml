@@ -154,6 +154,7 @@ ta:
     races:
       other: "வேறு"
     submit: "சமர்ப்பிக்க"
+    decline: "மூடவும்"
   project:
     projects: "திட்டப்பணிகள்"
     project_gallery: "திட்டப்பணிகள்"
