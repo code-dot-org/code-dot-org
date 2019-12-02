@@ -13,11 +13,8 @@ before_install:
   - sudo apt-get -qq update
   - sudo apt-get install build-essential g++
 
-install:
-  - travis_wait yarn test
-
 script:
-  - yarn test
+  - travis_wait yarn test
 
 notifications:
   email: false
