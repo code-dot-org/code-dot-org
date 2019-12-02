@@ -5,11 +5,16 @@ de-DE:
       2-3 Artist 1 new: Hallo, ich bin ein Künstler. Du kannst mich programmieren,
         um fast alles zu zeichnen. Benutze ein paar Blöcke, um mich über die grauen
         Linien im Bild zeichnen zu lassen (jede Linie ist 100 Pixel lang).
+      2-3 Artist 11: 'Gib dem Stoppschild einen Rahmen, indem du ein Achteck mit 100
+        Pixel Seiten machst. '
+      2-3 Artist 12: 'Zeichne einen Kreis, um den Augapfel fertigzustellen! Wenn der
+        Zeichner sich um 1 Grad mit jedem Schleifenschritt dreht, wie oft musst Du
+        den Code dann wiederholen, um einen Kreis zu zeichnen? '
       2-3 Artist 2 new: Dieses Haus hat eine halbfertige Wand. Jede Seite hat 100
         Pixel, aber die halbfertige nur 50. Vervollständige die Wand.
-      2-3 Artist 3.4: "Der \"springe\"-Block bewegt den Künstler, ohne eine Linie
+      2-3 Artist 3.4: "Der \"springe\"-Baustein bewegt den Künstler, ohne eine Linie
         zu zeichnen. \nZeichne die gestrichelte Linie nach. Verwende dazu \"springe\"
-        und \"bewegen\"-Blöcke."
+        und \"bewegen\"-Bausteine."
       2-3 Artist 3new: |-
         Der rote Hut ist 100 Pixel hoch. Zeichne den schwarzen Hut, der 70 Pixel kleiner ist, zu Ende.
 
@@ -35,6 +40,38 @@ de-DE:
       2-3 Artist 9 NEW: Vervollständige diesen Drachen
       2-3 Artist Assessment 1: "**Prüfung**: Vervollständige den letzten Zahn. Er
         ist 25 Pixel breit und 25 Pixel hoch."
+      2-3 Artist Debugging 1: "Dieser Hut sollte nur 50 Pixel breit sein. \nKannst
+        du das korrigieren?\n\n<br/>"
+      2-3 Artist Debugging 10: "Der Steuerkreuz auf meinem Controller ist zu schmal.
+        \n\nKannst du es um 10 Pixel breiter machen?\n\nVersuche den Code zuerst auszuführen,
+        um zu sehen, was los ist."
+      2-3 Artist Debugging 11: |-
+        Meine Schneeflocke fällt auseinander!
+
+        Kannst du herausfinden, was los ist?
+      2-3 Artist Debugging 2: "Dieser Code für die Schnurrhaare der Katze ist falsch.
+        \n\nKorrigiere diesen Code, um Whisker zu zeichnen, die alle die gleiche Länge
+        haben."
+      2-3 Artist Debugging 3: "Mein Boot hat ein Loch! \n\nWas musst du ändern, so
+        dass sich die Enden treffen?"
+      2-3 Artist Debugging 5: Der Code für das Bein und den Fuß ist falsch? Kannst
+        du das beheben?
+      2-3 Artist Debugging 6: |-
+        Sieht aus, als sitze ich auf einem Stuhl, dem ein Bein fehlt!
+
+        Ändere den Code, um das letzte Bein zu zeichnen.
+      2-3 Artist Debugging 7: |-
+        Sieht so aus, als ob das C im Code spiegelverkehrt gezeichnet wird!
+
+        Kannst du es wieder wie ein C aussehen lassen?
+      2-3 Artist Debugging 8: |-
+        Mein Lehrer sagt, dass ich beenden soll, was ich anfange!
+
+        Hilf mir, mein Windrad fertigzustellen. Kannst du herausfinden, was los ist?
+      2-3 Artist Debugging 9: |-
+        Irgendwas ist faul!
+
+        Der Code für diesen Stengel ist falsch. Kannst du herausfinden, wie du den Zeichner dazu bringen kannst, den Stengel auf die richtige Weise zu zeichnen?
       2-3 Artist Debugging Assessment 1: "Warum ist das Quadrat um 75 Pixel zu klein
         geraten?\\\r\n\\\r\nWo ist der Fehler? Kannst du es größer machen?"
       2-3 Artist Free Play: Freies Spiel! Zeichne was du willst.
@@ -44,26 +81,158 @@ de-DE:
         <br/>
       2-3 Artist Loops New 10: Jetzt lass uns einen Haufen V's miteinander verbinden,
         sie in einer Schleife zeichnen.
+      2-3 Artist Loops New 11: "Zeit, etwas flottes zu machen! \n\nBaue den Code aus
+        dem letzten Puzzle neu, aber diesmal füg eine Linkskurve von 30 Grad innerhalb
+        der Schleife hinzu. Wiederhole es jetzt 24 Mal statt 8 Mal."
       2-3 Artist Loops New 12: 'Zeichne einen Diamanten mit einer Seitenlänge von
         100 Pixel. '
+      2-3 Artist Loops New 13: "Wir werden mit einem Code (in grau) beginnen, um einen
+        Diamanten herzustellen. \n\nWiederhole den Grauen Code, um ein lustiges Muster
+        zu erstellen!"
+      2-3 Artist Loops New 14: |-
+        Spiel mit dem Code für den Diamanten herum und schaue, welche anderen Muster du herstellen kannst.
+
+        Versuche größere oder kleinere Drehungen und schaue wie oft du dich dann bewegen musst.
       2-3 Artist Loops New 15: |-
         Zeichne etwas, wozu du gerade Lust hast!
         <br/><br/>
+      2-3 Artist Loops New 2: |-
+        Hier ist das gleiche Rätsel, das wir gerade gelöst haben, aber diesmal können wir nur einen "bewege vorwärts"-Baustein und einen "Drehe"-Baustein verwenden.
+
+        Kannst du einen `wiederhole` Baustein benutzen, um dieses Rätsel zu lösen?
+      2-3 Artist Loops New 9: Zeichne ein einfaches V (beide Seiten haben 50 Pixel),
+        um den Pfeil zu vervollständigen.
+      2-3 Artist Nested Loops 1: |-
+        Du hast schon einmal Schleifen benutzt, um Formen zu zeichnen, aber jetzt werden wir Schleifen in andere Schleifen einfügen!
+
+        Erzeuge einen äußeren `Wiederholungsblock` um diese ganzen Bausteine, um das Muster zu zeichnen.
+
+        <br/>
       2-3 Artist Nested Loops 10: Wiederhole diesen Code 12 Mal, um das Muster zu
         zeichnen.
+      2-3 Artist Nested Loops 11: Wiederhole diesen Code 4 Mal, um das Muster zu vervollständigen
+        und drehe es um 90 Grad nach jedem Kreis.
       2-3 Artist Nested Loops 12: Wiederhole diesen Code 12 Mal, um die Wirbel zu
         vervollständigen.
+      2-3 Artist Nested Loops 2: "Wiederhole nun das Zeichnen des Dreiecks 6 mal.
+        \n\nNach jedem Dreieck musst du 60 Grad drehen, bevor du das nächste zeichnen
+        kannst."
+      2-3 Artist Nested Loops 3: "Du musst dein Dreieck 12 Mal wiederholt zeichnen,
+        um dieses Muster zu erzeugen. \n\nTeile die Anzahl der Grad in einem Kreis
+        (360) durch die Anzahl der Formen, die du zeichnest (12), um herauszufinden,
+        wie weit du dich nach jeder Form drehen musst."
+      2-3 Artist Nested Loops 4: |-
+        Wiederhole diesen Diamanten 12 mal, um eine Blume zu zeichnen!
+
+        Hinweis: Wir verwenden den gleichen Winkel, um 12 Diamanten erneut zu zeichnen, wie bei den 12 Dreiecken.
+        Wie viel musst du nach jeder Form drehen?
+      2-3 Artist Nested Loops 5: "Fülle die Fenster dieses Gebäudes mittels einer
+        verschachtelten Schleife aus. \n\nDie Fenster sind 20 Pixel lang und 20 Pixel
+        auseinander."
       2-3 Artist Nested Loops 6: Dieser Dinosaurier hat 8 Spitzen am Schwanz. Jede
         Spitze ist 30 Pixel lang. Das Dreieck muss 8 mal durchlaufen werden, aber
         sorge dafür, dass es sich nach jedem Durchlauf vorwärts bewegt!
+      2-3 Artist Nested Loops 7: "Wiederhole das Zeichnen dieses Dreiecks 10 mal,
+        um die Sonne zu zeichnen. \n\nDu musst dich nach jedem Dreieck bewegen und
+        drehen. \n\nDu kannst herausfinden, wie viel du drehen musst, indem du die
+        Anzahl der Grad in einem Kreis durch die Anzahl der Dreiecke teilst, aus denen
+        er besteht."
+      2-3 Artist Nested Loops 8: "Nun fügen wir etwas Gras zu unserem Bild hinzu.
+        \n\nJeder Grasbüschel ist 50 Pixel voneinander entfernt."
+      2-3 Artist Nested Loops 9: "Wir beenden dieses Bild, indem wir unsere Blume
+        hinzufügen. \n\nWiederhole das Zeichnen des Diamanten 12 mal, um eine Blume
+        zu zeichnen."
       2-3 Artist Nested Loops Free Play: Freies Spiel, zeichne irgendetwas Cooles
         mit verschachtelten Schleifen.
+      2-3 Bee Conditionals 11: "Ich frage mich, was da draußen los ist!\n\nHilf mir,
+        um den Hof herumzufliegen und Nektar nur von den Blumen zu sammeln, die welche
+        haben. "
+      2-3 Bee Conditionals 13: |-
+        Hier ist viel los!
+
+        Nutze das, was du gelernt hast, um den ganzen Nektar zu sammeln und dann den Honig herzustellen.
+      2-3 Bee Conditionals 14: |-
+        Lasst uns alles zusammenfügen!
+
+        Verwende das, was du gelernt hast, um mir zu helfen, Nektar nur von Blumen zu sammeln, die ihn haben, und verwende so wenig Bausteine wie möglich.
+
+        Vergiss nicht, am Ende Honig zu machen.
+      2-3 Bee Conditionals 15: "Dieses Treppenstufenmuster sollte vertraut aussehen.
+        \ \n\nKannst du Nektar nur von den Blüten sammeln, die Nektar besitzen, und
+        dabei so wenig Blöcke wie möglich verwenden?"
       2-3 Bee Conditionals 2: "Ich bin eine hungrige Biene! \nHilf mir, den gesamten
         Nektar der Blumen mit der geringsten Anzahl von Bausteinen zu sammeln."
+      2-3 Bee Conditionals 3: "Schau dir den ganzen Nektar an!\n\nHilf mir, den Nektar
+        zu sammeln und den Honig mit so wenig Blöcken wie möglich herzustellen.  "
+      2-3 Bee Conditionals 5: "Diese magischen violetten Blumen ändern sich!\n\nJedes
+        Mal, wenn du das Puzzle ausprobierst, können lilafarbene Blumen entweder 1
+        Nektar oder gar keinen haben.... aber du wirst die Nummer nicht kennen, bis
+        du den Code ausgeführt hast! \n\nAchte darauf, dass du keinen Nektar von einer
+        violetten Blume sammelst, wenn sie keinen hat. \nDu musst zuerst überprüfen,
+        ob der Nektar gleich 1 ist, indem du den Block `wenn Nektar` benutzt."
+      2-3 Bee Conditionals Assessment 1: |-
+        **Prüfung:** Sammle den ganzen Nektar.\
+        Achte darauf, nicht von einer lila Blume Nektar zu sammeln, wenn sie keinen hat.
+      2-3 Bee Debugging 1: |-
+        Diese Bausteine nerven mich wirklich!
+
+        Bereinige den oder die Fehler, um den gesamten Nektar zu sammeln.
+      2-3 Bee Debugging 2: |-
+        Kannst du das Problem hier finden?
+
+        Behebe den oder die Fehler, um den gesamten Nektar zu sammeln.
+      2-3 Bee Debugging 3: |-
+        Ooh, das hier sticht!
+
+        Behebe den oder die Fehler, um den gesamten Nektar zu sammeln.
+      2-3 Bee Debugging 5: "Diese Blume sieht lecker aus! \n\nBeseitige den oder die
+        Fehler, um den gesamten Nektar zu sammeln.\\\nDu kannst nun sowohl Ausführen
+        als auch Einzelschritt verwenden."
+      2-3 Bee Debugging 6: |-
+        Was für eine süße Herausforderung!
+
+        Beseitige den/die Fehler, um den gesamten Nektar zu sammeln.
       2-3 Bee Functions Assessment 2: "**Prüfung:** Erzeuge eine Funktion, mit der
         man sich drehen, vorwärts bewegen und 3 mal Honig erzeugen kann. Anschließend
         lasse die Biene dahin zurückkehren wo sie angefangen hat und drehe um."
+      2-3 Bee Loops 1: |-
+        Diese Blumen sehen lecker aus!
+
+        Sammle Nektar von jeder der Blüten mit den geringstmöglichen Bausteinen.
+      2-3 Bee Loops 13: "**Prüfung:** Sammle den gesamten Nektar mit den wenigsten
+        Bausteinen."
       2-3 Bee Loops 3A: Kannst du eine Schleife verwenden um den ganzen Nektar einzusammeln?
+      2-3 Bee Loops 3B: Verwende nun den Wiederholen-Baustein um den ganzen Nektar
+        aufzusammeln und den ganzen Honig zu erzeugen.
+      2-3 Bee Loops 4: |-
+        So eine fleißige Biene!
+
+        Hilf den Bienen, den gesamten Nektar zu sammeln und den ganzen Honig mit den geringstmöglichen Bausteinen herzustellen.
+      2-3 Bee Loops 4A: "Wie oft können Schleifen dir bei diesem Puzzle helfen?  \n\nSchleifen
+        sind dein Freund! Benutze einige von ihnen, um dieses Rätsel mit den wenigsten
+        Bausteinen zu lösen."
+      2-3 Bee Loops 5: "Die Form dieses Pfades ist anders als die der anderen. \n\nKannst
+        du den gesamten Nektar mit so wenigen Bausteinen wie möglich sammeln?"
+      2-3 Bee Loops 7: Füge diese Bausteine in eine Schleife ein, um Nektar von jeder
+        Blüte zu sammeln?
+      2-3 Maze 1: 'Kannst du mir helfen, das böse Schwein zu fangen? Klinke ein paar
+        `bewege vorwärts` Bausteine unter dem `Wenn ausführen` Baustein ein und drücke
+        auf "Ausführen". '
+      2-3 Maze 12: |-
+        Plötzlich erscheint ein magischer Baustein!  Mit dem Baustein `widerhole` kannst du Code immer wieder wiederholen.
+
+        Kannst du zum Schwein gelangen, indem du eine Schleife erstellst, die nur einen `bewege vorwärts`-Baustein innerhalb eines `wiederhole` verwendet?
+      2-3 Maze 13: Bringt mich zum Schwein! Du kannst diesmal nur einen `bewege vorwärts`
+        Baustein verwenden
+      2-3 Maze 15: In diesem Rätsel werden dir zwei `wiederhole` Schleifen helfen,
+        das Schwein mit der geringsten Anzahl an Schleifen zu erreichen!
+      2-3 Maze Loops 18: "Bring mich mit den wenigsten Bausteinen zur Sonnenblume!
+        \ \n\nVersuche, eine `Wiederhole`-Schleife in einer anderen zu verwenden,
+        um die Menge an Code zu reduzieren, die du brauchst."
+      2-3 Maze Loops 19: "Lasst uns das auf eine andere Ebene bringen! \n\nBenutze
+        Schleifen, um mich mit den wenigsten Schlaufen zur Sonnenblume zu bringen."
+      2-3 Maze Loops Assessment 1: "**Herausforderung:** Bringe mich mit nur 5 Bausteinen
+        zur Sonnenblume! "
       4-5 Artist Free Draw 1: Freies Zeichnen!  Zeichne, was deine Inspiration dir
         eingibt.
       4-5 Artist Patterns 11: Wie oft muss die Schleife durchlaufen werden, damit
@@ -73,6 +242,9 @@ de-DE:
         sich jetzt überdecken. Versuche es mit einer Änderung des ersten "springe
         rückwärts" Bausteins von 100 auf 50 (halb so weit). Wie weit sollte der Künstler
         beim zweiten "springe rückwärts" Baustein gehen?
+      4-5 Bee Conditionals 2: "Mehr Wolken! \n\nÜberprüfe unter jeder Wolke, ob sie
+        eine Blume versteckt, bevor du Nektar sammelst.  \n\nDenkt daran: Nicht alle
+        Wolken verbergen das Gleiche!"
       4-5 Maze 7: "Bringe den Zombie auf schnellstem Weg zur Sonnenblume. \nKannst
         Du die Aufgabe mit weniger als 11 Blöcken lösen?"
       4-5 Maze 9: |-
@@ -82,6 +254,10 @@ de-DE:
         Verwende den "Wiederhole bis"-Baustein, um die Aufgabe mit so wenig Blöcken wie möglich zu lösen.
       4-5 Maze Assessment 1: "**Aufgabe:** Gehe zur Sonnenblume und verwende dabei
         so wenig Bausteine wie möglich."
+      4-5 Nested Loops 1: 'Vervollständige den Code um die Dreiecke zu zeichnen. Das
+        erste ist bereits fertig. Hinweis: Drei Dreiecke in einer 360- Grad- Drehung.'
+      4-5 Nested Loops 2: 'Erstelle nun eine Schleife in einer weiteren Schleife um
+        10 Dreiecke zu zeichnen.\\ Dies nennt man eine verschachtelte Schleife.  '
       4-5 Nested Loops 5: Benutze den angegebenen Code in einer Schleife, um eine
         Windmühle zu erstellen.
       4-5 Nested Loops 9: Zeichne die Zähne im Mund des Alligators!
@@ -559,6 +735,72 @@ de-DE:
 
         -   Was sind Deiner Meinung nach die Aufgaben eines Website-Publishers?
         -   Warum möchtest du den Code sehen oder die Website einer anderen Person remixen?
+      CSD U2 text style text align_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+
+        ::: details [**Wie funktioniert der Code?**]
+
+        Hier ist der Code, der die Ausrichtung des Absatztextes steuert:
+
+            p {
+              text-align: left;
+            }
+
+        -   `p` ist der _Selektor_.  Er gibt an, welche Elemente den Regeln innerhalb der geschweiften Klammern folgen müssen. Das `p` steht für Absatz.
+        -   `text-align: left;` ist die Regel, die den Text innerhalb der `p`-Tags auf die linke Seite des Absatzes ausrichtet.
+            -   `text-align` ist die _Eigenschaft_.  Diese erklärt, worum es bei der Regel geht, in diesem Fall bei der Textausrichtung.
+            -   `links` ist der _Wert_.  Dieser erklärt, wie die Regel angewendet werden sollte, wobei in diesem Fall der Text auf die linke Seite des Absatzes ausgerichtet wird.
+
+        :::
+
+        :::: details [**Warum macht <code>text-align: left;</code> hier nichts?**]
+
+        Die meisten Eigenschaften haben Standardwerte.  Die Standardwerte sind die Stile, die ein Element automatisch hat, bevor du dein Style Sheet hinzufügst.  Der Standardwert für `text-align` ist `left`, so dass es hier keinen Unterschied macht.
+
+        :::
+
+        details [**Welche Werte sind für die Textausrichtung möglich? **]
+
+        Du kannst zwischen "links", "rechts" und "mitte" wählen.  Mehr über die Eigenschaft text-align erfährst du unter <a href="http://www.w3schools.com/cssref/pr_text_text-align.asp" target="_new">W3Schools - CSS text-align property</a>.
+
+        :::
+
+        :::: details [**Warum brauche ich alle Satzzeichen?**]
+
+        Die Interpunktion, wie die geschweiften Klammern `{}`, der Doppelpunkt `:` und das Semikolon \`;`` helfen dem Computer, die Regeln im Style Sheet zu verstehen.  Die geschweiften Klammern enthalten alle Regeln für einen bestimmten Selektor.  Jede Regel sollte mit einem Semikolon enden, und die Eigenschaften und Werte werden immer durch einen Doppelpunkt getrennt.
+
+        :::
+
+        :::: details [**Was ist ein Stylesheet?**]
+
+        Ein Stylesheet ist ein Dokument das steuert, wie eine Webseite aussehen soll.  Externe Stylesheets sind separate Dateien, die mit der HTML-Seite verknüpft sind.
+
+        :::
+
+        ::: Details [**Was ist CSS?**]
+
+        CSS ist eine Sprache, die die Darstellung von Inhalten auf einer Website steuert.  Es verwendet Regelsätze, um das Aussehen einer Seite zu ändern.  Jeder Regelsatz hat einen Selektor, der angibt, welche Elemente auf der Seite betroffen sind, und die Regeln, die erklären, wie die Elemente angezeigt werden.   Jede Regel besteht aus einer Eigenschaft und einem Wert für diese Eigenschaft.
+        <br/><br/>
+        Hier ist ein Beispiel für einen Regelsatz, der den Text in einem `h2`-Tag blau und kursiv macht:
+
+            h2 {
+               color: blue;
+               font-family: cursive;
+            }
+
+        In diesem Beispiel ist `h2` der Selektor, `color` und `font-family` sind Eigenschaften, und `blue` und `cursive` sind die Werte für diese Eigenschaften.
+
+        :::
+
+        </div>
+
+        # Textausrichtung
+
+        Die Eigenschaft `text-align` legt die horizontale (seitliche) Position des Textes innerhalb jeder Zeile fest.
+
+        -   Suche die Eigenschaft "text-align" im Absatzschlüssel.
+        -   Ändere die Absatzausrichtung.
+            -   Wähle zwischen "links", "rechts" und "mitte"
       CSD U3 - Booleans Video_2019: |-
         ## Zu berücksichtigende Fragen
 
@@ -895,8 +1137,21 @@ de-DE:
         Die Biene weiß nicht, was sich unter der Wolke verbirgt!
 
         Benutze den „Wenn“-Baustein, um nachzusehen und **NUR DANN** Nektar zu sammeln, wenn eine Blume unter der Wolke ist.
+      Course 4 EC 1a: "**Extrem-Herausforderung:** Es gibt keine Regeln oder Hinweise,
+        nur die Aufgabe!"
+      Course 4 EC 1b: "**Extrem-Herausforderung:** Es gibt keine Regeln oder Hinweise,
+        nur die Aufgabe!"
+      Course 4 EC 2a: "**Extrem-Herausforderung:** Es gibt keine Regeln oder Hinweise,
+        nur die Aufgabe!"
+      Course 4 EC 2b: "**Extrem-Herausforderung:** Es gibt keine Regeln oder Hinweise,
+        nur die Aufgabe!"
+      Course 4 EC 2c: "**Extrem-Herausforderung:** Es gibt keine Regeln oder Hinweise,
+        nur die Aufgabe!"
       Course 4 Maze 4: Versuche, das Rätsel mit dem „Wiederholen“-Baustein zu lösen,
         damit du weniger Bausteine benötigst...
+      Course 4 SCFL 3: "**For-Schleifen Super Challenge:** Kannst Du herausfinden,
+        wie Du diese Zeichnung wiederherstellen kannst? \n\n<img src=\"https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png\"
+        width=\"350px\"/>"
       CourseD_Dance_Party_01: |-
         _Los geht‘s mit der Tanzparty!_
 
@@ -1120,6 +1375,10 @@ de-DE:
         &quot;CAT&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;,
         &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title>\n    <title name=\"LAYOUT\">\"circle\"</title>\n
         \ </block></xml> \nJetzt können Sie mehrere Tänzer auf einmal erstellen!"
+      Dance_2019_07: |-
+        Jeder Tänzer hat eine Reihe von _Eigenschaften_, die steuern, wie er aussieht.
+
+        Verwende <xml><block type="Dancelab_setPropEach" block-text="the set block"><title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title><title name="PROPERTY">"scale"</title><title name="VAL">???</title></block></xml> unter einem grünen Ereignisblock, um Tänzer näher oder weiter weg erscheinen zu lassen.
       Dance_2019_08: Tänzer haben eine "Farb"-Eigenschaft, mit der eine Farbschicht
         hinzufügt werden kann. Versuchen Sie, den Farbton eines Ihrer Tänzer (oder
         einer ganzen Gruppe) zu ändern!
@@ -1420,6 +1679,8 @@ de-DE:
         zu sammeln.
       K-1 Bee Loops 6: Benutze eine `wiederhole`-Schleife, um den Nektar zu bekommen,
         Honig zu bekommen und dich zu bewegen!
+      K-1 Maze Loops 10: Bringt mich zum Schwein!\\ Die Verwendung der `Wiederhole`-Schleife
+        macht es viel einfacher.
       K-1 Maze Loops 11: |-
         Bring mich zum Schwein!\
         Mit der „Wiederholen“-Schleife geht es leichter.
@@ -1428,7 +1689,22 @@ de-DE:
         Mit der „Wiederholen“-Schleife geht es leichter.
       K-1 Maze Loops 2: Benutze die “Wiederholen"-Schleife, um mich zum Schwein zu
         bringen.
+      K-1 Maze Loops 3: |-
+        Bring mich zum Schwein!\
+        Achte darauf `wiederhole` Schleifen zu verwenden.
+      K-1 Maze Loops 5: |-
+        Bring mich zum Schwein!\
+        Achte darauf `wiederhole` Schleifen zu verwenden.
+      K-1 Maze Loops 6: |-
+        Bring mich zum Schwein!\
+        Achte darauf `wiederhole` Schleifen zu verwenden.
+      K-1 Maze Loops 7: |-
+        Bring mich zum Schwein!\
+        Achte darauf `wiederhole` Schleifen zu verwenden.
       K-1 Maze Loops 8: Benutze „Wiederholen“-Schleifen, um mich zum Schwein zu bringen.
+      K-1 Maze Loops Assessment 1: |-
+        Sieh dir an, was wir alles gelernt haben!\
+        Benutze eine `Wiederhole` Schleife, um mich zum Schwein zu bringen!
       MC HOC 2016 SCORE LEVEL: "In manchen Spielen werden die Punkte gezählt. Spiele
         mit iesen Eisengoles Fangen und benutze den <xml>  <block type=\"craft_addScore\">\n
         \   <title name=\"SCORE\">1</title>\n  </block></xml>-Block um dir einen Punkt
@@ -1822,6 +2098,8 @@ de-DE:
 
         ![](<https://images.code.org/e0ea2b008bf557ea81e99a27dd03ef03-image-1567713536857.2019-09-05 15_58_25.gif>)
       behaviors free play: "**Freiespiel:** Erstelle deine eigene Weltraumszene!"
+      course1_artist_loops_challenge2: Lasst uns ein Spiel spielen! Zeichne so viele
+        X's wie möglich! Kannst du drei hintereinander bekommen?
       course1_artist_loops_challenge3: |-
         **Zwitscher!**
 
@@ -1849,8 +2127,19 @@ de-DE:
         ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
       course2_artist_prog_challenge1: Zeichne Räume für jedes Tier. Es gibt viele
         verschiedene Möglichkeiten, dieses Rätsel zu lösen, also viel Spaß!
+      course2_artist_prog_challenge2: _Hilf mir, die gelben Linien auf dieser Straße
+        zu zeichnen!_
+      course2_bee_conditionals_challenge1: Sammle den ganzen Nektar oder mache den
+        ganzen Honig. Du kannst nur Nektar aus Blumen sammeln und Honig aus Waben
+        herstellen. Überprüfe, ob es eine Blume oder eine Wabe gibt.
+      course2_collector_loops_challenge2: |-
+        _"Lasst uns nach Schätzen suchen - mit Schleifen!"_
+
+        Hilf dem Sammler, indem du diesen Code debugst. Hol dir den ganzen Schatz!
       course2_collector_prog_challenge1: Schau genau! Kannst du alle **10** Schätze
         einsammeln?
+      course2_collector_prog_challenge2: Es gibt **20** Schätze in dieser Höhle zu
+        finden. Sammle mindestens die Hälfte, um diese Herausforderung zu beenden!
       course2_maze_programming_challenge1: '"Das Schwein versteckt sich! Kannst du
         mir helfen, mich zurechtzufinden?"\_'
       course2_maze_programming_challenge2: Manchmal gibt es mehr als eine Lösung für
@@ -2075,6 +2364,8 @@ de-DE:
       courseA_collector_loops2: |-
         Sammle alle Schätze ein! Bewege Laurel zu jedem Edelstein und benutze dann diesen Block:
         <xml><block type="collector_collect"/></xml>
+      courseA_collector_loops2_2018: 'Hole alle drei Haufen! Bewege Laurel auf jedes
+        Stück des Schatzes und benutze dann diesen Baustein: <xml><block type="collector_collect"/></xml>'
       courseA_collector_loops2_2019: 'Sammle alle drei Schätze ein! Bewege Laurel
         zu jedem Edelstein und benutze dann diesen <xml><block type="collector_collect"
         block-text="get treasure"/></xml> Baustein. '
@@ -2111,6 +2402,8 @@ de-DE:
       courseA_harvester_seq3_2019: Benutze **drei** <xml><block type="maze_moveNorth"
         block-text="move north"/></xml> Bausteine, um die Erntemaschine zum Mais zu
         bringen! Vergiss nicht, den Mais am Ende aufzunehmen.
+      courseA_harvester_seq9: Füge zwei Blöcke hinzu, um dieses Puzzle zu beenden!
+      courseA_harvester_seq9_2019: Füge zwei Blöcke hinzu, um dieses Puzzle zu beenden!
       courseA_maze_ramp2_2019: Füge die beiden<xml><block type="maze_moveEast" block-text="move
         east"/></xml> an den<xml><block type="when_run" block-text="when run"/></xml>
         an, um Deinen Code zu vervollständigen. Klicke dann auf "▶ Ausführen".
@@ -2154,6 +2447,8 @@ de-DE:
         Versuche diese Aufgabe von Anfang an allein zu schaffen.
 
         ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
+      courseA_maze_seq5_2018: Probiere dies hier mal aus.
+      courseA_maze_seq5_2019: Probiere dies hier mal aus.
       courseA_maze_seq6: |-
         Gehe zuerst in eine Richtung und dann in eine andere, um den Vogel zum Schwein zu bringen!
 
