@@ -857,6 +857,27 @@ nn-NO:
         - {}
         - {}
         - {}
+      Dance_Party_extras_intro:
+        markdown: "# Dans vidare!\n\nFor del 2 skal du lage eit eige prosjekt. Det
+          er ingen oppgåver her. I staden er det ei rekke prosjekt som viser ulike
+          måtar å lage meir avanserte dansefestar. \n\nDu kan gjere desse nivåa _i
+          kva som helst rekkefølge_. Kikk litt rundt for å sjå korleis noko vart gjort
+          på eit anna nivå eller kombiner konsepta mellom prosjekta. Prøv alle, finn
+          ein favoritt og bruk tid til å legge det til prosjektet for å gjere det
+          til ditt.\n\n<a class=\"btn btn-large btn-primary next-stage submitButton
+          pull-right\">Hald fram</a>\n\n<div class=\"clearfix\"></div>\n\n<div style=\"float:
+          left; margin: 10px\">\n<a href=\"2\">\n<h2>\nKom i formasjon\n</h2>\n\n<img
+          src=\"https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif\"></a>\n\n</div>\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"3\">\n<h2>\nKor forsvann
+          dei?\n</h2>\n\n<img src=\"https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif\"></a>\n\n</div>\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"4\">\n<h2>\nDansegrupper\n</h2>\n\n<img
+          src=\"https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"5\">\n<h2>\nFjerdedelsnotar\n</h2>\n\n<img
+          src=\"https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif\"></a>\n\n</div>\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"6\">\n<h2>\nBass, mellomtone,
+          diskant\n</h2>\n\n<img src=\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"7\">\n<h2>\nFortare, saktare\n</h2>\n\n<img
+          src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"></a>\n\n</div>\n"
       Internet Simulator Setup:
         content1: forklaring her
       Internet Simulator Setup 2:
