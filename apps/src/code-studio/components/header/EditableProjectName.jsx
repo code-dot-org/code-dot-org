@@ -6,7 +6,7 @@ import i18n from '@cdo/locale';
 import {connect} from 'react-redux';
 
 import ProjectUpdatedAt from './ProjectUpdatedAt';
-import {refreshProjectName, checkProjectName} from '../../headerRedux';
+import {refreshProjectName} from '../../headerRedux';
 
 const styles = {
   buttonWrapper: {
@@ -49,7 +49,6 @@ class UnconnectedEditProjectName extends React.Component {
     finishEdit: PropTypes.func.isRequired,
     projectName: PropTypes.string.isRequired,
     refreshProjectName: PropTypes.func.isRequired,
-    checkProjectName: PropTypes.func.isRequired,
     projectNameFailure: PropTypes.string
   };
 
@@ -121,8 +120,7 @@ const EditProjectName = connect(
     projectNameFailure: state.header.projectNameFailure
   }),
   {
-    refreshProjectName,
-    checkProjectName
+    refreshProjectName
   }
 )(UnconnectedEditProjectName);
 

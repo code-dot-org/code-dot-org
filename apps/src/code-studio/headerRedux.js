@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 /* globals dashboard */
 
 const SHOW_PROJECT_HEADER = 'header/SHOW_PROJECT_HEADER';
@@ -11,7 +9,6 @@ const SET_PROJECT_UPDATED_AT = 'header/SET_PROJECT_UPDATED_AT';
 const ENABLE_LEVEL_BUILDER_SAVE_BUTTON =
   'header/ENABLE_LEVEL_BUILDER_SAVE_BUTTON';
 const REFRESH_PROJECT_NAME = 'header/REFRESH_PROJECT_NAME';
-const CHECK_PROJECT_NAME = 'header/CHECK_PROJECT_NAME';
 const SHOW_TRY_AGAIN_DIALOG = 'header/SHOW_TRY_AGAIN_DIALOG';
 
 export const projectUpdatedStatuses = {
@@ -98,26 +95,6 @@ export default (state = initialState, action) => {
     };
   }
 
-  if (action.type === CHECK_PROJECT_NAME) {
-    // make ajax call.
-    $.get({
-      url: `/api/v1/projects/personal/check_name?new_name=${
-        action.projectName
-      }`,
-      dataType: 'json'
-    }).done(data => {
-      if (data.nameFailure) {
-        return {
-          ...state,
-          projectNameFailure: data.nameFailure
-        };
-      } else {
-        // name is safe or call to check it failed (current plan is to save anyway)
-        //save name in correct place
-      }
-    });
-  }
-
   if (action.type === SHOW_TRY_AGAIN_DIALOG) {
     return {
       ...state,
@@ -173,11 +150,6 @@ export const setProjectUpdatedAt = updatedAt => ({
 
 export const refreshProjectName = () => ({
   type: REFRESH_PROJECT_NAME
-});
-
-export const checkProjectName = projectName => ({
-  type: CHECK_PROJECT_NAME,
-  projectName
 });
 
 export const setShowTryAgainDialog = visible => ({
