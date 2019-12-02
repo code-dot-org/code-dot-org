@@ -619,30 +619,64 @@ class LevelsHelperTest < ActionView::TestCase
 
   test 'block options are localized' do
     toolbox = "<xml><category name=\"Actions\"/></xml>"
+    toolbox_translated_name = "Azioni"
     @level.toolbox_blocks = toolbox
 
     start = "<xml><block type=\"procedures_defnoreturn\"><title name=\"NAME\">details</title></block></xml>"
+    start_translated_name = "dettagli"
     @level.start_blocks = start
 
     I18n.locale = :'it-IT'
+    custom_i18n = {
+      "data" => {
+        "function_names" => {
+          @level.name => {
+            "Actions" => toolbox_translated_name,
+            "details" => start_translated_name
+          }
+        }
+      }
+    }
+    I18n.backend.store_translations I18n.locale, custom_i18n
+
+    new_toolbox = toolbox.sub("Actions", toolbox_translated_name)
+    new_start = start.sub("details", start_translated_name)
+    refute_equal new_toolbox, toolbox
+    refute_equal new_start, start
+
     options = blockly_options
-    new_toolbox = toolbox.sub("Actions", I18n.t("data.block_categories.Actions"))
-    new_start = start.sub("details", I18n.t("data.function_names.details"))
     assert_equal new_toolbox, options[:level]["toolbox"]
     assert_equal new_start, options[:level]["startBlocks"]
   end
 
   test 'block options are localized in project-backed levels' do
     toolbox = "<xml><category name=\"Actions\"/></xml>"
+    toolbox_translated_name = "Azioni"
     start = "<xml><block type=\"procedures_defnoreturn\"><title name=\"NAME\">details</title></block></xml>"
+    start_translated_name = "dettagli"
 
     project_level = create :maze, toolbox_blocks: toolbox, start_blocks: start
     @level.project_template_level_name = project_level.name
 
     I18n.locale = :'it-IT'
+    custom_i18n = {
+      "data" => {
+        "function_names" => {
+          @level.name => {
+            "Actions" => toolbox_translated_name,
+            "details" => start_translated_name
+          }
+        }
+      }
+    }
+    I18n.backend.store_translations I18n.locale, custom_i18n
+
+    new_toolbox = toolbox.sub("Actions", toolbox_translated_name)
+    new_start = start.sub("details", start_translated_name)
+    refute_equal new_toolbox, toolbox
+    refute_equal new_start, toolbox
+
     options = blockly_options
-    new_toolbox = toolbox.sub("Actions", I18n.t("data.block_categories.Actions"))
-    new_start = start.sub("details", I18n.t("data.function_names.details"))
     assert_equal new_toolbox, options[:level]["toolbox"]
     assert_equal new_start, options[:level]["startBlocks"]
   end
