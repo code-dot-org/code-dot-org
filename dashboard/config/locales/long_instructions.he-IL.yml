@@ -496,21 +496,21 @@ he-IL:
 
         בחרו 'חתול' או 'עצלן' כדי ליצור את הרקדן הראשון שלכם.
 
-        -   _אתם יכולים גם ללחוץ על הנורה שמשמאל אם אתם רוצים עוד מידע או אתגרי בונוס._
+        -   _אתם יכולים גם ללחוץ על הנורה שמימין אם אתם רוצים עוד מידע או אתגרי בונוס._
       Dance_2019_02: |-
         בלוק ה-<xml><block type="Dancelab_whenKey" block-text="when up pressed"></block></xml> מאפשר לכם להריץ קוד כשאתם לוחצים על מקשי החצים.
         השתמשו בבלוק ה-<xml><block type="Dancelab_doMoveEachLR" block-text="do once"><title name="GROUP">"CAT"</title><title name="MOVE">MOVES.XClapSide</title><title name="DIR">-1</title></block></xml> כדי לגרום לחתול למחוא כף!
 
         _ודאו שאתם לוחצים על המקש "חץ למעלה" או ![](<https://images.code.org/419e704e6841c0b696016bf5029b8cb9-image-1571864825506.06.45 PM.png>) לאחר שאתם לוחצים על מקש "הרץ"!_
       Dance_2019_03: זה הזמן לתחרות ריקודים! תכנתו כל רקדן לזוז כשאתם לוחצים על מקשים
-        שונים. בחרו את צעד הריקוד האהוב עליכם עבור כל רקדן או קבעו אותו כ"(אקראי)"
+        שונים. בחרו את צעד הריקוד האהוב עליכם עבור כל רקדן או קבעו אותו כ`(אקראי)`
         כדי לקבל משהו מפתיע ולא צפוי!
       Dance_2019_04: |-
         בואו נגרום לרקדנים לזוז בתיאום עם המוזיקה!
 
         חברו את בלוק ה-<xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> לבלוק ה-<xml><block type="Dancelab_changeMoveEachLR"><title name="GROUP">"SHARK"</title><title name="MOVE">MOVES.ThisOrThat</title><title name="DIR">-1</title></block></xml> שבארגז הכלים.
 
-        הרקדן שלכם אמרו להתחיל צעד חדש אחרי התיבה הרביעית.
+        הרקדן שלכם אמור להתחיל צעד חדש אחרי התיבה הרביעית.
 
         **תיבות** משמשות לספירת זמן במוזיקה. במדריך הזה, אורכה של תיבה הוא 4 פעמות.
       Dance_2019_05: |-
@@ -534,15 +534,15 @@ he-IL:
       Dance_2019_07: |-
         לכל רקדן צריך להיות סט _מאפיינים_ ששולט באופן בו הוא מופיע.
 
-        השתמשו בבלוק ה-<xml><block type="Dancelab_setPropEach" block-text="the set block"><title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title><title name="PROPERTY">"scale"</title><title name="VAL">???</title></block></xml> אחרי בלוק מאורעות ירוק כדי לגרום לרקדנים להופיע קרוב יותר או רחוק יותר.
+        השתמשו בבלוק ה-<xml><block type="Dancelab_setPropEach" block-text="the set block"><title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title><title name="PROPERTY">"scale"</title><title name="VAL">???</title></block></xml> אחרי בלוק אירוע ירוק כדי לגרום לרקדנים להופיע קרוב יותר או רחוק יותר.
       Dance_2019_08: לרקדנים יש מאפיין "גוון" שיכול להוסיף שיכבה של צבע. נסו לשנות
         את גוון הצבע של אחד הרקדנים שלכם (או אפילו קבוצה שלמה)!
       Dance_2019_09: |-
-        **הבלוק החדש** הזה הוא סוג מיוחד של מאורע שמופעל שוב ושוב.
+        **הבלוק החדש** הזה הוא סוג מיוחד של אירוע שמופעל שוב ושוב.
 
         <xml><block type="Dancelab_everySeconds"><title name="N">2</title><title name="UNIT">"measures"</title></block></xml>
 
-        על ידי כך שתניחו בלוקים חדשים בארגז הכלים שלכם שבתוך בלוק ה"חזור על", אתם יכולים לשנות את מאפייני הרקדנים שלכם עם הזמן. היו יצירתיים ותעשו חיים!
+        אתם יכולים לשנות את מאפייני הרקדנים שלכם עם הזמן, אם תניחו בלוקים חדשים מארגז הכלים שלכם בתוך בלוק ה"חזור על". היו יצירתיים ותעשו חיים!
 
         _כשתסיימו, לחצו על לחצן ה"סיום"._
       Dance_2019_10: התחילו להיכנס לגרוּב! צרו ריקוד משלכם, ושתפו אותו עם החברים שלכם.
