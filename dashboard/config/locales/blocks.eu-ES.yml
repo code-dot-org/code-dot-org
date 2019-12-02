@@ -330,6 +330,7 @@ eu:
             '"ROBOT"': robot guztiak
             '"SHARK"': marrazo guztiak
           LAYOUT:
+            '"diamond"': diamantea
             '"random"': ausazkoa
       Dancelab_randomColor:
         text: ausazko kolorea
