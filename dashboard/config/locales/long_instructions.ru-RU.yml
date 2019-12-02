@@ -841,6 +841,13 @@ ru-RU:
         &quot;CAT&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;,
         &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title>\n    <title name=\"LAYOUT\">\"circle\"</title>\n
         \ </block></xml>\nТеперь вы сможете создавать сразу много танцоров!"
+      Dance_2019_07: Каждый танцор имеет набор свойств, которые управляют тем, как
+        он выглядит. Используй <xml><block type="Dancelab_setPropEach" block-text="the
+        set block"><title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;,
+        &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;,
+        &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title><title name="PROPERTY">"scale"</title><title
+        name="VAL">???</title></block></xml> под зеленым блоком событий, чтобы танцоры
+        казались ближе или дальше.
       Dance_2019_08: У танцоров есть свойство «оттенок», позволяющее добавить слой
         краски. Попробуйте изменить оттенок одного из танцоров (или всей группы)!
       Dance_2019_09: |-
@@ -1057,6 +1064,10 @@ ru-RU:
       K-1 Maze Loops 8: Используй циклы «повторить», чтобы довести меня до свиньи!
       K-1 Maze Loops Assessment 1: Посмотри, чему мы научились! Используй цикл «повторить»,
         чтобы привести меня к свинке!
+      MC HOC 2016 SCORE LEVEL: В некоторых играх можно зарабатывать очки. Поиграйте
+        в салочки с этими железными големами и используйте блок «добавить  к счету»,
+        чтобы получать очко каждый раз, как вы их ловите. Чтобы выиграть, наберите
+        пять очков!
       MC_HOC_2017_01_RETRY: "Дверь заперта, но Исполнитель спешит на помощь! \\\r\n
         \\\r\n Прикрепите блок «двигаться вперед» к блоку «при запуске» в рабочей
         области, чтобы Исполнитель добрался до нажимной пластины [PressurePlate_Up].

@@ -893,6 +893,77 @@ ru-RU:
         - {}
         - correct: true
         - {}
+      Dance_Party_extras_intro:
+        markdown: |
+          # Продолжайте танцевать!
+
+          В части №2 вы можете создавать свой личный проект. Здесь нет никаких головоломок-вместо этого есть куча проектов, которые показывают различные способы сделать более сложные танцевальные вечеринки.
+
+          Вы можете проходить эти уровни в любом порядке. Вернитесь назад, чтобы посмотреть, как что-то было сделано на предыдущем уровне, или объединить концепции между проектами. Попробуйте их все, выберите свой любимый и потратьте свое время на добавление к этому проекту, чтобы сделать его своим собственным.
+
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Continue</a>
+
+          <div class="clearfix"></div>
+
+          <div style="float: left; margin: 10px">
+          <a href="2">
+          <h2>
+          Давайте устроим порядок!
+          </h2>
+
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="3">
+          <h2>
+          Куда они делись?
+          </h2>
+
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="4">
+          <h2>
+          Танцевальная команда
+          </h2>
+
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="5">
+          <h2>
+          Четвертные Ноты
+          </h2>
+
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="6">
+          <h2>
+          Бас, Середина, Высокие Частоты
+          </h2>
+
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="7">
+          <h2>
+          Ускорить, замедлить
+          </h2>
+
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
+
+          </div>
       GraphPaperProgramming-Unplugged:
         markdown: |
           # Программирование на бумаге
