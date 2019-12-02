@@ -11,9 +11,9 @@ const SVMTrainer = require('../../src/utils/SVMTrainer');
 import {ClassType} from '../../src/demo/constants';
 
 function clock(start) {
-  if ( !start ) return process.hrtime();
+  if (!start) return process.hrtime();
   var end = process.hrtime(start);
-  return Math.round((end[0]*1000) + (end[1]/1000000));
+  return Math.round(end[0] * 1000 + end[1] / 1000000);
 }
 
 function getRandomInt(max) {
@@ -162,7 +162,7 @@ const PartKey = Object.freeze({
   PECTORAL_FIN_FRONT: 'pectoralFinFront',
   DORSAL_FIN: 'dorsalFin',
   TAIL: 'tail',
-  COLOR: 'colorPalette'
+  COLOR: 'colors'
 });
 
 const NUM_TRIALS = 10;
@@ -174,30 +174,47 @@ describe('Model quality test', () => {
     initFishData();
   });
 
-  // TODO: (maddie) fix this test to work with new fishData.colors setup + re-enable
-  // test('Color test', async () => {
-  //   const trainSize = TRAIN_SIZE;
-  //
-  //   const idsByColor = {
-  //     red: [2, 5],
-  //     green: [3, 4],
-  //     blue: [0, 6]
-  //   };
-  //
-  //   for (const [color, ids] of Object.entries(idsByColor)) {
-  //     console.log(`${color}`);
-  //     const labelFn = (fish) => ids.includes(fish.colorPalette.index) ? ClassType.Like : ClassType.Dislike;
-  //     const result = await performTrials({
-  //       numTrials: NUM_TRIALS,
-  //       trainSize: trainSize,
-  //       testSize: 100,
-  //       labelFn: labelFn
-  //     });
-  //     analyzeConfusionMatrix(trainSize, result);
-  //     expect(result.precision).toBeGreaterThanOrEqual(0.85);
-  //     expect(result.recall).toBeGreaterThanOrEqual(0.5);
-  //   }
-  // });
+  test('Color test', async () => {
+    const trainSize = TRAIN_SIZE;
+
+    const idsByColor = {
+      red: [6, 7],
+      green: [2, 3],
+      blue: [4, 5]
+    };
+
+    const colorMatch = (rgb, colorIds) => {
+      const rgbs = Object.values(fishData.colors).map(color => color.rgb);
+
+      let match = false;
+      for (const id of colorIds) {
+        if (rgbs[id] === rgb) {
+          match = true;
+          break;
+        }
+      }
+
+      return match;
+    };
+
+    for (const [color, ids] of Object.entries(idsByColor)) {
+      console.log(`${color}`);
+      const labelFn = fish => {
+        return colorMatch(fish.colorPalette.bodyRgb, ids)
+          ? ClassType.Like
+          : ClassType.Dislike;
+      };
+      const result = await performTrials({
+        numTrials: NUM_TRIALS,
+        trainSize: trainSize,
+        testSize: 100,
+        labelFn: labelFn
+      });
+      analyzeConfusionMatrix(trainSize, result);
+      expect(result.precision).toBeGreaterThanOrEqual(0.85);
+      expect(result.recall).toBeGreaterThanOrEqual(0.5);
+    }
+  });
 
   test('test eels with smiling mouths', async () => {
     const trainSize = 300; // Need more fish to hit enough to train on
@@ -216,14 +233,21 @@ describe('Model quality test', () => {
       .filter(entry => bodyNames.includes(entry[0]))
       .map(entry => entry[1].index);
     console.log(
-      `mouth names: ${JSON.stringify(mouthNames)} mouthIds: ${JSON.stringify(mouthIds)}`
+      `mouth names: ${JSON.stringify(mouthNames)} mouthIds: ${JSON.stringify(
+        mouthIds
+      )}`
     );
     console.log(
-      `body names: ${JSON.stringify(bodyNames)} bodyIds: ${JSON.stringify(bodyIds)}`
+      `body names: ${JSON.stringify(bodyNames)} bodyIds: ${JSON.stringify(
+        bodyIds
+      )}`
     );
 
     const labelFn = fish =>
-      mouthIds.includes(fish[mouthKey].index) && bodyIds.includes(fish[bodyKey].index) ? ClassType.Like : ClassType.Dislike;
+      mouthIds.includes(fish[mouthKey].index) &&
+      bodyIds.includes(fish[bodyKey].index)
+        ? ClassType.Like
+        : ClassType.Dislike;
 
     const result = await performTrials({
       numTrials: 1,
@@ -460,7 +484,12 @@ describe('Model quality test', () => {
      */
     const finData = fishData.dorsalFins;
     const finKey = PartKey.DORSAL_FIN;
-    const fastFins = ['dorsal_fin_2', 'dorsal_fin_4', 'dorsal_fin_10', 'dorsal_fin_12'];
+    const fastFins = [
+      'dorsal_fin_2',
+      'dorsal_fin_4',
+      'dorsal_fin_10',
+      'dorsal_fin_12'
+    ];
 
     const bodyData = fishData.bodies;
     const bodyKey = PartKey.BODY;
@@ -477,14 +506,14 @@ describe('Model quality test', () => {
       .filter(entry => slowBodies.includes(entry[0]))
       .map(entry => entry[1].index);
 
+    console.log(`fast fin ids: ${JSON.stringify(fastFinIds)}`);
     console.log(
-      `fast fin ids: ${JSON.stringify(fastFinIds)}`
-    );
-    console.log(
-      `fast body ids: ${JSON.stringify(fastBodyIds)} slow body ids: ${JSON.stringify(slowBodyIds)}`
+      `fast body ids: ${JSON.stringify(
+        fastBodyIds
+      )} slow body ids: ${JSON.stringify(slowBodyIds)}`
     );
 
-    const labelFn = (fish) => {
+    const labelFn = fish => {
       const finId = fish[finKey].index;
       const bodyId = fish[bodyKey].index;
 
