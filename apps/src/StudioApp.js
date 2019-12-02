@@ -1838,6 +1838,28 @@ StudioApp.prototype.fixViewportForSmallScreens_ = function(viewport, config) {
   }
   var width = Math.max(minWidth, desiredWidth);
   var scale = deviceWidth / width;
+
+  var content = [
+    'width=' + width,
+    'minimal-ui',
+    'initial-scale=' + scale,
+    'maximum-scale=' + scale,
+    'minimum-scale=' + scale,
+    'target-densityDpi=device-dpi',
+    'user-scalable=no'
+  ];
+  viewport.setAttribute('content', content.join(', '));
+};
+
+/**
+ *
+ */
+StudioApp.prototype.fixViewportForSpecificWidthForSmallScreens_ = function(
+  viewport,
+  width
+) {
+  const scale = screen.width / width;
+
   var content = [
     'width=' + width,
     'minimal-ui',
