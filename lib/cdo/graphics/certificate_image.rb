@@ -202,6 +202,8 @@ def certificate_template_for(course)
       end
     elsif course == 'mee'
       'MC_Hour_Of_Code_Certificate_mee.png'
+    elsif course == ScriptConstants::OCEANS_NAME
+      'oceans_hoc_certificate.png'
     else
       'hour_of_code_certificate.jpg'
     end
