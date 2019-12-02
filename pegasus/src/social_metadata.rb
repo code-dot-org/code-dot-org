@@ -26,7 +26,8 @@ def get_social_metadata_for_page(request)
     dance_2018: {path: "/images/social-media/dance-social-2018.png", width: 1200, height: 630},
     dance_2019: {path: "/images/social-media/dance-social-2019.png", width: 1200, height: 630},
     hoc_thanks: {path: "/images/hourofcode-2015-video-thumbnail.png", width: 1440, height: 900},
-    hoc_2019_social: {path: "/shared/images/social-media/hoc2019_social.png", width: 1200, height: 630}
+    hoc_2019_social: {path: "/shared/images/social-media/hoc2019_social.png", width: 1200, height: 630},
+    oceans: {path: "/shared/images/social-media/oceans_social.png", width: 1200, height: 630}
   }
 
   # Important:
@@ -148,6 +149,13 @@ def get_social_metadata_for_page(request)
         image: images[:dance_2019]
       }
     },
+    "oceans" => {
+      "default" => {
+        title: hoc_s(:social_hoc2019_oceans_title),
+        description: hoc_s(:social_hoc2019_oceans_desc),
+        image: images[:oceans]
+      }
+    },
     "thanks" => {
       "default" => {
         title: hoc_s(:meta_tag_og_title),
@@ -163,6 +171,8 @@ def get_social_metadata_for_page(request)
     page = "minecraft"
   elsif request.path == "/dance" && request.site == "code.org"
     page = "dance"
+  elsif request.path == "/oceans" && request.site == "code.org"
+    page = "oceans"
   elsif request.path == "/" && ["code.org", "csedweek.org", "hourofcode.com"].include?(request.site)
     page = request.site
   elsif request.path == "/thanks" && request.site == "hourofcode.com"
