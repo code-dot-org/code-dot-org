@@ -21,6 +21,7 @@ import aiBotClosed from '../../public/images/ai-bot/ai-bot-closed.png';
 import counterIcon from '../../public/images/polaroid-icon.png';
 import arrowDownImage from '../../public/images/arrow-down.png';
 import snail from '../../public/images/snail-large.png';
+import loadingGif from '../../public/images/loading.gif';
 import Typist from 'react-typist';
 import {getCurrentGuide, dismissCurrentGuide} from './models/guide';
 import {playSound} from './models/soundLibrary';
@@ -168,8 +169,7 @@ const styles = {
     transform: 'translate(-50%, -50%)',
     top: '50%',
     left: '50%',
-    color: colors.darkGrey,
-    fontSize: '180%'
+    maxWidth: '30%'
   },
   activityIntroText: {
     position: 'absolute',
@@ -401,7 +401,7 @@ const styles = {
     top: 0,
     left: '0%',
     height: '150%',
-    backgroundColor: colors.green
+    backgroundColor: colors.teal
   },
   pondPanelGeneralBarText: {
     position: 'absolute',
@@ -467,11 +467,11 @@ const styles = {
     height: '6%',
     width: '2.5%',
     ':hover': {
-      backgroundColor: colors.neonBlue,
+      backgroundColor: colors.teal,
       color: colors.white
     },
     ':focus': {
-      backgroundColor: colors.neonBlue,
+      backgroundColor: colors.teal,
       color: colors.white
     }
   },
@@ -480,8 +480,8 @@ const styles = {
     margin: 'auto',
     height: '100%'
   },
-  bgNeonBlue: {
-    backgroundColor: colors.neonBlue,
+  bgTeal: {
+    backgroundColor: colors.teal,
     color: colors.white
   },
   bgRed: {
@@ -751,7 +751,7 @@ let Loading = class Loading extends React.Component {
   render() {
     return (
       <Body>
-        <div style={styles.loading}>Loading...</div>
+        <img src={loadingGif} style={styles.loading} />
       </Body>
     );
   }
@@ -1416,7 +1416,7 @@ let Pond = class Pond extends React.Component {
           <div
             style={{
               ...styles.infoIconContainer,
-              ...(!state.pondPanelShowing ? {} : styles.bgNeonBlue)
+              ...(!state.pondPanelShowing ? {} : styles.bgTeal)
             }}
             onClick={this.onPondPanelButtonClick}
           >
