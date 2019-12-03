@@ -94,7 +94,7 @@ class LevelsController < ApplicationController
         type: 'select',
         options: [
           ['Any owner', ''],
-          *Level.joins(:user).uniq.pluck('users.name, users.id').sort_by {|a| a[0]}
+          *Level.joins(:user).distinct.pluck('users.name, users.id').sort_by {|a| a[0]}
         ]
       }
     end
