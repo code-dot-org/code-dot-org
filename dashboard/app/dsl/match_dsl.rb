@@ -17,7 +17,11 @@ class MatchDSL < ContentDSL
 
   def layout(text) @hash[:layout] = text end
 
-  def self.non_i18n_fieldnames
-    super + %w(height layout)
+  def self.i18n_fields
+    super + %w(
+      answers
+      feedback
+      questions
+    )
   end
 end

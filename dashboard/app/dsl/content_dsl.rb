@@ -38,16 +38,14 @@ class ContentDSL < LevelDSL
     @hash[:options][key.to_sym] = args.first
   end
 
-  def self.non_i18n_fieldnames
+  def self.i18n_fields
     super + %w(
-      display_as_unplugged
+      content1
+      content2
+      content3
       display_name
-      hide_reference_area
-      options
-      submittable
-      teacher_markdown
-      use_large_video_player
-      video_key
+      markdown
+      title
     )
   end
 end

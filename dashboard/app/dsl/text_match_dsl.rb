@@ -10,7 +10,7 @@ class TextMatchDSL < ContentDSL
   def answer(text) @hash[:answers] << text end
   def placeholder(text) @hash[:placeholder] = text end
 
-  def self.non_i18n_fieldnames
-    super + %w(height)
+  def self.i18n_fields
+    super + %w(answers)
   end
 end
