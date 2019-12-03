@@ -106,7 +106,7 @@ Stellen Sie Ihrer Klasse Kopfhörer zur Verfügung, oder bitten Sie ihre Schüle
 
 Die Hour of Code ist nur der erste Schritt einer Reise um mehr darüber zu lernen, wie Technologie funktioniert und wie Software Anwendungen geschrieben werden. Um weiter zu reisen:
 
-- Ermutigen Sie Ihre Schülerinnen und Schüler weiter [online zu lernen](%= resolve_url('https://code. org/learn/beyond') %).
-- Nehmen Sie an einem [eintägigen Workshop](%= resolve_url('https://code.org/professional-development-workshops') %) teil, um Anleitung eines erfahrenen Informatikberaters zu erhalten. (Nur für Lehrer/Veranstalter aus den USA!)
+- Encourage students to continue to [learn online]({{ urls/learn_beyond }}).
+- [Attend]({{ urls/professional_development_workshops }}) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 {{ signup_button }}
