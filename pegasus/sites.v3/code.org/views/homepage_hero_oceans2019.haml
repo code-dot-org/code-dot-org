@@ -52,6 +52,11 @@
     left: 737px;
   }
 
+  @media screen and (max-width: 1080px)
+  {
+    .snail { display: none; }
+  }
+
 .img-container.desktop-feature
   %img.sea-creature{src: 'images/oceans/turtle.png'}
   .scanning-bot
@@ -101,13 +106,18 @@
         var swayOffsetX = Math.sin(((swayValue * Math.PI) / 180) * 2) * 25;
         var swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 6) * 2;
         var x = fishLocations[index].x + swayOffsetX;
+        var swimSpace = fishLocations[index].x + 150;
         var y;
         if (index == 6) {
           y = fishLocations[index].y;
         } else {
           y = fishLocations[index].y + swayOffsetY;
         }
-        $(this).css({left: x, top: y, display: 'block', width: fishWidths[index]});
+        if ($(window).width() < swimSpace) {
+          $(this).css({display: 'none'})
+        } else {
+          $(this).css({left: x, top: y, display: 'block', width: fishWidths[index]});
+        }
       });
     }, 1000 / 30);
   });
