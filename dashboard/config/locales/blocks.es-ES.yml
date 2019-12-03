@@ -447,6 +447,7 @@ es:
           LAYOUT:
             '"border"': frontera
             '"inner"': cuadrado
+            '"diamond"': diamante
             '"circle"': círculo
             '"grid"': cuadrícula
             '"row"': fila

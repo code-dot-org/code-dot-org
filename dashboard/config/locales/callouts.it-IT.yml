@@ -149,14 +149,14 @@ it-IT:
         dance_callout_11_a: Nuovo blocco!
         dance_callout_11_b: Nuovo blocco!
       Dance_2019_01:
-        dance_callout_01: Aggiungi questo blocco al tuo programma!
+        dance_callout_01: Qui scegli il tipo di ballerino.
       Dance_2019_02:
         dance_callout_11_a: Aggiungi questo blocco al tuo programma.
         arrow_buttons: Premi i pulsanti freccia per controllare il tuo ballerino.
       Dance_2019_04:
         dance_callout_02: Aggiungi questo blocco al tuo programma!
       Dance_2019_05:
-        dance_callout_05: Aggiungi un nuovo evento al programma.
+        dance_callout_05: Aggiungi un nuovo evento al tuo programma.
       Dance_2019_06:
         dance_party_11_5_groups: Nuovo blocco!
       Dance_2019_07:
@@ -879,11 +879,11 @@ it-IT:
       courseF_bee_for9_2019:
         courseF_bee_for9_1: I blocchi matematici li trovi qui dentro.
       courseF_bee_functions2:
-        courseF_bee_functions2_1: Questo blocco chiama una funzione. Clicca questo
-          bottono "modifica" per vedere cosa c'è all'interno!
+        courseF_bee_functions2_1: Questo blocco richiama una funzione. Clicca il pulsante
+          "modifica" per vedere cosa c'è all'interno!
       courseF_bee_functions6:
-        courseF_bee_functions6_1: Non dimenticare di guardare quì per più blocchi
-          che potrebbero aiutarti a renderlo più facile!
+        courseF_bee_functions6_1: Non dimenticarti che qui ci sono altri blocchi che
+          potrebbero semplificarti il lavoro!
       courseF_bee_functions_challenge1:
         courseF_bee_functions_challenge1_1: Quale codice dovresti inserire in questa
           funzione?
@@ -896,10 +896,15 @@ it-IT:
         courseF_bee_functions_1_2018_1: Puoi trovare qui le tue variabili!
       courseF_bee_variables_1_2019:
         courseF_bee_functions_1_2018_1: Puoi trovare qui le tue variabili!
+      courseF_playlab_variables1a:
+        courseF_playlab_variables1a_1: La cassetta degli attrezzi è stata organizzata
+          in categorie per farti trovare più facilmente i blocchi che ti servono.
       courseF_playlab_variables5c:
         courseF_playlab_variables5c_1: Troverai qui il tuo blocco variabile.
       courseF_playlab_variables6c:
         courseF_playlab_variables5c_1: Troverai qui il tuo blocco variabile.
+      courseF_playlab_variables7c:
+        courseF_playlab_variables7c_1: Il blocco `chiedi` lo trovi qui!
       coursea_maze_ramp1_2018:
         grade2_CaringForNewPet_0_1: Dopo aver collegato insieme tutti i blocchi, premi
           "Esegui" per far partire il tuo programma.

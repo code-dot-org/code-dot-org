@@ -1,5 +1,5 @@
 ---
-title: Press Kit
+title: प्रेस किट
 ---
 
 {{ signup_button }}

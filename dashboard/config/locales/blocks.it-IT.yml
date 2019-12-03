@@ -3,6 +3,7 @@ it:
   data:
     blocks:
       Dancelab_alternateMoves:
+        text: "{GROUP} alternano ogni {N} battute \ntra {MOVE1} e {MOVE2}"
         options:
           GROUP:
             sprites: tutto
@@ -16,9 +17,10 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
+            '"SLOTH"': bradipi
             '"UNICORN"': Unicorni
           MOVE1:
-            MOVES.Roll: Ruota il corpo
+            MOVES.Roll: Piroetta
             MOVES.ClapHigh: Applauso alto
             MOVES.Dab: Dab
             MOVES.DoubleJam: Doppio giù
@@ -31,7 +33,7 @@ it:
             MOVES.Thriller: Zombie
             MOVES.Rest: Nessuno
           MOVE2:
-            MOVES.Roll: Ruota il corpo
+            MOVES.Roll: Piroetta
             MOVES.ClapHigh: Applauso alto
             MOVES.Dab: Dab
             MOVES.DoubleJam: Doppio giù
@@ -71,12 +73,13 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
+            '"SLOTH"': bradipi
             '"UNICORN"': tutti gli unicorni
           MOVE:
             '"next"': "(Successiva)"
             '"prev"': "(Precedente)"
             '"rand"': "(Casuale)"
-            MOVES.Roll: Ruota il corpo
+            MOVES.Roll: Piroetta
             MOVES.ClapHigh: Applauso alto
             MOVES.Dab: Dab
             MOVES.DoubleJam: Doppio giù
@@ -98,7 +101,7 @@ it:
             '"next"': "(Successiva)"
             '"prev"': "(Precedente)"
             '"rand"': "(Casuale)"
-            MOVES.Roll: Ruota il corpo
+            MOVES.Roll: Piroetta
             MOVES.ClapHigh: Applauso alto
             MOVES.Dab: Dab
             MOVES.DoubleJam: Doppio giù
@@ -138,6 +141,7 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
+            '"SLOTH"': bradipi
             '"UNICORN"': Unicorni
           PROPERTY:
             '"scale"': dimensione
@@ -161,11 +165,12 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
+            '"SLOTH"': bradipi
             '"UNICORN"': Unicorni
           MOVE:
             '"rand"': "(Casuale)"
             MOVES.XBend: Butta dietro
-            MOVES.Roll: Ruota il corpo
+            MOVES.Roll: Piroetta
             MOVES.XClapSide: Applauso
             MOVES.ClapHigh: Applauso alto
             MOVES.Dab: Dab
@@ -197,7 +202,7 @@ it:
           MOVE:
             '"rand"': "(Casuale)"
             MOVES.XBend: Butta dietro
-            MOVES.Roll: Ruota il corpo
+            MOVES.Roll: Piroetta
             MOVES.XClapSide: Applauso
             MOVES.ClapHigh: Applauso alto
             MOVES.Dab: Dab
@@ -226,7 +231,7 @@ it:
       Dancelab_everyMeasuresRange:
         text: 'ripeti ogni {N} battute dopo {START} '
       Dancelab_everySeconds:
-        text: 'ogni {N} {UNIT} '
+        text: 'ripeti ogni {N} {UNIT} '
         options:
           UNIT:
             '"measures"': battute
@@ -280,7 +285,7 @@ it:
             MOVES.Drop: Spaccata
             MOVES.Floss: Floss
             MOVES.Fresh: Fresh
-            MOVES.Roll: Ruota il corpo
+            MOVES.Roll: Piroetta
             MOVES.Kick: Stella
             MOVES.ThisOrThat: Questo o quello
             MOVES.Thriller: Zombie
@@ -326,6 +331,7 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
+            '"SLOTH"': bradipi
             '"UNICORN"': Unicorni
           LOCATION:
             "{x: 200, y: 100}": in alto
@@ -353,6 +359,7 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
+            '"SLOTH"': bradipi
             '"UNICORN"': Unicorni
           FORMAT:
             '"border"': bordo
@@ -380,6 +387,7 @@ it:
             '"PINEAPPLE"': Ananas
             '"ROBOT"': robot
             '"SHARK"': Squalo
+            '"SLOTH"': bradipo
             '"UNICORN"': unicorno
           LOCATION:
             "{x: 200, y: 100}": in alto
@@ -408,6 +416,7 @@ it:
             '"PINEAPPLE"': Ananas
             '"ROBOT"': Robot
             '"SHARK"': Squalo
+            '"SLOTH"': bradipo
             '"UNICORN"': Unicorno
           LOCATION:
             "{x: 200, y: 100}": in alto
@@ -422,7 +431,7 @@ it:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": in un punto casuale
       Dancelab_makeNewDanceSpriteGroup:
         text: |-
-          Disponi {N} nuovi {COSTUME}
+          disponi {N} nuovi {COSTUME}
           in {LAYOUT}
         options:
           N:
@@ -452,14 +461,16 @@ it:
             '"DOG"': Cani
             '"DUCK"': Paperi
             '"FROG"': Ranocchi
-            '"MOOSE"': Alci
+            '"MOOSE"': Alce
             '"PINEAPPLE"': Ananas
             '"ROBOT"': Robot
             '"SHARK"': Squali
+            '"SLOTH"': bradipi
             '"UNICORN"': Unicorni
           LAYOUT:
             '"border"': bordo
             '"inner"': quadrato interno
+            '"diamond"': diamante
             '"circle"': cerchio
             '"grid"': griglia
             '"row"': fila
@@ -570,6 +581,7 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
+            '"SLOTH"': bradipi
             '"UNICORN"': Unicorni
           SPEED:
             '1': normale
@@ -639,6 +651,7 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
+            '"SLOTH"': bradipi
             '"UNICORN"': Unicorni
           PROPERTY:
             '"scale"': dimensione
@@ -674,6 +687,7 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
+            '"SLOTH"': bradipi
             '"UNICORN"': Unicorni
           PROPERTY:
             '"scale"': dimensione
@@ -700,6 +714,7 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
+            '"SLOTH"': bradipi
             '"UNICORN"': Unicorni
       Dancelab_setTintEachInline:
         text: imposta la tonalità di {THIS} a {VAL}
@@ -716,6 +731,7 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
+            '"SLOTH"': bradipi
             '"UNICORN"': Unicorni
       Dancelab_setTintInline:
         text: imposta la tonalità di {SPRITE} a {VAL}
@@ -740,6 +756,7 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
+            '"SLOTH"': bradipi
             '"UNICORN"': Unicorni
           VISIBILITY:
             'true': visibile
@@ -774,6 +791,7 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
+            '"SLOTH"': bradipi
             '"UNICORN"': Unicorni
           PROPERTY:
             '"scale"': dimensione
@@ -818,6 +836,7 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
+            '"SLOTH"': bradipi
             '"UNICORN"': Unicorni
           PROPERTY:
             '"scale"': dimensione
@@ -1318,7 +1337,7 @@ it:
             MOVES.Drop: Spaccata
             MOVES.Floss: Floss
             MOVES.Fresh: Fresh
-            MOVES.Roll: Ruota il corpo
+            MOVES.Roll: Piroetta
             MOVES.Kick: Stella
             MOVES.ThisOrThat: Questo o quello
             MOVES.Thriller: Zombie

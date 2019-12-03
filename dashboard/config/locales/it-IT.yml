@@ -1364,8 +1364,8 @@ it:
       workshop_course:
         csf_af: Fondamenti di Informatica (Corsi A-F)
         csf_express: Fondamenti di Informatica (Corsi rapidi)
-        csd: Scoperte CS
-        csp: CS Principles
+        csd: Alla scoperta dell'informatica
+        csp: Principi di informatica
       email_opt_in:
         opt_in_yes: Sì
         opt_in_no: 'No'

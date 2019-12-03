@@ -148,6 +148,7 @@ az:
             '19': '19'
             '20': '20'
           LAYOUT:
+            '"diamond"': almaz
             '"random"': təsadüfi
       Dancelab_randomColor:
         text: ixtiyari rəng

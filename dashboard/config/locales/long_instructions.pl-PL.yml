@@ -5,6 +5,11 @@ pl-PL:
       2-3 Artist 1 new: Cześć, jestem artystą. Możesz napisać kod, bym narysował prawie
         wszystko. Użyj kilku bloków, bym rysował po szarych liniach na obrazku. (Każda
         linia ma po 100 pikseli)
+      2-3 Artist 11: 'Dodaj znakowi stop obramowanie, tworząc ośmiokąt o bokach równych
+        100 pikseli. '
+      2-3 Artist 12: "Stwórz okrąg, by ukończyć oko!\n\nJeśli artysta obraca się o
+        1 stopień z każdą pętlą, to ile razy potrzebujesz powtórzyć ten kod, aby narysować
+        okrąg? "
       2-3 Artist 2 new: Ten dom ma do połowy skończoną ścianę. Każdy bok ma 100 ale
         tylko ściana skończona do połowy ma 50. Skończ ścianę.
       2-3 Artist 3.4: Blok skoku przesuwa artystę bez rysowania. Narysuj przerywaną
@@ -31,6 +36,22 @@ pl-PL:
       2-3 Artist Assessment 1: "**Szacowanie:** Ukończ rysowanie ostatniego zęba.
         Jest on szeroki na 25 pikseli i wysoki na 25 pikseli."
       2-3 Artist Free Play: Czas na zabawę! Narysuj cokolwiek chcesz.
+      2-3 Artist Loops New 1: Narysujmy głowę tego robota! Czy potrafisz stworzyć
+        kwadrat o bokach, które mają 100 pikseli?<br/>
+      2-3 Artist Loops New 10: Teraz połączmy trochę V razem w pętlę.
+      2-3 Artist Loops New 11: |-
+        Czas na zrobienie czegoś odlotowego!
+
+        Odbuduj kod z ostatniej łamigłówki, ale tym razem dodaj skręt w lewo o 30 stopni wewnątrz pętli. Teraz powtórz to 24 razy zamiast 8.
+      2-3 Artist Loops New 12: 'Narysuj diament o bokach 100 pikseli. '
+      2-3 Artist Loops New 13: "Zacznij od pewnego kodu (na szaro), by narysować jeden
+        diament. \n\nZapętlij szary kod, aby stworzyć zabawny wzór!"
+      2-3 Artist Loops New 2: |-
+        Tutaj jest ta sama łamigłówka, którą właśnie rozwiązaliśmy, ale tym razem możemy użyć tylko jednego bloku 'idź naprzód' i jednego bloku 'skręć'.
+
+        Czy potrafisz użyć bloku 'powtórz' do rozwiązania tej łamigłówki?
+      2-3 Artist Loops New 9: Narysuj proste V (w którym oba boki mają po 50 pikseli),
+        aby ukończyć strzałkę.
       2-3 Artist Nested Loops 10: Powtórz w pętli ten kod 12 razy, aby ukończyć ten
         rysunek.
       2-3 Artist Nested Loops 12: Powtórz w pętli ten kod 12 razy, aby otrzymać te
@@ -42,6 +63,21 @@ pl-PL:
       2-3 Bee Loops 3A: Użyj pętli "powtórz", by zebrać cały nektar.
       2-3 Maze 1: "Czy pomożesz mi złapać tę niesforną świnkę? \n\nUstaw parę bloków
         'idź naprzód' pod blokiem 'po uruchomieniu' i naciśnij 'Uruchom'. "
+      2-3 Maze 12: |-
+        Nagle pojawia się magiczny blok! Z blokiem 'powtórz' możesz zapętlać kod w kółko i w kółko.
+
+        Czy możesz dostać się do świnki, tworząc pętlę, która używa tylko jednego bloku 'idź naprzód' w środku bloku 'powtórz'?
+      2-3 Maze 13: Doprowadź mnie do świnki! Możesz teraz użyć tylko jednego bloku
+        'idź naprzód'
+      2-3 Maze 15: W tej łamigłówce dwie pętle 'powtórz' pomogą ci dotrzeć do świnki
+        za pomocą mniejszej liczby bloków!
+      2-3 Maze Loops 18: Doprowadź mnie do słonecznika używając możliwie najmniejszej
+        liczby bloków!   Spróbuj użyć pętli "powtórz" wewnątrz innej pętli, by skrócić
+        ilość kodu, który potrzebujesz.
+      2-3 Maze Loops 19: "Sprowadźmy to na wyższy poziom! \n\n Użyj pętli, aby doprowadzić
+        mnie do słonecznika za pomocą możliwie najmniejszej liczby bloków."
+      2-3 Maze Loops Assessment 1: "**Sprawdzian:** Doprowadź mnie do słonecznika,
+        używając tylko 5 bloków! "
       4-5 Artist Free Draw 1: Wolny wybór!  Narysuj cokolwiek, co inspiruje Cię do
         kreatywności.
       4-5 Artist Patterns 7: Zmodyfikujmy kod z ostatniej łamigłówki, aby utworzyć
@@ -214,7 +250,7 @@ pl-PL:
       CourseD_Dance_Party_01: |-
         _Urządźmy potańcówkę!_
 
-        Przeciągnij blok „utwórz nowego” do obszaru roboczego i połącz go wewnątrz bloku „układ”, aby utworzyć pierwszego tancerza.
+        Przeciągnij blok 'utwórz nowego' do obszaru roboczego i połącz go wewnątrz bloku 'układ, aby utworzyć pierwszego tancerza.
 
         -   _Jeśli chcesz uzyskać dodatkowe informacje lub potrzebujesz ekstra wyzwań, możesz także kliknąć żarówkę po lewej._
       CourseD_Dance_Party_02: |-
@@ -234,11 +270,11 @@ pl-PL:
       CourseD_Dance_Party_05: |-
         Użyj kolejnego nowego bloku, aby tancerz zmieniał ruchy **co 2 takty**!
 
-        \*Wybranie (Następny), (Poprzedni), or (Losowy) mówi tancerzowi, aby za każdym razem, gdy uruchamiany jest kod, wykonywał inny ruch.
+        -   Wybranie '(Następny)', '(Poprzedni)', lub '(Losowy)' mówi tancerzowi, aby za każdym razem, gdy uruchamiany jest kod, wykonywał inny ruch.
       CourseD_Dance_Party_06: |-
         _Potrzebujemy więcej tancerzy!_
 
-        Utwórz kopię tancerza do tańca z kotem i nazwij go „kopia\_tancerza1”.
+        Utwórz kopię tancerza do tańca z kotem i nazwij go 'kopia\_tancerza1'.
       CourseD_Dance_Party_08: |-
         Każdy tancerz odznacza się zestawem _właściwości_, które decydują o tym, jak wygląda.
 
@@ -327,7 +363,7 @@ pl-PL:
         PM.png>) po kliknięciu na przycisku Uruchom!_"
       Dance_2019_03: Pora na tańce! Zaprogramuj każdego tancerza, aby poruszał się
         po naciśnięciu różnych klawiszy. Wybierz ulubiony ruch dla każdego tancerza
-        lub ustaw tę opcję na „(Losowo)”, aby stworzyć coś zupełnie nieprzewidywalnego!
+        lub ustaw tę opcję na '(Losowo)', aby stworzyć coś zupełnie nieprzewidywalnego!
       Dance_2019_04: "Niech tancerze poruszają się w rytm muzyki!\n\nPrzyłącz blok
         <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">4</title><title
         name=\"UNIT\">\"measures\"</title></block></xml> do bloku <xml><block type=\"Dancelab_changeMoveEachLR\"><title
@@ -387,11 +423,11 @@ pl-PL:
       Dance_Party_05: |-
         Użyj kolejnego nowego bloku, aby tancerz zmieniał ruchy **co 2 takty**!
 
-        \*Wybranie (Następny), (Poprzedni), or (Losowy) mówi tancerzowi, aby za każdym razem, gdy uruchamiany jest kod, wykonywał inny ruch.
+        -   Wybranie '(Następny)', '(Poprzedni)', or '(Losowy)' mówi tancerzowi, aby za każdym razem, gdy uruchamiany jest kod, wykonywał inny ruch.
       Dance_Party_06: |-
         _Potrzebujemy więcej tancerzy!_
 
-        Utwórz kopię tancerza do tańca z kotem i nazwij go „kopia\_tancerza1”.
+        Utwórz kopię tancerza do tańca z kotem i nazwij go 'kopia\_tancerza1'.
       Dance_Party_08: |-
         Każdy tancerz odznacza się zestawem _właściwości_, które decydują o tym, jak wygląda.
 
@@ -403,12 +439,11 @@ pl-PL:
       Dance_Party_10: |-
         Teraz wiemy, jak zmieniać właściwości tancerza. Stosując poniższy blok możemy także sprawić, że te same właściwości będą automatycznie reagować na muzykę:
         <xml>
-        <block type="Dancelab_startMapping">
-        \< nazwa tytuł = "SPRITE" > right\_pineapple \< / title >
-
-        <title name="PROPERTY">"scale"</title>
-        <title name="RANGE">"bass"</title>
-        </block></xml>
+          <block type="Dancelab_startMapping">
+            <title name="SPRITE">right_unicorn</title>
+            <title name="PROPERTY">"scale"</title>
+            <title name="RANGE">"bass"</title>
+          </block></xml>
 
         Ten program wykorzystuje „basy” (niskie tony) w muzyce do sterowania wysokością tancerza. Czy możesz spowodować, aby drugi tancerz także reagował na muzykę?
       Dance_Party_11: |-
@@ -437,7 +472,7 @@ pl-PL:
       Dance_Party_extras_alternate_2019: |-
         # Tam i z powrotem!
 
-        Czasami możesz chcieć utworzyć wzór wybranych ruchów tanecznych. Ten nowy blok pozwala to zrobić.
+        Czasami możesz chcieć utworzyć własny układ ruchów tanecznych. Ten nowy blok pozwala to zrobić.
 
         <xml><block type="Dancelab_alternateMoves"><title name="GROUP">sprites</title><title name="N">2</title><title name="MOVE1">MOVES.Roll</title><title name="MOVE2">MOVES.ClapHigh</title></block></xml>
 
@@ -454,21 +489,21 @@ pl-PL:
         -   Spraw, aby tancerze wspierający również reagowali na wciskanie klawiszy
         -   Zmieniaj tancerza co 4 takty, ustawiając jego widoczność
       Dance_Party_extras_battle_2019: |-
-        # Zespoły taneczne
+        # Grupy taneczne
 
         To bitwa taneczna pomiędzy dwiema grupami. Klawisze ze strzałkami sterują jednym z tancerzy, a klawisze "w, a, s, d" drugim. Zagraj w taneczną bitwę z przyjacielem, a potem spróbuj udoskonalić ten taniec.
 
         -   Dodaj kolejne przyciski kontrolujące taniec
-        -   Spraw, aby tancerze wspierający również reagowali na naciskanie klawiszy
+        -   Spraw, aby tancerze wspierający również reagowali na wciskanie klawiszy
         -   Zmieniaj tancerza co 4 takty, ustawiając jego widoczność
       Dance_Party_extras_every_beat: "# Ćwierćnuty\n\nWiększość naszych tańców wykorzystuje
-        pełne takty, ale każdy takt składa się z 4 ćwierćnut. Ten taniec używa \"co
-        0,25 taktu\", co sprawia, że tancerz klaszcze w każdej ćwierćnucie. \n\nW
-        tym tańcu wykorzystano także blok _warunkowy_ do kontrolowania, kiedy blok
-        \"co 0,25 taktu\" może zmienić taniec. Spróbuj zmieniać liczby w bloku warunkowym,
+        pełne takty, ale każdy takt składa się z 4 ćwierćnut. Ten taniec używa 'co
+        0,25 taktu', co sprawia, że tancerz klaszcze w każdej ćwierćnucie. \n\nW tym
+        tańcu wykorzystano także blok _warunkowy_ do kontrolowania, kiedy blok \"co
+        0,25 taktu\" może zmienić taniec. Spróbuj zmieniać liczby w bloku warunkowym,
         aby zobaczyć, jak wpływa to na taniec. \n\n-   Eksperymentuj z innymi czasami
         trwania nut (np. 0,5 dla półnuty lub 0,125 dla ósemki). \n-   Dodaj jakieś
-        zdarzenia \"po zakończeniu taktu\". \n-   Przełącz \"takty\" na \"sekundy\"
+        zdarzenia 'po zakończeniu taktu'. \n-   Przełącz \"takty\" na \"sekundy\"
         i spróbuj w ten sposób taktować swoje tańce."
       Dance_Party_extras_every_beat_2019: |-
         # Ćwierćnuty
@@ -482,7 +517,7 @@ pl-PL:
       Dance_Party_extras_layout: |-
         # Przejdźmy do formacji!
 
-        Obejrzyj taniec, w którym użyto bloku „układ” do zmieniania formacji tancerzy zapasowych w trakcie tańca. Wypróbuj któregoś z pomysłów na rozbudowanie tańca:
+        Obejrzyj taniec, w którym użyto bloku 'układ' do zmieniania formacji tancerzy zapasowych w trakcie tańca. Wypróbuj któryś z pomysłów na rozbudowanie tańca:
 
         -   Utwórz drugą grupę tancerzy w innym układzie
         -   Zmień układ po naciśnięciu klawisza
@@ -496,11 +531,11 @@ pl-PL:
         -   Zmień układ po naciśnięciu klawisza
         -   Zmień właściwość, gdy tancerze zmienią formację
       Dance_Party_extras_mixed_2019: |-
-        Więcej przycisków
+        # Więcej przycisków
 
         Ten taniec pozwala automatycznie kontrolować właściwości tancerzy w czasie rzeczywistym, podczas gdy oni tańczą. Spróbuj zmienić inne właściwości po naciśnięciu przycisków. Na przykład:
 
-        -   Losuj odcień tancerza po naciśnięciu „w dół”.
+        -   Losuj odcień tancerza po naciśnięciu strzałki w dół.
         -   Dodaj grupę tancerzy w losowym układzie po naciśnięciu spacji.
       Dance_Party_extras_on_beat: |-
         # Bas, średni i wysoki ton
@@ -513,7 +548,7 @@ pl-PL:
       Dance_Party_extras_speed: |-
         # Przyspiesz, spowolnij
 
-        Ten ostatni taniec wykorzystuje blok "ustaw prędkość" do sterowania szybkością poruszania się tancerzy. Spróbuj poeksperymentować z różnymi prędkościami podczas różnych fragmentów piosenki. Nie przestawaj majstrować przy tym tańcu lub powróć do któregokolwiek z poprzednich tańców, aby uczynić je bardziej porywającymi.
+        Ten ostatni taniec wykorzystuje blok 'ustaw prędkość' do sterowania szybkością poruszania się tancerzy. Spróbuj poeksperymentować z różnymi prędkościami podczas różnych fragmentów piosenki. Nie przestawaj majstrować przy tym tańcu lub powróć do któregokolwiek z poprzednich tańców, aby uczynić je bardziej porywającymi.
       Dance_Party_extras_speed_2019: |-
         # Przyspiesz, zwolnij
 
@@ -527,13 +562,14 @@ pl-PL:
         -   Pokaż i ukryj tancerzy przy użyciu klawiszy strzałek
         -   Ukryj wszystkich tancerzy i przełącz na ekscytujący efekt tła
       Dance_Party_extras_visible_2019: |-
-        # Gdzie oni poszli?
+        # Ćwierćnuty
 
-        Ten taniec pokazuje i ukrywa dwie różne grupy tancerzy. Sprawdź to, a następnie spróbuj dodać własne ulepszenia.
+        Większość naszych tańców wykorzystuje całe takty, ale każdy takt składa się z czterech ćwierćnut. Taki taniec wykorzystuje blok [blockly block][0], by tancerz klaskał przy każdej ćwierćnucie po piątym takcie.
 
-        -   Dodaj kolejną grupę tancerzy
-        -   Pokaż i ukryj tancerzy przy użyciu klawiszy strzałek
-        -   Ukryj wszystkich tancerzy i przełącz na ekscytujący efekt tła
+        Spróbuj zmienić liczby w bloku, by przekonać się, jak zmieni się taniec.
+
+        -   Eksperymentuj z czasem trwania innych nut (np. 0,5 dla półnuty lub 0,125 dla ósemki).
+        -   Dodaj inne wydarzenia.
       Function intro Ryan: "W Twoim polu roboczym znajduje się funkcja o nazwie \"build
         bridget\".  Zawiera ona cały kod potrzebny do przekroczenia rzeki! \\\r\n
         \\\r\nUmieść zielony bloczek dwukrotnie w polu roboczym, aby naprawić ścieżkę,

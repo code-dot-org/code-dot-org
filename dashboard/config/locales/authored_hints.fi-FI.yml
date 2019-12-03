@@ -360,6 +360,10 @@ fi-FI:
           **Vapaaehtoinen haaste**
 
           Muuta taustaefektiä kappaleen eri vaiheissa yhdistämällä uusi blokki tapahtumien <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> alle.
+      Dance_Party_05:
+        validation: "**Miten läpäisen tämän tason?** \n\n-   Tanssijasi täytyy käydä
+          läpi vähintään 4 erilaista tanssiliikettä ennen kuin taso muuttuu. \n\n_Tämä
+          taso päättyy 12 mittayksikön jälkeen._"
       Dance_Party_06:
         validation: |-
           **Kuinka ylitän tämän tason?**

@@ -17,6 +17,7 @@ pl:
             '"PINEAPPLE"': ananasy
             '"ROBOT"': roboty
             '"SHARK"': rekiny
+            '"SLOTH"': leniuchy
             '"UNICORN"': jednorożce
           MOVE1:
             MOVES.Roll: Body Roll
@@ -72,6 +73,7 @@ pl:
             '"PINEAPPLE"': ananasy
             '"ROBOT"': roboty
             '"SHARK"': rekiny
+            '"SLOTH"': leniuchy
             '"UNICORN"': wszystkie jednorożce
           MOVE:
             '"next"': "(Następny)"
@@ -139,6 +141,7 @@ pl:
             '"PINEAPPLE"': ananasy
             '"ROBOT"': roboty
             '"SHARK"': rekiny
+            '"SLOTH"': leniuchy
             '"UNICORN"': jednorożce
           PROPERTY:
             '"scale"': rozmiar
@@ -162,6 +165,7 @@ pl:
             '"PINEAPPLE"': ananasy
             '"ROBOT"': roboty
             '"SHARK"': rekiny
+            '"SLOTH"': leniuchy
             '"UNICORN"': jednorożce
           MOVE:
             '"rand"': "(Losowy)"
@@ -329,6 +333,7 @@ pl:
             '"PINEAPPLE"': ananasy
             '"ROBOT"': roboty
             '"SHARK"': rekiny
+            '"SLOTH"': leniuchy
             '"UNICORN"': jednorożce
           LOCATION:
             "{x: 200, y: 100}": u góry
@@ -356,6 +361,7 @@ pl:
             '"PINEAPPLE"': ananasy
             '"ROBOT"': roboty
             '"SHARK"': rekiny
+            '"SLOTH"': leniuchy
             '"UNICORN"': jednorożce
           FORMAT:
             '"border"': brzeg
@@ -368,6 +374,7 @@ pl:
             '"plus"': plus
             '"random"': losowy
       Dancelab_makeAnonymousDanceSprite:
+        text: stwórz nowego {COSTUME} w {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': obcy
@@ -458,14 +465,20 @@ pl:
             '"PINEAPPLE"': Ananasy
             '"ROBOT"': Roboty
             '"SHARK"': Rekiny
+            '"SLOTH"': leniuchy
             '"UNICORN"': jednorożce
           LAYOUT:
             '"border"': brzeg
             '"inner"': wewnątrz kwadratu
+            '"diamond"': diament
             '"circle"': koło
             '"grid"': siatka
+            '"top"': górny wiersz
             '"row"': rząd
+            '"bottom"': dolny wiersz
+            '"left"': lewa kolumna
             '"column"': kolumna
+            '"right"': prawa kolumna
             '"x"': krzyż
             '"plus"': plus
             '"random"': losowy
@@ -522,18 +535,23 @@ pl:
             '"none"': Żaden
             '"rand"': "(Losowy)"
             '"circles"': Kółka
+            '"quads"': Kąty
             '"color_cycle"': Kolory
             '"diamonds"': Diamenty
             '"disco_ball"': Kula dyskotekowa
             '"fireworks"': Fajerwerki
             '"flowers"': Kwiaty
+            '"growing_stars"': Powiększające się gwiazdy
             '"swirl"': Hypno
             '"kaleidoscope"': Kalejdoskop
             '"lasers"': Laserowy parkiet
             '"splatter"': Plamy farby
             '"rainbow"': Tęcza
+            '"ripples_random"': Losowe fale
+            '"ripples"': Fale
             '"snowflakes"': Śnieg
             '"text"': Tytuły piosenek
+            '"squiggles"': Pokręcone linie
             '"galaxy"': Przestrzeń
             '"sparkles"': Migotanie
             '"spiral"': Spirala
@@ -574,6 +592,7 @@ pl:
             '"PINEAPPLE"': ananasy
             '"ROBOT"': roboty
             '"SHARK"': rekiny
+            '"SLOTH"': leniuchy
             '"UNICORN"': jednorożce
           SPEED:
             '1': normalny
@@ -608,8 +627,10 @@ pl:
             '"bubbles"': Bąbelki
             '"hearts_colorful"': Kolorowe Serca
             '"confetti"': Konfetti
+            '"emojis"': Emotikony
             '"hearts_red"': Serca
             '"music_notes"': Nuty
+            '"paint_drip"': Pipeta do farby
             '"pineapples"': Ananasy
             '"pizzas"': Pizze
             '"smiling_poop"': Kupa
@@ -618,6 +639,7 @@ pl:
             '"smile_face"': Uśmiechy
             '"spotlight"': Reflektor
             '"color_lights"': Światła rampy
+            '"exploding_stars"': Rozprysk
             '"raining_tacos"': Taco
       Dancelab_setProp:
         text: 'ustaw {SPRITE} {PROPERTY} na {VAL} '
@@ -644,6 +666,7 @@ pl:
             '"PINEAPPLE"': ananasy
             '"ROBOT"': roboty
             '"SHARK"': rekiny
+            '"SLOTH"': leniuchy
             '"UNICORN"': jednorożce
           PROPERTY:
             '"scale"': rozmiar
@@ -665,6 +688,7 @@ pl:
             '"y"': pozycja pionowa
             '"tint"': odcień
       Dancelab_setPropRandomEach:
+        text: losuj {GROUP} {PROPERTY}
         options:
           GROUP:
             sprites: wszystkie
@@ -678,6 +702,7 @@ pl:
             '"PINEAPPLE"': ananasy
             '"ROBOT"': roboty
             '"SHARK"': rekiny
+            '"SLOTH"': leniuchy
             '"UNICORN"': jednorożce
           PROPERTY:
             '"scale"': rozmiar
@@ -704,6 +729,7 @@ pl:
             '"PINEAPPLE"': ananasy
             '"ROBOT"': roboty
             '"SHARK"': rekiny
+            '"SLOTH"': leniuchy
             '"UNICORN"': jednorożce
       Dancelab_setTintEachInline:
         text: ustaw odcień {THIS} na {VAL}
@@ -720,6 +746,7 @@ pl:
             '"PINEAPPLE"': ananasy
             '"ROBOT"': roboty
             '"SHARK"': rekiny
+            '"SLOTH"': leniuchy
             '"UNICORN"': jednorożce
       Dancelab_setTintInline:
         text: ustaw {SPRITE} odcień na {VAL}
@@ -744,6 +771,7 @@ pl:
             '"PINEAPPLE"': ananasy
             '"ROBOT"': roboty
             '"SHARK"': rekiny
+            '"SLOTH"': leniuchy
             '"UNICORN"': jednorożce
           VISIBILITY:
             'true': widoczny
@@ -778,6 +806,7 @@ pl:
             '"PINEAPPLE"': ananasy
             '"ROBOT"': roboty
             '"SHARK"': rekiny
+            '"SLOTH"': leniuchy
             '"UNICORN"': jednorożce
           PROPERTY:
             '"scale"': rozmiar
@@ -822,6 +851,7 @@ pl:
             '"PINEAPPLE"': ananasy
             '"ROBOT"': roboty
             '"SHARK"': rekiny
+            '"SLOTH"': leniuchy
             '"UNICORN"': jednorożce
           PROPERTY:
             '"scale"': rozmiar
@@ -841,9 +871,17 @@ pl:
         options:
           STRING:
             '"music_wave"': Fale
+            '"ripples"': Fale
+            '"ripples_random"': Losowe fale
             '"quads"': Kąty
             '"flowers"': Kwiaty
+            '"popsicles"': Lody
+            '"squiggles"': Pokręcone linie
+            '"growing_stars"': Powiększające się gwiazdy
+            '"emojis"': Emotikony
             '"hearts_colorful"': Serca
+            '"paint_drio"': Pipeta do farby
+            '"exploding_stars"': Rozprysk
             '"row_top"': górny wiersz
             '"row_bottom"': dolny wiersz
             '"column_left"': lewa kolumna
@@ -1107,6 +1145,7 @@ pl:
             '"y"': współrzędna y
             '"direction"': kierunku ruchu
       Mikelab_groupChangeAnim:
+        text: zmień {SELECT} {COSTUME} na {COSTUME2}
         options:
           SELECT:
             '"all"': wszystkie
@@ -1121,6 +1160,7 @@ pl:
             '"y"': współrzędna y
             '"direction"': kierunku ruchu
       Mikelab_groupCreateNewSprite:
+        text: stwórz nowego {COSTUME} w {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": u góry

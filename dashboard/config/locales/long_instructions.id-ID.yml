@@ -520,6 +520,74 @@ id-ID:
       Course 4 Artist For Loops 6a: |-
         Buat tiga perubahan kecil pada
         kode dari level terakhir untuk mendapatkan ini!
+      CourseD_Dance_Party_01: "\"Mari kita berpesta tari!\n\n\\_ Tarik blok `buat
+        baru` ke ruang kerja, lalu hubungkan di dalam blok `penyetelan` untuk menciptakan
+        penari pertama Anda. \n\n-   _Anda juga dapat mengklik bola lampu ke kiri
+        jika Anda ingin informasi lebih lanjut atau tantangan tambahan._\""
+      CourseD_Dance_Party_02: |-
+        "Ayo bikin rusa ini menari!
+
+        Tarik keluar <xml><block type="Dancelab_changeMoveLR" block-text="new_dancer do floss"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> blok ke ruang kerja. Hubungkanlah di bawah <xml><block type="Dancelab_atTimestamp" block-text="after 4 measures"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> blok. Penari Anda harus memulai gerakan baru setelah birama keempat.
+
+        **Birama** digunakan untuk menghitung waktu dalam musik. Dalam tutorial ini, birama memiliki panjang empat ketukan.".
+      CourseD_Dance_Party_03: "\"_Sekarang kita nge-groove!_ \n\nTambahkan <xml><block
+        type=\"Dancelab_atTimestamp\" block-text=\"after 6 measures\"><title name=\"TIMESTAMP\">6</title><title
+        name=\"UNIT\">\"measures\"</title></block></xml> blok ke ruang kerja Anda.
+        Buat penari memulai gerakan baru setelah 6 birama.\"."
+      CourseD_Dance_Party_04: |-
+        "_Tari ini memerlukan flash!_
+
+        Cari blok baru di kotak alat Anda yang menambahkan efek latar belakang di belakang penari Anda. Perhatikan efeknya berubah tepat pada waktunya dengan musik!"!
+      CourseD_Dance_Party_05: |-
+        "Gunakan blok baru lainnya untuk membuat penari mengganti gerakan **setiap 2 birama**!
+
+        -   Memilih `(Berikutnya)`, `(Sebelumnya)`, atau `(Acak)` akan menyuruh penari melakukan gerakan berbeda setiap kali kode dijalankan.".
+      CourseD_Dance_Party_06: |-
+        "_Kita membutuhkan lebih banyak penari!_
+
+        Ciptakan penari cadangan yang disebut `penari_cadangan1` untuk menari dengan kucing.".
+      CourseD_Dance_Party_08: |-
+        "Setiap penari memiliki sejumlah _properti_ yang mengontrol seperti apakah penampakannya.
+
+        Anda dapat membuat seperti tampak ada penari di latar belakang dengan menjadikan _ukuran_ mereka lebih kecil. Dapatkah Anda membuat kedua penari cadangan berukuran sama?"?
+      CourseD_Dance_Party_09: |-
+        "Penari memiliki properti ""warna"" yang dapat menambahkan lapisan warna. Cobalah mengubah warna salah satu penari Anda.
+
+        -   Warna akan mencampur warna yang Anda pilih dengan warna penari.".
+      CourseD_Dance_Party_10: |-
+        "Kini Anda mengetahui cara mengubah properti penari. Kita juga dapat membuat properti yang sama merespons musik secara otomatis dengan blok ini:
+        <xml>
+          <block type="Dancelab_startMapping" block-text="right_unicorn begins following bass">
+            <title name="SPRITE">right_unicorn</title>
+            <title name="PROPERTY">"scale"</title>
+            <title name="RANGE">"bass"</title>
+          </block></xml>
+
+        Program ini menggunakan volume ""bas"" musik (suara rendah) untuk mengontrol tinggi satu penari. Apakah Anda dapat membuat penari lain yang juga merespons musik?"?
+      CourseD_Dance_Party_11: "\"<xml><block type=\"Dancelab_whenKey\" block-text=\"when
+        up pressed\"></block></xml> blok memungkinkan Anda menjalankan kode saat panah
+        atas ditekan. \n\nAnda dapat mengganti gerakan tari, mengubah properti penari,
+        atau melakukan gerakan cepat sekali saja. Silakan berkreasi dan awasi apakah
+        ada blok baru!\"!"
+      CourseD_Dance_Party_11_5: |-
+        "Periksa blok ini:
+
+        <xml>
+          <block type="Dancelab_makeNewDanceSpriteGroup" block-text="Make 6 new ducks in a circle">
+            <title name="N">6</title>
+            <title name="COSTUME">"DUCK"</title>
+            <title name="LAYOUT">"circle"</title>
+          </block></xml>
+
+        Kini Anda dapat menciptakan banyak penari sekaligus!
+
+        Cobalah menggunakan beberapa blok ""semua bebek"" untuk menulis kode yang akan membuat semua bebek menari bersama.".
+      CourseD_Dance_Party_11b: |-
+        "Kini saatnya untuk kompetisi tari! Kucing melakukan dab saat Anda menekan tombol panah kiri. Buat Robot ""jatuh"" begitu Anda menekan tombol panah kanan, dan ""bertepuk tangan"" begitu Anda menekan tombol panah atas.
+
+        **Gunakan tombol-tombol untuk membuat Robot jatuh-bertepuk tangan-jatuh-bertepuk tangan secepat mungkin!**"
+      CourseD_Dance_Party_12: Hidupkan groove Anda! Ciptakan tarian Anda sendiri untuk
+        dibagikan ke teman-teman.
       CourseE_HOC 2018 Level_1: Anda butuh persediaan untuk perjalanan selanjutnya.
         kumpulkan sebuah**perahu**![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
         dari **peti**![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
@@ -643,19 +711,23 @@ id-ID:
         Tarik keluar blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> ke ruang kerja. Hubungkanlah di bawah <xml><block type="Dancelab_changeMoveEachLR"><title name="GROUP">"SHARK"</title><title name="MOVE">MOVES.ThisOrThat</title><title name="DIR">-1</title></block></xml>. Penari Anda harus memulai gerakan baru setelah birama keempat.
 
         **Birama** digunakan untuk menghitung waktu dalam musik. Dalam tutorial ini, birama memiliki panjang empat ketukan.
-      Dance_2019_05: "\\_Sekarang kami sedang grooving! \\_ \n\nTambahkan blok <xml><block
-        type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"ukur\"</title></block></xml>
-        ke ruang kerja Anda. Buat penari memulai langkah baru setelah 6 langkah."
+      Dance_2019_05: "_Sekarang kita nge-groove!_ \n\nTambahkan <xml><block type=\"Dancelab_atTimestamp\"><title
+        name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml>
+        blok ke ruang kerja Anda. Buat penari memulai gerakan baru setelah 6 birama."
       Dance_2019_06: "Gunakan blok baru ini untuk membuat kelompok penari cadangan
         yang lebih kecil di sekitar penari utama di tengah. \n  <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\">\n
         \   <title name=\"N\">???</title>\n    <title name=\"COSTUME\" config=\"&quot;BEAR&quot;,
         &quot;CAT&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;,
         &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title>\n    <title name=\"LAYOUT\">\"circle\"</title>\n
         \ </block></xml>\nKini Anda dapat membuat banyak penari sekaligus!"
-      Dance_2019_07: |-
-        Setiap penari memiliki sejumlah _properti_ yang mengontrol seperti apakah penampakannya.
-
-        Anda dapat membuat seorang penari tampak lebih dekat atau lebih jauh dengan mengubah ukurannya. Ubahlah ukuran kelompok penari  beberapa waktu setelah musik dimulai.
+      Dance_2019_07: "Setiap penari memiliki sejumlah _properti_ yang mengontrol seperti
+        apakah penampakannya. \n\nGunakan <xml><block type=\"Dancelab_setPropEach\"
+        block-text=\"the set block\"><title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;,
+        &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;,
+        &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title><title
+        name=\"PROPERTY\">\"scale\"</title><title name=\"VAL\">???</title></block></xml>
+        di bawah blok acara hijau untuk membuat penari tampak lebih dekat atau lebih
+        jauh."
       Dance_2019_08: Penari memiliki properti "warna" yang dapat menambahkan lapisan
         warna. Cobalah mengubah warna salah satu penari Anda (atau seluruh kelompok)!
       Dance_2019_09: |-
@@ -666,15 +738,41 @@ id-ID:
         Blok baru lainnya dalam kotak alat Anda memungkinkan Anda untuk secara perlahan (atau secara acak!) mengubah properti penari seiring waktu berjalan.
 
         _Berkreasilah dan selamat bersenang-senang!_
+      Dance_2019_10: Hidupkan groove Anda! Ciptakan tarian Anda sendiri untuk dibagikan
+        ke teman-teman.
+      Dance_Party_01: "\"Mari kita berpesta tari!\n\n\\_ Tarik blok `buat baru` ke
+        ruang kerja, lalu hubungkan di dalam blok `penyetelan` untuk menciptakan penari
+        pertama Anda. \n\n-   _Anda juga dapat mengklik bola lampu ke kiri jika Anda
+        ingin informasi lebih lanjut atau tantangan tambahan._\""
       Dance_Party_02: |-
-        Ayo kita ini rusa besar menari!
+        "Ayo bikin rusa ini menari!
 
-        Keluarkan <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer<title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">titel</title><title name="DIR">1</title></block></xml> blok ke atas ruang kerja.Sambungkan di bawah<xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">" ukuran" </title></block></xml>blok. Penarimu harus mulai gerakan baru setelah langkah keempat.
+        Tarik keluar <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> blok ke ruang kerja. Hubungkanlah di bawah <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> blok. Penari Anda harus memulai gerakan baru setelah birama keempat.
 
-        **Ukuran**digunakan untuk menghitung waktu dalam musik.Di dalam tutorial ini,ukurannya adalah empat ketukan.
-      Dance_Party_03: "\\_Sekarang kami sedang grooving! \\_ \n\nTambahkan blok <xml><block
-        type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"ukur\"</title></block></xml>
-        ke ruang kerja Anda. Buat penari memulai langkah baru setelah 6 langkah."
+        **Birama** digunakan untuk menghitung waktu dalam musik. Dalam tutorial ini, birama memiliki panjang empat ketukan.".
+      Dance_Party_03: "_Sekarang kita nge-groove!_ \n\nTambahkan <xml><block type=\"Dancelab_atTimestamp\"><title
+        name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml>
+        blok ke ruang kerja Anda. Buat penari memulai gerakan baru setelah 6 birama."
+      Dance_Party_04: |-
+        "_Tari ini memerlukan flash!_
+
+        Cari blok baru di kotak alat Anda yang menambahkan efek latar belakang di belakang penari Anda. Perhatikan efeknya berubah tepat pada waktunya dengan musik!"!
+      Dance_Party_05: |-
+        "Gunakan blok baru lainnya untuk membuat penari mengganti gerakan **setiap 2 birama**!
+
+        -   Memilih `(Berikutnya)`, `(Sebelumnya)`, atau `(Acak)` akan menyuruh penari melakukan gerakan berbeda setiap kali kode dijalankan.".
+      Dance_Party_06: |-
+        "_Kita membutuhkan lebih banyak penari!_
+
+        Ciptakan penari cadangan yang disebut `penari_cadangan1` untuk menari dengan kucing.".
+      Dance_Party_08: |-
+        "Setiap penari memiliki sejumlah _properti_ yang mengontrol seperti apakah penampakannya.
+
+        Anda dapat membuat seperti tampak ada penari di latar belakang dengan menjadikan _ukuran_ mereka lebih kecil. Dapatkah Anda membuat kedua penari cadangan berukuran sama?"?
+      Dance_Party_09: |-
+        "Penari memiliki properti ""warna"" yang dapat menambahkan lapisan warna. Cobalah mengubah warna salah satu penari Anda.
+
+        -   Warna akan mencampur warna yang Anda pilih dengan warna penari.".
       Dance_Party_10: |-
         Sekarang kita tahu bagaimana mengubah properti penari. kita juga bisa membuat properti yang sama secara otomatis respon ke musik menggunakan blok ini:<xml>
         <block type="Dancelab_startMapping">
@@ -690,41 +788,62 @@ id-ID:
         menari, mengubah properti penari, atau melakukan gerakan cepat hanya sekali.
         Jadilah kreatif dan cari blok baru!"
       Dance_Party_11_5: |-
-        Cek blok ini:
+        "Periksa blok ini:
 
         <xml>
-        <block type="Dancelab_makeNewDanceSpriteGroup">
-        <title name="N">6</title>
-        <title name="COSTUME">'BEBEK'</title><title name="LAYOUT">"lingkaran"</xml></block></xml>
+          <block type="Dancelab_makeNewDanceSpriteGroup">
+            <title name="N">6</title>
+            <title name="COSTUME">"DUCK"</title>
+            <title name="LAYOUT">"circle"</title>
+          </block></xml>
 
-        Sekarang kamu bisa membuat banyak penari sekaligus!
-        Coba gunakan beberapa blok "semua bebek" untuk menulis kode yang membuat semua bebek menari bersama.
+        Kini Anda dapat menciptakan banyak penari sekaligus!
+
+        Cobalah menggunakan beberapa blok ""semua bebek"" untuk menulis kode yang akan membuat semua bebek menari bersama.".
+      Dance_Party_11b: |-
+        "Kini saatnya untuk kompetisi tari! Kucing melakukan dab saat Anda menekan tombol panah kiri. Buat Robot ""jatuh"" begitu Anda menekan tombol panah kanan, dan ""bertepuk tangan"" begitu Anda menekan tombol panah atas.
+
+        **Gunakan tombol-tombol untuk membuat Robot jatuh-bertepuk tangan-jatuh-bertepuk tangan secepat mungkin!**"
+      Dance_Party_12: Hidupkan groove Anda! Ciptakan tarian Anda sendiri untuk dibagikan
+        ke teman-teman.
+      Dance_Party_extras_alternate_2019: |-
+        # Ayo Bentuk Formasi!
+
+        Ceklah tarian ini yang menggunakan blok <xml><block type="Dancelab_alternateMoves"><title name="GROUP">sprites</title><title name="N">2</title><title name="MOVE1">MOVES.Roll</title><title name="MOVE2">MOVES.ClapHigh</title></block></xml> untuk mengubah formasi penari cadangan selama menari. Cobalah salah satu gagasan ini untuk mengembangkannya:
+
+        -   Membuat kelompok penari kedua dalam tata letak yang berbeda
+        -   Mengubah tata letak ketika tombol ditekan
+        -   Mengubah properti ketika penari mengubah formasi
       Dance_Party_extras_battle: |-
-        # Kru Tari
+        "# Kru Tari
 
-        Inilah tarian antara dua kru.Tombol panah mengontrol seorang penari dan kunci"w,a,s,d"mengontrol penari yang lain.Menarilah dengan seorang teman dan coba perbaiki tarian itu.
+        Ini adalah kompetisi tari antara dua kru. Tombol panah mengontrol salah satu penari dan tombol ""w,a,s,d"" mengontrol yang lain. Silakan berkompetisi tari dengan teman, lalu cobalah meningkatkan kompetisi tari ini.
 
-        \-Tambahkan lebih banyak tombol untuk untuk mengontrol tarian.
-        \-Buatlah penari cadangan yang juga merespon saat tombol ditekan.
-        \-Ganti penari setiap 4 langkah dengan mengatur visibilitas mereka
+        -   Menambahkan tombol lebih banyak untuk mengontrol tarian
+        -   Membuat penari cadangan untuk juga merespons saat tombol ditekan
+        -   Mengganti penari setiap 4 birama dengan mengatur visibilitas mereka"
       Dance_Party_extras_battle_2019: |-
-        # Kru Tari
+        "# Kru Tari
 
-        Inilah tarian antara dua kru.Tombol panah mengontrol seorang penari dan kunci"w,a,s,d"mengontrol penari yang lain.Menarilah dengan seorang teman dan coba perbaiki tarian itu.
+        Ini adalah kompetisi tari antara dua kru. Tombol panah mengontrol salah satu penari dan tombol ""w,a,s,d"" mengontrol yang lain. Silakan berkompetisi tari dengan teman, lalu cobalah meningkatkan kompetisi tari ini.
 
-        \-Tambahkan lebih banyak tombol untuk untuk mengontrol tarian.
-        \-Buatlah penari cadangan yang juga merespon saat tombol ditekan.
-        \-Ganti penari setiap 4 langkah dengan mengatur visibilitas mereka
+        -   Menambahkan tombol lebih banyak untuk mengontrol tarian
+        -   Membuat penari cadangan untuk juga merespons saat tombol ditekan
+        -   Mengganti penari setiap 4 birama dengan mengatur visibilitas mereka"
       Dance_Party_extras_every_beat: |-
-        # Seperempat Not
+        "# Not Seperempat
 
-        Sebagian besar tarian kami menggunakan semua ukuran, tapi setiap ukuran dibuat 4 seperempat not. Tarian ini menggunakan'setiap 0,25 ukuran'membuat penari bertepuk tangan setiap seperempat not.
+        Sebagian besar penari kita telah menggunakan birama penuh, tetapi setiap birama terdiri atas 4 not seperempat. Tarian ini menggunakan `setiap 0,25 birama` untuk membuat penari bertepuk tangan pada setiap not seperempat.
 
-        Tarian ini juga menggunakan sebuah blok_kondisional_ untuk mengontrol blok'setiap0,25ukuran' dapat mengubah tarian.
+        Tarian ini juga menggunakan _blok_ bersyarat untuk mengontrol kapan blok `setiap 0,25 birama` dapat mengubah tarian. Cobalah mengubah angka dalam blok bersyarat untuk melihat bagaimana hal itu mengubah tarian.
 
-        \-Mencoba dengan durasi not yang lain(seperti 0,5 untuk setengah not atau0,125 untuk not kedelapan).
-        \-Tambahkan beberapa tindakan'setelah ukuran'
-        \-Ganti 'ukuran' dengan'detik'dan coba atur waktu tarian dengan cara tersebut.
+        -   Bereksperimenlah dengan durasi not lain (seperti 0,5 untuk setengah not atau 0,125 untuk not kedelapan).
+        -   Tambahkan beberapa acara `setelah birama`.
+        -   Tukar ""birama"" dengan ""detik"" cobalah mengatur waktu tarian Anda seperti itu.".
+      Dance_Party_extras_every_beat_2019: |-
+        # Percepat, Perlambat
+
+        Tarian final ini menggunakan blok <xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml> untuk mengontrol seberapa cepat setiap penari bergerak. Cobalah bereksperimen dengan kecepatan yang berlainan pada berbagai titik berbeda dalam lagu. Silakan terus mengutak-atik tarian ini, atau kembalilah ke tarian sebelumnya untuk membuatnya semakin keren.
       Dance_Party_extras_layout: |-
         # Ayo Masuk Formasi!
 
@@ -733,48 +852,39 @@ id-ID:
         -   Buat grup penari kedua dalam tata letak yang berbeda
         -   Ubah tata letak saat tombol ditekan
         -   Ubah properti ketika penari mengubah formasi
-      Dance_Party_extras_layout_2019: |-
-        # Ayo Bentuk Formasi!
-
-        Ceklah tarian ini yang menggunakan blok <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> untuk mengubah formasi penari cadangan selama menari. Cobalah salah satu gagasan ini untuk mengembangkannya:
-
-        -   Membuat kelompok penari kedua dalam tata letak yang berbeda
-        -   Mengubah tata letak ketika tombol ditekan
-        -   Mengubah properti ketika penari mengubah formasi
       Dance_Party_extras_on_beat: |-
-        # Suara rendah, menengah, dan tinggi
+        "# Bas, Mid, dan Treble
 
-        Tarian ini menggunakan acara"puncak"untuk memicu kode saat bagian bagian musik bersuara keras.
-        Cobalah bermain dengan lagu berbeda untuk melihat bagaimana mereka mengubah tarian.
+        Tarian ini menggunakan acara ""puncak"" untuk memicu kode ketika bagian musik yang berbeda menjadi keras. Cobalah mengutak-atik lagu yang berbeda untuk melihat bagaimana mereka mengubah tarian.".
       Dance_Party_extras_on_beat_2019: |-
-        # Suara rendah, menengah, dan tinggi
+        "# Bas, Mid, dan Treble
 
-        Tarian ini menggunakan acara"puncak"untuk memicu kode saat bagian bagian musik bersuara keras.
-        Cobalah bermain dengan lagu berbeda untuk melihat bagaimana mereka mengubah tarian.
+        Tarian ini menggunakan acara ""puncak"" untuk memicu kode ketika bagian musik yang berbeda menjadi keras. Cobalah mengutak-atik lagu yang berbeda untuk melihat bagaimana mereka mengubah tarian.".
       Dance_Party_extras_speed: |-
-        # Mempercepat, Memperlambat
+        "# Percepat, Perlambat
 
-        Tarian terakhir menggunakan blok'pengaturan kecepatan'untuk mengontrol seberapa cepat setiap penari bersetiap. Cobalah bereksperimen dengan kecepatan berbeda selama berbeda titik dalam lagu. Bebaslah bermain main dalam tarian ini, atau kembali kesalah satu tarian untuk membuatnya lebih keren.
+        Tarian final ini menggunakan blok `atur kecepatan` untuk mengontrol seberapa cepatnya setiap penari bergerak. Cobalah bereksperimen dengan kecepatan yang berlainan pada berbagai titik berbeda dalam lagu. Silakan terus mengutak-atik tarian ini, atau kembalilah ke tarian sebelumnya untuk membuatnya semakin keren.".
       Dance_Party_extras_speed_2019: |-
         # Percepat, Perlambat
 
         Tarian final ini menggunakan blok <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> untuk mengontrol seberapa cepat setiap penari bergerak. Cobalah bereksperimen dengan kecepatan yang berlainan pada berbagai titik berbeda dalam lagu. Silakan terus mengutak-atik tarian ini, atau kembalilah ke tarian sebelumnya untuk membuatnya semakin keren.
       Dance_Party_extras_visible: |-
-        # kemana mereka pergi?
+        "# Kemana Mereka Pergi?
 
-        Tarian ini memperlihatkan dan menyembunyikan dua kelompok penari berbeda. Lihat, dan kemudian coba tambahkan bakat anda sendiri.
+        Tarian ini memperlihatkan dan menyembunyikan dua kelompok penari yang berbeda. Silakan dicek lalu cobalah menambahkan bakat Anda sendiri.
 
-        \-Tambahkan kelompok penari lain
-        \-Perlihatkan dan lainunyikan penari memnggunakan tombol panah
-        \-Sembunyikan semua penari dan beralih ke efek latar belakang yang menarik
+        -   Tambahkan kelompok penari lain
+        -   Perlihatkan dan sembunyikan penari dengan tombol panah
+        -   Sembunyikan semua penari dan beralihlah ke efek latar belakang yang mengasyikkan"
       Dance_Party_extras_visible_2019: |-
-        # kemana mereka pergi?
+        # Not Seperempat
 
-        Tarian ini memperlihatkan dan menyembunyikan dua kelompok penari berbeda. Lihat, dan kemudian coba tambahkan bakat anda sendiri.
+        Sebagian besar penari kita telah menggunakan birama penuh, tetapi setiap birama terdiri atas 4 not seperempat. Tarian ini menggunakan [blockly block][0] untuk membuat penari bertepuk tangan setiap not seperempat setelah birama ke-5.
 
-        \-Tambahkan kelompok penari lain
-        \-Perlihatkan dan lainunyikan penari memnggunakan tombol panah
-        \-Sembunyikan semua penari dan beralih ke efek latar belakang yang menarik
+        Cobalah mengubah angka pada blok untuk melihat bagaimana hal itu akan mengubah tarian.
+
+        -   Bereksperimenlah dengan durasi not lain (seperti 0,5 untuk setengah not atau 0,125 untuk not kedelapan).
+        -   Tambahkan beberapa acara lain.
       Escape Room Example: |-
         # Room Escape
 

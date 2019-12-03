@@ -195,3 +195,16 @@ te-IN:
           -   మీరు నొక్కినప్పుడు రోబో ఒక డాన్స్ మువ్ చేసేలా ’వెన్ లెఫ్ట్ యారో ప్రెస్డ్’ బ్లాక్ ఉపయోగించండి.
 
           _ఈ లెవల్ 7 మెజర్స్ తరువాత ముగుస్తుంది._ "
+      courseA_collector_loops3_2019:
+        courseA_collector_loops3_a: "Try using a \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title
+          name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n loop!"
+      courseB_iceage_loops3_2019:
+        courseB_iceage_loops3_a: |-
+          Use this new block!
+           <xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="3-10">5</title>
+              </block></xml>
+        courseB_iceage_loops3_b: |-
+          To repeat code, drag out a `repeat` <xml><block type="controls_repeat_simplified">
+              <title name="TIMES">???</title>
+            </block></xml>loop, then put the block you want inside of it.

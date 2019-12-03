@@ -734,8 +734,29 @@ sk:
         csd_gamelab_functions: Názvy a definície funkcií
         csd_applab_parameters: Funkcie s parametrami
         csd_applab_loops: Cykly v App Labe
+        CSF_Going_Places_Safely: Moja internetová štvrť
+        CSF_SpriteLab_Intro_v2: Predstavenie postavy
+        CSF_Spritelab_MakeSprite_v2: Ako vytvoriť postavu
         CSF_SpriteLab_SpritesInAction_v2: Postavy v akcii
         csd_debugging: Hľadanie a odstraňovanie chýb
+        csd_applab_designmode_short: App Lab Návrh režimu
+        csp-pd-welcome: Vitaj v rodine!
+        CSF-Teaching-Problem-Solving: CSF riešenie problémov pri učení
+        u5-traversals-get-list-explanation: Code.org [levelbuilder] - Pilotné video
+          - Dátový blok
+        u7-libraries-explanation: 'App Lab: Vytvor svoje vlastné bloky - Ako používať
+          knižnice'
+        how-to-k5-workshops: 'Základy Code.org CS: Žiak otestovaný, Učiteľ schválený'
+        why-should-teach-unplugged-activities: 'FAQ: Prečo mám učiť aktivity bez počítača?'
+        cs-principles-intro-to-objects: 'CS Princípy: Úvod do Predmetov'
+        oceans_machine_learning: Strojové učenie
+        oceans_training_data: Tréningové dáta
+        oceans_societal_implications: Spoločenské dôsledky
+        hoc_dance_congrats_2019: Tanečná párty 2019 - Párty pokračuje!
+        hoc_dance_warmup_2019: Tanečná párty 2019 - Zahrej sa
+        hoc_dance_events_2019: Tanečná párty 2019 - Udalosti
+        hoc_dance_measures_2019: Tanečná párty 2019 - Rozmery
+        hoc_dance_properties_2019: Tanečná Párty 2019 - Vlastnosti
     callout:
       text:
         drag_blocks: Chyť blok "posuň sa" a pripoj ho pod už použitý blok

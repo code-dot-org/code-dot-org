@@ -903,10 +903,10 @@
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/@code-dot-org/craft/-/craft-0.2.2.tgz#4b117337a5a601613f2d38514aa50ba972362939"
 
-"@code-dot-org/dance-party@0.0.52":
-  version "0.0.52"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/dance-party/-/dance-party-0.0.52.tgz#88f633a2e3c7d1f8f7cb49221d8a8106a7ee89c1"
-  integrity sha512-hsvMsPlOBZanWs9sizSBKSFTmEkCYkGytU6zpL4h0pCikbY6hmSrFQ1t9OE/kj1M4l/biWQP2kJdtX7F2NfILQ==
+"@code-dot-org/dance-party@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/dance-party/-/dance-party-1.0.0.tgz#8614365506025e6f61545a6b7a8495ee30d05221"
+  integrity sha512-zcOlP/0IUsmicjDdrFYhhS9WMyZ7eoIgH77nssY5RDGQqmDXoXz9ARgxSFzG2aEGpdCHxmT5RY2hAtXXnq/WTA==
   optionalDependencies:
     canvas "^1.6.13"
 
@@ -954,10 +954,10 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@code-dot-org/maze/-/maze-1.1.0.tgz#7c8185adf06a9172e3bde4ccd6f6738a787b2a7c"
 
-"@code-dot-org/ml-activities@0.0.15":
-  version "0.0.15"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/ml-activities/-/ml-activities-0.0.15.tgz#d47549754e5cd2414c406920ffb5f59e76f2c779"
-  integrity sha512-tq/u61/vqXAE8Lw/QcsSGi80plmuHe2SS1LxcR6/R67YKHAw2P8afeTZKPwXjKzXf81R6d1GjmP8kfbZTWTNXA==
+"@code-dot-org/ml-activities@0.0.21":
+  version "0.0.21"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/ml-activities/-/ml-activities-0.0.21.tgz#8672888c3f545857f77d1cad557ce08c09f503a4"
+  integrity sha512-jdpjBBRxYS1CuheH6aXP7/iErNAfYsKps9GrysA5YACaWWJjYnyeQoNwSO1jpJw3/5ZAM8WB4d2KSvdsbIUhfA==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.25"
     "@fortawesome/free-solid-svg-icons" "^5.11.2"

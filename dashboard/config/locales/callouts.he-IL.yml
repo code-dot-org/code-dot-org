@@ -106,8 +106,15 @@ he-IL:
       CourseD_Dance_Party_11:
         dance_callout_11_a: בלוק חדש!
         dance_callout_11_b: בלוק חדש!
+      Dance_2019_01:
+        dance_callout_01: בחרו כאן את סוג הרקדן.
+      Dance_2019_02:
+        dance_callout_11_a: הוסיפו את הבלוק הזה לתוכנה שלכם.
+        arrow_buttons: לחצו על מקשי החצים כדי לשלוט ברקדן שלכם.
       Dance_2019_04:
         dance_callout_02: הוסיפו את הבלוק הזה לתוכנה שלכם!
+      Dance_2019_05:
+        dance_callout_05: הוסיפו אירוע חדש לתוכנה שלכם.
       Dance_2019_06:
         dance_party_11_5_groups: בלוק חדש!
       Dance_2019_07:

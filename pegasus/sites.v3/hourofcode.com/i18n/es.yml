@@ -25,6 +25,69 @@ es:
     2019. La informática es fundamental para que cada estudiante aprenda.
   social_hoc2019_dance: "¡Con la presencia de Katy Perry, Jonas Brothers, Lil Nas
     X, Panic at the Disco, y muchos más!"
+  oceans_landing_title: AI for Oceans
+  oceans_landing_description: 'Explore machine learning by teaching “A.I.” to recognize
+    fish. #CSforGood'
+  oceans_landing_specs: English only | Ages 11+
+  oceans_landing_teacher_resources: Teacher Resources
+  oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
+    AI, machine learning, training data, and bias, while exploring ethical issues.
+  oceans_landing_resource_button: View Resources
+  oceans_landing_cs_for_good: CS For Good
+  oceans_landing_cs_for_good_desc: Resources to help students understand the role
+    computer science could play in creating a more equitable world.
+  oceans_landing_learn_more: Learn more about AI and Machine Learning
+  social_hoc2019_oceans_title: 'AI for Oceans #CSForGood'
+  social_hoc2019_oceans_desc: Learn about AI, machine learning, training data, and
+    bias, while exploring ethical issues and how AI can be used to address world problems.
+    Computer science is about so much more than coding! Enjoy Code.org's first step
+    in a new journey to teach more about AI throughout our curriculum.
+  hoc_overview_oceans_tutorial_header: AI For Oceans
+  hoc_overview_oceans_tutorial_desc: Learn about AI, machine learning, training data,
+    and bias, while exploring ethical issues and how AI can be used to address world
+    problems.
+  ai_video_title_what_is_ai: What is AI?
+  ai_video_title_phone_knows_dog: How does your phone know this is a dog?
+  ai_video_title_what_is_ml: What is Machine Learning?
+  ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small
+    and Prickly'
+  ai_video_title_ethics_of_ai: Ethics of AI
+  ai_video_title_ml_human_bias: Machine Learning and Human Bias
+  activity: Activity
+  name: Name
+  description: Description
+  audience: Audience
+  ai_resource_header: Teach and Learn about AI
+  ai_resource_ml_for_kids: Machine Learning for Kids
+  ai_resource_ml_for_kids_desc: Train a machine learning model with text, numbers,
+    or images, and use it to make games in Scratch.
+  ai_resource_ibm_ml_for_kids: 'IBM: Machine Learning for Kids'
+  ai_resouce_ibm_ml_for_kids_desc: Hands-on activities to introduce simple machine
+    learning models to students through games and interactive projects.
+  ai_resource_ecs: 'ECS: Artificial Intelligence (AI)'
+  ai_resource_ecs_desc: A new alternate curriculum unit for the Exploring Computer
+    Science (ECS) curriculum.
+  ai_resource_elements_ai: Elements of AI
+  ai_resource_elements_ai_desc: A series of free online courses created by Reaktor
+    and the University of Helsinki.
+  ai_resource_cognimates: Cognimates
+  ai_resource_cognimates_desc: An AI education platform for building games, programming
+    robots and training.
+  ai_audience_k12: K-12 (Reading required)
+  ai_audience_hs: High school
+  ai_activity_header: Activities Powered by AI and ML
+  ai_activity_teachable: Teachable Machine
+  ai_activity_teachable_desc: Train a computer to recognize your own images, sounds,
+    and poses.
+  ai_activity_quick_draw: Quick, Draw!
+  ai_activity_quick_draw_desc: Can a neural network learn to recognize doodling?
+  ai_activity_experiments: AI Experiments with Google
+  ai_activity_experiments_desc: Start exploring machine learning through pictures,
+    drawings, language, music, and more.
+  ai_activity_mixlab: MixLab
+  ai_activity_mixlab_desc: Make music using voice commands.
+  ai_activity_gaugan: GauGAN Beta
+  ai_activity_gaugan_desc: Paint photo-realistic landscapes with the help of AI.
   codeorg_homepage_hoc2018_curriculum: Ve más con <a href="%{studio_url}/courses"
     class="hoc2018-curriculum-link">Code.org cursos</a>
   codeorg_homepage_hoc2018_dance_heading: Crea tu propio <span class="highlight-word">Fiesta&nbsp;Baile</span>
@@ -43,6 +106,7 @@ es:
   hourofcode_homepage_hoc2018_header_line2: Edades entre 4 y 104.
   hoc2018_tutorial_mchoc_description: Utiliza bloques de código para hacer que Alex
     o Steve participen en una aventura por el mundo de Minecraft.
+  codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>
   cookie_banner_message: Si continúas navegando en nuestro sitio web o haces clic
     en "Acepto", aceptas que se almacenen cookies en tu ordenador o dispositivo.
   cookie_banner_more_information: Vea Políticas de Privacidad de Code.org.
@@ -699,6 +763,7 @@ es:
   learn_robotics_banner_blurb: "¿Tienes robots? ¡Utilízalos con las actividades a
     continuación y haz una Hora de programación tangible para estudiantes de cualquier
     edad!"
+  tutorial_dance2019_name: Dance Party 2019
   tutorial_danceparty_name: Fiesta de baile
   tutorial_chibitronics_name: 'Chibitronics: Illuminated Story'
   tutorial_athlete_name: Programa tu propio juego de deportes
@@ -1185,9 +1250,9 @@ es:
   tutorial_sushicards_name: Beginner Scratch Sushi Cards
   tutorial_codesparkcreate_name: 'codeSpark Academia: Crear juegos'
   tutorial_hardvsoft_name: Team Hardware vs. Team Software
-  tutorial_codestersecard_name: Making an E-Card
-  tutorial_codesterslogo_name: Your Company Logo
-  tutorial_codesterstshirt_name: Monogrammed T-Shirt Design
+  tutorial_codestersecard_name: Code an Interactive eCard
+  tutorial_codesterslogo_name: Design Your Own Logo
+  tutorial_codesterstshirt_name: Code Your Initials
   tutorial_codewards_name: "¡Salva la ciudad sumergida! "
   tutorial_olympics_name: C.A.T.S. en las Olimpiadas de robots
   tutorial_codinismhero_name: Programming Hero
@@ -2550,6 +2615,9 @@ es:
   tutorial_allcancodeapps_shortdescription: Use the Allcancode Platform to create
     web and mobile apps from design to delivery.
   tutorial_n2y_shortdescription: Help Bitt Bott explore Earth using direction arrows.
+  tutorial_dance2019_longdescription: Code a Dance Party to share with your friends.
+    Featuring Katy Perry, Shawn Mendes, Lil Nas X, Panic! At The Disco, Jonas Brothers,
+    and many more!
   tutorial_danceparty_longdescription: Programa una Fiesta de baile y compártela con
     tus amigos. ¡Con Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara y 25
     artistas más!
@@ -5263,6 +5331,9 @@ es:
     Each of the six activities includes simple directions that are supported with
     symbols from the n2y® SymbolStix PRIME® collection. The symbols help non-readers
     and beginning readers understand and follow the directions.
+  tutorial_dance2019_language: Arabic, Chinese, Czech, Danish, Dutch, English, Finnish,
+    French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean,
+    Malay, Polish, Portuguese, and 10 more!
   tutorial_danceparty_language: Múltiple
   tutorial_chibitronics_language: Español (España)
   tutorial_athlete_language: Inglés, francés, español, italiano, portugués (Brasil)
@@ -5933,6 +6004,7 @@ es:
   tutorial_duckrace_language: Inglés, Alemán
   tutorial_allcancodeapps_language: Español (España)
   tutorial_n2y_language: Español (España)
+  tutorial_dance2019_string_detail_grades: A partir de siete años
   tutorial_danceparty_string_detail_grades: A partir de siete años
   tutorial_chibitronics_string_detail_grades: 2-5 años
   tutorial_athlete_string_detail_grades: A partir de siete años
@@ -6286,7 +6358,7 @@ es:
   tutorial_codehsrn_string_detail_grades: A partir de 14 años
   tutorial_codehswd_string_detail_grades: 6+ años
   tutorial_turtlerobot_string_detail_grades: 5+ años
-  tutorial_ozoevo_string_detail_grades: Todas las edades
+  tutorial_ozoevo_string_detail_grades: 6+ años
   tutorial_ozoexped_string_detail_grades: 6+ años
   tutorial_ozojourney_string_detail_grades: 2-8 años
   tutorial_ozocodes_string_detail_grades: Todas las edades
@@ -6413,7 +6485,7 @@ es:
   tutorial_codesparkcreate_string_detail_grades: 5+ años
   tutorial_hardvsoft_string_detail_grades: 5+ años
   tutorial_codestersecard_string_detail_grades: Edad 6-8
-  tutorial_codesterslogo_string_detail_grades: 2-8 años
+  tutorial_codesterslogo_string_detail_grades: 6+ años
   tutorial_codesterstshirt_string_detail_grades: 6+ años
   tutorial_codewards_string_detail_grades: 2-8 años
   tutorial_olympics_string_detail_grades: 2-8 años
@@ -6511,6 +6583,8 @@ es:
   tutorial_duckrace_string_detail_grades: A partir de siete años
   tutorial_allcancodeapps_string_detail_grades: 6+ años
   tutorial_n2y_string_detail_grades: A partir de preescolar
+  tutorial_dance2019_string_platforms: Todos los navegadores modernos, tablets Android,
+    iPad, Unplugged
   tutorial_danceparty_string_platforms: Todos los navegadores modernos, tablets Android,
     iPad
   tutorial_chibitronics_string_platforms: Todos los navegadores modernos
@@ -7289,6 +7363,7 @@ es:
     iPad
   tutorial_allcancodeapps_string_platforms: Todos los navegadores modernos
   tutorial_n2y_string_platforms: Sin conexión
+  tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chibitronics Chibi Chip and Circuit
     Sticker LEDs
@@ -7870,6 +7945,7 @@ es:
   tutorial_duckrace_string_detail_platforms: ''
   tutorial_allcancodeapps_string_detail_platforms: ''
   tutorial_n2y_string_detail_platforms: ''
+  tutorial_dance2019_string_detail_programming_languages: Bloques
   tutorial_danceparty_string_detail_programming_languages: Bloques
   tutorial_chibitronics_string_detail_programming_languages: Bloques
   tutorial_athlete_string_detail_programming_languages: Bloques
@@ -8363,7 +8439,7 @@ es:
   tutorial_codesparkcreate_string_detail_programming_languages: Bloques
   tutorial_hardvsoft_string_detail_programming_languages: ''
   tutorial_codestersecard_string_detail_programming_languages: Bloques, Python
-  tutorial_codesterslogo_string_detail_programming_languages: Bloques, Python
+  tutorial_codesterslogo_string_detail_programming_languages: Python
   tutorial_codesterstshirt_string_detail_programming_languages: Bloques, Python
   tutorial_codewards_string_detail_programming_languages: Coffe Script
   tutorial_olympics_string_detail_programming_languages: Coffe Script
@@ -8516,7 +8592,7 @@ es:
   tutorial_stemc_blckhole_name: Escape Velocity and Black Holes!
   tutorial_careconfigure_name: ReconFigure of Speech
   tutorial_rpiscratch_name: Scratch 3.0 phrasebook
-  tutorial_ozaria_name: Ozaria by CodeCombat
+  tutorial_ozaria_name: Ozaria, por CodeCombat
   tutorial_ttovum_name: Ovum City
   tutorial_ttpassage_name: The Passage
   tutorial_tynkerhtmlen_name: Affordable and Clean Energy (HTML)
@@ -8567,6 +8643,8 @@ es:
   tutorial_ikodexmas_name: iKode Xmas
   tutorial_rpisensehat_name: Sense HAT data logger
   tutorial_modtraits_name: Character Traits with GoPiGo
+  tutorial_mee_name: 'Minecraft Hora del Código: usa bien la IA'
+  tutorial_kuborobo_name: Rutas de Programación de Robótica de KUBO
   tutorial_scratchimagine_longdescription: Imagine a world where anything is possible,
     then bring it to life with Scratch!
   tutorial_codesterspsa_longdescription: Learn the basics of coding in Python while
@@ -8727,9 +8805,10 @@ es:
     for you.
   tutorial_rpiscratch_longdescription: Create an interactive phrasebook that translates
     useful phrases into different languages.
-  tutorial_ozaria_longdescription: Customize your hero and journey to the Sky Mountain
-    where you learn to type real code, navigate through 15 game levels, and make your
-    own game in order to help save the world of Ozaria.
+  tutorial_ozaria_longdescription: Personaliza a tu héroe y transita tu propio camino
+    hacia la Montaña del cielo, a través del cual aprenderás a escribir código real,
+    deberás superar 15 niveles y diseñarás tu propio videojuego para ayudar a salvar
+    el mundo de Ozaria.
   tutorial_ttovum_longdescription: Can you control the chaos? Hack your way into the
     cyberpunk world of Ovum City. Debug broken code, solve puzzles, and upgrade your
     hardware as you explore self guided open world. Don't get caught by the drones!
@@ -8923,6 +9002,13 @@ es:
     environment.
   tutorial_modtraits_longdescription: 'Students use the steps of computational thinking
     to analyze character traits and create an algorithm to demonstrate those traits. '
+  tutorial_mee_longdescription: "¡Hay una aldea amenazada por las llamas y tú tienes
+    que programar una solución! Conoce a tu ayudante de programación, Minecraft Agent,
+    y prográmalo para que vaya al bosque y consiga datos sobre las condiciones que
+    contribuyen a los incendios."
+  tutorial_kuborobo_longdescription: Con esta actividad los alumnos prueban sus habilidades
+    lógicas y de secuenciación al usar las fichas (TagTiles) para programar su robot
+    KUBO para que viaje a varios lugares por un mapa impreso.
   tutorial_scratchimagine_language: Inglés, español
   tutorial_codesterspsa_language: Español (España)
   tutorial_googlehero_language: Inglés, español
@@ -9019,6 +9105,12 @@ es:
   tutorial_ikodexmas_language: Español (España)
   tutorial_rpisensehat_language: Español (España)
   tutorial_modtraits_language: Español (España)
+  tutorial_mee_language: Inglés (Estados Unidos), Inglés (Reino Unido), Alemán, Español
+    (España), Español (México), Francés (Francia), Francés (Canadá), Italiano, Japonés,
+    Coreano, Portugués (Brasil), Portugués (Portugal), Ruso, Chino (Simplificado),
+    Chino (Tradicional), Turco, Polaco, indonesio, ucraniano, griego, búlgaro, húngaro,
+    finlandés, danés, sueco, noruego, eslovaco, checo, holandés
+  tutorial_kuborobo_language: Spanish (Spain)
   tutorial_scratchimagine_string_detail_grades: A partir de siete años
   tutorial_codesterspsa_string_detail_grades: 6+ años
   tutorial_googlehero_string_detail_grades: 2-8 años
@@ -9115,6 +9207,10 @@ es:
   tutorial_ikodexmas_string_detail_grades: 2-5 años
   tutorial_rpisensehat_string_detail_grades: 6+ años
   tutorial_modtraits_string_detail_grades: A partir de siete años
+  tutorial_mee_string_detail_grades: A partir de siete años
+  tutorial_kuborobo_string_detail_grades: Educación infantil (Guardería) - 1º curso
+    (antes de empezar a leer, edades comprendidas entre 4-6 años), 2º-5º curso (edades
+    comprendidas entre 7-10 años)
   tutorial_scratchimagine_string_platforms: Todos los navegadores modernos, tablets
     Android, iPad
   tutorial_codesterspsa_string_platforms: Todos los navegadores modernos, tablets
@@ -9233,6 +9329,8 @@ es:
   tutorial_ikodexmas_string_platforms: Todos los navegadores modernos
   tutorial_rpisensehat_string_platforms: Todos los navegadores modernos
   tutorial_modtraits_string_platforms: Todos los navegadores modernos
+  tutorial_mee_string_platforms: Windows, iPad, MacOS
+  tutorial_kuborobo_string_platforms: Sin conexión
   tutorial_scratchimagine_string_detail_platforms: ''
   tutorial_codesterspsa_string_detail_platforms: ''
   tutorial_googlehero_string_detail_platforms: ''
@@ -9332,6 +9430,8 @@ es:
   tutorial_ikodexmas_string_detail_platforms: Microsoft Kodu
   tutorial_rpisensehat_string_detail_platforms: Raspbian (software), SenseHAT
   tutorial_modtraits_string_detail_platforms: GoPiGo
+  tutorial_mee_string_detail_platforms: ''
+  tutorial_kuborobo_string_detail_platforms: KUBO robot
   tutorial_scratchimagine_string_detail_programming_languages: Bloques
   tutorial_codesterspsa_string_detail_programming_languages: Python
   tutorial_googlehero_string_detail_programming_languages: Bloques
@@ -9440,6 +9540,8 @@ es:
   tutorial_ikodexmas_string_detail_programming_languages: Microsoft Kodu
   tutorial_rpisensehat_string_detail_programming_languages: Python
   tutorial_modtraits_string_detail_programming_languages: Bloques
+  tutorial_mee_string_detail_programming_languages: Bloques
+  tutorial_kuborobo_string_detail_programming_languages: Sin pantalla o software
   school_not_found_heading: No pudimos encontrar su escuela. Por favor introduzca
     más información.
   school_name: Nombre de la escuela

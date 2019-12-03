@@ -283,6 +283,16 @@ hu-HU:
       Course 4 Bee 3: Az ismeretlen objektum vagy virág vagy lép. Használd a ha/különben
         blokkot nektár gyűjtéséhez, ha ez virág, különben pedig készíts mézet (mert
         ez egy lép).
+      Course 4 EC 1a: "**Nehéz kihívás:**  Nincsenek szabályok. Nincsenek nyomok.
+        Csak a kihívás!"
+      Course 4 EC 1b: "**Nehéz kihívás:**  Nincsenek szabályok. Nincsenek nyomok.
+        Csak a kihívás!"
+      Course 4 EC 2a: "**Nehéz kihívás:**  Nincsenek szabályok. Nincsenek nyomok.
+        Csak a kihívás!"
+      Course 4 EC 2b: "**Nehéz kihívás:**  Nincsenek szabályok. Nincsenek nyomok.
+        Csak a kihívás!"
+      Course 4 EC 2c: "**Nehéz kihívás:**  Nincsenek szabályok. Nincsenek nyomok.
+        Csak a kihívás!"
       Course 4 Play Lab Params 4: "Itt van egy járőr nevű függvény. \n\nSzerkeszd
         a \"járőr\" függvényt úgy, hogy a macska 400 képpontot fel, majd 400 képpontot
         lefelé menjen."
@@ -423,10 +433,6 @@ hu-HU:
         &quot;CAT&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;,
         &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title>\n    <title name=\"LAYOUT\">\"circle\"</title>\n
         \ </block></xml>\nMost már egyszerre több táncost is létrehozhatsz!"
-      Dance_2019_07: |-
-        Minden táncos rendelkezik több _tulajdonsággal_, amelyek a megjelenését vezérlik.
-
-        A méretének megváltoztatásával úgy tűnhet, hogy egy táncos közelebb vagy távolabb van. Változtasd meg a táncosok egy csoportjának méretét miután a zene elindult.
       Dance_2019_08: A táncosok rendelkeznek egy "színárnyalat" tulajdonsággal, amely
         színt adhat nekik. Próbáld megváltoztatni az egyik táncos színét (vagy egy
         egész csoportét)!
@@ -510,6 +516,14 @@ hu-HU:
         **Használd a nyilakat, hogy a robot olyan gyorsan ismételje a spárga-taps-spárga-taps mozdulatokat, ahogy csak tudod!**
       Dance_Party_12: Lássuk, te hogy táncolsz! Hozd létre a saját táncodat, és oszd
         meg az ismerőseiddel.
+      Dance_Party_extras_alternate_2019: |-
+        # Vegyünk fel alakzatot!
+
+        Figyeld ezt a táncot, amely a <xml><block type="Dancelab_alternateMoves"><title name="GROUP">sprites</title><title name="N">2</title><title name="MOVE1">MOVES.Roll</title><title name="MOVE2">MOVES.ClapHigh</title></block></xml> blokkot használja fel a háttértáncosok alakzatának megváltoztatásához a tánc során. Próbáld ki az alábbi ötletek valamelyikét, és fejleszd tovább:
+
+        -   Hozz létre még egy csoport táncost egy eltérő elrendezésben
+        -   Változtasd meg az alakzatot valamely gomb lenyomásával
+        -   Változtasd meg valamely tulajdonságot, amikor a táncosok alakzatot váltanak
       Dance_Party_extras_battle: |-
         # Tánccsapatok
 
@@ -536,6 +550,10 @@ hu-HU:
         -   Kísérletezz más ritmusértékekkel (pl. félhez 0,5 vagy nyolcadhoz 0,125).
         -   Adj hozzá „ütem utáni” eseményeket.
         -   Válts át „ütemek”-ről „másodpercek”-re, és próbáld meg így időzíteni a táncaidat.
+      Dance_Party_extras_every_beat_2019: |-
+        # Gyorsítsd fel, lassítsd le
+
+        Ez az utolsó tánc a <xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml> blokk használatával vezérli az egyes táncosok mozgásának gyorsaságát. Kísérletezz különböző sebességekkel a dal különböző időpontjaiban. Nyugodtan matass bele a táncba, vagy térj vissza bármelyik korábbi tánchoz, és tedd még menőbbé.
       Dance_Party_extras_layout: |-
         # Álljunk alakzatba!
 
@@ -544,14 +562,6 @@ hu-HU:
         -   Hozz létre egy második táncoscsoportot eltérő elrendezéssel
         -   Érd el, hogy az elrendezés billentyűlenyomásra módosuljon
         -   Amikor a táncosok alakzatot váltanak, módosíts egy tulajdonságot is
-      Dance_Party_extras_layout_2019: |-
-        # Vegyünk fel alakzatot!
-
-        Figyeld ezt a táncot, amely a <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> blokkot használja fel a háttértáncosok alakzatának megváltoztatásához a tánc során. Próbáld ki az alábbi ötletek valamelyikét, és fejleszd tovább:
-
-        -   Hozz létre még egy csoport táncost egy eltérő elrendezésben
-        -   Változtasd meg az alakzatot valamely gomb lenyomásával
-        -   Változtasd meg valamely tulajdonságot, amikor a táncosok alakzatot váltanak
       Dance_Party_extras_on_beat: |-
         # Basszus, közép- és magashangok
 
@@ -577,13 +587,14 @@ hu-HU:
         -   A nyílbillentyűkkel jelenítsd meg és tüntesd el a táncosokat
         -   Tüntesd el az összes táncost, és válts át egy izgalmas háttéreffektre
       Dance_Party_extras_visible_2019: |-
-        # Hová tűntek?
+        # Negyedek
 
-        Ez a tánc két különböző tánccsoportot jelenít meg és tüntet el. Nézd meg, és egészítsd ki a saját ötleteiddel.
+        A táncaink többsége egész ütemeket használt, de mindegyik ütem 4 negyedből áll. Ez a tánc a [blockly block][0] használatával éri el, hogy a táncos minden negyed hangra tapsoljon az 5. ütem után.
 
-        -   Adj hozzá még egy tánccsapatot
-        -   A nyílbillentyűkkel jelenítsd meg és tüntesd el a táncosokat
-        -   Tüntesd el az összes táncost, és válts át egy izgalmas háttéreffektre
+        Próbáld megváltoztatni a számokat a blokkban, és figyeld meg, hogy hogyan változtatja meg a táncot.
+
+        -   Kísérletezz más hanghosszokkal (például 0.5 félhanghoz, vagy 0.125 nyolcad hanghoz).
+        -   Adj hozzá néhány más eseményt is.
       Function intro Ryan: "Egy \"híd építése\" nevű **függvény** van a munkaterületen.
         \ Ebben megtalálható a hídon való átkeléshez szükséges minden kód! \n\nAz
         út kijavításához és hogy {currentPlayerName} játékos eljusson a vöröskő fáklyához,
@@ -767,11 +778,18 @@ hu-HU:
         south"/></xml> a blokkot, hogy eljuss a makkhoz!
       courseB_iceage_loops3_2019: El tudod érni a makkot egy <xml><block type="maze_moveWest"
         block-text="move west"/></xml> blokkal? Próbálj ciklust használni!
+      courseC_artist_loopsPrePre1a_2019: |-
+        A művész rossz helyen áll.
+        Használd a <xml><block type="jump_to_xy" id="callMe" block-text="jump to 200 over 200 down"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml> blokkot, hogy a művész a rajzterület közepére kerüljön. Aztán rajzolj egy 50 képpont hosszúsági vonalat a  <xml><block type="draw_move_by_constant" block-text="move forward"><title name="DIR">moveForward</title><title name="VALUE">50</title></block></xml> segítségével.
       courseC_collector_prog2_2019: Move Laurelt a kincshez, majd használja <xml><block
         type="collector_collect" block-text="collect"/></xml> blokkot, hogy felvegye.
       courseC_maze_programming2_2019: Húzz egy extra <xml><block type="maze_moveForward"
         block-text="move forward"/></xml> blokkot elő a eszköztárból, hogy befejezd
         a kódod.
+      courseD_artist_5_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _\"Próbáld megváltoztatni az alakot vagy a vonal hosszát hogy sajátot alkoss\"_\n\n<br/>
+        \ \n\n**Tanács:** bárhogy megváltoztathatod a rajzot, de itt egy ötlet: \n\n-
+        \  Próbáld az alakzatok típusait megváltoztatni a hópehely közepén!"
       courseD_bee_nestedLoops8: Gyűjtsd össze az összes nektárt az összes virágról,
         és készíts mézet minden lépbe. Használj beágyazott ciklust!
       courseD_bee_nestedLoops8_2018: Gyűjtsd össze az összes nektárt az összes virágról,
