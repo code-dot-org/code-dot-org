@@ -449,6 +449,7 @@ is:
           LAYOUT:
             '"border"': rammi
             '"inner"': ferningur
+            '"diamond"': demant
             '"circle"': hringur
             '"grid"': fylking
             '"row"': hlið við hlið

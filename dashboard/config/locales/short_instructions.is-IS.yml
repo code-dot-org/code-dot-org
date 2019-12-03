@@ -975,6 +975,11 @@ is-IS:
       Dance Party Predict: 'Hvað heldur þú að muni gerast þegar þú smellir á geimveruna?  '
       Dance Party Predict_2019: 'Hvað heldur þú að muni gerast þegar þú smellir á
         geimveruna?  '
+      Dance_2019_01: 'Dragðu <xml><block type="Dancelab_makeAnonymousDanceSprite"
+        block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;,
+        &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml>
+        kubbinn út á vinnusvæðið og festu hann inn í <xml><block type="Dancelab_whenSetup2"
+        next_connection_disabled="true" block-text="setup"></block></xml> kubbinn.'
       Dance_2019_05: Láttu nú dansarann skipta um hreyfingu eftir 6 takta!
       Dance_2019_10: Finndu taktinn! Búðu til eigin dans sem þú getur deilt með vinum
         þínum.

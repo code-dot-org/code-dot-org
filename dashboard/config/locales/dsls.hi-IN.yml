@@ -970,16 +970,16 @@ hi-IN:
         questions:
         - {}
         answers:
-        - {}
+        - feedback: ग़लत.
         - correct: true
           feedback: सही!
-        - {}
+        - feedback: ग़लत.
         - feedback: गलत
       behaviors 4 predict:
         questions:
         - {}
         answers:
-        - {}
+        - feedback: ग़लत.
         - correct: true
           feedback: सही!
         - {}
@@ -1154,8 +1154,11 @@ hi-IN:
         - {}
         answers:
         - text: A
+          feedback: ग़लत.
         - text: B
+          feedback: ग़लत.
         - text: C
+          feedback: ग़लत.
         - text: D
           correct: true
           feedback: सही!
@@ -1164,8 +1167,11 @@ hi-IN:
         - {}
         answers:
         - text: A
+          feedback: ग़लत.
         - text: B
+          feedback: ग़लत.
         - text: C
+          feedback: ग़लत.
         - text: D
           correct: true
           feedback: सही!
@@ -1174,8 +1180,11 @@ hi-IN:
         - {}
         answers:
         - text: A
+          feedback: ग़लत.
         - text: B
+          feedback: ग़लत.
         - text: C
+          feedback: ग़लत.
         - text: D
           correct: true
           feedback: सही!
@@ -1680,6 +1689,7 @@ hi-IN:
         - {}
         answers:
         - correct: true
+          feedback: 'सही। '
         - {}
         - {}
         - text: मुझे पता नहीं

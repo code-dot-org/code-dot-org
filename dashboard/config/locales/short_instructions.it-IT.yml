@@ -1099,21 +1099,26 @@ it-IT:
       Dance Party Freeplay_2019: Ora crea la tua discoteca aliena!
       Dance Party Predict: 'Cosa pensi che succederà quando cliccherai sull''alieno?  '
       Dance Party Predict_2019: 'Cosa pensi che succederà quando cliccherai sull''alieno?  '
-      Dance_2019_01: Trascina nell’area di lavoro il blocco `crea un nuovo`e aggancialo
-        al blocco `quando si clicca su "Esegui"` (`setup`).
-      Dance_2019_02: Il blocco "quando premuto verso l'alto" consente di eseguire
-        il codice quando si preme la freccia su. Fai applaudire il ballerino quando
-        premi, o prova un'altra mossa!
-      Dance_2019_03: 'È ora di una gara di ballo! Programma ogni ballerino perché
-        si muova quando premi tasti diversi. Scegli il tuo movimento preferito per
-        ogni ballerino o impostalo su “(Casuale)” per qualcosa di totalmente imprevedibile! '
+      Dance_2019_01: 'Trascina il blocco <xml><block type="Dancelab_makeAnonymousDanceSprite"
+        block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;,
+        &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml>
+        nell’area di lavoro e inseriscilo nel blocco <xml><block type="Dancelab_whenSetup2"
+        next_connection_disabled="true" block-text="setup"></block></xml>.'
+      Dance_2019_02: Fai in modo che il gatto faccia una mossa di ballo quando premi
+        un tasto.
+      Dance_2019_03: 'È ora di una gara di ballo! Programma ogni ballerino affinché
+        si muova quando premi un certo tasto. Scegli il tuo movimento preferito per
+        ogni ballerino o impostalo su “(Casuale)” per ottenere qualcosa di totalmente
+        imprevedibile! '
       Dance_2019_04: Fai iniziare una nuova mossa al tuo ballerino dopo la quarta
         battuta.
       Dance_2019_05: Adesso fai in modo che il ballerino cominci una nuova mossa dopo
         6 battute.
-      Dance_2019_06: Imposta un gruppo di ballerini sullo sfondo intorno al ballerino
-        principale nel mezzo.
-      Dance_2019_07: Cambia la dimensione del gruppo di ballerini sullo sfondo.
+      Dance_2019_06: Imposta un gruppo di ballerini secondari dietro al ballerino
+        principale posizionato nel mezzo.
+      Dance_2019_07: Cambia la dimensione del gruppo di ballerini secondari.
+      Dance_2019_08: Prova a modificare la tonalità di uno dei tuoi ballerini (o di
+        un intero gruppo)!
       Dance_2019_09: Sii creativo con questi nuovi blocchi!
       Dance_2019_10: Lasciati andare e lanciati in pista! Crea un ballo personalizzato
         da condividere con i tuoi amici.
@@ -1143,24 +1148,25 @@ it-IT:
         le due mosse più velocemente che puoi!
       Dance_Party_12: Lasciati andare e lanciati in pista! Crea un ballo personalizzato
         da condividere con i tuoi amici.
+      Dance_Party_extras_alternate_2019: Avanti e indietro! (Clicca "Di più" per maggiori
+        dettagli)
       Dance_Party_extras_battle: Squadre di ballo (Clicca "Di più" per maggiori dettagli)
       Dance_Party_extras_battle_2019: Squadre di ballo (Clicca "Di più" per maggiori
         dettagli)
-      Dance_Party_extras_every_beat: Quattro Quarti (Clicca "Di più" per maggiori
+      Dance_Party_extras_every_beat: Quartine (Clicca "Di più" per maggiori dettagli)
+      Dance_Party_extras_every_beat_2019: Quartine (Clicca "Di più" per maggiori dettagli)
+      Dance_Party_extras_layout: Tutti in formazione! (Clicca "Di più" per maggiori
         dettagli)
-      Dance_Party_extras_every_beat_2019: Quattro Quarti (Clicca "Di più" per maggiori
+      Dance_Party_extras_layout_2019: Tutti in formazione! (Clicca "Di più" per maggiori
         dettagli)
-      Dance_Party_extras_layout: Tutti in Formazione! (Clicca "Di più" per maggiori
+      Dance_Party_extras_mixed_2019: Più pulsanti (Clicca "Di più" per maggiori dettagli)
+      Dance_Party_extras_on_beat: Bassi, medi e alti (Clicca "Di più" per maggiori
         dettagli)
-      Dance_Party_extras_layout_2019: Tutti in Formazione! (Clicca "Di più" per maggiori
+      Dance_Party_extras_on_beat_2019: Bassi, medi e alti (Clicca "Di più" per maggiori
         dettagli)
-      Dance_Party_extras_on_beat: Bassi, Medi e Alti (Clicca "Di più" per maggiori
+      Dance_Party_extras_speed: Accelerare, rallentare (Clicca "Di più" per maggiori
         dettagli)
-      Dance_Party_extras_on_beat_2019: Bassi, Medi e Alti (Clicca "Di più" per maggiori
-        dettagli)
-      Dance_Party_extras_speed: Accelerare, Rallentare (Clicca "Di più" per maggiori
-        dettagli)
-      Dance_Party_extras_speed_2019: Accelerare, Rallentare (Clicca "Di più" per maggiori
+      Dance_Party_extras_speed_2019: Accelerare, rallentare (Clicca "Di più" per maggiori
         dettagli)
       Dance_Party_extras_visible: Dove sono andati? (Clicca "Di più" per maggiori
         dettagli)
@@ -1906,7 +1912,7 @@ it-IT:
       course3_bee_functions_challenge1: Dovrai cavartela da solo in questa sfida.
         Potrebbe essere più difficile di quanto sembri!
       course3_farmer_condLoops_challenge2: Raccogli tutto per completare l'esercizio.
-      course3_farmer_until_challenge2: Usa il blocco `Se/Altrimenti` per seguire questo
+      course3_farmer_until_challenge2: Usa il blocco `se/altrimenti` per seguire questo
         percorso con molte curve in diverse direzioni. Ad ogni angolo, usa il blocco
         `rimuovi 1` all'interno di un ciclo per eliminare il mucchio di terra.
       course3_maze_until_challenge1: Nessun suggerimento, solo una sfida. Fai arrivare
@@ -1933,6 +1939,10 @@ it-IT:
       course4_harvester_nested_loops_challenge1: '"Ho bisogno di aiuto nella fattoria!
         Aiutami a raccogliere queste pannocchie usando solo i blocchi presenti nella
         cassetta degli attrezzi."'
+      course4_playlab_variables_challenge1: Usa questi blocchi per fare in modo che
+        i personaggi condividano un gioco di parole ("knock-knock joke"). Modifica
+        il contenuto delle variabili `firstName` e `punchLine` per raccontare la tua
+        storiella!
       courseA_artist_loops1: Questo è un nuovo tipo di esercizio chiamato "Artista".
         Prova a disegnare qualcosa di divertente. Quando sei soddisfatto, premi "Termina"
         per passare all'esercizio successivo.
@@ -3822,7 +3832,7 @@ it-IT:
       courseD_farmer_condLoops_challenge2: Raccogli tutto per completare l'esercizio.
       courseD_farmer_condLoops_challenge2_2018: Raccogli tutto per completare l'esercizio.
       courseD_farmer_condLoops_challenge2_2019: Raccogli tutto per completare l'esercizio.
-      courseD_farmer_until_challenge2: Usa il blocco `Se/Altrimenti` per seguire questo
+      courseD_farmer_until_challenge2: Usa il blocco `se/altrimenti` per seguire questo
         percorso con molte curve in diverse direzioni. Ad ogni angolo, usa il blocco
         `rimuovi 1` all'interno di un ciclo per eliminare il mucchio di terra.
       courseD_farmer_while1: Vai fino al mucchio di terra e usa il blocco `rimuovi
@@ -4640,9 +4650,20 @@ it-IT:
         possibile di blocchi.
       courseF_bee_for_challenge2_2019: Risolvi questo esercizio usando il minor numero
         possibile di blocchi.
-      courseF_bee_functions4: |-
-        La funzione "vai a prendere il nettare" (<i>move and get nectar</i>) sposta l'ape sul fiore, raccoglie il nettare e fa tornare l'ape dove si trovava.<br><br>
-        Usa questa funzione per raccogliere tutto il nettare.
+      courseF_bee_functions2: Usa la funzione `get only nectar` ("prendi solo nettare")
+        per raccogliere il nettare da ogni fiore.
+      courseF_bee_functions3: Clicca su "modifica" per inserire il codice all'interno
+        della funzione `only make honey` (_fai solo il miele_) e poi utilizzala per
+        risolvere questo esercizio.
+      courseF_bee_functions3a: Scrivi una funzione che raccolga il nettare se l'ape
+        è su un fiore, altrimenti produca il miele. Usa quindi la funzione per risolvere
+        l'esercizio!
+      courseF_bee_functions4: Crea una nuova funzione `move and check` (_muoviti e
+        controlla_) per raccoglie tutto il nettare.
+      courseF_bee_functions5a: Usa la funzione `move and check` (_muoviti e controlla_)
+        per raccogliere tutto il nettare.
+      courseF_bee_functions6: Aiuta l'ape a percorrere il labirinto girando a sinistra
+        in corrispondenza dei fiori e a destra quando incontra dei favi.
       courseF_bee_fwp9_predict1: Usa la tua nuova funzione per risolvere questo esercizio.
       courseF_bee_variables_1_2018: Completa questo programma per far sì che l'ape
         possa raccogliere tutto il nettare e produrre tutto il miele.
@@ -4688,8 +4709,18 @@ it-IT:
         con un'istruzione condizionale `se/altrimenti`.
       courseF_playlab_variables6c: Nel resto di questa lezione, costruirai un gioco
         che potrai controllare direttamente!
+      courseF_playlab_variables7b: Crea alcune domande e combina le risposte in una
+        storia tutta tua.
       courseF_playlab_variables7c: Fai in modo che il programma faccia qualcosa di
         particolare dopo aver chiesto all'utente di indovinare un colore.
+      courseF_playlab_variables8c: Usa le variabili per personalizzare il gioco.
+      courseF_playlab_variables_challenge1: 'Usa questi blocchi per fare in modo che
+        i personaggi condividano un gioco di parole ("knock-knock joke"). '
+      courseF_playlab_variables_challenge2: Questo gioco usa le variabili per tenere
+        il conto del punteggio.  Muovendo il cane, tocca il gatto per ottenere 2 punti
+        e il pinguino per guadagnarne 3 punti.  Ma fai attenzione, quando il gatto
+        e il pinguino si toccano, perdi 1 punto. Arriva esattamente a 10 punti per
+        vincere!
       coursea_maze_ramp1_2018: Per risolvere questo esercizio, aggancia insieme i
         due blocchi e clicca su "▶ Esegui"!
       coursea_maze_ramp1_2019: Per risolvere questo esercizio, aggancia insieme i

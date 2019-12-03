@@ -692,6 +692,27 @@ ur-PK:
         - {}
         - correct: true
         - {}
+      Dance_Party_extras_intro:
+        markdown: "# ڈانس کرتے رہیں!\n\n حصہ 2 کے لئے، آپ اپنا خود کا پروجیکٹ تیار
+          کرنے لگے ہیں۔ یہاں کوئی پزلز نہیں ہیں - اس کے بجائے یہاں پروجیکٹس کا گروپ
+          ہے جو مزید پیچیدہ ڈانس پارٹیاں بنانے کے مختلف طریقے دکھاتا ہے۔ آپ یہ لیولز
+          _کسی بھی ترتیب میں_ کر سکتے ہیں۔ یہ دیکھنے کے لئے اردگرد چھلانگ لگائیں کہ
+          گزشتہ لیول میں کچھ کیسے ہوا تھا، یا پراجیکٹس کے درمیان تصورات کو یکجا کریں۔
+          ان تمام کو آزمائیں، اپنی پسند منتخب کریں، اور اسے اپنا بنانے کے لئے اس پروجیکٹ
+          میں شامل کرنے کا کام کرنے اپنا وقت صرف کریں۔\n\n<a class=\"btn btn-large
+          btn-primary next-stage submitButton pull-right\">جاری رکھیں</a>\n<div class=\"clearfix\">\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"2\">\n<h2>\n تشکیل میں آئیں\n</h2>\n\n<img
+          src=\"https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif\">\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"3\">\n<h2>\n وہ کہاں گئے
+          تھے؟\n</h2>\n\n<img src=\"https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif\">\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"4\">\n<h2>\n ڈانس گروپ \n</h2>\n\n<img
+          src=\"https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif\">\n\n</div>\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"5\">\n<h2>\nچوتھائی سُر\n</h2>\n\n<img
+          src=\"https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif\">\n\n</div>\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"6\">\n<h2>\n باس، مڈ، ٹریبل\n</h2>\n\n<img
+          src=\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\">\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"7\">\n<h2>\nاسے تیز کریں،
+          اسے آہستہ کریں\n</h2>\n\n<img src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\">\n\n</div>\n"
       K-1 Artist 1 Multi 1:
         title: کثیر انتخاب
         questions:

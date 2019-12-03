@@ -447,6 +447,7 @@ hu:
           LAYOUT:
             '"border"': határ
             '"inner"': belső négyzet
+            '"diamond"': gyémánt
             '"circle"': kör
             '"grid"': rács
             '"row"': sor
