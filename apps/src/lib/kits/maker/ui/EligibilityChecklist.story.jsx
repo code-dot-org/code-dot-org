@@ -5,6 +5,7 @@ import {Unit6Intention} from '../util/discountLogic';
 
 const defaultProps = {
   statusPD: Status.SUCCEEDED,
+  statusAcademicYearPD: Status.SUCCEEDED,
   statusStudentCount: Status.SUCCEEDED,
   hasConfirmedSchool: false,
   adminSetStatus: false,
@@ -16,8 +17,8 @@ export default storybook => {
     .storiesOf('MakerToolkit/Discounts/EligibilityChecklist', module)
     .addStoryTable([
       {
-        name: '2019: Initial view',
-        description: 'New format for 2019',
+        name: '2020: Initial view',
+        description: 'New format for 2020',
         story: () => (
           <div style={{margin: '2em'}}>
             <EligibilityChecklist {...defaultProps} />
@@ -25,7 +26,7 @@ export default storybook => {
         )
       },
       {
-        name: '2019: School is not eligible',
+        name: '2020: School is not eligible',
         description: 'When your school does not qualify',
         story: () => (
           <div style={{margin: '2em'}}>
@@ -40,7 +41,7 @@ export default storybook => {
         )
       },
       {
-        name: '2019: Student count and facilitator failure',
+        name: '2020: Student count and facilitator failure',
         description: 'When your school does qualify',
         story: () => (
           <div style={{margin: '2em'}}>
@@ -57,7 +58,7 @@ export default storybook => {
         )
       },
       {
-        name: '2019: Student count and facilitator success',
+        name: '2020: Student count and facilitator success',
         description: 'When your school does qualify',
         story: () => (
           <div style={{margin: '2em'}}>
@@ -72,7 +73,7 @@ export default storybook => {
         )
       },
       {
-        name: '2019: Year choice failure',
+        name: '2020: Year choice failure',
         description: 'When you are not planning to teach this or next year',
         story: () => (
           <div style={{margin: '2em'}}>
@@ -88,7 +89,7 @@ export default storybook => {
         )
       },
       {
-        name: '2019: Year choice success',
+        name: '2020: Year choice success',
         description: 'When you are planning to teach this or next year',
         story: () => (
           <div style={{margin: '2em'}}>
@@ -98,7 +99,7 @@ export default storybook => {
               schoolName="Code.org Junior Academy"
               hasConfirmedSchool={true}
               getsFullDiscount={true}
-              unit6Intention={Unit6Intention.YES_18_19}
+              unit6Intention={Unit6Intention.YES_SPRING_2020}
             />
           </div>
         )
