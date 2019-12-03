@@ -6,8 +6,8 @@ class BubbleChoiceDSL < LevelDSL
     @hash[:sublevels] = []
   end
 
-  def self.non_i18n_fieldnames
-    super + %w(display_name sublevels)
+  def self.i18n_fields
+    super + %w(description)
   end
 
   def display_name(text) @hash[:display_name] = text end

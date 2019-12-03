@@ -12,8 +12,12 @@ class LevelGroupDSL < LevelDSL
     @level_names = []
   end
 
-  def self.non_i18n_fieldnames
-    super + %w(options pages texts submittable anonymous)
+  def self.i18n_fields
+    super + %w(
+      description
+      description_short
+      title
+    )
   end
 
   integer :id

@@ -34,16 +34,17 @@ class BaseDSL
   # user-visible strings from this instance
   def i18n_strings
     @hash.
-      # filter out any entries with nil key or value
-      select {|key, value| key.present? && value.present?}.
       # always stringify, for consistency
       deep_stringify_keys.
-      # each DSL type may define some fields that should not be translated
-      except(*self.class.non_i18n_fieldnames)
+      # only accept keys that the DSL class has specified should be translated
+      slice(*self.class.i18n_fields).
+      # filter out any entries with nil key or value
+      select {|key, value| key.present? && value.present?}
   end
 
-  # can be extended by subclasses
-  def self.non_i18n_fieldnames
+  # can be extended by subclasses to specify which fields to include in the
+  # i18n_strings hash
+  def self.i18n_fields
     []
   end
 
