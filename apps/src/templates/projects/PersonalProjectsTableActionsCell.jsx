@@ -48,7 +48,23 @@ class PersonalProjectsTableActionsCell extends Component {
   };
 
   onSave = () => {
-    this.props.saveProjectName(this.props.projectId, this.props.updatedName);
+    $.get({
+      url: `/api/v1/projects/personal/check_name?new_name=${
+        this.props.updatedName
+      }`,
+      dataType: 'json'
+    }).done(data => {
+      if (data.nameFailure) {
+        this.setState({
+          projectNameFailure: data.nameFailure
+        });
+      } else {
+        this.props.saveProjectName(
+          this.props.projectId,
+          this.props.updatedName
+        );
+      }
+    });
   };
 
   onRemix = () => {
