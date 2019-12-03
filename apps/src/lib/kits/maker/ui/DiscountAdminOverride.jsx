@@ -254,7 +254,8 @@ export default class DiscountAdminOverride extends Component {
                       checked={this.state.overrideValue === 'partial'}
                       onChange={this.handleOverrideChange}
                     />
-                    Teacher should receive full discount code (without AK/HI shipping)
+                    Teacher should receive full discount code (without AK/HI
+                    shipping)
                   </label>
                   <label>
                     <input
@@ -265,7 +266,8 @@ export default class DiscountAdminOverride extends Component {
                       checked={this.state.overrideValue === 'full'}
                       onChange={this.handleOverrideChange}
                     />
-                    Teacher should receive full discount code (with AK/HI shipping)
+                    Teacher should receive full discount code (with AK/HI
+                    shipping)
                   </label>
                 </div>
                 <Button
