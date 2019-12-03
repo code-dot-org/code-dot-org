@@ -19,7 +19,9 @@ export const Unit6Intention = {
  *   teacher's eligibility for a discount code.
  */
 export function isUnit6IntentionEligible(unit6Intention) {
-  return [Unit6Intention.YES_18_19, Unit6Intention.YES_19_20].includes(
-    unit6Intention
-  );
+  return [
+    Unit6Intention.YES_SPRING_2020,
+    Unit6Intention.YES_FALL_2020,
+    Unit6Intention.YES_SPRING_2021
+  ].includes(unit6Intention);
 }
