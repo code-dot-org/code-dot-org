@@ -113,7 +113,7 @@ const AquaticMinecraftPromo = {
 const DanceParty = {
   title: i18n.dancePartyTitle(),
   description: i18n.dancePartyDesc(),
-  link: '/s/dance/reset',
+  link: '/s/dance-2019/reset',
   image: 'dance-party',
   buttonText: i18n.dancePartyButton()
 };
@@ -150,10 +150,9 @@ export const cardSets = {
   ],
   signedInApplabCards: [ApplabProject, ApplabMarketing, AnotherHoC],
   signedOutApplabCards: [ApplabMarketing, CreateAccountApplab, ApplabProject],
-  signedInDefaultCards: [CSFExpress, ApplabTutorial, AnotherHoC],
-  youngerThan13DefaultCards: [CSFExpress, DanceParty, AnotherHoC],
+  signedInDefaultCards: [CSFExpress, DanceParty, AnotherHoC],
   signedInNonEnglishDefaultCards: [CSFAccelerated, CourseCatalog, AnotherHoC],
-  signedOutDefaultCards: [CSFExpress, ApplabTutorial, CreateAccount],
+  signedOutDefaultCards: [CSFExpress, DanceParty, CreateAccount],
   signedOutNonEnglishDefaultCards: [
     CSFAccelerated,
     CourseCatalog,
