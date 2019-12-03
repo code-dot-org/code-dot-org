@@ -58,7 +58,7 @@ File.readlines(ARGV[0]).each do |line|
 
   user.races = nil
   user.save!
-  puts("#{line} - success")
+  puts("#{line.strip} - success")
 rescue
-  puts("#{line} - ERROR - other")
+  puts("#{line.strip} - ERROR - other")
 end
