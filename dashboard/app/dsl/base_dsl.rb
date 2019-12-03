@@ -33,11 +33,17 @@ class BaseDSL
   # after parse has been done, this function returns a hash of all the
   # user-visible strings from this instance
   def i18n_strings
+    fields = self.class.i18n_fields.
+      # we stringify the keys in the hash below, so also stringify these
+      map(&:to_str).
+      # sort the fields here so the resulting hash is also sorted
+      sort
+
     @hash.
       # always stringify, for consistency
       deep_stringify_keys.
       # only accept keys that the DSL class has specified should be translated
-      slice(*self.class.i18n_fields).
+      slice(*fields).
       # filter out any entries with nil key or value
       select {|key, value| key.present? && value.present?}
   end
