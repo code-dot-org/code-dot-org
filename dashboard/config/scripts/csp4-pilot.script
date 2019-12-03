@@ -116,19 +116,19 @@ level 'U4 L11 Functions Make 4.75', progression: 'Make the Quote Maker App'
 level 'U4 L11 Functions Make 5', progression: 'Make the Quote Maker App'
 level 'U4 L11 Functions Make 6', progression: 'Make the Quote Maker App', assessment: true
 
-stage 'Practice PT Part 1', flex_category: 'csp_project'
+stage 'Project - Decision Maker App Part 1', flex_category: 'csp_project'
 level 'CSP U4L12 SFLP 20-21', progression: 'Lesson Overview'
 level 'U4 L12 Practice PT 1', progression: 'Sample Apps'
 level 'U4 L12 Practice PT 2', progression: 'Sample Apps'
 
-stage 'Practice PT Part 2', flex_category: 'csp_project'
+stage 'Project - Decision Maker App Part 2', flex_category: 'csp_project'
 level 'CSP U4L13 SFLP 20-21', progression: 'Lesson Overview'
 level 'U4 L13 Practice PT 1', progression: 'Create the Screens'
 level 'U4 L13 Practice PT 2', progression: 'Create the Variables'
 level 'U4 L13 Practice PT 3', progression: 'Create the Function'
 level 'U4 L13 Practice PT 4', progression: 'Add onEvents'
 
-stage 'Practice PT Part 3', flex_category: 'csp_project'
+stage 'Project - Decision Maker App Part 3', flex_category: 'csp_project'
 level 'CSP U4L14 SFLP 20-21', progression: 'Lesson Overview'
 level 'U4 L14 Practice PT 1', progression: 'Test Your Decision Maker App'
 level 'U4 L14 Practice PT 2', progression: 'Submit Your Decision Maker App', assessment: true
