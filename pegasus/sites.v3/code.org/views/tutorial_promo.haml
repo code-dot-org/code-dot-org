@@ -14,12 +14,11 @@
       %a{href: tutorial[:left_button_link], target: '_self'}
         %button.tutorial-button= tutorial[:left_button_text]
 
-  - unless tutorial[:skip_right_box]
-    .col-25.specific-tutorial.right-tutorial
-      .tutorial-box{id: tutorial[:id_for_mobile_image]}
-        %h2.specific-tutorial-heading= tutorial[:right_heading]
-        .tutorial-details
-          %p.tutorial-description= tutorial[:right_description]
-          %p.tutorial-specs= tutorial[:right_specs]
-        %a{href: tutorial[:right_button_link], target: '_self'}
-          %button.tutorial-button= tutorial[:right_button_text]
+  .col-25.specific-tutorial.right-tutorial
+    .tutorial-box{id: tutorial[:id_for_mobile_image]}
+      %h2.specific-tutorial-heading= tutorial[:right_heading]
+      .tutorial-details
+        %p.tutorial-description= tutorial[:right_description]
+        %p.tutorial-specs= tutorial[:right_specs]
+      %a{href: tutorial[:right_button_link], target: '_self'}
+        %button.tutorial-button= tutorial[:right_button_text]
