@@ -4,10 +4,38 @@ sl-SI:
     function_names:
       2-3 Artist 11:
         x: x
+      2-3 Artist 12:
+        details: podrobnosti
+        draw eyebrow: nariši obrv
+        draw pupil: nariši zenico
       2-3 Artist 3.4:
         draw a circle: nariši krog
+        draw a car: nariši avto
+      2-3 Artist 7:
+        draw_rect: nariši_pravokotnik
       2-3 Artist Debugging 10:
+        jump to middle: skoči na sredino
         draw a circle: nariši krog
+        draw a button: nariši gumb
+        draw cord: nariši kabel
+        draw R pad: nariši R gumb
+      2-3 Artist Debugging 5:
+        draw left leg: nariši levo nogo
+        draw right leg: nariši desno nogo
+        draw body and arms: nariši telo in roke
+        draw a head: nariši glavo
+      2-3 Artist Debugging 6:
+        draw right leg: nariši desno nogo
+        draw arms: nariši roke
+        jump to neck: skoči do vratu
+        draw left leg: nariši levo nogo
+      2-3 Artist Debugging 7:
+        draw O: nariši O
+        draw D: nariši D
+        draw E: nariši E
+      2-3 Artist Functions 10:
+        big gear: velik zobnik
+        small gear: majhen zobnik
       2-3 Artist Functions 11:
         draw a hexagon: nariši šesterokotnik
       2-3 Artist Functions 11.5:
@@ -22,12 +50,32 @@ sl-SI:
         draw a square: nariši kvadrat
       2-3 Artist Functions 9:
         draw a snowflake: nariši snežinko
+      2-3 Bee Functions 10:
+        collect purple nectar: pridobi ves nektar
+      2-3 Bee Functions Assessment 1:
+        get 7: dobi 7
+      2-3 Bee Functions Assessment 2:
+        move and get 3: premakni se in dobi 3
       4-5 Artist 3:
         draw a flower: nariši rožo
       4-5 Artist 6:
         draw a tree: nariši drevo
       4-5 Artist 7:
         draw a circle: nariši krog
+        draw a car: nariši avto
+      4-5 Artist 8:
+        draw circle: nariši krog
+        draw goal: nariši gol
+      4-5 Bee Conditionals 7:
+        check purple flower: preveri vijolično rožo
+      4-5 Bee Conditionals 8:
+        check flower make honey: preveri rožo naredi med
+      4-5 Bee Conditionals Assessment 1:
+        get nectar or make honey: dobi nektar ali naredi med
+      4-5 Bee Debugging 7:
+        make 3 honey: naredi 3-krat med
+      4-5 Bee Debugging 9:
+        make all honey: naredi med
       Course 4 Play Lab Params 1:
         jump: skoči
       Course 4 Play Lab Params 2:

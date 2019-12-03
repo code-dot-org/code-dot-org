@@ -263,7 +263,7 @@ th:
       applab: 'แอ๊ปแล็บ'
       artist: 'ศิลปิน'
       bounce: 'กระเด้ง'
-      dance: 'งานเต้นรำ'
+      dance: 'Dance Party'
       frozen: 'Frozen'
       gamelab: 'เกมแล๊บ (Game Lab)'
       gumball: 'โลกมหัศจรรย์ของ Gumball'
@@ -413,9 +413,9 @@ th:
       title: 'แอ๊ปแล็บ'
       audience: 'อายุ 13+'
     dance:
-      title: 'งานเต้นรำ'
+      title: 'Dance Party'
     dance-2019:
-      title: 'งานเต้นรำ'
+      title: 'Dance Party'
     20-hour:
       body: 'This 20-hour คอร์ส covers the core computer science and programming concepts in คอร์ส 2-4. The คอร์ส is designed for use with ages 10-18. Check out คอร์ส 2-4 for a more complete experience!'
     gallery:

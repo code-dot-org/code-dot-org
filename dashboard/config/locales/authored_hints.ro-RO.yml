@@ -1027,6 +1027,10 @@ ro-RO:
           "**Provocare opțională**
 
           Modifică efectul de fundal în diferite momente ale cântecului conectând blocul nou sub evenimentele <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.".
+      Dance_Party_05:
+        validation: "**Cum trec de acest nivel?** \n\n-   Dansatorul tău trebuie să
+          parcurgă cel puțin 4 mișcări de dans diferite înainte de sfârșitul nivelului.
+          \n\n_Acest nivel se termină după 12 măsuri._"
       Dance_Party_06:
         validation: |-
           "**Cum trec de acest nivel?**

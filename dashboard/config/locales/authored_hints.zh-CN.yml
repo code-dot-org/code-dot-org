@@ -1996,6 +1996,13 @@ zh-CN:
           **可选挑战**
 
           通过连接<xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"小节"</title></block></xml>事件下的新模块，在歌曲的不同时间点变换背景效果。
+      Dance_Party_05:
+        validation: |-
+          **如何通过这一关？**
+
+          -   您的舞者需要在关卡结束之前至少循环 4 种不同的舞蹈动作。
+
+          _此关在 12 个小节后结束。_
       Dance_Party_06:
         validation: |-
           **如何通过此关？**

@@ -1972,6 +1972,10 @@ nl-NL:
           **Extra uitdaging**
 
           Verander het achtergrondeffect op verschillende momenten door het nieuwe blok te verbinden onder de <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> gebeurtenissen.
+      Dance_Party_05:
+        validation: "\\*\\*Hoe kan ik dit level halen? \n\n-   Je danser moet minstens
+          4 verschillende dansbewegingen doorlopen voordat het level eindigt. \n\n_Dit
+          level eindigt na 12 maten_"
       Dance_Party_06:
         validation: |-
           **Hoe haal ik dit level?**

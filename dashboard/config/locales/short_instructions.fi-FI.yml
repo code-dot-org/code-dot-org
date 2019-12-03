@@ -108,9 +108,12 @@ fi-FI:
       CourseD_Dance_Party_11: "`Kun ylänuoli pohjassa`-blokki antaa sinun käyttää
         koodia, kun ylänuolta painetaan. Koeta saada tanssijasi tekemään nopea liike,
         kun painat ylänuolta."
+      CourseD_Dance_Party_11_5: Saa ankat tanssimaan yhdessä ”kaikki ankat! -lohkojen
+        avulla.
       CourseD_Dance_Party_11b: Laita Robotti “droppaamaan” painamalla oikeaa nuolta
         ja “flossaamaan” kun painat ylänuolta. Tee drop-flossaus niin nopeasti kuin
         pystyt!
+      CourseD_Dance_Party_12: Ryhdy toimiin! Luo oma tanssi ja jaa se ystäviesi kanssa.
       CourseE_HOC 2018 Level_1: Kerää vene arkusta.
       CourseE_HOC 2018 Level_10: Mene tämän Ocean Monumentin sisäänkäynnille.
       CourseE_HOC 2018 Level_11: Rakenna väylä prismariinilla Ocean Monumentin sisälle.
@@ -136,7 +139,9 @@ fi-FI:
       Dance_2019_06: Määritä taustatanssijoiden ryhmä keskellä olevan päätanssijan
         ympärille.
       Dance_2019_07: Muuta taustatanssijoiden ryhmän kokoa.
+      Dance_2019_08: Yritä vaihtaa yhden tanssijasi sävy (tai koko ryhmän)!
       Dance_2019_09: Käytä luovuutta näiden uusien blokkien kanssa!
+      Dance_2019_10: Ryhdy toimiin! Luo oma tanssi ja jaa se ystäviesi kanssa.
       Dance_Party_01: Raahaa ‘tee uusi’-blokki työtilaan ja yhdistä se ‘asetukset’-blokin
         sisällä.
       Dance_Party_02: Laita hirvi aloittamaan uusi tanssiliike neljän tahdin jälkeen!
@@ -153,8 +158,10 @@ fi-FI:
       Dance_Party_11: "`Kun ylänuoli pohjassa`-blokki antaa sinun käyttää koodia,
         kun ylänuolta painetaan. Koeta saada tanssijasi tekemään nopea liike, kun
         painat ylänuolta."
+      Dance_Party_11_5: Saa ankat tanssimaan yhdessä ”kaikki ankat! -lohkojen avulla.
       Dance_Party_11b: Laita Robotti “droppaamaan” painamalla oikeaa nuolta ja “flossaamaan”
         kun painat ylänuolta. Tee drop-flossaus niin nopeasti kuin pystyt!
+      Dance_Party_12: Ryhdy toimiin! Luo oma tanssi ja jaa se ystäviesi kanssa.
       Function intro Ryan: Luo polku soihdulle käyttämällä kahdesti toimintoa rakenna
         silta.
       Function intro Ryan_2019: Luo polku soihdulle käyttämällä kahdesti toimintoa

@@ -1,0 +1,29 @@
+da:
+  data:
+    block_categories:
+      Actions: Handlinger
+      Advanced: Avanceret
+      Behaviors: Adfærd
+      Brushes: Pensler
+      Color: Farve
+      Comment: Kommentar
+      Comments: Kommentarer
+      Conditionals: Betingelser
+      Dancers: Dansere
+      Default: Standard
+      Events: Hændelser
+      Functions: Funktioner
+      'Functions ': 'Funktioner '
+      Game/Score: Spil/score
+      Games/Score: Spil/score
+      Groups: Grupper
+      Locations: Placering
+      Logic: Logik
+      Loops: Løkker
+      Math: Matematik
+      Numbers: Tal
+      Properties: Egenskaber
+      Text: Tekst
+      Variables: Variabler
+      'Variables ': 'Variabler '
+      World: Verden

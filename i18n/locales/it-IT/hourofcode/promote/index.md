@@ -8,7 +8,9 @@ title: Spargi la voce
 
 ## 1. Diffondi la notizia
 
-Parla ai tuoi amici dell'**#OradelCodice**!
+Se sei in Italia potresti approfondire anche sul sito italiano [Programma il Futuro](https://www.programmailfuturo.it/come/ora-del-codice).  
+  
+Parla ai tuoi amici dell'Ora del Codice **#OradelCodice #HourOfCode**!
 
 {{ promote/share_buttons }}
 

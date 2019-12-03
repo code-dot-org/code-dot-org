@@ -98,6 +98,8 @@ vi-VN:
       Dance_2019_06: Thiết lập một nhóm các vũ công phụ họa đứng xung quanh vũ công
         chính ở giữa.
       Dance_2019_07: Thay đổi kích thước của nhóm vũ công phụ họa.
+      Dance_2019_08: Hãy thử thay đổi màu sắc của một trong các vũ công của bạn (hoặc
+        của toàn bộ nhóm nhảy)!
       Dance_2019_09: Hãy sáng tạo với những khối mới này!
       Dance_2019_10: Bắt đầu quẩy thôi! Tạo ra điệu nhảy của riêng bạn để chia sẻ
         với bạn bè.
@@ -430,6 +432,8 @@ vi-VN:
         lợn!
       courseA_maze_seq8_2019: Bạn hãy giải câu đố này và đưa chú chim đến chỗ chú
         lợn!
+      courseA_playLab_events1_2019: Đây là cấp độ Phòng Thí Nghiệm trò chơi. Di chuyển
+        các khối tới khu vực làm việc và xem điều gì sẽ xảy ra!
       courseA_playLab_events2: Chú chó Jorge muốn nói “Xin chào”. Bạn có thể giúp
         chú không?
       courseA_playLab_events2_2018: Chú chó Jorge muốn nói “Xin chào”. Bạn có thể
@@ -483,6 +487,19 @@ vi-VN:
         được chỗ chú lợn!
       courseB_playlab_events5: Thêm khối sự kiện để chàng kỵ sĩ di chuyển khi ấn phím
         mũi tên.
+      courseB_playlab_events6: |-
+        Giúp hiệp sĩ của bạn lấy tất cả lá cờ!
+        Để làm điều này, bạn cần tạo các sự kiện để giúp hiệp sĩ đi lên, xuống, sang trái và sang phải.
+      courseB_playlab_events6_2018: |-
+        Giúp hiệp sĩ của bạn lấy tất cả lá cờ!
+        Để làm điều này, bạn cần tạo các sự kiện để giúp hiệp sĩ đi lên, xuống, sang trái và sang phải.
+      courseB_playlab_events6_2019: |-
+        Giúp hiệp sĩ của bạn lấy tất cả lá cờ!
+        Để làm điều này, bạn cần tạo các sự kiện để giúp hiệp sĩ đi lên, xuống, sang trái và sang phải.
+      courseB_playlab_eventsFP_2018: "**Chơi tự do:**Sử dụng trí tưởng tượng của bạn.
+        Bạn có thể làm gì để trò chơi này thú vị hơn?"
+      courseB_playlab_eventsFP_2019: "**Chơi tự do:**Sử dụng trí tưởng tượng của bạn.
+        Bạn có thể làm gì để trò chơi này thú vị hơn?"
       courseB_starWars_prog1: '"Hãy đi lấy mảnh kim loại nào, BB-8!"'
       courseB_starWars_prog1_2018: '"Hãy đi lấy mảnh kim loại nào, BB-8!"'
       courseB_starWars_prog1_2019: '"Hãy đi lấy mảnh kim loại nào, BB-8!"'

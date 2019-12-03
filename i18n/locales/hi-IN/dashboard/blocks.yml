@@ -437,6 +437,7 @@ hi:
           LAYOUT:
             '"border"': बॉर्डर
             '"inner"': अंदर वर्ग
+            '"diamond"': हीरा
             '"circle"': गोला
             '"grid"': ग्रिड
             '"row"': पंक्ति

@@ -188,6 +188,8 @@ zh-TW:
       CourseD_Dance_Party_11:
         dance_callout_11_a: 新的程式積木！
         dance_callout_11_b: 新的程式積木！
+      CourseD_Dance_Party_11_5:
+        dance_party_11_5_groups: 在這裡查找「所有鴨子」程式積木
       Dance_2019_01:
         dance_callout_01: 在這裡選擇舞者的類型。
       Dance_2019_02:
@@ -215,6 +217,8 @@ zh-TW:
       Dance_Party_11:
         dance_callout_11_a: 新的程式積木！
         dance_callout_11_b: 新的程式積木！
+      Dance_Party_11_5:
+        dance_party_11_5_groups: 在這裡查找「所有鴨子」程式積木
       Function intro Ryan:
         Function_intro_Ryan_1: 此簡單的指令可告訴電腦在工作空間中執行有相同名稱的大量代碼。
       Function intro Ryan_2019:

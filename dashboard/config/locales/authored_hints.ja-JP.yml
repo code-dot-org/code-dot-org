@@ -360,6 +360,7 @@ ja-JP:
         Course_4_Artist_11_a: '前にうごく30ピクセル、右にまがる60度を使って、六角形の半分を書いてみてね。  '
         Course_4_Artist_11_b: '前にうごく80ピクセル、右にまがる80度を使って、三角形の3分の2を書いてみてね。 '
       Course 4 Artist 12:
+        Course_4_Artist_12_a: 'くり返しに使われている図形は、**六角形の半分**と**三角形の2/3**を組み合わせたものです。 '
         Course_4_Artist_12_b: 'それぞれの形は、前のパズルとほとんど同じですが、6角形を少し大きくします。 '
         Course_4_Artist_12_c: "1.  始めの3回は60ピクセルの長さで、60 度まがります\n2.  次の 2 回は 80 ピクセルの長さで、120
           度まがります "
@@ -517,6 +518,9 @@ ja-JP:
         Course_4_Artist_Functions_challenge_c: ひとつ正方形を書いたら、20ピクセル前にジャンプします。
         Course_4_Artist_Functions_challenge_d: 正方形を `counter` 回かいたら、左に90度まがります。
       Course 4 Artist Inspire:
+        Course_4_Artist_Inspire_a: 正方形を 1つ かいたら、長さの半分だけジャンプしてから 曲がって 次の正方形をかきましょう。
+        Course_4_Artist_Inspire_b: 正方形とジャンプを4回くり返して (次をかく前に左に曲がります) 、風車をかきます。
+        Course_4_Artist_Inspire_c: さらに、風車をかくのを **360/sides** 右に曲がりながら、4回くり返します。
         Course_4_Artist_Inspire_d: |-
           **答え**
 
@@ -690,6 +694,19 @@ ja-JP:
               </next>
             </block>
           </xml>
+      Course 4 Artist Vars 13:
+        Course_4_Artist_Vars_13_a: 2つのくり返し（くり返しの中にくり返しを入れる）が必要で、それぞれ `sides`回くり返します。
+        Course_4_Artist_Vars_13_b: |-
+          中のくり返しで八角形をかきます。（曲がる方向は左）
+
+          外側のループでは、前に進んで右に曲がるだけです。
+        Course_4_Artist_Vars_13_c: 辺の数を変えても大きさが変わらないようにするために、計算ブロックを使って 長さを 辺の数で割るようにしましょう。
+      Course 4 Artist Vars 6:
+        Course_4_Artist_Vars_6_a: 正多角形をかくには、 **360÷辺の数**だけ曲がります。
+      Course 4 Artist Vars 8:
+        Course_4_Artist_Vars_8_a: てきとうな長さを辺の数で わり算すれば、辺の数が多くなるほど、辺の長さが短くなります。
+      Course 4 Play Lab Vars 2:
+        Course_4_Play_Lab_Vars_2_a: 変数 `dog_speed` には、変数 `cat_speed` よりも大きな数字をセットしてください。
       Course 4 SCF 1:
         Course_4_SCF_1_e: |-
           **答え**

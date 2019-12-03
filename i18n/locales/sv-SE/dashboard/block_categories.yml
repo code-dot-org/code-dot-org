@@ -1,0 +1,15 @@
+sv:
+  data:
+    block_categories:
+      Actions: Åtgärder
+      Color: Färg
+      Conditionals: Villkor
+      Dancers: Dansare
+      Events: Händelser
+      Functions: funktioner
+      Groups: Grupper
+      Logic: Logik
+      Loops: loopar
+      Math: Matte
+      Text: text
+      Variables: variabler

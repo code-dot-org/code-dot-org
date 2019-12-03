@@ -3,6 +3,7 @@ ro:
   data:
     blocks:
       Dancelab_alternateMoves:
+        text: "{GROUP} alternează fiecare {N} \nmăsuri între {MOVE1} și {MOVE2}"
         options:
           GROUP:
             sprites: toate
@@ -16,6 +17,7 @@ ro:
             '"PINEAPPLE"': toţi ananaşii
             '"ROBOT"': toţi roboţii
             '"SHARK"': toţi rechinii
+            '"SLOTH"': leneși
             '"UNICORN"': unicorni
           MOVE1:
             MOVES.Roll: Corpul ca un val
@@ -69,6 +71,7 @@ ro:
             '"PINEAPPLE"': toţi ananaşii
             '"ROBOT"': toţi roboţii
             '"SHARK"': toţi rechinii
+            '"SLOTH"': leneși
             '"UNICORN"': toţi unicornii
           MOVE:
             '"next"': "(Următorul)"
@@ -134,6 +137,7 @@ ro:
             '"PINEAPPLE"': toţi ananaşii
             '"ROBOT"': toţi roboţii
             '"SHARK"': toţi rechinii
+            '"SLOTH"': leneși
             '"UNICORN"': unicorni
           PROPERTY:
             '"scale"': dimensiune
@@ -157,6 +161,7 @@ ro:
             '"PINEAPPLE"': toţi ananaşii
             '"ROBOT"': toţi roboţii
             '"SHARK"': toţi rechinii
+            '"SLOTH"': leneși
             '"UNICORN"': unicorni
           MOVE:
             '"rand"': Aleatoriu
@@ -217,6 +222,8 @@ ro:
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_everyMeasuresRange:
+        text: 'repetă fiecare {N} măsuri după {START} '
       Dancelab_everySeconds:
         text: 'la fiecare {N} {UNIT} '
         options:
@@ -317,6 +324,7 @@ ro:
             '"PINEAPPLE"': toţi ananaşii
             '"ROBOT"': toţi roboţii
             '"SHARK"': toţi rechinii
+            '"SLOTH"': leneși
             '"UNICORN"': unicorni
           LOCATION:
             "{x: 200, y: 100}": sus
@@ -344,6 +352,7 @@ ro:
             '"PINEAPPLE"': toţi ananaşii
             '"ROBOT"': toţi roboţii
             '"SHARK"': toţi rechinii
+            '"SLOTH"': leneși
             '"UNICORN"': unicorni
           FORMAT:
             '"border"': margine
@@ -369,6 +378,7 @@ ro:
             '"PINEAPPLE"': ananași
             '"ROBOT"': robot
             '"SHARK"': rechini
+            '"SLOTH"': leneș
             '"UNICORN"': unicorn
           LOCATION:
             "{x: 200, y: 100}": sus
@@ -397,6 +407,7 @@ ro:
             '"PINEAPPLE"': ananași
             '"ROBOT"': Robot
             '"SHARK"': rechini
+            '"SLOTH"': leneș
             '"UNICORN"': Unicorn
           LOCATION:
             "{x: 200, y: 100}": sus
@@ -445,14 +456,20 @@ ro:
             '"PINEAPPLE"': Ananaşi
             '"ROBOT"': Roboţi
             '"SHARK"': Rechini
+            '"SLOTH"': leneși
             '"UNICORN"': unicorni
           LAYOUT:
             '"border"': margine
             '"inner"': pătrat interior
+            '"diamond"': diamant
             '"circle"': cerc
             '"grid"': rețea
+            '"top"': rândul de sus
             '"row"': rând
+            '"bottom"': rândul de jos
+            '"left"': coloana stângă
             '"column"': coloană
+            '"right"': coloana dreaptă
             '"x"': încrucişat
             '"plus"': plus
             '"random"': aleator
@@ -513,22 +530,29 @@ ro:
             '"none"': Nici unul
             '"rand"': Aleatoriu
             '"circles"': Cercuri
+            '"quads"': Îngeri
             '"color_cycle"': Culori
             '"diamonds"': Diamante
             '"disco_ball"': Glob de discotecă
             '"fireworks"': Artificii
+            '"flowers"': Flori
+            '"growing_stars"': Stele crescânde
             '"swirl"': Hipnotic
             '"kaleidoscope"': Caleidoscope
             '"lasers"': Ring de dans cu lasere
             '"splatter"': Stropi de vopsea
             '"rainbow"': Curcubeu
+            '"ripples_random"': Ondulații aleatorii
+            '"ripples"': Ondulații
             '"snowflakes"': Zăpadă
             '"text"': Nume cântec
+            '"squiggles"': Mâzgălituri
             '"galaxy"': Spaţiu
             '"sparkles"': Scântei
             '"spiral"': Spirală
             '"disco"': Pătrate
             '"stars"': Stele
+            '"music_wave"': Valuri
           PALETTE:
             '"rave"': Negru şi alb
             '"cool"': Interesant
@@ -563,6 +587,7 @@ ro:
             '"PINEAPPLE"': toţi ananaşii
             '"ROBOT"': toţi roboţii
             '"SHARK"': toţi rechinii
+            '"SLOTH"': leneși
             '"UNICORN"': unicorni
           SPEED:
             '1': normal
@@ -595,9 +620,12 @@ ro:
             '"none"': Nici unul
             '"rand"': Aleatoriu
             '"bubbles"': Baloane
+            '"hearts_colorful"': Inimi colorate
             '"confetti"': Confeti
+            '"emojis"': Emoticoane
             '"hearts_red"': Inimi
             '"music_notes"': Note muzicale
+            '"paint_drip"': Strop de culoare
             '"pineapples"': Ananaşi
             '"pizzas"': Piţe
             '"smiling_poop"': Căcăţel
@@ -606,6 +634,7 @@ ro:
             '"smile_face"': Zâmbete
             '"spotlight"': Reflector
             '"color_lights"': Lumini de scenă
+            '"exploding_stars"': Accelerare
             '"raining_tacos"': Tacos
       Dancelab_setProp:
         text: 'setează {SPRITE} {PROPERTY} la {VAL} '
@@ -632,6 +661,7 @@ ro:
             '"PINEAPPLE"': toţi ananaşii
             '"ROBOT"': toţi roboţii
             '"SHARK"': toţi rechinii
+            '"SLOTH"': leneși
             '"UNICORN"': unicorni
           PROPERTY:
             '"scale"': dimensiune
@@ -667,6 +697,7 @@ ro:
             '"PINEAPPLE"': toţi ananaşii
             '"ROBOT"': toţi roboţii
             '"SHARK"': toţi rechinii
+            '"SLOTH"': leneși
             '"UNICORN"': unicorni
           PROPERTY:
             '"scale"': dimensiune
@@ -693,6 +724,7 @@ ro:
             '"PINEAPPLE"': toţi ananaşii
             '"ROBOT"': toţi roboţii
             '"SHARK"': toţi rechinii
+            '"SLOTH"': leneși
             '"UNICORN"': unicorni
       Dancelab_setTintEachInline:
         text: setează {THIS} nuanţa la {VAL}
@@ -709,6 +741,7 @@ ro:
             '"PINEAPPLE"': toţi ananaşii
             '"ROBOT"': toţi roboţii
             '"SHARK"': toţi rechinii
+            '"SLOTH"': leneși
             '"UNICORN"': unicorni
       Dancelab_setTintInline:
         text: setează {SPRITE} nuanţa la {VAL}
@@ -733,6 +766,7 @@ ro:
             '"PINEAPPLE"': toţi ananaşii
             '"ROBOT"': toţi roboţii
             '"SHARK"': toţi rechinii
+            '"SLOTH"': leneși
             '"UNICORN"': unicorni
           VISIBILITY:
             'true': vizibil
@@ -767,6 +801,7 @@ ro:
             '"PINEAPPLE"': toţi ananaşii
             '"ROBOT"': toţi roboţii
             '"SHARK"': toţi rechinii
+            '"SLOTH"': leneși
             '"UNICORN"': unicorni
           PROPERTY:
             '"scale"': dimensiune
@@ -811,6 +846,7 @@ ro:
             '"PINEAPPLE"': toţi ananaşii
             '"ROBOT"': toţi roboţii
             '"SHARK"': toţi rechinii
+            '"SLOTH"': leneși
             '"UNICORN"': unicorni
           PROPERTY:
             '"scale"': dimensiune
@@ -826,10 +862,33 @@ ro:
             '"mid"': sunet mediu
             '"treble"': sunet înalt
       Dancelab_translateStrings:
+        text: tradu {STRING}
         options:
           STRING:
+            '"music_wave"': Valuri
+            '"ripples"': Ondulații
+            '"ripples_random"': Ondulații aleatorii
+            '"quads"': Îngeri
+            '"flowers"': Flori
+            '"popsicles"': Acadele
+            '"squiggles"': Mâzgălituri
+            '"growing_stars"': Stele crescânde
+            '"emojis"': Emoticoane
             '"hearts_colorful"': Inimi
+            '"paint_drio"': Strop de culoare
+            '"exploding_stars"': Accelerare
+            '"row_top"': rândul de sus
+            '"row_bottom"': rândul de jos
+            '"column_left"': coloana stângă
+            '"column_right"': coloana dreaptă
             '"diamond"': diamant
+            '"mural"': Frescă
+            '"safari"': Safari
+            '"network"': Rețea
+            '"highway"': Autostradă
+            '"stream"': Flux
+            '"tile"': Ceramică
+            '"shadow"': Umbră
             '"s"': s
             '"t"': t
             '"u"': u
