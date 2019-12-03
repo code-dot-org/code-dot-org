@@ -22,13 +22,9 @@
   / Only enter name to create new records of certain level types.
   - unless @level.new_record? && @level.is_a?(Blockly)
     = render partial: 'levels/editors/all', locals: {f: f} unless @level.is_a? EvaluationMulti
-    = render partial: 'levels/editors/instructions', locals: {f: f} unless @level.is_a?(DSLDefined) || @level.is_a?(Unplugged)
-    = render partial: 'levels/editors/droplet', locals: {f: f} if @level.uses_droplet?
     = render partial: 'levels/editors/flappy', locals: {f: f} if @level.is_a? Flappy
     = render partial: 'levels/editors/bounce', locals: {f: f} if @level.is_a? Bounce
     = render partial: 'levels/editors/unplugged', locals: {f: f} if @level.is_a? Unplugged
-    = render partial: 'levels/editors/curriculum_specific', locals: {f: f} if (@level.uses_droplet?) || @level.is_a?(Blockly)
-    = render partial: 'levels/editors/blockly', locals: {f: f} if !(@level.uses_droplet?) && @level.is_a?(Blockly)
     = render partial: 'levels/editors/studio', locals: {f: f} if @level.is_a? Studio
     = render partial: 'levels/editors/maze', locals: {f: f} if @level.is_a? Maze
     = render partial: 'levels/editors/grid', locals: {f: f} if @level.is_a? Grid
@@ -41,7 +37,6 @@
     = render partial: 'levels/editors/spritelab', locals: {f: f} if @level.is_a?(GamelabJr) && !@level.is_a?(Dancelab)
     = render partial: 'levels/editors/dance', locals: {f: f} if @level.is_a?(Dancelab)
     = render partial: 'levels/editors/weblab', locals: {f: f} if @level.is_a? Weblab
-    = render partial: 'levels/editors/mini_rubric', locals: {f: f} if (@level.uses_droplet?) || @level.is_a?(Blockly) || @level.is_a?(Weblab)
     = render partial: 'levels/editors/dsl', locals: {f: f} if (@level.is_a?(DSLDefined) && !(@level.is_a?(EvaluationMulti)))
     = render partial: 'levels/editors/evaluation_multi', locals: {f: f} if @level.is_a? EvaluationMulti
     = render partial: 'levels/editors/netsim', locals: {f: f} if @level.is_a? NetSim
