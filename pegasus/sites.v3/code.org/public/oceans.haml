@@ -3,7 +3,6 @@ title: AI for Oceans
 theme: responsive
 ---
 :ruby
-  launch_ai = DCDO.get('launch_ai', nil)
 
   resources = {
     left_link: "https://curriculum.code.org/hoc/plugged/9/",
@@ -75,7 +74,7 @@ theme: responsive
     margin-top: 0px;
   }
 
-%div{style: "display: #{launch_ai ? 'block' : 'none'}"}
+%div
   .tutorial-promo-container
     = view :oceans_promo
     .tutorial-details.desktop-feature
