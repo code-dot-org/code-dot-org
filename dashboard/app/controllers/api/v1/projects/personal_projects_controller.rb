@@ -26,8 +26,6 @@ class Api::V1::Projects::PersonalProjectsController < ApplicationController
       # )
     end
 
-    if name_failure
-      render json: {nameFailure: name_failure}, status: :success
-    end
+    render json: {nameFailure: name_failure}, status: :ok
   end
 end
