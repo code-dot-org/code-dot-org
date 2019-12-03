@@ -1,10 +1,23 @@
 import 'idempotent-babel-polyfill';
 import {getState, setState} from '../state';
 import {generateOcean} from '../../utils/generateOcean';
-import {AppMode} from '../constants';
+import {AppMode, Modes} from '../constants';
+import {$time, finishLoading} from '../helpers';
 
 export const init = () => {
   const state = getState();
+
+  // Conditionally display a loading spinner during initialiation, as state.trainer.train() operation
+  // can take multiple seconds.
+  const setLoadingSpinner = [AppMode.FishShort, AppMode.FishLong].includes(
+    state.appMode
+  );
+  let startTime;
+  if (setLoadingSpinner) {
+    startTime = $time();
+    setState({currentMode: Modes.IntermediateLoading});
+  }
+
   state.trainer.train();
   let fishData = [];
   if (state.appMode === AppMode.CreaturesVTrashDemo) {
@@ -16,7 +29,18 @@ export const init = () => {
     fishData = generateOcean(100);
   }
 
-  setState({fishData});
+  const onLoadComplete = () => {
+    setState({
+      fishData,
+      currentMode: Modes.Predicting
+    });
+  };
+
+  if (setLoadingSpinner) {
+    finishLoading(startTime, onLoadComplete);
+  } else {
+    onLoadComplete();
+  }
 };
 
 export const predictFish = (state, idx) => {

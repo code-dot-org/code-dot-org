@@ -21,6 +21,7 @@ import aiBotClosed from '../../public/images/ai-bot/ai-bot-closed.png';
 import counterIcon from '../../public/images/polaroid-icon.png';
 import arrowDownImage from '../../public/images/arrow-down.png';
 import snail from '../../public/images/snail-large.png';
+import loadingGif from '../../public/images/loading.gif';
 import Typist from 'react-typist';
 import {getCurrentGuide, dismissCurrentGuide} from './models/guide';
 import {playSound} from './models/soundLibrary';
@@ -162,6 +163,13 @@ const styles = {
     right: '5%',
     padding: '3.5% 8%',
     width: '35%'
+  },
+  loading: {
+    position: 'absolute',
+    transform: 'translate(-50%, -50%)',
+    top: '50%',
+    left: '50%',
+    maxWidth: '30%'
   },
   activityIntroText: {
     position: 'absolute',
@@ -393,7 +401,7 @@ const styles = {
     top: 0,
     left: '0%',
     height: '150%',
-    backgroundColor: colors.green
+    backgroundColor: colors.teal
   },
   pondPanelGeneralBarText: {
     position: 'absolute',
@@ -459,11 +467,11 @@ const styles = {
     height: '6%',
     width: '2.5%',
     ':hover': {
-      backgroundColor: colors.neonBlue,
+      backgroundColor: colors.teal,
       color: colors.white
     },
     ':focus': {
-      backgroundColor: colors.neonBlue,
+      backgroundColor: colors.teal,
       color: colors.white
     }
   },
@@ -472,8 +480,8 @@ const styles = {
     margin: 'auto',
     height: '100%'
   },
-  bgNeonBlue: {
-    backgroundColor: colors.neonBlue,
+  bgTeal: {
+    backgroundColor: colors.teal,
     color: colors.white
   },
   bgRed: {
@@ -739,6 +747,16 @@ let ConfirmationDialog = class ConfirmationDialog extends React.Component {
 };
 ConfirmationDialog = Radium(ConfirmationDialog);
 
+let Loading = class Loading extends React.Component {
+  render() {
+    return (
+      <Body>
+        <img src={loadingGif} style={styles.loading} />
+      </Body>
+    );
+  }
+};
+
 const wordSet = {
   short: {
     text: ['What type of fish do you want to train A.I. to detect?'],
@@ -809,6 +827,20 @@ let Words = class Words extends React.Component {
       trainingQuestion: `Is this fish “${word.toLowerCase()}”?`
     });
     toMode(Modes.Training);
+
+    // Report an analytics event for the word chosen.
+    if (window.trackEvent) {
+      const appModeToString = {
+        [AppMode.FishShort]: 'words-short',
+        [AppMode.FishLong]: 'words-long'
+      };
+
+      window.trackEvent(
+        'oceans',
+        appModeToString[getState().appMode],
+        word.toLowerCase()
+      );
+    }
   }
 
   render() {
@@ -898,8 +930,7 @@ let Train = class Train extends React.Component {
             sound={'no'}
           >
             <FontAwesomeIcon icon={faBan} />
-            &nbsp;
-            &nbsp;
+            &nbsp; &nbsp;
             {noButtonText}
           </Button>
           <Button
@@ -911,8 +942,7 @@ let Train = class Train extends React.Component {
             sound={'yes'}
           >
             <FontAwesomeIcon icon={faCheck} />
-            &nbsp;
-            &nbsp;
+            &nbsp; &nbsp;
             {yesButtonText}
           </Button>
         </div>
@@ -1060,9 +1090,7 @@ let Predict = class Predict extends React.Component {
         {!state.isRunning && !state.isPaused && (
           <Button style={styles.continueButton} onClick={this.onRun}>
             <FontAwesomeIcon icon={faPlay} />
-            &nbsp;
-            &nbsp;
-            Run
+            &nbsp; &nbsp; Run
           </Button>
         )}
         {(state.isRunning || state.isPaused) && state.canSkipPredict && (
@@ -1388,7 +1416,7 @@ let Pond = class Pond extends React.Component {
           <div
             style={{
               ...styles.infoIconContainer,
-              ...(!state.pondPanelShowing ? {} : styles.bgNeonBlue)
+              ...(!state.pondPanelShowing ? {} : styles.bgTeal)
             }}
             onClick={this.onPondPanelButtonClick}
           >
@@ -1566,9 +1594,13 @@ export default class UI extends React.Component {
   render() {
     const state = getState();
     const currentMode = getState().currentMode;
+    const isLoading = [Modes.Loading, Modes.IntermediateLoading].includes(
+      currentMode
+    );
 
     return (
       <div>
+        {isLoading && <Loading />}
         {currentMode === Modes.Words && <Words />}
         {currentMode === Modes.Training && <Train />}
         {currentMode === Modes.Predicting && <Predict />}

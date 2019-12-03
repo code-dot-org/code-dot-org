@@ -2,7 +2,7 @@ import _ from 'lodash';
 import queryString from 'query-string';
 import {FishBodyPart} from '../utils/fishData';
 import {setState} from './state';
-import {Modes} from './constants';
+import constants, {Modes} from './constants';
 import labBackground from '../../public/images/lab-background.png';
 import waterBackground from '../../public/images/water-background.png';
 
@@ -160,8 +160,8 @@ export const generateColorPalette = (colors, bodyIndex = null) => {
   return {
     bodyRgb: bodyColor.rgb,
     finRgb: colors[finIndex].rgb,
-    knnData: bodyColor.knnData,
-    fieldInfos: bodyColor.fieldInfos
+    knnData: [...bodyColor.knnData, ...colors[finIndex].knnData],
+    fieldInfos: [...bodyColor.fieldInfos, ...colors[finIndex].fieldInfos]
   };
 };
 
@@ -196,4 +196,19 @@ export const resetTraining = state => {
     yesCount: 0,
     noCount: 0
   });
+};
+
+export const finishLoading = (startTime, onComplete) => {
+  const currentTime = $time();
+  const minimumEndTime = startTime + constants.minLoadingTime;
+  let delayTime;
+  if (currentTime >= minimumEndTime) {
+    // We are already past the minimumEndTime, so don't wait any more.
+    delayTime = 0;
+  } else {
+    // We are at less than the minimumEndTime, so just wait the remainder of time.
+    delayTime = minimumEndTime - currentTime;
+  }
+
+  setTimeout(onComplete, delayTime);
 };

@@ -12,7 +12,8 @@ const colors = {
   blue: '#3fa2f7',
   neonBlue: '#3cfff8',
   transparentBlack: 'rgba(0,0,0,0.85)',
-  transparentWhite: 'rgba(255,255,255,0.8)'
+  transparentWhite: 'rgba(255,255,255,0.8)',
+  teal: '#3fbed5'
 };
 
 export default colors;
