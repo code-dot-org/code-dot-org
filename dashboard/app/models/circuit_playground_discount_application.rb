@@ -53,8 +53,8 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
   end
 
   # @return {boolean} true if user is an eligible facilitator or attended relevant workshop
-  def self.user_pd_eligible?(user, workshop_subject)
-    user_pd_eligible_as_teacher?(user, workshop_subject) || user_pd_eligible_as_facilitator?(user)
+  def self.user_pd_eligible?(user, workshop_subjects)
+    user_pd_eligible_as_teacher?(user, workshop_subjects) || user_pd_eligible_as_facilitator?(user)
   end
 
   private_class_method def self.user_pd_eligible_as_teacher?(user, workshop_subjects)
