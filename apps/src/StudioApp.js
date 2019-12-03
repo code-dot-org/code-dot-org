@@ -356,7 +356,7 @@ StudioApp.prototype.init = function(config) {
   // Fixes viewport for small screens.
   var viewport = document.querySelector('meta[name="viewport"]');
   if (viewport) {
-    this.fixViewportForSmallScreens_(viewport, 600);
+    this.fixViewportForSmallScreens_(viewport, config);
   }
 
   var blockCount = document.getElementById('blockCounter');
