@@ -56,6 +56,8 @@
   audience: 'Audience'
 
   ai_resource_header: 'Teach and Learn about AI'
+  ai_resource_minecraft: 'Minecraft AI for Good'
+  ai_resource_minecraft_desc: 'Access free resources including a lesson plan, videos, computer science curriculum, and teacher trainings. (Requires Minecraft: Education Edition)'
   ai_resource_ml_for_kids: 'Machine Learning for Kids'
   ai_resource_ml_for_kids_desc: 'Train a machine learning model with text, numbers, or images, and use it to make games in Scratch.'
   ai_resource_ibm_ml_for_kids: 'IBM: Machine Learning for Kids'
@@ -5936,7 +5938,7 @@
   tutorial_modtraits_string_detail_programming_languages: "Blocks"
   tutorial_mee_string_detail_programming_languages: "Blocks"
   tutorial_kuborobo_string_detail_programming_languages: "Tagtiles that students piece together"
-  tutorial_ai-oceans_string_detail_programming_languages: "No coding languages"
+  tutorial_ai-oceans_string_detail_programming_languages: "AI and Machine Learning"
 
   school_not_found_heading: "We couldn't find your school. Please enter more information."
   school_name: "School name"
