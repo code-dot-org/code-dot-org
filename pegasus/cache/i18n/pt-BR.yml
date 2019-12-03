@@ -1290,11 +1290,14 @@ pt-BR:
   coursec-2019_name: Curso C (2019)
   coursed-2019_name: Curso D (2019)
   coursee-2019_name: Curso E (2019)
+  express-2018_name: Curso Expresso (2018)
   pre-express-2018_name: Curso Expresso de Pré-Leitor (2018)
   express-2019_name: Curso Expresso (2019)
   pre-express-2019_name: Curso Pre-reader Express (2019)
+  csd2_name: 'Unidade 2: Desenvolvimento para Web'
   csd3_name: 'Unidade 3: Jogos e Animação'
   accelerated_name: Curso acelerado
+  pre-express_name: Curso Expresso para Fase de Alfabetização
   20-hour_name: Curso acelerado
   algebra_name: CC na Álgebra Curso Completo
   AlgebraA_name: CC no Curso A de Álgebra
@@ -2156,6 +2159,8 @@ pt-BR:
   app_lab_tutorials: Tutoriais App Lab
   game_lab_documentation: Documentação Game Lab
   game_lab_tutorials: Tutoriais Game Lab
+  sprite_lab_documentation: Documentação do Sprite Lab
+  sprite_lab_tutorials: Tutoriais do Sprite Lab
   header_documentation: Documentação
   user_header_label: Oi, %{username}
   user_header_team: Equipe
@@ -2242,6 +2247,9 @@ pt-BR:
   hoc_overview_dance_subtitle: Codifique uma Festa Dançante para compartilhar com
     seus amigos. Apresentando Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara
     e mais 25!
+  hoc_overview_dance_2019_subtitle: Codifique uma Festa Dançante para compartilhar
+    com seus amigos. Com participações de Katy Perry, Shawn Mendes, Panic!, At The
+    Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, e mais 34 convidados!
   hoc_overview_title: Atividades da Hora do Código do Code.org
   hoc_overview_subtitle: A <a href="https://hourofcode.com">Hora do Código</a> é um
     movimento global que atinge dezenas de milhões de estudantes em mais de 180 países.
@@ -2282,6 +2290,7 @@ pt-BR:
   hoc2018_mc_aquatic_title: Minecraft Viagem Aquática
   hoc2018_mc_aquatic_description: O Minecraft está de volta para a Hora do Código
     com uma nova atividade! Viaje através de Minecraft com código.
+  hoc2019_mc_aquatic_description: Explore e crie mundos submersos com código.
   hoc2018_mc_hero_title: 'Minecraft: Jornada do Herói'
   hoc2018_mc_hero_description: O Minecraft está de volta para a Hora do Código com
     uma nova atividade! Viaje através de Minecraft com código.
@@ -2439,3 +2448,13 @@ pt-BR:
   hoc2018_mc_thank_microsoft: Nós agradecemos à Microsoft por apoiar nossa visão e
     missão para que toda criança tenha a oportunidade de aprender ciência da computação
     e as habilidades necessárias para ter sucesso no século XXI.
+  hoc2019_mc_mee_title: Minecraft AI pra Valer
+  hoc2019_mc_mee_description1: 'O novo tutorial Hora de Código Minecraft está agora
+    disponível em Minecraft: Edição Educacional para Windows, Mac e iPad. Aprenda
+    os fundamentos de codificação e explore IA com seus alunos!'
+  hoc2019_mc_mee_description2: Acesse recursos grátis incluindo um plano de aula,
+    vídeos, currículo de ciência da computação e treinamentos para professores.
+  hoc2019_mc_more_coding_resources: Mais Recursos de Codificação
+  hoc2019_dance_previous_versions: |-
+    Procurando uma versão anterior de Festa Dançante?
+    Clique aqui para começar [Parte 1](%{dance_2018_link}) and [Parte 2](%{dance_extras_2018_link}) do último ano.
