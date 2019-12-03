@@ -16522,7 +16522,7 @@ es-MX:
       Dance_Party_02: |-
         ¡Hagamos bailar a este alce!
 
-        Arrastra el bloque \<<xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> al espacio de trabajo. Conéctalo debajo del bloque <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> Tu bailarín debería empezar a moverse después del cuarto compás.
+        Arrastra el bloque \<<xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> al espacio de trabajo. Conéctalo debajo del bloque <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> Tu bailarín debería empezar a moverse después del cuarto compás.
 
         Los **compases** se usan para contar el tiempo en la música. En este tutorial, un compás tiene cuatro tiempos.
       Dance_Party_03: |-
@@ -16587,12 +16587,12 @@ es-MX:
 
         A veces es posible que desees crear un patrón de movimientos de baile que elijas. Este nuevo bloque te permite hacer exactamente eso.
 
-        [blockly block][0]
+        <xml><block type="Dancelab_alternateMoves"><title name="GROUP">sprites</title><title name="N">2</title><title name="MOVE1">MOVES.Roll</title><title name="MOVE2">MOVES.ClapHigh</title></block></xml>
 
         Los movimientos que elijas arriba se repetirán en secuencia para siempre.
 
         -   ¡Crea una rutina alterna para el bailarín principal al frente!
-        -   Usa diferentes números para cambiar la velocidad a la que se alternan los movimientos. ¡Prueba `1` o`0.5` para alternar más rápidamente!
+        -   Usa diferentes números para cambiar la velocidad a la que se alternan los movimientos. ¡Prueba `1` o `0.5` para alternar más rápidamente!
       Dance_Party_extras_battle: |-
         # Equipos de baile
 
@@ -16622,16 +16622,24 @@ es-MX:
       Dance_Party_extras_every_beat_2019: |-
         # Negras
 
-        La mayoría de nuestros bailes utilizaron compases completos, pero cada compás está formado por 4 negras. Este baile usa [blockly block][0] para que el bailarín aplauda en cada negra, pero solamente luego de los primeros cuarto compases.
+        La mayoría de nuestros bailes utilizaron compases completos, pero cada compás está formado por 4 negras. Este baile usa <xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml> para que el bailarín aplauda en cada negra, pero solamente luego de los primeros cuatro compases.
 
         Intenta cambiar los números en los bloque para ver cómo cambia el baile.
 
         -   Experimenta con otras duraciones de notas (como 0,5 para una blanca o 0,125 para una corchea).
-        -   Añade algunos otros eventos.
+        -   Añade otros eventos.
       Dance_Party_extras_layout: |-
         # ¡Vamos a organizarnos!
 
         Echa un vistazo a este baile que utiliza el bloque `disposición` para cambiar la formación de los bailarines que acompañan. Prueba una de estas ideas para ampliarlo:
+
+        -   Crea un segundo grupo de bailarines en una disposición diferente
+        -   Cambia la disposición cuando se presiona una tecla
+        -   Cambia una propiedad cuando los bailarines cambian la formación
+      Dance_Party_extras_layout_2019: |-
+        # ¡Vamos a organizarnos!
+
+        Echa un vistazo a este baile que utiliza el bloque <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> para cambiar la formación de los bailarines que acompañan. Prueba una de estas ideas para ampliarlo:
 
         -   Crea un segundo grupo de bailarines en una disposición diferente
         -   Cambia la disposición cuando se presiona una tecla
@@ -16658,7 +16666,7 @@ es-MX:
       Dance_Party_extras_speed_2019: |-
         # Acelera, reduce la velocidad
 
-        El baile final utiliza el bloque [bloque blockly][0] para controlar que tan rápido se mueve cada bailarín. Experimenta con diferentes velocidades en diferentes puntos de la canción. No dudes en seguir experimentando con este baile o regresa a cualquiera de los bailes anteriores para mejorarlos.
+        El baile final utiliza el bloque <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> para controlar que tan rápido se mueve cada bailarín. Experimenta con diferentes velocidades en diferentes puntos de la canción. No dudes en seguir experimentando con este baile o regresa a cualquiera de los bailes anteriores para mejorarlos.
       Dance_Party_extras_visible: |-
         # ¿Dónde habrán ido?
 
@@ -16668,13 +16676,14 @@ es-MX:
         -   Muestra y oculta a los bailarines con las teclas de flechas
         -   Oculta todos los bailarines y cambia a un emocionante efecto de fondo
       Dance_Party_extras_visible_2019: |-
-        # ¿Dónde habrán ido?
+        # Negras
 
-        Este baile muestra y oculta dos diferentes grupos de bailarines. Echa un vistazo y luego intenta agregar tu propio estilo.
+        La mayoría de nuestros bailes utilizaron compases completos, pero cada compás está formado por 4 negras. Este baile usa [bloque blockly][0] para que el bailarín aplauda en cada negra luego del quinto compás.
 
-        -   Añade otro grupo de bailarines
-        -   Muestra y oculta a los bailarines con las teclas de flechas
-        -   Oculta todos los bailarines y cambia a un emocionante efecto de fondo
+        Intenta cambiar los números en el bloque para ver cómo cambia el baile.
+
+        -   Experimenta con otras duraciones de notas (como 0,5 para una semicorchea o 0,125 para una corchea).
+        -   Añade algunos eventos.
       Escape Room Example: |-
         # Juego de escape
 

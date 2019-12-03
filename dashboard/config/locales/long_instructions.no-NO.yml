@@ -182,7 +182,7 @@ no-NO:
       Dance_Party_02: |-
         La oss få disse elgene til å danse!
 
-        Dra ut<xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>-blokken til arbeidsområdet. Koble den til under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>-blokken. Danseren din vil nå starte et nytt dansetrinn etter den fjerde takten.
+        Dra ut<xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>-blokken til arbeidsområdet. Koble den til under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>-blokken. Danseren din vil nå starte et nytt dansetrinn etter den fjerde takten.
 
         **Takter** brukes for å regne tiden i musikk. I denne veiledningen er en takt fire slag lang.
       Dance_Party_03: "_Nå svinger det!_ \n\nLegg til en <xml><block type=\"Dancelab_atTimestamp\"><title

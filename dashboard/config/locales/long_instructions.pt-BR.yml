@@ -13782,8 +13782,8 @@ pt-BR:
         # Faça isso
 
         -   Com o seu parceiro, responda às seguintes perguntas:
-                 1\. Qual é o maior número que você pode fazer com esta ferramenta?
-                 2\. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
+                 1. Qual é o maior número que você pode fazer com esta ferramenta?
+                 2. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
       CSD U5 binary 2_2018: |-
         # Número de 6 bits
 
@@ -13792,8 +13792,8 @@ pt-BR:
         # Faça isso
 
         -   Com o seu parceiro, responda às seguintes perguntas:
-                 1\. Qual é o maior número que você pode fazer com esta ferramenta?
-                 2\. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
+                 1. Qual é o maior número que você pode fazer com esta ferramenta?
+                 2. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
       CSD U5 binary 2_2019: |-
         # Número de 6 bits
 
@@ -13802,8 +13802,8 @@ pt-BR:
         # Faça isso
 
         -   Com o seu parceiro, responda às seguintes perguntas:
-                 1\. Qual é o maior número que você pode fazer com esta ferramenta?
-                 2\. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
+                 1. Qual é o maior número que você pode fazer com esta ferramenta?
+                 2. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
       CSD U5 binary 4-new: |-
         # Decodificando vários números
 
@@ -19516,7 +19516,7 @@ pt-BR:
       Dance_Party_extras_alternate_2019: |-
         # Vamos entrar em formação!
 
-        Veja esta dança que usa o [bloco blockly][0] para alterar a formação dos dançarinos de apoio ao longo da dança. Tente uma destas idéias para estendê-lo:
+        Veja esta dança que usa o <xml><block type="Dancelab_alternateMoves"><title name="GROUP">sprites</title><title name="N">2</title><title name="MOVE1">MOVES.Roll</title><title name="MOVE2">MOVES.ClapHigh</title></block></xml> para alterar a formação dos dançarinos de apoio ao longo da dança. Tente uma destas idéias para estendê-lo:
 
         -   Crie um segundo grupo de dançarinos em um layout diferente
         -   Alterar layout quando uma tecla é pressionada
@@ -19548,9 +19548,14 @@ pt-BR:
         -   Adicione alguns eventos `após o compasso`.
         -   Troque "compassos" por "segundos" e tente sincronizar suas danças dessa maneira.
       Dance_Party_extras_every_beat_2019: |-
-        # Acelere, diminua a velocidade
+        # Semínimas
 
-        Essa dança final usa o [bloco blockly][0] para controlar a rapidez com que cada dançarino se move. Tente experimentar velocidades diferentes durante pontos diferentes da música. Sinta-se à vontade para continuar mexendo nessa dança ou retornar a qualquer uma das danças anteriores para torná-las ainda mais legais.
+        A maioria das nossas danças usou compassos inteiros mas cada compasso é composto por 4 semínimas. Esta dança usa <xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml> para fazer o dançarino aplaudir a cada semínima, mas apenas nos quatro primeiros compassos.
+
+        Experimenta mudar os números nos blocos para ver como é que altera a dança.
+
+        -   Experimenta com outras durações de notas (como 0,5 para uma mínima ou 0,125 para uma colcheia)
+        -   Adiciona outros eventos.
       Dance_Party_extras_layout: |-
         # Vamos entrar em formação!
 
@@ -19562,18 +19567,18 @@ pt-BR:
       Dance_Party_extras_layout_2019: |-
         # Vamos Entrar em Formação!
 
-        Veja esta dança que usa o [bloco blockly][0] para alterar a formação dos participantes de apoio ao longo da dança. Tente uma destas idéias para estendê-lo:
+        Veja esta dança que usa o <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> para alterar a formação dos participantes de apoio ao longo da dança. Tente uma destas idéias para estendê-lo:
 
         -   Crie um segundo grupo de dançarinos em um layout diferente
         -   Altere o layout quando uma tecla é pressionada
         -   Altere uma propriedade quando os dançarinos trocam de formação
       Dance_Party_extras_mixed_2019: |-
-        # Mais botões
+        # Mais Botões
 
-        Essa dança permite controlar as propriedades dos dançarinos em tempo real enquanto eles dançam automaticamente. Tente fazer outras propriedades mudarem quando você pressiona os botões. Por exemplo:
+        Essa dança permite controlar as propriedades dos participantes em tempo real enquanto eles dançam automaticamente. Tente fazer outras propriedades mudarem quando você pressionar os botões. Por exemplo:
 
-        -   Aleatorize a tonalidade do dançarino quando você pressiona "para baixo".
-        -   Adicione um grupo de dançarinos com um layout aleatório ao pressionar "espaço".
+        -   Altere a tonalidade do dançarino para uma valor aleatório quando você pressionar "seta para baixo".
+        -   Adicione um grupo de dançarinos com um layout aleatório quando você pressionar "espaço".
       Dance_Party_extras_on_beat: |-
         # Grave, médio e agudo
 
@@ -19589,7 +19594,7 @@ pt-BR:
       Dance_Party_extras_speed_2019: |-
         # Acelere, diminua a velocidade
 
-        Essa dança final usa o [bloco blockly][0] para controlar a rapidez com que cada dançarino se move. Tente experimentar velocidades diferentes durante pontos diferentes da música. Sinta-se à vontade para continuar mexendo nessa dança ou retornar a qualquer uma das danças anteriores para torná-las ainda mais legais.
+        Essa dança final usa o <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> para controlar a rapidez com que cada dançarino se move. Tente experimentar velocidades diferentes durante pontos diferentes da música. Sinta-se à vontade para continuar mexendo nessa dança ou retornar a qualquer uma das danças anteriores para torná-las ainda mais legais.
       Dance_Party_extras_visible: |-
         # Onde eles foram?
 

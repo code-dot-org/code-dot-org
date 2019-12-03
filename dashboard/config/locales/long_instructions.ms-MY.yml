@@ -186,7 +186,7 @@ ms-MY:
       Dance_Party_extras_alternate_2019: |-
         # Mari Kita Berada dalam Formasi!
 
-        Lihat tarian ini yang menggunakan blok [blockly block][0] bagi menukar formasi penari sandaran sepanjang tarian. Cuba satu daripada idea ini untuk melanjutkannya:
+        Lihat tarian ini yang menggunakan blok <xml><block type="Dancelab_alternateMoves"><title name="GROUP">sprites</title><title name="N">2</title><title name="MOVE1">MOVES.Roll</title><title name="MOVE2">MOVES.ClapHigh</title></block></xml> bagi menukar formasi penari sandaran sepanjang tarian. Cuba satu daripada idea ini untuk melanjutkannya:
 
         -   Cipta kumpulan kedua penari dalam susun atur berbeza
         -   Tukar susun atur apabila kekunci ditekan
@@ -220,7 +220,7 @@ ms-MY:
       Dance_Party_extras_every_beat_2019: |-
         # Percepatkannya, Perlahankannya
 
-        Tarian akhir ini menggunakan blok [blockly block][0] untuk mengawal kepantasan setiap penari bergerak. Cuba bereksperimen dengan kelajuan berbeza semasa sudut berlainan dalam lagu. Jangan bimbang untuk terus bermain-main terhadap tarian ini, atau kembali kepada mana-mana tarian sebelumnya untuk menjadikannya lebih hebat.
+        Tarian akhir ini menggunakan blok <xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml> untuk mengawal kepantasan setiap penari bergerak. Cuba bereksperimen dengan kelajuan berbeza semasa sudut berlainan dalam lagu. Jangan bimbang untuk terus bermain-main terhadap tarian ini, atau kembali kepada mana-mana tarian sebelumnya untuk menjadikannya lebih hebat.
       Dance_Party_extras_layout: |-
         # Mari Kita Berada dalam Formasi!
 
@@ -244,7 +244,7 @@ ms-MY:
       Dance_Party_extras_speed_2019: |-
         # Percepatkannya, Perlahankannya
 
-        Tarian akhir ini menggunakan blok [blockly block][0] untuk mengawal kepantasan setiap penari bergerak. Cuba bereksperimen dengan kelajuan berbeza semasa sudut berlainan dalam lagu. Jangan bimbang untuk terus bermain-main terhadap tarian ini, atau kembali kepada mana-mana tarian sebelumnya untuk menjadikannya lebih hebat.
+        Tarian akhir ini menggunakan blok <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> untuk mengawal kepantasan setiap penari bergerak. Cuba bereksperimen dengan kelajuan berbeza semasa sudut berlainan dalam lagu. Jangan bimbang untuk terus bermain-main terhadap tarian ini, atau kembali kepada mana-mana tarian sebelumnya untuk menjadikannya lebih hebat.
       Dance_Party_extras_visible: |-
         # Ke Manakah Mereka Akan Pergi?
 
@@ -254,10 +254,11 @@ ms-MY:
         -   Tunjuk dan sembunyikan penari yang menggunakan kekunci anak panah
         -   Sembunyikan semua penari dan beralih kepada kesan latar belakang yang menarik
       Dance_Party_extras_visible_2019: |-
-        # Ke Manakah Mereka Akan Pergi?
+        # Not Perempat
 
-        Tarian ini menunjuk dan menyembunyikan dua kumpulan penari berbeza. Lihat dan kemudian cuba tambah bakat anda sendiri.
+        Kebanyakan tarian kita telah menggunakan seluruh corak berirama, tetapi setiap corak berirama terdiri daripada 4 not perempat. Tarian ini menggunakan [blockly block][0] untuk membuatkan penari menepuk tangan pada setiap not perempat selepas corak berirama ke-5.
 
-        -   Tambah satu lagi kumpulan penari
-        -   Tunjuk dan sembunyikan penari yang menggunakan kekunci anak panah
-        -   Sembunyikan semua penari dan beralih kepada kesan latar belakang yang menarik
+        Cuba ubah bilangan dalam blok untuk melihat cara ia menukar tarian.
+
+        -   Eksperimen dengan tempoh not lain (seperti 0.5 untuk not perdua atau 0.125 untuk not perlapan).
+        -   Tambahkan beberapa acara lain.

@@ -472,9 +472,9 @@ pl-PL:
       Dance_Party_extras_alternate_2019: |-
         # Tam i z powrotem!
 
-        Czasami możesz chcieć utworzyć wzór wybranych ruchów tanecznych. Ten nowy blok pozwala to zrobić.
+        Czasami możesz chcieć utworzyć własny układ ruchów tanecznych. Ten nowy blok pozwala to zrobić.
 
-        [blockly block][0]
+        <xml><block type="Dancelab_alternateMoves"><title name="GROUP">sprites</title><title name="N">2</title><title name="MOVE1">MOVES.Roll</title><title name="MOVE2">MOVES.ClapHigh</title></block></xml>
 
         Ruchy, które wybierzesz powyżej, będą powtarzane w sekwencji w nieskończoność.
 
@@ -489,12 +489,12 @@ pl-PL:
         -   Spraw, aby tancerze wspierający również reagowali na wciskanie klawiszy
         -   Zmieniaj tancerza co 4 takty, ustawiając jego widoczność
       Dance_Party_extras_battle_2019: |-
-        # Zespoły taneczne
+        # Grupy taneczne
 
         To bitwa taneczna pomiędzy dwiema grupami. Klawisze ze strzałkami sterują jednym z tancerzy, a klawisze "w, a, s, d" drugim. Zagraj w taneczną bitwę z przyjacielem, a potem spróbuj udoskonalić ten taniec.
 
         -   Dodaj kolejne przyciski kontrolujące taniec
-        -   Spraw, aby tancerze wspierający również reagowali na naciskanie klawiszy
+        -   Spraw, aby tancerze wspierający również reagowali na wciskanie klawiszy
         -   Zmieniaj tancerza co 4 takty, ustawiając jego widoczność
       Dance_Party_extras_every_beat: "# Ćwierćnuty\n\nWiększość naszych tańców wykorzystuje
         pełne takty, ale każdy takt składa się z 4 ćwierćnut. Ten taniec używa 'co
@@ -508,7 +508,7 @@ pl-PL:
       Dance_Party_extras_every_beat_2019: |-
         # Ćwierćnuty
 
-        Większość naszych tańców wykorzystuje całe takty, ale każdy takt składa się z czterech ćwierćnut. Taki taniec wykorzystuje blok [blockly block][0], by tancerz klaskał przy każdej ćwierćnucie, ale tylko w czasie pierwszych czterech taktów.
+        Większość naszych tańców wykorzystuje całe takty, ale każdy takt składa się z czterech ćwierćnut. Taki taniec wykorzystuje blok <xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml>, by tancerz klaskał przy każdej ćwierćnucie, ale tylko w czasie pierwszych czterech taktów.
 
         Spróbuj zmienić liczby w blokach, by przekonać się, jak zmieni się taniec.
 
@@ -525,17 +525,17 @@ pl-PL:
       Dance_Party_extras_layout_2019: |-
         # Twórzmy formację!
 
-        Wypróbuj taniec, który wykorzystuje blok [blockly block][0], by zmienić formację tancerzy pomocniczych w czasie tańca. Wypróbuj jeden z tych pomysłów i rozbuduj go:
+        Wypróbuj taniec, który wykorzystuje blok <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml>, by zmienić formację tancerzy pomocniczych w czasie tańca. Wypróbuj jeden z tych pomysłów i rozbuduj go:
 
         -   Utwórz drugą grupę tancerzy w innym układzie
         -   Zmień układ po naciśnięciu klawisza
         -   Zmień właściwość, gdy tancerze zmienią formację
       Dance_Party_extras_mixed_2019: |-
-        Więcej przycisków
+        # Więcej przycisków
 
         Ten taniec pozwala automatycznie kontrolować właściwości tancerzy w czasie rzeczywistym, podczas gdy oni tańczą. Spróbuj zmienić inne właściwości po naciśnięciu przycisków. Na przykład:
 
-        -   Losuj odcień tancerza po naciśnięciu „w dół”.
+        -   Losuj odcień tancerza po naciśnięciu strzałki w dół.
         -   Dodaj grupę tancerzy w losowym układzie po naciśnięciu spacji.
       Dance_Party_extras_on_beat: |-
         # Bas, średni i wysoki ton
@@ -562,13 +562,14 @@ pl-PL:
         -   Pokaż i ukryj tancerzy przy użyciu klawiszy strzałek
         -   Ukryj wszystkich tancerzy i przełącz na ekscytujący efekt tła
       Dance_Party_extras_visible_2019: |-
-        # Gdzie oni poszli?
+        # Ćwierćnuty
 
-        Ten taniec pokazuje i ukrywa dwie różne grupy tancerzy. Sprawdź to, a następnie spróbuj dodać własne ulepszenia.
+        Większość naszych tańców wykorzystuje całe takty, ale każdy takt składa się z czterech ćwierćnut. Taki taniec wykorzystuje blok [blockly block][0], by tancerz klaskał przy każdej ćwierćnucie po piątym takcie.
 
-        -   Dodaj kolejną grupę tancerzy
-        -   Pokaż i ukryj tancerzy przy użyciu klawiszy strzałek
-        -   Ukryj wszystkich tancerzy i przełącz na ekscytujący efekt tła
+        Spróbuj zmienić liczby w bloku, by przekonać się, jak zmieni się taniec.
+
+        -   Eksperymentuj z czasem trwania innych nut (np. 0,5 dla półnuty lub 0,125 dla ósemki).
+        -   Dodaj inne wydarzenia.
       Function intro Ryan: "W Twoim polu roboczym znajduje się funkcja o nazwie \"build
         bridget\".  Zawiera ona cały kod potrzebny do przekroczenia rzeki! \\\r\n
         \\\r\nUmieść zielony bloczek dwukrotnie w polu roboczym, aby naprawić ścieżkę,

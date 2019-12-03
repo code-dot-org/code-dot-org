@@ -293,14 +293,6 @@ cs-CZ:
 
         **Použij klávesy k rozhejbání robota klesnout-zatleskat-klesnout-zatleskat co nejrychleji!**
       Dance_Party_12: Roztoč to! Vytvoř si svůj vlastní tanec a sdílej ho s kamarády.
-      Dance_Party_extras_alternate_2019: |-
-        # Utvoř sestavu!
-
-        Podívej se na tento tanec, který používá blok [blockly block][0] ke změně sestavy doprovodných tanečníků během tance. Vyzkoušej jeden z těchto nápadů k vylepšení:
-
-        -   Vytvoř druhou skupinu tanečníků s jiným rozložením
-        -   Změň rozložení při stisknutí klávesy
-        -   Změň vlastnost, když tanečníci změní sestavu
       Dance_Party_extras_battle: |-
         # Taneční skupiny
 
@@ -327,10 +319,6 @@ cs-CZ:
         -   Experimentuj s dalšími délkami not (jako např. 0,5 pro poloviční notu nebo 0,125 pro osminovou notu).
         -   Přidej nějaké události „po taktu“.
         -   Přepni „takty“ za „sekundy“ a zkus časovat tance tímto způsobem.
-      Dance_Party_extras_every_beat_2019: |-
-        # Zrychli to, zpomal to
-
-        Tento poslední tanec používá blok [blockly block][0] k řízení rychlosti pohybu jednotlivých tanečníků. Zkus experimentovat s různými rychlostmi v různých místech písničky. Neboj se si s tímto tancem pořádně pohrát nebo se vrať k libovolnému z předchozích tanců a zkus je ještě vylepšit.
       Dance_Party_extras_layout: |-
         # Pojďme utvořit sestavu!
 
@@ -339,6 +327,14 @@ cs-CZ:
         -   Vytvoř druhou skupinu tanečníků v rozdílném rozvržení
         -   Změň rozvržení, když stiskneš klávesu
         -   Změň vlastnost, když tanečníci změní sestavy
+      Dance_Party_extras_layout_2019: |-
+        # Utvoř sestavu!
+
+        Podívej se na tento tanec, který používá blok <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> ke změně sestavy doprovodných tanečníků během tance. Vyzkoušej jeden z těchto nápadů k vylepšení:
+
+        -   Vytvoř druhou skupinu tanečníků s jiným rozložením
+        -   Změň rozložení při stisknutí klávesy
+        -   Změň vlastnost, když tanečníci změní sestavu
       Dance_Party_extras_on_beat: |-
         # Basy, středy a výšky
 
@@ -354,7 +350,7 @@ cs-CZ:
       Dance_Party_extras_speed_2019: |-
         # Zrychli to, zpomal to
 
-        Tento poslední tanec používá blok [blockly block][0] k řízení rychlosti pohybu jednotlivých tanečníků. Zkus experimentovat s různými rychlostmi v různých místech písničky. Neboj se si s tímto tancem pořádně pohrát nebo se vrať k libovolnému z předchozích tanců a zkus je ještě vylepšit.
+        Tento poslední tanec používá blok <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> k řízení rychlosti pohybu jednotlivých tanečníků. Zkus experimentovat s různými rychlostmi v různých místech písničky. Neboj se si s tímto tancem pořádně pohrát nebo se vrať k libovolnému z předchozích tanců a zkus je ještě vylepšit.
       Dance_Party_extras_visible: |-
         # Kam by šli?
 
@@ -364,13 +360,14 @@ cs-CZ:
         -   Zobraz a skryj tanečníky pomocí šipek s klávesami
         -   Skryj všechny své tanečníky a přepni se na vzrušující efekt pozadí
       Dance_Party_extras_visible_2019: |-
-        # Kam by šli?
+        # Čtvrťové noty
 
-        Tento tanec zobrazuje a skrývá dvě různé skupiny tanečníků. Zkontroluj to a poté zkus přidat svůj vlastní styl.
+        Většina našich tanců používala celé takty, ale každý takt obsahuje 4 čtvrťové noty. Tento tanec používá [blockly block][0], aby tanečník po 5. taktu na každou čtvrťovou notu tlesknul.
 
-        -   Přidej další skupinu tanečníků
-        -   Zobraz a skryj tanečníky pomocí šipek s klávesami
-        -   Skryj všechny své tanečníky a přepni se na vzrušující efekt pozadí
+        Zkus změnit čísla v bloku a podívat se, jak se tanec změní.
+
+        -   Experimentuj s jinými délkami not (například 0,5 pro půlovou notu nebo 0,125 pro osminovou notu).
+        -   Přidej nějaké další události.
       Function intro Ryan: "Máte v pracovním prostoru **funkci** s názvem „postavit
         most“. Veškerý kód, který potřebujete k překročení řeky, je do ní vložen!
         \\\r\n \\\r\nPřichyťte malý zelený blok dvakrát do pracovního prostoru, čímž

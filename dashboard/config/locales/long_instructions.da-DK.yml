@@ -340,14 +340,6 @@ da-DK:
         så hurtigt som du kan!**"
       Dance_Party_12: Bliv groovy! Skab dit eget Dance Party som du kan dele med dine
         venner.
-      Dance_Party_extras_alternate_2019: |-
-        # Lad os stille op i formation!
-
-        Tjek denne dans, der bruger blokken [blockly block][0] til at ændre backup-dansernes formation under hele dansen. Prøv en af disse ideer for at udvide den:
-
-        -   Opret en anden gruppe dansere i et andet layout
-        -   Skift layout, når der trykkes på en tast
-        -   Skift en egenskab, når danserne skifter formation
       Dance_Party_extras_battle: |-
         # Dansegrupper
 
@@ -377,7 +369,7 @@ da-DK:
       Dance_Party_extras_every_beat_2019: |-
         # Speed op, sæt farten ned
 
-        Denne sidste dans bruger blokken [blockly block][0] til at kontrollere, hvor hurtigt hver danser bevæger sig. Prøv at eksperimentere med forskellige hastigheder på forskellige punkter i sangen. Du er velkommen til at fortsætte med at flikke rundt på denne dans, eller vende tilbage til nogen af de tidligere danse for at gøre dem endnu mere cool.
+        Denne sidste dans bruger blokken <xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml> til at kontrollere, hvor hurtigt hver danser bevæger sig. Prøv at eksperimentere med forskellige hastigheder på forskellige punkter i sangen. Du er velkommen til at fortsætte med at flikke rundt på denne dans, eller vende tilbage til nogen af de tidligere danse for at gøre dem endnu mere cool.
       Dance_Party_extras_layout: |-
         # Lad os tage opstilling!
 
@@ -387,9 +379,9 @@ da-DK:
         \*Skift layout, når der trykkes på en tast
         \*Skift en egenskab, når danserne ændrer stilling
       Dance_Party_extras_layout_2019: |-
-        # Let's Get in Formation!
+        # Lad os stille op i formation!
 
-        Tjek denne dans, der bruger blokken [blockly block][0] til at ændre baggrundsdansernes stilling igennem dansen. Prøv en af disse ideer til at udvidde projektet:
+        Tjek denne dans, der bruger blokken <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> til at ændre baggrundsdansernes stilling igennem dansen. Prøv en af disse ideer til at udvidde projektet:
 
         # Lad os tage opstilling!
 
@@ -419,7 +411,7 @@ da-DK:
       Dance_Party_extras_speed_2019: |-
         # Speed op, sæt farten ned
 
-        Denne sidste dans bruger blokken [blockly block][0] til at kontrollere, hvor hurtigt hver danser bevæger sig. Prøv at eksperimentere med forskellige hastigheder på forskellige punkter i sangen. Du er velkommen til at fortsætte med at flikke rundt på denne dans, eller vende tilbage til nogen af de tidligere danse for at gøre dem endnu mere cool.
+        Denne sidste dans bruger blokken <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> til at kontrollere, hvor hurtigt hver danser bevæger sig. Prøv at eksperimentere med forskellige hastigheder på forskellige punkter i sangen. Du er velkommen til at fortsætte med at flikke rundt på denne dans, eller vende tilbage til nogen af de tidligere danse for at gøre dem endnu mere cool.
       Dance_Party_extras_visible: |-
         # Hvor forsvandt de hen?
 
@@ -429,13 +421,14 @@ da-DK:
         \*Vis og skjul dansere ved hjælp af piletasterne
         \*Skjul alle danserne, og skift til en spændende baggrundseffekt
       Dance_Party_extras_visible_2019: |-
-        # Hvor forsvandt de hen?
+        # Fjerdedelsnoder
 
-        Denne dans viser og skjuler to forskellige dansegrupper. Tjek det ud, og giv det derefter dit eget udtryk.
+        De fleste af vores danser har brugt hele takter, men hver takt består af fire fjerdedelsnoder. Denne dans bruger [blokly block] [0] til at få danseren til at klappe på hver fjerdedelsnode efter den 5. takt.
 
-        \*Tilføj en anden gruppe dansere
-        \*Vis og skjul dansere ved hjælp af piletasterne
-        \*Skjul alle danserne, og skift til en spændende baggrundseffekt
+        Prøv at ændre tallene i blokken for at se, hvordan det ændrer dansen.
+
+        -   -   Eksperimenter med andre nodevarigheder (såsom 0,5 for en halvnode eller 0,125 for en ottendedelsnode).
+        -   Tilføj nogle andre begivenheder.
       Function intro Ryan: "Du har en **funktion**, der hedder \"byg bro\" i dit arbejdsområde.
         \ Den indeholder al den nødvendige kode til at komme over floden! \\\r\n \\\r\nKlik
         den lille grønne blok ind i dit arbejdsområde to gange for at bygge en vej

@@ -10906,14 +10906,6 @@ zh-CN:
 
         \*\* 使用这些键来做出 蹲下-拍手-蹲下-拍手 的动作，看你能做多快！ \*\*
       Dance_Party_12: 随着节奏律动吧！创建自己的舞蹈，并与朋友分享。
-      Dance_Party_extras_alternate_2019: |-
-        # 进入阵型！
-
-        使用[blockly block][0]模块来改变伴舞演员在整个舞蹈中的阵型。尝试以下任意创意来扩展：
-
-        -   创建采用不同布局的另一组舞者
-        -   按下按键时更改布局
-        -   舞者改变阵型时更改属性
       Dance_Party_extras_battle: |-
         # 舞蹈团队
 
@@ -10943,7 +10935,7 @@ zh-CN:
       Dance_Party_extras_every_beat_2019: |-
         # 加速、减速
 
-        最后这段舞蹈采用[blockly block][0]模块来控制每个舞者的动作速度。尝试在曲子的不同位置采用不同的速度看看。您可以在这段舞蹈里面随意调节，或者返回之前任意舞蹈，来让效果变得更精彩一些。
+        最后这段舞蹈采用<xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml>模块来控制每个舞者的动作速度。尝试在曲子的不同位置采用不同的速度看看。您可以在这段舞蹈里面随意调节，或者返回之前任意舞蹈，来让效果变得更精彩一些。
       Dance_Party_extras_layout: |-
         # 开始编队！
 
@@ -10952,6 +10944,14 @@ zh-CN:
         -   在另一个布局中创建第二组舞者
         -   按下键时更改布局
         -   当舞者改变阵型时更改属性
+      Dance_Party_extras_layout_2019: |-
+        # 进入阵型！
+
+        使用<xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> 模块来改变伴舞演员在整个舞蹈中的阵型。尝试以下任意创意来扩展：
+
+        -   创建采用不同布局的另一组舞者
+        -   按下按键时更改布局
+        -   舞者改变阵型时更改属性
       Dance_Party_extras_on_beat: |-
         # 低音、中音和高音
 
@@ -10967,7 +10967,7 @@ zh-CN:
       Dance_Party_extras_speed_2019: |-
         # 加速、减速
 
-        最后这段舞蹈采用[blockly block][0]模块来控制每个舞者的动作速度。尝试在曲子的不同位置采用不同的速度看看。您可以在这段舞蹈里面随意调节，或者返回之前任意舞蹈，来让效果变得更精彩一些。
+        最后这段舞蹈采用<xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml>模块来控制每个舞者的动作速度。尝试在曲子的不同位置采用不同的速度看看。您可以在这段舞蹈里面随意调节，或者返回之前任意舞蹈，来让效果变得更精彩一些。
       Dance_Party_extras_visible: |-
         # 让他们去哪儿？
 
@@ -10977,13 +10977,14 @@ zh-CN:
         -   使用箭头键显示和隐藏舞者
         -   隐藏所有的舞者，并切换到一个令人兴奋的背景效果
       Dance_Party_extras_visible_2019: |-
-        # 让他们去哪儿？
+        # 四分音符
 
-        这个舞蹈显示和隐藏了两组舞者。看看如何加入自己的天赋。
+        大部分舞蹈都是按照小节为单位来设计的，而每个小节由 4 个四分音符构成。这段舞蹈使用[blockly block][0]来让舞者从第 5 小节之后在每个四分音符时都拍一下手。
 
-        -   添加另一组舞者
-        -   使用箭头键显示和隐藏舞者
-        -   隐藏所有的舞者，并切换到一个令人兴奋的背景效果
+        更改模块中的数字来试试看对舞蹈会有什么影响。
+
+        -   尝试采用其他音符时值（例如 0.5 是二分音符，0.125 是八分音符）。
+        -   添加其他事件。
       Fish Tank 1-validated: "**做出预测**：你觉得当运行代码时，会发生什么？"
       Fish Tank 2-validated: |-
         我们来做个鱼缸！

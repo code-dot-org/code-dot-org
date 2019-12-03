@@ -1733,13 +1733,13 @@ it-IT:
         -   Fai in modo che anche i ballerini secondari rispondano quando vengono premuti i tasti
         -   Imposta la visibilità dei ballerini in modo che si alternino ogni 4 battute
       Dance_Party_extras_battle_2019: |-
-        # Gruppi di ballo
+        # Squadre di ballo
 
-        Ecco una gara di ballo tra due squadre. I tasti freccia controllano uno dei ballerini e i tasti "w, a, s, d" controllano l'altro. Sfida un amico a una gara di ballo, e poi prova a migliorarla.
+        Ecco una sfida tra due squadre di ballo. I tasti freccia controllano uno dei ballerini e i tasti "w, a, s, d" controllano l'altro. Sfida un amico e poi cerca di migliorare questa gara di ballo.
 
-        -   Aggiungi altri tasti per controllare i balli
-        -   Fai reagire anche i ballerini di seconda fila quando i tasti vengono premuti
-        -   Alterna il ballerino ogni 4 battute impostando la sua visibilità
+        -   Aggiungi più tasti per controllare il ballo
+        -   Fai in modo che anche i ballerini secondari rispondano quando vengono premuti i tasti
+        -   Imposta la visibilità dei ballerini in modo che si alternino ogni 4 battute
       Dance_Party_extras_every_beat: |-
         # Quartine
 
@@ -1751,9 +1751,14 @@ it-IT:
         -   Aggiungi alcuni eventi `dopo ... battute`
         -   Cambia "battute" con "secondi" e prova a controllare il ballo in questo modo
       Dance_Party_extras_every_beat_2019: |-
-        # Accelerare, Rallentare
+        # Quartine
 
-        Questa danza finale usa il blocco [blockly block][0] per controllare la velocità di movimento di ogni ballerino. Prova a sperimentare con diverse velocità durante i diversi punti della canzone. Sentiti libero di continuare ad armeggiare su questa danza, o di tornare a uno qualsiasi dei balli precedenti per renderli ancora più cool.
+        Finora abbiamo usato battute intere, ma spesso ogni battuta è composta da 4 quartine. Questo ballo usa il blocco <xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml> per far applaudire il ballerino ad ogni quartina - ovvero quattro volte per ogni battuta - ma solo per le prime 4 battute.
+
+        Prova a cambiare i numeri nei blocchi per vedere come cambia il ballo.
+
+        -   Sperimenta altre durate (come 0.5 per mezza battuta o 0.125 per un'ottava).
+        -   Aggiungi altri eventi.
       Dance_Party_extras_layout: |-
         # Tutti in formazione!
 
@@ -1762,12 +1767,27 @@ it-IT:
         -   Crea un secondo gruppo di ballerini con una formazione diversa
         -   Cambia la disposizione quando si preme un tasto
         -   Cambia una proprietà quando i ballerini cambiano formazione
+      Dance_Party_extras_layout_2019: |-
+        # Tutti in formazione!
+
+        Dai un'occhiata a questo ballo che usa il blocco <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> per cambiare la formazione dei ballerini secondari durante il ballo. Prova ad estendere il progetto con una di queste idee.
+
+        -   Crea un secondo gruppo di ballerini con una formazione diversa
+        -   Cambia la disposizione quando si preme un tasto
+        -   Cambia una proprietà quando i ballerini cambiano formazione
+      Dance_Party_extras_mixed_2019: |-
+        # Più pulsanti
+
+        In questo ballo puoi controllare le proprietà dei ballerini in tempo reale mentre stanno ballando automaticamente. Prova a far cambiare altre proprietà quando premi i pulsanti. Per esempio:
+
+        -   Modifica casualmente la tonalità del ballerino quando si preme la freccia verso il basso.
+        -   Aggiungi un gruppo di ballerini con una disposizione casuale quando si preme "spazio".
       Dance_Party_extras_on_beat: |-
         # Bassi, medi e alti
 
         Questo ballo usa eventi di "picco" per attivare il codice quando particolari frequenze diventano dominanti. Prova a vedere come cambia il ballo riproducendo canzoni diverse.
       Dance_Party_extras_on_beat_2019: |-
-        # Bassi, Medi e Alti
+        # Bassi, medi e alti
 
         Questo ballo usa eventi di "picco" per attivare il codice quando particolari frequenze diventano dominanti. Prova a vedere come cambia il ballo riproducendo canzoni diverse.
       Dance_Party_extras_speed: |-
@@ -1775,9 +1795,9 @@ it-IT:
 
         Questo ballo finale usa il blocco `imposta la velocità di ballo` per controllare la velocità dei movimenti di ogni ballerino. Prova a sperimentare diverse velocità in diversi punti della canzone. Sentiti libero di continuare ad armeggiare su questo ballo o di tornare ai precedenti per renderli ancora più divertenti.
       Dance_Party_extras_speed_2019: |-
-        # Accelerare, Rallentare
+        # Accelerare, rallentare
 
-        Questa danza finale usa il blocco [blockly block][0] per controllare la velocità di movimento di ogni ballerino. Prova a sperimentare con diverse velocità durante i diversi punti della canzone. Sentiti libero di continuare ad armeggiare su questa danza, o di tornare a uno qualsiasi dei balli precedenti per renderli ancora più cool.
+        Questo ballo finale usa il blocco <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> per controllare la velocità dei movimenti di ogni ballerino. Prova a sperimentare diverse velocità in diversi punti della canzone. Sentiti libero di continuare ad armeggiare su questo ballo o di tornare ai precedenti per renderli ancora più divertenti.
       Dance_Party_extras_visible: |-
         # Dove sono andati?
 
@@ -1789,11 +1809,11 @@ it-IT:
       Dance_Party_extras_visible_2019: |-
         # Dove sono andati?
 
-        Questo ballo mostra e nasconde due diversi gruppi di ballerini. Dai un’occhiata e poi prova ad aggiungere il tuo tocco personale
+        In questo ballo, due diversi gruppi di ballerini appaiono e scompaiono. Provalo e poi cerca di aggiungere il tuo stile.
 
         -   Aggiungi un altro gruppo di ballerini
         -   Mostra e nascondi i ballerini usando i tasti freccia
-        -   Nascondi tutti i ballerini e passa a un emozionante effetto di sfondo
+        -   Nascondi i ballerini e sorprendi tutti con un effetto di sfondo mozzafiato
       Fish Tank 1-validated: "**Fai una previsione**: Che cosa pensi accadrà quando
         eseguirai questo codice?"
       Fish Tank 2-validated: "Facciamo un acquario!  \n\nTrasforma Dusty (il cespuglio

@@ -119,7 +119,7 @@ fil-PH:
       CourseD_Dance_Party_02: |-
         "Gawin natin itong moose dancing!
 
-        Hilahin ang <xml><block type="Dancelab_changeMoveLR" block-text="new_dancer do floss"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> block sa workspace. Ikonekta ito sa ilalim ng <xml><block type="Dancelab_atTimestamp" block-text="after 4 measures"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> block. Dapat mag-umpisa ang iyong dancer ng bagong galaw matapos ang ikaapat na measure.
+        Hilahin ang <xml><block type="Dancelab_changeMoveLR" block-text="new_dancer do floss"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> block sa workspace. Ikonekta ito sa ilalim ng <xml><block type="Dancelab_atTimestamp" block-text="after 4 measures"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> block. Dapat mag-umpisa ang iyong dancer ng bagong galaw matapos ang ikaapat na measure.
 
         Ang mga**measure** ay ginagamit para bilangin ang oras sa musika. Sa tutorialna ito, ang isang measure ay apat na beat o kupas ang haba.".
       CourseD_Dance_Party_03: "\"_Ngayon naggo-groove tayo!_ \n\nMagdagdag ng <xml>\\<block
@@ -232,7 +232,7 @@ fil-PH:
       Dance_Party_02: |-
         "Gawin natin itong moose dancing!
 
-        Hilahin ang <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> block sa workspace. Ikonekta ito sa ilalim ng <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> block. Dapat mag-umpisa ang iyong dancer ng bagong galaw matapos ang ikaapat na measure.
+        Hilahin ang <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> block sa workspace. Ikonekta ito sa ilalim ng <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> block. Dapat mag-umpisa ang iyong dancer ng bagong galaw matapos ang ikaapat na measure.
 
         Ang mga**measure** ay ginagamit para bilangin ang oras sa musika. Sa tutorialna ito, ang isang measure ay apat na beat o kupas ang haba.".
       Dance_Party_03: "\"_Ngayon naggo-groove tayo!_ \n\nMagdagdag ng <xml><block
@@ -293,14 +293,6 @@ fil-PH:
         **Gamitin ang mga key para ipagawa sa Robot ang drop-palakpak-drop-palakpak nang sinbilis ng kaya mo!**"
       Dance_Party_12: Mg-Groove! Lumikha ng iyong sariling sayaw na ibahagi sa iyong
         mga kaibigan.
-      Dance_Party_extras_alternate_2019: |-
-        # Mag-formation Tayo!
-
-        Tingnan ang sayaw na ito na gumagamit ng [blockly block][0] block para baguhin ang formation ng mga backup dancer sa buong sayaw. Subukan ang isa sa mga ideyang ito para i-extend ito:
-
-        -   Lumikha ng ikalawang grupo ng mga dancer sa iba’t ibang layout
-        -   Palitan ang layout kapag pinindot ang key
-        -   Palitan ang property kapag nagbago ng formation ang mga dancer
       Dance_Party_extras_battle: |-
         "# Mga Dance Crew
 
@@ -329,10 +321,6 @@ fil-PH:
         -   Mag-eksperimento sa ibang tagal ng nota (tulad ng 0.5 para sa half note o 0.125 para sa ika-8 nota).
         -   Magdagdag ng ilang event `matapos ang measure`.
         -   Baguhin ang ""measures"" sa ""seconds"" at subukang orasan ang iyong mga sayaw sa paraang iyon.".
-      Dance_Party_extras_every_beat_2019: |-
-        # Bilisin Ito, Bagalan Ito
-
-        Ang pinal na sayaw na ito ay gumagamit ng [blockly block][0] block para kontrolin kung gaano kabilis gumagalaw ang bawat dancer. Subukang mag-eksperimento sa iba’t ibang bilis sa iba’t ibang punto ng awit. Malaya kang magti-tinker sa sayaw na ito, o bumalik sa alinmang naunang mga sayaw para mas gawing cool ang mga ito.
       Dance_Party_extras_layout: |-
         "# Mag-formation Tayo!
 
@@ -341,6 +329,14 @@ fil-PH:
         -   Lumikha ng ikalawang pangkat ng mga dancer sa naiibang layout
         -   Palitan ang layout kapag pinindot ang key
         -   Palitan amg property kapag nagbago ng formation ang mga dancer"
+      Dance_Party_extras_layout_2019: |-
+        # Mag-formation Tayo!
+
+        Tingnan ang sayaw na ito na gumagamit ng <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> block para baguhin ang formation ng mga backup dancer sa buong sayaw. Subukan ang isa sa mga ideyang ito para i-extend ito:
+
+        -   Lumikha ng ikalawang grupo ng mga dancer sa iba’t ibang layout
+        -   Palitan ang layout kapag pinindot ang key
+        -   Palitan ang property kapag nagbago ng formation ang mga dancer
       Dance_Party_extras_on_beat: |-
         "# Bass, Mid, at Treble
 
@@ -356,7 +352,7 @@ fil-PH:
       Dance_Party_extras_speed_2019: |-
         # Bilisin Ito, Bagalan Ito
 
-        Ang pinal na sayaw na ito ay gumagamit ng [blockly block][0] block para kontrolin kung gaano kabilis gumagalaw ang bawat dancer. Subukang mag-eksperimento sa iba’t ibang bilis sa iba’t ibang punto ng awit. Malaya kang magti-tinker sa sayaw na ito, o bumalik sa alinmang naunang mga sayaw para mas gawing cool ang mga ito.
+        Ang pinal na sayaw na ito ay gumagamit ng <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> block para kontrolin kung gaano kabilis gumagalaw ang bawat dancer. Subukang mag-eksperimento sa iba’t ibang bilis sa iba’t ibang punto ng awit. Malaya kang magti-tinker sa sayaw na ito, o bumalik sa alinmang naunang mga sayaw para mas gawing cool ang mga ito.
       Dance_Party_extras_visible: |-
         "# Saan Sila Pumunta?
 
@@ -366,13 +362,14 @@ fil-PH:
         -   Ipakita at itago ang mga dancer gamit ang mga arrow key
         -   Itago ang lahat ng dancer at lumipat sa isang kapana-panabik na background effect"
       Dance_Party_extras_visible_2019: |-
-        "# Saan Sila Pumunta?
+        # Quarter Notes
 
-        Ang sayaw na ito ay nagpapakita at itinatago ang dalawang magkaibang pangkat ng mga dancer. Tingnan ito, at subukang idagdag ang iyong sariling flair.
+        Karamihan sa mga dancer ay gumamit ng buong sukat, ngunit ang bawat sukat ay binubuo ng 4 na quarter notes. Gumagamit ang sayaw na ito ng [blockly block][0] para papalakpak ang dancer kada quarter note matapos ang 5th measure.
 
-        -   Idagdag ang ibang pangkat ng mga dancer
-        -   Ipakita at itago ang mga dancer gamit ang mga arrow key
-        -   Itago ang lahat ng dancer at lumipat sa isang kapana-panabik na background effect"
+        Subukang palitan ang mga numero sa block para makita kung paano binabago nito ang sayaw.
+
+        -   Mag-eksperimento sa ibang tagal ng note (ltulad ng 0.5 para sa half note o 0.125 para sa eighth note).
+        -   Idagdag ang ilan pang ibang mga event.
       K-1 Bee Loops 5: Gumamit ng `repeat` na mga loop para makakuha ng nektar at
         pulot!
       K-1 Maze Loops 2: Gamitin ang `repeat` na bloke para mapapunta ako sa baboy!

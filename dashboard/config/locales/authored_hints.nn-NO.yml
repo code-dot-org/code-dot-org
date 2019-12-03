@@ -964,6 +964,8 @@ nn-NO:
           -   Bruk ‘når venstrepila blir trykka ned’-blokka til å få roboten til å gjere ein bestemt dans når du trykkar på venstrepila.
 
           _Denne øvinga ender etter 7 taktar._
+      Dance_Party_extras_alternate_2019:
+        alternate: Endringsblokka er i "Dansarar"-kategorien.
       Function intro Ryan:
         Function_intro_Ryan_b: Hvis du kaller funksjonene riktig, er dette veien du
           vil reise...

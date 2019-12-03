@@ -4104,6 +4104,8 @@ it-IT:
           -   Usa il blocco `quando si preme a sinistra` per far eseguire al Robot una mossa di ballo premendo quel tasto.
 
           _L'esercizio terminerà dopo 7 battute._
+      Dance_Party_extras_alternate_2019:
+        alternate: Il blocco `alternano ogni` si trova nella categoria "Ballerini".
       Function intro Ryan:
         Function_intro_Ryan_b: Se usi le funzioni in modo corretto, questo è il percorso
           che seguirai...

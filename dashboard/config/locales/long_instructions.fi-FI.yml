@@ -220,14 +220,6 @@ fi-FI:
       Dance_Party_11b: On tanssikisan aika! Kissa napauttaa, kun painat vasenta nuolinäppäintä.
         Laita Robotti “droppaamaan”, kun painat oikeaa nuolinäppäintä.
       Dance_Party_12: Ryhdy toimiin! Luo oma tanssi ja jaa se ystäviesi kanssa.
-      Dance_Party_extras_alternate_2019: |-
-        # Mennään muodostelmaan!
-
-        Tutustu tähän tanssiin, joka käyttää [blockly block][0] -blokkia muuttaakseen taustatanssijoiden muodostelmaa tanssin aikana. Kokeile yhtä näistä ideoista, jotta voit jatkaa sitä:
-
-        -   Luo toinen ryhmä tanssijoita eri asettelussa
-        -   Muuta asettelua, kun näppäintä painetaan
-        -   Muuta ominaisuutta, kun tanssijat muuttavat muodostelmaa
       Dance_Party_extras_battle: |-
         # Tanssiryhmät
 
@@ -254,10 +246,6 @@ fi-FI:
         -   Kokeile muita nuotinkestoja (kuten 0,5 puolinuotille tai 0,125 kahdeksasosanuotille)
         -   Lisää joitain `tahdin jälkeen`-tapahtumia.
         -   Vaihda “tahdit” “sekuntien” kanssa ja yritä ajoittaa tanssejasi siten.
-      Dance_Party_extras_every_beat_2019: |-
-        # Pistä vauhtia, himmaa ja hidasta
-
-        Tämä viimeinen tanssi käyttää [blockly block][0] -blokkia hallitakseen jokaisen tanssijan liikkeen nopeutta. Kokeile eri nopeuksia kappaleen eri aikoina. Voit leikitellä tämän tanssin aikana tai palata edellisiin tansseihin tehdäksesi ne entistä siisteimmiksi.
       Dance_Party_extras_layout: |-
         # Mennään muodostelmaan!
 
@@ -266,6 +254,14 @@ fi-FI:
         -   Luo toinen ryhmä tanssijoita eri asettelussa.
         -   Muuta asettelua, kun näppäintä painetaan
         -   Muuta ominaisuutta, kun tanssijat muuttavat muodostelmaa.
+      Dance_Party_extras_layout_2019: |-
+        # Mennään muodostelmaan!
+
+        Tutustu tähän tanssiin, joka käyttää <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> -blokkia muuttaakseen taustatanssijoiden muodostelmaa tanssin aikana. Kokeile yhtä näistä ideoista, jotta voit jatkaa sitä:
+
+        -   Luo toinen ryhmä tanssijoita eri asettelussa
+        -   Muuta asettelua, kun näppäintä painetaan
+        -   Muuta ominaisuutta, kun tanssijat muuttavat muodostelmaa
       Dance_Party_extras_on_beat: |-
         Basso, midi ja diskantti
 
@@ -281,7 +277,7 @@ fi-FI:
       Dance_Party_extras_speed_2019: |-
         # Pistä vauhtia, himmaa ja hidasta
 
-        Tämä viimeinen tanssi käyttää [blockly block][0] -blokkia hallitakseen jokaisen tanssijan liikkeen nopeutta. Kokeile eri nopeuksia kappaleen eri aikoina. Voit leikitellä tämän tanssin aikana tai palata edellisiin tansseihin tehdäksesi ne entistä siisteimmiksi.
+        Tämä viimeinen tanssi käyttää <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> -blokkia hallitakseen jokaisen tanssijan liikkeen nopeutta. Kokeile eri nopeuksia kappaleen eri aikoina. Voit leikitellä tämän tanssin aikana tai palata edellisiin tansseihin tehdäksesi ne entistä siisteimmiksi.
       Dance_Party_extras_visible: |-
         # Mihin he menivät?
 
@@ -291,13 +287,14 @@ fi-FI:
         -   Näyttää ja piilottaa tanssijat nuolinäppäimillä
         -   Piilota kaikki tanssijat, ja siirry jännittävään taustaefektiin.
       Dance_Party_extras_visible_2019: |-
-        # Mihin he menivät?
+        # Neljäsosanuotit
 
-        Tämä tanssi näyttää ja piilottaa kaksi tanssijoiden ryhmää. Tsekkaa se ja lisää oma vivahteesi.
+        Useimmissa tansseissamme on kokonaiset tahdit, mutta jokainen tahti koostuu neljästä neljäsosanuotista. Tämä tanssi käyttää [blockly block][0] blokkia niin, että tanssija taputtaa käsiään jokaisen neljäsosanuotin kohdalla viidennen tahdin jälkeen.
 
-        -   Lisää uusi ryhmä tanssijoita
-        -   Näyttää ja piilottaa tanssijat nuolinäppäimillä
-        -   Piilota kaikki tanssijat, ja siirry jännittävään taustaefektiin.
+        Kokeile muuttaa blokin numeroita, jotta näet, miten se muuttaa tanssia.
+
+        -   Kokeile muita nuottien kestoja (kuten 0.5 puolinuotille tai 0.125 kahdeksasosanuotille).
+        -   Lisää muita tapahtumia.
       Function intro Ryan: "Työtilassasi on **toiminto** rakenna silta. Se sisältää
         kaiken koodin, jota tarvitset joen ylittämiseen! \\\r\n \\\r\nKorjaa polku
         napsauttamalla pieni vihreä lohko työtilaasi kahdesti ja vie {currentPlayerName}

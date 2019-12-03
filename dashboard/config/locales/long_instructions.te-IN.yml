@@ -9,7 +9,7 @@ te-IN:
       CourseD_Dance_Party_02: |-
         "ఈ మూస్‌ను డాన్స్ చేయనిద్దాం!
 
-        వర్క్‌స్పేస్ పైకి <xml><block type="Dancelab_changeMoveLR" block-text="new_dancer do floss"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> బ్లాక్‌ను డ్రాగ్ ఔట్ చేయండి. block onto the workspace. దాన్ని క్రింద <xml><block type="Dancelab_atTimestamp" block-text="after 4 measures"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> బ్లాక్‌కు కనెక్ట్ చేయండి. నాలుగవ మెజర్ తరువాత మీ డాన్సర్ ఒక కొత్త మువ్ ప్రారభించాలి.
+        వర్క్‌స్పేస్ పైకి <xml><block type="Dancelab_changeMoveLR" block-text="new_dancer do floss"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> బ్లాక్‌ను డ్రాగ్ ఔట్ చేయండి. block onto the workspace. దాన్ని క్రింద <xml><block type="Dancelab_atTimestamp" block-text="after 4 measures"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> బ్లాక్‌కు కనెక్ట్ చేయండి. నాలుగవ మెజర్ తరువాత మీ డాన్సర్ ఒక కొత్త మువ్ ప్రారభించాలి.
 
         **మెజర్స్** మ్యూజిక్‌లో సమయాన్ని లెక్కించడానికి ఉపయోగించబడతాయి. ఈ ట్యుటోరియల్‌లో, ఒక మెజర్ నాలుగు బీట్స్ పొడవు ఉంటుంది.".
       CourseD_Dance_Party_03: "\"_ఇప్పుడు మనం గ్రూవింగ్ చేస్తున్నాము!_ \n\nఒక <xml><block
@@ -83,7 +83,7 @@ te-IN:
       Dance_Party_02: |-
         "ఈ మూస్‌ను డాన్స్ చేయనిద్దాం!
 
-        వర్క్‌స్పేస్ పైకి <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> బ్లాక్‌ను డ్రాగ్ ఔట్ చేయండి. block onto the workspace. దాన్ని క్రింద <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> బ్లాక్‌కు కనెక్ట్ చేయండి. నాలుగవ మెజర్ తరువాత మీ డాన్సర్ ఒక కొత్త మువ్ ప్రారభించాలి.
+        వర్క్‌స్పేస్ పైకి <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> బ్లాక్‌ను డ్రాగ్ ఔట్ చేయండి. block onto the workspace. దాన్ని క్రింద <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> బ్లాక్‌కు కనెక్ట్ చేయండి. నాలుగవ మెజర్ తరువాత మీ డాన్సర్ ఒక కొత్త మువ్ ప్రారభించాలి.
 
         **మెజర్స్** మ్యూజిక్‌లో సమయాన్ని లెక్కించడానికి ఉపయోగించబడతాయి. ఈ ట్యుటోరియల్‌లో, ఒక మెజర్ నాలుగు బీట్స్ పొడవు ఉంటుంది.".
       Dance_Party_03: "\"_ఇప్పుడు మనం గ్రూవింగ్ చేస్తున్నాము!_ \n\nఒక <xml><block

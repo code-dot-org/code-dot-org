@@ -1399,7 +1399,7 @@ de-DE:
       Dance_Party_02: |-
         Lasse den Elch tanzen!
 
-        Ziehe den Baustein <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> in den Arbeitsbereich. Verbinde ihn unterhalb des Bausteins <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Dein Tänzer sollte nach dem vierten Takt mit einem neuen Tanzschritt beginnen.
+        Ziehe den Baustein <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> in den Arbeitsbereich. Verbinde ihn unterhalb des Bausteins <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Dein Tänzer sollte nach dem vierten Takt mit einem neuen Tanzschritt beginnen.
 
         **Takte** sind die zeitliche Struktur von Musik. In diesem Tutorial ist ein Takt vier Schläge lang.
       Dance_Party_03: |-
@@ -1456,7 +1456,7 @@ de-DE:
 
         Manchmal möchtest du vielleicht ein Muster von Tanzbewegungen erstellen, die du wählst. Mit diesem neuen Baustein kannst du genau das tun.
 
-        [blockly block][0]
+        <xml><block type="Dancelab_alternateMoves"><title name="GROUP">sprites</title><title name="N">2</title><title name="MOVE1">MOVES.Roll</title><title name="MOVE2">MOVES.ClapHigh</title></block></xml>
 
         Die oben gewählten Züge werden sich für immer wiederholen.
 
@@ -1491,7 +1491,7 @@ de-DE:
       Dance_Party_extras_every_beat_2019: |-
         # Viertelnoten
 
-        Die meisten unserer Tänze haben ganze Takte verwendet, aber jeder Takt besteht aus 4 Viertelnoten. Dieser Tanz verwendet [blockly block][0], um die Tänzerin auf jede Viertelnote klatschen zu lassen, aber nur für die ersten 4 Takte.
+        Die meisten unserer Tänze haben ganze Takte verwendet, aber jeder Takt besteht aus 4 Viertelnoten. Dieser Tanz verwendet <xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml>, um die Tänzerin auf jede Viertelnote klatschen zu lassen, aber nur für die ersten 4 Takte.
 
         Versuche, die Zahlen in den Blöcken zu ändern, um zu sehen, wie es den Tanz verändert.
 
@@ -1505,6 +1505,14 @@ de-DE:
         -   Erstelle eine zweite Gruppe von Tänzern in einem anderen Layout
         -   Ändere das Layout, wenn eine Taste gedrückt wird
         -   Ändere eine Eigenschaft, wenn die Tänzer ihre Formation ändern
+      Dance_Party_extras_layout_2019: |-
+        # Let's Get in Formation!
+
+        Schau dir diesen Tanz an, der den <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> Baustein verwendet, um die Formation der Backup-Tänzer während des gesamten Tanzes zu ändern. Probiere eine dieser Ideen aus, um sie zu erweitern:
+
+        -   Erstellung einer zweiten Gruppe von Tänzern in einem anderen Layout
+        -   Layout ändern, wenn eine Taste gedrückt wird
+        -   Ändern einer Eigenschaft, wenn die Tänzer die Formation wechseln
       Dance_Party_extras_mixed_2019: |-
         # Mehr Interaktion
 
@@ -1525,9 +1533,9 @@ de-DE:
 
         Dieser letzte Tanz nutzt den Block „festgelegte Geschwindigkeit“, um zu kontrollieren, wie schnell sich jeder Tänzer bewegt. Versuche, an verschiedenen Stellen im Lied mit unterschiedlichen Geschwindigkeiten zu experimentieren. Zögere nicht, bei diesem Tanz herumzuexperimentieren oder kehre zu einem der bisherigen Tänze zurück, um ihn noch cooler zu machen.
       Dance_Party_extras_speed_2019: |-
-        # Mal schnell, mal langsam
+        # Beschleunigen, verlangsamen
 
-        Dieser letzte Tanz verwendet den [blockly block][0] Block, um zu steuern, wie schnell sich jeder Tänzer bewegt. Versuchen Sie, mit unterschiedlichen Geschwindigkeiten an verschiedenen Stellen in einem Stück zu experimentieren. Sie können weiter an diesem Tanz arbeiten oder zu einem der vorherigen Tänze zurückkehren, um sie noch cooler zu gestalten.
+        Dieser letzte Tanz nutzt den <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> Baustein, um zu kontrollieren, wie schnell sich jeder Tänzer bewegt. Versuche, an verschiedenen Stellen im Lied mit unterschiedlichen Geschwindigkeiten zu experimentieren. Zögere nicht, bei diesem Tanz herumzuexperimentieren oder kehre zu einem der bisherigen Tänze zurück, um ihn noch cooler zu machen.
       Dance_Party_extras_visible: |-
         # Wo würden sie hingehen?
 
