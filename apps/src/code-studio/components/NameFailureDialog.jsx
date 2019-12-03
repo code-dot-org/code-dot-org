@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import Dialog, {Body} from '@cdo/apps/templates/Dialog';
+import Dialog, {Body, Buttons, Confirm} from '@cdo/apps/templates/Dialog';
+import i18n from '@cdo/locale';
 
 export default class NameFailureDialog extends React.Component {
   static propTypes = {
@@ -23,6 +24,9 @@ export default class NameFailureDialog extends React.Component {
             phone number. Please pick a new name that doesn't contain "
             {this.props.flaggedText}."
           </p>
+          <Buttons>
+            <Confirm onClick={this.props.handleClose}>{i18n.ok()}</Confirm>
+          </Buttons>
         </Body>
       </Dialog>
     );
