@@ -65,3 +65,8 @@ function setStateInternal(newState, options = null) {
 export const setSetStateCallback = callback => {
   setStateCallback = callback;
 };
+
+export const resetState = () => {
+  state = {...initialState};
+  return state;
+};
