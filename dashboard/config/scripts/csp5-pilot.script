@@ -89,15 +89,12 @@ level 'U5 L09 Traversals Exit Ticket', progression: 'Check For Understanding', a
 
 stage 'Traversals Investigate', flex_category: 'csp_traversals'
 level 'CSP U5L10 SFLP 20-21', progression: 'Lesson Overview'
-level 'U5 Traversals Investigate Mile Tracker', progression: 'App Investigation'
-level 'U5 Traversals Investigate Word Guess - clone', progression: 'App Investigation'
-level 'U5 Traversals Investigate Dog Finder - clone', progression: 'App Investigation'
-level 'U5 Traversals Investigate Mile Tracker Modify', progression: 'Code Investigation'
-level 'U5 Traversals Get List Explanation Video', progression: 'The getList() Block'
-level 'U5 Traversals Investigate Word Guess Modify', progression: 'Code Investigation'
-level 'U5 Traversals Investigate Dog Finder Modify', progression: 'Code Investigation'
+level 'U5 Traversals Investigate Mile Tracker Modify', progression: 'Mile Tracker Investigation'
+level 'CSP U5L10 Traversals Investigate', progression: 'Intro to Datasets'
+level 'U5 Traversals Investigate Dog Finder Modify', progression: 'Dog Finder Investigation'
 level 'List Filter Pattern', progression: 'Traversal Patterns'
 level 'List Reduce Pattern', progression: 'Traversal Patterns'
+level 'CSP U5L10 CFU Traversals', progression: 'Check For Understanding', assessment: true
 
 stage 'Traversals Practice', flex_category: 'csp_traversals'
 level 'CSP U5L11 SFLP 20-21', progression: 'Lesson Overview'
@@ -108,7 +105,6 @@ level 'U5 Traversals Practice Part 4', progression: 'Filter and Reduce Practice'
 level 'U5 Traversals Practice Part 5', progression: 'Filter and Reduce Practice'
 level 'U5 Traversals Practice Part 6', progression: 'Filter and Reduce Practice'
 level 'U5 Traversals Practice Part 7', progression: 'App Practice'
-level 'U5 Traversals Practice Part 8', progression: 'App Practice'
 level 'U5L11 CFU For Each Psuedocode', progression: 'Check For Understanding: AP Practice', assessment: true
 
 stage 'Traversals Make', flex_category: 'csp_traversals'
@@ -121,20 +117,31 @@ level 'U5 Traversals Make Project Step 4', progression: 'Build the Poem Personal
 level 'U5 Traversals Make Project Step 5', progression: 'Build the Poem Personalizer'
 level 'U5 Traversals Make Project Step 6', progression: 'Build the Poem Personalizer', assessment: true
 
-stage 'Lesson 13: Assessment Day'
-level 'CSP U5L18 SFLP 20-21', progression: 'Lesson Overview'
-
 stage 'Semester Hackathon Part 1', flex_category: 'csp_project'
 level 'CSP U5L13 SFLP 20-21', progression: 'Lesson Overview'
 
 stage 'Semester Hackathon Part 2', flex_category: 'csp_project'
 level 'CSP U5L14 SFLP 20-21', progression: 'Lesson Overview'
+level 'U5 Hackathon Project Day 2', progression: 'Hackathon Project'
 
 stage 'Semester Hackathon Part 3', flex_category: 'csp_project'
 level 'CSP U5L15 SFLP 20-21', progression: 'Lesson Overview'
+level 'U5 Hackathon Project Day 3', progression: 'Hackathon Project'
 
 stage 'Semester Hackathon Part 4', flex_category: 'csp_project'
 level 'CSP U5L16 SFLP 20-21', progression: 'Lesson Overview'
+level 'U5 Hackathon Project Day 4', progression: 'Hackathon Project'
 
 stage 'Semester Hackathon Part 5', flex_category: 'csp_project'
 level 'CSP U5L17 SFLP 20-21', progression: 'Lesson Overview'
+level 'U5 Hackathon Project Day 5', progression: 'Hackathon Project', assessment: true
+
+stage 'Lesson 18: Assessment Day', lockable: true
+level 'CSP U5L18 SFLP 20-21', progression: 'Lesson Overview'
+level 'CSP Unit 5 AP-Style Assessment _2020', progression: 'Unit 5 Exam', assessment: true
+
+stage 'Unit 5 STUDENT Survey', lockable: true, flex_category: 'required'
+level 'CSP U5 20-21 Student Pilot Survey', progression: 'Unit 5 STUDENT Survey', assessment: true
+
+stage 'Unit 5 TEACHER Survey', lockable: true, flex_category: 'required'
+level 'CSP U5 20-21 Teacher Pilot Survey', progression: 'Unit 5 TEACHER Survey', assessment: true

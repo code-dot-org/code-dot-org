@@ -1,7 +1,7 @@
 :ruby
-  show_single_hero = Homepage.show_single_hero
+  show_single_hero = Homepage.show_single_hero(request)
   heroes_arranged, hero_display_time = Homepage.get_heroes_arranged(request)
-  actions = Homepage.get_actions
+  actions = Homepage.get_actions(request)
 
 - main_actions = capture_haml do
   - if show_single_hero == "dance2019"
@@ -12,6 +12,8 @@
       -# Don't tint the word "create"
       .desktop-feature= hoc_s(:codeorg_homepage_hoc2018_header_line2_mobile)
       .mobile-feature= hoc_s(:codeorg_homepage_hoc2018_header_line2_mobile)
+  - elsif show_single_hero == "oceans2019"
+    = view :homepage_hero_oceans2019
   - elsif show_single_hero == "hoc2019"
     .hero-message
       = hoc_s(:hoc2019_header_line1_mobile)
@@ -35,7 +37,13 @@
 
   .clear{style: "clear: both"}
 
-#hero{style: "position:relative"}
+- if show_single_hero == "oceans2019"
+  - hero_style = "position:relative; overflow: hidden; cursor: pointer"
+  - hero_onclick = "location.href='/oceans'"
+- else
+  - hero_style = "position:relative; overflow: hidden"
+
+#hero{style: hero_style, onclick: hero_onclick}
   - heroes_arranged.each_with_index do |entry, index|
     -# Preload the first hero image to render immediately, lazy-load the rest to conserve bandwidth.
     - if index == 0
@@ -47,7 +55,7 @@
       -# Temp: for dance2019, heroes will show/hide resposively, so use widehero_do_not_hide
       .widehero_do_not_hide#fullwidth0{style: "background-position: #{entry[:centering]}; background-image: url(#{entry[:image]});", class: entry[:classname]}
     - else
-      -# Temp: for dance2019, heroes will show/hide resposively, so use widehero_do_not_hide
+      -# Temp: for dance2019, heroes will show/hide responsively, so use widehero_do_not_hide
       .widehero_do_not_hide.lazyload{id: "fullwidth#{index}", "data-bg"=> "#{entry[:image]}", style: "background-position: #{entry[:centering]}", class: entry[:classname]}
 
   #fullwidth
@@ -86,6 +94,13 @@
           %span{style: "white-space: nowrap"}= star
           &nbsp; &nbsp;
         %span{style: "white-space: nowrap"}= hoc_s(:codeorg_homepage_hoc2018_musician_after)
+
+  - elsif show_single_hero == "oceans2019"
+    #actions{style: "text-align: left"}
+      = main_actions
+
+    .blank{style: "height: 54px"}
+      &nbsp;
 
   - elsif show_single_hero
     #actions
