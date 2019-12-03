@@ -174,6 +174,11 @@ id-ID:
         dance_callout_04: Tambahkan blok ini ke program Anda!
       CourseD_Dance_Party_06:
         dance_callout_06: Tambahkan penari baru Anda di sini
+      CourseD_Dance_Party_11:
+        dance_callout_11_a: Blok baru!
+        dance_callout_11_b: Blok baru!
+      CourseD_Dance_Party_11_5:
+        dance_party_11_5_groups: Lihat di sini untuk blok "semua bebek"
       Dance_2019_01:
         dance_callout_01: Add this block to your program!
       Dance_2019_02:
@@ -183,6 +188,13 @@ id-ID:
         dance_callout_02: Tambahkan blok ini ke program Anda!
       Dance_2019_05:
         dance_callout_05: Tambahkan acara baru ke program Anda.
+      Dance_2019_06:
+        dance_party_11_5_groups: Blok baru!
+      Dance_2019_07:
+        setprop_hint: Blok baru!
+      Dance_2019_09:
+        new_block_3: Blok baru!
+        new_block_4: Blok baru!
       Dance_Party_01:
         dance_callout_01: Tambahkan blok ini ke program Anda!
       Dance_Party_02:
@@ -191,6 +203,11 @@ id-ID:
         dance_callout_04: Tambahkan blok ini ke program Anda!
       Dance_Party_06:
         dance_callout_06: Tambahkan penari baru Anda di sini
+      Dance_Party_11:
+        dance_callout_11_a: Blok baru!
+        dance_callout_11_b: Blok baru!
+      Dance_Party_11_5:
+        dance_party_11_5_groups: Lihat di sini untuk blok "semua bebek"
       Fish Tank 3-validated_2019:
         spritelab_comment: Gunakan blok ini untuk membuat catatan untuk anda atau
           guru anda tentang bagaimana kode bekerja.

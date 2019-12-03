@@ -374,6 +374,11 @@ te-IN:
         - {}
         - {}
         - {}
+      BigEvent-Unplugged:
+        markdown: |
+          # The Big Event
+
+          In computer science, events are actions that a computer monitors. In this lesson you will react differently depending on which button is pressed.
       CSD Header Size MC:
         answers:
         - {}
@@ -662,6 +667,25 @@ te-IN:
         - {}
         - correct: true
         - {}
+      GoingPlacesSafely-unplugged:
+        markdown: |
+          # Going Places Safely
+
+          The Internet is a powerful, but sometimes dangerous place. Stay safe while navigating the Internet!
+
+          <p align=center>
+      HappyLoops-Unplugged:
+        markdown: |
+          # Happy Loops
+
+          In this lesson, you will learn about loops!
+
+          ![](https://images.code.org/6aac7f675f0c69033f42ccac6a733f68-image-1557769673400.png)
+      HappyMaps-Unplugged:
+        markdown: |
+          # Happy Maps
+
+          Create an algorithm to move a character through a maze.
       K-1 Artist 1 Multi 1:
         questions:
         - {}

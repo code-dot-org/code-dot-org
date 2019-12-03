@@ -1,0 +1,15 @@
+nl:
+  data:
+    block_categories:
+      Actions: Acties
+      Color: Kleur
+      Conditionals: Voorwaardelijke instructies
+      Dancers: Dansers
+      Events: Gebeurtenissen
+      Functions: Functies
+      Groups: Groepen
+      Logic: Logica
+      Loops: Lussen
+      Math: wiskundige
+      Text: Tekst
+      Variables: Variabelen

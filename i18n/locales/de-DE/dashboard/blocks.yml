@@ -454,10 +454,15 @@ de:
           LAYOUT:
             '"border"': Grenze
             '"inner"': Quadrat im Inneren
+            '"diamond"': Diamant
             '"circle"': Kreis
             '"grid"': Raster
+            '"top"': obere Reihe
             '"row"': Zeile
+            '"bottom"': untere Reihe
+            '"left"': linke Spalte
             '"column"': Spalte
+            '"right"': rechte Spalte
             '"x"': kreuz und quer
             '"plus"': plus
             '"random"': zufällig
@@ -963,6 +968,7 @@ de:
             '"direction"': Bewegungsrichtung
             '"tint"': Farbton
       gamelab_getThisSprite:
+        text: "{CHOICE} Sprite"
         options:
           CHOICE:
             '"this"': dies
@@ -1291,6 +1297,7 @@ de:
       Mikelab_hasBehavior:
         text: "{SPRITE} ist aktuell {BEHAVIOR}"
       Mikelab_hideFish:
+        text: entferne {TRASH}
         options:
           TRASH:
             object: Objekt
@@ -1434,11 +1441,14 @@ de:
       Vector_vectorNorth:
         text: Nord
       Vector_where:
+        text: für jedes Sprite bei dem {PROPERTY} den Wert {VALUE} hat mache {STATEMENT}
         options:
           PROPERTY:
             "'shapeColor'": Farbe
       aalab_addBehaviorUntilBoolean:
         text: "{SPRITE} beginnt {BEHAVIOR} bis {CONDITION}"
+      aalab_createNewSpriteAnonReturn2:
+        text: neues Sprite mit Namen {SPRITE_NAME} mit Kostüm {ANIMATION_NAME} an der Position {LOCATION}
       aalab_goToScene:
         text: gehe zur Szene {SCENE}
         options:

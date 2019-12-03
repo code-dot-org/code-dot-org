@@ -118,6 +118,7 @@ sq:
             '19': '19'
             '20': '20'
           LAYOUT:
+            '"diamond"': diamant
             '"random"': zakonshëm
       Dancelab_randomColor:
         text: ngjyrë e rastësishme

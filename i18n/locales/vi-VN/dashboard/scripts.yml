@@ -4730,7 +4730,7 @@ vi:
             new stage:
               name: giai đoạn mới
             Dance Party:
-              name: Bữa tiệc khiêu vũ
+              name: Bữa Tiệc Khiêu Vũ
           title: Bữa tiệc khiêu vũ
           description_short: Hợp tác với Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara và 25 nghệ sĩ khác!
           description: Viết mã bữa tiệc khiêu vũ của riêng bạn để chia sẻ với bạn bè của mình!
@@ -4747,11 +4747,11 @@ vi:
         dance--draft:
           stages:
             Dance Party:
-              name: Bữa tiệc khiêu vũ
+              name: Bữa Tiệc Khiêu Vũ
         dance-draft:
           stages:
             Dance Party:
-              name: Bữa tiệc khiêu vũ
+              name: Bữa Tiệc Khiêu Vũ
         dance-extras:
           description: Hãy làm nhiều hơn nữa so với giờ đầu tiên với các ý tưởng dự án mở rộng.
         coursef-2019:
@@ -4779,7 +4779,7 @@ vi:
         dance-low:
           stages:
             Dance Party:
-              name: Bữa tiệc khiêu vũ
+              name: Bữa Tiệc Khiêu Vũ
         coursed-2019:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -4795,7 +4795,7 @@ vi:
             Artist Binary:
               name: Nghệ sĩ nhị phân
             Dance Party:
-              name: Bữa tiệc khiêu vũ
+              name: Bữa Tiệc Khiêu Vũ
         coursee-2019:
           stages:
             Building a Foundation:
@@ -4841,7 +4841,7 @@ vi:
             Crowdsourcing:
               name: Đa nguồn
             Dance Party:
-              name: Bữa tiệc khiêu vũ
+              name: Bữa Tiệc Khiêu Vũ
             Concept Practice with Minecraft:
               name: Nhìn về phía trước
         csd1-2019:
@@ -5415,7 +5415,7 @@ vi:
         dance-2019:
           stages:
             Dance Party:
-              name: Bữa tiệc khiêu vũ
+              name: Bữa Tiệc Khiêu Vũ
           description: Viết mã bữa tiệc khiêu vũ của riêng bạn để chia sẻ với bạn bè của mình!
         k5-onlinepd-2019:
           stages:

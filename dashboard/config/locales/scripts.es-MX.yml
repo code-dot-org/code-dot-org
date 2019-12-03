@@ -12583,6 +12583,7 @@ es-MX:
           stages:
             Dance Party - Go Further:
               name: Fiesta de baile - Ir más allá
+          title: Sigue bailando (2018)
           description_short: Ve más allá de la Hora del Código con esta actividad
             de seguimiento para el tutorial de la Fiesta de baile de Code.org.
           description: Motívate con más ideas de proyectos.
@@ -15608,6 +15609,8 @@ es-MX:
               name: Encuesta de la Unidad 3 para ESTUDIANTES
             Unit 4 TEACHER Survey:
               name: Encuesta de la Unidad 4 para DOCENTES
+            'Lesson 15: Assessment Day':
+              name: 'Lección 15: día de evaluación'
           title: 'Unidad 4: Variables, condicionales, funciones'
         csp1-2019:
           title: CSP Unidad 1 - Internet ('19-'20)
@@ -16763,6 +16766,8 @@ es-MX:
               name: Evaluación de la Unidad 5
             Semester Exam:
               name: Examen semestral
+            'Lesson 13: Assessment Day':
+              name: 'Lección 13: día de evaluación'
           title: 'Unidad 5: Listas, bucles y recorridos'
         fit2019-novice:
           stages:
@@ -17713,6 +17718,8 @@ es-MX:
               name: Encuesta de la Unidad 3 para DOCENTES
             'Lesson 11: Unit Assessment':
               name: 'Lección 11: evaluación de la unidad'
+            'Lesson 11: Assessment Day':
+              name: 'Lección 11: día de evaluación'
           title: 'Unidad 3: Introducción al diseño de aplicaciones'
         csl-vn:
           stages:
@@ -18145,6 +18152,7 @@ es-MX:
             End of Course projects:
               name: Proyectos de fin de curso
         dance-extras-2019:
+          title: Sigue bailando (2019)
           description: Motívate con más ideas de proyectos.
           description_short: Ve más allá de la Hora del Código con esta actividad
             de seguimiento para el tutorial de la Fiesta de baile de Code.org.
@@ -18169,6 +18177,12 @@ es-MX:
               name: El valor de la privacidad
             'Project: Innovation Simulation Part 3':
               name: 'Proyecto: simulación de la innovación, parte 3'
+            Protecting Data Part 1:
+              name: Protección de datos, parte 1
+            Protecting Data Part 2:
+              name: Protección de datos, parte 2
+            'Lesson 14: Unit Assessment Day':
+              name: 'Lección 14: día de evaluación de la unidad'
           title: Ciberseguridad e impactos globales
         csp4-preview:
           stages:
@@ -18204,6 +18218,8 @@ es-MX:
               name: PT de práctica Parte 3
             'Lesson 15: Unit 4 Assessment':
               name: 'Lección 15: evaluación de la unidad 4'
+            'Lesson 15: Assessment Day':
+              name: 'Lección 15: día de evaluación'
           title: Variables, condicionales y funciones
         time4cs-control-unit-1:
           stages:

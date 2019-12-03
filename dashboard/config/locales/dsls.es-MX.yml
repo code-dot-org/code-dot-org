@@ -582,6 +582,29 @@ es-MX:
           <hr>
 
           **¡Ahora inténtalo tú!**
+      CSD - Getters and Setters:
+        markdown: |
+          # Getters y Setters
+
+          # Setters
+
+          Los setters son comandos que **establecen** o cambian la información. Todos los setters requieren al menos una cosa como entrada: a qué quiere cambiar la información.
+
+          Antes has usado `configurarPantalla()`. `configurarPantalla()` cambia la pantalla que está viendo el usuario. La única entrada que toma `configurarPantalla()` es la nueva pantalla para cambiar.
+
+          Otro ejemplo de un setter que usarás es `configurarTexto()`.
+
+          <img src="//curriculum.code.org/images/applab/setText.png" style="margin: 20px auto">
+
+          # Getters
+
+          Los getters son comandos que **obtienen** o recuperan información. Los getters a menudo requieren al menos una entrada: el lugar del que desea recuperar información.
+
+          `obtenerTexto()` es un getter común que usarás. Se puede usar para obtener el texto de algo como una entrada de texto.
+
+          <img src="//curriculum.code.org/images/applab/getText.png" style="margin: 20px auto">
+
+          A menudo, cuando usas un getter, es una buena idea guardar el resultado en una variable para que puedas usarlo en todo tu programa.
       CSD Header Size MC:
         title: Verificación rápida de títulos
         content1: Mira el código a continuación y predice cómo se mostrarán los títulos.
@@ -2234,6 +2257,52 @@ es-MX:
 
           * [Make a Recommendation](https://docs.google.com/document/d/1pKeFH1OkWzfg3MFTPCezhK_r4p8xu7QUkPKSf5vV41c/export?format=pdf) - Project Guide
           * [Make a Recommendation](https://docs.google.com/document/d/1ZdA-VIdyPZLONBFr7ojFeNfHCHYmacbrrphiR31k6Bk/export?format=pdf) - Peer Review
+      'CSD: getText vs getNumber':
+        markdown: |-
+          # obtenerTexto vs obtenerNúmero
+
+          Las computadoras almacenan información de diferentes maneras. Dos maneras diferentes en que una computadora almacena información son cadenas y números.
+
+          `obtenerNúmero()` intenta obtener el valor de lo que estés preguntando como un número.
+
+          `obtenerTexto()` obtiene el valor de lo que sea que estés preguntando como una cadena. Las cadenas a menudo están marcadas en tus programas con `" "`. Por ejemplo, todos los nombres de tus ID son cadenas. Puedes usar `obtenerTexto()` para recuperar un número, pero debes saber que estará rodeado por `" "`.
+
+          ## ¿Por que importa eso?
+
+          Por lo general, está bien obtener todo como una cadena, pero cuando deseas realizar operaciones matemáticas, necesita números, no cadenas. Cuando intentas agregar dos cadenas juntas, la computadora cree que deseas combinar las dos cadenas en una sola.
+
+          Entonces, cuando dices "2" + "2" `, la computadora evalúa eso como "22".
+
+          Mientras que como cuando dices `2 + 2` (observa que no es`" "`), la computadora evalúa eso como `4`.
+      'CSD: setProperty':
+        markdown: "# Cómo funciona configurarPropiedad\n\n`configurarPropiedad` es
+          el código que te permite establecer las propiedades de los elementos de
+          la interfaz de usuario, como el color, el ancho, el tamaño de fuente, etc.
+          Cualquier propiedad que puedas establecer en el Modo de diseño también se
+          puede establecer en el código usando `configurarPropiedad`\n<br><br>\n\n<div
+          style=\"column-count: 3; column-gap: 20px; column-rule: 0.5px solid #00adbc;
+          -moz-column-count: 3; width: 100%\">\n\n<p style=\"break-after: always;
+          -moz-column-break-after: always; -webkit-column-break-after: always;\">\n\n\t<span
+          style=\"color: #00adbc; font-size: 150%\">1.</span> En el modo de código,
+          puedes encontrar <code> configurarPropiedad</code> en la caja de herramientas
+          de Controles de IU. <br>\n\n\t<span style=\"color: #00adbc; font-size: 150%\">2.</span>
+          Elige la identificación del elemento de la interfaz de usuario del que desea
+          cambiar una propiedad</p>\n\n<p style=\"break-after: always; -moz-column-break-after:
+          always; -webkit-column-break-after: always;\">\n\n\t<span style=\"color:
+          #00adbc; font-size: 150%\">3.</span> El menú desplegable muestra una lista
+          de propiedades que puedes establecer para ese elemento. Coincide con la
+          lista de propiedades que ves para un elemento en <strong>Modo de diseño</strong>\n</p>\n\n<p
+          style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after:
+          always;\">\n\n\t<span style=\"color: #00adbc; font-size: 150%\">4.</span>
+          El último parámetro es el valor que deseas establecer para esa propiedad.
+          Nos interesa el color-de-fondo que tiene una variedad de valores que puedes
+          darle.\n</p>\n\n\n</div>\n\n<img src=\"https://images.code.org/b7736bdcbde48f7951ebdc87135dd46c-image-1480536740764.png\"
+          style=\"display: block; margin: auto\">\n\n\n## Cómo establecer el \"color-de-fondo\"\n\n<span
+          style=\"color: #00adbc; font-size: 150%\">1.</span>*color-de-fondo* es una
+          cadena (entre comillas) que representa el color. Por lo general, indica
+          el color como un valor hexadecimal o como tres valores RGB decimales como
+          *\"rgb(255,0,0)\"*\n\n<img src=\"https://images.code.org/43291bf1c067145771bf88a147d74d26-image-1480538343306.png\"
+          style=\"display: block; margin: auto\">\n"
       Choosing Good IDs:
         markdown: "# Elegir buenas identificaciones\n\n**Las buenas ID** son ** significativas
           y descriptivas**.\n\nAl igual que deseas buenos nombres para las funciones,
@@ -2635,6 +2704,90 @@ es-MX:
       Multi-Screen Apps:
         title: Título
         content1: descripción aquí
+        markdown: |
+          # Hacer pantallas múltiples
+
+          Puede imaginar que una aplicación típica tiene varias "pantallas" o vistas por las que pasa el usuario como parte del uso de su aplicación. A continuación se muestra un ejemplo típico con una pantalla de bienvenida, una pantalla que juega un juego y un juego sobre pantalla.
+
+          <img src="https://images.code.org/27065f81b2bf53dea099a76868f66e8e-image-1477324003598.png" style="display: block; margin: auto">
+
+          ## ¿Qué es una pantalla, de todos modos?
+
+          Una pantalla es solo un elemento de la interfaz de usuario como cualquier otra cosa en el Modo de diseño. Pero tiene algunas propiedades especiales:
+
+          1. Una pantalla es un elemento de la IU que contiene otros elementos de la IU.
+          2. Solo se puede ver una pantalla a la vez
+          3. Solo los elementos que "pertenecen" a una pantalla serán visibles cuando esa pantalla esté activa.
+          4. **Múltiples pantallas, pero solo un espacio de trabajo de codificación**
+            * A pesar de que sus *elementos de diseño* pueden estar distribuidos en varias pantallas, su código no se divide así.
+            * Solo hay un espacio de trabajo de codificación, que aún albergará todo tu código para la aplicación.
+
+          ## Cómo hacer una nueva pantalla
+
+          <div style="float: left; width: 33%">
+          Hay dos formas de agregar una pantalla a su aplicación. Primero, asegúrate de estar en <em> Modo de diseño </em>.
+          <br><br>
+          <span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+          Elige <em> Nueva pantalla... </em> en el menú desplegable en la parte superior del área de visualización. <strong> Nota: </strong> también utilizas este menú desplegable para cambiar de pantalla en Modo de diseño.
+          <br><br>
+          <span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>
+          O arrastra y suelta un elemento de la interfaz de usuario de pantalla desde la caja de herramientas. <strong> Aviso: </strong> tan pronto como sueltes el elemento de la pantalla, la aplicación te mostrará una <strong>nueva pantalla en blanco.</strong> Puedes volver a otras pantallas usando el menú desplegable en el parte superior.
+
+          </div>
+
+          ![](https://images.code.org/ed8f45d70a65329597c1623ddd756249-image-1477165123570.png)
+
+          ## Establecer las propiedades de una pantalla
+
+          <div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 4; width: 100%">
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+          Usa este menú desplegable para seleccionar la pantalla en la que deseas trabajar. La lista contendrá las ID de todas las pantallas que has creado.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>
+          Haz clic en un área en blanco del fondo para seleccionar la pantalla y establecer sus propiedades.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>
+          Las pantallas también tienen ID. Al igual que otros elementos de la interfaz de usuario, es una buena idea <em>dar a tus pantallas identificaciones descriptivas y significativas</em>. Esto hace que escribir código sea mucho más fácil.</p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span>
+          Si tu pantalla está llena de elementos de la IU y no hay un área en blanco donde hacer clic para seleccionarla, usa este menú desplegable. Enumera todos los elementos de la interfaz de usuario que forman parte de esta pantalla, incluida la pantalla misma.</p>
+          </div>
+
+          <img src="https://images.code.org/5f8934e6ae0fc2d9dfde8c9a0d93eec2-image-1477249243769.png" style="display: block; margin: auto;">
+
+          <div style="column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 2; width: 50%; float: right">
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span>
+          Haz clic en este botón para hacer que esta pantalla sea la "pantalla predeterminada", que significa la pantalla que se mostrará primero cuando se ejecute la aplicación.</p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">6.</span>
+          Las pantallas no tienen muchas propiedades, pero puedes establecer el fondo de la pantalla en un color o una imagen. Las imágenes se estiran o exprimen para ajustarse a la pantalla.</p>
+
+          </div>
+          <div style="clear: both">&nbsp;</div>
+
+          ## Usar el comando *configurarPantalla* para cambiar pantallas con código
+
+          El comando `configurarPantalla` cambia la pantalla para mostrar la pantalla que desees. Tú especificas la pantalla por su ID.
+
+          <img src="https://images.code.org/005222ed01ade7940963ce149d637286-image-1477168080948.png" style="display: block; margin: auto">
+
+          <div style="column-count: 3; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+          Busca <em>configurarPantalla</em> en la caja de herramientas Elementos de la IU y arrástralo al espacio de trabajo del código.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>
+          La mayoría de las veces, cambias la pantalla en respuesta a algún evento de usuario. En este caso, se agrega <em>configurarPantalla</em> a un controlador de eventos "clic" para la imagen con id:<em>smileyCara</em> </p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>
+          Selecciona la ID de la pantalla a la que deseas cambiar. En este caso, cuando se hace clic en la cara sonriente en la pantalla que dice "hola", queremos cambiar a la pantalla que dice "adiós". </p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span>
+          <strong>Idea clave: Múltiples pantallas: un espacio de trabajo de codificación.</strong> Este es el código que maneja un evento de "clic" para una imagen <em>que está en una pantalla diferente</em>: la <em> pantallaAdiós</em>. No puedes ver esa imagen en este momento, o esa pantalla, porque la pantalla no está seleccionada. Sin embargo, el código para ello todavía va aquí. </p>
+
+          </div>
       New Challenge Introduction:
         title: Título
         content1: descripción aquí
@@ -2658,9 +2811,60 @@ es-MX:
           con alguien (un compañero, un grupo pequeño o toda la clase) para conversar
           sobre lo que encontraste y verificar que conoces lo que está sucediendo
           y las diversas formas en que puedes usar la herramienta.\n\n\n"
+      OPD-K5 About:
+        markdown: |
+          # Primeros pasos: sobre este curso
+
+          ## Resumen del curso
+
+          Este curso tiene la intención de ser una introducción al currículo y los recursos de los Fundamentos de Ciencias de la Computación de Code.org para profesores. Mediante la lectura, los videos, al completar desafíos interactivos y reflexionar sobre tu aprendizaje, desarrollarás tu propia comprensión mientras te preparas para enseñar ciencias de la computación en tu clase.
+
+          ## Objetivos de aprendizaje
+
+          Al completar este curso en línea, los participantes:
+
+          - Aprenderán los conceptos básicos de la computación.
+          - Examinarán las mejores prácticas para enseñar estos conceptos básicos a tus alumnos
+          - Accederán a planes de estudio y recursos gratuitos para profesores
+          - Planificarán cómo comenzar a enseñar Fundamentos de Ciencias de la Computación
+          - Se conectarán con una comunidad de colegas educadores que están haciendo cambios positivos en sus aulas a través de la codificación
+
+          ## Requisitos previos
+
+          No se asume ninguna experiencia previa en codificación o educación en informática. Este es un curso para principiantes.
+
+          > **Una nota sobre la audiencia:** Este curso se centra en el plan de estudios gratuito de Fundamentos de Ciencias de la Computación de Code.org en el contexto de los alumnos de K-5. Aunque muchos de los mismos conceptos se pueden aplicar a cualquier curso de informática, si deseas enseñar un plan de estudios de computación más profundo que los Fundamentos de la Ciencia de la Computación (por ejemplo, uno de nuestros cursos de [Middle] (https://code.org/educate/csd) o [High school](https://code.org/educate/csp)), te recomendamos que busques más [oportunidades de desarrollo profesional en profundidad o en curso] (https://code.org/educate/professional-learning/middle-high).
+
+          ## Duración del curso
+
+          Completar este curso en línea debería tomar entre 3 y 7 horas, dependiendo de tu conocimiento previo y de cuán profundamente quieras adentrarte en los recursos de Code.org.
+      OPD-K5 PreSurvey:
+        markdown: |+
+          # Primeros pasos > Realiza la encuesta previa
+
+          Queremos que aproveches al máximo este desarrollo profesional. Por esa razón, te pedimos que completes [esta breve encuesta previa] (https://form.jotform.com/90556900301146). La encuesta te pedirá que reflexiones sobre tus objetivos para este curso y nos contará un poco sobre quién eres y cómo podemos apoyarte.
+
+          <a class="btn btn-large btn-primary" href="https://form.jotform.com/90556900301146?user_id=<user_id/>">Realiza la encuesta previa</a>
+
       OPD-K5 Stage3aGo:
         title: Título
         content1: descripción aquí
+      OPD-K5 Welcome 2:
+        markdown: |+
+          # Introducción> Cursos de fundamentos de Ciencia de la Computación
+
+          El objetivo del desarrollo profesional de Code.org es preparar a profesores como tú para integrar la computación en tus aulas y apoyar su crecimiento como profesores. Después de completar este curso en línea, estarás listo para enseñar uno o más de los siguientes cursos de Fundamentos de la Ciencia de la Computación de Code.org en tu salón de clases:
+
+           - **[Curso A](http://studio.code.org/s/coursea)**: aproximadamente 12 horas (Jardín de infantes)
+           - **[Curso B](http://studio.code.org/s/courseb)**: aproximadamente 12 horas (Grado 1)
+           - **[Curso C](http://studio.code.org/s/coursec)**: aproximadamente 18 horas (Grado 2)
+           - **[Curso D](http://studio.code.org/s/coursed)**: aproximadamente 18 horas (Grado 3)
+           - **[Curso E](http://studio.code.org/s/coursee)**: aproximadamente 18 horas (Grado 4)
+           - **[Curso F](http://studio.code.org/s/coursef)**: aproximadamente 20 horas (Grado 5)
+           - **[Fundamentos de la Ciencia de la Computación Express](http://studio.code.org/s/express)**: aproximadamente 20 horas (Edades de más de 8)
+           - **[Fundamentos de la Ciencia de la Computación Pre-Express](http://studio.code.org/s/pre-express)**: aproximadamente 20 horas (Edades de 4-8)
+
+
       'Overview: Design Mode':
         markdown: |
           # Bienvenido al Modo de diseño de laboratorio de aplicaciones

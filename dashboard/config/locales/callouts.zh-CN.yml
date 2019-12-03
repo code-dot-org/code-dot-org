@@ -14,6 +14,18 @@ zh-CN:
         applab_hoc_finish: 屏幕变绿了吗？如果是这样, 请按 "完成"。如果不是, 请点击 "重置", 更改您的代码, 然后再次点击 "运行"。
       AppLab Intro 7 - thisOrThatAddButton:
         AppLabHoCFinal11: 你现在正处于设计模式中。
+      CSD U3 Sprites anitab 1:
+        '': 点此打开动画标签页
+      CSD U3 Sprites anitab 1_2018:
+        '': 点此打开动画标签页
+      CSD U3 Sprites anitab 1_2019:
+        '': 点此打开动画标签页
+      CSD U3 Sprites text:
+        '': 使用此指令块以在屏幕上放置文本
+      CSD U3 Sprites text_2018:
+        '': 使用此指令块以在屏幕上放置文本
+      CSD U3 Sprites text_2019:
+        '': 使用此指令块以在屏幕上放置文本
       CSD U3 Variables Predict Where X:
         CSD_U3_variables: 改动这里的数字
       CSD U3 Variables Predict Where XY:

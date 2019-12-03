@@ -5,6 +5,8 @@ pl-PL:
       2-3 Artist 1 new: Cześć, jestem artystą. Możesz napisać kod, bym narysował prawie
         wszystko. Użyj kilku bloków, bym rysował po szarych liniach na obrazku. (Każda
         linia ma po 100 pikseli)
+      2-3 Artist 11: 'Dodaj znakowi stop obramowanie, tworząc ośmiokąt o bokach równych
+        100 pikseli. '
       2-3 Artist 12: "Utwórz okrąg, aby ukończyć gałkę oczną! \\\r \\\r Jeśli artysta
         obraza się o 1 stopień w każdej pętli, to ile razy musisz powtórzyć kod, aby
         narysować okrąg? 180? 360? 500?"
@@ -29,7 +31,25 @@ pl-PL:
       2-3 Artist Assessment 1: 'Szacowanie: Ukończ rysowanie ostatniego zęba. Jest
         on szeroki na 25 pikseli i wysoki na 25 pikseli.'
       2-3 Artist Free Play: Czas na zabawę! Narysuj cokolwiek chcesz.
+      2-3 Artist Loops New 1: Narysujmy głowę tego robota! Czy potrafisz stworzyć
+        kwadrat o bokach, które mają 100 pikseli?
+      2-3 Artist Loops New 10: Teraz połączmy trochę V razem w pętlę.
+      2-3 Artist Loops New 11: Odbuduj kod z ostatniej łamigłówki, ale tym razem dodaj
+        skręt w lewo o 30 stopni wewnątrz pętli. Teraz powtórz to 24 razy zamiast
+        8.
+      2-3 Artist Loops New 12: 'Narysuj diament o bokach 100 pikseli. '
+      2-3 Artist Loops New 13: "Zacznij od pewnego kodu (na szaro), by narysować jeden
+        diament. \n\nZapętlij szary kod, aby stworzyć zabawny wzór!"
+      2-3 Artist Loops New 14: Pobaw się kodem dla diamentu i zobacz jakie inne wzory
+        możesz stworzyć. Spróbuj zmienić o ile stopni się obracasz i ile razy zapętlasz
+        kod.
       2-3 Artist Loops New 15: Teraz narysuj coś, co Ci się spodoba!
+      2-3 Artist Loops New 2: |-
+        Tutaj jest ta sama łamigłówka, którą właśnie rozwiązaliśmy, ale tym razem możemy użyć tylko jednego bloku 'idź naprzód' i jednego bloku 'skręć'.
+
+        Czy potrafisz użyć bloku 'powtórz' do rozwiązania tej łamigłówki?
+      2-3 Artist Loops New 9: Narysuj proste V (w którym oba boki mają po 50 pikseli),
+        aby ukończyć strzałkę.
       2-3 Artist Nested Loops 10: Powtórz w pętli ten kod 12 razy, aby ukończyć ten
         rysunek.
       2-3 Artist Nested Loops 12: Powtórz w pętli ten kod 12 razy, aby otrzymać te
@@ -53,6 +73,14 @@ pl-PL:
       2-3 Maze 10: Prowadź mnie do tego zielonego zła! (Uważaj na pola z TNT)
       2-3 Maze 12: Czy możesz dostać mnie do świnki tworząc pętlę, która używa tylko
         jednego bloku 'idź naprzód' wewnątrz bloku 'powtórz'?
+      2-3 Maze 13: Doprowadź mnie do świnki! Możesz teraz użyć tylko jednego bloku
+        idź naprzód
+      2-3 Maze 15: W tej łamigłówce dwie pętle 'powtórz' pomogą ci dotrzeć do świnki
+        za pomocą mniejszej liczby bloków!
+      2-3 Maze 16: Pętle działają  nawet z wieloma blokami w środku. Czy potrafisz
+        umieścić ten ciąg bloków w pętli, aby doprowadzić zombie do słonecznika?
+      2-3 Maze 16 before: Czy potrafisz znaleźć najszybszy sposób na doprowadzenie
+        mnie do świnki?
       2-3 Maze 2: Ta świnka jeży moje piórka. Pomóż mi, by ją dopaść!
       2-3 Maze 3: Wyznacz ścieżkę i zaprowadź mnie do tej głupiutkiej świnki. Unikaj
         TNT, bo inaczej piórka będą latały!
@@ -66,8 +94,15 @@ pl-PL:
         rodzaju?
       2-3 Maze Loops 17: Wykorzystaj to, czego się nauczyłeś dotychczas, aby doprowadzić
         mnie do słonecznika!
+      2-3 Maze Loops 18: Doprowadź mnie do słonecznika używając możliwie najmniejszej
+        liczby bloków!   Spróbuj użyć pętli "powtórz" wewnątrz innej pętli, by skrócić
+        ilość kodu, który potrzebujesz.
+      2-3 Maze Loops 19: "Sprowadźmy to na wyższy poziom! \n Użyj pętli, aby doprowadzić
+        mnie do słonecznika za pomocą możliwie najmniejszej liczby bloków."
       2-3 Maze Loops 20: Czy potrafisz rozwiązać tę łamigłówkę używając możliwie najmniejszej
         liczby bloków?
+      2-3 Maze Loops 21: Doprowadź mnie do słonecznika używając możliwie najmniejszej
+        liczby bloków!
       2-3 Maze Loops Assessment 1: 'Sprawdzian: Doprowadź mnie do słonecznika przy
         użyciu tylko 5 bloków! '
       4-5 Artist 3.5: Zobacz, co się dzieje, gdy uruchomisz ten kod (lub naciśnij
@@ -259,20 +294,20 @@ pl-PL:
       Course 4 SCV 4: Rozwiąż tę łamigłówkę używając jak najmniejszej liczby bloków.
       Course 4 SCV 5: Rozwiąż tę łamigłówkę używając jak najmniejszej liczby bloków.
       Course 4 SCV 6: Kliknij tutaj, aby ponownie zobaczyć instrukcje.
-      CourseD_Dance_Party_01: Przeciągnij blok "utwórz nowego" do obszaru roboczego
-        i podłącz go w bloku "układ".
+      CourseD_Dance_Party_01: Przeciągnij blok 'utwórz nowego' do obszaru roboczego
+        i podłącz go w bloku 'układ'.
       CourseD_Dance_Party_02: Spraw, aby łoś rozpoczął nowy ruch po 4 taktach!
       CourseD_Dance_Party_03: Teraz spraw, aby tancerz rozpoczął nowy ruch po 6 taktach!
       CourseD_Dance_Party_04: Dodaj efekt tła do swojego programu.
       CourseD_Dance_Party_05: Użyj innego nowego bloku, aby tancerz zmieniał ruchy
         co 2 takty.
-      CourseD_Dance_Party_06: Utwórz kopię tancerza o nazwie "kopia\_tancerza1", aby
+      CourseD_Dance_Party_06: Utwórz kopię tancerza o nazwie 'kopia\_tancerza1', aby
         zatańczył z kotem.
       CourseD_Dance_Party_08: Czy możesz utworzyć obie kopie tancerzy tej samej wielkości?
-      CourseD_Dance_Party_09: Użyj bloku "ustaw odcień", aby zmienić kolor tancerza.
+      CourseD_Dance_Party_09: Użyj bloku 'ustaw odcień', aby zmienić kolor tancerza.
       CourseD_Dance_Party_10: Spraw, aby drugi tancerz również reagowała na muzykę
-        za pomocą bloku "zaczyna się to".
-      CourseD_Dance_Party_11: Blok "po naciśnięciu strzałki w górę" służy do uruchomienia
+        za pomocą bloku 'zaczyna się to'.
+      CourseD_Dance_Party_11: Blok 'po naciśnięciu strzałki w górę' służy do uruchomienia
         kodu po naciśnięciu klawisza strzałki w górę. Postaraj się, aby tancerz wykonał
         szybki ruch, gdy naciskasz ten klawisz.
       CourseD_Dance_Party_11_5: Użyj bloków "wszystkie kaczki", aby kaczki tańczyły

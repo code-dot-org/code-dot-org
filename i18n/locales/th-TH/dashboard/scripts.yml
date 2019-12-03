@@ -1455,7 +1455,7 @@ th:
         dance:
           stages:
             Dance Party:
-              name: งานเต้นรำ
+              name: Dance Party
           title: งานเต้นรำ
           description_short: มีเพลงของศิลปินดังต่างๆ เช่น Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara และคนอื่นๆ อีก 25 คน!
           description: เขียนโค้ดสำหรับปาร์ตี้เต้นรำของคุณเอง เพื่อแชร์กับเพื่อนๆ ของคุณ!
@@ -1473,11 +1473,11 @@ th:
         dance--draft:
           stages:
             Dance Party:
-              name: งานเต้นรำ
+              name: Dance Party
         dance-draft:
           stages:
             Dance Party:
-              name: งานเต้นรำ
+              name: Dance Party
         dance-extras:
           description: ศึกษาต่อเนื่องจากขั้นพื้นฐานด้วยการใส่ไอเดียเพิ่มเติมให้กับโครงงาน
         coursef-2019:
@@ -1511,7 +1511,7 @@ th:
         dance-low:
           stages:
             Dance Party:
-              name: งานเต้นรำ
+              name: Dance Party
           description_short: เขียนโค้ดสำหรับปาร์ตี้เต้นรำของคุณเอง เพื่อแชร์กับเพื่อนๆ ของคุณ! (เวอร์ชั่นนี้สำหรับการเชื่อมต่อสัญญาณที่ไม่รวดเร็ว)
         coursed-2019:
           description: ผู้เรียนจะพัฒนาความเข้าใจในเรื่องของ ลูปซ้อนลูป (nested loops) ลูปขณะที่ (while loops) เงื่อนไข (conditions) และอีเวนท์ (events) นอกเหนือจากการเขียนโค้ดแล้ว ผู้เรียนยังเรียนรู่การเป็นพลเมืองยุคดิจิทัลอีกด้วย
@@ -1546,7 +1546,7 @@ th:
             Artist Binary:
               name: ศิลปินศูนย์หนึ่ง
             Dance Party:
-              name: งานเต้นรำ
+              name: Dance Party
         coursee-2019:
           stages:
             Sequence in Maze:
@@ -1611,7 +1611,7 @@ th:
             Internet:
               name: อินเทอร์เน็ต
             Dance Party:
-              name: งานเต้นรำ
+              name: Dance Party
         andrea-test:
           stages:
             'null':
@@ -1811,7 +1811,7 @@ th:
         dance-2019:
           stages:
             Dance Party:
-              name: งานเต้นรำ
+              name: Dance Party
           description: เขียนโค้ดสำหรับปาร์ตี้เต้นรำของคุณเอง เพื่อแชร์กับเพื่อนๆ ของคุณ!
         k5-onlinepd-2019:
           stages:

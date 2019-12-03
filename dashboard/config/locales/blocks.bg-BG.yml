@@ -369,6 +369,7 @@ bg:
             '"UNICORN"': Еднорози
           LAYOUT:
             '"border"': рамка
+            '"diamond"': диамант
             '"circle"': кръг
             '"grid"': мрежа
             '"row"': ред
