@@ -114,7 +114,7 @@ const DanceParty = {
   title: i18n.dancePartyTitle(),
   description: i18n.dancePartyDesc(),
   link: '/s/dance-2019/reset',
-  image: 'dance-party',
+  image: 'dance-party-sloth-2019',
   buttonText: i18n.dancePartyButton()
 };
 
