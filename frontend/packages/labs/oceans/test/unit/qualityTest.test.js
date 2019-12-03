@@ -374,7 +374,7 @@ describe('Model quality test', () => {
   test('test tails', async () => {
     const partData = fishData.tails;
     const partKey = PartKey.TAIL;
-    const trainSize = 150;
+    const trainSize = 125;
 
     for (const [name, data] of Object.entries(partData)) {
       console.log(`${partKey} ${name}`);
@@ -383,7 +383,7 @@ describe('Model quality test', () => {
         return fish[partKey].index === id ? ClassType.Like : ClassType.Dislike;
       };
       const result = await performTrials({
-        numTrials: NUM_TRIALS,
+        numTrials: 5,
         trainSize: trainSize,
         testSize: TEST_SIZE,
         labelFn: labelFn
@@ -397,7 +397,7 @@ describe('Model quality test', () => {
   test('test dorsal fins', async () => {
     const partData = fishData.dorsalFins;
     const partKey = PartKey.DORSAL_FIN;
-    const trainSize = 150;
+    const trainSize = 125;
 
     for (const [name, data] of Object.entries(partData)) {
       console.log(`${partKey} ${name}`);
@@ -406,7 +406,7 @@ describe('Model quality test', () => {
         return fish[partKey].index === id ? ClassType.Like : ClassType.Dislike;
       };
       const result = await performTrials({
-        numTrials: NUM_TRIALS,
+        numTrials: 5,
         trainSize: trainSize,
         testSize: TEST_SIZE,
         labelFn: labelFn
