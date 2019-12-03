@@ -9,23 +9,23 @@ class CircuitPlaygroundDiscountApplicationTest < ActiveSupport::TestCase
     refute application.eligible_unit_6_intention?
     application.destroy
 
-    application = CircuitPlaygroundDiscountApplication.create!(user_id: teacher.id, unit_6_intention: 'yes1718')
-    refute application.eligible_unit_6_intention?
-    application.destroy
-
-    application = CircuitPlaygroundDiscountApplication.create!(user_id: teacher.id, unit_6_intention: 'yes1819')
+    application = CircuitPlaygroundDiscountApplication.create!(user_id: teacher.id, unit_6_intention: 'yesSpring2020')
     assert application.eligible_unit_6_intention?
     application.destroy
 
-    application = CircuitPlaygroundDiscountApplication.create!(user_id: teacher.id, unit_6_intention: 'yes1920')
+    application = CircuitPlaygroundDiscountApplication.create!(user_id: teacher.id, unit_6_intention: 'yesFall2020')
     assert application.eligible_unit_6_intention?
     application.destroy
 
-    application = CircuitPlaygroundDiscountApplication.create!(user_id: teacher.id, unit_6_intention: 'yesAfter')
-    refute application.eligible_unit_6_intention?
+    application = CircuitPlaygroundDiscountApplication.create!(user_id: teacher.id, unit_6_intention: 'yesSpring2021')
+    assert application.eligible_unit_6_intention?
     application.destroy
 
     application = CircuitPlaygroundDiscountApplication.create!(user_id: teacher.id, unit_6_intention: 'unsure')
+    refute application.eligible_unit_6_intention?
+    application.destroy
+
+    application = CircuitPlaygroundDiscountApplication.create!(user_id: teacher.id, unit_6_intention: nil)
     refute application.eligible_unit_6_intention?
     application.destroy
   end
@@ -42,26 +42,16 @@ class CircuitPlaygroundDiscountApplicationTest < ActiveSupport::TestCase
     assert_equal 'unsure', app1.unit_6_intention
   end
 
-  test 'studio_person_pd_eligible? returns true if attended a CSD TeacherCon this year' do
-    teacher = create :teacher
-    create :pd_attendance,
-      teacher: teacher,
-      workshop: create(:workshop,
-        course: Pd::Workshop::COURSE_CSD,
-        subject: Pd::Workshop::SUBJECT_TEACHER_CON,
-        started_at: DateTime.parse('2018-05-02')
-      )
-
-    assert CircuitPlaygroundDiscountApplication.studio_person_pd_eligible? teacher
-  end
-
   test 'studio_person_pd_eligible? returns true if attended a CSD Summer Workshop this year' do
     teacher = create :teacher
     create :pd_attendance,
       teacher: teacher,
-      workshop: create(:csd_summer_workshop, started_at: DateTime.parse('2018-05-02'))
+      workshop: create(:csd_summer_workshop, started_at: DateTime.parse('2019-05-02'))
 
-    assert CircuitPlaygroundDiscountApplication.studio_person_pd_eligible? teacher
+    assert CircuitPlaygroundDiscountApplication.studio_person_pd_eligible?(
+      teacher,
+      [Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP]
+    )
   end
 
   test 'studio_person_pd_eligible? returns false if a member of other cohorts, not CSD' do
@@ -70,11 +60,14 @@ class CircuitPlaygroundDiscountApplicationTest < ActiveSupport::TestCase
       teacher: teacher,
       workshop: create(:workshop,
         course: Pd::Workshop::COURSE_CSP,
-        subject: Pd::Workshop::SUBJECT_TEACHER_CON,
-        started_at: DateTime.parse('2018-05-02')
+        subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP,
+        started_at: DateTime.parse('2019-05-02')
       )
 
-    refute CircuitPlaygroundDiscountApplication.studio_person_pd_eligible? teacher
+    refute CircuitPlaygroundDiscountApplication.studio_person_pd_eligible?(
+      teacher,
+      [Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP]
+    )
   end
 
   test 'studio_person_pd_eligible? returns false if teacher attended an older event' do
@@ -83,11 +76,14 @@ class CircuitPlaygroundDiscountApplicationTest < ActiveSupport::TestCase
       teacher: teacher,
       workshop: create(:workshop,
         course: Pd::Workshop::COURSE_CSD,
-        subject: Pd::Workshop::SUBJECT_TEACHER_CON,
+        subject: Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP,
         started_at: DateTime.parse('2017-05-02')
       )
 
-    refute CircuitPlaygroundDiscountApplication.studio_person_pd_eligible? teacher
+    refute CircuitPlaygroundDiscountApplication.studio_person_pd_eligible?(
+      teacher,
+      [Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP]
+    )
   end
 
   test 'studio_person_pd_eligible? returns true if user is on the eligible facilitator list' do
@@ -114,8 +110,8 @@ class CircuitPlaygroundDiscountApplicationTest < ActiveSupport::TestCase
       teacher: user1,
       workshop: create(:workshop,
         course: Pd::Workshop::COURSE_CSD,
-        subject: Pd::Workshop::SUBJECT_TEACHER_CON,
-        started_at: DateTime.parse('2018-05-02')
+        subject: Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP,
+        started_at: DateTime.parse('2019-05-02')
       )
 
     assert_equal true, CircuitPlaygroundDiscountApplication.user_pd_eligible?(user1)
@@ -180,6 +176,7 @@ class CircuitPlaygroundDiscountApplicationTest < ActiveSupport::TestCase
       discount_code: nil,
       expiration: nil,
       is_pd_eligible: false,
+      is_quarterly_workshop_pd_eligible: false,
       is_progress_eligible: false,
       admin_set_status: false,
     }
@@ -200,6 +197,7 @@ class CircuitPlaygroundDiscountApplicationTest < ActiveSupport::TestCase
       discount_code: nil,
       expiration: nil,
       is_pd_eligible: false,
+      is_quarterly_workshop_pd_eligible: false,
       is_progress_eligible: false,
       admin_set_status: true,
     }
@@ -214,6 +212,7 @@ class CircuitPlaygroundDiscountApplicationTest < ActiveSupport::TestCase
 
     expected = {
       is_pd_eligible: false,
+      is_quarterly_workshop_pd_eligible: false,
       is_progress_eligible: true,
       user_school: {
         id: nil,
