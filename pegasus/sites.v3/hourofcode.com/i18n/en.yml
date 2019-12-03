@@ -5936,7 +5936,7 @@
   tutorial_modtraits_string_detail_programming_languages: "Blocks"
   tutorial_mee_string_detail_programming_languages: "Blocks"
   tutorial_kuborobo_string_detail_programming_languages: "Tagtiles that students piece together"
-  tutorial_ai-oceans_string_detail_programming_languages: "No coding languages"
+  tutorial_ai-oceans_string_detail_programming_languages: "AI and Machine Learning"
 
   school_not_found_heading: "We couldn't find your school. Please enter more information."
   school_name: "School name"
