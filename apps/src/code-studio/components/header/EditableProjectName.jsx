@@ -66,25 +66,29 @@ class UnconnectedEditProjectName extends React.Component {
       return;
     }
 
-    this.props.checkProjectName(newName);
-
-    if (this.props.projectNameFailure) {
-      console.log('NAME ERROR');
-      return;
-    } else {
-      dashboard.project.rename(newName, () => {
-        dashboard.header.updateTimestamp();
-        this.props.refreshProjectName();
+    $.get({
+      url: `/api/v1/projects/personal/check_name?new_name=${newName}`,
+      dataType: 'json'
+    }).done(data => {
+      if (data.nameFailure) {
         this.setState({
-          savingName: false
+          projectNameFailure: data.nameFailure
         });
-        this.props.finishEdit();
-      });
+      } else {
+        dashboard.project.rename(newName, () => {
+          dashboard.header.updateTimestamp();
+          this.props.refreshProjectName();
+          this.setState({
+            savingName: false
+          });
+          this.props.finishEdit();
+        });
 
-      this.setState({
-        savingName: true
-      });
-    }
+        this.setState({
+          savingName: true
+        });
+      }
+    });
   };
 
   render() {
