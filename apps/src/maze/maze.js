@@ -31,6 +31,8 @@ const tiles = maze.tiles;
 const createResultsHandlerForSubtype = require('./results/utils')
   .createResultsHandlerForSubtype;
 
+const MOBILE_PORTRAIT_WIDTH = 1000;
+
 module.exports = class Maze {
   constructor() {
     this.scale = {
@@ -65,6 +67,7 @@ module.exports = class Maze {
     // replace studioApp() methods with our own
     studioApp().runButtonClick = this.runButtonClick_;
     studioApp().reset = this.reset_;
+    studioApp().fixViewportForSmallScreens_ = studioApp().fixViewportForSpecificWidthForSmallScreens_;
 
     const skin = config.skin;
     const level = config.level;
@@ -204,6 +207,7 @@ module.exports = class Maze {
         <AppView
           visualizationColumn={visualizationColumn}
           onMount={studioApp().init.bind(studioApp(), config)}
+          rotateContainerWidth={MOBILE_PORTRAIT_WIDTH}
         />
       </Provider>,
       document.getElementById(config.containerId)
