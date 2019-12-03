@@ -36,13 +36,21 @@ require_relative '../../../dashboard/config/environment'
 # passed as the first argument to this script.
 File.readlines(ARGV[0]).each do |line|
   id = line.to_i
-  user = User.find_by_id(id)
+  user = User.with_deleted.find_by_id(id)
+
+  if user.races.nil?
+    puts("#{line.strip} - skip - race already removed")
+    next
+  end
 
   # we can ignore users who have not signed in since the proxies list was
   # updated prior to https://github.com/code-dot-org/code-dot-org/pull/28635
   old_account = user.current_sign_in_at.present? &&
     user.current_sign_in_at < "2017-11-17 12:25:11 -0800".to_datetime
-  next if old_account
+  if old_account
+    puts("#{line.strip} - skip - old account")
+    next
+  end
 
   # Of the users (mostly students) with URM data but no geolocation, about 60%
   # are in a section of a teacher in the US. So: Let's KEEP race data for
@@ -54,7 +62,10 @@ File.readlines(ARGV[0]).each do |line|
       teacher.within_united_states? ||
         teacher.user_school_infos.any? {|usi| usi.school_info.usa?}
     end
-  next if has_us_teacher
+  if has_us_teacher
+    puts("#{line.strip} - skip - has US teacher")
+    next
+  end
 
   user.races = nil
   user.save!
