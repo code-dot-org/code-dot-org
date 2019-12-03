@@ -13,34 +13,45 @@ export const init = () => {
     state.appMode
   );
   let startTime;
+  let trainingDelayTime;
   if (setLoadingSpinner) {
     startTime = $time();
+    trainingDelayTime = 500;
     setState({currentMode: Modes.IntermediateLoading});
-  }
-
-  state.trainer.train();
-  let fishData = [];
-  if (state.appMode === AppMode.CreaturesVTrashDemo) {
-    fishData = fishData.concat(generateOcean(4, 0, true, true, false));
-    fishData = fishData.concat(generateOcean(3, 4, false, false, true));
-  } else if (state.appMode === AppMode.FishLong) {
-    fishData = generateOcean(500);
   } else {
-    fishData = generateOcean(100);
+    trainingDelayTime = 0;
   }
 
-  const onLoadComplete = () => {
-    setState({
-      fishData,
-      currentMode: Modes.Predicting
-    });
-  };
+  // It's possible for state.trainer.train() to block the main thread for several
+  // seconds, and if it happens immediately it will prevent React from rendering
+  // the loading UI first.  If we are going to show the loading spinner, then also
+  // delay the beginning of our training.
+  setTimeout(() => {
+    state.trainer.train();
 
-  if (setLoadingSpinner) {
-    finishLoading(startTime, onLoadComplete);
-  } else {
-    onLoadComplete();
-  }
+    let fishData = [];
+    if (state.appMode === AppMode.CreaturesVTrashDemo) {
+      fishData = fishData.concat(generateOcean(4, 0, true, true, false));
+      fishData = fishData.concat(generateOcean(3, 4, false, false, true));
+    } else if (state.appMode === AppMode.FishLong) {
+      fishData = generateOcean(500);
+    } else {
+      fishData = generateOcean(100);
+    }
+
+    if (setLoadingSpinner) {
+      finishLoading(startTime, () => onLoadComplete(fishData));
+    } else {
+      onLoadComplete(fishData);
+    }
+  }, trainingDelayTime);
+};
+
+const onLoadComplete = fishData => {
+  setState({
+    fishData,
+    currentMode: Modes.Predicting
+  });
 };
 
 export const predictFish = (state, idx) => {
