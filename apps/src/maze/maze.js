@@ -31,7 +31,7 @@ const tiles = maze.tiles;
 const createResultsHandlerForSubtype = require('./results/utils')
   .createResultsHandlerForSubtype;
 
-const MOBILE_PORTRAIT_WIDTH = 1000;
+const MOBILE_PORTRAIT_WIDTH = 600;
 
 module.exports = class Maze {
   constructor() {
@@ -67,7 +67,6 @@ module.exports = class Maze {
     // replace studioApp() methods with our own
     studioApp().runButtonClick = this.runButtonClick_;
     studioApp().reset = this.reset_;
-    studioApp().fixViewportForSmallScreens_ = studioApp().fixViewportForSpecificWidthForSmallScreens_;
 
     const skin = config.skin;
     const level = config.level;
@@ -211,6 +210,16 @@ module.exports = class Maze {
         />
       </Provider>,
       document.getElementById(config.containerId)
+    );
+
+    // studioApp.init calls fixViewportForSmallScreens_ which incorrectly
+    // positions the "Rotate Container" image on iOS devices. We correct this
+    // by calling fixViewportForSpecificWidthForSmallScreens_ after the init is
+    // finished.
+    var viewport = document.querySelector('meta[name="viewport"]');
+    studioApp().fixViewportForSpecificWidthForSmallScreens_(
+      viewport,
+      MOBILE_PORTRAIT_WIDTH
     );
   }
 
