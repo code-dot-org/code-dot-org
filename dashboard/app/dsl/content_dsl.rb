@@ -43,7 +43,6 @@ class ContentDSL < LevelDSL
       content1
       content2
       content3
-      display_name
       markdown
       title
     )
