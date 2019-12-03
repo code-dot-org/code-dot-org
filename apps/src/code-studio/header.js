@@ -249,14 +249,14 @@ header.hideTryAgainDialog = () => {
   getStore().dispatch(setShowTryAgainDialog(false));
 };
 
-header.logToFirehose = detail => {
-  return firehoseClient.putRecord(
-    {
-      study: 'navigation_bar',
-      event: detail.nav_menu_clicked
-    },
-    {alwaysPut: true} // For testing purposes to confirm data is logged to firehose.  Remove before merging PR
-  );
-};
+// header.logToFirehose = detail => {
+//   return firehoseClient.putRecord(
+//     {
+//       study: 'navigation_bar',
+//       event: detail.nav_menu_clicked
+//     },
+//     {alwaysPut: true} // For testing purposes to confirm data is logged to firehose.  Remove before merging PR
+//   );
+// };
 
 export default header;
