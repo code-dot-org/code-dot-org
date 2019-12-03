@@ -16,8 +16,6 @@ social:
   @header["social"]["og:description"] = hoc_s(:social_hoc2018_global_movement)
   @header["social"]["og:image"] = 'https://' + request.host + '/images/social-media/code-2018-creativity.png'
 
-  launch_ai = DCDO.get('launch_ai', nil)
-
 %link{href: "/css/student.css", rel: "stylesheet"}
 %link{href: "/css/tools.css", rel: "stylesheet"}
 %link{href: "/shared/css/course-blocks.css", rel: "stylesheet", type: "text/css"}
@@ -27,7 +25,7 @@ social:
 
 = I18n.t(:hoc_overview_subtitle)
 
-- if launch_ai && request.language == 'en'
+- if request.language == 'en'
   .tile-container-responsive{style: "margin-top: 20px;"}
     .col-50
       .tutorial-tile
