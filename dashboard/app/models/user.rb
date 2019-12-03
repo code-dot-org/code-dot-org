@@ -517,7 +517,7 @@ class User < ActiveRecord::Base
       errors.add(:admin, 'must be a code.org account with only google oauth')
     end
 
-    # Admin should not have a password
+    # Code studio admins should not have a password
     errors.add(:admin, 'cannot have a password') if password.present?
   end
 
