@@ -37,7 +37,7 @@
 
   .clear{style: "clear: both"}
 
-#hero{style: "position:relative"}
+#hero{style: "position:relative; overflow: hidden"}
   - heroes_arranged.each_with_index do |entry, index|
     -# Preload the first hero image to render immediately, lazy-load the rest to conserve bandwidth.
     - if index == 0
