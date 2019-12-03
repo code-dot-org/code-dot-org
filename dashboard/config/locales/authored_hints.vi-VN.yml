@@ -199,7 +199,7 @@ vi-VN:
 
           -   Hãy đảm bảo rằng một vũ công xuất hiện trên màn hình.
 
-          _Cấp độ này kết thúc sau 4 nhịp._
+          \*Cấp độ này kết thúc sau 4 nhịp.\_
         challenges: |-
           **Thử thách tùy chọn**
 
@@ -305,7 +305,7 @@ vi-VN:
 
           -   Hãy đảm bảo rằng một vũ công xuất hiện trên màn hình.
 
-          _Cấp độ này kết thúc sau 4 nhịp._
+          \*Cấp độ này kết thúc sau 4 nhịp.\_
         challenges: |-
           **Thử thách tùy chọn**
 
@@ -414,7 +414,7 @@ vi-VN:
 
           -   Hãy đảm bảo rằng một vũ công xuất hiện trên màn hình.
 
-          _Cấp độ này kết thúc sau 4 nhịp._
+          \*Cấp độ này kết thúc sau 4 nhịp.\_
         challenges: |-
           **Thử thách tùy chọn**
 
@@ -446,6 +446,10 @@ vi-VN:
           **Thách thức phụ**
 
           Thay đổi hiệu ứng nền ở những thời điểm khác nhau trong bài hát bằng cách liên kết những khối mới theo sự kiện <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"nhịp"</title></block></xml>.
+      Dance_Party_05:
+        validation: "**Làm sao để tôi vượt qua cấp độ này?** \n\n-   Vũ công của bạn
+          cần phải xoay vòng qua ít nhất 4 động tác nhảy khác nhau trước khi cấp độ
+          kết thúc. \n\n_Cấp độ này kết thúc sau 12 nhịp._"
       Dance_Party_06:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
@@ -1752,6 +1756,129 @@ vi-VN:
           <block type="studio_move">
               <title name="SPRITE">1</title>
               <title name="DIR">2</title>
+            </block>
+          </xml>
+      courseB_playlab_events6:
+        courseB_playlab_events6_a: |-
+          Bạn sẽ cần những khối lệnh này:
+          <xml>
+            <block type="studio_whenArrow" id="callMe">
+              <title name="VALUE">up</title>
+            </block>
+            <block type="studio_whenArrow" id="callMe">
+              <title name="VALUE">down</title>
+            </block>
+            </xml>
+        courseB_playlab_events6_b: |-
+          Sử dụng mũi tên thả xuống màu xanh trên khối 'Khi nào \_\_\_ mũi tên" để chọn các hướng khác nhau
+          ![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)
+        courseB_playlab_events6_c: Đến chỗ tất cả lá cờ để vượt qua thử thách!
+      courseB_playlab_events6_2018:
+        courseB_playlab_events6_a: |-
+          Bạn sẽ cần những khối lệnh này:
+          <xml>
+            <block type="studio_whenArrow" id="callMe">
+              <title name="VALUE">up</title>
+            </block>
+            <block type="studio_whenArrow" id="callMe">
+              <title name="VALUE">down</title>
+            </block>
+            </xml>
+        courseB_playlab_events6_b: |-
+          Sử dụng mũi tên thả xuống màu xanh trên khối 'Khi nào \_\_\_ mũi tên" để chọn các hướng khác nhau
+          ![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)
+        courseB_playlab_events6_c: Đến chỗ tất cả lá cờ để vượt qua thử thách!
+      courseB_playlab_events6_2019:
+        courseB_playlab_events6_a: |-
+          Bạn sẽ cần những khối lệnh này:
+          <xml>
+            <block type="studio_whenArrow" id="callMe">
+              <title name="VALUE">up</title>
+            </block>
+            <block type="studio_whenArrow" id="callMe">
+              <title name="VALUE">down</title>
+            </block>
+            </xml>
+        courseB_playlab_events6_b: |-
+          Sử dụng mũi tên thả xuống màu xanh trên khối 'Khi nào \_\_\_ mũi tên" để chọn các hướng khác nhau
+          ![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)
+        courseB_playlab_events6_c: Đến chỗ tất cả lá cờ để vượt qua thử thách!
+      courseB_playlab_events7:
+        courseB_playlab_events7_a: |-
+          Đây là khối lệnh mà bạn sẽ cần:
+
+          <xml>
+          <block type="studio_whenSpriteCollided">
+              <title name="SPRITE1">0</title>
+              <title name="SPRITE2">1</title>
+            </block>
+          </xml>
+        courseB_playlab_events7_b: |-
+          Đây là khối lệnh bạn sẽ cần để tạo ra âm thanh.
+
+          <xml>
+          <block type="studio_playSound">
+              <title name="SOUND">slap</title>
+            </block>
+          </xml>
+        courseB_playlab_events7_c: |-
+          Đây là khối bạn sẽ cần để chàng kị sĩ biến mất
+
+          <xml>
+          <block type="studio_vanish">
+              <title name="SPRITE">1</title>
+            </block>
+          </xml>
+      courseB_playlab_events7_2018:
+        courseB_playlab_events7_a: |-
+          Đây là khối lệnh mà bạn sẽ cần:
+
+          <xml>
+          <block type="studio_whenSpriteCollided">
+              <title name="SPRITE1">0</title>
+              <title name="SPRITE2">1</title>
+            </block>
+          </xml>
+        courseB_playlab_events7_b: |-
+          Đây là khối lệnh bạn sẽ cần để tạo ra âm thanh.
+
+          <xml>
+          <block type="studio_playSound">
+              <title name="SOUND">slap</title>
+            </block>
+          </xml>
+        courseB_playlab_events7_c: |-
+          Đây là khối bạn sẽ cần để chàng kị sĩ biến mất
+
+          <xml>
+          <block type="studio_vanish">
+              <title name="SPRITE">1</title>
+            </block>
+          </xml>
+      courseB_playlab_events7_2019:
+        courseB_playlab_events7_a: |-
+          Đây là khối lệnh mà bạn sẽ cần:
+
+          <xml>
+          <block type="studio_whenSpriteCollided">
+              <title name="SPRITE1">0</title>
+              <title name="SPRITE2">1</title>
+            </block>
+          </xml>
+        courseB_playlab_events7_b: |-
+          Đây là khối lệnh bạn sẽ cần để tạo ra âm thanh.
+
+          <xml>
+          <block type="studio_playSound">
+              <title name="SOUND">slap</title>
+            </block>
+          </xml>
+        courseB_playlab_events7_c: |-
+          Đây là khối bạn sẽ cần để chàng kị sĩ biến mất
+
+          <xml>
+          <block type="studio_vanish">
+              <title name="SPRITE">1</title>
             </block>
           </xml>
       courseB_starWars_prog1:

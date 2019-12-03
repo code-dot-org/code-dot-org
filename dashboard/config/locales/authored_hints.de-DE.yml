@@ -43,6 +43,9 @@ de-DE:
       2-3 Artist 9 NEW:
         2-3_Artist_9_a: Diese Raute ist einfach nur ein gedrehter Quader
       2-3 Artist Debugging 10:
+        2-3_Artist_Debugging_10_a: Denke daran, dass das Bedienfeld 10 Pixel _breiter_
+          werden soll... also stelle sicher, dass **add** 10 zu jeder Nummer hinzugefügt
+          wird, die du änderst.
         2-3_Artist_Debugging_10_b: |-
           **Die Versuch-und-Irrtum-Methode ist hier völlig Ok!**
           Fang an, eine einzelne Zahl zu ändern.
@@ -54,35 +57,144 @@ de-DE:
         2-3_Artist_Debugging_3_a: Eine der Drehungen ist 15 Grad zu klein.
         2-3_Artist_Debugging_3_b: Wenn das Programm zu schnell läuft um zu sehen,
           was passiert, versuchen Sie es mit dem Schieberegler zu verlangsamen.
+      2-3 Artist Debugging 7:
+        2-3_Artist_Debugging_7_a: Was passiert, wenn sich der Künstler bewegt oder
+          rückwärts springt, nachdem er die erste Linie gezogen hat?
+      2-3 Artist Debugging 8:
+        2-3_Artist_Debugging_8_a: |-
+          Wie oft hat sich meine Form wiederholt?
+
+          Wie oft _sollte_ die Form wiederholt werden?
+
+          Wo kann man das im Programm ändern?
+      2-3 Artist Debugging 9:
+        2-3_Artist_Debugging_9_a: Der Zeichner muss 60 Grad weiter nach links drehen,
+          bevor er mit dem Zeichnen beginnt!
+        2-3_Artist_Debugging_9_b: Du musst keinen weiteren Baustein hinzufügen, um
+          die volle Drehung zu erhalten, sondern nur 60 Grad zum Baustein`drehe links`,
+          der bereits vorhanden ist hinzufügen!
       2-3 Artist Functions 12:
         2-3_Artist_Functions_12_a: Führe den Code zuerst aus um zu schauen, was hinzugefügt
           werden muss.
       2-3 Artist Functions 3:
         2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
+      2-3 Artist Loops New 11:
+        2-3_Artist_Loops_New_11_a: |-
+          Denke daran, dass der Code aus dem letzten Puzzle war:
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">8</title>
+                  <statement name="DO">
+                    <block type="draw_colour" inline="true">
+                      <value name="COLOUR">
+                        <block type="colour_random"/>
+                      </value>
+                      <next>
+                        <block type="draw_turn_by_constant_dropdown">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE" config="45,60,90,120,180">45</title>
+                          <next>
+                            <block type="draw_move_by_constant">
+                              <title name="DIR">moveForward</title>
+                              <title name="VALUE">50</title>
+                              <next>
+                                <block type="draw_turn_by_constant_dropdown">
+                                  <title name="DIR">turnLeft</title>
+                                  <title name="VALUE" config="45,60,90,120,180">90</title>
+                                  <next>
+                                    <block type="draw_move_by_constant">
+                                      <title name="DIR">moveForward</title>
+                                      <title name="VALUE">50</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </xml>
+        2-3_Artist_Loops_New_11_b: Deine neue Drehung sollte am **Ende** des Codes
+          innerhalb der Schleife stattfinden.
+      2-3 Artist Loops New 12:
+        2-3_Artist Loops_New_12_a: Bevor du mit dem Diamanten beginnst muss sich der
+          Zeichner um 60 Grad nach links drehen, um auf den richtigen Weg zu kommen.
+        2-3_Artist Loops_New_12_b: Nachdem der Zeichner 100 Pixel vorwärts gegangen
+          ist, muss er 120 Grad nach rechts drehen, um die scharfe Ecke zu machen.
+        2-3_Artist Loops_New_12_c: Der Zeichner muss nur 60 Grad nach rechts drehen,
+          um eine stumpfe Ecke zu erzeugen.
+      2-3 Artist Loops New 13:
+        2-3_Artist_Loops_New_13_a: "Am Ende jedes Diamanten befindet sich der Zeichner
+          bereits in der richtigen Richtung, um mit dem nächsten zu beginnen.  \n\nAus
+          diesem Grund müssen wir keinen zusätzlichen `Drehe links um` Baustein hinzufügen,
+          bevor wir wieder anfangen."
+        2-3_Artist_Loops_New_13_b: "Um jeden Diamanten herzustellen, muss der Zeichner:
+          \  \n\n-   sich bewegen\n-   rechts drehen um 120 Grad\n-   sich bewegen\n-
+          \  rechts drehen um 60 Grad  \n\nDann lass ihn alles noch einmal machen!"
       2-3 Artist Loops New 9:
+        2-3_Artist_Loops_New_9_a: Der Zeichner muss 45 Grad nach rechts drehen, bevor
+          er mit dem Zeichnen beginnt.
         2-3_Artist_Loops_New_9_b: Dieses V ist eigentlich nur ein halbes Quadrat.
           Wie könnte der Code ausschauen, der benötigt wird um ein halbes Quadrat
           zu zeichnen?
+      2-3 Artist Nested Loops 1:
+        2-3_Artist_Nested_Loops_1_a: Beachte alle grauen Blöcke in die Schleife einzuhängen.
       2-3 Artist Nested Loops 3:
         2-3_Artist_Nested_Loops_3_a: |-
           Brauchst du Hilfe mit den Winkeln?\
           **360/12 = 30**
+        2-3_Artist_Nested_Loops_3_b: Denke daran den gesamten Grauen Code und Ihren
+          Kurvenblock in eine Schleife unterzubringen.
       2-3 Artist Nested Loops 4:
         2-3_Artist_Nested_Loops_3_a: |-
           Brauchst du Hilfe mit den Winkeln?\
           **360/12 = 30**
       2-3 Artist Nested Loops 7:
-        2-3_Artist_Nested_Loops_7_a: Wie weit sollten Sie sich in jedem Schleifendurchlauf
+        2-3_Artist_Nested_Loops_7_a: Wie weit solltest du dich in jedem Schleifendurchlauf
           drehen? Was ist 360/10?
+      2-3 Artist Nested Loops 9:
+        2-3_Artist_Nested_Loops_9_a: |-
+          Brauchst Du Hilfe bei der Suche nach dem richtigen Winkel?
+
+          **360 / 12 = 30**
+      2-3 Bee Conditionals 14:
+        2-3_Bee_Conditionals_14_a: Hattest du Schwierigkeiten, herauszufinden, wie
+          man die Bausteine runterbekommt?  Versuch mal, die rote Blume genauso zu
+          behandeln wie eine lila Blume!
+        2-3_Bee_Conditionals_14_b: Wenn die rote Blume lila wäre, könntest du herausfinden,
+          wie man eine zusätzliche `Repeat`-Schleife verwendet, um den Code zu reduzieren?
       2-3 Bee Conditionals 15:
-        2-3_Bee_Conditionals_15_a: 'Denken Sie daran: Violette Blüten haben entweder
-          0 oder 1 Nektar und sie können sich bei jedem Start des Programmes ändern.'
+        2-3_Bee_Conditionals_15_a: 'Denke daran: Violette Blüten haben entweder 0
+          oder 1 Nektar und sie können sich bei jedem Start des Programmes ändern.'
+      2-3 Bee Conditionals 3:
+        2-3_Bee_Conditionals_3_a: Der Code ist am kürzesten, wenn du bei jedem Schritt
+          eine Schleife verwendest, eine weitere Schleife, um Nektar zu sammeln, und
+          eine weitere, um Honig herzustellen.
       2-3 Bee Conditionals 6:
-        2-3_Bee_Conditionals_6_a: 'Denken Sie daran: Violette Blüten ändern zwischen
-          0 und 1 Nektar, wenn Sie das Programm ausführen!'
+        2-3_Bee_Conditionals_6_a: 'Denke daran: Violette Blüten ändern zwischen 0
+          und 1 Nektar, wenn du das Programm ausführst!'
+      2-3 Bee Debugging 1:
+        2-3_Bee_Debugging_1_a: Sobald du den falschen Block gefunden und repariert
+          hast, siehst du irgendwelche Muster, die mit einer `Repeat`-Schleife einfacher
+          gemacht werden könnten?
+      2-3 Bee Debugging 2:
+        2-3_Bee_Debugging_2_a: Sobald du den falschen Block gefunden und repariert
+          hast, siehst du irgendwelche Muster, die mit einer `Repeat`-Schleife einfacher
+          gemacht werden könnten?
       2-3 Bee Debugging 4:
         2-3_Bee_Debugging_4_a: Macht die Biene etwas das keinen Sinn macht? Was passiert
-          wenn du diesen Block abänderst?
+          wenn du diesen Baustein abänderst?
+      2-3 Bee Loops 2:
+        2-3_Bee_Loops_2_a: Du solltest mit vier Bausteinen innerhalb deiner Schleife
+          enden.
       2-3 Bee Loops 3:
         2-3_Bee_Loops_3_a: Du solltest mit 6 Bausteinen innerhalb deiner Schleife
           enden.
@@ -95,15 +207,62 @@ de-DE:
       2-3 Bee Loops 4A:
         2-3_Bee_Loops_4A_a: Die erste Aktion wird eher eine Drehung als eine Fortbewegung
           sein.
+        2-3_Bee_Loops_4A_b: Der letzte Teil des Programms kann beendet werden, indem
+          am Ende des Programms außerhalb der Schleife Code geschrieben wird.
+        2-3_Bee_Loops_4A_c: Wenn du die Wiederholung noch nicht erkennen kannst, versuche
+          sie zuerst auf dem langen Weg zu programmieren, dann schaue, was du am Ende
+          zu einer `wiederhole`-Schleife kombinieren kannst.
+      2-3 Bee Loops 5:
+        2-3_Bee_Loops_5_a: Wenn du die Bausteine nicht sofort erkennen kannst, die
+          du in die `wiederhole`-Schleife legen kannst, fang damit an, jede Bewegung
+          zu programmieren und nach einem Muster zu suchen.
+      2-3 Bee Loops 6:
+        2-3_Bee_Loops_6_a: Wenn du nicht sagen kannst, was in die `wiederhole`-Schleife
+          gehen soll, versuche, Bausteine einzeln herauszuziehen und zu sehen, ob
+          du ein Muster finden kannst.
+        2-3_Bee_Loops_6_b: Es sollte 6 Blöcke innerhalb deiner `wiederhole`-Schleife
+          geben, wenn du fertig bist.
       2-3 Bee Loops 7:
         2-3_Bee_Loops_7_a: Die erste Aktion wird eher eine Drehung als eine Fortbewegung
           sein.
+        2-3_Bee_Loops_7_b: 'Wenn du dir die Schleife von Anfang an nicht ganz vorstellen
+          kannst, versuche die Lösung auf dem langen Weg zu programmieren und suche
+          dann nach einem Muster.  '
       2-3 Maze 1:
-        2-3_Maze_1_a: Um einen "vorwärts bewegen" block zu verwenden, ziehe diesen
+        2-3_Maze_1_a: Um einen "vorwärts bewegen" Baustein zu verwenden, ziehe diesen
           von der Werkzeugleiste in den Arbeitsbereich und verbinde ihn mit dem "Wenn
-          Ausführen" Block.
+          Ausführen" Baustein.
+      2-3 Maze 16:
+        2-3_Maze_16_a: Wenn das Muster schwer zu erkennen ist, dann versuche zuerst
+          alles zu programmieren und schaue, was sich immer wieder wiederholt, bevor
+          du die Schleifen einsetzt.
+        2-3_Maze_16_b: "Um viele Bausteine innerhalb einer Schleife zu platzieren,
+          ziehe einfach eine Schleife in den Arbeitsbereich und ziehe dann alle Bausteine
+          aus dem Startprogramm hinein.  \n\nVerbinde alles wieder mit dem `Wenn Ausführen`
+          Baustein und schon kann es losgehen!"
       2-3 Maze 6:
         2-3_Maze_6_a: Es gibt zwei Möglichkeiten um dieses Puzzle zu lösen!
+      2-3 Maze Loops 17:
+        2-3_Maze_Loops_17_a: Wenn das Muster schwer zu erkennen ist, dann versuche
+          zuerst alles zu programmieren und schaue, was sich immer wieder wiederholt,
+          bevor du die Schleifen einsetzt.
+        2-3_Maze_Loops_17_b: Wurde der Startcode gelöscht?  Klicke auf "Start over",
+          um ihn zurückzubekommen!
+      2-3 Maze Loops 18:
+        2-3_Maze_Loops_18_a: Wenn das Muster schwer zu erkennen ist, dann versuche
+          zuerst alles zu programmieren und schaue, was sich immer wieder wiederholt,
+          bevor du die Schleifen einsetzt.
+      2-3 Maze Loops 19:
+        2-3_Maze_Loops_19_a: Wenn du festsitzt, versuche zuerst den Code ohne Schleifen
+          auszuschreiben und nach Mustern zu suchen.
+        2-3_Maze_Loops_19_b: Das Einfügen einer Wiederholungsschleife in eine andere
+          kann helfen, die Anzahl der verwendeten Bausteine zu reduzieren.
+      2-3 Maze Loops 20:
+        2-3_Maze_Loops_20_a: Suche nach einem Treppenstufenmuster in diesem Labyrinth,
+          um herauszufinden, wo eine Schleife verwendet werden kann.
+      2-3 Maze Loops 21:
+        2-3_Maze_Loops_21_a: Wenn du Schwierigkeiten hast, das Treppenstufenmuster
+          zu finden, versuche, die blockierten Wege mit dem Finger abzudecken.
       4-5 Artist 11:
         4-5_Artist_11_a: In deiner Schleife, achte darauf dass der Künstler nach dem
           Zeichnen jeder Linie zurück springt und nach oben springt.
@@ -309,8 +468,8 @@ de-DE:
           die Sie ausgewählt hatten? Dass liegt daran, dass **färben** die von Ihnen
           gewählte Farbe mit den Farben des Tänzers mischen.
       Dance_2019_09:
-        validation: "**Wie bestehe ich diesen Level?** \n\n-   Drücken Sie einfach
-          die Taste \"Beenden\"!"
+        validation: "**Wie bestehe ich diesen Level?** \n\n-   Drücke einfach die
+          Taste \"Beenden\"!"
         repeat_every_ideas: "**Brauchen Sie Ideen?**\n\n-   Ändern Sie die Größe eines
           Tänzers mehrfach, um ihn wachsen zu lassen. \n-   Ändern Sie die Drehung
           eines Tänzers mehrfach, damit er sich dreht. \n-   Ändern Sie die horizontale
@@ -364,6 +523,13 @@ de-DE:
           **Optionale Herausforderung**
 
           Ändern Sie den Hintergrundeffekt an verschiedenen Stellen des Songs, indem Sie den neuen Block unter den <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"Takte"</title></block></xml>-Ereignissen verbinden.
+      Dance_Party_05:
+        validation: |-
+          **Wie bestehe ich dieses Level?**
+
+          -   Dein Tänzer muss mindestens 4 verschiedene Tanzbewegungen ausführen, bevor das Level endet.
+
+          _Dieses Level endet nach 12 Takten._
       Dance_Party_06:
         validation: |-
           **Wie schaffe ich diesen Level?**
@@ -587,6 +753,16 @@ de-DE:
           ![](<https://images.code.org/7070e44239b53f4b33a5b4fe054bb61c-image-1567714335486.2019-09-05 16_05_19.gif>)
 
           ![](<https://images.code.org/278494432d56f1f5d41e345a51223695-image-1567714335485.2019-09-05 16_11_12.gif>)
+      course1_artist_loops_challenge1:
+        courseA_artist_loops_challenge1_a: |-
+          Mit Schleifen kannst du die Wände und das Dach gestalten. Versuche verschiedene Bausteine zu wiederholen.
+
+          ![](https://images.code.org/1581a2f599b501103064fc9864aa964d-image-1491863694560.png)
+
+          Gestalte deine eigenen oder klicke auf den ![](https://images.code.org/53090194cea5dbf35ce9e35205156f5d-image-1491864793265.png) für Ideen!
+      course1_artist_loops_challenge2:
+        harvey_tictactoe: Du kannst `springe` Bausteine verwenden, um in andere Räume
+          zu gelangen.
       course1_artist_loops_challenge3:
         courseA_artist_loops_challenge2_b: Wenn du ein Vogelhaus fertig hast, spring
           zum nächsten!
@@ -694,14 +870,100 @@ de-DE:
                 </block>
               </next>
             </block></xml>
+      course2_artist_prog_challenge1:
+        courseC_artist_prog_challenge1_a: 'Das Rechteck ist 200 Pixel breit und 100
+          Pixel hoch. '
+      course2_artist_prog_challenge2:
+        courseC_artist_prog_challenge2_a: "Du kannst Befehle in den `wiederhole` Baustein
+          einfügen, um diese immer wieder zu wiederholen. Probiere es aus!\n\n<xml>\n
+          \ \n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">6</title>\n
+          \           <statement name=\"DO\">\n              <block type=\"draw_move_by_constant_dropdown\">\n
+          \               <title name=\"DIR\">moveForward</title>\n                <title
+          name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                <next>\n
+          \                 <block type=\"jump_by_constant_dropdown\">\n                    <title
+          name=\"DIR\">jumpForward</title>\n                    <title name=\"VALUE\"
+          config=\"25,50,100,150,200,300\">25</title>\n                  </block>\n
+          \               </next>\n              </block>\n              </statement></block></xml>"
+      course2_bee_conditionals_challenge1:
+        courseD_bee_conditionals_challenge1_a: |-
+          Kannst du einen Weg finden, der jede Blume und jede Wabe erreicht, ohne auf Bäume zu treffen? Der beste Weg ist eine Spirale.
+
+          **Du kannst das lösen, ohne jemals nach links zu gehen.**
+      course2_bee_conditionals_challenge2:
+        courseD_bee_conditionals_challenge1_b: |-
+          Genau wie die `wenn bei Blume` Bausteine, wird der Code innerhalb eines `solange Nektar > 0` nur ausgeführt, wenn sich die Biene an einer Blume befindet. Der Hauptunterschied besteht darin, dass der Code im Inneren wiederholt ausgeführt wird, bis kein Nektar mehr vorhanden ist.  Versuche dieses Muster:
+
+          <xml>  <block type="bee_whileNectarAmount">
+              <title name="ARG1">nectarRemaining</title>
+              <title name="OP">&gt;</title>
+              <title name="ARG2">0</title>                    <statement name="DO">
+                                <block type="maze_nectar"/>
+                              </statement>
+            </block></xml>
       course2_collector_loops_challenge2:
+        courseC_maze_loops_challenge2_a: Der Originalcode würde gut funktionieren
+          - wenn es nur einen Schatz in jedem Stapel gäbe!
         courseC_maze_loops_challenge2_b: Benutze Schleifen, damit du nicht zu viele
           ˋSammelnˋ Blöcke verwenden musst!
+      course2_collector_prog_challenge1:
+        courseC_collector_prog_challenge1_a: Du kannst den Befehl `sammle` öfter verwenden,
+          um den zusätzlichen Schatz zu sammeln.
+      course2_collector_prog_challenge2:
+        courseC_collector_prog_challenge1_a: Du kannst den Befehl `sammle` öfter verwenden,
+          um den zusätzlichen Schatz zu sammeln.
+      course2_harvester_loops_challenge1:
+        courseC_harvester_loops_challenge1_a: Denk nicht einmal daran, dies ohne Schleifen
+          zu versuchen!
+        courseC_harvester_loops_challenge1_b: Du kannst `bewege vorwärts` und `pflücke
+          Mais` so oft du willst wiederholen, dann an jeder Ecke rechts abbiegen.
+        courseC_harvester_loops_challenge1_c: |-
+          Der beste Weg, die ersten vier Maissorten zu sammeln, besteht aus einem `wiederhole`-Baustein innerhalb eines anderen `wiederhole`-Bausteins. Du kannst dieses Muster auch für den Rest des Puzzles verwenden!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">2</title>
+                      <statement name="DO">
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                          <next>
+                            <block type="harvester_corn"/>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  </block></next></block></xml>
+      course2_maze_loops_challenge1:
+        courseC_maze_loops_challenge1_a: Denke daran, dass dieser Weg aus drei verschiedenen
+          Teilen besteht. Jeder von ihnen hat ein Muster, das du wiederholen kannst.
+        courseC_maze_loops_challenge1_b: Zwischen jedem `wiederhole` Baustein musst
+          du `drehe links` oder `drehe rechts` einbauen, um Scrat für das nächste
+          Muster vorzubereiten.
+        courseC_maze_loops_challenge1_c: |-
+          Wenn du es bis hierher schaffst, musst du nur ´drehe links´ benutzen und dann ein paar Mal `bewege vorwärts`. Gib nicht auf!
+
+          ![](<https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34 PM.png>)
       course2_maze_programming_challenge2:
         courseC_maze_programming_challenge2_a: _Pass sehr gut auf, dass ich mich in
           die richtige Richtung drehe, wenn du mich rückwärts laufen lässt!_
         courseC_maze_programming_challenge2_b: Die kürzeste Lösung braucht nur 5 Blöcke,
           aber es benötigt den "wiederholen" Baustein!
+      course3_maze_debugging_challenge1:
+        courseC_maze_debugging_challenge1_b: Der Pfad von Scrat hat die Form eines
+          Rechtecks! Er muss sich jedes Mal auf die gleiche Weise drehen!
+        courseC_maze_debugging_challenge1_c: Wenn du feststeckst, kannst du immer
+          wieder von vorne anfangen, oder den ganzen Code entfernen und deinen eigenen
+          Weg finden!
       courseA_artist_loops2:
         courseA_artist_loops2_a: Du weißt nicht, wie man Linien zeichnet? Beginne
           damit, Blöcke zum <xml><block type="when_run"/></xml> Block anzufügen um
@@ -869,6 +1131,9 @@ de-DE:
       courseA_artist_loops9_2018:
         courseA_artist_loops9_a: Füge noch einen Block zum Code hinzu um die restlichen
           Stufen zu zeichnen.
+        courseA_artist_loops9_b: |-
+          Der von Dir hinzugefügte Baustein sollte sich innerhalb der Schleife <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">5</title></block>
+          </xml> befinden.
         courseA_artist_loops9_c: Wenn du nicht weißt, wohin du die Schleife setzen
           sollst, versuche den Code Schritt-für-Schritt zu schreiben und suche dann
           nach Mustern.
@@ -1198,16 +1463,32 @@ de-DE:
         courseA_harvester_loops5_a: 'Wenn Du nicht mehr weiter kommst, teile die Aufgabe
           in 2 Teile und löse sie nacheinander: Der eine Teil ist vor der Ecke und
           der zweite nach der Ecke.'
+        courseA_harvester_loops5_c: Benutze diesen Weg, um den ganzen Mais zu pflücken!
       courseA_harvester_loops5_2019:
         courseA_harvester_loops5_a: 'Wenn Du nicht mehr weiter kommst, teile die Aufgabe
           in 2 Teile und löse sie nacheinander: Der eine Teil ist vor der Ecke und
           der zweite nach der Ecke.'
+        courseA_harvester_loops5_c: Benutze diesen Weg, um den ganzen Mais zu pflücken!
+      courseA_harvester_loops5b:
+        courseA_harvester_loops5b_a: Drücke `Ausführen` und schaue, was passiert!
+      courseA_harvester_loops5b_2019:
+        courseA_harvester_loops5b_a: Drücke `Ausführen` und schaue, was passiert!
+      courseA_harvester_seq10:
+        courseA_harvester_seq10_c: Versuche, diesen Weg zu benutzen, um den gesamten
+          Mais zu pflücken.
+      courseA_harvester_seq10_2019:
+        courseA_harvester_seq10_c: Versuche, diesen Weg zu benutzen, um den gesamten
+          Mais zu pflücken.
       courseA_harvester_seq2:
         courseA_harvester_seq2_b: Versuche einmal, die einzelnen Schritte auf ein
           Blatt Papier zu schreiben um eine Lösung zu finden!
       courseA_harvester_seq2_2019:
         courseA_harvester_seq2_b: Versuche einmal, die einzelnen Schritte auf ein
           Blatt Papier zu schreiben um eine Lösung zu finden!
+      courseA_harvester_seq5:
+        courseA_harvester_seq5_b: Du musst einen Block entfernen.
+      courseA_harvester_seq5_2019:
+        courseA_harvester_seq5_b: Du musst einen Block entfernen.
       courseA_maze_seq1:
         courseA_maze_seq1_a: |-
           Wenn der Vogel sich nicht bewegt, dann überprüfe ob die Blöcke richtig unter <xml>

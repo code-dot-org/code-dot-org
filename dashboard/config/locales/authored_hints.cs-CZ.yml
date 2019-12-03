@@ -557,6 +557,10 @@ cs-CZ:
           **Volitelná výzva**
 
           Změň efekt pozadí v různých bodech během písně tak, že připojíš nový blok pod událostmi <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      Dance_Party_05:
+        validation: "**Jak splním tuto úroveň?** \n\n-   Tvůj tanečník musí do konce
+          úrovně vystřídat alespoň 4 různé taneční pohyby. \n\n_Tato úroveň končí
+          po 12 taktech._"
       Dance_Party_06:
         validation: |-
           **Jak splním tuto úroveň?**

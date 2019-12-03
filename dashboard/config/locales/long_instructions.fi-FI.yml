@@ -78,8 +78,15 @@ fi-FI:
         Tämä <xml><block type="Dancelab_whenKey"></block></xml> blokki antaa sinun käyttää koodia, kun ylänuolta painetaan.
 
         Voit muuttaa tanssiliikettä, muuttaa tanssijan ominaisuuksia, tai tehdä yhden nopean liikkeen kerran. Ole luova, ja etsi uusia blokkeja!
+      CourseD_Dance_Party_11_5: "Tarkista tämä lohko: \n\n<xml>\n  <block type=\"Dancelab_makeNewDanceSpriteGroup\"
+        block-text=\"Make 6 new ducks in a circle\">\n    <title name=\"N\">6</title>\n
+        \   <title name=\"COSTUME\">\"DUCK\"</title>\n    <title name=\"LAYOUT\">\"circle\"</title>\n
+        \ </block></xml> \n\nVoit nyt luoda joukon tanssijoita kerralla! \nYritä käyttää
+        joitakin ”kaikki ankat” -lohkoista kirjoittaaksesi koodin, joka saa kaikki
+        ankat tanssimaan yhdessä."
       CourseD_Dance_Party_11b: On tanssikisan aika! Kissa napauttaa, kun painat vasenta
         nuolinäppäintä. Laita Robotti “droppaamaan”, kun painat oikeaa nuolinäppäintä.
+      CourseD_Dance_Party_12: Ryhdy toimiin! Luo oma tanssi ja jaa se ystäviesi kanssa.
       CourseE_HOC 2018 Level_1: Tarvitset tarvikkeita matkataksesi eteenpäin. Kerää
         **vene** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
         \*\* arkusta\*\* ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
@@ -137,6 +144,13 @@ fi-FI:
         &quot;CAT&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;,
         &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title>\n    <title name=\"LAYOUT\">\"circle\"</title>\n
         \ </block></xml>\nNyt voit luoda joukon tanssijoita kerralla!"
+      Dance_2019_07: "Jokaisella tanssijalla on joukko \\_ominaisuuksia, joilla kontrolloidaan,
+        miltä se näyttää. \n\nNäytä <xml><block type=\"Dancelab_setPropEach\" block-text=\"the
+        set block\"><title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;,
+        &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;,
+        &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title><title name=\"PROPERTY\">\"scale\"</title><title
+        name=\"VAL\">???</title></block></xml> vihreässä tapahtumalohkossa saadaksesi
+        näyttämään siltä, että tanssijat ovat lähempänä tai kauempana."
       Dance_2019_08: Tanssijoilla on "sävy"-ominaisuus, joilla voidaan lisätä värikerrosta.
         Kokeile muuttaa yhden tanssijasi sävyä (tai koko ryhmän)!
       Dance_2019_09: |-
@@ -147,6 +161,7 @@ fi-FI:
         Muiden työkaluvalikoimassasi olevien blokkien avulla voit asteittain (tai satunnaisesti!) muuttaa tanssijoiden ominaisuuksia ajan mittaan.
 
         _Käytä luovuutta ja pidä hauskaa!_
+      Dance_2019_10: Ryhdy toimiin! Luo oma tanssi ja jaa se ystäviesi kanssa.
       Dance_Party_01: |-
         _Pidetään tanssibileet!_
 
@@ -197,16 +212,14 @@ fi-FI:
         Tämä <xml><block type="Dancelab_whenKey"></block></xml> blokki antaa sinun käyttää koodia, kun ylänuolta painetaan.
 
         Voit muuttaa tanssiliikettä, muuttaa tanssijan ominaisuuksia, tai tehdä yhden nopean liikkeen kerran. Ole luova, ja etsi uusia blokkeja!
+      Dance_Party_11_5: "Tarkista tämä lohko: \n\n<xml>\n  <block type=\"Dancelab_makeNewDanceSpriteGroup\">\n
+        \   <title name=\"N\">6</title>\n    <title name=\"COSTUME\">\"DUCK\"</title>\n
+        \   <title name=\"LAYOUT\">\"circle\"</title>\n  </block></xml> \n\nVoit nyt
+        luoda joukon tanssijoita kerralla! \n\nYritä käyttää joitakin ”kaikki ankat”
+        -lohkoista kirjoittaaksesi koodin, joka saa kaikki ankat tanssimaan yhdessä."
       Dance_Party_11b: On tanssikisan aika! Kissa napauttaa, kun painat vasenta nuolinäppäintä.
         Laita Robotti “droppaamaan”, kun painat oikeaa nuolinäppäintä.
-      Dance_Party_extras_alternate_2019: |-
-        # Mennään muodostelmaan!
-
-        Tutustu tähän tanssiin, joka käyttää [blockly block][0] -blokkia muuttaakseen taustatanssijoiden muodostelmaa tanssin aikana. Kokeile yhtä näistä ideoista, jotta voit jatkaa sitä:
-
-        -   Luo toinen ryhmä tanssijoita eri asettelussa
-        -   Muuta asettelua, kun näppäintä painetaan
-        -   Muuta ominaisuutta, kun tanssijat muuttavat muodostelmaa
+      Dance_Party_12: Ryhdy toimiin! Luo oma tanssi ja jaa se ystäviesi kanssa.
       Dance_Party_extras_battle: |-
         # Tanssiryhmät
 
@@ -233,10 +246,6 @@ fi-FI:
         -   Kokeile muita nuotinkestoja (kuten 0,5 puolinuotille tai 0,125 kahdeksasosanuotille)
         -   Lisää joitain `tahdin jälkeen`-tapahtumia.
         -   Vaihda “tahdit” “sekuntien” kanssa ja yritä ajoittaa tanssejasi siten.
-      Dance_Party_extras_every_beat_2019: |-
-        # Pistä vauhtia, himmaa ja hidasta
-
-        Tämä viimeinen tanssi käyttää [blockly block][0] -blokkia hallitakseen jokaisen tanssijan liikkeen nopeutta. Kokeile eri nopeuksia kappaleen eri aikoina. Voit leikitellä tämän tanssin aikana tai palata edellisiin tansseihin tehdäksesi ne entistä siisteimmiksi.
       Dance_Party_extras_layout: |-
         # Mennään muodostelmaan!
 
@@ -245,6 +254,14 @@ fi-FI:
         -   Luo toinen ryhmä tanssijoita eri asettelussa.
         -   Muuta asettelua, kun näppäintä painetaan
         -   Muuta ominaisuutta, kun tanssijat muuttavat muodostelmaa.
+      Dance_Party_extras_layout_2019: |-
+        # Mennään muodostelmaan!
+
+        Tutustu tähän tanssiin, joka käyttää <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> -blokkia muuttaakseen taustatanssijoiden muodostelmaa tanssin aikana. Kokeile yhtä näistä ideoista, jotta voit jatkaa sitä:
+
+        -   Luo toinen ryhmä tanssijoita eri asettelussa
+        -   Muuta asettelua, kun näppäintä painetaan
+        -   Muuta ominaisuutta, kun tanssijat muuttavat muodostelmaa
       Dance_Party_extras_on_beat: |-
         Basso, midi ja diskantti
 
@@ -260,7 +277,7 @@ fi-FI:
       Dance_Party_extras_speed_2019: |-
         # Pistä vauhtia, himmaa ja hidasta
 
-        Tämä viimeinen tanssi käyttää [blockly block][0] -blokkia hallitakseen jokaisen tanssijan liikkeen nopeutta. Kokeile eri nopeuksia kappaleen eri aikoina. Voit leikitellä tämän tanssin aikana tai palata edellisiin tansseihin tehdäksesi ne entistä siisteimmiksi.
+        Tämä viimeinen tanssi käyttää <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> -blokkia hallitakseen jokaisen tanssijan liikkeen nopeutta. Kokeile eri nopeuksia kappaleen eri aikoina. Voit leikitellä tämän tanssin aikana tai palata edellisiin tansseihin tehdäksesi ne entistä siisteimmiksi.
       Dance_Party_extras_visible: |-
         # Mihin he menivät?
 
@@ -270,13 +287,14 @@ fi-FI:
         -   Näyttää ja piilottaa tanssijat nuolinäppäimillä
         -   Piilota kaikki tanssijat, ja siirry jännittävään taustaefektiin.
       Dance_Party_extras_visible_2019: |-
-        # Mihin he menivät?
+        # Neljäsosanuotit
 
-        Tämä tanssi näyttää ja piilottaa kaksi tanssijoiden ryhmää. Tsekkaa se ja lisää oma vivahteesi.
+        Useimmissa tansseissamme on kokonaiset tahdit, mutta jokainen tahti koostuu neljästä neljäsosanuotista. Tämä tanssi käyttää [blockly block][0] blokkia niin, että tanssija taputtaa käsiään jokaisen neljäsosanuotin kohdalla viidennen tahdin jälkeen.
 
-        -   Lisää uusi ryhmä tanssijoita
-        -   Näyttää ja piilottaa tanssijat nuolinäppäimillä
-        -   Piilota kaikki tanssijat, ja siirry jännittävään taustaefektiin.
+        Kokeile muuttaa blokin numeroita, jotta näet, miten se muuttaa tanssia.
+
+        -   Kokeile muita nuottien kestoja (kuten 0.5 puolinuotille tai 0.125 kahdeksasosanuotille).
+        -   Lisää muita tapahtumia.
       Function intro Ryan: "Työtilassasi on **toiminto** rakenna silta. Se sisältää
         kaiken koodin, jota tarvitset joen ylittämiseen! \\\r\n \\\r\nKorjaa polku
         napsauttamalla pieni vihreä lohko työtilaasi kahdesti ja vie {currentPlayerName}

@@ -519,7 +519,7 @@ hu-HU:
       Dance_Party_extras_alternate_2019: |-
         # Vegyünk fel alakzatot!
 
-        Figyeld ezt a táncot, amely a [blockly block][0] blokkot használja fel a háttértáncosok alakzatának megváltoztatásához a tánc során. Próbáld ki az alábbi ötletek valamelyikét, és fejleszd tovább:
+        Figyeld ezt a táncot, amely a <xml><block type="Dancelab_alternateMoves"><title name="GROUP">sprites</title><title name="N">2</title><title name="MOVE1">MOVES.Roll</title><title name="MOVE2">MOVES.ClapHigh</title></block></xml> blokkot használja fel a háttértáncosok alakzatának megváltoztatásához a tánc során. Próbáld ki az alábbi ötletek valamelyikét, és fejleszd tovább:
 
         -   Hozz létre még egy csoport táncost egy eltérő elrendezésben
         -   Változtasd meg az alakzatot valamely gomb lenyomásával
@@ -553,7 +553,7 @@ hu-HU:
       Dance_Party_extras_every_beat_2019: |-
         # Gyorsítsd fel, lassítsd le
 
-        Ez az utolsó tánc a [blockly block][0] blokk használatával vezérli az egyes táncosok mozgásának gyorsaságát. Kísérletezz különböző sebességekkel a dal különböző időpontjaiban. Nyugodtan matass bele a táncba, vagy térj vissza bármelyik korábbi tánchoz, és tedd még menőbbé.
+        Ez az utolsó tánc a <xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml> blokk használatával vezérli az egyes táncosok mozgásának gyorsaságát. Kísérletezz különböző sebességekkel a dal különböző időpontjaiban. Nyugodtan matass bele a táncba, vagy térj vissza bármelyik korábbi tánchoz, és tedd még menőbbé.
       Dance_Party_extras_layout: |-
         # Álljunk alakzatba!
 
@@ -577,7 +577,7 @@ hu-HU:
       Dance_Party_extras_speed_2019: |-
         # Gyorsítsd fel, lassítsd le
 
-        Ez az utolsó tánc a [blockly block][0] blokk használatával vezérli az egyes táncosok mozgásának gyorsaságát. Kísérletezz különböző sebességekkel a dal különböző időpontjaiban. Nyugodtan matass bele a táncba, vagy térj vissza bármelyik korábbi tánchoz, és tedd még menőbbé.
+        Ez az utolsó tánc a <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> blokk használatával vezérli az egyes táncosok mozgásának gyorsaságát. Kísérletezz különböző sebességekkel a dal különböző időpontjaiban. Nyugodtan matass bele a táncba, vagy térj vissza bármelyik korábbi tánchoz, és tedd még menőbbé.
       Dance_Party_extras_visible: |-
         # Hová tűntek?
 
@@ -587,13 +587,14 @@ hu-HU:
         -   A nyílbillentyűkkel jelenítsd meg és tüntesd el a táncosokat
         -   Tüntesd el az összes táncost, és válts át egy izgalmas háttéreffektre
       Dance_Party_extras_visible_2019: |-
-        # Hová tűntek?
+        # Negyedek
 
-        Ez a tánc két különböző tánccsoportot jelenít meg és tüntet el. Nézd meg, és egészítsd ki a saját ötleteiddel.
+        A táncaink többsége egész ütemeket használt, de mindegyik ütem 4 negyedből áll. Ez a tánc a [blockly block][0] használatával éri el, hogy a táncos minden negyed hangra tapsoljon az 5. ütem után.
 
-        -   Adj hozzá még egy tánccsapatot
-        -   A nyílbillentyűkkel jelenítsd meg és tüntesd el a táncosokat
-        -   Tüntesd el az összes táncost, és válts át egy izgalmas háttéreffektre
+        Próbáld megváltoztatni a számokat a blokkban, és figyeld meg, hogy hogyan változtatja meg a táncot.
+
+        -   Kísérletezz más hanghosszokkal (például 0.5 félhanghoz, vagy 0.125 nyolcad hanghoz).
+        -   Adj hozzá néhány más eseményt is.
       Function intro Ryan: "Egy \"híd építése\" nevű **függvény** van a munkaterületen.
         \ Ebben megtalálható a hídon való átkeléshez szükséges minden kód! \n\nAz
         út kijavításához és hogy {currentPlayerName} játékos eljusson a vöröskő fáklyához,

@@ -414,6 +414,7 @@ ja:
           LAYOUT:
             '"border"': 境界
             '"inner"': 四角の中
+            '"diamond"': ダイヤモンド
             '"circle"': 円
             '"grid"': グリッド
             '"row"': 行

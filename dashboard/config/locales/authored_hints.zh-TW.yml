@@ -743,6 +743,13 @@ zh-TW:
           **可選挑戰**
 
           在 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> 事件之下，連接新的程式積木，以在歌曲期間的不同時間點變更背景效果。
+      Dance_Party_05:
+        validation: |-
+          **如何通過這一關？**
+
+          -   您的舞蹈演員需要在關卡結束之前至少迴圈 4 種不同的舞蹈動作。
+
+          _此關在 12 個小節後結束。_
       Dance_Party_06:
         validation: |-
           **我要怎麼通過這個關卡？**
