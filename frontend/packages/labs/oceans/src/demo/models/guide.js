@@ -265,7 +265,7 @@ const guides = [
   },
   {
     id: 'creaturesvtrash-training-init6',
-    text: `Great work!  The more data you provide A.I. the better it will do.  Keep training A.I. or continue when ready.`,
+    text: `Great work!  The more data you provide A.I., the better it will do.  Keep training A.I. or continue when ready.`,
     when: {
       appMode: AppMode.CreaturesVTrash,
       currentMode: Modes.Training,
