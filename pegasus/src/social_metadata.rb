@@ -27,7 +27,8 @@ def get_social_metadata_for_page(request)
     dance_2019: {path: "/images/social-media/dance-social-2019.png", width: 1200, height: 630},
     hoc_thanks: {path: "/images/hourofcode-2015-video-thumbnail.png", width: 1440, height: 900},
     hoc_2019_social: {path: "/shared/images/social-media/hoc2019_social.png", width: 1200, height: 630},
-    oceans: {path: "images/social-media/oceans_social.png", width: 1200, height: 630}
+    oceans: {path: "/shared/images/social-media/oceans_social.png", width: 1200, height: 630},
+    codeorg2019_social: {path: "/shared/images/social-media/codeorg2019_social.png", width: 1200, height: 630}
   }
 
   # Important:
@@ -38,32 +39,32 @@ def get_social_metadata_for_page(request)
       "soon-hoc" => {
         title: hoc_s(:hoc2019_header),
         description: hoc_s(:social_hoc2019_every_sudent),
-        image: images[:hoc_2019_social]
+        image: images[:codeorg2019_social]
       },
       "soon-hoc-mc" => {
         title: hoc_s(:hoc2019_header),
         description: hoc_s(:social_hoc2019_every_sudent),
-        image: images[:hoc_2019_social]
+        image: images[:codeorg2019_social]
       },
       "soon-hoc-dance" => {
         title: hoc_s(:hoc2019_header),
         description: hoc_s(:social_hoc2019_every_sudent),
-        image: images[:hoc_2019_social]
+        image: images[:codeorg2019_social]
       },
       "actual-hoc" => {
         title: I18n.t(:og_title_here),
         description: hoc_s(:social_hoc2019_learn_computer_science),
-        image: images[:hoc_2019_social]
+        image: images[:codeorg2019_social]
       },
       "actual-hoc-dance" => {
         title: I18n.t(:og_title_here),
         description: hoc_s(:social_hoc2019_learn_computer_science),
-        image: images[:hoc_2019_social]
+        image: images[:codeorg2019_social]
       },
       "default" => {
         title: hoc_s(:hoc2019_header),
         description: hoc_s(:social_hoc2019_every_sudent),
-        image: images[:hoc_2019_social]
+        image: images[:codeorg2019_social]
       }
     },
     "csedweek.org" => {
