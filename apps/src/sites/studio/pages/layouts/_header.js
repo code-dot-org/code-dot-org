@@ -22,12 +22,10 @@ document.querySelectorAll('.headerlink').forEach(link => {
     console.log(event);
     console.log(event.target.id);
     event.preventDefault();
-    firehoseClient.putRecord(
-      {
-        study: 'navigation_bar_trial_1',
-        event: event.id
-      },
-      {alwaysPut: true} // For testing purposes to confirm data is logged to firehose.  Remove before merging PR
-    );
+    firehoseClient.putRecord({
+      study: 'navigation_bar_not_on_the_edge',
+      event: event.target.dataset.linkTitle,
+      data_json: event.target.dataset.secondaryLink
+    });
   });
 });
