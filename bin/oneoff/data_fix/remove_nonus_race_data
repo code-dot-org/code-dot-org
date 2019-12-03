@@ -8,18 +8,36 @@
 require_relative '../../../dashboard/config/environment'
 
 # We specifically care about users that:
+#
 # 1. Have race data and
 # 2. Have either:
 #     a. a blank geoloc (cleared out in FND-592) or
 #     b. have been geolocated to outside the US (they've been re-geolocated
 #     since their IP/geoloc was cleared out in FND-592).
-have_race = User.with_deleted.includes(:user_geos).where.not(races: nil)
+#
+# We therefore gather the list of users to be updated with:
+#
+# have_race = User.with_deleted.includes(:user_geos).where.not(races: nil)
+# affected_users = have_race.
+#   where(user_geos: {id: nil}).
+#   or(have_race.where.not(user_geos: {country: "United States"}))
+#
+# Or, equivalently, with:
+#
+# SELECT users.id
+# FROM   users
+#        LEFT OUTER JOIN user_geos
+#                     ON user_geos.user_id = users.id
+# WHERE  ( users.races IS NOT NULL
+#          AND ( user_geos.id IS NULL
+#                 OR user_geos.country != 'United States' ) )
+#
+# The resulting user ids then should be put into a file, whose path should be
+# passed as the first argument to this script.
+File.readlines(ARGV[0]).each do |line|
+  id = line.to_i
+  user = User.find_by_id(id)
 
-affected_users = have_race.
-  where(user_geos: {id: nil}).
-  or(have_race.where.not(user_geos: {country: "United States"}))
-
-affected_users.find_each do |user|
   # we can ignore users who have not signed in since the proxies list was
   # updated prior to https://github.com/code-dot-org/code-dot-org/pull/28635
   old_account = user.current_sign_in_at.present? &&
@@ -36,12 +54,11 @@ affected_users.find_each do |user|
       teacher.within_united_states? ||
         teacher.user_school_infos.any? {|usi| usi.school_info.usa?}
     end
-
   next if has_us_teacher
 
   user.races = nil
   user.save!
-  puts("user #{user.id} - success")
+  puts("#{line} - success")
 rescue
-  puts("user #{user.id} - ERROR - other")
+  puts("#{line} - ERROR - other")
 end
