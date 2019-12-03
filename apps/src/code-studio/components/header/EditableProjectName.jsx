@@ -7,6 +7,7 @@ import {connect} from 'react-redux';
 
 import ProjectUpdatedAt from './ProjectUpdatedAt';
 import {refreshProjectName} from '../../headerRedux';
+import NameFailureDialog from '../NameFailureDialog';
 
 const styles = {
   buttonWrapper: {
@@ -114,6 +115,16 @@ class UnconnectedEditProjectName extends React.Component {
         >
           {i18n.save()}
         </div>
+        <NameFailureDialog
+          flaggedText={
+            this.state.projectNameFailure &&
+            this.state.projectNameFailure.content
+          }
+          isOpen={!!this.state.projectNameFailure}
+          handleClose={() => {
+            this.setState({projectNameFailure: undefined});
+          }}
+        />
       </div>
     );
   }

@@ -1,17 +1,21 @@
-/* global dashboard */
-
 import PropTypes from 'prop-types';
 import React from 'react';
 import Dialog, {Body} from '@cdo/apps/templates/Dialog';
 
 export default class NameFailureDialog extends React.Component {
   static propTypes = {
-    flaggedText: PropTypes.string.isRequired
+    flaggedText: PropTypes.string,
+    isOpen: PropTypes.bool.isRequired,
+    handleClose: PropTypes.func.isRequired
   };
 
   render() {
     return (
-      <Dialog title="Unable to rename project">
+      <Dialog
+        title="Unable to rename project"
+        isOpen={this.props.isOpen}
+        handleClose={this.props.handleClose}
+      >
         <Body>
           <p>
             It appears that your project name contains inappropriate language or
