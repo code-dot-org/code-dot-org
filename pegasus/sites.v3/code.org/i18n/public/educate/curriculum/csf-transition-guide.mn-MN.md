@@ -77,22 +77,22 @@ style_min: true
 ## Хичээлийн Хязгаарлалт, Дасгалууд (Бүх Нас)
 A-F хөтөлбөрүүд нь өмнөх хөтөлбөртэй харьцуулахад хязгаарлалт багатай.  Энэ нь сурагчидад аль болох эрт өөрсдөө кодоо зохиож бичихэд нь туслах бөгөөд алдаа засах зэрэг онцгой тохиолдолд л хязгаарлалт орно.  Энэ хэв маягын дагуу ихэнхи онлайн хичээлүүд нь эхлээд энгийн дасгалыг танилцуулж дараа аажмаар илүү төвөгтэй ойлголтуудыг нэвтрүүлж улмаар сурагчид уг ойлголтыг сууриар нь бүрэн ойлгоход туслана.  Дараа нь сурагчдыг дасгалтай ажиллуулах бөгөөд энэ нь тэдэнд тухайн ойлголтыг шинэ, илүү төвөгтэй өнцгөөр харж ойлгоход нь туслана.
 
-A-F хөтөлбөрт дасгалууд нь шинэчлэгдсэн байгаа.  Эдгээр дасгалуудын зорилго нь сурагчдыг тууштай байлгаж бие даан сэтгэх чадварт сургах юм.  Дасгалууд нь зориуд хүнд хийгдсэн бөгөөд тухайн ойлголтыг бүрэн ойлгосон сурагчид л эдгээр дасгалуудыг зохих цагт нь хийж дуусахаар хийгдсэн байгаа.  Энэ нь маш олон сурагчид эхэн үедээ дасгалуудыг амжилттай хийж чадахгүй байна гэсэн үг юм. This requires a particular attitude from both student and teacher to pull off.
+A-F хөтөлбөрт дасгалууд нь шинэчлэгдсэн байгаа.  Эдгээр дасгалуудын зорилго нь сурагчдыг тууштай байлгаж бие даан сэтгэх чадварт сургах юм.  Дасгалууд нь зориуд хүнд хийгдсэн бөгөөд тухайн ойлголтыг бүрэн ойлгосон сурагчид л эдгээр дасгалуудыг зохих цагт нь хийж дуусахаар хийгдсэн байгаа.  Энэ нь маш олон сурагчид эхэн үедээ дасгалуудыг амжилттай хийж чадахгүй байна гэсэн үг юм. Энэ хичээлийн үед багш болон сурагчид дараах зан төлвийг эзэмшсэн байх хэрэгтэй.
 
-1. Students should give these challenges a hearty try, then put them aside and carry on.  That practice allows for two very important things to happen:
-2. Students gain a better understanding of when and why to use the concept being studied. The following puzzles feel easier after the challenge, even though they are serious puzzles in their own right.
+1. Сурагчид эдгээр дасгалуудыг хийх гэж оролдоод чадахгүй нөхцөлд орхиж дараагийн дасгалыг хийнэ.  Ингэснээр дараах маш чухал зүйлд тус болно:
+2. Сурагчид тухайн ойлголтыг хэзээ, ямар зорилгоор ашиглаж байгааг илүү сайн ойлгоно. Тэгснээр дараагийн дасгалууд нь хүнд байсан ч ойлголтуудыг мэдэж авсан тул ажиллахад илүү хялбар болно.
 
-Keep in mind that students can go through lessons and reattempt incomplete puzzles at any time.  Sometimes it can be quite helpful to get a good night’s sleep before revisiting a tough problem.
+Сурагчид хийгээгүй болон дутуу орхисон дасгалуудаа хэзээ эргэж ороод ажиллах боломжтой.  Зарим тохиолдолд хэцүү асуудалтай тулгарсан үед амарсны дараагаар ажиллахад илүү хялбар болсон байдаг.
 
-Once students make it past the challenge, they will find a handful of exercises waiting for them that are similar to what they may have experienced in the first half of the stage. These puzzles were placed intentionally to test a student’s clarity on the subject being studied.  They might seem far too easy, given the puzzles that were experienced beforehand, but they were created to demonstrate the exact level of competence desired from the corresponding stage.
+Сурагчид эхний дасгалуудыг амжилттай хийсний дараа, дунд хэсгүүдэд тэдний өмнө ажилласантай төстэй хэд хэдэн дасгалууд дахин гарч ирэх болно. Эдгээр дасгалуудыг сурагчдын тухайн дасгалыг ойлгосон эсэхийг шалгах зорилгоор байршуулсан юм.  Өмнө нь ажилласан тул эдгээр дасгалууд нь хэтэрхий амархан мэт санагдаж болох ч угийн энэхүү дасгалуудын зорилго нь сурагч ямар ч төвөггүйгээр ажиллаж чадаж байгааг нь шалгах юм.
 
-In some instances, we end our lessons with free-play style levels.  These levels might either have no “wrong” answer, or they might allow several different ways to solve their core problem.  Please encourage students to give them their best shot and not just click “Continue” even though they can.
+Зарим тохиолдолд хичээлүүдийн төгсгөлд бүтээлчээр ажиллах дасгалууд байгаа.  Эдгээр дасгалуудад "буруу" хариулт байхгүй, эсвэл асуудлыг шийдэж болох хэд хэдэн арга, аргачлал байдаг.  Хэдийгээр сурагчид эдгээр дасгалуудыг шууд алгасах боломжтой ч тэднийг аль болох өөрийн чадлаараа, бүтээлчээр хийгээд үзэхийг зөвлөөрэй.
 
-Some final notes for this area:
+Энэ хэсэгт зориулсан чухал аргууд:
 
-* Remind students to be persistent and use their debugging skills on problems that feel tough.
-* Videos are often helpful.  When students get stuck, have them rewatch the video a second, third, or even fourth time.
-* Require students to read the instructions.  If they are having a hard time, let them read the instructions out loud to a classmate.
+* Сурагчдыг тууштай байж хэцүү асуудлуудыг алдаа засах чадвараа ашиглан шийдэхийг зөвлөөрэй.
+* Видео бичлэгүүд заримдаа тус болно.  Сурагчид хийж чадахгүй болох үед тэдэнд бичлэгийг хэд хэдэн удаа давтан үзүүлж болно.
+* Сурагчдаар зааварчилгааг уншуул.  Сурагчид хийж чадахгүй байвал зааварчилгааг ангийнхандаа чангаар уншуул.
 * It’s okay to use hints!  Students should use as many hints as they need, but be sure to attempt re-solving the puzzle at least one between each new offering.
 
 <a id="unplugged"></a>
