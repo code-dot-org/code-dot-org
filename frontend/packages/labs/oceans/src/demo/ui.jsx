@@ -1431,6 +1431,7 @@ let Pond = class Pond extends React.Component {
                 <Button
                   style={styles.playAgainButton}
                   onClick={() => {
+                    setState({pondClickedFish: null, pondPanelShowing: false});
                     resetTraining(state);
                     toMode(Modes.Words);
                   }}
