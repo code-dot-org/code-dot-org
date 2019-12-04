@@ -22,6 +22,7 @@ pl:
       messages:
         blank: "jest wymagane"
         blank_plural: "są wymagane"
+        invalid: "jest nieprawidłowy"
         invalid_plural: "są niepoprawne"
     attributes:
       user:
@@ -39,6 +40,9 @@ pl:
         age: 'Wiek'
         gender: 'Płeć'
         edit_header: 'Edytuj dane konta'
+        finish_sign_up_header: 'Zakończ tworzenie swojego konta'
+        finish_sign_up_subheader: 'Wypełnij poniższe informacje, aby zakończyć tworzenie konta Code.org dla <strong>%{email}</strong>.'
+        finish_sign_up_subheader_markdown: 'Wypełnij poniższe informacje, aby zakończyć tworzenie konta Code.org dla **%{email}**.'
         finish_sign_up_subheader_provider: 'Wypełnij poniższe informacje, aby zakończyć tworzenie konta Code.org z <strong>%{provider}</strong> <strong>%{email}</strong>.'
         finish_sign_up_subheader_provider_markdown: 'Wypełnij poniższe informacje, aby zakończyć tworzenie konta Code.org z **%{provider}** **%{email}**.'
         error:
@@ -264,14 +268,14 @@ pl:
         personal_login_created_username: 'Udało ci się utworzyć osobisty login. Teraz możesz zalogować się do swojego konta używając swojej nazwy użytkownika (%{username}) i hasła'
   nav:
     header:
-      finished_hoc: "Skończyłem moją Godzinę Kodowania (Hour of Code)"
+      finished_hoc: "Skończyłem!"
       sign_in_to_save: 'Zaloguj się, by zapisać postępy'
       my_dashboard: "Mój pulpit"
       course_catalog: "Katalog Kursów"
       project_gallery: "Galeria Projektów"
       sections: "Sekcje"
       help_support: "Pomoc i wsparcie"
-      report_bug: "Zgłoś błąd"
+      report_bug: "Zgłosić problem"
       teacher_community: "Społeczność nauczycieli"
       professional_learning: "Kształcenia Profesjonalne"
       documentation: "Dokumentacja"

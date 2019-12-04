@@ -46,7 +46,7 @@ pl:
             MOVES.Thriller: Zombie
             MOVES.Rest: Żaden
       Dancelab_atTimestamp:
-        text: po {TIMESTAMP} {UNIT}
+        text: po {TIMESTAMP} taktach {UNIT}
         options:
           UNIT:
             '"measures"': takty
@@ -374,6 +374,7 @@ pl:
             '"plus"': plus
             '"random"': losowy
       Dancelab_makeAnonymousDanceSprite:
+        text: stwórz nowego {COSTUME} w {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': obcy
@@ -469,10 +470,15 @@ pl:
           LAYOUT:
             '"border"': brzeg
             '"inner"': wewnątrz kwadratu
+            '"diamond"': diament
             '"circle"': koło
             '"grid"': siatka
+            '"top"': górny wiersz
             '"row"': rząd
+            '"bottom"': dolny wiersz
+            '"left"': lewa kolumna
             '"column"': kolumna
+            '"right"': prawa kolumna
             '"x"': krzyż
             '"plus"': plus
             '"random"': losowy
@@ -1139,6 +1145,7 @@ pl:
             '"y"': współrzędna y
             '"direction"': kierunku ruchu
       Mikelab_groupChangeAnim:
+        text: zmień {SELECT} {COSTUME} na {COSTUME2}
         options:
           SELECT:
             '"all"': wszystkie
@@ -1153,6 +1160,7 @@ pl:
             '"y"': współrzędna y
             '"direction"': kierunku ruchu
       Mikelab_groupCreateNewSprite:
+        text: stwórz nowego {COSTUME} w {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": u góry
@@ -1220,6 +1228,18 @@ pl:
             MOVES.ThisOrThat: This or That
             MOVES.Thriller: Zombie
             MOVES.Rest: Żaden
+      Mikelab_ifLabel:
+        text: |-
+          jeśli {DANCE}
+          wykonaj {DO1} w przeciwnym razie {DO2}
+      Mikelab_ifRecognizeLabel:
+        text: |-
+          jeśli wykryty obiekt to {DANCE}
+          wykonaj {DO1} w przeciwnym razie {DO2}
+      Mikelab_ifRecognizeLabelOnly:
+        text: |-
+          jeśli wykryty obiekt to {DANCE}
+          wykonaj {DO1}
       Mikelab_randomColor:
         text: losowy kolor
       Mikelab_repeatUntilComplete:

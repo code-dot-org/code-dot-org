@@ -272,7 +272,7 @@ pl:
         loop_while: Blok dopóki
         loop_for: Blok licznika
         parameters: Funkcje z parametrami
-        hoc_wrapup: Wrapup Godziny Kodowania (Hour of Code)
+        hoc_wrapup: Zakończenie Godziny Kodowania
         Unplug1: Co to jest CS (informatyka)?
         Unplug2: Myślenie komputacyjne
         Unplug3: Programowanie na papierze milimetrowym
@@ -449,11 +449,11 @@ pl:
         mc_2016_events: Minecraft w Godzinie Kodowania - Zdarzenia
         mc_2016_spawn: Minecraft w Godzinie Kodowania - Spawn
         mc_2016_congrats: Minecraft w Godzinie Kodowania - Gratulacje
-        applab_hoc_welcome: Godzina Kodowania w App Lab - Witamy
-        applab_hoc_setproperty: Godzina Kodowania w App Lab - ustawWłaściwość
-        applab_hoc_onevent: Godzina Kodowania w App Lab - wReakcjiNaZdarzenie
-        applab_hoc_designmode: Godzina Kodowania w App Lab - Tryb projektowania
-        applab_hoc_share: Godzina Kodowania w App Lab - Udostępnij
+        applab_hoc_welcome: Godzina Kodowania z App Lab - Witamy
+        applab_hoc_setproperty: Godzina Kodowania z App Lab - ustawWłaściwość
+        applab_hoc_onevent: Godzina Kodowania z App Lab - wReakcjiNaZdarzenie
+        applab_hoc_designmode: Godzina Kodowania z App Lab - Tryb projektowania
+        applab_hoc_share: Godzina Kodowania z App Lab - Udostępnij
         mc_2017_agent_intro: Godzina Kodowania Minecraft - Agent
         mc_2017_repeat: Godzina Kodowania Minecraft - Pętle Powtórz
         mc_2017_functions: Godzina Kodowania Minecraft - Funkcje
@@ -508,11 +508,17 @@ pl:
         hoc_dance_warmup: Potańcówka - Rozgrzewka
         hoc_dance_events: Potańcówka - Zdarzenia
         hoc_dance_properties: Potańcówka - Właściwości
+        hoc_dance_congrats: Potańcówka - Rozpoczynamy!
         csd_pair_programming: Programowanie w parach
         csd_applab_parameters: Funkcje z parametrami
         csd_problem_solving_process: Proces Rozwiązywania Problemów
         CSF_SpriteLab_SpritesInAction_v2: Duszki w akcji
         csd_debugging: Debugowanie
+        hoc_dance_congrats_2019: Potańcówka 2019 - Rozpoczynamy!
+        hoc_dance_warmup_2019: Potańcówka 2019 - Rozgrzewka
+        hoc_dance_events_2019: Potańcówka 2019 - Zdarzenia
+        hoc_dance_measures_2019: Potańcówka 2019 - Takty
+        hoc_dance_properties_2019: Potańcówka 2019 - Właściwości
     callout:
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku
