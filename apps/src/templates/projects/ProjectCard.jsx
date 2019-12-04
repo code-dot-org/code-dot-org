@@ -121,7 +121,7 @@ export default class ProjectCard extends React.Component {
           </div>
           <a
             style={styles.titleLink}
-            href={url}
+            href={studio(url)}
             target={isPublicGallery ? '_blank' : undefined}
           >
             <div
