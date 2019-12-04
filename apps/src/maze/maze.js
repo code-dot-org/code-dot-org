@@ -31,7 +31,7 @@ const tiles = maze.tiles;
 const createResultsHandlerForSubtype = require('./results/utils')
   .createResultsHandlerForSubtype;
 
-const MOBILE_PORTRAIT_WIDTH = 600;
+const MOBILE_PORTRAIT_WIDTH = 700;
 
 module.exports = class Maze {
   constructor() {
@@ -217,10 +217,12 @@ module.exports = class Maze {
     // by calling fixViewportForSpecificWidthForSmallScreens_ after the init is
     // finished.
     var viewport = document.querySelector('meta[name="viewport"]');
-    studioApp().fixViewportForSpecificWidthForSmallScreens_(
-      viewport,
-      MOBILE_PORTRAIT_WIDTH
-    );
+    if (viewport) {
+      studioApp().fixViewportForSpecificWidthForSmallScreens_(
+        viewport,
+        MOBILE_PORTRAIT_WIDTH
+      );
+    }
   }
 
   /**
