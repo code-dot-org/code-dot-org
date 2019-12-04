@@ -181,8 +181,8 @@ module CourseBlockHelper
       },
       Script::OCEANS_NAME => {
         url: CDO.code_org_url('/oceans'),
-        title: 'AI for Oceans',
-        body: 'Learn about machine learning and ethical use of AI. #CSforGood'
+        title: data_t_suffix('script.name', id, 'title'),
+        body: data_t_suffix('script.name', id, 'description_short')
       }
     }
 
