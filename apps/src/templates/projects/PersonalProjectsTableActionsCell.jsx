@@ -14,6 +14,7 @@ import {
   remix
 } from './projectsRedux';
 import {showDeleteDialog} from './deleteDialog/deleteProjectDialogRedux';
+import NameFailureDialog from '../../code-studio/components/NameFailureDialog';
 
 export const styles = {
   xIcon: {
@@ -33,6 +34,10 @@ class PersonalProjectsTableActionsCell extends Component {
     cancelRenamingProject: PropTypes.func.isRequired,
     saveProjectName: PropTypes.func.isRequired,
     remix: PropTypes.func.isRequired
+  };
+
+  state = {
+    projectNameFailure: undefined
   };
 
   onDelete = () => {
@@ -109,6 +114,16 @@ class PersonalProjectsTableActionsCell extends Component {
             />
           </div>
         )}
+        <NameFailureDialog
+          flaggedText={
+            this.state.projectNameFailure &&
+            this.state.projectNameFailure.content
+          }
+          isOpen={!!this.state.projectNameFailure}
+          handleClose={() => {
+            this.setState({projectNameFailure: undefined});
+          }}
+        />
       </div>
     );
   }
