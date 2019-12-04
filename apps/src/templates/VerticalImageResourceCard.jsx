@@ -125,7 +125,8 @@ class VerticalImageResourceCard extends Component {
       maker: require('@cdo/static/resource_cards/maker.png'),
       'dance-party': require('@cdo/static/resource_cards/danceparty.png'),
       'dance-party-2': require('@cdo/static/resource_cards/danceparty2.png'),
-      'dance-party-2-2019': require('@cdo/static/resource_cards/danceparty2-2019.png')
+      'dance-party-2-2019': require('@cdo/static/resource_cards/danceparty2-2019.png'),
+      'dance-party-sloth-2019': require('@cdo/static/resource_cards/danceparty-sloth-2019.png')
     };
     const imgSrc = filenameToImgUrl[image];
 
