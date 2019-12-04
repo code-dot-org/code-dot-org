@@ -4,6 +4,7 @@ import {init as initTraining} from './train';
 import {init as initPredicting} from './predict';
 import {init as initPond} from './pond';
 import {Modes} from '../constants';
+import {setPageAndSendPageview} from '../helpers';
 
 // Initialize a model (if that model has an `init` method) based on mode.
 // Should only be called when mode changes.
@@ -27,20 +28,15 @@ export const init = state => {
   }
 
   // Report a synthetic pageview to Google Analytics.
-  if (window.ga) {
-    const modeToPage = {
-      [Modes.Loading]: 'loading',
-      [Modes.Words]: 'words',
-      [Modes.Training]: 'training',
-      [Modes.Predicting]: 'predicting',
-      [Modes.Pond]: 'pond',
-      [Modes.Instructions]: 'instructions',
-      [Modes.IntermediateLoading]: 'intermediateLoading'
-    };
-
-    const syntheticPagePath =
-      window.location.pathname + '/' + modeToPage[state.currentMode];
-    window.ga('set', 'page', syntheticPagePath);
-    window.ga('send', 'pageview');
+  const modeToPage = {
+    [Modes.Loading]: 'loading',
+    [Modes.Words]: 'words',
+    [Modes.Training]: 'training',
+    [Modes.Pond]: 'pond',
+    [Modes.Instructions]: 'instructions'
+  };
+  const page = modeToPage[state.currentMode];
+  if (window.ga && page) {
+    setPageAndSendPageview(page);
   }
 };
