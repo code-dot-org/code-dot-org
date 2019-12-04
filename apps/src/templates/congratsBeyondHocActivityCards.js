@@ -150,7 +150,8 @@ export const cardSets = {
   ],
   signedInApplabCards: [ApplabProject, ApplabMarketing, AnotherHoC],
   signedOutApplabCards: [ApplabMarketing, CreateAccountApplab, ApplabProject],
-  signedInDefaultCards: [CSFExpress, DanceParty, AnotherHoC],
+  signedInDefaultCards: [CSFExpress, ApplabTutorial, AnotherHoC],
+  youngerThan13DefaultCards: [CSFExpress, DanceParty, AnotherHoC],
   signedInNonEnglishDefaultCards: [CSFAccelerated, CourseCatalog, AnotherHoC],
   signedOutDefaultCards: [CSFExpress, DanceParty, CreateAccount],
   signedOutNonEnglishDefaultCards: [
