@@ -3,6 +3,7 @@ hu:
   data:
     blocks:
       Dancelab_alternateMoves:
+        text: "{GROUP} váltakozik {N} ütemenként \n{MOVE1} és {MOVE2} között"
         options:
           GROUP:
             sprites: összes
@@ -16,6 +17,7 @@ hu:
             '"PINEAPPLE"': összes ananász
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
+            '"SLOTH"': lajhárok
             '"UNICORN"': Egyszarvúak
           MOVE1:
             MOVES.Roll: Testforgás
@@ -69,6 +71,7 @@ hu:
             '"PINEAPPLE"': összes ananász
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
+            '"SLOTH"': lajhárok
             '"UNICORN"': összes egyszarvú
           MOVE:
             '"next"': "(Következő)"
@@ -120,6 +123,7 @@ hu:
             '"x"': vízszintes helyzet
             '"y"': függőleges helyzet
       Dancelab_changePropEachBy:
+        text: change {GROUP} {PROPERTY} módosítása {VAL} értékkel
         options:
           GROUP:
             sprites: összes
@@ -133,6 +137,7 @@ hu:
             '"PINEAPPLE"': összes ananász
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
+            '"SLOTH"': lajhárok
             '"UNICORN"': Egyszarvúak
           PROPERTY:
             '"scale"': méret
@@ -156,6 +161,7 @@ hu:
             '"PINEAPPLE"': összes ananász
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
+            '"SLOTH"': lajhárok
             '"UNICORN"': Egyszarvúak
           MOVE:
             '"rand"': "(Véletlen)"
@@ -216,6 +222,8 @@ hu:
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_everyMeasuresRange:
+        text: 'ismételd meg {N} ütemenként {START} után '
       Dancelab_everySeconds:
         text: 'minden {N} {UNIT} '
         options:
@@ -302,6 +310,7 @@ hu:
             "{x: 300, y: 300}": jobbra lent
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": véletlen
       Dancelab_jumpToEach:
+        text: "{GROUP} ugorjon ide: {LOCATION}"
         options:
           GROUP:
             sprites: összes
@@ -315,6 +324,7 @@ hu:
             '"PINEAPPLE"': összes ananász
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
+            '"SLOTH"': lajhárok
             '"UNICORN"': Egyszarvúak
           LOCATION:
             "{x: 200, y: 100}": fent
@@ -342,6 +352,7 @@ hu:
             '"PINEAPPLE"': összes ananász
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
+            '"SLOTH"': lajhárok
             '"UNICORN"': Egyszarvúak
           FORMAT:
             '"border"': határ
@@ -367,6 +378,7 @@ hu:
             '"PINEAPPLE"': Ananász
             '"ROBOT"': robot
             '"SHARK"': Cápa
+            '"SLOTH"': lajhár
             '"UNICORN"': unikornis
           LOCATION:
             "{x: 200, y: 100}": fent
@@ -395,6 +407,7 @@ hu:
             '"PINEAPPLE"': Ananász
             '"ROBOT"': Robot
             '"SHARK"': Cápa
+            '"SLOTH"': lajhár
             '"UNICORN"': Egyszarvú
           LOCATION:
             "{x: 200, y: 100}": fent
@@ -443,14 +456,20 @@ hu:
             '"PINEAPPLE"': Ananászok
             '"ROBOT"': Robotok
             '"SHARK"': Cápák
+            '"SLOTH"': lajhárok
             '"UNICORN"': Egyszarvúak
           LAYOUT:
             '"border"': határ
             '"inner"': belső négyzet
+            '"diamond"': gyémánt
             '"circle"': kör
             '"grid"': rács
+            '"top"': felső sor
             '"row"': sor
+            '"bottom"': alsó sor
+            '"left"': bal oszlop
             '"column"': oszlop
+            '"right"': jobb oszlop
             '"x"': keresztezés
             '"plus"': plusz
             '"random"': véletlen
@@ -507,22 +526,29 @@ hu:
             '"none"': Egyik sem
             '"rand"': "(Véletlen)"
             '"circles"': Alagút
+            '"quads"': Sokszögek
             '"color_cycle"': Színek
             '"diamonds"': Gyémántok
             '"disco_ball"': Diszkógömb
             '"fireworks"': Tűzijáték
+            '"flowers"': Virágok
+            '"growing_stars"': Növekvő csillagok
             '"swirl"': Hipnó
             '"kaleidoscope"': Kaleidoszkóp
             '"lasers"': Lézer táncparkett
             '"splatter"': Festékfröccsenés
             '"rainbow"': Szivárvány
+            '"ripples_random"': Véletlenszerű lüktetés
+            '"ripples"': Lüktetés
             '"snowflakes"': Hó
             '"text"': Dalcím
+            '"squiggles"': Kígyóvonalak
             '"galaxy"': Világűr
             '"sparkles"': Ragyogás
             '"spiral"': Spirál
             '"disco"': Négyzetek
             '"stars"': Csillagok
+            '"music_wave"': Hullámok
           PALETTE:
             '"rave"': Fekete-fehér
             '"cool"': Kékek
@@ -557,6 +583,7 @@ hu:
             '"PINEAPPLE"': összes ananász
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
+            '"SLOTH"': lajhárok
             '"UNICORN"': Egyszarvúak
           SPEED:
             '1': normál
@@ -589,9 +616,12 @@ hu:
             '"none"': Egyik sem
             '"rand"': "(Véletlen)"
             '"bubbles"': Buborékok
+            '"hearts_colorful"': Színes szívek
             '"confetti"': Konfetti
+            '"emojis"': Emojik
             '"hearts_red"': Szívek
             '"music_notes"': Hangjegyek
+            '"paint_drip"': Festékcseppek
             '"pineapples"': Ananászok
             '"pizzas"': Pizzák
             '"smiling_poop"': Kaki
@@ -600,6 +630,7 @@ hu:
             '"smile_face"': Mosolyok
             '"spotlight"': Reflektorfény
             '"color_lights"': Színpadi fények
+            '"exploding_stars"': Csillagrobbanás
             '"raining_tacos"': Taco
       Dancelab_setProp:
         text: "{SPRITE} {PROPERTY} tulajdonságának beállítása: {VAL} "
@@ -626,6 +657,7 @@ hu:
             '"PINEAPPLE"': összes ananász
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
+            '"SLOTH"': lajhárok
             '"UNICORN"': Egyszarvúak
           PROPERTY:
             '"scale"': méret
@@ -647,6 +679,7 @@ hu:
             '"y"': függőleges helyzet
             '"tint"': árnyalat
       Dancelab_setPropRandomEach:
+        text: "{GROUP} {PROPERTY} véletlenszerűsítése"
         options:
           GROUP:
             sprites: összes
@@ -660,6 +693,7 @@ hu:
             '"PINEAPPLE"': összes ananász
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
+            '"SLOTH"': lajhárok
             '"UNICORN"': Egyszarvúak
           PROPERTY:
             '"scale"': méret
@@ -686,6 +720,7 @@ hu:
             '"PINEAPPLE"': összes ananász
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
+            '"SLOTH"': lajhárok
             '"UNICORN"': Egyszarvúak
       Dancelab_setTintEachInline:
         text: 'állítsd {THIS} árnyalat: {VAL}'
@@ -702,6 +737,7 @@ hu:
             '"PINEAPPLE"': összes ananász
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
+            '"SLOTH"': lajhárok
             '"UNICORN"': Egyszarvúak
       Dancelab_setTintInline:
         text: "{SPRITE} árnyalatának beállítása: {VAL}"
@@ -726,6 +762,7 @@ hu:
             '"PINEAPPLE"': összes ananász
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
+            '"SLOTH"': lajhárok
             '"UNICORN"': Egyszarvúak
           VISIBILITY:
             'true': látható
@@ -746,6 +783,7 @@ hu:
             '"mid"': közepes
             '"treble"': magas
       Dancelab_startMappingEach:
+        text: "{GROUP} elkezdi ezt: {PROPERTY} a {RANGE} alapján"
         options:
           GROUP:
             sprites: összes
@@ -759,6 +797,7 @@ hu:
             '"PINEAPPLE"': összes ananász
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
+            '"SLOTH"': lajhárok
             '"UNICORN"': Egyszarvúak
           PROPERTY:
             '"scale"': méret
@@ -789,6 +828,7 @@ hu:
             '"mid"': közepes
             '"treble"': magas
       Dancelab_stopMappingEach:
+        text: "{GROUP} leállítja ezt: {PROPERTY} {RANGE} alapján"
         options:
           GROUP:
             sprites: összes
@@ -802,6 +842,7 @@ hu:
             '"PINEAPPLE"': összes ananász
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
+            '"SLOTH"': lajhárok
             '"UNICORN"': Egyszarvúak
           PROPERTY:
             '"scale"': méret
@@ -817,10 +858,33 @@ hu:
             '"mid"': közepes
             '"treble"': magas
       Dancelab_translateStrings:
+        text: "{STRING} fordítása"
         options:
           STRING:
+            '"music_wave"': Hullámok
+            '"ripples"': Lüktetés
+            '"ripples_random"': Véletlenszerű lüktetés
+            '"quads"': Sokszögek
+            '"flowers"': Virágok
+            '"popsicles"': Nyalókák
+            '"squiggles"': Kígyóvonalak
+            '"growing_stars"': Növekvő csillagok
+            '"emojis"': Emojik
             '"hearts_colorful"': Szívek
+            '"paint_drio"': Festékcseppek
+            '"exploding_stars"': Csillagrobbanás
+            '"row_top"': felső sor
+            '"row_bottom"': alsó sor
+            '"column_left"': bal oszlop
+            '"column_right"': jobb oszlop
             '"diamond"': gyémánt
+            '"mural"': Falfestmény
+            '"safari"': Szafari
+            '"network"': Hálózat
+            '"highway"': Autópálya
+            '"stream"': Áramlás
+            '"tile"': Csempe
+            '"shadow"': Árnyék
             '"s"': s
             '"t"': t
             '"u"': u
@@ -829,6 +893,16 @@ hu:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenKey:
         text: "{KEY} lenyomásakor"
         options:
@@ -840,7 +914,12 @@ hu:
             '"space"': szóköz
             '"enter"': enter
             '"a"': a
+            '"b"': b
+            '"c"': c
             '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
             '"h"': h
             '"i"': i
             '"j"': j
@@ -850,6 +929,7 @@ hu:
             '"n"': 'n'
             '"o"': o
             '"p"': p
+            '"q"': q
             '"r"': r
             '"s"': s
             '"t"': t
@@ -859,6 +939,16 @@ hu:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenPeak:
         text: "{RANGE} csúcsértékekor"
         options:
@@ -932,7 +1022,12 @@ hu:
             '"right"': jobbra
             '"space"': világűr
             '"a"': a
+            '"b"': b
+            '"c"': c
             '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
             '"h"': h
             '"i"': i
             '"j"': j
@@ -942,6 +1037,7 @@ hu:
             '"n"': 'n'
             '"o"': o
             '"p"': p
+            '"q"': q
             '"r"': r
             '"s"': s
             '"t"': t
