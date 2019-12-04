@@ -99,6 +99,30 @@ theme: responsive
 
   = view :resource_boxes, resources: resources
 
+  :css
+    .microsoft-partnership {
+      font-size: 24px;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .microsoft-thanks {
+      font-size: 14px;
+      text-align: center;
+      padding-top: 20px;
+      margin-bottom: 85px;
+      margin-left: 18%;
+      margin-right: 18%;
+    }
+
+  .microsoft-partnership
+    = I18n.t(:hoc2018_mc_with_microsoft)
+    &nbsp;
+    %img{src: "images/fit-240/avatars/microsoft.jpg"}
+
+  .microsoft-thanks
+    = I18n.t(:hoc2018_mc_thank_microsoft)
+
   = view :ai_videos
 
   = view :ai_ml_resources_table

@@ -78,10 +78,8 @@
   ai_activity_quick_draw_desc: 'Can a neural network learn to recognize doodling?'
   ai_activity_experiments: 'AI Experiments with Google'
   ai_activity_experiments_desc: 'Start exploring machine learning through pictures, drawings, language, music, and more.'
-  ai_activity_mixlab: 'MixLab'
-  ai_activity_mixlab_desc: 'Make music using voice commands.'
-  ai_activity_gaugan: 'GauGAN Beta'
-  ai_activity_gaugan_desc: 'Paint photo-realistic landscapes with the help of AI.'
+  ai_activity_zooniverse: 'Zooniverse - Snapshot Mountain Zebra'
+  ai_activity_zooniverse_desc: 'Help protect the endangered Cape Mountain Zebra by identifying the different animals in the images.'
 
   codeorg_homepage_hoc2018_curriculum: 'Go further with <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org courses</a>'
   codeorg_homepage_hoc2018_dance_heading: 'Create your own <span class="highlight-word">Dance&nbsp;Party</span>'
