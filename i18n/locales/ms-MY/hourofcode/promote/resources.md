@@ -138,7 +138,7 @@ Computers are everywhere, changing every industry on the planet, but only 45% of
 
 Dengan Hour of Code, sains komputer telah dipaparkan pada laman Google, MSN, Yahoo!, dan Disney. Lebih daripada 100 rakan kongsi telah bekerjasama untuk menyokong gerakan ini. Setiap Stor Apple di dunia ini telah menganjurkan suatu Hour of Code. Malah Presiden Obama telah menulis barisan kod beliau yang pertama sebagai salah satu bahagian kempen ini.
 
-That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 3-9).
+Itulah sebabnya setiap pelajar [X number] di [SCHOOL NAME] menyertai acara pembelajaran terbesar dalam sejarah: Jam Kod, semasa Minggu Pendidikan Sains Komputer (3-9 Disember).
 
 Saya sedang menulis untuk menjemput anda supaya menghadiri perhimpunan permulaan kita dan melihat kanak-kanak memulakan aktiviti pada [DATE].
 

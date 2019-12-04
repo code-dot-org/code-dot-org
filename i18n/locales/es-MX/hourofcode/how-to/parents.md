@@ -1,5 +1,5 @@
 ---
-title: Guía para padres de familia
+title: Guía práctica para padres
 ---
 
 {{ signup_button }}

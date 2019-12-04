@@ -11,52 +11,101 @@ hu:
   campaign_date_full: december 4-10
   campaign_date_year: '2017'
   campaign_date_full_year: December 4-10, 2017
-  hoc2019_header: Tanulj szamitogep tudomanyi. Valtoztasd meg a vilagot!
-  hoc2019_header_line1_mobile: Tanulj szamitogep tudomanyi.
-  hoc2019_header_line2_mobile: Valtoztasd meg a vilagot!
-  social_hoc2019_every_sudent: 'Every student has the potential to change the world.
-    Help them get started. #CSforGood'
-  social_hoc2019_learn_computer_science: 'Learn computer science. Change the world.
-    #CSforGood #HourOfCode'
-  social_hoc_is_coming: The Hour of Code is coming!
-  social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
-    computer science. Change the world.'
-  social_hoc2019_coming_dates: The Hour of Code is coming December 9-15, 2019. Computer
-    science is foundational for every student to learn.
-  social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
-    Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
-  oceans_landing_title: AI for Oceans
-  oceans_landing_description: 'Explore machine learning by teaching “A.I.” to recognize
-    fish. #CSforGood'
+  hoc2019_header: Tanulj informatikát. Változtasd meg a világot!
+  hoc2019_header_line1_mobile: Tanulj informatikát.
+  hoc2019_header_line2_mobile: Változtasd meg a világot!
+  social_hoc2019_every_sudent: 'Minden diákban ott rejlik a lehetőség, hogy megváltoztassa
+    a világot. Segíts nekik elkezdeni. #CSforGood'
+  social_hoc2019_learn_computer_science: 'Tanulj informatikát. Változtasd meg a világot.
+    #CSforGood #HourofCode'
+  social_hoc_is_coming: Hamarosan itt a Kódolás Órája!
+  social_hoc2019_hoc_is_about_csforgood: 'Tanulj informatikát. Változtasd meg a világot!
+    #HourOfCode #CSforGood'
+  social_hoc2019_coming_dates: A Kódolás órájának dátuma 2019. december 9-15. Elengedhetetlen,
+    hogy minden tanuló tanuljon informatikát.
+  social_hoc2019_dance: Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X,
+    Jonas Brothers, Nicki Minaj, és még sokan mások!
+  oceans_landing_title: MI az Óceánokért
+  oceans_landing_description: Fedezd fel a gépi tanulást, tanítsd meg az "M.I"-t,
+    hogyan ismerjen fel halakat.
   oceans_landing_specs: English only | Ages 11+
-  oceans_landing_teacher_resources: Teacher Resources
-  oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
-    AI, machine learning, training data, and bias, while exploring ethical issues.
-  oceans_landing_resource_button: View Resources
+  oceans_landing_teacher_resources: Oktatói segédanyagok
+  oceans_landing_teacher_resources_desc: Óratervek és gyakorlatok az MI, gépi tanulás,
+    az ehhez kapcsolódó fogalmak és etikai problémák megtanításához.
+  oceans_landing_resource_button: Források megtekintése
   oceans_landing_cs_for_good: CS For Good
-  oceans_landing_cs_for_good_desc: Resources to help students understand the role
-    computer science could play in creating a more equitable world.
-  hoc_overview_oceans_tutorial_header: AI Oceans
-  hoc_overview_oceans_tutorial_desc: Teach "A.I." to sort between fish and trash while
-    exploring broader artificial intelligence concepts.
+  oceans_landing_cs_for_good_desc: Források, melyek segítenek a diákoknak megérteni,
+    hogyan segíthet a számítástecnika egy igazságosabb világ létrehozásában.
+  oceans_landing_learn_more: Tanulj tőbbet az MI-ről és a gépi tanulásról
+  social_hoc2019_oceans_title: 'AI for Oceans #CSForGood'
+  social_hoc2019_oceans_desc: Tanulj többet a mesterséges intelligenciáról, a gépi
+    tanulásról, más ehhez kapcsolódó foglamakról, az ezzel járó etikai problémákról
+    és arról, hogyan oldja meg az MI a világ problémáit. A számítástechnika sokkal
+    több mint csak kódolás! Taníts többet a Code.org segédanyagaival.
+  hoc_overview_oceans_tutorial_header: AI For Oceans
+  hoc_overview_oceans_tutorial_desc: Tanulj többet a mesterséges intelligenciáról,
+    a gépi tanulásról, más ehhez kapcsolódó foglamakról, az ezzel járó etikai problémákról
+    és arról, hogyan oldja meg az MI a világ problémáit.
+  ai_video_title_what_is_ai: Mi a Mesterséges Intelligencia (MI)?
+  ai_video_title_phone_knows_dog: Honnan tudja a telefonod, hogy ez egy kutya?
+  ai_video_title_what_is_ml: Mi az a gépi tanulás?
+  ai_video_title_ml_big_small_prickly: 'Gépi Tanulás: Kicsi, Nagy és Szeszélyes problémákra'
+  ai_video_title_ethics_of_ai: MI és az Etikusság
+  ai_video_title_ml_human_bias: Gépi Tanulás és Emberi Elfogultság
+  activity: Tevékenység
+  name: Név
+  description: Leírás
+  audience: Közönség
+  ai_resource_header: Taníts és Tanulj az MI-ről
+  ai_resource_ml_for_kids: Gépi Tanulás Gyerekeknek
+  ai_resource_ml_for_kids_desc: Használj szöveget, számokat vagy képeket, hogy megtaníts
+    egz tanuló algoritmust, és készíts játékokat Scratch-ben.
+  ai_resource_ibm_ml_for_kids: 'IBM: Gépi Tanulás Gyerekeknek'
+  ai_resouce_ibm_ml_for_kids_desc: Gyakorló feladatok, melyek játékokon és interaktív
+    projekteken keresztül mutatnak be gépi tanuló algoritmusokat a diákoknak.
+  ai_resource_ecs: 'ECS: Mesterséges Intelligencia (MI)'
+  ai_resource_ecs_desc: A new alternate curriculum unit for the Exploring Computer
+    Science (ECS) curriculum.
+  ai_resource_elements_ai: Elements of AI
+  ai_resource_elements_ai_desc: Egy sor online kurzus a Reaktor es a Helsinki Egyetem
+    által.
+  ai_resource_cognimates: Cognimates
+  ai_resource_cognimates_desc: Egy MI tanító platform játékok építésére, robotok programozására
+    és gyakorlásra.
+  ai_audience_k12: K-12 (Reading required)
+  ai_audience_hs: Középiskola
+  ai_activity_header: MI és GT támogatta tevékenységek
+  ai_activity_teachable: Tanítható Gép
+  ai_activity_teachable_desc: Taníts meg egy számítógépet, hogy felismerje a képeidet,
+    hangjaidat és mozdulataidat.
+  ai_activity_quick_draw: Gyorsan, Rajzolj!
+  ai_activity_quick_draw_desc: Fel tudja ismerni a neurális háló a firkálást?
+  ai_activity_experiments: MI kísérletek a Googlevel
+  ai_activity_experiments_desc: Kezd el a gépi tanulás megtanulását képeken, rajzokon,
+    nyelveken, zenén és sok máson keresztül.
+  ai_activity_mixlab: MixLab
+  ai_activity_mixlab_desc: Készíts zenét szóbeli utasításokkal.
+  ai_activity_gaugan: GauGAN Beta
+  ai_activity_gaugan_desc: Fess fotorealiztikus tájakat a mesterséges intelligencia
+    segítségével.
   codeorg_homepage_hoc2018_curriculum: Haladj tovább a <a href="%{studio_url}/courses"
     class="hoc2018-curriculum-link">Code.org kurzusokkal</a>
   codeorg_homepage_hoc2018_dance_heading: Készítsd el saját <span class="highlight-word">tánc&nbsp;partidat</span>
-  codeorg_homepage_hoc2018_header_line1: Hamarosan itt a "Hour of Code" esemény...
-  codeorg_homepage_hoc2018_header_line2_desktop: Mit szeretnél <span class="hoc2018-highlight-word">létrehozni?</span>
-  codeorg_homepage_hoc2018_header_line2_mobile: Mit fogsz létrehozni?
+  codeorg_homepage_hoc2018_header_line1: Hamarosan itt a Kódolás Órája...
+  codeorg_homepage_hoc2018_header_line2_desktop: Te mit fogsz <span class="hoc2018-highlight-word">létrehozni?</span>
+  codeorg_homepage_hoc2018_header_line2_mobile: Te mit fogsz létrehozni?
   codeorg_homepage_hoc2018_header_line3: Szárnyaljon a képzeleted és légy készen az
     innovációra. Hozz létre egy olyan "Hour of Code" eseményt, melynek csak a kreativitás
     szabhat határt.
   codeorg_homepage_hoc2018_musician_before: Kiemelt
-  codeorg_homepage_hoc2018_musician_after: és sok más!
+  codeorg_homepage_hoc2018_musician_after: és sokan mások!
   codeorg_homepage_hoc2018_video: Nézd meg a videónkat
   hourofcode_homepage_hoc2018_header_line1: A Kódolás Órája eseményeket bárki bárhol
     megszervezheti. Egyórás gyakorlatok több mint 45 nyelven. Gyakorlat nem szükséges.
   hourofcode_homepage_hoc2018_header_line2: "-től 104 éves korig."
   hoc2018_tutorial_mchoc_description: Minecraft is back for the Hour of Code with
     a brand new activity! Journey through Minecraft with code.
-  codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>
+  codeorg_homepage_hoc2019_dance_heading: Próbáld ki az új <span class="highlight-word">Táncos&nbsp;bulit!</span>
   cookie_banner_message: Az oldal további használatával, valamint az egyetértek gombra
     kattintással elfogadod a Cookie-k számítógépen történő tárolását.
   cookie_banner_more_information: Itt találod a Code.org adatvédelmi elveit.
@@ -244,7 +293,7 @@ hu:
   register_now: Regisztrálj most
   share_on_facebook: Megosztás Facebookon
   share_on_twitter: Megosztás Twitteren
-  promote_additional_resources: Additional resources coming soon!
+  promote_additional_resources: Újabb segédanyagok hamarosan!
   front_join_us_heading: Kódolás Órája minden diáknak.
   front_join_us_announcements: Közlemények
   front_join_us_anybody_can_learn: Bárki megtanulhatja
@@ -252,7 +301,7 @@ hu:
     számára. Segíts hogy legalább 100 millióan hozzájussanak.
   front_join_us_description_short: Az informatika egy biztos alapot ad minden tanulónak.
   front_join_us_button: Csatlakozz
-  front_what_is_hoc: Mi a Hour of Code?
+  front_what_is_hoc: Mi az a Kódolás Órája?
   front_join_us_header: Bárki megtanulhatja az alapokat, és élvezheti csinálni!
   front_join_us_volunteer_header: Önkénteskedni a Kódolás óráján
   front_join_us_tutorials: Próbáld ki ez év új bemutatóit!
@@ -298,15 +347,15 @@ hu:
   front_join_us_n_students_served: "# elérés"
   front_join_us_challenge: Nyerj egy videóchat lehetőséget az osztályodnak egy hírességgel!
   front_join_us_learn_more: Tudj meg többet
-  signup_closed: Registration for the Hour of Code is now closed. Please check again
-    in October to sign up for the next Hour of Code.
-  signup_registration_not_required: You don't need to register to participate! The
-    Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try
-    an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan
-    an event for your class.
-  signup_registration_closed: And every year in December, your class can join millions
-    of students around the world celebrating Computer Science Education Week with
-    the Hour of Code. We'll open registration for the annual celebration in October.
+  signup_closed: A regisztráció a Kódolás Órájára lezárult. Nézz vissza Októberben
+    hogy jelentkezz a következő Kódolás Órájára.
+  signup_registration_not_required: Nincs szükséged regisztrációra, hogy részt vegyél!
+    A Kódolás Órája egész évben elérhető. <a href='%{hoc_activities_url}'>Próbálj
+    ki egy feladatot</a> vagy olvasd el az <a href='%{howto_guide_url}'>Útmutatót</a>
+    és tervezz egy eseményt az osztályodnak.
+  signup_registration_closed: Az osztályod minden év decemberében világszerte több
+    millió tanulóhoz csatlakozhat, akik a Kódolás órájával ünneplik a számítástechnika
+    oktatásának hetét. Az évente tartott rendezvényre októberben kezdődik a regisztráció.
   signup_header: Rendezd meg te is a Kódolás Óráját (%{campaign_date}), regisztrálj
     itt.
   signup_name_label: Név
@@ -331,9 +380,9 @@ hu:
   signup_host_an_hour: Tarts meg egy órát
   signup_match_volunteer: Segíts nekem találni egy helyi szoftver mérnököt, hogy inspiráljam
     a tanulóimat
-  signup_email_preference_opt_in: Can we email you about updates to Code.org courses,
-    local opportunities, or other computer science news?
-  signup_email_preference_privacy: "(See our privacy policy)"
+  signup_email_preference_opt_in: Küldhetünk neked emailt a Code.org-os kurzusokkal,
+    helyi lehetőségekkel és egyéb számítástechnikai hírekkel kapcsolatban?
+  signup_email_preference_privacy: "(Tekintsd át adatvédelmi irányelveinket)"
   signup_email_preference_yes: Igen
   signup_email_preference_no: Nem
   signup_email_preference_error: Email preference is required
@@ -364,28 +413,28 @@ hu:
     megtartására.
   signup_thank_you_message: Küldtünk egy megerősítő e-mailt, amiben segítséget kapsz
     az induláshoz is.
-  social_hoc2018_code_org_what_create: 'Code.org: What will you create?'
+  social_hoc2018_code_org_what_create: 'Code.org: Te mit fogsz létrehozni?'
   social_hoc2018_creativity_in_are_you: 'The #HourOfCode is about creativity. I’m
     in! Are you?'
-  social_hoc2018_dance_party: 'Hour of Code: Dance Party'
-  social_hoc2018_dance_what_create: Featuring Katy Perry, Madonna, J. Balvin, Sia,
-    Keith Urban, Ciara, and 25 more!
-  social_hoc2018_every_student: Every student deserves the opportunity to express
-    their creativity with computer science.
-  social_hoc2018_every_student_try_what_create: Every student deserves the opportunity
-    to express their creativity with computer science. Try your hand at the new tutorials.
-    What will you create?
-  social_hoc2018_hoc_coming_create: The Hour of Code is coming. What will you create?
-  social_hoc2018_hoc_here: The Hour of Code is here!
+  social_hoc2018_dance_party: 'Kódolás Órája: Tánc Parti'
+  social_hoc2018_dance_what_create: Katy Perry, Madonna, J. Balvin, Sia, Keith Urban,
+    Ciara, és sokan mások!
+  social_hoc2018_every_student: Minden diák megárdemli a lehetőséget, hogy a számítástechnikán
+    keresztül fejezhesse ki kreativitását.
+  social_hoc2018_every_student_try_what_create: Minden diák megárdemli a lehetőséget,
+    hogy a számítástechnikán keresztül fejezhesse ki kreativitását. Próbáld ki új
+    oktatóanyagainkat. Te mit fogsz létrehozni?
+  social_hoc2018_hoc_coming_create: A Kódolás Órája közeleg. Te mit fogsz létrehozni?
+  social_hoc2018_hoc_here: Itt a Kódolás Órája!
   social_hoc2018_join: Hamarosan itt Kódolás Órája
-  social_hoc2018_mc: Minecraft is back for the Hour of Code, and you’re the hero!
-    Write code to journey through Minecraft biomes.
-  social_hoc2018_mc_creativity: Use your creativity and problem solving skills to
-    explore and build underwater worlds with code.
-  social_hoc2018_what_create: Mit fogsz létrehozni?
-  social_hoc2018_global_movement: The Hour of Code is a global movement reaching tens
-    of millions of students. One-hour tutorials are available in 45+ languages for
-    all ages.
+  social_hoc2018_mc: A Minecraft visszatért a Kódolás Órájára és te vagy a főszerepló.
+    Írj kódot, amely elvisz a különböző Minecraft biomokba.
+  social_hoc2018_mc_creativity: Használd a kreativitásodat és a problémamegoldó képességeidet,
+    hogy kódolással fedezz fel és építs egy víz alatti világot.
+  social_hoc2018_what_create: Te mit fogsz létrehozni?
+  social_hoc2018_global_movement: A Kódolás Órája egy globális kezdeményezés, mely
+    több tíz millió diákot elér. Több mint 45 nyelven érhetők el oktatóvideók minden
+    korosztálynak.
   map_title: Kódolás Órája térkép
   map_header: "# Kódolás Órája esemény szerte a nagyvilágban"
   map_header_count_year: "%{event_count} eseményt regisztráltak %{year} évben"
@@ -408,17 +457,17 @@ hu:
   meta_tag_twitter_description: A Kódolás Órája egy globális mozgalom, ami különböző
     életkorú tanulók tízmillióit éri el 180+ országban, és több mint 45 nyelven.
   twitter_default_text: 'Én részt veszek az idei #HourOfCode eseményen. És Te? @codeorg'
-  twitter_donor_text: 'This year''s #HourOfCode is about creativity. I’m in! Are you?
-    (Thanks %{random_donor} for supporting @codeorg)'
-  twitter_donor_text_2019: 'This year''s #HourOfCode is about #CSforGood. I’m in!
-    Are you? (Thanks %{random_donor} for supporting @codeorg)'
+  twitter_donor_text: 'Az idei #KódolásÓrája a kreativitásról szól. Én benne vagyok!
+    És te? (Köszönjük %{random_donor} hogy támogatod a @codeorg-t)'
+  twitter_donor_text_2019: 'Az idei #HourOfCode a #CSforGood-ról szól. Én benne vagyok!
+    És te? (Köszönjük %{random_donor} hogy támogatod a @codeorg-t)'
   hoc_faq_title: GYIK
-  hoc_faq_what_is_hoc_q: Mi a Hour of Code?
+  hoc_faq_what_is_hoc_q: Mi az a Kódolás Órája?
   hoc_faq_what_is_hoc_a: A Kódolás Órája egy egy órás bevezetés a számítástudomány
     alapjaiba, célja, hogy eloszlassa a kód homályát, és megmutassa, hogy bárki megtanulhatja
     az alapokat.  <a href='http://code.org/learn'>Próbáld ki az oktatóanyagokat</a>.
   hoc_faq_last_year: Próbáld ki az oktatóanyagokat
-  hoc_faq_when_is_hoc_q: Mikor lesz a Kódolás órája?
+  hoc_faq_when_is_hoc_q: Mikor lesz a Kódolás Órája?
   hoc_faq_when_is_hoc_a: A Kódolás Órája minden évben megrendezésre kerül az <a href='%{csedweek_url}'>
     Informatikaoktatás hetének</a> keretén belül. A %{campaign_date_year} évi Informatikaoktatás
     hete %{campaign_date_full} kerül megrendezésre, de egész évben van lehetőség Kódolás
@@ -629,7 +678,7 @@ hu:
   title_stats: Blurbs and Stats
   title_partners: Partnerek
   title_resources: Segédanyagok
-  title_past_posters: Régebbi "Hour of Code" poszterek
+  title_past_posters: Régebbi Kódolás órája poszterek
   title_signup_thanks: Köszönjük hogy jelentkeztél a Kódolás Órájának megtartására!
   title_tutorial_guidelines: Activity Guidelines
   title_whole_school: Whole School Participation
@@ -689,7 +738,7 @@ hu:
   learn_robotics_banner_heading: Robotika
   learn_robotics_banner_blurb: Vannak robotjaid? Használd őket az alábbi tevékenységekhez
     és készíts egy jobb Kódolás Órája programot bármely korosztálynak!
-  tutorial_dance2019_name: Dance Party 2019
+  tutorial_dance2019_name: Táncos buli 2019
   tutorial_danceparty_name: Táncos buli
   tutorial_chibitronics_name: 'Chibitronics: Illuminated Story'
   tutorial_athlete_name: Programozd le saját sportjátékodat
@@ -4916,9 +4965,9 @@ hu:
     Each of the six activities includes simple directions that are supported with
     symbols from the n2y® SymbolStix PRIME® collection. The symbols help non-readers
     and beginning readers understand and follow the directions.
-  tutorial_dance2019_language: Arabic, Chinese, Czech, Danish, Dutch, English, Finnish,
-    French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean,
-    Malay, Polish, Portuguese, and 10 more!
+  tutorial_dance2019_language: Arab, kínai, cseh, dán, holland, angol, finn, francia,
+    német, görög, hindi, magyar, indonéz, olasz, japán, koreai, maláj, lengyel, portugál
+    és még 10 további nyelven!
   tutorial_danceparty_language: English, Arabic, Catalan, Chinese, Czech, Danish,
     Dutch, Finnish, French, German, Greek, Hungarian, Italian, Japanese, Korean, Norwegian,
     Polish, Portuguese, Russian, Spanish, Swedish, Thai, Turkish, and Vietnamese
