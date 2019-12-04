@@ -1886,8 +1886,8 @@ en:
           description_audience: ''
         oceans:
           title: AI for Oceans
-          description: Description TBD.
-          description_short: Short Description TBD.
+          description: Learn how AI and machine learning can be used to address world problems.
+          description_short: Learn how AI and machine learning can be used to address world problems.
           stages:
             Oceans:
               name: Oceans
@@ -12684,6 +12684,12 @@ en:
               name: Semester Exam
             'Lesson 13: Assessment Day':
               name: 'Lesson 13: Assessment Day'
+            Unit 5 STUDENT Survey:
+              name: Unit 5 STUDENT Survey
+            Unit 5 TEACHER Survey:
+              name: Unit 5 TEACHER Survey
+            'Lesson 18: Assessment Day':
+              name: 'Lesson 18: Assessment Day'
           title: CSP Unit 5 Pilot - Lists, Loops, and Traversals
           description_audience: ''
           description_short: ''
@@ -13589,6 +13595,14 @@ en:
               name: Protecting Data Part 2
             'Lesson 14: Unit Assessment Day':
               name: 'Lesson 14: Unit Assessment Day'
+            'Project: Innovation Simulation Part 4':
+              name: 'Project: Innovation Simulation Part 4'
+            'Project: Innovation Simulation Part 5':
+              name: 'Project: Innovation Simulation Part 5'
+            'Project: Innovation Simulation Part 6':
+              name: 'Project: Innovation Simulation Part 6'
+            'Project: Innovation Simulation Part 7':
+              name: 'Project: Innovation Simulation Part 7'
           title: Cybersecurity and Global Impacts
           description_audience: ''
           description_short: ''
@@ -13633,7 +13647,7 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Sequencing in Maze:
               name: Sequencing in Maze
@@ -13661,7 +13675,7 @@ en:
               name: Conditionals Review
             Drawing with Loops:
               name: Drawing with Loops
-          title: Time4CS Control Unit 1
+          title: Time4CS Original Unit 1
           description_audience: ''
           description_short: ''
           description: ''
@@ -13751,3 +13765,111 @@ en:
           description_audience: ''
           description_short: "[Add description]"
           description: "[Add description]"
+        time4cs-control-unit-1:
+          title: Time4CS Control Unit 1
+          description: ''
+          description_short: ''
+          description_audience: ''
+          stages:
+            Sequencing in Maze:
+              name: Sequencing in Maze
+              description_student: ''
+              description_teacher: ''
+            Programming and Loops with the Artist:
+              name: Programming and Loops with the Artist
+              description_student: ''
+              description_teacher: ''
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Conditionals in Minecraft: Voyage Aquatic'
+              description_student: ''
+              description_teacher: ''
+            Conditionals:
+              name: Conditionals
+              description_student: ''
+              description_teacher: ''
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+              description_student: ''
+              description_teacher: ''
+            Simon Says:
+              name: Simon Says
+              description_student: ''
+              description_teacher: ''
+            Learning Sprites with Sprite Lab:
+              name: Learning Sprites with Sprite Lab
+              description_student: ''
+              description_teacher: ''
+            Alien Dance Party with Sprite Lab:
+              name: Alien Dance Party with Sprite Lab
+              description_student: ''
+              description_teacher: ''
+            Private and Personal Information:
+              name: Private and Personal Information
+              description_student: ''
+              description_teacher: ''
+            About Me:
+              name: About Me
+              description_student: ''
+              description_teacher: ''
+            Access Ability:
+              name: Access Ability
+              description_student: ''
+              description_teacher: ''
+            Conditionals Review:
+              name: Conditionals Review
+              description_student: ''
+              description_teacher: ''
+        time4cs-experiment-unit-1:
+          title: Time4CS Experiment Unit 1
+          description: ''
+          description_short: ''
+          description_audience: ''
+          stages:
+            Sequencing in Maze:
+              name: Sequencing in Maze
+              description_student: ''
+              description_teacher: ''
+            Programming and Loops with the Artist:
+              name: Programming and Loops with the Artist
+              description_student: ''
+              description_teacher: ''
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Conditionals in Minecraft: Voyage Aquatic'
+              description_student: ''
+              description_teacher: ''
+            Conditionals:
+              name: Conditionals
+              description_student: ''
+              description_teacher: ''
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+              description_student: ''
+              description_teacher: ''
+            Simon Says:
+              name: Simon Says
+              description_student: ''
+              description_teacher: ''
+            Learning Sprites with Sprite Lab:
+              name: Learning Sprites with Sprite Lab
+              description_student: ''
+              description_teacher: ''
+            Alien Dance Party with Sprite Lab:
+              name: Alien Dance Party with Sprite Lab
+              description_student: ''
+              description_teacher: ''
+            Private and Personal Information:
+              name: Private and Personal Information
+              description_student: ''
+              description_teacher: ''
+            About Me:
+              name: About Me
+              description_student: ''
+              description_teacher: ''
+            Access Ability:
+              name: Access Ability
+              description_student: ''
+              description_teacher: ''
+            Conditionals Review:
+              name: Conditionals Review
+              description_student: ''
+              description_teacher: ''

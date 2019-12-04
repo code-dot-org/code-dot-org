@@ -1,21 +1,36 @@
 name 'csp-u5-exam1-robot_2020'
-encrypted 'LdIollekk9t0sSJFmAlROW5OYT9cenQ76puUXJXZOZRdgXjtuIebXV4cr7d/
-kmUyN2dCLU9TwxNjlh9MzhG/Q1XaFyfdqahrts6LZqmklypbsq3PGqDcH1lK
-hfyC7JR/oKShNSdFFiUm4/8tB7kZTiGnnMdETNGkOH0zS5J7cBf2clBfy22J
-UaQ+lqomnwDDT8EB7z4TigUq+GqPONiacLzkYy1XBYSK6MCyMTXxqT8aZzEC
-a+jRM2NmqL24QIGm/rBHJxxKrN87Wzp92flL5Br5EaXhKpSX0hoS5F0HGbi1
-7Pg8JsF7E5sOkKw7g+yRHsrvisF/yaBPlrg6Nxsr26+vV95AhUKG3cfL/UzE
-Ffe/IynGVvXCIlcP9hbCGyqWVAXlIkoY5p3coL13q+/Tz1NLfTcWscr05hnS
-pr2lZJYInN7vV5aktK4mdMEDOkHNc54DLfk4B6Bcv+PT+ZbNEkiUl/L5DlBA
-XpuUMzmvKEA4JSxfdhs2iOZBDlQS3IzhLpR08vNkN9dOqIYOYdIgvocUYK4D
-E1Q7ZJ65LGOzsDBIhOMnfOWHfiRVz7A/tIoyiOL16b9LqNaWGGGCAE82dn8Z
-aYJB5gBQ7u3zM99+OrwNL+InaNS5vdpPOHj0wUeo0RcAtThv2TKTHdzyGRLn
-yrO3KvDDQs82GG2NnlV1+VMvJUa7XsaSRIhP/tw5HyfVr+SC7EK1krn/Jkfv
-zwH8nHqa1zvQQTeyEi1SNuD7U6M3ugGAf8CkNAHcHv1Cs4klXw2K8ZtNhyCo
-WbZuTQ6c/pCMqeKnlU0roPDAfRbQsBHwgurS8X9K2jX+cwQ+Y1b988uhgebq
-OpuaiQhA1NJBPyFz5R2UP8crHPJ4D/Kv3QHf/PHD/eaJH+S9IP0ICncnfUEF
-cUtOJ6+TLUGNpA5MfSQzypldB0jyNBXkeljqM9rwTU8MNr+FvNLeE9NqVOmR
-cR5ph/70lXG3zo4ikkLVOnfLUXyBvARqwwULZPEKNhZ+4lyEygE5J1S4fZF4
-Z7MUzmqJBBYYIjsHZxZD3E+2frqTmkfDYmHN+aOiAvYfOs3AgVWOn9vWjeDt
-qOxHtSKb35fAgrIXN4zoFpnUSPc1QFEXQLI+Q2R0SV9eIii+IYY=
-'
+editor_experiment ''
+
+
+right '<pre>REPEAT 2 TIMES
+  REPEAT 3 TIMES
+    MOVE_FORWARD
+  TURN LEFT
+</pre>'
+
+wrong '<pre>REPEAT 3 TIMES
+  REPEAT 2 TIMES
+    MOVE_FORWARD
+  TURN LEFT  
+</pre>'
+
+wrong '<pre>REPEAT 3 TIMES
+  REPEAT 3 TIMES
+    MOVE_FORWARD
+  TURN LEFT 
+</pre>'
+
+wrong '<pre>REPEAT 2 TIMES
+  REPEAT 2 TIMES
+    MOVE_FORWARD
+  TURN LEFT
+</pre>'
+
+markdown <<MARKDOWN
+<img src="https://images.code.org/a2d08c5c0948e9418425c4fc8af621ef-image-1575301837741.png" style="width:200px">
+
+The following question uses a robot in a grid of squares. The robot is represented by a triangle, which is initially
+facing up.
+
+Which of the following programs will move the robot to the gray square following the path shown on the grid?
+MARKDOWN

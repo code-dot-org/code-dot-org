@@ -37,6 +37,8 @@ class FirehoseClient
   # Posts a record to the analytics stream.
   # @param data [hash] The data to insert into the stream.
   def put_record(data)
+    return unless Gatekeeper.allows('firehose', default: true)
+
     data_with_common_values = add_common_values(data)
 
     if [:development, :test].include? rack_env

@@ -2272,6 +2272,9 @@ es-MX:
   hoc_overview_dance_title: Fiesta de baile
   hoc_overview_dance_subtitle: Programa una Fiesta de baile y compártela con tus amigos.
     ¡Con Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara y 25 artistas más!
+  hoc_overview_dance_2019_subtitle: Programa una Fiesta de baile para compartir con
+    tus amigos. Con Katy Perry, Shawn Mendes, Lil Nas X, Panic! At The Disco, Jonas
+    Brothers, ¡y muchos más!
   hoc_overview_title: Actividades de la Hora del Código de Code.org
   hoc_overview_subtitle: La <a href="https://hourofcode.com">Hora del Código</a> es
     un movimiento global que llega a decenas de millones de estudiantes en más 180
@@ -2484,3 +2487,6 @@ es-MX:
     lecciones, videos, un plan de estudios en ciencias de la computación y entrenamientos
     para docentes.
   hoc2019_mc_more_coding_resources: Más recursos para la programación
+  hoc2019_dance_previous_versions: "¿Estás buscando una versión anterior de Fiesta
+    de baile?  \nHaz clic aquí para iniciar [Parte 1](%{dance_2018_link}) y [Parte
+    2](%{dance_extras_2018_link}) del último año."

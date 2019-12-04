@@ -6,32 +6,28 @@
   %p Number from 0.0 to 1.0 for how fast Applab runs by default while in the IDE. If not set, default is 1.0
   = f.number_field :slider_speed, :step => 0.1
 .field
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :show_turtle_before_run, description: "Show turtle before Run is pressed"}
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :show_turtle_before_run, description: "Show turtle before Run is pressed"}
 .field
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :design_mode_at_start, description: "Start in Design Mode"}
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :design_mode_at_start, description: "Start in Design Mode"}
 .field
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :widget_mode, description: "Enable Widget Mode: Creates an embeded level with a double-width app screen that auto-runs on page load. The coding workspace, design mode, data mode, the reset button, and sharing are all disabled in widget mode."}
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :widget_mode, description: "Enable Widget Mode: Creates an embeded level with a double-width app screen that auto-runs on page load. The coding workspace, design mode, data mode, the reset button, and sharing are all disabled in widget mode."}
 .field
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :hide_design_mode, description: "Hide Design Mode"}
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :hide_design_mode, description: "Hide Design Mode"}
 .field
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :makerlab_enabled, description: "Enable Maker APIs"}
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :makerlab_enabled, description: "Enable Maker APIs"}
 .field
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :expand_debugger, description: "Expand Debugger by Default"}
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :expand_debugger, description: "Expand Debugger by Default"}
 
-= render partial: 'levels/editors/watchers_ui', locals: {f: f}
+= render partial: 'levels/editors/fields/watchers_ui', locals: {f: f}
 .field
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :autocomplete_palette_apis_only, description: "Autocomplete palette APIs only"}
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :autocomplete_palette_apis_only, description: "Autocomplete palette APIs only"}
 .field
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :execute_palette_apis_only, description: "Execute palette APIs only"}
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :execute_palette_apis_only, description: "Execute palette APIs only"}
 .field
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :beginner_mode, description: "Beginner mode for loops"}
-.field
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :submittable, description: "Submittable"}
-  %p
-    If checked, students with teachers can "submit" a solution for
-    grading. Submitting a solution means that it is marked as
-    submitted and they can no longer edit it (unless a teacher returns
-    it).
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :beginner_mode, description: "Beginner mode for loops"}
+
+= render partial: 'levels/editors/fields/submittable', locals: {f: f}
+
 .field
   = f.label :start_html, 'Starting design mode html'
   %p
@@ -48,7 +44,7 @@
   :javascript
     levelbuilder.initializeCodeMirror('level_start_html', 'html');
 
-= render partial: 'levels/editors/encrypted_examples', locals: {f: f, level_type: 'applab'}
+= render partial: 'levels/editors/fields/encrypted_examples', locals: {f: f, level_type: 'applab'}
 
 .field
   = f.label 'Log Conditions'
@@ -66,7 +62,7 @@
     levelbuilder.initializeCodeMirror('level_log_conditions', 'javascript');
 
 .field
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: 'fail_on_lint_errors', description: "Fail on lint errors"}
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: 'fail_on_lint_errors', description: "Fail on lint errors"}
   %p
     Lint warnings and errors (in the editor's gutter area) will prevent the student from continuing when the Finish button is pressed.
 
@@ -85,40 +81,19 @@
   :javascript
     levelbuilder.initializeCodeMirror('level_data_tables', 'javascript');
 
-.field
-  = f.label 'Key-Value Data'
-  You can copy the data array from the debug view in the Data tab in App Lab.
-  %pre
-    = preserve do
-      :escaped
-        Example:
-        {
-          "click_count": 5,
-          "button_color": "blue"
-        }
-  = f.text_area 'data_properties', placeholder: 'Insert JSON Key-Value Data', rows: 4, value: @level.data_properties or ''
-  :javascript
-    levelbuilder.initializeCodeMirror('level_data_properties', 'javascript');
+= render partial: 'levels/editors/fields/key_value_data', locals: {f: f}
 
 .field
   = f.label :data_library_tables,'Dataset Libraries'
   = f.text_area :data_library_tables, value: @level.data_library_tables, readonly: true
 
 .field
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :hide_view_data_button, description: "Hide Data Button"}
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :hide_view_data_button, description: "Hide Data Button"}
 
 .field
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :debugger_disabled, description: "Disable code debugger (Console is still enabled)"}
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :debugger_disabled, description: "Disable code debugger (Console is still enabled)"}
 
-.field
-  = f.label :helper_libraries
-  %p
-    Select
-    %a.select_all{href: '#'} all
-    \/
-    %a.select_none{href: '#'} none
-    (shift-click or cmd-click to select multiple).
-  = f.select :helper_libraries, (Library.distinct.pluck(:name) + (@level.helper_libraries || [])).uniq.sort, {}, {multiple: true}
+= render partial: 'levels/editors/fields/helper_libraries', locals: {f: f}
 
 :ruby
   script_data = {

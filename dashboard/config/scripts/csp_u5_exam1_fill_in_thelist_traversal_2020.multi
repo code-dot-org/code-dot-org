@@ -1,11 +1,20 @@
 name 'csp-u5-exam1-fill-in-thelist-traversal_2020'
-encrypted 'rISCTJoHbOf//oETW5shmQMjfexx80YhakYfJctJWR8UeRk6e4LzOwMrq44C
-twE6s4B2TaoZadba3tTBht6NWGFtAIGS9JLy9mcaqn3dFhS++ZjsjR4aDLF9
-Cky7ctXZ7tdV1Q1v/FmlrjCChYqGNrpPSEe64XhLlrW+M1HCehhdfQN2Rw7+
-801nwK7n7P8Ogltxdb5r6lSjvHj6JrJc/pQeP42//ofdQDEwvjycY3tJQEpO
-QD0ptWTJm9qYRmrdqkjgaADzoLRhdLXm04ZsuDvgoMK9/ilUqE5/krCyiQJ7
-O9/6xAZ5IB2/vefbeRl9B2wgjN76fol1FPFSicStdW2H/8V/lunOfYDcp2F2
-Op3kbPRvJ+6O/6oafLv6bWwepKpCxU0ChJOmGfP6omBAUYfgSGFxnZuKGLnD
-stZmIaF2Hu1pFVa+/T/Nns0aQOuq1UPBUSDUyPKECu4bQ6YvLXlUcnkI9xnn
-Vix4MvBSqt+QCrTSRKXEl4oOBvUp1fzE
-'
+editor_experiment ''
+wrong 'i < list[list.length]'
+right 'i < list.length'
+wrong 'i < list[0]'
+wrong 'i < list[1]'
+
+
+
+markdown <<MARKDOWN
+```
+list = [10, 5, 15];
+
+for(var i = 0; <INSERT CODE>; i++){
+  console.log(list[i]);
+}
+```
+
+Which of the following will NOT result if placed where the program reads `<INSERT CODE>` and the program is run?
+MARKDOWN
