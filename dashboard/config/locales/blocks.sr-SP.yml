@@ -108,6 +108,7 @@ sr:
             '19': '19'
             '20': '20'
           LAYOUT:
+            '"diamond"': дијамант
             '"random"': насумичан
       Dancelab_randomColor:
         text: насумична боја
