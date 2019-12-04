@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-//import Dialog, {Body, Buttons, Confirm} from '@cdo/apps/templates/Dialog';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
@@ -32,14 +31,9 @@ export default class NameFailureDialog extends React.Component {
         isOpen={this.props.isOpen}
         handleClose={this.props.handleClose}
       >
-        <h1 style={styles.title}>Unable to rename project</h1>
+        <h1 style={styles.title}>{i18n.nameFailureDialogTitle()}</h1>
         <div style={styles.body}>
-          <p>
-            It appears that your project name contains inappropriate language or
-            personally identifiable information like your address, email, or
-            phone number. Please pick a new name that doesn't contain "
-            {this.props.flaggedText}."
-          </p>
+          <p>{i18n.nameFailureDialogBody({text: this.props.flaggedText})}</p>
         </div>
         <DialogFooter rightAlign>
           <Button
