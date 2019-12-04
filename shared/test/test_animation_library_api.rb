@@ -30,4 +30,19 @@ class AnimationLibraryTest < Minitest::Test
   ensure
     AWS::S3.s3 = nil
   end
+
+  def test_get_spritelab_animation
+    contents = 'TEST_ANIMATION'
+    # Ensure the shared S3 client is used by stubbing the client with the expected response.
+    AWS::S3.s3 = Aws::S3::Client.new(
+      stub_responses: {
+        get_object: {body: contents, content_type: 'image/png'}
+      }
+    )
+    get '/api/v1/spritelab-animation-library/version/test_animation.png'
+    assert last_response.ok?
+    assert_equal contents, last_response.body
+  ensure
+    AWS::S3.s3 = nil
+  end
 end
