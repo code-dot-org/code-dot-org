@@ -4,6 +4,7 @@ nav: about_nav
 video_player: true
 theme: responsive
 ---
+<link rel="stylesheet" type="text/css" rel= "stylesheet" href="/css/jobs.css" />
 
 # Job Openings at Code.org
 
@@ -11,6 +12,7 @@ theme: responsive
 
 <% facebook = {:u=>'https://youtu.be/mTGSiB4kB18'} %>
 <% twitter = {:url=>'https://youtu.be/mTGSiB4kB18', :related=>'codeorg', :text=>"Meet the team at @codeorg and see how much they’ve done! (Thanks #{get_random_donor_twitter} for supporting @codeorg)"} %>
+
 
 <%=view :display_video_thumbnail, id: "codeorg_recruiting", video_code: "mTGSiB4kB18", play_button: 'center', facebook: facebook, twitter: twitter, letterbox: "false", download_path: "http://videos.code.org/social/about-codeorg.mp4" %>
 
@@ -29,7 +31,7 @@ Launched in 2013, Code.org&reg; is a nonprofit dedicated to expanding access to 
 <div id='lever-jobs-container'></div>
 <script type='text/javascript'>
 
-  window.leverJobsOptions = {accountName: 'Code.org', includeCss: true};
+  window.leverJobsOptions = {accountName: 'Code.org'};
 
 </script>
 <script type='text/javascript' src='https://andreasmb.github.io/lever-jobs-embed/index.js'></script>
