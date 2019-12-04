@@ -7355,7 +7355,6 @@ tr:
             Dance Party:
               name: Dans Partisi
         dance-extras:
-          title: Dans Etmeye Devam
           description: Genişletilmiş proje fikirleri ile ilk saatin ötesine geç.
         coursef-2019:
           description: Farklı döngüler, olaylar, fonksiyonlar ve koşulları kullanma hakkında bilgi edinin. Farklı problem çözme tekniklerini incelemek ve bilgisayarın ve internetin toplumsal etkilerini tartışmak. Bu dersin ikinci bölümünde, arkadaşlarınız ve ailenizle paylaşabileceğiniz bir kaptanlık projesi tasarlayınız ve oluşturunuz.
@@ -8795,7 +8794,6 @@ tr:
             For Loops:
               name: For Döngüleri
         dance-extras-2019:
-          title: Dans Etmeye Devam
           description: Genişletilmiş proje fikirleri ile ilk saatin ötesine geç.
         csp10-pilot:
           stages:

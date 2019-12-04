@@ -3,74 +3,145 @@ ta:
   site_name: குறியீடு மணி
   hour_of_code: குறியீடு மணி
   language: English
-  front_title: "%{campaign_date} வரலாற்றில் மிகப் பெரிய கற்றல் நிகழ்வு சேர"
-  coming_soon: விரைவில் வருகிறது
-  campaign_date_start_short: டிசம்பர் 4
+  front_title: சரித்திரத்திலேயே மிகப்பெரிய கற்றுக் கொள்ளும் நிகழ்வில் இணையுங்கள்,
+    %{campaign_date}
+  coming_soon: விரைவில் வரவிருக்கிறது
+  campaign_date_start_short: டிச. 4
   campaign_date_start_long: டிசம்பர் 4
-  campaign_date_short: டிசம்பர் 4-10
+  campaign_date_short: டிச. 4-10
   campaign_date_full: டிசம்பர் 4-10
   campaign_date_year: '2017'
   campaign_date_full_year: டிசம்பர் 4-10, 2017
-  hoc2019_header: Learn computer science. Change the world.
-  hoc2019_header_line1_mobile: Learn computer science.
-  hoc2019_header_line2_mobile: Change the world.
-  social_hoc2019_every_sudent: 'Every student has the potential to change the world.
-    Help them get started. #CSforGood'
-  social_hoc2019_learn_computer_science: 'Learn computer science. Change the world.
-    #CSforGood #HourOfCode'
-  social_hoc_is_coming: The Hour of Code is coming!
-  social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
-    computer science. Change the world.'
-  social_hoc2019_coming_dates: The Hour of Code is coming December 9-15, 2019. Computer
-    science is foundational for every student to learn.
-  social_hoc2019_dance: Featuring Katy Perry, Jonas Brothers, Lil Nas X, Panic at
-    the Disco, and many more!
-  codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
+  hoc2019_header: கம்ப்யூட்டர் சயின்ஸ் கற்றுக்கொள்ளுங்கள். உலகை மாற்றுங்கள்.
+  hoc2019_header_line1_mobile: கம்ப்யூட்டர் சயின்ஸ் கற்றுக்கொள்ளுங்கள்.
+  hoc2019_header_line2_mobile: உலகை மாற்றுங்கள்.
+  social_hoc2019_every_sudent: 'ஒவ்வொரு மாணவருக்கும் உலகை மாற்றும் ஆற்றல் உண்டு. அவர்கள்
+    தொடங்குவதற்கு உதவுங்கள். #CSforGood'
+  social_hoc2019_learn_computer_science: 'கம்ப்யூட்டர் சயின்ஸ் கற்றுக்கொள்ளுங்கள்.
+    உலகை மாற்றுங்கள். #CSforGood #HourOfCode'
+  social_hoc_is_coming: ஒரு மணி நேர குறியீடு வருகிறது!
+  social_hoc2019_hoc_is_about_csforgood: "#HourOfCode என்பது #CSforGood –ஐப் பற்றியது.
+    கம்ப்யூட்டர் சயின்ஸ் கற்றுக்கொள்ளுங்கள். உலகை மாற்றுங்கள்."
+  social_hoc2019_coming_dates: Hour of Code டிசம்பர் 9-15, 2019 முதல் தொடங்குகிறது
+    கம்ப்யூட்டர் சயின்ஸ் ஒவ்வொரு மாணவரும் கற்றுக் கொள்வதற்கான அடிப்படை கல்வியாகும்.
+  social_hoc2019_dance: கேட்டி பெர்ரி, ஜோனாஸ் பிரதர்ஸ், லில் நாஸ் எக்ஸ், பேனிக் அட்
+    டிஸ்கோ, இன்னும் பலர் தோன்றுகிறார்கள்!
+  oceans_landing_title: AI for Oceans
+  oceans_landing_description: 'Explore machine learning by teaching “A.I.” to recognize
+    fish. #CSforGood'
+  oceans_landing_specs: English only | Ages 11+
+  oceans_landing_teacher_resources: Teacher Resources
+  oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
+    AI, machine learning, training data, and bias, while exploring ethical issues.
+  oceans_landing_resource_button: View Resources
+  oceans_landing_cs_for_good: CS For Good
+  oceans_landing_cs_for_good_desc: Resources to help students understand the role
+    computer science could play in creating a more equitable world.
+  oceans_landing_learn_more: Learn more about AI and Machine Learning
+  social_hoc2019_oceans_title: 'AI for Oceans #CSForGood'
+  social_hoc2019_oceans_desc: Learn about AI, machine learning, training data, and
+    bias, while exploring ethical issues and how AI can be used to address world problems.
+    Computer science is about so much more than coding! Enjoy Code.org's first step
+    in a new journey to teach more about AI throughout our curriculum.
+  hoc_overview_oceans_tutorial_header: AI For Oceans
+  hoc_overview_oceans_tutorial_desc: Learn about AI, machine learning, training data,
+    and bias, while exploring ethical issues and how AI can be used to address world
+    problems.
+  ai_video_title_what_is_ai: What is AI?
+  ai_video_title_phone_knows_dog: How does your phone know this is a dog?
+  ai_video_title_what_is_ml: What is Machine Learning?
+  ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small
+    and Prickly'
+  ai_video_title_ethics_of_ai: Ethics of AI
+  ai_video_title_ml_human_bias: Machine Learning and Human Bias
+  activity: Activity
+  name: Name
+  description: Description
+  audience: Audience
+  ai_resource_header: Teach and Learn about AI
+  ai_resource_ml_for_kids: Machine Learning for Kids
+  ai_resource_ml_for_kids_desc: Train a machine learning model with text, numbers,
+    or images, and use it to make games in Scratch.
+  ai_resource_ibm_ml_for_kids: 'IBM: Machine Learning for Kids'
+  ai_resouce_ibm_ml_for_kids_desc: Hands-on activities to introduce simple machine
+    learning models to students through games and interactive projects.
+  ai_resource_ecs: 'ECS: Artificial Intelligence (AI)'
+  ai_resource_ecs_desc: A new alternate curriculum unit for the Exploring Computer
+    Science (ECS) curriculum.
+  ai_resource_elements_ai: Elements of AI
+  ai_resource_elements_ai_desc: A series of free online courses created by Reaktor
+    and the University of Helsinki.
+  ai_resource_cognimates: Cognimates
+  ai_resource_cognimates_desc: An AI education platform for building games, programming
+    robots and training.
+  ai_audience_k12: K-12 (Reading required)
+  ai_audience_hs: High school
+  ai_activity_header: Activities Powered by AI and ML
+  ai_activity_teachable: Teachable Machine
+  ai_activity_teachable_desc: Train a computer to recognize your own images, sounds,
+    and poses.
+  ai_activity_quick_draw: Quick, Draw!
+  ai_activity_quick_draw_desc: Can a neural network learn to recognize doodling?
+  ai_activity_experiments: AI Experiments with Google
+  ai_activity_experiments_desc: Start exploring machine learning through pictures,
+    drawings, language, music, and more.
+  ai_activity_mixlab: MixLab
+  ai_activity_mixlab_desc: Make music using voice commands.
+  ai_activity_gaugan: GauGAN Beta
+  ai_activity_gaugan_desc: Paint photo-realistic landscapes with the help of AI.
+  codeorg_homepage_hoc2018_curriculum: மேலும் கற்றுக் கொள்ளுங்கள் <a href="%{studio_url}/courses"
     class="hoc2018-curriculum-link">Code.org courses</a>
-  codeorg_homepage_hoc2018_dance_heading: Create your own <span class="highlight-word">Dance&nbsp;Party</span>
-  codeorg_homepage_hoc2018_header_line1: The Hour of Code is coming...
-  codeorg_homepage_hoc2018_header_line2_desktop: What will you <span class="hoc2018-highlight-word">create?</span>
-  codeorg_homepage_hoc2018_header_line2_mobile: What will you create?
-  codeorg_homepage_hoc2018_header_line3: Give flight to imagination and birth to innovation.
-    Start with an Hour of Code and your own brand of creativity, whatever it may be.
-  codeorg_homepage_hoc2018_musician_before: Featuring
-  codeorg_homepage_hoc2018_musician_after: and more!
-  codeorg_homepage_hoc2018_video: Watch our video
-  hourofcode_homepage_hoc2018_header_line1: Anyone, anywhere can organize an Hour
-    of Code event. One-hour tutorials in over 45 languages. No experience needed.
-  hourofcode_homepage_hoc2018_header_line2: Ages 4 to 104.
-  hoc2018_tutorial_mchoc_description: Minecraft is back for the Hour of Code with
-    a brand new activity! Journey through Minecraft with code.
-  cookie_banner_message: By continuing to browse our site or clicking "I agree," you
-    agree to the storing of cookies on your computer or device.
-  cookie_banner_more_information: See Code.org's Privacy Policy.
-  cookie_banner_accept: I agree
-  front_header_banner: "%{campaign_date} வரலாற்றில் மிகப் பெரிய கற்றல் நிகழ்வு சேர"
-  front_intro_default: கோட் ஆஃப் ஹவர் 180+ நாடுகளில் பல்லாயிரக்கணக்கான மாணவர்களை அடையும்
-    ஒரு உலகளாவிய இயக்கமாகும். எவரும் எங்கு வேண்டுமானாலும் கோடீஸ் நிகழ்வு ஏற்பாடு செய்யலாம்.
-    ஒரு மணி நேர பயிற்சிகள் 45 மொழிகளில் கிடைக்கின்றன. அனுபவம் தேவை இல்லை. <strong>
-    வயது 4 முதல் 104 வரை. </ strong>
-  front_intro_default_2: A global movement in 180+ countries.
-  front_watch_video: புதிய வீடியோ
-  front_watch_regular_video: வீடியோ பார்க்க
-  front_volunteers: தொழில்நுட்ப தொண்டர்கள் தேவை
-  front_start_learning: கற்றல் தொடக்கம்
-  gdpr_dialog_heading: Do you agree to using a web site based in the United States?
-  gdpr_dialog_message: Data from your use of this site may be sent to and stored or
-    processed in the United States.
-  gdpr_dialog_link_intro: For details see our
-  gdpr_dialog_privacy_policy: privacy policy
-  gdpr_dialog_logout: Logout
-  gdpr_dialog_yes: 'Yes'
-  header_menu_resources: வளங்கள்
-  header_menu_faq: கேள்விகளும் பதில்களும்
-  header_menu_how_to: எப்படி என்று
-  header_menu_promote: ஊக்குவிக்க
-  header_menu_activities: செயல்பாடுகள்
+  codeorg_homepage_hoc2018_dance_heading: உங்கள் சொந்த <span class=" வார்த்தையை-முன்னிலைப்படுத்து">
+    டான்ஸ் &nbsp; பார்டி </span> ஐ உருவாக்குங்கள்
+  codeorg_homepage_hoc2018_header_line1: Hour of Code வருகிறது...
+  codeorg_homepage_hoc2018_header_line2_desktop: நீங்கள் என்ன <span class="hoc2018-highlight-word">உருவாக்குவீர்கள்?</span>
+  codeorg_homepage_hoc2018_header_line2_mobile: நீங்கள் எதை உருவாக்குவீர்கள்?
+  codeorg_homepage_hoc2018_header_line3: உங்கள் கற்பனைத்திறனை சிறகு முளைக்கச் செய்து
+    புதுமையான கண்டுபிடிப்பை பிறக்கச் செய்யுங்கள். ஒரு Hour of Code உடன் உங்களின் தனி
+    முத்திரையான படைப்பாற்றலை அது எதுவாக இருந்தாலும் தொடங்குங்கள்.
+  codeorg_homepage_hoc2018_musician_before: தோன்றுகிறார்கள்
+  codeorg_homepage_hoc2018_musician_after: மேலும் பலர்!
+  codeorg_homepage_hoc2018_video: எங்கள் காணொளியை காணவும்
+  hourofcode_homepage_hoc2018_header_line1: ஒரு Hour of Code நிகழ்வை யார் வேண்டுமானாலும்,
+    எங்கு வேண்டுமானாலும் ஏற்பாடு செய்யலாம். 45க்கும் அதிகமான மொழிகளில் ஒரு-மணிநேர
+    டுடோரியல்கள். அனுபவம் தேவையில்லை.
+  hourofcode_homepage_hoc2018_header_line2: 4 முதல் 104 வயது வரை.
+  hoc2018_tutorial_mchoc_description: Hour of Code க்காக Minecraft மீண்டும் புத்தம்
+    புதிய நடவடிக்கையுடன் வருகிறது! குறியீட்டைக் கொண்டு Minecraft ஊடான பயணம்.
+  codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>
+  cookie_banner_message: எங்கள் தளத்தில் தொடர்ந்து உலாவுதல் மூலமோ அல்லது ”நான் ஒப்புக்கொள்கிறேன்,”
+    (”I agree”) என்பதை சொடுக்குவதன் மூலமோ நீங்கள் உங்கள் கணினி அல்லது சாதனத்தில் குக்கீகளை
+    சேகரிக்க ஒப்புக் கொள்கிறீர்கள்.
+  cookie_banner_more_information: Code.org-ன் தனியுரிமை கொள்கையை காணவும்.
+  cookie_banner_accept: ஏற்றுக்கொள்கிறேன்
+  front_header_banner: சரித்திரத்திலேயே மிகப்பெரிய கற்றுக் கொள்ளும் நிகழ்வில் இணையுங்கள்,
+    %{campaign_date}
+  front_intro_default: Hour of Code என்பது 180+ நாடுகளில் பல்லாயிரக்கணக்கான மாணவர்களைச்
+    சென்றடையும் ஒரு உலகளாவிய இயக்கமாகும். Hour of Code நிகழ்ச்சியை யார் வேண்டுமானாலும்
+    எங்கு வேண்டுமானாலும் ஏற்பாடு செய்யலாம். ஒரு மணி நேர பயிற்சிகள் 45 க்கும் மேற்பட்ட
+    மொழிகளில் கிடைக்கின்றன. அனுபவம் தேவையில்லை. <strong>வயது 4 முதல்104 வரை.</strong>
+  front_intro_default_2: 180+ நாடுகளில் உள்ள ஒரு உலகளாவிய இயக்கம்.
+  front_watch_video: புதிய காணொளியைக் காண்க
+  front_watch_regular_video: காணொளியைக் காண்க
+  front_volunteers: தொழில்நுட்ப தொண்டூழியர்கள் தேவை
+  front_start_learning: கற்றுக்கொள்ளத் தொடங்குக
+  gdpr_dialog_heading: அமெரிக்காவை அடிப்படையாகக் கொண்ட ஒரு வலைதளத்தை பயன்படுத்த நீங்கள்
+    ஒப்புக்கொள்கிறீர்களா?
+  gdpr_dialog_message: இந்த வலைத்தளத்தை நீங்கள் பயனப்டுத்துவதற்கான டேட்டா அமெரிக்காவிற்கு
+    அனுப்பப்பட்ட சேகரிக்கப்படும் அல்லது செயல்முறைப்படுத்தப்படும்.
+  gdpr_dialog_link_intro: விபரங்களுக்கு காணவேண்டியது எங்களது
+  gdpr_dialog_privacy_policy: தனியுரிமைக் கொள்கை
+  gdpr_dialog_logout: வெளியேறு
+  gdpr_dialog_yes: ஆம்
+  header_menu_resources: வள ஆதாரங்கள்
+  header_menu_faq: அடிக்கடி கேட்கப்படும் கேள்விகள்
+  header_menu_how_to: எவ்வாறு இதைச் செய்யலாம்
+  header_menu_promote: ஊக்குவிப்பு
+  header_menu_activities: நடவடிக்கைகள்
   not_found_title: பக்கம் காணப்படவில்லை
-  not_found_desc: கோரப்பட்ட பக்கம் காணப்படவில்லை
-  not_found_instructions: வலை முகவரியை சரிபார் முறைகளுள் அல்லது இணைப்பை பட்டியலில்
-    இருந்து தேர்வு செய்யவும்.
+  not_found_desc: வேண்டுகோள் விடுத்த படம் காணப்படவில்லை
+  not_found_instructions: வலைத்தளத்தை சரிபார்த்திடுக அல்லது மறுசமர்ப்பிப்பு செய்க
+    அல்லது கீழ்காணும் பட்டியலிலிருந்து ஒரு இணைப்பை தெரிவு செய்க.
   company_4-H: 4-H இளைஞர் மேம்பாடு
   company_asa: பின்னணி கூட்டணி
   company_asos: ASOS
@@ -198,492 +269,540 @@ ta:
   company_wuhsd: வைட்டியர் யூனியன் உயர்நிலைப் பள்ளி
   company_wcschools: வில்சன் கவுண்டி பள்ளிகள்
   company_yelp: இருந்து நீக்க வேண்டுமா
-  nav_back_to_resources: வளங்கள் மீண்டும்
-  how_to_nav_educators: கல்வியாளர்கள்
-  how_to_nav_after_school: பள்ளி முடிந்ததும்
-  how_to_nav_parents: பெற்றோர்
-  how_to_nav_public_officials: பொது அதிகாரிகள்
-  how_to_nav_districts: மாவட்டங்களில்
-  how_to_nav_assemblies: பாடசாலை சபைகள்
-  how_to_nav_organizations: அமைப்புகள்
-  how_to_nav_companies: நிறுவனங்கள்
-  how_to_nav_afterschool_educators: பாடசாலைக்கு கல்வியாளர்கள்
-  how_to_nav_volunteers: தொண்டர்கள்
-  whats_next_header: அடுத்தது என்ன?
-  whats_next_description: பொருட்கள் மற்றும் உங்கள் நிகழ்ச்சி பயனுள்ளதாக குறிப்புகள்
-    அனுப்புவோம். <a href='http://code.org/learn'> தற்போதைய பயிற்சி முயற்சி</a> எந்த
-    உலாவி, ஸ்மார்ட்போன் – அல்லது எந்த கணினி!
-  whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
-  whats_next_promote: "<a href='/promote'> குறியீட்டு மணிநேரத்தை ஊக்குவிக்கவும் </a>"
-  whats_next_how_to_promote: "<a href='/promote/resources'> கோடரியின் மணிநேரத்தை மேம்படுத்துவது
-    எப்படி </a>"
-  whats_next_how_to_promote_link: "<a href='/promote'><a href='/promote'> கோடரியின்
-    மணிநேரத்தை மேம்படுத்துவது எப்படி </a>"
-  whats_next_try: "<a href='%{learn_url}'> பயிற்சிகளை முயற்சி செய்க </a>"
-  whats_next_try_button: பயிற்சி முயற்சி
-  n_have_learned_an_hoc: "<h1> ஒரு </ h1> <h2> குறியீட்டு மணி </ h2> <h3> # பணியாற்றிய
-    </ h3>"
-  anybody_can_learn: யார் வேண்டுமானாலும் கற்றுக்கொள்ளலாம்.
-  get_started: தொடக்கம்
-  beyond_an_hour: குறியீடு அப்பால் ஒரு மணி நேரம்
-  register_now: இப்போதே பதிவு
-  share_on_facebook: Facebook இல் பகிர்
-  share_on_twitter: Twitter இல் பகிர்
-  promote_additional_resources: Additional resources coming soon!
-  front_join_us_heading: ஒவ்வொரு மாணவருக்கும் ஒரு மணிநேர கோட்.
+  nav_back_to_resources: வள ஆதாரங்களுக்குத் திரும்புக
+  how_to_nav_educators: பயிற்றுவிப்பாளர்களுக்கு
+  how_to_nav_after_school: பள்ளி நேரத்திற்குப் பின்புக்க்கு
+  how_to_nav_parents: பெற்றோர்களுக்கு
+  how_to_nav_public_officials: பொது அதிகாரிகளுக்கு
+  how_to_nav_districts: மாவட்டங்களுக்கு\
+  how_to_nav_assemblies: பள்ளிக் கூட்டங்களுக்கு
+  how_to_nav_organizations: அமைப்புகளுக்கு
+  how_to_nav_companies: நிறுவனங்களுக்கு
+  how_to_nav_afterschool_educators: பள்ளி நேரத்திற்கு பின் பயிற்றுவிக்கும் ஆசிரியர்களுக்கு
+  how_to_nav_volunteers: தொண்டூழியர்களுக்கு
+  whats_next_header: அடுத்து என்ன?
+  whats_next_description: உங்கள் நிகழ்வுக்கான பாடப்பொருட்கள் மற்றும் உங்கள் நிகழ்வுக்கான
+    உதவிக்குறிப்புகளை நாங்கள் அனுப்புவோம். எந்த ப்ரவுசர், ஸ்மார்ட்ஃபோனுக்கும் – அல்லது
+    கணினியே இல்லை என்றாலும் <a href='http://code.org/learn'>ல் நடப்பு டுடோரியல்களை
+    முயற்சிக்கவும் </a>!
+  whats_next_how_to: "<a href='/how-to'>ஒரு Hour of Codeஐ எவ்வாறு இயக்குவது</a>"
+  whats_next_promote: "<a href='/promote'> Hour of Codeஐ பரப்பவும்</a>"
+  whats_next_how_to_promote: "<a href='/promote/resources'> Hour of Codeஐ எவ்வாறு
+    பரப்புவது</a>"
+  whats_next_how_to_promote_link: "<a href='/promote'> Hour of Codeஐ எவ்வாறு பரப்புவது
+    </a>"
+  whats_next_try: "<a href='%{learn_url}'>டுடோரியல்களை முயற்சித்துப் பாருங்கள்</a>"
+  whats_next_try_button: பயிற்சிகளை முயற்சிக்கவும்
+  n_have_learned_an_hoc: "<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>"
+  anybody_can_learn: யாரும் கற்றுக்கொள்ளலாம்.
+  get_started: தொடங்குக
+  beyond_an_hour: ஒரு Hour of Code -ஐயும் தாண்டி
+  register_now: இப்போதே பதிவு செய்துகொள்ளுங்கள்
+  share_on_facebook: முகநூலில் பகிரவும்
+  share_on_twitter: ட்விட்டரில் பகிர்க
+  promote_additional_resources: கூடுதல் வழிமுறைகள் விரைவில் வருகின்றன!
+  front_join_us_heading: ஒவ்வொரு மாணவருக்கும் ஒரு Hour of Code.
   front_join_us_announcements: அறிவிப்புகள்
-  front_join_us_anybody_can_learn: யாராலும் கற்றுக்கொள்ள முடியும்
-  front_join_us_description: கணினி அறிவியல் ஒவ்வொரு மாணவருக்கும் ஒரு அடித்தளம். 100
-    மில்லியன் டாலர்களை அறிமுகப்படுத்த எங்களுக்கு உதவுங்கள்.
-  front_join_us_description_short: கணினி அறிவியல் ஒவ்வொரு மாணவருக்கும் ஒரு அடித்தளம்.
-  front_join_us_button: எங்களுடன் சேர்
-  front_what_is_hoc: 'ஒரு மணி நேரக் கணினி குறியீடு என்றால் என்ன? '
-  front_join_us_header: யாரும் அடிப்படைகளை கற்றுக் கொள்ளலாம், மேலும் அதை வேடிக்கை
-    செய்து பாருங்கள்!
-  front_join_us_volunteer_header: கோடரியின் மணி நேரம் தொண்டர்கள்
-  front_join_us_tutorials: கோட் டுடோரியலின் உங்கள் நேரத்தைத் தேர்வு செய்க!
-  front_join_us_tutorials_link: "<I> 200 க்கும் மேற்பட்ட பயிற்சி மற்றும் பாடம் திட்டங்கள்
-    </ i> வடிகட்டி மற்றும் உலாவுக! எந்தவொரு அனுபவ மட்டத்திலும் வெவ்வேறு தலைப்புப்
-    பகுதிகளிலும், பல வன்பொருள் தேவைகளுடனும், மாணவர்களுடனும் நடவடிக்கைகளைக் கண்டறிக."
-  front_join_us_robotics: ரோபோக்கள் அல்லது சுற்றுகள் வெற்றி!
-  front_join_us_robotics_link: உங்கள் மாணவர்களுடன் ஒரு ரோபோக்கள் அல்லது உடல் கணினி
-    உபகரணங்களைப் பயன்படுத்த விரும்புகிறீர்களா? எங்கள் தாராள கூட்டாளிகள் 100 க்கும்
-    மேற்பட்ட வகுப்பறைகளுக்கு நன்கொடை அளிக்கின்றனர்! பங்கேற்க கோடரியின் தேதிக்கு பதிவு
-    செய்யவும். (Code.org, US மட்டும் தேர்ந்தெடுக்கப்பட்ட வகுப்பறைகள்)
+  front_join_us_anybody_can_learn: யாரும் கற்றுக்கொள்ளலாம்
+  front_join_us_description: கம்ப்யூட்டர் சயின்ஸ் ஒவ்வொரு மாணவரும் கற்றுக் கொள்வதற்கான
+    அடிப்படை கல்வியாகும். 100 மில்லியன் நபர்களுக்கு இதை அறிமுகப்படுத்த எங்களுக்கு
+    உதவுங்கள்.
+  front_join_us_description_short: கம்ப்யூட்டர் சயின்ஸ் ஒவ்வொரு மாணவரும் கற்றுக் கொள்வதற்கான
+    அடிப்படை கல்வியாகும்.
+  front_join_us_button: எங்களுடன் இணையுங்கள்
+  front_what_is_hoc: Hour of Code என்பது என்ன?
+  front_join_us_header: யார் வேண்டுமானாலும் அடிப்படைகளை கற்றுக் கொண்டு, அதை மகிழ்ந்து
+    அனுபவிக்கலாம்!
+  front_join_us_volunteer_header: Hour of Code க்கான தொண்டூழியர்கள்
+  front_join_us_tutorials: உங்கள் Hour of Code டுடோரியலை தெரிவு செய்யுங்கள்!
+  front_join_us_tutorials_link: "<i> 200 டுடோரியல்கள் மற்றும் பாடத் திட்டங்கள் </i>
+    இதிலிருந்து வடிகட்டி ப்ரவுஸ் செய்யுங்கள்! பல்வேறுபட்ட பாடத்திற்கான பகுதிகள், பல
+    ஹார்டுவேர் தேவைப்பாடுகள், மற்றும் எந்த ஒரு அனுபவ நிலையிலும் உள்ள மாணவர்களுக்கான
+    நடவடிக்கைகளை கண்டறியுங்கள்."
+  front_join_us_robotics: ரோபோக்கள் அல்லது சர்க்யூட்களை வெல்லுங்கள்!
+  front_join_us_robotics_link: உங்கள் மாணவர்களுடன் பயன்படுத்த உங்களுக்கு ரோபோக்கள்
+    அல்லது பொருள்ரீதியான கணினி தொகுப்புகள் உங்களுக்குத் தேவையா? தாராள மனப்பான்மை கொண்ட
+    எங்கள் பங்காளர்கள் 75 வகுப்பறைகளை அன்பளிப்பு செய்கிறார்கள்! பங்கேற்க Hour of Code-க்கு
+    பதிவு செய்யுங்கள். (Code.org –ஆல் தெரிவு செய்யப்படும் வகுப்பறைகள், US மட்டும்)
   front_join_us_teacher: நீங்கள் ஒரு ஆசிரியரா?
-  front_join_us_inspire: மாணவர்கள் உத்வேகம்
-  front_join_us_inspire_link: வகுப்பறையில் கோடரியின் ஒரு மணி நேரம்.
-  front_join_us_teacher_link: வகுப்பறையில் ஒரு மணிநேர குறியீடு கொண்ட மாணவர்களை ஊக்குவிக்கும்
-  front_join_us_teacher_volunteer: உங்கள் வகுப்பறையைப் பார்வையிடவோ அல்லது தொலைவிலுள்ள
-    உங்கள் மாணவர்களுக்கு ஊக்கமளிக்கும் உள்ளூர் தொண்டர்களைத் தேடுங்கள்.
+  front_join_us_inspire: உங்கள் மாணவர்களுக்கு ஊக்கத்தை ஏற்படுத்துங்கள்
+  front_join_us_inspire_link: வகுப்பறையில் ஒரு Hour of Code உடன்.
+  front_join_us_teacher_link: வகுப்பறையில் ஒரு Hour of Code உடன் உங்கள் மாணவர்களுக்கு
+    ஊக்கத்தை ஏற்படுத்துங்கள்
+  front_join_us_teacher_volunteer: உங்கள் வகுப்பறைக்கு வரக்கூடிய அல்லது உங்கள் மாணவர்களை
+    தொலைவிலிருந்தே ஊக்கப்படுத்தக்கூடிய உள்ளூர் தொண்டூழியர்களை தேடுங்கள்.
   front_join_us_parent: நீங்கள் ஒரு பெற்றோரா?
-  front_join_us_ask_link: உங்கள் உள்ளூர் பள்ளிக்கு கேளுங்கள்
-  front_join_us_ask: ஒரு மணிநேரத்தை நடத்த வேண்டும்
-  front_join_us_parent_link: உங்கள் உள்ளூர் பள்ளி கோட் ஒரு மணி நேரம் நடத்த
-  front_join_us_computer_science: கணினி அறிவியல் நேசிக்கிறதா?
-  front_join_us_cs_volunteer: கணினி விஞ்ஞான கல்வி பற்றி ஆர்வமா?
-  front_join_us_spread: வார்த்தையை பரப்புங்கள்.
-  front_join_us_spread_word: உங்கள் சமூகத்தில் வார்த்தையை பரப்புங்கள்
-  front_join_us_spread_word_work: உங்கள் சமூகத்தில் அல்லது பணியிடத்தில் வார்த்தையை
-    பரப்புங்கள்
-  front_join_us_sign_up_volunteer: ஒரு உள்ளூர் வகுப்பறையில் தன்னார்வலருக்கு அல்லது
-    ஒரு வீடியோ அரட்டை மூலம் பதிவு செய்யுங்கள்.
-  front_join_us_organize: அல்லது கோடை நிகழ்வு ஒரு மணி நேரம் உங்களை ஏற்பாடு.
-  front_join_us_how_to_run: கோடரியின் ஒரு மணிநேரத்தை எப்படி நடத்துவது?
-  front_join_us_help_promote: கோடை மணிநேரத்தை ஊக்குவிக்க உதவுங்கள்
+  front_join_us_ask_link: உங்கள் உள்ளூர் பள்ளியிடம் கேளுங்கள்
+  front_join_us_ask: ஒரு Hour of Code–ஐ ஏற்பாடு செய்ய.
+  front_join_us_parent_link: ஒரு Hour of Code–ஐ ஏற்பாடு செய்ய உங்கள் உள்ளூர் பள்ளியை
+    கேளுங்கள்
+  front_join_us_computer_science: கம்ப்யூட்டர் சயின்ஸ் என்றால் பிடிக்குமா?
+  front_join_us_cs_volunteer: கம்ப்யூட்டர் சயின்ஸ் கல்வி குறித்து விருப்ப ஆர்வத்துடன்
+    உள்ளீர்களா?
+  front_join_us_spread: இது குறித்து பரப்புங்கள்.
+  front_join_us_spread_word: உங்கள் சமூகத்தில் இது குறித்து பரப்புங்கள்
+  front_join_us_spread_word_work: உங்கள் சமூகம் அல்லது பணியிடத்தில் இது குறித்து பரப்புங்கள்
+  front_join_us_sign_up_volunteer: ஒரு உள்ளூர் வகுப்பறையில் அல்லது ஒரு வீடியோ சாட்டின்
+    மூலமாக தொண்டூழியம் செய்ய பதிவு செய்யுங்கள்.
+  front_join_us_organize: அல்லது நீங்களே ஒரு Hour of Code நிகழ்வை ஏற்பாடு செய்யுங்கள்.
+  front_join_us_how_to_run: ஒரு Hour of Code-ஐ எப்படி இயக்க செய்ய வேண்டும் என்பது
+    குறித்து இங்கே தரப்பட்டுள்ளது
+  front_join_us_help_promote: Hour of Code பரப்ப உதவுங்கள்
   front_join_us_students: மாணவர்கள்
   front_join_us_teachers: ஆசிரியர்கள்
-  front_join_us_everyone: அனைவரும்
-  front_join_us_try: அதை முயற்சிக்கவும்
-  front_join_us_sign_up: பதிவுபெறு
-  front_join_us_host: இது ஹோஸ்ட்
-  front_join_us_support: அதற்கு ஆதரவு
-  front_join_us_more_info: மேலும் தகவலுக்கு, <a href='https://code.org'> code.org</a>
-    செல்லவும்.
-  front_join_us_code_info: மேலும் விவரங்களுக்கு, தயவுசெய்து வருகை code.org
-  front_join_us_n_students_served: "# உதவியது"
-  front_join_us_challenge: அதை முயற்சிக்கவும்
+  front_join_us_everyone: ஒவ்வொருவரும்
+  front_join_us_try: இதை முயற்சிக்கவும்
+  front_join_us_sign_up: பதிந்துகொள்க
+  front_join_us_host: நடத்துங்கள்
+  front_join_us_support: இதற்கு ஆதரவளியுங்கள்
+  front_join_us_more_info: மேலதிக தகவல்களுக்கு, தயவுசெய்து பார்வையிடவும் <a href='https://code.org'>code.org
+    </a>.
+  front_join_us_code_info: 'மேலும் தகவல்களுக்கு, தயவுசெய்து பார்வையிடவும்: code.org'
+  front_join_us_n_students_served: "# உதவியது# வழங்கப்பட்டது."
+  front_join_us_challenge: ஒரு பிரபலத்துடன் உங்களது வகுப்பறை அமைவதற்கான ஒரு வீடியோ
+    சாட்டை வெல்லுங்கள்!
   front_join_us_learn_more: மேலும் அறிக
-  signup_closed: கோட்டின் மணி நேரம் பதிவு செய்யப்பட்டுள்ளது. அக்டோபரில் அடுத்த குறியீடாக
-    பதிவு செய்ய, மீண்டும் சரிபார்க்கவும்.
-  signup_registration_not_required: You don't need to register to participate! The
-    Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try
-    an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan
-    an event for your class.
-  signup_registration_closed: And every year in December, your class can join millions
-    of students around the world celebrating Computer Science Education Week with
-    the Hour of Code. We'll open registration for the annual celebration in October.
-  signup_header: "%{campaign_date} போது ஒரு குறியீடு மணி ஏற்பாடு மற்றும் இங்கே பதிவு
-    செய்க."
+  signup_closed: Hour of Code-க்கான பதிவு இப்போது முடிவுற்றது. அடுத்த Hour of Code-ல்
+    பதிவு செய்ய மீண்டும் அக்டோபரில் பாருங்கள்.
+  signup_registration_not_required: பங்கேற்க நீங்கள் பதிவு செய்ய வேண்டிய தேவை இல்லை!
+    ஆண்டு முழுவதும் Hour of Code நடவடிக்கைகள் கிடைக்கக்கூடியதாக உள்ளன. உங்கள் வகுப்புக்கான
+    ஒரு நிகழ்வை திட்டமிட <a href='%{hoc_activities_url}'>ஒரு நடவடிக்கையை </a> அல்லது
+    எங்களது <a href='%{howto_guide_url}'> எவ்வாறு செய்வது வழிகாட்டியை </a> முயற்சியுங்கள்.
+  signup_registration_closed: உலகமெங்கும் Hour of Code உடன் கம்ப்யூட்டர் சயின்ஸ் கல்வி
+    வாரத்தை கொண்டாடுகிற பல லட்சக்கணக்கான மாணவர்களுடன் ஒவ்வொரு ஆண்டும் டிசம்பரில் உங்கள்
+    வகுப்பு இணையலாம். ஆண்டு விழா கொண்டாட்டத்திற்கான பதிவை அக்டோபரில் நாங்கள் திறக்கிறோம்.
+  signup_header: "%{campaign_date}-ல் ஒரு Hour of Code –ஐ ஏற்பாடு செய்து, இங்கு பதிவு
+    செய்யுங்கள்."
   signup_name_label: உங்கள் பெயர்
-  signup_name_error: பெயர் தேவைப்படுகிறது.
+  signup_name_error: பெயர் தேவை.
   signup_email_label: உங்கள் மின்னஞ்சல்
   signup_email_error: மின்னஞ்சல் தேவை
   signup_invalid_email_error: நீங்கள் உள்ளிட்ட மின்னஞ்சல் முகவரி தவறானது
-  signup_organization_name_label: நிறுவன பெயர்
-  signup_organization_name_error: நிறுவனத்தின் பெயர் தேவைப்படுகிறது.
-  signup_event_type_label: நிகழ்வு வகை
-  signup_event_type_error: நிகழ்வு வகை தேவைப்படுகிறது.
-  signup_event_entire_school_label: என் பள்ளி பங்கேற்கிறது
-  signup_event_location_label: நிகழ்வு இருப்பிடம்
-  signup_event_location_error: நிகழ்வு இடம் தேவைப்படுகிறது.
-  signup_special_event_flag_label: அப்பால் ஒரு மணி நேரம் போக மற்ற சிறப்பு திட்டங்கள்
-    மற்றும் சமூகத்தின் உறுப்பினர்கள் ஒரு மாவட்டம் முழுவதும் என் நிகழ்வு அதிகரிக்கும்
-  signup_special_event_details_label: சிறப்பு நிகழ்வாக உயர்த்திக் பொருந்தும்
-  signup_send_posters_flag_label: என் பள்ளி அல்லது அமைப்பு <a href= "/resources/promote#posters">
-    சுவரொட்டிகள்</a> அனுப்ப (அமெரிக்கா மட்டும் போது பொருட்கள் கடைசியாக)
-  signup_send_posters_address_label: பாடசாலை அல்லது நிறுவனத்தில் முகவரி
-  signup_whole_school_flag_label: இந்த நிகழ்வு பள்ளி மட்டும் உள்ளது
-  signup_your_event: உங்கள் நிகழ்வு பதிவு
-  signup_host_an_hour: ஒரு மணி நேரம் ஹோஸ்ட்
-  signup_match_volunteer: என் மாணவர்கள் அளிக்கக் உள்ளூர் மென்பொருள் பொறியாளர் கண்டுபிடிக்க
-    எனக்கு உதவ
-  signup_email_preference_opt_in: Can we email you about updates to Code.org courses,
-    local opportunities, or other computer science news?
-  signup_email_preference_privacy: "(See our privacy policy)"
-  signup_email_preference_yes: 'Yes'
-  signup_email_preference_no: 'No'
-  signup_email_preference_error: Email preference is required
-  signup_multiple_event_warning: நீங்கள் பல நிகழ்வுகள் ஹோஸ்டிங் என்றால், ஒரு தனித்துவமான
-    பெயர் அல்லது மின்னஞ்சலை ஒவ்வொருவரும் சமர்ப்பிக்கவும். பெயர் மற்றும் மின்னஞ்சல்
-    ஒரு சம்பவம் மட்டுமே நாங்கள் எண்ணி.
-  signup_registration_deadline: பதிவு குறியீடு மணி டிசம்பர் 11 மூடும்.
+  signup_organization_name_label: நிறுவனத்தின் பெயர்
+  signup_organization_name_error: நிறுவனத்தின் பெயர் தேவை.
+  signup_event_type_label: நிகழ்வின் வகை
+  signup_event_type_error: நிகழ்வின் வகை தேவை.
+  signup_event_entire_school_label: என் ஒட்டுமொத்த பள்ளியும் பங்கேற்கிறது
+  signup_event_location_label: நிகழ்வு நடைபெறும் இடம்
+  signup_event_location_error: நிகழ்வு நடைபெறும் இடம் தேவை.
+  signup_special_event_flag_label: என் நிகழ்வில் கலந்து கொள்வது ஒரு ஒட்டுமொத்த மாவட்டம்,
+    சமூகத்தின் உறுப்பினர்கள் மற்றும்/அல்லது ஒரு மணிநேரத்திற்கும் தாண்டிச் செல்வதற்கான
+    பிற சிறப்பு திட்டங்கள்
+  signup_special_event_details_label: ஒரு சிறப்பு நிகழ்வாக சிறப்பம்சம் ஏற்படுத்த விண்ணப்பிக்கவும்
+  signup_send_posters_flag_label: என் பள்ளி அல்லது அமைப்புக்கு (யுஎஸ் மட்டுமே, இருப்பு
+    உள்ளவரை) <a href= "/resources/promote#posters">posters</a> அனுப்புக
+  signup_send_posters_address_label: பள்ளி அல்லது நிறுவனத்தின் முகவரிபள்ளி அல்லது
+    நிறுவனத்தின் முகவரி
+  signup_whole_school_flag_label: இந்த நிகழ்வு முழு பள்ளிக்கும் ஆனது
+  signup_your_event: உங்கள் நிகழ்வை பதிவு செய்திடுக
+  signup_host_an_hour: ஒரு மணிநேரம் நடத்திடுக
+  signup_match_volunteer: என் மாணவர்களுக்கு ஊக்கம் ஏற்படுத்த ஒரு உள்ளூர் மென்பொருள்
+    பொறியாளரை கண்டுபிடிக்க எனக்கு உதவுங்கள்
+  signup_email_preference_opt_in: வகுப்புகள், உள்ளூர் வாய்ப்புகள், அல்லது பிற கம்ப்யூட்டர்
+    சயின்ஸ் குறித்த புதிய தகவல்களை நாங்கள் உங்களுக்கு மின்னஞ்சல் செய்யலாமா?
+  signup_email_preference_privacy: "(எங்களது தனியுரிமை கொள்கையை காணவும்)"
+  signup_email_preference_yes: ஆம்
+  signup_email_preference_no: இல்லை
+  signup_email_preference_error: மின்னஞ்சல் விருப்பத்தேர்வு தேவை
+  signup_multiple_event_warning: நீங்கள் பதிவு செய்கையில் மேப்பில் உங்கள் பள்ளியின்
+    பெயர் மற்றும் நகரத்தை நாங்கள் இடுவோம். நீங்கள் பல நிகழ்வுகளை நடத்துகிறீர்கள் என்றால்,
+    ஒவ்வொன்றிற்கும் ஒரு தனித்துவமான பெயர் அல்லது மின்னஞ்சலை தயவுசெய்து சமர்ப்பிக்கவும்.
+    ஒரு பெயர் மற்றும் மின்னஞ்சல் கூட்டுக்கு நாங்கள் ஒரு எண்ணிக்கை நிகழ்வையே எண்ணுவோம்.
+  signup_registration_deadline: Hour of Codeக்கான பதிவு டிசம்பர் 11 உடன் முடிகிறது.
   signup_name_placeholder: உங்கள் பெயர்
   signup_email_placeholder: you@example.com
-  signup_organization_name_placeholder: உதாரணமாக, லிங்கன் உயர்நிலை பள்ளி
+  signup_organization_name_placeholder: உதாரணத்திற்கு, லின்கன் உயர்நிலைப் பள்ளி
   signup_event_country_label: நிகழ்வு நாடு
-  signup_event_country_error: நாட்டின் தேவை.
-  signup_event_location_placeholder: அஞ்சல் குறியீடு மற்றும் நாடு அல்லது முழு முகவரி.
-  signup_special_event_details_placeholder: இது ஒரு சிறப்பு நிகழ்ச்சி எது விவரிக்கவும்
-  signup_send_posters_address_placeholder: இந்த முகவரி நம்முடைய வரைபடத்தில் பகிர்ந்துகொள்ளப்படாது
+  signup_event_country_error: நாடு தேவை.
+  signup_event_location_placeholder: அஞ்சல் குறியீட்டெண் மற்றும் நாடு அல்லது முழு
+    முகவரி.
+  signup_special_event_details_placeholder: இதை ஒரு சிறப்பு நிகழ்வாக எது ஆக்குகிறது
+    என விளக்கவும்
+  signup_send_posters_address_placeholder: இந்த முகவரி எங்கள் மேப்பில் பகிரப்படாது
   signup_event_type_in_school: ஒரு பள்ளியில்
-  signup_event_type_out_of_school: பள்ளி வெளியே
+  signup_event_type_out_of_school: பள்ளிக்கு வெளியே
   signup_submit_census_label: சமர்ப்பி
-  signup_submit_census_error_message: நாங்கள் வருந்துகிறோம். ஒரு பிழை ஏற்பட்டது.
-    படிவத்தை சமர்ப்பிப்பதற்கு மீண்டும் முயற்சிக்கவும்.
-  signup_submit_label: பதிவுபெறு
-  signup_submit_error_message: ஒரு பிழை ஏற்பட்டது. தேவையான அனைத்து புலங்களும் சரியாக
-    நிரப்பப்பட்டுள்ளன உறுதி செய்ய சரிபார்க்கவும்.
-  signup_submit_and_continue_label: சமர்ப்பிக்க, தொடர்ந்து
-  signup_continue_label: தொடர்ந்து
-  signup_thank_you_header: கையொப்பமிடும் குறியீடு மணி நிகழ்வை நடத்த அப் நன்றி.
-  signup_thank_you_message: நீங்கள் ஒரு உறுதிப்படுத்தல் மின்னஞ்சலை நீங்கள் தொடங்குவதற்கு
-    தகவல் அனுப்பினோம்.
-  social_hoc2018_code_org_what_create: 'Code.org: What will you create?'
-  social_hoc2018_creativity_in_are_you: 'The #HourOfCode is about creativity. I’m
-    in! Are you?'
-  social_hoc2018_dance_party: 'Hour of Code: Dance Party'
-  social_hoc2018_dance_what_create: Featuring Katy Perry, Madonna, J. Balvin, Sia,
-    Keith Urban, Ciara, and 25 more!
-  social_hoc2018_every_student: Every student deserves the opportunity to express
-    their creativity with computer science.
-  social_hoc2018_every_student_try_what_create: Every student deserves the opportunity
-    to express their creativity with computer science. Try your hand at the new tutorials.
-    What will you create?
-  social_hoc2018_hoc_coming_create: The Hour of Code is coming. What will you create?
-  social_hoc2018_hoc_here: The Hour of Code is here!
-  social_hoc2018_join: 'கோடை மணி: இயக்கம் சேர'
-  social_hoc2018_mc: Minecraft is back for the Hour of Code, and you’re the hero!
-    Write code to journey through Minecraft biomes.
-  social_hoc2018_mc_creativity: Use your creativity and problem solving skills to
-    explore and build underwater worlds with code.
-  social_hoc2018_what_create: What will you create?
-  social_hoc2018_global_movement: The Hour of Code is a global movement reaching tens
-    of millions of students. One-hour tutorials are available in 45+ languages for
-    all ages.
-  map_title: மணி குறியீடு வரைபடம்
-  map_header: "# நிகழ்வுகளை பதிவு குறியீடு 2017 மணி"
-  map_header_count_year: "%{event_count} events registered in %{year}"
-  see_all_events: எல்லா நிகழ்வுகளையும் காட்டு
-  map_header_company: "# நிறுவனம் அமைப்பாளர்கள்"
-  map_header_country: "%{country}+ இல்"
-  map_search_placeholder: குறியீடு மணி நிகழ்வுகள் தேடல்
-  map_search_search: தேடு
-  map_search_reset: மீட்டமை
-  map_legend_title: புராண
-  map_legend_hoc_events: கோட் நிகழ்வின் மணி
-  map_legend_cs_tech_jam: சிறப்பு நிகழ்ச்சி
-  map_warning: கோட் வரைபடத்தின் மணி முதல் 200,000 பதிவுசெய்யப்பட்ட நிகழ்வுகளை மட்டுமே
-    காட்டுகிறது. செல்லுபடியாகும் முகவரியுடன் பதிவுசெய்யப்பட்ட அனைத்து நிகழ்வுகளும்
-    <a href='%{events_url}'> நிகழ்வுகள் பக்கத்திலும் </a> பார்க்கப்படலாம்.
-  meta_tag_og_title: 'கோடை மணி: இயக்கம் சேர'
-  meta_tag_og_description: The Hour of Code is a global movement reaching tens of
-    millions of students of all ages in 180+ countries and over 45 languages.
-  meta_tag_twitter_title: 'கோடை மணி: இயக்கம் சேர'
-  meta_tag_twitter_description: The Hour of Code is a global movement reaching tens
-    of millions of students of all ages in 180+ countries and over 45 languages.
-  twitter_default_text: 'நான் இந்த ஆண்டு #HourOfCode இல் பங்கு பெறுகிறேன், நீங்களா?
+  signup_submit_census_error_message: மன்னிக்கவும். ஒரு பிழை ஏற்பட்டுள்ளது. தயவுசெய்து
+    படிவத்தை மீண்டும் சமர்ப்பிக்க முயற்சிக்கவும்.
+  signup_submit_label: பதிந்துகொள்க
+  signup_submit_error_message: ஒரு பிழை ஏற்பட்டுள்ளது. தேவைப்படுகிற அனைத்து இடங்களும்
+    முறையாக பூர்த்தி செய்யப்பட்டனவா என்பதை தயவுசெய்து சரிபார்க்கவும்.
+  signup_submit_and_continue_label: சமர்ப்பி மற்றும் தொடர்க
+  signup_continue_label: தொடரவும்
+  signup_thank_you_header: ஒரு Hour of Code நிகழ்வை நடத்த பதிவு செய்தமைக்கு நன்றி.
+  signup_thank_you_message: நீங்கள் துவங்குவதற்கு உதவும் விதமாக நாங்கள் தகவல்கள் அடங்கிய
+    ஒரு உறுதிப்படுத்தும் மின்னஞ்சலை உங்களுக்கு அனுப்பியுள்ளோம்.
+  social_hoc2018_code_org_what_create: 'Code.org: நீங்கள் எதை உருவாக்குவீர்கள்?'
+  social_hoc2018_creativity_in_are_you: "#HourOfCode படைப்பாற்றலைப் பற்றியது. நான்
+    இணைந்துவிட்டேன்! நீங்கள்?"
+  social_hoc2018_dance_party: 'Hour of Code: டான்ஸ் பார்ட்டி'
+  social_hoc2018_dance_what_create: கேடி பெர்ரி, மடோனா, ஜெ. பால்வின், ஸியா, கீத் அர்பன்,
+    சியாரா, மற்றும் மேலும் 25 பேர் தோன்றுகிறர்கள்!
+  social_hoc2018_every_student: கம்ப்யூட்டர் சயின்ஸ் மூலமாக ஒவ்வொரு மாணவரும் தங்கள்
+    படைப்பாற்றலை வெளிப்படுத்தும் வாய்ப்பைப் பெற தகுதியானவர்கள்.
+  social_hoc2018_every_student_try_what_create: கம்ப்யூட்டர் சயின்ஸ் மூலமாக ஒவ்வொரு
+    மாணவரும் தங்கள் படைப்பாற்றலை வெளிப்படுத்தும் வாய்ப்பைப் பெற தகுதியானவர்கள். புதிய
+    டுடோரியல்களை நீங்கள் முயற்சி செய்து பாருங்கள். நீங்கள் எதை உருவாக்குவீர்கள்?
+  social_hoc2018_hoc_coming_create: Hour of Code வருகிறது. நீங்கள் எதை உருவாக்குவீர்கள்?
+  social_hoc2018_hoc_here: Hour of Code வந்துவிட்டது!
+  social_hoc2018_join: 'Hour of Code: இயக்கத்தில் இணையுங்கள்'
+  social_hoc2018_mc: Hour of Codeக்காக மீண்டும் Minecraft, நீங்கள் தான் கதாநாயகன்!
+    Minecraft பயோம்கள் ஊடான பயணத்திற்கு குறியீட்டை எழுதுக.
+  social_hoc2018_mc_creativity: உங்கள் படைப்பாற்றல் மற்றும் சிக்கல் தீர்க்கும் திறன்களை
+    பயன்படுத்தி குறியீட்டால் நீருக்கு அடியில் ஆன உலகங்களை ஆராய்ந்து கட்டமையுங்கள்.
+  social_hoc2018_what_create: நீங்கள் எதை உருவாக்குவீர்கள்?
+  social_hoc2018_global_movement: Hour of Code என்பது பல்லாயிரக்கணக்கான மாணவர்களைச்
+    சென்றடையும் ஒரு உலகளாவிய இயக்கமாகும். ஒரு மணி நேர பயிற்சி வீடியோக்கள் எல்லா வயதினருக்கும்
+    45+ மேற்பட்ட மொழிகளில் கிடைக்கின்றன.
+  map_title: Hour of Code வரைபடம்
+  map_header: "# Hour of Code 2017க்கு பதிவு செய்யப்பட்ட நிகழ்வுகள்"
+  map_header_count_year: "%{year} ல் %{event_count} நிகழ்வுகள் பதிவாகியுள்ளன"
+  see_all_events: எல்லா நிகழ்வுகளையும் காண்க
+  map_header_company: "# நிறுவன ஏற்பாட்டாளர்களால்"
+  map_header_country: "# %{country}-ல்"
+  map_search_placeholder: Hour of Code நிகழ்வுகளைத் தேடுக
+  map_search_search: தேடுக
+  map_search_reset: மீட்டமைக்கவும்
+  map_legend_title: குறிவிளக்கம்
+  map_legend_hoc_events: Hour of Code நிகழ்வு
+  map_legend_cs_tech_jam: சிறப்பு நிகழ்வு
+  map_warning: "<a href='%{events_url}'>events page.</a> ல் நிகழ்வுகளின் முழு பட்டியலைக்
+    காணலாம்"
+  meta_tag_og_title: 'Hour of Code: இயக்கத்தில் இணையுங்கள்'
+  meta_tag_og_description: Hour of Code என்பது 180+ நாடுகளில் 45க்கும் மேற்பட்ட மொழிகளில்
+    எல்லா வயதுகளிலும் உள்ள கோடிக்கணக்கான மாணவர்களை சென்றடையும் ஒரு உலகளாவிய இயக்கம்.
+  meta_tag_twitter_title: 'Hour of Code: இயக்கத்தில் இணையுங்கள்'
+  meta_tag_twitter_description: Hour of Code என்பது 180+ நாடுகளில் 45க்கும் மேற்பட்ட
+    மொழிகளில் எல்லா வயதுகளிலும் உள்ள கோடிக்கணக்கான மாணவர்களை சென்றடையும் ஒரு உலகளாவிய
+    இயக்கம்.
+  twitter_default_text: 'இந்த ஆண்டின் #HourOfCode-ல் நான் பங்கேற்கிறேன், நீங்கள்?
     @codeorg'
-  twitter_donor_text: 'This year''s #HourOfCode is about creativity. I’m in! Are you?
-    (Thanks %{random_donor} for supporting @codeorg)'
-  twitter_donor_text_2019: 'This year''s #HourOfCode is about #CSforGood. I’m in!
-    Are you? (Thanks %{random_donor} for supporting @codeorg)'
+  twitter_donor_text: 'இந்த ஆண்டின் #HourOfCode படைப்பாற்றலைப் பற்றியது. நான் இணைந்துவிட்டேன்!
+    நீங்கள்? (@codeorg -ஐ நீங்கள் ஆதரிப்பதற்கு நன்றி %{random_donor})'
+  twitter_donor_text_2019: 'இந்த ஆண்டின் # ஹவர் ஆஃப் கோட் #சிறந்தவற்றிற்கு CS என்பது
+    பற்றியது. நான் இணைந்துவிட்டேன்! நீங்கள்? (@codeorg -ஐ நீங்கள் ஆதரிப்பதற்கு நன்றி
+    %{random_donor})'
   hoc_faq_title: அடிக்கடி கேட்கப்படும் கேள்விகள்
-  hoc_faq_what_is_hoc_q: 'ஒரு மணி நேரக் கணினி குறியீடு என்றால் என்ன? '
-  hoc_faq_what_is_hoc_a: "The Hour of Code started as a one-hour introduction to computer
-    science, designed to demystify \"code\", to show that anybody can learn the basics,
-    and to broaden participation in the field of computer science. It has since become
-    a worldwide effort to celebrate computer science, starting with 1-hour coding
-    activities but expanding to all sorts of community efforts. Check out the <a href='%{tutorials}'>tutorials
-    and activities</a>. This grassroots campaign is supported by over <a href='%{partners}'>400
-    partners</a> and 200,000 educators worldwide.\n "
-  hoc_faq_last_year: பயிற்சிகளை முயற்சிக்கவும்
-  hoc_faq_when_is_hoc_q: கோட் ஆஃப் எப்போது?
-  hoc_faq_when_is_hoc_a: The Hour of Code takes place each year during <a href='%{csedweek_url}'>Computer
-    Science Education Week</a>. The %{campaign_date_year} Computer Science Education
-    Week will be %{campaign_date_full}, but you can host an Hour of Code all year-round.
-    Computer Science Education Week is held annually in recognition of the birthday
-    of computing pioneer <a href='%{grace_hopper}'>Admiral Grace Murray Hopper</a>
-    (December 9, 1906).
-  hoc_faq_why_cs_q: ஏன் கணினி அறிவியல்?
-  hoc_faq_why_cs_a: "<i> ஒவ்வொரு </ i> மாணவர் கணினி அறிவியல் கற்று கொள்ள வாய்ப்பு
-    வேண்டும். இது சிக்கல் தீர்க்கும் திறன், தர்க்கம் மற்றும் படைப்பாற்றல் ஆகியவற்றை
-    வளர்ப்பதற்கு உதவுகிறது. ஆரம்பத்தில் தொடங்கி, மாணவர்கள் எந்த 21 ஆம் நூற்றாண்டின்
-    வாழ்க்கை பாதையில் வெற்றிக்கு அடித்தளம் இருக்கும். <a href='%{stats_url}'> இங்கே
-    </a> மேலும் புள்ளிவிவரங்களைக் காண்க."
-  hoc_faq_how_participate_q: கோடரியின் மணி நேரத்தில் எப்படி நான் பங்கேற்க வேண்டும்?
-  hoc_faq_how_participate_a: "<a href='/how-to'>Start planning here</a> by reviewing
-    our how-to guide. You can organize an Hour of Code event at your school or in
-    your community &mdash; like in an extracurricular club, non-profit or at work.
-    Or, just try it yourself when %{campaign_date} arrives."
-  hoc_faq_behind_hoc_q: கோட் ஆஃப் ஹவர் பின்னால் யார்?
-  hoc_faq_behind_hoc_a: The Hour of Code is driven by the Hour of Code and Computer
-    Science Education Week <a href='%{partner_url}'>Advisory and Review Committees</a>
-    as well as an unprecedented coalition of partners that have come together to support
-    the Hour of Code &mdash; including Microsoft, Apple, Amazon, Boys and Girls Clubs
-    of America and the College Board.
-  hoc_faq_host_q: குறியீட்டு பற்றி எனக்கு எதுவும் தெரியாது. நான் இன்னும் ஒரு நிகழ்ச்சியை
-    நடத்தலாமா?
-  hoc_faq_host_a: நிச்சயமாக. குறியீட்டு நடவடிக்கைகள் மணி நேர சுயமாக வழிநடத்தப்படுகின்றன.
-    நீங்கள் செய்ய வேண்டியது எல்லாம் <a href='%{codeorg_url}/learn'> எங்கள் தற்போதைய
-    பயிற்சிகளை முயற்சி செய்க </a>, நீங்கள் விரும்பும் டுடோரியலைத் தேர்ந்தெடுத்து ஒரு
-    மணிநேரத்தை & mdash; நாங்கள் மற்றவர்களை கவனித்துக்கொள்கிறோம். மழலையர் பள்ளி வரை
-    மற்றும் ஒவ்வொரு வயது மற்றும் அனுபவ நிலைக்குமான விருப்பங்களையும் நாங்கள் கொண்டுள்ளோம்.
-    எங்கள் <a href='/how-to'> எப்படி வழிகாட்ட வேண்டும் </a> என்பதைப் படிப்பதன் மூலம்
-    உங்கள் நிகழ்வைத் திட்டமிடுக.
-  hoc_faq_devices_q: எனது மாணவர்களுக்கு என்ன சாதனங்கள் பயன்படுத்த வேண்டும்?
-  hoc_faq_devices_a: Code.org tutorials work on all devices and browsers. You can
-    see more information about Code.org's tutorial tech needs <a href='%{codeorg_url}/educate/it'>here</a>.
-    Tech needs for non-Code.org tutorials can be found on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
-    in the tutorial specific description. Don't forget we also offer <a href='%{unplugged_url}'>unplugged
-    activities</a> if your school can't accommodate the tutorials!
-  hoc_faq_need_computers_q: ஒவ்வொரு பங்கேற்பாளருக்கும் எனக்கு கணினிகள் தேவையா?
-  hoc_faq_need_computers_a: No. We have Hour of Code tutorials that work on PCs, smartphones,
-    tablets, and some that require no computer at all! You can join wherever you are,
-    with whatever you have. <p><i>Here are a few options:</i> <br> <ul> <li><b>Work
-    in pairs.</b> <a href='%{pair_programming_research}'>Research shows</a> students
-    learn best with <a href='%{pair_programming_video}'>pair programming</a>, sharing
-    a computer and working together. Encourage your students to double up. <li><b>Use
-    a projected screen.</b> If you have a projector and screen for a Web-connected
-    computer, your entire group can do an Hour of Code together. Watch video portions
-    together and take turns solving puzzles or answering questions. <li><b>Go unplugged.</b>
-    We offer <a href='%{unplugged_url}'>tutorials that require no computer</a> at
-    all. </ul>
-  hoc_faq_international_q: I am in <country>. How do I participate internationally?
-  hoc_faq_international_a: Anyone can organize an Hour of Code event, anywhere in
-    the world. Last year, students worldwide joined together for the Hour of Code.
-    Find out more <a href='/promote'>here</a>.
-  hoc_faq_tutorial_q: How can I make an Hour of Code tutorial?
-  hoc_faq_tutorial_a: If you're interested in becoming a tutorial partner, <a href='/tutorial-guidelines'>see
-    our guidelines and instructions</a>. We'd like to host a variety of engaging options,
-    but the primary goal is to optimize the experience for students and teachers who
-    are new to computer science.
-  hoc_faq_account_q: மாண்வர்களுக்கு ஒரு கணக்குடன் உள்ளே நுழையும் தேவை உண்டா?
-  hoc_faq_account_a: இல்லை. Hour of Code -இல் முயன்றுபார்ப்பதற்கு மாணவர்களுக்கு பதிவுசெய்ய
-    தேவையில்லை. <a href='%{codeorg_url}/learn/beyond'>அடுத்த நிலையில்</a> உள்ள அநேகப்பயிற்சிகளுக்கு
-    பதிவுசெய்யும் தேவை உண்டு. மேலும், இங்கு பதிவுசெய்வது Code Studio -இல் தானாக பதிவுசெய்யாது.
-    மாணவர்களுக்கு நீங்கள் பதிவுசெய்ய விரும்பினால், <a href='https://youtu.be/_smelV_KISE'>இங்கே</a>
-    சொடுக்கவும்.
-  hoc_faq_high_school_q: உயர்நிலைப்பள்ளியில் பயிலும் மாணவர்களுக்கு உரிய பயிற்சி யாது?
-  hoc_faq_high_school_a: Our Star Wars and Minecraft tutorials are great for high
-    schoolers, especially the Star Wars JavaScript version and the free play level
-    on both tutorials. Alternately, we recommend trying one of the beginner tutorials
-    on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> to start, such as the
-    tutorial with Angry Birds or with Anna and Elsa. A high school student should
-    be able to finish one of these in 30 minutes and can then try a more advanced
-    tutorial in JavaScript, such as Khan Academy or CodeHS.
-  hoc_faq_scratch_q: I am doing Scratch for Hour of Code, but what if my students
-    have iPads rather than laptops?
-  hoc_faq_scratch_a: Scratch doesn't run on tablets. If your students are young, they
-    can use the ScratchJR iPad app (for early-readers). If you look at the tutorials
-    on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>, you can find other
-    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
-  hoc_faq_count_hoc_q: How do you count Hours of Code?
-  hoc_faq_map_q: Why don't I see my dot on the map?
-  hoc_faq_map_a: We're so sorry you aren't seeing your event on the Hour of Code map.
-    Because of the tens of thousands of organizers who sign up, the map aggregates
-    the data and displays one point for several events. If you click the <a href='%{events_url}'>events
-    page</a> link below the map you will be directed to a list of all events by state
-    and can find your event listed there. Additionally, given the thousands of people
-    signing up for the Hour of Code, the map and event list usually takes 48 hours
-    to update. Check back in a few days!
-  hoc_faq_count_hoc_a: The Hour of Code tracker isn't an exact measurement of usage.
-    We do not count unique student IDs perfectly when tracking participation in the
-    Hour of Code, especially because we don't require students to log in or register.
-    As a result, we both over-count and under-count participants at the same time.
-    Read all the details <a href='%{codeorg_url}/loc'>here</a>.
-  hoc_faq_one_hour_q: How much can one learn in an hour?
-  hoc_faq_one_hour_a: The goal of the Hour of Code is not to teach anybody to become
-    an expert computer scientist in one hour. One hour is only enough to learn that
-    computer science is fun and creative, that it is accessible at all ages, for all
-    students, regardless of background. The measure of success of this campaign is
-    not in how much CS students learn - the success is reflected in broad participation
-    across gender and ethnic and socioeconomic groups, and the resulting increase
-    in enrollment and participation we see in CS courses at all grade levels. Millions
-    of the participating teachers and students have decided to go beyond one hour
-    -  to learn for a whole day or a whole week or longer, and many students have
-    decided to enroll in a whole course (or even a college major) as a result. <br/><br/>
-    Besides the students, another "learner" is the educator who gains the confidence
-    after one hour that they can teach computer science even though they may not have
-    a college degree as a computer scientist. Tens of thousands of teachers decide
-    to pursue computer science further, either attending PD or offering follow-on
-    online courses, or both. And this applies to school administrators too, who realize
-    that computer science is something their students want and their teachers are
-    capable of. <br/><br/> Above all, what all participants can learn in an hour is
-    that we can do this.
-  hoc_faq_more_questions_q: Still have more questions?
-  hoc_faq_more_questions_a: Try finding an answer in our <a href='http://support.code.org'>support
-    forum</a>.
-  hoc_faq_keep_learning_q: How do I keep learning after the Hour of Code?
-  hoc_faq_keep_learning_a: Anyone can host an Hour of Code at any time. The tutorials
-    stay up year-round. You can expect all our tutorials and curriculum to be available
-    on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for
-    event how-to guides and other resources to help make your Hour of Code event a
-    success.
-  hoc_faq_certificates_q: Where can I print certificates for my students?
-  hoc_faq_certificates_a: Go to our <a href='%{codeorg_url}/certificates'>certificates
-    page</a> where you can print certificates for your entire class ahead of time.
-    You can also print out <a href='%{codeorg_url}/certificates?course=mc'>special
-    certificates</a> for students doing the Minecraft tutorial.
-  hoc_faq_logo_q: Are there limitations to how I can use the Hour of Code logo or
-    name?
-  hoc_faq_logo_a: Hour of Code is trademarked. We don't want to prevent its usage,
-    but we want to make sure its usage fits within a few limits. Please see <a href='%{logo_url}'>these
-    guidelines for usage</a>.
-  stats_hoc_2013_image_alt: 2013 மணி குறியீடு விபரம்
-  stats_growth: 15 மில்லியன் பயனர்களை சென்றடைய வேகமாக இருந்தது.
-  stats_i18n: மாணவர்கள் 45 மொழிகளில் கற்றல்
-  stats_tumblr: 'Tumblr: 3.5 வருடங்கள்'
-  stats_facebook: 'முகநுல்: 3 ஆண்டுகள்'
-  stats_twitter: 'ட்விட்டரில்: 2.5 ஆண்டுகள்'
-  stats_pinterest: 'Pinterest: 2 ஆண்டுகளுக்கு'
-  stats_instagram: 'Instagram: 14 மாதங்கள்'
-  stats_hoc: 'குறியீடு மணி: 5 நாட்கள்'
-  stats_global: 100 மீ ஒரு குறியீடு மணி மாணவர்கள் முயற்சி
-  stats_girls_more: மேலும் பெண்கள் முயற்சி கணினி அறிவியல் விட கடந்த 70 ஆண்டுகளில்
-  stats_females: Participation of female students in computer science is only 20-25%
-    of high school courses, university courses, and the workforce.
-  stats_females_more: During the Hour of Code, female students make up <b>50% of all
-    participants</b>!
-  stats_nina: '"ஒவ்வொரு நாளும் அதே ஈட்டுகிறது &mdash; 100% நிச்சயம்."-நீனா நிக்கொலஸ்
-    Peery, ஆசிரியர்'
-  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
-    Alzate, 5th grader'
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
-    - Michael Clark, Teacher'
-  resources_how_to: ஆசிரியர்களுக்கான வழிகாட்டல் எப்படி
-  resources_how_to_events: நிகழ்வு எப்படி வழிகாட்டும்
-  resources_how_to_districts: மாவட்டங்களுக்கு வழிகாட்ட எப்படி
-  resources_how_to_officials: பொது அதிகாரிகளுக்கு வழிகாட்ட எப்படி
-  resources_handouts: வார்த்தை பரவுவதற்கான கையேடுகள்
-  resources_one_pager: ஒரு பக்கம் கையேடு
-  resources_brochure: சிற்றேடு
-  resources_posters: சுவரொட்டிகள்
-  resources_videos: வீடியோக்கள்
+  hoc_faq_what_is_hoc_q: Hour of Code என்பது என்ன?
+  hoc_faq_what_is_hoc_a: Hour of Code என்பது ”கோட்” குறித்த குழப்பங்களை தீர்க்கும்
+    விதமாகவும், யாரொருவரும் அடிப்படைகளை கற்றுக்கொள்ளும் படியாகவும், மற்றும் கம்ப்யூட்டர்
+    சயின்ஸ் துறையில் பங்களிப்புகளை விரிவுபடுத்தவும் வடிவமைக்கப்பட்ட கம்ப்யூட்டர் சயின்ஸ்
+    குறித்த ஒரு மணிநேர அறிமுகமாகும். அன்று தொடங்கி இது கம்ப்யூட்டர் சயின்ஸை கொண்டாடுகிற
+    உலகளாவிய முயற்சியாக ஆனதோடு, 1-மணிநேர கோடிங் நடவடிக்கைகளில் தொடங்கினாலும் அனைத்து
+    விதமான சமூக முயற்சிகளாகவும் விரிவடைந்து வருகிறது. <a href='%{tutorials}'> டுடோரியல்கள்
+    மற்றும் நடவடிக்கைகள்</a> ஐ பார்க்கவும். இந்த அடிப்படை நிலையிலான பிரச்சாரம் <a
+    href='%{partners}'>400 பங்காளர்கள்</a> மற்றும் 200,000 பயிற்றுவிப்பாளர்களால் உலகெங்கிலும்
+    ஆதரிக்கப்படுகிறது.
+  hoc_faq_last_year: டுடோரியல்களை முயற்சிக்கவும்
+  hoc_faq_when_is_hoc_q: Hour of Code எப்போது நடைபெறுகிறது?
+  hoc_faq_when_is_hoc_a: Hour of Code ஒவ்வொரு ஆண்டும் <a href='%{csedweek_url}'>கம்ப்யூட்டர்
+    சயின்ஸ் வாரத்தில்</a> நடக்கிறது. %{campaign_date_year} ஆண்டுக்கான கம்ப்யூட்டர்
+    சயின்ஸ் கல்வி வாரம் %{campaign_date_full} அன்று இருக்கும், ஆனால் Hour of Code
+    ஐ ஆண்டு முழுவதிலும் நீங்கள் நடத்தலாம். வருடாந்திரமாக கம்ப்யூட்டர் சயின்ஸ் கல்வி
+    வாரம் என்பது கம்ப்யூட்டிங்கின் முன்னோடியான <a href='%{grace_hopper}'>அட்மிரல்
+    கிரேஸ் முர்ரே ஹாப்பர்</a> பிறந்த நாளை (December 9, 1906) அங்கீகரிக்கும் விதமாக
+    நடைபெறுகிறது.
+  hoc_faq_why_cs_q: ஏன் கம்ப்யூட்டர் சயின்ஸ்?
+  hoc_faq_why_cs_a: "<i>ஒவ்வொரு</i> மாணவரும் கம்ப்யூட்டர் சயின்ஸ் பயில்வதற்கான வாய்ப்பை
+    பெற வேண்டும். அது சிக்கலை தீர்க்கும் திறன்கள், தர்க்க அறிவு மற்றும் படைப்பாற்றலை
+    வளர்க்க உதவுகிறது. முன்கூட்டியே தொடங்குவதன் மூலம், மாணவர்கள் 21ம் நூற்றாண்டின்
+    துறைசார் வழியில் எதிலும் வெற்றி காண்பதற்கான ஒரு அடித்தளத்தை பெறுவார்கள். மேலதிகமான
+    புள்ளிவிபரங்களை <a href='%{stats_url}'>here</a> ல் பார்க்கவும்."
+  hoc_faq_how_participate_q: Hour of Code ல் நான் எவ்வாறு பங்கேற்பது?
+  hoc_faq_how_participate_a: எங்களது எவ்வாறு செய்வது வழிகாட்டுதலை மறுபார்வை செய்வதன்
+    மூலம் <a href='/how-to'>இங்கு திட்டமிடத் தொடங்குங்கள்</a> நீங்கள் உங்கள் பள்ளியில்
+    அல்லது உங்கள் சமூகத்தில் &mdash; பாடத்திட்டம் சாரா நடவடிக்கைககள் சங்கம், இலாப
+    நோக்கமற்ற நிறுவனம் அல்லது பணியிடத்தில் Hour of Code ஐ ஏற்பாடு செய்யலாம் அல்லது,
+    %{campaign_date} வந்ததும் அதை முயற்சி செய்து பாருங்கள்.
+  hoc_faq_behind_hoc_q: Hour of Code அ?
+  hoc_faq_behind_hoc_a: Hour of Code மற்றும் கம்ப்யூட்டர் சயின்ஸ் கல்வி வாரம் <a href='%{partner_url}'>
+    ஆலோசனை மற்றும் மறுபார்வை கமிட்டிகளால் </a> மற்றும் முன்னெப்போதும் நிகழாத வகையில்
+    மைக்ரோசாஃப்ட், ஆப்பிள், அமேசான், பாய்ஸ் அன் கேர்ள்ஸ் கிளப்ஸ் ஆஃப் அமெரிக்க மற்றும்
+    காலேஜ் போர்டு உள்ளிட்ட பங்காளர்களுடனான கூட்டணியாலும் தான் Hour of Code இயக்கப்படுகிறது.
+  hoc_faq_host_q: கோடிங் பற்றி எனக்கு எதுவும் தெரியாது. இருந்தாலும் கூட என்னால் ஒரு
+    நிகழ்வை நடத்த இயலுமா?
+  hoc_faq_host_a: உண்மை தான். Hour of Code நடவடிக்கைகள், சுய வழிகாட்டுதலுடன் மேற்கொள்ளக்
+    கூடியதாகும். நீங்கள் செய்ய வேண்டியதெல்லாம் <a href='%{codeorg_url}/learn'> உங்களது
+    தற்போதைய டுடோரியல்களை முயற்சியுங்கள், நீங்கள் விரும்பும் டுடோரியலை தெரிவு செய்யுங்கள்,
+    மற்றும் ஒரு மணிநேரத்தை தெரிவு செய்யுங்கள் &mdash; மற்றவற்றை நாங்கள் பார்த்துக்
+    கொள்கிறோம். மழலையர் பள்ளி தொடங்கி ஒவ்வொரு வயது மற்றும் அனுபவ நிலைக்கும் ஏற்றபடியான
+    தெரிவுகளும் எங்களிடம் உள்ளன. எங்களது <a href='/how-to'> எவ்வாறு செய்வது வழிகாட்டி</a>
+    -யை வாசித்து திட்டமிடத் தொடங்குங்கள்.
+  hoc_faq_devices_q: என் மாணவர்களுக்கு நான் என்ன சாதனங்களை பயன்படுத்த வேண்டும்?
+  hoc_faq_devices_a: Code.org டுடோரியல்கள் அனைத்து சாதனங்கள் மற்றும் ப்ரவுஸர்களிலும்
+    இயங்கும். நீங்கள் Code.org –ன் டுடோரியல் தொழில்நுட்பத் தேவைகள் குறித்தான மேலதிக
+    விபரங்களை <a href='%{codeorg_url}/educate/it'>here</a>ல் காணலாம்.. Code.org அல்லாத
+    டுடோரியல்கள் தொழில்நுட்பத் தேவைகளுக்கு <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
+    ல் டுடோரியல் குறிப்பான விளக்கத்தில் காணலாம். unplugged activities</a> if your
+    school can't accommodate the tutorials! டுடோரியல்களுக்கு உங்கள் பள்ளியால் இடமளிக்க
+    இயலாது எனில் <a href='%{unplugged_url}'>unplugged activities</a> ஐயும் வழங்குகிறோம்
+    என்பதை மறவாதீர்!
+  hoc_faq_need_computers_q: ஒவ்வொரு பங்கேற்பாளருக்காகவும் எனக்குக் கணினி தேவையா?
+  hoc_faq_need_computers_a: இல்லை. PCக்கள், ஸ்மார்ட்ஃபோன்கள், டேப்ளட்கள் ஆகியவற்றில்
+    இயங்குகிற மற்றும் கணினியே தேவைப்படாத சில என எங்களிடம் Hour of Code டுடோரியல்கள்
+    உள்ளன! நீங்கள் எங்கிருந்தாலும், உங்களிடம் என்ன இருந்தாலும் உங்களால் இணைய முடியும்.
+    <p><i>இதோ சில விருப்பத்தேர்வுகள்:</i> <br> <ul> <li><b>ஜோடியாக கற்க.</b> <a href='%{pair_programming_research}'>ஆராய்ச்சி
+    காட்சிகள்</a> மாணவர்கள் சிறப்பாக பயில்வதற்கு<a href='%{pair_programming_video}'>
+    ஜோடியாக புரோகிராமிங் செய்தல்</a>, ஒரு கணினியை பகிர்ந்து கொண்டு ஒன்றிணைந்து பணியாற்றுதல்.
+    உங்கள் மாணவர்களை இரண்டு மடங்காக ஆவதற்கு ஊக்குவியுங்கள். <li><b> புரொஜக்‌ஷன் திரை
+    ஒன்றை பயன்படுத்துக.</b> இணையத்தில் இணைந்த ஒரு கணினிக்கு, உங்களிடம் ஒரு புரொஜக்டர்
+    மற்றும் திரை இருந்தால், உங்கள் ஒட்டுமொத்த குழுவும் ஒரு Hour of Code இணைந்து செய்யலாம்.
+    இணைந்து காணொளி பாகங்களை பார்த்து புதிர்களை தீர்ப்பது அல்லது கேள்விகளுக்கு பதிலளிப்பது
+    என செய்யுங்கள். <li><b>அன்பிளக்டு ஆகுங்கள்.</b> நாங்கள் வழங்குகிறோம்<a href='%{unplugged_url}'>கணினி
+    தேவைப்படாத டுடோரியல்கள்</a> at all. </ul>
+  hoc_faq_international_q: நான் <country>-இல் உள்ளேன் சர்வதேச அளவில் நான் எவ்வாறு
+    பங்கேற்பது?
+  hoc_faq_international_a: ஒரு Hour of Code நிகழ்வை யார் வேண்டுமானாலும், உலகில் எங்கிருந்து
+    வேண்டுமானாலும் ஏற்பாடு செய்யலாம். கடந்த அண்டு, உலகமெங்கும் இருந்து மாணவர்கள் Hour
+    of Code க்கு என இணைந்தனர். மேலதிக தகவல்களுக்கு <a href='/promote'>இங்கு காணவும்</a>.
+  hoc_faq_tutorial_q: ஒரு Hour of Code டுடோரியலை எவ்வாறு செய்வது?
+  hoc_faq_tutorial_a: ஒரு டுடோரியல் பங்காளராக நீங்கள் ஆக விரும்பினால், <a href='/tutorial-guidelines'>எங்கள்
+    வழிகாட்டுதல்கள் மற்றும் அறிவுறுத்துதல்களைக் காண்க</a>. பல வகையான ஈடுபாடு ஏற்படுத்தக்கூடிய
+    தெரிவுகளை நடத்த எங்களுக்கு விருப்பம் என்கிறபோதிலும் எங்களது முதன்மையோன இலக்கு
+    கம்ப்யூட்டர் சயின்ஸிற்கு புதிதாக உள்ள மாணவர்கள் மற்றும் ஆசிரியர்களுக்கு அனுபவத்தை
+    உகந்த நிலைக்கு கொண்டு வருவது தான்.
+  hoc_faq_account_q: மாணவர்கள் அக்கவுண்ட் பயன்படுத்தி நுழைவது அவசியமா?
+  hoc_faq_account_a: இல்லை. Hour of Code ஐ முயற்சிக்க மாணவர்கள் பதிவிடுவதோ அல்ல உள்நுழைவதோ
+    செய்ய வேண்டிய அவசியமே கிடையாது. <a href='%{codeorg_url}/learn/beyond'> பின்தொடரும்
+    வகுப்புகளில் பெரும்பான்மையானவற்றிற்கு அக்கவுண்ட் பதிவு செய்து மாணவர்களின் முன்னேற்றத்தை
+    சேகரிப்பது அவசியம் </a> require account creation to save student progress. அதோடு,
+    Hour of Code உடன் பதிவு செய்வது என்பது தன்னியக்கமாக ஒரு குறியீடு ஸ்டுடியோ அக்கவுண்ட்டை
+    தொடங்காது. உங்கள் மாணவர்களுக்கு அக்கவுண்ட்கள் தொடங்க நீங்கள் விரும்பினால், இந்த
+    <a href='https://youtu.be/_smelV_KISE'>instructions</a> அறிவுறுத்தல்களைப் பின்பற்றுங்கள்.
+  hoc_faq_high_school_q: உயர்நிலைப் பள்ளி மாணவர்களுடன் எந்த நடவடிக்கை நான் செய்ய வேண்டும்?
+  hoc_faq_high_school_a: நமது Star Wars மற்றும் Minecraft டுடோரியல்கள் உயர்நிலைப்
+    பள்ளி மாணவர்களுக்கு மிகவும் சிறப்பாக இருக்கும், முக்கியமாக இரண்டு டுடோரியல்களிலுமே
+    Star Wars ஜாவாஸ்கிரிப்ட் பதிப்பு மற்றும் இலவச விளையாட்டு நிலை. மாற்றாக, ஆங்ரி
+    பேர்ட்ஸ் அல்லது ஆனா அன்ட் எல்ஸா உடனான டுடோரியல் என்பது போன்று, துவங்குவதற்கு <a
+    href='%{codeorg_url}/learn'>%{partner_url}/learn</a> -இல் தொடக்கநிலை டுடோரியல்களில்
+    ஒன்றை முயற்சித்துப் பார்க்க நாங்கள் பரிந்துரைக்கிறோம். ஒரு உயர்நிலைப் பள்ளி மாணவர்
+    இவற்றில் ஏதேனும் ஒன்றை 30 நிமிடங்களில் முடித்துவிட இயன்றவராக இருக்க வேண்டும் என்பதோடு
+    Khan அகாடெமி அல்லது CodeHS போன்ற ஒரு இன்னும் மேம்பட்ட ஜாவாஸ்கிரிப்ட் டுடோரியலை
+    முயல இயன்றவராக இருப்பார்.
+  hoc_faq_scratch_q: நான் Hour of Code க்கான Scratch-ஐ செய்கிறேன், ஆனால் என் மாணவர்கள்
+    லேப்டாப்களுக்குப் பதிலாக ஐபேடுகள் வைத்திருந்தால் என்ன செய்வது?
+  hoc_faq_scratch_a: Scratch டேப்ளட்களில் இயங்குவதில்லை. உங்கள் மாணவர்கள் இளமையாக
+    இருந்தால், அவர்கள் (இளம் வாசகர்களுக்கு) ScratchJR ஐபேடு செயலியை பயன்படுத்தலாம்.
+    <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>ல் நீங்கள் டுடோரியல்களைப்
+    பார்த்தால், Code.org, Tynker, Lightbot, அல்லது CodeSpark - என iPadகளில் வேலை செய்யும்
+    பிற டுடோரியல்களை காணலாம்.
+  hoc_faq_count_hoc_q: நீங்கள் உங்கள் Hours of Code–ஐ எவ்வாறு எண்ணிக்கை செய்வீர்கள்?
+  hoc_faq_map_q: மேப்பில் என்னுடைய புள்ளியை ஏன் காணவில்லை?
+  hoc_faq_map_a: Hour of Code மேப்பில் உங்கள் Hour of Code நிகழ்வை நீங்கள் காண இயலாததற்கு
+    நாங்கள் வருந்துகிறோம். பல ஆயிரக்கணக்கான ஏற்பாட்டாளர்கள் பதிவு செய்வதால், மேப்
+    டேட்டாவை சராசரியாக ஆக்கி பல நிகழ்வுகளுக்கு ஒரு புள்ளியை திரையில் காட்டுகிறது.
+    மேப்பிற்கு கீழே <a href='%{events_url}'>நிகழ்வுகள் பக்கத்தை</a> இணைப்பை நீங்கள்
+    க்ளிக் செய்தால் மாநில வாரியான அனைத்து நிகழ்வுகளின் ஒரு பட்டியலுக்கு நீங்கள் கொண்டு
+    செல்லப்படுவீர்கள், அதில் உங்கள் நிகழ்வு பட்டியலிடப்பட்டிருப்பதை உங்களால் காண இயலும்.
+    கூடுதலாக, Hour of Code-க்கு ஆயிரம் மக்கள் பதிவு செய்கையில், மேப் மற்றும் நிகழ்வுப்
+    பட்டியல் அப்டேட் ஆவதற்கு பொதுவாக 48 மணிநேரங்கள் ஆகும். ஒரு சில நாட்களில் மீண்டும்
+    வந்து சரிபார்க்கவும்!
+  hoc_faq_count_hoc_a: Hour of Code டிராக்கர் என்பது பயன்பாட்டின் துல்லியமான அளவீடு
+    அல்ல. Hour of Codeல் பங்கேற்பு குறித்து ட்ராக் செய்கையில், குறிப்பாக நாங்கள் மாணவர்களை
+    உள்நுழையவோ அல்லது பதியவோ வேண்டுவதில்லை என்பதால், தனிப்பட்ட மாணவர் அடையாள எண்களை
+    துல்லியமாக நாங்கள் எண்ணுவதில்லை. இதன் விளைவாக, நாங்கள் ஒரே நேரத்தில் பங்கேற்பாளர்களை
+    அதிகமாக எண்ணுவதையோ அல்லது குறைவாக எண்ணுவதையோ செய்கிறோம். <a href='%{codeorg_url}/loc'>here</a>ல்
+    அனைத்து தகவல்களையும் வாசிக்கவும்.
+  hoc_faq_one_hour_q: ஒரு மணிநேரத்தில் ஒருவர் எவ்வளவு கற்றுக்கொள்ள இயலும்?
+  hoc_faq_one_hour_a: Hour of Code-ன் இலக்கு என்பது ஒரு மணிநேரத்தில் யாரையும் கணினி
+    விஞ்ஞானி நிபுணராக உருவாக்குவதற்கு கற்றுத் தருவது அல்ல.  கம்ப்யூட்டர் சயின்ஸ் என்பது
+    வேடிக்கையானது மற்றும் படைப்புத்திறன் மிக்கது என்பதையும், பின்னணி எவ்வாறாக இருப்பினும்
+    அனைத்து வயதினருக்கும், அனைத்து மாணவர்களுக்கும் கிடைக்கக்கூடியது என்பதையும் கற்றுத்
+    தர மட்டுமே ஒருமணிநேரம் போதுமானதாகும். இந்த பிரச்சாரத்தின் வெற்றியின் அளவீடு CS
+    மாணவர்கள் கற்கிறார்கள் என்பதில் இல்லை – இது பாலினம் மற்றும் பாரம்பரியம் மற்றும்
+    சமூக பொருளாதார குழுக்களைக் கடந்த பெரிய அளவிலான பங்கேற்பிலும், மற்றும் அனைத்து
+    தர நிலைகளிலும் உள்ள எங்களது CS வகுப்புகளில் பதிவு செய்து கொள்வதில் ஏற்படுகிற அதிகரிப்பு
+    ஆகியவற்றில் பிரதிபலிக்கிறது. இதன் விளைவாக, பங்கேற்கும் லட்சக்கணக்கான ஆசிரியர்கள்
+    மற்றும் மாணவர்கள் ஒரு மணிநேரத்தையும் தாண்டிச் செல்ல தீர்மானித்துள்ளார்கள் – ஒரு
+    முழு நாள் அல்லது முழு வாரம் அல்லது அதற்கு மேலும் கற்றுக் கொள்வதற்கு, மேலும் ஒரு
+    முழு வகுப்பில் சேர (அல்லது ஒரு கல்லூரி முக்கியப்பாடமாக கொள்ள) ணுபல மாணவர்கள் தீர்மானித்துள்ளனர்.
+    <br/><br/>  மாணவர்கள் தவிரவும், பயிற்றுவிப்பாளர்கள் கூட இன்னொரு ”பயிற்சி பெறுபவர்”
+    தான், இவர்கள் ஒரு மணி நேரத்திற்குப் பின் தாங்கள் ஒரு கணினி விஞ்ஞானியாக ஒரு கல்லூரி
+    பட்டம் கொண்டிராமல் இருந்தாலும் கூட தங்களால் கற்றுத்தர இயலும் என்கிற நம்பிக்கையைப்
+    பெறுகிறார்கள். பல ஆயிரக்கணக்கான ஆசிரியர்கள், PD-ல் கலந்து கொள்வதன் மூலமோ அல்லது
+    பின்தொடர்ச்சி ஆன்லைன் வகுப்புகளை வழங்குவதன் மூலமாகவோ அல்லது இரண்டும் செய்தோ மேலும்
+    கம்ப்யூட்டர் சயின்ஸை மேற்கொள்ள தீர்மானித்துள்ளனர். இது பள்ளி நிர்வாகத்தினருக்கும்
+    பொருந்துகிறது, அவர்கள் கம்ப்யூட்டர் சயின்ஸ் தங்கள் மாணவர்களுக்குத் தேவையான ஒன்று
+    என்பதையும் தங்கள் ஆசிரியர்கள் அதற்குத் தகுதியானவர்கள் என்பதையும் உணர்ந்திருக்கிறார்கள்.
+    <br/><br/> Above all, what all participants can learn in an hour is that we can
+    do this.
+  hoc_faq_more_questions_q: இன்னும் அதிகக் கேள்விகள் உள்ளதா?
+  hoc_faq_more_questions_a: எங்களது <a href='http://support.code.org'>support forum</a>ல்
+    ஒரு விடையை கண்டுபிடிக்க முயலுங்கள்.
+  hoc_faq_keep_learning_q: Hour of Codeக்குப் பின்னர் நான் எவ்வாறு பயிற்சி பெறுவதை
+    தொடருவேன்?
+  hoc_faq_keep_learning_a: யாரும் ஒரு Hour of Code ஐ எந்த நேரத்திலும் நடத்தலாம். ஆண்டு
+    முழுவதிலும் டுடோரியல்கள் உள்ளன. எங்களது அனைத்து டுடோரியல்கள் மற்றும் பாடத்திட்டங்களும்
+    எங்கள் வலைத்தளத்தில் எப்போதும் இருக்கும் என நீங்கள் எதிர்பார்க்கலாம். நிகழ்வுக்கான
+    எவ்வாறு செய்வது வழிகாட்டிகள் மற்றும் உங்கள் Hour of Code நிகழ்வை ஒரு வெற்றிகரமானதாக
+    ஆக்க உதவும பிற வளஆதாரங்களுக்கு <a href='/promote'>our resources</a> க்கு செல்லவும்.
+  hoc_faq_certificates_q: என் மாணவர்களுக்கான சான்றிதழ்களை நான் எங்கு அச்சடிப்பது?
+  hoc_faq_certificates_a: எங்களது <a href='%{codeorg_url}/certificates'>சான்றிதழ்கள்
+    பக்கத்திற்கு </a> சென்றால், அங்கு முன்கூட்டியே ஒட்டுமொத்த வகுப்புக்கான சான்றிதழ்களை
+    அச்சடிக்கலாம். நீங்கள் Minecraft டுடோரியல் பயிலும் மாணவர்களுக்கும் <a href='%{codeorg_url}/certificates?course=mc'>சிறப்பு
+    சான்றிதழ்கள்</a> அச்சடிக்கலாம்.
+  hoc_faq_logo_q: Hour of Code சின்னம் அல்லது பெயரை நான் எவ்வாறு பயன்படுத்தலாம் என்பதற்கான
+    வரம்புகள் உள்ளனவா?
+  hoc_faq_logo_a: Hour of Code என்பது வணிகக் குறியீடாகப் பதியப்பட்டது. அதை பயன்படுத்துவதை
+    நாங்கள் தடுக்க விரும்பவில்லை, ஆனால் அதன் பயன்பாடு ஒரு சில வரம்புகளுக்கு உட்பட்டு
+    உள்ளதை உறுதி செய்து கொள்ள நாங்கள் விரும்புகிறோம். பயன்பாட்டுக்கான இந்த வழிகாட்டுதல்களை
+    <a href='%{logo_url}'> usage</a> தயவுசெய்து காணவும்.
+  stats_hoc_2013_image_alt: 2013 Hour of Code லிருந்து புள்ளிவிபரங்கள்
+  stats_growth: 15 மில்லியன் பயனர்களை சென்றடைந்த மிக வேகமான ஒன்றாக இது இருந்தது.
+  stats_i18n: 15 க்கும் அதிகமான மொழிகளில் மாணவர்கள் பயில்கிறார்கள்
+  stats_tumblr: 'டம்ப்ளர்: 3.5 ஆண்டுகள்'
+  stats_facebook: 'முகநூல்: 3 ஆண்டுகள்'
+  stats_twitter: 'டிவிட்டர்: 2.5 ஆண்டுகள்'
+  stats_pinterest: 'பின்டெரெஸ்ட்: 2 ஆண்டுகள்'
+  stats_instagram: 'இன்ஸ்டாஃகிராம்: 14 மாதங்கள்'
+  stats_hoc: 'The Hour of Code: 5 நாட்கள்'
+  stats_global: 100 மில்லியனுக்கும் அதிகமான மாணவர்கள் ஒரு Hour of Code–ஐ முயற்சித்துள்ளார்கள்
+  stats_girls_more: கடந்த 70 ஆண்டுகளைக் காட்டிலும் அதிக பெண்கள் கம்ப்யூட்டர் சயின்ஸை
+    முயற்சித்துள்ளார்கள்
+  stats_females: உயர்நிலைப் பள்ளி வகுப்புகள், பல்கலைக்கழக வகுப்புகள் மற்றும் ஊழியர்கள்
+    சக்தி ஆகியவற்றிலிருந்து கம்ப்யூட்டர் சயின்ஸில் பெண் மாணவர்களின் பங்கேற்பு வெறும்
+    20-25% மட்டுமே உள்ளது.
+  stats_females_more: Hour of Code ன் போது பெண் மாணவர்கள் <b>அனைத்து பங்கேற்பாளர்களில்
+    50%</b> வகிக்கிறார்கள்!
+  stats_nina: '"ஒவ்வொரு நாளும் அதே முடிவுகளையும் &mdash; 100% ஈடுபாட்டையும் கொடுத்தது."
+    - நைனா நிகோல்ஸ் பீரி, ஆசிரியர்'
+  stats_student: '"இது ஒரு <b>வாழ்வில் ஒரு முறை கிடைக்கும்</b> வாய்ப்பு என்று எனக்குத்
+    தெரியும்." - மரியானா அல்சேட், 5வது கிரேடர்'
+  stats_michael: "\"கற்றுக் கொள்வது குறித்து என் மாணவர்கள் இவ்வளவு ஆர்வமாக இருந்ததை
+    நான் <b>ஒருபோதும்</b> பார்த்ததில்லை. - மைக்கேல் க்ளார்க், ஆசிரியர்"
+  resources_how_to: ஆசிரியர்களுக்கான எவ்வாறு செய்வது வழிகாட்டி
+  resources_how_to_events: நிகழ்வு எவ்வாறு செய்வது வழிகாட்டி
+  resources_how_to_districts: மாவட்டங்களுக்கான எவ்வாறு செய்வது வழிகாட்டி
+  resources_how_to_officials: அரசு அதிகாரிகளுக்கான எவ்வாறு செய்வது என்பதற்கான வழிகாட்டி
+  resources_handouts: பரப்புவதற்கான துண்டுப்பிரசுரங்கள்
+  resources_one_pager: ஒரு பக்க பிரசுரம்
+  resources_brochure: தகவல் சிற்றேடு
+  resources_posters: சுவரோட்டிகள்
+  resources_videos: காணொலிகள்
   resources_banners: சமூக ஊடகம்
   resources_emails: மாதிரி மின்னஞ்சல்கள்
-  resources_logo: குறியீடு சின்னத்தின் மணி
-  resources_stats: புள்ளிவிவரங்கள் மற்றும் blurbs
-  resources_press_kit: பிரஸ் கிட்
-  resources_social: சமூக
-  resources_country_resources: நாடு குறிப்பிட்ட வளங்கள்
+  resources_logo: Hour of Code சின்னம்
+  resources_stats: புள்ளிவிபரங்கள் மற்றும் சிறு விளம்பரங்கள்
+  resources_press_kit: ப்ரஸ் கிட்
+  resources_social: சமூகம்
+  resources_country_resources: நாடு சார்ந்த வளஆதாரங்கள்
   resources_stickers: ஸ்டிக்கர்கள்
-  resources_how_to_guides: வழிகாட்டல் எப்படி
-  resources_promote: ஊக்குவிக்க
-  resources_nav_tutorials: பயிற்சிகளை முயற்சிக்கவும்
-  resources_nav_promote: வார்த்தையை பரப்புங்கள்
-  resources_nav_spread_word: தொடர்பு கொள்ள எப்படி
-  resources_banner_promote_text: ஊக்குவிக்க
+  resources_how_to_guides: எவ்வாறு செய்வது வழிகாட்டிகள்
+  resources_promote: ஊக்குவிப்பு
+  resources_nav_tutorials: டுடோரியல்களை முயற்சிக்கவும்
+  resources_nav_promote: இது குறித்து பரப்புங்கள்
+  resources_nav_spread_word: எவ்வாறு ஈடுபடுவது
+  resources_banner_promote_text: ஊக்குவிப்பு
   resources_banner_promote_button: பிரசுரங்கள், உற்சாகமூட்டும் சுவரொட்டிகள் மற்றும்
-    சமூக ஊடக பதாகைகளில் பதிவு செய்ய மற்றவர்களை ஊக்குவிக்கவும்.
-  resources_banner_howto_text: எப்படி என்று அறிவதற்கான
-  resources_banner_howto_button: கல்வியாளர்களுக்கும், பெற்றோர்களுக்கும், மாவட்டங்களுக்கும்,
-    ஒரு மணிநேர நியமனம் வழங்குவதற்கான வளங்கள்.
-  handouts_section: இந்த கையேட்டைப் பகிர்ந்து கொள்ளுங்கள்
-  handouts_onepager: இந்த ஒரு பக்கம் கையொப்பத்துடன் வார்த்தைகளை பரப்புங்கள்
-  handouts_brochure: ஆசிரியர்களுக்கும் பள்ளிகளுக்கும் இந்த சிற்றேட்டை கொடுங்கள்
-  handouts_participationguide: இந்த பங்கேற்பு வழிகாட்டியுடன் கோட் ஆஃப் ஹவர் திட்டமிடுங்கள்
-  videos_title: மாணவர்கள் ஊக்குவிக்க இந்த வீடியோக்களைக் காண்பி
-  videos_what_most_schools_dont_teach: பெரும்பாலான பள்ளிகள் என்ன கற்பிக்க வேண்டும்
+    சமூக ஊடக பதாகைகளில் பதிவு செய்ய மற்றவர்களை ஊக்குவிக்கவும். தகவல் சிற்றேடுகள்,
+    ஊக்கந்தரும் சுவரொட்டிகள் மற்றும் சமூக ஊடக பேனர்கள் ஆகியவற்றைக் கொண்டு பதிவு செய்ய
+    பிறரை ஊக்கப்படுத்துதல்.
+  resources_banner_howto_text: எவ்வாறு இதைச் செய்யலாம்
+  resources_banner_howto_button: ஒரு Hour of Code–ஐ நடத்த பயிற்றுவிப்பாளர்கள், பெற்றோர்
+    மற்றும் மாவட்டங்களுக்கான வள ஆதாரங்கள்.
+  handouts_section: இந்த துண்டுப்பிரசுரங்களை பகிரவும்
+  handouts_onepager: இந்த ஒரு பக்க பிரசுரத்தை கொண்டு பரப்பவும்
+  handouts_brochure: ஆசிரியர்கள் மற்றும் பள்ளிகளிடம் இந்த தகவல் சிற்றேட்டைத் தரவும்
+  handouts_participationguide: இந்த பங்கேற்பு வழிகாட்டி கொண்டு உங்கள் Hour of Code–ஐ
+    திட்டமிடுங்கள்
+  videos_title: மாணவர்களை ஊக்கப்படுத்த இந்த காணொளிகளைக் காட்டுங்கள்
+  videos_what_most_schools_dont_teach: பெரும்பாலான பள்ளிகள் எதைச் சொல்லித் தருவதில்லை
     (5 நிமிடம்)
-  videos_hoc_2014: கோட் இன் ஹவர் இங்கே உள்ளது - யாராலும் அறிய முடியும்
-  videos_obama_cs: ஜனாதிபதி ஒபாமா கணினி அறிவியல்
-  videos_anybody_can_learn: Anybody Can Learn (1 min)
-  videos_creativity: What is Creativity?
-  videos_creativity_series: What is Creativity? View Full Series.
-  title_country_resources: நாடு குறிப்பிட்ட வளங்கள்
-  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
-  title_hoc_review_committee: Hour of Code and CSEdWeek Review Committee
-  title_how_to_promote: வார்த்தையை பரப்புங்கள்
-  title_how_to_districts: Hour of Code How-To for Districts
-  title_how_to_events: Hour of Code Event How-To
-  title_how_to_organizations: How to host an Hour of Code - Organizations
-  title_how_to_companies: How to host an Hour of Code - Companies
-  title_how_to_officials: பொது அதிகாரிகளுக்கு வழிகாட்ட எப்படி
-  title_how_to_volunteers: How-to guide for Hour of Code volunteers
-  title_how_to_parents: பெற்றோர்களுக்கு வழிகாட்டுவது எப்படி என்று
-  title_how_to: எப்படி வழிநடத்துவதென்று
-  title_international_partners: Contact International Partners
-  title_press_release: Hour of Code Press Release for Elected Officials
-  title_op_ed: Sample Op-ed Supportive of Computer Science Education Week and Hour
-    of Code
-  title_press_kit: பிரஸ் கிட்
-  title_proclamation: Sample Resolution Supportive of Computer Science Education Week
-    and Hour of Code
-  title_stats: Blurbs and Stats
-  title_partners: Partners
-  title_resources: வளங்கள்
+  videos_hoc_2014: Hour of Code வந்துவிட்டது – யார் வேண்டுமானாலும் கற்றுக் கொள்ளலாம்
+  videos_obama_cs: கம்ப்யூட்டர் சயின்ஸ் குறித்து அதிபர் ஒபாமா
+  videos_anybody_can_learn: யார் வேண்டுமானாலும் கற்கலாம் (1 நிமிடம்)
+  videos_creativity: படைப்பாற்றல் என்றால் என்ன?
+  videos_creativity_series: படைப்பாற்றல் என்றால் என்ன? அனைத்து தொடர்களையும் பார்க்கவும்.
+  title_country_resources: நாடு சார்ந்த வளஆதாரங்கள்
+  title_hoc_advisory_committee: Hour of Code மற்றும் CSEdWeek ஆலோசனைக் குழு
+  title_hoc_review_committee: Hour of Code மற்றும் CSEDWeek மறுஆய்வுக் குழு
+  title_how_to_promote: இது குறித்து பரப்புங்கள்
+  title_how_to_districts: மாவட்டங்களுக்கான Hour of Code எவ்வாறு செய்வது
+  title_how_to_events: Hour of Code நிகழ்வு எவ்வாறு செய்வது
+  title_how_to_organizations: ஒரு Hour of Code –ஐ எவ்வாறு நடத்துவது - அமைப்புகள்
+  title_how_to_companies: ஒரு Hour of Code –ஐ எவ்வாறு நடத்துவது - நிறுவனங்கள்
+  title_how_to_officials: அரசு அதிகாரிகளுக்கான எவ்வாறு செய்வது என்பதற்கான வழிகாட்டி
+  title_how_to_volunteers: தொண்டூழியர்களுக்கான எவ்வாறு செய்வது வழிகாட்டி
+  title_how_to_parents: பெற்றோருக்கான எவ்வாறு செய்வது வழிகாட்டி
+  title_how_to: எவ்வாறு செய்வது வழிகாட்டி
+  title_international_partners: சர்வதேச பங்காளர்களை தொடர்பு கொள்
+  title_press_release: தெரிவு செய்யப்பட்ட அதிகாரிகளுக்கான Hour of Code செய்தி வெளியீடு
+  title_op_ed: கம்ப்யூட்டர் சயின்ஸ் கல்வி வாரம் மற்றும் Hour of Code க்கு ஆதரவான செய்தித்தாள்
+    பக்க மாதிரி
+  title_press_kit: ப்ரஸ் கிட்
+  title_proclamation: கம்ப்யூட்டர் சயின்ஸ் கல்வி வாரம் மற்றும் Hour of Code க்கு ஆதரவான
+    மாதிரி தீர்மானம்
+  title_stats: சிறுவிளம்பரங்கள் மற்றும் புள்ளிவிபரங்கள்
+  title_partners: பங்காளர்கள்
+  title_resources: வள ஆதாரங்கள்
   title_past_posters: குறியீடு சுவரொட்டிகளின் கடந்த நேரம்
-  title_signup_thanks: Thanks for signing up to host an Hour of Code!
-  title_tutorial_guidelines: Activity Guidelines
-  title_whole_school: Whole School Participation
-  events_nav_title: Hour of Code Events
-  events_nav_all: All Events
-  events_nav_whole_schools: Whole Schools
-  events_nav_special: Special Events
-  events_nav_orgs: Organizations
-  events_all_old_title: All @year Hour of Code events
-  events_all_title: All Hour of Code events
-  events_whole_school_title: Whole-school Hour of Code events
-  events_special_title: Hour of Code Special Events
-  events_orgs_title: All Hour of Code events organized by Partner Organizations
-  event: event
-  events: events
-  highlights_title: Highlights
-  highlights_header: Hour of Code Highlights
-  highlights_description: Some of our favorite moments from the Hour of Code campaign.
-  higlights_see_more: See more highlights
-  highlights_readmore: Read more
-  highlights_watchvideo: வீடியோ பார்க்க
-  highlights_facebook: Facebook இல் பகிர்
-  highlights_constant_alba_heading: The actress, activist, and entrepreneur hosted
-    an Hour of Code with the entire staff at The Honest Company.
-  highlights_constant_alba_short_heading: Jessica Alba learns an Hour of Code
-  highlights_constant_obama_heading: President Obama is the first president to write
-    a line of code, hosting a historic Hour of Code for students at the White House.
-  highlights_constant_obama_short_heading: Coder in Chief
-  highlights_constant_malala_heading: '"Every girl deserves to take part in creating
-    the technology that''ll change our world, and change who runs it."'
-  highlights_constant_malala_short_heading: Nobel Peace Prize winner Malala
-  highlights_constant_trudeau_heading: Canadian Prime Minister Justin Trudeau coded
-    a simple game featuring his favorite sport.
-  highlights_constant_trudeau_short_heading: Prime Minister Justin Trudeau codes a
-    game
-  highlights_constant_ny_heading: After an epic battle, 80% of Brooklyn schools did
-    the Hour of Code vs. 60% in Chicago. Not bad!
-  highlights_constant_ny_short_heading: Brooklyn beats Chicago
-  highlights_constant_athletes_heading: Champions and gold medalists Serena Williams,
-    Neymar Jr, Carmelo Anthony and more inspire students to push themselves.
-  highlights_constant_athletes_short_heading: Push yourself
-  footer_copyright_message: Copyright %{current_year} Code.org. All rights reserved.
-  footer_trademark_message: Hour of Code™ is a trademark of Code.org.
-  footer_menu_partners: Partners and Advisors
-  footer_menu_contact: Contact us
-  footer_menu_support: Support
-  footer_menu_terms: Terms
-  footer_menu_privacy: Privacy Policy
-  learn_banner_heading: Hour of Code Activities
-  learn_banner_blurb: Try a one-hour tutorial designed for all ages in over 45 languages.  Join
-    millions of students and teachers in over 180 countries starting with an Hour
-    of Code.
-  learn_banner_beyond: Want to keep learning?  <a id='learn_banner_beyond'>Go beyond
-    an hour</a>
-  learn_banner_teachers: 'Teachers: <a id=''teacher_banner_host''>Host an hour</a>
-    or <a id=''teacher_banner_howto''>read the How-To Guide</a>'
-  learn_robotics_banner_heading: Robotics and Circuits
-  learn_robotics_banner_blurb: Got robots or physical computing kits? Use them with
-    the activities below and make a tangible Hour of Code for students of any age!
-    Some activities even offer a simulator so you can get started without any hardware.
+  title_signup_thanks: ஒரு –ஐ நடத்த பதிவு செய்தமைக்கு நன்றி!
+  title_tutorial_guidelines: நடவடிக்கை வழிகாட்டுதல்கள்
+  title_whole_school: முழுப் பள்ளி பங்கேற்பு
+  events_nav_title: Hour of Code நிகழ்வுகள்
+  events_nav_all: அனைத்து நிகழ்வுகள்
+  events_nav_whole_schools: முழுப் பள்ளிகள்
+  events_nav_special: சிறப்பு நிகழ்வுகள்
+  events_nav_orgs: அமைப்புகள்
+  events_all_old_title: அனைத்து @ஆண்டு Hour of Code நிகழ்வுகள்
+  events_all_title: அனைத்து Hour of Code நிகழ்வுகள்
+  events_whole_school_title: முழுப் பள்ளி Hour of Code நிகழ்வுகள்
+  events_special_title: Hour of Code சிறப்பு நிகழ்வுகள்
+  events_orgs_title: பங்காளர் அமைப்புகளால் ஏற்பாடு செய்யப்பட்ட அனைத்து Hour of Code
+    நிகழ்வுகள்
+  event: நிகழ்வு
+  events: நிகழ்வுகள்
+  highlights_title: சிறப்பம்சங்கள்
+  highlights_header: Hour of Code சிறப்பும்சங்கள்
+  highlights_description: Hour of Code பிரச்சாரத்தில்.
+  higlights_see_more: மேலதிக சிறப்பம்சங்களைக் காண்க
+  highlights_readmore: மேலும் வாசியுங்கள்
+  highlights_watchvideo: காணொளியைக் காண்க
+  highlights_facebook: முகநூலில் பகிரவும்
+  highlights_constant_alba_heading: தி ஹானஸ்ட் கம்பெனியில் ஒட்டுமொத்த ஊழியர்களுடன்
+    ஒரு Hour of Codeஐ நடிகை, சமூக ஆர்வலர் மற்றும் தொழிலதிபர் நடத்தினார்.
+  highlights_constant_alba_short_heading: ஜெஸிகா அல்பா Hour of Code கற்றுக் கொள்கிறார்
+  highlights_constant_obama_heading: அதிபர் ஒபாமா, வெள்ளை மாளிகையில் மாணவர்களுக்காக
+    சரித்திரப்புகழ் வாய்ந்த ஒரு Hour of Code ஏற்பாடு செய்து ஒரு வரி கோட் எழுதிய முதல்
+    அதிபர் ஆவார்.
+  highlights_constant_obama_short_heading: தலைமை கோட் எழுதுநர்
+  highlights_constant_malala_heading: "”நமது உலகை மாற்றும், அதை இயக்குபவரை மாற்றும்
+    தொழில்நுட்பத்தை உருவாக்குவதில் பங்கு பெற ஒவ்வொரு பெண்ணும் தகுதி உடையவள்”"
+  highlights_constant_malala_short_heading: அமைதிக்கான நோபல் பரிசு வெற்றியாளர் மலாலா
+  highlights_constant_trudeau_heading: கனடிய பிரதமர் ஜஸ்டின் ட்ரூடோ தனக்கு பிடித்தமான
+    விளையாட்டு இடம்பெறும் ஒரு எளிய கேமை கோட் செய்தார்.
+  highlights_constant_trudeau_short_heading: பிரதமர் ஜஸ்டின் ட்ரூடோ ஒரு கேமை கோட்
+    செய்தார்
+  highlights_constant_ny_heading: ஒரு முக்கியப் போட்டியில் ப்ரூக்ளின் 80% Hour of
+    Code செய்ய சிகாகோ 60% செய்தது பரவாயில்லை!
+  highlights_constant_ny_short_heading: ப்ரூக்ளின் சிகாகோவை வென்றது
+  highlights_constant_athletes_heading: சாம்பியன்கள் மற்றும் தங்கப் பதக்கம் வென்றவர்களான
+    செரினா வில்லியம்ஸ், நெய்மார் ஜுனியர், கார்மெலோ ஆன்டனி மற்றும் பலர், மாணவர்கள்
+    தாங்களே முன்வந்து செயலாற்றுவதை ஊக்குவித்தனர்.
+  highlights_constant_athletes_short_heading: நீங்களே முன்வந்து செயலாற்றுங்கள்
+  footer_copyright_message: காப்புரிமை %{current_year} Code.org. எல்லா உரிமைகளும்
+    பாதுகாக்கப்பட்டவை.
+  footer_trademark_message: Hour of Code™ என்பது Code.orgன் வணிக முத்திரையாகும்.
+  footer_menu_partners: பங்காளர்கள் மற்றும் ஆலோசகர்கள்
+  footer_menu_contact: எங்களைத் தொடர்புகொள்க
+  footer_menu_support: ஆதரிக்கிறேன்
+  footer_menu_terms: நிபந்தனைகள்
+  footer_menu_privacy: தனியுரிமைக் கொள்கை
+  learn_banner_heading: Hour of Code நடவடிக்கைகள்
+  learn_banner_blurb: 45க்கும் அதிகமான மொழிகளில் அனைத்து வயதினருக்கும் வடிவமைக்கப்பட்ட
+    ஒரு ஒரு-மணிநேர டுடோரியலை முயற்சித்துப் பாருங்கள்.  180க்கும் அதிகமான நாடுகளில்
+    Hour of Code ஐ தொடங்குகிற லட்சக்கணக்கான மாணவர்கள் மற்றும் ஆசிரியர்களுடன் இணையுங்கள்.
+  learn_banner_beyond: தொடர்ந்து கற்றுக் கொள்ள வேண்டுமா?  <a id='learn_banner_beyond'>ஒரு
+    மணிநேரத்தையும் தாண்டிச் செல்க</a>
+  learn_banner_teachers: 'ஆசிரியர்கள்: <a id=''teacher_banner_host''>ஒரு மணிநேரம்
+    நடத்துதல்</a> or <a id=''teacher_banner_howto''>எவ்வாறு செய்வது வழிகாட்டியைப்
+    படிக்கவும் </a>'
+  learn_robotics_banner_heading: ரோபோடிக்ஸ் மற்றும் சர்க்யூட்கள்
+  learn_robotics_banner_blurb: ரோபோக்கள் அல்லது பொருள்ரீதியான கணினி கருவிப்பெட்டியை
+    வைத்துள்ளீர்களா? அவற்றை கீழ்க்காணும் நடவடிக்கைகளுக்குப் பயன்படுத்தி எந்த வயதையும்
+    சேர்ந்த மாணவர்களுக்கு ஒரு உறுதியான Hour of Code ஐ உருவாக்குங்கள். எந்த ஹார்டுவேரும்
+    இன்றி நீங்கள் துவங்க ஏதுவாக சில நடவடிக்ககளில் ஒரு சிமுலேட்டரும் வழங்கப்படுகிறது.
+  tutorial_dance2019_name: Dance Party 2019
   tutorial_danceparty_name: Dance Party
   tutorial_chibitronics_name: 'Chibitronics: Illuminated Story'
   tutorial_athlete_name: Code your own sports game
@@ -1163,9 +1282,9 @@ ta:
   tutorial_sushicards_name: Beginner Scratch Sushi Cards
   tutorial_codesparkcreate_name: 'codeSpark Academy with The Foos: Create Games'
   tutorial_hardvsoft_name: Team Hardware vs. Team Software
-  tutorial_codestersecard_name: Making an E-Card
-  tutorial_codesterslogo_name: Your Company Logo
-  tutorial_codesterstshirt_name: Monogrammed T-Shirt Design
+  tutorial_codestersecard_name: Code an Interactive eCard
+  tutorial_codesterslogo_name: Design Your Own Logo
+  tutorial_codesterstshirt_name: Code Your Initials
   tutorial_codewards_name: Rescue the underwater city!
   tutorial_olympics_name: C.A.T.S. go for Robot Olympics
   tutorial_codinismhero_name: Programming Hero
@@ -1275,8 +1394,8 @@ ta:
     Star Wars game in a galaxy far, far away.
   tutorial_gumadventure_shortdescription: Use code to continue an episode of The Amazing
     World of Gumball.
-  tutorial_mchoc_shortdescription: Minecraft is back for the Hour of Code with a brand
-    new activity! Journey through Minecraft with code.
+  tutorial_mchoc_shortdescription: Hour of Code க்காக Minecraft மீண்டும் புத்தம் புதிய
+    நடவடிக்கையுடன் வருகிறது! குறியீட்டைக் கொண்டு Minecraft ஊடான பயணம்.
   tutorial_vidnews_shortdescription: Code effects and graphics to make a news story
     all about tech, diversity, kids, and coding.
   tutorial_kodable-pre_shortdescription: A fun game to teach computer programming
@@ -2447,6 +2566,9 @@ ta:
   tutorial_allcancodeapps_shortdescription: Use the Allcancode Platform to create
     web and mobile apps from design to delivery.
   tutorial_n2y_shortdescription: Help Bitt Bott explore Earth using direction arrows.
+  tutorial_dance2019_longdescription: Code a Dance Party to share with your friends.
+    Featuring Katy Perry, Shawn Mendes, Lil Nas X, Panic! At The Disco, Jonas Brothers,
+    and many more!
   tutorial_danceparty_longdescription: Code a Dance Party to share with your friends.
     Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!
   tutorial_chibitronics_longdescription: Program a paper circuit to light up your
@@ -2467,8 +2589,8 @@ ta:
     Signal," a glitch affects how the characters relate to each other. In this activity,
     continue the story by making your own glitch and imagining how Gumball and his
     friends would react to it.
-  tutorial_mchoc_longdescription: Minecraft is back for the Hour of Code with a brand
-    new activity! Journey through Minecraft with code.
+  tutorial_mchoc_longdescription: Hour of Code க்காக Minecraft மீண்டும் புத்தம் புதிய
+    நடவடிக்கையுடன் வருகிறது! குறியீட்டைக் கொண்டு Minecraft ஊடான பயணம்.
   tutorial_vidnews_longdescription: 'It''s the HOC News! Videos and graphics are all
     about tech, diversity, kids, and coding. Finished projects can be uploaded to
     school website as the report on the HOC itself. Teachers can encourage students
@@ -4894,6 +5016,9 @@ ta:
     Each of the six activities includes simple directions that are supported with
     symbols from the n2y® SymbolStix PRIME® collection. The symbols help non-readers
     and beginning readers understand and follow the directions.
+  tutorial_dance2019_language: Arabic, Chinese, Czech, Danish, Dutch, English, Finnish,
+    French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean,
+    Malay, Polish, Portuguese, and 10 more!
   tutorial_danceparty_language: English, Arabic, Catalan, Chinese, Czech, Danish,
     Dutch, Finnish, French, German, Greek, Hungarian, Italian, Japanese, Korean, Norwegian,
     Polish, Portuguese, Russian, Spanish, Swedish, Thai, Turkish, and Vietnamese
@@ -5574,6 +5699,7 @@ ta:
   tutorial_duckrace_language: English, German
   tutorial_allcancodeapps_language: English
   tutorial_n2y_language: English
+  tutorial_dance2019_string_detail_grades: Grades 2+
   tutorial_danceparty_string_detail_grades: Grades 2+
   tutorial_chibitronics_string_detail_grades: Grades 2-5
   tutorial_athlete_string_detail_grades: Grades 2+
@@ -5927,7 +6053,7 @@ ta:
   tutorial_codehsrn_string_detail_grades: Grades 9+
   tutorial_codehswd_string_detail_grades: Grades 6+
   tutorial_turtlerobot_string_detail_grades: Pre-reader - Grade 5
-  tutorial_ozoevo_string_detail_grades: All ages
+  tutorial_ozoevo_string_detail_grades: Grades 6+
   tutorial_ozoexped_string_detail_grades: Grades 6+
   tutorial_ozojourney_string_detail_grades: Grades 2-8
   tutorial_ozocodes_string_detail_grades: All ages
@@ -6054,7 +6180,7 @@ ta:
   tutorial_codesparkcreate_string_detail_grades: Pre-reader - Grade 5
   tutorial_hardvsoft_string_detail_grades: Pre-reader - Grade 5
   tutorial_codestersecard_string_detail_grades: Grades 6-8
-  tutorial_codesterslogo_string_detail_grades: Grades 2-8
+  tutorial_codesterslogo_string_detail_grades: Grades 6+
   tutorial_codesterstshirt_string_detail_grades: Grades 6+
   tutorial_codewards_string_detail_grades: Grades 2-8
   tutorial_olympics_string_detail_grades: Grades 2-8
@@ -6152,6 +6278,8 @@ ta:
   tutorial_duckrace_string_detail_grades: Grades 2+
   tutorial_allcancodeapps_string_detail_grades: Grades 6+
   tutorial_n2y_string_detail_grades: Pre-reader+
+  tutorial_dance2019_string_platforms: All modern browsers, Android tablet, iPad,
+    Unplugged
   tutorial_danceparty_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_chibitronics_string_platforms: All modern browsers
   tutorial_athlete_string_platforms: All modern browsers
@@ -6875,6 +7003,7 @@ ta:
   tutorial_duckrace_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_allcancodeapps_string_platforms: All modern browsers
   tutorial_n2y_string_platforms: Unplugged
+  tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chibitronics Chibi Chip and Circuit
     Sticker LEDs
@@ -7455,6 +7584,7 @@ ta:
   tutorial_duckrace_string_detail_platforms: ''
   tutorial_allcancodeapps_string_detail_platforms: ''
   tutorial_n2y_string_detail_platforms: ''
+  tutorial_dance2019_string_detail_programming_languages: Blocks
   tutorial_danceparty_string_detail_programming_languages: Blocks
   tutorial_chibitronics_string_detail_programming_languages: Blocks
   tutorial_athlete_string_detail_programming_languages: Blocks
@@ -7958,7 +8088,7 @@ ta:
   tutorial_codesparkcreate_string_detail_programming_languages: Blocks
   tutorial_hardvsoft_string_detail_programming_languages: ''
   tutorial_codestersecard_string_detail_programming_languages: Blocks, Python
-  tutorial_codesterslogo_string_detail_programming_languages: Blocks, Python
+  tutorial_codesterslogo_string_detail_programming_languages: Python
   tutorial_codesterstshirt_string_detail_programming_languages: Blocks, Python
   tutorial_codewards_string_detail_programming_languages: CoffeeScript
   tutorial_olympics_string_detail_programming_languages: CoffeeScript
@@ -8162,6 +8292,8 @@ ta:
   tutorial_ikodexmas_name: iKode Xmas
   tutorial_rpisensehat_name: Sense HAT data logger
   tutorial_modtraits_name: Character Traits with GoPiGo
+  tutorial_mee_name: 'Minecraft Hour of Code: AI for Good'
+  tutorial_kuborobo_name: KUBO Robotics Coding Routes
   tutorial_scratchimagine_longdescription: Imagine a world where anything is possible,
     then bring it to life with Scratch!
   tutorial_codesterspsa_longdescription: Learn the basics of coding in Python while
@@ -8518,6 +8650,13 @@ ta:
     environment.
   tutorial_modtraits_longdescription: 'Students use the steps of computational thinking
     to analyze character traits and create an algorithm to demonstrate those traits. '
+  tutorial_mee_longdescription: Program the Minecraft Agent to collect data about
+    forest fires. Then write code to help prevent the spread of fire, save the village,
+    and bring life back to the forest. Learn coding basics and explore a real-world
+    example of artificial intelligence.
+  tutorial_kuborobo_longdescription: In this activity, students put their logic and
+    sequencing skills to the test as they use the Tagtiles to program their KUBO robot
+    to travel to various locations on a printed map.
   tutorial_scratchimagine_language: English, Spanish
   tutorial_codesterspsa_language: English
   tutorial_googlehero_language: English, Spanish
@@ -8614,6 +8753,12 @@ ta:
   tutorial_ikodexmas_language: English
   tutorial_rpisensehat_language: English
   tutorial_modtraits_language: English
+  tutorial_mee_language: Bulgarian, Chinese (Simplified), Chinese (Traditional), Czech,
+    Danish, Dutch, English (UK), English (United States), Finnish, French (Canada),
+    French (France), German, Greek, Hungarian, Indonesian, Italian, Japanese, Korean,
+    Norwegian, Polish, Portuguese (Brazil), Portuguese (Portugal), Russian, Slovak,
+    Spanish (Spain), Spanish (Mexico), Swedish, Turkish, Ukrainian
+  tutorial_kuborobo_language: English, Spanish
   tutorial_scratchimagine_string_detail_grades: Grades 2+
   tutorial_codesterspsa_string_detail_grades: Grades 6+
   tutorial_googlehero_string_detail_grades: Grades 2-8
@@ -8699,9 +8844,9 @@ ta:
   tutorial_microbit15_string_detail_grades: Grades 2-8
   tutorial_unity_string_detail_grades: Grades 9+
   tutorial_blockscadtarget_string_detail_grades: Grades 6+
-  tutorial_tcadicicles_string_detail_grades: Grades 6-8
+  tutorial_tcadicicles_string_detail_grades: Grades 7-8
   tutorial_blockscadscale_string_detail_grades: Grades 6+
-  tutorial_tcadloops_string_detail_grades: Grades 6-8
+  tutorial_tcadloops_string_detail_grades: Grades 5-6
   tutorial_phidgets_string_detail_grades: Grades 9+
   tutorial_kcjmerry_string_detail_grades: Grades 2-8
   tutorial_modvariables_string_detail_grades: Grades 6+
@@ -8710,6 +8855,8 @@ ta:
   tutorial_ikodexmas_string_detail_grades: Grades 2-5
   tutorial_rpisensehat_string_detail_grades: Grades 6+
   tutorial_modtraits_string_detail_grades: Grades 2+
+  tutorial_mee_string_detail_grades: Grades 2+
+  tutorial_kuborobo_string_detail_grades: Pre-reader - Grades 8
   tutorial_scratchimagine_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_codesterspsa_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_googlehero_string_platforms: All modern browsers, Android tablet, iPad
@@ -8815,6 +8962,8 @@ ta:
   tutorial_ikodexmas_string_platforms: All modern browsers
   tutorial_rpisensehat_string_platforms: All modern browsers
   tutorial_modtraits_string_platforms: All modern browsers
+  tutorial_mee_string_platforms: iPad, Computers (Windows PC, Mac)
+  tutorial_kuborobo_string_platforms: Unplugged
   tutorial_scratchimagine_string_detail_platforms: ''
   tutorial_codesterspsa_string_detail_platforms: ''
   tutorial_googlehero_string_detail_platforms: ''
@@ -8914,6 +9063,8 @@ ta:
   tutorial_ikodexmas_string_detail_platforms: Microsoft Kodu
   tutorial_rpisensehat_string_detail_platforms: Raspbian (software), SenseHAT
   tutorial_modtraits_string_detail_platforms: GoPiGo
+  tutorial_mee_string_detail_platforms: ''
+  tutorial_kuborobo_string_detail_platforms: KUBO robot
   tutorial_scratchimagine_string_detail_programming_languages: Blocks
   tutorial_codesterspsa_string_detail_programming_languages: Python
   tutorial_googlehero_string_detail_programming_languages: Blocks
@@ -9022,58 +9173,67 @@ ta:
   tutorial_ikodexmas_string_detail_programming_languages: Microsoft Kodu
   tutorial_rpisensehat_string_detail_programming_languages: Python
   tutorial_modtraits_string_detail_programming_languages: Blocks
-  school_not_found_heading: We couldn't find your school. Please enter more information.
-  school_name: School name
-  school_name_error: School name is required.
-  school_city: School city
-  school_state: School state
-  school_zip: Postal code
-  school_zip_error: School postal code is required.
-  census_thanks: Thanks for signing up!
-  census_header: Please take a few minutes to tell us about your school (Optional).
-  census_heading: Please share how much coding/computer programming is taught at this
-    school. Assume for the purposes of the following questions that coding/computer
-    programming does not include HTML/CSS, Web design, or how to use apps.
-  census_how_many_hoc: How many students will do an Hour of Code?
-  census_how_many_after_school: How many students do computer programming in an after-school
-    program?
-  census_how_many_ten_hours: How many students take at least 10 hours of computer
-    programming integrated into a non-Computer Science course (such as TechEd, Math,
-    Science, Art, Library or general classroom/homeroom)?
-  census_how_many_twenty_hours: How many students take a semester or year-long computer
-    science course that includes at least 20 hours of coding/computer programming?
-  census_other_cs: This school teaches other computing classes that do not include
-    at least 20 hours of coding/computer programming. (For example, learning to use
-    applications, computer literacy, web design, HTML/CSS, or other)
-  census_connection: What is your connection to this school?
-  census_pledge: I pledge to expand computer science offerings at my school, and to
-    engage a diverse group of students, to bring opportunity to all.
-  census_followup_heading: Your school offers a semester or year-long computer science
-    class! What topics does this course include?
-  census_followup_frequency: How often per week does this class meet?
-  less_than_one: "< 1 hour per week"
-  one_to_three: 1-3 hours per week
-  three_plus: 3+ hours per week
-  census_followup_more: Please tell us more about this course.
-  census_followup_more_placeholder: For example, name of the class, how often it meets,
-    description of what is taught.
-  census_topics_blocks: Block-based programming
-  census_topics_text: "  Text-based programming in a language such as Java, JavaScript,
-    Python, C++, etc. (Excluding HTML or CSS)"
-  census_topics_robots: Robotics / Physical Computing
-  census_topics_internet: Internet and networking
-  census_topics_security: Cybersecurity
-  census_topics_data: Data analysis
-  census_topics_web_design: Web design using HTML and CSS
-  census_topics_game_design: Game design using game layout tools without coding or
-    computer programming
-  teacher: Teacher
-  administrator: Administrator
-  parent: Parent
-  volunteer_or_advocate: Volunteer/Community Advocate
-  other: Other
-  other_describe: Other (please describe below)
-  none: None
-  some: Some
-  all: All
-  dont_know: I don't know
+  tutorial_mee_string_detail_programming_languages: Blocks
+  tutorial_kuborobo_string_detail_programming_languages: Tagtiles that students piece
+    together
+  school_not_found_heading: உங்கள் பள்ளியை எங்களால் காண இயலவில்லை. தயவுசெய்து மேலும்
+    தகவல்களை உள்ளிடவும்.
+  school_name: பள்ளி பெயர்
+  school_name_error: பள்ளியின் பெயர் தேவை.
+  school_city: பள்ளி நகரம்
+  school_state: பள்ளி மாநிலம்
+  school_zip: அஞ்சல் குறியீடு
+  school_zip_error: பள்ளியின் அஞ்சல் குறியீடு தேவை.
+  census_thanks: பதிவு செய்ததற்கு நன்றி!
+  census_header: உங்கள் பள்ளியைப் பற்றி எங்களுக்குச் சொல்ல சில நிமிடங்கள் எடுத்துக்
+    கொள்ளுங்கள் (விரும்பத்தேர்வானது).
+  census_heading: இந்த பள்ளியில் எவ்வளவு குறியீடு/கணினி நிரலாக்கங்கள் கற்பிக்கப்படுகின்றன
+    என்பதைப் பகிரவும். குறியீடு/கணினி நிரலாக்கத்தில் HTML / CSS, வலை வடிவமைப்பு அல்லது
+    பயன்பாடுகளை எவ்வாறு பயன்படுத்துவது ஆகியவை அடங்காது என்று பின்வரும் கேள்விகளின்
+    நோக்கங்களுக்காக கருதுங்கள்.
+  census_how_many_hoc: எத்தனை மாணவர்கள் Hour of Code -ஐ செய்வார்கள்?
+  census_how_many_after_school: பள்ளி நேரத்திற்கு பிறகு எத்தனை மாணவர்கள் கணினி நிரலாக்க
+    செயல்பாட்டில் கலந்து கொண்டு செய்கிறார்கள்?
+  census_how_many_ten_hours: எத்தனை மாணவர்கள் குறைந்தபட்சம் 10 மணிநேர ஒருங்கிணைந்த
+    கணினி நிரலாக்கத்தைக் கணினி அல்லாத அறிவியல் பாடத்திட்டத்தில் (TechEd, கணிதம், அறிவியல்,
+    கலை, நூலகம் அல்லது பொது வகுப்பறை/வீட்டு அறை போன்றவை) எடுத்துக்கொள்கிறார்கள்?
+  census_how_many_twenty_hours: எத்தனை மாணவர்கள் குறைந்தபட்சம் 20 மணிநேர குறியீடு/கணினி
+    நிரலாக்கத்தை உள்ளடக்கிய ஒரு செமஸ்டர் அல்லது ஓராண்டு கணினி அறிவியல் படிப்பை எடுத்து
+    படிக்கிறார்கள்?
+  census_other_cs: இந்த பள்ளி ஆசிரியர்கள் கணினி வகுப்பு நேரங்களில் குறைந்தது 20 மணிநேரங்களைத்
+    தவிர்த்து, குறியீடு / கணினி நிரலாக்க பாடங்களை கற்பிக்கிறார்கள். (எடுத்துக்காட்டாக,
+    பயன்பாடுகள், கணினி கல்வியறிவு, வெப் டிசைனிங், HTML/CSS, அல்லது பிறவற்றைப் பயன்படுத்தக்
+    கற்றுக்கொள்வது)
+  census_connection: இந்த பள்ளியுடன் உங்கள் தொடர்பு எத்தகையது?
+  census_pledge: எனது பள்ளியில் கணினி அறிவியல் அரிவை விரிவுபடுத்த உறுதியெடுத்துள்ளேன்,
+    பலதரப்பட்ட மாணவர்களை இதில் ஈடுபடுத்துவதற்கும், அனைவருக்கும் வாய்ப்பைக் கொடுப்பதற்கும்
+    நான் உறுதியெடுத்துள்ளேன்.
+  census_followup_heading: உங்கள் பள்ளி ஒரு செமஸ்டர் அல்லது ஓராண்டு முழுவதும் கணினி
+    அறிவியல் வகுப்பை வழங்குகிறது! இந்த பாடத்திட்டத்தில் என்னென்ன தலைப்புகள் உள்ளன?
+  census_followup_frequency: இந்த வகுப்புக்கள் வாரத்திற்கு எத்தனை முறை நடைபெறுகிறது?
+  less_than_one: வாரத்திற்கு < 1 மணிநேரம்
+  one_to_three: ஒரு வாரத்திற்கு 1-3 மணிநேரம்
+  three_plus: வாரத்திற்கு 3+ மணி நேரம்
+  census_followup_more: இந்த பாடத்திட்டத்தைப் பற்றி மேலும் சொல்லுங்கள்.
+  census_followup_more_placeholder: எடுத்துக்காட்டாக, வகுப்பின் பெயர், வகுப்புக்கள்
+    எப்பொழுதெல்லாம் நடத்தப்படுகிறது, என்னென்ன கற்பிக்கப்படுகிறது என்பது பற்றிய விபரங்கள்.
+  census_topics_blocks: ப்ளாக் அடிப்படையிலான நிரலாக்கம்
+  census_topics_text: "  Java, JavaScript, Python, C++, போன்ற மொழியில் உரை அடிப்படையிலான
+    நிரலாக்கம். (HTML அல்லது CSS தவிர)"
+  census_topics_robots: ரோபாட்டிக்ஸ் / பிசிகல் கம்ப்யூட்டிங்
+  census_topics_internet: இணையம் மற்றும் நெட்வொர்க்கிங்
+  census_topics_security: சைபர் செக்யூரிட்டி
+  census_topics_data: தரவு பகுப்பாய்வு
+  census_topics_web_design: HTML மற்றும் CSS CSS ஐப் பயன்படுத்தி வெப் டிசைனிங்
+  census_topics_game_design: குறியீடு அல்லது கணினி நிரலாக்கம் போன்றவற்றைப் பயன்படுத்தாமல்
+    விளையாட்டு தளவமைப்பு கருவிகளைப் பயன்படுத்தி விளையாட்டை வடிவமைத்தல்
+  teacher: ஆசிரியர்
+  administrator: நிர்வாகி
+  parent: பெற்றோர்
+  volunteer_or_advocate: தொண்டூழியர்/சமூக வழக்கறிஞர்
+  other: மற்றவை
+  other_describe: பிற (தயவுசெய்து கீழே விளக்கவும்)
+  none: எதுவும் இல்லை
+  some: ஓரளவு
+  all: அனைத்தும்
+  dont_know: தெரியவில்லை

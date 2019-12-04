@@ -504,6 +504,24 @@ zh-TW:
       CSD U2 Design Project_2018_2019:
         title: 標題
         content1: 在此描述
+      CSD U2 Expression Exemplars:
+        markdown: |
+          # 個人網站範例
+
+          點擊以下網站，查看其他學生所製作的個人網站。
+
+          <a href="https://codeprojects.org/SYRw7CQJzSmAErCEF-mMXQ" target="_blank"><img src="https://images.code.org/25b7284a4cd3d26f9b989a5c3bba6485-image-1493760609250.29.54 PM.png" style="width:200px;float:left"></a>
+
+          <a href="https://codeprojects.org/y6u1W372PZh2MfzxwHQBKA" target="_blank"><img src="https://images.code.org/5929f61d14370a72e2e3b77c1948d5ed-image-1493943243592.13.32 PM.png" style="width:200px;float:left"></a>
+      CSD U2 Expression Exemplars_2018:
+        markdown: |
+          # 個人網站範例
+
+          點擊以下網站，查看其他學生所製作的個人網站。
+
+          <a href="https://codeprojects.org/SYRw7CQJzSmAErCEF-mMXQ" target="_blank"><img src="https://images.code.org/25b7284a4cd3d26f9b989a5c3bba6485-image-1493760609250.29.54 PM.png" style="width:200px;float:left"></a>
+
+          <a href="https://codeprojects.org/y6u1W372PZh2MfzxwHQBKA" target="_blank"><img src="https://images.code.org/5929f61d14370a72e2e3b77c1948d5ed-image-1493943243592.13.32 PM.png" style="width:200px;float:left"></a>
       CSD U2 L2 Overview:
         title: 標題
         content1: 在此描述
@@ -521,6 +539,32 @@ zh-TW:
         content1: 在此描述
       CSD U2 Lesson 6 Overview:
         content1: 在此描述
+      CSD U2 Top Websites_2018:
+        markdown: |
+          # 美國最熱門網站
+
+          以下出列美國一些最常訪問的網站。包含核心功能的簡述。
+
+
+          * Google.com - 網站、圖片、影片以及其他媒體的搜索引擎
+          * Youtube.com - 供用戶提交影片的網站，帶有評級影片及留言評論等功能
+          * Facebook.com - 社交媒體社區，允許用戶與朋友們共享資訊
+          * Amazon.com - 經營各種商品的線上購物網站
+          * Yahoo.com - 搜索引擎、電子郵件提供商與新聞來源
+          * Wikipedia.org - 內容由用戶生成的免費線上百科全書
+      CSD U2 Top Websites_2018_2019:
+        markdown: |
+          # 美國最熱門網站
+
+          以下出列美國一些最常訪問的網站。包含核心功能的簡述。
+
+
+          * Google.com - 網站、圖片、影片以及其他媒體的搜索引擎
+          * Youtube.com - 供用戶提交影片的網站，帶有評級影片及留言評論等功能
+          * Facebook.com - 社交媒體社區，允許用戶與朋友們共享資訊
+          * Amazon.com - 經營各種商品的線上購物網站
+          * Yahoo.com - 搜索引擎、電子郵件提供商與新聞來源
+          * Wikipedia.org - 內容由用戶生成的免費線上百科全書
       CSD U2 expand project:
         title: 標題
         content1: 在此描述
@@ -769,6 +813,17 @@ zh-TW:
       CSD U3 combining rep:
         title: 標題
         content1: 在此描述
+        markdown: |+
+          ###可以解碼這個二進制字符串嗎？
+
+
+
+          ＃1000011
+
+
+
+          ###需要什麼樣的資訊來協助解碼？
+
       CSD U3 combining rep_2018:
         title: 標題
         content1: 在此描述
@@ -905,6 +960,25 @@ zh-TW:
         - {}
         - correct: true
         - {}
+      CSD-U5-SFLP Problem Solving and Data:
+        markdown: |
+          # 概述
+
+          將使用問題解決流程來協助解決一個數據問題。
+
+          ## 資源
+
+          * [使用數據解決問題](https://docs.google.com/document/d/1_5JzwIIl8u72QJq_dFpFPnVcNREBc3UHtQtObkwgckw/export?format=pdf) - 活動指南
+      CSD-U5-SFLP Problem Solving with Big Data:
+        markdown: |
+          # 概述
+
+          本課程所涵蓋的內容：有關一個組織如何透過收集與使用數據來解決現實世界中的問題。課程將探討三種可使用數據解決的情況，並且針對希望解決的數據類型、以及如何收集數據等問題進行腦力激盪法的思考。每個場景還包括一部以現實生活的服務為主、利用數據來解決類似問題的影片。
+
+
+          ## 資源
+
+          * [真實世界中的數據](https://docs.google.com/document/d/10MwyEV-wgpE6tHZxi-d9SQKrTPoz8J-QwmND8rn-m2I/export?format=pdf) - 活動指南
       Dance_Party_extras_intro:
         markdown: "# 繼續跳舞!\n\n對於第2部分，您將創建自己的專案。 這裡沒有謎題 - 相反，有一些專案展現不同的方式來製作更複雜的舞會。
           \n\n您可以按照自己的喜好順序選擇這個層級。 跳轉看看在先前級別中完成哪些事情，或者組合專案中的概念。 嘗試所有這些，選擇您喜歡的，並花時間在添加到該專案上，讓它成為你自己的專案。\n\n<a
@@ -1176,12 +1250,32 @@ zh-TW:
         title: 標題
         content1: 在此描述
       'Technique: Frequency Analysis':
+        title: 如何破解替代密碼
         content1: 在此描述
       Terminology Recap:
+        title: 很容易吧！下一步是什麼？
         content1: 在此描述
       TheRightAppMarkdownLevel_2019:
         markdown: "# 正確的應用程式\n\n* 現在所有人都使用電腦，特別是智慧型手機。 \n* 智慧型手機的應用程式幫助人們做一些事情，像是與們有說話，聽音樂，買東西，或只是瀏覽網頁。\n*
           對於程序員來說，了解他人的需求並設計應用程式對他們來說非常重要！\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)\n"
+      Unit 1 Lesson 2 Overview:
+        markdown: |
+          # 概述
+
+          在本堂課中，將學習一種正式的問題解決流程，這將有助於構建解決各種問題的方法。
+
+
+          ## 資源
+
+          * [問題解決過程 — 活動指南](https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf)
+      Unit 1 Lesson 3 Overview:
+        markdown: |
+          # 概述
+          在本堂課中，你將把解決問題的過程應用在各種問題上，以探索每個步驟是如何幫助自己開發並改進對這項問題的解決方案。
+
+          ## 資源
+
+          * [解決問題 — 活動指南](https://docs.google.com/document/d/1cym5lMuy41CbvXYe7F57N2XfI6Afp0hJsHovhR0GD2M/export?format=pdf)
       behaviors 1 predict:
         questions:
         - {}
@@ -1759,21 +1853,25 @@ zh-TW:
         - correct: true
       courseF_bee_variables_8a_2018:
         questions:
-        - {}
+        - text: 看看下面的編碼。蜜蜂最後會收集到多少塊花蜜？
         answers:
         - {}
-        - correct: true
+        - text: 蜜蜂只能收集到2塊花蜜。
+          correct: true
           feedback: 正確！
-        - {}
+        - text: 蜜蜂會收集到所有的花蜜。
+          feedback: 不正確。在調用最後兩個函數之前，將變量設置回0。
         - text: 我不知道。
       courseF_bee_variables_8a_2018_2019:
         questions:
-        - {}
+        - text: 看看下面的編碼。蜜蜂最後會收集到多少塊花蜜？
         answers:
         - {}
-        - correct: true
+        - text: 蜜蜂只能收集到2塊花蜜。
+          correct: true
           feedback: 正確！
-        - {}
+        - text: 蜜蜂會收集到所有的花蜜。
+          feedback: 不正確。在調用最後兩個函數之前，將變量設置回0。
         - text: 我不知道。
       courseF_multi_artist_for10_predict1:
         questions:
@@ -1873,7 +1971,7 @@ zh-TW:
         - correct: true
           feedback: 正確！
         - {}
-        - {}
+        - text: '我不知道。 '
       courseF_multi_bee_for3_predict1_2018_2019:
         questions:
         - {}
@@ -1882,7 +1980,7 @@ zh-TW:
         - correct: true
           feedback: 正確！
         - {}
-        - {}
+        - text: '我不知道。 '
       courseF_multi_bee_fwp9_predict1:
         questions:
         - {}
@@ -1926,6 +2024,16 @@ zh-TW:
           feedback: 正確！
         - {}
         - {}
+      csd-pre-survey-2017-levelgroup:
+        markdown: |
+          # 概述
+
+          本堂課將分組設計鋁箔紙船，該船將在盡可能承載最多硬幣的情況下漂浮在水上。在課程結束時，小組將會討論在活動中的經驗，並與將在本課程其他部分中所要解決的類型問題建立聯繫。
+
+
+          ## 資源
+
+          * [鋁箔紙船](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - 活動指南 (複製為 [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
       grade2_multi_collector_A_predict1:
         questions:
         - {}

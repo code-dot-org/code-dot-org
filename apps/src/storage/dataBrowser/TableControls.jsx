@@ -4,7 +4,7 @@
  */
 import ConfirmDeleteButton from './ConfirmDeleteButton';
 import ConfirmImportButton from './ConfirmImportButton';
-import DataVisualizer from './DataVisualizer';
+import VisualizerModal from './dataVisualizer/VisualizerModal';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import React from 'react';
@@ -67,7 +67,7 @@ class TableControls extends React.Component {
         </div>{' '}
         <div style={styles.buttonWrapper}>
           {experiments.isEnabled(experiments.APPLAB_DATASETS) && (
-            <DataVisualizer />
+            <VisualizerModal />
           )}
 
           {!this.props.readOnly && (

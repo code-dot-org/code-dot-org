@@ -151,10 +151,6 @@ sv-SE:
             <title name="COSTUME" config="&quot;BEAR&quot;, &quot;CAT&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title>
             <title name="LAYOUT">"circle"</title>
           </block></xml>Nu kan du skapa många dansare på en gång!
-      Dance_2019_07: Varje dansare har ett set med _egenskaper_ som avgör hur de ser
-        ut. Du kan få det att se ut som att en dansare är närmre eller längre bort
-        genom att ändra deras storlek. Ändra storleken på en grupp dansare någon gång
-        efter att musiken har börjat.
       Dance_2019_08: Dansare har en ”färgtons”-egenskap som kan lägga till färg. Prova
         att ändra färgton på en av dina dansare (eller en hel grupp)!
       Dance_2019_09: Det här är en särskild sorts händelse som utlöses upprepade gånger.<xml><block
@@ -172,7 +168,7 @@ sv-SE:
       Dance_Party_02: |-
         Låt oss få denna älg att dansa!
 
-        Dra ut <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> blocket till arbetsytan. Koppla samman det undertill med <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> blocket. Din dansare bör starta en ny rörelse efter den fjärde åtgärden.
+        Dra ut <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> blocket till arbetsytan. Koppla samman det undertill med <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> blocket. Din dansare bör starta en ny rörelse efter den fjärde åtgärden.
 
         **Åtgärder** används för att mäta tid i musik. I denna handledning är en åtgärd fyra takter lång.
       Dance_Party_03: |-
@@ -231,6 +227,14 @@ sv-SE:
         vänsterpilen. Gör så att roboten ”faller” när du trycker på högerpilen.
       Dance_Party_12: Dags att svänga på höfterna! Skapa en egen dans att dela med
         dina vänner.
+      Dance_Party_extras_alternate_2019: '# Det är dags för uppställning!Kolla in
+        den här dansen som använder <xml><block type="Dancelab_alternateMoves"><title
+        name="GROUP">sprites</title><title name="N">2</title><title name="MOVE1">MOVES.Roll</title><title
+        name="MOVE2">MOVES.ClapHigh</title></block></xml>-blocket för att förändra
+        bakgrundsdansarnas formation under dansen. Prova en av de här idéerna för
+        att utveckla den:-   Skapa en andra grupp dansare i en annan gruppering-   Ändra
+        gruppering med en knapptryckning-   Ändra en egenskap när dansarna ändrar
+        formation'
       Dance_Party_extras_battle: |-
         # Dansgrupper
 
@@ -257,6 +261,14 @@ sv-SE:
         -   Experimentera med andra notlängder (som 0,5 för en halvnot eller 0,125 för en åttondelsnot).
         -   Lägg till några händelser med ”efteråtgärder”.
         -   Byt ”åtgärder” mot ”sekunder” och försök att på så sätt tajma dina danser.
+      Dance_Party_extras_every_beat_2019: '# Öka takten, sakta nerI den här sista
+        dansen använder vi <xml><block type="controls_if"><value name="IF0"><block
+        type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title
+        name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title
+        name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml>-blocket
+        för att kontrollera hur snabbt varje dansare rör sig. Experimentera med olika
+        hastigheter vid olika tillfällen i sången. Knåpa gärna vidare på den här dansen
+        eller gå tillbaka till någon av de tidigare danserna och gör dom ännu coolare.'
       Dance_Party_extras_layout: |-
         # Uppställning!
 
@@ -265,13 +277,6 @@ sv-SE:
         -   Skapa en andra grupp av dansare i en annan utformning
         -   Ändra utformning när en tangent trycks in
         -   Ändra en egenskap när dansarna ändrar formation
-      Dance_Party_extras_layout_2019: '# Det är dags för uppställning!Kolla in den
-        här dansen som använder <xml><block type="Dancelab_layoutSprites" block-text="layout"><title
-        name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml>-blocket
-        för att förändra bakgrundsdansarnas formation under dansen. Prova en av de
-        här idéerna för att utveckla den:-   Skapa en andra grupp dansare i en annan
-        gruppering-   Ändra gruppering med en knapptryckning-   Ändra en egenskap
-        när dansarna ändrar formation'
       Dance_Party_extras_on_beat: |-
         # Bas, mellanregister och diskant
 
@@ -298,14 +303,13 @@ sv-SE:
         -   Lägg till en grupp av dansare
         -   Visa och dölj dansare med hjälp av piltangenterna
         -   Dölj alla dansare och växla till en spännande bakgrundseffekt
-      Dance_Party_extras_visible_2019: |-
-        # Vart tog de vägen?
-
-        Denna dans visar och döljer två olika grupper av dansare. Kolla in det och försök sedan att lägga till din egen stil.
-
-        -   Lägg till en grupp av dansare
-        -   Visa och dölj dansare med hjälp av piltangenterna
-        -   Dölj alla dansare och växla till en spännande bakgrundseffekt
+      Dance_Party_extras_visible_2019: "# FjärdedelsnoterI de flesta av våra danser
+        har vi använt hela takter, men varje takt består av fyra fjärdedelsnoter.
+        Den här dansen använder [blockly block][0] så att dansarna klappar på varje
+        fjärdedelsnot efter den femte takten. Prova att ändra siffrorna i blocket
+        för att se hur det påverkar dansen.-   Experimentera med andra notlängder
+        (som 0,5 för en halvnot eller 0,125 för en åttondelsnot).-   Lägg till några
+        ytterligare händelser."
       Function intro Ryan: "Du har en **funktion** som heter \"bygg bro\" i arbetsytan.
         \ All kod du behöver för att korsa floden är inbyggd i den!\\\r\n \\\r\nFäst
         två av de små, gröna blocken i arbetsytan för att fixa vägen och ta {currentPlayerName}

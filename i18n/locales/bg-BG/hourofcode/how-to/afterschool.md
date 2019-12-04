@@ -79,6 +79,6 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## Какво идва след Hour of Code?
 
-Hour of Code е само първата стъпка в образователното пътуване за това, как технологията работи и как се създават софтуерни приложения. Помогне на учениците да продължат пътуването си и ги насърчете да [Научат повече онлайн](%= codeorg_url('/learn/beyond') %)!
+Hour of Code е само първата стъпка в образователното пътуване за това, как технологията работи и как се създават софтуерни приложения. Help students continue their journey and encourage them to [learn more online](/beyond)!
 
 {{ signup_button }}

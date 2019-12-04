@@ -72,9 +72,14 @@ export default class LibraryManagerDialog extends React.Component {
   onOpen = () => {
     let libraryClient = new LibraryClientApi();
     this.setState({libraries: dashboard.project.getProjectLibraries() || []});
-    libraryClient.getClassLibraries(libraries => {
-      this.setState({classLibraries: libraries});
-    });
+    libraryClient.getClassLibraries(
+      libraries => {
+        this.setState({classLibraries: libraries});
+      },
+      error => {
+        console.log('error: ' + error);
+      }
+    );
   };
 
   setLibraryToImport = event => {

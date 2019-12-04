@@ -2520,6 +2520,8 @@ pt-BR:
           -   Use o bloco 'com a seta para a esquerda pressionada' para fazer o robô executar um movimento de dança ao pressioná-la.
 
           _Esta fase termina após oito compassos._
+      Dance_Party_extras_alternate_2019:
+        alternate: O bloco alternativo está na categoria "Dançarinos".
       Function intro Ryan:
         Function_intro_Ryan_b: Se você chamar as funções corretamente, este é o caminho
           que você vai viajar...
@@ -9193,6 +9195,12 @@ pt-BR:
           adiante.
         courseC_starWars_loops5_a: A melhor solução utiliza uma volta, então um único
           'mover à frente', outra volta, e então um laço.
+      courseC_starWars_loops5_2018:
+        courseC_starWars_loops5_a: A melhor solução usa um único \`avançar ', depois
+          um voltar e depois uma repetição.
+      courseC_starWars_loops5_2019:
+        courseC_starWars_loops5_a: A melhor solução usa um único \`avançar ', depois
+          um voltar e depois uma repetição.
       courseC_starWars_loops6:
         courseC_starWars_loops6_a: Tente escrever todos os movimentos em um pedaço
           de papel e procure um padrão.

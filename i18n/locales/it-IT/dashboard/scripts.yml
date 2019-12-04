@@ -4,18 +4,18 @@ it:
   data:
     script:
       category:
-        csd_category_name: Scoperte CS ('17-'18)
-        csd_2018_category_name: Scoperte CS ('18-'19)
-        csd_2019_category_name: Scoperte CS ('19-'20)
+        csd_category_name: Alla scoperta dell'informatica ('17-'18)
+        csd_2018_category_name: Alla scoperta dell'informatica ('18-'19)
+        csd_2019_category_name: Alla scoperta dell'informatica ('19-'20)
         csf_category_name: Corsi base
         csf_2018_category_name: Fondamenti di Informatica (2018)
         csf_international_category_name: Fondamenti di Informatica (in Italiano)
         csf2_draft_category_name: 'Corsi A - F: In fase di sviluppo'
         csp_category_name: "Princìpi dell'Informatica (versione 2015-16)"
         csp_2018_category_name: Principi di informatica ('18-'19)
-        csp_2019_category_name: Principi CS ('19-'20)
+        csp_2019_category_name: Principi di informatica ('19-'20)
         cspexams_category_name: Prova pratica di principi d'informatica
-        csp17_category_name: CS Principles ('17-'18)
+        csp17_category_name: Principi di informatica ('17-'18)
         full_course_category_name: Corsi Avanzati
         hoc_category_name: L'Ora del Codice
         math_category_name: Matematica
@@ -1866,7 +1866,7 @@ it:
           assignment_family_title: Corso A
           description_audience: 'Da 4 a 7 anni'
           description_short: Introduzione all'informatica per bambini che non leggono ancora.
-          description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+          description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. **ATTENZIONE**: qui a destra scegli la versione **2018**, è la più aggiornata in italiano ==>'
         courseb-2017:
           stages:
             'Debugging: Unspotted Bugs':
@@ -1901,7 +1901,7 @@ it:
           assignment_family_title: Corso B
           description_audience: 'Da 5 a 8 anni'
           description_short: Introduzione all'informatica per bambini che stanno appena imparando a leggere. (Simile al Corso A, ma con maggior varietà per bambini leggermente più grandi.)
-          description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+          description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. **ATTENZIONE**: qui a destra scegli la versione **2018**, è la più aggiornata in italiano ==>'
         coursec-2017:
           stages:
             Building a Foundation:
@@ -1938,7 +1938,7 @@ it:
           assignment_family_title: Corso C
           description_audience: 'Da 6 a 10 anni'
           description_short: Impara le basi dell'informatica e crea disegni, storie animate o giochi interattivi.
-          description: 'Crea programmi con sequenze di istruzioni, cicli ed eventi. Traduci le tue iniziali in binario, indaga sulle diverse tecniche di risoluzione dei problemi e impara a reagire correttamente al cyberbullismo. Alla fine del corso, puoi creare e condividere un gioco interattivo o una storia animata! ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+          description: 'Crea programmi con sequenze di istruzioni, cicli ed eventi. Traduci le tue iniziali in binario, indaga sulle diverse tecniche di risoluzione dei problemi e impara a reagire correttamente al cyberbullismo. Alla fine del corso, puoi creare e condividere un gioco interattivo o una storia animata! **ATTENZIONE**: qui a destra scegli la versione **2018**, è la più aggiornata in italiano ==>'
         coursed-2017:
           stages:
             Introduction:
@@ -2014,7 +2014,7 @@ it:
           assignment_family_title: Corso D
           description_audience: 'Da 7 a 11 anni'
           description_short: Vengono ripresi brevemente i concetti del corso C ed aggiunti algoritmi, cicli annidati, istruzioni condizionali e altro ancora.
-          description: 'In questo corso vengono insegnati nuovi concetti di informatica tra cui algoritmi, cicli annidati, cicli "mentre", istruzioni condizionali ed eventi. Vengono introdotti alcuni concetti di cittadinanza digitale ed è possibile creare il proprio gioco o la propria storia che è poi possibile condividere con gli amici. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+          description: 'In questo corso vengono insegnati nuovi concetti di informatica tra cui algoritmi, cicli annidati, cicli "mentre", istruzioni condizionali ed eventi. Vengono introdotti alcuni concetti di cittadinanza digitale ed è possibile creare il proprio gioco o la propria storia che è poi possibile condividere con gli amici. **ATTENZIONE**: qui a destra scegli la versione **2018**, è la più aggiornata in italiano ==>'
         coursee-2017:
           stages:
             'Algorithms: Tangrams':
@@ -2123,7 +2123,7 @@ it:
           assignment_family_title: Corso E
           description_audience: 'Da 8 a 12 anni'
           description_short: Vengono ripresi i concetti dei corsi C e D e viene aggiunto il concetto di funzione.
-          description: 'Si inizia con algoritmi, cicli, istruzioni condizionali ed eventi per poi introdurre le funzioni. Nella seconda parte di questo corso, puoi progettare e creare un progetto finale che potrai condividere con i tuoi amici e familiari. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+          description: 'Si inizia con algoritmi, cicli, istruzioni condizionali ed eventi per poi introdurre le funzioni. Nella seconda parte di questo corso, puoi progettare e creare un progetto finale che potrai condividere con i tuoi amici e familiari. **ATTENZIONE**: qui a destra scegli la versione **2018**, è la più aggiornata in italiano ==>'
         coursef-2017:
           stages:
             'Algorithms: Tangrams':
@@ -2210,7 +2210,7 @@ it:
           assignment_family_title: Corso F
           description_audience: 'Da 9 a 13 anni'
           description_short: Impara tutti i concetti dei corsi di fondamenti di informatica e crea disegni, storie o giochi interattivi.
-          description: 'Impara ad usare diversi tipi di cicli, eventi, funzioni e istruzioni condizionali. Indaga sulle diverse tecniche di risoluzione dei problemi e discuti sull''impatto sociale dell''informatica e di Internet. Nella seconda parte di questo corso, pianifica e crea un progetto di fine corso che puoi condividere con amici ed familiari. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+          description: 'Impara ad usare diversi tipi di cicli, eventi, funzioni e istruzioni condizionali. Indaga sulle diverse tecniche di risoluzione dei problemi e discuti sull''impatto sociale dell''informatica e di Internet. Nella seconda parte di questo corso, pianifica e crea un progetto di fine corso che puoi condividere con amici ed familiari. **ATTENZIONE**: qui a destra scegli la versione **2018**, è la più aggiornata in italiano ==>'
         express-2017:
           stages:
             Introduction:
@@ -2304,7 +2304,7 @@ it:
           title: Corso rapido
           assignment_family_title: Corso Rapido (2018)
           description_short: 'Introduzione all''informatica: mette a disposizione di studenti più grandi, il meglio del nostro curriculum per la scuola primaria.'
-          description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+          description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. **ATTENZIONE**: qui a destra scegli la versione **2018**, è la più aggiornata in italiano ==>'
         pre-express-2017:
           stages:
             'Debugging: Unspotted Bugs':
@@ -2336,7 +2336,7 @@ it:
           title: Corso rapido pre-scolare
           assignment_family_title: Corso rapido pre-scolare
           description_short: 'Introduzione all''informatica per studenti pre-scolari: mette insieme il meglio dei nostri corsi per la scuola dell''infanzia e per la prima classe della scuola primaria.'
-          description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+          description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. **ATTENZIONE**: qui a destra scegli la versione **2018**, è la più aggiornata in italiano ==>'
         subgoal-labels-opt-in:
           stages:
             other:
@@ -2829,7 +2829,7 @@ it:
         coursea-2018:
           title: Corso A (2018)
           assignment_family_title: Corso A
-          description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+          description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. **ATTENZIONE**: qui a destra scegli la versione **2018**, è la più aggiornata in italiano ==>'
           description_short: Introduzione all'informatica per bambini che non leggono ancora.
           description_audience: 'Da 4 a 7 anni'
           stages:
@@ -2882,7 +2882,7 @@ it:
         express-2018:
           title: Corso Rapido (2018)
           assignment_family_title: Corso Rapido
-          description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+          description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. **ATTENZIONE**: qui a destra scegli la versione **2018**, è la più aggiornata in italiano ==>'
           description_short: 'Introduzione all''informatica: mette a disposizione di studenti più grandi, il meglio del nostro curriculum per la scuola primaria.'
           stages:
             'Algorithms: Graph Paper Programming':
@@ -3016,7 +3016,7 @@ it:
         courseb-2018:
           title: Corso B (2018)
           assignment_family_title: Corso B
-          description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+          description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. **ATTENZIONE**: qui a destra scegli la versione **2018**, è la più aggiornata in italiano ==>'
           description_short: Introduzione all'informatica per alunni che devono imparare a leggere. Simile al Corso A, ma con maggior approfondimento dei concetti.
           description_audience: 'Da 5 a 8 anni'
           stages:
@@ -3059,7 +3059,7 @@ it:
         coursed-2018:
           title: Corso D (2018)
           assignment_family_title: Corso D
-          description: Gli studenti sviluppano la comprensione dei cicli annidati, dei cicli "mentre", delle istruzioni condizionali e degli eventi. Oltre alla programmazione, gli studenti vengono introdotti al concetto di cittadinanza digitale.
+          description: 'Gli studenti sviluppano la comprensione dei cicli annidati, dei cicli "mentre", delle istruzioni condizionali e degli eventi. Oltre alla programmazione, gli studenti vengono introdotti al concetto di cittadinanza digitale. **ATTENZIONE**: qui a destra scegli la versione **2018**, è la più aggiornata in italiano ==>'
           description_short: Impara le istruzioni condizionali e sviluppa le tue capacità artistiche per cerare un disegno, una storia o un gioco.
           description_audience: 'Da 7 a 11 anni'
           stages:
@@ -3122,7 +3122,7 @@ it:
         coursec-2018:
           title: Corso C (2018)
           assignment_family_title: Corso C
-          description: 'Crea programmi con sequenze di istruzioni, cicli ed eventi. Traduci le tue iniziali in binario, indaga sulle diverse tecniche di risoluzione dei problemi e impara a reagire correttamente al cyberbullismo. Alla fine del corso, puoi creare e condividere un gioco interattivo o una storia animata! ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+          description: 'Crea programmi con sequenze di istruzioni, cicli ed eventi. Traduci le tue iniziali in binario, indaga sulle diverse tecniche di risoluzione dei problemi e impara a reagire correttamente al cyberbullismo. Alla fine del corso, puoi creare e condividere un gioco interattivo o una storia animata! **ATTENZIONE**: qui a destra scegli la versione **2018**, è la più aggiornata in italiano ==>'
           description_short: Impara le basi dell'informatica e crea disegni, storie animate o giochi interattivi.
           description_audience: 'Da 6 a 10 anni'
           stages:
@@ -3167,7 +3167,7 @@ it:
         coursee-2018:
           title: Corso E (2018)
           assignment_family_title: Corso E
-          description: 'Si inizia con algoritmi, cicli, istruzioni condizionali ed eventi per poi introdurre le funzioni. Nella seconda parte di questo corso, puoi progettare e creare un progetto finale che potrai condividere con i tuoi amici e familiari. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+          description: 'Si inizia con algoritmi, cicli, istruzioni condizionali ed eventi per poi introdurre le funzioni. Nella seconda parte di questo corso, puoi progettare e creare un progetto finale che potrai condividere con i tuoi amici e familiari. **ATTENZIONE**: qui a destra scegli la versione **2018**, è la più aggiornata in italiano ==>'
           description_audience: 'Da 8 a 12 anni'
           stages:
             'Programming: My Robotic Friends':
@@ -3258,7 +3258,7 @@ it:
         coursef-2018:
           title: Corso F (2018)
           assignment_family_title: Corso F
-          description: 'Impara ad usare diversi tipi di cicli, eventi, funzioni e istruzioni condizionali. Indaga sulle diverse tecniche di risoluzione dei problemi e discuti sull''impatto sociale dell''informatica e di Internet. Nella seconda parte di questo corso, pianifica e crea un progetto di fine corso che puoi condividere con amici ed familiari. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+          description: 'Impara ad usare diversi tipi di cicli, eventi, funzioni e istruzioni condizionali. Indaga sulle diverse tecniche di risoluzione dei problemi e discuti sull''impatto sociale dell''informatica e di Internet. Nella seconda parte di questo corso, pianifica e crea un progetto di fine corso che puoi condividere con amici ed familiari. **ATTENZIONE**: qui a destra scegli la versione **2018**, è la più aggiornata in italiano ==>'
           description_short: Impara tutti i concetti dei corsi di fondamenti di informatica e crea disegni, storie o giochi interattivi.
           description_audience: 'Da 9 a 13 anni'
           stages:
@@ -3422,7 +3422,7 @@ it:
         pre-express-2018:
           title: Corso Rapido pre-scolare (2018)
           assignment_family_title: Corso rapido pre-scolare
-          description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+          description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. **ATTENZIONE**: qui a destra scegli la versione **2018**, è la più aggiornata in italiano ==>'
           description_short: 'Introduzione all''informatica per studenti pre-scolari: mette insieme il meglio dei nostri corsi per la scuola dell''infanzia e per la prima classe della scuola primaria.'
           stages:
             'Debugging: Unspotted Bugs':
@@ -3526,10 +3526,10 @@ it:
           stages:
             Dance Party - Go Further:
               name: Ballando col codice - Spingiti oltre
-          title: Continua a ballare
+          title: Continua a ballare (2018)
           description: Vai oltre alla prima ora di programmazione creando progetti più complessi.
         coursef-2019:
-          description: 'Impara ad usare diversi tipi di cicli, eventi, funzioni e istruzioni condizionali. Indaga sulle diverse tecniche di risoluzione dei problemi e discuti sull''impatto sociale dell''informatica e di Internet. Nella seconda parte di questo corso, pianifica e crea un progetto di fine corso che puoi condividere con amici ed familiari. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+          description: 'Impara ad usare diversi tipi di cicli, eventi, funzioni e istruzioni condizionali. Indaga sulle diverse tecniche di risoluzione dei problemi e discuti sull''impatto sociale dell''informatica e di Internet. Nella seconda parte di questo corso, pianifica e crea un progetto di fine corso che puoi condividere con amici ed familiari. **ATTENZIONE**: qui a destra scegli la versione **2018**, è la più aggiornata in italiano ==>'
           description_short: Impara tutti i concetti dei corsi di fondamenti di informatica e crea disegni, storie o giochi interattivi.
           description_audience: 'Da 9 a 13 anni'
           stages:
@@ -3639,7 +3639,7 @@ it:
           title: Ballando col codice (versione per connessioni lente)
           description_short: Crea un ballo tutto tuo e condividilo con i tuoi amici! (Versione per connessioni lente)
         coursed-2019:
-          description: Gli studenti sviluppano la comprensione dei cicli annidati, dei cicli "mentre", delle istruzioni condizionali e degli eventi. Oltre alla programmazione, gli studenti vengono introdotti al concetto di cittadinanza digitale.
+          description: 'Gli studenti sviluppano la comprensione dei cicli annidati, dei cicli "mentre", delle istruzioni condizionali e degli eventi. Oltre alla programmazione, gli studenti vengono introdotti al concetto di cittadinanza digitale. **ATTENZIONE**: qui a destra scegli la versione **2018**, è la più aggiornata in italiano ==>'
           description_short: Impara le istruzioni condizionali e sviluppa le tue capacità artistiche per cerare un disegno, una storia o un gioco.
           description_audience: 'Da 7 a 11 anni'
           stages:
@@ -3707,7 +3707,7 @@ it:
             Dance Party:
               name: Ballando col codice
         coursee-2019:
-          description: 'Si inizia con algoritmi, cicli, istruzioni condizionali ed eventi per poi introdurre le funzioni. Nella seconda parte di questo corso, puoi progettare e creare un progetto finale che potrai condividere con i tuoi amici e familiari. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+          description: 'Si inizia con algoritmi, cicli, istruzioni condizionali ed eventi per poi introdurre le funzioni. Nella seconda parte di questo corso, puoi progettare e creare un progetto finale che potrai condividere con i tuoi amici e familiari. **ATTENZIONE**: qui a destra scegli la versione **2018**, è la più aggiornata in italiano ==>'
           description_audience: 'Da 8 a 12 anni'
           stages:
             'Programming: My Robotic Friends':
@@ -3797,7 +3797,7 @@ it:
               name: Composizione di canzoni
         express-2019:
           title: Corso Rapido (2017)
-          description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+          description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. **ATTENZIONE**: qui a destra scegli la versione **2018**, è la più aggiornata in italiano ==>'
           description_short: 'Introduzione all''informatica: mette a disposizione di studenti più grandi, il meglio del nostro curriculum per la scuola primaria.'
           stages:
             'Algorithms: Graph Paper Programming':
@@ -3915,7 +3915,7 @@ it:
           title: Continua a ballare
           description: Vai oltre alla prima ora di programmazione creando progetti più complessi.
         coursec-2019:
-          description: 'Crea programmi con sequenze di istruzioni, cicli ed eventi. Traduci le tue iniziali in binario, indaga sulle diverse tecniche di risoluzione dei problemi e impara a reagire correttamente al cyberbullismo. Alla fine del corso, puoi creare e condividere un gioco interattivo o una storia animata! ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+          description: 'Crea programmi con sequenze di istruzioni, cicli ed eventi. Traduci le tue iniziali in binario, indaga sulle diverse tecniche di risoluzione dei problemi e impara a reagire correttamente al cyberbullismo. Alla fine del corso, puoi creare e condividere un gioco interattivo o una storia animata! **ATTENZIONE**: qui a destra scegli la versione **2018**, è la più aggiornata in italiano ==>'
           description_short: Impara le basi dell'informatica e crea disegni, storie animate o giochi interattivi.
           description_audience: 'Da 6 a 10 anni'
           stages:
@@ -3961,7 +3961,7 @@ it:
         gamelab:
           title: Sviluppo Giochi
         coursea-2019:
-          description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+          description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. **ATTENZIONE**: qui a destra scegli la versione **2018**, è la più aggiornata in italiano ==>'
           description_short: Introduzione all'informatica per bambini che non leggono ancora.
           description_audience: 'Da 4 a 7 anni'
           stages:
@@ -4007,7 +4007,7 @@ it:
               name: Sequenze di istruzioni con Scrat
               description_teacher: Questa lezione darà agli studenti un'idea di cosa aspettarsi quando andranno nel laboratorio di informatica. Si comincia con una breve discussione introduttiva sui comportamenti da tenere in laboratorio, poi gli studenti inizieranno ad utilizzare un computer per completare degli esercizi online.
         courseb-2019:
-          description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+          description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. **ATTENZIONE**: qui a destra scegli la versione **2018**, è la più aggiornata in italiano ==>'
           description_short: Introduzione all'informatica per alunni che devono imparare a leggere. Simile al Corso A, ma con maggior approfondimento dei concetti.
           description_audience: 'Da 5 a 8 anni'
           stages:
@@ -4053,7 +4053,7 @@ it:
               description_teacher: Questa lezione darà agli studenti un'idea di cosa aspettarsi quando andranno nel laboratorio di informatica. Si comincia con una breve discussione introduttiva sui comportamenti da tenere in laboratorio, poi gli studenti inizieranno ad utilizzare un computer per completare degli esercizi online.
         pre-express-2019:
           title: Corso Rapido pre-scolare (2019)
-          description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+          description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. **ATTENZIONE**: qui a destra scegli la versione **2018**, è la più aggiornata in italiano ==>'
           description_short: 'Introduzione all''informatica per studenti pre-scolari: mette insieme il meglio dei nostri corsi per la scuola dell''infanzia e per la prima classe della scuola primaria.'
           stages:
             'Debugging: Unspotted Bugs':
@@ -4463,7 +4463,7 @@ it:
             For Loops:
               name: Cicli con contatore
         dance-extras-2019:
-          title: Continua a ballare
+          title: Continua a ballare (2019)
           description: Vai oltre alla prima ora di programmazione creando progetti più complessi.
           stages:
             Dance Party - Go Further:

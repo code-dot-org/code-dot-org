@@ -1,0 +1,15 @@
+fil:
+  data:
+    block_categories:
+      Actions: Mga aksyon
+      Color: Kulay
+      Conditionals: Mga conditional
+      Events: Mga event
+      Functions: Mga function
+      Input: Input
+      Logic: Lohika
+      Loops: Mga loop
+      Math: Math
+      Sprites: Mga Sprites
+      Text: Text
+      Variables: Mga variable

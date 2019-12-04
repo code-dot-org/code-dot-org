@@ -54,18 +54,6 @@ export function getColumnNamesFromRecords(records) {
   return columnNames;
 }
 
-/**
- * @param {string} tableName
- * @returns {Promise} Promise containing an array of column names.
- */
-export function getColumnNames(tableName) {
-  const columnsRef = getColumnsRef(getProjectDatabase(), tableName);
-  return columnsRef.once('value').then(snapshot => {
-    const columnsData = snapshot.val() || {};
-    return _.values(columnsData).map(column => column.columnName);
-  });
-}
-
 export function addColumnName(tableName, columnName) {
   return getColumnRefByName(tableName, columnName).then(columnRef => {
     if (!columnRef) {
@@ -98,7 +86,28 @@ export function renameColumnName(tableName, oldName, newName) {
   });
 }
 
-export function onColumnNames(database, tableName, callback) {
+/**
+ * Gets a one-time snapshot of the column names for the given table at
+ * /<channelId>/metadata/tables/<tableName>/columns
+ * @param {string} tableName
+ * @returns {Promise} Promise containing an array of column names.
+ */
+export function getColumnNamesSnapshot(tableName) {
+  const columnsRef = getColumnsRef(getProjectDatabase(), tableName);
+  return columnsRef.once('value').then(snapshot => {
+    const columnsData = snapshot.val() || {};
+    return _.values(columnsData).map(column => column.columnName);
+  });
+}
+
+/**
+ * Sets up a listener on /<channelId>/metadata/tables/<tableName>/columns and calls the
+ * provided callback whenever the columns change.
+ * @param database
+ * @param {string} tableName
+ * @param callback
+ */
+export function onColumnsChange(database, tableName, callback) {
   getColumnsRef(database, tableName).on('value', snapshot => {
     const columnsData = snapshot.val() || {};
     const columnNames = _.values(columnsData).map(column => column.columnName);
@@ -113,7 +122,7 @@ export function onColumnNames(database, tableName, callback) {
  * @returns {*}
  */
 export function addMissingColumns(tableName) {
-  return getColumnNames(tableName).then(existingColumnNames => {
+  return getColumnNamesSnapshot(tableName).then(existingColumnNames => {
     const recordsRef = getProjectDatabase().child(
       `storage/tables/${tableName}/records`
     );

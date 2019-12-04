@@ -73,7 +73,7 @@ he:
           MOVE:
             '"next"': "(הבא)"
             '"prev"': "(קודם)"
-            '"rand"': "(רנדומלי)"
+            '"rand"': "(אקראי)"
             MOVES.Roll: בָּאדִי רוֹל / גלגול גוף
             MOVES.ClapHigh: קלאפ היי
             MOVES.Dab: דֶאבּ
@@ -94,7 +94,7 @@ he:
           MOVE:
             '"next"': "(הבא)"
             '"prev"': "(קודם)"
-            '"rand"': "(רנדומלי)"
+            '"rand"': "(אקראי)"
             MOVES.Roll: בָּאדִי רוֹל / גלגול גוף
             MOVES.ClapHigh: קלאפ היי
             MOVES.Dab: דֶאבּ
@@ -158,7 +158,7 @@ he:
             '"SHARK"': כל הכרישים
             '"UNICORN"': חדי-קרן
           MOVE:
-            '"rand"': "(רנדומלי)"
+            '"rand"': "(אקראי)"
             MOVES.XBend: בנד
             MOVES.Roll: בָּאדִי רוֹל / גלגול גוף
             MOVES.XClapSide: מחא כף
@@ -189,7 +189,7 @@ he:
         text: "{SPRITE} עושה {MOVE} {DIR} פעם אחת"
         options:
           MOVE:
-            '"rand"': "(רנדומלי)"
+            '"rand"': "(אקראי)"
             MOVES.XBend: בנד
             MOVES.Roll: בָּאדִי רוֹל / גלגול גוף
             MOVES.XClapSide: מחא כף
@@ -446,6 +446,7 @@ he:
           LAYOUT:
             '"border"': גבול
             '"inner"': בתוך ריבוע
+            '"diamond"': יהלום
             '"circle"': עיגול
             '"grid"': רשת
             '"row"': שורה
@@ -504,7 +505,7 @@ he:
         options:
           EFFECT:
             '"none"': כלום
-            '"rand"': "(רנדומלי)"
+            '"rand"': "(אקראי)"
             '"circles"': מעגלים
             '"color_cycle"': צבעים
             '"diamonds"': יהלומים
@@ -586,7 +587,7 @@ he:
         options:
           EFFECT:
             '"none"': כלום
-            '"rand"': "(רנדומלי)"
+            '"rand"': "(אקראי)"
             '"bubbles"': בועות
             '"confetti"': קונפטי
             '"hearts_red"': לבבות

@@ -3,6 +3,9 @@ id:
   data:
     blocks:
       Dancelab_alternateMoves:
+        text: |-
+          {GROUP} berganti setiap {N}
+          birama antara {MOVE1} dan {MOVE2}
         options:
           GROUP:
             sprites: semua
@@ -16,20 +19,37 @@ id:
             '"PINEAPPLE"': semua nanas
             '"ROBOT"': semua robot
             '"SHARK"': semua hiu
+            '"SLOTH"': sloths
+            '"UNICORN"': unicorn
           MOVE1:
+            MOVES.Roll: Body Roll
             MOVES.ClapHigh: Tepuk tangan di atas
             MOVES.Dab: Oleskan
+            MOVES.DoubleJam: Double Down
+            MOVES.Drop: Jatuh
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
             MOVES.Clown: Badut
-            MOVES.Rest: Tidak ada
+            MOVES.Kick: Bintang
+            MOVES.ThisOrThat: Ini atau Itu
+            MOVES.Rest: Tidak Ada
           MOVE2:
+            MOVES.Roll: Body Roll
             MOVES.ClapHigh: Tepuk tangan di atas
             MOVES.Dab: Oleskan
+            MOVES.DoubleJam: Double Down
+            MOVES.Drop: Jatuh
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
             MOVES.Clown: Badut
-            MOVES.Rest: Tidak ada
+            MOVES.Kick: Bintang
+            MOVES.ThisOrThat: Ini atau Itu
+            MOVES.Rest: Tidak Ada
       Dancelab_atTimestamp:
         text: setelah {TIMESTAMP}{UNIT}
         options:
           UNIT:
+            '"measures"': birama
             '"seconds"': detik
       Dancelab_changeColorBy:
         text: ubah {COLOR}{METHOD} dengan {AMOUNT}
@@ -53,33 +73,59 @@ id:
             '"PINEAPPLE"': semua nanas
             '"ROBOT"': semua robot
             '"SHARK"': semua hiu
+            '"SLOTH"': sloths
+            '"UNICORN"': unicorn
           MOVE:
+            '"next"': "(Berikutnya)"
+            '"prev"': "(Sebelumnya)"
             '"rand"': Acak
+            MOVES.Roll: Body Roll
             MOVES.ClapHigh: Tepuk tangan di atas
             MOVES.Dab: Oleskan
+            MOVES.DoubleJam: Double Down
+            MOVES.Drop: Jatuh
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
             MOVES.Clown: Badut
-            MOVES.Rest: Tidak ada
+            MOVES.Kick: Bintang
+            MOVES.ThisOrThat: Ini atau Itu
+            MOVES.Rest: Tidak Ada
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
+        text: "{SPRITE} melakukan {MOVE} {DIR} selamanya"
         options:
           MOVE:
+            '"next"': "(Berikutnya)"
+            '"prev"': "(Sebelumnya)"
             '"rand"': Acak
+            MOVES.Roll: Body Roll
             MOVES.ClapHigh: Tepuk tangan di atas
             MOVES.Dab: Oleskan
+            MOVES.DoubleJam: Double Down
+            MOVES.Drop: Jatuh
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
             MOVES.Clown: Badut
-            MOVES.Rest: Tidak ada
+            MOVES.Kick: Bintang
+            MOVES.ThisOrThat: Ini atau Itu
+            MOVES.Rest: Tidak Ada
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changePropBy:
+        text: ubah {SPRITE} {PROPERTY} dengan {VAL}
         options:
           PROPERTY:
             '"scale"': ukuran
+            '"width"': lebar
             '"height"': tinggi
             '"rotation"': Perputaran
+            '"x"': posisi horizontal
+            '"y"': posisi vertikal
       Dancelab_changePropEachBy:
+        text: mengganti {GROUP} {PROPERTY} oleh {VAL}
         options:
           GROUP:
             sprites: semua
@@ -93,11 +139,17 @@ id:
             '"PINEAPPLE"': semua nanas
             '"ROBOT"': semua robot
             '"SHARK"': semua hiu
+            '"SLOTH"': sloths
+            '"UNICORN"': unicorn
           PROPERTY:
             '"scale"': ukuran
+            '"width"': lebar
             '"height"': tinggi
             '"rotation"': Perputaran
+            '"x"': posisi horizontal
+            '"y"': posisi vertikal
       Dancelab_doMoveEachLR:
+        text: "{GROUP} melakukan {MOVE} {DIR} sekali"
         options:
           GROUP:
             sprites: semua
@@ -111,66 +163,151 @@ id:
             '"PINEAPPLE"': semua nanas
             '"ROBOT"': semua robot
             '"SHARK"': semua hiu
+            '"SLOTH"': sloths
+            '"UNICORN"': unicorn
           MOVE:
             '"rand"': Acak
+            MOVES.XBend: Membungkuk
+            MOVES.Roll: Body Roll
+            MOVES.XClapSide: Bertepuk Tangan
             MOVES.ClapHigh: Tepuk tangan di atas
             MOVES.Dab: Oleskan
+            MOVES.XFever: Disko
+            MOVES.DoubleJam: Double Down
+            MOVES.Drop: Jatuh
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
             MOVES.Clown: Badut
-            MOVES.Rest: Tidak ada
+            MOVES.XHeadHips: Kepala + Paha
+            MOVES.XHop: Melompat
+            MOVES.XHighKick: Menendang
+            MOVES.XKnee: Lutut
+            MOVES.XKneel: Berlutut
+            MOVES.XOle: Ole
+            MOVES.XArmsSide: Mengulur
+            MOVES.XSlide: Slide
+            MOVES.Kick: Bintang
+            MOVES.XArmsUp: Meregang
+            MOVES.ThisOrThat: Ini atau Itu
+            MOVES.Rest: Tidak Ada
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
+        text: "{SPRITE} melakukan {MOVE} {DIR} sekali"
         options:
           MOVE:
             '"rand"': Acak
+            MOVES.XBend: Membungkuk
+            MOVES.Roll: Body Roll
+            MOVES.XClapSide: Bertepuk Tangan
             MOVES.ClapHigh: Tepuk tangan di atas
             MOVES.Dab: Oleskan
+            MOVES.XFever: Disko
+            MOVES.DoubleJam: Double Down
+            MOVES.Drop: Jatuh
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
             MOVES.Clown: Badut
-            MOVES.Rest: Tidak ada
+            MOVES.XHeadHips: Kepala + Paha
+            MOVES.XHop: Melompat
+            MOVES.XHighKick: Menendang
+            MOVES.XKnee: Lutut
+            MOVES.XKneel: Berlutut
+            MOVES.XOle: Ole
+            MOVES.XArmsSide: Mengulur
+            MOVES.XSlide: Slide
+            MOVES.Kick: Bintang
+            MOVES.XArmsUp: Meregang
+            MOVES.ThisOrThat: Ini atau Itu
+            MOVES.Rest: Tidak Ada
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_everyMeasuresRange:
+        text: 'ulangi setiap {N} birama setelah {START} '
       Dancelab_everySeconds:
         options:
           UNIT:
+            '"measures"': birama
             '"seconds"': detik
+      Dancelab_everySecondsRange:
+        text: 'setiap {N} {UNIT} dari {START} hingga {STOP} '
+        options:
+          UNIT:
+            measures: Birama
+            seconds: Detik
+      Dancelab_everyVerseChorus:
+        text: 'setiap {UNIT} '
+        options:
+          UNIT:
+            '"verse"': bait
+            '"chorus"': ulangan lagu
       Dancelab_getEnergy:
+        text: dapatkan {RANGE}
         options:
           RANGE:
             '"low"': Kecil
             '"mid"': Sedang
             '"high"': Besar
       Dancelab_getProp:
+        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': ukuran
+            '"width"': lebar
             '"height"': tinggi
             '"rotation"': Perputaran
+            '"x"': posisi horizontal
+            '"y"': posisi vertikal
             '"tint"': Mewarnai
       Dancelab_getTime:
+        text: waktu saat ini di {UNIT}
         options:
           UNIT:
+            '"measures"': birama
             '"seconds"': detik
       Dancelab_ifDanceIs:
+        text: |-
+          "jika {SPRITE} melakukan {DANCE}
+          {DO1} {DO2}"
         options:
           DANCE:
             MOVES.ClapHigh: Tepuk tangan di atas
             MOVES.Clown: Badut
             MOVES.Dab: Oleskan
-            MOVES.Rest: Tidak ada
+            MOVES.DoubleJam: Double Down
+            MOVES.Drop: Jatuh
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Roll: Body Roll
+            MOVES.Kick: Bintang
+            MOVES.ThisOrThat: Ini atau Itu
+            MOVES.Rest: Tidak Ada
       Dancelab_ifTime:
+        text: |-
+          "jika {UNIT} adalah {OP} {N}
+          {DO1} {DO2}"
         options:
           UNIT:
+            '"measures"': birama
             '"seconds"': detik
+          OP:
+            '">"': ">"
+            '"<"': "<"
+            '"="': "="
       Dancelab_jumpTo:
+        text: "{SPRITE} melompat ke {LOCATION}"
         options:
           LOCATION:
+            "{x: 200, y: 100}": bagian atas
+            "{x: 200, y: 300}": bagian bawah
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: 200, y: 200}": Tengah
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": acak
       Dancelab_jumpToEach:
+        text: melompat {GROUP} ke {LOCATION}
         options:
           GROUP:
             sprites: semua
@@ -184,12 +321,17 @@ id:
             '"PINEAPPLE"': semua nanas
             '"ROBOT"': semua robot
             '"SHARK"': semua hiu
+            '"SLOTH"': sloths
+            '"UNICORN"': unicorn
           LOCATION:
+            "{x: 200, y: 100}": bagian atas
+            "{x: 200, y: 300}": bagian bawah
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: 200, y: 200}": Tengah
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": acak
       Dancelab_layoutSprites:
+        text: tata letak {GROUP} sebagai {FORMAT}
         options:
           GROUP:
             sprites: semua
@@ -203,42 +345,70 @@ id:
             '"PINEAPPLE"': semua nanas
             '"ROBOT"': semua robot
             '"SHARK"': semua hiu
+            '"SLOTH"': sloths
+            '"UNICORN"': unicorn
           FORMAT:
+            '"border"': batas
+            '"inner"': di dalam persegi
+            '"circle"': lingkaran
             '"grid"': Kisi
             '"row"': baris
             '"column"': kolom
+            '"x"': berselang-seling
+            '"plus"': plus
             '"random"': acak
       Dancelab_makeAnonymousDanceSprite:
+        text: buat baru {COSTUME} di {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': alien
+            '"BEAR"': beruang
             '"CAT"': kucing
             '"DOG"': anjing
             '"DUCK"': bebek
+            '"FROG"': katak
             '"MOOSE"': semua rusa
+            '"PINEAPPLE"': nanas
             '"ROBOT"': robot
+            '"SHARK"': hiu
+            '"SLOTH"': sloth
             '"UNICORN"': unicorn
           LOCATION:
+            "{x: 200, y: 100}": bagian atas
+            "{x: 200, y: 300}": bagian bawah
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: 200, y: 200}": Tengah
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": acak
       Dancelab_makeNewDanceSprite:
+        text: |-
+          "buat baru {COSTUME}
+          disebut {NAME} di {LOCATION}"
         options:
           COSTUME:
             '"ALIEN"': alien
+            '"BEAR"': beruang
             '"CAT"': kucing
             '"DOG"': anjing
             '"DUCK"': bebek
+            '"FROG"': katak
             '"MOOSE"': semua rusa
+            '"PINEAPPLE"': nanas
             '"ROBOT"': robot
+            '"SHARK"': hiu
+            '"SLOTH"': sloth
             '"UNICORN"': unicorn
           LOCATION:
+            "{x: 200, y: 100}": bagian atas
+            "{x: 200, y: 300}": bagian bawah
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: 200, y: 200}": Tengah
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": acak
       Dancelab_makeNewDanceSpriteGroup:
+        text: |-
+          buat {N} {COSTUME} baru
+          dalam {LAYOUT}
         options:
           'N':
             '2': '2'
@@ -271,31 +441,121 @@ id:
             '"PINEAPPLE"': semua nanas
             '"ROBOT"': semua robot
             '"SHARK"': semua hiu
+            '"SLOTH"': sloths
+            '"UNICORN"': unicorn
           LAYOUT:
+            '"border"': batas
+            '"inner"': di dalam persegi
+            '"diamond"': berlian
+            '"circle"': lingkaran
             '"grid"': Kisi
+            '"top"': baris atas
             '"row"': baris
+            '"bottom"': baris bawah
+            '"left"': kolom kiri
             '"column"': kolom
+            '"right"': kolom kanan
+            '"x"': berselang-seling
+            '"plus"': plus
             '"random"': acak
+      Dancelab_mixColors:
+        text: campur {COLOR1} dan {COLOR2}
+      Dancelab_nMeasures:
+        text: "{N} birama"
+      Dancelab_onPointerDown:
+        text: pada pointer turun
+      Dancelab_onPointerDrag:
+        text: pada pointer tarik
+      Dancelab_onPointerUp:
+        text: pada pointer atas
       Dancelab_randomColor:
         text: warna acak
+      Dancelab_setBackground:
+        text: tetapkan warna latar belakang {COLOR}
       Dancelab_setBackgroundEffect:
+        text: |-
+          "tetapkan efek latar belakang
+          {EFFECT} {PALETTE}"
         options:
           EFFECT:
-            '"none"': Tidak ada
+            '"none"': Tidak Ada
+            '"circles"': Lingkaran
+            '"color_cycle"': Warna
+            '"diamonds"': Berlian
+            '"disco_ball"': Bola Disko
+            '"fireworks"': Kembang Api
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kaleidoskop
+            '"lasers"': Lantai Dansa Laser
+            '"splatter"': Percikan Cat
+            '"rainbow"': Pelangi
+            '"snowflakes"': Salju
+            '"text"': Nama Lagu
+            '"galaxy"': Spasi
+            '"sparkles"': Kilauan
+            '"spiral"': Spiral
+            '"disco"': Bujur sangkar
+            '"stars"': Bintang
+          PALETTE:
+            '"rave"': Hitam dan Putih
+            '"cool"': Keren
+            '"electronic"': Elektronik
+            '"iceCream"': Es Krim
+            '"default"': Lampu
+            '"neon"': Neon
+            '"tropical"': Tropis
+            '"vintage"': Vintage
+            '"warm"': Hangat
       Dancelab_setBackgroundEffectWithPalette:
         options:
           EFFECT:
-            '"none"': Tidak ada
+            '"none"': Tidak Ada
             '"rand"': Acak
+            '"circles"': Lingkaran
+            '"quads"': Sudut
+            '"color_cycle"': Warna
+            '"diamonds"': Berlian
+            '"disco_ball"': Bola Disko
+            '"fireworks"': Kembang Api
+            '"flowers"': Bunga
+            '"growing_stars"': Bintang Tumbuh
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kaleidoskop
+            '"lasers"': Lantai Dansa Laser
+            '"splatter"': Percikan Cat
+            '"rainbow"': Pelangi
+            '"ripples_random"': Riak Acak
+            '"ripples"': Riak
+            '"snowflakes"': Salju
+            '"text"': Nama Lagu
+            '"squiggles"': Garis berlekuk
+            '"galaxy"': Spasi
+            '"sparkles"': Kilauan
+            '"spiral"': Spiral
+            '"disco"': Bujur sangkar
+            '"stars"': Bintang
+            '"music_wave"': Gelombang
+          PALETTE:
+            '"rave"': Hitam dan Putih
+            '"cool"': Keren
+            '"electronic"': Elektronik
+            '"iceCream"': Es Krim
+            '"default"': Lampu
+            '"neon"': Neon
+            '"tropical"': Tropis
+            '"vintage"': Vintage
+            '"warm"': Hangat
       Dancelab_setDanceSpeed:
+        text: tetapkan {SPRITE} kecepatan tari menjadi {SPEED}
         options:
           SPEED:
             '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
+            '2': cepat
+            '4': sangat cepat
+            '0.5': lambat
+            '0.25': sangat lambat
       Dancelab_setDanceSpeedEach:
+        text: tetapkan {GROUP} kecepatan tari menjadi {SPEED}
         options:
           GROUP:
             sprites: semua
@@ -309,28 +569,67 @@ id:
             '"PINEAPPLE"': semua nanas
             '"ROBOT"': semua robot
             '"SHARK"': semua hiu
+            '"SLOTH"': sloths
+            '"UNICORN"': unicorn
           SPEED:
             '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
+            '2': cepat
+            '4': sangat cepat
+            '0.5': lambat
+            '0.25': sangat lambat
       Dancelab_setForegroundEffect:
+        text: tetapkan efek latar depan {EFFECT}
         options:
           EFFECT:
-            '"none"': Tidak ada
+            '"none"': Tidak Ada
+            '"bubbles"': Gelembung
+            '"confetti"': Konfeti
+            '"hearts_red"': Hati
+            '"music_notes"': Not Musik
+            '"pineapples"': Nanas
+            '"pizzas"': Pizza
+            '"smiling_poop"': Poop
+            '"rain"': Hujan
+            '"floating_rainbows"': Pelangi
+            '"smile_face"': Senyum
+            '"spotlight"': Lampu Sorot
+            '"color_lights"': Lampu Panggung
+            '"raining_tacos"': Taco
       Dancelab_setForegroundEffectExtended:
+        text: tetapkan efek latar depan {EFFECT}
         options:
           EFFECT:
-            '"none"': Tidak ada
+            '"none"': Tidak Ada
             '"rand"': Acak
+            '"bubbles"': Gelembung
+            '"hearts_colorful"': Hati Penuh Warna
+            '"confetti"': Konfeti
+            '"emojis"': Emoji
+            '"hearts_red"': Hati
+            '"music_notes"': Not Musik
+            '"paint_drip"': Tetesan Cat
+            '"pineapples"': Nanas
+            '"pizzas"': Pizza
+            '"smiling_poop"': Poop
+            '"rain"': Hujan
+            '"floating_rainbows"': Pelangi
+            '"smile_face"': Senyum
+            '"spotlight"': Lampu Sorot
+            '"color_lights"': Lampu Panggung
+            '"exploding_stars"': Semburan bintang
+            '"raining_tacos"': Taco
       Dancelab_setProp:
+        text: 'tetapkan {SPRITE} {PROPERTY} menjadi {VAL} '
         options:
           PROPERTY:
             '"scale"': ukuran
+            '"width"': lebar
             '"height"': tinggi
             '"rotation"': Perputaran
+            '"x"': posisi horizontal
+            '"y"': posisi vertikal
       Dancelab_setPropEach:
+        text: tetapkan {GROUP} {PROPERTY} menjadi {VAL}
         options:
           GROUP:
             sprites: semua
@@ -344,19 +643,29 @@ id:
             '"PINEAPPLE"': semua nanas
             '"ROBOT"': semua robot
             '"SHARK"': semua hiu
+            '"SLOTH"': sloths
+            '"UNICORN"': unicorn
           PROPERTY:
             '"scale"': ukuran
+            '"width"': lebar
             '"height"': tinggi
             '"rotation"': Perputaran
+            '"x"': posisi horizontal
+            '"y"': posisi vertikal
             '"tint"': Mewarnai
       Dancelab_setPropRandom:
+        text: acak {SPRITE} {PROPERTY}
         options:
           PROPERTY:
             '"scale"': ukuran
+            '"width"': lebar
             '"height"': tinggi
             '"rotation"': Perputaran
+            '"x"': posisi horizontal
+            '"y"': posisi vertikal
             '"tint"': Mewarnai
       Dancelab_setPropRandomEach:
+        text: acak {GROUP} {PROPERTY}
         options:
           GROUP:
             sprites: semua
@@ -370,12 +679,20 @@ id:
             '"PINEAPPLE"': semua nanas
             '"ROBOT"': semua robot
             '"SHARK"': semua hiu
+            '"SLOTH"': sloths
+            '"UNICORN"': unicorn
           PROPERTY:
             '"scale"': ukuran
+            '"width"': lebar
             '"height"': tinggi
             '"rotation"': Perputaran
+            '"x"': posisi horizontal
+            '"y"': posisi vertikal
             '"tint"': Mewarnai
+      Dancelab_setTint:
+        text: tetapkan {SPRITE} warna menjadi {VAL}
       Dancelab_setTintEach:
+        text: tetapkan {THIS} warna menjadi {VAL}
         options:
           THIS:
             sprites: semua
@@ -389,7 +706,10 @@ id:
             '"PINEAPPLE"': semua nanas
             '"ROBOT"': semua robot
             '"SHARK"': semua hiu
+            '"SLOTH"': sloths
+            '"UNICORN"': unicorn
       Dancelab_setTintEachInline:
+        text: tetapkan {THIS} warna menjadi {VAL}
         options:
           THIS:
             sprites: semua
@@ -403,7 +723,18 @@ id:
             '"PINEAPPLE"': semua nanas
             '"ROBOT"': semua robot
             '"SHARK"': semua hiu
+            '"SLOTH"': sloths
+            '"UNICORN"': unicorn
+      Dancelab_setTintInline:
+        text: tetapkan {SPRITE} warna menjadi {VAL}
+      Dancelab_setVisible:
+        text: tetapkan {SPRITE} tampak kepada {VISIBILITY}
+        options:
+          VISIBILITY:
+            'true': tampak
+            'false': tidak tampak
       Dancelab_setVisibleEach:
+        text: tetapkan visibilitas {THIS} ke {VISIBILITY}
         options:
           THIS:
             sprites: semua
@@ -417,18 +748,28 @@ id:
             '"PINEAPPLE"': semua nanas
             '"ROBOT"': semua robot
             '"SHARK"': semua hiu
+            '"SLOTH"': sloths
+            '"UNICORN"': unicorn
+          VISIBILITY:
+            'true': tampak
+            'false': tidak tampak
       Dancelab_startMapping:
+        text: "{SPRITE} dimulai {PROPERTY} mengikuti {RANGE}"
         options:
           PROPERTY:
             '"scale"': ukuran
+            '"width"': lebar
             '"height"': tinggi
             '"rotation"': Perputaran
+            '"x"': posisi horizontal
+            '"y"': posisi vertikal
             '"tint"': Mewarnai
           RANGE:
             '"bass"': Kecil
             '"mid"': Sedang
             '"treble"': Besar
       Dancelab_startMappingEach:
+        text: "{GROUP} memulai {PROPERTY} menyusul {RANGE}"
         options:
           GROUP:
             sprites: semua
@@ -442,21 +783,30 @@ id:
             '"PINEAPPLE"': semua nanas
             '"ROBOT"': semua robot
             '"SHARK"': semua hiu
+            '"SLOTH"': sloths
+            '"UNICORN"': unicorn
           PROPERTY:
             '"scale"': ukuran
+            '"width"': lebar
             '"height"': tinggi
             '"rotation"': Perputaran
+            '"x"': posisi horizontal
+            '"y"': posisi vertikal
             '"tint"': Mewarnai
           RANGE:
             '"bass"': Kecil
             '"mid"': Sedang
             '"treble"': Besar
       Dancelab_stopMapping:
+        text: "{SPRITE} menghentikan {PROPERTY} mengikuti {RANGE}"
         options:
           PROPERTY:
             '"scale"': ukuran
+            '"width"': lebar
             '"height"': tinggi
             '"rotation"': Perputaran
+            '"x"': posisi horizontal
+            '"y"': posisi vertikal
             '"direction"': Arah pergerakan
             '"tint"': Mewarnai
           RANGE:
@@ -464,6 +814,7 @@ id:
             '"mid"': Sedang
             '"treble"': Besar
       Dancelab_stopMappingEach:
+        text: "{GROUP} menghentikan {PROPERTY} menyusul {RANGE}"
         options:
           GROUP:
             sprites: semua
@@ -477,10 +828,15 @@ id:
             '"PINEAPPLE"': semua nanas
             '"ROBOT"': semua robot
             '"SHARK"': semua hiu
+            '"SLOTH"': sloths
+            '"UNICORN"': unicorn
           PROPERTY:
             '"scale"': ukuran
+            '"width"': lebar
             '"height"': tinggi
             '"rotation"': Perputaran
+            '"x"': posisi horizontal
+            '"y"': posisi vertikal
             '"direction"': Arah pergerakan
             '"tint"': Mewarnai
           RANGE:
@@ -488,28 +844,110 @@ id:
             '"mid"': Sedang
             '"treble"': Besar
       Dancelab_translateStrings:
+        text: terjemahkan {STRING}
         options:
           STRING:
+            '"music_wave"': Gelombang
+            '"ripples"': Riak
+            '"ripples_random"': Riak Acak
+            '"quads"': Sudut
+            '"flowers"': Bunga
+            '"popsicles"': Es krim bertangkai
+            '"squiggles"': Garis berlekuk
+            '"growing_stars"': Bintang Tumbuh
+            '"emojis"': Emoji
+            '"hearts_colorful"': Hati
+            '"paint_drio"': Tetesan Cat
+            '"exploding_stars"': Semburan bintang
+            '"row_top"': baris atas
+            '"row_bottom"': baris bawah
+            '"column_left"': kolom kiri
+            '"column_right"': kolom kanan
             '"diamond"': berlian
+            '"mural"': Mural
+            '"safari"': Safari
+            '"network"': Jaringan
+            '"highway"': Jalan Raya
+            '"stream"': Aliran
+            '"tile"': Ubin
+            '"shadow"': Bayangan
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
             '"y"': 'y'
+            '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenKey:
+        text: ketika {KEY} ditekan
         options:
           KEY:
             '"up"': atas
             '"left"': kiri
             '"down"': turun
             '"right"': kanan
-            '"space"': luar angkasa
+            '"space"': spasi
+            '"enter"': enter
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
             '"y"': 'y'
+            '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenPeak:
+        text: ketika puncak {RANGE}
         options:
           RANGE:
             '0': Kecil
             '1': Sedang
             '2': Besar
+      Dancelab_whenSetup:
+        text: setelan
+      Dancelab_whenSetup2:
+        text: setelan
       gamelab_changePropBy:
+        text: ubah {SPRITE} {PROPERTY} dengan {VAL}
         options:
           PROPERTY:
             '"scale"': ukuran
@@ -523,6 +961,7 @@ id:
             '"when"': ketika
             '"while"': Selagi
       gamelab_getProp:
+        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': ukuran
@@ -533,6 +972,8 @@ id:
             '"tint"': Mewarnai
       gamelab_hideTitleScreen:
         text: menyembunyikan judul layar
+      gamelab_jumpTo:
+        text: "{SPRITE} melompat ke {LOCATION}"
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -543,9 +984,33 @@ id:
             '"down"': turun
             '"left"': kiri
             '"right"': kanan
-            '"space"': luar angkasa
+            '"space"': spasi
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
             '"y"': 'y'
+            '"z"': z
       gamelab_locationMouse:
         text: Lokasi tetikus
       gamelab_mirrorSprite:
@@ -559,6 +1024,8 @@ id:
         text: warna acak
       gamelab_randomColor:
         text: warna acak
+      gamelab_setBackground:
+        text: tetapkan warna latar belakang {COLOR}
       gamelab_setBackgroundImage:
         options:
           IMG:
@@ -581,6 +1048,7 @@ id:
         options:
           PROPERTY:
             '"scale"': ukuran
+            '"width"': lebar
             '"height"': tinggi
       gamelab_spriteClicked:
         options:
@@ -593,13 +1061,18 @@ id:
             '"right"': kanan
             '"left"': kiri
       gamelab_whenKey:
+        text: ketika {KEY} ditekan
         options:
           KEY:
             '"up"': atas
             '"down"': turun
             '"left"': kiri
             '"right"': kanan
-            '"space"': luar angkasa
+            '"space"': spasi
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       gamelab_whileKey:
         options:
           KEY:
@@ -607,7 +1080,11 @@ id:
             '"down"': turun
             '"left"': kiri
             '"right"': kanan
-            '"space"': luar angkasa
+            '"space"': spasi
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -619,6 +1096,8 @@ id:
       Mikelab_createNewSprite:
         options:
           LOCATION:
+            "{x: 200, y: 100}": bagian atas
+            "{x: 200, y: 300}": bagian bawah
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: 200, y: 200}": Tengah
@@ -632,6 +1111,7 @@ id:
             '"y"': posisi y
             '"direction"': Arah pergerakan
       Mikelab_groupChangeAnim:
+        text: ganti {SELECT} {COSTUME} menjadi {COSTUME2}
         options:
           SELECT:
             '"all"': semua
@@ -646,8 +1126,11 @@ id:
             '"y"': posisi y
             '"direction"': Arah pergerakan
       Mikelab_groupCreateNewSprite:
+        text: buat baru {COSTUME} di {LOCATION}
         options:
           LOCATION:
+            "{x: 200, y: 100}": bagian atas
+            "{x: 200, y: 300}": bagian bawah
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: 200, y: 200}": Tengah
@@ -691,12 +1174,22 @@ id:
           SELECT:
             '"all"': semua
       Mikelab_ifDanceIs:
+        text: |-
+          "jika {SPRITE} melakukan {DANCE}
+          {DO1} {DO2}"
         options:
           DANCE:
             MOVES.ClapHigh: Tepuk tangan di atas
             MOVES.Clown: Badut
             MOVES.Dab: Oleskan
-            MOVES.Rest: Tidak ada
+            MOVES.DoubleJam: Double Down
+            MOVES.Drop: Jatuh
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Roll: Body Roll
+            MOVES.Kick: Bintang
+            MOVES.ThisOrThat: Ini atau Itu
+            MOVES.Rest: Tidak Ada
       Mikelab_randomColor:
         text: warna acak
       Mikelab_repeatUntilComplete:
@@ -721,11 +1214,14 @@ id:
       Mikelab_sprite:
         options:
           LOCATION:
+            "{x: 200, y: 100}": bagian atas
+            "{x: 200, y: 300}": bagian bawah
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: 200, y: 200}": Tengah
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Acak
       Mikelab_whenKeyPressed:
+        text: ketika {KEY} ditekan
         options:
           KEY:
             '"up"': panah keatas
@@ -789,13 +1285,18 @@ id:
             '"left"': kiri
             '"right"': kanan
       binary_whenKey:
+        text: ketika {KEY} ditekan
         options:
           KEY:
             '"up"': atas
             '"down"': turun
             '"left"': kiri
             '"right"': kanan
-            '"space"': luar angkasa
+            '"space"': spasi
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       craft_ifPath:
         options:
           DIR:

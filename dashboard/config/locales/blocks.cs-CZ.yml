@@ -3,6 +3,7 @@ cs:
   data:
     blocks:
       Dancelab_alternateMoves:
+        text: "{GROUP} střídat každých {N} taktů \nmezi {MOVE1} a {MOVE2}"
         options:
           GROUP:
             sprites: vše
@@ -16,6 +17,7 @@ cs:
             '"PINEAPPLE"': všechny ananasy
             '"ROBOT"': všichni roboti
             '"SHARK"': všichni žraloci
+            '"SLOTH"': lenochodové
             '"UNICORN"': Jednorožci
           MOVE1:
             MOVES.Roll: Naklánění
@@ -69,6 +71,7 @@ cs:
             '"PINEAPPLE"': všechny ananasy
             '"ROBOT"': všichni roboti
             '"SHARK"': všichni žraloci
+            '"SLOTH"': lenochodové
             '"UNICORN"': všichni jednorožci
           MOVE:
             '"next"': "(Další)"
@@ -121,6 +124,7 @@ cs:
             '"x"': vodorovná pozice
             '"y"': svislá pozice
       Dancelab_changePropEachBy:
+        text: změnit {GROUP} {PROPERTY} o {VAL}
         options:
           GROUP:
             sprites: vše
@@ -134,6 +138,7 @@ cs:
             '"PINEAPPLE"': všechny ananasy
             '"ROBOT"': všichni roboti
             '"SHARK"': všichni žraloci
+            '"SLOTH"': lenochodové
             '"UNICORN"': Jednorožci
           PROPERTY:
             '"scale"': velikost
@@ -157,9 +162,11 @@ cs:
             '"PINEAPPLE"': všechny ananasy
             '"ROBOT"': všichni roboti
             '"SHARK"': všichni žraloci
+            '"SLOTH"': lenochodové
             '"UNICORN"': Jednorožci
           MOVE:
             '"rand"': "(Náhodně)"
+            MOVES.XBend: Ohyb
             MOVES.Roll: Naklánění
             MOVES.XClapSide: Tlesk
             MOVES.ClapHigh: Clap High
@@ -170,9 +177,16 @@ cs:
             MOVES.Floss: Tančí floss
             MOVES.Fresh: Tančí fresh
             MOVES.Clown: Šaškují
+            MOVES.XHeadHips: Hlava + boky
+            MOVES.XHop: Hop
             MOVES.XHighKick: Kop
+            MOVES.XKnee: Koleno
             MOVES.XKneel: Poklek
+            MOVES.XOle: Ole
+            MOVES.XArmsSide: Natažení
+            MOVES.XSlide: Skluz
             MOVES.Kick: Kopou
+            MOVES.XArmsUp: Napnutí
             MOVES.ThisOrThat: Toto nebo ono
             MOVES.Rest: Žádný
           DIR:
@@ -183,6 +197,7 @@ cs:
         options:
           MOVE:
             '"rand"': "(Náhodně)"
+            MOVES.XBend: Ohyb
             MOVES.Roll: Naklánění
             MOVES.XClapSide: Tlesk
             MOVES.ClapHigh: Clap High
@@ -193,14 +208,23 @@ cs:
             MOVES.Floss: Tančí floss
             MOVES.Fresh: Tančí fresh
             MOVES.Clown: Šaškují
+            MOVES.XHeadHips: Hlava + boky
+            MOVES.XHop: Hop
             MOVES.XHighKick: Kop
+            MOVES.XKnee: Koleno
             MOVES.XKneel: Poklek
+            MOVES.XOle: Ole
+            MOVES.XArmsSide: Natažení
+            MOVES.XSlide: Skluz
             MOVES.Kick: Kopou
+            MOVES.XArmsUp: Napnutí
             MOVES.ThisOrThat: Toto nebo ono
             MOVES.Rest: Žádný
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_everyMeasuresRange:
+        text: 'opakovat každých {N} taktů po {START} '
       Dancelab_everySeconds:
         text: 'každé {N} {UNIT} '
         options:
@@ -268,6 +292,10 @@ cs:
           UNIT:
             '"measures"': takty
             '"seconds"': sekund
+          OP:
+            '">"': ">"
+            '"<"': "<"
+            '"="': "="
       Dancelab_jumpTo:
         text: "{SPRITE} skoč na {LOCATION}"
         options:
@@ -283,6 +311,7 @@ cs:
             "{x: 300, y: 300}": dole vpravo
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": náhodně
       Dancelab_jumpToEach:
+        text: skočit {GROUP} na {LOCATION}
         options:
           GROUP:
             sprites: vše
@@ -296,6 +325,7 @@ cs:
             '"PINEAPPLE"': všechny ananasy
             '"ROBOT"': všichni roboti
             '"SHARK"': všichni žraloci
+            '"SLOTH"': lenochodové
             '"UNICORN"': Jednorožci
           LOCATION:
             "{x: 200, y: 100}": nahoře
@@ -323,6 +353,7 @@ cs:
             '"PINEAPPLE"': všechny ananasy
             '"ROBOT"': všichni roboti
             '"SHARK"': všichni žraloci
+            '"SLOTH"': lenochodové
             '"UNICORN"': Jednorožci
           FORMAT:
             '"border"': hranice
@@ -335,6 +366,7 @@ cs:
             '"plus"': plus
             '"random"': náhodně
       Dancelab_makeAnonymousDanceSprite:
+        text: vytvořit nový {COSTUME} v {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': mimozemšťan
@@ -347,6 +379,7 @@ cs:
             '"PINEAPPLE"': Ananas
             '"ROBOT"': robot
             '"SHARK"': Žralok
+            '"SLOTH"': lenochod
             '"UNICORN"': jednorožec
           LOCATION:
             "{x: 200, y: 100}": nahoře
@@ -375,6 +408,7 @@ cs:
             '"PINEAPPLE"': Ananas
             '"ROBOT"': Robot
             '"SHARK"': Žralok
+            '"SLOTH"': lenochod
             '"UNICORN"': Jednorožec
           LOCATION:
             "{x: 200, y: 100}": nahoře
@@ -423,14 +457,20 @@ cs:
             '"PINEAPPLE"': Ananasy
             '"ROBOT"': Roboti
             '"SHARK"': Žraloci
+            '"SLOTH"': lenochodové
             '"UNICORN"': Jednorožci
           LAYOUT:
             '"border"': hranice
             '"inner"': vnitřní čtverec
+            '"diamond"': diamant
             '"circle"': kruh
             '"grid"': mřížka
+            '"top"': horní řádek
             '"row"': řádek
+            '"bottom"': dolní řádek
+            '"left"': levý sloupec
             '"column"': sloupec
+            '"right"': pravý sloupec
             '"x"': křížem krážem
             '"plus"': plus
             '"random"': náhodně
@@ -457,6 +497,7 @@ cs:
             '"color_cycle"': Barvy
             '"diamonds"': Diamanty
             '"disco_ball"': Disco koule
+            '"fireworks"': Ohňostroj
             '"swirl"': Hypno
             '"kaleidoscope"': Kaleidoskop
             '"lasers"': Laserový taneční parket
@@ -472,6 +513,8 @@ cs:
           PALETTE:
             '"rave"': Černá a bílá
             '"cool"': Modré
+            '"electronic"': Elektronika
+            '"iceCream"': Zmrzlina
             '"default"': Světlo
             '"tropical"': Tropické
             '"warm"': Červené
@@ -482,24 +525,34 @@ cs:
             '"none"': Žádný
             '"rand"': "(Náhodně)"
             '"circles"': Tunel
+            '"quads"': Úhly
             '"color_cycle"': Barvy
             '"diamonds"': Diamanty
             '"disco_ball"': Disco koule
+            '"fireworks"': Ohňostroj
+            '"flowers"': Květiny
+            '"growing_stars"': Zvětšující se hvězdy
             '"swirl"': Hypno
             '"kaleidoscope"': Kaleidoskop
             '"lasers"': Laserový taneční parket
             '"splatter"': Barevný stříkanec
             '"rainbow"': Duha
+            '"ripples_random"': Náhodné vlny
+            '"ripples"': Vlny
             '"snowflakes"': Sníh
             '"text"': Název skladby
+            '"squiggles"': Klikyháky
             '"galaxy"': Vesmír
             '"sparkles"': Lesky
             '"spiral"': Spirála
             '"disco"': Čtverce
             '"stars"': Hvězdy
+            '"music_wave"': Vlny
           PALETTE:
             '"rave"': Černá a bílá
             '"cool"': Modré
+            '"electronic"': Elektronika
+            '"iceCream"': Zmrzlina
             '"default"': Světlo
             '"tropical"': Tropické
             '"warm"': Červené
@@ -527,6 +580,7 @@ cs:
             '"PINEAPPLE"': všechny ananasy
             '"ROBOT"': všichni roboti
             '"SHARK"': všichni žraloci
+            '"SLOTH"': lenochodové
             '"UNICORN"': Jednorožci
           SPEED:
             '1': normální
@@ -544,10 +598,12 @@ cs:
             '"hearts_red"': Srdce
             '"music_notes"': Hudební noty
             '"pineapples"': Ananasy
+            '"pizzas"': Pizzy
             '"smiling_poop"': Hovínko
             '"rain"': Déšť
             '"floating_rainbows"': Duha
             '"spotlight"': Bodový reflektor
+            '"color_lights"': Osvětlení scény
             '"raining_tacos"': Tacos
       Dancelab_setForegroundEffectExtended:
         text: nastavit efekt popředí {EFFECT}
@@ -556,14 +612,20 @@ cs:
             '"none"': Žádný
             '"rand"': "(Náhodně)"
             '"bubbles"': Bubliny
+            '"hearts_colorful"': Barevná srdíčka
             '"confetti"': Konfety
+            '"emojis"': Emoji
             '"hearts_red"': Srdce
             '"music_notes"': Hudební noty
+            '"paint_drip"': Kapky barev
             '"pineapples"': Ananasy
+            '"pizzas"': Pizzy
             '"smiling_poop"': Hovínko
             '"rain"': Déšť
             '"floating_rainbows"': Duha
             '"spotlight"': Bodový reflektor
+            '"color_lights"': Osvětlení scény
+            '"exploding_stars"': Výbuch hvězdy
             '"raining_tacos"': Tacos
       Dancelab_setProp:
         text: 'nastavit {SPRITE} {PROPERTY} na {VAL} '
@@ -590,6 +652,7 @@ cs:
             '"PINEAPPLE"': všechny ananasy
             '"ROBOT"': všichni roboti
             '"SHARK"': všichni žraloci
+            '"SLOTH"': lenochodové
             '"UNICORN"': Jednorožci
           PROPERTY:
             '"scale"': velikost
@@ -611,6 +674,7 @@ cs:
             '"y"': svislá pozice
             '"tint"': odstín
       Dancelab_setPropRandomEach:
+        text: změnit {GROUP} {PROPERTY} na [COSTUME2][2]
         options:
           GROUP:
             sprites: vše
@@ -624,6 +688,7 @@ cs:
             '"PINEAPPLE"': všechny ananasy
             '"ROBOT"': všichni roboti
             '"SHARK"': všichni žraloci
+            '"SLOTH"': lenochodové
             '"UNICORN"': Jednorožci
           PROPERTY:
             '"scale"': velikost
@@ -650,6 +715,7 @@ cs:
             '"PINEAPPLE"': všechny ananasy
             '"ROBOT"': všichni roboti
             '"SHARK"': všichni žraloci
+            '"SLOTH"': lenochodové
             '"UNICORN"': Jednorožci
       Dancelab_setTintEachInline:
         text: nastav odstín {THIS} na {VAL}
@@ -666,6 +732,7 @@ cs:
             '"PINEAPPLE"': všechny ananasy
             '"ROBOT"': všichni roboti
             '"SHARK"': všichni žraloci
+            '"SLOTH"': lenochodové
             '"UNICORN"': Jednorožci
       Dancelab_setTintInline:
         text: nastavit {SPRITE} odstín na {VAL}
@@ -690,6 +757,7 @@ cs:
             '"PINEAPPLE"': všechny ananasy
             '"ROBOT"': všichni roboti
             '"SHARK"': všichni žraloci
+            '"SLOTH"': lenochodové
             '"UNICORN"': Jednorožci
           VISIBILITY:
             'true': viditelný
@@ -710,6 +778,7 @@ cs:
             '"mid"': středy
             '"treble"': výšky
       Dancelab_startMappingEach:
+        text: "{GROUP} začít {PROPERTY} podle {RANGE}"
         options:
           GROUP:
             sprites: vše
@@ -723,6 +792,7 @@ cs:
             '"PINEAPPLE"': všechny ananasy
             '"ROBOT"': všichni roboti
             '"SHARK"': všichni žraloci
+            '"SLOTH"': lenochodové
             '"UNICORN"': Jednorožci
           PROPERTY:
             '"scale"': velikost
@@ -753,6 +823,7 @@ cs:
             '"mid"': středy
             '"treble"': výšky
       Dancelab_stopMappingEach:
+        text: "{GROUP} skončit {PROPERTY} podle {RANGE}"
         options:
           GROUP:
             sprites: vše
@@ -766,6 +837,7 @@ cs:
             '"PINEAPPLE"': všechny ananasy
             '"ROBOT"': všichni roboti
             '"SHARK"': všichni žraloci
+            '"SLOTH"': lenochodové
             '"UNICORN"': Jednorožci
           PROPERTY:
             '"scale"': velikost
@@ -781,10 +853,33 @@ cs:
             '"mid"': středy
             '"treble"': výšky
       Dancelab_translateStrings:
+        text: přeložit {STRING}
         options:
           STRING:
+            '"music_wave"': Vlny
+            '"ripples"': Vlny
+            '"ripples_random"': Náhodné vlny
+            '"quads"': Úhly
+            '"flowers"': Květiny
+            '"popsicles"': Nanuky
+            '"squiggles"': Klikyháky
+            '"growing_stars"': Zvětšující se hvězdy
+            '"emojis"': Emoji
             '"hearts_colorful"': Srdce
+            '"paint_drio"': Kapky barev
+            '"exploding_stars"': Výbuch hvězdy
+            '"row_top"': horní řádek
+            '"row_bottom"': dolní řádek
+            '"column_left"': levý sloupec
+            '"column_right"': pravý sloupec
             '"diamond"': diamant
+            '"mural"': Nástěnná malba
+            '"safari"': Safari
+            '"network"': Síť
+            '"highway"': Dálnice
+            '"stream"': Potok
+            '"tile"': Dlaždice
+            '"shadow"': Stín
             '"s"': s
             '"t"': t
             '"u"': u
@@ -793,6 +888,16 @@ cs:
             '"x"': x
             '"y"': y
             '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenKey:
         text: když je stisknuta {KEY}
         options:
@@ -804,15 +909,22 @@ cs:
             '"space"': vesmír
             '"enter"': enter
             '"a"': a
+            '"b"': b
+            '"c"': c
             '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
             '"h"': h
             '"i"': i
             '"j"': j
             '"k"': k
             '"l"': l
             '"m"': m
+            '"n"': n
             '"o"': o
             '"p"': p
+            '"q"': q
             '"r"': r
             '"s"': s
             '"t"': t
@@ -822,6 +934,16 @@ cs:
             '"x"': x
             '"y"': y
             '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenPeak:
         text: když je {RANGE} na vrcholu
         options:
@@ -880,15 +1002,22 @@ cs:
             '"right"': vpravo
             '"space"': vesmír
             '"a"': a
+            '"b"': b
+            '"c"': c
             '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
             '"h"': h
             '"i"': i
             '"j"': j
             '"k"': k
             '"l"': l
             '"m"': m
+            '"n"': n
             '"o"': o
             '"p"': p
+            '"q"': q
             '"r"': r
             '"s"': s
             '"t"': t
@@ -1003,6 +1132,7 @@ cs:
             '"y"': souřadnice Y
             '"direction"': směr pohybu
       Mikelab_groupChangeAnim:
+        text: změnit {SELECT} {COSTUME} na {COSTUME2}
         options:
           SELECT:
             '"all"': vše
@@ -1017,6 +1147,7 @@ cs:
             '"y"': souřadnice Y
             '"direction"': směr pohybu
       Mikelab_groupCreateNewSprite:
+        text: vytvořit nový {COSTUME} v {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": nahoře

@@ -3,6 +3,7 @@ de:
   data:
     blocks:
       Dancelab_alternateMoves:
+        text: "{GROUP} wechselt jeden {N} Takt \nzwischen {MOVE1} und {MOVE2}"
         options:
           GROUP:
             sprites: Alle
@@ -120,6 +121,7 @@ de:
             '"x"': horizontale Position
             '"y"': vertikale Position
       Dancelab_changePropEachBy:
+        text: ändere {GROUP} {PROPERTY} um {VAL}
         options:
           GROUP:
             sprites: Alle
@@ -216,6 +218,8 @@ de:
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_everyMeasuresRange:
+        text: 'wiederhole jeden {N} Takt nach {START} '
       Dancelab_everySeconds:
         text: 'jede {N} {UNIT} '
         options:
@@ -302,6 +306,7 @@ de:
             "{x: 300, y: 300}": unten rechts
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": zufällig
       Dancelab_jumpToEach:
+        text: springe {GROUP} zu {LOCATION}
         options:
           GROUP:
             sprites: Alle
@@ -367,6 +372,7 @@ de:
             '"PINEAPPLE"': Ananas
             '"ROBOT"': Roboter
             '"SHARK"': Hai
+            '"SLOTH"': Faulheit
             '"UNICORN"': Einhorn
           LOCATION:
             "{x: 200, y: 100}": oben
@@ -395,6 +401,7 @@ de:
             '"PINEAPPLE"': Ananas
             '"ROBOT"': Roboter
             '"SHARK"': Hai
+            '"SLOTH"': Faulheit
             '"UNICORN"': Einhorn
           LOCATION:
             "{x: 200, y: 100}": oben
@@ -447,10 +454,15 @@ de:
           LAYOUT:
             '"border"': Grenze
             '"inner"': Quadrat im Inneren
+            '"diamond"': Diamant
             '"circle"': Kreis
             '"grid"': Raster
+            '"top"': obere Reihe
             '"row"': Zeile
+            '"bottom"': untere Reihe
+            '"left"': linke Spalte
             '"column"': Spalte
+            '"right"': rechte Spalte
             '"x"': kreuz und quer
             '"plus"': plus
             '"random"': zufällig
@@ -511,11 +523,14 @@ de:
             '"diamonds"': Rauten
             '"disco_ball"': Disco-Kugel
             '"fireworks"': Feuerwerk
+            '"flowers"': Blumen
             '"swirl"': Hypno
             '"kaleidoscope"': Kaleidoskop
             '"lasers"': Laser-Tanzfläche
             '"splatter"': Farbspritzer
             '"rainbow"': Regenbogen
+            '"ripples_random"': Zufällige Ripples
+            '"ripples"': Ripples
             '"snowflakes"': Schnee
             '"text"': Song-Titel
             '"galaxy"': Weltall
@@ -523,6 +538,7 @@ de:
             '"spiral"': Spirale
             '"disco"': Quadrate
             '"stars"': Sterne
+            '"music_wave"': Wellen
           PALETTE:
             '"rave"': Schwarzweiß
             '"cool"': Blautöne
@@ -647,6 +663,7 @@ de:
             '"y"': vertikale Position
             '"tint"': Farbton
       Dancelab_setPropRandomEach:
+        text: randomisiere {GROUP} {PROPERTY}
         options:
           GROUP:
             sprites: Alle
@@ -746,6 +763,7 @@ de:
             '"mid"': Mitten
             '"treble"': Höhen
       Dancelab_startMappingEach:
+        text: "{GROUP} beginnt {PROPERTY} nach {RANGE}"
         options:
           GROUP:
             sprites: Alle
@@ -789,6 +807,7 @@ de:
             '"mid"': Mitten
             '"treble"': Höhen
       Dancelab_stopMappingEach:
+        text: "{GROUP} stoppt {PROPERTY} nach {RANGE}"
         options:
           GROUP:
             sprites: Alle
@@ -817,10 +836,23 @@ de:
             '"mid"': Mitten
             '"treble"': Höhen
       Dancelab_translateStrings:
+        text: übersetze {STRING}
         options:
           STRING:
+            '"music_wave"': Wellen
+            '"ripples"': Ripples
+            '"ripples_random"': Zufällige Ripples
+            '"flowers"': Blumen
             '"hearts_colorful"': Herzen
+            '"row_top"': obere Reihe
+            '"row_bottom"': untere Reihe
+            '"column_left"': linke Spalte
+            '"column_right"': rechte Spalte
             '"diamond"': Diamant
+            '"safari"': Safari
+            '"network"': Netzwerk
+            '"tile"': Kachel
+            '"shadow"': Schatten
             '"s"': s
             '"t"': t
             '"u"': u
@@ -936,6 +968,7 @@ de:
             '"direction"': Bewegungsrichtung
             '"tint"': Farbton
       gamelab_getThisSprite:
+        text: "{CHOICE} Sprite"
         options:
           CHOICE:
             '"this"': dies
@@ -945,6 +978,7 @@ de:
       gamelab_jumpTo:
         text: "{SPRITE} springe zu {LOCATION}"
       gamelab_keyPressed:
+        text: "{CONDITION} {KEY} gedrückt"
         options:
           CONDITION:
             '"when"': wenn
@@ -1019,6 +1053,8 @@ de:
             '"East"': Ost
             '"South"': Süd
             '"West"': West
+      gamelab_printText:
+        text: drucke {TEXT}
       gamelab_randColor:
         text: zufällige Farbe
       gamelab_randomColor:
@@ -1049,6 +1085,7 @@ de:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': Unterwasser
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': Winter
       gamelab_setProp:
+        text: setze {SPRITE} {PROPERTY} auf {VAL}
         options:
           PROPERTY:
             '"scale"': Größe
@@ -1063,6 +1100,8 @@ de:
             '"scale"': Größe
             '"width"': Breite
             '"height"': Höhe
+      gamelab_setTint:
+        text: ändere die Farbe von {THIS} nach {COLOR}
       gamelab_spriteClicked:
         text: "{CONDITION} {SPRITE} geklickt"
         options:
@@ -1127,6 +1166,15 @@ de:
         text: y Koordinate von {SPRITE}
       Mikelab_addBehaviorSimple:
         text: "{SPRITE} beginnt {BEHAVIOR}"
+      Mikelab_addTrainingData:
+        text: 'Trainingsdaten hinzufügen: {NAME},{LOCATION}'
+        options:
+          NAME:
+            "{x: 201, y: 100}": Objekt
+            "{x: 200, y: 100}": Fisch
+          LOCATION:
+            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": Fisch
+            "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": kein Fisch
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1195,6 +1243,7 @@ de:
       Mikelab_groupGetProp:
         options:
           SELECT:
+            '"average"': mittel
             '"this"': dies
           PROPERTY:
             '"scale"': Größe
@@ -1247,6 +1296,12 @@ de:
           {STATEMENT}
       Mikelab_hasBehavior:
         text: "{SPRITE} ist aktuell {BEHAVIOR}"
+      Mikelab_hideFish:
+        text: entferne {TRASH}
+        options:
+          TRASH:
+            object: Objekt
+            fish: Fisch
       Mikelab_ifDanceIs:
         text: |-
           wenn {SPRITE} {DANCE} tut
@@ -1264,6 +1319,18 @@ de:
             MOVES.Kick: Stern
             MOVES.ThisOrThat: Dies oder Das
             MOVES.Rest: Keiner
+      Mikelab_ifLabel:
+        options:
+          DANCE:
+            MOVES.ClapHigh: Fisch
+      Mikelab_ifRecognizeLabel:
+        options:
+          DANCE:
+            MOVES.ClapHigh: Fisch
+      Mikelab_ifRecognizeLabelOnly:
+        options:
+          DANCE:
+            MOVES.ClapHigh: Fisch
       Mikelab_locationAt:
         text: 'Position x: {X} y: {Y}'
       Mikelab_location_picker:
@@ -1274,6 +1341,10 @@ de:
         text: Sprite {SPRITE} stoppt {BEHAVIOR}
       Mikelab_repeatUntilComplete:
         text: ewig wiederholen
+      Mikelab_sendBad:
+        text: bewege Objekt nach links
+      Mikelab_sendGood:
+        text: bewege Objekt nach rechts
       Mikelab_setBG:
         options:
           BG:
@@ -1330,6 +1401,12 @@ de:
             '"d"': D
       Mikelab_whenMouseClicked:
         text: wenn Maus angeklickt
+      Mikelab_whenYesNoClicked:
+        text: wenn {KEY} gedrückt
+        options:
+          KEY:
+            '"yes"': ja
+            '"no"': nein
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -1364,11 +1441,14 @@ de:
       Vector_vectorNorth:
         text: Nord
       Vector_where:
+        text: für jedes Sprite bei dem {PROPERTY} den Wert {VALUE} hat mache {STATEMENT}
         options:
           PROPERTY:
             "'shapeColor'": Farbe
       aalab_addBehaviorUntilBoolean:
         text: "{SPRITE} beginnt {BEHAVIOR} bis {CONDITION}"
+      aalab_createNewSpriteAnonReturn2:
+        text: neues Sprite mit Namen {SPRITE_NAME} mit Kostüm {ANIMATION_NAME} an der Position {LOCATION}
       aalab_goToScene:
         text: gehe zur Szene {SCENE}
         options:
@@ -1386,6 +1466,7 @@ de:
             '2': '2'
             '3': '3'
       aalab_showHideSprite:
+        text: "{OPTION}{SPRITE}"
         options:
           OPTION:
             '"show"': zeige

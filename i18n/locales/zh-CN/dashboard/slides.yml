@@ -2135,3 +2135,52 @@ zh-CN:
         image: 'notes/opd_closing_1.png'
       2:
         image: 'notes/opd_closing_2.png'
+    hoc_dance_warmup_2019:
+      1:
+        image: 'notes/hoc_dance_warmup_1.png'
+        text: "编程一小时 | 舞蹈派对：热身"
+      2:
+        image: 'notes/hoc_dance_warmup_2.png'
+        text: "你好啊！我叫 Miral Kotb，一名舞者兼软件工程师，同时也是 iLuminate 的作者。"
+      3:
+        image: 'notes/hoc_dance_warmup_3.png'
+      4:
+        image: 'notes/hoc_dance_warmup_4.png'
+      5:
+      6:
+      7:
+      8:
+      9:
+      10:
+      11:
+      12:
+      13:
+        image: 'notes/hoc_dance_warmup_13.png'
+    hoc_dance_events_2019:
+      1:
+        image: 'notes/hoc_dance_events_1.png'
+      2:
+      3:
+      4:
+        text: "一般事件会去侦听的动作有鼠标单击，按下方向键，屏幕触碰。"
+      5:
+      6:
+      7:
+      8:
+    hoc_dance_properties_2019:
+      1:
+        image: 'notes/hoc_dance_properties_1.png'
+      2:
+        image: 'notes/hoc_dance_properties_2.png'
+      3:
+        image: 'notes/hoc_dance_properties_3.png'
+      4:
+        image: 'notes/hoc_dance_properties_4.png'
+      5:
+        image: 'notes/hoc_dance_properties_5.png'
+      6:
+        image: 'notes/hoc_dance_properties_6.png'
+      7:
+      8:
+      9:
+      10:

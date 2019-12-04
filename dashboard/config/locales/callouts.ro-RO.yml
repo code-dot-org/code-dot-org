@@ -80,6 +80,8 @@ ro-RO:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Bloc nou!
         dance_callout_11_b: Bloc nou!
+      CourseD_Dance_Party_11_5:
+        dance_party_11_5_groups: Caută aici blocurile „toate rațele”
       Dance_2019_01:
         dance_callout_01: Adaugă acest bloc la programul tău!
       Dance_2019_02:
@@ -107,6 +109,8 @@ ro-RO:
       Dance_Party_11:
         dance_callout_11_a: Bloc nou!
         dance_callout_11_b: Bloc nou!
+      Dance_Party_11_5:
+        dance_party_11_5_groups: Caută aici blocurile „toate rațele”
       Infinity_move_collide:
         Infinity_move_collide_callout: Emite un sunet când se produce acest eveniment.
       Infinity_move_directions:

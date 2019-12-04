@@ -3,6 +3,7 @@ ms:
   data:
     blocks:
       Dancelab_alternateMoves:
+        text: "{GROUP} berselang-seli setiap {N} corak berirama \nantara {MOVE1} dan {MOVE2}"
         options:
           GROUP:
             '"ALIEN"': semua makhluk asing
@@ -15,6 +16,7 @@ ms:
             '"PINEAPPLE"': nenas
             '"ROBOT"': robot
             '"SHARK"': ikan Jerung
+            '"SLOTH"': sloths
             '"UNICORN"': unikorn
           MOVE1:
             MOVES.Roll: Gerakan Gulung Badan
@@ -67,6 +69,7 @@ ms:
             '"PINEAPPLE"': nenas
             '"ROBOT"': robot
             '"SHARK"': ikan Jerung
+            '"SLOTH"': sloths
             '"UNICORN"': unikorn
           MOVE:
             '"next"': "(Seterusnya)"
@@ -118,6 +121,7 @@ ms:
             '"x"': kedudukan mendatar
             '"y"': kedudukan menegak
       Dancelab_changePropEachBy:
+        text: tukar {GROUP} {PROPERTY} dengan {VAL}
         options:
           GROUP:
             '"ALIEN"': semua makhluk asing
@@ -130,6 +134,7 @@ ms:
             '"PINEAPPLE"': nenas
             '"ROBOT"': robot
             '"SHARK"': ikan Jerung
+            '"SLOTH"': sloths
             '"UNICORN"': unikorn
           PROPERTY:
             '"scale"': saiz
@@ -152,6 +157,7 @@ ms:
             '"PINEAPPLE"': nenas
             '"ROBOT"': robot
             '"SHARK"': ikan Jerung
+            '"SLOTH"': sloths
             '"UNICORN"': unikorn
           MOVE:
             '"rand"': "(Rawak)"
@@ -212,6 +218,8 @@ ms:
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_everyMeasuresRange:
+        text: 'ulangi setiap {N} corak berirama selepas {START} '
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -290,6 +298,7 @@ ms:
             "{x: 300, y: 200}": kanan
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": rawak
       Dancelab_jumpToEach:
+        text: lompat {GROUP} ke {LOCATION}
         options:
           GROUP:
             '"ALIEN"': semua makhluk asing
@@ -302,6 +311,7 @@ ms:
             '"PINEAPPLE"': nenas
             '"ROBOT"': robot
             '"SHARK"': ikan Jerung
+            '"SLOTH"': sloths
             '"UNICORN"': unikorn
           LOCATION:
             "{x: 200, y: 100}": bahagian atas
@@ -323,6 +333,7 @@ ms:
             '"PINEAPPLE"': nenas
             '"ROBOT"': robot
             '"SHARK"': ikan Jerung
+            '"SLOTH"': sloths
             '"UNICORN"': unikorn
           FORMAT:
             '"border"': sempadan
@@ -335,6 +346,7 @@ ms:
             '"plus"': tambah
             '"random"': rawak
       Dancelab_makeAnonymousDanceSprite:
+        text: buatkan {COSTUME} baharu di {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': makhluk asing
@@ -344,6 +356,7 @@ ms:
             '"MOOSE"': rusa
             '"PINEAPPLE"': nenas
             '"SHARK"': ikan Jerung
+            '"SLOTH"': sloth
           LOCATION:
             "{x: 200, y: 100}": bahagian atas
             "{x: 200, y: 300}": bahagian bawah
@@ -361,6 +374,7 @@ ms:
             '"MOOSE"': rusa
             '"PINEAPPLE"': nenas
             '"SHARK"': ikan Jerung
+            '"SLOTH"': sloth
           LOCATION:
             "{x: 200, y: 100}": bahagian atas
             "{x: 200, y: 300}": bahagian bawah
@@ -401,14 +415,19 @@ ms:
             '"PINEAPPLE"': nenas
             '"ROBOT"': robot
             '"SHARK"': ikan Jerung
+            '"SLOTH"': sloths
             '"UNICORN"': unikorn
           LAYOUT:
             '"border"': sempadan
             '"inner"': dalam segi empat
             '"circle"': bulatan
             '"grid"': grid
+            '"top"': barisan Atas
             '"row"': baris
+            '"bottom"': barisan Bawah
+            '"left"': lajur Kiri
             '"column"': lajur
+            '"right"': lajur Kanan
             '"x"': bersilang-silang
             '"plus"': tambah
             '"random"': rawak
@@ -465,21 +484,28 @@ ms:
             '"none"': Tiada
             '"rand"': "(Rawak)"
             '"circles"': Bulatan
+            '"quads"': Sudut
             '"color_cycle"': Warna
             '"diamonds"': Berlian
             '"disco_ball"': Bola Disko
             '"fireworks"': Bunga Api
+            '"flowers"': Bunga
+            '"growing_stars"': Bintang yang Semakin Meningkat
             '"swirl"': Hypno
             '"kaleidoscope"': Kaleidoskop
             '"lasers"': Lantai Menari Laser
             '"splatter"': Percikan Cat
             '"rainbow"': Pelangi
+            '"ripples_random"': Riak Rawak
+            '"ripples"': Riak
             '"snowflakes"': Salji
             '"text"': Nama Lagu
+            '"squiggles"': Cacing Kerawit
             '"sparkles"': Berkilau
             '"spiral"': Lingkaran
             '"disco"': Segi Empat
             '"stars"': Bintang
+            '"music_wave"': Gelombang
           PALETTE:
             '"rave"': Hitam dan Putih
             '"cool"': Sejuk
@@ -513,6 +539,7 @@ ms:
             '"PINEAPPLE"': nenas
             '"ROBOT"': robot
             '"SHARK"': ikan Jerung
+            '"SLOTH"': sloths
             '"UNICORN"': unikorn
           SPEED:
             '1': normal
@@ -545,9 +572,12 @@ ms:
             '"none"': Tiada
             '"rand"': "(Rawak)"
             '"bubbles"': Gelembung
+            '"hearts_colorful"': Hati Berwarna-warni
             '"confetti"': Konfeti
+            '"emojis"': Emoji
             '"hearts_red"': Hati
             '"music_notes"': Not Muzik
+            '"paint_drip"': Titisan Cat
             '"pineapples"': Nenas
             '"pizzas"': Piza
             '"smiling_poop"': Tahi
@@ -556,6 +586,7 @@ ms:
             '"smile_face"': Senyuman
             '"spotlight"': Lampu Sorot
             '"color_lights"': Lampu Pentas
+            '"exploding_stars"': Pecahan Cahaya
             '"raining_tacos"': Tacos
       Dancelab_setProp:
         text: 'tetapkan {SPRITE} {PROPERTY} kepada {VAL} '
@@ -581,6 +612,7 @@ ms:
             '"PINEAPPLE"': nenas
             '"ROBOT"': robot
             '"SHARK"': ikan Jerung
+            '"SLOTH"': sloths
             '"UNICORN"': unikorn
           PROPERTY:
             '"scale"': saiz
@@ -591,7 +623,7 @@ ms:
             '"y"': kedudukan menegak
             '"tint"': warna
       Dancelab_setPropRandom:
-        text: merawak{SPRITE} {PROPERTY}
+        text: merawak {SPRITE} {PROPERTY}
         options:
           PROPERTY:
             '"scale"': saiz
@@ -602,6 +634,7 @@ ms:
             '"y"': kedudukan menegak
             '"tint"': warna
       Dancelab_setPropRandomEach:
+        text: merawak{GROUP} {PROPERTY}
         options:
           GROUP:
             '"ALIEN"': semua makhluk asing
@@ -614,6 +647,7 @@ ms:
             '"PINEAPPLE"': nenas
             '"ROBOT"': robot
             '"SHARK"': ikan Jerung
+            '"SLOTH"': sloths
             '"UNICORN"': unikorn
           PROPERTY:
             '"scale"': saiz
@@ -639,6 +673,7 @@ ms:
             '"PINEAPPLE"': nenas
             '"ROBOT"': robot
             '"SHARK"': ikan Jerung
+            '"SLOTH"': sloths
             '"UNICORN"': unikorn
       Dancelab_setTintEachInline:
         text: tetapkan {THIS} warna kepada {VAL}
@@ -654,6 +689,7 @@ ms:
             '"PINEAPPLE"': nenas
             '"ROBOT"': robot
             '"SHARK"': ikan Jerung
+            '"SLOTH"': sloths
             '"UNICORN"': unikorn
       Dancelab_setTintInline:
         text: tetapkan {SPRITE} warna kepada {VAL}
@@ -677,6 +713,7 @@ ms:
             '"PINEAPPLE"': nenas
             '"ROBOT"': robot
             '"SHARK"': ikan Jerung
+            '"SLOTH"': sloths
             '"UNICORN"': unikorn
           VISIBILITY:
             'true': boleh dilihat
@@ -697,6 +734,7 @@ ms:
             '"mid"': julat tengah
             '"treble"': trebel
       Dancelab_startMappingEach:
+        text: "{GROUP} bermula {PROPERTY} berikutan {RANGE}"
         options:
           GROUP:
             '"ALIEN"': semua makhluk asing
@@ -709,6 +747,7 @@ ms:
             '"PINEAPPLE"': nenas
             '"ROBOT"': robot
             '"SHARK"': ikan Jerung
+            '"SLOTH"': sloths
             '"UNICORN"': unikorn
           PROPERTY:
             '"scale"': saiz
@@ -739,6 +778,7 @@ ms:
             '"mid"': julat tengah
             '"treble"': trebel
       Dancelab_stopMappingEach:
+        text: "{GROUP} berhenti {PROPERTY} berikutan {RANGE}"
         options:
           GROUP:
             '"ALIEN"': semua makhluk asing
@@ -751,6 +791,7 @@ ms:
             '"PINEAPPLE"': nenas
             '"ROBOT"': robot
             '"SHARK"': ikan Jerung
+            '"SLOTH"': sloths
             '"UNICORN"': unikorn
           PROPERTY:
             '"scale"': saiz
@@ -766,9 +807,32 @@ ms:
             '"mid"': julat tengah
             '"treble"': trebel
       Dancelab_translateStrings:
+        text: terjemahkan {STRING}
         options:
           STRING:
+            '"music_wave"': Gelombang
+            '"ripples"': Riak
+            '"ripples_random"': Riak Rawak
+            '"quads"': Sudut
+            '"flowers"': Bunga
+            '"popsicles"': Popsikel
+            '"squiggles"': Cacing Kerawit
+            '"growing_stars"': Bintang yang Semakin Meningkat
+            '"emojis"': Emoji
             '"hearts_colorful"': Hati
+            '"paint_drio"': Titisan Cat
+            '"exploding_stars"': Pecahan Cahaya
+            '"row_top"': barisan Atas
+            '"row_bottom"': barisan Bawah
+            '"column_left"': lajur Kiri
+            '"column_right"': lajur Kanan
+            '"mural"': Mural
+            '"safari"': Safari
+            '"network"': Rangkaian
+            '"highway"': Lebuh Raya
+            '"stream"': Aliran
+            '"tile"': Jubin
+            '"shadow"': Bayang-bayang
             '"s"': s
             '"t"': t
             '"u"': u
@@ -985,6 +1049,8 @@ ms:
             '"scale"': saiz
             '"rotation"': putaran
             '"direction"': arah pergerakan
+      Mikelab_groupChangeAnim:
+        text: tukar {SELECT} {COSTUME} kepada {COSTUME2}
       Mikelab_groupChangePropBy:
         options:
           PROPERTY:
@@ -992,6 +1058,7 @@ ms:
             '"rotation"': putaran
             '"direction"': arah pergerakan
       Mikelab_groupCreateNewSprite:
+        text: buatkan {COSTUME} baharu di {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": bahagian atas

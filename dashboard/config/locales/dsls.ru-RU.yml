@@ -893,6 +893,170 @@ ru-RU:
         - {}
         - correct: true
         - {}
+      Dance_Party_extras_intro:
+        markdown: |
+          # Продолжайте танцевать!
+
+          В части №2 вы можете создавать свой личный проект. Здесь нет никаких головоломок-вместо этого есть куча проектов, которые показывают различные способы сделать более сложные танцевальные вечеринки.
+
+          Вы можете проходить эти уровни в любом порядке. Вернитесь назад, чтобы посмотреть, как что-то было сделано на предыдущем уровне, или объединить концепции между проектами. Попробуйте их все, выберите свой любимый и потратьте свое время на добавление к этому проекту, чтобы сделать его своим собственным.
+
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Continue</a>
+
+          <div class="clearfix"></div>
+
+          <div style="float: left; margin: 10px">
+          <a href="2">
+          <h2>
+          Давайте устроим порядок!
+          </h2>
+
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="3">
+          <h2>
+          Куда они делись?
+          </h2>
+
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="4">
+          <h2>
+          Танцевальная команда
+          </h2>
+
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="5">
+          <h2>
+          Четвертные Ноты
+          </h2>
+
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="6">
+          <h2>
+          Бас, Середина, Высокие Частоты
+          </h2>
+
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="7">
+          <h2>
+          Ускорить, замедлить
+          </h2>
+
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
+
+          </div>
+      Dance_Party_extras_intro_2019:
+        markdown: |
+          # Продолжайте танцевать!
+
+          В части №2 вы можете создавать свой личный проект. Здесь нет никаких головоломок-вместо этого есть куча проектов, которые показывают различные способы сделать более сложные танцевальные вечеринки.
+
+          Вы можете проходить эти уровни в любом порядке. Вернитесь назад, чтобы посмотреть, как что-то было сделано на предыдущем уровне, или объединить концепции между проектами. Попробуйте их все, выберите свой любимый и потратьте свое время на добавление к этому проекту, чтобы сделать его своим собственным.
+
+
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Continue</a>
+
+          <div class="clearfix"></div>
+
+
+          <div style="float: left; margin: 10px">
+          <a href="2">
+          <h2>
+          Туда и обратно
+          </h2>
+
+          <img src="https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="3">
+          <h2>
+          Больше кнопок
+          </h2>
+
+          <img src="https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif"></a>
+
+          </div>
+          <div style="float: left; margin: 10px">
+          <a href="4">
+          <h2>
+          Давайте устроим порядок
+          </h2>
+
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="5">
+          <h2>
+          Куда они делись?
+          </h2>
+
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="6">
+          <h2>
+          Танцевальная команда
+          </h2>
+
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="7">
+          <h2>
+          Четвертные Ноты
+          </h2>
+
+
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="8">
+          <h2>
+          Бас, Середина, Высокие Частоты
+          </h2>
+
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="9">
+          <h2>
+          Ускорить, замедлить
+          </h2>
+
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
+
+          </div>
       GraphPaperProgramming-Unplugged:
         markdown: |
           # Программирование на бумаге
@@ -1112,6 +1276,42 @@ ru-RU:
       OPD-K5 Stage3aGo:
         title: название
         content1: Описание здесь
+      'Overview: Design Mode':
+        markdown: |
+          #Добро пожаловать в Режим дизайна Лаборатории приложений.
+          В Режиме дизайна перетаскивайте элементы интерфейса в приложение.
+
+          ###Словарь
+          * **Интерфейс пользователя (UI)** - Как пользователь взаимодействует с компьютером или приложением.
+          * **UI элементы** или объекты - кнопки, картинки, поля ввода текста, выпадающие меню, страницы и тому подобное
+
+          ##Пример
+
+          <div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>Два переключателя над картинкой Телефон нужны для переключения между Режимом дизайна и Режимом кодирования..</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>Для добавления элемента интерфейса в приложение просто перетащи его в Область приложения (на картинку телефона). Там его можно перемещать, изменять его размер и еще много разных свойств этого элемента. </p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span><em>Вкладка Свойства</em> показывает все свойства элемента интерфейса, которые можно изменить для настройки его внешнего вида..</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span><strong>Идентификатор элемента</strong> служит ссылкой на элемент в коде. Мы еще поговорим об идентификаторах позже..</p>
+          </div>
+
+          ![](https://images.code.org/01a31ac3be66deb6d01a92a1edfffd21-image-1476726587662.png)
+
+
+          <div style="column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 66%; float: right">
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span>Можно поменять текст на кнопке на любой, который нужен.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">6.</span><strong>Замечание:</strong>Листайте вниз, чтобы увидеть остальные свойства элемента, "скрытые" ниже.
+          </div>
+
+          <div style="clear: both"></div>
+          <hr>
+
+          **Итак, попробуем!**
       Prepare for your presentation:
         title: название
         content1: Описание здесь

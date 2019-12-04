@@ -42,29 +42,38 @@ const styles = {
  */
 export default class RotateContainer extends React.Component {
   static propTypes = {
-    assetUrl: PropTypes.func.isRequired
+    assetUrl: PropTypes.func.isRequired,
+    width: PropTypes.number
   };
 
   render() {
-    // In StudioApp.prototype.fixViewportForSmallScreens_ we end up scaling our
-    // viewport so that things look good in landscape mode. Unfortunately, this
-    // means that we can't dependably use CSS to size our rotate container in a
-    // way that works across ios and android.
-    // What we do is to figure out the scaling factor fixViewportForSmallScreens_
-    // is going to use and set our width relative to that factor.
-    // In addition, I've added an outer container that fills up the whole space
-    // with a white background, so that if you scroll off of the inner container
-    // you see white instead of the codeApp
+    let width, height;
+    if (this.props.width) {
+      width = this.props.width;
+      height = '100%';
+    } else {
+      // In StudioApp.prototype.fixViewportForSmallScreens_ we end up scaling our
+      // viewport so that things look good in landscape mode. Unfortunately, this
+      // means that we can't dependably use CSS to size our rotate container in a
+      // way that works across ios and android.
+      // What we do is to figure out the scaling factor fixViewportForSmallScreens_
+      // is going to use and set our width relative to that factor.
+      // In addition, I've added an outer container that fills up the whole space
+      // with a white background, so that if you scroll off of the inner container
+      // you see white instead of the codeApp
 
-    const scale = screen.height / 900;
+      const scale = screen.height / 900;
+      width = window.screen.width / scale;
+      height = window.screen.height;
+    }
 
     return (
       <div id="rotateContainer" style={styles.rotateContainer}>
         <div
           style={{
             ...styles.rotateContainerInner,
-            width: window.screen.width / scale,
-            height: window.screen.height,
+            width: width,
+            height: height,
             backgroundImage:
               'url(' +
               this.props.assetUrl('media/turnphone_horizontal.png') +

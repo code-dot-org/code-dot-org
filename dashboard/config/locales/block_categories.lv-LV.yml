@@ -3,17 +3,12 @@ lv:
   data:
     block_categories:
       Actions: Darbības
-      Loops: Cikli
-      Functions: Funkcijas
       Color: Krāsa
-      Math: Matemātika
-      Logic: Loģika
-      Variables: Mainīgie
       Conditionals: Sazarojumi
       Events: Pasākumi
+      Functions: Funkcijas
+      Logic: Loģika
+      Loops: Cikli
+      Math: Matemātika
       Text: Teksts
-      Start: Sākt
-      Booleans: Booleans
-      test: pārbaude
-      Name: Vārds
-      Function: Funkcija
+      Variables: Mainīgie
