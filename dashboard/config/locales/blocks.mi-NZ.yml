@@ -125,6 +125,8 @@ mi:
             '18': '18'
             '19': '19'
             '20': '20'
+          LAYOUT:
+            '"diamond"': taimana
       Dancelab_randomColor:
         text: tae matapōkere
       Dancelab_setDanceSpeed:
