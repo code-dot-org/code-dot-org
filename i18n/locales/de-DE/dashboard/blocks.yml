@@ -17,6 +17,7 @@ de:
             '"PINEAPPLE"': alle Ananas
             '"ROBOT"': alle Roboter
             '"SHARK"': alle Haie
+            '"SLOTH"': faultiere
             '"UNICORN"': Einhörner
           MOVE1:
             MOVES.Roll: Roll
@@ -70,6 +71,7 @@ de:
             '"PINEAPPLE"': alle Ananas
             '"ROBOT"': alle Roboter
             '"SHARK"': alle Haie
+            '"SLOTH"': faultiere
             '"UNICORN"': alle Einhörner
           MOVE:
             '"next"': "(nächster)"
@@ -135,6 +137,7 @@ de:
             '"PINEAPPLE"': alle Ananas
             '"ROBOT"': alle Roboter
             '"SHARK"': alle Haie
+            '"SLOTH"': faultiere
             '"UNICORN"': Einhörner
           PROPERTY:
             '"scale"': Größe
@@ -158,6 +161,7 @@ de:
             '"PINEAPPLE"': alle Ananas
             '"ROBOT"': alle Roboter
             '"SHARK"': alle Haie
+            '"SLOTH"': faultiere
             '"UNICORN"': Einhörner
           MOVE:
             '"rand"': "(zufällig)"
@@ -320,6 +324,7 @@ de:
             '"PINEAPPLE"': alle Ananas
             '"ROBOT"': alle Roboter
             '"SHARK"': alle Haie
+            '"SLOTH"': faultiere
             '"UNICORN"': Einhörner
           LOCATION:
             "{x: 200, y: 100}": oben
@@ -347,6 +352,7 @@ de:
             '"PINEAPPLE"': alle Ananas
             '"ROBOT"': alle Roboter
             '"SHARK"': alle Haie
+            '"SLOTH"': faultiere
             '"UNICORN"': Einhörner
           FORMAT:
             '"border"': Grenze
@@ -450,14 +456,20 @@ de:
             '"PINEAPPLE"': Ananas
             '"ROBOT"': Roboter
             '"SHARK"': Haie
+            '"SLOTH"': faultiere
             '"UNICORN"': Einhörner
           LAYOUT:
             '"border"': Grenze
             '"inner"': Quadrat im Inneren
+            '"diamond"': Diamant
             '"circle"': Kreis
             '"grid"': Raster
+            '"top"': obere Reihe
             '"row"': Zeile
+            '"bottom"': untere Reihe
+            '"left"': linke Spalte
             '"column"': Spalte
+            '"right"': rechte Spalte
             '"x"': kreuz und quer
             '"plus"': plus
             '"random"': zufällig
@@ -514,11 +526,13 @@ de:
             '"none"': Keiner
             '"rand"': "(zufällig)"
             '"circles"': Tunnel
+            '"quads"': Winkel
             '"color_cycle"': Farben
             '"diamonds"': Rauten
             '"disco_ball"': Disco-Kugel
             '"fireworks"': Feuerwerk
             '"flowers"': Blumen
+            '"growing_stars"': Wachsende Sterne
             '"swirl"': Hypno
             '"kaleidoscope"': Kaleidoskop
             '"lasers"': Laser-Tanzfläche
@@ -528,6 +542,7 @@ de:
             '"ripples"': Ripples
             '"snowflakes"': Schnee
             '"text"': Song-Titel
+            '"squiggles"': Schnörkel
             '"galaxy"': Weltall
             '"sparkles"': Funkeln
             '"spiral"': Spirale
@@ -568,6 +583,7 @@ de:
             '"PINEAPPLE"': alle Ananas
             '"ROBOT"': alle Roboter
             '"SHARK"': alle Haie
+            '"SLOTH"': faultiere
             '"UNICORN"': Einhörner
           SPEED:
             '1': Normal
@@ -600,9 +616,12 @@ de:
             '"none"': Keiner
             '"rand"': "(zufällig)"
             '"bubbles"': Blasen
+            '"hearts_colorful"': Farbenfrohe Herzen
             '"confetti"': Konfetti
+            '"emojis"': Emojis
             '"hearts_red"': Herzen
             '"music_notes"': Musiknoten
+            '"paint_drip"': Tropfende Farbe
             '"pineapples"': Ananas
             '"pizzas"': Pizza
             '"smiling_poop"': Kacke
@@ -611,6 +630,7 @@ de:
             '"smile_face"': Smiley
             '"spotlight"': Scheinwerfer
             '"color_lights"': Bühnenlicht
+            '"exploding_stars"': Starburst
             '"raining_tacos"': Tacos
       Dancelab_setProp:
         text: 'stellen Sie {SPRITE} {PROPERTY} auf {VAL} '
@@ -637,6 +657,7 @@ de:
             '"PINEAPPLE"': alle Ananas
             '"ROBOT"': alle Roboter
             '"SHARK"': alle Haie
+            '"SLOTH"': faultiere
             '"UNICORN"': Einhörner
           PROPERTY:
             '"scale"': Größe
@@ -672,6 +693,7 @@ de:
             '"PINEAPPLE"': alle Ananas
             '"ROBOT"': alle Roboter
             '"SHARK"': alle Haie
+            '"SLOTH"': faultiere
             '"UNICORN"': Einhörner
           PROPERTY:
             '"scale"': Größe
@@ -698,6 +720,7 @@ de:
             '"PINEAPPLE"': alle Ananas
             '"ROBOT"': alle Roboter
             '"SHARK"': alle Haie
+            '"SLOTH"': faultiere
             '"UNICORN"': Einhörner
       Dancelab_setTintEachInline:
         text: stelle {THIS} Farbton auf {VAL}
@@ -714,6 +737,7 @@ de:
             '"PINEAPPLE"': alle Ananas
             '"ROBOT"': alle Roboter
             '"SHARK"': alle Haie
+            '"SLOTH"': faultiere
             '"UNICORN"': Einhörner
       Dancelab_setTintInline:
         text: stellen Sie {SPRITE} Farbton auf {VAL}
@@ -738,6 +762,7 @@ de:
             '"PINEAPPLE"': alle Ananas
             '"ROBOT"': alle Roboter
             '"SHARK"': alle Haie
+            '"SLOTH"': faultiere
             '"UNICORN"': Einhörner
           VISIBILITY:
             'true': sichtbar
@@ -772,6 +797,7 @@ de:
             '"PINEAPPLE"': alle Ananas
             '"ROBOT"': alle Roboter
             '"SHARK"': alle Haie
+            '"SLOTH"': faultiere
             '"UNICORN"': Einhörner
           PROPERTY:
             '"scale"': Größe
@@ -816,6 +842,7 @@ de:
             '"PINEAPPLE"': alle Ananas
             '"ROBOT"': alle Roboter
             '"SHARK"': alle Haie
+            '"SLOTH"': faultiere
             '"UNICORN"': Einhörner
           PROPERTY:
             '"scale"': Größe
@@ -837,15 +864,25 @@ de:
             '"music_wave"': Wellen
             '"ripples"': Ripples
             '"ripples_random"': Zufällige Ripples
+            '"quads"': Winkel
             '"flowers"': Blumen
+            '"popsicles"': Eis am Stiel
+            '"squiggles"': Schnörkel
+            '"growing_stars"': Wachsende Sterne
+            '"emojis"': Emojis
             '"hearts_colorful"': Herzen
+            '"paint_drio"': Tropfende Farbe
+            '"exploding_stars"': Starburst
             '"row_top"': obere Reihe
             '"row_bottom"': untere Reihe
             '"column_left"': linke Spalte
             '"column_right"': rechte Spalte
             '"diamond"': Diamant
+            '"mural"': Mural
             '"safari"': Safari
             '"network"': Netzwerk
+            '"highway"': Autobahn
+            '"stream"': Stream
             '"tile"': Kachel
             '"shadow"': Schatten
             '"s"': s
@@ -963,6 +1000,7 @@ de:
             '"direction"': Bewegungsrichtung
             '"tint"': Farbton
       gamelab_getThisSprite:
+        text: "{CHOICE} Sprite"
         options:
           CHOICE:
             '"this"': dies
@@ -1291,6 +1329,7 @@ de:
       Mikelab_hasBehavior:
         text: "{SPRITE} ist aktuell {BEHAVIOR}"
       Mikelab_hideFish:
+        text: entferne {TRASH}
         options:
           TRASH:
             object: Objekt
@@ -1434,11 +1473,14 @@ de:
       Vector_vectorNorth:
         text: Nord
       Vector_where:
+        text: für jedes Sprite bei dem {PROPERTY} den Wert {VALUE} hat mache {STATEMENT}
         options:
           PROPERTY:
             "'shapeColor'": Farbe
       aalab_addBehaviorUntilBoolean:
         text: "{SPRITE} beginnt {BEHAVIOR} bis {CONDITION}"
+      aalab_createNewSpriteAnonReturn2:
+        text: neues Sprite mit Namen {SPRITE_NAME} mit Kostüm {ANIMATION_NAME} an der Position {LOCATION}
       aalab_goToScene:
         text: gehe zur Szene {SCENE}
         options:

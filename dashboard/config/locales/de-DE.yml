@@ -16,6 +16,13 @@ de:
         zuzugreifen.
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: ist ungültig. Beachte, dass jeder Link nur einmal verwendet
+                werden kann, um das Passwort zurückzusetzen, und nur der zuletzt gesendete
+                Link funktioniert.
       messages:
         blank: ist erforderlich
         blank_plural: ist erforderlich
@@ -47,6 +54,7 @@ de:
           fertigzustellen.
         finish_sign_up_subheader_provider_markdown: Gib folgende Informationen ein
           um dein Code.org-Konto mit **%{provider}** für **%{email}** fertigzustellen.
+        reset_password_token: Den Link zum Zurücksetzen des Passworts hast du befolgt
         error:
           future: darf nicht in der Zukunft liegen
   beta: Beta
@@ -127,6 +135,13 @@ de:
       Code.org account.
     already_linked: Dein %{provider} Account ist bereits verbunden mit deinem Code.org
       Account.
+    existing_account:
+      account_exists: Gute Nachrichten! Du hast bereits ein Code.org-Konto, der %{email}
+        verwendet
+      sign_in: Bitte melden Dich an und wir verlinken Dein %{provider} Profil.
+      sign_up: Nicht deine E-Mail? Möchten Sie ein neues Konto mit einer anderen E-Mail
+        erstellen? Wir werden auch Ihr %{provider}-Profil verlinken, wenn Sie sich
+        für die Erstellung eines neuen Kontos entscheiden.
   signup_form:
     email_signup: Registriere dich mit deiner E-Mail-Adresse
     student_count: "%{count} Schüler haben sich bereits angemeldet."
@@ -277,6 +292,7 @@ de:
     student_associated_subject: Login Informationen for Code.org
   teacher_mailer:
     new_teacher_subject: Willkommen bei Code.org!
+    delete_teacher_subject: 'Code.org Benachrichtigung: Dein Konto wurde gelöscht'
   section:
     your_section:
       one: 'Dein Bereich:'
@@ -419,8 +435,10 @@ de:
       gumball: Die fantastische Welt von Gumball
       iceage: Ice Age
       infinity: Unendlichkeit
+      makerlab: Maker Toolkit
       minecraft_adventurer: Minecraft Abenteurer
       minecraft_aquatic: Minecraft Aquatic
+      minecraft_codebuilder: 'Minecraft: Code Connection'
       minecraft_designer: Minecraft
       minecraft_hero: Minecraft Hero
       playlab: Spielelabor
@@ -482,6 +500,9 @@ de:
       zu bestätigen)"
     delete: Account löschen
     delete_text: Klicken Sie auf der unten stehenden Taste, um Ihren Account zu löschen.
+    delete_text_teacher_managed_note: Du hast keine Berechtigung, dieses Konto zu
+      löschen, da es von deinem Lehrer verwaltet wird. Dein(e) Lehrer müssen dich
+      aus ihren Bereichen entfernen, bevor du dein Konto löschen kannst.
     delete_text_teacher_note: 'Bitte bemerke: Das Löschen Ihres Accounts löscht nicht
       die Accounts Ihrer Schüler.'
     delete_confirm: Sind Sie sicher, dass Sie diesen Beitrag löschen möchten?
@@ -490,12 +511,24 @@ de:
     no_password_because_sponsored: Wende dich an deinen Lehrer um dich um dein Passwort
       zu kümmern.
     create_personal_login: Erstelle ein persönliches Login
+    create_personal_login_under_13_info: Wenn du dein Code.org-Konto auch nach dem
+      Ende des Schuljahres weiter nutzen möchtest, bitte deinen Elternteil/Vormund,
+      dir zu helfen, dein persönliches Login zu erstellen.
     create_personal_login_under_13_username: Beutzername (benutze nicht deinen echten
       Namen!)
+    create_personal_login_under_13_parent_email: Eltern / Erziehungsberechtigten E-Mail-Adresse
     create_personal_login_info: Wenn du dein Code.org-Konto auch nach dem Ende des
       laufenden Schuljahres weiterverwenden möchtest, kannst du unten dein eigenes
       Login-Konto erstellen.
+    create_personal_login_link_account: Sie können stattdessen auch die Verbindung
+      zu einem persönlichen Konto im Abschnitt "Verknüpfte Konten verwalten" wählen.
     enter_new_login_info: Gib deine neuen Login-Informationen ein
+    confirm_secret_words: Bestätige, dass du es bist, indem du deine aktuellen Geheimwörter
+      eingibst
+    parent_email_label: E-Mail der Eltern/Vormund (optional)
+    parent_email_hint: "(dies kann für die Passwort-Wiederherstellung verwendet werden)"
+    enter_parent_email: Gib die E-Mail-Adresse deines Elternteils oder Erziehungsberechtigten
+      ein (zur Wiederherstellung des Passworts)
     update: Konto aktualisieren
     account_successfully_updated: Konto erfolgreich aktualisiert.
     update_email: Aktualisieren
@@ -543,6 +576,8 @@ de:
     test_videos_help: Teste unseren neuen Video-Player an deiner Schule
     try_beta_courses: Neu! Probieren Sie unsere Beta-Kurse für Grundschüler
     use_as_teacher: Verwenden Sie diese Seite als Lehrer
+    heading_elementary_markdown: "## 20-stündige Kurse mit den \n\n# Grundlagen der
+      Informatik (für alle Altersstufen)"
     your_gallery: Galerie
     no_primary_course: Probiere einen Code-Studio-Kurs aus
     choose_next_course: Wähle einen der Code-Studio-Kurse unten aus
@@ -560,6 +595,8 @@ de:
       Sektion eingeschrieben sein.
     already_enrolled_in_new_section: Sie können diese Schüler nicht bewegen, weil
       dieser Lehrer sie bereits in einer anderen Sektion hat.
+    third_party_login: Sie können Schüler nicht in einen Abschnitt verschieben, der
+      mit einem Drittanbieterwerkzeug synchronisiert ist.
   share:
     title: Mit Code Studio lernen
     description: Jeder kann Informatik lernen. Mache Spiele, Apps und Kunst mit Code.
@@ -568,6 +605,7 @@ de:
     male: Männlich
     female: Weiblich
     non_binary: Nicht-binär
+    not_listed: Bevorzugter Termin nicht aufgeführt
     none: Möchte ich nicht beantworten
   user_type:
     student: Schüler
@@ -647,6 +685,9 @@ de:
       gamelab_unsupported_tablet: Game Lab funktioniert am Besten auf einem Desktop-PC
         oder einem Laptop mit Maus und Tastatur. Es könnte Probleme bei der Wiedergabe
         auf deinem jetzigen Gerät geben.
+      oceans_unsupported_browser: Dieser Browser wird für dieses Tutorial nicht unterstützt.
+        Bitte versuche diese Seite mit Edge, Chrome, Firefox oder einem anderen modernen
+        Browser zu besuchen.
       weblab_unsupported_browser: Unglücklicherweise gibt es momentan ein Problem
         beim Laden von Web Lab in diesem Browser. Sie können einen anderen Browser
         verwenden bis das Problem gelöst ist. Wir entschuldigen uns vielmals für die
@@ -788,6 +829,9 @@ de:
         mit einem Kartenspiel.
     widgets:
       title: Widgets
+      body: Die Studenten können Konzepte aus unserem Informatikgrundkurs mit diesen
+        digitalen Werkzeugen praktisch erproben. Verwenden Sie die Widgets einzeln
+        oder erstellen Sie eine Lektion mit einem Konzept für Ihre Klasse.
       audience: Ab 14 Jahren
       cta: Lerne wie
   gallery:
@@ -810,6 +854,8 @@ de:
     header_artist: Code-Kunst
     report_abuse: Missbrauch melden
   landing:
+    prerelease_tutorial: Diese Anleitung ist in der **Beta**-Version.  Sie wird nach
+      Rückmeldungen noch überarbeitet und verbessert.
     report_bug: Fehler melden
     support: Hilfe erhalten
     support_url: "//support.code.org"
@@ -835,6 +881,10 @@ de:
     hide_survey_last_answer: Diese Umfrage ist anonym.  Bitte öffnen Sie das Lehrer-Dashboard,
       um die Ergebnisse anzusehen. Beachten Sie, dass Ergebnisse nur angezeigt werden,
       sofern mindesten fünf Teilnehmer an der Umfrage teilgenommen haben.
+    survey_submission_thankyou: Vielen Dank, dass du diese Umfrage eingereicht hast!
+      Die Umfrage wurde gelöscht, so dass Deine Antworten anonym bleiben. Beachte,
+      dass Dein Lehrer weiterhin Antworten für die gesamte Klasse sehen kann, jedoch
+      ohne Namen.
   level_group-submittable:
     wrong_title: Vielen Dank
     wrong_body: Vielen Dank für das Einsenden Ihrer Fragen.
@@ -886,6 +936,13 @@ de:
   age_interstitial:
     age: Dein Alter
     header: Aktualisieren der Kontoinformationen
+    warning: Wir sind dabei, unsere Erfahrungen zu aktualisieren, um Ihnen einen noch
+      besseren Datenschutz zu bieten. Dazu benötigen wir bestehende Benutzer, die
+      hier ihr Alter eingeben.
+    disclaimer: Wie immer wird code.org diese Informationen niemals an Dritte vermieten,
+      verkaufen oder weitergeben.
+    sign_out_markdown: Wenn Sie Ihr Alter nicht angeben möchten, können Sie sich [sign
+      out](%{url}).
   terms_interstitial:
     title: Aktualisierte Nutzungsbedingungen und Datenschutzerklärung
     intro_desc: 'Wir haben unsere Nutzungs- und Datenschutzbestimmungen aktualisiert.
@@ -930,6 +987,11 @@ de:
       akzeptieren.
     review_terms: Aktualisierte Bedingungen ansehen
   school_info_interstitial:
+    title: Wir wollen jedem Schüler die Informatik näher bringen - helfen Sie uns,
+      unsere Fortschritte zu verfolgen!
+    message: Bitte geben Sie unten Ihre Schuldaten ein.
+    message_with_suggestion: Bitte überprüfen Sie, ob die folgenden Informationen
+      korrekt sind, oder aktualisieren Sie sie gegebenenfalls.
     save: Speichern
   race_interstitial:
     title: 'Optional: Helfen Sie uns, unsere Fortschritte zur Verbesserung der Vielfalt
@@ -983,6 +1045,8 @@ de:
       für andere freigibst. Gib sie nur für Personen in deiner Schule frei.
     embed: Einbetten
     advanced_share: Erweiterte Optionen anzeigen
+    no_projects: Sie haben derzeit keine Projekte. Klicken Sie auf eine der obigen
+      Schaltflächen, um ein Projekt zu starten.
     name: Name
     updated: Aktualisiert
     project_type: Projekttyp
@@ -990,10 +1054,18 @@ de:
       etwas</strong>, um ein neues App- oder Künstlerprojekt zu machen! <br/> Du kannst
       immer wieder zurückkommen und an Deinen Projekten arbeiten.
     need_help: Brauchst du Hilfe bei den ersten Schritten?
+    thumbnail_help: Sie sehen nicht die richtige Miniaturansicht für Ihr Projekt?
+      Führen Sie Ihre App aus, um ein neues Miniaturbild zu erstellen. Beachten Sie,
+      dass es einige Stunden dauern kann, bis die Miniaturansicht überall aktualisiert
+      wird.
     saved: Gespeichert
     not_saved: Nicht gespeichert
     view_all: Meine Projekte ansehen
     edit_project: Projekt bearbeiten
+    sharing_disabled: Sorry, dieses Projekt ist nicht für die Freigabe verfügbar.
+      Wenn es sich um Ihr Projekt oder das Projekt eines Ihrer Schüler handelt, melden
+      Sie sich bitte <a href='https://studio.code.org/users/sign_in'>bei Ihrem Konto</a>
+      an, um das Projekt zu sehen.
     abuse:
       tos: Dieses Projekt wurde wegen Verstoßes gegen die <a href='http://code.org/tos'>
         Nutzungsbedingungen </a> von Code.org gemeldet und kann nicht mit anderen
@@ -1053,6 +1125,7 @@ de:
     csf_jigsaw: Puzzle
     csf_loops: Schleifen
     csf_events: Ereignisse
+    csf_online_safety: Online-Sicherheit
     csf_binary: Binärdatei
     csf_conditionals: Bedingungen
     csf_nested_loops: Verschachtelte Schleifen
@@ -1061,9 +1134,24 @@ de:
     csf_for_loops: '"Zähle mit"-Schleifen'
     csf_internet: Internet
     csf_warmup: Aufwärmübung
+    csd1_1: 'Kapitel 1: Der Problemlösungsprozess'
+    csd1_2: 'Kapitel 2: Computer und Problemlösung'
+    csd2_1: 'Kapitel 1: Webinhalte und HTML'
+    csd2_2: 'Kapitel 2: Styling und CSS'
+    csd3_1: 'Kapitel 1: Bilder und Animationen'
+    csd3_2: 'Kapitel 2: Erstellen von Spielen'
+    csd4_1: 'Kapitel 1: Benutzerzentriertes Design'
+    csd4_2: 'Kapitel 2: App Prototyping'
+    csd5_1: 'Kapitel 1: Darstellung von Informationen'
+    csd5_2: 'Kapitel 2: Datenprobleme lösen'
+    csd6_1: 'Kapitel 1: Programmierung mit Hardware'
+    csp1_1: 'Kapitel 1: Darstellung und Übertragung von Informationen'
     cspSurvey: Umfrage
+    csp_postap_1: 'Kapitel 1: Daten manipulieren und visualisieren'
+    csp_postap_2: 'Kapitel 2: Apps und Datenbanken'
     csp2_1_2018: 'Einheit 2: Digitale Informationen'
     csp3_1_2018: 'Einheit 3: Einführung in die Programmierung'
+    csp4_1_2018: 'Lektion 4: Big Data und Datenschutz'
     csp_variables: Variablen
     csp_conditionals: Bedingungen
     csp_functions: Funktionen
@@ -1071,13 +1159,18 @@ de:
     csp_lists: Listen
     csp_loops: Schleifen
     csp_libraries: Bibliotheken
+    csp_parameters_return_values: Parameter und Rückgabewerte
     time4cs_c1: Everglades und seine Ökosysteme
     time4cs_c2: Nahrungsketten in den Everglades
     time4cs_c3: Leben in den Everglades
     time4cs_c4: Invasive Auswirkungen auf die Everglades
     time4cs_c5: Bürger beeinflussen den Wandel in den Everglades
+    time4cs_c6: Bedingungen (Überprüfung)
     k5_getting_started: Erste Schritte
+    k5_csf_intro: Lernen Sie die CS Fundamentals Kurse kennen
+    k5_coding_concepts: Kodierungskonzepte und Unterrichtsstrategien
     k5_next_steps: Nächste Schritte
+    k5_basic_concepts: Grundlegende Kodierungskonzepte und Unterrichtsmethoden
   external_links:
     disclaimer: Haftungsausschluss
     leaving_domain: |-
@@ -1157,6 +1250,9 @@ de:
     Lehrer, in welcher Lerneinheit du sein solltest.
   no_script_access_student: Du hast keinen Zugriff auf diese Lerneinheit. Bitte frag
     Deinen Lehrer, auf welcher Lerneinheit du sein solltest.
+  no_script_access_teacher: Sie haben keinen Zugriff auf dieses Gerät. Wenn Sie glauben,
+    dass Sie Zugang zu diesem Gerät haben sollten, schreiben Sie bitte an support@code.org,
+    damit wir die Situation beheben können.
   return_unit_overview: Gehe zur Übersicht der Einheit
   return_course_overview: Gehe zur Übersicht
   view_all_units: Alle Einheiten anzeigen
@@ -1164,20 +1260,42 @@ de:
   pd:
     form_labels:
       first_name: Vorname
+      first_name_preferred: Bevorzugter Vorname
       last_name: Nachname
       email: E-Mail
       email_alternate: Alternative E-Mail
+      gender: Geschlechtsidentität
       school_name: Schulname
       school_city: Stadt der Schule
       school_country: Land der Schule
+      ages: Welches Alter unterrichten Sie in diesem Jahr?
+      subjects: Welches Fach / welche Fächer unterrichten Sie in diesem Jahr?
+      resources: Welche der folgenden informatischen Bildungsressourcen nutzen Sie?
+      robotics: Welche der folgenden Robotik-Ressourcen verwenden Sie?
+      workshop_organizer: Workshop-Veranstalter(in)
+      workshop_facilitator: Workshop-Moderator(in)
+      workshop_course: Workshop-Kurs
       email_opt_in: Dürfen wir Ihnen per E-Mail Informationen über das internationale
         Programm von Code.org, Updates unserer Kurse oder andere Neuigkeiten aus der
         Informatik zukommen lassen?
+      legal_opt_in: 'Mit dem Absenden dieses Formulars erklären Sie sich damit einverstanden,
+        dass Code.org Informationen darüber, wie Sie Code.org und die Ressourcen für
+        professionelles Lernen nutzen, an die internationalen Partner von Code.org
+        in Ihrem Land, Schulbezirk und an Moderatoren weitergibt. Wir werden Ihre
+        Kontaktinformationen, welche Kurse/Einheiten Sie verwenden, an diese Partner
+        weitergeben und Daten über Ihre Kurse sammeln. Dazu gehören die Anzahl der
+        Schüler in Ihrem Unterricht, die demografische Aufteilung Ihres Klassenzimmers
+        sowie der Name Ihrer Schule und Ihres Bezirks. Wir werden keine Informationen
+        über einzelne Schüler an unsere Partner weitergeben: Alle Schülerinformationen
+        werden anonymisiert und zusammengefasst. Unsere internationalen Partner und
+        Moderatoren sind vertraglich verpflichtet, diese Informationen mit der gleichen
+        Vertraulichkeit wie Code.org zu behandeln.'
     form_entries:
       gender:
         male: Männlich
         female: Weiblich
         non_binary: Nicht-binär
+        not_listed: Bevorzugter Termin nicht aufgeführt
         none: Möchte ich nicht beantworten
       school_country:
         canada: Kanada
@@ -1203,6 +1321,7 @@ de:
         efl: Englisch als Fremdsprache
         music: Musik
         art: Kunst
+        other: 'Andere:'
       resources:
         bootstrap: Bootstrap
         codecademy: CodeCademy
@@ -1211,6 +1330,7 @@ de:
         kodable: Kodable
         scratch: Scratch
         tynker: Tynker
+        other: 'Andere:'
       robotics:
         grok: Grok Learning
         kodable: Kodable
@@ -1220,6 +1340,7 @@ de:
         sphero: Sphero
         raspberry: Raspberry Pi
         wonder: Wonder Workshop
+        other: 'Andere:'
       workshop_course:
         csp: Informatik Grundprinzipien
       email_opt_in:
@@ -1242,7 +1363,22 @@ de:
         eine Email schreiben oder im [Lehrerforum](%{teacher_forum_url}) posten!
     logged_out:
       heading: Vielen Dank für Ihr Interesse am Professional Learning Program!
+      body: Um zu beginnen, müssen Sie zuerst in Ihr Code.org-Konto eingeloggt sein.
+        Wenn Sie weitere Informationen über das Programm wünschen, bevor Sie Ihre
+        Anwendung starten, lesen Sie bitte die <a href="%{url}">Übersicht über das
+        Professional Learning Programm</a>.
+    not_teacher:
+      more_markdown: Wenn Sie vor dem Start Ihrer Anwendung weitere Informationen
+        über das Programm wünschen, lesen Sie bitte die Übersicht [Professional Learning
+        Program overview](%{pl_overview}).
+    no_teacher_email:
+      body_markdown: Dein Konto hat keine E-Mail-Adresse. Bitte besuchen Sie Ihre
+        [Kontoeinstellungen](%{user_registration}), um Ihre E-Mail-Adresse hinzuzufügen,
+        bevor Sie dieses Formular ausfüllen.
+  courses_category: Vollständige Kurse
   cookie_banner:
+    message: Indem Sie unsere Website weiter benutzen oder auf "Ich stimme zu" klicken,
+      stimmen Sie der Speicherung von Cookies auf Ihrem Computer oder Gerät zu.
     more_information: Siehe Datenschutzerklärung von Code.org.
     accept: Ich stimme zu
   gdpr_dialog:

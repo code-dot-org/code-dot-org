@@ -117,7 +117,7 @@ de-DE:
         title: Labyrinth Multiple-Choice
         content1: "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500"
         questions:
-        - {}
+        - text: Welcher Anordnung an Bausteinen bringt mich zum Schwein?
         answers:
         - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png"
         - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png"
@@ -128,7 +128,7 @@ de-DE:
         title: Multiple-Choice
         content1: "/script_assets/2-3_images/unplugged/relay_programming_1_q.png"
         questions:
-        - {}
+        - text: Welches Programm erzeugt **nicht** dieses Bild?
         answers:
         - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png"
         - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png"
@@ -147,7 +147,7 @@ de-DE:
         content1: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
           700"
         questions:
-        - {}
+        - text: Was müsstest du reparieren, um daraus einen fertigen Kreis zu machen?
         answers:
         - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png"
         - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png"
@@ -156,13 +156,16 @@ de-DE:
         - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
       2-3 artist functions multi 1:
         title: 'Der Künstler: Funktionen Multiple-Choice Eins'
+        content1: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png,
+          500"
         questions:
         - text: Wähle die richtigen Bausteine, um dieses Bild mit den vorhandenen
             Funktionen zu zeichnen
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png"
       2-3 artist loops match 1:
         content2: Weise die Schleife der Form zu.
         questions:
@@ -247,13 +250,13 @@ de-DE:
         title: Labyrinth Übereinstimmung Eins
         content1: Weise die Puzzle den Blöcken zu.
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png"
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a3.png"
       2-3 maze multi 1:
         title: Multiple-Choice Labyrinth Eins
         content1: "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500"
@@ -300,12 +303,14 @@ de-DE:
         - text: "<h3>Räder/Seite: 2<br/>Fenster/Seite: 6</h3>"
         - text: "<h3>Räder/Seite: 3<br/>Fenster/Seite: 2</h3>"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png"
       4-5 Computational Thinking Multi 1:
         title: Multiple-Choice
+        content1: Hier sind drei Sätze. Welche der folgenden Vorlagen abstrahiert
+          korrekt, so dass alle drei mit dem gleichen Muster wie die Vorlage übereinstimmen?
         questions:
         - text: Berlin ist eine große Stadt. <br/> Bielefeld ist eine mittelgroße
             Stadt. <br/> Werl ist eine kleine Stadt.
@@ -320,8 +325,9 @@ de-DE:
         questions:
         - text: Welches dieser Bilder repräsentiert Crowdsourcing am besten?
         answers:
-        - {}
-        - correct: true
+        - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png"
+          correct: true
       4-5 Crowdsourcing Multi 2:
         title: Multiple-Choice
         questions:
@@ -345,16 +351,19 @@ de-DE:
         - text: Die Kreditkartennummer deiner Eltern
       4-5 Internet Multi 1:
         title: Multiple-Choice
+        content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
         questions:
         - text: Wenn du versuchst, dich bei code.org anzumelden, zu welcher IP-Adresse
             bringt der DNS dich am wahrscheinlichsten?
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: 23.23.224.106
+        - text: 54.209.61.132
+        - text: 64.14.68.10
+        - text: 54.243.71.82
+          correct: true
       4-5 Internet Multi 2:
         title: Multiple-Choice
+        content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
         questions:
         - text: Wenn der DNS sie zu der Seite mit der IP-Adresse 100.42.50.110 geleitet
             hat, auf welcher Seite sind sie?
@@ -366,6 +375,7 @@ de-DE:
         - text: khanacademy.org
       4-5 Songwriting Multi 1:
         title: Multiple-Choice
+        content1: "/script_assets/4-5_images/unplugged/songwriting_1_q.png"
         questions:
         - {}
         answers:
@@ -373,17 +383,22 @@ de-DE:
         - text: Lou, Lou, spring zu my Lou <br/> Lou, Lou, spring zu my Lou <br/>
             Lou, Lou, sspring zu Lou <br/> spring zu my Lou, mein Liebling.
           correct: true
-        - {}
-        - {}
+        - text: Lou, Lou, spring zu my Lou <br/> Lou, Lou, spring zu Lou <br/> Lou,
+            Lou, spring zu my Lou <br/> spring zu my Lou, mein Schätzchen. <br/> <br/><p>Fly
+            in der Buttermilch, <br/>Fliege Husch, Husch,
+        - text: Fliegen in der Buttermilch, <br/> Husch, fliege, Husch, <br/> Fliege
+            in der Buttermilch, <br/> Husch, fliege, Husch, <br/> Fliege in der Buttermilch,
+            <br/> Husch, fliege, Husch, <br/> spring zu my Lou, mein Liebling.
       4-5 Suncatchers Match 1:
         title: Passend
         content1: Weise jedem Programm die Wörter zu, die es bildet, mithilfe der
           vorhandenen Fähigkeitsgruppen.
+        content2: "/script_assets/4-5_images/unplugged/suncatchers_1.png"
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a2.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a3.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png"
         answers:
         - text: "<h4>STACK</h4>"
         - text: "<h4>STAMP</h4>"
@@ -391,97 +406,116 @@ de-DE:
         - text: "<h4>RAMP</h4>"
       4-5 Suncatchers Multi 1:
         title: Multiple-Choice
+        content1: "/script_assets/4-5_images/unplugged/suncatchers_2_q.png"
         questions:
         - text: Welches der unteren Programme <em>erstellt nicht</em> genau dieselbe
             Sequenz wie das Programm 1?
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png"
+          correct: true
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png"
       4-5 artist loops multi 1:
         title: Künstler Schleifen Multiple-Choice
+        content1: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png,
+          500"
         questions:
         - text: Welche Bausteine erstellen das Design?
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png"
       4-5 artist multi 1:
         title: Künstler Multiple-Choice
         questions:
         - text: Welche Bausteine zeichnen ein Rechteck mit einen Umfang von 100?
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png"
       4-5 artist multi 2:
         title: Künstler Multiple-Choice
         questions:
         - text: Welche Zeichnung ist symmetrisch?
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png"
+          correct: true
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png"
       4-5 bee conditionals multi 1:
         title: Biene Bedingungen Multiple-Choice
+        content1: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png"
         questions:
         - text: Wähle die besten Bausteine.
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png"
+          correct: true
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png"
       4-5 bee debug multi 1:
         title: Biene Debug Multiple-Choice
+        content1: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png"
+        content2: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png"
         questions:
         - text: Welche Version der Funktion funktioniert?
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a3.png"
+          correct: true
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png"
       4-5 bee loops multi 1:
         title: Biene Schleifen Multiple-Choice
+        content1: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png"
         questions:
         - text: Welche Bausteine werden die Aufgabe lösen?
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png"
       4-5 maze conditionals multi 1:
         title: Labyrinth Bedingungen Multiple-Choice
+        content1: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png,
+          500"
         questions:
         - text: Welche Bausteine lösen die Aufgabe?
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png"
       4-5 maze match 1:
         title: Labyrinth Übereinstimmung
         content1: Weise die Puzzle den Blöcken zu.
         pre_title: Anweisungen
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png"
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a3.png"
       4-5 maze multi 1:
         title: Labyrinth Multiple-Choice
+        content1: "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500"
         questions:
         - text: Welche Bausteine lösen die Aufgabe?
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png"
       Begin planning your project:
         title: Titel
         content1: hier die Beschreibung
@@ -1205,7 +1239,7 @@ de-DE:
 
           Für Teil 2 wirst du Dein eigenes Projekt erstellen. Es gibt hier keine Rätsel - stattdessen gibt es eine Reihe von Projekten, die verschiedene Wege aufzeigen, komplexere Tanzpartys zu gestalten.
 
-          Du kannst diese Stufen _in beliebiger Reihenfolge_ durchführen. Springe herum, um zu sehen, wie etwas in einer früheren Ebene gemacht wurde, oder kombiniere Konzepte zwischen den Projekten. Probiere alle aus, wähle Deine Favoriten und verbringe Deine Zeit damit, dieses Projekt zu ergänzen, um es zu Deinem eigenen zu machen.
+          Du kannst diese Stufen in beliebiger Reihenfolge durchführen. Springe herum, um zu sehen, wie etwas in einem früheren Level gemacht wurde, oder kombiniere Konzepte aus verschiedenen Projekten. Probiere alle aus, wähle Deine Favoriten und verbringe Deine Zeit damit, dieses Projekt zu erweitern, um es zu Deinem eigenen zu machen.
 
           <a class="btn btn-large btn-primary next-stage submitButton pull-right">Weiter</a>
 
@@ -2324,6 +2358,21 @@ de-DE:
         - text: D
           correct: true
           feedback: Richtig!
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
       courseD_multi_artist_binary8_predict1_2018:
         questions:
         - {}
@@ -2334,6 +2383,21 @@ de-DE:
         - text: D
           correct: true
           feedback: Richtig!
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
       courseD_multi_artist_binary8_predict1_2018_2019:
         questions:
         - {}
@@ -2344,6 +2408,21 @@ de-DE:
         - text: D
           correct: true
           feedback: Richtig!
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
       courseD_multi_artist_nestedLoops9_predict1:
         questions:
         - {}
@@ -2995,3 +3074,5 @@ de-DE:
         - text: Ich weiß es nicht.
           feedback: Laurel versucht Schätze einzusammeln an Stellen, wo kein Schatz
             ist, und das verursacht einen Fehler.
+      gradek1_activity_beNice:
+        title: Der Computer ist dein Freund
