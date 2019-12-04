@@ -408,6 +408,7 @@
   "downloadAssessmentCSV": "Last ned en CSV-fil med elevbesvarelser",
   "downloadFeedbackCSV": "Last ned en CSV-fil med tilbakemeldinger",
   "downloadReplayVideoButtonDownload": "Animasjon",
+  "downloadReplayVideoButtonError": "Beklager, vi klarte ikke å laste ned animasjonen din. Forsøk å kjøre prosjektet ditt på nytt og forsøk en gang til.",
   "dropletBlock_addOperator_description": "Legg til to tall",
   "dropletBlock_addOperator_signatureOverride": "Legg til operatør",
   "dropletBlock_andOperator_description": "Returnerer TRUE når begge uttrykkene er sanne og FALSE ellers",
