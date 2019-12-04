@@ -51,7 +51,7 @@ nl-NL:
 
         -   Door '(Volgende)', '(Vorige)' of '(Willekeurig)' te kiezen zorg je dat je danser elke keer als de code wordt uitgevoerd een andere move doet.
       CourseD_Dance_Party_06: |-
-        -   We hebben meer dansers nodig!\*
+        _We hebben meer dansers nodig!_
 
         Maak een achtergronddanser genaamd 'achtergronddanser1' om met de kat te dansen.
       CourseD_Dance_Party_08: |-
@@ -60,7 +60,8 @@ nl-NL:
         Je kunt het laten lijken alsof een danser op de achtergrond staat door hun _grootte_ kleiner te maken. Kun je beide achtergronddansers dezelfde grootte geven?
       CourseD_Dance_Party_09: |-
         Dansers hebben een "tint" eigenschap waarmee je hun kleur bepaalt. Probeer de tint van een van je dansers eens te veranderen.
-        \*Tinten mengen de kleur die je kiest met de kleuren van de danser.
+
+        -   Tinten mengen de kleur die je kiest met de kleuren van de danser.
       CourseD_Dance_Party_10: |-
         Nu weten we hoe we de eigenschappen van dansers kunnen veranderen. We kunnen deze eigenschappen ook automatisch op de muziek laten reageren met behulp van dit blok:
         <xml>
@@ -161,6 +162,10 @@ nl-NL:
         &quot;CAT&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;,
         &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title>\n    <title name=\"LAYOUT\">\"circle\"</title>\n
         \ </block></xml>\nNu kun je in één keer een stel dansers maken!"
+      Dance_2019_07: |-
+        Elke danser heeft een set_eigenschappen_ die bepaalt hoe het eruit ziet.
+
+         Gebruik <xml><block type="Dancelab_setPropEach" block-text="the set block"><title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title><title name="PROPERTY">"scale"</title><title name="VAL">???</title></block></xml> onder een groen eventblok om de dansers dichter of verder weg te laten lijken.
       Dance_2019_08: Dansers hebben een "tint"-eigenschap die een laagje kleur kan
         toevoegen. Probeer de tint van een van je dansers (of een hele groep) te veranderen!
       Dance_2019_09: "Dit is een speciaal soort gebeurtenis dat steeds opnieuw wordt
@@ -195,7 +200,7 @@ nl-NL:
 
         -   Door '(Volgende)', '(Vorige)' of '(Willekeurig)' te kiezen zorg je dat je danser elke keer als de code wordt uitgevoerd een andere move doet.
       Dance_Party_06: |-
-        -   We hebben meer dansers nodig!\*
+        _We hebben meer dansers nodig!_
 
         Maak een achtergronddanser genaamd 'achtergronddanser1' om met de kat te dansen.
       Dance_Party_08: |-
@@ -204,7 +209,8 @@ nl-NL:
         Je kunt het laten lijken alsof een danser op de achtergrond staat door hun _grootte_ kleiner te maken. Kun je beide achtergronddansers dezelfde grootte geven?
       Dance_Party_09: |-
         Dansers hebben een "tint" eigenschap waarmee je hun kleur bepaalt. Probeer de tint van een van je dansers eens te veranderen.
-        \*Tinten mengen de kleur die je kiest met de kleuren van de danser.
+
+        -   Tinten mengen de kleur die je kiest met de kleuren van de danser.
       Dance_Party_10: |-
         Nu weten we hoe we de eigenschappen van dansers kunnen veranderen. We kunnen deze eigenschappen ook automatisch op de muziek laten reageren met behulp van dit blok:
         <xml>
@@ -237,12 +243,6 @@ nl-NL:
         je op de linkerpijltoets drukt. Zorg dat de Robot "naar de grond gaat" door
         op de rechterpijltoets te drukken.
       Dance_Party_12: Ga helemaal los! Maak je eigen dans om te delen met je vrienden.
-      Dance_Party_extras_alternate_2019: "# Laten we in positie gaan staan!\n\nBekijk
-        deze dans die gebruik maakt van het blok [blockly block][0] om de positie
-        van de back-up dansers tijdens de dans te veranderen. Probeer een van deze
-        ideeën uit om het uit te breiden: \n\n-   Creëer een tweede groep dansers
-        in een andere lay-out\n-   Wijzig de lay-out wanneer een toets wordt ingedrukt
-        \n-   Wijzig een eigenschap wanneer de dansers van positie veranderen"
       Dance_Party_extras_battle: |-
         # Dancecrews
 
@@ -269,10 +269,6 @@ nl-NL:
         -   Experimenteer met andere nootlengtes (zoals 0,5 voor een halve noot of 0,125 voor een achtste noot).
         -   Voeg gebeurtenissen 'na de maat' toe.
         -   Wissel "maten" om met "seconden" en probeer de dans op die manier te timen.
-      Dance_Party_extras_every_beat_2019: |-
-        # Versnellen, vertragen
-
-        Deze laatste dans gebruikt het blok [blocky block][0] om te bepalen hoe snel elke danser beweegt. Probeer te experimenteren met verschillende snelheden tijdens verschillende punten in het nummer. Voel je vrij om aan deze dans te blijven sleutelen, of terug te keren naar een van de vorige dansen om ze nog gaver te maken.
       Dance_Party_extras_layout: |-
         # Ga in positie staan!
 
@@ -281,6 +277,13 @@ nl-NL:
         -   Maak een tweede groep dansers met een andere lay-out
         -   Verander de lay-out door een toets in te drukken
         -   Verander een eigenschap wanneer de dansers van positie wisselen
+      Dance_Party_extras_layout_2019: "# Laten we in positie gaan staan!\n\nBekijk
+        deze dans die gebruik maakt van het blok <xml><block type=\"Dancelab_layoutSprites\"
+        block-text=\"layout\"><title name=\"GROUP\">\"MOOSE\"</title><title name=\"FORMAT\">???</title></block></xml>
+        om de positie van de back-up dansers tijdens de dans te veranderen. Probeer
+        een van deze ideeën uit om het uit te breiden: \n\n-   Creëer een tweede groep
+        dansers in een andere lay-out\n-   Wijzig de lay-out wanneer een toets wordt
+        ingedrukt \n-   Wijzig een eigenschap wanneer de dansers van positie veranderen"
       Dance_Party_extras_on_beat: |-
         # Bass, mid en treble
 
@@ -296,7 +299,7 @@ nl-NL:
       Dance_Party_extras_speed_2019: |-
         # Versnellen, vertragen
 
-        Deze laatste dans gebruikt het blok [blocky block][0] om te bepalen hoe snel elke danser beweegt. Probeer te experimenteren met verschillende snelheden tijdens verschillende punten in het nummer. Voel je vrij om aan deze dans te blijven sleutelen, of terug te keren naar een van de vorige dansen om ze nog gaver te maken.
+        Deze laatste dans gebruikt het blok <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> om te bepalen hoe snel elke danser beweegt. Probeer te experimenteren met verschillende snelheden tijdens verschillende punten in het nummer. Voel je vrij om aan deze dans te blijven sleutelen, of terug te keren naar een van de vorige dansen om ze nog gaver te maken.
       Dance_Party_extras_visible: |-
         # Waar zijn ze heen?
 
@@ -305,14 +308,13 @@ nl-NL:
         -   Voeg nog een groep dansers toe
         -   Laat dansers verschijnen en verdwijnen met behulp van de pijltoetsen
         -   Verberg alle dansers en schakel over naar een spannend achtergrondeffect
-      Dance_Party_extras_visible_2019: |-
-        # Waar zijn ze heen?
-
-        Deze dans toont en verbergt twee verschillende groepen van dansers. Bekijk hem eens, en probeer dan je eigen touch toe te voegen.
-
-        -   Voeg nog een groep dansers toe
-        -   Laat dansers verschijnen en verdwijnen met behulp van de pijltoetsen
-        -   Verberg alle dansers en schakel over naar een spannend achtergrondeffect
+      Dance_Party_extras_visible_2019: "# Kwartnoten\n\nDe meeste van onze dansen
+        hebben hele maten gebruikt, maar elke maat bestaat uit 4 kwartnoten. Deze
+        dans maakt gebruik van [blockly block][0] om de danser na de 5e maat op elke
+        kwartnoot te laten klappen. \n\nProbeer de nummers in het blok te veranderen
+        om te zien hoe het de dans verandert. \n\n-   Experimenteer met een andere
+        nootduur (zoals 0,5 voor een halve noot of 0,125 voor een achtste noot). \n-
+        \  Voeg enkele andere gebeurtenissen toe."
       Function intro Ryan: "Er is een **function** genaamd 'brug bouwen' in de werkruimte.
         \ Alle code die je nodig hebt om de rivier over te steken, zit hierin! \\\r\n
         \\\r\nMaak twee kleine, groene blokjes vast in je werkruimte om het pad te
