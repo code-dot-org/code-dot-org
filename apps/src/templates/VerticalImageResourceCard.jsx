@@ -95,7 +95,7 @@ class VerticalImageResourceCard extends Component {
     cardIds: PropTypes.array
   };
 
-  logToFirehose = (eventName, overrideData = {}) => {
+  logToFirehose = () => {
     let data = {
       card_options: this.props.cardIds
     };
