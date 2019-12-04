@@ -61,7 +61,7 @@ ADMIN_IDS = %w(
 
 ADMIN_IDS.each do |admin_id|
   ActiveRecord::Base.transaction do
-    User.where(id: admin_id).update!(encrypted_password: nil)
+    User.find_by(id: admin_id).update!(encrypted_password: nil)
 
     raise ActiveRecord::Rollback.new, "Intentional rollback" if DRY_RUN
     puts "Admin password updated - #{admin_id}"
