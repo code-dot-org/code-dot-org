@@ -26,7 +26,7 @@ describe('Model quality test', () => {
       expect(state.mode).toBe(Modes.Predicting);
       expect(state.fishData).toBeTruthy();
       expect(state.fishData.length).toBeGreaterThan(0);
-    });
+    }, 100);
   });
 
   test('fish gets prediction on predict', async () => {
