@@ -3,6 +3,9 @@ zh-TW:
   data:
     blocks:
       Dancelab_alternateMoves:
+        text: |-
+          {GROUP} 每 {N} 小節交替
+          動作 {MOVE1} 和 {MOVE2}
         options:
           GROUP:
             sprites: 全部
@@ -16,6 +19,7 @@ zh-TW:
             '"PINEAPPLE"': 全部鳳梨
             '"ROBOT"': 全部機器人
             '"SHARK"': 全部鯊魚
+            '"SLOTH"': 樹懶
             '"UNICORN"': 獨角獸
           MOVE1:
             MOVES.Roll: Body Roll
@@ -71,6 +75,7 @@ zh-TW:
             '"PINEAPPLE"': 全部鳳梨
             '"ROBOT"': 全部機器人
             '"SHARK"': 全部鯊魚
+            '"SLOTH"': 樹懶
             '"UNICORN"': 全部獨角獸
           MOVE:
             '"next"': 下一個
@@ -124,6 +129,7 @@ zh-TW:
             '"x"': 水平位置
             '"y"': 垂直位置
       Dancelab_changePropEachBy:
+        text: 更改 {GROUP} {PROPERTY} 數值 {VAL}
         options:
           GROUP:
             sprites: 全部
@@ -137,6 +143,7 @@ zh-TW:
             '"PINEAPPLE"': 全部鳳梨
             '"ROBOT"': 全部機器人
             '"SHARK"': 全部鯊魚
+            '"SLOTH"': 樹懶
             '"UNICORN"': 獨角獸
           PROPERTY:
             '"scale"': 尺寸
@@ -160,6 +167,7 @@ zh-TW:
             '"PINEAPPLE"': 全部鳳梨
             '"ROBOT"': 全部機器人
             '"SHARK"': 全部鯊魚
+            '"SLOTH"': 樹懶
             '"UNICORN"': 獨角獸
           MOVE:
             '"rand"': 隨機
@@ -283,6 +291,7 @@ zh-TW:
             MOVES.Thriller: Zombie
             MOVES.Rest: 無
       Dancelab_ifTime:
+        text: "如果 {UNIT} 是 {OP} {N} \n{DO1} {DO2}"
         options:
           UNIT:
             '"measures"': 小節
@@ -306,6 +315,7 @@ zh-TW:
             "{x: 300, y: 300}": 右下
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 隨機
       Dancelab_jumpToEach:
+        text: 讓 {GROUP} 跳到 {LOCATION}
         options:
           GROUP:
             sprites: 全部
@@ -319,6 +329,7 @@ zh-TW:
             '"PINEAPPLE"': 全部鳳梨
             '"ROBOT"': 全部機器人
             '"SHARK"': 全部鯊魚
+            '"SLOTH"': 樹懶
             '"UNICORN"': 獨角獸
           LOCATION:
             "{x: 200, y: 100}": 頂部
@@ -346,6 +357,7 @@ zh-TW:
             '"PINEAPPLE"': 全部鳳梨
             '"ROBOT"': 全部機器人
             '"SHARK"': 全部鯊魚
+            '"SLOTH"': 樹懶
             '"UNICORN"': 獨角獸
           FORMAT:
             '"border"': 邊框
@@ -371,6 +383,7 @@ zh-TW:
             '"PINEAPPLE"': 鳳梨
             '"ROBOT"': 機器人
             '"SHARK"': 鯊魚
+            '"SLOTH"': 樹懶
             '"UNICORN"': 獨角獸
           LOCATION:
             "{x: 200, y: 100}": 頂部
@@ -399,6 +412,7 @@ zh-TW:
             '"PINEAPPLE"': 鳳梨
             '"ROBOT"': 機器人
             '"SHARK"': 鯊魚
+            '"SLOTH"': 樹懶
             '"UNICORN"': 獨角獸
           LOCATION:
             "{x: 200, y: 100}": 頂部
@@ -447,14 +461,20 @@ zh-TW:
             '"PINEAPPLE"': 鳳梨
             '"ROBOT"': 機器人
             '"SHARK"': 鯊魚
+            '"SLOTH"': 樹懶
             '"UNICORN"': 獨角獸
           LAYOUT:
             '"border"': 邊框
             '"inner"': 正方形內部
+            '"diamond"': 鑽石
             '"circle"': 圓形
             '"grid"': 格狀
+            '"top"': 最上排
             '"row"': 橫列
+            '"bottom"': 最底排
+            '"left"': 左欄
             '"column"': 直排
+            '"right"': 右欄
             '"x"': 十字交叉
             '"plus"': 十字加號
             '"random"': 隨機
@@ -517,6 +537,7 @@ zh-TW:
             '"disco_ball"': 迪斯科球
             '"fireworks"': 煙火
             '"flowers"': 花朵
+            '"growing_stars"': 變大的星星
             '"swirl"': 催眠
             '"kaleidoscope"': 萬花筒
             '"lasers"': 鐳射舞池
@@ -526,6 +547,7 @@ zh-TW:
             '"ripples"': 漣漪
             '"snowflakes"': 雪球
             '"text"': 歌曲標題
+            '"squiggles"': 花體
             '"galaxy"': 太空
             '"sparkles"': 火花
             '"spiral"': 螺旋
@@ -566,6 +588,7 @@ zh-TW:
             '"PINEAPPLE"': 全部鳳梨
             '"ROBOT"': 全部機器人
             '"SHARK"': 全部鯊魚
+            '"SLOTH"': 樹懶
             '"UNICORN"': 獨角獸
           SPEED:
             '1': 普通
@@ -600,8 +623,10 @@ zh-TW:
             '"bubbles"': 氣泡
             '"hearts_colorful"': 五彩繽紛的心
             '"confetti"': 紙花
+            '"emojis"': 表情符號
             '"hearts_red"': 愛心
             '"music_notes"': 音符
+            '"paint_drip"': 油漆液滴
             '"pineapples"': 鳳梨
             '"pizzas"': 披蕯
             '"smiling_poop"': 便便
@@ -610,6 +635,7 @@ zh-TW:
             '"smile_face"': 笑臉
             '"spotlight"': 聚光燈
             '"color_lights"': 舞台燈
+            '"exploding_stars"': 星爆
             '"raining_tacos"': 墨西哥捲餅
       Dancelab_setProp:
         text: '角色 {SPRITE} {PROPERTY} 設為 {VAL} '
@@ -636,6 +662,7 @@ zh-TW:
             '"PINEAPPLE"': 全部鳳梨
             '"ROBOT"': 全部機器人
             '"SHARK"': 全部鯊魚
+            '"SLOTH"': 樹懶
             '"UNICORN"': 獨角獸
           PROPERTY:
             '"scale"': 尺寸
@@ -657,7 +684,7 @@ zh-TW:
             '"y"': 垂直位置
             '"tint"': 色調
       Dancelab_setPropRandomEach:
-        text: 隨機化 {GROUP} {PROPERTY}
+        text: 角色 {GROUP} {PROPERTY} 改變 隨機取數
         options:
           GROUP:
             sprites: 全部
@@ -671,6 +698,7 @@ zh-TW:
             '"PINEAPPLE"': 全部鳳梨
             '"ROBOT"': 全部機器人
             '"SHARK"': 全部鯊魚
+            '"SLOTH"': 樹懶
             '"UNICORN"': 獨角獸
           PROPERTY:
             '"scale"': 尺寸
@@ -697,6 +725,7 @@ zh-TW:
             '"PINEAPPLE"': 全部鳳梨
             '"ROBOT"': 全部機器人
             '"SHARK"': 全部鯊魚
+            '"SLOTH"': 樹懶
             '"UNICORN"': 獨角獸
       Dancelab_setTintEachInline:
         text: 角色 {THIS} 色調設為 {VAL}
@@ -713,6 +742,7 @@ zh-TW:
             '"PINEAPPLE"': 全部鳳梨
             '"ROBOT"': 全部機器人
             '"SHARK"': 全部鯊魚
+            '"SLOTH"': 樹懶
             '"UNICORN"': 獨角獸
       Dancelab_setTintInline:
         text: 角色 {SPRITE} 色調設為 {VAL}
@@ -737,6 +767,7 @@ zh-TW:
             '"PINEAPPLE"': 全部鳳梨
             '"ROBOT"': 全部機器人
             '"SHARK"': 全部鯊魚
+            '"SLOTH"': 樹懶
             '"UNICORN"': 獨角獸
           VISIBILITY:
             'true': 可見
@@ -757,6 +788,7 @@ zh-TW:
             '"mid"': 中音
             '"treble"': 高音
       Dancelab_startMappingEach:
+        text: "{GROUP} 開始 {PROPERTY} 跟隨 {RANGE}"
         options:
           GROUP:
             sprites: 全部
@@ -770,6 +802,7 @@ zh-TW:
             '"PINEAPPLE"': 全部鳳梨
             '"ROBOT"': 全部機器人
             '"SHARK"': 全部鯊魚
+            '"SLOTH"': 樹懶
             '"UNICORN"': 獨角獸
           PROPERTY:
             '"scale"': 尺寸
@@ -800,6 +833,7 @@ zh-TW:
             '"mid"': 中音
             '"treble"': 高音
       Dancelab_stopMappingEach:
+        text: "{GROUP} 停止 {PROPERTY} 跟隨 {RANGE}"
         options:
           GROUP:
             sprites: 全部
@@ -813,6 +847,7 @@ zh-TW:
             '"PINEAPPLE"': 全部鳳梨
             '"ROBOT"': 全部機器人
             '"SHARK"': 全部鯊魚
+            '"SLOTH"': 樹懶
             '"UNICORN"': 獨角獸
           PROPERTY:
             '"scale"': 尺寸
@@ -837,8 +872,24 @@ zh-TW:
             '"quads"': 角度
             '"flowers"': 花朵
             '"popsicles"': 冰棒
+            '"squiggles"': 花體
+            '"growing_stars"': 變大的星星
+            '"emojis"': 表情符號
             '"hearts_colorful"': 愛心
+            '"paint_drio"': 油漆液滴
+            '"exploding_stars"': 星爆
+            '"row_top"': 最上排
+            '"row_bottom"': 最底排
+            '"column_left"': 左欄
+            '"column_right"': 右欄
             '"diamond"': 鑽石
+            '"mural"': 壁畫
+            '"safari"': 遊獵
+            '"network"': 網路
+            '"highway"': 高速公路
+            '"stream"': 串流
+            '"tile"': 平鋪
+            '"shadow"': 陰影
             '"s"': s
             '"t"': t
             '"u"': u
@@ -866,6 +917,7 @@ zh-TW:
             '"down"': 向下
             '"right"': 向右
             '"space"': 空白
+            '"enter"': 輸入
             '"a"': a
             '"b"': b
             '"c"': c
@@ -1196,6 +1248,7 @@ zh-TW:
             '"y"': y 座標
             '"direction"': 移動方向
       Mikelab_groupChangeAnim:
+        text: 將 {SELECT}{COSTUME} 更改為 {COSTUME2}
         options:
           SELECT:
             '"all"': 全部
