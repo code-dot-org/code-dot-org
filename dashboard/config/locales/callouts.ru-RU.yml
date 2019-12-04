@@ -19,7 +19,7 @@ ru-RU:
         applab_hoc_finish: Страница стала зеленой? Если да, нажми "Готово". Если нет,
           нажми "Сбросить", исправь код и нажми "Выполнить" снова.
       AppLab Intro 7 - thisOrThatAddButton:
-        AppLabHoCFinal11: Теперь вы в режиме дизайна.
+        AppLabHoCFinal11: Теперь вы в Режиме Дизайна.
       CSD U3 Variables Predict Where X:
         CSD_U3_variables: Поменяйте число здесь
       CSD U3 Variables Predict Where XY:
@@ -162,6 +162,8 @@ ru-RU:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Новый блок!
         dance_callout_11_b: Новый блок!
+      CourseD_Dance_Party_11_5:
+        dance_party_11_5_groups: Ищите блоки «все утки» здесь
       Dance_2019_01:
         dance_callout_01: Добавьте этот блок в вашу программу!
       Dance_2019_02:
@@ -189,6 +191,8 @@ ru-RU:
       Dance_Party_11:
         dance_callout_11_a: Новый блок!
         dance_callout_11_b: Новый блок!
+      Dance_Party_11_5:
+        dance_party_11_5_groups: Ищите блоки «все утки» здесь
       Function intro Ryan:
         Function_intro_Ryan_1: Эта небольшая инструкция дает команду компьютеру выполнить
           БОЛЬШОЙ фрагмент кода с тем же именем в рабочей области.
