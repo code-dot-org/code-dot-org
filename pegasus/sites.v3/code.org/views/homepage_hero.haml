@@ -37,13 +37,7 @@
 
   .clear{style: "clear: both"}
 
-- if show_single_hero == "oceans2019"
-  - hero_style = "position:relative; overflow: hidden; cursor: pointer"
-  - hero_onclick = "location.href='/oceans'"
-- else
-  - hero_style = "position:relative; overflow: hidden"
-
-#hero{style: hero_style, onclick: hero_onclick}
+#hero{style: "position: relative; overflow: hidden"}
   - heroes_arranged.each_with_index do |entry, index|
     -# Preload the first hero image to render immediately, lazy-load the rest to conserve bandwidth.
     - if index == 0
@@ -96,11 +90,11 @@
         %span{style: "white-space: nowrap"}= hoc_s(:codeorg_homepage_hoc2018_musician_after)
 
   - elsif show_single_hero == "oceans2019"
-    #actions{style: "text-align: left"}
+    #actions{style: "text-align: left; cursor: pointer", onclick: "location.href='/oceans'"}
       = main_actions
 
-    .blank{style: "height: 54px"}
-      &nbsp;
+      .blank{style: "height: 54px"}
+        &nbsp;
 
   - elsif show_single_hero
     #actions
