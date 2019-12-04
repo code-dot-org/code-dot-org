@@ -115,10 +115,7 @@ class PersonalProjectsTableActionsCell extends Component {
           </div>
         )}
         <NameFailureDialog
-          flaggedText={
-            this.state.projectNameFailure &&
-            this.state.projectNameFailure.content
-          }
+          flaggedText={this.state.projectNameFailure}
           isOpen={!!this.state.projectNameFailure}
           handleClose={() => {
             this.setState({projectNameFailure: undefined});
