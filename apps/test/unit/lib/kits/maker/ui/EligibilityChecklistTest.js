@@ -59,7 +59,7 @@ describe('EligibilityChecklist', () => {
     const wrapper = shallow(
       <EligibilityChecklist
         {...defaultProps}
-        unit6Intention={Unit6Intention.YES_18_19}
+        unit6Intention={Unit6Intention.YES_SPRING_2020}
         schoolId="12345"
         schoolName="Code.org Junior Academy"
         hasConfirmedSchool={true}
@@ -73,7 +73,7 @@ describe('EligibilityChecklist', () => {
     const wrapper = shallow(
       <EligibilityChecklist
         {...defaultProps}
-        unit6Intention={Unit6Intention.YES_18_19}
+        unit6Intention={Unit6Intention.YES_SPRING_2020}
         schoolId="12345"
         schoolName="Code.org Junior Academy"
         hasConfirmedSchool={true}
@@ -90,7 +90,7 @@ describe('EligibilityChecklist', () => {
     const wrapper = shallow(
       <EligibilityChecklist
         {...defaultProps}
-        unit6Intention={Unit6Intention.YES_18_19}
+        unit6Intention={Unit6Intention.YES_SPRING_2020}
         schoolId="12345"
         schoolName="Code.org Junior Academy"
         hasConfirmedSchool={true}
@@ -108,7 +108,7 @@ describe('EligibilityChecklist', () => {
     const wrapper = shallow(
       <EligibilityChecklist
         {...defaultProps}
-        unit6Intention={Unit6Intention.YES_18_19}
+        unit6Intention={Unit6Intention.YES_SPRING_2020}
         initialDiscountCode="MYCODE"
         initialExpiration="2018-12-31T00:00:00.000Z"
         getsFullDiscount={false}
@@ -121,7 +121,7 @@ describe('EligibilityChecklist', () => {
     const wrapper = shallow(
       <EligibilityChecklist
         {...defaultProps}
-        unit6Intention={Unit6Intention.YES_18_19}
+        unit6Intention={Unit6Intention.YES_SPRING_2020}
         adminSetStatus={true}
         getsFullDiscount={true}
       />
