@@ -10,6 +10,7 @@ ko-KR:
         - text: 사각형에서 시작해서<br/>사각형 위에 삼각형을 그리고<br/>사각형 위에 삼각형을 그리세요.
         - text: 사격형으로부터 시작하여<br/>사각형의 오른쪽에 삼각형을 넣고<br/>사각형의 아래쪽에 평행 사변형을 넣고<br/>평행사변형의
             오른쪽에 삼각형을 넣습니다
+          correct: true
         - text: 사각형으로 시작하세요<br/>사각형의 위쪽에 삼각형을 놓으세요<br/>평행 사변형의 오른쪽에 삼각형을 놓으세요
         - text: 사각형으로 시작하세요<br/>사각형의 아래쪽에 삼각형을 놓으세요<br/>삼각형의 오른쪽에 평행 사변형을 놓으세요
       2-3 Algorithms Multi 2:
@@ -19,7 +20,7 @@ ko-KR:
         - text: 어떤 이미지가 이 알고리즘으로 만들 수 <em>없나요?</em>
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 Big Event Match 1:
@@ -55,14 +56,14 @@ ko-KR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 Getting Loopy Multi 1:
         title: 객관식
         questions:
         - text: 반복을 이용해 이 순차실행을 간단히 할 수 있을까요?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -83,7 +84,7 @@ ko-KR:
         - text: 어떤 프로그램이 이 그림을 그릴 수 있을까요?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 Maze Match 2:
         title: 미로 퍼즐 짝맞추기
@@ -103,7 +104,7 @@ ko-KR:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 Relay Programming Multi 1:
@@ -113,7 +114,7 @@ ko-KR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       2-3 Relay Programming Multi 2:
         title: 객관식
         questions:
@@ -121,13 +122,14 @@ ko-KR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       2-3 artist debug multi 1:
         questions:
         - {}
         answers:
         - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
         - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
+          correct: true
         - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
         - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
       2-3 artist functions multi 1:
@@ -135,7 +137,7 @@ ko-KR:
         questions:
         - text: 주어진 함수들을 사용해서 이미지를 그리기 위해 적당한 블럭들을 선택하세요.
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 artist loops match 1:
@@ -157,7 +159,7 @@ ko-KR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 artist loops multi 2:
         title: 예술가 반복 다중 선택
@@ -167,7 +169,7 @@ ko-KR:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       2-3 artist match 1:
         title: 예술가 똑같이 그리기
         content1: 블럭들을 사용해서 똑같은 모양을 맞추세요.
@@ -187,14 +189,14 @@ ko-KR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 bee conditionals multi 3:
         questions:
         - text: 가장 적합한 블록들을 고르세요.
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 bee loops multi 1:
@@ -202,7 +204,7 @@ ko-KR:
         questions:
         - text: 어떤 블록을 사용해야 꽃꿀을 모두 모을 수 있을까요?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -223,7 +225,7 @@ ko-KR:
         - text: 다음중 어떤 블록들이 정답일까요?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 Algorithms Match 1:
@@ -248,6 +250,7 @@ ko-KR:
         - text: 쿠키를 굽고
         - text: 식료품 리스트를 쇼핑
         - text: 바나나
+          correct: true
       4-5 Computational Thinking Match 1:
         title: 맞추기
         content1: 각각의 자동차들이 조각내어졌습니다. 자동차들의 짝을 맞추세요.
@@ -269,6 +272,7 @@ ko-KR:
         answers:
         - text: 시애틀 _____ _____ _____입니다.
         - text: _____은 _____ 도시입니다.
+          correct: true
         - text: _____ _____는 _____입니다.
         - text: Eugene는 _____ 도시입니다.
       4-5 Crowdsourcing Multi 1:
@@ -278,12 +282,14 @@ ko-KR:
         answers:
         - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png"
         - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png"
+          correct: true
       4-5 Crowdsourcing Multi 2:
         title: 객관식
         questions:
         - text: 클라우드소싱을 연습하기에 가장 좋은 활동은?
         answers:
         - text: 방 청소
+          correct: true
         - text: 디저트를 먹는
         - text: 머리를 빗질하는
         - text: 세수하는
@@ -294,6 +300,7 @@ ko-KR:
         answers:
         - text: 생일
         - text: 좋아하는 음식
+          correct: true
         - text: 주소
         - text: 부모의 신용 카드 번호
       4-5 Internet Multi 1:
@@ -305,7 +312,7 @@ ko-KR:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       4-5 Internet Multi 2:
         title: 객관식
         content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
@@ -313,7 +320,7 @@ ko-KR:
         - text: IP 주소 100.42.50.110 을 입력하면 나오는 웹페이지는?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 Songwriting Multi 1:
@@ -325,6 +332,7 @@ ko-KR:
         - text: Lou, Lou, skip to my Lou,
         - text: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou,
             Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.
+          correct: true
         - text: "? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou,
             Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's
             in the buttermilk, <br/>Shoo, fly, shoo,"
@@ -353,6 +361,7 @@ ko-KR:
         answers:
         - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png"
         - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png"
+          correct: true
         - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png"
       4-5 artist loops multi 1:
         title: 예술가 반복 다중 선택
@@ -360,7 +369,7 @@ ko-KR:
         - text: 어떤 블럭이 같은 모양을 만들어낼 수 있을까요?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 artist multi 1:
@@ -369,7 +378,7 @@ ko-KR:
         - text: 둘레의 길이가 100인 사각형을 그리는 블록들은?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 artist multi 2:
@@ -379,7 +388,7 @@ ko-KR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       4-5 bee conditionals multi 1:
         title: 꿀벌 조건선택 객관식
@@ -389,7 +398,7 @@ ko-KR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       4-5 bee debug multi 1:
         title: 꿀벌 디버깅 객관식
@@ -397,7 +406,7 @@ ko-KR:
         - text: 제대로 동작하는 함수는?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 bee loops multi 1:
@@ -405,7 +414,7 @@ ko-KR:
         questions:
         - text: 어떤 블록이 퍼즐을 해결할 수 있을까요?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -414,7 +423,7 @@ ko-KR:
         questions:
         - text: 어떤 블록이 퍼즐을 해결할 수 있을까요?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -435,7 +444,7 @@ ko-KR:
         questions:
         - text: 어떤 블록이 퍼즐을 해결할 수 있을까요?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -449,19 +458,19 @@ ko-KR:
       CSD Header Size MC:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U1 Lesson 5 Overview:
@@ -658,7 +667,7 @@ ko-KR:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -667,7 +676,7 @@ ko-KR:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -676,7 +685,7 @@ ko-KR:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -688,19 +697,19 @@ ko-KR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018_2019:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Keypress Matching:
         questions:
@@ -735,7 +744,7 @@ ko-KR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Sprite Movement Predict Multi_2018:
         questions:
@@ -743,7 +752,7 @@ ko-KR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019:
         questions:
@@ -751,14 +760,14 @@ ko-KR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Sprites intro predict multi:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U3 Sprites intro predict multi_2018:
@@ -766,7 +775,7 @@ ko-KR:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
@@ -774,7 +783,7 @@ ko-KR:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U3 combining rep:
@@ -875,7 +884,7 @@ ko-KR:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       CSD U6 array multi_2018:
         questions:
         - {}
@@ -883,7 +892,7 @@ ko-KR:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       CSD U6 array multi_2018_2019:
         questions:
         - {}
@@ -891,7 +900,7 @@ ko-KR:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       CSD U6 final intro:
         content1: 설명 입력
       CSD U6 final intro_2018:
@@ -904,7 +913,7 @@ ko-KR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U6 setProperty predict multi_2018:
         questions:
@@ -912,8 +921,31 @@ ko-KR:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
+      Dance_Party_extras_intro:
+        markdown: "# 계속 춤추세요! \n\n파트 2에서는 자신만의 프로젝트를 만듭니다. 여기에는 퍼즐은 없어요. 대신, 더 복잡한
+          댄스 파티를 만드는 다양한 방법들을 보여주는 프로젝트들은 많죠. 다음 레벨들은 _어떤 순서로든_ 할 수 있습니다. \n\n여기저기
+          둘러보며 이전 레벨에서 어떤 식으로 되었는지 알아보거나 여러 프로젝트의 개념을 섞어보세요. 모두 써 보고, 마음에 드는 걸 고른
+          다음, 그걸 저 프로젝트에 추가하는 데 시간을 쏟으며 자신의 것으로 만드세요. \n\n<a class=\"btn btn-large
+          btn-primary next-stage submitButton pull-right\">계속</a>\n\n <div class=\"clearfix\">\n\n</div>
+          <div style=\"float: left; margin: 10px\"> \n<a href=\"2\"> \n<h2>\n 앞뒤로
+          \n</h2> \n\n<img src=\"https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif\"></a>
+          \n\n</div> \n\n<div style=\"float: left; margin: 10px\">\n <a href=\"3\">
+          \n<h2> \n더 많은 단추\n </h2> \n\n<img src=\"https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif\"></a>\n\n
+          </div>\n\n <div style=\"float: left; margin: 10px\"> \n<a href=\"4\"> \n<h2>
+          \n대형을 갖추세요 \n</h2> \n\n<img src=\"https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif\"></a>
+          \n\n</div>\n\n <div style=\"float: left; margin: 10px\"> \n<a href=\"5\">
+          \n<h2> \n어디 갔어요?\n </h2> \n\n<img src=\"https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif\"></a>
+          \n\n</div>\n\n <div style=\"float: left; margin: 10px\"> \n<a href=\"6\">
+          \n<h2> \n댄스 크루 \n</h2> \n\n<img src=\"https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif\"></a>\n\n
+          </div>\n\n <div style=\"float: left; margin: 10px\"> \n<a href=\"7\"> \n<h2>
+          \n4분음표 \n</h2>\n\n <img src=\"https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif\"></a>\n\n
+          </div>\n\n <div style=\"float: left; margin: 10px\">\n <a href=\"8\"> \n<h2>\n
+          저음, 중음, 고음 \n</h2>\n\n <img src=\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\"></a>\n\n
+          </div> \n\n<div style=\"float: left; margin: 10px\"> \n<a href=\"9\">\n
+          <h2> \n빨리빨리, 천천히 천천히\n </h2> \n\n<img src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"></a>\n\n
+          </div>\n"
       Internet Simulator Setup:
         content1: 설명 입력
       Internet Simulator Setup 2:
@@ -927,7 +959,7 @@ ko-KR:
         - text: 어떤 블록이 퍼즐을 해결할 수 있을까요?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Artist 1 Multi 2:
@@ -935,7 +967,7 @@ ko-KR:
         questions:
         - text: 어떤 블록들이 사각형을 그릴 수 있을까요?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -958,7 +990,7 @@ ko-KR:
         - text: 꽃꿀은 몇 개 일까요?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Bee 1 Multi 2:
@@ -969,7 +1001,7 @@ ko-KR:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Bee Loops Match 1:
         title: 맞추기
         content2: 블럭을 맞추세요.
@@ -1001,13 +1033,13 @@ ko-KR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Getting Loopy Multi 1:
         title: 객관식
         questions:
         - text: 반복을 이용해 이 순차실행을 간단히 할 수 있을까요?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Happy Maps Multi 1:
@@ -1017,6 +1049,7 @@ ko-KR:
         answers:
         - {}
         - text: "/script_assets/k_1_images/unplugged_images/down.png"
+          correct: true
         - {}
         - {}
       K-1 Keep it Private Multi 1:
@@ -1024,7 +1057,7 @@ ko-KR:
         questions:
         - text: 온라인으로 공유하지 <strong>말아야 할</strong> 정보는?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Maze Debugging Multi 1:
@@ -1032,7 +1065,7 @@ ko-KR:
         questions:
         - text: 마지막 블록으로 적절한 것은?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1041,7 +1074,7 @@ ko-KR:
         questions:
         - text: 같은 반복 블럭은?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Maze Loops Multi 2:
@@ -1051,7 +1084,7 @@ ko-KR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Maze Match 1:
         title: 맞추기
         content2: 퍼즐들과 블럭들을 맞추세요.
@@ -1073,7 +1106,7 @@ ko-KR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       K-1 Move It Multi 1:
         title: 객관식
@@ -1081,7 +1114,7 @@ ko-KR:
         - text: 어떤 알고리즘이 플러브를 꽃에 보낼 수 있을까요?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Plant a Seed Multi 1:
@@ -1091,14 +1124,14 @@ ko-KR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Plant a Seed Multi 2:
         title: 객관식
         questions:
         - text: 이 알고리즘의 빈 칸에 채워야 하는 것은?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       K-1 Word Search Multi 1:
         title: 객관식
@@ -1106,7 +1139,7 @@ ko-KR:
         - text: '"이동하기" 블록은?'
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       K-1 Word Search Multi 3:
         title: 객관식
@@ -1115,6 +1148,7 @@ ko-KR:
         answers:
         - text: 집합
         - text: 사각형
+          correct: true
         - text: 아래쪽
       Multi-Screen Apps:
         title: 제목화면 주제
@@ -1164,7 +1198,7 @@ ko-KR:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - feedback: 틀림
       behaviors 4 predict:
@@ -1172,7 +1206,7 @@ ko-KR:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - feedback: 틀림
       courseC_multi_artist_prog6_predict1:
@@ -1181,7 +1215,7 @@ ko-KR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseC_multi_artist_prog6_predict1_2018:
         questions:
@@ -1189,7 +1223,7 @@ ko-KR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
         questions:
@@ -1197,38 +1231,41 @@ ko-KR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseC_multi_harvester_loops11_predict1:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
       courseC_multi_harvester_loops11_predict1_2018:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
       courseC_multi_maze_debugging8_predict1:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_debugging8_predict1_2018:
@@ -1236,7 +1273,7 @@ ko-KR:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
@@ -1244,7 +1281,7 @@ ko-KR:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_programming8_predict1:
@@ -1252,7 +1289,7 @@ ko-KR:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_programming8_predict1_2018:
@@ -1260,7 +1297,7 @@ ko-KR:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
@@ -1268,7 +1305,7 @@ ko-KR:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_starWars_predict1:
@@ -1277,7 +1314,7 @@ ko-KR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - text: 잘 모르겠음
       courseC_multi_starWars_predict1_2018:
         questions:
@@ -1285,7 +1322,7 @@ ko-KR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - text: 잘 모르겠음
       courseC_multi_starWars_predict1_2018_2019:
         questions:
@@ -1293,14 +1330,14 @@ ko-KR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - text: 잘 모르겠음
       courseC_multi_starWars_predict2:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_starWars_predict2_2018:
@@ -1308,7 +1345,7 @@ ko-KR:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_starWars_predict2_2018_2019:
@@ -1316,7 +1353,7 @@ ko-KR:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_artist_binary8_predict1:
@@ -1327,6 +1364,7 @@ ko-KR:
         - text: B
         - text: C
         - text: D
+          correct: true
       courseD_multi_artist_binary8_predict1_2018:
         questions:
         - {}
@@ -1335,6 +1373,7 @@ ko-KR:
         - text: B
         - text: C
         - text: D
+          correct: true
       courseD_multi_artist_binary8_predict1_2018_2019:
         questions:
         - {}
@@ -1343,11 +1382,13 @@ ko-KR:
         - text: B
         - text: C
         - text: D
+          correct: true
       courseD_multi_artist_nestedLoops9_predict1:
         questions:
         - {}
         answers:
         - text: A
+          correct: true
         - text: B
         - text: C
         - {}
@@ -1356,6 +1397,7 @@ ko-KR:
         - {}
         answers:
         - text: A
+          correct: true
         - text: B
         - text: C
         - {}
@@ -1364,6 +1406,7 @@ ko-KR:
         - {}
         answers:
         - text: A
+          correct: true
         - text: B
         - text: C
         - {}
@@ -1372,7 +1415,7 @@ ko-KR:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_bee_conditionals1_predict1_2018:
@@ -1380,7 +1423,7 @@ ko-KR:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
@@ -1388,14 +1431,14 @@ ko-KR:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_bee_conditionals7_predict2:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1403,7 +1446,7 @@ ko-KR:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1411,7 +1454,7 @@ ko-KR:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1421,7 +1464,7 @@ ko-KR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
         questions:
@@ -1429,7 +1472,7 @@ ko-KR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         questions:
@@ -1437,31 +1480,34 @@ ko-KR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_bee_nestedLoops9_predict2:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
       courseD_multi_collector_debugging10_predict1:
         questions:
@@ -1469,7 +1515,7 @@ ko-KR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_condLoops9_predict1:
         questions:
@@ -1477,7 +1523,7 @@ ko-KR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
         questions:
@@ -1485,7 +1531,7 @@ ko-KR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         questions:
@@ -1493,14 +1539,14 @@ ko-KR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_ramp13:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_farmer_while10_predict2:
@@ -1508,7 +1554,7 @@ ko-KR:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_farmer_while10_predict2_2018:
@@ -1516,7 +1562,7 @@ ko-KR:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
@@ -1524,7 +1570,7 @@ ko-KR:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_farmer_while4_predict1:
@@ -1533,7 +1579,7 @@ ko-KR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_while4_predict1_2018:
         questions:
@@ -1541,7 +1587,7 @@ ko-KR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
         questions:
@@ -1549,13 +1595,13 @@ ko-KR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_maze_until10_predict2:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1563,7 +1609,7 @@ ko-KR:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1571,7 +1617,7 @@ ko-KR:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1580,7 +1626,7 @@ ko-KR:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_maze_until2_predict1_2018:
@@ -1588,7 +1634,7 @@ ko-KR:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
@@ -1596,7 +1642,7 @@ ko-KR:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_scrat_predict1:
@@ -1604,14 +1650,14 @@ ko-KR:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseE_multi_bee_functions_predict1:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1622,14 +1668,14 @@ ko-KR:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseE_multi_farmer_functions11_predict_2018:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
         questions:
@@ -1637,7 +1683,7 @@ ko-KR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseE_prediction_artistFunction1:
         questions:
@@ -1646,7 +1692,7 @@ ko-KR:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseE_prediction_artistFunction1_2018:
         questions:
         - {}
@@ -1654,7 +1700,7 @@ ko-KR:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseE_prediction_artistFunction1_2018_2019:
         questions:
         - {}
@@ -1662,13 +1708,13 @@ ko-KR:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseF_bee_variables_8a_2018:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_bee_variables_8a_2018_2019:
@@ -1676,7 +1722,7 @@ ko-KR:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_artist_for10_predict1:
@@ -1685,7 +1731,7 @@ ko-KR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseF_multi_artist_for10_predict1_2018:
         questions:
@@ -1693,7 +1739,7 @@ ko-KR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
         questions:
@@ -1701,13 +1747,13 @@ ko-KR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseF_multi_artist_fwp2_predict1:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1715,7 +1761,7 @@ ko-KR:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1723,7 +1769,7 @@ ko-KR:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1731,7 +1777,7 @@ ko-KR:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1740,14 +1786,14 @@ ko-KR:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_bee_conditionals7_predict2:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1756,7 +1802,7 @@ ko-KR:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_bee_for3_predict1_2018:
@@ -1764,7 +1810,7 @@ ko-KR:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_bee_for3_predict1_2018_2019:
@@ -1772,7 +1818,7 @@ ko-KR:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_bee_fwp9_predict1:
@@ -1780,14 +1826,14 @@ ko-KR:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_playlab_variables4c_predictive1:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1796,7 +1842,7 @@ ko-KR:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       coursee_prediction_artistfunction2_2018:
@@ -1804,7 +1850,7 @@ ko-KR:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       coursee_prediction_artistfunction2_2018_2019:
@@ -1812,7 +1858,7 @@ ko-KR:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       csd-pre-survey-2017-levelgroup:
@@ -1829,7 +1875,7 @@ ko-KR:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       grade2_multi_collector_A_predict1_2018:
@@ -1837,7 +1883,7 @@ ko-KR:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
@@ -1845,6 +1891,6 @@ ko-KR:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}

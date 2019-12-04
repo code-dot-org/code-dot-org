@@ -317,7 +317,7 @@ ko:
       stats: 통계
       help_us: 도움주기
       teach: 가르치기
-      about: 안내
+      about: 소개
     user:
       classroom: 선생님 홈페이지
       district_dashboard: 대시보드 구역
@@ -342,7 +342,7 @@ ko:
       eval: 평가
       flappy: 플래피
       frozen: 겨울왕국
-      gamelab: Game Lab
+      gamelab: 게임 연구소
       gamelab_jr: 게임 연구소 (베타)
       gumball: 검볼의 어메이징 월드
       iceage: 아이스 에이지
@@ -350,10 +350,12 @@ ko:
       minecraft_adventurer: Minecraft 모험가
       minecraft_designer: 마인크래프트
       playlab: Play Lab
+      spritelab: 스프라이트 연구소
       starwars: 스타워즈
       starwarsblocks: 스타워즈 (블록)
       starwarsblocks_hour: 스타워즈 (블록)
       weblab: 웹 연구소
+      view_all: 모든 프로젝트 보기...
     popup:
       progress_for_user: "%{name} 의 진도"
       progress: 내 진도
@@ -606,7 +608,7 @@ ko:
       title: 갤러리
       body: 다른 사람이 만든 앱과 이미지 갤러리 보기
     gamelab:
-      title: Game Lab
+      title: 게임 연구소
       audience: 13세 이상
       cta: 방법 알아보기
     hoc-encryption:
@@ -870,6 +872,7 @@ ko:
     csf_events: 이벤트
     csf_binary: 2진
     csf_conditionals: 조건
+    csf_spritelab: 스프라이트 연구소
     csf_nested_loops: 중첩 반복
     csf_functions: 함수
     csf_variables: 변수

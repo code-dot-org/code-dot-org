@@ -474,6 +474,12 @@ ko-KR:
             <title name="LAYOUT">"circle"</title>
           </block></xml>
         이제 여러 댄서들을 한번에 생성할 수 있습니다!
+      Dance_2019_07: "모든 댄서에게는 어떻게 보일지를 조정하는 _속성_들이 있습니다. \n\n댄서들이 가깝거나 멀게 보이도록 <xml><block
+        type=\"Dancelab_setPropEach\" block-text=\"the set block\"><title name=\"GROUP\"
+        config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;,
+        &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title><title
+        name=\"PROPERTY\">\"scale\"</title><title name=\"VAL\">???</title></block></xml>
+        블록을 녹색 이벤트 블록 밑에 사용하세요."
       Dance_2019_08: 댄서들에게는 색상을 덧댈 수 있는 “색조” 속성이 있습니다. 댄서 한 명(혹은 그룹 전체)의 색조를 바꾸어 보세요!
       Dance_2019_09: |-
         몇 번씩 트리거된 특별한 이벤트 종류입니다.
@@ -553,7 +559,7 @@ ko-KR:
       Dance_Party_extras_alternate_2019: |-
         # 대형을 만들어 봅시다!
 
-        이 댄스를 확인하세요. [blockly block][0] 블록이 사용되어 댄스 내내 백업 댄서들의 대형을 바꿉니다. 다음 아이디어들을 시도하며 확장해 보세요.
+        이 댄스를 확인하세요. <xml><block type="Dancelab_alternateMoves"><title name="GROUP">sprites</title><title name="N">2</title><title name="MOVE1">MOVES.Roll</title><title name="MOVE2">MOVES.ClapHigh</title></block></xml> 블록이 사용되어 댄스 내내 백업 댄서들의 대형을 바꿉니다. 다음 아이디어들을 시도하며 확장해 보세요.
 
         -   다른 레이아웃에 두 번째 댄서 그룹 생성
         -   키를 누르면 레이아웃 변경
@@ -587,7 +593,7 @@ ko-KR:
       Dance_Party_extras_every_beat_2019: |-
         # 속도를 높이고 속도를 낮추세요
 
-        이 마지막 댄스는 [blockly block][0] 블록을 사용해 각 댄서가 얼마나 빨리 움직일지를 조절합니다. 노래 중간중간에 속도를 달리하며 실험해 보세요. 이 댄스를 계속 바꾸어 보거나, 돌아가서 이전 댄스들을 훨씬 더 멋지게 만들어 보세요.
+        이 마지막 댄스는 <xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml> 블록을 사용해 각 댄서가 얼마나 빨리 움직일지를 조절합니다. 노래 중간중간에 속도를 달리하며 실험해 보세요. 이 댄스를 계속 바꾸어 보거나, 돌아가서 이전 댄스들을 훨씬 더 멋지게 만들어 보세요.
       Dance_Party_extras_layout: |-
         # 대형 만들기
 
@@ -611,7 +617,7 @@ ko-KR:
       Dance_Party_extras_speed_2019: |-
         # 속도를 높이고 속도를 낮추세요
 
-        이 마지막 댄스는 [blockly block][0] 블록을 사용해 각 댄서가 얼마나 빨리 움직일지를 조절합니다. 노래 중간중간에 속도를 달리하며 실험해 보세요. 이 댄스를 계속 바꾸어 보거나, 돌아가서 이전 댄스들을 훨씬 더 멋지게 만들어 보세요.
+        이 마지막 댄스는 <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> 블록을 사용해 각 댄서가 얼마나 빨리 움직일지를 조절합니다. 노래 중간중간에 속도를 달리하며 실험해 보세요. 이 댄스를 계속 바꾸어 보거나, 돌아가서 이전 댄스들을 훨씬 더 멋지게 만들어 보세요.
       Dance_Party_extras_visible: |-
         # 그들이 어디로 갔나요?
 
@@ -621,13 +627,14 @@ ko-KR:
         -   화살표 키를 사용하여 댄서 보이기 및 숨기기
         -   모든 댄서를 숨기고 흥미로운 배경 효과로 바꾸기
       Dance_Party_extras_visible_2019: |-
-        # 그들이 어디로 갔나요?
+        # 4분음표
 
-        이 댄스는 두 개의 댄서 그룹을 보여주고 숨깁니다. 확인해 보시고 나만의 솜씨를 추가하세요.
+        저희의 댄스는 대부분 온전한 마디들을 사용했지만, 각 마디는 4분음표들로 되어 있습니다. 이 댄스는 [blockly block][0] 블록이 사용되어 댄서가 5번째 마디 이후 매 4분음표에서 손뼉을 칩니다.
 
-        -   다른 댄서 그룹 추가
-        -   화살표 키를 사용하여 댄서 보이기 및 숨기기
-        -   모든 댄서를 숨기고 흥미로운 배경 효과로 바꾸기
+        블록의 숫자를 바꾸면 댄스가 어떻게 바뀌는지 알아보세요.
+
+        -   다른 길이의 음(예: 2분 음표는 0.5, 8분 음표는 0.125)으로 실험하세요.
+        -   다른 이벤트를 추가하세요.
       Function intro Ryan: "작업 공간에 있는 '다리 짓기' **함수가** 보이죠?  강을 건너는 해결 방법은 이미 주어졌어요!
         \\\r\n \\\r\n녹색의 작은 블록을 작업 공간으로 두 번 가져와 길을 만들고 {currentPlayerName}이(가) 레드스톤
         횃불 [redstone_torch] 쪽으로 갈 수 있게 도와주세요."
