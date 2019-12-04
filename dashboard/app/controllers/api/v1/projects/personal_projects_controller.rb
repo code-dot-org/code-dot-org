@@ -21,6 +21,6 @@ class Api::V1::Projects::PersonalProjectsController < ApplicationController
       )
     end
 
-    render json: {nameFailure: name_failure}, status: :ok
+    render json: {nameFailure: name_failure.content}, status: :ok
   end
 end
