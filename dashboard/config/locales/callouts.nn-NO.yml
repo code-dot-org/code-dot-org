@@ -173,8 +173,15 @@ nn-NO:
         dance_callout_11_b: Ny blokk!
       CourseD_Dance_Party_11_5:
         dance_party_11_5_groups: Se her for "alle ender" blokker
+      Dance_2019_01:
+        dance_callout_01: Velg type dansar her.
+      Dance_2019_02:
+        dance_callout_11_a: Legg denne blokka til programmet ditt.
+        arrow_buttons: Trykk på piltastane for å kontrollere dansaren din.
       Dance_2019_04:
         dance_callout_02: Legg denne blokka til programmet ditt!
+      Dance_2019_05:
+        dance_callout_05: Legg til ei ny hending i programmet ditt.
       Dance_2019_06:
         dance_party_11_5_groups: Ny blokk!
       Dance_2019_07:
@@ -194,7 +201,7 @@ nn-NO:
         dance_callout_11_a: Ny blokk!
         dance_callout_11_b: Ny blokk!
       Dance_Party_11_5:
-        dance_party_11_5_groups: Se her for "alle ender" blokker
+        dance_party_11_5_groups: Sjå her for "alle ender"-blokker
       Function intro Ryan:
         Function_intro_Ryan_1: Denne vesle instruksjonen fortel datamaskina å køyre
           den STORE mengda med kode med det same namnet i arbeidsområdet.
