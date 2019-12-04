@@ -5,6 +5,7 @@ require 'cdo/sinatra'
 require 'cdo/aws/s3'
 
 ANIMATION_LIBRARY_BUCKET = 'cdo-animation-library'.freeze
+SPRITELAB_ANIMATION_LIBRARY_BUCKET = 'cdo-spritelab-animation-library'.freeze
 
 #
 # Provides limited access to the cdo-animation-library S3 bucket, which contains
@@ -24,12 +25,12 @@ class AnimationLibraryApi < Sinatra::Base
   #
   # Retrieve a file from the animation library
   #
-  get %r{/api/v1/animation-library/([^/]+)/(.+)} do |version_id, animation_name|
+  get %r{/api/v1/(spritelab-)?animation-library/([^/]+)/(.+)} do |endpoint, version_id, animation_name|
     not_found if version_id.empty? || animation_name.empty?
-
+    bucket = (endpoint == 'spritelab-') ? SPRITELAB_ANIMATION_LIBRARY_BUCKET : ANIMATION_LIBRARY_BUCKET
     begin
       result = Aws::S3::Bucket.
-        new(ANIMATION_LIBRARY_BUCKET, client: AWS::S3.create_client).
+        new(bucket, client: AWS::S3.create_client).
         object(animation_name).
         get(version_id: version_id)
       content_type result.content_type
