@@ -35,8 +35,5 @@ export const init = state => {
     [Modes.Pond]: 'pond',
     [Modes.Instructions]: 'instructions'
   };
-  const page = modeToPage[state.currentMode];
-  if (window.ga && page) {
-    reportPageView(page);
-  }
+  reportPageView(modeToPage[state.currentMode]);
 };

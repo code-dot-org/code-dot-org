@@ -214,7 +214,7 @@ export const finishLoading = (startTime, onComplete) => {
 };
 
 export const reportPageView = page => {
-  if (!window.ga) {
+  if (!window.ga || !page) {
     return;
   }
 
