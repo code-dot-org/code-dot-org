@@ -309,6 +309,7 @@ uk-UA:
   studiobar_elementary_title: Базові курси
   studiobar_elementary_body: Три нові курси для K&#8209;5
   studiobar_dance_title: Танцювальна вечірка
+  studiobar_dance_body: Створіть та продемонструйте власну танцювальну вечірку
   studiobar_hoc_title: Година Коду
   studiobar_hoc_body: Вчимося програмувати зі Злими Птахами
   studiobar_flappy_title: Код Пурха
@@ -599,6 +600,7 @@ uk-UA:
   video_title_my_name_is_aracely: Мене звати Араклі
   video_1min: 1 хв
   video_2min: 2 хв
+  video_3min: 3 хв
   video_5min: 5 хв
   speak_another_language: Інша мова?
   help_translate: Допоможіть нам з перекладом.
@@ -1074,6 +1076,7 @@ uk-UA:
   carousel_heading_webpages: Навчіться створювати веб-сторінки
   carousel_heading_robots: Навчіться програмувати роботів
   carousel_heading_ide: Платформи, популярні серед вчителів
+  carousel_heading_mobtabelem: Для телефонів і планшетів
   educator_notes: Інформація для вчителя
   teach_led_lesson_plans: Плани уроків для вчителів
   learn_footer_all_tutorials: Перегляньте<a href="https://code.org/educate/allhourofcode">вичерпний
@@ -1159,6 +1162,15 @@ uk-UA:
   coursee_name: Курс Ґ
   coursef-draft_name: Курс Д
   coursef_name: Курс Д
+  coursea-2017_name: Курс А (2017)
+  courseb-2017_name: Курс B (2017)
+  coursec-2017_name: Курс C (2017)
+  coursed-2017_name: Курс D (2017)
+  coursee-2017_name: Курс E (2017)
+  coursef-2017_name: Курс F (2017)
+  express-2018_name: Експрес курс (2018)
+  csd2_name: 'Блок 2: Веб-розробка'
+  csd3_name: 'Блок 3: Анімація та ігри'
   accelerated_name: Прискорений курс
   20-hour_name: Прискорений курс
   algebra_name: Інформатика в алгебрі
@@ -1901,15 +1913,17 @@ uk-UA:
   header_documentation: Документація
   user_header_label: Привіт %{username}
   user_header_team: Команда
+  user_header_my_projects: Мої проекти
   user_header_settings: Мій профіль
   user_header_logout: Вийти
-  user_header_signin: Вхід
+  user_header_signin: Увійти
   user_header_create: 'Творіть '
   user_header_gamelab: Ігрова лабораторія
   user_header_playlab: Ігрова студія
   user_header_dance: Танцювальна вечірка
   user_header_minecraft: Майнкрафт
   user_header_flappy: Пурх
+  sign_in_instruct_secret: Виберіть їх секрет %{secret}.
   applab_tile_start_tutorial: Початок
   aquatic_name: 'Minecraft: Водна подорож'
   account_sign_up_email_opt_in: Чи можемо ми сповіщати вас про оновлення курсів, локальних
@@ -1917,6 +1931,12 @@ uk-UA:
   account_sign_up_child_accept_terms: Я підтверджую що у мене є згода моїх батьків
     і законних опікунів на дозвіл використання Code.org.
   hoc_overview_dance_title: Танцювальна вечірка
+  hoc_overview_dance_subtitle: Закодуйте танцювальну вечірку та покажіть її друзям.
+    Під пісні Кеті Пері, Мадонни, Джея Бальвіна, Сіа, Кіта Урбана, Сіари та ще 25
+    виконавців!
+  hoc_overview_dance_2019_subtitle: Закодуйте танцювальну вечірку та покажіть її друзям.
+    Під пісні Кеті Перрі, Шона Мендеса, Panic! At The Disco, Lil Nas X, Jonas Brothers,
+    Нікі Мінаж та 34 інших виконавців та груп!
   hoc_overview_start_tutorial: Початок
   hoc2018_creativity: творчість
   hoc2018_creativity_create: Створити
@@ -1953,6 +1973,7 @@ uk-UA:
     відео</a> з фахівцями зі сфери технологій
   hoc2018_mc_video_1min: 1 хв
   hoc2018_mc_video_2min: 2 хв
+  hoc2018_mc_video_3min: 3 хв
   hoc2018_mc_video_5min: 5 хв
   hoc2018_mc_video_title_steph_curry: Година коду зі Стефом Каррі
   hoc2018_mc_video_title_sports: Постарайся! Навчитись може кожен.
@@ -1968,6 +1989,8 @@ uk-UA:
   hoc2018_mc_homepage_join_us: Приєднуйтесь
   hoc2018_mc_homepage_try_it: Спробувати
   hoc2018_dance_party_main_heading: Танцювальна вечірка
+  hoc2018_dance_party_subheading: Допоможіть перекласти Dance Party
+  hoc2018_dance_create_your_own_dance_title: Створіть власну Dance Party
   hoc2018_dance_party_box_title: Танцювальна вечірка
   hoc2018_dance_party_box_description: Закодуй танцювальну вечірку і поділися з друзями!
   hoc2018_dance_party_button: Початок
@@ -1990,5 +2013,12 @@ uk-UA:
   hoc2018_dance_view_creativity_video_playlist: Що таке креативність? Перегляньте
     всі серії (5 хв)
   hoc2018_dance_amazon_about_future_engineer_button: Дізнайтеся більше
+  hoc2018_dance_amazon_try_coding_this_summer_button: Приєднатися до табору
   hoc2018_dance_measure: Крок
   hoc2018_dance_measure_colon: 'Крок:'
+  page_not_found_title: Сторінка не знайдена
+  page_not_found_header: '404: Сторінка не знайдена'
+  hoc2019_mc_more_coding_resources: Більше Coding ресурсів
+  hoc2019_dance_previous_versions: |-
+    Шукаєте попередню версію Dance Party?
+    Натисніть тут, щоб почати [Частина 1] (%{dance_2018_link}) та [Частина 2] (%{dance_extras_2018_link}) з останнього року.

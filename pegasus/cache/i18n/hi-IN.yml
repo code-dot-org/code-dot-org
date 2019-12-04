@@ -2066,7 +2066,7 @@ hi-IN:
   header_about: के बारे में
   header_teacher_community: अध्यापक समुदाय
   header_help_support: 'सहायता और समर्थन '
-  header_report_bug: "“समस्या की रिपोर्ट करें”"
+  header_report_bug: समस्या की रिपोर्ट करें
   header_tutorials: ट्यूटोरियल
   app_lab_documentation: ऐप लैब दस्तावेज
   app_lab_tutorials: ऐप लैब ट्यूटोरियल्स
@@ -2159,6 +2159,9 @@ hi-IN:
   hoc_overview_dance_subtitle: अपने दोस्तों के साथ साझा करने के लिए डांस पार्टी को
     कोड करें। इसमें कैटी पेरी, मैडोना, जे, बाल्विन, सिया, कीथ अर्बन, कियारा और 25
     और को पेश करें!
+  hoc_overview_dance_2019_subtitle: अपने दोस्तों के साथ साझा करने के लिए डांस पार्टी
+    को कोड करें।पेश करते हैं कैटी पेरी, शॉन मेंडेस, पैनिक को! डिस्को, लिल नास एक्स,
+    जोनास ब्रदर्स, निकी मिनाज और 34 और में!
   hoc_overview_title: ऑवर ऑफ़ कोड गतिविधियां code.org के तरफ से
   hoc_overview_subtitle: <a href="https://hourofcode.com">आवर ऑफ़ कोड</a> एक वैश्विक
     अभियान है, जो 180 से अधिक देशों में लाखों छात्रों तक पहुंच रहा है। कोई भी, कहीं

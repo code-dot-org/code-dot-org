@@ -30,7 +30,7 @@ ja-JP:
   twentyhours_heading: コンピュータサイエンスコースを紹介する
   twentyhours_text: 初めてのHour of Codeを修了しましたか？フォローアップコースでコンピュータサイエンスやプログラミング概念をさらに学びましょう。
   og_title: 全ての子供に機会を得る権利があります
-  og_title_soon: もうすぐHour of Codeです
+  og_title_soon: Hour of Code（アワー オブ コード）が近づいています。
   og_title_here: Hour of Codeがやってきた！
   og_description: すべての学校のすべての学生が、コンピュータ サイエンスを学ぶ機会を得られる。それはすべてを変えるでしょう。
   og_description_celeb: 新しいチュートリアルに挑戦し、1人もしくはクラスで著名人とのビデオチャットを勝ちとりましょう！
@@ -254,7 +254,7 @@ ja-JP:
   studiobar_elementary_title: 初級コース
   studiobar_elementary_body: K&#8209;5 の生徒のための、3つの新しいコース
   studiobar_dance_title: ダンスパーティー
-  studiobar_dance_body: 自分だけのダンスパーティーを作成して共有しよう
+  studiobar_dance_body: 独自のダンスパーティーを作成し、共有します
   studiobar_hoc_title: Hour of Code
   studiobar_hoc_body: アングリーバードでコードを学ぶ
   studiobar_flappy_title: Flappyのコード
@@ -303,7 +303,7 @@ ja-JP:
   homepage_hero_text_stat_loc: 850万人の女の子がCode.orgに参加して学んでいます。
   homepage_hero_text_stat_students: 'コードスタジオの学生アカウント #student_count  '
   homepage_hero_text_stat_served: 'Hour of Code: #served 提供'
-  homepage_hero_hoc_is_coming: もうすぐHour of Codeです
+  homepage_hero_hoc_is_coming: Hour of Code（アワー オブ コード）が近づいています。
   homepage_hero_hoc_is_here: Hour of Codeがやってきました
   homepage_slot_text_hoc: Hour of Code
   homepage_slot_text_frozen: "「アナと雪の女王」のアナとエルサ"
@@ -1563,6 +1563,9 @@ ja-JP:
   applab_tile_teacher_guide: 教師用ガイドを表示
   account_sign_up_email_opt_in: 当社のコースについての最新情報、各地域における機会、コンピュータサイエンスに関するニュースなどを電子メールを介して送付してもよろしいですか？
   hoc_overview_dance_title: ダンスパーティー
+  hoc_overview_dance_subtitle: お友達と共有するダンスパーティーをコード化します。Katy Perry、Madonna、J。Balvin、Sia、Keith
+    Urban、Ciara、その他25人以上が参加します！
+  hoc_overview_dance_2019_subtitle: お友達と共有するため、ダンスパーティーをコード化します。ディスコでは、ケイティ・ペリー、ショーン・メンデス、パニックが中心となり、リルナスX、ジョナスブラザーズ、ニッキーミナージュや、その他34人以上が参加します。
   hoc_overview_partner_activities_title: パートナー提供によるアクティビティを追加
   hoc_overview_partner_activities_body: Hour of Codeウェブサイトは、年齢や経験レベルを問わずに利用可能な、Code.org
     とパートナーが開発した 100 以上のコンピューター科学のアクティビティを掲載しています。
