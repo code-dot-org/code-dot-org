@@ -8,7 +8,8 @@ const {
 const {generateOcean, filterOcean} = require('../../src/utils/generateOcean');
 const SimpleTrainer = require('../../src/utils/SimpleTrainer');
 const SVMTrainer = require('../../src/utils/SVMTrainer');
-import {ClassType} from '../../src/demo/constants';
+import {AppMode, ClassType} from '../../src/demo/constants';
+import {setState} from '../../src/demo/state';
 
 function clock(start) {
   if (!start) return process.hrtime();
@@ -174,6 +175,10 @@ describe('Model quality test', () => {
     initFishData();
   });
 
+  beforeEach(() => {
+    setState({appMode: null});
+  });
+
   test('Color test', async () => {
     const trainSize = TRAIN_SIZE;
 
@@ -259,6 +264,7 @@ describe('Model quality test', () => {
   });
 
   test('test eels with smiling mouths', async () => {
+    setState({appMode: AppMode.FishLong});
     const trainSize = 300; // Need more fish to hit enough to train on
     const mouthData = fishData.mouths;
     const mouthKey = PartKey.MOUTH;
