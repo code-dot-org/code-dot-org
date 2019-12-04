@@ -462,10 +462,15 @@ es-MX:
           LAYOUT:
             '"border"': borde
             '"inner"': cuadrado interno
+            '"diamond"': diamante
             '"circle"': círculo
             '"grid"': cuadrícula
+            '"top"': fila superior
             '"row"': fila
+            '"bottom"': fila inferior
+            '"left"': columna izquierda
             '"column"': columna
+            '"right"': columna derecha
             '"x"': entrecruzado
             '"plus"': más
             '"random"': al azar

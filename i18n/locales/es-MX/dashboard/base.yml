@@ -123,6 +123,10 @@ es-MX:
     unable_to_connect_provider: "No se pudo conectar tu cuenta de Code.org a tu %{provider}. Por favor, inténtalo de nuevo."
     already_in_use: "Tu %{provider} ya está conectado a otra cuenta de Code.org."
     already_linked: "La cuenta con tu %{provider} ya está vinculada a tu cuenta de Code.org."
+    existing_account:
+      account_exists: "¡Buenas noticias! Ya tienes una cuenta de Code.org que utiliza %{email}"
+      sign_in: "Inicia sesión y te vincularemos con tu perfil de %{provider}."
+      sign_up: "¿No es tu correo electrónico? ¿Quieres crear una nueva cuenta con una dirección de correo electrónico diferente? También vincularemos tu perfil de %{provider} si quieres hacerlo."
   signup_form:
     email_signup: 'Regístrate con tu dirección de correo electrónico'
     student_count: '%{count} estudiantes ya se han registrado.'
@@ -559,6 +563,7 @@ es-MX:
       link: "Aprende más"
       applab_unsupported_tablet: "El Laboratorio de aplicaciones funciona mejor en una computadora de escritorio o portátil con un ratón o un teclado. Puede que experimentes problemas si usas esta herramienta en tu dispositivo actual."
       gamelab_unsupported_tablet: "El Laboratorio de juegos funciona mejor en una computadora de escritorio o portátil con un ratón o un teclado. Puede que experimentes problemas si usas esta herramienta en tu dispositivo actual."
+      oceans_unsupported_browser: "Este navegador no es compatible con este tutorial. Prueba visitar esta página en Edge, Chrome, Firefox u otro navegador moderno."
       weblab_unsupported_browser: "Lamentablemente, estamos teniendo algunos problemas para cargar el Laboratorio web en este navegador. Prueba con otro navegador hasta que esto se resuelva. Disculpa las molestias."
       weblab_unsupported_locale_storage: "Puedes experimentar problemas con el Laboratorio web en el modo de navegación privada. Por favor, vuelve a cargar el proyecto en modo normal. Disculpa las molestias."
   slow_loading: 'Esto está tardando más de lo habitual...'
@@ -940,6 +945,7 @@ es-MX:
     time4cs_c3: 'Vivir en Everglades'
     time4cs_c4: 'Impactos invasivos en Everglades'
     time4cs_c5: 'Los ciudadanos efectúan cambios en Everglades'
+    time4cs_c6: 'Condicionales (revisión)'
     k5_getting_started: 'Primeros pasos'
     k5_csf_intro: 'Conoce los Cursos de Fundamentos de Ciencias de la Computación'
     k5_coding_concepts: 'Conceptos de programación y estrategias de enseñanza'
