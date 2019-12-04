@@ -213,7 +213,7 @@ export const finishLoading = (startTime, onComplete) => {
   setTimeout(onComplete, delayTime);
 };
 
-export const setPageAndSendPageview = page => {
+export const reportPageView = page => {
   if (!window.ga) {
     return;
   }

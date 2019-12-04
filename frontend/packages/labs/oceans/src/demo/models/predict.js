@@ -2,7 +2,7 @@ import 'idempotent-babel-polyfill';
 import {getState, setState} from '../state';
 import {generateOcean} from '../../utils/generateOcean';
 import {AppMode, Modes} from '../constants';
-import {$time, finishLoading, setPageAndSendPageview} from '../helpers';
+import {$time, finishLoading, reportPageView} from '../helpers';
 
 export const init = () => {
   const state = getState();
@@ -20,7 +20,7 @@ export const init = () => {
     setState({currentMode: Modes.IntermediateLoading});
 
     // Manually send a GA event for Modes.IntermediateLoading.
-    setPageAndSendPageview('intermediateLoading');
+    reportPageView('intermediateLoading');
   } else {
     trainingDelayTime = 0;
   }
@@ -31,7 +31,7 @@ export const init = () => {
   // delay the beginning of our training.
   setTimeout(() => {
     // Manually send a GA event for Modes.Predicting.
-    setPageAndSendPageview('predicting');
+    reportPageView('predicting');
 
     state.trainer.train();
 

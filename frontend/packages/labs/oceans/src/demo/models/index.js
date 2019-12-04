@@ -4,7 +4,7 @@ import {init as initTraining} from './train';
 import {init as initPredicting} from './predict';
 import {init as initPond} from './pond';
 import {Modes} from '../constants';
-import {setPageAndSendPageview} from '../helpers';
+import {reportPageView} from '../helpers';
 
 // Initialize a model (if that model has an `init` method) based on mode.
 // Should only be called when mode changes.
@@ -37,6 +37,6 @@ export const init = state => {
   };
   const page = modeToPage[state.currentMode];
   if (window.ga && page) {
-    setPageAndSendPageview(page);
+    reportPageView(page);
   }
 };
