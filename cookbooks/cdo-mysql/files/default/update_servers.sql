@@ -9,12 +9,11 @@
 -- Note: although the ProxySQL admin interface uses the MySQL client protocol,
 -- it uses the SQLite dialect for its SQL-query syntax.
 
-DELETE FROM `mysql_servers`;
-
--- Copy `runtime_mysql_servers` to `mysql_servers`, with HG2 copied from HG1.
-INSERT INTO `mysql_servers` SELECT * FROM `runtime_mysql_servers` WHERE `hostgroup_id` != 2;
-UPDATE `mysql_servers` SET `hostgroup_id` = 2 WHERE `hostgroup_id` = 1;
-INSERT INTO `mysql_servers` SELECT * FROM `runtime_mysql_servers` WHERE `hostgroup_id` = 1;
+-- Copy `runtime_mysql_servers` to `mysql_servers`
+REPLACE INTO `mysql_servers` SELECT * FROM `runtime_mysql_servers` WHERE `hostgroup_id` != 2;
+-- Set HG2 copied from HG1.
+REPLACE INTO `mysql_servers` (hostgroup_id, hostname, port, status, weight)
+    SELECT 2, hostname, port, status, weight FROM `mysql_servers` WHERE `hostgroup_id` = 1;
 
 -- Update weights on servers.
 UPDATE `mysql_servers` SET `weight` = CASE

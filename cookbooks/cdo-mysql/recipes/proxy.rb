@@ -35,8 +35,10 @@ if (is_aurora = !!node['cdo-secrets']['db_cluster_id'])
 end
 
 admin = URI.parse(node['cdo-mysql']['proxy']['admin'])
-admin_opt_str = %w(user password host port).map {|x| "--#{x}=#{admin.send(x)}"}.join(' ')
-mysql_admin = "mysql #{admin_opt_str}"
+admin_opt_str = %w(user host port).map {|x| "--#{x}=#{admin.send(x)}"}.join(' ')
+# Set password via named pipe (requires Bash) to suppress password-warning message on stderr.
+admin_password = "--defaults-extra-file=<(printf \"[client]\\npassword=#{admin.password}\")"
+mysql_admin = "mysql #{admin_password} #{admin_opt_str}"
 
 proxy_port = node['cdo-mysql']['proxy']['port']
 data_dir = '/var/lib/proxysql'
@@ -79,10 +81,10 @@ file "#{data_dir}/update_servers.sh" do
   owner 'proxysql'
   mode '0700'
   content <<BASH
-#!/bin/bash
-DIFF=$(#{mysql_admin} -rN <#{data_dir}/update_servers.sql 2>/dev/null)
+#!/bin/bash -e
+DIFF=$(#{mysql_admin} -rN <#{data_dir}/update_servers.sql)
 if [ "$DIFF" -ne 0 ]; then
-  #{mysql_admin} -e 'LOAD MYSQL SERVERS TO RUNTIME' 2>/dev/null
+  #{mysql_admin} -e 'LOAD MYSQL SERVERS TO RUNTIME'
 fi
 BASH
 end
@@ -90,12 +92,12 @@ end
 # Configure ProxySQL scheduler to run update_servers every second.
 # Load via MySQL admin interface because configuring scheduler from file is not supported.
 execute 'proxysql-aurora-admin' do
-  admin_sql = <<~SQL
+  environment SQL: <<~SQL
     REPLACE INTO `scheduler` (id, interval_ms, filename) VALUES (1, 1000, "#{data_dir}/update_servers.sh");
     LOAD SCHEDULER TO RUNTIME;
     SAVE SCHEDULER TO DISK;
   SQL
-  command "#{mysql_admin} -e '#{admin_sql}'"
+  command "bash -c '#{mysql_admin} -e \"$SQL\"'"
   action :nothing
   retries 3
   sensitive true
