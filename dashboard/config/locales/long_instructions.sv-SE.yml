@@ -227,11 +227,14 @@ sv-SE:
         vänsterpilen. Gör så att roboten ”faller” när du trycker på högerpilen.
       Dance_Party_12: Dags att svänga på höfterna! Skapa en egen dans att dela med
         dina vänner.
-      Dance_Party_extras_alternate_2019: "# Det är dags för uppställning!Kolla in
-        den här dansen som använder [blockly block][0]-blocket för att förändra bakgrundsdansarnas
-        formation under dansen. Prova en av de här idéerna för att utveckla den:-
-        \  Skapa en andra grupp dansare i en annan gruppering-   Ändra gruppering
-        med en knapptryckning-   Ändra en egenskap när dansarna ändrar formation"
+      Dance_Party_extras_alternate_2019: '# Det är dags för uppställning!Kolla in
+        den här dansen som använder <xml><block type="Dancelab_alternateMoves"><title
+        name="GROUP">sprites</title><title name="N">2</title><title name="MOVE1">MOVES.Roll</title><title
+        name="MOVE2">MOVES.ClapHigh</title></block></xml>-blocket för att förändra
+        bakgrundsdansarnas formation under dansen. Prova en av de här idéerna för
+        att utveckla den:-   Skapa en andra grupp dansare i en annan gruppering-   Ändra
+        gruppering med en knapptryckning-   Ändra en egenskap när dansarna ändrar
+        formation'
       Dance_Party_extras_battle: |-
         # Dansgrupper
 
@@ -258,11 +261,14 @@ sv-SE:
         -   Experimentera med andra notlängder (som 0,5 för en halvnot eller 0,125 för en åttondelsnot).
         -   Lägg till några händelser med ”efteråtgärder”.
         -   Byt ”åtgärder” mot ”sekunder” och försök att på så sätt tajma dina danser.
-      Dance_Party_extras_every_beat_2019: "# Öka takten, sakta nerI den här sista
-        dansen använder vi [blockly block][0]-blocket för att kontrollera hur snabbt
-        varje dansare rör sig. Experimentera med olika hastigheter vid olika tillfällen
-        i sången. Knåpa gärna vidare på den här dansen eller gå tillbaka till någon
-        av de tidigare danserna och gör dom ännu coolare."
+      Dance_Party_extras_every_beat_2019: '# Öka takten, sakta nerI den här sista
+        dansen använder vi <xml><block type="controls_if"><value name="IF0"><block
+        type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title
+        name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title
+        name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml>-blocket
+        för att kontrollera hur snabbt varje dansare rör sig. Experimentera med olika
+        hastigheter vid olika tillfällen i sången. Knåpa gärna vidare på den här dansen
+        eller gå tillbaka till någon av de tidigare danserna och gör dom ännu coolare.'
       Dance_Party_extras_layout: |-
         # Uppställning!
 
@@ -283,11 +289,12 @@ sv-SE:
         # Öka takten, sakta ner
 
         Denna sista dans använder blocket ”ange hastighet” för att styra hur snabbt varje dansare rör sig. Testa att experimentera med olika hastigheter under olika tidpunkter i låten. Fortsätt gärna mixtra med denna dans eller återgå till någon av de tidigare danserna för att göra dem ännu coolare.
-      Dance_Party_extras_speed_2019: "# Öka takten, sakta nerI den här sista dansen
-        använder vi [blockly block][0]-blocket för att kontrollera hur snabbt varje
-        dansare rör sig. Experimentera med olika hastigheter vid olika tillfällen
+      Dance_Party_extras_speed_2019: '# Öka takten, sakta nerI den här sista dansen
+        använder vi <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title
+        name="SPEED">2</title></block></xml>-blocket för att kontrollera hur snabbt
+        varje dansare rör sig. Experimentera med olika hastigheter vid olika tillfällen
         i sången. Knåpa gärna vidare på den här dansen eller gå tillbaka till någon
-        av de tidigare danserna och gör dom ännu coolare."
+        av de tidigare danserna och gör dom ännu coolare.'
       Dance_Party_extras_visible: |-
         # Vart tog de vägen?
 
@@ -296,14 +303,13 @@ sv-SE:
         -   Lägg till en grupp av dansare
         -   Visa och dölj dansare med hjälp av piltangenterna
         -   Dölj alla dansare och växla till en spännande bakgrundseffekt
-      Dance_Party_extras_visible_2019: |-
-        # Vart tog de vägen?
-
-        Denna dans visar och döljer två olika grupper av dansare. Kolla in det och försök sedan att lägga till din egen stil.
-
-        -   Lägg till en grupp av dansare
-        -   Visa och dölj dansare med hjälp av piltangenterna
-        -   Dölj alla dansare och växla till en spännande bakgrundseffekt
+      Dance_Party_extras_visible_2019: "# FjärdedelsnoterI de flesta av våra danser
+        har vi använt hela takter, men varje takt består av fyra fjärdedelsnoter.
+        Den här dansen använder [blockly block][0] så att dansarna klappar på varje
+        fjärdedelsnot efter den femte takten. Prova att ändra siffrorna i blocket
+        för att se hur det påverkar dansen.-   Experimentera med andra notlängder
+        (som 0,5 för en halvnot eller 0,125 för en åttondelsnot).-   Lägg till några
+        ytterligare händelser."
       Function intro Ryan: "Du har en **funktion** som heter \"bygg bro\" i arbetsytan.
         \ All kod du behöver för att korsa floden är inbyggd i den!\\\r\n \\\r\nFäst
         två av de små, gröna blocken i arbetsytan för att fixa vägen och ta {currentPlayerName}
