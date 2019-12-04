@@ -123,10 +123,68 @@ no-NO:
       CourseE_HOC 2018 Level_9b: Du kom deg til korallrevet, let etter \*\* hjertet
         av havet \*\*! \[] (<https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png>)!
         Blå og rød korall for å komme frem til \*\* skattekisten \*\*! \[] (<https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png>).
+      Crack a Caesar Cipher: |-
+        # Knekk en Cæsar kode!
+
+        Dette verktøyet lar deg leke med tekst og lage Cæsar kode. du kan bruke det til å kryptere eller dekryptere en melding.
+
+        # Gjør dette
+
+        Åpne en **Eksempelmelding** fra nedtrekksmenyen. Det vil åpne en melding som er kryptert med en Cæsarkode.
+        ![](https://images.code.org/347139486c8c729bf3c6e72ce67da878-image-1476286380409.gif)
+
+        -   Bruk knappene i Cæsar erstatningsfanen, du kan prøve deg fram med å dra alfabetet frem og tilbake for å dekryptere meldingen.
+            ![](https://images.code.org/ef9ebc16d2f1442dc46fba9bd48b5d43-image-1476285966821.gif)
+            Se hvor lang tid det tar deg å dekryptere meldingen! Er dette en god metode for dekryptere hemmelige data?
+            <img src="http://code.org/api/hour/begin_encryption.png">
+      Dance_2019_01: |-
+        Dra <xml><block type="Dancelab_makeAnonymousDanceSprite" block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;, &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml>-blokken inn i arbeidsområdet, og koble den inne i <xml><block type="Dancelab_whenSetup2" next_connection_disabled="true" block-text="setup"></block></xml>-blokken
+
+         Velg `katt` eller `dovendyr` for å lage din første danser.
+
+        -   _Du kan også klikke på lyspæren til venstre om du ønsker mer informasjon eller flere utfordringer._
+      Dance_2019_02: |-
+        <xml><block type="Dancelab_whenKey" block-text="when up pressed"></block></xml>-blokken lar deg kjøre kode når du bruker piltastene. Bruk <xml><block type="Dancelab_doMoveEachLR" block-text="do once"><title name="GROUP">"CAT"</title><title name="MOVE">MOVES.XClapSide</title><title name="DIR">-1</title></block></xml>-blokken for å få katten til å klappe!
+
+        _Husk å trykke på «pil opp» tasten eller ![](<https://images.code.org/419e704e6841c0b696016bf5029b8cb9-image-1571864825506.06.45 PM.png>) etter at du har klikket på Kjør knappen!_
+      Dance_2019_03: Det er klart for dansekonkurranse! Programmer hver danser til
+        å bevege seg når du bruker ulike taster. Velg din favorittbevegelse for hver
+        danser og sett den til '(Tilfeldig)' for å noe helt uforutsett!
+      Dance_2019_04: |-
+        La oss få danserens bevegelser til å gå i takt med musikken!
+
+        Koble <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>-blokken til en <xml><block type="Dancelab_changeMoveEachLR"><title name="GROUP">"SHARK"</title><title name="MOVE">MOVES.ThisOrThat</title><title name="DIR">-1</title></block></xml>-blokk fra verktøykassen.
+
+        Danseren din skal starte en ny bevegelse etter den fjerde takten.
+
+        **Takter** er brukt til å telle taktslag i musikken. I denne oppgaven er én takt fire taktslag lang.
       Dance_2019_05: "_Nå svinger det!_ \n\nLegg til en <xml><block type=\"Dancelab_atTimestamp\"><title
-        name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml>
-        blokk i arbeidsområdet ditt. Få danseren til å starte en ny bevegelse etter
-        6 taker."
+        name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml>-blokk
+        i arbeidsområdet ditt. Få danseren til å starte en ny bevegelse etter 6 takter."
+      Dance_2019_06: |-
+        Bruk denne nye blokken til å sette sammen en gruppe med mindre bakgrunnsdansere rundt danseren i midten.
+
+          <xml><block type="Dancelab_makeNewDanceSpriteGroup">
+            <title name="N">???</title>
+            <title name="COSTUME" config="&quot;BEAR&quot;, &quot;CAT&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title>
+            <title name="LAYOUT">"circle"</title>
+          </block></xml>
+
+        Nå kan du lage en haug med bakgrunnsdansere på 1-2-3!
+      Dance_2019_07: |-
+        Hver danser har et sett med _egenskaper_ som kontrollerer utseendet.
+
+        Bruk <xml><block type="Dancelab_setPropEach" block-text="the set block"><title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title><title name="PROPERTY">"scale"</title><title name="VAL">???</title></block></xml> under en grønn hendelsesblokk for å få danseren til å opptre nærmere eller lengre vekk.
+      Dance_2019_08: Danserne har en "fargetone"-egenskap som kan legge til et lag
+        med farger. Prøv å endre fargen til en av danserne dine (eller hele gruppen)!
+      Dance_2019_09: |-
+        Denne \*\*nye blokken" er en spesiell type hendelse som blir utløst gang på gang.
+
+        <xml><block type="Dancelab_everySeconds"><title name="N">2</title><title name="UNIT">"measures"</title></block></xml>
+
+        Ved å plassere de nye blokkene i verktøykassen inne i løkken kan du gjentatte ganger endre danserens egenskaper over tid. Vær kreativ og ha det gøy!
+
+        _Når du er ferdig trykk på Fullfør knappen._
       Dance_2019_10: Ta på deg danseskoene! Lag din egen dans og del den med vennene
         dine.
       Dance_Party_01: |-
@@ -138,13 +196,12 @@ no-NO:
       Dance_Party_02: |-
         La oss få disse elgene til å danse!
 
-        Dra ut <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> blokken til arbeidsområdet. Koble den til under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> blokken. Danseren din vil nå starte en ny "move" etter den fjerde takten.
+        Dra ut<xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>-blokken til arbeidsområdet. Koble den til under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>-blokken. Danseren din vil nå starte et nytt dansetrinn etter den fjerde takten.
 
         **Takter** brukes for å regne tiden i musikk. I denne veiledningen er en takt fire slag lang.
       Dance_Party_03: "_Nå svinger det!_ \n\nLegg til en <xml><block type=\"Dancelab_atTimestamp\"><title
-        name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml>
-        blokk i arbeidsområdet ditt. Få danseren til å starte en ny bevegelse etter
-        6 taker."
+        name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml>-blokk
+        i arbeidsområdet ditt. Få danseren til å starte en ny bevegelse etter 6 takter."
       Dance_Party_04: |-
         _Denne dansen trenger litt blits!_
 
@@ -168,22 +225,30 @@ no-NO:
       Dance_Party_10: |-
         Nå vet vi hvordan man endrer en dansers egenskaper. Vi kan også få de samme egenskapene til å tilsvare musikken automatisk ved å bruke denne blokken:
         <xml>
-        <block type="Dancelab_startMapping">
-
-        <title name="SPRITE">høyre_enhjørning</title>
-        <title name="PROPERTY">"skala"</title>
-        <title name="RANGE">"bass"</title>
-        </block></xml>
+          <block type="Dancelab_startMapping">
+            <title name="SPRITE">right_unicorn</title>
+            <title name="PROPERTY">"scale"</title>
+            <title name="RANGE">"bass"</title>
+          </block></xml>
 
         Dette programmet bruker musikkens bass (de lave lydene) til å kontrollere danserens høyde. Kan du få den andre danseren til å tilsvare musikken også?
       Dance_Party_11: |-
-        <xml><block type="Dancelab_whenKey"></block></xml> blokken lar deg bruke en kode når “pil opp tasten” blir trykket på.
+        Blokken <xml><block type="Dancelab_whenKey"></block></xml> lar deg bruke en kode når “pil opp-tasten” blir trykket på.
 
-        Du kan endre danserens bevegelse, endre en dansers egenskaper, eller gjør en rask bevegelse kun en gang. Vær kreativ og se ut etter nye blokker!
-      Dance_Party_11_5: "Sjekk ut denne blokken:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title
-        name=\"N\">6</title>\n<title name=\"COSTUME\">\"AND\"</title>\n<title name=\"LAYOUT\">\"sirkel\"</title>\n</block></xml>\n
-        \ \nNå kan du lage mange dansere samtidig!\n\nPrøv å bruke en av “alle ender”
-        blokkene for å skrive en kode som får alle endene til å danse sammen."
+        Du kan endre danserens bevegelse, endre en dansers egenskaper eller gjør en rask bevegelse kun en gang. Vær kreativ og se etter nye blokker!
+      Dance_Party_11_5: |-
+        Sjekk ut denne blokken:
+
+        <xml>
+          <block type="Dancelab_makeNewDanceSpriteGroup">
+            <title name="N">6</title>
+            <title name="COSTUME">"DUCK"</title>
+            <title name="LAYOUT">"circle"</title>
+          </block></xml>
+
+        Nå kan du lage mange dansere samtidig!
+
+        Prøv å bruke en av “alle ender”-blokkene for å skrive en kode som får alle endene til å danse sammen.
       Dance_Party_11b: |-
         Det er på tide med en dansekonkurranse! Katten dabber når du trykker på “venstre pil tasten”. Få roboten til å “falle” en gang når du trykker på “pil høyre tasten”, og “klappe høyt” en gang når du trykker på “pil opp tasten”.
 
@@ -209,7 +274,7 @@ no-NO:
       Dance_Party_extras_every_beat: |-
         # Firedelsnoter
 
-        De fleste av dansene våre har brukt hele takter, men hver takt består av 4 firedelsnoter. Denne dansen bruker 'hver 0,25. takt' for å få danseren til å klappe på hver firedelsnote.
+        De fleste av dansene våre har brukt hele takter, men hver takt består av 4 fjerdedelsnoter. Denne dansen bruker 'hver 0,25. takt' for å få danseren til å klappe på hver fjerdedelsnote.
 
         Denne dansen bruker også en _betingelsesblokk_ til å kontrollere når ‘hver 0,25. takt’-blokken kan endre dansen. Prøv å endre tallene i betingelsesblokken for å se hvordan dette endrer dansen.
 
@@ -217,7 +282,7 @@ no-NO:
         -   Legg til noen ‘etter takten'-hendelser.
         -   Bytt "takter" med "sekunder", og prøv å justere timingen på dansen på denne måten isteden.
       Dance_Party_extras_layout: |-
-        # Kom i formasjon
+        # La oss komme i formasjon!
 
         Sjekk ut denne dansen som bruker ‘oppsett’-blokken til å endre bakgrunnsdansernes formasjon gjennom dansen. Prøv en av disse ideene for å utvide den:
 
@@ -363,6 +428,32 @@ no-NO:
         til sauen.
       Overworld Move to Sheep_2019: Legg til enda en "gå fremover"-kommando for å
         nå fram til sauen.
+      Standalone_Artist_2: Tegn denne diamanten med 120 og 60 graders vinkler og 150
+        piksler lange sider.
+      Standalone_Artist_3: Kan du tegne denne sekskanten med lange sider på 100 piksler
+        og vinkler på 60 grader?
+      Standalone_Artist_4: Nå har du fått en ny brikke som du kan bruke; gjenta-løkken.
+        Den vil repetere et sett med kommandoer. Hva skjer hvis du gjentar disse kommandoene
+        6 ganger?
+      Standalone_Artist_5: Hvor mange ganger må du å repetere denne diamanten for
+        å tegne blomsten?
+      Standalone_Artist_5.5: 'Legg merke til hvordan vi har forenklet diamantkoden
+        ved å legge inn en løkke. Du kan kjøre en sekvens i en løkke 12 ganger for
+        å tegne blomsten. Hint: Du vil trenge å snu 30 grader etter at diamanten har
+        kjørt i en løkke for å ikke fortsette å tegne over den samme diamanten.'
+      Standalone_Artist_6: 'Kjør denne sekskant-koden 6 ganger i en løkke for å lage
+        designet. Hvor mange grader må du snu hver gang? Hint: del antall grader i
+        en sirkel på antall ganger du skal kjøre løkka.'
+      Standalone_Artist_7: 'En funksjon er en annet programmeringsverktøy for å hjelpe
+        deg med å unngå å gjenta deg selv. Denne funksjonen tegner en blomst så du
+        kan bruke den hver gang du vil tegne en blomst. Bruk denne og den nye hoppe-blokken
+        til å tegne disse blomstene. Hint: Blomstene er 150 piksler fra hverandre'
+      Standalone_Artist_8: Her er en funksjon kalt "Tegn en figur" som vi har programmert
+        for å tegne sekskantene. Kjør koden for å se hva den gjør og eksperimenterer
+        deretter med funksjonen for å se hva som skjer. Kan du få den til å tegne
+        et mønster av firkanter, trekanter eller åttekanter?
+      Standalone_Artist_9: Gå videre og lag det bildet du ønsker! Du har til og med
+        en tom funksjon som kan du få til å gjøre hva du vil!
       Underground If Statements: Nå begynner det å bli vanskelig. Utvinn 3 redstone,
         men ikke fall i lavaen. Bruk en `hvis`-kommando til å plassere brostein over
         all lava du kommer over.
