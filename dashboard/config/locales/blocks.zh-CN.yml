@@ -3,6 +3,9 @@ zh-CN:
   data:
     blocks:
       Dancelab_alternateMoves:
+        text: |-
+          {GROUP} 每 {N} 小节交替
+          动作 {MOVE1} 和 {MOVE2}
         options:
           GROUP:
             sprites: 所有
@@ -16,6 +19,7 @@ zh-CN:
             '"PINEAPPLE"': 所有菠萝
             '"ROBOT"': 所有机器人
             '"SHARK"': 所有鲨鱼
+            '"SLOTH"': 树懒
             '"UNICORN"': 独角兽
           MOVE1:
             MOVES.Roll: 身体转动
@@ -69,6 +73,7 @@ zh-CN:
             '"PINEAPPLE"': 所有菠萝
             '"ROBOT"': 所有机器人
             '"SHARK"': 所有鲨鱼
+            '"SLOTH"': 树懒
             '"UNICORN"': 所有独角兽
           MOVE:
             '"next"': "（下一步）"
@@ -121,6 +126,7 @@ zh-CN:
             '"x"': 水平位置
             '"y"': 垂直位置
       Dancelab_changePropEachBy:
+        text: 更改 {GROUP} {PROPERTY} 数值 {VAL}
         options:
           GROUP:
             sprites: 所有
@@ -134,6 +140,7 @@ zh-CN:
             '"PINEAPPLE"': 所有菠萝
             '"ROBOT"': 所有机器人
             '"SHARK"': 所有鲨鱼
+            '"SLOTH"': 树懒
             '"UNICORN"': 独角兽
           PROPERTY:
             '"scale"': 大小
@@ -157,6 +164,7 @@ zh-CN:
             '"PINEAPPLE"': 所有菠萝
             '"ROBOT"': 所有机器人
             '"SHARK"': 所有鲨鱼
+            '"SLOTH"': 树懒
             '"UNICORN"': 独角兽
           MOVE:
             '"rand"': 随机
@@ -305,6 +313,7 @@ zh-CN:
             "{x: 300, y: 300}": 右下
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 随机
       Dancelab_jumpToEach:
+        text: 让 {GROUP} 跳到 {LOCATION}
         options:
           GROUP:
             sprites: 所有
@@ -318,6 +327,7 @@ zh-CN:
             '"PINEAPPLE"': 所有菠萝
             '"ROBOT"': 所有机器人
             '"SHARK"': 所有鲨鱼
+            '"SLOTH"': 树懒
             '"UNICORN"': 独角兽
           LOCATION:
             "{x: 200, y: 100}": 顶部
@@ -345,6 +355,7 @@ zh-CN:
             '"PINEAPPLE"': 所有菠萝
             '"ROBOT"': 所有机器人
             '"SHARK"': 所有鲨鱼
+            '"SLOTH"': 树懒
             '"UNICORN"': 独角兽
           FORMAT:
             '"border"': 边框
@@ -370,6 +381,7 @@ zh-CN:
             '"PINEAPPLE"': 菠萝
             '"ROBOT"': 机器人
             '"SHARK"': 鲨鱼
+            '"SLOTH"': 树懒
             '"UNICORN"': 独角兽
           LOCATION:
             "{x: 200, y: 100}": 顶部
@@ -398,6 +410,7 @@ zh-CN:
             '"PINEAPPLE"': 菠萝
             '"ROBOT"': 机器人
             '"SHARK"': 鲨鱼
+            '"SLOTH"': 树懒
             '"UNICORN"': 独角兽
           LOCATION:
             "{x: 200, y: 100}": 顶部
@@ -444,14 +457,20 @@ zh-CN:
             '"PINEAPPLE"': 菠萝
             '"ROBOT"': 机器人
             '"SHARK"': 鲨鱼
+            '"SLOTH"': 树懒
             '"UNICORN"': 独角兽
           LAYOUT:
             '"border"': 边框
             '"inner"': 正方形内部
+            '"diamond"': 钻石
             '"circle"': 圆
             '"grid"': 网格
+            '"top"': 最上排
             '"row"': 行
+            '"bottom"': 最底排
+            '"left"': 左栏
             '"column"': 列
+            '"right"': 右栏
             '"x"': 十字交叉
             '"plus"': 添加
             '"random"': 随机
@@ -508,22 +527,29 @@ zh-CN:
             '"none"': 没有
             '"rand"': 随机
             '"circles"': 隧道
+            '"quads"': 角度
             '"color_cycle"': 颜色
             '"diamonds"': 菱形
             '"disco_ball"': 迪斯科球
             '"fireworks"': 烟火
+            '"flowers"': 花朵
+            '"growing_stars"': 变大的星星
             '"swirl"': 催眠
             '"kaleidoscope"': 万花筒
             '"lasers"': 激光舞池
             '"splatter"': 油漆飞溅
             '"rainbow"': 彩虹
+            '"ripples_random"': 随机涟漪
+            '"ripples"': 涟漪
             '"snowflakes"': 雪
             '"text"': 歌曲标题
+            '"squiggles"': 花体
             '"galaxy"': 空间
             '"sparkles"': 火花
             '"spiral"': 螺旋
             '"disco"': 方形
             '"stars"': 星星
+            '"music_wave"': 波浪
           PALETTE:
             '"rave"': 黑白
             '"cool"': 蓝色
@@ -558,6 +584,7 @@ zh-CN:
             '"PINEAPPLE"': 所有菠萝
             '"ROBOT"': 所有机器人
             '"SHARK"': 所有鲨鱼
+            '"SLOTH"': 树懒
             '"UNICORN"': 独角兽
           SPEED:
             '1': 正常
@@ -590,9 +617,12 @@ zh-CN:
             '"none"': 没有
             '"rand"': 随机
             '"bubbles"': 气泡
+            '"hearts_colorful"': 多彩的心
             '"confetti"': 彩纸屑
+            '"emojis"': 表情符号
             '"hearts_red"': 心
             '"music_notes"': 音符
+            '"paint_drip"': 油漆液滴
             '"pineapples"': 菠萝
             '"pizzas"': 比萨
             '"smiling_poop"': 便便
@@ -601,6 +631,7 @@ zh-CN:
             '"smile_face"': 微笑
             '"spotlight"': 聚光灯
             '"color_lights"': 舞台灯光
+            '"exploding_stars"': 星爆
             '"raining_tacos"': 玉米卷
       Dancelab_setProp:
         text: 设置 {SPRITE} {PROPERTY} 为 {VAL}
@@ -627,6 +658,7 @@ zh-CN:
             '"PINEAPPLE"': 所有菠萝
             '"ROBOT"': 所有机器人
             '"SHARK"': 所有鲨鱼
+            '"SLOTH"': 树懒
             '"UNICORN"': 独角兽
           PROPERTY:
             '"scale"': 大小
@@ -648,6 +680,7 @@ zh-CN:
             '"y"': 垂直位置
             '"tint"': 色调
       Dancelab_setPropRandomEach:
+        text: 随机 {GROUP} {PROPERTY}
         options:
           GROUP:
             sprites: 所有
@@ -661,6 +694,7 @@ zh-CN:
             '"PINEAPPLE"': 所有菠萝
             '"ROBOT"': 所有机器人
             '"SHARK"': 所有鲨鱼
+            '"SLOTH"': 树懒
             '"UNICORN"': 独角兽
           PROPERTY:
             '"scale"': 大小
@@ -687,6 +721,7 @@ zh-CN:
             '"PINEAPPLE"': 所有菠萝
             '"ROBOT"': 所有机器人
             '"SHARK"': 所有鲨鱼
+            '"SLOTH"': 树懒
             '"UNICORN"': 独角兽
       Dancelab_setTintEachInline:
         text: 设置 {THIS} 色调为 {VAL}
@@ -703,6 +738,7 @@ zh-CN:
             '"PINEAPPLE"': 所有菠萝
             '"ROBOT"': 所有机器人
             '"SHARK"': 所有鲨鱼
+            '"SLOTH"': 树懒
             '"UNICORN"': 独角兽
       Dancelab_setTintInline:
         text: 设置 {SPRITE} 色调为 {VAL}
@@ -727,6 +763,7 @@ zh-CN:
             '"PINEAPPLE"': 所有菠萝
             '"ROBOT"': 所有机器人
             '"SHARK"': 所有鲨鱼
+            '"SLOTH"': 树懒
             '"UNICORN"': 独角兽
           VISIBILITY:
             'true': 可见
@@ -747,6 +784,7 @@ zh-CN:
             '"mid"': 中音音量
             '"treble"': 高音音量
       Dancelab_startMappingEach:
+        text: "{GROUP} 开始 {PROPERTY} 跟随 {RANGE}"
         options:
           GROUP:
             sprites: 所有
@@ -760,6 +798,7 @@ zh-CN:
             '"PINEAPPLE"': 所有菠萝
             '"ROBOT"': 所有机器人
             '"SHARK"': 所有鲨鱼
+            '"SLOTH"': 树懒
             '"UNICORN"': 独角兽
           PROPERTY:
             '"scale"': 大小
@@ -790,6 +829,7 @@ zh-CN:
             '"mid"': 中音音量
             '"treble"': 高音音量
       Dancelab_stopMappingEach:
+        text: "{GROUP} 停止 {PROPERTY} 跟随 {RANGE}"
         options:
           GROUP:
             sprites: 所有
@@ -803,6 +843,7 @@ zh-CN:
             '"PINEAPPLE"': 所有菠萝
             '"ROBOT"': 所有机器人
             '"SHARK"': 所有鲨鱼
+            '"SLOTH"': 树懒
             '"UNICORN"': 独角兽
           PROPERTY:
             '"scale"': 大小
@@ -818,10 +859,33 @@ zh-CN:
             '"mid"': 中音音量
             '"treble"': 高音音量
       Dancelab_translateStrings:
+        text: 翻译 {STRING}
         options:
           STRING:
+            '"music_wave"': 波浪
+            '"ripples"': 涟漪
+            '"ripples_random"': 随机涟漪
+            '"quads"': 角度
+            '"flowers"': 花朵
+            '"popsicles"': 冰棒
+            '"squiggles"': 花体
+            '"growing_stars"': 变大的星星
+            '"emojis"': 表情符号
             '"hearts_colorful"': 心
+            '"paint_drio"': 油漆液滴
+            '"exploding_stars"': 星爆
+            '"row_top"': 最上排
+            '"row_bottom"': 最底排
+            '"column_left"': 左栏
+            '"column_right"': 右栏
             '"diamond"': 钻石
+            '"mural"': 壁画
+            '"safari"': 游猎
+            '"network"': 网路
+            '"highway"': 高速公路
+            '"stream"': 串流
+            '"tile"': 平铺
+            '"shadow"': 阴影
             '"s"': s
             '"t"': t
             '"u"': u

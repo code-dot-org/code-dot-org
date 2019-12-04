@@ -1760,32 +1760,35 @@ zh-CN:
       CourseD_Dance_Party_01:
         validation: |-
           **我如何通过此关？**
-          \*确保屏幕上出现一个舞者。
+
+          -   确保屏幕上出现一个舞者。
 
           _此关在 4 个小节后结束。_
         challenges: |-
           **可选挑战**
-          \*选择播放一首不同的歌曲。
-          \*选择一个像驼鹿的不同项目！
-          \*重命名您的舞者。
+
+          -   选择播放一首不同的歌曲。
+          -   选择一个像驼鹿的不同项目！
+          -   重命名您的舞者。
       CourseD_Dance_Party_02:
         validation: |-
           **我如何通过此关？**
-          \*舞者需要在 4 个小节后变换到新动作。
+
+          -   舞者需要在 4 个小节后变换到新动作。
 
           _此关在 8 个小节后结束。_
       CourseD_Dance_Party_03:
         validation: |-
           **如何通过此关？**
 
-          \*6 个小节后，舞者需要跳与 4 个小节后不同的舞蹈。
+          -   6 个小节后，舞者需要跳与 4 个小节后不同的舞蹈。
 
           _此关在 12 个小节后结束。_
       CourseD_Dance_Party_04:
         validation: |-
           **如何通过此关？**
 
-          \*需要在歌曲的第七个小节变换背景效果。
+          -   需要在歌曲的第七个小节变换背景效果。
 
           _此关在 10 个小节后结束。_
         challenges: |-
@@ -1796,60 +1799,60 @@ zh-CN:
         validation: |-
           **如何通过此关？**
 
-          \*需要至少两个舞者。
+          -   需要至少两个舞者。
 
           _此关在 6 个小节后结束。_
         challenges: |-
           **可选挑战**
 
-          \*添加第三个舞者（或者更多数量！）
-          \*让所有舞者在歌曲的不同时间点做不同的动作。
+          -   添加第三个舞者（或者更多数量！）
+          -   让所有舞者在歌曲的不同时间点做不同的动作。
       CourseD_Dance_Party_08:
         validation: |-
           **如何通过此关？**
 
-          \*两个舞者的大小不能为 100。
+          -   两个舞者的大小不能为 100。
 
           _此关在 6 个小节后结束。_
         challenges: |-
           **可选挑战**
 
-          \*通过更改其他属性（宽度、高度、旋转等）来尝试
+          -   通过更改其他属性（宽度、高度、旋转等）来尝试
       CourseD_Dance_Party_09:
         validation: |-
           **如何通过此关？**
 
-          \*更改至少一个舞者的色彩。
+          -   更改至少一个舞者的色彩。
 
           _此关在 8 个小节后结束。_
       CourseD_Dance_Party_10:
         validation: |-
           **如何通过此关？**
 
-          \*必须更改两个或更多的舞者属性。
+          -   必须更改两个或更多的舞者属性。
 
           _此关在 8 个小节后结束。_
       CourseD_Dance_Party_11:
         validation: |-
           **如何通过此关？**
 
-          \*只需发挥想象力！
+          -   只需发挥想象力！
 
           _此关在 8 个小节后结束。_
       CourseD_Dance_Party_11_5:
         validation: |-
           **如何通过此关？**
 
-          \*只需发挥想象力！
+          -   只需发挥想象力！
 
           _此关在 8 个小节后结束。_
       CourseD_Dance_Party_11b:
         validation: |-
           **如何通过此关？**
 
-          \*使用`当按左方向键时`模块让机器人在按下时做一个舞蹈动作。
+          -   使用`当按左方向键时`模块让机器人在按下时做一个舞蹈动作。
 
-          -   此关在 8 个小节后结束。\*
+          _此关在 8 个小节后结束。_
       CourseE_HOC 2018 Level_10:
         voyage_aquatic_10a: 看到**海晶灯** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)
           了吗？怎样可以用条件来使用它们，穿过海底遗迹？
@@ -1860,7 +1863,8 @@ zh-CN:
       Dance_2019_01:
         validation: |-
           **我如何通过此关？**
-          \*确保屏幕上出现一个舞者。
+
+          -   确保屏幕上出现一个舞者。
 
           _此关在 4 个小节后结束。_
         challenges: |-
@@ -1896,14 +1900,15 @@ zh-CN:
       Dance_2019_04:
         validation: |-
           **我如何通过此关？**
-          \*舞者需要在 4 个小节后变换到新动作。
+
+          -   舞者需要在 4 个小节后变换到新动作。
 
           _此关在 8 个小节后结束。_
       Dance_2019_05:
         validation: |-
           **如何通过此关？**
 
-          \*6 个小节后，舞者需要跳与 4 个小节后不同的舞蹈。
+          -   6 个小节后，舞者需要跳与 4 个小节后不同的舞蹈。
 
           _此关在 12 个小节后结束。_
         challenges: |-
@@ -1964,96 +1969,106 @@ zh-CN:
       Dance_Party_01:
         validation: |-
           **我如何通过此关？**
-          \*确保屏幕上出现一个舞者。
+
+          -   确保屏幕上出现一个舞者。
 
           _此关在 4 个小节后结束。_
         challenges: |-
           **可选挑战**
-          \*选择播放一首不同的歌曲。
-          \*选择一个像驼鹿的不同项目！
-          \*重命名您的舞者。
+
+          -   选择播放一首不同的歌曲。
+          -   选择一个像驼鹿的不同项目！
+          -   重命名您的舞者。
       Dance_Party_02:
         validation: |-
           **我如何通过此关？**
-          \*舞者需要在 4 个小节后变换到新动作。
+
+          -   舞者需要在 4 个小节后变换到新动作。
 
           _此关在 8 个小节后结束。_
       Dance_Party_03:
         validation: |-
           **如何通过此关？**
 
-          \*6 个小节后，舞者需要跳与 4 个小节后不同的舞蹈。
+          -   6 个小节后，舞者需要跳与 4 个小节后不同的舞蹈。
 
           _此关在 12 个小节后结束。_
       Dance_Party_04:
         validation: |-
           **如何通过此关？**
 
-          \*需要在歌曲的第七个小节变换背景效果。
+          -   需要在歌曲的第七个小节变换背景效果。
 
           _此关在 10 个小节后结束。_
         challenges: |-
           **可选挑战**
 
-          通过连接<xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"小节"</title></block></xml>事件下的新模块，在歌曲的不同时间点变换背景效果。
+          通过连接<xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> 事件下的新模块，在歌曲的不同时间点变换背景效果。
+      Dance_Party_05:
+        validation: |-
+          **如何通过这一关？**
+
+          -   您的舞者需要在关卡结束之前至少循环 4 种不同的舞蹈动作。
+
+          _此关在 12 个小节后结束。_
       Dance_Party_06:
         validation: |-
           **如何通过此关？**
 
-          \*需要至少两个舞者。
+          -   需要至少两个舞者。
 
           _此关在 6 个小节后结束。_
         challenges: |-
           **可选挑战**
 
-          \*添加第三个舞者（或者更多数量！）
-          \*让所有舞者在歌曲的不同时间点做不同的动作。
+          -   添加第三个舞者（或者更多数量！）
+          -   让所有舞者在歌曲的不同时间点做不同的动作。
       Dance_Party_08:
         validation: |-
           **如何通过此关？**
 
-          \*两个舞者的大小不能为 100。
+          -   两个舞者的大小不能为 100。
 
           _此关在 6 个小节后结束。_
         challenges: |-
           **可选挑战**
 
-          \*通过更改其他属性（宽度、高度、旋转等）来尝试
+          -   通过更改其他属性（宽度、高度、旋转等）来尝试
       Dance_Party_09:
         validation: |-
           **如何通过此关？**
 
-          \*更改至少一个舞者的色彩。
+          -   更改至少一个舞者的色彩。
 
           _此关在 8 个小节后结束。_
       Dance_Party_10:
         validation: |-
           **如何通过此关？**
 
-          \*必须更改两个或更多的舞者属性。
+          -   必须更改两个或更多的舞者属性。
 
           _此关在 8 个小节后结束。_
       Dance_Party_11:
         validation: |-
           **如何通过此关？**
 
-          \*只需发挥想象力！
+          -   只需发挥想象力！
 
           _此关在 8 个小节后结束。_
       Dance_Party_11_5:
         validation: |-
           **如何通过此关？**
 
-          \*只需发挥想象力！
+          -   只需发挥想象力！
 
           _此关在 8 个小节后结束。_
       Dance_Party_11b:
         validation: |-
           **如何通过此关？**
 
-          \*使用`当按左方向键时`模块让机器人在按下时做一个舞蹈动作。
+          -   使用`当按左方向键时`模块让机器人在按下时做一个舞蹈动作。
 
-          -   此关在 8 个小节后结束。\*
+          _此关在 8 个小节后结束。_
       Function intro Ryan:
         Function_intro_Ryan_b: 如果您调用的函数正确, 这将是您要旅行的路径。
         Function_intro_Ryan_a: 您可以在程序中多次调用某一函数！尝试调用两次以解决该难题。
@@ -8570,7 +8585,7 @@ zh-CN:
         courseD_bounce_events10s_a: |-
           应该在代码中同时使用这些事件：
 
-          <xml><block type="bounce_whenBallInGoal" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">swish</title><next><block type="bounce_incrementPlayerScore"></block></next></block></next></block><block type="bounce_whenBallMissesPaddle" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">whistle</title><next><block type="bounce_incrementOpponentScore"></block></next></block></next>\</block</xml>
+          <xml><block type="bounce_whenBallInGoal" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">swish</title><next><block type="bounce_incrementPlayerScore"></block></next></block></next></block><block type="bounce_whenBallMissesPaddle" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">whistle</title><next><block type="bounce_incrementOpponentScore"></block></next></block></next></block></xml>
       courseD_bounce_events10s_2019:
         courseD_bounce_events10s_a: |-
           应该在代码中同时使用这些事件：
@@ -8647,7 +8662,7 @@ zh-CN:
         courseD_bounce_events5s_b: |-
           确保已将此代码添加到工作区：
 
-          <xml> <block type="bounce_whenPaddleCollided" deletable="false"> <next> <block type="bounce_bounceBall"/></next></block></xml>
+          <xml>  <block type="bounce_whenPaddleCollided" deletable="false"> <next> <block type="bounce_bounceBall"/></next></block></xml>
       courseD_bounce_events5s_2019:
         courseD_bounce_events5s_a: 你不需要移动手来解决这个关卡。
         courseD_bounce_events5s_b: |-
