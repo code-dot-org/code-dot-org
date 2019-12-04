@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import ContentContainer from './ContentContainer';
 import ResourceCardResponsiveContainer from './studioHomepages/ResourceCardResponsiveContainer';
 import VerticalImageResourceCard from './VerticalImageResourceCard';
@@ -10,11 +11,13 @@ import shapes from './studioHomepages/shapes';
 
 export default class VerticalImageResourceCardRow extends Component {
   static propTypes = {
-    cards: shapes.courses
+    cards: shapes.courses,
+    // For logging
+    cardIds: PropTypes.array
   };
 
   render() {
-    const {cards} = this.props;
+    const {cards, cardIds} = this.props;
     return (
       <ContentContainer heading="" description="" hideBottomMargin={true}>
         <ResourceCardResponsiveContainer>
@@ -27,6 +30,7 @@ export default class VerticalImageResourceCardRow extends Component {
               link={card.link}
               image={card.image}
               MCShareLink={card.MCShareLink}
+              cardIds={cardIds}
             />
           ))}
         </ResourceCardResponsiveContainer>

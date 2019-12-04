@@ -4,6 +4,7 @@ import Radium from 'radium';
 import {connect} from 'react-redux';
 import color from '../util/color';
 import Button from './Button';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const styles = {
   card: {
@@ -89,7 +90,21 @@ class VerticalImageResourceCard extends Component {
     image: PropTypes.string.isRequired,
     isRtl: PropTypes.bool.isRequired,
     MCShareLink: PropTypes.string,
-    jumbo: PropTypes.bool
+    jumbo: PropTypes.bool,
+    // For logging
+    cardIds: PropTypes.array
+  };
+
+  logToFirehose = (eventName, overrideData = {}) => {
+    let data = {
+      card_options: this.props.cardIds
+    };
+
+    firehoseClient.putRecord({
+      study: 'congrats_promo_box_click',
+      event: this.props.link,
+      data_json: JSON.stringify(data)
+    });
   };
 
   render() {
@@ -155,6 +170,7 @@ class VerticalImageResourceCard extends Component {
             color={Button.ButtonColor.gray}
             text={buttonText}
             style={[styles.button, localeStyle]}
+            onClick={this.logToFirehose}
           />
         </div>
       </div>

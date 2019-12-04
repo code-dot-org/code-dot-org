@@ -2,6 +2,7 @@ import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import i18n from '@cdo/locale';
 
 const CSFExpress = {
+  id: 'csf-express',
   title: i18n.csfExpressTitle(),
   description: i18n.csfExpressDesc(),
   link: '/s/express',
@@ -10,6 +11,7 @@ const CSFExpress = {
 };
 
 const CSFAccelerated = {
+  id: 'csf-accelerated',
   title: i18n.csfAcceleratedTitle(),
   description: i18n.csfAcceleratedDesc(),
   link: '/s/20-hour',
@@ -18,6 +20,7 @@ const CSFAccelerated = {
 };
 
 const CourseCatalog = {
+  id: 'course-catalog',
   title: i18n.courseCatalogTitle(),
   description: i18n.courseCatalogDescription(),
   link: '/courses',
@@ -26,6 +29,7 @@ const CourseCatalog = {
 };
 
 const CreateAccount = {
+  id: 'create-account',
   title: i18n.createAccount(),
   description: i18n.createAccountDesc(),
   link: '/users/sign_up',
@@ -34,6 +38,7 @@ const CreateAccount = {
 };
 
 const CreateAccountApplab = {
+  id: 'create-account-applab',
   title: i18n.createAccount(),
   description: i18n.createAccountApplabDesc(),
   link: '/users/sign_up',
@@ -42,6 +47,7 @@ const CreateAccountApplab = {
 };
 
 const AnotherHoC = {
+  id: 'another-hoc',
   title: i18n.anotherHoCTitle(),
   description: i18n.anotherHoCDesc(),
   link: pegasus('/hourofcode/overview'),
@@ -50,6 +56,7 @@ const AnotherHoC = {
 };
 
 const ApplabTutorial = {
+  id: 'applab-tutorial',
   title: i18n.applabTutorialTitle(),
   description: i18n.applabTutorialDesc(),
   link: '/s/applab-intro/reset',
@@ -58,6 +65,7 @@ const ApplabTutorial = {
 };
 
 const ApplabMarketing = {
+  id: 'applab-marketing',
   title: i18n.applabMarketingTitle(),
   description: i18n.applabMarketingDesc(),
   link: pegasus('/applab'),
@@ -66,6 +74,7 @@ const ApplabMarketing = {
 };
 
 const ApplabProject = {
+  id: 'applab-project',
   title: i18n.applabProjectTitle(),
   description: i18n.applabProjectDesc(),
   link: '/projects/applab/new',
@@ -74,6 +83,7 @@ const ApplabProject = {
 };
 
 const OldMinecraft = {
+  id: 'old-minecraft',
   title: i18n.pre2017MinecraftTitle(),
   description: i18n.pre2017MinecraftDesc(),
   link: 'https://education.minecraft.net/hour-of-code',
@@ -82,6 +92,7 @@ const OldMinecraft = {
 };
 
 const HeroMinecraft = {
+  id: 'hero-minecraft',
   title: i18n.minecraft2017Title(),
   description: i18n.minecraft2017Desc(),
   link: 'https://education.minecraft.net/hour-of-code',
@@ -93,6 +104,7 @@ const HeroMinecraft = {
 // This card is displayed when you complete the Code.org MC Aquatic tutorial.
 // The takes you to the Microsoft Minecraft page.
 const AquaticMinecraft = {
+  id: 'aquatic-minecraft',
   title: i18n.minecraftAquaticTitle(),
   description: i18n.minecraftAquaticDesc(),
   link: 'http://aka.ms/hoc2018',
@@ -103,6 +115,7 @@ const AquaticMinecraft = {
 // This card is displayed to promote the MC Aquatic tutorial after finishing
 // another Hour of Code activity.
 const AquaticMinecraftPromo = {
+  id: 'aquatic-minecraft-promo',
   title: i18n.minecraftAquaticPromoTitle(),
   description: i18n.minecraftAquaticPromoDesc(),
   link: '/s/aquatic/reset',
@@ -111,6 +124,7 @@ const AquaticMinecraftPromo = {
 };
 
 const DanceParty = {
+  id: 'dance-party',
   title: i18n.dancePartyTitle(),
   description: i18n.dancePartyDesc(),
   link: '/s/dance/reset',
@@ -119,6 +133,7 @@ const DanceParty = {
 };
 
 const DancePartyFollowUp = {
+  id: 'dance-party-extras',
   title: i18n.danceAfterPartyTitle(),
   description: i18n.danceAfterPartyDesc(),
   link: '/s/dance-extras-2019/reset',

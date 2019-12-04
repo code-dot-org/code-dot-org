@@ -8,6 +8,7 @@ import {LocalClassActionBlock} from './studioHomepages/TwoColumnActionBlock';
 import {tutorialTypes} from './tutorialTypes.js';
 import {cardSets} from './congratsBeyondHocActivityCards';
 import {ResponsiveSize} from '@cdo/apps/code-studio/responsiveRedux';
+import _ from 'lodash';
 
 const styles = {
   heading: {
@@ -140,6 +141,7 @@ class StudentsBeyondHoc extends Component {
         specificCardSet = 'signedOutDefaultCards';
     }
     const cards = cardSets[specificCardSet];
+    const cardIds = _.map(cards, 'id');
 
     // 2017 Minecraft Tutorial has a share link that can be used on Minecraft // Education to import code. Check if the 2017 Minecraft tutorial was
     // completed; if it was, update the Minecraft share link for the card that // goes to Minecraft Education.
@@ -163,7 +165,7 @@ class StudentsBeyondHoc extends Component {
     return (
       <div style={styles.container}>
         <h1 style={headingStyle}>{heading}</h1>
-        <VerticalImageResourceCardRow cards={cards} />
+        <VerticalImageResourceCardRow cards={cards} cardIds={cardIds} />
         {isEnglish && (
           <CourseBlocksStudentGradeBands
             showContainer={false}
