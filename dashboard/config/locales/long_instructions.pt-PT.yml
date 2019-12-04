@@ -480,6 +480,14 @@ pt-PT:
       CourseE_HOC 2018 Level_9b: Chegaste ao recife de coral, agora procura o **Heart
         of the Sea** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
         ! Usa o coral azul e vermelho para alcançar o **baú** do tesouro ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
+      Dance_2019_01: "Arrasta o bloco <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"
+        block-text=\"make a new dancer\"><title name=\"COSTUME\" config=\"&quot;CAT&quot;,
+        &quot;PINEAPPLE&quot;\">\"CAT\"</title><title name=\"LOCATION\">{x: 200, y:
+        200}</title></block></xml> para o ambiente de trabalho e liga-o dentro do
+        bloco <xml><block type=\"Dancelab_whenSetup2\" next_connection_disabled=\"true\"
+        block-text=\"setup\"></block></xml>. \n\n Escolhe `gato` ou `preguiça` para
+        criar o teu primeiro dançarino.\n\n-   _Podes também clicar na lâmpada à esquerda
+        se quiseres mais informações ou desafios extras._"
       Dance_2019_02: "O bloco <xml><block type=\"Dancelab_whenKey\" block-text=\"when
         up pressed\"></block></xml> permite-te executar o código quando primes as
         teclas direcionais. \nUsa o bloco <xml><block type=\"Dancelab_doMoveEachLR\"
@@ -490,6 +498,14 @@ pt-PT:
       Dance_2019_03: Está na hora da dança! Programa cada dançarino para se mover
         quando premires teclas diferentes. Escolhe o teu movimento preferido para
         cada dançarino ou defini-o para `(Aleatório)` para algo completamente imprevisível!
+      Dance_2019_04: "Vamos pôr os dançarinos a mexerem-se ao ritmo da música!\n\nConecta
+        o bloco <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">4</title><title
+        name=\"UNIT\">\"measures\"</title></block></xml> a um bloco <xml><block type=\"Dancelab_changeMoveEachLR\"><title
+        name=\"GROUP\">\"SHARK\"</title><title name=\"MOVE\">MOVES.ThisOrThat</title><title
+        name=\"DIR\">-1</title></block></xml> da caixa de ferramentas. \n\nO teu dançarino
+        deverá começar um novo movimento após o quarto compasso.\n\nOs **compassos**
+        são usados para contar o tempo da música. Neste tutorial, um compasso tem
+        quatro tempos."
       Dance_2019_05: "_Agora já estamos a curtir!_ \n\nAdiciona um bloco <xml><block
         type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml>
         à tua área de trabalho. Faz o dançarino iniciar um novo movimento após 6 compassos."
@@ -542,13 +558,16 @@ pt-PT:
 
         Tenta usar alguns dos blocos "todos patos" para escrever o código que fará com que todos os patos dancem juntos.
       Dance_Party_extras_alternate_2019: |-
-        # Ponham-se em formação!
+        # Para a frente e para trás!
 
-        Vê esta dança que usa o bloco [blockly block][0] para mudar a formação dos dançarinos secundários ao longo da dança. Experimenta uma destas ideias para estendê-la:
+        Às vezes tu poderás querer criar um padrão de movimentos de dança que escolheres. Este novo bloco permite-te criar mesmo isso.
 
-        -   Cria um segundo grupo de dançarinos numa disposição diferente
-        -   Muda a disposição quando uma tecla é premida
-        -   Altera uma propriedade quando os dançarinos mudarem de formação
+        <xml><block type="Dancelab_alternateMoves"><title name="GROUP">sprites</title><title name="N">2</title><title name="MOVE1">MOVES.Roll</title><title name="MOVE2">MOVES.ClapHigh</title></block></xml>
+
+        Os movimentos que escolheres acima, repetirão-se em sequência para sempre.
+
+        -   Cria uma rotina que se muda para o dançarino principal à frente!
+        -   Usa números diferentes para mudar a velocidade relativa de como os movimentos se alternam!
       Dance_Party_extras_battle: |-
         # Maltas da Dança
 
@@ -576,9 +595,14 @@ pt-PT:
         -   Adiciona alguns eventos "após o compasso".
         -   Troca "compassos" por "segundos" e tenta sincronizar as tuas danças dessa maneira.
       Dance_Party_extras_every_beat_2019: |-
-        # Acelera-a, Abranda-a
+        # Semínimas
 
-        Esta dança final usa o bloco [blockly block][0] para controlar o quão rápido cada dançarino se mexe. Tenta experimentar com diferentes velocidades durante pontos diferentes na canção. Põe-te à vontade em mexericar nesta dança ou volta a qualquer uma das danças anteriores para torná-las mais fixes.
+        A maioria das nossas danças usou compassos inteiros mas cada compasso é composto por 4 semínimas. Esta dança usa <xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml> para fazer o dançarino aplaudir a cada semínima mas só apenas para os primeiros 4 compassos.
+
+        Experimenta mudar os números no bloco para ver como é que altera a dança.
+
+        -   Experimenta com outras durações de notas (como 0,5 para uma mínima ou 0,125 para uma colcheia).
+        -   Adiciona outros eventos.
       Dance_Party_extras_layout: |-
         # Ponham-se em formação!
 
@@ -587,6 +611,21 @@ pt-PT:
         -   Cria um segundo grupo de dançarinos numa disposição diferente
         -   Muda a disposição quando uma tecla é premida
         -   Altera uma propriedade quando os dançarinos mudarem de formação
+      Dance_Party_extras_layout_2019: |-
+        # Ponham-se em formação!
+
+        Vê esta dança que usa o bloco <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> para mudar a formação dos dançarinos secundários ao longo da dança. Experimenta uma destas ideias para estendê-la:
+
+        -   Cria um segundo grupo de dançarinos numa disposição diferente
+        -   Muda a disposição quando uma tecla é premida
+        -   Altera uma propriedade quando os dançarinos mudarem de formação
+      Dance_Party_extras_mixed_2019: |-
+        # Mais botões
+
+        Esta dança permite-te controlar as propriedades dos dançarinos em tempo real enquanto que eles dançam automaticamente. Tenta fazer com que outras propriedades mudem quando premires os botões. Por exemplo:
+
+        -   Alterar à sorte a tonalidade da cor do dançarino quando premires "seta para baixo".
+        -   Adicionar um grupo de dançarinos com uma disposição aleatória quando premires "barra de espaço".
       Dance_Party_extras_on_beat: |-
         # Grave, Médio e Agudo
 
@@ -602,7 +641,7 @@ pt-PT:
       Dance_Party_extras_speed_2019: |-
         # Acelera-a, Abranda-a
 
-        Esta dança final usa o bloco [blockly block][0] para controlar o quão rápido cada dançarino se mexe. Tenta experimentar com diferentes velocidades durante pontos diferentes na canção. Põe-te à vontade em mexericar nesta dança ou volta a qualquer uma das danças anteriores para torná-las mais fixes.
+        Esta dança final usa o bloco <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> para controlar o quão rápido cada dançarino se mexe. Tenta experimentar com diferentes velocidades durante pontos diferentes na canção. Põe-te à vontade em mexericar nesta dança ou volta a qualquer uma das danças anteriores para torná-las mais fixes.
       Dance_Party_extras_visible: |-
         # Para onde é que eles foram?
 
@@ -612,13 +651,14 @@ pt-PT:
         -   Mostra e oculta dançarinos usando as teclas direcionais
         -   Oculta todos os dançarinos e troca para um efeito de fundo emocionante
       Dance_Party_extras_visible_2019: |-
-        # Para onde é que eles foram?
+        # Semínimas
 
-        Esta dança mostra e oculta dois grupos diferentes de dançarinos. Vê e depois tenta adicionar ao teu próprio gosto.
+        A maioria das nossas danças usou compassos inteiros mas cada compasso é composto por 4 semínimas. Esta dança usa [blockly block][0] para fazer o dançarino aplaudir a cada semínima.
 
-        -   Adiciona outro grupo de dançarinos
-        -   Mostra e oculta dançarinos usando as teclas direcionais
-        -   Oculta todos os dançarinos e troca para um efeito de fundo emocionante
+        Experimenta mudar os números no bloco para ver como é que altera a dança.
+
+        -   Experimenta com outras durações de notas (como 0,5 para uma mínima ou 0,125 para uma colcheia)
+        -   Adiciona outros eventos
       Function intro Ryan: "Uma **função** chamada \"construir ponte\" está no teu
         espaço de trabalho.  Todo o código de que precisas para atravessar o rio está
         incorporado! \\\r\n \\\r\nEncaixa o pequeno bloco verde duas vezes no teu
