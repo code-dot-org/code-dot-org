@@ -16,10 +16,10 @@
 
 %form#volunteer-search-form{role: "form", onsubmit: "event.preventDefault();"}
   #volunteer-search-facets.form-section.row
-    %h3.col-xs-12.top-margin Narrow your search
+    %h3.col-xs-12.top-margin Search your location
     .form-section.row.no-margin
       .form-group.col-xs-4
-        %input#location.form-control{name: "location", placeholder: "Search my location", type: "text", value: search_location}
+        %input#location.form-control{name: "location", placeholder: "ZIP code, city and state/country", type: "text", value: search_location}
       .form-group.col-xs-2.submit-btn
         %button#btn-submit{type: "submit", style: "margin-top: 0px"} Search
 
