@@ -4965,6 +4965,8 @@ sk:
               name: Udalosti
             Functions:
               name: Funkcie
+            'Diving Deeper: Courses E and F':
+              name: 'Ponárame sa hlbšie: Kurzy E a F'
             Variables:
               name: Premenné
             For Loops:
