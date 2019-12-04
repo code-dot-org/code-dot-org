@@ -99,6 +99,8 @@ uk-UA:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Новий блок!
         dance_callout_11_b: Новий блок!
+      CourseD_Dance_Party_11_5:
+        dance_party_11_5_groups: Шукайте блок "усі качки" тут
       Dance_2019_01:
         dance_callout_01: Оберіть тип танцівника тут.
       Dance_2019_02:
@@ -126,6 +128,8 @@ uk-UA:
       Dance_Party_11:
         dance_callout_11_a: Новий блок!
         dance_callout_11_b: Новий блок!
+      Dance_Party_11_5:
+        dance_party_11_5_groups: Шукайте блок "усі качки" тут
       Function intro Ryan:
         Function_intro_Ryan_1: Ця інструкція каже комп’ютеру запустити ВЕЛИКИЙ фрагмент
           програмного коду з тим самим іменем у робочій області.
