@@ -19,6 +19,7 @@ export const init = async () => {
     constants.maxPondFish
   );
   arrangeFish(pondFish);
+  arrangeFish(recallFish);
   setState({pondFish, recallFish});
   if (
     state.appMode === AppMode.FishShort ||
