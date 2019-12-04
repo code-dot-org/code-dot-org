@@ -109,6 +109,8 @@ ne:
             '18': '18'
             '19': '19'
             '20': '20'
+          LAYOUT:
+            '"diamond"': diamond
       Dancelab_randomColor:
         text: कुनै एक  रङ
       Dancelab_setDanceSpeed:

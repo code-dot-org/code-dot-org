@@ -424,6 +424,7 @@ ar:
           LAYOUT:
             '"border"': الحدود
             '"inner"': مربع داخلي
+            '"diamond"': ماسة
             '"circle"': دائرة
             '"grid"': شبكة
             '"row"': صف

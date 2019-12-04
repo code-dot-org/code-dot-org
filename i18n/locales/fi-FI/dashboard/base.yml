@@ -350,6 +350,7 @@ fi:
       artist: 'Taiteilija'
       basketball: 'Koripallo'
       bounce: 'Bounce'
+      dance: 'Tanssibileet'
       flappy: 'Flappy'
       frozen: 'Frozen'
       gamelab: 'Pelilabra'
@@ -572,6 +573,10 @@ fi:
       body_short: "Suunnittele sovellus, koodaa lohkoilla tai JavaScriptillä, jaa sitten kavereille sekunneissa."
       audience: 'Ikäryhmille 13+'
       cta: 'Lisätietoja'
+    dance:
+      title: 'Tanssibileet'
+    dance-2019:
+      title: 'Tanssibileet'
     hoc:
       title: 'Klassinen sokkelo'
       body: 'Kokeile tietojenkäsittelytieteen perusteita. Jo miljoonat ovat kokeilleet.'

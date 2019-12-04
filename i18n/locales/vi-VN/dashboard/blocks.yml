@@ -3,12 +3,13 @@ vi:
   data:
     blocks:
       Dancelab_alternateMoves:
+        text: "{GROUP} luân phiên giữa \n{MOVE1} và {MOVE2} sau mỗi {N} nhịp"
         options:
           GROUP:
             sprites: tất cả
-            '"ALIEN"': tất cả người ngoài hành tinh
-            '"BEAR"': tất cả gấu
-            '"CAT"': tất cả mèo
+            '"ALIEN"': người ngoài hành tinh
+            '"BEAR"': gấu
+            '"CAT"': mèo
             '"DOG"': tất cả chó
             '"DUCK"': tất cả vịt
             '"FROG"': tất cả ếch
@@ -16,11 +17,13 @@ vi:
             '"PINEAPPLE"': tất cả trái dứa
             '"ROBOT"': tất cả robot
             '"SHARK"': tất cả cá mập
+            '"SLOTH"': con lười
             '"UNICORN"': Kỳ lân
           MOVE1:
             MOVES.Roll: Cuộn cơ thể
             MOVES.ClapHigh: Vỗ tay cao
             MOVES.DoubleJam: Giảm gấp đôi
+            MOVES.Drop: Thả
             MOVES.Fresh: Tươi
             MOVES.Clown: Chú hề
             MOVES.Kick: Ngôi sao
@@ -30,22 +33,22 @@ vi:
             MOVES.Roll: Cuộn cơ thể
             MOVES.ClapHigh: Vỗ tay cao
             MOVES.DoubleJam: Giảm gấp đôi
+            MOVES.Drop: Thả
             MOVES.Fresh: Tươi
             MOVES.Clown: Chú hề
             MOVES.Kick: Ngôi sao
             MOVES.ThisOrThat: Đây hoặc đó
             MOVES.Rest: Không có
       Dancelab_atTimestamp:
-        text: sau {TIMESTAMP} {UNIT}
         options:
           UNIT:
             '"measures"': nhịp
             '"seconds"': giây
       Dancelab_changeColorBy:
-        text: thay đổi {COLOR} {METHOD} thành {AMOUNT}
+        text: thay đổi {METHOD} {COLOR} theo {AMOUNT}
         options:
           METHOD:
-            '"hue"': sắc màu
+            '"hue"': sắc độ
             '"saturation"': độ bão hòa
             '"brightness"': độ sáng
       Dancelab_changeMoveEachLR:
@@ -53,9 +56,9 @@ vi:
         options:
           GROUP:
             sprites: tất cả
-            '"ALIEN"': tất cả người ngoài hành tinh
-            '"BEAR"': tất cả gấu
-            '"CAT"': tất cả mèo
+            '"ALIEN"': người ngoài hành tinh
+            '"BEAR"': gấu
+            '"CAT"': mèo
             '"DOG"': tất cả chó
             '"DUCK"': tất cả vịt
             '"FROG"': tất cả ếch
@@ -63,6 +66,7 @@ vi:
             '"PINEAPPLE"': tất cả trái dứa
             '"ROBOT"': tất cả robot
             '"SHARK"': tất cả cá mập
+            '"SLOTH"': con lười
             '"UNICORN"': tất cả kỳ lân
           MOVE:
             '"next"': "(Tiếp theo)"
@@ -71,6 +75,7 @@ vi:
             MOVES.Roll: Cuộn cơ thể
             MOVES.ClapHigh: Vỗ tay cao
             MOVES.DoubleJam: Giảm gấp đôi
+            MOVES.Drop: Thả
             MOVES.Fresh: Tươi
             MOVES.Clown: Chú hề
             MOVES.Kick: Ngôi sao
@@ -89,6 +94,7 @@ vi:
             MOVES.Roll: Cuộn cơ thể
             MOVES.ClapHigh: Vỗ tay cao
             MOVES.DoubleJam: Giảm gấp đôi
+            MOVES.Drop: Thả
             MOVES.Fresh: Tươi
             MOVES.Clown: Chú hề
             MOVES.Kick: Ngôi sao
@@ -108,12 +114,13 @@ vi:
             '"x"': vị trí ngang
             '"y"': vị trí dọc
       Dancelab_changePropEachBy:
+        text: thay đổi {GROUP} {PROPERTY} đi {VAL}
         options:
           GROUP:
             sprites: tất cả
-            '"ALIEN"': tất cả người ngoài hành tinh
-            '"BEAR"': tất cả gấu
-            '"CAT"': tất cả mèo
+            '"ALIEN"': người ngoài hành tinh
+            '"BEAR"': gấu
+            '"CAT"': mèo
             '"DOG"': tất cả chó
             '"DUCK"': tất cả vịt
             '"FROG"': tất cả ếch
@@ -121,6 +128,7 @@ vi:
             '"PINEAPPLE"': tất cả trái dứa
             '"ROBOT"': tất cả robot
             '"SHARK"': tất cả cá mập
+            '"SLOTH"': con lười
             '"UNICORN"': Kỳ lân
           PROPERTY:
             '"scale"': kích cỡ
@@ -134,9 +142,9 @@ vi:
         options:
           GROUP:
             sprites: tất cả
-            '"ALIEN"': tất cả người ngoài hành tinh
-            '"BEAR"': tất cả gấu
-            '"CAT"': tất cả mèo
+            '"ALIEN"': người ngoài hành tinh
+            '"BEAR"': gấu
+            '"CAT"': mèo
             '"DOG"': tất cả chó
             '"DUCK"': tất cả vịt
             '"FROG"': tất cả ếch
@@ -144,15 +152,29 @@ vi:
             '"PINEAPPLE"': tất cả trái dứa
             '"ROBOT"': tất cả robot
             '"SHARK"': tất cả cá mập
+            '"SLOTH"': con lười
             '"UNICORN"': Kỳ lân
           MOVE:
             '"rand"': "(Ngẫu nhiên)"
+            MOVES.XBend: Uốn cong
             MOVES.Roll: Cuộn cơ thể
+            MOVES.XClapSide: Vỗ tay
             MOVES.ClapHigh: Vỗ tay cao
+            MOVES.XFever: Disco
             MOVES.DoubleJam: Giảm gấp đôi
+            MOVES.Drop: Thả
             MOVES.Fresh: Tươi
             MOVES.Clown: Chú hề
+            MOVES.XHeadHips: Đầu + Hông
+            MOVES.XHop: Nhảy lên
+            MOVES.XHighKick: Đá chân
+            MOVES.XKnee: Đầu gối
+            MOVES.XKneel: Quỳ
+            MOVES.XOle: Ole
+            MOVES.XArmsSide: Với tay
+            MOVES.XSlide: Trượt
             MOVES.Kick: Ngôi sao
+            MOVES.XArmsUp: Kéo dãn
             MOVES.ThisOrThat: Đây hoặc đó
             MOVES.Rest: Không có
           DIR:
@@ -163,17 +185,32 @@ vi:
         options:
           MOVE:
             '"rand"': "(Ngẫu nhiên)"
+            MOVES.XBend: Uốn cong
             MOVES.Roll: Cuộn cơ thể
+            MOVES.XClapSide: Vỗ tay
             MOVES.ClapHigh: Vỗ tay cao
+            MOVES.XFever: Disco
             MOVES.DoubleJam: Giảm gấp đôi
+            MOVES.Drop: Thả
             MOVES.Fresh: Tươi
             MOVES.Clown: Chú hề
+            MOVES.XHeadHips: Đầu + Hông
+            MOVES.XHop: Nhảy lên
+            MOVES.XHighKick: Đá chân
+            MOVES.XKnee: Đầu gối
+            MOVES.XKneel: Quỳ
+            MOVES.XOle: Ole
+            MOVES.XArmsSide: Với tay
+            MOVES.XSlide: Trượt
             MOVES.Kick: Ngôi sao
+            MOVES.XArmsUp: Kéo dãn
             MOVES.ThisOrThat: Đây hoặc đó
             MOVES.Rest: Không có
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_everyMeasuresRange:
+        text: 'lặp lại sau mỗi {N} nhịp sau khi {START} '
       Dancelab_everySeconds:
         text: 'mỗi {N} {UNIT} '
         options:
@@ -225,16 +262,24 @@ vi:
             MOVES.ClapHigh: Vỗ tay cao
             MOVES.Clown: Chú hề
             MOVES.DoubleJam: Giảm gấp đôi
+            MOVES.Drop: Thả
             MOVES.Fresh: Tươi
             MOVES.Roll: Cuộn cơ thể
             MOVES.Kick: Ngôi sao
             MOVES.ThisOrThat: Đây hoặc đó
             MOVES.Rest: Không có
       Dancelab_ifTime:
+        text: |-
+          ถ้า {UNIT} คือ {OP} {N}
+           {DO1} {DO2}
         options:
           UNIT:
             '"measures"': nhịp
             '"seconds"': giây
+          OP:
+            '">"': ">"
+            '"<"': "<"
+            '"="': "="
       Dancelab_jumpTo:
         text: "{SPRITE} nhảy đến {LOCATION}"
         options:
@@ -250,12 +295,13 @@ vi:
             "{x: 300, y: 300}": dưới phải
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ngẫu nhiên
       Dancelab_jumpToEach:
+        text: lệnh cho {GROUP} nhảy tới {LOCATION}
         options:
           GROUP:
             sprites: tất cả
-            '"ALIEN"': tất cả người ngoài hành tinh
-            '"BEAR"': tất cả gấu
-            '"CAT"': tất cả mèo
+            '"ALIEN"': người ngoài hành tinh
+            '"BEAR"': gấu
+            '"CAT"': mèo
             '"DOG"': tất cả chó
             '"DUCK"': tất cả vịt
             '"FROG"': tất cả ếch
@@ -263,6 +309,7 @@ vi:
             '"PINEAPPLE"': tất cả trái dứa
             '"ROBOT"': tất cả robot
             '"SHARK"': tất cả cá mập
+            '"SLOTH"': con lười
             '"UNICORN"': Kỳ lân
           LOCATION:
             "{x: 200, y: 100}": trên
@@ -280,9 +327,9 @@ vi:
         options:
           GROUP:
             sprites: tất cả
-            '"ALIEN"': tất cả người ngoài hành tinh
-            '"BEAR"': tất cả gấu
-            '"CAT"': tất cả mèo
+            '"ALIEN"': người ngoài hành tinh
+            '"BEAR"': gấu
+            '"CAT"': mèo
             '"DOG"': tất cả chó
             '"DUCK"': tất cả vịt
             '"FROG"': tất cả ếch
@@ -290,6 +337,7 @@ vi:
             '"PINEAPPLE"': tất cả trái dứa
             '"ROBOT"': tất cả robot
             '"SHARK"': tất cả cá mập
+            '"SLOTH"': con lười
             '"UNICORN"': Kỳ lân
           FORMAT:
             '"border"': đường biên
@@ -301,6 +349,7 @@ vi:
             '"plus"': cộng
             '"random"': ngẫu nhiên
       Dancelab_makeAnonymousDanceSprite:
+        text: tạo một {COSTUME} mới tại {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': Người ngoài hành tinh
@@ -313,6 +362,7 @@ vi:
             '"PINEAPPLE"': Trái dứa
             '"ROBOT"': robot
             '"SHARK"': Cá mập
+            '"SLOTH"': con lười
             '"UNICORN"': kỳ lân
           LOCATION:
             "{x: 200, y: 100}": trên
@@ -341,6 +391,7 @@ vi:
             '"PINEAPPLE"': Trái dứa
             '"ROBOT"': robot
             '"SHARK"': Cá mập
+            '"SLOTH"': con lười
             '"UNICORN"': kỳ lân
           LOCATION:
             "{x: 200, y: 100}": trên
@@ -389,14 +440,20 @@ vi:
             '"PINEAPPLE"': Trái dứa
             '"ROBOT"': Robot
             '"SHARK"': Cá mập
+            '"SLOTH"': con lười
             '"UNICORN"': Kỳ lân
           LAYOUT:
             '"border"': đường biên
             '"inner"': hình vuông bên trong
+            '"diamond"': kim cương
             '"circle"': vòng tròn
             '"grid"': lưới
+            '"top"': hàng trên cùng
             '"row"': hàng
+            '"bottom"': hàng dưới cùng
+            '"left"': cột trái
             '"column"': cột
+            '"right"': cột phải
             '"plus"': cộng
             '"random"': ngẫu nhiên
       Dancelab_mixColors:
@@ -422,6 +479,7 @@ vi:
             '"color_cycle"': Màu sắc
             '"diamonds"': Kim cương
             '"disco_ball"': Bóng Disco
+            '"fireworks"': พลุ
             '"swirl"': Thôi miên
             '"kaleidoscope"': Kính vạn hoa
             '"lasers"': Sàn nhảy laze
@@ -437,7 +495,10 @@ vi:
           PALETTE:
             '"rave"': Đen và trắng
             '"cool"': Xanh
+            '"electronic"': ไฟฟ้า
+            '"iceCream"': ไอศกรีม
             '"default"': Sáng
+            '"neon"': Đèn Neon
             '"tropical"': Nhiệt đới
             '"vintage"': Cổ điển
             '"warm"': Đỏ
@@ -448,25 +509,36 @@ vi:
             '"none"': Không có
             '"rand"': "(Ngẫu nhiên)"
             '"circles"': Đường hầm
+            '"quads"': Góc
             '"color_cycle"': Màu sắc
             '"diamonds"': Kim cương
             '"disco_ball"': Bóng Disco
+            '"fireworks"': พลุ
+            '"flowers"': ดอกไม้
+            '"growing_stars"': Ngôi sao lớn dần
             '"swirl"': Thôi miên
             '"kaleidoscope"': Kính vạn hoa
             '"lasers"': Sàn nhảy laze
             '"splatter"': Tiếng lộp độp của sơn
             '"rainbow"': Cầu vồng
+            '"ripples_random"': Gợn sóng ngẫu nhiên
+            '"ripples"': Gợn sóng
             '"snowflakes"': Tuyết
             '"text"': Tiêu đề bài hát
+            '"squiggles"': Nét nguệch ngoạc
             '"galaxy"': Không gian
             '"sparkles"': Lấp lánh
             '"spiral"': Xoắn ốc
             '"disco"': Hình vuông
             '"stars"': Sao
+            '"music_wave"': คลื่น
           PALETTE:
             '"rave"': Đen và trắng
             '"cool"': Xanh
+            '"electronic"': ไฟฟ้า
+            '"iceCream"': ไอศกรีม
             '"default"': Sáng
+            '"neon"': Đèn Neon
             '"tropical"': Nhiệt đới
             '"vintage"': Cổ điển
             '"warm"': Đỏ
@@ -480,12 +552,13 @@ vi:
             '0.5': chậm
             '0.25': rất chậm
       Dancelab_setDanceSpeedEach:
+        text: thay đổi tốc độ nhảy của {GROUP} thành {SPEED}
         options:
           GROUP:
             sprites: tất cả
-            '"ALIEN"': tất cả người ngoài hành tinh
-            '"BEAR"': tất cả gấu
-            '"CAT"': tất cả mèo
+            '"ALIEN"': người ngoài hành tinh
+            '"BEAR"': gấu
+            '"CAT"': mèo
             '"DOG"': tất cả chó
             '"DUCK"': tất cả vịt
             '"FROG"': tất cả ếch
@@ -493,6 +566,7 @@ vi:
             '"PINEAPPLE"': tất cả trái dứa
             '"ROBOT"': tất cả robot
             '"SHARK"': tất cả cá mập
+            '"SLOTH"': con lười
             '"UNICORN"': Kỳ lân
           SPEED:
             '1': bình thường
@@ -510,10 +584,13 @@ vi:
             '"hearts_red"': Trái tim
             '"music_notes"': Nốt nhạc
             '"pineapples"': Trái dứa
+            '"pizzas"': Pizza
             '"smiling_poop"': Đuôi tàu
             '"rain"': Mưa
             '"floating_rainbows"': Cầu vồng
             '"smile_face"': Mặt cười
+            '"spotlight"': Tiêu điểm
+            '"color_lights"': Ánh đèn sân khấu
             '"raining_tacos"': Taco
       Dancelab_setForegroundEffectExtended:
         text: thiết lập hiệu ứng tiền cảnh {EFFECT}
@@ -522,14 +599,21 @@ vi:
             '"none"': Không có
             '"rand"': "(Ngẫu nhiên)"
             '"bubbles"': Bong bóng
+            '"hearts_colorful"': Trái tim sặc sỡ
             '"confetti"': Hoa giấy
+            '"emojis"': Emoji
             '"hearts_red"': Trái tim
             '"music_notes"': Nốt nhạc
+            '"paint_drip"': Sơn nhỏ giọt
             '"pineapples"': Trái dứa
+            '"pizzas"': Pizza
             '"smiling_poop"': Đuôi tàu
             '"rain"': Mưa
             '"floating_rainbows"': Cầu vồng
             '"smile_face"': Mặt cười
+            '"spotlight"': Tiêu điểm
+            '"color_lights"': Ánh đèn sân khấu
+            '"exploding_stars"': Lóe sáng
             '"raining_tacos"': Taco
       Dancelab_setProp:
         text: 'thiết lập {PROPERTY} {SPRITE} thành {VAL} '
@@ -546,9 +630,9 @@ vi:
         options:
           GROUP:
             sprites: tất cả
-            '"ALIEN"': tất cả người ngoài hành tinh
-            '"BEAR"': tất cả gấu
-            '"CAT"': tất cả mèo
+            '"ALIEN"': người ngoài hành tinh
+            '"BEAR"': gấu
+            '"CAT"': mèo
             '"DOG"': tất cả chó
             '"DUCK"': tất cả vịt
             '"FROG"': tất cả ếch
@@ -556,6 +640,7 @@ vi:
             '"PINEAPPLE"': tất cả trái dứa
             '"ROBOT"': tất cả robot
             '"SHARK"': tất cả cá mập
+            '"SLOTH"': con lười
             '"UNICORN"': Kỳ lân
           PROPERTY:
             '"scale"': kích cỡ
@@ -577,12 +662,13 @@ vi:
             '"y"': vị trí dọc
             '"tint"': sắc thái
       Dancelab_setPropRandomEach:
+        text: chọn ngẫu nhiên {GROUP} {PROPERTY}
         options:
           GROUP:
             sprites: tất cả
-            '"ALIEN"': tất cả người ngoài hành tinh
-            '"BEAR"': tất cả gấu
-            '"CAT"': tất cả mèo
+            '"ALIEN"': người ngoài hành tinh
+            '"BEAR"': gấu
+            '"CAT"': mèo
             '"DOG"': tất cả chó
             '"DUCK"': tất cả vịt
             '"FROG"': tất cả ếch
@@ -590,6 +676,7 @@ vi:
             '"PINEAPPLE"': tất cả trái dứa
             '"ROBOT"': tất cả robot
             '"SHARK"': tất cả cá mập
+            '"SLOTH"': con lười
             '"UNICORN"': Kỳ lân
           PROPERTY:
             '"scale"': kích cỡ
@@ -602,12 +689,13 @@ vi:
       Dancelab_setTint:
         text: thiết lập sắc thái {SPRITE} thành {VAL}
       Dancelab_setTintEach:
+        text: thiết lập màu {THIS} thành {VAL}
         options:
           THIS:
             sprites: tất cả
-            '"ALIEN"': tất cả người ngoài hành tinh
-            '"BEAR"': tất cả gấu
-            '"CAT"': tất cả mèo
+            '"ALIEN"': người ngoài hành tinh
+            '"BEAR"': gấu
+            '"CAT"': mèo
             '"DOG"': tất cả chó
             '"DUCK"': tất cả vịt
             '"FROG"': tất cả ếch
@@ -615,14 +703,16 @@ vi:
             '"PINEAPPLE"': tất cả trái dứa
             '"ROBOT"': tất cả robot
             '"SHARK"': tất cả cá mập
+            '"SLOTH"': con lười
             '"UNICORN"': Kỳ lân
       Dancelab_setTintEachInline:
+        text: thiết lập màu {THIS} thành {VAL}
         options:
           THIS:
             sprites: tất cả
-            '"ALIEN"': tất cả người ngoài hành tinh
-            '"BEAR"': tất cả gấu
-            '"CAT"': tất cả mèo
+            '"ALIEN"': người ngoài hành tinh
+            '"BEAR"': gấu
+            '"CAT"': mèo
             '"DOG"': tất cả chó
             '"DUCK"': tất cả vịt
             '"FROG"': tất cả ếch
@@ -630,6 +720,7 @@ vi:
             '"PINEAPPLE"': tất cả trái dứa
             '"ROBOT"': tất cả robot
             '"SHARK"': tất cả cá mập
+            '"SLOTH"': con lười
             '"UNICORN"': Kỳ lân
       Dancelab_setTintInline:
         text: thiết lập sắc thái {SPRITE} thành {VAL}
@@ -644,9 +735,9 @@ vi:
         options:
           THIS:
             sprites: tất cả
-            '"ALIEN"': tất cả người ngoài hành tinh
-            '"BEAR"': tất cả gấu
-            '"CAT"': tất cả mèo
+            '"ALIEN"': người ngoài hành tinh
+            '"BEAR"': gấu
+            '"CAT"': mèo
             '"DOG"': tất cả chó
             '"DUCK"': tất cả vịt
             '"FROG"': tất cả ếch
@@ -654,6 +745,7 @@ vi:
             '"PINEAPPLE"': tất cả trái dứa
             '"ROBOT"': tất cả robot
             '"SHARK"': tất cả cá mập
+            '"SLOTH"': con lười
             '"UNICORN"': Kỳ lân
           VISIBILITY:
             'true': có thể nhìn thấy
@@ -674,12 +766,13 @@ vi:
             '"mid"': âm trung
             '"treble"': âm cao
       Dancelab_startMappingEach:
+        text: "{GROUP} bắt đầu {PROPERTY} sau {RANGE}"
         options:
           GROUP:
             sprites: tất cả
-            '"ALIEN"': tất cả người ngoài hành tinh
-            '"BEAR"': tất cả gấu
-            '"CAT"': tất cả mèo
+            '"ALIEN"': người ngoài hành tinh
+            '"BEAR"': gấu
+            '"CAT"': mèo
             '"DOG"': tất cả chó
             '"DUCK"': tất cả vịt
             '"FROG"': tất cả ếch
@@ -687,6 +780,7 @@ vi:
             '"PINEAPPLE"': tất cả trái dứa
             '"ROBOT"': tất cả robot
             '"SHARK"': tất cả cá mập
+            '"SLOTH"': con lười
             '"UNICORN"': Kỳ lân
           PROPERTY:
             '"scale"': kích cỡ
@@ -717,12 +811,13 @@ vi:
             '"mid"': âm trung
             '"treble"': âm cao
       Dancelab_stopMappingEach:
+        text: "{GROUP} dừng {PROPERTY} sau {RANGE}"
         options:
           GROUP:
             sprites: tất cả
-            '"ALIEN"': tất cả người ngoài hành tinh
-            '"BEAR"': tất cả gấu
-            '"CAT"': tất cả mèo
+            '"ALIEN"': người ngoài hành tinh
+            '"BEAR"': gấu
+            '"CAT"': mèo
             '"DOG"': tất cả chó
             '"DUCK"': tất cả vịt
             '"FROG"': tất cả ếch
@@ -730,6 +825,7 @@ vi:
             '"PINEAPPLE"': tất cả trái dứa
             '"ROBOT"': tất cả robot
             '"SHARK"': tất cả cá mập
+            '"SLOTH"': con lười
             '"UNICORN"': Kỳ lân
           PROPERTY:
             '"scale"': kích cỡ
@@ -745,11 +841,50 @@ vi:
             '"mid"': âm trung
             '"treble"': âm cao
       Dancelab_translateStrings:
+        text: dịch {STRING}
         options:
           STRING:
+            '"music_wave"': คลื่น
+            '"ripples"': Gợn sóng
+            '"ripples_random"': Gợn sóng ngẫu nhiên
+            '"quads"': Góc
+            '"flowers"': ดอกไม้
+            '"popsicles"': Kem que
+            '"squiggles"': Nét nguệch ngoạc
+            '"growing_stars"': Ngôi sao lớn dần
+            '"emojis"': Emoji
             '"hearts_colorful"': Trái tim
+            '"paint_drio"': Sơn nhỏ giọt
+            '"exploding_stars"': Lóe sáng
+            '"row_top"': hàng trên cùng
+            '"row_bottom"': hàng dưới cùng
+            '"column_left"': cột trái
+            '"column_right"': cột phải
             '"diamond"': kim cương
+            '"mural"': Tranh tường
+            '"safari"': Khu hoang dã
+            '"network"': Mạng lưới
+            '"highway"': Đường cao tốc
+            '"stream"': Dòng suối
+            '"tile"': Gạch ngói
+            '"shadow"': Bóng tối
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
+            '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenKey:
         text: khi nhấn {KEY}
         options:
@@ -759,7 +894,42 @@ vi:
             '"down"': xuống
             '"right"': phải
             '"space"': vũ trụ
+            '"enter"': nhập
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
+            '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenPeak:
         text: khi đỉnh {RANGE}
         options:
@@ -808,7 +978,31 @@ vi:
             '"left"': trái
             '"right"': phải
             '"space"': vũ trụ
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
+            '"z"': z
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -864,6 +1058,10 @@ vi:
             '"left"': trái
             '"right"': phải
             '"space"': vũ trụ
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       gamelab_whileKey:
         options:
           KEY:
@@ -872,6 +1070,10 @@ vi:
             '"left"': trái
             '"right"': phải
             '"space"': vũ trụ
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -901,6 +1103,7 @@ vi:
             '"y"': tung độ
             '"direction"': phương hướng chuyển động
       Mikelab_groupChangeAnim:
+        text: thay đổi {SELECT} {COSTUME} thành {COSTUME2}
         options:
           SELECT:
             '"all"': tất cả
@@ -915,6 +1118,7 @@ vi:
             '"y"': tung độ
             '"direction"': phương hướng chuyển động
       Mikelab_groupCreateNewSprite:
+        text: tạo một {COSTUME} mới tại {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": trên
@@ -973,6 +1177,7 @@ vi:
             MOVES.ClapHigh: Vỗ tay cao
             MOVES.Clown: Chú hề
             MOVES.DoubleJam: Giảm gấp đôi
+            MOVES.Drop: Thả
             MOVES.Fresh: Tươi
             MOVES.Roll: Cuộn cơ thể
             MOVES.Kick: Ngôi sao
@@ -1082,6 +1287,10 @@ vi:
             '"left"': trái
             '"right"': phải
             '"space"': vũ trụ
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       craft_ifPath:
         text: |-
           nếu có đường dẫn {DIR}

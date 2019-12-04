@@ -17,6 +17,7 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
+            '"SLOTH"': bradipi
             '"UNICORN"': Unicorni
           MOVE1:
             MOVES.Roll: Piroetta
@@ -72,6 +73,7 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
+            '"SLOTH"': bradipi
             '"UNICORN"': tutti gli unicorni
           MOVE:
             '"next"': "(Successiva)"
@@ -139,6 +141,7 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
+            '"SLOTH"': bradipi
             '"UNICORN"': Unicorni
           PROPERTY:
             '"scale"': dimensione
@@ -162,6 +165,7 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
+            '"SLOTH"': bradipi
             '"UNICORN"': Unicorni
           MOVE:
             '"rand"': "(Casuale)"
@@ -327,6 +331,7 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
+            '"SLOTH"': bradipi
             '"UNICORN"': Unicorni
           LOCATION:
             "{x: 200, y: 100}": in alto
@@ -354,6 +359,7 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
+            '"SLOTH"': bradipi
             '"UNICORN"': Unicorni
           FORMAT:
             '"border"': bordo
@@ -381,6 +387,7 @@ it:
             '"PINEAPPLE"': Ananas
             '"ROBOT"': robot
             '"SHARK"': Squalo
+            '"SLOTH"': bradipo
             '"UNICORN"': unicorno
           LOCATION:
             "{x: 200, y: 100}": in alto
@@ -409,6 +416,7 @@ it:
             '"PINEAPPLE"': Ananas
             '"ROBOT"': Robot
             '"SHARK"': Squalo
+            '"SLOTH"': bradipo
             '"UNICORN"': Unicorno
           LOCATION:
             "{x: 200, y: 100}": in alto
@@ -423,7 +431,7 @@ it:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": in un punto casuale
       Dancelab_makeNewDanceSpriteGroup:
         text: |-
-          Disponi {N} nuovi {COSTUME}
+          disponi {N} nuovi {COSTUME}
           in {LAYOUT}
         options:
           'N':
@@ -457,10 +465,12 @@ it:
             '"PINEAPPLE"': Ananas
             '"ROBOT"': Robot
             '"SHARK"': Squali
+            '"SLOTH"': bradipi
             '"UNICORN"': Unicorni
           LAYOUT:
             '"border"': bordo
             '"inner"': quadrato interno
+            '"diamond"': diamante
             '"circle"': cerchio
             '"grid"': griglia
             '"row"': fila
@@ -571,6 +581,7 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
+            '"SLOTH"': bradipi
             '"UNICORN"': Unicorni
           SPEED:
             '1': normale
@@ -640,6 +651,7 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
+            '"SLOTH"': bradipi
             '"UNICORN"': Unicorni
           PROPERTY:
             '"scale"': dimensione
@@ -675,6 +687,7 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
+            '"SLOTH"': bradipi
             '"UNICORN"': Unicorni
           PROPERTY:
             '"scale"': dimensione
@@ -701,6 +714,7 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
+            '"SLOTH"': bradipi
             '"UNICORN"': Unicorni
       Dancelab_setTintEachInline:
         text: imposta la tonalità di {THIS} a {VAL}
@@ -717,6 +731,7 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
+            '"SLOTH"': bradipi
             '"UNICORN"': Unicorni
       Dancelab_setTintInline:
         text: imposta la tonalità di {SPRITE} a {VAL}
@@ -741,6 +756,7 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
+            '"SLOTH"': bradipi
             '"UNICORN"': Unicorni
           VISIBILITY:
             'true': visibile
@@ -775,6 +791,7 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
+            '"SLOTH"': bradipi
             '"UNICORN"': Unicorni
           PROPERTY:
             '"scale"': dimensione
@@ -819,6 +836,7 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
+            '"SLOTH"': bradipi
             '"UNICORN"': Unicorni
           PROPERTY:
             '"scale"': dimensione

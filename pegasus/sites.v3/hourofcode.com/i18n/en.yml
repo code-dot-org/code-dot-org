@@ -25,12 +25,12 @@
   oceans_landing_title: 'AI for Oceans'
   oceans_landing_description: 'Learn about machine learning and ethical use of AI.'
   cs_for_good_hashtag: '#CSforGood'
-  oceans_landing_specs: 'English only | Grades 3rd+'
-  oceans_landing_explanation: "Computer science is about so much more than coding! Learn about AI, machine learning, training data, and bias, while exploring ethical issues and how AI can be used to address world problems. Enjoy Code.org's first step in a new journey to teach more about AI throughout our curriculum. When you use the AI for Oceans activity you are training real machine learning models. <a href='#behind-the-scenes'>Learn more</a>."
+  oceans_landing_specs: 'English only | Grades 3+'
+  oceans_landing_explanation: "Computer science is about so much more than coding! Learn about artificial intelligence (AI), machine learning, training data, and bias, while exploring ethical issues and how AI can be used to address world problems. Enjoy Code.org's first step in a new journey to teach more about AI. When you use the AI for Oceans activity you are training real machine learning models. <a href='#behind-the-scenes'>Learn more</a>."
   oceans_landing_teacher_resources: 'Teacher Resources'
   oceans_landing_teacher_resources_desc: 'Lesson plans and activities to help you teach AI, machine learning, training data, and bias, while exploring ethical issues.'
   oceans_landing_resource_button: 'View Resources'
-  oceans_landing_cs_for_good: 'CS For Good'
+  oceans_landing_cs_for_good: 'CS for Good'
   oceans_landing_cs_for_good_desc: 'Resources to help students understand the role computer science could play in creating a more equitable world.'
   oceans_landing_videos: 'Videos about AI and Machine Learning'
   oceans_behind_the_scenes: 'AI for Oceans: Behind the Scenes'
@@ -40,8 +40,8 @@
   social_hoc2019_oceans_title: 'AI for Oceans #CSforGood'
   social_hoc2019_oceans_desc: "Learn about AI, machine learning, training data, and bias, while exploring ethical issues and how AI can be used to address world problems. Computer science is about so much more than coding! Enjoy Code.org's first step in a new journey to teach more about AI throughout our curriculum."
 
-  hoc_overview_oceans_tutorial_header: 'AI For Oceans'
-  hoc_overview_oceans_tutorial_desc: 'Learn about AI, machine learning, training data, and bias, while exploring ethical issues and how AI can be used to address world problems.'
+  hoc_overview_oceans_tutorial_header: 'AI for Oceans'
+  hoc_overview_oceans_tutorial_desc: 'Learn about artificial intelligence (AI), machine learning, training data, and bias, while exploring ethical issues and how AI can be used to address world problems.'
 
   ai_video_title_what_is_ai: 'What is AI?'
   ai_video_title_phone_knows_dog: 'How does your phone know this is a dog?'
@@ -49,6 +49,7 @@
   ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small and Prickly'
   ai_video_title_ethics_of_ai: 'Ethics of AI'
   ai_video_title_ml_human_bias: 'Machine Learning and Human Bias'
+  ai_video_title_seeing_ai: 'Seeing AI: Making the visual world more accessible'
 
   activity: 'Activity'
   name: 'Name'
@@ -56,6 +57,8 @@
   audience: 'Audience'
 
   ai_resource_header: 'Teach and Learn about AI'
+  ai_resource_minecraft: 'Minecraft AI for Good'
+  ai_resource_minecraft_desc: 'Access free resources including a lesson plan, videos, computer science curriculum, and teacher trainings. (Requires Minecraft: Education Edition)'
   ai_resource_ml_for_kids: 'Machine Learning for Kids'
   ai_resource_ml_for_kids_desc: 'Train a machine learning model with text, numbers, or images, and use it to make games in Scratch.'
   ai_resource_ibm_ml_for_kids: 'IBM: Machine Learning for Kids'
@@ -70,16 +73,16 @@
   ai_audience_hs: 'High school'
 
   ai_activity_header: 'Activities Powered by AI and ML'
-  ai_activity_teachable: 'Teachable Machine'
-  ai_activity_teachable_desc: 'Train a computer to recognize your own images, sounds, and poses.'
+  ai_activity_seeing_ai: 'Seeing AI'
+  ai_activity_seeing_ai_desc: 'A free app that narrates the world around you in a variety of languages.'
   ai_activity_quick_draw: 'Quick, Draw!'
   ai_activity_quick_draw_desc: 'Can a neural network learn to recognize doodling?'
+  ai_activity_teachable: 'Teachable Machine'
+  ai_activity_teachable_desc: 'Train a computer to recognize your own images, sounds, and poses.'
   ai_activity_experiments: 'AI Experiments with Google'
   ai_activity_experiments_desc: 'Start exploring machine learning through pictures, drawings, language, music, and more.'
-  ai_activity_mixlab: 'MixLab'
-  ai_activity_mixlab_desc: 'Make music using voice commands.'
-  ai_activity_gaugan: 'GauGAN Beta'
-  ai_activity_gaugan_desc: 'Paint photo-realistic landscapes with the help of AI.'
+  ai_activity_zooniverse: 'Zooniverse - Snapshot Mountain Zebra'
+  ai_activity_zooniverse_desc: 'Help protect the endangered Cape Mountain Zebra by identifying the different animals in the images.'
 
   codeorg_homepage_hoc2018_curriculum: 'Go further with <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org courses</a>'
   codeorg_homepage_hoc2018_dance_heading: 'Create your own <span class="highlight-word">Dance&nbsp;Party</span>'
@@ -5936,7 +5939,7 @@
   tutorial_modtraits_string_detail_programming_languages: "Blocks"
   tutorial_mee_string_detail_programming_languages: "Blocks"
   tutorial_kuborobo_string_detail_programming_languages: "Tagtiles that students piece together"
-  tutorial_ai-oceans_string_detail_programming_languages: "No coding languages"
+  tutorial_ai-oceans_string_detail_programming_languages: "AI and Machine Learning"
 
   school_not_found_heading: "We couldn't find your school. Please enter more information."
   school_name: "School name"

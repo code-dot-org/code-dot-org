@@ -449,6 +449,7 @@ pt-BR:
           LAYOUT:
             '"border"': borda
             '"inner"': quadrado interno
+            '"diamond"': diamante
             '"circle"': círculo
             '"grid"': grade
             '"row"': linha
@@ -955,6 +956,7 @@ pt-BR:
         options:
           CHOICE:
             '"this"': este
+            '"other"': outro
       gamelab_hideTitleScreen:
         text: esconder a tela do título
       gamelab_isTouchingEdges:

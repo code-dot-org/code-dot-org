@@ -3,21 +3,14 @@ fil:
   data:
     block_categories:
       Actions: Mga aksyon
-      Loops: Mga loop
-      Functions: Mga function
       Color: Kulay
-      Math: Math
-      Logic: Lohika
-      Variables: Mga variable
       Conditionals: Mga conditional
       Events: Mga event
-      Text: Text
-      Sprites: Mga Sprites
-      Location: Lokasyon
+      Functions: Mga function
       Input: Input
-      Start: Panimula
-      Booleans: Mga Boolean
-      test: subukan
-      Foo: Foo
-      Name: Pangalan
-      Function: Function
+      Logic: Lohika
+      Loops: Mga loop
+      Math: Math
+      Sprites: Mga Sprites
+      Text: Text
+      Variables: Mga variable

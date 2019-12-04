@@ -913,6 +913,10 @@ id-ID:
           "**Tantangan opsional**
 
           Ubah efek latar belakang pada berbagai titik berbeda selama pemutaran lagu dengan menghubungkan blok baru <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> acara.".
+      Dance_Party_05:
+        validation: "**Bagaimana cara lulus dari level ini?** \n\n-   Penari Anda
+          perlu melewati siklus minimal 4 gerakan tari yang berbeda sebelum level
+          berakhir. \n\n_Level ini akan berakhir setelah 12 birama._"
       Dance_Party_06:
         validation: |-
           **Bagaimana cara lulus dari level ini?**

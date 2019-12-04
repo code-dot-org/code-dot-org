@@ -164,15 +164,13 @@ class CourseBlocksCsfLegacy extends Component {
 
 export class CourseBlocksHoc extends Component {
   static propTypes = {
-    isInternational: PropTypes.bool,
-    showOceans: PropTypes.bool
+    isInternational: PropTypes.bool
   };
 
   componentDidMount() {
-    const thirdTutorial = this.props.showOceans ? '#oceans' : '#applab-intro';
     const tiles = this.props.isInternational
       ? ['#dance-2019', '#aquatic', '#frozen', '#hourofcode']
-      : ['#dance-2019', '#aquatic', thirdTutorial, '#flappy'];
+      : ['#dance-2019', '#aquatic', '#oceans', '#flappy'];
 
     tiles.forEach((tile, index) => {
       $(tile).appendTo(ReactDOM.findDOMNode(this.refs[index]));

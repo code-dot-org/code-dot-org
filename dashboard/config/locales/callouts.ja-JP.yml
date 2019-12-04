@@ -30,6 +30,8 @@ ja-JP:
         set_length: このブロックを使い、「長さ」を適切な値にセットします。
       Course 4 Artist Vars 6:
         degrees_per_side: 360度を辺の数で割って、各角度の大きさを度で求めます。
+      Course 4 Artist Vars 8:
+        Course_4_Artist_Vars_8_a: もっとスペースが必要？このバーを引っ張れば、コーディングするエリアを広げることができます。
       Course 4 Bee 1:
         if_bee_nectar: '"if"ブロックを使用してミツバチが花の蜜をとるかどうかを決めます。'
       Course 4 Bee 3:
