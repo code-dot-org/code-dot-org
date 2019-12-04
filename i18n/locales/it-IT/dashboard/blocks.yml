@@ -17,6 +17,7 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
+            '"SLOTH"': bradipi
             '"UNICORN"': Unicorni
           MOVE1:
             MOVES.Roll: Piroetta
@@ -72,6 +73,7 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
+            '"SLOTH"': bradipi
             '"UNICORN"': tutti gli unicorni
           MOVE:
             '"next"': "(Successiva)"
@@ -139,6 +141,7 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
+            '"SLOTH"': bradipi
             '"UNICORN"': Unicorni
           PROPERTY:
             '"scale"': dimensione
@@ -162,6 +165,7 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
+            '"SLOTH"': bradipi
             '"UNICORN"': Unicorni
           MOVE:
             '"rand"': "(Casuale)"
@@ -327,6 +331,7 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
+            '"SLOTH"': bradipi
             '"UNICORN"': Unicorni
           LOCATION:
             "{x: 200, y: 100}": in alto
@@ -354,6 +359,7 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
+            '"SLOTH"': bradipi
             '"UNICORN"': Unicorni
           FORMAT:
             '"border"': bordo
@@ -381,6 +387,7 @@ it:
             '"PINEAPPLE"': Ananas
             '"ROBOT"': robot
             '"SHARK"': Squalo
+            '"SLOTH"': bradipo
             '"UNICORN"': unicorno
           LOCATION:
             "{x: 200, y: 100}": in alto
@@ -409,6 +416,7 @@ it:
             '"PINEAPPLE"': Ananas
             '"ROBOT"': Robot
             '"SHARK"': Squalo
+            '"SLOTH"': bradipo
             '"UNICORN"': Unicorno
           LOCATION:
             "{x: 200, y: 100}": in alto
@@ -423,7 +431,7 @@ it:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": in un punto casuale
       Dancelab_makeNewDanceSpriteGroup:
         text: |-
-          Disponi {N} nuovi {COSTUME}
+          disponi {N} nuovi {COSTUME}
           in {LAYOUT}
         options:
           'N':
@@ -457,14 +465,20 @@ it:
             '"PINEAPPLE"': Ananas
             '"ROBOT"': Robot
             '"SHARK"': Squali
+            '"SLOTH"': bradipi
             '"UNICORN"': Unicorni
           LAYOUT:
             '"border"': bordo
             '"inner"': quadrato interno
+            '"diamond"': diamante
             '"circle"': cerchio
             '"grid"': griglia
+            '"top"': prima fila
             '"row"': fila
+            '"bottom"': ultima fila
+            '"left"': colonna a sinistra
             '"column"': colonna
+            '"right"': colonna a destra
             '"x"': croce
             '"plus"': più
             '"random"': a caso
@@ -521,22 +535,29 @@ it:
             '"none"': Nessuno
             '"rand"': "(Casuale)"
             '"circles"': Tunnel
+            '"quads"': Angoli
             '"color_cycle"': Colori
             '"diamonds"': Rombi
             '"disco_ball"': Palla da discoteca
             '"fireworks"': Fuochi d'artificio
+            '"flowers"': Fiori
+            '"growing_stars"': Stelle nascenti
             '"swirl"': Ipnotico
             '"kaleidoscope"': Caleidoscopio
             '"lasers"': Pista da ballo laser
             '"splatter"': Schizzi di vernice
             '"rainbow"': Arcobaleno
+            '"ripples_random"': Increspature casuali
+            '"ripples"': Increspature
             '"snowflakes"': Neve
             '"text"': Titoli delle canzoni
+            '"squiggles"': Scarabocchi
             '"galaxy"': Spazio
             '"sparkles"': Scintille
             '"spiral"': Spirale
             '"disco"': Quadrati
             '"stars"': Stelle
+            '"music_wave"': Onde
           PALETTE:
             '"rave"': Bianco e nero
             '"cool"': Blu
@@ -571,6 +592,7 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
+            '"SLOTH"': bradipi
             '"UNICORN"': Unicorni
           SPEED:
             '1': normale
@@ -603,9 +625,12 @@ it:
             '"none"': Nessuno
             '"rand"': "(Casuale)"
             '"bubbles"': Bolle
+            '"hearts_colorful"': Cuori colorati
             '"confetti"': Coriandoli
+            '"emojis"': Emoji
             '"hearts_red"': Cuori
             '"music_notes"': Note musicali
+            '"paint_drip"': Gocce di vernice
             '"pineapples"': Ananas
             '"pizzas"': Pizze
             '"smiling_poop"': Cacca
@@ -614,6 +639,7 @@ it:
             '"smile_face"': Smiley
             '"spotlight"': Riflettore
             '"color_lights"': Luci del palco
+            '"exploding_stars"': Starburst
             '"raining_tacos"': Tacos
       Dancelab_setProp:
         text: 'imposta la {PROPERTY} di {SPRITE} a {VAL} '
@@ -640,6 +666,7 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
+            '"SLOTH"': bradipi
             '"UNICORN"': Unicorni
           PROPERTY:
             '"scale"': dimensione
@@ -675,6 +702,7 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
+            '"SLOTH"': bradipi
             '"UNICORN"': Unicorni
           PROPERTY:
             '"scale"': dimensione
@@ -701,6 +729,7 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
+            '"SLOTH"': bradipi
             '"UNICORN"': Unicorni
       Dancelab_setTintEachInline:
         text: imposta la tonalità di {THIS} a {VAL}
@@ -717,6 +746,7 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
+            '"SLOTH"': bradipi
             '"UNICORN"': Unicorni
       Dancelab_setTintInline:
         text: imposta la tonalità di {SPRITE} a {VAL}
@@ -741,6 +771,7 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
+            '"SLOTH"': bradipi
             '"UNICORN"': Unicorni
           VISIBILITY:
             'true': visibile
@@ -775,6 +806,7 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
+            '"SLOTH"': bradipi
             '"UNICORN"': Unicorni
           PROPERTY:
             '"scale"': dimensione
@@ -819,6 +851,7 @@ it:
             '"PINEAPPLE"': tutti gli ananas
             '"ROBOT"': tutti i robot
             '"SHARK"': tutti gli squali
+            '"SLOTH"': bradipi
             '"UNICORN"': Unicorni
           PROPERTY:
             '"scale"': dimensione
@@ -834,10 +867,33 @@ it:
             '"mid"': toni medi
             '"treble"': toni acuti
       Dancelab_translateStrings:
+        text: tradurre {STRING}
         options:
           STRING:
+            '"music_wave"': Onde
+            '"ripples"': Increspature
+            '"ripples_random"': Increspature casuali
+            '"quads"': Angoli
+            '"flowers"': Fiori
+            '"popsicles"': Ghiaccioli
+            '"squiggles"': Scarabocchi
+            '"growing_stars"': Stelle nascenti
+            '"emojis"': Emoji
             '"hearts_colorful"': Cuori
+            '"paint_drio"': Gocce di vernice
+            '"exploding_stars"': Starburst
+            '"row_top"': prima fila
+            '"row_bottom"': ultima fila
+            '"column_left"': colonna a sinistra
+            '"column_right"': colonna a destra
             '"diamond"': diamante
+            '"mural"': Murale
+            '"safari"': Safari
+            '"network"': Rete
+            '"highway"': Autostrada
+            '"stream"': Flusso
+            '"tile"': Piastrelle
+            '"shadow"': Ombra
             '"s"': s
             '"t"': t
             '"u"': u

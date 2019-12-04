@@ -4,18 +4,18 @@ it:
   data:
     script:
       category:
-        csd_category_name: Scoperte CS ('17-'18)
-        csd_2018_category_name: Scoperte CS ('18-'19)
-        csd_2019_category_name: Scoperte CS ('19-'20)
+        csd_category_name: Alla scoperta dell'informatica ('17-'18)
+        csd_2018_category_name: Alla scoperta dell'informatica ('18-'19)
+        csd_2019_category_name: Alla scoperta dell'informatica ('19-'20)
         csf_category_name: Corsi base
         csf_2018_category_name: Fondamenti di Informatica (2018)
         csf_international_category_name: Fondamenti di Informatica (in Italiano)
         csf2_draft_category_name: 'Corsi A - F: In fase di sviluppo'
         csp_category_name: "Princìpi dell'Informatica (versione 2015-16)"
         csp_2018_category_name: Principi di informatica ('18-'19)
-        csp_2019_category_name: Principi CS ('19-'20)
+        csp_2019_category_name: Principi di informatica ('19-'20)
         cspexams_category_name: Prova pratica di principi d'informatica
-        csp17_category_name: CS Principles ('17-'18)
+        csp17_category_name: Principi di informatica ('17-'18)
         full_course_category_name: Corsi Avanzati
         hoc_category_name: L'Ora del Codice
         math_category_name: Matematica
@@ -3526,6 +3526,7 @@ it:
           stages:
             Dance Party - Go Further:
               name: Ballando col codice - Spingiti oltre
+          title: Continua a ballare (2018)
           description: Vai oltre alla prima ora di programmazione creando progetti più complessi.
         coursef-2019:
           description: 'Impara ad usare diversi tipi di cicli, eventi, funzioni e istruzioni condizionali. Indaga sulle diverse tecniche di risoluzione dei problemi e discuti sull''impatto sociale dell''informatica e di Internet. Nella seconda parte di questo corso, pianifica e crea un progetto di fine corso che puoi condividere con amici ed familiari. **ATTENZIONE**: qui a destra scegli la versione **2018**, è la più aggiornata in italiano ==>'
@@ -4462,6 +4463,7 @@ it:
             For Loops:
               name: Cicli con contatore
         dance-extras-2019:
+          title: Continua a ballare (2019)
           description: Vai oltre alla prima ora di programmazione creando progetti più complessi.
           stages:
             Dance Party - Go Further:

@@ -148,15 +148,17 @@ it-IT:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Nuovo blocco!
         dance_callout_11_b: Nuovo blocco!
+      CourseD_Dance_Party_11_5:
+        dance_party_11_5_groups: Guarda qui per blocchi "tutte le anatre"
       Dance_2019_01:
-        dance_callout_01: Aggiungi questo blocco al tuo programma!
+        dance_callout_01: Qui scegli il tipo di ballerino.
       Dance_2019_02:
         dance_callout_11_a: Aggiungi questo blocco al tuo programma.
         arrow_buttons: Premi i pulsanti freccia per controllare il tuo ballerino.
       Dance_2019_04:
         dance_callout_02: Aggiungi questo blocco al tuo programma!
       Dance_2019_05:
-        dance_callout_05: Aggiungi un nuovo evento al programma.
+        dance_callout_05: Aggiungi un nuovo evento al tuo programma.
       Dance_2019_06:
         dance_party_11_5_groups: Nuovo blocco!
       Dance_2019_07:
@@ -175,6 +177,8 @@ it-IT:
       Dance_Party_11:
         dance_callout_11_a: Nuovo blocco!
         dance_callout_11_b: Nuovo blocco!
+      Dance_Party_11_5:
+        dance_party_11_5_groups: Guarda qui per blocchi "tutte le anatre"
       Function intro Ryan:
         Function_intro_Ryan_1: Questa piccola istruzione dice al computer di eseguire
           la GRANDE porzione di codice con lo stesso nome nell'area di lavoro.
@@ -321,10 +325,10 @@ it-IT:
         courseD_bee_debugging_challenge1_callout1: Usa quest'istruzione per far andare
           l'ape all'indietro.
       course3_bee_functions_challenge3:
-        courseF_bee_functions_challenge1_1: Quale codice dovresti inserire in questa
+        courseF_bee_functions_challenge1_1: Che istruzioni dovresti inserire in questa
           funzione?
-        courseF_bee_functions_challenge1_2: La funzione "controlla nettare o miele"
-          può essere usata quì se la modifichi per produrre miele più volte.
+        courseF_bee_functions_challenge1_2: Qui puoi usare la funzione `controlla
+          nettare o miele` modificandola per produrre miele più volte.
       course3_playLab_challenge1:
         courseC_PlayLab_events_challenge1_1: Questo blocco ti permette di muovere
           gli attori in diverse parti dello spazio di gioco.
@@ -879,16 +883,16 @@ it-IT:
       courseF_bee_for9_2019:
         courseF_bee_for9_1: I blocchi matematici li trovi qui dentro.
       courseF_bee_functions2:
-        courseF_bee_functions2_1: Questo blocco chiama una funzione. Clicca questo
-          bottono "modifica" per vedere cosa c'è all'interno!
+        courseF_bee_functions2_1: Questo blocco richiama una funzione. Clicca il pulsante
+          "modifica" per vedere cosa c'è all'interno!
       courseF_bee_functions6:
-        courseF_bee_functions6_1: Non dimenticare di guardare quì per più blocchi
-          che potrebbero aiutarti a renderlo più facile!
+        courseF_bee_functions6_1: Non dimenticarti che qui ci sono altri blocchi che
+          potrebbero semplificarti il lavoro!
       courseF_bee_functions_challenge1:
-        courseF_bee_functions_challenge1_1: Quale codice dovresti inserire in questa
+        courseF_bee_functions_challenge1_1: Che istruzioni dovresti inserire in questa
           funzione?
-        courseF_bee_functions_challenge1_2: La funzione "controlla nettare o miele"
-          può essere usata quì se la modifichi per produrre miele più volte.
+        courseF_bee_functions_challenge1_2: Qui puoi usare la funzione `controlla
+          nettare o miele` modificandola per produrre miele più volte.
       courseF_bee_fwp_challenge2:
         courseF_bee_fwp_challenge2_callout1: Questa funzione farà un buon lavoro con
           le pannocchie, ma con le altre verdure?
