@@ -62,7 +62,7 @@ class AuthenticationOption < ApplicationRecord
     MICROSOFT
   ]
 
-  def google_oauth2?
+  def google?
     credential_type == GOOGLE
   end
 

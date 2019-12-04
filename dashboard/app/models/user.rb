@@ -513,7 +513,7 @@ class User < ActiveRecord::Base
     # Exception for development and adhoc environments where Google is not available as an authentication provider by default
     return if rack_env?(:development, :adhoc)
 
-    unless (authentication_options.count == 1) && (authentication_options.all? {|ao| ao.google_oauth2? && ao.codeorg_email?})
+    unless (authentication_options.count == 1) && (authentication_options.all? {|ao| ao.google? && ao.codeorg_email?})
       errors.add(:admin, 'must be a code.org account with only google oauth')
     end
   end
