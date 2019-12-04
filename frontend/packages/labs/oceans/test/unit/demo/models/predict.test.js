@@ -36,6 +36,7 @@ describe('Model quality test', () => {
     setTimeout(async () => {
       const state = getState();
       await predictFish(state, 0);
+      expect(state.trainer.predict).toBeCalled();
       expect(state.fishData[0].result).toBeInstanceOf(Number);
     }, 100);
   });
