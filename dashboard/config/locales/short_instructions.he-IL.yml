@@ -369,11 +369,11 @@ he-IL:
       CourseE_HOC 2018 Level_9b: 'השתמשו בשונית האלמוגים כנקודת ציון כדי להגיע לאוצר.  '
       Crack Random Substitution: הוראות
       Crack a Caesar Cipher: הוראות
-      Dance_2019_01: 'גררו את בלוק ה-<xml><block type="Dancelab_makeAnonymousDanceSprite"
-        block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;,
-        &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml>
-        אל תוך חלל העבודה, וחברו אותו בתוך בלוק ה-<xml><block type="Dancelab_whenSetup2"
-        next_connection_disabled="true" block-text="setup"></block></xml>.'
+      Dance_2019_01: |-
+        גררו אל תוך חלל העבודה את הבלוק
+        <xml><block type="Dancelab_makeAnonymousDanceSprite" block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;, &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml>
+        וחברו אותו בתוך הבלוק
+        <xml><block type="Dancelab_whenSetup2" next_connection_disabled="true" block-text="setup"></block></xml>
       Dance_2019_02: גרמו לחתול לבצע צעד ריקוד כשאתם לוחצים על מקש כלשהו.
       Dance_2019_03: 'זה הזמן לתחרות ריקודים! תכנתו כל רקדן לזוז כשאתם לוחצים על מקשים
         שונים. בחרו את צעד הריקוד האהוב עליכם עבור כל רקדן או קבעו אותו כ"(אקראי)"
@@ -384,7 +384,7 @@ he-IL:
       Dance_2019_07: שנו את הגודל של קבוצת רקדני הליווי.
       Dance_2019_08: נסו לשנות את הגוון של אחד או יותר מהרקדנים שלכם (אולי אפילו קבוצה
         שלמה)!
-      Dance_2019_09: הרגישו חופשי להתפרע עם הבלוקים החדשים הללו!
+      Dance_2019_09: הרגישו חופשי להתפרע ולהיות יצירתיים עם הבלוקים החדשים הללו!
       Dance_2019_10: התחילו להיכנס לגרוּב! צרו ריקוד משלכם, ושתפו אותו עם החברים שלכם.
       Dance_Party_01: גררו את בלוק ה"צור חדש" אל תוך חלל העבודה, וחברו אותו בתוך בלוק
         ה"הגדרות".
