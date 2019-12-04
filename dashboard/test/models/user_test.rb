@@ -4181,7 +4181,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'cannot grant admin role when google authentication option is not present' do
     email = 'annieeasley@code.org'
-    migrated_teacher = create(:teacher, email: email)
+    migrated_teacher = create(:teacher, :google_sso_provider, email: email)
 
     migrated_teacher.authentication_options.destroy_all
 
@@ -4192,7 +4192,7 @@ class UserTest < ActiveSupport::TestCase
     end
 
     refute migrated_teacher.reload.admin?
-    assert_equal ["Admin must be a code.org account with only google oauth", "Email is required"], migrated_teacher.errors.full_messages
+    assert_equal ["Admin must be a code.org account with only google oauth"], migrated_teacher.errors.full_messages
   end
 
   test 'cannot grant admin role when not a codeorg account' do
