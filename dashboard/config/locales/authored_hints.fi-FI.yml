@@ -117,7 +117,8 @@ fi-FI:
       CourseD_Dance_Party_01:
         validation: |-
           **Kuinka ylitän tämän tason?**
-          \*Varmista, että tanssija näkyy ruudulla.
+
+          -   Varmista, että tanssija näkyy ruudulla.
 
           _Tämä taso päättyy 4 tahdin jälkeen._
         challenges: |-
@@ -218,7 +219,8 @@ fi-FI:
       Dance_2019_01:
         validation: |-
           **Kuinka ylitän tämän tason?**
-          \*Varmista, että tanssija näkyy ruudulla.
+
+          -   Varmista, että tanssija näkyy ruudulla.
 
           _Tämä taso päättyy 4 tahdin jälkeen._
         challenges: |-
@@ -326,7 +328,8 @@ fi-FI:
       Dance_Party_01:
         validation: |-
           **Kuinka ylitän tämän tason?**
-          \*Varmista, että tanssija näkyy ruudulla.
+
+          -   Varmista, että tanssija näkyy ruudulla.
 
           _Tämä taso päättyy 4 tahdin jälkeen._
         challenges: |-
@@ -360,6 +363,10 @@ fi-FI:
           **Vapaaehtoinen haaste**
 
           Muuta taustaefektiä kappaleen eri vaiheissa yhdistämällä uusi blokki tapahtumien <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> alle.
+      Dance_Party_05:
+        validation: "**Miten läpäisen tämän tason?** \n\n-   Tanssijasi täytyy käydä
+          läpi vähintään 4 erilaista tanssiliikettä ennen kuin taso muuttuu. \n\n_Tämä
+          taso päättyy 12 mittayksikön jälkeen._"
       Dance_Party_06:
         validation: |-
           **Kuinka ylitän tämän tason?**
