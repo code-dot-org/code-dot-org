@@ -121,6 +121,9 @@ class StudentsBeyondHoc extends Component {
       case completedTutorialType === 'dance' && !signedIn && !isEnglish:
         specificCardSet = 'signedOutNonEnglishDancePartyCards';
         break;
+      case completedTutorialType === 'other' && isEnglish && under13:
+        specificCardSet = 'youngerThan13DefaultCards';
+        break;
       case completedTutorialType === 'other' && signedIn && isEnglish:
         specificCardSet = 'signedInDefaultCards';
         break;
