@@ -377,7 +377,7 @@ export default {
           .appendTitle(fieldLabel, 'VAR')
           .appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);
 
-        if (Blockly.useModalFunctionEditor && Blockly.hasCategories) {
+        if (Blockly.useModalFunctionEditor) {
           var editLabel = new Blockly.FieldIcon(Blockly.Msg.FUNCTION_EDIT);
           Blockly.bindEvent_(
             editLabel.fieldGroup_,
