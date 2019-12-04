@@ -3,6 +3,8 @@ hi:
   data:
     blocks:
       Dancelab_alternateMoves:
+        text: "{GROUP} प्रत्येक {N} संगीत प्रविधियों के बाद \n{MOVE1} और {MOVE2} को
+          बदलता है"
         options:
           GROUP:
             '"ALIEN"': सभी एलियन्स
@@ -15,6 +17,7 @@ hi:
             '"PINEAPPLE"': सभी अनानास
             '"ROBOT"': सभी रोबोट
             '"SHARK"': सभी शार्क्स
+            '"SLOTH"': निष्क्रियता
             '"UNICORN"': गेंडा
           MOVE1:
             MOVES.Roll: बॉडी रोल
@@ -67,6 +70,7 @@ hi:
             '"PINEAPPLE"': सभी अनानास
             '"ROBOT"': सभी रोबोट
             '"SHARK"': सभी शार्क्स
+            '"SLOTH"': निष्क्रियता
             '"UNICORN"': सभी गेंडे
           MOVE:
             '"next"': "(अगला)"
@@ -118,6 +122,7 @@ hi:
             '"x"': क्षैतिज स्थिति
             '"y"': लंबवत स्थिति
       Dancelab_changePropEachBy:
+        text: "{GROUP} {PROPERTY} के {VAL} तक बदलें"
         options:
           GROUP:
             '"ALIEN"': सभी एलियन्स
@@ -130,6 +135,7 @@ hi:
             '"PINEAPPLE"': सभी अनानास
             '"ROBOT"': सभी रोबोट
             '"SHARK"': सभी शार्क्स
+            '"SLOTH"': निष्क्रियता
             '"UNICORN"': गेंडा
           PROPERTY:
             '"scale"': आकार
@@ -152,6 +158,7 @@ hi:
             '"PINEAPPLE"': सभी अनानास
             '"ROBOT"': सभी रोबोट
             '"SHARK"': सभी शार्क्स
+            '"SLOTH"': निष्क्रियता
             '"UNICORN"': गेंडा
           MOVE:
             '"rand"': "(बेतरतीब)"
@@ -212,6 +219,8 @@ hi:
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_everyMeasuresRange:
+        text: 'प्रत्येक {N} प्रविधियों को {START} के बाद दोहराएं '
       Dancelab_everySeconds:
         text: 'प्रत्येक {N} {UNIT} '
         options:
@@ -298,6 +307,7 @@ hi:
             "{x: 300, y: 300}": नीचे दाएं
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": यादृच्छिक
       Dancelab_jumpToEach:
+        text: "{GROUP} से {LOCATION} पर जाएं"
         options:
           GROUP:
             '"ALIEN"': सभी एलियन्स
@@ -310,6 +320,7 @@ hi:
             '"PINEAPPLE"': सभी अनानास
             '"ROBOT"': सभी रोबोट
             '"SHARK"': सभी शार्क्स
+            '"SLOTH"': निष्क्रियता
             '"UNICORN"': गेंडा
           LOCATION:
             "{x: 200, y: 100}": ऊपर
@@ -336,6 +347,7 @@ hi:
             '"PINEAPPLE"': सभी अनानास
             '"ROBOT"': सभी रोबोट
             '"SHARK"': सभी शार्क्स
+            '"SLOTH"': निष्क्रियता
             '"UNICORN"': गेंडा
           FORMAT:
             '"border"': बॉर्डर
@@ -361,6 +373,7 @@ hi:
             '"PINEAPPLE"': अनानास
             '"ROBOT"': रोबोट
             '"SHARK"': शार्क
+            '"SLOTH"': निष्क्रियता
             '"UNICORN"': गेंडा
           LOCATION:
             "{x: 200, y: 100}": ऊपर
@@ -387,6 +400,7 @@ hi:
             '"PINEAPPLE"': अनानास
             '"ROBOT"': रोबोट
             '"SHARK"': शार्क
+            '"SLOTH"': निष्क्रियता
             '"UNICORN"': गेंडा
           LOCATION:
             "{x: 200, y: 100}": ऊपर
@@ -433,14 +447,20 @@ hi:
             '"PINEAPPLE"': अनानास
             '"ROBOT"': रोबोट
             '"SHARK"': संगीत प्रविधियां
+            '"SLOTH"': निष्क्रियता
             '"UNICORN"': गेंडा
           LAYOUT:
             '"border"': बॉर्डर
             '"inner"': अंदर वर्ग
+            '"diamond"': हीरा
             '"circle"': गोला
             '"grid"': ग्रिड
+            '"top"': सबसे ऊपर की पंक्ति
             '"row"': पंक्ति
+            '"bottom"': सबसे नीचे की पंक्ति
+            '"left"': बायां कॉलम
             '"column"': कॉलम
+            '"right"': दायां कॉलम
             '"x"': आड़ा-तिरछा
             '"plus"': जोड़
             '"random"': यादृच्छिक
@@ -497,22 +517,29 @@ hi:
             '"none"': कोई नहीं
             '"rand"': "(बेतरतीब)"
             '"circles"': चक्र
+            '"quads"': कोण
             '"color_cycle"': रंग
             '"diamonds"': हीरा
             '"disco_ball"': डिस्को बॉल
             '"fireworks"': पटाखे
+            '"flowers"': फूल
+            '"growing_stars"': उभरते तारे
             '"swirl"': हिप्नो
             '"kaleidoscope"': कैलाइडोस्कोप
             '"lasers"': लेजर डांस फ्लोर
             '"splatter"': पेंट का छिड़काव
             '"rainbow"': इंद्रधनुष
+            '"ripples_random"': बेतरतीब लहरें
+            '"ripples"': लहरें
             '"snowflakes"': हिमपात
             '"text"': गाने के नाम
+            '"squiggles"': टेढ़ी-मेढ़ी रेखाएं
             '"galaxy"': खाली स्थान
             '"sparkles"': फुलझड़ियां
             '"spiral"': घुमावदार
             '"disco"': चोकोण
             '"stars"': स्टार
+            '"music_wave"': तरंगें
           PALETTE:
             '"rave"': काला व सफेद
             '"cool"': शांत!
@@ -546,6 +573,7 @@ hi:
             '"PINEAPPLE"': सभी अनानास
             '"ROBOT"': सभी रोबोट
             '"SHARK"': सभी शार्क्स
+            '"SLOTH"': निष्क्रियता
             '"UNICORN"': गेंडा
           SPEED:
             '1': normal
@@ -578,9 +606,12 @@ hi:
             '"none"': कोई नहीं
             '"rand"': "(बेतरतीब)"
             '"bubbles"': बुलबुले
+            '"hearts_colorful"': रंगीन दिल
             '"confetti"': कॉन्फेटी
+            '"emojis"': इमोजी
             '"hearts_red"': दिल
             '"music_notes"': संगीत के नोट्स
+            '"paint_drip"': पेंट ड्रिप
             '"pineapples"': अनानास
             '"pizzas"': पिज़्ज़ा
             '"smiling_poop"': पूप
@@ -589,6 +620,7 @@ hi:
             '"smile_face"': इंद्रधनुष
             '"spotlight"': स्पॉटलाइट
             '"color_lights"': स्टेज लाइटें
+            '"exploding_stars"': स्टारबर्स्ट
             '"raining_tacos"': टैको
       Dancelab_setProp:
         text: "{SPRITE} {PROPERTY} को {VAL} पर सेट करें "
@@ -614,6 +646,7 @@ hi:
             '"PINEAPPLE"': सभी अनानास
             '"ROBOT"': सभी रोबोट
             '"SHARK"': सभी शार्क्स
+            '"SLOTH"': निष्क्रियता
             '"UNICORN"': गेंडा
           PROPERTY:
             '"scale"': आकार
@@ -635,6 +668,7 @@ hi:
             '"y"': लंबवत स्थिति
             '"tint"': रंगत
       Dancelab_setPropRandomEach:
+        text: "{GROUP} {PROPERTY} को बेतरतीब करें"
         options:
           GROUP:
             '"ALIEN"': सभी एलियन्स
@@ -647,6 +681,7 @@ hi:
             '"PINEAPPLE"': सभी अनानास
             '"ROBOT"': सभी रोबोट
             '"SHARK"': सभी शार्क्स
+            '"SLOTH"': निष्क्रियता
             '"UNICORN"': गेंडा
           PROPERTY:
             '"scale"': आकार
@@ -672,6 +707,7 @@ hi:
             '"PINEAPPLE"': सभी अनानास
             '"ROBOT"': सभी रोबोट
             '"SHARK"': सभी शार्क्स
+            '"SLOTH"': निष्क्रियता
             '"UNICORN"': गेंडा
       Dancelab_setTintEachInline:
         text: "{THIS} रंगत को {VAL} पर सेट करें"
@@ -687,6 +723,7 @@ hi:
             '"PINEAPPLE"': सभी अनानास
             '"ROBOT"': सभी रोबोट
             '"SHARK"': सभी शार्क्स
+            '"SLOTH"': निष्क्रियता
             '"UNICORN"': गेंडा
       Dancelab_setTintInline:
         text: "{SPRITE} की रंगत को {VAL} पर सेट करें"
@@ -710,6 +747,7 @@ hi:
             '"PINEAPPLE"': सभी अनानास
             '"ROBOT"': सभी रोबोट
             '"SHARK"': सभी शार्क्स
+            '"SLOTH"': निष्क्रियता
             '"UNICORN"': गेंडा
           VISIBILITY:
             'true': दृश्य
@@ -730,6 +768,7 @@ hi:
             '"mid"': मध्य
             '"treble"': ऊंची ध्वनि
       Dancelab_startMappingEach:
+        text: "{GROUP} {PROPERTY} निम्न {RANGE} पर शुरू करता है"
         options:
           GROUP:
             '"ALIEN"': सभी एलियन्स
@@ -742,6 +781,7 @@ hi:
             '"PINEAPPLE"': सभी अनानास
             '"ROBOT"': सभी रोबोट
             '"SHARK"': सभी शार्क्स
+            '"SLOTH"': निष्क्रियता
             '"UNICORN"': गेंडा
           PROPERTY:
             '"scale"': आकार
@@ -772,6 +812,7 @@ hi:
             '"mid"': मध्य
             '"treble"': ऊंची ध्वनि
       Dancelab_stopMappingEach:
+        text: "{GROUP} {PROPERTY} निम्न {RANGE} पर रोकता है"
         options:
           GROUP:
             '"ALIEN"': सभी एलियन्स
@@ -784,6 +825,7 @@ hi:
             '"PINEAPPLE"': सभी अनानास
             '"ROBOT"': सभी रोबोट
             '"SHARK"': सभी शार्क्स
+            '"SLOTH"': निष्क्रियता
             '"UNICORN"': गेंडा
           PROPERTY:
             '"scale"': आकार
@@ -799,10 +841,33 @@ hi:
             '"mid"': मध्य
             '"treble"': ऊंची ध्वनि
       Dancelab_translateStrings:
+        text: "{STRING} का अनुवाद करें"
         options:
           STRING:
+            '"music_wave"': तरंगें
+            '"ripples"': लहरें
+            '"ripples_random"': बेतरतीब लहरें
+            '"quads"': कोण
+            '"flowers"': फूल
+            '"popsicles"': पॉपसिक्ल्स
+            '"squiggles"': टेढ़ी-मेढ़ी रेखाएं
+            '"growing_stars"': उभरते तारे
+            '"emojis"': इमोजी
             '"hearts_colorful"': दिल
+            '"paint_drio"': पेंट ड्रिप
+            '"exploding_stars"': स्टारबर्स्ट
+            '"row_top"': सबसे ऊपर की पंक्ति
+            '"row_bottom"': सबसे नीचे की पंक्ति
+            '"column_left"': बायां कॉलम
+            '"column_right"': दायां कॉलम
             '"diamond"': हीरा
+            '"mural"': भित्ति-चित्र
+            '"safari"': सफारी
+            '"network"': नेटवर्क
+            '"highway"': राजमार्ग
+            '"stream"': स्ट्रीम
+            '"tile"': टाइल
+            '"shadow"': छाया
             '"s"': s
             '"t"': t
             '"u"': u
