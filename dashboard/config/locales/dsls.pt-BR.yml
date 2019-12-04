@@ -1503,6 +1503,14 @@ pt-BR:
         - text: "  0<br>200<br>100"
         - text: "  verdadeiro<br>erro<br>verdadeiro"
         - text: "  falso<br>verdadeiro<br>falso"
+        markdown: |
+          # Expressões booleanas
+
+          A tomada de decisão em computadores é baseada em instruções chamadas ** expressões booleanas **. Uma expressão booleana é ** qualquer expressão que só pode ser avaliada como `TRUE` ou` FALSE` **. Isso pode ser particularmente útil quando usado para comparar as propriedades de dois sprites. Por exemplo, você pode descobrir qual é maior ou mais alto. Nos próximos quebra-cabeças, usaremos expressões booleanas simples para comparar propriedades de sprites.
+
+          # Prever
+
+          Leia o código abaixo. Existem alguns novos símbolos nos quais você não foi apresentado. Adivinhe o que eles significam e tente responder à seguinte pergunta
       CSD U3 Boolean MC_2018:
         title: título
         questions:
@@ -1513,6 +1521,14 @@ pt-BR:
         - text: "  0<br>200<br>100"
         - text: "  verdadeiro<br>erro<br>verdadeiro"
         - text: "  falso<br>verdadeiro<br>falso"
+        markdown: |
+          # Expressões booleanas
+
+          A tomada de decisão em computadores é baseada em instruções chamadas ** expressões booleanas **. Uma expressão booleana é ** qualquer expressão que só pode ser avaliada como `TRUE` ou` FALSE` **. Isso pode ser particularmente útil quando usado para comparar as propriedades de dois sprites. Por exemplo, você pode descobrir qual é maior ou mais alto. Nos próximos quebra-cabeças, usaremos expressões booleanas simples para comparar propriedades de sprites.
+
+          # Prever
+
+          Leia o código abaixo. Existem alguns novos símbolos nos quais você não foi apresentado. Adivinhe o que eles significam e tente responder à seguinte pergunta
       CSD U3 Boolean MC_2018_2019:
         title: título
         questions:
@@ -1523,6 +1539,14 @@ pt-BR:
         - text: "  0<br>200<br>100"
         - text: "  verdadeiro<br>erro<br>verdadeiro"
         - text: "  falso<br>verdadeiro<br>falso"
+        markdown: |
+          # Expressões booleanas
+
+          A tomada de decisão em computadores é baseada em instruções chamadas ** expressões booleanas **. Uma expressão booleana é ** qualquer expressão que só pode ser avaliada como `TRUE` ou` FALSE` **. Isso pode ser particularmente útil quando usado para comparar as propriedades de dois sprites. Por exemplo, você pode descobrir qual é maior ou mais alto. Nos próximos quebra-cabeças, usaremos expressões booleanas simples para comparar propriedades de sprites.
+
+          # Prever
+
+          Leia o código abaixo. Existem alguns novos símbolos nos quais você não foi apresentado. Adivinhe o que eles significam e tente responder à seguinte pergunta
       CSD U3 Card Examples_2018:
         title: Criando um Cartão Interativo
         content1: descrição aqui
@@ -1636,6 +1660,12 @@ pt-BR:
           feedback: Funções poderão ser criadas em qualquer lugar no seu código. Ainda
             é uma boa ideia mantê-las agrupadas na parte inferior para que fiquem
             organizadas!
+        markdown: |
+          # Importa onde você cria funções?
+
+          Até agora, todas as suas funções foram criadas na parte inferior do seu código. O que você acha que acontecerá se você chamar uma função antes que ela seja definida?
+
+          Observe que o quadrado vermelho é desenhado ** antes de ** sua função ser criada, enquanto o quadrado verde é desenhado ** após ** sua função ser criada. Qual destes você acha que será desenhado?
       CSD U3 Functions Prediction define first_2018:
         answers:
         - text: O quadrado vermelho será desenhado, mas o verde não. Você não pode
@@ -1658,6 +1688,12 @@ pt-BR:
           feedback: Funções poderão ser criadas em qualquer lugar no seu código. Ainda
             é uma boa ideia mantê-las agrupadas na parte inferior para que fiquem
             organizadas!
+        markdown: |
+          # Importa onde você cria funções?
+
+          Até agora, todas as suas funções foram criadas na parte inferior do seu código. O que você acha que acontecerá se você chamar uma função antes que ela seja definida?
+
+          Observe que o quadrado vermelho é desenhado ** antes de ** sua função ser criada, enquanto o quadrado verde é desenhado ** após ** sua função ser criada. Qual destes você acha que será desenhado?
       CSD U3 Functions Prediction define first_2018_2019:
         answers:
         - text: O quadrado vermelho será desenhado, mas o verde não. Você não pode
@@ -1680,6 +1716,12 @@ pt-BR:
           feedback: Funções poderão ser criadas em qualquer lugar no seu código. Ainda
             é uma boa ideia mantê-las agrupadas na parte inferior para que fiquem
             organizadas!
+        markdown: |
+          # Importa onde você cria funções?
+
+          Até agora, todas as suas funções foram criadas na parte inferior do seu código. O que você acha que acontecerá se você chamar uma função antes que ela seja definida?
+
+          Observe que o quadrado vermelho é desenhado ** antes de ** sua função ser criada, enquanto o quadrado verde é desenhado ** após ** sua função ser criada. Qual destes você acha que será desenhado?
       CSD U3 Functions SFLP:
         markdown: |+
           # Visão global
@@ -6375,6 +6417,10 @@ pt-BR:
         - text: Eu não sei.
           feedback: O bloco `pegar abóbora` está dentro do laço, então o agricultor
             tentará colher abóboras em cada etapa, em vez de apenas no final.
+        markdown: |+
+          Aqui temos um novo tipo de desafio que usa blocos parecidos com os que você já viu. Você consegue adivinhar o que vai acontecer quando você executar o código abaixo?
+
+
       courseD_multi_farmer_while10_predict2:
         questions:
         - text: Dê uma boa olhada no código abaixo. O que será deixado no final deste
@@ -6773,6 +6819,16 @@ pt-BR:
         - text: Eu não sei.
           feedback: A variável volta a ser 0 antes das duas últimas chamadas de função,
             onde 1 é adicionado a cada vez. A abelha recolhe 2 unidades de néctar.
+      courseF_external_variableConstant:
+        markdown: |+
+          <h2>Mais sobre Variáveis</h2>
+
+          <img src="https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png" style="padding-left: 30px; width:300px; float:right;"/>
+          <h3>Você acaba de aprender um ótimo jeito de usar uma variável... Como uma constante!
+          Quando você usa uma variável como uma constante, você define um valor uma vez, e então usa o *mesmo* valor várias vezes no seu programa, sem mudá-lo após clicar em "Executar"</h3>
+          <br/><hr/>
+          <h3>Na próxima parte do curso, você programará com variáveis que *mudam* dentro do programa.</h3>
+
       courseF_external_variableConstant_2018:
         markdown: |+
           <h2>Mais sobre Variáveis</h2>
@@ -7101,6 +7157,10 @@ pt-BR:
         - text: Eu não sei.
           feedback: O programa usa parâmetros para permitir que uma única função crie
             duas caixas de tamanho diferentes.
+        markdown: |+
+          Nós adicionamos parâmetros para a função 'desenhe um quadrado'. Clique no botão "editar" azul para ver toda a definição da função.
+
+
       courseF_multi_artist_variables3a_predict1:
         questions:
         - text: Colocamos o valor variável comprimento como 50. O que irá acontecer
@@ -7175,6 +7235,11 @@ pt-BR:
         - text: Eu não sei.
           feedback: O bloco 'se na flor' assegura que a abelha só tentará obter néctar
             se houver uma flor embaixo da nuvem.
+        markdown: 'A nuvem está bloqueando a exibição. Poderia haver uma flor sob
+          esta nuvem. Se houver uma flor, a abelha precisará coletar néctar ** uma
+          vez **.
+
+'
       courseF_multi_bee_conditionals7_predict2:
         questions:
         - text: Olhe cuidadosamente para o código abaixo. O que você acha que acontecerá
@@ -7194,6 +7259,11 @@ pt-BR:
         - text: Eu não sei.
           feedback: O bloco 'se na flor' permite que a abelha obtenha néctar em cada
             flor, caso contrário, ela fará mel.
+        markdown: 'Às vezes uma nuvem cobre uma flor, às vezes ela cobre uma colmeia!
+          De qualquer forma, sempre terá apenas **uma** flor ou **uma** colmeia embaixo
+          de cada nuvem.
+
+'
       courseF_multi_bee_for3_predict1:
         questions:
         - text: Leia o código abaixo. O que acontecerá quando você clicar em "Executar"?
@@ -7267,6 +7337,10 @@ pt-BR:
         - text: Eu não sei.
           feedback: Clicando para olhar dentro da função mostra que está programada
             para coletar a quantidade de nectar ou mel que for passada por parâmetro.
+        markdown: |+
+          Debaixo dessas nuvens, existe uma flor com exatamente 1 néctar ou um favo de mel com exatamente 1 mel. Clique no botão azul "editar" na função para ver o que há dentro antes de responder à pergunta abaixo.
+
+
       courseF_multi_playlab_variables4c_predictive1:
         questions:
         - text: O que aconteceria se você digitasse o nome "Ali" no prompt?
@@ -7283,6 +7357,12 @@ pt-BR:
         - text: Eu não sei.
           feedback: 'Incorreta. Observe que o bloco `juntar` insere o nome fornecido
             (Ali) na sentença do pirata. '
+        markdown: |
+          ** Este quebra-cabeça usa um novo bloco chamado bloco `pergunte`. **
+
+          O bloco `pergunte' interrompe o programa e solicita que o usuário insira algum texto.
+
+          Qualquer texto que o usuário digitar é salvo na variável mostrada no final do bloco `pergunte`. Nesse caso, é a variável `nome`.
       courseF_project_exemplars_2019:
         title: Teste a Página da Apostila de Markdown
         content1: Teste a Página da Apostila de Markdown

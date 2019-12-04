@@ -9105,6 +9105,30 @@ pt-BR:
         -   Execute o programa
         -   Enquanto o programa é executado, pressione a tecla "seta para cima" no seu teclado.
         -   Você conseguiu adivinhar? Ou você se surpreendeu? Discuta sobre o código com um colega.
+      CSD U3 Keypress Boolean embed-2018: |-
+        # Adivinhação - teclaPressionada()
+
+        O bloco `teclaPressionada()` é o primeiro do conjunto de blocos que nos permite receber informações do usuário. Esse é o primeiro passo na nossa jornada de desenvolvimento de jogos! Veja se você consegue adivinhar como o bloco `teclaPressionada()` funciona. Você **não vai escrever nenhum código**.
+
+        # Instruções
+
+        -   Leia o programa com cuidado.
+        -   **Tente adivinhar o que vai acontecer quando executar o programa** e escreva na caixa abaixo. Seja detalhista!
+        -   Execute o programa
+        -   Enquanto o programa é executado, pressione a barra de espaço no seu teclado.
+        -   Você conseguiu adivinhar? Ou você se surpreendeu? Discuta sobre o código com um colega.
+      CSD U3 Keypress Boolean embed-2018_2019: |-
+        # Adivinhação - teclaPressionada()
+
+        O bloco `teclaPressionada()` é o primeiro do conjunto de blocos que nos permite receber informações do usuário. Esse é o primeiro passo na nossa jornada de desenvolvimento de jogos! Veja se você consegue adivinhar como o bloco `teclaPressionada()` funciona. Você **não vai escrever nenhum código**.
+
+        # Instruções
+
+        -   Leia o programa com cuidado.
+        -   **Tente adivinhar o que vai acontecer quando executar o programa** e escreva na caixa abaixo. Seja detalhista!
+        -   Execute o programa
+        -   Enquanto o programa é executado, pressione a barra de espaço no seu teclado.
+        -   Você conseguiu adivinhar? Ou você se surpreendeu? Discuta sobre o código com um colega.
       CSD U3 Keypress Watchers Predict: |-
         # Tente Adivinhar: Entrada do Usuário
 
@@ -11124,20 +11148,20 @@ pt-BR:
       CSD U3 abstraction rotation control: |-
         # Velocidade de controle
 
-        Você usou `velocidadeDeRotacao` fora do loop de desenho para fazer seu sprite girar quando seu programa foi iniciado. Você também pode usar `velocidadeDeRotacao` \*\* dentro \*\* do laço de repetição de desenhar para mudar a velocidade do sprite durante o jogo. Por exemplo, um sprite pode começar a girar quando o usuário pressiona a barra de espaço, e vai continuar girando até que seja ordenado que pare.
+        Você usou `velocidadeDeRotacao` fora do loop de desenho para fazer seu sprite girar quando seu programa foi iniciado. Você também pode usar `velocidadeDeRotacao` **dentro** do laço de repetição de desenhar para mudar a velocidade do sprite durante o jogo. Por exemplo, um sprite pode começar a girar quando o usuário pressiona a barra de espaço, e vai continuar girando até que seja ordenado que pare.
 
         # Faça isso
 
-        -   Veja a instrução `if` dentro do loop de desenho que verifica se a barra de espaço foi pressionada. ([Mostre-me onde] [0])
+        -   Veja a instrução `if` dentro do loop de desenho que verifica se a barra de espaço foi pressionada. ([Mostre-me onde](#triggercallout=code_triggered1))
         -   Use o bloco `velocidadeDeRotacao` para que a roda de cor comece a girar quando o usuário pressionar a barra de espaço.
       CSD U3 abstraction rotation control_2018: |-
         # Velocidade de controle
 
-        Você usou `velocidadeDeRotacao` fora do loop de desenho para fazer seu sprite girar quando seu programa foi iniciado. Você também pode usar `velocidadeDeRotacao` \*\* dentro \*\* do laço de repetição de desenhar para mudar a velocidade do sprite durante o jogo. Por exemplo, um sprite pode começar a girar quando o usuário pressiona a barra de espaço, e vai continuar girando até que seja ordenado que pare.
+        Você usou `velocidadeDeRotacao` fora do loop de desenho para fazer seu sprite girar quando seu programa foi iniciado. Você também pode usar `velocidadeDeRotacao` **dentro** do laço de repetição de desenhar para mudar a velocidade do sprite durante o jogo. Por exemplo, um sprite pode começar a girar quando o usuário pressiona a barra de espaço, e vai continuar girando até que seja ordenado que pare.
 
         # Faça isso
 
-        -   Veja a instrução `if` dentro do loop de desenho que verifica se a barra de espaço foi pressionada. ([Mostre-me onde] [0])
+        -   Veja a instrução `if` dentro do loop de desenho que verifica se a barra de espaço foi pressionada. ([Mostre-me onde](#triggercallout=code_triggered1))
         -   Use o bloco `velocidadeDeRotacao` para que a roda de cor comece a girar quando o usuário pressionar a barra de espaço.
       CSD U3 abstraction rotation control_2019: |-
         # Controlando a Velocidade
@@ -11146,7 +11170,7 @@ pt-BR:
 
         # Faça isso
 
-        -   Veja a instrução `if` dentro do laço de desenho, que verifica se a barra de espaço foi pressionada. ( [Mostre-me onde](#triggercallout=code_triggered1) )
+        -   Veja a instrução `if` dentro do laço de desenho, que verifica se a barra de espaço foi pressionada. ([Mostre-me onde](#triggercallout=code_triggered1))
         -   Use o bloco `velocidadeDeRotacao` para fazer a roda colorida começar a girar quando o usuário pressionar a barra de espaço.
       CSD U3 abstraction rotation_2018: |-
         # Velocidade de rotação
@@ -13503,6 +13527,32 @@ pt-BR:
         -   Clique em <img src="https://images.code.org/9e963203e9cafd558b760730d13537ca-image-1461783998310.06.20 PM.png" width=100> para executar o programa e ver o que acontece. ([Mostrar onde] [1])
         -   Altere os números dentro do bloco e tente executar o programa novamente.
         -   Tente colocar o retângulo perto do canto inferior direito da tela.
+      CSD U3 rect_2018: |-
+        # Explorar o Laboratório de Jogos
+
+        Bem-vindo ao Laboratório de Jogos, onde você pode criar animações e jogos interativos!
+
+        Você já praticou o básico de colocar formas em uma grade. No Laboratório de Jogos, você fará o mesmo com a área de exibição à esquerda.
+
+        # Faça isto
+
+        -   Observe a linha de código na área de trabalho abaixo destas instruções ([Mostre-me onde] [0]) e discuta com seu parceiro onde você acha que a forma será desenhada na grade.
+        -   Clique em <img src="https://images.code.org/9e963203e9cafd558b760730d13537ca-image-1461783998310.06.20 PM.png" width=100> para executar o programa e ver o que acontece.
+        -   Altere os números dentro do bloco e tente executar o programa novamente.
+        -   Tente colocar o retângulo próximo ao canto inferior direito da tela.
+      CSD U3 rect_2019: |-
+        # Explorar o Laboratório de Jogos
+
+        Bem-vindo ao Laboratório de Jogos, onde você pode criar animações e jogos interativos!
+
+        Você já praticou o básico de colocar formas em uma grade. No Laboratório de Jogos, você fará o mesmo com a área de exibição à esquerda.
+
+        # Faça isto
+
+        -   Observe a linha de código na área de trabalho abaixo destas instruções ([Mostre-me onde] [0]) e discuta com seu parceiro onde você acha que a forma será desenhada na grade.
+        -   Clique em <img src="https://images.code.org/9e963203e9cafd558b760730d13537ca-image-1461783998310.06.20 PM.png" width=100> para executar o programa e ver o que acontece.
+        -   Altere os números dentro do bloco e tente executar o programa novamente.
+        -   Tente colocar o retângulo próximo ao canto inferior direito da tela.
       CSD U3 sequence: |-
         <img src="https://images.code.org/30d68fb30db5b61187f104f46292e052-image-1493060980724.08.05 PM.png" style="float:right">
 
@@ -14123,6 +14173,36 @@ pt-BR:
         Escreva sua resposta na caixa abaixo, depois execute o código e veja o que acontece.
       CSD U6 Catch the Mouse_2018: Previsão Integrada
       CSD U6 Catch the Mouse_2019: Previsão Integrada
+      CSD U6 Driver pt 2: |-
+        # Limitar a curva
+
+        Você deve ter notado que era realmente difícil dirigir o carro, a menos que suas mãos estivessem se movendo devagar e com cuidado. Isso ocorre porque o número que o `roll` retorna pode ser um número realmente grande, dependendo de quanto o acelerômetro está sendo girado. Lembre-se, o \`roll 'tem um intervalo de -90 a 90.
+
+        # Faça isto
+
+        Encontre uma maneira de fazer com que o \`roll 'seja um número menor enquanto o estiver usando para dirigir o carro. Você tem todos os operadores matemáticos disponíveis para isso.
+
+        _Desafio_: Você pode impedir que o carro saia do lado da tela?
+      CSD U6 Driver pt 2_2018: |-
+        # Limitar a curva
+
+        Você deve ter notado que era realmente difícil dirigir o carro, a menos que suas mãos estivessem se movendo devagar e com cuidado. Isso ocorre porque o número que o `roll` retorna pode ser um número realmente grande, dependendo de quanto o acelerômetro está sendo girado. Lembre-se, o \`roll 'tem um intervalo de -90 a 90.
+
+        # Faça isto
+
+        Encontre uma maneira de fazer com que o \`roll 'seja um número menor enquanto o estiver usando para dirigir o carro. Você tem todos os operadores matemáticos disponíveis para isso.
+
+        _Desafio_: Você pode impedir que o carro saia do lado da tela?
+      CSD U6 Driver pt 2_2019: |-
+        # Limitar a curva
+
+        Você deve ter notado que era realmente difícil dirigir o carro, a menos que suas mãos estivessem se movendo devagar e com cuidado. Isso ocorre porque o número que o `roll` retorna pode ser um número realmente grande, dependendo de quanto o acelerômetro está sendo girado. Lembre-se, o \`roll 'tem um intervalo de -90 a 90.
+
+        # Faça isto
+
+        Encontre uma maneira de fazer com que o \`roll 'seja um número menor enquanto o estiver usando para dirigir o carro. Você tem todos os operadores matemáticos disponíveis para isso.
+
+        _Desafio_: Você pode impedir que o carro saia do lado da tela?
       CSD U6 Driver pt1: |-
         # Volante
 
@@ -14647,6 +14727,48 @@ pt-BR:
         -   Escolha um valor limite que faça com que o fundo da tela mude apenas quando for detectado um ruído alto.
 
         \_ Dica: Seu limite depende de quanto ruído ambiente há na sala e de quanto ele muda. Um limiar que funciona em uma sala silenciosa pode não funcionar em uma sala de aula mais barulhenta.\_
+      CSD U6 array piano: |-
+        # Pânico de Piano
+
+        Até agora, você acabou de usar os elementos de uma matriz. Agora, você vai mudar o que está dentro da matriz.
+
+        Nosso bom amigo, o piano está de volta, mas agora toca notas de duas matrizes: `notes`, que contém notas naturais (C, D, E, F, G, A, B) e`sharpNotes`, que contém notas afiadas (C #, D #, F #, G #, A #).
+
+        # Faça isto
+
+        A matriz `sharpNotes` possui apenas um item dentro dela no momento.
+
+        -   Fixe o arranjo para que as teclas afiadas do piano possam realmente tocar a nota certa.
+
+        _Hint: Modificar matrizes é muito mais fácil no modo de texto. Você sempre pode alternar entre o modo de bloco e de texto clicando no botão no canto superior direito da área de trabalho do código._
+      CSD U6 array piano_2018: |-
+        # Pânico de Piano
+
+        Até agora, você acabou de usar os elementos de uma matriz. Agora, você vai mudar o que está dentro da matriz.
+
+        Nosso bom amigo, o piano está de volta, mas agora toca notas de duas matrizes: `notes`, que contém notas naturais (C, D, E, F, G, A, B) e`sharpNotes`, que contém notas afiadas (C #, D #, F #, G #, A #).
+
+        # Faça isto
+
+        A matriz `sharpNotes` possui apenas um item dentro dela no momento.
+
+        -   Fixe o arranjo para que as teclas afiadas do piano possam realmente tocar a nota certa.
+
+        _Hint: Modificar matrizes é muito mais fácil no modo de texto. Você sempre pode alternar entre o modo de bloco e de texto clicando no botão no canto superior direito da área de trabalho do código._
+      CSD U6 array piano_2019: |-
+        # Pânico de Piano
+
+        Até agora, você acabou de usar os elementos de uma matriz. Agora, você vai mudar o que está dentro da matriz.
+
+        Nosso bom amigo, o piano está de volta, mas agora toca notas de duas matrizes: `notes`, que contém notas naturais (C, D, E, F, G, A, B) e`sharpNotes`, que contém notas afiadas (C #, D #, F #, G #, A #).
+
+        # Faça isto
+
+        A matriz `sharpNotes` possui apenas um item dentro dela no momento.
+
+        -   Fixe o arranjo para que as teclas afiadas do piano possam realmente tocar a nota certa.
+
+        _Hint: Modificar matrizes é muito mais fácil no modo de texto. Você sempre pode alternar entre o modo de bloco e de texto clicando no botão no canto superior direito da área de trabalho do código._
       CSD U6 arrays video: |-
         ## Perguntas a Considerar
 
@@ -15308,6 +15430,33 @@ pt-BR:
 
         -   Use a propriedade "rolar" do acelerômetro para determinar se a placa está inclinada para a esquerda ou direita.
         -   Use uma condição para alterar o texto para que o elemento "direção" seja "Esquerda" ou "Direita", dependendo da orientação do quadro.
+      CSD U6 directional leds pitch: |-
+        # Pitch
+
+        Este programa acende os LEDs superiores (0 e 9) quando você inclina a placa para frente. Se você inclinar a placa para trás, os LEDs na parte inferior (4 e 5) deverão acender.
+
+        # Faça isto
+
+        -   Use a afinação da placa para acender os LEDs 4 e 5 ao inclinar a placa para trás.
+        -   Execute seu código e teste-o algumas vezes.
+      CSD U6 directional leds pitch_2018: |-
+        # Pitch
+
+        Este programa acende os LEDs superiores (0 e 9) quando você inclina a placa para frente. Se você inclinar a placa para trás, os LEDs na parte inferior (4 e 5) deverão acender.
+
+        # Faça isto
+
+        -   Use a afinação da placa para acender os LEDs 4 e 5 ao inclinar a placa para trás.
+        -   Execute seu código e teste-o algumas vezes.
+      CSD U6 directional leds pitch_2019: |-
+        # Pitch
+
+        Este programa acende os LEDs superiores (0 e 9) quando você inclina a placa para frente. Se você inclinar a placa para trás, os LEDs na parte inferior (4 e 5) deverão acender.
+
+        # Faça isto
+
+        -   Use a afinação da placa para acender os LEDs 4 e 5 ao inclinar a placa para trás.
+        -   Execute seu código e teste-o algumas vezes.
       CSD U6 emoji race demo: |-
         # Corrida de Emoji!
 
@@ -15506,6 +15655,48 @@ pt-BR:
         -   Quais manipuladores de eventos esse aplicativo usa?
         -   Quais elementos estão sendo alterados com código?
         -   Quais propriedades estão sendo alteradas quando você clica em um botão?
+      CSD U6 for loop button array: |-
+        # Laço de repetição sobre matrizes
+
+        Uma das maneiras mais poderosas de usar um laço de repetição for é fazer um laço de repetição sobre uma matriz, executando o código em cada item da matriz. Podemos fazer isso usando a variável do contador de loop for (geralmente `i`) como o índice da sua matriz.
+
+        # Faça isto
+
+        Este programa deve percorrer os botões da matriz e fazer duas coisas em cada botão - altere a cor de fundo para vermelho e altere a altura para 50 px.
+
+        -   Adicione um segundo bloco `setProperty` dentro do loop
+        -   Mude o alvo para `botoes [i]`
+        -   Defina a propriedade "height" para 50
+
+        ![expandable](https://images.code.org/df3d514bae5c23de9e0fbdf1d7798432-image-1512431649584.png)
+      CSD U6 for loop button array_2018: |-
+        # Laço de repetição sobre matrizes
+
+        Uma das maneiras mais poderosas de usar um laço de repetição for é fazer um laço de repetição sobre uma matriz, executando o código em cada item da matriz. Podemos fazer isso usando a variável do contador de loop for (geralmente `i`) como o índice da sua matriz.
+
+        # Faça isto
+
+        Este programa deve percorrer os botões da matriz e fazer duas coisas em cada botão - altere a cor de fundo para vermelho e altere a altura para 50 px.
+
+        -   Adicione um segundo bloco `setProperty` dentro do loop
+        -   Mude o alvo para `botoes [i]`
+        -   Defina a propriedade "height" para 50
+
+        ![expandable](https://images.code.org/df3d514bae5c23de9e0fbdf1d7798432-image-1512431649584.png)
+      CSD U6 for loop button array_2019: |-
+        # Laço de repetição sobre matrizes
+
+        Uma das maneiras mais poderosas de usar um laço de repetição for é fazer um laço de repetição sobre uma matriz, executando o código em cada item da matriz. Podemos fazer isso usando a variável do contador de loop for (geralmente `i`) como o índice da sua matriz.
+
+        # Faça isto
+
+        Este programa deve percorrer os botões da matriz e fazer duas coisas em cada botão - altere a cor de fundo para vermelho e altere a altura para 50 px.
+
+        -   Adicione um segundo bloco `setProperty` dentro do loop
+        -   Mude o alvo para `botoes [i]`
+        -   Defina a propriedade "height" para 50
+
+        ![expandable](https://images.code.org/df3d514bae5c23de9e0fbdf1d7798432-image-1512431649584.png)
       CSD U6 for loop click exit: |-
         # Saber quando parar
 
@@ -16191,6 +16382,102 @@ pt-BR:
         -   Leia o código e preveja o que o programa fará, depois clique em "Executar" para testar sua previsão.
       CSD U6 interval_2018: Prever nível
       CSD U6 interval_2019: Prever nível
+      CSD U6 investigate orientation: |-
+        # Pitch and Roll
+
+        Este programa exibe o pitch and roll do quadro e também muda de cor dependendo dos valores.
+
+        # Faça isto
+
+        Faça o programa alterar as seguintes cores inclinando o quadro para o tom e o rolo corretos.
+
+        <div style="display:inline-block; background-color: skyblue; height: 30px; width:30px">&nbsp;</div> Pitch: 0 | Roll: -20
+
+        <p/>
+
+        <div style="display:inline-block; background-color: burlywood; height: 30px; width:30px">&nbsp;</div> Pitch: 30 | Roll: 0
+
+        <p/>
+
+        <div style="display:inline-block; background-color: mistyrose; height: 30px; width:30px">&nbsp;</div> Pitch: -15 | Roll: 10
+
+        <p/>
+
+        <div style="display:inline-block; background-color: yellowgreen; height: 30px; width:30px">&nbsp;</div> Pitch: 5 | Roll: -25
+
+        <p/>
+
+        <div style="display:inline-block; background-color: thistle; height: 30px; width:30px">&nbsp;</div> Pitch: 10 | Roll: 30
+
+        <p/>
+
+        Qual o caminho que você deve inclinar para obter um tom positivo?
+
+        Para que lado você deve inclinar para obter um rolo negativo?
+      CSD U6 investigate orientation_2018: |-
+        # Pitch and Roll
+
+        Este programa exibe o pitch and roll do quadro e também muda de cor dependendo dos valores.
+
+        # Faça isto
+
+        Faça o programa alterar as seguintes cores inclinando o quadro para o tom e o rolo corretos.
+
+        <div style="display:inline-block; background-color: skyblue; height: 30px; width:30px">&nbsp;</div> Pitch: 0 | Roll: -20
+
+        <p/>
+
+        <div style="display:inline-block; background-color: burlywood; height: 30px; width:30px">&nbsp;</div> Pitch: 30 | Roll: 0
+
+        <p/>
+
+        <div style="display:inline-block; background-color: mistyrose; height: 30px; width:30px">&nbsp;</div> Pitch: -15 | Roll: 10
+
+        <p/>
+
+        <div style="display:inline-block; background-color: yellowgreen; height: 30px; width:30px">&nbsp;</div> Pitch: 5 | Roll: -25
+
+        <p/>
+
+        <div style="display:inline-block; background-color: thistle; height: 30px; width:30px">&nbsp;</div> Pitch: 10 | Roll: 30
+
+        <p/>
+
+        Qual o caminho que você deve inclinar para obter um tom positivo?
+
+        Para que lado você deve inclinar para obter um rolo negativo?
+      CSD U6 investigate orientation_2019: |-
+        # Pitch and Roll
+
+        Este programa exibe o pitch and roll do quadro e também muda de cor dependendo dos valores.
+
+        # Faça isto
+
+        Faça o programa alterar as seguintes cores inclinando o quadro para o tom e o rolo corretos.
+
+        <div style="display:inline-block; background-color: skyblue; height: 30px; width:30px">&nbsp;</div> Pitch: 0 | Roll: -20
+
+        <p/>
+
+        <div style="display:inline-block; background-color: burlywood; height: 30px; width:30px">&nbsp;</div> Pitch: 30 | Roll: 0
+
+        <p/>
+
+        <div style="display:inline-block; background-color: mistyrose; height: 30px; width:30px">&nbsp;</div> Pitch: -15 | Roll: 10
+
+        <p/>
+
+        <div style="display:inline-block; background-color: yellowgreen; height: 30px; width:30px">&nbsp;</div> Pitch: 5 | Roll: -25
+
+        <p/>
+
+        <div style="display:inline-block; background-color: thistle; height: 30px; width:30px">&nbsp;</div> Pitch: 10 | Roll: 30
+
+        <p/>
+
+        Qual o caminho que você deve inclinar para obter um tom positivo?
+
+        Para que lado você deve inclinar para obter um rolo negativo?
       CSD U6 iter create notes: |-
         # Reprodutor de música
 
@@ -18617,6 +18904,39 @@ pt-BR:
 
         -   Crie uma nova matriz com as notas que você quiser. Elas podem estar em oitavas diferentes, associadas a um determinado tom, etc. Qualquer coisa que você quiser!
         -   Faça sua cigarra tocar uma nota aleatória de sua matriz quando o botão **direito** for pressionado.
+      CSDU6 piano with notes: |-
+        # Notas de Piano
+
+        Este é o mesmo piano que você viu no início da lição, mas há alguns bugs!
+
+        # Faça isto
+
+        -   Edite o código para que todas as teclas estejam usando um bloco `buzzer.note ()` para tocar a nota correspondente.
+        -   Certifique-se de que todos os valores passados para `buzzer.note ()` sejam notas e não frequências.
+
+        \_ Dica: Lembre-se de colocar aspas nas notas! por exemplo, `buzzer.note (" A4 ", 100);` \_
+      CSDU6 piano with notes_2018: |-
+        # Notas de Piano
+
+        Este é o mesmo piano que você viu no início da lição, mas há alguns bugs!
+
+        # Faça isto
+
+        -   Edite o código para que todas as teclas estejam usando um bloco `buzzer.note ()` para tocar a nota correspondente.
+        -   Certifique-se de que todos os valores passados para `buzzer.note ()` sejam notas e não frequências.
+
+        \_ Dica: Lembre-se de colocar aspas nas notas! por exemplo, `buzzer.note (" A4 ", 100);` \_
+      CSDU6 piano with notes_2019: |-
+        # Notas de Piano
+
+        Este é o mesmo piano que você viu no início da lição, mas há alguns bugs!
+
+        # Faça isto
+
+        -   Edite o código para que todas as teclas estejam usando um bloco `buzzer.note ()` para tocar a nota correspondente.
+        -   Certifique-se de que todos os valores passados para `buzzer.note ()` sejam notas e não frequências.
+
+        \_ Dica: Lembre-se de colocar aspas nas notas! por exemplo, `buzzer.note (" A4 ", 100);` \_
       CSDU6 play null notes: |-
         # Notas nulas
 
@@ -19516,7 +19836,7 @@ pt-BR:
       Dance_Party_extras_alternate_2019: |-
         # Vamos entrar em formação!
 
-        Veja esta dança que usa o [bloco blockly][0] para alterar a formação dos dançarinos de apoio ao longo da dança. Tente uma destas idéias para estendê-lo:
+        Veja esta dança que usa o <xml><block type="Dancelab_alternateMoves"><title name="GROUP">sprites</title><title name="N">2</title><title name="MOVE1">MOVES.Roll</title><title name="MOVE2">MOVES.ClapHigh</title></block></xml> para alterar a formação dos dançarinos de apoio ao longo da dança. Tente uma destas idéias para estendê-lo:
 
         -   Crie um segundo grupo de dançarinos em um layout diferente
         -   Alterar layout quando uma tecla é pressionada
@@ -19548,9 +19868,14 @@ pt-BR:
         -   Adicione alguns eventos `após o compasso`.
         -   Troque "compassos" por "segundos" e tente sincronizar suas danças dessa maneira.
       Dance_Party_extras_every_beat_2019: |-
-        # Acelere, diminua a velocidade
+        # Semínimas
 
-        Essa dança final usa o [bloco blockly][0] para controlar a rapidez com que cada dançarino se move. Tente experimentar velocidades diferentes durante pontos diferentes da música. Sinta-se à vontade para continuar mexendo nessa dança ou retornar a qualquer uma das danças anteriores para torná-las ainda mais legais.
+        A maioria das nossas danças usou compassos inteiros mas cada compasso é composto por 4 semínimas. Esta dança usa <xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml> para fazer o dançarino aplaudir a cada semínima, mas apenas nos quatro primeiros compassos.
+
+        Experimenta mudar os números nos blocos para ver como é que altera a dança.
+
+        -   Experimenta com outras durações de notas (como 0,5 para uma mínima ou 0,125 para uma colcheia)
+        -   Adiciona outros eventos.
       Dance_Party_extras_layout: |-
         # Vamos entrar em formação!
 
@@ -19562,18 +19887,18 @@ pt-BR:
       Dance_Party_extras_layout_2019: |-
         # Vamos Entrar em Formação!
 
-        Veja esta dança que usa o [bloco blockly][0] para alterar a formação dos participantes de apoio ao longo da dança. Tente uma destas idéias para estendê-lo:
+        Veja esta dança que usa o <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> para alterar a formação dos participantes de apoio ao longo da dança. Tente uma destas idéias para estendê-lo:
 
         -   Crie um segundo grupo de dançarinos em um layout diferente
         -   Altere o layout quando uma tecla é pressionada
         -   Altere uma propriedade quando os dançarinos trocam de formação
       Dance_Party_extras_mixed_2019: |-
-        # Mais botões
+        # Mais Botões
 
-        Essa dança permite controlar as propriedades dos dançarinos em tempo real enquanto eles dançam automaticamente. Tente fazer outras propriedades mudarem quando você pressiona os botões. Por exemplo:
+        Essa dança permite controlar as propriedades dos participantes em tempo real enquanto eles dançam automaticamente. Tente fazer outras propriedades mudarem quando você pressionar os botões. Por exemplo:
 
-        -   Aleatorize a tonalidade do dançarino quando você pressiona "para baixo".
-        -   Adicione um grupo de dançarinos com um layout aleatório ao pressionar "espaço".
+        -   Altere a tonalidade do dançarino para uma valor aleatório quando você pressionar "seta para baixo".
+        -   Adicione um grupo de dançarinos com um layout aleatório quando você pressionar "espaço".
       Dance_Party_extras_on_beat: |-
         # Grave, médio e agudo
 
@@ -19589,7 +19914,7 @@ pt-BR:
       Dance_Party_extras_speed_2019: |-
         # Acelere, diminua a velocidade
 
-        Essa dança final usa o [bloco blockly][0] para controlar a rapidez com que cada dançarino se move. Tente experimentar velocidades diferentes durante pontos diferentes da música. Sinta-se à vontade para continuar mexendo nessa dança ou retornar a qualquer uma das danças anteriores para torná-las ainda mais legais.
+        Essa dança final usa o <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> para controlar a rapidez com que cada dançarino se move. Tente experimentar velocidades diferentes durante pontos diferentes da música. Sinta-se à vontade para continuar mexendo nessa dança ou retornar a qualquer uma das danças anteriores para torná-las ainda mais legais.
       Dance_Party_extras_visible: |-
         # Onde eles foram?
 
