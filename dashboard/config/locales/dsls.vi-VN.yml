@@ -9,7 +9,7 @@ vi-VN:
         answers:
         - text: Bắt đầu với một hình vuông <br/> đặt một hình tam giác trên hình vuông
             <br/> đặt một tam giác bên dưới hình vuông
-        - {}
+        - correct: true
         - text: Bắt đầu với một hình vuông <br/> đặt một hình bình hành trên hình
             vuông <br/> đặt một tam giác bên phải của hình bình hành
         - text: Bắt đầu với một hình vuông <br/> đặt một tam giác bên dưới hình vuông
@@ -22,7 +22,7 @@ vi-VN:
         - text: Hiện hình ảnh nào <em>không</em> làm theo thuật toán này?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 Big Event Match 1:
@@ -59,14 +59,14 @@ vi-VN:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 Getting Loopy Multi 1:
         title: Nhiều lựa chọn
         questions:
         - text: Bạn sẽ đơn giản hóa trình tự này với vòng như thế nào?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -87,7 +87,7 @@ vi-VN:
         - text: Chương trình nào làm nên hình ảnh này?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 Maze Match 2:
         title: Nối Mê Cung
@@ -107,7 +107,7 @@ vi-VN:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 Relay Programming Multi 1:
@@ -117,7 +117,7 @@ vi-VN:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       2-3 Relay Programming Multi 2:
         title: Nhiều lựa chọn
         questions:
@@ -125,13 +125,13 @@ vi-VN:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       2-3 artist debug multi 1:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 artist functions multi 1:
@@ -139,7 +139,7 @@ vi-VN:
         questions:
         - text: Chọn khối lệnh đúng để vẽ hình này sử dụng nhữ hàm đã cho
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 artist loops match 1:
@@ -161,7 +161,7 @@ vi-VN:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 artist loops multi 2:
         title: 'Nghệ sĩ - Vòng lặp: Chọn đáp án đúng - Phần 1'
@@ -171,7 +171,7 @@ vi-VN:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       2-3 artist match 1:
         title: Nối vói nghệ sĩ phù hợp
         content1: Nối hình với khối phù hợp.
@@ -191,14 +191,14 @@ vi-VN:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 bee conditionals multi 3:
         questions:
         - text: Chọn các khối tốt nhất.
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 bee loops multi 1:
@@ -206,7 +206,7 @@ vi-VN:
         questions:
         - text: Khối lệnh nào sẽ thu thập hết mật ong?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -227,7 +227,7 @@ vi-VN:
         - text: Khối lệnh nào đúng?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 Algorithms Match 1:
@@ -253,6 +253,7 @@ vi-VN:
         - text: Nướng bánh qui
         - text: Mua sắm theo danh sách
         - text: Quả chuối
+          correct: true
       4-5 Computational Thinking Match 1:
         title: Phù hợp với/ khớp với / Chính xác với
         content1: Mỗi chiếc xe đã bị phân huỷ thành từng miếng nhỏ. Khớp mỗi xe với
@@ -275,6 +276,7 @@ vi-VN:
         answers:
         - text: Bang Seattle _____ a _____ _____.
         - text: _____ là một thành phố_____.
+          correct: true
         - text: _____ là một _____ _____.
         - text: Eugene là một thành phố _____.
       4-5 Crowdsourcing Multi 1:
@@ -283,13 +285,14 @@ vi-VN:
         - text: Ảnh nào sau đây đặc trưng cho crowdsourcing?
         answers:
         - {}
-        - {}
+        - correct: true
       4-5 Crowdsourcing Multi 2:
         title: Nhiều lựa chọn
         questions:
         - text: Hoạt động nào có thể dễ dàng áp dụng crowdsourcing nhất?
         answers:
         - text: Dọn phòng
+          correct: true
         - text: Thưởng thức bữa tráng miệng
         - text: Chải tóc
         - text: Rửa mặt
@@ -301,6 +304,7 @@ vi-VN:
         answers:
         - text: Sinh nhật của bạn
         - text: Món ăn yêu thích của bạn
+          correct: true
         - text: Địa chỉ của bạn
         - text: Số thẻ tín dụng của quý phụ huynh
       4-5 Internet Multi 1:
@@ -312,7 +316,7 @@ vi-VN:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       4-5 Internet Multi 2:
         title: Nhiều lựa chọn
         questions:
@@ -320,7 +324,7 @@ vi-VN:
             nào bạn đang dùng?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 Songwriting Multi 1:
@@ -332,6 +336,7 @@ vi-VN:
         - text: Lou, Lou, chuyển qua Lou của tôi nào, <br/>Lou, Lou, chuyển qua Lou
             của tôi, <br/>Lou, Lou, chuyển qua Lou của tôi, <br/>Chuyển qua Lou của
             tôi, người yêu .
+          correct: true
         - {}
         - {}
       4-5 Suncatchers Match 1:
@@ -355,7 +360,7 @@ vi-VN:
             xác như ở Chương trình 1?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       4-5 artist loops multi 1:
         title: 'Nghệ sĩ - Vòng lặp: Chọn đáp án đúng - Phần 1'
@@ -363,7 +368,7 @@ vi-VN:
         - text: Khối nào sẽ vẽ đúng ra hình này?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 artist multi 1:
@@ -372,7 +377,7 @@ vi-VN:
         - text: Khối nào vẽ một hình chữ nhật có chu vi 100 pixels?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 artist multi 2:
@@ -382,7 +387,7 @@ vi-VN:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       4-5 bee conditionals multi 1:
         title: 'Ong - Cấu trúc rẽ nhánh: Chọn câu trả lời đúng'
@@ -391,7 +396,7 @@ vi-VN:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       4-5 bee debug multi 1:
         title: 'Ong - Gỡ Lỗi: Chọn đáp án đúng'
@@ -399,7 +404,7 @@ vi-VN:
         - text: Hàm nào sẽ hoạt động?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 bee loops multi 1:
@@ -407,7 +412,7 @@ vi-VN:
         questions:
         - text: Khối nào sẽ giải quyết các câu đố?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -416,7 +421,7 @@ vi-VN:
         questions:
         - text: Những khối nào giải quyết câu đố này?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -437,7 +442,7 @@ vi-VN:
         questions:
         - text: Những khối nào giải quyết câu đố này?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -453,19 +458,19 @@ vi-VN:
       CSD Header Size MC:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U2 Design Project:
@@ -608,7 +613,7 @@ vi-VN:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -617,7 +622,7 @@ vi-VN:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -626,7 +631,7 @@ vi-VN:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -640,19 +645,19 @@ vi-VN:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018_2019:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Keypress Matching:
         questions:
@@ -687,7 +692,7 @@ vi-VN:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Sprite Movement Predict Multi_2018:
         questions:
@@ -695,7 +700,7 @@ vi-VN:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019:
         questions:
@@ -703,14 +708,14 @@ vi-VN:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Sprites intro predict multi:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U3 Sprites intro predict multi_2018:
@@ -718,7 +723,7 @@ vi-VN:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
@@ -726,7 +731,7 @@ vi-VN:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U3 combining rep:
@@ -839,7 +844,7 @@ vi-VN:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       CSD U6 array multi_2018:
         questions:
         - {}
@@ -847,7 +852,7 @@ vi-VN:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       CSD U6 array multi_2018_2019:
         questions:
         - {}
@@ -855,7 +860,7 @@ vi-VN:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       CSD U6 final intro:
         content1: mô tả ở đây
       CSD U6 final intro_2018:
@@ -868,7 +873,7 @@ vi-VN:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U6 setProperty predict multi_2018:
         questions:
@@ -876,8 +881,35 @@ vi-VN:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
+      Dance_Party_extras_intro:
+        markdown: "\"# Tiếp tục khiêu vũ!\n \nTrong phần 2, bạn sẽ tạo ra dự án của
+          riêng mình. Không còn những câu đố - thay vào đó là nhiều dự án thể hiện
+          bằng nhiều cách khác nhau để cho ra những bữa tiệc khiêu vũ phức tạp hơn.
+          \n\nBạn có thể thực hiện cấp độ này theo bất kỳ thứ tự nào. Khám phá xung
+          quanh để xem công việc được thực hiện ra sao ở cấp độ trước đó, hoặc kết
+          hợp ý tưởng của các dự án. Hãy thử tất cả, chọn ra mục bạn yêu thích và
+          dành thời gian bổ sung thêm vào dự án để biến nó thành của riêng bạn.\n\n<a
+          class=\"\"btn btn-large btn-primary next-stage submitButton pull-right\"\">Tiếp
+          tục</a> \n\n<div class=\"\"clearfix\"\"></div> \n\n<div style=\"\"float:
+          left; margin: 10px\"\">\n <a href=\"\"2\"\">\n <h2> \nLặp đi lặp lại \n</h2>
+          \n\n<img src=\"\"https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif\"\"></a>
+          \n\n</div> \n\n<div style=\"\"float: left; margin: 10px\"\"> \n<a href=\"\"3\"\">\n
+          <h2>\n Thêm nút \n</h2>\n\n <img src=\"\"https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif\"\"></a>
+          \n\n</div>\n\n <div style=\"\"float: left; margin: 10px\"\">\n <a href=\"\"4\"\">\n
+          <h2> \nVào đội hình \n</h2> \n\n<img src=\"\"https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif\"\"></a>\n\n
+          </div>\n\n <div style=\"\"float: left; margin: 10px\"\">\n <a href=\"\"5\"\">
+          \n<h2> \nHọ sẽ đi đâu? \n</h2> \n\n<img src=\"\"https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif\"\"></a>
+          \n\n</div> \n\n<div style=\"\"float: left; margin: 10px\"\">\n <a href=\"\"6\"\">\n
+          <h2>\n Nhóm nhảy \n</h2> \n\n<img src=\"\"https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif\"\"></a>
+          \n\n</div> \n\n<div style=\"\"float: left; margin: 10px\"\"> \n<a href=\"\"7\"\">\n
+          <h2> \nNốt đen\n </h2> \n\n<img src=\"\"https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif\"\"></a>
+          \n\n</div> \n\n<div style=\"\"float: left; margin: 10px\"\">\n <a href=\"\"8\"\">\n
+          <h2>\n Âm trầm, Âm trung, Âm cao \n</h2> \n\n<img src=\"\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\"\"></a>
+          \n\n</div>\n\n <div style=\"\"float: left; margin: 10px\"\"> \n<a href=\"\"9\"\">
+          \n<h2>\n Nhanh lên, Chậm lại \n</h2>\n\n <img src=\"\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"\"></a>\n\n
+          </div>\"\n"
       Internet Simulator Setup:
         title: Thiết lập trình mô phỏng internet
         content1: mô tả ở đây
@@ -892,7 +924,7 @@ vi-VN:
         - text: Những khối nào giải quyết câu đố này?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Artist 1 Multi 2:
@@ -900,7 +932,7 @@ vi-VN:
         questions:
         - text: Những khối nào vẽ ra hình vuông?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -923,7 +955,7 @@ vi-VN:
         - text: Có bao nhiêu mật hoa?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Bee 1 Multi 2:
@@ -934,7 +966,7 @@ vi-VN:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Bee Loops Match 1:
         title: Phù hợp với/ khớp với / Chính xác với
         content2: Nối các khối
@@ -967,13 +999,13 @@ vi-VN:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Getting Loopy Multi 1:
         title: Nhiều lựa chọn
         questions:
         - text: Bạn sẽ đơn giản hóa trình tự này với vòng như thế nào?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Happy Maps Multi 1:
@@ -982,7 +1014,7 @@ vi-VN:
         - text: Mũi tên nào đưa Flurb tới kho báu?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Keep it Private Multi 1:
@@ -990,7 +1022,7 @@ vi-VN:
         questions:
         - text: Thông tin nào bạn <strong>không nên</strong> chia sẻ trực tuyến?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Maze Debugging Multi 1:
@@ -998,7 +1030,7 @@ vi-VN:
         questions:
         - text: Khối nào nên chọn cuối cùng?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1007,7 +1039,7 @@ vi-VN:
         questions:
         - text: Khối lặp lại nào là giống nhau?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Maze Loops Multi 2:
@@ -1017,7 +1049,7 @@ vi-VN:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Maze Match 1:
         title: Phù hợp với/ khớp với / Chính xác với
         content2: Nối câu đố với khối lệnh phù hợp
@@ -1039,7 +1071,7 @@ vi-VN:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       K-1 Move It Multi 1:
         title: Nhiều lựa chọn
@@ -1047,7 +1079,7 @@ vi-VN:
         - text: Thuật toàn nào đưa Flurb tới những bông hoa?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Plant a Seed Multi 1:
@@ -1057,14 +1089,14 @@ vi-VN:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Plant a Seed Multi 2:
         title: Nhiều lựa chọn
         questions:
         - text: Bước mà nên điền vào chỗ trống cho thuật toán này?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       K-1 Word Search Multi 1:
         title: Nhiều lựa chọn
@@ -1072,7 +1104,7 @@ vi-VN:
         - text: Khối nào có nghĩa "DI CHUYỂN"?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       K-1 Word Search Multi 3:
         title: Nhiều lựa chọn
@@ -1081,6 +1113,7 @@ vi-VN:
         answers:
         - text: THIẾT LẬP
         - text: QUẢNG TRƯỜNG
+          correct: true
         - text: PHÍA NAM
       Multi-Screen Apps:
         title: tiêu đề
@@ -1104,7 +1137,7 @@ vi-VN:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - feedback: Không đúng
       behaviors 4 predict:
@@ -1112,7 +1145,7 @@ vi-VN:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - feedback: Không đúng
       courseC_multi_artist_prog6_predict1:
@@ -1121,7 +1154,7 @@ vi-VN:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseC_multi_artist_prog6_predict1_2018:
         questions:
@@ -1129,7 +1162,7 @@ vi-VN:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
         questions:
@@ -1137,38 +1170,41 @@ vi-VN:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseC_multi_harvester_loops11_predict1:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
       courseC_multi_harvester_loops11_predict1_2018:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
       courseC_multi_maze_debugging8_predict1:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_debugging8_predict1_2018:
@@ -1176,7 +1212,7 @@ vi-VN:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
@@ -1184,7 +1220,7 @@ vi-VN:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_programming8_predict1:
@@ -1192,7 +1228,7 @@ vi-VN:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_programming8_predict1_2018:
@@ -1200,7 +1236,7 @@ vi-VN:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
@@ -1208,7 +1244,7 @@ vi-VN:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_starWars_predict1:
@@ -1217,7 +1253,7 @@ vi-VN:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - text: Tôi không biết
       courseC_multi_starWars_predict1_2018:
         questions:
@@ -1225,7 +1261,7 @@ vi-VN:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - text: Tôi không biết
       courseC_multi_starWars_predict1_2018_2019:
         questions:
@@ -1233,14 +1269,14 @@ vi-VN:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - text: Tôi không biết
       courseC_multi_starWars_predict2:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_starWars_predict2_2018:
@@ -1248,7 +1284,7 @@ vi-VN:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_starWars_predict2_2018_2019:
@@ -1256,7 +1292,7 @@ vi-VN:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_external_binary1:
@@ -1273,6 +1309,7 @@ vi-VN:
         - text: B
         - text: C
         - text: D
+          correct: true
       courseD_multi_artist_binary8_predict1_2018:
         questions:
         - {}
@@ -1281,6 +1318,7 @@ vi-VN:
         - text: B
         - text: C
         - text: D
+          correct: true
       courseD_multi_artist_binary8_predict1_2018_2019:
         questions:
         - {}
@@ -1289,11 +1327,13 @@ vi-VN:
         - text: B
         - text: C
         - text: D
+          correct: true
       courseD_multi_artist_nestedLoops9_predict1:
         questions:
         - {}
         answers:
         - text: A
+          correct: true
         - text: B
         - text: C
         - {}
@@ -1302,6 +1342,7 @@ vi-VN:
         - {}
         answers:
         - text: A
+          correct: true
         - text: B
         - text: C
         - {}
@@ -1310,6 +1351,7 @@ vi-VN:
         - {}
         answers:
         - text: A
+          correct: true
         - text: B
         - text: C
         - {}
@@ -1318,7 +1360,7 @@ vi-VN:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_bee_conditionals1_predict1_2018:
@@ -1326,7 +1368,7 @@ vi-VN:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
@@ -1334,14 +1376,14 @@ vi-VN:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_bee_conditionals7_predict2:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1349,7 +1391,7 @@ vi-VN:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1357,7 +1399,7 @@ vi-VN:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1367,7 +1409,7 @@ vi-VN:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
         questions:
@@ -1375,7 +1417,7 @@ vi-VN:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         questions:
@@ -1383,31 +1425,34 @@ vi-VN:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_bee_nestedLoops9_predict2:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
       courseD_multi_collector_debugging10_predict1:
         questions:
@@ -1415,7 +1460,7 @@ vi-VN:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_condLoops9_predict1:
         questions:
@@ -1423,7 +1468,7 @@ vi-VN:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
         questions:
@@ -1431,7 +1476,7 @@ vi-VN:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         questions:
@@ -1439,14 +1484,14 @@ vi-VN:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_ramp13:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_farmer_while10_predict2:
@@ -1454,7 +1499,7 @@ vi-VN:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_farmer_while10_predict2_2018:
@@ -1462,7 +1507,7 @@ vi-VN:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
@@ -1470,7 +1515,7 @@ vi-VN:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_farmer_while4_predict1:
@@ -1479,7 +1524,7 @@ vi-VN:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_while4_predict1_2018:
         questions:
@@ -1487,7 +1532,7 @@ vi-VN:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
         questions:
@@ -1495,13 +1540,13 @@ vi-VN:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_maze_until10_predict2:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1509,7 +1554,7 @@ vi-VN:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1517,7 +1562,7 @@ vi-VN:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1526,7 +1571,7 @@ vi-VN:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_maze_until2_predict1_2018:
@@ -1534,7 +1579,7 @@ vi-VN:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
@@ -1542,7 +1587,7 @@ vi-VN:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_scrat_predict1:
@@ -1550,14 +1595,14 @@ vi-VN:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseE_multi_bee_functions_predict1:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1568,14 +1613,14 @@ vi-VN:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseE_multi_farmer_functions11_predict_2018:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
         questions:
@@ -1583,7 +1628,7 @@ vi-VN:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseE_prediction_artistFunction1:
         questions:
@@ -1592,7 +1637,7 @@ vi-VN:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseE_prediction_artistFunction1_2018:
         questions:
         - {}
@@ -1600,7 +1645,7 @@ vi-VN:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseE_prediction_artistFunction1_2018_2019:
         questions:
         - {}
@@ -1608,13 +1653,13 @@ vi-VN:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseF_bee_variables_8a_2018:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_bee_variables_8a_2018_2019:
@@ -1622,7 +1667,7 @@ vi-VN:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_artist_for10_predict1:
@@ -1631,7 +1676,7 @@ vi-VN:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseF_multi_artist_for10_predict1_2018:
         questions:
@@ -1639,7 +1684,7 @@ vi-VN:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
         questions:
@@ -1647,13 +1692,13 @@ vi-VN:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseF_multi_artist_fwp2_predict1:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1661,7 +1706,7 @@ vi-VN:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1669,7 +1714,7 @@ vi-VN:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1677,7 +1722,7 @@ vi-VN:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1686,14 +1731,14 @@ vi-VN:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_bee_conditionals7_predict2:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1702,7 +1747,7 @@ vi-VN:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_bee_for3_predict1_2018:
@@ -1710,7 +1755,7 @@ vi-VN:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_bee_for3_predict1_2018_2019:
@@ -1718,7 +1763,7 @@ vi-VN:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_bee_fwp9_predict1:
@@ -1726,14 +1771,14 @@ vi-VN:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_playlab_variables4c_predictive1:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1742,7 +1787,7 @@ vi-VN:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       coursee_prediction_artistfunction2_2018:
@@ -1750,7 +1795,7 @@ vi-VN:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       coursee_prediction_artistfunction2_2018_2019:
@@ -1758,7 +1803,7 @@ vi-VN:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       grade2_multi_collector_A_predict1:
@@ -1766,7 +1811,7 @@ vi-VN:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       grade2_multi_collector_A_predict1_2018:
@@ -1774,7 +1819,7 @@ vi-VN:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
@@ -1782,7 +1827,7 @@ vi-VN:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       gradek1_activity_beNice:
