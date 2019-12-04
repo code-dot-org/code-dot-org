@@ -5078,11 +5078,13 @@ tr-TR:
       Dance_Party_11b: Şimdi dans zamanı! Sol ok tuşuna bastığınızda Kedi dab dansı
         yapar. Sağ ok tuşuna bastığınızda Robota "drop" figürü yaptırırsınız.
       Dance_Party_12: Havaya girin! Kendi dansınızı yaratın ve arkadaşlarınızla paylaşın.
-      Dance_Party_extras_alternate_2019: "# Formasyona girelim! Yedek dansçıların
-        dans boyunca formasyonunu değiştirmek için [blockly block][0] bloğunu kullanan
-        bu dansı izleyin. Genişletmek için bu fikirlerden birini deneyin: - Farklı
-        bir düzende ikinci bir dansçı grubu oluşturun - Bir tuşa basıldığında düzeni
-        değiştirin - Dansçılar formasyon değiştirdiğinde özelliği değiştirin"
+      Dance_Party_extras_alternate_2019: '# Formasyona girelim! Yedek dansçıların
+        dans boyunca formasyonunu değiştirmek için <xml><block type="Dancelab_alternateMoves"><title
+        name="GROUP">sprites</title><title name="N">2</title><title name="MOVE1">MOVES.Roll</title><title
+        name="MOVE2">MOVES.ClapHigh</title></block></xml> bloğunu kullanan bu dansı
+        izleyin. Genişletmek için bu fikirlerden birini deneyin: - Farklı bir düzende
+        ikinci bir dansçı grubu oluşturun - Bir tuşa basıldığında düzeni değiştirin
+        - Dansçılar formasyon değiştirdiğinde özelliği değiştirin'
       Dance_Party_extras_battle: |-
         # Dans Ekipleri
 
@@ -5109,11 +5111,15 @@ tr-TR:
         -   Diğer nota uzunluklarıyla denemeler yapın (örneğin yarım nota için 0,5 veya 1/8’lik nota için 0,125 değeri girin).
         -   Birkaç `ölçüden sonra` etkinliği ekleyin.
         -   "Ölçüler" değerini "saniyeler" ile değiştirerek danslarınızı böyle zamanlamayı deneyin.
-      Dance_Party_extras_every_beat_2019: "# Hızlandırın, Yavaşlatın Bu final dansı,
-        her dansçının ne kadar hızlı hareket ettiğini kontrol etmek için [blockly
-        block][0] bloğunu kullanır. Şarkının farklı noktaları sırasında farklı hızlarla
-        deneme yapmayı deneyin. Bu dansı takip etmeye devam etmekten çekinmeyin ya
-        da daha güzel olmaları için önceki danslardan birine geri dönün."
+      Dance_Party_extras_every_beat_2019: '# Hızlandırın, Yavaşlatın Bu final dansı,
+        her dansçının ne kadar hızlı hareket ettiğini kontrol etmek için <xml><block
+        type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value
+        name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value
+        name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement
+        name="DO0"></statement></block></xml> bloğunu kullanır. Şarkının farklı noktaları
+        sırasında farklı hızlarla deneme yapmayı deneyin. Bu dansı takip etmeye devam
+        etmekten çekinmeyin ya da daha güzel olmaları için önceki danslardan birine
+        geri dönün.'
       Dance_Party_extras_layout: |-
         # Şimdi Giriş Düzeni!
 
@@ -5134,11 +5140,12 @@ tr-TR:
         # Hızlandır, Yavaşlat
 
         Bu son dans dansçıların hızını belirlemek için `hız ayarla` bloğunu kullanır. Şarkının farklı yerlerinde farklı hızlarla denemeler yapın. Bu dansta özgürce denemeler yapın veya daha önceki danslara dönerek onları daha da güzelleştirin.
-      Dance_Party_extras_speed_2019: "# Hızlandırın, Yavaşlatın Bu final dansı, her
-        dansçının ne kadar hızlı hareket ettiğini kontrol etmek için [blockly block][0]
-        bloğunu kullanır. Şarkının farklı noktaları sırasında farklı hızlarla deneme
-        yapmayı deneyin. Bu dansı takip etmeye devam etmekten çekinmeyin ya da daha
-        güzel olmaları için önceki danslardan birine geri dönün."
+      Dance_Party_extras_speed_2019: '# Hızlandırın, Yavaşlatın Bu final dansı, her
+        dansçının ne kadar hızlı hareket ettiğini kontrol etmek için <xml><block type="Dancelab_setDanceSpeedEach"><title
+        name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> bloğunu
+        kullanır. Şarkının farklı noktaları sırasında farklı hızlarla deneme yapmayı
+        deneyin. Bu dansı takip etmeye devam etmekten çekinmeyin ya da daha güzel
+        olmaları için önceki danslardan birine geri dönün.'
       Dance_Party_extras_visible: |-
         # Nereye gittiler?
 
@@ -5147,14 +5154,12 @@ tr-TR:
         -   Başka bir dansçı grubu ekleyin
         -   Ok tuşlarını kullanarak dansçıları görünür yapın ve gizleyin
         -   Tüm dansçıları gizleyin ve heyecan veren bir arka plan efektine geçiş yapın
-      Dance_Party_extras_visible_2019: |-
-        # Nereye gittiler?
-
-        Bu dans iki farklı dansçı grubunu görünür yapar ve gizler. Deneyin ve sonra kendi yaratıcılığınızı ekleyin.
-
-        -   Başka bir dansçı grubu ekleyin
-        -   Ok tuşlarını kullanarak dansçıları görünür yapın ve gizleyin
-        -   Tüm dansçıları gizleyin ve heyecan veren bir arka plan efektine geçiş yapın
+      Dance_Party_extras_visible_2019: "# Çeyrek Notlar Danslarımızın çoğu tüm ölçüleri
+        kullanmıştır, ancak her ölçüt 4 çeyrek notundan oluşmaktadır. Bu dans, 5.
+        ölçütten sonra her çeyrek notunda dansçının alkışlaması için [blockly block][0]
+        kullanır. Dansı nasıl değiştirdiğini görmek için bloktaki sayıları değiştirmeyi
+        deneyin. - Diğer not süreleri ile deneme (yarım not için 0,5 veya sekizinci
+        not için 0,125 gibi). - Başka etkinlikler de ekleyin."
       Function intro Ryan: "Çalışma alanında `köprü inşa et` adlı bir **işlev** var.
         \ Nehrin karşısına geçmek için gereken tüm kodlar orada bulunuyor! \\\r\n
         \\\r\nKüçük yeşil bloğu çalışma alanına iki kez tutturarak yolu tamir et ve
