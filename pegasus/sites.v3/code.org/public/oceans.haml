@@ -75,22 +75,21 @@ theme: responsive
   }
 
 %div
-  .tutorial-promo-container
-    = view :oceans_promo
-    .tutorial-details.desktop-feature
-      %h1.tutorial-heading= hoc_s(:oceans_landing_title)
-      %p.tutorial-description= hoc_s(:oceans_landing_description)
-      %p.tutorial-description= hoc_s(:cs_for_good_hashtag)
-      %p.tutorial-specs= hoc_s(:oceans_landing_specs)
-      %a{href: CDO.studio_url('/s/oceans/reset'), target: '_self'}
+  %a{href: CDO.studio_url('/s/oceans/reset'), target: '_self', style: "font-family: 'Gotham 4r', sans-serif; text-decoration: none"}
+    .tutorial-promo-container
+      = view :oceans_promo
+      .tutorial-details.desktop-feature
+        %h1.tutorial-heading= hoc_s(:oceans_landing_title)
+        %p.tutorial-description= hoc_s(:oceans_landing_description)
+        %p.tutorial-description= hoc_s(:cs_for_good_hashtag)
+        %p.tutorial-specs= hoc_s(:oceans_landing_specs)
         %button.tutorial-button=I18n.t(:try_now)
 
-    .tutorial-details-mobile.mobile-feature
-      %h1.tutorial-heading.tutorial-heading-mobile= hoc_s(:oceans_landing_title)
-      %p.tutorial-description= hoc_s(:oceans_landing_description)
-      %p.tutorial-description= hoc_s(:cs_for_good_hashtag)
-      %p.tutorial-specs= hoc_s(:oceans_landing_specs)
-      %a{href: CDO.studio_url('/s/oceans/reset'), target: '_self'}
+      .tutorial-details-mobile.mobile-feature
+        %h1.tutorial-heading.tutorial-heading-mobile= hoc_s(:oceans_landing_title)
+        %p.tutorial-description= hoc_s(:oceans_landing_description)
+        %p.tutorial-description= hoc_s(:cs_for_good_hashtag)
+        %p.tutorial-specs= hoc_s(:oceans_landing_specs)
         %button.tutorial-button=I18n.t(:try_now)
 
   %div{style: "clear: both; margin-top: 10px;"}
