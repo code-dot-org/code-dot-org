@@ -49,6 +49,7 @@
   ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small and Prickly'
   ai_video_title_ethics_of_ai: 'Ethics of AI'
   ai_video_title_ml_human_bias: 'Machine Learning and Human Bias'
+  ai_video_title_seeing_ai: 'Seeing AI: Making the visual world more accessible'
 
   activity: 'Activity'
   name: 'Name'
@@ -72,10 +73,12 @@
   ai_audience_hs: 'High school'
 
   ai_activity_header: 'Activities Powered by AI and ML'
-  ai_activity_teachable: 'Teachable Machine'
-  ai_activity_teachable_desc: 'Train a computer to recognize your own images, sounds, and poses.'
+  ai_activity_seeing_ai: 'Seeing AI'
+  ai_activity_seeing_ai_desc: 'A free app that narrates the world around you in a variety of languages.'
   ai_activity_quick_draw: 'Quick, Draw!'
   ai_activity_quick_draw_desc: 'Can a neural network learn to recognize doodling?'
+  ai_activity_teachable: 'Teachable Machine'
+  ai_activity_teachable_desc: 'Train a computer to recognize your own images, sounds, and poses.'
   ai_activity_experiments: 'AI Experiments with Google'
   ai_activity_experiments_desc: 'Start exploring machine learning through pictures, drawings, language, music, and more.'
   ai_activity_zooniverse: 'Zooniverse - Snapshot Mountain Zebra'
