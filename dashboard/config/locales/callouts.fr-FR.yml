@@ -95,6 +95,8 @@ fr-FR:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Nouveau bloc !
         dance_callout_11_b: Nouveau bloc !
+      CourseD_Dance_Party_11_5:
+        dance_party_11_5_groups: Regardez ici les blocs « tous les canards »
       Dance_2019_01:
         dance_callout_01: Ajoutez ce bloc à votre programme!
       Dance_2019_02:
@@ -122,6 +124,8 @@ fr-FR:
       Dance_Party_11:
         dance_callout_11_a: Nouveau bloc !
         dance_callout_11_b: Nouveau bloc !
+      Dance_Party_11_5:
+        dance_party_11_5_groups: Regardez ici les blocs « tous les canards »
       Function intro Ryan:
         Function_intro_Ryan_1: Cette petite instruction indique à l'ordinateur d'exécuter
           un GROS morceau de code avec le même nom dans l'espace de travail.

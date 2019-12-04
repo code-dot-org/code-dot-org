@@ -3,6 +3,7 @@ fr:
   data:
     blocks:
       Dancelab_alternateMoves:
+        text: "{GROUP} changez toutes les {N} mesures \nentre {MOVE1} and {MOVE2}"
         options:
           GROUP:
             sprites: tout
@@ -16,6 +17,7 @@ fr:
             '"PINEAPPLE"': tous les ananas
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
+            '"SLOTH"': paresseux
             '"UNICORN"': Licornes
           MOVE1:
             MOVES.Roll: Roulis de caisse
@@ -69,6 +71,7 @@ fr:
             '"PINEAPPLE"': tous les ananas
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
+            '"SLOTH"': paresseux
             '"UNICORN"': Toutes les licornes
           MOVE:
             '"next"': "(Suivant)"
@@ -120,6 +123,7 @@ fr:
             '"x"': position horizontale
             '"y"': position verticale
       Dancelab_changePropEachBy:
+        text: changez {GROUP} {PROPERTY} en {VAL}
         options:
           GROUP:
             sprites: tout
@@ -133,6 +137,7 @@ fr:
             '"PINEAPPLE"': tous les ananas
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
+            '"SLOTH"': paresseux
             '"UNICORN"': Licornes
           PROPERTY:
             '"scale"': taille
@@ -156,6 +161,7 @@ fr:
             '"PINEAPPLE"': tous les ananas
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
+            '"SLOTH"': paresseux
             '"UNICORN"': Licornes
           MOVE:
             '"rand"': "(Aléatoire)"
@@ -216,6 +222,8 @@ fr:
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_everyMeasuresRange:
+        text: 'répéter toutes les {N} mesures après {START} '
       Dancelab_everySeconds:
         text: 'chaque {N} {UNIT} '
         options:
@@ -302,6 +310,7 @@ fr:
             "{x: 300, y: 300}": vers le haut à droite
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aléatoire
       Dancelab_jumpToEach:
+        text: sauter {GROUP} à {LOCATION}
         options:
           GROUP:
             sprites: tout
@@ -315,6 +324,7 @@ fr:
             '"PINEAPPLE"': tous les ananas
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
+            '"SLOTH"': paresseux
             '"UNICORN"': Licornes
           LOCATION:
             "{x: 200, y: 100}": vers le haut
@@ -342,6 +352,7 @@ fr:
             '"PINEAPPLE"': tous les ananas
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
+            '"SLOTH"': paresseux
             '"UNICORN"': Licornes
           FORMAT:
             '"border"': frontière
@@ -354,7 +365,7 @@ fr:
             '"plus"': plus
             '"random"': aléatoire
       Dancelab_makeAnonymousDanceSprite:
-        text: fais un nouveau {COSTUME} à {LOCATION}
+        text: faire un nouveau {COSTUME} à {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': extraterrestre
@@ -367,6 +378,7 @@ fr:
             '"PINEAPPLE"': Ananas
             '"ROBOT"': robot
             '"SHARK"': Requin
+            '"SLOTH"': paresseux
             '"UNICORN"': licorne
           LOCATION:
             "{x: 200, y: 100}": vers le haut
@@ -395,6 +407,7 @@ fr:
             '"PINEAPPLE"': Ananas
             '"ROBOT"': Robot
             '"SHARK"': Requin
+            '"SLOTH"': paresseux
             '"UNICORN"': Licorne
           LOCATION:
             "{x: 200, y: 100}": vers le haut
@@ -443,14 +456,20 @@ fr:
             '"PINEAPPLE"': Ananas
             '"ROBOT"': Robots
             '"SHARK"': Requins
+            '"SLOTH"': paresseux
             '"UNICORN"': Licornes
           LAYOUT:
             '"border"': frontière
             '"inner"': carré intérieur
+            '"diamond"': diamant
             '"circle"': cercle
             '"grid"': grille
+            '"top"': rangée du haut
             '"row"': ligne
+            '"bottom"': rangée du bas
+            '"left"': colonne de gauche
             '"column"': colonne
+            '"right"': colonne de droite
             '"x"': entrecroisement
             '"plus"': plus
             '"random"': aléatoire
@@ -507,22 +526,29 @@ fr:
             '"none"': Aucun
             '"rand"': "(Aléatoire)"
             '"circles"': Tunnel
+            '"quads"': Angles
             '"color_cycle"': Couleurs
             '"diamonds"': Diamants
             '"disco_ball"': Boule disco
             '"fireworks"': Feux d'artifice
+            '"flowers"': Fleurs
+            '"growing_stars"': Étoiles montantes
             '"swirl"': Hypno
             '"kaleidoscope"': Kaléidoscope
             '"lasers"': Piste de danse laser
             '"splatter"': Éclaboussures de peinture
             '"rainbow"': Arc-en-ciel
+            '"ripples_random"': Ondulations aléatoires
+            '"ripples"': Ondulations
             '"snowflakes"': Neige
             '"text"': Titre de la chanson
+            '"squiggles"': Gribouillis
             '"galaxy"': Espace
             '"sparkles"': Éclats
             '"spiral"': Spirale
             '"disco"': Carrés
             '"stars"': Étoiles
+            '"music_wave"': Vagues
           PALETTE:
             '"rave"': Noir et blanc
             '"cool"': Blues
@@ -557,6 +583,7 @@ fr:
             '"PINEAPPLE"': tous les ananas
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
+            '"SLOTH"': paresseux
             '"UNICORN"': Licornes
           SPEED:
             '1': normal
@@ -589,9 +616,12 @@ fr:
             '"none"': Aucun
             '"rand"': "(Aléatoire)"
             '"bubbles"': Bulles
+            '"hearts_colorful"': Cœurs colorés
             '"confetti"': Confettis
+            '"emojis"': Emojis
             '"hearts_red"': Cœurs
             '"music_notes"': Notes de musique
+            '"paint_drip"': Gouttes de peinture
             '"pineapples"': Ananas
             '"pizzas"': Pizzas
             '"smiling_poop"': Crotte
@@ -600,6 +630,7 @@ fr:
             '"smile_face"': Smileys
             '"spotlight"': Projecteur
             '"color_lights"': Éclairage de scène
+            '"exploding_stars"': Starburst
             '"raining_tacos"': Tacos
       Dancelab_setProp:
         text: 'définir {SPRITE} {PROPERTY} à {VAL} '
@@ -626,6 +657,7 @@ fr:
             '"PINEAPPLE"': tous les ananas
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
+            '"SLOTH"': paresseux
             '"UNICORN"': Licornes
           PROPERTY:
             '"scale"': taille
@@ -647,6 +679,7 @@ fr:
             '"y"': position verticale
             '"tint"': nuance
       Dancelab_setPropRandomEach:
+        text: randomiser {GROUP} {PROPERTY}
         options:
           GROUP:
             sprites: tout
@@ -660,6 +693,7 @@ fr:
             '"PINEAPPLE"': tous les ananas
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
+            '"SLOTH"': paresseux
             '"UNICORN"': Licornes
           PROPERTY:
             '"scale"': taille
@@ -686,6 +720,7 @@ fr:
             '"PINEAPPLE"': tous les ananas
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
+            '"SLOTH"': paresseux
             '"UNICORN"': Licornes
       Dancelab_setTintEachInline:
         text: définir la teinte de {THIS} à {VAL}
@@ -702,6 +737,7 @@ fr:
             '"PINEAPPLE"': tous les ananas
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
+            '"SLOTH"': paresseux
             '"UNICORN"': Licornes
       Dancelab_setTintInline:
         text: définir la teinte de {SPRITE} à {VAL}
@@ -726,6 +762,7 @@ fr:
             '"PINEAPPLE"': tous les ananas
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
+            '"SLOTH"': paresseux
             '"UNICORN"': Licornes
           VISIBILITY:
             'true': visible
@@ -746,6 +783,7 @@ fr:
             '"mid"': médium
             '"treble"': aigu
       Dancelab_startMappingEach:
+        text: "{GROUP} commence {PROPERTY} après {RANGE}"
         options:
           GROUP:
             sprites: tout
@@ -759,6 +797,7 @@ fr:
             '"PINEAPPLE"': tous les ananas
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
+            '"SLOTH"': paresseux
             '"UNICORN"': Licornes
           PROPERTY:
             '"scale"': taille
@@ -789,6 +828,7 @@ fr:
             '"mid"': médium
             '"treble"': aigu
       Dancelab_stopMappingEach:
+        text: "{GROUP} arrête {PROPERTY} après {RANGE}"
         options:
           GROUP:
             sprites: tout
@@ -802,6 +842,7 @@ fr:
             '"PINEAPPLE"': tous les ananas
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
+            '"SLOTH"': paresseux
             '"UNICORN"': Licornes
           PROPERTY:
             '"scale"': taille
@@ -817,10 +858,33 @@ fr:
             '"mid"': médium
             '"treble"': aigu
       Dancelab_translateStrings:
+        text: traduire {STRING}
         options:
           STRING:
+            '"music_wave"': Vagues
+            '"ripples"': Ondulations
+            '"ripples_random"': Ondulations aléatoires
+            '"quads"': Angles
+            '"flowers"': Fleurs
+            '"popsicles"': Glaces à l’eau
+            '"squiggles"': Gribouillis
+            '"growing_stars"': Étoiles montantes
+            '"emojis"': Emojis
             '"hearts_colorful"': Cœurs
+            '"paint_drio"': Gouttes de peinture
+            '"exploding_stars"': Starburst
+            '"row_top"': rangée du haut
+            '"row_bottom"': rangée du bas
+            '"column_left"': colonne de gauche
+            '"column_right"': colonne de droite
             '"diamond"': diamant
+            '"mural"': Mural
+            '"safari"': Safari
+            '"network"': Network
+            '"highway"': Autoroute
+            '"stream"': Courant
+            '"tile"': Tuile
+            '"shadow"': Ombre
             '"s"': s
             '"t"': t
             '"u"': u
@@ -1174,7 +1238,7 @@ fr:
             '"y"': position y
             '"direction"': direction du mouvement
       Mikelab_groupChangeAnim:
-        text: change {SELECT} {COSTUME} en {COSTUME2}
+        text: modifier {SELECT} {COSTUME} en {COSTUME2}
         options:
           SELECT:
             '"all"': tout
@@ -1192,7 +1256,7 @@ fr:
             '"y"': position y
             '"direction"': direction du mouvement
       Mikelab_groupCreateNewSprite:
-        text: fais un nouveau {COSTUME} à {LOCATION}
+        text: faire un nouveau {COSTUME} à {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": vers le haut

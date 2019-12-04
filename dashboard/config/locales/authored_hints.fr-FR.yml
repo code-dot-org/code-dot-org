@@ -2093,10 +2093,10 @@ fr-FR:
           -   Utilise plusieurs blocs <xml><block type="Dancelab_whenKey"><title name="KEY"></title></block></xml>.
       Dance_2019_03:
         validation: |-
-          **Comment puis-je passer ce niveau?**
+          **Comment puis-je réussir à passer ce niveau?**
 
-          -   Les deux danseurs doivent effectuer un mouvement.
-          -   Tu dois appuyer sur les touches fléchées.
+          -   Les deux danseurs doivent faire un mouvement.
+          -   Il faut appuyer sur les touches fléchées.
 
           _Ce niveau se termine après 6 mesures._
         challenges: |-
@@ -2123,9 +2123,9 @@ fr-FR:
           -   Change l’arrière-plan à chaque changement de danseur.
       Dance_2019_06:
         validation: |-
-          **Comment puis-je passer ce niveau?**
+          **Comment puis-je réussir à passer ce niveau?**
 
-          -   Crée un danseur principal et un groupe de danseurs de secours.
+          -   Créez un danseur principal et un groupe de danseurs en renfort.
 
           _Ce niveau se termine après 7 mesures._
         challenges: |-
@@ -2211,6 +2211,10 @@ fr-FR:
           **Défis optionnels**
 
           Change l’effet de fond à différents moments de la chanson en connectant le nouveau bloc sous les événements <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"mesures"</title></block></xml>.
+      Dance_Party_05:
+        validation: "**Comment réussir ce niveau ?** \n\n-   Votre danseur doit effectuer
+          au moins 4 mouvements de danse différents avant la fin du niveau. \n\n_Ce
+          niveau se termine après 12 mesures._"
       Dance_Party_06:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
