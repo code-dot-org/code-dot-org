@@ -716,9 +716,14 @@ zh-TW:
         -   在`每次經過_小節後`積木之後添加其它事件。
         -   用「秒」替換「節拍」，並嘗試以這種方式為舞蹈計時。
       Dance_Party_extras_every_beat_2019: |-
-        # 加速、減速
+        # 四分音符
 
-        最後這段舞蹈採用<xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml>程式積木來控制每個舞者的動作速度。嘗試在曲子的不同位置採用不同的速度看看。您可以在這段舞蹈裡面隨意調節，或者返回之前任意舞蹈，來讓效果變得更精彩一些。
+        大部分舞蹈都是按照小節為單位來設計的，而每個小節由 4 個四分音符構成。這段舞蹈使用 [blockly block][0]來讓舞者從第 5 小節之後在每個四分音符時都拍一下手。
+
+        更改程式積木中的數字來試試看對舞蹈會有什麼影響。
+
+        -   嘗試採用其他音符時值（例如 0.5 是二分音符，0.125 是八分音符）。
+        -   添加其他事件。
       Dance_Party_extras_layout: |-
         # 讓我們加入陣形！
 
@@ -760,14 +765,13 @@ zh-TW:
         -   使用方向鍵來顯示和隱藏舞者。
         -   隱藏所有舞者並切換一個讓人興奮的背景效果。
       Dance_Party_extras_visible_2019: |-
-        # 四分音符
+        # 他們要去哪？
 
-        大部分舞蹈都是按照小節為單位來設計的，而每個小節由 4 個四分音符構成。這段舞蹈使用[blockly block][0]來讓舞者從第 5 小節之後在每個四分音符時都拍一下手。
+        這個舞蹈顯示和隱藏了兩組不同的舞者。你可以試試下面的方法，看看效果如何。
 
-        更改程式積木中的數字來試試看對舞蹈會有什麼影響。
-
-        -   嘗試採用其他音符時值（例如 0.5 是二分音符，0.125 是八分音符）。
-        -   添加其他事件。
+        -   添加另一組舞者。
+        -   使用方向鍵來顯示和隱藏舞者。
+        -   隱藏所有舞者並切換一個讓人興奮的背景效果。
       Function intro Ryan: "您的工作空間中有一個名為「建造橋樑」的**功能**。您要過河所需的代碼都建置在內！\\\r\n \\\r\n在您的工作空間中短按兩次小型的綠色方塊，即可修正路徑並讓
         {currentPlayerName} 前往紅石火把 [redstone_torch] 的位置。"
       Function intro Ryan_2019: "您的工作空間中有一個名為「建造橋樑」的**功能**。您要過河所需的代碼都建置在內！\\\r\n \\\r\n在您的工作空間中短按兩次小型的綠色方塊，即可修正路徑並讓
