@@ -212,3 +212,13 @@ export const finishLoading = (startTime, onComplete) => {
 
   setTimeout(onComplete, delayTime);
 };
+
+export const reportPageView = page => {
+  if (!window.ga || !page) {
+    return;
+  }
+
+  const syntheticPagePath = window.location.pathname + '/' + page;
+  window.ga('set', 'page', syntheticPagePath);
+  window.ga('send', 'pageview');
+};
