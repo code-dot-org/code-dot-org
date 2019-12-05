@@ -552,7 +552,7 @@ pl-PL:
       Dance_Party_extras_speed_2019: |-
         # Przyspiesz, zwolnij
 
-        Ostatni taniec wykorzystuje blok [blockly block] [0], by kontrolować tempo ruchu każdego tancerza. Spróbuj eksperymentować z różnymi prędkościami w różnych miejscach utworu. Zachowaj swobodę wprowadzania zmian w tym tańcu lub wróć do dowolnego z poprzednich tańców, aby sprawić, że będą jeszcze fajniejsze.
+        Ostatni taniec wykorzystuje blok <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml>, by kontrolować tempo ruchu każdego tancerza. Spróbuj eksperymentować z różnymi prędkościami w różnych miejscach utworu. Zachowaj swobodę wprowadzania zmian w tym tańcu lub wróć do dowolnego z poprzednich tańców, aby sprawić, że będą jeszcze fajniejsze.
       Dance_Party_extras_visible: |-
         # Gdzie oni poszli?
 

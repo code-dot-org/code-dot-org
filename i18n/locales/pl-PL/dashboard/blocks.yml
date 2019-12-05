@@ -46,7 +46,7 @@ pl:
             MOVES.Thriller: Zombie
             MOVES.Rest: Żaden
       Dancelab_atTimestamp:
-        text: po {TIMESTAMP} {UNIT}
+        text: po {TIMESTAMP} taktach {UNIT}
         options:
           UNIT:
             '"measures"': takty
@@ -1228,6 +1228,18 @@ pl:
             MOVES.ThisOrThat: This or That
             MOVES.Thriller: Zombie
             MOVES.Rest: Żaden
+      Mikelab_ifLabel:
+        text: |-
+          jeśli {DANCE}
+          wykonaj {DO1} w przeciwnym razie {DO2}
+      Mikelab_ifRecognizeLabel:
+        text: |-
+          jeśli wykryty obiekt to {DANCE}
+          wykonaj {DO1} w przeciwnym razie {DO2}
+      Mikelab_ifRecognizeLabelOnly:
+        text: |-
+          jeśli wykryty obiekt to {DANCE}
+          wykonaj {DO1}
       Mikelab_randomColor:
         text: losowy kolor
       Mikelab_repeatUntilComplete:

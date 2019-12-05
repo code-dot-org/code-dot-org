@@ -4204,6 +4204,11 @@ pl:
             Dance Party:
               name: Potańcówka
         dance-extras:
+          stages:
+            Dance Party - Go Further:
+              name: Potańcówka - Przejdź dalej
+          title: Nie przestawaj tańczyć (2018)
+          description_short: Dzięki tej aktywności, która następuje, wyjdź poza Godzinę Kodowania do samouczka Potańcówki w Code.org.
           description: Wyjdź poza pierwszą godzinę dzięki rozszerzonym pomysłom na projekt.
         coursef-2019:
           description_short: Poznaj wszystkie pojęcia z podstaw informatyki i stwórz własne dzieło sztuki, historyjkę lub grę.
@@ -4357,7 +4362,11 @@ pl:
             'null':
               name: 'wartość null'
         dance-extras-gallery:
+          stages:
+            Dance Party - Go Further:
+              name: Potańcówka - Przejdź dalej
           title: Nie przestawaj tańczyć
+          description_short: Dzięki tej aktywności, która następuje, wyjdź poza Godzinę Kodowania do samouczka Potańcówki w Code.org.
           description: Wyjdź poza pierwszą godzinę dzięki rozszerzonym pomysłom na projekt.
         coursec-2019:
           description_short: Poznaj podstawy informatyki i twórz własne artystyczne dzieła, opowiadania i gry.
@@ -4880,7 +4889,12 @@ pl:
             For Loops:
               name: Pętle dla (for)
         dance-extras-2019:
+          title: Nie przestawaj tańczyć (2019)
           description: Wyjdź poza pierwszą godzinę dzięki rozszerzonym pomysłom na projekt.
+          description_short: Dzięki tej aktywności, która następuje, wyjdź poza Godzinę Kodowania do samouczka Potańcówki w Code.org.
+          stages:
+            Dance Party - Go Further:
+              name: Potańcówka - Przejdź dalej
         csp10-pilot:
           stages:
             new stage:
