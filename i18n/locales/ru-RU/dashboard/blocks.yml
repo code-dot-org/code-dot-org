@@ -325,6 +325,7 @@ ru:
             '"plus"': плюс
             '"random"': случайный
       Dancelab_makeAnonymousDanceSprite:
+        text: сделать новый {COSTUME} в {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': инопланетянин
@@ -607,6 +608,7 @@ ru:
             '"y"': вертикальное положение
             '"tint"': оттенок
       Dancelab_setPropRandomEach:
+        text: рандомизировать {GROUP} {PROPERTY}
         options:
           GROUP:
             sprites: все
@@ -998,6 +1000,7 @@ ru:
             '"y"': позиция ординат (y)
             '"direction"': направление движения
       Mikelab_groupChangeAnim:
+        text: поменяйте {SELECT} {COSTUME} на {COSTUME2}
         options:
           SELECT:
             '"all"': все
@@ -1012,6 +1015,7 @@ ru:
             '"y"': позиция ординат (y)
             '"direction"': направление движения
       Mikelab_groupCreateNewSprite:
+        text: сделать новый {COSTUME} в {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": верх

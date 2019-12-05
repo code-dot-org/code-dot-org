@@ -3,12 +3,21 @@ ru-RU:
   data:
     display_name:
       AB_Debug_Artist1: 'Художник: Отладка #1 (AB)'
+      App Lab Intro 8 - Video Design Mode: Режим дизайна
       App Lab Intro 8 - Video Getting Started: 'Видео: начало работы'
       App Lab Intro 8 - Video Images and Sounds: 'Видео: Изображения и звуки'
+      App Lab Intro 8 - Video Make It Interactive: 'Video: Сделай программу интерактивной'
       App Lab Intro 8 - Video Share Your App: 'Видео: Поделись своим приложением'
       AppLab Intro 7 - Change Screen Color: Изменить цвет окна
       AppLab Intro 7 - Change Text 2: Изменить текст
       AppLab Intro 7 - Full Text: Две кнопки
+      AppLab Intro 7 - onEvent intro: Пусть кнопки реагируют на нажатие
+      AppLab Intro 7 - onEvent twoButtons: Еще поработаем с реакцией на события onEvent
+      AppLab Intro 7 - playSound: Звуки - функция playSound/игратьЗвук/
+      AppLab Intro 7 - thisOrThatAddButton: То или это
+      AppLab Intro 7 - thisOrThatAddScreen: То или это
+      AppLab Intro 7 - thisOrThatPersonalize: То или это
+      AppLab Intro 7 - thisOrThatSetScreen: То или это
       CSD If Else Map: Операторы "если-иначе"
       CSD If Else Map_2018: Операторы "если-иначе"
       CSD If Else Map_2019: Операторы "если-иначе"
