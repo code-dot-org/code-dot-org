@@ -3,6 +3,7 @@ he:
   data:
     blocks:
       Dancelab_alternateMoves:
+        text: "{GROUP} מחליפים כל {N} תיבות \nבין {MOVE1} ו{MOVE2}"
         options:
           GROUP:
             sprites: כולם
@@ -12,10 +13,11 @@ he:
             '"DOG"': כל הכלבים
             '"DUCK"': כל הברווזים
             '"FROG"': כל הצפרדעים
-            '"MOOSE"': כל המוּסים
+            '"MOOSE"': מוּס
             '"PINEAPPLE"': כל האננסים
             '"ROBOT"': כל הרובוטים
             '"SHARK"': כל הכרישים
+            '"SLOTH"': כל העצלנים
             '"UNICORN"': חדי-קרן
           MOVE1:
             MOVES.Roll: בָּאדִי רוֹל / גלגול גוף
@@ -65,10 +67,11 @@ he:
             '"DOG"': כל הכלבים
             '"DUCK"': כל הברווזים
             '"FROG"': כל הצפרדעים
-            '"MOOSE"': כל המוּסים
+            '"MOOSE"': מוּס
             '"PINEAPPLE"': כל האננסים
             '"ROBOT"': כל הרובוטים
             '"SHARK"': כל הכרישים
+            '"SLOTH"': כל העצלנים
             '"UNICORN"': כל חדי-הקרן
           MOVE:
             '"next"': "(הבא)"
@@ -120,6 +123,7 @@ he:
             '"x"': מיקום אופקי
             '"y"': מיקום אנכי
       Dancelab_changePropEachBy:
+        text: שנה {GROUP} {PROPERTY} ב {VAL}
         options:
           GROUP:
             sprites: כולם
@@ -129,10 +133,11 @@ he:
             '"DOG"': כל הכלבים
             '"DUCK"': כל הברווזים
             '"FROG"': כל הצפרדעים
-            '"MOOSE"': כל המוּסים
+            '"MOOSE"': מוּס
             '"PINEAPPLE"': כל האננסים
             '"ROBOT"': כל הרובוטים
             '"SHARK"': כל הכרישים
+            '"SLOTH"': כל העצלנים
             '"UNICORN"': חדי-קרן
           PROPERTY:
             '"scale"': גודל
@@ -152,10 +157,11 @@ he:
             '"DOG"': כל הכלבים
             '"DUCK"': כל הברווזים
             '"FROG"': כל הצפרדעים
-            '"MOOSE"': כל המוּסים
+            '"MOOSE"': מוּס
             '"PINEAPPLE"': כל האננסים
             '"ROBOT"': כל הרובוטים
             '"SHARK"': כל הכרישים
+            '"SLOTH"': כל העצלנים
             '"UNICORN"': חדי-קרן
           MOVE:
             '"rand"': "(אקראי)"
@@ -216,6 +222,8 @@ he:
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_everyMeasuresRange:
+        text: 'חזור כל {N} תיבות אחרי {START} '
       Dancelab_everySeconds:
         text: 'כל {N} {UNIT} '
         options:
@@ -302,6 +310,7 @@ he:
             "{x: 300, y: 300}": למטה מימין
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": אקראי
       Dancelab_jumpToEach:
+        text: הקפץ {GROUP} ל {LOCATION}
         options:
           GROUP:
             sprites: כולם
@@ -311,10 +320,11 @@ he:
             '"DOG"': כל הכלבים
             '"DUCK"': כל הברווזים
             '"FROG"': כל הצפרדעים
-            '"MOOSE"': כל המוּסים
+            '"MOOSE"': מוּס
             '"PINEAPPLE"': כל האננסים
             '"ROBOT"': כל הרובוטים
             '"SHARK"': כל הכרישים
+            '"SLOTH"': כל העצלנים
             '"UNICORN"': חדי-קרן
           LOCATION:
             "{x: 200, y: 100}": עליון
@@ -338,10 +348,11 @@ he:
             '"DOG"': כל הכלבים
             '"DUCK"': כל הברווזים
             '"FROG"': כל הצפרדעים
-            '"MOOSE"': כל המוּסים
+            '"MOOSE"': מוּס
             '"PINEAPPLE"': כל האננסים
             '"ROBOT"': כל הרובוטים
             '"SHARK"': כל הכרישים
+            '"SLOTH"': כל העצלנים
             '"UNICORN"': חדי-קרן
           FORMAT:
             '"border"': גבול
@@ -354,6 +365,7 @@ he:
             '"plus"': פלוס
             '"random"': אקראי
       Dancelab_makeAnonymousDanceSprite:
+        text: צור {COSTUME} חדש ב {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': חוצן
@@ -362,10 +374,11 @@ he:
             '"DOG"': כלב
             '"DUCK"': ברווז
             '"FROG"': צפרדע
-            '"MOOSE"': כל המוּסים
+            '"MOOSE"': מוּס
             '"PINEAPPLE"': אננס
             '"ROBOT"': רובוט
             '"SHARK"': כריש
+            '"SLOTH"': עצלן
             '"UNICORN"': חד-קרן
           LOCATION:
             "{x: 200, y: 100}": עליון
@@ -394,6 +407,7 @@ he:
             '"PINEAPPLE"': אננס
             '"ROBOT"': רובוט
             '"SHARK"': כריש
+            '"SLOTH"': עצלן
             '"UNICORN"': חד-קרן
           LOCATION:
             "{x: 200, y: 100}": עליון
@@ -438,10 +452,11 @@ he:
             '"DOG"': כלבים
             '"DUCK"': ברווזים
             '"FROG"': צפרדעים
-            '"MOOSE"': כל המוּסים
+            '"MOOSE"': מוּס
             '"PINEAPPLE"': אננסים
             '"ROBOT"': רובוטים
             '"SHARK"': כרישים
+            '"SLOTH"': כל העצלנים
             '"UNICORN"': חדי-קרן
           LAYOUT:
             '"border"': גבול
@@ -449,8 +464,12 @@ he:
             '"diamond"': יהלום
             '"circle"': עיגול
             '"grid"': רשת
+            '"top"': שורה עליונה
             '"row"': שורה
+            '"bottom"': שורה תחתונה
+            '"left"': עמודה שמאלית
             '"column"': עמודה
+            '"right"': עמודה ימנית
             '"x"': קְרִיס-קְרוֹס
             '"plus"': פלוס
             '"random"': אקראי
@@ -507,22 +526,29 @@ he:
             '"none"': כלום
             '"rand"': "(אקראי)"
             '"circles"': מעגלים
+            '"quads"': מלאכים
             '"color_cycle"': צבעים
             '"diamonds"': יהלומים
             '"disco_ball"': כדור דיסקו
             '"fireworks"': זיקוקים
+            '"flowers"': פרחים
+            '"growing_stars"': כוכבים גדלים
             '"swirl"': הִיפְּנוֹ
             '"kaleidoscope"': קליידוסקופ
             '"lasers"': רחבת ריקודים מלייזר
             '"splatter"': בועות
             '"rainbow"': קשת
+            '"ripples_random"': אדוות אקראיות
+            '"ripples"': אדוות
             '"snowflakes"': שלג
             '"text"': שמות שירים
+            '"squiggles"': קווים מתפתלים
             '"galaxy"': חלל
             '"sparkles"': נצנוצים
             '"spiral"': ספירלה
             '"disco"': ריבועים
             '"stars"': כוכבים
+            '"music_wave"': גלים
           PALETTE:
             '"rave"': שחור לבן
             '"cool"': מגניב
@@ -553,10 +579,11 @@ he:
             '"DOG"': כל הכלבים
             '"DUCK"': כל הברווזים
             '"FROG"': כל הצפרדעים
-            '"MOOSE"': כל המוּסים
+            '"MOOSE"': מוּס
             '"PINEAPPLE"': כל האננסים
             '"ROBOT"': כל הרובוטים
             '"SHARK"': כל הכרישים
+            '"SLOTH"': כל העצלנים
             '"UNICORN"': חדי-קרן
           SPEED:
             '1': רגיל
@@ -589,9 +616,12 @@ he:
             '"none"': כלום
             '"rand"': "(אקראי)"
             '"bubbles"': בועות
+            '"hearts_colorful"': לבבות צבעוניים
             '"confetti"': קונפטי
+            '"emojis"': אמוג'יס
             '"hearts_red"': לבבות
             '"music_notes"': תווים
+            '"paint_drip"': צבע נוטף
             '"pineapples"': אננסים
             '"pizzas"': פיצות
             '"smiling_poop"': קקי
@@ -600,6 +630,7 @@ he:
             '"smile_face"': חיוכים
             '"spotlight"': זרקור
             '"color_lights"': אורות שלב
+            '"exploding_stars"': כוכבים
             '"raining_tacos"': טָאקוֹ
       Dancelab_setProp:
         text: 'קבע {PROPERTY} של {SPRITE} ל {VAL} '
@@ -622,10 +653,11 @@ he:
             '"DOG"': כל הכלבים
             '"DUCK"': כל הברווזים
             '"FROG"': כל הצפרדעים
-            '"MOOSE"': כל המוּסים
+            '"MOOSE"': מוּס
             '"PINEAPPLE"': כל האננסים
             '"ROBOT"': כל הרובוטים
             '"SHARK"': כל הכרישים
+            '"SLOTH"': כל העצלנים
             '"UNICORN"': חדי-קרן
           PROPERTY:
             '"scale"': גודל
@@ -647,6 +679,7 @@ he:
             '"y"': מיקום אנכי
             '"tint"': גוון
       Dancelab_setPropRandomEach:
+        text: קבע באקראי את {PROPERTY} של {GROUP}
         options:
           GROUP:
             sprites: כולם
@@ -656,10 +689,11 @@ he:
             '"DOG"': כל הכלבים
             '"DUCK"': כל הברווזים
             '"FROG"': כל הצפרדעים
-            '"MOOSE"': כל המוּסים
+            '"MOOSE"': מוּס
             '"PINEAPPLE"': כל האננסים
             '"ROBOT"': כל הרובוטים
             '"SHARK"': כל הכרישים
+            '"SLOTH"': כל העצלנים
             '"UNICORN"': חדי-קרן
           PROPERTY:
             '"scale"': גודל
@@ -682,10 +716,11 @@ he:
             '"DOG"': כל הכלבים
             '"DUCK"': כל הברווזים
             '"FROG"': כל הצפרדעים
-            '"MOOSE"': כל המוּסים
+            '"MOOSE"': מוּס
             '"PINEAPPLE"': כל האננסים
             '"ROBOT"': כל הרובוטים
             '"SHARK"': כל הכרישים
+            '"SLOTH"': כל העצלנים
             '"UNICORN"': חדי-קרן
       Dancelab_setTintEachInline:
         text: קבע גוון של {THIS} ל {VAL}
@@ -698,10 +733,11 @@ he:
             '"DOG"': כל הכלבים
             '"DUCK"': כל הברווזים
             '"FROG"': כל הצפרדעים
-            '"MOOSE"': כל המוּסים
+            '"MOOSE"': מוּס
             '"PINEAPPLE"': כל האננסים
             '"ROBOT"': כל הרובוטים
             '"SHARK"': כל הכרישים
+            '"SLOTH"': כל העצלנים
             '"UNICORN"': חדי-קרן
       Dancelab_setTintInline:
         text: קבע גוון של {SPRITE} ל {VAL}
@@ -722,10 +758,11 @@ he:
             '"DOG"': כל הכלבים
             '"DUCK"': כל הברווזים
             '"FROG"': כל הצפרדעים
-            '"MOOSE"': כל המוּסים
+            '"MOOSE"': מוּס
             '"PINEAPPLE"': כל האננסים
             '"ROBOT"': כל הרובוטים
             '"SHARK"': כל הכרישים
+            '"SLOTH"': כל העצלנים
             '"UNICORN"': חדי-קרן
           VISIBILITY:
             'true': נראה
@@ -746,6 +783,7 @@ he:
             '"mid"': אמצע
             '"treble"': טְרֶבֶּל
       Dancelab_startMappingEach:
+        text: "{PROPERTY} של {GROUP} מתחיל לעקוב אחרי {RANGE}"
         options:
           GROUP:
             sprites: כולם
@@ -755,10 +793,11 @@ he:
             '"DOG"': כל הכלבים
             '"DUCK"': כל הברווזים
             '"FROG"': כל הצפרדעים
-            '"MOOSE"': כל המוּסים
+            '"MOOSE"': מוּס
             '"PINEAPPLE"': כל האננסים
             '"ROBOT"': כל הרובוטים
             '"SHARK"': כל הכרישים
+            '"SLOTH"': כל העצלנים
             '"UNICORN"': חדי-קרן
           PROPERTY:
             '"scale"': גודל
@@ -789,6 +828,7 @@ he:
             '"mid"': אמצע
             '"treble"': טְרֶבֶּל
       Dancelab_stopMappingEach:
+        text: "{PROPERTY} של {GROUP} מפסיק לעקוב אחרי {RANGE}"
         options:
           GROUP:
             sprites: כולם
@@ -798,10 +838,11 @@ he:
             '"DOG"': כל הכלבים
             '"DUCK"': כל הברווזים
             '"FROG"': כל הצפרדעים
-            '"MOOSE"': כל המוּסים
+            '"MOOSE"': מוּס
             '"PINEAPPLE"': כל האננסים
             '"ROBOT"': כל הרובוטים
             '"SHARK"': כל הכרישים
+            '"SLOTH"': כל העצלנים
             '"UNICORN"': חדי-קרן
           PROPERTY:
             '"scale"': גודל
@@ -817,10 +858,33 @@ he:
             '"mid"': אמצע
             '"treble"': טְרֶבֶּל
       Dancelab_translateStrings:
+        text: תרגם את {STRING}
         options:
           STRING:
+            '"music_wave"': גלים
+            '"ripples"': אדוות
+            '"ripples_random"': אדוות אקראיות
+            '"quads"': מלאכים
+            '"flowers"': פרחים
+            '"popsicles"': ארטיקים
+            '"squiggles"': קווים מתפתלים
+            '"growing_stars"': כוכבים גדלים
+            '"emojis"': אמוג'יס
             '"hearts_colorful"': לבבות
+            '"paint_drio"': צבע נוטף
+            '"exploding_stars"': כוכבים
+            '"row_top"': שורה עליונה
+            '"row_bottom"': שורה תחתונה
+            '"column_left"': עמודה שמאלית
+            '"column_right"': עמודה ימנית
             '"diamond"': יהלום
+            '"mural"': ציור קיר
+            '"safari"': ספארי
+            '"network"': רשת
+            '"highway"': כביש מהיר
+            '"stream"': נחל
+            '"tile"': אריח
+            '"shadow"': צל
             '"s"': s
             '"t"': t
             '"u"': u
@@ -848,7 +912,7 @@ he:
             '"down"': למטה
             '"right"': ימינה
             '"space"': חלל
-            '"enter"': אנטר
+            '"enter"': היכנסו
             '"a"': a
             '"b"': נ
             '"c"': ב
@@ -1107,6 +1171,7 @@ he:
             '"y"': מיקום בציר y
             '"direction"': כיוון תנועה
       Mikelab_groupCreateNewSprite:
+        text: צור {COSTUME} חדש ב {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": עליון
@@ -1178,6 +1243,18 @@ he:
             MOVES.Kick: כוכב
             MOVES.ThisOrThat: זה או ההוא
             MOVES.Rest: כלום
+      Mikelab_ifLabel:
+        text: |-
+          אם {DANCE}
+          עשה {DO1} אחרת {DO2}
+      Mikelab_ifRecognizeLabel:
+        text: |-
+          אם האובייקט הנוכחי מזוהה כ{DANCE}
+          עשה {DO1} אחרת {DO2}
+      Mikelab_ifRecognizeLabelOnly:
+        text: |-
+          אם האובייקט הנוכחי מזוהה כ{DANCE}
+          עשה {DO1}
       Mikelab_locationAt:
         text: 'מיקום: x: {X} y: {Y}'
       Mikelab_location_picker:
