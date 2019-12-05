@@ -222,7 +222,7 @@ hu-HU:
   studiobar_elementary_title: Kurzusok alsósoknak
   studiobar_elementary_body: Három új tanfolyamunk k &#8209; 5 nek
   studiobar_dance_title: Táncos buli
-  studiobar_dance_body: Hozd létre és oszd meg saját táncos bulidat
+  studiobar_dance_body: Hozd létre, és oszd meg a saját Táncos bulidat
   studiobar_hoc_title: A kódolás órája
   studiobar_hoc_body: Tanulj programozni az Angry Birds-el
   studiobar_flappy_title: Flappy kód
@@ -1615,6 +1615,11 @@ hu-HU:
   account_sign_up_child_accept_terms: Megerősítem, hogy a szülőm vagy törvényes gondviselőm
     engedélyt adott, hogy használjam Code.org szolgáltatásait.
   hoc_overview_dance_title: Táncos buli
+  hoc_overview_dance_subtitle: Programozz le egy Táncos bulit, és oszd meg barátaiddal.
+    Közreműködik Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara és még 25-en!
+  hoc_overview_dance_2019_subtitle: 'Programozz le egy Táncos bulit, és oszd meg barátaiddal.
+    Közreműködik Katy Perry, Shawn Mendes, Panic! A diszkóban: Lil Nas X, Jonas Brothers,
+    Nicki Minaj és még 34-en!'
   hoc_overview_partner_activities_title: További tevékenységek a partnerektől
   hoc_overview_partner_activities_body: A Code.org és partnerei által fejlesztett
     Kódolás Órája weboldal több mint 100 számítástechnikai programot kínál minden

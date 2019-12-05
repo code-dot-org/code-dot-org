@@ -26,7 +26,7 @@
   twentyhours_heading: "Subukan ang aming Intro sa kurso ng Computer Science"
   twentyhours_text: "Tapos ka na sa iyong unang Hour of Code? Matuto pa ng ibang computer science at mga programming concept sa follow-up na kurso na ito."
   og_title: 'Code.org: Kahit Sino ay Maaaring Matuto'
-  og_title_soon: "Ang Hour of Code ay paparating na"
+  og_title_soon: "Paparating ang Oras ng Code"
   og_title_here: "Ang Hour of Code ay nandito na!"
   og_description: "Bawat estudyante sa bawat paaralan ay dapat magkaroon ng pagkakataon na makapag-aral ng computer science."
   og_description_celeb: "Subukan ang mga bagong tutoryal, manalo ng isang celebrity video na chat para sa iyong sarili o sa iyong klase!"
@@ -227,6 +227,7 @@
   studiobar_elementary_title: "Mga kurso pang elementary"
   studiobar_elementary_body: "Ang tatlong bagong kurso namin para sa K&#8209;5"
   studiobar_dance_title: "Dance Party"
+  studiobar_dance_body: "Likhain at ibahagi ang iyong sariling Dance Party"
   studiobar_hoc_title: "Ang Hour of Code"
   studiobar_hoc_body: "Matutong mag-code gamit ang Angry Birds"
   studiobar_flappy_title: "Flappy Code"
@@ -286,7 +287,7 @@
   homepage_hero_text_stat_loc: "8.5 milyong kababaihan ang naka-enrol para matuto sa Code.org"
   homepage_hero_text_stat_students: "#student_count na mga account ng estudyante sa Code.org"
   homepage_hero_text_stat_served: 'Ang Hour of Code #served nakahanda na'
-  homepage_hero_hoc_is_coming: "Ang Hour of Code ay paparating na"
+  homepage_hero_hoc_is_coming: "Paparating ang Oras ng Code"
   homepage_hero_hoc_is_here: "Ang Hour of Code ay nandito na"
   homepage_slot_text_hoc: "Ang Hour of Code"
   homepage_slot_text_frozen: "Frozen kasama sina Anna at Elsa"
@@ -1416,6 +1417,8 @@
   applab-intro_name: Panimula ng App Lab
   applab_tile_start_tutorial: "Panimula"
   hoc_overview_dance_title: "Dance Party"
+  hoc_overview_dance_subtitle: "I-code ang isang Dance Party para ibahagi sa iyong mga kaibigan. Itinatampok sina Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, at karagdagang 25 pa!"
+  hoc_overview_dance_2019_subtitle: "I-code ang isang Dance Party para ibahagi sa iyong mga kaibigan. Itinatampok sina Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, at karagdagang 34 pa!"
   hoc_overview_start_tutorial: "Panimula"
   hoc2018_creativity_create: "I-create"
   hoc2018_mc_page_title: "Mga Tutoryal sa Minecraft Hour of Code"
