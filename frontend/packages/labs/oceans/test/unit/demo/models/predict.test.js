@@ -16,6 +16,8 @@ describe('Model quality test', () => {
     });
   });
 
+  jest.useFakeTimers();
+
   test('init state without intermediate loading', () => {
     init();
     // There's a setTimeout in the predict init. Ideally this would be
