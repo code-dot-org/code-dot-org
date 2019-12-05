@@ -117,7 +117,8 @@ fi-FI:
       CourseD_Dance_Party_01:
         validation: |-
           **Kuinka ylitän tämän tason?**
-          \*Varmista, että tanssija näkyy ruudulla.
+
+          -   Varmista, että tanssija näkyy ruudulla.
 
           _Tämä taso päättyy 4 tahdin jälkeen._
         challenges: |-
@@ -218,7 +219,8 @@ fi-FI:
       Dance_2019_01:
         validation: |-
           **Kuinka ylitän tämän tason?**
-          \*Varmista, että tanssija näkyy ruudulla.
+
+          -   Varmista, että tanssija näkyy ruudulla.
 
           _Tämä taso päättyy 4 tahdin jälkeen._
         challenges: |-
@@ -326,7 +328,8 @@ fi-FI:
       Dance_Party_01:
         validation: |-
           **Kuinka ylitän tämän tason?**
-          \*Varmista, että tanssija näkyy ruudulla.
+
+          -   Varmista, että tanssija näkyy ruudulla.
 
           _Tämä taso päättyy 4 tahdin jälkeen._
         challenges: |-
