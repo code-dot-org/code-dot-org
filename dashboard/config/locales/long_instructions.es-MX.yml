@@ -16676,15 +16676,14 @@ es-MX:
         -   Muestra y oculta a los bailarines con las teclas de flechas
         -   Oculta todos los bailarines y cambia a un emocionante efecto de fondo
       Dance_Party_extras_visible_2019: |-
-        # Negras
+        # ¿Dónde habrán ido?
 
-        La mayoría de nuestros bailes utilizaron compases completos, pero cada compás está formado por 4 negras. Este baile usa [bloque blockly][0] para que el bailarín aplauda en cada negra luego del quinto compás.
+        Este baile muestra y oculta dos diferentes grupos de bailarines. Echa un vistazo y luego intenta agregar tu propio estilo.
 
-        Intenta cambiar los números en el bloque para ver cómo cambia el baile.
-
-        -   Experimenta con otras duraciones de notas (como 0,5 para una semicorchea o 0,125 para una corchea).
-        -   Añade algunos eventos.
-      Escape Room Example: |-
+        -   Añade otro grupo de bailarines
+        -   Muestra y oculta a los bailarines con las teclas de flechas
+        -   Oculta todos los bailarines y cambia a un emocionante efecto de fondo
+     Escape Room Example: |-
         # Juego de escape
 
         ¡En el taller de hoy trabajarás para crear una aplicación de juego de escape! Este nivel tiene una aplicación de ejemplo con la que deberías jugar para experimentar lo que estarás creando.
