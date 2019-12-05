@@ -292,7 +292,7 @@ class MakerControllerTest < ActionController::TestCase
     assert_response :forbidden
 
     # intend to teach unit 6, but has not confirmed school
-    application.update!(unit_6_intention: 'yes1819')
+    application.update!(unit_6_intention: 'yesSpring2020')
     post :complete, params: {signature: "My Name"}
     assert_response :forbidden
 
@@ -309,7 +309,7 @@ class MakerControllerTest < ActionController::TestCase
     create :circuit_playground_discount_application,
       user: @teacher,
       school: @school,
-      unit_6_intention: 'yes1819',
+      unit_6_intention: 'yesSpring2020',
       full_discount: true
     code = create :circuit_playground_discount_code
 
@@ -356,7 +356,7 @@ class MakerControllerTest < ActionController::TestCase
 
     create :circuit_playground_discount_application,
       user_id: @teacher.id,
-      unit_6_intention: 'yes1819',
+      unit_6_intention: 'yesSpring2020',
       school_id: @school.id,
       full_discount: true
 
@@ -383,6 +383,7 @@ class MakerControllerTest < ActionController::TestCase
     expected = {
       "application" => {
         "is_pd_eligible" => false,
+        "is_quarterly_workshop_pd_eligible" => false,
         "is_progress_eligible" => false,
         "user_school" => {
           "id" => nil,
@@ -412,12 +413,13 @@ class MakerControllerTest < ActionController::TestCase
     # has not yet confirmed school
     create :circuit_playground_discount_application,
       user_id: @teacher.id,
-      unit_6_intention: 'yes1819'
+      unit_6_intention: 'yesSpring2020'
     post :override, params: {user: @teacher.id, full_discount: true}
     assert_response :success
     expected = {
       "application" => {
         "is_pd_eligible" => false,
+        "is_quarterly_workshop_pd_eligible" => false,
         "is_progress_eligible" => false,
         "user_school" => {
           "id" => nil,
@@ -429,7 +431,7 @@ class MakerControllerTest < ActionController::TestCase
           "name" => nil,
           "high_needs" => nil,
         },
-        "unit_6_intention" => "yes1819",
+        "unit_6_intention" => "yesSpring2020",
         "full_discount" => true,
         "admin_set_status" => true,
         "discount_code" => nil,
