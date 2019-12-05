@@ -564,6 +564,8 @@ ko:
               name: 스튜디오
             Web Lab:
               name: 웹 연구소
+            Sprite Lab:
+              name: 스프라이트 연구소
         algebraPD2b:
           description: '단계 2 온라인: 혼합된 여름 공부'
           description_short: '단계 2 온라인: 혼합된 여름 공부'
@@ -858,7 +860,7 @@ ko:
         allthehiddenthings:
           stages:
             Game Lab:
-              name: Game Lab
+              name: 게임 연구소
         CSDU4-Draft:
           stages:
             Design Mode:
@@ -1779,7 +1781,7 @@ ko:
             Binary Bracelets:
               name: 2진 팔찌
         gamelab:
-          title: Game Lab
+          title: 게임 연구소
         coursea-2019:
           stages:
             'Programming: Happy Maps':
@@ -1906,6 +1908,8 @@ ko:
               name: 이벤트
             Functions:
               name: 함수
+            Sprite Lab:
+              name: 스프라이트 연구소
             Variables:
               name: 변수
             For Loops:

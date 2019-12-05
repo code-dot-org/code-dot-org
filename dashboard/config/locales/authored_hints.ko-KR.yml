@@ -2084,6 +2084,9 @@ ko-KR:
           **선택 과제**
 
           <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> 이벤트 아래 있는 새로운 블록에 연결하여 노래 중간 여러 시점에 배경 효과를 변경하세요.
+      Dance_Party_05:
+        validation: "**이 레벨은 어떻게 통과하죠?** \n\n레벨이 끝나기 전에 댄서가 최소 4가지 춤동작을 순환하게 해야 합니다.
+          \n\n_이 레벨은 12마디 후에 끝납니다._"
       Dance_Party_06:
         validation: |-
           **이 단계를 어떻게 통과하나요?**

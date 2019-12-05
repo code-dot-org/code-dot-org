@@ -39,7 +39,8 @@ ko:
         NetSim: 인터넷 시뮬레이터
         Custom: 화가
         CustomStudio: Play Lab
-        Gamelab: Game Lab
+        Gamelab: 게임 연구소
+        Spritelab: 스프라이트 연구소
     trophy:
       name:
         Bronze: 동

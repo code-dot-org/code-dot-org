@@ -474,6 +474,12 @@ ko-KR:
             <title name="LAYOUT">"circle"</title>
           </block></xml>
         이제 여러 댄서들을 한번에 생성할 수 있습니다!
+      Dance_2019_07: "모든 댄서에게는 어떻게 보일지를 조정하는 _속성_들이 있습니다. \n\n댄서들이 가깝거나 멀게 보이도록 <xml><block
+        type=\"Dancelab_setPropEach\" block-text=\"the set block\"><title name=\"GROUP\"
+        config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;,
+        &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title><title
+        name=\"PROPERTY\">\"scale\"</title><title name=\"VAL\">???</title></block></xml>
+        블록을 녹색 이벤트 블록 밑에 사용하세요."
       Dance_2019_08: 댄서들에게는 색상을 덧댈 수 있는 “색조” 속성이 있습니다. 댄서 한 명(혹은 그룹 전체)의 색조를 바꾸어 보세요!
       Dance_2019_09: |-
         몇 번씩 트리거된 특별한 이벤트 종류입니다.
