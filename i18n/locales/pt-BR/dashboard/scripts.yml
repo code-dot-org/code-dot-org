@@ -4062,6 +4062,8 @@ pt-BR:
               name: Obtendo propriedades
             The Program Design Process:
               name: O processo de design de programa
+              description_student: Essa lição apresenta aos alunos o processo que eles usarão para criar seus próprios programas ao longo desta unidade. Esse processo é centrado em torno de um guia de projeto que solicita aos alunos que desenhem suas telas, identifiquem elementos do Circuito Playground a serem usados, definam variáveis e descrevem eventos antes de começarem a programar. Esse processo é semelhante ao Processo de Design de Jogos que usamos na Unidade 3. Nesta lição, os alunos começam jogando um jogo no estilo cabo de guerra em que o código está oculto. Eles discutem sobre quais componentes, eventos e variáveis precisam para criar o programa. Eles recebem um guia completo do projeto, que mostra uma maneira de implementar o projeto. Os alunos passam por esse processo através de uma série de níveis. No final da lição, os alunos têm a oportunidade de fazer melhorias no programa para torná-lo seu.
+              description_teacher: Essa lição apresenta aos alunos o processo que eles usarão para criar seus próprios programas ao longo desta unidade. Esse processo é centrado em torno de um guia de projeto que solicita aos alunos que desenhem suas telas, identifiquem elementos do Circuito Playground a serem usados, definam variáveis e descrevem eventos antes de começarem a programar. Esse processo é semelhante ao Processo de Design de Jogos que usamos na Unidade 3. Nesta lição, os alunos começam jogando um jogo no estilo cabo de guerra em que o código está oculto. Eles discutem sobre quais componentes, eventos e variáveis precisam para criar o programa. Eles recebem um guia completo do projeto, que mostra uma maneira de implementar o projeto. Os alunos passam por esse processo através de uma série de níveis. No final da lição, os alunos têm a oportunidade de fazer melhorias no programa para torná-lo seu.
             'Project: Make a Game':
               name: 'Projeto: Fazer um Jogo'
               description_student: Os alunos aprendem o que aprenderam no capítulo um e desenvolvem um aplicativo de design próprio que usa o quadro para gerar informações.
@@ -4077,6 +4079,7 @@ pt-BR:
             Arrays and For Loops:
               name: Vetores e laços para
               description_student: A combinação de _lista_ e _repetição para_ permite escrever código que afeta todos os elementos de uma lista, independentemente de quanto tempo seja. A classe usa essa estrutura para escrever programas que processam todos os elementos nas listas, incluindo a lista de LEDs coloridos.
+              description_teacher: Usar uma _repetição para_ para iterar sobre todos os elementos em um vetor é uma construção realmente útil na maioria das linguagens de programação. Nesta lição, os alunos aprendem o básico de como uma _repetição para_ pode ser usada para repetir o código e depois combiná-la com o que eles já aprenderam sobre vetores para escrever programas que processam todos os elementos em um vetor. Os alunos usam os laços para percorrer cada elemento de uma lista, um de cada vez, sem precisar escrever código para cada elemento. No final da lição, os alunos aplicarão isso com a lista `corLed` no quadro para criar um aplicativo que altere todos os LEDs cada vez que um botão for clicado.
             Accelerometer:
               name: Acelerômetro
               description_student: Nesta lição, os alunos explorarão o acelerômetro e seus recursos. Eles se familiarizarão com seus eventos e propriedades, além de criarem vários programas utilizando o acelerômetro semelhante aos que provavelmente encontraram em aplicativos do mundo real.
@@ -4111,6 +4114,8 @@ pt-BR:
               description_teacher: Nesta lição, os alunos exploram como os três sensores analógicos (som, luz e temperatura) podem ser usados para escrever programas que respondem a mudanças no ambiente. O uso desses sensores marca uma transição em termos de como os usuários interagem com um programa. Ao usar sensores como entrada, o usuário de um aplicativo não precisa interagir diretamente com ele, ou pode interagir sem realmente perceber que está fazendo isso.
             The Program Design Process_:
               name: O processo de design de programa
+              description_student: Essa lição apresenta aos alunos o processo que eles usarão para criar seus próprios programas ao longo desta unidade. Esse processo é centrado em torno de um guia de projeto que solicita aos alunos que desenhem suas telas, identifiquem elementos do Circuito Playground a serem usados, definam variáveis e descrevem eventos antes de começarem a programar. Esse processo é semelhante ao Processo de Design de Jogos que usamos na Unidade 3. Nesta lição, os alunos começam jogando um jogo no estilo cabo de guerra em que o código está oculto. Eles discutem sobre quais componentes, eventos e variáveis precisam para criar o programa. Eles recebem um guia completo do projeto, que mostra uma maneira de implementar o projeto. Os alunos passam por esse processo através de uma série de níveis. No final da lição, os alunos têm a oportunidade de fazer melhorias no programa para torná-lo seu.
+              description_teacher: Essa lição apresenta aos alunos o processo que eles usarão para criar seus próprios programas ao longo desta unidade. Esse processo é centrado em torno de um guia de projeto que solicita aos alunos que desenhem suas telas, identifiquem elementos do Circuito Playground a serem usados, definam variáveis e descrevem eventos antes de começarem a programar. Esse processo é semelhante ao Processo de Design de Jogos que usamos na Unidade 3. Nesta lição, os alunos começam jogando um jogo no estilo cabo de guerra em que o código está oculto. Eles discutem sobre quais componentes, eventos e variáveis precisam para criar o programa. Eles recebem um guia completo do projeto, que mostra uma maneira de implementar o projeto. Os alunos passam por esse processo através de uma série de níveis. No final da lição, os alunos têm a oportunidade de fazer melhorias no programa para torná-lo seu.
             'Project: Make a Game_':
               name: 'Projeto: Fazer um Jogo'
             Making Music_:
@@ -4120,6 +4125,7 @@ pt-BR:
             Arrays and For Loops_:
               name: Vetores e laços para
               description_student: A combinação de _lista_ e _repetição para_ permite escrever código que afeta todos os elementos de uma lista, independentemente de quanto tempo seja. A classe usa essa estrutura para escrever programas que processam todos os elementos nas listas, incluindo a lista de LEDs coloridos.
+              description_teacher: Usar uma _repetição para_ para iterar sobre todos os elementos em um vetor é uma construção realmente útil na maioria das linguagens de programação. Nesta lição, os alunos aprendem o básico de como uma _repetição para_ pode ser usada para repetir o código e depois combiná-la com o que eles já aprenderam sobre vetores para escrever programas que processam todos os elementos em um vetor. Os alunos usam os laços para percorrer cada elemento de uma lista, um de cada vez, sem precisar escrever código para cada elemento. No final da lição, os alunos aplicarão isso com a lista `corLed` no quadro para criar um aplicativo que altere todos os LEDs cada vez que um botão for clicado.
             Accelerometer_:
               name: Acelerômetro
               description_student: Nesta lição, os alunos explorarão o acelerômetro e seus recursos. Eles se familiarizarão com seus eventos e propriedades, além de criarem vários programas utilizando o acelerômetro semelhante aos que provavelmente encontraram em aplicativos do mundo real.
@@ -5410,11 +5416,15 @@ pt-BR:
               name: Laços aninhados
             Loops in Artist (UPDATED!):
               name: Laços em Artista (ATUALIZADO!)
+            Sarah test stage:
+              name: Sarah fase de teste
           title: Novo script expresso
         new-stages-sept-2017:
           stages:
             Loops in Artist:
               name: Laços no Artista
+            Sequences with Scrat:
+              name: Sequências com Scrat
         new-e:
           stages:
             'Programming: My Robotic Friends':
@@ -5545,6 +5555,7 @@ pt-BR:
             Project - Solve a Data Problem:
               name: Projeto - Resolver um problema de dados
           description_short: Aprenda como as pessoas usam computadores para resolver problemas de dados.
+          description: A unidade 5 trata da importância dos dados na solução de problemas e destaca como os computadores podem ajudar nesse processo. O primeiro capítulo explora os diferentes sistemas usados para representar informações em um computador e os desafios e as vantagens e desvantagens do uso deles. No segundo capítulo, você aprenderá como as coleções de dados são usadas para resolver problemas e como os computadores ajudam a automatizar as etapas desse processo. O capítulo conclui considerando como o processo de solução de problemas de dados pode ser aplicado a uma área de sua escolha.
         hocali:
           stages:
             new stage:
@@ -5627,6 +5638,8 @@ pt-BR:
               name: Criptografia simples
             Web Development - Creating Webpages:
               name: Desenvolvimento Web - Criando Páginas Web
+            App Development - Intro to App Lab:
+              name: Desenvolvimento de aplicativos - Introdução ao Laboratório de Aplicativos
             Creating Webpages:
               name: Criação de páginas Web
             User Interfaces:
