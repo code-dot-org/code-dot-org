@@ -183,6 +183,8 @@ de-DE:
         So viele schöne Blumen!
 
         Behebe den/die Fehler, um den gesamten Nektar zu sammeln.
+      2-3 Bee Functions 2: "Funktionen sind Programm-Bausteine, die eine Aufgabe ausführen.
+        \n\nVerwende die „hohle 5“- Funktion, um gleichzeitig 5 mal Nektar zu holen."
       2-3 Bee Functions 3: Sammle den ganzen Nektar von allen Blumen.
       2-3 Bee Functions 6: Jetzt benutze dieselbe Funktion, um Nektar von den drei
         Blüten zu sammeln.
@@ -217,6 +219,10 @@ de-DE:
         gesamten Nektar zu sammeln und den ganzen Honig herzustellen?
       2-3 Bee Loops 7: Füge diese Bausteine in eine Schleife ein, um Nektar von jeder
         Blüte zu sammeln?
+      2-3 Bee Loops 8: |-
+        Benutze die „Solange Nektar“- Schleife, um den ganzen Nektar zu sammeln.
+
+        Diese Schleife wird solange durchlaufen, wie die Bedingung wahr ist - in diesem Fall: `Nektar > 0`.
       2-3 Maze 1: 'Kannst du mir helfen, das böse Schwein zu fangen? Klinke ein paar
         `bewege vorwärts` Bausteine unter dem `Wenn ausführen` Baustein ein und drücke
         auf "Ausführen". '
@@ -251,6 +257,12 @@ de-DE:
         Anzahl an Bausteinen verwenden?
       2-3 Maze Loops 21: Bring mich mit den wenigsten Blöcken zur Sonnenblume!
       2-3 Maze Loops Assessment 1: 'Aufgabe: Bring mich mit nur 5 Bausteinen zur Sonnenblume! '
+      4-5 Artist 1: 'Hilf mir, meine Box fertig zu zeichnen. (Jede Linie ist 300 Pixel
+        lang) '
+      4-5 Artist 2: Baue diesen Code in eine Schleife ein um so das Quadrat zu vervollständigen.
+      4-5 Artist 3: Dieses rechteckige Blumenbeet hat einen Umfang von 600. Die lange
+        Seite hat eine Länge von 200. Zeichne das Rechteck mit so wenigen Bausteinen
+        wie möglich.
       4-5 Artist 3.5: Finde heraus, was passiert, wenn du diesen Code ausführst (oder
         drücke auf „Ausführen“ und probiere es aus). Wiederhole den Vorgang, bis die
         Zeichnung vollständig ist. Die Farben sind (höchstwahrscheinlich) jedes Mal
@@ -268,6 +280,8 @@ de-DE:
         sich jetzt überdecken. Versuche es mit einer Änderung des ersten "springe
         rückwärts" Bausteins von 100 auf 50 (halb so weit). Wie weit sollte der Künstler
         beim zweiten "springe rückwärts" Baustein gehen?
+      4-5 Artist Patterns Free Play: Freies Spielen - versuche dein Glück beim Entwerfen
+        deines eigenen Musters!
       4-5 Bee Conditionals 2: "Mehr Wolken! \n\nÜberprüfe unter jeder Wolke, ob sie
         eine Blume versteckt, bevor du Nektar sammelst.  \n\nDenkt daran: Nicht alle
         Wolken verbergen das Gleiche!"
@@ -282,8 +296,19 @@ de-DE:
       4-5 Bee Debugging 9: Warum macht die Biene nicht genug Honig?
       4-5 Bee Debugging Assessment 1: 'Prüfung: Repariere den Code.'
       4-5 Bee Nested Loops 1: Benutze eine Schleife, um den gesamten Nektar zu sammeln.
+      4-5 Bee Nested Loops 2: 'Sammle den ganzen Nektar von allen Blumen. Benutze
+        eine verschachtelte Schleife. '
+      4-5 Bee Nested Loops 3: Sammle den gesamten Nektar, indem du den anfangs vorhandenen
+        Code in eine geschachtelte Schleife einschließt.
+      4-5 Bee Nested Loops 4: "Sammle den gesamten Nektar jeder Blüte und erzeuge
+        Honig bei jeder Honigwabe. \n\nBenutze eine verschachtelte Schleife. "
       4-5 Bee Nested Loops 5: Sammle den gesamten Nektar, indem du eine geschachtelte
         Schleife erzeugst.
+      4-5 Bee Nested Loops 7: Schließe diese Schleife in eine andere Schleife ein,
+        so dass eine geschachtelte Schleife entsteht, und sammle so den gesamten Nektar
+        der Blüten.
+      4-5 Bee Nested Loops Rows: Sammle Nektar aus den Blütenreihe! Benutze eine verschachtelte
+        Schleife.
       4-5 Maze 1: Guter Mensch. Ich Zombie. Muss ... zur ... Sonnenblume.
       4-5 Maze 10: Kannst du zur Sonnenblume gelangen, und dabei nur vier Bausteine
         benutzen?
@@ -318,6 +343,8 @@ de-DE:
       4-5 Nested Loops 5: Benutze den angegebenen Code in einer Schleife, um eine
         Windmühle zu erstellen.
       4-5 Nested Loops 9: Zeichne die Zähne im Mund des Alligators!
+      4-5 While Loops Assessment 1: Hier sind viele Löcher und Erdhaufen.  Hilf mir,
+        die Löcher zu füllen und die Haufen zu entfernen und den Boden wieder zu ebnen.
       AB_Debug_PlayLab3: Bewege den Ritter zu jeder der Flaggen. Wenn etwas schief
         läuft, suchen Sie nach den Fehlern!
       Alien Defender: 'Projekt Idee: Macht ein Verteidigungsspiel in Play Lab!'
@@ -462,8 +489,11 @@ de-DE:
       Dance Party 7_2019: Lasse den blauen Außerirdischen einen neuen Tanz beginnen,
         wenn der rosa Außerirdische ihn berührt. Verwenden Sie das Ereignis `wenn
         berührt`.
-      Dance_2019_01: Ziehen Sie den Block "Neuen Block erstellen" in den Arbeitsbereich,
-        und verbinden Sie ihn innerhalb des "Setup" -Blocks.
+      Dance_2019_01: 'Ziehen Sie den Block <xml><block type="Dancelab_makeAnonymousDanceSprite"
+        block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;,
+        &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml>
+        in den Arbeitsbereich, und verbinden Sie ihn innerhalb des <xml><block type="Dancelab_whenSetup2"
+        next_connection_disabled="true" block-text="setup"></block></xml> Blocks.'
       Dance_2019_02: Mit dem Block `wenn Pfeil nach oben  gedrückt ist` können Sie
         Code ausführen, wenn Sie Pfeil nach oben drücken. Lassen Sie die  Tänzerin
         klatschen, wenn Sie den Pfeil nach oben drücken, oder probieren Sie eine andere
@@ -1063,6 +1093,9 @@ de-DE:
         sammeln?
       course2_collector_prog_challenge2: Es gibt 20 Schätze zu finden. Sammle mindestens
         die Hälfte, um diese Herausforderung zu beenden!
+      course2_harvester_loops_challenge1: Sammle den gesamten Mais ein.
+      course2_harvester_loops_challenge2: Sammle den gesamten Salat ein. Vermeide
+        die Bäume und Felder!
       course2_maze_loops_challenge1: 'Versuche Schleifen zu verwenden, damit Scrat
         seine Eicheln findet! '
       course2_maze_programming_challenge1: '"Das Schwein versteckt sich! Kannst du
@@ -1445,6 +1478,9 @@ de-DE:
         kann.
       courseB_playlab_events4_2018: Hol dir den Drachen, um dieses Level zu beenden!
       courseB_playlab_events4_2019: Hol dir den Drachen, um dieses Level zu beenden!
+      courseB_starWars_prog2: Holt das ganze Metall.
+      courseB_starWars_prog2_2018: Holt das ganze Metall.
+      courseB_starWars_prog2_2019: Holt das ganze Metall.
       courseC19_playLab_EOC2: Nutze Ereignisse und Aktionen, um deinen Helden in Bewegung
         zu setzen. Komme zu den Zielen.
       courseC19_playLab_EOC5: Tolle Arbeit! Du hast alle grundlegenden Komponenten
@@ -1458,6 +1494,27 @@ de-DE:
         der Hund (Figur 1) sich zu Olivia, der Katze hinbewegt?
       courseC_PlayLab_eventsA_embed_2019: Lasst uns ein Spiel spielen. Erreiche 5
         Punkte, indem du den Pinguin auf den Oktopus bewegst!
+      courseC_PlayLab_eventsFP: Erstelle deine eigene Geschichte. Wenn du fertig bist,
+        klicke auf "Fertig stellen", um es mit Freunden zu teilen. Siehe Geschichtenideen
+        in den Hinweisen.
+      courseC_PlayLab_eventsFP_2018: Erstelle deine eigene Geschichte. Wenn du fertig
+        bist, klicke auf "Fertig stellen", um es mit Freunden zu teilen. Siehe Geschichtenideen
+        in den Hinweisen.
+      courseC_PlayLab_eventsFP_2019: Erstelle deine eigene Geschichte. Wenn du fertig
+        bist, klicke auf "Fertig stellen", um es mit Freunden zu teilen. Siehe Geschichtenideen
+        in den Hinweisen.
+      courseC_PlayLab_events_challenge1: "Benutze einen neuen Block, damit sich Waddles
+        automatisch zum Start zurückbewegt, wenn er in den Dinosaurier läuft und einen
+        Punkt erzielt. \nSpiele das Spiel und bewege die Waddles mit den Pfeilen,
+        bis du genug Punkte hast."
+      courseC_PlayLab_events_challenge1_2018: "Benutze einen neuen Block, damit sich
+        Waddles automatisch zum Start zurückbewegt, wenn er in den Dinosaurier läuft
+        und einen Punkt erzielt. \nSpiele das Spiel und bewege die Waddles mit den
+        Pfeilen, bis du genug Punkte hast."
+      courseC_PlayLab_events_challenge1_2019: "Benutze einen neuen Block, damit sich
+        Waddles automatisch zum Start zurückbewegt, wenn er in den Dinosaurier läuft
+        und einen Punkt erzielt. \nSpiele das Spiel und bewege die Waddles mit den
+        Pfeilen, bis du genug Punkte hast."
       courseC_artist_loop1_2018: Fügen wir etwas Pep hinzu mit einem `Set Pattern`
         Baustein.
       courseC_artist_loop1_2019: Fügen wir etwas Pep hinzu mit einem `Set Pattern`
@@ -1551,6 +1608,15 @@ de-DE:
         um diese Herausforderung zu beenden!
       courseC_data wizard: "Drücke \"Ausführen\". \nDer Zauberer lässt Tiere erscheinen.
         \n\nZähle sie. \nWas fällt dir auf?"
+      courseC_harvester_loops_challenge1a: Sammle den gesamten Mais ein.
+      courseC_harvester_loops_challenge1a_2018: Sammle den gesamten Mais ein.
+      courseC_harvester_loops_challenge1a_2019: Sammle den gesamten Mais ein.
+      courseC_harvester_loops_challenge2: Sammle den gesamten Salat ein. Vermeide
+        die Bäume und Felder!
+      courseC_harvester_loops_challenge2_2018: Sammle den gesamten Salat ein. Vermeide
+        die Bäume und Felder!
+      courseC_harvester_loops_challenge2_2019: Sammle den gesamten Salat ein. Vermeide
+        die Bäume und Felder!
       courseC_maze_debugging9_2019: Verwende die Bausteine in der Toolbox, um Ihr
         Programm zu erstellen. Bring den Vogel zum Schwein.
       courseC_maze_loops_challenge1a: 'Versuche Schleifen zu verwenden, damit Scrat

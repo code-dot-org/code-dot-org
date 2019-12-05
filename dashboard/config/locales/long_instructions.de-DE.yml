@@ -192,6 +192,8 @@ de-DE:
         Was für eine süße Herausforderung!
 
         Beseitige den/die Fehler, um den gesamten Nektar zu sammeln.
+      2-3 Bee Functions 2: "Funktionen sind Programm-Bausteine, die eine Aufgabe ausführen.
+        \n\nVerwende die „hohle 5“- Funktion, um gleichzeitig 5 mal Nektar zu holen."
       2-3 Bee Functions Assessment 2: "**Prüfung:** Erzeuge eine Funktion, mit der
         man sich drehen, vorwärts bewegen und 3 mal Honig erzeugen kann. Anschließend
         lasse die Biene dahin zurückkehren wo sie angefangen hat und drehe um."
@@ -215,6 +217,10 @@ de-DE:
         du den gesamten Nektar mit so wenigen Bausteinen wie möglich sammeln?"
       2-3 Bee Loops 7: Füge diese Bausteine in eine Schleife ein, um Nektar von jeder
         Blüte zu sammeln?
+      2-3 Bee Loops 8: |-
+        Benutze die „Solange Nektar“- Schleife, um den ganzen Nektar zu sammeln.
+
+        Diese Schleife wird solange durchlaufen, wie die Bedingung wahr ist - in diesem Fall: `Nektar > 0`.
       2-3 Maze 1: 'Kannst du mir helfen, das böse Schwein zu fangen? Klinke ein paar
         `bewege vorwärts` Bausteine unter dem `Wenn ausführen` Baustein ein und drücke
         auf "Ausführen". '
@@ -233,6 +239,13 @@ de-DE:
         Schleifen, um mich mit den wenigsten Schlaufen zur Sonnenblume zu bringen."
       2-3 Maze Loops Assessment 1: "**Herausforderung:** Bringe mich mit nur 5 Bausteinen
         zur Sonnenblume! "
+      4-5 Artist 1: 'Hilf mir, meine Box fertig zu zeichnen. (Jede Linie ist 300 Pixel
+        lang) '
+      4-5 Artist 2: Baue diesen Code in eine Schleife ein um so das Quadrat zu vervollständigen.
+      4-5 Artist 3: |-
+        Dieses rechteckige Blumenbeet hat einen Umfang von 600. Die lange Seite hat eine Länge von 200.
+
+        Zeichne das Rechteck mit so wenigen Bausteinen wie möglich.
       4-5 Artist Free Draw 1: Freies Zeichnen!  Zeichne, was deine Inspiration dir
         eingibt.
       4-5 Artist Patterns 11: Wie oft muss die Schleife durchlaufen werden, damit
@@ -242,9 +255,15 @@ de-DE:
         sich jetzt überdecken. Versuche es mit einer Änderung des ersten "springe
         rückwärts" Bausteins von 100 auf 50 (halb so weit). Wie weit sollte der Künstler
         beim zweiten "springe rückwärts" Baustein gehen?
+      4-5 Artist Patterns Free Play: Freies Spielen - versuche dein Glück beim Entwerfen
+        deines eigenen Musters!
       4-5 Bee Conditionals 2: "Mehr Wolken! \n\nÜberprüfe unter jeder Wolke, ob sie
         eine Blume versteckt, bevor du Nektar sammelst.  \n\nDenkt daran: Nicht alle
         Wolken verbergen das Gleiche!"
+      4-5 Bee Nested Loops 2: "Sammle den ganzen Nektar von allen Blumen. \n\nBenutze
+        eine verschachtelte Schleife. "
+      4-5 Bee Nested Loops 4: "Sammle den gesamten Nektar jeder Blüte und erzeuge
+        Honig bei jeder Honigwabe. \n\nBenutze eine verschachtelte Schleife. "
       4-5 Maze 7: "Bringe den Zombie auf schnellstem Weg zur Sonnenblume. \nKannst
         Du die Aufgabe mit weniger als 11 Blöcken lösen?"
       4-5 Maze 9: |-
@@ -1122,6 +1141,49 @@ de-DE:
 
         -   Wo in App Lab können Sie die Benutzeroberfläche Ihrer App gestalten?
         -   Welche Arten von Elementen können Sie Ihrer App hinzufügen?
+      CSDU6 - UI and Inputs - dropdown setText: |-
+        # setText und getText
+
+        Häufig wirst du den Text eines Oberflächenelements abrufen und damit den Text eines anderen Elements auf dem Bildschirm festlegen wollen. Kannst du den Text aus der Dropdown-Liste holen, wenn der Benutzer eine neue Eingabe auswählt, und damit den Text des Labels "choiceDisplay" einstellen.
+      CSDU6 - UI and Inputs - get set with text input: |-
+        # setText und getText
+
+        Du hast bereits gesehen, wie man getText und setText verwendet. Kannst du dafür sorgen, dass diese App den Text erhält, den der Benutzer eingegeben hat, sobald er die Eingabetaste gedrückt hat, und ihn im Textfeld unten anzeigen?
+
+        _Tipp: Das Ereignis "change" wird ausgelöst, wenn der Benutzer auf "enter" in einem Feld klickt. Benutze einen Event-Handler für die Texteingabe, der auf das Ereignis "change" achtet._
+      CSDU6 - UI and Inputs - getNumber: |-
+        # getNumber
+
+        **Starter Code:** Dieses Programm erstellt einen einfachen Taschenrechner, aber **es stimmt etwas nicht mit ihm. Versuche 2 + 2. einzusetzen.**
+
+        Wir können dies beheben, indem wir `getNumber()` anstelle von `getText()` verwenden. Kannst du das Programm reparieren, indem du `getText()` zu `getNumber()` änderst?
+      CSDU6 - UI and Inputs - getNumber practice: |-
+        # getNumber
+
+        **Startcode:** Das Programm versucht, die Wertanzeige zu aktualisieren, wenn sich der Schiebereglerwert ändert, setzt aber immer den Wert auf 10.
+
+        Kannst du `getNumber()` verwenden, um den Wert des Schiebereglers abzurufen und die valueDisplay bei Änderungen zu aktualisieren?
+      CSDU6 - UI and Inputs - setProperty: |-
+        # setProperty Hintergrundfarbe
+
+        Ändere die Hintergrundfarbe einer Schaltfläche jedes Mal, wenn sie mit `setProperty()` angeklickt wird, auf eine neue Zufallsfarbe.
+      CSDU6 - UI and Inputs - setProperty Image: "# setProperty image\n\n**Hinweis:**
+        Dieses Level beginnt im Designmodus.\n\nEs ist ein Bildelement für dich eingerichtet,
+        das jedoch nicht angezeigt wird, wenn du den Designmodus verlässt, da ihm
+        nicht mitgeteilt wurde, welches Bild angezeigt werden soll. \n\n-   Benutze
+        den Befehl `setProperty()`, um das Bild des UI Image Elements auf dem Bildschirm
+        einzustellen."
+      CSDU6 - UI and Inputs - setProperty first level: |-
+        # setProperty
+
+        **Starter Code:** Es gibt einen Aufruf von `setProperty()`, der die Textfarbe auf blau setzt, wenn du das Programm ausführst.
+
+        Kannst du weitere Aufrufe zu `setProperty()` hinzufügen, die andere Dinge am Text ändern, wenn du das Programm ausführst? Probiere, mindestens 3 weitere Dinge zu ändern.
+      CSDU6 - UI and Inputs - setScreen: "# setScreen\n\nBeginnen wir mit einem Setter,
+        den Sie vor `setScreen()` verwendet haben. \n\n-   Sorge dafür, dass die Schaltfläche
+        \"About Me\" auf der Startseite zur Seite \"About Me\" führt.\n-   Die Schaltfläche
+        Zurück auf der Seite Über mich soll anschließend noch dafür sorgen, dass sie
+        zur Startseite gelangen."
       CSDU6 making new arrays_2019: |-
         # Making New Arrays
 
@@ -1399,7 +1461,7 @@ de-DE:
       Dance_Party_02: |-
         Lasse den Elch tanzen!
 
-        Ziehe den Baustein <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> in den Arbeitsbereich. Verbinde ihn unterhalb des Bausteins <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Dein Tänzer sollte nach dem vierten Takt mit einem neuen Tanzschritt beginnen.
+        Ziehe den Baustein <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> in den Arbeitsbereich. Verbinde ihn unterhalb des Bausteins <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Dein Tänzer sollte nach dem vierten Takt mit einem neuen Tanzschritt beginnen.
 
         **Takte** sind die zeitliche Struktur von Musik. In diesem Tutorial ist ein Takt vier Schläge lang.
       Dance_Party_03: |-
@@ -1544,14 +1606,13 @@ de-DE:
         -   Füge eine weitere Gruppe von Tänzern hinzu
         -   Blende Tänzer mithilfe der Pfeiltasten ein- und aus
         -   Blende alle der Tänzer aus und wechsle zu einem spannenden Hintergrundeffekt
-      Dance_Party_extras_visible_2019: |-
-        # Wo würden sie hingehen?
-
-        Dieser Tanz blendet zwei verschiedene Gruppen von Tänzern ein und aus. Sieh ihn dir an und versuche dann, dein eigenes Flair hinzuzufügen.
-
-        -   Füge eine weitere Gruppe von Tänzern hinzu
-        -   Blende Tänzer mithilfe der Pfeiltasten ein- und aus
-        -   Blende alle der Tänzer aus und wechsle zu einem spannenden Hintergrundeffekt
+      Dance_Party_extras_visible_2019: "# Viertelnoten\n\nDie meisten unserer Tänze
+        haben ganze Takte verwendet, aber jeder Takt besteht aus 4 Viertelnoten. Dieser
+        Tanz verwendet [blockly block][0], damit die Tänzer nach dem fünften Takt
+        auf jede Viertelnote klatschen. \n\nVersuchen Sie, die Zahlen im Block zu
+        ändern, um zu sehen, wie er den Tanz verändert. \n\n-   Experimentieren Sie
+        mit anderen Notenlängen (z.B. 0,5 für eine halbe Note oder 0,125 für eine
+        Achtelnote). \n-   Fügen Sie weitere Ereignisse hinzu."
       Escape Room Example: |-
         # Room Escape
 
@@ -2148,6 +2209,9 @@ de-DE:
         einsammeln?
       course2_collector_prog_challenge2: Es gibt **20** Schätze in dieser Höhle zu
         finden. Sammle mindestens die Hälfte, um diese Herausforderung zu beenden!
+      course2_harvester_loops_challenge1: Sammle den gesamten Mais ein.
+      course2_harvester_loops_challenge2: Sammle den gesamten Salat ein. Vermeide
+        die Bäume und Felder!
       course2_maze_programming_challenge1: '"Das Schwein versteckt sich! Kannst du
         mir helfen, mich zurechtzufinden?"\_'
       course2_maze_programming_challenge2: Manchmal gibt es mehr als eine Lösung für
@@ -2896,6 +2960,12 @@ de-DE:
         Sammle mindestens **10** ein um diese Herausforderung zu beenden!
       courseC_data wizard: Drücke "Ausführen". Der Zauberer lässt Tiere erscheinen.
         Zähle sie. Was fällt dir auf?
+      courseC_harvester_loops_challenge2: Sammle den gesamten Salat ein. Vermeide
+        die Bäume und Felder!
+      courseC_harvester_loops_challenge2_2018: Sammle den gesamten Salat ein. Vermeide
+        die Bäume und Felder!
+      courseC_harvester_loops_challenge2_2019: Sammle den gesamten Salat ein. Vermeide
+        die Bäume und Felder!
       courseC_maze_programming1: Für diese Aufgabe musst du alle Blöcke zusammensetzen,
         auf 'Ausführen' klicken und zusehen, wie es läuft!
       courseC_maze_programming1_2018: Für diese Aufgabe musst du alle Blöcke zusammensetzen,

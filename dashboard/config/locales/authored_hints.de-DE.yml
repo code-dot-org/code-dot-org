@@ -171,6 +171,19 @@ de-DE:
           behandeln wie eine lila Blume!
         2-3_Bee_Conditionals_14_b: Wenn die rote Blume lila wäre, könntest du herausfinden,
           wie man eine zusätzliche `Repeat`-Schleife verwendet, um den Code zu reduzieren?
+        2-3_Bee_Conditionals_14_c: |-
+          Versuche dies in zwei getrennte Teile aufzuteilen:
+
+          ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
+
+          1.  Sammle Nektar 3 mal.
+              -   5 mal vorwärts bewegen
+              -   Überprüfe, ob Nektar vorhanden ist, wenn ja: sammle ihn.
+              -   Links abbiegen
+
+          2.  Mache Honig
+              -   Einmal vorwärts bewegen
+              -   Mache zweimal Honig
       2-3 Bee Conditionals 15:
         2-3_Bee_Conditionals_15_a: 'Denke daran: Violette Blüten haben entweder 0
           oder 1 Nektar und sie können sich bei jedem Start des Programmes ändern.'
@@ -192,6 +205,14 @@ de-DE:
       2-3 Bee Debugging 4:
         2-3_Bee_Debugging_4_a: Macht die Biene etwas das keinen Sinn macht? Was passiert
           wenn du diesen Baustein abänderst?
+      2-3 Bee Functions 4:
+        2-3_Bee_Functions_4_a: Du musst keine Schleife mit einer Funktion verwenden.
+          Versuche die Bewegung mittels der Funktion, dann einzeln bewegen und die
+          Funktion erneut zu verwenden.
+      2-3 Bee Functions 6:
+        2-3_Bee_Functions_6_a: Du musst keine Schleife mit einer Funktion verwenden.
+          Versuche die Bewegung mittels der Funktion, dann einzeln bewegen und die
+          Funktion erneut zu verwenden.
       2-3 Bee Loops 2:
         2-3_Bee_Loops_2_a: Du solltest mit vier Bausteinen innerhalb deiner Schleife
           enden.
@@ -271,6 +292,13 @@ de-DE:
           Ein Kreis hat 360 Grad!
 
           So oft musst du diesen Block (um 1 Grad zu drehen) wiederholen damit der Kreis komplett ist!
+      4-5 Artist Assessment 1:
+        4-5_Artist_Assessment_1_a: Du musst nur das äußere Dreieck zeichnen, um dieses
+          Rätsel zu lösen.
+      4-5 Bee Nested Loops Rows:
+        4-5_Bee_Nested_Loops_Rows_a: Versuche dieses Rätsel wie ein langes Rechteck
+          zu behandeln, in dem sich die Biene vorwärts bewegen muss, und biege dann
+          mehrmals nach links ab, um den Weg abzuschließen.
       4-5 Maze 10:
         4-5_Maze_10_a: |-
           Wenn Du Schwierigkeiten dabei hast die Aufgabe mithilfe der Schleifen zu lösen, dann versuche es auf herkömmlichen Wege und suche dann nach sich wiederholenden Bausteinen.
@@ -294,6 +322,8 @@ de-DE:
           Suche nach sich wiederholenden Teilen in Deinem Code und setze diese in eine Schleife!
       4-5 Nested Loops 12:
         4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
+      4-5 While Loops 8:
+        4-5_While_Loops_8_a: Jedes Element benötigt eine eigene `while`-Schleife.
       Course 4 SCF 1:
         Course_4_SCF_1_a: Jedes Hexagon hat 40 Pixel lange Seiten.
       Course 4 SCF 1a:
@@ -524,12 +554,9 @@ de-DE:
 
           Ändern Sie den Hintergrundeffekt an verschiedenen Stellen des Songs, indem Sie den neuen Block unter den <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"Takte"</title></block></xml>-Ereignissen verbinden.
       Dance_Party_05:
-        validation: |-
-          **Wie bestehe ich dieses Level?**
-
-          -   Dein Tänzer muss mindestens 4 verschiedene Tanzbewegungen ausführen, bevor das Level endet.
-
-          _Dieses Level endet nach 12 Takten._
+        validation: "Wie kann ich zur nächsten Stufe gelangen? \n\nIhr Tänzer sollte
+          mindestens 4 verschiedene Tanzbewegungen durchlaufen, bevor die Stufe zu
+          Ende geht. \n\nDiese Stufe endet nach 12 Takten"
       Dance_Party_06:
         validation: |-
           **Wie schaffe ich diesen Level?**
@@ -964,6 +991,16 @@ de-DE:
         courseC_maze_debugging_challenge1_c: Wenn du feststeckst, kannst du immer
           wieder von vorne anfangen, oder den ganzen Code entfernen und deinen eigenen
           Weg finden!
+      course3_maze_debugging_challenge2:
+        courseC_maze_debugging_challenge2_a: Eine Möglichkeit, dies zu lösen, besteht
+          darin, zwischen den Kurven weitere Schritte vorwärts zu machen.
+        courseC_maze_debugging_challenge2_b: Wenn du festsitzt, kannst du jederzeit
+          von vorne anfangen oder den ganzen Code entfernen und deinen eigenen Weg
+          finden!
+        courseC_maze_debugging_challenge2_c: |-
+          Es gibt zwei verschiedene Wege auf denen du mit "gehe vorwärts" Dich bewegen kannst, und nur vier Kurven. Wenn du einen Weg findest, den Block "Wiederholung" zu verwenden, kann es noch mehr geben!
+
+          ![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)
       courseA_artist_loops2:
         courseA_artist_loops2_a: Du weißt nicht, wie man Linien zeichnet? Beginne
           damit, Blöcke zum <xml><block type="when_run"/></xml> Block anzufügen um
@@ -2181,6 +2218,24 @@ de-DE:
         courseB_maze_seq7_a: Füge 1 Block hinzu, um Scrat zur Eichel zu bewegen.
       courseB_maze_seq8:
         courseB_maze_seq8_b: Es gibt zwei Möglichkeiten um dieses Puzzle zu lösen!
+      courseB_maze_seq_challenge2:
+        courseB_maze_seq_challenge2_b: Ordne die Bausteine neu an und nimm den Treppenmusterweg.
+      courseB_maze_seq_challenge2_2018:
+        courseB_maze_seq_challenge2_b: Ordne die Bausteine neu an und nimm den Treppenmusterweg.
+      courseB_maze_seq_challenge2_2019:
+        courseB_maze_seq_challenge2_b: Ordne die Bausteine neu an und nimm den Treppenmusterweg.
+      courseC_PlayLab_events9:
+        courseC_PlayLab_events9_c: Du kannst mehr als ein Ereignis `wenn Schauspieler
+          berührt` gleichzeitig in deinem Arbeitsbereich haben, so dass du nicht das
+          erste löschen musst!
+      courseC_PlayLab_events9_2018:
+        courseC_PlayLab_events9_c: Du kannst mehr als ein Ereignis `wenn Schauspieler
+          berührt` gleichzeitig in deinem Arbeitsbereich haben, so dass du nicht das
+          erste löschen musst!
+      courseC_PlayLab_events9_2019:
+        courseC_PlayLab_events9_c: Du kannst mehr als ein Ereignis `wenn Schauspieler
+          berührt` gleichzeitig in deinem Arbeitsbereich haben, so dass du nicht das
+          erste löschen musst!
       courseC_PlayLab_eventsFP_2019:
         idea1: |-
           Brauchst du eine Idee?
@@ -2194,6 +2249,30 @@ de-DE:
           **Ein Abenteuer erleben** - Ändere den Hintergrund, dann lasse die Charaktere darüber reden, wo sie sich gerade befinden.
 
           <img src= "https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif" style="width: 200px">
+      courseC_PlayLab_events_challenge1:
+        courseC_PlayLab_events_challenge_a: |-
+          Du kannst diesen Block verwenden, um Schauspieler an verschiedene Orte im Spielraum zu bewegen.
+
+          <xml> <block type="studio_setSpritePosition">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">12</title>
+            </block></xml>
+      courseC_PlayLab_events_challenge1_2018:
+        courseC_PlayLab_events_challenge_a: |-
+          Du kannst diesen Block verwenden, um Schauspieler an verschiedene Orte im Spielraum zu bewegen.
+
+          <xml> <block type="studio_setSpritePosition">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">12</title>
+            </block></xml>
+      courseC_PlayLab_events_challenge1_2019:
+        courseC_PlayLab_events_challenge_a: |-
+          Du kannst diesen Block verwenden, um Schauspieler an verschiedene Orte im Spielraum zu bewegen.
+
+          <xml> <block type="studio_setSpritePosition">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">12</title>
+            </block></xml>
       courseC_artist_loops1b_2019:
         courseC_artist_loops1b_a: |-
           Dies ist der erste Baustein, den du benötigst:
@@ -2344,6 +2423,15 @@ de-DE:
               </next>
             </block>
           </xml>
+      courseC_artist_loopsPre1a:
+        courseC_artist_loopsPre1a_a: Denken Sie daran, den `Drehe`-Baustein in die
+          Schleife einzuhängen.
+      courseC_artist_loopsPre1a_2018:
+        courseC_artist_loopsPre1a_a: Denken Sie daran, den `Drehe`-Baustein in die
+          Schleife einzuhängen.
+      courseC_artist_loopsPre1a_2019:
+        courseC_artist_loopsPre1a_a: Denken Sie daran, den `Drehe`-Baustein in die
+          Schleife einzuhängen.
       courseC_artist_loopsPrePre1a:
         courseC_artist_loopsPrePre1a_a: |-
           Den ersten Block, den du brauchen wirst, ist:
@@ -2618,7 +2706,10 @@ de-DE:
           auf jedem Feld verwenden.
         courseC_collector_prog_challenge1_b: Hast du dich verlaufen? Versuche diesen
           Weg zu nehmen um die Aufgabe zu lösen!
+      courseC_harvester_loops_challenge1a:
+        courseC_harvester_loops_challenge1_a: Das ist ohne Schleifen zu schwer!
       courseC_harvester_loops_challenge1a_2018:
+        courseC_harvester_loops_challenge1_a: Das ist ohne Schleifen zu schwer!
         courseC_harvester_loops_challenge1_c: |-
           Nachdem du die ersten beiden Male Mais gepflückt hast, kannst du eine verschachtelte Schlaufe verwenden, um die nächsten acht Stücke auszuwählen.
 
@@ -2643,6 +2734,8 @@ de-DE:
                     </block>
                   </statement>
                   </block></xml>
+      courseC_harvester_loops_challenge1a_2019:
+        courseC_harvester_loops_challenge1_a: Das ist ohne Schleifen zu schwer!
       courseC_maze_debugging2:
         courseC_maze_debugging2_c: Du findest nicht heraus, was schief läuft? Führe
           den Code ein paar mal aus um zu sehen, was passiert.

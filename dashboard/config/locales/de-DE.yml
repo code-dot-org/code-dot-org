@@ -435,8 +435,10 @@ de:
       gumball: Die fantastische Welt von Gumball
       iceage: Ice Age
       infinity: Unendlichkeit
+      makerlab: Maker Toolkit
       minecraft_adventurer: Minecraft Abenteurer
       minecraft_aquatic: Minecraft Aquatic
+      minecraft_codebuilder: 'Minecraft: Code Connection'
       minecraft_designer: Minecraft
       minecraft_hero: Minecraft Hero
       playlab: Spielelabor
@@ -521,7 +523,12 @@ de:
     create_personal_login_link_account: Sie können stattdessen auch die Verbindung
       zu einem persönlichen Konto im Abschnitt "Verknüpfte Konten verwalten" wählen.
     enter_new_login_info: Gib deine neuen Login-Informationen ein
+    confirm_secret_words: Bestätige, dass du es bist, indem du deine aktuellen Geheimwörter
+      eingibst
+    parent_email_label: E-Mail der Eltern/Vormund (optional)
     parent_email_hint: "(dies kann für die Passwort-Wiederherstellung verwendet werden)"
+    enter_parent_email: Gib die E-Mail-Adresse deines Elternteils oder Erziehungsberechtigten
+      ein (zur Wiederherstellung des Passworts)
     update: Konto aktualisieren
     account_successfully_updated: Konto erfolgreich aktualisiert.
     update_email: Aktualisieren
@@ -569,6 +576,8 @@ de:
     test_videos_help: Teste unseren neuen Video-Player an deiner Schule
     try_beta_courses: Neu! Probieren Sie unsere Beta-Kurse für Grundschüler
     use_as_teacher: Verwenden Sie diese Seite als Lehrer
+    heading_elementary_markdown: "## 20-stündige Kurse mit den \n\n# Grundlagen der
+      Informatik (für alle Altersstufen)"
     your_gallery: Galerie
     no_primary_course: Probiere einen Code-Studio-Kurs aus
     choose_next_course: Wähle einen der Code-Studio-Kurse unten aus
@@ -596,6 +605,7 @@ de:
     male: Männlich
     female: Weiblich
     non_binary: Nicht-binär
+    not_listed: Bevorzugter Termin nicht aufgeführt
     none: Möchte ich nicht beantworten
   user_type:
     student: Schüler
@@ -1052,6 +1062,10 @@ de:
     not_saved: Nicht gespeichert
     view_all: Meine Projekte ansehen
     edit_project: Projekt bearbeiten
+    sharing_disabled: Sorry, dieses Projekt ist nicht für die Freigabe verfügbar.
+      Wenn es sich um Ihr Projekt oder das Projekt eines Ihrer Schüler handelt, melden
+      Sie sich bitte <a href='https://studio.code.org/users/sign_in'>bei Ihrem Konto</a>
+      an, um das Projekt zu sehen.
     abuse:
       tos: Dieses Projekt wurde wegen Verstoßes gegen die <a href='http://code.org/tos'>
         Nutzungsbedingungen </a> von Code.org gemeldet und kann nicht mit anderen
@@ -1111,6 +1125,7 @@ de:
     csf_jigsaw: Puzzle
     csf_loops: Schleifen
     csf_events: Ereignisse
+    csf_online_safety: Online-Sicherheit
     csf_binary: Binärdatei
     csf_conditionals: Bedingungen
     csf_nested_loops: Verschachtelte Schleifen
@@ -1121,14 +1136,22 @@ de:
     csf_warmup: Aufwärmübung
     csd1_1: 'Kapitel 1: Der Problemlösungsprozess'
     csd1_2: 'Kapitel 2: Computer und Problemlösung'
+    csd2_1: 'Kapitel 1: Webinhalte und HTML'
+    csd2_2: 'Kapitel 2: Styling und CSS'
     csd3_1: 'Kapitel 1: Bilder und Animationen'
     csd3_2: 'Kapitel 2: Erstellen von Spielen'
+    csd4_1: 'Kapitel 1: Benutzerzentriertes Design'
+    csd4_2: 'Kapitel 2: App Prototyping'
     csd5_1: 'Kapitel 1: Darstellung von Informationen'
     csd5_2: 'Kapitel 2: Datenprobleme lösen'
     csd6_1: 'Kapitel 1: Programmierung mit Hardware'
+    csp1_1: 'Kapitel 1: Darstellung und Übertragung von Informationen'
     cspSurvey: Umfrage
+    csp_postap_1: 'Kapitel 1: Daten manipulieren und visualisieren'
+    csp_postap_2: 'Kapitel 2: Apps und Datenbanken'
     csp2_1_2018: 'Einheit 2: Digitale Informationen'
     csp3_1_2018: 'Einheit 3: Einführung in die Programmierung'
+    csp4_1_2018: 'Lektion 4: Big Data und Datenschutz'
     csp_variables: Variablen
     csp_conditionals: Bedingungen
     csp_functions: Funktionen
@@ -1144,7 +1167,10 @@ de:
     time4cs_c5: Bürger beeinflussen den Wandel in den Everglades
     time4cs_c6: Bedingungen (Überprüfung)
     k5_getting_started: Erste Schritte
+    k5_csf_intro: Lernen Sie die CS Fundamentals Kurse kennen
+    k5_coding_concepts: Kodierungskonzepte und Unterrichtsstrategien
     k5_next_steps: Nächste Schritte
+    k5_basic_concepts: Grundlegende Kodierungskonzepte und Unterrichtsmethoden
   external_links:
     disclaimer: Haftungsausschluss
     leaving_domain: |-
@@ -1224,6 +1250,9 @@ de:
     Lehrer, in welcher Lerneinheit du sein solltest.
   no_script_access_student: Du hast keinen Zugriff auf diese Lerneinheit. Bitte frag
     Deinen Lehrer, auf welcher Lerneinheit du sein solltest.
+  no_script_access_teacher: Sie haben keinen Zugriff auf dieses Gerät. Wenn Sie glauben,
+    dass Sie Zugang zu diesem Gerät haben sollten, schreiben Sie bitte an support@code.org,
+    damit wir die Situation beheben können.
   return_unit_overview: Gehe zur Übersicht der Einheit
   return_course_overview: Gehe zur Übersicht
   view_all_units: Alle Einheiten anzeigen
@@ -1241,14 +1270,32 @@ de:
       school_country: Land der Schule
       ages: Welches Alter unterrichten Sie in diesem Jahr?
       subjects: Welches Fach / welche Fächer unterrichten Sie in diesem Jahr?
+      resources: Welche der folgenden informatischen Bildungsressourcen nutzen Sie?
+      robotics: Welche der folgenden Robotik-Ressourcen verwenden Sie?
+      workshop_organizer: Workshop-Veranstalter(in)
+      workshop_facilitator: Workshop-Moderator(in)
+      workshop_course: Workshop-Kurs
       email_opt_in: Dürfen wir Ihnen per E-Mail Informationen über das internationale
         Programm von Code.org, Updates unserer Kurse oder andere Neuigkeiten aus der
         Informatik zukommen lassen?
+      legal_opt_in: 'Mit dem Absenden dieses Formulars erklären Sie sich damit einverstanden,
+        dass Code.org Informationen darüber, wie Sie Code.org und die Ressourcen für
+        professionelles Lernen nutzen, an die internationalen Partner von Code.org
+        in Ihrem Land, Schulbezirk und an Moderatoren weitergibt. Wir werden Ihre
+        Kontaktinformationen, welche Kurse/Einheiten Sie verwenden, an diese Partner
+        weitergeben und Daten über Ihre Kurse sammeln. Dazu gehören die Anzahl der
+        Schüler in Ihrem Unterricht, die demografische Aufteilung Ihres Klassenzimmers
+        sowie der Name Ihrer Schule und Ihres Bezirks. Wir werden keine Informationen
+        über einzelne Schüler an unsere Partner weitergeben: Alle Schülerinformationen
+        werden anonymisiert und zusammengefasst. Unsere internationalen Partner und
+        Moderatoren sind vertraglich verpflichtet, diese Informationen mit der gleichen
+        Vertraulichkeit wie Code.org zu behandeln.'
     form_entries:
       gender:
         male: Männlich
         female: Weiblich
         non_binary: Nicht-binär
+        not_listed: Bevorzugter Termin nicht aufgeführt
         none: Möchte ich nicht beantworten
       school_country:
         canada: Kanada
@@ -1316,6 +1363,18 @@ de:
         eine Email schreiben oder im [Lehrerforum](%{teacher_forum_url}) posten!
     logged_out:
       heading: Vielen Dank für Ihr Interesse am Professional Learning Program!
+      body: Um zu beginnen, müssen Sie zuerst in Ihr Code.org-Konto eingeloggt sein.
+        Wenn Sie weitere Informationen über das Programm wünschen, bevor Sie Ihre
+        Anwendung starten, lesen Sie bitte die <a href="%{url}">Übersicht über das
+        Professional Learning Programm</a>.
+    not_teacher:
+      more_markdown: Wenn Sie vor dem Start Ihrer Anwendung weitere Informationen
+        über das Programm wünschen, lesen Sie bitte die Übersicht [Professional Learning
+        Program overview](%{pl_overview}).
+    no_teacher_email:
+      body_markdown: Dein Konto hat keine E-Mail-Adresse. Bitte besuchen Sie Ihre
+        [Kontoeinstellungen](%{user_registration}), um Ihre E-Mail-Adresse hinzuzufügen,
+        bevor Sie dieses Formular ausfüllen.
   courses_category: Vollständige Kurse
   cookie_banner:
     message: Indem Sie unsere Website weiter benutzen oder auf "Ich stimme zu" klicken,

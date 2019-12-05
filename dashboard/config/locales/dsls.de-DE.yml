@@ -1239,7 +1239,7 @@ de-DE:
 
           Für Teil 2 wirst du Dein eigenes Projekt erstellen. Es gibt hier keine Rätsel - stattdessen gibt es eine Reihe von Projekten, die verschiedene Wege aufzeigen, komplexere Tanzpartys zu gestalten.
 
-          Du kannst diese Stufen _in beliebiger Reihenfolge_ durchführen. Springe herum, um zu sehen, wie etwas in einer früheren Ebene gemacht wurde, oder kombiniere Konzepte zwischen den Projekten. Probiere alle aus, wähle Deine Favoriten und verbringe Deine Zeit damit, dieses Projekt zu ergänzen, um es zu Deinem eigenen zu machen.
+          Du kannst diese Stufen in beliebiger Reihenfolge durchführen. Springe herum, um zu sehen, wie etwas in einem früheren Level gemacht wurde, oder kombiniere Konzepte aus verschiedenen Projekten. Probiere alle aus, wähle Deine Favoriten und verbringe Deine Zeit damit, dieses Projekt zu erweitern, um es zu Deinem eigenen zu machen.
 
           <a class="btn btn-large btn-primary next-stage submitButton pull-right">Weiter</a>
 
@@ -3074,3 +3074,5 @@ de-DE:
         - text: Ich weiß es nicht.
           feedback: Laurel versucht Schätze einzusammeln an Stellen, wo kein Schatz
             ist, und das verursacht einen Fehler.
+      gradek1_activity_beNice:
+        title: Der Computer ist dein Freund
