@@ -251,7 +251,7 @@ zh-CN:
       CourseD_Dance_Party_03: 现在让舞者在 6 个小节后开始做新动作！
       CourseD_Dance_Party_04: 为程序添加背景效果。
       CourseD_Dance_Party_05: 使用其他新模块让舞者每 2 个小节变换动作。
-      CourseD_Dance_Party_06: 创建名为“backup\_dancer1”的伴舞，与猫一起跳舞。
+      CourseD_Dance_Party_06: 创建名为`backup_dancer1`的伴舞，与猫一起跳舞。
       CourseD_Dance_Party_08: 你能让两个伴舞的大小相同吗？
       CourseD_Dance_Party_09: 使用`设置色彩`模块，更改一个舞者的颜色。
       CourseD_Dance_Party_10: 使用`开始跟随`模块，让另一个舞者也对音乐做出响应。
@@ -303,7 +303,7 @@ zh-CN:
       Dance_Party_03: 现在让舞者在 6 个小节后开始做新动作！
       Dance_Party_04: 为程序添加背景效果。
       Dance_Party_05: 使用其他新模块让舞者每 2 个小节变换动作。
-      Dance_Party_06: 创建名为“backup\_dancer1”的伴舞，与猫一起跳舞。
+      Dance_Party_06: 创建名为`backup_dancer1`的伴舞，与猫一起跳舞。
       Dance_Party_08: 你能让两个伴舞的大小相同吗？
       Dance_Party_09: 使用`设置色彩`模块，更改一个舞者的颜色。
       Dance_Party_10: 使用`开始跟随`模块，让另一个舞者也对音乐做出响应。
@@ -1613,8 +1613,8 @@ zh-CN:
       courseD_bee_nestedLoops9_predict2: 酿蜂蜜。
       courseD_bee_nestedLoops9_predict2_2018: 酿蜂蜜。
       courseD_bee_nestedLoops9_predict2_2019: 酿蜂蜜。
-      courseD_bounce_events10s_2018: '把 "得分点" 块加到“当球击中”的事件上。将 '' 对手得分点 '' 模块加到“球错过球拍”的事件上。这样来创建这个游戏。 '
-      courseD_bounce_events10s_2019: '把 "得分点" 块加到“当球击中”的事件上。将 '' 对手得分点 '' 模块加到“球错过球拍”的事件上。这样来创建这个游戏。 '
+      courseD_bounce_events10s_2018: '把 `得分点` 块加到`当球击中`的事件上。将 '' 对手得分点 '' 模块加到`球错过球拍`的事件上。这样来创建这个游戏。 '
+      courseD_bounce_events10s_2019: '把 `得分点` 块加到`当球击中`的事件上。将 '' 对手得分点 '' 模块加到`球错过球拍`的事件上。这样来创建这个游戏。 '
       courseD_bounce_events11s_2018: '在所有需要新球的游戏里面加上"扔出新球" 模块。 '
       courseD_bounce_events11s_2019: '在所有需要新球的游戏里面加上"扔出新球" 模块。 '
       courseD_bounce_events12s_2018: 让这个游戏成为你自己的。你可以改变所有的视觉效果和规则。完成后, 单击 "完成", 让朋友在手机上试用您的游戏。

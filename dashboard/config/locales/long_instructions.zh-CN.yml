@@ -10644,7 +10644,7 @@ zh-CN:
 
         在这个游戏里，你会扮演小狗，要比小猫收集到更多的旗帜。用下方向键来控制小狗。当你玩完以后，点击`完成`。
       CourseD_Dance_Party_01: |-
-        _让我们开个舞会吧！_
+        _让我们开个舞会吧!_
 
         将“新建”模块拖到工作区，并关联到“设置”模块，创建您的第一个舞者。
 
@@ -10666,11 +10666,11 @@ zh-CN:
       CourseD_Dance_Party_05: |-
         使用其他新模块让舞者**每 2 个小节**变换动作！
 
-        \*\*选择“(下一步)”、“(上一步)”或“(随机)”，让舞者在代码每次运行时做不同的动作。
+        -   选择`(下一步)`、`(上一步)`或`(随机)`，让舞者在代码每次运行时做不同的动作。
       CourseD_Dance_Party_06: |-
         _我们需要更多舞者！_
 
-        创建名为“backup\_dancer1”的伴舞，与猫一起跳舞。
+        创建名为`backup_dancer1`的伴舞，与猫一起跳舞。
       CourseD_Dance_Party_08: |-
         每个舞者都有一系列控制其外观的 _属性设置_。
 
@@ -10838,7 +10838,7 @@ zh-CN:
         _要有创造力，玩得开心！_
       Dance_2019_10: 随着节奏律动吧！创建自己的舞蹈，并与朋友分享。
       Dance_Party_01: |-
-        _让我们开个舞会吧！_
+        _让我们开个舞会吧!_
 
         将“新建”模块拖到工作区，并关联到“设置”模块，创建您的第一个舞者。
 
@@ -10860,11 +10860,11 @@ zh-CN:
       Dance_Party_05: |-
         使用其他新模块让舞者**每 2 个小节**变换动作！
 
-        \*\*选择“(下一步)”、“(上一步)”或“(随机)”，让舞者在代码每次运行时做不同的动作。
+        -   选择`(下一步)`、`(上一步)`或`(随机)`，让舞者在代码每次运行时做不同的动作。
       Dance_Party_06: |-
         _我们需要更多舞者！_
 
-        创建名为“backup\_dancer1”的伴舞，与猫一起跳舞。
+        创建名为`backup_dancer1`的伴舞，与猫一起跳舞。
       Dance_Party_08: |-
         每个舞者都有一系列控制其外观的 _属性设置_。
 
@@ -13454,12 +13454,10 @@ zh-CN:
         _"继续！"_
 
         用你学过的知识来捡起所有的废金属！
-      courseD_artist_1_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_“嗨，我是阿伦达尔的爱莎，帮我画个图形吧。”_\n\n画一个边长50像素的六边形。
-        \ \n\n* * *\n\n要画这个六边形，你需要： \n\n-   向前移动**50**像素\n-   向右转**60**度\n-   \\-\n
-        \   一共重复**6**次"
-      courseD_artist_1_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_“嗨，我是阿伦达尔的爱莎，帮我画个图形吧。”_\n\n画一个边长50像素的六边形。
-        \ \n\n* * *\n\n要画这个六边形，你需要： \n\n-   向前移动**50**像素\n-   向右转**60**度\n-   \\-\n
-        \   一共重复**6**次"
+      courseD_artist_1_2018: "![][0] _“嗨，我是阿伦达尔的爱莎，帮我画个图形吧。”_\n\n画一个边长50像素的六边形。  \n\n*
+        * *\n\n要画这个六边形，你需要： \n\n-   向前移动**50**像素\n-   向右转**60**度\n-   一共重复**6**次"
+      courseD_artist_1_2018_2019: "![][0] _“嗨，我是阿伦达尔的爱莎，帮我画个图形吧。”_\n\n画一个边长50像素的六边形。
+        \ \n\n* * *\n\n要画这个六边形，你需要： \n\n-   向前移动**50**像素\n-   向右转**60**度\n-   一共重复**6**次"
       courseD_artist_2_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_“做得好！”_\n\n画完六边形后，向右转**60**度，然后画一条**150**像素长的线。
         \  \n\n使用<xml><block type=\"jump_to\"><title\nname=\"VALUE\">中心位置</title></block></xml>模块，将爱莎放到区域中心来结束。"
       courseD_artist_2_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_“做得好！”_\n\n画完六边形后，向右转**60**度，然后画一条**150**像素长的线。
@@ -14338,14 +14336,12 @@ zh-CN:
       courseD_iceage_loops1_2019: 帮助斯奎特穿过溜滑的冰去拿到橡子！
       courseD_iceage_loops2: |-
         用一个<xml><block type="maze_turn">
-            <title
-        name="DIR">turnLeft</title>
-          </block></xml>模块来到达橡子！
+            <title name="DIR">turnLeft</title>
+          </block></xml> 模块来到达橡子！
       courseD_iceage_loops2_2019: |-
-        用一个<xml><block type="maze_turn">
-            <title
-        name="DIR">turnLeft</title>
-          </block></xml>模块来到达橡子！
+        用一个<xml><block type="maze_turn" block-text="turn left">
+            <title name="DIR">turnLeft</title>
+          </block></xml> 模块来到达橡子！
       courseD_iceage_loops3: 你能只用一个 <xml><block type="maze_moveForward"/></xml>模块来获得橡子吗？试试用循环！
       courseD_iceage_loops3_2019: 你能只用一个 <xml><block type="maze_moveWest"/></xml>模块来获得橡子吗？试试用循环！
       courseD_iceage_loops4: 再添加一个模块来让斯奎特用各种方法到达橡子！
