@@ -765,6 +765,11 @@ pt-PT:
         ao tesouro.
       Crack Random Substitution: Instruções
       Crack a Caesar Cipher: Instruções
+      Dance_2019_01: 'Arrasta o bloco <xml><block type="Dancelab_makeAnonymousDanceSprite"
+        block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;,
+        &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml>
+        para o ambiente de trabalho e liga-o dentro do bloco <xml><block type="Dancelab_whenSetup2"
+        next_connection_disabled="true" block-text="setup"></block></xml>.'
       Dance_2019_02: Faz com que o gato realize um movimento de dança quando primes
         uma tecla.
       Dance_2019_03: 'Está na hora da dança! Programa cada dançarino para se mover
