@@ -18065,6 +18065,6 @@ it-IT:
           `quando si clicca su "Esegui"` per farli eseguire immediatamente all'avvio
           del programma.
       Dance_Party_05:
-        validation: "\\*\\*Come faccio a passare questo livello \\*\\* \n\n-   Il
+        validation: "**Come faccio a passare questo livello** \n\n-   Il
           tuo ballerino deve passare attraverso almeno 4 diversi passi di danza prima
           che il livello finisca. \n\nQuesto livello termina dopo 12 battute"
