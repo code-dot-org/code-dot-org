@@ -83,12 +83,9 @@
       "/docs/concepts/patterns/list-filter-pattern/",
       "/docs/concepts/patterns/list-reduce-pattern/"
     ],
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
     "widget_mode": "false",
-    "libraries_enabled": "false"
+    "libraries_enabled": "false",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
