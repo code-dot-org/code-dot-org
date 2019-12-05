@@ -1613,8 +1613,6 @@ ur:
         text: جگہ بنیادی
       craft_placeTorch:
         text: مشعل یہاں رکہیں
-      craft_repeatUntilConduit:
-        text: "[STATEMENT]12321[0] تک دوبارہ کریں"
       craft_repeatUntilGoal:
         text: |-
           مقصد
