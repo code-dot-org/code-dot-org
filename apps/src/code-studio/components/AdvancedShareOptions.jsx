@@ -391,12 +391,12 @@ class AdvancedShareOptions extends React.Component {
         if (allowExportExpo) {
           exportExpoTab = this.renderAdvancedListItem(
             ShareOptions.EXPORT_EXPO,
-            'Run natively (Beta)'
+            i18n.runNatively()
           );
         }
         exportTab = this.renderAdvancedListItem(
           ShareOptions.EXPORT,
-          'Export for web'
+          i18n.exportForWeb()
         );
       }
       const embedTab = this.renderAdvancedListItem(
