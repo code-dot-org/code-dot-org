@@ -287,14 +287,13 @@ fi-FI:
         -   Näyttää ja piilottaa tanssijat nuolinäppäimillä
         -   Piilota kaikki tanssijat, ja siirry jännittävään taustaefektiin.
       Dance_Party_extras_visible_2019: |-
-        # Neljäsosanuotit
+        # Mihin he menivät?
 
-        Useimmissa tansseissamme on kokonaiset tahdit, mutta jokainen tahti koostuu neljästä neljäsosanuotista. Tämä tanssi käyttää [blockly block][0] blokkia niin, että tanssija taputtaa käsiään jokaisen neljäsosanuotin kohdalla viidennen tahdin jälkeen.
+        Tämä tanssi näyttää ja piilottaa kaksi tanssijoiden ryhmää. Tsekkaa se ja lisää oma vivahteesi.
 
-        Kokeile muuttaa blokin numeroita, jotta näet, miten se muuttaa tanssia.
-
-        -   Kokeile muita nuottien kestoja (kuten 0.5 puolinuotille tai 0.125 kahdeksasosanuotille).
-        -   Lisää muita tapahtumia.
+        -   Lisää uusi ryhmä tanssijoita
+        -   Näyttää ja piilottaa tanssijat nuolinäppäimillä
+        -   Piilota kaikki tanssijat, ja siirry jännittävään taustaefektiin.
       Function intro Ryan: "Työtilassasi on **toiminto** rakenna silta. Se sisältää
         kaiken koodin, jota tarvitset joen ylittämiseen! \\\r\n \\\r\nKorjaa polku
         napsauttamalla pieni vihreä lohko työtilaasi kahdesti ja vie {currentPlayerName}
