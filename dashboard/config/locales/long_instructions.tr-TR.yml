@@ -5111,17 +5111,15 @@ tr-TR:
         -   Diğer nota uzunluklarıyla denemeler yapın (örneğin yarım nota için 0,5 veya 1/8’lik nota için 0,125 değeri girin).
         -   Birkaç `ölçüden sonra` etkinliği ekleyin.
         -   "Ölçüler" değerini "saniyeler" ile değiştirerek danslarınızı böyle zamanlamayı deneyin.
-      Dance_Party_extras_every_beat_2019: "# Çeyrek Notlar\n\nDanslarımızın çoğu tüm
-        ölçüleri kullanmıştır, ancak her ölçüt 4 çeyrek notundan oluşmaktadır. Bu
-        dans, 4. ölçütten sonra her çeyrek notunda dansçının alkışlaması için <xml><block
-        type=\"controls_if\"><value name=\"IF0\"><block type=\"logic_compare\"><title
-        name=\"OP\">LT</title><value name=\"A\"><block type=\"Dancelab_getTime\"><title
-        name=\"UNIT\">\"measures\"</title></block></value><value name=\"B\"><block
-        type=\"math_number\"><title name=\"NUM\">5</title></block></value></block></value><statement
-        name=\"DO0\"></statement></block></xml> kullanır. \n\nDansı nasıl değiştirdiğini
-        görmek için bloktaki sayıları değiştirmeyi deneyin. \n\n-   Diğer not süreleri
-        ile deneme (yarım not için 0,5 veya sekizinci not için 0,125 gibi). \n-   Başka
-        etkinlikler de ekleyin."
+      Dance_Party_extras_every_beat_2019: |-
+        # Çeyrek Notlar 
+
+        Danslarımızın çoğu tüm ölçüleri kullanmıştır, ancak her ölçüt 4 çeyrek notundan oluşmaktadır. Bu dans, 4. ölçütten sonra her çeyrek notunda dansçının alkışlaması için [blockly block][0] kullanır. 
+
+        Dansı nasıl değiştirdiğini görmek için bloktaki sayıları değiştirmeyi deneyin. 
+
+        -  Diğer not süreleri ile deneme (yarım not için 0,5 veya sekizinci not için 0,125 gibi). 
+        -  Başka etkinlikler de ekleyin.
       Dance_Party_extras_layout: |-
         # Hadi Düzene Girelim!
 

@@ -369,6 +369,7 @@ ja:
             '"plus"': プラス
             '"random"': ランダム に
       Dancelab_makeAnonymousDanceSprite:
+        text: "{LOCATION} で新しい{COSTUME} を作成します"
         options:
           COSTUME:
             '"ALIEN"': エイリアン

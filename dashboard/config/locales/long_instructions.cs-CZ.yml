@@ -360,14 +360,13 @@ cs-CZ:
         -   Zobraz a skryj tanečníky pomocí šipek s klávesami
         -   Skryj všechny své tanečníky a přepni se na vzrušující efekt pozadí
       Dance_Party_extras_visible_2019: |-
-        # Čtvrťové noty
+        # Kam by šli?
 
-        Většina našich tanců používala celé takty, ale každý takt obsahuje 4 čtvrťové noty. Tento tanec používá [blockly block][0], aby tanečník po 5. taktu na každou čtvrťovou notu tlesknul.
+        Tento tanec zobrazuje a skrývá dvě různé skupiny tanečníků. Zkontroluj to a poté zkus přidat svůj vlastní styl.
 
-        Zkus změnit čísla v bloku a podívat se, jak se tanec změní.
-
-        -   Experimentuj s jinými délkami not (například 0,5 pro půlovou notu nebo 0,125 pro osminovou notu).
-        -   Přidej nějaké další události.
+        -   Přidej další skupinu tanečníků
+        -   Zobraz a skryj tanečníky pomocí šipek s klávesami
+        -   Skryj všechny své tanečníky a přepni se na vzrušující efekt pozadí
       Function intro Ryan: "Máte v pracovním prostoru **funkci** s názvem „postavit
         most“. Veškerý kód, který potřebujete k překročení řeky, je do ní vložen!
         \\\r\n \\\r\nPřichyťte malý zelený blok dvakrát do pracovního prostoru, čímž
