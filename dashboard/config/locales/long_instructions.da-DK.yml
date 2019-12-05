@@ -366,8 +366,8 @@ da-DK:
         \*Eksperimentér med andre noder (såsom 0,5 for en halvnode eller 0,125 for en ottendedelsnode).
         \*Tilføj nogle 'eftertakt'-hændelser.
         \*Skift takter ud med sekunder, og prøv at time dine danse på den måde.
-    Dance_Party_extras_every_beat_2019: |-
-         # Fjerdedelsnoder
+      Dance_Party_extras_every_beat_2019: |-
+        # Fjerdedelsnoder
 
         De fleste af vores danser har brugt hele takter, men hver takt består af fire fjerdedelsnoder. Denne dans bruger [blokly block] [0] til at få danseren til at klappe på hver fjerdedelsnode efter den 5. takt.
 
@@ -375,7 +375,7 @@ da-DK:
 
         -   -   Eksperimenter med andre nodevarigheder (såsom 0,5 for en halvnode eller 0,125 for en ottendedelsnode).
         -   Tilføj nogle andre begivenheder.
-     Dance_Party_extras_layout: |-
+      Dance_Party_extras_layout: |-
         # Lad os tage opstilling!
 
         Tjek denne dans, der bruger blokken 'layout' til at ændre baggrundsdansernes stilling igennem dansen. Prøv en af disse ideer til at udvidde projektet:
