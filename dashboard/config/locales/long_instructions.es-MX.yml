@@ -16522,7 +16522,7 @@ es-MX:
       Dance_Party_02: |-
         ¡Hagamos bailar a este alce!
 
-        Arrastra el bloque \<<xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> al espacio de trabajo. Conéctalo debajo del bloque <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> Tu bailarín debería empezar a moverse después del cuarto compás.
+        Arrastra el bloque \<<xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> al espacio de trabajo. Conéctalo debajo del bloque <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> Tu bailarín debería empezar a moverse después del cuarto compás.
 
         Los **compases** se usan para contar el tiempo en la música. En este tutorial, un compás tiene cuatro tiempos.
       Dance_Party_03: |-
@@ -16747,6 +16747,41 @@ es-MX:
         el río! \\\r\n \\\r\nAjusta el pequeño bloque verde en tu área de trabajo
         dos veces para arreglar el camino y llevar a {currentPlayerName} hasta la
         antorcha de piedra rojiza [redstone_torch]."
+      Gamelab StartScreen Intro: |-
+        # Pantallas de inicio y fin
+
+        Este tutorial te enseñará cómo crear pantallas de inicio y finalización en Laboratorio de juegos, así como reiniciar el juego desde la pantalla final.
+
+        Pulsa ejecutar para jugar el juego de la izquierda. Sigue las instrucciones en la pantalla de inicio para jugar. Una vez que termines el juego, sigue las instrucciones en la pantalla final para reiniciar el juego.
+
+        En la próxima burbuja, verás el código para jugar y comenzarás a agregar tus propias pantallas de inicio y finalización.
+
+        ## Pantalla de inicio
+
+        La pantalla de inicio es la pantalla introductoria que aparece antes de que el usuario comience a jugar. Por lo general, tiene el título del juego y algunas instrucciones básicas para jugar. También podría incluir el desarrollador del juego.
+
+        ## Pantalla final
+
+        La pantalla final aparece después de que el usuario haya ganado o perdido el juego. A veces incluye el puntaje final, las clasificaciones de los jugadores u otra información. También puede tener una opción para volver a jugar.
+      Gamelab StartScreen State: |-
+        # Variable de estado del juego
+
+        Nuestro juego de muestra tenía cuatro escenarios diferentes (o **estados**) que debemos seguir para mostrar la pantalla correcta: "comenzar", "jugar", "ganar" y "perder". El primer paso para agregar una pantalla de inicio o fin al juego es crear una variable para realizar un seguimiento de los cambios en el estado del juego.
+
+        ## Hacer esto
+
+        -   Declara una variable llamada `EstadoDeJuego` al comienzo del programa. (Un buen lugar para hacer esto sería cerca de donde se declaran `puntaje` y `vidas`.
+        -   Establece el valor inicial de tu variable `EstadoDeJuego` en "comenzar "
+
+        (Debido a que aún no estás utilizando esta variable, verás un triángulo de advertencia junto a la línea donde se declara. Tampoco afectará la forma en que se ejecuta el programa).
+      Gamelab StartScreen base code: |-
+        # Código de juego
+
+        Este es el código para el juego sin las pantallas de inicio y finalización. La función `EstatusDeJuego` (llamada en la línea 43 y definida en la línea 208) verifica si el usuario ha ganado o perdido, pero solo agrega un mensaje de texto a la pantalla. La jugabilidad también continúa incluso después de que termina el juego.
+
+        ## Hacer esto
+
+        Lee el código, en particular el código antes del ciclo de dibujo (líneas 1-24), dentro del ciclo de dibujo (líneas 27-43) y dentro de la función `EstatusDeJuego` (líneas 209-224). Está bien si no entiendes todo en el juego, pero debes ver que el código antes del ciclo de dibujo configura los sprites, y el código dentro del ciclo de control controla el juego.
       Geometric Sun: "**Idea para un proyecto:** usa ideas geométricas como formas
         para crear un patrón. ¡Esto requiere persistencia y planificación!"
       Geometric Sun_2018: "**Idea para un proyecto:** usa ideas geométricas como formas
@@ -17008,9 +17043,141 @@ es-MX:
         ¡Vamos a recoger algo de néctar!"
       NEW Course 4 Bee For Loops 8: "¡Lo tienes! \n\n¿Cuál debería ser tu **incremento**
         para recoger 3, 6, 9, 12 y 15 néctares?"
+      NetSim Standalone Automatic DNS: |-
+        # Sistema de nombres de dominio (DNS)
+
+        En esta versión del Simulador de Internet, se le proporciona un Sistema de Nombres de Dominio (DNS) que conoce las direcciones IP de todas las computadoras conectadas. Solo puedes ver los nombres de host de otras computadoras conectadas.\
+        ![](https://images.code.org/3ac2c23ed610abc7e785ec85054e89a9-image-1434746293690.PNG)
+
+        La dirección del DNS es siempre \<yourRouterNumber>.15. Envía un mensaje con el protocolo `GET [hostname]`, por ejemplo `GET Bob2`, al DNS para obtener la dirección de otro estudiante. Puedes realizar un seguimiento de las respuestas en la sección Notas, en la pestaña DNS.\
+        ![](https://images.code.org/c81c1a6b876eb46674a7f7e5e70506ce-image-1434746797267.png)
+
+        Tu profesor entregará instrucciones más específicas para esta actividad.
+      NetSim Standalone Broadcast: |-
+        # Difundir mensajes en el Simulador de Internet
+
+        En esta versión de simulador de Internet, puedes conectarte con hasta 5 personas más en una habitación. Cuando envías mensajes en la sala, todos los reciben. ¿Cuáles son algunos de los desafíos de este sistema y cómo podrías resolverlos?
+
+        Tu profesor entregará instrucciones más específicas para esta actividad.
+      NetSim Standalone Classroom Routers: |-
+        # Enrutamiento de mensajes
+
+        En esta versión de Simulador de Internet, todos se conectan a un enrutador y tienen una dirección específica. Para enviar mensajes, debes dirigir tu mensaje a la dirección específica del destinatario, y el enrutador se encargará de entregarlo a la computadora correcta. Si hay otros enrutadores creados en tu clase, ¡solicita la dirección de uno de tus compañeros de clase y envíales un mensaje! Mira el enrutador de registro para ver la ruta que tomaron los mensajes a través de la red.
+
+        Tu profesor entregará instrucciones más específicas para esta actividad.
+      NetSim Standalone Freeplay: |-
+        # Juego Libre del Simulador de Internet
+
+        En esta versión del Simulador del Internet, la mayoría de las opciones están activadas y son configurables. Los mensajes se pueden enviar a cualquier enrutador dentro de la clase, y los mensajes tomarán diferentes caminos para llegar a su destino.
+
+        Tu profesor entregará instrucciones más específicas para esta actividad.
+      NetSim Standalone Manual DNS: |-
+        # Introducción a DNS
+
+        En esta versión del simulador, no puedes ver las direcciones de los otros estudiantes. En cambio, uno de ustedes debe actuar como un servicio de nombres, para ayudar a compartir direcciones entre sí. Desde la pestaña DNS en la columna izquierda, una persona puede asumir el control como DNS.
+
+        Tu profesor entregará instrucciones más específicas para esta actividad.
+      NetSim Standalone Packets TCP: |-
+        # Paquetes y hacer que Internet sea confiable
+
+        Los mensajes en Internet pueden tomar muchos caminos para llegar a su destino y, a veces, a lo largo del camino, el mensaje se descarta. En esta versión del Simulador de Internet:
+
+        -   Hay un 10% de posibilidades de que se descarte un paquete
+        -   Varios paquetes pueden tomar diferentes caminos hacia el destino
+        -   El tamaño máximo predeterminado del paquete se establece en 6 caracteres adicionales
+
+        Tu profesor maestro entregará instrucciones más específicas para esta actividad.
+      NetSim Standalone SendAB: |-
+        # Envío de bits con el Simulador de Internet
+
+        Tú y tu pareja comparten un solo cable que solo puede estar en el estado A o en el estado B. Puedes configurar el cable en cualquier estado en cualquier momento, y puedes leer el estado del cable en cualquier momento. ¿Puedes encontrar una manera de comunicarte efectivamente solo con este sistema?
+
+        Tu profesor entregará instrucciones más específicas para esta actividad.
+      NetSim Standalone Sending Numbers: |-
+        # Envío de números con el Simulador de Internet
+
+        ¡Tú y tu pareja ahora pueden enviar mensajes de manera confiable de un lado a otro sin coordinación adicional! Si bien siempre envías bits de un lado a otro, también puedes representar esos bits como números decimales. ¿Qué tipo de información puedes representar con este sistema?
+
+        Tu profesor entregará instrucciones más específicas para esta actividad.
+      NetSim Standalone Sending Numbers Ascii: |-
+        # Envío de texto con el Simulador de Internet
+
+        Ahora que has transmitido información representada como números decimales, puedes asignar esos números a caracteres de texto para enviar información basada en texto de un lado a otro. Con un protocolo basado en texto, puedes representar y comunicar fácilmente todo tipo de información.
+
+        Tu profesor entregará instrucciones más específicas para esta actividad.
+      OPD-K5 CS Video: |-
+        ## Primeros pasos: ¿Por qué los fundamentos de la informática (CS)?
+
+        Completarás este curso gratuito a tu propio ritmo utilizando la misma plataforma de aprendizaje que puedes usar en el aula con tus alumnos.
+
+        Comencemos por aprender un poco sobre los Fundamentos de la informática (CS) y cómo ha funcionado para los profesores y estudiantes de todo el mundo. En el siguiente nivel, cubriremos cómo interactuar con la plataforma de aprendizaje CS Fundamentals, que utilizará para completar este curso.
+
+        > ## Reflexionar
+        >
+        > ¿Cuáles son tus primeras impresiones de los Fundamentos de Ciencias de la Computación?
+        >
+        > [Tuitea tus pensamientos](https://twitter.com/teachcode) y asegúrate de etiquetar @teachcode en tu tweet para que podamos responder.
+        >
+        > <a href="http://ctt.ec/Bfjw3" target="blank"><button class="default">Compartir en Twitter >></button></a><br><br>
+        > ¿No tienes una cuenta de Twitter? También puedes encontrarnos en [Facebook](https://www.facebook.com/Code.org/) o [Instagram](https://www.instagram.com/codeorg/).
+      OPD-K5 Closing: |-
+        > \*\* Si disfrutaste este curso, inscríbete en un taller en persona:\*\*
+        >
+        > [Regístrate ahora] [0] para continuar aprendiendo ciencias de la computación y su pedagogía. Los talleres gratuitos en persona son un lugar valioso para colaborar y relacionarte con otros educadores apasionados en tu área.
+      OPD-K5 EventsVid: |-
+        Mira este video que define los "eventos" y muestra cómo funcionan en Fundamentos de la Ciencias de la Computación. Después, probarás algunos desafíos que requieren que codifiques eventos.
+
+        > Un evento es una línea de código que le dice a tu computadora que "escuche" que algo suceda y luego tome una acción. Por ejemplo, en las páginas web, a menudo puedes mostrar un menú desplegable cuando pasas el mouse sobre la barra de navegación. El "desplazamiento del mouse" es un "evento" que desencadena una acción.
       OPD-K5 FirstProgram: Mira el siguiente video, que explica el primer programa
         que los estudiantes más jóvenes escribirán en [Course A](https://studio.code.org/s/coursea-2018?section_id=2042045).
         ¡En la página siguiente podrás escribir un programa similar!
+      OPD-K5 LessonPlanning: "Hasta ahora, te hemos presentado algunos de nuestros
+        planes de lecciones desconectados. Sin embargo, hay planes de lecciones para
+        cada lección de Fundamentos de las Ciencias de la Computación, tanto conectados
+        como en línea. Puedes encontrar la lista completa de planes de lecciones para
+        cada curso a continuación:\n<br/>\n<br/> \n[Planes de lecciones del Curso
+        A] [0] <br/>\n[Planes de lecciones del Curso B] [1] <br/>\n[Planes de lecciones
+        del Curso C] [2] <br/>\n[Planes de lecciones del Curso D] [3] <br/>\n[Planes
+        de lecciones del Curso E] [4] <br/>\n[Planes de lecciones del curso F] [5]
+        <br/>\n\nSin embargo, es posible que desees adaptar estas lecciones o crear
+        las suyas propias. El siguiente video explica la estructura de las lecciones
+        de Fundamentos de las Ciencias de la Computación, pero también proporciona
+        consejos en caso de que desees desarrollar tus propias lecciones."
+      OPD-K5 Problem Solving: |-
+        # Mejores prácticas > Solución de problemas metacognitivos
+
+        Enseñar explícitamente estrategias de resolución de problemas metacognitivos antes, durante y después de la codificación es extremadamente importante para ayudar a los estudiantes a procesar su aprendizaje. La resolución de problemas megacognitivos implica pensar en el proceso de pensamiento en sí mismo y reflexionar sobre cómo resolver los problemas. Mira el video a continuación para conocer la "Receta de resolución de desafíos" de Code.org que puede ayudar a los estudiantes a tener éxito con problemas difíciles:
+
+        [Esta hoja de trabajo] [0] detalla los diferentes pasos de la Receta de resolución de desafíos.
+
+        <img src="https://images.code.org/18ec61f8b911b83ca1cdea404a34c40e-image-1434399798952.png" width="650px" style="margin-right:45px; border-radius:10px;">
+
+        > ## Reflexionar:
+        >
+        > ¿Cómo podrías enseñar explícitamente la resolución de problemas en tu aula de informática?
+        >
+        > [Tuitea tus pensamientos] [1] y asegúrate de etiquetar @teachcode en tu tweet para que podamos responder.
+        >
+        > <a href="http://ctt.ec/ic2bx" target="blank"><h4><i class="fa fa-external-link-square" ></i> Compartir en Twitter</h4></a>
+      OPD-K5 RepeatBlock: Mira el video a continuación, que explica cómo funcionan
+        los bucles e introduce el bloque 'Repetir' en Fundamentos de la Ciencia de
+        la Computación.
+      OPD-K5 Unplugged Video: |-
+        ## Mirando hacia el futuro > "Desconectado"
+
+        <img src="https://images.code.org/ae83fdee9390a1155e5173b2a06f9773-image-1434399991310.JPG" class="level-image">
+
+        Al enseñar ciencias de la computación, puedes pensar que sería mejor tener acceso a la tecnología de nivel superior: computadoras nuevas, Internet rápido, las últimas aplicaciones. Pero en Code.org, hemos descubierto que algunas de las lecciones de computación más impactantes en realidad están "desconectadas" o se llevan a cabo con poca o ninguna tecnología. En estas lecciones, los estudiantes aprenden conceptos informáticos sin una computadora.
+
+        Es por eso que todos nuestros cursos de Fundamentos de la Ciencia de la Computación usan actividades desconectadas para introducir conceptos de informática con manipuladores físicos antes de que los estudiantes escriban programas de computadora utilizando esos conceptos. Un ejemplo de esto sería hacer un baile de movimientos repetidos con la clase para comprender el concepto de cómo los bucles repiten comandos en un programa de computadora. De esta manera, cuando los estudiantes continúan escribiendo programas usando bucles, la actividad desconectada los ha configurado con algo con lo que ya están familiarizados y pueden relacionar este nuevo concepto con esa actividad.
+
+        Mira el video a continuación para comprender los beneficios de usar actividades desconectadas para enseñar ciencias de la computación.
+
+        **A medida que avanzas en las etapas 4-8**, tendrás la oportunidad de revisar algunas de nuestras actividades desconectadas para cada uno de los conceptos básicos cubiertos en este curso.
+      OPD-K5 WhatIsCS: ¿Alguna vez te has preguntado "Exactamente qué es la informática"?
+        O "¿Por qué algunos programas de computadora se escriben con palabras y otros
+        se escriben con imágenes?" Si es así, mira este video; es una gran introducción
+        al campo de la ciencia de la computación.
       Overworld Chop Tree: La madera es un recurso muy importante. Muchas cosas están
         hechas de madera. Camina hacia el árbol y usa el comando del bloque `destruir`
         para talarlo.
@@ -18434,6 +18601,9 @@ es-MX:
       courseA_collector_preLoops2: "¡Genial! ¡Ahora puedes agregar el código tú mismo!
         \n\nColoca un bloque ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
         en la parte inferior del programa y haz clic en \"Ejecutar\"."
+      courseA_collector_preLoops3: Para agarrar el tesoro, encaja dos bloques ![](https://images.code.org/54c206b62a02f1d7ea8f1bee52664ecb-image-1508905670742.25.37.png)
+        y un bloque ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
+        en la parte inferior del programa y haz clic en "Ejecutar".
       courseA_collector_preLoops7: |-
         ¡Consigue los tres montones! Acerca a Laurel a cada pieza del tesoro y, luego, usa este bloque:
           <xml><block type="collector_collect"/></xml>
