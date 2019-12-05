@@ -13097,6 +13097,12 @@ en:
               name: 'Lesson 11: Unit Assessment'
             'Lesson 11: Assessment Day':
               name: 'Lesson 11: Assessment Day'
+            Project - Designing an App Part 5:
+              name: Project - Designing an App Part 5
+            Intro to Programming:
+              name: Intro to Programming
+            Debugging:
+              name: Debugging
           title: CSP Unit 3 Pilot - Intro to App Design
           description_audience: ''
           description_short: ''
@@ -13627,6 +13633,18 @@ en:
               name: 'Project: Innovation Simulation Part 6'
             'Project: Innovation Simulation Part 7':
               name: 'Project: Innovation Simulation Part 7'
+            Project - Innovation Simulation Part 1:
+              name: Project - Innovation Simulation Part 1
+            Project - Innovation Simulation Part 2:
+              name: Project - Innovation Simulation Part 2
+            Project - Innovation Simulation Part 3:
+              name: Project - Innovation Simulation Part 3
+            Project - Innovation Simulation Part 4:
+              name: Project - Innovation Simulation Part 4
+            Project - Innovation Simulation Part 6:
+              name: Project - Innovation Simulation Part 6
+            Project - Innovation Simulation Part 7:
+              name: Project - Innovation Simulation Part 7
           title: Cybersecurity and Global Impacts
           description_audience: ''
           description_short: ''
@@ -13897,3 +13915,41 @@ en:
               name: Conditionals Review
               description_student: ''
               description_teacher: ''
+        csp7-pilot:
+          stages:
+            Parameters and Returns Explore:
+              name: Parameters and Returns Explore
+            Parameters and Returns Investigate:
+              name: Parameters and Returns Investigate
+            Parameters and Returns Practice:
+              name: Parameters and Returns Practice
+            Parameters and Returns Make:
+              name: Parameters and Returns Make
+            Libraries Explore:
+              name: Libraries Explore
+            Libraries Investigate:
+              name: Libraries Investigate
+            Libraries Practice:
+              name: Libraries Practice
+            Libraries Make:
+              name: Libraries Make
+            Project - Libraries Part 1:
+              name: Project - Libraries Part 1
+            Project - Libraries Part 2:
+              name: Project - Libraries Part 2
+            Project - Libraries Part 3:
+              name: Project - Libraries Part 3
+            Assessment Day:
+              name: Assessment Day
+            Parameters and Return Explore:
+              name: Parameters and Return Explore
+            Parameters and Return Investigate:
+              name: Parameters and Return Investigate
+            Parameters and Return Practice:
+              name: Parameters and Return Practice
+            Parameters and Return Make:
+              name: Parameters and Return Make
+          title: CSP Unit 7 Pilot - Parameters, Return, and Libraries
+          description_audience: ''
+          description_short: ''
+          description: ''
