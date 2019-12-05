@@ -222,6 +222,8 @@ da-DK:
         Hiro.
       Infinity_shoot_directions: Hiro er "figur 3".  Få Hiro til at sende et projektil
         efter hver af de fire andre.  Vent et sekund mellem hvert projektil.
+      Infinity_touch_score: Få Anna til at score et point, når hun berør et snefnug.
+        Tryk på 'Kør' og styr hende så hun rør ved flere snefnug.
       K-1 Artist Loops 5: Hvad skal du gentage 4 gange for at tegne trappen?
       K-1 Artist Loops 7: Kan du gøre mønsteret færdigt med to loops?
       K-1 Artist Loops 8: Denne trappe har bredere trin.

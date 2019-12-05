@@ -375,7 +375,7 @@ da:
       artist: Kunstner
       bounce: Hoppe
       calc: Infinitesimalregning
-      dance: Dansefest
+      dance: Dance Party
       eval: Evaluer
       flappy: Flappy
       frozen: Frozen
@@ -607,9 +607,9 @@ da:
       title: App Lab
       audience: Alder 13+
     dance:
-      title: Dansefest
+      title: Dance Party
     dance-2019:
-      title: Dansefest
+      title: Dance Party
     hoc:
       title: Klassisk labyrint
       body: Prøv grundlæggende kodning. Millioner har allerede gjort det.

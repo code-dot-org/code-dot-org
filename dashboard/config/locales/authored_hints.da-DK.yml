@@ -229,6 +229,8 @@ da-DK:
         validation: "**Hvordan består jeg dette niveau?** \n\n-   Brug `når venstre
           pil trykkes ned`-blokken, for at få robotten til at gøre et dansetrin, når
           du trykker på den. \n\n_Dette niveau slutter efter 7 takter._"
+      Dance_Party_extras_alternate_2019:
+        alternate: '''Skift'' blokken er i kategorien "Dansere".'
       Function intro Ryan:
         Function_intro_Ryan_a: Du kan kalde en funktion mange gange i dit program!  Prøv
           at kalde den to gange for at løse opgaven.

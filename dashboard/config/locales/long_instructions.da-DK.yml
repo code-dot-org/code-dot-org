@@ -340,6 +340,17 @@ da-DK:
         så hurtigt som du kan!**"
       Dance_Party_12: Bliv groovy! Skab dit eget Dance Party som du kan dele med dine
         venner.
+      Dance_Party_extras_alternate_2019: |-
+        # Frem og tilbage!
+
+        Nogle gange har du måske lyst til selv at bestemme, hvordan danserne skal danse. Med denne nye blok kan du det.
+
+        <xml><block type="Dancelab_alternateMoves"><title name="GROUP">sprites</title><title name="N">2</title><title name="MOVE1">MOVES.Roll</title><title name="MOVE2">MOVES.ClapHigh</title></block></xml>
+
+        Dansetrinene som du vælger foroven vil blive gentaget.
+
+        -   Kod dansetrinene for den forreste danser!
+        -   Brug forskellige talværdier til hastigheden af skiftene mellem trinene. Prøv med `1` eller `0.5` for at skiftene bliver hurtigere!
       Dance_Party_extras_battle: |-
         # Dansegrupper
 
