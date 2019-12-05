@@ -134,6 +134,7 @@
 "fil-PH":
   english: "Filipino"
   native: "Pilipino"
+  debug: true
 
 "fr": "fr-FR"
 "fr-FR":
@@ -271,6 +272,7 @@
 "mr-IN":
   english: "Marathi"
   native: "मराठी"
+  debug: true
   webfonts: false
 
 "ms": "ms-MY"
@@ -396,12 +398,14 @@
 "ta-IN":
   english: "Tamil"
   native: "தமிழ்"
+  debug: true
   webfonts: false
 
 "te": "te-IN"
 "te-IN":
   english: "Telugu"
   native: "తెలుగు"
+  debug: true
   webfonts: false
 
 "th": "th-TH"
