@@ -1,0 +1,52 @@
+login_required true
+hideable_stages true
+has_verified_resources true
+has_lesson_plan true
+curriculum_path 'https://curriculum.code.org/{LOCALE}/cspilot/unit7/{LESSON}'
+pilot_experiment 'csp-piloters'
+curriculum_umbrella 'CSP'
+
+stage 'Parameters and Return Explore', flex_category: 'csp_parameters_return_values'
+level 'CSP U7L1 SFLP 20-21', progression: 'Lesson Overview'
+
+stage 'Parameters and Return Investigate', flex_category: 'csp_parameters_return_values'
+level 'CSP U7L2 SFLP 20-21', progression: 'Lesson Overview'
+level 'U7 Param Return Investigate Rock', progression: 'App Investigation'
+
+stage 'Parameters and Return Practice', flex_category: 'csp_parameters_return_values'
+level 'CSP U7L3 SFLP 20-21', progression: 'Lesson Overview'
+level 'U7 Param Return Practice Part 1', progression: 'console.log Practice'
+level 'U7 Param Return Practice Part 2', progression: 'console.log Practice'
+level 'U7 Param Return Practice Part 4', progression: 'console.log Practice'
+level 'U7 Param Return Practice Part 3', progression: 'console.log Practice'
+level 'U7 Param Return Practice Part 5', progression: 'console.log Practice'
+level 'U7 Param Investigate Calculator App', progression: 'App Practice'
+level 'U7 Param Practice App 2', progression: 'App Practice'
+level 'U73 CFU Param Return AP', progression: 'Check For Understanding: AP Practice', assessment: true
+
+stage 'Parameters and Return Make', flex_category: 'csp_parameters_return_values'
+level 'CSP U7L4 SFLP 20-21', progression: 'Lesson Overview'
+
+stage 'Libraries Explore', flex_category: 'csp_libraries'
+level 'CSP U7L5 SFLP 20-21', progression: 'Lesson Overview'
+
+stage 'Libraries Investigate', flex_category: 'csp_libraries'
+level 'CSP U7L6 SFLP 20-21', progression: 'Lesson Overview'
+
+stage 'Libraries Practice', flex_category: 'csp_libraries'
+level 'CSP U7L7 SFLP 20-21', progression: 'Lesson Overview'
+
+stage 'Libraries Make', flex_category: 'csp_libraries'
+level 'CSP U7L8 SFLP 20-21', progression: 'Lesson Overview'
+
+stage 'Project - Libraries Part 1', flex_category: 'csp_project'
+level 'CSP U7L9 SFLP 20-21', progression: 'Lesson Overview'
+
+stage 'Project - Libraries Part 2', flex_category: 'csp_project'
+level 'CSP U7L10 SFLP 20-21', progression: 'Lesson Overview'
+
+stage 'Project - Libraries Part 3', flex_category: 'csp_project'
+level 'CSP U7L11 SFLP 20-21', progression: 'Lesson Overview'
+
+stage 'Assessment Day'
+level 'CSP U7L12 SFLP 20-21', progression: 'Lesson Overview'
