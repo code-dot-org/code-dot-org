@@ -214,11 +214,11 @@ sv-SE:
         Kolla in detta block:
 
         <xml>
-        <block type="Dancelab_makeNewDanceSpriteGroup">
-        <title name="N">6</title>
-        <title name="COSTUME">"DUCK"</title>
-        <title name="LAYOUT">"circle"</title>
-        </block></xml>
+          <block type="Dancelab_makeNewDanceSpriteGroup">
+            <title name="N">6</title>
+            <title name="COSTUME">"DUCK"</title>
+            <title name="LAYOUT">"circle"</title>
+          </block></xml>
 
         Nu kan du skapa ett gäng dansare på samma gång!
 
@@ -486,3 +486,25 @@ sv-SE:
       frozen square snowflake: Kan du skapa en snöflinga med "Upprepa"-blocket för
         att göra en fyrkant 10 gånger, och "Vända"-blocket för att vända 36 grader
         mellan varje fyrkant?
+      Dance_2019_07: "Varje dansare har en uppsättning _properties_ som kontrollerar
+        hur det ser ut. \n\nAnvänd <xml><block type=\"Dancelab_setPropEach\" block-text=\"the
+        set block\"><title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;,
+        &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;,
+        &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title><title name=\"PROPERTY\">\"scale\"</title><title
+        name=\"VAL\">???</title></block></xml> under ett grönt eventblock för att
+        få dansarna att verka vara närmare eller längre bort."
+      Dance_Party_extras_layout_2019: |-
+        # Låt oss komma igång!
+
+        Kolla in denna dans som använder <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> blocket för att ändra reservdansersformation under hela dansen. Prova en av dessa idéer för att utöka den:
+
+        -   Skapa en andra grupp av dansare i en annan layout
+        -   Ändra layout när en tangent trycks ned
+        -   Ändra en egenskap när dansarna ändrar formation
+      Dance_Party_extras_mixed_2019: |-
+        # More Knappar
+
+        Denna dans låter dig styra dansarnas egenskaper i realtid medan de dansar automatiskt. Försök att göra andra egenskaper ändrade när du trycker på knapparna. Till exempel:
+
+        -   Slumpmässigt tonaren från dansaren när du trycker på "ner".
+        -   Lägg till en grupp dansare med slumpmässig layout när du trycker på "mellanslag".

@@ -462,8 +462,11 @@ de-DE:
       Dance Party 7_2019: Lasse den blauen Außerirdischen einen neuen Tanz beginnen,
         wenn der rosa Außerirdische ihn berührt. Verwenden Sie das Ereignis `wenn
         berührt`.
-      Dance_2019_01: Ziehen Sie den Block "Neuen Block erstellen" in den Arbeitsbereich,
-        und verbinden Sie ihn innerhalb des "Setup" -Blocks.
+      Dance_2019_01: 'Ziehen Sie den Block <xml><block type="Dancelab_makeAnonymousDanceSprite"
+        block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;,
+        &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml>
+        in den Arbeitsbereich, und verbinden Sie ihn innerhalb des <xml><block type="Dancelab_whenSetup2"
+        next_connection_disabled="true" block-text="setup"></block></xml> Blocks.'
       Dance_2019_02: Mit dem Block `wenn Pfeil nach oben  gedrückt ist` können Sie
         Code ausführen, wenn Sie Pfeil nach oben drücken. Lassen Sie die  Tänzerin
         klatschen, wenn Sie den Pfeil nach oben drücken, oder probieren Sie eine andere

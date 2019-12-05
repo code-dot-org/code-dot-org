@@ -653,11 +653,11 @@ ja-JP:
         このブロックをチェックしてみましょう。
 
         <xml>
-        <block type="Dancelab_makeNewDanceSpriteGroup">
-        <title name="N">6</title>
-        <title name="COSTUME">"アヒル"</title>
-        <title name="LAYOUT">"円"</title>
-        </block></xml>
+          <block type="Dancelab_makeNewDanceSpriteGroup">
+            <title name="N">6</title>
+            <title name="COSTUME">"DUCK"</title>
+            <title name="LAYOUT">"circle"</title>
+          </block></xml>
 
         次は、たくさんのダンサーを一度に作成します！
 
@@ -5218,3 +5218,18 @@ ja-JP:
         -   ゾウはいくつリンゴを集めましたか？
         -   カバはいくつリンゴを集めましたか？
         -   リンゴをすべて集めるのに、何回、実行しましたか？
+      Dance_Party_extras_layout_2019: |-
+        ＃結成しましょう！
+
+        <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> ブロックを使用して、ダンス全体でバックアップダンサーのフォーメーションを変更するこのダンスをチェックしてください。次のアイデアのいずれかを試して拡張してください：
+
+        異なるレイアウトでダンサーの2番目のグループを作成
+        キーが押されたときにレイアウトを変更
+        ダンサーがフォーメーションを変更したときにプロパティを変更
+      Dance_Party_extras_mixed_2019: |-
+        ＃More Buttons
+
+        このダンスでは、ダンサーが自動的に踊りながら、ダンサーのプロパティをリアルタイムで制御できます。ボタンを押したときに他のプロパティを変更してみてください。例：
+
+        「下」を押したときにダンサーの色合いをランダム化します。
+        「スペース」を押したときに、ランダムなレイアウトでダンサーのグループを追加します。

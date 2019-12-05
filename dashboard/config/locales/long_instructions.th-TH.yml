@@ -554,11 +554,11 @@ th-TH:
         ลองตรวจสอบบล็อกนี้:
 
         <xml>
-        <block type="Dancelab_makeNewDanceSpriteGroup">
-        <title name="N">6</title>
-        <title name="COSTUME">"DUCK"</title>
-        <title name="LAYOUT">"circle"</title>
-        </block></xml>
+          <block type="Dancelab_makeNewDanceSpriteGroup">
+            <title name="N">6</title>
+            <title name="COSTUME">"DUCK"</title>
+            <title name="LAYOUT">"circle"</title>
+          </block></xml>
 
         ถึงตอนนี้คุณสามารถสร้างนักเต้นเป็นกลุ่มได้ในคราวเดียว!
 
@@ -2670,3 +2670,18 @@ th-TH:
         200 พิกเซล
       ramp_artist_loops9_2019: แก้ปริศนานี้ ด้วยการวาดสี่เหลี่ยมจัตุรัสที่มีความยาวด้านเท่ากับ
         200 พิกเซล
+      Dance_Party_extras_layout_2019: |-
+        # มาในรูปแบบกันเถอะ!
+
+        ดูการเต้นนี้ที่ใช้บล็อก <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> บล็อกเพื่อเปลี่ยนรูปแบบของนักเต้นสำรองตลอดการเต้น ลองหนึ่งในแนวคิดเหล่านี้เพื่อขยาย:
+
+        -   สร้างกลุ่มนักเต้นกลุ่มที่สองในเค้าโครงที่แตกต่าง
+        -   เปลี่ยนเค้าโครงเมื่อกดปุ่ม
+        -   เปลี่ยนคุณสมบัติเมื่อนักเต้นเปลี่ยนการก่อตัว
+      Dance_Party_extras_mixed_2019: |-
+        # ปุ่มเพิ่มเติม
+
+        การเต้นรำนี้ช่วยให้คุณสามารถควบคุมคุณสมบัตินักเต้นแบบเรียลไทม์ในขณะที่พวกเขาเต้นโดยอัตโนมัติ ลองทำการเปลี่ยนแปลงคุณสมบัติอื่น ๆ เมื่อคุณกดปุ่ม ตัวอย่างเช่น:
+
+        -   สุ่มสีของนักเต้นเมื่อคุณกด "ลง"
+        -   เพิ่มกลุ่มนักเต้นด้วยเค้าโครงแบบสุ่มเมื่อคุณกด "space"
