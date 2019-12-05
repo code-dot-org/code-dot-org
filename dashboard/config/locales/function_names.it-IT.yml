@@ -330,11 +330,11 @@ it-IT:
       course3_bee_functions_challenge3:
         check nectar or honey: controlla nettare o miele
         row of nectar: riga di nettare
-        rowOfNectar: rigaDiNettare
+        rowOfNectar: riga di nettare
       course3_bee_functions_challenge4:
         check nectar or honey: controlla nettare o miele
         row of nectar: riga di nettare
-        rowOfNectar: rigaDiNettare
+        rowOfNectar: riga di nettare
         move and check: vai avanti e controlla
       course3_playLab_challenge1:
         win game: vittoria
@@ -741,22 +741,22 @@ it-IT:
         get nectar make honey: prendi il nettare e fai il miele
       courseF_bee_functions_challenge1:
         row of nectar: riga di nettare
-        rowOfNectar: rigaDiNettare
+        rowOfNectar: riga di nettare
         check nectar or honey: controlla nettare o miele
       courseF_bee_functions_challenge2:
-        rowOfNectar: rigaDiNettare
+        rowOfNectar: riga di nettare
         move and check: vai avanti e controlla
         check nectar or honey: controlla nettare o miele
       courseF_bee_fwp2:
-        rowOfNectar: rigaDiNettare
+        rowOfNectar: riga di nettare
       courseF_bee_fwp3:
-        rowOfNectar: rigaDiNettare
+        rowOfNectar: riga di nettare
       courseF_bee_fwp4:
-        rowOfNectar: rigaDiNettare
+        rowOfNectar: riga di nettare
       courseF_bee_fwp5:
-        rowOfNectar: rigaDiNettare
+        rowOfNectar: riga di nettare
       courseF_bee_fwp6:
-        rowOfNectar: rigaDiNettare
+        rowOfNectar: riga di nettare
       courseF_bee_fwp7:
         rowOfNectarOrHoney: rigaDiNettareOMiele
       courseF_bee_fwp8:

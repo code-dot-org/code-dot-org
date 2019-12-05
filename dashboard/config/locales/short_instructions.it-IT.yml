@@ -1911,6 +1911,11 @@ it-IT:
         come funziona, poi personalizzalo e rendilo tuo!
       course3_bee_functions_challenge1: Dovrai cavartela da solo in questa sfida.
         Potrebbe essere più difficile di quanto sembri!
+      course3_bee_functions_challenge3: Crea una nuova funzione per raccogliere tutto
+        il nettare e produrre tutto il miele `mentre c'è strada in avanti`. Usala
+        per completare l'esercizio!
+      course3_bee_functions_challenge4: Usa ciò che hai imparato per completare questo
+        esercizio!
       course3_farmer_condLoops_challenge2: Raccogli tutto per completare l'esercizio.
       course3_farmer_until_challenge2: Usa il blocco `se/altrimenti` per seguire questo
         percorso con molte curve in diverse direzioni. Ad ogni angolo, usa il blocco
@@ -4664,6 +4669,15 @@ it-IT:
         per raccogliere tutto il nettare.
       courseF_bee_functions6: Aiuta l'ape a percorrere il labirinto girando a sinistra
         in corrispondenza dei fiori e a destra quando incontra dei favi.
+      courseF_bee_functions7: Per percorrere questo labirinto, ricostruisci la funzione
+        del precedente esercizio.
+      courseF_bee_functions8a: Raccogli tutto il nettare e fai tutto il miele!
+      courseF_bee_functionsPre7: Ora prova a creare una funzione per percorrere questo
+        labirinto. In che modo è diverso da quello precedente?
+      courseF_bee_functions_challenge1: Crea una nuova funzione per raccogliere tutto
+        il nettare e produrre tutto il miele `mentre c'è strada in avanti`.
+      courseF_bee_functions_challenge2: Usa ciò che hai imparato per completare questo
+        esercizio!
       courseF_bee_fwp9_predict1: Usa la tua nuova funzione per risolvere questo esercizio.
       courseF_bee_variables_1_2018: Completa questo programma per far sì che l'ape
         possa raccogliere tutto il nettare e produrre tutto il miele.

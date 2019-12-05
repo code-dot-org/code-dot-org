@@ -4046,6 +4046,10 @@ it-IT:
           **Sfida supplementare**
 
           Cambia effetto allo sfondo in momenti diversi della canzone agganciando il nuovo blocco a diversi eventi <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      Dance_Party_05:
+        validation: "\\*\\*Come faccio a passare questo livello \\*\\* \n\n-   Il
+          tuo ballerino deve passare attraverso almeno 4 diversi passi di danza prima
+          che il livello finisca. \n\nQuesto livello termina dopo 12 battute"
       Dance_Party_06:
         validation: |-
           **Come faccio a completare questo esercizio?**
@@ -4971,7 +4975,21 @@ it-IT:
           Aggiungi qualche blocco e prova a vedere cosa fa. Poi aggiungine altri e controlla di nuovo. Velocemente arriverai alla soluzione!
         courseE_bee_functions_challenge1_b: Ricordati di inserire il codice all'interno
           del blocco verde aperto che definisce cosa deve fare la funzione.
+      course3_bee_functions_challenge3:
+        courseF_bee_functions_challenge1_a: Ricordati che è possibile richiamare una
+          funzione dall'interno della definizione di un'altra funzione!
       course3_bee_functions_challenge4:
+        courseF_bee_functions_challenge2_a: |-
+          Se c'è strada a destra, devi fare così:
+
+          -   prendi tutto il nettare o produci tutto il miele,
+          -   gira a destra verso il percorso laterale,
+          -   spostati fino alla fine del percorso laterale,
+          -   gira a destra.
+
+          Se si ripete due volte la sequenza precedente, si è pronti a proseguire lungo il sentiero principale.
+
+          **Clicca sull'ultimo suggerimento solo se vuoi vedere la soluzione completa!**
         courseF_bee_functions_challenge2_b: |-
           **Soluzione:**
 
@@ -17634,15 +17652,49 @@ it-IT:
           o un favo, prendere il nettare o fare il miele e poi girare.
         courseF_bee_functions6_c: Visto che la svolta è già all'interno della funzione,
           all'esterno basterà un ciclo `mentre` per completare il labirinto.
+      courseF_bee_functions7:
+        courseF_bee_functions7_a: Puoi dare un'occhiata alla funzione del precedente
+          esercizio.
+        courseF_bee_functions7_b: Prova a tracciare un percorso nel labirinto con
+          il dito. In quali punti l'ape deve prendere delle decisioni?
       courseF_bee_functions8a:
         courseF_bee_functions8a_a: |-
           Se ti sembra troppo difficile, prova a creare la funzione poco per volta.<br>
           Aggiungi qualche blocco e prova a vedere cosa fa. Poi aggiungine altri e controlla di nuovo. Velocemente arriverai alla soluzione!
+        courseF_bee_functions8a_b: Ricordati di inserire il codice all'interno del
+          blocco funzione dopo aver premuto il pulsante "modifica".
       courseF_bee_functionsPre7:
         courseF_bee_functions7_a: |-
           Se ti sembra troppo difficile, prova a creare la funzione poco per volta.<br>
           Aggiungi qualche blocco e prova a vedere cosa fa. Poi aggiungine altri e controlla di nuovo. Velocemente arriverai alla soluzione!
+        courseF_bee_functions7_b: |-
+          Ricordati di inserire il codice all'interno del blocco verde aperto che definisce cosa deve fare la funzione.
+
+          <xml>
+            <block type="procedures_defnoreturn" editable="false">
+              <mutation/>
+              <title name="NAME">get nectar make honey</title>
+              <statement name="STACK">
+              </statement>
+            </block>
+          </xml>
+        courseF_bee_functions7_c: Da che parte devi girare se c'è un favo? E quando
+          incontri un fiore? E se non c'è proprio nulla?
+      courseF_bee_functions_challenge1:
+        courseF_bee_functions_challenge1_a: Ricordati che è possibile richiamare una
+          funzione dall'interno della definizione di un'altra funzione!
       courseF_bee_functions_challenge2:
+        courseF_bee_functions_challenge2_a: |-
+          Se c'è strada a destra, devi fare così:
+
+          -   prendi tutto il nettare o produci tutto il miele,
+          -   gira a destra verso il percorso laterale,
+          -   spostati fino alla fine del percorso laterale,
+          -   gira a destra.
+
+          Se si ripete due volte la sequenza precedente, si è pronti a proseguire lungo il sentiero principale.
+
+          **Clicca sull'ultimo suggerimento solo se vuoi vedere la soluzione completa!**
         courseF_bee_functions_challenge2_b: |-
           **Soluzione:**
 

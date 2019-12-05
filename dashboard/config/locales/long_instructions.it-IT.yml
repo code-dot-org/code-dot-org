@@ -1716,14 +1716,14 @@ it-IT:
         **Usa i tasti per far fare al Robot il ballo spaccata-applauso-spaccata-applauso il più velocemente possibile!**
       Dance_Party_12: Lasciati andare e lanciati in pista! Crea un ballo personalizzato
         da condividere con i tuoi amici.
-      Dance_Party_extras_alternate_2019: |-
-        # Tutti in Formazione!
-
-        Dai un'occhiata a questo ballo che usa il blocco [blockly block][0] per cambiare la formazione dei ballerini sullo sfondo durante il ballo. Prova una di queste idee per ampliarl:
-
-        -   Crea un secondo gruppo di ballerini in una diversa disposizione
-        -   Cambia la disposizione quando si preme un tasto
-        -   Cambia una proprietà quando i ballerini cambiano formazione
+      Dance_Party_extras_alternate_2019: "# Avanti e indietro!\n\nA volte potresti
+        voler creare una sequenza di mosse a tua scelta. Questo nuovo blocco ti permette
+        di fare proprio questo.\n\n<xml><block type=\"Dancelab_alternateMoves\"><title
+        name=\"GROUP\">sprites</title><title name=\"N\">2</title><title name=\"MOVE1\">MOVES.Roll</title><title
+        name=\"MOVE2\">MOVES.ClapHigh</title></block></xml>\n\nLe mosse indicate verranno
+        alternate per sempre.\n\n-   Crea una sequenza alternata tra il ballerino
+        principale e quelli secondari! \n-   Prova diversi ritmi di alternanza delle
+        mosse, per esempio `1` o `0.5` per alternare più in fretta!"
       Dance_Party_extras_battle: |-
         # Squadre di ballo
 
@@ -2391,6 +2391,11 @@ it-IT:
             </block></xml>
       course3_bee_functions_challenge1: Dovrai cavartela da solo in questa sfida.
         Potrebbe essere più difficile di quanto sembri!
+      course3_bee_functions_challenge3: Crea una nuova funzione per raccogliere tutto
+        il nettare e produrre tutto il miele `mentre c'è strada in avanti`. Usala
+        per completare l'esercizio!
+      course3_bee_functions_challenge4: Usa ciò che hai imparato per completare questo
+        esercizio!
       course3_farmer_until_challenge2: Usa il blocco `se/altrimenti` per seguire questo
         percorso con molte curve in diverse direzioni. Ad ogni angolo, usa il blocco
         `rimuovi 1` all'interno di un ciclo per eliminare il mucchio di terra.
@@ -6746,6 +6751,24 @@ it-IT:
         _"Questo campo è labirinticamente fantastico!"_
 
         Ora costruisci una tua funzione per aiutare l'ape a percorrere il labirinto girando a sinistra in corrispondenza dei fiori e a destra quando incontra dei favi. Chiaramente, non dimenticare di raccogliere il nettare e fare il miele lungo il percorso!
+      courseF_bee_functions7: |-
+        Per percorrere questo labirinto, ricostruisci la funzione del precedente esercizio.
+
+        Gira a sinistra in corrispondenza dei favi e a destra quando incontri dei fiori.\
+        **Attenzione:** alcune curve non sono segnate!
+      courseF_bee_functions8a: "Sotto questa nuvola, potrebbe esserci un fiore con
+        una quantità sconosciuta di nettare o un favo con una quantità sconosciuta
+        di miele.  \n\nScrivi un programma in grado di gestire entrambe le situazioni."
+      courseF_bee_functionsPre7: |-
+        Ora prova a creare una funzione per percorrere questo labirinto. In che modo è diverso da quello precedente?
+
+        Gira a sinistra in corrispondenza dei favi e a destra quando incontri dei fiori.\
+        **Attenzione:** alcune curve non sono segnate!
+      courseF_bee_functions_challenge1: Crea una nuova funzione per raccogliere tutto
+        il nettare e produrre tutto il miele `mentre c'è strada in avanti`. Usala
+        per completare l'esercizio!
+      courseF_bee_functions_challenge2: Usa ciò che hai imparato per completare questo
+        esercizio!
       courseF_bee_variables_3_2018: |-
         _"Che giardino fantastico!"_
 

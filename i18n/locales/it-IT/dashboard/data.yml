@@ -538,6 +538,11 @@ it:
         csd_debugging: Correzione errori (debugging)
         csd_applab_designmode_short: Sviluppo App - Modalità Interfaccia
         CSF-Teaching-Problem-Solving: Fondamenti di informatica - Insegnare a risolvere i problemi (Problem Solving)
+        hoc_dance_congrats_2019: Ballando col codice 2019 - Parte la festa!
+        hoc_dance_warmup_2019: Ballando col codice 2019 - Riscaldamento
+        hoc_dance_events_2019: Ballando col codice 2019 - Eventi
+        hoc_dance_measures_2019: Ballando col codice 2019 - Le Misure
+        hoc_dance_properties_2019: Ballando col codice 2019 - Proprietà
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto l'altro blocco qua sopra
