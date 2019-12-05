@@ -260,7 +260,7 @@ uk-UA:
       Dance_Party_02: |-
         "Нехай цей лось потанцює!
 
-        Перетягніть блок<xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> на робочу область. З'єднайте його з блоком <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Ваш танцівник має почати новий рух після четвертого такту.
+        Перетягніть блок<xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> на робочу область. З'єднайте його з блоком <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Ваш танцівник має почати новий рух після четвертого такту.
 
         **Такти** використовуються для відліку часу в музиці. У цьому уроці такт складається з чотирьох бітів.".
       Dance_Party_03: "\"_Танцюємо!_ \n\nДодайте блок <xml><block type=\"Dancelab_atTimestamp\"><title

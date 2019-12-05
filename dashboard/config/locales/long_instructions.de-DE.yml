@@ -1544,14 +1544,13 @@ de-DE:
         -   Füge eine weitere Gruppe von Tänzern hinzu
         -   Blende Tänzer mithilfe der Pfeiltasten ein- und aus
         -   Blende alle der Tänzer aus und wechsle zu einem spannenden Hintergrundeffekt
-      Dance_Party_extras_visible_2019: |-
-        # Wo würden sie hingehen?
-
-        Dieser Tanz blendet zwei verschiedene Gruppen von Tänzern ein und aus. Sieh ihn dir an und versuche dann, dein eigenes Flair hinzuzufügen.
-
-        -   Füge eine weitere Gruppe von Tänzern hinzu
-        -   Blende Tänzer mithilfe der Pfeiltasten ein- und aus
-        -   Blende alle der Tänzer aus und wechsle zu einem spannenden Hintergrundeffekt
+      Dance_Party_extras_visible_2019: "# Viertelnoten\n\nDie meisten unserer Tänze
+        haben ganze Takte verwendet, aber jeder Takt besteht aus 4 Viertelnoten. Dieser
+        Tanz verwendet [blockly block][0], damit die Tänzer nach dem fünften Takt
+        auf jede Viertelnote klatschen. \n\nVersuchen Sie, die Zahlen im Block zu
+        ändern, um zu sehen, wie er den Tanz verändert. \n\n-   Experimentieren Sie
+        mit anderen Notenlängen (z.B. 0,5 für eine halbe Note oder 0,125 für eine
+        Achtelnote). \n-   Fügen Sie weitere Ereignisse hinzu."
       Escape Room Example: |-
         # Room Escape
 

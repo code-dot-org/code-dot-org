@@ -216,11 +216,11 @@ vi-VN:
         Hãy xem khối này:
 
         <xml>
-        <block type="Dancelab_makeNewDanceSpriteGroup">
-        <title name="N">6</title>
-        <title name="COSTUME">"VỊT"</title>
-        <title name="LAYOUT">"vòng tròn"</title>
-        </block></xml>
+          <block type="Dancelab_makeNewDanceSpriteGroup">
+            <title name="N">6</title>
+            <title name="COSTUME">"DUCK"</title>
+            <title name="LAYOUT">"circle"</title>
+          </block></xml>
 
         Bây giờ bạn có thể cùng lúc tạo ra một loạt các vũ công!
 
@@ -932,3 +932,18 @@ vi-VN:
         chắn xoay 120 độ trước mỗi hình vuông mới. '
       frozen square snowflake: Bạn có thể tạo một bông tuyết sử dụng khối "Lặp lại"
         để làm một hình vuông 10 lần, và khối "Xoay" để xoay 36 độ giữa mỗi hình?
+      Dance_Party_extras_layout_2019: |-
+        # Hãy hình thành!
+
+        Kiểm tra điệu nhảy này sử dụng khối <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> để thay đổi đội hình của các vũ công dự phòng trong suốt điệu nhảy. Hãy thử một trong những ý tưởng sau để mở rộng nó:
+
+        -   Tạo nhóm vũ công thứ hai theo bố cục khác
+        -   Thay đổi bố cục khi nhấn phím
+        -   Thay đổi thuộc tính khi vũ công thay đổi đội hình
+      Dance_Party_extras_mixed_2019: |-
+        # Thêm nút
+
+        Điệu nhảy này cho phép bạn điều khiển các thuộc tính của vũ công trong thời gian thực trong khi họ nhảy tự động. Hãy thử làm cho các thuộc tính khác thay đổi khi bạn nhấn các nút. Ví dụ:
+
+        -   Chọn ngẫu nhiên sắc độ của vũ công khi bạn nhấn "xuống".
+        -   Thêm một nhóm các vũ công có bố cục ngẫu nhiên khi bạn nhấn "dấu cách".

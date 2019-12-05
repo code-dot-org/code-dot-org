@@ -123,7 +123,7 @@ ms-MY:
       Dance_Party_02: |-
         Mari kita pastikan rusa ini menari!
 
-        Seret keluar blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> ke ruang kerja. Sambungkannya di bawah blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Penari anda sepatutnya memulakan gerakan baharu selepas corak berirama keempat.
+        Seret keluar blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> ke ruang kerja. Sambungkannya di bawah blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Penari anda sepatutnya memulakan gerakan baharu selepas corak berirama keempat.
 
         **Corak Berirama** digunakan untuk mengira masa dalam muzik.
       Dance_Party_03: |-
@@ -154,7 +154,7 @@ ms-MY:
         Sekarang kita tahu cara menukar sifat penari. Kita juga boleh membuatkan sifat yang sama bertindak balas kepada muzik secara automatik dengan menggunakan blok ini:
         <xml>
           <block type="Dancelab_startMapping">
-            <title name="SPRITE">right_unicorn</title>
+            <title name="SPRITE">right\_unicorn</title>
             <title name="PROPERTY">"scale"</title>
             <title name="RANGE">"bass"</title>
           </block></xml>
@@ -262,3 +262,18 @@ ms-MY:
 
         -   Eksperimen dengan tempoh not lain (seperti 0.5 untuk not perdua atau 0.125 untuk not perlapan).
         -   Tambahkan beberapa acara lain.
+      Dance_Party_extras_layout_2019: |-
+        # Mari kita mendapatkan dalam pembentukan!
+
+        Lihatlah tarian ini yang menggunakan blok <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> Halang untuk menukar pembentukan penari ' di seluruh tarian. Cuba salah satu idea ini untuk melanjutkan:
+
+        \-Buat Kumpulan kedua penari dalam susun atur yang berbeza
+        \-Tukar talaletak apabila kekunci ditekan
+        \-Tukar harta apabila penari perubahan pembentukan
+      Dance_Party_extras_mixed_2019: |-
+        # Lagi Tombol
+
+        Tarian ini memungkinkan Anda mengontrol sifat penari secara real time sementara mereka menari secara otomatis. Cuba buat sifat lain berubah apabila anda menekan butang. Sebagai contoh:
+
+        -   Randomize warna penari apabila anda menekan “bawah”.
+        -   Tambah sekumpulan penari dengan susun atur rawak apabila anda menekan “ruang”.

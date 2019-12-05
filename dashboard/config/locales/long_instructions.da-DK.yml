@@ -287,7 +287,7 @@ da-DK:
       Dance_Party_02: |-
         Lad os få denne elg til at danse
 
-        Træk blokken <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> ind på. Sæt den under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> blokken. Din danser skal begynde et nyt move efter 4 takter.
+        Træk blokken <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> ind på. Sæt den under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> blokken. Din danser skal begynde et nyt move efter 4 takter.
 
         **Takter** bliver brugt til at måle tiden i musik. I denne vejledning er en takt på fire slag.
       Dance_Party_03: "_Nu skal vi lave rytmen!_ \n\nTilføj <xml><block type=\"Dancelab_atTimestamp\"><title
@@ -312,7 +312,7 @@ da-DK:
       Dance_Party_10: "Nu ved vi, hvordan man ændrer en dansers egenskaber. Vi kan
         også få de samme egenskaber til at reagere automatisk på musikken ved hjælp
         af denne blok: <xml>\n  <block type=\"Dancelab_startMapping\">\n    <title
-        name=\"SPRITE\">right_unicorn</title>\n    <title name=\"PROPERTY\">\"scale\"</title>\n
+        name=\"SPRITE\">right\\_unicorn</title>\n    <title name=\"PROPERTY\">\"scale\"</title>\n
         \   <title name=\"RANGE\">\"bass\"</title>\n  </block></xml> \n\nDette program
         bruger musikens \"bas\"-volumen (de lave lyde) til at kontrollere en dansers
         højde. Kan du også få den anden danser til at reagere på musikken?"
@@ -830,3 +830,14 @@ da-DK:
       frozen square snowflake: Kan du lave et snefnug, ved at bruge "Gentagelse" blokken
         og lave en firkant 10 gange. Og ved at bruge "Dreje" blokken for at dreje
         36 grader mellem hvert kvadrat?
+      Dance_Party_extras_alternate_2019: |-
+        # Frem og tilbage!
+
+        Nogle gange har du måske lyst til selv at bestemme, hvordan danserne skal danse. Med denne nye blok kan du det.
+
+        <xml><block type="Dancelab_alternateMoves"><title name="GROUP">sprites</title><title name="N">2</title><title name="MOVE1">MOVES.Roll</title><title name="MOVE2">MOVES.ClapHigh</title></block></xml>
+
+        Dansetrinene som du vælger foroven vil blive gentaget.
+
+        -   Kod dansetrinene for den forreste danser!
+        -   Brug forskellige talværdier til hastigheden af skiftene mellem trinene. Prøv med `1` eller `0.5` for at skiftene bliver hurtigere!
