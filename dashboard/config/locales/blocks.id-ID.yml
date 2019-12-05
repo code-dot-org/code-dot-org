@@ -227,6 +227,7 @@ id:
       Dancelab_everyMeasuresRange:
         text: 'ulangi setiap {N} birama setelah {START} '
       Dancelab_everySeconds:
+        text: 'ulangi setiap {N} {UNIT} '
         options:
           UNIT:
             '"measures"': birama
@@ -305,6 +306,10 @@ id:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: 200, y: 200}": Tengah
+            "{x: 100, y: 100}": atas-kiri
+            "{x: 300, y: 100}": atas-kanan
+            "{x: 100, y: 300}": bawah-kiri
+            "{x: 300, y: 300}": bawah kanan
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": acak
       Dancelab_jumpToEach:
         text: melompat {GROUP} ke {LOCATION}
@@ -329,6 +334,10 @@ id:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: 200, y: 200}": Tengah
+            "{x: 100, y: 100}": atas-kiri
+            "{x: 300, y: 100}": atas-kanan
+            "{x: 100, y: 300}": bawah-kiri
+            "{x: 300, y: 300}": bawah kanan
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": acak
       Dancelab_layoutSprites:
         text: tata letak {GROUP} sebagai {FORMAT}
@@ -379,6 +388,10 @@ id:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: 200, y: 200}": Tengah
+            "{x: 100, y: 100}": atas-kiri
+            "{x: 300, y: 100}": atas-kanan
+            "{x: 100, y: 300}": bawah-kiri
+            "{x: 300, y: 300}": bawah kanan
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": acak
       Dancelab_makeNewDanceSprite:
         text: |-
@@ -404,6 +417,10 @@ id:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: 200, y: 200}": Tengah
+            "{x: 100, y: 100}": atas-kiri
+            "{x: 300, y: 100}": atas-kanan
+            "{x: 100, y: 300}": bawah-kiri
+            "{x: 300, y: 300}": bawah kanan
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": acak
       Dancelab_makeNewDanceSpriteGroup:
         text: |-
@@ -507,6 +524,9 @@ id:
             '"vintage"': Vintage
             '"warm"': Hangat
       Dancelab_setBackgroundEffectWithPalette:
+        text: |-
+          tetapkan efek latar belakang
+          {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Tidak Ada
@@ -1103,6 +1123,10 @@ id:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: 200, y: 200}": Tengah
+            "{x: 100, y: 100}": atas-kiri
+            "{x: 300, y: 100}": atas-kanan
+            "{x: 100, y: 300}": bawah-kiri
+            "{x: 300, y: 300}": bawah kanan
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Acak
       Mikelab_getProp:
         options:
@@ -1136,6 +1160,10 @@ id:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: 200, y: 200}": Tengah
+            "{x: 100, y: 100}": atas-kiri
+            "{x: 300, y: 100}": atas-kanan
+            "{x: 100, y: 300}": bawah-kiri
+            "{x: 300, y: 300}": bawah kanan
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Acak
       Mikelab_groupDestroy:
         options:
@@ -1221,6 +1249,10 @@ id:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: 200, y: 200}": Tengah
+            "{x: 100, y: 100}": atas-kiri
+            "{x: 300, y: 100}": atas-kanan
+            "{x: 100, y: 300}": bawah-kiri
+            "{x: 300, y: 300}": bawah kanan
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Acak
       Mikelab_whenKeyPressed:
         text: ketika {KEY} ditekan
