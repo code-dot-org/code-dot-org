@@ -218,9 +218,14 @@ ms-MY:
         -   Tambahkan beberapa acara `selepas corak berirama`.
         -   Tukar "corak berirama" kepada "saat" dan cuba tentukan masa tarian anda dengan kaedah itu.
       Dance_Party_extras_every_beat_2019: |-
-        # Percepatkannya, Perlahankannya
+        # Not Perempat
 
-        Tarian akhir ini menggunakan blok <xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml> untuk mengawal kepantasan setiap penari bergerak. Cuba bereksperimen dengan kelajuan berbeza semasa sudut berlainan dalam lagu. Jangan bimbang untuk terus bermain-main terhadap tarian ini, atau kembali kepada mana-mana tarian sebelumnya untuk menjadikannya lebih hebat.
+        Kebanyakan tarian kita telah menggunakan seluruh corak berirama, tetapi setiap corak berirama terdiri daripada 4 not perempat. Tarian ini menggunakan  block][0] untuk membuatkan penari menepuk tangan pada setiap not perempat selepas corak berirama ke-5.
+
+        Cuba ubah bilangan dalam blok untuk melihat cara ia menukar tarian.
+
+        -   Eksperimen dengan tempoh not lain (seperti 0.5 untuk not perdua atau 0.125 untuk not perlapan).
+        -   Tambahkan beberapa acara lain.
       Dance_Party_extras_layout: |-
         # Mari Kita Berada dalam Formasi!
 
@@ -254,14 +259,13 @@ ms-MY:
         -   Tunjuk dan sembunyikan penari yang menggunakan kekunci anak panah
         -   Sembunyikan semua penari dan beralih kepada kesan latar belakang yang menarik
       Dance_Party_extras_visible_2019: |-
-        # Not Perempat
+        # Ke Manakah Mereka Akan Pergi?
 
-        Kebanyakan tarian kita telah menggunakan seluruh corak berirama, tetapi setiap corak berirama terdiri daripada 4 not perempat. Tarian ini menggunakan [blockly block][0] untuk membuatkan penari menepuk tangan pada setiap not perempat selepas corak berirama ke-5.
+        Tarian ini menunjuk dan menyembunyikan dua kumpulan penari berbeza. Lihat dan kemudian cuba tambah bakat anda sendiri.
 
-        Cuba ubah bilangan dalam blok untuk melihat cara ia menukar tarian.
-
-        -   Eksperimen dengan tempoh not lain (seperti 0.5 untuk not perdua atau 0.125 untuk not perlapan).
-        -   Tambahkan beberapa acara lain.
+        -   Tambah satu lagi kumpulan penari
+        -   Tunjuk dan sembunyikan penari yang menggunakan kekunci anak panah
+        -   Sembunyikan semua penari dan beralih kepada kesan latar belakang yang menarik
       Dance_Party_extras_layout_2019: |-
         # Mari kita mendapatkan dalam pembentukan!
 
