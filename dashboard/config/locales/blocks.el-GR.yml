@@ -222,8 +222,6 @@ el:
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_everyMeasuresRange:
-        text: 'επαναλάβετε κάθε [Ν] [0] μέτρα μετά [START] [1] '
       Dancelab_everySeconds:
         text: 'κάθε {N} {UNIT} '
         options:
@@ -858,7 +856,6 @@ el:
             '"mid"': μεσαία
             '"treble"': πρίμα
       Dancelab_translateStrings:
-        text: μετάφραση του [STRING] [0]
         options:
           STRING:
             '"music_wave"': Κύματα

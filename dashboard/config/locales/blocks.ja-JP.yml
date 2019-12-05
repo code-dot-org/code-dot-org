@@ -683,7 +683,6 @@ ja:
             '"y"': 垂直方向の位置
             '"tint"': 色合い
       Dancelab_setPropRandomEach:
-        text: "[GROUP] [0] [PROPERTY] [1] をランダム化します"
         options:
           GROUP:
             sprites: すべて
