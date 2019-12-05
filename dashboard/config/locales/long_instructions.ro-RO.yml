@@ -1102,9 +1102,14 @@ ro-RO:
         niște evenimente `după măsură`.\n-   Schimbă „măsurile” în „secunde” și încearcă
         să-ți cronometrezi dansurile în acest fel.\"."
       Dance_Party_extras_every_beat_2019: |-
-        # Grăbește-l, încetinește-l
+        # Sfert de note
 
-        Acest dans de final folosește blocul <xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml> pentru a controla cât de repede se mișcă fiecare dansator. Experimentează cu diferite viteze pe parcursul mai multor momente din cântec. Improvizează liber la acest dans sau revino la oricare dintre dansurile anterioare pentru a-l face și mai tare.
+        Majoritatea dansurilor noastre folosesc măsuri întregi, dar fiecare măsură este alcătuită din 4 sferturi de note. Acest dans folosește [blockly block][0] pentru a-l face pe dansator să aplaude la fiecare sfert de notă după a cincea măsură.
+
+        Încearcă să modifici cifrele din bloc pentru a vedea modul în care aceasta schimbă dansul.
+
+        -   Experimentează cu alte durate ale notelor (ex. 0,5 pentru o doime sau 0,125 pentru o optime).
+        -   Adaugă alte evenimente.
       Dance_Party_extras_layout: "\"# Să trecem în formație!\n\nVezi acest dans care
         folosește blocul `aranjament` pentru a modifica formația dansatorilor de rezervă
         pe durata dansului. Încearcă una dintre aceste idei pentru a dezvolta dansul:\n\n-
@@ -1132,15 +1137,11 @@ ro-RO:
         \  Adaugă un alt grup de dansatori                                                                                                                  \n-
         \  Arată și ascunde dansatori folosind tastele cu săgeată                                                                          \n-
         \  Ascunde toți dansatorii și treci la un efect de fundal captivant\""
-      Dance_Party_extras_visible_2019: |-
-        # Sfert de note
-
-        Majoritatea dansurilor noastre folosesc măsuri întregi, dar fiecare măsură este alcătuită din 4 sferturi de note. Acest dans folosește [blockly block][0] pentru a-l face pe dansator să aplaude la fiecare sfert de notă după a cincea măsură.
-
-        Încearcă să modifici cifrele din bloc pentru a vedea modul în care aceasta schimbă dansul.
-
-        -   Experimentează cu alte durate ale notelor (ex. 0,5 pentru o doime sau 0,125 pentru o optime).
-        -   Adaugă alte evenimente.
+      Dance_Party_extras_visible_2019: "\"# Unde au dispărut?\n\nAcest dans arată și ascunde
+        două grupuri diferite de dansatori. Vizionează-l și apoi adaugă ceva personal.\n\n-
+        \  Adaugă un alt grup de dansatori                                                                                                                  \n-
+        \  Arată și ascunde dansatori folosind tastele cu săgeată                                                                          \n-
+        \  Ascunde toți dansatorii și treci la un efect de fundal captivant\""
       HOC 2018 Level_12: Felicitări! Mediul acvatic deschis te aşteaptă. Construieşte
         un recif de corali! Un vulcan! O epavă! Aşa cum vrei tu.
       Intro to Web Lab - Part 1_2019: |-
