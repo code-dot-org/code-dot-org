@@ -101,8 +101,16 @@ SELECT distinct
        case when (q1 + q2 + q3 + q4) >= 3 then 1 else 0 end as retained,
        case when c.studio_person_id is not null then 1 else 0 end as completed, -- completed course trained in
        case when s.studio_person_id is not null then 1 else 0 end as started, -- started course trained in (implementation)
-       tmp_csd.script_most_progress,
-       tmp.students_script_most_progress,
+       tmp_csp.script_most_progress script_most_progress_csp,
+       tmp_csp.students_script_most_progress students_script_most_progress_csp,
+       tmp_csd.script_most_progress script_most_progress_csd,
+       tmp_csd.students_script_most_progress students_script_most_progress_csd,
+       case when d.course = 'CS Principles' then tmp_csp.script_most_progress
+            when d.course = 'CS Discoveries' then tmp_csd.script_most_progress
+            end as script_most_progress,
+       case when d.course = 'CS Principles' then tmp_csp.students_script_most_progress
+            when d.course = 'CS Discoveries' then tmp_csd.students_script_most_progress
+            end as students_script_most_progress,
        sa_csp.sections as sections_csp,
        sa_csp.students as students_csp,
        sa_csp.students_started as students_started_csp,
@@ -140,11 +148,11 @@ LEFT JOIN analysis.quarterly_workshop_attendance_view qwa
 LEFT JOIN dashboard_production_pii.regional_partners rp  
       ON d.regional_partner_id = rp.id 
 -- analysis tables
-LEFT JOIN public.test_student_activity_csp_csd_view sa_csp 
+LEFT JOIN analysis.student_activity_csp_csd_view sa_csp 
       ON sa_csp.studio_person_id = d.studio_person_id 
       AND sa_csp.school_year >= d.school_year 
       AND sa_csp.course_name_short = 'csp'
-LEFT JOIN public.test_student_activity_csp_csd_view sa_csd 
+LEFT JOIN analysis.student_activity_csp_csd_view sa_csd 
       ON sa_csd.studio_person_id = d.studio_person_id 
       AND sa_csd.school_year >= d.school_year 
       AND sa_csd.course_name_short = 'csd'
@@ -156,9 +164,14 @@ LEFT JOIN completed c
       ON c.studio_person_id = d.studio_person_id
       AND c.course = d.course   
       AND c.school_year  = s.school_year  
-LEFT JOIN analysis.teacher_most_progress_csp_csd_view tmp 
-      ON tmp.studio_person_id = d.studio_person_id
-      AND tmp.school_year = coalesce(sa_csp.school_year, sa_csd.school_year)
-with no schema binding;
+LEFT JOIN analysis.teacher_most_progress_csp_csd_view tmp_csp 
+      ON tmp_csp.studio_person_id = d.studio_person_id
+      AND tmp_csp.school_year = coalesce(sa_csp.school_year, sa_csd.school_year)
+      AND tmp_csp.course_name_short = 'csp'
+LEFT JOIN analysis.teacher_most_progress_csp_csd_view tmp_csd 
+      ON tmp_csd.studio_person_id = d.studio_person_id
+      AND tmp_csd.school_year = coalesce(sa_csp.school_year, sa_csd.school_year)
+      AND tmp_csd.course_name_short = 'csd'
+with no schema binding
 
 GRANT SELECT ON analysis_pii.regional_partner_stats_csp_csd_view TO reader_pii;
