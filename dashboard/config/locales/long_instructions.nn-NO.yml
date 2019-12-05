@@ -414,6 +414,20 @@ nn-NO:
       CourseE_HOC 2018 Level_9b: Du kom deg til revet. No må du leite etter **hjarta
         til havet** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)!
         Bruk den blå og den røde korallen for å kome fram til **skattkista** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
+      Crack a Caesar Cipher: |-
+        # Knekk en Cæsar kode!
+
+        Dette verktøyet lar deg leke med tekst og lage Cæsar kode. du kan bruke det til å kryptere eller dekryptere en melding.
+
+        # Gjør dette
+
+        Åpne en **Eksempelmelding** fra nedtrekksmenyen. Det vil åpne en melding som er kryptert med en Cæsarkode.
+        ![](https://images.code.org/347139486c8c729bf3c6e72ce67da878-image-1476286380409.gif)
+
+        -   Bruk knappene i Cæsar erstatningsfanen, du kan prøve deg fram med å dra alfabetet frem og tilbake for å dekryptere meldingen.
+            ![](https://images.code.org/ef9ebc16d2f1442dc46fba9bd48b5d43-image-1476285966821.gif)
+            Se hvor lang tid det tar deg å dekryptere meldingen! Er dette en god metode for dekryptere hemmelige data?
+            <img src="http://code.org/api/hour/begin_encryption.png">
       Dance_2019_01: |-
         Dra <xml><block type="Dancelab_makeAnonymousDanceSprite" block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;, &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml>-blokka inn i arbeidsområdet og koble den inn i <xml><block type="Dancelab_whenSetup2" next_connection_disabled="true" block-text="setup"></block></xml>-blokka.
 
@@ -883,8 +897,9 @@ nn-NO:
         tolv gongar med ein 30 graders sving.
       courseC_artist_loops2a_2018: No kan du bruke ei løkke for å spinne fuglen din
         rundt tolv gongar med ein 30 graders sving.
-      courseC_artist_loops2a_2019: No kan du bruke ei løkke for å spinne fuglen din
-        rundt tolv gongar med ein 30 graders sving.
+      courseC_artist_loops2a_2019: "No kan du bruke ei løkke for å lage fleire kopiar.
+        Prøv å endre talet på \"snu\"- og \"gjenta\"-blokkene for å lage andre mønster.
+        \n\n* * *\n\nTrykk på \"Ferdig\" når du er nøgd med det du har laga. \n\n![expandable](https://images.code.org/8b4352a1abe72419043d278752261b57-image-1553097917337.png)\n![expandable](https://images.code.org/5211e2fe2852e25a884a790155ba47d5-image-1553097923167.png)\n![expandable](https://images.code.org/0e3fbe8bbd20526cc735dfd26d2473ee-image-1553097925789.png)"
       courseC_collector_prog9: _"La oss få heile skatten!"_
       courseC_collector_prog9_2018: _"La oss få heile skatten!"_
       courseC_collector_prog9_2019: _"La oss få heile skatten!"_
