@@ -176,6 +176,11 @@ fil-PH:
         dance_callout_04: Idagdag ang block na ito sa iyong program!
       CourseD_Dance_Party_06:
         dance_callout_06: Idagdag ang bagong dancer dito
+      CourseD_Dance_Party_11:
+        dance_callout_11_a: Bagong block!
+        dance_callout_11_b: Bagong block!
+      CourseD_Dance_Party_11_5:
+        dance_party_11_5_groups: Tingnan dito para sa mga block na "lahat pato"
       Dance_2019_01:
         dance_callout_01: Add this block to your program!
       Dance_2019_02:
@@ -185,6 +190,13 @@ fil-PH:
         dance_callout_02: Idagdag ang block na ito sa iyong program!
       Dance_2019_05:
         dance_callout_05: Magdagdag ng isang bagong kaganapan sa iyong programa.
+      Dance_2019_06:
+        dance_party_11_5_groups: Bagong block!
+      Dance_2019_07:
+        setprop_hint: Bagong block!
+      Dance_2019_09:
+        new_block_3: Bagong block!
+        new_block_4: Bagong block!
       Dance_Party_01:
         dance_callout_01: Idagdag ang block na ito sa iyong program!
       Dance_Party_02:
@@ -193,6 +205,11 @@ fil-PH:
         dance_callout_04: Idagdag ang block na ito sa iyong program!
       Dance_Party_06:
         dance_callout_06: Idagdag ang bagong dancer dito
+      Dance_Party_11:
+        dance_callout_11_a: Bagong block!
+        dance_callout_11_b: Bagong block!
+      Dance_Party_11_5:
+        dance_party_11_5_groups: Tingnan dito para sa mga block na "lahat pato"
       Function intro Ryan:
         Function_intro_Ryan_1: Ang maliit na mga instruksyon na ito ay nagsasabi sa
           kompyuter na magpatakbo ng MALALAKING tipag ng code na may parehong mga

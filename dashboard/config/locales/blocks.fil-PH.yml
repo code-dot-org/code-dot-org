@@ -3,6 +3,8 @@ fil:
   data:
     blocks:
       Dancelab_alternateMoves:
+        text: "Ang {GROUP} ay maghahalinhinan bawat {N} measure \nsa pagitan ng {MOVE1}
+          at {MOVE2}"
         options:
           GROUP:
             sprites: lahat
@@ -16,6 +18,7 @@ fil:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
+            '"SLOTH"': sloths
             '"UNICORN"': unicorns
           MOVE1:
             MOVES.Roll: Body Roll
@@ -69,6 +72,7 @@ fil:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
+            '"SLOTH"': sloths
             '"UNICORN"': unicorns
           MOVE:
             '"next"': "(Kasunod)"
@@ -120,6 +124,7 @@ fil:
             '"x"': posisyong pahiga
             '"y"': posisyong patayo
       Dancelab_changePropEachBy:
+        text: change {GROUP} {PROPERTY} by {VAL}
         options:
           GROUP:
             sprites: lahat
@@ -133,6 +138,7 @@ fil:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
+            '"SLOTH"': sloths
             '"UNICORN"': unicorns
           PROPERTY:
             '"scale"': laki
@@ -156,6 +162,7 @@ fil:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
+            '"SLOTH"': sloths
             '"UNICORN"': unicorns
           MOVE:
             '"rand"': "(Random)"
@@ -216,6 +223,8 @@ fil:
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_everyMeasuresRange:
+        text: 'ulitin bawat {N} measure makalipas ang {START} '
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -296,6 +305,7 @@ fil:
             "{x: 300, y: 200}": kanan
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": nang hindi pinipili
       Dancelab_jumpToEach:
+        text: tumalon {GROUP} sa {LOCATION}
         options:
           GROUP:
             sprites: lahat
@@ -309,6 +319,7 @@ fil:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
+            '"SLOTH"': sloths
             '"UNICORN"': unicorns
           LOCATION:
             "{x: 200, y: 100}": itaas
@@ -331,6 +342,7 @@ fil:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
+            '"SLOTH"': sloths
             '"UNICORN"': unicorns
           FORMAT:
             '"border"': border
@@ -343,6 +355,7 @@ fil:
             '"plus"': idagdag
             '"random"': nang hindi pinipili
       Dancelab_makeAnonymousDanceSprite:
+        text: gumawa ng bagong {COSTUME} sa {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': dayuhan
@@ -355,6 +368,7 @@ fil:
             '"PINEAPPLE"': pinya
             '"ROBOT"': robot
             '"SHARK"': pating
+            '"SLOTH"': sloth
             '"UNICORN"': unicorn
           LOCATION:
             "{x: 200, y: 100}": itaas
@@ -378,6 +392,7 @@ fil:
             '"PINEAPPLE"': pinya
             '"ROBOT"': robot
             '"SHARK"': pating
+            '"SLOTH"': sloth
             '"UNICORN"': unicorn
           LOCATION:
             "{x: 200, y: 100}": itaas
@@ -421,6 +436,7 @@ fil:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
+            '"SLOTH"': sloths
             '"UNICORN"': unicorns
           LAYOUT:
             '"border"': border
@@ -428,8 +444,12 @@ fil:
             '"diamond"': diyamante
             '"circle"': bilog
             '"grid"': grid
+            '"top"': pinakamataas na hilera
             '"row"': hilera
+            '"bottom"': pinakamababang hilera
+            '"left"': kaliwang kolum
             '"column"': kolum
+            '"right"': kanang kolum
             '"x"': criss-cross
             '"plus"': idagdag
             '"random"': nang hindi pinipili
@@ -484,21 +504,28 @@ fil:
             '"none"': Wala
             '"rand"': "(Random)"
             '"circles"': Mga bilog
+            '"quads"': Mga Anggulo
             '"color_cycle"': Mga Kulay
             '"diamonds"': Diyamante
             '"disco_ball"': Disco Ball
             '"fireworks"': Fireworks
+            '"flowers"': Mga Bulaklak
+            '"growing_stars"': Growing Stars
             '"swirl"': Hypno
             '"kaleidoscope"': Kaleidoscope
             '"lasers"': Laser Dance Floor
             '"splatter"': Isaboy ang Pintura
             '"rainbow"': Bahaghari
+            '"ripples_random"': Random Ripples
+            '"ripples"': Ripples
             '"snowflakes"': Niyebe
             '"text"': Mga Pangalan ng Awit
+            '"squiggles"': Squiggles
             '"sparkles"': Sparkles
             '"spiral"': Spiral
             '"disco"': Mga kwadrado
             '"stars"': Mga Bituin
+            '"music_wave"': Mga Alon
           PALETTE:
             '"rave"': Itim at Puti
             '"cool"': Cool
@@ -533,6 +560,7 @@ fil:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
+            '"SLOTH"': sloths
             '"UNICORN"': unicorns
           SPEED:
             '1': normal
@@ -565,9 +593,12 @@ fil:
             '"none"': Wala
             '"rand"': "(Random)"
             '"bubbles"': Bubbles
+            '"hearts_colorful"': Makulay na mga Puso
             '"confetti"': Confetti
+            '"emojis"': Mga Emoji
             '"hearts_red"': Mga Puso
             '"music_notes"': Mga Nota ng Musika
+            '"paint_drip"': Tulo ngPintura
             '"pineapples"': Pineapples
             '"pizzas"': Pizzas
             '"smiling_poop"': Poop
@@ -576,6 +607,7 @@ fil:
             '"smile_face"': Mga Ngiti
             '"spotlight"': Spotlight
             '"color_lights"': Mga Ilaw ng Entablado
+            '"exploding_stars"': Starburst
             '"raining_tacos"': Tacos
       Dancelab_setProp:
         text: 'i-set ang {SPRITE} {PROPERTY} to {VAL} '
@@ -602,6 +634,7 @@ fil:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
+            '"SLOTH"': sloths
             '"UNICORN"': unicorns
           PROPERTY:
             '"scale"': laki
@@ -623,6 +656,7 @@ fil:
             '"y"': posisyong patayo
             '"tint"': tint
       Dancelab_setPropRandomEach:
+        text: i-randomize ang {GROUP} {PROPERTY}
         options:
           GROUP:
             sprites: lahat
@@ -636,6 +670,7 @@ fil:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
+            '"SLOTH"': sloths
             '"UNICORN"': unicorns
           PROPERTY:
             '"scale"': laki
@@ -662,6 +697,7 @@ fil:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
+            '"SLOTH"': sloths
             '"UNICORN"': unicorns
       Dancelab_setTintEachInline:
         text: i-set ang {THIS} tint sa {VAL}
@@ -678,6 +714,7 @@ fil:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
+            '"SLOTH"': sloths
             '"UNICORN"': unicorns
       Dancelab_setTintInline:
         text: i-set ang {SPRITE} tint sa {VAL}
@@ -702,6 +739,7 @@ fil:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
+            '"SLOTH"': sloths
             '"UNICORN"': unicorns
           VISIBILITY:
             'true': makikita
@@ -722,6 +760,7 @@ fil:
             '"mid"': mid
             '"treble"': treble
       Dancelab_startMappingEach:
+        text: Ang {GROUP} ay magsisimula {PROPERTY} kasunod ng {RANGE}
         options:
           GROUP:
             sprites: lahat
@@ -735,6 +774,7 @@ fil:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
+            '"SLOTH"': sloths
             '"UNICORN"': unicorns
           PROPERTY:
             '"scale"': laki
@@ -765,6 +805,7 @@ fil:
             '"mid"': mid
             '"treble"': treble
       Dancelab_stopMappingEach:
+        text: Ang {GROUP} ay hihinto {PROPERTY} kasunod ng {RANGE}
         options:
           GROUP:
             sprites: lahat
@@ -778,6 +819,7 @@ fil:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
+            '"SLOTH"': sloths
             '"UNICORN"': unicorns
           PROPERTY:
             '"scale"': laki
@@ -793,10 +835,33 @@ fil:
             '"mid"': mid
             '"treble"': treble
       Dancelab_translateStrings:
+        text: isalin ang {STRING}
         options:
           STRING:
+            '"music_wave"': Mga Alon
+            '"ripples"': Ripples
+            '"ripples_random"': Random Ripples
+            '"quads"': Mga Anggulo
+            '"flowers"': Mga Bulaklak
+            '"popsicles"': Popsicles
+            '"squiggles"': Squiggles
+            '"growing_stars"': Growing Stars
+            '"emojis"': Mga Emoji
             '"hearts_colorful"': Mga Puso
+            '"paint_drio"': Tulo ngPintura
+            '"exploding_stars"': Starburst
+            '"row_top"': pinakamataas na hilera
+            '"row_bottom"': pinakamababang hilera
+            '"column_left"': kaliwang kolum
+            '"column_right"': kanang kolum
             '"diamond"': diyamante
+            '"mural"': Mural
+            '"safari"': Safari
+            '"network"': Network
+            '"highway"': Highway
+            '"stream"': Stream
+            '"tile"': Tile
+            '"shadow"': Anino
             '"s"': s
             '"t"': t
             '"u"': u
@@ -1031,6 +1096,7 @@ fil:
             '"y"': y na posisyon
             '"direction"': direksyon ng galaw
       Mikelab_groupChangeAnim:
+        text: palitan ang {SELECT} {COSTUME} ng {COSTUME2}
         options:
           SELECT:
             '"all"': lahat
@@ -1045,6 +1111,7 @@ fil:
             '"y"': y na posisyon
             '"direction"': direksyon ng galaw
       Mikelab_groupCreateNewSprite:
+        text: gumawa ng bagong {COSTUME} sa {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": itaas
