@@ -422,6 +422,13 @@ hu-HU:
           **Választható feladat**
 
           Módosítsd a háttéreffektet a dal különböző pontjain. Ehhez csatlakoztasd az új blokkot az <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> események alá.
+      Dance_Party_05:
+        validation: |-
+          **Hogyan teljesíthetem ezt a szintet?**
+
+          -   A táncosodnak meg kell tennie legalább 4 különböző táncmozdulatot a szint vége előtt.
+
+          _Ez a szint 12 ütem után ér véget._
       Dance_Party_06:
         validation: |-
           **Hogyan csinálhatom meg ezt a szintet?**

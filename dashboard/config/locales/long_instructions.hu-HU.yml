@@ -433,6 +433,10 @@ hu-HU:
         &quot;CAT&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;,
         &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title>\n    <title name=\"LAYOUT\">\"circle\"</title>\n
         \ </block></xml>\nMost már egyszerre több táncost is létrehozhatsz!"
+      Dance_2019_07: |-
+        Minden táncoshoz tartozik több olyan _tulajdonság_, amely a megjelenését szabályozza.
+
+        A zöld eseményblokk alatt a <xml><block type="Dancelab_setPropEach" block-text="the set block"><title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title><title name="PROPERTY">"scale"</title><title name="VAL">???</title></block></xml> használatával érheted el, hogy a táncosok közelebbinek vagy távolibbnak tűnjenek.
       Dance_2019_08: A táncosok rendelkeznek egy "színárnyalat" tulajdonsággal, amely
         színt adhat nekik. Próbáld megváltoztatni az egyik táncos színét (vagy egy
         egész csoportét)!
