@@ -3,6 +3,9 @@ ja:
   data:
     blocks:
       Dancelab_alternateMoves:
+        text: |-
+          {GROUP} は {MOVE1} と {MOVE2}
+          の間の毎 {N} 小節を変更する
         options:
           GROUP:
             sprites: すべて
@@ -16,6 +19,7 @@ ja:
             '"PINEAPPLE"': すべてのパイナップル
             '"ROBOT"': すべてのロボット
             '"SHARK"': すべてのサメ
+            '"SLOTH"': sloths
             '"UNICORN"': ユニコーン
           MOVE1:
             MOVES.Roll: ボディロール
@@ -69,6 +73,7 @@ ja:
             '"PINEAPPLE"': すべてのパイナップル
             '"ROBOT"': すべてのロボット
             '"SHARK"': すべてのサメ
+            '"SLOTH"': sloths
             '"UNICORN"': ユニコーンだらけ
           MOVE:
             '"next"': "(次へ)"
@@ -120,6 +125,9 @@ ja:
             '"x"': 水平方向の位置
             '"y"': 垂直方向の位置
       Dancelab_changePropEachBy:
+        text: |-
+          {VAL} で{GROUP} {PROPERTY}
+           を変更する
         options:
           GROUP:
             sprites: すべて
@@ -133,6 +141,7 @@ ja:
             '"PINEAPPLE"': すべてのパイナップル
             '"ROBOT"': すべてのロボット
             '"SHARK"': すべてのサメ
+            '"SLOTH"': sloths
             '"UNICORN"': ユニコーン
           PROPERTY:
             '"scale"': 大きさ
@@ -156,18 +165,31 @@ ja:
             '"PINEAPPLE"': すべてのパイナップル
             '"ROBOT"': すべてのロボット
             '"SHARK"': すべてのサメ
+            '"SLOTH"': sloths
             '"UNICORN"': ユニコーン
           MOVE:
             '"rand"': "(ランダム)"
+            MOVES.XBend: 曲げる
             MOVES.Roll: ボディロール
+            MOVES.XClapSide: 拍手
             MOVES.ClapHigh: 手を高く上げてたたく
             MOVES.Dab: ダブ
+            MOVES.XFever: ディスコ
             MOVES.DoubleJam: ダブルダウン
             MOVES.Drop: ドロップ
             MOVES.Floss: フロス
             MOVES.Fresh: フレッシュ
             MOVES.Clown: ガンナム
+            MOVES.XHeadHips: 頭+腰
+            MOVES.XHop: 跳ぶ
+            MOVES.XHighKick: キック
+            MOVES.XKnee: 膝
+            MOVES.XKneel: ひざまずく
+            MOVES.XOle: オレ
+            MOVES.XArmsSide: リーチ
+            MOVES.XSlide: 滑り台
             MOVES.Kick: 星
+            MOVES.XArmsUp: ストレッチ
             MOVES.ThisOrThat: ディス・オア・ザット
             MOVES.Rest: 設定なし
           DIR:
@@ -178,20 +200,34 @@ ja:
         options:
           MOVE:
             '"rand"': "(ランダム)"
+            MOVES.XBend: 曲げる
             MOVES.Roll: ボディロール
+            MOVES.XClapSide: 拍手
             MOVES.ClapHigh: 手を高く上げてたたく
             MOVES.Dab: ダブ
+            MOVES.XFever: ディスコ
             MOVES.DoubleJam: ダブルダウン
             MOVES.Drop: ドロップ
             MOVES.Floss: フロス
             MOVES.Fresh: フレッシュ
             MOVES.Clown: ガンナム
+            MOVES.XHeadHips: 頭+腰
+            MOVES.XHop: 跳ぶ
+            MOVES.XHighKick: キック
+            MOVES.XKnee: 膝
+            MOVES.XKneel: ひざまずく
+            MOVES.XOle: オレ
+            MOVES.XArmsSide: リーチ
+            MOVES.XSlide: 滑り台
             MOVES.Kick: 星
+            MOVES.XArmsUp: ストレッチ
             MOVES.ThisOrThat: ディス・オア・ザット
             MOVES.Rest: 設定なし
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_everyMeasuresRange:
+        text: "{START} 後に、毎 {N} 小節 "
       Dancelab_everySeconds:
         text: 'すべての {N} {UNIT} '
         options:
@@ -218,6 +254,7 @@ ja:
             '"mid"': ミドル
             '"high"': トレブル
       Dancelab_getProp:
+        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': 大きさ
@@ -251,10 +288,17 @@ ja:
             MOVES.ThisOrThat: ディス・オア・ザット
             MOVES.Rest: 設定なし
       Dancelab_ifTime:
+        text: |-
+          もし、{UNIT} が {OP}
+           {N} {DO1} {DO2} の場合
         options:
           UNIT:
             '"measures"': 小節
             '"seconds"': 秒
+          OP:
+            '">"': ">"
+            '"<"': "<"
+            '"="': "="
       Dancelab_jumpTo:
         text: "{SPRITE}　{LOCATION}にとぶ"
         options:
@@ -270,6 +314,7 @@ ja:
             "{x: 300, y: 300}": 右下
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ランダム に
       Dancelab_jumpToEach:
+        text: "{GROUP} から{LOCATION} にジャンプ"
         options:
           GROUP:
             sprites: すべて
@@ -283,6 +328,7 @@ ja:
             '"PINEAPPLE"': すべてのパイナップル
             '"ROBOT"': すべてのロボット
             '"SHARK"': すべてのサメ
+            '"SLOTH"': sloths
             '"UNICORN"': ユニコーン
           LOCATION:
             "{x: 200, y: 100}": 上
@@ -310,6 +356,7 @@ ja:
             '"PINEAPPLE"': すべてのパイナップル
             '"ROBOT"': すべてのロボット
             '"SHARK"': すべてのサメ
+            '"SLOTH"': sloths
             '"UNICORN"': ユニコーン
           FORMAT:
             '"border"': 境界
@@ -322,6 +369,7 @@ ja:
             '"plus"': プラス
             '"random"': ランダム に
       Dancelab_makeAnonymousDanceSprite:
+        text: "[LOCATION] [1] で新しい[COSTUME] [0] を作成します"
         options:
           COSTUME:
             '"ALIEN"': エイリアン
@@ -334,6 +382,7 @@ ja:
             '"PINEAPPLE"': パイナップル
             '"ROBOT"': ロボット
             '"SHARK"': サメ
+            '"SLOTH"': sloth
             '"UNICORN"': ユニコーン
           LOCATION:
             "{x: 200, y: 100}": 上
@@ -362,6 +411,7 @@ ja:
             '"PINEAPPLE"': パイナップル
             '"ROBOT"': ロボット
             '"SHARK"': サメ
+            '"SLOTH"': sloth
             '"UNICORN"': ユニコーン
           LOCATION:
             "{x: 200, y: 100}": 上
@@ -410,6 +460,7 @@ ja:
             '"PINEAPPLE"': パイナップル
             '"ROBOT"': ロボット
             '"SHARK"': サメ
+            '"SLOTH"': sloths
             '"UNICORN"': ユニコーン
           LAYOUT:
             '"border"': 境界
@@ -417,8 +468,12 @@ ja:
             '"diamond"': ダイヤモンド
             '"circle"': 円
             '"grid"': グリッド
+            '"top"': 一番上の行
             '"row"': 行
+            '"bottom"': 最終行
+            '"left"': 左の列
             '"column"': 列
+            '"right"': 右の列
             '"x"': 十字
             '"plus"': プラス
             '"random"': ランダム に
@@ -445,6 +500,7 @@ ja:
             '"color_cycle"': 色
             '"diamonds"': ダイヤモンド
             '"disco_ball"': ミラーボール
+            '"fireworks"': 花火
             '"swirl"': ヒプノ
             '"kaleidoscope"': 万華鏡
             '"lasers"': レーザーのダンスフロア
@@ -460,6 +516,8 @@ ja:
           PALETTE:
             '"rave"': 白黒
             '"cool"': 青
+            '"electronic"': エレクトロニクス
+            '"iceCream"': アイスクリーム
             '"default"': 光
             '"neon"': ネオン
             '"tropical"': 熱帯
@@ -472,24 +530,34 @@ ja:
             '"none"': 設定なし
             '"rand"': "(ランダム)"
             '"circles"': トンネル
+            '"quads"': アングル
             '"color_cycle"': 色
             '"diamonds"': ダイヤモンド
             '"disco_ball"': ミラーボール
+            '"fireworks"': 花火
+            '"flowers"': フラワー
+            '"growing_stars"': 成長する星
             '"swirl"': ヒプノ
             '"kaleidoscope"': 万華鏡
             '"lasers"': レーザーのダンスフロア
             '"splatter"': 塗料のしぶき
             '"rainbow"': 虹
+            '"ripples_random"': ランダムなさざ波
+            '"ripples"': さざ波
             '"snowflakes"': 雪
             '"text"': 曲名
+            '"squiggles"': 波線
             '"galaxy"': 宇宙
             '"sparkles"': きらめき
             '"spiral"': スパイラル
             '"disco"': 正方形
             '"stars"': 星
+            '"music_wave"': 波
           PALETTE:
             '"rave"': 白黒
             '"cool"': 青
+            '"electronic"': エレクトロニクス
+            '"iceCream"': アイスクリーム
             '"default"': 光
             '"neon"': ネオン
             '"tropical"': 熱帯
@@ -505,6 +573,7 @@ ja:
             '0.5': おそい
             '0.25': すごくおそい
       Dancelab_setDanceSpeedEach:
+        text: "{GROUP} のダンス速度を {SPEED} に設定"
         options:
           GROUP:
             sprites: すべて
@@ -518,6 +587,7 @@ ja:
             '"PINEAPPLE"': すべてのパイナップル
             '"ROBOT"': すべてのロボット
             '"SHARK"': すべてのサメ
+            '"SLOTH"': sloths
             '"UNICORN"': ユニコーン
           SPEED:
             '1': ノーマル
@@ -535,10 +605,13 @@ ja:
             '"hearts_red"': ハート
             '"music_notes"': 音符
             '"pineapples"': パイナップル
+            '"pizzas"': ピザ
             '"smiling_poop"': うんち
             '"rain"': 雨
             '"floating_rainbows"': 虹
             '"smile_face"': スマイル
+            '"spotlight"': 'Spotligh+A188: A192t'
+            '"color_lights"': ステージライト
             '"raining_tacos"': タコス
       Dancelab_setForegroundEffectExtended:
         text: 前景エフェクトを {EFFECT} にセット
@@ -547,14 +620,21 @@ ja:
             '"none"': 設定なし
             '"rand"': "(ランダム)"
             '"bubbles"': 泡
+            '"hearts_colorful"': カラフルなハート
             '"confetti"': 紙吹雪
+            '"emojis"': 絵文字
             '"hearts_red"': ハート
             '"music_notes"': 音符
+            '"paint_drip"': ペイントドリップ
             '"pineapples"': パイナップル
+            '"pizzas"': ピザ
             '"smiling_poop"': うんち
             '"rain"': 雨
             '"floating_rainbows"': 虹
             '"smile_face"': スマイル
+            '"spotlight"': 'Spotligh+A188: A192t'
+            '"color_lights"': ステージライト
+            '"exploding_stars"': スターバースト
             '"raining_tacos"': タコス
       Dancelab_setProp:
         text: "{SPRITE} {PROPERTY} を {VAL} にセット "
@@ -581,6 +661,7 @@ ja:
             '"PINEAPPLE"': すべてのパイナップル
             '"ROBOT"': すべてのロボット
             '"SHARK"': すべてのサメ
+            '"SLOTH"': sloths
             '"UNICORN"': ユニコーン
           PROPERTY:
             '"scale"': 大きさ
@@ -602,6 +683,7 @@ ja:
             '"y"': 垂直方向の位置
             '"tint"': 色合い
       Dancelab_setPropRandomEach:
+        text: "[GROUP] [0] [PROPERTY] [1] をランダム化します"
         options:
           GROUP:
             sprites: すべて
@@ -615,6 +697,7 @@ ja:
             '"PINEAPPLE"': すべてのパイナップル
             '"ROBOT"': すべてのロボット
             '"SHARK"': すべてのサメ
+            '"SLOTH"': sloths
             '"UNICORN"': ユニコーン
           PROPERTY:
             '"scale"': 大きさ
@@ -627,6 +710,7 @@ ja:
       Dancelab_setTint:
         text: "{SPRITE} の色合いを {VAL} にセット"
       Dancelab_setTintEach:
+        text: "{THIS} の色合いを {VAL} に設定"
         options:
           THIS:
             sprites: すべて
@@ -640,8 +724,10 @@ ja:
             '"PINEAPPLE"': すべてのパイナップル
             '"ROBOT"': すべてのロボット
             '"SHARK"': すべてのサメ
+            '"SLOTH"': sloths
             '"UNICORN"': ユニコーン
       Dancelab_setTintEachInline:
+        text: "{THIS} の色合いを {VAL} に設定"
         options:
           THIS:
             sprites: すべて
@@ -655,6 +741,7 @@ ja:
             '"PINEAPPLE"': すべてのパイナップル
             '"ROBOT"': すべてのロボット
             '"SHARK"': すべてのサメ
+            '"SLOTH"': sloths
             '"UNICORN"': ユニコーン
       Dancelab_setTintInline:
         text: "{SPRITE} の色合いを {VAL} にセット"
@@ -679,6 +766,7 @@ ja:
             '"PINEAPPLE"': すべてのパイナップル
             '"ROBOT"': すべてのロボット
             '"SHARK"': すべてのサメ
+            '"SLOTH"': sloths
             '"UNICORN"': ユニコーン
           VISIBILITY:
             'true': 見える
@@ -699,6 +787,7 @@ ja:
             '"mid"': ミドル
             '"treble"': トレブル
       Dancelab_startMappingEach:
+        text: "{GROUP} は{PROPERTY} を{RANGE} の後に開始"
         options:
           GROUP:
             sprites: すべて
@@ -712,6 +801,7 @@ ja:
             '"PINEAPPLE"': すべてのパイナップル
             '"ROBOT"': すべてのロボット
             '"SHARK"': すべてのサメ
+            '"SLOTH"': sloths
             '"UNICORN"': ユニコーン
           PROPERTY:
             '"scale"': 大きさ
@@ -742,6 +832,7 @@ ja:
             '"mid"': ミドル
             '"treble"': トレブル
       Dancelab_stopMappingEach:
+        text: "{GROUP} は{PROPERTY} を{RANGE} の後に終了"
         options:
           GROUP:
             sprites: すべて
@@ -755,6 +846,7 @@ ja:
             '"PINEAPPLE"': すべてのパイナップル
             '"ROBOT"': すべてのロボット
             '"SHARK"': すべてのサメ
+            '"SLOTH"': sloths
             '"UNICORN"': ユニコーン
           PROPERTY:
             '"scale"': 大きさ
@@ -770,12 +862,51 @@ ja:
             '"mid"': ミドル
             '"treble"': トレブル
       Dancelab_translateStrings:
+        text: "{STRING} を翻訳"
         options:
           STRING:
+            '"music_wave"': 波
+            '"ripples"': さざ波
+            '"ripples_random"': ランダムなさざ波
+            '"quads"': アングル
+            '"flowers"': フラワー
+            '"popsicles"': アイスキャンディー
+            '"squiggles"': 波線
+            '"growing_stars"': 成長する星
+            '"emojis"': 絵文字
             '"hearts_colorful"': ハート
+            '"paint_drio"': ペイントドリップ
+            '"exploding_stars"': スターバースト
+            '"row_top"': 一番上の行
+            '"row_bottom"': 最終行
+            '"column_left"': 左の列
+            '"column_right"': 右の列
             '"diamond"': ダイヤモンド
+            '"mural"': 壁画
+            '"safari"': サファリ
+            '"network"': ネットワーク
+            '"highway"': ハイウェイ
+            '"stream"': ストリーム
+            '"tile"': タイル
+            '"shadow"': 影
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
             '"y"': y
+            '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenKey:
         text: "{KEY} が押されたとき"
         options:
@@ -785,8 +916,43 @@ ja:
             '"down"': 下 に
             '"right"': 右 に
             '"space"': うちゅう
+            '"enter"': 入る
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
             '"y"': y
+            '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenPeak:
         text: "{RANGE} がいちばん大きいとき"
         options:
@@ -813,6 +979,7 @@ ja:
             '"when"': もし
             '"while"': 以下の間
       gamelab_getProp:
+        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': 大きさ
@@ -834,8 +1001,32 @@ ja:
             '"left"': 左 に
             '"right"': 右 に
             '"space"': うちゅう
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
             '"y"': y
+            '"z"': z
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -891,6 +1082,10 @@ ja:
             '"left"': 左 に
             '"right"': 右 に
             '"space"': うちゅう
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       gamelab_whileKey:
         options:
           KEY:
@@ -899,6 +1094,10 @@ ja:
             '"left"': 左 に
             '"right"': 右 に
             '"space"': うちゅう
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -928,6 +1127,7 @@ ja:
             '"y"': y 位置
             '"direction"': 動きの方向
       Mikelab_groupChangeAnim:
+        text: "[SELECT] [0] [COSTUME] [1] を[COSTUME2] [2] に変更します"
         options:
           SELECT:
             '"all"': すべて
@@ -942,6 +1142,7 @@ ja:
             '"y"': y 位置
             '"direction"': 動きの方向
       Mikelab_groupCreateNewSprite:
+        text: "[LOCATION] [1] で新しい[COSTUME] [0] を作成します"
         options:
           LOCATION:
             "{x: 200, y: 100}": 上
@@ -1112,6 +1313,10 @@ ja:
             '"left"': 左 に
             '"right"': 右 に
             '"space"': うちゅう
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       craft_ifPath:
         text: |-
           {DIR}に道がある時

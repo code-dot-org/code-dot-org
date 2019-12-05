@@ -3699,6 +3699,9 @@ ja-JP:
           \*\* 自由選択のチャレンジ \*\*
 
           <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"小節"</title></block></xml> イベントの下に新しいブロックをつないで、曲のあいだのいくつかのポイントで背景エフェクトを変更してみましょう。
+      Dance_Party_05:
+        validation: "**このレベルをクリアするにはどうすればよいですか？**\n\n\\-ダンサーは、レベルが終了する前に少なくとも4つの異なるダンスの動きを繰り返す必要があります。
+          \n\n_このレベルは12小節後に終了します。_"
       Dance_Party_06:
         validation: |-
           **どうしたらこのレベルをクリアできますか？**
