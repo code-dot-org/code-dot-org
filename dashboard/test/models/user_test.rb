@@ -4192,7 +4192,7 @@ class UserTest < ActiveSupport::TestCase
     end
 
     refute migrated_teacher.reload.admin?
-    assert_equal ["Admin must be a code.org account with only google oauth"], migrated_teacher.errors.full_messages
+    assert_equal ["Admin must be a code.org account with only google oauth", "Email is required"], migrated_teacher.errors.full_messages
   end
 
   test 'cannot grant admin role when not a codeorg account' do
