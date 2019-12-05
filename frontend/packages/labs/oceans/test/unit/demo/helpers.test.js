@@ -1,5 +1,5 @@
-import {filterFishComponents} from '../../../src/demo/helpers';
-import {AppMode} from '../../../src/demo/constants';
+import {filterFishComponents} from '@ml/demo/helpers';
+import {AppMode} from '@ml/demo/constants';
 
 describe('filterFishComponents', () => {
   const fishComponents = {
