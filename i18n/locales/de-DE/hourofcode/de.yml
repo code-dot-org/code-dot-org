@@ -22,8 +22,8 @@ de:
   social_hoc_is_coming: The Hour of Code is coming!
   social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
     computer science. Change the world.'
-  social_hoc2019_coming_dates: The Hour of Code is coming December 9-15, 2019. Computer
-    science is foundational for every student to learn.
+  social_hoc2019_coming_dates: Stunde des Codes kommt vom 9.-15. Dezember 2019. Informatik
+    ist etwas grundlegendes, dass jeder Schüler lernen sollte.
   social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
     Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
   oceans_landing_title: AI for Oceans
@@ -106,7 +106,7 @@ de:
   hourofcode_homepage_hoc2018_header_line2: Altersgruppe 4 bis 104.
   hoc2018_tutorial_mchoc_description: Verwende Code-Blöcke, um Steve oder Alex in
     ein Abenteuer durch die Minecraft-Welt zu schicken.
-  codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>
+  codeorg_homepage_hoc2019_dance_heading: Probieren Sie die neue <span class="highlight-word">Dance&nbsp;Party!</span>
   cookie_banner_message: Indem Sie unsere Website weiter benutzen oder auf "Ich stimme
     zu" klicken, stimmen Sie der Speicherung von Cookies auf Ihrem Computer oder Gerät
     zu.
@@ -767,7 +767,7 @@ de:
   learn_robotics_banner_blurb: Haben Sie Roboter? Dann kombinieren Sie sie mit den
     folgenden Aktivitäten, um Schülern jeden Alters eine Stunde des Codes zum Anfassen
     anzubieten!
-  tutorial_dance2019_name: Dance Party 2019
+  tutorial_dance2019_name: Tanzparty 2019
   tutorial_danceparty_name: Tanzparty
   tutorial_chibitronics_name: 'Chibitronics: Erleuchtete Geschichte'
   tutorial_athlete_name: Programmiere dein eigenes Sportspiel
@@ -5026,9 +5026,10 @@ de:
     Each of the six activities includes simple directions that are supported with
     symbols from the n2y® SymbolStix PRIME® collection. The symbols help non-readers
     and beginning readers understand and follow the directions.
-  tutorial_dance2019_language: Arabic, Chinese, Czech, Danish, Dutch, English, Finnish,
-    French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean,
-    Malay, Polish, Portuguese, and 10 more!
+  tutorial_dance2019_language: Arabisch, Chinesisch, Tschechisch, Dänisch, Holländisch,
+    Englisch, Finnisch, Französisch, Deutsch, Griechisch, Hindi, Ungarisch, Indonesisch,
+    Italienisch, Japanisch, Koreanisch, Malaysisch, Polnisch, Portugiesisch, und 10
+    weiteren!
   tutorial_danceparty_language: Mehrere
   tutorial_chibitronics_language: Deutsch
   tutorial_athlete_language: Englisch, Französisch, Spanisch, Italienisch, Portugiesisch

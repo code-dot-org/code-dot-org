@@ -21,8 +21,7 @@ ja:
   social_hoc_is_coming: The Hour of Code is coming!
   social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
     computer science. Change the world.'
-  social_hoc2019_coming_dates: The Hour of Code is coming December 9-15, 2019. Computer
-    science is foundational for every student to learn.
+  social_hoc2019_coming_dates: もうすぐ2018年12月3～9日がHour of Codeです。コンピューターサイエンスはすべての生徒たちが学ぶべき基礎です。
   social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
     Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
   oceans_landing_title: AI for Oceans
@@ -102,7 +101,8 @@ ja:
   hourofcode_homepage_hoc2018_header_line1: 世界中の誰でもHour of Codeのイベントを開催できます。45以上の言語の1時間のチュートリアルが用意されています。経験は必要ありません。
   hourofcode_homepage_hoc2018_header_line2: 4歳から104歳まで。
   hoc2018_tutorial_mchoc_description: コードブロックで、アレックスやスティーブをマインクラフト世界の冒険に連れ出しましょう。
-  codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>
+  codeorg_homepage_hoc2019_dance_heading: 新しい<span class = "highlight-word"> Dance＆nbsp;
+    Party！</ span>をお試しください
   cookie_banner_message: このサイトの閲覧を継続するか「同意する」をクリックすることで、クッキーがあなたのコンピューターやデバイスに保存されることに同意することになります。
   cookie_banner_more_information: Code.orgのプライバシーポリシーを参照する。
   cookie_banner_accept: 同意する
@@ -623,7 +623,7 @@ ja:
   learn_robotics_banner_heading: ロボット工学
   learn_robotics_banner_blurb: ロボットをお持ちですか？あなたのロボットとアクティビティを組み合わせて年齢を超え、全ての生徒を対象とした、手に触れることができるHour
     of Codeを造りましょう！
-  tutorial_dance2019_name: Dance Party 2019
+  tutorial_dance2019_name: ダンスパーティー2019
   tutorial_danceparty_name: Dance Party
   tutorial_chibitronics_name: 'Chibitronics: Illuminated Story'
   tutorial_athlete_name: 自分だけのスポーツゲームのコードを書く
@@ -4612,9 +4612,7 @@ ja:
     Each of the six activities includes simple directions that are supported with
     symbols from the n2y® SymbolStix PRIME® collection. The symbols help non-readers
     and beginning readers understand and follow the directions.
-  tutorial_dance2019_language: Arabic, Chinese, Czech, Danish, Dutch, English, Finnish,
-    French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean,
-    Malay, Polish, Portuguese, and 10 more!
+  tutorial_dance2019_language: アラビア語、中国語、チェコ語、デンマーク語、オランダ語、英語、フィンランド語、フランス語、ドイツ語、ギリシャ語、ヒンディー語、ハンガリー語、インドネシア語、イタリア語、日本語、韓国語、マレー語、ポーランド語、ポルトガル語、その他10カ国語！
   tutorial_danceparty_language: English, Arabic, Catalan, Chinese, Czech, Danish,
     Dutch, Finnish, French, German, Greek, Hungarian, Italian, Japanese, Korean, Norwegian,
     Polish, Portuguese, Russian, Spanish, Swedish, Thai, Turkish, and Vietnamese

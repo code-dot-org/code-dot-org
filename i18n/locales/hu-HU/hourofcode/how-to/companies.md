@@ -1,5 +1,5 @@
 ---
-title: How to host an Hour of Code - Companies
+title: Hogyan tarts Kódolás Óráját - Cégek
 ---
 
 {{ signup_button }}

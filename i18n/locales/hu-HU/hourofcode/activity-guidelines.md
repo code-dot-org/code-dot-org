@@ -1,5 +1,5 @@
 ---
-title: Activity Guidelines
+title: Közösségi iránymutatások
 ---
 
 <style>

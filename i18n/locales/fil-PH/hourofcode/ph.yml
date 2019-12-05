@@ -21,8 +21,8 @@ ph:
   social_hoc_is_coming: The Hour of Code is coming!
   social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
     computer science. Change the world.'
-  social_hoc2019_coming_dates: The Hour of Code is coming December 9-15, 2019. Computer
-    science is foundational for every student to learn.
+  social_hoc2019_coming_dates: Ang Oras ng Code ay darating sa Disyembre 9-15, 2019.
+    Ang Computer science ay pampundasyon para matutunan ng bawat estudyante.
   social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
     Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
   oceans_landing_title: AI for Oceans
@@ -104,7 +104,7 @@ ph:
   hourofcode_homepage_hoc2018_header_line2: Ages 4 to 104.
   hoc2018_tutorial_mchoc_description: Ang Minecraft ay nagbabalik para sa Hour of
     Code kasama ng bagong aktibidad! Paglalakbay patungo sa Minecraft sa Code.
-  codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>
+  codeorg_homepage_hoc2019_dance_heading: Subukan ang bagong <span class="highlight-word">Dance&nbsp;Party!</span>
   cookie_banner_message: By continuing to browse our site or clicking "I agree," you
     agree to the storing of cookies on your computer or device.
   cookie_banner_more_information: See Code.org's Privacy Policy.
@@ -360,11 +360,12 @@ ph:
     Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try
     an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan
     an event for your class.
-  signup_registration_closed: And every year in December, your class can join millions
-    of students around the world celebrating Computer Science Education Week with
-    the Hour of Code. We'll open registration for the annual celebration in October.
-  signup_header: Mag-organisa ng Hour of Code sa panahon ng %{campaign_date}, at irehistro
-    dito.
+  signup_registration_closed: At sa bawat taon sa Disyembre, ang iyong klase ay maaaring
+    sumali sa milyon-miyong estudyante sa buong mundo sa pagdiriwang sa Linggo ng
+    Edukasyon ng Computer Science kasabay ang Oras ng Code. Bubuksan namin ang pagrehistro
+    para sa taunang pagdiriwang sa Oktubre.
+  signup_header: Mag-organisa ng isang Oras ng Code sa panahon ng %{campaign_date},
+    at mag-register dito.
   signup_name_label: Iyong pangalan
   signup_name_error: Kailangan ang pangalan.
   signup_email_label: Iyong email
@@ -5596,7 +5597,7 @@ ph:
     and beginning readers understand and follow the directions.
   tutorial_dance2019_language: Arabic, Chinese, Czech, Danish, Dutch, English, Finnish,
     French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean,
-    Malay, Polish, Portuguese, and 10 more!
+    Malay, Polish, Portuguese, at karagdagang 10 pa!
   tutorial_danceparty_language: English, Arabic, Catalan, Chinese, Czech, Danish,
     Dutch, Finnish, French, German, Greek, Hungarian, Italian, Japanese, Korean, Norwegian,
     Polish, Portuguese, Russian, Spanish, Swedish, Thai, Turkish, and Vietnamese

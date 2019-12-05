@@ -1,5 +1,5 @@
 ---
-title: Contacta socios internacionales
+title: Contacta a socios internacionales
 ---
 
 <style>
@@ -10,7 +10,7 @@ title: Contacta socios internacionales
 
 {{ signup_button }}
 
-# Contacta socios internacionales
+# Contacta a socios internacionales
 
 Code.org trabaja con organizaciones de todo el mundo para que la Hora del Código sea un movimiento verdaderamente internacional. ¿Sabías que, en 2017, el 60% de las actividades de la Hora del Código ocurrieron fuera de los EE. UU.?
 

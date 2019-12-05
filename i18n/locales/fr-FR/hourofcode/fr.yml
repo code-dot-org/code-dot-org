@@ -22,8 +22,8 @@ fr:
   social_hoc_is_coming: The Hour of Code is coming!
   social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
     computer science. Change the world.'
-  social_hoc2019_coming_dates: The Hour of Code is coming December 9-15, 2019. Computer
-    science is foundational for every student to learn.
+  social_hoc2019_coming_dates: L'Heure du Code est du 9 au 15 décembre 2019. L'informatique
+    est un apprentissage fondamental pour tous les élèves.
   social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
     Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
   oceans_landing_title: AI for Oceans
@@ -107,7 +107,8 @@ fr:
   hourofcode_homepage_hoc2018_header_line2: 'Âge : de 4 à 104 ans.'
   hoc2018_tutorial_mchoc_description: Utilise des blocs de code pour accompagner Alex
     ou Steve dans leur aventures au sein de cet univers Minecraft.
-  codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>
+  codeorg_homepage_hoc2019_dance_heading: Essayez la nouvelle <span class="highlight-word">Dance&nbsp;Party
+    !</span>
   cookie_banner_message: En poursuivant votre navigation sur ce site ou en cliquant
     sur « J’accepte », vous acceptez le stockage de cookies sur votre ordinateur ou
     appareil mobile.
@@ -365,11 +366,12 @@ fr:
     Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try
     an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan
     an event for your class.
-  signup_registration_closed: And every year in December, your class can join millions
-    of students around the world celebrating Computer Science Education Week with
-    the Hour of Code. We'll open registration for the annual celebration in October.
-  signup_header: Organisez un évènement Un Heure de Code durant %{campaign_date},
-    et inscrivez-le ici.
+  signup_registration_closed: Et chaque année en décembre, votre classe peut rejoindre
+    des millions d’étudiants du monde entier célébrant la Semaine de l’informatique
+    avec l’Heure du Code. Nous ouvrirons les inscriptions pour la célébration annuelle
+    en octobre.
+  signup_header: Organisez une Heure de Code le %{campaign_date}, et enregistrez-la
+    ici.
   signup_name_label: Votre Nom
   signup_name_error: Le nom est requis.
   signup_email_label: Votre e-mail
@@ -5130,9 +5132,9 @@ fr:
     Each of the six activities includes simple directions that are supported with
     symbols from the n2y® SymbolStix PRIME® collection. The symbols help non-readers
     and beginning readers understand and follow the directions.
-  tutorial_dance2019_language: Arabic, Chinese, Czech, Danish, Dutch, English, Finnish,
-    French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean,
-    Malay, Polish, Portuguese, and 10 more!
+  tutorial_dance2019_language: Arabe, chinois, tchèque, danois, néerlandais, anglais,
+    finnois, français, allemand, grec, hindi, hongrois, indonésien, italien, japonais,
+    coréen, malais, polonais, portugais et 10 autres !
   tutorial_danceparty_language: Anglais, arabe, catalan, chinois, tchèque, danois,
     néerlandais, finnois, français, allemand, grec, hongrois, italien, japonais, coréen,
     norvégien, polonais, portugais, russe, espagnol, suédois, thaï, turc et vietnamien

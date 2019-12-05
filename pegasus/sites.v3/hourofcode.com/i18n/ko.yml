@@ -21,8 +21,8 @@ ko:
   social_hoc_is_coming: The Hour of Code is coming!
   social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
     computer science. Change the world.'
-  social_hoc2019_coming_dates: The Hour of Code is coming December 9-15, 2019. Computer
-    science is foundational for every student to learn.
+  social_hoc2019_coming_dates: 아워 오브 코드는 2019년 12월 9~15일에 찾아옵니다. 컴퓨터 공학은 모든 학생의 배움에
+    기초가 됩니다.
   social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
     Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
   oceans_landing_title: AI for Oceans
@@ -103,7 +103,8 @@ ko:
     분량의 튜토리얼이 45개 이상의 언어로 제공됩니다. 사전 학습이 필요하지 않습니다.
   hourofcode_homepage_hoc2018_header_line2: 4세부터 104세까지 사용할 수 있습니다.
   hoc2018_tutorial_mchoc_description: 코드 블록을 사용해 알렉스나 스티브가 마인크래프트 세계에서 모험을 펼치게 하세요.
-  codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>
+  codeorg_homepage_hoc2019_dance_heading: 새 <span class="highlight-word">Dance&nbsp;Party</span>를
+    해보세요!
   cookie_banner_message: By continuing to browse our site or clicking "I agree," you
     agree to the storing of cookies on your computer or device.
   cookie_banner_more_information: See Code.org's Privacy Policy.
@@ -340,9 +341,8 @@ ko:
     Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try
     an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan
     an event for your class.
-  signup_registration_closed: And every year in December, your class can join millions
-    of students around the world celebrating Computer Science Education Week with
-    the Hour of Code. We'll open registration for the annual celebration in October.
+  signup_registration_closed: 그래서 매년 12월 여러분의 학급은 전 세계 수백만 명의 학생들과 아워 오브 코드를 함께하며
+    컴퓨터 공학 교육 주간을 기념할 수 있습니다. 연례 행사 참가 신청은 10월에 시작합니다.
   signup_header: "%{campaign_date} 동안 Hour of code를 운영하시고, 이곳에서 등록하세요."
   signup_name_label: 이름
   signup_name_error: Name is required.
@@ -685,7 +685,7 @@ ko:
   learn_robotics_banner_heading: 로보틱스
   learn_robotics_banner_blurb: 로봇이 있으세요? 로봇을 아래 활동에 활용하여 모든 연령대 학생들에게 직접 체험할 수 있는
     코딩의 시간을 만들어 주세요!
-  tutorial_dance2019_name: Dance Party 2019
+  tutorial_dance2019_name: 댄스 파티 2019
   tutorial_danceparty_name: 댄스 파티
   tutorial_chibitronics_name: 'Chibitronics: Illuminated Story'
   tutorial_athlete_name: 나만의 스포츠 게임을 코딩하세요
@@ -4842,9 +4842,8 @@ ko:
     Each of the six activities includes simple directions that are supported with
     symbols from the n2y® SymbolStix PRIME® collection. The symbols help non-readers
     and beginning readers understand and follow the directions.
-  tutorial_dance2019_language: Arabic, Chinese, Czech, Danish, Dutch, English, Finnish,
-    French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean,
-    Malay, Polish, Portuguese, and 10 more!
+  tutorial_dance2019_language: 아랍어, 중국어, 체코어, 덴마크어, 네덜란드어, 영어, 핀란드어, 프랑스어, 독일어, 그리스어,
+    힌두어, 헝가리어, 인도네시아어, 이탈리아어, 일본어, 한국어, 말레이어, 폴란드어, 포르투갈어 등 10개 언어가 제공됩니다!
   tutorial_danceparty_language: English, Arabic, Catalan, Chinese, Czech, Danish,
     Dutch, Finnish, French, German, Greek, Hungarian, Italian, Japanese, Korean, Norwegian,
     Polish, Portuguese, Russian, Spanish, Swedish, Thai, Turkish, and Vietnamese

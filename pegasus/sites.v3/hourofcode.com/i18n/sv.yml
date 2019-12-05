@@ -22,8 +22,8 @@ sv:
   social_hoc_is_coming: The Hour of Code is coming!
   social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
     computer science. Change the world.'
-  social_hoc2019_coming_dates: The Hour of Code is coming December 9-15, 2019. Computer
-    science is foundational for every student to learn.
+  social_hoc2019_coming_dates: Hour of Code blir 9-15 December, 2019. Datorvetenskap
+    är grundläggande för varje elev att kunna.
   social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
     Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
   oceans_landing_title: AI for Oceans
@@ -106,7 +106,7 @@ sv:
   hourofcode_homepage_hoc2018_header_line2: Åldrarna 4 till 104.
   hoc2018_tutorial_mchoc_description: Använd kodblock för att ta Alex eller Steve
     på ett äventyr genom denna Minecraftvärld.
-  codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>
+  codeorg_homepage_hoc2019_dance_heading: Prova nya <span class="highlight-word">Dance&nbsp;Party!</span>
   cookie_banner_message: Genom att fortsätta på vår webbplats eller klicka "Jag godkänner"
     så godkänner du att vi lagrar cookies på din dator eller enhet.
   cookie_banner_more_information: Läs Code.org:s sekretesspolicy.
@@ -355,8 +355,8 @@ sv:
   signup_registration_closed: Och varje år i december, kan din klass tillsammans med
     miljontals elever runt om i världen fira Computer Science Education Week genom
     Hour of Code. Vi öppnar registreringen för det årliga firandet i oktober.
-  signup_header: Organisera en Hour of Code under %{campaign_date} och registrera
-    det här.
+  signup_header: Organisera en Hour of Code den %{campaign_date}, och registrera den
+    här.
   signup_name_label: Ditt namn
   signup_name_error: Namn krävs.
   signup_email_label: Din mailadress
@@ -4977,9 +4977,9 @@ sv:
     Each of the six activities includes simple directions that are supported with
     symbols from the n2y® SymbolStix PRIME® collection. The symbols help non-readers
     and beginning readers understand and follow the directions.
-  tutorial_dance2019_language: Arabic, Chinese, Czech, Danish, Dutch, English, Finnish,
-    French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean,
-    Malay, Polish, Portuguese, and 10 more!
+  tutorial_dance2019_language: Arabiska, kinesiska, tjeckiska, danska, nederländska,
+    engelska, finska, franska, tyska, grekiska, hindi, ungerska, indonesiska, italienska,
+    japanska, koreanska, malay, polska, portugisiska, och ytterligare 10!
   tutorial_danceparty_language: Multipla
   tutorial_chibitronics_language: Svenska
   tutorial_athlete_language: Engelska, franska, spanska, italienska, portugisiska
