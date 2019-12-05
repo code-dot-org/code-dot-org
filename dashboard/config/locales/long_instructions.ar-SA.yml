@@ -117,7 +117,9 @@ ar-SA:
       Dance_2019_02: |-
         يتيح لك المربع البرمجي <xml><block type="Dancelab_whenKey" block-text="when up pressed"></block></xml> تشغيل الكود البرمجي عند الضغط على السهم لأعلى. استخدم المربع البرمجي لجعل الراقص يصفق عند الضغط عليه، أو جرب حركة أخرى!
 
-        _تأكد من الضغط على السهم لأعلى، أو   ![](<https://images.code.org/419e704e6841c0b696016bf5029b8cb9-image-1571864825506.06.45 PM.png>) بعد النقر على زر التشغيل!_
+        <xml><block type="Dancelab_doMoveEachLR" block-text="do once"><title name="GROUP">"CAT"</title><title name="MOVE">MOVES.XClapSide</title><title name="DIR">-1</title></block></xml>
+
+        _تأكد من الضغط على السهم لأعلى، أو ![](<https://images.code.org/419e704e6841c0b696016bf5029b8cb9-image-1571864825506.06.45 PM.png>) بعد النقر على زر التشغيل!_
       Dance_2019_03: حان الوقت للرقص! قم ببرمجة كل راقص للتحرك عند الضغط على المفاتيح
         المختلفة. اختر الحركة المفضلة لديك لكل راقص، أو تعيينها على `(عشوائي)` للحصول
         على حركات غير متوقعة تماماً!
@@ -128,7 +130,7 @@ ar-SA:
 
         **الإجراءات** يتم استخدامها لحساب الوقت في الموسيقى. في هذه الدورة التعليمية، يكون الإجراء هو  لأربعة إيقاعات موسيقية.
       Dance_2019_05: |-
-        -   الآن نحن نرقص ونستمتع بذلك!\*
+        _الآن نحن نرقص ونستمتع بذلك!_
 
         أضف المربع البرمجي <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> إلى مساحة عملك. اجعل الراقص يبدأ بحركة جديدة بعد 6 إجراءات.
       Dance_2019_06: "استتخدم هذا المربع البرمجي الجديد لتعيين مجموعة من الراقصيين
@@ -238,7 +240,7 @@ ar-SA:
       Dance_Party_extras_every_beat_2019: |-
         # زيادة سرعة الراقص، وخفضها
 
-        تستخدم هذه الرقصة النهائية المربع البرمجي [blockly block][0] للتحكم في مدى السعة التي يتحرك بها كل راقص. حاول التجربة مع سرعات مختلفة أثناء النقاط المتفاوتة في الأغنية. يجوز لك الحفاظ على الحركة غير المنتظمة في هذه الرقصة، أو العودة إلى أي رقصات سابقة لجعلها أكثر روعة.
+        تستخدم هذه الرقصة النهائية المربع البرمجي <xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml> للتحكم في مدى السعة التي يتحرك بها كل راقص. حاول التجربة مع سرعات مختلفة أثناء النقاط المتفاوتة في الأغنية. يجوز لك الحفاظ على الحركة غير المنتظمة في هذه الرقصة، أو العودة إلى أي رقصات سابقة لجعلها أكثر روعة.
       Dance_Party_extras_layout: |-
         # لننضم في تشكيل!
 
@@ -262,7 +264,7 @@ ar-SA:
       Dance_Party_extras_speed_2019: |-
         # زيادة سرعة الراقص، وخفضها
 
-        تستخدم هذه الرقصة النهائية المربع البرمجي [blockly block][0] للتحكم في مدى السعة التي يتحرك بها كل راقص. حاول التجربة مع سرعات مختلفة أثناء النقاط المتفاوتة في الأغنية. يجوز لك الحفاظ على الحركة غير المنتظمة في هذه الرقصة، أو العودة إلى أي رقصات سابقة لجعلها أكثر روعة.
+        تستخدم هذه الرقصة النهائية المربع البرمجي <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> للتحكم في مدى السعة التي يتحرك بها كل راقص. حاول التجربة مع سرعات مختلفة أثناء النقاط المتفاوتة في الأغنية. يجوز لك الحفاظ على الحركة غير المنتظمة في هذه الرقصة، أو العودة إلى أي رقصات سابقة لجعلها أكثر روعة.
       Dance_Party_extras_visible: |-
         # أغنية Where'd They Go؟
 
@@ -1194,3 +1196,35 @@ ar-SA:
       grade2_collector_A: ساعد لورا بجمع كل المجوهرات.
       grade2_collector_A_2018: ساعد لورا بجمع كل المجوهرات.
       grade2_collector_A_2019: ساعد لورا بجمع كل المجوهرات.
+      Dance_2019_07: |-
+        كل راقصة لديها مجموعة من _properties_ التي تتحكم في ما يبدو.
+
+        استخدم <xml><block type="Dancelab_setPropEach" block-text="the set block"><title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title><title name="PROPERTY">"scale"</title><title name="VAL">???</title></block></xml> تحت كتلة الحدث الأخضر لجعل الراقصين يظهرون أقرب أو أبعد.
+      Dance_Party_11_5: |-
+        تحقق من هذه الكتلة:
+
+        <xml>
+          <block type="Dancelab_makeNewDanceSpriteGroup">
+            <title name="N">6</title>
+            <title name="COSTUME">"DUCK"</title>
+            <title name="LAYOUT">"circle"</title>
+          </block></xml>
+
+        الآن يمكنك إنشاء مجموعة من الراقصين في وقت واحد!
+
+        حاول استخدام بعض كتل «جميع البط» لكتابة التعليمات البرمجية التي من شأنها أن تجعل كل البط الرقص معا.
+      Dance_Party_extras_layout_2019: |-
+        # دعونا نخوض في التشكيلة!
+
+        تحقق من هذه الرقصة التي تستخدم  <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml>  لتغيير تشكيلة الراقصين الاحتياطيين طيلة الرقصة. جرب واحدة من هذه الأفكار للتوسع:
+
+        -   قم بإنشاء مجموعة ثانية من الراقصين في تخطيط مختلف
+        -   قم بتغيير التخطيط عندما يكون المفتاح مضغوطاَ
+        -   قم بتغيير الخاصية عند قيام الراقصون بتغيير التشكيلة
+      Dance_Party_extras_mixed_2019: |-
+        # More Buttons
+
+        يتيح لك هذا الرقص التحكم في خصائص الراقصين في الوقت الفعلي أثناء الرقص تلقائيًا. حاول جعل الخصائص الأخرى تتغير عندما تضغط على الأزرار. على سبيل المثال:
+
+        -   عشوائية لون الراقصة عندما تضغط على "لأسفل".
+        -   أضف مجموعة من الراقصين بتخطيط عشوائي عند الضغط على "space"
