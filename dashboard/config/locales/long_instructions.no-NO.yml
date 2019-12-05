@@ -123,6 +123,20 @@ no-NO:
       CourseE_HOC 2018 Level_9b: Du kom deg til korallrevet, let etter \*\* hjertet
         av havet \*\*! \[] (<https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png>)!
         Blå og rød korall for å komme frem til \*\* skattekisten \*\*! \[] (<https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png>).
+      Crack a Caesar Cipher: |-
+        # Knekk en Cæsar kode!
+
+        Dette verktøyet lar deg leke med tekst og lage Cæsar kode. du kan bruke det til å kryptere eller dekryptere en melding.
+
+        # Gjør dette
+
+        Åpne en **Eksempelmelding** fra nedtrekksmenyen. Det vil åpne en melding som er kryptert med en Cæsarkode.
+        ![](https://images.code.org/347139486c8c729bf3c6e72ce67da878-image-1476286380409.gif)
+
+        -   Bruk knappene i Cæsar erstatningsfanen, du kan prøve deg fram med å dra alfabetet frem og tilbake for å dekryptere meldingen.
+            ![](https://images.code.org/ef9ebc16d2f1442dc46fba9bd48b5d43-image-1476285966821.gif)
+            Se hvor lang tid det tar deg å dekryptere meldingen! Er dette en god metode for dekryptere hemmelige data?
+            <img src="http://code.org/api/hour/begin_encryption.png">
       Dance_2019_01: |-
         Dra <xml><block type="Dancelab_makeAnonymousDanceSprite" block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;, &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml>-blokken inn i arbeidsområdet, og koble den inne i <xml><block type="Dancelab_whenSetup2" next_connection_disabled="true" block-text="setup"></block></xml>-blokken
 
@@ -182,7 +196,7 @@ no-NO:
       Dance_Party_02: |-
         La oss få disse elgene til å danse!
 
-        Dra ut<xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>-blokken til arbeidsområdet. Koble den til under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>-blokken. Danseren din vil nå starte et nytt dansetrinn etter den fjerde takten.
+        Dra ut<xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>-blokken til arbeidsområdet. Koble den til under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>-blokken. Danseren din vil nå starte et nytt dansetrinn etter den fjerde takten.
 
         **Takter** brukes for å regne tiden i musikk. I denne veiledningen er en takt fire slag lang.
       Dance_Party_03: "_Nå svinger det!_ \n\nLegg til en <xml><block type=\"Dancelab_atTimestamp\"><title
@@ -241,6 +255,14 @@ no-NO:
         **Bruk tastene til å få roboten til å gjøre fall-klapp-fall-klapp så fort som du kan!**
       Dance_Party_12: Ta på deg danseskoene! Lag din egen dans og del den med vennene
         dine.
+      Dance_Party_extras_alternate_2019: "# Frem og Tilbake!\n\nNoen ganger ønsker
+        du å lage et mønster av danse bevegelsene du velger. Denne blokken lar deg
+        gjøre akkurat det. \n\n<xml><block type=\"Dancelab_alternateMoves\"><title
+        name=\"GROUP\">sprites</title><title name=\"N\">2</title><title name=\"MOVE1\">MOVES.Roll</title><title
+        name=\"MOVE2\">MOVES.ClapHigh</title></block></xml>\n\nBevegelsene du velger
+        ovenfor vil repeteres i rekkefølge uendelig.\n\n-   Lag en varierende rutine
+        til hoveddanseren i front!\n-   Bruk forskjellig tall for endre frekvensen
+        bevegelsene varierer med. Forsøk med `1` eller `0.5` for å varierere raskere!"
       Dance_Party_extras_battle: |-
         # Dansegrupper
 
