@@ -1705,25 +1705,30 @@ it-IT:
       Dance_Party_11_5: |-
         Dai un’occhiata a questo blocco:
 
-        <xml>   <block type="Dancelab_makeNewDanceSpriteGroup">     <title name="N">6</title>     <title name="COSTUME">"DUCK"</title>     <title name="LAYOUT">"circle"</title>   </block></xml>
+        <xml>
+          <block type="Dancelab_makeNewDanceSpriteGroup">
+            <title name="N">6</title>
+            <title name="COSTUME">"DUCK"</title>
+            <title name="LAYOUT">"circle"</title>
+          </block></xml>
 
         Ora sei in grado di creare un gruppo di ballerini in un colpo solo!
 
-        Prova ad usare alcuni blocchi `"tutti i paperi" eseguono la mossa ...` per scrivere del codice che faccia ballare i paperi tutti assieme.
+        Prova ad usare alcuni blocchi `"tutti i paperi" eseguono la mossa...` per scrivere del codice che faccia ballare i paperi tutti assieme.
       Dance_Party_11b: |-
         E ora una sfida all’ultima mossa! Quando premi la freccia a sinistra (←) il Gatto fa la "dab". Fai fare una “spaccata” al Robot premendo la freccia a destra (→) e fagli fare un "applauso" quando premi la freccia in giù (↓).
 
         **Usa i tasti per far fare al Robot il ballo spaccata-applauso-spaccata-applauso il più velocemente possibile!**
       Dance_Party_12: Lasciati andare e lanciati in pista! Crea un ballo personalizzato
         da condividere con i tuoi amici.
-      Dance_Party_extras_alternate_2019: |-
-        # Tutti in Formazione!
-
-        Dai un'occhiata a questo ballo che usa il blocco [blockly block][0] per cambiare la formazione dei ballerini sullo sfondo durante il ballo. Prova una di queste idee per ampliarl:
-
-        -   Crea un secondo gruppo di ballerini in una diversa disposizione
-        -   Cambia la disposizione quando si preme un tasto
-        -   Cambia una proprietà quando i ballerini cambiano formazione
+      Dance_Party_extras_alternate_2019: "# Avanti e indietro!\n\nA volte potresti
+        voler creare una sequenza di mosse a tua scelta. Questo nuovo blocco ti permette
+        di fare proprio questo.\n\n<xml><block type=\"Dancelab_alternateMoves\"><title
+        name=\"GROUP\">sprites</title><title name=\"N\">2</title><title name=\"MOVE1\">MOVES.Roll</title><title
+        name=\"MOVE2\">MOVES.ClapHigh</title></block></xml>\n\nLe mosse indicate verranno
+        alternate per sempre.\n\n-   Crea una sequenza alternata tra il ballerino
+        principale e quelli secondari! \n-   Prova diversi ritmi di alternanza delle
+        mosse, per esempio `1` o `0.5` per alternare più in fretta!"
       Dance_Party_extras_battle: |-
         # Squadre di ballo
 

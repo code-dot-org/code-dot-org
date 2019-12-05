@@ -1054,11 +1054,11 @@ ro-RO:
         Verifică acest bloc:
 
         <xml>
-        <block type="Dancelab_makeNewDanceSpriteGroup">
-        <title name="N">6</title>
-        <title name="COSTUME">"RAŢĂ"</title>
-        <title name="LAYOUT">"cerc"</title>
-        </block></xml>
+          <block type="Dancelab_makeNewDanceSpriteGroup">
+            <title name="N">6</title>
+            <title name="COSTUME">"DUCK"</title>
+            <title name="LAYOUT">"circle"</title>
+          </block></xml>
 
         Acum poţi creea mai mulţi dansatori în acelaşi timp!
 
@@ -1534,3 +1534,18 @@ ro-RO:
       frozen square snowflake: Poţi crea un fulg de zăpadă folosind blocul "Repetă"
         pentru a face un pătrat de 10 ori, precum și blocul "Întoarce" pentru a se
         roti cu 36 de grade între fiecare pătrat?
+      Dance_Party_extras_layout_2019: |-
+        # Hai să ne formăm!
+
+        Verificați acest dans care folosește blocul <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> pentru a schimba formarea dansatorilor de rezervă pe tot parcursul dansului. Încercați una dintre aceste idei pentru a o extinde:
+
+        -   Creați un al doilea grup de dansatori într-o dispunere diferită
+        -   Modificați aspectul când este apăsată o tastă
+        -   Modificați o proprietate atunci când dansatorii schimbă formația
+      Dance_Party_extras_mixed_2019: |-
+        # Mai multe butoane
+
+        Acest dans vă permite să controlați proprietățile dansatorilor în timp real, în timp ce dansează automat. Încercați să faceți ca alte proprietăți să se schimbe atunci când apăsați butoanele. De exemplu:
+
+        -   Alegeți nuanța dansatorului când apăsați „în jos”.
+        -   Adăugați un grup de dansatori cu un layout aleatoriu când apăsați „spațiu”.

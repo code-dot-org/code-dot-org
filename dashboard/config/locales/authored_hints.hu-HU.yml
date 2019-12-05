@@ -676,3 +676,12 @@ hu-HU:
           Ne feledd, hogy a kódod a zöld blokkon belül építheted.
 
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
+      Dance_Party_05:
+        validation: |-
+          **Hogyan teljesíthetem ezt a szintet?**
+
+          -   A táncosodnak meg kell tennie legalább 4 különböző táncmozdulatot a szint vége előtt.
+
+          _Ez a szint 12 ütem után ér véget._
+      Dance_Party_extras_alternate_2019:
+        alternate: Az alternatív blokk a "Dancers" kategóriába tartozik.

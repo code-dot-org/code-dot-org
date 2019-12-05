@@ -915,11 +915,11 @@ ru-RU:
         Посмотрите этот блок:
 
         <xml>
-        <block type="Dancelab_makeNewDanceSpriteGroup">
-        <title name="N">6</title>
-        <title name="COSTUME">"DUCK"</title>
-        <title name="LAYOUT">"circle"</title>
-        </block></xml>
+          <block type="Dancelab_makeNewDanceSpriteGroup">
+            <title name="N">6</title>
+            <title name="COSTUME">"DUCK"</title>
+            <title name="LAYOUT">"circle"</title>
+          </block></xml>
 
         Теперь вы можете сразу создать множество танцоров!
 
