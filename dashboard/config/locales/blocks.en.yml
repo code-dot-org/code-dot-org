@@ -829,7 +829,7 @@ en:
             '"mid"': mid
             '"treble"': treble
       Dancelab_stopMapping:
-        text: "{SPRITE} stops {PROPERTY} following {RANGE}"
+        text: "{SPRITE} stop {PROPERTY} following {RANGE}"
         options:
           PROPERTY:
             '"scale"': size
