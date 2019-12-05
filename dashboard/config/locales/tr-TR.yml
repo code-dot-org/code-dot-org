@@ -15,6 +15,12 @@ tr:
         deneyin.
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: geçersiz. Her link şifre yenilemek için yalnızca bir kez kullanılabilir
+                ve en son gönderilen link geçerlidir.
       messages:
         blank: gerekli
         blank_plural: gereklidir
@@ -40,6 +46,8 @@ tr:
         gender: Cinsiyet
         edit_header: Hesap Bilgilerini Düzenle
         finish_sign_up_header: Hesabınızı oluşturmayı bitirin
+        finish_sign_up_subheader: Code.org hesabı oluşturmayı bitirmek için sıradaki
+          bilgileri doldurun <strong>%{email}</strong>.
         error:
           future: gelecekte olması mümkün değil
   beta: beta
@@ -88,6 +96,7 @@ tr:
   auth:
     sign_in_with: "%{provider} ile giriş yapın"
     signed_in: Giriş yapıldı!
+    signed_out_markdown: "### Code.org dan çıkış yaptınız%{url}."
     already_signedup: Zaten kayıtlı mısınız?
     notyet_signedup: Henüz kaydolmadınız mı?
     google_oauth2: Google Hesabı
@@ -141,6 +150,7 @@ tr:
     age: Yaş
     user_type: Bir öğrenci ya da bir öğretmen misiniz?
     submit: Kaydol
+    go_to_account: Hesabıma Git
     teacher: Öğretmen misiniz?
     valid_username: Mevcut!
     invalid_username: Kullanıcı adı en az 5 karakter uzunluğunda olmalıdır
@@ -150,6 +160,8 @@ tr:
     mismatch_password: Girdiğiniz iki parola aynı değil
     under_13_consent: Eğer 13 yaşından küçüksem, Code.org hizmetlerini kullanmam için
       ebeveynlerimin veya yasal vasimin izni olduğunu onaylıyorum.
+    student_consent: Code.org hizmetlerini kullanmam için ebeveynlerimin veya yasal
+      vasimin izni olduğunu onaylıyorum.
     agree_us_website: Amerika Birleşik Devletleri merkezli bir web sitesi kullanmayı
       kabul ediyorum.
     my_data_to_us: Bu siteyi kullanımıma ilişkin veriler Amerika Birleşik Devletleri’ne

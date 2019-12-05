@@ -1589,7 +1589,7 @@ tr-TR:
       CSD U2 new page: "# Web siteniz için yeni bir sayfa oluşturun.\\\r\n\n\\\r\nİşte
         önceki projen.  Yeni bir sayfa daha ekliyor olacaksın. Yeni sayfan listenin
         en iyi 10'u, yemek tarifi veya hoşlandığın herhangi bir şey olabilir.\\\r\n\\\r\n\n#
-        Bunu Yap\\\r\n\n\\*\nBağlantıya tıklayarak yeni bir HTML dosya ekle \n\\!\\[](\\<<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38>\nPM.png>).
+        Bunu Yap\\\r\n\n\\*\nBağlantıya tıklayarak yeni bir HTML dosya ekle \n![](<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38\nPM.png>).
         Yeni sayfa çalışma alanının solunda dosyaların listesinin içinde gözükecek.
         .\\\r\n\n-   Dosyayı yeniden adlandır, sağ tıklayarak ve Yeniden Adlandır'
         ı seçerek veya seçili iken üzerine tıklayarak.   **İsmin diğerlerinden farklı
