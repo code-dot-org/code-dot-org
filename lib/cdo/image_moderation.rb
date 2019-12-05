@@ -25,9 +25,7 @@ module ImageModeration
       study: 'azure-content-moderation',
       study_group: 'v1',
       event: 'moderation-error',
-      data_json: {
-        error: err
-      }.to_json
+      data_string: err
     )
     :everyone
   end
