@@ -916,7 +916,7 @@ ko-KR:
       Dance_Party_extras_layout_2019: |-
         # 형성하자!
 
-        에서 [blockly 블록] 사용이 댄스를 체크 아웃[0] 블록 댄스 걸쳐 백업 댄서 '포메이션을 변경.
+        에서 <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> 사용이 댄스를 체크 아웃[0] 블록 댄스 걸쳐 백업 댄서 '포메이션을 변경.
 
         다른 레이아웃으로 두 번째 댄서 그룹 만들기
         키를 누를 때 레이아웃 변경

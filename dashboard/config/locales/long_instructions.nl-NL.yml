@@ -307,13 +307,14 @@ nl-NL:
         -   Voeg nog een groep dansers toe
         -   Laat dansers verschijnen en verdwijnen met behulp van de pijltoetsen
         -   Verberg alle dansers en schakel over naar een spannend achtergrondeffect
-      Dance_Party_extras_visible_2019: "# Kwartnoten\n\nDe meeste van onze dansen
-        hebben hele maten gebruikt, maar elke maat bestaat uit 4 kwartnoten. Deze
-        dans maakt gebruik van [blockly block][0] om de danser na de 5e maat op elke
-        kwartnoot te laten klappen. \n\nProbeer de nummers in het blok te veranderen
-        om te zien hoe het de dans verandert. \n\n-   Experimenteer met een andere
-        nootduur (zoals 0,5 voor een halve noot of 0,125 voor een achtste noot). \n-
-        \  Voeg enkele andere gebeurtenissen toe."
+      Dance_Party_extras_visible_2019: |-
+        # Waar zijn ze heen?
+
+        Deze dans toont en verbergt twee verschillende groepen van dansers. Bekijk hem eens, en probeer dan je eigen touch toe te voegen.
+
+        -   Voeg nog een groep dansers toe
+        -   Laat dansers verschijnen en verdwijnen met behulp van de pijltoetsen
+        -   Verberg alle dansers en schakel over naar een spannend achtergrondeffect
       Function intro Ryan: "Er is een **function** genaamd 'brug bouwen' in de werkruimte.
         \ Alle code die je nodig hebt om de rivier over te steken, zit hierin! \\\r\n
         \\\r\nMaak twee kleine, groene blokjes vast in je werkruimte om het pad te

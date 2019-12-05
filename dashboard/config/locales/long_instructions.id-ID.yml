@@ -1327,14 +1327,6 @@ id-ID:
         \-Berapa banyak apel yang gajah kumpulkan?
         \-Berapa banyak apel yang kuda nil kumpulkan?
         \-Berapa banyak waktu yang digunakan untuk mengumpulkan semua apel?
-      Dance_Party_extras_layout_2019: |-
-        # Ayo Masuk Formasi!
-
-        Lihatlah tarian ini yang menggunakan blok[0] [blockly block] untuk mengubah formasi penari cadangan sepanjang tarian. Cobalah salah satu dari ide-ide ini untuk memperluasnya:
-
-        -   Buat grup penari kedua dalam tata letak yang berbeda
-        -   Ubah tata letak ketika tombol ditekan
-        -   Ubah properti ketika penari mengubah formasi
       Dance_Party_extras_mixed_2019: |-
         # More Buttons
 
