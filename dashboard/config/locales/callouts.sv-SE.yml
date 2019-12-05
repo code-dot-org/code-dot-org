@@ -84,6 +84,8 @@ sv-SE:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Nytt Block!
         dance_callout_11_b: Nytt Block!
+      CourseD_Dance_Party_11_5:
+        dance_party_11_5_groups: Kolla här för "alla ankor" block
       Dance_2019_01:
         dance_callout_01: Lägg till detta block till ditt program!
       Dance_2019_02:
@@ -111,6 +113,8 @@ sv-SE:
       Dance_Party_11:
         dance_callout_11_a: Nytt Block!
         dance_callout_11_b: Nytt Block!
+      Dance_Party_11_5:
+        dance_party_11_5_groups: Kolla här för "alla ankor" block
       Function intro Ryan:
         Function_intro_Ryan_1: Den här lilla instruktionen säger åt datorn att köra
           den STORA gruppen kod med samma namn i arbetsytan.

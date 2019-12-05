@@ -151,6 +151,13 @@ sv-SE:
             <title name="COSTUME" config="&quot;BEAR&quot;, &quot;CAT&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title>
             <title name="LAYOUT">"circle"</title>
           </block></xml>Nu kan du skapa många dansare på en gång!
+      Dance_2019_07: "Varje dansare har en uppsättning _properties_ som kontrollerar
+        hur det ser ut. \n\nAnvänd <xml><block type=\"Dancelab_setPropEach\" block-text=\"the
+        set block\"><title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;,
+        &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;,
+        &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title><title name=\"PROPERTY\">\"scale\"</title><title
+        name=\"VAL\">???</title></block></xml> under ett grönt eventblock för att
+        få dansarna att verka vara närmare eller längre bort."
       Dance_2019_08: Dansare har en ”färgtons”-egenskap som kan lägga till färg. Prova
         att ändra färgton på en av dina dansare (eller en hel grupp)!
       Dance_2019_09: Det här är en särskild sorts händelse som utlöses upprepade gånger.<xml><block
@@ -168,7 +175,7 @@ sv-SE:
       Dance_Party_02: |-
         Låt oss få denna älg att dansa!
 
-        Dra ut <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> blocket till arbetsytan. Koppla samman det undertill med <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> blocket. Din dansare bör starta en ny rörelse efter den fjärde åtgärden.
+        Dra ut <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> blocket till arbetsytan. Koppla samman det undertill med <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> blocket. Din dansare bör starta en ny rörelse efter den fjärde åtgärden.
 
         **Åtgärder** används för att mäta tid i musik. I denna handledning är en åtgärd fyra takter lång.
       Dance_Party_03: |-
