@@ -2211,6 +2211,10 @@ fr-FR:
           **Défis optionnels**
 
           Change l’effet de fond à différents moments de la chanson en connectant le nouveau bloc sous les événements <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"mesures"</title></block></xml>.
+      Dance_Party_05:
+        validation: "**Comment réussir ce niveau ?** \n\n-   Votre danseur doit effectuer
+          au moins 4 mouvements de danse différents avant la fin du niveau. \n\n_Ce
+          niveau se termine après 12 mesures._"
       Dance_Party_06:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
