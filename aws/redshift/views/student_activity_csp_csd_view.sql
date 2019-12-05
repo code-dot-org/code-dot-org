@@ -1,8 +1,12 @@
-DROP VIEW IF EXISTS student_activity_csp_csd_view CASCADE;
-
 CREATE OR REPLACE view analysis.student_activity_csp_csd_view  AS
+
+WITH distinct_csp_csd_script_ids as
+(SELECT DISTINCT script_id, course_name_short, course_name_long from analysis.course_structure where course_name_short in ('csd', 'csp'))
+
   SELECT u_teachers.studio_person_id,
          sy.school_year,
+         course_name_long,
+         course_name_short,
          COUNT(DISTINCT se.id) sections,
          COUNT(DISTINCT us.user_id) students,
          COUNT(DISTINCT CASE WHEN u_students.gender = 'f' THEN us.user_id ELSE NULL END) students_female,
@@ -20,7 +24,8 @@ CREATE OR REPLACE view analysis.student_activity_csp_csd_view  AS
       ON fo.section_id = se.id
     JOIN dashboard_production.user_scripts us
       ON us.user_id = fo.student_user_id 
-      AND us.script_id IN (select distinct script_id from analysis.course_structure where course_name_short in ('csd', 'csp'))-- student progress included whether CSP or CSD 
+    JOIN distinct_csp_csd_script_ids dsi
+      ON dsi.script_id = us.script_id
     JOIN dashboard_production_pii.users u_students
       ON u_students.id = us.user_id AND u_students.user_type = 'student'
     JOIN dashboard_production_pii.users u_teachers
@@ -35,6 +40,7 @@ CREATE OR REPLACE view analysis.student_activity_csp_csd_view  AS
       ON ccc.user_id = u_students.id 
       AND ccc.completed_at between sy.started_at and sy.ended_at
       
-  GROUP BY 1, 2
+  GROUP BY 1, 2, 3, 4
   
 WITH NO SCHEMA BINDING;
+
