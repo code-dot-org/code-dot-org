@@ -123,6 +123,10 @@ hi-IN:
         &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title>\n
         \   <title name=\"LAYOUT\">\"circle\"</title>\n  </block></xml>\nअब आप एक
         साथ कई डांसर बना सकते हैं!"
+      Dance_2019_07: |-
+        हर डांसर के पास _विशेषताओं_ का सेट होता है, जो इसके स्वरूप को नियंत्रित करता है।
+
+        डांसरों को अधिक पास या दूर करने के लिए हरे इवेंट ब्लॉक के अंतर्गत <xml><block type="Dancelab_setPropEach" block-text="the set block"><title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title><title name="PROPERTY">"scale"</title><title name="VAL">???</title></block></xml> का उपयोग करं।
       Dance_2019_08: डांसरों की एक "tint” यानि रंग की प्रॉपर्टी होती है जो रंग की
         एक परत चढ़ाती है। अपने किसी एक डांसर (या पूरे समूह) का रंग बदल कर देखें!
       Dance_2019_09: |-
