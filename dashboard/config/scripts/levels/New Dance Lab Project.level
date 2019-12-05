@@ -136,6 +136,16 @@
             <title name="MOVE">MOVES.Clown</title>
             <title name="DIR">-1</title>
           </block>
+          <block type="Dancelab_startMappingEach">
+            <title name="GROUP">sprites</title>
+            <title name="PROPERTY">"scale"</title>
+            <title name="RANGE">"bass"</title>
+          </block>
+          <block type="Dancelab_stopMappingEach">
+            <title name="GROUP">sprites</title>
+            <title name="PROPERTY">"scale"</title>
+            <title name="RANGE">"bass"</title>
+          </block>
           <block type="Dancelab_alternateMoves">
             <title name="GROUP">sprites</title>
             <title name="N">2</title>

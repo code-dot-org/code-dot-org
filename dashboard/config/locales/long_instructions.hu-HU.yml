@@ -501,11 +501,11 @@ hu-HU:
         Nézd meg ezt a blokkot:
 
         <xml>
-        <block type="Dancelab_makeNewDanceSpriteGroup">
-        <title name="N">6</title>
-        <title name="COSTUME">"DUCK"</title>
-        <title name="LAYOUT">"circle"</title>
-        </block></xml>
+          <block type="Dancelab_makeNewDanceSpriteGroup">
+            <title name="N">6</title>
+            <title name="COSTUME">"DUCK"</title>
+            <title name="LAYOUT">"circle"</title>
+          </block></xml>
 
         Most már egyetlen mozdulattal egy csomó táncost létre tudsz hozni!
 
@@ -861,3 +861,22 @@ hu-HU:
       frozen square snowflake: Tudsz készíteni egy hópelyhet az ismételd blokkal?
         rajzoljunk négyzetet 10 alkalommal, és közben használjuk a fordulj blokkot
         36 fokos elfordulásokkal minden négyzet után.
+      Dance_2019_07: |-
+        Minden táncoshoz tartozik több olyan _tulajdonság_, amely a megjelenését szabályozza.
+
+        A zöld eseményblokk alatt a <xml><block type="Dancelab_setPropEach" block-text="the set block"><title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title><title name="PROPERTY">"scale"</title><title name="VAL">???</title></block></xml> használatával érheted el, hogy a táncosok közelebbinek vagy távolibbnak tűnjenek.
+      Dance_Party_extras_layout_2019: |-
+        # Vegyünk formációba!
+
+        Nézze meg ezt a táncot, amely az <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> blokkot használja a táncosok mentális formációjának megváltoztatásához az egész tánc során. Próbálkozzon az alábbi ötletek egyikével, hogy kibővítse:
+
+        -   Hozzon létre egy második táncoscsoportot más elrendezéssel
+        -   Megváltoztassa az elrendezést, amikor egy gombot megnyomnak
+        -   Tulajdonságok megváltoztatása, ha a táncosok megváltoztatják a formációt
+      Dance_Party_extras_mixed_2019: |-
+        # Több gomb
+
+        Ez a tánc lehetővé teszi, hogy valós időben ellenőrizzék a táncosok tulajdonságait, miközben automatikusan táncolnak. Próbáljon meg más tulajdonságokat megváltoztatni, amikor megnyomja a gombokat. Például:
+
+        -   Véletlenítse a táncos árnyalatát, amikor a "le" gombot nyomja meg.
+        -   Adjon hozzá egy táncoscsoportot véletlenszerű elrendezéssel, ha megnyomja a „szóköz” gombot.

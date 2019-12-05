@@ -3,6 +3,7 @@ fil:
   data:
     blocks:
       Dancelab_alternateMoves:
+        text: "Ang {GROUP} ay maghahalinhinan bawat {N} measure \nsa pagitan ng {MOVE1} at {MOVE2}"
         options:
           GROUP:
             sprites: lahat
@@ -16,6 +17,7 @@ fil:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
+            '"SLOTH"': sloths
             '"UNICORN"': unicorns
           MOVE1:
             MOVES.Roll: Body Roll
@@ -69,6 +71,7 @@ fil:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
+            '"SLOTH"': sloths
             '"UNICORN"': unicorns
           MOVE:
             '"next"': "(Kasunod)"
@@ -120,6 +123,7 @@ fil:
             '"x"': posisyong pahiga
             '"y"': posisyong patayo
       Dancelab_changePropEachBy:
+        text: change {GROUP} {PROPERTY} by {VAL}
         options:
           GROUP:
             sprites: lahat
@@ -133,6 +137,7 @@ fil:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
+            '"SLOTH"': sloths
             '"UNICORN"': unicorns
           PROPERTY:
             '"scale"': laki
@@ -156,6 +161,7 @@ fil:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
+            '"SLOTH"': sloths
             '"UNICORN"': unicorns
           MOVE:
             '"rand"': "(Random)"
@@ -216,7 +222,10 @@ fil:
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_everyMeasuresRange:
+        text: 'ulitin bawat {N} measure makalipas ang {START} '
       Dancelab_everySeconds:
+        text: 'Ulitin ang bawat {N} {UNIT} '
         options:
           UNIT:
             '"measures"': measure
@@ -294,8 +303,14 @@ fil:
             "{x: 200, y: 300}": ibaba
             "{x: 100, y: 200}": kaliwa
             "{x: 300, y: 200}": kanan
+            "{x: 200, y: 200}": center
+            "{x: 100, y: 100}": Kaliwang itaas
+            "{x: 300, y: 100}": kanang itaas
+            "{x: 100, y: 300}": ibabang kaliwa
+            "{x: 300, y: 300}": kanang ibaba
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": nang hindi pinipili
       Dancelab_jumpToEach:
+        text: tumalon {GROUP} sa {LOCATION}
         options:
           GROUP:
             sprites: lahat
@@ -309,12 +324,18 @@ fil:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
+            '"SLOTH"': sloths
             '"UNICORN"': unicorns
           LOCATION:
             "{x: 200, y: 100}": itaas
             "{x: 200, y: 300}": ibaba
             "{x: 100, y: 200}": kaliwa
             "{x: 300, y: 200}": kanan
+            "{x: 200, y: 200}": center
+            "{x: 100, y: 100}": Kaliwang itaas
+            "{x: 300, y: 100}": kanang itaas
+            "{x: 100, y: 300}": ibabang kaliwa
+            "{x: 300, y: 300}": kanang ibaba
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": nang hindi pinipili
       Dancelab_layoutSprites:
         text: i-layout ang {GROUP} bilang isang {FORMAT}
@@ -331,6 +352,7 @@ fil:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
+            '"SLOTH"': sloths
             '"UNICORN"': unicorns
           FORMAT:
             '"border"': border
@@ -343,6 +365,7 @@ fil:
             '"plus"': idagdag
             '"random"': nang hindi pinipili
       Dancelab_makeAnonymousDanceSprite:
+        text: gumawa ng bagong {COSTUME} sa {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': dayuhan
@@ -355,12 +378,18 @@ fil:
             '"PINEAPPLE"': pinya
             '"ROBOT"': robot
             '"SHARK"': pating
+            '"SLOTH"': sloth
             '"UNICORN"': unicorn
           LOCATION:
             "{x: 200, y: 100}": itaas
             "{x: 200, y: 300}": ibaba
             "{x: 100, y: 200}": kaliwa
             "{x: 300, y: 200}": kanan
+            "{x: 200, y: 200}": center
+            "{x: 100, y: 100}": Kaliwang itaas
+            "{x: 300, y: 100}": kanang itaas
+            "{x: 100, y: 300}": ibabang kaliwa
+            "{x: 300, y: 300}": kanang ibaba
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": nang hindi pinipili
       Dancelab_makeNewDanceSprite:
         text: |-
@@ -378,12 +407,18 @@ fil:
             '"PINEAPPLE"': pinya
             '"ROBOT"': robot
             '"SHARK"': pating
+            '"SLOTH"': sloth
             '"UNICORN"': unicorn
           LOCATION:
             "{x: 200, y: 100}": itaas
             "{x: 200, y: 300}": ibaba
             "{x: 100, y: 200}": kaliwa
             "{x: 300, y: 200}": kanan
+            "{x: 200, y: 200}": center
+            "{x: 100, y: 100}": Kaliwang itaas
+            "{x: 300, y: 100}": kanang itaas
+            "{x: 100, y: 300}": ibabang kaliwa
+            "{x: 300, y: 300}": kanang ibaba
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": nang hindi pinipili
       Dancelab_makeNewDanceSpriteGroup:
         text: |-
@@ -421,6 +456,7 @@ fil:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
+            '"SLOTH"': sloths
             '"UNICORN"': unicorns
           LAYOUT:
             '"border"': border
@@ -428,8 +464,12 @@ fil:
             '"diamond"': diyamante
             '"circle"': bilog
             '"grid"': grid
+            '"top"': pinakamataas na hilera
             '"row"': hilera
+            '"bottom"': pinakamababang hilera
+            '"left"': kaliwang kolum
             '"column"': kolum
+            '"right"': kanang kolum
             '"x"': criss-cross
             '"plus"': idagdag
             '"random"': nang hindi pinipili
@@ -441,6 +481,8 @@ fil:
         text: sa pointer pababa
       Dancelab_onPointerDrag:
         text: sa pointer paghila
+      Dancelab_onPointerUp:
+        text: sa panturo up
       Dancelab_randomColor:
         text: iba-ibang kulay
       Dancelab_setBackground:
@@ -464,6 +506,7 @@ fil:
             '"rainbow"': Bahaghari
             '"snowflakes"': Niyebe
             '"text"': Mga Pangalan ng Awit
+            '"galaxy"': Space
             '"sparkles"': Sparkles
             '"spiral"': Spiral
             '"disco"': Mga kwadrado
@@ -479,26 +522,37 @@ fil:
             '"vintage"': Vintage
             '"warm"': Warm
       Dancelab_setBackgroundEffectWithPalette:
+        text: |-
+          Itakda ang background effect
+          {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Wala
             '"rand"': "(Random)"
             '"circles"': Mga bilog
+            '"quads"': Mga Anggulo
             '"color_cycle"': Mga Kulay
             '"diamonds"': Diyamante
             '"disco_ball"': Disco Ball
             '"fireworks"': Fireworks
+            '"flowers"': Mga Bulaklak
+            '"growing_stars"': Growing Stars
             '"swirl"': Hypno
             '"kaleidoscope"': Kaleidoscope
             '"lasers"': Laser Dance Floor
             '"splatter"': Isaboy ang Pintura
             '"rainbow"': Bahaghari
+            '"ripples_random"': Random Ripples
+            '"ripples"': Ripples
             '"snowflakes"': Niyebe
             '"text"': Mga Pangalan ng Awit
+            '"squiggles"': Squiggles
+            '"galaxy"': Space
             '"sparkles"': Sparkles
             '"spiral"': Spiral
             '"disco"': Mga kwadrado
             '"stars"': Mga Bituin
+            '"music_wave"': Mga Alon
           PALETTE:
             '"rave"': Itim at Puti
             '"cool"': Cool
@@ -533,6 +587,7 @@ fil:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
+            '"SLOTH"': sloths
             '"UNICORN"': unicorns
           SPEED:
             '1': normal
@@ -565,9 +620,12 @@ fil:
             '"none"': Wala
             '"rand"': "(Random)"
             '"bubbles"': Bubbles
+            '"hearts_colorful"': Makulay na mga Puso
             '"confetti"': Confetti
+            '"emojis"': Mga Emoji
             '"hearts_red"': Mga Puso
             '"music_notes"': Mga Nota ng Musika
+            '"paint_drip"': Tulo ngPintura
             '"pineapples"': Pineapples
             '"pizzas"': Pizzas
             '"smiling_poop"': Poop
@@ -576,6 +634,7 @@ fil:
             '"smile_face"': Mga Ngiti
             '"spotlight"': Spotlight
             '"color_lights"': Mga Ilaw ng Entablado
+            '"exploding_stars"': Starburst
             '"raining_tacos"': Tacos
       Dancelab_setProp:
         text: 'i-set ang {SPRITE} {PROPERTY} to {VAL} '
@@ -602,6 +661,7 @@ fil:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
+            '"SLOTH"': sloths
             '"UNICORN"': unicorns
           PROPERTY:
             '"scale"': laki
@@ -623,6 +683,7 @@ fil:
             '"y"': posisyong patayo
             '"tint"': tint
       Dancelab_setPropRandomEach:
+        text: i-randomize ang {GROUP} {PROPERTY}
         options:
           GROUP:
             sprites: lahat
@@ -636,6 +697,7 @@ fil:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
+            '"SLOTH"': sloths
             '"UNICORN"': unicorns
           PROPERTY:
             '"scale"': laki
@@ -662,6 +724,7 @@ fil:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
+            '"SLOTH"': sloths
             '"UNICORN"': unicorns
       Dancelab_setTintEachInline:
         text: i-set ang {THIS} tint sa {VAL}
@@ -678,6 +741,7 @@ fil:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
+            '"SLOTH"': sloths
             '"UNICORN"': unicorns
       Dancelab_setTintInline:
         text: i-set ang {SPRITE} tint sa {VAL}
@@ -702,6 +766,7 @@ fil:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
+            '"SLOTH"': sloths
             '"UNICORN"': unicorns
           VISIBILITY:
             'true': makikita
@@ -722,6 +787,7 @@ fil:
             '"mid"': mid
             '"treble"': treble
       Dancelab_startMappingEach:
+        text: Ang {GROUP} ay magsisimula {PROPERTY} kasunod ng {RANGE}
         options:
           GROUP:
             sprites: lahat
@@ -735,6 +801,7 @@ fil:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
+            '"SLOTH"': sloths
             '"UNICORN"': unicorns
           PROPERTY:
             '"scale"': laki
@@ -765,6 +832,7 @@ fil:
             '"mid"': mid
             '"treble"': treble
       Dancelab_stopMappingEach:
+        text: Ang {GROUP} ay hihinto {PROPERTY} kasunod ng {RANGE}
         options:
           GROUP:
             sprites: lahat
@@ -778,6 +846,7 @@ fil:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
+            '"SLOTH"': sloths
             '"UNICORN"': unicorns
           PROPERTY:
             '"scale"': laki
@@ -793,10 +862,33 @@ fil:
             '"mid"': mid
             '"treble"': treble
       Dancelab_translateStrings:
+        text: isalin ang {STRING}
         options:
           STRING:
+            '"music_wave"': Mga Alon
+            '"ripples"': Ripples
+            '"ripples_random"': Random Ripples
+            '"quads"': Mga Anggulo
+            '"flowers"': Mga Bulaklak
+            '"popsicles"': Popsicles
+            '"squiggles"': Squiggles
+            '"growing_stars"': Growing Stars
+            '"emojis"': Mga Emoji
             '"hearts_colorful"': Mga Puso
+            '"paint_drio"': Tulo ngPintura
+            '"exploding_stars"': Starburst
+            '"row_top"': pinakamataas na hilera
+            '"row_bottom"': pinakamababang hilera
+            '"column_left"': kaliwang kolum
+            '"column_right"': kanang kolum
             '"diamond"': diyamante
+            '"mural"': Mural
+            '"safari"': Safari
+            '"network"': Network
+            '"highway"': Highway
+            '"stream"': Stream
+            '"tile"': Tile
+            '"shadow"': Anino
             '"s"': s
             '"t"': t
             '"u"': u
@@ -822,7 +914,7 @@ fil:
             '"left"': kaliwa
             '"down"': baba
             '"right"': kanan
-            '"space"': espasyo
+            '"space"': Space
             '"enter"': ilagay
             '"a"': a
             '"b"': b
@@ -870,6 +962,10 @@ fil:
         text: i-setup
       Dancelab_whenSetup2:
         text: i-setup
+      gamelab_addBehaviorSimple:
+        text: sprite {SPRITE} ay nagsisimula {BEHAVIOR}
+      gamelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       gamelab_changePropBy:
         text: palitan ang {SPRITE} {PROPERTY} ng {VAL}
         options:
@@ -880,10 +976,25 @@ fil:
             '"y"': y na posisyon
             '"direction"': direksyon ng galaw
       gamelab_checkTouching:
+        text: "{CONDITION} {SPRITE1} touches {SPRITE2}"
         options:
           CONDITION:
             '"when"': kelan
             '"while"': habang
+      gamelab_clickedOn:
+        text: Kapag {SPRITE} nag-click
+      gamelab_clickedSpritePointer:
+        text: nag-click {SPRITE}
+      gamelab_comment:
+        text: komento {COMMENT}
+      gamelab_createNewSprite:
+        text: "gumawa ng bagong sprite \n tinawag {NAME} \n sa kasuutan {COSTUME} \n sa {LOCATION}"
+      gamelab_destroy:
+        text: alisin {THIS}
+      gamelab_draggable:
+        text: pagiging draggable
+      gamelab_edgesDisplace:
+        text: gilid block {SPRITE} mula sa paglipat
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -895,12 +1006,19 @@ fil:
             '"direction"': direksyon ng galaw
             '"tint"': tint
       gamelab_getThisSprite:
+        text: "{CHOICE} sprite"
         options:
           CHOICE:
+            '"this"': ito
             '"other"': iba
+      gamelab_hideTitleScreen:
+        text: itago ang title screen
+      gamelab_isTouchingEdges:
+        text: "{SPRITE} ay hawakan gilid"
       gamelab_jumpTo:
         text: "{SPRITE} tumalon sa {LOCATION}"
       gamelab_keyPressed:
+        text: "{CONDITION} {KEY} nakapindot"
         options:
           CONDITION:
             '"when"': kelan
@@ -936,28 +1054,82 @@ fil:
             '"w"': w
             '"x"': x
             '"z"': z
+      gamelab_locationAt:
+        text: 'Lokasyon x: {X} y {Y}'
+      gamelab_locationMouse:
+        text: Lokasyon ng mouse
+      gamelab_locationOf:
+        text: Lokasyon ng {SPRITE}
+      gamelab_location_picker:
+        text: "{LOCATION}"
+      gamelab_makeNewSpriteAnon:
+        text: gumawa ng bagong {ANIMATION_NAME} sprite sa {LOCATION}
       gamelab_mirrorSprite:
+        text: "{SPRITE} mukha {DIRECTION}"
         options:
           DIRECTION:
             '"right"': kanan
             '"left"': kaliwa
+      gamelab_mouseLocation:
+        text: Lokasyon ng mouse
+      gamelab_moveForward:
+        text: ilipat {SPRITE} {DISTANCE} pixels pasulong
+      gamelab_moveInDirection:
+        text: ilipat {SPRITE} {DISTANCE} pixels {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': North
+            '"East"': Silangan
+            '"South"': South
+            '"West"': West
+      gamelab_moveToward:
+        text: ilipat {SPRITE} pixels {DISTANCE} sa {TARGET}
+      gamelab_playSound:
+        text: Ang ... {SOUND}
+      gamelab_pointInDirection:
+        text: punto {SPRITE} {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': North
+            '"East"': Silangan
+            '"South"': South
+            '"West"': West
+      gamelab_printText:
+        text: print {TEXT}
       gamelab_randColor:
         text: iba-ibang kulay
       gamelab_randomColor:
         text: iba-ibang kulay
+      gamelab_randomLocation:
+        text: random na lokasyon
+      gamelab_removeAllBehaviors:
+        text: "{SPRITE} hinto lahat"
+      gamelab_removeBehaviorSimple:
+        text: sprite {SPRITE} tumitigil {BEHAVIOR}
+      gamelab_removeTint:
+        text: tanggalin ang kulay mula sa {THIS}
+      gamelab_setAnimation:
+        text: pagbabago {THIS} costume upang {ANIMATION}
       gamelab_setBackground:
         text: set background color {COLOR}
       gamelab_setBackgroundImage:
+        text: Itakda ang background sa {IMG}
         options:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': kuweba
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': siyudad
+            '"https://studio.code.org/blockly/media/skins/studio/background.png"': hukuman
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': desert
+            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': kalawakan
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': grid
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': bahaghari
+            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': SCI-Fi ng
+            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': mga bituin
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': sa ilalim ng tubig
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': winter
+            undefined: wala
       gamelab_setProp:
+        text: set {SPRITE} {PROPERTY} sa {VAL}
         options:
           PROPERTY:
             '"scale"': laki
@@ -966,21 +1138,37 @@ fil:
             '"y"': y na posisyon
             '"direction"': direksyon ng galaw
       gamelab_setSizes:
+        text: set {SPRITE} {PROPERTY} sa {N}%
         options:
           PROPERTY:
             '"scale"': laki
             '"width"': lapad
             '"height"': taas
+      gamelab_setTint:
+        text: baguhin ang kulay ng {THIS} sa {COLOR}
+      gamelab_setupSim:
+        text: |-
+          setup simulation sa
+          {SPRITE1N}{SPRITE1COSTUME}bilis{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}bilis{SPRITE2SPEED}
+          pagkolekta ng
+          {SPRITE3N}{SPRITE3COSTUME}
+      gamelab_showTitleScreen:
+        text: ipakita ang title screen {BREAK} pamagat {TITLE} teksto {SUBTITLE}
       gamelab_spriteClicked:
+        text: "{CONDITION} {SPRITE} nag-click"
         options:
           CONDITION:
             '"when"': kelan
             '"while"': habang
       gamelab_turn:
+        text: bumaling {SPRITE} {DIRECTION} {N} degrees
         options:
           DIRECTION:
             '"right"': kanan
             '"left"': kaliwa
+      gamelab_whenDownArrow:
+        text: Kapag ang down arrow ay pinindot
       gamelab_whenKey:
         text: kapag pinindot ang {KEY}
         options:
@@ -994,7 +1182,18 @@ fil:
             '"w"': w
             '"s"': s
             '"d"': d
+      gamelab_whenLeftArrow:
+        text: Kapag ang kaliwang arrow pinindot
+      gamelab_whenRightArrow:
+        text: Kapag ang kanang arrow ay pinindot
+      gamelab_whenTouching:
+        text: Kapag {SPRITE1} touches {SPRITE2}
+      gamelab_whenUpArrow:
+        text: Kapag up arrow pinindot
+      gamelab_whileDownArrow:
+        text: Habang down arrow pipi
       gamelab_whileKey:
+        text: Habang {KEY} nakapindot
         options:
           KEY:
             '"up"': paitaas
@@ -1006,6 +1205,31 @@ fil:
             '"w"': w
             '"s"': s
             '"d"': d
+      gamelab_whileLeftArrow:
+        text: Habang ang kaliwang arrow ay pinindot
+      gamelab_whileRightArrow:
+        text: Habang ang karapatan arrow pinindot
+      gamelab_whileTouching:
+        text: Habang {SPRITE1} ay pagpindot {SPRITE2}
+      gamelab_whileUpArrow:
+        text: Habang up arrow pinindot
+      gamelab_xLocationOf:
+        text: x coordinate ng {SPRITE}
+      gamelab_yLocationOf:
+        text: y ang mga {SPRITE}
+      Mikelab_addBehaviorSimple:
+        text: sprite {SPRITE} ay nagsisimula {BEHAVIOR}
+      Mikelab_addTrainingData:
+        text: 'Magdagdag ng datos ng pagsasanay: {NAME},{LOCATION}'
+        options:
+          NAME:
+            "{x: 201, y: 100}": bagay
+            "{x: 200, y: 100}": isda
+          LOCATION:
+            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": isda
+            "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": hindi isda
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ang aking etiketa
+            "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": hindi ang etiketa ko
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1021,6 +1245,13 @@ fil:
             "{x: 200, y: 300}": ibaba
             "{x: 100, y: 200}": kaliwa
             "{x: 300, y: 200}": kanan
+            "{x: 200, y: 200}": center
+            "{x: 100, y: 100}": Kaliwang itaas
+            "{x: 300, y: 100}": kanang itaas
+            "{x: 100, y: 300}": ibabang kaliwa
+            "{x: 300, y: 300}": kanang ibaba
+      Mikelab_getNext:
+        text: kumuha ng susunod na bagay
       Mikelab_getProp:
         options:
           PROPERTY:
@@ -1030,13 +1261,17 @@ fil:
             '"y"': y na posisyon
             '"direction"': direksyon ng galaw
       Mikelab_groupChangeAnim:
+        text: palitan ang {SELECT} {COSTUME} ng {COSTUME2}
         options:
           SELECT:
             '"all"': lahat
+            '"this"': ito
       Mikelab_groupChangePropBy:
+        text: pagbabago {PROPERTY} ng {SELECT} {COSTUME} ng {VAL}
         options:
           SELECT:
             '"all"': lahat
+            '"this"': ito
           PROPERTY:
             '"scale"': laki
             '"rotation"': rotation
@@ -1044,18 +1279,34 @@ fil:
             '"y"': y na posisyon
             '"direction"': direksyon ng galaw
       Mikelab_groupCreateNewSprite:
+        text: gumawa ng bagong {COSTUME} sa {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": itaas
             "{x: 200, y: 300}": ibaba
             "{x: 100, y: 200}": kaliwa
             "{x: 300, y: 200}": kanan
+            "{x: 200, y: 200}": center
+            "{x: 100, y: 100}": Kaliwang itaas
+            "{x: 300, y: 100}": kanang itaas
+            "{x: 100, y: 300}": ibabang kaliwa
+            "{x: 300, y: 300}": kanang ibaba
       Mikelab_groupDestroy:
+        text: alisin {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': lahat
+            '"this"': ito
+      Mikelab_groupDisplace:
+        text: lahat {COSTUME} block {COSTUME2} mula sa paglipat
+      Mikelab_groupEdgesDisplace:
+        text: gilid block {COSTUME} mula sa paglipat
       Mikelab_groupGetProp:
+        text: "{SELECT} {COSTUME}ng {PROPERTY}"
         options:
+          SELECT:
+            '"average"': average
+            '"this"': ito
           PROPERTY:
             '"scale"': laki
             '"rotation"': rotation
@@ -1063,21 +1314,29 @@ fil:
             '"y"': y na posisyon
             '"direction"': direksyon ng galaw
       Mikelab_groupRemoveAllBehaviors:
+        text: itigil {SELECT} {COSTUME} pag-uugali
         options:
           SELECT:
             '"all"': lahat
+            '"this"': ito
       Mikelab_groupRemoveBehaviorSimple:
+        text: "{SELECT} {COSTUME} tumitigil {BEHAVIOR}"
         options:
           SELECT:
             '"all"': lahat
+            '"this"': ito
       Mikelab_groupRemoveTint:
+        text: tanggalin ang kulay mula sa {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': lahat
+            '"this"': ito
       Mikelab_groupSetProp:
+        text: set {PROPERTY} ng {SELECT} {COSTUME} sa {VAL}
         options:
           SELECT:
             '"all"': lahat
+            '"this"': ito
           PROPERTY:
             '"scale"': laki
             '"rotation"': rotation
@@ -1085,9 +1344,29 @@ fil:
             '"y"': y na posisyon
             '"direction"': direksyon ng galaw
       Mikelab_groupSetTint:
+        text: baguhin ang kulay ng {SELECT} {COSTUME} sa {COLOR}
         options:
           SELECT:
             '"all"': lahat
+            '"this"': ito
+      Mikelab_groupWhenClickedOn:
+        text: Kapag {COSTUME} nag-click
+      Mikelab_groupWhenXTouchesY:
+        text: Kapag{COSTUME} touches {COSTUME2}
+      Mikelab_groupWhileClicked:
+        text: Habang nag-klik sa {COSTUME}
+      Mikelab_groupWhileTouchingAny:
+        text: |-
+          Habang{COSTUME} ay pagpindot {COSTUME2}
+          {STATEMENT}
+      Mikelab_hasBehavior:
+        text: "{SPRITE} ay kasalukuyang {BEHAVIOR}"
+      Mikelab_hideFish:
+        text: alisin {TRASH}
+        options:
+          TRASH:
+            object: bagay
+            fish: isda
       Mikelab_ifDanceIs:
         text: |-
           "kung ginagawa ng {SPRITE} ang {DANCE}
@@ -1105,10 +1384,44 @@ fil:
             MOVES.Kick: Bituin
             MOVES.ThisOrThat: Ito o Iyan
             MOVES.Rest: Wala
+      Mikelab_ifLabel:
+        text: |-
+          kung {DANCE}
+          gawin {DO1} ibang {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: isda
+            MOVES.Clown: ang aking etiketa
+      Mikelab_ifRecognizeLabel:
+        text: |-
+          kung makilala ang bagay bilang {DANCE}
+          gawin {DO1} ibang {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: isda
+            MOVES.Clown: ang aking etiketa
+      Mikelab_ifRecognizeLabelOnly:
+        text: |-
+          kung makilala ang bagay bilang {DANCE}
+          gawin {DO1}
+        options:
+          DANCE:
+            MOVES.ClapHigh: isda
+            MOVES.Clown: hindi ang etiketa ko
+      Mikelab_locationAt:
+        text: 'Lokasyon x: {X} y {Y}'
+      Mikelab_location_picker:
+        text: "{LOCATION}"
       Mikelab_randomColor:
         text: iba-ibang kulay
+      Mikelab_removeBehaviorSimple:
+        text: sprite {SPRITE} tumitigil {BEHAVIOR}
       Mikelab_repeatUntilComplete:
         text: ulitin ng walang katapusan
+      Mikelab_sendBad:
+        text: ilipat ang object kaliwa
+      Mikelab_sendGood:
+        text: ilipat ang bagay kanan
       Mikelab_setBG:
         options:
           BG:
@@ -1127,12 +1440,20 @@ fil:
             '"right"': kanan
             '"left"': kaliwa
       Mikelab_sprite:
+        text: bagong {COSTUME} sprite sa {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": itaas
             "{x: 200, y: 300}": ibaba
             "{x: 100, y: 200}": kaliwa
             "{x: 300, y: 200}": kanan
+            "{x: 200, y: 200}": center
+            "{x: 100, y: 100}": Kaliwang itaas
+            "{x: 300, y: 100}": kanang itaas
+            "{x: 100, y: 300}": ibabang kaliwa
+            "{x: 300, y: 300}": kanang ibaba
+      Mikelab_whenClickedOn:
+        text: Kapag {SPRITE} nag-click
       Mikelab_whenKeyPressed:
         text: kapag pinindot ang {KEY}
         options:
@@ -1152,6 +1473,14 @@ fil:
             '"right"': kanang arrow
             '"w"': W
             '"s"': S
+      Mikelab_whenMouseClicked:
+        text: Kapag mouse ay nag-klik
+      Mikelab_whenYesNoClicked:
+        text: Kapag {KEY} nag-click
+        options:
+          KEY:
+            '"yes"': oo
+            '"no"': walang
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -1159,30 +1488,105 @@ fil:
             '"down"': pababa na arrow
             '"left"': kaliwang arrow
             '"right"': kanang arrow
+      Mikelab_xLocationOf:
+        text: x coordinate ng {SPRITE}
+      Mikelab_yLocationOf:
+        text: y ang mga {SPRITE}
       RyanLab_moveForward:
         text: umabante
       RyanLab_turnLeft:
         text: kumaliwa
       RyanLab_turnRight:
         text: kumanan
+      SpriteLab2Beta_spriteSay:
+        text: sprite {SPRITE} sinasabi {TEXT} para sa {SECONDS} segundo
+      Vector_createSpriteWith:
+        text: |-
+          lumikha ng sprite
+          gawin{STATEMENT}
+      Vector_log:
+        text: mensaheng log {MESSAGE}
+      Vector_positionCenter:
+        text: center
+      Vector_push:
+        text: Itakda ang bilis {VECTOR}
+      Vector_randomLocation:
+        text: random na lokasyon
+      Vector_setColor:
+        text: Itakda ang kulay upang {COLOR}
+      Vector_setSize:
+        text: Itakda ang lapad {WIDTH} taas {HEIGHT}
+      Vector_teleportTo:
+        text: Magtakda ng posisyon {POSITION}
+      Vector_vectorNorth:
+        text: North
+      Vector_where:
+        text: bawat sprite kung saan {PROPERTY} ay {VALUE} gawin{STATEMENT}
+        options:
+          PROPERTY:
+            "'shapeColor'": kulay
+      aalab_addBehaviorForDuration:
+        text: aalab sprite {SPRITE} ay nagsisimula {BEHAVIOR} para sa {SECONDS} segundo
+      aalab_addBehaviorUntilBoolean:
+        text: sprite {SPRITE} ay nagsisimula {BEHAVIOR} hanggang {CONDITION}
+      aalab_createNewSpriteAnonReturn2:
+        text: bagong sprite na pinangalanang{SPRITE_NAME} sa kasuutan{ANIMATION_NAME} sa lokasyon{LOCATION}
       aalab_goToScene:
+        text: pumunta sa eksena {SCENE}
         options:
           SCENE:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_prompt:
+        text: magtanong {MESSAGE}
       aalab_scene:
+        text: tagpo {SCENE}
         options:
           SCENE:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_setupStory:
+        text: kuwento ng set-ap
       aalab_showHideSprite:
+        text: "{OPTION}{SPRITE}"
         options:
           OPTION:
             '"show"': ipakita
             '"hide"': itago
+      binary_drawBin:
+        text: Gumuhit ng binary {BIN}
+      binary_drawBinScreen:
+        text: |-
+          Gumuhit ng screen
+          {B1}
+          {B2}
+          {B3}
+          {B4}
+          {B5}
+          {B6}
+          {B7}
+          {B8}
+      binary_drawDec:
+        text: Gumuhit ng kailangan ang decimal {DEC}
+      binary_drawPixelHere:
+        text: Itakda ang pixel {VAL}
+        options:
+          VAL:
+            '0': 'off'
+            '1': sa
+            '"toggle"': magpalipat-lipat
+      binary_drawString:
+        text: Gumuhit ng string {STR}
+      binary_goTo:
+        text: Tumalon sa {LOC}
+      binary_goToHome:
+        text: Tumalon sa tuktok kaliwa
+      binary_gridSize:
+        text: Magset ng laki ng grid {SIZE}
       binary_move:
+        text: ilipat {DIR}
         options:
           DIR:
             '"up"': paitaas
@@ -1203,19 +1607,93 @@ fil:
             '"s"': s
             '"d"': d
       craft_ifPath:
+        text: |-
+          kung landas {DIR}
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": unahan
+            "'right'": sa tamang
+            "'left'": sa kaliwa
       craft_ifStandingOn:
+        text: |-
+          kung nakatayo sa {TYPE}
+          {STATEMENT}
         options:
           TYPE:
+            "'blueCoralBlock'": Blue coral
+            "'redCoralBlock'": Red coral
             "'sand'": buhangin
+            "'wool_blue'": malalim na tubig
             "'planksOak'": tablang oak
+            "'seaLantern'": dagat parol
       craft_ifStandingOnLimit:
+        text: |-
+          kung nakatayo sa {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": buhangin
+            "'darkPrismarine'": madilim na prismarine
+            "'seaLantern'": dagat parol
+      craft_log:
+        text: mensaheng log {MESSAGE}
       craft_moveForward:
         text: umabante
+      craft_placeBlock:
+        text: lugar {blockType}
+        options:
+          blockType:
+            '"strippedOak"': inalisan ng oak
+            '"strippedDarkOak"': inalisan ng maiitim na oak
+            '"stoneBricks"': bato brick
+            '"mossyStoneBricks"': mossy bato brick
+            '"crackedStoneBricks"': basag bato brick
+            '"decorativeStoneBricks"': pandekorasyon bato brick
+            '"blueCoralBlock"': Blue coral block
+            '"pinkCoralBlock"': pink coral block
+            '"magentaCoralBlock"': Magenta coral block
+            '"redCoralBlock"': Red coral block
+            '"yellowCoralBlock"': dilaw na coral block
+            '"blueDeadCoralBlock"': Blue patay coral block
+            '"pinkDeadCoralBlock"': pink patay coral block
+            '"magentaDeadCoralBlock"': Magenta patay coral block
+            '"readDeadCoralBlock"': Red Dead coral block
+            '"yellowDeadCoralBlock"': dilaw na patay coral block
+            '"prismarine"': prismarine
+            '"darkPrismarine"': madilim na prismarine
+            '"seaLantern"': dagat parol
+            '"packedIce"': puno ng yelo
+            '"blueIce"': Blue yelo
+            '"blackConcrete"': itim kongkreto
+            '"seaGrass"': dagat damo
+            '"kelp"': kelp
+            '"polishedGranite"': makintab na Granite
+      craft_placePrismarine:
+        text: lugar prismarine
       craft_placeTorch:
         text: lagay ng tanglaw
+      craft_repeatUntilConduit:
+        text: |-
+          Ulitin hanggang sa makumpleto ang
+          {STATEMENT}
+      craft_repeatUntilGoal:
+        text: |-
+          Ulitin hanggang sa mithiin
+          {STATEMENT}
+      craft_spawnEntity:
+        text: spawn {ENTITY}
+        options:
+          ENTITY:
+            '"cod"': COD
+            '"dolphin"': dolphin
+            '"salmon"': salmon
+            '"seaTurtle"': dagat pagong
+            '"squid"': pusit
+            '"tropicalFish"': tropikal na isda
+      craft_turn:
+        text: bumaling {DIR}
+        options:
+          DIR:
+            right: right ↻
+            left: kaliwang ↺

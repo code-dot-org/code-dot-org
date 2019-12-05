@@ -747,7 +747,7 @@ id-ID:
       Dance_Party_02: |-
         "Ayo bikin rusa ini menari!
 
-        Tarik keluar <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> blok ke ruang kerja. Hubungkanlah di bawah <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> blok. Penari Anda harus memulai gerakan baru setelah birama keempat.
+        Tarik keluar <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> blok ke ruang kerja. Hubungkanlah di bawah <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> blok. Penari Anda harus memulai gerakan baru setelah birama keempat.
 
         **Birama** digunakan untuk menghitung waktu dalam musik. Dalam tutorial ini, birama memiliki panjang empat ketukan.".
       Dance_Party_03: "_Sekarang kita nge-groove!_ \n\nTambahkan <xml><block type=\"Dancelab_atTimestamp\"><title
@@ -1327,3 +1327,10 @@ id-ID:
         \-Berapa banyak apel yang gajah kumpulkan?
         \-Berapa banyak apel yang kuda nil kumpulkan?
         \-Berapa banyak waktu yang digunakan untuk mengumpulkan semua apel?
+      Dance_Party_extras_mixed_2019: |-
+        # More Buttons
+
+        Tarian ini memungkinkan Anda mengontrol properti penari secara real time saat mereka menari secara otomatis. Coba ubah properti lain saat Anda menekan tombol. Misalnya:
+
+        -   Acak warna penari saat Anda menekan "bawah".
+        -   Tambahkan sekelompok penari dengan tata letak acak saat Anda menekan "spasi".
