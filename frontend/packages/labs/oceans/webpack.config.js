@@ -6,6 +6,8 @@ const commonConfig = {
   devtool: 'eval-cheap-module-source-map',
   resolve: {
     extensions: ['.js', '.jsx'],
+    // Note: Separate aliases are required for aliases to work in unit tests. These should
+    // be added in package.json in the jest configuration.
     alias: {
       '@ml': path.resolve(__dirname, 'src')
     }
