@@ -4,10 +4,10 @@ const {
   fieldInfos,
   MouthExpression,
   BodyShape
-} = require('../../../src/utils/fishData');
-const {generateOcean, filterOcean} = require('../../../src/utils/generateOcean');
-const SVMTrainer = require('../../../src/utils/SVMTrainer');
-import {ClassType} from '../../../src/oceans/constants';
+} = require('@ml/utils/fishData');
+const {generateOcean, filterOcean} = require('@ml/utils/generateOcean');
+const SVMTrainer = require('@ml/utils/SVMTrainer');
+import {ClassType} from '@ml/oceans/constants';
 
 const floatEquals = (a, b) => {
   return Math.abs(a - b) <= 0.0001;
