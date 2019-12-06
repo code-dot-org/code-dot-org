@@ -3,7 +3,7 @@ import {singleton as studioApp} from '../../StudioApp';
 import {stripQuotes} from '../../utils';
 import _ from 'lodash';
 import {EventType} from '@code-dot-org/craft';
-import {BLOCK_NAME_TO_DISPLAY_TEXT} from '../blockI18n';
+import {BLOCK_NAME_TO_DISPLAY_TEXT} from '../utils';
 
 const ENTITY_INPUT_EXTRA_SPACING = 14;
 
@@ -121,9 +121,10 @@ const DIRECTIONS_TO_DISPLAY_TEXT = {
 };
 
 /**
- * Converts an array of keys into a blockly-friendly set of dropdown options,
- * in the form of [[displayText, key], [displayText, key]], grabbing key
- * translations from a set of key -> i18n string mappings.
+ * Reimplement utils.blockTypesToDropdownOptions with support for a wider
+ * variety of displayable things than just blocks.
+ *
+ * @see utils.blockTypesToDropdownOptions
  * @param keysList
  * @returns {Array.<Array.<String>>}
  */

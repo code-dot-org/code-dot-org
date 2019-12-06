@@ -1,5 +1,5 @@
 var i18n = require('../locale');
-import {BLOCK_NAME_TO_DISPLAY_TEXT} from '../blockI18n';
+import {blockTypesToDropdownOptions} from '../utils';
 
 var allBlocks = [
   'bedrock',
@@ -38,13 +38,6 @@ var allBlocks = [
   'tree',
   'wool'
 ];
-
-function keysToDropdownOptions(keysList) {
-  return keysList.map(function(key) {
-    var displayText = BLOCK_NAME_TO_DISPLAY_TEXT[key] || key;
-    return [displayText, key];
-  });
-}
 
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function(blockly, blockInstallOptions) {
@@ -148,7 +141,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.craft_ifBlockAhead = {
     helpUrl: '',
     init: function() {
-      var dropdownOptions = keysToDropdownOptions(
+      var dropdownOptions = blockTypesToDropdownOptions(
         craftBlockOptions.ifBlockOptions || allDropdownBlocks
       );
       var dropdown = new blockly.FieldDropdown(dropdownOptions);
@@ -209,7 +202,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.craft_placeBlock = {
     helpUrl: '',
     init: function() {
-      var dropdownOptions = keysToDropdownOptions(
+      var dropdownOptions = blockTypesToDropdownOptions(
         craftBlockOptions.placeBlockOptions || allDropdownBlocks
       );
       var dropdown = new blockly.FieldDropdown(dropdownOptions);
@@ -274,7 +267,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.craft_placeBlockAhead = {
     helpUrl: '',
     init: function() {
-      var dropdownOptions = keysToDropdownOptions(
+      var dropdownOptions = blockTypesToDropdownOptions(
         craftBlockOptions.placeBlockOptions || allDropdownBlocks
       );
       var dropdown = new blockly.FieldDropdown(dropdownOptions);
