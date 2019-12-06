@@ -10,6 +10,7 @@ class TextMatchDSL < ContentDSL
   def answer(text) @hash[:answers] << text end
   def placeholder(text) @hash[:placeholder] = text end
 
+  # @override
   def self.i18n_fields
     super + %w(answers placeholder)
   end

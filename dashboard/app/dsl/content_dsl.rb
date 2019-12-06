@@ -38,6 +38,7 @@ class ContentDSL < LevelDSL
     @hash[:options][key.to_sym] = args.first
   end
 
+  # @override
   def self.i18n_fields
     super + %w(
       content1
