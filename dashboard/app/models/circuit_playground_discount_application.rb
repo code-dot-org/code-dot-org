@@ -28,10 +28,10 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
 
   enum unit_6_intention: {
     no: 1,
-    yesSpring2020: 2,
-    yesFall2020: 3,
-    yesSpring2021: 4,
     unsure: 5,
+    yesSpring2020: 7,
+    yesFall2020: 8,
+    yesSpring2021: 9
   }
 
   def eligible_unit_6_intention?
