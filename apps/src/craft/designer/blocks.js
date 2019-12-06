@@ -1,4 +1,4 @@
-const i18n = require('./locale');
+const i18n = require('../locale');
 import {singleton as studioApp} from '../../StudioApp';
 import {stripQuotes} from '../../utils';
 import _ from 'lodash';
