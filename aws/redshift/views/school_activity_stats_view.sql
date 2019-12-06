@@ -75,6 +75,7 @@ csf_script_ids as
          ss.frl_eligible_percent,
          ss.urm_percent,
          ss.high_needs,
+         ss.rural,
          ss.students,
          sc.latitude,
          sc.longitude,
@@ -127,7 +128,7 @@ csf_script_ids as
         ON hoc_event.school_id = ss.school_id
     LEFT JOIN applied_to_csd_csp_pd app
         ON app.school_id = ss.school_id
-  GROUP BY 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18
+  GROUP BY 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18, 19
   WITH NO SCHEMA BINDING;
   
 GRANT SELECT ON analysis.school_activity_stats_view TO GROUP reader;
