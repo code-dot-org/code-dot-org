@@ -1,49 +1,5 @@
 var i18n = require('../locale');
-
-var blocksToDisplayText = {
-  bedrock: i18n.blockTypeBedrock(),
-  bricks: i18n.blockTypeBricks(),
-  clay: i18n.blockTypeClay(),
-  oreCoal: i18n.blockTypeOreCoal(),
-  dirtCoarse: i18n.blockTypeDirtCoarse(),
-  cobblestone: i18n.blockTypeCobblestone(),
-  oreDiamond: i18n.blockTypeOreDiamond(),
-  dirt: i18n.blockTypeDirt(),
-  oreEmerald: i18n.blockTypeOreEmerald(),
-  farmlandWet: i18n.blockTypeFarmlandWet(),
-  glass: i18n.blockTypeGlass(),
-  oreGold: i18n.blockTypeOreGold(),
-  grass: i18n.blockTypeGrass(),
-  gravel: i18n.blockTypeGravel(),
-  ice: i18n.blockTypeIce(),
-  snow: i18n.blockTypeSnow(),
-  netherrack: i18n.blockTypeNetherrack(),
-  netherBrick: i18n.blockTypeNetherBrick(),
-  clayHardened: i18n.blockTypeClayHardened(),
-  oreIron: i18n.blockTypeOreIron(),
-  oreLapis: i18n.blockTypeOreLapis(),
-  lava: i18n.blockTypeLava(),
-  logAcacia: i18n.blockTypeLogAcacia(),
-  logBirch: i18n.blockTypeLogBirch(),
-  logJungle: i18n.blockTypeLogJungle(),
-  logOak: i18n.blockTypeLogOak(),
-  logSpruce: i18n.blockTypeLogSpruce(),
-  planksAcacia: i18n.blockTypePlanksAcacia(),
-  planksBirch: i18n.blockTypePlanksBirch(),
-  planksJungle: i18n.blockTypePlanksJungle(),
-  planksOak: i18n.blockTypePlanksOak(),
-  planksSpruce: i18n.blockTypePlanksSpruce(),
-  oreRedstone: i18n.blockTypeOreRedstone(),
-  rail: i18n.blockTypeRail(),
-  sand: i18n.blockTypeSand(),
-  sandstone: i18n.blockTypeSandstone(),
-  stone: i18n.blockTypeStone(),
-  tnt: i18n.blockTypeTnt(),
-  tree: i18n.blockTypeTree(),
-  water: i18n.blockTypeWater(),
-  wool: i18n.blockTypeWool(),
-  '': i18n.blockTypeEmpty()
-};
+import {BLOCK_NAME_TO_DISPLAY_TEXT} from '../blockI18n';
 
 var allBlocks = [
   'bedrock',
@@ -85,7 +41,7 @@ var allBlocks = [
 
 function keysToDropdownOptions(keysList) {
   return keysList.map(function(key) {
-    var displayText = blocksToDisplayText[key] || key;
+    var displayText = BLOCK_NAME_TO_DISPLAY_TEXT[key] || key;
     return [displayText, key];
   });
 }

@@ -3,6 +3,7 @@ import {singleton as studioApp} from '../../StudioApp';
 import {stripQuotes} from '../../utils';
 import _ from 'lodash';
 import {EventType} from '@code-dot-org/craft';
+import {BLOCK_NAME_TO_DISPLAY_TEXT} from '../blockI18n';
 
 const ENTITY_INPUT_EXTRA_SPACING = 14;
 
@@ -13,51 +14,6 @@ const NUMBERS_TO_DISPLAY_TEXT = {
   '4.0': i18n.timeLong(),
   '8.0': i18n.timeVeryLong(),
   random: i18n.timeRandom()
-};
-
-const BLOCKS_TO_DISPLAY_TEXT = {
-  bedrock: i18n.blockTypeBedrock(),
-  bricks: i18n.blockTypeBricks(),
-  clay: i18n.blockTypeClay(),
-  oreCoal: i18n.blockTypeOreCoal(),
-  dirtCoarse: i18n.blockTypeDirtCoarse(),
-  cobblestone: i18n.blockTypeCobblestone(),
-  oreDiamond: i18n.blockTypeOreDiamond(),
-  dirt: i18n.blockTypeDirt(),
-  oreEmerald: i18n.blockTypeOreEmerald(),
-  farmlandWet: i18n.blockTypeFarmlandWet(),
-  glass: i18n.blockTypeGlass(),
-  oreGold: i18n.blockTypeOreGold(),
-  grass: i18n.blockTypeGrass(),
-  gravel: i18n.blockTypeGravel(),
-  ice: i18n.blockTypeIce(),
-  snow: i18n.blockTypeSnow(),
-  netherrack: i18n.blockTypeNetherrack(),
-  netherBrick: i18n.blockTypeNetherBrick(),
-  clayHardened: i18n.blockTypeClayHardened(),
-  oreIron: i18n.blockTypeOreIron(),
-  oreLapis: i18n.blockTypeOreLapis(),
-  lava: i18n.blockTypeLava(),
-  logAcacia: i18n.blockTypeLogAcacia(),
-  logBirch: i18n.blockTypeLogBirch(),
-  logJungle: i18n.blockTypeLogJungle(),
-  logOak: i18n.blockTypeLogOak(),
-  logSpruce: i18n.blockTypeLogSpruce(),
-  planksAcacia: i18n.blockTypePlanksAcacia(),
-  planksBirch: i18n.blockTypePlanksBirch(),
-  planksJungle: i18n.blockTypePlanksJungle(),
-  planksOak: i18n.blockTypePlanksOak(),
-  planksSpruce: i18n.blockTypePlanksSpruce(),
-  oreRedstone: i18n.blockTypeOreRedstone(),
-  rail: i18n.blockTypeRail(),
-  sand: i18n.blockTypeSand(),
-  sandstone: i18n.blockTypeSandstone(),
-  stone: i18n.blockTypeStone(),
-  tnt: i18n.blockTypeTnt(),
-  tree: i18n.blockTypeTree(),
-  water: i18n.blockTypeWater(),
-  wool: i18n.blockTypeWool(),
-  '': i18n.blockTypeEmpty()
 };
 
 const MINIBLOCKS_TO_DISPLAY_TEXT = {
@@ -174,7 +130,7 @@ const DIRECTIONS_TO_DISPLAY_TEXT = {
 function keysToDropdownOptions(keysList) {
   return keysList.map(function(key) {
     var displayText =
-      BLOCKS_TO_DISPLAY_TEXT[key] ||
+      BLOCK_NAME_TO_DISPLAY_TEXT[key] ||
       NUMBERS_TO_DISPLAY_TEXT[key] ||
       DIRECTIONS_TO_DISPLAY_TEXT[key] ||
       ENTITY_TYPES_TO_DISPLAY_TEXT[key] ||
