@@ -16,7 +16,8 @@
     },
     "setupTestFrameworkScriptFile": "<rootDir>/test/setup.js",
     "globals": {
-      "window": {}
+      "window": {},
+      "location": {}
     }
   },
   "scripts": {
