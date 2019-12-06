@@ -22,7 +22,6 @@ A new poster set is available featuring Malala, Stephen Curry, Shakira and more!
 
 {{ promote_new_posters }}
 
-* Want to download smaller versions of these posters? <a href="https://www.dropbox.com/sh/8dqt7p9ioc4hnmu/AABQfTWLTPVh2Kgy32PSvLU3a?dl=0" target="_blank">Download them here</a>.
 * Looking for our posters from previous years? [Find them here]({{ promote/previous_posters_url }})!
 
 <a id="social"></a>
@@ -139,7 +138,7 @@ Computers are everywhere, changing every industry on the planet, but only 45% of
 
 因為《編程一小時》，計算機科學已經登上谷歌，MSN，雅虎和迪斯尼的主頁。 超過 100 個合作夥伴共同支持這項活動。 世界上每個蘋果專賣店都有舉辦過《編程一小時》。 甚至連奧巴馬總統也曾在競選活動中寫下了自己的第一行編程。
 
-That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 3-9).
+這就是 [學校名稱] 有 [X 人數] 名學生都參加史上最大規模的學習活動的原因：電腦科學教育周（12 月 3 日至 9 日）中的程式設計一小時。
 
 我誠邀您參加我們的開幕式，來看看孩子們如何在[日期] 開始他們的編程之旅。
 

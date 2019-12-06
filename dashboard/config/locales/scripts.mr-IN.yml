@@ -1,1 +1,54 @@
---- {}
+---
+mr:
+  data:
+    script:
+      name:
+        events:
+          title: ईव्हेंट्स
+          description: ईव्हेंट्स
+          description_short: ईव्हेंट्स
+        gradeKinder:
+          stages:
+            Events:
+              name: ईव्हेंट्स
+        grade1:
+          stages:
+            Events:
+              name: ईव्हेंट्स
+        k5concepts:
+          stages:
+            Events:
+              name: ईव्हेंट्स
+        dance:
+          stages:
+            Dance Party:
+              name: डांस पार्टी
+          title: डांस पार्टी
+        dance--draft:
+          stages:
+            Dance Party:
+              name: डांस पार्टी
+        dance-draft:
+          stages:
+            Dance Party:
+              name: डांस पार्टी
+        dance-low:
+          stages:
+            Dance Party:
+              name: डांस पार्टी
+        coursed-2019:
+          stages:
+            Dance Party:
+              name: डांस पार्टी
+        express-2019:
+          stages:
+            Dance Party:
+              name: डांस पार्टी
+        dance-2019:
+          stages:
+            Dance Party:
+              name: डांस पार्टी
+        k5-onlinepd-2019:
+          stages:
+            Events:
+              name: ईव्हेंट्स

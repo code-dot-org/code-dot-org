@@ -2654,7 +2654,6 @@ ru:
             Dance Party:
               name: Танцевальная вечеринка
         dance-extras:
-          title: Продолжайте танцевать
           description: Дополнительные идеи для проектов уведут вас за пределы первого часа.
         coursef-2019:
           description_audience: 'Возраст: 9-13'
@@ -3027,6 +3026,8 @@ ru:
           stages:
             Routers and Redundancy:
               name: Маршрутизаторы и резервирование
+            The Need for Addressing:
+              name: Необходимость адресации
         peru-2019:
           stages:
             Introduction:
@@ -3040,7 +3041,7 @@ ru:
             Dance Party:
               name: Танцевальная вечеринка
           description: Создавайте свой собственный танец и делитесь им с друзьями.
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Getting Started:
               name: Приступить к работе
@@ -3077,5 +3078,24 @@ ru:
             For Loops:
               name: Циклы с параметром
         dance-extras-2019:
-          title: Продолжайте танцевать
           description: Дополнительные идеи для проектов уведут вас за пределы первого часа.
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Условные команды
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Краудсорсинг
+            Conditionals with Cards:
+              name: Условные выражения с картами
+            Nested Loops in Bee:
+              name: Вложенные циклы в Пчеле
+            Nested Loops in Artist:
+              name: Вложенные циклы в Художнике
+        time4cs-experiment-unit-2:
+          stages:
+            Nested Loops in Maze:
+              name: Вложенные циклы в Лабиринте
+            Fancy Shapes using Nested Loops:
+              name: Вложенные циклы в Художнике

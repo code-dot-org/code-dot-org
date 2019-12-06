@@ -3,8 +3,18 @@ import ReactDOM from 'react-dom';
 import FishView from './FishView';
 import {Provider} from 'react-redux';
 import {getStore} from '../redux';
-import {initAll} from '@code-dot-org/ml-activities';
+import {setAssetPath} from '@code-dot-org/ml-activities/dist/assetPath';
 import {TestResults} from '@cdo/apps/constants';
+
+/**
+ * On small mobile devices, when in portrait orientation, we show an overlay
+ * image telling the user to rotate their device to landscape mode.  Because
+ * the fish app is able to render at a minimum width of 480px, we set this
+ * width to be somewhat larger.  We will use this width to set the viewport
+ * on the mobile device, and correspondingly to scale up the overlay image to
+ * properly fit on the mobile device for that viewport.
+ */
+const MOBILE_PORTRAIT_WIDTH = 600;
 
 /**
  * An instantiable Fish class
@@ -54,6 +64,15 @@ Fish.prototype.init = function(config) {
     bodyElement.className = bodyElement.className + ' pin_bottom';
     container.className = container.className + ' pin_bottom';
 
+    // Fixes viewport for small screens.  Also usually done by studioApp_.init().
+    var viewport = document.querySelector('meta[name="viewport"]');
+    if (viewport) {
+      this.studioApp_.fixViewportForSpecificWidthForSmallScreens_(
+        viewport,
+        MOBILE_PORTRAIT_WIDTH
+      );
+    }
+
     this.initMLActivities();
   };
 
@@ -67,7 +86,7 @@ Fish.prototype.init = function(config) {
 
   ReactDOM.render(
     <Provider store={getStore()}>
-      <FishView onMount={onMount} />
+      <FishView onMount={onMount} mobilePortraitWidth={MOBILE_PORTRAIT_WIDTH} />
     </Provider>,
     document.getElementById(config.containerId)
   );
@@ -99,12 +118,18 @@ Fish.prototype.initMLActivities = function() {
   const canvas = document.getElementById('activity-canvas');
   const backgroundCanvas = document.getElementById('background-canvas');
 
+  setAssetPath('/blockly/media/skins/fish/');
+
+  const {initAll} = require('@code-dot-org/ml-activities');
+
   // Set initial state for UI elements.
   initAll({
     canvas,
     backgroundCanvas,
     appMode: mode,
-    onContinue
+    onContinue,
+    registerSound: this.studioApp_.registerAudio.bind(this.studioApp_),
+    playSound: this.studioApp_.playAudio.bind(this.studioApp_)
   });
 };
 

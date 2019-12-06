@@ -418,6 +418,36 @@ cs-CZ:
           -   Zajisti, aby se tanečník zobrazil na obrazovce.
 
           _Tato úroveň končí po 4 taktech._
+        challenges: |-
+          **Volitelné výzvy**
+
+          -   Vyber si jinou písničku k přehrávání.
+          -   Přesuň svého tanečníka na nové místo.
+          -   Vytvoř více než jednoho tanečníka.
+      Dance_2019_02:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          -   Tanečník musí provést pohyb.
+          -   Musíš stisknout klávesu se šipkou.
+
+          _Tato úroveň končí po 4 taktech._
+        challenges: |-
+          **Volitelná výzva**
+
+          -   Použij více než jeden blok <xml><block type="Dancelab_whenKey"><title name="KEY"></title></block></xml>.
+      Dance_2019_03:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          -   Oba tanečníci musejí provést pohyb.
+          -   Musíš stisknout klávesy se šipkami.
+
+          _Tato úroveň končí po 4 taktech._
+        challenges: |-
+          **Volitelná výzva**
+
+          -   Zajisti, aby tanečník reagoval na klávesy s levou a pravou šipkou.
       Dance_2019_04:
         validation: |-
           **Jak splním tuto úroveň?**
@@ -432,6 +462,63 @@ cs-CZ:
           -   Po 6 taktech musí tanečník tančit jiný tanec než po 4 taktech.
 
           _Tato úroveň končí po 12 taktech._
+        challenges: |-
+          **Volitelná výzva**
+
+          -   Změň pozadí, kdykoli tanečníci změní pohyby.
+      Dance_2019_06:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          -   Vytvoř jednoho hlavního tanečníka a skupinu doprovodných tanečníků.
+
+          _Tato úroveň končí po 12 taktech._
+        challenges: |-
+          **Volitelná výzva**
+
+          -   Vytvoř několik skupin doprovodných tanečníků.
+      Dance_2019_07:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          -   Změň velikost alespoň jednoho tanečníka poté, co začne hrát hudba.
+
+          _Tato úroveň končí po 6 taktech._
+        challenges: |-
+          **Volitelná výzva**
+
+          -   Experimentuj se změnami různých vlastností (šířka, výška, otočení atd.)
+      Dance_2019_08:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          -   Změň odstín alespoň jednoho tanečníka.
+
+          _Tato úroveň končí po 6 taktech._
+        tint_hint: Všiml(a) sis, že se tanečníci nezmění přesně na vybranou barvu?
+          Je to proto, že **odstíny** míchají vybranou barvu s barvou tanečníka.
+      Dance_2019_09:
+        validation: |-
+          **Jak splním tuto úroveň?**
+
+          -   Stačí zmáčknout tlačítko „Dokončit“!
+        repeat_every_ideas: |-
+          **Chceš nějaké nápady?**
+
+          -   Opakovaně měň velikost tanečníka, aby se zvětšoval.
+          -   Opakovaně měň otočení tanečníka, aby se otáčel.
+          -   Opakovaně měň vodorovnou nebo svislou polohu tanečníka, aby se pohyboval po obrazovce.
+
+          _Můžeš používat i záporná čísla a docílit tak opačného efektu!_
+        next_previous: |-
+          **Volitelná výzva**
+
+          -   Můžeš také použít tento nový blok události k postupnému procházení seznamu tanečních pohybů nastavením pohybu na `(Náhodný)`, `(Další)` nebo `(Předchozí)`.
+              <xml><block type="Dancelab_changeMoveEachLR">
+              <title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;">???</title>
+              <title name="MOVE">"rand"</title>
+              <title name="DIR">-1</title>
+              </block></xml>
       Dance_Party_01:
         validation: |-
           **Jak splním tuto úroveň?**
@@ -470,6 +557,10 @@ cs-CZ:
           **Volitelná výzva**
 
           Změň efekt pozadí v různých bodech během písně tak, že připojíš nový blok pod událostmi <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      Dance_Party_05:
+        validation: "**Jak splním tuto úroveň?** \n\n-   Tvůj tanečník musí do konce
+          úrovně vystřídat alespoň 4 různé taneční pohyby. \n\n_Tato úroveň končí
+          po 12 taktech._"
       Dance_Party_06:
         validation: |-
           **Jak splním tuto úroveň?**
@@ -527,7 +618,7 @@ cs-CZ:
 
           -   Použij blok `když je stisknuta šipka vlevo`, abys přiměl(a) Robota k tanečnímu pohybu, když stiskneš tuto klávesu.
 
-          _Tato úroveň končí po 8 taktech._
+          _Tato úroveň končí po 7 taktech._
       Function intro Ryan:
         Function_intro_Ryan_a: Funkci můžete ve svém programu zavolat vícekrát. Zkuste
           ji zavolat dvakrát, abyste vyřešili tuto hádanku.
@@ -863,3 +954,5 @@ cs-CZ:
           Pokud je hádanka příliš složitá, zkuste budovat svou funkci po částech.
 
           Přidejte pár bloků a vyzkoušejte to. Přidejte další a zkuste to znovu. Brzy se vám to podaří!
+      Dance_Party_extras_alternate_2019:
+        alternate: Alternativní blok je v kategorii „Tanečníci“.

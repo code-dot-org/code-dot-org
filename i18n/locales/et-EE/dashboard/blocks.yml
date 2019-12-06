@@ -2,6 +2,45 @@
 et:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: kõik
+            '"ALIEN"': kõik tulnukad
+            '"BEAR"': kõik karud
+            '"CAT"': kõik kassid
+            '"DOG"': kõik koerad
+            '"DUCK"': kõik pardid
+            '"FROG"': kõik konnad
+            '"MOOSE"': kõik põdrad
+            '"PINEAPPLE"': kõik ananassid
+            '"ROBOT"': kõik robotid
+            '"SHARK"': kõik haid
+            '"UNICORN"': Ükssarvikud
+          MOVE1:
+            MOVES.Roll: Rulli
+            MOVES.ClapHigh: Kõrge plaks
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Topelt jam
+            MOVES.Drop: Kükita
+            MOVES.Floss: Floss
+            MOVES.Fresh: Uus
+            MOVES.Clown: Kloun
+            MOVES.Kick: Täht
+            MOVES.ThisOrThat: Seda või teist
+            MOVES.Rest: Mitte ükski
+          MOVE2:
+            MOVES.Roll: Rulli
+            MOVES.ClapHigh: Kõrge plaks
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Topelt jam
+            MOVES.Drop: Kükita
+            MOVES.Floss: Floss
+            MOVES.Fresh: Uus
+            MOVES.Clown: Kloun
+            MOVES.Kick: Täht
+            MOVES.ThisOrThat: Seda või teist
+            MOVES.Rest: Mitte ükski
       Dancelab_atTimestamp:
         text: pärast {TIMESTAMP} {UNIT}
         options:
@@ -380,6 +419,7 @@ et:
           LAYOUT:
             '"border"': piir
             '"inner"': ruudu sees
+            '"diamond"': teemant
             '"circle"': ring
             '"grid"': ruudustikus
             '"row"': rida
@@ -703,11 +743,6 @@ et:
         options:
           STRING:
             '"diamond"': teemant
-            '"l"': l
-            '"m"': m
-            '"o"': o
-            '"p"': p
-            '"r"': r
             '"s"': s
             '"t"': t
             '"u"': u

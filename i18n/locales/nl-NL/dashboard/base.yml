@@ -527,6 +527,8 @@ nl:
       cta: 'Leer hoe'
     dance:
       title: 'Dansfeest'
+    dance-2019:
+      title: 'Dansfeest'
     hoc:
       title: 'Klassiek doolhof'
       body: 'Probeer de beginselen van de informatica. Miljoenen gingen je voor!'

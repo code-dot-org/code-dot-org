@@ -1530,7 +1530,6 @@ he:
             Dance Party:
               name: מסיבת ריקודים
         dance-extras:
-          title: המשיכו לרקוד
           description: המשיכו מעבר לשעה הראשונה עם רעיונות לפרויקטים נוספים.
         coursef-2019:
           stages:
@@ -1777,7 +1776,7 @@ he:
           stages:
             Dance Party:
               name: מסיבת ריקודים
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Computer Science Fundamentals:
               name: יסודות מדעי המחשב
@@ -1796,5 +1795,16 @@ he:
             For Loops:
               name: בשביל לולאות
         dance-extras-2019:
-          title: המשיכו לרקוד
           description: המשיכו מעבר לשעה הראשונה עם רעיונות לפרויקטים נוספים.
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: תנאים
+        time4cs-control-unit-2:
+          stages:
+            Conditionals with Cards:
+              name: התניות עם כרטיסים
+        time4cs-experiment-unit-2:
+          stages:
+            Nested Loops in Maze:
+              name: לולאות מקוננות במבוך

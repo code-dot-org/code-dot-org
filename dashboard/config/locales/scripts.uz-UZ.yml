@@ -389,7 +389,7 @@ uz:
               name: Funksiyalar
             Sprite Properties:
               name: Sprait hususiyatlari
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Loops:
               name: Sikllar
@@ -399,3 +399,7 @@ uz:
               name: Funksiyalar
             Variables:
               name: O‘zgaruvchilar
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Shart buyruqlari

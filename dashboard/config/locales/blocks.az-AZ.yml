@@ -2,6 +2,14 @@
 az:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: bütün
+          MOVE1:
+            MOVES.Rest: Heç biri
+          MOVE2:
+            MOVES.Rest: Heç biri
       Dancelab_atTimestamp:
         options:
           UNIT:
@@ -140,6 +148,7 @@ az:
             '19': '19'
             '20': '20'
           LAYOUT:
+            '"diamond"': almaz
             '"random"': təsadüfi
       Dancelab_randomColor:
         text: ixtiyari rəng

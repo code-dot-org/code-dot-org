@@ -9,7 +9,8 @@ sl-SI:
         answers:
         - text: Začni s kvadratom<br/>Postavi trikotnik nad kvadrat<br/>Postavi trikotnik
             pod kvadrat
-        - {}
+        - text: Začni s kvadratom<br/>Postavi trikotnik desno od kvadrata<br/>Postavi
+            paralelogram pod kvadrat<br/>Postavi trikotnik desno od paralelograma
         - text: Začni s kvadratom<br/>Postavi paralelogram nad kvadrat<br/>Postavi
             trikotnik desno od paralelograma
         - text: Začni s kvadratom<br/>Postavi trikotnik pod kvadrat<br/>Postavi paralelogram
@@ -40,6 +41,7 @@ sl-SI:
         - {}
       2-3 Binary Match 1:
         title: Ujemanje
+        content2: Uporabi zgornje slike, da povežeš črke na levi s kodo na desni
         questions:
         - text: "<strong>N</strong>"
         - text: "<strong>O</strong>"
@@ -53,7 +55,7 @@ sl-SI:
       2-3 Conditionals Multi 1:
         title: Izbirno vprašanje
         questions:
-        - {}
+        - text: Kateri komplet kart je po pravilniku igre točkovan pravilno?
         answers:
         - {}
         - {}
@@ -102,7 +104,7 @@ sl-SI:
       2-3 Maze Multi 2:
         title: Labirint izbirno vprašanje
         questions:
-        - {}
+        - text: Kateri niz blokov me bo pripeljal do pujsa?
         answers:
         - {}
         - {}
@@ -111,7 +113,7 @@ sl-SI:
       2-3 Relay Programming Multi 1:
         title: Izbirno vprašanje
         questions:
-        - {}
+        - text: Kateri program NE ustvari te slike?
         answers:
         - {}
         - {}
@@ -119,14 +121,15 @@ sl-SI:
       2-3 Relay Programming Multi 2:
         title: Izbirno vprašanje
         questions:
-        - {}
+        - text: Kateri odgovor ne vsebuje napak?
         answers:
         - {}
         - {}
         - {}
       2-3 artist debug multi 1:
+        title: Umetnik Razhroščevanje Izbirno vprašanje 1
         questions:
-        - {}
+        - text: Kaj moraš narediti, da dokončaš krog?
         answers:
         - {}
         - {}
@@ -141,6 +144,7 @@ sl-SI:
         - {}
         - {}
       2-3 artist loops match 1:
+        title: Umetnik Zanke Igra povezovanja
         content2: Poveži zanke z ustrezno obliko
         questions:
         - {}
@@ -209,6 +213,7 @@ sl-SI:
         - {}
         - {}
       2-3 maze match 1:
+        title: Labirint povezovanje
         content1: Poveži ustrezne bloke z rešitvami
         questions:
         - {}
@@ -221,7 +226,7 @@ sl-SI:
       2-3 maze multi 1:
         title: Labirint izbirno vprašanje ena
         questions:
-        - {}
+        - text: Kateri niz blokov je pravilen odgovor?
         answers:
         - {}
         - {}
@@ -255,10 +260,10 @@ sl-SI:
         content1: Vsako od teh vozil je bilo razstavljeno na manjše dele. Poveži vsako
           od vozil s seznamom delov.
         questions:
-        - {}
+        - text: "<h3>Kolesa/strani: 2 <br/> Okna/stran: 0</h3>"
         - text: "<h3>Kolesa/strani: 2 <br/> Okna/stran: 1</h3>"
-        - {}
-        - {}
+        - text: "<h3>Kolesa/stran: 2 <br/> Okna/stran: 6</h3>"
+        - text: "<h3>Kolesa/stran: 3 <br/> Okna/stran: 2</h3>"
         answers:
         - {}
         - {}
@@ -266,6 +271,8 @@ sl-SI:
         - {}
       4-5 Computational Thinking Multi 1:
         title: Izbirno vprašanje
+        content1: Napisani so trije stavki. Kateri od spodnjih primerov je napisan
+          tako, da vsi trije stavki ustrezajo predlogi?
         questions:
         - text: Seattle je veliko mesto.<br/>Eugene je srednje mesto.<br/>Hillview
             je majhno mesto.
@@ -322,12 +329,18 @@ sl-SI:
       4-5 Songwriting Multi 1:
         title: Izbirno vprašanje
         questions:
-        - {}
+        - text: Kateri je največji kos te pesmi, ki ga lahko določite za refren, da
+            se refren ponovi natanko takrat, ko se ga pokliče?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Lou, Lou, skip to my Lou,
+        - text: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou,
+            Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.
+        - text: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou,
+            Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's
+            in the buttermilk, <br/>Shoo, fly, shoo,
+        - text: Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+            <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+            <br/>Skip to my Lou, my darlin.
       4-5 Suncatchers Match 1:
         title: Ujemanje
         content1: Poveži vsak program z besedo, ki ga naredi. Uporabi podane skupine
@@ -380,6 +393,8 @@ sl-SI:
         - {}
       4-5 bee conditionals multi 1:
         title: Čebelica pogoji izbirno vprašanje
+        content2: Vijolična roža ima lahko 3, 2 ali 1 nektar, ampak ne veš, koliko.
+          Kateri blok pravilno preveri in dobi ves nektar iz vijoličnega cveta?
         questions:
         - text: Izberi najboljše bloke.
         answers:
@@ -854,7 +869,7 @@ sl-SI:
       K-1 Digital Footprint Multi 1:
         title: Izbirno vprašanje
         questions:
-        - {}
+        - text: Katera izmed živali ima <strong>najslabši</strong> digitalni odtis?
         answers:
         - {}
         - {}

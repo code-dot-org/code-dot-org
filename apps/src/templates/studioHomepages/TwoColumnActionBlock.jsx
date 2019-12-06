@@ -220,19 +220,44 @@ export class SpecialAnnouncementActionBlock extends Component {
   render() {
     return (
       <TwoColumnActionBlock
-        id="csforgood-announcement"
+        id="danceparty-2019-announcement"
         imageUrl={pegasus(
-          '/shared/images/fill-540x289/teacher-announcement/hoc2019-csforgood.jpg'
+          '/shared/images/fill-540x289/teacher-announcement/hoc2019-danceparty.jpg'
         )}
-        subHeading={i18n.specialAnnouncementHeadingHoc2019CsForGood()}
-        description={i18n.specialAnnouncementDescriptionHoc2019CsForGood()}
+        subHeading={i18n.specialAnnouncementHeadingHoc2019DanceParty()}
+        description={i18n.specialAnnouncementDescriptionHoc2019DanceParty()}
         buttons={[
           {
             url: 'https://hourofcode.com/#join',
             text: i18n.joinUs()
           },
           {
-            url: pegasus('/learn'),
+            url: pegasus('/hourofcode/overview'),
+            text: i18n.tryIt()
+          }
+        ]}
+      />
+    );
+  }
+}
+
+export class OceansAnnouncement extends Component {
+  render() {
+    return (
+      <TwoColumnActionBlock
+        id="oceans-2019-announcement"
+        imageUrl={pegasus(
+          '/shared/images/fill-540x289/teacher-announcement/hoc2019-oceans.png'
+        )}
+        subHeading={i18n.specialAnnouncementHeadingHoc2019Oceans()}
+        description={i18n.specialAnnouncementDescriptionHoc2019Oceans()}
+        buttons={[
+          {
+            url: 'https://hourofcode.com/#join',
+            text: i18n.joinUs()
+          },
+          {
+            url: pegasus('/hourofcode/overview'),
             text: i18n.tryIt()
           }
         ]}

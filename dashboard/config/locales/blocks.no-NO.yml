@@ -2,6 +2,45 @@
 'no':
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: alle
+            '"ALIEN"': alle romvesener
+            '"BEAR"': alle bjørner
+            '"CAT"': alle katter
+            '"DOG"': alle hunder
+            '"DUCK"': alle ender
+            '"FROG"': alle frosker
+            '"MOOSE"': alle elger
+            '"PINEAPPLE"': alle ananaser
+            '"ROBOT"': alle roboter
+            '"SHARK"': alle haier
+            '"UNICORN"': Enhjørninger
+          MOVE1:
+            MOVES.Roll: Kroppsrulling
+            MOVES.ClapHigh: Klapp høyt
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double down
+            MOVES.Drop: Fall
+            MOVES.Floss: Floss
+            MOVES.Fresh: Frisk
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Stjerne
+            MOVES.ThisOrThat: Dette eller det
+            MOVES.Rest: Ingen
+          MOVE2:
+            MOVES.Roll: Kroppsrulling
+            MOVES.ClapHigh: Klapp høyt
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double down
+            MOVES.Drop: Fall
+            MOVES.Floss: Floss
+            MOVES.Fresh: Frisk
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Stjerne
+            MOVES.ThisOrThat: Dette eller det
+            MOVES.Rest: Ingen
       Dancelab_atTimestamp:
         text: etter {TIMESTAMP} {UNIT}
         options:
@@ -402,6 +441,7 @@
           LAYOUT:
             '"border"': kantlinje
             '"inner"': indre kvadrat
+            '"diamond"': diamant
             '"circle"': sirkel
             '"grid"': rutenett
             '"row"': rad
@@ -775,12 +815,6 @@
           STRING:
             '"hearts_colorful"': Hjerter
             '"diamond"': diamant
-            '"l"': l
-            '"m"': m
-            '"n"': n
-            '"o"': o
-            '"p"': p
-            '"r"': r
             '"s"': s
             '"t"': t
             '"u"': u

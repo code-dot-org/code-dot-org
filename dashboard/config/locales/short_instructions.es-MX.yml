@@ -1041,13 +1041,25 @@ es-MX:
       Dance Party Freeplay_2019: "¡Ahora crea tu propia discoteca extraterrestre!"
       Dance Party Predict: "¿Qué crees que ocurrirá al hacer clic en el extraterrestre?"
       Dance Party Predict_2019: "¿Qué crees que ocurrirá al hacer clic en el extraterrestre?"
-      Dance_2019_01: Arrastra el bloque [blockly block] [0] al espacio de trabajo
-        y conéctalo dentro del bloque [blockly block] [1].
+      Dance_2019_01: 'Arrastra el bloque <xml><block type="Dancelab_makeAnonymousDanceSprite"
+        block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;,
+        &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml>
+        al espacio de trabajo y conéctalo dentro del bloque <xml><block type="Dancelab_whenSetup2"
+        next_connection_disabled="true" block-text="setup"></block></xml>.'
       Dance_2019_02: Crea un movimiento de hacer un baile cuando presionas una tecla.
+      Dance_2019_03: ¡Es momento para un baile! Programa a cada bailarín para que
+        se mueva cuando presiones diferentes teclas. ¡Elige tu movimiento favorito
+        para cada bailarín o configúralo en "(Aleatorio)" para algo totalmente impredecible!
+      Dance_2019_04: Haz que tu bailarín comience un nuevo movimiento después de la
+        cuarta medida.
       Dance_2019_05: Haz que el bailarín comience un nuevo movimiento después de 6
         medidas.
-      Dance_2019_08: Utiliza el bloque de 'definir tinte ' para cambiar el color de
-        un bailarín.
+      Dance_2019_06: Establece un grupo de bailarines de respaldo alrededor del bailarín
+        principal en el medio.
+      Dance_2019_07: Cambia el tamaño del grupo de bailarines de respaldo.
+      Dance_2019_08: "¡Prueba con cambiar la tonalidad de tus bailarines (o de todo
+        un grupo)!"
+      Dance_2019_09: "¡Sé creativo con estos nuevos bloques!"
       Dance_2019_10: |-
         ¡Vamos baila! Crea tu propio baile para compartir con tus
         amigos.
@@ -1077,6 +1089,8 @@ es-MX:
       Dance_Party_12: |-
         ¡Vamos baila! Crea tu propio baile para compartir con tus
         amigos.
+      Dance_Party_extras_alternate_2019: ¡Idea y vuelta! (Haz clic en "Más" para obtener
+        más información)
       Dance_Party_extras_battle: Equipos de baile (haz clic en "Más" para obtener
         más detalles)
       Dance_Party_extras_battle_2019: Equipos de baile (haz clic en "Más" para obtener
@@ -1088,6 +1102,8 @@ es-MX:
         más detalles)
       Dance_Party_extras_layout_2019: ¡Vamos a organizarnos! (haz clic en "Más" para
         obtener más detalles)
+      Dance_Party_extras_mixed_2019: Más botones (Haz clic en "Más" para obtener más
+        información)
       Dance_Party_extras_on_beat: Graves, medios y agudos (haz clic en "Más" para
         obtener más detalles)
       Dance_Party_extras_on_beat_2019: Graves, medios y agudos (haz clic en "Más"

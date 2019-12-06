@@ -661,6 +661,29 @@ pt-BR:
           <hr>
 
           ** Agora você tenta! **
+      CSD - Getters and Setters:
+        markdown: |
+          # Getters e Setters
+
+          # Setters
+
+          Setters são comandos que ** configuram ** ou alteram informações. Todos os setters exigem pelo menos uma coisa como entrada: para o que deseja alterar as informações.
+
+          Você já usou `setScreen()` antes. `setScreen()` altera a tela que o usuário está visualizando. A única entrada que `setScreen()` utiliza é a nova tela para a qual mudar.
+
+          Outro exemplo de um setter que você usará é `setText()`.
+
+          <img src="//curriculum.code.org/images/applab/setText.png" style="margin: 20px auto">
+
+          # Getters
+
+          Getters são comandos que ** obtêm ** ou recuperam informações. Os getters geralmente exigem pelo menos uma entrada: o local do qual você deseja recuperar informações.
+
+          `getText ()` é um getter comum que você usará. Pode ser usado para obter o texto de algo como uma entrada de texto.
+
+          <img src="//curriculum.code.org/images/applab/getText.png" style="margin: 20px auto">
+
+          Freqüentemente, quando você usa um getter, é uma boa idéia salvar o resultado em uma variável para que você possa usá-lo em todo o programa.
       CSD Header Size MC:
         title: Verificação rápida de títulos
         content1: Olhe o código abaixo e preveja como os títulos serão mostrados.
@@ -2825,6 +2848,8 @@ pt-BR:
         - text: <img src="https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00
             PM.png" width="200px"
           correct: true
+        markdown: "![](https://images.code.org/134a993836c148f64a7045d489ec58dc-image-1512686800350.45.08
+          PM.png)\n"
       CSD U6 array multi_2018:
         title: Usando Vetores
         questions:
@@ -2840,6 +2865,8 @@ pt-BR:
         - text: <img src="https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00
             PM.png" width="200px"
           correct: true
+        markdown: "![](https://images.code.org/134a993836c148f64a7045d489ec58dc-image-1512686800350.45.08
+          PM.png)\n"
       CSD U6 array multi_2018_2019:
         title: Usando Vetores
         questions:
@@ -2855,6 +2882,8 @@ pt-BR:
         - text: <img src="https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00
             PM.png" width="200px"
           correct: true
+        markdown: "![](https://images.code.org/134a993836c148f64a7045d489ec58dc-image-1512686800350.45.08
+          PM.png)\n"
       CSD U6 circuit smart bike blinker build:
         markdown: |
           # Construa seu pisca-pisca
@@ -3089,6 +3118,52 @@ pt-BR:
 
           * [Fazer uma recomendação] (https://docs.google.com/document/d/1pKeFH1OkWzfg3MFTPCezhK_r4p8xu7QUkPKSf5vV41c/export?format=pdf) - Guia do projeto
           * [Faça uma recomendação] (https://docs.google.com/document/d/1ZdA-VIdyPZLONBFr7ojFeNfHCHYmacbrrphiR31k6Bk/export?format=pdf) - Revisão por pares
+      'CSD: getText vs getNumber':
+        markdown: |
+          # getText vs getNumber
+
+          Os computadores armazenam informações de maneiras diferentes. Duas maneiras diferentes pelas quais um computador armazena informações são sequências e números.
+
+          `getNumber ()` tenta obter o valor do que você está perguntando como um número.
+
+          `getText ()` obtém o valor do que você está perguntando como uma string. As strings são frequentemente marcadas nos seus programas com `" "`. Por exemplo, todos os nomes dos seus IDs são cadeias de caracteres. Você pode usar o `getText ()` para recuperar um número, mas saiba que ele será cercado por `" "`.
+
+          ## Por que isso importa?
+
+          Normalmente, é bom obter tudo como uma string, mas quando você quer fazer operações matemáticas, precisa de números, não de strings. Quando você tenta adicionar duas cadeias, o computador pensa que deseja combinar as duas cadeias em uma cadeia.
+
+          Então, quando você diz "" 2 "+" 2 "`, o computador avalia isso como `" 22 "`.
+
+          Onde, quando você diz `2 + 2` (observe não é `" "`), o computador avalia isso como` 4`.
+      'CSD: setProperty':
+        markdown: "# Como setProperty Funciona\n\n`setProperty` é o código que permite
+          definir propriedades dos elementos da interface do usuário, como cor, largura,
+          tamanho da fonte, etc. Qualquer propriedade que você pode definir no Modo
+          Design também pode ser definida no código usando` setProperty`\n\n<br><br>\n\n<div
+          style=\"column-count: 3; column-gap: 20px; column-rule: 0.5px solid #00adbc;
+          -moz-column-count: 3; width: 100%\">\n\n<p style=\"break-after: always;
+          -moz-column-break-after: always; -webkit-column-break-after: always;\">\n\n<span
+          style=\"color: #00adbc; font-size: 150%\">1.</span> No modo de código, você
+          pode encontrar <code> setProperty </code> na caixa de ferramentas Controles
+          da interface do usuário. <br>\n\n<span style=\"color: #00adbc; font-size:
+          150%\">2.</span>  Escolha o ID do elemento da interface do usuário do qual
+          você deseja alterar uma propriedade\n</p>\n\n<p style=\"break-after: always;
+          -moz-column-break-after: always; -webkit-column-break-after: always;\"></span>\n\n<span
+          style=\"color: #00adbc; font-size: 150%\">3.</span>  O menu suspenso mostra
+          uma lista de propriedades que você pode definir para esse elemento. Corresponde
+          à lista de propriedades que você vê para um elemento no <strong> Modo de
+          design </strong>\n</p>\n\n<p style=\"break-after: always; -moz-column-break-after:
+          always; -webkit-column-break-after: always;\">\n\n\t<span style=\"color:
+          #00adbc; font-size: 150%\">4.</span> O último parâmetro é o valor que você
+          deseja definir para essa propriedade. Estamos interessados ​​na cor de fundo,
+          que possui uma variedade de valores que você pode atribuir.\n</p>\n\n\n</div>\n\n<img
+          src=\"https://images.code.org/b7736bdcbde48f7951ebdc87135dd46c-image-1480536740764.png\"
+          style=\"display: block; margin: auto\"></span>\n\n\n## Como definir a \"cor
+          de fundo\"\n\n<span style=\"color: #00adbc; font-size: 150%\">1.</span>
+          * background-color * é uma string (entre aspas) que representa a cor. Normalmente,
+          você indica a cor como um valor hexadecimal ou como três valores decimais
+          RGB, como * \"rgb (255,0,0)\" *\n\n<img src=\"https://images.code.org/43291bf1c067145771bf88a147d74d26-image-1480538343306.png\"
+          style=\"display: block; margin: auto\">\n"
       CSDU6 Innovation:
         markdown: |+
           # Pesquisa em Inovação
@@ -3261,13 +3336,96 @@ pt-BR:
           todos, escolha o seu favorito e gaste seu tempo trabalhando para que este
           projeto se torne o seu\n"
       Dance_Party_extras_intro_2019:
-        markdown: "#Continue dançando!\n\nPara a parte 2, você criará o seu próprio
-          projeto. Não há quebra-cabeças aqui - em vez disso, há vários projetos que
-          mostram maneiras diferentes de fazer uma festa dançante muito mais complexa.
-          \n\nVocê pode fazer esses níveis em qualquer ordem. Pule para ver como algo
-          foi feito em um nível anterior ou combine conceitos entre os projetos. Experimente
-          todos, escolha o seu favorito e gaste seu tempo trabalhando para que este
-          projeto se torne o seu\n"
+        markdown: |
+          # Continue Dançando!
+
+          Na parte 2, você irá criar seu próprio projeto. Não teremos quebra-cabeças aqui - ao invés disso há uma variedade de projetos que mostram formas diferentes para criar festas dançantes mais complexas.
+
+          Você pode percorrer estes níveis _em qualquer ordem_. Revire tudo à volta para ver como alguma coisa foi feita em um nível anterior, ou combine conceitos entre os projetos. Experimente todos eles, escolha seu favorito, e gaste seu tempo incrementando o projeto para torná-lo seu.
+
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Prosseguir</a>
+
+          <div class="clearfix"></div>
+
+
+          <div style="float: left; margin: 10px">
+          <a href="2">
+          <h2>
+          Para Frente e para Trás
+          </h2>
+
+          <img src="https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="3">
+          <h2>
+          Mais Botões
+          </h2>
+
+          <img src="https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif"></a>
+
+          </div>
+          <div style="float: left; margin: 10px">
+          <a href="4">
+          <h2>
+          Entre em formação
+          </h2>
+
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="5">
+          <h2>
+          Para Onde Eles Foram?
+          </h2>
+
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="6">
+          <h2>
+          Blocos de Dança
+          </h2>
+
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="7">
+          <h2>
+          Notas Semínimas
+          </h2>
+
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="8">
+          <h2>
+          Grave, Médio, Agudo
+          </h2>
+
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="9">
+          <h2>
+          Mais Rápido, Mais Lento
+          </h2>
+
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
+
+          </div>
       Design a Screen for your App_2018:
         markdown: |
           # Simulando seu App
@@ -3751,6 +3909,92 @@ pt-BR:
       Multi-Screen Apps:
         title: título
         content1: descrição aqui
+        markdown: |
+          # Criando Múltiplas Telas
+
+          Você pode imaginar que um aplicativo típico possui um número de "telas" ou visualizações que o usuário atravessa à medida que usa seu applicativo. Abaixo temos um exemplo típico com uma tela de abertura, uma tela que executa o jogo e uma tela de final de jogo.
+
+          <img src="https://images.code.org/27065f81b2bf53dea099a76868f66e8e-image-1477324003598.png" style="display: block; margin: auto">
+
+          ## O que é uma tela, afinal?
+
+          Uma tela é somente um elemento de interface, como qualquer outro em Modo de Desenho. Mas ela possui algumas propriedades especiais:
+
+          1. Uma tela é um elemento de UI que contém outros elementos de UI
+          2. Somente uma tela pode estar visível em um determinado momento
+          3. Somente elementos que "pertencem" à tela serão visíveis quando esta tela estiver ativa,
+          4. **Múltiplas telas, mas somente uma área de codificação**
+           * Mesmo quando seus *elementos de desenho* poderão estar espalhados através de múltiplas telas, seu código não irá se fragmentar desta maneira.
+           * Existe somente uma área de codificação, que irá conter todo o código para o aplicativo.
+
+          ## Como Criar uma Nova Tela
+
+          <div style="float: left; width: 33%">
+          Há duas maneiras para adicionar uma tela à sua aplicação. Primeiro, tenha certeza que você está em <em>Modo de Desenho</em>.
+          <br><br>
+          <span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+          Selecione <em>Nova Tela...</em> do menu de contexto no topo da área de exibição. <strong>Nota:</strong> Você também utiliza este menu de contexto para alternar entre telas em modo de desenho.
+          <br><br>
+          <span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>
+          Ou arraste e solte um elemento UI de Tela da caixa de ferramentas. <strong>Cuidado: </strong>Assim que você soltar o elemento de tela, o aplicativo irá mostrar a você uma <strong>nova tela em branco.</strong> Você pode retornar às outras telas usando o menu de contexto que fica no topo.
+
+          </div>
+
+          ![](https://images.code.org/ed8f45d70a65329597c1623ddd756249-image-1477165123570.png)
+
+          ## Defina as Propriedades da Tela
+
+          <div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 4; width: 100%">
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+          Use este menu de contexto para selecionar a tela em que você quer trabalhar. A lista irá conter os IDs de todas as telas que você criou.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>
+          Clique sobre a área em branco ao fundo para selecionar a tela e definir suas propriedades. </p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>
+          Telas também possuem IDs. Como outros elementos de UI, é uma boa ideia <em>dar às suas telas IDs descritivos e significativos</em>. Isto torna muito mais fácil escrever codigo.</p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span>
+          Se a sua tela estiver repleta com elementos de UI e não houver área em branco para clicá-la e selecioná-la, use este menu de contexto. Ele relaciona todos os elementos de UI que fazem parte da tela, incluindo a tela em si.</p>
+          </div>
+
+          <img src="https://images.code.org/5f8934e6ae0fc2d9dfde8c9a0d93eec2-image-1477249243769.png" style="display: block; margin: auto;">
+
+          <div style="column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 2; width: 50%; float: right">
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span>
+          Clique este botão para tornar a tela a "tela padrão", o que significa que a tela será será mostrada primeiro quando o aplicativo for iniciado.</p>
+
+
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">6.</span>
+          Telas não têm muitas propriedades, mas você pode definir o fundo da tela para uma cor ou uma imagem. Images são esticadas ou comprimidas para que caibam na tela.</p>
+
+          </div>
+          <div style="clear: both">&nbsp;</div>
+
+          ## Usando o comando *defineTela* para alterar telas via código
+
+          O comando `defineTela` altera a tela para exibir a tela que você quiser. Você especifica a tela pelo seu ID.
+
+          <img src="https://images.code.org/005222ed01ade7940963ce149d637286-image-1477168080948.png" style="display: block; margin: auto">
+
+          <div style="column-count: 3; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+          Localize <em>defineTela</em> na caixa de ferramentas dos elementos de UI e arraste-o para a área de codificação.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>
+          Na maioria das vezes você altera a tela em resposta a algum evento gerado pelo usuário. Neste caso <em>defineTela</em> está sendo adicionado a um tratador de evento "clique" para a imagem com Id: <em>smileyFace</em></p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>
+          Selecione o ID da tela que você quer exibir. Neste caso, quanto a tela smiley face é clicada, na tela onde aparece "Olá" nós queremos alterar a tela para que diga "tchau".</p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span>
+          <strong>Ideia chave: Múltiplas Telas - Área de Códificação Única.</strong> Teste é o código que trata o evento "clique" para uma <em>imagem que está localizada em uma tela diferente</em> - a <em>goodbyeScreen</em>. Você não pode ver a image neste momento, ou a tela, porque a tela não está selecionada. Entretanto, o código para ela é colocado aqui.</p>
+
+          </div>
       MyLoopyRoboticFriends-Unplugged:
         markdown: |
           # Meus Amigos Robôs Entrelaçados

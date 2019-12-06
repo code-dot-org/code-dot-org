@@ -5,12 +5,14 @@ zh-TW:
       category:
         csd_category_name: 計算機科學探索（'17-'18）
         csd_2018_category_name: 計算機科學探索（'18-'19）
+        csd_2019_category_name: 電腦科學探索（'19-'20）
         csf_category_name: CS 基本原理
         csf_2018_category_name: 計算機科學基礎（2018）
         csf_international_category_name: 計算機科學基礎國際版
         csf2_draft_category_name: 開發中：課程 A - F
         csp_category_name: "'15-' 16 計算機科學原理"
         csp_2018_category_name: 計算機科學原理（'18-'19）
+        csp_2019_category_name: 電腦科學原理（'19-'20）
         cspexams_category_name: 計算機科學原理應用測驗
         csp17_category_name: CS 原理 ('17-'18)
         full_course_category_name: 完整課程
@@ -509,14 +511,22 @@ zh-TW:
               name: 二進位數
             Bytes and File Sizes:
               name: 位元組（Bytes）與檔案大小
+            Encode a Complex Thing:
+              name: 編碼體驗
             Encoding B&W Images:
               name: 黑白圖片的編碼
             Encoding Color Images:
               name: 彩色圖片的編碼
+            Encoding Numbers in the Real World:
+              name: 現實世界中的數位編碼
             Encoding and Sending Text:
               name: 文字的編碼和發送
+            Lossy Compression and File Formats:
+              name: 有損壓縮與文件格式
             Number Systems:
               name: 數字系統
+            Personal Innovations:
+              name: 個人創新
             Sending Binary Messages:
               name: 二進位訊息的發送
             Sending Binary Messages with the Internet Simulator:
@@ -539,6 +549,8 @@ zh-TW:
               name: PD 簡介
             Teacher Dashboard:
               name: 教師控制台
+            Why Computer Science belongs in Algebra:
+              name: 為什麼電腦科學屬於代數數學
         algPDmiami:
           description: 通過函數式程式設計教代數
           description_short: 通過函數式程式設計教代數
@@ -608,8 +620,14 @@ zh-TW:
               name: 計算機式思維及為 K-12 科學教育設計的框架
             Introduction to PD:
               name: PD 簡介
+            Introduction to StarLogo Nova:
+              name: StarLogo Nova簡介
             The Tutorial:
               name: 教程
+            Using Computer Models in Science:
+              name: 在科學中使用電腦模型
+            Using Models in the Classroom:
+              name: 在課堂上使用模型
             What to Expect:
               name: 有什麼期待
         rbo-reference:
@@ -704,6 +722,8 @@ zh-TW:
               name: PD 簡介
             Teacher Dashboard:
               name: 教師控制台
+            Why Computer Science belongs in Algebra:
+              name: 為什麼電腦科學屬於代數數學
         algebraPD-iZone:
           description: 階段 1 線上介紹
           description_short: 階段 1 線上介紹
@@ -714,6 +734,8 @@ zh-TW:
               name: PD 簡介
             Teacher Dashboard:
               name: 教師控制台
+            Why Computer Science belongs in Algebra:
+              name: 為什麼電腦科學屬於代數數學
         sciencePD-NexTech:
           title: Science PD 裡的計算機科學
           description: 階段 1 線上介紹
@@ -726,8 +748,14 @@ zh-TW:
               name: 計算機式思維及為 K-12 科學教育設計的框架
             Introduction to PD:
               name: PD 簡介
+            Introduction to StarLogo Nova:
+              name: StarLogo Nova簡介
             The Tutorial:
               name: 教程
+            Using Computer Models in Science:
+              name: 在科學中使用電腦模型
+            Using Models in the Classroom:
+              name: 在課堂上使用模型
             What to Expect:
               name: 有什麼期待
         sciencePD-iZone:
@@ -741,8 +769,14 @@ zh-TW:
               name: 計算機式思維及為 K-12 科學教育設計的框架
             Introduction to PD:
               name: PD 簡介
+            Introduction to StarLogo Nova:
+              name: StarLogo Nova簡介
             The Tutorial:
               name: 教程
+            Using Computer Models in Science:
+              name: 在科學中使用電腦模型
+            Using Models in the Classroom:
+              name: 在課堂上使用模型
             What to Expect:
               name: 有什麼期待
         sciencePD2:
@@ -1205,6 +1239,10 @@ zh-TW:
               name: 數據的彙編
             Creating Javascript Objects:
               name: Javascript 物件的創建
+            Data, Security, and Privacy:
+              name: 數據、安全性與隱私
+            Designing Data Collection:
+              name: 設計數據收集
             Discover a Data Story:
               name: 發現數據故事
             How is Data Collected?:
@@ -1505,6 +1543,8 @@ zh-TW:
               name: PD 簡介
             Teacher Dashboard:
               name: 教師控制台
+            Why Computer Science belongs in Algebra:
+              name: 為什麼電腦科學屬於代數數學
         algebraPD3c:
           stages:
             Getting Started:
@@ -1521,6 +1561,8 @@ zh-TW:
               name: 計算機科學原理課前問卷調查
             Number Systems:
               name: 數字系統
+            Personal Innovations:
+              name: 個人創新
             Sending Binary Messages:
               name: 二進位訊息的發送
             Sending Binary Messages with the Internet Simulator:
@@ -1549,6 +1591,8 @@ zh-TW:
               name: 彩色圖片的編碼
             Intro to Data:
               name: 數據的介紹
+            Lossy Compression and File Formats:
+              name: 有損壓縮與文件格式
             Text Compression:
               name: 文字壓縮
             Unit 2 Chapter 1 Assessment:
@@ -1668,8 +1712,14 @@ zh-TW:
               name: 計算機式思維及為 K-12 科學教育設計的框架
             Introduction to PD:
               name: PD 簡介
+            Introduction to StarLogo Nova:
+              name: StarLogo Nova簡介
             The Tutorial:
               name: 教程
+            Using Computer Models in Science:
+              name: 在科學中使用電腦模型
+            Using Models in the Classroom:
+              name: 在課堂上使用模型
             What to Expect:
               name: 有什麼期待
         TEMP CSD Unit 3:
@@ -1695,6 +1745,8 @@ zh-TW:
               name: PD 簡介
             Teacher Dashboard:
               name: 教師控制台
+            Why Computer Science belongs in Algebra:
+              name: 為什麼電腦科學屬於代數數學
         sciencePD1:
           description_short: 階段 1 線上介紹
           stages:
@@ -1704,8 +1756,14 @@ zh-TW:
               name: 計算機式思維及為 K-12 科學教育設計的框架
             Introduction to PD:
               name: PD 簡介
+            Introduction to StarLogo Nova:
+              name: StarLogo Nova簡介
             The Tutorial:
               name: 教程
+            Using Computer Models in Science:
+              name: 在科學中使用電腦模型
+            Using Models in the Classroom:
+              name: 在課堂上使用模型
             What to Expect:
               name: 有什麼期待
         cspoptional:
@@ -1828,6 +1886,8 @@ zh-TW:
               name: 站台上的文本
             Website Design:
               name: 網站設計
+            Intellectual Property:
+              name: 知識產權
             Box Model and Page Layout:
               name: 盒模型和頁面版型
             Publishing a Website:
@@ -1866,12 +1926,20 @@ zh-TW:
           stages:
             Discovery Learning:
               name: 發現學習
+            Group Work and Peer Learning:
+              name: 小組工作與同伴學習
+            Introduction to Teachercon:
+              name: Teachercon簡介
             Lesson 2,2:
               name: '教程 2.2: 文字壓縮'
+            Measuring Student Learning:
+              name: 衡量學生的學習
         kinderTest:
           stages:
             'Bee: Conditionals':
               name: 蜜蜂 - 條件判斷（Conditionals）
+            Kindergarten Stage 1:
+              name: 幼稚園第一階段
         gradeKinder:
           description_audience: 年齡 5-18
           stages:
@@ -2063,6 +2131,12 @@ zh-TW:
               name: 農夫 - 條件迴圈（While Loops）
             Unplugged Conditionals with Loops:
               name: 不插電活動 - 條件判斷帶迴圈
+        alltheplcthings:
+          stages:
+            Group Work and Peer Learning:
+              name: 小組工作與同伴學習
+            Introduction to Teachercon:
+              name: Teachercon簡介
         csd3-2017:
           title: CSD 單元 3 -互動式遊戲和動畫
           description_short: Game Lab 編程環境介紹
@@ -2225,8 +2299,12 @@ zh-TW:
           stages:
             Unit 1 Overview:
               name: 單元 1 概覽
+            Group Work and Peer Learning:
+              name: 小組工作與同伴學習
             Discovery Learning:
               name: 發現學習
+            Measuring Student Learning:
+              name: 衡量學生的學習
             'Lessons 4-6: Encoding and Sending Numbers':
               name: 課程  4 - 6：編碼和發送數字訊息
             'Lessons 4 - 6: Encoding and Sending Numbers':
@@ -2249,8 +2327,12 @@ zh-TW:
               name: 單元 1 概覽
             'Lessons 4 - 6: Encoding and Sending Numbers':
               name: 課程  4 - 6：編碼和發送數字訊息
+            Group Work and Peer Learning:
+              name: 小組工作與同伴學習
             Discovery Learning:
               name: 發現學習
+            Measuring Student Learning:
+              name: 衡量學生的學習
         basketball:
           title: 選擇你的球隊，來場籃球比賽
           description_short: 選擇你的球隊，來場籃球比賽
@@ -2304,6 +2386,8 @@ zh-TW:
               name: 網站的發佈
             Sources and Search Engines:
               name: 來源和搜尋引擎
+            Intellectual Property:
+              name: 知識產權
             'Personal Website: Finalizing Site':
               name: 個人網站：完成站台
             'Project: Personal Portfolio Website':
@@ -2326,8 +2410,12 @@ zh-TW:
               name: 單元 2 概覽
             'Lessons 1 - 2: Bytes, File Sizes, and Text Compression':
               name: '教程 1-2: 位元組、檔案大小和文字壓縮'
+            Group Work and Peer Learning:
+              name: 小組工作與同伴學習
             Discovery Learning:
               name: 發現學習
+            Measuring Student Learning:
+              name: 衡量學生的學習
         csd4-2017:
           stages:
             Analysis of Design:
@@ -2577,8 +2665,12 @@ zh-TW:
           stages:
             Unit 3 Overview:
               name: 單元 5 概覽
+            Group Work and Peer Learning:
+              name: 小組工作與同伴學習
             Discovery Learning:
               name: 發現學習
+            Measuring Student Learning:
+              name: 衡量學生的學習
         csdgraveyard:
           stages:
             new stage:
@@ -2591,8 +2683,12 @@ zh-TW:
           stages:
             Unit 3 Overview:
               name: 單元 5 概覽
+            Group Work and Peer Learning:
+              name: 小組工作與同伴學習
             Discovery Learning:
               name: 發現學習
+            Measuring Student Learning:
+              name: 衡量學生的學習
             Unit 4 Overview:
               name: 單元 4 概覽
         sciencepd4:
@@ -2644,8 +2740,12 @@ zh-TW:
               name: 事件驅動的程式設計
             Variables and Strings:
               name: 變數與字串
+            Group Work and Peer Learning:
+              name: 小組工作與同伴學習
             Discovery Learning:
               name: 發現學習
+            Measuring Student Learning:
+              name: 衡量學生的學習
         csp6-support:
           title: 單元 6 線上專業學習課程
           description: 即將推出：在 2 月中旬，這個頁面會有一系列提供給教師準備 AP 考試的資源。
@@ -3020,6 +3120,8 @@ zh-TW:
               name: 數位足跡
             Images in HTML:
               name: 在 HTML 中的圖像
+            Intellectual Property:
+              name: 知識產權
             Images:
               name: 圖像
             Clean Code and Debugging:
@@ -3135,6 +3237,8 @@ zh-TW:
               name: 網站的發佈
             Sources and Search Engines:
               name: 來源和搜尋引擎
+            Intellectual Property:
+              name: 知識產權
             'Project: Personal Portfolio Website':
               name: 專案：個人作品網站
           description_short: Web 開發
@@ -3208,6 +3312,7 @@ zh-TW:
               name: 和 BB-8 與 Rey 一起寫程式
           title: 課程 B
           assignment_family_title: 課程 B
+          description_audience: 年齡：5-8 歲
           description_short: 為學前兒童準備的計算機科學介紹（類似課程 A，但對年紀大些的學童提供了更多變化）
           description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
         coursec-2017:
@@ -3226,6 +3331,7 @@ zh-TW:
               name: 藝術家中的迴圈（Loops）
           title: 課程 C
           assignment_family_title: 課程 C
+          description_audience: 年齡：6-10 歲
         coursed-2017:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -3241,6 +3347,7 @@ zh-TW:
               name: 和收藏家學除錯（Debug）
           title: 課程 D
           assignment_family_title: 課程 D
+          description_audience: 年齡：7-11 歲
           description_short: 快速地導覽在課程 C 的概念，進一步的介紹演算法、巢狀迴圈、條件判斷式…等的使用。
           description: 學習新的編程概念，包括演算法、巢狀迴圈、當迴圈、條件以及事件。在創建和分享自己的遊戲或故事之前，會先做個數位公民的介紹。
         coursee-2017:
@@ -3281,11 +3388,13 @@ zh-TW:
               name: 巢狀迴圈
           title: 課程 E
           assignment_family_title: 課程 E
+          description_audience: 年齡：8-12 歲
           description_short: 快速地導覽在課程 C 和課程 D 的概念，進一步的介紹函式的使用。
         coursef-2017:
           stages:
             'Algorithms: Tangrams':
               name: '演算法: 七巧板'
+              description_student: 在此將學習使用稱之為七巧板的謎題的算法！
             The Power of Words:
               name: 數位公民 - 語言的力量
             Ice Age Play Lab:
@@ -3311,6 +3420,7 @@ zh-TW:
               name: 藝術家中的迴圈（Loops）
           title: 課程 F
           assignment_family_title: 課程 F
+          description_audience: 年齡：9-13 歲
           description_short: 學習計算機科學的基礎概念，並創建自己的藝術、故事、遊戲作品。
         csdnovice:
           stages:
@@ -3452,6 +3562,7 @@ zh-TW:
               name: 巢狀迴圈
           title: 速學課程
           assignment_family_title: 速學課程
+          description_audience: 年齡：9-18 歲
           description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
         pre-express-2017:
           stages:
@@ -3770,6 +3881,8 @@ zh-TW:
               name: 問題解決：個人創新
             'Data Science: Problem Solving with Big Data':
               name: 資料科學：用大數據解決問題
+            Personal Innovations:
+              name: 個人創新
             What is a Computer?:
               name: 電腦是什麼？
             Problem Solving with Big Data:
@@ -4054,6 +4167,7 @@ zh-TW:
           title: 速學課程
           assignment_family_title: 速學課程
           description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
+          description_audience: 年齡：9-18 歲
           stages:
             'Algorithms: Graph Paper Programming':
               name: 方格紙編程
@@ -4087,8 +4201,12 @@ zh-TW:
               name: 與憤怒鳥一起編程
             Programming in Collector:
               name: 和 Laurel 一起收集寶石
+            Programming in Artist:
+              name: 用代碼創作藝術
             'Loops: Getting Loopy':
               name: 學習迴圈
+            Copyright and Creativity:
+              name: 版權與創意
             'Concept Practice with Minecraft ':
               name: 與 Minecraft 一起展望未來
             Nested Loops in Bee:
@@ -4123,6 +4241,7 @@ zh-TW:
           title: 課程 B（2018）
           assignment_family_title: 課程 B
           description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
+          description_audience: 年齡：5-8 歲
           stages:
             'Debugging: Unspotted Bugs':
               name: 除錯（Debug）- 沒被發現的蟲蟲
@@ -4148,6 +4267,7 @@ zh-TW:
           title: 課程 D（2018）
           assignment_family_title: 課程 D
           description: 學生學習巢狀迴圈、當迴圈、條件與事件，除了編碼，學生還會學到什麼是數位公民。
+          description_audience: 年齡：7-11 歲
           stages:
             'Algorithms: Graph Paper Programming':
               name: 方格紙編程
@@ -4187,18 +4307,36 @@ zh-TW:
               name: 行為的用法
             Virtual Pet - Behaviors:
               name: 虛擬寵物 - 行為
+            Fish Tank:
+              name: 魚缸
+            Virtual Pet - Forever:
+              name: 虛擬寵物 - Forever
             Alien Dance Party - Input:
               name: 外星人舞蹈派對 - 輸入（Input）
+            Virtual Pet - Interactions:
+              name: 虛擬寵物 — 互動
+        petgame:
+          stages:
+            pet game:
+              name: 寵物遊戲
+        csp-exam:
+          title: 電腦科學原理AP測驗準備
+          description_short: 電腦科學原理AP測驗準備
         coursec-2018:
           title: 課程 C（2018）
           assignment_family_title: 課程 C
+          description_audience: 年齡：6-10 歲
           stages:
             Building a Foundation:
               name: 打好基礎
             Programming in Maze:
               name: 與憤怒鳥一起編程
+            'Real-life Algorithms: Paper Planes':
+              name: 紙飛機
             Programming in Collector:
               name: 和 Laurel 一起收集寶石
+            Programming in Artist:
+              name: 用代碼創作藝術
             'Loops: Getting Loopy':
               name: 學習迴圈
             'Events: The Big Event':
@@ -4235,11 +4373,14 @@ zh-TW:
         coursee-2018:
           title: 課程 E（2018）
           assignment_family_title: 課程 E
+          description_audience: 年齡：8-12 歲
           stages:
             'Programming: My Robotic Friends':
               name: 我的機器人朋友
             Building a Foundation:
               name: 打好基礎
+            Programming in Artist:
+              name: 用代碼創作藝術
             Nested Loops:
               name: 迷宮裡的巢狀迴圈（Nested Loops）
             Introduction:
@@ -4271,15 +4412,19 @@ zh-TW:
           title: 課程 F（2018）
           assignment_family_title: 課程 F
           description_short: 學習計算機科學的基礎概念，並創建自己的藝術、故事、遊戲作品。
+          description_audience: 年齡：9-13 歲
           stages:
             'Programming: My Robotic Friends':
               name: 我的機器人朋友
             Building a Foundation:
               name: 打好基礎
+            Programming in Artist:
+              name: 用代碼創作藝術
             Nested Loops in Bee/Zombie:
               name: 迷宮裡的巢狀迴圈（Nested Loops）
             'Algorithms: Tangrams':
               name: '演算法: 七巧板'
+              description_student: 在此將學習使用稱之為七巧板的謎題的算法！
             Introduction:
               name: 介紹
             Ice Age Play Lab:
@@ -4315,6 +4460,8 @@ zh-TW:
           stages:
             CS Principles Pre-survey:
               name: 計算機科學原理課前問卷調查
+            Personal Innovations:
+              name: 個人創新
             Sending Binary Messages:
               name: 二進位訊息的發送
             Sending Binary Messages with the Internet Simulator:
@@ -4413,6 +4560,8 @@ zh-TW:
               name: 黑白圖片的編碼
             Encoding Color Images:
               name: 彩色圖片的編碼
+            Lossy Compression and File Formats:
+              name: 有損壓縮與文件格式
             Unit 2 Chapter 1 Assessment:
               name: 單元 2 第 1 節 評量
             Intro to Data:
@@ -4516,6 +4665,8 @@ zh-TW:
           stages:
             Alien Dance Party - Input:
               name: 外星人舞蹈派對 - 輸入（Input）
+            Virtual Pet - Interactions:
+              name: 虛擬寵物 — 互動
         csd1-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -4730,6 +4881,8 @@ zh-TW:
           stages:
             Alien Dance Party - Input:
               name: 外星人舞蹈派對 - 輸入（Input）
+            Virtual Pet - Interactions:
+              name: 虛擬寵物 — 互動
         fit-test:
           stages:
             Deeper Learning Overview:
@@ -4738,10 +4891,14 @@ zh-TW:
           stages:
             Alien Dance Party - Input:
               name: 外星人舞蹈派對 - 輸入（Input）
+            Virtual Pet - Interactions:
+              name: 虛擬寵物 — 互動
         spritelab-ee:
           stages:
             Alien Dance Party - Input:
               name: 外星人舞蹈派對 - 輸入（Input）
+            Virtual Pet - Interactions:
+              name: 虛擬寵物 — 互動
         frozen-2018:
           stages:
             Artist:
@@ -4795,11 +4952,11 @@ zh-TW:
           stages:
             Dance Party - Go Further:
               name: 舞蹈派對 - 深入學習
-          title: 繼續跳舞
           description: 在一小時之後嘗試更多奇思妙想。
         coursef-2019:
           title: 課程 F（2019）
           description_short: 學習計算機科學的基礎概念，並創建自己的藝術、故事、遊戲作品。
+          description_audience: 年齡：9-13 歲
           stages:
             Building a Foundation:
               name: 打好基礎
@@ -4833,6 +4990,8 @@ zh-TW:
               name: Sprite Lab 中的行為
             Editing Behaviors:
               name: 行為的修改
+            Copyright and Creativity:
+              name: 版權與創意
             Internet:
               name: 網際網路
             Crowdsourcing:
@@ -4845,6 +5004,7 @@ zh-TW:
         coursed-2019:
           title: 課程 D（2019）
           description: 學生學習巢狀迴圈、當迴圈、條件與事件，除了編碼，學生還會學到什麼是數位公民。
+          description_audience: 年齡：7-11 歲
           stages:
             'Algorithms: Graph Paper Programming':
               name: 方格紙編程
@@ -4873,6 +5033,7 @@ zh-TW:
               name: 舞蹈派對
         coursee-2019:
           title: 課程 E（2019）
+          description_audience: 年齡：8-12 歲
           stages:
             Building a Foundation:
               name: 打好基礎
@@ -4889,6 +5050,8 @@ zh-TW:
               description_teacher: 在計算機科學世界中，函式（function）可以說是最壯觀的建築物之一。函式，有時候稱為程序，是在龐大的程式中，可以被不斷重複利用的一些程式小片段。這個課程將會幫助學生直觀的了解，把這麼多零碎的代碼組合成函式是非常有用的。
             Functions in Minecraft:
               name: Minecraft 中的函式
+            Copyright and Creativity:
+              name: 版權與創意
             Alien Dance Party with Sprite Lab:
               name: 用 Sprite Lab 創作外星人舞蹈派對
             Explore Project Ideas:
@@ -4916,6 +5079,7 @@ zh-TW:
         express-2019:
           title: 速學課程（2017）
           description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
+          description_audience: 年齡：9-18 歲
           stages:
             Programming in Maze:
               name: 與憤怒鳥一起編程
@@ -4923,8 +5087,12 @@ zh-TW:
               name: 接力編程
             Programming in Collector:
               name: 和 Laurel 一起收集寶石
+            Programming in Artist:
+              name: 用代碼創作藝術
             'Loops: Getting Loopy':
               name: 迴圈：學習迴圈
+            Copyright and Creativity:
+              name: 版權與創意
             'Concept Practice with Minecraft ':
               name: 與 Minecraft 一起實踐所學
             Nested Loops in Bee:
@@ -4984,6 +5152,12 @@ zh-TW:
               name: 'null'
             Deeper Learning Overview:
               name: 深度學習概覽
+            Part 1:
+              name: 第一部分
+            Part 2:
+              name: 第二部分
+            part 3:
+              name: 第三部分
         dance-extras-gallery:
           stages:
             Dance Party - Go Further:
@@ -4992,6 +5166,7 @@ zh-TW:
           description: 在一小時之後嘗試更多奇思妙想。
         coursec-2019:
           title: 課程 C（2019）
+          description_audience: 年齡：6-10 歲
           stages:
             Programming in Maze:
               name: 與憤怒鳥一起編程
@@ -4999,6 +5174,8 @@ zh-TW:
               name: 生活中的演算法 - 紙飛機
             Programming in Collector:
               name: 和 Laurel 一起收集寶石
+            Programming in Artist:
+              name: 用代碼創作藝術
             'Loops: Getting Loopy':
               name: 迴圈：學習迴圈
             Loops in Artist:
@@ -5047,6 +5224,7 @@ zh-TW:
         courseb-2019:
           title: 課程 B（2019）
           description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
+          description_audience: 年齡：5-8 歲
           stages:
             Move It, Move It:
               name: 移動它，移動它
@@ -5056,6 +5234,8 @@ zh-TW:
               name: 你的數位足跡
             Programming in Ice Age:
               name: 在冰河歷險紀裡編程
+            Copyright and Creativity:
+              name: 版權與創意
             Programming with Rey and BB-8:
               name: 和 BB-8 與 Rey 一起寫程式
             Loops in Ice Age:
@@ -5089,6 +5269,8 @@ zh-TW:
               name: 你的數位足跡
             Programming in Ice Age:
               name: 在冰河歷險紀裡編程
+            Copyright and Creativity:
+              name: 版權與創意
             Programming with Rey and BB-8:
               name: 和 BB-8 與 Rey 一起寫程式
             Loops in Collector:
@@ -5258,6 +5440,8 @@ zh-TW:
           stages:
             CS Principles Pre-survey:
               name: 計算機科學原理課前問卷調查
+            Personal Innovations:
+              name: 個人創新
             Sending Binary Messages:
               name: 二進位訊息的發送
             Sending Binary Messages with the Internet Simulator:
@@ -5381,6 +5565,8 @@ zh-TW:
               name: 二進位訊息的發送
             Sending Binary Messages with the Internet Simulator:
               name: 用網路模擬器發送二進位訊息
+            Intellectual Property:
+              name: 知識產權
             CS Principles Pre-survey:
               name: 計算機科學原理課前問卷調查
             Binary Numbers:
@@ -5413,6 +5599,7 @@ zh-TW:
               name: 創建一個星際大戰遊戲！
             Functions in Minecraft:
               name: Minecraft 中的函式
+          description_audience: 四年級
         csp1-pilot-staging:
           stages:
             Variables Make:
@@ -5550,8 +5737,26 @@ zh-TW:
               name: 透過 CSS 修改元素樣式
             Sources and Search Engines:
               name: 來源和搜尋引擎
+            Intellectual Property:
+              name: 知識產權
+            Project - Building a Webpage:
+              name: 專案 — 製作網頁
+            Purpose of a  Websites:
+              name: 網站的目的
             Images:
               name: 圖像
+            Exploring Web Pages:
+              name: 瀏覽網頁
+            Searching and Research:
+              name: 搜索與研究
+            Sources and Research:
+              name: 資料來源與研究
+            Linking Pages:
+              name: 鏈接頁面
+            Planning a Multi-page Website:
+              name: 規劃多頁網站
+            Linking and Navigation:
+              name: 鏈接與導航
         csd3-pilot:
           title: CSD 單元 3 -互動式遊戲和動畫
           description_short: Game Lab 編程環境介紹
@@ -5675,7 +5880,7 @@ zh-TW:
             Dance Party:
               name: 舞蹈派對
           description: 寫個你自己的舞蹈程式，並分享給朋友們！
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Getting Started:
               name: 新手上路
@@ -5712,7 +5917,6 @@ zh-TW:
             For Loops:
               name: 計數迴圈（For Loops）
         dance-extras-2019:
-          title: 繼續跳舞
           description: 在一小時之後嘗試更多奇思妙想。
           stages:
             Dance Party - Go Further:
@@ -5729,3 +5933,31 @@ zh-TW:
               name: 變數的建立
             Functions Make:
               name: 函式的建立
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: 條件判斷（Conditionals）
+            Alien Dance Party with Sprite Lab:
+              name: 用 Sprite Lab 創作外星人舞蹈派對
+            Access Ability:
+              name: 輔助功能
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: 群眾外包（Crowdsourcing）
+            Conditionals with Cards:
+              name: 用撲克牌學習條件判斷（Conditionals）
+            Nested Loops in Bee:
+              name: 蜜蜂裡的巢狀迴圈（Nested Loops）
+            Nested Loops in Artist:
+              name: 小藝術家裡的巢狀迴圈（Nested Loops）
+            Functions in Minecraft:
+              name: Minecraft 中的函式
+        time4cs-experiment-unit-2:
+          stages:
+            Nested Loops in Maze:
+              name: 迷宮裡的巢狀迴圈（Nested Loops）
+            Fancy Shapes using Nested Loops:
+              name: 小藝術家裡的巢狀迴圈（Nested Loops）
+            Functions in Minecraft:
+              name: Minecraft 中的函式

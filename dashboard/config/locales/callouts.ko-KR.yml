@@ -87,8 +87,15 @@ ko-KR:
       CourseD_Dance_Party_11:
         dance_callout_11_a: 새 블록!
         dance_callout_11_b: 새 블록!
+      Dance_2019_01:
+        dance_callout_01: 이 블록을 프로그램에 추가하세요!
+      Dance_2019_02:
+        dance_callout_11_a: 이 블록을 프로그램에 추가합니다.
+        arrow_buttons: 댄서를 조종하려면 화살표 단추를 누르세요.
       Dance_2019_04:
         dance_callout_02: 이 블록을 프로그램에 추가하세요!
+      Dance_2019_05:
+        dance_callout_05: 프로그램에 새로운 이벤트를 추가하십시오.
       Dance_2019_06:
         dance_party_11_5_groups: 새 블록!
       Dance_2019_07:
@@ -219,3 +226,5 @@ ko-KR:
         replace_questions: '"???" 부분에 수를 입력하면 됩니다.'
       frozen square snowflake:
         replace_questions: '"???" 부분에 수를 입력하면 됩니다.'
+      Dance_Party_11_5:
+        dance_party_11_5_groups: "“모든 오리” 블록은 여기에서 찾으세요"

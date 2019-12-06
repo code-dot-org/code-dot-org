@@ -9,7 +9,7 @@ exports.addReadyListener = function(callback) {
 exports.getTouchEventName = function(eventName) {
   var isIE11Touch = window.navigator.pointerEnabled;
   var isIE10Touch = window.navigator.msPointerEnabled;
-  var isStandardTouch = 'ontouchend' in document.documentElement;
+  var isStandardTouch = !(isIE11Touch || isIE10Touch);
 
   var key;
   if (isIE11Touch) {
@@ -66,7 +66,29 @@ var addEvent = function(
       if (suppressTouchDefault) {
         e.preventDefault();
       }
-      unbindEvent('click');
+
+      // ---- Workaround for IE 11 (2019) ----
+      // Background: PreventDefault is not recognized in IE. In IE 11, a click
+      // event will fire the following events:
+      // MSPointerDown -> pointerdown -> MSPointerUp -> pointerup -> click
+      // This exact same sequence of events happens whether the event originated
+      // from a touch, a trackpad, or a mouse. mousedown, mouseup, and mousemove
+      // events behave similarly. Because of this behavior, we can (and should)
+      // remove the event handlers that are not specific to IE 11 as soon as an
+      // IE 11 event is fired. This will prevent duplicate events from happening
+      // such as double click.
+      let IEEvents = [
+        'pointerdown',
+        'MSPointerDown',
+        'pointermove',
+        'MSPointerMove',
+        'pointerup',
+        'MSPointerUp'
+      ];
+      if (IEEvents.includes(touchEvent)) {
+        unbindEvent('click');
+      }
+
       handler.call(this, e);
     });
   }

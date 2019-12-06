@@ -12,6 +12,8 @@ zh-TW:
         4_5_Bee_Conditionals_2_1: 記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。
       AppLab Intro 7 - Change Screen Color:
         applab_hoc_finish: 顯示幕變綠了嗎？ 如果是這樣，請點擊“完成”。 如果沒有，請點擊“重置”，更改代碼，然後再次點擊“運行”。
+      AppLab Intro 7 - thisOrThatAddButton:
+        AppLabHoCFinal11: 你現在處於設計模式中。
       CSD U3 Variables Predict Where X:
         CSD_U3_variables: 在此修改數值
       CSD U3 Variables Predict Where X_2018:
@@ -186,8 +188,17 @@ zh-TW:
       CourseD_Dance_Party_11:
         dance_callout_11_a: 新的程式積木！
         dance_callout_11_b: 新的程式積木！
+      CourseD_Dance_Party_11_5:
+        dance_party_11_5_groups: 在這裡查找「所有鴨子」程式積木
+      Dance_2019_01:
+        dance_callout_01: 在這裡選擇舞者的類型。
+      Dance_2019_02:
+        dance_callout_11_a: 將此程式積木添加到您的程式中。
+        arrow_buttons: 按箭頭按鈕控制舞者。
       Dance_2019_04:
         dance_callout_02: 將此程式積木新增至您的程式！
+      Dance_2019_05:
+        dance_callout_05: 將新事件添加到程式中。
       Dance_2019_06:
         dance_party_11_5_groups: 新的程式積木！
       Dance_2019_07:
@@ -206,6 +217,8 @@ zh-TW:
       Dance_Party_11:
         dance_callout_11_a: 新的程式積木！
         dance_callout_11_b: 新的程式積木！
+      Dance_Party_11_5:
+        dance_party_11_5_groups: 在這裡查找「所有鴨子」程式積木
       Function intro Ryan:
         Function_intro_Ryan_1: 此簡單的指令可告訴電腦在工作空間中執行有相同名稱的大量代碼。
       Function intro Ryan_2019:
@@ -469,6 +482,10 @@ zh-TW:
         courseF_bee_functions2_1: 這個積木稱做函式（function）。點擊「編輯」按鈕看看裡面有什麼！
       courseF_bee_functions6:
         courseF_bee_functions6_1: 別忘了看看這兒，裡頭有更多積木，也許可以幫助你！
+      courseF_bee_variables_1_2018:
+        courseF_bee_functions_1_2018_1: 可以在這裡找到你的變量！
+      courseF_bee_variables_1_2019:
+        courseF_bee_functions_1_2018_1: 可以在這裡找到你的變量！
       frozen circle function with parameter:
         frozen_circle_function_with_parameter_circle: 使用「建立一個圓形」積木並修改它的尺寸。
       frozen cross:

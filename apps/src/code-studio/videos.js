@@ -24,6 +24,8 @@ videos.createVideoWithFallback = function(
   if (fullWidth) {
     video.addClass('video-player-full-width');
     parentElement.addClass('video-content-full-width');
+    width = '100%';
+    height = '100%';
   } else {
     video.width(width).height(height);
   }
@@ -342,8 +344,23 @@ function youTubeAvailabilityEndpointURL(noCookie) {
 // Precondition: $('#video') must exist on the DOM before this function is called.
 function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
   var fallbackPlayerID = 'fallbackPlayer' + Date.now();
+
+  // If we have want the video player to be at 100% width & 100% height, then
+  // let's assume we are attaching to a container that is relative, and we want
+  // to expand to its edges.  This is currently implemented by a standalone
+  // video.
+  let containerDivStyle;
+  if (playerWidth === '100%' && playerHeight === '100%') {
+    containerDivStyle =
+      'position: absolute; top: 0; bottom: 0; left: 0; right: 0';
+  } else {
+    containerDivStyle = '';
+  }
+
   var playerCode =
-    '<div><video id="' +
+    '<div style="' +
+    containerDivStyle +
+    '"><video id="' +
     fallbackPlayerID +
     '" ' +
     'width="' +

@@ -30,6 +30,8 @@ ja-JP:
         set_length: このブロックを使い、「長さ」を適切な値にセットします。
       Course 4 Artist Vars 6:
         degrees_per_side: 360度を辺の数で割って、各角度の大きさを度で求めます。
+      Course 4 Artist Vars 8:
+        Course_4_Artist_Vars_8_a: もっとスペースが必要？このバーを引っ張れば、コーディングするエリアを広げることができます。
       Course 4 Bee 1:
         if_bee_nectar: '"if"ブロックを使用してミツバチが花の蜜をとるかどうかを決めます。'
       Course 4 Bee 3:
@@ -56,9 +58,16 @@ ja-JP:
         dance_callout_11_a: 新しいブロック！
         dance_callout_11_b: 新しいブロック！
       CourseD_Dance_Party_11_5:
-        dance_party_11_5_groups: '"すべてのアヒル" は、ここにあります。'
+        dance_party_11_5_groups: '"アヒル" は、すべて ここにあります。'
+      Dance_2019_01:
+        dance_callout_01: プログラムにこのブロックを追加！
+      Dance_2019_02:
+        dance_callout_11_a: このブロックをプログラムに追加します。
+        arrow_buttons: 矢印ボタンを押してダンサーをコントロールします。
       Dance_2019_04:
         dance_callout_02: プログラムにこのブロックを追加！
+      Dance_2019_05:
+        dance_callout_05: プログラムに新しいイベントを追加します。
       Dance_2019_06:
         dance_party_11_5_groups: 新しいブロック！
       Dance_2019_07:
@@ -78,7 +87,7 @@ ja-JP:
         dance_callout_11_a: 新しいブロック！
         dance_callout_11_b: 新しいブロック！
       Dance_Party_11_5:
-        dance_party_11_5_groups: '"すべてのアヒル" は、ここにあります。'
+        dance_party_11_5_groups: '"アヒル" は、すべて ここにあります。'
       Fish Tank 3-validated_2019:
         spritelab_comment: このブロックを使って、プログラムがどのように動くか あなたや先生のメモを 残すことができます。
       Function intro Ryan:

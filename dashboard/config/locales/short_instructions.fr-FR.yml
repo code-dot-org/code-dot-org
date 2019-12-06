@@ -819,8 +819,8 @@ fr-FR:
       Course 4 SCV 4: Résous ce puzzle avec le moins de blocs possible.
       Course 4 SCV 5: Résous ce puzzle avec le moins de blocs possible.
       Course 4 SCV 6: Clique ici pour revoir les instructions.
-      CourseD_Dance_Party_01: Faites glisser le bloc «\_créer un nouveau\_» dans l'espace
-        de travail et connectez-le à l'intérieur du bloc « configuration ».
+      CourseD_Dance_Party_01: Faites glisser le bloc `créer un nouveau` dans l'espace
+        de travail et connectez-le à l'intérieur du bloc `configuration`.
       CourseD_Dance_Party_02: Faites que l'orignal commence un nouveau mouvement après
         4 mesures !
       CourseD_Dance_Party_03: Maintenant, demandez au danseur de commencer un nouveau
@@ -862,14 +862,30 @@ fr-FR:
       CourseE_HOC 2018 Level_9b: Suivez le corail pour atteindre le trésor.
       Crack Random Substitution: Consignes
       Crack a Caesar Cipher: Consignes
+      Dance_2019_01: 'Faites glisser le bloc <xml><block type="Dancelab_makeAnonymousDanceSprite"
+        block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;,
+        &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml>
+        dans l''espace de travail et connectez-le à l''intérieur du bloc <xml><block
+        type="Dancelab_whenSetup2" next_connection_disabled="true" block-text="setup"></block></xml>.'
+      Dance_2019_02: Faites danser le chat lorsque vous appuyez sur une touche.
+      Dance_2019_03: 'Il est temps de danser! Programme chaque danseur pour qu''il
+        bouge lorsque tu appuies sur des touches différentes. Choisis ton mouvement
+        préféré pour chaque danseur ou régle-le sur "(Aléatoire)" pour quelque chose
+        de totalement imprévisible! '
+      Dance_2019_04: Fait ton danseur commencer un nouveau mouvement après la quatrième
+        mesure.
       Dance_2019_05: Maintenant, demandez au danseur de commencer un nouveau mouvement
         après 6 mesures !
+      Dance_2019_06: Configure un groupe de danseurs de secours autour du danseur
+        principal au milieu.
+      Dance_2019_07: Change la taille du groupe de danseurs de secours.
       Dance_2019_08: Utilisez le bloc « définir la nuance » pour changer la couleur
         d'un danseur.
+      Dance_2019_09: Soit créatif avec ces nouveaux blocs!
       Dance_2019_10: Prends ton rythme ! Créez votre propre danse à partager avec
         vos amis.
-      Dance_Party_01: Faites glisser le bloc «\_créer un nouveau\_» dans l'espace
-        de travail et connectez-le à l'intérieur du bloc « configuration ».
+      Dance_Party_01: Faites glisser le bloc `créer un nouveau` dans l'espace de travail
+        et connectez-le à l'intérieur du bloc `configuration`.
       Dance_Party_02: Faites que l'orignal commence un nouveau mouvement après 4 mesures
         !
       Dance_Party_03: Maintenant, demandez au danseur de commencer un nouveau mouvement
@@ -3397,3 +3413,7 @@ fr-FR:
       scrat 20: Peux-tu ajouter seulement 3 blocs pour m’aider à résoudre un labyrinthe
         plus complexe? Si tu le fais bien, je peux emprunter n’importe quelle voie
         sinueuse, peu importe sa longueur. Fais-vite ! La glace fond !
+      Dance_Party_extras_alternate_2019: D'avant en arrière! (Cliquez sur "Plus" pour
+        plus de détails)
+      Dance_Party_extras_mixed_2019: Plus de boutons (Cliquez sur "Plus" pour plus
+        de détails)

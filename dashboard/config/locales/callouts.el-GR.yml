@@ -45,8 +45,15 @@ el-GR:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Νέο μπλοκ*!
         dance_callout_11_b: Νέο μπλοκ*!
+      Dance_2019_01:
+        dance_callout_01: Προσθέστε αυτό το μπλοκ* στο πρόγραμμά σας!
+      Dance_2019_02:
+        dance_callout_11_a: Προσθέστε αυτό το μπλοκ στο πρόγραμμά σας.
+        arrow_buttons: Πατήστε τα κουμπιά βέλους για να ελέγξετε τον χορευτή σας.
       Dance_2019_04:
         dance_callout_02: Προσθέστε αυτό το μπλοκ* στο πρόγραμμά σας!
+      Dance_2019_05:
+        dance_callout_05: Προσθέστε ένα νέο συμβάν στο πρόγραμμά σας.
       Dance_2019_06:
         dance_party_11_5_groups: Νέο μπλοκ*!
       Dance_2019_07:
@@ -194,3 +201,5 @@ el-GR:
       frozen square snowflake:
         replace_questions: Χρησιμοποίησε το αναδυόμενο μενού για να αντικαταστήσεις
           το "???" με έναν αριθμό
+      Dance_Party_11_5:
+        dance_party_11_5_groups: Αναζητήστε εδώ τα μπλοκ «όλες τις πάπιες»

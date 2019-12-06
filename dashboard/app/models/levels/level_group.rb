@@ -25,20 +25,20 @@
 
 class LevelGroup < DSLDefined
   def dsl_default
-    <<ruby
-name 'unique level name here'
-title 'title of the assessment here'
-submittable 'true'
-anonymous 'false'
+    <<~ruby
+      name 'unique level name here'
+      title 'title of the assessment here'
+      submittable 'true'
+      anonymous 'false'
 
-page
-level 'level1'
-level 'level2'
+      page
+      level 'level1'
+      level 'level2'
 
-page
-level 'level 3'
-level 'level 4'
-ruby
+      page
+      level 'level 3'
+      level 'level 4'
+    ruby
   end
 
   def icon

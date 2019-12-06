@@ -1851,7 +1851,6 @@ sv:
             Dance Party:
               name: Dansparty
         dance-extras:
-          title: Fortsätt att dansa
           description: Med ytterligare projektidéer kan du fortsätta efter den första
             timmen.
         coursef-2019:
@@ -2069,7 +2068,7 @@ sv:
             Dance Party:
               name: Dansparty
           description: Koda ditt egna dansparty som du kan dela med dina vänner.
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Next Steps:
               name: Nästa steg
@@ -2086,6 +2085,15 @@ sv:
             For Loops:
               name: "'För' loopar"
         dance-extras-2019:
-          title: Fortsätt att dansa
           description: Med ytterligare projektidéer kan du fortsätta efter den första
             timmen.
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Villkor
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Villkorssatser med kort

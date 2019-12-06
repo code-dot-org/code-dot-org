@@ -560,6 +560,8 @@ pt:
       cta: 'Saber mais'
     dance:
       title: 'Festa da Dança'
+    dance-2019:
+      title: 'Festa da Dança'
     hoc:
       title: 'Labirinto clássico'
       body: 'Explora as noções básicas da Ciência da Computação. Milhões de pessoas já experimentaram.'

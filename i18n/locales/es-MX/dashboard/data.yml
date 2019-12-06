@@ -545,9 +545,14 @@ es-MX:
         how-to-k5-workshops: 'Fundamentos de Ciencias de la Computación de Code.org: probado por los niños, aprobado por los docentes'
         why-should-teach-unplugged-activities: 'Preguntas frecuentes: ¿por qué debo enseñar las actividades "sin conexión"?'
         cs-principles-intro-to-objects: 'Principios de Ciencias de la Computación: introducción a objetos'
-        ocean_machine_learning: 'Aprendizaje automático'
-        ocean_training_data: 'Datos de entrenamiento'
-        ocean_societal_implications: 'Implicaciones para la sociedad'
+        oceans_machine_learning: Aprendizaje automático
+        oceans_training_data: Datos de entrenamiento
+        oceans_societal_implications: Implicaciones para la sociedad
+        hoc_dance_congrats_2019: 'Fiesta de baile 2019: ¡Fiesta!'
+        hoc_dance_warmup_2019: 'Fiesta de baile 2019: Precalentamiento'
+        hoc_dance_events_2019: 'Fiesta de baile 2019: Eventos'
+        hoc_dance_measures_2019: 'Fiesta de baile 2019: Medidas'
+        hoc_dance_properties_2019: 'Fiesta de baile 2019: Propiedades'
     callout:
       text:
         drag_blocks: Arrastra un bloque "mover" y colócalo debajo del otro bloque

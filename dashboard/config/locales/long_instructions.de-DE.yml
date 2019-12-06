@@ -5,11 +5,16 @@ de-DE:
       2-3 Artist 1 new: Hallo, ich bin ein Künstler. Du kannst mich programmieren,
         um fast alles zu zeichnen. Benutze ein paar Blöcke, um mich über die grauen
         Linien im Bild zeichnen zu lassen (jede Linie ist 100 Pixel lang).
+      2-3 Artist 11: 'Gib dem Stoppschild einen Rahmen, indem du ein Achteck mit 100
+        Pixel Seiten machst. '
+      2-3 Artist 12: 'Zeichne einen Kreis, um den Augapfel fertigzustellen! Wenn der
+        Zeichner sich um 1 Grad mit jedem Schleifenschritt dreht, wie oft musst Du
+        den Code dann wiederholen, um einen Kreis zu zeichnen? '
       2-3 Artist 2 new: Dieses Haus hat eine halbfertige Wand. Jede Seite hat 100
         Pixel, aber die halbfertige nur 50. Vervollständige die Wand.
-      2-3 Artist 3.4: "Der \"springe\"-Block bewegt den Künstler, ohne eine Linie
+      2-3 Artist 3.4: "Der \"springe\"-Baustein bewegt den Künstler, ohne eine Linie
         zu zeichnen. \nZeichne die gestrichelte Linie nach. Verwende dazu \"springe\"
-        und \"bewegen\"-Blöcke."
+        und \"bewegen\"-Bausteine."
       2-3 Artist 3new: |-
         Der rote Hut ist 100 Pixel hoch. Zeichne den schwarzen Hut, der 70 Pixel kleiner ist, zu Ende.
 
@@ -35,6 +40,38 @@ de-DE:
       2-3 Artist 9 NEW: Vervollständige diesen Drachen
       2-3 Artist Assessment 1: "**Prüfung**: Vervollständige den letzten Zahn. Er
         ist 25 Pixel breit und 25 Pixel hoch."
+      2-3 Artist Debugging 1: "Dieser Hut sollte nur 50 Pixel breit sein. \nKannst
+        du das korrigieren?\n\n<br/>"
+      2-3 Artist Debugging 10: "Der Steuerkreuz auf meinem Controller ist zu schmal.
+        \n\nKannst du es um 10 Pixel breiter machen?\n\nVersuche den Code zuerst auszuführen,
+        um zu sehen, was los ist."
+      2-3 Artist Debugging 11: |-
+        Meine Schneeflocke fällt auseinander!
+
+        Kannst du herausfinden, was los ist?
+      2-3 Artist Debugging 2: "Dieser Code für die Schnurrhaare der Katze ist falsch.
+        \n\nKorrigiere diesen Code, um Whisker zu zeichnen, die alle die gleiche Länge
+        haben."
+      2-3 Artist Debugging 3: "Mein Boot hat ein Loch! \n\nWas musst du ändern, so
+        dass sich die Enden treffen?"
+      2-3 Artist Debugging 5: Der Code für das Bein und den Fuß ist falsch? Kannst
+        du das beheben?
+      2-3 Artist Debugging 6: |-
+        Sieht aus, als sitze ich auf einem Stuhl, dem ein Bein fehlt!
+
+        Ändere den Code, um das letzte Bein zu zeichnen.
+      2-3 Artist Debugging 7: |-
+        Sieht so aus, als ob das C im Code spiegelverkehrt gezeichnet wird!
+
+        Kannst du es wieder wie ein C aussehen lassen?
+      2-3 Artist Debugging 8: |-
+        Mein Lehrer sagt, dass ich beenden soll, was ich anfange!
+
+        Hilf mir, mein Windrad fertigzustellen. Kannst du herausfinden, was los ist?
+      2-3 Artist Debugging 9: |-
+        Irgendwas ist faul!
+
+        Der Code für diesen Stengel ist falsch. Kannst du herausfinden, wie du den Zeichner dazu bringen kannst, den Stengel auf die richtige Weise zu zeichnen?
       2-3 Artist Debugging Assessment 1: "Warum ist das Quadrat um 75 Pixel zu klein
         geraten?\\\r\n\\\r\nWo ist der Fehler? Kannst du es größer machen?"
       2-3 Artist Free Play: Freies Spiel! Zeichne was du willst.
@@ -44,24 +81,158 @@ de-DE:
         <br/>
       2-3 Artist Loops New 10: Jetzt lass uns einen Haufen V's miteinander verbinden,
         sie in einer Schleife zeichnen.
+      2-3 Artist Loops New 11: "Zeit, etwas flottes zu machen! \n\nBaue den Code aus
+        dem letzten Puzzle neu, aber diesmal füg eine Linkskurve von 30 Grad innerhalb
+        der Schleife hinzu. Wiederhole es jetzt 24 Mal statt 8 Mal."
       2-3 Artist Loops New 12: 'Zeichne einen Diamanten mit einer Seitenlänge von
         100 Pixel. '
+      2-3 Artist Loops New 13: "Wir werden mit einem Code (in grau) beginnen, um einen
+        Diamanten herzustellen. \n\nWiederhole den Grauen Code, um ein lustiges Muster
+        zu erstellen!"
+      2-3 Artist Loops New 14: |-
+        Spiel mit dem Code für den Diamanten herum und schaue, welche anderen Muster du herstellen kannst.
+
+        Versuche größere oder kleinere Drehungen und schaue wie oft du dich dann bewegen musst.
       2-3 Artist Loops New 15: |-
         Zeichne etwas, wozu du gerade Lust hast!
         <br/><br/>
+      2-3 Artist Loops New 2: |-
+        Hier ist das gleiche Rätsel, das wir gerade gelöst haben, aber diesmal können wir nur einen "bewege vorwärts"-Baustein und einen "Drehe"-Baustein verwenden.
+
+        Kannst du einen `wiederhole` Baustein benutzen, um dieses Rätsel zu lösen?
+      2-3 Artist Loops New 9: Zeichne ein einfaches V (beide Seiten haben 50 Pixel),
+        um den Pfeil zu vervollständigen.
+      2-3 Artist Nested Loops 1: |-
+        Du hast schon einmal Schleifen benutzt, um Formen zu zeichnen, aber jetzt werden wir Schleifen in andere Schleifen einfügen!
+
+        Erzeuge einen äußeren `Wiederholungsblock` um diese ganzen Bausteine, um das Muster zu zeichnen.
+
+        <br/>
       2-3 Artist Nested Loops 10: Wiederhole diesen Code 12 Mal, um das Muster zu
         zeichnen.
+      2-3 Artist Nested Loops 11: Wiederhole diesen Code 4 Mal, um das Muster zu vervollständigen
+        und drehe es um 90 Grad nach jedem Kreis.
       2-3 Artist Nested Loops 12: Wiederhole diesen Code 12 Mal, um die Wirbel zu
         vervollständigen.
+      2-3 Artist Nested Loops 2: "Wiederhole nun das Zeichnen des Dreiecks 6 mal.
+        \n\nNach jedem Dreieck musst du 60 Grad drehen, bevor du das nächste zeichnen
+        kannst."
+      2-3 Artist Nested Loops 3: "Du musst dein Dreieck 12 Mal wiederholt zeichnen,
+        um dieses Muster zu erzeugen. \n\nTeile die Anzahl der Grad in einem Kreis
+        (360) durch die Anzahl der Formen, die du zeichnest (12), um herauszufinden,
+        wie weit du dich nach jeder Form drehen musst."
+      2-3 Artist Nested Loops 4: |-
+        Wiederhole diesen Diamanten 12 mal, um eine Blume zu zeichnen!
+
+        Hinweis: Wir verwenden den gleichen Winkel, um 12 Diamanten erneut zu zeichnen, wie bei den 12 Dreiecken.
+        Wie viel musst du nach jeder Form drehen?
+      2-3 Artist Nested Loops 5: "Fülle die Fenster dieses Gebäudes mittels einer
+        verschachtelten Schleife aus. \n\nDie Fenster sind 20 Pixel lang und 20 Pixel
+        auseinander."
       2-3 Artist Nested Loops 6: Dieser Dinosaurier hat 8 Spitzen am Schwanz. Jede
         Spitze ist 30 Pixel lang. Das Dreieck muss 8 mal durchlaufen werden, aber
         sorge dafür, dass es sich nach jedem Durchlauf vorwärts bewegt!
+      2-3 Artist Nested Loops 7: "Wiederhole das Zeichnen dieses Dreiecks 10 mal,
+        um die Sonne zu zeichnen. \n\nDu musst dich nach jedem Dreieck bewegen und
+        drehen. \n\nDu kannst herausfinden, wie viel du drehen musst, indem du die
+        Anzahl der Grad in einem Kreis durch die Anzahl der Dreiecke teilst, aus denen
+        er besteht."
+      2-3 Artist Nested Loops 8: "Nun fügen wir etwas Gras zu unserem Bild hinzu.
+        \n\nJeder Grasbüschel ist 50 Pixel voneinander entfernt."
+      2-3 Artist Nested Loops 9: "Wir beenden dieses Bild, indem wir unsere Blume
+        hinzufügen. \n\nWiederhole das Zeichnen des Diamanten 12 mal, um eine Blume
+        zu zeichnen."
       2-3 Artist Nested Loops Free Play: Freies Spiel, zeichne irgendetwas Cooles
         mit verschachtelten Schleifen.
+      2-3 Bee Conditionals 11: "Ich frage mich, was da draußen los ist!\n\nHilf mir,
+        um den Hof herumzufliegen und Nektar nur von den Blumen zu sammeln, die welche
+        haben. "
+      2-3 Bee Conditionals 13: |-
+        Hier ist viel los!
+
+        Nutze das, was du gelernt hast, um den ganzen Nektar zu sammeln und dann den Honig herzustellen.
+      2-3 Bee Conditionals 14: |-
+        Lasst uns alles zusammenfügen!
+
+        Verwende das, was du gelernt hast, um mir zu helfen, Nektar nur von Blumen zu sammeln, die ihn haben, und verwende so wenig Bausteine wie möglich.
+
+        Vergiss nicht, am Ende Honig zu machen.
+      2-3 Bee Conditionals 15: "Dieses Treppenstufenmuster sollte vertraut aussehen.
+        \ \n\nKannst du Nektar nur von den Blüten sammeln, die Nektar besitzen, und
+        dabei so wenig Blöcke wie möglich verwenden?"
+      2-3 Bee Conditionals 2: "Ich bin eine hungrige Biene! \nHilf mir, den gesamten
+        Nektar der Blumen mit der geringsten Anzahl von Bausteinen zu sammeln."
+      2-3 Bee Conditionals 3: "Schau dir den ganzen Nektar an!\n\nHilf mir, den Nektar
+        zu sammeln und den Honig mit so wenig Blöcken wie möglich herzustellen.  "
+      2-3 Bee Conditionals 5: "Diese magischen violetten Blumen ändern sich!\n\nJedes
+        Mal, wenn du das Puzzle ausprobierst, können lilafarbene Blumen entweder 1
+        Nektar oder gar keinen haben.... aber du wirst die Nummer nicht kennen, bis
+        du den Code ausgeführt hast! \n\nAchte darauf, dass du keinen Nektar von einer
+        violetten Blume sammelst, wenn sie keinen hat. \nDu musst zuerst überprüfen,
+        ob der Nektar gleich 1 ist, indem du den Block `wenn Nektar` benutzt."
+      2-3 Bee Conditionals Assessment 1: |-
+        **Prüfung:** Sammle den ganzen Nektar.\
+        Achte darauf, nicht von einer lila Blume Nektar zu sammeln, wenn sie keinen hat.
+      2-3 Bee Debugging 1: |-
+        Diese Bausteine nerven mich wirklich!
+
+        Bereinige den oder die Fehler, um den gesamten Nektar zu sammeln.
+      2-3 Bee Debugging 2: |-
+        Kannst du das Problem hier finden?
+
+        Behebe den oder die Fehler, um den gesamten Nektar zu sammeln.
+      2-3 Bee Debugging 3: |-
+        Ooh, das hier sticht!
+
+        Behebe den oder die Fehler, um den gesamten Nektar zu sammeln.
+      2-3 Bee Debugging 5: "Diese Blume sieht lecker aus! \n\nBeseitige den oder die
+        Fehler, um den gesamten Nektar zu sammeln.\\\nDu kannst nun sowohl Ausführen
+        als auch Einzelschritt verwenden."
+      2-3 Bee Debugging 6: |-
+        Was für eine süße Herausforderung!
+
+        Beseitige den/die Fehler, um den gesamten Nektar zu sammeln.
       2-3 Bee Functions Assessment 2: "**Prüfung:** Erzeuge eine Funktion, mit der
         man sich drehen, vorwärts bewegen und 3 mal Honig erzeugen kann. Anschließend
         lasse die Biene dahin zurückkehren wo sie angefangen hat und drehe um."
+      2-3 Bee Loops 1: |-
+        Diese Blumen sehen lecker aus!
+
+        Sammle Nektar von jeder der Blüten mit den geringstmöglichen Bausteinen.
+      2-3 Bee Loops 13: "**Prüfung:** Sammle den gesamten Nektar mit den wenigsten
+        Bausteinen."
       2-3 Bee Loops 3A: Kannst du eine Schleife verwenden um den ganzen Nektar einzusammeln?
+      2-3 Bee Loops 3B: Verwende nun den Wiederholen-Baustein um den ganzen Nektar
+        aufzusammeln und den ganzen Honig zu erzeugen.
+      2-3 Bee Loops 4: |-
+        So eine fleißige Biene!
+
+        Hilf den Bienen, den gesamten Nektar zu sammeln und den ganzen Honig mit den geringstmöglichen Bausteinen herzustellen.
+      2-3 Bee Loops 4A: "Wie oft können Schleifen dir bei diesem Puzzle helfen?  \n\nSchleifen
+        sind dein Freund! Benutze einige von ihnen, um dieses Rätsel mit den wenigsten
+        Bausteinen zu lösen."
+      2-3 Bee Loops 5: "Die Form dieses Pfades ist anders als die der anderen. \n\nKannst
+        du den gesamten Nektar mit so wenigen Bausteinen wie möglich sammeln?"
+      2-3 Bee Loops 7: Füge diese Bausteine in eine Schleife ein, um Nektar von jeder
+        Blüte zu sammeln?
+      2-3 Maze 1: 'Kannst du mir helfen, das böse Schwein zu fangen? Klinke ein paar
+        `bewege vorwärts` Bausteine unter dem `Wenn ausführen` Baustein ein und drücke
+        auf "Ausführen". '
+      2-3 Maze 12: |-
+        Plötzlich erscheint ein magischer Baustein!  Mit dem Baustein `widerhole` kannst du Code immer wieder wiederholen.
+
+        Kannst du zum Schwein gelangen, indem du eine Schleife erstellst, die nur einen `bewege vorwärts`-Baustein innerhalb eines `wiederhole` verwendet?
+      2-3 Maze 13: Bringt mich zum Schwein! Du kannst diesmal nur einen `bewege vorwärts`
+        Baustein verwenden
+      2-3 Maze 15: In diesem Rätsel werden dir zwei `wiederhole` Schleifen helfen,
+        das Schwein mit der geringsten Anzahl an Schleifen zu erreichen!
+      2-3 Maze Loops 18: "Bring mich mit den wenigsten Bausteinen zur Sonnenblume!
+        \ \n\nVersuche, eine `Wiederhole`-Schleife in einer anderen zu verwenden,
+        um die Menge an Code zu reduzieren, die du brauchst."
+      2-3 Maze Loops 19: "Lasst uns das auf eine andere Ebene bringen! \n\nBenutze
+        Schleifen, um mich mit den wenigsten Schlaufen zur Sonnenblume zu bringen."
+      2-3 Maze Loops Assessment 1: "**Herausforderung:** Bringe mich mit nur 5 Bausteinen
+        zur Sonnenblume! "
       4-5 Artist Free Draw 1: Freies Zeichnen!  Zeichne, was deine Inspiration dir
         eingibt.
       4-5 Artist Patterns 11: Wie oft muss die Schleife durchlaufen werden, damit
@@ -71,6 +242,9 @@ de-DE:
         sich jetzt überdecken. Versuche es mit einer Änderung des ersten "springe
         rückwärts" Bausteins von 100 auf 50 (halb so weit). Wie weit sollte der Künstler
         beim zweiten "springe rückwärts" Baustein gehen?
+      4-5 Bee Conditionals 2: "Mehr Wolken! \n\nÜberprüfe unter jeder Wolke, ob sie
+        eine Blume versteckt, bevor du Nektar sammelst.  \n\nDenkt daran: Nicht alle
+        Wolken verbergen das Gleiche!"
       4-5 Maze 7: "Bringe den Zombie auf schnellstem Weg zur Sonnenblume. \nKannst
         Du die Aufgabe mit weniger als 11 Blöcken lösen?"
       4-5 Maze 9: |-
@@ -80,6 +254,10 @@ de-DE:
         Verwende den "Wiederhole bis"-Baustein, um die Aufgabe mit so wenig Blöcken wie möglich zu lösen.
       4-5 Maze Assessment 1: "**Aufgabe:** Gehe zur Sonnenblume und verwende dabei
         so wenig Bausteine wie möglich."
+      4-5 Nested Loops 1: 'Vervollständige den Code um die Dreiecke zu zeichnen. Das
+        erste ist bereits fertig. Hinweis: Drei Dreiecke in einer 360- Grad- Drehung.'
+      4-5 Nested Loops 2: 'Erstelle nun eine Schleife in einer weiteren Schleife um
+        10 Dreiecke zu zeichnen.\\ Dies nennt man eine verschachtelte Schleife.  '
       4-5 Nested Loops 5: Benutze den angegebenen Code in einer Schleife, um eine
         Windmühle zu erstellen.
       4-5 Nested Loops 9: Zeichne die Zähne im Mund des Alligators!
@@ -281,6 +459,168 @@ de-DE:
         -   Nachdem du das Bild korrigiert hast, notieren Dir sowohl Ihren Prozess als auch Deinen endgültigen Filter im Bereich Level 6 Deines Activitätsleitfadens.
 
         _Wie viele Versuche hat es gedauert, bis du den richtigen Filter gefunden hast?_
+      CSD U2 HTML Adding Paragraphs pt 2_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+
+        ::: details [**Was ist ein Absatzelement?**]
+
+        Absätze werden durch Öffnen (`<p>`) und Schließen (`</p>`) von Tags gekennzeichnet. Absätze in HTML können eine beliebige Länge des Textes von einem Wort bis zu einer Reihe von Sätzen sein. Absätze gruppieren Sätze und setzen etwas Abstand zwischen dieser Textgruppe und der nächsten Textgruppe.
+
+        :::
+
+        ::: details [**Wie mache ich mehrere Absätze?**]
+
+        Hier ist ein Beispiel für mehrere Absatz-Tags in einer Reihe. Dieser Code wird in den Body der Webseite eingefügt.
+
+            <p>This is a paragraph. It has two sentences.</p>
+            <p>This is another paragraph.</p>
+
+        :::
+
+        </div>
+
+        # Absatz Tags verwenden
+
+        Die `<p>` `</p>` Tags oder "paragraph" Start- und End-Tags werden um den Text herum platziert, um anzuzeigen, dass er Teil eines Absatzes ist. Das Platzieren von Text zwischen Absatz- und End-Tags lässt den Computer wissen, dass er anders behandelt werden sollte, oft nur mit einem Abstand zu anderen Texten.
+
+        # Mache Folgendes
+
+        -   Platziere den Text, den du gerade geschrieben hast, in mindestens zwei separaten Absätzen, indem du ihn mit `<p>` und `</p>` Tags umgibst.
+        -   Vergleiche die Ergebnisse mit einem Nachbarn. Was hat sich an der Art und Weise, wie der Text angezeigt wird, geändert?
+      CSD U2 HTML Debug Paragraphs_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+
+        ::: details [**Was ist ein Absatzelement?**]
+
+        Absätze werden durch öffnende ( `<p>` ) und schließende ( `</p>`) Tags gekennzeichnet. Absätze in HTML können eine beliebige Länge des Textes von einem Wort bis zu einer Reihe von Sätzen sein. Absätze gruppieren Sätze und setzen etwas Abstand zwischen dieser Textgruppe und der nächsten Textgruppe.
+
+        :::
+
+        Details[**Warum scheint HTML zu funktionieren, auch wenn es kaputt ist?**]
+
+        HTML wird von Ihrem Webbrowser gelesen, um Webseiten zu generieren. Da Menschen beim Schreiben ihrer Webseiten oft kleine Fehler machen, sind Browser so programmiert, dass sie genau erraten, was Sie vorhaben. Manchmal sind sogar verschiedene Browser programmiert, um unterschiedliche Vermutungen anstellen zu können! Der einzige Weg, um sicherzustellen, dass Ihr Code so aussieht, wie Sie es beabsichtigen, ist sicherzustellen, dass Sie immer die richtigen Tags verwenden.
+
+        :::
+
+        :::: details [**Warum wird der Code manchmal rosa?**]
+
+        Web Lab ist so programmiert, dass es automatisch einige Fehler in HTML erkennt.  Wenn es einen Fehler bemerkt, wird dieser Code rosa.  Der Fehler kann in rosa sein, oder er kann irgendwo vor dem rosa Code liegen.  Sie müssen sorgfältig debuggen, um Ihren Fehler zu finden.
+
+        :::
+
+        </div>
+
+        # Debuggen: Reparieren der beschädigten Tags
+
+        Diese einfache Webseite hat einige Probleme, die verhindern, dass der Inhalt korrekt angezeigt wird. Identifizieren und beheben Sie die Probleme. Diese Vorgehensweise wird auch als "Debugging" Ihres Codes bezeichnet.
+
+        # Mache Folgendes
+
+        -   Behebe den defekten Code, damit die Webseite korrekt angezeigt wird.
+        -   Vergleiche die Probleme die du behoben hast mit deinem Nachbarn
+      CSD U2 Heading Demo_2019: "# Überschriften\n\n<div class=\"no-pullthrough\"
+        style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:
+        20px; font-size:14px\">\n\n::: Details [**Was sind Überschriften?**]\nÜberschriften
+        sind die unterschiedlich großen Abschnittsüberschriften auf einer Webseite.
+        Überschriften fügen Deiner Webseite Struktur hinzu, indem der Text aufgebrochen
+        wird, so dass dieser für einen Benutzer einfacher zu lesen ist.\n:::\n\n::::
+        details [**Wie mache ich unterschiedlich große Überschriften?**]\nDie Überschriften
+        sind in 6 verschiedenen Größen erhältlich. Bisher hast du in erster Linie
+        die Größte verwendet: `<h1>`. Die Zahl '1' im HTML-Tag gibt an, dass dies
+        die größte Überschrift ist. Die kleinste Überschrift ist `<h6>`. Du kannst
+        auch die Tags `<h2>`, `<h3>`, `<h4>` und `<h5>` ausprobieren, die kleiner
+        werden, wenn die Zahl größer wird.\n:::\n\n:::: details [**Was ist HTML?**]\nHTML
+        steht für Hypertext Markup Language. HTML wird verwendet, um den Inhalt einer
+        Webseite zu strukturieren. HTML verwendet Tags, um anzugeben, wo bestimmte
+        Strukturen beginnen und enden. Diese Tags sind Zeichensätze, die nicht in
+        der englischen Sprache vorkommen, so dass Inhalt und Struktur unterschieden
+        werden können. \n:::\n\n::: details [**Was ist ein HTML-Element?**]\nEin HTML-Element
+        ist ein Teil einer Website, das durch ein Start-Tag gekennzeichnet ist und
+        manchmal mit einem End-Tag geschlossen wird. Das Element beinhaltet auch den
+        Inhalt innerhalb der Tags. Zum Beispiel: \n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"
+        style=\"width:500px\">\n:::\n\n:::: details [**Was ist ein HTML-Tag?**]\n\nEin
+        HTML-Tag ist der spezielle Zeichensatz, der der Maschine mitteilt, wo der
+        Anfang oder das Ende eines HTML-Elements ist und welcher Typ es ist.\n\n:::\n\n</div>\n\nBisher
+        hast Du Deine Inhalte in Absätze unterteilt.  Eine weitere Möglichkeit, wie
+        HTML es Dir ermöglicht, den Code zu organisieren, ist die Verwendung von **Überschriften**.
+        \ Eine Überschrift ist ein kurzer Text, der wie ein Titel an den Anfang eines
+        Inhaltsabschnitts gestellt wird.\n\n# Mache Folgendes:\n\n-   Finde die Überschriften
+        auf der Webseite unten und verwende das Inspektor-Tool, um den Code zu sehen,
+        aus dem sie bestehen.\n-   Stelle sicher, dass du und Dein Partner sich darüber
+        einig seid, was die Tags bewirken.\n-   Ändere den Code so, dass \"Zeichnung\"
+        und \"2 Jahre\" mit den Überschriften auf der restlichen Seite übereinstimmen."
+      CSD U2 Heading Sizes_2019: "# Überschriftengrößen\n\n<div class=\"no-pullthrough\"
+        style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:
+        20px; font-size:14px\">\n\n::: Details [**Was sind Überschriften?**]\nÜberschriften
+        sind die unterschiedlich großen Abschnittsüberschriften auf einer Webseite.
+        Überschriften fügen Ihrer Webseite Struktur hinzu, indem sie den Text aufbrechen,
+        so dass dieser für einen Benutzer einfacher zu lesen ist.\n:::\n\n:::: details
+        [**Wie mache ich unterschiedlich große Überschriften?**]\nDie Überschriften
+        sind in 6 verschiedenen Größen erhältlich.  Die häufigste Überschrift ist
+        `<h1>` Die Zahl 1 im HTML-Tag bezeichnet, dass es sich um die größte Überschrift
+        handelt. Die kleinste Überschrift ist `<h6>`. Du kannst auch die Tags `<h2>`,
+        `<h3>`, `<h4>`, `<h4>` und `<h5>` versuchen, die mit zunehmender Anzahl kleiner
+        werden.\n:::\n\n:::: details [**Was ist HTML?**]\nHTML steht für Hypertext
+        Markup Language. HTML wird verwendet, um den Inhalt einer Webseite zu strukturieren.
+        HTML verwendet Tags, um anzugeben, wo bestimmte Strukturen beginnen und enden.
+        Diese Tags sind Zeichensätze, die nicht in der englischen Sprache vorkommen,
+        so dass Inhalt und Struktur unterschieden werden können. \n:::\n\n::: details
+        [**Was ist ein HTML-Element?**]\nEin HTML-Element ist ein Teil einer Website,
+        das durch ein Start-Tag gekennzeichnet ist und manchmal mit einem End-Tag
+        geschlossen wird. Das Element beinhaltet auch den Inhalt innerhalb der Tags.
+        Zum Beispiel: \n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"
+        style=\"width:500px\">\n:::\n\n:::: details [**Was ist ein HTML-Tag?**]\n\nEin
+        HTML-Tag ist der spezielle Zeichensatz, der der Maschine mitteilt, wo der
+        Anfang oder das Ende eines HTML-Elements ist und welcher Typ es ist.\n\n:::\n\n</div>\n\nÜberschriften
+        können in verschiedenen Größen erhältlich sein.  Auf dieser Seite gibt es
+        sechs unterschiedlich große Überschriften, die jedoch alle vertauscht sind.
+        \ Kannst du und dein Partner herausfinden, wie man sie repariert?\n\nMache
+        Folgendes:\n\n-   Verwende das Inspektorwerkzeug, um herauszufinden, was die
+        Überschriften zu unterschiedlichen Größen macht.\n-   Stelle sicher, dass
+        du und Dein Partner sich darüber einig sind, was die verschiedenen Header-Tags
+        bewirken.\n-   Ändere die Tags so, dass die Überschriften in der Reihenfolge
+        von groß nach klein sind, und der Text sagt die richtige Größe, wie im Bild
+        unten. \n\n<img src=\"https://images.code.org/762022f97a355dd63dce5ecc8d0127aa-image-1493161154608.58.15
+        PM.png\" style=\"width:100px; float:left\">"
+      CSD U2 Heading Test_2019: "# Überschriften und Absätze\n\n<div class=\"no-pullthrough\"
+        style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:
+        20px; font-size:14px\">\n\n::: details [**Was ist ein Absatzelement?**]\n\nAbsätze
+        werden auch durch öffnende (`<p>`) und schließende (`</p>`) Tags gekennzeichnet.
+        Absätze in HTML können eine beliebige Länge des Textes von einem Wort bis
+        zu einer Reihe von Sätzen sein. Der gesamte Text auf einer Webseite sollte
+        in einem HTML-Element (Überschriften oder Absätze) enthalten sein. Absätze
+        gruppieren Sätze und setzen etwas Abstand zwischen dieser Textgruppe und der
+        nächsten Textgruppe.\n\n:::\n\ndetails [**Wie erstelle ich mehrere Absätze?**]\n\nAbsätze
+        werden durch Öffnen (`<p>`) und Schließen (`</p>`) von Tags gekennzeichnet.
+        Um mehr als einen Absatz zu erstellen, benötigen Sie mehrere Sätze von öffnenden
+        und schließenden `<p>` Tags. Zum Beispiel:\n\n        <p>\n            Dies
+        ist ein Absatz.\n        </p>\n        <p>\n            Dies ist ein weiterer
+        Absatz.\n        </p>\n\n:::\n\n::: Details [**Was sind Überschriften?**]\nÜberschriften
+        sind die unterschiedlich großen Abschnittsüberschriften auf einer Webseite.
+        Überschriften fügen Ihrer Webseite Struktur hinzu, indem sie den Text aufbrechen,
+        so dass dieser für einen Benutzer einfacher zu lesen ist.\n:::\n\n:::: details
+        [**Wie mache ich unterschiedlich große Überschriften?**]\nDie Überschriften
+        sind in 6 verschiedenen Größen erhältlich. Bisher hast du in erster Linie
+        das größte \\<h1> verwendet. Die Zahl 1 im HTML-Tag gibt an, dass dies die
+        größte Überschrift ist. Die kleinste Überschrift ist \\<h6>. Du kannst auch
+        die \\<h2>, \\<h3>, \\<h4>, \\<h4> und \\<h5> Tags ausprobieren, die kleiner
+        werden, wenn die Zahl größer wird.\n:::\n\n:::: details [**Was ist HTML?**]\nHTML
+        steht für Hypertext Markup Language. HTML wird verwendet, um den Inhalt einer
+        Webseite zu strukturieren. HTML verwendet Tags, um anzugeben, wo bestimmte
+        Strukturen beginnen und enden. Diese Tags sind Zeichensätze, die nicht in
+        der englischen Sprache vorkommen, so dass Inhalt und Struktur unterschieden
+        werden können. \n:::\n\n::: details [**Was ist ein HTML-Element?**]\nEin HTML-Element
+        ist ein Teil einer Website, das durch ein Start-Tag gekennzeichnet ist und
+        manchmal mit einem End-Tag geschlossen wird. Das Element beinhaltet auch den
+        Inhalt innerhalb der Tags. Zum Beispiel: \n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"
+        style=\"width:500px\">\n:::\n\n:::: details [**Was ist ein HTML-Tag?**]\n\nEin
+        HTML-Tag ist der spezielle Zeichensatz, der der Maschine mitteilt, wo der
+        Anfang oder das Ende eines HTML-Elements ist und welcher Typ es ist.\n\n:::\n\n</div>\n\nDer
+        Autor dieser Seite hat eine Menge Inhalt hinzugefügt, aber nicht an die Struktur
+        gedacht.  Der gesamte Text wird zusammengefügt.\n\nMache Folgendes:\n\n-   Schaue
+        Dir den Inhalt mit Deinem Partner an und entscheide, was Deiner Meinung nach
+        die beste Struktur sein sollte.\n-   Verwende Deine Überschriften- und Absatz-Tags,
+        um die Struktur in die Seite zu kodieren."
       CSD U2 Inspector Warm Up_2019: |-
         <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
         <details>
@@ -390,6 +730,77 @@ de-DE:
         \  Suche die Eigenschaft `margin` im Regelsatz `img`.\n-   Vergrößere 'margin'
         und besprechen die Wirkung mit einem Partner.\n-   Wählen einen anderen Elementtyp
         und gib ihm ebenfalls einen Rand."
+      CSD U2 publish video: |-
+        ## Zu berücksichtigende Fragen
+
+        -   Was sind Deiner Meinung nach die Aufgaben eines Website-Publishers?
+        -   Warum möchtest du den Code sehen oder die Website einer anderen Person remixen?
+      CSD U2 text style text align_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+
+        ::: details [**Wie funktioniert der Code?**]
+
+        Hier ist der Code, der die Ausrichtung des Absatztextes steuert:
+
+            p {
+              text-align: left;
+            }
+
+        -   `p` ist der _Selektor_.  Er gibt an, welche Elemente den Regeln innerhalb der geschweiften Klammern folgen müssen. Das `p` steht für Absatz.
+        -   `text-align: left;` ist die Regel, die den Text innerhalb der `p`-Tags auf die linke Seite des Absatzes ausrichtet.
+            -   `text-align` ist die _Eigenschaft_.  Diese erklärt, worum es bei der Regel geht, in diesem Fall bei der Textausrichtung.
+            -   `links` ist der _Wert_.  Dieser erklärt, wie die Regel angewendet werden sollte, wobei in diesem Fall der Text auf die linke Seite des Absatzes ausgerichtet wird.
+
+        :::
+
+        :::: details [**Warum macht <code>text-align: left;</code> hier nichts?**]
+
+        Die meisten Eigenschaften haben Standardwerte.  Die Standardwerte sind die Stile, die ein Element automatisch hat, bevor du dein Style Sheet hinzufügst.  Der Standardwert für `text-align` ist `left`, so dass es hier keinen Unterschied macht.
+
+        :::
+
+        details [**Welche Werte sind für die Textausrichtung möglich? **]
+
+        Du kannst zwischen "links", "rechts" und "mitte" wählen.  Mehr über die Eigenschaft text-align erfährst du unter <a href="http://www.w3schools.com/cssref/pr_text_text-align.asp" target="_new">W3Schools - CSS text-align property</a>.
+
+        :::
+
+        :::: details [**Warum brauche ich alle Satzzeichen?**]
+
+        Die Interpunktion, wie die geschweiften Klammern `{}`, der Doppelpunkt `:` und das Semikolon \`;`` helfen dem Computer, die Regeln im Style Sheet zu verstehen.  Die geschweiften Klammern enthalten alle Regeln für einen bestimmten Selektor.  Jede Regel sollte mit einem Semikolon enden, und die Eigenschaften und Werte werden immer durch einen Doppelpunkt getrennt.
+
+        :::
+
+        :::: details [**Was ist ein Stylesheet?**]
+
+        Ein Stylesheet ist ein Dokument das steuert, wie eine Webseite aussehen soll.  Externe Stylesheets sind separate Dateien, die mit der HTML-Seite verknüpft sind.
+
+        :::
+
+        ::: Details [**Was ist CSS?**]
+
+        CSS ist eine Sprache, die die Darstellung von Inhalten auf einer Website steuert.  Es verwendet Regelsätze, um das Aussehen einer Seite zu ändern.  Jeder Regelsatz hat einen Selektor, der angibt, welche Elemente auf der Seite betroffen sind, und die Regeln, die erklären, wie die Elemente angezeigt werden.   Jede Regel besteht aus einer Eigenschaft und einem Wert für diese Eigenschaft.
+        <br/><br/>
+        Hier ist ein Beispiel für einen Regelsatz, der den Text in einem `h2`-Tag blau und kursiv macht:
+
+            h2 {
+               color: blue;
+               font-family: cursive;
+            }
+
+        In diesem Beispiel ist `h2` der Selektor, `color` und `font-family` sind Eigenschaften, und `blue` und `cursive` sind die Werte für diese Eigenschaften.
+
+        :::
+
+        </div>
+
+        # Textausrichtung
+
+        Die Eigenschaft `text-align` legt die horizontale (seitliche) Position des Textes innerhalb jeder Zeile fest.
+
+        -   Suche die Eigenschaft "text-align" im Absatzschlüssel.
+        -   Ändere die Absatzausrichtung.
+            -   Wähle zwischen "links", "rechts" und "mitte"
       CSD U3 - Booleans Video_2019: |-
         ## Zu berücksichtigende Fragen
 
@@ -400,6 +811,18 @@ de-DE:
         ## Zu berücksichtigende Fragen
 
         -   Was ist ein Beispiel dafür, wann Sie eine "wenn/ansonsten"-Anweisung benötigen würden?
+      CSD U3 - conditionals - transition_2019: |-
+        # Booleans
+
+        In den letzten paar Leveln haben wir die Werte von Sprites verglichen, um herauszufinden, ob etwas wahr oder falsch ist. Beginnen wir damit, das in den Kontext einer Animation zu stellen.
+
+        # Mache Folgendes
+
+        Das Programm zeichnet einen Rennwagen und eine Ziellinie. Wir werden herausfinden, wann der Rennwagen die Ziellinie überquert. Die Sprites sind alle für dich eingerichtet.
+
+        -   Füge eine `console.log`-Anweisung innerhalb der Zeichenschleife hinzu. ( [Zeige mir, wo](#triggercallout=callout) )
+        -   Füge einen booleschen Ausdruck in die `console.log` ein, der fragt: "Ist die x-Position des Rennwagens kleiner als die x-Position der Ziellinie"?
+        -   Betrachte die Ausgabe des Programms, während sich das Fahrzeug bewegt. Wann ändert sich der Ausgang? Warum?
       CSD U3 Boolean Modify_2019: "# Boolesche Ausdrücke\n\nDie einfachsten booleschen
         Ausdrücke sind Fragen, die der Computer mit wahr oder falsch beantworten kann.
         \nMan kann dabei auch sagen, dass es sich um boolesche Ausdrücke handelt,
@@ -501,6 +924,15 @@ de-DE:
         <li>Label können nicht mit einer Zahl beginnen. </li>
         <li>Groß- und Kleinschreibung müssen exakt gleich sein.</li>
         </ul></details></summary>
+      CSD U3 abstraction rotation control_2019: |-
+        # Geschwindigkeit kontrollieren
+
+        Du hast `Rotationsgeschwindigkeit` außerhalb der Zeichenschleife verwendet, um dein Sprite beim Start des Programms drehen zu lassen.  Du kannst auch `Rotationsgeschwindigkeit` **innerhalb der Schleife** verwenden, um die Geschwindigkeit des Sprites während des Spiels zu ändern.  Zum Beispiel kann sich ein Sprite drehen, wenn der Benutzer die Leertaste drückt, und es dreht sich weiter, bis ihm gesagt wird, dass es anhalten soll.
+
+        # Mach Folgendes
+
+        -   Schaue Dir die `if` -Anweisung innerhalb der Zeichenschleife an, die überprüft, ob die Leertaste gedrückt wurde. ( [Zeige mir, wo](#triggercallout=code_triggered1) )
+        -   Verwende den Block `Rotationsgeschwindigkeit`, damit sich das Farbrad dreht, wenn der Benutzer die Leertaste drückt.
       CSD U3 collisions types_2019: |-
         # Kollisionsarten
 
@@ -599,6 +1031,14 @@ de-DE:
 
         -   Worin besteht der Unterschied zwischen Hard- und Software?
         -   Was macht das Betriebssystem eines Computers?
+      CSD U6 light pattern off_2019: |-
+        # Ausschalten
+
+        Wenn du diese App startest, sind die Lichter aus, aber sobald du ein Muster wählst, gibt es keine Möglichkeit, die Lichter wieder auszuschalten!
+
+        # Mache Folgendes
+
+        Erstelle eine Funktion, die alle LEDs ausschaltet, und füge dann eine "Off"-Schaltfläche zur App hinzu, damit diese alle farbigen LEDs ausschaltet.
       CSD U6 params modify clouds_2019: |-
         # Wolken
 
@@ -697,8 +1137,21 @@ de-DE:
         Die Biene weiß nicht, was sich unter der Wolke verbirgt!
 
         Benutze den „Wenn“-Baustein, um nachzusehen und **NUR DANN** Nektar zu sammeln, wenn eine Blume unter der Wolke ist.
+      Course 4 EC 1a: "**Extrem-Herausforderung:** Es gibt keine Regeln oder Hinweise,
+        nur die Aufgabe!"
+      Course 4 EC 1b: "**Extrem-Herausforderung:** Es gibt keine Regeln oder Hinweise,
+        nur die Aufgabe!"
+      Course 4 EC 2a: "**Extrem-Herausforderung:** Es gibt keine Regeln oder Hinweise,
+        nur die Aufgabe!"
+      Course 4 EC 2b: "**Extrem-Herausforderung:** Es gibt keine Regeln oder Hinweise,
+        nur die Aufgabe!"
+      Course 4 EC 2c: "**Extrem-Herausforderung:** Es gibt keine Regeln oder Hinweise,
+        nur die Aufgabe!"
       Course 4 Maze 4: Versuche, das Rätsel mit dem „Wiederholen“-Baustein zu lösen,
         damit du weniger Bausteine benötigst...
+      Course 4 SCFL 3: "**For-Schleifen Super Challenge:** Kannst Du herausfinden,
+        wie Du diese Zeichnung wiederherstellen kannst? \n\n<img src=\"https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png\"
+        width=\"350px\"/>"
       CourseD_Dance_Party_01: |-
         _Los geht‘s mit der Tanzparty!_
 
@@ -887,10 +1340,54 @@ de-DE:
       Dance Party Predict_2019: "**Mache eine Vorhersage:** Hier ist ein Sprite, das
         wie ein blauer Außerirdischer aussieht!   \n\nWas wird deiner Meinung nach
         passieren, wenn du darauf klickst?  "
+      Dance_2019_01: "_Lassen Sie uns eine Tanzparty veranstalten!_\n\nZiehen Sie
+        den <xml><block type=\"Dancelab_makeAnonymousDanceSprite\" block-text=\"make
+        a new dancer\"><title name=\"COSTUME\" config=\"&quot;CAT&quot;, &quot;PINEAPPLE&quot;\">\"CAT\"</title><title
+        name=\"LOCATION\">{x: 200, y: 200}</title></block></xml> in den Arbeitsbereich
+        und verbinden Sie ihn innerhalb des <xml><block type=\"Dancelab_whenSetup2\"
+        next_connection_disabled=\"true\" block-text=\"setup\"></block></xml> Blocks,
+        um Ihren ersten Tänzer zu erstellen. \n\n-   Sie können auch auf die Glühbirne
+        auf der linken Seite klicken, wenn Sie weitere Informationen benötigen oder
+        zusätzliche Herausforderungen hinzufügen möchten.\\_"
+      Dance_2019_02: |-
+        Mit dem Block <xml><block type="Dancelab_whenKey" block-text="when up pressed"></block></xml> können Sie Code ausführen, wenn Sie den Pfeil nach oben drücken. Verwenden Sie den <xml><block type="Dancelab_doMoveEachLR" block-text="do once"><title name="GROUP">"CAT"</title><title name="MOVE">MOVES.XClapSide</title><title name="DIR">-1</title></block></xml> Block, um die Tänzerin klatschen zu lassen, wenn Sie den Pfeil nach oben drücken, oder probieren Sie eine andere Bewegung aus!
+        _Achten Sie darauf, Ihren Pfeil nach oben oder ![](<https://images.code.org/419e704e6841c0b696016bf5029b8cb9-image-1571864825506.06.45 PM.png>) zu drücken, nachdem Sie die Schaltfläche Ausführen angeklickt haben!_
+      Dance_2019_03: Es ist Zeit für einen Tanzwettbewerb!  Programmieren Sie jeden
+        Tänzer so, dass er sich bewegt, wenn Sie verschiedene Tasten drücken. Wählen
+        Sie für jeden Tänzer Ihre Lieblingsbewegung aus oder stellen Sie ihn für etwas
+        völlig Unvorhersehbares auf stellen Sie für etwas völlig Unvorhersehbares
+        "(Random)“ ein!
+      Dance_2019_04: "Bringen Sie die Tänzer dazu, sich im Takt der Musik zu bewegen!
+        \n\nZiehen Sie den<xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">4</title><title
+        name=\"UNIT\">\"measures\"</title></block></xml> Block auf den Arbeitsbereich.
+        Verbinden Sie ihn unter dem <xml><block type=\"Dancelab_changeMoveEachLR\"><title
+        name=\"GROUP\">\"SHARK\"</title><title name=\"MOVE\">MOVES.ThisOrThat</title><title
+        name=\"DIR\">-1</title></block></xml> block. Ihr Tänzer sollte nach dem vierten
+        Takt eine neue Bewegung beginnen. \n\n**Takte** werden verwendet, um die Zeit
+        in der Musik zu zählen. In diesem Tutorial besteht ein Takt aus vier Schlägen."
       Dance_2019_05: |-
         _Jetzt grooven wir!_
 
         Füge einen <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> Baustein zu Deienem Arbeitsbereich hinzu. Lasse den Tänzer nach 6 Takten einen neuen Tanzschritt beginnen.
+      Dance_2019_06: "Verwenden Sie diesen neuen Block, um eine Gruppe kleinerer Ersatztänzer
+        um einen Lead-Tänzer in der Mitte herum zu erstellen.\n  <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\">\n
+        \   <title name=\"N\">???</title>\n    <title name=\"COSTUME\" config=\"&quot;BEAR&quot;,
+        &quot;CAT&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;,
+        &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title>\n    <title name=\"LAYOUT\">\"circle\"</title>\n
+        \ </block></xml> \nJetzt können Sie mehrere Tänzer auf einmal erstellen!"
+      Dance_2019_07: |-
+        Jeder Tänzer hat eine Reihe von _Eigenschaften_, die steuern, wie er aussieht.
+
+        Verwende <xml><block type="Dancelab_setPropEach" block-text="the set block"><title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title><title name="PROPERTY">"scale"</title><title name="VAL">???</title></block></xml> unter einem grünen Ereignisblock, um Tänzer näher oder weiter weg erscheinen zu lassen.
+      Dance_2019_08: Tänzer haben eine "Farb"-Eigenschaft, mit der eine Farbschicht
+        hinzufügt werden kann. Versuchen Sie, den Farbton eines Ihrer Tänzer (oder
+        einer ganzen Gruppe) zu ändern!
+      Dance_2019_09: "Dies ist eine besondere Art von Ereignis, das immer wieder ausgelöst
+        wird.\n\n <xml><block type=\"Dancelab_everySeconds\"><title name=\"N\">2</title><title
+        name=\"UNIT\">\"measures\"</title></block></xml> \n\nDie anderen neuen Blöcke
+        in Ihrer Toolbox ermöglichen es Ihnen, die Eigenschaften der Tänzer im Laufe
+        der Zeit schrittweise (oder zufällig!) zu ändern. \n_Seien kreativ und haben
+        Sie Spaß dabei!_"
       Dance_2019_10: Grooven Sie los! Erstellen Sie einen eigenen Tanz und teilen
         Sie ihn mit Ihren Freunden.
       Dance_Party_01: |-
@@ -954,6 +1451,17 @@ de-DE:
         Sie die rechte Pfeiltaste drücken.
       Dance_Party_12: Grooven Sie los! Erstellen Sie einen eigenen Tanz und teilen
         Sie ihn mit Ihren Freunden.
+      Dance_Party_extras_alternate_2019: |-
+        # Hin und her!
+
+        Manchmal möchtest du vielleicht ein Muster von Tanzbewegungen erstellen, die du wählst. Mit diesem neuen Baustein kannst du genau das tun.
+
+        <xml><block type="Dancelab_alternateMoves"><title name="GROUP">sprites</title><title name="N">2</title><title name="MOVE1">MOVES.Roll</title><title name="MOVE2">MOVES.ClapHigh</title></block></xml>
+
+        Die oben gewählten Züge werden sich für immer wiederholen.
+
+        -   Erstelle eine abwechselnde Routine für die Leadtänzerin an der Front!
+        -   Verwende verschiedene Zahlen, um die Geschwindigkeit zu ändern, mit der sich die Bewegungen abwechseln. Versuche `1` oder `0.5`, um schneller zu wechseln!
       Dance_Party_extras_battle: |-
         # Tanz-Crews
 
@@ -980,6 +1488,15 @@ de-DE:
         -   Experimentiere mit anderen Tondauern (wie 0,5 für eine halbe Note oder 0,125 für eine Achtelnote).
         -   Füge einige Events „nach dem Takt“ hinzu.
         -   Tausche „Takte“ und „Sekunden“ und versuche, deine Tänze auf diese Weise zeitlich abzustimmen.
+      Dance_Party_extras_every_beat_2019: |-
+        # Viertelnoten
+
+        Die meisten unserer Tänze haben ganze Takte verwendet, aber jeder Takt besteht aus 4 Viertelnoten. Dieser Tanz verwendet <xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml>, um die Tänzerin auf jede Viertelnote klatschen zu lassen, aber nur für die ersten 4 Takte.
+
+        Versuche, die Zahlen in den Blöcken zu ändern, um zu sehen, wie es den Tanz verändert.
+
+        -   Experimentiere mit anderen Notenlängen (z. B. 0,5 für eine Halbe Note oder 0,125 für eine Achtelnote).
+        -   Füge weitere Ereignisse hinzu.
       Dance_Party_extras_layout: |-
         # Nehmen wir die Formation ein!
 
@@ -988,6 +1505,21 @@ de-DE:
         -   Erstelle eine zweite Gruppe von Tänzern in einem anderen Layout
         -   Ändere das Layout, wenn eine Taste gedrückt wird
         -   Ändere eine Eigenschaft, wenn die Tänzer ihre Formation ändern
+      Dance_Party_extras_layout_2019: |-
+        # Let's Get in Formation!
+
+        Schau dir diesen Tanz an, der den <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> Baustein verwendet, um die Formation der Backup-Tänzer während des gesamten Tanzes zu ändern. Probiere eine dieser Ideen aus, um sie zu erweitern:
+
+        -   Erstellung einer zweiten Gruppe von Tänzern in einem anderen Layout
+        -   Layout ändern, wenn eine Taste gedrückt wird
+        -   Ändern einer Eigenschaft, wenn die Tänzer die Formation wechseln
+      Dance_Party_extras_mixed_2019: |-
+        # Mehr Interaktion
+
+        Mit diesem Tanz kannst du die Eigenschaften der Tänzer in Echtzeit steuern, während sie automatisch tanzen. Versuche, andere Eigenschaften zu ändern, wenn du die Tasten drückst. Zum Beispiel:
+
+        -   Randomisiere den Farbton der Tänzerin, wenn du "runter" drückst.
+        -   Füge eine Gruppe von Tänzern mit einem zufälligen Layout hinzu, wenn du "space" drückst.
       Dance_Party_extras_on_beat: |-
         # Bass, Mitten und Höhen
 
@@ -1000,6 +1532,10 @@ de-DE:
         # Beschleunigen, verlangsamen
 
         Dieser letzte Tanz nutzt den Block „festgelegte Geschwindigkeit“, um zu kontrollieren, wie schnell sich jeder Tänzer bewegt. Versuche, an verschiedenen Stellen im Lied mit unterschiedlichen Geschwindigkeiten zu experimentieren. Zögere nicht, bei diesem Tanz herumzuexperimentieren oder kehre zu einem der bisherigen Tänze zurück, um ihn noch cooler zu machen.
+      Dance_Party_extras_speed_2019: |-
+        # Beschleunigen, verlangsamen
+
+        Dieser letzte Tanz nutzt den <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> Baustein, um zu kontrollieren, wie schnell sich jeder Tänzer bewegt. Versuche, an verschiedenen Stellen im Lied mit unterschiedlichen Geschwindigkeiten zu experimentieren. Zögere nicht, bei diesem Tanz herumzuexperimentieren oder kehre zu einem der bisherigen Tänze zurück, um ihn noch cooler zu machen.
       Dance_Party_extras_visible: |-
         # Wo würden sie hingehen?
 
@@ -1141,8 +1677,18 @@ de-DE:
         -   Wozu werden Variablen verwendet?
         -   Wie erstellt man eine Variable und weist ihr einen Wert zu?
         -   Was kann in eine Variable aufnehmen?
+      K-1 Bee Loops 2: Benutze eine `wiederhole`-schleife, um dich zu bewegen, und
+        dann nimm den Nektar und mache Honig!
+      K-1 Bee Loops 3: Verwenden Sie drei `wiederhole`-Schleifen, um den Nektar zu
+        erhalten und Honig zu machen!
+      K-1 Bee Loops 4: Verwende `wiederholen` Schleifen, um den Nektar zu erhalten,
+        Honig zu machen und sich zu bewegen!
       K-1 Bee Loops 5: Verwende „Wiederhole"-Schleifen, um den Nektar und den Honig
         zu sammeln.
+      K-1 Bee Loops 6: Benutze eine `wiederhole`-Schleife, um den Nektar zu bekommen,
+        Honig zu bekommen und dich zu bewegen!
+      K-1 Maze Loops 10: Bringt mich zum Schwein!\\ Die Verwendung der `Wiederhole`-Schleife
+        macht es viel einfacher.
       K-1 Maze Loops 11: |-
         Bring mich zum Schwein!\
         Mit der „Wiederholen“-Schleife geht es leichter.
@@ -1151,7 +1697,22 @@ de-DE:
         Mit der „Wiederholen“-Schleife geht es leichter.
       K-1 Maze Loops 2: Benutze die “Wiederholen"-Schleife, um mich zum Schwein zu
         bringen.
+      K-1 Maze Loops 3: |-
+        Bring mich zum Schwein!\
+        Achte darauf `wiederhole` Schleifen zu verwenden.
+      K-1 Maze Loops 5: |-
+        Bring mich zum Schwein!\
+        Achte darauf `wiederhole` Schleifen zu verwenden.
+      K-1 Maze Loops 6: |-
+        Bring mich zum Schwein!\
+        Achte darauf `wiederhole` Schleifen zu verwenden.
+      K-1 Maze Loops 7: |-
+        Bring mich zum Schwein!\
+        Achte darauf `wiederhole` Schleifen zu verwenden.
       K-1 Maze Loops 8: Benutze „Wiederholen“-Schleifen, um mich zum Schwein zu bringen.
+      K-1 Maze Loops Assessment 1: |-
+        Sieh dir an, was wir alles gelernt haben!\
+        Benutze eine `Wiederhole` Schleife, um mich zum Schwein zu bringen!
       MC HOC 2016 SCORE LEVEL: "In manchen Spielen werden die Punkte gezählt. Spiele
         mit iesen Eisengoles Fangen und benutze den <xml>  <block type=\"craft_addScore\">\n
         \   <title name=\"SCORE\">1</title>\n  </block></xml>-Block um dir einen Punkt
@@ -1424,6 +1985,11 @@ de-DE:
         ## Zu berücksichtigend Frage
 
         -   Woher weiß die Webseite, welches Stylesheet sie verwenden soll?
+      'Video: Intro to CSS_2019': |-
+        ## Zu berücksichtigende Fragen
+
+        -   Inwiefern unterscheidet sich der Stil einer Webseite von der Struktur?
+        -   Warum möchtest du, dass die Webseite einen bestimmten Stil hat?
       Vigenere: "# Verschlüsseln und Entschlüsseln einer Nachricht mit der Vigenère-Chiffre\n\nDies
         ist eine interaktive Version der Vigenère-Chiffre, die die Ver- und Entschlüsselung
         animiert, während sie stattfindet, mit einem Stück Text zum Ver- und Entschlüsseln
@@ -1540,6 +2106,8 @@ de-DE:
 
         ![](<https://images.code.org/e0ea2b008bf557ea81e99a27dd03ef03-image-1567713536857.2019-09-05 15_58_25.gif>)
       behaviors free play: "**Freiespiel:** Erstelle deine eigene Weltraumszene!"
+      course1_artist_loops_challenge2: Lasst uns ein Spiel spielen! Zeichne so viele
+        X's wie möglich! Kannst du drei hintereinander bekommen?
       course1_artist_loops_challenge3: |-
         **Zwitscher!**
 
@@ -1567,13 +2135,27 @@ de-DE:
         ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
       course2_artist_prog_challenge1: Zeichne Räume für jedes Tier. Es gibt viele
         verschiedene Möglichkeiten, dieses Rätsel zu lösen, also viel Spaß!
+      course2_artist_prog_challenge2: _Hilf mir, die gelben Linien auf dieser Straße
+        zu zeichnen!_
+      course2_bee_conditionals_challenge1: Sammle den ganzen Nektar oder mache den
+        ganzen Honig. Du kannst nur Nektar aus Blumen sammeln und Honig aus Waben
+        herstellen. Überprüfe, ob es eine Blume oder eine Wabe gibt.
+      course2_collector_loops_challenge2: |-
+        _"Lasst uns nach Schätzen suchen - mit Schleifen!"_
+
+        Hilf dem Sammler, indem du diesen Code debugst. Hol dir den ganzen Schatz!
       course2_collector_prog_challenge1: Schau genau! Kannst du alle **10** Schätze
         einsammeln?
+      course2_collector_prog_challenge2: Es gibt **20** Schätze in dieser Höhle zu
+        finden. Sammle mindestens die Hälfte, um diese Herausforderung zu beenden!
       course2_maze_programming_challenge1: '"Das Schwein versteckt sich! Kannst du
         mir helfen, mich zurechtzufinden?"\_'
       course2_maze_programming_challenge2: Manchmal gibt es mehr als eine Lösung für
         ein Problem. Manchmal ist es schneller, rückwärts zu gehen, als vorwärts!
       course3_maze_debugging_challenge1: _"Gehe ich hier nur immer im Kreis herum?"_
+      course4_artist_binary_challenge2: |-
+        Auf diesem Gitter sind 256 Bits dargestellt - das bedeutet, dass es für eine kleine Änderung leicht ist, große Probleme zu verursachen. Bist du emsig genug, um dieses Logo wiederherzustellen?
+        ![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)
       course4_artist_fwp_challenge1: Versuche, dieses Programm auszuführen und verändere
         es, um zu sehen, was passiert. Kannst du herausfinden, wie es funktioniert?
         (Oder lösche es und ersetze es durch etwas ganz anderes)
@@ -1790,6 +2372,8 @@ de-DE:
       courseA_collector_loops2: |-
         Sammle alle Schätze ein! Bewege Laurel zu jedem Edelstein und benutze dann diesen Block:
         <xml><block type="collector_collect"/></xml>
+      courseA_collector_loops2_2018: 'Hole alle drei Haufen! Bewege Laurel auf jedes
+        Stück des Schatzes und benutze dann diesen Baustein: <xml><block type="collector_collect"/></xml>'
       courseA_collector_loops2_2019: 'Sammle alle drei Schätze ein! Bewege Laurel
         zu jedem Edelstein und benutze dann diesen <xml><block type="collector_collect"
         block-text="get treasure"/></xml> Baustein. '
@@ -1826,6 +2410,8 @@ de-DE:
       courseA_harvester_seq3_2019: Benutze **drei** <xml><block type="maze_moveNorth"
         block-text="move north"/></xml> Bausteine, um die Erntemaschine zum Mais zu
         bringen! Vergiss nicht, den Mais am Ende aufzunehmen.
+      courseA_harvester_seq9: Füge zwei Blöcke hinzu, um dieses Puzzle zu beenden!
+      courseA_harvester_seq9_2019: Füge zwei Blöcke hinzu, um dieses Puzzle zu beenden!
       courseA_maze_ramp2_2019: Füge die beiden<xml><block type="maze_moveEast" block-text="move
         east"/></xml> an den<xml><block type="when_run" block-text="when run"/></xml>
         an, um Deinen Code zu vervollständigen. Klicke dann auf "▶ Ausführen".
@@ -1869,6 +2455,8 @@ de-DE:
         Versuche diese Aufgabe von Anfang an allein zu schaffen.
 
         ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
+      courseA_maze_seq5_2018: Probiere dies hier mal aus.
+      courseA_maze_seq5_2019: Probiere dies hier mal aus.
       courseA_maze_seq6: |-
         Gehe zuerst in eine Richtung und dann in eine andere, um den Vogel zum Schwein zu bringen!
 
@@ -2056,6 +2644,28 @@ de-DE:
         klicke "Fertig"!
       courseC_PlayLab_eventsA_embed_2019: Lasst uns ein Spiel spielen. Erreiche 5
         Punkte, indem du den Pinguin auf den Oktopus bewegst!
+      courseC_PlayLab_events_challenge1_2018: |-
+        Benutze einen neuen Baustein, damit sich die Waddles automatisch zum Start zurückbewegen, wenn er in den Dinosaurier läuft und einen Punkt erzielt. Dies wird dein Spiel herausfordernder und unterhaltsamer machen!
+
+        Spiele das Spiel und bewege die Waddles mit den Pfeilen, bis du 5 oder mehr Punkte bekommst. Um diese Herausforderung zu meistern, muss Waddles in die Position "Mitte links" des Bildschirms gebracht werden.
+      courseC_PlayLab_events_challenge1_2019: |-
+        Benutze einen neuen Baustein, damit sich die Waddles automatisch zum Start zurückbewegen, wenn er in den Dinosaurier läuft und einen Punkt erzielt. Dies wird dein Spiel herausfordernder und unterhaltsamer machen!
+
+        Spiele das Spiel und bewege die Waddles mit den Pfeilen, bis du 5 oder mehr Punkte bekommst. Um diese Herausforderung zu meistern, muss Waddles in die Position "Mitte links" des Bildschirms gebracht werden.
+      courseC_artist_loop1_2018: "_\"Fantastisch!\"\"_ \n\nLasst uns etwas Stil hinzufügen,
+        indem wir den Pinsel mit dem<xml><block type=\"draw_line_style_pattern\">
+        <title name=\"VALUE\">DEFAULT</title></block></xml> Baustein ändern, bevor
+        unsere Schleife beginnt."
+      courseC_artist_loop1_2019: "_\"Fantastisch!\"\"_ \n\nLasst uns etwas Stil hinzufügen,
+        indem wir den Pinsel mit dem<xml><block type=\"draw_line_style_pattern\" block-text=\"set
+        pattern\"> <title name=\"VALUE\">DEFAULT</title></block></xml> Baustein ändern,
+        bevor unsere Schleife beginnt."
+      courseC_artist_loops1a_2018: "**Freispiel:** Lasst uns etwas Größeres bauen,
+        einen Schritt nach dem anderen!  \n\nBenutze den `springe zu 200 über 200
+        runter` Baustein, um den Zeichner in die Mitte des Spielbereichs zu bringen,
+        und benutze dann den Baustein `Zeichne einen Aufkleber`, um einen Vogel erscheinen
+        zu lassen.  \n\n* * *\n\nDrücke \"Fertig stellen\", wenn du mit dem, was du
+        gemacht hast, zufrieden bist."
       courseC_artist_loops1a_2019: |-
         **Freispiel:** Lasst uns etwas Größeres bauen, einen Schritt nach dem anderen!
 
@@ -2085,6 +2695,12 @@ de-DE:
         direkt über dem ersten hinzu, um ein Bild wie das untenstehende zu erstellen.\n\n*
         * *\n\nDrücke \"Fertig stellen\", wenn du mit dem, was du gemacht hast, zufrieden
         bist.\n\n![expandable](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)\n![expandable](https://images.code.org/dd0e0eee69d37493c5ba584164316a9f-image-1553098351969.png)\n![expandable](https://images.code.org/880908899d8e6ceac8a8ce1bd0bf47eb-image-1553098355311.png)"
+      courseC_artist_loops4a_2018: |-
+        Editiere deinen Code so, dass du um 75 Pixel nach vorne springst, zwischen dem Stempeln des Vogels und des Schlägers. In diesem Rätsel stelle sicher, dass du innerhalb deiner Schleife zu 200 über 200 nach unten gesprungen bist, damit du in der Mitte bleibst!
+
+        * * *
+
+        ![expandable](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)
       courseC_artist_loops4a_2019: |-
         Bearbeite Deinen Code so, dass du zwischen den beiden Aufklebern vorwärts springst. In diesem Puzzle stelle sicher, dass du innerhalb der Schleife an Mitte gesprungen bist, um in der Mitte zu bleiben!
 
@@ -2125,6 +2741,26 @@ de-DE:
         ![expandable](https://images.code.org/9f28cb9b434b914846c3846bc6652f66-image-1560982666379.png)
         ![expandable](https://images.code.org/e9128684956504b0172708d63b65f93a-image-1560982686482.png)
         ![expandable](https://images.code.org/8e9cf52ecaf72678c65558f18f3e0d3e-image-1560982695632.png)
+      courseC_artist_loopsPre1a: |-
+        Und jetzt, setze diesen Code in eine ˋWiederholenˋ Schleife und wiederhole sie **6** mal.
+
+        -   Siehst du, wir haben am Schluss des zu wiederholenden Codes ein 60 Grad Drehung eingesetzt, um eine volle Drehung zu erhalten.
+      courseC_artist_loopsPre1a_2018: |-
+        Und jetzt, setze diesen Code in eine ˋWiederholenˋ Schleife und wiederhole sie **6** mal.
+
+        -   Siehst du, wir haben am Schluss des zu wiederholenden Codes ein 60 Grad Drehung eingesetzt, um eine volle Drehung zu erhalten.
+      courseC_artist_loopsPre1a_2019: |-
+        Und jetzt, setze diesen Code in eine ˋWiederholenˋ Schleife und wiederhole sie **6** mal.
+
+        -   Siehst du, wir haben am Schluss des zu wiederholenden Codes ein 60 Grad Drehung eingesetzt, um eine volle Drehung zu erhalten.
+      courseC_artist_loopsPrePre1a: |-
+        Benutze den <xml><block type="jump_to_xy" id="callMe"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml> Block um den Künstler in die Mitte des Spielbereichs zu bringen.\
+        Male dann eine 50 Pixel lange Linie mit dem <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">50</title></block></xml> Block.
+      courseC_artist_loopsPrePre1a_2018: |-
+        ### Der Zeichner ist an der falschen Stelle!
+
+        Benutze den Baustein <xml><block type="jump_to_xy" id="callMe"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml>, um den Zeichner in die Mitte des Spielbereichs zu bringen.
+        Zeichne dann eine 50 Pixel lange Linie mit dem Baustein <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">50</title></block></xml>.
       courseC_artist_loopsPrePre1a_2019: "Der Künstler ist an der falschen Stelle!
         \ \n\nBenutzen Sie den <xml><block type=\"jump_to_xy\" id=\"callMe\" block-text=\"jump
         to 200 over 200 down\"><title name=\"XPOS\">200</title><title name=\"YPOS\">200</title></block></xml>
@@ -2132,6 +2768,26 @@ de-DE:
         dann eine 50 Pixel lange Linie mit dem <xml><block type=\"draw_move_by_constant\"
         block-text=\"move forward\"><title name=\"DIR\">moveForward</title><title
         name=\"VALUE\">50</title></block></xml> Baustein."
+      courseC_artist_prog6_2018: |-
+        _"Jetzt ein Schild für Belle!"_
+
+        Zeichne dieses Quadrat mit 200 Pixel Seiten.
+      courseC_artist_prog6_2019: |-
+        _"Jetzt ein Schild für Belle!"_
+
+        Zeichne dieses Quadrat mit 200 Pixel Seiten.
+      courseC_collector_loops_challenge2: |-
+        _„Lass uns zusammen nach Schätzen suchen!“_
+
+        Hilf der Sammlerin mindestens **5** Schätze zu sammeln.
+      courseC_collector_loops_challenge2_2018: |-
+        _„Lass uns zusammen nach Schätzen suchen!“_
+
+        Hilf der Sammlerin mindestens **5** Schätze zu sammeln.
+      courseC_collector_loops_challenge2_2019: |-
+        _„Lass uns zusammen nach Schätzen suchen!“_
+
+        Hilf der Sammlerin mindestens **5** Schätze zu sammeln.
       courseC_collector_prog1: |-
         **Freies Spiel:** Das ist Laurel, die Abenteurerin! Bewege sie und sammle soviel Schätze wie möglich ein. Benutze den 'sammle' Block um die Schätze aufzuheben!
 
@@ -2444,12 +3100,44 @@ de-DE:
         kannst deine Zeichnung beliebig ändern, aber hier ist eine Idee:\n\n-   Versuche,
         die Formen in der Mitte der Schneeflocke mit denen am Ende jeder Linie zu
         tauschen!"
+      courseD_artist_binary_challenge2_2018: |-
+        Auf diesem Gitter sind 256 Bits dargestellt - das bedeutet, dass es für eine kleine Änderung leicht ist, große Probleme zu verursachen. Bist du emsig genug, um dieses Logo wiederherzustellen?
+        ![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)
+      courseD_artist_binary_challenge2_2019: |-
+        Auf diesem Gitter sind 256 Bits dargestellt - das bedeutet, dass es für eine kleine Änderung leicht ist, große Probleme zu verursachen. Bist du emsig genug, um dieses Logo wiederherzustellen?
+        ![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)
       courseD_bee_nestedLoops8: Sammle den gesamten Nektar jeder Blüte und erzeuge
         Honig bei jeder Honigwabe. Benutze eine verschachtelte Schleife.
       courseD_bee_nestedLoops8_2018: Sammle den gesamten Nektar jeder Blüte und erzeuge
         Honig bei jeder Honigwabe. Benutze eine verschachtelte Schleife.
       courseD_bee_nestedLoops8_2019: Sammle den gesamten Nektar jeder Blüte und erzeuge
         Honig bei jeder Honigwabe. Benutze eine verschachtelte Schleife.
+      courseD_bounce_events1s_2018: "Auf zum Reifen!     \n\nHänge einen Block an
+        das Ereignis `Wenn der linke Pfeil` an und drücke auf \"Ausführen \", um den
+        Spieler ins Netz zu bringen."
+      courseD_bounce_events1s_2019: "Auf zum Reifen!     \n\nHänge einen Block an
+        das Ereignis `Wenn der linke Pfeil` an und drücke auf \"Ausführen \", um den
+        Spieler ins Netz zu bringen."
+      courseD_bounce_events2s_2018: Nun hänge einen Baustein an das "when right event"
+        an, so dass die Hand zu beiden Körben gelangen kann.
+      courseD_bounce_events2s_2019: Nun hänge einen Baustein an das "when right event"
+        an, so dass die Hand zu beiden Körben gelangen kann.
+      courseD_bounce_events5s_2018: Wir werden einen Basketball schicken, der zur
+        Hand hinunterfliegt.  Hänge einen Baustein ans Ereignis "When ball hits hand"
+        an, um sicherzustellen, dass der Ball den Korb erreicht.
+      courseD_bounce_events5s_2019: Wir werden einen Basketball schicken, der zur
+        Hand hinunterfliegt.  Hänge einen Baustein ans Ereignis "When ball hits hand"
+        an, um sicherzustellen, dass der Ball den Korb erreicht.
+      courseD_bounce_events6s_2018: "Nun befindet sich der Korb oben.  \n\nFüge Code
+        hinzu, damit der Ball springt, wenn er auf die Wand trifft um dieses Rätsel
+        zu lösen."
+      courseD_bounce_events6s_2019: "Nun befindet sich der Korb oben.  \n\nFüge Code
+        hinzu, damit der Ball springt, wenn er auf die Wand trifft um dieses Rätsel
+        zu lösen."
+      courseD_collector_debugging6a_2018: 'Herausforderung: Verwende den Code im Arbeitsbereich,
+        um mindestens **6** Schätze zu erreichen!'
+      courseD_collector_debugging6a_2019: 'Herausforderung: Verwende den Code im Arbeitsbereich,
+        um mindestens **6** Schätze zu erreichen!'
       courseD_iceage_loops7: 'Scrat möchte wirklich gern zur Eichel kommen! '
       courseD_iceage_loops7_2019: 'Scrat möchte wirklich gern zur Eichel kommen! '
       courseD_maze_intro4_2019: '\_"Verfolge den Weg und führe mich zum Schwein."

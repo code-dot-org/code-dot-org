@@ -279,7 +279,9 @@ zh-TW:
       4-5 While Loops 7: 哇，現在這裡有三個土堆！你可以寫個程式，挖除它們直到地面變平整嗎？
       4-5 While Loops 8: " 有一個非常深的洞，還有一個非常大的土堆。需要幾鏟土才能把地面變平整呢？提示:：填土和挖土都用了「當…」迴圈。"
       4-5 While Loops Assessment 1: 這兒有許多坑洞和土堆。幫我把它們填滿或鏟除，讓地面變平整。
+      AB_Debug_PlayLab3: 將騎士挪移到每根旗子那兒。如果出現了問題，請找出錯誤來！
       Alien Defender: 專案點子：在 Play Lab 裡設計一個獨一無二的遊戲！
+      CDEF_debugging_flappy2: 為什麼這個遊戲操作不起來？
       CSD U3 Boolean Modify: 修改一下程式，讓所有的 console.log 指令輸出 true
       CSD U3 Boolean Modify_2018: 修改一下程式，讓所有的 console.log 指令輸出 true
       CSD U3 Boolean Modify_2019: 修改一下程式，讓所有的 console.log 指令輸出 true
@@ -292,6 +294,9 @@ zh-TW:
       CSD U3 L5 Freeplay: 改變花瓣尺寸的值數次，你的圖案會有什麼變化呢？
       CSD U3 L5 Freeplay_2018: 改變花瓣尺寸的值數次，你的圖案會有什麼變化呢？
       CSD U3 L5 Freeplay_2019: 改變花瓣尺寸的值數次，你的圖案會有什麼變化呢？
+      CSD U3 Sprites intro sprites: 做這個
+      CSD U3 Sprites intro sprites_2018: 做這個
+      CSD U3 Sprites intro sprites_2019: 做這個
       CSD U3 Variables change circle size: 改變花瓣尺寸的值數次，你的圖案會有什麼變化呢？
       CSD U3 Variables change circle size_2018: 改變花瓣尺寸的值數次，你的圖案會有什麼變化呢？
       CSD U3 Variables change circle size_2019: 改變花瓣尺寸的值數次，你的圖案會有什麼變化呢？
@@ -308,6 +313,9 @@ zh-TW:
       CSD U5 black white images pixelation 3: 修改寬度和高度的滑桿以找到圖像（點擊這裡查看更多）
       CSD U5 black white images pixelation 3_2018: 修改寬度和高度的滑桿以找到圖像（點擊這裡查看更多）
       CSD U5 black white images pixelation 3_2019: 修改寬度和高度的滑桿以找到圖像（點擊這裡查看更多）
+      CSD U5 black white images pixelation 4: 在笑臉上添加眉毛（單擊此處查看圖像）
+      CSD U5 black white images pixelation 4_2018: 在笑臉上添加眉毛（單擊此處查看圖像）
+      CSD U5 black white images pixelation 4_2019: 在笑臉上添加眉毛（單擊此處查看圖像）
       CSD U5 black white images pixelation 5: 畫你喜歡的任何東西
       CSD U5 black white images pixelation 5_2018: 畫你喜歡的任何東西
       CSD U5 black white images pixelation 5_2019: 畫你喜歡的任何東西
@@ -508,8 +516,18 @@ zh-TW:
       Dance Party Freeplay_2019: 現在就來創造一個外星生物的舞會！
       Dance Party Predict: 預測一下，當你點擊外星生物時會發生什麼事？
       Dance Party Predict_2019: 預測一下，當你點擊外星生物時會發生什麼事？
+      Dance_2019_01: '將<xml><block type="Dancelab_makeAnonymousDanceSprite" block-text="make
+        a new dancer"><title name="COSTUME" config="&quot;CAT&quot;, &quot;PINEAPPLE&quot;">"CAT"</title><title
+        name="LOCATION">{x: 200, y: 200}</title></block></xml>程式積木拖到工作區中，然後將其連接到<xml><block
+        type="Dancelab_whenSetup2" next_connection_disabled="true" block-text="setup"></block></xml>程式積木中以製作您的第一個舞者。'
+      Dance_2019_02: 選擇您按下按鍵時作出的舞蹈動作。
+      Dance_2019_03: 開始跳舞吧！對每個舞者進行程式設計，讓他們在您按下不同按鍵做出相應動作。為每個舞者選擇您喜歡的動作，或者將其設置為「（隨機）」來做出完全出乎您預料的動作！
+      Dance_2019_04: 第四小節之後，讓您的舞者開始新的動作。
       Dance_2019_05: 現在讓舞者在 6 個小節後開始新的動作！
-      Dance_2019_08: 使用「設定色調」積木來變更舞者的顏色。
+      Dance_2019_06: 製作一組伴舞演員將領舞者圍繞在中間。
+      Dance_2019_07: 更改伴舞演員組的大小。
+      Dance_2019_08: 嘗試更改其中一位舞蹈演員（或整組舞蹈演員）的色彩！
+      Dance_2019_09: 用這些新程式積木發揮創造力！
       Dance_2019_10: 隨著音樂律動！建立一支自己的舞蹈，與朋友分享。
       Dance_Party_01: 將「創建一個新的」積木拖曳至工作區中，並把它放到「設定」積木裡頭。
       Dance_Party_02: 讓麋鹿在 4 個小節後開始新的動作！
@@ -1298,6 +1316,8 @@ zh-TW:
       courseD_collector_debugging4: 修復一個或多個錯誤以收集到所有的寶藏。
       courseD_collector_debugging4a_2018: 修復一個或多個錯誤以收集到所有的寶藏。
       courseD_collector_debugging4a_2019: 修復一個或多個錯誤以收集到所有的寶藏。
+      courseD_collector_debugging6a_2018: 挑戰：使用工作區中的代碼，可至少獲得**6**件寶物！
+      courseD_collector_debugging6a_2019: 挑戰：使用工作區中的代碼，可至少獲得**6**件寶物！
       courseD_collector_nested_loops_challenge2a: 幫 Laurel 收集到至少 2 塊寶石。
       courseD_collector_ramp10: 幫 Laurel 收集到所有寶石。
       courseD_collector_ramp8: 幫 Laurel 收集到所有寶石。
@@ -1483,6 +1503,16 @@ zh-TW:
       courseF_bee_fwp7: "**挑戰：**修改你的函式，讓你的函式也可以釀造蜂蜜。"
       courseF_bee_fwp8: 使用你的新函式以畫出這個螺旋圖形。
       courseF_bee_fwp9_predict1: 使用你的新函式以完成這個關卡。
+      courseF_bee_variables_1_2018: 完成編碼，以便蜜蜂能夠收集到所有的蜂蜜與花蜜。
+      courseF_bee_variables_1_2019: 完成編碼，以便蜜蜂能夠收集到所有的蜂蜜與花蜜。
+      courseF_bee_variables_4_2018: 編輯代碼來解決這個難題。
+      courseF_bee_variables_4_2019: 編輯代碼來解決這個難題。
+      courseF_bee_variables_5_2018: 自行創作代碼來解決這個難題
+      courseF_bee_variables_5_2019: 自行創作代碼來解決這個難題
+      courseF_bee_variables_7_2018: 這個難題有些不同。需要做些什麼來解決呢？
+      courseF_bee_variables_7_2019: 這個難題有些不同。需要做些什麼來解決呢？
+      courseF_bee_variables_8_2018: 蜜蜂能從這朵花中採集到多少花蜜？
+      courseF_bee_variables_8_2019: 蜜蜂能從這朵花中採集到多少花蜜？
       courseF_playlab_variables3b_josh: 用變數 `age` 取代固定的年齡 `12`，幫 Kiki 和 Brain 完成對話。
       flappy_1: 添加一個積木到「當點擊時」積木下，然後點擊「運行」。點擊或輕觸螢幕，讓像素鳥移動至目標。
       flappy_11: 創造你自己的像素鳥遊戲。你可以改變所有看的到的東西和所有規則，甚至是重力。當你完成時，點擊完成，讓你的朋友可以在他們手機上體驗你做的遊戲。
@@ -1539,3 +1569,5 @@ zh-TW:
       scrat 18: "「如果…否則」積木會先檢查條件是否成立，然後才決定執行什麼操作。如果想讓我得到橡樹果實，就用用這個新的積木。"
       scrat 19: 再練習一次「如果…否則…」積木，你能一次就成功嗎？
       scrat 20: 你可以只靠 3 個積木，來幫我完成一個更複雜的關卡嗎？只要你成功了，不管是多長的曲徑，我都能自己通過囉！快點！冰快融化啦！
+      Dance_Party_extras_alternate_2019: 來來回回！ （單擊“更多”以獲取詳細信息）
+      Dance_Party_extras_mixed_2019: 更多按鈕（有關詳細信息，請單擊“更多”）

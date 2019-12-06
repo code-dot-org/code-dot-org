@@ -118,6 +118,7 @@ hr:
             '19': '19'
             '20': '20'
           LAYOUT:
+            '"diamond"': dijamant
             '"random"': slučajno odabran
       Dancelab_randomColor:
         text: nasumično odabrana boja

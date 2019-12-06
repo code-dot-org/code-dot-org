@@ -79,6 +79,6 @@ Indítsa el a Kódolás Óráját azáltal, hogyinspirálja a résztvevőket, va
 
 ## Mi jön a "Hour of Code" esemény után?
 
-Az "Hour of Code" esemény csak az első lépés, hogy újat tanulj a technológia működéséről, és hogy készíts új szoftvereket. Segítsd a diákokat az útjaikon és biztasd őket, hogy [tanuljanak online még többet](%= codeorg_url('/learn/beyond') %)!
+Az "Hour of Code" esemény csak az első lépés, hogy újat tanulj a technológia működéséről, és hogy készíts új szoftvereket. Help students continue their journey and encourage them to [learn more online](/beyond)!
 
 {{ signup_button }}

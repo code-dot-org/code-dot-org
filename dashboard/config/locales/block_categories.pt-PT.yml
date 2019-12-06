@@ -3,18 +3,28 @@ pt:
   data:
     block_categories:
       Actions: Ações
-      Loops: ciclos
-      Functions: Funções
+      Advanced: Avançado
+      Behaviors: Comportamentos
+      Brushes: Pincéis
       Color: Cor
-      Math: Matemática
-      Logic: Lógica
-      Variables: variáveis
+      Comment: Comentário
+      Comments: Comentários
       Conditionals: Condicionais
+      Dancers: Dançarinos
+      Default: Por defeito
       Events: Eventos
-      Text: texto
-      Location: Localização
-      Start: Começar
-      Booleans: Booleanos
-      test: teste
-      Name: Nome
-      Function: Função
+      Functions: Funções
+      'Functions ': 'Funções '
+      Game/Score: Jogo/Pontuação
+      Games/Score: Jogos/Pontuação
+      Groups: Grupos
+      Locations: Localizações
+      Logic: Lógica
+      Loops: Ciclos
+      Math: Matemática
+      Numbers: Números
+      Properties: Propriedades
+      Text: Texto
+      Variables: Variáveis
+      'Variables ': 'Variáveis '
+      World: Mundo

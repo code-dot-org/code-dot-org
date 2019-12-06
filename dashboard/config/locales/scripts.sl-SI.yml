@@ -1215,7 +1215,7 @@ sl:
               name: Uvod
             Nested Loops:
               name: Gnezdenje zank
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Computer Science Fundamentals:
               name: Osnove Računalništva
@@ -1229,3 +1229,13 @@ sl:
               name: Funkcije
             Variables:
               name: Spremenljivke
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Pogoji
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Pogojniki s kartami

@@ -373,8 +373,8 @@ es-MX:
         Course_4_Artist_12_b: 'La forma de la unidad es casi la misma que en el último
           acertijo, excepto que el medio hexágono es un poco más grande. '
         Course_4_Artist_12_c: "1.  Las primeras tres líneas tienen 60 píxeles de largo
-          y necesitas girar 60 grados.\n     2) Las siguientes dos líneas tienen 80
-          píxeles de largo y necesitas girar 120 grados "
+          y necesitas girar 60 grados.\n     2\\) Las siguientes dos líneas tienen
+          80 píxeles de largo y necesitas girar 120 grados "
         Course_4_Artist_12_d: |-
           **Solución:**
 
@@ -3870,7 +3870,19 @@ es-MX:
         challenges: |-
           **Desafío opcional**
 
-          Usa más de un bloque <xml><block type="Dancelab_whenKey"><title name="KEY">"up"</title></block></xml>.
+          Usa más de un bloque <xml><block type="Dancelab_whenKey"><title name="KEY"></title></block></xml>.
+      Dance_2019_03:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          -   Ambos bailarines deben realizar un movimiento.
+          -   Debes presionar las teclas de flecha.
+
+          _Este nivel termina después de 4 medidas._
+        challenges: |-
+          **Desafío opcional**
+
+          -   Haz que un bailarín responda a las teclas de flecha izquierda y derecha.
       Dance_2019_04:
         validation: |-
           **¿Cómo paso este nivel?**
@@ -3885,6 +3897,64 @@ es-MX:
           -   Después de 6 medidas, tu bailarín necesita estar haciendo un baile distinto después de 4 medidas.
 
           _Este nivel termina después de 12 medidas._
+        challenges: |-
+          **Desafío opcional**
+
+          -   Cambia el fondo cada vez que los bailarines cambien de movimiento.
+      Dance_2019_06:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          -   Crea un bailarín principal y un grupo de bailarines de respaldo dentro de las primeras 4 medidas de la canción.
+
+          _Este nivel termina después de 7 medidas._
+        challenges: |-
+          **Desafío opcional**
+
+          -   Crea múltiples grupos de bailarines de respaldo.
+      Dance_2019_07:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          -   Cambia el tamaño de al menos un bailarín después de que comience la música.
+
+          _Este nivel termina después de 6 medidas._
+        challenges: |-
+          **Desafío opcional**
+
+          -   Experimenta cambiando otras propiedades, como el ancho o la rotación.
+      Dance_2019_08:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          -   Cambia el tinte de al menos un bailarín.
+
+          _Este nivel termina después de 6 medidas._
+        tint_hint: "¿Notaste que tus bailarines no cambian al color exacto que eliges?
+          Esto se debe a que los **tintes** mezclan el color que eliges con los colores
+          de la bailarina."
+      Dance_2019_09:
+        validation: |-
+          **¿Cómo paso este nivel?**
+
+          -   ¡Solo tienes que presionar el botón "Finalizar"!
+        repeat_every_ideas: |-
+          **¿Necesitas algunas ideas?**
+
+          -   Cambia repetidamente el tamaño de un bailarín para que crezca.
+          -   Cambia repetidamente la rotación de un bailarín para que gire.
+          -   Cambia repetidamente la posición horizontal o vertical de un bailarín para que se mueva por la pantalla.
+
+          _¡También puedes usar números negativos para crear el efecto opuesto!_
+        next_previous: |-
+          **Desafío opcional**
+
+          -   Puedes usar este nuevo bloque de evento para recorrer una lista de movimientos de baile y establecer el movimiento como `(Aleatorio)`, `(Siguiente)` o `(Anterior)`.
+              <xml><block type="Dancelab_changeMoveEachLR">
+              <title name="GROUP">???</title>
+              <title name="MOVE">"rand"</title>
+              <title name="DIR">-1</title>
+              </block></xml>
       Dance_Party_01:
         validation: |-
           **¿Cómo paso este nivel?**
@@ -3988,6 +4058,8 @@ es-MX:
           -   Utiliza el bloque 'cuando presiona la flecha izquierda' para hacer que el Robot haga un movimiento de baile cuando lo pulses.
 
           _Este nivel termina después de 8 medidas._
+      Dance_Party_extras_alternate_2019:
+        alternate: El bloque alternativo está en la categoría "Bailarines".
       Function intro Ryan:
         Function_intro_Ryan_b: Si llama a las funciones correctamente, este es el
           camino por el que viajará...
@@ -5008,23 +5080,12 @@ es-MX:
             </block>
           </xml>
       course3_collector_debugging_challenge2:
-        courseD_collector_debugging_challenge2_b: |-
-          A continuación, recoge las gemas restantes en esta fila.
-
-          ![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)
-          Agrega estos bloques a tu programa.
-
-          <xml><block type="maze_move">
-                              <title name="DIR">moveBackward</title>
-                            </block>
-          <block type="controls_repeat">
-                  <title name="TIMES">4</title>
-                  <statement name="DO">
-
-                  </statement>
-                </block>
-
-          </xml>
+        courseD_collector_debugging_challenge2_b: "A continuación, recoge las gemas
+          restantes en esta fila.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04
+          AM.png>)\nAgrega estos bloques a tu programa.\n\n<xml><block type=\"maze_move\">\n
+          \                   <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block
+          type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement
+          name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
         courseD_collector_debugging_challenge2_c: "Finalmente, recoge el tesoro restante.
           Agrega estos bloques a tu programa.\n\n<xml>\n  <block type=\"maze_turn\">\n
           \               <title name=\"DIR\">turnRight</title>\n              </block>\n
@@ -11973,7 +12034,7 @@ es-MX:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">></title>
+              <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -11984,7 +12045,7 @@ es-MX:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">></title>
+              <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -11995,7 +12056,7 @@ es-MX:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">></title>
+              <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -12367,24 +12428,13 @@ es-MX:
           \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
           name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
           \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
-          \   <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
-        courseD_collector_debugging_challenge2_b: |-
-          A continuación, recoge las gemas restantes en esta fila.
-
-          ![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)
-          Agrega estos bloques a tu programa.
-
-          <xml><block type="maze_move">
-                              <title name="DIR">moveBackward</title>
-                            </block>
-          <block type="controls_repeat">
-                  <title name="TIMES">4</title>
-                  <statement name="DO">
-
-                  </statement>
-                </block>
-
-          </xml>
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
+        courseD_collector_debugging_challenge2_b: "A continuación, recoge las gemas
+          restantes en esta fila.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04
+          AM.png>)\nAgrega estos bloques a tu programa.\n\n<xml><block type=\"maze_move\">\n
+          \                   <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block
+          type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement
+          name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
         courseD_collector_debugging_challenge2_c: "Finalmente, recoge el tesoro restante.
           Agrega estos bloques a tu programa.\n\n<xml>\n  <block type=\"maze_turn\">\n
           \               <title name=\"DIR\">turnRight</title>\n              </block>\n

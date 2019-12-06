@@ -2,6 +2,10 @@
 de-DE:
   data:
     callouts:
+      2-3 Artist Debugging 1:
+        2-3_Artist_Debugging_1_a: Der Zeichner hat keinen "Step"-Button, aber du kannst
+          den Schieberegler nach links ziehen, um zu sehen, wie dein Programm sorgfältiger
+          läuft.
       2-3 Bee Conditionals 5:
         Bee_Cond_5_1a: Violette Blumen haben entweder 1 oder 0 Nektar.... doch das
           weißt du nicht, bis du den Code ausführst!
@@ -104,8 +108,15 @@ de-DE:
         dance_callout_11_b: Neuer Block!
       CourseD_Dance_Party_11_5:
         dance_party_11_5_groups: Schaue hier für "alle Enten" Bausteine
+      Dance_2019_01:
+        dance_callout_01: Fügen Sie diesen Block Ihrem Programm hinzu!
+      Dance_2019_02:
+        dance_callout_11_a: Fügen Sie diesen Block zu Ihrem Programm hinzu.
+        arrow_buttons: Drücken Sie zum Steuern Ihrer Tänzerin  die Pfeiltasten.
       Dance_2019_04:
         dance_callout_02: Fügen Sie diesen Block Ihrem Programm hinzu!
+      Dance_2019_05:
+        dance_callout_05: Fügen Sie Ihrem Programm ein neues Ereignis hinzu.
       Dance_2019_06:
         dance_party_11_5_groups: Neuer Block!
       Dance_2019_07:
@@ -364,10 +375,25 @@ de-DE:
           diesen zu verwenden!
       courseC_artist_loops1b_2019:
         sticker2: Füge dies zur Mitte deines Programms hinzu.
+      courseC_artist_loopsPrePre1a:
+        courseC_artist_loopsPrePre1a_1: Beginne mit diesem Block, um den Künstler
+          in die Mitte des Bildschirms zu bringen.
+      courseC_artist_loopsPrePre1a_2018:
+        courseC_artist_loopsPrePre1a_1: Beginne mit diesem Block, um den Künstler
+          in die Mitte des Bildschirms zu bringen.
+      courseC_artist_loopsPrePre1a_2019:
+        courseC_artist_loopsPrePre1a_1: Beginne mit diesem Block, um den Künstler
+          in die Mitte des Bildschirms zu bringen.
       courseC_collector_prog1:
         courseC_collector_prog1_1: Siehst du einige neue Blöcke in deiner Werkzeugkiste?
           Mach dir keine Sorgen, wir zeigen dir später noch wofür du sie benutzen
           kannst.
+      courseC_collector_prog1_2018:
+        courseC_collector_prog1_1: Siehst du ein paar neue Blöcke in der Toolbox?  Keine
+          Sorge, wir zeigen dir, wie du sie in einer anderen Lektion verwenden kannst.
+      courseC_collector_prog1_2019:
+        courseC_collector_prog1_1: Siehst du ein paar neue Blöcke in der Toolbox?  Keine
+          Sorge, wir zeigen dir, wie du sie in einer anderen Lektion verwenden kannst.
       courseC_collector_prog7:
         courseC_collector_prog7_1: Du kannst dir mehr Blöcke aus der Werkzeugkiste
           nehmen wenn du sie brauchst!
@@ -377,6 +403,9 @@ de-DE:
       courseC_collector_prog7_2019:
         courseC_collector_prog7_1: Du kannst dir mehr Blöcke aus der Werkzeugkiste
           nehmen wenn du sie brauchst!
+      courseC_maze_debugging5_2018:
+        courseC_maze_debugging5_1: Die grauen Bausteine sind gesperrt und können nicht
+          gelöscht werden!
       courseC_maze_debugging5_2019:
         courseC_maze_debugging5_1: Diese Bausteine sind gesperrt und können nicht
           gelöscht werden!

@@ -1459,7 +1459,6 @@ ar:
             Dance Party:
               name: حفلة رقص
         dance-extras:
-          title: استمر في الرقص
           description: تجاوز الساعة الأولى بأفكار مشاريع موسعة.
         coursef-2019:
           stages:
@@ -1672,7 +1671,7 @@ ar:
             Dance Party:
               name: حفلة رقص
           description: برمِج حفلة الرقص الخاصة بك لمشاركتها مع أصدقائك.
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Sequencing:
               name: التجزيء
@@ -1689,5 +1688,14 @@ ar:
             For Loops:
               name: للحلقات
         dance-extras-2019:
-          title: استمر في الرقص
           description: تجاوز الساعة الأولى بأفكار مشاريع موسعة.
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: الجمل الشرطية
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: حشد المصادر
+            Conditionals with Cards:
+              name: الشرطية مع بطاقات

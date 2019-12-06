@@ -453,10 +453,50 @@ th-TH:
       CourseE_HOC 2018 Level_9b: คุณถึงแนวปะการังแล้ว ตอนนี้ก็ค้นหา **Heart of the
         Sea** \[] (<https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png>)
         ต่อได้ ใช้ปะการังสีน้ำเงินและสีแดงเพื่อไปให้ถึง **หีบ** (<https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png>)
+      Dance_2019_01: "ลากบล็อก <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"
+        block-text=\"make a new dancer\"><title name=\"COSTUME\" config=\"&quot;CAT&quot;,
+        &quot;PINEAPPLE&quot;\">\"CAT\"</title><title name=\"LOCATION\">{x: 200, y:
+        200}</title></block></xml> เข้ามาในพื้นที่ทำงาน แล้วเชื่อมต่อภายใน\nบล็อก
+        <xml><block type=\"Dancelab_whenSetup2\" next_connection_disabled=\"true\"
+        block-text=\"setup\"></block></xml> \n\n เลือก `แมว` หรือ `สลอธ` เพื่อสร้างนักเต้นคนแรกของคุณ\n\n-
+        \  _คุณยังสามารถคลิกหลอดไฟทางซ้ายมือได้อีกด้วย หากต้องการข้อมูลเพิ่มเติมหรือต้องการความท้าทายพิเศษ_"
+      Dance_2019_02: "บล็อก <xml><block type=\"Dancelab_whenKey\" block-text=\"when
+        up pressed\"></block></xml> ทำให้คุณใช้โค้ดได้เมื่อกดปุ่มลูกศร \nใช้บล็อก
+        <xml><block type=\"Dancelab_doMoveEachLR\" block-text=\"do once\"><title name=\"GROUP\">\"CAT\"</title><title
+        name=\"MOVE\">MOVES.XClapSide</title><title name=\"DIR\">-1</title></block></xml>
+        เพื่อทำให้แมวปรบมือ!\n\n_อย่าลืมกดปุ่ม \"ลูกศรขึ้น\" หรือ ![](<https://images.code.org/419e704e6841c0b696016bf5029b8cb9-image-1571864825506.06.45
+        PM.png>) หลังจากคลิกปุ่ม ทำงาน!_"
+      Dance_2019_03: ได้เวลาเต้นกระจาย! โปรแกรมให้นักเต้นแต่ละคนขยับตัวเมื่อกดปุ่มที่แตกต่างกัน
+        เลือกท่าเต้นโปรดของคุณสำหรับนักเต้นแต่ละคน หรือกำหนดค่าเป็น `(สุ่ม)` เพื่อดูสิ่งที่คาดไม่ถึง!
+      Dance_2019_04: "ทำให้นักเต้นขยับตัวตามจังหวะเสียงดนตรี!\n\nเชื่อมต่อบล็อก <xml><block
+        type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">4</title><title name=\"UNIT\">\"measures\"</title></block></xml>
+        เข้ากับบล็อก <xml><block type=\"Dancelab_changeMoveEachLR\"><title name=\"GROUP\">\"SHARK\"</title><title
+        name=\"MOVE\">MOVES.ThisOrThat</title><title name=\"DIR\">-1</title></block></xml>
+        จากกล่องเครื่องมือ \n\nนักเต้นของคุณควรเริ่มท่าเต้นใหม่หลังจากห้องดนตรีที่สี่\n\n**ห้องดนตรี**
+        ใช้สำหรับนับจังหวะของเสียงดนตรี ในบทฝึกสอนนี้ หนึ่งห้องดนตรีจะมีความยาวทั้งสิ้นสี่จังหวะ"
       Dance_2019_05: |-
         _เอาละเรามาปลดปล่อยและเต้นรำกันเถิด!_
 
         เพิ่ม <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> บล็อกในพื้นที่ทำงานของคุณ ทำให้นักเต้นเริ่มการเคลื่อนไหวใหม่หลังผ่านไปแล้ว 6 ห้องดนตรี
+      Dance_2019_06: "ใช้บล็อกใหม่นี้เพื่อสร้างกลุ่มนักเต้นประกอบขนาดเล็กลงรอบตัวนักเต้นนำที่อยู่ตรงกลาง
+        \n\n  <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\">\n    <title name=\"N\">???</title>\n
+        \   <title name=\"COSTUME\" config=\"&quot;BEAR&quot;, &quot;CAT&quot;, &quot;FROG&quot;,
+        &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title>\n
+        \   <title name=\"LAYOUT\">\"circle\"</title>\n  </block></xml>\n\nตอนนี้คุณสามารถสร้างนักเต้นประกอบได้เป็นจำนวนมากในครั้งเดียว!"
+      Dance_2019_07: |-
+        นักเต้นทุกคนมีชุด_คุณสมบัติ_ซึ่งคอยควบคุมลักษณะที่แสดงให้เห็น
+
+        ใช้ <xml><block type="Dancelab_setPropEach" block-text="the set block"><title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title><title name="PROPERTY">"scale"</title><title name="VAL">???</title></block></xml> ใต้บล็อกเหตุการณ์สีเขียวเพื่อทำให้นักเต้นปรากฏตัวใกล้ขึ้นหรือไกลออกไปหลังเสียงดนตรีเริ่มต้น
+      Dance_2019_08: นักต้นมีคุณสมบัติ "ระดับอ่อนสี" ที่สามารถเพิ่มเลเยอร์สีได้ ลองเปลี่ยนระดับอ่อนสีนักเต้นของคุณดูสักหนึ่งคน
+        (หรือทั้งกลุ่มเลยก็ได้)!
+      Dance_2019_09: |-
+        นี่คือเหตุการณ์พิเศษที่จะเริ่มซ้ำหลายครั้ง
+
+        <xml><block type="Dancelab_everySeconds"><title name="N">2</title><title name="UNIT">"measures"</title></block></xml>
+
+        บล็อกใหม่อื่นๆ ในกล่องเครื่องมือของคุณทำให้สุ่มเปลี่ยนคุณสมบัติของนักเต้นได้เรื่อยๆ
+
+        _มีความคิดสร้างสรรค์และสนุกสนานไปด้วยกัน!_
       Dance_2019_10: ปลดปล่อยและสนุกกับการเต้นรำของคุณ! สร้างการเต้นรำของคุณเองเอาไว้แชร์กับเพื่อน
         ๆ ของคุณ
       Dance_Party_01: |-
@@ -514,11 +554,11 @@ th-TH:
         ลองตรวจสอบบล็อกนี้:
 
         <xml>
-        <block type="Dancelab_makeNewDanceSpriteGroup">
-        <title name="N">6</title>
-        <title name="COSTUME">"DUCK"</title>
-        <title name="LAYOUT">"circle"</title>
-        </block></xml>
+          <block type="Dancelab_makeNewDanceSpriteGroup">
+            <title name="N">6</title>
+            <title name="COSTUME">"DUCK"</title>
+            <title name="LAYOUT">"circle"</title>
+          </block></xml>
 
         ถึงตอนนี้คุณสามารถสร้างนักเต้นเป็นกลุ่มได้ในคราวเดียว!
 
@@ -527,6 +567,14 @@ th-TH:
         ทำให้หุ่นยนต์ “ทิ้งตัว” เมื่อคุณกดปุ่มลูกศรขวามือ
       Dance_Party_12: ปลดปล่อยและสนุกกับการเต้นรำของคุณ! สร้างการเต้นรำของคุณเองเอาไว้แชร์กับเพื่อน
         ๆ ของคุณ
+      Dance_Party_extras_alternate_2019: |-
+        # จัดรูปแบบกลุ่มนักเต้น!
+
+        ตรวจสอบท่าเต้นที่ใช้บล็อก <xml><block type="Dancelab_alternateMoves"><title name="GROUP">sprites</title><title name="N">2</title><title name="MOVE1">MOVES.Roll</title><title name="MOVE2">MOVES.ClapHigh</title></block></xml> ท่านี้เพื่อเปลี่ยนรูปแบบของนักเต้นประกอบตลอดทั้งการเต้น ลองใช้ไอเดียเหล่านี้เพื่อขยายผล:
+
+        -   สร้างนักเต้นกลุ่มที่สองในเลย์เอาท์อื่น
+        -   เปลี่ยนเลย์เอาท์เมื่อกดปุ่ม
+        -   เปลี่ยนคุณสมบัติเมื่อนักเต้นเปลี่ยนรูปแบบ
       Dance_Party_extras_battle: |-
         # นักเต้น
 
@@ -553,6 +601,10 @@ th-TH:
         -   ลองความยาวโน๊ตอื่นๆ (เช่น 0.5 สำหรับโน๊ตสองจังหวะหรือ 0.125 สำหรับโน๊ตครึ่งจังหวะ)
         -   เพิ่มเหตุการณ์ “หลังจากห้องดนตรี”
         -   เปลี่ยนจาก “ห้องดนตรี" เป็น "วินาที" และพยายามหาจังหวะเวลาการเต้นดู
+      Dance_Party_extras_every_beat_2019: |-
+        # เร่งจังหวะขึ้น ลดความเร็วลง
+
+        ท่าเต้นสุดท้ายท่านี้ใช้บล็อก <xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml> เพื่อควบคุมความเร็วการเคลื่อนไหวของนักเต้นแต่ละคน ทดลองใช้ความเร็วที่แตกต่างกันไปในเพลงแต่ละจุด ปรับแต่งท่าเต้นนี้ได้ตามใจชอบ หรือกลับไปใช้ท่าเต้นก่อนหน้าใดก็ได้เพื่อทำให้ดูดียิ่งขึ้น
       Dance_Party_extras_layout: |-
         # มาจัดรูปแบบตำแหน่งการยืนของกลุ่มนักเต้นกัน
 
@@ -573,6 +625,10 @@ th-TH:
         # เร่งจังหวะขึ้น ลดความเร็วลง
 
         การเต้นสุดท้ายนี้ใช้บล็อก “ตั้งค่าความเร็ว” เพื่อควบคุมความเร็วแต่ละท่าของนักเต้น ลองใช้ความเร็วต่างกันไปในจุดต่างๆ ของเพลง ลองปรับแต่งการเต้นนี้ไปเรื่อยๆ หรือกลับไปยังการเต้นก่อนหน้าเพื่อปรับปรุงการเต้นให้ยอดเยี่ยมกว่าเดิม
+      Dance_Party_extras_speed_2019: |-
+        # เร่งจังหวะขึ้น ลดความเร็วลง
+
+        ท่าเต้นสุดท้ายท่านี้ใช้บล็อก <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> เพื่อควบคุมความเร็วการเคลื่อนไหวของนักเต้นแต่ละคน ทดลองใช้ความเร็วที่แตกต่างกันไปในเพลงแต่ละจุด ปรับแต่งท่าเต้นนี้ได้ตามใจชอบ หรือกลับไปใช้ท่าเต้นก่อนหน้าใดก็ได้เพื่อทำให้ดูดียิ่งขึ้น
       Dance_Party_extras_visible: |-
         # พวกเขาหายไปไหนกัน
 
@@ -582,13 +638,14 @@ th-TH:
         -   แสดงและซ่อนนักเต้นโดยใช้แป้นลูกศร
         -   ซ่อนนักเต้นทั้งหมด และสลับเปลี่ยนไปใช้เอฟเฟกต์พื้นหลังที่น่าตื่นเต้น
       Dance_Party_extras_visible_2019: |-
-        # พวกเขาหายไปไหนกัน
+        # โน๊ตหนึ่งจังหวะ
 
-        การเต้นนี้จะแสดงและซ่อนกลุ่มนักเต้น 2 กลุ่ม ลองเล่นดู และพยายามเพิ่มความเก๋ไก๋เข้าไปในแบบของคุณเอง
+        การเต้นส่วนใหญ่ของเราใช้โน๊ตสี่จังหวะ ซึ่งในแต่ละห้องดนตรีประกอบด้วยโน๊ตหนึ่งจังหวะจำนวน 4 ตัว ท่าเต้นนี้ใช้ [blockly block][0] ทำให้นักเต้นปรบมือตามโน๊ตหนึ่งจังหวะทุกตัวหลังจากห้องดนตรีที่ 5
 
-        -   เพิ่มนักเต้นอีกกลุ่ม
-        -   แสดงและซ่อนนักเต้นโดยใช้แป้นลูกศร
-        -   ซ่อนนักเต้นทั้งหมด และสลับเปลี่ยนไปใช้เอฟเฟกต์พื้นหลังที่น่าตื่นเต้น
+        ลองเปลี่ยนตัวเลขในบล็อกเพื่อดูว่าการเต้นจะเปลี่ยนไปอย่างไร
+
+        -   ทดลองกับตัวโน๊ตที่มีความยาวอื่นๆ (เช่น 0.5 สำหรับโน๊ตสองจังหวะ หรือ 0.125 สำหรับโน๊ตครึ่งจังหวะ)
+        -   เพิ่มเหตุการณ์อื่นๆ
       Function intro Ryan: "มี **ฟังก์ชั่น**ชื่อ`สร้างสะพาน` มีอยู่แล้วในพื้นที่ทำงานของคุณ
         โค้ดทั้งหมดที่คุณต้องใช้เพื่อข้ามแม่น้ำได้ให้มาพร้อมแล้ว! \nให้ต่อบล็อกเล็กๆ
         สีเขียว<xml> <block type=\"procedures_callnoreturn\" id=\"callMe\"><mutation
@@ -2613,3 +2670,18 @@ th-TH:
         200 พิกเซล
       ramp_artist_loops9_2019: แก้ปริศนานี้ ด้วยการวาดสี่เหลี่ยมจัตุรัสที่มีความยาวด้านเท่ากับ
         200 พิกเซล
+      Dance_Party_extras_layout_2019: |-
+        # มาในรูปแบบกันเถอะ!
+
+        ดูการเต้นนี้ที่ใช้บล็อก <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> บล็อกเพื่อเปลี่ยนรูปแบบของนักเต้นสำรองตลอดการเต้น ลองหนึ่งในแนวคิดเหล่านี้เพื่อขยาย:
+
+        -   สร้างกลุ่มนักเต้นกลุ่มที่สองในเค้าโครงที่แตกต่าง
+        -   เปลี่ยนเค้าโครงเมื่อกดปุ่ม
+        -   เปลี่ยนคุณสมบัติเมื่อนักเต้นเปลี่ยนการก่อตัว
+      Dance_Party_extras_mixed_2019: |-
+        # ปุ่มเพิ่มเติม
+
+        การเต้นรำนี้ช่วยให้คุณสามารถควบคุมคุณสมบัตินักเต้นแบบเรียลไทม์ในขณะที่พวกเขาเต้นโดยอัตโนมัติ ลองทำการเปลี่ยนแปลงคุณสมบัติอื่น ๆ เมื่อคุณกดปุ่ม ตัวอย่างเช่น:
+
+        -   สุ่มสีของนักเต้นเมื่อคุณกด "ลง"
+        -   เพิ่มกลุ่มนักเต้นด้วยเค้าโครงแบบสุ่มเมื่อคุณกด "space"

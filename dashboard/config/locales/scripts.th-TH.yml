@@ -1531,7 +1531,7 @@ th:
         dance:
           stages:
             Dance Party:
-              name: งานเต้นรำ
+              name: Dance Party
           title: งานเต้นรำ
           description_short: มีเพลงของศิลปินดังต่างๆ เช่น Katy Perry, Madonna, J.
             Balvin, Sia, Keith Urban, Ciara และคนอื่นๆ อีก 25 คน!
@@ -1551,13 +1551,12 @@ th:
         dance--draft:
           stages:
             Dance Party:
-              name: งานเต้นรำ
+              name: Dance Party
         dance-draft:
           stages:
             Dance Party:
-              name: งานเต้นรำ
+              name: Dance Party
         dance-extras:
-          title: สร้างโค้ดเต้นรำกันต่อไป
           description: ศึกษาต่อเนื่องจากขั้นพื้นฐานด้วยการใส่ไอเดียเพิ่มเติมให้กับโครงงาน
         coursef-2019:
           stages:
@@ -1590,7 +1589,7 @@ th:
         dance-low:
           stages:
             Dance Party:
-              name: งานเต้นรำ
+              name: Dance Party
           description_short: เขียนโค้ดสำหรับปาร์ตี้เต้นรำของคุณเอง เพื่อแชร์กับเพื่อนๆ
             ของคุณ! (เวอร์ชั่นนี้สำหรับการเชื่อมต่อสัญญาณที่ไม่รวดเร็ว)
         coursed-2019:
@@ -1628,7 +1627,7 @@ th:
             Artist Binary:
               name: ศิลปินศูนย์หนึ่ง
             Dance Party:
-              name: งานเต้นรำ
+              name: Dance Party
         coursee-2019:
           stages:
             Sequence in Maze:
@@ -1694,7 +1693,7 @@ th:
             Internet:
               name: อินเทอร์เน็ต
             Dance Party:
-              name: งานเต้นรำ
+              name: Dance Party
         andrea-test:
           stages:
             'null':
@@ -1923,9 +1922,9 @@ th:
         dance-2019:
           stages:
             Dance Party:
-              name: งานเต้นรำ
+              name: Dance Party
           description: เขียนโค้ดสำหรับปาร์ตี้เต้นรำของคุณเอง เพื่อแชร์กับเพื่อนๆ ของคุณ!
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Computer Science Fundamentals:
               name: พื้นฐานด้านวิทยาการคอมพิวเตอร์
@@ -1942,5 +1941,34 @@ th:
             For Loops:
               name: การวนรอบ
         dance-extras-2019:
-          title: สร้างโค้ดเต้นรำกันต่อไป
           description: ศึกษาต่อเนื่องจากขั้นพื้นฐานด้วยการใส่ไอเดียเพิ่มเติมให้กับโครงงาน
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: เงื่อนไข
+        time4cs-control-unit-2:
+          stages:
+            Conditionals with Cards:
+              name: เงื่อนไข
+            Nested Loops in Bee:
+              name: ลูปซ้อนลูป ในเรื่องผึ้ง
+            Nested Loops in Artist:
+              name: ลูปซ้อนลูป ในเกมศิลปิน
+            Nested Loops in Frozen:
+              name: ลูปซ้อนลูป ในเกม Frozen
+            Functions in Minecraft:
+              name: ฟังก์ชั่นในไมน์คราฟท์
+            Functions in Harvester:
+              name: ฟังก์ชั่นต่างๆ ที่ใช้กับเรื่องเกษตรกร
+        time4cs-experiment-unit-2:
+          stages:
+            Nested Loops in Maze:
+              name: ลูปซ้อนลูป ในเกมเขาวงกต
+            Fancy Shapes using Nested Loops:
+              name: ลูปซ้อนลูป ในเกมศิลปิน
+            Nested Loops with Frozen:
+              name: ลูปซ้อนลูป กับเกม Frozen
+            Functions in Minecraft:
+              name: ฟังก์ชั่นในไมน์คราฟท์
+            Functions with Harvester:
+              name: ฟังก์ชั่นต่างๆ กับเรื่องเกษตรกร

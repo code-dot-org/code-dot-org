@@ -25,6 +25,7 @@ sv:
       user:
         name: 'Visat namn'
         email: 'E-post'
+        parent_email: 'Förälder/vårdnadshavares e-postadress'
         username: "användarnamn\n"
         password: 'Lösenord'
         password_confirmation: 'Lösenordsbekräftelse'
@@ -486,6 +487,8 @@ sv:
       audience: 'Ålder 13+'
       cta: 'Läs mer'
     dance:
+      title: 'Dansparty'
+    dance-2019:
       title: 'Dansparty'
     hoc:
       title: 'Klassisk labyrint'

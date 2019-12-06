@@ -1989,7 +1989,6 @@ bs:
             Dance Party:
               name: Plesna zabava
         dance-extras:
-          title: Nastavite plesati
           description: Izađite iz okvira prvog sata sa proširenim idejama o projektu.
         coursef-2019:
           stages:
@@ -2241,7 +2240,7 @@ bs:
           stages:
             Dance Party:
               name: Plesna zabava
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Planning:
               name: Planiranje
@@ -2260,5 +2259,14 @@ bs:
             For Loops:
               name: Od-Do-Za Petlje
         dance-extras-2019:
-          title: Nastavite plesati
           description: Izađite iz okvira prvog sata sa proširenim idejama o projektu.
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Uvjeti
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Uvjeti s Kartama

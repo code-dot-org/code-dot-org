@@ -1706,7 +1706,6 @@ uk:
             Dance Party:
               name: Танцювальна вечірка
         dance-extras:
-          title: Продовжуємо танцювати
           description: Рухайся далі однієї години з розширеними проектними ідеями.
         coursef-2019:
           description_audience: 'Вік: 9-13'
@@ -1942,7 +1941,7 @@ uk:
           stages:
             Dance Party:
               name: Танцювальна вечірка
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           title: Викладання основ інформатики
           description_short: Дізнайтеся, як викладати інформатику за допомогою безкоштовного онлайнового курсу основ інформатики від Code.org, який можна проходити у довільному темпі.
           stages:
@@ -1965,5 +1964,14 @@ uk:
             For Loops:
               name: Цикли For
         dance-extras-2019:
-          title: Продовжуємо танцювати
           description: Рухайся далі однієї години з розширеними проектними ідеями.
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Умови
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Краудсорсинг
+            Conditionals with Cards:
+              name: Листівки та умови

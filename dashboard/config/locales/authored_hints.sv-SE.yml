@@ -134,6 +134,19 @@ sv-SE:
           -   Kontrollera att en dansare visas på skärmen.
 
           _Denna nivå slutar efter 4 åtgärder._
+        challenges: "**Valfria utmaningar**   \\_Välj att spela en annan sång.   Flytta
+          din dansare till ett nytt ställe.   Skapa mer än en dansare."
+      Dance_2019_02:
+        validation: "**Hur klarar jag den här nivån?**-   Dansaren måste ta ett danssteg.-
+          \  Du måste trycka på en piltangent._Den här nivån är slut efter fyra takter._"
+        challenges: '**Valfri utmaning**-   Använd mer än ett <xml><block type="Dancelab_whenKey"><title
+          name="KEY"></title></block></xml>-block.'
+      Dance_2019_03:
+        validation: "**Hur klarar jag den här nivån?**-   Båda dansarna måste ta ett
+          danssteg.-   Du måste trycka på piltangenterna._Den här nivån är slut efter
+          fyra takter._"
+        challenges: "\\*Valfri utmaning\\*\\*-   Gör så att en dansare rör sig med
+          vänster och höger piltangent."
       Dance_2019_04:
         validation: |-
           **Hur ska man ta sig förbi denna nivå?**
@@ -148,6 +161,39 @@ sv-SE:
           -   Efter 6 åtgärder måste din dansare göra en annan dans än den som gjordes efter 4 åtgärder.
 
           _Denna nivå slutar efter 12 åtgärder._
+        challenges: "**Valfri utmaning**-   Ändra bakgrunden när dansarna ändrar danssteg."
+      Dance_2019_06:
+        validation: "**Hur klarar jag den här nivån?**-   Skapa en ledande dansare
+          och en grupp bakgrundsdansare._Den här nivån är slut efter sju takter._"
+        challenges: "**Valfri utmaning**-   Skapa flera grupper med bakgrundsdansare."
+      Dance_2019_07:
+        validation: "**Hur klara jag den här nivån?**-   Ändra storlek på minst en
+          dansare när musiken har börjat._Den här nivån är slut efter sex takter._"
+        challenges: |-
+          **Valfri utmaning**
+
+          -   Experimentera genom att ändra andra egenskaper (bredd, längd, rotation osv.)
+      Dance_2019_08:
+        validation: "**Hur klara jag den här nivån?**-   Ändra färgton på minst en
+          dansare._Den här nivån är slut efter sex takter._"
+        tint_hint: Märkte du att dina dansare inte ändrar färg till exakt den ton
+          du valde? Det beror på att **färgtoner** blandar de färger som du väljer
+          med dansarens färger.
+      Dance_2019_09:
+        validation: "**Hur klarar jag den här nivån?**-   Du behöver bara att trycka
+          på ”Klar”-knappen!"
+        repeat_every_ideas: "**Behöver du idéer?**-   Ändra en dansares storlek flera
+          gånger så att den blir större.-   Ändra en dansares rotation flera gånger
+          så att den snurrar runt.-   Ändra en dansares horisontella eller vertikala
+          position flera gånger så att den rör sig över skärmen._Du kan också använda
+          negativa siffror för att skapa motsatt effekt!_"
+        next_previous: '**Valfri utmaning**-   Du kan också använda det här nya händelse-blocket
+          för att gå igenom flera olika danssteg genom att ange rörelsen som ”(Slumpmässig)”,
+          ”(Nästa)” eller ”(Föregående)”.    <xml><block type="Dancelab_changeMoveEachLR">    <title
+          name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;,
+          &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;,
+          &quot;SHARK&quot;, &quot;UNICORN&quot;">???</title>    <title name="MOVE">"slump"</title>    <title
+          name="DIR">-1</title>    </block></xml>'
       Dance_Party_01:
         validation: |-
           **Hur ska man ta sig förbi denna nivå?**
@@ -388,3 +434,9 @@ sv-SE:
         courseE_artist_functions1_a: Rutorna varje har 100 pixel sidor, det betyder
           att du kommer att behöva flytta framåt 175 pixlar innan du ritar din andra
           torget.
+      Dance_Party_05:
+        validation: "**Hur klarar jag denna nivå?** \n\n-   Din dansare behöver cykla
+          genom åtminstone 4 olika danssteg innan nivån slutar. \n\n_Denna nivå slutar
+          efter 12 takter._"
+      Dance_Party_extras_alternate_2019:
+        alternate: Det alternativa blocket är i kategorin "Dansare".
