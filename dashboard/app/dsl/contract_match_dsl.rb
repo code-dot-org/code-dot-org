@@ -6,4 +6,8 @@ class ContractMatchDSL < ContentDSL
   end
 
   def answer(text) @hash[:answers] << text end
+
+  def self.i18n_fields
+    super + %w(answers)
+  end
 end
