@@ -74,6 +74,7 @@ csf_script_ids as
          ss.stage_hi AS high,
          ss.frl_eligible_percent,
          ss.urm_percent,
+         ss.high_needs,
          ss.students,
          sc.latitude,
          sc.longitude,
