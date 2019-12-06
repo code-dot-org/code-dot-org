@@ -1,4 +1,4 @@
-var i18n = require('./locale');
+var i18n = require('../locale');
 
 var blocksToDisplayText = {
   bedrock: i18n.blockTypeBedrock(),
