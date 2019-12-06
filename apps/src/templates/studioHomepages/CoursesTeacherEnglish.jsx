@@ -1,6 +1,5 @@
 import $ from 'jquery';
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import ContentContainer from '../ContentContainer';
 import {AdministratorResourcesActionBlock} from './TwoColumnActionBlock';
@@ -16,10 +15,6 @@ import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
  * though it may also be shown for a signed-out user using English.
  */
 class CoursesTeacherEnglish extends Component {
-  static propTypes = {
-    showOceans: PropTypes.bool
-  };
-
   componentDidMount() {
     // The components used here are implemented in legacy HAML/CSS rather than React.
     $('.courseexplorer')
@@ -49,7 +44,7 @@ class CoursesTeacherEnglish extends Component {
             link={pegasus('/hourofcode/overview')}
             showLink={true}
           >
-            <CourseBlocksHoc showOceans={this.props.showOceans} />
+            <CourseBlocksHoc />
           </ContentContainer>
 
           <CourseBlocksTools isEnglish={true} />
