@@ -23,7 +23,7 @@ import arrowDownImage from '@public/images/arrow-down.png';
 import snail from '@public/images/snail-large.png';
 import loadingGif from '@public/images/loading.gif';
 import Typist from 'react-typist';
-import {getCurrentGuide, dismissCurrentGuide} from './models/guide';
+import * as guide from './models/guide';
 import {playSound} from './models/soundLibrary';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {
@@ -662,7 +662,7 @@ class Content extends React.Component {
   }
 }
 
-let Button = class Button extends React.Component {
+let UnwrappedButton = class Button extends React.Component {
   static propTypes = {
     className: PropTypes.string,
     style: PropTypes.object,
@@ -671,8 +671,8 @@ let Button = class Button extends React.Component {
     sound: PropTypes.string
   };
 
-  onClick(event) {
-    dismissCurrentGuide();
+  onClick = event => {
+    guide.dismissCurrentGuide();
     const clickReturnValue = this.props.onClick(event);
 
     if (clickReturnValue !== false) {
@@ -682,7 +682,7 @@ let Button = class Button extends React.Component {
         playSound('other');
       }
     }
-  }
+  };
 
   render() {
     return (
@@ -690,14 +690,14 @@ let Button = class Button extends React.Component {
         type="button"
         className={this.props.className}
         style={[styles.button, this.props.style]}
-        onClick={event => this.onClick(event)}
+        onClick={this.onClick}
       >
         {this.props.children}
       </button>
     );
   }
 };
-Button = Radium(Button);
+export const Button = Radium(UnwrappedButton); // Exported for unit tests.
 
 let ConfirmationDialog = class ConfirmationDialog extends React.Component {
   static propTypes = {
@@ -1275,7 +1275,7 @@ let Pond = class Pond extends React.Component {
 
   onPondClick = e => {
     // Don't allow pond clicks if a Guide is currently showing.
-    if (getCurrentGuide()) {
+    if (guide.getCurrentGuide()) {
       return;
     }
 
@@ -1480,7 +1480,7 @@ let Guide = class Guide extends React.Component {
   }
 
   dismissGuideClick() {
-    const dismissed = dismissCurrentGuide();
+    const dismissed = guide.dismissCurrentGuide();
     if (dismissed) {
       playSound('other');
     }
@@ -1488,7 +1488,7 @@ let Guide = class Guide extends React.Component {
 
   render() {
     const state = getState();
-    const currentGuide = getCurrentGuide();
+    const currentGuide = guide.getCurrentGuide();
 
     let guideBgStyle = [styles.guideBackground];
     if (currentGuide) {
