@@ -22,7 +22,7 @@ class BaseDSL
     object.name(name) if name.present?
     ascii = str ? str.to_ascii : ''
     object.instance_eval(ascii, filename)
-    [object.parse_output, object.i18n_strings]
+    [object.parse_output, object.i18n_hash]
   end
 
   # override in subclass
@@ -32,7 +32,7 @@ class BaseDSL
 
   # after parse has been done, this function returns a hash of all the
   # user-visible strings from this instance
-  def i18n_strings
+  def i18n_hash
     fields = self.class.i18n_fields.
       # we stringify the keys in the hash below, so also stringify these
       map(&:to_str).
@@ -49,7 +49,7 @@ class BaseDSL
   end
 
   # can be extended by subclasses to specify which fields to include in the
-  # i18n_strings hash
+  # i18n hash
   def self.i18n_fields
     []
   end
