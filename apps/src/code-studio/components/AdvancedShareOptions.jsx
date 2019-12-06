@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import QRCode from 'qrcode.react';
 import * as color from '../../util/color';
 import {CIPHER, ALPHABET} from '../../constants';
+import i18n from '@cdo/locale';
 
 const INSTRUCTIONS_LINK =
   'https://codeorg.zendesk.com/knowledge/articles/360004789872';
@@ -376,7 +377,7 @@ class AdvancedShareOptions extends React.Component {
   };
 
   render() {
-    let {expanded, exportApp, allowExportExpo, i18n, onExpand} = this.props;
+    let {expanded, exportApp, allowExportExpo, onExpand} = this.props;
     let {selectedOption} = this.state;
     if (!selectedOption) {
       // no options are available. Render nothing.
@@ -401,7 +402,7 @@ class AdvancedShareOptions extends React.Component {
       }
       const embedTab = this.renderAdvancedListItem(
         ShareOptions.EMBED,
-        i18n.t('project.embed')
+        this.props.i18n.t('project.embed')
       );
       optionsNav = (
         <div>
@@ -427,7 +428,7 @@ class AdvancedShareOptions extends React.Component {
     const expand =
       expanded && selectedOption ? null : (
         <a onClick={onExpand} style={style.expand}>
-          {i18n.t('project.advanced_share')}
+          {this.props.i18n.t('project.advanced_share')}
         </a>
       );
     return (
