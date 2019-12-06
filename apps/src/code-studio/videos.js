@@ -202,6 +202,25 @@ videos.showVideoDialog = function(options, forceShowVideo) {
   var nav = $div.find('.ui-tabs-nav');
   nav.append(download);
 
+  // Possibly append a switch to fallback player.
+  if (
+    window.location.href.includes('/s/dance-2019') &&
+    !window.location.href.includes('force_youtube_fallback')
+  ) {
+    var fallbackUrl =
+      document.location.pathname +
+      addUrlParam(document.location.search, 'force_youtube_fallback', '1');
+
+    var switchToFallback = $('<a/>')
+      .append($('<span>Use alternate player</span>'))
+      .addClass('switch-to-fallback')
+      .css('float', 'left')
+      .css('margin-top', '9px')
+      .css('margin-left', '9px')
+      .attr('href', fallbackUrl);
+    nav.append(switchToFallback);
+  }
+
   var fallbackPlayerLinkDiv = $(
     '<div id="fallback-player-caption-dialog-link"/>'
   ).css({
@@ -272,6 +291,33 @@ videos.showVideoDialog = function(options, forceShowVideo) {
   setupVideoFallback(options, $div.width(), divHeight, function() {
     return shouldStillAdd;
   });
+};
+
+/**
+ * Add a URL parameter (or changing it if it already exists)
+ * @param {search} string  this is typically document.location.search
+ * @param {key}    string  the key to set
+ * @param {val}    string  value
+ */
+var addUrlParam = function(search, key, val) {
+  var newParam = key + '=' + val,
+    params = '?' + newParam;
+
+  // If the "search" string exists, then build params from it
+  if (search) {
+    // Try to replace an existance instance
+    params = search.replace(
+      new RegExp('([?&])' + key + '[^&]*'),
+      '$1' + newParam
+    );
+
+    // If nothing was replaced, then add the new param to the end
+    if (params === search) {
+      params += '&' + newParam;
+    }
+  }
+
+  return params;
 };
 
 // Precondition: $('#video') must exist on the DOM before this function is called.
