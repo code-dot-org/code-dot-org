@@ -371,9 +371,7 @@ class AdvancedShareOptions extends React.Component {
   renderLibraryTab = () => {
     return (
       <div>
-        <p style={style.p}>
-          Share the functions in your project with a friend or classmate.
-        </p>
+        <p style={style.p}>{i18n.shareLibraryWithClassmate()}</p>
         <button
           type="button"
           onClick={this.props.openLibraryCreationDialog}
