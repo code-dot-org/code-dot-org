@@ -1,5 +1,9 @@
 import i18n from './locale';
 
+/**
+ * provides a mapping from the block name as used by things like the Blockly
+ * placeBlock configuration to the internationalized display name
+ */
 export const BLOCK_NAME_TO_DISPLAY_TEXT = {
   '': i18n.blockTypeEmpty(),
   bedrock: i18n.blockTypeBedrock(),
@@ -55,3 +59,20 @@ export const BLOCK_NAME_TO_DISPLAY_TEXT = {
   wool_red: i18n.blockTypeWoolRed(),
   wool_yellow: i18n.blockTypeWoolYellow()
 };
+
+/**
+ * Converts an array of blockTypes into a blockly-friendly set of dropdown
+ * options, in the form of [[displayName, blockType], ...]
+ *
+ * displayName will be the internationalized user-friendly name for the block
+ * if it exists, and the raw blockType if it does not.
+ *
+ * @param {string[]} blockTypes
+ * @returns {Array.<Array.<String>>} - an array of [displayName, blockType] pairs
+ */
+export function blockTypesToDropdownOptions(blockTypes) {
+  return blockTypes.map(function(blockType) {
+    const displayName = BLOCK_NAME_TO_DISPLAY_TEXT[blockType] || blockType;
+    return [displayName, blockType];
+  });
+}
