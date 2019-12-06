@@ -56,12 +56,12 @@ def run_rubocop(files)
 end
 
 def run_eslint_apps(files)
-  run("./node_modules/.bin/eslint -c .eslintrc.js #{files.join(' ')}", APPS_DIR)
+  run("./node_modules/.bin/eslint -c .eslintrc.js -f './formatters/eslint-formatter.js' #{files.join(' ')}", APPS_DIR)
 end
 
 def run_eslint_shared(files)
   # Use vanilla eslint parser, because babel-eslint always allows es6
-  run("../../apps/node_modules/eslint/bin/eslint.js -f '../../apps/formatter/eslint-formatter.js' #{files.join(' ')}", SHARED_JS_DIR)
+  run("../../apps/node_modules/eslint/bin/eslint.js #{files.join(' ')}", SHARED_JS_DIR)
 end
 
 def run_haml(files)
