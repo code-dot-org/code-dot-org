@@ -12,9 +12,7 @@ import Notification, {NotificationType} from '../Notification';
 import {SpecialAnnouncementActionBlock} from '../studioHomepages/TwoColumnActionBlock';
 import i18n from '@cdo/locale';
 import SchoolAutocompleteDropdown from '../SchoolAutocompleteDropdown';
-import CensusMap from './CensusMap';
 import CensusMapReplacement from './CensusMapReplacement';
-import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   heading: {
@@ -43,7 +41,6 @@ class YourSchool extends Component {
     alertText: PropTypes.string,
     alertUrl: PropTypes.string,
     prefillData: censusFormPrefillDataShape,
-    fusionTableId: PropTypes.string,
     hideMap: PropTypes.bool,
     currentCensusYear: PropTypes.number
   };
@@ -145,20 +142,10 @@ class YourSchool extends Component {
               schoolFilter={this.hasLocation}
             />
             <br />
-            {experiments.isEnabled('censusMapOnMapbox') && (
-              <CensusMapReplacement
-                fusionTableId={this.props.fusionTableId}
-                school={schoolForMap}
-                onTakeSurveyClick={this.handleTakeSurveyClick}
-              />
-            )}
-            {!experiments.isEnabled('censusMapOnMapbox') && (
-              <CensusMap
-                fusionTableId={this.props.fusionTableId}
-                school={schoolForMap}
-                onTakeSurveyClick={this.handleTakeSurveyClick}
-              />
-            )}
+            <CensusMapReplacement
+              school={schoolForMap}
+              onTakeSurveyClick={this.handleTakeSurveyClick}
+            />
           </div>
         )}
         <CensusForm

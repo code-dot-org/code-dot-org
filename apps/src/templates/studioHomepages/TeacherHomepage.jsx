@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import HeaderBanner from '../HeaderBanner';
 import Notification from '../Notification';
-import {SpecialAnnouncementActionBlock} from './TwoColumnActionBlock';
+import {OceansAnnouncement} from './TwoColumnActionBlock';
 import RecentCourses from './RecentCourses';
 import TeacherSections from './TeacherSections';
 import StudentSections from './StudentSections';
@@ -153,7 +153,6 @@ export default class TeacherHomepage extends Component {
 
   render() {
     const {
-      hocLaunch,
       courses,
       topCourse,
       announcement,
@@ -182,9 +181,7 @@ export default class TeacherHomepage extends Component {
         <HeaderBanner headingText={i18n.homepageHeading()} short={true} />
         <ProtectedStatefulDiv ref="flashes" />
         <ProtectedStatefulDiv ref="teacherReminders" />
-        {isEnglish && showSpecialAnnouncement && (
-          <SpecialAnnouncementActionBlock hocLaunch={hocLaunch} />
-        )}
+        {isEnglish && showSpecialAnnouncement && <OceansAnnouncement />}
         {announcement && showAnnouncement && (
           <div>
             <Notification

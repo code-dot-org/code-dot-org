@@ -4,7 +4,7 @@
 
 .img-dance-stars {
   position: absolute;
-  top: 10px;
+  top: 0px;
   left: 70px;
   width: 330px;
   padding: 20px 10px 10px;
@@ -30,7 +30,7 @@
   text-align: center;
   position: absolute;
   bottom: 0;
-  color: #00adbc;
+  color: white;
   text-align: center;
   margin-bottom: 10px;
   font-family: 'Gotham 5r', sans-serif;
@@ -114,6 +114,10 @@ a:hover {
   white-space: nowrap;
 }
 
+.sponsor-logo-image {
+  margin-top: -5px;
+}
+
 @media screen and (min-width: 0px) and (max-width: 512px) {
   .sponsor-logo-with-text {
     flex-direction: column;
@@ -142,10 +146,13 @@ a:hover {
   }
 
   .img-container {
-    background: url(/images/dance-hoc/dance_party_tutorial_hero.png);
+    /* This background is only visible on mobile width.  It's covered by an image
+     * on wider widths. */
+    background: url(/images/dance-hoc/dance_party_2019_tutorial_hero.png);
     margin: 5px;
     border-radius: 5px;
     background-size: cover;
+    padding: initial;
   }
 
   .foot-note-text {
@@ -191,7 +198,8 @@ a:hover {
     left: 50%;
     margin-left: -260px;
     padding: 0;
-    top: 50%;
+    /* A little above the middle while we're showing announcement text below. */
+    top: 40%;
     margin-top: -43px;
   }
 
@@ -242,4 +250,57 @@ a:hover {
   .dance-responsive-padding {
     text-align: center;
   }
+}
+
+/* New announcement text under the artist images, with variants for desktop,
+ * tablet, and mobile. */
+
+.new-announcement {
+  position: absolute;
+  color: white;
+  font-size: 30px;
+  line-height: 30px;
+  top: 230px;
+  text-align: center;
+  width: 460px;
+  font-family: 'Gotham 5r', sans-serif;
+}
+
+.new-announcement .highlight-word {
+  color: rgb(89, 202, 211);
+}
+
+.new-announcement-tablet {
+  position: absolute;
+  bottom: 10%;
+  color: white;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+  width: 100%;
+  font-family: 'Gotham 5r', sans-serif;
+  .highlight-word {
+    color: rgb(89, 202, 211);
+  }
+}
+
+.new-announcement-tablet .highlight-word {
+  color: rgb(89, 202, 211);
+}
+
+.new-announcement-mobile {
+  color: white;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 10px;
+  font-family: 'Gotham 5r', sans-serif;
+  .highlight-word {
+    color: rgb(89, 202, 211);
+  }
+}
+
+.new-announcement-mobile .highlight-word {
+  color: rgb(89, 202, 211);
 }

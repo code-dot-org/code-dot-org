@@ -37,10 +37,10 @@ class External < DSLDefined
   end
 
   def dsl_default
-    <<-TEXT.strip_heredoc.chomp
-    name '#{name || 'unique level name here'}'
-    title 'title'
-    description 'description here'
+    <<~TEXT
+      name '#{name || 'unique level name here'}'
+      title 'title'
+      description 'description here'
     TEXT
   end
 

@@ -4181,7 +4181,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'cannot grant admin role when google authentication option is not present' do
     email = 'annieeasley@code.org'
-    migrated_teacher = create(:teacher, email: email)
+    migrated_teacher = create(:teacher, :google_sso_provider, email: email)
 
     assert_raises(ActiveRecord::RecordInvalid) do
       migrated_teacher.update!(admin: true)
