@@ -243,6 +243,7 @@ fr:
             '"verse"': verset
             '"chorus"': chœur
       Dancelab_getEnergy:
+        text: obtenir {RANGE}
         options:
           RANGE:
             '"low"': grave

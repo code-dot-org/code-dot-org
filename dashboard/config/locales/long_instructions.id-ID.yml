@@ -841,9 +841,14 @@ id-ID:
         -   Tambahkan beberapa acara `setelah birama`.
         -   Tukar ""birama"" dengan ""detik"" cobalah mengatur waktu tarian Anda seperti itu.".
       Dance_Party_extras_every_beat_2019: |-
-        # Percepat, Perlambat
+        # Not Seperempat
 
-        Tarian final ini menggunakan blok <xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml> untuk mengontrol seberapa cepat setiap penari bergerak. Cobalah bereksperimen dengan kecepatan yang berlainan pada berbagai titik berbeda dalam lagu. Silakan terus mengutak-atik tarian ini, atau kembalilah ke tarian sebelumnya untuk membuatnya semakin keren.
+        Sebagian besar penari kita telah menggunakan birama penuh, tetapi setiap birama terdiri atas 4 not seperempat. Tarian ini menggunakan [blockly block][0] untuk membuat penari bertepuk tangan setiap not seperempat setelah birama ke-5.
+
+        Cobalah mengubah angka pada blok untuk melihat bagaimana hal itu akan mengubah tarian.
+
+        -   Bereksperimenlah dengan durasi not lain (seperti 0,5 untuk setengah not atau 0,125 untuk not kedelapan).
+        -   Tambahkan beberapa acara lain.
       Dance_Party_extras_layout: |-
         # Ayo Masuk Formasi!
 
@@ -877,14 +882,13 @@ id-ID:
         -   Perlihatkan dan sembunyikan penari dengan tombol panah
         -   Sembunyikan semua penari dan beralihlah ke efek latar belakang yang mengasyikkan"
       Dance_Party_extras_visible_2019: |-
-        # Not Seperempat
+        "# Kemana Mereka Pergi?
 
-        Sebagian besar penari kita telah menggunakan birama penuh, tetapi setiap birama terdiri atas 4 not seperempat. Tarian ini menggunakan [blockly block][0] untuk membuat penari bertepuk tangan setiap not seperempat setelah birama ke-5.
+        Tarian ini memperlihatkan dan menyembunyikan dua kelompok penari yang berbeda. Silakan dicek lalu cobalah menambahkan bakat Anda sendiri.
 
-        Cobalah mengubah angka pada blok untuk melihat bagaimana hal itu akan mengubah tarian.
-
-        -   Bereksperimenlah dengan durasi not lain (seperti 0,5 untuk setengah not atau 0,125 untuk not kedelapan).
-        -   Tambahkan beberapa acara lain.
+        -   Tambahkan kelompok penari lain
+        -   Perlihatkan dan sembunyikan penari dengan tombol panah
+        -   Sembunyikan semua penari dan beralihlah ke efek latar belakang yang mengasyikkan"
       Escape Room Example: |-
         # Room Escape
 

@@ -245,6 +245,7 @@ nl:
             '"verse"': couplet
             '"chorus"': refrein
       Dancelab_getEnergy:
+        text: krijg {RANGE}
         options:
           RANGE:
             '"low"': Bass
