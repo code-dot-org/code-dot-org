@@ -4,7 +4,10 @@ import PropTypes from 'prop-types';
 import QRCode from 'qrcode.react';
 import * as color from '../../util/color';
 import {CIPHER, ALPHABET} from '../../constants';
+import {connect} from 'react-redux';
+import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
+import {hideShareDialog, showLibraryCreationDialog} from './shareDialogRedux';
 
 const INSTRUCTIONS_LINK =
   'https://codeorg.zendesk.com/knowledge/articles/360004789872';
@@ -93,7 +96,8 @@ const style = {
 const ShareOptions = {
   EXPORT: 'export',
   EXPORT_EXPO: 'exportExpo',
-  EMBED: 'embed'
+  EMBED: 'embed',
+  LIBRARY: 'library'
 };
 
 class AdvancedShareOptions extends React.Component {
@@ -101,6 +105,8 @@ class AdvancedShareOptions extends React.Component {
     shareUrl: PropTypes.string.isRequired,
     allowExportExpo: PropTypes.bool.isRequired,
     exportApp: PropTypes.func,
+    librariesEnabled: PropTypes.bool,
+    openLibraryCreationDialog: PropTypes.func.isRequired,
     onExpand: PropTypes.func.isRequired,
     expanded: PropTypes.bool.isRequired,
     i18n: PropTypes.object.isRequired,
@@ -362,6 +368,21 @@ class AdvancedShareOptions extends React.Component {
     );
   }
 
+  renderLibraryTab = () => {
+    return (
+      <div>
+        <p style={style.p}>{i18n.shareLibraryWithClassmate()}</p>
+        <button
+          type="button"
+          onClick={this.props.openLibraryCreationDialog}
+          style={{marginLeft: 0}}
+        >
+          {i18n.shareLibrary()}
+        </button>
+      </div>
+    );
+  };
+
   renderAdvancedListItem = (option, name) => {
     return (
       <li
@@ -377,14 +398,20 @@ class AdvancedShareOptions extends React.Component {
   };
 
   render() {
-    let {expanded, exportApp, allowExportExpo, onExpand} = this.props;
+    let {
+      expanded,
+      exportApp,
+      allowExportExpo,
+      onExpand,
+      librariesEnabled
+    } = this.props;
     let {selectedOption} = this.state;
     if (!selectedOption) {
       // no options are available. Render nothing.
       return null;
     }
-    let optionsNav;
-    let selectedTab;
+
+    let optionsNav, selectedTab, libraryTab;
     if (expanded) {
       let exportTab = null;
       let exportExpoTab = null;
@@ -404,12 +431,22 @@ class AdvancedShareOptions extends React.Component {
         ShareOptions.EMBED,
         this.props.i18n.t('project.embed')
       );
+      if (
+        experiments.isEnabled(experiments.STUDENT_LIBRARIES) ||
+        librariesEnabled
+      ) {
+        libraryTab = this.renderAdvancedListItem(
+          ShareOptions.LIBRARY,
+          i18n.shareLibrary()
+        );
+      }
       optionsNav = (
         <div>
           <ul style={style.nav.ul}>
             {exportExpoTab}
             {exportTab}
             {embedTab}
+            {libraryTab}
           </ul>
         </div>
       );
@@ -422,6 +459,9 @@ class AdvancedShareOptions extends React.Component {
           break;
         case ShareOptions.EMBED:
           selectedTab = this.renderEmbedTab();
+          break;
+        case ShareOptions.LIBRARY:
+          selectedTab = this.renderLibraryTab();
           break;
       }
     }
@@ -441,4 +481,14 @@ class AdvancedShareOptions extends React.Component {
   }
 }
 
-export default Radium(AdvancedShareOptions);
+export default connect(
+  state => ({
+    librariesEnabled: state.pageConstants.librariesEnabled
+  }),
+  dispatch => ({
+    openLibraryCreationDialog() {
+      dispatch(showLibraryCreationDialog());
+      dispatch(hideShareDialog());
+    }
+  })
+)(Radium(AdvancedShareOptions));
