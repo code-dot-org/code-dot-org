@@ -5,9 +5,18 @@
   "main": "dist/main.js",
   "jest": {
     "testEnvironment": "node",
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
     "moduleNameMapper": {
-      ".+\\.(bin|jpg|jpeg|png|mp3|ogg|wav)$": "identity-obj-proxy",
-      "^@ml(.*)$": "<rootDir>/src/$1"
+      ".+\\.(bin|jpg|jpeg|png|mp3|ogg|wav|gif)$": "identity-obj-proxy",
+      "^@ml(.*)$": "<rootDir>/src/$1",
+      "^@public(.*)$": "<rootDir>/public/$1"
+    },
+    "setupTestFrameworkScriptFile": "<rootDir>/test/setup.js",
+    "globals": {
+      "window": {}
     }
   },
   "scripts": {
@@ -71,6 +80,7 @@
     "query-string": "4.1.0",
     "radium": "^0.25.2",
     "react": "~15.4.0",
+    "react-addons-test-utils": "~15.4.0",
     "react-dom": "~15.4.0",
     "react-test-renderer": "~15.4.0",
     "style-loader": "^1.0.0",

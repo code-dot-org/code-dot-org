@@ -1,5 +1,4 @@
 import {Button} from '@ml/oceans/ui';
-import * as guide from '@ml/oceans/models/guide';
 
 describe('Button', () => {
   it('dismisses guide on click', () => {});
