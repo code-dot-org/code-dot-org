@@ -28,6 +28,16 @@
         =t('continue')
   .video-link= link_to t('video.download'), video.download
 
+  - if @level.video_full_width
+    - if request.original_url.include?("/s/oceans")
+      - if !request.original_url.include?("force_youtube_fallback")
+        - uri = URI.parse(request.original_url)
+        - query = Rack::Utils.parse_query(uri.query)
+        - query["force_youtube_fallback"] = "1"
+        - uri.query = Rack::Utils.build_query(query)
+        &nbsp; | &nbsp;
+        %a{href: uri} Try alternate player
+
   - if @slides
     .slides-link
       |
