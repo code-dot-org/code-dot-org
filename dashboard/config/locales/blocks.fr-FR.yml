@@ -447,6 +447,7 @@ fr:
           LAYOUT:
             '"border"': frontière
             '"inner"': carré intérieur
+            '"diamond"': diamant
             '"circle"': cercle
             '"grid"': grille
             '"row"': ligne

@@ -437,6 +437,7 @@ sv:
           LAYOUT:
             '"border"': gräns
             '"inner"': innanför kvadrat
+            '"diamond"': diamant
             '"circle"': cirkel
             '"grid"': rutnät
             '"row"': rad

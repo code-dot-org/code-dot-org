@@ -312,7 +312,7 @@ cs-CZ:
   studiobar_title_nolink: Prozkoumejte Code Studio
   studiobar_elementary_title: Základní kurzy
   studiobar_elementary_body: Naše tři nové kurzy pro první stupeň ZŠ
-  studiobar_dance_title: Taneční večírek
+  studiobar_dance_title: Dance Party
   studiobar_dance_body: Vytvářej a sdílej své vlastní taneční večírky
   studiobar_hoc_title: Hodina kódu
   studiobar_hoc_body: Naučte se programovat s Angry Birds
@@ -1854,7 +1854,7 @@ cs-CZ:
   user_header_logout: Odhlásit se
   user_header_signin: Přihlásit
   user_header_playlab: Play Lab
-  user_header_dance: Taneční večírek
+  user_header_dance: Dance Party
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
   applab_tile_start_tutorial: Spustit
@@ -1863,7 +1863,10 @@ cs-CZ:
     v našich kurzech, lokálních příležitostech a jiných informatických zprávách?
   account_sign_up_child_accept_terms: Potvrzuji, že mám od svých rodičů nebo zákonného
     zástupce dovoleno používat Code.org.
-  hoc_overview_dance_title: Taneční večírek
+  hoc_overview_dance_title: Dance Party
+  hoc_overview_dance_2019_subtitle: Naprogramuj Dance Party a sdílej ji s kamarády.
+    Vystupují Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers,
+    Nicki Minaj a dalších 34 umělců!
   hoc_overview_partner_activities_title: Další aktivity partnerů
   hoc_overview_partner_activities_body: Webové stránky hodiny kódu mají více než 100
     aktivit počítačové vědy pro lidi v každém věku a na jakékoliv úrovni zkušeností
@@ -1917,10 +1920,10 @@ cs-CZ:
   hoc2018_mc_minecraft_education: Minecraft vzdělávání
   hoc2018_mc_continue_learning: Pokračuj s Minecraft učením.
   hoc2018_mc_go_to_mc_education: Přejít na Minecraft vzdělávání
-  hoc2018_dance_party_main_heading: Taneční večírek
+  hoc2018_dance_party_main_heading: Dance Party
   hoc2018_dance_party_subheading: Pomoz přeložit Taneční Párty
   hoc2018_dance_create_your_own_dance_title: Vytvoř si svůj vlastní večírek
-  hoc2018_dance_party_box_title: Taneční večírek
+  hoc2018_dance_party_box_title: Dance Party
   hoc2018_dance_party_box_description: Vytvoř kód Taneční Párty a sdílej ho s přáteli!
   hoc2018_dance_party_specs: Jazyk | Formát | Věk 6-106
   hoc2018_dance_party_button: Spustit

@@ -1,0 +1,29 @@
+cs:
+  data:
+    block_categories:
+      Actions: Akce
+      Advanced: Pokročilé
+      Behaviors: Chování
+      Brushes: Štětce
+      Color: Barva
+      Comment: Komentář
+      Comments: Komentáře
+      Conditionals: Podmínky
+      Dancers: Tanečníci
+      Default: Výchozí
+      Events: Události
+      Functions: Funkce
+      'Functions ': 'Funkce '
+      Game/Score: Hra/Skóre
+      Games/Score: Hry/Skóre
+      Groups: Skupiny
+      Locations: Umístění
+      Logic: Logika
+      Loops: Smyčky
+      Math: Matematika
+      Numbers: Čísla
+      Properties: Vlastnosti
+      Text: text
+      Variables: Proměnné
+      'Variables ': 'Proměnné '
+      World: Svět

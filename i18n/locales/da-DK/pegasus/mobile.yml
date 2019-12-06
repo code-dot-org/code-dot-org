@@ -26,6 +26,7 @@
   twentyhours_heading: "Prøv vores intro til programmeringskursus"
   twentyhours_text: "Færdig med din første Hour of Code? Lær flere centrale datalogi- og programmeringbegreber i dette opfølgende kursus."
   og_title: 'Ethvert barn fortjener muligheder'
+  og_title_soon: "Hour of Code kommer"
   og_description: "Alle elever i alle skoler fortjener mulighed for at lære seg at programmere. Det forandrer det hele."
   csedweek_og_title: "Computer Science Education Week"
   hoc2014_heading: "Vær med i <a href=\"http://hourofcode.com\">Hour of Code</a> <br/>8. - 14. December 2014 <br/>"
@@ -160,7 +161,7 @@
   studiobar_elementary_title: "Grundlæggende kurser"
   studiobar_elementary_body: "Vores tre nye kurser for indskoling og melemtrin"
   studiobar_dance_title: "Dansefest"
-  studiobar_dance_body: "Lav og del dine egne dansefester"
+  studiobar_dance_body: "Skab og del dit eget Dance Party"
   studiobar_hoc_title: "Kodetimen"
   studiobar_hoc_body: "Lær at kode med Angry Birds"
   studiobar_flappy_title: "Flappy kode"
@@ -207,6 +208,7 @@
   homepage_hero_text_stat_loc: "#loc linjer kode skrevet af elever"
   homepage_hero_text_stat_students: "#student_count elever oprettet på Code Studio"
   homepage_hero_text_stat_served: 'Hour of Code: #served har prøvet'
+  homepage_hero_hoc_is_coming: "Hour of Code kommer"
   homepage_slot_text_hoc: "Kodetimen"
   homepage_slot_text_frozen: "Frozen med Anna og Elsa"
   homepage_slot_text_studio: "Alle vores øvelser"
@@ -1131,6 +1133,8 @@
   account_sign_up_email_opt_in: "Kan vi e-maile dig om opdateringer til vores kurser, lokale muligheder eller andre nyheder om computervidenskab?"
   account_sign_up_child_accept_terms: "Hvis jeg er under 13 år, bekræfter jeg, at jeg har mine forældres eller værges tilladelse til at benytte tjenesterne fra Code.org."
   hoc_overview_dance_title: "Dansefest"
+  hoc_overview_dance_subtitle: "Programmer et Dance Party som du kan dele med dine venner. Med Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, og 25 flere!"
+  hoc_overview_dance_2019_subtitle: "Programmer et Dance Party som du kan dele med dine venner. Med Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, og 34 flere!"
   hoc_overview_partner_activities_title: "Flere aktiviteter fra partnere"
   hoc_overview_partner_activities_body: "Webstedet En Times Kodning har over 100 databehandlingsaktiviteter for alle aldre og erfaringsniveauer, udviklet af Code.org og partnere."
   hoc_overview_partner_activities_link: "Vis aktiviteter"

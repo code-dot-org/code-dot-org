@@ -24,6 +24,7 @@
   "blockActionGetItemDetail": "получить деталь элемента",
   "blockActionGetItemDetailInSlotNumber": "получить детали элемента в номер слота",
   "blockActionGetItemSpace": "получить место элемента",
+  "blockActionGetItemSpaceInSlotNumber": "получить пространство элемента в номер слота",
   "blockActionGive": "дать",
   "blockActionInspect": "изучить",
   "blockActionInspectData": "изучить данные",

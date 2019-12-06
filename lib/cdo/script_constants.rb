@@ -65,6 +65,7 @@ module ScriptConstants
       nil,
       DANCE_PARTY_2019_NAME = 'dance-2019'.freeze, # 2019 hour of code
       DANCE_PARTY_EXTRAS_2019_NAME = 'dance-extras-2019'.freeze, # 2019 hour of code
+      OCEANS_NAME = 'oceans'.freeze,
       MINECRAFT_AQUATIC_NAME = 'aquatic'.freeze,
       MINECRAFT_HERO_NAME = 'hero'.freeze,
       MINECRAFT_NAME = 'mc'.freeze,
@@ -85,7 +86,6 @@ module ScriptConstants
       BASKETBALL_NAME = 'basketball'.freeze,
       SPORTS_NAME = 'sports'.freeze,
       HOC_NAME = 'hourofcode'.freeze, # 2014 hour of code
-      OCEANS_NAME = 'oceans'.freeze,
       DANCE_PARTY_NAME = 'dance'.freeze, # 2018 hour of code
       DANCE_PARTY_EXTRAS_NAME = 'dance-extras'.freeze, # 2018 hour of code
     ],

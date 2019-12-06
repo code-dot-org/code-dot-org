@@ -1,0 +1,18 @@
+th:
+  data:
+    block_categories:
+      Actions: การดำเนินการ
+      Brushes: พู่กัน
+      Color: สี
+      Comment: หมายเหตุ (Comment)
+      Comments: หมายเหตุ (Comment)
+      Conditionals: เงื่อนไข 
+      Dancers: นักเต้น
+      Events: เหตุการณ์
+      Functions: ฟังก์ชัน
+      Groups: กลุ่ม
+      Logic: ตรรกะ
+      Loops: ลูป
+      Math: คำนวณ
+      Text: ข้อความ
+      Variables: ตัวแปร

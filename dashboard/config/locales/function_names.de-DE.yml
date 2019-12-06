@@ -29,6 +29,7 @@ de-DE:
         draw sitting stick figure: zeichne ein sitzendes Strichmännchen
         draw head: zeichne Kopf
         draw arms: zeichne Arme
+        jump to neck: an den Hals springen
         draw left leg: zeichne linkes Bein
       2-3 Artist Debugging 7:
         draw O: O zeichnen
@@ -48,6 +49,8 @@ de-DE:
         draw a square: zeichne ein Quadrat
       2-3 Artist Functions 9:
         draw a snowflake: zeichne eine Schneeflocke
+      2-3 Bee Functions 10:
+        collect purple nectar: sammele violetten Nektar
       2-3 Bee Functions 2:
         get 5: erhalte 5
       2-3 Bee Functions Assessment 1:
@@ -62,6 +65,10 @@ de-DE:
         draw a car: zeichne ein Auto
       4-5 Artist 8:
         draw circle: zeichne einen Kreis
+      4-5 Bee Conditionals 7:
+        check purple flower: prüfe die lila Blume
+      4-5 Bee Conditionals Assessment 1:
+        get nectar or make honey: hole Nektar oder stelle Honig her
       Choose Your Own Adventure:
         story: Handlung
       Course 4 Artist Binary 1:

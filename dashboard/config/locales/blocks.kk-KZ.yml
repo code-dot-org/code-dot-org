@@ -108,6 +108,7 @@ kk:
             '19': '19'
             '20': '20'
           LAYOUT:
+            '"diamond"': алмас
             '"random"': кездейсоқ
       Dancelab_randomColor:
         text: кездейсоқ түс

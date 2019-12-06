@@ -2093,10 +2093,10 @@ fr-FR:
           -   Utilise plusieurs blocs <xml><block type="Dancelab_whenKey"><title name="KEY"></title></block></xml>.
       Dance_2019_03:
         validation: |-
-          **Comment puis-je passer ce niveau?**
+          **Comment puis-je réussir à passer ce niveau?**
 
-          -   Les deux danseurs doivent effectuer un mouvement.
-          -   Tu dois appuyer sur les touches fléchées.
+          -   Les deux danseurs doivent faire un mouvement.
+          -   Il faut appuyer sur les touches fléchées.
 
           _Ce niveau se termine après 6 mesures._
         challenges: |-
@@ -2123,9 +2123,9 @@ fr-FR:
           -   Change l’arrière-plan à chaque changement de danseur.
       Dance_2019_06:
         validation: |-
-          **Comment puis-je passer ce niveau?**
+          **Comment puis-je réussir à passer ce niveau?**
 
-          -   Crée un danseur principal et un groupe de danseurs de secours.
+          -   Créez un danseur principal et un groupe de danseurs en renfort.
 
           _Ce niveau se termine après 7 mesures._
         challenges: |-
