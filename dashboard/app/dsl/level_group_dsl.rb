@@ -12,6 +12,7 @@ class LevelGroupDSL < LevelDSL
     @level_names = []
   end
 
+  # @override
   def self.i18n_fields
     super + %w(
       description

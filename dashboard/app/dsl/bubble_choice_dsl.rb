@@ -6,6 +6,7 @@ class BubbleChoiceDSL < LevelDSL
     @hash[:sublevels] = []
   end
 
+  # @override
   def self.i18n_fields
     super + %w(description display_name)
   end
