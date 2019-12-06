@@ -11,7 +11,7 @@
         align-items: center;
         display: flex;
       }
-      input[type="radio"] {
+      input[type='radio'] {
         cursor: pointer;
       }
 
@@ -62,22 +62,37 @@
        * And the font-size is (18px * (800 * 0.9 / 930)
        */
       @media screen {
-        #container { max-width: 480px; }
-        #container-react { font-size: calc(18px * 480 / 930); }
+        #container {
+          max-width: 480px;
+        }
+        #container-react {
+          font-size: calc(18px * 480 / 930);
+        }
       }
       @media screen and (min-width: 800px) and (min-height: 515px) {
-        #container { max-width: 720px; }
-        #container-react { font-size: calc(18px * 720 / 930); }
+        #container {
+          max-width: 720px;
+        }
+        #container-react {
+          font-size: calc(18px * 720 / 930);
+        }
       }
       @media screen and (min-width: 1024px) and (min-height: 628px) {
-        #container { max-width: 930px; }
-        #container-react { font-size: calc(18px * 930 / 930); }
+        #container {
+          max-width: 930px;
+        }
+        #container-react {
+          font-size: calc(18px * 930 / 930);
+        }
       }
       @media screen and (min-width: 1137px) and (min-height: 685px) {
-        #container { max-width: 1024px; }
-        #container-react { font-size: calc(18px * 1024 / 930); }
+        #container {
+          max-width: 1024px;
+        }
+        #container-react {
+          font-size: calc(18px * 1024 / 930);
+        }
       }
-
     </style>
   </head>
   <body>
@@ -108,6 +123,6 @@
       <canvas id="background-canvas"></canvas>
       <canvas id="activity-canvas"></canvas>
     </div>
-    <script src="demo.js"></script>
+    <script src="oceans.js"></script>
   </body>
 </html>

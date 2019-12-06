@@ -51,7 +51,7 @@ const commonConfig = {
       },
       {
         type: 'javascript/auto',
-        test: /src\/demo\/model.json$/,
+        test: /src\/oceans\/model.json$/,
         use: [
           {
             loader: 'file-loader',
@@ -92,7 +92,7 @@ const firstConfigOnly = {
     new CleanWebpackPlugin(),
     new CopyPlugin([
       {
-        from: 'src/demo/*.bin',
+        from: 'src/oceans/*.bin',
         to: 'assets/models/',
         flatten: true
       }
@@ -112,7 +112,7 @@ const externalConfig = {
 const defaultConfig = [
   {
     entry: {
-      assetPath: './src/demo/assetPath.js'
+      assetPath: './src/oceans/assetPath.js'
     },
     ...commonConfig,
     ...firstConfigOnly,
@@ -120,7 +120,7 @@ const defaultConfig = [
   },
   {
     entry: {
-      demo: './src/demo/index.jsx'
+      oceans: './src/oceans/index.jsx'
     },
     ...commonConfig
   }

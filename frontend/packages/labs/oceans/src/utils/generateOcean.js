@@ -2,10 +2,10 @@ import {
   FishOceanObject,
   SeaCreatureOceanObject,
   TrashOceanObject
-} from '../demo/OceanObject';
-import {getState} from '../demo/state';
+} from '../oceans/OceanObject';
+import {getState} from '../oceans/state';
 import {fishData} from './fishData';
-import {filterFishComponents, generateColorPalette} from '../demo/helpers';
+import {filterFishComponents, generateColorPalette} from '../oceans/helpers';
 import _ from 'lodash';
 
 /*

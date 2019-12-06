@@ -1,4 +1,4 @@
-import {AppMode} from '../demo/constants';
+import {AppMode} from '../oceans/constants';
 
 import pectoral_fin_1_image from '../../public/images/fish/pectoralFin/pectoral_fin_1.png';
 import pectoral_fin_10_image from '../../public/images/fish/pectoralFin/pectoral_fin_10.png';
