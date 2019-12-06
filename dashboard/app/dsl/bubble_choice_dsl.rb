@@ -7,7 +7,7 @@ class BubbleChoiceDSL < LevelDSL
   end
 
   def self.i18n_fields
-    super + %w(description)
+    super + %w(description display_name)
   end
 
   def display_name(text) @hash[:display_name] = text end
