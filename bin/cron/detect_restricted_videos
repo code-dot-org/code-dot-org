@@ -1,0 +1,64 @@
+#!/usr/bin/env ruby
+
+require_relative '../../lib/cdo/only_one'
+exit(1) unless only_one_running?(__FILE__)
+
+require 'csv'
+require 'httparty'
+require 'optparse'
+require_relative '../../deployment'
+
+def player_response(response_text)
+  # The response text is a querystring (&key=value&key=value)
+  # The value we care about is associated with the key 'player_response'
+  # It's a CGI-encoded JSON blob containing details about whether the video is loadable/playable
+  params = response_text.split('&').map {|line| line.split('=')}.select {|line| line.count == 2}.to_h
+  JSON.parse CGI.unescape params['player_response']
+end
+
+options = {}
+OptionParser.new do |opts|
+  opts.banner = <<~BANNER
+    Usage: #{File.basename(__FILE__)} [options]
+
+    This script checks YouTube videos listed in dashboard/config/videos.csv for content
+    restrictions that may affect schools.
+
+    Options:
+  BANNER
+
+  opts.on('--filter=FILTER', 'Only check videos with keys matching given regular expression') do |filter|
+    options[:filter] = filter
+  end
+
+  opts.on('-h', '--help', 'Print this') do
+    puts opts
+    exit
+  end
+end.parse!
+
+video_count = 0
+error_count = 0
+CSV.foreach(dashboard_dir('config/videos.csv'), headers: true) do |row|
+  video_key = row['Key']
+  youtube_code = row['YoutubeCode']
+  if options[:filter]
+    next unless Regexp.new(options[:filter]) =~ video_key
+  end
+  video_count += 1
+  ['Strict', 'Moderate'].each do |mode|
+    responseText = HTTParty.get("https://www.youtube-nocookie.com/get_video_info?video_id=#{youtube_code}", {
+      headers: {
+        "Content-Type" => "application/json",
+        "YouTube-Restrict" => mode
+      }
+    })
+    response = player_response(responseText)
+    if response['playabilityStatus']['status'] != 'OK'
+      error_count += 1
+      puts "#{video_key} (#{mode}): #{response['playabilityStatus']['reason']}"
+    end
+    sleep 0.1
+  end
+end
+puts "Checked #{video_count} videos, #{error_count} problems detected."
