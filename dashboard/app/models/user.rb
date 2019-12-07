@@ -498,6 +498,9 @@ class User < ActiveRecord::Base
     unless (authentication_options.count == 1) && (authentication_options.all? {|ao| ao.google? && ao.codeorg_email?})
       errors.add(:admin, 'must be a code.org account with only google oauth')
     end
+
+    # Code studio admins should not have a password
+    errors.add(:admin, 'cannot have a password') if password.present?
   end
 
   def fix_by_user_type

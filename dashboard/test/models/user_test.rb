@@ -4142,7 +4142,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'can grant admin role with only google oauth, codeorg account' do
     email = 'fernhunt@code.org'
-    migrated_teacher = create(:teacher, :google_sso_provider, email: email)
+    migrated_teacher = create(:teacher, :google_sso_provider, email: email, password: nil)
 
     assert_equal 1, migrated_teacher.authentication_options.count
     migrated_teacher.update!(admin: true)
@@ -4160,8 +4160,8 @@ class UserTest < ActiveSupport::TestCase
     end
 
     refute unmigrated_teacher_without_password.reload.admin?
-    assert 2, unmigrated_teacher_without_password.errors[:admin].count
-    assert_equal ["Admin must be a migrated user", "Admin must be a code.org account with only google oauth"], unmigrated_teacher_without_password.errors.full_messages
+    assert_equal 3, unmigrated_teacher_without_password.errors[:admin].count
+    assert_equal ["Admin must be a migrated user", "Admin must be a code.org account with only google oauth", "Admin cannot have a password"], unmigrated_teacher_without_password.errors.full_messages
   end
 
   test 'cannot grant admin role with multiple authentication options' do
@@ -4176,23 +4176,19 @@ class UserTest < ActiveSupport::TestCase
     end
 
     refute migrated_teacher.reload.admin?
-    assert_equal ["Admin must be a code.org account with only google oauth"], migrated_teacher.errors.full_messages
+    assert_equal ["Admin must be a code.org account with only google oauth", "Admin cannot have a password"], migrated_teacher.errors.full_messages
   end
 
   test 'cannot grant admin role when google authentication option is not present' do
     email = 'annieeasley@code.org'
     migrated_teacher = create(:teacher, :google_sso_provider, email: email)
 
-    migrated_teacher.authentication_options.destroy_all
-
-    assert_equal 0, migrated_teacher.authentication_options.count
-
     assert_raises(ActiveRecord::RecordInvalid) do
       migrated_teacher.update!(admin: true)
     end
 
     refute migrated_teacher.reload.admin?
-    assert_equal ["Admin must be a code.org account with only google oauth", "Email is required"], migrated_teacher.errors.full_messages
+    assert_equal ["Admin must be a code.org account with only google oauth", "Admin cannot have a password"], migrated_teacher.errors.full_messages
   end
 
   test 'cannot grant admin role when not a codeorg account' do
@@ -4206,8 +4202,8 @@ class UserTest < ActiveSupport::TestCase
     end
 
     refute migrated_teacher.reload.admin?
-    assert migrated_teacher.errors[:admin].length == 1
-    assert_equal ["Admin must be a code.org account with only google oauth"], migrated_teacher.errors.full_messages
+    assert migrated_teacher.errors[:admin].length == 2
+    assert_equal ["Admin must be a code.org account with only google oauth", "Admin cannot have a password"], migrated_teacher.errors.full_messages
   end
 
   test 'can grant admin role when in development environment' do
@@ -4225,7 +4221,6 @@ class UserTest < ActiveSupport::TestCase
     with_rack_env(:adhoc) do
       email = 'dorothyvaughan@code.org'
       migrated_teacher = create(:teacher, email: email)
-
       assert migrated_teacher.update(admin: true)
 
       assert migrated_teacher.reload.admin?
