@@ -12,13 +12,18 @@ import color from '../../util/color';
 import * as applabConstants from '../../applab/constants';
 import * as p5labConstants from '@cdo/apps/p5lab/constants';
 import {SongTitlesToArtistTwitterHandle} from '../dancePartySongArtistTags';
-import {hideShareDialog, unpublishProject} from './shareDialogRedux';
+import {
+  hideShareDialog,
+  unpublishProject,
+  showLibraryCreationDialog
+} from './shareDialogRedux';
 import DownloadReplayVideoButton from './DownloadReplayVideoButton';
 import {showPublishDialog} from '../../templates/projects/publishDialog/publishDialogRedux';
 import PublishDialog from '../../templates/projects/publishDialog/PublishDialog';
 import {createHiddenPrintWindow} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import experiments from '@cdo/apps/util/experiments';
 import LibraryCreationDialog from './libraries/LibraryCreationDialog';
 import LibraryClientApi from './libraries/LibraryClientApi';
 
@@ -148,6 +153,7 @@ class ShareAllowedDialog extends React.Component {
     }).isRequired,
     allowExportExpo: PropTypes.bool.isRequired,
     exportApp: PropTypes.func,
+    librariesEnabled: PropTypes.bool,
     icon: PropTypes.string,
     shareUrl: PropTypes.string.isRequired,
     // Only applicable to Dance Party projects, used to Tweet at song artist.
@@ -165,6 +171,7 @@ class ShareAllowedDialog extends React.Component {
     onClose: PropTypes.func.isRequired,
     onShowPublishDialog: PropTypes.func.isRequired,
     onUnpublish: PropTypes.func.isRequired,
+    openLibraryCreationDialog: PropTypes.func.isRequired,
     hideBackdrop: BaseDialog.propTypes.hideBackdrop,
     canShareSocial: PropTypes.bool.isRequired,
     userSharingDisabled: PropTypes.bool
@@ -416,6 +423,16 @@ class ShareAllowedDialog extends React.Component {
                       className="no-mc"
                     />
                   )}
+                  {(experiments.isEnabled(experiments.STUDENT_LIBRARIES) ||
+                    this.props.librariesEnabled) && (
+                    <button
+                      type="button"
+                      onClick={this.props.openLibraryCreationDialog}
+                      style={styles.button}
+                    >
+                      {i18n.shareLibrary()}
+                    </button>
+                  )}
                   <DownloadReplayVideoButton
                     style={styles.button}
                     onError={this.replayVideoNotFound}
@@ -512,6 +529,7 @@ export default connect(
   state => ({
     allowExportExpo: state.pageConstants.allowExportExpo || false,
     exportApp: state.pageConstants.exportApp,
+    librariesEnabled: state.pageConstants.librariesEnabled,
     isOpen: state.shareDialog.isOpen,
     isUnpublishPending: state.shareDialog.isUnpublishPending
   }),
@@ -523,6 +541,10 @@ export default connect(
     },
     onUnpublish(projectId) {
       dispatch(unpublishProject(projectId));
+    },
+    openLibraryCreationDialog() {
+      dispatch(showLibraryCreationDialog());
+      dispatch(hideShareDialog());
     }
   })
 )(ShareAllowedDialog);
