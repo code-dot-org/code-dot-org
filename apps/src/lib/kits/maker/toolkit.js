@@ -93,8 +93,9 @@ export function connect({interpreter, onDisconnect}) {
       }
       commands.injectBoardController(currentBoard);
 
+      currentBoard.installOnInterpreter(interpreter);
+
       if (!experiments.isEnabled('microbit')) {
-        currentBoard.installOnInterpreter(interpreter);
         if (typeof onDisconnect === 'function') {
           currentBoard.once('disconnect', () => {
             onDisconnect();
