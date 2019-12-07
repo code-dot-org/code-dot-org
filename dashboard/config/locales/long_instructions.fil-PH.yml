@@ -362,14 +362,13 @@ fil-PH:
         -   Ipakita at itago ang mga dancer gamit ang mga arrow key
         -   Itago ang lahat ng dancer at lumipat sa isang kapana-panabik na background effect"
       Dance_Party_extras_visible_2019: |-
-        # Quarter Notes
+        "# Saan Sila Pumunta?
 
-        Karamihan sa mga dancer ay gumamit ng buong sukat, ngunit ang bawat sukat ay binubuo ng 4 na quarter notes. Gumagamit ang sayaw na ito ng [blockly block][0] para papalakpak ang dancer kada quarter note matapos ang 5th measure.
+        Ang sayaw na ito ay nagpapakita at itinatago ang dalawang magkaibang pangkat ng mga dancer. Tingnan ito, at subukang idagdag ang iyong sariling flair.
 
-        Subukang palitan ang mga numero sa block para makita kung paano binabago nito ang sayaw.
-
-        -   Mag-eksperimento sa ibang tagal ng note (ltulad ng 0.5 para sa half note o 0.125 para sa eighth note).
-        -   Idagdag ang ilan pang ibang mga event.
+        -   Idagdag ang ibang pangkat ng mga dancer
+        -   Ipakita at itago ang mga dancer gamit ang mga arrow key
+        -   Itago ang lahat ng dancer at lumipat sa isang kapana-panabik na background effect"
       K-1 Bee Loops 5: Gumamit ng `repeat` na mga loop para makakuha ng nektar at
         pulot!
       K-1 Maze Loops 2: Gamitin ang `repeat` na bloke para mapapunta ako sa baboy!

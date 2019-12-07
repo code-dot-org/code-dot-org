@@ -367,9 +367,14 @@ da-DK:
         \*Tilføj nogle 'eftertakt'-hændelser.
         \*Skift takter ud med sekunder, og prøv at time dine danse på den måde.
       Dance_Party_extras_every_beat_2019: |-
-        # Speed op, sæt farten ned
+        # Fjerdedelsnoder
 
-        Denne sidste dans bruger blokken <xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml> til at kontrollere, hvor hurtigt hver danser bevæger sig. Prøv at eksperimentere med forskellige hastigheder på forskellige punkter i sangen. Du er velkommen til at fortsætte med at flikke rundt på denne dans, eller vende tilbage til nogen af de tidligere danse for at gøre dem endnu mere cool.
+        De fleste af vores danser har brugt hele takter, men hver takt består af fire fjerdedelsnoder. Denne dans bruger [blokly block] [0] til at få danseren til at klappe på hver fjerdedelsnode efter den 5. takt.
+
+        Prøv at ændre tallene i blokken for at se, hvordan det ændrer dansen.
+
+        -   -   Eksperimenter med andre nodevarigheder (såsom 0,5 for en halvnode eller 0,125 for en ottendedelsnode).
+        -   Tilføj nogle andre begivenheder.
       Dance_Party_extras_layout: |-
         # Lad os tage opstilling!
 
@@ -421,14 +426,13 @@ da-DK:
         \*Vis og skjul dansere ved hjælp af piletasterne
         \*Skjul alle danserne, og skift til en spændende baggrundseffekt
       Dance_Party_extras_visible_2019: |-
-        # Fjerdedelsnoder
+        # Hvor forsvandt de hen?
 
-        De fleste af vores danser har brugt hele takter, men hver takt består af fire fjerdedelsnoder. Denne dans bruger [blokly block] [0] til at få danseren til at klappe på hver fjerdedelsnode efter den 5. takt.
+        Denne dans viser og skjuler to forskellige dansegrupper. Tjek det ud, og giv det derefter dit eget udtryk.
 
-        Prøv at ændre tallene i blokken for at se, hvordan det ændrer dansen.
-
-        -   -   Eksperimenter med andre nodevarigheder (såsom 0,5 for en halvnode eller 0,125 for en ottendedelsnode).
-        -   Tilføj nogle andre begivenheder.
+        \*Tilføj en anden gruppe dansere
+        \*Vis og skjul dansere ved hjælp af piletasterne
+        \*Skjul alle danserne, og skift til en spændende baggrundseffekt 
       Function intro Ryan: "Du har en **funktion**, der hedder \"byg bro\" i dit arbejdsområde.
         \ Den indeholder al den nødvendige kode til at komme over floden! \\\r\n \\\r\nKlik
         den lille grønne blok ind i dit arbejdsområde to gange for at bygge en vej

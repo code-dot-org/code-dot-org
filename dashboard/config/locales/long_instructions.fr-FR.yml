@@ -5688,14 +5688,13 @@ fr-FR:
         -   Affiche et masque les danseurs à l'aide des touches fléchées
         -   Cache tous les danseurs et passe à un effet d’arrière plan emballant
       Dance_Party_extras_visible_2019: |-
-        # Noires
+        # Où iraient-ils ?
 
-        La plupart de nos danses ont utilisé des mesures entières, mais chaque mesure est composée de 4 noires. Cette danse utilise [blockly block][0] pour faire taper du danseur sur chaque note après la cinquième mesure.
+        Cette danse montre et cache deux groupes de danseurs différents. Jette-y un coup d'œil, puis essaie d'ajouter ton propre style.
 
-        Essaye de changer les chiffres dans le bloc pour voir comment cela change la danse.
-
-        -   Expérimente avec d'autres durées de note (0,5 pour une demi-note ou 0,125 pour une croche).
-        -   Ajoute d'autres événements.
+        -   Ajoute un autre groupe de danseurs
+        -   Affiche et masque les danseurs à l'aide des touches fléchées
+        -   Cache tous les danseurs et passe à un effet d’arrière plan emballant
       Escape Room Example: "# Room Escape Dans l'atelier d'aujourd'hui, vous allez
         travailler à la création d'une application pour l'évasion de la pièce! Ce
         niveau contient un exemple d'application avec lequel vous devriez jouer pour

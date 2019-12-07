@@ -2,7 +2,7 @@
   "category": "Sprites",
   "config": {
     "func": "stopMappingEach",
-    "blockText": "{GROUP} stops {PROPERTY} following {RANGE}",
+    "blockText": "{GROUP} stop {PROPERTY} following {RANGE}",
     "color": [
       136,
       0.84,

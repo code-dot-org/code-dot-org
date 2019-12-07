@@ -44,6 +44,7 @@
   hoc_overview_oceans_tutorial_desc: 'Learn about artificial intelligence (AI), machine learning, training data, and bias, while exploring ethical issues and how AI can be used to address world problems.'
 
   ai_video_title_what_is_ai: 'What is AI?'
+  ai_video_title_algorithm_bias: 'Fighting bias in algorithms'
   ai_video_title_phone_knows_dog: 'How does your phone know this is a dog?'
   ai_video_title_what_is_ml: 'What is Machine Learning?'
   ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small and Prickly'
@@ -2413,7 +2414,7 @@
   tutorial_frogger_language: "English, Spanish, Italian, French, German, and Dutch"
   tutorial_tynkereco_language: "English only"
   tutorial_mitedarc_language: "English only"
-  tutorial_khan_language: "English, Portuguese (Brazil), Spanish"
+  tutorial_khan_language: "Czech, English, Portuguese (Brazil), Spanish"
   tutorial_tynkerd_language: "English only"
   tutorial_cdmy_language: "English, Spanish"
   tutorial_codestersdance_language: "English, Spanish"
@@ -2612,8 +2613,8 @@
   tutorial_wolframp_language: "English only"
   tutorial_wolframn_language: "English only"
   tutorial_soloweb_language: "English only"
-  tutorial_khanweb_language: "English, Portuguese (Brazil), Spanish"
-  tutorial_khandata_language: "English, Portuguese (Brazil), Spanish"
+  tutorial_khanweb_language: "Czech, English, Portuguese (Brazil), Spanish"
+  tutorial_khandata_language: "Czech, English, Portuguese (Brazil), Spanish"
   tutorial_robomeshiq_language: "English only"
   tutorial_googlelogo_language: "English only"
   tutorial_playtune_language: "English only"
