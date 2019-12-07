@@ -8,11 +8,7 @@
 .help_button{class: "hide-mobile", id: "help-button"}
   .help_contents{style: 'display: none', id: "help-contents"}
     - help_items.each do |entry|
-      %a.linktag{id: entry[:id], href: entry[:url]}=entry[:title]
+    %a.linktag{id: entry[:id], href: entry[:url], data: {"link-title": "#{entry[:title]}", "secondary-link": "#{entry[:url]}", "user-id":"#{current_user.blank? ? '' : current_user.id}"}}= entry[:title]
 
   %i.help_icon.clicktag{class: "fa fa-question-circle hide-mobile", id: "help-icon"}
     %span{style: "pointer-events: none"}
-
-
-
-

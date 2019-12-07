@@ -16,16 +16,46 @@ if (container.length) {
   );
 }
 
-document.querySelectorAll('.headerlink').forEach(link => {
-  console.log(link);
+function recordLinkEvent(link, studyText, eventText) {
   link.addEventListener('click', event => {
     console.log(event);
     console.log(event.target.id);
-    event.preventDefault();
-    firehoseClient.putRecord({
-      study: 'navigation_bar_not_on_the_edge',
-      event: event.target.dataset.linkTitle,
-      data_json: event.target.dataset.secondaryLink
-    });
+    //debugger;
+    firehoseClient.putRecord(
+      {
+        study: studyText,
+        event: eventText,
+        data_json: JSON.stringify({
+          tab_title: event.target.dataset.linkTitle,
+          link_url: event.target.dataset.secondaryLink
+        })
+      },
+      {alwaysPut: true} // For testing purposes to confirm data is logged to firehose.  Remove before merging PR
+    );
   });
+}
+
+// Progress, Course catalog, Dashboard & Professional Learning links
+document.querySelectorAll('.headerlink').forEach(link => {
+  console.log(link);
+
+  recordLinkEvent(link, 'nav_bar', 'header_links');
 });
+
+// dashboard logo
+document.querySelectorAll('.header_logo').forEach(link => {
+  console.log(link);
+  //debugger;
+  recordLinkEvent(link, 'nav_bar', 'dashboard_logo');
+});
+
+// create menu
+
+// help button
+document.querySelectorAll('.linktag').forEach(link => {
+  console.log(link);
+  //debugger;
+  recordLinkEvent(link, 'nav_bar', 'help_button');
+});
+
+// hamburger menu
