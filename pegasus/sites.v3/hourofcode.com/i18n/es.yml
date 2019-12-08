@@ -511,7 +511,7 @@ es:
   hoc_faq_devices_q: "¿Qué dispositivos debo usar para mis estudiantes?"
   hoc_faq_devices_a: Los tutoriales de Code.org funcionan en todos los dispositivos
     y navegadores. Puedes ver más información sobre las necesidades tecnológicas del
-    tutorial de Code.org en < a href = '%{codeorg_url}/educate/it'>. Las necesidades
+    tutorial de Code.org en <a href = '%{codeorg_url}/educate/it'>. Las necesidades
     tecnológicas de los tutoriales que no son de Code.org pueden encontrarse en <a
     href =''%{codeorg_url}/learn'> en la descripción específica del tutorial. ¡No
     olvides que también ofrecemos actividades sin conexión si tu escuela no puede
