@@ -19,7 +19,7 @@ Feature: (Un)Assign on script and course overview pages
     And I press the first ".uitest-unassign-button" element
     # One assign button for each of 9 currently unassigned units in this course,
     # and one at the top of the page indicating the course is assigned
-    And I wait for 3 seconds
+    And I wait until element ".uitest-unassign-button" is not visible
     Then the overview page contains 10 assign buttons
     And I press the first ".uitest-assign-button" element
     And I wait until element ".uitest-unassign-button" is visible
