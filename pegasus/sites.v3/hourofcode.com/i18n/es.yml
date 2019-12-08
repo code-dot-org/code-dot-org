@@ -498,7 +498,7 @@ es:
     en escuelas e institutos de las Ciencias de la Computación, con una especial atención
     en incrementar el número de mujeres y estudiantes de colectivos minoritarios que
     aprenden a programar. Una <a href='%{codeorg_url}/about/partners'>coalición sin
-    precedentes de socios</a>que se ha reunido para apoyar la Hora del Código, también
+    precedentes de socios</a> que se ha reunido para apoyar la Hora del Código, también
     &mdash; incluyendo Microsoft, Apple, Amazon, Boys y Girls Clubs of America y College
     Board.
   hoc_faq_host_q: No sé nada acerca de programación. ¿Aún así puedo organizar un evento?
@@ -510,18 +510,17 @@ es:
     tu evento leyendo nuestra <a href='/how-to'>guía</a>.
   hoc_faq_devices_q: "¿Qué dispositivos debo usar para mis estudiantes?"
   hoc_faq_devices_a: Los tutoriales de Code.org funcionan en todos los dispositivos
-    y navegadores. Puedes ver más información sobre las necesidades tecnológicas del
-    tutorial de Code.org en <a href = '%{codeorg_url}/educate/it'>. Las necesidades
-    tecnológicas de los tutoriales que no son de Code.org pueden encontrarse en <a
-    href =''%{codeorg_url}/learn'> en la descripción específica del tutorial. ¡No
-    olvides que también ofrecemos actividades sin conexión si tu escuela no puede
-    alojar los tutoriales!
+    y navegadores. Puedes ver más información sobre la tecnología compatible con los
+    tutoriales de Code.org <a href='%{codeorg_url}/educate/it'>aquí</a>, y con los
+    tutoriales que no pertenecen a Code.org en <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> la
+    descripción específica del tutorial. ¡No olvides que también ofrecemos <a href='%{unplugged_url}'>actividades
+    sin conexión</a> si tu escuela no puede incorporar los tutoriales!
   hoc_faq_need_computers_q: "¿Necesito ordenadores para cada participante?"
   hoc_faq_need_computers_a: No. Tenemos tutoriales de la Hora del Código que funcionan
     en PCs, teléfonos móviles, tabletas y algunos que no requieren ¡ordenador! Tú
     puedes unirte desde donde estés, con lo que tengas. <p><i>Aquí están algunas opciones:</i>
     <br> <ul><li><b>Trabaja en parejas.</b> Las investigaciones muestran que los estudiantes
-    aprenden mejor en<a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>pares
+    aprenden mejor en <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>pares
     de programación</a>, compartiendo un ordenador y trabajando juntos. Anima a tus
     estudiantes a trabajar en pares. <li><b>Un cañón proyector.</b> Si tú tienes un
     proyector y un ordenador conectado a Internet, el grupo entero puede hacer una
