@@ -14,6 +14,7 @@ stage 'Parameters and Return Investigate', flex_category: 'csp_parameters_return
 level 'CSP U7L2 SFLP 20-21', progression: 'Lesson Overview'
 level 'U7 Param Return Investigate Rock', progression: 'App Investigation'
 level 'U7 Param Investigate Poetry App', progression: 'App Investigation'
+level 'U7L2 CSP CFU Param and Return', progression: 'Check For Understanding'
 
 stage 'Parameters and Return Practice', flex_category: 'csp_parameters_return_values'
 level 'CSP U7L3 SFLP 20-21', progression: 'Lesson Overview'
