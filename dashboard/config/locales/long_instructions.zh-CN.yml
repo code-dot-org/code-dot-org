@@ -10933,9 +10933,14 @@ zh-CN:
         -   添加一些`小节后`的事件。
         -   将"小节"切换为"秒"，并试着以这种方式给舞蹈安排节奏。
       Dance_Party_extras_every_beat_2019: |-
-        # 加速、减速
+        # 四分音符
 
-        最后这段舞蹈采用<xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml>模块来控制每个舞者的动作速度。尝试在曲子的不同位置采用不同的速度看看。您可以在这段舞蹈里面随意调节，或者返回之前任意舞蹈，来让效果变得更精彩一些。
+        大部分舞蹈都是按照小节为单位来设计的，而每个小节由 4 个四分音符构成。这段舞蹈使用[blockly block][0]来让舞者从第 5 小节之后在每个四分音符时都拍一下手。
+
+        更改模块中的数字来试试看对舞蹈会有什么影响。
+
+        -   尝试采用其他音符时值（例如 0.5 是二分音符，0.125 是八分音符）。
+        -   添加其他事件。
       Dance_Party_extras_layout: |-
         # 开始编队！
 
@@ -10977,14 +10982,13 @@ zh-CN:
         -   使用箭头键显示和隐藏舞者
         -   隐藏所有的舞者，并切换到一个令人兴奋的背景效果
       Dance_Party_extras_visible_2019: |-
-        # 四分音符
+        # 让他们去哪儿？
 
-        大部分舞蹈都是按照小节为单位来设计的，而每个小节由 4 个四分音符构成。这段舞蹈使用[blockly block][0]来让舞者从第 5 小节之后在每个四分音符时都拍一下手。
+        这个舞蹈显示和隐藏了两组舞者。看看如何加入自己的天赋。
 
-        更改模块中的数字来试试看对舞蹈会有什么影响。
-
-        -   尝试采用其他音符时值（例如 0.5 是二分音符，0.125 是八分音符）。
-        -   添加其他事件。
+        -   添加另一组舞者
+        -   使用箭头键显示和隐藏舞者
+        -   隐藏所有的舞者，并切换到一个令人兴奋的背景效果
       Fish Tank 1-validated: "**做出预测**：你觉得当运行代码时，会发生什么？"
       Fish Tank 2-validated: |-
         我们来做个鱼缸！
