@@ -9,6 +9,10 @@ const styles = {
     height: '2em',
     textAlign: 'center',
     border: '1px solid black'
+  },
+  title: {
+    fontFamily: '"Gotham 5r", sans-serif, sans-serif',
+    fontSize: 16
   }
 };
 
@@ -90,37 +94,40 @@ class CrossTabChart extends React.Component {
       .map(record =>
         Object.values(record).filter(value => typeof value === 'number')
       )
-      .flatten();
+      .flat();
 
     const min = Math.min(...numericValues);
     const max = Math.max(...numericValues);
 
     return (
-      <table>
-        <tbody>
-          <tr>
-            {columns.map(column => (
-              <th key={column} style={styles.headerCell}>
-                {column}
-              </th>
-            ))}
-          </tr>
-          {chartData.map((record, id) => (
-            <tr key={id}>
-              {columns.map(column => {
-                const value = record[column];
-                const color = this.getColorForValue(value, min, max);
-                const cellStyle = {...styles.cell, backgroundColor: color};
-                return (
-                  <td key={column} style={cellStyle}>
-                    {value}
-                  </td>
-                );
-              })}
+      <div>
+        <p style={styles.title}>{this.props.chartTitle}</p>
+        <table>
+          <tbody>
+            <tr>
+              {columns.map(column => (
+                <th key={column} style={styles.headerCell}>
+                  {column}
+                </th>
+              ))}
             </tr>
-          ))}
-        </tbody>
-      </table>
+            {chartData.map((record, id) => (
+              <tr key={id}>
+                {columns.map(column => {
+                  const value = record[column];
+                  const color = this.getColorForValue(value, min, max);
+                  const cellStyle = {...styles.cell, backgroundColor: color};
+                  return (
+                    <td key={column} style={cellStyle}>
+                      {value}
+                    </td>
+                  );
+                })}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     );
   }
 }

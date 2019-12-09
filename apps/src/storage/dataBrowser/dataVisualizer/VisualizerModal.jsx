@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import memoize from 'memoize-one';
+import {DebounceInput} from 'react-debounce-input';
 import _ from 'lodash';
 import * as dataStyles from '../dataStyles';
 import * as rowStyle from '@cdo/apps/applab/designElements/rowStyle';
@@ -99,12 +100,14 @@ class VisualizerModal extends React.Component {
             <div>
               <div style={rowStyle.container}>
                 <label style={rowStyle.description}>Chart Title</label>
-                <input
+                <DebounceInput
                   style={rowStyle.input}
+                  minLength={1}
+                  debounceTimeout={500}
                   value={this.state.chartTitle}
-                  onChange={event =>
-                    this.setState({chartTitle: event.target.value})
-                  }
+                  onChange={event => {
+                    this.setState({chartTitle: event.target.value});
+                  }}
                 />
               </div>
             </div>
