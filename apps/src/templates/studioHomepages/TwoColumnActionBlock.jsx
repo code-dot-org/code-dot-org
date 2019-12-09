@@ -228,35 +228,6 @@ export class SpecialAnnouncementActionBlock extends Component {
         description={i18n.specialAnnouncementDescriptionHoc2019DanceParty()}
         buttons={[
           {
-            url: 'https://hourofcode.com/#join',
-            text: i18n.joinUs()
-          },
-          {
-            url: pegasus('/hourofcode/overview'),
-            text: i18n.tryIt()
-          }
-        ]}
-      />
-    );
-  }
-}
-
-export class OceansAnnouncement extends Component {
-  render() {
-    return (
-      <TwoColumnActionBlock
-        id="oceans-2019-announcement"
-        imageUrl={pegasus(
-          '/shared/images/fill-540x289/teacher-announcement/hoc2019-oceans.png'
-        )}
-        subHeading={i18n.specialAnnouncementHeadingHoc2019Oceans()}
-        description={i18n.specialAnnouncementDescriptionHoc2019Oceans()}
-        buttons={[
-          {
-            url: 'https://hourofcode.com/#join',
-            text: i18n.joinUs()
-          },
-          {
             url: pegasus('/hourofcode/overview'),
             text: i18n.tryIt()
           }
