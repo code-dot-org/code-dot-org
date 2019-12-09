@@ -9,6 +9,7 @@ import {isBlank} from '../dataUtils';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 import DropdownField from './DropdownField';
 import DataVisualizer from './DataVisualizer';
+import ChartPlaceholder from './ChartPlaceholder';
 
 const INITIAL_STATE = {
   isVisualizerOpen: false,
@@ -40,6 +41,20 @@ class VisualizerModal extends React.Component {
   handleOpen = () => this.setState({isVisualizerOpen: true});
 
   handleClose = () => this.setState({isVisualizerOpen: false});
+
+  canDisplayChart = () => {
+    switch (this.state.chartType) {
+      case 'Bar Chart':
+        return !!this.state.selectedColumn1;
+      case 'Histogram':
+        return !!(this.state.selectedColumn1 && this.state.bucketSize);
+      case 'Scatter Plot':
+      case 'Cross Tab':
+        return !!(this.state.selectedColumn1 && this.state.selectedColumn2);
+      default:
+        return false;
+    }
+  };
 
   parseRecords = memoize(rawRecords => {
     if (Object.keys(rawRecords).length === 0) {
@@ -153,7 +168,7 @@ class VisualizerModal extends React.Component {
               />
             )}
           </div>
-          {this.state.chartType && (
+          {this.canDisplayChart() ? (
             <DataVisualizer
               records={parsedRecords}
               numericColumns={numericColumns}
@@ -163,6 +178,8 @@ class VisualizerModal extends React.Component {
               selectedColumn1={this.state.selectedColumn1}
               selectedColumn2={this.state.selectedColumn2}
             />
+          ) : (
+            <ChartPlaceholder />
           )}
           <div style={{paddingTop: 20}}>
             <DropdownField
