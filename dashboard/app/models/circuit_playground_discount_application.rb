@@ -126,7 +126,8 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
       is_quarterly_workshop_pd_eligible: studio_person_pd_eligible?(user,
         [
           Pd::Workshop::SUBJECT_CSD_WORKSHOP_4,
-          Pd::Workshop::SUBJECT_CSD_WORKSHOP_6
+          Pd::Workshop::SUBJECT_CSD_WORKSHOP_6,
+          Pd::WorkshopConstants::SUBJECT_CSD_VIRTUAL_8
         ]
       ),
       is_progress_eligible: student_progress_eligible?(user)
@@ -155,7 +156,8 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
       is_quarterly_workshop_pd_eligible: studio_person_pd_eligible?(user,
         [
           Pd::Workshop::SUBJECT_CSD_WORKSHOP_4,
-          Pd::Workshop::SUBJECT_CSD_WORKSHOP_6
+          Pd::Workshop::SUBJECT_CSD_WORKSHOP_6,
+          Pd::WorkshopConstants::SUBJECT_CSD_VIRTUAL_8
         ]
       ),
       is_progress_eligible: student_progress_eligible?(user),
