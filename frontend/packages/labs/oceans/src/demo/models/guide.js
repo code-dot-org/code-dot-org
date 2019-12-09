@@ -187,7 +187,7 @@ const guides = [
     }
   },
   {
-    id: 'creaturesvtrash-predicting-pause3',
+    id: 'creaturesvtrashdemo-predicting-pause3',
     text: `A.I. only learns what we teach it.`,
     when: {
       appMode: AppMode.CreaturesVTrashDemo,
@@ -196,7 +196,7 @@ const guides = [
     }
   },
   {
-    id: 'creaturesvtrash-predicting-pause4',
+    id: 'creaturesvtrashdemo-predicting-pause4',
     text: `Let’s train A.I. again.`,
     when: {
       appMode: AppMode.CreaturesVTrashDemo,
