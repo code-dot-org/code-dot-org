@@ -16,7 +16,10 @@ const INITIAL_STATE = {
   chartType: '',
   bucketSize: '',
   selectedColumn1: '',
-  selectedColumn2: ''
+  selectedColumn2: '',
+  filterColumn: '',
+  filterValue: '',
+  screen: ''
 };
 
 class VisualizerModal extends React.Component {
@@ -93,11 +96,10 @@ class VisualizerModal extends React.Component {
           fullHeight
         >
           <div style={{overflow: 'auto', maxHeight: '90%'}}>
-            <h1> Explore {this.props.tableName} </h1>
-            <h2> Overview </h2>
+            <h2> Explore {this.props.tableName} </h2>
 
             <div>
-              <div style={rowStyle.container}>
+              <div style={{...rowStyle.container, float: 'left'}}>
                 <label style={rowStyle.description}>Chart Title</label>
                 <input
                   style={rowStyle.input}
@@ -117,7 +119,7 @@ class VisualizerModal extends React.Component {
             />
 
             {this.state.chartType === 'Histogram' && (
-              <div style={rowStyle.container}>
+              <div style={{...rowStyle.container, float: 'left'}}>
                 <label style={rowStyle.description}>Bucket Size</label>
                 <input
                   style={rowStyle.input}
@@ -162,6 +164,43 @@ class VisualizerModal extends React.Component {
               selectedColumn2={this.state.selectedColumn2}
             />
           )}
+          <div style={{paddingTop: 20}}>
+            <DropdownField
+              displayName="Filter"
+              options={[1, 2, 3]}
+              disabledOptions={[]}
+              value={this.state.filterColumn}
+              onChange={event =>
+                this.setState({filterColumn: event.target.value})
+              }
+              inlineLabel
+            />
+            <DropdownField
+              displayName="by"
+              options={[]}
+              disabledOptions={[]}
+              value={this.state.filterValue}
+              onChange={event =>
+                this.setState({filterValue: event.target.value})
+              }
+              inlineLabel
+            />
+            <DropdownField
+              displayName="Create chart on screen"
+              options={[]}
+              disabledOptions={[]}
+              value={this.state.screen}
+              onChange={event => this.setState({screen: event.target.value})}
+              inlineLabel
+            />
+            <button
+              type="button"
+              style={dataStyles.grayButton}
+              onClick={this.handleOpen}
+            >
+              Create
+            </button>
+          </div>
         </BaseDialog>
       </span>
     );
