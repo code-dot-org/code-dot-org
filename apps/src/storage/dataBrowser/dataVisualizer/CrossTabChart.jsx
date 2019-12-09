@@ -90,7 +90,7 @@ class CrossTabChart extends React.Component {
       .map(record =>
         Object.values(record).filter(value => typeof value === 'number')
       )
-      .flatten();
+      .flat();
 
     const min = Math.min(...numericValues);
     const max = Math.max(...numericValues);
