@@ -76,10 +76,14 @@ export default class ProgressBox extends Component {
       height: imperfect
     };
 
+    const lessonNumberStyle = {
+      ...styles.lessonNumber,
+      color: perfect ? color.white : color.charcoal
+    };
     return (
       <div style={boxWithBorderStyle}>
         {this.props.showLessonNumber && (
-          <div style={styles.lessonNumber}>{this.props.lessonNumber}</div>
+          <div style={lessonNumberStyle}>{this.props.lessonNumber}</div>
         )}
         <div style={incompleteLevels} />
         <div style={imperfectLevels} />
