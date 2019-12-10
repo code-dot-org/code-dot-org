@@ -78,9 +78,10 @@ module ProxyHelper
     render_error_response 400, "Invalid URI #{location}"
   rescue SocketError, Net::OpenTimeout, Net::ReadTimeout, Errno::ECONNRESET, Errno::ECONNREFUSED, Errno::ENETUNREACH => e
     render_error_response 400, "Network error #{e.class} #{e.message}"
-  rescue OpenSSL::SSL::SSLError => e
-    raise e unless e.message =~ SSL_HOSTNAME_MISMATCH_REGEX
-    render_error_response 400, "Remote host SSL certificate error #{e.message}"
+  rescue OpenSSL::SSL::SSLError
+    render_error_response 400, "Remote host SSL certificate error"
+  rescue EOFError
+    render_error_response 400, "Remote host closed the connection before sending all data"
   end
 
   # Unlike render_proxied_url, this does not attempt to render the URL, but instead
