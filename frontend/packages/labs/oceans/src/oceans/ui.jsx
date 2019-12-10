@@ -676,11 +676,8 @@ let UnwrappedButton = class Button extends React.Component {
     const clickReturnValue = this.props.onClick(event);
 
     if (clickReturnValue !== false) {
-      if (this.props.sound && clickReturnValue !== false) {
-        playSound(this.props.sound);
-      } else {
-        playSound('other');
-      }
+      const sound = this.props.sound || 'other';
+      playSound(sound);
     }
   };
 
