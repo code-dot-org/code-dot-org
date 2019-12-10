@@ -221,7 +221,12 @@ FirebaseStorage.createRecord = function(tableName, record, onSuccess, onError) {
       );
       return recordRef.set(JSON.stringify(record));
     })
-    .then(() => addMissingColumns(tableName, Object.keys(record)))
+    .then(() =>
+      addMissingColumns(
+        tableName,
+        getColumnNamesFromRecords([JSON.stringify(record)])
+      )
+    )
     .then(() => onSuccess(record), onError);
 };
 
@@ -379,7 +384,12 @@ FirebaseStorage.updateRecord = function(
         incrementRateLimitCounters()
           .then(() => updateTableCounters(tableName, 0))
           .then(() => recordRef.set(recordJson))
-          .then(() => addMissingColumns(tableName, Object.keys(record)))
+          .then(() =>
+            addMissingColumns(
+              tableName,
+              getColumnNamesFromRecords([recordJson])
+            )
+          )
           .then(() => onComplete(record, true), onError);
       }
     });
