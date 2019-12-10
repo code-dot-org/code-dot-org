@@ -6,7 +6,6 @@ const {
   BodyShape
 } = require('@ml/utils/fishData');
 const {generateOcean, filterOcean} = require('@ml/utils/generateOcean');
-const SimpleTrainer = require('@ml/utils/SimpleTrainer');
 const SVMTrainer = require('@ml/utils/SVMTrainer');
 import {AppMode, ClassType} from '@ml/oceans/constants';
 import {setState} from '@ml/oceans/state';

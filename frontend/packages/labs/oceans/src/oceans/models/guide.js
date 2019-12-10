@@ -147,22 +147,22 @@ const guides = [
     arrow: 'LowerRight'
   },
   {
-    id: 'creaturesvtrash-predicting-init1',
+    id: 'creaturesvtrashdemo-predicting-init1',
     text: `So far, we trained A.I. to identify objects as either “fish” or “not fish”.`,
     when: {appMode: AppMode.CreaturesVTrashDemo, currentMode: Modes.Predicting}
   },
   {
-    id: 'creaturesvtrash-predicting-init2',
+    id: 'creaturesvtrashdemo-predicting-init2',
     text: `What if this training data was used to decide what belonged in the water?`,
     when: {appMode: AppMode.CreaturesVTrashDemo, currentMode: Modes.Predicting}
   },
   {
-    id: 'creaturesvtrash-predicting-init3',
+    id: 'creaturesvtrashdemo-predicting-init3',
     text: `What would happen to other sea creatures?  Does our training approach cause unintended consequences?`,
     when: {appMode: AppMode.CreaturesVTrashDemo, currentMode: Modes.Predicting}
   },
   {
-    id: 'creaturesvtrash-predicting-init4',
+    id: 'creaturesvtrashdemo-predicting-init4',
     text: `Let’s see.`,
     when: {appMode: AppMode.CreaturesVTrashDemo, currentMode: Modes.Predicting},
     noDimBackground: true,
@@ -187,7 +187,7 @@ const guides = [
     }
   },
   {
-    id: 'creaturesvtrash-predicting-pause3',
+    id: 'creaturesvtrashdemo-predicting-pause3',
     text: `A.I. only learns what we teach it.`,
     when: {
       appMode: AppMode.CreaturesVTrashDemo,
@@ -196,7 +196,7 @@ const guides = [
     }
   },
   {
-    id: 'creaturesvtrash-predicting-pause4',
+    id: 'creaturesvtrashdemo-predicting-pause4',
     text: `Let’s train A.I. again.`,
     when: {
       appMode: AppMode.CreaturesVTrashDemo,
