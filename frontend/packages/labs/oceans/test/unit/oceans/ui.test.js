@@ -4,6 +4,7 @@ import {shallow} from 'enzyme';
 import sinon from 'sinon';
 import {Button} from '@ml/oceans/ui';
 import * as guide from '@ml/oceans/models/guide';
+import * as soundLibrary from '@ml/oceans/models/soundLibrary';
 
 const DEFAULT_PROPS = {
   // radiumConfig.userAgent is required because our unit tests run in the "node" testEnvironment
@@ -13,14 +14,19 @@ const DEFAULT_PROPS = {
 };
 
 describe('Button', () => {
-  let onClickMock;
+  let onClickMock, playSoundSpy;
 
   beforeEach(() => {
+    soundLibrary.injectSoundAPIs({playSound: sinon.fake()});
+    playSoundSpy = sinon.spy(soundLibrary, 'playSound');
     onClickMock = sinon.fake.returns(false);
   });
 
+  afterEach(() => {
+    soundLibrary.playSound.restore();
+  });
+
   it('dismisses guide on click', () => {
-    guide.dismissCurrentGuide();
     const dismissCurrentGuideSpy = sinon.spy(guide, 'dismissCurrentGuide');
     const wrapper = shallow(
       <Button {...DEFAULT_PROPS} onClick={onClickMock} />
@@ -41,7 +47,34 @@ describe('Button', () => {
     expect(onClickMock.calledOnce);
   });
 
-  it('plays a sound if onClick prop does not return false', () => {});
+  it('does not play a sound if onClick prop returns false', () => {
+    const wrapper = shallow(
+      <Button {...DEFAULT_PROPS} onClick={onClickMock} />
+    );
 
-  it('does not play a sound if onClick prop returns false', () => {});
+    wrapper.simulate('click');
+    expect(!playSoundSpy.called);
+  });
+
+  describe('onClick prop does not return false', () => {
+    it('plays sound if supplied', () => {
+      onClickMock = sinon.fake.returns(true);
+      const wrapper = shallow(
+        <Button {...DEFAULT_PROPS} onClick={onClickMock} sound="sortyes" />
+      );
+
+      wrapper.simulate('click');
+      expect(playSoundSpy.withArgs('sortyes').calledOnce);
+    });
+
+    it('plays "other" sound if sound not supplied', () => {
+      onClickMock = sinon.fake.returns(true);
+      const wrapper = shallow(
+        <Button {...DEFAULT_PROPS} onClick={onClickMock} />
+      );
+
+      wrapper.simulate('click');
+      expect(playSoundSpy.withArgs('other').calledOnce);
+    });
+  });
 });
