@@ -39,18 +39,24 @@ const soundLibrary = {
   ]
 };
 
-export const injectSoundAPIs = ({registerSound, playSound}) => {
+const injectSoundAPIs = ({registerSound, playSound}) => {
   registerSoundAPI = registerSound;
   playSoundAPI = playSound;
 };
 
-export const loadSounds = () => {
+const loadSounds = () => {
   Object.entries(soundLibrary).forEach(([_, category]) =>
     category.forEach(sound => registerSoundAPI({id: sound, mp3: sound}))
   );
 };
 
-export const playSound = (categoryName, volume = undefined) => {
+const playSound = (categoryName, volume = undefined) => {
   const index = randomInt(0, soundLibrary[categoryName].length - 1);
   playSoundAPI(soundLibrary[categoryName][index], {volume: volume || 1.0});
+};
+
+export default {
+  injectSoundAPIs,
+  loadSounds,
+  playSound
 };

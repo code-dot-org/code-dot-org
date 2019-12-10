@@ -24,7 +24,7 @@ import snail from '@public/images/snail-large.png';
 import loadingGif from '@public/images/loading.gif';
 import Typist from 'react-typist';
 import * as guide from './models/guide';
-import {playSound} from './models/soundLibrary';
+import * as soundLibrary from './models/soundLibrary';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {
   faPlay,
@@ -677,7 +677,7 @@ let UnwrappedButton = class Button extends React.Component {
 
     if (clickReturnValue !== false) {
       const sound = this.props.sound || 'other';
-      playSound(sound);
+      soundLibrary.playSound(sound);
     }
   };
 
@@ -1248,11 +1248,11 @@ let Pond = class Pond extends React.Component {
     if (state.showRecallFish) {
       currentFishSet = state.recallFish;
       nextFishSet = state.pondFish;
-      playSound('yes');
+      soundLibrary.playSound('yes');
     } else {
       currentFishSet = state.pondFish;
       nextFishSet = state.recallFish;
-      playSound('no');
+      soundLibrary.playSound('no');
     }
 
     // Don't call arrangeFish if fish have already been arranged.
@@ -1325,7 +1325,7 @@ let Pond = class Pond extends React.Component {
             }
           });
           fishClicked = true;
-          playSound('yes');
+          soundLibrary.playSound('yes');
 
           if (
             state.appMode === AppMode.FishShort ||
@@ -1348,7 +1348,7 @@ let Pond = class Pond extends React.Component {
 
       if (!fishClicked) {
         setState({pondClickedFish: null});
-        playSound('no');
+        soundLibrary.playSound('no');
       }
     }
   };
@@ -1365,9 +1365,9 @@ let Pond = class Pond extends React.Component {
       });
 
       if (state.pondPanelShowing) {
-        playSound('sortno');
+        soundLibrary.playSound('sortno');
       } else {
-        playSound('sortyes');
+        soundLibrary.playSound('sortyes');
       }
     }
 
@@ -1479,7 +1479,7 @@ let Guide = class Guide extends React.Component {
   dismissGuideClick() {
     const dismissed = guide.dismissCurrentGuide();
     if (dismissed) {
-      playSound('other');
+      soundLibrary.playSound('other');
     }
   }
 
@@ -1502,7 +1502,7 @@ let Guide = class Guide extends React.Component {
     // Start playing the typing sounds.
     if (!state.guideShowing && !state.guideTypingTimer && currentGuide) {
       const guideTypingTimer = setInterval(() => {
-        playSound('no', 0.5);
+        soundLibrary.playSound('no', 0.5);
       }, 1000 / 10);
       setState({guideTypingTimer});
     }
