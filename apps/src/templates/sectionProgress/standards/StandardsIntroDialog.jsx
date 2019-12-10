@@ -18,8 +18,7 @@ const styles = {
 export class StandardsIntroDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
-    handleConfirm: PropTypes.func.isRequired,
-    handleCancel: PropTypes.func.isRequired
+    handleConfirm: PropTypes.func.isRequired
   };
 
   render() {
