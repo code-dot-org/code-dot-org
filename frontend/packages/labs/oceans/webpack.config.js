@@ -9,7 +9,8 @@ const commonConfig = {
     // Note: Separate aliases are required for aliases to work in unit tests. These should
     // be added in package.json in the jest configuration.
     alias: {
-      '@ml': path.resolve(__dirname, 'src')
+      '@ml': path.resolve(__dirname, 'src'),
+      '@public': path.resolve(__dirname, 'public')
     }
   },
   output: {
