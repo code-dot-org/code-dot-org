@@ -27,7 +27,7 @@ export function getColumnRefByName(tableName, columnName) {
     });
 }
 
-function getColumnNamesFromRecords(records) {
+export function getColumnNamesFromRecords(records) {
   const columnNames = [];
   Object.keys(records).forEach(id => {
     const record = JSON.parse(records[id]);
@@ -109,23 +109,16 @@ export function onColumnsChange(database, tableName, callback) {
 /**
  *
  * @param {string} tableName
- * @param {Array.<string>} existingColumnNames
+ * @param {Array.<string>} columns
  * @returns {*}
  */
-export function addMissingColumns(tableName) {
+export function addMissingColumns(tableName, columns) {
   return getColumnNamesSnapshot(tableName).then(existingColumnNames => {
-    const recordsRef = getProjectDatabase().child(
-      `storage/tables/${tableName}/records`
-    );
-    return recordsRef.once('value').then(snapshot => {
-      const recordsData = snapshot.val() || {};
-      getColumnNamesFromRecords(recordsData).forEach(columnName => {
-        if (!existingColumnNames.includes(columnName)) {
-          getColumnsRef(getProjectDatabase(), tableName)
-            .push()
-            .set({columnName});
-        }
-      });
+    let columnsRef = getColumnsRef(getProjectDatabase(), tableName);
+    columns.forEach(columnName => {
+      if (!existingColumnNames.includes(columnName)) {
+        columnsRef.push().set({columnName});
+      }
     });
   });
 }
