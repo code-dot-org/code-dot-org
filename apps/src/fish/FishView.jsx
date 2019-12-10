@@ -73,22 +73,37 @@ class FishView extends React.Component {
   };
 
   render() {
+    // The tutorial has a width:height ratio of 16:9.
+    const aspectRatio = 16 / 9;
+
     let containerWidth, containerHeight;
 
+    // Constrain tutorial to 1280px maximum width.
     const maxContainerWidth = Math.min(this.state.windowWidth, 1280);
+
+    // Reducing by 27px leaves appropriate space above the small footer.
     const maxContainerHeight = this.state.windowHeight - 27;
 
-    if (maxContainerWidth / maxContainerHeight > 16 / 9) {
+    if (maxContainerWidth / maxContainerHeight > aspectRatio) {
       // Constrain by height.
-      containerWidth = maxContainerHeight * (16 / 9);
-      containerHeight = maxContainerHeight;
-    } else if (maxContainerWidth / maxContainerWidth < 16 / 9) {
+      containerWidth = maxContainerHeight * aspectRatio;
+      //containerHeight = maxContainerHeight;
+    } else if (maxContainerWidth / maxContainerWidth < aspectRatio) {
       // Constrain by width.
       containerWidth = maxContainerWidth;
-      containerHeight = maxContainerWidth * (9 / 16);
+      //containerHeight = maxContainerWidth / aspectRatio;
     }
 
-    const fontSize = (18 * containerWidth) / 930;
+    // Constrain tutorial to 320px minimum width;
+    if (containerWidth < 320) {
+      containerWidth = 320;
+    }
+
+    // Calculate the height.
+    containerHeight = containerWidth / aspectRatio;
+
+    // The tutorial shows 18px fonts when 930px wide.
+    const baseFontSize = (18 * containerWidth) / 930;
 
     return (
       <StudioAppWrapper rotateContainerWidth={this.props.mobilePortraitWidth}>
@@ -104,7 +119,7 @@ class FishView extends React.Component {
           >
             <div
               id="container-react"
-              style={{...styles.containerReact, fontSize}}
+              style={{...styles.containerReact, fontSize: baseFontSize}}
             />
             <canvas id="background-canvas" style={styles.backgroundCanvas} />
             <canvas id="activity-canvas" style={styles.activityCanvas} />
