@@ -11,7 +11,7 @@ export const J5_CONSTANTS = {
 };
 
 export const SENSOR_VARS = ['soundSensor', 'lightSensor', 'tempSensor'];
-export const BUTTON_VARS = ['buttonL', 'buttonR'];
+export const BUTTON_VARS = ['buttonL', 'buttonR', 'buttonA', 'buttonB'];
 const TOUCH_PAD_VARS = TOUCH_PINS.map(pin => `touchPad${pin}`);
 
 const BUTTON_EVENTS = ['down', 'up'];
@@ -21,6 +21,8 @@ const TOUCH_EVENTS = ['down', 'up'];
 export const COMPONENT_EVENTS = {
   buttonL: BUTTON_EVENTS,
   buttonR: BUTTON_EVENTS,
+  buttonA: BUTTON_EVENTS,
+  buttonB: BUTTON_EVENTS,
   toggleSwitch: ['open', 'close', 'change'],
   accelerometer: ['change', 'data', 'shake']
 };

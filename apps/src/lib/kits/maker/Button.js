@@ -22,16 +22,21 @@ export function PlaygroundButton(opts) {
 PlaygroundButton.inherits(five.Button);
 
 export function MicroBitButton(board) {
-  this.buttonAEvents = new Array(6).fill(0);
+  this.buttonEvents = new Array(6).fill(0);
   board.mb.addFirmataEventListener((sourceID, eventID) => {
-    if (1 === sourceID) {
-      this.buttonAEvents[eventID]++;
+    if (board.pin === sourceID) {
+      this.buttonEvents[eventID]++;
+      if (eventID === 1) {
+        this.emit('down');
+      } else if (eventID === 2) {
+        this.emit('up');
+      }
     }
   });
 
   // Add a read-only `isPressed` property
   Object.defineProperty(this, 'isPressed', {
-    get: () => this.buttonAEvents[1] > 0
+    get: () => this.buttonEvents[1] > 0
   });
 }
 MicroBitButton.inherits(five.Button);
