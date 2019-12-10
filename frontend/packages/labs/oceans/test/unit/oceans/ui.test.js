@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {shallow} from 'enzyme';
+import sinon from 'sinon';
 import {Button} from '@ml/oceans/ui';
 import * as guide from '@ml/oceans/models/guide';
 
@@ -12,13 +13,33 @@ const DEFAULT_PROPS = {
 };
 
 describe('Button', () => {
-  it('dismisses guide on click', () => {
-    const onClickSpy = event => false;
-    const wrapper = shallow(<Button {...DEFAULT_PROPS} onClick={onClickSpy} />);
-    wrapper.simulate('click');
+  let onClickMock;
+
+  beforeEach(() => {
+    onClickMock = sinon.fake.returns(false);
   });
 
-  it('calls onClick prop on click', () => {});
+  it('dismisses guide on click', () => {
+    guide.dismissCurrentGuide();
+    const dismissCurrentGuideSpy = sinon.spy(guide, 'dismissCurrentGuide');
+    const wrapper = shallow(
+      <Button {...DEFAULT_PROPS} onClick={onClickMock} />
+    );
+
+    wrapper.simulate('click');
+    expect(dismissCurrentGuideSpy.calledOnce);
+
+    guide.dismissCurrentGuide.restore();
+  });
+
+  it('calls onClick prop on click', () => {
+    const wrapper = shallow(
+      <Button {...DEFAULT_PROPS} onClick={onClickMock} />
+    );
+
+    wrapper.simulate('click');
+    expect(onClickMock.calledOnce);
+  });
 
   it('plays a sound if onClick prop does not return false', () => {});
 
