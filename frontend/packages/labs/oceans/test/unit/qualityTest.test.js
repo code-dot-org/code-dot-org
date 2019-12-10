@@ -7,8 +7,8 @@ const {
 } = require('../../src/utils/fishData');
 const {generateOcean, filterOcean} = require('../../src/utils/generateOcean');
 const SVMTrainer = require('../../src/utils/SVMTrainer');
-import {AppMode, ClassType} from '../../src/demo/constants';
-import {setState} from '../../src/demo/state';
+import {AppMode, ClassType} from '../../src/oceans/constants';
+import {setState} from '../../src/oceans/state';
 
 function clock(start) {
   if (!start) return process.hrtime();

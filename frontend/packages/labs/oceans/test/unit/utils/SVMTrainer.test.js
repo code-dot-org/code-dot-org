@@ -7,7 +7,7 @@ const {
 } = require('../../../src/utils/fishData');
 const {generateOcean, filterOcean} = require('../../../src/utils/generateOcean');
 const SVMTrainer = require('../../../src/utils/SVMTrainer');
-import {ClassType} from '../../../src/demo/constants';
+import {ClassType} from '../../../src/oceans/constants';
 
 const floatEquals = (a, b) => {
   return Math.abs(a - b) <= 0.0001;

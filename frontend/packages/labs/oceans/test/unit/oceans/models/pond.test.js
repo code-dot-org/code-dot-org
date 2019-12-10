@@ -1,8 +1,8 @@
 const {initFishData} = require('@ml/utils/fishData');
-import {setState, getState, resetState} from '@ml/demo/state';
-import {TrashOceanObject} from '@ml/demo/OceanObject';
-import {ClassType, Modes} from '@ml/demo/constants';
-import {init} from '@ml/demo/models/pond';
+import {setState, getState, resetState} from '@ml/oceans/state';
+import {TrashOceanObject} from '@ml/oceans/OceanObject';
+import {ClassType, Modes} from '@ml/oceans/constants';
+import {init} from '@ml/oceans/models/pond';
 import SimpleTrainer from '@ml/utils/SimpleTrainer';
 import {generateOcean} from '@ml/utils/generateOcean';
 

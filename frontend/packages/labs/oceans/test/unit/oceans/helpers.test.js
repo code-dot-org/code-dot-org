@@ -1,5 +1,5 @@
-import {filterFishComponents} from '@ml/demo/helpers';
-import {AppMode} from '@ml/demo/constants';
+import {filterFishComponents} from '@ml/oceans/helpers';
+import {AppMode} from '@ml/oceans/constants';
 
 describe('filterFishComponents', () => {
   const fishComponents = {
