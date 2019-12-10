@@ -87,11 +87,9 @@ class FishView extends React.Component {
     if (maxContainerWidth / maxContainerHeight > aspectRatio) {
       // Constrain by height.
       containerWidth = maxContainerHeight * aspectRatio;
-      //containerHeight = maxContainerHeight;
     } else if (maxContainerWidth / maxContainerWidth < aspectRatio) {
       // Constrain by width.
       containerWidth = maxContainerWidth;
-      //containerHeight = maxContainerWidth / aspectRatio;
     }
 
     // Constrain tutorial to 320px minimum width;
@@ -112,8 +110,8 @@ class FishView extends React.Component {
             id="container"
             style={{
               ...styles.container,
-              width: containerWidth,
-              height: containerHeight
+              width: Math.round(containerWidth),
+              height: Math.round(containerHeight)
             }}
             dir="ltr"
           >
