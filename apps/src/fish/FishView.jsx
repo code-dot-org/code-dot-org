@@ -51,25 +51,34 @@ class FishView extends React.Component {
     super(props);
 
     this.state = {
-      windowWidth: $('#codeApp').width(),
-      windowHeight: $('#codeApp').height()
+      windowWidth: $(window).width(),
+      windowHeight: $(window).height(),
+      appWidth: $('#codeApp').width(),
+      appHeight: $('#codeApp').height()
     };
   }
 
   componentDidMount() {
     this.props.onMount();
+
     window.addEventListener('resize', _.debounce(this.onResize, 100));
-    this.setState({
-      windowWidth: $('#codeApp').width(),
-      windowHeight: $('#codeApp').height()
-    });
   }
 
   onResize = () => {
-    const windowWidth = $('#codeApp').width();
-    const windowHeight = $('#codeApp').height();
+    const windowWidth = $(window).width();
+    const windowHeight = $(window).height();
 
-    this.setState({windowWidth, windowHeight});
+    // Check that the window dimensions have actually changed to avoid
+    // unnecessary event-proessing on iOS Safari.
+    if (
+      this.state.windowWidth !== windowWidth ||
+      this.state.windowHeight !== windowHeight
+    ) {
+      const appWidth = $('#codeApp').width();
+      const appHeight = $('#codeApp').height();
+
+      this.setState({windowWidth, windowHeight, appWidth, appHeight});
+    }
   };
 
   render() {
@@ -79,10 +88,11 @@ class FishView extends React.Component {
     let containerWidth, containerHeight;
 
     // Constrain tutorial to 1280px maximum width.
-    const maxContainerWidth = Math.min(this.state.windowWidth, 1280);
+    const maxContainerWidth = Math.min(this.state.appWidth, 1280);
 
     // Reducing by 27px leaves appropriate space above the small footer.
-    const maxContainerHeight = this.state.windowHeight - 27;
+    const maxContainerHeight =
+      Math.min(this.state.appHeight, window.innerHeight) - 27;
 
     if (maxContainerWidth / maxContainerHeight > aspectRatio) {
       // Constrain by height.
