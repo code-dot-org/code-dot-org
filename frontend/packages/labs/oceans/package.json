@@ -84,6 +84,7 @@
     "react-addons-test-utils": "~15.4.0",
     "react-dom": "~15.4.0",
     "react-test-renderer": "~15.4.0",
+    "sinon": "^7.5.0",
     "style-loader": "^1.0.0",
     "svm": "uponthesun/svmjs",
     "url-loader": "^2.2.0",
@@ -101,8 +102,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/react-fontawesome": "^0.1.7",
-    "react-typist": "^2.0.5",
-    "sinon": "^7.5.0"
+    "react-typist": "^2.0.5"
   },
   "files": [
     "dist/**/!(oceans.js)"
