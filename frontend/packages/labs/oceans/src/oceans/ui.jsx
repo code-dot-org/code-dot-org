@@ -744,7 +744,7 @@ let UnwrappedConfirmationDialog = class ConfirmationDialog extends React.Compone
 };
 export const ConfirmationDialog = Radium(UnwrappedConfirmationDialog); // Exported for unit tests.
 
-let Loading = class Loading extends React.Component {
+class Loading extends React.Component {
   render() {
     return (
       <Body>
@@ -752,7 +752,7 @@ let Loading = class Loading extends React.Component {
       </Body>
     );
   }
-};
+}
 
 const wordSet = {
   short: {
