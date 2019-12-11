@@ -1,4 +1,4 @@
-CREATE TABLE user_proficiencies_20190901_20190701 AS
+CREATE TABLE user_proficiencies_20190901_20190914 AS
 SELECT
   user_levels.user_id,
   SUM(IF(level_concept_difficulties.sequencing = 1, 1, 0)) AS sequencing_d1_count,
