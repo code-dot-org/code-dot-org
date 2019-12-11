@@ -63,9 +63,7 @@ class StandardsIntroDialog extends Component {
           </ul>
         </div>
         <div style={styles.description}>
-          <p>
-            <SafeMarkdown markdown={i18n.standardsReminder()} />
-          </p>
+          <SafeMarkdown markdown={i18n.standardsReminder()} />
         </div>
         <DialogFooter rightAlign>
           <Button
