@@ -61,7 +61,6 @@ class LessonStatusDialog extends Component {
             text={i18n.closeAndSave()}
             onClick={this.props.handleConfirm}
             color={Button.ButtonColor.orange}
-            className="no-mc"
           />
         </DialogFooter>
       </BaseDialog>
