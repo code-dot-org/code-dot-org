@@ -57,19 +57,7 @@ class SectionProgressToggle extends React.Component {
       },
       {includeUserId: true}
     );
-    // Display the toggle based on the internal state so that it is
-    // more immediately responsive. Once setting internal state is
-    // complete, then update the redux currentView.
-    // Timeouts forces a render of the local state before dispatching
-    // the action.
-    this.setState(
-      {selectedToggle: selectedToggle, initialView: selectedToggle},
-      () => {
-        setTimeout(() => {
-          this.props.setCurrentView(selectedToggle);
-        }, 0);
-      }
-    );
+    this.props.setCurrentView(selectedToggle);
   };
 
   render() {
