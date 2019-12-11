@@ -6,6 +6,8 @@ import jQuery from 'jquery';
 import EnrollForm from '@cdo/apps/code-studio/pd/workshop_enrollment/enroll_form';
 import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
+const refute = p => assert.isNotOk(p);
+
 describe('Enroll Form', () => {
   // We aren't testing server responses, but have a fake server to handle calls and suppress warnings
   sinon.fakeServer.create();
@@ -34,18 +36,18 @@ describe('Enroll Form', () => {
     });
 
     it('displays role question and grade question', () => {
-      expect(enrollForm.find('#role')).to.have.length(1);
-      expect(enrollForm.find('#grades_teaching')).to.have.length(1);
+      assert(enrollForm.exists('#role'));
+      assert(enrollForm.exists('#grades_teaching'));
     });
 
     it('displays describe role question after other/admin role answer', () => {
       enrollForm.setState({role: 'Other'});
-      expect(enrollForm.find('#describe_role')).to.have.length(1);
+      assert(enrollForm.exists('#describe_role'));
     });
 
     it("doesn't display describe role question after normal teaching role answer", () => {
       enrollForm.setState({role: 'Librarian'});
-      expect(enrollForm.find('#describe_role')).to.have.length(0);
+      refute(enrollForm.exists('#describe_role'));
     });
   });
 
@@ -91,11 +93,11 @@ describe('Enroll Form', () => {
     });
 
     it('does not display intent question', () => {
-      assert.isFalse(enrollForm.exists({groupName: 'csf_intro_intent'}));
+      refute(enrollForm.exists({groupName: 'csf_intro_intent'}));
     });
 
     it('does not display other factors question', () => {
-      assert.isFalse(enrollForm.exists({groupName: 'csf_intro_other_factors'}));
+      refute(enrollForm.exists({groupName: 'csf_intro_other_factors'}));
     });
   });
 
@@ -116,23 +118,23 @@ describe('Enroll Form', () => {
     });
 
     it('does not display role question', () => {
-      expect(enrollForm.find('#role')).to.have.length(0);
+      refute(enrollForm.exists('#role'));
     });
 
     it('does not display previous courses question', () => {
-      expect(enrollForm.find('#previous_courses')).to.have.length(0);
+      refute(enrollForm.exists('#previous_courses'));
     });
 
     it('does not display replace existing question', () => {
-      expect(enrollForm.find('#replace_existing')).to.have.length(0);
+      refute(enrollForm.exists('#replace_existing'));
     });
 
     it('does not display intent question', () => {
-      assert.isFalse(enrollForm.exists({groupName: 'csf_intro_intent'}));
+      refute(enrollForm.exists({groupName: 'csf_intro_intent'}));
     });
 
     it('does not display other factors question', () => {
-      assert.isFalse(enrollForm.exists({groupName: 'csf_intro_other_factors'}));
+      refute(enrollForm.exists({groupName: 'csf_intro_other_factors'}));
     });
   });
 
@@ -153,11 +155,11 @@ describe('Enroll Form', () => {
     });
 
     it('does display previous courses question', () => {
-      expect(enrollForm.find('#previous_courses')).to.have.length(1);
+      assert(enrollForm.exists('#previous_courses'));
     });
 
     it('does display replace existing question', () => {
-      expect(enrollForm.find('#replace_existing')).to.have.length(1);
+      assert(enrollForm.exists('#replace_existing'));
     });
   });
 
