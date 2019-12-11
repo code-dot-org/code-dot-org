@@ -3,7 +3,7 @@ import {setState, getState, resetState} from '@ml/oceans/state';
 import {ClassType, Modes, AppMode} from '@ml/oceans/constants';
 import {init, predictFish} from '@ml/oceans/models/predict';
 import SimpleTrainer from '@ml/utils/SimpleTrainer';
-import {TrashOceanObject} from '@ml/demo/OceanObject';
+import {TrashOceanObject} from '@ml/oceans/OceanObject';
 
 global.window = {};
 
