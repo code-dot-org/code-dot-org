@@ -68,7 +68,7 @@ class CrossTabChart extends React.Component {
   };
 
   getColorForValue = (value, min, max) => {
-    if (typeof value === 'string') {
+    if (typeof value !== 'number') {
       return 'white';
     }
     const lightest = 100;
@@ -91,12 +91,17 @@ class CrossTabChart extends React.Component {
       this.props.selectedColumn1,
       this.props.selectedColumn2
     );
+    const numericValues = [];
 
-    const numericValues = chartData
-      .map(record =>
-        Object.values(record).filter(value => typeof value === 'number')
-      )
-      .flat();
+    chartData.forEach(record => {
+      Object.entries(record).forEach(entry => {
+        let key = entry[0];
+        let value = entry[1];
+        if (typeof value === 'number' && key !== this.props.selectedColumn1) {
+          numericValues.push(value);
+        }
+      });
+    });
 
     const min = Math.min(...numericValues);
     const max = Math.max(...numericValues);
@@ -117,7 +122,10 @@ class CrossTabChart extends React.Component {
               <tr key={id}>
                 {columns.map(column => {
                   const value = record[column];
-                  const color = this.getColorForValue(value, min, max);
+                  const color =
+                    column === this.props.selectedColumn1
+                      ? 'white'
+                      : this.getColorForValue(value, min, max);
                   const cellStyle = {...styles.cell, backgroundColor: color};
                   return (
                     <td key={column} style={cellStyle}>
