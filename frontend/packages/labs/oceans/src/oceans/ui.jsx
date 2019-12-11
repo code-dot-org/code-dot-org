@@ -4,7 +4,7 @@ import Radium from 'radium';
 import _ from 'lodash';
 import {getState, setState} from './state';
 import constants, {AppMode, Modes} from './constants';
-import {toMode} from './toMode';
+import * as modeHelpers from './modeHelpers';
 import {
   $time,
   currentRunTime,
@@ -754,7 +754,7 @@ class Loading extends React.Component {
   }
 }
 
-const wordSet = {
+export const wordSet = {
   short: {
     text: ['What type of fish do you want to train A.I. to detect?'],
     choices: [
@@ -788,12 +788,17 @@ const wordSet = {
   }
 };
 
-let Words = class Words extends React.Component {
+let UnwrappedWords = class Words extends React.Component {
   constructor(props) {
     super(props);
 
     // Randomize word choices in each set, merge the sets, and set as state.
     const appMode = getState().appMode;
+
+    if (!wordSet[appMode]) {
+      throw `Could not find a set of choices in wordSet for appMode '${appMode}'`;
+    }
+
     const appModeWordSet = wordSet[appMode].choices;
     let choices = [];
     let maxSize = 0;
@@ -823,7 +828,7 @@ let Words = class Words extends React.Component {
       word,
       trainingQuestion: `Is this fish “${word.toLowerCase()}”?`
     });
-    toMode(Modes.Training);
+    modeHelpers.toMode(Modes.Training);
 
     // Report an analytics event for the word chosen.
     if (window.trackEvent) {
@@ -868,7 +873,7 @@ let Words = class Words extends React.Component {
     );
   }
 };
-Words = Radium(Words);
+export const Words = Radium(UnwrappedWords); // Exported for unit tests.
 
 let Train = class Train extends React.Component {
   state = {
@@ -945,7 +950,7 @@ let Train = class Train extends React.Component {
         </div>
         <Button
           style={styles.continueButton}
-          onClick={() => toMode(Modes.Predicting)}
+          onClick={() => modeHelpers.toMode(Modes.Predicting)}
         >
           Continue
         </Button>
@@ -982,7 +987,7 @@ let Predict = class Predict extends React.Component {
       state.onContinue();
     } else {
       setState({showRecallFish: false});
-      toMode(Modes.Pond);
+      modeHelpers.toMode(Modes.Pond);
     }
   };
 
@@ -1430,7 +1435,7 @@ let Pond = class Pond extends React.Component {
                   onClick={() => {
                     setState({pondClickedFish: null, pondPanelShowing: false});
                     resetTraining(state);
-                    toMode(Modes.Words);
+                    modeHelpers.toMode(Modes.Words);
                   }}
                 >
                   New Word
@@ -1454,7 +1459,7 @@ let Pond = class Pond extends React.Component {
               <Button
                 style={styles.backButton}
                 onClick={() => {
-                  toMode(Modes.Training);
+                  modeHelpers.toMode(Modes.Training);
                   setState({pondClickedFish: null, pondPanelShowing: false});
                 }}
               >
