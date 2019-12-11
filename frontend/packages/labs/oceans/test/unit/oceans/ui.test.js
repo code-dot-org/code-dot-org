@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import {Button} from '@ml/oceans/ui';
+import {Button, ConfirmationDialog} from '@ml/oceans/ui';
 import * as guide from '@ml/oceans/models/guide';
 import * as soundLibrary from '@ml/oceans/models/soundLibrary';
 
@@ -76,5 +76,44 @@ describe('Button', () => {
       wrapper.simulate('click');
       expect(playSoundSpy.withArgs('other').calledOnce);
     });
+  });
+});
+
+describe('ConfirmationDialog', () => {
+  let onYesClickSpy, onNoClickSpy;
+
+  beforeEach(() => {
+    onYesClickSpy = sinon.spy();
+    onNoClickSpy = sinon.spy();
+  });
+
+  it('calls onYesClick prop when erase button is clicked', () => {
+    const wrapper = shallow(
+      <ConfirmationDialog
+        {...DEFAULT_PROPS}
+        onYesClick={onYesClickSpy}
+        onNoClick={onNoClickSpy}
+      />
+    );
+
+    const eraseButton = wrapper.find('Button').at(0);
+    eraseButton.simulate('click');
+    expect(onYesClickSpy.calledOnce);
+    expect(!onNoClickSpy.called);
+  });
+
+  it('calls onNoClick prop when cancel button is clicked', () => {
+    const wrapper = shallow(
+      <ConfirmationDialog
+        {...DEFAULT_PROPS}
+        onYesClick={onYesClickSpy}
+        onNoClick={onNoClickSpy}
+      />
+    );
+
+    const cancelButton = wrapper.find('Button').at(1);
+    cancelButton.simulate('click');
+    expect(onNoClickSpy.calledOnce);
+    expect(!onYesClickSpy.called);
   });
 });

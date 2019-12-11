@@ -696,10 +696,10 @@ let UnwrappedButton = class Button extends React.Component {
 };
 export const Button = Radium(UnwrappedButton); // Exported for unit tests.
 
-let ConfirmationDialog = class ConfirmationDialog extends React.Component {
+let UnwrappedConfirmationDialog = class ConfirmationDialog extends React.Component {
   static propTypes = {
-    onYesClick: PropTypes.func,
-    onNoClick: PropTypes.func
+    onYesClick: PropTypes.func.isRequired,
+    onNoClick: PropTypes.func.isRequired
   };
 
   render() {
@@ -742,7 +742,7 @@ let ConfirmationDialog = class ConfirmationDialog extends React.Component {
     );
   }
 };
-ConfirmationDialog = Radium(ConfirmationDialog);
+export const ConfirmationDialog = Radium(UnwrappedConfirmationDialog); // Exported for unit tests.
 
 let Loading = class Loading extends React.Component {
   render() {
