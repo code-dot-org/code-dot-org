@@ -105,9 +105,9 @@ class VisualizerModal extends React.Component {
                   minLength={1}
                   debounceTimeout={500}
                   value={this.state.chartTitle}
-                  onChange={event => {
-                    this.setState({chartTitle: event.target.value});
-                  }}
+                  onChange={event =>
+                    this.setState({chartTitle: event.target.value})
+                  }
                 />
               </div>
             </div>
