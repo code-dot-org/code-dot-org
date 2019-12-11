@@ -5,6 +5,7 @@ import BaseDialog from '../../BaseDialog';
 import DialogFooter from '../../teacherDashboard/DialogFooter';
 import Button from '../../Button';
 import MultiCheckboxSelector from '../../MultiCheckboxSelector';
+import ProgressBox from '../ProgressBox';
 
 const styles = {
   dialog: {
@@ -40,11 +41,13 @@ class LessonStatusDialog extends Component {
           items={[
             {
               id: 'one',
+              number: 1,
               name: 'Lesson 1',
               url: 'https://curriculum.code.org/csf-19/coursea/1/'
             },
             {
               id: 'two',
+              number: 3,
               name: 'Lesson 4',
               url: 'https://curriculum.code.org/csf-19/coursea/3/'
             }
@@ -71,7 +74,16 @@ class LessonStatusDialog extends Component {
 const ComplexLessonComponent = function({style, lesson}) {
   return (
     <div style={styles.lessonListItem}>
-      <div>Box</div>
+      <div>
+        <ProgressBox
+          started={false}
+          incomplete={0}
+          imperfect={0}
+          perfect={0}
+          showLessonNumber={true}
+          lessonNumber={lesson.number}
+        />
+      </div>
       <a style={{paddingLeft: 10}} href={lesson.url}>
         {lesson.name}
       </a>
@@ -82,6 +94,7 @@ ComplexLessonComponent.propTypes = {
   style: PropTypes.object,
   lesson: PropTypes.shape({
     id: PropTypes.string,
+    number: PropTypes.number,
     name: PropTypes.string,
     url: PropTypes.string
   })
