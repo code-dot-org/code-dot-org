@@ -5,10 +5,16 @@ require_relative '../../../deployment'
 require 'cdo/only_one'
 require 'net/http'
 require 'json'
+require 'ostruct'
+require 'date'
 require_relative '../../../shared/middleware/helpers/firebase_helper'
 
 WeatherForecastOffice = Struct.new(:city, :state, :zip)
-WeatherRecord = Struct.new(:id, :city, :state, :timestamp, :temp_min, :temp_max, :weather, :icon, :wind_speed)
+
+def cardinal_dir_from_degrees(degrees)
+  dirs = %w(N NE E SE S SW W NW N)
+  return dirs[(degrees / 45).round]
+end
 
 def get_weather_data
   forecast_offices = [
@@ -136,27 +142,53 @@ def get_weather_data
     WeatherForecastOffice.new('Spokane', 'Washington', '99224')
   ]
   records = []
-  columns = %w(id city state timestamp temp_min temp_max weather icon wind_speed)
+  columns = ['id', 'State', 'City', 'Forecast Number', 'Date', 'Time Measurement', 'Main Condition',
+             'Condition Description', 'Icon', 'Temperature', 'Humidity', 'Wind Speed', 'Wind Direction', 'Rain Inches',
+             'Snow Inches', 'Pressure', 'Cloud Coverage', 'UTC Timestamp', 'Timezone Offset']
+
   id = 1
   forecast_offices.each do |office|
+    forecast_number = 1
+
     url = "http://api.openweathermap.org/data/2.5/forecast?zip=#{office.zip},us&units=imperial&appid=c719e74bc77b787d940386405e0cbb83"
     response = Net::HTTP.get_response(URI(url))
     next unless response.code == '200'
-    measurements = JSON.parse(response.body)["list"]
+
+    parsed_response = JSON.parse(response.body)
+    measurements = parsed_response['list']
     measurements.each do |measurement|
-      row = WeatherRecord.new(
-        id,
-        office.city,
-        office.state,
-        measurement["dt_txt"],
-        measurement["main"]["temp_min"],
-        measurement["main"]["temp_max"],
-        measurement["weather"][0]["description"],
-        measurement["weather"][0]["icon"],
-        measurement["wind"]["speed"]
-      )
-      records.push(row.to_h.to_json)
+      record = OpenStruct.new
+      record.id = id
+      record.State = office.state
+      record.City = office.city
+      record['Forecast Number'] = forecast_number
+
+      # list.dt gives timestamp of forecast in UTC, city.timezone gives shift in seconds from UTC
+      parsed_date = Time.at(measurement['dt'] - parsed_response['city']['timezone'])
+      record.Date = parsed_date.strftime('%a %-m/%-d') # ex Wed 1/7
+      record['Time Measurement'] = parsed_date.strftime('%-l %p') # ex 7 PM
+
+      weather_condition = measurement['weather'][0]
+      record['Main Condition'] = weather_condition['main']
+      record['Condition Description'] = weather_condition['description']
+      record.Icon = format('http://openweathermap.org/img/wn/%s@2x.png', weather_condition['icon'])
+
+      record['Temperature'] = measurement['main']['temp'].round
+      record.Humidity = measurement['main']['humidity']
+      record['Wind Speed'] = measurement['wind']['speed'].round
+      record['Wind Direction'] = cardinal_dir_from_degrees(measurement['wind']['deg'])
+
+      record['Rain Inches'] = measurement['rain'] ? measurement['rain']['3h'] : 0
+      record['Snow Inches'] = measurement['snow'] ? measurement['snow']['3h'] : 0
+
+      record['Pressure'] = measurement['main']['pressure']
+      record['Cloud Coverage'] = measurement['clouds']['all']
+      record['UTC Timestamp'] = measurement['dt']
+      record['Timezone Offset'] = parsed_response['city']['timezone']
+
+      records.push(record.to_h.to_json)
       id += 1
+      forecast_number += 1
     end
   end
   return records, columns
@@ -165,6 +197,7 @@ end
 def main
   fb = FirebaseHelper.new('shared')
   records, columns = get_weather_data
+  fb.delete_shared_table('weather')
   fb.upload_shared_table('weather', records, columns)
 end
 
