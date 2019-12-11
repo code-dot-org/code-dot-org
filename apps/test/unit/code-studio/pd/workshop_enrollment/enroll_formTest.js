@@ -1,9 +1,10 @@
 import React from 'react';
-import EnrollForm from '@cdo/apps/code-studio/pd/workshop_enrollment/enroll_form';
-import {expect} from 'chai';
+import {assert, expect} from 'chai';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
 import jQuery from 'jquery';
+import EnrollForm from '@cdo/apps/code-studio/pd/workshop_enrollment/enroll_form';
+import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 describe('Enroll Form', () => {
   // We aren't testing server responses, but have a fake server to handle calls and suppress warnings
@@ -48,6 +49,56 @@ describe('Enroll Form', () => {
     });
   });
 
+  describe('CSF Intro Enroll Form', () => {
+    let enrollForm;
+    before(() => {
+      enrollForm = shallow(
+        <EnrollForm
+          workshop_id={props.workshop_id}
+          workshop_course="CS Fundamentals"
+          workshop_subject={SubjectNames.SUBJECT_CSF_101}
+          first_name={props.first_name}
+          email={props.email}
+          previous_courses={props.previous_courses}
+          onSubmissionComplete={props.onSubmissionComplete}
+        />
+      );
+    });
+
+    it('displays intent question', () => {
+      assert(enrollForm.exists({groupName: 'csf_intro_intent'}));
+    });
+
+    it('displays other factors question', () => {
+      assert(enrollForm.exists({groupName: 'csf_intro_other_factors'}));
+    });
+  });
+
+  describe('CSF Deep Dive Enroll Form', () => {
+    let enrollForm;
+    before(() => {
+      enrollForm = shallow(
+        <EnrollForm
+          workshop_id={props.workshop_id}
+          workshop_course="CS Fundamentals"
+          workshop_subject={SubjectNames.SUBJECT_CSF_201}
+          first_name={props.first_name}
+          email={props.email}
+          previous_courses={props.previous_courses}
+          onSubmissionComplete={props.onSubmissionComplete}
+        />
+      );
+    });
+
+    it('does not display intent question', () => {
+      assert.isFalse(enrollForm.exists({groupName: 'csf_intro_intent'}));
+    });
+
+    it('does not display other factors question', () => {
+      assert.isFalse(enrollForm.exists({groupName: 'csf_intro_other_factors'}));
+    });
+  });
+
   describe('CSP Enroll Form', () => {
     let enrollForm;
     before(() => {
@@ -74,6 +125,14 @@ describe('Enroll Form', () => {
 
     it('does not display replace existing question', () => {
       expect(enrollForm.find('#replace_existing')).to.have.length(0);
+    });
+
+    it('does not display intent question', () => {
+      assert.isFalse(enrollForm.exists({groupName: 'csf_intro_intent'}));
+    });
+
+    it('does not display other factors question', () => {
+      assert.isFalse(enrollForm.exists({groupName: 'csf_intro_other_factors'}));
     });
   });
 
