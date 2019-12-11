@@ -67,9 +67,8 @@ class CreateStandardsReportDialog extends Component {
             <SafeMarkdown markdown={i18n.createStandardsReportSuggestion2()} />
           </li>
           <li>
-            <span>{i18n.createStandardsReportSuggestion3() + ' '}</span>
             <a href="https://studio.code.org/projects" target="_blank">
-              {i18n.createStandardsReportStudentProjectLink()}
+              {i18n.createStandardsReportSuggestion3()}
             </a>
           </li>
         </ul>
