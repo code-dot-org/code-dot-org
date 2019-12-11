@@ -3,13 +3,39 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import memoize from 'memoize-one';
 import _ from 'lodash';
+import color from '../../../util/color';
 import * as dataStyles from '../dataStyles';
 import * as rowStyle from '@cdo/apps/applab/designElements/rowStyle';
 import {isBlank} from '../dataUtils';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 import DropdownField from './DropdownField';
 import DataVisualizer from './DataVisualizer';
-import ChartPlaceholder from './ChartPlaceholder';
+
+const styles = {
+  container: {
+    display: 'inline-block'
+  },
+  modalBody: {
+    overflow: 'auto',
+    maxHeight: '90%'
+  },
+  input: {
+    ...rowStyle.container,
+    float: 'left'
+  },
+  placeholderContainer: {
+    position: 'relative',
+    textAlign: 'center'
+  },
+  placeholderText: {
+    position: 'absolute',
+    width: '100%',
+    bottom: '50%',
+    fontFamily: '"Gotham 5r", sans-serif, sans-serif',
+    fontSize: 20,
+    color: color.dark_charcoal
+  }
+};
 
 const INITIAL_STATE = {
   isVisualizerOpen: false,
@@ -96,7 +122,7 @@ class VisualizerModal extends React.Component {
     );
 
     return (
-      <span style={{display: 'inline-block'}}>
+      <span style={styles.container}>
         <button
           type="button"
           style={dataStyles.whiteButton}
@@ -110,11 +136,11 @@ class VisualizerModal extends React.Component {
           fullWidth
           fullHeight
         >
-          <div style={{overflow: 'auto', maxHeight: '90%'}}>
+          <div style={styles.modalBody}>
             <h2> Explore {this.props.tableName} </h2>
 
             <div>
-              <div style={{...rowStyle.container, float: 'left'}}>
+              <div style={styles.input}>
                 <label style={rowStyle.description}>Chart Title</label>
                 <input
                   style={rowStyle.input}
@@ -134,7 +160,7 @@ class VisualizerModal extends React.Component {
             />
 
             {this.state.chartType === 'Histogram' && (
-              <div style={{...rowStyle.container, float: 'left'}}>
+              <div style={styles.input}>
                 <label style={rowStyle.description}>Bucket Size</label>
                 <input
                   style={rowStyle.input}
@@ -179,7 +205,12 @@ class VisualizerModal extends React.Component {
               selectedColumn2={this.state.selectedColumn2}
             />
           ) : (
-            <ChartPlaceholder />
+            <div style={styles.placeholderContainer}>
+              <div style={styles.placeholderText}>
+                Select values to generate a visualization
+              </div>
+              <img src={require('./placeholder.png')} />
+            </div>
           )}
           <div style={{paddingTop: 20}}>
             <DropdownField
