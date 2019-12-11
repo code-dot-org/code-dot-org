@@ -4,7 +4,6 @@ import {ClassType, Modes, AppMode} from '@ml/demo/constants';
 import {init, predictFish} from '@ml/demo/models/predict';
 import SimpleTrainer from '@ml/utils/SimpleTrainer';
 import {TrashOceanObject} from '@ml/demo/OceanObject';
-import sinon from 'sinon';
 
 global.window = {};
 
