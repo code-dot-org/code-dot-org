@@ -83,13 +83,11 @@ class CreateStandardsReportDialog extends Component {
             text={i18n.back()}
             onClick={this.props.handleBack}
             color={Button.ButtonColor.gray}
-            className="no-mc"
           />
           <Button
             text={i18n.createReport()}
             onClick={this.props.handleConfirm}
             color={Button.ButtonColor.orange}
-            className="no-mc"
           />
         </DialogFooter>
       </BaseDialog>
