@@ -5,8 +5,6 @@ import {init, predictFish} from '@ml/oceans/models/predict';
 import SimpleTrainer from '@ml/utils/SimpleTrainer';
 import {TrashOceanObject} from '@ml/oceans/OceanObject';
 
-global.window = {};
-
 describe('Predict test', () => {
   beforeAll(() => {
     initFishData();
