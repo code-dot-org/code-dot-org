@@ -18,6 +18,7 @@ const NOT_TEACHING = "I'm not teaching this year";
 const EXPLAIN = '(Please Explain):';
 
 const CSF = 'CS Fundamentals';
+const INTRO = SubjectNames.SUBJECT_CSF_101;
 const DEEP_DIVE = SubjectNames.SUBJECT_CSF_201;
 
 const VALIDATION_STATE_ERROR = 'error';
@@ -261,7 +262,8 @@ export default class EnrollForm extends React.Component {
           this.state.csf_has_physical_curriculum_guide
         ],
       previous_courses: this.state.previous_courses,
-      replace_existing: this.state.replace_existing
+      replace_existing: this.state.replace_existing,
+      csf_intro_intent: this.state.csf_intro_intent
     };
     this.submitRequest = $.ajax({
       method: 'POST',
@@ -324,6 +326,11 @@ export default class EnrollForm extends React.Component {
         onInputChange: this.handleTeachingOtherChange
       }
     ]);
+    const csfIntroIntentLabel =
+      `Most teachers register for the Intro workshop in order to learn how to ` +
+      `teach a CS Fundamentals course during the current or upcoming academic year. Is this also ` +
+      `true of your interest in registering for this workshop?`;
+    const csfIntroIntentAnswers = ['Yes', 'No', 'Unsure'];
     const csfCourses = Object.keys(CSF_COURSES)
       .filter(key => key !== 'courses14_accelerated')
       .map(key => CSF_COURSES[key])
@@ -460,6 +467,24 @@ export default class EnrollForm extends React.Component {
             />
           </FormGroup>
         )}
+        {this.props.workshop_course === CSF &&
+          this.props.workshop_subject === INTRO && (
+            <ButtonList
+              groupName="csf_intro_intent"
+              type="radio"
+              required
+              label={csfIntroIntentLabel}
+              answers={csfIntroIntentAnswers}
+              onChange={this.handleChange}
+              selectedItems={this.state.csf_intro_intent}
+              validationState={
+                this.state.errors.hasOwnProperty('csf_intro_intent')
+                  ? VALIDATION_STATE_ERROR
+                  : null
+              }
+              errorText={this.state.errors.csf_intro_intent}
+            />
+          )}
         {this.props.workshop_course === CSF &&
           this.props.workshop_subject === DEEP_DIVE && (
             <FormGroup>
@@ -614,7 +639,9 @@ export default class EnrollForm extends React.Component {
     if (this.props.workshop_course === CSF) {
       requiredFields.push('role');
       requiredFields.push('grades_teaching');
-      if (this.props.workshop_subject === DEEP_DIVE) {
+      if (this.props.workshop_subject === INTRO) {
+        requiredFields.push('csf_intro_intent');
+      } else if (this.props.workshop_subject === DEEP_DIVE) {
         requiredFields.push('attended_csf_intro_workshop');
         requiredFields.push('csf_has_physical_curriculum_guide');
       }
