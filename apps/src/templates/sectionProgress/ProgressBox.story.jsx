@@ -74,7 +74,7 @@ export default storybook => {
           imperfect={0}
           perfect={0}
           showLessonNumber={true}
-          lessonNumber={88}
+          lessonNumber={1}
         />
       )
     }
