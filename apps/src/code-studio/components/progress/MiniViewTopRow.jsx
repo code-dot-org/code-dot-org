@@ -50,10 +50,10 @@ export default class MiniViewTopRow extends React.Component {
     const sectionId = queryParams('section_id');
     var params;
     switch (true) {
-      case typeof selectedSectionId !== 'undefined' && selectedSectionId !== '':
+      case typeof !!selectedSectionId:
         params = stringifyQueryParams({section_id: selectedSectionId});
         break;
-      case typeof sectionId !== 'undefined' && sectionId !== '':
+      case typeof !!sectionId:
         params = stringifyQueryParams({section_id: sectionId});
         break;
       default:
