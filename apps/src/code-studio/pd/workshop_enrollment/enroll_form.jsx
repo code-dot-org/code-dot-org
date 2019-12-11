@@ -263,7 +263,8 @@ export default class EnrollForm extends React.Component {
         ],
       previous_courses: this.state.previous_courses,
       replace_existing: this.state.replace_existing,
-      csf_intro_intent: this.state.csf_intro_intent
+      csf_intro_intent: this.state.csf_intro_intent,
+      csf_intro_other_factors: this.state.csf_intro_other_factors
     };
     this.submitRequest = $.ajax({
       method: 'POST',
@@ -326,11 +327,25 @@ export default class EnrollForm extends React.Component {
         onInputChange: this.handleTeachingOtherChange
       }
     ]);
+
     const csfIntroIntentLabel =
       `Most teachers register for the Intro workshop in order to learn how to ` +
       `teach a CS Fundamentals course during the current or upcoming academic year. Is this also ` +
       `true of your interest in registering for this workshop?`;
     const csfIntroIntentAnswers = ['Yes', 'No', 'Unsure'];
+
+    const csfIntroOtherFactorsLabel = `What other factors might influence your registration? Check all that apply.`;
+    const csfIntroOtherFactorsAnswers = [
+      'I am newly assigned to teach computer science and want help getting started.',
+      'Teaching computer science is one of my teaching duties.',
+      'I am interested in teaching CS Fundamentals.',
+      'I have administrator support to teach CS Fundamentals.',
+      'I have available time on my schedule for teaching computer science.',
+      'I want to learn computer science concepts.',
+      'Computer science is a required subject in my region.',
+      'I am here to bring information back to my school or district.'
+    ];
+
     const csfCourses = Object.keys(CSF_COURSES)
       .filter(key => key !== 'courses14_accelerated')
       .map(key => CSF_COURSES[key])
@@ -483,6 +498,23 @@ export default class EnrollForm extends React.Component {
                   : null
               }
               errorText={this.state.errors.csf_intro_intent}
+            />
+          )}
+        {this.props.workshop_course === CSF &&
+          this.props.workshop_subject === INTRO && (
+            <ButtonList
+              groupName="csf_intro_other_factors"
+              type="check"
+              label={csfIntroOtherFactorsLabel}
+              answers={csfIntroOtherFactorsAnswers}
+              onChange={this.handleChange}
+              selectedItems={this.state.csf_intro_other_factors}
+              validationState={
+                this.state.errors.hasOwnProperty('csf_intro_other_factors')
+                  ? VALIDATION_STATE_ERROR
+                  : null
+              }
+              errorText={this.state.errors.csf_intro_other_factors}
             />
           )}
         {this.props.workshop_course === CSF &&
