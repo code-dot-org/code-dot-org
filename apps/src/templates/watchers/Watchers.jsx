@@ -411,6 +411,7 @@ class Watchers extends React.Component {
                   attachment: 'together'
                 }
               ]}
+              style={{zIndex: 2}}
             >
               <input
                 placeholder="Variable / Property"
