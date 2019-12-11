@@ -653,11 +653,11 @@ ja-JP:
         このブロックをチェックしてみましょう。
 
         <xml>
-        <block type="Dancelab_makeNewDanceSpriteGroup">
-        <title name="N">6</title>
-        <title name="COSTUME">"アヒル"</title>
-        <title name="LAYOUT">"円"</title>
-        </block></xml>
+          <block type="Dancelab_makeNewDanceSpriteGroup">
+            <title name="N">6</title>
+            <title name="COSTUME">"DUCK"</title>
+            <title name="LAYOUT">"circle"</title>
+          </block></xml>
 
         次は、たくさんのダンサーを一度に作成します！
 
@@ -699,9 +699,14 @@ ja-JP:
         -   「小節後」イベントをいくつか追加してください。
             \*「小節」を「秒」に切り替えて、その方法でダンスのタイミングを計ってみてください。
       Dance_Party_extras_every_beat_2019: |-
-        # スピードアップ、スローダウン
+        # 四分音符
 
-        この最後のダンスでは、<xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml>ブロックを使用して、各ダンサーの動きの速さをコントロールします。曲のさまざまなポイントでさまざまな速度を試してみてください。このダンスをそのまま調整し続けたり、以前のダンスに戻ったりしてさらにクールにしましょう。
+        ダンスのほとんどは小節全体を使用していますが、各小節は4つの四分音符で構成されています。このダンスでは、[blockly block][0]を使用して、5小節後の4分音符ごとにダンサーが拍手します。
+
+        ブロック内の数字を変更して、ダンスがどのように変化するかを確認してみてください。
+
+        * 他の音符の長さを試してください（半音の場合は0.5、8分音符の場合は0.125）
+        * 他のイベントを追加してください。
       Dance_Party_extras_layout: |-
         # フォーメーションにつきましょう!
 
@@ -735,14 +740,13 @@ ja-JP:
         -   矢印キーを使用してダンサーを表示したり非表示にしたりしてください
         -   すべてのダンサーを非表示にして、エキサイティングな背景効果に切り替えてください
       Dance_Party_extras_visible_2019: |-
-        # 四分音符
+        # どこへ行った？
 
-        ダンスのほとんどは小節全体を使用していますが、各小節は4つの四分音符で構成されています。このダンスでは、[blockly block][0]を使用して、5小節後の4分音符ごとにダンサーが拍手します。
+        このダンスでは、2つのグループのダンサーたちを表示したり非表示にしたりします。それを確認して、自分自身の工夫を追加してみてください。
 
-        ブロック内の数字を変更して、ダンスがどのように変化するかを確認してみてください。
-
-        -   他の音符の長さを試してください（半音の場合は0.5、8分音符の場合は0.125）
-        -   他のイベントを追加してください。
+        -   ダンサーのグループをもう1つ追加してください
+        -   矢印キーを使用してダンサーを表示したり非表示にしたりしてください
+        -   すべてのダンサーを非表示にして、エキサイティングな背景効果に切り替えてください
       Fish Tank 1-validated: "**予測してみよう** このプログラムを実行したら、どうなりますか？"
       Fish Tank 2-validated: |-
         水そうを作ろう！
@@ -5218,3 +5222,18 @@ ja-JP:
         -   ゾウはいくつリンゴを集めましたか？
         -   カバはいくつリンゴを集めましたか？
         -   リンゴをすべて集めるのに、何回、実行しましたか？
+      Dance_Party_extras_layout_2019: |-
+        ＃結成しましょう！
+
+        <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> ブロックを使用して、ダンス全体でバックアップダンサーのフォーメーションを変更するこのダンスをチェックしてください。次のアイデアのいずれかを試して拡張してください：
+
+        異なるレイアウトでダンサーの2番目のグループを作成
+        キーが押されたときにレイアウトを変更
+        ダンサーがフォーメーションを変更したときにプロパティを変更
+      Dance_Party_extras_mixed_2019: |-
+        ＃More Buttons
+
+        このダンスでは、ダンサーが自動的に踊りながら、ダンサーのプロパティをリアルタイムで制御できます。ボタンを押したときに他のプロパティを変更してみてください。例：
+
+        「下」を押したときにダンサーの色合いをランダム化します。
+        「スペース」を押したときに、ランダムなレイアウトでダンサーのグループを追加します。
