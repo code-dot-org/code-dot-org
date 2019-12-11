@@ -1,7 +1,7 @@
 const {initFishData} = require('@ml/utils/fishData');
-import {setState, getState, resetState} from '@ml/demo/state';
-import {ClassType, Modes} from '@ml/demo/constants';
-import {init, onClassifyFish} from '@ml/demo/models/train.js';
+import {setState, getState, resetState} from '@ml/oceans/state';
+import {ClassType, Modes} from '@ml/oceans/constants';
+import {init, onClassifyFish} from '@ml/oceans/models/train.js';
 
 describe('Model quality test', () => {
   beforeAll(() => {

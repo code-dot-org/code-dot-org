@@ -4,11 +4,11 @@ const {
   fieldInfos,
   MouthExpression,
   BodyShape
-} = require('../../src/utils/fishData');
-const {generateOcean, filterOcean} = require('../../src/utils/generateOcean');
-const SVMTrainer = require('../../src/utils/SVMTrainer');
-import {AppMode, ClassType} from '../../src/demo/constants';
-import {setState} from '../../src/demo/state';
+} = require('@ml/utils/fishData');
+const {generateOcean, filterOcean} = require('@ml/utils/generateOcean');
+const SVMTrainer = require('@ml/utils/SVMTrainer');
+import {AppMode, ClassType} from '@ml/oceans/constants';
+import {setState} from '@ml/oceans/state';
 
 function clock(start) {
   if (!start) return process.hrtime();

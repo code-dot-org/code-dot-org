@@ -15,16 +15,16 @@ import {
 import {onClassifyFish} from './models/train';
 import {arrangeFish} from './models/pond';
 import colors from './colors';
-import aiBotHead from '../../public/images/ai-bot/ai-bot-head.png';
-import aiBotBody from '../../public/images/ai-bot/ai-bot-body.png';
-import aiBotClosed from '../../public/images/ai-bot/ai-bot-closed.png';
-import counterIcon from '../../public/images/polaroid-icon.png';
-import arrowDownImage from '../../public/images/arrow-down.png';
-import snail from '../../public/images/snail-large.png';
-import loadingGif from '../../public/images/loading.gif';
+import aiBotHead from '@public/images/ai-bot/ai-bot-head.png';
+import aiBotBody from '@public/images/ai-bot/ai-bot-body.png';
+import aiBotClosed from '@public/images/ai-bot/ai-bot-closed.png';
+import counterIcon from '@public/images/polaroid-icon.png';
+import arrowDownImage from '@public/images/arrow-down.png';
+import snail from '@public/images/snail-large.png';
+import loadingGif from '@public/images/loading.gif';
 import Typist from 'react-typist';
-import {getCurrentGuide, dismissCurrentGuide} from './models/guide';
-import {playSound} from './models/soundLibrary';
+import * as guide from './models/guide';
+import * as soundLibrary from './models/soundLibrary';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {
   faPlay,
@@ -662,7 +662,7 @@ class Content extends React.Component {
   }
 }
 
-let Button = class Button extends React.Component {
+let UnwrappedButton = class Button extends React.Component {
   static propTypes = {
     className: PropTypes.string,
     style: PropTypes.object,
@@ -671,18 +671,15 @@ let Button = class Button extends React.Component {
     sound: PropTypes.string
   };
 
-  onClick(event) {
-    dismissCurrentGuide();
+  onClick = event => {
+    guide.dismissCurrentGuide();
     const clickReturnValue = this.props.onClick(event);
 
     if (clickReturnValue !== false) {
-      if (this.props.sound && clickReturnValue !== false) {
-        playSound(this.props.sound);
-      } else {
-        playSound('other');
-      }
+      const sound = this.props.sound || 'other';
+      soundLibrary.playSound(sound);
     }
-  }
+  };
 
   render() {
     return (
@@ -690,14 +687,14 @@ let Button = class Button extends React.Component {
         type="button"
         className={this.props.className}
         style={[styles.button, this.props.style]}
-        onClick={event => this.onClick(event)}
+        onClick={this.onClick}
       >
         {this.props.children}
       </button>
     );
   }
 };
-Button = Radium(Button);
+export const Button = Radium(UnwrappedButton); // Exported for unit tests.
 
 let ConfirmationDialog = class ConfirmationDialog extends React.Component {
   static propTypes = {
@@ -1251,11 +1248,11 @@ let Pond = class Pond extends React.Component {
     if (state.showRecallFish) {
       currentFishSet = state.recallFish;
       nextFishSet = state.pondFish;
-      playSound('yes');
+      soundLibrary.playSound('yes');
     } else {
       currentFishSet = state.pondFish;
       nextFishSet = state.recallFish;
-      playSound('no');
+      soundLibrary.playSound('no');
     }
 
     // Don't call arrangeFish if fish have already been arranged.
@@ -1275,7 +1272,7 @@ let Pond = class Pond extends React.Component {
 
   onPondClick = e => {
     // Don't allow pond clicks if a Guide is currently showing.
-    if (getCurrentGuide()) {
+    if (guide.getCurrentGuide()) {
       return;
     }
 
@@ -1328,7 +1325,7 @@ let Pond = class Pond extends React.Component {
             }
           });
           fishClicked = true;
-          playSound('yes');
+          soundLibrary.playSound('yes');
 
           if (
             state.appMode === AppMode.FishShort ||
@@ -1351,7 +1348,7 @@ let Pond = class Pond extends React.Component {
 
       if (!fishClicked) {
         setState({pondClickedFish: null});
-        playSound('no');
+        soundLibrary.playSound('no');
       }
     }
   };
@@ -1368,9 +1365,9 @@ let Pond = class Pond extends React.Component {
       });
 
       if (state.pondPanelShowing) {
-        playSound('sortno');
+        soundLibrary.playSound('sortno');
       } else {
-        playSound('sortyes');
+        soundLibrary.playSound('sortyes');
       }
     }
 
@@ -1480,15 +1477,15 @@ let Guide = class Guide extends React.Component {
   }
 
   dismissGuideClick() {
-    const dismissed = dismissCurrentGuide();
+    const dismissed = guide.dismissCurrentGuide();
     if (dismissed) {
-      playSound('other');
+      soundLibrary.playSound('other');
     }
   }
 
   render() {
     const state = getState();
-    const currentGuide = getCurrentGuide();
+    const currentGuide = guide.getCurrentGuide();
 
     let guideBgStyle = [styles.guideBackground];
     if (currentGuide) {
@@ -1505,7 +1502,7 @@ let Guide = class Guide extends React.Component {
     // Start playing the typing sounds.
     if (!state.guideShowing && !state.guideTypingTimer && currentGuide) {
       const guideTypingTimer = setInterval(() => {
-        playSound('no', 0.5);
+        soundLibrary.playSound('no', 0.5);
       }, 1000 / 10);
       setState({guideTypingTimer});
     }

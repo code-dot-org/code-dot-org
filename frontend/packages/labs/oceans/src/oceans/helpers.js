@@ -3,8 +3,8 @@ import queryString from 'query-string';
 import {FishBodyPart} from '../utils/fishData';
 import {setState} from './state';
 import constants, {Modes} from './constants';
-import labBackground from '../../public/images/lab-background.png';
-import waterBackground from '../../public/images/water-background.png';
+import labBackground from '@public/images/lab-background.png';
+import waterBackground from '@public/images/water-background.png';
 
 export const $time =
   Date.now ||

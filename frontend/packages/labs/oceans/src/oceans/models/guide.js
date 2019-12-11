@@ -1,10 +1,10 @@
 import {getState, setState} from '../state';
 import {AppMode, Modes} from '../constants';
 import {queryStrFor} from '../helpers';
-import turtleImage from '../../../public/images/turtle-large.png';
-import seahorseImage from '../../../public/images/seahorse-large.png';
-import trashBottleImage from '../../../public/images/bottle-large.png';
-import trashCanImage from '../../../public/images/can-large.png';
+import turtleImage from '@public/images/turtle-large.png';
+import seahorseImage from '@public/images/seahorse-large.png';
+import trashBottleImage from '@public/images/bottle-large.png';
+import trashCanImage from '@public/images/can-large.png';
 
 const imageStyleOverrides = {
   turtle: {bottom: '1%', left: '6%'},
@@ -467,7 +467,7 @@ const guides = [
   }
 ];
 
-export function getCurrentGuide() {
+const getCurrentGuide = () => {
   if (queryStrFor('guide') === 'off') {
     return null;
   }
@@ -493,9 +493,9 @@ export function getCurrentGuide() {
   }
 
   return null;
-}
+};
 
-export function dismissCurrentGuide() {
+const dismissCurrentGuide = () => {
   const currentGuide = getCurrentGuide();
 
   // If we have a current guide, and it's actually showing (rather than still
@@ -511,4 +511,9 @@ export function dismissCurrentGuide() {
   }
 
   return false;
-}
+};
+
+export default {
+  getCurrentGuide,
+  dismissCurrentGuide
+};

@@ -1,2 +1,2 @@
-import './demo/assetPath';
-export {initAll} from './demo/init';
+import './oceans/assetPath';
+export {initAll} from './oceans/init';

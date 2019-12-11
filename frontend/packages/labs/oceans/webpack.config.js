@@ -9,7 +9,8 @@ const commonConfig = {
     // Note: Separate aliases are required for aliases to work in unit tests. These should
     // be added in package.json in the jest configuration.
     alias: {
-      '@ml': path.resolve(__dirname, 'src')
+      '@ml': path.resolve(__dirname, 'src'),
+      '@public': path.resolve(__dirname, 'public')
     }
   },
   output: {
@@ -51,7 +52,7 @@ const commonConfig = {
       },
       {
         type: 'javascript/auto',
-        test: /src\/demo\/model.json$/,
+        test: /src\/oceans\/model.json$/,
         use: [
           {
             loader: 'file-loader',
@@ -92,7 +93,7 @@ const firstConfigOnly = {
     new CleanWebpackPlugin(),
     new CopyPlugin([
       {
-        from: 'src/demo/*.bin',
+        from: 'src/oceans/*.bin',
         to: 'assets/models/',
         flatten: true
       }
@@ -112,7 +113,7 @@ const externalConfig = {
 const defaultConfig = [
   {
     entry: {
-      assetPath: './src/demo/assetPath.js'
+      assetPath: './src/oceans/assetPath.js'
     },
     ...commonConfig,
     ...firstConfigOnly,
@@ -120,7 +121,7 @@ const defaultConfig = [
   },
   {
     entry: {
-      demo: './src/demo/index.jsx'
+      oceans: './src/oceans/index.jsx'
     },
     ...commonConfig
   }

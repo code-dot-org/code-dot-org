@@ -21,20 +21,20 @@ import {
   FishOceanObject,
   SeaCreatureOceanObject
 } from './OceanObject';
-import aiBotClosed from '../../public/images/ai-bot/ai-bot-closed.png';
-import aiBotYes from '../../public/images/ai-bot/ai-bot-yes.png';
-import aiBotNo from '../../public/images/ai-bot/ai-bot-no.png';
-import redScanner from '../../public/images/ai-bot/red-scanner.png';
-import greenScanner from '../../public/images/ai-bot/green-scanner.png';
-import blueScanner from '../../public/images/ai-bot/blue-scanner.png';
-import {playSound} from './models/soundLibrary';
-import bluePredictionFrame from '../../public/images/blue-prediction-frame.png';
-import questionIcon from '../../public/images/question-icon.png';
-import greenPredictionFrame from '../../public/images/green-prediction-frame.png';
-import checkmarkIcon from '../../public/images/checkmark-icon.png';
-import redPredictionFrame from '../../public/images/red-prediction-frame.png';
-import banIcon from '../../public/images/ban-icon.png';
-import polaroidFrame from '../../public/images/polaroid-frame.png';
+import aiBotClosed from '@public/images/ai-bot/ai-bot-closed.png';
+import aiBotYes from '@public/images/ai-bot/ai-bot-yes.png';
+import aiBotNo from '@public/images/ai-bot/ai-bot-no.png';
+import redScanner from '@public/images/ai-bot/red-scanner.png';
+import greenScanner from '@public/images/ai-bot/green-scanner.png';
+import blueScanner from '@public/images/ai-bot/blue-scanner.png';
+import * as soundLibrary from './models/soundLibrary';
+import bluePredictionFrame from '@public/images/blue-prediction-frame.png';
+import questionIcon from '@public/images/question-icon.png';
+import greenPredictionFrame from '@public/images/green-prediction-frame.png';
+import checkmarkIcon from '@public/images/checkmark-icon.png';
+import redPredictionFrame from '@public/images/red-prediction-frame.png';
+import banIcon from '@public/images/ban-icon.png';
+import polaroidFrame from '@public/images/polaroid-frame.png';
 
 let prevState = {};
 let currentModeStartTime = $time();
@@ -485,9 +485,9 @@ const drawPredictBot = state => {
 
   if (scannerImg !== lastScannerImg) {
     if (scannerImg === botImages.likeScanner) {
-      playSound('sortyes');
+      soundLibrary.playSound('sortyes');
     } else if (scannerImg === botImages.dislikeScanner) {
-      playSound('sortno');
+      soundLibrary.playSound('sortno');
     }
     lastScannerImg = scannerImg;
   }
