@@ -30,11 +30,12 @@ level 'U73 CFU Param Return AP', progression: 'Check For Understanding: AP Pract
 
 stage 'Parameters and Return Make', flex_category: 'csp_parameters_return_values'
 level 'CSP U7L4 SFLP 20-21', progression: 'Lesson Overview'
-level 'U7 Param Return Make RPS App 1', progression: 'Build the Rock Paper Scissors App'
+level 'U7 Param Return Make RPS App 1', progression: 'Try the Rock Paper Scissors App'
 level 'U7 Param Return Make RPS App 2', progression: 'Build the Rock Paper Scissors App'
 level 'U7 Param Return Make RPS App 3', progression: 'Build the Rock Paper Scissors App'
 level 'U7 Param Return Make RPS App 4', progression: 'Build the Rock Paper Scissors App'
 level 'U7 Param Return Make RPS App 5', progression: 'Build the Rock Paper Scissors App'
+level 'U7 Param Return Make RPS App 6', progression: 'Build the Rock Paper Scissors App'
 
 stage 'Libraries Explore', flex_category: 'csp_libraries'
 level 'CSP U7L5 SFLP 20-21', progression: 'Lesson Overview'
