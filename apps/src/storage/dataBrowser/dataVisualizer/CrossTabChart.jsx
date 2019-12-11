@@ -12,7 +12,9 @@ const styles = {
   },
   title: {
     fontFamily: '"Gotham 5r", sans-serif, sans-serif',
-    fontSize: 16
+    fontSize: 16,
+    lineHeight: '16px',
+    color: 'black'
   }
 };
 
@@ -101,7 +103,7 @@ class CrossTabChart extends React.Component {
 
     return (
       <div>
-        <p style={styles.title}>{this.props.chartTitle}</p>
+        <h1 style={styles.title}>{this.props.chartTitle}</h1>
         <table>
           <tbody>
             <tr>
