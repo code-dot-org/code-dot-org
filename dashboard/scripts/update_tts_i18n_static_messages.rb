@@ -86,8 +86,7 @@ FEEDBACK_MESSAGES = {
     "danceFeedbackOnlyOneDancerMoved": "Only one of your dancers moved.",
     "danceFeedbackNeedLead": "You also need to create one lead dancer with the <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">\\{x: 200, y: 200\\}</title></block></xml> block.",
     "danceFeedbackNeedBackup": "You need to create a group of backup dancers with the <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml> block.",
-    "danceFeedbackSetSize": "You need to change the size of at least one dancer after the music starts.",
-    "measure": "Measure:"
+    "danceFeedbackSetSize": "You need to change the size of at least one dancer after the music starts."
   }
 }.freeze
 
@@ -111,6 +110,9 @@ TextToSpeech::VOICES.each do |lang, _voice|
 
       content_hash = Digest::MD5.hexdigest(text)
       filename = "#{loc_voice[:VOICE]}/#{loc_voice[:SPEED]}/#{loc_voice[:SHAPE]}/#{content_hash}/#{text}.mp3"
+
+      # Sanitize the text after generating the filename to keep the content hash
+      # consistent with original text
       text = TextToSpeech.sanitize(text)
       TextToSpeech.tts_upload_to_s3(text, filename)
     end
