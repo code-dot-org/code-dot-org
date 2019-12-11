@@ -1,45 +1,64 @@
 const {initFishData} = require('@ml/utils/fishData');
 import {setState, getState, resetState} from '@ml/demo/state';
-import {ClassType, Modes} from '@ml/demo/constants';
+import {ClassType, Modes, AppMode} from '@ml/demo/constants';
 import {init, predictFish} from '@ml/demo/models/predict';
 import SimpleTrainer from '@ml/utils/SimpleTrainer';
+import {TrashOceanObject} from '@ml/demo/OceanObject';
+import sinon from 'sinon';
 
-describe('Model quality test', () => {
+global.window = {};
+
+describe('Predict test', () => {
   beforeAll(() => {
     initFishData();
+    jasmine.DEFAULT_TIMEOUT_INTERVAL = 5000;
   });
 
   beforeEach(() => {
+    const trainer = new SimpleTrainer();
+    trainer.predict = jest.fn(async example => {
+      if (example instanceof TrashOceanObject) {
+        return {predictedClassId: 1, confidenceByClassId: {0: 0, 1: 1}};
+      } else {
+        return {predictedClassId: 0, confidenceByClassId: {0: 1, 1: 0}};
+      }
+    });
+
     resetState();
     setState({
-      trainer: new SimpleTrainer()
+      trainer
     });
   });
 
-  jest.useFakeTimers();
-
   test('init state without intermediate loading', () => {
-    init();
-    // There's a setTimeout in the predict init. Ideally this would be
-    // refactored to use promises if possible but until then, wait 100 ms.
-    setTimeout(async () => {
+    return init().then(() => {
       const state = getState();
       expect(state).toBeTruthy();
-      expect(state.mode).toBe(Modes.Predicting);
+      expect(state.currentMode).toBe(Modes.Predicting);
       expect(state.fishData).toBeTruthy();
       expect(state.fishData.length).toBeGreaterThan(0);
-    }, 100);
+    });
   });
 
-  test('fish gets prediction on predict', async () => {
+  test('init state to intermediate loading', async () => {
+    setState({appMode: AppMode.FishShort});
     init();
-    // There's a setTimeout in the predict init. Ideally this would be
-    // refactored to use promises if possible but until then, wait 100 ms.
-    setTimeout(async () => {
-      const state = getState();
-      await predictFish(state, 0);
-      expect(state.trainer.predict).toBeCalled();
-      expect(state.fishData[0].result).toBeInstanceOf(Number);
-    }, 100);
+
+    const state = getState();
+    expect(state).toBeTruthy();
+    expect(state.currentMode).toBe(Modes.IntermediateLoading);
+  });
+
+  it('fish gets prediction on predict', async () => {
+    setState({appMode: AppMode.FishVTrash});
+    let state = getState();
+    return init().then(() => {
+      state = getState();
+      return predictFish(state, 0).then(() => {
+        expect(
+          state.fishData[0].result.predictedClassId
+        ).toBeGreaterThanOrEqual(0);
+      });
+    });
   });
 });
