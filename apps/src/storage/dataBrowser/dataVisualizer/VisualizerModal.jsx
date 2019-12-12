@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import memoize from 'memoize-one';
 import {DebounceInput} from 'react-debounce-input';
 import _ from 'lodash';
+import color from '../../../util/color';
 import * as dataStyles from '../dataStyles';
 import * as rowStyle from '@cdo/apps/applab/designElements/rowStyle';
 import {isBlank} from '../dataUtils';
@@ -11,13 +12,42 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 import DropdownField from './DropdownField';
 import DataVisualizer from './DataVisualizer';
 
+const styles = {
+  container: {
+    display: 'inline-block'
+  },
+  modalBody: {
+    overflow: 'auto',
+    maxHeight: '90%'
+  },
+  input: {
+    ...rowStyle.container,
+    float: 'left'
+  },
+  placeholderContainer: {
+    position: 'relative',
+    textAlign: 'center'
+  },
+  placeholderText: {
+    position: 'absolute',
+    width: '100%',
+    bottom: '50%',
+    fontFamily: '"Gotham 5r", sans-serif, sans-serif',
+    fontSize: 20,
+    color: color.dark_charcoal
+  }
+};
+
 const INITIAL_STATE = {
   isVisualizerOpen: false,
   chartTitle: '',
   chartType: '',
   bucketSize: '',
   selectedColumn1: '',
-  selectedColumn2: ''
+  selectedColumn2: '',
+  filterColumn: '',
+  filterValue: '',
+  screen: ''
 };
 
 class VisualizerModal extends React.Component {
@@ -38,6 +68,20 @@ class VisualizerModal extends React.Component {
   handleOpen = () => this.setState({isVisualizerOpen: true});
 
   handleClose = () => this.setState({isVisualizerOpen: false});
+
+  canDisplayChart = () => {
+    switch (this.state.chartType) {
+      case 'Bar Chart':
+        return !!this.state.selectedColumn1;
+      case 'Histogram':
+        return !!(this.state.selectedColumn1 && this.state.bucketSize);
+      case 'Scatter Plot':
+      case 'Cross Tab':
+        return !!(this.state.selectedColumn1 && this.state.selectedColumn2);
+      default:
+        return false;
+    }
+  };
 
   parseRecords = memoize(rawRecords => {
     if (Object.keys(rawRecords).length === 0) {
@@ -79,7 +123,7 @@ class VisualizerModal extends React.Component {
     );
 
     return (
-      <span style={{display: 'inline-block'}}>
+      <span style={styles.container}>
         <button
           type="button"
           style={dataStyles.whiteButton}
@@ -93,12 +137,11 @@ class VisualizerModal extends React.Component {
           fullWidth
           fullHeight
         >
-          <div style={{overflow: 'auto', maxHeight: '90%'}}>
-            <h1> Explore {this.props.tableName} </h1>
-            <h2> Overview </h2>
+          <div style={styles.modalBody}>
+            <h2> Explore {this.props.tableName} </h2>
 
             <div>
-              <div style={rowStyle.container}>
+              <div style={styles.input}>
                 <label style={rowStyle.description}>Chart Title</label>
                 <DebounceInput
                   style={rowStyle.input}
@@ -120,7 +163,7 @@ class VisualizerModal extends React.Component {
             />
 
             {this.state.chartType === 'Histogram' && (
-              <div style={rowStyle.container}>
+              <div style={styles.input}>
                 <label style={rowStyle.description}>Bucket Size</label>
                 <input
                   style={rowStyle.input}
@@ -154,7 +197,7 @@ class VisualizerModal extends React.Component {
               />
             )}
           </div>
-          {this.state.chartType && (
+          {this.canDisplayChart() ? (
             <DataVisualizer
               records={parsedRecords}
               numericColumns={numericColumns}
@@ -164,7 +207,51 @@ class VisualizerModal extends React.Component {
               selectedColumn1={this.state.selectedColumn1}
               selectedColumn2={this.state.selectedColumn2}
             />
+          ) : (
+            <div style={styles.placeholderContainer}>
+              <div style={styles.placeholderText}>
+                Select values to generate a visualization
+              </div>
+              <img src={require('./placeholder.png')} />
+            </div>
           )}
+          <div style={{paddingTop: 20}}>
+            <DropdownField
+              displayName="Filter"
+              options={[1, 2, 3]}
+              disabledOptions={[]}
+              value={this.state.filterColumn}
+              onChange={event =>
+                this.setState({filterColumn: event.target.value})
+              }
+              inlineLabel
+            />
+            <DropdownField
+              displayName="by"
+              options={[]}
+              disabledOptions={[]}
+              value={this.state.filterValue}
+              onChange={event =>
+                this.setState({filterValue: event.target.value})
+              }
+              inlineLabel
+            />
+            <DropdownField
+              displayName="Create chart on screen"
+              options={[]}
+              disabledOptions={[]}
+              value={this.state.screen}
+              onChange={event => this.setState({screen: event.target.value})}
+              inlineLabel
+            />
+            <button
+              type="button"
+              style={dataStyles.grayButton}
+              onClick={this.handleOpen}
+            >
+              Create
+            </button>
+          </div>
         </BaseDialog>
       </span>
     );
