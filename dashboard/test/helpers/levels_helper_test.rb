@@ -494,6 +494,31 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal '/s/test_script/stage/2/puzzle/1/page/1', build_script_level_path(stage.script_levels[0], {puzzle_page: '1'})
   end
 
+  test 'build_script_level_path uses names for bonus levels to support cross-environment links' do
+    input_dsl = <<-DSL.gsub(/^\s+/, '')
+      stage 'Test bonus level links'
+      level 'Level1'
+      level 'BonusLevel1', bonus: true
+    DSL
+
+    create :level, name: 'Level1'
+    create :level, name: 'BonusLevel1'
+
+    script_data, _ = ScriptDSL.parse(input_dsl, 'test_bonus_level_links')
+
+    script = Script.add_script(
+      {name: 'test_bonus_level_links'},
+      script_data[:stages]
+    )
+
+    bonus_script_level = script.stages.first.script_levels[1]
+    uri = URI(build_script_level_path(bonus_script_level, {}))
+    assert_equal '/s/test_bonus_level_links/stage/1/extras', uri.path
+
+    query_params = CGI.parse(uri.query)
+    assert_equal bonus_script_level.level.name, query_params['level_name'].first
+  end
+
   test 'build_script_level_path handles bonus levels with or without solutions' do
     input_dsl = <<-DSL.gsub(/^\s+/, '')
       stage 'My cool stage'
