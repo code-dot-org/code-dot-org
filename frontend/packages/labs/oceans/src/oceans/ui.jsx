@@ -1590,10 +1590,6 @@ let Guide = class Guide extends React.Component {
 Guide = Radium(Guide);
 
 export default class UI extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const state = getState();
     const currentMode = getState().currentMode;
