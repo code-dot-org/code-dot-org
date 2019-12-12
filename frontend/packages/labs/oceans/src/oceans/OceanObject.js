@@ -243,12 +243,12 @@ export class FishOceanObject extends OceanObject {
       ...this.colorPalette.knnData
     ];
     this.fieldInfos = [
-      ...(this.body.fieldInfos || []),
-      ...(this.eye.fieldInfos || []),
-      ...(this.mouth.fieldInfos || []),
-      ...(this.dorsalFin.fieldInfos || []),
-      ...(this.tail.fieldInfos || []),
-      ...(this.colorPalette.fieldInfos || [])
+      ...this.body.fieldInfos,
+      ...this.eye.fieldInfos,
+      ...this.mouth.fieldInfos,
+      ...this.dorsalFin.fieldInfos,
+      ...this.tail.fieldInfos,
+      ...this.colorPalette.fieldInfos
     ];
   }
 
