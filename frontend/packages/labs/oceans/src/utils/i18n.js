@@ -8,5 +8,5 @@ export const init = () => {
 };
 
 export const t = (key, options) => {
-    return "!" + messages[key](options);
+    return messages[key](options);
 };
