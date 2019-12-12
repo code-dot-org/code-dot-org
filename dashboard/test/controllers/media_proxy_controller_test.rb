@@ -53,7 +53,6 @@ class MediaProxyControllerTest < ActionController::TestCase
   end
 
   test "can't access loopback IP addresses" do
-    stub_request(:get, IMAGE_URI).to_return(body: IMAGE_DATA, headers: {content_type: 'image/jpeg'})
     get :get, params: {u: 'http://0.0.0.0'}
     assert_response 400
   end
