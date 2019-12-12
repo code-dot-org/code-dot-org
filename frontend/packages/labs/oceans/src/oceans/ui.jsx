@@ -1524,9 +1524,9 @@ let Guide = class Guide extends React.Component {
                 }}
               >
                 <div>
-                  {currentGuide.heading && (
+                  {currentGuide.didYouKnow && (
                     <div style={styles.guideHeading}>
-                      {currentGuide.heading}
+                      {I18n.t('didYouKnow')}
                     </div>
                   )}
                   <div style={styles.guideTypingText}>

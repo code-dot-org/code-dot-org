@@ -48,7 +48,6 @@ const guides = [
   },
   {
     id: 'fishvtrash-training-pause1',
-    heading: 'Did you know?',
     textFn: () => {
       return I18n.t('fishvtrash-training-pause1');
     },
@@ -60,6 +59,7 @@ const guides = [
       }
     },
     style: 'Info',
+    didYouKnow: true,
     image: trashBottleImage,
     imageStyle: imageStyleOverrides.bottle
   },
@@ -78,7 +78,6 @@ const guides = [
   },
   {
     id: 'fishvtrash-training-pause3',
-    heading: 'Did you know?',
     textFn: () => {
       return I18n.t('fishvtrash-training-pause3');
     },
@@ -89,6 +88,7 @@ const guides = [
         return state.yesCount + state.noCount >= 15;
       }
     },
+    didYouKnow: true,
     style: 'Info',
     image: trashCanImage,
     imageStyle: imageStyleOverrides.can
@@ -264,7 +264,6 @@ const guides = [
   },
   {
     id: 'creaturesvtrash-training-init2',
-    heading: 'Did you know?',
     textFn: () => {
       return I18n.t('creaturesvtrash-training-init2');
     },
@@ -275,6 +274,7 @@ const guides = [
         return state.yesCount + state.noCount >= 5;
       }
     },
+    didYouKnow: true,
     style: 'Info',
     image: seahorseImage,
     imageStyle: imageStyleOverrides.seahorse
@@ -294,7 +294,6 @@ const guides = [
   },
   {
     id: 'creaturesvtrash-training-init4',
-    heading: 'Did you know?',
     textFn: () => {
       return I18n.t('creaturesvtrash-training-init4');
     },
@@ -305,6 +304,7 @@ const guides = [
         return state.yesCount + state.noCount >= 15;
       }
     },
+    didYouKnow: true,
     style: 'Info',
     image: turtleImage,
     imageStyle: imageStyleOverrides.turtle
