@@ -28,7 +28,6 @@ class SectionProgressToggle extends React.Component {
   };
 
   state = {
-    initialView: ViewType.SUMMARY,
     selectedToggle: this.props.currentView
   };
 
@@ -37,8 +36,7 @@ class SectionProgressToggle extends React.Component {
     // still need to update when that happens.
     if (this.state.selectedToggle !== nextProps.currentView) {
       this.setState({
-        selectedToggle: nextProps.currentView,
-        initialView: nextProps.currentView
+        selectedToggle: nextProps.currentView
       });
     }
   }
@@ -51,7 +49,7 @@ class SectionProgressToggle extends React.Component {
         event: 'view_change_toggle',
         data_json: JSON.stringify({
           section_id: this.props.sectionId,
-          old_view: this.state.initialView,
+          old_view: this.state.selectedToggle,
           new_view: selectedToggle
         })
       },
