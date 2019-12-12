@@ -1,4 +1,10 @@
 /*
+  Code from: https://github.com/microbit-foundation/microbit-firmata
+ */
+
+// TODO Reference this code from package.json after demo
+
+/*
 MIT License
 
 Copyright (c) 2019 Micro:bit Educational Foundation
