@@ -43,9 +43,17 @@ level 'U7 L04 Exit Ticket', progression: 'Check For Understanding', assessment: 
 
 stage 'Libraries Investigate', flex_category: 'csp_libraries'
 level 'CSP U7L6 SFLP 20-21', progression: 'Lesson Overview'
+level 'U7L6 States App Investigation', progression: 'States App'
+level 'U7L6 Pigify App Investigation', progression: 'Pigify App'
 
 stage 'Libraries Practice', flex_category: 'csp_libraries'
 level 'CSP U7L7 SFLP 20-21', progression: 'Lesson Overview'
+level 'U7 Libraries Practice 1', progression: 'Using Libraries'
+level 'U7 Libraries Practice 2', progression: 'Using Libraries'
+level 'U7 Libraries Practice 3', progression: 'Using Libraries'
+level 'U7 Libraries Practice 4', progression: 'Debugging Libraries'
+level 'U7 Libraries Practice 5', progression: 'Debugging Libraries'
+level 'U7 Libraries Practice 6', progression: 'Debugging Libraries'
 
 stage 'Libraries Make', flex_category: 'csp_libraries'
 level 'CSP U7L8 SFLP 20-21', progression: 'Lesson Overview'
