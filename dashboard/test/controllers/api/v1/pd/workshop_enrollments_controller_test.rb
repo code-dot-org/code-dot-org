@@ -237,6 +237,24 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
     refute_nil enrollment.code
   end
 
+  test 'CSF Intro enrollments can be created' do
+    assert_creates(Pd::Enrollment) do
+      post :create, params: {
+        workshop_id: @workshop.id,
+        school_info: school_info_params,
+        csf_intro_intent: 'Yes',
+        csf_intro_other_factors: [
+          "I want to learn computer science concepts.",
+          "I have available time on my schedule for teaching computer science."
+        ]
+      }.merge(enrollment_test_params)
+      assert_response :success
+      assert_equal RESPONSE_MESSAGES[:SUCCESS], JSON.parse(@response.body)["workshop_enrollment_status"]
+    end
+    enrollment = Pd::Enrollment.last
+    refute_nil enrollment.code
+  end
+
   test 'creating a duplicate enrollment sends \'duplicate\' workshop enrollment status' do
     params = enrollment_test_params.merge(
       {
