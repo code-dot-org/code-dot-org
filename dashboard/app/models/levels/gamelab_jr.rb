@@ -53,7 +53,6 @@ class GamelabJr < Gamelab
           use_default_sprites: true,
           hide_animation_mode: true,
           show_type_hints: true,
-          include_shared_functions: true,
           hide_custom_blocks: true,
           all_animations_single_frame: true,
           use_modal_function_editor: true
