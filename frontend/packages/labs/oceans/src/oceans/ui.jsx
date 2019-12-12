@@ -12,7 +12,7 @@ import {
   resetTraining,
   friendlyNameForFishPart
 } from './helpers';
-import {onClassifyFish} from './models/train';
+import train from './models/train';
 import {arrangeFish} from './models/pond';
 import colors from './colors';
 import aiBotHead from '@public/images/ai-bot/ai-bot-head.png';
@@ -927,7 +927,7 @@ let UnwrappedTrain = class Train extends React.Component {
             style={styles.trainButtonNo}
             onClick={() => {
               this.setState({headOpen: true});
-              return onClassifyFish(false);
+              return train.onClassifyFish(false);
             }}
             sound={'no'}
           >
@@ -939,7 +939,7 @@ let UnwrappedTrain = class Train extends React.Component {
             style={styles.trainButtonYes}
             onClick={() => {
               this.setState({headOpen: true});
-              return onClassifyFish(true);
+              return train.onClassifyFish(true);
             }}
             sound={'yes'}
           >

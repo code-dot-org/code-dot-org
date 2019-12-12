@@ -5,7 +5,7 @@ import SimpleTrainer from '../../utils/SimpleTrainer';
 import SVMTrainer from '../../utils/SVMTrainer';
 import {generateOcean} from '../../utils/generateOcean';
 
-export const init = () => {
+const init = () => {
   const state = getState();
 
   let trainer = state.trainer;
@@ -38,7 +38,7 @@ export const init = () => {
   });
 };
 
-export const onClassifyFish = doesLike => {
+const onClassifyFish = doesLike => {
   const state = getState();
 
   // No-op if animation is currently in progress.
@@ -72,4 +72,9 @@ export const onClassifyFish = doesLike => {
   });
 
   return true;
+};
+
+export default {
+  init,
+  onClassifyFish
 };
