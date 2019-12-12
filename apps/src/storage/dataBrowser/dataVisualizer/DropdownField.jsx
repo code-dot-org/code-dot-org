@@ -1,6 +1,7 @@
 import React from 'react';
 import Radium from 'radium';
 import PropTypes from 'prop-types';
+import msg from '@cdo/locale';
 import * as rowStyle from '@cdo/apps/applab/designElements/rowStyle';
 
 class DropdownField extends React.Component {
@@ -33,7 +34,7 @@ class DropdownField extends React.Component {
       <div style={containerStyle}>
         <label style={labelStyle}>{this.props.displayName}</label>
         <select value={this.props.value} onChange={this.props.onChange}>
-          <option value="">Select</option>
+          <option value="">{msg.select()}</option>
           {this.props.options.map(option => (
             <option
               key={option}
