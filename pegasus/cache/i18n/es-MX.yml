@@ -2272,6 +2272,9 @@ es-MX:
   hoc_overview_dance_title: Fiesta de baile
   hoc_overview_dance_subtitle: Programa una Fiesta de baile y compártela con tus amigos.
     ¡Con Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara y 25 artistas más!
+  hoc_overview_dance_2019_subtitle: Programa una Fiesta de baile para compartir con
+    tus amigos. Con Katy Perry, Shawn Mendes, Lil Nas X, Panic! At The Disco, Jonas
+    Brothers, ¡y muchos más!
   hoc_overview_title: Actividades de la Hora del Código de Code.org
   hoc_overview_subtitle: La <a href="https://hourofcode.com">Hora del Código</a> es
     un movimiento global que llega a decenas de millones de estudiantes en más 180
@@ -2280,7 +2283,7 @@ es-MX:
     en más de 45 idiomas.
   hoc_overview_partner_activities_title: Más actividades de nuestros socios
   hoc_overview_partner_activities_body: El sitio web de la Hora del Código cuenta
-    con más de 100 actividades sobre ciencias de la computación para todas las edades
+    con más de 500 actividades sobre ciencias de la computación para todas las edades
     y niveles de experiencia, desarrolladas por Code.org y nuestros socios.
   hoc_overview_partner_activities_link: Ver actividades
   hoc_overview_start_tutorial: Comenzar
@@ -2313,6 +2316,7 @@ es-MX:
   hoc2018_mc_aquatic_title: Voyage Aquatic de Minecraft
   hoc2018_mc_aquatic_description: "¡Minecraft está de vuelta para la Hora del Código
     con una actividad nueva! Viaja a través de Minecraft con códigos."
+  hoc2019_mc_aquatic_description: Explora y crea mundos submarinos a través del código.
   hoc2018_mc_hero_title: Viaje del héroe de Minecraft
   hoc2018_mc_hero_description: "¡Minecraft está de vuelta para la Hora del Código
     con una actividad nueva! Viaja a través de Minecraft con códigos."
@@ -2474,3 +2478,15 @@ es-MX:
   hoc2018_mc_thank_microsoft: Agradecemos a Microsoft por el apoyo a nuestra visión
     y misión centradas en asegurar que cada niño tenga la oportunidad de aprender
     ciencias de la computación y las habilidades para tener éxito en el siglo XXI.
+  hoc2019_mc_mee_title: Minecraft AI for Good
+  hoc2019_mc_mee_description1: 'El nuevo tutorial para Minecraft de la Hora del Código
+    ya está disponible en Minecraft: Education Edition para Windows, Mac y iPad. ¡Aprende
+    los conceptos básicos de programar y explorar la inteligencia artificial con tus
+    estudiantes!'
+  hoc2019_mc_mee_description2: Accede a recursos gratuitos que incluyen un plan de
+    lecciones, videos, un plan de estudios en ciencias de la computación y entrenamientos
+    para docentes.
+  hoc2019_mc_more_coding_resources: Más recursos para la programación
+  hoc2019_dance_previous_versions: "¿Estás buscando una versión anterior de Fiesta
+    de baile?  \nHaz clic aquí para iniciar [Parte 1](%{dance_2018_link}) y [Parte
+    2](%{dance_extras_2018_link}) del último año."

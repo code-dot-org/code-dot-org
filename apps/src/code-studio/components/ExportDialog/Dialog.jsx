@@ -4,7 +4,10 @@ import {connect} from 'react-redux';
 import BaseDialog from '../../../templates/BaseDialog';
 import AbuseError from '../AbuseError';
 import color from '../../../util/color';
-import {PLATFORM_ANDROID, DEFAULT_PLATFORM} from '../../../util/exporter';
+import {
+  PLATFORM_ANDROID,
+  DEFAULT_PLATFORM
+} from '../../../util/exporterConstants';
 import {hideExportDialog} from '../exportDialogRedux';
 import i18n from '@cdo/locale';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
@@ -268,6 +271,7 @@ class ExportDialog extends React.Component {
       md5PublishSavedSources: md5SavedSources
     });
     try {
+      recordExport('publishToExpo');
       const exportResult = await exportApp({
         mode: 'expoPublish',
         iconFileUrl
@@ -286,6 +290,7 @@ class ExportDialog extends React.Component {
       });
       return exportResult;
     } catch (e) {
+      recordExport('publishToExpoError');
       this.setState({
         exporting: false,
         md5PublishSavedSources: null,
@@ -327,6 +332,7 @@ class ExportDialog extends React.Component {
       return;
     }
 
+    recordExport('generateApk');
     this.setState({generatingApk: true});
     try {
       const apkBuildId = await expoGenerateApk({
@@ -338,6 +344,7 @@ class ExportDialog extends React.Component {
       this.setState({apkBuildId});
       return this.waitForApkBuild(apkBuildId, expoSnackId);
     } catch (e) {
+      recordExport('generateApkError');
       this.setState({
         generatingApk: false,
         apkError: 'Failed to create Android app. Please try again later.',
@@ -378,6 +385,7 @@ class ExportDialog extends React.Component {
         return;
       }
       if (apkUri) {
+        recordExport('generateApkSuccess');
         this.setState({
           generatingApk: false,
           apkError: null,
@@ -392,6 +400,7 @@ class ExportDialog extends React.Component {
         }, APK_BUILD_STATUS_CHECK_PERIOD);
       }
     } catch (e) {
+      recordExport('generateApkError');
       this.setState({
         generatingApk: false,
         apkError: 'Failed to create Android app. Please try again later.',
@@ -460,27 +469,33 @@ class ExportDialog extends React.Component {
 
     switch (screen) {
       case 'intro':
+        recordExport('platformScreen');
         this.setState({screen: 'platform'});
         break;
       case 'platform':
+        recordExport('iconScreen');
         this.setState({screen: 'icon'});
         break;
-      case 'icon':
-        this.setState({
-          screen:
-            platform === PLATFORM_ANDROID ? 'publishAndroid' : 'publishIOS'
-        });
+      case 'icon': {
+        const nextScreen =
+          platform === PLATFORM_ANDROID ? 'publishAndroid' : 'publishIOS';
+        recordExport(`${nextScreen}Screen`);
+        this.setState({screen: nextScreen});
         break;
+      }
       case 'publishAndroid':
         this.generateApkAsNeeded();
+        recordExport('generatingScreen');
         this.setState({screen: 'generating'});
         break;
       case 'publishIOS':
         this.publishExpoExport();
+        recordExport('generatingScreen');
         this.setState({screen: 'generating'});
         break;
       case 'generating':
         if (this.isPublishingForIOSWithoutError()) {
+          recordExport('navigateToExpo');
           this.visitExpoSite();
         }
         this.close();

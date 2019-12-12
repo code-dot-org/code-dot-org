@@ -7,11 +7,11 @@
       "challenges": "**Optional Challenges**\n\n-   Choose a different song to play.\n-   Move your dancer to a new location.\n-   Make more than one dancer."
     },
     "callouts": {
-      "dance_callout_01": "Choose the type of dancer here.."
+      "dance_callout_01": "Choose the type of dancer here."
     }
   },
   "https://studio.code.org/s/dance-2019/stage/1/puzzle/2": {
-    "short_instructions": "Make the do a dance move when you press a key.",
+    "short_instructions": "Make the cat do a dance move when you press a key.",
     "long_instructions": "The [blockly block][0] block lets you run code when you press the arrow buttons. \nUse the [blockly block][1] block to make the cat clap!\n\n_Make sure to press your \"up arrow\" key or [][2] after clicking the Run button!_",
     "authored_hints": {
       "validation": "**How do I pass this level?**\n\n-   The dancer must perform a move.\n-   You must press an arrow key.\n\n_This level ends after 4 measures._",
@@ -26,7 +26,7 @@
     "short_instructions": "It's time for a dance-off! Program each dancer to move when you press different keys. Choose your favorite move for each dancer or set it to \"(Random)\" for something totally unpredictable! ",
     "long_instructions": "It's time for a dance-off! Program each dancer to move when you press different keys. Choose your favorite move for each dancer or set it to `(Random)` for something totally unpredictable!",
     "authored_hints": {
-      "validation": "**How do I pass this level?**\n\n-   Both dancers must perform a move.\n-   You must press the arrow keys.\n\n_This level ends after 4 measures._",
+      "validation": "**How do I pass this level?**\n\n-   Both dancers must perform a move.\n-   You must press the arrow keys.\n\n_This level ends after 6 measures._",
       "challenges": "**Optional Challenge**\n\n-   Make a dancer respond to the left and right arrow keys."
     }
   },
@@ -55,8 +55,7 @@
     "short_instructions": "Set up a group of backup dancers around the lead dancer in the middle.",
     "long_instructions": "Use this new block to set up a group of smaller backup dancers around a lead dancer in the middle. \n\n  [blockly block][0]\n\nNow you can create a bunch of backup dancers all at once!",
     "authored_hints": {
-      "validation": "**How do I pass this level?**\n\n-   Create one lead dancer and a group of backup dancers.\n\n_This level ends after 7 measures._",
-      "layout hint": "This block creates a group of smaller dancers in a layout you choose.\n  [blockly block][0]",
+      "validation": "**How do I pass this level?**\n\n-   Create one lead dancer and a group of backup dancers within the first 4 measures of the song.\n\n_This level ends after 7 measures._",
       "challenges": "**Optional Challenge**\n\n-   Create multiple groups of backup dancers."
     },
     "callouts": {
@@ -65,10 +64,9 @@
   },
   "https://studio.code.org/s/dance-2019/stage/1/puzzle/7": {
     "short_instructions": "Change the size of the group of backup dancers.",
-    "long_instructions": "Every dancer has a set of _properties_ that controls what it looks like.\n\nYou can make it look like a dancer is closer or farther away by changing their size. Change the size of a group of dancers sometime after the music starts.",
+    "long_instructions": "Every dancer has a set of _properties_ that controls what it looks like.\n\nUse [blockly block][0] under a green event block to make dancers appear closer or farther away.",
     "authored_hints": {
-      "validation": "**How do I pass this level?**\n\n-   Change the size of at least one dancer after the music starts.\n\n_This level ends after 6 measures._",
-      "event_hint": "Connect the [blockly block][0]block underneath a green event block.",
+      "validation": "**How do I pass this level?**\n\n-   Change the size of at least one dancer.\n\n_This level ends after 6 measures._",
       "challenges": "**Optional Challenge**\n\n-   Experiment by changing other properties such as width or rotation."
     },
     "callouts": {
@@ -76,7 +74,7 @@
     }
   },
   "https://studio.code.org/s/dance-2019/stage/1/puzzle/8": {
-    "short_instructions": "Use the `set tint` block to change the color of a dancer.",
+    "short_instructions": "Try changing the tint of one of your dancers (or an entire group)!",
     "long_instructions": "Dancers have a \"tint\" property that can add a layer of color. Try changing the tint of one of your dancers (or an entire group)!",
     "authored_hints": {
       "validation": "**How do I pass this level?**\n\n-   Change the tint of at least one dancer.\n\n_This level ends after 6 measures._",
@@ -85,14 +83,15 @@
   },
   "https://studio.code.org/s/dance-2019/stage/1/puzzle/9": {
     "short_instructions": "Be creative with these new blocks!",
-    "long_instructions": "This is a special kind of event that is triggered over and over.\n\n[blockly block][0]\n\nThe other new blocks in your toolbox allow you to gradually (or randomly!) change dancers' properties over time.\n\n_Be creative and have fun!_",
+    "long_instructions": "This **new block** is a special kind of event that is triggered over and over.\n\n[blockly block][0]\n\nBy placing the other new blocks in your toolbox inside the repeat block you can repeatedly change dancers' properties over time. Be creative and have fun!\n\n_When you are done press the Finish button._",
     "authored_hints": {
       "validation": "**How do I pass this level?**\n\n-   Just press the \"Finish\" button!",
-      "repeat_every_ideas": "**Need some ideas?**\n\n-   Repeatedly change a dancer's size to make it grow.\n-   Repeatedly change a dancer's rotation to make it spin.\n-   Repeatedly change a dancer's horizontal or vertical position to make it move across the screen.\n\n_You can also use negative numbers to create an opposite effect!_",
+      "repeat_every_ideas": "**Need some ideas?**\n\n-   Repeatedly change a dancer's size to make it grow.\n-   Repeatedly change a dancer's rotation to make it spin.\n\n_You can also use negative numbers to create an opposite effect!_",
       "next_previous": "**Optional Challenge**\n\n-   You can also use this new event block to cycle through a list of dance moves by setting the move to `(Random)`, `(Next)`, or `(Previous)`.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
     },
     "callouts": {
-      "new_block_1": "New block!"
+      "new_block_3": "New block!",
+      "new_block_4": "New block!"
     }
   },
   "https://studio.code.org/s/dance-2019/stage/1/puzzle/10": {

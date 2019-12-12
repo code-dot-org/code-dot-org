@@ -106,7 +106,10 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     )
 
     if auth_option.save
-      flash.notice = I18n.t('user.account_successfully_updated')
+      provider = I18n.t(auth_option.credential_type, scope: "auth", default: "")
+      flash.notice = auth_option.email.blank? ?
+        I18n.t('user.auth_option_saved_no_email', provider: provider) :
+        I18n.t('user.auth_option_saved', provider: provider, email: auth_option.email)
     else
       flash.alert = get_connect_provider_errors(auth_option)
     end
@@ -138,9 +141,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     prepare_locale_cookie user
 
-    if User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(provider) && user.persisted?
-      handle_untrusted_email_signin user, provider
-    elsif allows_silent_takeover(user, auth_hash)
+    if allows_silent_takeover(user, auth_hash)
       user = silent_takeover user, auth_hash
       sign_in_user user
     elsif user.persisted?
@@ -198,7 +199,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     SignUpTracking.log_oauth_callback AuthenticationOption::CLEVER, session
     prepare_locale_cookie user
     user.update_oauth_credential_tokens auth_hash
-    handle_untrusted_email_signin(user, AuthenticationOption::CLEVER)
+    sign_in_user user
   end
 
   def sign_up_clever
@@ -213,18 +214,19 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     user = User.from_omniauth(auth_hash, auth_params, session)
     prepare_locale_cookie user
 
-    if user.persisted?
-      handle_untrusted_email_signin(user, AuthenticationOption::CLEVER)
-    elsif (looked_up_user = User.find_by_email_or_hashed_email(user.email))
-      email_already_taken_redirect(
-        provider: AuthenticationOption::CLEVER,
-        found_provider: looked_up_user.provider,
-        email: user.email
-      )
-    else
-      # This is a new registration
-      register_new_user user
-    end
+    # if the registration credentials identify us as an existing user, simply
+    # sign in as that user.
+    return sign_in_user user if user.persisted?
+
+    # if a user account with the same email (that could not be authenticated
+    # with the given registration credentals) exists, display an interim page
+    # prompting the user to either log in to that account or create a new one
+    # with a manually-provided email.
+    existing_account = User.find_by_email_or_hashed_email(user.email).present?
+    return redirect_to users_existing_account_path({provider: auth_hash.provider, email: user.email}) if existing_account
+
+    # otherwise, this is a new registration
+    register_new_user user
   end
 
   def find_user_by_credential
@@ -293,39 +295,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     )
     auth.info = auth_info
     auth
-  end
-
-  # Clever/Powerschool signins have unique requirements, and must be handled a bit outside the normal flow
-  def handle_untrusted_email_signin(user, provider)
-    force_takeover = user.teacher? && user.email.present? && user.email.end_with?('.oauthemailalreadytaken')
-    if force_takeover
-      # It's a user who must link accounts - a Clever/Powerschool Code.org teacher account with an
-      # email that conflicts with an existing Code.org account.
-      #
-      # We don't want them using the teacher account as-is because it doesn't have a valid email.
-      # We can't do a silent takeover because we don't trust email addresses from Clever/Powerschool
-      #
-      # Long-term I'd like sign-up when there's a conflict like this to just fail, with a helpful
-      # message directing the teacher to sign in to their existing account and then link Clever
-      # to it from the accounts page.
-      if user.migrated?
-        auth_option = user.authentication_options.find_by credential_type: provider
-        begin_account_takeover \
-          provider: provider,
-          uid: auth_option.authentication_id,
-          oauth_token: auth_option.data_hash[:oauth_token],
-          force_takeover: force_takeover
-      else
-        begin_account_takeover \
-          provider: user.provider,
-          uid: user.uid,
-          oauth_token: user.oauth_token,
-          force_takeover: force_takeover
-      end
-      user.seen_oauth_connect_dialog = true
-      user.save!
-    end
-    sign_in_user user
   end
 
   def just_authorized_google_classroom?

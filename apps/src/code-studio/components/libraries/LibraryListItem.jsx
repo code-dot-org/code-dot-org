@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
 
 const styles = {
   listItem: {
@@ -30,7 +31,8 @@ const styles = {
   },
   viewCode: {
     position: 'absolute',
-    right: 0
+    right: 0,
+    background: 'inherit'
   },
   addButton: {
     marginLeft: 'auto'
@@ -46,11 +48,13 @@ export default class LibraryListItem extends React.Component {
     library: PropTypes.object.isRequired,
     onRefresh: PropTypes.func,
     onRemove: PropTypes.func,
-    onAdd: PropTypes.func
+    onAdd: PropTypes.func,
+    onViewCode: PropTypes.func
   };
 
-  viewCode = _ => {
-    return '';
+  viewCode = event => {
+    event.preventDefault();
+    this.props.onViewCode();
   };
 
   render() {
@@ -64,7 +68,9 @@ export default class LibraryListItem extends React.Component {
           {library.studentName && (
             <span style={styles.author}>Author: {library.studentName}</span>
           )}
-          <span style={styles.viewCode}>{this.viewCode(library)}</span>
+          <a onClick={this.viewCode} style={styles.viewCode}>
+            {i18n.viewCode()}
+          </a>
         </span>
         {this.props.onAdd && (
           <button

@@ -8,9 +8,9 @@ theme: responsive
 ## Hardware
 
 - We recommend at least a 15 MBit/sec Internet connection for your school.
-- You will need a desktop or laptop computer with a mouse (or touchpad) and keyboard for our middle and high school-level courses, CS Discoveries and CS Principles.
-    - iPads (including with a keyboard attachment) or other tablets are not supported for CS Discoveries or CS Principles.
-    - All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and Chromebooks, in addition to all other modern laptop or desktop computers.
+- The smallest screen size we support is 1024 x 728 px.
+- You will need a desktop or laptop computer with a mouse (or touchpad) and keyboard for our middle and high school-level courses, CS Discoveries and CS Principles. iPads (including with a keyboard attachment) or other tablets are not supported for CS Discoveries or CS Principles.
+- All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and Chromebooks, in addition to all other modern laptop or desktop computers.
 
 ## Supported Browsers and Platforms
 

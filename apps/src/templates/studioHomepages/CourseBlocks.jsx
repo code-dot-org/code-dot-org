@@ -169,8 +169,8 @@ export class CourseBlocksHoc extends Component {
 
   componentDidMount() {
     const tiles = this.props.isInternational
-      ? ['#dance', '#aquatic', '#frozen', '#hourofcode']
-      : ['#dance', '#aquatic', '#applab-intro', '#flappy'];
+      ? ['#dance-2019', '#aquatic', '#frozen', '#hourofcode']
+      : ['#dance-2019', '#aquatic', '#oceans', '#flappy'];
 
     tiles.forEach((tile, index) => {
       $(tile).appendTo(ReactDOM.findDOMNode(this.refs[index]));

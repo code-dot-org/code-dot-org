@@ -12,7 +12,8 @@ class StudioAppWrapper extends React.Component {
     assetUrl: PropTypes.func.isRequired,
     isEmbedView: PropTypes.bool.isRequired,
     isShareView: PropTypes.bool.isRequired,
-    children: PropTypes.node
+    children: PropTypes.node,
+    rotateContainerWidth: PropTypes.number
   };
 
   requiresLandscape() {
@@ -23,7 +24,10 @@ class StudioAppWrapper extends React.Component {
     return (
       <div>
         {this.requiresLandscape() && (
-          <RotateContainer assetUrl={this.props.assetUrl} />
+          <RotateContainer
+            assetUrl={this.props.assetUrl}
+            width={this.props.rotateContainerWidth}
+          />
         )}
         {this.props.children}
         <div className="clear" />

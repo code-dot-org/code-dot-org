@@ -6,6 +6,7 @@ import i18n from '@cdo/locale';
 import Button from '../Button';
 import CourseScriptTeacherInfo from './CourseScriptTeacherInfo';
 import AssignButton from '@cdo/apps/templates/AssignButton';
+import UnassignButton from '@cdo/apps/templates/UnassignButton';
 import Assigned from '@cdo/apps/templates/Assigned';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
@@ -15,7 +16,6 @@ import {
 } from '@cdo/apps/code-studio/hiddenStageRedux';
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   main: {
@@ -62,10 +62,10 @@ class CourseScript extends Component {
     courseId: PropTypes.number,
     description: PropTypes.string,
     assignedSectionId: PropTypes.number,
-
+    showAssignButton: PropTypes.bool,
     // redux provided
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
-    selectedSectionId: PropTypes.number.isRequired,
+    selectedSectionId: PropTypes.number,
     hiddenStageState: PropTypes.object.isRequired,
     hasNoSections: PropTypes.bool.isRequired,
     toggleHiddenScript: PropTypes.func.isRequired,
@@ -102,7 +102,8 @@ class CourseScript extends Component {
       hasNoSections,
       assignedSectionId,
       courseId,
-      sectionsForDropdown
+      sectionsForDropdown,
+      showAssignButton
     } = this.props;
 
     const isHidden = isScriptHiddenForSection(
@@ -144,17 +145,20 @@ class CourseScript extends Component {
               color={Button.ButtonColor.gray}
               className="uitest-go-to-unit-button"
             />
-            {isAssigned &&
-              experiments.isEnabled(experiments.ASSIGNMENT_UPDATES) && (
-                <Assigned />
-              )}
+            {isAssigned && viewAs === ViewType.Student && <Assigned />}
+            {isAssigned && viewAs === ViewType.Teacher && selectedSectionId && (
+              <UnassignButton sectionId={selectedSectionId} />
+            )}
             {!isAssigned &&
               viewAs === ViewType.Teacher &&
-              experiments.isEnabled(experiments.ASSIGNMENT_UPDATES) && (
+              showAssignButton &&
+              selectedSection && (
                 <AssignButton
-                  sectionId={selectedSectionId}
+                  sectionId={selectedSection.id}
                   scriptId={id}
                   courseId={courseId}
+                  assignmentName={title}
+                  sectionName={selectedSection.name}
                 />
               )}
           </span>

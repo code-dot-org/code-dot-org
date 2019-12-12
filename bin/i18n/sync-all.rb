@@ -44,13 +44,13 @@ class I18nSync
   def run
     if @options[:interactive]
       checkout_staging
-      sync_in if I18nScriptUtils.should_i "sync in"
-      sync_up if I18nScriptUtils.should_i "sync up"
+      sync_in if should_i "sync in"
+      sync_up if should_i "sync up"
       create_in_up_pr if @options[:with_pull_request]
-      sync_down if I18nScriptUtils.should_i "sync down"
-      sync_out if I18nScriptUtils.should_i "sync out"
+      sync_down if should_i "sync down"
+      sync_out if should_i "sync out"
       create_down_out_pr if @options[:with_pull_request]
-      upload_i18n_stats if I18nScriptUtils.should_i "upload translation stats"
+      upload_i18n_stats if should_i "upload translation stats"
       checkout_staging
     elsif @options[:command]
       case @options[:command]
@@ -104,6 +104,10 @@ class I18nSync
       opts.on("-p", "--with-pull-request", "Automatically generate pull requests") do
         options[:with_pull_request] = true
       end
+
+      opts.on("-y", "--yes", "Run without confirmation") do
+        options[:yes] = true
+      end
     end
     opt_parser.parse!(args)
 
@@ -116,8 +120,28 @@ class I18nSync
     options
   end
 
+  def should_i(question)
+    return true if @options[:yes]
+
+    loop do
+      print "Should I #{question}? [Yes]/Skip/Quit: "
+      response = gets.strip.downcase
+      puts ''
+      if 'yes'.start_with?(response) # also catches blank/return ;)
+        return true
+      elsif 'skip'.start_with?(response) || 'no'.start_with?(response)
+        return false
+      elsif 'quit'.start_with?(response)
+        puts "quitting"
+        exit(-1)
+      else
+        puts "Sorry, I didn't understand that.\n\n"
+      end
+    end
+  end
+
   def create_in_up_pr
-    return unless I18nScriptUtils.should_i "create the in & up PR"
+    return unless should_i "create the in & up PR"
     `git checkout -B #{IN_UP_BRANCH}`
 
     I18nScriptUtils.git_add_and_commit(
@@ -168,13 +192,13 @@ class I18nSync
   end
 
   def create_down_out_pr
-    return unless I18nScriptUtils.should_i "create the down & out PR"
+    return unless should_i "create the down & out PR"
     `git checkout -B #{DOWN_OUT_BRANCH}`
 
     I18nScriptUtils.git_add_and_commit(
       [
         "pegasus/cache",
-        "i18n/locales/*/pegasus",
+        "i18n/locales/*-*/pegasus",
       ],
       "pegasus i18n updates"
     )
@@ -203,7 +227,7 @@ class I18nSync
     I18nScriptUtils.git_add_and_commit(
       [
         "apps/i18n/*/*.json",
-        "i18n/locales/*/blockly-mooc",
+        "i18n/locales/*-*/blockly-mooc",
       ],
       "apps i18n updates"
     )
@@ -211,14 +235,14 @@ class I18nSync
     I18nScriptUtils.git_add_and_commit(
       [
         "apps/lib/blockly/*.js",
-        "i18n/locales/*/blockly-core",
+        "i18n/locales/*-*/blockly-core",
       ],
       "blockly i18n updates"
     )
 
     I18nScriptUtils.git_add_and_commit(
       [
-        "i18n/locales/*/hourofcode/",
+        "i18n/locales/*-*/hourofcode/",
         "pegasus/sites.v3/hourofcode.com/i18n/*.yml",
         "pegasus/sites.v3/hourofcode.com/i18n/public/*/"
       ],
@@ -242,8 +266,8 @@ class I18nSync
 
   def checkout_staging
     return if GitUtils.current_branch == "staging"
-    `git checkout staging` if I18nScriptUtils.should_i "switch to staging branch"
+    `git checkout staging` if should_i "switch to staging branch"
   end
 end
 
-I18nSync.new(ARGV).run if __FILE__ == $0 && only_one_running?(__FILE__)
+I18nSync.new(ARGV).run if only_one_running?(__FILE__)

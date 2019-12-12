@@ -4,7 +4,6 @@ import $ from 'jquery';
 import {connect} from 'react-redux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import CourseScript from './CourseScript';
-import LabeledSectionSelector from '@cdo/apps/code-studio/components/progress/LabeledSectionSelector';
 import CourseOverviewTopRow from './CourseOverviewTopRow';
 import {resourceShape} from './resourceType';
 import styleConstants from '@cdo/apps/styleConstants';
@@ -29,7 +28,6 @@ import AssignmentVersionSelector, {
   setRecommendedAndSelectedVersions
 } from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
 import StudentFeedbackNotification from '@cdo/apps/templates/feedback/StudentFeedbackNotification';
-import experiments from '@cdo/apps/util/experiments';
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 const styles = {
@@ -232,9 +230,6 @@ class CourseOverview extends Component {
         {showNotification && <VerifiedResourcesNotification />}
         {isTeacher && (
           <div>
-            {!experiments.isEnabled(experiments.ASSIGNMENT_UPDATES) && (
-              <LabeledSectionSelector />
-            )}
             <CourseOverviewTopRow
               sectionsInfo={sectionsInfo}
               sectionsForDropdown={sectionsForDropdown}
@@ -254,6 +249,7 @@ class CourseOverview extends Component {
             description={script.description}
             assignedSectionId={script.assigned_section_id}
             courseId={id}
+            showAssignButton={showAssignButton}
           />
         ))}
       </div>

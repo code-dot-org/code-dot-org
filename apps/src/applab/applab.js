@@ -17,12 +17,9 @@ import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
 import dom from '../dom';
 import * as utils from '../utils';
 import * as dropletConfig from './dropletConfig';
+import {getDatasetInfo} from '../storage/dataBrowser/dataUtils';
 import {initFirebaseStorage} from '../storage/firebaseStorage';
-import {
-  getColumnsRef,
-  onColumnNames,
-  addMissingColumns
-} from '../storage/firebaseMetadata';
+import {getColumnsRef, onColumnsChange} from '../storage/firebaseMetadata';
 import {getProjectDatabase, getSharedDatabase} from '../storage/firebaseUtils';
 import * as apiTimeoutList from '../lib/util/timeoutList';
 import designMode from './designMode';
@@ -560,14 +557,10 @@ Applab.init = function(config) {
     project.sourceHandler.setInitialLibrariesList(startLibraries);
     designMode.resetIds();
     Applab.setLevelHtml(config.level.startHtml || '');
-    let promise = Applab.storage.populateTable(level.dataTables, true); // overwrite = true
-    promise.catch(outputError);
-    Applab.storage.populateKeyValue(
-      level.dataProperties,
-      true,
-      () => {},
-      outputError
-    ); // overwrite = true
+    Applab.storage.clearAllData(
+      () => console.log('success'),
+      err => console.log(err)
+    );
     studioApp().resetButtonClick();
   };
 
@@ -608,18 +601,9 @@ Applab.init = function(config) {
   // Print any json parsing errors to the applab debug console and the browser debug
   // console. If a json parse error is thrown before the applab debug console
   // initializes, the error will be printed only to the browser debug console.
-  let dataLoadedPromise = Promise.resolve();
-  if (level.dataTables) {
-    dataLoadedPromise = Applab.storage.populateTable(level.dataTables, false); // overwrite = false
-    dataLoadedPromise.catch(outputError);
-  }
-  if (level.dataProperties) {
-    Applab.storage.populateKeyValue(
-      level.dataProperties,
-      false,
-      () => {},
-      outputError
-    ); // overwrite = false
+  let isDataTabLoaded = Promise.resolve();
+  if (level.dataTables || level.dataProperties || level.dataLibraryTables) {
+    isDataTabLoaded = initDataTab(level);
   }
 
   Applab.handleVersionHistory = studioApp().getVersionHistoryHandler(config);
@@ -775,7 +759,7 @@ Applab.init = function(config) {
     })
     .then(() => {
       if (getStore().getState().pageConstants.widgetMode) {
-        dataLoadedPromise.then(() => {
+        isDataTabLoaded.then(() => {
           Applab.runButtonClick();
         });
       }
@@ -786,6 +770,40 @@ Applab.init = function(config) {
   }
   return loader;
 };
+
+async function initDataTab(levelOptions) {
+  if (levelOptions.dataTables) {
+    Applab.storage.populateTable(levelOptions.dataTables).catch(outputError);
+  }
+  if (levelOptions.dataProperties) {
+    Applab.storage.populateKeyValue(
+      levelOptions.dataProperties,
+      () => {},
+      outputError
+    );
+  }
+  if (levelOptions.dataLibraryTables) {
+    let channelExists = await Applab.storage.channelExists();
+    if (!channelExists) {
+      const tables = levelOptions.dataLibraryTables.split(',');
+      tables.forEach(table => {
+        if (getDatasetInfo(table).current) {
+          Applab.storage.addCurrentTableToProject(
+            table,
+            () => console.log('success'),
+            outputError
+          );
+        } else {
+          Applab.storage.copyStaticTable(
+            table,
+            () => console.log('success'),
+            outputError
+          );
+        }
+      });
+    }
+  }
+}
 
 function changedToDataMode(state, lastState) {
   return (
@@ -1323,7 +1341,7 @@ function onInterfaceModeChange(mode) {
 }
 
 function onDataPreview(tableName) {
-  onColumnNames(getSharedDatabase(), tableName, columnNames => {
+  onColumnsChange(getSharedDatabase(), tableName, columnNames => {
     getStore().dispatch(updateTableColumns(tableName, columnNames));
   });
 
@@ -1371,10 +1389,7 @@ function onDataViewChange(view, oldTableName, newTableName) {
       } else {
         storageRef = projectStorageRef.child(`tables/${newTableName}/records`);
       }
-      if (newTableType === tableType.PROJECT) {
-        addMissingColumns(newTableName);
-      }
-      onColumnNames(
+      onColumnsChange(
         newTableType === tableType.PROJECT
           ? getProjectDatabase()
           : getSharedDatabase(),

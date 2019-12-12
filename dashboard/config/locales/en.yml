@@ -134,6 +134,10 @@ en:
     unable_to_connect_provider: "Unable to connect your Code.org account to your %{provider} account. Please try again."
     already_in_use: "Your %{provider} account is already connected to another Code.org account."
     already_linked: "Your %{provider} account is already linked to your Code.org account."
+    existing_account:
+      account_exists: "Good news! You already have a Code.org account that uses %{email}"
+      sign_in: "Please sign in and we'll link your %{provider} profile."
+      sign_up: "Not your email? Want to create a new account with a different email? We will also link your %{provider} profile if you choose to create a new account."
   signup_form:
     email_signup: 'Sign up with your email address'
     student_count: '%{count} students have already signed up.'
@@ -470,6 +474,8 @@ en:
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
     update: "Update Account"
     account_successfully_updated: "Account successfully updated."
+    auth_option_saved: "You have successfully linked your %{provider} account with email %{email}."
+    auth_option_saved_no_email: "You have successfully linked your %{provider} account."
     update_email: "Update"
   user_level:
     completed: 'Completed'
@@ -578,6 +584,7 @@ en:
       link: "Learn more"
       applab_unsupported_tablet: "App Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
       gamelab_unsupported_tablet: "Game Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
+      oceans_unsupported_browser: "This browser is not supported for this tutorial. Please try visiting this page using Edge, Chrome, Firefox, or another modern browser."
       weblab_unsupported_browser: "Unfortunately, we're currently experiencing issues with loading Web Lab on this browser. You may want to use a different browser until this is resolved. Sorry for the inconvenience."
       weblab_unsupported_locale_storage: "You may experience issues using Web Lab in Private Browsing mode. Please reload your project in normal mode. Sorry for the inconvenience."
   slow_loading: 'This is taking longer than usual...'
@@ -619,6 +626,8 @@ en:
       audience: 'Ages 13+'
       cta: 'Learn how'
     dance:
+      title: 'Dance Party'
+    dance-2019:
       title: 'Dance Party'
     hoc:
       title: 'Classic Maze'
@@ -967,11 +976,12 @@ en:
     csp_libraries: 'Libraries'
     csp_parameters_return_values: 'Parameters and Return Values'
     dlp: 'Reflection Prompts'
-    time4cs_c1: 'Everglades and Its Ecosystems'
-    time4cs_c2: 'Food Chains in the Everglades'
-    time4cs_c3: 'Living in the Everglades'
-    time4cs_c4: 'Invasive Impacts on the Everglades'
-    time4cs_c5: 'Citizens Affect Change in the Everglades'
+    time4cs_c1: 'Collection 1: The Everglades & its Ecosystems'
+    time4cs_c2: 'Collection 2: Food Chains (in the Everglades)'
+    time4cs_c3: 'Collection 3: Native Species (in the Everglades)'
+    time4cs_c4: 'Collection 4: Impact of Invasive Species (on the Everglades)'
+    time4cs_c5: 'Collection 5: Citizens Take Action'
+    time4cs_c6: 'Conditionals (review)'
     k5_getting_started: 'Getting Started'
     k5_csf_intro: 'Get to know the CS Fundamentals Courses'
     k5_coding_concepts: 'Coding Concepts and Teaching Strategies'

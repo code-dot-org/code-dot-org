@@ -391,7 +391,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test 'login: oauth takeover transfers sections to taken over account' do
-    User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.each do |provider|
+    AuthenticationOption::UNTRUSTED_EMAIL_CREDENTIAL_TYPES.each do |provider|
       teacher = create :teacher
       section = create :section, user: teacher, login_type: 'clever'
       oauth_student = create :student, provider: provider
@@ -412,7 +412,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test 'login: oauth takeover does not happen if takeover is expired' do
-    User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.each do |provider|
+    AuthenticationOption::UNTRUSTED_EMAIL_CREDENTIAL_TYPES.each do |provider|
       teacher = create :teacher
       section = create :section, user: teacher, login_type: 'clever'
       oauth_student = create :student, provider: provider
@@ -435,7 +435,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test 'login: oauth takeover takes over account when account has no activity' do
-    User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.each do |provider|
+    AuthenticationOption::UNTRUSTED_EMAIL_CREDENTIAL_TYPES.each do |provider|
       oauth_student = create :student, provider: provider
       student = create :student
 
@@ -455,7 +455,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test 'login: oauth takeover does nothing if account has activity' do
-    User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.each do |provider|
+    AuthenticationOption::UNTRUSTED_EMAIL_CREDENTIAL_TYPES.each do |provider|
       oauth_student = create :student, provider: provider
       student = create :student
       level = create(:level)
@@ -1101,11 +1101,9 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal User.last.id, signed_in_user_id
   end
 
-  test 'sign_up_clever: email taken redirect if _two_ users are already using your email address' do
-    # TODO: Make this not a thing
+  test 'sign_up_clever: email conflict redirect if any users are already using your email address' do
     email = 'alreadytaken@example.com'
     create :student, email: email
-    create :student, email: email + '.oauthemailalreadytaken'
 
     auth = generate_auth_user_hash(
       provider: AuthenticationOption::CLEVER,
@@ -1117,27 +1115,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     refute_creates(User) do
       get :clever
     end
-    assert_redirected_to "/users/sign_in?providerNotLinked=clever&email=#{email}.oauthemailalreadytaken"
-  end
-
-  test 'sign_up_clever: clever email taken redirect if _two_ users are already using your email address and one of them is clever' do
-    # TODO: Make this not a thing
-    email = 'alreadytaken@example.com'
-    create :student, email: email
-    taken_email = email + '.oauthemailalreadytaken'
-    create :student, email: taken_email, provider: AuthenticationOption::CLEVER
-
-    auth = generate_auth_user_hash(
-      provider: AuthenticationOption::CLEVER,
-      user_type: User::TYPE_TEACHER,
-      email: email
-    )
-    @request.env['omniauth.auth'] = auth
-    @request.env['omniauth.params'] = {}
-    refute_creates(User) do
-      get :clever
-    end
-    assert_redirected_to "/users/sign_in?providerNotLinked=clever&email=#{taken_email}"
+    assert_redirected_to users_existing_account_path({provider: "clever", email: email})
   end
 
   test 'connect_provider: can connect multiple auth options with the same email to the same user' do
@@ -1514,6 +1492,34 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_redirected_to 'http://test.host/users/edit'
     expected_notice = I18n.t('auth.already_linked', provider: I18n.t("auth.google_oauth2"))
     assert_equal expected_notice, flash.notice
+  end
+
+  test "connect_provider: return messaging specific to linked account" do
+    provider = AuthenticationOption::SILENT_TAKEOVER_CREDENTIAL_TYPES.sample
+
+    [User::TYPE_STUDENT, User::TYPE_TEACHER].each do |user_type|
+      user = create user_type
+      auth = generate_auth_user_hash(
+        provider: provider,
+        email: user.email
+      )
+      @request.env['omniauth.auth'] = auth
+
+      Timecop.freeze do
+        setup_should_connect_provider(user, 2.days.from_now)
+        get provider
+
+        assert_redirected_to 'http://test.host/users/edit'
+
+        provider_name = I18n.t(provider, scope: :auth)
+        expected_notice = user.teacher? ?
+          I18n.t('user.auth_option_saved', provider: provider_name, email: user.email) :
+          I18n.t('user.auth_option_saved_no_email', provider: provider_name)
+
+        assert_equal expected_notice, flash.notice
+        sign_out user
+      end
+    end
   end
 
   test 'silent_takeover: Adds email to teacher account missing email' do
