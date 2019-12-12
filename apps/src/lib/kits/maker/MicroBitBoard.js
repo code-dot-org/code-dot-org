@@ -6,11 +6,6 @@ import {
   createMicroBitComponents,
   componentConstructors
 } from './MicroBitComponents';
-import {MicroBitButton} from './Button';
-import {J5_CONSTANTS} from './PlaygroundConstants';
-
-// Polyfill node's process.hrtime for the browser, gets used by johnny-five.
-process.hrtime = require('browser-process-hrtime');
 
 /**
  * Controller interface for BBC micro:bit board using
@@ -24,9 +19,6 @@ export default class MicroBitBoard extends EventEmitter {
 
     /** @private {Object} Map of component controllers */
     this.prewiredComponents_ = null;
-
-    /** @private {Array} List of dynamically-created component controllers. */
-    this.dynamicComponents_ = [];
 
     /** @private {MicrobitFirmataClient} serial port controller */
     this.boardClient_ = new MBFirmataClient(SerialPort);
@@ -43,7 +35,7 @@ export default class MicroBitBoard extends EventEmitter {
   }
 
   /**
-   * Initialize a set of johnny-five component controllers.
+   * Initialize a set of component controllers.
    * Exposed as a separate step here for the sake of the setup page; generally
    * it'd be better to just call connect(), above.
    * @throws {Error} if called before connecting to firmware
@@ -52,8 +44,7 @@ export default class MicroBitBoard extends EventEmitter {
     return createMicroBitComponents(this.boardClient_).then(components => {
       this.prewiredComponents_ = {
         board: this.boardClient_,
-        ...components,
-        ...J5_CONSTANTS
+        ...components
       };
     });
   }
@@ -86,11 +77,7 @@ export default class MicroBitBoard extends EventEmitter {
   createLed(pin) {}
 
   // TODO
-  createButton(pin) {
-    const newButton = new MicroBitButton(pin);
-    this.dynamicComponents_.push(newButton);
-    return newButton;
-  }
+  createButton(pin) {}
 
   // TODO
   /**
@@ -98,7 +85,6 @@ export default class MicroBitBoard extends EventEmitter {
    */
   destroy() {}
 
-  // TODO
   /**
    * Marshals the board component controllers and appropriate constants into the
    * given JS Interpreter instance so they can be used by student code.
