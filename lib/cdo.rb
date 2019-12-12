@@ -134,6 +134,13 @@ module Cdo
       rack_env&.to_sym == env.to_sym
     end
 
+    # Identify whether we are executing on the managed test system (test.code.org / test-studio.code.org)
+    # to ensure that other systems (such as staging-next or Continuous Integration builds) that are operating
+    # with RACK_ENV=test do not carry out actions on behalf of the managed test system.
+    def test_system?
+      rack_env?(:test) && pegasus_hostname == 'test.code.org'
+    end
+
     # Sets the slogger to use in a test.
     # slogger must support a `write` method.
     def set_slogger_for_test(slogger)

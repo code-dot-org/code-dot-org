@@ -1838,6 +1838,32 @@ StudioApp.prototype.fixViewportForSmallScreens_ = function(viewport, config) {
   }
   var width = Math.max(minWidth, desiredWidth);
   var scale = deviceWidth / width;
+
+  var content = [
+    'width=' + width,
+    'minimal-ui',
+    'initial-scale=' + scale,
+    'maximum-scale=' + scale,
+    'minimum-scale=' + scale,
+    'target-densityDpi=device-dpi',
+    'user-scalable=no'
+  ];
+  viewport.setAttribute('content', content.join(', '));
+};
+
+/**
+ *
+ */
+StudioApp.prototype.fixViewportForSpecificWidthForSmallScreens_ = function(
+  viewport,
+  width
+) {
+  // iOS sets the screen width to the min of width and height. Android sets the
+  // screen width to the landscape width. We take the min of width and height
+  // here to enforce consistent behavior.
+  let screenWidth = Math.min(screen.width, screen.height);
+  const scale = screenWidth / width;
+
   var content = [
     'width=' + width,
     'minimal-ui',

@@ -141,7 +141,7 @@ def get_weather_data
     WeatherForecastOffice.new('Seattle', 'Washington', '98115'),
     WeatherForecastOffice.new('Spokane', 'Washington', '99224')
   ]
-  records = []
+  records = {}
   columns = ['id', 'State', 'City', 'Forecast Number', 'Date', 'Time Measurement', 'Main Condition',
              'Condition Description', 'Icon', 'Temperature', 'Humidity', 'Wind Speed', 'Wind Direction', 'Rain Inches',
              'Snow Inches', 'Pressure', 'Cloud Coverage', 'UTC Timestamp', 'Timezone Offset']
@@ -186,7 +186,7 @@ def get_weather_data
       record['UTC Timestamp'] = measurement['dt']
       record['Timezone Offset'] = parsed_response['city']['timezone']
 
-      records.push(record.to_h.to_json)
+      records[id] = row.to_h.to_json
       id += 1
       forecast_number += 1
     end

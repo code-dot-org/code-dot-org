@@ -1,6 +1,16 @@
 :ruby
   videos = [
     {
+      id: 'seeing_ai',
+      code: 'DybczED-GKE',
+      text: hoc_s(:ai_video_title_seeing_ai)
+    },
+    {
+      id: 'algorithm_bias',
+      code: 'UG_X_7g63rY',
+      text: hoc_s(:ai_video_title_algorithm_bias)
+    },
+    {
       id: 'ml_human_bias',
       code: '59bMh59JQDo',
       text: hoc_s(:ai_video_title_ml_human_bias)
@@ -31,6 +41,8 @@
       text: hoc_s(:ai_video_title_what_is_ai)
     }
   ]
+
+%h2= hoc_s(:oceans_landing_videos)
 
 - videos.each do |video|
   .col-50{style: "padding:10px"}
