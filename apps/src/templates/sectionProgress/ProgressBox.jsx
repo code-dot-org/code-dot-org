@@ -17,7 +17,9 @@ const styles = {
   lessonNumber: {
     position: 'absolute',
     zIndex: 2,
-    padding: 2
+    paddingTop: 2,
+    textAlign: 'center',
+    width: 20
   }
 };
 
