@@ -7,7 +7,7 @@ import {setInitialState, setSetStateCallback} from './state';
 import {render as renderCanvas} from './renderer';
 import {toMode} from './toMode';
 import {loadSounds, injectSoundAPIs} from './models/soundLibrary';
-import * as I18n from '../utils/i18n';
+import * as I18n from './i18n';
 
 //
 // Required in options:

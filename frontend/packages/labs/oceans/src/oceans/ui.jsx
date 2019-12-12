@@ -31,7 +31,7 @@ import {
   faInfo,
   faTrash
 } from '@fortawesome/free-solid-svg-icons';
-import * as I18n from '../utils/i18n';
+import * as I18n from './i18n';
 
 const styles = {
   body: {

@@ -92,6 +92,6 @@
     "react-typist": "^2.0.5"
   },
   "files": [
-    "dist/**/!(demo.js)"
+    "dist/**/!(oceans.js)"
   ]
 }

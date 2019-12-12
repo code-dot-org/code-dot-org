@@ -4,7 +4,7 @@ import {ClassType, AppMode} from '../constants';
 import SimpleTrainer from '../../utils/SimpleTrainer';
 import SVMTrainer from '../../utils/SVMTrainer';
 import {generateOcean} from '../../utils/generateOcean';
-import * as I18n from '../../utils/i18n';
+import * as I18n from '../i18n';
 
 export const init = () => {
   const state = getState();
