@@ -1,0 +1,35 @@
+%legend.control-legend{data: {toggle: "collapse", target: "#defaultSong"}}
+  Default Song
+
+#defaultSong.in.collapse
+  = f.label :default_song, 'Default Song'
+  = f.select :default_song, options_for_select(@level.class.hoc_songs, @level.default_song)
+
+= render partial: 'levels/editors/fields/debugger', locals: {f: f}
+
+= render partial: 'levels/editors/fields/control_buttons', locals: {f: f}
+
+= render partial: 'levels/editors/fields/submittable', locals: {f: f}
+
+= render partial: 'levels/editors/fields/block_pools', locals: {f: f}
+
+= render partial: 'levels/editors/fields/helper_libraries', locals: {f: f}
+
+= render partial: 'levels/editors/fields/validation_code', locals: {f: f}
+
+= render partial: 'levels/editors/fields/encrypted_examples', locals: {f: f, level_type: 'dance'}
+
+.field
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :include_shared_functions, description: "Make shared functions and behaviors available"}
+
+= render partial: 'levels/editors/fields/custom_block', locals: {f: f}
+
+= render partial: 'levels/editors/fields/custom_helper_library', locals: {f: f}
+
+:javascript
+  window.toggleBlock = function (elementId) {
+    var element = document.getElementById(elementId);
+    if (element) {
+      element.style.display = element.style.display === 'none' ? 'block' : 'none';
+    }
+  };
