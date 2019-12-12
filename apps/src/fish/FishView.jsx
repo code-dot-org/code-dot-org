@@ -61,6 +61,13 @@ class FishView extends React.Component {
   componentDidMount() {
     this.props.onMount();
 
+    this.setState({
+      windowWidth: $(window).width(),
+      windowHeight: $(window).height(),
+      appWidth: $('#codeApp').width(),
+      appHeight: $('#codeApp').height()
+    });
+
     window.addEventListener('resize', _.debounce(this.onResize, 100));
   }
 
