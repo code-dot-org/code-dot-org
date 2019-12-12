@@ -4,6 +4,7 @@ import {ClassType, AppMode} from '../constants';
 import SimpleTrainer from '../../utils/SimpleTrainer';
 import SVMTrainer from '../../utils/SVMTrainer';
 import {generateOcean} from '../../utils/generateOcean';
+import * as I18n from '../../utils/i18n';
 
 export const init = () => {
   const state = getState();
@@ -19,14 +20,14 @@ export const init = () => {
 
   if (state.appMode === AppMode.FishVTrash) {
     setState({
-      word: 'Fish',
-      trainingQuestion: 'Is this a fish?'
+      word: I18n.t('fish'),
+      trainingQuestion: I18n.t('isThisAFish')
     });
   }
   if (state.appMode === AppMode.CreaturesVTrash) {
     setState({
-      word: 'Water creature',
-      trainingQuestion: 'Does this belong in the water?'
+      word: I18n.t('waterCreature'),
+      trainingQuestion: I18n.t('doesThisBelongInWater')
     });
   }
 

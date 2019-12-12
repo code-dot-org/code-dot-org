@@ -5,6 +5,7 @@ import turtleImage from '@public/images/turtle-large.png';
 import seahorseImage from '@public/images/seahorse-large.png';
 import trashBottleImage from '@public/images/bottle-large.png';
 import trashCanImage from '@public/images/can-large.png';
+import * as I18n from '@ml/utils/i18n';
 
 const imageStyleOverrides = {
   turtle: {bottom: '1%', left: '6%'},
@@ -16,26 +17,41 @@ const imageStyleOverrides = {
 const guides = [
   {
     id: 'fishvtrash-training-init1',
+    textFn: () => {
+      return I18n.t('fishvtrash-training-init1');
+    },
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Training}
   },
   {
     id: 'fishvtrash-training-init2',
+    textFn: () => {
+      return I18n.t('fishvtrash-training-init2');
+    },
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Training},
     arrow: 'BotRight'
   },
   {
     id: 'fishvtrash-training-init3',
+    textFn: () => {
+      return I18n.t('fishvtrash-training-init3');
+    },
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Training}
   },
   {
     id: 'fishvtrash-training-init4',
+    textFn: () => {
+      return I18n.t('fishvtrash-training-init4');
+    },
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Training},
     style: 'Center',
     arrow: 'LowerCenter'
   },
   {
     id: 'fishvtrash-training-pause1',
-    hasHeading: true,
+    heading: 'Did you know?',
+    textFn: () => {
+      return I18n.t('fishvtrash-training-pause1');
+    },
     when: {
       appMode: AppMode.FishVTrash,
       currentMode: Modes.Training,
@@ -49,6 +65,9 @@ const guides = [
   },
   {
     id: 'fishvtrash-training-pause2',
+    textFn: () => {
+      return I18n.t('fishvtrash-training-pause2');
+    },
     when: {
       appMode: AppMode.FishVTrash,
       currentMode: Modes.Training,
@@ -59,7 +78,10 @@ const guides = [
   },
   {
     id: 'fishvtrash-training-pause3',
-    hasHeading: true,
+    heading: 'Did you know?',
+    textFn: () => {
+      return I18n.t('fishvtrash-training-pause3');
+    },
     when: {
       appMode: AppMode.FishVTrash,
       currentMode: Modes.Training,
@@ -73,6 +95,9 @@ const guides = [
   },
   {
     id: 'fishvtrash-training-pause4',
+    textFn: () => {
+      return I18n.t('fishvtrash-training-pause4');
+    },
     when: {
       appMode: AppMode.FishVTrash,
       currentMode: Modes.Training,
@@ -83,6 +108,9 @@ const guides = [
   },
   {
     id: 'fishvtrash-training-pause5',
+    textFn: () => {
+      return I18n.t('fishvtrash-training-pause5');
+    },
     when: {
       appMode: AppMode.FishVTrash,
       currentMode: Modes.Training,
@@ -93,20 +121,32 @@ const guides = [
   },
   {
     id: 'fishvtrash-predicting-init1',
+    textFn: () => {
+      return I18n.t('fishvtrash-predicting-init1');
+    },
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Predicting}
   },
   {
     id: 'fishvtrash-predicting-init2',
+    textFn: () => {
+      return I18n.t('fishvtrash-predicting-init2');
+    },
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Predicting}
   },
   {
     id: 'fishvtrash-predicting-init3',
+    textFn: () => {
+      return I18n.t('fishvtrash-predicting-init3');
+    },
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Predicting},
     noDimBackground: true,
     arrow: 'LowerRight'
   },
   {
     id: 'fishvtrash-pond-init1',
+    textFn: () => {
+      return I18n.t('fishvtrash-pond-init1');
+    },
     when: {
       appMode: AppMode.FishVTrash,
       currentMode: Modes.Pond,
@@ -117,39 +157,63 @@ const guides = [
   },
   {
     id: 'fishvtrash-pond-recall',
+    textFn: () => {
+      return I18n.t('fishvtrash-pond-recall');
+    },
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Pond},
     arrow: 'UpperRight'
   },
   {
     id: 'fishvtrash-pond-init2',
+    textFn: () => {
+      return I18n.t('fishvtrash-pond-init2');
+    },
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Pond},
     arrow: 'LowerLeft'
   },
   {
     id: 'fishvtrash-pond-init3',
+    textFn: () => {
+      return I18n.t('fishvtrash-pond-init3');
+    },
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Pond},
     arrow: 'LowerRight'
   },
   {
     id: 'creaturesvtrashdemo-predicting-init1',
+    textFn: () => {
+      return I18n.t('creaturesvtrashdemo-predicting-init1');
+    },
     when: {appMode: AppMode.CreaturesVTrashDemo, currentMode: Modes.Predicting}
   },
   {
     id: 'creaturesvtrashdemo-predicting-init2',
+    textFn: () => {
+      return I18n.t('creaturesvtrashdemo-predicting-init2');
+    },
     when: {appMode: AppMode.CreaturesVTrashDemo, currentMode: Modes.Predicting}
   },
   {
     id: 'creaturesvtrashdemo-predicting-init3',
+    textFn: () => {
+      return I18n.t('creaturesvtrashdemo-predicting-init3');
+    },
     when: {appMode: AppMode.CreaturesVTrashDemo, currentMode: Modes.Predicting}
   },
   {
     id: 'creaturesvtrashdemo-predicting-init4',
+    textFn: () => {
+      return I18n.t('creaturesvtrashdemo-predicting-init4');
+    },
     when: {appMode: AppMode.CreaturesVTrashDemo, currentMode: Modes.Predicting},
     noDimBackground: true,
     arrow: 'LowerRight'
   },
   {
     id: 'creaturesvtrashdemo-predicting-pause1',
+    textFn: () => {
+      return I18n.t('creaturesvtrashdemo-predicting-pause1');
+    },
     when: {
       appMode: AppMode.CreaturesVTrashDemo,
       currentMode: Modes.Predicting,
@@ -158,6 +222,9 @@ const guides = [
   },
   {
     id: 'creaturesvtrashdemo-predicting-pause2',
+    textFn: () => {
+      return I18n.t('creaturesvtrashdemo-predicting-pause2');
+    },
     when: {
       appMode: AppMode.CreaturesVTrashDemo,
       currentMode: Modes.Predicting,
@@ -166,6 +233,9 @@ const guides = [
   },
   {
     id: 'creaturesvtrashdemo-predicting-pause3',
+    textFn: () => {
+      return I18n.t('creaturesvtrashdemo-predicting-pause3');
+    },
     when: {
       appMode: AppMode.CreaturesVTrashDemo,
       currentMode: Modes.Predicting,
@@ -174,6 +244,9 @@ const guides = [
   },
   {
     id: 'creaturesvtrashdemo-predicting-pause4',
+    textFn: () => {
+      return I18n.t('creaturesvtrashdemo-predicting-pause4');
+    },
     when: {
       appMode: AppMode.CreaturesVTrashDemo,
       currentMode: Modes.Predicting,
@@ -184,11 +257,17 @@ const guides = [
   },
   {
     id: 'creaturesvtrash-training-init1',
+    textFn: () => {
+      return I18n.t('creaturesvtrash-training-init1');
+    },
     when: {appMode: AppMode.CreaturesVTrash, currentMode: Modes.Training}
   },
   {
     id: 'creaturesvtrash-training-init2',
-    hasHeadong: true,
+    heading: 'Did you know?',
+    textFn: () => {
+      return I18n.t('creaturesvtrash-training-init2');
+    },
     when: {
       appMode: AppMode.CreaturesVTrash,
       currentMode: Modes.Training,
@@ -202,6 +281,9 @@ const guides = [
   },
   {
     id: 'creaturesvtrash-training-init3',
+    textFn: () => {
+      return I18n.t('creaturesvtrash-training-init3');
+    },
     when: {
       appMode: AppMode.CreaturesVTrash,
       currentMode: Modes.Training,
@@ -212,7 +294,10 @@ const guides = [
   },
   {
     id: 'creaturesvtrash-training-init4',
-    hasHeading: true,
+    heading: 'Did you know?',
+    textFn: () => {
+      return I18n.t('creaturesvtrash-training-init4');
+    },
     when: {
       appMode: AppMode.CreaturesVTrash,
       currentMode: Modes.Training,
@@ -226,6 +311,9 @@ const guides = [
   },
   {
     id: 'creaturesvtrash-training-init5',
+    textFn: () => {
+      return I18n.t('creaturesvtrash-training-init5');
+    },
     when: {
       appMode: AppMode.CreaturesVTrash,
       currentMode: Modes.Training,
@@ -236,6 +324,9 @@ const guides = [
   },
   {
     id: 'creaturesvtrash-training-init6',
+    textFn: () => {
+      return I18n.t('creaturesvtrash-training-init6');
+    },
     when: {
       appMode: AppMode.CreaturesVTrash,
       currentMode: Modes.Training,
@@ -246,10 +337,16 @@ const guides = [
   },
   {
     id: 'creaturesvtrash-predicting-init1',
+    textFn: () => {
+      return I18n.t('creaturesvtrash-predicting-init1');
+    },
     when: {appMode: AppMode.CreaturesVTrash, currentMode: Modes.Predicting}
   },
   {
     id: 'creaturesvtrash-pond-init1',
+    textFn: () => {
+      return I18n.t('creaturesvtrash-pond-init1');
+    },
     when: {
       appMode: AppMode.CreaturesVTrash,
       currentMode: Modes.Pond,
@@ -260,14 +357,23 @@ const guides = [
   },
   {
     id: 'fishshort-words-init1',
+    textFn: () => {
+      return I18n.t('fishshort-words-init1');
+    },
     when: {appMode: AppMode.FishShort, currentMode: Modes.Words}
   },
   {
     id: 'fishshort-words-init2',
+    textFn: () => {
+      return I18n.t('fishshort-words-init2');
+    },
     when: {appMode: AppMode.FishShort, currentMode: Modes.Words}
   },
   {
     id: 'fishshort-words-training-pause1',
+    textFn: () => {
+      return I18n.t('fishshort-words-training-pause1');
+    },
     when: {
       appMode: AppMode.FishShort,
       currentMode: Modes.Training,
@@ -278,6 +384,9 @@ const guides = [
   },
   {
     id: 'fishshort-words-training-pause2',
+    textFn: () => {
+      return I18n.t('fishshort-words-training-pause2');
+    },
     when: {
       appMode: AppMode.FishShort,
       currentMode: Modes.Training,
@@ -289,23 +398,29 @@ const guides = [
   {
     id: 'fishshort-predicting-init1',
     textFn: state => {
-      return `With your training data, you have programmed A.I. to recognize “${state.word.toLowerCase()}” fish.`;
+      return I18n.t('fishshort-predicting-init1', {
+        WORD: state.word.toLowerCase()
+      });
     },
     when: {appMode: AppMode.FishShort, currentMode: Modes.Predicting}
   },
   {
     id: 'fishshort-predicting-init2',
     textFn: state => {
-      return `Let’s see A.I. identify “${state.word.toLowerCase()}” fish.`;
+      return I18n.t('fishshort-predicting-init2', {
+        WORD: state.word.toLowerCase()
+      });
     },
     when: {appMode: AppMode.FishShort, currentMode: Modes.Predicting}
   },
   {
     id: 'fishshort-pond-init1',
     textFn: state => {
-      return `Based on your training, A.I. identified ${
-        state.fishData.length === 1 ? 'this' : 'these'
-      } fish as “${state.word.toLowerCase()}”.  How did A.I. do?  You can Train More if you want to improve the results.`;
+     return I18n.t('fishshort-pond-init1', {
+        N: state.fishData.length,
+        WORD: state.word.toLowerCase()
+      });
+
     },
     when: {
       appMode: AppMode.FishShort,
@@ -317,24 +432,31 @@ const guides = [
   },
   {
     id: 'fishshort-pond-init2',
-    text: 'Click on the info button to see what A.I. learned.',
+    textFn: () => {
+      return I18n.t('fishshort-pond-init2');
+    },
     when: {appMode: AppMode.FishShort, currentMode: Modes.Pond},
     arrow: 'UpperFarRight'
   },
   {
     id: 'fishlong-words-init1',
-    text: 'Now let’s see if A.I. can learn a less obvious word.',
+    textFn: () => {
+      return I18n.t('fishlong-words-init1');
+    },
     when: {appMode: AppMode.FishLong, currentMode: Modes.Words}
   },
   {
     id: 'fishlong-words-init2',
-    text:
-      'Let’s teach A.I. a word that depends on your opinion.  It is up to you to pick fish that match your word.',
+    textFn: () => {
+      return I18n.t('fishlong-words-init2');
+    },
     when: {appMode: AppMode.FishLong, currentMode: Modes.Words}
   },
   {
     id: 'fishlong-training-pause1',
-    text: `Is it fair to use artificial intelligence to judge a fish by its looks?  While AI might seem fair and neutral, its analysis comes from the training we provide.  What unintended bias could this cause?`,
+    textFn: () => {
+      return I18n.t('fishlong-training-pause1');
+    },
     when: {
       appMode: AppMode.FishLong,
       currentMode: Modes.Training,
@@ -345,7 +467,9 @@ const guides = [
   },
   {
     id: 'fishlong-training-pause2',
-    text: `More training data will help A.I. learn your word.  Keep training.`,
+    textFn: () => {
+      return I18n.t('fishlong-training-pause2');
+    },
     when: {
       appMode: AppMode.FishLong,
       currentMode: Modes.Training,
@@ -356,7 +480,9 @@ const guides = [
   },
   {
     id: 'fishlong-training-pause3',
-    text: `Each choice you make can help A.I. learn.  Keep training.`,
+    textFn: () => {
+      return I18n.t('fishlong-training-pause3');
+    },
     when: {
       appMode: AppMode.FishLong,
       currentMode: Modes.Training,
@@ -367,7 +493,9 @@ const guides = [
   },
   {
     id: 'fishlong-training-pause4',
-    text: `Do you think A.I. has enough training data?  A.I. will do better with a lot of data.  Continue when you think A.I. is ready.`,
+    textFn: () => {
+      return I18n.t('fishlong-training-pause4');
+    },
     when: {
       appMode: AppMode.FishLong,
       currentMode: Modes.Training,
@@ -378,7 +506,9 @@ const guides = [
   },
   {
     id: 'fishlong-training-many',
-    text: `Wow.  That’s a lot of fish!`,
+    textFn: () => {
+      return I18n.t('fishlong-training-many');
+    },
     when: {
       appMode: AppMode.FishLong,
       currentMode: Modes.Training,
@@ -390,23 +520,28 @@ const guides = [
   {
     id: 'fishlong-predicting-init1',
     textFn: state => {
-      return `With your training data, you have programmed A.I. to recognize “${state.word.toLowerCase()}” fish.`;
+      return I18n.t('fishlong-predicting-init1', {
+        WORD: state.word.toLowerCase()
+      });
     },
     when: {appMode: AppMode.FishLong, currentMode: Modes.Predicting}
   },
   {
     id: 'fishlong-predicting-init2',
     textFn: state => {
-      return `Let’s see A.I. identify “${state.word.toLowerCase()}” fish.`;
+      return I18n.t('fishlong-predicting-init2', {
+        WORD: state.word.toLowerCase()
+      });
     },
     when: {appMode: AppMode.FishLong, currentMode: Modes.Predicting}
   },
   {
     id: 'fishlong-pond-init1',
     textFn: state => {
-      return `Based on your training, A.I. identified ${
-        state.fishData.length === 1 ? 'this' : 'these'
-      } fish as “${state.word.toLowerCase()}”.  How did A.I do?`;
+      return I18n.t('fishlong-pond-init1', {
+        N: state.fishData.length,
+        WORD: state.word.toLowerCase()
+      });
     },
     when: {
       appMode: AppMode.FishLong,
@@ -418,13 +553,17 @@ const guides = [
   },
   {
     id: 'fishlong-pond-init2',
-    text: `You can Train More if you want to improve the results.`,
+    textFn: () => {
+      return I18n.t('fishlong-pond-init2');
+    },
     when: {appMode: AppMode.FishLong, currentMode: Modes.Pond},
     arrow: 'LowerLeft'
   },
   {
     id: 'fishlong-pond-init3',
-    text: `Or you can teach A.I. a new word by choosing New Word.`,
+    textFn: () => {
+      return I18n.t('fishlong-pond-init3');
+    },
     when: {appMode: AppMode.FishLong, currentMode: Modes.Pond},
     arrow: 'LowishRight'
   }
@@ -450,12 +589,6 @@ export function getCurrentGuide() {
       if (
         !(state.guideDismissals && state.guideDismissals.includes(guide.id))
       ) {
-        if (state.i18n[guide.id]) {
-          guide.text = state.i18n[guide.id]();
-        }
-        if (guide.hasHeading && state.i18n[`${guide.id}-heading`]) {
-          guide.heading = state.i18n[`${guide.id}-heading`]();
-        }
         return guide;
       }
     }

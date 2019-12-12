@@ -9,8 +9,7 @@ import {
   $time,
   currentRunTime,
   finishMovement,
-  resetTraining,
-  friendlyNameForFishPart
+  resetTraining
 } from './helpers';
 import {onClassifyFish} from './models/train';
 import {arrangeFish} from './models/pond';
@@ -37,6 +36,7 @@ import {
   faInfo,
   faTrash
 } from '@fortawesome/free-solid-svg-icons';
+import * as I18n from '../utils/i18n';
 
 const styles = {
   body: {
@@ -716,11 +716,10 @@ let ConfirmationDialog = class ConfirmationDialog extends React.Component {
                 style={styles.confirmationHeader}
                 className="confirmation-text"
               >
-                Are you sure?
+                {I18n.t('areYouSure')}
               </div>
               <div style={styles.confirmationText}>
-                {`Erasing A.I.'s data will permanently delete all training. Is
-                that what you want to do?`}
+                {I18n.t('eraseWarning')}
               </div>
             </div>
           </div>
@@ -730,14 +729,14 @@ let ConfirmationDialog = class ConfirmationDialog extends React.Component {
               style={styles.confirmationYesButton}
               className="dialog-button"
             >
-              <FontAwesomeIcon icon={faEraser} /> Erase
+              <FontAwesomeIcon icon={faEraser} /> {I18n.t('erase')}
             </Button>
             <Button
               onClick={this.props.onNoClick}
               style={styles.confirmationNoButton}
               className="dialog-button"
             >
-              Cancel
+              {I18n.t('cancel')}
             </Button>
           </div>
         </div>
@@ -824,7 +823,7 @@ let Words = class Words extends React.Component {
     const word = this.state.choices[itemIndex];
     setState({
       word,
-      trainingQuestion: `Is this fish “${word.toLowerCase()}”?`
+      trainingQuestion: I18n.t('isThisFish', {WORD: word.toLowerCase()})
     });
     toMode(Modes.Training);
 
@@ -881,9 +880,9 @@ let Train = class Train extends React.Component {
   render() {
     const state = getState();
     const yesButtonText =
-      state.appMode === AppMode.CreaturesVTrash ? 'Yes' : state.word;
+      state.appMode === AppMode.CreaturesVTrash ? I18n.t('yes') : state.word;
     const noButtonText =
-      state.appMode === AppMode.CreaturesVTrash ? 'No' : `Not ${state.word}`;
+      state.appMode === AppMode.CreaturesVTrash ? I18n.t('no') : I18n.t('notWord', {WORD: state.word});
     const resetTrainingFunction = () => {
       resetTraining(state);
       setState({showConfirmationDialog: false});
@@ -950,7 +949,7 @@ let Train = class Train extends React.Component {
           style={styles.continueButton}
           onClick={() => toMode(Modes.Predicting)}
         >
-          Continue
+        {I18n.t('continue')}
         </Button>
       </Body>
     );
@@ -1090,12 +1089,12 @@ let Predict = class Predict extends React.Component {
         {!state.isRunning && !state.isPaused && (
           <Button style={styles.continueButton} onClick={this.onRun}>
             <FontAwesomeIcon icon={faPlay} />
-            &nbsp; &nbsp; Run
+            &nbsp; &nbsp; {I18n.t('run')}
           </Button>
         )}
         {(state.isRunning || state.isPaused) && state.canSkipPredict && (
           <Button style={styles.continueButton} onClick={this.onContinue}>
-            Continue
+          {I18n.t('continue')}
           </Button>
         )}
       </Body>
@@ -1127,7 +1126,7 @@ class PondPanel extends React.Component {
             {state.pondExplainGeneralSummary && (
               <div>
                 <div style={styles.pondPanelPreText}>
-                  These were the most important fish parts:
+                {I18n.t('mostImportantParts')}
                 </div>
                 {state.pondExplainGeneralSummary.slice(0, 5).map((f, i) => (
                   <div key={i}>
@@ -1147,14 +1146,14 @@ class PondPanel extends React.Component {
                           &nbsp;
                         </div>
                         <div style={styles.pondPanelGeneralBarText}>
-                          {friendlyNameForFishPart(f.partType)}
+                          {I18n.t(f.partType)}
                         </div>
                       </div>
                     )}
                   </div>
                 ))}
                 <div style={styles.pondPanelPostText}>
-                  Click individual fish to see their information.
+                {I18n.t('clickIndividualFish')}
                 </div>
               </div>
             )}
@@ -1200,7 +1199,7 @@ class PondPanel extends React.Component {
                           &nbsp;
                         </div>
                         <div style={styles.pondPanelGreenBarText}>
-                          {friendlyNameForFishPart(f.partType)}
+                          {I18n.t(f.partType)}
                         </div>
                       </div>
                     )}
@@ -1219,7 +1218,7 @@ class PondPanel extends React.Component {
                           &nbsp;
                         </div>
                         <div style={styles.pondPanelRedBarText}>
-                          {friendlyNameForFishPart(f.partType)}
+                          {I18n.t(f.partType)}
                         </div>
                       </div>
                     )}
@@ -1436,13 +1435,13 @@ let Pond = class Pond extends React.Component {
                     toMode(Modes.Words);
                   }}
                 >
-                  New Word
+                {I18n.t('newWord')}
                 </Button>
                 <Button
                   style={styles.finishButton}
                   onClick={() => state.onContinue()}
                 >
-                  Finish
+                {I18n.t('finish')}
                 </Button>
               </div>
             ) : (
@@ -1450,7 +1449,7 @@ let Pond = class Pond extends React.Component {
                 style={styles.continueButton}
                 onClick={() => state.onContinue()}
               >
-                Continue
+                {I18n.t('continue')}
               </Button>
             )}
             <div>
@@ -1461,7 +1460,7 @@ let Pond = class Pond extends React.Component {
                   setState({pondClickedFish: null, pondPanelShowing: false});
                 }}
               >
-                Train More
+                {I18n.t('trainMore')}
               </Button>
             </div>
           </div>
