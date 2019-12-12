@@ -875,7 +875,7 @@ let UnwrappedWords = class Words extends React.Component {
 };
 export const Words = Radium(UnwrappedWords); // Exported for unit tests.
 
-let Train = class Train extends React.Component {
+let UnwrappedTrain = class Train extends React.Component {
   state = {
     headOpen: false
   };
@@ -906,7 +906,7 @@ let Train = class Train extends React.Component {
         </div>
         <div style={styles.counter}>
           <img src={counterIcon} style={styles.counterImg} />
-          <span style={styles.counterNum}>
+          <span style={styles.counterNum} id="uitest-train-count">
             {Math.min(999, state.yesCount + state.noCount)}
           </span>
         </div>
@@ -958,7 +958,7 @@ let Train = class Train extends React.Component {
     );
   }
 };
-Train = Radium(Train);
+export const Train = Radium(UnwrappedTrain); // Exported for unit tests.
 
 const defaultTimeScale = 1;
 const timeScales = [1, 2];
