@@ -4,7 +4,7 @@ import Radium from 'radium';
 import _ from 'lodash';
 import {getState, setState} from './state';
 import constants, {AppMode, Modes} from './constants';
-import * as modeHelpers from './modeHelpers';
+import modeHelpers from './modeHelpers';
 import {
   $time,
   currentRunTime,
@@ -23,8 +23,8 @@ import arrowDownImage from '@public/images/arrow-down.png';
 import snail from '@public/images/snail-large.png';
 import loadingGif from '@public/images/loading.gif';
 import Typist from 'react-typist';
-import * as guide from './models/guide';
-import * as soundLibrary from './models/soundLibrary';
+import guide from './models/guide';
+import soundLibrary from './models/soundLibrary';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {
   faPlay,
