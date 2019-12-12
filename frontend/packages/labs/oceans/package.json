@@ -11,8 +11,7 @@
     }
   },
   "scripts": {
-    "build": "node bin/compileI18n.js && webpack -p",
-    "build:i18n": "node bin/compileI18n.js",
+    "build": "webpack -p",
     "start": "yarn run dev",
     "dev": "webpack-dev-server --mode development --content-base public --host 0.0.0.0 --disable-host-check",
     "lint": "eslint --ext .js,.jsx src",
@@ -93,7 +92,6 @@
     "react-typist": "^2.0.5"
   },
   "files": [
-    "dist/**/!(demo.js)",
-    "i18n/ocean.json"
+    "dist/**/!(demo.js)"
   ]
 }
