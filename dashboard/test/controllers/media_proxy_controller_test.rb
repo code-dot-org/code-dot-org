@@ -77,4 +77,25 @@ class MediaProxyControllerTest < ActionController::TestCase
     get :get, params: {u: IMAGE_URI}
     assert_response 503
   end
+
+  test "should return 400 on upstream timeouts" do
+    stub_request(:get, IMAGE_URI).to_timeout
+    get :get, params: {u: IMAGE_URI}
+    assert_response 400
+    assert_includes response.body, 'Network error'
+  end
+
+  test "should return 400 on SSL errors" do
+    stub_request(:get, IMAGE_URI).to_raise(OpenSSL::SSL::SSLError)
+    get :get, params: {u: IMAGE_URI}
+    assert_response 400
+    assert_includes response.body, 'Remote host SSL certificate error'
+  end
+
+  test "should return 400 on EOF errors" do
+    stub_request(:get, IMAGE_URI).to_raise(EOFError)
+    get :get, params: {u: IMAGE_URI}
+    assert_response 400
+    assert_includes response.body, 'Remote host closed the connection'
+  end
 end
