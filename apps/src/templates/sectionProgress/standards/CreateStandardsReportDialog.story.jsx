@@ -7,11 +7,7 @@ export default storybook => {
     .storiesOf('Standards/CreateStandardsReportDialog', module)
     .add('overview', () => {
       return (
-        <CreateStandardsReportDialog
-          isOpen
-          handleConfirm={action('Confirm')}
-          handleBack={action('Back')}
-        />
+        <CreateStandardsReportDialog isOpen handleConfirm={action('Confirm')} />
       );
     });
 };
