@@ -1,5 +1,9 @@
 /*
   Code from: https://github.com/microbit-foundation/microbit-firmata
+
+  This file includes changes to the original code to facilitate using this
+  in our repo. The changes are tracked here:
+  https://github.com/microbit-foundation/microbit-firmata/pull/3
  */
 
 // TODO Reference this code from package.json after demo
@@ -38,11 +42,21 @@ SOFTWARE.
  * Clients can listen for DAL events, digital pin changes, or analog channel updates.
  */
 
-const serialport = require('serialport');
-const {TextEncoder, TextDecoder} = require('util');
+let serialport;
+let TextEncoder, TextDecoder;
+
+// If running outside of the browser, create the TextEncoder/TextDecoder
+if (typeof window === 'undefined' || !window.TextEncoder) {
+  TextEncoder = require('util').TextEncoder;
+  TextDecoder = require('util').TextDecoder;
+} else {
+  TextEncoder = window.TextEncoder;
+  TextDecoder = window.TextDecoder;
+}
 
 class MicrobitFirmataClient {
-  constructor() {
+  constructor(port) {
+    serialport = port ? port : require('serialport');
     this.addConstants();
     this.myPort = null;
     this.inbuf = new Uint8Array(1000);
@@ -115,10 +129,13 @@ class MicrobitFirmataClient {
 
   // Connecting/Disconnecting
 
+  /**
+   * @returns {Promise} when port has been opened or if no port found
+   */
   connect() {
     // Search serial port list for a connected micro:bit and, if found, open that port.
 
-    serialport.list()
+    return serialport.list()
     .then((ports) => {
       for (var i = 0; i < ports.length; i++) {
         var p = ports[i];
@@ -133,13 +150,17 @@ class MicrobitFirmataClient {
         // Attempt to open the serial port on the given port name.
         // If this fails it will fail with an UnhandledPromiseRejectionWarning.
         console.log("Opening", portName);
-        this.setSerialPort(new serialport(portName, { baudRate: 57600 }));
+        return this.setSerialPort(new serialport(portName, { baudRate: 57600 }));
       } else {
         console.log("No micro:bit found; is your board plugged in?");
+        return null;
       }
     });
   }
 
+  /**
+   * @returns {Promise} when board version is set
+   */
   setSerialPort(port) {
     // Use the given port. Assume the port has been opened by the caller.
 
@@ -157,7 +178,7 @@ class MicrobitFirmataClient {
 
     // get the board serial number (used to determine board version)
     this.boardVersion = '';
-    serialport.list()
+    return serialport.list()
     .then((ports) => {
       for (var i = 0; i < ports.length; i++) {
         var p = ports[i];
