@@ -17,11 +17,10 @@ const DEFAULT_PROPS = {
 };
 
 describe('Button', () => {
-  let onClickMock, playSoundSpy;
+  let onClickMock, playSoundStub;
 
   beforeEach(() => {
-    soundLibrary.injectSoundAPIs({playSound: sinon.fake()});
-    playSoundSpy = sinon.spy(soundLibrary, 'playSound');
+    playSoundStub = sinon.stub(soundLibrary, 'playSound');
     onClickMock = sinon.fake.returns(false);
   });
 
@@ -56,7 +55,7 @@ describe('Button', () => {
     );
 
     wrapper.simulate('click');
-    expect(playSoundSpy.callCount).toEqual(0);
+    expect(playSoundStub.callCount).toEqual(0);
   });
 
   describe('onClick prop does not return false', () => {
@@ -67,7 +66,7 @@ describe('Button', () => {
       );
 
       wrapper.simulate('click');
-      expect(playSoundSpy.withArgs('sortyes').calledOnce).toBeTruthy();
+      expect(playSoundStub.withArgs('sortyes').calledOnce).toBeTruthy();
     });
 
     it('plays "other" sound if sound not supplied', () => {
@@ -77,7 +76,7 @@ describe('Button', () => {
       );
 
       wrapper.simulate('click');
-      expect(playSoundSpy.withArgs('other').calledOnce).toBeTruthy();
+      expect(playSoundStub.withArgs('other').calledOnce).toBeTruthy();
     });
   });
 });
