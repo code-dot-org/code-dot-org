@@ -152,11 +152,15 @@ describe('Words', () => {
   });
 
   describe('onChangeWord', () => {
+    let toModeStub;
+
     beforeEach(() => {
+      toModeStub = sinon.stub(modeHelpers, 'toMode');
       setState({appMode: AppMode.FishLong});
     });
 
     afterEach(() => {
+      modeHelpers.toMode.restore();
       resetState();
     });
 
@@ -173,16 +177,13 @@ describe('Words', () => {
     });
 
     it('transitions to Modes.Training', () => {
-      const toModeSpy = sinon.spy(modeHelpers, 'toMode');
       const wrapper = shallow(<Words {...DEFAULT_PROPS} />);
 
       wrapper
         .find('Button')
         .at(0)
         .simulate('click');
-      expect(toModeSpy.withArgs(Modes.Training).calledOnce).toBeTruthy();
-
-      modeHelpers.toMode.restore();
+      expect(toModeStub.withArgs(Modes.Training).calledOnce).toBeTruthy();
     });
 
     it('reports an analytics event if window.trackEvent is provided', () => {
