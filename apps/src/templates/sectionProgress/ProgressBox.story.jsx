@@ -49,6 +49,34 @@ export default storybook => {
       story: () => (
         <ProgressBox started={true} incomplete={0} imperfect={0} perfect={20} />
       )
+    },
+    {
+      name: 'Lesson number, complete',
+      description: `include lesson number with green background`,
+      story: () => (
+        <ProgressBox
+          started={true}
+          incomplete={0}
+          imperfect={0}
+          perfect={20}
+          showLessonNumber={true}
+          lessonNumber={88}
+        />
+      )
+    },
+    {
+      name: 'Lesson number, incomplete',
+      description: `include lesson number with white background`,
+      story: () => (
+        <ProgressBox
+          started={false}
+          incomplete={0}
+          imperfect={0}
+          perfect={0}
+          showLessonNumber={true}
+          lessonNumber={1}
+        />
+      )
     }
   ]);
 };
