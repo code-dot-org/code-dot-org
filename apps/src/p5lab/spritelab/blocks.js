@@ -1,4 +1,5 @@
 /* global dashboard */
+/* global appOptions */
 
 import {SVG_NS} from '@cdo/apps/constants';
 import {getStore} from '@cdo/apps/redux';
@@ -377,7 +378,12 @@ export default {
           .appendTitle(fieldLabel, 'VAR')
           .appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);
 
-        if (Blockly.useModalFunctionEditor) {
+        let allowBehaviorEditing = Blockly.useModalFunctionEditor;
+        if (appOptions.level.toolbox && !Blockly.hasCategories) {
+          allowBehaviorEditing = false;
+        }
+
+        if (allowBehaviorEditing) {
           var editLabel = new Blockly.FieldIcon(Blockly.Msg.FUNCTION_EDIT);
           Blockly.bindEvent_(
             editLabel.fieldGroup_,
