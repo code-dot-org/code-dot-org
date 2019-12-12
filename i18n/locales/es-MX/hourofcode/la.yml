@@ -25,20 +25,70 @@ la:
     de 2019. Es fundamental que cada estudiante aprenda ciencias de la computación.
   social_hoc2019_dance: "¡Con la presencia de Katy Perry, Jonas Brothers, Lil Nas
     X, Panic at the Disco y muchos más!"
-  oceans_landing_title: AI for Oceans
-  oceans_landing_description: 'Explore machine learning by teaching “A.I.” to recognize
-    fish. #CSforGood'
-  oceans_landing_specs: English only | Ages 11+
-  oceans_landing_teacher_resources: Teacher Resources
-  oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
-    AI, machine learning, training data, and bias, while exploring ethical issues.
-  oceans_landing_resource_button: View Resources
+  oceans_landing_title: AI para océanos
+  oceans_landing_description: 'Explora el aprendizaje automático enseñando "A.I."
+    para reconocer a los peces. #CSforGood'
+  oceans_landing_specs: Sólo en inglés | +11 años
+  oceans_landing_teacher_resources: Recursos para docentes
+  oceans_landing_teacher_resources_desc: Planes de lecciones y actividades para ayudarte
+    a enseñar AI, aprendizaje automático, fechas de entrenamientos y sesgos, mientras
+    exploras cuestiones éticas.
+  oceans_landing_resource_button: Ver recursos
   oceans_landing_cs_for_good: CS For Good
-  oceans_landing_cs_for_good_desc: Resources to help students understand the role
-    computer science could play in creating a more equitable world.
-  hoc_overview_oceans_tutorial_header: AI Oceans
-  hoc_overview_oceans_tutorial_desc: Teach "A.I." to sort between fish and trash while
-    exploring broader artificial intelligence concepts.
+  oceans_landing_cs_for_good_desc: Recursos para ayudar a los estudiantes a comprender
+    el papel que podrían desempeñar las ciencias de la computación en la creación
+    de un mundo más equitativo.
+  oceans_landing_learn_more: Learn more about AI and Machine Learning
+  social_hoc2019_oceans_title: 'AI for Oceans #CSForGood'
+  social_hoc2019_oceans_desc: Learn about AI, machine learning, training data, and
+    bias, while exploring ethical issues and how AI can be used to address world problems.
+    Computer science is about so much more than coding! Enjoy Code.org's first step
+    in a new journey to teach more about AI throughout our curriculum.
+  hoc_overview_oceans_tutorial_header: Océanos de AI
+  hoc_overview_oceans_tutorial_desc: Enseña "A.I." para clasificar entre peces y basura
+    mientras exploras conceptos más amplios de inteligencia artificial.
+  ai_video_title_what_is_ai: What is AI?
+  ai_video_title_phone_knows_dog: How does your phone know this is a dog?
+  ai_video_title_what_is_ml: What is Machine Learning?
+  ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small
+    and Prickly'
+  ai_video_title_ethics_of_ai: Ethics of AI
+  ai_video_title_ml_human_bias: Machine Learning and Human Bias
+  activity: Activity
+  name: Name
+  description: Description
+  audience: Audience
+  ai_resource_header: Teach and Learn about AI
+  ai_resource_ml_for_kids: Machine Learning for Kids
+  ai_resource_ml_for_kids_desc: Train a machine learning model with text, numbers,
+    or images, and use it to make games in Scratch.
+  ai_resource_ibm_ml_for_kids: 'IBM: Machine Learning for Kids'
+  ai_resouce_ibm_ml_for_kids_desc: Hands-on activities to introduce simple machine
+    learning models to students through games and interactive projects.
+  ai_resource_ecs: 'ECS: Artificial Intelligence (AI)'
+  ai_resource_ecs_desc: A new alternate curriculum unit for the Exploring Computer
+    Science (ECS) curriculum.
+  ai_resource_elements_ai: Elements of AI
+  ai_resource_elements_ai_desc: A series of free online courses created by Reaktor
+    and the University of Helsinki.
+  ai_resource_cognimates: Cognimates
+  ai_resource_cognimates_desc: An AI education platform for building games, programming
+    robots and training.
+  ai_audience_k12: K-12 (Reading required)
+  ai_audience_hs: High school
+  ai_activity_header: Activities Powered by AI and ML
+  ai_activity_teachable: Teachable Machine
+  ai_activity_teachable_desc: Train a computer to recognize your own images, sounds,
+    and poses.
+  ai_activity_quick_draw: Quick, Draw!
+  ai_activity_quick_draw_desc: Can a neural network learn to recognize doodling?
+  ai_activity_experiments: AI Experiments with Google
+  ai_activity_experiments_desc: Start exploring machine learning through pictures,
+    drawings, language, music, and more.
+  ai_activity_mixlab: MixLab
+  ai_activity_mixlab_desc: Make music using voice commands.
+  ai_activity_gaugan: GauGAN Beta
+  ai_activity_gaugan_desc: Paint photo-realistic landscapes with the help of AI.
   codeorg_homepage_hoc2018_curriculum: Avanza con los <a href="%{studio_url}/courses"
     class="hoc2018-curriculum-link">cursos de Code.org</a>
   codeorg_homepage_hoc2018_dance_heading: Crea tu propia <span class="highlight-word">Fiesta&nbsp;de
@@ -5367,9 +5417,10 @@ la:
     actividades incluye instrucciones simples compatibles con símbolos de la colección
     n2y® SymbolStix PRIME®. Los símbolos ayudan a los no lectores y a los lectores
     principiantes a comprender y seguir las instrucciones.
-  tutorial_dance2019_language: Árabe, chino, checo, danés, holandés, inglés, finlandés,
-    francés, alemán, griego, hindi, húngaro, indonesio, italiano, japonés, coreano,
-    malayo, polaco, portugués, ¡y 10 más!
+  tutorial_dance2019_language: Angličtina, arabština, čeština, čínština, dánština,
+    finština, francouzština, hindština, indonéština, italština, japonština, korejština,
+    malajština, maďarština, nizozemština, němčina, polština, portugalština, řečtina
+    a dalších 10 jazyků!
   tutorial_danceparty_language: Inglés, árabe, catalán, chino, checo, danés, holandés,
     finlandés, francés, alemán, griego, húngaro, italiano, japonés, coreano, noruego,
     polaco, portugués, ruso, español, sueco, tailandés, turco y vietnamita

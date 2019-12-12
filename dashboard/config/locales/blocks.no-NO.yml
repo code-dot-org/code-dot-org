@@ -441,6 +441,7 @@
           LAYOUT:
             '"border"': kantlinje
             '"inner"': indre kvadrat
+            '"diamond"': diamant
             '"circle"': sirkel
             '"grid"': rutenett
             '"row"': rad

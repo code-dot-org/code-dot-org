@@ -89,6 +89,7 @@ level 'U5 L09 Traversals Exit Ticket', progression: 'Check For Understanding', a
 
 stage 'Traversals Investigate', flex_category: 'csp_traversals'
 level 'CSP U5L10 SFLP 20-21', progression: 'Lesson Overview'
+level 'Full Year Pilot Experiments Dashboard', progression: 'Turn on Data Library'
 level 'U5 Traversals Investigate Mile Tracker Modify', progression: 'Mile Tracker Investigation'
 level 'CSP U5L10 Traversals Investigate', progression: 'Intro to Datasets'
 level 'U5 Traversals Investigate Dog Finder Modify', progression: 'Dog Finder Investigation'

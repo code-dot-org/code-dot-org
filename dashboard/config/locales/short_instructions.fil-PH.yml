@@ -248,8 +248,35 @@ fil-PH:
       Course 4 SCV 5: Lutasin ang palaisipang ito gamit ang pinakakaunting bilang
         ng mga bloke hangga't maaari.
       Course 4 SCV 6: Mag-click dito para matingnan ulit ang mga instruksyon.
-      Crack Random Substitution: Alituntunin
-      Crack a Caesar Cipher: Alituntunin
+      CourseD_Dance_Party_01: I-drag ang block na `gumawa ng bago` sa workspace, at
+        ikonekta sa `setup` block.
+      CourseD_Dance_Party_02: Paumpisahin ng bagong galaw ang moose matapos ang 4
+        na measure!
+      CourseD_Dance_Party_03: Ngayon paumpisahin ang dancer ng bagong galaw matapos
+        ang 6 na measure!
+      CourseD_Dance_Party_04: Magdagdag ng background effect sa iyong program.
+      CourseD_Dance_Party_05: Gumamit ng ibang block para ipabago sa dancer ang mga
+        galaw bawat 2 measure.
+      CourseD_Dance_Party_06: Lumikha ng isang backup dancer na tinatawag na `backup_dancer1`
+        para sumayaw kasama ng pusa.
+      CourseD_Dance_Party_08: Pwede mo bang gawing magkasinlaki ang dalawang backup
+        dancer?
+      CourseD_Dance_Party_09: Gamitin ang `set tint` block para baguhin ang kulay
+        ng isang dancer.
+      CourseD_Dance_Party_10: Patugunin ang ibang dancer sa musika gamit din ang `umpisahan
+        ang kasunod na` block.
+      CourseD_Dance_Party_11: Hinahayaan ka ng `kapag pinindot` na block na i-run
+        ang code kapag pinindot ang paitaas na arrow. Subukang gumawa ng mabilis na
+        galaw ang dancer kapag pinindot mo ang paitaas.
+      CourseD_Dance_Party_11_5: Gamitin ang mga block na "lahat ng pato" para pasayawin
+        nang sabay ang mga pato.
+      CourseD_Dance_Party_11b: '"Patumbahin" ang robot kapag pinindot mo ang kanang
+        arrow key, at "pumalakpak" kapag pinindot mo ang paitaas na arrow key nang
+        sinbilis nang makakaya mo!'
+      CourseD_Dance_Party_12: Mg-Groove! Lumikha ng iyong sariling sayaw na ibahagi
+        sa iyong mga kaibigan.
+      Crack Random Substitution: Mga Tagubilin
+      Crack a Caesar Cipher: Mga Tagubilin
       Dance_2019_01: Drag the `make a new` block into the workspace, and connect it
         inside the `setup` block.
       Dance_2019_02: Ang `when up pressed` block ay nagpapahintulot sa iyo na i-run
@@ -261,10 +288,39 @@ fil-PH:
         hindi mahuhulaan! '
       Dance_2019_04: Papag-umpisahin ang dancer ng bagong galaw matapos ang ikaapat
         na measure.
+      Dance_2019_05: Ngayon paumpisahin ang dancer ng bagong galaw matapos ang 6 na
+        measure!
       Dance_2019_06: Mag--set up ng isang pangkat ng mga backup dancer sa paligid
         ng nangungunang dancer sa gitna.
       Dance_2019_07: Palitan ang laki ng pangkat ng mga backup dancer.
       Dance_2019_09: Maging mapanlikha sa mga block na ito!
+      Dance_2019_10: Mg-Groove! Lumikha ng iyong sariling sayaw na ibahagi sa iyong
+        mga kaibigan.
+      Dance_Party_01: I-drag ang block na `gumawa ng bago` sa workspace, at ikonekta
+        sa `setup` block.
+      Dance_Party_02: Paumpisahin ng bagong galaw ang moose matapos ang 4 na measure!
+      Dance_Party_03: Ngayon paumpisahin ang dancer ng bagong galaw matapos ang 6
+        na measure!
+      Dance_Party_04: Magdagdag ng background effect sa iyong program.
+      Dance_Party_05: Gumamit ng ibang block para ipabago sa dancer ang mga galaw
+        bawat 2 measure.
+      Dance_Party_06: Lumikha ng isang backup dancer na tinatawag na `backup_dancer1`
+        para sumayaw kasama ng pusa.
+      Dance_Party_08: Pwede mo bang gawing magkasinlaki ang dalawang backup dancer?
+      Dance_Party_09: Gamitin ang `set tint` block para baguhin ang kulay ng isang
+        dancer.
+      Dance_Party_10: Patugunin ang ibang dancer sa musika gamit din ang `umpisahan
+        ang kasunod na` block.
+      Dance_Party_11: Hinahayaan ka ng `kapag pinindot` na block na i-run ang code
+        kapag pinindot ang paitaas na arrow. Subukang gumawa ng mabilis na galaw ang
+        dancer kapag pinindot mo ang paitaas.
+      Dance_Party_11_5: Gamitin ang mga block na "lahat ng pato" para pasayawin nang
+        sabay ang mga pato.
+      Dance_Party_11b: '"Patumbahin" ang robot kapag pinindot mo ang kanang arrow
+        key, at "pumalakpak" kapag pinindot mo ang paitaas na arrow key nang sinbilis
+        nang makakaya mo!'
+      Dance_Party_12: Mg-Groove! Lumikha ng iyong sariling sayaw na ibahagi sa iyong
+        mga kaibigan.
       Dance_Party_extras_battle: Dance Crews (I-click ang "Mas Marami Pa" para sa
         mga detalye)
       Dance_Party_extras_battle_2019: Dance Crews (I-click ang "Mas Marami Pa" para
@@ -3600,3 +3656,9 @@ fil-PH:
         lutasin ang mas kumplikado pa na maze? Kung magawa mo ito nang tama, maaari
         akong maglakad sa kahit anong balukot na daan kahit anuman ang haba. Bilisan!
         Ang yelo ay natutunaw na!
+      Dance_2019_08: Subukang palitan ang tint ng isa sa iyong mga dancer (o ang buong
+        pangkat)!
+      Dance_Party_extras_alternate_2019: Pabalik-balik! (I-click ang "karagdagang"
+        para sa mga detalye)
+      Dance_Party_extras_mixed_2019: Higit pang mga pindutan (I-click ang "higit pa"
+        para sa mga detalye)

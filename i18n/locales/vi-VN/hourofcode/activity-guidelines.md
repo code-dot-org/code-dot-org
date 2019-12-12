@@ -10,48 +10,48 @@ title: Activity Guidelines
 
 {{ signup_button }}
 
-# Lesson guidelines for the Hour of Code™ and Computer Science Education Week
+# Bài học hướng dẫn về "Giờ Lập Trình" và Tuần Giáo Dục Khoa học Máy tính
 
-Code.org hosts a variety of Hour of Code™ activities, lessons, and videos on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [hourofcode.com/learn]({{ urls/learn }}).
+Code.org là trang chủ nơi tập trung rất nhiều những hoạt động, bài học và video của Giờ Lập Trình trên (các) trang web Code.org, Hour of Code, và CSEdWeek. Bạn có thể vào xem tất cả hoạt động đang diễn ra ở [hourofcode.com/learn]({{ urls/learn }}).
 
-Want to submit your own self-guided game, teacher-led lesson, or activity that explains a computer science principle? Join this global movement and help participants around the world get started with an hour of code or go further with multi-lesson, day long, or week long activities.
+Bạn muốn gửi những trò chơi tự hướng dẫn của mình, bài học được giáo viên hướng dẫn, hay hoạt động giải thích nguyên tác cơ bản của khoa học máy tính? Hãy tham gia vào hoạt động toàn cầu này và giúp những người tham gia khắp thế giới bắt đầu với một giờ học mã hóa hay xa hơn nữa là những hoạt động với đa dạng bài học, kéo dài một ngày hay một tuần.
 
-**After reading the guidelines, you can submit your activity through our [Hour of Code™ Activity Submission page](http://bit.ly/29zt9ki). You can submit an activity at any time, but the deadline for inclusion in any given calendar year is October 1. (For example, any activities received after October 1, {{ campaign_date/year }} will not be listed for {{ campaign_date/year }}'s Hour of Code.)** If you have any questions about your activitiy submission, please reach out to us at support@code.org.
+** Sau khi đọc hướng dẫn, bạn có thể xem lại hoạt động của mình qua Hồ sơ hoạt động trên trang [Hour of Code ](http://bit.ly/29zt9ki). Ban có thể gửi một hoạt động bất cứ lúc nào, nhưng hãy nhớ hạn chót tổng kết trong bất cứ năm dương lịch nào là mùng 1 tháng 10. (Ví dụ, bất kỳ những hoạt động nào được nhận sau mùng 1 tháng 10, {{campaign_date/year}} sẽ không có trong danh sách {{ campaign_date/year}}'s Hour of Code.)** Nếu bạn còn bất kỳ câu hỏi nào về việc thưc hiện các hoạt động của mình, hãy liên lạc với chúng tôi ở support@code.org.
 
-A few tips:
+Một vài mẹo nhỏ:
 
-1. **Submit more than one activity**: If you’ve built activities for different levels, different ages, or other categories, we list your activities separately so each teacher can find the right thing for their classroom. So if you previously built a landing page and gave us a single URL to promote, don’t do that anymore. Submit each tutorial or activity individually. Given the number of submissions we have seen in recent years, we will have time to review up to 5 activities per partner. After that, we will make a best effort to review as many as possible before Hour of Code begins.
+1. ** Gửi đi nhiều hơn một hoạt động**: Nếu bạn đang xây dựng các hoạt động cho nhiều mức độ khác nhau, độ tuổi khác nhau, hoặc nhiều thể loại khác, chúng tôi sẽ tạo danh sách các hoạt động ấy thành từng phần riêng để mỗi giáo viên có thể tìm được thứ mình cần cho lớp học của họ. Do vậy nếu bạn đã xây dựng trước một trang đích và đã gửi cho chúng tôi môt liên kết mạng đơn để quảng cáo, đừng làm như vậy nữa. Gửi đi mỗi hướng dẫn hay hoạt động cá nhân. Gửi số lượng bài nộp chúng tôi đã xem vài năm gần đây, chúng tôi sẽ dành thời gian để xem lại 5 hoạt động của mỗi thành viên. Sau đó, chúng tôi sẽ cố gắng xem lại nhiều nhất có thể trước khi Hour of Code bắt đầu.
 
-2. **Beyond beginner lessons**: In addition to lessons for teachers and students who are learning computer science for the first time, we list learning experiences for computer science-savvy classrooms that want to go a little bit further! Help us by submitting lessons for classes that are already comfortable with the basics. These learners could be any age from 9 to 99.
+2. **Về những bài học cho người mới bắt đầu**: ngoài những bài giảng cho giáo viên và học sinh lần đầu học về khoa học máy tính, chúng tôi sẽ làm danh sách những trải nghiệm về việc học khoa học máy tính- lớp học mở rộng cho những ai muốn tìm hiểu nhiều hơn nữa! Hãy giúp chúng tôi bằng việc gửi những bài học cho các lớp học đã hiểu về những điều cơ bản. Những người tham gia học có thể là bất kỳ ai trong độ tuổi từ 9 đến 99.
 
-3. **Subject areas**: Have a great lesson idea that integrates Computer Science in Math? History? Language Arts? Science? Art? Or another subject? We’ve had numerous requests from teachers who want to connect the Hour of Code to their subject area (particularly with the upgraded ISTE standards for students including “innovative designer” and “computational thinker”). Teachers can filter for their classroom type (grade band or subject area) so we need your help filling in gaps to offer classroom activities or lesson plans that relate CS to every major subject area for different grade bands. We also continue to have a “Computer Science” category for teachers who are looking for generic CS activities.
+3. **Các môn học**: Bạn có ý tưởng giảng dạy nào về việc kết hợp Khoa học Máy tính vào môn Toán không? Lịch sử? Nghệ thuật ngôn ngữ? Khoa học? Mỹ thuật? Hay bất kỳ môn học nào khác? Chúng tôi nhận được nhiều yêu cầu từ giáo viên những người muốn kết nối Giờ học mã vào tiết giảng dạy của họ (đặc biệt với việc nâng cấp trình độ ISTE cho học sinh bao gồm "nhà thiết kế sáng tạo" và " những người biết tính toán"). Giáo viên có thể phân loại lớp học của họ theo nhiều cách( khối lớp hoặc môn học) vậy nên chúng tôi cần sự giúp đỡ của bạn để xây dựng các hoạt động hay lên kế hoạch giảng dạy liên quan đến CS cho lớp học mà phù hợp với mỗi môn học cho mỗi khối lớp riêng. Chúng tôi cũng tiếp tục thêm "Khoa học Máy tính" vao danh muc cho những giáo viên muốn tìm hiểu thêm về hoạt động CS chung.
 
 <a id="top"></a>
 
-## Index:
+## Mục lục:
 
-- [What to Submit](#whatsubmit)
-- [General guidelines for creating an Hour of Code™ activity](#guidelines)
-- [How to Submit](#submit)
-- [How activities will be evaluated](#inclusion)
-- [Suggestions for designing your activity](#design)
-- [Trademark Guidelines](#tm)
-- [Tracking Pixel](#pixel)
-- [Promoting your activity, CSEdWeek, and Hour of Code](#promote)
+- [Gửi cái gì](#whatsubmit)
+- [Hướng dẫn chung cho việc tạo một hoạt động Hour of Code](#guidelines)
+- [Gửi đi như thế nào](#submit)
+- [Các hoạt động sẽ được đánh giá như thế nào](#inclusion)
+- [Những đề xuất để thiết kế hoạt động của bạn](#design)
+- [Nguyên tắc nhãn hiệu](#tm)
+- [Theo dõi Pixel](#pixel)
+- [Thúc đẩy hoạt động của bạn, CSEdWeek, và Giờ học mật mã](#promote)
 
 <a id="whatsubmit"></a>
 
-## What to Submit
+## Gửi cái gì
 
-**Self-guided puzzle or game ([example](https://code.org/mc))**
+**Trò chơi hay câu đố tự hướng dẫn ([ví dụ](https://code.org/mc))**
 
-These activities are designed for students to self-direct through a tutorial. They don’t require much instruction from a teacher or teacher prep work.
+Những hoạt đông này được thiết kế để học sinh có thể tự làm theo hướng dẫn. Họ không yêu cầu nhiều hướng dẫn từ một giáo viên hay giáo án của giáo viên.
 
-**Teacher Facilitated lesson ([example](https://csedweek.org/csteacher/computerhistory.pdf), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
+**Giáo viên tạo điều kiện giảng dạy ([ví dụ](https://csedweek.org/csteacher/computerhistory.pdf),[bản mẫu](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
 
-Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative activities that teach the basics of computer science. To help more advanced teachers find inspiration, we collect and curate "teacher-led" lessons and activity plans for Hour of Code veterans.
+Hiện nay có hàng nghìn nhà giáo dục đang thử nghiệm với Giờ học mã, nhiều lớp học đã sẵn sàng cho các hoạt động sáng tạo dạy về khoa học máy tính cơ bản. Để giúp cho những giáo viên tiên tiến tìm thấy động lực, chúng tôi đã thu thập và chọn ra những bài giảng do giáo viên giảng dạy và những kế hoach hoạt động cho các cựu chiến binh của Giờ học mã.
 
-One type of activity that we will feature for experienced teachers are “open sandbox” creation projects. Activities that encourage students to build their own app, game, website or other project. If facilitated properly, more open-ended activities can better showcase the creative nature of computer science.
+Một thể loại hoạt động mà chúng tôi sẽ làm cho những giáo viên có kinh nghệm là dự án sáng tạo " mở hộp cát". Những hoạt động này khuyến khích các bạn học sinh tự xây dựng nên phần mềm, trò chơi, trang web hay những dự án khác của riêng mình. If facilitated properly, more open-ended activities can better showcase the creative nature of computer science.
 
 Some educators may also prefer to host Hour of Code activities that follow a traditional lesson format rather than a guided-puzzle/game experience.
 
@@ -169,7 +169,7 @@ What you’ll need:
 
 <a id="inclusion"></a>
 
-## How activities will be evaluated
+## Các hoạt động sẽ được đánh giá như thế nào
 
 A diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
 
@@ -231,7 +231,7 @@ You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resour
 
 <a id="tm"></a>
 
-## Trademark Guidelines
+## Nguyên tắc nhãn hiệu
 
 Many of our tutorial partners have used our trademark "Hour of Code" on their web sites. We don't want to prevent this usage, but we want to make sure usage falls within a few limits:
 
@@ -244,7 +244,7 @@ Many of our tutorial partners have used our trademark "Hour of Code" on their we
 
 <a id="pixel"></a>
 
-## Tracking Pixel
+## Theo dõi Pixel
 
 In order to more accurately track participation we ask every tutorial partner to include a 1-pixel tracking image on the first page of their Hour of Code tutorials. The pixel-image must be on the start page only. Do not include on any interim pages of your tutorial.
 

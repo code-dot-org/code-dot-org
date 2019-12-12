@@ -21,8 +21,8 @@ vi:
   social_hoc_is_coming: The Hour of Code is coming!
   social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
     computer science. Change the world.'
-  social_hoc2019_coming_dates: The Hour of Code is coming December 9-15, 2019. Computer
-    science is foundational for every student to learn.
+  social_hoc2019_coming_dates: Giờ Lập Trình sắp diễn ra từ ngày 9-15/12/2019. Khoa
+    học máy tính là kiến thức nền tảng mà mọi học sinh cần học hỏi.
   social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
     Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
   oceans_landing_title: AI for Oceans
@@ -36,9 +36,58 @@ vi:
   oceans_landing_cs_for_good: CS For Good
   oceans_landing_cs_for_good_desc: Resources to help students understand the role
     computer science could play in creating a more equitable world.
-  hoc_overview_oceans_tutorial_header: AI Oceans
-  hoc_overview_oceans_tutorial_desc: Teach "A.I." to sort between fish and trash while
-    exploring broader artificial intelligence concepts.
+  oceans_landing_learn_more: Learn more about AI and Machine Learning
+  social_hoc2019_oceans_title: 'AI for Oceans #CSForGood'
+  social_hoc2019_oceans_desc: Learn about AI, machine learning, training data, and
+    bias, while exploring ethical issues and how AI can be used to address world problems.
+    Computer science is about so much more than coding! Enjoy Code.org's first step
+    in a new journey to teach more about AI throughout our curriculum.
+  hoc_overview_oceans_tutorial_header: AI For Oceans
+  hoc_overview_oceans_tutorial_desc: Learn about AI, machine learning, training data,
+    and bias, while exploring ethical issues and how AI can be used to address world
+    problems.
+  ai_video_title_what_is_ai: What is AI?
+  ai_video_title_phone_knows_dog: How does your phone know this is a dog?
+  ai_video_title_what_is_ml: What is Machine Learning?
+  ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small
+    and Prickly'
+  ai_video_title_ethics_of_ai: Ethics of AI
+  ai_video_title_ml_human_bias: Machine Learning and Human Bias
+  activity: Activity
+  name: Name
+  description: Description
+  audience: Audience
+  ai_resource_header: Teach and Learn about AI
+  ai_resource_ml_for_kids: Machine Learning for Kids
+  ai_resource_ml_for_kids_desc: Train a machine learning model with text, numbers,
+    or images, and use it to make games in Scratch.
+  ai_resource_ibm_ml_for_kids: 'IBM: Machine Learning for Kids'
+  ai_resouce_ibm_ml_for_kids_desc: Hands-on activities to introduce simple machine
+    learning models to students through games and interactive projects.
+  ai_resource_ecs: 'ECS: Artificial Intelligence (AI)'
+  ai_resource_ecs_desc: A new alternate curriculum unit for the Exploring Computer
+    Science (ECS) curriculum.
+  ai_resource_elements_ai: Elements of AI
+  ai_resource_elements_ai_desc: A series of free online courses created by Reaktor
+    and the University of Helsinki.
+  ai_resource_cognimates: Cognimates
+  ai_resource_cognimates_desc: An AI education platform for building games, programming
+    robots and training.
+  ai_audience_k12: K-12 (Reading required)
+  ai_audience_hs: High school
+  ai_activity_header: Activities Powered by AI and ML
+  ai_activity_teachable: Teachable Machine
+  ai_activity_teachable_desc: Train a computer to recognize your own images, sounds,
+    and poses.
+  ai_activity_quick_draw: Quick, Draw!
+  ai_activity_quick_draw_desc: Can a neural network learn to recognize doodling?
+  ai_activity_experiments: AI Experiments with Google
+  ai_activity_experiments_desc: Start exploring machine learning through pictures,
+    drawings, language, music, and more.
+  ai_activity_mixlab: MixLab
+  ai_activity_mixlab_desc: Make music using voice commands.
+  ai_activity_gaugan: GauGAN Beta
+  ai_activity_gaugan_desc: Paint photo-realistic landscapes with the help of AI.
   codeorg_homepage_hoc2018_curriculum: Tiến xa hơn với <a href="%{studio_url}/courses"
     class="hoc2018-curriculum-link">các khóa học tại Code.org</a>
   codeorg_homepage_hoc2018_dance_heading: Tạo buổi <span class="highlight-word"> Khiêu
@@ -59,7 +108,8 @@ vi:
   hourofcode_homepage_hoc2018_header_line2: Từ 4 đến 104 tuổi.
   hoc2018_tutorial_mchoc_description: Minecraft is back for the Hour of Code with
     a brand new activity! Journey through Minecraft with code.
-  codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>
+  codeorg_homepage_hoc2019_dance_heading: Hãy thử khám phá <span class="highlight-word">Bữa
+    Tiệc&nbsp;Khiêu Vũ!</span> mới
   cookie_banner_message: Để tiếp tục xem trên trang của chúng tôi hoặc nhấn "Tôi đồng
     ý", bạn đã chấp nhận để chúng tôi lưu trữ cookie trên máy tính của bạn hay các
     thiết bị khác.
@@ -312,9 +362,10 @@ vi:
     Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try
     an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan
     an event for your class.
-  signup_registration_closed: And every year in December, your class can join millions
-    of students around the world celebrating Computer Science Education Week with
-    the Hour of Code. We'll open registration for the annual celebration in October.
+  signup_registration_closed: Và mỗi năm vào tháng 12, lớp của bạn có thể tham gia
+    cùng hàng triệu học sinh trên toàn thế giới kỷ niệm Tuần lễ Giáo dục về Khoa học
+    Máy tính với Giờ Lập Trình. Chúng tôi sẽ mở đợt đăng ký tham gia lễ kỷ niệm hàng
+    năm vào Tháng 10.
   signup_header: Tổ chức một sự kiện Hour of Code vào %{campaign_date}, và đăng ký
     nó ở đây.
   signup_name_label: Tên của bạn
@@ -716,7 +767,7 @@ vi:
   learn_robotics_banner_blurb: Got robots or physical computing kits? Use them with
     the activities below and make a tangible Hour of Code for students of any age!
     Some activities even offer a simulator so you can get started without any hardware.
-  tutorial_dance2019_name: Dance Party 2019
+  tutorial_dance2019_name: Bữa Tiệc Khiêu Vũ 2019
   tutorial_danceparty_name: Dance Party
   tutorial_chibitronics_name: 'Chibitronics: Illuminated Story'
   tutorial_athlete_name: Code your own sports game
@@ -2480,9 +2531,7 @@ vi:
   tutorial_allcancodeapps_shortdescription: Use the Allcancode Platform to create
     web and mobile apps from design to delivery.
   tutorial_n2y_shortdescription: Help Bitt Bott explore Earth using direction arrows.
-  tutorial_dance2019_longdescription: Code a Dance Party to share with your friends.
-    Featuring Katy Perry, Shawn Mendes, Lil Nas X, Panic! At The Disco, Jonas Brothers,
-    and many more!
+  tutorial_dance2019_longdescription: Code một Bữa Tiệc Khiêu Vũ để chia sẻ với bạn bè của bạn. Với sự góp mặt của Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, và 34 nghệ sĩ khác!
   tutorial_danceparty_longdescription: Code a Dance Party to share with your friends.
     Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!
   tutorial_chibitronics_longdescription: Program a paper circuit to light up your
@@ -4934,9 +4983,9 @@ vi:
     Each of the six activities includes simple directions that are supported with
     symbols from the n2y® SymbolStix PRIME® collection. The symbols help non-readers
     and beginning readers understand and follow the directions.
-  tutorial_dance2019_language: Arabic, Chinese, Czech, Danish, Dutch, English, Finnish,
-    French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean,
-    Malay, Polish, Portuguese, and 10 more!
+  tutorial_dance2019_language: Tiếng Ả Rập, Trung Quốc, Séc, Đan Mạch, Hà Lan, Anh,
+    Phần Lan, Pháp, Đức, Hy Lạp, Hindi, Hungary, Indonesia, Ý, Nhật Bản, Hàn Quốc,
+    Malay, Ba Lan, Bồ Đào Nha, và 10 ngôn ngữ khác!
   tutorial_danceparty_language: English, Arabic, Catalan, Chinese, Czech, Danish,
     Dutch, Finnish, French, German, Greek, Hungarian, Italian, Japanese, Korean, Norwegian,
     Polish, Portuguese, Russian, Spanish, Swedish, Thai, Turkish, and Vietnamese

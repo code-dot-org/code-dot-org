@@ -168,7 +168,7 @@ sv-SE:
       Dance_Party_02: |-
         Låt oss få denna älg att dansa!
 
-        Dra ut <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> blocket till arbetsytan. Koppla samman det undertill med <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> blocket. Din dansare bör starta en ny rörelse efter den fjärde åtgärden.
+        Dra ut <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> blocket till arbetsytan. Koppla samman det undertill med <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> blocket. Din dansare bör starta en ny rörelse efter den fjärde åtgärden.
 
         **Åtgärder** används för att mäta tid i musik. I denna handledning är en åtgärd fyra takter lång.
       Dance_Party_03: |-
@@ -214,11 +214,11 @@ sv-SE:
         Kolla in detta block:
 
         <xml>
-        <block type="Dancelab_makeNewDanceSpriteGroup">
-        <title name="N">6</title>
-        <title name="COSTUME">"DUCK"</title>
-        <title name="LAYOUT">"circle"</title>
-        </block></xml>
+          <block type="Dancelab_makeNewDanceSpriteGroup">
+            <title name="N">6</title>
+            <title name="COSTUME">"DUCK"</title>
+            <title name="LAYOUT">"circle"</title>
+          </block></xml>
 
         Nu kan du skapa ett gäng dansare på samma gång!
 
@@ -227,11 +227,14 @@ sv-SE:
         vänsterpilen. Gör så att roboten ”faller” när du trycker på högerpilen.
       Dance_Party_12: Dags att svänga på höfterna! Skapa en egen dans att dela med
         dina vänner.
-      Dance_Party_extras_alternate_2019: "# Det är dags för uppställning!Kolla in
-        den här dansen som använder [blockly block][0]-blocket för att förändra bakgrundsdansarnas
-        formation under dansen. Prova en av de här idéerna för att utveckla den:-
-        \  Skapa en andra grupp dansare i en annan gruppering-   Ändra gruppering
-        med en knapptryckning-   Ändra en egenskap när dansarna ändrar formation"
+      Dance_Party_extras_alternate_2019: '# Det är dags för uppställning!Kolla in
+        den här dansen som använder <xml><block type="Dancelab_alternateMoves"><title
+        name="GROUP">sprites</title><title name="N">2</title><title name="MOVE1">MOVES.Roll</title><title
+        name="MOVE2">MOVES.ClapHigh</title></block></xml>-blocket för att förändra
+        bakgrundsdansarnas formation under dansen. Prova en av de här idéerna för
+        att utveckla den:-   Skapa en andra grupp dansare i en annan gruppering-   Ändra
+        gruppering med en knapptryckning-   Ändra en egenskap när dansarna ändrar
+        formation'
       Dance_Party_extras_battle: |-
         # Dansgrupper
 
@@ -258,11 +261,15 @@ sv-SE:
         -   Experimentera med andra notlängder (som 0,5 för en halvnot eller 0,125 för en åttondelsnot).
         -   Lägg till några händelser med ”efteråtgärder”.
         -   Byt ”åtgärder” mot ”sekunder” och försök att på så sätt tajma dina danser.
-      Dance_Party_extras_every_beat_2019: "# Öka takten, sakta nerI den här sista
-        dansen använder vi [blockly block][0]-blocket för att kontrollera hur snabbt
-        varje dansare rör sig. Experimentera med olika hastigheter vid olika tillfällen
-        i sången. Knåpa gärna vidare på den här dansen eller gå tillbaka till någon
-        av de tidigare danserna och gör dom ännu coolare."
+      Dance_Party_extras_every_beat_2019: |-
+        # FjärdedelsnoterI
+
+        de flesta av våra danser har vi använt hela takter, men varje takt består av fyra fjärdedelsnoter. Den här dansen använder [blockly block][0] så att dansarna klappar på varje fjärdedelsnot efter den femte takten.
+
+        Prova att ändra siffrorna i blocket för att se hur det påverkar dansen.
+
+        -   Experimentera med andra notlängder (som 0,5 för en halvnot eller 0,125 för en åttondelsnot).
+        -   Lägg till några ytterligare händelser.
       Dance_Party_extras_layout: |-
         # Uppställning!
 
@@ -283,11 +290,12 @@ sv-SE:
         # Öka takten, sakta ner
 
         Denna sista dans använder blocket ”ange hastighet” för att styra hur snabbt varje dansare rör sig. Testa att experimentera med olika hastigheter under olika tidpunkter i låten. Fortsätt gärna mixtra med denna dans eller återgå till någon av de tidigare danserna för att göra dem ännu coolare.
-      Dance_Party_extras_speed_2019: "# Öka takten, sakta nerI den här sista dansen
-        använder vi [blockly block][0]-blocket för att kontrollera hur snabbt varje
-        dansare rör sig. Experimentera med olika hastigheter vid olika tillfällen
+      Dance_Party_extras_speed_2019: '# Öka takten, sakta nerI den här sista dansen
+        använder vi <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title
+        name="SPEED">2</title></block></xml>-blocket för att kontrollera hur snabbt
+        varje dansare rör sig. Experimentera med olika hastigheter vid olika tillfällen
         i sången. Knåpa gärna vidare på den här dansen eller gå tillbaka till någon
-        av de tidigare danserna och gör dom ännu coolare."
+        av de tidigare danserna och gör dom ännu coolare.'
       Dance_Party_extras_visible: |-
         # Vart tog de vägen?
 
@@ -480,3 +488,25 @@ sv-SE:
       frozen square snowflake: Kan du skapa en snöflinga med "Upprepa"-blocket för
         att göra en fyrkant 10 gånger, och "Vända"-blocket för att vända 36 grader
         mellan varje fyrkant?
+      Dance_2019_07: "Varje dansare har en uppsättning _properties_ som kontrollerar
+        hur det ser ut. \n\nAnvänd <xml><block type=\"Dancelab_setPropEach\" block-text=\"the
+        set block\"><title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;,
+        &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;,
+        &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title><title name=\"PROPERTY\">\"scale\"</title><title
+        name=\"VAL\">???</title></block></xml> under ett grönt eventblock för att
+        få dansarna att verka vara närmare eller längre bort."
+      Dance_Party_extras_layout_2019: |-
+        # Låt oss komma igång!
+
+        Kolla in denna dans som använder <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> blocket för att ändra reservdansersformation under hela dansen. Prova en av dessa idéer för att utöka den:
+
+        -   Skapa en andra grupp av dansare i en annan layout
+        -   Ändra layout när en tangent trycks ned
+        -   Ändra en egenskap när dansarna ändrar formation
+      Dance_Party_extras_mixed_2019: |-
+        # More Knappar
+
+        Denna dans låter dig styra dansarnas egenskaper i realtid medan de dansar automatiskt. Försök att göra andra egenskaper ändrade när du trycker på knapparna. Till exempel:
+
+        -   Slumpmässigt tonaren från dansaren när du trycker på "ner".
+        -   Lägg till en grupp dansare med slumpmässig layout när du trycker på "mellanslag".

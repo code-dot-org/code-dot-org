@@ -1589,7 +1589,7 @@ tr-TR:
       CSD U2 new page: "# Web siteniz için yeni bir sayfa oluşturun.\\\r\n\n\\\r\nİşte
         önceki projen.  Yeni bir sayfa daha ekliyor olacaksın. Yeni sayfan listenin
         en iyi 10'u, yemek tarifi veya hoşlandığın herhangi bir şey olabilir.\\\r\n\\\r\n\n#
-        Bunu Yap\\\r\n\n\\*\nBağlantıya tıklayarak yeni bir HTML dosya ekle \n![](<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38\nPM.png>).
+        Bunu Yap\\\r\n\n\\*\nBağlantıya tıklayarak yeni bir HTML dosya ekle \n\\!\\[](\\<<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38>\nPM.png>).
         Yeni sayfa çalışma alanının solunda dosyaların listesinin içinde gözükecek.
         .\\\r\n\n-   Dosyayı yeniden adlandır, sağ tıklayarak ve Yeniden Adlandır'
         ı seçerek veya seçili iken üzerine tıklayarak.   **İsmin diğerlerinden farklı
@@ -5066,11 +5066,11 @@ tr-TR:
         Bu bloğa bir bakın:
 
         <xml>
-        <block type="Dancelab_makeNewDanceSpriteGroup">
-        <title name="N">6</title>
-        <title name="COSTUME">"DUCK"</title>
-        <title name="LAYOUT">"circle"</title>
-        </block></xml>
+          <block type="Dancelab_makeNewDanceSpriteGroup">
+            <title name="N">6</title>
+            <title name="COSTUME">"DUCK"</title>
+            <title name="LAYOUT">"circle"</title>
+          </block></xml>
 
         Artık tek seferde birden çok dansçı yaratabilirsiniz!
 
@@ -5078,11 +5078,13 @@ tr-TR:
       Dance_Party_11b: Şimdi dans zamanı! Sol ok tuşuna bastığınızda Kedi dab dansı
         yapar. Sağ ok tuşuna bastığınızda Robota "drop" figürü yaptırırsınız.
       Dance_Party_12: Havaya girin! Kendi dansınızı yaratın ve arkadaşlarınızla paylaşın.
-      Dance_Party_extras_alternate_2019: "# Formasyona girelim! Yedek dansçıların
-        dans boyunca formasyonunu değiştirmek için [blockly block][0] bloğunu kullanan
-        bu dansı izleyin. Genişletmek için bu fikirlerden birini deneyin: - Farklı
-        bir düzende ikinci bir dansçı grubu oluşturun - Bir tuşa basıldığında düzeni
-        değiştirin - Dansçılar formasyon değiştirdiğinde özelliği değiştirin"
+      Dance_Party_extras_alternate_2019: '# Formasyona girelim! Yedek dansçıların
+        dans boyunca formasyonunu değiştirmek için <xml><block type="Dancelab_alternateMoves"><title
+        name="GROUP">sprites</title><title name="N">2</title><title name="MOVE1">MOVES.Roll</title><title
+        name="MOVE2">MOVES.ClapHigh</title></block></xml> bloğunu kullanan bu dansı
+        izleyin. Genişletmek için bu fikirlerden birini deneyin: - Farklı bir düzende
+        ikinci bir dansçı grubu oluşturun - Bir tuşa basıldığında düzeni değiştirin
+        - Dansçılar formasyon değiştirdiğinde özelliği değiştirin'
       Dance_Party_extras_battle: |-
         # Dans Ekipleri
 
@@ -5109,13 +5111,17 @@ tr-TR:
         -   Diğer nota uzunluklarıyla denemeler yapın (örneğin yarım nota için 0,5 veya 1/8’lik nota için 0,125 değeri girin).
         -   Birkaç `ölçüden sonra` etkinliği ekleyin.
         -   "Ölçüler" değerini "saniyeler" ile değiştirerek danslarınızı böyle zamanlamayı deneyin.
-      Dance_Party_extras_every_beat_2019: "# Hızlandırın, Yavaşlatın Bu final dansı,
-        her dansçının ne kadar hızlı hareket ettiğini kontrol etmek için [blockly
-        block][0] bloğunu kullanır. Şarkının farklı noktaları sırasında farklı hızlarla
-        deneme yapmayı deneyin. Bu dansı takip etmeye devam etmekten çekinmeyin ya
-        da daha güzel olmaları için önceki danslardan birine geri dönün."
+      Dance_Party_extras_every_beat_2019: |-
+        # Çeyrek Notlar 
+
+        Danslarımızın çoğu tüm ölçüleri kullanmıştır, ancak her ölçüt 4 çeyrek notundan oluşmaktadır. Bu dans, 4. ölçütten sonra her çeyrek notunda dansçının alkışlaması için [blockly block][0] kullanır. 
+
+        Dansı nasıl değiştirdiğini görmek için bloktaki sayıları değiştirmeyi deneyin. 
+
+        -  Diğer not süreleri ile deneme (yarım not için 0,5 veya sekizinci not için 0,125 gibi). 
+        -  Başka etkinlikler de ekleyin.
       Dance_Party_extras_layout: |-
-        # Şimdi Giriş Düzeni!
+        # Hadi Düzene Girelim!
 
         Dans boyunca arka plan dansçılarının dizilimini değiştirmek için `düzen` bloğunu kullanan bu dansa göz atın. Geliştirmek için şu fikirlerden birini deneyin:
 
@@ -5134,11 +5140,12 @@ tr-TR:
         # Hızlandır, Yavaşlat
 
         Bu son dans dansçıların hızını belirlemek için `hız ayarla` bloğunu kullanır. Şarkının farklı yerlerinde farklı hızlarla denemeler yapın. Bu dansta özgürce denemeler yapın veya daha önceki danslara dönerek onları daha da güzelleştirin.
-      Dance_Party_extras_speed_2019: "# Hızlandırın, Yavaşlatın Bu final dansı, her
-        dansçının ne kadar hızlı hareket ettiğini kontrol etmek için [blockly block][0]
-        bloğunu kullanır. Şarkının farklı noktaları sırasında farklı hızlarla deneme
-        yapmayı deneyin. Bu dansı takip etmeye devam etmekten çekinmeyin ya da daha
-        güzel olmaları için önceki danslardan birine geri dönün."
+      Dance_Party_extras_speed_2019: '# Hızlandırın, Yavaşlatın Bu final dansı, her
+        dansçının ne kadar hızlı hareket ettiğini kontrol etmek için <xml><block type="Dancelab_setDanceSpeedEach"><title
+        name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> bloğunu
+        kullanır. Şarkının farklı noktaları sırasında farklı hızlarla deneme yapmayı
+        deneyin. Bu dansı takip etmeye devam etmekten çekinmeyin ya da daha güzel
+        olmaları için önceki danslardan birine geri dönün.'
       Dance_Party_extras_visible: |-
         # Nereye gittiler?
 
@@ -7532,3 +7539,18 @@ tr-TR:
       ramp_artist_loops9: Bu bulmacayı 200 piksel kenarlı bir kare çizerek çözün.
       ramp_artist_loops9_2018: Bu bulmacayı 200 piksel kenarlı bir kare çizerek çözün.
       ramp_artist_loops9_2019: Bu bulmacayı 200 piksel kenarlı bir kare çizerek çözün.
+      Dance_Party_extras_layout_2019: |-
+        # Formasyona girelim!
+
+        dans boyunca yedek dansçıların oluşumunu değiştirmek için <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> bloğunu kullanan bu dansı kontrol edin. Uzatmak için bu fikirlerden birini deneyin:
+
+        -   Farklı bir düzende dansçı ikinci bir grup oluşturun
+        -   Bir tuşa basıldığında düzeni değiştirin
+        -   Dansçılar oluşumunu değiştirdiğinde bir özelliği değiştirin
+      Dance_Party_extras_mixed_2019: |-
+        # Daha Düğmeler
+
+        Bu dans, dansçıların özelliklerini otomatik olarak dans ederken gerçek zamanlı olarak kontrol etmenizi sağlar. Düğmelere bastığınızda diğer özellikleri değiştirmeyi deneyin. Örneğin:
+
+        -   “Aşağı” tuşuna bastığınızda dansçının tonunu rasgele hale getirin.
+        -   “boşluk” tuşuna bastığınızda rastgele bir düzene sahip bir grup dansçı ekleyin.

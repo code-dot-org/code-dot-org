@@ -104,7 +104,7 @@ class Homepage
     ]
   end
 
-  def self.get_actions
+  def self.get_actions(request)
     # Show a Latin American specific video to users browsing in Spanish or
     # Portuguese to promote LATAM HOC.
     latam_language_codes = [:"es-MX", :"es-ES", :"pt-BR", :"pt-PT"]
@@ -335,8 +335,8 @@ class Homepage
     end
   end
 
-  def self.get_video
-    video = get_actions.find {|a| a[:type] == "video"}
+  def self.get_video(request)
+    video = get_actions(request).find {|a| a[:type] == "video"}
 
     if video
       {
@@ -350,8 +350,9 @@ class Homepage
     end
   end
 
-  def self.show_single_hero
-    "dance2019"
+  def self.show_single_hero(request)
+    launch_ai = DCDO.get('launch_ai', nil)
+    (launch_ai && request.language == "en") ? "oceans2019" : "dance2019"
   end
 
   def self.get_heroes_arranged(request)
@@ -361,17 +362,20 @@ class Homepage
       {text: "homepage_hero_text_stat_students", classname: "desktop-feature", centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2019_dance.jpg"},
       {text: "homepage_hero_text_stat_students", classname: "mobile-feature", centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2019_dance_narrow.jpg"}
     ]
+    hero_oceans2019 = [{text: "homepage_hero_text_stat_students", centering: "0% 70%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2019_oceans.png"}]
 
     # Generate a random set of hero images alternating between non-celeb and celeb.
     heroes = get_heroes
     hero_display_time = 13 * 1000
 
-    if show_single_hero == "hoc2019"
+    if show_single_hero(request) == "hoc2019"
       heroes_arranged = hero_hoc2019
-    elsif show_single_hero == "create"
+    elsif show_single_hero(request) == "create"
       heroes_arranged = hero_create
-    elsif show_single_hero == "dance2019"
+    elsif show_single_hero(request) == "dance2019"
       heroes_arranged = hero_dance2019
+    elsif show_single_hero(request) == "oceans2019"
+      heroes_arranged = hero_oceans2019
     else
       # The order alternates person & stat.  Person alternates non-celeb and
       # celeb.  Non-celeb is student or teacher. We open with a celeb, i.e.,
@@ -432,7 +436,7 @@ class Homepage
   def self.get_dance_stars
     stars = [
       "Katy Perry", "Lil Nas X (ft. Billy Ray Cyrus)", "Jonas Brothers", "Panic! At The Disco",
-      "Shawn Mendes", "Nicki Minaj", "Pedro Capó", "Francesco Gabbani", "Sia",
+      "Shawn Mendes", "Nicki Minaj", "KIDZ BOP", "Pedro Capó", "Francesco Gabbani", "Sia",
       "A-ha", "Ariana Grande", "Avicii and Aloe Blacc", "Calvin Harris",
       "Carly Rae Jepsen", "Ciara", "Coldplay", "Ed Sheeran", "Imagine Dragons",
       "J Balvin and Willy William", "Justin Bieber", "Keith Urban", "Lady Gaga",

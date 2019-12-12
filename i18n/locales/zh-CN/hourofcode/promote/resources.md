@@ -138,7 +138,7 @@ Computers are everywhere, changing every industry on the planet, but only 45% of
 
 因为《编程一小时》，计算机科学已经登上谷歌，MSN，雅虎和迪斯尼的主页。 超过100位合作伙伴共同支持这项活动。 世界上每个苹果专卖店都有举办过《编程一小时》。 甚至连奥巴马总统也曾在竞选活动中写下了自己的第一行编码。
 
-That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 3-9).
+这就是 [学校名称] 有 [X 人数] 名学生都参加史上最大规模的学习活动的原因：计算机科学教育周（12 月 3 日至 9 日）中的编程一小时。
 
 我诚邀您参加我们的开幕式，来看看孩子们如何在[日期] 开始他们的编程之旅。
 

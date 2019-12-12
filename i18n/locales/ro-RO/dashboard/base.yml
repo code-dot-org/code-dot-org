@@ -324,7 +324,7 @@ ro:
       stats: 'Studio-ul Code'
       settings: 'Contul meu'
       logout: 'Deloghează-te'
-      signin: 'Loghează-te'
+      signin: 'Autentificare'
       signup: 'Creează un cont'
       already_registered: 'Eşti deja înregistrat?'
       pair_programming: 'Programare prin împerechere'
@@ -720,7 +720,7 @@ ro:
     ok: "OK"
     startover_title: "Ești sigur că vrei să începi din nou?"
     startover_body: "Acest lucru va reseta puzzle-ul la starea sa inițială şi va şterge tot ce ai adăugat sau modificat."
-    startover_ok: "Reîncepe"
+    startover_ok: "Începe din nou"
     startover_cancel: "Revocare"
   time:
     hour: '1 oră'

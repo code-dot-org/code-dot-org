@@ -810,6 +810,8 @@ tr-TR:
       Dance_2019_05: Şimdi dansçıyı 6 ölçü sonra yeni bir harekete başlatın!
       Dance_2019_06: Ortada baş dansçının çevresine bir grup yedek dansçı ayarlayın.
       Dance_2019_07: Yedek dansçı grubunun boyutunu değiştirin.
+      Dance_2019_08: Dansçılarınızdan birinin (veya tüm grubun) renk tonunu değiştirmeyi
+        deneyin!
       Dance_2019_09: Bu yeni bloklarla yaratıcı olun!
       Dance_2019_10: Havaya girin! Kendi dansınızı yaratın ve arkadaşlarınızla paylaşın.
       Dance_Party_01: "`Yeni yap` bloğunu çalışma alanına sürükleyin ve `kurulum`
@@ -3002,3 +3004,6 @@ tr-TR:
       scrat 20: Sadece 3 blok ekleyerek daha karmaşık bir labirenti çözmeme yardım
         eder misin? Eğer doğru yaparsan, ne kadar uzun olursa olsun dolambaçlı yollardan
         yürüyebilirim. Çabuk! Buz eriyor!
+      Dance_Party_extras_alternate_2019: Geri ve Forth! (Ayrıntılar için “Daha Fazla”
+        seçeneğine tıklayın)
+      Dance_Party_extras_mixed_2019: Daha Düğmeler (Ayrıntılar için “Daha Fazla” tıklayın)

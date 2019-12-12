@@ -228,10 +228,6 @@ export class SpecialAnnouncementActionBlock extends Component {
         description={i18n.specialAnnouncementDescriptionHoc2019DanceParty()}
         buttons={[
           {
-            url: 'https://hourofcode.com/#join',
-            text: i18n.joinUs()
-          },
-          {
             url: pegasus('/hourofcode/overview'),
             text: i18n.tryIt()
           }

@@ -743,6 +743,13 @@ zh-TW:
           **可選挑戰**
 
           在 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> 事件之下，連接新的程式積木，以在歌曲期間的不同時間點變更背景效果。
+      Dance_Party_05:
+        validation: |-
+          **如何通過這一關？**
+
+          -   您的舞蹈演員需要在關卡結束之前至少迴圈 4 種不同的舞蹈動作。
+
+          _此關在 12 個小節後結束。_
       Dance_Party_06:
         validation: |-
           **我要怎麼通過這個關卡？**
@@ -3135,3 +3142,5 @@ zh-TW:
       grade5_artist_variables_triangles1_2019:
         grade5_artist_variables_triangles1_a: 要讓三角形的每個角保持為 60 度，需要將藝術家轉 120 度。
         grade5_artist_variables_triangles1_b: 使用`重複`迴圈來把程式縮短。
+      Dance_Party_extras_alternate_2019:
+        alternate: 備用塊在“ Dancers”類別中。
