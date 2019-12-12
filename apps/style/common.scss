@@ -291,11 +291,6 @@ button.arrow:disabled {
   z-index: 1;
 }
 
-/* Set z-index to 2 so this appears over the codeTextbox */
-.debug-watch-autocomplete-dropdown {
-  z-index: 2;
-}
-
 #codeTextbox.pin_bottom {
   border: 1px solid #ddd;
 }
