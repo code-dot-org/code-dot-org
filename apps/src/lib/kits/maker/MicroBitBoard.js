@@ -1,4 +1,5 @@
 /** @file Board controller for BBC micro:bit */
+/* global SerialPort */ // Maybe provided by the Code.org Browser
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 import MBFirmataClient from '../../../third-party/maker/MBFirmataClient';
 import {
@@ -18,7 +19,7 @@ process.hrtime = require('browser-process-hrtime');
  * @implements MakerBoard
  */
 export default class MicroBitBoard extends EventEmitter {
-  constructor(port) {
+  constructor() {
     super();
 
     /** @private {Object} Map of component controllers */
@@ -28,7 +29,7 @@ export default class MicroBitBoard extends EventEmitter {
     this.dynamicComponents_ = [];
 
     /** @private {MicrobitFirmataClient} serial port controller */
-    this.boardClient_ = new MBFirmataClient(port);
+    this.boardClient_ = new MBFirmataClient(SerialPort);
   }
 
   /**
