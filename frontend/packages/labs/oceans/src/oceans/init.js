@@ -5,8 +5,8 @@ import UI from './ui';
 import constants, {Modes} from './constants';
 import {setInitialState, setSetStateCallback} from './state';
 import {render as renderCanvas} from './renderer';
-import * as modeHelpers from './modeHelpers';
-import * as soundLibrary from './models/soundLibrary';
+import modeHelpers from './modeHelpers';
+import soundLibrary from './models/soundLibrary';
 
 //
 // Required in options:

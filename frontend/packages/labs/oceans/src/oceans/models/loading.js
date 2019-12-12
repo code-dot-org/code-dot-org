@@ -4,7 +4,7 @@ import {getState, setState} from '../state';
 import {AppMode, Modes} from '../constants';
 import {initFishData} from '../../utils/fishData';
 import {getAppMode, $time, finishLoading} from '../helpers';
-import * as modeHelpers from '../modeHelpers';
+import modeHelpers from '../modeHelpers';
 import SimpleTrainer from '../../utils/SimpleTrainer';
 
 export const init = async () => {
