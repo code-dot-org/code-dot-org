@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import memoize from 'memoize-one';
 import {DebounceInput} from 'react-debounce-input';
 import _ from 'lodash';
+import msg from '@cdo/locale';
 import color from '../../../util/color';
 import * as dataStyles from '../dataStyles';
 import * as rowStyle from '@cdo/apps/applab/designElements/rowStyle';
@@ -129,7 +130,7 @@ class VisualizerModal extends React.Component {
           style={dataStyles.whiteButton}
           onClick={this.handleOpen}
         >
-          Show Viz (Placeholder)
+          {msg.visualizeData()}
         </button>
         <BaseDialog
           isOpen={this.state.isVisualizerOpen}
@@ -138,11 +139,13 @@ class VisualizerModal extends React.Component {
           fullHeight
         >
           <div style={styles.modalBody}>
-            <h2> Explore {this.props.tableName} </h2>
+            <h2> {msg.exploreDataset({datasetName: this.props.tableName})} </h2>
 
             <div>
               <div style={styles.input}>
-                <label style={rowStyle.description}>Chart Title</label>
+                <label style={rowStyle.description}>
+                  {msg.dataVisualizerChartTitle()}
+                </label>
                 <DebounceInput
                   style={rowStyle.input}
                   minLength={1}
@@ -156,7 +159,7 @@ class VisualizerModal extends React.Component {
             </div>
 
             <DropdownField
-              displayName="Chart Type"
+              displayName={msg.dataVisualizerChartType()}
               options={['Bar Chart', 'Histogram', 'Scatter Plot', 'Cross Tab']}
               value={this.state.chartType}
               onChange={event => this.setState({chartType: event.target.value})}
@@ -176,7 +179,11 @@ class VisualizerModal extends React.Component {
             )}
 
             <DropdownField
-              displayName={isMultiColumnChart ? 'X Values' : 'Values'}
+              displayName={
+                isMultiColumnChart
+                  ? msg.dataVisualizerXValues()
+                  : msg.dataVisualizerValues()
+              }
               options={this.props.tableColumns}
               disabledOptions={disabledOptions}
               value={this.state.selectedColumn1}
@@ -187,7 +194,7 @@ class VisualizerModal extends React.Component {
 
             {isMultiColumnChart && (
               <DropdownField
-                displayName="Y Values"
+                displayName={msg.dataVisualizerYValues()}
                 options={this.props.tableColumns}
                 disabledOptions={disabledOptions}
                 value={this.state.selectedColumn2}
@@ -210,14 +217,14 @@ class VisualizerModal extends React.Component {
           ) : (
             <div style={styles.placeholderContainer}>
               <div style={styles.placeholderText}>
-                Select values to generate a visualization
+                {msg.dataVisualizerPlaceholderText()}
               </div>
               <img src={require('./placeholder.png')} />
             </div>
           )}
           <div style={{paddingTop: 20}}>
             <DropdownField
-              displayName="Filter"
+              displayName={msg.filter()}
               options={[1, 2, 3]}
               disabledOptions={[]}
               value={this.state.filterColumn}
@@ -227,7 +234,7 @@ class VisualizerModal extends React.Component {
               inlineLabel
             />
             <DropdownField
-              displayName="by"
+              displayName={msg.by()}
               options={[]}
               disabledOptions={[]}
               value={this.state.filterValue}
@@ -237,7 +244,7 @@ class VisualizerModal extends React.Component {
               inlineLabel
             />
             <DropdownField
-              displayName="Create chart on screen"
+              displayName={msg.dataVisualizerCreateChart()}
               options={[]}
               disabledOptions={[]}
               value={this.state.screen}
@@ -249,7 +256,7 @@ class VisualizerModal extends React.Component {
               style={dataStyles.grayButton}
               onClick={this.handleOpen}
             >
-              Create
+              {msg.create()}
             </button>
           </div>
         </BaseDialog>
