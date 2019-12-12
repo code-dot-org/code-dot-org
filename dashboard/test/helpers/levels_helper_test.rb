@@ -546,13 +546,14 @@ class LevelsHelperTest < ActionView::TestCase
     uri = URI(build_script_level_path(sl, {}))
     query_params = CGI.parse(uri.query)
     assert_equal '/s/my_cool_script/stage/1/extras', uri.path
-    assert_equal sl.id.to_s, query_params['id'].first
+    assert_equal sl.level.name, query_params['level_name'].first
+    assert_nil query_params['solution'].first
 
     sl = stage.script_levels[3]
     uri = URI(build_script_level_path(sl, {solution: true}))
     query_params = CGI.parse(uri.query)
     assert_equal '/s/my_cool_script/stage/1/extras', uri.path
-    assert_equal sl.id.to_s, query_params['id'].first
+    assert_equal sl.level.name, query_params['level_name'].first
     assert_equal 'true', query_params['solution'].first
   end
 
