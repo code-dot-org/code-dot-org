@@ -14,6 +14,18 @@ zh-CN:
         applab_hoc_finish: 屏幕变绿了吗？如果是这样, 请按 "完成"。如果不是, 请点击 "重置", 更改您的代码, 然后再次点击 "运行"。
       AppLab Intro 7 - thisOrThatAddButton:
         AppLabHoCFinal11: 你现在正处于设计模式中。
+      CSD U3 Sprites anitab 1:
+        '': 点此打开动画标签页
+      CSD U3 Sprites anitab 1_2018:
+        '': 点此打开动画标签页
+      CSD U3 Sprites anitab 1_2019:
+        '': 点此打开动画标签页
+      CSD U3 Sprites text:
+        '': 使用此指令块以在屏幕上放置文本
+      CSD U3 Sprites text_2018:
+        '': 使用此指令块以在屏幕上放置文本
+      CSD U3 Sprites text_2019:
+        '': 使用此指令块以在屏幕上放置文本
       CSD U3 Variables Predict Where X:
         CSD_U3_variables: 改动这里的数字
       CSD U3 Variables Predict Where XY:
@@ -155,14 +167,20 @@ zh-CN:
         dance_party_11_5_groups: 在这里找到”所有鸭子“模块
       Dance_2019_01:
         dance_callout_01: 向程序里增加这个模块！
+      Dance_2019_02:
+        dance_callout_11_a: 将此模块添加到您的程序中。
+        arrow_buttons: 按箭头按钮控制舞者。
       Dance_2019_04:
         dance_callout_02: 向程序里增加这个模块！
+      Dance_2019_05:
+        dance_callout_05: 将新事件添加到您的程序。
       Dance_2019_06:
         dance_party_11_5_groups: 新模块！
       Dance_2019_07:
         setprop_hint: 新模块！
       Dance_2019_09:
-        new_block_1: 新模块！
+        new_block_3: 新模块！
+        new_block_4: 新模块！
       Dance_Party_01:
         dance_callout_01: 向程序里增加这个模块！
       Dance_Party_02:

@@ -2,15 +2,54 @@
 pl-PL:
   data:
     short_instructions:
+      2-3 Artist 1 new: Cześć, jestem artystą. Możesz napisać kod, bym narysował prawie
+        wszystko. Użyj kilku bloków, bym rysował po szarych liniach na obrazku. (Każda
+        linia ma po 100 pikseli)
+      2-3 Artist 11: 'Dodaj znakowi stop obramowanie, tworząc ośmiokąt o bokach równych
+        100 pikseli. '
       2-3 Artist 12: "Utwórz okrąg, aby ukończyć gałkę oczną! \\\r \\\r Jeśli artysta
         obraza się o 1 stopień w każdej pętli, to ile razy musisz powtórzyć kod, aby
         narysować okrąg? 180? 360? 500?"
       2-3 Artist 2 new: 'Ten dom ma ścianę wybudowaną w połowie. Każdy bok ma długość
         100, ale ściana w połowie ukończona ma 50. Ukończ tę ścianę. '
+      2-3 Artist 3.4: Blok skoku przesuwa artystę bez rysowania. Narysuj przerywaną
+        linię używając bloków 'skocz do przodu' i 'idź do przodu'. Każda linia ma
+        po 50 pikseli.
+      2-3 Artist 3new: 'Czerwony kapelusz jest wysoki na 100 pikseli. Skończ rysować
+        czarny kapelusz, który jest o 70 pikseli niższy. (Uwaga: Szerokość każdego
+        kapelusza to 50 pikseli.)'
       2-3 Artist 4: Pomóż mi dokończyć domek dla tego kota.
+      2-3 Artist 6: 'Ten dom potrzebuje dachu! Narysuj trójkąt. Podpowiedź: wszystkie
+        trzy boki mają taką samą długość.'
+      2-3 Artist 7: 'Skończ rysować ostani zestaw okien na szkole, by wszyscy w klasie
+        mogli wyjrzeć na zewnątrz. Boki każdego z kwadratowych okienek mają po 25
+        pikseli. '
+      2-3 Artist 8: Utwórz pokoje dla każdego zwierzęcia, dzieląc prostokąt na 2 kwadraty
+        tej samej wielkości. Prostokąt jest szeroki na 200 pikseli i wysoki na 100
+        pikseli. Istnieje wiele możliwości rozwiązania tej zagadki, więc baw się dobrze!
       2-3 Artist 9 NEW: Dokończ ten latawiec
+      2-3 Artist Assessment 1: 'Szacowanie: Ukończ rysowanie ostatniego zęba. Jest
+        on szeroki na 25 pikseli i wysoki na 25 pikseli.'
       2-3 Artist Free Play: Czas na zabawę! Narysuj cokolwiek chcesz.
+      2-3 Artist Loops New 1: Narysujmy głowę tego robota! Czy potrafisz stworzyć
+        kwadrat o bokach, które mają 100 pikseli?
+      2-3 Artist Loops New 10: Teraz połączmy trochę V razem w pętlę.
+      2-3 Artist Loops New 11: Odbuduj kod z ostatniej łamigłówki, ale tym razem dodaj
+        skręt w lewo o 30 stopni wewnątrz pętli. Teraz powtórz to 24 razy zamiast
+        8.
+      2-3 Artist Loops New 12: 'Narysuj diament o bokach 100 pikseli. '
+      2-3 Artist Loops New 13: "Zacznij od pewnego kodu (na szaro), by narysować jeden
+        diament. \n\nZapętlij szary kod, aby stworzyć zabawny wzór!"
+      2-3 Artist Loops New 14: Pobaw się kodem dla diamentu i zobacz jakie inne wzory
+        możesz stworzyć. Spróbuj zmienić o ile stopni się obracasz i ile razy zapętlasz
+        kod.
       2-3 Artist Loops New 15: Teraz narysuj coś, co Ci się spodoba!
+      2-3 Artist Loops New 2: |-
+        Tutaj jest ta sama łamigłówka, którą właśnie rozwiązaliśmy, ale tym razem możemy użyć tylko jednego bloku 'idź naprzód' i jednego bloku 'skręć'.
+
+        Czy potrafisz użyć bloku 'powtórz' do rozwiązania tej łamigłówki?
+      2-3 Artist Loops New 9: Narysuj proste V (w którym oba boki mają po 50 pikseli),
+        aby ukończyć strzałkę.
       2-3 Artist Nested Loops 10: Powtórz w pętli ten kod 12 razy, aby ukończyć ten
         rysunek.
       2-3 Artist Nested Loops 12: Powtórz w pętli ten kod 12 razy, aby otrzymać te
@@ -29,18 +68,41 @@ pl-PL:
         kwiatów.
       2-3 Bee Loops 2A: Tym razem użyj pętli, by zebrać cały nektar.
       2-3 Bee Loops 3A: Użyj pętli "powtórz", by zebrać cały nektar.
+      2-3 Maze 1: 'Czy pomożesz mi złapać niesforną świnkę? Ustaw parę bloków ''idź
+        naprzód'' pod blokiem ''po uruchomieniu'' i naciśnij ''Uruchom''. '
       2-3 Maze 10: Prowadź mnie do tego zielonego zła! (Uważaj na pola z TNT)
+      2-3 Maze 12: Czy możesz dostać mnie do świnki tworząc pętlę, która używa tylko
+        jednego bloku 'idź naprzód' wewnątrz bloku 'powtórz'?
+      2-3 Maze 13: Doprowadź mnie do świnki! Możesz teraz użyć tylko jednego bloku
+        idź naprzód
+      2-3 Maze 15: W tej łamigłówce dwie pętle 'powtórz' pomogą ci dotrzeć do świnki
+        za pomocą mniejszej liczby bloków!
+      2-3 Maze 16: Pętle działają  nawet z wieloma blokami w środku. Czy potrafisz
+        umieścić ten ciąg bloków w pętli, aby doprowadzić zombie do słonecznika?
+      2-3 Maze 16 before: Czy potrafisz znaleźć najszybszy sposób na doprowadzenie
+        mnie do świnki?
       2-3 Maze 2: Ta świnka jeży moje piórka. Pomóż mi, by ją dopaść!
+      2-3 Maze 3: Wyznacz ścieżkę i zaprowadź mnie do tej głupiutkiej świnki. Unikaj
+        TNT, bo inaczej piórka będą latały!
       2-3 Maze 4: Prowadź mnie do tego zielonego zła! (Uważaj na pola z TNT)
       2-3 Maze 6: Zachowaj spokój i pomóż mi znaleźć tę złą świnkę. W przeciwnym razie
         mogę się rozgniewać!
       2-3 Maze 7: Prowadź mnie do tego zielonego zła! (Uważaj na pola z TNT)
       2-3 Maze 8: Doprowadź mnie do świnki!
       2-3 Maze 9: Prowadź mnie do tego zielonego zła! (Uważaj na pola z TNT)
+      2-3 Maze Loops 1: Czy możesz dostać mnie do świnki używając 5 bloków tego samego
+        rodzaju?
       2-3 Maze Loops 17: Wykorzystaj to, czego się nauczyłeś dotychczas, aby doprowadzić
         mnie do słonecznika!
+      2-3 Maze Loops 18: Doprowadź mnie do słonecznika używając możliwie najmniejszej
+        liczby bloków!   Spróbuj użyć pętli "powtórz" wewnątrz innej pętli, by skrócić
+        ilość kodu, który potrzebujesz.
+      2-3 Maze Loops 19: "Sprowadźmy to na wyższy poziom! \n Użyj pętli, aby doprowadzić
+        mnie do słonecznika za pomocą możliwie najmniejszej liczby bloków."
       2-3 Maze Loops 20: Czy potrafisz rozwiązać tę łamigłówkę używając możliwie najmniejszej
         liczby bloków?
+      2-3 Maze Loops 21: Doprowadź mnie do słonecznika używając możliwie najmniejszej
+        liczby bloków!
       2-3 Maze Loops Assessment 1: 'Sprawdzian: Doprowadź mnie do słonecznika przy
         użyciu tylko 5 bloków! '
       4-5 Artist 3.5: Zobacz, co się dzieje, gdy uruchomisz ten kod (lub naciśnij
@@ -232,20 +294,20 @@ pl-PL:
       Course 4 SCV 4: Rozwiąż tę łamigłówkę używając jak najmniejszej liczby bloków.
       Course 4 SCV 5: Rozwiąż tę łamigłówkę używając jak najmniejszej liczby bloków.
       Course 4 SCV 6: Kliknij tutaj, aby ponownie zobaczyć instrukcje.
-      CourseD_Dance_Party_01: Przeciągnij blok "utwórz nowego" do obszaru roboczego
-        i podłącz go w bloku "układ".
+      CourseD_Dance_Party_01: Przeciągnij blok 'utwórz nowego' do obszaru roboczego
+        i podłącz go w bloku 'układ'.
       CourseD_Dance_Party_02: Spraw, aby łoś rozpoczął nowy ruch po 4 taktach!
       CourseD_Dance_Party_03: Teraz spraw, aby tancerz rozpoczął nowy ruch po 6 taktach!
       CourseD_Dance_Party_04: Dodaj efekt tła do swojego programu.
       CourseD_Dance_Party_05: Użyj innego nowego bloku, aby tancerz zmieniał ruchy
         co 2 takty.
-      CourseD_Dance_Party_06: Utwórz kopię tancerza o nazwie "kopia\_tancerza1", aby
+      CourseD_Dance_Party_06: Utwórz kopię tancerza o nazwie 'kopia\_tancerza1', aby
         zatańczył z kotem.
       CourseD_Dance_Party_08: Czy możesz utworzyć obie kopie tancerzy tej samej wielkości?
-      CourseD_Dance_Party_09: Użyj bloku "ustaw odcień", aby zmienić kolor tancerza.
+      CourseD_Dance_Party_09: Użyj bloku 'ustaw odcień', aby zmienić kolor tancerza.
       CourseD_Dance_Party_10: Spraw, aby drugi tancerz również reagowała na muzykę
-        za pomocą bloku "zaczyna się to".
-      CourseD_Dance_Party_11: Blok "po naciśnięciu strzałki w górę" służy do uruchomienia
+        za pomocą bloku 'zaczyna się to'.
+      CourseD_Dance_Party_11: Blok 'po naciśnięciu strzałki w górę' służy do uruchomienia
         kodu po naciśnięciu klawisza strzałki w górę. Postaraj się, aby tancerz wykonał
         szybki ruch, gdy naciskasz ten klawisz.
       CourseD_Dance_Party_11_5: Użyj bloków "wszystkie kaczki", aby kaczki tańczyły
@@ -269,24 +331,37 @@ pl-PL:
         do skarbu.
       Crack Random Substitution: Instrukcje
       Crack a Caesar Cipher: Instrukcje
-      Dance_2019_01: Przeciągnij blok "utwórz nowego" do obszaru roboczego i podłącz
-        go w bloku "układ".
+      Dance_2019_01: 'Przeciągnij blok <xml><block type="Dancelab_makeAnonymousDanceSprite"
+        block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;,
+        &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml>
+        do obszaru roboczego i podłącz go w bloku <xml><block type="Dancelab_whenSetup2"
+        next_connection_disabled="true" block-text="setup"></block></xml>.'
+      Dance_2019_02: Spowoduj, że kot zatańczy po naciśnięciu klawisza.
+      Dance_2019_03: Pora na tańce! Zaprogramuj każdego tancerza, aby poruszał się
+        po naciśnięciu różnych klawiszy. Wybierz ulubiony ruch dla każdego tancerza
+        lub ustaw tę opcję na „(Losowo)”, aby stworzyć coś zupełnie nieprzewidywalnego!
+      Dance_2019_04: Upewnij się, że Twój tancerz rozpocznie nowy ruch po czwartym
+        takcie.
       Dance_2019_05: Teraz spraw, aby tancerz rozpoczął nowy ruch po 6 taktach!
-      Dance_2019_08: Użyj bloku "ustaw odcień", aby zmienić kolor tancerza.
+      Dance_2019_06: Ustaw grupę tancerzy pomocniczych wokół głównego tancerza pośrodku.
+      Dance_2019_07: Zmień rozmiar grupy tancerzy pomocniczych.
+      Dance_2019_08: Spróbuj zmienić odcień jednego ze swoich tancerzy (lub całej
+        grupy)!
+      Dance_2019_09: Bądź kreatywny dzięki tym nowym blokom!
       Dance_2019_10: Dobrej zabawy! Utwórz własny taniec i udostępnij go przyjaciołom.
-      Dance_Party_01: Przeciągnij blok "utwórz nowego" do obszaru roboczego i podłącz
-        go w bloku "układ".
+      Dance_Party_01: Przeciągnij blok 'utwórz nowego' do obszaru roboczego i podłącz
+        go w bloku 'układ'.
       Dance_Party_02: Spraw, aby łoś rozpoczął nowy ruch po 4 taktach!
       Dance_Party_03: Teraz spraw, aby tancerz rozpoczął nowy ruch po 6 taktach!
       Dance_Party_04: Dodaj efekt tła do swojego programu.
       Dance_Party_05: Użyj innego nowego bloku, aby tancerz zmieniał ruchy co 2 takty.
-      Dance_Party_06: Utwórz kopię tancerza o nazwie "kopia\_tancerza1", aby zatańczył
+      Dance_Party_06: Utwórz kopię tancerza o nazwie 'kopia\_tancerza1', aby zatańczył
         z kotem.
       Dance_Party_08: Czy możesz utworzyć obie kopie tancerzy tej samej wielkości?
-      Dance_Party_09: Użyj bloku "ustaw odcień", aby zmienić kolor tancerza.
+      Dance_Party_09: Użyj bloku 'ustaw odcień', aby zmienić kolor tancerza.
       Dance_Party_10: Spraw, aby drugi tancerz również reagowała na muzykę za pomocą
-        bloku "zaczyna się to".
-      Dance_Party_11: Blok "po naciśnięciu strzałki w górę" służy do uruchomienia
+        bloku 'zaczyna się to'.
+      Dance_Party_11: Blok 'po naciśnięciu strzałki w górę' służy do uruchomienia
         kodu po naciśnięciu klawisza strzałki w górę. Postaraj się, aby tancerz wykonał
         szybki ruch, gdy naciskasz ten klawisz.
       Dance_Party_11_5: Użyj bloków "wszystkie kaczki", aby kaczki tańczyły razem.
@@ -294,12 +369,14 @@ pl-PL:
         strzałki w prawo, i raz "klasnął" (Clap), gdy naciśniesz klawisz strzałki
         w górę. Wykonuj tupnij-klaśnij tak szybko, jak potrafisz!
       Dance_Party_12: Dobrej zabawy! Utwórz własny taniec i udostępnij go przyjaciołom.
+      Dance_Party_extras_alternate_2019: Tam i z powrotem! (Kliknij Więcej po szczegóły)
       Dance_Party_extras_battle: Zespoły taneczne (Kliknij Więcej po szczegóły)
       Dance_Party_extras_battle_2019: Zespoły taneczne (Kliknij Więcej po szczegóły)
       Dance_Party_extras_every_beat: Ćwierćnuty (Kliknij Więcej po szczegóły)
       Dance_Party_extras_every_beat_2019: Ćwierćnuty (Kliknij Więcej po szczegóły)
       Dance_Party_extras_layout: Twórzmy formację (Kliknij Więcej po szczegóły)
       Dance_Party_extras_layout_2019: Twórzmy formację (Kliknij Więcej po szczegóły)
+      Dance_Party_extras_mixed_2019: Więcej przycisków (Kliknij Więcej po szczegóły)
       Dance_Party_extras_on_beat: Bas, średni i wysoki ton (Kliknij Więcej po szczegóły)
       Dance_Party_extras_on_beat_2019: Bas, średni i wysoki ton (Kliknij Więcej po
         szczegóły)
@@ -655,11 +732,18 @@ pl-PL:
         do tego jak utworzyć obrazek taki jak ten?"
       course2_artist_nestedLoops_challenge2: "\\*\\* Wyzwanie: \\*\\* Czy możesz dojść
         do tego jak utworzyć obrazek taki jak ten?"
+      course2_artist_prog_challenge1: Narysuj pokoje dla każdego ze zwierząt. Jest
+        wiele możliwości rozwiązania tej zagadki, więc baw się dobrze. Najkrótsze
+        rozwiązanie składa się z 6 bloków, lecz użyj tylu ile ci się podoba!
+      course2_artist_prog_challenge2: _Pomóż mi namalować żółte linie na tej drodze!_
       course2_bee_conditionals_challenge1: Zbierz cały nektar i zrób cały miód.
       course2_bee_conditionals_challenge2: Zbierz cały nektar i zrób cały miód.
+      course2_collector_loops_challenge2: Zbierz cały skarb!
       course2_harvester_loops_challenge1: Zbierz całą kukurydzę.
       course2_harvester_loops_challenge2: Zbierz wszystkie sałaty. Unikaj drzew i
         pól!
+      course2_maze_programming_challenge1: \_"Świnka się chowa! Czy pomożesz mi znaleźć
+        sposób na obejście przeszkód?"
       course2_maze_programming_challenge2: Czasami jest więcej sposobów na rozwiązanie
         tego samego problemu. Czasami szybciej jest się cofnąć niż iść na przód!
       course3_bee_functions_challenge4: Wykorzystaj wszystko czego się nauczyłeś,
@@ -715,6 +799,12 @@ pl-PL:
       courseB_artist_loops_challenge2_2019: |-
         Zagrajmy w grę!
         Narysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?
+      courseB_collector_loops_challenge2a: Pomóż Laurelowi zabrać co najmniej **5**
+        części skarbu, aby ukończyć tę łamigłówkę.
+      courseB_collector_loops_challenge2a_2018: Pomóż Laurelowi zabrać co najmniej
+        **5** części skarbu, aby ukończyć tę łamigłówkę.
+      courseB_collector_loops_challenge2a_2019: Pomóż Laurelowi zabrać co najmniej
+        **5** części skarbu, aby ukończyć tę łamigłówkę.
       courseB_maze_seq_challenge2: Debuguj ten poziom. Te bloki są poprawne, ale w
         złej kolejności!
       courseB_maze_seq_challenge2_2018: Debuguj ten poziom. Te bloki są poprawne,

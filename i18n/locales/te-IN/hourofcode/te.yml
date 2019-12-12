@@ -3,74 +3,142 @@ te:
   site_name: HOUR of CODE
   hour_of_code: Hour of Code
   language: English
-  front_title: Join the largest learning event in history, %{campaign_date}
-  coming_soon: Coming Soon
-  campaign_date_start_short: Dec. 4
-  campaign_date_start_long: December 4
-  campaign_date_short: Dec. 4-10
-  campaign_date_full: December 4-10
+  front_title: చరిత్రలోనే అతిపెద్ద ఈవెంట్‌లో చేరండి, %{campaign_date}
+  coming_soon: త్వరలోనే వస్తుంది
+  campaign_date_start_short: డిసె. 4
+  campaign_date_start_long: డిసెంబరు 4
+  campaign_date_short: డిసె. 4-10
+  campaign_date_full: డిసెంబరు 4-10
   campaign_date_year: '2017'
-  campaign_date_full_year: December 4-10, 2017
-  hoc2019_header: Learn computer science. Change the world.
-  hoc2019_header_line1_mobile: Learn computer science.
-  hoc2019_header_line2_mobile: Change the world.
-  social_hoc2019_every_sudent: 'Every student has the potential to change the world.
-    Help them get started. #CSforGood'
-  social_hoc2019_learn_computer_science: 'Learn computer science. Change the world.
-    #CSforGood #HourOfCode'
-  social_hoc_is_coming: The Hour of Code is coming!
-  social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
-    computer science. Change the world.'
-  social_hoc2019_coming_dates: The Hour of Code is coming December 9-15, 2019. Computer
-    science is foundational for every student to learn.
-  social_hoc2019_dance: Featuring Katy Perry, Jonas Brothers, Lil Nas X, Panic at
-    the Disco, and many more!
-  codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
-    class="hoc2018-curriculum-link">Code.org courses</a>
-  codeorg_homepage_hoc2018_dance_heading: Create your own <span class="highlight-word">Dance&nbsp;Party</span>
-  codeorg_homepage_hoc2018_header_line1: The Hour of Code is coming...
-  codeorg_homepage_hoc2018_header_line2_desktop: What will you <span class="hoc2018-highlight-word">create?</span>
-  codeorg_homepage_hoc2018_header_line2_mobile: What will you create?
-  codeorg_homepage_hoc2018_header_line3: Give flight to imagination and birth to innovation.
-    Start with an Hour of Code and your own brand of creativity, whatever it may be.
-  codeorg_homepage_hoc2018_musician_before: Featuring
-  codeorg_homepage_hoc2018_musician_after: and more!
-  codeorg_homepage_hoc2018_video: Watch our video
-  hourofcode_homepage_hoc2018_header_line1: Anyone, anywhere can organize an Hour
-    of Code event. One-hour tutorials in over 45 languages. No experience needed.
-  hourofcode_homepage_hoc2018_header_line2: Ages 4 to 104.
-  hoc2018_tutorial_mchoc_description: Minecraft is back for the Hour of Code with
-    a brand new activity! Journey through Minecraft with code.
-  cookie_banner_message: By continuing to browse our site or clicking "I agree," you
-    agree to the storing of cookies on your computer or device.
-  cookie_banner_more_information: See Code.org's Privacy Policy.
-  cookie_banner_accept: I agree
-  front_header_banner: Join the largest learning event in history, %{campaign_date}
-  front_intro_default: The Hour of Code is a global movement reaching tens of millions
-    of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event.
-    One-hour tutorials are available in over 45 languages. No experience needed. <strong>Ages
-    4 to 104.</strong>
-  front_intro_default_2: A global movement in 180+ countries.
-  front_watch_video: Watch the new video
-  front_watch_regular_video: Watch the video
-  front_volunteers: Technical volunteers wanted
-  front_start_learning: Start learning
-  gdpr_dialog_heading: Do you agree to using a web site based in the United States?
-  gdpr_dialog_message: Data from your use of this site may be sent to and stored or
-    processed in the United States.
-  gdpr_dialog_link_intro: For details see our
-  gdpr_dialog_privacy_policy: privacy policy
-  gdpr_dialog_logout: Logout
-  gdpr_dialog_yes: 'Yes'
-  header_menu_resources: Resources
-  header_menu_faq: FAQ
-  header_menu_how_to: How-To
-  header_menu_promote: Promote
-  header_menu_activities: Activities
-  not_found_title: Page Not Found
-  not_found_desc: The requested page was not found
-  not_found_instructions: Check the web address and resubmit or choose a link from
-    the list below.
+  campaign_date_full_year: డిసెంబరు 4-10, 2017
+  hoc2019_header: కంప్యూటర్ సైన్స్ నేర్చుకోండి. ప్రపంచాన్ని మార్చండి.
+  hoc2019_header_line1_mobile: కంప్యూటర్ సైన్స్ నేర్చుకోండి.
+  hoc2019_header_line2_mobile: ప్రపంచాన్ని మార్చండి.
+  social_hoc2019_every_sudent: 'ప్రతి విద్యార్థిలో ప్రపంచాన్ని మార్చే సామర్థ్యం ఉంది.
+    మొదలు పెట్టడానికి వారికి తోడ్పడండి. #CSforGood'
+  social_hoc2019_learn_computer_science: 'కంప్యూటర్ సైన్స్ నేర్చుకోండి. ప్రపంచాన్ని
+    మార్చండి. #CSforGood #HourOfCode'
+  social_hoc_is_coming: అవర్ ఆఫ్ కోడ్ వస్తుంది!
+  social_hoc2019_hoc_is_about_csforgood: 'ఈ #HourOfCode అనేది #CSforGood కు సంబంధించింది.
+    కంప్యూటర్ సైన్స్ నేర్చుకోండి. ప్రపంచాన్ని మార్చండి.'
+  social_hoc2019_coming_dates: అవర్ ఆఫ్ కోడ్ డిసెంబరు 9-15, 2019 కు వస్తోంది. ప్రతి
+    విద్యార్థి నేర్చుకోవడానికి కంప్యూటర్ సైన్స్ పునాది.
+  social_hoc2019_dance: కేటీ పెర్రీ, జోనస్ బ్రదర్స్, లిల్ నాస్ X, పానిక్ అట్ ద డిస్కో,
+    ఇంకా మరెందరో కనిపించే!
+  oceans_landing_title: AI for Oceans
+  oceans_landing_description: 'Explore machine learning by teaching “A.I.” to recognize
+    fish. #CSforGood'
+  oceans_landing_specs: English only | Ages 11+
+  oceans_landing_teacher_resources: Teacher Resources
+  oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
+    AI, machine learning, training data, and bias, while exploring ethical issues.
+  oceans_landing_resource_button: View Resources
+  oceans_landing_cs_for_good: CS For Good
+  oceans_landing_cs_for_good_desc: Resources to help students understand the role
+    computer science could play in creating a more equitable world.
+  oceans_landing_learn_more: Learn more about AI and Machine Learning
+  social_hoc2019_oceans_title: 'AI for Oceans #CSForGood'
+  social_hoc2019_oceans_desc: Learn about AI, machine learning, training data, and
+    bias, while exploring ethical issues and how AI can be used to address world problems.
+    Computer science is about so much more than coding! Enjoy Code.org's first step
+    in a new journey to teach more about AI throughout our curriculum.
+  hoc_overview_oceans_tutorial_header: AI For Oceans
+  hoc_overview_oceans_tutorial_desc: Learn about AI, machine learning, training data,
+    and bias, while exploring ethical issues and how AI can be used to address world
+    problems.
+  ai_video_title_what_is_ai: What is AI?
+  ai_video_title_phone_knows_dog: How does your phone know this is a dog?
+  ai_video_title_what_is_ml: What is Machine Learning?
+  ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small
+    and Prickly'
+  ai_video_title_ethics_of_ai: Ethics of AI
+  ai_video_title_ml_human_bias: Machine Learning and Human Bias
+  activity: Activity
+  name: Name
+  description: Description
+  audience: Audience
+  ai_resource_header: Teach and Learn about AI
+  ai_resource_ml_for_kids: Machine Learning for Kids
+  ai_resource_ml_for_kids_desc: Train a machine learning model with text, numbers,
+    or images, and use it to make games in Scratch.
+  ai_resource_ibm_ml_for_kids: 'IBM: Machine Learning for Kids'
+  ai_resouce_ibm_ml_for_kids_desc: Hands-on activities to introduce simple machine
+    learning models to students through games and interactive projects.
+  ai_resource_ecs: 'ECS: Artificial Intelligence (AI)'
+  ai_resource_ecs_desc: A new alternate curriculum unit for the Exploring Computer
+    Science (ECS) curriculum.
+  ai_resource_elements_ai: Elements of AI
+  ai_resource_elements_ai_desc: A series of free online courses created by Reaktor
+    and the University of Helsinki.
+  ai_resource_cognimates: Cognimates
+  ai_resource_cognimates_desc: An AI education platform for building games, programming
+    robots and training.
+  ai_audience_k12: K-12 (Reading required)
+  ai_audience_hs: High school
+  ai_activity_header: Activities Powered by AI and ML
+  ai_activity_teachable: Teachable Machine
+  ai_activity_teachable_desc: Train a computer to recognize your own images, sounds,
+    and poses.
+  ai_activity_quick_draw: Quick, Draw!
+  ai_activity_quick_draw_desc: Can a neural network learn to recognize doodling?
+  ai_activity_experiments: AI Experiments with Google
+  ai_activity_experiments_desc: Start exploring machine learning through pictures,
+    drawings, language, music, and more.
+  ai_activity_mixlab: MixLab
+  ai_activity_mixlab_desc: Make music using voice commands.
+  ai_activity_gaugan: GauGAN Beta
+  ai_activity_gaugan_desc: Paint photo-realistic landscapes with the help of AI.
+  codeorg_homepage_hoc2018_curriculum: మరింత ముందుకు వెళ్లండి <a href="%{studio_url}/courses"
+    class="hoc2018-curriculum-link">Code.org కోర్సులతో</a>
+  codeorg_homepage_hoc2018_dance_heading: సృష్టించండి మీ సొంత <span class="highlight-word">డాన్స్&nbsp;పార్టీ</span>
+  codeorg_homepage_hoc2018_header_line1: అవర్ ఆఫ్ కోడ్ వస్తుంది...
+  codeorg_homepage_hoc2018_header_line2_desktop: మీరు ఏమి <span class="hoc2018-highlight-word">సృష్టిస్తారు?</span>
+  codeorg_homepage_hoc2018_header_line2_mobile: మీరు ఏమి సృష్టిస్తారు?
+  codeorg_homepage_hoc2018_header_line3: మీ ఊహలకు రెక్కలు ఇవ్వండి మరియు అన్వేషణకు
+    జన్మనివ్వండి. అవర్ ఆఫ్ కోడ్ మరియు మీ సొంత బ్రాండ్ సృజనాత్మకతతో ప్రారంభించండి,
+    అది ఏమైనా కానీ.
+  codeorg_homepage_hoc2018_musician_before: కనిపించే
+  codeorg_homepage_hoc2018_musician_after: మరియు మరెన్నో!
+  codeorg_homepage_hoc2018_video: మా వీడియో చూడండి
+  hourofcode_homepage_hoc2018_header_line1: ఎవరైనా, ఎక్కడైనా అవర్ ఆఫ్ కోడ్ ఈవెంట్
+    నిర్వహించవచ్చు. ఒన్-అవర్ ట్యుటోరియల్స్ 45 కుపైగా భాషల్లో ఉన్నాయి. అనుభవం అవసరం
+    లేదు.
+  hourofcode_homepage_hoc2018_header_line2: వయస్సులు 4 నుండి 104.
+  hoc2018_tutorial_mchoc_description: ఒక సరికొత్త యాక్టివిటీతో Minecraft అవర్ ఆఫ్
+    కోడ్ కోసం మళ్లీ వచ్చింది! కోడ్‌తో Minecraft గుండా ప్రయాణం చేయండి.
+  codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>
+  cookie_banner_message: మా సైట్‌ను బ్రౌజ్ చేయటం కొనసాగించడం ద్వారా లేక "నేను నేను
+    అంగీకరిస్తాను" ను క్లిక్ చేయడం ద్వారా మీరు మీ కంప్యూటర్ లేక పరికరంలో కుకీలు నిల్వ
+    చేయడానికి అంగీకరిస్తున్నారు.
+  cookie_banner_more_information: Code.org గోప్యతా పాలసీ చూడండి.
+  cookie_banner_accept: నేను అంగీకరిస్తాను
+  front_header_banner: చరిత్రలోనే అతిపెద్ద ఈవెంట్‌లో చేరండి, %{campaign_date}
+  front_intro_default: అవర్ ఆఫ్ కోడ్ (Hour of Code) 180+ దేశాలలోని లక్షలాది విద్యార్థులను
+    చేరుకుంటున్న ఒక ప్రపంచవ్యాప్త ఉద్యమం. ఎవరైనా, ఎక్కడైనా అవర్ ఆఫ్ కోడ్ ఈవెంట్‌ను
+    నిర్వహించవచ్‌ఉ. ఒన్ అవర్ ట్యుటోరియల్స్ 45 కంటే ఎక్కువ భాషల్లో అందుబాటులో ఉన్నాయి.
+    అనుభవం అవసరం లేదు. <strong>వయస్సులు 4 నుండి 104.</strong>
+  front_intro_default_2: 180+ దేశాలలో ఒక ప్రపంచవ్యాప్త ఉద్యమం.
+  front_watch_video: కొత్త వీడియో చూడండి
+  front_watch_regular_video: వీడియో చూడండి
+  front_volunteers: టెక్నికల్ వాలెంటీర్లు కావాలి
+  front_start_learning: నేర్చుకోవడం ప్రారంభించండి
+  gdpr_dialog_heading: మీరు యునైటెడ్ స్టేట్స్‌లో మూలం ఉన్న ఒక వెబ్ సైట్ ఉపయోగించడానికి
+    అంగీకరిస్తారా?
+  gdpr_dialog_message: ఈ సైట్‌ను మీరు ఉపయోగించడానికి సంబంధించిన డేటా యునైటెడ్ స్టేట్స్‌కు
+    పంపబడవచ్చు లేక అక్క ప్రాసెస్ చేయబడవచ్చు.
+  gdpr_dialog_link_intro: వివరాల కోసం చూడండి మా
+  gdpr_dialog_privacy_policy: గోప్యతా పాలసీ
+  gdpr_dialog_logout: లాగ్‌ఔట్
+  gdpr_dialog_yes: అవును
+  header_menu_resources: వనరులు
+  header_menu_faq: తరచూ అడిగే ప్రశ్నలు
+  header_menu_how_to: హౌ-టు
+  header_menu_promote: ప్రమోట
+  header_menu_activities: కార్యకలాపాలు
+  not_found_title: పేజి కనిపించలేదు
+  not_found_desc: అభ్యర్థించిన పేజీ కనిపించలేదు
+  not_found_instructions: వెబ్ అడ్రసు చెక్ చేసి, తిరిగి సబ్మిట్ చేయండి లేదా క్రింది
+    లిస్టు నుండి ఒక లింక్ ఎంచుకోండి.
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
   company_asos: ASOS
@@ -198,482 +266,495 @@ te:
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
   company_yelp: Yelp
-  nav_back_to_resources: Back to Resources
-  how_to_nav_educators: For educators
-  how_to_nav_after_school: For after school
-  how_to_nav_parents: For parents
-  how_to_nav_public_officials: For public officials
-  how_to_nav_districts: For districts
-  how_to_nav_assemblies: For school assemblies
-  how_to_nav_organizations: For organizations
-  how_to_nav_companies: For companies
-  how_to_nav_afterschool_educators: For after-school educators
-  how_to_nav_volunteers: For volunteers
-  whats_next_header: What's next?
-  whats_next_description: We'll send you materials and helpful tips for your event.
-    <a href='http://code.org/learn'>Try current tutorials</a> for any browser, smartphone
-    – or even no computer!
-  whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
-  whats_next_promote: "<a href='/promote'>Promote the Hour of Code</a>"
-  whats_next_how_to_promote: "<a href='/promote/resources'>How to promote the Hour
-    of Code</a>"
-  whats_next_how_to_promote_link: "<a href='/promote'>How to promote the Hour of Code</a>"
-  whats_next_try: "<a href='%{learn_url}'>Try tutorials</a>"
-  whats_next_try_button: Try tutorials
-  n_have_learned_an_hoc: "<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>"
-  anybody_can_learn: Anybody can learn.
-  get_started: Start
-  beyond_an_hour: Beyond an Hour of Code
-  register_now: Register Now
-  share_on_facebook: Share on Facebook
-  share_on_twitter: Share on Twitter
-  promote_additional_resources: Additional resources coming soon!
-  front_join_us_heading: An Hour of Code for every student.
-  front_join_us_announcements: Announcements
-  front_join_us_anybody_can_learn: Anybody can learn
-  front_join_us_description: Computer science is a foundation for every student. Help
-    us introduce it to 100 million.
-  front_join_us_description_short: Computer science is a foundation for every student.
-  front_join_us_button: Join us
-  front_what_is_hoc: What is the Hour of Code?
-  front_join_us_header: Anyone can learn the basics, and have fun doing it!
-  front_join_us_volunteer_header: Volunteers for the Hour of Code
-  front_join_us_tutorials: Choose your Hour of Code tutorial!
-  front_join_us_tutorials_link: Filter and browse <i>over 200 tutorials and lesson
-    plans</i>! Find activities for different subject areas, multiple hardware needs,
-    and students at any experience level.
-  front_join_us_robotics: Win robots or circuits!
-  front_join_us_robotics_link: Do you want a set of robots or physical computing kits
-    to use with your students? Our generous partners are donating sets to 75 classrooms!
-    Sign up for the Hour of Code to participate. (Classrooms selected by Code.org,
-    US Only)
-  front_join_us_teacher: Are you a teacher?
-  front_join_us_inspire: Inspire students with
-  front_join_us_inspire_link: an Hour of Code in the classroom.
-  front_join_us_teacher_link: Inspire students with an Hour of Code in the classroom
-  front_join_us_teacher_volunteer: Search for local volunteers who can visit your
-    classroom or inspire your students remotely.
-  front_join_us_parent: Are you a parent?
-  front_join_us_ask_link: Ask your local school
-  front_join_us_ask: to host an Hour of Code.
-  front_join_us_parent_link: Ask your local school to host an Hour of Code
-  front_join_us_computer_science: Just love computer science?
-  front_join_us_cs_volunteer: Passionate about computer science education?
-  front_join_us_spread: Spread the word.
-  front_join_us_spread_word: Spread the word in your community
-  front_join_us_spread_word_work: Spread the word in your community or workplace
-  front_join_us_sign_up_volunteer: Sign up to volunteer at a local classroom or through
-    a video chat.
-  front_join_us_organize: Or organize an Hour of Code event yourself.
-  front_join_us_how_to_run: Here's how to run an Hour of Code
-  front_join_us_help_promote: Help promote the Hour of Code
-  front_join_us_students: Students
-  front_join_us_teachers: Teachers
-  front_join_us_everyone: Everyone
-  front_join_us_try: Try it
-  front_join_us_sign_up: Sign up
-  front_join_us_host: Host it
-  front_join_us_support: Support it
-  front_join_us_more_info: For more information, please visit <a href='https://code.org'>code.org</a>.
-  front_join_us_code_info: For more information, please visit code.org
-  front_join_us_n_students_served: "# served."
-  front_join_us_challenge: Win a video chat for your classroom with a celebrity!
-  front_join_us_learn_more: Learn more
-  signup_closed: Registration for the Hour of Code is now closed. Please check again
-    in October to sign up for the next Hour of Code.
-  signup_registration_not_required: You don't need to register to participate! The
-    Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try
-    an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan
-    an event for your class.
-  signup_registration_closed: And every year in December, your class can join millions
-    of students around the world celebrating Computer Science Education Week with
-    the Hour of Code. We'll open registration for the annual celebration in October.
-  signup_header: Organize an Hour of Code during %{campaign_date}, and register it
-    here.
-  signup_name_label: Your name
-  signup_name_error: Name is required.
-  signup_email_label: Your email
-  signup_email_error: Email is required
-  signup_invalid_email_error: The email address you entered is invalid
-  signup_organization_name_label: Organization name
-  signup_organization_name_error: Organization name is required.
-  signup_event_type_label: Event type
-  signup_event_type_error: Event type is required.
-  signup_event_entire_school_label: My entire school is participating
-  signup_event_location_label: Event location
-  signup_event_location_error: Event location is required.
-  signup_special_event_flag_label: My event will involve an entire district, members
-    of the community, and/or other special plans to go beyond an hour
-  signup_special_event_details_label: Apply to be highlighted as a special event
-  signup_send_posters_flag_label: Send <a href= "/resources/promote#posters">posters</a>
-    to my school or organization (US only, while supplies last)
-  signup_send_posters_address_label: Address of school or organization
-  signup_whole_school_flag_label: This event is for a whole school
-  signup_your_event: Sign up your event
-  signup_host_an_hour: Host an hour
-  signup_match_volunteer: Help me find a local software engineer to inspire my students
-  signup_email_preference_opt_in: Can we email you about updates to Code.org courses,
-    local opportunities, or other computer science news?
-  signup_email_preference_privacy: "(See our privacy policy)"
-  signup_email_preference_yes: 'Yes'
-  signup_email_preference_no: 'No'
-  signup_email_preference_error: Email preference is required
-  signup_multiple_event_warning: We will put your school name and city on the map
-    when you register. If you're hosting multiple events, please submit a unique name
-    or email for each one. We only count one event per name and email combination.
-  signup_registration_deadline: Registration for the Hour of Code closes December
-    11.
-  signup_name_placeholder: Your Name
+  nav_back_to_resources: వెనక్కు వనరులక
+  how_to_nav_educators: బోధకుల కోసం
+  how_to_nav_after_school: ఆఫ్టర్ స్కూల్ కోసం
+  how_to_nav_parents: తల్లిదండ్రుల కోసం
+  how_to_nav_public_officials: పబ్లిక్ అధికారుల కోసం
+  how_to_nav_districts: జిల్లాల కోసం
+  how_to_nav_assemblies: స్కూల్ అసెంబ్లీల కోసం
+  how_to_nav_organizations: సంస్థల కోసం
+  how_to_nav_companies: కంపెనీల కోసం
+  how_to_nav_afterschool_educators: ఆఫ్టర్-స్కూల్ బోధకుల కోసం
+  how_to_nav_volunteers: వాలెంటీర్ల కోసం
+  whats_next_header: తరువాత ఏమిటి?
+  whats_next_description: మీ ఈవెంట్ కోసం మేము మెటీరియల్స్ మరియు ఉపయోగకరమైన సలహాలు
+    పంపుతాము. <a href='http://code.org/learn'>ప్రస్తుత ట్యుటోరియల్స్, ప్రయత్నించండి</a>
+    ఏ బ్రౌజరు, స్మార్ట్ ఫోనులో అయినా - లేక కంప్యూటర్ లేకపోయినా!
+  whats_next_how_to: "<a href='/how-to'>అవర్ ఆఫ్ కోడ్‌ను ఎలా రన్ చేయాలి</a>"
+  whats_next_promote: "<a href='/promote'>అవర్ ఆఫ్ కోడ్‌ను ప్రమోట్ చేయండి</a>"
+  whats_next_how_to_promote: "<a href='/promote/resources'>అవర్ ఆఫ్ కోడ్‌ను ప్రమోట్
+    చేయడం ఎలా</a>"
+  whats_next_how_to_promote_link: "<a href='/promote'>అవర్ ఆఫ్ కోడ్‌ను ప్రమోట్ చేయడం
+    ఎలా</a>"
+  whats_next_try: "<a href='%{learn_url}'>ట్యుటోరియల్స్ ప్రయత్నించండి</a>"
+  whats_next_try_button: ట్యుటోరియల్స్ ప్రయత్నించండి
+  n_have_learned_an_hoc: "<h1>Try an</h1><h2>అవర్ ఆఫ్ కోడ్</h2><h3># served</h3>"
+  anybody_can_learn: ఎవరైనా నేర్చుకోవచ్చు.
+  get_started: ప్రారంభించండి
+  beyond_an_hour: అవర్ ఆఫ్ కోడ్ మించి
+  register_now: ఇప్పుడే రిజిస్టర్ చేసుకోండి
+  share_on_facebook: Facebook లో షేర్ చేయండి
+  share_on_twitter: Twitter లో షేర్ చేయండి
+  promote_additional_resources: అదనపు వనరులు వస్తున్నాయి!
+  front_join_us_heading: అవర్ ఆఫ్ కోడ్ ప్రతి విద్యార్థి కోసం.
+  front_join_us_announcements: ప్రకటనలు
+  front_join_us_anybody_can_learn: ఎవరైనా నేర్చుకోవచ్చు
+  front_join_us_description: ప్రతి విద్యార్థికి కంప్యూటరు సైన్సు పునాది. దీన్ని 100
+    మిలియన్ల మందికి పరిచయం చేయడంలో మాకు తోడ్పడండి.
+  front_join_us_description_short: ప్రతి విద్యార్థికి కంప్యూటరు సైన్సు పునాది.
+  front_join_us_button: మాతో చేరండి
+  front_what_is_hoc: అవర్ ఆఫ్ కోడ్ అంటే ఏమిటి?
+  front_join_us_header: ఎవరైనా బేసిక్స్ నేర్చుకోగలరు మరియు దాన్ని చేయడంలో ఫన్ పొందగలరు!\!
+  front_join_us_volunteer_header: అవర్ ఆఫ్ కోడ్ కోసం వాలెంటీర్లు
+  front_join_us_tutorials: మీ అవర్ ఆఫ్ కోడ్ ట్యూటోరియల్స్ ఎంచుకోండి!
+  front_join_us_tutorials_link: ఫిల్టర్ మరియు బ్రౌజ్ చేయండి <i>200 లకు పైగా ట్యుటోరియల్స్
+    మరియు పాఠ్య ప్రణాళికలు</i>! వివిధ సబ్జెక్టు రంగాలకు, బహుళ హార్డ్‌వేర్ అవసరాలకు
+    మరియు ఏ అనుభవ స్థాయి ఉన్న విద్యార్థులకు అయినా కార్యకలాపాలు కనుగొనండి.
+  front_join_us_robotics: రోబోట్స్ లేక సర్క్యూట్స్‌ను గెలవండి!
+  front_join_us_robotics_link: మీ విద్యార్థులతో ఉపయోగించడానికి మీకు ఒక సెట్ రోబోలు
+    లేక భౌతిక కంప్యూటింగ్ కిట్స్ కావాలా? మా ఉదారతగల భాగస్వాములు సెట్లను 75 తరగతి గదులకు
+    దానం ఇస్తున్నారు! పాల్గొనడానికి అవర్ ఆఫ్ కోడ్ కోసం సైన్ అప్ చేయండి. (Code.org,
+    యు.ఎస్ ఎంపిక చేసిన తరగతి గదులు మాత్రమే)
+  front_join_us_teacher: మీరు టీచరా?
+  front_join_us_inspire: తరగతి గదిలో అవర్ ఆఫ్ కోడ్‌తో
+  front_join_us_inspire_link: విద్యార్థులకు ప్రేరణ కలిగించండి.
+  front_join_us_teacher_link: తరగతి గదిలో అవర్ ఆఫ్ కోడ్‌తో విద్యార్థులకు ప్రేరణ కలిగించండి
+  front_join_us_teacher_volunteer: మీ తరగతి గదిని సందర్శించగల లేక మీ విద్యార్థులకు
+    దూరం నుండి ప్రేరణ ఇవ్వగల వాలెంటీర్ల కోసం వెతకండి.
+  front_join_us_parent: మీరు తల్లిదండ్రులా?
+  front_join_us_ask_link: అవర్ ఆఫ్ కోడ్‌ను హోస్ట్ చేయవలసిందిగా
+  front_join_us_ask: మీ స్థానిక పాఠశాలను కోరండి.
+  front_join_us_parent_link: అవర్ ఆఫ్ కోడ్‌ను హోస్ట్ చేయవలసిందిగా మీ స్థానిక పాఠశాలను
+    కోరండి
+  front_join_us_computer_science: కంప్యూటర్ సైన్స్ అంటే అంతులేని ప్రేమా?
+  front_join_us_cs_volunteer: కంప్యూటర్ సైన్స్ విద్య అంటే అత్యుత్సాహం ఉందా?
+  front_join_us_spread: ఈ విషయాన్ని ప్రచారం చేయండి.
+  front_join_us_spread_word: మీ కమ్యూనిటీలో ఈ విషయాన్ని ప్రచారం చేయండి
+  front_join_us_spread_word_work: మీ మీ కమ్యూనిటీలో లేదా మీ పని ప్రదేశంలో ఈ విషయాన్ని
+    ప్రచారం చేయండి
+  front_join_us_sign_up_volunteer: ఒక స్థానిక పాఠశాలలో లేక వీడియో ఛాట్ ద్వారా వాలెంటరీ
+    పని చేయడానికి సైన్ అప్ చేయండి.
+  front_join_us_organize: లేదా మీరే ఒక అవర్ ఆఫ్ కోడ్ ఈవెంట్‌ను నిర్వహించండి.
+  front_join_us_how_to_run: అవర్ ఆఫ్ కోడ్‌ను ఎలా రన్ చేయాలో ఇక్కడ ఇవ్వబడింది
+  front_join_us_help_promote: అవర్ ఆఫ్ కోడ్‌ను ప్రోత్సహించడంలో సహాయపడండి
+  front_join_us_students: విద్యార్థులు
+  front_join_us_teachers: టీచర్లు
+  front_join_us_everyone: ప్రతి ఒక్కరు
+  front_join_us_try: దీన్ని ప్రయత్నించండి
+  front_join_us_sign_up: సైన్ అప్ చేయండి
+  front_join_us_host: దీన్ని హోస్ట్ చేయండి
+  front_join_us_support: దీనికి మద్దతు ఇవ్వండి
+  front_join_us_more_info: మరింత సమాచారం కోసం, దయచేసి సందర్శించండి <a href='https://code.org'>code.org</a>.
+  front_join_us_code_info: మరింత సమాచారం కోసం code.org సందర్శించండి
+  front_join_us_n_students_served: "# సర్వ్ చేయబడ్డారు."
+  front_join_us_challenge: ఒక సెలబ్రిటీతో మీ తరగతి గది కోసం ఒక వీడియో ఛాట్ గెలుచుకోండి!
+  front_join_us_learn_more: మరింత తెలుసుకోండి
+  signup_closed: అవర్ ఆఫ్ కోడ్ కోసం రిజిస్ట్రేషన్ ఇప్పుడు ముగిసింది. తరువాతి అవర్
+    ఆఫ్ కోడ్ కోసం సైన్ అప్ చేయడానికి దయచేసి అక్టోబరులో తిరిగి చెక్ చేయండి.
+  signup_registration_not_required: పాల్గొనడానికి మీరు రిజిస్టర్ చేయనవసరం లేదు! అవర్
+    ఆఫ్ కోడ్ కార్యకలాపాలు సంవత్సరం పొడవునా అందుబాటులో ఉంటాయి. <a href='%{hoc_activities_url}'>ఒక
+    యాక్టివిటీ ప్రయత్నించండి</a> లేదా మా <a href='%{howto_guide_url}'>హౌ-టు గైడ్ చదవండి</a>
+    మీ తరగతి గది కోసం ఒక ఈవెంట్ ప్లాన్ చేసుకోవడానికి.
+  signup_registration_closed: ప్రతి సంవత్సరం డిసెంబరులో, మీ తరగతి గదిని ప్రపంచవ్యాప్తంగా
+    అవర్ ఆఫ్ కోడ్‌తో కంప్యూటర్ సైన్స్ ఎడ్యుకేషన్ వీక్ సెలెబ్రేట్ చేసుకుంటున్న మిలియన్ల
+    కొద్దీ విద్యార్థులతో చేర్చవచ్చు. వార్షిక వేడుకకు మేము రిజిస్ట్రేషన్ అక్టోబరులో
+    తెరుస్తాము.
+  signup_header: అవర్ ఆఫ్ కోడ్‌ను %{campaign_date} లో నిర్వహించండి మరియు ఇక్కడ రిజిస్టర్
+    చేసుకోండి.
+  signup_name_label: మీ పేరు
+  signup_name_error: పేరు అవసరం.
+  signup_email_label: మీ ఇమెయిల్
+  signup_email_error: ఇమెయిల్ అవసరం
+  signup_invalid_email_error: మీరు ఎంటర్ చేసిన ఇమెయిల్ అడ్రసు చెల్లనిది
+  signup_organization_name_label: సంస్థ పేరు
+  signup_organization_name_error: సంస్థ పేరు అవసరం.
+  signup_event_type_label: ఈవెంట్ రకం
+  signup_event_type_error: ఈవెంట్ రకం అవసరం.
+  signup_event_entire_school_label: మా మొత్తం పాఠశాల పాల్గొంటున్నది
+  signup_event_location_label: ఈవెంట్ స్థానం
+  signup_event_location_error: ఈవెంట్ స్థానం అవసరం.
+  signup_special_event_flag_label: మా ఈవెంట్ ఒక గంట పరిధి దాటి వెళ్లడానికి మొత్తం
+    జిల్లాను, కమ్యూనిటీ లోని సభ్యులను మరియు/లేదా ఇతర ప్రత్యేక ప్రణాళికలను కలుపుకుని
+    పోతుంది
+  signup_special_event_details_label: ఒక ప్రత్యేక ఈవెంట్‌గా హైలైట్ చేయబడటానికి అప్లై
+    చేయండి
+  signup_send_posters_flag_label: మా పాఠశాల లేక సంస్థకు <a href= "/resources/promote#posters">posters</a>
+    పంపండి (యు. ఎస్. మాత్రమే, సరఫరాలు ఉన్నంతవరకు)
+  signup_send_posters_address_label: పాఠశాల లేక సంస్థ అడ్రసు
+  signup_whole_school_flag_label: ఈ ఈవెంట్ మొత్తం పాఠశాల కోసం
+  signup_your_event: మీ ఈవెంట్‌ను సైన్ అప్ చేయండి
+  signup_host_an_hour: ఒక గంట హోస్ట్ చేయండి
+  signup_match_volunteer: మా విద్యార్థులకు ప్రేరణ కల్గించడానికి ఒక స్థానిక సాఫ్ట్‌వేర్
+    ఇంజనీరును వెతకడంలో నాకు సహాయపడండి
+  signup_email_preference_opt_in: మేము Code.org కోర్సులు, స్థానిక అవకాశాలు లేక ఇతర
+    కంప్యూటర్ సైన్స్ న్యూస్ గురించి అప్‌డేట్స్ మీకు ఇమెయిల్ చేయవచ్చా?
+  signup_email_preference_privacy: "(మా గోప్యత పాలసీ చూడండి)"
+  signup_email_preference_yes: అవును
+  signup_email_preference_no: లేదు
+  signup_email_preference_error: ఇమెయిల్ ప్రాధాన్యత అవసరం
+  signup_multiple_event_warning: మీరు రిజిస్టర్ చేసుకున్నప్పుడు, మేము మీ పాఠశాల పేరు
+    మరియు నగరాన్ని మ్యాప్‌లో ఉంచుతాము. మీరు బహు ఈవెంట్లను హోస్ట్ చేస్తున్నట్లైతే,
+    ప్రతి దానికి దయచేసి ఒక ప్రత్యేక పేరు లేక ఇమెయిల్ ఇవ్వండి.
+  signup_registration_deadline: అవర్ ఆఫ్ కోడ్‌కు రిజిస్ట్రేషన్ డిసెంబరు 11 న ముగుస్తుంది.
+  signup_name_placeholder: మీ పేరు
   signup_email_placeholder: you@example.com
-  signup_organization_name_placeholder: For example, Lincoln High School
-  signup_event_country_label: Event country
-  signup_event_country_error: Country is required.
-  signup_event_location_placeholder: Postal code and country OR full address.
-  signup_special_event_details_placeholder: Describe what makes this a special event
-  signup_send_posters_address_placeholder: This address will not be shared on our
-    map
-  signup_event_type_in_school: In a school
-  signup_event_type_out_of_school: Outside of school
-  signup_submit_census_label: Submit
-  signup_submit_census_error_message: We're sorry. An error occurred. Please try submitting
-    the form again.
-  signup_submit_label: Sign up
-  signup_submit_error_message: An error occurred. Please check to make sure all required
-    fields have been filled out properly.
-  signup_submit_and_continue_label: Submit and Continue
-  signup_continue_label: Continue
-  signup_thank_you_header: Thank you for signing-up to host an Hour of Code event.
-  signup_thank_you_message: We sent you a confirmation email with information to help
-    you get started.
-  social_hoc2018_code_org_what_create: 'Code.org: What will you create?'
-  social_hoc2018_creativity_in_are_you: 'The #HourOfCode is about creativity. I’m
-    in! Are you?'
-  social_hoc2018_dance_party: 'Hour of Code: Dance Party'
-  social_hoc2018_dance_what_create: Featuring Katy Perry, Madonna, J. Balvin, Sia,
-    Keith Urban, Ciara, and 25 more!
-  social_hoc2018_every_student: Every student deserves the opportunity to express
-    their creativity with computer science.
-  social_hoc2018_every_student_try_what_create: Every student deserves the opportunity
-    to express their creativity with computer science. Try your hand at the new tutorials.
-    What will you create?
-  social_hoc2018_hoc_coming_create: The Hour of Code is coming. What will you create?
-  social_hoc2018_hoc_here: The Hour of Code is here!
-  social_hoc2018_join: 'Hour of Code: Join the Movement'
-  social_hoc2018_mc: Minecraft is back for the Hour of Code, and you’re the hero!
-    Write code to journey through Minecraft biomes.
-  social_hoc2018_mc_creativity: Use your creativity and problem solving skills to
-    explore and build underwater worlds with code.
-  social_hoc2018_what_create: What will you create?
-  social_hoc2018_global_movement: The Hour of Code is a global movement reaching tens
-    of millions of students. One-hour tutorials are available in 45+ languages for
-    all ages.
-  map_title: Hour of Code map
-  map_header: "# events registered for Hour of Code 2017"
-  map_header_count_year: "%{event_count} events registered in %{year}"
-  see_all_events: See all events
-  map_header_company: "# by company organizers"
-  map_header_country: "# in %{country}"
-  map_search_placeholder: Search for Hour of Code events
-  map_search_search: Search
-  map_search_reset: Reset
-  map_legend_title: Legend
-  map_legend_hoc_events: Hour of Code Event
-  map_legend_cs_tech_jam: Special Event
-  map_warning: A full list of the events can be viewed on the <a href='%{events_url}'>events
-    page.</a>
-  meta_tag_og_title: 'Hour of Code: Join the Movement'
-  meta_tag_og_description: The Hour of Code is a global movement reaching tens of
-    millions of students of all ages in 180+ countries and over 45 languages.
-  meta_tag_twitter_title: 'Hour of Code: Join the Movement'
-  meta_tag_twitter_description: The Hour of Code is a global movement reaching tens
-    of millions of students of all ages in 180+ countries and over 45 languages.
-  twitter_default_text: 'I''m participating in this year''s #HourOfCode, are you?
+  signup_organization_name_placeholder: ఉదాహరణకు, లింకన్ హైస్కూల్
+  signup_event_country_label: ఈవెంట్ దేశం
+  signup_event_country_error: దేశం అవసరం.
+  signup_event_location_placeholder: పోస్టల్ కోడ్ మరియు దేశం లేక పూర్తి అడ్రసు.
+  signup_special_event_details_placeholder: దీన్ని ఏది ఒక ప్రత్యేక ఈవెంట్‌గా చేస్తుందో
+    వివరించండి
+  signup_send_posters_address_placeholder: ఈ అడ్రసు మా మ్యాప్‌లో షేర్ చేయబడదు
+  signup_event_type_in_school: ఒక పాఠశాలలో
+  signup_event_type_out_of_school: పాఠశాల బయట
+  signup_submit_census_label: సబ్మిట్ చేయండి
+  signup_submit_census_error_message: మమ్మల్ని క్షమించండి. ఒక తప్పిదం జరిగింది. ఫారం
+    సబ్మిట్ చేయడం మళ్లీ ప్రయత్నించండి.
+  signup_submit_label: సైన్ అప్ చేయండి
+  signup_submit_error_message: ఒక తప్పిదం జరిగింది. అవసరమైన ఫీల్డ్‌లు అన్నీ సరిగ్గా
+    నింపబడ్డాయని ధృవీకరించుకోవడానికి దయచేసి చెక్ చేయండి.
+  signup_submit_and_continue_label: సబ్మిట్ చేయండి మరియు కొనసాగండి
+  signup_continue_label: కొనసాగండి
+  signup_thank_you_header: అవర్ ఆఫ్ కోడ్ ఈవెంట్ హోస్ట్ చేయడానికి సైన్ అప్ చేసినందుకు
+    ధన్యవాదాలు.
+  signup_thank_you_message: మీరు ప్రారంభించడంలో సహాయపడటానికి సమాచారంతో మేము మీకు ఒక
+    నిర్థారణ ఇమెయిల్ పంపాము.
+  social_hoc2018_code_org_what_create: 'Code.org: మీరు ఏమి సృష్టిస్తారు?'
+  social_hoc2018_creativity_in_are_you: 'ఈ #HourOfCode సృజనాత్మకతకు సంబంధించింది.
+    నేను ఇందులో ఉన్నాను. మీరున్నారా?'
+  social_hoc2018_dance_party: 'అవర్ ఆఫ్ కోడ్: డాన్స్ పార్టీ'
+  social_hoc2018_dance_what_create: కేటీ పెర్రీ, మడోన్నా, జె. బల్విన్, సియా, కీత్
+    అర్బన్, సియారా, ఇంకా 25 మంది కనిపించే!
+  social_hoc2018_every_student: కంప్యూటర్ సైన్స్‌తో తమ సృజనాత్మకతను వ్యక్తం చేసే అర్హత
+    ప్రతి విద్యార్థికి ఉంది.
+  social_hoc2018_every_student_try_what_create: కంప్యూటర్ సైన్స్‌తో తమ సృజనాత్మకతను
+    వ్యక్తం చేసే అర్హత ప్రతి విద్యార్థికి ఉంది. కొత్త ట్యుటోరియల్స్‌ను మీరే ప్రయత్నించి
+    చూడండి. మీరు ఏమి సృష్టిస్తారు?
+  social_hoc2018_hoc_coming_create: అవర్ ఆఫ్ కోడ్ వస్తుంది! మీరు ఏమి సృష్టిస్తారు?
+  social_hoc2018_hoc_here: అవర్ ఆఫ్ కోడ్ వచ్చేసింది!
+  social_hoc2018_join: 'అవర్ ఆఫ్ కోడ్: ఉద్యమంలో చేరండి'
+  social_hoc2018_mc: అవర్ ఆఫ్ కోడ్ కోసం Minecraft మళ్లీ వచ్చింది, మీరే హోరో! కోడ్‌తో
+    Minecraft biomes గుండా ప్రయాణం చేయడానికి కోడ్ రాయండి.
+  social_hoc2018_mc_creativity: కోడ్‌తో నీటి లోపలి ప్రపంచాలను అన్వేషించే మరియు నిర్మించే
+    మీ సృజనాత్మకత మరియు సమస్య పరిష్కరించే నైపుణ్యాలను ఉపయోగించండి.
+  social_hoc2018_what_create: మీరు ఏమి సృష్టిస్తారు?
+  social_hoc2018_global_movement: ఆఅవర్ ఆఫ్ కోడ్ లక్షలాది విద్యార్థులను చేరుకుంటున్న
+    ఒక ప్రపంచవ్యాప్త ఉద్యమం. ఒన్-అవర్ ట్యుటోరియల్స్ 45+ భాషల్లో అన్ని వయస్సుల వారికి
+    అందుబాటులో ఉన్నాయి.
+  map_title: అవర్ ఆఫ్ కోడ్ మ్యాప్
+  map_header: 'అవర్ ఆఫ్ కోడ్ 2017 కోసం # ఈవెంట్లు రిజిస్టర్ చేయబడ్డాయి'
+  map_header_count_year: "%{event_count} ఈవెంట్లు రిజిస్టర్ చేయబడ్డాయి %{year}"
+  see_all_events: అన్ని ఈవెంట్లు చూడండి
+  map_header_company: 'కంపెనీ నిర్వాహకుల ద్వారా #'
+  map_header_country: "%{country} లో #"
+  map_search_placeholder: అవర్ ఆఫ్ కోడ్ ఈవెంట్ల కోసం వెతకండి
+  map_search_search: వెతకండి
+  map_search_reset: రీసెట్ చేయండి
+  map_legend_title: లెజెండ్
+  map_legend_hoc_events: అవర్ ఆఫ్ కోడ్ ఈవెంట్
+  map_legend_cs_tech_jam: ప్రత్యేక ఈవెంట్
+  map_warning: ఈవెంట్ల పూర్తి లిస్టును <a href='%{events_url}'>ఈవెంట్స్ పేజీలో చూడవచ్చు.</a>
+  meta_tag_og_title: 'అవర్ ఆఫ్ కోడ్: ఉద్యమంలో చేరండి'
+  meta_tag_og_description: ఆఅవర్ ఆఫ్ కోడ్ 180+ దేశాలలో మరియు 45కు పైగా భాషల్లో అన్ని
+    వయస్సుల లక్షలాది విద్యార్థులను చేరుకుంటున్న ఒక ప్రపంచవ్యాప్త ఉద్యమం.
+  meta_tag_twitter_title: 'అవర్ ఆఫ్ కోడ్: ఉద్యమంలో చేరండి'
+  meta_tag_twitter_description: ఆఅవర్ ఆఫ్ కోడ్ 180+ దేశాలలో మరియు 45కు పైగా భాషల్లో
+    అన్ని వయస్సుల లక్షలాది విద్యార్థులను చేరుకుంటున్న ఒక ప్రపంచవ్యాప్త ఉద్యమం.
+  twitter_default_text: 'నేను ఈ సంవత్సరపు #HourOfCode లో పాల్గొంటున్నాను, మీరు పాల్గొంటున్నారా?
     @codeorg'
-  twitter_donor_text: 'This year''s #HourOfCode is about creativity. I’m in! Are you?
-    (Thanks %{random_donor} for supporting @codeorg)'
-  twitter_donor_text_2019: 'This year''s #HourOfCode is about #CSforGood. I’m in!
-    Are you? (Thanks %{random_donor} for supporting @codeorg)'
-  hoc_faq_title: FAQs
-  hoc_faq_what_is_hoc_q: What is the Hour of Code?
-  hoc_faq_what_is_hoc_a: The Hour of Code started as a one-hour introduction to computer
-    science, designed to demystify "code", to show that anybody can learn the basics,
-    and to broaden participation in the field of computer science. It has since become
-    a worldwide effort to celebrate computer science, starting with 1-hour coding
-    activities but expanding to all sorts of community efforts. Check out the <a href='%{tutorials}'>tutorials
-    and activities</a>. This grassroots campaign is supported by over <a href='%{partners}'>400
-    partners</a> and 200,000 educators worldwide.
-  hoc_faq_last_year: Try the tutorials
-  hoc_faq_when_is_hoc_q: When is the Hour of Code?
-  hoc_faq_when_is_hoc_a: The Hour of Code takes place each year during <a href='%{csedweek_url}'>Computer
-    Science Education Week</a>. The %{campaign_date_year} Computer Science Education
-    Week will be %{campaign_date_full}, but you can host an Hour of Code all year-round.
-    Computer Science Education Week is held annually in recognition of the birthday
-    of computing pioneer <a href='%{grace_hopper}'>Admiral Grace Murray Hopper</a>
-    (December 9, 1906).
-  hoc_faq_why_cs_q: Why computer science?
-  hoc_faq_why_cs_a: "<i>Every</i> student should have the opportunity to learn computer
-    science. It helps nurture problem-solving skills, logic and creativity. By starting
-    early, students will have a foundation for success in any 21st-century career
-    path. See more stats <a href='%{stats_url}'>here</a>."
-  hoc_faq_how_participate_q: How do I participate in the Hour of Code?
-  hoc_faq_how_participate_a: "<a href='/how-to'>Start planning here</a> by reviewing
-    our how-to guide. You can organize an Hour of Code event at your school or in
-    your community &mdash; like in an extracurricular club, non-profit or at work.
-    Or, just try it yourself when %{campaign_date} arrives."
-  hoc_faq_behind_hoc_q: Who is behind the Hour of Code?
-  hoc_faq_behind_hoc_a: The Hour of Code is driven by the Hour of Code and Computer
-    Science Education Week <a href='%{partner_url}'>Advisory and Review Committees</a>
-    as well as an unprecedented coalition of partners that have come together to support
-    the Hour of Code &mdash; including Microsoft, Apple, Amazon, Boys and Girls Clubs
-    of America and the College Board.
-  hoc_faq_host_q: I don't know anything about coding. Can I still host an event?
-  hoc_faq_host_a: Of course. Hour of Code activities are self-guided. All you have
-    to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the
-    tutorial you want, and pick an hour &mdash; we take care of the rest. We also
-    have options for every age and experience-level, from kindergarten and up. Start
-    planning your event by reading our <a href='/how-to'>how to guide</a>.
-  hoc_faq_devices_q: What devices should I use for my students?
-  hoc_faq_devices_a: Code.org tutorials work on all devices and browsers. You can
-    see more information about Code.org's tutorial tech needs <a href='%{codeorg_url}/educate/it'>here</a>.
-    Tech needs for non-Code.org tutorials can be found on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
-    in the tutorial specific description. Don't forget we also offer <a href='%{unplugged_url}'>unplugged
-    activities</a> if your school can't accommodate the tutorials!
-  hoc_faq_need_computers_q: Do I need computers for every participant?
-  hoc_faq_need_computers_a: No. We have Hour of Code tutorials that work on PCs, smartphones,
-    tablets, and some that require no computer at all! You can join wherever you are,
-    with whatever you have. <p><i>Here are a few options:</i> <br> <ul> <li><b>Work
-    in pairs.</b> <a href='%{pair_programming_research}'>Research shows</a> students
-    learn best with <a href='%{pair_programming_video}'>pair programming</a>, sharing
-    a computer and working together. Encourage your students to double up. <li><b>Use
-    a projected screen.</b> If you have a projector and screen for a Web-connected
-    computer, your entire group can do an Hour of Code together. Watch video portions
-    together and take turns solving puzzles or answering questions. <li><b>Go unplugged.</b>
-    We offer <a href='%{unplugged_url}'>tutorials that require no computer</a> at
-    all. </ul>
-  hoc_faq_international_q: I am in <country>. How do I participate internationally?
-  hoc_faq_international_a: Anyone can organize an Hour of Code event, anywhere in
-    the world. Last year, students worldwide joined together for the Hour of Code.
-    Find out more <a href='/promote'>here</a>.
-  hoc_faq_tutorial_q: How can I make an Hour of Code tutorial?
-  hoc_faq_tutorial_a: If you're interested in becoming a tutorial partner, <a href='/tutorial-guidelines'>see
-    our guidelines and instructions</a>. We'd like to host a variety of engaging options,
-    but the primary goal is to optimize the experience for students and teachers who
-    are new to computer science.
-  hoc_faq_account_q: Do students need to log on using an account?
-  hoc_faq_account_a: No. Absolutely no signup or login is required for students to
-    try the Hour of Code. Most of the <a href='%{codeorg_url}/learn/beyond'>follow-on
-    courses</a> require account creation to save student progress. Also, signing up
-    for the Hour of Code does NOT automatically create a Code Studio account. If you
-    do want to create accounts for your students, please follow these <a href='https://youtu.be/_smelV_KISE'>instructions</a>.
-  hoc_faq_high_school_q: Which activity should I do with high school students?
-  hoc_faq_high_school_a: Our Star Wars and Minecraft tutorials are great for high
-    schoolers, especially the Star Wars JavaScript version and the free play level
-    on both tutorials. Alternately, we recommend trying one of the beginner tutorials
-    on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> to start, such as the
-    tutorial with Angry Birds or with Anna and Elsa. A high school student should
-    be able to finish one of these in 30 minutes and can then try a more advanced
-    tutorial in JavaScript, such as Khan Academy or CodeHS.
-  hoc_faq_scratch_q: I am doing Scratch for Hour of Code, but what if my students
-    have iPads rather than laptops?
-  hoc_faq_scratch_a: Scratch doesn't run on tablets. If your students are young, they
-    can use the ScratchJR iPad app (for early-readers). If you look at the tutorials
-    on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>, you can find other
-    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
-  hoc_faq_count_hoc_q: How do you count Hours of Code?
-  hoc_faq_map_q: Why don't I see my dot on the map?
-  hoc_faq_map_a: We're so sorry you aren't seeing your event on the Hour of Code map.
-    Because of the tens of thousands of organizers who sign up, the map aggregates
-    the data and displays one point for several events. If you click the <a href='%{events_url}'>events
-    page</a> link below the map you will be directed to a list of all events by state
-    and can find your event listed there. Additionally, given the thousands of people
-    signing up for the Hour of Code, the map and event list usually takes 48 hours
-    to update. Check back in a few days!
-  hoc_faq_count_hoc_a: The Hour of Code tracker isn't an exact measurement of usage.
-    We do not count unique student IDs perfectly when tracking participation in the
-    Hour of Code, especially because we don't require students to log in or register.
-    As a result, we both over-count and under-count participants at the same time.
-    Read all the details <a href='%{codeorg_url}/loc'>here</a>.
-  hoc_faq_one_hour_q: How much can one learn in an hour?
-  hoc_faq_one_hour_a: The goal of the Hour of Code is not to teach anybody to become
-    an expert computer scientist in one hour. One hour is only enough to learn that
-    computer science is fun and creative, that it is accessible at all ages, for all
-    students, regardless of background. The measure of success of this campaign is
-    not in how much CS students learn - the success is reflected in broad participation
-    across gender and ethnic and socioeconomic groups, and the resulting increase
-    in enrollment and participation we see in CS courses at all grade levels. Millions
-    of the participating teachers and students have decided to go beyond one hour
-    -  to learn for a whole day or a whole week or longer, and many students have
-    decided to enroll in a whole course (or even a college major) as a result. <br/><br/>
-    Besides the students, another "learner" is the educator who gains the confidence
-    after one hour that they can teach computer science even though they may not have
-    a college degree as a computer scientist. Tens of thousands of teachers decide
-    to pursue computer science further, either attending PD or offering follow-on
-    online courses, or both. And this applies to school administrators too, who realize
-    that computer science is something their students want and their teachers are
-    capable of. <br/><br/> Above all, what all participants can learn in an hour is
-    that we can do this.
-  hoc_faq_more_questions_q: Still have more questions?
-  hoc_faq_more_questions_a: Try finding an answer in our <a href='http://support.code.org'>support
-    forum</a>.
-  hoc_faq_keep_learning_q: How do I keep learning after the Hour of Code?
-  hoc_faq_keep_learning_a: Anyone can host an Hour of Code at any time. The tutorials
-    stay up year-round. You can expect all our tutorials and curriculum to be available
-    on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for
-    event how-to guides and other resources to help make your Hour of Code event a
-    success.
-  hoc_faq_certificates_q: Where can I print certificates for my students?
-  hoc_faq_certificates_a: Go to our <a href='%{codeorg_url}/certificates'>certificates
-    page</a> where you can print certificates for your entire class ahead of time.
-    You can also print out <a href='%{codeorg_url}/certificates?course=mc'>special
-    certificates</a> for students doing the Minecraft tutorial.
-  hoc_faq_logo_q: Are there limitations to how I can use the Hour of Code logo or
-    name?
-  hoc_faq_logo_a: Hour of Code is trademarked. We don't want to prevent its usage,
-    but we want to make sure its usage fits within a few limits. Please see <a href='%{logo_url}'>these
-    guidelines for usage</a>.
-  stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
-  stats_growth: It was the fastest to reach 15 million users.
-  stats_i18n: Students are learning in over 45 languages
-  stats_tumblr: 'Tumblr: 3.5 years'
-  stats_facebook: 'Facebook: 3 years'
-  stats_twitter: 'Twitter: 2.5 years'
-  stats_pinterest: 'Pinterest: 2 years'
-  stats_instagram: 'Instagram: 14 months'
-  stats_hoc: 'The Hour of Code: 5 days'
-  stats_global: Over 100M students have tried an Hour of Code
-  stats_girls_more: More girls tried computer science than in the last 70 years
-  stats_females: Participation of female students in computer science is only 20-25%
-    of high school courses, university courses, and the workforce.
-  stats_females_more: During the Hour of Code, female students make up <b>50% of all
-    participants</b>!
-  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
-    - Nina Nichols Peery, Teacher'
-  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
-    Alzate, 5th grader'
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
-    - Michael Clark, Teacher'
-  resources_how_to: How-to guide for teachers
-  resources_how_to_events: Event how-to guide
-  resources_how_to_districts: How-to guide for districts
-  resources_how_to_officials: How-to guide for public officials
-  resources_handouts: Handouts to spread the word
-  resources_one_pager: One-page handout
-  resources_brochure: Brochure
-  resources_posters: Posters
-  resources_videos: Videos
-  resources_banners: Social media
-  resources_emails: Sample emails
-  resources_logo: Hour of Code logo
-  resources_stats: Stats and blurbs
-  resources_press_kit: Press Kit
-  resources_social: Social
-  resources_country_resources: Country Specific Resources
-  resources_stickers: Stickers
-  resources_how_to_guides: How-to guides
-  resources_promote: Promote
-  resources_nav_tutorials: Try the tutorials
-  resources_nav_promote: Spread the word
-  resources_nav_spread_word: How to get involved
-  resources_banner_promote_text: Promote
-  resources_banner_promote_button: Encourage others to sign up with brochures, inspirational
-    posters and social media banners.
-  resources_banner_howto_text: How-to
-  resources_banner_howto_button: Resources for educators, parents and districts to
-    host an Hour of Code.
-  handouts_section: Share these handouts
-  handouts_onepager: Spread the word with this one page handout
-  handouts_brochure: Give this brochure to teachers and schools
-  handouts_participationguide: Plan your Hour of Code with this participation guide
-  videos_title: Show these videos to inspire students
-  videos_what_most_schools_dont_teach: What Most Schools Don't Teach (5 min)
-  videos_hoc_2014: Hour of Code is Here - Anybody Can Learn
-  videos_obama_cs: President Obama on computer science
-  videos_anybody_can_learn: Anybody Can Learn (1 min)
-  videos_creativity: What is Creativity?
-  videos_creativity_series: What is Creativity? View Full Series.
-  title_country_resources: Country Specific Resources
-  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
-  title_hoc_review_committee: Hour of Code and CSEdWeek Review Committee
-  title_how_to_promote: Spread the word
-  title_how_to_districts: Hour of Code How-To for Districts
-  title_how_to_events: Hour of Code Event How-To
-  title_how_to_organizations: How to host an Hour of Code - Organizations
-  title_how_to_companies: How to host an Hour of Code - Companies
-  title_how_to_officials: How-to guide for public officials
-  title_how_to_volunteers: How-to guide for Hour of Code volunteers
-  title_how_to_parents: How-to guide for parents
-  title_how_to: How-to Guide
-  title_international_partners: Contact International Partners
-  title_press_release: Hour of Code Press Release for Elected Officials
-  title_op_ed: Sample Op-ed Supportive of Computer Science Education Week and Hour
-    of Code
-  title_press_kit: Press Kit
-  title_proclamation: Sample Resolution Supportive of Computer Science Education Week
-    and Hour of Code
-  title_stats: Blurbs and Stats
-  title_partners: Partners
-  title_resources: Resources
+  twitter_donor_text: 'ఈ సంవత్సరపు #HourOfCode సృజనాత్మకతకు సంబంధించింది. నేను ఇందులో
+    ఉన్నాను! మీరున్నారా? (మద్దతు ఇచ్చినందుకు %{random_donor} ధన్యవాదాలు @codeorg)'
+  twitter_donor_text_2019: 'ఈ సంవత్సరపు #HourOfCode #CSforGood కు సంబంధించింది. నేను
+    ఇందులో ఉన్నాను! మీరున్నారా? (మద్దతు ఇచ్చినందుకు %{random_donor} ధన్యవాదాలు @codeorg)'
+  hoc_faq_title: తరచూ అడిగే ప్రశ్నలు
+  hoc_faq_what_is_hoc_q: అవర్ ఆఫ్ కోడ్ అంటే ఏమిటి?
+  hoc_faq_what_is_hoc_a: కంప్యూటర్ సైన్స్ రంగంలో "కోడ్" గురించి ఉన్న భ్రమలు తొలగించడానికి,
+    ఎవరైనా బేసిక్స్ నేర్చుకోవచ్చని చూపించడానికి మరియు ఈ రంగంలో ప్రజలు పాల్గొనడాన్ని
+    విస్తృతపరచడానికి, కంప్యూటర్ సైన్స్ గురించి ఒక-గంట పరిచయం చేసే కార్యక్రమంగా అవర్
+    ఆఫ్ కోడ్ ప్రారంభం అయింది. అప్పటి నుండి ఇది కంప్యూటర్ సైన్స్‌ను వేడుక చేసుకోవడానికి,
+    1-అవర్ కోడింగ్ కార్యకలాపాలతో ప్రారంభమై, అన్ని రకాల కమ్యూనిటీ ప్రయత్నాలకు విస్తరిస్తూ
+    ఒక ప్రపంచవ్యాప్త ప్రయత్నంగా మారింది. <a href='%{tutorials}'>ట్యుటీరియల్స్ మరియు
+    కార్యకలాపాలు</a> చెక్ ఔట్ చేయండి. ఈ క్షేత్రస్థాయి ఉద్యమానికి ప్రపంచవ్యాప్తంగా
+    <a href='%{partners}'>400 భాగస్వాములు</a> మరియు 200,000 ఎడ్యుకేటర్ల మద్దతు ఉంది.
+  hoc_faq_last_year: ట్యుటోరియల్స్ ప్రయత్నించండి
+  hoc_faq_when_is_hoc_q: అవర్ ఆఫ్ కోడ్ అంటే ఏమిటి?
+  hoc_faq_when_is_hoc_a: అవర్ ఆఫ్ కోడ్ ప్రతి సంవత్సరం <a href='%{csedweek_url}'>కంపూటర్
+    సైన్స్ ఎడ్యుకేషన్ వీక్</a>సమయంలో జరుగుతుంది. %{campaign_date_year} కంప్యూటర్ సైన్స్
+    ఎడ్యుకేషన్ వీక్ %{campaign_date_full} న ఉంటుంది, కానీ మీరు సంవత్సరం అంతా అవర్
+    ఆఫ్ కోడ్‌ను హోస్ట్ చేయవచ్చు. కంప్యూటింగ్ మార్గదర్శకులు <a href='%{grace_hopper}'>అడ్మిరల్
+    గ్రేస్ ముర్రే హోప్పర్</a> (డిసెంబరు 9, 1906) ఙ్ఞాపకార్థం ప్రతి సంవత్సరం కంపూటర్
+    సైన్స్ ఎడ్యుకేషన్ వీక్ నిర్వహించబడుతుంది.
+  hoc_faq_why_cs_q: కంపూటర్ సైన్స్ ఎందుకు?
+  hoc_faq_why_cs_a: "<i>Every</i> కంప్యూటర్ సైన్స్ నేర్చుకోవడానికి ప్రతి విద్యార్థికి
+    అవకాశం ఉండాలి. ఇది సమస్య-పరిష్కార నైపుణ్యాలు, తర్కం మరియు సృజనాత్మకతను పెంచడానికి
+    సహాయపడుతుంది. ముందుగా ప్రారంభించడం ద్వారా విద్యార్థులు 21వ-శతాబ్దపు వృత్తి మార్గం
+    దేనిలోనైనా విజయం సాధించడానికి పునాది ఏర్పరచుకుంటారు. మరిన్ని గణాంకాలు <a href='%{stats_url}'>ఇక్కడ</a>
+    చూడండి."
+  hoc_faq_how_participate_q: అవర్ ఆఫ్ కోడ్ లో నేను ఎలా పాల్గొంటాను?
+  hoc_faq_how_participate_a: మా హౌ-టు గైడ్‌ను సమీక్షించడం ద్వారా <a href='/how-to'>ప్లానింగ్
+    చేయడం ఇక్కడ ప్రారంభించండి</a>. మీరు మీ పాఠశాలలో లేక మీ కమ్యూనిటీలో &mdash; ఒక
+    అదనపు బోధనేతర క్లబ్, నాన్-ప్రాఫిట్ లేక పని ప్రదేశం లాంటి చోట అవర్ ఆఫ్ కోడ్ ఈవెంట్‌ను
+    నిర్వహించవచ్చు. లేదా %{campaign_date} వచ్చినప్పుడు మీకు మీరే ఊరకే ప్రయత్నించండి.
+  hoc_faq_behind_hoc_q: అవర్ ఆఫ్ కోడ్ వెనుక ఎవరున్నారు?
+  hoc_faq_behind_hoc_a: అవర్ ఆఫ్ కోడ్, అవర్ ఆఫ్ కోడ్ మరియు కంప్యూటర్ సైన్స్ ఎడ్యుకేషన్
+    వీక్ <a href='%{partner_url}'>సలహా మరియు సమీక్షా కమిటీలు</a>తోపాటు మైక్రోసాఫ్ట్,
+    ఆపిల్, అమేజాన్, అమెరికాలోని బాయ్స్ అండ్ గర్ల్స్ క్లబ్బులు మరియు కాలేజ్ బోర్డుతోసహా
+    భాగస్వాముల ఒక అభూతపూర్వ కూటమి ద్వారా అవర్ ఆఫ్ కోడ్ స్ఫూర్తి పొందింది.
+  hoc_faq_host_q: నాకు కోడింగ్ గురించి ఏమీ తెలియదు. అయినా నేను ఒక ఈవెంట్ హోస్ట్ చేయగలనా?
+  hoc_faq_host_a: అవును. అవర్ ఆఫ్ కోడ్ కార్యకలాపాలు స్వీయ-మార్గదర్శనం కలవి. మీరు చేయవలసినదల్లా
+    <a href='%{codeorg_url}/learn'>మా ప్రస్తుత ట్యుటోరియల్స్ ప్రయత్నించడమే</a>, మీకు
+    కావలసిన ట్యుటోరియల్స్ ఎంచుకోండి మరియు ఒక గంట ఎంచుకోండి &mdash; మిగిలినదంతా మేము
+    చూసుకుంటాము. మావద్ద ప్రతి వయస్సు మరియు అనుభవం-స్థాయికి కిండర్‌గార్టన్ నుండి ఆపై
+    స్థాయికి వికల్పాలు కూడా ఉన్నాయి. మా <a href='/how-to'>how to guide</a> చదవటం ద్వారా
+    మీ ఈవెంట్ ప్లాన్ చేసుకోవడం ప్రారంభించండి.
+  hoc_faq_devices_q: మా విద్యార్థుల కోసం నేను ఏ పరికరాలు ఉపయోగించాలి?
+  hoc_faq_devices_a: Code.org ట్యుటోరియల్స్ అన్ని పరికరాలు మరియు బ్రౌజర్లలో పనిచేస్తాయి.
+    Code.org ట్యుటోరియల్ టెక్నికల్ అవసరాల గురించి <a href='%{codeorg_url}/educate/it'>ఇక్కడ</a>చూడగలరు.
+    non-Code.org ట్యుటోరియల్స్, ట్యుటోరియల్ నిర్దిష్ట వర్ణనలో <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
+    లో పొందవచ్చు. మీ పాఠశాల ట్యుటోరియల్స్‌కు వసతి కల్పించలేక పోతే మేము <a href='%{unplugged_url}'>unplugged
+    activities</a> కూడా అందివ్వగలమని మరచిపోకండి!
+  hoc_faq_need_computers_q: ప్రతి పాల్గొనే వ్యక్తి కోసం నాను కంప్యూటర్లు అవసరమా?
+  hoc_faq_need_computers_a: లేదు. కంప్యూటర్ ఏమాత్రం అవసరం లేని పిసిలు, స్మార్ట్‌ఫోన్లు,
+    టాబ్లెట్లు మరియు మరికొన్నింటిపై పనిచేసే అవర్ ఆఫ్ కోడ్ ట్యుటోరియల్స్ మావద్ద ఉన్నాయి!
+    మీరు ఎక్కడ ఉంటే అక్కడ, మీవద్ద ఏముంటే దానితో చేరవచ్చు. <p><i>ఇక్కడ కొద్ది వికల్పాలు
+    ఉన్నాయి:</i> <br> <ul> <li><b>జంటగా పనిచేయండి.</b> <a href='%{pair_programming_research}'>పరిశోధనలు</a>
+    విద్యార్థులు ఒక కంప్యూటర్ పంచుకుంటూ మరియు కలసి పనిచేస్తూ <a href='%{pair_programming_video}'>జంట
+    ప్రోగ్రామింగ్</a>ద్వారా అత్యుత్తమంగా నేర్చుకుంటారు అని చెబుతున్నాయి. ఇద్దరిద్దరుగా
+    ఏర్పడటానికి మీ విద్యార్థులను ప్రోత్సహించండి. <li><b>ఒక ప్రొజెక్టెడ్ స్క్రీన్ ఉపయోగించండి.</b>
+    మీ వద్ద వెబ్-కనెక్ట్ చేయబడిన కంప్యూటర్ కోసం ఒక ప్రొజెక్టర్ మరియు స్క్రీన్ ఉంటే,
+    మీ మొత్తం గ్రూపు కలిసి అవర్ ఆఫ్ కోడ్‌ను చేయగలదు. వీడియో భాగాలను కలిసి చూడండి మరియు
+    పజిల్స్ పరిష్కరించడానికి లేక ప్రశ్నలకు జవాబివ్వడానికి వంతులు తీసుకోండి. <li><b>అన్‌ప్లగ్గడ్‌గా
+    వెళ్లండి.</b> కంప్యూటర్ అవసరం లేని <a href='%{unplugged_url}'> ట్యుటోరియల్స్ మేము
+    అందిస్తాము. </ul>
+  hoc_faq_international_q: నేను <country> లో ఉన్నాను. నేను అంతర్జాతీయంగా ఎలా పాల్గొనగలను?
+  hoc_faq_international_a: ఎవ్వరైనా అవర్ ఆఫ్ కోడ్ ఈవెంట్‌ను, ప్రపంచంలో ఎక్కడైనా నిర్వహించవచ్చు.
+    గత సంవత్సరం, ప్రపంచవ్యాప్తంగా విద్యార్థులు అవర్ ఆఫ్ కోడ్ కోసం ఒకచోట చేరారు. మరింత
+    తెలుసుకోండి <a href='/promote'>ఇక్కడ</a>.
+  hoc_faq_tutorial_q: నేను అవర్ ఆఫ్ కోడ్ ట్యుటోరియల్ ఎలా తయారు చేయగలను?
+  hoc_faq_tutorial_a: మీకు ట్యుటోరియల్ భాగస్వామి కావాలని ఆసక్తి ఉంటే, <a href='/tutorial-guidelines'>మా
+    మార్గదర్శకాలు మరియు సూచనలు చూడండి</a>. మేము వివిధ రకాల ఆకర్షణీయమైన వికల్పాలను
+    హోస్ట్ చేయాలని కోరుకుంటాము, కానీ కంప్యూటర్ సైన్స్‌కు కొత్త అయిన విద్యార్థులు మరియు
+    ఉపాధ్యాయుల కోసం అనుభవాన్ని అనుకూలపరచడం ప్రధాన లక్ష్యం.
+  hoc_faq_account_q: విద్యార్థులు ఒక అకౌంట్ ఉపయోగించి లాగ్ ఆన్ కావలసిన అవసరం ఉందా?
+  hoc_faq_account_a: లేదు. విద్యార్థులు అవర్ ఆఫ్ కోడ్‌ను ప్రయత్నించడానికి ఏమాత్రం
+    సైన్‌అప్ లేదా లాగిన్ అవసరం లేదు. చాలా వరకు <a href='%{codeorg_url}/learn/beyond'>ఫాలో-ఆన్
+    కోర్సులకు</a> విద్యార్థి పురోగతిని సేవ్ చేయడానికి అకౌంట్ సృష్టించడం అవసరం అవుతుంది.
+    అంతేకాకుండా, అవర్ ఆఫ్ కోడ్ కోసం సైన్ అప్ చేయడం అనేది ఆటోమేటిక్‌గా కోడ్ స్టూడియో
+    అకౌంట్ సృష్టించదు. మీరు మీ విద్యార్థుల కోసం అకౌంట్లు సృష్టంచవద్దని అనుకుంటే, దయచేసి
+    ఈ <a href='https://youtu.be/_smelV_KISE'>సూచనలు</a> పాటించండి.
+  hoc_faq_high_school_q: ఉన్నత పాఠశాల విద్యార్థులకు నేను ఏ యాక్టివిటీ చేయాలి?
+  hoc_faq_high_school_a: మా స్టార్ వార్స్ (Star Wars) మరియు మినెక్రాఫ్ట్ (Minecraft)
+    ట్యుటోరియల్స్ ఉన్నత పాఠశాల విద్యార్థులకు అద్భుతంగా ఉంటాయి, ప్రత్యేకించి స్టార్
+    వార్స్ JavaScript వెర్షను మరియు రెండు వెర్షన్లలో ఫ్రీ ప్లే లెవల్. ప్రత్యామ్నాయంగా,
+    Angry Birds లేక Anna and Elsa లాంటి ప్రారంభ ట్యుటోరియల్స్‌లో ఒకదాన్ని <a href='%{codeorg_url}/learn'>%{partner_url}/లెర్న్</a>
+    తో మొదలు పెట్టమని మేము సిఫారసు చేస్తాము. ఉన్నత పాఠశాల విద్యార్థి వీటిలో ఒకదాన్ని
+    30 నిమిషాలలో పూర్తి చేయగలగాలి మరియు తరువాత JavaScript లో Khan Academy లేక CodeHS
+    లాంటి మరింత ఉన్నతస్థాయి ట్యుటోరియల్‌ను వారు ప్రయత్నించవచ్చు.
+  hoc_faq_scratch_q: నేను అవర్ ఆఫ్ కోడ్ కోసం Scratch చేస్తున్నాను, అయితే మా విద్యార్థుల
+    వద్ద లాప్‌టాప్ లకు బదులు iPads ఉంటే ఏమవుతుంది?
+  hoc_faq_scratch_a: Scratch టాబ్లెట్లలో నడువదు. మీ విద్యార్థులు చిన్నవయస్సువారు అయితే,
+    వారు ScratchJR iPad యాప్ (ప్రారంభ-రీడర్ల కోసం) ఉపయోగించగలరు. మీరు <a href='%{codeorg_url}/learn'>%{partner_url}/లెర్న్</a>
+    మీద టుటోరియల్స్ కోసం చూస్తుంటే, మీరు Code.org, Tynker, Lightbot లేదా CodeSpark
+    నుండి iPads లో పనిచేసే ఇతర ట్యుటోరియల్స్ పొందగలరు.
+  hoc_faq_count_hoc_q: కోడ్ యొక్క గంటలను మీరు ఎలా లెక్కిస్తారు?
+  hoc_faq_map_q: మ్యాప్‌లో నా డాట్ నాకు ఎందుకు కనిపించదు?
+  hoc_faq_map_a: అవర్ ఆఫ్ కోడ్ మ్యాప్‌లో మీ ఈవెంట్ మీకు కనిపించనందుకు మమ్మల్ని క్షమించండి.
+    వేలాది నిర్వాహకులు సైన్ అప్ చేయడం వల్ల, మ్యాప్ డేటాను మొత్తం చేసి అనేక ఈవెంట్లకు
+    ఒక పాయింట్ చూపిస్తుంది. మీరు మ్యాప్ క్రింది <a href='%{events_url}'>ఈవెంట్స్ పేజి</a>
+    క్లిక్ చేస్తే, మీరు స్టేట్ ప్రకారం అన్ని ఈవెంట్ల లిస్టుకు డైరెక్ట్ చేయబడతారు,
+    అక్కడ మీ ఈవెంట్ లిస్ట్ చేయబడి మీకు కనిపిస్తుంది. అంతేకాకుండా, వేలాదిమంది అవర్
+    ఆఫ్ కోడ్‌కు సైన్ అప్ చేస్తూ ఉండటం వల్ల, మ్యాప్ మరియు ఈవెంట్ లిస్టు అప్‌డేట్ అవ్వడానికి
+    48 గంటలు పడుతుంది. కొద్ది రోజుల తరువాత మళ్లీ చెక్ చేయండి!
+  hoc_faq_count_hoc_a: అవర్ ఆఫ్ కోడ్ ట్రాకర్ వాడకం యొక్క ఖచ్చితమైన కొలత కాదు. అవర్
+    ఆఫ్ కోడ్‌లో పార్టిసిపేషన్‌ను ట్రాక్ చేసేటప్పుడు మేము ప్రత్యేక విద్యార్థి ఐడిలను
+    ఖచ్చితంగా లెక్కించము, దీనికి ప్రత్యేక కారణం ఏమిటంటే, విద్యార్థులు లాగ్ ఇన్ లేదా
+    రిజిస్టర్ చేయాల్సిన అవసరం మాకు లేదు. ఫలితంగా, మేము ఒకే సమయంలో పాల్గొనేవారిని మేము
+    ఎక్కువ లేదా తక్కువగా రెండూ లెక్కిస్తాము. అన్ని వివరాలు చదవండి <a href='%{codeorg_url}/loc'>ఇక్కడ</a>.
+  hoc_faq_one_hour_q: ఒక గంటలో ఒకరు ఎంత నేర్చుకోగలరు?
+  hoc_faq_one_hour_a: అవర్ ఆఫ్ కోడ్ లక్ష్యం ఎవరినైనా ఒక గంటలో నైపుణ్యంగల కంప్యూటర్
+    సైంటిస్ట్ అయ్యేలా బోధించాలని కాదు. నేపథ్యంతో సంబంధం లేకుండా అన్ని వయస్సుల, అందరు
+    విద్యార్థులకు అందుబాటులో ఉండే కంప్యూటర్ సైన్స్ ఒక ఫన్ మరియు క్రియేటివ్ అని నేర్చుకోవడానికి
+    ఒక గంట సరిపోతుంది. ఈ ఉద్యమం యొక్క విజయపు కొలమానం సిఎస్ విద్యార్థులు ఎంత నేర్చుకున్నారు
+    అనేది కాదు - ఈ విజయం లింగ, జాతి మరియు సాంఘిక ఆర్థిక గ్రూపుల వ్యాప్తంగా విస్తృతంగా
+    పాల్గొనడంలో మరియు దీని ఫలితంగా అన్ని గ్రేడ్ స్థాయిలలో సిఎస్ కోర్సులలో పెరిగిన
+    నమోదు మరియు పార్టిసిపేషన్‌లో ఇది ప్రతిబింబిస్తుంది. లక్షలాదిమంది పాల్గొంటున్న
+    ఉపాధ్యాయులు మరియు విద్యార్థులు ఒక గంటను దాటి వెళ్లాలని - రోజంతా లేక వారం అంతా
+    లేక ఇంకా ఎక్కువ సమయం నేర్చుకోవడానికి నిర్ణయించుకున్నారు, ఫలితంగా ఎంతోమంది విద్యార్థులు
+    ఒక పూర్తి కోర్సులోనే (లేదా ఒక కాలేజ్ మేజర్‌లో కూడా) చేరడానికి నిర్ణయించుకున్నారు.
+    <br/><br/> విద్యార్థులే కాకుండా, ఒక గంట తరువాత తమకు కంప్యూటర్ సైంటిస్ట్‌గా కాలేజి
+    డిగ్రీ లేకపోయినప్పటికీ తాము కూడా కంప్యూటర్ సైన్స్ బోధించగలమని విశ్వాసం పొందిన
+    మరొక "లెర్నర్" ఎడ్యుకేటర్. వేలాదిమంది ఉపాధ్యాయులు PD లేక ఫాలో-ఆన్ ఆన్‌‌లైన్ కోర్సులకు,
+    లేదా రెండింటికీ హాజరై కంప్యూటర్ సైన్స్‌ను మరింత నేర్చుకోవాలని నిర్ణయించుకున్నారు.
+    ఇది పాఠశాల పరిపాలకులకు కూడా వర్తిస్తుంది, వీరు తమ విద్యార్థులు నేర్చుకోవాలని కోరుకుంటున్నది
+    మరియు తమ ఉపాధ్యాయులు నేర్పించగలిగినది కంప్యూటర్ సైన్స్ అని తెలుసుకున్నారు. <br/><br/>
+    పై అన్నింటికీ మించి, పాల్గొనేవారందరూ ఒక గంటలో నేర్చుకున్నది మేము దీన్ని చేయగలం
+    అని.
+  hoc_faq_more_questions_q: ఇంకా మరిన్ని ప్రశ్నలు ఉన్నాయా?
+  hoc_faq_more_questions_a: మా <a href='http://support.code.org'>సపోర్టు ఫోరం</a>
+    లో జవాబులు పొందడానికి ప్రయత్నించండి.
+  hoc_faq_keep_learning_q: అవర్ ఆఫ్ కోడ్ తరువాత నేను నేర్చుకోవడం ఎలా కొనసాగిస్తాను?
+  hoc_faq_keep_learning_a: ఎవరైనా ఎప్పుడైనా అవర్ ఆఫ్ కోడ్ హోస్ట్ చేయవచ్చు. ట్యుటోరియల్స్
+    ఏడాది పొడవునా ఉంటాయి. మా అన్ని ట్యుటోరియల్స్ మరియు పాఠ్యప్రణాళిక మా సైట్‌లో శాశ్వతంగా
+    ఉంటాయని మీరు ఆశించవచ్చు. మీ అవర్ ఆఫ్ కోడ్ విజయవంతం అవ్వడానికి సహాయపడే ఈవెంట్ హౌ-టు
+    గైడ్స్ మరియు ఇతర వనరుల కోసం దయచేసి <a href='/promote'>our resources</a> కు వెళ్లండి.
+  hoc_faq_certificates_q: మా విద్యార్థుల కోసం నేను ఎక్కడ సర్టిఫికేట్స్ ప్రింట్ చేయగలను?
+  hoc_faq_certificates_a: మా <a href='%{codeorg_url}/certificates'>certificates page</a>
+    కు వెళ్లండి, అక్కడ మీ మొత్తం క్లాసుకు ముందుగానే సర్టిఫికేట్లు ప్రింట్ చేయగలరు.
+    Minecraft ట్యుటోరియల్ చేసే విద్యార్థులకు కూడా మీరు <a href='%{codeorg_url}/certificates?course=mc'>special
+    certificates</a> లో సర్టిపికేట్స్ ప్రింట్ చేయగలరు.
+  hoc_faq_logo_q: అవర్ ఆఫ్ కోడ్ లోగో లేక పేరును నేను ఉపయోగించడం మీద ఏవైనా పరిమితులు
+    ఉన్నాయా?
+  hoc_faq_logo_a: అవర్ ఆఫ్ కోడ్ ఒక ట్రేడ్ మార్కు. మేము దీని వాడకాన్ని నిరోధించాలని
+    అనుకోవడం లేదు, కానీ దీని వాడకం కొన్ని పరిమితులకు లోబడి ఉండాలే చూడాలనికి మేము కోరుకుంటాము.
+    దయచేసి చూడండి <a href='%{logo_url}'>వాడకానికి ఈ మార్గదర్శకాలు</a>.
+  stats_hoc_2013_image_alt: 2013 అవర్ ఆఫ్ కోడ్ మ్యాప్ నుండి గణాంకాలు
+  stats_growth: ఇది 15 మిలియన్ల యూజర్లను చేరిన అత్యంత వేగవంతమైనది.
+  stats_i18n: విద్యార్థులు 45 కంటే ఎక్కువ భాషల్లో నేర్చుకుంటున్నారు
+  stats_tumblr: 'Tumblr: 3.5 సంవత్సరాలు'
+  stats_facebook: 'Facebook: 3 సంవత్సరాలు'
+  stats_twitter: 'Twitter: 2.5 సంవత్సరాలు'
+  stats_pinterest: 'Pinterest: 2 సంవత్సరాలు'
+  stats_instagram: 'Instagram: 14 నెలలు'
+  stats_hoc: 'అవర్ ఆఫ్ కోడ్: 5 రోజులు'
+  stats_global: 100 మిలియన్లకు పైగా విద్యార్థులు అవర్ ఆఫ్ కోడ్ ప్రయత్నించారు
+  stats_girls_more: గత 70 సంవత్సరాలలో కంటే ఎక్కువ బాలికలు కంప్యూటర్ సైన్స్‌ను ప్రయత్నించారు
+  stats_females: ఉన్నత పాఠశాల కోర్సులు, యూనివర్శిటీ కోర్సులు మరియు వర్క్‌ఫోర్స్‌లోని
+    మహిళా విద్యార్థులలో కేవలం 20-25% కంప్యూటర్ సైన్స్‌లో పాల్గొంటున్నారు.
+  stats_females_more: అవర్ ఆఫ్ కోడ్ సమయంలో, మహిళ విద్యార్థులు <b>మొత్తం పాల్గొనేవారిలో
+    50%</b> ఉన్నారు!
+  stats_nina: '"ప్రతి ఒక్కరోజు ఒకే ఫలితాలు&mdash ఇచ్చింది; 100% ఎంగేజ్‌మెంట్." - నినా
+    నిఖోలస్ ఫీరీ, టీచరు'
+  stats_student: '"ఇది <b>జీవితంలో ఒకసారి</b> అవకాశం అని నాకు తెలుసు" - మరియానా అల్జేట్,
+    5వ గ్రేడర్'
+  stats_michael: '"నా విద్యార్థులు నేర్చుకోవడం గురించి ఇంత ఉత్సాహం చూపడం నేను <b>ఎప్పుడూ,
+    ముందెప్పుడూ</b> చూడలేదు." - మైఖేల్ క్లార్క్, టీచర్'
+  resources_how_to: టీచర్ల కోసం హౌ-టు గైడ్
+  resources_how_to_events: ఈవెంట్ హౌ-టు గైడ్
+  resources_how_to_districts: టీచర్ల కోసం హౌ-టు గైడ్
+  resources_how_to_officials: పబ్లిక్ అధికారుల కోసం హౌ-టు గైడ్
+  resources_handouts: విషయాన్ని ప్రచారం చేయడానికి హాండ్‌ఔట్స్
+  resources_one_pager: ఒక-పేజీ హాండ్‌ఔట్
+  resources_brochure: బ్రోచర్
+  resources_posters: పోస్టర్లు
+  resources_videos: వీడియోలు
+  resources_banners: సోషల్ మీడియా
+  resources_emails: నమూనా ఇమెయిళ్లు
+  resources_logo: అవర్ ఆఫ్ కోడ్ లోగో
+  resources_stats: గణాంకాలు మరియు ప్రశంసలు
+  resources_press_kit: ప్రెస్ కిట్
+  resources_social: సోషల్
+  resources_country_resources: దేశ నిర్దిష్ట వనరులు
+  resources_stickers: స్టిక్కర్ల
+  resources_how_to_guides: హౌ-టు మార్గదర్శకాలు
+  resources_promote: ప్రమోట
+  resources_nav_tutorials: ట్యుటోరియల్స్ ప్రయత్నించండి
+  resources_nav_promote: ఈ విషయాన్ని ప్రచారం చేయండి
+  resources_nav_spread_word: పాలుపంచుకోవడం ఎలా
+  resources_banner_promote_text: ప్రమోట
+  resources_banner_promote_button: బ్రోచర్లు, ప్రేరణాత్మక పోస్టర్లు మరియు సోషల్ మీడియా
+    బ్యానర్ల ద్వారా సైన్ అప్ చేయడానికి ఇతరులను ప్రోత్సహించండి.
+  resources_banner_howto_text: హౌ-టు
+  resources_banner_howto_button: ఒక అవర్ ఆఫ్ కోడ్ హోస్ట్ చేయడానికి ఎడ్యుకేటర్లు, పేరెంట్స్
+    మరియు డిస్ట్రిక్ట్స్ కోసం వనరులు.
+  handouts_section: ఈ హాండ్‍‌ఔట్స్ పంచుకోండి
+  handouts_onepager: ఈ ఒక పేజీ హాండ్‌ఔట్‌తో ఈ విషయాన్ని ప్రచారం చేయండి
+  handouts_brochure: ఈ బ్రోచర్‌ను టీచర్లు మరియు పాఠశాలలకు ఇవ్వండి
+  handouts_participationguide: ఈ పార్టిసిపేషన్ గైడ్‌తో మీ అవర్ ఆఫ్ కోడ్ ప్లాన్ చేసుకోండి
+  videos_title: విద్యార్థులకు ప్రేరణ కల్గించడానికి ఈ వీడియోలు చూపించండి
+  videos_what_most_schools_dont_teach: అత్యధిక పాఠశాలలు నేర్పించనిదేమిటి (5నిమి)
+  videos_hoc_2014: అవర్ ఆఫ్ కోడ్ కోడ్ ఇక్క ఉంది - ఎవరైనా నేర్చుకోవచ్చు
+  videos_obama_cs: కంప్యూటర్ సైన్స్ గురించి ప్రెసిడెండ్ ఒబామా
+  videos_anybody_can_learn: ఎవరైనా నేర్చుకోవచ్చు (1నిమి)
+  videos_creativity: సృజనాత్మకత అంటే ఏమిటి?
+  videos_creativity_series: సృజనాత్మకత అంటే ఏమిటి? పూర్తి సీరీస్ చూడండి.
+  title_country_resources: దేశ నిర్దిష్ట వనరులు
+  title_hoc_advisory_committee: అవర్ ఆఫ్ కోడ్ మరియు CSEdWeek సలహా కమిటీ
+  title_hoc_review_committee: అవర్ ఆఫ్ కోడ్ మరియు CSEdWeek రివ్యూ కమిటీ
+  title_how_to_promote: ఈ విషయాన్ని ప్రచారం చేయండి
+  title_how_to_districts: జిల్లాల కోసం అవర్ ఆఫ్ కోడ్ హౌ-టు
+  title_how_to_events: అవర్ ఆఫ్ కోడ్ ఈవెంట్ హౌ-టు
+  title_how_to_organizations: ఒక అవర్ ఆఫ్ కోడ్ హోస్ట్ చేయడం ఎలా - సంస్థలు
+  title_how_to_companies: ఒక అవర్ ఆఫ్ కోడ్ హోస్ట్ చేయడం ఎలా - కంపెనీలు
+  title_how_to_officials: పబ్లిక్ అధికారుల కోసం హౌ-టు గైడ్
+  title_how_to_volunteers: అవర్ ఆఫ్ కోడ్ వాలెంటీర్ల కోసం హౌ-టు గైడ్
+  title_how_to_parents: తల్లిదండ్రుల కోసం హౌ-టు గైడ్
+  title_how_to: హౌ-టు గైడ్
+  title_international_partners: అంతర్జాతీయ భాగస్వాములను సంప్రదించండి
+  title_press_release: ఎన్నిక కాబడిన అధికారులకు అవర్ ఆఫ్ కోడ్ పత్రికా ప్రకటనలు
+  title_op_ed: కంప్యూటర్ సైన్స్ ఎడ్యుకేషన్ వీక్ మరియు అవర్ ఆఫ్ కోడ్‌కు మద్దతుగా నమూనా
+    Op-ed
+  title_press_kit: ప్రెస్ కిట్
+  title_proclamation: కంప్యూటర్ సైన్స్ ఎడ్యుకేషన్ వీక్ మరియు అవర్ ఆఫ్ కోడ్‌కు మద్దతుగా
+    నమూనా తీర్మానం
+  title_stats: ప్రశంసలు మరియు గణాంకాలు
+  title_partners: భాగస్వాములు
+  title_resources: వనరులు
   title_past_posters: Past Hour of Code Posters
-  title_signup_thanks: Thanks for signing up to host an Hour of Code!
-  title_tutorial_guidelines: Activity Guidelines
-  title_whole_school: Whole School Participation
-  events_nav_title: Hour of Code Events
-  events_nav_all: All Events
-  events_nav_whole_schools: Whole Schools
-  events_nav_special: Special Events
-  events_nav_orgs: Organizations
-  events_all_old_title: All @year Hour of Code events
-  events_all_title: All Hour of Code events
-  events_whole_school_title: Whole-school Hour of Code events
-  events_special_title: Hour of Code Special Events
-  events_orgs_title: All Hour of Code events organized by Partner Organizations
-  event: event
-  events: events
-  highlights_title: Highlights
-  highlights_header: Hour of Code Highlights
-  highlights_description: Some of our favorite moments from the Hour of Code campaign.
-  higlights_see_more: See more highlights
-  highlights_readmore: Read more
-  highlights_watchvideo: Watch the video
-  highlights_facebook: Share on Facebook
-  highlights_constant_alba_heading: The actress, activist, and entrepreneur hosted
-    an Hour of Code with the entire staff at The Honest Company.
-  highlights_constant_alba_short_heading: Jessica Alba learns an Hour of Code
-  highlights_constant_obama_heading: President Obama is the first president to write
-    a line of code, hosting a historic Hour of Code for students at the White House.
-  highlights_constant_obama_short_heading: Coder in Chief
-  highlights_constant_malala_heading: '"Every girl deserves to take part in creating
-    the technology that''ll change our world, and change who runs it."'
-  highlights_constant_malala_short_heading: Nobel Peace Prize winner Malala
-  highlights_constant_trudeau_heading: Canadian Prime Minister Justin Trudeau coded
-    a simple game featuring his favorite sport.
-  highlights_constant_trudeau_short_heading: Prime Minister Justin Trudeau codes a
-    game
-  highlights_constant_ny_heading: After an epic battle, 80% of Brooklyn schools did
-    the Hour of Code vs. 60% in Chicago. Not bad!
-  highlights_constant_ny_short_heading: Brooklyn beats Chicago
-  highlights_constant_athletes_heading: Champions and gold medalists Serena Williams,
-    Neymar Jr, Carmelo Anthony and more inspire students to push themselves.
-  highlights_constant_athletes_short_heading: Push yourself
-  footer_copyright_message: Copyright %{current_year} Code.org. All rights reserved.
-  footer_trademark_message: Hour of Code™ is a trademark of Code.org.
-  footer_menu_partners: Partners and Advisors
-  footer_menu_contact: Contact us
-  footer_menu_support: Support
-  footer_menu_terms: Terms
-  footer_menu_privacy: Privacy Policy
-  learn_banner_heading: Hour of Code Activities
-  learn_banner_blurb: Try a one-hour tutorial designed for all ages in over 45 languages.  Join
-    millions of students and teachers in over 180 countries starting with an Hour
-    of Code.
-  learn_banner_beyond: Want to keep learning?  <a id='learn_banner_beyond'>Go beyond
-    an hour</a>
-  learn_banner_teachers: 'Teachers: <a id=''teacher_banner_host''>Host an hour</a>
-    or <a id=''teacher_banner_howto''>read the How-To Guide</a>'
-  learn_robotics_banner_heading: Robotics and Circuits
-  learn_robotics_banner_blurb: Got robots or physical computing kits? Use them with
-    the activities below and make a tangible Hour of Code for students of any age!
-    Some activities even offer a simulator so you can get started without any hardware.
+  title_signup_thanks: ఒక అవర్ ఆఫ్ కోడ్ హోస్ట్ చేయడానికి సైనింగ్ అప్ చేసినందుకు ధన్యవాదాలు!
+  title_tutorial_guidelines: కార్యకలాపాల మార్గదర్శకాలు
+  title_whole_school: మొత్త పాఠశాల పాల్గొనటం
+  events_nav_title: అవర్ ఆఫ్ కోడ్ ఈవెంట్లు
+  events_nav_all: అన్ని ఈవెంట్లు
+  events_nav_whole_schools: మొత్తం పాఠశాల
+  events_nav_special: ప్రత్యేక ఈవెంట్లు
+  events_nav_orgs: సంస్థలు
+  events_all_old_title: "@సంవత్సరం అవర్ ఆఫ్ కోడ్ అన్ని ఈవెంట్లు"
+  events_all_title: అవర్ ఆఫ్ కోడ్ అన్ని ఈవెంట్లు
+  events_whole_school_title: మొత్తం-పాఠశాల అవర్ ఆఫ్ కోడ్ ఈవెంట్లు
+  events_special_title: అవర్ ఆఫ్ కోడ్ ప్రత్యేక ఈవెంట్లు
+  events_orgs_title: పార్ట్‌నర్ సంస్థలు నిర్వహించే అన్ని అవర్ ఆఫ్ కోడ్ ఈవెంట్లు
+  event: ఈవెంట్
+  events: ఈవెంట్లు
+  highlights_title: హైలైట్స్
+  highlights_header: అవర్ ఆఫ్ కోడ్ హైలైట్స్
+  highlights_description: అవర్ ఆఫ్ కోడ్ ఉద్యమం నుండి మాకు నచ్చిన కొన్ని క్షణాలు.
+  higlights_see_more: మరిన్ని హైలైట్స్ చూడండి
+  highlights_readmore: మరింత చదవండి
+  highlights_watchvideo: వీడియో చూడండి
+  highlights_facebook: Facebook లో షేర్ చేయండి
+  highlights_constant_alba_heading: ద హానెస్ట్ కంపెనీలో మొత్త సిబ్బందికి నటి, కార్యకర్త
+    మరియు పారిశ్రామికవేత్త అవర్ ఆఫ్ కోడ్ హోస్ట్ చేశారు.
+  highlights_constant_alba_short_heading: జెస్సికా అల్బా ఒక అవర్ ఆఫ్ కోడ్ నేర్చుకుంది
+  highlights_constant_obama_heading: విద్యార్థుల కోసం వైట్ హౌస్‌లో చారిత్రాత్మక అవర్
+    ఆఫ్ కోడ్ హోస్ట్ చేస్తూ, లైన్ ఆఫ్ కోడ్ రాసిన మొదటి ప్రెసిడెంట్, ప్రెసిడెంట్ ఒబామా.
+  highlights_constant_obama_short_heading: కోడర్ ఇన్ ఛీఫ్
+  highlights_constant_malala_heading: '"ప్రతి బాలిక ప్రపంచాన్ని మార్చే మరియు దీన్ని
+    నడిపేవారిని మార్చే టెక్నాలజీని సృష్టించటంలో పాలుపంచుకోవడానికి అర్హురాలు."'
+  highlights_constant_malala_short_heading: నోబుల్ శాంతి బహుమతి గ్రహీత మలాలా
+  highlights_constant_trudeau_heading: కెనడా ప్రధానమంత్రి జస్టిన్ ట్రుడా తనకు ఇష్టమైన
+    క్రీడతో కూడిన ఒక సింపుల్ గేమ్‌ను కోడ్ చేశారు.
+  highlights_constant_trudeau_short_heading: ప్రధానమంత్రి జస్టిన్ ట్రుడా ఒక గేమ్ కోడ్
+    చేశారు
+  highlights_constant_ny_heading: ఒక గొప్ప యుద్ధం తరువాత, 80% బ్రూక్లిన్ స్కూళ్లు,
+    60% ఛికాకో స్కూళ్లకు పోటీగా అవర్ ఆఫ్ కోడ్ చేశాయి!
+  highlights_constant_ny_short_heading: బ్రూక్రిన్ ఛికాగోను ఓడించింది
+  highlights_constant_athletes_heading: ఛాంపియన్లు మరియు స్వర్ణ పతకాల విజేతలు సెరేనా
+    విలియమ్స్, నేమర్ జూ, కార్మెలో ఆంథోనీ మరియు ఇంకా ఎందరో విద్యార్థులు తమను తాము ముందుకు
+    తీసుకెళ్లేందుకు ప్రేరణ కల్గించారు.
+  highlights_constant_athletes_short_heading: మిమ్మల్ని మీరు ముందుకు తీసుకెళ్లండి
+  footer_copyright_message: కాపీరైట్ %{current_year} Code.org. అన్ని హక్కులు సురక్షితం
+    చేయబడ్డాయి.
+  footer_trademark_message: అవర్ ఆఫ్ కోడ్™ అనేది Code.org యొక్క వాణిజ్య చిహ్నం.
+  footer_menu_partners: భాగస్వాములు మరియు సలహాదారులు
+  footer_menu_contact: మమ్మల్ని సంప్రదించండి
+  footer_menu_support: మద్దతు
+  footer_menu_terms: నిబంధనలు
+  footer_menu_privacy: గోప్యత పాలసీ
+  learn_banner_heading: అవర్ ఆఫ్ కోడ్ కార్యకలాపాలు
+  learn_banner_blurb: అన్ని వయస్సులవారికి 45 కుపైగా భాషల్లో డిజైన్ చేయబడిన ఒన్-అవర్
+    ట్యుటోరియల్స్ ప్రయత్నించండి. అవర్ ఆఫ్ కోడ్‌తో ప్రారంభించి 180 కిపైగా దేశాలలోని
+    లక్షలాది విద్యార్థులు మరియు ఉపాధ్యాయులతో చేరండి.
+  learn_banner_beyond: నేర్చుకుంటూనే ఉండాలనుకుంటున్నారా? <a id='learn_banner_beyond'>
+    ఒక గంట దాటి వెళ్లండి</a>
+  learn_banner_teachers: 'ఉపాధ్యాయులు: <a id=''teacher_banner_host''>ఒక అవర్ హోస్ట్
+    చేయండి</a> or <a id=''teacher_banner_howto''>హౌ-టు గైడ్ చదవండి</a>'
+  learn_robotics_banner_heading: రోబోటిక్స్ మరియు సర్క్యూట్స్
+  learn_robotics_banner_blurb: రోబోలు లేక భౌతిక కంప్యూటింగ్ కిట్స్ ఉన్నాయా? వాటిని
+    క్రింది కార్యకలాపాలతో ఉపయోగించండి మరియు ఏ వయస్సు విద్యార్థులకైనా ఒక కంటికి కనిపించే
+    అవర్ ఆఫ్ కోడ్ తయారు చేయండి! కొన్ని కార్యకలాపాలు మీరు ఎలాంటి హార్డ్‌వేర్ లేకుండా
+    ప్రారంభించగలిగే సిములేటర్‌ను కూడా అందిస్తాయి.
+  tutorial_dance2019_name: Dance Party 2019
   tutorial_danceparty_name: Dance Party
   tutorial_chibitronics_name: 'Chibitronics: Illuminated Story'
   tutorial_athlete_name: Code your own sports game
@@ -1153,9 +1234,9 @@ te:
   tutorial_sushicards_name: Beginner Scratch Sushi Cards
   tutorial_codesparkcreate_name: 'codeSpark Academy with The Foos: Create Games'
   tutorial_hardvsoft_name: Team Hardware vs. Team Software
-  tutorial_codestersecard_name: Making an E-Card
-  tutorial_codesterslogo_name: Your Company Logo
-  tutorial_codesterstshirt_name: Monogrammed T-Shirt Design
+  tutorial_codestersecard_name: Code an Interactive eCard
+  tutorial_codesterslogo_name: Design Your Own Logo
+  tutorial_codesterstshirt_name: Code Your Initials
   tutorial_codewards_name: Rescue the underwater city!
   tutorial_olympics_name: C.A.T.S. go for Robot Olympics
   tutorial_codinismhero_name: Programming Hero
@@ -1265,8 +1346,8 @@ te:
     Star Wars game in a galaxy far, far away.
   tutorial_gumadventure_shortdescription: Use code to continue an episode of The Amazing
     World of Gumball.
-  tutorial_mchoc_shortdescription: Minecraft is back for the Hour of Code with a brand
-    new activity! Journey through Minecraft with code.
+  tutorial_mchoc_shortdescription: ఒక సరికొత్త యాక్టివిటీతో Minecraft అవర్ ఆఫ్ కోడ్
+    కోసం మళ్లీ వచ్చింది! కోడ్‌తో Minecraft గుండా ప్రయాణం చేయండి.
   tutorial_vidnews_shortdescription: Code effects and graphics to make a news story
     all about tech, diversity, kids, and coding.
   tutorial_kodable-pre_shortdescription: A fun game to teach computer programming
@@ -2437,6 +2518,9 @@ te:
   tutorial_allcancodeapps_shortdescription: Use the Allcancode Platform to create
     web and mobile apps from design to delivery.
   tutorial_n2y_shortdescription: Help Bitt Bott explore Earth using direction arrows.
+  tutorial_dance2019_longdescription: Code a Dance Party to share with your friends.
+    Featuring Katy Perry, Shawn Mendes, Lil Nas X, Panic! At The Disco, Jonas Brothers,
+    and many more!
   tutorial_danceparty_longdescription: Code a Dance Party to share with your friends.
     Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!
   tutorial_chibitronics_longdescription: Program a paper circuit to light up your
@@ -2457,8 +2541,8 @@ te:
     Signal," a glitch affects how the characters relate to each other. In this activity,
     continue the story by making your own glitch and imagining how Gumball and his
     friends would react to it.
-  tutorial_mchoc_longdescription: Minecraft is back for the Hour of Code with a brand
-    new activity! Journey through Minecraft with code.
+  tutorial_mchoc_longdescription: ఒక సరికొత్త యాక్టివిటీతో Minecraft అవర్ ఆఫ్ కోడ్
+    కోసం మళ్లీ వచ్చింది! కోడ్‌తో Minecraft గుండా ప్రయాణం చేయండి.
   tutorial_vidnews_longdescription: 'It''s the HOC News! Videos and graphics are all
     about tech, diversity, kids, and coding. Finished projects can be uploaded to
     school website as the report on the HOC itself. Teachers can encourage students
@@ -4884,6 +4968,9 @@ te:
     Each of the six activities includes simple directions that are supported with
     symbols from the n2y® SymbolStix PRIME® collection. The symbols help non-readers
     and beginning readers understand and follow the directions.
+  tutorial_dance2019_language: Arabic, Chinese, Czech, Danish, Dutch, English, Finnish,
+    French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean,
+    Malay, Polish, Portuguese, and 10 more!
   tutorial_danceparty_language: English, Arabic, Catalan, Chinese, Czech, Danish,
     Dutch, Finnish, French, German, Greek, Hungarian, Italian, Japanese, Korean, Norwegian,
     Polish, Portuguese, Russian, Spanish, Swedish, Thai, Turkish, and Vietnamese
@@ -5564,6 +5651,7 @@ te:
   tutorial_duckrace_language: English, German
   tutorial_allcancodeapps_language: English
   tutorial_n2y_language: English
+  tutorial_dance2019_string_detail_grades: Grades 2+
   tutorial_danceparty_string_detail_grades: Grades 2+
   tutorial_chibitronics_string_detail_grades: Grades 2-5
   tutorial_athlete_string_detail_grades: Grades 2+
@@ -5917,7 +6005,7 @@ te:
   tutorial_codehsrn_string_detail_grades: Grades 9+
   tutorial_codehswd_string_detail_grades: Grades 6+
   tutorial_turtlerobot_string_detail_grades: Pre-reader - Grade 5
-  tutorial_ozoevo_string_detail_grades: All ages
+  tutorial_ozoevo_string_detail_grades: Grades 6+
   tutorial_ozoexped_string_detail_grades: Grades 6+
   tutorial_ozojourney_string_detail_grades: Grades 2-8
   tutorial_ozocodes_string_detail_grades: All ages
@@ -6044,7 +6132,7 @@ te:
   tutorial_codesparkcreate_string_detail_grades: Pre-reader - Grade 5
   tutorial_hardvsoft_string_detail_grades: Pre-reader - Grade 5
   tutorial_codestersecard_string_detail_grades: Grades 6-8
-  tutorial_codesterslogo_string_detail_grades: Grades 2-8
+  tutorial_codesterslogo_string_detail_grades: Grades 6+
   tutorial_codesterstshirt_string_detail_grades: Grades 6+
   tutorial_codewards_string_detail_grades: Grades 2-8
   tutorial_olympics_string_detail_grades: Grades 2-8
@@ -6142,6 +6230,8 @@ te:
   tutorial_duckrace_string_detail_grades: Grades 2+
   tutorial_allcancodeapps_string_detail_grades: Grades 6+
   tutorial_n2y_string_detail_grades: Pre-reader+
+  tutorial_dance2019_string_platforms: All modern browsers, Android tablet, iPad,
+    Unplugged
   tutorial_danceparty_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_chibitronics_string_platforms: All modern browsers
   tutorial_athlete_string_platforms: All modern browsers
@@ -6865,6 +6955,7 @@ te:
   tutorial_duckrace_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_allcancodeapps_string_platforms: All modern browsers
   tutorial_n2y_string_platforms: Unplugged
+  tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chibitronics Chibi Chip and Circuit
     Sticker LEDs
@@ -7445,6 +7536,7 @@ te:
   tutorial_duckrace_string_detail_platforms: ''
   tutorial_allcancodeapps_string_detail_platforms: ''
   tutorial_n2y_string_detail_platforms: ''
+  tutorial_dance2019_string_detail_programming_languages: Blocks
   tutorial_danceparty_string_detail_programming_languages: Blocks
   tutorial_chibitronics_string_detail_programming_languages: Blocks
   tutorial_athlete_string_detail_programming_languages: Blocks
@@ -7948,7 +8040,7 @@ te:
   tutorial_codesparkcreate_string_detail_programming_languages: Blocks
   tutorial_hardvsoft_string_detail_programming_languages: ''
   tutorial_codestersecard_string_detail_programming_languages: Blocks, Python
-  tutorial_codesterslogo_string_detail_programming_languages: Blocks, Python
+  tutorial_codesterslogo_string_detail_programming_languages: Python
   tutorial_codesterstshirt_string_detail_programming_languages: Blocks, Python
   tutorial_codewards_string_detail_programming_languages: CoffeeScript
   tutorial_olympics_string_detail_programming_languages: CoffeeScript
@@ -8152,6 +8244,8 @@ te:
   tutorial_ikodexmas_name: iKode Xmas
   tutorial_rpisensehat_name: Sense HAT data logger
   tutorial_modtraits_name: Character Traits with GoPiGo
+  tutorial_mee_name: 'Minecraft Hour of Code: AI for Good'
+  tutorial_kuborobo_name: KUBO Robotics Coding Routes
   tutorial_scratchimagine_longdescription: Imagine a world where anything is possible,
     then bring it to life with Scratch!
   tutorial_codesterspsa_longdescription: Learn the basics of coding in Python while
@@ -8508,6 +8602,13 @@ te:
     environment.
   tutorial_modtraits_longdescription: 'Students use the steps of computational thinking
     to analyze character traits and create an algorithm to demonstrate those traits. '
+  tutorial_mee_longdescription: Program the Minecraft Agent to collect data about
+    forest fires. Then write code to help prevent the spread of fire, save the village,
+    and bring life back to the forest. Learn coding basics and explore a real-world
+    example of artificial intelligence.
+  tutorial_kuborobo_longdescription: In this activity, students put their logic and
+    sequencing skills to the test as they use the Tagtiles to program their KUBO robot
+    to travel to various locations on a printed map.
   tutorial_scratchimagine_language: English, Spanish
   tutorial_codesterspsa_language: English
   tutorial_googlehero_language: English, Spanish
@@ -8604,6 +8705,12 @@ te:
   tutorial_ikodexmas_language: English
   tutorial_rpisensehat_language: English
   tutorial_modtraits_language: English
+  tutorial_mee_language: Bulgarian, Chinese (Simplified), Chinese (Traditional), Czech,
+    Danish, Dutch, English (UK), English (United States), Finnish, French (Canada),
+    French (France), German, Greek, Hungarian, Indonesian, Italian, Japanese, Korean,
+    Norwegian, Polish, Portuguese (Brazil), Portuguese (Portugal), Russian, Slovak,
+    Spanish (Spain), Spanish (Mexico), Swedish, Turkish, Ukrainian
+  tutorial_kuborobo_language: English, Spanish
   tutorial_scratchimagine_string_detail_grades: Grades 2+
   tutorial_codesterspsa_string_detail_grades: Grades 6+
   tutorial_googlehero_string_detail_grades: Grades 2-8
@@ -8689,9 +8796,9 @@ te:
   tutorial_microbit15_string_detail_grades: Grades 2-8
   tutorial_unity_string_detail_grades: Grades 9+
   tutorial_blockscadtarget_string_detail_grades: Grades 6+
-  tutorial_tcadicicles_string_detail_grades: Grades 6-8
+  tutorial_tcadicicles_string_detail_grades: Grades 7-8
   tutorial_blockscadscale_string_detail_grades: Grades 6+
-  tutorial_tcadloops_string_detail_grades: Grades 6-8
+  tutorial_tcadloops_string_detail_grades: Grades 5-6
   tutorial_phidgets_string_detail_grades: Grades 9+
   tutorial_kcjmerry_string_detail_grades: Grades 2-8
   tutorial_modvariables_string_detail_grades: Grades 6+
@@ -8700,6 +8807,8 @@ te:
   tutorial_ikodexmas_string_detail_grades: Grades 2-5
   tutorial_rpisensehat_string_detail_grades: Grades 6+
   tutorial_modtraits_string_detail_grades: Grades 2+
+  tutorial_mee_string_detail_grades: Grades 2+
+  tutorial_kuborobo_string_detail_grades: Pre-reader - Grades 8
   tutorial_scratchimagine_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_codesterspsa_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_googlehero_string_platforms: All modern browsers, Android tablet, iPad
@@ -8805,6 +8914,8 @@ te:
   tutorial_ikodexmas_string_platforms: All modern browsers
   tutorial_rpisensehat_string_platforms: All modern browsers
   tutorial_modtraits_string_platforms: All modern browsers
+  tutorial_mee_string_platforms: iPad, Computers (Windows PC, Mac)
+  tutorial_kuborobo_string_platforms: Unplugged
   tutorial_scratchimagine_string_detail_platforms: ''
   tutorial_codesterspsa_string_detail_platforms: ''
   tutorial_googlehero_string_detail_platforms: ''
@@ -8904,6 +9015,8 @@ te:
   tutorial_ikodexmas_string_detail_platforms: Microsoft Kodu
   tutorial_rpisensehat_string_detail_platforms: Raspbian (software), SenseHAT
   tutorial_modtraits_string_detail_platforms: GoPiGo
+  tutorial_mee_string_detail_platforms: ''
+  tutorial_kuborobo_string_detail_platforms: KUBO robot
   tutorial_scratchimagine_string_detail_programming_languages: Blocks
   tutorial_codesterspsa_string_detail_programming_languages: Python
   tutorial_googlehero_string_detail_programming_languages: Blocks
@@ -9012,58 +9125,63 @@ te:
   tutorial_ikodexmas_string_detail_programming_languages: Microsoft Kodu
   tutorial_rpisensehat_string_detail_programming_languages: Python
   tutorial_modtraits_string_detail_programming_languages: Blocks
-  school_not_found_heading: We couldn't find your school. Please enter more information.
-  school_name: School name
-  school_name_error: School name is required.
-  school_city: School city
-  school_state: School state
-  school_zip: Postal code
-  school_zip_error: School postal code is required.
-  census_thanks: Thanks for signing up!
-  census_header: Please take a few minutes to tell us about your school (Optional).
-  census_heading: Please share how much coding/computer programming is taught at this
-    school. Assume for the purposes of the following questions that coding/computer
-    programming does not include HTML/CSS, Web design, or how to use apps.
-  census_how_many_hoc: How many students will do an Hour of Code?
-  census_how_many_after_school: How many students do computer programming in an after-school
-    program?
-  census_how_many_ten_hours: How many students take at least 10 hours of computer
-    programming integrated into a non-Computer Science course (such as TechEd, Math,
-    Science, Art, Library or general classroom/homeroom)?
-  census_how_many_twenty_hours: How many students take a semester or year-long computer
-    science course that includes at least 20 hours of coding/computer programming?
-  census_other_cs: This school teaches other computing classes that do not include
-    at least 20 hours of coding/computer programming. (For example, learning to use
-    applications, computer literacy, web design, HTML/CSS, or other)
-  census_connection: What is your connection to this school?
-  census_pledge: I pledge to expand computer science offerings at my school, and to
-    engage a diverse group of students, to bring opportunity to all.
-  census_followup_heading: Your school offers a semester or year-long computer science
-    class! What topics does this course include?
-  census_followup_frequency: How often per week does this class meet?
-  less_than_one: "< 1 hour per week"
-  one_to_three: 1-3 hours per week
-  three_plus: 3+ hours per week
-  census_followup_more: Please tell us more about this course.
-  census_followup_more_placeholder: For example, name of the class, how often it meets,
-    description of what is taught.
-  census_topics_blocks: Block-based programming
-  census_topics_text: "  Text-based programming in a language such as Java, JavaScript,
-    Python, C++, etc. (Excluding HTML or CSS)"
-  census_topics_robots: Robotics / Physical Computing
-  census_topics_internet: Internet and networking
-  census_topics_security: Cybersecurity
-  census_topics_data: Data analysis
-  census_topics_web_design: Web design using HTML and CSS
-  census_topics_game_design: Game design using game layout tools without coding or
-    computer programming
-  teacher: Teacher
-  administrator: Administrator
-  parent: Parent
-  volunteer_or_advocate: Volunteer/Community Advocate
-  other: Other
-  other_describe: Other (please describe below)
-  none: None
-  some: Some
-  all: All
-  dont_know: I don't know
+  tutorial_mee_string_detail_programming_languages: Blocks
+  tutorial_kuborobo_string_detail_programming_languages: Tagtiles that students piece
+    together
+  school_not_found_heading: మీ పాఠశాలను మేము కనుగొనలేక పోయాము. దయచేసి మరింత సమాచారం
+    ఎంటర్ చేయండి.
+  school_name: పాఠశాల పేరు
+  school_name_error: పాఠశాల పేరు అవసరం.
+  school_city: పాఠశాల ఉన్న నగరం
+  school_state: పాఠశాల ఉన్న రాష్ట్రం
+  school_zip: పోస్టల్ కోడ్
+  school_zip_error: పాఠశాల పోస్టల్ కోడ్ అవసరం.
+  census_thanks: సైనింగ్ అప్ చేసినందుకు ధన్యవాదాలు!
+  census_header: మీ పాఠశాల గురించి చెప్పడానికి దయచేసి కొద్ది నిమిషాలు తీసుకోండి (ఐచ్ఛికం).
+  census_heading: ఈ పాఠశాలలో ఎంత కోడింగ్/కంప్యూటర్ ప్రోగ్రామింగ్ నేర్పబడుతున్నదో దయచేసి
+    చెప్పండి. క్రింది ప్రశ్నల కోసం కోడింగ్/కంప్యూటర్ ప్రోగ్రామింగ్‌లలో HTML/CSS, వెబ్
+    డిజైన్ లేక యాప్స్ ఉపయోగించడం ఎలా అనేవి లేవని అనుకోండి.
+  census_how_many_hoc: అవర్ ఆఫ్ కోడ్‌ను ఎంతమంది విద్యార్థులు చేస్తారు?
+  census_how_many_after_school: ఒక ఆఫ్టర్-స్కూల్ ప్రోగ్రామ్‌లో ఎంతమంది విద్యార్థులు
+    కంప్యూటర్ ప్రోగ్రామింగ్ చేస్తారు?
+  census_how_many_ten_hours: ఒక నాన్-కంప్యూటర్ సైన్స్ కోర్సులో (టెక్‌ఎడ్, మ్యాథ్,
+    సైన్స్, ఆర్ట్, లైబ్రరీ లేక జనరల్ క్లాస్‌రూమ్/హోమ్‌రూమ్ లాంటివి) సమ్మిళితం చేయబడిన
+    కంప్యూటర్ ప్రోగ్రామింగ్‌ను ఎంతమంది విద్యార్థులు కనీసం 10 గంటలు తీసుకుంటారు?
+  census_how_many_twenty_hours: ఎంతమంది విద్యార్థులు కనీసం 20 గంటల కోడింగ్/కంప్యూటర్
+    ప్రోగ్రామింగ్ ఉన్న సెమిస్టర్ లేక సంవత్సరం పొడవున్న కంప్యూటర్ సైన్స్ కోర్సు తీసుకుంటారు?
+  census_other_cs: ఈ పాఠశాల కనీసం 20 గంటలు కోడింగ్/కంప్యూటర్ ప్రోగ్రామింగ్ లేని ఇతర
+    కంప్యూటింగ్ క్లాసులను బోధిస్తుంది. (ఉదాహరణకు, అప్లికేషన్లు ఉపయోగించడం నేర్చుకోవడం,
+    కంప్యూటర్ లిటరసీ, వెబ్ డిజైన్, HTML/CSS లేక ఇతరము)
+  census_connection: మీకు ఈ పాఠశాలతో ఉన్న సంబంధం ఏమిటి?
+  census_pledge: నేను కంప్యూటర్ సైన్స్ ఆపరింగ్స్‌ను మా పాఠశాలలో పెంచడానికి మరియు ఒక
+    వైవిధ్యభరితమైన గ్రూపును ఎంగేజ్ చేయడానికి, అందరికీ అవకాశం తీసుకురావడానికి కృషి
+    చేస్తానని ప్రతిజ్ఞ చేస్తున్నాను.
+  census_followup_heading: మీ పాఠశాల సెమిస్టర్ లేక సంవత్సరం పొడవుగల కంప్యూటర్ సైన్స్
+    క్లాసును ఆఫర్ చేస్తుంది! ఈ కోర్సులో ఏ టాపిక్స్ ఉన్నాయి?
+  census_followup_frequency: ఈ క్లాసు వారానికి ఎంత తరచుగా కలుస్తుంది?
+  less_than_one: వారానికి < 1 గంట
+  one_to_three: వారానికి 1-3 గంటలు
+  three_plus: వారానికి 3+గంటలు
+  census_followup_more: ఈ కోర్సు గురించి దయచేసి మాకు మరింత చెప్పండి.
+  census_followup_more_placeholder: ఉదాహరణకు, క్లాసు పేరు, ఎంత తరచుగా ఇది జరుగుతుమది,
+    ఏమి నేర్పించబడుతుందో దానికి వివరణ.
+  census_topics_blocks: బ్లాక్-ఆధారిత ప్రోగ్రామింగ్
+  census_topics_text: "  Java, JavaScript, Python, C++ మొదలైన లాగ్వేజ్‌లో టెక్స్ట్-ఆధారిత
+    ప్రోగ్రామింగ్ (HTML లేక CSS మినహా)"
+  census_topics_robots: రోబోటిక్స్/ఫిజికల్ కంప్యూటింగ్
+  census_topics_internet: ఇంటర్నెట్ మరియు నెట్‌వర్కింగ్
+  census_topics_security: సైబర్‌సెక్యూరిటీ
+  census_topics_data: డేటా అనాలిసిస్
+  census_topics_web_design: HTML మరియ CSS ఉపయోగించి వెబ్ డిజైన్
+  census_topics_game_design: గేమ్ లేఔట్ టూల్స్ ఉపయోగించి కోడింగ్ లేక కంప్యూటర్ ప్రోగ్రామింగ్
+    లేకుండా గేమ్ డిజైన్
+  teacher: టీచర్
+  administrator: పరిపాలకుడు
+  parent: పేరెంట్
+  volunteer_or_advocate: వాలెంటీరు/కమ్యూనిటీ అడ్వోకేట్
+  other: ఇతరులు
+  other_describe: ఇతరులు (దయచేసి క్రింద వివరించండి)
+  none: ఎవరూ కాదు
+  some: కొందరు
+  all: అందరు
+  dont_know: నాకు తెలియదు

@@ -416,6 +416,8 @@ bs:
       cta: 'Nauči kako'
     dance:
       title: 'Plesna zabava'
+    dance-2019:
+      title: 'Plesna zabava'
     hoc:
       body: 'Isprobajte osnove informatike. Milijuni su im dali šansu.'
     flappy:

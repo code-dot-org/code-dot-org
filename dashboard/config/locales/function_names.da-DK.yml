@@ -104,6 +104,8 @@ da-DK:
         jump: hop
       Standalone_Artist_7:
         draw a flower: tegn en blomst
+      course1_artist_loops_challenge1:
+        '"simple" solution': Simpel løsning
       course3_artist_functions_challenge1:
         do something: gør noget
       course3_artist_functions_challenge2:
@@ -116,6 +118,8 @@ da-DK:
         do something: gør noget
       course4_artist_fwp_challenge1:
         do something: gør noget
+      courseA_artist_loops_challenge1:
+        '"simple" solution': Simpel løsning
       courseC_data wizard:
         do something: gør noget
       courseE_artist_concept1:
@@ -253,3 +257,11 @@ da-DK:
         do something: gør noget
       courseF_bee_functions8a:
         do something: gør noget
+      courseF_bee_variables_7_2018:
+        collect: saml op
+      courseF_bee_variables_7_2019:
+        collect: saml op
+      courseF_bee_variables_8_2018:
+        collect: saml op
+      courseF_bee_variables_8_2019:
+        collect: saml op

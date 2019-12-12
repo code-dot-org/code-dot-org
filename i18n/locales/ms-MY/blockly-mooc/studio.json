@@ -743,7 +743,7 @@
   "vanishTooltip": "",
   "wait": "",
   "waitFor": "",
-  "waitSeconds": "",
+  "waitSeconds": "saat",
   "waitForClick": "",
   "waitForRandom": "",
   "waitForHalfSecond": "",

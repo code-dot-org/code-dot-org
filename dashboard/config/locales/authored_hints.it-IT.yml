@@ -94,6 +94,49 @@ it-IT:
         2-3_Artist_Functions_4_a: L'artista deve girare di 120 gradi prima di disegnare
           il successivo quadrato.
       2-3 Artist Loops New 11:
+        2-3_Artist_Loops_New_11_a: |-
+          Ti ricordi il codice dell'ultimo esercizio?
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">8</title>
+                  <statement name="DO">
+                    <block type="draw_colour" inline="true">
+                      <value name="COLOUR">
+                        <block type="colour_random"/>
+                      </value>
+                      <next>
+                        <block type="draw_turn_by_constant_dropdown">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE" config="45,60,90,120,180">45</title>
+                          <next>
+                            <block type="draw_move_by_constant">
+                              <title name="DIR">moveForward</title>
+                              <title name="VALUE">50</title>
+                              <next>
+                                <block type="draw_turn_by_constant_dropdown">
+                                  <title name="DIR">turnLeft</title>
+                                  <title name="VALUE" config="45,60,90,120,180">90</title>
+                                  <next>
+                                    <block type="draw_move_by_constant">
+                                      <title name="DIR">moveForward</title>
+                                      <title name="VALUE">50</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </xml>
         2-3_Artist_Loops_New_11_b: Devi aggiungere Il blocco `gira a sinistra di 30
           gradi` <b>dopo</b> le altre istruzioni all'interno del ciclo.
       2-3 Artist Loops New 12:
@@ -107,6 +150,15 @@ it-IT:
         2-3_Artist_Loops_New_13_a: |-
           Al termine di ogni rombo, sei già rivolto nella direzione giusta per iniziare il successivo.<br>
           Per questo non è necessario aggiungere un altro blocco `gira a sinistra` prima di disegnare il nuovo rombo.
+        2-3_Artist_Loops_New_13_b: |-
+          Per disegnare un rombo devi:
+
+          -   andare avanti
+          -   girare a destra di 120 gradi
+          -   andare avanti
+          -   girare a destra di 60 gradi
+
+          Poi devi ripetere tutto per gli altri rombi!
       2-3 Artist Loops New 9:
         2-3_Artist_Loops_New_9_a: Devi girare a destra di 45 gradi prima di iniziare
           a disegnare.
@@ -142,6 +194,19 @@ it-IT:
           il fiore rosso come se fosse viola!
         2-3_Bee_Conditionals_14_b: Se consideri il fiore rosso come se fosse viola,
           allora puoi usare un ulteriore <i>ciclo</i> `ripeti ... volte`.
+        2-3_Bee_Conditionals_14_c: |-
+          Prova a suddividere il problema in due parti separate:
+
+          ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
+
+          1.  Raccogli il nettare 3 volte
+              -   Vai avanti di 5 passi
+              -   Controlla se c'è del nettare, in caso affermativo: prendilo
+              -   Gira a sinistra
+
+          2.  Produci il miele
+              -   Fai un passo avanti
+              -   Produci due volte il miele
       2-3 Bee Conditionals 15:
         2-3_Bee_Conditionals_15_a: 'Ricorda: i fiori viola possono avere una quantità
           di nettare pari a 0 oppure 1 e questa quantità può cambiare ogni volta che
@@ -3750,21 +3815,21 @@ it-IT:
 
           -   Il ballerino deve cambiare mossa dopo 4 battute.
 
-          _L'esercizio terminerà dopo 8 battute._
+          _L'esercizio terminerà dopo 7 battute._
       CourseD_Dance_Party_03:
         validation: |-
           **Come faccio a completare questo esercizio?**
 
           -   Dopo 6 battute, il tuo ballerino dovrà ballare in modo diverso rispetto a come ballava dopo 4 battute.
 
-          _L'esercizio terminerà dopo 12 battute._
+          _L'esercizio terminerà dopo 11 battute._
       CourseD_Dance_Party_04:
         validation: |-
           **Come faccio a completare questo esercizio?**
 
           -   Devi fare in modo che lo sfondo cambi effetto prima della settima battuta della canzone.
 
-          _L'esercizio terminerà dopo 10 battute._
+          _L'esercizio terminerà dopo 9 battute._
         challenges: |-
           **Sfida supplementare**
 
@@ -3775,7 +3840,7 @@ it-IT:
 
           -   Devi avere almeno due ballerini.
 
-          \*L'esercizio terminerà dopo 6 battute. \*
+          _L'esercizio terminerà dopo 5 battute._
         challenges: |-
           **Sfida supplementare**
 
@@ -3787,7 +3852,7 @@ it-IT:
 
           -   Due ballerini devono avere una dimensione diversa da 100.
 
-          \*L'esercizio terminerà dopo 6 battute. \*
+          _L'esercizio terminerà dopo 5 battute._
         challenges: |-
           **Sfida supplementare**
 
@@ -3798,35 +3863,35 @@ it-IT:
 
           -   Modifica la tonalità di almeno un ballerino.
 
-          _L'esercizio terminerà dopo 8 battute._
+          _L'esercizio terminerà dopo 7 battute._
       CourseD_Dance_Party_10:
         validation: |-
           **Come faccio a completare questo esercizio?**
 
-          -   Le proprietà di due o più ballerini devono essere cambiate.
+          -   Bisogna far cambiare le proprietà di due o più ballerini.
 
-          \*L'esercizio terminerà dopo 8 battute. \*
+          _L'esercizio terminerà dopo 7 battute._
       CourseD_Dance_Party_11:
         validation: |-
           **Come faccio a completare questo esercizio?**
 
           -   Sii semplicemente creativo!
 
-          _L'esercizio terminerà dopo 8 battute._
+          _L'esercizio terminerà dopo 7 battute._
       CourseD_Dance_Party_11_5:
         validation: |-
           **Come faccio a completare questo esercizio?**
 
           -   Sii semplicemente creativo!
 
-          _L'esercizio terminerà dopo 8 battute._
+          _L'esercizio terminerà dopo 7 battute._
       CourseD_Dance_Party_11b:
         validation: |-
           **Come faccio a completare questo esercizio?**
 
           -   Usa il blocco `quando si preme a sinistra` per far eseguire al Robot una mossa di ballo premendo quel tasto.
 
-          _L'esercizio terminerà dopo 8 battute._
+          _L'esercizio terminerà dopo 7 battute._
       CourseE_HOC 2018 Level_10:
         voyage_aquatic_10a: Guarda le **Lanterne marine** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
           Come potresti usare un'istruzione condizionale per attraversare il Monumento
@@ -3843,25 +3908,107 @@ it-IT:
           -   Assicurati che sullo schermo appaia un ballerino.
 
           _L'esercizio terminerà dopo 4 battute._
+        challenges: |-
+          **Sfide supplementari**
+
+          -   Scegli un'altra canzone.
+          -   Sposta il tuo ballerino in una posizione differente.
+          -   Crea altri ballerini.
+      Dance_2019_02:
+        validation: |-
+          **Come faccio a superare questo livello?**
+
+          -   Il ballerino deve eseguire una mossa.
+          -   Devi premere un tasto freccia.
+
+          _Questo livello termina dopo 4 battute._
+        challenges: |-
+          **Sfida supplementare**
+
+          Usa più di un blocco <xml><block type="Dancelab_whenKey"><title name="KEY"></title></block></xml>.
+      Dance_2019_03:
+        validation: |-
+          **Come faccio a superare questo livello?**
+
+          -   Entrambi i ballerini devono eseguire un movimento.
+          -   Devi premere i tasti freccia.
+
+          _Questo livello termina dopo 6 battute._
+        challenges: |-
+          **Sfida supplementare**
+
+          -   Fai in modo che un ballerino risponda ai tasti freccia sinistra e destra.
       Dance_2019_04:
         validation: |-
           **Come faccio a completare questo esercizio?**
 
           -   Il ballerino deve cambiare mossa dopo 4 battute.
 
-          _L'esercizio terminerà dopo 8 battute._
+          _L'esercizio terminerà dopo 7 battute._
       Dance_2019_05:
         validation: |-
           **Come faccio a completare questo esercizio?**
 
           -   Dopo 6 battute, il tuo ballerino dovrà ballare in modo diverso rispetto a come ballava dopo 4 battute.
 
-          _L'esercizio terminerà dopo 12 battute._
-      Dance_2019_07:
+          _L'esercizio terminerà dopo 11 battute._
         challenges: |-
           **Sfida supplementare**
 
-          -   Fai qualche esperimento modificando le altre proprietà (larghezza, altezza, rotazione e così via)
+          -   Modifica lo sfondo ogni volta che i ballerini cambiano mossa.
+      Dance_2019_06:
+        validation: |-
+          **Come faccio a superare questo livello?**
+
+          -   Crea un ballerino principale e un gruppo di ballerini secondari entro le prime 4 battute della canzone.
+
+          _Questo livello termina dopo 7 battute._
+        challenges: |-
+          **Sfida supplementare**
+
+          -   Crea gruppi multipli di ballerini secondari.
+      Dance_2019_07:
+        validation: |-
+          **Come faccio a superare questo livello?**
+
+          -   Cambia le dimensioni di almeno un ballerino.
+
+          _Questo livello termina dopo 6 battute._
+        challenges: |-
+          **Sfida supplementare**
+
+          -   Fai qualche esperimento modificando le altre proprietà (larghezza, altezza, rotazione ecc.)
+      Dance_2019_08:
+        validation: |-
+          **Come faccio a superare questo livello?**
+
+          -   Cambia la tonalità di almeno un ballerino.
+
+          _Questo livello termina dopo 6 battute._
+        tint_hint: Hai notato che i tuoi ballerini non assumono esattamente il colore
+          che hai scelto? Questo perché con **tonalità** si intende una miscela tra
+          il colore che indichi e i colori del ballerino.
+      Dance_2019_09:
+        validation: |-
+          **Come faccio a superare questo livello?**
+
+          -   Basta premere il pulsante "Termina!"!
+        repeat_every_ideas: |-
+          **Hai bisogno di qualche idea?**
+
+          -   Cambia ripetutamente le dimensioni di un ballerino per farlo crescere.
+          -   Cambia ripetutamente la rotazione di un ballerino per farlo girare..
+
+          _Puoi anche usare numeri negativi per creare un effetto opposto!_
+        next_previous: |-
+          **Sfida supplementare**
+
+          -   Puoi anche usare questo nuovo blocco evento per alternare una sequenza di mosse di ballo, impostando "(Casuale)", "(Successivo)", o "(Precedente)".
+              <xml><block type="Dancelab_changeMoveEachLR">
+              <title name="GROUP">???</title>
+              <title name="MOVE">"rand"</title>
+              <title name="DIR">-1</title>
+              </block></xml>
       Dance_Party_01:
         validation: |-
           **Come faccio a completare questo esercizio?**
@@ -3880,21 +4027,21 @@ it-IT:
 
           -   Il ballerino deve cambiare mossa dopo 4 battute.
 
-          _L'esercizio terminerà dopo 8 battute._
+          _L'esercizio terminerà dopo 7 battute._
       Dance_Party_03:
         validation: |-
           **Come faccio a completare questo esercizio?**
 
           -   Dopo 6 battute, il tuo ballerino dovrà ballare in modo diverso rispetto a come ballava dopo 4 battute.
 
-          _L'esercizio terminerà dopo 12 battute._
+          _L'esercizio terminerà dopo 11 battute._
       Dance_Party_04:
         validation: |-
           **Come faccio a completare questo esercizio?**
 
           -   Devi fare in modo che lo sfondo cambi effetto prima della settima battuta della canzone.
 
-          _L'esercizio terminerà dopo 10 battute._
+          _L'esercizio terminerà dopo 9 battute._
         challenges: |-
           **Sfida supplementare**
 
@@ -3905,7 +4052,7 @@ it-IT:
 
           -   Devi avere almeno due ballerini.
 
-          \*L'esercizio terminerà dopo 6 battute. \*
+          _L'esercizio terminerà dopo 5 battute._
         challenges: |-
           **Sfida supplementare**
 
@@ -3917,7 +4064,7 @@ it-IT:
 
           -   Due ballerini devono avere una dimensione diversa da 100.
 
-          \*L'esercizio terminerà dopo 6 battute. \*
+          _L'esercizio terminerà dopo 5 battute._
         challenges: |-
           **Sfida supplementare**
 
@@ -3928,35 +4075,37 @@ it-IT:
 
           -   Modifica la tonalità di almeno un ballerino.
 
-          _L'esercizio terminerà dopo 8 battute._
+          _L'esercizio terminerà dopo 7 battute._
       Dance_Party_10:
         validation: |-
           **Come faccio a completare questo esercizio?**
 
-          -   Le proprietà di due o più ballerini devono essere cambiate.
+          -   Bisogna far cambiare le proprietà di due o più ballerini.
 
-          \*L'esercizio terminerà dopo 8 battute. \*
+          _L'esercizio terminerà dopo 7 battute._
       Dance_Party_11:
         validation: |-
           **Come faccio a completare questo esercizio?**
 
           -   Sii semplicemente creativo!
 
-          _L'esercizio terminerà dopo 8 battute._
+          _L'esercizio terminerà dopo 7 battute._
       Dance_Party_11_5:
         validation: |-
           **Come faccio a completare questo esercizio?**
 
           -   Sii semplicemente creativo!
 
-          _L'esercizio terminerà dopo 8 battute._
+          _L'esercizio terminerà dopo 7 battute._
       Dance_Party_11b:
         validation: |-
           **Come faccio a completare questo esercizio?**
 
           -   Usa il blocco `quando si preme a sinistra` per far eseguire al Robot una mossa di ballo premendo quel tasto.
 
-          _L'esercizio terminerà dopo 8 battute._
+          _L'esercizio terminerà dopo 7 battute._
+      Dance_Party_extras_alternate_2019:
+        alternate: Il blocco `alternano ogni` si trova nella categoria "Ballerini".
       Function intro Ryan:
         Function_intro_Ryan_b: Se usi le funzioni in modo corretto, questo è il percorso
           che seguirai...
@@ -4470,12 +4619,24 @@ it-IT:
           magari per evidenziare cosa sarebbe successo se ti fossi voltato dall'altra
           parte.
       course1_artist_loops_challenge1:
+        courseA_artist_loops_challenge1_a: |-
+          Puoi usare dei cicli come questo per creare le pareti e il tetto. Prova con diversi blocchi.
+
+          ![](https://images.code.org/1581a2f599b501103064fc9864aa964d-image-1491863694560.png)
+
+          Fai le tue prove o clicca la ![](https://images.code.org/53090194cea5dbf35ce9e35205156f5d-image-1491864793265.png) per qualche idea!
         courseA_artist_loops_challenge1_b: "![](https://images.code.org/34f3bae38f77f07eaf455188c0b008e5-image-1491864823946.png)"
         courseA_artist_loops_challenge1_c: "![](https://images.code.org/24b208839971803f3f6cd6ae41da56df-image-1491864839734.png)"
         courseA_artist_loops_challenge1_d: "![](https://images.code.org/d3ccefffa0cc77bdd4a597cdb49fc85e-image-1491864847347.png)"
+      course1_artist_loops_challenge2:
+        harvey_tictactoe: Devi usare il blocco `salta` per spostarti senza disegnare.
       course1_artist_loops_challenge3:
         courseA_artist_loops_challenge2_a: Blocchi come questo <xml>  <block type="simple_move_up_left"/></xml>
           permetteranno all'artista di muoversi in diagonale!
+        courseA_artist_loops_challenge2_b: Quando hai finito di disegnare la casetta
+          del primo uccellino, `salta` alla successiva!
+        courseA_artist_loops_challenge2_c: Per risolvere questa sfida, dovrai usare
+          TANTI blocchi all'interno del ciclo.
       course1_artist_loops_challenge4:
         courseB_artist_loops_challenge1_a: 'Blocchi come questo: <xml> <block type="simple_move_up_right"/></xml>
           permetteranno all''artista di muoversi in diagonale!'
@@ -4491,7 +4652,28 @@ it-IT:
         courseA_collector_loops_challenge1_c: Ci sono 6 gemme sul lato destro della
           grotta, ma è necessario spostarle e raccoglierle solo 5 volte. Lo sai il
           perché?
+      course1_collector_loops_challenge2:
+        courseA_collector_loops_challenge2_b: Devi semplicemente usare un blocco ![](<https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34
+          PM.png>) per risolvere questo esercizio.
+        courseA_collector_loops_challenge2_a: |-
+          Prova a tornare indietro sul percorso prima di andare verso il basso.
+
+          ![](<https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png>)
       course1_collector_loops_challenge3:
+        courseB_collector_loops_challenge1_b: |-
+          Inizia ripetendo le seguenti istruzioni:
+
+          <xml>
+            <block type="maze_moveSouth"/><next>
+            <block type="collector_collect"/></next>
+            </xml>
+        courseB_collector_loops_challenge1_a: |-
+          Lo schema verso l'alto (N) è un po' diverso da quello verso il basso (S).
+
+          <xml>
+            <block type="collector_collect"/><next>
+            <block type="maze_moveNorth"/></next>next>
+            </xml>
         courseB_collector_loops_challenge1_c: "Muoviti due volte verso Est tra un
           percorso e l'altro:\n\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block
           type=\"maze_moveEast\"></block></next></block>\n  </xml>\n\nPuoi riuscirci
@@ -4653,6 +4835,17 @@ it-IT:
       course2_artist_prog_challenge1:
         courseC_artist_prog_challenge1_a: 'Il rettangolo è largo 200 pixel e alto
           100. '
+      course2_artist_prog_challenge2:
+        courseC_artist_prog_challenge2_a: "Puoi mettere le istruzioni all'interno
+          del blocco `ripeti ... volte` per farle eseguire più e più volte. Provaci!\n\n<xml>\n
+          \ \n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">6</title>\n
+          \           <statement name=\"DO\">\n              <block type=\"draw_move_by_constant_dropdown\">\n
+          \               <title name=\"DIR\">moveForward</title>\n                <title
+          name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                <next>\n
+          \                 <block type=\"jump_by_constant_dropdown\">\n                    <title
+          name=\"DIR\">jumpForward</title>\n                    <title name=\"VALUE\"
+          config=\"25,50,100,150,200,300\">25</title>\n                  </block>\n
+          \               </next>\n              </block>\n              </statement></block></xml>"
       course2_bee_conditionals_challenge1:
         courseD_bee_conditionals_challenge1_a: |-
           Riesci a trovare un percorso che raggiunga tutti i fiori e i favi senza colpire nessun albero? Il percorso migliore è a spirale.
@@ -4661,13 +4854,61 @@ it-IT:
         courseD_bee_conditionals_challenge1_b: In questo esercizio, conviene immaginare
           che ogni casella possa avere un fiore, un favo o nulla. In questo modo portai
           ripetere l'istruzione condizionale `se/altrimenti` ad ogni passo.
+      course2_bee_conditionals_challenge2:
+        courseD_bee_conditionals_challenge1_b: |-
+          Proprio come i blocchi `se c'è un fiore`, il codice all'interno del ciclo `mentre nettare > 0` viene eseguito solo se l'ape è su un fiore. La differenza principale è che il codice all'interno verrà ripetuto più volte fino a quando non ci sarà più nettare.  Prova questo schema:
+
+          <xml>  <block type="bee_whileNectarAmount">
+              <title name="ARG1">nectarRemaining</title>
+              <title name="OP">&gt;</title>
+              <title name="ARG2">0</title>                    <statement name="DO">
+                                <block type="maze_nectar"/>
+                              </statement>
+            </block></xml>
       course2_collector_loops_challenge2:
+        courseC_maze_loops_challenge2_a: Il programma proposto funzionerebbe benissimo...
+          se ci fosse un solo diamante in ogni casella!
         courseC_maze_loops_challenge2_b: Usa dei cicli per non superare il numero
           massimo di blocchi `raccogli`!
+      course2_collector_prog_challenge1:
+        courseC_collector_prog_challenge1_a: Puoi usare più volte il blocco `raccogli`
+          per raccogliere i diamanti supplementari.
+      course2_collector_prog_challenge2:
+        courseC_collector_prog_challenge1_a: Puoi usare più volte il blocco `raccogli`
+          per raccogliere i diamanti supplementari.
       course2_harvester_loops_challenge1:
+        courseC_harvester_loops_challenge1_a: Non pensarci nemmeno a cercare una soluzione
+          senza cicli!
         courseC_harvester_loops_challenge1_b: Puoi ripetere i blocchi `vai avanti`
           e `prendi pannocchia` tutte le volte che ti serve, poi `gira a destra` ad
           ogni angolo.
+        courseC_harvester_loops_challenge1_c: |-
+          Il modo migliore per raccogliere le prime quattro pannocchie sfrutta un blocco `ripeti ... volte` all'interno di un altro blocco `ripeti ... volte`. Puoi usare questo schema anche per il resto dell'esercizio!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">2</title>
+                      <statement name="DO">
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                          <next>
+                            <block type="harvester_corn"/>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  </block></next></block></xml>
       course2_harvester_loops_challenge2:
         courseC_harvester_loops_challenge2_a: Un modo per risolvere questo esercizio
           assomiglia a uno zig-zag. Un altro modo ricorda una spirale! Ci sono tante
@@ -4685,6 +4926,13 @@ it-IT:
       course2_maze_loops_challenge1:
         courseC_maze_loops_challenge1_a: Considera questo percorso diviso in due parti
           diverse. Ognuna ha un suo schema che si ripete.
+        courseC_maze_loops_challenge1_b: Tra un blocco `ripeti ... volte` e l'altro,
+          sarà necessario girare a sinistra o a destra per predisporre Scrat al prossimo
+          schema.
+        courseC_maze_loops_challenge1_c: |-
+          Arrivati a questo punto, bastano alcun blocchi `gira a sinistra` e `vai avanti`. Non mollare!
+
+          ![](<https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34 PM.png>)
       course2_maze_programming_challenge2:
         courseC_maze_programming_challenge2_a: _"Se mi fai muovere all'indietro, stai
           particolarmente attento a farmi girare dalla parte giusta!"_
@@ -4831,23 +5079,13 @@ it-IT:
             </block>
           </xml>
       course3_collector_debugging_challenge2:
-        courseD_collector_debugging_challenge2_b: |-
-          Quindi, dopo aver fatto un passo indietro, raccogli i diamanti rimanenti. E ripeti questo meccanismo su tutta la fila.
-
-          ![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)
-          Aggiungi questi blocchi al tuo programma:
-
-          <xml><block type="maze_move">
-                              <title name="DIR">moveBackward</title>
-                            </block>
-          <block type="controls_repeat">
-                  <title name="TIMES">4</title>
-                  <statement name="DO">
-
-                  </statement>
-                </block>
-
-          </xml>
+        courseD_collector_debugging_challenge2_b: "Quindi, dopo aver fatto un passo
+          indietro, raccogli i diamanti rimanenti. E ripeti questo meccanismo su tutta
+          la fila.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04
+          AM.png>)\nAggiungi questi blocchi al tuo programma:\n\n<xml><block type=\"maze_move\">\n
+          \                   <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block
+          type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement
+          name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
         courseD_collector_debugging_challenge2_c: "Infine, per raccogliere i diamanti
           rimanenti su tutti i lati del percorso, aggiungi questi blocchi al tuo programma:\n\n<xml>\n
           \ <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n
@@ -5179,6 +5417,27 @@ it-IT:
               </next>
             </block>
           </xml>
+      course4_playlab_variables_challenge1:
+        courseF_playlab_variables_challenge1_a: |-
+          Avrai prendere altri blocchi dalla cassetta degli attrezzi per far parlare i personaggi.
+
+          <xml><block type="studio_saySpriteParamsTime" inline="true">
+                <value name="SPRITE">
+                  <block type="math_number">
+                    <title name="NUM">1</title>
+                  </block>
+                </value>
+                                <value name="TEXT">
+                            <block type="text">
+                              <title name="TEXT">Knock knock.</title>
+                            </block>
+                          </value>
+                <value name="TIME">
+                  <block type="math_number">
+                    <title name="NUM">1</title>
+                  </block>
+                </value>
+                </block></xml>
       courseA_artist_loops2:
         courseA_artist_loops2_a: Non riesci ad immaginare come si fa a disegnare una
           linea? Per vedere cosa capita, inizia ad agganciare qualche blocco a caso
@@ -12102,24 +12361,14 @@ it-IT:
           \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
           name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
           \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
-          \   <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
-        courseD_collector_debugging_challenge2_b: |-
-          Quindi, dopo aver fatto un passo indietro, raccogli i diamanti rimanenti. E ripeti questo meccanismo su tutta la fila.
-
-          ![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)
-          Aggiungi questi blocchi al tuo programma:
-
-          <xml><block type="maze_move">
-                              <title name="DIR">moveBackward</title>
-                            </block>
-          <block type="controls_repeat">
-                  <title name="TIMES">4</title>
-                  <statement name="DO">
-
-                  </statement>
-                </block>
-
-          </xml>
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
+        courseD_collector_debugging_challenge2_b: "Quindi, dopo aver fatto un passo
+          indietro, raccogli i diamanti rimanenti. E ripeti questo meccanismo su tutta
+          la fila.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04
+          AM.png>)\nAggiungi questi blocchi al tuo programma:\n\n<xml><block type=\"maze_move\">\n
+          \                   <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block
+          type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement
+          name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
         courseD_collector_debugging_challenge2_c: "Infine, per raccogliere i diamanti
           rimanenti su tutti i lati del percorso, aggiungi questi blocchi al tuo programma:\n\n<xml>\n
           \ <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n
@@ -16600,18 +16849,34 @@ it-IT:
         courseF_artist_variables_challenge2_d: <b>Soluzione:</b> Vuoi sapere come
           è stata realizzata la figura che ti abbiamo mostrato? <a href="https://studio.code.org/c/117486491"
           target="_blank">Clicca qui</a> e poi su "Come funziona" per scoprirlo.
+      courseF_bee_conditionals10:
+        courseF_bee_conditionals10_a: Immagina che ci sia una nuvola in ogni casella.
+          Questa visione ti aiuta a semplificare il programma?
+        courseF_bee_conditionals10_b: Usa un blocco `se/altrimenti` per controllare
+          in ogni casella se c'è del nettare o del miele.
+        courseF_bee_conditionals10_c: Un blocco `mentre` potrebbe aiutare ad arrivare
+          alla fine di questo percorso?
       courseF_bee_conditionals2:
         courseF_bee_conditionals2_a: Qualche volta c'è un fiore, altre volte no. Se
           vuoi che il tuo programma funzioni in entrambi i casi, assicurati di usare
           un blocco `se`.
+        courseF_bee_conditionals2_b: Prova a scrivere la sequenza che ti fa raggiungere
+          tutte le caselle, poi aggiungi l'istruzione `se`.
       courseF_bee_conditionals3:
         courseF_bee_conditionals3_a: Assicurati di usare un'istruzione condizionale
           `se` per verificare in ogni casella se c'è un fiore.
+        courseF_bee_conditionals3_b: Un ciclo `ripeti` potrà rivelarsi utile per usare
+          solamente un blocco `se`.
+        courseF_bee_conditionals3_c: Prova a scrivere il codice per controllare la
+          prima nuvola. Potresti ripeterlo per controllarle tutte?
       courseF_bee_conditionals4:
         courseD_bee_conditionals4_a: Puoi sempre trattare ogni casella come se avesse
           sopra una nuvola, anche se in questo caso riesci a vedere tutto il percorso.
         courseF_bee_conditionals4_b: Usa un blocco `se` all'interno del ciclo per
           controllare la presenza di un fiore in ogni casella.
+        courseF_bee_conditionals4_c: Grazie al blocco `mentre c'è strada in avanti`,
+          puoi andare avanti cercando i fiori. Cosa dovrebbe fare l'ape `se c'è un
+          fiore`?
       courseF_bee_conditionals5:
         courseF_bee_conditionals5_a: Pensa ad ogni lato del percorso rettangolare
           come ad un percorso a sé stante. Imposta un ciclo annidato con un blocco
@@ -16623,6 +16888,9 @@ it-IT:
         courseF_bee_conditionals5_c: Ci sono 3 lati del rettangolo con dei fiori,
           quindi del codice devi usare `ripeti 3 volte`. Ad ogni ripetizione, l'ape
           deve procedere lungo il percorso `mentre c'è strada in avanti`.
+        courseF_bee_conditionals5_d: Per muoversi lungo il percorso, si dovrà usare
+          il blocco `vai avanti`, ma in ogni casella l'ape deve controllare la presenza
+          di un fiore. Cosa deve fare l'ape `se c'è un fiore`?
       courseF_bee_conditionals8:
         courseF_bee_conditionals8_a: "**Attenzione:** Ogni volta che esegui il programma
           ciò che è nascosto può cambiare: per risolvere l'esercizio, devi quindi
@@ -16631,6 +16899,8 @@ it-IT:
           Questo esercizio è un po' complicato, perché non puoi controllare le caselle vuote, i fiori _e_ i favi con un'unica istruzione condizionale.
 
           Controlla solo se c'è un fiore o un favo alla fine di ogni tratto del percorso (dove vedi le nuvole).
+        courseF_bee_conditionals8_c: Cosa succede se ignori il primo fiore ed usi
+          il blocco `mentre c'è strada in avanti`?
       courseF_bee_for1:
         courseF_bee_for1_a: Trascina un blocco numerico viola nello spazio vuoto del
           ciclo `ripeti ... volte` per indicare quante volte deve essere ripetuto.
@@ -17318,6 +17588,41 @@ it-IT:
       courseF_bee_functions2:
         courseF_bee_functions2_a: La funzione è già stata scritta per te, ma è necessario
           che tu la richiami quando l'artista è su ogni fiore.
+        courseF_bee_functions2_b: Clicca sul pulsante blu "modifica" della funzione
+          `get only nectar` (_prendi solo nettare_) per vedere cosa fa.
+      courseF_bee_functions3:
+        courseF_bee_functions3_a: 'In questo esercizio, la funzione deve solo produrre
+          il miele, non deve contenere alcun blocco `vai avanti` o `gira`. '
+        courseF_bee_functions3_b: Ricordati che la funzione deve produrre miele solo
+          _se_ c'è un favo.
+        courseF_bee_functions3_c: Usa il blocco verde `only make honey` (_fai solo
+          il miele_) per richiamare questa funzione.
+        courseF_bee_functions3_d: Prova questo percorso.
+      courseF_bee_functions3a:
+        courseF_bee_functions3a_a: 'In questo esercizio, la funzione deve solo raccogliere
+          il nettare o produrre il miele, non deve contenere alcun blocco `vai avanti`
+          o `gira`. '
+        courseF_bee_functions3a_b: Segui un percorso a scalinata per controllare le
+          prime quattro nuvole.
+      courseF_bee_functions4:
+        courseF_bee_functions4_a: Il codice presente nella funzione dovrebbe far girare
+          l'ape, farla andare avanti a prendere il nettare o fare il miele e farla
+          tornare sul percorso principale. Non hai quindi bisogno di aggiungere questa
+          parte di movimenti nel programma principale.
+        courseF_bee_functions4_b: Provare a costruire il programma utilizzando i blocchi
+          funzione come ti aspetti che debbano comportarsi, successivamente procedi
+          con la definizione del codice interno alla funzione.
+      courseF_bee_functions5a:
+        courseF_bee_functions5a_a: "Il codice presente nella funzione deve controllare
+          `se c'è strada a destra` e, in caso affermativo, deve far girare l'ape,
+          farla andare avanti a prendere il nettare o fare il miele e farla tornare
+          sul percorso principale.  \n\nNon hai quindi bisogno di aggiungere questa
+          parte di movimenti nel programma principale."
+        courseF_bee_functions5a_b: Visto che i lati del percorso principale sono di
+          lunghezze differenti, avrai bisogno di un ciclo `mentre` per percorrerli.
+        courseF_bee_functions5a_c: All'interno del ciclo `mentre`, devi di andare
+          avanti ed usare la funzione per verificare la presenza di un percorso in
+          avanti.
       courseF_bee_functions6:
         courseF_bee_functions6_a: "Se ti sembra troppo difficile, prova a creare la
           funzione poco per volta.  \n\nAggiungi qualche blocco e prova a vedere cosa
@@ -17325,6 +17630,10 @@ it-IT:
           soluzione!\n\n<xml>\n  <block type=\"procedures_defnoreturn\" editable=\"false\">\n
           \   <mutation/>\n    <title name=\"NAME\">get nectar make honey</title>\n
           \   <statement name=\"STACK\">\n    </statement>\n  </block>\n</xml>"
+        courseF_bee_functions6_b: La tua funzione deve controllare se c'è un fiore
+          o un favo, prendere il nettare o fare il miele e poi girare.
+        courseF_bee_functions6_c: Visto che la svolta è già all'interno della funzione,
+          all'esterno basterà un ciclo `mentre` per completare il labirinto.
       courseF_bee_functions8a:
         courseF_bee_functions8a_a: |-
           Se ti sembra troppo difficile, prova a creare la funzione poco per volta.<br>
@@ -17477,7 +17786,68 @@ it-IT:
                                 </block>
                               </value>
                             </block></xml>
+      courseF_playlab_variables1a:
+        courseF_playlab_variables1a_a: Dovrai sostituire le parole "What should I
+          shout?" ("Cosa devo urlare?"), che intravedi nel blocco verde, con "Goal!"
+      courseF_playlab_variables2b:
+        courseF_playlab_variables2b_a: Cosa pensi che dirà Kiki quando premerai il
+          pulsante "Esegui"?
+      courseF_playlab_variables3b_josh:
+        courseF_playlab_variables3b_a: 'Ci sono due blocchi con spazi vuoti: uno nel  blocco
+          `il personaggio dice` ed uno nel blocco `unisci`. Aggiungi lì la variabile
+          `age`!'
+      courseF_playlab_variables4b:
+        courseF_playlab_variables4b_a: Non hai bisogno di prendere alcun blocco dalla
+          cassetta degli attrezzi.
+        courseF_playlab_variables4b_b: Posiziona due volte la variabile `age` ("età")
+          e una volta la variabile `name` ("nome") in modo che la conversazione abbia
+          senso.
+      courseF_playlab_variables5c:
+        courseF_playlab_variables5c_a: Cerca il blocco della variabile `answer` ("risposta")
+          nella categoria “Variabili” della cassetta degli attrezzi.
+        courseF_playlab_variables5c_b: Verifica il funzionamento del programma! Per
+          vedere come si comporta, prova ad inserire sia il colore "red" ("rosso"),
+          sia altri colori.
+      courseF_playlab_variables6c:
+        courseF_playlab_variables6c_a: Il blocco `chiedi` lo trovi all'interno della
+          categoria "Input" della cassetta degli attrezzi.
+      courseF_playlab_variables7b:
+        courseF_playlab_variables7b_a: Fai chiacchierare un gatto e un cane dei loro
+          cibi preferiti. Usa il blocco `chiedi` per scoprire il cibo preferito, quindi
+          visualizza il testo sullo schermo!
+        courseF_playlab_variables7b_b: Fai in modo che il tuo personaggio preferito
+          chieda se l'utente vuole che gli racconti una barzelletta. Se la risposta
+          è sì, allora visualizza una battuta sullo schermo.
+      courseF_playlab_variables7c:
+        courseF_playlab_variables7c_a: Ricordati di mettere il nuovo blocco `chiedi`
+          prima dell'istruzione condizionale `se/altrimenti`.
+      courseF_playlab_variables8c:
+        courseF_playlab_variables8c_a: Inserisci il blocco `unisci` in un blocco `il
+          personaggio dice` sfruttando le variabili per formare frasi personalizzate.
+      courseF_playlab_variables_challenge1:
+        courseF_playlab_variables_challenge1_a: |-
+          Avrai prendere altri blocchi dalla cassetta degli attrezzi per far parlare i personaggi.
+
+          <xml><block type="studio_saySpriteParamsTime" inline="true">
+                <value name="SPRITE">
+                  <block type="math_number">
+                    <title name="NUM">1</title>
+                  </block>
+                </value>
+                                <value name="TEXT">
+                            <block type="text">
+                              <title name="TEXT">Knock knock.</title>
+                            </block>
+                          </value>
+                <value name="TIME">
+                  <block type="math_number">
+                    <title name="NUM">1</title>
+                  </block>
+                </value>
+                </block></xml>
       courseF_playlab_variables_challenge2:
+        courseF_playlab_variables_challenge2_a: Aggiungi e sottrai punti alla variabile
+          `score` quando i personaggi si toccano.
         courseF_playlab_variables_challenge2_b: Se vuoi, puoi modificare il parametro
           che cambia la velocità alla quale si muove il cane ogni volta che premi
           le frecce.
@@ -17657,6 +18027,10 @@ it-IT:
           Trascina il blocco `il personaggio 1 dice ...` dalla cassetta degli attrezzi
           e attaccalo all'evento`quando si clicca su "Esegui"` già presente nell'area
           di lavoro. Poi aggiungi la scritta "Ciao!" al suo interno.
+      iceage_hello2:
+        iceage_hello2_a: 'Per risolvere questo esercizio, è necessario far dire qualcosa
+          a Sid usando il blocco `il personaggio 1 dice`. Dovrai anche far in modo
+          che Manny dica qualcosa, usando il blocco `il personaggio 2 dice`. '
       iceage_move_events:
         iceage_move_events_a: Per risolvere l'esercizio, ogni evento `quando si preme
           sulla freccia ...` ha bisogno di avere collegato un diverso comando `sposta
@@ -17690,3 +18064,7 @@ it-IT:
         iceage_warn_ice_age_b: Aggiungi entrambi i nuovi blocchi sotto all'evento
           `quando si clicca su "Esegui"` per farli eseguire immediatamente all'avvio
           del programma.
+      Dance_Party_05:
+        validation: "**Come faccio a passare questo livello** \n\n-   Il
+          tuo ballerino deve passare attraverso almeno 4 diversi passi di danza prima
+          che il livello finisca. \n\nQuesto livello termina dopo 12 battute"

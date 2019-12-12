@@ -880,64 +880,83 @@ ro-RO:
       Course 4 SCV 6: Apasă aici pentru a vedea din nou instrucţiunile.
       CourseD_Dance_Party_01: Trage blocul `crează un nou` în spaţiul de lucru, şi
         conectează-l în interiorul blocului `configurare`.
-      CourseD_Dance_Party_02: Fă elanul să înceapă o nouă mişcare după 4 măsuri!
-      CourseD_Dance_Party_03: Acum fă dansatorul să înceapă o nouă mişcare dup 6 măsuri!
-      CourseD_Dance_Party_04: Adaugă un efect de fundal pentru programul tău.
-      CourseD_Dance_Party_05: Utilizează un alt bloc nou pentru a face dansatorul
-        să îşi schimbe mişcările la fiecare 2 măsuri.
-      CourseD_Dance_Party_06: Creează un dansator de rezervă numit `dansator_rezervă1`
-        pentru a dansa cu pisica.
-      CourseD_Dance_Party_08: Poţi face ambii dansatori de aceeaşi mărime?
+      CourseD_Dance_Party_02: Acum fă elanul să înceapă o nouă mişcare după 4 măsuri!
+      CourseD_Dance_Party_03: Acum fă dansatorul să înceapă o nouă mişcare după 6
+        măsuri!
+      CourseD_Dance_Party_04: Adaugă un efect de fundal la programul tău.
+      CourseD_Dance_Party_05: Folosește un alt bloc nou pentru a-l face pe dansator
+        să-și schimbe mișcările la fiecare 2 măsuri.
+      CourseD_Dance_Party_06: Creează un dansator de rezervă numit `dansator_derezervă1`
+        care să danseze cu pisica.
+      CourseD_Dance_Party_08: Poți face ca ambii dansatori de rezervă să aibă aceeași
+        dimensiune?
       CourseD_Dance_Party_09: Utilizează blocul `setează nuanţă` pentru a schimba
         culoarea dansatorului.
-      CourseD_Dance_Party_10: Fă ca şi celălalt dansator să reacţioneze la muzică
-        utilizând blocul `începe cu`.
-      CourseD_Dance_Party_11: Blocul "când sus este apăsat(ă)" te lasă să execuţi
-        cod atunci cînd tasta săgeată în sus este apăsată. Încearcă să faci dansatorul
-        să facă o mişcare rapidă cănd apeşi săgeata în sus.
-      CourseD_Dance_Party_11_5: Utilizează blocurile "toate raţele" pentru a face
-        raţele să danseze împreună.
-      CourseD_Dance_Party_11b: Fă robotul să facă o "cădere" atunci când apeşi tasta
-        săgeată în dreapta, şi să facă "bated din palme" atunci când apeşi tasta săgeată
-        în sus. Fă secvenţa "cădere"-"bate din palme" cât de repede poţi!
+      CourseD_Dance_Party_10: Fă ca celălalt dansator să reacționeze la muzică folosind
+        și blocul `începe să urmărească`.
+      CourseD_Dance_Party_11: Blocul `când se apasă sus` te lasă să rulezi codul când
+        se apasă tasta cu săgeată în sus. Încearcă să faci dansatorul să execute o
+        mișcare rapidă când apeși sus.
+      CourseD_Dance_Party_11_5: Folosește blocurile „toate rațele” pentru a face rațele
+        să danseze împreună.
+      CourseD_Dance_Party_11b: Fă Robotul să „cadă” o dată când apeși tasta cu săgeată
+        dreapta și să „aplaude” o dată când apeși tasta cu săgeată în sus. Fă mișcările
+        de cădere-aplaudare cât de repede poți!
+      CourseD_Dance_Party_12: Dezlănțuiește-te! Creează un dans al tău pe care să-l
+        dansezi cu prietenii.
       Crack Random Substitution: Instrucţiuni
       Crack a Caesar Cipher: Instrucţiuni
-      Dance_2019_01: Trage blocul `crează un nou` în spaţiul de lucru, şi conectează-l
+      Dance_2019_01: Trage blocul `creează un nou` în spaţiul de lucru, şi conectează-l
         în interiorul blocului `configurare`.
-      Dance_2019_05: Acum fă dansatorul să înceapă o nouă mişcare dup 6 măsuri!
-      Dance_2019_08: Utilizează blocul `setează nuanţă` pentru a schimba culoarea
-        dansatorului.
+      Dance_2019_02: Blocul `când se apasă sus` îți permite să rulezi codul când se
+        apasă săgeata sus. Fă ca dansatorul să aplaude când apeși sus sau încearcă
+        altă mișcare!
+      Dance_2019_03: E timpul de dans! Programează fiecare dansator să se miște când
+        apeși diferite taste. Alege mișcarea ta preferată pentru fiecare dansator
+        sau setează-l pe „(Aleatoriu)" pentru ceva cu totul neașteptat!
+      Dance_2019_04: Acum fă dansatorul să înceapă o nouă mişcare după a patra măsură.
+      Dance_2019_05: Acum fă dansatorul să înceapă o nouă mişcare după 6 măsuri!
+      Dance_2019_06: Creează un grup de dansatori de rezervă în jurul dansatorului
+        principal din mijloc.
+      Dance_2019_07: Modifică dimensiunea grupului de dansatori de rezervă.
+      Dance_2019_08: Încearcă să schimbi culoarea unuia dintre dansatorii tăi (sau
+        a întregului grup)!
+      Dance_2019_09: Fii creativ cu aceste blocuri noi!
+      Dance_2019_10: Dezlănțuiește-te! Creează un dans al tău pe care să-l dansezi
+        cu prietenii.
       Dance_Party_01: Trage blocul `crează un nou` în spaţiul de lucru, şi conectează-l
         în interiorul blocului `configurare`.
-      Dance_Party_02: Fă elanul să înceapă o nouă mişcare după 4 măsuri!
-      Dance_Party_03: Acum fă dansatorul să înceapă o nouă mişcare dup 6 măsuri!
-      Dance_Party_04: Adaugă un efect de fundal pentru programul tău.
-      Dance_Party_05: Utilizează un alt bloc nou pentru a face dansatorul să îşi schimbe
-        mişcările la fiecare 2 măsuri.
-      Dance_Party_06: Creează un dansator de rezervă numit `dansator_rezervă1` pentru
-        a dansa cu pisica.
-      Dance_Party_08: Poţi face ambii dansatori de aceeaşi mărime?
+      Dance_Party_02: Acum fă elanul să înceapă o nouă mişcare după 4 măsuri!
+      Dance_Party_03: Acum fă dansatorul să înceapă o nouă mişcare după 6 măsuri!
+      Dance_Party_04: Adaugă un efect de fundal la programul tău.
+      Dance_Party_05: Folosește un alt bloc nou pentru a-l face pe dansator să-și
+        schimbe mișcările la fiecare 2 măsuri.
+      Dance_Party_06: Creează un dansator de rezervă numit `dansator_derezervă1` care
+        să danseze cu pisica.
+      Dance_Party_08: Poți face ca ambii dansatori de rezervă să aibă aceeași dimensiune?
       Dance_Party_09: Utilizează blocul `setează nuanţă` pentru a schimba culoarea
         dansatorului.
-      Dance_Party_10: Fă ca şi celălalt dansator să reacţioneze la muzică utilizând
-        blocul `începe cu`.
-      Dance_Party_11: Blocul "când sus este apăsat(ă)" te lasă să execuţi cod atunci
-        cînd tasta săgeată în sus este apăsată. Încearcă să faci dansatorul să facă
-        o mişcare rapidă cănd apeşi săgeata în sus.
-      Dance_Party_11_5: Utilizează blocurile "toate raţele" pentru a face raţele să
+      Dance_Party_10: Fă ca celălalt dansator să reacționeze la muzică folosind și
+        blocul `începe să urmărească`.
+      Dance_Party_11: Blocul `când se apasă sus` te lasă să rulezi codul când se apasă
+        tasta cu săgeată în sus. Încearcă să faci dansatorul să execute o mișcare
+        rapidă când apeși sus.
+      Dance_Party_11_5: Folosește blocurile „toate rațele” pentru a face rațele să
         danseze împreună.
-      Dance_Party_11b: Fă robotul să facă o "cădere" atunci când apeşi tasta săgeată
-        în dreapta, şi să facă "bated din palme" atunci când apeşi tasta săgeată în
-        sus. Fă secvenţa "cădere"-"bate din palme" cât de repede poţi!
+      Dance_Party_11b: Fă Robotul să „cadă” o dată când apeși tasta cu săgeată dreapta
+        și să „aplaude” o dată când apeși tasta cu săgeată în sus. Fă mișcările de
+        cădere-aplaudare cât de repede poți!
+      Dance_Party_12: Dezlănțuiește-te! Creează un dans al tău pe care să-l dansezi
+        cu prietenii.
       Dance_Party_extras_battle: Dans pe echipe (apasă "Mai mult" pentru detalii)
       Dance_Party_extras_battle_2019: Dans pe echipe (apasă "Mai mult" pentru detalii)
       Dance_Party_extras_every_beat: Sfert de note (apasă pe "Mai mult" pentru detalii)
       Dance_Party_extras_every_beat_2019: Sfert de note (apasă pe "Mai mult" pentru
         detalii)
-      Dance_Party_extras_layout: Hai să trecem în formaţie! (apasă pe "Mai mult" pentru
-        detalii)
-      Dance_Party_extras_layout_2019: Hai să trecem în formaţie! (apasă pe "Mai mult"
-        pentru detalii)
+      Dance_Party_extras_layout: '# Să trecem în formație! (Apasă "Mai mult" pentru
+        detalii)'
+      Dance_Party_extras_layout_2019: '# Să trecem în formație! (Apasă "Mai mult"
+        pentru detalii)'
       Dance_Party_extras_on_beat: Sunete joase, medii şi înalte (apasă pe "Mai mult"
         pentru detalii)
       Dance_Party_extras_on_beat_2019: Sunete joase, medii şi înalte (apasă pe "Mai
@@ -946,8 +965,8 @@ ro-RO:
         pentru detalii)
       Dance_Party_extras_speed_2019: Măreşte viteza, Micşorează viteza (apasă pe "Mai
         mult" pentru detalii)
-      Dance_Party_extras_visible: Unde au dispărut? (apasă pe "Mai mult" pentru detalii)
-      Dance_Party_extras_visible_2019: Unde au dispărut? (apasă pe "Mai mult" pentru
+      Dance_Party_extras_visible: Unde au dispărut? (Apasă "Mai mult" pentru detalii)
+      Dance_Party_extras_visible_2019: Unde au dispărut? (Apasă "Mai mult" pentru
         detalii)
       Frequency Analysis: Test
       HOC 2018 Level_12: Proiectează propriul tău mediu acvatic, aşa cum vrei tu!
@@ -1730,3 +1749,7 @@ ro-RO:
       scrat 20: Puteți să mai adăugați doar 3 blocuri pentru a mă ajuta să rezolv
         un labirint mai complex? Dacă o faceți bine, voi putea să merg pe orice traseu
         curbat, indiferent de lungime. Uraaa! Gheața se topește!
+      Dance_Party_extras_alternate_2019: Înainte și înapoi! (Faceți clic pe „Mai multe”
+        pentru detalii)
+      Dance_Party_extras_mixed_2019: Mai multe butoane (faceți clic pe „Mai mult”
+        pentru detalii)

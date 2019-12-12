@@ -441,7 +441,7 @@ fr-FR:
       AppLab Intro 7 - thisOrThatSetScreen: |-
         <img src="https://images.code.org/acd1acf659a2504d38ff80256d8e870f-image-1508374065550.com-crop (1).gif" style="float:right;height:200px">
 
-        **But:** L'écran change en "ecranDroite"lorsque l'utilisateur clique sur le `boutonDroite`
+        **But:** L'écran change en "ecranDroite" lorsque l'utilisateur clique sur le `boutonDroite`
 
         **Comment:** En mode Code, ajoute un nouveau `onEvent()` à ton programme pour ton bouton "Droite!". Ajoute un bloc `setScreen()` à l'intérieur qui change l'écran vers `ecranDroite`.
 
@@ -1586,7 +1586,7 @@ fr-FR:
       CSD U2 new page: "# Create a New Page for Your Website.\\\r\n\n\\\r\nHere's\nyour
         project from before.  You'll be adding another page.  Your new page\ncan be
         a top 10 list, a recipe, or anything you like.\\\r\n\\\r\n\n# Do This\\\r\n\n\\*\nAdd
-        a new HTML file by clicking  \\!\\[](\\<<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38>\nPM.png>).
+        a new HTML file by clicking  ![](<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38\nPM.png>).
         \ The new file will appear in the files list on the left side of the\nworkspace.\\\r\n\n-
         \  Rename the file, either by right clicking it and choosing\n    \"Rename\",
         or by clicking on it when it's already highlighted.  **Make sure\n    the
@@ -1596,7 +1596,7 @@ fr-FR:
       CSD U2 new page_2018: "# Create a New Page for Your Website.\\\r\n\n\\\r\nHere's\nyour
         project from before.  You'll be adding another page.  Your new page\ncan be
         a top 10 list, a recipe, or anything you like.\\\r\n\\\r\n\n# Do This\\\r\n\n\\*\nAdd
-        a new HTML file by clicking  \\!\\[](\\<<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38>\nPM.png>).
+        a new HTML file by clicking  ![](<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38\nPM.png>).
         \ The new file will appear in the files list on the left side of the\nworkspace.\\\r\n\n-
         \  Rename the file, either by right clicking it and choosing\n    \"Rename\",
         or by clicking on it when it's already highlighted.  **Make sure\n    the
@@ -1606,7 +1606,7 @@ fr-FR:
       CSD U2 new page_2019: "# Create a New Page for Your Website.\\\r\n\n\\\r\nHere's\nyour
         project from before.  You'll be adding another page.  Your new page\ncan be
         a top 10 list, a recipe, or anything you like.\\\r\n\\\r\n\n# Do This\\\r\n\n\\*\nAdd
-        a new HTML file by clicking  \\!\\[](\\<<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38>\nPM.png>).
+        a new HTML file by clicking  ![](<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38\nPM.png>).
         \ The new file will appear in the files list on the left side of the\nworkspace.\\\r\n\n-
         \  Rename the file, either by right clicking it and choosing\n    \"Rename\",
         or by clicking on it when it's already highlighted.  **Make sure\n    the
@@ -1717,17 +1717,17 @@ fr-FR:
         to help you\n    find any potential problems with your site.\\\r"
       CSD U2 project share: "# Share Your Project\\\r\n\n\\\r\nIt's\ntime to share
         your project with the world!\\\r\n\\\r\n\n# Do This\\\r\n\n-   Click the\n
-        \   \\!\\[](\\<<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27>\n
+        \   ![](<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27\n
         \   AM.png>) button at the top of this page.\\\r\n-   Copy the URL it gives
         you, and\n    email it to the people you want to see your page.\\\r\n    \\\r"
       CSD U2 project share_2018: "# Share Your Project\\\r\n\n\\\r\nIt's\ntime to
         share your project with the world!\\\r\n\\\r\n\n# Do This\\\r\n\n-   Click
-        the\n    \\!\\[](\\<<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27>\n
+        the\n    ![](<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27\n
         \   AM.png>) button at the top of this page.\\\r\n-   Copy the URL it gives
         you, and\n    email it to the people you want to see your page.\\\r\n    \\\r"
       CSD U2 project share_2019: "# Share Your Project\\\r\n\n\\\r\nIt's\ntime to
         share your project with the world!\\\r\n\\\r\n\n# Do This\\\r\n\n-   Click
-        the\n    \\!\\[](\\<<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27>\n
+        the\n    ![](<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27\n
         \   AM.png>) button at the top of this page.\\\r\n-   Copy the URL it gives
         you, and\n    email it to the people you want to see your page.\\\r\n    \\\r"
       CSD U2 upload images: "# Upload Images\\\r\n\n\\\r\nNext, you'll\nneed to upload
@@ -2105,172 +2105,172 @@ fr-FR:
         \  What do you think the exclamation mark (`!`) on line 10\n    does?\\\r\n-
         \  How might you use the different keypress blocks in a game?"
       CSD U3 L11 Freeplay: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned to create
-        whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
-        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
+        whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L11 Freeplay_2018: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
-        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L11 Freeplay_2019: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
-        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L12 Freeplay: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned to create
-        whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
-        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
+        whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L12 Freeplay_2018: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
-        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L12 Freeplay_2019: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
-        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L13 Freeplay: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned to create
-        whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
-        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
+        whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L13 Freeplay_2018: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
-        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L13 Freeplay_2019: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
-        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L15 Freeplay: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned to create
-        whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
-        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
+        whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L15 Freeplay_2018: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
-        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L15 Freeplay_2019: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
-        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L16 Freeplay: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned to create
-        whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
-        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
+        whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L16 Freeplay_2018: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
-        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L16 Freeplay_2019: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
-        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L17 Freeplay: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned to create
-        whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
-        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
+        whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L17 Freeplay_2018: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
-        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L17 Freeplay_2019: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
-        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L18 Freeplay: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned to create
-        whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
-        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
+        whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L18 Freeplay_2018: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
-        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L18 Freeplay_2019: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
-        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L19 Freeplay: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned to create
-        whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
-        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
+        whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L19 Freeplay_2018: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
-        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L19 Freeplay_2019: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
-        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L3 Freeplay: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned to create
-        whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
-        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
+        whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L3 Freeplay_2018: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
-        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L3 Freeplay_2019: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
-        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L4 Freeplay: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned to create
-        whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
-        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
+        whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L4 Freeplay_2018: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
-        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L4 Freeplay_2019: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
-        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L5 Freeplay: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned to create
-        whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
-        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
+        whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L5 Freeplay_2018: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
-        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L5 Freeplay_2019: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
-        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L6 Freeplay: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned to create
-        whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
-        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
+        whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L6 Freeplay_2018: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
-        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L6 Freeplay_2019: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
-        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L7 Freeplay: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned to create
-        whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
-        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
+        whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L7 Freeplay_2018: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
-        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L7 Freeplay_2019: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
-        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L9 Freeplay: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned to create
-        whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
-        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
+        whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L9 Freeplay_2018: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
-        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L9 Freeplay_2019: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
-        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
+        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 Mouse Input Bee 1: "<img src=\"https://images.code.org/d2092b4f2debc336f963d48bd6cf4973-image-1477681020928.gif\"\nstyle=\"float:right\">\\\r\n\\\r\n\n#
         Mouse X and Y\\\r\n\n\\\r\nOne of the simplest ways\nto take input is to just
@@ -2436,10 +2436,10 @@ fr-FR:
         watchers to help debug your program._"
       CSD U3 Plotting Shapes Shape Lab: "# Drawing Shapes\\\r\n\n\\\r\nExplore\nusing
         this tool that lets you draw different colored shapes. \\\r\n\\\r\nMake\nsure
-        you hit \"Run\" and try out turning on the grid to help you place shapes\nprecisely.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59>\nPM.png>)"
+        you hit \"Run\" and try out turning on the grid to help you place shapes\nprecisely.\\\r\n\\\r\n![](<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59\nPM.png>)"
       CSD U3 Plotting Shapes Shape Lab_2018: "# Drawing Shapes\\\r\n\n\\\r\nExplore\nusing
         this tool that lets you draw different colored shapes. \\\r\n\\\r\nMake\nsure
-        you hit \"Run\" and try out turning on the grid to help you place shapes\nprecisely.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59>\nPM.png>)"
+        you hit \"Run\" and try out turning on the grid to help you place shapes\nprecisely.\\\r\n\\\r\n![](<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59\nPM.png>)"
       CSD U3 Random Debug Cloud: "<img src=\"https://images.code.org/529b7e5ddda4683e6a0cc5b3028e4dbf-image-1490824752133.58.50\nPM.png\"
         style=\"float:right;height:150px\">\\\r\n\\\r\n\n# Debug - Using 4 Parameters\\\r\n\n\\\r\nNow\nthat
         the grass is working, let's add a cloud to the sky. Unfortunately, it\nlooks
@@ -3408,100 +3408,100 @@ fr-FR:
         you encode 59 in binary?"
       CSD U5 binary 4-new: "# Decoding multiple numbers\\\r\n\n\\\r\nHere's\na widget
         that can calculate numbers of 4, 5, or 6 bits.  You can use it to\nfind the
-        two world records encoded in the binary string below.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06>\nPM.png>)\\\r\n\\\r\n\n1.
+        two world records encoded in the binary string below.\\\r\n\\\r\n![](<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06\nPM.png>)\\\r\n\\\r\n\n1.
         \ Most number of people lifted and thrown in two minutes.\n    (4 bits)\\\r\n2.
         \ Most canned drinks opened by a parrot in one minute. (6 bits)\\\r\n    \\\r\n
         \   # \n    Do This\\\r\n3.  Decode the two numbers from the binary string."
       CSD U5 binary 4-new_2018: "# Decoding multiple numbers\\\r\n\n\\\r\nHere's\na
         widget that can calculate numbers of 4, 5, or 6 bits.  You can use it to\nfind
-        the two world records encoded in the binary string below.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06>\nPM.png>)\\\r\n\\\r\n\n1.
+        the two world records encoded in the binary string below.\\\r\n\\\r\n![](<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06\nPM.png>)\\\r\n\\\r\n\n1.
         \ Most number of people lifted and thrown in two minutes.\n    (4 bits)\\\r\n2.
         \ Most canned drinks opened by a parrot in one minute. (6 bits)\\\r\n    \\\r\n
         \   # \n    Do This\\\r\n3.  Decode the two numbers from the binary string."
       CSD U5 binary 4-new_2019: "# Decoding multiple numbers\\\r\n\n\\\r\nHere's\na
         widget that can calculate numbers of 4, 5, or 6 bits.  You can use it to\nfind
-        the two world records encoded in the binary string below.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06>\nPM.png>)\\\r\n\\\r\n\n1.
+        the two world records encoded in the binary string below.\\\r\n\\\r\n![](<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06\nPM.png>)\\\r\n\\\r\n\n1.
         \ Most number of people lifted and thrown in two minutes.\n    (4 bits)\\\r\n2.
         \ Most canned drinks opened by a parrot in one minute. (6 bits)\\\r\n    \\\r\n
         \   # \n    Do This\\\r\n3.  Decode the two numbers from the binary string."
       CSD U5 binary 5-new: "# Decoding multiple numbers\\\r\n\n\\\r\nHere's\na widget
         that can calculate numbers up to to eight bits. (If you have a shorter\nnumber,
         you can just leave the extra bits at the left off.) You can use it\nto find
-        the values of the two world records below.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14>\nPM.png>)\\\r\n\\\r\n\n1.
+        the values of the two world records below.\\\r\n\\\r\n![](<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14\nPM.png>)\\\r\n\\\r\n\n1.
         \ Longest tail on a dog (in inches) (5 bits)\\\r\n2.  Most spoons\n    balanced
         on someone's face (5 bits)\\\r\n    \\\r\n    # Do This\\\r\n3.  Decode the
         two\n    numbers from a the binary string."
       CSD U5 binary 5-new_2018: "# Decoding multiple numbers\\\r\n\n\\\r\nHere's\na
         widget that can calculate numbers up to to eight bits. (If you have a shorter\nnumber,
         you can just leave the extra bits at the left off.) You can use it\nto find
-        the values of the two world records below.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14>\nPM.png>)\\\r\n\\\r\n\n1.
+        the values of the two world records below.\\\r\n\\\r\n![](<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14\nPM.png>)\\\r\n\\\r\n\n1.
         \ Longest tail on a dog (in inches) (5 bits)\\\r\n2.  Most spoons\n    balanced
         on someone's face (5 bits)\\\r\n    \\\r\n    # Do This\\\r\n3.  Decode the
         two\n    numbers from a the binary string."
       CSD U5 binary 5-new_2019: "# Decoding multiple numbers\\\r\n\n\\\r\nHere's\na
         widget that can calculate numbers up to to eight bits. (If you have a shorter\nnumber,
         you can just leave the extra bits at the left off.) You can use it\nto find
-        the values of the two world records below.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14>\nPM.png>)\\\r\n\\\r\n\n1.
+        the values of the two world records below.\\\r\n\\\r\n![](<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14\nPM.png>)\\\r\n\\\r\n\n1.
         \ Longest tail on a dog (in inches) (5 bits)\\\r\n2.  Most spoons\n    balanced
         on someone's face (5 bits)\\\r\n    \\\r\n    # Do This\\\r\n3.  Decode the
         two\n    numbers from a the binary string."
       CSD U5 binary 6-new: "# Decoding multiple numbers\\\r\n\n\\\r\nHere's\na new
         bit string.  This time, you don't know the bit length of the two numbers.
-        \ Try\nto decode the numbers without knowing the bit length.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>\nPM.png>)\\\r\n\\\r\n\n1.
+        \ Try\nto decode the numbers without knowing the bit length.\\\r\n\\\r\n![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46\nPM.png>)\\\r\n\\\r\n\n1.
         \ Largest wind chime, in feet (? bits)\\\r\n2.  Furthest arrow\n    shot with
         someone's feet (in feet) (? bits)\\\r\n    \\\r\n    # Do This\\\r\n3.  Try
         to\n    decode the two numbers from the binary string.\\\r\n4.  Discuss with
         your partner\n    why you cannot know for sure whether your answer is correct."
       CSD U5 binary 6-new_2018: "# Decoding multiple numbers\\\r\n\n\\\r\nHere's\na
         new bit string.  This time, you don't know the bit length of the two numbers.
-        \ Try\nto decode the numbers without knowing the bit length.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>\nPM.png>)\\\r\n\\\r\n\n1.
+        \ Try\nto decode the numbers without knowing the bit length.\\\r\n\\\r\n![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46\nPM.png>)\\\r\n\\\r\n\n1.
         \ Largest wind chime, in feet (? bits)\\\r\n2.  Furthest arrow\n    shot with
         someone's feet (in feet) (? bits)\\\r\n    \\\r\n    # Do This\\\r\n3.  Try
         to\n    decode the two numbers from the binary string.\\\r\n4.  Discuss with
         your partner\n    why you cannot know for sure whether your answer is correct."
       CSD U5 binary 6-new_2019: "# Decoding multiple numbers\\\r\n\n\\\r\nHere's\na
         new bit string.  This time, you don't know the bit length of the two numbers.
-        \ Try\nto decode the numbers without knowing the bit length.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>\nPM.png>)\\\r\n\\\r\n\n1.
+        \ Try\nto decode the numbers without knowing the bit length.\\\r\n\\\r\n![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46\nPM.png>)\\\r\n\\\r\n\n1.
         \ Largest wind chime, in feet (? bits)\\\r\n2.  Furthest arrow\n    shot with
         someone's feet (in feet) (? bits)\\\r\n    \\\r\n    # Do This\\\r\n3.  Try
         to\n    decode the two numbers from the binary string.\\\r\n4.  Discuss with
         your partner\n    why you cannot know for sure whether your answer is correct."
       CSD U5 binary 7-new: "# Bit Length\\\r\n\n\\\r\nIf you don't\nknow how many
         bits long each number is, you won't be able to decode a string\nof numbers.\\\r\n\\\r\nFor
-        example, the following binary string could be decoded\nmany different ways.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>\nPM.png>)\\\r\n\\\r\nIf
-        you split the string like this, the string reads 12, 84.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01>\nPM.png>)
-        \\!\\[](\\<<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08>\nPM.png>)\\\r\n\\\r\n\\\r\nIf
-        you split it like this, the string reads 42, 20.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13>\nPM.png>)
-        \\!\\[](\\<<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19>\nPM.png>)\\\r\n\\\r\nTo
+        example, the following binary string could be decoded\nmany different ways.\\\r\n\\\r\n![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46\nPM.png>)\\\r\n\\\r\nIf
+        you split the string like this, the string reads 12, 84.\\\r\n\\\r\n![](<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01\nPM.png>)
+        ![](<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08\nPM.png>)\\\r\n\\\r\n\\\r\nIf
+        you split it like this, the string reads 42, 20.\\\r\n\\\r\n![](<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13\nPM.png>)
+        ![](<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19\nPM.png>)\\\r\n\\\r\nTo
         solve this problem, people agree on a fixed length for every\nnumber.  The
         following string uses the same two numbers, but each number takes\nup exactly
-        eight bits, no matter how many bits it actually needs.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26>\nPM.png>)\\\r\n\\\r\n\n#
+        eight bits, no matter how many bits it actually needs.\\\r\n\\\r\n![](<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26\nPM.png>)\\\r\n\\\r\n\n#
         Do This\\\r\n\n\\\r\n\n-   Use the binary widget to decode the string\n    that
         uses eight bit numbers.\\\r\n-   Check you answer with a partner to see whether\n
         \   you got the same answer."
       CSD U5 binary 7-new_2018: "# Bit Length\\\r\n\n\\\r\nIf you don't\nknow how
         many bits long each number is, you won't be able to decode a string\nof numbers.\\\r\n\\\r\nFor
-        example, the following binary string could be decoded\nmany different ways.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>\nPM.png>)\\\r\n\\\r\nIf
-        you split the string like this, the string reads 12, 84.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01>\nPM.png>)
-        \\!\\[](\\<<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08>\nPM.png>)\\\r\n\\\r\n\\\r\nIf
-        you split it like this, the string reads 42, 20.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13>\nPM.png>)
-        \\!\\[](\\<<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19>\nPM.png>)\\\r\n\\\r\nTo
+        example, the following binary string could be decoded\nmany different ways.\\\r\n\\\r\n![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46\nPM.png>)\\\r\n\\\r\nIf
+        you split the string like this, the string reads 12, 84.\\\r\n\\\r\n![](<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01\nPM.png>)
+        ![](<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08\nPM.png>)\\\r\n\\\r\n\\\r\nIf
+        you split it like this, the string reads 42, 20.\\\r\n\\\r\n![](<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13\nPM.png>)
+        ![](<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19\nPM.png>)\\\r\n\\\r\nTo
         solve this problem, people agree on a fixed length for every\nnumber.  The
         following string uses the same two numbers, but each number takes\nup exactly
-        eight bits, no matter how many bits it actually needs.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26>\nPM.png>)\\\r\n\\\r\n\n#
+        eight bits, no matter how many bits it actually needs.\\\r\n\\\r\n![](<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26\nPM.png>)\\\r\n\\\r\n\n#
         Do This\\\r\n\n\\\r\n\n-   Use the binary widget to decode the string\n    that
         uses eight bit numbers.\\\r\n-   Check you answer with a partner to see whether\n
         \   you got the same answer."
       CSD U5 binary 7-new_2019: "# Bit Length\\\r\n\n\\\r\nIf you don't\nknow how
         many bits long each number is, you won't be able to decode a string\nof numbers.\\\r\n\\\r\nFor
-        example, the following binary string could be decoded\nmany different ways.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>\nPM.png>)\\\r\n\\\r\nIf
-        you split the string like this, the string reads 12, 84.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01>\nPM.png>)
-        \\!\\[](\\<<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08>\nPM.png>)\\\r\n\\\r\n\\\r\nIf
-        you split it like this, the string reads 42, 20.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13>\nPM.png>)
-        \\!\\[](\\<<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19>\nPM.png>)\\\r\n\\\r\nTo
+        example, the following binary string could be decoded\nmany different ways.\\\r\n\\\r\n![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46\nPM.png>)\\\r\n\\\r\nIf
+        you split the string like this, the string reads 12, 84.\\\r\n\\\r\n![](<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01\nPM.png>)
+        ![](<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08\nPM.png>)\\\r\n\\\r\n\\\r\nIf
+        you split it like this, the string reads 42, 20.\\\r\n\\\r\n![](<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13\nPM.png>)
+        ![](<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19\nPM.png>)\\\r\n\\\r\nTo
         solve this problem, people agree on a fixed length for every\nnumber.  The
         following string uses the same two numbers, but each number takes\nup exactly
-        eight bits, no matter how many bits it actually needs.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26>\nPM.png>)\\\r\n\\\r\n\n#
+        eight bits, no matter how many bits it actually needs.\\\r\n\\\r\n![](<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26\nPM.png>)\\\r\n\\\r\n\n#
         Do This\\\r\n\n\\\r\n\n-   Use the binary widget to decode the string\n    that
         uses eight bit numbers.\\\r\n-   Check you answer with a partner to see whether\n
         \   you got the same answer."
@@ -3509,26 +3509,26 @@ fr-FR:
         shape by typing 0s and 1s. You can always click \"Readable Format\"\nif you
         want to clean up your work."
       CSD U5 black white images pixelation 2: "# Do This\\\r\n\n\\\r\nUse\nthe pixelation
-        widget to draw a smiley face\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>\nPM.png>)"
+        widget to draw a smiley face\\\r\n\\\r\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47\nPM.png>)"
       CSD U5 black white images pixelation 2_2018: "# Do This\\\r\n\n\\\r\nUse\nthe
-        pixelation widget to draw a smiley face\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>\nPM.png>)"
+        pixelation widget to draw a smiley face\\\r\n\\\r\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47\nPM.png>)"
       CSD U5 black white images pixelation 2_2019: "# Do This\\\r\n\n\\\r\nUse\nthe
-        pixelation widget to draw a smiley face\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>\nPM.png>)"
+        pixelation widget to draw a smiley face\\\r\n\\\r\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47\nPM.png>)"
       CSD U5 black white images pixelation 3: "# Do This\\\r\n\n\\\r\nThe\nwidth and
         height sliders are set incorrectly for this image so it doesn't\nlook like
-        anything. Change them until you find the image.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17>\nPM.png>)"
+        anything. Change them until you find the image.\\\r\n\\\r\n![](<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17\nPM.png>)"
       CSD U5 black white images pixelation 3_2018: "# Do This\\\r\n\n\\\r\nThe\nwidth
         and height sliders are set incorrectly for this image so it doesn't\nlook
-        like anything. Change them until you find the image.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17>\nPM.png>)"
+        like anything. Change them until you find the image.\\\r\n\\\r\n![](<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17\nPM.png>)"
       CSD U5 black white images pixelation 3_2019: "# Do This\\\r\n\n\\\r\nThe\nwidth
         and height sliders are set incorrectly for this image so it doesn't\nlook
-        like anything. Change them until you find the image.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17>\nPM.png>)"
+        like anything. Change them until you find the image.\\\r\n\\\r\n![](<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17\nPM.png>)"
       CSD U5 black white images pixelation 4: "# Do This\\\r\n\n\\\r\nAdd\neyebrows
-        to this smiley face. Remember to use the \"Readable Format\" if you\nget stuck.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37>\nPM.png>)"
+        to this smiley face. Remember to use the \"Readable Format\" if you\nget stuck.\\\r\n\\\r\n![](<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37\nPM.png>)"
       CSD U5 black white images pixelation 4_2018: "# Do This\\\r\n\n\\\r\nAdd\neyebrows
-        to this smiley face. Remember to use the \"Readable Format\" if you\nget stuck.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37>\nPM.png>)"
+        to this smiley face. Remember to use the \"Readable Format\" if you\nget stuck.\\\r\n\\\r\n![](<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37\nPM.png>)"
       CSD U5 black white images pixelation 4_2019: "# Do This\\\r\n\n\\\r\nAdd\neyebrows
-        to this smiley face. Remember to use the \"Readable Format\" if you\nget stuck.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37>\nPM.png>)"
+        to this smiley face. Remember to use the \"Readable Format\" if you\nget stuck.\\\r\n\\\r\n![](<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37\nPM.png>)"
       CSD U5 black white images pixelation 5: "# Do This\\\r\n\n\\\r\nNow\nit's your
         turn. Draw anything you want in the pixelation widget. Feel free\nto change
         the width and height of your image if you wish."
@@ -5368,7 +5368,7 @@ fr-FR:
       CourseD_Dance_Party_01: |-
         _Faisons une fête dansante !_
 
-        Faites glisser le bloc « créer un nouveau » dans l’espace de travail, puis connectez-le à l’intérieur du bloc « configuration » pour créer votre premier danseur.
+        Faites glisser le bloc `créer un nouveau` dans l’espace de travail, puis connectez-le à l’intérieur du bloc « configuration » pour créer votre premier danseur.
 
         -   _Vous pouvez également cliquer sur l'ampoule située à gauche si vous souhaitez plus d'informations ou des défis supplémentaires._
       CourseD_Dance_Party_02: |-
@@ -5382,13 +5382,13 @@ fr-FR:
 
         Ajoutez un bloc <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> à votre espace de travail. Faites en sorte que le danseur commence un nouveau mouvement après 6 mesures.
       CourseD_Dance_Party_04: |-
-        _Cette danse a besoin d'être un peu plus éclatante !_
+        _Cette danse a besoin d'être un peu plus éclatante!_
 
         Recherchez un nouveau bloc dans votre boîte à outils qui ajoute un effet de fond derrière votre danseur. Regardez les effets changer avec la musique !
       CourseD_Dance_Party_05: |-
         Utilisez un autre nouveau bloc pour faire changer les mouvements du danseur **toutes les 2 mesures** !
 
-        \*Choisir « (Suivant) », « (Précédent) » ou « (Aléatoire) » indique au danseur d'effectuer un mouvement différent à chaque fois que le programme est exécuté.
+        -   Choisir `(Suivant)`, `(Précédent)` ou `(Aléatoire)` indique au danseur d'effectuer un mouvement différent à chaque fois que le programme est exécuté.
       CourseD_Dance_Party_06: |-
         _Nous avons besoin de plus de danseurs !_
 
@@ -5502,16 +5502,61 @@ fr-FR:
         Regarde combien de temps il t'a fallu pour casser ce chiffrement! Est ce que c'est le bon moyen de crypter des données sensibles ?
 
         <img src="http://code.org/api/hour/begin_encryption.png">
+      Dance_2019_01: |-
+        \_Faisons une soirée dansante! \_
+
+        Fais glisser le bloc <xml><block type="Dancelab_makeAnonymousDanceSprite" block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;, &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml> dans l'espace de travail et connecte-le à l'intérieur du bloc <xml><block type="Dancelab_whenSetup2" next_connection_disabled="true" block-text="setup"></block></xml> pour créer ton premier danseur.
+
+        -   _Tu peux également cliquer sur l'ampoule située à gauche si tu souhaites plus d'informations ou des défis supplémentaires._
+      Dance_2019_02: |-
+        Le bloc <xml><block type="Dancelab_whenKey" block-text="when up pressed"></block></xml> te permet d'exécuter du code lorsque tu appuies sur la flèche vers le haut. Utilise le bloc <xml><block type="Dancelab_doMoveEachLR" block-text="do once"><title name="GROUP">"CAT"</title><title name="MOVE">MOVES.XClapSide</title><title name="DIR">-1</title></block></xml> pour faire taper du danseur lorsque tu appuies sur la flèche vers le haut ou essaye un autre coup!
+
+        _Assure-toi d’appuyer sur ta flèche vers le haut ou sur ![](<https://images.code.org/419e704e6841c0b696016bf5029b8cb9-image-1571864825506.06.45 PM.png>) après avoir cliqué sur le bouton Exécuter!_
+      Dance_2019_03: Il est temps de danser! Programme chaque danseur pour qu'il bouge
+        lorsque tu appuies sur des touches différentes. Choisis ton coup préféré pour
+        chaque danseur ou règle-le sur `(Aléatoire)` pour quelque chose de totalement
+        imprévisible!
+      Dance_2019_04: |-
+        Faisons bouger les danseurs au rythme de la musique!
+
+        Faites glisser le bloc <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> vers l'espace de travail. Connecte-le sous le bloc <xml><block type="Dancelab_changeMoveEachLR"><title name="GROUP">"SHARK"</title><title name="MOVE">MOVES.ThisOrThat</title><title name="DIR">-1</title></block></xml>. Ton danseur devrait commencer un nouveau mouvement après la quatrième mesure.
+
+        **Les mesures** sont utilisées pour compter le temps passé en musique. Dans ce tutoriel, une mesure dure quatre temps.
       Dance_2019_05: |-
         _Voilà qu'on danse !_
 
         Ajoutez un bloc <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> à votre espace de travail. Faites en sorte que le danseur commence un nouveau mouvement après 6 mesures.
+      Dance_2019_06: |-
+        Utilise ce nouveau bloc pour configurer un groupe de danseurs de secours plus petits autour d’un danseur principal au milieu.
+
+        <xml><block type="Dancelab_makeNewDanceSpriteGroup">
+            <title name="N">???</title>
+            <title name="COSTUME" config="&quot;BEAR&quot;, &quot;CAT&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title>
+            <title name="LAYOUT">"circle"</title>
+          </block></xml>
+
+        Maintenant, tu peux créer un groupe de danseurs en même temps!
+      Dance_2019_07: |-
+        Chaque danseur a un ensemble de _propriétés_ qui contrôle ce à quoi il ressemble.
+
+        Utilisez <xml><block type="Dancelab_setPropEach" block-text="the set block"><title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title><title name="PROPERTY">"scale"</title><title name="VAL">???</title></block></xml> sous un bloc d’événements vert pour que les danseurs aient l'air plus proches ou plus éloignés.
+      Dance_2019_08: Les danseurs ont une propriété "teinte" qui peut ajouter une
+        couche de couleur. Essaye de changer la teinte de l'un de tes danseurs (ou
+        d'un groupe entier)!
+      Dance_2019_09: |-
+        Ce **nouveau bloc** est un type spécial d'événement qui se déclenche encore et encore.
+
+        <xml><block type="Dancelab_everySeconds"><title name="N">2</title><title name="UNIT">"measures"</title></block></xml>
+
+        Les autres nouveaux blocs de ta boîte à outils te permettent de modifier progressivement (ou de manière aléatoire!) les propriétés des danseurs au fil du temps.
+
+        \_Soit créatif et amuse-toi! \_
       Dance_2019_10: Prends ton rythme ! Créez votre propre danse à partager avec
         vos amis.
       Dance_Party_01: |-
         _Faisons une fête dansante !_
 
-        Faites glisser le bloc « créer un nouveau » dans l’espace de travail, puis connectez-le à l’intérieur du bloc « configuration » pour créer votre premier danseur.
+        Faites glisser le bloc `créer un nouveau` dans l’espace de travail, puis connectez-le à l’intérieur du bloc « configuration » pour créer votre premier danseur.
 
         -   _Vous pouvez également cliquer sur l'ampoule située à gauche si vous souhaitez plus d'informations ou des défis supplémentaires._
       Dance_Party_02: |-
@@ -5525,13 +5570,13 @@ fr-FR:
 
         Ajoutez un bloc <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> à votre espace de travail. Faites en sorte que le danseur commence un nouveau mouvement après 6 mesures.
       Dance_Party_04: |-
-        _Cette danse a besoin d'être un peu plus éclatante !_
+        _Cette danse a besoin d'être un peu plus éclatante!_
 
         Recherchez un nouveau bloc dans votre boîte à outils qui ajoute un effet de fond derrière votre danseur. Regardez les effets changer avec la musique !
       Dance_Party_05: |-
         Utilisez un autre nouveau bloc pour faire changer les mouvements du danseur **toutes les 2 mesures** !
 
-        \*Choisir « (Suivant) », « (Précédent) » ou « (Aléatoire) » indique au danseur d'effectuer un mouvement différent à chaque fois que le programme est exécuté.
+        -   Choisir `(Suivant)`, `(Précédent)` ou `(Aléatoire)` indique au danseur d'effectuer un mouvement différent à chaque fois que le programme est exécuté.
       Dance_Party_06: |-
         _Nous avons besoin de plus de danseurs !_
 
@@ -5610,6 +5655,14 @@ fr-FR:
         -   Crée un deuxième groupe de danseurs dans une mise en page différente
         -   Change la mise en page quand une touche est enfoncée
         -   Modifie une propriété lorsque les danseurs changent de formation
+      Dance_Party_extras_layout_2019: |-
+        # Entrons en formation!
+
+        Découvrez cette danse qui utilise le bloc <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> pour modifier la formation des danseurs de secours tout au long de la danse. Essayez l'une de ces idées pour l'étendre:
+
+        -   Créer un deuxième groupe de danseurs dans une mise en page différente
+        -   Changer la disposition quand on appuie sur une touche
+        -   Changer une propriété quand les danseurs changent de formation
       Dance_Party_extras_on_beat: |-
         # grave, médium et aigü
 
@@ -5622,6 +5675,10 @@ fr-FR:
         # Accélére la, ralenti la
 
         Cette danse finale utilise le bloc « vitesse définie » pour contrôler la rapidité avec laquelle chaque danseur se déplace. Essaie d’expérimenter avec différentes vitesses à différents moments de la chanson. N'hésite pas à continuer à bricoler sur cette danse, ou à revenir à l'une des danses précédentes pour les rendre encore plus cool.
+      Dance_Party_extras_speed_2019: |-
+        # Accélère, ralentis
+
+        Cette danse finale utilise le bloc <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> pour contrôler la vitesse de déplacement de chaque danseur. Essaye d’expérimenter avec différentes vitesses à différents moments de la chanson. N'hésite pas à continuer à bricoler sur cette danse, ou à revenir à l'une des danses précédentes pour les rendre encore plus amusantes.
       Dance_Party_extras_visible: |-
         # Où iraient-ils ?
 
@@ -5631,7 +5688,7 @@ fr-FR:
         -   Affiche et masque les danseurs à l'aide des touches fléchées
         -   Cache tous les danseurs et passe à un effet d’arrière plan emballant
       Dance_Party_extras_visible_2019: |-
-        # Où iraient-ils ?
+        # Où iraient-ils ?
 
         Cette danse montre et cache deux groupes de danseurs différents. Jette-y un coup d'œil, puis essaie d'ajouter ton propre style.
 
@@ -9275,3 +9332,30 @@ fr-FR:
         de 200 pixels.
       ramp_artist_loops9_2019: Résous ce puzzle en dessinant un carré avec des côtés
         de 200 pixels.
+      Dance_Party_extras_alternate_2019: |-
+        # D'avant en arrière!
+
+        Parfois, vous pouvez créer un modèle de mouvements de danse que vous choisissez. Ce nouveau bloc vous permet de faire exactement cela.
+
+        <xml><block type="Dancelab_alternateMoves"><title name="GROUP">sprites</title><title name="N">2</title><title name="MOVE1">MOVES.Roll</title><title name="MOVE2">MOVES.ClapHigh</title></block></xml>
+
+        Les mouvements que vous avez choisis ci-dessus se répètent indéfiniment.
+
+        -   Créez une routine en alternance pour la danseuse principale à l'avant!
+        -   Utilisez des nombres différents pour changer le taux d'alternance des mouvements. Essayez `1` ou`0.5` pour alterner plus rapidement!
+      Dance_Party_extras_every_beat_2019: |-
+        # Noires
+
+        La plupart de nos danses ont utilisé des mesures entières, mais chaque mesure est composée de 4 noires. Cette danse utilise <xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml> pour faire applaudir le danseur, mais seulement pour les 4 premières mesures.
+
+        Essaye de changer les chiffres dans le bloc pour voir comment cela change la danse.``
+
+        -   Expérimente avec d'autres durées de note (0,5 pour une demi-note ou 0,125 pour une croche).
+        -   Ajoute d'autres événements.
+      Dance_Party_extras_mixed_2019: |-
+        # Plus de boutons
+
+        Cette danse vous permet de contrôler les propriétés des danseurs en temps réel pendant qu'ils dansent automatiquement. Essayez de modifier d’autres propriétés lorsque vous appuyez sur les boutons. Par exemple:
+
+        -   Aléatoire la teinte du danseur lorsque vous appuyez sur "bas".
+        -   Ajoutez un groupe de danseurs avec une disposition aléatoire lorsque vous appuyez sur "espace".

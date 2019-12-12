@@ -2,6 +2,41 @@
 eu:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            '"ALIEN"': estralurtar guztiak
+            '"BEAR"': hartz guztiak
+            '"CAT"': katu guztiak
+            '"DOG"': txakur guztiak
+            '"DUCK"': ahate guztiak
+            '"FROG"': zapo guztiak
+            '"MOOSE"': altze guztiak
+            '"PINEAPPLE"': piña giztiak
+            '"ROBOT"': robot guztiak
+            '"SHARK"': marrazo guztiak
+          MOVE1:
+            MOVES.Roll: Biratu
+            MOVES.ClapHigh: Txalo Haundi
+            MOVES.Dab: Mihi-arrain
+            MOVES.DoubleJam: Urdaiazpiko bikoitza
+            MOVES.Drop: Bota
+            MOVES.Floss: Haria
+            MOVES.Fresh: Freskatu
+            MOVES.Clown: Pailazoa
+            MOVES.Kick: Bota
+            MOVES.ThisOrThat: Hau edo Hori
+          MOVE2:
+            MOVES.Roll: Biratu
+            MOVES.ClapHigh: Txalo Haundi
+            MOVES.Dab: Mihi-arrain
+            MOVES.DoubleJam: Urdaiazpiko bikoitza
+            MOVES.Drop: Bota
+            MOVES.Floss: Haria
+            MOVES.Fresh: Freskatu
+            MOVES.Clown: Pailazoa
+            MOVES.Kick: Bota
+            MOVES.ThisOrThat: Hau edo Hori
       Dancelab_atTimestamp:
         text: "{TIMESTAMP} ondoren {UNIT}"
         options:
@@ -295,6 +330,7 @@ eu:
             '"ROBOT"': robot guztiak
             '"SHARK"': marrazo guztiak
           LAYOUT:
+            '"diamond"': diamantea
             '"random"': ausazkoa
       Dancelab_randomColor:
         text: ausazko kolorea
@@ -511,6 +547,13 @@ eu:
             '"tint"': tinta
           RANGE:
             '"mid"': erdi
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': diamantea
+            '"s"': s
+            '"w"': w
+            '"x"': x
       Dancelab_whenKey:
         text: "{KEY} zapaltzean"
         options:

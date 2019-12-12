@@ -9,6 +9,8 @@ import {generateAST} from '@code-dot-org/js-interpreter';
 
 import {setIsDebuggerPaused} from '../../../redux/runState';
 
+const MAX_CALL_STACK_SIZE = 10000;
+
 const StepType = {
   RUN: 0,
   IN: 1,
@@ -672,6 +674,9 @@ export default class JSInterpreter {
         this.logStep_();
       }
       this.executionError = safeStepInterpreter(this);
+      if (this.interpreter.getStackDepth() > MAX_CALL_STACK_SIZE) {
+        this.executionError = new Error('Maximum call stack size exceeded.');
+      }
       if (!this.executionError && this.interpreter.getStackDepth()) {
         const state = this.interpreter.peekStackFrame(),
           nodeType = state.node.type;

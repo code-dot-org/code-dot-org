@@ -105,6 +105,10 @@ ta:
               name: கலைஞர்
             The Maze:
               name: புதிர்பாதை
+        events:
+          title: நிகழ்வுகள்
+          description: நிகழ்வுகள்
+          description_short: நிகழ்வுகள்
         step:
           title: அடி
           stages:
@@ -134,6 +138,8 @@ ta:
               name: செயல்பாடுகள்
         gradeKinder:
           stages:
+            Events:
+              name: நிகழ்வுகள்
             Loops:
               name: சுழற்சிகள்
         grade4:
@@ -142,6 +148,8 @@ ta:
               name: பாடல் எழுதுதல்
         grade1:
           stages:
+            Events:
+              name: நிகழ்வுகள்
             Loops:
               name: சுழற்சிகள்
         csd3-2017:
@@ -152,6 +160,8 @@ ta:
               name: மாறிலிகள்
         k5concepts:
           stages:
+            Events:
+              name: நிகழ்வுகள்
             Functions:
               name: செயல்பாடுகள்
             Loops:
@@ -286,10 +296,12 @@ ta:
               name: மாறிலிகள்
             Functions:
               name: செயல்பாடுகள்
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Loops:
               name: சுழற்சிகள்
+            Events:
+              name: நிகழ்வுகள்
             Functions:
               name: செயல்பாடுகள்
             Variables:

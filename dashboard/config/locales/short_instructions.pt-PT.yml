@@ -5,6 +5,8 @@ pt-PT:
       2-3 Artist 1 new: Oi, eu sou um artista. Você pode escrever códigos para me
         fazer desenhar quase qualquer coisa. Use alguns blocos para me fazer desenhar
         sobre as linhas cinzas na imagem. (Cada linha tem o comprimento de 100 pixels)
+      2-3 Artist 11: 'Faz uma borda no sinal de stop usando um octágono com lados
+        de 100 píxeis. '
       2-3 Artist 12: |-
         Configure o bloco "repita vezes" para que ele crie
         um "círculo" para terminar o globo ocular. Se cada movimento virar um grau para a direita,
@@ -12,6 +14,9 @@ pt-PT:
       2-3 Artist 2 new: |-
         Esta casa tem uma parede inacabada. Cada lado
         tem 100 pixels de comprimento, mas a parede inacabada tem apenas 50. Complete a parede.
+      2-3 Artist 3.4: O bloco `saltar para` move o artista sem desenhar. Desenha a
+        linha tracejada usando blocos `saltar para` e `mover para`. Cada linha tem
+        50 píxeis.
       2-3 Artist 3new: |-
         O chapéu vermelho tem 100 pixels de altura. Termine o desenho
         de um chapéu preto que seja 70 pixels menor. A largura do chapéu preto é de 50 pixels.
@@ -21,6 +26,9 @@ pt-PT:
       2-3 Artist 7: |-
         Termine de desenhar a metade direita da última janela.
         Cada quadrado da janela tem 25 pixels.
+      2-3 Artist 8: Completa os quartos de cada um dos animais dividindo o rectângulo
+        em dois quadrados iguais. O rectângulo tem 200 píxeis de largura e 100 píxeis
+        de altura. Há várias maneiras de resolver este enigma, diverte-te!
       2-3 Artist 9 NEW: Terminar este papagaio
       2-3 Artist Assessment 1: "Avaliação: Terminar o desenho do último dente, \ntem
         25 píxeis de largura e 25 píxels de altura."
@@ -73,12 +81,19 @@ pt-PT:
       2-3 Artist Loops New 10: |-
         Agora vamos conectar um monte de V's,
         desenhando-os em um laço.
+      2-3 Artist Loops New 11: |-
+        Reconstrói o código do último enigma, mas esta vez, adiciona uma viragem à esquerda de 30 graus dentro da repetição.
+        E desta vez, repete 24 vezes em vez de 8.
       2-3 Artist Loops New 12: Desenhe um diamante com lados de 100 pixels.
       2-3 Artist Loops New 13: Agora, desenhe o diamante 3 vezes em um laço.
       2-3 Artist Loops New 14: |-
         Agora, vamos desenhar o diamante 10 vezes,
         mas vamos rotacionar 90 graus entre cada diamante.
       2-3 Artist Loops New 15: Desenha algo divertido.
+      2-3 Artist Loops New 2: |-
+        Este é o mesmo enigma que acabámos de resolver, mas desta vez, só podemos usar um bloco `mover para a frente` e um bloco `virar à`.
+
+        Consegues usar um bloco `repita` para resolver este enigma?
       2-3 Artist Loops New 9: |-
         Desenhe um V simples com ambos os lados com 50
         pixels para completar a seta.
@@ -263,6 +278,7 @@ pt-PT:
       2-3 Maze 12: |-
         Você pode substituir esses cinco blocos por apenas dois blocos?
         (Dica: crie um laço usando um bloco "repita vezes")
+      2-3 Maze 13: Leva-me ao porco! Esta vez, só podes usar um bloco `mover para`
       2-3 Maze 15: Use dois laços para chegar até o porco usando menos blocos.
       2-3 Maze 16: Leve-me até o girassol. Repita a sequência!
       2-3 Maze 16 before: Leve-me até o porco.
@@ -280,9 +296,16 @@ pt-PT:
       2-3 Maze Loops 1: Consegues levar-me até ao porquinho com 5 blocos do mesmo
         género?
       2-3 Maze Loops 17: Leve-me até o girassol!
+      2-3 Maze Loops 18: "Leva-me até ao girassol usando o menor número de blocos
+        possível! \n\nTenta usar um bloco `repita`dentro de outro para reduzir a quantidade
+        de código que precisas."
+      2-3 Maze Loops 19: |-
+        Vamos levar isto ao próximo nível!
+        Usa repetições para me levar ao girassol com o menor número de blocos possível.
       2-3 Maze Loops 20: |-
         Você pode resolver esse desafio usando o menor número
         possível de blocos?
+      2-3 Maze Loops 21: Leva-me ao girassol com o menor número de blocos possível!
       2-3 Maze Loops Assessment 1: |-
         Avaliação: Leve-me até o girassol
         usando apenas 5 blocos!
@@ -742,6 +765,20 @@ pt-PT:
         ao tesouro.
       Crack Random Substitution: Instruções
       Crack a Caesar Cipher: Instruções
+      Dance_2019_02: Faz com que o gato realize um movimento de dança quando primes
+        uma tecla.
+      Dance_2019_03: 'Está na hora da dança! Programa cada dançarino para se mover
+        quando premires teclas diferentes. Escolhe o teu movimento preferido para
+        cada dançarino ou defini-o para "(Aleatório)" para algo completamente imprevisível! '
+      Dance_2019_04: Faz o teu dançarino iniciar um novo movimento após o quarto compasso.
+      Dance_2019_06: Forma um grupo de dançarinos secundários à volta do dançarino
+        principal que está no meio.
+      Dance_2019_07: Altera o tamanho do grupo de dançarinos secundários.
+      Dance_2019_08: Experimenta trocar o tom de cor dum dos teus dançarinos (ou dum
+        grupo inteiro)!
+      Dance_2019_09: Sê criativo com estes blocos novos!
+      Dance_Party_extras_alternate_2019: Para a frente e para trás! (Clica em "Mais"
+        para ver os detalhes)
       Dance_Party_extras_battle: Maltas da Dança (Clica em "Mais" para veres os detalhes)
       Dance_Party_extras_battle_2019: Maltas da Dança (Clica em "Mais" para veres
         os detalhes)
@@ -752,13 +789,14 @@ pt-PT:
         os detalhes)
       Dance_Party_extras_layout_2019: Ponham-se em formação! (Clica em "Mais" para
         veres os detalhes)
+      Dance_Party_extras_mixed_2019: Mais Botões (Clica em "Mais" para ver os detalhes)
       Dance_Party_extras_on_beat: Grave, Médio e Agudo (Clica em "Mais" para veres
         os detalhes)
       Dance_Party_extras_on_beat_2019: Grave, Médio e Agudo (Clica em "Mais" para
         veres os detalhes)
-      Dance_Party_extras_speed: Acelera-a, Abranda-a (Clica em "Mais" para veres os
+      Dance_Party_extras_speed: Acelera-a, abranda-a (Clica em "Mais" para veres os
         detalhes)
-      Dance_Party_extras_speed_2019: Acelera-a, Abranda-a (Clica em "Mais" para veres
+      Dance_Party_extras_speed_2019: Acelera-a, abranda-a (Clica em "Mais" para veres
         os detalhes)
       Dance_Party_extras_visible: Para onde é que eles foram? (Clica em "Mais" para
         veres os detalhes)
@@ -943,37 +981,36 @@ pt-PT:
         blocos para me levar até o porco!
       MC HOC 2016 Level 10: Está na hora de criares o teu próprio Minecraft! Gera
         criaturas e depois faz com que elas façam o que tu quiseres. Diverte-te!
-      MC HOC 2016 Level 2-2: A galinha não se mexe. Coloca blocos de "mover" e "virar"
-        na vaga de "quando gerado" para conseguires que ela se mova.
-      MC HOC 2016 Level 3: Excelente, a galinha moveu-se! Mas depois parou. Nos jogos,
-        as galinhas andam para sempre. Utiliza uma ação circular "fazer para sempre"
-        para manteres essas galinhas em movimento.
-      MC HOC 2016 Level 4: Agora as galinhas ficam esquisitas porque se movem todas
+      MC HOC 2016 Level 2-2: A galinha não se mexe. Coloca blocos `mover` e `virar`
+        na ranhura de "quando gerado" para conseguires que ela se mova.
+      MC HOC 2016 Level 3: Porreiro, a galinha mexeu-se! Mas depois parou. Nos jogos,
+        as galinhas andam para sempre. Utiliza um ciclo `fazer para sempre` para manter
+        estas galinhas a mexerem-se.
+      MC HOC 2016 Level 4: Agora as galinhas ficam estranhas porque se movem todas
         da mesma maneira. Os jogos utilizam movimentos aleatórios para fazer com que
-        as coisas pareçam reais. Faz com que as galinhas possam "virar aleatoriamente".
-      MC HOC 2016 Level 5: As vacas perderam-se! Leva-as até à relva com um bloco
-        "dar um passo em direção a" numa ação circular "fazer para sempre".
-      MC HOC 2016 Level 6: Agora cria os mortos-vivos. Utiliza o bloco "gerar" para
-        criar 3 mortos-vivos quando a noite cair. Faz com que eles se movam na tua
-        direção. Sobrevive até de manhã.
+        as coisas se pareçam reais. Faz com que as galinhas possam `virar aleatoriamente`.
+      MC HOC 2016 Level 5: Estas vacas estão perdidas! Leva-as até à relva com o bloco
+        `dar um passo em direção a` num ciclo `fazer para sempre`.
+      MC HOC 2016 Level 6: Agora crias os zombies. Utiliza o bloco `gerar` para criar
+        3 zombies quando a noite cair. Faz com que eles se movam na tua direção. Sobrevive
+        até de manhã.
       MC HOC 2016 Level 8: O caminho até à tua ovelha está bloqueado por uma parede
         de pedra. Felizmente, há um Creeper aqui. Os Creepers explodem quando lhes
         tocas. Faz com que a explosão do Creeper rebente a parede, para que possas
         alcançar a tua ovelha!
-      MC HOC 2016 New Drop: Em Minecraft, as ovelhas largam lã. Coloca o bloco "largar"
-        em "quando utilizado" e depois caminha até à ovelha e faz com que ela largue
+      MC HOC 2016 New Drop: No Minecraft, as ovelhas largam lã. Coloca o bloco `largar`
+        em `quando utilizado` e depois caminha até à ovelha e faz com que ela largue
         um item.
-      MC HOC 2016 New Spawn: Nos jogos, gerar significa adicionar algo ao mundo. Coloca
-        um bloco "gerar" sob "quando executado" para gerar qualquer coisa quando o
-        jogo começar.
+      MC HOC 2016 New Spawn: Agora podes encher o mundo com o que tu quiseres! Coloca
+        um bloco `gerar` sob `quando executado` para gerar coisas quando o jogo começar.
       MC HOC 2016 New Walk: Vamos explorar o nosso mundo! Move-te com as setas e prime
-        a barra de espaços ou toca no painel do jogo para utilizar os itens. Utiliza
-        a porta para entrar na casa.
+        a barra de espaços ou toca no painel do jogo para utilizar itens. Usa a porta
+        para entrar na casa.
       MC HOC 2016 SCORE LEVEL: Alguns jogos permitem-te registar pontuações. Joga
-        à apanhada com estes Golems de Ferro e utiliza o bloco "adicionar 1 à pontuação"
+        à apanhada com estes Golems de Ferro e utiliza o bloco `adicionar 1 à pontuação`
         para obteres um ponto quando os apanhares. Alcança cinco pontos para ganhar!
-      MC HOC 2016 Village Test: Oh, não! Os Mortos-Vivos aprisionaram-te no interior!
-        Codifica o Golem de Ferro para que ele persiga e ataque os mortos-vivos!
+      MC HOC 2016 Village Test: Oh não! Os Zombies aprisionaram-te no interior! Programa
+        o Golem de Ferro para que ele persiga e ataque os zombies!
       MC_HOC_2017_01_RETRY: 'Leva o Agent até à placa de pressão, prime "Executar"
         e utiliza as teclas de seta para mover o jogador para fora da casa e recolher
         o baú. '
@@ -1246,6 +1283,14 @@ pt-PT:
         até que ela atinja o alvo.
       course1_maze_seq_challenge1: Traça o caminho e leva-me até ao porquinho tonto.
         Não choques com as dinamites, se não ficas sem penas!
+      course2_artist_prog_challenge1: Desenha quartos para cada um dos animais. Há
+        várias maneiras possíveis de resolver este enigma, por isso diverte-te. A
+        solução mais curta usa 6 blocos, mas podes usar quantos quiseres!
+      course2_artist_prog_challenge2: _Ajuda-me a pintar as linhas amarelas nesta
+        estrada!_
+      course2_collector_loops_challenge2: Apanha todos os tesouros!
+      course2_maze_programming_challenge1: '"O porco está escondido! Podes ajudar-me
+        a encontrá-lo?"'
       course4_artist_fwp_challenge1: Tenta executar este programa e faz as alterações
         para ver o que acontece. Podes descobrir como funciona? (Ou apagá-lo e substituí-lo
         por algo totalmente diferente)

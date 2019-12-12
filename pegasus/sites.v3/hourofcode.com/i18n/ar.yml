@@ -25,6 +25,69 @@ ar:
     ليتعلمها كل طالب.
   social_hoc2019_dance: يضم Katy Perry، Jonas Brothers، Lil Nas X، Panic at the Disco،
     وmany more!
+  oceans_landing_title: AI for Oceans
+  oceans_landing_description: 'Explore machine learning by teaching “A.I.” to recognize
+    fish. #CSforGood'
+  oceans_landing_specs: English only | Ages 11+
+  oceans_landing_teacher_resources: Teacher Resources
+  oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
+    AI, machine learning, training data, and bias, while exploring ethical issues.
+  oceans_landing_resource_button: View Resources
+  oceans_landing_cs_for_good: CS For Good
+  oceans_landing_cs_for_good_desc: Resources to help students understand the role
+    computer science could play in creating a more equitable world.
+  oceans_landing_learn_more: Learn more about AI and Machine Learning
+  social_hoc2019_oceans_title: 'AI for Oceans #CSForGood'
+  social_hoc2019_oceans_desc: Learn about AI, machine learning, training data, and
+    bias, while exploring ethical issues and how AI can be used to address world problems.
+    Computer science is about so much more than coding! Enjoy Code.org's first step
+    in a new journey to teach more about AI throughout our curriculum.
+  hoc_overview_oceans_tutorial_header: AI For Oceans
+  hoc_overview_oceans_tutorial_desc: Learn about AI, machine learning, training data,
+    and bias, while exploring ethical issues and how AI can be used to address world
+    problems.
+  ai_video_title_what_is_ai: What is AI?
+  ai_video_title_phone_knows_dog: How does your phone know this is a dog?
+  ai_video_title_what_is_ml: What is Machine Learning?
+  ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small
+    and Prickly'
+  ai_video_title_ethics_of_ai: Ethics of AI
+  ai_video_title_ml_human_bias: Machine Learning and Human Bias
+  activity: Activity
+  name: Name
+  description: Description
+  audience: Audience
+  ai_resource_header: Teach and Learn about AI
+  ai_resource_ml_for_kids: Machine Learning for Kids
+  ai_resource_ml_for_kids_desc: Train a machine learning model with text, numbers,
+    or images, and use it to make games in Scratch.
+  ai_resource_ibm_ml_for_kids: 'IBM: Machine Learning for Kids'
+  ai_resouce_ibm_ml_for_kids_desc: Hands-on activities to introduce simple machine
+    learning models to students through games and interactive projects.
+  ai_resource_ecs: 'ECS: Artificial Intelligence (AI)'
+  ai_resource_ecs_desc: A new alternate curriculum unit for the Exploring Computer
+    Science (ECS) curriculum.
+  ai_resource_elements_ai: Elements of AI
+  ai_resource_elements_ai_desc: A series of free online courses created by Reaktor
+    and the University of Helsinki.
+  ai_resource_cognimates: Cognimates
+  ai_resource_cognimates_desc: An AI education platform for building games, programming
+    robots and training.
+  ai_audience_k12: K-12 (Reading required)
+  ai_audience_hs: High school
+  ai_activity_header: Activities Powered by AI and ML
+  ai_activity_teachable: Teachable Machine
+  ai_activity_teachable_desc: Train a computer to recognize your own images, sounds,
+    and poses.
+  ai_activity_quick_draw: Quick, Draw!
+  ai_activity_quick_draw_desc: Can a neural network learn to recognize doodling?
+  ai_activity_experiments: AI Experiments with Google
+  ai_activity_experiments_desc: Start exploring machine learning through pictures,
+    drawings, language, music, and more.
+  ai_activity_mixlab: MixLab
+  ai_activity_mixlab_desc: Make music using voice commands.
+  ai_activity_gaugan: GauGAN Beta
+  ai_activity_gaugan_desc: Paint photo-realistic landscapes with the help of AI.
   codeorg_homepage_hoc2018_curriculum: واصل مع <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">دورات
     code.org</a>
   codeorg_homepage_hoc2018_dance_heading: أنشئ <span class="highlight-word">رقصة&nbsp;
@@ -42,6 +105,7 @@ ar:
   hourofcode_homepage_hoc2018_header_line2: تتراوح الأعمار من 4 إلى 104.
   hoc2018_tutorial_mchoc_description: استخدم القطع البرمجية لأخذ أليكس وستيف في مغامرة
     من خلال عالم ماين كرافت
+  codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>
   cookie_banner_message: بالاستمرار في تصفح موقعنا أو النقر فوق "أوافق"، فأنت توافق
     على تخزين cookies على الكمبيوتر أو الجهاز الخاص بك.
   cookie_banner_more_information: انظر سياسة الخصوصية في Code.org.
@@ -646,6 +710,7 @@ ar:
   learn_robotics_banner_heading: الروبوتات
   learn_robotics_banner_blurb: هل لديك روبوتات؟ استخدمها في الأنشطة وخطط لساعة ملموسة
     من البرمجة للطلاب من أي عمر!
+  tutorial_dance2019_name: Dance Party 2019
   tutorial_danceparty_name: حفلة رقص
   tutorial_chibitronics_name: 'القصة المضيئة: Chibitronics'
   tutorial_athlete_name: اكتب التعليمات البرمجية للعبتك الرياضية الخاصة
@@ -2315,6 +2380,7 @@ ar:
   tutorial_allcancodeapps_shortdescription: استعمل منصة (Allcancode) لإنشاء تطبيقات
     الهاتف والويب من التصميم الى التسليم.
   tutorial_n2y_shortdescription: ساعد (Bitt Bott) لاستكشاف الأرض باستعمال أسهم الاتجاهات.
+  tutorial_dance2019_longdescription: قم بإضفاء التعليمات البرمجية على حفلة الرقص لمشاركتها مع أصدقائك. الشخصيات هي كاتي بيري ، شون مينديز، بانيك! آت ذا ديسكو، وليل ناز إكس، ، جوناس بروثرز، نيكي ميناج، وأكثر من 34 شخصية رائعة أخرى!
   tutorial_danceparty_longdescription: برمج حفلة رقص مع (Katy Perry)، و(Madonna)،
     و(J. Balvin)، و(Keith Urban)، و(Ciara)، و25 آخرين لتقاسمها مع أصدقائك!
   tutorial_chibitronics_longdescription: برمج دارة ورقية لإضاءة قصتك.
@@ -4404,6 +4470,9 @@ ar:
     (Bitt Bott) بعض التعليمات البسيطة عن طريق اختيار وإدارة أسهم اتجاه مناسبة. يتضمن
     كل نشاط من الأنشطة الستة تعليمات بسيطة مدعومة من مجموعة (n2y® SymbolStix PRIME®).
     تساعد الرموز المبتدئين في تعلم القراءة ومن لم يتعلموها بعد على فهم واتباع التعليمات.
+  tutorial_dance2019_language: Arabic, Chinese, Czech, Danish, Dutch, English, Finnish,
+    French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean,
+    Malay, Polish, Portuguese, and 10 more!
   tutorial_danceparty_language: انجليزية، عربية، كاتالانية، صينية، تشيكية، دانماركية،
     هولندية، فنلندية، فرنسية، ألمانية، يونانية، هنغارية،إيطالية، يابانية، كورية،نرويجية،
     بولونية، برتغالية، روسية، اسبانية، سويدية،تايلاندية، تركية فيتنامية
@@ -5079,6 +5148,7 @@ ar:
   tutorial_duckrace_language: انجليوية، ألمانية
   tutorial_allcancodeapps_language: الانجليزية
   tutorial_n2y_language: الانجليزية
+  tutorial_dance2019_string_detail_grades: بدايةً من الصف 2
   tutorial_danceparty_string_detail_grades: بدايةً من الصف 2
   tutorial_chibitronics_string_detail_grades: المستويات 2-5
   tutorial_athlete_string_detail_grades: بدايةً من الصف 2
@@ -5432,7 +5502,7 @@ ar:
   tutorial_codehsrn_string_detail_grades: بدايةً من الصف 9
   tutorial_codehswd_string_detail_grades: المستوى 6+
   tutorial_turtlerobot_string_detail_grades: قبل تعلم القراءة - المستوى 5
-  tutorial_ozoevo_string_detail_grades: جميع الأعمار
+  tutorial_ozoevo_string_detail_grades: المستوى 6+
   tutorial_ozoexped_string_detail_grades: المستوى 6+
   tutorial_ozojourney_string_detail_grades: المستويات 2-8
   tutorial_ozocodes_string_detail_grades: جميع الأعمار
@@ -5559,7 +5629,7 @@ ar:
   tutorial_codesparkcreate_string_detail_grades: قبل تعلم القراءة - المستوى 5
   tutorial_hardvsoft_string_detail_grades: قبل تعلم القراءة - المستوى 5
   tutorial_codestersecard_string_detail_grades: المستويات 6-8
-  tutorial_codesterslogo_string_detail_grades: المستويات 2-8
+  tutorial_codesterslogo_string_detail_grades: المستوى 6+
   tutorial_codesterstshirt_string_detail_grades: المستوى 6+
   tutorial_codewards_string_detail_grades: المستويات 2-8
   tutorial_olympics_string_detail_grades: المستويات 2-8
@@ -5657,6 +5727,8 @@ ar:
   tutorial_duckrace_string_detail_grades: بدايةً من الصف 2
   tutorial_allcancodeapps_string_detail_grades: المستوى 6+
   tutorial_n2y_string_detail_grades: بدايةً من المبتدئين في القراءة
+  tutorial_dance2019_string_platforms: المتصفحات الحديثة، أندرويد اللوحات، آي باد،
+    المستقلة
   tutorial_danceparty_string_platforms: المتصفحات الحديثة، لوحات الأندرويد، آي باد،
     المستقلة
   tutorial_chibitronics_string_platforms: المتصفحات الحديثة كافة
@@ -6403,6 +6475,7 @@ ar:
     المستقلة
   tutorial_allcancodeapps_string_platforms: المتصفحات الحديثة كافة
   tutorial_n2y_string_platforms: مستقلة
+  tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: رقاقات (Chibitronics Chibi) وملصقات
     دارات الصمام الثناي الكهرابائي (LEDs)
@@ -6983,6 +7056,7 @@ ar:
   tutorial_duckrace_string_detail_platforms: ''
   tutorial_allcancodeapps_string_detail_platforms: ''
   tutorial_n2y_string_detail_platforms: ''
+  tutorial_dance2019_string_detail_programming_languages: مربعات برمجية
   tutorial_danceparty_string_detail_programming_languages: مربعات برمجية
   tutorial_chibitronics_string_detail_programming_languages: مربعات برمجية
   tutorial_athlete_string_detail_programming_languages: مربعات برمجية
@@ -7513,7 +7587,7 @@ ar:
   tutorial_codesparkcreate_string_detail_programming_languages: مربعات برمجية
   tutorial_hardvsoft_string_detail_programming_languages: ''
   tutorial_codestersecard_string_detail_programming_languages: الكتل البرمجية، بايتون
-  tutorial_codesterslogo_string_detail_programming_languages: الكتل البرمجية، بايتون
+  tutorial_codesterslogo_string_detail_programming_languages: بايثون (Python)
   tutorial_codesterstshirt_string_detail_programming_languages: الكتل البرمجية، بايتون
   tutorial_codewards_string_detail_programming_languages: لغة البرمجة CoffeeScript
   tutorial_olympics_string_detail_programming_languages: لغة البرمجة CoffeeScript
@@ -7623,11 +7697,11 @@ ar:
   tutorial_duckrace_string_detail_programming_languages: مربعات برمجية
   tutorial_allcancodeapps_string_detail_programming_languages: مربعات برمجية
   tutorial_n2y_string_detail_programming_languages: ''
-  tutorial_scratchimagine_name: Imagine a World
+  tutorial_scratchimagine_name: تخيل عالما
   tutorial_codesterspsa_name: 'Codesters: Code Your Own PSA'
-  tutorial_googlehero_name: Code Your Hero
+  tutorial_googlehero_name: برمج بطلك
   tutorial_codestersbball_name: 'Codesters: Basketball'
-  tutorial_scratchcartoon_name: Code a Cartoon
+  tutorial_scratchcartoon_name: برمج رسوما متحركة
   tutorial_codemonkeyjr_name: 'CodeMonkey Jr.: Pre-coding for Preschoolers'
   tutorial_bananatales_name: 'Banana Tales: Python Coding Game'
   tutorial_scratchtales_name: Talking Tales
@@ -7636,7 +7710,7 @@ ar:
   tutorial_kodablebeach_name: Beach Cleanup with Kodable
   tutorial_tynkeren_name: Affordable and Clean Energy
   tutorial_tynkerjavapro_name: Responsible Consumption and Production (JavaScript)
-  tutorial_grasshopperhack_name: Hack a Game
+  tutorial_grasshopperhack_name: قرصن لعبة
   tutorial_pbskids_name: PBS KIDS Scratch Jr
   tutorial_nclabdata_name: Data Power!
   tutorial_grasshopperphoto_name: Filter a Photo
@@ -7658,10 +7732,10 @@ ar:
   tutorial_vidcodemap_name: 'Vidcode: Map Your Community'
   tutorial_robotmagicfarm_name: 'FarmBot: Plant with Code'
   tutorial_codehstriangle_name: Triangle Computations with CodeHS
-  tutorial_ttwhitehouse_name: White House
+  tutorial_ttwhitehouse_name: البيت الأبيض
   tutorial_modulo_name: 'Modulo Code: Code E.D.'
   tutorial_codingtown_name: Coding Town
-  tutorial_kanoart_name: Art Playground
+  tutorial_kanoart_name: ملعب الفن
   tutorial_dragonscript_name: 'DragonScript Arena: a Javascript coding game with Dragons'
   tutorial_uwcloud_name: Cloud Constructor
   tutorial_htmlmuffin_name: Master the Web with Muffin the Cat
@@ -7671,7 +7745,7 @@ ar:
   tutorial_rpiscratch_name: Scratch 3.0 phrasebook
   tutorial_ozaria_name: Ozaria by CodeCombat
   tutorial_ttovum_name: Ovum City
-  tutorial_ttpassage_name: The Passage
+  tutorial_ttpassage_name: المقطع
   tutorial_tynkerhtmlen_name: Affordable and Clean Energy (HTML)
   tutorial_ttfrog_name: Frog Squash
   tutorial_codemojijava_name: Learn Basic Java
@@ -7689,11 +7763,11 @@ ar:
   tutorial_spherobaby_name: Sphero Baby Steps
   tutorial_toxarchitect_name: Utopian Architect
   tutorial_idodge_name: Ice Cream Dodge
-  tutorial_firiacodebot_name: Intro to Python with CodeBot
+  tutorial_firiacodebot_name: مقدمة لبايتون بواسطة CodeBot
   tutorial_modlighthouse_name: Lighthouse Design Challenge with Cubelets
   tutorial_spherogreen_name: Sphero Goes Green
   tutorial_ozopopstar_name: PopStar|Creating Functions With OzoBlockly
-  tutorial_eddesign_name: Edison the designer
+  tutorial_eddesign_name: المصمم Edison
   tutorial_edshapeup_name: Robot shape-up with Edison
   tutorial_ozocolor_name: Pop Star|Creating Functions With Ozobot Color Codes
   tutorial_kcjanimals_name: About a Canadian Animal
@@ -7705,7 +7779,7 @@ ar:
   tutorial_microbit14_name: 'micro:bit: coding towards Global Goal 14, Life Below
     Water'
   tutorial_barobomoon_name: Moon Base SOS with Arduino
-  tutorial_eddog_name: Code a guard dog with Edison
+  tutorial_eddog_name: برمج كلب حراسة بواسطة Edison
   tutorial_microbit15_name: 'micro:bit: coding towards Global Goal 15, Life on Land'
   tutorial_unity_name: 'Unity Game Development Creator Kit: Beginner Code'
   tutorial_blockscadtarget_name: Transformation Target Practice
@@ -7720,6 +7794,8 @@ ar:
   tutorial_ikodexmas_name: iKode Xmas
   tutorial_rpisensehat_name: Sense HAT data logger
   tutorial_modtraits_name: Character Traits with GoPiGo
+  tutorial_mee_name: 'Minecraft Hour of Code: AI for Good'
+  tutorial_kuborobo_name: KUBO Robotics Coding Routes
   tutorial_scratchimagine_longdescription: Imagine a world where anything is possible,
     then bring it to life with Scratch!
   tutorial_codesterspsa_longdescription: Learn the basics of coding in Python while
@@ -8076,6 +8152,13 @@ ar:
     environment.
   tutorial_modtraits_longdescription: 'Students use the steps of computational thinking
     to analyze character traits and create an algorithm to demonstrate those traits. '
+  tutorial_mee_longdescription: Program the Minecraft Agent to collect data about
+    forest fires. Then write code to help prevent the spread of fire, save the village,
+    and bring life back to the forest. Learn coding basics and explore a real-world
+    example of artificial intelligence.
+  tutorial_kuborobo_longdescription: In this activity, students put their logic and
+    sequencing skills to the test as they use the Tagtiles to program their KUBO robot
+    to travel to various locations on a printed map.
   tutorial_scratchimagine_language: انجليزية، اسبانية
   tutorial_codesterspsa_language: الانجليزية
   tutorial_googlehero_language: انجليزية، اسبانية
@@ -8172,6 +8255,12 @@ ar:
   tutorial_ikodexmas_language: الانجليزية
   tutorial_rpisensehat_language: الانجليزية
   tutorial_modtraits_language: الانجليزية
+  tutorial_mee_language: Bulgarian, Chinese (Simplified), Chinese (Traditional), Czech,
+    Danish, Dutch, English (UK), English (United States), Finnish, French (Canada),
+    French (France), German, Greek, Hungarian, Indonesian, Italian, Japanese, Korean,
+    Norwegian, Polish, Portuguese (Brazil), Portuguese (Portugal), Russian, Slovak,
+    Spanish (Spain), Spanish (Mexico), Swedish, Turkish, Ukrainian
+  tutorial_kuborobo_language: انجليزية، اسبانية
   tutorial_scratchimagine_string_detail_grades: بدايةً من الصف 2
   tutorial_codesterspsa_string_detail_grades: المستوى 6+
   tutorial_googlehero_string_detail_grades: المستويات 2-8
@@ -8268,6 +8357,8 @@ ar:
   tutorial_ikodexmas_string_detail_grades: المستويات 2-5
   tutorial_rpisensehat_string_detail_grades: المستوى 6+
   tutorial_modtraits_string_detail_grades: بدايةً من الصف 2
+  tutorial_mee_string_detail_grades: بدايةً من الصف 2
+  tutorial_kuborobo_string_detail_grades: Pre-reader - Grades 8
   tutorial_scratchimagine_string_platforms: المتصفحات الحديثة، لوحات الأندرويد، آي
     باد، المستقلة
   tutorial_codesterspsa_string_platforms: المتصفحات الحديثة، لوحات الأندرويد، آي باد،
@@ -8383,6 +8474,8 @@ ar:
   tutorial_ikodexmas_string_platforms: المتصفحات الحديثة كافة
   tutorial_rpisensehat_string_platforms: المتصفحات الحديثة كافة
   tutorial_modtraits_string_platforms: المتصفحات الحديثة كافة
+  tutorial_mee_string_platforms: iPad, Computers (Windows PC, Mac)
+  tutorial_kuborobo_string_platforms: مستقلة
   tutorial_scratchimagine_string_detail_platforms: ''
   tutorial_codesterspsa_string_detail_platforms: ''
   tutorial_googlehero_string_detail_platforms: ''
@@ -8482,6 +8575,8 @@ ar:
   tutorial_ikodexmas_string_detail_platforms: Microsoft Kodu
   tutorial_rpisensehat_string_detail_platforms: Raspbian (software), SenseHAT
   tutorial_modtraits_string_detail_platforms: GoPiGo
+  tutorial_mee_string_detail_platforms: ''
+  tutorial_kuborobo_string_detail_platforms: KUBO robot
   tutorial_scratchimagine_string_detail_programming_languages: مربعات برمجية
   tutorial_codesterspsa_string_detail_programming_languages: بايثون (Python)
   tutorial_googlehero_string_detail_programming_languages: مربعات برمجية
@@ -8598,6 +8693,9 @@ ar:
   tutorial_ikodexmas_string_detail_programming_languages: Microsoft Kodu
   tutorial_rpisensehat_string_detail_programming_languages: بايثون (Python)
   tutorial_modtraits_string_detail_programming_languages: مربعات برمجية
+  tutorial_mee_string_detail_programming_languages: مربعات برمجية
+  tutorial_kuborobo_string_detail_programming_languages: Tagtiles that students piece
+    together
   school_not_found_heading: لم نستطع إيجاد مدرستك، المرجو إدخال معلومات أكثر.
   school_name: اسم المدرسة
   school_name_error: اسم المدرسة مطلوب.

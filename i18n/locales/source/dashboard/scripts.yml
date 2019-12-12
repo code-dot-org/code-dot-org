@@ -1884,13 +1884,13 @@ en:
             Hour of Code 2015:
               name: Hour of Code 2015
           description_audience: ''
-        ocean:
-          title: Ocean Hour of Code
-          description: Description TBD.
-          description_short: Short Description TBD.
+        oceans:
+          title: AI for Oceans
+          description: Learn how AI and machine learning can be used to address world problems.
+          description_short: Learn how AI and machine learning can be used to address world problems.
           stages:
-            Ocean:
-              name: Ocean
+            Oceans:
+              name: Oceans
           description_audience: ''
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'
@@ -9701,7 +9701,7 @@ en:
               name: new stage
             Dance Party:
               name: Dance Party
-          title: Dance Party
+          title: Dance Party (2018)
           description_audience: ''
           description_short: Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!
           description: Code your own dance party to share with your friends!
@@ -9817,7 +9817,7 @@ en:
           stages:
             Dance Party - Go Further:
               name: Dance Party - Go Further
-          title: Keep On Dancing
+          title: Keep On Dancing (2018)
           description_audience: ''
           description_short: Go beyond the Hour of Code with this follow-up activity to Code.org's Dance Party tutorial.
           description: Go beyond the first hour with extended project ideas.
@@ -11372,6 +11372,8 @@ en:
               name: Unit 4 STUDENT Survey
             Unit 4 TEACHER Survey:
               name: Unit 4 TEACHER Survey
+            'Lesson 15: Assessment Day':
+              name: 'Lesson 15: Assessment Day'
           title: CSP Unit 4 Pilot - Variables, Conditionals, and Functions
           description_audience: ''
           description_short: ''
@@ -11886,6 +11888,16 @@ en:
               name: Unit 1 STUDENT Survey
             Unit 1 TEACHER Survey:
               name: Unit 1 TEACHER Survey
+            'Lesson 14: Unit Assessment':
+              name: 'Lesson 14: Unit Assessment'
+            Representing Information:
+              name: Representing Information
+            Representing Text:
+              name: Representing Text
+            Circle Square Patterns:
+              name: Circle Square Patterns
+            'Lesson 14: Assessment Day':
+              name: 'Lesson 14: Assessment Day'
           title: CSP Unit 1 Pilot - Digital Information
           description_audience: ''
           description_short: ''
@@ -12670,6 +12682,8 @@ en:
               name: Unit 5 Assessment
             Semester Exam:
               name: Semester Exam
+            'Lesson 13: Assessment Day':
+              name: 'Lesson 13: Assessment Day'
           title: CSP Unit 5 Pilot - Lists, Loops, and Traversals
           description_audience: ''
           description_short: ''
@@ -13055,6 +13069,8 @@ en:
               name: Unit 3 TEACHER Survey
             'Lesson 11: Unit Assessment':
               name: 'Lesson 11: Unit Assessment'
+            'Lesson 11: Assessment Day':
+              name: 'Lesson 11: Assessment Day'
           title: CSP Unit 3 Pilot - Intro to App Design
           description_audience: ''
           description_short: ''
@@ -13339,6 +13355,14 @@ en:
               name: Unit 2 STUDENT Survey
             Unit 2 TEACHER Survey:
               name: Unit 2 TEACHER Survey
+            DNS and HTTP:
+              name: DNS and HTTP
+            Welcome to the Internet:
+              name: Welcome to the Internet
+            'Lesson 9: Assessment Day':
+              name: 'Lesson 9: Assessment Day'
+            The Need for Addressing:
+              name: The Need for Addressing
           title: CSP Unit 2 Pilot - The Internet
           description_audience: ''
           description_short: ''
@@ -13427,11 +13451,11 @@ en:
           stages:
             Dance Party:
               name: Dance Party
-          title: Dance Party (2019 Remix)
+          title: Dance Party (2019)
           description_audience: ''
-          description_short: ''
+          description_short: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
           description: Code your own dance party to share with your friends!
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           title: Teaching Computer Science Fundamentals
           description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course!
           description_short: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course.
@@ -13532,7 +13556,7 @@ en:
             End of Course projects:
               name: End of Course projects
         dance-extras-2019:
-          title: Keep On Dancing
+          title: Keep On Dancing (2019)
           description: Go beyond the first hour with extended project ideas.
           description_short: Go beyond the Hour of Code with this follow-up activity to Code.org's Dance Party tutorial.
           description_audience: ''
@@ -13557,6 +13581,14 @@ en:
               name: Data Policies and Privacy
             The Value of Privacy:
               name: The Value of Privacy
+            'Project: Innovation Simulation Part 3':
+              name: 'Project: Innovation Simulation Part 3'
+            Protecting Data Part 1:
+              name: Protecting Data Part 1
+            Protecting Data Part 2:
+              name: Protecting Data Part 2
+            'Lesson 14: Unit Assessment Day':
+              name: 'Lesson 14: Unit Assessment Day'
           title: Cybersecurity and Global Impacts
           description_audience: ''
           description_short: ''
@@ -13595,7 +13627,127 @@ en:
               name: Practice PT Part 3
             'Lesson 15: Unit 4 Assessment':
               name: 'Lesson 15: Unit 4 Assessment'
-          title: Variables, Conditionals, and Functions
+            'Lesson 15: Assessment Day':
+              name: 'Lesson 15: Assessment Day'
+          title: 'CSP Preview: Variables, Conditionals, and Functions'
           description_audience: ''
           description_short: ''
           description: ''
+        time4cs-control-unit-1:
+          stages:
+            Sequencing in Maze:
+              name: Sequencing in Maze
+            Programming and Loops with the Artist:
+              name: Programming and Loops with the Artist
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Conditionals in Minecraft: Voyage Aquatic'
+            Conditionals:
+              name: Conditionals
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+            Simon Says:
+              name: Simon Says
+            Learning Sprites with Sprite Lab:
+              name: Learning Sprites with Sprite Lab
+            Alien Dance Party with Sprite Lab:
+              name: Alien Dance Party with Sprite Lab
+            Private and Personal Information:
+              name: Private and Personal Information
+            About Me:
+              name: About Me
+            Access Ability:
+              name: Access Ability
+            Conditionals Review:
+              name: Conditionals Review
+            Drawing with Loops:
+              name: Drawing with Loops
+          title: Time4CS Control Unit 1
+          description_audience: ''
+          description_short: ''
+          description: ''
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Conditionals with Cards
+            Nested Loops in Bee:
+              name: Nested Loops in Bee
+            Nested Loops in Artist:
+              name: Nested Loops in Artist
+            Nested Loops in Frozen:
+              name: Nested Loops in Frozen
+            'Functions: Songwriting':
+              name: 'Functions: Songwriting'
+            Functions in Minecraft:
+              name: Functions in Minecraft
+            Functions in Harvester:
+              name: Functions in Harvester
+            Functions in Artist:
+              name: Functions in Artist
+            End of Course Project:
+              name: End of Course Project
+            Nested Loops in the Maze:
+              name: Nested Loops in the Maze
+          title: Time4CS Control Unit 2
+          description_audience: ''
+          description_short: ''
+          description: ''
+        time4cs-experiment-unit-2:
+          stages:
+            Introduction to the Problem:
+              name: Introduction to the Problem
+            Crowdsourcing (Integrated lesson):
+              name: Crowdsourcing (Integrated lesson)
+            Everglades Habitats:
+              name: Everglades Habitats
+            Evaluating a Project in Sprite Lab:
+              name: Evaluating a Project in Sprite Lab
+            Food Chains:
+              name: Food Chains
+            Conditionals with Cards (Integrated Lesson)- Part 1:
+              name: Conditionals with Cards (Integrated Lesson)- Part 1
+            Alligator Holes:
+              name: Alligator Holes
+            Food Chain Game:
+              name: Food Chain Game
+            Invasive Species:
+              name: Invasive Species
+            Conditionals with Cards (Integrated Lesson)- Part 2:
+              name: Conditionals with Cards (Integrated Lesson)- Part 2
+            I am in Big Trouble:
+              name: I am in Big Trouble
+            Conditionals in Sprite Lab:
+              name: Conditionals in Sprite Lab
+            Nested Loops in Maze:
+              name: Nested Loops in Maze
+            Fancy Shapes using Nested Loops:
+              name: Fancy Shapes using Nested Loops
+            Nested Loops with Frozen:
+              name: Nested Loops with Frozen
+            Fishy Business:
+              name: Fishy Business
+            Songwriting (Integrated Lesson):
+              name: Songwriting (Integrated Lesson)
+            Functions in Minecraft:
+              name: Functions in Minecraft
+            Functions with Harvester:
+              name: Functions with Harvester
+            Functions with Artist:
+              name: Functions with Artist
+            Pythons impacting native populations:
+              name: Pythons impacting native populations
+            Functions in Sprite Lab:
+              name: Functions in Sprite Lab
+            Python Problem- Current Solutions:
+              name: Python Problem- Current Solutions
+            End of Course Project (integrated- project planning lesson):
+              name: End of Course Project (integrated- project planning lesson)
+            Debate- Pythons impacting native populations:
+              name: Debate- Pythons impacting native populations
+            Work on Project:
+              name: Work on Project
+          title: Time4CS Experiment Unit 2
+          description_audience: ''
+          description_short: "[Add description]"
+          description: "[Add description]"

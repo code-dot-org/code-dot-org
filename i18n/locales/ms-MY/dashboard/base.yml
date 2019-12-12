@@ -164,7 +164,12 @@ ms:
     header:
       finished_hoc: "Saya telah menyelesaikan Hour of Code saya"
       sign_in_to_save: 'Daftar Masuk untuk menyimpan kemajuan'
+      course_catalog: "Katalog Kursus"
+      project_gallery: "Projek"
+      help_support: "Bantuan dan sokongan"
+      report_bug: "Laporkan masalah"
       educate_hoc: "Hour of Code"
+      about: "Tentang"
     user:
       classroom: 'Laman Utama Guru'
       label: 'Hi %{username}'
@@ -172,8 +177,10 @@ ms:
       settings: 'Akaun saya'
       logout: 'Daftar keluar'
       signin: 'Log masuk'
+      signup: 'Buat akaun'
       create: 'Buat'
       bounce: 'Lantunan'
+      dance: 'Majlis Tari-Menari'
       flappy: 'Flappy'
       infinity: 'Infiniti'
     popup:
@@ -239,15 +246,17 @@ ms:
     student: 'pelajar'
     teacher: 'Guru'
   footer:
+    copyright: 'Hak Cipta'
     more: 'Lagi'
     feedback: 'Sediakan maklum balas'
-    translate: 'Bantu kami menterjemahkan ke bahasa anda'
+    translate: 'Sukarela menterjemah kandungan kami'
     support: 'Bantuan dan Komuniti'
-    tos: 'Terma'
-    privacy: 'Dasar privasi'
+    tos: 'Terma Perkhidmatan'
+    privacy: 'Dasar Privasi'
     secure: 'Versi Dilindungi'
+    report_abuse: 'Lapor Salah Guna'
   reference_area:
-    title: 'Perlukan bantuan?'
+    title: 'Perlu bantuan?'
     subtitle: 'Lihat video dan petunjuk ini'
     teacher: 'Lihat penyelesaian'
     auth_error: 'Anda tidak disahkan untuk melihat penyelesaian tersebut.'
@@ -281,6 +290,10 @@ ms:
       current: "Tahap semasa"
       unused: "Tahap yang tidak digunakan"
   upsell:
+    dance:
+      title: 'Majlis Tari-Menari'
+    dance-2019:
+      title: 'Majlis Tari-Menari'
     hoc:
       body: 'Cuba asas-asas sains komputer. Ramai yang telah mencuba.'
     flappy:
@@ -295,6 +308,9 @@ ms:
     picture_count: "Sebelum ini <b>%{days}</b> hari, pelajar telah melukis <b>%{count}</b> gambar dengan menulis program komputer mereka sendiri. Klik pada gambar untuk melihat program dimainkan."
     want_to_make_your_own: "Ingin buat anda punya sendiri?"
     more: "Lagi &rarr;"
+    report_abuse: "Lapor Salah Guna"
+  landing:
+    help_support: "Bantuan dan sokongan"
   multi:
     wrong_title: "Jawapan yang salah"
     wrong_body: "Jawapan yang telah anda masukkan adalah tidak betul.  Sila cuba lagi!"
@@ -316,8 +332,8 @@ ms:
     startover_ok: "Mula Sekali Lagi"
     startover_cancel: "Batal"
   terms_interstitial:
-    tos: "Terma"
-    privacy: "Dasar privasi"
+    tos: "Terma Perkhidmatan"
+    privacy: "Dasar Privasi"
     print: "Cetak"
   school_info_interstitial:
     save: "Simpan"
@@ -326,6 +342,8 @@ ms:
       other: "Lain-lain"
     submit: "Hantar"
   project:
+    projects: "Projek"
+    project_gallery: "Projek"
     name: "Nama"
     saved: "Disimpan di dalam galeri!"
     abuse:

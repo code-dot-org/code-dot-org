@@ -541,6 +541,70 @@ es-MX:
         markdown: "# El Gran Evento \n\nEn ciencias de la computación, eventos son
           acciones que un computador monitorea. En esta lección usted reaccionará
           de manera diferente dependiendo cuál botón esta presionado.\n"
+      Building a UI with Design Mode:
+        markdown: |
+          # Bienvenidos al modo de diseño de Laboratorio de aplicaciones
+          En Laboratorio de aplicaciones, el "Modo de diseño" te permite arrastrar y soltar elementos de la interfaz de usuario en la aplicación.
+
+          ### Vocabulario
+          **Interfaz de usuario (IU)**: La "Interfaz de usuario" o **IU** de una aplicación se refiere a cómo una persona (usuario) interactúa con la computadora o la aplicación. Existen patrones comunes para las interfaces de usuario que probablemente conozcas solo por experiencia:
+
+          * **Elementos u objetos de IU**, como botones, imágenes, cuadros de texto, menús desplegables, pantallas, etc.
+          * **Eventos o controles de IU**, como *hacer clic*, *desplazarse*, *mover mouse*, *tipear tecla de teclado*, etc.
+
+          Laboratorio de aplicaciones te permite agregar fácilmente elementos de IU a tu aplicación y luego agregar código para responder cuando un usuario interactúa con esos elementos. Es una especie de proceso de dos pasos, pero aprenderemos todo al respecto en esta lección.
+
+          Para comenzar, solo veamos el Modo de diseño y agreguemos un solo elemento de interfaz de usuario (un botón) a nuestra aplicación. Agregaremos código más adelante.
+
+          <div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+          Verás un nuevo conjunto de interruptores sobre el área de la aplicación que te permite alternar entre "Modo de diseño" y "Modo de código".</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>Agregar un elemento es tan fácil como arrastrarlo y soltarlo en la aplicación donde lo deseed. Una vez que está en la pantalla de la aplicación, puedes cambiar su posición, cambiar su tamaño y cambiar muchas otras propiedades al respecto. </p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>La pestaña <em>Propiedades</em> muestra todo lo que puedes cambiar sobre el aspecto de un elemento de la interfaz de usuario.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span>La <strong>ID del elemento</strong> es importante, porque es cómo refieres al elemento en tu código. Discutiremos las ID de elementos más adelante.</p>
+          </div>
+
+          ![](https://images.code.org/01a31ac3be66deb6d01a92a1edfffd21-image-1476726587662.png)
+
+
+          <div style="column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 66%; float: right">
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span>Puedes hacer que el texto que ve el usuario en el texto del botón sea lo que quieras.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">6.</span><strong>Nota:</strong>Desplázate hacia abajo para ver otras propiedades, porque un elemento de la interfaz de usuario podría estar "oculto".</p>
+          </div>
+
+          <div style="clear: both"></div>
+          <hr>
+
+          **¡Ahora inténtalo tú!**
+      CSD - Getters and Setters:
+        markdown: |
+          # Getters y Setters
+
+          # Setters
+
+          Los setters son comandos que **establecen** o cambian la información. Todos los setters requieren al menos una cosa como entrada: a qué quiere cambiar la información.
+
+          Antes has usado `configurarPantalla()`. `configurarPantalla()` cambia la pantalla que está viendo el usuario. La única entrada que toma `configurarPantalla()` es la nueva pantalla para cambiar.
+
+          Otro ejemplo de un setter que usarás es `configurarTexto()`.
+
+          <img src="//curriculum.code.org/images/applab/setText.png" style="margin: 20px auto">
+
+          # Getters
+
+          Los getters son comandos que **obtienen** o recuperan información. Los getters a menudo requieren al menos una entrada: el lugar del que desea recuperar información.
+
+          `obtenerTexto()` es un getter común que usarás. Se puede usar para obtener el texto de algo como una entrada de texto.
+
+          <img src="//curriculum.code.org/images/applab/getText.png" style="margin: 20px auto">
+
+          A menudo, cuando usas un getter, es una buena idea guardar el resultado en una variable para que puedas usarlo en todo tu programa.
       CSD Header Size MC:
         title: Verificación rápida de títulos
         content1: Mira el código a continuación y predice cómo se mostrarán los títulos.
@@ -2193,6 +2257,78 @@ es-MX:
 
           * [Make a Recommendation](https://docs.google.com/document/d/1pKeFH1OkWzfg3MFTPCezhK_r4p8xu7QUkPKSf5vV41c/export?format=pdf) - Project Guide
           * [Make a Recommendation](https://docs.google.com/document/d/1ZdA-VIdyPZLONBFr7ojFeNfHCHYmacbrrphiR31k6Bk/export?format=pdf) - Peer Review
+      'CSD: getText vs getNumber':
+        markdown: |-
+          # obtenerTexto vs obtenerNúmero
+
+          Las computadoras almacenan información de diferentes maneras. Dos maneras diferentes en que una computadora almacena información son cadenas y números.
+
+          `obtenerNúmero()` intenta obtener el valor de lo que estés preguntando como un número.
+
+          `obtenerTexto()` obtiene el valor de lo que sea que estés preguntando como una cadena. Las cadenas a menudo están marcadas en tus programas con `" "`. Por ejemplo, todos los nombres de tus ID son cadenas. Puedes usar `obtenerTexto()` para recuperar un número, pero debes saber que estará rodeado por `" "`.
+
+          ## ¿Por que importa eso?
+
+          Por lo general, está bien obtener todo como una cadena, pero cuando deseas realizar operaciones matemáticas, necesita números, no cadenas. Cuando intentas agregar dos cadenas juntas, la computadora cree que deseas combinar las dos cadenas en una sola.
+
+          Entonces, cuando dices "2" + "2" `, la computadora evalúa eso como "22".
+
+          Mientras que como cuando dices `2 + 2` (observa que no es`" "`), la computadora evalúa eso como `4`.
+      'CSD: setProperty':
+        markdown: "# Cómo funciona configurarPropiedad\n\n`configurarPropiedad` es
+          el código que te permite establecer las propiedades de los elementos de
+          la interfaz de usuario, como el color, el ancho, el tamaño de fuente, etc.
+          Cualquier propiedad que puedas establecer en el Modo de diseño también se
+          puede establecer en el código usando `configurarPropiedad`\n<br><br>\n\n<div
+          style=\"column-count: 3; column-gap: 20px; column-rule: 0.5px solid #00adbc;
+          -moz-column-count: 3; width: 100%\">\n\n<p style=\"break-after: always;
+          -moz-column-break-after: always; -webkit-column-break-after: always;\">\n\n\t<span
+          style=\"color: #00adbc; font-size: 150%\">1.</span> En el modo de código,
+          puedes encontrar <code> configurarPropiedad</code> en la caja de herramientas
+          de Controles de IU. <br>\n\n\t<span style=\"color: #00adbc; font-size: 150%\">2.</span>
+          Elige la identificación del elemento de la interfaz de usuario del que desea
+          cambiar una propiedad</p>\n\n<p style=\"break-after: always; -moz-column-break-after:
+          always; -webkit-column-break-after: always;\">\n\n\t<span style=\"color:
+          #00adbc; font-size: 150%\">3.</span> El menú desplegable muestra una lista
+          de propiedades que puedes establecer para ese elemento. Coincide con la
+          lista de propiedades que ves para un elemento en <strong>Modo de diseño</strong>\n</p>\n\n<p
+          style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after:
+          always;\">\n\n\t<span style=\"color: #00adbc; font-size: 150%\">4.</span>
+          El último parámetro es el valor que deseas establecer para esa propiedad.
+          Nos interesa el color-de-fondo que tiene una variedad de valores que puedes
+          darle.\n</p>\n\n\n</div>\n\n<img src=\"https://images.code.org/b7736bdcbde48f7951ebdc87135dd46c-image-1480536740764.png\"
+          style=\"display: block; margin: auto\">\n\n\n## Cómo establecer el \"color-de-fondo\"\n\n<span
+          style=\"color: #00adbc; font-size: 150%\">1.</span>*color-de-fondo* es una
+          cadena (entre comillas) que representa el color. Por lo general, indica
+          el color como un valor hexadecimal o como tres valores RGB decimales como
+          *\"rgb(255,0,0)\"*\n\n<img src=\"https://images.code.org/43291bf1c067145771bf88a147d74d26-image-1480538343306.png\"
+          style=\"display: block; margin: auto\">\n"
+      Choosing Good IDs:
+        markdown: "# Elegir buenas identificaciones\n\n**Las buenas ID** son ** significativas
+          y descriptivas**.\n\nAl igual que deseas buenos nombres para las funciones,
+          querrás una identificación para describir el propósito previsto del elemento.\n\nPor
+          ejemplo, si tiene muchos botones en tu programa, querrás dar a cada uno
+          una identificación que describa lo que hace el botón.\n\nEntonces, en lugar
+          de esto:\n \n * `botón1` y` botón2`\n\nPuedes crear identificaciones que
+          transmitan no solo que se trata de un botón, sino para qué deseas que se
+          use el botón, como:\n\n * `BotónInicio` y `BotónGuardar` o\n * `InicioBotón`
+          y `GuardarBotón` o\n * `BtnInicio` y `BtnGuardar`\n * ¡Tú decides!\n\n<img
+          src = \"https://images.code.org/b33be9ee1521f2aa80fedcf22c929d44-image-1476910499958.png\"
+          style = \"display: block; margin: auto;\">\n\n# Reglas sobre ID\nAl hacer
+          identificaciones descriptivas y significativas, **hay algunas reglas sobre
+          identificaciones** que necesita saber. ID ...\n\n* distinguen entre mayúsculas
+          y minúsculas.\n* no pueden contener espacios.\n* * deben * comenzar con
+          una letra (A-Z o a-z) y pueden estar seguidas por cualquier número de dígitos
+          y letras.\n* pueden contener guiones (\"-\"), guiones bajos (\"_\"), dos
+          puntos (\":\") o puntos (\".\").\n\n**¿Distingue entre mayúsculas y minúsculas?**\n\nEsto
+          significa que hay una diferencia entre `BotónInicio` y `botónInicio` (observa
+          la B mayúscula en el primero).\n\nEstas diferencias parecen molestas al
+          principio, pero te acostumbras a ellas y realmente aprecias el hecho de
+          que la computadora requiera tanta precisión.\n\nExisten algunos estilos
+          comunes para usar mayúsculas y deletrear ID de varias palabras:\n\n* **\"Camelcase\"**:
+          `unNombreCamelcasePodríaLucirAsí`\n* **Guiones bajos**: `Algunas_Personas_Prefieren_Usar_Guiones_Bajos_Para_Separar_Palabras`\n*
+          **guiones**: `Otras_Prefieren_Guiones_O_Rayas'\n\nLo que elijas depende
+          de ti. Es tu estilo. Simplemente ayuda a ser consistente.\n\n\n\n\n"
       Dance_Party_extras_intro:
         markdown: "# ¡Sigamos bailando!\n\nPara la parte 2, vas a crear tu propio
           proyecto. Aquí no hay desafíos, sino muchos proyectos que muestran diferentes
@@ -2214,25 +2350,96 @@ es-MX:
           style=\"float: left; margin: 10px\">\n<a href=\"7\">\n<h2>\nAcelera, reduce
           la velocidad\n</h2>\n\n<img src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"></a>\n\n</div>\n"
       Dance_Party_extras_intro_2019:
-        markdown: "# ¡Sigamos bailando!\n\nPara la parte 2, vas a crear tu propio
-          proyecto. Aquí no hay desafíos, sino muchos proyectos que muestran diferentes
-          formas de crear fiestas de baile más complejas.\n\nPuedes hacer estos niveles
-          _en cualquier orden_. Salta para ver cómo se hizo algo en un nivel anterior
-          o combina conceptos entre los proyectos. Pruébalos todos, elige tu favorito
-          y trabaja en la personalización de ese proyecto.\n\n<a class=\"btn btn-large
-          btn-primary next-stage submitButton pull-right\">Continuar</a>\n\n<div class=\"clearfix\"></div>\n\n<div
-          style=\"float: left; margin: 10px\">\n<a href=\"2\">\n<h2>\nPoner en formación\n</h2>\n\n<img
-          src=\"https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif\"></a>\n\n</div>\n\n<div
-          style=\"float: left; margin: 10px\">\n<a href=\"3\">\n<h2>\n¿A dónde fueron?\n</h2>\n\n<img
-          src=\"https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif\"></a>\n\n</div>\n\n<div
-          style=\"float: left; margin: 10px\">\n<a href=\"4\">\n<h2>\nGrupos de baile\n</h2>\n\n<img
-          src=\"https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif\"></a>\n\n</div>\n\n<div
-          style=\"float: left; margin: 10px\">\n<a href=\"5\">\n<h2>\nNegras\n</h2>\n\n<img
-          src=\"https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif\"></a>\n\n</div>\n\n<div
-          style=\"float: left; margin: 10px\">\n<a href=\"6\">\n<h2>\nBajos, medios
-          y agudos \n</h2>\n\n<img src=\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\"></a>\n\n</div>\n\n<div
-          style=\"float: left; margin: 10px\">\n<a href=\"7\">\n<h2>\nAcelera, reduce
-          la velocidad\n</h2>\n\n<img src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"></a>\n\n</div>\n"
+        markdown: |
+          # ¡Sigue bailando!
+
+          Para la parte 2, vas a crear tu propio proyecto. Aquí no hay desafíos; en cambio, hay un montón de proyectos que muestran diferentes formas de hacer fiestas de baile más complejas.
+
+          Puede hacer estos niveles _en cualquier orden_. Salta para ver cómo se hizo algo en un nivel anterior, o combina conceptos entre los proyectos. Pruébalos todos, elige su favorito y pasa tu tiempo trabajando en sumar a ese proyecto para hacerlo suyo.
+
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Continuar</a>
+
+          <div class="clearfix"></div>
+
+
+          <div style="float: left; margin: 10px">
+          <a href="2">
+          <h2>
+          Ida y vuelta
+          </h2>
+
+          <img src="https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="3">
+          <h2>
+          Más botones
+          </h2>
+
+          <img src="https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif"></a>
+
+          </div>
+          <div style="float: left; margin: 10px">
+          <a href="4">
+          <h2>
+          Poner en formación
+          </h2>
+
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="5">
+          <h2>
+          ¿Dónde fueron?
+          </h2>
+
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="6">
+          <h2>
+          Grupos de baile
+          </h2>
+
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="7">
+          <h2>
+          Negras
+          </h2>
+
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="8">
+          <h2>
+          Bajos, medios y agudos
+          </h2>
+
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="9">
+          <h2>
+          Acelera, reduce la velocidad
+          </h2>
+
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
+
+          </div>
       GoingPlacesSafely-unplugged:
         markdown: |
           # Ir a lugares con seguridad
@@ -2497,6 +2704,90 @@ es-MX:
       Multi-Screen Apps:
         title: Título
         content1: descripción aquí
+        markdown: |
+          # Hacer pantallas múltiples
+
+          Puede imaginar que una aplicación típica tiene varias "pantallas" o vistas por las que pasa el usuario como parte del uso de su aplicación. A continuación se muestra un ejemplo típico con una pantalla de bienvenida, una pantalla que juega un juego y un juego sobre pantalla.
+
+          <img src="https://images.code.org/27065f81b2bf53dea099a76868f66e8e-image-1477324003598.png" style="display: block; margin: auto">
+
+          ## ¿Qué es una pantalla, de todos modos?
+
+          Una pantalla es solo un elemento de la interfaz de usuario como cualquier otra cosa en el Modo de diseño. Pero tiene algunas propiedades especiales:
+
+          1. Una pantalla es un elemento de la IU que contiene otros elementos de la IU.
+          2. Solo se puede ver una pantalla a la vez
+          3. Solo los elementos que "pertenecen" a una pantalla serán visibles cuando esa pantalla esté activa.
+          4. **Múltiples pantallas, pero solo un espacio de trabajo de codificación**
+            * A pesar de que sus *elementos de diseño* pueden estar distribuidos en varias pantallas, su código no se divide así.
+            * Solo hay un espacio de trabajo de codificación, que aún albergará todo tu código para la aplicación.
+
+          ## Cómo hacer una nueva pantalla
+
+          <div style="float: left; width: 33%">
+          Hay dos formas de agregar una pantalla a su aplicación. Primero, asegúrate de estar en <em> Modo de diseño </em>.
+          <br><br>
+          <span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+          Elige <em> Nueva pantalla... </em> en el menú desplegable en la parte superior del área de visualización. <strong> Nota: </strong> también utilizas este menú desplegable para cambiar de pantalla en Modo de diseño.
+          <br><br>
+          <span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>
+          O arrastra y suelta un elemento de la interfaz de usuario de pantalla desde la caja de herramientas. <strong> Aviso: </strong> tan pronto como sueltes el elemento de la pantalla, la aplicación te mostrará una <strong>nueva pantalla en blanco.</strong> Puedes volver a otras pantallas usando el menú desplegable en el parte superior.
+
+          </div>
+
+          ![](https://images.code.org/ed8f45d70a65329597c1623ddd756249-image-1477165123570.png)
+
+          ## Establecer las propiedades de una pantalla
+
+          <div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 4; width: 100%">
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+          Usa este menú desplegable para seleccionar la pantalla en la que deseas trabajar. La lista contendrá las ID de todas las pantallas que has creado.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>
+          Haz clic en un área en blanco del fondo para seleccionar la pantalla y establecer sus propiedades.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>
+          Las pantallas también tienen ID. Al igual que otros elementos de la interfaz de usuario, es una buena idea <em>dar a tus pantallas identificaciones descriptivas y significativas</em>. Esto hace que escribir código sea mucho más fácil.</p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span>
+          Si tu pantalla está llena de elementos de la IU y no hay un área en blanco donde hacer clic para seleccionarla, usa este menú desplegable. Enumera todos los elementos de la interfaz de usuario que forman parte de esta pantalla, incluida la pantalla misma.</p>
+          </div>
+
+          <img src="https://images.code.org/5f8934e6ae0fc2d9dfde8c9a0d93eec2-image-1477249243769.png" style="display: block; margin: auto;">
+
+          <div style="column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 2; width: 50%; float: right">
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span>
+          Haz clic en este botón para hacer que esta pantalla sea la "pantalla predeterminada", que significa la pantalla que se mostrará primero cuando se ejecute la aplicación.</p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">6.</span>
+          Las pantallas no tienen muchas propiedades, pero puedes establecer el fondo de la pantalla en un color o una imagen. Las imágenes se estiran o exprimen para ajustarse a la pantalla.</p>
+
+          </div>
+          <div style="clear: both">&nbsp;</div>
+
+          ## Usar el comando *configurarPantalla* para cambiar pantallas con código
+
+          El comando `configurarPantalla` cambia la pantalla para mostrar la pantalla que desees. Tú especificas la pantalla por su ID.
+
+          <img src="https://images.code.org/005222ed01ade7940963ce149d637286-image-1477168080948.png" style="display: block; margin: auto">
+
+          <div style="column-count: 3; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+          Busca <em>configurarPantalla</em> en la caja de herramientas Elementos de la IU y arrástralo al espacio de trabajo del código.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>
+          La mayoría de las veces, cambias la pantalla en respuesta a algún evento de usuario. En este caso, se agrega <em>configurarPantalla</em> a un controlador de eventos "clic" para la imagen con id:<em>smileyCara</em> </p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>
+          Selecciona la ID de la pantalla a la que deseas cambiar. En este caso, cuando se hace clic en la cara sonriente en la pantalla que dice "hola", queremos cambiar a la pantalla que dice "adiós". </p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span>
+          <strong>Idea clave: Múltiples pantallas: un espacio de trabajo de codificación.</strong> Este es el código que maneja un evento de "clic" para una imagen <em>que está en una pantalla diferente</em>: la <em> pantallaAdiós</em>. No puedes ver esa imagen en este momento, o esa pantalla, porque la pantalla no está seleccionada. Sin embargo, el código para ello todavía va aquí. </p>
+
+          </div>
       New Challenge Introduction:
         title: Título
         content1: descripción aquí
@@ -2520,14 +2811,281 @@ es-MX:
           con alguien (un compañero, un grupo pequeño o toda la clase) para conversar
           sobre lo que encontraste y verificar que conoces lo que está sucediendo
           y las diversas formas en que puedes usar la herramienta.\n\n\n"
+      OPD-K5 About:
+        markdown: |
+          # Primeros pasos: sobre este curso
+
+          ## Resumen del curso
+
+          Este curso tiene la intención de ser una introducción al currículo y los recursos de los Fundamentos de Ciencias de la Computación de Code.org para profesores. Mediante la lectura, los videos, al completar desafíos interactivos y reflexionar sobre tu aprendizaje, desarrollarás tu propia comprensión mientras te preparas para enseñar ciencias de la computación en tu clase.
+
+          ## Objetivos de aprendizaje
+
+          Al completar este curso en línea, los participantes:
+
+          - Aprenderán los conceptos básicos de la computación.
+          - Examinarán las mejores prácticas para enseñar estos conceptos básicos a tus alumnos
+          - Accederán a planes de estudio y recursos gratuitos para profesores
+          - Planificarán cómo comenzar a enseñar Fundamentos de Ciencias de la Computación
+          - Se conectarán con una comunidad de colegas educadores que están haciendo cambios positivos en sus aulas a través de la codificación
+
+          ## Requisitos previos
+
+          No se asume ninguna experiencia previa en codificación o educación en informática. Este es un curso para principiantes.
+
+          > **Una nota sobre la audiencia:** Este curso se centra en el plan de estudios gratuito de Fundamentos de Ciencias de la Computación de Code.org en el contexto de los alumnos de K-5. Aunque muchos de los mismos conceptos se pueden aplicar a cualquier curso de informática, si deseas enseñar un plan de estudios de computación más profundo que los Fundamentos de la Ciencia de la Computación (por ejemplo, uno de nuestros cursos de [Middle] (https://code.org/educate/csd) o [High school](https://code.org/educate/csp)), te recomendamos que busques más [oportunidades de desarrollo profesional en profundidad o en curso] (https://code.org/educate/professional-learning/middle-high).
+
+          ## Duración del curso
+
+          Completar este curso en línea debería tomar entre 3 y 7 horas, dependiendo de tu conocimiento previo y de cuán profundamente quieras adentrarte en los recursos de Code.org.
+      OPD-K5 PreSurvey:
+        markdown: |+
+          # Primeros pasos > Realiza la encuesta previa
+
+          Queremos que aproveches al máximo este desarrollo profesional. Por esa razón, te pedimos que completes [esta breve encuesta previa] (https://form.jotform.com/90556900301146). La encuesta te pedirá que reflexiones sobre tus objetivos para este curso y nos contará un poco sobre quién eres y cómo podemos apoyarte.
+
+          <a class="btn btn-large btn-primary" href="https://form.jotform.com/90556900301146?user_id=<user_id/>">Realiza la encuesta previa</a>
+
       OPD-K5 Stage3aGo:
         title: Título
         content1: descripción aquí
+      OPD-K5 Welcome 2:
+        markdown: |+
+          # Introducción> Cursos de fundamentos de Ciencia de la Computación
+
+          El objetivo del desarrollo profesional de Code.org es preparar a profesores como tú para integrar la computación en tus aulas y apoyar su crecimiento como profesores. Después de completar este curso en línea, estarás listo para enseñar uno o más de los siguientes cursos de Fundamentos de la Ciencia de la Computación de Code.org en tu salón de clases:
+
+           - **[Curso A](http://studio.code.org/s/coursea)**: aproximadamente 12 horas (Jardín de infantes)
+           - **[Curso B](http://studio.code.org/s/courseb)**: aproximadamente 12 horas (Grado 1)
+           - **[Curso C](http://studio.code.org/s/coursec)**: aproximadamente 18 horas (Grado 2)
+           - **[Curso D](http://studio.code.org/s/coursed)**: aproximadamente 18 horas (Grado 3)
+           - **[Curso E](http://studio.code.org/s/coursee)**: aproximadamente 18 horas (Grado 4)
+           - **[Curso F](http://studio.code.org/s/coursef)**: aproximadamente 20 horas (Grado 5)
+           - **[Fundamentos de la Ciencia de la Computación Express](http://studio.code.org/s/express)**: aproximadamente 20 horas (Edades de más de 8)
+           - **[Fundamentos de la Ciencia de la Computación Pre-Express](http://studio.code.org/s/pre-express)**: aproximadamente 20 horas (Edades de 4-8)
+
+
+      'Overview: Design Mode':
+        markdown: |
+          # Bienvenido al Modo de diseño de laboratorio de aplicaciones
+          En el Laboratorio de aplicaciones, el "Modo de diseño" te permite arrastrar y soltar elementos de la interfaz de usuario en la aplicación.
+
+          ### Vocabulario
+          * ** Interfaz de usuario (IU) ** - Cómo una persona (usuario) interactúa con la computadora o la aplicación.
+          * ** Elementos u objetos de la IU **, como botones, imágenes, cuadros de texto, menús desplegables, pantallas, etc.
+
+          ## Ejemplo
+
+          <div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+          Verás un nuevo conjunto de interruptores sobre el área de la aplicación que le permite alternar entre "Modo de diseño" y "Modo de código".</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>Agregar un elemento es tan fácil como arrastrarlo y soltarlo en la aplicación donde lo desees. Una vez que está en la pantalla de la aplicación, puedes cambiar su posición, cambiar su tamaño y cambiar muchas otras propiedades al respecto.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>La pestaña <em> Propiedades </em> muestra todo lo que puede cambiar sobre el aspecto de un elemento de la interfaz de usuario.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span>La <strong> ID del elemento </strong> es importante porque es cómo refieres al elemento en tu código. Discutiremos las ID de elementos más adelante.</p>
+          </div>
+
+          ![](https://images.code.org/01a31ac3be66deb6d01a92a1edfffd21-image-1476726587662.png)
+
+
+          <div style="column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 66%; float: right">
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span>Puedes hacer que el texto que el usuario ve en el texto del botón sea lo que quieras.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">6.</span><strong>Nota: </strong> desplázate hacia abajo para ver otras propiedades, porque podría haber un elemento de la interfaz de usuario que está "oculto".</p>
+          </div>
+
+          <div style="clear: both"></div>
+          <hr>
+
+          **¡Ahora inténtalo tú!**
+      'Overview: If Statements':
+        markdown: |+
+          # Sentencias si
+
+          ## Cómo funcionan las sentencias si
+
+          <img src="https://images.code.org/361556bbff61bf91e2c737f745582dff-image-1479418505481.png" style="float: right; margin-left: 20px; margin-right: 20px">
+
+          Las sentencias si te permiten *tomar una decisión que determine qué líneas de código deben ejecutarse a continuación.*
+
+          A la derecha, hay un diagrama que muestra los elementos de una sentencia `si` básica en JavaScript.
+
+          Hay dos partes básicas en una sentencia si.
+
+          1. Una condición por evaluar (una expresión booleana que evalúa a **verdadero** o **falso**)
+          2. Código que debería ejecutar *si* la expresión era verdadera; encerrada entre llaves
+
+          ## Un ejemplo trabajado
+          <img src="https://images.code.org/ca716e009ddb8dc397eb5a651a1ac2d7-image-1479420772852.png" style="display: block; margin: auto; float: right">
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 150%;">1.</span>
+          El programa se ejecuta línea por línea como es de esperar. Muestra un mensaje, luego le pide al usuario que ingrese un número. Cualquiera que sea el tipo de usuario, se almacenará en la variable <code>edad</code> y luego pasará a la siguiente línea...
+          </p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 150%;">2.</span>
+          Cuando se encuentra la sentencia <code> si</code>, lo que <em>primero</em> hace es evaluar la condición entre paréntesis. Comprueba si, en este punto del programa, el valor en una variable <code>edad</code> es mayor o igual a 18. Si es así, decimos que la expresión "<strong>devuelve verdadero</ fuerte> ". De lo contrario, devuelve falso.
+          </p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 150%;">3.</span>
+          Estas sentencias de console.log <em>solo</em> se ejecutarán si la sentencia es verdadera. Las llaves encierran todo el código que debe ejecutarse si, y solo si, la expresión es verdadera. De lo contrario, toda la sección de código encapsulada en la sentencia si se <em>omite</em>.
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 150%;">4.</span>
+          La ejecución comienza aquí, en la primera línea después de la llave de cierre de la sentencia si. Esta línea <em>siempre</em> se ejecutará, pero ten en cuenta que si el usuario ingresó una edad menor de 18 años, se omitirá toda la sentencia if, y solo dirá "Gracias por verificar". (Arreglaremos esta incomodidad pronto).
+
+          </p>
+
+          <div style="clear: both">&nbsp;</div>
+
+
+      'Overview: Images':
+        markdown: |+
+          # Imágenes
+
+          ## Ingresa una URL de una imagen en la web
+
+          <img src="https://images.code.org/acf4542eda586e7b73bc27dd8746848c-image-1477675154724.png" style="width: 250px; float: right">
+
+          Hay varias formas de obtener la URL de una imagen.
+
+          Una técnica común (que se muestra a la derecha) es encontrar una imagen que te guste en una página web y luego hacer clic derecho (o ctrl-clic), y elegir una opción que diga algo como "Copiar dirección de imagen", y luego puedes pegarla en el cuadro de texto en el Laboratorio de aplicaciones.
+
+          Si no estás seguro, también puedes elegir una opción como "Abrir imagen en una nueva pestaña" que aísla la imagen por sí misma y la URL se mostrará en la barra de direcciones, que puedes copiar/pegar en el Laboratorio de aplicaciones.
+
+          **Error común**: Uso de la URL de un *sitio web de búsqueda de imágenes* en lugar de una URL de la imagen en sí.
+
+          * Asegúrate de obtener la ruta a un archivo de imagen real, algo que termina con **.Jpg**, **.gif** o **.png**.
+          * Una URL que comienza así: `https://www.google.com/search?q=cat&espv=2&biw=1497....` probablemente sea incorrecta.
+
+
+          ## Sube tus propias imágenes
+
+          Si has guardado imágenes en tu computadora, puedes cargarlas en el **administrador de recursos** del laboratorio de aplicaciones. Simplemente **haz clic en Cargar archivo** y siga los cuadros de diálogo en pantalla.
+
+          Para las imágenes, el archivo debe ser de tipo: **.jpg**, **.png** o **.gif**
+
+          Una vez que hayas cargado la imagen, debes **Elegirla** para configurar la imagen en ese archivo. Si agregas varias imágenes, las verás listadas cada vez que cargues un archivo y puedes elegir usar *cualquier* archivo que ya hayas cargado.
+
+          ![](https://images.code.org/d64d7e3dadc882897e450b00a0fc6cb2-image-1476896824985.gif)
+
+          ### ¡Haz clic en Continuar para probarlo!
+
+
+      'Overview: onEvent':
+        markdown: |
+          # Responder a la entrada del usuario
+
+          Tendrás que sumergirte en el Dodo de código para que realmente responda a los usuarios. Laboratorio de aplicaciones espera para responder a ciertos **eventos** que ocurren en un programa. El bloque `enEvento` especifica en qué elemento de la interfaz de usuario esperar un evento.
+
+          ## EnEvento
+
+          <br><br>
+
+          <div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 4; width: 100%">
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+          Cambiar al Modo de código</p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>
+          Arrastra un bloque <code>enEvento</code> de la caja de herramientas al espacio de trabajo.</p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>
+          Usa el menú desplegable para seleccionar la <em> ID </em> del elemento de la interfaz de usuario que deseas configurar para responder a algún evento. Las ID de todos los elementos de la interfaz de usuario agregados en modo de diseño se enumerarán aquí.</p>
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span>
+          Usa el menú desplegable para seleccionar el <em>tipo</em> de evento al que desea responder. (Solo usa "clic" por ahora).</p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span>
+          Agrega código dentro de la función que desea ejecutar <em>cuando</em> el usuario desencadena el evento. La función se ejecutará una vez cada vez que el usuario active el evento específico.</p>
+
+          </div>
+
+          ![](https://images.code.org/9b506faaaadf61338dc738a4eafb66b2-image-1476740205599.png)
+      'Overview: setPosition':
+        markdown: |
+          # configurarPosición y dimensiones de pantalla
+
+          El comando `configurarPosición` te permite mover elementos de la IU a una posición arbitraria en la pantalla.
+
+          <img src="https://images.code.org/ee55080bb341528ca7e8ebc79f9f978b-image-1490369263385.27.12 AM.png" style="display: block; margin: auto">
+
+          Tú (quizás obviamente) necesitas conectar números reales en estos parámetros de `configurarPosición` para que tenga algún efecto. Los números para configurarPosición **coordenadas x e y de la pantalla**.
+
+          **Sugerencias:**
+
+          * 0,0 es la esquina superior izquierda.
+          * Especifica una ubicación según la cantidad de píxeles desde la **izquierda y abajo** desde la parte superior de la pantalla.
+          * La pantalla es **320 por 450 píxeles**.
+          * Puedes **desplazarte sobre la pantalla** para ver la coordenada x, y de cualquier punto.
+
+          <div style="width: 100%; text-align: center">
+          <img src="https://images.code.org/8b346602d75f2877c64e1793b6a04302-image-1476889124747.png">
+
+          <img src="https://images.code.org/fc7e830fa2ea994b885c76618b484dfa-image-1476889137756.gif">
+          </div>
       Prepare for your presentation:
         title: Título
         content1: descripción aquí
       Prepare for your presentation_2018:
         title: Prepárate para tu presentación
+      Responding to User Input:
+        markdown: |+
+          # Responder a la entrada del usuario
+
+          El Modo de diseño hace que sea muy fácil diseñar la interfaz de usuario para su aplicación, pero necesitaremos sumergirnos en el Modo de código para que realmente responda a los usuarios.
+
+          En Laboratorio de juegos, el bucle Dibujar solo ejecutaba código constantemente, usando condicionales para verificar las interacciones del usuario. Laboratorio de aplicaciones, por otro lado, espera responder a ciertos **eventos** que ocurren en un programa. Es la forma en que Laboratorio de aplicaciones dice "¡Oye! ¡Algo sucedió!". Esto significa que no es necesario que se ejecute ningún código cuando no interactúas directamente con una aplicación, y tu código puede responder a cada uno de estos eventos a medida que ocurren.
+
+          Colectivamente, las tareas de codificación involucradas en hacer que su aplicación responda a eventos activando funciones se llaman **Manejo de eventos **.
+
+          En Laboratorio de aplicaciones, todo el manejo de eventos comienza agregando un bloque especial de código llamado `enEvento`. Esta es la forma de hacerlo:
+
+          <br><br>
+
+          <div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 4; width: 100%">
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+          Switch into Code Mode</p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>
+          Arrastra un bloque <code>enEvento</code> desde la caja de herramientas al espacio de trabajo.</p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>
+          Usa el menú desplegable para seleccionar la <em>ID</em> del elemento de la interfaz de usuario que deseas configurar para responder a algún evento. Las ID de todos los elementos de la IU agregados en Modo de diseño se enumerarán aquí.</p>
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span>
+          Usa el menú desplegable para seleccionar el <em>tipo</em> del evento al que desea responder. (Solo usa "clic" por ahora).</p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span>
+          Agrega código dentro de la función que deseas ejecutar <em>cuando</em> el usuario desencadena el evento. La función se ejecutará una vez, cada vez que el usuario active el evento específico.</p>
+
+          </div>
+
+          ![](https://images.code.org/9b506faaaadf61338dc738a4eafb66b2-image-1476740205599.png)
+
+          ### Cambio de pantallas con un "clic"
+
+          En la programación dirigida por eventos, es importante comprender que:
+
+          * **Los usuarios activan eventos**: los eventos ocurren cuando los usuarios hacen clic en un botón, tocan la pantalla, mueven el mouse, escriben una tecla en el teclado, etc.
+          * **Código de activación de eventos**: cuando se produce un evento o se "dispara", se puede utilizar para activar una función de JavaScript en particular.
+
+          El bloque `enEvento` de Laboratorio de aplicaciones es un tipo de función de manejo de eventos llamada **Oyente de eventos**. Envuelve toda la configuración que necesitas para manejar los eventos en un comando que tiene varias partes. Aquí hay un ejemplo con todo etiquetado:
+
+          <img src="//curriculum.code.org/images/applab/onEvent_diagram.png" style="display: block; margin: 20px auto">
+
+          <div style="column-count: 3; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+          Código para ejecutar cuando la función de devolución de llamada se activa cuando el usuario hace clic en <em>botón1</em>. En este caso, simplemente mueve la tortuga hacia adelante 25 píxeles. El código de manejo de eventos generalmente será más de una línea. Este es solo un ejemplo simple para comenzar.</p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>
+          Ten en cuenta que esta función, a diferencia de otras que hemos visto, no tiene un nombre. También se llama <em>función de devolución de llamada</em>, que es un término extraño. Una función de devolución de llamada solo es diferente de una función normal en que no la llamas directamente desde tu código. En cambio, una función de devolución de llamada es <strong>llamada por el sistema</strong> en el momento en que ocurre el evento especificado. Las funciones de devolución de llamada son un patrón común en una gran cantidad de programación basada en eventos.</p>
+
+
+          ### ¡Intentarás esto a continuación!
+
       'Technique: Frequency Analysis':
         title: Cómo descifrar un cifrado de sustitución
         content1: descripción aquí
@@ -3350,6 +3908,9 @@ es-MX:
           feedback: En este código, la cosechadora hará un patrón de escalones varias
             veces y recogerá la mayor cantidad de maíz o lechuga que encuentre. No
             recogerá la calabaza.
+        markdown: |
+          Los brotes en este desafió serán de maíz o lechuga.
+          <br/>
       courseD_multi_farmer_condLoops9_predict1_2018:
         questions:
         - text: Observa el siguiente código con atención. ¿Qué sucederá si haces clic
@@ -3368,6 +3929,9 @@ es-MX:
           feedback: En este código, la cosechadora hará un patrón de escalones varias
             veces y recolectará la mayor cantidad de maíz o lechuga que encuentre.
             No recogerá la calabaza.
+        markdown: |
+          Los brotes en este desafió serán de maíz o lechuga.
+          <br/>
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         questions:
         - text: Observa el siguiente código con atención. ¿Qué sucederá si haces clic
@@ -3386,6 +3950,9 @@ es-MX:
           feedback: En este código, la cosechadora hará un patrón de escalones varias
             veces y recolectará la mayor cantidad de maíz o lechuga que encuentre.
             No recogerá la calabaza.
+        markdown: |
+          Los brotes en este desafió serán de maíz o lechuga.
+          <br/>
       courseD_multi_farmer_ramp13:
         questions:
         - {}
@@ -3406,6 +3973,10 @@ es-MX:
           feedback: El bloque `recoger calabaza` está dentro del bucle, por lo que
             la granjera intentará recoger calabazas en cada paso, en lugar de hacerlo
             solo al final.
+        markdown: |+
+          Este es un nuevo tipo de desafío que utiliza bloques similares a lo que ya has visto. ¿Puedes hacer una predicción acerca de lo que ocurrirá cuando ejecutes el código que se encuentra debajo?
+
+
       courseD_multi_farmer_while10_predict2:
         questions:
         - text: Observa el código siguiente con atención. ¿Qué quedará al final de
@@ -3792,6 +4363,15 @@ es-MX:
         - text: No lo sé.
           feedback: La variable vuelve a 0 antes de las dos últimas llamadas de funciones,
             donde se agrega 1 cada vez. La abeja recogerá 2 unidades de néctar.
+      courseF_external_variableConstant:
+        markdown: "<h2>Más sobre variables</h2>\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
+          style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>Acabas de
+          aprender una manera genial de usar una variable... ¡como una constante!
+          \ \nCuando usas una variable como una constante, lo que haces es establecer
+          un valor una vez y, luego, usas el *mismo* valor varias veces en tu programa
+          sin cambiarlo luego de hacer clic en \"Ejecutar\".  </h3>\n<br/><hr/>\n<h3>En
+          la próxima parte de la serie, escribirás código con variables que *hacen*
+          cambios dentro del programa.</h3>\n\n"
       courseF_markdown_algorithms_end:
         title: Prueba de reducción de la página del libro de texto
         content1: Prueba de reducción de la página del libro de texto
@@ -3919,6 +4499,10 @@ es-MX:
         - text: No lo sé.
           feedback: El programa usa parámetros para que una única función pueda crear
             dos cajas de diferente tamaño.
+        markdown: |+
+          Añadimos parámetros a la función 'dibujar un cuadrado'. Haz clic en el botón "editar" azul para ver la definición de toda la función.
+
+
       courseF_multi_artist_variables3a_predict1:
         questions:
         - text: Hemos establecido la variable "longitud" en 50. ¿Qué sucederá cuando
@@ -3989,6 +4573,10 @@ es-MX:
         - text: No lo sé.
           feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
             néctar solamente si hay una flor debajo de la nube.
+        markdown: 'La nube bloquea la vista. Podría haber una flor debajo de esta
+          nube. Si hay una flor, la abeja deberá recoger el néctar **una vez**.
+
+'
       courseF_multi_bee_conditionals7_predict2:
         questions:
         - text: Observa el siguiente código con atención. ¿Qué crees que sucederá
@@ -4007,6 +4595,10 @@ es-MX:
         - text: No lo sé.
           feedback: El bloque `si en la flor` permite a la abeja tomar el néctar de
             cada flor; de lo contrario, hará miel.
+        markdown: 'A veces la nube cubre una flor, ¡y a veces cubre un panal! De una
+          u otra manera, solo habrá **una** flor o **un* panal debajo de cada nube.
+
+'
       courseF_multi_bee_for3_predict1:
         questions:
         - text: Lee el siguiente código. ¿Qué sucederá cuando hagas clic en "Ejecutar"?
@@ -4077,6 +4669,10 @@ es-MX:
         - text: No lo sé.
           feedback: Al hacer clic para ver dentro de la función, verás que está definida
             por un parámetro para recoger todo el néctar o la miel que se encuentre.
+        markdown: |+
+          Debajo de estas nubes, hay una flor con 1 néctar o un panal con 1 miel. Haz clic en el botón "editar" azul de la función para ver lo que hay adentro antes de responder la pregunta a continuación.
+
+
       courseF_multi_playlab_variables4c_predictive1:
         questions:
         - text: ¿Qué sucederá si el usuario ingresa el nombre "Ali" en la ventana?
@@ -4093,6 +4689,11 @@ es-MX:
         - text: No lo sé.
           feedback: 'Incorrecto. Observa que el bloque `unirse` inserta el nombre
             (Ali) en la oración del pirata. '
+        markdown: "**Este desafío usa un nuevo bloque llamado `preguntar`.**\n\nEl
+          bloque `preguntar` detiene el programa y pide al usuario que ingrese algún
+          texto. \n\nEl texto ingresado por el usuario es guardado en la variable
+          que se muestra al final del bloque `preguntar`. En este caso, es la variable
+          `nombre`.\n"
       courseF_project_exemplars_2019:
         title: Prueba de reducción de la página del libro de texto
         content1: Prueba de reducción de la página del libro de texto

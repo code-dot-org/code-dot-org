@@ -21,6 +21,7 @@ apt_package %w(
   imagemagick
   libmagickcore-dev
   libmagickwand-dev
+  fonts-noto
 )
 
 # Used by lesson plan generator.
@@ -98,6 +99,7 @@ if node['cdo-secrets']["build_apps"] ||
   # TODO keep this logic in sync with `BUILD_PACKAGE` in `package.rake`.
   (node['cdo-apps']['daemon'] && %w[staging test adhoc].include?(node.chef_environment))
   include_recipe 'cdo-nodejs'
+  include_recipe 'cdo-apps::generate_pdf'
 end
 
 # Workaround for lack of zoneinfo in docker: https://forums.docker.com/t/synchronize-timezone-from-host-to-container/39116/3

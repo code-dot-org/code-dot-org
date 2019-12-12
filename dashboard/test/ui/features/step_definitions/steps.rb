@@ -1019,6 +1019,40 @@ And /^I create a new section( and go home)?$/ do |home|
   navigate_to replace_hostname('http://studio.code.org') if home
 end
 
+Then /^the overview page contains ([\d]+) assign (?:button|buttons)$/ do |expected_num|
+  actual_num = @browser.execute_script("return $('.uitest-assign-button').length;")
+  expect(actual_num).to eq(expected_num.to_i)
+end
+
+And /^I create a new section named "([^"]*)" assigned to "([^"]*)" version "([^"]*)"(?: and unit "([^"]*)")?$/ do |section_name, assignment_family, version_year, secondary|
+  individual_steps %Q{
+    When I see the section set up box
+    When I press the new section button
+    Then I should see the new section dialog
+    When I select email login
+    Then I wait to see "#uitest-section-name"
+    And I press keys "#{section_name}" for element "#uitest-section-name"
+    Then I wait to see "#uitest-assignment-family"
+    When I select the "#{assignment_family}" option in dropdown "uitest-assignment-family"
+
+    And I click selector "#assignment-version-year" once I see it
+    And I click selector ".assignment-version-title:contains(#{version_year})" once I see it
+  }
+
+  if secondary
+    individual_steps %Q{
+      And I wait to see "#uitest-secondary-assignment"
+      And I select the "#{secondary}" option in dropdown "uitest-secondary-assignment"
+    }
+  end
+
+  individual_steps %Q{
+    And I press the save button to create a new section
+    And I wait for the dialog to close
+    Then I should see the section table
+  }
+end
+
 And /^I create a new section with course "([^"]*)", version "([^"]*)"(?: and unit "([^"]*)")?$/ do |assignment_family, version_year, secondary|
   individual_steps %Q{
     When I see the section set up box
@@ -1226,25 +1260,6 @@ end
 
 And(/^I wait until I am on the join page$/) do
   wait_short_until {/^\/join/.match(@browser.execute_script("return location.pathname"))}
-end
-
-# TODO: As of PR#9262, this method is not used. Evaluate its usage or lack
-# thereof, removing it if it remains unused.
-And(/I display toast "([^"]*)"$/) do |message|
-  @browser.execute_script(<<-SCRIPT)
-    var div = document.createElement('div');
-    div.className = 'ui-test-toast';
-    div.textContent = "#{message}";
-    div.style.position = 'absolute';
-    div.style.top = '50px';
-    div.style.right = '50px';
-    div.style.padding = '50px';
-    div.style.backgroundColor = 'lightyellow';
-    div.style.border = 'dashed 3px #eeee00';
-    div.style.fontWeight = 'bold';
-    div.style.fontSize = '14pt';
-    document.body.appendChild(div);
-  SCRIPT
 end
 
 And(/I fill in username and password for "([^"]*)"$/) do |name|
@@ -1730,4 +1745,13 @@ end
 
 And(/^one year passes for user "([^"]*)"$/) do |name|
   pass_time_for_user name, 1.year.ago
+end
+
+Then /^I click selector "([^"]*)" (\d+(?:\.\d*)?) times?$/ do |selector, times|
+  step_list = []
+  times.to_i.times do
+    step_list.push("Then I click selector \"#{selector}\" once I see it")
+    step_list.push("And I wait for 1 seconds")
+  end
+  steps step_list.join("\n")
 end

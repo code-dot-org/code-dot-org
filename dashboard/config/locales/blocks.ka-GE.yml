@@ -2,6 +2,14 @@
 ka:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: ყველა
+          MOVE1:
+            MOVES.Rest: არცერთი
+          MOVE2:
+            MOVES.Rest: არცერთი
       Dancelab_atTimestamp:
         options:
           UNIT:
@@ -189,6 +197,7 @@ ka:
             '19': '19'
             '20': '20'
           LAYOUT:
+            '"diamond"': ბრილიანტი
             '"grid"': ბადე
             '"row"': მწკრივი
             '"column"': სვეტი
@@ -340,6 +349,14 @@ ka:
             '"bass"': დაბალი
             '"mid"': საშუალო
             '"treble"': მაღალი
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': ბრილიანტი
+            '"s"': s
+            '"w"': w
+            '"x"': x
+            '"y"': y
       Dancelab_whenKey:
         options:
           KEY:

@@ -282,8 +282,8 @@ uk:
       course_catalog: "Каталог курсів"
       project_gallery: "Проекти"
       sections: "Секції"
-      help_support: "Допомога і підтримка"
-      report_bug: "Повідомити про помилку"
+      help_support: "Допомога та підтримка"
+      report_bug: "Сповістити про проблему"
       teacher_community: "Спільнота вчителів"
       documentation: "Документація"
       tutorials: "Навчальні матеріали"
@@ -319,7 +319,7 @@ uk:
       stats: 'Студія коду'
       settings: 'Мій профіль'
       logout: 'Вийти'
-      signin: 'Вхід'
+      signin: 'Увійти'
       signup: 'Створити обліковий запис'
       already_registered: 'Вже зареєстровані?'
       pair_programming: 'Програмування в парах'
@@ -569,6 +569,8 @@ uk:
       cta: 'Почати навчання'
     dance:
       title: 'Танцювальна вечірка'
+    dance-2019:
+      title: 'Танцювальна вечірка'
     hoc:
       title: 'Лабіринт'
       body: 'Спробуйте основи інформатики. Мільйони вже скористались цим шансом.'
@@ -652,7 +654,7 @@ uk:
     support: "Отримати допомогу"
     support_url: "//support.code.org"
     help_resources: "Довідки та ресурси"
-    help_support: "Допомога і підтримка"
+    help_support: "Допомога та підтримка"
     documentation: "Документація"
     tutorials: "Навчальні матеріали"
   multi:

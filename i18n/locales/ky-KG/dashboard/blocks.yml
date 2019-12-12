@@ -2,6 +2,14 @@
 ky:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: баары
+          MOVE1:
+            MOVES.Rest: Жок
+          MOVE2:
+            MOVES.Rest: Жок
       Dancelab_atTimestamp:
         options:
           UNIT:
@@ -140,6 +148,7 @@ ky:
             '19': '19'
             '20': '20'
           LAYOUT:
+            '"diamond"': алмаз
             '"random"': туш келди
       Dancelab_randomColor:
         text: кокус түс
@@ -237,6 +246,12 @@ ky:
           PROPERTY:
             '"scale"': өлчөмү
             '"height"': бийиктиги
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': алмаз
+            '"x"': x
+            '"y"': 'y'
       Dancelab_whenKey:
         options:
           KEY:

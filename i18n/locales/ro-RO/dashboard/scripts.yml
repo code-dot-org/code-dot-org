@@ -1208,7 +1208,7 @@ ro:
             Hour of Code 2015:
               name: Ora de cod 2015
           description_audience: '[șir gol]'
-        ocean:
+        oceans:
           description_audience: '[șir gol]'
         CSPPD3-Unit3-pt2:
           stages:
@@ -3548,8 +3548,8 @@ ro:
         dance:
           stages:
             Dance Party:
-              name: Petrecere cu dans
-          title: Petrecere cu dans
+              name: Petrecere dansantă
+          title: Petrecere dansantă
           description_audience: '[șir gol]'
         frozen-2018-test-b:
           description: '[șir gol]'
@@ -3573,7 +3573,7 @@ ro:
           description_audience: '[șir gol]'
           stages:
             Dance Party:
-              name: Petrecere cu dans
+              name: Petrecere dansantă
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
         dance-draft:
@@ -3582,7 +3582,7 @@ ro:
           description_audience: '[șir gol]'
           stages:
             Dance Party:
-              name: Petrecere cu dans
+              name: Petrecere dansantă
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
         cspplayground:
@@ -3590,7 +3590,6 @@ ro:
           description_short: '[șir gol]'
           description: '[șir gol]'
         dance-extras:
-          title: Continuă să dansezi
           description_audience: '[șir gol]'
           description: Mergi mai departe de prima oră cu ideile de extindere a proiectelor.
         coursef-2019:
@@ -3650,7 +3649,7 @@ ro:
         dance-low:
           stages:
             Dance Party:
-              name: Petrecere cu dans
+              name: Petrecere dansantă
           description_audience: '[șir gol]'
           description: '[șir gol]'
         coursed-2019:
@@ -3679,7 +3678,7 @@ ro:
             Artist Binary:
               name: Binar cu artist
             Dance Party:
-              name: Petrecere cu dans
+              name: Petrecere dansantă
         coursee-2019:
           stages:
             'Programming: My Robotic Friends':
@@ -3879,7 +3878,7 @@ ro:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Dance Party:
-              name: Petrecere cu dans
+              name: Petrecere dansantă
         csd1-2019:
           description_audience: '[șir gol]'
           stages:
@@ -4649,6 +4648,8 @@ ro:
           stages:
             Routers and Redundancy:
               name: Routere și redundanță
+            The Need for Addressing:
+              name: Nevoia de adresare
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
@@ -4684,10 +4685,9 @@ ro:
         dance-2019:
           stages:
             Dance Party:
-              name: Petrecere cu dans
+              name: Petrecere dansantă
           description_audience: '[șir gol]'
-          description_short: '[șir gol]'
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           description_audience: '[șir gol]'
           stages:
             Getting Started:
@@ -4747,7 +4747,6 @@ ro:
             For Loops:
               name: Bucle Pentru
         dance-extras-2019:
-          title: Continuă să dansezi
           description: Mergi mai departe de prima oră cu ideile de extindere a proiectelor.
           description_audience: '[șir gol]'
           stages:
@@ -4758,3 +4757,25 @@ ro:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
+        csp4-preview:
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Condiţionale
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Obţinând Informaţii/Critici
+            Conditionals with Cards:
+              name: Condiționale cu Carduri
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        time4cs-experiment-unit-2:
+          description_audience: '[șir gol]'

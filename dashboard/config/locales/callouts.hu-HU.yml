@@ -56,14 +56,20 @@ hu-HU:
         dance_callout_11_b: Új blokk!
       Dance_2019_01:
         dance_callout_01: Add hozzá ezt a blokkot a programodhoz!
+      Dance_2019_02:
+        dance_callout_11_a: Add hozzá ezt a blokkot a programodhoz.
+        arrow_buttons: A nyílgombok megnyomásával vezéreld a táncosodat.
       Dance_2019_04:
         dance_callout_02: Add hozzá ezt a blokkot a programodhoz!
+      Dance_2019_05:
+        dance_callout_05: Vegyen fel új eseményeket a programjába.
       Dance_2019_06:
         dance_party_11_5_groups: Új blokk!
       Dance_2019_07:
         setprop_hint: Új blokk!
       Dance_2019_09:
-        new_block_1: Új blokk!
+        new_block_3: Új blokk!
+        new_block_4: Új blokk!
       Dance_Party_01:
         dance_callout_01: Add hozzá ezt a blokkot a programodhoz!
       Dance_Party_02:
@@ -221,3 +227,5 @@ hu-HU:
       frozen square snowflake:
         replace_questions: Használd a legördülő menüt hogy helyettesítsd a "???" egy
           számmal
+      Dance_Party_11_5:
+        dance_party_11_5_groups: Itt keresd az "Összes kacsa" blokkokat

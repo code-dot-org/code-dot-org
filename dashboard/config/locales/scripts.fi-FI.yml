@@ -1564,6 +1564,9 @@ fi:
             Artist:
               name: Taiteilija
         dance:
+          stages:
+            Dance Party:
+              name: Tanssibileet
           description_short: Mukana Katy Perry, Madonna, J.Balvinin, Sia, Keith Urban,
             Ciara ja 25 muuta!
           description: Koodaa oma Dance Party, jonka voit jakaa ystäviesi kanssa!
@@ -1578,8 +1581,15 @@ fi:
           title: 'Minecraft: Merellinen matka'
           description_short: Minecraft on palannut takaisin Hour of Code -tunnille
             täysin uudella toiminnolla!
+        dance--draft:
+          stages:
+            Dance Party:
+              name: Tanssibileet
+        dance-draft:
+          stages:
+            Dance Party:
+              name: Tanssibileet
         dance-extras:
-          title: Jatka tanssimista
           description: Syvennä ensimmäisen oppitunnin osaamistasi laajennetuilla projekti-ideoilla.
         coursef-2019:
           stages:
@@ -1597,6 +1607,10 @@ fi:
               name: Internetti
             Crowdsourcing:
               name: Joukkoistaminen
+        dance-low:
+          stages:
+            Dance Party:
+              name: Tanssibileet
         coursed-2019:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -1611,6 +1625,8 @@ fi:
               name: Binäärikuvat
             Artist Binary:
               name: 'Taiteilija: binääri'
+            Dance Party:
+              name: Tanssibileet
         coursee-2019:
           stages:
             Building a Foundation:
@@ -1647,6 +1663,8 @@ fi:
               name: Internet
             Crowdsourcing:
               name: Joukkoistaminen
+            Dance Party:
+              name: Tanssibileet
         andrea-test:
           stages:
             'null':
@@ -1757,8 +1775,11 @@ fi:
             Nested Loops:
               name: Sisäkkäiset silmukat
         dance-2019:
+          stages:
+            Dance Party:
+              name: Tanssibileet
           description: Koodaa oma Dance Party, jonka voit jakaa ystäviesi kanssa!
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Computer Science Fundamentals:
               name: Tietojenkäsittelyn Perusteet
@@ -1775,5 +1796,14 @@ fi:
             For Loops:
               name: Silmukat
         dance-extras-2019:
-          title: Jatka tanssimista
           description: Syvennä ensimmäisen oppitunnin osaamistasi laajennetuilla projekti-ideoilla.
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Ehtolausekkeet
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Joukkoistaminen
+            Conditionals with Cards:
+              name: Ehtolauseet pelikorteilla

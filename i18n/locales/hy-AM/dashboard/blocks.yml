@@ -118,6 +118,7 @@ hy:
             '19': '19'
             '20': '20'
           LAYOUT:
+            '"diamond"': ադամանդ
             '"random"': կամայական
       Dancelab_randomColor:
         text: կամայական գույն
@@ -177,6 +178,11 @@ hy:
           PROPERTY:
             '"scale"': չափ
             '"height"': բարձրություն
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': ադամանդ
+            '"x"': x
       Dancelab_whenKey:
         options:
           KEY:

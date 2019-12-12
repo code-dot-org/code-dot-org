@@ -60,6 +60,7 @@ el:
   join_section:
     code:
       placeholder: "Τμήμα κώδικα (ABCDEF)"
+      submit: 'Συμμετοχή'
   add_hint_form:
     placeholder: 'Παρακαλούμε εισάγετε την υπόδειξή σας εδώ'
     submit: 'Προσθέστε υπόδειξη'
@@ -244,9 +245,26 @@ el:
       sign_in_to_save: 'Συνδέσου για να αποθηκεύσεις την πρόοδό σου'
       course_catalog: "Κατάλογος Μαθημάτων"
       project_gallery: "Έργα"
+      sections: "Ενότητες"
       help_support: "Βοήθεια και υποστήριξη"
       report_bug: "Αναφορά σφάλματος"
+      teacher_community: "Κοινότητα δασκάλων"
+      documentation: "Τεκμηρίωση"
+      tutorials: "Οδηγοί εκμάθησης"
+      educate_elementary: "Δημοτικό σχολείο"
+      educate_middle: "Γυμνάσιο"
+      educate_high: "Λύκειο"
       educate_hoc: "Η Ώρα του Κώδικα"
+      educate_beyond: "Πέρα από το Code.org"
+      about_us: "Σχετικά με εμάς"
+      about_donors: "Δωρητές"
+      about_partners: "Συνεργάτες"
+      about_evaluation: "Αξιολογήσεις"
+      about_jobs: "Θέσεις εργασίας"
+      about_contact: "Επικοινωνία"
+      about_faqs: "Συχνές ερωτήσεις"
+      learn: "Εκμάθηση"
+      teach: "Διδασκαλία"
       about: "Σχετικά"
     user:
       classroom: 'Αρχική Σελίδα Εκπαιδευτή'
@@ -276,6 +294,7 @@ el:
       minecraft_adventurer: 'Ζήστε μια περιπέτεια στο Minecraft'
       minecraft_designer: 'Minecraft'
       playlab: 'Εργαστήριο Παιχνιδιού'
+      scratch: 'Scratch'
       sports: 'Αθλητισμός'
       spritelab: 'Sprite Lab'
       starwars: 'Star Wars'
@@ -315,6 +334,7 @@ el:
       example: 'Παράδειγμα λύσης'
       example_with_number: 'Παράδειγμα λύσης %{solution_number}'
       submitted_on: 'Υποβλήθηκε στις %{date}'
+      last_updated: 'Τελευταία ενημέρωση:'
       unsubmit: 'Ανακλήθηκε'
       worked_with: 'Συνεργάστηκε με'
       update_lock_settings: 'Ενημέρωση ρυθμίσεων κλειδώματος.'
@@ -422,6 +442,8 @@ el:
     notes_coming_soon: 'Σημειώσεις για αυτό το βίντεο έρχονται σύντομα.'
     autoplay_option: 'Αυτόματη αναπαραγωγή βίντεο'
     download: 'Κατεβάστε το βίντεο'
+    show_notes: 'Εμφάνιση σημειώσεων'
+    show_video: 'Εμφάνιση βίντεο'
   compatibility:
     upgrade:
       link: "Μάθετε περισσότερα"
@@ -465,6 +487,8 @@ el:
       cta: 'Μάθε πώς'
     dance:
       title: 'Πάρτι Χορού'
+    dance-2019:
+      title: 'Πάρτι Χορού'
     hoc:
       title: 'Κλασικός λαβύρινθος'
       body: 'Δοκιμάστε τα βασικά της επιστήμης των υπολογιστών. Εκατομμύρια τα  έχουν ήδη δοκιμάσει.'
@@ -490,6 +514,7 @@ el:
       title: "Απλή Κρυπτογράφηση"
       body: "Οι μαθητές θα μάθουν τεχνικές για να δημιουργήσουν και να σπάσουν κρυπτογραφημένα μηνύματα."
     weblab:
+      title: "Web Lab (beta)"
       body: "Το Web Lab (Εργαστήριο Ιστού) είναι ένα προγραμματιστικό περιβάλλον όπου μπορείτε να κάνετε απλές ιστοσελίδες χρησιμοποιώντας HTML και CSS. Σχεδιάστε τις ιστοσελίδες σας και κοινοποιήστε τον δικτυακό τόπο σας σε δευτερόλεπτα."
       audience: "Ηλικίες 13+"
       cta: "Μάθε πώς"
@@ -526,6 +551,7 @@ el:
       title: "Συνθήκες"
       body: "Μάθετε για αλγόριθμους και εντολές επιλογής σε αυτή την «χωρίς υπολογιστή» δραστηριότητα χρησιμοποιώντας μια τράπουλα."
     widgets:
+      audience: "Ηλικίες 14+"
       cta: "Μάθε πώς"
   gallery:
     students_drew_these_with_code: "Οι μαθητές τα σχεδίασαν αυτά με κώδικα!"
@@ -546,6 +572,8 @@ el:
     support_url: "//support.code.org"
     help_resources: "Βοήθεια και πόροι"
     help_support: "Βοήθεια και υποστήριξη"
+    documentation: "Τεκμηρίωση"
+    tutorials: "Οδηγοί εκμάθησης"
   multi:
     wrong_title: "Λανθασμένη απάντηση"
     wrong_body: "Η απάντηση που πληκτρολογήσατε δεν είναι σωστή.  Παρακαλώ προσπαθήστε ξανά!"
@@ -606,6 +634,8 @@ el:
   terms_interstitial:
     tos: "Όροι"
     privacy: "Πολιτική Απορρήτου"
+    privacy_notice: "Σημείωση απορρήτου"
+    accept: "Αποδοχή"
     print: "Εκτύπωσε"
   school_info_interstitial:
     save: "Αποθήκευση"
@@ -635,8 +665,11 @@ el:
     new: "Δημιουργία Νέου"
     exit: "Επιστροφή στο Μάθημα"
     project_gallery: "Έργα"
+    publish: "Δημοσίευση"
+    unpublish: "Αναίρεση δημοσίευσης"
     share_title: Μοιράσου το έργο σου
     share_copy_link: "Αντιγραφή του συνδέσμου:"
+    embed: "Ενσωματωμένο"
     name: "Όνομα"
     updated: "Ενημερωμένο"
     project_type: "Τύπος Έργου"
@@ -680,14 +713,47 @@ el:
     csf_variables: 'Μεταβλητές'
     csf_for_loops: 'Βρόχοι Για'
     csf_internet: 'Διαδίκτυο'
+    csf_warmup: 'Ζέσταμα'
+    cspSurvey: 'Έρευνα'
     csp_variables: 'Μεταβλητές'
     csp_conditionals: 'Συνθήκες'
     csp_functions: 'Συναρτήσεις'
+    csp_project: 'Έργο'
     csp_lists: 'Λίστες'
     csp_loops: 'Βρόχοι'
+    csp_libraries: 'Βιβλιοθήκες'
+  external_links:
+    disclaimer: Αποποίηση ευθυνών
+  hoc_download:
+    capsule_title: 'Έχετε Internet;'
+    instructions_headline: 'Χωρίς Internet;'
+    minecraft_name: 'Minecraft Ώρα του Κώδικα'
+    download_message: 'Λήψη του %{app_name} για χρήση εκτός σύνδεσης (136MB)'
+    download_in_Albanian: 'Λήψη στα Αλβανικά:'
+    download_in_Arabic: 'Λήψη στα Αραβικά:'
+    download_in_Czech: 'Λήψη στα Τσέχικα:'
+    download_in_Danish: 'Λήψη στα Δανικά:'
+    download_in_Dutch: 'Λήψη στα Ολλανδικά:'
+    download_in_English: 'Λήψη στα Αγγλικά:'
+    download_in_Finnish: 'Λήψη στα Φινλανδικά:'
+    download_in_French: 'Λήψη στα Γαλλικά:'
+    download_in_German: 'Λήψη στα Γερμανικά:'
+    download_in_Greek: 'Λήψη στα Ελληνικά:'
+    download_in_Hebrew: 'Λήψη στα Εβραϊκά:'
+    download_in_Hungarian: 'Λήψη στα Ουγγρικά:'
+    download_in_Icelandic: 'Λήψη στα Ισλανδικά:'
+    download_in_Irish: 'Λήψη στα Ιρλανδικά:'
+    download_in_Italian: 'Λήψη στα Ιταλικά:'
+    download_in_Japanese: 'Λήψη στα Ιαπωνικά:'
+    download_in_Korean: 'Λήψη στα Κορεατικά:'
+    download_in_Spanish: 'Λήψη στα Ισπανικά:'
+    windows: 'Windows (64-bit)'
+    mac: 'Mac OS X'
   view_teacher_guide: 'Προβολή Οδηγού Εκπαιδευτικού'
   pd:
     form_labels:
+      first_name: 'Όνομα'
+      last_name: 'Επώνυμο'
       email: 'Ηλεκτρονικό ταχυδρομείο'
       school_name: 'Όνομα σχολείου'
       school_country: 'Χώρα σχολείου'
@@ -696,22 +762,62 @@ el:
         male: 'Αγόρι'
         female: 'Κορίτσι'
         none: 'Προτιμώ να μην απαντήσω'
+      school_country:
+        canada: 'Καναδάς'
+        chile: 'Χιλή'
+        israel: 'Ισραήλ'
+        malaysia: 'Μαλαισία'
+        mexico: 'Μεξικό'
+        thailand: 'Ταϊλάνδη'
+      ages:
+        ages_under_6: '< 6 ετών'
+        ages_7_8: '7-8 ετών'
+        ages_9_10: '9-10 ετών'
+        ages_11_12: '11-12 ετών'
+        ages_13_14: '13-14 ετών'
+        ages_15_16: '15-16 ετών'
+        ages_17_18: '17-18 ετών'
+        ages_19_over: '19+ ετών'
       subjects:
         cs: 'Επιστήμη των Υπολογιστών'
+        ict: 'Τεχνολογία πληροφοριών και επικοινωνίας'
         math: 'Μαθηματικά'
         science: 'Επιστήμη'
+        history: 'Ιστορία/Κοινωνικές επιστήμες'
         la: 'Τέχνη Γλωσσών'
+        efl: 'Αγγλικά ως ξένη γλώσσα'
+        music: 'Μουσική'
+        art: 'Τέχνη'
+        other: "Άλλο:"
       resources:
+        bootstrap: 'Bootstrap'
+        codecademy: 'CodeCademy'
+        csfirst: 'Google CS First'
+        khan: 'Khan Academy'
         kodable: 'Kodable'
         lightbot: 'Lightbot'
+        scratch: 'Scratch'
+        tynker: 'Tynker'
+        other: "Άλλο:"
       robotics:
+        grok: 'Grok Learning'
         kodable: 'Kodable'
+        lego: 'LEGO Education'
+        microbit: 'Microbit'
+        ozobot: 'Ozobot'
+        sphero: 'Sphero'
+        raspberry: 'Raspberry Pi'
+        wonder: 'Wonder Workshop'
+        other: "Άλλο:"
       workshop_course:
         csp: 'Βασικές Αρχές της Επιστήμης των Υπολογιστών '' 16-''17'
       email_opt_in:
         opt_in_yes: 'Ναι'
         opt_in_no: 'Όχι'
+  courses_category: 'Πλήρη μαθήματα'
   cookie_banner:
     accept: 'Συμφωνώ'
   gdpr_dialog:
+    privacy_policy: 'πολιτική απορρήτου'
+    logout: 'Αποσύνδεση'
     yes: 'Ναι'

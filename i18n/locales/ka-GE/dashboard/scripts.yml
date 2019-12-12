@@ -5475,6 +5475,8 @@ ka:
               name: კომპიუტერული მეცნიერების საფუძვლების წინარეგამოკითხვა
             Binary Numbers:
               name: ორობითი რიცხვები
+            Representing Information:
+              name: ინფორმაციის წარმოდგენა
         csd-videos:
           stages:
             new stage:
@@ -5686,7 +5688,7 @@ ka:
           stages:
             Dance Party:
               name: ცეკვა
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Getting Started:
               name: დაწყება
@@ -5718,3 +5720,37 @@ ka:
           stages:
             new stage:
               name: ახალი დონე
+        csp4-preview:
+          stages:
+            new stage:
+              name: ახალი დონე
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: პირობითი ბრძანებები
+            'Events: The Big Event':
+              name: 'მოვლენები: დიდი მოვლენა'
+            Private and Personal Information:
+              name: კონფიდენციალური და პირადი ინფორმაცია
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: ქრაუდსორსინგი
+            Conditionals with Cards:
+              name: პირობები ბარათებით
+            Nested Loops in Bee:
+              name: ჩადგმული ციკლები ფუტკარში
+            Nested Loops in Artist:
+              name: ჩადგმული ციკლები მხატვარში
+            'Functions: Songwriting':
+              name: 'ფუნქციები: სიმღერების დაწერა'
+            Functions in Artist:
+              name: ფუნქციები მხატვარში
+        time4cs-experiment-unit-2:
+          stages:
+            Nested Loops in Maze:
+              name: ჩადგმული ციკლები ლაბირინთში
+            Fancy Shapes using Nested Loops:
+              name: რთული ფიგურები ჩადგმული ციკლების მეშევეობით
+            Functions with Artist:
+              name: ფუნქციები მხატვარში

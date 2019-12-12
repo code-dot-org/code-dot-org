@@ -517,10 +517,7 @@ sk-SK:
       Dance Party Freeplay_2019: A teraz si vytvorte vlastnú mimozemšťanskú diskotéku!
       Dance Party Predict: 'Čo si myslíte, že sa stane, keď kliknete na mimozemšťana?  '
       Dance Party Predict_2019: 'Čo si myslíte, že sa stane, keď kliknete na mimozemšťana?  '
-      Dance_2019_01: Pretiahni blok `vytvor` na pracovnú plochu a napoj ho do vnútra
-        bloku `nastavenie`.
       Dance_2019_05: Teraz donúť tanečníka začať nový krok po 6 taktoch!
-      Dance_2019_08: Použi blok `nastav sfarbenie` na zmenu farby tanečníka.
       Dance_2019_10: Roztoč to na parkete! Vytvor svoj vlastný tanec, ktorý môžeš
         zdieľať s kamarátmi.
       Dance_Party_01: Pretiahni blok `vytvor` na pracovnú plochu a napoj ho do vnútra
@@ -824,6 +821,11 @@ sk-SK:
       course1_maze_seq_challenge1: '"Nájdi cestu a priveď ma k tomu nezbednému prasiatku.
         Vyhni sa TNT, lebo bude lietať perie!"'
       course2_collector_loops_challenge2: Pozbieraj všetky drahokamy!
+      course2_harvester_loops_challenge1: Pozbieraj všetku kukuricu.
+      course2_harvester_loops_challenge2: Pozbieraj všetok šalát. Vyhni sa stromom
+        a poliam!
+      course2_maze_loops_challenge1: 'Scrat chce teraz vyskúšať slučky, aby našiel
+        žaluď! '
       course2_maze_programming_challenge2: Niekedy existuje viac spôsobov ako vyriešiť
         jeden problém. Niekedy je rýchlešie ísť dozadu ako ísť dopredu!
       course4_artist_fwp_challenge1: Skús spustiť tento program a spraviť v ňom zmeny
@@ -1423,6 +1425,12 @@ sk-SK:
       courseC_collector_prog9: _"Pozbierajme všetky drahokamy!"_
       courseC_collector_prog9_2018: _"Pozbierajme všetky drahokamy!"_
       courseC_collector_prog9_2019: _"Pozbierajme všetky drahokamy!"_
+      courseC_collector_prog_challenge1: Pozri sa pozorne! Vieš pozbierať všetkých
+        **10** drahokamov?
+      courseC_collector_prog_challenge1_2018: Pozri sa pozorne! Vieš pozbierať všetkých
+        **10** drahokamov?
+      courseC_collector_prog_challenge1_2019: Pozri sa pozorne! Vieš pozbierať všetkých
+        **10** drahokamov?
       courseC_collector_prog_challenge2: Pozbieraj aspoň **10** drahokamov, aby si
         dokončil túto výzvu!
       courseC_collector_prog_challenge2_2018: Pozbieraj aspoň **10** drahokamov, aby
@@ -1524,6 +1532,15 @@ sk-SK:
       courseC_harvester_loops9: Pozbieraj všetky kukurice a tekvice.
       courseC_harvester_loops9_2018: Pozbieraj všetky kukurice a tekvice.
       courseC_harvester_loops9_2019: Pozbieraj všetky kukurice a tekvice.
+      courseC_harvester_loops_challenge1a: Pozbieraj všetku kukuricu.
+      courseC_harvester_loops_challenge1a_2018: Pozbieraj všetku kukuricu.
+      courseC_harvester_loops_challenge1a_2019: Pozbieraj všetku kukuricu.
+      courseC_harvester_loops_challenge2: Pozbieraj všetok šalát. Vyhni sa stromom
+        a poliam!
+      courseC_harvester_loops_challenge2_2018: Pozbieraj všetok šalát. Vyhni sa stromom
+        a poliam!
+      courseC_harvester_loops_challenge2_2019: Pozbieraj všetok šalát. Vyhni sa stromom
+        a poliam!
       courseC_maze_debugging1: Uprav kód tak, aby sa Scrat dostal k žaluďu.
       courseC_maze_debugging1_2018: Uprav kód tak, aby sa Scrat dostal k žaluďu.
       courseC_maze_debugging1_2019: Uprav kód tak, aby sa Scrat dostal k žaluďu.
@@ -1572,6 +1589,12 @@ sk-SK:
         že použiješ iba 4 príkazy `otoč sa`.
       courseC_maze_debugging_challenge2_2019: Pomôž Scratovi dostať sa k žaluďu tak,
         že použiješ iba 4 príkazy `otoč sa`.
+      courseC_maze_loops_challenge1a: 'Scrat chce teraz vyskúšať slučky, aby našiel
+        žaluď! '
+      courseC_maze_loops_challenge1a_2018: 'Scrat chce teraz vyskúšať slučky, aby
+        našiel žaluď! '
+      courseC_maze_loops_challenge1a_2019: 'Scrat chce teraz vyskúšať slučky, aby
+        našiel žaluď! '
       courseC_maze_programming1: V tejto úlohe pospájaj všetky bloky, klikni na tlačítko
         "Spustiť" a sleduj, čo sa stane!
       courseC_maze_programming1_2018: V tejto úlohe pospájaj všetky bloky, klikni

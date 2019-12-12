@@ -610,7 +610,7 @@
   dashboard_course_csins_desc: "Code.org ha collaborato con Project GUTS per fornire un'introduzione ai concetti di informatica all'interno di contesti di modellazione e simulazione."
   dashboard_course_ecs: "Esplorando l'Informatica"
   dashboard_course_ecs_desc: 'Esplorare l''Informatica in un corso annuale costituito da 6 unità. Interazione Uomo-Computer, Risoluzione Problemi, Web Design, Programmazione, Elaborazione ed Analisi dei Dati e Robotica.'
-  dashboard_course_csp: "Principi di informatica ® AP"
+  dashboard_course_csp: "Principi di informatica"
   dashboard_course_csp_desc: "I corsi di Code.org sono stati progettati in modo rigoroso, coinvolgente e approcciabile in modo da esplorare le idee alla base dei fondamenti dell'informatica."
   dashboard_landing_loading: "Sto caricando..."
   dashboard_action_cancel: "Annulla"
@@ -752,9 +752,9 @@
   dashboard_teacher_worksheet: "teacher worksheet"
   dashboard_curriculum_csina: 'Informatica in Algebra:'
   dashboard_curriculum_csins: 'Informatica nelle Scienze:'
-  dashboard_curriculum_csp: 'Principi di informatica ® AP:'
+  dashboard_curriculum_csp: 'Principi di informatica:'
   dashboard_curriculum_ecs: 'Esplorando l''Informatica:'
-  dashboard_curriculum_csd: 'Alla Scoperta dell''Informatica (scuole medie - in inglese): '
+  dashboard_curriculum_csd: 'Alla scoperta dell''informatica: '
   dashboard_grade_k: "livello"
   dashboard_grade_other: "Altro"
   dashboard_login_word: "Parola"
@@ -1460,10 +1460,11 @@
   account_sign_up_child_accept_terms: "Confermo che i miei genitori o chi ne fa le veci mi hanno dato il permesso di utilizzare i servizi di Code.org."
   hoc_overview_dance_title: "Ballando col codice"
   hoc_overview_dance_subtitle: "Crea un progetto in \"Ballando col codice\" da condividere con i tuoi amici. Con Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara e altri 25!"
+  hoc_overview_dance_2019_subtitle: "Divertiti con i tuoi amici \"Ballando col codice\" con Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj e molti altri!"
   hoc_overview_title: "Attività dell'Ora del Codice di Code.org"
   hoc_overview_subtitle: "L'<a href=\"https://hourofcode.com\">Ora del Codice</a> è un movimento globale che coinvolge decine di milioni di studenti in più di 180 nazioni. Chiunque, in ogni parte del mondo, può organizzare un'Ora del Codice o provare una delle oltre 200 esercitazioni di un'ora, disponibili in oltre 45 lingue diverse."
   hoc_overview_partner_activities_title: "Altre attività dei nostri partner"
-  hoc_overview_partner_activities_body: "Nel sito dell'Ora del Codice puoi trovare più di 100 esercitazioni per tutte le età e livelli di esperienza, sviluppate da Code.org e partner."
+  hoc_overview_partner_activities_body: "Il sito Web “The Hour of Code” offre più di 100 attività legate all’informatica adatte a tutte le età e a tutti livelli di esperienza, sviluppate da Code.org e dai suoi partner."
   hoc_overview_partner_activities_link: "Visualizza tutte le attività"
   hoc_overview_start_tutorial: "Inizia"
   hoc_overview_view_teacher_guide: "Guida per l'insegnante (in inglese)"

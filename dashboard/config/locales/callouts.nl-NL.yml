@@ -131,16 +131,24 @@ nl-NL:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Nieuw blok!
         dance_callout_11_b: Nieuw blok!
+      CourseD_Dance_Party_11_5:
+        dance_party_11_5_groups: Kijk hier voor blokken "alle eenden"
       Dance_2019_01:
         dance_callout_01: Voeg dit blok toe aan je programma!
+      Dance_2019_02:
+        dance_callout_11_a: Voeg dit blok toe aan je programma.
+        arrow_buttons: Druk op de pijltjestoetsen om je danser te besturen.
       Dance_2019_04:
         dance_callout_02: Voeg dit blok toe aan je programma!
+      Dance_2019_05:
+        dance_callout_05: Voeg een nieuw evenement toe aan je programma.
       Dance_2019_06:
         dance_party_11_5_groups: Nieuw blok!
       Dance_2019_07:
         setprop_hint: Nieuw blok!
       Dance_2019_09:
-        new_block_1: Nieuw blok!
+        new_block_3: Nieuw blok!
+        new_block_4: Nieuw blok!
       Dance_Party_01:
         dance_callout_01: Voeg dit blok toe aan je programma!
       Dance_Party_02:
@@ -152,6 +160,8 @@ nl-NL:
       Dance_Party_11:
         dance_callout_11_a: Nieuw blok!
         dance_callout_11_b: Nieuw blok!
+      Dance_Party_11_5:
+        dance_party_11_5_groups: Kijk hier voor blokken "alle eenden"
       Function intro Ryan:
         Function_intro_Ryan_1: Met deze kleine instructie weet de computer dat het
           GROTE stuk code met dezelfde naam in de werkruimte moet worden uitgevoerd.

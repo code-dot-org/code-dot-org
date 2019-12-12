@@ -598,6 +598,8 @@ is:
       cta: 'Læra hvernig'
     dance:
       title: 'Danspartý'
+    dance-2019:
+      title: 'Danspartý'
     hoc:
       title: 'Völundarhús'
       body: 'Prófaðu undirstöðuatriði tölvunarfræði. Miljónir hafa gert það.'

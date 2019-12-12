@@ -9,6 +9,11 @@ zh-TW:
       pair_programmer: 目前和你進行小組編程活動的人從來沒有接觸過這些內容。若要存取這個內容，你必須停止小組編程並再試一次。
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: 是無效的。請注意，每個鏈接只允許使用一次來重置密碼，並且只有最近發送的鏈接才能使用。
       messages:
         blank: 必填
         blank_plural: 必填
@@ -33,6 +38,8 @@ zh-TW:
         finish_sign_up_header: 已成功創建你的帳戶
         finish_sign_up_subheader: 填妥下面的資料以完成 <strong>%{email}</strong> 的帳戶申請。
         finish_sign_up_subheader_markdown: 填妥下面的資料以完成 **%{email}** 的帳戶申請。
+        finish_sign_up_subheader_provider: 填寫以下資料以使用 <strong>%{provider}</strong>為<strong>%{email}</strong>開設一個Code.org帳號。
+        finish_sign_up_subheader_provider_markdown: 填寫以下資料，以 **%{provider}**的名義為 **%{email}**完成設立一個Code.org帳戶。
         error:
           future: 不能選擇將來的時間
   beta: 測試版
@@ -53,6 +60,7 @@ zh-TW:
     code:
       placeholder: 學習小組代碼 (ABCDEF)
       instructions_short: 輸入您的學習小組代碼（6字元）
+      submit: 加入
   add_hint_form:
     placeholder: 請在此處輸入您的提示
     submit: 添加提示
@@ -81,6 +89,8 @@ zh-TW:
     continue_with: 用 %{provider} 登入
     sign_in_with: 用 %{provider} 登入
     signed_in: 已成功登入！
+    signed_out_markdown: "###你已登出[Code.org](%{url})."
+    sign_out_of_markdown: "#### 你使用 %{provider} 登錄。[單擊此處](%{url}) 登出 %{provider}."
     already_signedup: 已經註冊了？
     notyet_signedup: 還沒加入？
     google_oauth2: Google 帳戶
@@ -100,7 +110,12 @@ zh-TW:
     unable_to_connect_provider: 無法將你的 Code.org 帳戶連接到 %{provider} ，麻煩再試一次。
     already_in_use: 你的 %{provider} 已與 Code.org 的另一個帳戶綁定。
     already_linked: 你的 %{provider} 已與 Code.org 的另一個帳戶綁定。
+    existing_account:
+      account_exists: 好消息！你已有一個使用%{email}開設的Code.org帳戶
+      sign_in: 請登錄，我們將鏈接你的%{provider}個人資料。
+      sign_up: 不是你的電子郵件？是否希望用其他電子郵件設立一個新帳戶？如果選擇設立新帳戶，我們還將鏈接你的 %{provider} 個人資料。
   signup_form:
+    email_signup: 用你的電郵註冊
     student_count: "%{count} 名學生已經註冊。"
     teacher_count: "%{count} 名教師已經註冊。"
     overview: 註冊一個帳號來追蹤你的進度或管理你的班級。<a href="/">你可以瀏覽不同的階段與關卡</a>而不用註冊，但需要註冊帳號來儲存你的專案與進度。
@@ -123,6 +138,7 @@ zh-TW:
     age: 年齡
     user_type: 你是學生還是教師？
     submit: 註冊
+    go_to_account: 前往我的帳號
     teacher: 你是一名教師？
     valid_username: 可以使用！
     invalid_username: 用戶名稱至少需 5 字元
@@ -314,6 +330,7 @@ zh-TW:
       district_dashboard: 分區控制台
       label: 嗨，%{username}
       stats: Code Studio
+      my_projects: 我的專案
       settings: 帳戶設定
       logout: 登出
       signin: 登入
@@ -327,6 +344,7 @@ zh-TW:
       algebra_game: 代數
       applab: App Lab
       artist: 藝術家
+      artist_k1: 小藝術家（學齡前學生）
       basketball: 籃球
       bounce: 彈跳
       calc: 計算
@@ -341,6 +359,7 @@ zh-TW:
       infinity: 無限
       minecraft_adventurer: Minecraft 探險家
       minecraft_aquatic: Minecraft 水世界
+      minecraft_codebuilder: 'Minecraft: 代碼連接'
       minecraft_designer: Minecraft
       minecraft_hero: Minecraft 英雄們
       playlab: Play Lab
@@ -385,6 +404,7 @@ zh-TW:
       example: 解答範例
       example_with_number: 解答範例 %{solution_number}
       submitted_on: 提交時間：
+      last_updated: '最近一次更新:'
       unsubmit: 取消提交
       worked_with: 工作伙伴
       update_lock_settings: 在此更新上鎖相關設定。
@@ -463,6 +483,10 @@ zh-TW:
     test_videos_help: 在你的學校測試我們新的影片播放器
     try_beta_courses: 新課程！試試我們為 K-5 學生設計的課程（測試版）。
     use_as_teacher: 以教師身份使用此站
+    heading_elementary_markdown: |-
+      ## 20小時課程
+
+      # 電腦科學基礎知識（所有年齡段）
     your_gallery: 藝廊
     no_primary_course: 體驗 Code Studio 的課程
     choose_next_course: 從下方的 Code Studio 課程中選一個體驗
@@ -589,6 +613,8 @@ zh-TW:
       audience: 年齡 13+
       cta: 學習如何做
     dance:
+      title: 舞蹈派對
+    dance-2019:
       title: 舞蹈派對
     hoc:
       title: 經典迷宮
@@ -1061,3 +1087,5 @@ zh-TW:
     true: 是
   page_not_found_title: 找不到頁面
   page_not_found_header: " 404：找不到頁面"
+  page_not_found_description: 你要查找的頁面在該地址不存在。檢查網址並重新提交。或者，返回我們的主頁。
+  page_not_found_button: 返回主頁

@@ -118,6 +118,7 @@ hr:
             '19': '19'
             '20': '20'
           LAYOUT:
+            '"diamond"': dijamant
             '"random"': slučajno odabran
       Dancelab_randomColor:
         text: nasumično odabrana boja
@@ -177,6 +178,11 @@ hr:
           PROPERTY:
             '"scale"': veličina
             '"height"': visina
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': dijamant
+            '"x"': x
       Dancelab_whenKey:
         options:
           KEY:

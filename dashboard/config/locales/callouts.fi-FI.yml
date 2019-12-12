@@ -81,16 +81,24 @@ fi-FI:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Uusi blokki!
         dance_callout_11_b: Uusi blokki!
+      CourseD_Dance_Party_11_5:
+        dance_party_11_5_groups: Etsi täältä kaikki ankat -lohkoa
       Dance_2019_01:
         dance_callout_01: Lisää tämä blokki ohjelmaasi!
+      Dance_2019_02:
+        dance_callout_11_a: Lisää tämä blokki ohjelmaasi.
+        arrow_buttons: Paina nuolinäppäimiä, jotta voit hallita tanssijaasi.
       Dance_2019_04:
         dance_callout_02: Lisää tämä blokki ohjelmaasi!
+      Dance_2019_05:
+        dance_callout_05: Lisää uusi tapahtuma ohjelmaan.
       Dance_2019_06:
         dance_party_11_5_groups: Uusi blokki!
       Dance_2019_07:
         setprop_hint: Uusi blokki!
       Dance_2019_09:
-        new_block_1: Uusi blokki!
+        new_block_3: Uusi blokki!
+        new_block_4: Uusi blokki!
       Dance_Party_01:
         dance_callout_01: Lisää tämä blokki ohjelmaasi!
       Dance_Party_02:
@@ -102,6 +110,8 @@ fi-FI:
       Dance_Party_11:
         dance_callout_11_a: Uusi blokki!
         dance_callout_11_b: Uusi blokki!
+      Dance_Party_11_5:
+        dance_party_11_5_groups: Etsi täältä kaikki ankat -lohkoa
       Function intro Ryan:
         Function_intro_Ryan_1: Tämä pieni ohje saa tietokoneen suorittamaan ISON möhkäleen
           samannimistä koodia työtilassa.

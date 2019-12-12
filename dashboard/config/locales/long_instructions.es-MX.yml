@@ -8491,15 +8491,6 @@ es-MX:
 
         -   Observa la instrucción `si` dentro del bucle dibujar que comprueba si se ha presionado la barra espaciadora. ( [Muéstrame dónde](#triggercallout=code_triggered1) )
         -   Usa el bloque `velocidadRotación` para que la rueda de colores comience a girar si el usuario presiona la barra espaciadora.
-      CSD U3 abstraction rotation control_2019: |-
-        # Controlar la velocidad
-
-        Usaste `velocidadRotación` fuera del bucle dibujar para que tu sprite gire cuando inicias tu programa. También puedes usar `velocidadRotación` **dentro** del bucle dibujar para cambiar la velocidad del sprite durante el juego. Por ejemplo, un sprite puede comenzar a girar cuando el usuario presiona la barra espaciadora, y seguirá girando hasta que se le indique que se detenga.
-
-        # Haz esto
-
-        -   Observa la instrucción `si` dentro del bucle dibujar que comprueba si se ha presionado la barra espaciadora. ( [Muéstrame dónde](#triggercallout=code_triggered1) )
-        -   Usa el bloque `velocidadRotación` para que la rueda de colores comience a girar si el usuario presiona la barra espaciadora.
       CSD U3 abstraction rotation_2018: |-
         # velocidadRotación
 
@@ -14906,6 +14897,114 @@ es-MX:
         \n\n-   **Cambia el texto del botón** para que diga \"Presióname\".\n\n-   **Define
         el color del botón** para que sea rojo.\n\n<img src=\"https://images.code.org/4cab6a5233cf07df0d8e312932762012-image-1444314797615.gif\"
         style=\"width: 500px; float: middle\">"
+      CSDU4 - Design Mode - 16: |-
+        # Activa tu botón
+
+        En la última lección, te centraste en diseñar una página de tu aplicación en Modo de diseño. Esta es una forma excelente y rápida de descubrir el lado visual de una aplicación, pero no es muy funcional. Si haces clic en cualquiera de los botones que agregaste, no sucede nada. ¡Ahora estás trabajando para agregar algunas funciones básicas haciendo que los botones de tu aplicación realmente hagan algo!
+
+        \*\* Objetivo:\*\* Agregar código usando el Modo de diseño para que el botón responda a un clic.
+
+        # Hacer esto
+
+        Tu aplicación de inicio tiene dos elementos, una _etiqueta_ con la id `EtiquetaDeTítulo` y un _botón_ con el ID `cambiarBotónDeTítulo`. Para empezar, harás que el botón registre un mensaje en la consola cuando se haga clic.
+
+        -   En Modo de diseño, **haz clic en el botón proporcionado para editar sus propiedades**
+        -   Haz clic en la pestaña **Eventos**
+        -   Inserta un `enEvento` desde el Modo de diseño haciendo clic en **Insertar y mostrar código** debajo de la **Pestaña Eventos**.
+        -   Echa un vistazo al bloque que se agregó a la pestaña **Modo de código**.
+        -   Ejecuta el programa, haz clic en tu botón y **busca la salida en la _Consola de Depuración_** debajo del espacio de trabajo en lugar de la ventana de la aplicación. Discutiremos la _Consola de Depuración_ en el siguiente nivel.
+      CSDU4 - Design Mode - 17: |-
+        # Actualización de ID y depuración con el registro de la consola
+
+        Aquí tenemos un par de botones con controladores de eventos y sentencias de `registro.consola`, ¡pero todos están cambiados!
+
+        Deberíamos haberles dado a los botones mejores nombres de identificación para poder distinguir la diferencia en función de la identificación. **¿Puedes actualizar los nombres de ID y los mensajes `registro.consola` para que coincidan con el botón correcto?**
+
+        # Hacer esto
+
+        -   **Cambia las ID** de los botones en Modo de diseño a nombres más descriptivos.
+
+        -   Cambia al Modo de código y observa que los **desplegables de ID se han actualizado para incluir los nuevos ID**. (Aún debes seleccionar la ID correcta del menú desplegable).
+
+        -   **Actualiza los mensajes `registro.consola`** para que coincidan con los botones.
+      CSDU4 - Design Mode - 18: "# Capas y eliminación\n\n<img src=\"https://images.code.org/9e620f70869de438c4f0c66663686876-image-1444678130772.gif\"
+        style=\"width: 200px; float: right\">Los elementos de la interfaz de usuario
+        pueden superponerse entre sí, por lo que querrás la posibilidad de cambiar
+        el orden o la **profundidad** a la que se representa cada uno.\n\nSi **te
+        desplazas hacia la parte inferior de la pestaña Propiedades**, encontrarás
+        botones que te permiten **eliminar o cambiar fácilmente la profundidad** de
+        un elemento.\n\n-   **Elimina un Elemento** seleccionándolo (haciendo clic
+        en él) en la vista de diseño y luego haciendo clic en **Eliminar** en la pestaña
+        de propiedades.\n-   **Cambia la profundidad** de los elementos usando las
+        flechas dobles o simples.\n    -   Haz clic en la flecha doble para enviar
+        todo al frente o atrás.\n    -   Haz clic en la flecha única para subir o
+        bajar una capa.\n\n# Hacer esto:\n\nUsa las herramientas **eliminar** y **profundidad**
+        para **crear la imagen \"Después\"**\n\n<table>\n<tr>\n\t<th style=\"text-align:center\">Antes</th>\n
+        \   <th style=\"text-align:center\">Después</th>\n</tr>\n<tr>\n\t<td align=center><img
+        src=\"https://images.code.org/023f749ecb58c91869a4eacab6701203-image-1444685187662.png\"
+        style=\"width:200px ; border: solid 1px black\"></td>\n    <td style=\"text-align:center\"><img
+        src=\"https://images.code.org/e45fc7d451c071683fd3b59466b106b0-image-1444684677212.png\"
+        style=\"width:200px; border: solid 1px black\"></td>\n</tr>\n</table>"
+      CSDU4 - Design Mode - 19: "# Segunda pantalla\n\nLa mayoría de las aplicaciones
+        tienen más de una pantalla o página, y cada una tiene diferentes contenidos.
+        Con el Modo de diseño, puedes agregar rápidamente una nueva pantalla a tu
+        aplicación.\n\n# Hacer esto\n\nAgregarás una segunda pantalla a tu aplicación
+        y agregarás un botón a esa pantalla. ¡Asegúrate de estar usando buenas identificaciones!\n\n-
+        \  Arrastra <img src=\"https://images.code.org/4337b39cfd797ed9289b70fb6cb365fb-image-1444353631083.17.39
+        PM.png\" style=\"width: 50px\"> desde Caja de herramientas de diseño a tu
+        aplicación. ¡Ahora tienes dos pantallas!\n-   Usando el Modo de diseño, crea
+        un botón en tu nueva pantalla. <img src=\"https://images.code.org/bbf464e2fc94bacba39407d6842f2336-image-1478300698068.04.35
+        PM.png\" style=\"width: 150px\"> \n-   Establece las ID de tus pantallas y
+        botones en algo que tenga sentido, por ejemplo _\"pantallaDeInicio\"_, _\"pantallaDeDetalles\"_,
+        _\"botónDeInicio\"_ y _\"detailsButton\"_\n\nSiempre puedes usar el menú desplegable
+        de la pantalla en la parte superior de la ventana de la aplicación para cambiar
+        entre tus pantallas <img src=\"https://images.code.org/404e0b3f520a413c8a5e62e74b70bb19-image-1478300388689.58.59
+        PM.png\" style=\"width: 150px\"> "
+      CSDU4 - Design Mode - 20: |-
+        # Cambio de pantallas
+
+        Puedes establecer qué pantalla se muestra en su aplicación con el comando `configurarPantalla()`. Si está trabajando en bloques, puedes seleccionar a qué pantalla deseas cambiar desde un menú desplegable.
+
+        ![](<https://images.code.org/615fae136488e1e6d1349e4383388e08-image-1478303858022.13.25 PM.png>)
+
+        # Hacer esto
+
+        Utilizarás un bloque `enEvento()` con `configurarPantalla()` para hacer que los dos botones de tu aplicación cambien entre las dos pantallas.
+
+        -   Arrastra dos bloques `enEvento()`
+        -   Establece las ID para tus bloques `enEvento()` para cada uno de tus dos botones
+        -   Coloca un bloque `configurarPantalla` dentro de cada uno de los bloques `enEvento`
+        -   Elige la pantalla apropiada del menú desplegable de cada bloque `enEvento`
+        -   Prueba tu aplicación para asegurarte de que tus botones te permitan alternar entre las dos pantallas
+      CSDU4 - Design Mode - 21: |-
+        # Agregar imágenes
+
+        A veces, la funcionalidad que deseas representar en tu prototipo es demasiado complicada para lograrlo solo con los botones y campos predeterminados. Si deseas simular interfaces más avanzadas (como un mapa), la forma más fácil de hacerlo es con una imagen
+
+        # Hacer esto
+
+        -   Encuentra y descarga una imagen de un mapa que te gusta
+        -   Arrastra un elemento de imagen a tu aplicación \[] [0]
+        -   Elige tu imagen ![](<https://images.code.org/e5b9571ae54af60a3ae597b787e741ea-image-1444667688762.34.42 AM.png>)
+            -   **Las URL** se pueden agregar directamente al campo "imagen".
+            -   \*\*Sube imágenes \*\* haciendo clic en "Elegir".
+            -   **Nota:** Siempre puedes ver todos los archivos que has subido haciendo clic en el engranaje en la parte superior de la caja de herramientas. ![](<https://images.code.org/53b405b771bc11bf5d24c84c878c80dd-image-1444668067826.35.10 AM.png>)
+        -   ¡Asegúrate de darle a tu imagen una buena ID!
+      CSDU4 - Design Mode - 3: |-
+        # ¿Cómo funcionan los eventos?
+
+        Las aplicaciones controladas por eventos están formadas por elementos que pueden desencadenar eventos (como botones) y fragmentos de código llamados **controladores de eventos**. Los controladores de eventos son comandos que "observan" que ciertos eventos ocurran en tu programa, y ​​luego ejecutan alguna función cuando ocurre un evento.
+
+        Cuando creas un controlador de eventos por primera vez desde el Modo de diseño, coloca un bloque `registro.consola ()` para ayudarte a probar el evento, pero puedes colocar casi cualquier código que desees dentro del controlador de eventos.
+
+        # Hacer esto
+
+        La caja de herramientas tiene un nuevo bloque llamado `configurarTexto` que te permite cambiar el texto de un elemento en la pantalla. Vas a modificar el controlador de eventos de botón para que cambie el texto del título al hacer clic.
+
+        -   Arrastra un bloque `configurarTexto ()` al _interior_ de la función de devolución de llamada `enEvento ()` (donde está actualmente el bloque `registro.consola ()`)
+        -   En el menú desplegable del bloque, selecciona "EtiquetaDeTítulo" (la identificación del elemento que deseas cambiar)
+        -   En la segunda entrada del bloque, reemplaza "texto" con un nuevo título para la aplicación
+        -   Ejecuta tu programa y haz clic en el botón para verlo funcionar
       CSDU4 - Design Mode - 4: |-
         # ID
 
@@ -14920,6 +15019,21 @@ es-MX:
         -   Cambia el ID de tu botón "presióname" a algo más útil (como `botónRojo`)
         -   Arrastra un segundo botón
         -   Haz que el segundo botón sea azul y asígnale el ID `botónAzul`
+      CSDU4 - Design Mode Icons: |-
+        <img src="https://images.code.org/2b405319f597910b1563ae607958171c-image-1475866226306.49.51.png" style="width: 200px; float:right">
+
+        # Iconos
+
+        Los íconos ayudan a los usuarios a encontrar la funcionalidad correcta y, al mismo tiempo, hacen que su aplicación se sienta más pulida.
+
+        # Hacer esto
+
+        Agrega algunos íconos a tu aplicación. Para cada ícono:
+
+        -   Arrastra un elemento de imagen
+        -   Junto al campo "Imagen", haz clic en "Elegir..."
+        -   Haz clic en la pestaña "Íconos" y selecciona uno
+        -   ¡Asegúrate de darle a tu imagen una buena ID! (¿Aún tenemos que decirlo?)
       CSDU4 Connecting Screens: |-
         # Navegar
 
@@ -15031,6 +15145,20 @@ es-MX:
 
         -   ¿En donde del App Lab puedes diseñar la interfaz de usuario para tu aplicación?
         -   ¿Cuales son algunos tipos de elementos que puedes agregar a tu aplicación?
+      CSDU4 Functionality visible: |-
+        # Control de visibilidad
+
+        Antes de esta lección, cuando estábamos proponiendo formas de simplificar la aplicación de prueba, mencionamos que era posible mostrar u ocultar elementos de diseño con código. Laboratorio de aplicaciones tiene dos funciones que te permiten controlar la visibilidad de un elemento:
+
+        -   `ocultarElemento()` hace invisible el elemento especificado
+        -   `mostrarElemento()` hace visible el elemento especificado
+
+        # Hacer esto
+
+        La aplicación proporcionada tiene una imagen y dos botones.
+
+        -   Adjunta un controlador de eventos al botón "Ocultar" que oculta la imagen al hacer clic
+        -   Adjunta un controlador de eventos al botón "Mostrar" que muestra la imagen al hacer clic
       CSDU4 List App Demo: |-
         # Administrador de listas
 
@@ -15261,6 +15389,69 @@ es-MX:
 
         -   Crea un evento 'up' para el botón izquierdo.
         -   Agrega código para apagar el LED cuando el botón vuelve hacia arriba.
+      CSDU6 - UI and Inputs - dropdown setText: |-
+        # configurarTexto y obtenerTexto
+
+        A menudo, querrás obtener el texto de un elemento de la interfaz de usuario y usarlo para establecer el texto de otro elemento en la pantalla. Puedes obtener el texto del menú desplegable cuando el usuario selecciona una nueva entrada y usarla para establecer el texto de la etiqueta "mostrarElección".
+      CSDU6 - UI and Inputs - get set with text input: |-
+        # configurarTexto y obtenerTexto
+
+        Ya has visto cómo usar obtenerTexto y configurarTexto. ¿Puedes hacer que esta aplicación obtenga el texto que el usuario escribió una vez que presionó enter y lo muestre en el área de texto en la parte inferior?
+
+        _Sugerencia: el evento "cambiar" se activa cuando el usuario hace clic en "enter" en un campo. Use un controlador de eventos para la entrada de texto observando el evento "cambiar"._
+      CSDU6 - UI and Inputs - getNumber: |-
+        # obtenerNúmero
+
+        **Código de inicio:** Este programa crea una calculadora simple, pero **hay algo mal con ella. Intenta poner 2 + 2.**
+
+        Podemos solucionar esto usando `obtenerNúmero()` en lugar de `obtenerTexto()`. ¿Puedes arreglar el programa cambiando `obtenerTexto()` a `obtenerNúmero()`?
+      CSDU6 - UI and Inputs - getNumber practice: |-
+        # obtenerNúmero
+
+        **Código de inicio:** El programa intenta actualizar el mostrarValor cada vez que cambia el valor del control deslizante, pero siempre establece el valor en 10.
+
+        ¿Puede usar `obtenerNúmero()` para obtener el valor del control deslizante y actualizar el valor de la pantalla a medida que cambia?
+      CSDU6 - UI and Inputs - getText: |-
+        # obtenerTexto
+
+        Intenta configurar un controlador de eventos que obtenga el texto del menú desplegable siempre que un usuario seleccione un nuevo elemento del menú desplegable. Necesitarás usar el getter `obtenerTexto()`. Siempre que uses un getter, debes guardarlo en una variable. Usa `registro.consola()` para asegurarte de que funciona.
+      CSDU6 - UI and Inputs - hide show: |-
+        # Ocultar y mostrar
+
+        Es un poco extraño que ambos botones estén en la pantalla al mismo tiempo. No necesitas el botón de detener la alarma hasta que la alarma esté activada. ¿Puedes hacer que los botones solo se muestren cuando sean necesarios?
+
+        -   Querrás que el botón de detener la alarma esté oculto cuando se inicia el programa. Puedes hacer esto en el Modo de diseño.
+
+        Sugerencia: cuando haces clic en el botón de activación de alarma, debes cambiar el texto, ocultar el botón de activación alarma _y_ mostrar el botón de detención de alarma.
+      CSDU6 - UI and Inputs - setProperty: |-
+        # color-de-fondo de configurarPropiedad
+
+        Cambia el `color-de-fondo` de un botón a un nuevo color aleatorio cada vez que se haga clic usando`configurarPropiedad()`.
+      CSDU6 - UI and Inputs - setProperty Image: |-
+        # imagen de configurarPropiedad
+
+        **Nota:** Este nivel comienza en el Modo de diseño.
+
+        Hay un elemento de imagen configurado para ti, pero no se muestra cuando sales del Modo de diseño porque no se le ha dicho qué imagen mostrar.
+
+        -   Utiliza el comando `configurarPropiedad()` para configurar la imagen del elemento Imagen de la interfaz de usuario en la pantalla.
+      CSDU6 - UI and Inputs - setProperty first level: |-
+        # configurarPropiedad
+
+        **Código de inicio:** Hay una llamada a `configurarPropiedad()` que establece el color del texto en azul cuando ejecutas el programa.
+
+        ¿Puedes agregar más llamadas a `configurarPropiedad()` que cambien otras cosas sobre el texto cuando ejecutas el programa? Intenta cambiar al menos 3 cosas más.
+      CSDU6 - UI and Inputs - setScreen: |-
+        # configurarPantalla
+
+        Comencemos con un setter que hayas usado antes de `configurarPantalla()`.
+
+        -   Haz que el botón Acerca de mí en la página de inicio vaya a la página Acerca de mí.
+        -   Haz que el botón Atrás en Acerca de mí vaya a la página de inicio.
+      CSDU6 - UI and Inputs - setText: |-
+        # configurarTexto
+
+        Vamos a comenzar a hacer una aplicación de alarma. Ya hemos configurado un controlador de eventos para el "activarBotónDeAlarma" que cambiará el texto "EtiquetaDeEstatus" a ENCENDIDO cuando se haga clic. ¿Se puede hacer que el botón de detener la alarma cambie el texto a APAGADO al hacer clic?
       CSDU6 - button LED prediction: Ver el nivel contenido para Markdown
       CSDU6 - button LED prediction_2018: Ver el nivel contenido para Markdown
       CSDU6 - button LED prediction_2019: Ver el nivel contenido para Markdown
@@ -16268,10 +16459,57 @@ es-MX:
         ¡Observa cuánto tiempo te lleva descifrar el código! ¿Es un buen método para cifrar datos secretos?
 
         <img src="http://code.org/api/hour/begin_encryption.png">
+      Dance_2019_01: |-
+        Arrastra el bloque <xml><block type="Dancelab_makeAnonymousDanceSprite" block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;, &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml> al espacio de trabajo y conéctalo dentro del bloque <xml><block type="Dancelab_whenSetup2" next_connection_disabled="true" block-text="setup"></block></xml>.
+
+         Elige `gato` o`perezoso` para crear tu primer bailarín.
+
+        -   _También puedes hacer clic en la bombilla de la izquierda si quieres más información o desafíos adicionales._
+      Dance_2019_02: |-
+        El bloque <xml><block type="Dancelab_whenKey" block-text="when up pressed"></block></xml> te permite ejecutar código cuando presionas los botones de flecha.
+        ¡Usa el bloque <xml><block type="Dancelab_doMoveEachLR" block-text="do once"><title name="GROUP">"CAT"</title><title name="MOVE">MOVES.XClapSide</title><title name="DIR">-1</title></block></xml> para hacer que el gato aplauda!
+
+        _¡Asegúrate de presionar la tecla "flecha arriba" o ![](<https://images.code.org/419e704e6841c0b696016bf5029b8cb9-image-1571864825506.06.45 PM.png>) después de hacer clic en el botón Ejecutar!_
+      Dance_2019_03: "¡Es momento para un baile! Programa a cada bailarín para que
+        se mueva cuando presiones diferentes teclas. ¡Elige tu movimiento favorito
+        para cada bailarín o configúralo en `(Aleatorio)` para algo totalmente impredecible!"
+      Dance_2019_04: |-
+        ¡Hagamos que los bailarines se muevan al ritmo de la música!
+
+        Conecta el bloque <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> a un bloque <xml><block type="Dancelab_changeMoveEachLR"><title name="GROUP">"SHARK"</title><title name="MOVE">MOVES.ThisOrThat</title><title name="DIR">-1</title></block></xml> de la caja de herramientas.
+
+        Su bailarín debería comenzar un nuevo movimiento después de la cuarta medida.
+
+        **Las medidas** se usan para contar el tiempo en la música. En este tutorial, una medida tiene cuatro tiempos de duración.
       Dance_2019_05: |-
         _¡Ya estamos entrando en ritmo!_
 
         Añade un bloque <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> a tu espacio de trabajo. Haz que el bailarín empiece a moverse después de 6 compases.
+      Dance_2019_06: |-
+        Usa este nuevo bloque para configurar un grupo de bailarines de respaldo más pequeños alrededor de un bailarín principal en el medio.
+
+         <xml><block type="Dancelab_makeNewDanceSpriteGroup">
+            <title name="N">???</title>
+            <title name="COSTUME" config="&quot;BEAR&quot;, &quot;CAT&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title>
+            <title name="LAYOUT">"circle"</title>
+          </block></xml>
+
+        ¡Ahora puedes crear un grupo de bailarines de respaldo al mismo tiempo!
+      Dance_2019_07: |-
+        Cada bailarín tiene un conjunto de _propiedades_ que controlan su aspecto.
+
+        Usa <xml><block type="Dancelab_setPropEach" block-text="the set block"><title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title><title name="PROPERTY">"scale"</title><title name="VAL">???</title></block></xml> debajo de un bloque de evento verde para hacer que los bailarines aparezcan más cerca o más lejos después de que comience la música.
+      Dance_2019_08: Los bailarines tienen una propiedad de "tinte" que puede agregar
+        una capa de color. ¡Intenta cambiar el tinte de uno de tus bailarines (o de
+        un grupo completo)!
+      Dance_2019_09: |-
+        Este es un tipo especial de evento que se activa una y otra vez.
+
+        <xml><block type="Dancelab_everySeconds"><title name="N">2</title><title name="UNIT">"measures"</title></block></xml>
+
+        Los otros bloques nuevos en tu caja de herramientas te permiten cambiar aleatoriamente las propiedades de los bailarines con el tiempo.
+
+        _¡Sé creativo y diviértete!_
       Dance_2019_10: |-
         ¡Vamos baila! Crea tu propio baile para compartir con tus
         amigos.
@@ -16344,6 +16582,17 @@ es-MX:
       Dance_Party_12: |-
         ¡Vamos baila! Crea tu propio baile para compartir con tus
         amigos.
+      Dance_Party_extras_alternate_2019: |-
+        # ¡Ida y vuelta!
+
+        A veces es posible que desees crear un patrón de movimientos de baile que elijas. Este nuevo bloque te permite hacer exactamente eso.
+
+        <xml><block type="Dancelab_alternateMoves"><title name="GROUP">sprites</title><title name="N">2</title><title name="MOVE1">MOVES.Roll</title><title name="MOVE2">MOVES.ClapHigh</title></block></xml>
+
+        Los movimientos que elijas arriba se repetirán en secuencia para siempre.
+
+        -   ¡Crea una rutina alterna para el bailarín principal al frente!
+        -   Usa diferentes números para cambiar la velocidad a la que se alternan los movimientos. ¡Prueba `1` o `0.5` para alternar más rápidamente!
       Dance_Party_extras_battle: |-
         # Equipos de baile
 
@@ -16370,6 +16619,15 @@ es-MX:
         -   Experimenta con otras duraciones de notas (como 0,5 para una semicorchea o 0,125 para una corchea).
         -   Añade algunos eventos `después del compás`
         -   Cambia "compases" por "segundos" y prueba sincronizar tus bailes de esa manera.
+      Dance_Party_extras_every_beat_2019: |-
+        # Negras
+
+        La mayoría de nuestros bailes utilizaron compases completos, pero cada compás está formado por 4 negras. Este baile usa <xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml> para que el bailarín aplauda en cada negra, pero solamente luego de los primeros cuatro compases.
+
+        Intenta cambiar los números en los bloque para ver cómo cambia el baile.
+
+        -   Experimenta con otras duraciones de notas (como 0,5 para una blanca o 0,125 para una corchea).
+        -   Añade otros eventos.
       Dance_Party_extras_layout: |-
         # ¡Vamos a organizarnos!
 
@@ -16378,6 +16636,21 @@ es-MX:
         -   Crea un segundo grupo de bailarines en una disposición diferente
         -   Cambia la disposición cuando se presiona una tecla
         -   Cambia una propiedad cuando los bailarines cambian la formación
+      Dance_Party_extras_layout_2019: |-
+        # ¡Vamos a organizarnos!
+
+        Echa un vistazo a este baile que utiliza el bloque <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> para cambiar la formación de los bailarines que acompañan. Prueba una de estas ideas para ampliarlo:
+
+        -   Crea un segundo grupo de bailarines en una disposición diferente
+        -   Cambia la disposición cuando se presiona una tecla
+        -   Cambia una propiedad cuando los bailarines cambian la formación
+      Dance_Party_extras_mixed_2019: |-
+        # Más botones
+
+        Este baile te permite controlar las propiedades de los bailarines en tiempo real mientras bailan automáticamente. Intenta cambiar otras propiedades cuando presiones los botones. Por ejemplo:
+
+        -   Aleatoriza el matiz del bailarín cuando presiones "abajo".
+        -   Agrega un grupo de bailarines con un diseño aleatorio cuando presionas "espacio".
       Dance_Party_extras_on_beat: |-
         # Graves, medios y agudos
 
@@ -16390,6 +16663,10 @@ es-MX:
         # Más rápido, más lento
 
         El baile final utiliza el bloque `establecer velocidad` para controlar la rapidez de los movimientos de cada bailarín. Experimenta con diferentes velocidades en distintos puntos de la canción de este baile, todas las veces que quieras, o regresa a cualquiera de los bailes anteriores para mejorarlos.
+      Dance_Party_extras_speed_2019: |-
+        # Acelera, reduce la velocidad
+
+        El baile final utiliza el bloque <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> para controlar que tan rápido se mueve cada bailarín. Experimenta con diferentes velocidades en diferentes puntos de la canción. No dudes en seguir experimentando con este baile o regresa a cualquiera de los bailes anteriores para mejorarlos.
       Dance_Party_extras_visible: |-
         # ¿Dónde habrán ido?
 
@@ -16594,9 +16871,12 @@ es-MX:
       MC_HOC_2017_04_Cole_2019: "¡El Agent puede cruzar el agua!  \\\r\n \\\r\nUsa
         un bucle \"Repetir\" para resolver este acertijo y ayuda a {currentPlayerName}
         a llegar a la **cubeta** [bucket_empty] detrás de la puerta."
-      MC_HOC_2017_05_Cole: "¡Oh, no, el puente se derrumbó! \\\r\n\\\r\nEscribe el
-        código para que el Agent reconstruya el puente usando el bloque \"colocar\"
-        para que {currentPlayerName} pueda llegar hasta la **pala** [diamond_shovel]."
+      MC_HOC_2017_05_Cole: |-
+        ¡Oh, no, el puente se derrumbó!
+
+        Escribe el código para que el Agent reconstruya el puente usando el bloque <xml>  <block type="craft_placeBlock">
+            <title name="TYPE">       </title>
+          </block></xml> para que {currentPlayerName} pueda llegar hasta la **pala** [diamond_shovel].
       MC_HOC_2017_05_Cole_2019: "¡Oh, no, el puente se derrumbó! \\\r\n\\\r\nEscribe
         el código para que el Agent reconstruya el puente usando el bloque \"colocar\"
         para que {currentPlayerName} pueda llegar hasta la **pala** [diamond_shovel]."
@@ -21279,10 +21559,18 @@ es-MX:
         después 'resuelve el desafío!
       courseE_farmer_functions11_predict_2019: Descifra qué función usar y cuál eliminar,
         después 'resuelve el desafío!
-      courseE_farmer_functions13_2018: "Resuelve este desafío en 23 bloques o menos.\\\r\n\\_\\_\\_
-        \ \\\r\n\\\r\n\n##### Cada brote crecerá como _un_ maíz o como nada."
-      courseE_farmer_functions13_2019: "Resuelve este desafío en 23 bloques o menos.\\\r\n\\_\\_\\_
-        \ \\\r\n\\\r\n\n##### Cada brote crecerá como _un_ maíz o como nada."
+      courseE_farmer_functions13_2018: |-
+        Resuelve este desafío en 23 bloques o menos.
+
+        * * *
+
+        ##### Cada brote crecerá como _un_ maíz o como nada. Para encontrar la mejor solución, necesitaras editar las funciones directamente.
+      courseE_farmer_functions13_2019: |-
+        Resuelve este desafío en 23 bloques o menos.
+
+        * * *
+
+        ##### Cada brote crecerá como _un_ maíz o como nada. Para encontrar la mejor solución, necesitaras editar las funciones directamente.
       courseE_farmer_functions1_2018: |-
         _"¿Nos hemos conocido antes? ¡Soy la cosechadora!"_
 
@@ -21317,12 +21605,18 @@ es-MX:
         * * *
 
         ##### Cada brote hará crecer _un_ maíz o nada.
-      courseE_farmer_functions2b_2018: "Usa la función para ayudar a la cosechadora
-        a recoger el maíz y las calabazas.\\\r\n\\_\\_\\_\\\r\n\n##### Cada brote
-        crecerá como _un_ maíz o como nada."
-      courseE_farmer_functions2b_2019: "Usa la función para ayudar a la cosechadora
-        a recoger el maíz y las calabazas.\\\r\n\\_\\_\\_\\\r\n\n##### Cada brote
-        crecerá como _un_ maíz o como nada."
+      courseE_farmer_functions2b_2018: |-
+        Usa la función para ayudar a la cosechadora a recoger el maíz y las calabazas.
+
+        * * *
+
+        ##### Cada brote crecerá como _un_ maíz o como nada.
+      courseE_farmer_functions2b_2019: |-
+        Usa la función para ayudar a la cosechadora a recoger el maíz y las calabazas.
+
+        * * *
+
+        ##### Cada brote crecerá como _un_ maíz o como nada.
       courseE_farmer_functions2ba: "_\"¡Me siento tan funcional!\"_\n\n¿Notaste que
         había un código repetido en el último desafío? Poner todo dentro de un bucle
         no sirve, pero **podemos** usar funciones. \n\nPara este desafío, debemos
@@ -21330,14 +21624,22 @@ es-MX:
         Ahora, todo lo que necesitas hacer es poner el **bloque que llama a la función**
         `maíz y calabaza` dentro del código donde lo necesitas.\n\n* * *\n\n#####
         Cada brote hará crecer _un_ maíz o nada."
-      courseE_farmer_functions2ba_2018: "_\"¡Me siento tan funcional!\"_\\\r\n\\\r\n¡Ahora
-        hay calabazas múltiples en cada parche!  Mira cuidadosamente las definiciones
-        de la función debajo para descifrar cómo usar cada una.\\\r\n\\_\\_\\_\\\r\n\n#####
-        Cada brote crecerá como _un_ maíz o como nada."
-      courseE_farmer_functions2ba_2019: "_\"¡Me siento tan funcional!\"_\\\r\n\\\r\n¡Ahora
-        hay calabazas múltiples en cada parche!  Mira cuidadosamente las definiciones
-        de la función debajo para descifrar cómo usar cada una.\\\r\n\\_\\_\\_\\\r\n\n#####
-        Cada brote crecerá como _un_ maíz o como nada."
+      courseE_farmer_functions2ba_2018: |-
+        _"¡Me siento tan funcional!"_
+
+        ¡Ahora hay múltiples calabazas en cada parche!  Mira cuidadosamente las definiciones de las funciones debajo para descifrar cómo usar cada una.
+
+        * * *
+
+        ##### Cada brote crecerá como _un_ maíz o como nada.
+      courseE_farmer_functions2ba_2019: |-
+        _"¡Me siento tan funcional!"_
+
+        ¡Ahora hay múltiples calabazas en cada parche!  Mira cuidadosamente las definiciones de las funciones debajo para descifrar cómo usar cada una.
+
+        * * *
+
+        ##### Cada brote crecerá como _un_ maíz o como nada.
       courseE_farmer_functions3c: "Ahora, completa la función tu mismo sacando los
         bloques desde el código y dejándolos en la \n **definición de función**.  \\\r\n\\\r\nNo
         te olvides de agregar los bloques pequeños **función llamar** para usar la

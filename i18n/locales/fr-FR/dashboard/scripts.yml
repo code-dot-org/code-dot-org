@@ -2921,7 +2921,6 @@ fr:
             Dance Party:
               name: Fête dansante
         dance-extras:
-          title: Continuez à danser
           description: Allez au-delà de la première heure avec de longues idées de projets.
         coursef-2019:
           description_short: Apprenez toutes les notions fondamentales de l’informatique et créez vos propres œuvres d’arts, histoires ou jeux.
@@ -3320,7 +3319,7 @@ fr:
             Dance Party:
               name: Fête dansante
           description: Codez votre propre soirée dansante à partager avec vos amis !
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Computer Science Fundamentals:
               name: Fondamentaux de l'informatique
@@ -3355,9 +3354,22 @@ fr:
             For Loops:
               name: Boucles « Pour »
         dance-extras-2019:
-          title: Continuez à danser
           description: Allez au-delà de la première heure avec de longues idées de projets.
         csp10-pilot:
           stages:
             new stage:
               name: nouvelle étape
+        csp4-preview:
+          stages:
+            new stage:
+              name: nouvelle étape
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Instructions conditionnelles
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Financement participatif
+            Conditionals with Cards:
+              name: Instructions conditionnelles avec des cartes

@@ -2,6 +2,14 @@
 ga:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: uile
+          MOVE1:
+            MOVES.Rest: Dada
+          MOVE2:
+            MOVES.Rest: Dada
       Dancelab_atTimestamp:
         options:
           UNIT:
@@ -140,6 +148,7 @@ ga:
             '19': '19'
             '20': '20'
           LAYOUT:
+            '"diamond"': diamant
             '"random"': randamach
       Dancelab_randomColor:
         text: dath randamach
@@ -237,6 +246,12 @@ ga:
           PROPERTY:
             '"scale"': méid
             '"height"': airde
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': diamant
+            '"x"': x
+            '"y"': y
       Dancelab_whenKey:
         options:
           KEY:

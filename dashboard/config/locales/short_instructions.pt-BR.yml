@@ -1146,12 +1146,23 @@ pt-BR:
       Dance Party Predict: 'O que acha que vai acontecer quando você clicar no alienígena?  '
       Dance Party Predict_2019: 'O que acha que vai acontecer quando você clicar no
         alienígena?  '
-      Dance_2019_01: Arraste o bloco 'criar novo' para a área de trabalho, conectando-o
-        dentro do bloco de 'configuração'.
+      Dance_2019_01: 'Arraste o bloco <xml><block type="Dancelab_makeAnonymousDanceSprite"
+        block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;,
+        &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml>
+        para a área de trabalho e conecte-o dentro do bloco <xml><block type="Dancelab_whenSetup2"
+        next_connection_disabled="true" block-text="setup"></block></xml>.'
+      Dance_2019_02: Faça-o dançar quando você pressionar uma tecla.
+      Dance_2019_03: 'É hora de uma dança! Programe cada dançarino para se mover quando
+        você pressionar teclas diferentes. Escolha seu movimento favorito para cada
+        dançarino ou defina-o como "(Aleatório)" para algo totalmente imprevisível! '
+      Dance_2019_04: Faça seu dançarino iniciar uma nova jogada após o quarto compasso.
       Dance_2019_05: Agora, faça o(a) dançarino(a) iniciar um novo movimento após
         seis compassos!
-      Dance_2019_08: Use o bloco de 'definir tonalidade” para alterar a cor de um(a)
-        dançarino(a).
+      Dance_2019_06: Configure um grupo de dançarinos de apoio ao redor do dançarino
+        principal no meio.
+      Dance_2019_07: Altere o tamanho do grupo de dançarinos de apoio.
+      Dance_2019_08: Tente mudar a cor de um de seus dançarinos (ou de um grupo inteiro)!
+      Dance_2019_09: Seja criativo com esses novos blocos!
       Dance_2019_10: Entre no ritmo! Crie sua própria dança para compartilhar com
         seus amigos.
       Dance_Party_01: Arraste o bloco 'criar novo' para a área de trabalho, conectando-o
@@ -1179,6 +1190,8 @@ pt-BR:
         cima. Faça o movimento dança drop-dança do fio dental o mais rápido que puder!
       Dance_Party_12: Entre no ritmo! Crie sua própria dança para compartilhar com
         seus amigos.
+      Dance_Party_extras_alternate_2019: Para Frente e Para Trás! (Clique "mais" para
+        detalhes)
       Dance_Party_extras_battle: Equipes de Dança (Clique em "Mais" para mais detalhes)
       Dance_Party_extras_battle_2019: Equipes de Dança (Clique em "Mais" para mais
         detalhes)
@@ -1189,6 +1202,7 @@ pt-BR:
         detalhes)
       Dance_Party_extras_layout_2019: Vamos Entrar em Formação! (Clique em "Mais"
         para detalhes)
+      Dance_Party_extras_mixed_2019: Mais Botões (Clique "Mais" para detalhes)
       Dance_Party_extras_on_beat: Grave, Médio e Agudo (Clique em "Mais" para mais
         detalhes)
       Dance_Party_extras_on_beat_2019: Grave, Médio e Agudo (Clique em "Mais" para

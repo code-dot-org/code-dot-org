@@ -3628,11 +3628,6 @@ is-IS:
           -   Eftir 6 takta verður dansarinn að vera að dansa öðruvísi en hann gerði eftir 4 takta.
 
           -   Borðið endar eftir 11 takta.\*
-      Dance_2019_07:
-        challenges: |-
-          **Valfrjáls áskorun**
-
-          -   Prófaðu að breyta öðrum eiginleikum (breidd, hæð, snúningi, ...)
       Dance_Party_01:
         validation: |-
           **Hvernig klára ég þetta borð?**
@@ -3670,6 +3665,13 @@ is-IS:
           **Valfrjáls áskorun**
 
           Breyttu bakgrunninum á mismunandi stöðum í söngnum með því að tengja nýja kubbinn undir atburðarkubbinn <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"taktar"</title></block></xml>.
+      Dance_Party_05:
+        validation: |-
+          **Hvernig klára ég þennan áfanga?**
+
+          -   Dansarinn þinn þarf að nota minnst 4 mismunandi danshreyfingar til að áfanganum ljúki.
+
+          _Þessi áfangi klárast eftir 12 takta._
       Dance_Party_06:
         validation: |-
           **Hvernig klára ég þetta borð?**

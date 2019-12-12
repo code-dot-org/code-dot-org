@@ -360,6 +360,7 @@ ja-JP:
         Course_4_Artist_11_a: '前にうごく30ピクセル、右にまがる60度を使って、六角形の半分を書いてみてね。  '
         Course_4_Artist_11_b: '前にうごく80ピクセル、右にまがる80度を使って、三角形の3分の2を書いてみてね。 '
       Course 4 Artist 12:
+        Course_4_Artist_12_a: 'くり返しに使われている図形は、**六角形の半分**と**三角形の2/3**を組み合わせたものです。 '
         Course_4_Artist_12_b: 'それぞれの形は、前のパズルとほとんど同じですが、6角形を少し大きくします。 '
         Course_4_Artist_12_c: "1.  始めの3回は60ピクセルの長さで、60 度まがります\n2.  次の 2 回は 80 ピクセルの長さで、120
           度まがります "
@@ -418,6 +419,20 @@ ja-JP:
               </next>
             </block>
           </xml>
+      Course 4 Artist 6:
+        Course_4_Artist_6_a: 360度の範囲に 3つの三角形が あります。3つで 360なら 何度曲がればいいかな？
+      Course 4 Artist 8a:
+        Course_4_Artist_8a: |-
+          何度 曲がればいいか 助けが 必要ですか？
+
+          360度回転する間に3つ三角形をかきます。
+
+          3つで 360なら 何度曲がればいいかな？
+      Course 4 Artist 9:
+        Course_4_Artist_9_a: |-
+          何度曲がればいいかな？
+
+          360÷10は、いくつ？
       Course 4 Artist Binary Free Play 2b:
         Course_4_Artist_Binary_Free_Play_2b_d: |-
           **答え**
@@ -503,6 +518,9 @@ ja-JP:
         Course_4_Artist_Functions_challenge_c: ひとつ正方形を書いたら、20ピクセル前にジャンプします。
         Course_4_Artist_Functions_challenge_d: 正方形を `counter` 回かいたら、左に90度まがります。
       Course 4 Artist Inspire:
+        Course_4_Artist_Inspire_a: 正方形を 1つ かいたら、長さの半分だけジャンプしてから 曲がって 次の正方形をかきましょう。
+        Course_4_Artist_Inspire_b: 正方形とジャンプを4回くり返して (次をかく前に左に曲がります) 、風車をかきます。
+        Course_4_Artist_Inspire_c: さらに、風車をかくのを **360/sides** 右に曲がりながら、4回くり返します。
         Course_4_Artist_Inspire_d: |-
           **答え**
 
@@ -676,6 +694,19 @@ ja-JP:
               </next>
             </block>
           </xml>
+      Course 4 Artist Vars 13:
+        Course_4_Artist_Vars_13_a: 2つのくり返し（くり返しの中にくり返しを入れる）が必要で、それぞれ `sides`回くり返します。
+        Course_4_Artist_Vars_13_b: |-
+          中のくり返しで八角形をかきます。（曲がる方向は左）
+
+          外側のループでは、前に進んで右に曲がるだけです。
+        Course_4_Artist_Vars_13_c: 辺の数を変えても大きさが変わらないようにするために、計算ブロックを使って 長さを 辺の数で割るようにしましょう。
+      Course 4 Artist Vars 6:
+        Course_4_Artist_Vars_6_a: 正多角形をかくには、 **360÷辺の数**だけ曲がります。
+      Course 4 Artist Vars 8:
+        Course_4_Artist_Vars_8_a: てきとうな長さを辺の数で わり算すれば、辺の数が多くなるほど、辺の長さが短くなります。
+      Course 4 Play Lab Vars 2:
+        Course_4_Play_Lab_Vars_2_a: 変数 `dog_speed` には、変数 `cat_speed` よりも大きな数字をセットしてください。
       Course 4 SCF 1:
         Course_4_SCF_1_e: |-
           **答え**
@@ -3534,6 +3565,8 @@ ja-JP:
       CourseE_HOC 2018 Level_10:
         voyage_aquatic_10a: "**海のランタン** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)
           が見えますか?海のランタンと条件をどう組み合わせれば、海底遺跡を通りぬけられるでしょうか?"
+      CourseE_HOC 2018 Level_7a:
+        aquatic7: 道があるときを使って、右に曲がりましょう。
       CourseE_HOC 2018 Level_9b:
         voyage_aquatic_9a: 赤色と青色のサンゴブロックが見えますか？それぞれ左と右に曲がる道しるべにしてサンゴ礁を進みます。
       Dance_2019_01:
@@ -3543,6 +3576,32 @@ ja-JP:
           -   画面にダンサーが表示されていることをたしかめてください。
 
           _このレベルは4小節で終わります。_
+        challenges: "**オプションのチャレンジ**\n\n\\*再生する別の曲を選択してください。\n\\*ダンサーを新しい場所に移動してください。
+          \n\\*複数のダンサーを作成してください。"
+      Dance_2019_02:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+
+          \*ダンサーがダンスをしなければなりません。
+          \*矢印キーを押してください。
+
+          _このレベルは4小節で終わります。_
+        challenges: |-
+          **オプションのチャレンジ**
+
+          \*複数の<xml><block type="Dancelab_whenKey"><title name="KEY"></title></block></xml>ブロックを使用してください。
+      Dance_2019_03:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+
+          \*両方のダンサーがダンスをしなければなりません。
+          \*矢印キーを押してください。
+
+          _このレベルは4小節で終わります。_
+        challenges: |-
+          **オプションのチャレンジ**
+
+          \*ダンサーが左右の矢印キーに反応するようにしてください。
       Dance_2019_04:
         validation: |-
           **どうしたらこのレベルをクリアできますか？**
@@ -3556,11 +3615,54 @@ ja-JP:
           \*6小節後、ダンサーは4小節後とは違うダンスをする必要があります。
 
           _このレベルは12小節で終わります。_
+        challenges: |-
+          **オプションチャレンジ**
+
+          \*ダンサーが動きを切り替えるたびに背景を変更してください。
+      Dance_2019_06:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+
+          \*1人のリードダンサーとバックアップダンサーのグループを作成してください。
+
+          _このレベルは7小節で終わります。_
+        challenges: |-
+          **オプションチャレンジ**
+
+          \*複数のグループのバックアップダンサーを作成してください。
       Dance_2019_07:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか**
+
+          \*音楽が開始したら、少なくとも1人のダンサーのおおきさを変更してください。
+
+          _このレベルは6小節で終わります。_
         challenges: |-
           \*\* 自由選択のチャレンジ \*\*
 
           \*その他のプロパティ（幅、高さ、回転など）を変えて実験してみましょう
+      Dance_2019_08:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+
+          \*少なくとも1人のダンサーの色合いを変更してください。
+
+          _このレベルは6小節で終わります。_
+        tint_hint: ダンサーは選択した正確な色に変わっていないことに気づきましたか？これは、**色合い**が、選択した色とダンサーの色がミックスしているためです。
+      Dance_2019_09:
+        validation: |-
+          **どうしたらこのレベルをクリアできますか？**
+
+          \*「完了」ボタンを押すだけです！
+        repeat_every_ideas: "**アイデアが必要ですか？**\n\n-   ダンサーのおおきさを繰り返し変更して成長させてください。\n-
+          \  ダンサーのローテーションを繰り返し変更して、回転させてください。\n-   ダンサーの水平または垂直位置を繰り返し変更して、画面上を移動させてください。
+          \n\n_負の数を使用して逆の効果を作成することもできます！_"
+        next_previous: "**オプションのチャレンジ**\n\n-   また、この新しいイベントブロックを使用して、`（ランダムに）`、`（次へ）`、または`（前へ）`移動を設定することで、ダンスの動きのリストをリピートできます。
+          \n    <xml><block type=\"Dancelab*changeMoveEachLR\">\n    <title name=\"GROUP\"
+          config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;,
+          &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;,
+          &quot;UNICORN&quot;\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n
+          \   <title name=\"DIR\">-1</title>\n    </block></xml>"
       Dance_Party_01:
         validation: |-
           **どうしたらこのレベルをクリアできますか？**
@@ -3664,6 +3766,8 @@ ja-JP:
       HOC 2018 Level_10:
         voyage_aquatic_10a: "**海のランタン** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)
           が見えますか?海のランタンと条件をどう組み合わせれば、海底遺跡を通りぬけられるでしょうか?"
+      HOC 2018 Level_7a:
+        aquatic7: 道があるときを使って、右に曲がりましょう。
       HOC 2018 Level_9b:
         voyage_aquatic_9a: 赤色と青色のサンゴブロックが見えますか？それぞれ左と右に曲がる道しるべにしてサンゴ礁を進みます。
       MC_HOC_2017_01_RETRY:
@@ -3720,11 +3824,13 @@ ja-JP:
         MC_HOC_2017_06_Cole_b: Agentが水を上を渡りきる橋をかけられるよう手助けしてください！
       MC_HOC_2017_07_Cole:
         MC_HOC_2017_07_Cole_c: Agentにさせることは、トロッコまでの道を通れるようにすることです。
-        MC_HOC_2017_07_Cole_a: このパズルをクリアするために、「道を作る」関数のしくみを学んで、ツールボックスにある緑色の小さな「道を作る」ブロックを使って、その関数を必要なだけ呼び出します。
+        MC_HOC_2017_07_Cole_a: このパズルをクリアするために、関数 `道を作る`で 何が できるかを みてみましょう。ツールボックスから
+          緑色の小さな`道を作る`ブロックを 取り出せば、その関数を 何回でも 呼び出すことができます。
         MC_HOC_2017_07_Cole_b: この関数ブロックをツールボックスにある他のブロックと組み合わせて、パズルをクリアしてみましょう。
       MC_HOC_2017_07_Cole_2019:
         MC_HOC_2017_07_Cole_c: Agentにさせることは、トロッコまでの道を通れるようにすることです。
-        MC_HOC_2017_07_Cole_a: このパズルをクリアするために、「道を作る」関数のしくみを学んで、ツールボックスにある緑色の小さな「道を作る」ブロックを使って、その関数を必要なだけ呼び出します。
+        MC_HOC_2017_07_Cole_a: このパズルをクリアするために、関数 `道を作る`で 何が できるかを みてみましょう。ツールボックスから
+          緑色の小さな`道を作る`ブロックを 取り出せば、その関数を 何回でも 呼び出すことができます。
         MC_HOC_2017_07_Cole_b: この関数ブロックをツールボックスにある他のブロックと組み合わせて、パズルをクリアしてみましょう。
       MC_HOC_2017_10_RETRY:
         MC_HOC_2017_10_Cole_b: どこへ行ったらいいかわからない？点線を見つけられるかみてみて！
@@ -3853,11 +3959,37 @@ ja-JP:
         mc_9_c: "`松明を置く` を使て、今立っている場所に松明を置きましょう。"
       behaviors 2:
         behavior hint: |-
-          ロケットの動きを修正しよう！
+          ロケットの行動を変えてみよう！
 
           -   ロケットを どの方向に 動かしますか？
+      behaviors 3:
+        behavior hint: |-
+          スプライトの行動を変えよう！
+
+          -   どの値を変えれば、スプライトのスピードを変えることができますか？
+      behaviors 3a:
+        behavior hint: |-
+          スプライトの行動を変えよう！
+
+          -   どの値を変えれば、スプライトのスピードを変えることができますか？
+      behaviors 5:
+        target hint: どの宇宙船を選んでもOKです。どの宇宙船がいいですか？
+        behavior hint: 行動を変えよう。宇宙飛行士をななめに進ませるには、異なる2つの方向に進ませる必要があります。
+      behaviors 6:
+        behavior hint: |-
+          スプライトの行動を変えよう！
+
+          -   どの値を変えれば、スプライトのスピードを変えることができますか？
+      behaviors 7:
+        behaviors_hint1: 2つの異なる操作を入れた行動を新たに作るか、2つの行動を組み合わせます。
+        sprites_idea1: |-
+          楽しんでる、宇宙船が宇宙に飛んでいくようにしたり、キャラが走って来るようにしたりしてみよう。背景やスプライトのコスチュームを思い通りに変えてみよう！
+
+          ![](<https://images.code.org/7070e44239b53f4b33a5b4fe054bb61c-image-1567714335486.2019-09-05 16_05_19.gif>)
+
+          ![](<https://images.code.org/278494432d56f1f5d41e345a51223695-image-1567714335485.2019-09-05 16_11_12.gif>)
       comment_intro_maze_2018:
-        courseC_maze_programming4_a: コメントは、あなたが書いたプログラムを 他の人が 見た時に 役立ちます。
+        courseC_maze_programming4_a: コメントは、あなたが書いたプログラムを 他の人が 理解する時に 役立ちます。
         courseC_maze_programming4_b: 進む方向を変えるときにコメントを入れておきます。-もし、別の方向に 行ったら どうなるのか
       course1_artist_loops_challenge1:
         courseA_artist_loops_challenge1_a: |-
@@ -4070,18 +4202,10 @@ ja-JP:
           \   <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n
           \           <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n
           \         </block>\n    </next>\n  </block></xml> で とりをしゃべらせることが できます。"
-        courseA_playlab_events_challenge2_b: |-
-          おとをならすには、<xml>
-            <block type="studio_whenSpriteClicked">
-              <title name="SPRITE">6</title>
-              <next>
-
-                    <block type="studio_playSound">
-                      <title name="SOUND">winpoint</title>
-                    </block>
-                  </next>
-
-            </block></xml> をつかいます。
+        courseA_playlab_events_challenge2_b: "おとをならすには、<xml>\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block
+          type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n
+          \         </block>\n        </next>\n  </block></xml> をつかいます。"
         courseA_playlab_events_challenge2_c: |-
           <xml>  <block type="studio_whenSpriteClicked">
               <title name="SPRITE">5</title>
@@ -4372,24 +4496,12 @@ ja-JP:
           \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
           name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
           \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
-          \   <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
-        courseD_collector_debugging_challenge2_b: |-
-          次に道にそって宝石を集めます。
-
-          ![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)
-          さっき作ったプログラムに 次のブロックを加えます。
-
-          <xml><block type="maze_move">
-                              <title name="DIR">moveBackward</title>
-                            </block>
-          <block type="controls_repeat">
-                  <title name="TIMES">4</title>
-                  <statement name="DO">
-
-                  </statement>
-                </block>
-
-          </xml>
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
+        courseD_collector_debugging_challenge2_b: "次に道にそって宝石を集めます。\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04
+          AM.png>)\nさっき作ったプログラムに 次のブロックを加えます。\n\n<xml><block type=\"maze_move\">\n
+          \                   <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block
+          type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement
+          name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
         courseD_collector_debugging_challenge2_c: "最後に他の道にある たからものを 集めます。さらに 次のブロックを
           加えます。\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n
           \             </block>\n      <block type=\"controls_repeat\">\n        <title
@@ -5033,6 +5145,8 @@ ja-JP:
               </next>
             </block>
           </xml>
+      course4_harvester_nested_loops_challenge1:
+        courseD_harvester_nested_loops_challenge1_a: ジグザグに行くくり返しは、たぶん、どこかで使ったことがあると思います。プログラムを思い出したら、それに少し追加してみよう。
       course4_playlab_variables_challenge1:
         courseF_playlab_variables_challenge1_a: |-
           キャラに何か言わせるために つぎのブロックを追加しましょう。
@@ -5251,6 +5365,10 @@ ja-JP:
           name="TIMES" config="3-10">???</title></block></xml> ブロックのなかに くりかえす ブロックを
           いれてください。
       courseA_collector_loops3_2019:
+        courseA_collector_loops3_a: |-
+          くりかえし を するには、これ！
+
+          <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
         courseA_collector_loops3_b: <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml> ブロックのなかに くりかえす ブロックを
           いれてください。
@@ -5426,6 +5544,9 @@ ja-JP:
           `ピック トウモロコシ` <xml><block type="harvester_corn"/></xml> を **4つ** つかいます。
         courseA_harvester_loops2_b: 'むつかしい？ やることを こえにだして いってみよう。 '
       courseA_harvester_loops2_2019:
+        courseA_harvester_loops2_a: "**4つ** の`西`\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\nと
+          **4つ** の<xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml> を
+          つかいます。 "
         courseA_harvester_loops2_b: 'むつかしい？ やることを こえにだして いってみよう。 '
       courseA_harvester_loops3:
         courseA_harvester_loops3_a: |-
@@ -5471,7 +5592,7 @@ ja-JP:
         courseA_harvester_loops5a_a: |-
           くりかえしのあとに もう1かい `くりかえし` <xml> <block type="controls_repeat_simplified_dropdown">
               <title name="TIMES" config="2-10">6</title>
-            </block></xml> を おこないます。
+            </block></xml> を つかいます。
         courseA_harvester_loops5a_b: 1つめの くりかえし には、`南`<xml><block type="maze_moveSouth"
           limit="1"/></xml> を いれます。もう１つには、 `東` <xml><block type="maze_moveEast" limit="1"/></xml>
           を いれます。
@@ -5480,7 +5601,7 @@ ja-JP:
         courseA_harvester_loops5a_a: |-
           くりかえしのあとに もう1かい `くりかえし` <xml> <block type="controls_repeat_simplified_dropdown">
               <title name="TIMES" config="2-10">6</title>
-            </block></xml> を おこないます。
+            </block></xml> を つかいます。
         courseA_harvester_loops5a_b: 1つめの くりかえし には、`南`<xml><block type="maze_moveSouth"
           limit="1"/></xml> を いれます。もう１つには、 `東` <xml><block type="maze_moveEast" limit="1"/></xml>
           を いれます。
@@ -5535,12 +5656,12 @@ ja-JP:
             <block type="maze_moveEast"/>
           </xml>
       courseA_harvester_seq10:
-        courseA_harvester_seq10_a: むつかしい？どのように いけばよいか かみに かいてみよう。
+        courseA_harvester_seq10_a: むつかしい？どうやって いけばいいのか かみに かいてみよう。
         courseA_harvester_seq10_b: "`東` と `北` をつかいます。これを 2かい くりかえします。トウモロコシを しゅうかく
           するのを わすれないでね。"
         courseA_harvester_seq10_c: あかい せん のとおりに いって みよう。
       courseA_harvester_seq10_2019:
-        courseA_harvester_seq10_a: むつかしい？どのように いけばよいか かみに かいてみよう。
+        courseA_harvester_seq10_a: むつかしい？どうやって いけばいいのか かみに かいてみよう。
         courseA_harvester_seq10_b: "`東` と `北` をつかいます。これを 2かい くりかえします。トウモロコシを しゅうかく
           するのを わすれないでね。"
         courseA_harvester_seq10_c: あかい せん のとおりに いって みよう。
@@ -5592,13 +5713,13 @@ ja-JP:
           <xml><block type="harvester_corn"/></xml>
         courseA_harvester_seq3_b: やることを こえに だして いって みよう。
       courseA_harvester_seq4:
-        courseA_harvester_seq4_a: トウモロコシまで なんブロック？ワークスペースには、あるブロックは いくつ？
+        courseA_harvester_seq4_a: トウモロコシまで なんブロック？ワークスペースにあるブロックは いくつ？
         courseA_harvester_seq4_b: |-
           `東` が 5つ と `ピック トウモロコシ`を 1つ つかいます。
 
           <xml><block type="harvester_corn"/></xml>
       courseA_harvester_seq4_2019:
-        courseA_harvester_seq4_a: トウモロコシまで なんブロック？ワークスペースには、あるブロックは いくつ？
+        courseA_harvester_seq4_a: トウモロコシまで なんブロック？ワークスペースにあるブロックは いくつ？
         courseA_harvester_seq4_b: |-
           `東` が 5つ と `ピック トウモロコシ`を 1つ つかいます。
 
@@ -5622,10 +5743,10 @@ ja-JP:
       courseA_harvester_seq6_2019:
         courseA_harvester_seq6_a: むつかしいとおもったら、やることを こえに だして いってみよう
       courseA_harvester_seq7:
-        courseA_harvester_seq7_a: かどを まがる まえ と まっがた あとに わけて、かんがえて みましょう。
+        courseA_harvester_seq7_a: かどを まがる まえ と まっがた あとに わけて、かんがえて みよう。
         courseA_harvester_seq7_b: むつかしい？あかい せん のとおりに いって みよう。
       courseA_harvester_seq7_2019:
-        courseA_harvester_seq7_a: かどを まがる まえ と まっがた あとに わけて、かんがえて みましょう。
+        courseA_harvester_seq7_a: かどを まがる まえ と まっがた あとに わけて、かんがえて みよう。
         courseA_harvester_seq7_b: むつかしい？あかい せん のとおりに いって みよう。
       courseA_harvester_seq8:
         courseA_harvester_seq8_a: うごくブロックを **4つ** と ピック トウモロコシを **2つ** つかいます。
@@ -5848,6 +5969,12 @@ ja-JP:
       courseA_maze_seq13_2019:
         courseA_maze_seq13_a: どうやって ぶたのところへ いけばいいか ゆびで なぞって かんがえて みよう。
         courseA_maze_seq13_b: いろんなブロックを いれて、うごかしてみよう。まちがえても だいじょうぶ！
+        courseA_maze_seq13_c: |-
+          <xml><block type="maze_moveNorth"/></xml> と
+
+          <xml><block type="maze_moveEast"/></xml>
+
+           をつかえば、ブタを つかまえることが できます。
       courseA_maze_seq1_2018:
         courseA_maze_seq1_a: |-
           トリさんが うごかないときは、<xml>
@@ -6198,18 +6325,10 @@ ja-JP:
           \   <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n
           \           <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n
           \         </block>\n    </next>\n  </block></xml> で とりをしゃべらせることが できます。"
-        courseA_playlab_events_challenge2_b: |-
-          おとをならすには、<xml>
-            <block type="studio_whenSpriteClicked">
-              <title name="SPRITE">6</title>
-              <next>
-
-                    <block type="studio_playSound">
-                      <title name="SOUND">winpoint</title>
-                    </block>
-                  </next>
-
-            </block></xml> をつかいます。
+        courseA_playlab_events_challenge2_b: "おとをならすには、<xml>\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block
+          type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n
+          \         </block>\n        </next>\n  </block></xml> をつかいます。"
         courseA_playlab_events_challenge2_c: |-
           <xml>  <block type="studio_whenSpriteClicked">
               <title name="SPRITE">5</title>
@@ -6237,18 +6356,10 @@ ja-JP:
           \   <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n
           \           <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n
           \         </block>\n    </next>\n  </block></xml> で とりをしゃべらせることが できます。"
-        courseA_playlab_events_challenge2_b: |-
-          おとをならすには、<xml>
-            <block type="studio_whenSpriteClicked">
-              <title name="SPRITE">6</title>
-              <next>
-
-                    <block type="studio_playSound">
-                      <title name="SOUND">winpoint</title>
-                    </block>
-                  </next>
-
-            </block></xml> をつかいます。
+        courseA_playlab_events_challenge2_b: "おとをならすには、<xml>\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block
+          type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n
+          \         </block>\n        </next>\n  </block></xml> をつかいます。"
         courseA_playlab_events_challenge2_c: |-
           <xml>  <block type="studio_whenSpriteClicked">
               <title name="SPRITE">5</title>
@@ -6276,18 +6387,10 @@ ja-JP:
           \   <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n
           \           <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n
           \         </block>\n    </next>\n  </block></xml> で とりをしゃべらせることが できます。"
-        courseA_playlab_events_challenge2_b: |-
-          おとをならすには、<xml>
-            <block type="studio_whenSpriteClicked">
-              <title name="SPRITE">6</title>
-              <next>
-
-                    <block type="studio_playSound">
-                      <title name="SOUND">winpoint</title>
-                    </block>
-                  </next>
-
-            </block></xml> をつかいます。
+        courseA_playlab_events_challenge2_b: "おとをならすには、<xml>\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block
+          type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n
+          \         </block>\n        </next>\n  </block></xml> をつかいます。"
         courseA_playlab_events_challenge2_c: |-
           <xml>  <block type="studio_whenSpriteClicked">
               <title name="SPRITE">5</title>
@@ -6510,13 +6613,13 @@ ja-JP:
         courseB_artist_loops3_a: |-
           `くりかえし` <xml><block type="controls_repeat_simplified">
               <title name="TIMES">???</title>
-            </block></xml> を つかえば、プログラムが みじかく できるよ。
+            </block></xml> を つかえば、プログラムが みじかく できます。
         courseB_artist_loops3_b: 線をかくために、アーティストを南に うごかしてください。
       courseB_artist_loops3_2019:
         courseB_artist_loops3_a: |-
           `くりかえし` <xml><block type="controls_repeat_simplified">
               <title name="TIMES">???</title>
-            </block></xml> を つかえば、プログラムが みじかく できるよ。
+            </block></xml> を つかえば、プログラムが みじかく できます。
         courseB_artist_loops3_b: 線をかくために、アーティストを南に うごかしてください。
       courseB_artist_loops4:
         courseB_artist_loops4_a: ジャンプブロックをつかえば、線を ひかずに 前にすすむことが できます。
@@ -7091,21 +7194,21 @@ ja-JP:
           type="collector_collect"/></xml> を２つ いれるか、くりかえしのなかに `くりかえし`を いれて たからものを
           とるか します。
       courseB_iceage_loops1:
-        courseB_iceage_loops1_a: こおりの われめに ちゅういしてね！おっこちたら、こおっちゃうよ。
+        courseB_iceage_loops1_a: こおりの われめに ちゅういしてね！おちたら、こおっちゃうよ。
         courseB_iceage_loops1_b: |-
           このブロックを つかいましょう。
 
           <xml><block type="maze_moveEast"/></xml>
       courseB_iceage_loops10:
-        courseB_iceage_loops10_a: こおりの われめに ちゅういしてね！おっこちたら、こおっちゃうよ。
-        courseB_iceage_loops10_b: ドングリまで いくみちを こえに だして いってみるか、かみに かいてみて。パターンは みつかるかな？
+        courseB_iceage_loops10_a: こおりの われめに ちゅういしてね！おちたら、こおっちゃうよ。
+        courseB_iceage_loops10_b: ドングリまで いくみちを こえに だして いってみるか、かみに かいてみよう。パターンは みつかるかな？
         courseB_iceage_loops10_c: 赤いせんのとおりに いってみよう。
       courseB_iceage_loops10_2019:
-        courseB_iceage_loops10_a: こおりの われめに ちゅういしてね！おっこちたら、こおっちゃうよ。
-        courseB_iceage_loops10_b: ドングリまで いくみちを こえに だして いってみるか、かみに かいてみて。パターンは みつかるかな？
+        courseB_iceage_loops10_a: こおりの われめに ちゅういしてね！おちたら、こおっちゃうよ。
+        courseB_iceage_loops10_b: ドングリまで いくみちを こえに だして いってみるか、かみに かいてみよう。パターンは みつかるかな？
         courseB_iceage_loops10_c: 赤いせんのとおりに いってみよう。
       courseB_iceage_loops1_2019:
-        courseB_iceage_loops1_a: こおりの われめに ちゅういしてね！おっこちたら、こおっちゃうよ。
+        courseB_iceage_loops1_a: こおりの われめに ちゅういしてね！おちたら、こおっちゃうよ。
         courseB_iceage_loops1_b: |-
           このブロックを つかいましょう。
 
@@ -7131,21 +7234,31 @@ ja-JP:
             </block></xml>
 
           このなかに くりかえす ブロックを いれます。
+      courseB_iceage_loops3_2019:
+        courseB_iceage_loops3_a: |-
+          このブロックを つかってみよう！
+           <xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="3-10">5</title>
+              </block></xml>
+        courseB_iceage_loops3_b: |-
+          くりかえすためには、 `くりかえし` <xml><block type="controls_repeat_simplified">
+              <title name="TIMES">???</title>
+            </block></xml> をとりだして、くりかえしたいブロックを そのなかに いれます。
       courseB_iceage_loops4:
-        courseB_iceage_loops4_a: スクラットが ドングリに いく みちを かいてみよう。パターンがわかるかかな？
+        courseB_iceage_loops4_a: スクラットが ドングリに いく みちを かいてみよう。パターンがわかるかな？
         courseB_iceage_loops4_b: どんどん 実行（じっこう）して、どうなるか みて みよう！
         courseB_iceage_loops4_c: 赤いせんのとおりに いってみよう。
       courseB_iceage_loops4_2019:
-        courseB_iceage_loops4_a: スクラットが ドングリに いく みちを かいてみよう。パターンがわかるかかな？
+        courseB_iceage_loops4_a: スクラットが ドングリに いく みちを かいてみよう。パターンがわかるかな？
         courseB_iceage_loops4_b: どんどん 実行（じっこう）して、どうなるか みて みよう！
         courseB_iceage_loops4_c: 赤いせんのとおりに いってみよう。
       courseB_iceage_loops6:
         courseB_iceage_loops6_a: うごく ほうこうは、ぜんぶで **3つ** です。
-        courseB_iceage_loops6_b: "**もうひとつ** くりかえしを つくります。"
+        courseB_iceage_loops6_b: "**もうひとつ** くりかえしを つくります！"
         courseB_iceage_loops6_c: 赤いせんのとおりに いってみよう。
       courseB_iceage_loops6_2019:
         courseB_iceage_loops6_a: うごく ほうこうは、ぜんぶで **3つ** です。
-        courseB_iceage_loops6_b: "**もうひとつ** くりかえしを つくります。"
+        courseB_iceage_loops6_b: "**もうひとつ** くりかえしを つくります！"
         courseB_iceage_loops6_c: 赤いせんのとおりに いってみよう。
       courseB_iceage_loops7:
         courseB_iceage_loops7_a: うまく いかないときは、かみに どうやって いけばいいか かいてみよう。パターンはみつかった？
@@ -7165,11 +7278,11 @@ ja-JP:
         courseB_iceage_loops8_c: 赤いせんのとおりに いってみよう。
       courseB_iceage_loops9:
         courseB_iceage_loops9_a: うまくいかない？そんなときは、すこしづつ つくってみよう。すこし つくったら、どんどん実行（じっこう）してみよう。
-        courseB_iceage_loops9_b: こたえ、**4つ**のくりかえしを つかいます。
+        courseB_iceage_loops9_b: "**4つ**のくりかえしを つかいます。"
         courseB_iceage_loops9_c: 赤いせんのとおりに いってみよう。
       courseB_iceage_loops9_2019:
         courseB_iceage_loops9_a: うまくいかない？そんなときは、すこしづつ つくってみよう。すこし つくったら、どんどん実行（じっこう）してみよう。
-        courseB_iceage_loops9_b: こたえ、**4つ**のくりかえしを つかいます。
+        courseB_iceage_loops9_b: "**4つ**のくりかえしを つかいます。"
         courseB_iceage_loops9_c: 赤いせんのとおりに いってみよう。
       courseB_maze_seq1:
         courseB_maze_seq1_a: <xml><block type="when_run"/></xml> の下にトリさんを前にうごかすブロックをひっつけて。
@@ -7938,14 +8051,14 @@ ja-JP:
         courseB_starWars_prog9_c: |-
           `くりかえし` <xml><block type="controls_repeat_simplified">
               <title name="TIMES">3</title>
-            </block></xml> を つかってみましょう。
+            </block></xml> を つかってみよう。
       courseB_starWars_prog9_2019:
         courseB_starWars_prog9_a: ミスをおそれないで！まちがってもいいから、プログラムを書いたら実行して、どうなるか見てみよう。
         courseB_starWars_prog9_b: パズルをクリアするほうほうは、たくさんあります。
         courseB_starWars_prog9_c: |-
           `くりかえし` <xml><block type="controls_repeat_simplified">
               <title name="TIMES">3</title>
-            </block></xml> を つかってみましょう。
+            </block></xml> を つかってみよう。
       courseC19_playLab_EOC1:
         courseE_playLab_scaffold1_a: "`セット キャラ 1 ??? の絵`で、キャラを追加することができます。"
         courseE_playLab_scaffold1_b: プログラムが開始したときにキャラが登場するよう `実行（じっこう）した時`の下に`セット
@@ -8178,6 +8291,18 @@ ja-JP:
 
           **ピンボールl** - 矢じるしキーで キャラを うごかして、ほかの キャラに さわったら ランダムに 音を鳴らすというのは どうですか？
       courseC_PlayLab_eventsFP_2019:
+        idea1: |-
+          _アイデアがひつよう？_
+
+          **そこにいるのは、だれ？** てきとうをつかって、キャラを出します。そうすれば、だれが 出てくるか だれにも わかりません。
+
+          <img src= "https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif" style="width: 200px">
+        idea2: |-
+          _アイデアがひつよう？_
+
+          **ぼうけんに でかけよう** - はいけいを変えて、 キャラに どこに いるか しゃべらせよう。
+
+          <img src= "https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif" style="width: 200px">
         idea3: |-
           _アイデアがひつよう？_
 
@@ -8322,6 +8447,18 @@ ja-JP:
               <title name="VALUE">Bird</title>
             </block>
           </xml>
+      courseC_artist_loops1b_2019:
+        courseC_artist_loops1b_a: |-
+          ひつようなブロックは、これ。
+
+          <xml>
+            <block type="draw_turn_by_constant_dropdown">
+              <title name="DIR">???</title>
+              <title name="VALUE" config="45,60,90,120,180">???</title>
+            </block>
+          </xml>
+
+          曲がる方向と角度をえらぶことができます。
       courseC_artist_loops2a:
         courseC_artist_loops2a_a: くり返しの中で200、200にジャンプして、鳥のスタンプを押してから30度曲がってね。
         courseC_artist_loops2a_b: "`くりかえし`ブロックにある数字をクリックして、数を変えよう。"
@@ -8329,6 +8466,7 @@ ja-JP:
         courseC_artist_loops2a_a: くり返しの中で200、200にジャンプして、鳥のスタンプを押してから30度曲がってね。
         courseC_artist_loops2a_b: "`くりかえし`ブロックにある数字をクリックして、数を変えよう。"
       courseC_artist_loops2a_2019:
+        courseC_artist_loops2a_a: くり返しの中に、真ん中にジャンプする、向きをかえる、スタンプをおす を 入れます。
         courseC_artist_loops2a_b: "`くりかえし`ブロックにある数字をクリックして、数を変えよう。"
       courseC_artist_loops3a:
         courseC_artist_loops3a_a: 鳥のスタンプを押した後に、１つだけブロックを追加しよう。
@@ -8336,6 +8474,43 @@ ja-JP:
       courseC_artist_loops3a_2018:
         courseC_artist_loops3a_a: 鳥のスタンプを押した後に、１つだけブロックを追加しよう。
         courseC_artist_loops3a_b: "`スタンプ`の ドロップダウンメニューを 押して、コウモリに変えよう。"
+      courseC_artist_loops3a_2019:
+        courseC_artist_loops3a_a: くり返しの中で 1つ目のスタンプをおした後に もう1つブロックを ついかしよう。
+        courseC_artist_loops3a_b: |-
+          プログラムは、こんな感じになります！
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">???</title>
+                  <statement name="DO">
+                    <block type="jump_to">
+                      <title name="VALUE">13</title>
+                      <next>
+                        <block type="draw_turn_by_constant_dropdown">
+                          <title name="DIR">???</title>
+                          <title name="VALUE" config="1,2,5,10,12,20,30,45,60,90,120,180">???</title>
+                          <next>
+                            <block type="sticker">
+                              <title name="VALUE">Cat</title>
+                              <next>
+                                <block type="sticker">
+                                  <title name="VALUE">Dog</title>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </xml>
+
+          スタンプは、自分の好きなものを使おう。
       courseC_artist_loops4a:
         courseC_artist_loops4a_a: |-
           これを使って、前にジャンプしてください。
@@ -8372,6 +8547,45 @@ ja-JP:
           </xml>
 
           数字を変えるのを忘れないでね！
+        courseC_artist_loops4a_b: |-
+          こんなふうに してみよう。
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">???</title>
+                  <statement name="DO">
+                    <block type="jump_to">
+                      <title name="VALUE">13</title>
+                      <next>
+                        <block type="draw_turn_by_constant_dropdown">
+                          <title name="DIR">???</title>
+                          <title name="VALUE" config="1,2,5,10,12,20,30,45,60,90,120,180">???</title>
+                          <next>
+                            <block type="sticker">
+                              <title name="VALUE">Cat</title>
+                              <next>
+                                <block type="jump_by_constant">
+                                  <title name="DIR">jumpForward</title>
+                                  <title name="VALUE">???</title>
+                                  <next>
+                                    <block type="sticker">
+                                      <title name="VALUE">Dog</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </xml>
       courseC_artist_loops5a:
         courseC_artist_loops5a_a: "`スタンプ`の ドロップダウンメニューで キャラクターを かえることが できます。"
       courseC_artist_loops5a_2018:
@@ -8408,6 +8622,62 @@ ja-JP:
             </block>
           </xml>
         courseC_artist_loops5b_b: 好きな形をえらんだら、同じピクセルの 前にすすむ と 後ろにすすむを 追加しよう。
+        courseC_artist_loops5b_c: |-
+          こんなふうに してみよう。
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="draw_line_style_pattern">
+                  <title name="VALUE">rainbowLine</title>
+                  <next>
+                    <block type="controls_repeat">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="jump_to">
+                          <title name="VALUE">13</title>
+                          <next>
+                            <block type="draw_move_by_constant">
+                              <title name="DIR">moveForward</title>
+                              <title name="VALUE">???</title>
+                              <next>
+                                <block type="draw_move_by_constant">
+                                  <title name="DIR">moveBackward</title>
+                                  <title name="VALUE">???</title>
+                                  <next>
+                                    <block type="draw_turn_by_constant_dropdown">
+                                      <title name="DIR">???</title>
+                                      <title name="VALUE" config="1,2,5,10,12,20,30,45,60,90,120,180">???</title>
+                                      <next>
+                                        <block type="sticker">
+                                          <title name="VALUE">Cat</title>
+                                          <next>
+                                            <block type="jump_by_constant">
+                                              <title name="DIR">jumpForward</title>
+                                              <title name="VALUE">???</title>
+                                              <next>
+                                                <block type="sticker">
+                                                  <title name="VALUE">Dog</title>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
       courseC_artist_loops6a:
         courseC_artist_loops6a_a: 上のようにするには、スタンプとスタンプの間を 75ピクセルより 小さくします。
       courseC_artist_loops6a_2018:
@@ -9475,9 +9745,9 @@ ja-JP:
         courseC_starWars_loops5_b: 下に行って まがってから 前にすすもう。
         courseC_starWars_loops5_a: 向きをかえて １つ`前に すすむ`、また 向きを かえたら、つぎに`くりかえし`をつかいます。
       courseC_starWars_loops5_2018:
-        courseC_starWars_loops5_a: ベストなプログラムは、 `前に すすむ` を1回、曲がって、つぎに、くりかえしを つかいます。
+        courseC_starWars_loops5_a: いちばん短いプログラムは、 `前に すすむ` を1回、曲がって、つぎに、くりかえしを つかいます。
       courseC_starWars_loops5_2019:
-        courseC_starWars_loops5_a: ベストなプログラムは、 `前に すすむ` を1回、曲がって、つぎに、くりかえしを つかいます。
+        courseC_starWars_loops5_a: いちばん短いプログラムは、 `前に すすむ` を1回、曲がって、つぎに、くりかえしを つかいます。
       courseC_starWars_loops6:
         courseC_starWars_loops6_a: すべてのうごきを紙にかいて、くりかえしのパターンを見つけよう。
         courseC_starWars_loops6_b: |-
@@ -9554,10 +9824,10 @@ ja-JP:
         courseD_artist_project1_a: "`まがる`のドロップダウンメニューで曲がる方向をえらべるわよ！"
         courseD_artist_project1_b: "`うごく まえに` で線がかけるけど、`前に ジャンプする` ではかけません。"
       courseD_artist_2_2018:
-        courseD_artist_project1_b: "`うごく`で線はかけますが、 `ジャンプ`では線はかけません。"
+        courseD_artist_project1_b: "`うごく`で線はかけますが、 `ジャンプ`で線はかけません。"
         courseD_artist_project1_a: "`まがる`のドロップダウンメニューで曲がる方向をえらべるわよ！"
       courseD_artist_2_2018_2019:
-        courseD_artist_project1_b: "`うごく`で線はかけますが、 `ジャンプ`では線はかけません。"
+        courseD_artist_project1_b: "`うごく`で線はかけますが、 `ジャンプ`で線はかけません。"
         courseD_artist_project1_a: "`まがる`のドロップダウンメニューで曲がる方向をえらべるわよ！"
       courseD_artist_5_2018:
         '1': 図形を逆にするとき、曲がる角度を変えるのをわすれないでね。
@@ -10173,6 +10443,10 @@ ja-JP:
           すすむ`を使います。道を進みながら、花があるか調べます。`もし 花で`あれば、`花のミツをとる`します。
         courseD_bee_conditionals5_b: "`前に道がある間`の中で、前に進んで花があるか調べます。花があるか調べるには どうすればいいかな？花があったら何をしますか？"
         courseD_bee_conditionals5_hintVid2: ビデオを見てパズルをクリアしよう。
+      courseD_bee_conditionals5_2019:
+        courseD_bee_conditionals5_a: "`もし 花で` を使えば、くり返しの入れ子にすることでパズルをクリアできます。 左右の道のプログラムと上下の道のプログラムを書いて、2回くり返します。"
+        courseD_bee_conditionals5_c: 道を進むとき、 `前に すすむ`が必要です。前に進むとき、花があるかチェックします。 `もし
+          花で やること`で、`花のミツをとる`します。
       courseD_bee_conditionals6:
         courseD_bee_conditionals6_hintVid1: わからないときは、ビデオを見てみよう！
         courseD_bee_conditionals6_a: "`もし`を使って、くもの下にあるが ハチの巣かどうか 調べてみよう。"
@@ -10285,7 +10559,7 @@ ja-JP:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">></title>
+              <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -10296,7 +10570,7 @@ ja-JP:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">></title>
+              <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -10307,7 +10581,7 @@ ja-JP:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">></title>
+              <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -10428,10 +10702,10 @@ ja-JP:
       courseD_bounce_events11s_2019:
         courseD_bounce_events11s_a: ボールをなげるのは、ゲームをスタートしたとき、ゴールに入ったとき、ボールが手から落ちた時の3つです。
       courseD_bounce_events12s_2018:
-        courseD_bounce_events12s_a: "`実行（じっこう）した時`の下でブロックをひっつけて、ボールや手の動くスピードを変えることができます。"
+        courseD_bounce_events12s_a: "`実行（じっこう）した時`の下にブロックをひっつけて、ボールや手の動くスピードを変えることができます。"
         courseD_bounce_events12s_b: ポイントを2倍にして、チームのロゴを変えてみよう。
       courseD_bounce_events12s_2019:
-        courseD_bounce_events12s_a: "`実行（じっこう）した時`の下でブロックをひっつけて、ボールや手の動くスピードを変えることができます。"
+        courseD_bounce_events12s_a: "`実行（じっこう）した時`の下にブロックをひっつけて、ボールや手の動くスピードを変えることができます。"
         courseD_bounce_events12s_b: ポイントを2倍にして、チームのロゴを変えてみよう。
       courseD_bounce_events1s_2018:
         courseD_bounce_events1s_a: |-
@@ -10503,20 +10777,20 @@ ja-JP:
           <xml>  <block type="bounce_whenPaddleCollided" deletable="false"> <next> <block type="bounce_bounceBall"/></next></block></xml>
       courseD_bounce_events6s_2018:
         courseD_bounce_events6s_a: |-
-          このブロックは、ついか できたかな？
+          このブロックは、ついか したかな？
 
           <xml><block type="bounce_whenWallCollided" deletable="false"><next><block type="bounce_bounceBall"></block></next></block></block></xml>
         courseD_bounce_events6s_b: ちゃんとプログラムできていれば、手は動かさなくても だいじょうぶ。
       courseD_bounce_events6s_2019:
         courseD_bounce_events6s_a: |-
-          このブロックは、ついか できたかな？
+          このブロックは、ついか したかな？
 
           <xml><block type="bounce_whenWallCollided" deletable="false"><next><block type="bounce_bounceBall"></block></next></block></block></xml>
         courseD_bounce_events6s_b: ちゃんとプログラムできていれば、手は動かさなくても だいじょうぶ。
       courseD_bounce_events7s_2018:
-        courseD_bounce_events7s_a: ほかの場所でも 音が なるようにしてみよう。
+        courseD_bounce_events7s_a: ほかの場所でも 音が なるようにしよう。
       courseD_bounce_events7s_2019:
-        courseD_bounce_events7s_a: ほかの場所でも 音が なるようにしてみよう。
+        courseD_bounce_events7s_a: ほかの場所でも 音が なるようにしよう。
       courseD_collector_debugging1:
         courseD_collector_debugging1_a: |-
           "ステップ" ボタンをおして、プログラムの １ステップ目が あっているか たしかめよう。
@@ -10665,7 +10939,7 @@ ja-JP:
 
           どこで まちがったのかな？
         courseD_collector_debugging6_b: ワークスペースにあるブロックは、ぜんぶ使います。わからなくなったら、"実行（じっこう）した時"の下にブロックを
-          ひっつけて どうなくか実行（じっこう）してみよう。
+          ひっつけて どうなるか実行（じっこう）してみよう。
       courseD_collector_debugging6a_2019:
         courseD_collector_debugging6_a: |-
           "ステップ" ボタンをクリックしてプログラムを実行してみよう。さいしょの 動きはあってる？
@@ -10674,7 +10948,7 @@ ja-JP:
 
           どこで まちがったのかな？
         courseD_collector_debugging6_b: ワークスペースにあるブロックは、ぜんぶ使います。わからなくなったら、"実行（じっこう）した時"の下にブロックを
-          ひっつけて どうなくか実行（じっこう）してみよう。
+          ひっつけて どうなるか実行（じっこう）してみよう。
       courseD_collector_debugging8:
         courseD_collector_debugging8_a: くりかえしを使えば、かんたんにできるところが あるのが わかるかな？
         courseD_collector_debugging8_b: くりかえしの入れ子を使えば、プログラムを短くできるよ。
@@ -10688,24 +10962,12 @@ ja-JP:
           \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
           name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
           \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
-          \   <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
-        courseD_collector_debugging_challenge2_b: |-
-          次に道にそって宝石を集めます。
-
-          ![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)
-          さっき作ったプログラムに 次のブロックを加えます。
-
-          <xml><block type="maze_move">
-                              <title name="DIR">moveBackward</title>
-                            </block>
-          <block type="controls_repeat">
-                  <title name="TIMES">4</title>
-                  <statement name="DO">
-
-                  </statement>
-                </block>
-
-          </xml>
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
+        courseD_collector_debugging_challenge2_b: "次に道にそって宝石を集めます。\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04
+          AM.png>)\nさっき作ったプログラムに 次のブロックを加えます。\n\n<xml><block type=\"maze_move\">\n
+          \                   <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block
+          type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement
+          name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
         courseD_collector_debugging_challenge2_c: "最後に他の道にある たからものを 集めます。さらに 次のブロックを
           加えます。\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n
           \             </block>\n      <block type=\"controls_repeat\">\n        <title
@@ -11071,6 +11333,8 @@ ja-JP:
         courseD_farmer_condLoops6_a: "`前に道がある間` か `もし先に道があれば やること/でなければ` を使って、うずまき状に進みましょう。"
         courseD_farmer_condLoops6_b: トウモロコシがあるかチェックする必要があります。プログラムの最後の最後でカボチャを収かくします。
       courseD_farmer_condLoops6_2019:
+        courseD_farmer_condLoops6_a: "`前に道がある間` か `もし 先に 道があれば やること / でなければ` を使って、農夫を
+          うずまき状に 進ませましょう。"
         courseD_farmer_condLoops6_b: トウモロコシがあるかチェックする必要があります。プログラムの最後の最後でカボチャを収かくします。
       courseD_farmer_condLoops7:
         courseD_farmer_condLoops7_a: |-
@@ -11089,6 +11353,7 @@ ja-JP:
           注意 うずまき状に行くのがもっとも簡単です。
 
           ![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)
+        courseD_farmer_condLoops7_b: "`前に道がある間` を使えば、農夫を つきあたりまで 行かせることができます。"
       courseD_farmer_condLoops_challenge1:
         courseD_farmer_condLoops_challenge1_a: '"ステップ"ボタンでプログラムを実行してみよう。'
         courseD_farmer_condLoops_challenge1_b: カボチャがあれば、`ピック カボチャ`します。カボチャじゃなければ、何をしますか？
@@ -11257,21 +11522,21 @@ ja-JP:
         courseD_harvester_nested_loops_challenge1_b: トウモロコシはたくさんあるので、 `ピック トウモロコシ`を何回も行います。
         courseD_harvester_nested_loops_challenge1_c: メインのくり返しの中にも くり返しを 入れます。
       courseD_iceage_loops1:
-        courseD_iceage_loops1_a: こおりの われめに ちゅういしてね！おっこちたら、こおっちゃうよ。
+        courseD_iceage_loops1_a: こおりの われめに ちゅういしてね！おちたら、こおっちゃうよ。
         courseD_iceage_loops1_b: |-
           このブロックを つかいましょう。
 
           <xml><block type="maze_moveForward"/></xml>
       courseD_iceage_loops10:
-        courseB_iceage_loops10_a: こおりの われめに ちゅういしてね！おっこちたら、こおっちゃうよ。
-        courseB_iceage_loops10_b: ドングリまで いくみちを こえに だして いってみるか、かみに かいてみて。パターンは みつかるかな？
+        courseB_iceage_loops10_a: こおりの われめに ちゅういしてね！おちたら、こおっちゃうよ。
+        courseB_iceage_loops10_b: ドングリまで いくみちを こえに だして いってみるか、かみに かいてみよう。パターンは みつかるかな？
         courseB_iceage_loops10_c: 赤いせんのとおりに いってみよう。
       courseD_iceage_loops10_2019:
-        courseB_iceage_loops10_a: こおりの われめに ちゅういしてね！おっこちたら、こおっちゃうよ。
-        courseB_iceage_loops10_b: ドングリまで いくみちを こえに だして いってみるか、かみに かいてみて。パターンは みつかるかな？
+        courseB_iceage_loops10_a: こおりの われめに ちゅういしてね！おちたら、こおっちゃうよ。
+        courseB_iceage_loops10_b: ドングリまで いくみちを こえに だして いってみるか、かみに かいてみよう。パターンは みつかるかな？
         courseB_iceage_loops10_c: 赤いせんのとおりに いってみよう。
       courseD_iceage_loops1_2019:
-        courseD_iceage_loops1_a: こおりの われめに ちゅういしてね！おっこちたら、こおっちゃうよ。
+        courseD_iceage_loops1_a: こおりの われめに ちゅういしてね！おちたら、こおっちゃうよ。
         courseD_iceage_loops1_b: |-
           このブロックを つかいましょう。
 
@@ -11291,6 +11556,12 @@ ja-JP:
             </block></xml>
         courseB_iceage_loops3_b: コードをくり返すために、 `くりかえし` を取り出して、くり返したいブロックをその中に入れよう。
       courseD_iceage_loops3_2019:
+        courseB_iceage_loops3_a: |-
+          このブロックを使おう。
+
+           <xml><block type="controls_repeat_dropdown">
+              <title name="TIMES" config="2-10">5</title>
+            </block></xml>
         courseB_iceage_loops3_b: コードをくり返すために、 `くりかえし` を取り出して、くり返したいブロックをその中に入れよう。
       courseD_iceage_loops4:
         courseD_iceage_loops4_a: どんどん 実行（じっこう）して、どうなるか みて みよう！
@@ -11301,12 +11572,12 @@ ja-JP:
         courseD_iceage_loops4_b: スクラットがドンクリにたどり着くまでの動きを書き出してみよう。パターンは見つかったかな？
         courseD_iceage_loops4_c: 赤いせんのとおりに いってみよう。
       courseD_iceage_loops6:
-        courseD_iceage_loops6_a: "`前に すすむ`を使うのは、3つだけ。"
-        courseD_iceage_loops6_b: "**もうひとつ** くりかえしを つくります。"
+        courseD_iceage_loops6_a: "`前に すすむ`は、3つ使います。"
+        courseD_iceage_loops6_b: "**もうひとつ** くりかえしを つくります！"
         courseD_iceage_loops6_c: 赤いせんのとおりに いってみよう。
       courseD_iceage_loops6_2019:
-        courseD_iceage_loops6_a: "`前に すすむ`を使うのは、3つだけ。"
-        courseD_iceage_loops6_b: "**もうひとつ** くりかえしを つくります。"
+        courseD_iceage_loops6_a: "`前に すすむ`は、3つ使います。"
+        courseD_iceage_loops6_b: "**もうひとつ** くりかえしを つくります！"
         courseD_iceage_loops6_c: 赤いせんのとおりに いってみよう。
       courseD_iceage_loops7:
         courseB_iceage_loops7_a: うまく いかないときは、かみに どうやって いけばいいか かいてみよう。パターンはみつかった？
@@ -11326,14 +11597,19 @@ ja-JP:
         courseD_iceage_loops8_c: 赤いせんのとおりに いってみよう。
       courseD_iceage_loops9:
         courseD_iceage_loops9_a: うまくいかない？そんなときは、すこしづつ つくってみよう。すこし つくったら、どんどん実行（じっこう）してみよう。
-        courseD_iceage_loops9_b: こたえ、**4つ**のくりかえしを つかいます。
+        courseD_iceage_loops9_b: "**4つ**のくりかえしを つかいます。"
         courseD_iceage_loops9_c: 赤いせんのとおりに いってみよう。
       courseD_iceage_loops9_2019:
         courseD_iceage_loops9_a: うまくいかない？そんなときは、すこしづつ つくってみよう。すこし つくったら、どんどん実行（じっこう）してみよう。
-        courseD_iceage_loops9_b: こたえ、**4つ**のくりかえしを つかいます。
+        courseD_iceage_loops9_b: "**4つ**のくりかえしを つかいます。"
         courseD_iceage_loops9_c: 赤いせんのとおりに いってみよう。
+      courseD_maze_intro4_2019:
+        courseC_maze_programming4_a: トリさんが どちらに曲がるかは、トリさんが 向いている方向で 決まります。トリさんは いま
+          右を向いているので、下に進みます。
+        courseC_maze_programming4_b: 道にそって進むには、前にすすんで、曲がって、また、前にすすんで、さっき曲がった方向とは逆に曲がります。もう一回前に進めば、ブタをつかまえることができます。
       courseD_maze_intro5a_2019:
         courseC_maze_programming5_a: '"ステップ"ボタンを押せば、1行づつ実行されるので、次に何をすればいいか わかりやすくなります。'
+        courseC_maze_programming5_b: 曲がる方向は、トリさんが向いている方向で決まります。
         courseC_maze_programming5_c: ミスをおそれないで！まちがってもいいから、ブロックを引っ付けたら、どうなるか実行してみよう。
       courseD_maze_nestedLoops3:
         courseD_maze_nestedLoops3_a: "`くりかえし` の中に、もう一つくり返しを作ってみよう。"
@@ -11446,6 +11722,9 @@ ja-JP:
       courseD_maze_ramp4_2018:
         courseC_maze_programming4_a: 曲がる方向の右左は、トリさんが向いている方向で決まります。いま、トリさんは右の方を向いているので、右に回ると下にほうに行きます。
         courseC_maze_programming4_b: 道に沿って進むには、前に進む、曲がる、前に進む、はじめと反対側に曲がります。もう一回前に進むとブタのところに行けます。
+      courseD_maze_ramp4_2019:
+        courseC_maze_programming4_a: 曲がる方向の右左は、スクラットが向いている方向で決まります。いま、スクラットは右の方を向いているので、右に回ると下にほうに行きます。
+        courseC_maze_programming4_b: 道にそって進むには、前にすすんで、曲がって、また、前にすすんで、さっき曲がった方向とは逆に曲がります。もう一回前に進めば、ブタをつかまえることができます。
       courseD_maze_ramp5:
         courseC_maze_programming5_a: '"ステップ"ボタンを押せば、1行づつ実行されるので、次に何をすればいいか わかりやすくなります。'
         courseC_maze_programming5_b: 曲がる方向は、トリさんが向いている方向で決まります。
@@ -11468,6 +11747,7 @@ ja-JP:
         courseC_maze_programming5_c: ミスをおそれないで！まちがってもいいから、ブロックを引っ付けたら、どうなるか実行してみよう。
       courseD_maze_ramp5a_2019:
         courseC_maze_programming5_a: '"ステップ"ボタンを押せば、1行づつ実行されるので、次に何をすればいいか わかりやすくなります。'
+        courseC_maze_programming5_b: 曲がる方向は、スクラットが向いている方向で決まります。
         courseC_maze_programming5_c: ミスをおそれないで！まちがってもいいから、ブロックを引っ付けたら、どうなるか実行してみよう。
       courseD_maze_ramp5b:
         courseC_maze_programming5_a: '"ステップ"ボタンを押せば、1行づつ実行されるので、次に何をすればいいか わかりやすくなります。'
@@ -11662,6 +11942,8 @@ ja-JP:
           残ったブロックをもとにもどします。
         courseC_maze_programming3_b: 右に曲がるか左に曲がるかは、スクラットが向いている方向で決まります。
       courseD_scrat_ramp4:
+        courseC_maze_programming4_a: 曲がる方向の右左は、スクラットが向いている方向で決まります。いま、スクラットは右の方を向いているので、右に回ると下にほうに行きます。
+        courseC_maze_programming4_b: 道にそって進むには、前にすすんで、曲がって、また、前にすすんで、さっき曲がった方向とは逆に曲がります。もう一回前に進めば、ブタをつかまえることができます。
         courseC_maze_programming4_c: ミスをおそれないで！まちがってもいいから、ブロックを引っ付けたら、どうなるか実行してみよう。
       courseD_scrat_ramp5:
         courseC_maze_programming5_a: '"ステップ"ボタンを押せば、1行づつ実行されるので、次に何をすればいいか わかりやすくなります。'
@@ -11821,10 +12103,10 @@ ja-JP:
           下に おりてください。
       courseE_artist_functions7_2018:
         courseD_artist_functions7_a: まずは、まどをかく関数を作ってみよう！
-        courseD_artist_functions7_b: 2階から1階に行くには、右に曲がって、150ピクセルジャンプして、また、右を向きます。これで残りの窓をかく方向を向きます。
+        courseD_artist_functions7_b: 2階から1階に行くには、右に曲がって、150ピクセル ジャンプして、また、右を向きます。これで残りの窓をかく方向を向きます。
       courseE_artist_functions7_2019:
         courseD_artist_functions7_a: まずは、まどをかく関数を作ってみよう！
-        courseD_artist_functions7_b: 2階から1階に行くには、右に曲がって、150ピクセルジャンプして、また、右を向きます。これで残りの窓をかく方向を向きます。
+        courseD_artist_functions7_b: 2階から1階に行くには、右に曲がって、150ピクセル ジャンプして、また、右を向きます。これで残りの窓をかく方向を向きます。
       courseE_artist_functions8:
         courseD_artist_functions8_f: "`うごく まえに` は１つだけで `前に ジャンプする` と `後ろに ジャンプする`
           は たくさん使うよ！"
@@ -11861,7 +12143,7 @@ ja-JP:
           一行が、３つの正方形で できているのが わかるかな。何行 かけばいいかな、また、どこから かきは始めればいいかな？
 
           ![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)
-        courseD_artist_functions8_c: 一行のずれた正方形の列をかき終わったら、次をかくために、下と後ろにジャンプします。
+        courseD_artist_functions8_c: 少しずらして次の列をかくには、正方形の列をかき終わった後、下と後ろにジャンプします。
         courseD_artist_functions8_g: "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
       courseE_artist_functions8_2019:
         courseD_artist_functions8_f: "`うごく まえに` は１つだけで `前に ジャンプする` と `後ろに ジャンプする`
@@ -11880,7 +12162,7 @@ ja-JP:
           一行が、３つの正方形で できているのが わかるかな。何行 かけばいいかな、また、どこから かきは始めればいいかな？
 
           ![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)
-        courseD_artist_functions8_c: 一行のずれた正方形の列をかき終わったら、次をかくために、下と後ろにジャンプします。
+        courseD_artist_functions8_c: 少しずらして次の列をかくには、正方形の列をかき終わった後、下と後ろにジャンプします。
         courseD_artist_functions8_g: "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
       courseE_artist_functions8b_2018:
         courseD_artist_functions8_f: もようを かくには、`前に ジャンプする` を1つ 使います！
@@ -12072,7 +12354,7 @@ ja-JP:
       courseE_bee_concept2_2018:
         courseE_bee_concept2_a: "`前に道がある間` を使ってみよう。"
         courseE_bee_concept2_d: "`以下の間`の条件を 花のミツ>0 にすることで、ミツがあるか 調べることが できます。これは、
-          `花のミツがある間`と同じ意味です。 "
+          `花のミツがある間`と同じ動きをします。 "
         courseE_bee_concept2_b: "`前に道がある間` を使って、ハチミツを作りながら、道を最後まで進みます。"
         courseE_bee_concept2_c: 道を最後まで行ったら、どっちに曲がる？
       courseE_bee_concept3:
@@ -12263,10 +12545,10 @@ ja-JP:
         courseE_farmer_functions6c_c: トウモロコシかどうか調べるのをわすれないで！
       courseE_farmer_functions7a1_2018:
         courseE_farmer_functions7a1_2018_a: ツールボックス`関数（かんすう）`の下にあるブロックで 関数を 作ります。
-        courseE_farmer_functions7a1_2018_b: それを使いところで 関数を よぶのを わすれないで。
+        courseE_farmer_functions7a1_2018_b: 関数を作った後、関数を よぶのを わすれないで。
       courseE_farmer_functions7a1_2019:
         courseE_farmer_functions7a1_2018_a: ツールボックス`関数（かんすう）`の下にあるブロックで 関数を 作ります。
-        courseE_farmer_functions7a1_2018_b: それを使いところで 関数を よぶのを わすれないで。
+        courseE_farmer_functions7a1_2018_b: 関数を作った後、関数を よぶのを わすれないで。
       courseE_farmer_functions7b:
         courseE_farmer_functions7b_a: 関数を使わなくてもクリアすることができます。
         courseE_farmer_functions7b_b: "`もし やること/でなければ` を使って作物が何か調べて、作物の種類によって曲がる方向を変えよう。"
@@ -12285,12 +12567,12 @@ ja-JP:
         courseE_farmer_functions9a1_2018a: さっきのパズルで使った関数と同じものを作ろう。
         courseE_farmer_functions9a1_2018b: １つ前のパズルと同じやり方で、半分はクリアできます。
         courseE_farmer_functions9a1_2018c: 残ったレタスをしゅうかくするには、関数を呼ぶ前に 何回か `まがる` と `前に
-          すすむ` 必要があります。
+          すすむ` を行う必要があります。
       courseE_farmer_functions9a1_2019:
         courseE_farmer_functions9a1_2018a: さっきのパズルで使った関数と同じものを作ろう。
         courseE_farmer_functions9a1_2018b: １つ前のパズルと同じやり方で、半分はクリアできます。
         courseE_farmer_functions9a1_2018c: 残ったレタスをしゅうかくするには、関数を呼ぶ前に 何回か `まがる` と `前に
-          すすむ` 必要があります。
+          すすむ` を行う必要があります。
       courseE_farmer_functions9b:
         courseE_farmer_functions9b_a: 道にそって進むには、`もし やること` や`もし やること/でなければ`を入れ子にして
           使います。
@@ -15542,3 +15824,8 @@ ja-JP:
       iceage_warn_ice_age:
         iceage_warn_ice_age_a: '2ブロック追加すれば、このパズルをクリアできます。 '
         iceage_warn_ice_age_b: プログラムを実行したときにやることを `実行（じっこう）した時`の下に引っ付けよう。
+      Dance_Party_05:
+        validation: "**このレベルをクリアするにはどうすればよいですか？**\n\n\\-ダンサーは、レベルが終了する前に少なくとも4つの異なるダンスの動きを繰り返す必要があります。
+          \n\n_このレベルは12小節後に終了します。_"
+      Dance_Party_extras_alternate_2019:
+        alternate: 代替ブロックは「ダンサー」カテゴリにあります。

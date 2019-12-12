@@ -19,6 +19,11 @@ da:
       pair_programmer: 'Du er i øjeblikket ved at par-programmere med en studerende, der ikke har adgang til dette indhold. For at få adgang til dette indhold, stop par-programmering og prøv igen senere.'
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: "ugyldigt!. Bemærk, at hvert link kun kan blive brugt en gang, til at nulstille din adgangskode, eller password. Kun det sidst sendte link vil virke."
       messages:
         blank: "påkrævet"
         blank_plural: "påkrævet"
@@ -45,6 +50,7 @@ da:
         finish_sign_up_subheader_markdown: 'Fyll ut for å gjøre ferdig Code.org-konto for **%{email}**.'
         finish_sign_up_subheader_provider: 'Udfyld følgende oplysninger for at afslutte oprettelsen af en Code.org konto <strong>%{provider}</strong> for <strong>%{email}</strong>.'
         finish_sign_up_subheader_provider_markdown: 'Fyll ut følgende informasjon for å fullføre opprettelsen av en Code.org konto med **%{provider}** for **%{email}**.'
+        reset_password_token: "Adgangskode linket du har brugt"
         error:
           future: kan ikke være i fremtiden
   beta: "beta"
@@ -63,7 +69,11 @@ da:
   heading_x_of_y: "%{heading} (side %{x} af %{y})"
   join_section:
     code:
+      title: 'Deltag i en del af Code.org'
       placeholder: "Afsnitskode (ABCDEF)"
+      instructions: "Skriv den 6 bogstavskode som din lærer har har givet dig (for eksempel: \"ABCDEF\") for at deltage i denne del."
+      instructions_short: "Skriv din 6 bogstavskode"
+      submit: 'Deltag'
   add_hint_form:
     placeholder: 'Skriv dit huske-ord her'
     submit: 'Skriv huske-ord'
@@ -92,6 +102,8 @@ da:
     continue_with: 'Fortsæt med %{provider}'
     sign_in_with: 'Log ind med %{provider}'
     signed_in: 'Logget ind!'
+    signed_out_markdown: '### Du er logget ud af [Code.org](%{url}).'
+    sign_out_of_markdown: '#### Du brugte%{provider} til at logge ind. [Klik her](%{url}) for at logge ud%{provider}.'
     already_signedup: 'Allerede tilmeldt?'
     notyet_signedup: "Ikke tilmeldt endnu?"
     google_oauth2: 'Google-konto'
@@ -110,6 +122,10 @@ da:
     unable_to_connect_provider: "Ude af stand til at forbinde din Code.org konto til kontoen %{provider}. Prøv venligst igen."
     already_in_use: "Kontoen %{provider} er allerede forbundet til en anden Code.org konto."
     already_linked: "Kontoen %{provider} er allerede forbundet til en anden Code.org konto."
+    existing_account:
+      account_exists: "Super! Du har allerede en Code.org konto med som bruger %{email}"
+      sign_in: "Log på og vi vil linke til din%{provider} profil."
+      sign_up: "Er det ikke din e-mail? Vil du oprette en ny konto med en anden e-mail? Vi vil linke til din %{provider} profil, hvis du vælger at oprette en ny konto."
   signup_form:
     email_signup: 'Tilmeld dig med din e-mail'
     student_count: '%{count} elever har allerede tilmeldt sig.'
@@ -118,6 +134,7 @@ da:
     overview_markdown: 'Registrer deg for å følgje fremdrifta din eller administrere klasserommet. [Du kan bla gjennom dei ulike scenane og oppgåvene](/) utan ein konto, men du må registrere deg for å lagre framgang og prosjekt.'
     hoc_already_signed_up_heading: 'Begynd uden at logge ind'
     hoc_already_signed_up_content: 'Du er tilmeldt at undervise en time kode! Du og dine elever behøver ikke at logge på Code Studio til at deltage i denne aktivitet. For at komme i gang, <a href="%{learn_url}">vælge en tutorial</a> til dit klasseværelse og del linket med dem.<br/><br/>hvis du nød Code Studio og ønsker at gå videre, kan du oprette en adgangskode og oprette en kode til Code Studio nedenfor for at tilmelde dine elever i nogen af vores <a href="%{educate_url}">længere kurser</a>.'
+    hoc_already_signed_up_content_post_hoc: 'Tak for at du ville arrangere En Times kodning. For at logge på Code Studie, må du oprette en adgangskode til din konto. Så kan du gemme dine fremskridt, og styre din klasses. Du vil kunne oprette forløb for dine elever, og følge deres fremskridt. <a href="%{studio_url}">Du kan også med at kigge rundt og se de forskellige opgaver. </a> uden at oprette en konto.'
     hoc_already_signed_up_content_post_hoc_markdown: 'Takk for at du vil arrangere ein kodetime. For å logge deg inn på Code Studio må du lage eit passord til kontoen din. Med ein slik konto, kan du lagre framgongen din og ta kontroll over klasserommet. Du kan sette elevar opp på forskjellige kurs og spore framdrifta deira. [Du kan og fortsette å kikke på dei ulike stadiene og oppgåvene](%{studio_url})utan å lage ein konto.'
     teacher_educator_guide: 'Se lærerens guide'
     title: "Tilmeld dig Code.org"
@@ -509,6 +526,8 @@ da:
       title: 'App Lab'
       audience: 'Alder 13+'
     dance:
+      title: 'Dansefest'
+    dance-2019:
       title: 'Dansefest'
     hoc:
       title: 'Klassisk labyrint'

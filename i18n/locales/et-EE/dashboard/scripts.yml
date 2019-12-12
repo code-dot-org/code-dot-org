@@ -1666,7 +1666,6 @@ et:
             Dance Party:
               name: Tantsuõhtu
         dance-extras:
-          title: Tantsi edasi
           description: Mine põhjalikumate projjektiideedega esimesest tunnist edasi.
         coursef-2019:
           stages:
@@ -1869,7 +1868,7 @@ et:
           stages:
             Dance Party:
               name: Tantsuõhtu
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Next Steps:
               name: Järgmised sammud
@@ -1886,5 +1885,14 @@ et:
             For Loops:
               name: For tsükkel
         dance-extras-2019:
-          title: Tantsi edasi
           description: Mine põhjalikumate projjektiideedega esimesest tunnist edasi.
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Tingimuslaused
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Ühistegevused
+            Conditionals with Cards:
+              name: Tingimuslaused kaartidel

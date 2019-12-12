@@ -1505,7 +1505,7 @@ cs:
         dance:
           stages:
             Dance Party:
-              name: Taneční večírek
+              name: Dance Party
           title: Taneční večírek
           description_short: S Katy Perry, Madonnou, J. Balvinem, Siou, Keithem Urbanem, Ciarou a 25 dalšími!
           description: Vytvoř si svůj vlastní taneční večírek a sdílej ho s kamarády!
@@ -1521,13 +1521,12 @@ cs:
         dance--draft:
           stages:
             Dance Party:
-              name: Taneční večírek
+              name: Dance Party
         dance-draft:
           stages:
             Dance Party:
-              name: Taneční večírek
+              name: Dance Party
         dance-extras:
-          title: Nepřestávej tančit
           description: Pokračuj i po první hodině kódu rozšířením nápadů ve svém projektu.
         coursef-2019:
           stages:
@@ -1548,7 +1547,7 @@ cs:
         dance-low:
           stages:
             Dance Party:
-              name: Taneční večírek
+              name: Dance Party
           description_short: Nakóduj vlastní taneční party, kterou můžeš sdílet s přáteli! (Tato verze je pro pomalá připojení)
         coursed-2019:
           stages:
@@ -1565,7 +1564,7 @@ cs:
             Artist Binary:
               name: Umělecké binární
             Dance Party:
-              name: Taneční večírek
+              name: Dance Party
         coursee-2019:
           stages:
             Building a Foundation:
@@ -1603,7 +1602,7 @@ cs:
             Crowdsourcing:
               name: Crowdsourcing
             Dance Party:
-              name: Taneční večírek
+              name: Dance Party
         andrea-test:
           stages:
             'null':
@@ -1727,9 +1726,9 @@ cs:
         dance-2019:
           stages:
             Dance Party:
-              name: Taneční večírek
+              name: Dance Party
           description: Vytvoř si svůj vlastní taneční večírek a sdílej ho s kamarády!
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Loops:
               name: Smyčky
@@ -1744,5 +1743,14 @@ cs:
             For Loops:
               name: For cykly
         dance-extras-2019:
-          title: Nepřestávej tančit
           description: Pokračuj i po první hodině kódu rozšířením nápadů ve svém projektu.
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Podmínky
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Podmínky s kartami

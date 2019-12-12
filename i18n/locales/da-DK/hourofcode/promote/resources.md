@@ -22,7 +22,6 @@ A new poster set is available featuring Malala, Stephen Curry, Shakira and more!
 
 {{ promote_new_posters }}
 
-* Want to download smaller versions of these posters? <a href="https://www.dropbox.com/sh/8dqt7p9ioc4hnmu/AABQfTWLTPVh2Kgy32PSvLU3a?dl=0" target="_blank">Download them here</a>.
 * Looking for our posters from previous years? [Find them here]({{ promote/previous_posters_url }})!
 
 <a id="social"></a>
@@ -139,7 +138,7 @@ Computers are everywhere, changing every industry on the planet, but only 45% of
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. Even President Obama wrote his first line of code as part of the campaign.
 
-That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 3-9).
+Derfor deltager alle [X number] eleverne på [SCHOOL NAME] i den største læringsbegivenhed i historien: Hour of Code i løbet af Computer Science Education-ugen (3-9. december).
 
 I'm writing to invite you to attend our kickoff assembly and to see kids start the activity on [DATE].
 

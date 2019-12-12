@@ -2,6 +2,45 @@
 pt-BR:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: todos
+            '"ALIEN"': todos os alienígenas
+            '"BEAR"': todos os ursos
+            '"CAT"': todos os gatos
+            '"DOG"': todos os cães
+            '"DUCK"': todos os patos
+            '"FROG"': todos os sapos
+            '"MOOSE"': todos os alces
+            '"PINEAPPLE"': todos os abacaxis
+            '"ROBOT"': todos os robôs
+            '"SHARK"': todos os tubarões
+            '"UNICORN"': Unicórnios
+          MOVE1:
+            MOVES.Roll: Rolar
+            MOVES.ClapHigh: Bater palmas
+            MOVES.Dab: Dança dab
+            MOVES.DoubleJam: Double Jam
+            MOVES.Drop: Dança drop
+            MOVES.Floss: Dança do fio dental
+            MOVES.Fresh: Novo
+            MOVES.Clown: Palhaço
+            MOVES.Kick: Estrela
+            MOVES.ThisOrThat: Isso ou Aquilo
+            MOVES.Rest: Nenhum
+          MOVE2:
+            MOVES.Roll: Rolar
+            MOVES.ClapHigh: Bater palmas
+            MOVES.Dab: Dança dab
+            MOVES.DoubleJam: Double Jam
+            MOVES.Drop: Dança drop
+            MOVES.Floss: Dança do fio dental
+            MOVES.Fresh: Novo
+            MOVES.Clown: Palhaço
+            MOVES.Kick: Estrela
+            MOVES.ThisOrThat: Isso ou Aquilo
+            MOVES.Rest: Nenhum
       Dancelab_atTimestamp:
         text: após {TIMESTAMP} {UNIT}
         options:
@@ -410,6 +449,7 @@ pt-BR:
           LAYOUT:
             '"border"': borda
             '"inner"': quadrado interno
+            '"diamond"': diamante
             '"circle"': círculo
             '"grid"': grade
             '"row"': linha
@@ -782,6 +822,29 @@ pt-BR:
             '"bass"': grave
             '"mid"': médio
             '"treble"': agudo
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"hearts_colorful"': Corações
+            '"diamond"': diamante
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenKey:
         text: quando {KEY} for pressionado
         options:
@@ -892,6 +955,7 @@ pt-BR:
         options:
           CHOICE:
             '"this"': este
+            '"other"': outro
       gamelab_hideTitleScreen:
         text: esconder a tela do título
       gamelab_isTouchingEdges:

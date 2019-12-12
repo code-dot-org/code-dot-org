@@ -112,6 +112,7 @@ fa:
             '19': '19'
             '20': '20'
           LAYOUT:
+            '"diamond"': الماس
             '"random"': در هم
       Dancelab_randomColor:
         text: رنگ تصادفی
@@ -171,6 +172,11 @@ fa:
           PROPERTY:
             '"scale"': اندازه
             '"height"': ارتفاع
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': الماس
+            '"x"': طول (x)
       Dancelab_whenKey:
         options:
           KEY:

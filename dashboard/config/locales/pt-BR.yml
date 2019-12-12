@@ -365,6 +365,8 @@ pt-BR:
       app_lab_tutorials: Tutoriais App Lab
       game_lab_documentation: Documentação Game Lab
       game_lab_tutorials: Tutoriais Game Lab
+      sprite_lab_documentation: Documentação do Sprite Lab
+      sprite_lab_tutorials: Tutoriais do Sprite Lab
       educate_overview: Visão Geral do Educador
       educate_elementary: Ensino Fundamental
       educate_middle: Ensino Fundamental II
@@ -741,6 +743,8 @@ pt-BR:
       audience: A partir de 13 anos
       cta: Saiba como
     dance:
+      title: Festa dançante
+    dance-2019:
       title: Festa dançante
     hoc:
       title: Labirinto clássico

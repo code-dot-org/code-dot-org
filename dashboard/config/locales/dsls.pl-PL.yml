@@ -9,7 +9,9 @@ pl-PL:
         answers:
         - text: Rozpocznij od kwadratu <br/> Umieść trójkąt powyżej kwadratu <br/>
             Umieścić trójkąt poniżej kwadratu
-        - correct: true
+        - text: Zacznij od kwadratu<br/>Umieść trójkąt na prawo od kwadratu<br/>Umieść
+            równoległobok pot kwadratem<br/>Umieść trójkąt na prawo od równoległoboku
+          correct: true
         - text: Zacznij od kwadratu<br/>Umieść równoległobok nad kwadratem<br/>Umieść
             trójkąt na prawo od równoległoboku
         - text: Zacznij od kwadratu<br/>Umieść trójkąt pod kwadratem<br/>Umieść równoległobok
@@ -104,7 +106,7 @@ pl-PL:
       2-3 Maze Multi 2:
         title: 'Labirynt: Test wielokrotnego wyboru'
         questions:
-        - {}
+        - text: Który zestaw bloków zaprowadzi nie do świnki?
         answers:
         - {}
         - correct: true
@@ -449,23 +451,47 @@ pl-PL:
       Begin planning your project:
         title: tytuł
       CSD Header Size MC:
+        title: Szybkie sprawdzenie nagłówków
+        content1: Spójrz na poniższy kod i spróbuj przewidzieć, jak będą wyświetlane
+          nagłówki. Wybierz jedną z opcji po prawej stronie.
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
       CSD Header Size MC_2018:
+        title: Szybkie sprawdzenie nagłówków
+        content1: Spójrz na poniższy kod i spróbuj przewidzieć, jak będą wyświetlane
+          nagłówki. Wybierz jedną z opcji po prawej stronie.
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
       CSD Header Size MC_2018_2019:
+        title: Szybkie sprawdzenie nagłówków
+        content1: Spójrz na poniższy kod i spróbuj przewidzieć, jak będą wyświetlane
+          nagłówki. Wybierz jedną z opcji po prawej stronie.
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
       CSD U1 Lesson 5 Overview:
         markdown: |
           #Podsumowanie
@@ -558,44 +584,80 @@ pl-PL:
         - {}
         - {}
       CSD U2 lists match:
+        title: Szybkie sprawdzenie list
+        content1: Dopasuj listę do kodu, który ją tworzy.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
       CSD U2 lists match_2018:
+        title: Szybkie sprawdzenie list
+        content1: Dopasuj listę do kodu, który ją tworzy.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
       CSD U2 lists match_2018_2019:
+        title: Szybkie sprawdzenie list
+        content1: Dopasuj listę do kodu, który ją tworzy.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
       CSD U3 - conditionals - Matching:
         questions:
         - {}
@@ -918,9 +980,9 @@ pl-PL:
         markdown: |
           # Nie przestawaj tańczyć!
 
-          W części 2 stworzysz swój własny projekt. Nie ma tu żadnych łamigłówek - zamiast tego przedstawionych jest wiele projektów, które pokazują różne sposoby tworzenia bardziej złożonych układów tanecznych.
+          W części 2 stworzysz własny projekt. Nie ma tu żadnych łamigłówek - zamiast tego jest wiele projektów, które pokazują różne sposoby tworzenia bardziej złożonych imprez tanecznych.
 
-          Możesz zrealizować te poziomy _w dowolnej kolejności_. Zobacz w jaki sposób coś zostało zrobione na poprzednim poziomie lub połącz koncepcje między projektami. Wypróbuj je wszystkie, wybierz swoje ulubione i poświęć swój czas na pracę nad dodaniem ich do tego projektu, aby powstał z niego twój własny.
+          Możesz przechodzić te poziomy _w dowolnej kolejności_. Przejdź, aby zobaczyć, jak coś zostało zrobione na poprzednim poziomie, lub połącz pomysły między projektami. Wypróbuj je wszystkie, wybierz swój ulubiony i poświęć swój czas na powiększenie go, utworzyć swój własny.
 
           <a class="btn btn-large btn-primary next-stage submitButton pull-right">Kontynuuj</a>
 
@@ -928,6 +990,25 @@ pl-PL:
 
           <div style="float: left; margin: 10px">
           <a href="2">
+          <h2>
+          Tam i z powrotem
+          </h2>
+
+          <img src="https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="3">
+          <h2>
+          Więcej przycisków
+          </h2>
+
+          <img src="https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif"></a>
+
+          </div>
+          <div style="float: left; margin: 10px">
+          <a href="4">
           <h2>
           Twórzmy formację
           </h2>
@@ -937,7 +1018,7 @@ pl-PL:
           </div>
 
           <div style="float: left; margin: 10px">
-          <a href="3">
+          <a href="5">
           <h2>
           Gdzie oni poszli?
           </h2>
@@ -947,9 +1028,9 @@ pl-PL:
           </div>
 
           <div style="float: left; margin: 10px">
-          <a href="4">
+          <a href="6">
           <h2>
-          Grupy taneczne
+          Zespoły taneczne
           </h2>
 
           <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
@@ -957,7 +1038,7 @@ pl-PL:
           </div>
 
           <div style="float: left; margin: 10px">
-          <a href="5">
+          <a href="7">
           <h2>
           Ćwierćnuty
           </h2>
@@ -967,7 +1048,7 @@ pl-PL:
           </div>
 
           <div style="float: left; margin: 10px">
-          <a href="6">
+          <a href="8">
           <h2>
           Bas, średni i wysoki ton
           </h2>
@@ -977,7 +1058,7 @@ pl-PL:
           </div>
 
           <div style="float: left; margin: 10px">
-          <a href="7">
+          <a href="9">
           <h2>
           Przyspiesz, zwolnij
           </h2>

@@ -3981,7 +3981,6 @@ is:
             Dance Party:
               name: Danspartý
         dance-extras:
-          title: Halda áfram að dansa
           description: Halda áfram eftir fyrstu klukkustundina með fleiri hugmyndir að verkefnum.
         coursef-2019:
           description_short: Lærðu öll hugtökin í Grunnatriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
@@ -4538,6 +4537,8 @@ is:
               name: nýr áfangi
             Routers and Redundancy:
               name: Netbeinar og umfremd
+            The Need for Addressing:
+              name: Þörfin fyrir vistföng
         peru-2019:
           stages:
             new stage:
@@ -4550,7 +4551,7 @@ is:
           stages:
             Dance Party:
               name: Danspartý
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Getting Started:
               name: Fyrstu skrefin
@@ -4591,9 +4592,24 @@ is:
             For Loops:
               name: Frá lykkjur
         dance-extras-2019:
-          title: Halda áfram að dansa
           description: Halda áfram eftir fyrstu klukkustundina með fleiri hugmyndir að verkefnum.
         csp10-pilot:
           stages:
             new stage:
               name: nýr áfangi
+        csp4-preview:
+          stages:
+            new stage:
+              name: nýr áfangi
+        time4cs-control-unit-1:
+          stages:
+            Sequencing in Maze:
+              name: Röð aðgerða í Völundarhúsi
+            Conditionals:
+              name: Skilyrði
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Hópvistun
+            Conditionals with Cards:
+              name: Skilyrði með kortum

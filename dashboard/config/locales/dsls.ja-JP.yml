@@ -440,7 +440,7 @@ ja-JP:
           absolute; top: 79%; left: 49.8%; transform: translateX(-49.8%); font-weight:
           bold;\">実行</div>\n  <div style=\"position: absolute; top: 52%; left: 39%;
           transform: translateX(-39%); font-weight: bold;\">振り返り</div>\n</div>\n\n*
-          **定義**\n  * どのようなプログラムを作りますか？\n  * 制約条件はありますか？\n  * 完成したら どんのように動きますか？\n*
+          **定義**\n  * どのようなプログラムを作りますか？\n  * 制約条件はありますか？\n  * 完成したら どのように動きますか？\n*
           **準備**\n  * 意見を出しあう / どのようなことができるのか調べる\n  * いろいろ較べてみる\n  * 計画を作る\n* **実行**\n
           \ * 計画に従って実行する\n* **振り返り**\n  * 定義で決めた結果を得られたか？\n  * 何を学んだか、もっと良くするために何をすればいいか？\n
           \ * 新たな問題は見つかった？\n\n# コースの概要\nこれから、準備してあるゲームを利用してゲーム作りを体験します。つぎに、経験したことを活かしてオリジナルのゲームを作成して、作ったゲームをみんなの前で発表して、意見をもらいます。これはプログラムを作るうえで、とても重要なことです。
@@ -462,7 +462,7 @@ ja-JP:
           absolute; top: 79%; left: 49.8%; transform: translateX(-49.8%); font-weight:
           bold;\">実行</div>\n  <div style=\"position: absolute; top: 52%; left: 39%;
           transform: translateX(-39%); font-weight: bold;\">振り返り</div>\n</div>\n\n*
-          **定義**\n  * どのようなプログラムを作りますか？\n  * 制約条件はありますか？\n  * 完成したら どんのように動きますか？\n*
+          **定義**\n  * どのようなプログラムを作りますか？\n  * 制約条件はありますか？\n  * 完成したら どのように動きますか？\n*
           **準備**\n  * 意見を出しあう / どのようなことができるのか調べる\n  * いろいろ較べてみる\n  * 計画を作る\n* **実行**\n
           \ * 計画に従って実行する\n* **振り返り**\n  * 定義で決めた結果を得られたか？\n  * 何を学んだか、もっと良くするために何をすればいいか？\n
           \ * 新たな問題は見つかった？\n\n# コースの概要\nこれから、準備してあるゲームを利用してゲーム作りを体験します。つぎに、経験したことを活かしてオリジナルのゲームを作成して、作ったゲームをみんなの前で発表して、意見をもらいます。これはプログラムを作るうえで、とても重要なことです。
@@ -473,6 +473,33 @@ ja-JP:
       Begin planning your project_2018_2019:
         title: 計画を立てることから始める
         content1: 説明
+        markdown: |+
+          # プロジェクトのれい
+
+          さいごのプロジェクトを始めます。始める前に、いくつか れいを 見てみましょう。
+
+          | Hungry Squirrel | Alien Story |
+          |---|---|
+          | [![Hungry Squirrel (Play Lab)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Hungry Squirrel (Play Lab")](https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view) | [![Alien Story (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "Alien Story (Play Lab")](https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view) |
+          | 音を ついかしよう！ | 別のシーンをついかしよう！|
+
+      BigEvent-Unplugged:
+        markdown: |
+          # ビッグ イベント
+
+          コンピューター の せかいでは、イベントは、コンピューターを うごかすときに つかう めいれいの 1つです。このレッスンでは、おしたボタンで ちがう うごきを させられることを まなびます。
+      BinaryBracelets-Unplugged:
+        markdown: |
+          # バイナリー形式
+
+          コンピュータがわかる形式で あなたの名前を かいてみよう！
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      BinaryImages-Unplugged:
+        markdown: |
+          # バイナリー イメージ
+
+          ２つの数字（0 と 1）だけで もようをかく方法を 伝えましょう。
       CSD Header Size MC:
         answers:
         - {}
@@ -884,6 +911,41 @@ ja-JP:
         - {}
         - {}
         - {}
+      ConditionalsWithCards-Unplugged:
+        markdown: |
+          # 条件判定について
+
+          トランプを使って、"もし 赤いカードなら、1ポイント ゲット" や "もし 黒いカードなら、1ポイント ゲット" といったルールを作ってみよう。
+      Crowdsourcing-Unplugged:
+        markdown: |
+          # 助け合うこと
+
+          助け合うこと とは、コンピュータ サイエンスの世界で 問題を解決しようとするとき、あなたが一人でがんばるよりも、クラスのみんなで協力したほうが、はやく解決できる ということを 意味します。
+      DesigningForAccessibilityMarkdownLevel_2019:
+        markdown: |
+          # 使いやすさの設計
+
+          * コンピュータ サイエンスの世界で、**使いやすさ** とは、障害を持った人でも使える技術のことです。
+          * 障害には、肉体的、聴覚,、視覚など さまざまなものが あります。
+          * 障害は多様で、**スマートフォンのアプリ**をどのように使うかなど、様々な面に影響を与えます。
+          * 障害を持った人にも 使いやすいアプリを設計することで、すべての人にとって 使いやすいものになります！
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DigitalCitizenship-Unplugged:
+        markdown: |
+          # デジタル市民権
+
+          ネットで公開すると危険な情報があります。このレッスンでは、公開しても安全な情報とダメな情報について学びます。
+      DigitalFootprint-Unplugged:
+        markdown: |
+          # インターネット上の 足あと
+
+          インターネットで かきこみをすると 足あとが のこります。
+      DigitalSharing-Unplugged:
+        markdown: |
+          # 共有
+
+          とくに インタネットを世界で 所有権と著作権を尊重することの課題と利点について学びます。
       EnvelopeVariables-Unplugged:
         markdown: |
           # 変数
@@ -894,6 +956,35 @@ ja-JP:
           # くり返し
 
           くり返しを使うことで、同じことを何回も実施することができます。これから、くり返しの使い方について、学んでいきます。
+      GettingLoopy-Unplugged:
+        markdown: |
+          # くりかえし
+
+          ダンスをれいに くりかえしについて まなびます。
+      GoingPlacesSafely-unplugged:
+        markdown: |
+          # あんぜんな ばしょに 行こう
+
+          インタネットは いろいろなことが できますが、きけんな ばしょでも あります。インタネットを あんぜんに つかいましょう！
+
+          <p align=center>
+      GraphPaperProgramming-Unplugged:
+        markdown: |
+          # グラフ用紙を使ったプログラミング
+
+          友だちが同じもようをかけるように、アルゴリズム（もようのかき方）を書いてみよう。
+      HappyLoops-Unplugged:
+        markdown: |
+          # ハッピー ループ
+
+          このレッスンでは、くりかえし について まなびます！
+
+          ![](https://images.code.org/6aac7f675f0c69033f42ccac6a733f68-image-1557769673400.png)
+      HappyMaps-Unplugged:
+        markdown: |
+          # ハッピー マップ
+
+          キャラをうごかして めいろを クリアする ほうほうを かんがえよう。
       Internet Simulator Setup:
         content1: 説明
       Internet Simulator Setup 2:
@@ -1101,15 +1192,49 @@ ja-JP:
         - {}
         - {}
         - text: 南
+      MoveItMoveIt-Unplugged:
+        markdown: |
+          # うごかせ、うごかせ
+
+          ちずを みながら コマンドをつかって ゴールにすすみましょう。
       Multi-Screen Apps:
         title: タイトル
         content1: 説明
+      MyLoopyRoboticFriends-Unplugged:
+        markdown: |
+          # ロボットに同じ動きをくり返させる
+
+          くりかえしをつかえば、プログラムを 短くできます！
+      MyRoboticFriends-Unplugged:
+        markdown: |
+          # ロボットの友だち
+
+          ロボットのためにプログラムを書くことで、プログラムについて学びます。
       New Challenge Introduction:
         title: タイトル
         content1: 説明
       OPD-K5 Stage3aGo:
         title: タイトル
         content1: 説明
+      PicturingData-Unplugged:
+        markdown: |
+          # データをあつめる
+
+          プレイラボのプロジェクトを使って、データをあつめて、よそく しましょう。
+
+          ![](https://images.code.org/606a78c09a01133a1bbc1aa9c76f3320-image-1557334268558.png)
+      PowerOfWords-Unplugged:
+        markdown: |
+          # ことばの力
+
+          ネットで だれかに 意地悪を されたときのことについて、学びます。
+      PowerfulPasswords-Unplugged:
+        markdown: |
+          # 強力なパスワード
+
+          なぜ、パスワードを使うのか調べて、パスワードをつかうメリットについて学びます。強力で安全なパスワードを作る方法と それを いじする方法について学びます。
+
+          ![](https://images.code.org/9e082a5564a289bccc8e2dd79a2cae9f-image-1557869939256.png)
       Prepare for your presentation:
         title: タイトル
         content1: 説明
@@ -1123,10 +1248,45 @@ ja-JP:
           # 作品発表
 
           作品発表の時間です！先生が、どのように発表すればいいのか くわしく説明してくれます。
+      PrivatePersonalInformation-Unplugged:
+        markdown: |
+          # 個人情報の保護
+
+          ネットで 公開してもいい情報 と 公開してはいけない情報 の 違い について、学びます。
+
+          ![](https://images.code.org/872576b170b9d8aec9b29f684a1ad94e-image-1557878406833.png)
+      RelayProgramming-Unplugged:
+        markdown: |
+          # リレー プログラミング
+          チームに分かれて、みんなで もようを かくプログラムを作ります。
+      ScreenOutTheMean-Unplugged:
+        markdown: |
+          # いじめられたとき
+
+          ネットで だれかに いじめられたときのことについて、学びます。
+      SimonSays-Unplugged:
+        markdown: |
+          # サイモンさんから
+
+          ゲームをしたり、コマンドがどのように動作するか考えたりすることは、正しい答えをたどり着くのに必要なことです。
+      Songwriting-Unplugged:
+        markdown: |
+          # 作曲
+
+          歌のコーラスの例に、関数の定義と使い方について学ぼう。
       'Technique: Frequency Analysis':
         content1: 説明
       Terminology Recap:
         content1: 説明
+      TheRightAppMarkdownLevel_2019:
+        markdown: |
+          # 正しい アプリ
+
+          * みんなが、コンピューターをつかいます。とくに、スマートフォンは。
+          * スマートフォンのアプリで ともだちと はなしたり、おんがくを きいたり、かいものをしたり、ネットをしたりすることができます。
+          * どのようなことをしたいのか、すべてのひとが つかいやすいのか かんがえることは、プログラマーにとって たいせつなことです！
+
+          ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
       behaviors 1 predict:
         questions:
         - text: '`mystery behavior`がどのように動くか、 "編集"ボタンを押して見てみよう。中を見て、どのように動くか 予測してみよう。'
@@ -1141,12 +1301,16 @@ ja-JP:
           feedback: 不正解
       behaviors 4 predict:
         questions:
-        - {}
+        - text: 予測してみよう！衛星は銀河まで、どのように進みますか？
         answers:
-        - feedback: ふせいかい
-        - feedback: せいかい！
-        - {}
-        - feedback: 不正解
+        - text: 西に行ってから、南に行く
+          feedback: ふせいかい
+        - text: ななめに進む
+          feedback: せいかい！
+        - text: ジグザグに行く
+          feedback: '不正解 '
+        - text: 南に行ってから、西に行く
+          feedback: 不正解
       courseC_multi_artist_prog6_predict1:
         questions:
         - text: プログラムを実行（じっこう）したら、どんな図形が書けますか？
@@ -1408,6 +1572,13 @@ ja-JP:
           feedback: 不正解、五角形を かく くりかえしを ４回 くりかえして 一周しています。
         - text: わかりません
           feedback: 五角形を かく くりかえしを ４回 くりかえして 一周しています。
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
       courseD_multi_artist_nestedLoops9_predict1_2018:
         questions:
         - text: "”実行（じっこう）”をクリックしたら、どの図形がかけますか？"
@@ -1420,6 +1591,13 @@ ja-JP:
           feedback: 不正解、五角形を かく くりかえしを ４回 くりかえして 一周しています。
         - text: わかりません
           feedback: 五角形を かく くりかえしを ４回 くりかえして 一周しています。
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         questions:
         - text: "”実行（じっこう）”をクリックしたら、どの図形がかけますか？"
@@ -1432,6 +1610,13 @@ ja-JP:
           feedback: 不正解、五角形を かく くりかえしを ４回 くりかえして 一周しています。
         - text: わかりません
           feedback: 五角形を かく くりかえしを ４回 くりかえして 一周しています。
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
       courseD_multi_bee_conditionals1_predict1:
         questions:
         - text: くもの下は見えないけど、花があるはず。もし 花があれば、ミツを集めよう。花じゃなかったら、何もしなくていいよ。 "実行（じっこう）"をクリックしたら、どうなるか考えてみよう。
@@ -1494,7 +1679,8 @@ ja-JP:
           feedback: "`もし 花で` があるので、ハチは花ではミツをとり、ハチの巣ではハチミツを作ります。"
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         questions:
-        - {}
+        - text: '"実行（じっこう）" をクリックしたら、どうなりますか？ただし、くもの下にかくれているのは、ハチの巣が*1つ* か 花が *1つ*
+            です。'
         answers:
         - text: ハチは花ではミツをとり、ハチの巣ではハチミツを作ります。
           feedback: せいかい！
@@ -1600,6 +1786,9 @@ ja-JP:
           feedback: せいかい！
         - text: わかりません
           feedback: かいだんじょうに進んで、そこにあるトウモロコシやレタスを しゅかく しますが、カボチャだけは しゅうかく しません。
+        markdown: |
+          葉っぱは、トウモロコシとレタスになります。
+          <br/>
       courseD_multi_farmer_condLoops9_predict1_2018:
         questions:
         - text: "”実行（じっこう）”をクリックしたら、どうなるかな？"
@@ -1607,11 +1796,14 @@ ja-JP:
         - text: 全部の作物をしゅうかくできる。
           feedback: ふせいかい、カボチャをとる命令はありません。
         - text: 通った道にある作物を ひとつも 収かくしません。
-          feedback: ふせいかい、農夫は階だんみたいに進んですすんで、そこにあるトウモロコシやレタスを収かくしますが、カボチャは収かくしていません。
+          feedback: ふせいかい、農夫は階だんみたいに進んですすんで、そこにあるトウモロコシやレタスを収かくしますが、カボチャは収かくしません。
         - text: カボチャ以外の作物は、全部収かくする。
           feedback: せいかい！
         - text: わかりません
-          feedback: 農夫は階だんみたいに進んですすんで、そこにあるトウモロコシやレタスを収かくしますが、カボチャは収かくしていません。
+          feedback: 農夫は階だんみたいに進んですすんで、そこにあるトウモロコシやレタスを収かくするが、カボチャは収かくしない。
+        markdown: |
+          葉っぱは、トウモロコシとレタスになります。
+          <br/>
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         questions:
         - text: "”実行（じっこう）”をクリックしたら、どうなるかな？"
@@ -1619,11 +1811,14 @@ ja-JP:
         - text: 全部の作物をしゅうかくできる。
           feedback: ふせいかい、カボチャをとる命令はありません。
         - text: 通った道にある作物を ひとつも 収かくしません。
-          feedback: ふせいかい、農夫は階だんみたいに進んですすんで、そこにあるトウモロコシやレタスを収かくしますが、カボチャは収かくしていません。
+          feedback: ふせいかい、農夫は階だんみたいに進んですすんで、そこにあるトウモロコシやレタスを収かくしますが、カボチャは収かくしません。
         - text: カボチャ以外の作物は、全部収かくする。
           feedback: せいかい！
         - text: わかりません
-          feedback: 農夫は階だんみたいに進んですすんで、そこにあるトウモロコシやレタスを収かくしますが、カボチャは収かくしていません。
+          feedback: 農夫は階だんみたいに進んですすんで、そこにあるトウモロコシやレタスを収かくするが、カボチャは収かくしない。
+        markdown: |
+          葉っぱは、トウモロコシとレタスになります。
+          <br/>
       courseD_multi_farmer_ramp13:
         questions:
         - {}
@@ -1639,6 +1834,10 @@ ja-JP:
         - text: わかりません
           feedback: "`ピック カボチャ`がくりかえしの中にあるで、農夫は、さいごに カボチャを しゅうかくするのではなく、前に進むごとに カボチャを
             しゅうかくします。"
+        markdown: |+
+          見たことのあるブロックで書かれたプログラムがあります。このプログラムを実行したら、どうなるかわかりますか？
+
+
       courseD_multi_farmer_while10_predict2:
         questions:
         - text: このプログラムを動かしたら、どうなるかな？
@@ -1883,6 +2082,25 @@ ja-JP:
       courseE_project_exemplars_2019:
         title: Test Markdown Textbook Page
         content1: Test Markdown Textbook Page
+        markdown: |+
+          # プロジェクトの例
+
+          最後のプロジェクトをはじめます。始める前に、他のプロジェクトを見てみましょう。
+
+          ## スプライト ラボ
+
+          | モンスター ダンス (スプライト ラボ) | カップケーキ ゲーム (スプライト ラボ) |
+          |---|---|
+          | [![Monster Dance (Sprite Lab)](https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png "Monster Dance (Sprite Lab")](https://studio.code.org/projects/spritelab/S2l_b6LHSmSULTBF7CibJm1rTsngztJyu5pgORe7GBs/view) | [![Cupcake Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png "Cupcake Game (Sprite Lab")](https://studio.code.org/projects/spritelab/gXM_YU_qL_QWo1o5Wkam96oiFrYY5VUp27m2xKlp7EQ/view) |
+          | ゲームに文字やスコアを追加しよう！ | ゲームに文字やスコアを追加しよう！ |
+
+          ## アーティスト
+
+          | パターン (アーティスト) | 花もよう (アーティスト) |
+          |---|---|
+          | [![Pattern (Artist)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png "Pattern (Artist)")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view) | [![Function Flowers (Artist)](https://images.code.org/1e6da38baf996dace44581572895a4b8-image-1556822184973.png "Function Flowers (Artist)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) |
+          | かり返しの入れ子を使ってみよう！ | 関数を使ってみよう！ |
+
       courseF_bee_variables_8a_2018:
         title: ハチと変数
         questions:
@@ -1910,9 +2128,15 @@ ja-JP:
         - text: わかりません
           feedback: 関数を1回呼べば変数は1増えますが、最後に関数を2回呼ぶ前に、変数を0にしています。なので、ハチはミツを2つ集めます。
       courseF_external_variableConstant:
-        markdown: "<h2>変数について</h2>\n\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
-          style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>決まった値を入れておくための変数の学習は順調に進んでいます！
-          \n決まった値を入れておくために変数を使うのであれば、値を入れるのは1回です。変数を使えば、\"実行\"して値を変えたくなった時、1か所変えるだけでプログラムの中で**同じ**値を使うことができます。</h3>\n<br/><hr/>\n<h3>次のパートでは、プログラムの中で値が*変わる*変数をプログラムしてみましょう。</h3>\n\n"
+        markdown: |+
+          <h2>変数について</h2>
+
+          <img src="https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png" style="padding-left: 30px; width:300px; float:right;"/>
+          <h3>決まった値を入れておくための変数の学習は順調に進んでいます！
+          決まった値を入れておくために変数を使うのであれば、値を入れるのは1回です。変数を使えば、"実行"して値を変えたくなった時、1か所変えるだけでプログラムの中で**同じ**値を使うことができます。</h3>
+          <br/><hr/>
+          <h3>次のパートでは、プログラムの中で値が*変わる*変数をプログラムしてみましょう。</h3>
+
       courseF_external_variableConstant_2018:
         markdown: "<h2>変数について</h2>\n\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
           style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>決まった値を入れておくための変数の学習は順調に進んでいます！
@@ -2080,8 +2304,8 @@ ja-JP:
       courseF_markdown_loops_end:
         title: Test Markdown Textbook Page
         content1: Test Markdown Textbook Page
-        markdown: "# **\"ループ\"について 学びましょう！**  \n\n### **ループとは、何回も何回も あることを 行うことです。**
-          別の言葉で、もう一度行うことをくり返しといいます。\n\n### ループは、あるパターンをくり返すのにとても便利です。はじめに ループを 使わずにプログラムを書いてみて、それから、パターンを見つけます。\n\n###
+        markdown: "# **\"ループ\"について 学びましょう！**  \n\n### **ループとは、何回も何回も 同じことを 行うことです。**
+          別の言葉で、もう一度行うことをくり返しといいます。\n\n### ループは、あるパターンをくり返すのにとても便利です。はじめに ループを 使わずにプログラムを書いて、それから、パターンを見つけます。\n\n###
           パターンが見つかったら、それを`くりかえし`ブロックの中に入れます！\n\n---\n\n## **用語**\n\n* ### **ループ**
           - あることを何回も何回も行うこと\n\n* ### **くり返し** - もう一度行うこと\n"
       courseF_markdown_loops_intro:
@@ -2114,7 +2338,7 @@ ja-JP:
 
           ### *ループの中に*ループを入れたらどうなるか考えたことがある？
 
-          ### 今度はそれをやってみましょう！
+          ### 今度はそれをやってみよう！
 
           ### ループは あるパターンを くり返すのが得意ですが、 ループの中にループを使うのはどんなとき？考えてみよう！
           ---
@@ -2125,13 +2349,13 @@ ja-JP:
       courseF_markdown_variables_end:
         title: Test Markdown Textbook Page
         content1: Test Markdown Textbook Page
-        markdown: "# **\"変数\"について、学習しました！**\n\n### 変数を使うには、名前と値が必要です。名前は後から変えることはできませんが、値はいつでも変えることができます。プログラムで値を入れておくための箱にして、変数の名前を使うことができます！
-          \n\n---\n\n## **用語**\n\n### **変数** - 変更可能な情報を入れておくための箱\n\n"
+        markdown: "# **\"変数\"について、学習しました！**\n\n### 変数を使うには、名前と値が必要です。名前は後から変えることはできませんが、値はいつでも変えることができます。プログラムで値を入れた箱の中身は、変数の名前を使って
+          見たり 変更したりすることが できます！ \n\n---\n\n## **用語**\n\n### **変数** - 変更可能な情報を入れておくための箱\n\n"
       courseF_markdown_variables_end_2019:
         title: Test Markdown Textbook Page
         content1: Test Markdown Textbook Page
-        markdown: "# **\"変数\"について、学習しました！**\n\n### 変数を使うには、名前と値が必要です。名前は後から変えることはできませんが、値はいつでも変えることができます。プログラムで値を入れておくための箱にして、変数の名前を使うことができます！
-          \n\n---\n\n## **用語**\n\n### **変数** - 変更可能な情報を入れておくための箱\n\n"
+        markdown: "# **\"変数\"について、学習しました！**\n\n### 変数を使うには、名前と値が必要です。名前は後から変えることはできませんが、値はいつでも変えることができます。プログラムで値を入れた箱の中身は、変数の名前を使って
+          見たり 変更したりすることが できます！ \n\n---\n\n## **用語**\n\n### **変数** - 変更可能な情報を入れておくための箱\n\n"
       courseF_markdown_variables_intro:
         title: Test Markdown Textbook Page
         content1: Test Markdown Textbook Page
@@ -2176,6 +2400,10 @@ ja-JP:
           feedback: せいかい！
         - text: わかりません
           feedback: 不正解、 `まつ`のくり返しのなかでだんだん長くて 太くなっていく 線をかきます。
+        markdown: |+
+          `まつ`のcounterは、線の幅に使われています。
+
+
       courseF_multi_artist_for10_predict1_2018:
         questions:
         - text: プログラムを実行（じっこう）したら、どうなりますか？
@@ -2188,6 +2416,10 @@ ja-JP:
           feedback: せいかい！
         - text: わかりません
           feedback: 不正解、 `まつ`のくり返しのなかでだんだん長くて 太くなっていく 線をかきます。
+        markdown: |+
+          `まつ`のcounterは、線の幅に使われています。
+
+
       courseF_multi_artist_for10_predict1_2018_2019:
         questions:
         - text: プログラムを実行（じっこう）したら、どうなりますか？
@@ -2200,6 +2432,10 @@ ja-JP:
           feedback: せいかい！
         - text: わかりません
           feedback: 不正解、 `まつ`のくり返しのなかでだんだん長くて 太くなっていく 線をかきます。
+        markdown: |+
+          `まつ`のcounterは、線の幅に使われています。
+
+
       courseF_multi_artist_fwp2_predict1:
         questions:
         - text: プログラムを実行（じっこう）したら、どうなりますか？
@@ -2212,6 +2448,10 @@ ja-JP:
           feedback: 不正解、パラメータを変えることで 1つの関数で ちがう大きさの正方形をかいています。
         - text: わかりません
           feedback: パラメータを変えることで 1つの関数で ちがう大きさの正方形を2つ かいています。
+        markdown: |+
+          関数 '正方形をかく'にパラメータが追加されました。 "編集" をクリックして、関数の中身を見てみよう。
+
+
       courseF_multi_artist_variables3a_predict1:
         questions:
         - text: 変数 "length"に50をセットしました。"実行（じっこう）"をクリックしたら どうなるかな？
@@ -2260,6 +2500,9 @@ ja-JP:
           feedback: ふせいかい、くもの下に花があるか `もし 花で` で調べて、花が あればミツを 集めます。
         - text: わかりません
           feedback: くもの下に花があるか `もし 花で` で調べて、花が あればミツを 集めます。
+        markdown: 'くもで下に何があるか見えません。くもの下には、花があるかもしれません。花があれば、**一度だけ**ミツを集めましょう。
+
+'
       courseF_multi_bee_conditionals7_predict2:
         questions:
         - text: "”実行（じっこう）”をクリックしたら、どうなるかな？"
@@ -2272,6 +2515,9 @@ ja-JP:
           feedback: 不正解、`もし 花で` で、ハチは花からミツを集め、ハチの巣でハチミツを作ります。
         - text: わかりません
           feedback: "`もし 花で` で、ハチは花からミツを集め、ハチの巣でハチミツを作ります。"
+        markdown: 'くもの下には花があることもあるし、ハチの巣があることもあります！ どちらであっても、くもの下にあるのは、花が**1つ**か、ハチの巣が**1つ**です。
+
+'
       courseF_multi_bee_for3_predict1:
         questions:
         - text: プログラムを実行（じっこう）したら、どうなりますか？
@@ -2284,6 +2530,10 @@ ja-JP:
           feedback: 不正解、 `回くりかえす`でハチはミツを集めるけど、4つの花からしかミツを集めません。
         - text: 'ハチは花にあるよりも たくさんのミツを 集めようとする。 '
           feedback: 不正解、 `回くりかえす`でハチはミツを集めるけど、4つの花からしかミツを集めません。
+        markdown: |+
+          うーん！  このパズルは、`まつ` を使えば かんたんにクリアすることができる！
+
+
       courseF_multi_bee_for3_predict1_2018:
         questions:
         - text: プログラムを実行（じっこう）したら、どうなりますか？
@@ -2296,6 +2546,10 @@ ja-JP:
           feedback: 不正解、 `回くりかえす`でハチはミツを集めるけど、4つの花からしかミツを集めません。
         - text: 'わかりません '
           feedback: "`回くりかえす`でハチはミツを集めるけど、4つの花からしかミツを集めません。"
+        markdown: |+
+          うーん！  このパズルは、`まつ` を使えば かんたんにクリアすることができる！
+
+
       courseF_multi_bee_for3_predict1_2018_2019:
         questions:
         - text: プログラムを実行（じっこう）したら、どうなりますか？
@@ -2308,6 +2562,10 @@ ja-JP:
           feedback: 不正解、 `回くりかえす`でハチはミツを集めるけど、4つの花からしかミツを集めません。
         - text: 'わかりません '
           feedback: "`回くりかえす`でハチはミツを集めるけど、4つの花からしかミツを集めません。"
+        markdown: |+
+          うーん！  このパズルは、`まつ` を使えば かんたんにクリアすることができる！
+
+
       courseF_multi_bee_fwp9_predict1:
         questions:
         - text: プログラムを実行（じっこう）したら、どうなりますか？
@@ -2320,6 +2578,10 @@ ja-JP:
           feedback: 不正解、関数はパラメータにセットした数だけ、ミツかハチミツを集めます。
         - text: わかりません
           feedback: クリックして関数の中を見れば、パラメータにセットされた数だけ、ミツかハチミツを集めているのがわかります。
+        markdown: |+
+          くもの下には、花が1つか、ハチの巣が1つあります。下の質問に答える前に、関数ブロックの”編集”をクリックして、中を見てみよう。
+
+
       courseF_multi_playlab_variables4c_predictive1:
         questions:
         - text: 質問に "Ali"と答えたら どうなりますか？
@@ -2332,9 +2594,34 @@ ja-JP:
           feedback: 不正解、 `つなげる`を使えば、かいぞくのことばと質問の答えをつなげることができます。
         - text: わかりません
           feedback: '不正解、`つなげる`を使えば、かいぞくのことばに質問の答え（Ali）をつなげることができます。 '
+        markdown: |
+          **このパズルでは、新たなブロック`しつもん` を使います。**
+
+          `しつもん` ブロックはプログラムを停止させて、答えを入れるためのウインドを開きます。
+
+          入力した答えは、`しつもん`の後ろに指定した変数にセットされます。今回は、変数`name`にセットされます。
       courseF_project_exemplars_2019:
         title: Test Markdown Textbook Page
         content1: Test Markdown Textbook Page
+        markdown: |+
+          # プロジェクトの例
+
+          最後のプロジェクトを始めます。始める前に、プロジェクトの例を見てみましょう。
+
+          ## Sprite Lab
+
+          | Cupcake Game (Sprite Lab) | Helicopter Game (Sprite Lab) |
+          |---|---|
+          | [![#Bunny Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png)](https://studio.code.org/projects/spritelab/gXM_YU_qL_QWo1o5Wkam96oiFrYY5VUp27m2xKlp7EQ/view) | [![#Helicopter Game (Sprite Lab)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png)](https://studio.code.org/projects/spritelab/QeROTy1pNyjNPC-ZZdBN1mcpkmTEMUc2FYwXX0SOFAY/view) |
+          | ゲームに言葉やスコアを追加してみましょう！ | ゲームに言葉やスコアを追加してみましょう！ |
+
+          ## アーティスト
+
+          | フラワー (アーティスト) | スパイラル (アーティスト) |
+          |---|---|
+          | [![Flowers (Artist)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png)](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view) | [![Spiral (Artist)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png)](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view) |
+          | 変数を使って創作してみましょう！ | くり返しを使って創作してみましょう！|
+
       coursee_prediction_artistfunction2:
         questions:
         - text: '"実行（じっこう）"をクリックしたら、どんな絵が かかれますか？'

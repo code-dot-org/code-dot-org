@@ -76,20 +76,28 @@ ro-RO:
       CourseD_Dance_Party_04:
         dance_callout_04: Adaugă acest bloc la programul tău!
       CourseD_Dance_Party_06:
-        dance_callout_06: Adaugă un nou dansator aici
+        dance_callout_06: Adaugă noul dansator aici
       CourseD_Dance_Party_11:
         dance_callout_11_a: Bloc nou!
         dance_callout_11_b: Bloc nou!
+      CourseD_Dance_Party_11_5:
+        dance_party_11_5_groups: Caută aici blocurile „toate rațele”
       Dance_2019_01:
         dance_callout_01: Adaugă acest bloc la programul tău!
+      Dance_2019_02:
+        dance_callout_11_a: Adaugă acest bloc la programul tău.
+        arrow_buttons: Apasă butoanele cu săgeată pentru a-l controla pe dansator.
       Dance_2019_04:
         dance_callout_02: Adaugă acest bloc la programul tău!
+      Dance_2019_05:
+        dance_callout_05: Adăugați un nou eveniment în program.
       Dance_2019_06:
         dance_party_11_5_groups: Bloc nou!
       Dance_2019_07:
         setprop_hint: Bloc nou!
       Dance_2019_09:
-        new_block_1: Bloc nou!
+        new_block_3: Bloc nou!
+        new_block_4: Bloc nou!
       Dance_Party_01:
         dance_callout_01: Adaugă acest bloc la programul tău!
       Dance_Party_02:
@@ -97,10 +105,12 @@ ro-RO:
       Dance_Party_04:
         dance_callout_04: Adaugă acest bloc la programul tău!
       Dance_Party_06:
-        dance_callout_06: Adaugă un nou dansator aici
+        dance_callout_06: Adaugă noul dansator aici
       Dance_Party_11:
         dance_callout_11_a: Bloc nou!
         dance_callout_11_b: Bloc nou!
+      Dance_Party_11_5:
+        dance_party_11_5_groups: Caută aici blocurile „toate rațele”
       Infinity_move_collide:
         Infinity_move_collide_callout: Emite un sunet când se produce acest eveniment.
       Infinity_move_directions:

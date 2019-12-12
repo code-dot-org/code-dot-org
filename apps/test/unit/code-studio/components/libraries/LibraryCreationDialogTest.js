@@ -82,56 +82,74 @@ describe('LibraryCreationDialog', () => {
   });
 
   describe('onOpen', () => {
-    it('sets the loading state to CODE_ERROR when a code error exists', () => {
-      sinon
-        .stub(annotationList, 'getJSLintAnnotations')
-        .returns([{type: 'error'}]);
-      wrapper.instance().onOpen();
-      wrapper.update();
-      expect(wrapper.state().publishState).to.equal(PublishState.CODE_ERROR);
-      annotationList.getJSLintAnnotations.restore();
-    });
-
-    it('sets loading state to NO_FUNCTIONS when there are no functions', () => {
-      sinon.stub(annotationList, 'getJSLintAnnotations').returns([]);
-      let sourceStub = sinon.stub(
+    let getJSLintAnnotationsStub, sourceStub, functionStub;
+    let libraryName = 'name';
+    let source = 'function foo() {}';
+    beforeEach(() => {
+      getJSLintAnnotationsStub = sinon.stub(
+        annotationList,
+        'getJSLintAnnotations'
+      );
+      sourceStub = sinon.stub(
         window.dashboard.project,
         'getUpdatedSourceAndHtml_'
       );
+      functionStub = sinon.stub(libraryParser, 'getFunctions');
+      sinon.stub(libraryParser, 'sanitizeName').returns(libraryName);
+      sinon.stub(window.dashboard.project, 'getLevelName').returns(libraryName);
+    });
+
+    afterEach(() => {
+      annotationList.getJSLintAnnotations.restore();
+      window.dashboard.project.getUpdatedSourceAndHtml_.restore();
+      libraryParser.getFunctions.restore();
+      libraryParser.sanitizeName.restore();
+      window.dashboard.project.getLevelName.restore();
+    });
+
+    it('sets the loading state to CODE_ERROR when a code error exists', () => {
+      getJSLintAnnotationsStub.returns([{type: 'error'}]);
+      wrapper.instance().onOpen();
+      wrapper.update();
+      expect(wrapper.state().publishState).to.equal(PublishState.CODE_ERROR);
+    });
+
+    it('sets loading state to NO_FUNCTIONS when there are no functions', () => {
+      getJSLintAnnotationsStub.returns([]);
       sourceStub.yields({source: ''});
-      sinon.stub(libraryParser, 'getFunctions').returns([]);
+      functionStub.returns([]);
 
       wrapper.instance().onOpen();
       wrapper.update();
       expect(wrapper.state().publishState).to.equal(PublishState.NO_FUNCTIONS);
-
-      annotationList.getJSLintAnnotations.restore();
-      window.dashboard.project.getUpdatedSourceAndHtml_.restore();
-      libraryParser.getFunctions.restore();
     });
 
     it('sets loading state to DONE_LOADING on success', () => {
-      sinon.stub(annotationList, 'getJSLintAnnotations').returns([]);
-      sinon
-        .stub(libraryParser, 'getFunctions')
-        .returns([{functionName: 'foo', comment: ''}]);
-      sinon.stub(libraryParser, 'sanitizeName').returns('name');
-      sinon.stub(window.dashboard.project, 'getLevelName').returns('name');
-      let sourceStub = sinon.stub(
-        window.dashboard.project,
-        'getUpdatedSourceAndHtml_'
-      );
-      sourceStub.yields({source: 'function foo() {}'});
+      getJSLintAnnotationsStub.returns([]);
+      functionStub.returns([{functionName: 'foo', comment: ''}]);
+      sourceStub.yields({source: source});
 
       wrapper.instance().onOpen();
       wrapper.update();
       expect(wrapper.state().publishState).to.equal(PublishState.DONE_LOADING);
+      expect(wrapper.state().librarySource).to.equal(source);
+      expect(wrapper.state().libraryName).to.equal(libraryName);
+    });
 
-      annotationList.getJSLintAnnotations.restore();
-      libraryParser.getFunctions.restore();
-      libraryParser.sanitizeName.restore();
-      window.dashboard.project.getLevelName.restore();
-      window.dashboard.project.getUpdatedSourceAndHtml_.restore();
+    it('prepends imported libraries to the exported source', () => {
+      let library = 'function bar() {}';
+      getJSLintAnnotationsStub.returns([]);
+      functionStub.returns([{functionName: 'foo', comment: ''}]);
+      sourceStub.yields({source: source, libraries: [library]});
+      sinon.stub(libraryParser, 'createLibraryClosure').returns(library);
+
+      wrapper.instance().onOpen();
+      wrapper.update();
+      expect(wrapper.state().publishState).to.equal(PublishState.DONE_LOADING);
+      expect(wrapper.state().librarySource).to.equal(library + source);
+      expect(wrapper.state().libraryName).to.equal(libraryName);
+
+      libraryParser.createLibraryClosure.restore();
     });
   });
 

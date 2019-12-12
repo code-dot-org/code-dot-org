@@ -2,6 +2,43 @@
 bg:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: всички
+            '"ALIEN"': всички извънземни
+            '"BEAR"': всички мечки
+            '"CAT"': всички котки
+            '"DOG"': всички кучета
+            '"DUCK"': всички патици
+            '"FROG"': всички жаби
+            '"MOOSE"': всички лосове
+            '"PINEAPPLE"': всички ананаси
+            '"ROBOT"': всички роботи
+            '"SHARK"': всички акули
+            '"UNICORN"': Еднорози
+          MOVE1:
+            MOVES.ClapHigh: Пляскай високо
+            MOVES.Dab: Бучица
+            MOVES.DoubleJam: Двойно почукване
+            MOVES.Drop: Капка
+            MOVES.Floss: Памук
+            MOVES.Fresh: Пресен
+            MOVES.Clown: Клоун
+            MOVES.Kick: Ритник
+            MOVES.ThisOrThat: Това или онова
+            MOVES.Rest: Без
+          MOVE2:
+            MOVES.ClapHigh: Пляскай високо
+            MOVES.Dab: Бучица
+            MOVES.DoubleJam: Двойно почукване
+            MOVES.Drop: Капка
+            MOVES.Floss: Памук
+            MOVES.Fresh: Пресен
+            MOVES.Clown: Клоун
+            MOVES.Kick: Ритник
+            MOVES.ThisOrThat: Това или онова
+            MOVES.Rest: Без
       Dancelab_atTimestamp:
         text: след {TIMESTAMP} {UNIT}
         options:
@@ -332,6 +369,7 @@ bg:
             '"UNICORN"': Еднорози
           LAYOUT:
             '"border"': рамка
+            '"diamond"': диамант
             '"circle"': кръг
             '"grid"': мрежа
             '"row"': ред
@@ -598,6 +636,14 @@ bg:
           RANGE:
             '"bass"': бас
             '"treble"': сопрано
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': диамант
+            '"s"': s
+            '"w"': w
+            '"x"': x
+            '"y"': y
       Dancelab_whenKey:
         text: когато {KEY} е натиснат
         options:

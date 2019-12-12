@@ -499,10 +499,22 @@ nn-NO:
       CourseE_HOC 2018 Level_9b: 'Bruk korallar som guide for å finne skatten.  '
       Crack Random Substitution: Instruksjonar
       Crack a Caesar Cipher: Instruksjonar
-      Dance_2019_01: Dra “lag ei ny blokk”-blokka inn i arbeidsområdet, og koble den
-        til inni oppsettblokka.
+      Dance_2019_01: 'Dra <xml><block type="Dancelab_makeAnonymousDanceSprite" block-text="make
+        a new dancer"><title name="COSTUME" config="&quot;CAT&quot;, &quot;PINEAPPLE&quot;">"CAT"</title><title
+        name="LOCATION">{x: 200, y: 200}</title></block></xml>-blokka inn i arbeidsområdet
+        og koble den inn i <xml><block type="Dancelab_whenSetup2" next_connection_disabled="true"
+        block-text="setup"></block></xml>-blokka.'
+      Dance_2019_02: Få katten til å gjere eit dansetrinn når du trykker ein tast.
+      Dance_2019_03: 'Det er tid for dansevisning! Programmer kvar dansar til å danse
+        når du trykker på ulike tastar. Velg ditt favoritt dansetrinn for kvar dansar
+        eller sett det til "(Tilfeldig)" for noko totalt uforutsigbart! '
+      Dance_2019_04: Få dansaren til å starte eit nytt dansetrinn etter fjerde takt.
       Dance_2019_05: Få dansaren til å gjere eit nytt dansetrinn etter 6 taktar!
-      Dance_2019_08: Bruk ei fargevalblokk til å skifte farge på dansaren.
+      Dance_2019_06: Sett opp ei gruppe med bakgrunnsdansarar rundt hoveddansaren
+        i midten.
+      Dance_2019_07: Endre storleiken på gruppa med bakgrunnsdansarar.
+      Dance_2019_08: Prøv å endre farge på ein av dansarane din (eller heile gruppa)!
+      Dance_2019_09: Ver kreativ med desse nye blokkene!
       Dance_2019_10: Groove i veg! Lag ein dans du kan dele med venene dine.
       Dance_Party_01: Dra “lag ei ny blokk”-blokka inn i arbeidsområdet, og koble
         den til inni oppsettblokka.
@@ -510,7 +522,7 @@ nn-NO:
       Dance_Party_03: Få dansaren til å gjere eit nytt dansetrinn etter 6 taktar!
       Dance_Party_04: Legg til ein bakgrunnseffekt i programmet.
       Dance_Party_05: Bruk ei ny blokk for å få dansaren til å bytte dansetrinn kvar
-        2. takt.
+        andre takt.
       Dance_Party_06: Lag ein ny dansar som heiter ‘backup\_dancer1’, som kan danse
         med katten.
       Dance_Party_08: Kan du gjere begge bakgrunnsdansarane like store?
@@ -522,9 +534,24 @@ nn-NO:
         opp.
       Dance_Party_11_5: Bruk ‘alle endene’-blokker til å få endene til å danse saman.
       Dance_Party_11b: Få roboten til å “droppe” når du trykker på høgrepila, og gjere
-        ein “floss” når du trykker på oppoverpilen. Gjer en droppfloss så fort du
+        ein “klapp” når du trykker på oppoverpila. Gjer eit dropp-klapp så fort du
         kan!
       Dance_Party_12: Groove i veg! Lag ein dans du kan dele med venene dine.
+      Dance_Party_extras_alternate_2019: Fram og tilbake! (Klikk "Meir" for informasjon)
+      Dance_Party_extras_battle: Dansegrupper (Klikk "Meir" for informasjon)
+      Dance_Party_extras_battle_2019: Dansegrupper (Klikk "Meir" for informasjon)
+      Dance_Party_extras_every_beat: Fjerdedelsnotar (Klikk "Meir" for informasjon)
+      Dance_Party_extras_every_beat_2019: Fjerdedelsnotar (Klikk "Meir" for informasjon)
+      Dance_Party_extras_layout: La oss komme i formasjon! (Klikk "Mer" for informasjon)
+      Dance_Party_extras_layout_2019: La oss komme i formasjon! (Klikk "Mer" for informasjon)
+      Dance_Party_extras_mixed_2019: Fleire knappar (Klikk "Meir" for informasjon)
+      Dance_Party_extras_on_beat: Bass, mellomtone og diskant (Klikk "Meir" for informasjon)
+      Dance_Party_extras_on_beat_2019: Bass, mellomtone og diskant (Klikk "Meir" for
+        informasjon)
+      Dance_Party_extras_speed: Fortare, saktare (Klikk "Meir" for informasjon)
+      Dance_Party_extras_speed_2019: Fortare, saktare (Klikk "Meir" for informasjon)
+      Dance_Party_extras_visible: Kor forsvann dei? (Klikk "Meir" for informasjon)
+      Dance_Party_extras_visible_2019: Kor forsvann dei? (Klikk "Meir" for informasjon)
       Find the Wizard: Bygg kva du vil. Dette er eit eksempel på eit gjett-eit-tal-spel!
       FoodFight: Dette er eit eksempel på eit spel du kan lage i spel-lab.
       Function intro Ryan: Bruk funksjonen "build bridge"(bygg bru) to gonger for
@@ -810,10 +837,32 @@ nn-NO:
       Standalone_Artist_1: Velkomen til Kunstnar! Først, la oss prøve å lage eit enkelt
         kvadrat ved å bruke blokkane for å snu til høgre og flytte framover. Kvar
         side bør vere 100 pikslar lange.
+      Standalone_Artist_2: Tegn denne diamanten med 120 og 60 graders vinkler og 150
+        piksler lange sider.
+      Standalone_Artist_3: Kan du tegne denne sekskanten med lange sider på 100 piksler
+        og vinkler på 60 grader?
+      Standalone_Artist_4: Nå har du fått en ny brikke som du kan bruke; gjenta-løkken.
+        Den vil repetere et sett med kommandoer. Hva skjer hvis du gjentar disse kommandoene
+        6 ganger?
+      Standalone_Artist_5: Hvor mange ganger må du å repetere denne diamanten for
+        å tegne blomsten?
+      Standalone_Artist_5.5: 'Legg merke til hvordan vi har forenklet diamantkoden
+        ved å legge inn en løkke. Du kan kjøre en sekvens i en løkke 12 ganger for
+        å tegne blomsten. Hint: Du vil trenge å snu 30 grader etter at diamanten har
+        kjørt i en løkke for å ikke fortsette å tegne over den samme diamanten.'
+      Standalone_Artist_6: 'Kjør denne sekskant-koden 6 ganger i en løkke for å lage
+        designet. Hvor mange grader må du snu hver gang? Hint: del antall grader i
+        en sirkel på antall ganger du skal kjøre løkka.'
+      Standalone_Artist_7: 'En funksjon er en annet programmeringsverktøy for å hjelpe
+        deg med å unngå å gjenta deg selv. Denne funksjonen tegner en blomst så du
+        kan bruke den hver gang du vil tegne en blomst. Bruk denne og den nye hoppe-blokken
+        til å tegne disse blomstene. Hint: Blomstene er 150 piksler fra hverandre'
       Standalone_Artist_8: Her er ein funksjon kalla "Teikn ein figur" som vi har
         programmert til å teikne sekskantar. Køyr koden for å sjå kva den gjer og
         så kan du eksperimentere med den og sjå kva som skjer om du endrer på den.
         Kan du få den til å teikne eit mønster av kvadrat, trekantar og åttekantar?
+      Standalone_Artist_9: Gå videre og lag det bildet du ønsker! Du har til og med
+        en tom funksjon som kan du få til å gjøre hva du vil!
       U4 Model Design 1: Legg til ein stor raud knapp på skjermen din i design mode.
         (Klikk for å sjå fullstendige instruksjonar)
       U4 Model Design 1_2018: Legg til ein stor raud knapp på skjermen din i design
@@ -871,7 +920,7 @@ nn-NO:
       bounce_12: Opprett ditt eiget Sprett-spel. Du kan endre alle bileta og reglane.
         Når du er ferdig, klikk Fullfør for å la vener prøve spelet på telefonane
         sine.
-      bounce_12_basketball: Opprett ditt eget basketball-spel. Du kan endre alle reglane.
+      bounce_12_basketball: Opprett ditt eige basketball-spel. Du kan endre alle reglane.
         Når du er ferdig, klikk Fullfør for å la vener prøve spelet på sine telefonar.
       bounce_12_sports: 'Lag ditt eige spel! Du bestemmer: Du kan endre på alle reglar,
         blande og setje saman ulike sportar. Ver kreativ! Når du er ferdig, trykk

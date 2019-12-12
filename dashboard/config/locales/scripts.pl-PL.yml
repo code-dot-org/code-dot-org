@@ -3473,10 +3473,16 @@ pl:
               name: nowy etap
             What is a Computer?:
               name: Czym jest komputer?
+            Programming - Hour of Code:
+              name: Programowanie - Godzina Kodowania
             Simple Encryption:
               name: Proste szyfrowanie
+            Creating Webpages:
+              name: Tworzenie stron internetowych
             User Interfaces:
               name: Interfejsy użytkownika
+            Intro to App Lab (13+):
+              name: Wprowadzenie do App Lab (13+)
         allthesurveys:
           title: Wszystkie ankiety
         hero:
@@ -3545,6 +3551,7 @@ pl:
               name: Internet
             Crowdsourcing:
               name: Praca w grupie (Crowdsourcing)
+          title: Kurs E 2018 (Przestarzały!)
         course-f-2018:
           stages:
             Sequence in Maze:
@@ -4226,8 +4233,8 @@ pl:
             Dance Party:
               name: Potańcówka
           title: Potańcówka
-          description_short: Z piosenkami Katy Perry, Madonny, J. Balvina, Sia, Keitha
-            Urbana, Ciary i 25 innych gwiazd!
+          description_short: Występują Katy Perry, Madonna, J. Balvin, Sia, Keith
+            Urban, Ciara i 25 innych gwiazd!
           description: Stwórz kod swojej własnej imprezy tanecznej i udostępnij ją
             swoim znajomym.
         frozen-2018-test-b:
@@ -4254,7 +4261,6 @@ pl:
             Dance Party:
               name: Potańcówka
         dance-extras:
-          title: Nie przestawaj tańczyć
           description: Wyjdź poza pierwszą godzinę dzięki rozszerzonym pomysłom na
             projekt.
         coursef-2019:
@@ -4812,6 +4818,8 @@ pl:
               name: Własność intelektualna
             Images:
               name: Obrazki
+            CSS Classes:
+              name: Klasy CSS
         csd3-pilot:
           description_short: Programowanie
           stages:
@@ -4879,6 +4887,8 @@ pl:
               name: nowy etap
             Routers and Redundancy:
               name: Routery i nadmiarowość
+            The Need for Addressing:
+              name: Potrzeba adresowania
         peru-2019:
           stages:
             new stage:
@@ -4895,7 +4905,7 @@ pl:
               name: Potańcówka
           description: Stwórz kod swojej własnej imprezy tanecznej i udostępnij ją
             swoim znajomym.
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Getting Started:
               name: Pierwsze kroki
@@ -4932,10 +4942,29 @@ pl:
             For Loops:
               name: Pętle dla (for)
         dance-extras-2019:
-          title: Nie przestawaj tańczyć
           description: Wyjdź poza pierwszą godzinę dzięki rozszerzonym pomysłom na
             projekt.
         csp10-pilot:
           stages:
             new stage:
               name: nowy etap
+        csp4-preview:
+          stages:
+            new stage:
+              name: nowy etap
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Zdania z warunkami
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Praca w grupie (Crowdsourcing)
+            Conditionals with Cards:
+              name: Warunkowe z kartami
+            Nested Loops in Bee:
+              name: Zagnieżdżone pętle w pszczole
+        time4cs-experiment-unit-2:
+          stages:
+            Nested Loops in Maze:
+              name: Zagnieżdżone pętle w labiryncie

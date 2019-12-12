@@ -118,6 +118,7 @@ sq:
             '19': '19'
             '20': '20'
           LAYOUT:
+            '"diamond"': diamant
             '"random"': zakonshëm
       Dancelab_randomColor:
         text: ngjyrë e rastësishme
@@ -177,6 +178,11 @@ sq:
           PROPERTY:
             '"scale"': madhësia
             '"height"': gjatësia
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': diamant
+            '"x"': x
       Dancelab_whenKey:
         options:
           KEY:
