@@ -411,7 +411,7 @@ class Watchers extends React.Component {
                   attachment: 'together'
                 }
               ]}
-              style={{zIndex: 2}}
+              className="debug-watch-autocomplete-dropdown"
             >
               <input
                 placeholder="Variable / Property"
