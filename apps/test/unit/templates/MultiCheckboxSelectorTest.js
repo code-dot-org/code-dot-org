@@ -123,7 +123,7 @@ describe('MultiCheckboxSelector', () => {
     });
 
     it('should not render a header', () => {
-      expect(header).to.have.length(0);
+      expect(header).to.have.lengthOf(0);
     });
   });
 });
