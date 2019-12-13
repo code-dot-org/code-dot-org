@@ -2182,6 +2182,13 @@ tr-TR:
           **İsteğe Bağlı Görev**
 
           Şarkının farklı yerlerinde <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> etkinliklerinin altına yeni blok ekleyerek arka plan efektini değiştirin.
+      Dance_Party_05:
+        validation: |-
+          **Bu seviyeyi nasıl geçerim?**
+
+          -   Dansçınızın, seviye sona ermeden en az 4 farklı dans hareketi boyunca hareket etmesi gerekir.
+
+          _Bu seviye 12 ölçütten sonra biter._
       Dance_Party_06:
         validation: |-
           **Bu seviyeyi nasıl geçerim?**
@@ -11791,3 +11798,5 @@ tr-TR:
           eklemelisin. '
         iceage_warn_ice_age_b: Program başladıktan hemen sonra onlara sahip olmak
           için 'Çalıştığı zaman' olayının altına 2 yeni blok ekle.
+      Dance_Party_extras_alternate_2019:
+        alternate: Alternatif blok “Dansçılar” kategorisinde.

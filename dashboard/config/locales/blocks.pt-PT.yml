@@ -149,6 +149,7 @@ pt:
             '19': '19'
             '20': '20'
           LAYOUT:
+            '"diamond"': diamante
             '"row"': aula
             '"random"': aleatório
       Dancelab_randomColor:

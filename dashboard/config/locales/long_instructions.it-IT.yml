@@ -1602,46 +1602,59 @@ it-IT:
       Dance Party Predict_2019: "**Fai una previsione:** Ecco ora un alieno blu! \n\nCosa
         pensi accadrà quando ci cliccherai sopra?  "
       Dance_2019_01: |-
-        _Facciamo una festa da ballo!_
+        Trascina il blocco <xml><block type="Dancelab_makeAnonymousDanceSprite" block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;, &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml> nell'area di lavoro e collegalo all'interno del blocco <xml><block type="Dancelab_whenSetup2" next_connection_disabled="true" block-text="setup"></block></xml>.
 
-        Trascina il blocco <xml><block type="Dancelab_makeAnonymousDanceSprite" block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;, &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml> nell'area di lavoro, e collegalo all'interno del blocco <xml><block type="Dancelab_whenSetup2" next_connection_disabled="true" block-text="setup"></block></xml> per creare il tuo primo ballerino.
+        Scegli il `gatto` o il `bradipo` come primo ballerino.
 
-        -   _È inoltre possibile fare clic sulla lampadina a sinistra se si desiderano maggiori informazioni o sfide extra._
-      Dance_2019_02: |-
-        Il <xml><block type="Dancelab_whenKey" block-text="when up pressed"></block></xml> blocco consente di avviare il codice quando si preme la freccia su. Usa il blocco <xml><block type="Dancelab_doMoveEachLR" block-text="do once"><title name="GROUP">"CAT"</title><title name="MOVE">MOVES.XClapSide</title><title name="DIR">-1</title></block></xml> per far applaudire il ballerino quando premi, o prova un'altra mossa!
+        -   _Puoi cliccare sulla lampadina qui a sinistra se desideri maggiori informazioni o sfide aggiuntive._
+      Dance_2019_02: "Il blocco <xml><block type=\"Dancelab_whenKey\" block-text=\"when
+        up pressed\"></block></xml> consente di eseguire alcuni blocchi di istruzioni
+        quando si preme la freccia verso l'alto. \nUsa il blocco <xml><block type=\"Dancelab_doMoveEachLR\"
+        block-text=\"do once\"><title name=\"GROUP\">\"CAT\"</title><title name=\"MOVE\">MOVES.XClapSide</title><title
+        name=\"DIR\">-1</title></block></xml> per far applaudire il gatto!\n\n_Assicurati
+        di premere la freccia verso l'alto o ![](<https://images.code.org/419e704e6841c0b696016bf5029b8cb9-image-1571864825506.06.45
+        PM.png>) dopo aver cliccato il pulsante \"Esegui\"!_"
+      Dance_2019_03: È ora di una gara di ballo! Programma ogni ballerino affinché
+        si muova quando premi un certo tasto. Scegli il tuo movimento preferito per
+        ogni ballerino o impostalo su `(Casuale)` per ottenere qualcosa di totalmente
+        imprevedibile!
+      Dance_2019_04: "Muoviamo i ballerini a tempo di musica!\n\nTrascina il blocco
+        <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">4</title><title
+        name=\"UNIT\">\"measures\"</title></block></xml> nell’area di lavoro e collegalalo
+        al blocco <xml><block type=\"Dancelab_changeMoveEachLR\"><title name=\"GROUP\">\"SHARK\"</title><title
+        name=\"MOVE\">MOVES.ThisOrThat</title><title name=\"DIR\">-1</title></block></xml>.
+        \n\nIl tuo ballerino deve iniziare una nuova mossa dopo la quarta battuta.\n\nIn
+        musica le **battute** sono usate per scandire il tempo. In questa esercitazione,
+        una battuta dura quattro quarti."
+      Dance_2019_05: "_Adesso sì che ci stiamo scatenando!_ \n\nAggiungi un blocco
+        <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title
+        name=\"UNIT\">\"measures\"</title></block></xml> all'area di lavoro e fai
+        cominciare al ballerino una nuova mossa dopo 6 battute."
+      Dance_2019_06: |-
+        Usa questo nuovo blocco per impostare un gruppo di ballerini secondari, dietro al ballerino principale posizionato nel mezzo.
 
-        _Assicurati di premere la freccia su o ![](<https://images.code.org/419e704e6841c0b696016bf5029b8cb9-image-1571864825506.06.45 PM.png>) dopo aver cliccato il pulsante Esegui!_
-      Dance_2019_03: È ora di una gara di ballo! Programma ogni ballerino perché si
-        muova quando premi tasti diversi. Scegli il tuo movimento preferito per ogni
-        ballerino o impostalo su `(Casuale)`per qualcosa di totalmente imprevedibile!
-      Dance_2019_04: |-
-        Muoviamo i ballerini a tempo con la musica!
+          <xml><block type="Dancelab_makeNewDanceSpriteGroup">
+            <title name="N">???</title>
+            <title name="COSTUME" config="&quot;BEAR&quot;, &quot;CAT&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title>
+            <title name="LAYOUT">"circle"</title>
+          </block></xml>
 
-        Trascina il blocco <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> sull’area di lavoro. Collegala sotto il blocco <xml><block type="Dancelab_changeMoveEachLR"><title name="GROUP">"SHARK"</title><title name="MOVE">MOVES.ThisOrThat</title><title name="DIR">-1</title></block></xml>. Il tuo ballerino dovrebbe iniziare una nuova mossa dopo la quarta battuta.
+        Ora puoi creare un gruppo di ballerini tutti in una volta!
+      Dance_2019_07: |-
+        Ogni ballerino è caratterizzato da un insieme di _proprietà_ che ne definiscono l'aspetto.
 
-        **Battute** sono usate per contare il tempo nella musica. In questo tutorial, una battuta è lunga quattro tempi.
-      Dance_2019_05: |-
-        _Adesso sì che ci stiamo scatenando!_
-
-        Aggiungi un blocco <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> alla tua area di lavoro e fai cominciare al ballerino una nuova mossa dopo 6 battute.
-      Dance_2019_06: "Usa questo nuovo blocco per impostare un gruppo di ballerini
-        più piccolo sullo sfondo intorno al ballerino principale nel mezzo. \n  <xml><block
-        type=\"Dancelab_makeNewDanceSpriteGroup\">\n    <title name=\"N\">???</title>\n
-        \   <title name=\"COSTUME\" config=\"&quot;BEAR&quot;, &quot;CAT&quot;, &quot;FROG&quot;,
-        &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title>\n
-        \   <title name=\"LAYOUT\">\"circle\"</title>\n  </block></xml>\nOra è possibile
-        creare un gruppo di ballerini tutti in una volta!"
+        Collega il blocco <xml><block type="Dancelab_setPropEach" block-text="the set block"><title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title><title name="PROPERTY">"scale"</title><title name="VAL">???</title></block></xml> ad un blocco evento verde, per rappresentare ballerini più vicini e più lontani.
       Dance_2019_08: I ballerini hanno una proprietà “tonalità” che può aggiungere
         uno strato di colore. Prova a cambiare la tonalità di uno dei tuoi ballerini
         (o di un intero gruppo)!
       Dance_2019_09: |-
-        Questo è un particolare tipo di evento che viene attivato più e più volte.
+        Questo **nuovo blocco** è un particolare tipo di evento che viene attivato più e più volte.
 
         <xml><block type="Dancelab_everySeconds"><title name="N">2</title><title name="UNIT">"measures"</title></block></xml>
 
-        Gli altri nuovi blocchi del tuo toolbox ti permettono di cambiare gradualmente (o casualmente!) le proprietà dei ballerini nel tempo.
+        Posizionando in questo nuovo blocco evento gli altri nuovi blocchi che trovi nella cassetta degli attrezzi, potrai far variare le proprietà dei ballerini nel tempo. Sii creativo e divertiti!
 
-        \_Sii creativo e divertiti!
+        _Quando hai finito, premi il pulsante termina._
       Dance_2019_10: Lasciati andare e lanciati in pista! Crea un ballo personalizzato
         da condividere con i tuoi amici.
       Dance_Party_01: |-
@@ -1656,10 +1669,10 @@ it-IT:
         Trascina il blocco <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> nell'area di lavoro e inseriscilo sotto al blocco <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Dopo la quarta battuta, il tuo ballerino dovrebbe cominciare ad eseguire una nuova mossa.
 
         Le **battute** in musica sono l’unità di misura del tempo. In questa esercitazione una battuta corrisponde a quattro secondi.
-      Dance_Party_03: |-
-        _Adesso sì che ci stiamo scatenando!_
-
-        Aggiungi un blocco <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> alla tua area di lavoro e fai cominciare al ballerino una nuova mossa dopo 6 battute.
+      Dance_Party_03: "_Adesso sì che ci stiamo scatenando!_ \n\nAggiungi un blocco
+        <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title
+        name=\"UNIT\">\"measures\"</title></block></xml> all'area di lavoro e fai
+        cominciare al ballerino una nuova mossa dopo 6 battute."
       Dance_Party_04: |-
         _Dobbiamo vivacizzare un po’ questo ballo!_
 
@@ -1692,95 +1705,120 @@ it-IT:
       Dance_Party_11_5: |-
         Dai un’occhiata a questo blocco:
 
-        <xml>   <block type="Dancelab_makeNewDanceSpriteGroup">     <title name="N">6</title>     <title name="COSTUME">"DUCK"</title>     <title name="LAYOUT">"circle"</title>   </block></xml>
+        <xml>
+          <block type="Dancelab_makeNewDanceSpriteGroup">
+            <title name="N">6</title>
+            <title name="COSTUME">"DUCK"</title>
+            <title name="LAYOUT">"circle"</title>
+          </block></xml>
 
         Ora sei in grado di creare un gruppo di ballerini in un colpo solo!
 
-        Prova ad usare alcuni blocchi `"tutti i paperi" eseguono la mossa ...` per scrivere del codice che faccia ballare i paperi tutti assieme.
+        Prova ad usare alcuni blocchi `"tutti i paperi" eseguono la mossa...` per scrivere del codice che faccia ballare i paperi tutti assieme.
       Dance_Party_11b: |-
         E ora una sfida all’ultima mossa! Quando premi la freccia a sinistra (←) il Gatto fa la "dab". Fai fare una “spaccata” al Robot premendo la freccia a destra (→) e fagli fare un "applauso" quando premi la freccia in giù (↓).
 
         **Usa i tasti per far fare al Robot il ballo spaccata-applauso-spaccata-applauso il più velocemente possibile!**
       Dance_Party_12: Lasciati andare e lanciati in pista! Crea un ballo personalizzato
         da condividere con i tuoi amici.
-      Dance_Party_extras_alternate_2019: |-
-        # Tutti in Formazione!
-
-        Dai un'occhiata a questo ballo che usa il blocco [blockly block][0] per cambiare la formazione dei ballerini sullo sfondo durante il ballo. Prova una di queste idee per ampliarl:
-
-        -   Crea un secondo gruppo di ballerini in una diversa disposizione
-        -   Cambia la disposizione quando si preme un tasto
-        -   Cambia una proprietà quando i ballerini cambiano formazione
+      Dance_Party_extras_alternate_2019: "# Avanti e indietro!\n\nA volte potresti
+        voler creare una sequenza di mosse a tua scelta. Questo nuovo blocco ti permette
+        di fare proprio questo.\n\n<xml><block type=\"Dancelab_alternateMoves\"><title
+        name=\"GROUP\">sprites</title><title name=\"N\">2</title><title name=\"MOVE1\">MOVES.Roll</title><title
+        name=\"MOVE2\">MOVES.ClapHigh</title></block></xml>\n\nLe mosse indicate verranno
+        alternate per sempre.\n\n-   Crea una sequenza alternata tra il ballerino
+        principale e quelli secondari! \n-   Prova diversi ritmi di alternanza delle
+        mosse, per esempio `1` o `0.5` per alternare più in fretta!"
       Dance_Party_extras_battle: |-
-        # Gruppi di ballo
+        # Squadre di ballo
 
-        Ecco una gara di ballo tra due squadre. I tasti freccia controllano uno dei ballerini e i tasti "w, a, s, d" controllano l'altro. Sfida un amico a una gara di ballo, e poi prova a migliorarla.
+        Ecco una sfida tra due squadre di ballo. I tasti freccia controllano uno dei ballerini e i tasti "w, a, s, d" controllano l'altro. Sfida un amico e poi cerca di migliorare questa gara di ballo.
 
-        -   Aggiungi altri tasti per controllare i balli
-        -   Fai reagire anche i ballerini di seconda fila quando i tasti vengono premuti
-        -   Alterna il ballerino ogni 4 battute impostando la sua visibilità
+        -   Aggiungi più tasti per controllare il ballo
+        -   Fai in modo che anche i ballerini secondari rispondano quando vengono premuti i tasti
+        -   Imposta la visibilità dei ballerini in modo che si alternino ogni 4 battute
       Dance_Party_extras_battle_2019: |-
-        # Gruppi di ballo
+        # Squadre di ballo
 
-        Ecco una gara di ballo tra due squadre. I tasti freccia controllano uno dei ballerini e i tasti "w, a, s, d" controllano l'altro. Sfida un amico a una gara di ballo, e poi prova a migliorarla.
+        Ecco una sfida tra due squadre di ballo. I tasti freccia controllano uno dei ballerini e i tasti "w, a, s, d" controllano l'altro. Sfida un amico e poi cerca di migliorare questa gara di ballo.
 
-        -   Aggiungi altri tasti per controllare i balli
-        -   Fai reagire anche i ballerini di seconda fila quando i tasti vengono premuti
-        -   Alterna il ballerino ogni 4 battute impostando la sua visibilità
+        -   Aggiungi più tasti per controllare il ballo
+        -   Fai in modo che anche i ballerini secondari rispondano quando vengono premuti i tasti
+        -   Imposta la visibilità dei ballerini in modo che si alternino ogni 4 battute
       Dance_Party_extras_every_beat: |-
         # Quartine
 
-        La maggior parte dei nostri balli utilizza battute intere, ma ogni battuta è formata da 4 quartine. Questo ballo utilizza 'ogni 0,25 battute' per fare battere le mani al ballerino ad ogni quartina.
+        Finora abbiamo usato battute intere, ma spesso ogni battuta è composta da 4 quartine. Questo ballo usa il blocco `ogni 0.25 battute` per far applaudire il ballerino ad ogni quartina, ovvero quattro volte per ogni battuta.
 
-        Il ballo utilizza anche un\_blocco \_condizionale per controllare il momento in cui il blocco di «ogni 0,25 battute» può cambiare il ballo. Prova a cambiare i numeri nel blocco condizionale per vedere come cambia il ballo.
+        Questo ballo usa anche un blocco _condizionale_ per specificare quando il blocco "ogni 0.25 battute" può modificare il ballo. Prova a cambiare i numeri nel blocco condizionale per vedere come cambia il ballo.
 
-        -   Sperimenta la durata dell’altra nota (tipo 0,5 per una nota di mezzo o 0,125 per una croma).
-        -   Aggiungi alcuni eventi `dopo la battuta`.
-        -   Scambia le "battute" con i "secondi" e provare a temporizzare le tue danza in questo modo.
+        -   Sperimenta altre durate (come 0.5 per mezza battuta o 0.125 per un'ottava)
+        -   Aggiungi alcuni eventi `dopo ... battute`
+        -   Cambia "battute" con "secondi" e prova a controllare il ballo in questo modo
       Dance_Party_extras_every_beat_2019: |-
-        # Accelerare, Rallentare
+        # Quartine
 
-        Questa danza finale usa il blocco [blockly block][0] per controllare la velocità di movimento di ogni ballerino. Prova a sperimentare con diverse velocità durante i diversi punti della canzone. Sentiti libero di continuare ad armeggiare su questa danza, o di tornare a uno qualsiasi dei balli precedenti per renderli ancora più cool.
+        Finora abbiamo usato battute intere, ma spesso ogni battuta è composta da 4 quartine. Questo ballo usa il blocco <xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml> per far applaudire il ballerino ad ogni quartina - ovvero quattro volte per ogni battuta - ma solo per le prime 4 battute.
+
+        Prova a cambiare i numeri nei blocchi per vedere come cambia il ballo.
+
+        -   Sperimenta altre durate (come 0.5 per mezza battuta o 0.125 per un'ottava).
+        -   Aggiungi altri eventi.
       Dance_Party_extras_layout: |-
-        # Tutti in Formazione!
+        # Tutti in formazione!
 
         Dai un'occhiata a questo ballo che usa il blocco `disponi ... nuovi ... in ...` per cambiare la formazione dei ballerini secondari durante il ballo. Prova ad estendere il progetto con una di queste idee.
 
         -   Crea un secondo gruppo di ballerini con una formazione diversa
         -   Cambia la disposizione quando si preme un tasto
         -   Cambia una proprietà quando i ballerini cambiano formazione
+      Dance_Party_extras_layout_2019: |-
+        # Tutti in formazione!
+
+        Dai un'occhiata a questo ballo che usa il blocco <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> per cambiare la formazione dei ballerini secondari durante il ballo. Prova ad estendere il progetto con una di queste idee.
+
+        -   Crea un secondo gruppo di ballerini con una formazione diversa
+        -   Cambia la disposizione quando si preme un tasto
+        -   Cambia una proprietà quando i ballerini cambiano formazione
+      Dance_Party_extras_mixed_2019: |-
+        # Più pulsanti
+
+        In questo ballo puoi controllare le proprietà dei ballerini in tempo reale mentre stanno ballando automaticamente. Prova a far cambiare altre proprietà quando premi i pulsanti. Per esempio:
+
+        -   Modifica casualmente la tonalità del ballerino quando si preme la freccia verso il basso.
+        -   Aggiungi un gruppo di ballerini con una disposizione casuale quando si preme "spazio".
       Dance_Party_extras_on_beat: |-
-        # Bassi, Medi e Alti
+        # Bassi, medi e alti
 
         Questo ballo usa eventi di "picco" per attivare il codice quando particolari frequenze diventano dominanti. Prova a vedere come cambia il ballo riproducendo canzoni diverse.
       Dance_Party_extras_on_beat_2019: |-
-        # Bassi, Medi e Alti
+        # Bassi, medi e alti
 
         Questo ballo usa eventi di "picco" per attivare il codice quando particolari frequenze diventano dominanti. Prova a vedere come cambia il ballo riproducendo canzoni diverse.
       Dance_Party_extras_speed: |-
-        # Accelerare, Rallentare
+        # Accelerare, rallentare
 
         Questo ballo finale usa il blocco `imposta la velocità di ballo` per controllare la velocità dei movimenti di ogni ballerino. Prova a sperimentare diverse velocità in diversi punti della canzone. Sentiti libero di continuare ad armeggiare su questo ballo o di tornare ai precedenti per renderli ancora più divertenti.
       Dance_Party_extras_speed_2019: |-
-        # Accelerare, Rallentare
+        # Accelerare, rallentare
 
-        Questa danza finale usa il blocco [blockly block][0] per controllare la velocità di movimento di ogni ballerino. Prova a sperimentare con diverse velocità durante i diversi punti della canzone. Sentiti libero di continuare ad armeggiare su questa danza, o di tornare a uno qualsiasi dei balli precedenti per renderli ancora più cool.
+        Questo ballo finale usa il blocco <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> per controllare la velocità dei movimenti di ogni ballerino. Prova a sperimentare diverse velocità in diversi punti della canzone. Sentiti libero di continuare ad armeggiare su questo ballo o di tornare ai precedenti per renderli ancora più divertenti.
       Dance_Party_extras_visible: |-
         # Dove sono andati?
 
-        Questo ballo mostra e nasconde due diversi gruppi di ballerini. Dai un’occhiata e poi prova ad aggiungere il tuo tocco personale
+        In questo ballo, due diversi gruppi di ballerini appaiono e scompaiono. Provalo e poi cerca di aggiungere il tuo stile.
 
         -   Aggiungi un altro gruppo di ballerini
         -   Mostra e nascondi i ballerini usando i tasti freccia
-        -   Nascondi tutti i ballerini e passa a un emozionante effetto di sfondo
+        -   Nascondi i ballerini e sorprendi tutti con un effetto di sfondo mozzafiato
       Dance_Party_extras_visible_2019: |-
         # Dove sono andati?
 
-        Questo ballo mostra e nasconde due diversi gruppi di ballerini. Dai un’occhiata e poi prova ad aggiungere il tuo tocco personale
+        In questo ballo, due diversi gruppi di ballerini appaiono e scompaiono. Provalo e poi cerca di aggiungere il tuo stile.
 
         -   Aggiungi un altro gruppo di ballerini
         -   Mostra e nascondi i ballerini usando i tasti freccia
-        -   Nascondi tutti i ballerini e passa a un emozionante effetto di sfondo
+        -   Nascondi i ballerini e sorprendi tutti con un effetto di sfondo mozzafiato
       Fish Tank 1-validated: "**Fai una previsione**: Che cosa pensi accadrà quando
         eseguirai questo codice?"
       Fish Tank 2-validated: "Facciamo un acquario!  \n\nTrasforma Dusty (il cespuglio
@@ -2358,7 +2396,7 @@ it-IT:
             </block></xml>
       course3_bee_functions_challenge1: Dovrai cavartela da solo in questa sfida.
         Potrebbe essere più difficile di quanto sembri!
-      course3_farmer_until_challenge2: Usa il blocco `Se/Altrimenti` per seguire questo
+      course3_farmer_until_challenge2: Usa il blocco `se/altrimenti` per seguire questo
         percorso con molte curve in diverse direzioni. Ad ogni angolo, usa il blocco
         `rimuovi 1` all'interno di un ciclo per eliminare il mucchio di terra.
       course3_maze_until_challenge1: Nessun suggerimento, solo una sfida. Fai arrivare
@@ -2399,6 +2437,10 @@ it-IT:
       course4_harvester_nested_loops_challenge1: _"Ho bisogno di aiuto nella fattoria!
         Aiutami a raccogliere queste pannocchie usando solo i blocchi presenti nella
         cassetta degli attrezzi."_
+      course4_playlab_variables_challenge1: Usa questi blocchi per fare in modo che
+        i personaggi condividano un gioco di parole ("knock-knock joke"). Modifica
+        il contenuto delle variabili `firstName` e `punchLine` per raccontare la tua
+        storiella!
       courseA_artist_loops10: |-
         ## È ora di tornare a terra. Aiutami a posizionare le pietre così non cado in acqua!
 
@@ -5336,7 +5378,7 @@ it-IT:
         _"Mi trovo in un labirinto con tanti ortaggi differenti!"_
 
         `Gira a destra` in corrispondenza delle zucche, `gira a sinistra` se trovi una lattuga. Raccogli tutto per completare l'esercizio.
-      courseD_farmer_until_challenge2: Usa il blocco `Se/Altrimenti` per seguire questo
+      courseD_farmer_until_challenge2: Usa il blocco `se/altrimenti` per seguire questo
         percorso con molte curve in diverse direzioni. Ad ogni angolo, usa il blocco
         `rimuovi 1` all'interno di un ciclo per eliminare il mucchio di terra.
       courseD_farmer_while1: |-
@@ -6563,6 +6605,12 @@ it-IT:
         Le istruzioni condizionali posso essere utili anche quando sai esattamente cosa c'è in ogni casella.
 
         Raccogli tutto il nettare e fai tutto il miele.
+      courseF_bee_conditionals2: |-
+        _"È troppo nuvoloso per vedere i fiori!"_
+
+        Prima di prendere il nettare, controlla sotto ogni nuvola se sta nascondendo un fiore. Se sotto la nuvola c'è un fiore, l'ape deve prendere **una** dose di nettare.
+
+        Ricorda: le nuvole non nascondono sempre la stessa cosa!
       courseF_bee_conditionals3: Visto che puoi raccogliere il nettare solo dai fiori,
         devi prima controllare in ogni casella se c'è un fiore. Se sotto ognuna di
         queste nuvole c'è un fiore, l'ape dovrà raccogliere _una dose_ di nettare.
@@ -6675,6 +6723,34 @@ it-IT:
         possibile di blocchi.
       courseF_bee_for_challenge2_2019: Risolvi questo esercizio con il minore numero
         possibile di blocchi.
+      courseF_bee_functions2: "Per semplificare le cose, ora impariamo ad usare le
+        funzioni!\n\nD'ora in poi, userai un nuovo _strumento per modificare le funzioni_.
+        \ Si tratta di una finestra separata che apparirà quando cercherai di modificare
+        una funzione. Nell'area di lavoro non vedrai il codice della funzione, ma
+        non ti preoccupare... è sempre lì!  \n\n* * *\n\nEsercitiamoci con questa
+        funzione che raccoglie il nettare solo se l'ape è su un fiore.  Per vedere
+        il codice della funzione, clicca sul pulsante blu \"modifica\"!\n\nUsa la
+        funzione `get only nectar` (_prendi solo nettare_) per raccogliere il nettare
+        da ogni fiore."
+      courseF_bee_functions3: Ora devi creare tu una funzione per produrre del miele
+        **solo** se c'è un favo! Clicca su "modifica" per creare la funzione `only
+        make honey` (_fai solo il miele_), poi utilizzala per risolvere questo esercizio.
+      courseF_bee_functions3a: |-
+        Ogni nuvola potrebbe nascondere un fiore o un favo! Scrivi una funzione che raccolga il nettare se l'ape è su un fiore, altrimenti produca il miele.
+
+        Usa quindi la funzione per risolvere l'esercizio!
+      courseF_bee_functions4: "Sapevi che si può richiamare una funzione dall'_interno_
+        di un'altra funzione?  \n\nUsa la funzione `check nectar or honey` (_controlla
+        nettare o miele_) all'interno della nuova funzione `move and check` (_muoviti
+        e controlla_) per aiutare l'ape a girare, andare a prendere ciò che c'è sotto
+        la nuvola e fare retromarcia!"
+      courseF_bee_functions5a: Ora, costruisci la funzione `move and check` (_muoviti
+        e controlla_) in modo che porti l'ape alla nuvola ogni volta che c'è un percorso
+        sulla destra, quindi usala per risolvere questo esercizio!
+      courseF_bee_functions6: |-
+        _"Questo campo è labirinticamente fantastico!"_
+
+        Ora costruisci una tua funzione per aiutare l'ape a percorrere il labirinto girando a sinistra in corrispondenza dei fiori e a destra quando incontra dei favi. Chiaramente, non dimenticare di raccogliere il nettare e fare il miele lungo il percorso!
       courseF_bee_variables_3_2018: |-
         _"Che giardino fantastico!"_
 
@@ -6713,10 +6789,29 @@ it-IT:
         Nel resto di questa lezione, userai diversi blocchi `chiedi` e istruzioni condizionali `se/altrimenti`, al fine di creare un gioco che controllerai **tu**!
 
         Inizia definendo la variabile "codename" ("nome in codice") con una parola segreta che puoi ricordare facilmente. Quindi, usa un blocco `chiedi` per richiedere il nome in codice all'utente. Avrai bisogno di un blocco `se/altrimenti` per capire se il nome in codice inserito corrisponde a quello definito nel programma.
+      courseF_playlab_variables7b: "È ora di realizzare il tuo progetto!  \n\nCrea
+        alcune domande e combina le risposte in una storia tutta tua.\n\nSe ti servono
+        delle idee, clicca sull'icona dei suggerimenti."
       courseF_playlab_variables7c: |-
         Aggiungi un altro `chiedi` per chiedere all'utente di indovinare un colore.
 
         Utilizza l'istruzione condizionale `se/altrimenti` in modo che quando si inserisce il tuo nome in codice il gioco vinca sempre, mentre qualsiasi altro utente perda sempre.
+      courseF_playlab_variables8c: Usa il blocco `unisci` (nella categoria "Testo"
+        della cassetta degli attrezzi) per personalizzare i messaggi di vittoria/sconfitta,
+        facendo in modo che includano le variabili `codename` e `color`.
+      courseF_playlab_variables_challenge1: Usa questi blocchi per fare in modo che
+        i personaggi condividano un gioco di parole ("knock-knock joke"). Modifica
+        il contenuto delle variabili `firstName` e `punchLine` per raccontare la tua
+        storiella!
+      courseF_playlab_variables_challenge2: "Questo è un gioco di inseguimenti!  Muovendo
+        il cane, tocca il gatto per ottenere 2 punti e il pinguino per guadagnarne
+        3 punti. Arriva esattamente a 10 punti per vincere!  \n\nMa fai attenzione,
+        quando il gatto e il pinguino si toccano, perdi 1 punto. \n\n* * *\n\nAggiungi
+        i blocchi necessari per far funzionare il gioco nel modo in cui è stato spiegato.\n\n-
+        \  Come puoi muovere il cane (personaggio 1) in tutte le direzioni utilizzando
+        i tasti freccia?\n-   Come puoi aggiungere punti quando il cane tocca il gatto
+        (personaggio 2) o il pinguino (personaggio 3)?\n-   Come puoi togliere un
+        punto quando il gatto ed il pinguino si toccano?"
       coursea_maze_ramp1_2018: Per far arrivare l'uccellino fino al maialino, trascina
         il blocco <xml><block type="maze_moveEast"/></xml> sotto al blocco <xml><block
         type="when_run"/></xml>, poi premi "▶ Esegui"!

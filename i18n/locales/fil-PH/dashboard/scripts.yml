@@ -7374,6 +7374,8 @@ fil:
           stages:
             new stage:
               name: bagong yugto
+            Dance Party:
+              name: Dance Party
         frozen-2018-test-b:
           stages:
             Artist:
@@ -7384,6 +7386,14 @@ fil:
               name: Digital na Disenyo
             Linking Screens:
               name: Pag-uugnay sa mga Screen
+        dance--draft:
+          stages:
+            Dance Party:
+              name: Dance Party
+        dance-draft:
+          stages:
+            Dance Party:
+              name: Dance Party
         coursef-2019:
           description: Matutong gumami sa iba't ibang uri ng mga loop, mga event, mga function, at mga kondisyonal. Siyasatin ang iba't ibang mga pamamaraan sa paglutas ng mga problema at talakayain ang mga epekto ng computing at internet sa lipunan. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng isang capstone na proyekto na maaari mong ibahagi sa mga kaibigan at pamilya.
           description_short: Alamin ang lahat ng mga konsepto sa mga Pangunahing Kaalaman sa Computer Science at maglikha ng iyong sariling sining, kuwento o laro.
@@ -7463,6 +7473,10 @@ fil:
               name: Pag-crowdsourcing
               description_student: Ang araling ito ay nagtuturo sa iyo tungkol sa crowdsourcing, ang proseso sa pagbuo ng isang proyekto sa isang pangkat.
               description_teacher: Sa computer science, makakaharap tayo ng iilang mga malalaki, nakakatakot na mga problema. Mga hamon gaya ng paghahanap sa pinakamalaking prime na numero o pagsunod-sunod sa DNA ay halos imposibleng magawa bilang isang indibidwal. Ang pagdadagdag ng kapangyarihan ng iba ay nagpapagawa sa gawaing mga ito na mapapamahalaan. Ang araling ito ay magpapakita sa mga estudyante kung paano maaring nakakatulong ang pagtutulungan sa industriya ng computer science.
+        dance-low:
+          stages:
+            Dance Party:
+              name: Dance Party
         coursed-2019:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -7501,6 +7515,8 @@ fil:
               name: Bumuo ng Star Wars na Laro
               description_student: Damdamin ang puwersa habang nagbubuo ka ng iyong sariling Star Wars na laro sa araling ito.
               description_teacher: Sa araling ito, ang mga estudyante ay magsasanay sa paggamit ng mga pangyayari para makabuo ng laro na maaari nilang ibahagi online. Nagpapakita kay R2-D2 at ibang mga karakter sa Star Wars, ang mga estudyante ay gagabayan sa mga pangyayari, pagkatapos ay bibigyan ng lugar para makalikha ng kanilang sariling laro.
+            Dance Party:
+              name: Dance Party
         coursee-2019:
           description: Magsimulang mag-code gamit ang mga algoritmo, mga loop, mga kondisyonal, at mga pangyayari at pagkatapos ay pupunta ka sa mga function. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng capstone na proyekto na maaari mong ibahagi sa iyong mga kaibigan at pamilya.
           description_audience: 'Mga Edad: 8-12'
@@ -7655,6 +7671,8 @@ fil:
               name: Internet
             Crowdsourcing:
               name: Pag-crowdsourcing
+            Dance Party:
+              name: Dance Party
             Concept Practice with Minecraft:
               name: Masdan ang Hinaharap
         csd1-2019:
@@ -8717,6 +8735,10 @@ fil:
               name: Mga Pangyayari sa Star Wars
             Nested Loops in Frozen:
               name: Naka-nest na mga Loop sa Frozen
+        dance-2019:
+          stages:
+            Dance Party:
+              name: Dance Party
         k5-onlinepd-2019:
           stages:
             Getting Started:

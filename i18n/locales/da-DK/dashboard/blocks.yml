@@ -362,6 +362,7 @@ da:
             '"plus"': plus
             '"random"': tilfældig
       Dancelab_makeAnonymousDanceSprite:
+        text: lav et nyt {COSTUME} på {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': alien
@@ -457,10 +458,15 @@ da:
           LAYOUT:
             '"border"': grænse
             '"inner"': indersiden af firkant
+            '"diamond"': diamant
             '"circle"': cirkel
             '"grid"': gitter
+            '"top"': øverste række
             '"row"': række
+            '"bottom"': nederste række
+            '"left"': venstre kolonne
             '"column"': kolonne
+            '"right"': højre kolonne
             '"x"': kryds og tværs
             '"plus"': plus
             '"random"': tilfældig
@@ -667,7 +673,7 @@ da:
             '"y"': lodret position
             '"tint"': toning
       Dancelab_setPropRandomEach:
-        text: tilfældig {GROUP} {PROPERTY}
+        text: randomiser {GROUP} {PROPERTY}
         options:
           GROUP:
             sprites: alle
@@ -1183,6 +1189,7 @@ da:
             '"y"': y-position
             '"direction"': bevægelses retning
       Mikelab_groupChangeAnim:
+        text: ændr {SELECT} {COSTUME} til {COSTUME2}
         options:
           SELECT:
             '"all"': alle
@@ -1197,6 +1204,7 @@ da:
             '"y"': y-position
             '"direction"': bevægelses retning
       Mikelab_groupCreateNewSprite:
+        text: lav et nyt {COSTUME} på {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": top

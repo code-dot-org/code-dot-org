@@ -53,8 +53,8 @@ ms-MY:
           -   Dua penari perlu mempunyai saiz selain 100.
 
           _Peringkat ini berakhir selepas 5 corak berirama._
-        challenges: "**Cabaran Pilihan\\*** \n\nEksperimen dengan menukar sifat lain
-          (kelebaran, ketinggian, putaran dan sebagainya)"
+        challenges: "**Cabaran Pilihan\\*** \n\n-   Eksperimen dengan menukar sifat
+          lain (kelebaran, ketinggian, putaran dan sebagainya)"
       CourseD_Dance_Party_09:
         validation: |-
           **Bagaimanakah saya boleh lulus peringkat ini?**
@@ -233,6 +233,10 @@ ms-MY:
           **Cabaran Pilihan**
 
           Tukar kesan latar belakang pada titik yang berbeza semasa lagu dimainkan dengan menyambung kepada blok baharu di bawah acara <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      Dance_Party_05:
+        validation: "**Bagaimanakah saya boleh lulus peringkat ini?** \n\n-   penari
+          anda perlu melalui kitaran sekurang-kurangnya 4 gerakan tarian berbeza sebelum
+          peringkat itu berakhir. \n\n_Peringkat ini berakhir selepas 12 corak berirama._"
       Dance_Party_06:
         validation: |-
           **Bagaimanakah saya boleh lulus peringkat ini?**
@@ -250,8 +254,8 @@ ms-MY:
           -   Dua penari perlu mempunyai saiz selain 100.
 
           _Peringkat ini berakhir selepas 5 corak berirama._
-        challenges: "**Cabaran Pilihan\\*** \n\nEksperimen dengan menukar sifat lain
-          (kelebaran, ketinggian, putaran dan sebagainya)"
+        challenges: "**Cabaran Pilihan\\*** \n\n-   Eksperimen dengan menukar sifat
+          lain (kelebaran, ketinggian, putaran dan sebagainya)"
       Dance_Party_09:
         validation: |-
           **Bagaimanakah saya boleh lulus peringkat ini?**
@@ -287,3 +291,5 @@ ms-MY:
           -   Gunakan blok `apabila anak panah kiri ditekan` untuk membuatkan Robot melakukan gerakan menari apabila anda menekannya.
 
           _Peringkat ini berakhir selepas 7 corak berirama._
+      Dance_Party_extras_alternate_2019:
+        alternate: Blok alternatif adalah dalam kategori “Penari”.

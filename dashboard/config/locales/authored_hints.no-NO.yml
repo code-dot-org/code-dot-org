@@ -708,6 +708,36 @@ no-NO:
           -   Pass på at en danser vises på skjermen.
 
           -   dette nivået slutter etter 4 takter.\*
+        challenges: |-
+          **Valgfrie utfordringer**
+
+          -   velg en annen sang.
+          -   flytt danseren din til et annet sted.
+          -   lag flere dansere.
+      Dance_2019_02:
+        validation: |-
+          **Hvordan fullfører jeg denne oppgaven?**
+
+          -   Danseren må foreta en bevegelse.
+          -   Du må trykke på en piltast.
+
+          _Denne oppgaven slutter etter 4 takter._
+        challenges: |-
+          **Valgfri utfordring**
+
+          Bruk mer enn en <xml><block type="Dancelab_whenKey"><title name="KEY"></title></block></xml>-block.
+      Dance_2019_03:
+        validation: |-
+          **Hvordan fullfører jeg denne oppgaven?**
+
+          -   Begge danserne må utføre en bevegelse.
+          -   Du må bruke piltastene.
+
+          _Denne oppgaven slutter etter 6 takter._
+        challenges: |-
+          **Valgfri utfordring**
+
+          -   Få en danser til å respondere på venstre og høyre piltaster.
       Dance_2019_04:
         validation: |-
           \*\* Hvordan runder jeg dette nivået? \*\*
@@ -722,6 +752,63 @@ no-NO:
           -   Etter 6 takter må din danser må gjøre en annen dans enn den gjorde etter 4 takter.
 
           -   Nivået ender etter 11 takter.\*
+        challenges: |-
+          **Valgfri utfordring**
+
+          -   Bytt bakgrunn når danseren bytter bevegelse.
+      Dance_2019_06:
+        validation: |-
+          **Hvordan fullfører jeg oppgaven?**
+
+          -   Lag en hoveddanser og en gruppe med bakgrunnsdansere innen de fire første taktene av sangen.
+
+          _Denne oppgaven slutter etter 7 takter._
+        challenges: |-
+          **Valgfri utfordring**
+
+          -   Lag mange grupper med bakgrunnsdansere.
+      Dance_2019_07:
+        validation: |-
+          **Hvordan fullfører jeg oppgaven?**
+
+          -   Endre størrelsen på minst en danser.
+
+          _Denne oppgaven slutter etter 6 takter._
+        challenges: |-
+          **Valgfri utfordring**
+
+          -   Eksperimenter med å endre andre egenskaper som f. eks bredde og rotasjoner.
+      Dance_2019_08:
+        validation: |-
+          **Hvordan fullfører jeg oppgaven?**
+
+          -   Endre fargetone på minst en danser.
+
+          _Denne oppgaven slutter etter 6 takter._
+        tint_hint: Har du lagt merke til at danserne ikke endrer til nøyaktig den
+          samme fargen som du velger? Det er fordi **fargetonen** mikser fargen du
+          velger med den egentlige fargen på danseren.
+      Dance_2019_09:
+        validation: |-
+          **Hvordan fullfører jeg oppgaven?**
+
+          -   Bare trykk på "Fullfør" knappen!
+        repeat_every_ideas: |-
+          **Trenger du noen ideer?**
+
+          -   Endre danserens størrelse gjentatte ganger for å få den til å vokse.
+          -   Endre danserens rotasjon gjentatte ganger for å få den til å spinne.
+
+          _Du kan også bruke negative tall for å skape en motsatt effekt!_
+        next_previous: |-
+          **Valgfri utfordring**
+
+          -   Du kan også bruke denne nye hendelsesblokken for å gå gjennom en liste av bevegelser ved å sette bevegelsen til '(Tilfeldig)','(Neste)', eller '(Forrige)'.
+              <xml><block type="Dancelab_changeMoveEachLR">
+              <title name="GROUP">???</title>
+              <title name="MOVE">"rand"</title>
+              <title name="DIR">-1</title>
+              </block></xml>
       Dance_Party_01:
         validation: |-
           \*\* Hvordan runder jeg dette nivået? \*\*
@@ -754,6 +841,13 @@ no-NO:
 
           -   Du skal endre en bakgrunnseffekt et sted i den syvende takten av sangen.
           -   Dette nivået ender etter 9 takter.\*
+      Dance_Party_05:
+        validation: |-
+          **Hvordan kommer jeg videre?**
+
+          -   Danseren din trenger å gjennomføre minst 4 ulike bevegelser før de kommer videre.
+
+          _Dette nivået inneholder 12 takter._
       Function intro Ryan:
         Function_intro_Ryan_b: Hvis du kaller funksjonene riktig, er dette veien du
           vil reise...

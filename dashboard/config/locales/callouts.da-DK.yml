@@ -5,6 +5,8 @@ da-DK:
       AppLab Intro 7 - Change Screen Color:
         applab_hoc_finish: Skiftede skærmen til grøn? Hvis det skete, så tryk på Færdig.
           Hvis ikke, så tryk på Nulstil, ændre på koden og tryk igen på Kør.
+      AppLab Intro 7 - thisOrThatAddButton:
+        AppLabHoCFinal11: Du er nu i design tilstand.
       Course 4 Artist 4:
         repeat_full_circle: Angiv antallet af gange zombien skal bevæge sig for at
           have gennemført en fuld cirkel
@@ -32,13 +34,48 @@ da-DK:
         edit_add_parameter: Klik Redigér for at tilføje en parameter i din funktion
       Course 4 Play Lab Vars 1:
         arrows_move_actor: Brug pilene til at flytte figuren
+      CourseD_Dance_Party_01:
+        dance_callout_01: Føj denne blok til dit program!
+      CourseD_Dance_Party_02:
+        dance_callout_02: Føj denne blok til dit program!
+      CourseD_Dance_Party_04:
+        dance_callout_04: Føj denne blok til dit program!
+      CourseD_Dance_Party_06:
+        dance_callout_06: Tilføj din nye danser her
+      CourseD_Dance_Party_11:
+        dance_callout_11_a: Ny blok!
+        dance_callout_11_b: Ny blok!
+      CourseD_Dance_Party_11_5:
+        dance_party_11_5_groups: Se her for "alle ænder"-blokke
       Dance_2019_01:
         dance_callout_01: Her vælger du typen af danser.
       Dance_2019_02:
         dance_callout_11_a: Føj denne blok til dit program.
         arrow_buttons: Tryk på piletasterne for at kontrollere din danser.
+      Dance_2019_04:
+        dance_callout_02: Føj denne blok til dit program!
       Dance_2019_05:
         dance_callout_05: Føj en ny begivenhed til dit program.
+      Dance_2019_06:
+        dance_party_11_5_groups: Ny blok!
+      Dance_2019_07:
+        setprop_hint: Ny blok!
+      Dance_2019_09:
+        new_block_3: Ny blok!
+        new_block_4: Ny blok!
+      Dance_Party_01:
+        dance_callout_01: Føj denne blok til dit program!
+      Dance_Party_02:
+        dance_callout_02: Føj denne blok til dit program!
+      Dance_Party_04:
+        dance_callout_04: Føj denne blok til dit program!
+      Dance_Party_06:
+        dance_callout_06: Tilføj din nye danser her
+      Dance_Party_11:
+        dance_callout_11_a: Ny blok!
+        dance_callout_11_b: Ny blok!
+      Dance_Party_11_5:
+        dance_party_11_5_groups: Se her for "alle ænder"-blokke
       Function intro Ryan:
         Function_intro_Ryan_1: Denne lille instruktion fortæller computeren, at den
           skal køre et STORT kodestykke med det samme navn i arbejdsområdet.
@@ -121,18 +158,69 @@ da-DK:
         craft_what_is_iron: Udvind jern!
       Underground Iron_2019:
         craft_what_is_iron: Udvind jern!
+      courseA_artist_loops4:
+        courseA_artist_loops4_1: Dette tal fortæller hvor mange af disse blokke du
+          kan bruge i denne opgave.
+      courseA_artist_loops4_2018:
+        courseA_artist_loops4_1: Dette tal fortæller hvor mange af disse blokke du
+          kan bruge i denne opgave.
+      courseA_artist_loops4_2019:
+        courseA_artist_loops4_1: Dette tal fortæller hvor mange af disse blokke du
+          kan bruge i denne opgave.
+      courseA_collector_loops1:
+        courseA_collector_loops1_1: Kan du se nogle nye blokke i værktøjskassen? Vi
+          skal nok vise senere hvordan du bruger dem.
+      courseA_collector_loops3:
+        gradek_adventurer_loops2_1: Dette tal fortæller hvor mange af disse blokke
+          du kan bruge i denne opgave.
+      courseA_collector_loops3_2018:
+        gradek_adventurer_loops2_1: Dette tal fortæller hvor mange af disse blokke
+          du kan bruge i denne opgave.
+      courseA_collector_loops3_2019:
+        gradek_adventurer_loops2_1: Dette tal fortæller hvor mange af disse blokke
+          du kan bruge i denne opgave.
+      courseA_collector_preLoops2:
+        courseA_collector_loops1_1: Kan du se nogle nye blokke i værktøjskassen? Vi
+          skal nok vise senere hvordan du bruger dem.
+      courseA_collector_preLoops3:
+        courseA_collector_loops1_1: Kan du se nogle nye blokke i værktøjskassen? Vi
+          skal nok vise senere hvordan du bruger dem.
+      courseA_collector_preLoops4:
+        courseA_collector_loops1_1: Kan du se nogle nye blokke i værktøjskassen? Vi
+          skal nok vise senere hvordan du bruger dem.
+      courseA_collector_preLoops5:
+        courseA_collector_loops1_1: Kan du se nogle nye blokke i værktøjskassen? Vi
+          skal nok vise senere hvordan du bruger dem.
+      courseA_collector_preLoops6:
+        courseA_collector_loops1_1: Kan du se nogle nye blokke i værktøjskassen? Vi
+          skal nok vise senere hvordan du bruger dem.
       courseA_maze_seq1:
         courseA_maze_seq1_1: Klik på TIP! hvis du har brug for hjælp!
       courseA_maze_seq1_2018:
         courseA_maze_seq1_1: Klik på TIP! hvis du har brug for hjælp!
       courseA_maze_seq1_2019:
         courseA_maze_seq1_1: Klik på TIP! hvis du har brug for hjælp!
+      courseA_maze_seq2:
+        courseA_maze_seqA_callout1: Prøv 'trin' knapperne for at gå frem trin for
+          trin. Det vil hjælpe dig med at finde fejlen!
+      courseA_maze_seq4:
+        made_of_stone: Disse blokke er lavet af sten. Du kan flytte dem, men ikke
+          slette dem!
+      courseB_collector_loops1:
+        courseB_collector_loops1_1: Kan du se nogle nye blokke i værktøjskassen? Vi
+          skal nok vise senere hvordan du bruger dem.
       courseB_maze_seq1:
         courseB_maze_seq1: Klik på TIP! hvis du har brug for hjælp!
       courseB_maze_seq1_2018:
         courseB_maze_seq1: Klik på TIP! hvis du har brug for hjælp!
       courseB_maze_seq1_2019:
         courseB_maze_seq1: Klik på TIP! hvis du har brug for hjælp!
+      courseB_maze_seq2:
+        courseB_maze_seq2_callout1: Prøv 'trin' knapperne for at gå frem trin for
+          trin. Det vil hjælpe dig med at finde fejlen!
+      courseC_collector_prog1:
+        courseC_collector_prog1_1: Kan du se nogle nye blokke i værktøjskassen? Vi
+          skal nok vise senere hvordan du bruger dem.
       frozen circle function with parameter:
         frozen_circle_function_with_parameter_circle: Brug "lav en cirkel" blokken
           og skift størrelsen.

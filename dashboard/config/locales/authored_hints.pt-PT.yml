@@ -188,6 +188,11 @@ pt-PT:
           **Desafio Opcional**
 
           -   Faz com que um dançarino responda às teclas direcionais esquerda e direita.
+      Dance_2019_05:
+        challenges: |-
+          **Desafio Opcional**
+
+          -   Altera o fundo sempre que os dançarinos troquem de movimento.
       Dance_2019_06:
         validation: |-
           **Como é que eu passo este nível?**
@@ -248,6 +253,8 @@ pt-PT:
           -   O teu dançarino precisa de deslocar-se ciclicamente no mínimo em 4 movimentos de dança diferentes antes do nível acabar.
 
           _Este nível termina após 12 compassos._
+      Dance_Party_extras_alternate_2019:
+        alternate: O bloco alternativo está na categoria "Dançarinos".
       Function intro Ryan:
         Function_intro_Ryan_a: Podes chamar uma função várias vezes no teu programa!  Experimenta
           chamá-la duas vezes para resolver este quebra-cabeças.

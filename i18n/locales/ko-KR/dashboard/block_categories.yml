@@ -1,0 +1,29 @@
+ko:
+  data:
+    block_categories:
+      Actions: 동작
+      Advanced: 고급
+      Behaviors: 행동
+      Brushes: 브러쉬
+      Color: 색
+      Comment: 댓글
+      Comments: 의견
+      Conditionals: 조건
+      Dancers: 댄서
+      Default: 기본값
+      Events: 이벤트
+      Functions: 함수
+      'Functions ': "함수\n"
+      Game/Score: 게임/점수
+      Games/Score: 게임/점수
+      Groups: 그룹
+      Locations: 위치
+      Logic: 논리
+      Loops: 반복
+      Math: 계산
+      Numbers: 숫자
+      Properties: 등록 정보
+      Text: 문장
+      Variables: 변수
+      'Variables ': '변수 '
+      World: 세계
