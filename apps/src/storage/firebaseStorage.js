@@ -29,8 +29,7 @@ import {
   deleteColumnName,
   renameColumnName,
   addMissingColumns,
-  getColumnsRef,
-  getColumnNamesFromRecords
+  getColumnsRef
 } from './firebaseMetadata';
 import {tableType} from './redux/data';
 import {WarningType} from './constants';
@@ -221,12 +220,6 @@ FirebaseStorage.createRecord = function(tableName, record, onSuccess, onError) {
       );
       return recordRef.set(JSON.stringify(record));
     })
-    .then(() =>
-      addMissingColumns(
-        tableName,
-        getColumnNamesFromRecords([JSON.stringify(record)])
-      )
-    )
     .then(() => onSuccess(record), onError);
 };
 
@@ -384,12 +377,6 @@ FirebaseStorage.updateRecord = function(
         incrementRateLimitCounters()
           .then(() => updateTableCounters(tableName, 0))
           .then(() => recordRef.set(recordJson))
-          .then(() =>
-            addMissingColumns(
-              tableName,
-              getColumnNamesFromRecords([recordJson])
-            )
-          )
           .then(() => onComplete(record, true), onError);
       }
     });
@@ -559,11 +546,7 @@ FirebaseStorage.copyStaticTable = function(tableName, onSuccess, onError) {
     })
     .then(snapshot => {
       getRecordsRef(tableName).set(snapshot.val());
-      return snapshot;
     })
-    .then(snapshot =>
-      addMissingColumns(tableName, getColumnNamesFromRecords(snapshot.val()))
-    )
     .then(onSuccess, onError);
 };
 
@@ -622,7 +605,6 @@ FirebaseStorage.createTable = function(tableName, onSuccess, onError) {
           return Promise.resolve();
         });
     })
-    .then(() => addColumnName(tableName, 'id'))
     .then(onSuccess, onError);
 };
 
@@ -1025,12 +1007,7 @@ function overwriteTableData(tableName, recordsData) {
         rowCount: count
       });
     })
-    .then(() =>
-      addMissingColumns(
-        tableName,
-        getColumnNamesFromRecords(Object.values(recordsData))
-      )
-    );
+    .then(() => addMissingColumns(tableName));
 }
 
 FirebaseStorage.importCsv = function(
