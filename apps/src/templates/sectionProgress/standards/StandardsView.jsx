@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import StandardsIntroDialog from './standards/StandardsIntroDialog';
+import StandardsIntroDialog from './StandardsIntroDialog';
 
 export default class StandardsView extends Component {
   static propTypes = {
