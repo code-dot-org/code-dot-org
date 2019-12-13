@@ -18,7 +18,7 @@ theme: responsive
     = I18n.t(:enter_certificate_names, script_name: script_name)
   %p{:style=>"float: left; width: 360px; margin-top: 20px;"}<
     ="#{I18n.t :want_a_blank_certificate_template} "
-    %a{href: '/images/hour_of_code_certificate.jpg', target: '_blank'}=I18n.t :print_one_here_certificates
+    %a{href: '/images/#{certificate_template_for(script)}', target: '_blank'}=I18n.t :print_one_here_certificates
 %br
 %form{:method=>"post", :action=>'/printcertificates'}
   -if script
