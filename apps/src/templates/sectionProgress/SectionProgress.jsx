@@ -1,18 +1,16 @@
-import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactTooltip from 'react-tooltip';
 import ScriptSelector from './ScriptSelector';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionProgressToggle';
-import VirtualizedDetailView from './VirtualizedDetailView';
-import VirtualizedSummaryView from './VirtualizedSummaryView';
-import SummaryViewLegend from './SummaryViewLegend';
+import StandardsView from '@cdo/apps/templates/sectionProgress/standards/StandardsView';
+import SummaryView from '@cdo/apps/templates/sectionProgress/summary/SummaryView';
+import DetailView from '@cdo/apps/templates/sectionProgress/detail/DetailView';
 import LessonSelector from './LessonSelector';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {h3Style} from '../../lib/ui/Headings';
-import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import {
   ViewType,
   loadScript,
@@ -25,14 +23,12 @@ import {tooltipIdForLessonNumber} from './multiGridConstants';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import {
   setScriptId,
-  validScriptPropType,
-  getSelectedScriptFriendlyName
+  validScriptPropType
 } from '@cdo/apps/redux/scriptSelectionRedux';
 import {stageIsAllAssessment} from '@cdo/apps/templates/progress/progressHelpers';
-import color from '../../util/color';
 import firehoseClient from '../../lib/util/firehose';
 import experiments from '@cdo/apps/util/experiments';
-import StandardsIntroDialog from './standards/StandardsIntroDialog';
+import ProgressViewHeader from './ProgressViewHeader';
 
 const styles = {
   heading: {
@@ -53,12 +49,6 @@ const styles = {
   },
   toggle: {
     margin: '0px 30px'
-  },
-  tableHeader: {
-    marginBottom: 10
-  },
-  scriptLink: {
-    color: color.teal
   },
   show: {
     display: 'block'
@@ -85,9 +75,7 @@ class SectionProgress extends Component {
     loadScript: PropTypes.func.isRequired,
     setScriptId: PropTypes.func.isRequired,
     setLessonOfInterest: PropTypes.func.isRequired,
-    isLoadingProgress: PropTypes.bool.isRequired,
-    scriptFriendlyName: PropTypes.string.isRequired,
-    showStandardsIntroDialog: PropTypes.bool
+    isLoadingProgress: PropTypes.bool.isRequired
   };
 
   componentDidMount() {
@@ -134,16 +122,6 @@ class SectionProgress extends Component {
     ));
   }
 
-  // Re-attaches mouse handlers on tooltip targets to tooltips.  Called
-  // after the virtualized MultiGrid component scrolls, which may cause
-  // target cells to be created or destroyed.
-  afterScroll = _.debounce(ReactTooltip.rebuild, 10);
-
-  getLinkToOverview() {
-    const {scriptData, section} = this.props;
-    return scriptData ? `${scriptData.path}?section_id=${section.id}` : null;
-  }
-
   navigateToScript = () => {
     firehoseClient.putRecord(
       {
@@ -161,18 +139,14 @@ class SectionProgress extends Component {
 
   render() {
     const {
-      section,
       validScripts,
       currentView,
       scriptId,
       scriptData,
-      isLoadingProgress,
-      scriptFriendlyName,
-      showStandardsIntroDialog
+      isLoadingProgress
     } = this.props;
 
     const levelDataInitialized = scriptData && !isLoadingProgress;
-    const linkToOverview = this.getLinkToOverview();
     const lessons = scriptData ? scriptData.stages : [];
     const summaryStyle =
       currentView === ViewType.SUMMARY ? styles.show : styles.hide;
@@ -203,6 +177,8 @@ class SectionProgress extends Component {
             <LessonSelector lessons={lessons} onChange={this.onChangeLevel} />
           )}
         </div>
+
+        <ProgressViewHeader />
         <div style={{clear: 'both'}}>
           {!levelDataInitialized && (
             <FontAwesome
@@ -213,65 +189,21 @@ class SectionProgress extends Component {
           )}
           {levelDataInitialized && (
             <div id="uitest-summary-view" style={summaryStyle}>
-              <div
-                style={{...h3Style, ...styles.heading, ...styles.tableHeader}}
-              >
-                <span>{i18n.lessonsAttempted() + ' '}</span>
-                <a
-                  href={linkToOverview}
-                  style={styles.scriptLink}
-                  onClick={this.navigateToScript}
-                >
-                  {scriptFriendlyName}
-                </a>
-              </div>
-              <VirtualizedSummaryView
-                section={section}
-                scriptData={scriptData}
-                onScroll={this.afterScroll}
-              />
-              <SummaryViewLegend
-                showCSFProgressBox={!scriptData.excludeCsfColumnInLegend}
-              />
+              <SummaryView />
             </div>
           )}
           {levelDataInitialized && (
             <div id="uitest-detail-view" style={detailStyle}>
-              <div
-                style={{...h3Style, ...styles.heading, ...styles.tableHeader}}
-              >
-                <span>{i18n.levelsAttempted() + ' '}</span>
-                <a
-                  href={linkToOverview}
-                  style={styles.scriptLink}
-                  onClick={this.navigateToScript}
-                >
-                  {scriptFriendlyName}
-                </a>
-              </div>
-              <VirtualizedDetailView
-                section={section}
-                stageExtrasEnabled={section.stageExtras}
-                scriptData={scriptData}
-                onScroll={this.afterScroll}
-              />
-              <ProgressLegend
-                excludeCsfColumn={scriptData.excludeCsfColumnInLegend}
-              />
+              <DetailView />
+            </div>
+          )}
+          {levelDataInitialized && this.renderTooltips()}
+          {experiments.isEnabled(experiments.STANDARDS_REPORT) && (
+            <div style={standardsStyle}>
+              <StandardsView />
             </div>
           )}
         </div>
-        {levelDataInitialized && this.renderTooltips()}
-        {experiments.isEnabled(experiments.STANDARDS_REPORT) && (
-          <div style={standardsStyle}>
-            <StandardsIntroDialog
-              isOpen={
-                currentView === ViewType.STANDARDS && showStandardsIntroDialog
-              }
-            />
-            <p>Coming soon...</p>
-          </div>
-        )}
       </div>
     );
   }
@@ -287,9 +219,7 @@ export default connect(
     currentView: state.sectionProgress.currentView,
     scriptData: getCurrentScriptData(state),
     studentLevelProgress: getCurrentProgress(state),
-    isLoadingProgress: state.sectionProgress.isLoadingProgress,
-    scriptFriendlyName: getSelectedScriptFriendlyName(state),
-    showStandardsIntroDialog: !state.currentUser.hasSeenStandardsReportInfo
+    isLoadingProgress: state.sectionProgress.isLoadingProgress
   }),
   dispatch => ({
     loadScript(scriptId) {
