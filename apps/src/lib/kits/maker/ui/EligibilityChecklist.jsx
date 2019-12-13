@@ -179,12 +179,9 @@ export default class EligibilityChecklist extends React.Component {
         {this.state.statusYear === Status.SUCCEEDED && (
           <div>
             <div>
-              You meet all the requirements for a fully subsidized classroom
-              kit. Click the “Get Code” button to get your code.
-              <br />
               <strong>
-                If you are in Alaska or Hawaii, please contact teacher@code.org
-                to receive a discount code that covers shipping.
+                You meet all the requirements for a fully subsidized classroom
+                kit. Click the “Get Code” button to get your code.
               </strong>
             </div>
             <Button
