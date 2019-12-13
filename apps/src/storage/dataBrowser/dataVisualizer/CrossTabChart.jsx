@@ -9,12 +9,6 @@ const styles = {
     height: '2em',
     textAlign: 'center',
     border: '1px solid black'
-  },
-  title: {
-    fontFamily: '"Gotham 5r", sans-serif, sans-serif',
-    fontSize: 16,
-    lineHeight: '16px',
-    color: 'black'
   }
 };
 
@@ -107,37 +101,34 @@ class CrossTabChart extends React.Component {
     const max = Math.max(...numericValues);
 
     return (
-      <div>
-        <h1 style={styles.title}>{this.props.chartTitle}</h1>
-        <table>
-          <tbody>
-            <tr>
-              {columns.map(column => (
-                <th key={column} style={styles.headerCell}>
-                  {column}
-                </th>
-              ))}
-            </tr>
-            {chartData.map((record, id) => (
-              <tr key={id}>
-                {columns.map(column => {
-                  const value = record[column];
-                  const color =
-                    column === this.props.selectedColumn1
-                      ? 'white'
-                      : this.getColorForValue(value, min, max);
-                  const cellStyle = {...styles.cell, backgroundColor: color};
-                  return (
-                    <td key={column} style={cellStyle}>
-                      {value}
-                    </td>
-                  );
-                })}
-              </tr>
+      <table>
+        <tbody>
+          <tr>
+            {columns.map(column => (
+              <th key={column} style={styles.headerCell}>
+                {column}
+              </th>
             ))}
-          </tbody>
-        </table>
-      </div>
+          </tr>
+          {chartData.map((record, id) => (
+            <tr key={id}>
+              {columns.map(column => {
+                const value = record[column];
+                const color =
+                  column === this.props.selectedColumn1
+                    ? 'white'
+                    : this.getColorForValue(value, min, max);
+                const cellStyle = {...styles.cell, backgroundColor: color};
+                return (
+                  <td key={column} style={cellStyle}>
+                    {value}
+                  </td>
+                );
+              })}
+            </tr>
+          ))}
+        </tbody>
+      </table>
     );
   }
 }
