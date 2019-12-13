@@ -92,18 +92,12 @@ export function connect({interpreter, onDisconnect}) {
         return Promise.reject(new ConnectionCanceledError());
       }
       commands.injectBoardController(currentBoard);
-
       currentBoard.installOnInterpreter(interpreter);
-
-      if (!experiments.isEnabled('microbit')) {
-        if (typeof onDisconnect === 'function') {
-          currentBoard.once('disconnect', () => {
-            onDisconnect();
-            disconnect();
-          });
-        }
-      } else {
-        // ToDo
+      if (typeof onDisconnect === 'function') {
+        currentBoard.once('disconnect', () => {
+          onDisconnect();
+          disconnect();
+        });
       }
       dispatch(redux.reportConnected());
       trackEvent('Maker', 'ConnectionSuccess');
@@ -165,7 +159,8 @@ function getBoard() {
     return Promise.resolve(new FakeBoard());
   } else {
     if (experiments.isEnabled('microbit')) {
-      return findPortWithViableDevice().then(port => new MicroBitBoard(port));
+      //TODO - break out the applicable parts of findPortWithViableDevice
+      return findPortWithViableDevice().then(() => new MicroBitBoard());
     } else {
       return findPortWithViableDevice().then(
         port => new CircuitPlaygroundBoard(port)
@@ -187,7 +182,7 @@ function shouldRunWithFakeBoard() {
  * Resets the board state and puts maker UI back in a default state.
  */
 export function reset() {
-  if (currentBoard && !experiments.isEnabled('microbit')) {
+  if (currentBoard) {
     currentBoard.reset();
   }
 }
