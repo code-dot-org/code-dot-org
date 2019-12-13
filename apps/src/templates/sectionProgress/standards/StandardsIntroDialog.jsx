@@ -21,6 +21,11 @@ const styles = {
   }
 };
 
+/*
+Dialog that show the first time a teacher goes to the
+Standards view of the Progress Tab in Teacher Dashboard
+*/
+
 class StandardsIntroDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
