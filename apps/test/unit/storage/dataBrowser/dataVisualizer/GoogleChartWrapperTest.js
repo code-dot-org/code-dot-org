@@ -28,6 +28,7 @@ describe('GoogleChartWrapper', () => {
           numericColumns={['category2', 'category3']}
           chartType="Bar Chart"
           selectedColumn1="category1"
+          chartTitle="Title"
         />
       );
 
@@ -41,7 +42,7 @@ describe('GoogleChartWrapper', () => {
       expect(spy.getCalls()[0].args).to.deep.equal([
         expectedChartData,
         ['category1', 'count'],
-        {}
+        {title: 'Title'}
       ]);
     });
 
@@ -59,6 +60,7 @@ describe('GoogleChartWrapper', () => {
           chartType="Histogram"
           selectedColumn1="category2"
           bucketSize="2"
+          chartTitle="Title"
         />
       );
 
@@ -66,7 +68,7 @@ describe('GoogleChartWrapper', () => {
       expect(spy.getCalls()[0].args).to.deep.equal([
         expectedChartData,
         ['category2'],
-        {histogram: {bucketSize: '2'}}
+        {histogram: {bucketSize: '2'}, title: 'Title'}
       ]);
     });
 
@@ -84,13 +86,14 @@ describe('GoogleChartWrapper', () => {
           chartType="Scatter Plot"
           selectedColumn1="category2"
           selectedColumn2="category3"
+          chartTitle="Title"
         />
       );
       expect(spy).to.have.been.calledOnce;
       expect(spy.getCalls()[0].args).to.deep.equal([
         expectedChartData,
         ['category2', 'category3'],
-        {}
+        {title: 'Title'}
       ]);
     });
   });
