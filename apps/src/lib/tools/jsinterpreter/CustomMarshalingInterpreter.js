@@ -47,7 +47,12 @@ export default class CustomMarshalingInterpreter extends Interpreter {
       }
     });
     // Program nodes always have end=0 for some reason (acorn related).
-    // Our code likes them to have end=1 for historical reasons, the result
+    // The Interpreter.step method assumes that a falsey state.node.end value means
+    // the interpreter is inside polyfill code, because it strips all location information from ast nodes for polyfill code.
+    // This means the interpreter will sometimes step more often than necessary. This is a problem for us when breakpoints
+    // are turned on because the interpreter can step over nodes that we need to check before they get stepped, resulting
+    // in an infinite loop.
+    // Also, our code likes them to have end=1 for historical reasons, the result
     // being that unhandled exceptions will highlight the first character
     // of the program. The logic below preserves that behavior:
     if (this.ast && this.ast.type === 'Program') {
