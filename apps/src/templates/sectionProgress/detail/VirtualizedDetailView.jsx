@@ -2,18 +2,18 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {MultiGrid} from 'react-virtualized';
-import StudentProgressDetailCell from '@cdo/apps/templates/sectionProgress/StudentProgressDetailCell';
+import StudentProgressDetailCell from '@cdo/apps/templates/sectionProgress/detail/StudentProgressDetailCell';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import styleConstants from '../../styleConstants';
+import styleConstants from '../../../styleConstants';
 import {
   scriptDataPropType,
   getColumnWidthsForDetailView,
   getLevels,
   setLessonOfInterest
-} from './sectionProgressRedux';
+} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import {getIconForLevel} from '@cdo/apps/templates/progress/progressHelpers';
-import color from '../../util/color';
+import color from '../../../util/color';
 import {
   progressStyles,
   ROW_HEIGHT,
@@ -22,9 +22,9 @@ import {
   PROGRESS_BUBBLE_WIDTH,
   DIAMOND_BUBBLE_WIDTH,
   tooltipIdForLessonNumber
-} from './multiGridConstants';
+} from '@cdo/apps/templates/sectionProgress/multiGridConstants';
 import i18n from '@cdo/locale';
-import SectionProgressNameCell from './SectionProgressNameCell';
+import SectionProgressNameCell from '@cdo/apps/templates/sectionProgress/SectionProgressNameCell';
 
 const ARROW_PADDING = 60;
 // Only show arrow next to lesson numbers if column is larger than a single small bubble and it's margin.
