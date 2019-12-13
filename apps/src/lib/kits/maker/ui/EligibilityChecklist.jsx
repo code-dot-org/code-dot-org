@@ -25,6 +25,7 @@ export default class EligibilityChecklist extends React.Component {
     unit6Intention: PropTypes.string,
     schoolId: PropTypes.string,
     schoolName: PropTypes.string,
+    schoolHighNeedsEligible: PropTypes.bool,
     hasConfirmedSchool: PropTypes.bool,
     getsFullDiscount: PropTypes.bool,
     initialDiscountCode: PropTypes.string,
@@ -70,7 +71,7 @@ export default class EligibilityChecklist extends React.Component {
       this.state = {
         ...this.state,
         schoolId: props.schoolId,
-        schoolEligible: !!props.getsFullDiscount
+        schoolEligible: !!props.schoolHighNeedsEligible
       };
     }
 
@@ -81,10 +82,10 @@ export default class EligibilityChecklist extends React.Component {
     };
   }
 
-  handleSchoolConfirmed = ({schoolId, fullDiscount}) => {
+  handleSchoolConfirmed = ({schoolId, schoolHighNeedsEligible}) => {
     this.setState({
       schoolId: schoolId,
-      schoolEligible: !!fullDiscount
+      schoolEligible: schoolHighNeedsEligible
     });
   };
 

@@ -112,6 +112,7 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
       has_confirmed_school: application.try(:has_confirmed_school?) || false,
       school_id: school_id,
       school_name: school_id ? School.find(school_id).name : nil,
+      school_high_needs_eligible: School.find(school_id).try(:maker_high_needs?),
       # true/false once has_submitted_school is true
       # false implies partial discount
       gets_full_discount: application.try(:full_discount),
@@ -127,7 +128,7 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
         [
           Pd::Workshop::SUBJECT_CSD_WORKSHOP_4,
           Pd::Workshop::SUBJECT_CSD_WORKSHOP_6,
-          Pd::WorkshopConstants::SUBJECT_CSD_VIRTUAL_8
+          Pd::Workshop::SUBJECT_CSD_VIRTUAL_8
         ]
       ),
       is_progress_eligible: student_progress_eligible?(user)
@@ -157,7 +158,7 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
         [
           Pd::Workshop::SUBJECT_CSD_WORKSHOP_4,
           Pd::Workshop::SUBJECT_CSD_WORKSHOP_6,
-          Pd::WorkshopConstants::SUBJECT_CSD_VIRTUAL_8
+          Pd::Workshop::SUBJECT_CSD_VIRTUAL_8
         ]
       ),
       is_progress_eligible: student_progress_eligible?(user),
