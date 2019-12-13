@@ -57,6 +57,7 @@ const INITIAL_STATE = {
 
 class DataTable extends React.Component {
   static propTypes = {
+    getColumnNames: PropTypes.func.isRequired,
     readOnly: PropTypes.bool,
     rowsPerPage: PropTypes.number,
     // from redux state
@@ -161,8 +162,12 @@ class DataTable extends React.Component {
   };
 
   getNextColumnName() {
-    let i = this.props.tableColumns.length;
-    while (this.props.tableColumns.includes(`column${i}`)) {
+    const names = this.props.getColumnNames(
+      this.props.tableRecords,
+      this.props.tableColumns
+    );
+    let i = names.length;
+    while (names.includes(`column${i}`)) {
       i++;
     }
     return `column${i}`;
@@ -206,7 +211,10 @@ class DataTable extends React.Component {
   }
 
   render() {
-    let columnNames = [...this.props.tableColumns];
+    let columnNames = this.props.getColumnNames(
+      this.props.tableRecords,
+      this.props.tableColumns
+    );
     let editingColumn = this.state.editingColumn;
 
     let rowsPerPage = this.props.rowsPerPage || MAX_ROWS_PER_PAGE;
