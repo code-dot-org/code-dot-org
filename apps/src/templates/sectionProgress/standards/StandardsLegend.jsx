@@ -7,7 +7,9 @@ const styles = {
   header: {
     fontWeight: 'bold',
     color: color.charcoal,
-    textAlign: 'center'
+    textAlign: 'center',
+    fontSize: 16,
+    lineHeight: '24px'
   },
   th: {
     backgroundColor: color.lightest_gray,
