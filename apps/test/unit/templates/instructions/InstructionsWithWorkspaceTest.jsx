@@ -1,14 +1,28 @@
 import $ from 'jquery';
 import React from 'react';
 import sinon from 'sinon';
-import {shallow} from 'enzyme';
+import {Provider} from 'react-redux';
+import {shallow, mount} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
-import {UnwrappedInstructionsWithWorkspace as InstructionsWithWorkspace} from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux
+} from '@cdo/apps/redux';
+import instructionsReducer from '@cdo/apps/redux/instructions';
+import pageConstantsReducer, {
+  setPageConstants
+} from '@cdo/apps/redux/pageConstants';
+import isRtlReducer, {setRtl} from '@cdo/apps/code-studio/isRtlRedux';
+import InstructionsWithWorkspace, {
+  UnwrappedInstructionsWithWorkspace
+} from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
 
 describe('InstructionsWithWorkspace', () => {
   it('renders instructions and code workspace', () => {
     const wrapper = shallow(
-      <InstructionsWithWorkspace
+      <UnwrappedInstructionsWithWorkspace
         instructionsHeight={400}
         setInstructionsMaxHeightAvailable={() => {}}
       />
@@ -20,7 +34,7 @@ describe('InstructionsWithWorkspace', () => {
 
   it('initially does not know window width or height', () => {
     const wrapper = shallow(
-      <InstructionsWithWorkspace
+      <UnwrappedInstructionsWithWorkspace
         instructionsHeight={400}
         setInstructionsMaxHeightAvailable={() => {}}
       />
@@ -51,7 +65,7 @@ describe('InstructionsWithWorkspace', () => {
       codeWorkspaceHeight = 100
     } = {}) {
       const wrapper = shallow(
-        <InstructionsWithWorkspace
+        <UnwrappedInstructionsWithWorkspace
           instructionsHeight={instructionsHeight}
           setInstructionsMaxHeightAvailable={setInstructionsMaxHeightAvailable}
         />
@@ -133,6 +147,42 @@ describe('InstructionsWithWorkspace', () => {
       const wrapper = setupComponent({codeWorkspaceHeight: 0});
       wrapper.instance().onResize();
       expect(setInstructionsMaxHeightAvailable).not.to.have.been.called;
+    });
+  });
+
+  // This is a set of integration tests over the draggable resize grippy's behavior,
+  // which lives between the instructions area and the code workspace.
+  // As a result, these tests use much heavier setup than the rest of the file.
+  describe('resize bar behavior', () => {
+    beforeEach(() => {
+      stubRedux();
+      registerReducers({
+        instructions: instructionsReducer,
+        isRtl: isRtlReducer,
+        pageConstants: pageConstantsReducer
+      });
+      const store = getStore();
+      store.dispatch(setRtl(false));
+      store.dispatch(
+        setPageConstants({
+          hideSource: false,
+          isEmbedView: false,
+          isShareView: false,
+          noVisualization: false
+        })
+      );
+    });
+
+    afterEach(() => {
+      restoreRedux();
+    });
+
+    it('can deep-render component', () => {
+      mount(
+        <Provider store={getStore()}>
+          <InstructionsWithWorkspace />
+        </Provider>
+      );
     });
   });
 });
