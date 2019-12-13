@@ -102,7 +102,7 @@ class MakerController < ApplicationController
     CircuitPlaygroundDiscountApplication.create!(
       user: current_user,
       school_id: school_id,
-      full_discount: false
+      full_discount: (%w(AK HI).include? school.state)
     )
 
     render json: {school_high_needs_eligible: school.try(:maker_high_needs?)}

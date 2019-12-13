@@ -264,6 +264,36 @@ class MakerControllerTest < ActionController::TestCase
     end
   end
 
+  test "schoolchoice: Returns full discount when applicant from Alaska" do
+    sign_in @teacher
+    school_alaska = create(:school, state: 'AK')
+
+    post :schoolchoice, params: {nces: school_alaska.id}
+    application = CircuitPlaygroundDiscountApplication.find_by(user_id: @teacher)
+
+    assert application.full_discount
+  end
+
+  test "schoolchoice: Returns full discount when applicant from Hawaii" do
+    sign_in @teacher
+    school_hawaii = create(:school, state: 'HI')
+
+    post :schoolchoice, params: {nces: school_hawaii.id}
+    application = CircuitPlaygroundDiscountApplication.find_by(user_id: @teacher)
+
+    assert application.full_discount
+  end
+
+  test "schoolchoice: Returns no discount when school not in Alaska or Hawaii" do
+    sign_in @teacher
+    school_washington = create(:school, state: 'WA')
+
+    post :schoolchoice, params: {nces: school_washington.id}
+    application = CircuitPlaygroundDiscountApplication.find_by(user_id: @teacher)
+
+    assert_equal application.full_discount, false
+  end
+
   test "complete: fails if not given a signature" do
     DCDO.stubs(:get).with('currently_distributing_discount_codes', false).returns(true)
     sign_in @teacher
