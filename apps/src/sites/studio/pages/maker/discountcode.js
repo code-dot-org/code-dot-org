@@ -33,6 +33,7 @@ $(document).ready(() => {
           unit6Intention={application.unit_6_intention}
           schoolId={application.school_id}
           schoolName={application.school_name}
+          schoolHighNeedsEligible={application.school_high_needs_eligible}
           hasConfirmedSchool={application.has_confirmed_school}
           getsFullDiscount={application.gets_full_discount}
           initialDiscountCode={application.discount_code}

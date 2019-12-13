@@ -69,8 +69,10 @@ class MakerController < ApplicationController
 
     # Ensure we have an existing application and the school is eligible
     application = CircuitPlaygroundDiscountApplication.find_by_studio_person_id(current_user.studio_person_id)
+    school = School.find(application.school_id)
+
     return head :not_found unless application
-    return head :forbidden unless application.full_discount?
+    return head :forbidden unless school.try(:maker_high_needs?)
 
     # validate that we're eligible (this should be visible already, but we should
     # never have submitted this request if not eligible in these ways
@@ -96,13 +98,14 @@ class MakerController < ApplicationController
     return head :forbidden if application && application.has_confirmed_school?
 
     # Create our application
-    application = CircuitPlaygroundDiscountApplication.create!(
+    # For 2020, applications by default get the non "full discount" (ie, without shipping)
+    CircuitPlaygroundDiscountApplication.create!(
       user: current_user,
       school_id: school_id,
-      full_discount: school.maker_high_needs?
+      full_discount: false
     )
 
-    render json: {full_discount: application.full_discount?}
+    render json: {school_high_needs_eligible: school.try(:maker_high_needs?)}
   end
 
   # POST /maker/complete
