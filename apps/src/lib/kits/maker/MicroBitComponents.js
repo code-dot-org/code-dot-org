@@ -20,6 +20,28 @@ export function createMicroBitComponents(board) {
 }
 
 /**
+ * De-initializes any components that might have been created
+ * by createMicroBitComponents
+ * @param {Object} components - map of components, as originally returned by
+ *   createMicroBitComponents.  This object will be mutated: Destroyed
+ *   components will be removed. Additional members of this object will be
+ *   ignored.
+ * @param {boolean} shouldDestroyComponents - whether or not to fully delete the
+ *   components, or just reset to their initial state.
+ */
+export function cleanupMicroBitComponents(components, shouldDestroyComponents) {
+  if (components.ledMatrix) {
+    components.ledMatrix.allOff();
+  }
+
+  if (shouldDestroyComponents) {
+    delete components.ledMatrix;
+    delete components.buttonA;
+    delete components.buttonB;
+  }
+}
+
+/**
  * Set of classes used by interpreter to understand the type of instantiated
  * objects, allowing it to make methods and properties of instances available.
  */
