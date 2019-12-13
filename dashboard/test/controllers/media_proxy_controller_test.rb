@@ -52,6 +52,11 @@ class MediaProxyControllerTest < ActionController::TestCase
     assert_response 400
   end
 
+  test "can't access loopback IP addresses" do
+    get :get, params: {u: 'http://0.0.0.0'}
+    assert_response 400
+  end
+
   test "should fail if too many redirects" do
     response = {body: 'Redirect', status: 302, headers: {location: IMAGE_URI}}
     stub_request(:get, IMAGE_URI).to_return(
