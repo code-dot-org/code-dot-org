@@ -12,7 +12,7 @@ import {
   resetTraining,
   friendlyNameForFishPart
 } from './helpers';
-import {onClassifyFish} from './models/train';
+import train from './models/train';
 import {arrangeFish} from './models/pond';
 import colors from './colors';
 import aiBotHead from '@public/images/ai-bot/ai-bot-head.png';
@@ -875,7 +875,7 @@ let UnwrappedWords = class Words extends React.Component {
 };
 export const Words = Radium(UnwrappedWords); // Exported for unit tests.
 
-let Train = class Train extends React.Component {
+let UnwrappedTrain = class Train extends React.Component {
   state = {
     headOpen: false
   };
@@ -906,7 +906,7 @@ let Train = class Train extends React.Component {
         </div>
         <div style={styles.counter}>
           <img src={counterIcon} style={styles.counterImg} />
-          <span style={styles.counterNum}>
+          <span style={styles.counterNum} id="uitest-train-count">
             {Math.min(999, state.yesCount + state.noCount)}
           </span>
         </div>
@@ -927,7 +927,7 @@ let Train = class Train extends React.Component {
             style={styles.trainButtonNo}
             onClick={() => {
               this.setState({headOpen: true});
-              return onClassifyFish(false);
+              return train.onClassifyFish(false);
             }}
             sound={'no'}
           >
@@ -939,7 +939,7 @@ let Train = class Train extends React.Component {
             style={styles.trainButtonYes}
             onClick={() => {
               this.setState({headOpen: true});
-              return onClassifyFish(true);
+              return train.onClassifyFish(true);
             }}
             sound={'yes'}
           >
@@ -958,7 +958,7 @@ let Train = class Train extends React.Component {
     );
   }
 };
-Train = Radium(Train);
+export const Train = Radium(UnwrappedTrain); // Exported for unit tests.
 
 const defaultTimeScale = 1;
 const timeScales = [1, 2];
@@ -1590,10 +1590,6 @@ let Guide = class Guide extends React.Component {
 Guide = Radium(Guide);
 
 export default class UI extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const state = getState();
     const currentMode = getState().currentMode;

@@ -2,9 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import {Button, ConfirmationDialog, Words, wordSet} from '@ml/oceans/ui';
+import {Button, ConfirmationDialog, Words, wordSet, Train} from '@ml/oceans/ui';
 import guide from '@ml/oceans/models/guide';
 import soundLibrary from '@ml/oceans/models/soundLibrary';
+import train from '@ml/oceans/models/train';
 import modeHelpers from '@ml/oceans/modeHelpers';
 import {setState, getState, resetState} from '@ml/oceans/state';
 import {AppMode, Modes} from '@ml/oceans/constants';
@@ -195,5 +196,126 @@ describe('Words', () => {
         .simulate('click');
       expect(window.trackEvent.calledOnce).toBeTruthy();
     });
+  });
+});
+
+describe('Train', () => {
+  let classifyFishStub;
+
+  beforeEach(() => {
+    classifyFishStub = sinon.stub(train, 'onClassifyFish');
+  });
+
+  afterEach(() => {
+    train.onClassifyFish.restore();
+  });
+
+  it('displays the current training count', () => {
+    setState({yesCount: 10, noCount: 23});
+    const wrapper = shallow(<Train {...DEFAULT_PROPS} />);
+    const trainCount = wrapper.find('#uitest-train-count');
+
+    expect(trainCount.text()).toEqual('33');
+  });
+
+  it('displays 999 if current training count is greater than 999', () => {
+    setState({yesCount: 1000, noCount: 1});
+    const wrapper = shallow(<Train {...DEFAULT_PROPS} />);
+    const trainCount = wrapper.find('#uitest-train-count');
+
+    expect(trainCount.text()).toEqual('999');
+  });
+
+  it('sets state to display confirmation dialog when erase icon is clicked', () => {
+    const initialState = getState();
+    expect(initialState.showConfirmationDialog).toBeFalsy();
+    expect(initialState.confirmationDialogOnYes).toBeNull();
+
+    const wrapper = shallow(<Train {...DEFAULT_PROPS} />);
+    const eraseIcon = wrapper.find('FontAwesomeIcon').at(0);
+    eraseIcon.simulate('click');
+
+    const newState = getState();
+    expect(newState.showConfirmationDialog).toBeTruthy();
+    expect(newState.confirmationDialogOnYes).not.toBeNull();
+  });
+
+  describe('train "no" button', () => {
+    const getNoButton = wrapper => wrapper.find('Button').at(0);
+
+    it('displays the current word when not in AppMode.CreaturesVTrash', () => {
+      setState({appMode: 'not-creatures-v-trash', word: 'Spooky'});
+      const wrapper = shallow(<Train {...DEFAULT_PROPS} />);
+      const noButton = getNoButton(wrapper).render();
+
+      expect(noButton.text().trimLeft()).toEqual('Not Spooky');
+    });
+
+    it('displays "no" in AppMode.CreaturesVTrash', () => {
+      setState({appMode: AppMode.CreaturesVTrash, word: 'Spooky'});
+      const wrapper = shallow(<Train {...DEFAULT_PROPS} />);
+      const noButton = getNoButton(wrapper).render();
+
+      expect(noButton.text().trimLeft()).toEqual('No');
+    });
+
+    it('classifies fish on click', () => {
+      const wrapper = shallow(<Train {...DEFAULT_PROPS} />);
+      getNoButton(wrapper).simulate('click');
+
+      expect(classifyFishStub.withArgs(false).callCount).toEqual(1);
+    });
+
+    it('opens bot head on click', () => {
+      const wrapper = shallow(<Train {...DEFAULT_PROPS} />);
+
+      expect(wrapper.state().headOpen).toBeFalsy();
+      getNoButton(wrapper).simulate('click');
+      expect(wrapper.state().headOpen).toBeTruthy();
+    });
+  });
+
+  describe('train "yes" button', () => {
+    const getYesButton = wrapper => wrapper.find('Button').at(1);
+
+    it('displays the current word when not in AppMode.CreaturesVTrash', () => {
+      setState({appMode: 'not-creatures-v-trash', word: 'Spooky'});
+      const wrapper = shallow(<Train {...DEFAULT_PROPS} />);
+      const noButton = getYesButton(wrapper).render();
+
+      expect(noButton.text().trimLeft()).toEqual('Spooky');
+    });
+
+    it('displays "yes" in AppMode.CreaturesVTrash', () => {
+      setState({appMode: AppMode.CreaturesVTrash, word: 'Spooky'});
+      const wrapper = shallow(<Train {...DEFAULT_PROPS} />);
+      const noButton = getYesButton(wrapper).render();
+
+      expect(noButton.text().trimLeft()).toEqual('Yes');
+    });
+
+    it('classifies fish on click', () => {
+      const wrapper = shallow(<Train {...DEFAULT_PROPS} />);
+      getYesButton(wrapper).simulate('click');
+
+      expect(classifyFishStub.withArgs(true).callCount).toEqual(1);
+    });
+
+    it('opens bot head on click', () => {
+      const wrapper = shallow(<Train {...DEFAULT_PROPS} />);
+
+      expect(wrapper.state().headOpen).toBeFalsy();
+      getYesButton(wrapper).simulate('click');
+      expect(wrapper.state().headOpen).toBeTruthy();
+    });
+  });
+
+  it('transitions to Modes.Predicting when continue button is clicked', () => {
+    const toModeStub = sinon.stub(modeHelpers, 'toMode');
+    const wrapper = shallow(<Train {...DEFAULT_PROPS} />);
+    const continueButton = wrapper.find('Button').at(2);
+    continueButton.simulate('click');
+
+    expect(toModeStub.withArgs(Modes.Predicting).callCount).toEqual(1);
   });
 });

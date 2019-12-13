@@ -36,7 +36,9 @@ const initialState = {
   pondFishMaxExplainValue: 1,
   pondRecallFishMaxExplainValue: 1,
   guideDismissals: [],
-  guideShowing: false
+  guideShowing: false,
+  showConfirmationDialog: false,
+  confirmationDialogOnYes: null
 };
 let state = {...initialState};
 
