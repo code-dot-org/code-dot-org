@@ -32,6 +32,7 @@ import {stageIsAllAssessment} from '@cdo/apps/templates/progress/progressHelpers
 import color from '../../util/color';
 import firehoseClient from '../../lib/util/firehose';
 import experiments from '@cdo/apps/util/experiments';
+import StandardsIntroDialog from './standards/StandardsIntroDialog';
 
 const styles = {
   heading: {
@@ -85,7 +86,8 @@ class SectionProgress extends Component {
     setScriptId: PropTypes.func.isRequired,
     setLessonOfInterest: PropTypes.func.isRequired,
     isLoadingProgress: PropTypes.bool.isRequired,
-    scriptFriendlyName: PropTypes.string.isRequired
+    scriptFriendlyName: PropTypes.string.isRequired,
+    showStandardsIntroDialog: PropTypes.bool
   };
 
   componentDidMount() {
@@ -165,7 +167,8 @@ class SectionProgress extends Component {
       scriptId,
       scriptData,
       isLoadingProgress,
-      scriptFriendlyName
+      scriptFriendlyName,
+      showStandardsIntroDialog
     } = this.props;
 
     const levelDataInitialized = scriptData && !isLoadingProgress;
@@ -260,7 +263,14 @@ class SectionProgress extends Component {
         </div>
         {levelDataInitialized && this.renderTooltips()}
         {experiments.isEnabled(experiments.STANDARDS_REPORT) && (
-          <div style={standardsStyle}>Coming soon...</div>
+          <div style={standardsStyle}>
+            <StandardsIntroDialog
+              isOpen={
+                currentView === ViewType.STANDARDS && showStandardsIntroDialog
+              }
+            />
+            <p>Coming soon...</p>
+          </div>
         )}
       </div>
     );
@@ -278,7 +288,8 @@ export default connect(
     scriptData: getCurrentScriptData(state),
     studentLevelProgress: getCurrentProgress(state),
     isLoadingProgress: state.sectionProgress.isLoadingProgress,
-    scriptFriendlyName: getSelectedScriptFriendlyName(state)
+    scriptFriendlyName: getSelectedScriptFriendlyName(state),
+    showStandardsIntroDialog: !state.currentUser.hasSeenStandardsReportInfo
   }),
   dispatch => ({
     loadScript(scriptId) {
