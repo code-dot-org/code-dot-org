@@ -86,6 +86,10 @@ class AuthenticationOption < ApplicationRecord
 
   scope :trusted_email, -> {where(credential_type: TRUSTED_EMAIL_CREDENTIAL_TYPES)}
 
+  def google?
+    credential_type == GOOGLE
+  end
+
   def codeorg_email?
     Mail::Address.new(email).domain == 'code.org'
   end

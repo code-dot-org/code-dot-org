@@ -1,4 +1,3 @@
-@skip
 @no_ie
 @no_mobile
 Feature: (Un)Assign on script and course overview pages
@@ -20,7 +19,7 @@ Feature: (Un)Assign on script and course overview pages
     And I press the first ".uitest-unassign-button" element
     # One assign button for each of 9 currently unassigned units in this course,
     # and one at the top of the page indicating the course is assigned
-    And I wait for the page to fully load
+    And I wait until element ".uitest-unassign-button" is not visible
     Then the overview page contains 10 assign buttons
     And I press the first ".uitest-assign-button" element
     And I wait until element ".uitest-unassign-button" is visible
@@ -53,7 +52,6 @@ Feature: (Un)Assign on script and course overview pages
     And check that the URL contains "courses/csp-2017"
     And I wait until element ".uitest-CourseScript" is visible
     And I wait until element ".uitest-unassign-button" is visible
-    And I wait until element ".uitest-assigned" is visible
     And I press the first ".uitest-unassign-button" element
     And I press the first ".uitest-togglehidden" element
     And I press the first ".uitest-go-to-unit-button" element to load a new page
