@@ -28,7 +28,11 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
 
   enum unit_6_intention: {
     no: 1,
+    yes1718: 2,
+    yes1819: 3,
+    yesAfter: 4,
     unsure: 5,
+    yes1920: 6,
     yesSpring2020: 7,
     yesFall2020: 8,
     yesSpring2021: 9
