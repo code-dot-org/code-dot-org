@@ -41,13 +41,15 @@ module HocEventReview
   # Get events according to given filters
   def self.events(**rest)
     events_query(rest).
-      select(:data, :secret, :processed_data).
-      limit(100).
-      map do |form|
-        JSON.parse(form[:data]).
-          merge(secret: form[:secret]).
-          merge(JSON.parse(form[:processed_data]))
-      end
+        select(:data, :secret, :processed_data).
+        limit(100).
+        map do |form|
+          next unless !!form[:processed_data]
+          JSON.parse(form[:data]).
+              merge(secret: form[:secret]).
+              merge(JSON.parse(form[:processed_data]))
+        end.
+        compact
   end
 
   private_class_method def self.events_query(
