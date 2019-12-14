@@ -204,7 +204,6 @@ describe('InstructionsWithWorkspace', () => {
           </InstructionsWithWorkspace>
         </Provider>
       );
-      // utils.fireResizeEvent();
 
       const resizer = () => wrapper.find('HeightResizer');
       const instructionsHeight = () =>
@@ -217,7 +216,6 @@ describe('InstructionsWithWorkspace', () => {
       // Instructions content height is stubbed to 500.
       // Initial render height is 300.
       // Real 'height' style on relevant element is 287 due to 13px resize bar adjustment.
-
       assert.equal(287, instructionsHeight());
       assert.include(store.getState().instructions, {
         renderedHeight: 300,
@@ -227,13 +225,7 @@ describe('InstructionsWithWorkspace', () => {
       });
 
       // Drag the resize bar to make the instructions bigger by 100px
-
-      resizer().simulate('mousedown', {button: 0, pageY: 0});
-      resizer().simulate('mousemove', {pageY: 100});
-      resizer().simulate('mouseup', {});
-
-      // Check updated instructions size
-
+      drag(resizer(), 100);
       assert.equal(387, instructionsHeight());
       assert.include(store.getState().instructions, {
         renderedHeight: 400,
@@ -243,13 +235,7 @@ describe('InstructionsWithWorkspace', () => {
       });
 
       // Drag the resize bar to make the instructions smaller by 100px
-
-      resizer().simulate('mousedown', {button: 0, pageY: 100});
-      resizer().simulate('mousemove', {pageY: 0});
-      resizer().simulate('mouseup', {});
-
-      // Check updated instructions size
-
+      drag(resizer(), -100);
       assert.equal(287, instructionsHeight());
       assert.include(store.getState().instructions, {
         renderedHeight: 300,
@@ -259,13 +245,7 @@ describe('InstructionsWithWorkspace', () => {
       });
 
       // Drag the resize bar to make the instructions as large as possible
-
-      resizer().simulate('mousedown', {button: 0, pageY: 0});
-      resizer().simulate('mousemove', {pageY: 1000});
-      resizer().simulate('mouseup', {});
-
-      // Check the instructions stopped at their max needed height
-
+      drag(resizer(), 1000);
       assert.equal(530, instructionsHeight());
       assert.include(store.getState().instructions, {
         renderedHeight: 543,
@@ -275,13 +255,7 @@ describe('InstructionsWithWorkspace', () => {
       });
 
       // Drag the resize bar to make the instructions as small as possible
-
-      resizer().simulate('mousedown', {button: 0, pageY: 1000});
-      resizer().simulate('mousemove', {pageY: 0});
-      resizer().simulate('mouseup', {});
-
-      // Check the instructions stopped at their minimum height
-
+      drag(resizer(), -1000);
       assert.equal(60, instructionsHeight());
       assert.include(store.getState().instructions, {
         renderedHeight: 73,
@@ -290,5 +264,11 @@ describe('InstructionsWithWorkspace', () => {
         maxAvailableHeight: Infinity
       });
     });
+
+    function drag(element, distance) {
+      element.simulate('mousedown', {button: 0, pageY: 1000});
+      element.simulate('mousemove', {pageY: 1000 + distance});
+      element.simulate('mouseup', {});
+    }
   });
 });
