@@ -430,7 +430,7 @@ class LevelsHelperTest < ActionView::TestCase
     # (position 4) Lockable 3
     # (position 5) Non-Lockable 2
 
-    input_dsl = <<-DSL.gsub(/^\s+/, '')
+    input_dsl = <<~DSL
       stage 'Lockable1',
         lockable: true;
       assessment 'LockableAssessment1';
@@ -495,7 +495,7 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test 'build_script_level_path uses names for bonus levels to support cross-environment links' do
-    input_dsl = <<-DSL.gsub(/^\s+/, '')
+    input_dsl = <<~DSL
       stage 'Test bonus level links'
       level 'Level1'
       level 'BonusLevel1', bonus: true
@@ -520,7 +520,7 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test 'build_script_level_path handles bonus levels with or without solutions' do
-    input_dsl = <<-DSL.gsub(/^\s+/, '')
+    input_dsl = <<~DSL
       stage 'My cool stage'
       level 'Level1'
       level 'Level2'
