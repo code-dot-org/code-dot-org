@@ -36,6 +36,15 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
    * call adjustTopPaneHeight as our maxHeight may need adjusting.
    */
   onResize = () => {
+    // We have to have a reference to this component to do anything on resize anyway.
+    // Guard here because our tests aren't cleaning up nicely :(
+    if (!this.codeWorkspaceContainer) {
+      return;
+    }
+
+    // TODO (brad)
+    // See if we can achieve this effect with memoization instead of state
+    // https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html#what-about-memoization
     const {
       windowWidth: lastWindowWidth,
       windowHeight: lastWindowHeight
