@@ -999,49 +999,55 @@ ta-IN:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: அ
+        - text: ஆ
+        - text: இ
+        - text: ஈ
+          correct: true
       courseD_multi_artist_binary8_predict1_2018:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: அ
+        - text: ஆ
+        - text: இ
+        - text: ஈ
+          correct: true
       courseD_multi_artist_binary8_predict1_2018_2019:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: அ
+        - text: ஆ
+        - text: இ
+        - text: ஈ
+          correct: true
       courseD_multi_artist_nestedLoops9_predict1:
         questions:
         - {}
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: அ
+          correct: true
+        - text: ஆ
+        - text: இ
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
         questions:
         - {}
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: அ
+          correct: true
+        - text: ஆ
+        - text: இ
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         questions:
         - {}
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: அ
+          correct: true
+        - text: ஆ
+        - text: இ
         - {}
       courseD_multi_bee_conditionals1_predict1:
         questions:
