@@ -351,8 +351,12 @@ ms:
             '"inner"': dalam segi empat
             '"circle"': bulatan
             '"grid"': grid
+            '"top"': barisan Atas
             '"row"': baris
+            '"bottom"': barisan Bawah
+            '"left"': lajur Kiri
             '"column"': lajur
+            '"right"': lajur Kanan
             '"x"': bersilang-silang
             '"plus"': tambah
             '"random"': rawak

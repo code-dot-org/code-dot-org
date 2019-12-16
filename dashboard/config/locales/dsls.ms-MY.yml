@@ -742,19 +742,110 @@ ms-MY:
           anda dan luangkan masa berusaha menambah baik projek tersebut untuk menjadikannya
           sebagai projek anda sendiri. \n\n<a class=\"btn btn-large btn-primary next-stage
           submitButton pull-right\">Teruskan</a> \n\n<div class=\"clearfix\"></div>\n\n
-          <div style=\"float: left; margin: 10px\"> \n<a href=\"2\"> \n<h2> Pergi
-          ke Depan dan ke Belakang \n</h2> \n\n<img src=\"https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif\"></a>\n\n
+          <div style=\"float: left; margin: 10px\"> \n<a href=\"2\"> \n<h2> \nBerada
+          dalam Formasi\n</h2> \n\n<img src=\"https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif\"></a>\n\n
           </div> \n\n<div style=\"float: left; margin: 10px\">\n <a href=\"3\">\n
-          <h2> Lebih Banyak Butang \n</h2> \n\n<img src=\"https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif\"></a>
+          <h2> \nKe Manakah Mereka Akan Pergi?\n</h2> \n\n<img src=\"https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif\"></a>
           \n\n</div> \n\n<div style=\"float: left; margin: 10px\"> \n<a href=\"4\">\n
-          <h2> Berada dalam Formasi\n </h2> \n\n<img src=\"https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif\"></a>
+          <h2> \nKru Tarian\n </h2> \n\n<img src=\"https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif\"></a>
           \n\n</div> \n\n<div style=\"float: left; margin: 10px\"> \n<a href=\"5\">
-          \n<h2> Ke Manakah Mereka Akan Pergi?\n </h2>\n\n <img src=\"https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif\"></a>
+          \n<h2> \nNot Perempat\n </h2>\n\n <img src=\"https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif\"></a>
           \n\n</div> \n\n<div style=\"float: left; margin: 10px\"> \n<a href=\"6\">
-          \n<h2> Kru Tarian \n</h2> \n\n<img src=\"https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif\"></a>
+          \n<h2> \nBes, Julat Tengah dan Trebel \n</h2> \n\n<img src=\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\"></a>
           \n\n</div> \n\n<div style=\"float: left; margin: 10px\"> \n<a href=\"7\">
-          \n<h2> Not Perempat \n</h2> \n\n<img src=\"https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif\"></a>
+          \n<h2> \nPercepatkannya, Perlahankannya \n</h2> \n\n<img src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"></a>
           \n\n</div>\n"
+      Dance_Party_extras_intro_2019:
+        markdown: |
+          # Teruskan menari!
+
+          Untuk Bahagian 2, anda akan membuat projek anda sendiri. Tiada teka-teki di sini-sebaliknya terdapat sekumpulan projek yang menunjukkan cara yang berbeza untuk membuat lebih banyak parti tarian.
+
+          Anda boleh melakukan tahap ini _in mana-mana order_. Melompat di sekitar untuk melihat bagaimana sesuatu yang dilakukan di peringkat sebelumnya, atau menggabungkan konsep antara projek-projeknya. Cuba mereka semua, memilih kegemaran anda, dan menghabiskan masa anda bekerja untuk menambah projek itu untuk membuatnya sendiri.
+
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Teruskan</a>
+
+          <div class="clearfix"></div>
+
+
+          <div style="float: left; margin: 10px">
+          <a href="2">
+          <h2>
+          Belakang dan sebagainya
+          </h2>
+
+          <img src="https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="3">
+          <h2>
+          Lebih butang
+          </h2>
+
+          <img src="https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif"></a>
+
+          </div>
+          <div style="float: left; margin: 10px">
+          <a href="4">
+          <h2>
+          Mendapatkan dalam pembentukan
+          </h2>
+
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="5">
+          <h2>
+          Di mana mereka pergi?
+          </h2>
+
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="6">
+          <h2>
+          Krew tarian
+          </h2>
+
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="7">
+          <h2>
+          Nota suku
+          </h2>
+
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="8">
+          <h2>
+          Bes, Mid, Treble
+          </h2>
+
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="9">
+          <h2>
+          Mempercepatkan, melambatkan
+          </h2>
+
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
+
+          </div>
       Internet Simulator Setup 2:
         title: tajuk
       K-1 Artist 1 Multi 1:
