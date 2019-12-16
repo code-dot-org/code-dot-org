@@ -22,6 +22,8 @@ const styles = {
  */
 class SectionProgressToggle extends React.Component {
   static propTypes = {
+    showStandardsToggle: PropTypes.bool,
+    // Redux provided
     currentView: PropTypes.string.isRequired,
     setCurrentView: PropTypes.func.isRequired,
     sectionId: PropTypes.number
@@ -60,7 +62,7 @@ class SectionProgressToggle extends React.Component {
 
   render() {
     const {selectedToggle} = this.state;
-
+    const {showStandardsToggle} = this.props;
     return (
       <ToggleGroup
         selected={selectedToggle}
@@ -82,15 +84,17 @@ class SectionProgressToggle extends React.Component {
         >
           <div>{i18n.levels()}</div>
         </button>
-        {experiments.isEnabled(experiments.STANDARDS_REPORT) && (
-          <button
-            type="button"
-            value={ViewType.STANDARDS}
-            style={styles.toggleButton}
-          >
-            <div>{i18n.standards()}</div>
-          </button>
-        )}
+        {experiments.isEnabled(experiments.STANDARDS_REPORT) &&
+          showStandardsToggle && (
+            <button
+              type="button"
+              value={ViewType.STANDARDS}
+              style={styles.toggleButton}
+              id="uitest-standards-toggle"
+            >
+              <div>{i18n.standards()}</div>
+            </button>
+          )}
       </ToggleGroup>
     );
   }
