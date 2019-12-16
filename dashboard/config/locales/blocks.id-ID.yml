@@ -359,10 +359,15 @@ id:
           FORMAT:
             '"border"': batas
             '"inner"': di dalam persegi
+            '"diamond"': berlian
             '"circle"': lingkaran
             '"grid"': Kisi
+            '"top"': baris atas
             '"row"': baris
+            '"bottom"': baris bawah
+            '"left"': kolom kiri
             '"column"': kolom
+            '"right"': kolom kanan
             '"x"': berselang-seling
             '"plus"': plus
             '"random"': acak

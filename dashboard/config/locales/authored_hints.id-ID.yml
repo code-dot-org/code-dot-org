@@ -672,10 +672,10 @@ id-ID:
 
           _Level ini akan berakhir setelah 4 birama._
         challenges: |-
-          "**Tantangan pilihan**
+          **Tantangan pilihan**
 
           -   Pilih lagu yang lain untuk diputar.
-          -   Ganti nama penari Anda.".
+          -   Ganti nama penari Anda.
       CourseD_Dance_Party_02:
         validation: |-
           **Bagaimana cara lulus dari level ini?**
@@ -698,9 +698,9 @@ id-ID:
 
           _Level ini akan berakhir setelah 9 birama._
         challenges: |-
-          "**Tantangan opsional**
+          **Tantangan opsional**
 
-          Ubah efek latar belakang pada berbagai titik berbeda selama pemutaran lagu dengan menghubungkan blok baru <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> acara.".
+          Ubah efek latar belakang pada berbagai titik berbeda selama pemutaran lagu dengan menghubungkan blok baru <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> acara.
       CourseD_Dance_Party_06:
         validation: |-
           **Bagaimana cara lulus dari level ini?**
@@ -709,10 +709,10 @@ id-ID:
 
           _Level ini akan berakhir setelah 5 birama._
         challenges: |-
-          "**Tantangan Opsional**
+          **Tantangan Opsional**
 
           -   Tambahkan penari ketiga (atau sebanyak yang Anda inginkan!)
-          -   Buat seluruh penari Anda melakukan berbagai gerakan berbeda pada berbagai saat pada lagu.".
+          -   Buat seluruh penari Anda melakukan berbagai gerakan berbeda pada berbagai saat pada lagu.
       CourseD_Dance_Party_08:
         validation: |-
           **Bagaimana cara lulus dari level ini?**
@@ -884,10 +884,10 @@ id-ID:
 
           _Level ini akan berakhir setelah 4 birama._
         challenges: |-
-          "**Tantangan pilihan**
+          **Tantangan pilihan**
 
           -   Pilih lagu yang lain untuk diputar.
-          -   Ganti nama penari Anda.".
+          -   Ganti nama penari Anda.
       Dance_Party_02:
         validation: |-
           **Bagaimana cara lulus dari level ini?**
@@ -910,9 +910,9 @@ id-ID:
 
           _Level ini akan berakhir setelah 9 birama._
         challenges: |-
-          "**Tantangan opsional**
+          **Tantangan opsional**
 
-          Ubah efek latar belakang pada berbagai titik berbeda selama pemutaran lagu dengan menghubungkan blok baru <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> acara.".
+          Ubah efek latar belakang pada berbagai titik berbeda selama pemutaran lagu dengan menghubungkan blok baru <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> acara.
       Dance_Party_05:
         validation: "**Bagaimana cara lulus dari level ini?** \n\n-   Penari Anda
           perlu melewati siklus minimal 4 gerakan tari yang berbeda sebelum level
@@ -925,10 +925,10 @@ id-ID:
 
           _Level ini akan berakhir setelah 5 birama._
         challenges: |-
-          "**Tantangan Opsional**
+          **Tantangan Opsional**
 
           -   Tambahkan penari ketiga (atau sebanyak yang Anda inginkan!)
-          -   Buat seluruh penari Anda melakukan berbagai gerakan berbeda pada berbagai saat pada lagu.".
+          -   Buat seluruh penari Anda melakukan berbagai gerakan berbeda pada berbagai saat pada lagu.
       Dance_Party_08:
         validation: |-
           **Bagaimana cara lulus dari level ini?**
@@ -975,6 +975,8 @@ id-ID:
           -   Gunakan blok `ketika panah kiri ditekan` untuk membuat Robot melakukan gerakan tari ketika Anda menekannya.
 
           _Level ini akan berakhir setelah 7 birama._
+      Dance_Party_extras_alternate_2019:
+        alternate: Blok yang berganti terdapat dalam kategori "Penari".
       Function intro Ryan:
         Function_intro_Ryan_b: Jika anda menyebut fungsi dengan benar, ini adalah
           jalan yang akan anda tempuh...
@@ -5721,5 +5723,3 @@ id-ID:
           teka-teki ini. Menyeret blok `mengatakan` keluar dari toolbar dan menghubungkan
           itu ke `ketika menjalankan` event blok yang sudah ada di dalam ruang pekerjaan.
           Selanjutnya, ketik "Halo!" ke dalam.
-      Dance_Party_extras_alternate_2019:
-        alternate: Blok pengganti berada dalam kategori "Penari".
