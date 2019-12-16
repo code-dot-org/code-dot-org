@@ -102,13 +102,12 @@ class HocEventReviewTest < Minitest::Test
     end
 
     it 'only finds events with processed data' do
-      with_form country: 'US', state: 'CA', special_event: 1 do
-        with_form country: 'US', state: 'OR', has_processed_data: false  do
-          expected = [
-            {state_code: 'CA', count: 1},
-          ]
-          actual = HocEventReview.event_counts_by_state special_events_only: true
-          assert_equal expected, actual
+      with_form country: 'US', state: 'CA', has_processed_data: false do
+        with_form country: 'US', state: 'OR' do
+          with_form country: 'MX' do
+            actual = HocEventReview.events
+            assert_equal 2, actual.size
+          end
         end
       end
     end
