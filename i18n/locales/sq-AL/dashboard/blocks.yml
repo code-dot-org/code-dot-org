@@ -68,6 +68,7 @@ sq:
       Dancelab_layoutSprites:
         options:
           FORMAT:
+            '"diamond"': diamant
             '"random"': zakonshëm
       Dancelab_makeAnonymousDanceSprite:
         options:
