@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import memoize from 'memoize-one';
-import {DebounceInput} from 'react-debounce-input';
 import _ from 'lodash';
 import msg from '@cdo/locale';
 import color from '../../../util/color';
@@ -71,7 +70,6 @@ class VisualizerModal extends React.Component {
   handleClose = () => this.setState({isVisualizerOpen: false});
 
   canDisplayChart = () => {
-    console.log(this.state.chartType);
     switch (this.state.chartType) {
       case ChartType.BAR_CHART:
         return !!this.state.selectedColumn1;
@@ -149,10 +147,8 @@ class VisualizerModal extends React.Component {
                 <label style={rowStyle.description}>
                   {msg.dataVisualizerChartTitle()}
                 </label>
-                <DebounceInput
+                <input
                   style={rowStyle.input}
-                  minLength={1}
-                  debounceTimeout={500}
                   value={this.state.chartTitle}
                   onChange={event =>
                     this.setState({chartTitle: event.target.value})
