@@ -16522,7 +16522,7 @@ es-MX:
       Dance_Party_02: |-
         ¡Hagamos bailar a este alce!
 
-        Arrastra el bloque \<<xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> al espacio de trabajo. Conéctalo debajo del bloque <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> Tu bailarín debería empezar a moverse después del cuarto compás.
+        Arrastra el bloque \<<xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> al espacio de trabajo. Conéctalo debajo del bloque <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> Tu bailarín debería empezar a moverse después del cuarto compás.
 
         Los **compases** se usan para contar el tiempo en la música. En este tutorial, un compás tiene cuatro tiempos.
       Dance_Party_03: |-
@@ -16676,13 +16676,14 @@ es-MX:
         -   Muestra y oculta a los bailarines con las teclas de flechas
         -   Oculta todos los bailarines y cambia a un emocionante efecto de fondo
       Dance_Party_extras_visible_2019: |-
-        # ¿Dónde habrán ido?
+        # Negras
 
-        Este baile muestra y oculta dos diferentes grupos de bailarines. Echa un vistazo y luego intenta agregar tu propio estilo.
+        La mayoría de nuestros bailes utilizaron compases completos, pero cada compás está formado por 4 negras. Este baile usa [bloque blockly][0] para que el bailarín aplauda en cada negra luego del quinto compás.
 
-        -   Añade otro grupo de bailarines
-        -   Muestra y oculta a los bailarines con las teclas de flechas
-        -   Oculta todos los bailarines y cambia a un emocionante efecto de fondo
+        Intenta cambiar los números en el bloque para ver cómo cambia el baile.
+
+        -   Experimenta con otras duraciones de notas (como 0,5 para una semicorchea o 0,125 para una corchea).
+        -   Añade algunos eventos.
       Escape Room Example: |-
         # Juego de escape
 
@@ -16746,6 +16747,118 @@ es-MX:
         el río! \\\r\n \\\r\nAjusta el pequeño bloque verde en tu área de trabajo
         dos veces para arreglar el camino y llevar a {currentPlayerName} hasta la
         antorcha de piedra rojiza [redstone_torch]."
+      Gamelab StartScreen Change State: |-
+        # Cambiar el estado
+
+        Ahora que puedes mostrar una pantalla diferente según el estado de tu programa, necesitarás una forma de cambiar entre estados. Para pasar del estado "inicial" al estado "jugando", puedes hacer que el usuario presione la tecla "s". \*\* Solo\*\* querrás que el programa verifique la pulsación de la tecla cuando el programa está en el estado "inicial", de modo que para esto, tu código irá dentro del condicional "inicial". Poner un bloque `si` dentro de otro se llama **anidar** condicionales.
+
+        ## Hacer esto
+
+        -   Dentro de la sentencia `si` que verifica" iniciar", agrega una nueva sentencia `si` que verifica si el usuario ha presionado la tecla "s". (`si (teclaAbajo ("s")) {`)
+        -   Dentro de tu nueva sentencia `si`, configura el valor de tu variable `estadoDeJuego` en "jugando". (`estadoDeJuego = "jugando";`)
+        -   Prueba el código iniciando el juego y presionando "s". El juego debe comenzar a jugarse después de presionar la tecla.
+
+        Si el juego no se inicia en la pantalla de inicio, verifica que cuando se crea la variable `estadoDeJuego` al comienzo del programa, su valor sea "comienzo". (`var estadoDeJuego = "comenzar";`)
+      Gamelab StartScreen Check State: |-
+        # Comprobando el estado del juego
+
+        Ahora que tienes el estado de tu juego almacenado en una variable, puedes verificarlo para determinar qué debe mostrarse. Esto debería suceder dentro del ciclo de extracción, ya que es algo que cambiará a medida que se ejecute el programa. El programa debe verificar si el juego está en el estado "jugando" y solo ejecutar el programa si lo está. Podemos preocuparnos por los otros estados más tarde.
+
+        -   Dentro del ciclo de dibujo, agrega una condicional (sentencia `si`).
+        -   Para la condición, verifica si `EstadoDeJuego ==" jugar"`.
+        -   Mueve el resto del código del ciclo de extracción dentro de la sentencia `si`, de modo que solo se ejecute si el juego se está "jugando".
+        -   Ejecuta el programa. No debería pasar nada porque el juego todavía está en el estado "inicial".
+        -   Vuelve a donde estableciste el valor de tu variable `EstadoDeJuego` y cámbialo de "comenzar" a "jugar ".
+        -   Ejecuta el juego nuevamente, y se deberías jugar normalmente, porque ahora está en el estado "jugando".
+        -   Cambia el valor de la variable de nuevo a "inicio".
+
+        (Es importante encontrar formas de verificar tu código a medida que avanza, en lugar de esperar hasta el final de muchos cambios complejos para ejecutarlo. Al verificar los estados de juego y de inicio, sabes que tu condicional funciona correctamente y que el juego se debe jugar mientras estás en el estado "jugando").
+      Gamelab StartScreen Check States: |-
+        # Verificar todos los estados
+
+        En este momento, el único estado con el que tu programa puede intervenir es "jugar", pero puedes agregar más condicionales para dar cuenta de los otros tres estados.
+
+        ## Hacer esto
+
+        -   Dentro del ciclo de empate, agrega tres sentencia `si` más que verifiquen `EstadoDeJuego == "comenzar"`, `EstadoDeJuego == "ganado"`y `EstadoDeJuego == "perdido"`, respectivamente.
+        -   Dentro de cada sentencia `si`, agrega código que dibuje texto en la pantalla, para que puedas ver los resultados de los diferentes estados. También es posible que desees utilizar `dibujarSprites` para que puedas ver la imagen de fondo y los sprites del jugador, pero asegúrate de dibujar el texto en la parte superior de los sprites.
+        -   Verifica tu código ejecutando el programa en los diferentes estados. (No te preocupes aún por hacerlos perfectos, solo asegúrate de que los condicionales funcionen como deberían).
+
+        Para realizar un seguimiento de tu código, puede resultarte útil crear una función para cada una de las diferentes pantallas de texto, y luego llamar a esas funciones dentro de los condicionales.
+      Gamelab StartScreen End Game: |-
+        # Finalizar el juego
+
+        A continuación, deberás agregar un código que cambie el estado del juego cuando pierdas. Desplázate hasta la parte inferior del programa, a la función `estadoDelJuego`. Dentro de la función, el programa verifica el puntaje y las variables de vida para verificar si el usuario debe ganar o perder el juego. En lugar de mostrar un mensaje de ganar o perder, querrás cambiar el estado del juego a "ganado" o "perdido";
+
+        ## Hacer esto
+
+        -   Dentro de la función `estadoDeJuego`, reemplaza el código `texto ("¡Ganaste!", 35, 200);` con `estadoDeJuego = "ganado"`.
+        -   Dentro de la función `estadoDeJuego`, reemplaza el código `texto ("¡Perdiste!", 35, 200);` con `estadoDeJuego = "perdido"`.
+        -   Comprueba tu código ejecutando el juego y perdiendo.
+        -   Comprueba tu código ejecutando el juego y ganando.
+
+        (Para que el juego sea mucho más fácil de ganar, cambia el número original de vidas a 1000 reemplazando `var vidas = 3;` a `var vidas = 1000;`.)
+      Gamelab StartScreen Hide Sprites: |-
+        # Ocultar y mostrar sprites
+
+        Es posible que prefieras que la plataforma, la moneda y los sprites de roca solo sean visibles cuando se juega. Puedes cambiar la configuración del juego para establecer su propiedad visible en 'falso' al comienzo del juego, luego establecerlo en 'verdadero' cuando comienzas el juego, y luego 'falso' nuevamente cuando el juego se gana o se pierde.
+
+        ## Hacer esto
+
+        -   Agrega código después de crear tus plataformas, grupos de sprites de oro y rocas que establezcan las propiedades visibles de esos grupos de sprites en 'falso' (por ejemplo, 'plataformas.establecerVisibleCadaUna (falso);\`)
+        -   En los mismos tres lugares donde estableces `estadoDeJuego = "jugando";`, establece las propiedades visibles de los grupos de sprites en `verdadero`.
+        -   En los mismos lugares donde estableces `estadoDeJuego = "perdido";` y `estadoDeJuego = "ganado";`, configura los grupos de sprites en visibles
+        -   Comprueba tu código ejecutando el juego y perdiendo, y reiniciando el juego.
+        -   Verifica tu código ejecutando el juego y ganando, y reiniciando el juego.
+      Gamelab StartScreen Intro: |-
+        # Pantallas de inicio y fin
+
+        Este tutorial te enseñará cómo crear pantallas de inicio y finalización en Laboratorio de juegos, así como reiniciar el juego desde la pantalla final.
+
+        Pulsa ejecutar para jugar el juego de la izquierda. Sigue las instrucciones en la pantalla de inicio para jugar. Una vez que termines el juego, sigue las instrucciones en la pantalla final para reiniciar el juego.
+
+        En la próxima burbuja, verás el código para jugar y comenzarás a agregar tus propias pantallas de inicio y finalización.
+
+        ## Pantalla de inicio
+
+        La pantalla de inicio es la pantalla introductoria que aparece antes de que el usuario comience a jugar. Por lo general, tiene el título del juego y algunas instrucciones básicas para jugar. También podría incluir el desarrollador del juego.
+
+        ## Pantalla final
+
+        La pantalla final aparece después de que el usuario haya ganado o perdido el juego. A veces incluye el puntaje final, las clasificaciones de los jugadores u otra información. También puede tener una opción para volver a jugar.
+      Gamelab StartScreen Restart Game: |-
+        # Reiniciar el juego
+
+        Por último, deberás agregar código que reinicie el juego. Esto es similar a como comenzaste el juego haciendo que el usuario presione la tecla "s". Esta vez, deberás verificar durante los estados "perdido" y "ganado". Si el usuario presiona la tecla "r" durante uno de estos estados, debes reiniciar el juego configurando `estadoDeJuego` en "jugando" y también restableciendo las variables `puntaje` y `vidas` a 0 y 3, respectivamente.
+
+        ## Hacer esto
+
+        -   Dentro de la sentencia `si (estadoDeJuego =="perdido") {`, agrega una sentencia si que verifique si el usuario ha presionado la tecla "r".
+        -   Dentro de tu nueva sentencia `si`, establece `puntaje` en 0, `vidas` en 3 y `estadoDeJuego` en "jugando".
+        -   Dentro de la sentencia `si (estadoDeJuego == "ganado") {`, agrega una sentencia si que verifique si el usuario ha presionado la tecla "r".
+        -   Dentro de tu nueva sentencia `si`, establece `puntaje` en 0, `vidas` en 3 y `estadoDeJuego` en "jugando".
+        -   Dentro de la función `estadoDeJuego`, reemplaza el código `texto ("¡Perdiste!", 35, 200);` con `estadoDeJuego = "perdido"`.
+        -   Comprueba tu código ejecutando el juego y perdiendo, y reiniciando el juego.
+        -   Verifica tu código ejecutando el juego y ganando, y reiniciando el juego.
+      Gamelab StartScreen State: |-
+        # Variable de estado del juego
+
+        Nuestro juego de muestra tenía cuatro escenarios diferentes (o **estados**) que debemos seguir para mostrar la pantalla correcta: "comenzar", "jugar", "ganar" y "perder". El primer paso para agregar una pantalla de inicio o fin al juego es crear una variable para realizar un seguimiento de los cambios en el estado del juego.
+
+        ## Hacer esto
+
+        -   Declara una variable llamada `EstadoDeJuego` al comienzo del programa. (Un buen lugar para hacer esto sería cerca de donde se declaran `puntaje` y `vidas`.
+        -   Establece el valor inicial de tu variable `EstadoDeJuego` en "comenzar "
+
+        (Debido a que aún no estás utilizando esta variable, verás un triángulo de advertencia junto a la línea donde se declara. Tampoco afectará la forma en que se ejecuta el programa).
+      Gamelab StartScreen base code: |-
+        # Código de juego
+
+        Este es el código para el juego sin las pantallas de inicio y finalización. La función `EstatusDeJuego` (llamada en la línea 43 y definida en la línea 208) verifica si el usuario ha ganado o perdido, pero solo agrega un mensaje de texto a la pantalla. La jugabilidad también continúa incluso después de que termina el juego.
+
+        ## Hacer esto
+
+        Lee el código, en particular el código antes del ciclo de dibujo (líneas 1-24), dentro del ciclo de dibujo (líneas 27-43) y dentro de la función `EstatusDeJuego` (líneas 209-224). Está bien si no entiendes todo en el juego, pero debes ver que el código antes del ciclo de dibujo configura los sprites, y el código dentro del ciclo de control controla el juego.
       Geometric Sun: "**Idea para un proyecto:** usa ideas geométricas como formas
         para crear un patrón. ¡Esto requiere persistencia y planificación!"
       Geometric Sun_2018: "**Idea para un proyecto:** usa ideas geométricas como formas
@@ -17007,9 +17120,141 @@ es-MX:
         ¡Vamos a recoger algo de néctar!"
       NEW Course 4 Bee For Loops 8: "¡Lo tienes! \n\n¿Cuál debería ser tu **incremento**
         para recoger 3, 6, 9, 12 y 15 néctares?"
+      NetSim Standalone Automatic DNS: |-
+        # Sistema de nombres de dominio (DNS)
+
+        En esta versión del Simulador de Internet, se le proporciona un Sistema de Nombres de Dominio (DNS) que conoce las direcciones IP de todas las computadoras conectadas. Solo puedes ver los nombres de host de otras computadoras conectadas.\
+        ![](https://images.code.org/3ac2c23ed610abc7e785ec85054e89a9-image-1434746293690.PNG)
+
+        La dirección del DNS es siempre \<yourRouterNumber>.15. Envía un mensaje con el protocolo `GET [hostname]`, por ejemplo `GET Bob2`, al DNS para obtener la dirección de otro estudiante. Puedes realizar un seguimiento de las respuestas en la sección Notas, en la pestaña DNS.\
+        ![](https://images.code.org/c81c1a6b876eb46674a7f7e5e70506ce-image-1434746797267.png)
+
+        Tu profesor entregará instrucciones más específicas para esta actividad.
+      NetSim Standalone Broadcast: |-
+        # Difundir mensajes en el Simulador de Internet
+
+        En esta versión de simulador de Internet, puedes conectarte con hasta 5 personas más en una habitación. Cuando envías mensajes en la sala, todos los reciben. ¿Cuáles son algunos de los desafíos de este sistema y cómo podrías resolverlos?
+
+        Tu profesor entregará instrucciones más específicas para esta actividad.
+      NetSim Standalone Classroom Routers: |-
+        # Enrutamiento de mensajes
+
+        En esta versión de Simulador de Internet, todos se conectan a un enrutador y tienen una dirección específica. Para enviar mensajes, debes dirigir tu mensaje a la dirección específica del destinatario, y el enrutador se encargará de entregarlo a la computadora correcta. Si hay otros enrutadores creados en tu clase, ¡solicita la dirección de uno de tus compañeros de clase y envíales un mensaje! Mira el enrutador de registro para ver la ruta que tomaron los mensajes a través de la red.
+
+        Tu profesor entregará instrucciones más específicas para esta actividad.
+      NetSim Standalone Freeplay: |-
+        # Juego Libre del Simulador de Internet
+
+        En esta versión del Simulador del Internet, la mayoría de las opciones están activadas y son configurables. Los mensajes se pueden enviar a cualquier enrutador dentro de la clase, y los mensajes tomarán diferentes caminos para llegar a su destino.
+
+        Tu profesor entregará instrucciones más específicas para esta actividad.
+      NetSim Standalone Manual DNS: |-
+        # Introducción a DNS
+
+        En esta versión del simulador, no puedes ver las direcciones de los otros estudiantes. En cambio, uno de ustedes debe actuar como un servicio de nombres, para ayudar a compartir direcciones entre sí. Desde la pestaña DNS en la columna izquierda, una persona puede asumir el control como DNS.
+
+        Tu profesor entregará instrucciones más específicas para esta actividad.
+      NetSim Standalone Packets TCP: |-
+        # Paquetes y hacer que Internet sea confiable
+
+        Los mensajes en Internet pueden tomar muchos caminos para llegar a su destino y, a veces, a lo largo del camino, el mensaje se descarta. En esta versión del Simulador de Internet:
+
+        -   Hay un 10% de posibilidades de que se descarte un paquete
+        -   Varios paquetes pueden tomar diferentes caminos hacia el destino
+        -   El tamaño máximo predeterminado del paquete se establece en 6 caracteres adicionales
+
+        Tu profesor maestro entregará instrucciones más específicas para esta actividad.
+      NetSim Standalone SendAB: |-
+        # Envío de bits con el Simulador de Internet
+
+        Tú y tu pareja comparten un solo cable que solo puede estar en el estado A o en el estado B. Puedes configurar el cable en cualquier estado en cualquier momento, y puedes leer el estado del cable en cualquier momento. ¿Puedes encontrar una manera de comunicarte efectivamente solo con este sistema?
+
+        Tu profesor entregará instrucciones más específicas para esta actividad.
+      NetSim Standalone Sending Numbers: |-
+        # Envío de números con el Simulador de Internet
+
+        ¡Tú y tu pareja ahora pueden enviar mensajes de manera confiable de un lado a otro sin coordinación adicional! Si bien siempre envías bits de un lado a otro, también puedes representar esos bits como números decimales. ¿Qué tipo de información puedes representar con este sistema?
+
+        Tu profesor entregará instrucciones más específicas para esta actividad.
+      NetSim Standalone Sending Numbers Ascii: |-
+        # Envío de texto con el Simulador de Internet
+
+        Ahora que has transmitido información representada como números decimales, puedes asignar esos números a caracteres de texto para enviar información basada en texto de un lado a otro. Con un protocolo basado en texto, puedes representar y comunicar fácilmente todo tipo de información.
+
+        Tu profesor entregará instrucciones más específicas para esta actividad.
+      OPD-K5 CS Video: |-
+        ## Primeros pasos: ¿Por qué los fundamentos de la informática (CS)?
+
+        Completarás este curso gratuito a tu propio ritmo utilizando la misma plataforma de aprendizaje que puedes usar en el aula con tus alumnos.
+
+        Comencemos por aprender un poco sobre los Fundamentos de la informática (CS) y cómo ha funcionado para los profesores y estudiantes de todo el mundo. En el siguiente nivel, cubriremos cómo interactuar con la plataforma de aprendizaje CS Fundamentals, que utilizará para completar este curso.
+
+        > ## Reflexionar
+        >
+        > ¿Cuáles son tus primeras impresiones de los Fundamentos de Ciencias de la Computación?
+        >
+        > [Tuitea tus pensamientos](https://twitter.com/teachcode) y asegúrate de etiquetar @teachcode en tu tweet para que podamos responder.
+        >
+        > <a href="http://ctt.ec/Bfjw3" target="blank"><button class="default">Compartir en Twitter >></button></a><br><br>
+        > ¿No tienes una cuenta de Twitter? También puedes encontrarnos en [Facebook](https://www.facebook.com/Code.org/) o [Instagram](https://www.instagram.com/codeorg/).
+      OPD-K5 Closing: |-
+        > \*\* Si disfrutaste este curso, inscríbete en un taller en persona:\*\*
+        >
+        > [Regístrate ahora] [0] para continuar aprendiendo ciencias de la computación y su pedagogía. Los talleres gratuitos en persona son un lugar valioso para colaborar y relacionarte con otros educadores apasionados en tu área.
+      OPD-K5 EventsVid: |-
+        Mira este video que define los "eventos" y muestra cómo funcionan en Fundamentos de la Ciencias de la Computación. Después, probarás algunos desafíos que requieren que codifiques eventos.
+
+        > Un evento es una línea de código que le dice a tu computadora que "escuche" que algo suceda y luego tome una acción. Por ejemplo, en las páginas web, a menudo puedes mostrar un menú desplegable cuando pasas el mouse sobre la barra de navegación. El "desplazamiento del mouse" es un "evento" que desencadena una acción.
       OPD-K5 FirstProgram: Mira el siguiente video, que explica el primer programa
         que los estudiantes más jóvenes escribirán en [Course A](https://studio.code.org/s/coursea-2018?section_id=2042045).
         ¡En la página siguiente podrás escribir un programa similar!
+      OPD-K5 LessonPlanning: "Hasta ahora, te hemos presentado algunos de nuestros
+        planes de lecciones desconectados. Sin embargo, hay planes de lecciones para
+        cada lección de Fundamentos de las Ciencias de la Computación, tanto conectados
+        como en línea. Puedes encontrar la lista completa de planes de lecciones para
+        cada curso a continuación:\n<br/>\n<br/> \n[Planes de lecciones del Curso
+        A] [0] <br/>\n[Planes de lecciones del Curso B] [1] <br/>\n[Planes de lecciones
+        del Curso C] [2] <br/>\n[Planes de lecciones del Curso D] [3] <br/>\n[Planes
+        de lecciones del Curso E] [4] <br/>\n[Planes de lecciones del curso F] [5]
+        <br/>\n\nSin embargo, es posible que desees adaptar estas lecciones o crear
+        las suyas propias. El siguiente video explica la estructura de las lecciones
+        de Fundamentos de las Ciencias de la Computación, pero también proporciona
+        consejos en caso de que desees desarrollar tus propias lecciones."
+      OPD-K5 Problem Solving: |-
+        # Mejores prácticas > Solución de problemas metacognitivos
+
+        Enseñar explícitamente estrategias de resolución de problemas metacognitivos antes, durante y después de la codificación es extremadamente importante para ayudar a los estudiantes a procesar su aprendizaje. La resolución de problemas megacognitivos implica pensar en el proceso de pensamiento en sí mismo y reflexionar sobre cómo resolver los problemas. Mira el video a continuación para conocer la "Receta de resolución de desafíos" de Code.org que puede ayudar a los estudiantes a tener éxito con problemas difíciles:
+
+        [Esta hoja de trabajo] [0] detalla los diferentes pasos de la Receta de resolución de desafíos.
+
+        <img src="https://images.code.org/18ec61f8b911b83ca1cdea404a34c40e-image-1434399798952.png" width="650px" style="margin-right:45px; border-radius:10px;">
+
+        > ## Reflexionar:
+        >
+        > ¿Cómo podrías enseñar explícitamente la resolución de problemas en tu aula de informática?
+        >
+        > [Tuitea tus pensamientos] [1] y asegúrate de etiquetar @teachcode en tu tweet para que podamos responder.
+        >
+        > <a href="http://ctt.ec/ic2bx" target="blank"><h4><i class="fa fa-external-link-square" ></i> Compartir en Twitter</h4></a>
+      OPD-K5 RepeatBlock: Mira el video a continuación, que explica cómo funcionan
+        los bucles e introduce el bloque 'Repetir' en Fundamentos de la Ciencia de
+        la Computación.
+      OPD-K5 Unplugged Video: |-
+        ## Mirando hacia el futuro > "Desconectado"
+
+        <img src="https://images.code.org/ae83fdee9390a1155e5173b2a06f9773-image-1434399991310.JPG" class="level-image">
+
+        Al enseñar ciencias de la computación, puedes pensar que sería mejor tener acceso a la tecnología de nivel superior: computadoras nuevas, Internet rápido, las últimas aplicaciones. Pero en Code.org, hemos descubierto que algunas de las lecciones de computación más impactantes en realidad están "desconectadas" o se llevan a cabo con poca o ninguna tecnología. En estas lecciones, los estudiantes aprenden conceptos informáticos sin una computadora.
+
+        Es por eso que todos nuestros cursos de Fundamentos de la Ciencia de la Computación usan actividades desconectadas para introducir conceptos de informática con manipuladores físicos antes de que los estudiantes escriban programas de computadora utilizando esos conceptos. Un ejemplo de esto sería hacer un baile de movimientos repetidos con la clase para comprender el concepto de cómo los bucles repiten comandos en un programa de computadora. De esta manera, cuando los estudiantes continúan escribiendo programas usando bucles, la actividad desconectada los ha configurado con algo con lo que ya están familiarizados y pueden relacionar este nuevo concepto con esa actividad.
+
+        Mira el video a continuación para comprender los beneficios de usar actividades desconectadas para enseñar ciencias de la computación.
+
+        **A medida que avanzas en las etapas 4-8**, tendrás la oportunidad de revisar algunas de nuestras actividades desconectadas para cada uno de los conceptos básicos cubiertos en este curso.
+      OPD-K5 WhatIsCS: ¿Alguna vez te has preguntado "Exactamente qué es la informática"?
+        O "¿Por qué algunos programas de computadora se escriben con palabras y otros
+        se escriben con imágenes?" Si es así, mira este video; es una gran introducción
+        al campo de la ciencia de la computación.
       Overworld Chop Tree: La madera es un recurso muy importante. Muchas cosas están
         hechas de madera. Camina hacia el árbol y usa el comando del bloque `destruir`
         para talarlo.
@@ -18433,6 +18678,9 @@ es-MX:
       courseA_collector_preLoops2: "¡Genial! ¡Ahora puedes agregar el código tú mismo!
         \n\nColoca un bloque ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
         en la parte inferior del programa y haz clic en \"Ejecutar\"."
+      courseA_collector_preLoops3: Para agarrar el tesoro, encaja dos bloques ![](https://images.code.org/54c206b62a02f1d7ea8f1bee52664ecb-image-1508905670742.25.37.png)
+        y un bloque ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
+        en la parte inferior del programa y haz clic en "Ejecutar".
       courseA_collector_preLoops7: |-
         ¡Consigue los tres montones! Acerca a Laurel a cada pieza del tesoro y, luego, usa este bloque:
           <xml><block type="collector_collect"/></xml>
@@ -22433,6 +22681,24 @@ es-MX:
         Vamos a dibujar un triángulo equilátero.
 
         Tiene que tener lados de 50 pixeles de largo.
+      grade5_pixelation: |-
+        # Haz tu propia imagen de cualquier tamaño
+
+        ![](https://images.code.org/01c15fed4f1a2c6c3af531edc35e736e-image-1439596066108.png)
+        ![](https://images.code.org/24efcaa184d1fc852f37c32911b3b87c-image-1439596070178.png)
+        ![](https://images.code.org/c9a5d0fd5ba445b7f6b5744e08b50e49-image-1439596071878.png)
+        ![](https://images.code.org/f14e1b8dd722b0ca5bc54fa96b34f2eb-image-1439596074236.png)
+        ![](https://images.code.org/fe938c0c16453b9d461b4023098079df-image-1439596075744.png)
+        ![](https://images.code.org/02c88a7da51289b2f2d1f64bd8c97b28-image-1439596077514.png)
+        ![](https://images.code.org/309e3157dcfd91956181007f483f8e58-image-1439596079084.png)
+
+        **Instrucciones:**
+
+        -   Codifica una imagen de cualquier cosa que quieras usando `binario`.
+        -   El lenguaje binario se representará solo con `0` y `1`.
+        -   Es posible que primero desees planificar y dibujar con papel cuadriculado.
+        -   Representa algo, tal vez, tu nombre escrito, tus iniciales, un ícono o logotipo de algún tipo.
+        -   ¡Sé creativo! La imagen no tiene que ser un cuadrado perfecto, puede ser larga y delgada.
       iceage_click_hello: |-
         ¿Puedes ayudar a Sid a llamar a sus amigos cada vez que haces clic en él?\
         Una vez que estés listo, presiona "Ejecutar". ¡Haz clic en Sid para ver cómo funciona tu código!
@@ -22470,6 +22736,35 @@ es-MX:
         una tormenta de hielo! \\\r\nCambia la escena a un fondo helado y establece
         la velocidad de Sid (actor 1) en rápido.\\\r\nPresiona \"Ejecutar\" y mueve
         a Sid hacia Diego para que le advierta."
+      mike3bit: |-
+        Color de 3 bits
+
+        **Instrucciones:**
+
+        -   Comenzamos con la imagen 4x2 que Maddie estaba creando, pero hemos dejado de lado los últimos píxeles.
+        -   Termina la imagen descubriendo qué colores faltan y codificándolos.
+      mike3bitbird: |-
+        Color de 3 bits
+
+        Este es un ejemplo de una imagen hecha con color de 3 bits. Intenta cambiarlo para entender cómo funciona.
+
+        _Si deseas restablecer la imagen, presiona "Comenzar de nuevo"._
+      mike3bitfreeplay: |-
+        Color de 3 bits
+
+        Tienes una última oportunidad para experimentar y ser creativo con el widget de pixelación. ¡Haz algo increíble y compártelo con tus compañeros de clase!
+
+        -   _Sugerencia:_ puedes copiar y pegar el valor de un píxel para usarlo repetidamente.
+      mike3bitmario: |-
+        Color de 3 bits
+
+        **Reto:**
+
+        Un codificador binario descuidado escribió UN 0 o 1 adicional en algún lugar dentro de los datos de esta imagen. ¡La parte adicional que está causando que Mario falle!
+
+        ¡Elimina el bit adicional para restaurar a Mario a la normalidad!
+
+        ![](<https://images.code.org/8b7c17ba204a1a4d33e1bd6de7f01d76-image-1477306657312.54.57 AM.png>)
       ramp_artist_loops1: |-
         ¡Que día más hermoso!
 

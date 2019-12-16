@@ -4752,6 +4752,18 @@ es-MX:
       iceage_warn_ice_age: Cambia la escena a un fondo con hielo y configura la velocidad
         de Sid (actor 1) en rápido.
       k-1 maze 1: "¿Me llevarías al Oeste para agarrar al cerdo? "
+      mike3bit: Comenzamos con la imagen de 4x2 que Maddie estaba creando, pero hemos
+        dejado de lado los últimos píxeles. Termina la imagen descubriendo qué colores
+        faltan y codificándolos.
+      mike3bitbird: Este es un ejemplo de una imagen hecha con color de 3 bits. Intenta
+        cambiarlo para entender cómo funciona. Si deseas restablecer la imagen, presiona
+        "Comenzar de nuevo".
+      mike3bitfreeplay: "¡Haz algo increíble y compártelo con tus compañeros de clase!
+        Puedes copiar y pegar el valor de un píxel para usarlo repetidamente."
+      mike3bitmario: |-
+        Un codificador binario descuidado escribió UN 0 o 1 adicional en algún lugar dentro de los datos de esta imagen. ¡La parte adicional que está causando que Mario falle!
+
+        ¡Elimina el bit adicional para restaurar a Mario a la normalidad!
       ramp_artist_loops1: Avanza 60 pixeles para completar este desafío.
       ramp_artist_loops1_2018: Avanza 60 pixeles para completar este desafío.
       ramp_artist_loops1_2019: Avanza 60 pixeles para completar este desafío.

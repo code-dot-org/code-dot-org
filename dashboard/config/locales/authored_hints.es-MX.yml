@@ -6239,9 +6239,17 @@ es-MX:
           solución.
         courseA_collector_loops_challenge2kp_a: "¿Puedes usar loops para resolver
           este puzzle?"
+      courseA_collector_preLoops4:
+        courseA_collector_preLoops4_a: Para agarrar el tesoro, encaja dos bloques
+          ![](https://images.code.org/2df8a25d7e96207f57d1a6b504950b70-image-1508906116743.34.37.png)
+          y un bloque ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
+          en la parte inferior del programa y haz clic en "Ejecutar".
       courseA_collector_preLoops5:
         courseA_collector_preLoops5_a: "¡Tendrás que ir en dos direcciones diferentes
           para obtener incluso una gema!"
+      courseA_collector_preLoops6:
+        courseA_collector_preLoops6_a: Necesitarás usar dos bloques ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
+          para resolver este desafío.
       courseA_collector_preLoops7:
         courseA_collector_loops2_b: |-
           Luego que te hayas movido hacia un cuadrado con tesoro, usa este bloque para recogerlo.
