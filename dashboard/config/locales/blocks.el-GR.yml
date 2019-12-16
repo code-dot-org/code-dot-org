@@ -222,6 +222,8 @@ el:
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_everyMeasuresRange:
+        text: 'επαναλάβετε κάθε [Ν] [0] μέτρα μετά [START] [1] '
       Dancelab_everySeconds:
         text: 'κάθε {N} {UNIT} '
         options:
@@ -355,10 +357,15 @@ el:
           FORMAT:
             '"border"': όριο
             '"inner"': εσωτερικό τετράγωνο
+            '"diamond"': διαμάντι
             '"circle"': κύκλος
             '"grid"': πλέγμα
+            '"top"': πάνω σειρά
             '"row"': γραμμή
+            '"bottom"': κάτω σειρά
+            '"left"': αριστερή στήλη
             '"column"': στήλη
+            '"right"': δεξιά στήλη
             '"x"': χιαστί
             '"plus"': συν
             '"random"': τυχαίο
@@ -856,6 +863,7 @@ el:
             '"mid"': μεσαία
             '"treble"': πρίμα
       Dancelab_translateStrings:
+        text: μετάφραση του [STRING] [0]
         options:
           STRING:
             '"music_wave"': Κύματα
