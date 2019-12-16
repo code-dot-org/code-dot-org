@@ -454,10 +454,17 @@ he:
         MC_2018_loops: 'מיינקראפט: מסע ימי - חזור עד ש'
         mc_2018_conditionals: 'מיינקראפט: מסע ימי - תנאים'
         mc_2018_closing: 'מיינקראפט: מסע ימי - כל הכבוד'
+        hoc_dance_warmup: מסיבת ריקודים - חימום
         hoc_dance_events: מסיבת ריקודים - אירועים
         hoc_dance_properties: מסיבת ריקודים - תכונות
+        hoc_dance_congrats: מסיבת ריקודים - תתחילו לחגוג!
         csd_pair_programming: תכנות בזוגות
         csd_applab_parameters: פונקציות ופרמטרים
+        hoc_dance_congrats_2019: מסיבת ריקודים 2019 - תתחילו לחגוג!
+        hoc_dance_warmup_2019: מסיבת ריקודים 2019 - חימום
+        hoc_dance_events_2019: מסיבת ריקודים - אירועים
+        hoc_dance_measures_2019: מסיבת ריקודים - תיבות
+        hoc_dance_properties_2019: מסיבת ריקודים - מאפיינים
     callout:
       text:
         run: לחצו על "התחל" כדי לנסות את התוכנית שלכם

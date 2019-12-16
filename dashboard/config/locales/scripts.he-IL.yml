@@ -1954,6 +1954,7 @@ he:
           stages:
             Dance Party:
               name: מסיבת ריקודים
+          title: מסיבת ריקודים (2019)
         k5-onlinepd-2019:
           stages:
             Computer Science Fundamentals:
@@ -1973,6 +1974,7 @@ he:
             For Loops:
               name: בשביל לולאות
         dance-extras-2019:
+          title: המשיכו לרקוד (2019)
           description: המשיכו מעבר לשעה הראשונה עם רעיונות לפרויקטים נוספים.
         time4cs-control-unit-1:
           stages:
