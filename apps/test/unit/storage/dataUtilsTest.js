@@ -1,5 +1,7 @@
 import {expect} from '../../util/deprecatedChai';
 import {
+  isBlank,
+  ignoreMissingValues,
   castValue,
   displayableValue,
   editableValue,
@@ -7,6 +9,97 @@ import {
   isBoolean,
   toBoolean
 } from '@cdo/apps/storage/dataBrowser/dataUtils';
+
+describe('isBlank', () => {
+  it('counts null, undefined, and empty string as blank', () => {
+    expect(isBlank(null)).to.be.true;
+    expect(isBlank(undefined)).to.be.true;
+    expect(isBlank('')).to.be.true;
+  });
+
+  it('counts other falsy values as not blank', () => {
+    expect(isBlank(0)).to.be.false;
+    expect(isBlank(false)).to.be.false;
+    expect(isBlank(-1)).to.be.false;
+    expect(isBlank(' ')).to.be.false;
+  });
+});
+
+describe('ignoreMissingValues', () => {
+  const records = [
+    {category1: 'red', category2: 1, category3: 10},
+    {category1: 'blue', category2: 1, category3: 20},
+    {category1: 'red', category2: 3, category3: 10},
+    {category1: undefined, category2: 4, category3: 10},
+    {category1: 'red', category2: null, category3: 10},
+    {category1: 'blue', category2: 1, category3: null},
+    {category1: '', category2: 3, category3: 10},
+    {category1: '', category2: null, category3: undefined}
+  ];
+  it('returns [] if there are no records', () => {
+    expect(ignoreMissingValues([], [])).to.deep.equal([]);
+    expect(ignoreMissingValues(undefined, undefined)).to.deep.equal([]);
+  });
+  it('returns all records if there are no columns to filter by', () => {
+    expect(ignoreMissingValues(records, [])).to.deep.equal(records);
+    expect(ignoreMissingValues(records, undefined)).to.deep.equal(records);
+  });
+  it('filters out records missing value for one column', () => {
+    expect(ignoreMissingValues(records, ['category1'])).to.deep.equal([
+      {category1: 'red', category2: 1, category3: 10},
+      {category1: 'blue', category2: 1, category3: 20},
+      {category1: 'red', category2: 3, category3: 10},
+      {category1: 'red', category2: null, category3: 10},
+      {category1: 'blue', category2: 1, category3: null}
+    ]);
+
+    expect(ignoreMissingValues(records, ['category2'])).to.deep.equal([
+      {category1: 'red', category2: 1, category3: 10},
+      {category1: 'blue', category2: 1, category3: 20},
+      {category1: 'red', category2: 3, category3: 10},
+      {category1: undefined, category2: 4, category3: 10},
+      {category1: 'blue', category2: 1, category3: null},
+      {category1: '', category2: 3, category3: 10}
+    ]);
+
+    expect(ignoreMissingValues(records, ['category3'])).to.deep.equal([
+      {category1: 'red', category2: 1, category3: 10},
+      {category1: 'blue', category2: 1, category3: 20},
+      {category1: 'red', category2: 3, category3: 10},
+      {category1: undefined, category2: 4, category3: 10},
+      {category1: 'red', category2: null, category3: 10},
+      {category1: '', category2: 3, category3: 10}
+    ]);
+  });
+
+  it('filters out records missing a value for any provided column', () => {
+    expect(
+      ignoreMissingValues(records, ['category1', 'category2'])
+    ).to.deep.equal([
+      {category1: 'red', category2: 1, category3: 10},
+      {category1: 'blue', category2: 1, category3: 20},
+      {category1: 'red', category2: 3, category3: 10},
+      {category1: 'blue', category2: 1, category3: null}
+    ]);
+    expect(
+      ignoreMissingValues(records, ['category2', 'category3'])
+    ).to.deep.equal([
+      {category1: 'red', category2: 1, category3: 10},
+      {category1: 'blue', category2: 1, category3: 20},
+      {category1: 'red', category2: 3, category3: 10},
+      {category1: undefined, category2: 4, category3: 10},
+      {category1: '', category2: 3, category3: 10}
+    ]);
+
+    expect(
+      ignoreMissingValues(records, ['category1', 'category2', 'category3'])
+    ).to.deep.equal([
+      {category1: 'red', category2: 1, category3: 10},
+      {category1: 'blue', category2: 1, category3: 20},
+      {category1: 'red', category2: 3, category3: 10}
+    ]);
+  });
+});
 
 describe('isNumber', () => {
   it('detects valid numerical values', () => {

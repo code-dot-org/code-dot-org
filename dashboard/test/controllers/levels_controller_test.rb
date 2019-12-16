@@ -521,6 +521,50 @@ class LevelsControllerTest < ActionController::TestCase
     assert_equal "encrypted", assigns(:level).dsl_text.split("\n")[1].split(" ").first
   end
 
+  test "should allow rename of new level" do
+    get :edit, params: {id: @level.id}
+    assert_response :success
+    assert_includes @response.body, @level.name
+    assert_not_includes @response.body, 'level cannot be renamed'
+  end
+
+  test "should prevent rename of level in visible or pilot script" do
+    script_level = create :script_level
+    script = script_level.script
+    level = script_level.level
+    assert_equal script.hidden, false
+
+    get :edit, params: {id: level.id}
+    assert_response :success
+    assert_includes @response.body, level.name
+    assert_includes @response.body, 'level cannot be renamed'
+
+    script.hidden = true
+    script.save!
+    get :edit, params: {id: level.id}
+    assert_response :success
+    assert_includes @response.body, level.name
+    assert_not_includes @response.body, 'level cannot be renamed'
+
+    script.pilot_experiment = 'platformization-partners'
+    script.save!
+    get :edit, params: {id: level.id}
+    assert_response :success
+    assert_includes @response.body, level.name
+    assert_includes @response.body, 'level cannot be renamed'
+  end
+
+  test "should prevent rename of stanadalone project level" do
+    level_name = ProjectsController::STANDALONE_PROJECTS.values.first[:name]
+    # standalone project levels are created when we generate fixtures
+    level = Level.find_by(name: level_name)
+
+    get :edit, params: {id: level.id}
+    assert_response :success
+    assert_includes @response.body, level.name
+    assert_includes @response.body, 'level cannot be renamed'
+  end
+
   test "should update level" do
     patch :update, params: {id: @level, level: {stub: nil}}
     # Level update now uses AJAX callback, returns a 200 JSON response instead of redirect

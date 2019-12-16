@@ -237,7 +237,8 @@ class ProjectsListTest < ActionController::TestCase
       events: [],
       k1: [],
       spritelab: [],
-      dance: []
+      dance: [],
+      library: []
     }
     fake_recent_projects = {
       applab: [
@@ -252,7 +253,8 @@ class ProjectsListTest < ActionController::TestCase
       events: [],
       k1: [],
       spritelab: [],
-      dance: []
+      dance: [],
+      library: []
     }
     ProjectsList.stubs(:fetch_featured_published_projects).returns(fake_featured_projects)
     ProjectsList.stubs(:fetch_published_project_types).returns(fake_recent_projects)
@@ -264,7 +266,61 @@ class ProjectsListTest < ActionController::TestCase
     assert_equal combined_projects[:applab].last, {name: "recentApplab3"}
   end
 
+  test 'fetch_section_libraries filters by library_name' do
+    applab_lib_name = 'applab_library'
+    gamelab_lib_name = 'gamelab_library'
+    description = 'library description'
+    student_name = 'student name'
+    stub_projects = [
+      {
+        name: applab_lib_name,
+        properties: {}.to_json,
+        birthday: 13.years.ago.to_datetime,
+        storage_id: @storage_id,
+        id: 1,
+        project_type: 'applab',
+        value: {'libraryName': applab_lib_name, 'libraryDescription': description}.to_json,
+        state: 'active'
+      },
+      {
+        name: gamelab_lib_name,
+        properties: {}.to_json,
+        birthday: 13.years.ago.to_datetime,
+        storage_id: @storage_id,
+        id: 2,
+        project_type: 'gamelab',
+        value: {'libraryName': gamelab_lib_name, 'libraryDescription': description}.to_json,
+        state: 'active'
+      }
+    ]
+    stub_users = {
+      @storage_id => 4
+    }
+    Section = Struct.new(:students)
+    Student = Struct.new(:id, :name)
+    student = Student.new(4, student_name)
+    section = Section.new([student])
+
+    PEGASUS_DB.stubs(:[]).returns(user_db_result(stub_users)).then.returns(library_db_result(stub_projects))
+
+    StorageApps.stubs(:get_published_project_data).returns({})
+    lib_response = ProjectsList.send(:fetch_section_libraries, section)
+    assert_equal 2, lib_response.length
+    assert_equal applab_lib_name, lib_response[0][:name]
+    assert_equal gamelab_lib_name, lib_response[1][:name]
+    assert_equal description, lib_response[0][:description]
+    assert_equal student_name, lib_response[0][:studentName]
+  end
+
   private
+
+  def user_db_result(result)
+    stub(where: stub(select_hash: result))
+  end
+
+  def library_db_result(result)
+    stub(where: stub(where: stub(where: result)))
+  end
 
   def db_result(result)
     stub(select: stub(join: stub(join: stub(where: stub(where: stub(exclude: stub(order: stub(limit: result))))))))

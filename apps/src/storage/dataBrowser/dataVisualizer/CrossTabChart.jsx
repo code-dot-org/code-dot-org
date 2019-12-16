@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import React from 'react';
 
 const styles = {
@@ -15,10 +14,11 @@ const styles = {
 
 class CrossTabChart extends React.Component {
   static propTypes = {
-    parsedRecords: PropTypes.array.isRequired,
+    records: PropTypes.array.isRequired,
     numericColumns: PropTypes.arrayOf(PropTypes.string).isRequired,
-    rowName: PropTypes.string.isRequired,
-    columnName: PropTypes.string.isRequired
+    chartTitle: PropTypes.string,
+    selectedColumn1: PropTypes.string,
+    selectedColumn2: PropTypes.string
   };
 
   /**
@@ -62,7 +62,7 @@ class CrossTabChart extends React.Component {
   };
 
   getColorForValue = (value, min, max) => {
-    if (typeof value === 'string') {
+    if (typeof value !== 'number') {
       return 'white';
     }
     const lightest = 100;
@@ -74,23 +74,28 @@ class CrossTabChart extends React.Component {
 
   render() {
     if (
-      !this.props.parsedRecords ||
-      !this.props.rowName ||
-      !this.props.columnName
+      !this.props.records ||
+      !this.props.selectedColumn1 ||
+      !this.props.selectedColumn2
     ) {
       return null;
     }
     const {chartData, columns} = this.createPivotTable(
-      this.props.parsedRecords,
-      this.props.rowName,
-      this.props.columnName
+      this.props.records,
+      this.props.selectedColumn1,
+      this.props.selectedColumn2
     );
+    const numericValues = [];
 
-    const numericValues = chartData
-      .map(record =>
-        Object.values(record).filter(value => typeof value === 'number')
-      )
-      .flatten();
+    chartData.forEach(record => {
+      Object.entries(record).forEach(entry => {
+        let key = entry[0];
+        let value = entry[1];
+        if (typeof value === 'number' && key !== this.props.selectedColumn1) {
+          numericValues.push(value);
+        }
+      });
+    });
 
     const min = Math.min(...numericValues);
     const max = Math.max(...numericValues);
@@ -109,7 +114,10 @@ class CrossTabChart extends React.Component {
             <tr key={id}>
               {columns.map(column => {
                 const value = record[column];
-                const color = this.getColorForValue(value, min, max);
+                const color =
+                  column === this.props.selectedColumn1
+                    ? 'white'
+                    : this.getColorForValue(value, min, max);
                 const cellStyle = {...styles.cell, backgroundColor: color};
                 return (
                   <td key={column} style={cellStyle}>
@@ -125,4 +133,4 @@ class CrossTabChart extends React.Component {
   }
 }
 
-export default Radium(CrossTabChart);
+export default CrossTabChart;
