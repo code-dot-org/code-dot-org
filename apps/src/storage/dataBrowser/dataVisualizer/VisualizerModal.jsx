@@ -8,7 +8,7 @@ import msg from '@cdo/locale';
 import color from '../../../util/color';
 import * as dataStyles from '../dataStyles';
 import * as rowStyle from '@cdo/apps/applab/designElements/rowStyle';
-import {isBlank} from '../dataUtils';
+import {ChartType, isBlank} from '../dataUtils';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 import DropdownField from './DropdownField';
 import DataVisualizer from './DataVisualizer';
@@ -42,7 +42,7 @@ const styles = {
 const INITIAL_STATE = {
   isVisualizerOpen: false,
   chartTitle: '',
-  chartType: '',
+  chartType: ChartType.NONE,
   bucketSize: '',
   selectedColumn1: '',
   selectedColumn2: '',
@@ -71,13 +71,14 @@ class VisualizerModal extends React.Component {
   handleClose = () => this.setState({isVisualizerOpen: false});
 
   canDisplayChart = () => {
+    console.log(this.state.chartType);
     switch (this.state.chartType) {
-      case 'Bar Chart':
+      case ChartType.BAR_CHART:
         return !!this.state.selectedColumn1;
-      case 'Histogram':
+      case ChartType.HISTOGRAM:
         return !!(this.state.selectedColumn1 && this.state.bucketSize);
-      case 'Scatter Plot':
-      case 'Cross Tab':
+      case ChartType.SCATTER_PLOT:
+      case ChartType.CROSS_TAB:
         return !!(this.state.selectedColumn1 && this.state.selectedColumn2);
       default:
         return false;
@@ -113,15 +114,17 @@ class VisualizerModal extends React.Component {
     );
 
     let disabledOptions = [];
-    const disableNonNumericColumns = ['Scatter Plot', 'Histogram'].includes(
-      this.state.chartType
-    );
+    const disableNonNumericColumns = [
+      ChartType.SCATTER_PLOT,
+      ChartType.HISTOGRAM
+    ].includes(this.state.chartType);
     if (disableNonNumericColumns) {
       disabledOptions = _.difference(this.props.tableColumns, numericColumns);
     }
-    const isMultiColumnChart = ['Scatter Plot', 'Cross Tab'].includes(
-      this.state.chartType
-    );
+    const isMultiColumnChart = [
+      ChartType.SCATTER_PLOT,
+      ChartType.CROSS_TAB
+    ].includes(this.state.chartType);
 
     return (
       <span style={styles.container}>
@@ -160,12 +163,19 @@ class VisualizerModal extends React.Component {
 
             <DropdownField
               displayName={msg.dataVisualizerChartType()}
-              options={['Bar Chart', 'Histogram', 'Scatter Plot', 'Cross Tab']}
+              options={[
+                ChartType.BAR_CHART,
+                ChartType.HISTOGRAM,
+                ChartType.SCATTER_PLOT,
+                ChartType.CROSS_TAB
+              ]}
               value={this.state.chartType}
-              onChange={event => this.setState({chartType: event.target.value})}
+              onChange={event =>
+                this.setState({chartType: parseFloat(event.target.value)})
+              }
             />
 
-            {this.state.chartType === 'Histogram' && (
+            {this.state.chartType === ChartType.HISTOGRAM && (
               <div style={styles.input}>
                 <label style={rowStyle.description}>Bucket Size</label>
                 <input
