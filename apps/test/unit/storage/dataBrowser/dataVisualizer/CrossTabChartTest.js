@@ -1,13 +1,13 @@
 import React from 'react';
 import {mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import CrossTabChart from '@cdo/apps/storage/dataBrowser/CrossTabChart';
+import {expect} from '../../../../util/reconfiguredChai';
+import CrossTabChart from '@cdo/apps/storage/dataBrowser/dataVisualizer/CrossTabChart';
 
 const DEFAULT_PROPS = {
-  parsedRecords: [],
+  records: [],
   numericColumns: [],
-  rowName: '',
-  columnName: ''
+  selectedColumn1: '',
+  selectedColumn2: ''
 };
 
 describe('CrossTabChart', () => {
