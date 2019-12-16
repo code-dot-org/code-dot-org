@@ -362,10 +362,15 @@ zh-CN:
           FORMAT:
             '"border"': 边框
             '"inner"': 正方形内部
+            '"diamond"': 钻石
             '"circle"': 圆
             '"grid"': 网格
+            '"top"': 最上排
             '"row"': 行
+            '"bottom"': 最底排
+            '"left"': 左栏
             '"column"': 列
+            '"right"': 右栏
             '"x"': 十字交叉
             '"plus"': 添加
             '"random"': 随机

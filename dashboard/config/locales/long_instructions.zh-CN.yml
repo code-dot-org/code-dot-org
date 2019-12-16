@@ -988,6 +988,52 @@ zh-CN:
 
         -   修复缺失的代码，让网页能够正确的显示
         -   将你修复的问题与旁边的同学进行比较
+      CSD U2 Heading Demo: |-
+        # 标题
+
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary><strong>标题是什么？</strong></summary>
+
+        标题标签定义了一个网页中段落标题的大小。合理使用标题可以使得你的网页更加有条理并更易于阅读。
+
+        </details>
+        <details>
+        <summary><strong>如何创建不同大小的标题？</strong></summary>
+
+        在HTML中有六种不同大小的标题。 到目前为止，你已经使用过最大的： \<h1>。 标签中数字“1”代表了这是HTML中最大标题大小。最小的标题标签是 \<h6>。 同时，你也可以试一试 \<h2>， \<h3>,，\<h4>，和\<h5> 。标签中数字越小代表标题尺寸越大。
+
+        </h1>
+        </details>
+        <details>
+        <summary><strong>HTML是什么？</strong></summary>
+
+        HTML直译为超文本标记语言，它被用于给网页内容添加结构。HTML通过“标签”来标记一个结构的开始和结束。这些标签使用的都不是普通的英语，以此来将内容和结构进行区分。
+
+        </details>
+        <details>
+        <summary><strong>HTML元素是什么？</strong></summary>
+
+        一个开始标签和一个结束标签中间的网站内容被称作HTML元素。HTML元素同时包括了标签的内容。比如说
+        <img src="https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png" style="width:500px">
+
+        </details>
+        <details>
+        <summary><strong> HTML标签是什么？</strong></summary>
+
+        HTML标签是机器何以辨认的特殊字符。标签标记了元素的开始，结束和性质。
+
+        </details>
+        </div>
+
+        到目前为止，你已经将网站内容组成了段落。在HTML中，你还可以用 **标题**组织代码的结构。标题就是一段文字前面的相当于文章题目的内容。
+
+        试一试：
+
+        -   在下面的网站中找到标题并且使用检查器看一看他们的代码
+        -   和搭档讨论标签的作用
+        -   试着改变代码的内容使得“画” 和“2年”和网页中其他的一样
       CSD U2 Heading Demo_2018: |-
         # 标头
 
@@ -10644,7 +10690,7 @@ zh-CN:
 
         在这个游戏里，你会扮演小狗，要比小猫收集到更多的旗帜。用下方向键来控制小狗。当你玩完以后，点击`完成`。
       CourseD_Dance_Party_01: |-
-        _让我们开个舞会吧！_
+        _让我们开个舞会吧!_
 
         将“新建”模块拖到工作区，并关联到“设置”模块，创建您的第一个舞者。
 
@@ -10666,11 +10712,11 @@ zh-CN:
       CourseD_Dance_Party_05: |-
         使用其他新模块让舞者**每 2 个小节**变换动作！
 
-        \*\*选择“(下一步)”、“(上一步)”或“(随机)”，让舞者在代码每次运行时做不同的动作。
+        -   选择`(下一步)`、`(上一步)`或`(随机)`，让舞者在代码每次运行时做不同的动作。
       CourseD_Dance_Party_06: |-
         _我们需要更多舞者！_
 
-        创建名为“backup\_dancer1”的伴舞，与猫一起跳舞。
+        创建名为`backup_dancer1`的伴舞，与猫一起跳舞。
       CourseD_Dance_Party_08: |-
         每个舞者都有一系列控制其外观的 _属性设置_。
 
@@ -10812,9 +10858,9 @@ zh-CN:
 
         **小节**是个单位，用来计算音乐中的时间。在本教程中，一个小节长度为四拍。
       Dance_2019_05: |-
-        _现在跟着节奏动起来！_
+        _现在跟着节奏动起来!_
 
-        在工作区域添加一个 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"小节"</title></block></xml>模块。让舞者在 6 个小节后开始新的动作！
+        在工作区域添加一个 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> 模块。让舞者在 6 个小节后开始新的动作！
       Dance_2019_06: |-
         使用这个新模块来创建一组比较小的伴舞演员，将领舞者围绕在中间。
           <xml><block type="Dancelab_makeNewDanceSpriteGroup">
@@ -10846,13 +10892,13 @@ zh-CN:
       Dance_Party_02: |-
         让这只驼鹿舞动起来吧！
 
-        将<xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">牙线舞</title><title name="DIR">-1</title></block></xml>模块拖放到工作区。将其连接到下面的 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"小节"</title></block></xml>模块。您的舞者应在第四个小节后开始新的动作。
+        将<xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> 模块拖放到工作区。将其连接到下面的 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> 模块。您的舞者应在第四个小节后开始新的动作。
 
         **小节**用于音乐计时。本教程中，一个小节长度为四个节拍。
       Dance_Party_03: |-
-        _现在跟着节奏动起来！_
+        _现在跟着节奏动起来!_
 
-        在工作区域添加一个 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"小节"</title></block></xml>模块。让舞者在 6 个小节后开始新的动作！
+        在工作区域添加一个 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> 模块。让舞者在 6 个小节后开始新的动作！
       Dance_Party_04: |-
         _给舞蹈加点炫酷效果！_
 
@@ -10906,6 +10952,10 @@ zh-CN:
 
         \*\* 使用这些键来做出 蹲下-拍手-蹲下-拍手 的动作，看你能做多快！ \*\*
       Dance_Party_12: 随着节奏律动吧！创建自己的舞蹈，并与朋友分享。
+      Dance_Party_extras_alternate_2019: "# 不断重复！\n\n有时您可能想用您选择的舞蹈动作来创建一套模式。用这个新模块就可以做到这一点。\n\n<xml><block
+        type=\"Dancelab_alternateMoves\"><title name=\"GROUP\">sprites</title><title
+        name=\"N\">2</title><title name=\"MOVE1\">MOVES.Roll</title><title name=\"MOVE2\">MOVES.ClapHigh</title></block></xml>
+        \n\n您在上方选择的动作将永远重复进行。\n\n-   为前排领舞者创建一套交替的动作模式！\n-   使用不同的数字来改变动作的速率。尝试使用“1”或“0.5”来加快动作交替的速度！"
       Dance_Party_extras_battle: |-
         # 舞蹈团队
 
@@ -10935,7 +10985,7 @@ zh-CN:
       Dance_Party_extras_every_beat_2019: |-
         # 四分音符
 
-        大部分舞蹈都是按照小节为单位来设计的，而每个小节由 4 个四分音符构成。这段舞蹈使用[blockly block][0]来让舞者从第 5 小节之后在每个四分音符时都拍一下手。
+        大部分舞蹈都是按照小节为单位来设计的，而每个小节由 4 个四分音符构成。这段舞蹈使用<xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml>来让舞者从第 5 小节之后在每个四分音符时都拍一下手。
 
         更改模块中的数字来试试看对舞蹈会有什么影响。
 
@@ -10957,6 +11007,13 @@ zh-CN:
         -   创建采用不同布局的另一组舞者
         -   按下按键时更改布局
         -   舞者改变阵型时更改属性
+      Dance_Party_extras_mixed_2019: |-
+        # 更多按钮
+
+        此舞蹈让您在舞者自动跳舞时实时控制他们的属性。尝试在按下按钮时更改其他属性。例如：
+
+        -   按“下”时，随机分配舞者的色彩。
+        -   按“空格”时，添加一组具有随机布局的舞者。
       Dance_Party_extras_on_beat: |-
         # 低音、中音和高音
 
@@ -13458,12 +13515,10 @@ zh-CN:
         _"继续！"_
 
         用你学过的知识来捡起所有的废金属！
-      courseD_artist_1_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_“嗨，我是阿伦达尔的爱莎，帮我画个图形吧。”_\n\n画一个边长50像素的六边形。
-        \ \n\n* * *\n\n要画这个六边形，你需要： \n\n-   向前移动**50**像素\n-   向右转**60**度\n-   \\-\n
-        \   一共重复**6**次"
-      courseD_artist_1_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_“嗨，我是阿伦达尔的爱莎，帮我画个图形吧。”_\n\n画一个边长50像素的六边形。
-        \ \n\n* * *\n\n要画这个六边形，你需要： \n\n-   向前移动**50**像素\n-   向右转**60**度\n-   \\-\n
-        \   一共重复**6**次"
+      courseD_artist_1_2018: "![][0] _“嗨，我是阿伦达尔的爱莎，帮我画个图形吧。”_\n\n画一个边长50像素的六边形。  \n\n*
+        * *\n\n要画这个六边形，你需要： \n\n-   向前移动**50**像素\n-   向右转**60**度\n-   一共重复**6**次"
+      courseD_artist_1_2018_2019: "![][0] _“嗨，我是阿伦达尔的爱莎，帮我画个图形吧。”_\n\n画一个边长50像素的六边形。
+        \ \n\n* * *\n\n要画这个六边形，你需要： \n\n-   向前移动**50**像素\n-   向右转**60**度\n-   一共重复**6**次"
       courseD_artist_2_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_“做得好！”_\n\n画完六边形后，向右转**60**度，然后画一条**150**像素长的线。
         \  \n\n使用<xml><block type=\"jump_to\"><title\nname=\"VALUE\">中心位置</title></block></xml>模块，将爱莎放到区域中心来结束。"
       courseD_artist_2_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_“做得好！”_\n\n画完六边形后，向右转**60**度，然后画一条**150**像素长的线。
@@ -14342,14 +14397,12 @@ zh-CN:
       courseD_iceage_loops1_2019: 帮助斯奎特穿过溜滑的冰去拿到橡子！
       courseD_iceage_loops2: |-
         用一个<xml><block type="maze_turn">
-            <title
-        name="DIR">turnLeft</title>
-          </block></xml>模块来到达橡子！
+            <title name="DIR">turnLeft</title>
+          </block></xml> 模块来到达橡子！
       courseD_iceage_loops2_2019: |-
-        用一个<xml><block type="maze_turn">
-            <title
-        name="DIR">turnLeft</title>
-          </block></xml>模块来到达橡子！
+        用一个<xml><block type="maze_turn" block-text="turn left">
+            <title name="DIR">turnLeft</title>
+          </block></xml> 模块来到达橡子！
       courseD_iceage_loops3: 你能只用一个 <xml><block type="maze_moveForward"/></xml>模块来获得橡子吗？试试用循环！
       courseD_iceage_loops3_2019: 你能只用一个 <xml><block type="maze_moveWest"/></xml>模块来获得橡子吗？试试用循环！
       courseD_iceage_loops4: 再添加一个模块来让斯奎特用各种方法到达橡子！
@@ -15635,21 +15688,3 @@ zh-CN:
       ramp_artist_loops9: 画一个边长200像素的正方形来通过这关。
       ramp_artist_loops9_2018: 画一个边长200像素的正方形来通过这关。
       ramp_artist_loops9_2019: 画一个边长200像素的正方形来通过这关。
-      Dance_Party_extras_alternate_2019: |-
-        ＃ 来来回回！
-
-        有时您可能想创建一种选择的舞蹈动作模式。这个新块使您可以做到这一点。
-
-        <xml><block type="Dancelab_alternateMoves"><title name="GROUP">sprites</title><title name="N">2</title><title name="MOVE1">MOVES.Roll</title><title name="MOVE2">MOVES.ClapHigh</title></block></xml>
-
-        您在上方选择的移动将永远重复进行。
-
-        在前面为主舞者创建一个交替例程！
-        使用不同的数字来更改移动交替的速率。尝试使用“ 1”或“ 0.5”来更快地切换！
-      Dance_Party_extras_mixed_2019: |-
-        ＃更多按钮
-
-        此舞让您在舞者自动跳舞时实时控制他们的属性。尝试在按下按钮时更改其他属性。例如：
-
-        当您按下“向下”按钮时，将舞者的色彩随机化。
-        按“空格”时，添加一组具有随机布局的舞者。

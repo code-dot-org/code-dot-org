@@ -251,7 +251,7 @@ zh-CN:
       CourseD_Dance_Party_03: 现在让舞者在 6 个小节后开始做新动作！
       CourseD_Dance_Party_04: 为程序添加背景效果。
       CourseD_Dance_Party_05: 使用其他新模块让舞者每 2 个小节变换动作。
-      CourseD_Dance_Party_06: 创建名为“backup\_dancer1”的伴舞，与猫一起跳舞。
+      CourseD_Dance_Party_06: 创建名为`backup_dancer1`的伴舞，与猫一起跳舞。
       CourseD_Dance_Party_08: 你能让两个伴舞的大小相同吗？
       CourseD_Dance_Party_09: 使用`设置色彩`模块，更改一个舞者的颜色。
       CourseD_Dance_Party_10: 使用`开始跟随`模块，让另一个舞者也对音乐做出响应。
@@ -311,6 +311,20 @@ zh-CN:
       Dance_Party_11_5: 使用“所有鸭子”模块，让鸭子一起跳舞。
       Dance_Party_11b: 让机器人在按下右方向键时“掉落”，在按下上方向键时"鼓掌"。做掉落-鼓掌舞动作要尽可能快！
       Dance_Party_12: 随着节奏律动吧！创建自己的舞蹈，并与朋友分享。
+      Dance_Party_extras_alternate_2019: 不断重复！（单击“更多”以获取详细信息）
+      Dance_Party_extras_battle: 舞蹈团队 (点击 “更多” 查看详情)
+      Dance_Party_extras_battle_2019: 舞蹈团队 (点击 “更多” 查看详情)
+      Dance_Party_extras_every_beat: 季度票据 (点击 “更多” 查看详情)
+      Dance_Party_extras_every_beat_2019: 季度票据 (点击 “更多” 查看详情)
+      Dance_Party_extras_layout: 让我们进入编队！ (详情请点击 “更多”)
+      Dance_Party_extras_layout_2019: 让我们进入编队！ (详情请点击 “更多”)
+      Dance_Party_extras_mixed_2019: 更多按钮（单击“更多”以获取详细信息）
+      Dance_Party_extras_on_beat: 低音、中音和高音（点击 “更多” 了解详情）
+      Dance_Party_extras_on_beat_2019: 低音、中音和高音（点击 “更多” 了解详情）
+      Dance_Party_extras_speed: 加快速度，减慢速度（点击 “更多” 了解详情）
+      Dance_Party_extras_speed_2019: 加快速度，减慢速度（点击 “更多” 了解详情）
+      Dance_Party_extras_visible: 他们去哪儿了？ (详情请点击 “更多”)
+      Dance_Party_extras_visible_2019: 他们去哪儿了？ (详情请点击 “更多”)
       Find the Wizard: 随便创造一个东西。这是一个猜数游戏的例子！
       Fish Tank 2-validated: 改变达斯汀（风滚草）为鱼。
       Fish Tank 2-validated_2019: 改变达斯汀（风滚草）为鱼。
@@ -1613,8 +1627,8 @@ zh-CN:
       courseD_bee_nestedLoops9_predict2: 酿蜂蜜。
       courseD_bee_nestedLoops9_predict2_2018: 酿蜂蜜。
       courseD_bee_nestedLoops9_predict2_2019: 酿蜂蜜。
-      courseD_bounce_events10s_2018: '把 "得分点" 块加到“当球击中”的事件上。将 '' 对手得分点 '' 模块加到“球错过球拍”的事件上。这样来创建这个游戏。 '
-      courseD_bounce_events10s_2019: '把 "得分点" 块加到“当球击中”的事件上。将 '' 对手得分点 '' 模块加到“球错过球拍”的事件上。这样来创建这个游戏。 '
+      courseD_bounce_events10s_2018: '把 `得分点` 块加到`当球击中`的事件上。将 '' 对手得分点 '' 模块加到`球错过球拍`的事件上。这样来创建这个游戏。 '
+      courseD_bounce_events10s_2019: '把 `得分点` 块加到`当球击中`的事件上。将 '' 对手得分点 '' 模块加到`球错过球拍`的事件上。这样来创建这个游戏。 '
       courseD_bounce_events11s_2018: '在所有需要新球的游戏里面加上"扔出新球" 模块。 '
       courseD_bounce_events11s_2019: '在所有需要新球的游戏里面加上"扔出新球" 模块。 '
       courseD_bounce_events12s_2018: 让这个游戏成为你自己的。你可以改变所有的视觉效果和规则。完成后, 单击 "完成", 让朋友在手机上试用您的游戏。
@@ -2304,17 +2318,3 @@ zh-CN:
       scrat 18: 这个“如果-否则”代码块检查这个条件是否成立，然后做一件事或另一件事。如果想让我得到橡子的活，你需要尝试使用这个“如果-否则”代码块。
       scrat 19: 让我们来再练习一次使用“如果/否则”块，你能第一次就成功么？
       scrat 20: 你可以只添加3个代码块就帮我解决一个更复杂的迷宫吗？如果你做对了，我能走任何长度的曲线了。快一点！冰在融化！
-      Dance_Party_extras_alternate_2019: 来来回回！ （单击“更多”以获取详细信息）
-      Dance_Party_extras_battle: 舞蹈团队 (点击 “更多” 查看详情)
-      Dance_Party_extras_battle_2019: 舞蹈团队 (点击 “更多” 查看详情)
-      Dance_Party_extras_every_beat: 季度票据 (点击 “更多” 查看详情)
-      Dance_Party_extras_every_beat_2019: 季度票据 (点击 “更多” 查看详情)
-      Dance_Party_extras_layout: 让我们进入编队！ (详情请点击 “更多”)
-      Dance_Party_extras_layout_2019: 让我们进入编队！ (详情请点击 “更多”)
-      Dance_Party_extras_mixed_2019: 更多按钮（有关详细信息，请单击“更多”）
-      Dance_Party_extras_on_beat: 低音、中音和高音（点击 “更多” 了解详情）
-      Dance_Party_extras_on_beat_2019: 低音、中音和高音（点击 “更多” 了解详情）
-      Dance_Party_extras_speed: 加快速度，减慢速度（点击 “更多” 了解详情）
-      Dance_Party_extras_speed_2019: 加快速度，减慢速度（点击 “更多” 了解详情）
-      Dance_Party_extras_visible: 他们去哪儿了？ (详情请点击 “更多”)
-      Dance_Party_extras_visible_2019: 他们去哪儿了？ (详情请点击 “更多”)
