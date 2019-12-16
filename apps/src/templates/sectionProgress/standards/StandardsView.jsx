@@ -5,7 +5,6 @@ import StandardsLegend from './StandardsLegend';
 
 export default class StandardsView extends Component {
   static propTypes = {
-    //Provided by redux
     showStandardsIntroDialog: PropTypes.bool
   };
 
