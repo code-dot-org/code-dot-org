@@ -3614,6 +3614,36 @@ is-IS:
           -   Láttu dansara birtast á skjánum.
 
           _Þetta borð endar eftir 4 takta._
+        challenges: |-
+          **Valfrjálsar áskoranir**
+
+          -   Velja að spila annað lag.
+          -   Færa dansarann á annan stað.
+          -   Búa til fleiri en einn dansara.
+      Dance_2019_02:
+        validation: |-
+          **Hvernig klára ég þetta borð?**
+
+          -   Dansarinn verður að gera hreyfingu.
+          -   Þú verður að ýta á örvarlykil.
+
+          _Þetta borð endar eftir 4 takta._
+        challenges: |-
+          **Valfrjáls áskorun**
+
+          Nota fleiri en einn <xml><block type="Dancelab_whenKey"><title name="KEY"></title></block></xml> kubb.
+      Dance_2019_03:
+        validation: |-
+          **Hvernig klára ég þetta borð?**
+
+          -   Báðir dansararnir verða að framkvæma hreyfingu.
+          -   Þú verður að ýta á örvarlyklana.
+
+          _Þetta borð endar eftir 6 takta._
+        challenges: |-
+          **Valfrjáls áskorun**
+
+          -   Láttu dansarann bregðast við vinstri og hægri örvarlyklunum.
       Dance_2019_04:
         validation: |-
           **Hvernig klára ég þetta borð?**
@@ -3628,6 +3658,62 @@ is-IS:
           -   Eftir 6 takta verður dansarinn að vera að dansa öðruvísi en hann gerði eftir 4 takta.
 
           -   Borðið endar eftir 11 takta.\*
+        challenges: |-
+          **Valfrjáls áskorun**
+
+          -   Breyta bakgrunninum í hvert sinn sem dansararnir skipta um hreyfingu.
+      Dance_2019_06:
+        validation: |-
+          **Hvernig klára ég þetta borð?**
+
+          -   Búðu til einn aðaldansara og hóp aukadansara á fyrstu 4 töktum lagsins.
+
+          _Þetta borð endar eftir 7 takta._
+        challenges: |-
+          **Valfrjáls áskorun**
+
+          -   Búa til fleiri en einn hóp aukadansara.
+      Dance_2019_07:
+        validation: |-
+          **Hvernig klára ég þetta borð?**
+
+          -   Breyttu stærðinni á minnst einum dansara.
+
+          -   Borðið endar eftir 6 takta.\_
+        challenges: |-
+          **Valfrjáls áskorun**
+
+          -   Prófa að breyta öðrum eiginleikum svo sem breidd eða snúningi.
+      Dance_2019_08:
+        validation: |-
+          **Hvernig klára ég þetta borð?**
+
+          -   Breyttu litnum á minnst einum dansara.
+
+          _Borðið endar eftir 6 takta._
+        tint_hint: Tókstu eftir að dansararnir fá ekki nákvæmlega þann lit sem þú
+          valdir? Það er vegna þess að **litur** sem þú velur blandast litum dansaranna.
+      Dance_2019_09:
+        validation: |-
+          **Hvernig klára ég þetta borð?**
+
+          -   Ýttu bara á "Ljúka" hnappinn!
+        repeat_every_ideas: |-
+          **Vantar þig hugmyndir?**
+
+          -   Breyttu stærð dansara endurtekið til að láta hann stækka.
+          -   Breyttu snúningi dansara endurtekið til að láta hann snúast í hringi.
+
+          _Þú getur líka notað neikvæðar tölur til að láta áhrifin virka öfugt!_
+        next_previous: |-
+          **Valfrjáls áskorun**
+
+          -   Þú getur líka notað þennan nýja atvikskubb til að fara í gegnum röð danshreyfinga með því að stilla hreyfinguna á `(Handahóf)`, `(Næsta)` eða `(Fyrri)`.
+              <xml><block type="Dancelab_changeMoveEachLR">
+              <title name="GROUP">???</title>
+              <title name="MOVE">"rand"</title>
+              <title name="DIR">-1</title>
+              </block></xml>
       Dance_Party_01:
         validation: |-
           **Hvernig klára ég þetta borð?**
@@ -3730,6 +3816,8 @@ is-IS:
           -   Notaðu `þegar vinstri ör` kubbinn til að láta Vélmennið gera danshreyfingu þegar þú ýtir á örina.
 
           -   Borðið endar eftir 7 takta.\*
+      Dance_Party_extras_alternate_2019:
+        alternate: Skiptingakubburinn er í flokknum "Dansarar".
       Function intro Ryan:
         Function_intro_Ryan_b: Ef þú kallar rétt á föllin, er þetta slóðin sem þú
           munt ferðast eftir...

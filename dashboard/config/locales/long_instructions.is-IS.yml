@@ -6481,9 +6481,47 @@ is-IS:
          Veldu `cat` eða `sloth` til að búa til fyrsta dansarann.
 
         -   _Þú getur líka smellt á ljósaperuna vinstra megin til að fá meiri upplýsingar eða viðbótaráskoranir._
+      Dance_2019_02: "Með <xml><block type=\"Dancelab_whenKey\" block-text=\"when
+        up pressed\"></block></xml> kubbnum getur þú keyrt kóða með því að ýta á örvarlyklana.
+        \nNotaðu <xml><block type=\"Dancelab_doMoveEachLR\" block-text=\"do once\"><title
+        name=\"GROUP\">\"CAT\"</title><title name=\"MOVE\">MOVES.XClapSide</title><title
+        name=\"DIR\">-1</title></block></xml> kubbinn til að láta köttinn klappa!\n\n_Gættu
+        þess að ýta á \"upp ör\" lykilinn eða ![](<https://images.code.org/419e704e6841c0b696016bf5029b8cb9-image-1571864825506.06.45
+        PM.png>) eftir að þú smellir á Keyra hnappinn!_"
+      Dance_2019_03: Nú er það danskeppni! Forritaðu dansarana þannig að mismmunandi
+        lyklar stjórni hverjum þeirra. Veldu góða hreyfingu fyrir hvern dansara eða
+        stilltu hann á `(Handahóf)` svo hann geri eitthvað óvænt!
+      Dance_2019_04: "Látum dansarana hreyfa sig í takt við tónlistina!\n\nTengdu
+        <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">4</title><title
+        name=\"UNIT\">\"measures\"</title></block></xml> kubbinn við <xml><block type=\"Dancelab_changeMoveEachLR\"><title
+        name=\"GROUP\">\"SHARK\"</title><title name=\"MOVE\">MOVES.ThisOrThat</title><title
+        name=\"DIR\">-1</title></block></xml> kubb úr dótakassanum. \n\nDansarinn
+        þinn ætti að byrja nýja hreyfingu eftir fjórða taktinn.\n\n**Taktar** eru
+        notaðir til að telja tímann í tónlist. Í þessum æfingum er taktur fjögur taktslög
+        á lengd."
       Dance_2019_05: "_Nú erum við að dansa!_ \n\nBættu <xml><block type=\"Dancelab_atTimestamp\"><title
         name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml>
         kubbi við vinnusvæðið þitt. Láttu dansarann byrja nýjan dans eftir 6 takta."
+      Dance_2019_06: "Notaðu þennan nýja kubb til að stilla upp hópi minni aukadansara
+        í kringum aðaldansarann í miðjunni. \n\n  <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\">\n
+        \   <title name=\"N\">???</title>\n    <title name=\"COSTUME\" config=\"&quot;BEAR&quot;,
+        &quot;CAT&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;,
+        &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title>\n    <title name=\"LAYOUT\">\"circle\"</title>\n
+        \ </block></xml>\n\nNú getur þú búið til heilan hóp aukadansara í einni aðgerð!"
+      Dance_2019_07: |-
+        Hver dansari hefir visst safn _eiginleika_ sem stjórna útliti dansarans.
+
+        Settu <xml><block type="Dancelab_setPropEach" block-text="the set block"><title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title><title name="PROPERTY">"scale"</title><title name="VAL">???</title></block></xml> undir grænan atvikskubb til að láta dansara sjást nær eða lengra í burtu.
+      Dance_2019_08: Dansarar hafa eiginleikann "litur" sem stjórnar lit þeirra. Prófaðu
+        að breyta litnum á einum dansara (eða á heilum hópi)!
+      Dance_2019_09: |-
+        Þessi **nýji kubbur** er sérstök tegund atviks sem kviknar aftur og aftur.
+
+        <xml><block type="Dancelab_everySeconds"><title name="N">2</title><title name="UNIT">"measures"</title></block></xml>
+
+        Með því að setja hina nýju kubbana inn í endurtekningarkubbinn getur þú aftur og aftur breytt eiginleikum dansara á meðan þeir dansa. Gerðu eitthvað frumlegt og skemmtilegt við þetta!
+
+        _Ýttu svo á Ljúka hnappinn._
       Dance_2019_10: Finndu taktinn! Búðu til eigin dans sem þú getur deilt með vinum
         þínum.
       Dance_Party_01: |-
@@ -6547,6 +6585,17 @@ is-IS:
         **Notaðu lyklana til að láta Vélmennið droppa-klappa droppa-klappa eins hratt og þú getur!**
       Dance_Party_12: Finndu taktinn! Búðu til eigin dans sem þú getur deilt með vinum
         þínum.
+      Dance_Party_extras_alternate_2019: |-
+        # Fram og aftur!
+
+        Stundum gætirðu viljað búa til mynstur af völdum danshreyfingum. Með þessum nýja kubbi geturðu einmitt gert það.
+
+        <xml><block type="Dancelab_alternateMoves"><title name="GROUP">sprites</title><title name="N">2</title><title name="MOVE1">MOVES.Roll</title><title name="MOVE2">MOVES.ClapHigh</title></block></xml>
+
+        Hreyfingarnar sem þú velur verða endurteknar í sömu röð til eilífðar.
+
+        -   Búðu til breytilega rútínu fyrir aðaldansarann fremst!
+        -   Notaðu mismunandi tölur til að stjórna hversu títt skipt er um hreyfingarnar. Prófaðu `1` eða `0.5` til að skipta hraðar!
       Dance_Party_extras_battle: |-
         # Danshópar
 
@@ -6573,6 +6622,15 @@ is-IS:
         -   Gerðu tilraunir með aðrar nótulengdir (svo sem 0,5 fyrir hálfnótu eða 0,125 fyrir áttundapartsnótu).
         -   Bættu við einhverjum `eftir takt` atvikum.
         -   Notaðu "sekúndur" í stað "takta" og reyndu að tímasetja dansana þannig.
+      Dance_Party_extras_every_beat_2019: |-
+        # Fjórðungsnótur
+
+        Flestir dansar okkar nota heila takta, en hver taktur samanstendur af 4 fjórðungsnótum. Þessi dans notar <xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml> til að láta dansarann klappa við hverja fjórðungsnótu en bara fyrir fyrstu 4 taktana.
+
+        Prófaðu að breyta tölunum í kubbunum til að sjá hvaða áhrif það hefur á dansinn.
+
+        -   Gerðu tilraunir með aðrar nótulengdir (t. d. 0.5 fyrir hálfnótu eða 0.125 fyrir áttundunótu).
+        -   Bættu við öðrum atvikum.
       Dance_Party_extras_layout: |-
         # Stilla sér upp!
 
@@ -6581,6 +6639,21 @@ is-IS:
         -   Búðu til annan hóp dansara í annarri uppstillingu
         -   Láttu uppstillinguna breytast þegar ýtt er á lykil
         -   Breyttu eiginleika þegar dansarar skipta um uppstillingu
+      Dance_Party_extras_layout_2019: |-
+        # Uppstilling!
+
+        Skoðaðu þennan dans sem notar <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> kubbinn til að breyta uppstillingu aukadansaranna á meðan á dansinum stendur. Prófaðu eina af þessum hugmyndum sem viðbót:
+
+        -   Búa til annan hóp dansara í annarri uppstillingu
+        -   Láta uppstillinguna breytast þegar ýtt er á lykil
+        -   Breyta eiginleika þegar dansararnir skipta um uppstillingu
+      Dance_Party_extras_mixed_2019: |-
+        # Fleiri hnappar
+
+        Í þessum dansi getur þú stjórnað eiginleikum dansaranna á meðan þeir eru að dansa. Prófaðu að láta aðra eiginleika breytast þegar þú ýtir á hnappana. Til dæmis:
+
+        -   Breyta lit dansarann af handahófi þegar þú ýtir á "ör niður".
+        -   Bæta við hópi dansara með uppstillingu valda af handahófi þegar þú ýtir á bilslána.
       Dance_Party_extras_on_beat: |-
         # Bassa-, mið- og háir tónar
 
@@ -6593,6 +6666,10 @@ is-IS:
         # Hraðar, hægar
 
         Þessi síðasti dans notar `stilla hraða` kubbinn til að stjórna hve hratt hver dansari hreyfir sig. Gerðu tilraunir með mismunandi hraða á mismunandi stöðum í laginu. Haltu áfram að gera breytingar á þessum dansi eða farðu til baka í einhvern af hinum dönsunum til að gera þá enn flottari.
+      Dance_Party_extras_speed_2019: |-
+        # Hraðar, hægar
+
+        Þessi síðasti dans notar <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> kubbinn til að stjórna hve hratt hver dansari hreyfir sig. Gerðu tilraunir með mismunandi hraða á mismunandi stöðum í laginu. Haltu áfram að gera breytingar á þessum dansi eða farðu til baka í einhvern af hinum dönsunum til að gera þá enn flottari.
       Dance_Party_extras_visible: |-
         # Hvert fóru þeir?
 

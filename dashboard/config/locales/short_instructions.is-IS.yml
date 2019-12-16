@@ -980,7 +980,16 @@ is-IS:
         &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml>
         kubbinn út á vinnusvæðið og festu hann inn í <xml><block type="Dancelab_whenSetup2"
         next_connection_disabled="true" block-text="setup"></block></xml> kubbinn.'
+      Dance_2019_02: Láttu köttinn gera danshreyfingu þegar ýtt er á lykil.
+      Dance_2019_03: 'Nú er það danskeppni! Forritaðu dansarana þannig að mismmunandi
+        lyklar stjórni hverjum þeirra. Veldu góða hreyfingu fyrir hvern dansara eða
+        stilltu hann á "(Handahóf)" svo hann geri eitthvað óvænt! '
+      Dance_2019_04: Láttu dansarann byrja nýja hreyfingu eftir fjórða taktinn.
       Dance_2019_05: Láttu nú dansarann skipta um hreyfingu eftir 6 takta!
+      Dance_2019_06: Stilltu upp hópi aukadansara í kringum aðaldansarann í miðjunni.
+      Dance_2019_07: Breyttu stærð aukadansarahópsins.
+      Dance_2019_08: Prófaðu að breyta litnum á einum dansara (eða heilum hópi)!
+      Dance_2019_09: Gerðu eitthvað frumlegt með þessum nýju kubbum!
       Dance_2019_10: Finndu taktinn! Búðu til eigin dans sem þú getur deilt með vinum
         þínum.
       Dance_Party_01: Dragðu kubbinn `búa til` inn á vinnusvæðið og láttu hann smella
@@ -1004,12 +1013,16 @@ is-IS:
         eins hratt og þú getur!
       Dance_Party_12: Finndu taktinn! Búðu til eigin dans sem þú getur deilt með vinum
         þínum.
+      Dance_Party_extras_alternate_2019: Fram og aftur! (Smelltu á "Nánar" til að
+        fá upplýsingar)
       Dance_Party_extras_battle: Danshópar (Meira um þá undir "Meira")
       Dance_Party_extras_battle_2019: Danshópar (Meira um þá undir "Meira")
       Dance_Party_extras_every_beat: Fjórðapartsnótur (Meira um þær undir "Meira")
       Dance_Party_extras_every_beat_2019: Fjórðapartsnótur (Meira um þær undir "Meira")
       Dance_Party_extras_layout: Stillum okkur upp! (Meira um það undir "Meira")
       Dance_Party_extras_layout_2019: Stillum okkur upp! (Meira um það undir "Meira")
+      Dance_Party_extras_mixed_2019: Fleiri hnappar! (Smelltu á "Nánar" til að fá
+        upplýsingar)
       Dance_Party_extras_on_beat: Bassa-, mið- og háhljóð (Meira um þau undir "Meira")
       Dance_Party_extras_on_beat_2019: Bassa-, mið- og háhljóð (Meira um þau undir
         "Meira")
