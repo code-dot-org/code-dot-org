@@ -14,7 +14,7 @@ title: Anleitung für "Hour of Code"-Bezirke
 
 ### 1. Werben Sie Schulen vor Ort an
 
-Verbreiten Sie [diese E-Mail](%= resolve_url('/promote/resources#sample-emails') %) und [die Anleitung für Lehrer](%= resolve_url('/how-to') %) oder veröffentlichen Sie [einen kurzen Text](%= resolve_url('/promote/stats') %) in einem Newsletter oder einer Pinnwand. <br />
+Verbreiten Sie [diese E-Mail]({{ promote/sample_emails }}) und [die Anleitung für Lehrer]({{ urls/how_to_guide }}) oder veröffentlichen Sie [einen kurzen Text]({{ promote/stats_url }}) in einem Newsletter oder einer Pinnwand. <br />
 
 ### 2. Stellen Sie den Schulen einen Beispiel-Lehrplan zur Verfügung
 

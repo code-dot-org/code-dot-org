@@ -26,38 +26,71 @@ es:
   social_hoc2019_dance: "¡Con la presencia de Katy Perry, Jonas Brothers, Lil Nas
     X, Panic at the Disco, y muchos más!"
   oceans_landing_title: AI for Oceans
-  oceans_landing_description: 'Explore machine learning by teaching “A.I.” to recognize
-    fish. #CSforGood'
-  oceans_landing_specs: English only | Ages 11+
+  oceans_landing_description: Learn about machine learning and ethical use of AI.
+  cs_for_good_hashtag: "#CSforGood"
+  oceans_landing_specs: English only | Grades 3+
+  oceans_landing_explanation: Computer science is about so much more than coding!
+    Learn about artificial intelligence (AI), machine learning, training data, and
+    bias, while exploring ethical issues and how AI can be used to address world problems.
+    Enjoy Code.org's first step in a new journey to teach more about AI. When you
+    use the AI for Oceans activity you are training real machine learning models.
+    <a href='#behind-the-scenes'>Learn more</a>.
   oceans_landing_teacher_resources: Teacher Resources
   oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
     AI, machine learning, training data, and bias, while exploring ethical issues.
   oceans_landing_resource_button: View Resources
-  oceans_landing_cs_for_good: CS For Good
+  oceans_landing_cs_for_good: CS for Good
   oceans_landing_cs_for_good_desc: Resources to help students understand the role
     computer science could play in creating a more equitable world.
-  oceans_landing_learn_more: Learn more about AI and Machine Learning
-  social_hoc2019_oceans_title: 'AI for Oceans #CSForGood'
+  oceans_landing_videos: Videos about AI and Machine Learning
+  oceans_behind_the_scenes: 'AI for Oceans: Behind the Scenes'
+  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
+    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
+    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
+    a dataset of over 14 million images hand-annotated with words such as "balloon"
+    or "strawberry". In order to customize this model with the labeled training data
+    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
+    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
+    to obtain a list of annotations that are most likely to apply to it. Then, for
+    a new image, we feed it to MobileNet and compare its resulting list of annotations
+    to those from the training dataset. We classify the new image with the same label
+    (such as "fish" or "not fish") as the images from the training set with the most
+    similar results.
+  oceans_behind_the_scenes_2: Levels 6-8 use a <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
+    Machine</a> (SVM). We look at each component of the fish (such as eyes, mouth,
+    body) and assemble all of the metadata for the components (such as number of teeth,
+    body shape) into a vector of numbers for each fish. We use these vectors to train
+    the SVM. Based on the training data, the SVM separates the "space" of all possible
+    fish into two parts, which correspond to the classes we are trying to learn (such
+    as "blue" or "not blue").
+  social_hoc2019_oceans_title: 'AI for Oceans #CSforGood'
   social_hoc2019_oceans_desc: Learn about AI, machine learning, training data, and
     bias, while exploring ethical issues and how AI can be used to address world problems.
     Computer science is about so much more than coding! Enjoy Code.org's first step
     in a new journey to teach more about AI throughout our curriculum.
-  hoc_overview_oceans_tutorial_header: AI For Oceans
-  hoc_overview_oceans_tutorial_desc: Learn about AI, machine learning, training data,
-    and bias, while exploring ethical issues and how AI can be used to address world
-    problems.
+  hoc_overview_oceans_tutorial_header: AI for Oceans
+  hoc_overview_oceans_tutorial_desc: Learn about artificial intelligence (AI), machine
+    learning, training data, and bias, while exploring ethical issues and how AI can
+    be used to address world problems.
   ai_video_title_what_is_ai: What is AI?
+  ai_video_title_algorithm_bias: Fighting bias in algorithms
   ai_video_title_phone_knows_dog: How does your phone know this is a dog?
   ai_video_title_what_is_ml: What is Machine Learning?
   ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small
     and Prickly'
   ai_video_title_ethics_of_ai: Ethics of AI
   ai_video_title_ml_human_bias: Machine Learning and Human Bias
+  ai_video_title_seeing_ai: 'Seeing AI: Making the visual world more accessible'
   activity: Activity
   name: Name
   description: Description
   audience: Audience
   ai_resource_header: Teach and Learn about AI
+  ai_resource_minecraft: Minecraft AI for Good
+  ai_resource_minecraft_desc: 'Access free resources including a lesson plan, videos,
+    computer science curriculum, and teacher trainings. (Requires Minecraft: Education
+    Edition)'
   ai_resource_ml_for_kids: Machine Learning for Kids
   ai_resource_ml_for_kids_desc: Train a machine learning model with text, numbers,
     or images, and use it to make games in Scratch.
@@ -76,18 +109,20 @@ es:
   ai_audience_k12: K-12 (Reading required)
   ai_audience_hs: High school
   ai_activity_header: Activities Powered by AI and ML
+  ai_activity_seeing_ai: Seeing AI
+  ai_activity_seeing_ai_desc: A free app that narrates the world around you in a variety
+    of languages.
+  ai_activity_quick_draw: Quick, Draw!
+  ai_activity_quick_draw_desc: Can a neural network learn to recognize doodling?
   ai_activity_teachable: Teachable Machine
   ai_activity_teachable_desc: Train a computer to recognize your own images, sounds,
     and poses.
-  ai_activity_quick_draw: Quick, Draw!
-  ai_activity_quick_draw_desc: Can a neural network learn to recognize doodling?
   ai_activity_experiments: AI Experiments with Google
   ai_activity_experiments_desc: Start exploring machine learning through pictures,
     drawings, language, music, and more.
-  ai_activity_mixlab: MixLab
-  ai_activity_mixlab_desc: Make music using voice commands.
-  ai_activity_gaugan: GauGAN Beta
-  ai_activity_gaugan_desc: Paint photo-realistic landscapes with the help of AI.
+  ai_activity_zooniverse: Zooniverse - Snapshot Mountain Zebra
+  ai_activity_zooniverse_desc: Help protect the endangered Cape Mountain Zebra by
+    identifying the different animals in the images.
   codeorg_homepage_hoc2018_curriculum: Ve más con <a href="%{studio_url}/courses"
     class="hoc2018-curriculum-link">Code.org cursos</a>
   codeorg_homepage_hoc2018_dance_heading: Crea tu propio <span class="highlight-word">Fiesta&nbsp;Baile</span>
@@ -493,14 +528,11 @@ es:
     en una organización sin ánimo de lucro o en tu lugar de trabajo. Simplemente,
     pruébalo cuando llegue el %{campaign_date}."
   hoc_faq_behind_hoc_q: "¿Quién está detrás de la Hora de Programación?"
-  hoc_faq_behind_hoc_a: La Hora del Código está organizada por <a href='http://code.org'>Code.org</a>,
-    una organización pública sin fines de lucro (501c3) dedicada a promover la participación
-    en escuelas e institutos de las Ciencias de la Computación, con una especial atención
-    en incrementar el número de mujeres y estudiantes de colectivos minoritarios que
-    aprenden a programar. Una <a href='%{codeorg_url}/about/partners'>coalición sin
-    precedentes de socios</a> que se ha reunido para apoyar la Hora del Código, también
-    &mdash; incluyendo Microsoft, Apple, Amazon, Boys y Girls Clubs of America y College
-    Board.
+  hoc_faq_behind_hoc_a: La Hora del Código es impulsada por los <a href='%{partner_url}'>Comités
+    de Asesoría y Revisión</a> de la Hora del Código y la Semana por la Educación
+    en Ciencias de la Computación, así como por una coalición de socios sin precedentes
+    que se han unido para apoyar la Hora del Código, entre ellos, Microsoft, Apple,
+    Amazon, Boys and Girls Clubs of America y el College Board.
   hoc_faq_host_q: No sé nada acerca de programación. ¿Aún así puedo organizar un evento?
   hoc_faq_host_a: Por supuesto. Las actividades de La Hora del Código son auto guiadas.
     Todo lo que tienes que hacer es <a href='%{codeorg_url}/learn'>probar nuestros
@@ -510,17 +542,18 @@ es:
     tu evento leyendo nuestra <a href='/how-to'>guía</a>.
   hoc_faq_devices_q: "¿Qué dispositivos debo usar para mis estudiantes?"
   hoc_faq_devices_a: Los tutoriales de Code.org funcionan en todos los dispositivos
-    y navegadores. Puedes ver más información sobre la tecnología compatible con los
-    tutoriales de Code.org <a href='%{codeorg_url}/educate/it'>aquí</a>, y con los
-    tutoriales que no pertenecen a Code.org en <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> la
-    descripción específica del tutorial. ¡No olvides que también ofrecemos <a href='%{unplugged_url}'>actividades
-    sin conexión</a> si tu escuela no puede incorporar los tutoriales!
+    y navegadores. Puedes ver más información sobre las necesidades tecnológicas del
+    tutorial de Code.org <a href = '%{codeorg_url}/educate/it'>aquí</a>. Las necesidades
+    tecnológicas de los tutoriales que no son de Code.org pueden encontrarse en <a
+    href='%{codeorg_url}/learn'>%{partner_url}/learn</a> en la descripción específica
+    del tutorial. ¡No olvides que también ofrecemos <a href='%{unplugged_url}'>actividades
+    sin conexión</a> si tu escuela no puede alojar los tutoriales!
   hoc_faq_need_computers_q: "¿Necesito ordenadores para cada participante?"
   hoc_faq_need_computers_a: No. Tenemos tutoriales de la Hora del Código que funcionan
     en PCs, teléfonos móviles, tabletas y algunos que no requieren ¡ordenador! Tú
     puedes unirte desde donde estés, con lo que tengas. <p><i>Aquí están algunas opciones:</i>
     <br> <ul><li><b>Trabaja en parejas.</b> Las investigaciones muestran que los estudiantes
-    aprenden mejor en <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>pares
+    aprenden mejor en<a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>pares
     de programación</a>, compartiendo un ordenador y trabajando juntos. Anima a tus
     estudiantes a trabajar en pares. <li><b>Un cañón proyector.</b> Si tú tienes un
     proyector y un ordenador conectado a Internet, el grupo entero puede hacer una
@@ -8644,6 +8677,7 @@ es:
   tutorial_modtraits_name: Character Traits with GoPiGo
   tutorial_mee_name: 'Minecraft Hora del Código: usa bien la IA'
   tutorial_kuborobo_name: Rutas de Programación de Robótica de KUBO
+  tutorial_ai-oceans_name: AI for Oceans
   tutorial_scratchimagine_longdescription: Imagine a world where anything is possible,
     then bring it to life with Scratch!
   tutorial_codesterspsa_longdescription: Learn the basics of coding in Python while
@@ -9008,6 +9042,9 @@ es:
   tutorial_kuborobo_longdescription: Con esta actividad los alumnos prueban sus habilidades
     lógicas y de secuenciación al usar las fichas (TagTiles) para programar su robot
     KUBO para que viaje a varios lugares por un mapa impreso.
+  tutorial_ai-oceans_longdescription: Computer science is about so much more than
+    coding! Learn about AI, machine learning, training data, and bias, while exploring
+    ethical issues and how AI can be used to address world problems.
   tutorial_scratchimagine_language: Inglés, español
   tutorial_codesterspsa_language: Español (España)
   tutorial_googlehero_language: Inglés, español
@@ -9110,6 +9147,7 @@ es:
     Chino (Tradicional), Turco, Polaco, indonesio, ucraniano, griego, búlgaro, húngaro,
     finlandés, danés, sueco, noruego, eslovaco, checo, holandés
   tutorial_kuborobo_language: Spanish (Spain)
+  tutorial_ai-oceans_language: Español (España)
   tutorial_scratchimagine_string_detail_grades: A partir de siete años
   tutorial_codesterspsa_string_detail_grades: 6+ años
   tutorial_googlehero_string_detail_grades: 2-8 años
@@ -9210,6 +9248,7 @@ es:
   tutorial_kuborobo_string_detail_grades: Educación infantil (Guardería) - 1º curso
     (antes de empezar a leer, edades comprendidas entre 4-6 años), 2º-5º curso (edades
     comprendidas entre 7-10 años)
+  tutorial_ai-oceans_string_detail_grades: Grades 3+
   tutorial_scratchimagine_string_platforms: Todos los navegadores modernos, tablets
     Android, iPad
   tutorial_codesterspsa_string_platforms: Todos los navegadores modernos, tablets
@@ -9330,6 +9369,8 @@ es:
   tutorial_modtraits_string_platforms: Todos los navegadores modernos
   tutorial_mee_string_platforms: Windows, iPad, MacOS
   tutorial_kuborobo_string_platforms: Sin conexión
+  tutorial_ai-oceans_string_platforms: All modern browsers, modern Android tablets,
+    iPads, modern Android phones, iPhones
   tutorial_scratchimagine_string_detail_platforms: ''
   tutorial_codesterspsa_string_detail_platforms: ''
   tutorial_googlehero_string_detail_platforms: ''
@@ -9431,6 +9472,7 @@ es:
   tutorial_modtraits_string_detail_platforms: GoPiGo
   tutorial_mee_string_detail_platforms: ''
   tutorial_kuborobo_string_detail_platforms: KUBO robot
+  tutorial_ai-oceans_string_detail_platforms: ''
   tutorial_scratchimagine_string_detail_programming_languages: Bloques
   tutorial_codesterspsa_string_detail_programming_languages: Python
   tutorial_googlehero_string_detail_programming_languages: Bloques
@@ -9541,6 +9583,7 @@ es:
   tutorial_modtraits_string_detail_programming_languages: Bloques
   tutorial_mee_string_detail_programming_languages: Bloques
   tutorial_kuborobo_string_detail_programming_languages: Sin pantalla o software
+  tutorial_ai-oceans_string_detail_programming_languages: AI and Machine Learning
   school_not_found_heading: No pudimos encontrar su escuela. Por favor introduzca
     más información.
   school_name: Nombre de la escuela

@@ -11,8 +11,8 @@ nn:
   campaign_date_full: 4.-10. desember
   campaign_date_year: '2017'
   campaign_date_full_year: 4.-10. desember, 2017
-  hoc2019_header: Lær deg informatikk. Endre verda.
-  hoc2019_header_line1_mobile: Lær deg informatikk.
+  hoc2019_header: Lær deg programmering. Så kan du endre verda.
+  hoc2019_header_line1_mobile: Lær deg programmering.
   hoc2019_header_line2_mobile: Endre verda.
   social_hoc2019_every_sudent: 'Kvar elev har potensialet til å endra verda. Hjelp
     dei i gong. #CSforGood'
@@ -25,69 +25,105 @@ nn:
     er eit fundament kvar elev kan lære.
   social_hoc2019_dance: Med Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas
     X, Jonas Brothers, Nicki Minaj og 34 andre!
-  oceans_landing_title: AI for Oceans
-  oceans_landing_description: 'Explore machine learning by teaching “A.I.” to recognize
-    fish. #CSforGood'
-  oceans_landing_specs: English only | Ages 11+
-  oceans_landing_teacher_resources: Teacher Resources
-  oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
-    AI, machine learning, training data, and bias, while exploring ethical issues.
-  oceans_landing_resource_button: View Resources
-  oceans_landing_cs_for_good: CS For Good
-  oceans_landing_cs_for_good_desc: Resources to help students understand the role
-    computer science could play in creating a more equitable world.
-  oceans_landing_learn_more: Learn more about AI and Machine Learning
-  social_hoc2019_oceans_title: 'AI for Oceans #CSForGood'
-  social_hoc2019_oceans_desc: Learn about AI, machine learning, training data, and
+  oceans_landing_title: AI for hav
+  oceans_landing_description: 'Utforsk maskinlæring ved å lære "A.I." til å kjenne
+    att fisk. #CSforGood'
+  cs_for_good_hashtag: "#CSforGood"
+  oceans_landing_specs: Berre på engelsk | Alder 11+
+  oceans_landing_explanation: Computer science is about so much more than coding!
+    Learn about artificial intelligence (AI), machine learning, training data, and
     bias, while exploring ethical issues and how AI can be used to address world problems.
-    Computer science is about so much more than coding! Enjoy Code.org's first step
-    in a new journey to teach more about AI throughout our curriculum.
-  hoc_overview_oceans_tutorial_header: AI For Oceans
-  hoc_overview_oceans_tutorial_desc: Learn about AI, machine learning, training data,
-    and bias, while exploring ethical issues and how AI can be used to address world
-    problems.
-  ai_video_title_what_is_ai: What is AI?
-  ai_video_title_phone_knows_dog: How does your phone know this is a dog?
-  ai_video_title_what_is_ml: What is Machine Learning?
-  ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small
-    and Prickly'
-  ai_video_title_ethics_of_ai: Ethics of AI
-  ai_video_title_ml_human_bias: Machine Learning and Human Bias
-  activity: Activity
-  name: Name
-  description: Description
-  audience: Audience
-  ai_resource_header: Teach and Learn about AI
-  ai_resource_ml_for_kids: Machine Learning for Kids
-  ai_resource_ml_for_kids_desc: Train a machine learning model with text, numbers,
-    or images, and use it to make games in Scratch.
-  ai_resource_ibm_ml_for_kids: 'IBM: Machine Learning for Kids'
-  ai_resouce_ibm_ml_for_kids_desc: Hands-on activities to introduce simple machine
-    learning models to students through games and interactive projects.
-  ai_resource_ecs: 'ECS: Artificial Intelligence (AI)'
-  ai_resource_ecs_desc: A new alternate curriculum unit for the Exploring Computer
-    Science (ECS) curriculum.
-  ai_resource_elements_ai: Elements of AI
-  ai_resource_elements_ai_desc: A series of free online courses created by Reaktor
-    and the University of Helsinki.
+    Enjoy Code.org's first step in a new journey to teach more about AI. When you
+    use the AI for Oceans activity you are training real machine learning models.
+    <a href='#behind-the-scenes'>Learn more</a>.
+  oceans_landing_teacher_resources: Lærerressursar
+  oceans_landing_teacher_resources_desc: Timeplanar og aktivitetar som hjelper deg
+    med å undervise AI, maskinlæring, treningsdata og bias, medan du utforskar etiske
+    problem.
+  oceans_landing_resource_button: Vis ressursar
+  oceans_landing_cs_for_good: Programmering for det gode
+  oceans_landing_cs_for_good_desc: Ressursar for å hjelpe elevane med å forstå rolla
+    datavitskap kan ha i å skapa ei meir rettferdig verd.
+  oceans_landing_videos: Videos about AI and Machine Learning
+  oceans_behind_the_scenes: 'AI for Oceans: Behind the Scenes'
+  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
+    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
+    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
+    a dataset of over 14 million images hand-annotated with words such as "balloon"
+    or "strawberry". In order to customize this model with the labeled training data
+    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
+    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
+    to obtain a list of annotations that are most likely to apply to it. Then, for
+    a new image, we feed it to MobileNet and compare its resulting list of annotations
+    to those from the training dataset. We classify the new image with the same label
+    (such as "fish" or "not fish") as the images from the training set with the most
+    similar results.
+  oceans_behind_the_scenes_2: Levels 6-8 use a <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
+    Machine</a> (SVM). We look at each component of the fish (such as eyes, mouth,
+    body) and assemble all of the metadata for the components (such as number of teeth,
+    body shape) into a vector of numbers for each fish. We use these vectors to train
+    the SVM. Based on the training data, the SVM separates the "space" of all possible
+    fish into two parts, which correspond to the classes we are trying to learn (such
+    as "blue" or "not blue").
+  social_hoc2019_oceans_title: 'AI for hav #CSForGood'
+  social_hoc2019_oceans_desc: 'Lær om AI, maskinlæring, treningsdata og bias medan
+    ein utforskar etiske problem og korleis AI kan brukast for å løyse verdsproblem.
+    Datavitskap er om så mykje meir enn koding! Bli med Code.org sine første steg
+    på ny reise for å lære meir om AI gjennom pensumet vårt. '
+  hoc_overview_oceans_tutorial_header: AI for hav
+  hoc_overview_oceans_tutorial_desc: Lær om AI, maskinlæring, treningsdata og bias
+    medan ein utforskar etiske problem og korleis AI kan brukast for å løyse verdsproblem.
+  ai_video_title_what_is_ai: Kva er AI?
+  ai_video_title_algorithm_bias: Fighting bias in algorithms
+  ai_video_title_phone_knows_dog: Korleis veit telefonen din at dette er ein hund?
+  ai_video_title_what_is_ml: Kva er maskinlæring?
+  ai_video_title_ml_big_small_prickly: 'Maskinlæring: Løyse problem som er store,
+    små og pittesmå'
+  ai_video_title_ethics_of_ai: Etikk i AI
+  ai_video_title_ml_human_bias: Maskinlæring og menneskelege bias
+  ai_video_title_seeing_ai: 'Seeing AI: Making the visual world more accessible'
+  activity: Aktivitet
+  name: Namn
+  description: Skildring
+  audience: Publikum
+  ai_resource_header: Undervis og lær om AI
+  ai_resource_minecraft: Minecraft AI for Good
+  ai_resource_minecraft_desc: 'Access free resources including a lesson plan, videos,
+    computer science curriculum, and teacher trainings. (Requires Minecraft: Education
+    Edition)'
+  ai_resource_ml_for_kids: Maskinlæring for barn
+  ai_resource_ml_for_kids_desc: Tren opp ein maskinlæringsmodell med tekst, tal og
+    bilde og bruk det til å lage spel i Scratch.
+  ai_resource_ibm_ml_for_kids: 'IBM: Maskinlæring for barn'
+  ai_resouce_ibm_ml_for_kids_desc: Praktiske aktivitetar for å introdusere enkel maskinlæringsmodellar
+    til elevar gjennom spel og interaktive prosjekt.
+  ai_resource_ecs: 'ESC: Kunstig intelligens (AI)'
+  ai_resource_ecs_desc: Ein ny alternativ læreplan for Exploring Computer Science
+    (ECS)-pensumet.
+  ai_resource_elements_ai: Elementar i AI
+  ai_resource_elements_ai_desc: Ein serie med gratis nettkurs utforma av Reaktor og
+    universitetet i Helsinki.
   ai_resource_cognimates: Cognimates
-  ai_resource_cognimates_desc: An AI education platform for building games, programming
-    robots and training.
-  ai_audience_k12: K-12 (Reading required)
-  ai_audience_hs: High school
-  ai_activity_header: Activities Powered by AI and ML
-  ai_activity_teachable: Teachable Machine
-  ai_activity_teachable_desc: Train a computer to recognize your own images, sounds,
-    and poses.
-  ai_activity_quick_draw: Quick, Draw!
-  ai_activity_quick_draw_desc: Can a neural network learn to recognize doodling?
-  ai_activity_experiments: AI Experiments with Google
-  ai_activity_experiments_desc: Start exploring machine learning through pictures,
-    drawings, language, music, and more.
-  ai_activity_mixlab: MixLab
-  ai_activity_mixlab_desc: Make music using voice commands.
-  ai_activity_gaugan: GauGAN Beta
-  ai_activity_gaugan_desc: Paint photo-realistic landscapes with the help of AI.
+  ai_resource_cognimates_desc: Ein AI-utdanningsplattform for å bygge spel, programmere
+    robotar og opplæring.
+  ai_audience_k12: Grunnskulen (Treng å kunne lese)
+  ai_audience_hs: Vidaregåande skule
+  ai_activity_header: Aktivitetar med AI og ML
+  ai_activity_seeing_ai: Seeing AI
+  ai_activity_seeing_ai_desc: A free app that narrates the world around you in a variety
+    of languages.
+  ai_activity_quick_draw: Teikn kjapt!
+  ai_activity_quick_draw_desc: Kan eit nevralt nettverk lære seg å kjenne att krusedullar?
+  ai_activity_teachable: Maskin du kan lære opp
+  ai_activity_teachable_desc: 'Lær opp ei datamaskin til å kjenne att dine bilete,
+    lydar og poseringar. '
+  ai_activity_experiments: AI-eksperiment med Google
+  ai_activity_experiments_desc: Utforsk maskinlæring gjennom bilete, teikningar, språk,
+    musikk og meir.
+  ai_activity_zooniverse: Zooniverse - Snapshot Mountain Zebra
+  ai_activity_zooniverse_desc: Help protect the endangered Cape Mountain Zebra by
+    identifying the different animals in the images.
   codeorg_homepage_hoc2018_curriculum: Gå vidare med <a href="%{studio_url}/courses"
     class="hoc2018-curriculum-link">Code.org-kurs</a>
   codeorg_homepage_hoc2018_dance_heading: Lag din eigen <span class="highlight-word">dansefest</span>
@@ -308,9 +344,10 @@ nn:
     200 opplæringsprogram og leksjonar</i>! Finn aktivitetar for ulike fagområde,
     ulike plattformar og elevar på alle erfaringsnivå.
   front_join_us_robotics: Har du roboter?
-  front_join_us_robotics_link: Takk til våre samarbeidspartnere innen automasjon og
-    robotikk for å støtte Kodetimen! Om klasserommet ditt har roboter, klikk på logoane
-    for å finne ein robot-aktivitet!
+  front_join_us_robotics_link: Ønsker du eit sett med fysisk programmeringsdingsar
+    og robotar du kan bruke med elevane dine? Partnarane våre gir sett til 75 klasserom!
+    Registrer deg på Kodetimen for å delta (Klasserom blir valgt av Code.org. Berre
+    for USA)
   front_join_us_teacher: Er du ein lærar?
   front_join_us_inspire: Inspirer elevane med
   front_join_us_inspire_link: Kodetimen i klasserommet.
@@ -442,8 +479,7 @@ nn:
   map_legend_title: Tegnforklaring
   map_legend_hoc_events: Kodetimearrangement
   map_legend_cs_tech_jam: Spesialarrangement
-  map_warning: Kodetimen-kartet viser berre dei 200.000 første registrerte arrangementa.
-    Alle registrerte arrangement kan du sjå på <a href='%{events_url}'>arrangement-sida.</a>
+  map_warning: Ei full liste av arrangement kan du sjå på <a href='%{events_url}'>arrangement-sida</a>.
   meta_tag_og_title: 'Kodetimen: Alle kan lære'
   meta_tag_og_description: Kodetimen er ei verdensomsfattande rørsle som når ut til
     titalls millionar elevar i meir enn 180 land og fins på over 45 språk.
@@ -541,10 +577,11 @@ nn:
   hoc_faq_map_q: Kvifor ser eg ikkje min prikk på kartet?
   hoc_faq_map_a: Vi er veldig lei oss for at du ikkje ser arrangementet ditt på kartet
     over Kodetimen. Fordi titusenvis av organisatorar melder seg på vil kartet samle
-    fleire arrangement under kvar prikk. Viss du klikkar på nummeret over kartet vil
-    du få opp ei liste over alle arrangement for kvar region og finne arrangementet
-    ditt der. I tillegg vil det ofte ta opp til 48 timar før kartet oppdaterar seg
-    på grunn av det er tusenvis av påmeldingar. Sjekk igjen om nokre få dagar!
+    fleire arrangement under kvar prikk. Viss du klikkar på <a href='%{events_url}'>sida
+    for arrangement</a>-lenka under kartet vil du få opp ei liste over alle arrangement
+    for kvar region og finne arrangementet ditt der. I tillegg vil det ofte ta opp
+    til 48 timar før kartet oppdaterar seg på grunn av det er tusenvis av påmeldingar.
+    Sjekk igjen om nokre få dagar!
   hoc_faq_count_hoc_a: Teljaren for Kodetimen er ikkje heilt nøyaktig. Vi tel ikkje
     unike elevar eksakt når vi måler deltakinga på Kodetimen, særskilt kjem dette
     av at vi ikkje krev innlogging eller registrering. Dette fører til at vi både
@@ -1007,7 +1044,7 @@ nn:
   tutorial_playtune_name: Spel melodien-appen
   tutorial_computeit_name: Rekn det ut
   tutorial_codesterssj_name: Vitsar i verdsrommet
-  tutorial_cmchat_name: Python-chatbot
+  tutorial_cmchat_name: Trivia-chatbot
   tutorial_tynkerdb_name: Dragesprenging
   tutorial_cmbuild_name: Spelbyggar
   tutorial_robotrattle_name: Robot-rangle
@@ -1139,9 +1176,9 @@ nn:
   tutorial_cadj_name: DR DJ Device
   tutorial_cacrazy_name: Kod ville skapningar
   tutorial_cajump_name: Hoppande syltetøy
-  tutorial_carest_name: Robo-restaurant puzzler
+  tutorial_carest_name: 'Oppgåvespel: Robo-restaurant'
   tutorial_accai_name: Accenture Intelligent Space Exploration
-  tutorial_vceclipse_name: Code the Eclipse
+  tutorial_vceclipse_name: Kod formørkelsen
   tutorial_pmzero_name: Pac-Man ZERO
   tutorial_hsela_name: 'Telling stories: ELA + coding'
   tutorial_ticklear_name: What's AR?
@@ -1211,8 +1248,8 @@ nn:
   tutorial_codesparkcreate_name: codeSpark Academy med Foos - Lag spel
   tutorial_hardvsoft_name: Team maskinvare vs Team programvare
   tutorial_codestersecard_name: Lag eit e-kort
-  tutorial_codesterslogo_name: Firmalogo
-  tutorial_codesterstshirt_name: T-skjortedesign med monogram
+  tutorial_codesterslogo_name: Design eigen logo
+  tutorial_codesterstshirt_name: Programmer initialane dine
   tutorial_codewards_name: Redd den undersjøiske byen!
   tutorial_olympics_name: C.A.T.S. går for Robot-OL
   tutorial_codinismhero_name: Programmere helten
@@ -1247,31 +1284,31 @@ nn:
   tutorial_mbbuttons_name: 'Introduksjon til BBCs micro:bit: Animasjon og knappar'
   tutorial_meteor_name: Lag eit spel med fallande meteorar til BBC micro:bit
   tutorial_ballbounce_name: Ball Bounce Mobile App
-  tutorial_mitcodi_name: Codi the Bee
-  tutorial_mitdoodle_name: Digital Doodle Mobile App
-  tutorial_talktome_name: Talk to Me Mobile App
-  tutorial_mobilecspmap_name: Map Tour App
-  tutorial_ozorandom_name: Ozobot Random Story Generator
+  tutorial_mitcodi_name: Bia Codi
+  tutorial_mitdoodle_name: Digital Doodle-mobilapp
+  tutorial_talktome_name: Snakk til meg-mobilapp
+  tutorial_mobilecspmap_name: Turkart-app
+  tutorial_ozorandom_name: Ozobot - den tilfeldige forteljingsgeneratoren
   tutorial_ozotroll_name: Trollet Evo
-  tutorial_peblioart_name: 'Interactive Art: Bringing Art to Life with Code'
+  tutorial_peblioart_name: 'Interaktiv kunst: Gi kunst liv med koding'
   tutorial_astropi_name: 'Astro Pi: Mission Zero'
-  tutorial_rgart_name: RoboGarden STEAM - Art
-  tutorial_rgengineer_name: RoboGarden STEAM - Engineering
-  tutorial_rgmath_name: RoboGarden STEAM - Math
-  tutorial_rgscience_name: RoboGarden STEAM - Science
-  tutorial_rgtech_name: RoboGarden STEAM - Technology
-  tutorial_robotmagic3d_name: " Animate a 3D Logo"
-  tutorial_robotmagicflappy_name: 3D Flappy Bird
-  tutorial_scratchadventure_name: Animate an Adventure Game
-  tutorial_scratchtalk_name: Create Animations That Talk
-  tutorial_scratchjrstory_name: 'We Can Create a Story Together! '
-  tutorial_scratchjrtwinkle_name: Twinkle, Twinkle Little Star Class Collaboration
-  tutorial_spherocomm_name: Communication
-  tutorial_spherocommunity_name: Your Community
-  tutorial_spherofunctions_name: Fun Fun Functions
-  tutorial_spheroinfrared_name: 'BOLT: Infrared'
-  tutorial_spherolightsensor_name: 'BOLT: Light Sensor'
-  tutorial_spheromansion_name: 'Jurassic Code: Mansion Mayhem'
+  tutorial_rgart_name: RoboGarden STEAM - Kunst
+  tutorial_rgengineer_name: RoboGarden STEAM - Ingeniørfag
+  tutorial_rgmath_name: RoboGarden STEAM - Matte
+  tutorial_rgscience_name: RoboGarden STEAM - Vitenskap
+  tutorial_rgtech_name: RoboGarden STEAM - Teknologi
+  tutorial_robotmagic3d_name: " Animer ein 3D-logo"
+  tutorial_robotmagicflappy_name: Flaksefugl i 3D
+  tutorial_scratchadventure_name: Animer eit eventyrspel
+  tutorial_scratchtalk_name: Lag animasjonar som snakkar
+  tutorial_scratchjrstory_name: 'Vi kan lage ei forteljing saman! '
+  tutorial_scratchjrtwinkle_name: Twinkle, Twinkle Little Star - Klassesamarbeid
+  tutorial_spherocomm_name: Kommunikasjon
+  tutorial_spherocommunity_name: Fellesskapet ditt
+  tutorial_spherofunctions_name: Kjempekjekke funksjonar
+  tutorial_spheroinfrared_name: 'BOLT: Infrarød'
+  tutorial_spherolightsensor_name: 'BOLT: Lyssensor'
+  tutorial_spheromansion_name: 'Jurassic-kode: Mansion Mayhem'
   tutorial_roadblocks_name: Vegsperringar
   tutorial_spherotext2_name: 'Tekst 2: betingelsar'
   tutorial_spherotext3_name: 'Tekst 3: lys'
@@ -2976,24 +3013,9 @@ nn:
   tutorial_mozillahw_longdescription: Learners will remix JavaScript code to change
     the words on a website, learning about composing for the web, coding JavaScript
     values, and remixing Web content.
-  tutorial_ticklep_longdescription: "Det du kan oppnå\nPapegøye-drone som er kompatibel
-    med Tickle-appen, er kjent for sine fantastiske flygeeigenskapar. Ved å bruke
-    Tickle-appen kan du få dei til å fly på innovative måtar og utføre fantastiske
-    show i lufta. Samtidig som du lærer deg programmeringskonsept medan du prøver
-    å nå målet. \n(Utstyr du treng: Rolling Spider/Airborn Night Airborne Cargo)\n\nØving
-    og utføring\n- Programmer ei drone til å ta av, flippe fleire gongar og lande.\n-
-    Få ei drone til å fly framover i ei spesiell fart for ei spesifisert varigheit
-    til eit mål, og deretter flytt bakover til startpunktet.\n-Programmer ei Papegøye-drone
-    til å fly langs eit kvadrat og ei trekanta rute ved å snu til spesifikke retningsvinklar
-    og fly.\n- Bruk rørslesensorar på eininga di og programmerer ruter for å styre
-    ei drone. Til dømes kan du programmere drona til å fly til høgre når eininga di
-    blir tilta til høgre, fly framover når den blir tiltar framover. Når du ristar
-    på eninga di, kan drona då utføra ein flip i lufta!\n\nDet du kan lære deg\n-
-    Bli kjent med visuell prgrammering.\n- Lære kodekonsepta \"løkke\": ei kontrollsetning
-    som spesifiserer køyring som lar koden bli repetert fleire gongar.  \n- Lær to
-    relaterte fysikkkonsept: 1) Lineære forhold mellom fart, tid og avstand; 2) hastigheit,
-    ein vektor som skidra verdien til farta med ei retning. \n- Forstå retningsvinklar
-    (0 til 369 gradar)."
+  tutorial_ticklep_longdescription: 'Med Tickle, ein brukarvenleg programmeringsapp,
+    kan du lett programmere eiPapegøye-drone til å svømme på ulike måtar berre ved
+    å dra og sleppe kodeblokker saman for å lage ein kommando den skal følge. '
   tutorial_bbot_longdescription: "With these 3 one-hour coding activities, you don't
     need any programming knowledge or experience to teach your students about programming!
     You can teach programming in a fun and easy way. Go over the activities and download
@@ -8226,6 +8248,7 @@ nn:
   tutorial_modtraits_name: Character Traits with GoPiGo
   tutorial_mee_name: 'Kodetimen i Minecraft: nyttig kunstig intelligens '
   tutorial_kuborobo_name: KUBO Robotics Coding Routes
+  tutorial_ai-oceans_name: AI for hav
   tutorial_scratchimagine_longdescription: Imagine a world where anything is possible,
     then bring it to life with Scratch!
   tutorial_codesterspsa_longdescription: Learn the basics of coding in Python while
@@ -8589,6 +8612,9 @@ nn:
   tutorial_kuborobo_longdescription: In this activity, students put their logic and
     sequencing skills to the test as they use the Tagtiles to program their KUBO robot
     to travel to various locations on a printed map.
+  tutorial_ai-oceans_longdescription: Computer science is about so much more than
+    coding! Learn about AI, machine learning, training data, and bias, while exploring
+    ethical issues and how AI can be used to address world problems.
   tutorial_scratchimagine_language: English, Spanish
   tutorial_codesterspsa_language: Norsk Nynorsk
   tutorial_googlehero_language: English, Spanish
@@ -8691,6 +8717,7 @@ nn:
     (tradisjonell), tyrkisk, Polsk, indonesisk, ukrainsk, gresk, bulgarsk, ungarsk,
     finsk, dansk, svensk, norsk, slovakisk, tsjekkisk, nederlandsk
   tutorial_kuborobo_language: English, Spanish
+  tutorial_ai-oceans_language: Norsk Nynorsk
   tutorial_scratchimagine_string_detail_grades: Frå 2. klasse
   tutorial_codesterspsa_string_detail_grades: Frå 6. klasse
   tutorial_googlehero_string_detail_grades: Frå 2. - 8. klasse
@@ -8789,6 +8816,7 @@ nn:
   tutorial_modtraits_string_detail_grades: Frå 2. klasse
   tutorial_mee_string_detail_grades: Frå 2. klasse
   tutorial_kuborobo_string_detail_grades: Pre-reader - Grades 8
+  tutorial_ai-oceans_string_detail_grades: Grades 3+
   tutorial_scratchimagine_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_codesterspsa_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_googlehero_string_platforms: All modern browsers, Android tablet, iPad
@@ -8896,6 +8924,8 @@ nn:
   tutorial_modtraits_string_platforms: All modern browsers
   tutorial_mee_string_platforms: Windows, iPad, MacOS
   tutorial_kuborobo_string_platforms: Unplugged
+  tutorial_ai-oceans_string_platforms: All modern browsers, modern Android tablets,
+    iPads, modern Android phones, iPhones
   tutorial_scratchimagine_string_detail_platforms: ''
   tutorial_codesterspsa_string_detail_platforms: ''
   tutorial_googlehero_string_detail_platforms: ''
@@ -8997,6 +9027,7 @@ nn:
   tutorial_modtraits_string_detail_platforms: GoPiGo
   tutorial_mee_string_detail_platforms: ''
   tutorial_kuborobo_string_detail_platforms: KUBO robot
+  tutorial_ai-oceans_string_detail_platforms: ''
   tutorial_scratchimagine_string_detail_programming_languages: Blokker
   tutorial_codesterspsa_string_detail_programming_languages: Python
   tutorial_googlehero_string_detail_programming_languages: Blokker
@@ -9108,6 +9139,7 @@ nn:
   tutorial_mee_string_detail_programming_languages: Blokker
   tutorial_kuborobo_string_detail_programming_languages: Tagtiles that students piece
     together
+  tutorial_ai-oceans_string_detail_programming_languages: AI and Machine Learning
   school_not_found_heading: Vi kunne ikkje finne skulen din. Skriv inn meir informasjon.
   school_name: Skulenamn
   school_name_error: Skulenamn er påkrevd.

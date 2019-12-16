@@ -11,101 +11,136 @@ hu:
   campaign_date_full: december 4-10
   campaign_date_year: '2017'
   campaign_date_full_year: December 4-10, 2017
-  hoc2019_header: Tanulj szamitogep tudomanyi. Valtoztasd meg a vilagot!
-  hoc2019_header_line1_mobile: Tanulj szamitogep tudomanyi.
-  hoc2019_header_line2_mobile: Valtoztasd meg a vilagot!
-  social_hoc2019_every_sudent: 'Every student has the potential to change the world.
-    Help them get started. #CSforGood'
-  social_hoc2019_learn_computer_science: 'Learn computer science. Change the world.
-    #CSforGood #HourOfCode'
-  social_hoc_is_coming: The Hour of Code is coming!
-  social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
-    computer science. Change the world.'
-  social_hoc2019_coming_dates: The Hour of Code is coming December 9-15, 2019. Computer
-    science is foundational for every student to learn.
-  social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
-    Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
-  oceans_landing_title: AI for Oceans
-  oceans_landing_description: 'Explore machine learning by teaching “A.I.” to recognize
-    fish. #CSforGood'
-  oceans_landing_specs: English only | Ages 11+
-  oceans_landing_teacher_resources: Teacher Resources
-  oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
-    AI, machine learning, training data, and bias, while exploring ethical issues.
-  oceans_landing_resource_button: View Resources
-  oceans_landing_cs_for_good: CS For Good
-  oceans_landing_cs_for_good_desc: Resources to help students understand the role
-    computer science could play in creating a more equitable world.
-  oceans_landing_learn_more: Learn more about AI and Machine Learning
-  social_hoc2019_oceans_title: 'AI for Oceans #CSForGood'
-  social_hoc2019_oceans_desc: Learn about AI, machine learning, training data, and
+  hoc2019_header: Tanulj informatikát. Változtasd meg a világot!
+  hoc2019_header_line1_mobile: Tanulj informatikát.
+  hoc2019_header_line2_mobile: Változtasd meg a világot!
+  social_hoc2019_every_sudent: 'Minden diákban ott rejlik a lehetőség, hogy megváltoztassa
+    a világot. Segíts nekik elkezdeni. #CSforGood'
+  social_hoc2019_learn_computer_science: 'Tanulj informatikát. Változtasd meg a világot.
+    #CSforGood #HourofCode'
+  social_hoc_is_coming: Hamarosan itt a Kódolás Órája!
+  social_hoc2019_hoc_is_about_csforgood: 'Tanulj informatikát. Változtasd meg a világot!
+    #HourOfCode #CSforGood'
+  social_hoc2019_coming_dates: A Kódolás órájának dátuma 2019. december 9-15. Elengedhetetlen,
+    hogy minden tanuló tanuljon informatikát.
+  social_hoc2019_dance: Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X,
+    Jonas Brothers, Nicki Minaj, és még sokan mások!
+  oceans_landing_title: MI az Óceánokért
+  oceans_landing_description: Fedezd fel a gépi tanulást, tanítsd meg az "M.I"-t,
+    hogyan ismerjen fel halakat.
+  cs_for_good_hashtag: "#CSforGood"
+  oceans_landing_specs: English only | Grades 3+
+  oceans_landing_explanation: Computer science is about so much more than coding!
+    Learn about artificial intelligence (AI), machine learning, training data, and
     bias, while exploring ethical issues and how AI can be used to address world problems.
-    Computer science is about so much more than coding! Enjoy Code.org's first step
-    in a new journey to teach more about AI throughout our curriculum.
-  hoc_overview_oceans_tutorial_header: AI For Oceans
-  hoc_overview_oceans_tutorial_desc: Learn about AI, machine learning, training data,
-    and bias, while exploring ethical issues and how AI can be used to address world
-    problems.
-  ai_video_title_what_is_ai: What is AI?
-  ai_video_title_phone_knows_dog: How does your phone know this is a dog?
-  ai_video_title_what_is_ml: What is Machine Learning?
-  ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small
-    and Prickly'
-  ai_video_title_ethics_of_ai: Ethics of AI
-  ai_video_title_ml_human_bias: Machine Learning and Human Bias
-  activity: Activity
-  name: Name
-  description: Description
-  audience: Audience
-  ai_resource_header: Teach and Learn about AI
-  ai_resource_ml_for_kids: Machine Learning for Kids
-  ai_resource_ml_for_kids_desc: Train a machine learning model with text, numbers,
-    or images, and use it to make games in Scratch.
-  ai_resource_ibm_ml_for_kids: 'IBM: Machine Learning for Kids'
-  ai_resouce_ibm_ml_for_kids_desc: Hands-on activities to introduce simple machine
-    learning models to students through games and interactive projects.
-  ai_resource_ecs: 'ECS: Artificial Intelligence (AI)'
+    Enjoy Code.org's first step in a new journey to teach more about AI. When you
+    use the AI for Oceans activity you are training real machine learning models.
+    <a href='#behind-the-scenes'>Learn more</a>.
+  oceans_landing_teacher_resources: Oktatói segédanyagok
+  oceans_landing_teacher_resources_desc: Óratervek és gyakorlatok az MI, gépi tanulás,
+    az ehhez kapcsolódó fogalmak és etikai problémák megtanításához.
+  oceans_landing_resource_button: Források megtekintése
+  oceans_landing_cs_for_good: CS for Good
+  oceans_landing_cs_for_good_desc: Források, melyek segítenek a diákoknak megérteni,
+    hogyan segíthet a számítástecnika egy igazságosabb világ létrehozásában.
+  oceans_landing_videos: Videos about AI and Machine Learning
+  oceans_behind_the_scenes: 'AI for Oceans: Behind the Scenes'
+  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
+    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
+    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
+    a dataset of over 14 million images hand-annotated with words such as "balloon"
+    or "strawberry". In order to customize this model with the labeled training data
+    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
+    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
+    to obtain a list of annotations that are most likely to apply to it. Then, for
+    a new image, we feed it to MobileNet and compare its resulting list of annotations
+    to those from the training dataset. We classify the new image with the same label
+    (such as "fish" or "not fish") as the images from the training set with the most
+    similar results.
+  oceans_behind_the_scenes_2: Levels 6-8 use a <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
+    Machine</a> (SVM). We look at each component of the fish (such as eyes, mouth,
+    body) and assemble all of the metadata for the components (such as number of teeth,
+    body shape) into a vector of numbers for each fish. We use these vectors to train
+    the SVM. Based on the training data, the SVM separates the "space" of all possible
+    fish into two parts, which correspond to the classes we are trying to learn (such
+    as "blue" or "not blue").
+  social_hoc2019_oceans_title: 'AI for Oceans #CSforGood'
+  social_hoc2019_oceans_desc: Tanulj többet a mesterséges intelligenciáról, a gépi
+    tanulásról, más ehhez kapcsolódó foglamakról, az ezzel járó etikai problémákról
+    és arról, hogyan oldja meg az MI a világ problémáit. A számítástechnika sokkal
+    több mint csak kódolás! Taníts többet a Code.org segédanyagaival.
+  hoc_overview_oceans_tutorial_header: MI az Óceánokért
+  hoc_overview_oceans_tutorial_desc: Tanulj többet a mesterséges intelligenciáról,
+    a gépi tanulásról, más ehhez kapcsolódó foglamakról, az ezzel járó etikai problémákról
+    és arról, hogyan oldja meg az MI a világ problémáit.
+  ai_video_title_what_is_ai: Mi a Mesterséges Intelligencia (MI)?
+  ai_video_title_algorithm_bias: Fighting bias in algorithms
+  ai_video_title_phone_knows_dog: Honnan tudja a telefonod, hogy ez egy kutya?
+  ai_video_title_what_is_ml: Mi az a gépi tanulás?
+  ai_video_title_ml_big_small_prickly: 'Gépi Tanulás: Kicsi, Nagy és Szeszélyes problémákra'
+  ai_video_title_ethics_of_ai: MI és az Etikusság
+  ai_video_title_ml_human_bias: Gépi Tanulás és Emberi Elfogultság
+  ai_video_title_seeing_ai: 'Seeing AI: Making the visual world more accessible'
+  activity: Tevékenység
+  name: Név
+  description: Leírás
+  audience: Közönség
+  ai_resource_header: Taníts és Tanulj az MI-ről
+  ai_resource_minecraft: Minecraft AI for Good
+  ai_resource_minecraft_desc: 'Access free resources including a lesson plan, videos,
+    computer science curriculum, and teacher trainings. (Requires Minecraft: Education
+    Edition)'
+  ai_resource_ml_for_kids: Gépi Tanulás Gyerekeknek
+  ai_resource_ml_for_kids_desc: Használj szöveget, számokat vagy képeket, hogy megtaníts
+    egz tanuló algoritmust, és készíts játékokat Scratch-ben.
+  ai_resource_ibm_ml_for_kids: 'IBM: Gépi Tanulás Gyerekeknek'
+  ai_resouce_ibm_ml_for_kids_desc: Gyakorló feladatok, melyek játékokon és interaktív
+    projekteken keresztül mutatnak be gépi tanuló algoritmusokat a diákoknak.
+  ai_resource_ecs: 'ECS: Mesterséges Intelligencia (MI)'
   ai_resource_ecs_desc: A new alternate curriculum unit for the Exploring Computer
     Science (ECS) curriculum.
-  ai_resource_elements_ai: Elements of AI
-  ai_resource_elements_ai_desc: A series of free online courses created by Reaktor
-    and the University of Helsinki.
+  ai_resource_elements_ai: Az MI elemei
+  ai_resource_elements_ai_desc: Egy sor online kurzus a Reaktor es a Helsinki Egyetem
+    által.
   ai_resource_cognimates: Cognimates
-  ai_resource_cognimates_desc: An AI education platform for building games, programming
-    robots and training.
+  ai_resource_cognimates_desc: Egy MI tanító platform játékok építésére, robotok programozására
+    és gyakorlásra.
   ai_audience_k12: K-12 (Reading required)
-  ai_audience_hs: High school
-  ai_activity_header: Activities Powered by AI and ML
-  ai_activity_teachable: Teachable Machine
-  ai_activity_teachable_desc: Train a computer to recognize your own images, sounds,
-    and poses.
-  ai_activity_quick_draw: Quick, Draw!
-  ai_activity_quick_draw_desc: Can a neural network learn to recognize doodling?
-  ai_activity_experiments: AI Experiments with Google
-  ai_activity_experiments_desc: Start exploring machine learning through pictures,
-    drawings, language, music, and more.
-  ai_activity_mixlab: MixLab
-  ai_activity_mixlab_desc: Make music using voice commands.
-  ai_activity_gaugan: GauGAN Beta
-  ai_activity_gaugan_desc: Paint photo-realistic landscapes with the help of AI.
+  ai_audience_hs: Középiskola
+  ai_activity_header: MI és GT támogatta tevékenységek
+  ai_activity_seeing_ai: Seeing AI
+  ai_activity_seeing_ai_desc: A free app that narrates the world around you in a variety
+    of languages.
+  ai_activity_quick_draw: Gyorsan, Rajzolj!
+  ai_activity_quick_draw_desc: Fel tudja ismerni a neurális háló a firkálást?
+  ai_activity_teachable: Tanítható Gép
+  ai_activity_teachable_desc: Taníts meg egy számítógépet, hogy felismerje a képeidet,
+    hangjaidat és mozdulataidat.
+  ai_activity_experiments: MI kísérletek a Googlevel
+  ai_activity_experiments_desc: Kezd el a gépi tanulás megtanulását képeken, rajzokon,
+    nyelveken, zenén és sok máson keresztül.
+  ai_activity_zooniverse: Zooniverse - Snapshot Mountain Zebra
+  ai_activity_zooniverse_desc: Help protect the endangered Cape Mountain Zebra by
+    identifying the different animals in the images.
   codeorg_homepage_hoc2018_curriculum: Haladj tovább a <a href="%{studio_url}/courses"
     class="hoc2018-curriculum-link">Code.org kurzusokkal</a>
   codeorg_homepage_hoc2018_dance_heading: Készítsd el saját <span class="highlight-word">tánc&nbsp;partidat</span>
-  codeorg_homepage_hoc2018_header_line1: Hamarosan itt a "Hour of Code" esemény...
-  codeorg_homepage_hoc2018_header_line2_desktop: Mit szeretnél <span class="hoc2018-highlight-word">létrehozni?</span>
-  codeorg_homepage_hoc2018_header_line2_mobile: Mit fogsz létrehozni?
+  codeorg_homepage_hoc2018_header_line1: Hamarosan itt a Kódolás Órája...
+  codeorg_homepage_hoc2018_header_line2_desktop: Te mit fogsz <span class="hoc2018-highlight-word">létrehozni?</span>
+  codeorg_homepage_hoc2018_header_line2_mobile: Te mit fogsz létrehozni?
   codeorg_homepage_hoc2018_header_line3: Szárnyaljon a képzeleted és légy készen az
     innovációra. Hozz létre egy olyan "Hour of Code" eseményt, melynek csak a kreativitás
     szabhat határt.
   codeorg_homepage_hoc2018_musician_before: Kiemelt
-  codeorg_homepage_hoc2018_musician_after: és sok más!
+  codeorg_homepage_hoc2018_musician_after: és sokan mások!
   codeorg_homepage_hoc2018_video: Nézd meg a videónkat
   hourofcode_homepage_hoc2018_header_line1: A Kódolás Órája eseményeket bárki bárhol
     megszervezheti. Egyórás gyakorlatok több mint 45 nyelven. Gyakorlat nem szükséges.
   hourofcode_homepage_hoc2018_header_line2: "-től 104 éves korig."
-  hoc2018_tutorial_mchoc_description: Minecraft is back for the Hour of Code with
-    a brand new activity! Journey through Minecraft with code.
-  codeorg_homepage_hoc2019_dance_heading: Próbáld ki az új <span class="highlight-word">Dance&nbsp;Party!</span>
+  hoc2018_tutorial_mchoc_description: A Minecraft egy vadonatúj programmal tér vissza
+    a Kódolás Órájára! Utazz végig a Minecraft világán kódok segítségével.
+  codeorg_homepage_hoc2019_dance_heading: Próbáld ki az új <span class="highlight-word">Táncos&nbsp;bulit!</span>
   cookie_banner_message: Az oldal további használatával, valamint az egyetértek gombra
     kattintással elfogadod a Cookie-k számítógépen történő tárolását.
   cookie_banner_more_information: Itt találod a Code.org adatvédelmi elveit.
@@ -293,7 +328,7 @@ hu:
   register_now: Regisztrálj most
   share_on_facebook: Megosztás Facebookon
   share_on_twitter: Megosztás Twitteren
-  promote_additional_resources: Additional resources coming soon!
+  promote_additional_resources: Újabb segédanyagok hamarosan!
   front_join_us_heading: Kódolás Órája minden diáknak.
   front_join_us_announcements: Közlemények
   front_join_us_anybody_can_learn: Bárki megtanulhatja
@@ -301,7 +336,7 @@ hu:
     számára. Segíts hogy legalább 100 millióan hozzájussanak.
   front_join_us_description_short: Az informatika egy biztos alapot ad minden tanulónak.
   front_join_us_button: Csatlakozz
-  front_what_is_hoc: Mi a Hour of Code?
+  front_what_is_hoc: Mi az a Kódolás Órája?
   front_join_us_header: Bárki megtanulhatja az alapokat, és élvezheti csinálni!
   front_join_us_volunteer_header: Önkénteskedni a Kódolás óráján
   front_join_us_tutorials: Próbáld ki ez év új bemutatóit!
@@ -347,15 +382,15 @@ hu:
   front_join_us_n_students_served: "# elérés"
   front_join_us_challenge: Nyerj egy videóchat lehetőséget az osztályodnak egy hírességgel!
   front_join_us_learn_more: Tudj meg többet
-  signup_closed: Registration for the Hour of Code is now closed. Please check again
-    in October to sign up for the next Hour of Code.
-  signup_registration_not_required: You don't need to register to participate! The
-    Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try
-    an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan
-    an event for your class.
-  signup_registration_closed: And every year in December, your class can join millions
-    of students around the world celebrating Computer Science Education Week with
-    the Hour of Code. We'll open registration for the annual celebration in October.
+  signup_closed: A regisztráció a Kódolás Órájára lezárult. Nézz vissza Októberben
+    hogy jelentkezz a következő Kódolás Órájára.
+  signup_registration_not_required: Nincs szükséged regisztrációra, hogy részt vegyél!
+    A Kódolás Órája egész évben elérhető. <a href='%{hoc_activities_url}'>Próbálj
+    ki egy feladatot</a> vagy olvasd el az <a href='%{howto_guide_url}'>Útmutatót</a>
+    és tervezz egy eseményt az osztályodnak.
+  signup_registration_closed: Az osztályod minden év decemberében világszerte több
+    millió tanulóhoz csatlakozhat, akik a Kódolás órájával ünneplik a számítástechnika
+    oktatásának hetét. Az évente tartott rendezvényre októberben kezdődik a regisztráció.
   signup_header: Rendezd meg te is a Kódolás Óráját (%{campaign_date}), regisztrálj
     itt.
   signup_name_label: Név
@@ -380,12 +415,12 @@ hu:
   signup_host_an_hour: Tarts meg egy órát
   signup_match_volunteer: Segíts nekem találni egy helyi szoftver mérnököt, hogy inspiráljam
     a tanulóimat
-  signup_email_preference_opt_in: Can we email you about updates to Code.org courses,
-    local opportunities, or other computer science news?
-  signup_email_preference_privacy: "(See our privacy policy)"
+  signup_email_preference_opt_in: Küldhetünk neked emailt a Code.org-os kurzusokkal,
+    helyi lehetőségekkel és egyéb számítástechnikai hírekkel kapcsolatban?
+  signup_email_preference_privacy: "(Tekintsd át adatvédelmi irányelveinket)"
   signup_email_preference_yes: Igen
   signup_email_preference_no: Nem
-  signup_email_preference_error: Email preference is required
+  signup_email_preference_error: Kérlek adj meg email preferenciát
   signup_multiple_event_warning: Ha több eseményt szervezel, akkor adj egyedi nevet
     vagy emailt mindegyikhez. Csak egy eseménynek számolunk egy név és email kombinációt.
   signup_registration_deadline: A Kódolás Órájának regisztrációja december 11-én zárul.
@@ -413,28 +448,28 @@ hu:
     megtartására.
   signup_thank_you_message: Küldtünk egy megerősítő e-mailt, amiben segítséget kapsz
     az induláshoz is.
-  social_hoc2018_code_org_what_create: 'Code.org: What will you create?'
-  social_hoc2018_creativity_in_are_you: 'The #HourOfCode is about creativity. I’m
-    in! Are you?'
-  social_hoc2018_dance_party: 'Hour of Code: Dance Party'
-  social_hoc2018_dance_what_create: Featuring Katy Perry, Madonna, J. Balvin, Sia,
-    Keith Urban, Ciara, and 25 more!
-  social_hoc2018_every_student: Every student deserves the opportunity to express
-    their creativity with computer science.
-  social_hoc2018_every_student_try_what_create: Every student deserves the opportunity
-    to express their creativity with computer science. Try your hand at the new tutorials.
-    What will you create?
-  social_hoc2018_hoc_coming_create: The Hour of Code is coming. What will you create?
-  social_hoc2018_hoc_here: The Hour of Code is here!
+  social_hoc2018_code_org_what_create: 'Code.org: Te mit fogsz létrehozni?'
+  social_hoc2018_creativity_in_are_you: 'A #KódolásÓrája a kreativitásról szól. Én
+    benne vagyok. És te?'
+  social_hoc2018_dance_party: 'Kódolás Órája: Tánc Parti'
+  social_hoc2018_dance_what_create: Katy Perry, Madonna, J. Balvin, Sia, Keith Urban,
+    Ciara, és sokan mások!
+  social_hoc2018_every_student: Minden diák megárdemli a lehetőséget, hogy a számítástechnikán
+    keresztül fejezhesse ki kreativitását.
+  social_hoc2018_every_student_try_what_create: Minden diák megárdemli a lehetőséget,
+    hogy a számítástechnikán keresztül fejezhesse ki kreativitását. Próbáld ki új
+    oktatóanyagainkat. Te mit fogsz létrehozni?
+  social_hoc2018_hoc_coming_create: A Kódolás Órája közeleg. Te mit fogsz létrehozni?
+  social_hoc2018_hoc_here: Itt a Kódolás Órája!
   social_hoc2018_join: Hamarosan itt Kódolás Órája
-  social_hoc2018_mc: Minecraft is back for the Hour of Code, and you’re the hero!
-    Write code to journey through Minecraft biomes.
-  social_hoc2018_mc_creativity: Use your creativity and problem solving skills to
-    explore and build underwater worlds with code.
-  social_hoc2018_what_create: Mit fogsz létrehozni?
-  social_hoc2018_global_movement: The Hour of Code is a global movement reaching tens
-    of millions of students. One-hour tutorials are available in 45+ languages for
-    all ages.
+  social_hoc2018_mc: A Minecraft visszatért a Kódolás Órájára és te vagy a főszerepló.
+    Írj kódot, amely elvisz a különböző Minecraft biomokba.
+  social_hoc2018_mc_creativity: Használd a kreativitásodat és a problémamegoldó képességeidet,
+    hogy kódolással fedezz fel és építs egy víz alatti világot.
+  social_hoc2018_what_create: Te mit fogsz létrehozni?
+  social_hoc2018_global_movement: A Kódolás Órája egy globális kezdeményezés, mely
+    több tíz millió diákot elér. Több mint 45 nyelven érhetők el oktatóvideók minden
+    korosztálynak.
   map_title: Kódolás Órája térkép
   map_header: "# Kódolás Órája esemény szerte a nagyvilágban"
   map_header_count_year: "%{event_count} eseményt regisztráltak %{year} évben"
@@ -457,17 +492,17 @@ hu:
   meta_tag_twitter_description: A Kódolás Órája egy globális mozgalom, ami különböző
     életkorú tanulók tízmillióit éri el 180+ országban, és több mint 45 nyelven.
   twitter_default_text: 'Én részt veszek az idei #HourOfCode eseményen. És Te? @codeorg'
-  twitter_donor_text: 'This year''s #HourOfCode is about creativity. I’m in! Are you?
-    (Thanks %{random_donor} for supporting @codeorg)'
-  twitter_donor_text_2019: 'This year''s #HourOfCode is about #CSforGood. I’m in!
-    Are you? (Thanks %{random_donor} for supporting @codeorg)'
+  twitter_donor_text: 'Az idei #KódolásÓrája a kreativitásról szól. Én benne vagyok!
+    És te? (Köszönjük %{random_donor} hogy támogatod a @codeorg-t)'
+  twitter_donor_text_2019: 'Az idei #HourOfCode a #CSforGood-ról szól. Én benne vagyok!
+    És te? (Köszönjük %{random_donor} hogy támogatod a @codeorg-t)'
   hoc_faq_title: GYIK
-  hoc_faq_what_is_hoc_q: Mi a Hour of Code?
+  hoc_faq_what_is_hoc_q: Mi az a Kódolás Órája?
   hoc_faq_what_is_hoc_a: A Kódolás Órája egy egy órás bevezetés a számítástudomány
     alapjaiba, célja, hogy eloszlassa a kód homályát, és megmutassa, hogy bárki megtanulhatja
     az alapokat.  <a href='http://code.org/learn'>Próbáld ki az oktatóanyagokat</a>.
   hoc_faq_last_year: Próbáld ki az oktatóanyagokat
-  hoc_faq_when_is_hoc_q: Mikor lesz a Kódolás órája?
+  hoc_faq_when_is_hoc_q: Mikor lesz a Kódolás Órája?
   hoc_faq_when_is_hoc_a: A Kódolás Órája minden évben megrendezésre kerül az <a href='%{csedweek_url}'>
     Informatikaoktatás hetének</a> keretén belül. A %{campaign_date_year} évi Informatikaoktatás
     hete %{campaign_date_full} kerül megrendezésre, de egész évben van lehetőség Kódolás
@@ -501,11 +536,12 @@ hu:
     óvodától kezdve. Kezd el megtervezni a saját eseményedet azzal, hogy elolvasod
     az <a href='/how-to'>útmutatónkat</a>.
   hoc_faq_devices_q: Milyen eszközöket kellene használni a diákjaimnak?
-  hoc_faq_devices_a: 'A Code.org tutorialok minden eszközön és böngészővel működnek.
-    További információkat a tutorialok technikai követelményeiről itt:<a href=''%{codeorg_url}/educate/it''>here</a>
-    találsz. A nem Code.org-os tutoriálok technikai követelményeiről itt:<a href=''%{codeorg_url}/learn''>%{partner_url}/learn</a>
-    találsz bővebb infót, a tutorial leírásokban. Ne feledd ezt is ajánljuk: <a href=''%{unplugged_url}''>unplugged
-    activities</a> ha nem tudod használni a tutorialokat!'
+  hoc_faq_devices_a: 'A Code.org útmutatók minden eszközön és böngészővel működnek.
+    További információkat az útmutatók technikai követelményeiről <a href=''%{codeorg_url}/educate/it''>itt</a>
+    találsz. A nem Code.org-os útmutatók technikai követelményeiről a következő linken
+    találsz bővebb információt: <a href=''%{codeorg_url}/learn''>%{partner_url}/learn</a>.
+    Amennyiben az iskolád nem tudja használni ezeket, a következő, <a href=''%{unplugged_url}''>számítógépet
+    nem igénylő feladatokat</a> is ajánljuk!'
   hoc_faq_need_computers_q: Minden résztvevőnek szüksége lesz számítógépre?
   hoc_faq_need_computers_a: Nem. Az oktatóanyagok között van olyan, ami számítógépen,
     telefonon vagy táblagépen működik, de akad olyan is, amihez egyáltalán nincs szükség
@@ -518,7 +554,7 @@ hu:
     Nézzétek megy együtt a videókat és felváltva próbálják meg a gyerekek megoldani
     a problémákat vagy megválaszolni a kérdéseket.<li><b>Tedd el a gépet</b> Olyan
     anyagokat is kínálunk, amelyekhez egyáltalán nincs szükség számítógépre.</ul>
-  hoc_faq_international_q: Lakhelyem <country>. Hogyan vehetek részt nemzetközileg?
+  hoc_faq_international_q: Magyaroszágon lakom. Hogyan vehetek részt nemzetközileg?
   hoc_faq_international_a: Bárki, bárhol a világon szervezhet Kódolás Órája eseményt.
     Tavaly a diákok a világ minden pontjáról csatlakoztak a Kódolás Órája eseményhez.
     Tudj meg többet erről <a href='promote'>itt</a>.
@@ -540,11 +576,11 @@ hu:
     vagy a CodeHS.
   hoc_faq_scratch_q: A Scratchet használom a Kódolás óráján, de mi van, ha a diákjaimnak
     iPadjük van, és nem laptopjuk?
-  hoc_faq_scratch_a: A Scratch nem fut tableteken. Ha a diákjaid fiatalok, akkor használhatják
-    a ScratchJR iPad alkalmazást (kezdő olvasóknak szánt verzió). A <a href='http://code.org/learn'>Code.org/tanulás</a>
-    címen található oktatóanyagok között találhatsz olyanokat, amelyek működnek iPaden
-    is - például a Code.org, Tynker, Lightbot vagy a CodeSpark.
-  hoc_faq_count_hoc_q: Hogyan számolod a Kódolás Óráját?
+  hoc_faq_scratch_a: A Scratch nem fut tableteken. Ha a diákjaid fiatalok, használhatják
+    a ScratchJR iPad appot (kezdőknek). Ha elnézel a <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
+    oldalra, találsz olyan oktatóanyagokat is, melyek műküdnek iPad-en is a Code.org,
+    Tynker, Lightbot, vagy CodeSpark felületeken.
+  hoc_faq_count_hoc_q: Hogyan számoljuk a Kódolt Órákat?
   hoc_faq_map_q: Miért nem látom a jelölésemet a térképen?
   hoc_faq_map_a: Sajnáljuk hogy nem látható az eseményed a Kódolás Órája térképen.
     Annyira sok eseményszervező jelentkezett, hogy a térképen egymást eltakarják.
@@ -552,49 +588,46 @@ hu:
     eseményének listájához, ott megtalálod magad. Továbbá mivel több ezren jelentkeznek
     a Kódolás Órájára, a térkép eseménylistáját 48 óránként frissítjük. Nézz vissza
     később!
-  hoc_faq_count_hoc_a: The Hour of Code tracker isn't an exact measurement of usage.
-    We do not count unique student IDs perfectly when tracking participation in the
-    Hour of Code, especially because we don't require students to log in or register.
-    As a result, we both over-count and under-count participants at the same time.
-    Read all the details <a href='%{codeorg_url}/loc'>here</a>.
+  hoc_faq_count_hoc_a: A Kódolt Órák száma nem egy egzakt szám. Nem számoljuk a különböző
+    diákazonosítókat, mikor a résztvevőket mérjük, hiszen nincs szükség regisztrációra
+    a részvételhez. Ennek eredményeképp egyszerre becsüljük alul és felül a résztvevők
+    számát. Kattints <a href='%{codeorg_url}/loc'>ide</a>, ha többet szeretnél tudni.
   hoc_faq_one_hour_q: Mennyit lehet megtanulni egy óra alatt?
-  hoc_faq_one_hour_a: The goal of the Hour of Code is not to teach anybody to become
-    an expert computer scientist in one hour. One hour is only enough to learn that
-    computer science is fun and creative, that it is accessible at all ages, for all
-    students, regardless of background. The measure of success of this campaign is
-    not in how much CS students learn - the success is reflected in broad participation
-    across gender and ethnic and socioeconomic groups, and the resulting increase
-    in enrollment and participation we see in CS courses at all grade levels. Millions
-    of the participating teachers and students have decided to go beyond one hour
-    -  to learn for a whole day or a whole week or longer, and many students have
-    decided to enroll in a whole course (or even a college major) as a result. <br/><br/>
-    Besides the students, another "learner" is the educator who gains the confidence
-    after one hour that they can teach computer science even though they may not have
-    a college degree as a computer scientist. Tens of thousands of teachers decide
-    to pursue computer science further, either attending PD or offering follow-on
-    online courses, or both. And this applies to school administrators too, who realize
-    that computer science is something their students want and their teachers are
-    capable of. <br/><br/> Above all, what all participants can learn in an hour is
-    that we can do this.
+  hoc_faq_one_hour_a: A Kódolás Órájának nem célja, hogy egy óra alatt szakértőket
+    képezzen. Egy óra csupán arra elég, hogy megmutassuk, a számítástechinka szórakoztató
+    és kreatív, és minden korosztálynak elérhető, bármilyen háttérrel is rendelkezik.
+    A sikeresség mércéje nem az, mennyit tanulnak a diákok - a siker a sokszinű, különböző
+    nemű, etnikumú, szociális státuszú résztvevők számában mérhető, a kurzus minden
+    szintjén. A résztvevő tanárok és diákok millió döntöttek úgy, hogy folytatják
+    egy óránál tovább - hogy tanulnak egy egész napig, egy egész hétig, vagy tovább,
+    és sokan jelentkeztek egész kurzusokra (vagy akár egyetemi képzésekre) a kezdeményezés
+    határásra. <br/><br/> A programon keresztül a tanárok is diákokká válnak, hiszen
+    képesek lesznek magabiztosan számítástechnikát oktatni anélkül, hogy rendelkeznének
+    az ehhez szükséges képesítéssel. Több tízezer tanár dönt úgy, hogy jobban elmélyülnek
+    a számítástechnikában, és részt vesznek további online vagy offline kurzusokon.
+    És ez igaz az iskolai döntéshozókra is, akik rájönnek, hogy a számítástechnika
+    egy olyan téma, amelyet a diákjaik tanulni szeretnének, és a tanárok képesek is
+    ezt tanítani. <br/><br/> Mindenekfelett, a legfontosabb amit minden résztvevő
+    megtanul egy óra alatt az, hogy képesek vagyunk erre.
   hoc_faq_more_questions_q: További kérdéseid vannak?
   hoc_faq_more_questions_a: Nézz körül a <a href='http://support.code.org'>fórumban</a>,
     hátha megtalálod a kérdéseire a válaszokat.
-  hoc_faq_keep_learning_q: How do I keep learning after the Hour of Code?
-  hoc_faq_keep_learning_a: Anyone can host an Hour of Code at any time. The tutorials
-    stay up year-round. You can expect all our tutorials and curriculum to be available
-    on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for
-    event how-to guides and other resources to help make your Hour of Code event a
-    success.
+  hoc_faq_keep_learning_q: Hogyan tanuljak tovább a Kódolás Órája után?
+  hoc_faq_keep_learning_a: Bárki, bármikor tarthat Kódolás Óráját. A segédanyagok
+    elérhetőek egész évben. Biztos lehetsz benne, hogy az összes segédanyagunk és
+    anyagunk örökké elérhető lesz. Menj a <a href='/promote'>források</a> oldalra
+    további anyagokárt, melyek segítenek abban, hogy sikeres legyen az általad szervezett
+    Kódolás Órája is.
   hoc_faq_certificates_q: Hol tudom kinyomtatni a tanúsítványokat a tanítványaimnak?
-  hoc_faq_certificates_a: Go to our <a href='%{codeorg_url}/certificates'>certificates
-    page</a> where you can print certificates for your entire class ahead of time.
-    You can also print out <a href='%{codeorg_url}/certificates?course=mc'>special
-    certificates</a> for students doing the Minecraft tutorial.
-  hoc_faq_logo_q: Are there limitations to how I can use the Hour of Code logo or
-    name?
-  hoc_faq_logo_a: Hour of Code is trademarked. We don't want to prevent its usage,
-    but we want to make sure its usage fits within a few limits. Please see <a href='%{logo_url}'>these
-    guidelines for usage</a>.
+  hoc_faq_certificates_a: Menj a <a href='%{codeorg_url}/certificates'>tanúsítványok
+    fülre</a>, ahol az egész osztályod számára ki tudod ezeket nyomtatni. Itt tudod
+    kinyomtatni a <a href='%{codeorg_url}/certificates?course=mc'>speciális tanúsítványokat</a>
+    is azoknak a diákoknak, akik a Minecraft oktatóanyagokat csinálják.
+  hoc_faq_logo_q: Van bármi feltétele annak, hogy a Kódolás Órája logóját vagy nevét
+    használjam?
+  hoc_faq_logo_a: A Kódolás Órája szabadalom alatt áll. Nem akarjuk megakadályozni
+    a használatát, azonban szeretnénk, ha csak bizonyos keretek között lenne használva.
+    Lesd meg az <a href='%{logo_url}'>ezzel kapcsolatos irányelveinket</a>.
   stats_hoc_2013_image_alt: A 2013-as Kódolás Órája statisztikája
   stats_growth: 15 millió felhasználó elérése a legrövidebb idő alatt.
   stats_i18n: A tanulók több, mint 45 különböző nyelven tanulnak
@@ -607,10 +640,9 @@ hu:
   stats_global: Több, mint 100 millióan próbálták ki a kódolást egy órán át
   stats_girls_more: Több lány próbálta ki a számítógép-tudományt, mint az elmúlt 70
     évben
-  stats_females: Participation of female students in computer science is only 20-25%
-    of high school courses, university courses, and the workforce.
-  stats_females_more: During the Hour of Code, female students make up <b>50% of all
-    participants</b>!
+  stats_females: A nők aránya mindössze 20-25% a számítástechnikai gimnáziumi és egyetemi
+    képzésekben és a munkaerőpiacon.
+  stats_females_more: A Kódolás Órája során a <b>résztvevők 50%-a</b> nő!
   stats_nina: "„Minden egyes napo ugyanazzal az eredménnyel&mdash; 100%-os elkötelezettség.”
     - Nina Nichols Peery, tanár"
   stats_student: "„Tudtam, hogy ez egy <b>egyszeri</b> lehetőség.” - Mariana Alzate,
@@ -640,48 +672,49 @@ hu:
   resources_nav_promote: Terjeszd az igét
   resources_nav_spread_word: Hogyan csatlakozz
   resources_banner_promote_text: Támogatás
-  resources_banner_promote_button: Encourage others to sign up with brochures, inspirational
-    posters and social media banners.
+  resources_banner_promote_button: Használd brossúráinkat, inspiráló posztereinket
+    és közösségi médiás bannereinket az esemény népszerűsítésére.
   resources_banner_howto_text: Útmutató
-  resources_banner_howto_button: Resources for educators, parents and districts to
-    host an Hour of Code.
-  handouts_section: Share these handouts
-  handouts_onepager: Spread the word with this one page handout
-  handouts_brochure: Give this brochure to teachers and schools
-  handouts_participationguide: Plan your Hour of Code with this participation guide
+  resources_banner_howto_button: Források tanároknak, szülőknek és tankerületeknek
+    a Kódolás Órája megszervezéséhez.
+  handouts_section: Oszd meg ezeket az anyagokat
+  handouts_onepager: Hirdesd az eseményt ezzel az egy oldalas bemutatóval
+  handouts_brochure: Add ezt a brossúrát tanároknak és iskoláknak
+  handouts_participationguide: Tervezd meg a saját Kódolás Órája eseményed ezzel az
+    útmutatóval
   videos_title: Mutassa be ezeket a videókat, hogy inspirálja a diákokat
-  videos_what_most_schools_dont_teach: What Most Schools Don't Teach (5 min)
-  videos_hoc_2014: Hour of Code is Here - Anybody Can Learn
+  videos_what_most_schools_dont_teach: Amit a legtöbb iskola nem tanít (5 perc)
+  videos_hoc_2014: A Kódolás Órája Elérkezett - Bárki Tanulhat
   videos_obama_cs: Obama elnök a számítástechnikáról
-  videos_anybody_can_learn: Anybody Can Learn (1 min)
-  videos_creativity: What is Creativity?
-  videos_creativity_series: What is Creativity? View Full Series.
+  videos_anybody_can_learn: Bárki Tanulhat (1 perc)
+  videos_creativity: Mi a Kreativitás?
+  videos_creativity_series: Mi a Kreativitás? Nézd meg a teljes sorozatot.
   title_country_resources: Ország specifikus anyagok
-  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
-  title_hoc_review_committee: Hour of Code and CSEdWeek Review Committee
+  title_hoc_advisory_committee: Az Hour of Code és a CSEdWeek Tanácsadó Testülete
+  title_hoc_review_committee: Az Hour of Code és a CSEdWeek Felügyeleti Testülete
   title_how_to_promote: Terjeszd az igét
   title_how_to_districts: Kódolás Órája útmutató tankerületeknek
   title_how_to_events: Útmutató Kódolás Órája eseményhez
-  title_how_to_organizations: How to host an Hour of Code - Organizations
-  title_how_to_companies: How to host an Hour of Code - Companies
+  title_how_to_organizations: Hogyan tarts Kódolás Óráját - Szervezetek
+  title_how_to_companies: Hogyan tarts Kódolás Óráját - Cégek
   title_how_to_officials: Útmutató köztisztviselőknek
   title_how_to_volunteers: Útmutató Kódolás Órája önkénteseknek
   title_how_to_parents: Útmutató szülőknek
   title_how_to: Útmutató
-  title_international_partners: Contact International Partners
-  title_press_release: Hour of Code Press Release for Elected Officials
+  title_international_partners: Érj el Nemzetközi Partnereket
+  title_press_release: Hour of Code sajtóanyagok testületi tagok számára
   title_op_ed: Sample Op-ed Supportive of Computer Science Education Week and Hour
     of Code
   title_press_kit: Sajtóanyag
   title_proclamation: Sample Resolution Supportive of Computer Science Education Week
     and Hour of Code
-  title_stats: Blurbs and Stats
+  title_stats: Reklám és statisztikák
   title_partners: Partnerek
   title_resources: Segédanyagok
   title_past_posters: Régebbi Kódolás órája poszterek
   title_signup_thanks: Köszönjük hogy jelentkeztél a Kódolás Órájának megtartására!
-  title_tutorial_guidelines: Activity Guidelines
-  title_whole_school: Whole School Participation
+  title_tutorial_guidelines: Közösségi iránymutatások
+  title_whole_school: Teljes Iskolás Részvétel
   events_nav_title: Kódolás Órája események
   events_nav_all: Minden esemény
   events_nav_whole_schools: Minden iskola
@@ -696,29 +729,29 @@ hu:
   events: események
   highlights_title: Kiemelt tartalmak
   highlights_header: Kódolás Órája kiemelt tartalmak
-  highlights_description: Some of our favorite moments from the Hour of Code campaign.
-  higlights_see_more: See more highlights
+  highlights_description: A kedvenc pillanataink a Kódolás Órája kampányból.
+  higlights_see_more: Több fontos pillanat
   highlights_readmore: Továbbiak
   highlights_watchvideo: Nézd meg a videót
   highlights_facebook: Megosztás Facebookon
-  highlights_constant_alba_heading: The actress, activist, and entrepreneur hosted
-    an Hour of Code with the entire staff at The Honest Company.
-  highlights_constant_alba_short_heading: Jessica Alba learns an Hour of Code
-  highlights_constant_obama_heading: President Obama is the first president to write
-    a line of code, hosting a historic Hour of Code for students at the White House.
-  highlights_constant_obama_short_heading: Coder in Chief
-  highlights_constant_malala_heading: '"Every girl deserves to take part in creating
-    the technology that''ll change our world, and change who runs it."'
-  highlights_constant_malala_short_heading: Nobel Peace Prize winner Malala
-  highlights_constant_trudeau_heading: Canadian Prime Minister Justin Trudeau coded
-    a simple game featuring his favorite sport.
-  highlights_constant_trudeau_short_heading: Prime Minister Justin Trudeau codes a
-    game
-  highlights_constant_ny_heading: After an epic battle, 80% of Brooklyn schools did
-    the Hour of Code vs. 60% in Chicago. Not bad!
+  highlights_constant_alba_heading: A színésznő, aktivista és vállakozó a 'The Honest
+    Company' teljes személyzetével tartott Kódolás Óráját.
+  highlights_constant_alba_short_heading: Jessica Alba a Kódolás Óráján
+  highlights_constant_obama_heading: Obama elnök az első az elnökök között, aki kódolt,
+    történelmi Kódolás Óráját tartott a Fehér Házban a diákoknak.
+  highlights_constant_obama_short_heading: Kódoló Elnök
+  highlights_constant_malala_heading: '"Minden lány megérdemli a lehetőséget, hogy
+    részt vegyen a technológia létrehozásában, ami megváltoztatja a világunkat."'
+  highlights_constant_malala_short_heading: A Nobel Békedíj győztes Malala
+  highlights_constant_trudeau_heading: Kanadai miniszterelnök Justin Trudeau egy egyszerű
+    játékot kódolt, amiben a kedvenc sportja is benne volt.
+  highlights_constant_trudeau_short_heading: Justin Trudeau miniszterelnök játékot
+    kódol
+  highlights_constant_ny_heading: Egy legendás versenyben a brooklyni iskolák 80%-a
+    tartott Kódolás Óráját szemben a chicagói iskolák 60%-val. Nem rossz!
   highlights_constant_ny_short_heading: Brooklyn legyőzi Chicagot
-  highlights_constant_athletes_heading: Champions and gold medalists Serena Williams,
-    Neymar Jr, Carmelo Anthony and more inspire students to push themselves.
+  highlights_constant_athletes_heading: Bajnokok, mint Serena Williams, Neymar Jr,
+    Carmelo Anthony inspiraljak a diakokat, hogy kihozzak magukbol a maximumot.
   highlights_constant_athletes_short_heading: Haladj előre
   footer_copyright_message: Copyright 2015 Code.org. Minden jog fenntartva.
   footer_trademark_message: Hour of Code™ a Code.org bejegyzett védjegye.
@@ -738,18 +771,18 @@ hu:
   learn_robotics_banner_heading: Robotika
   learn_robotics_banner_blurb: Vannak robotjaid? Használd őket az alábbi tevékenységekhez
     és készíts egy jobb Kódolás Órája programot bármely korosztálynak!
-  tutorial_dance2019_name: Dance Party 2019
+  tutorial_dance2019_name: Táncos buli 2019
   tutorial_danceparty_name: Táncos buli
-  tutorial_chibitronics_name: 'Chibitronics: Illuminated Story'
+  tutorial_chibitronics_name: 'Chibitronics: Egy fényes történet'
   tutorial_athlete_name: Programozd le saját sportjátékodat
   tutorial_moana_name: 'Moana: Útkeresés kódolással'
   tutorial_star-wars_name: 'Csillagok háborúja: egy galaxis építése kódolással'
-  tutorial_gumadventure_name: Gumball's Coding Adventure
+  tutorial_gumadventure_name: Gumball Kódolós Története
   tutorial_mchoc_name: Minecraft Kódolás Órája
-  tutorial_vidnews_name: 'Vidcode: Code the News'
-  tutorial_kodable-pre_name: Kodable (pre-readers welcome)
-  tutorial_highseas_name: Adventure on the High Seas
-  tutorial_capython_name: Python Turtle Graphics
+  tutorial_vidnews_name: 'Vidcode: Kódold a híreket'
+  tutorial_kodable-pre_name: Kodable (még nem olvasók részére is)
+  tutorial_highseas_name: Kalandok a Nyílt Tengeren
+  tutorial_capython_name: Python Teknős Grafika
   tutorial_frzn_name: Kódolj Annával és Elzával
   tutorial_cocom_name: 'CodeCombat: Menekülés a labirintusból!'
   tutorial_play-lab_name: Játék labor
@@ -757,23 +790,23 @@ hu:
   tutorial_textcomp_name: Szöveg tömörítés
   tutorial_encryption_name: Egyszerű titkosítás
   tutorial_kanopixel_name: Kano Pixel Hack
-  tutorial_foos_name: codeSpark Academy with The Foos
-  tutorial_tynkerdd_name: Dragon Dash
-  tutorial_tynkerana_name: Analog Clock STEM Kit
-  tutorial_vidcard_name: 'Vidcode: Bestie Greeting Card'
+  tutorial_foos_name: codeSpark Akadémia Foo-ékkal
+  tutorial_tynkerdd_name: Sárkány Roham
+  tutorial_tynkerana_name: Analóg Óra STEM Készlet
+  tutorial_vidcard_name: 'Vidcode: Baráti Üdvözlő Lap'
   tutorial_spritebox_name: Spritebox Coding
-  tutorial_tynkerch_name: Counter Hack
+  tutorial_tynkerch_name: Ellenhekkelés
   tutorial_lightbot_name: Lightbot
   tutorial_hoc_name: Placeholder for new code.org/hoc
   tutorial_code_name: Írd meg az első számítógépes programodat
   tutorial_tinspire_name: 10 Minutes of Code for the TI-Nspire CX
-  tutorial_itchbounceball_name: ITCH Bouncing Ball (in Scratch)
-  tutorial_vidclim_name: 'Vidcode: Climate Science & Code'
-  tutorial_matlab_name: Learn to Code with MATLAB
-  tutorial_flap_name: Make a Flappy game
+  tutorial_itchbounceball_name: ITCH Pattogó Labda (Scratch-ben)
+  tutorial_vidclim_name: 'Vidcode: Klíma-tudomány és Kódolás'
+  tutorial_matlab_name: Tanulj meg MATLAB-al kódolni
+  tutorial_flap_name: Készíts egy Flappy játékot
   tutorial_galaxy_name: Galaxy Game Jam
-  tutorial_inf_name: Infinity Play Lab
-  tutorial_tynkersol_name: Solar System STEM Kit
+  tutorial_inf_name: Infinity játéklabor
+  tutorial_tynkersol_name: Naprendszer STEM Készlet
   tutorial_itchg_name: ITCH Name IT - Geography
   tutorial_como_name: Coding Adventure
   tutorial_processfound_name: The Processing Foundation - Hello Processing
@@ -787,7 +820,7 @@ hu:
   tutorial_tynkermult_name: Multiplication Escape STEM Kit
   tutorial_monster_name: Mystery Island Coding Quest
   tutorial_tynkerapp_name: Készíts egy Appot
-  tutorial_tynkerpup_name: Puppy Adventure
+  tutorial_tynkerpup_name: Egy kutyus kalandjai
   tutorial_livecode_name: LiveCode Sound Boards
   tutorial_cocomgame_name: 'CodeCombat: Készítsd el a saját játékodat!'
   tutorial_tynkerspin_name: Spin Draw Animation Kit
@@ -799,7 +832,7 @@ hu:
   tutorial_texas-instruments_name: 10 Minutes of Code
   tutorial_cajava_name: Drawing Flags with JavaScript
   tutorial_codehs_name: Tanulj kódolni Karel a kutya-val
-  tutorial_hopemo_name: Emoji Draw
+  tutorial_hopemo_name: Emoji rajzolás
   tutorial_tynkercm_name: Code Monsters
   tutorial_codesterswintergreet_name: Téli üdvözlőlapok
   tutorial_codestersc_name: A koordináta sík
@@ -816,64 +849,64 @@ hu:
   tutorial_codestersbasketball_name: Kosárlabda
   tutorial_nclkarel_name: Tanulj kódolni Karellel a robottal
   tutorial_buildpong_name: Build Pong with AI
-  tutorial_tynkerdrones_name: Program Drones and Robots
-  tutorial_carla_name: Programming with Carla
-  tutorial_zulama_name: Zulama MakeQuest Video Game Activity
-  tutorial_capost_name: Build a Digital Postcard with HTML and CSS
-  tutorial_marco_name: Run Marco!
+  tutorial_tynkerdrones_name: Drón és robot programok
+  tutorial_carla_name: Programozás Carlával
+  tutorial_zulama_name: Zulama Küldetéskészítő videójáték
+  tutorial_capost_name: Készíts digitális képeslapot HTML és CSS segítségével
+  tutorial_marco_name: Fuss Marco!
   tutorial_codestersflappybike_name: Flappy kerékpár
-  tutorial_kanopong_name: Kano Computing - Make Pong
+  tutorial_kanopong_name: Kano programozás - Pong készítés
   tutorial_tynkerright_name: Bill of Rights STEM Kit
   tutorial_touchdevelop_name: TouchDevelop
-  tutorial_tynkercc_name: Code Commander
+  tutorial_tynkercc_name: Kód parancsnok
   tutorial_bamboo_name: Bamboo JS
-  tutorial_robojav_name: 'Robots and Java: An introduction to Java'
-  tutorial_roboba_name: Learn Algebra with RoboBlockly
+  tutorial_robojav_name: 'Robotok és Java: Bevezető a Java-ba'
+  tutorial_roboba_name: Tanulj Algebrát RoboBlocky-val
   tutorial_knodsnake_name: JavaScript Snake
   tutorial_soccharater_name: Karakter Építés
   tutorial_silent_name: Néma Tanár
-  tutorial_robomesh_name: Program VEX IQ Robots with Blockly
-  tutorial_amaze_name: A-Maze-thing
+  tutorial_robomesh_name: Programoyy IQ Robotokat Blocky-val
+  tutorial_amaze_name: Út-veszt-Ő
   tutorial_codestersds_name: Dream Sequence
-  tutorial_knodtext_name: 'Text Adventure: Python'
-  tutorial_alicegar_name: Animating with Alice and Garfield
+  tutorial_knodtext_name: 'Szöveges Kaland: Python'
+  tutorial_alicegar_name: Animáció Garfield-al és Alice-el
   tutorial_codesterstransform_name: Kirakósjáték átalakítás
-  tutorial_flexfrog_name: Flexbox Froggy
+  tutorial_flexfrog_name: Flexbox Békuci
   tutorial_codemoji_name: Kódemoji
   tutorial_robobii_name: Tanulj kódolni RoboBlockly-val
   tutorial_robobm_name: Matekozz RoboBlockly-val
-  tutorial_codingrobots_name: Learn One Hour Coding with RoboBlockly
-  tutorial_robob_name: Learn Robotics with RoboBlockly
+  tutorial_codingrobots_name: Tanulj kódolni RoboBlockly-val
+  tutorial_robob_name: Tanulj kódolni RoboBlockly-val
   tutorial_coders_name: 'A programozók visszavágnak: bevezetés a bot programozásba'
-  tutorial_tynkerhw_name: Learn to Code with Hot Wheels
-  tutorial_tynkermh_name: Learn to Code with Monster High
-  tutorial_caphoto_name: Build a Photo Booth App
-  tutorial_mozillahw_name: Mozilla Homework Excuse Generator
-  tutorial_ticklep_name: Parrot Wonder
-  tutorial_bbot_name: Bomberbot Fun and Easy Coding Activities
-  tutorial_scratchg_name: Programming Games in Scratch
-  tutorial_roboticfriends_name: My Robotic Friends
-  tutorial_sjforest_name: 'ScratchJr: Can I Make a Spooky Forest?'
-  tutorial_sjgreet_name: 'ScratchJr: Can I Make My Characters Greet Each Other?'
-  tutorial_sjsunset_name: 'ScratchJr: Can I Make the Sun Set?'
-  tutorial_fufafrenz_name: fuzzFamily Frenzy
-  tutorial_bbcgeo_name: Bitsbox Coding + Geometry
-  tutorial_chspixel_name: CodeHS Pixel Art
-  tutorial_hummingbird_name: Creating a Game with Hummingbird
-  tutorial_recoloring_name: Recoloring the Universe
-  tutorial_bbcchem_name: Bitsbox Coding + Chemistry
-  tutorial_floalgo_name: 'Coding: Algorithms Lesson Plan'
-  tutorial_flocond_name: 'Coding: Conditionals Lesson Plan'
-  tutorial_floloops_name: 'Coding: For Loops Lesson Plan'
-  tutorial_pgts_name: Rock, Paper, Scissors
-  tutorial_ozo_name: The OzoBlockly Tutorial
-  tutorial_bbcla_name: Bitsbox Coding + Language Arts
-  tutorial_bbcsci_name: Bitsbox Coding + Science
-  tutorial_tlctour_name: Tour Guide Activity
+  tutorial_tynkerhw_name: Tanulj Kódolni a Hot Wheels-el
+  tutorial_tynkermh_name: Tanulj Kódolni a Monster High-al
+  tutorial_caphoto_name: Készíts Fotókabin Alkalmazást
+  tutorial_mozillahw_name: Mozilla Házifeladat Kifogás Generátor
+  tutorial_ticklep_name: Papagáj Csoda
+  tutorial_bbot_name: Bomberbot Játék és Könnyű Kódolós Feladatok
+  tutorial_scratchg_name: Játékok Programozása Scratch-ben
+  tutorial_roboticfriends_name: A Robot Barátaim
+  tutorial_sjforest_name: 'ScratchJr: Készítünk egy ijesztő erdőt?'
+  tutorial_sjgreet_name: 'ScratchJr: Köszönhetnek egymásnak a szereplőim?'
+  tutorial_sjsunset_name: 'ScratchJr: Elküldjük a Napot Aludni?'
+  tutorial_fufafrenz_name: fuzzCsaládi Őrület
+  tutorial_bbcgeo_name: Bitsbox Kódolás + Geometria
+  tutorial_chspixel_name: CodeHS Pixel Művészet
+  tutorial_hummingbird_name: Játék készítése Hummingbird-el
+  tutorial_recoloring_name: Az Univerzum Újraszínezése
+  tutorial_bbcchem_name: Bitsbox Kódolás + Kémia
+  tutorial_floalgo_name: 'Kódolás: Algoritmusok'
+  tutorial_flocond_name: 'Kódolás: Kondíciók'
+  tutorial_floloops_name: 'Kódolás: For Ciklusok'
+  tutorial_pgts_name: Kő, Papír, Olló
+  tutorial_ozo_name: OzoBlockly útmutató
+  tutorial_bbcla_name: Bitsbox kódolás + Nyelv művészete
+  tutorial_bbcsci_name: Bitsbox kódolás + Tudomány
+  tutorial_tlctour_name: Idegenvezetés
   tutorial_codesterstj_name: CS party
-  tutorial_tlclocked_name: Locked-In
-  tutorial_baubles_name: Binary Baubles
-  tutorial_bbcart_name: Bitsbox Coding + Art
+  tutorial_tlclocked_name: Bezárva
+  tutorial_baubles_name: Kétkomponensű buborékok
+  tutorial_bbcart_name: Bitsbox kódolás + Művészet
   tutorial_tlcknight_name: Knight's Tour Activity
   tutorial_fufafit_name: fuzzFamily Fitness
   tutorial_ozodance_name: Ozobot Dance-Off
@@ -882,43 +915,43 @@ hu:
   tutorial_hopgame_name: Hopscotch Game Design Workshop
   tutorial_icontrol_name: iControl
   tutorial_cocomteach_name: 'CodeCombat: Tanári irányítású tevékenységek'
-  tutorial_bbcmathii_name: Bitsbox Coding + Math (K-2)
-  tutorial_bbcphys_name: Bitsbox Coding + Physics
+  tutorial_bbcmathii_name: Bitsbox kódolás + Matematika
+  tutorial_bbcphys_name: Bitsbox kódolás + Fizika
   tutorial_bitsbox_name: Build Crazy Apps with Bitsbox
-  tutorial_tlcemo_name: 'Emotion Machine: Create-a-Face Card'
-  tutorial_crd_name: Conditionals with Cards
-  tutorial_bbcbio_name: Bitsbox Coding + Biology
+  tutorial_tlcemo_name: 'Érzelem készítő gép: Arc-kártya készítés'
+  tutorial_crd_name: Feltételek kártyákkal
+  tutorial_bbcbio_name: Bitsbox programozás + Biológia
   tutorial_ticklebb8_name: BB-8 Swing
-  tutorial_grok_name: Grok Learning
-  tutorial_ijournalist_name: iJournalist
-  tutorial_bbcmusic_name: Bitsbox Coding + Music
-  tutorial_secretcodes_name: Secret Codes Activity
-  tutorial_tlchex_name: HexaHexaFlexagon Automata Activity
-  tutorial_tickles_name: Sphero Run
-  tutorial_ozogame_name: Create an Ozobot Game Level
-  tutorial_vidcodeio_name: Input and Output, Math Activity
-  tutorial_besttech_name: Best Technology Activity
-  tutorial_tlcbrain_name: Brain-in-a-bag Activity
-  tutorial_hopquiz_name: Quiz Creator
-  tutorial_unfortunate_name: A Series of Unfortunate Events
-  tutorial_cha_name: Computer History Activity
-  tutorial_elaseq_name: 'Writing and Coding: ELA Integration with Common Core Standards'
-  tutorial_bbcmathi_name: Bitsbox Coding + Math (3-5)
-  tutorial_tlcpixel_name: Pixel Puzzles
-  tutorial_arduino_name: Arduino Activity
-  tutorial_introrobo_name: Introduction to Robotics
-  tutorial_tlcinvis_name: Invisible Palming Activity
-  tutorial_tlcjflap_name: 'JFLAP: Creating Finite State Machines'
-  tutorial_procolor_name: Drive to School with Ozobot
-  tutorial_spiralsfinch_name: Spirals with the Finch
-  tutorial_ozoi_name: Ozobot and OzoCodes Intro
-  tutorial_ticklel_name: LEGO Bricker
-  tutorial_spiralsdash_name: Draw Spirals with Dash
-  tutorial_ghdebug_name: Grace Hopper Debugging Activity
-  tutorial_tlckk_name: Kriss-Kross Puzzles
-  tutorial_firstcomp_name: My First Computer
-  tutorial_mazefinch_name: Through the Maze with the Finch Robot
-  tutorial_tlccc_name: Compression Code Puzzles
+  tutorial_grok_name: Grok tanulás
+  tutorial_ijournalist_name: e-ujságíró
+  tutorial_bbcmusic_name: Bitsbox programozás + Zene
+  tutorial_secretcodes_name: Titkos kódok
+  tutorial_tlchex_name: HexaHexaFlexagon automata
+  tutorial_tickles_name: Szuperhős futás
+  tutorial_ozogame_name: Készíts Ozbot játékot
+  tutorial_vidcodeio_name: Feltételes mód kártyákkal
+  tutorial_besttech_name: A legjobb technológia
+  tutorial_tlcbrain_name: Agy a táskában
+  tutorial_hopquiz_name: Kvíz készítő
+  tutorial_unfortunate_name: Szerencsétlen események sorozata
+  tutorial_cha_name: Számítástechnika történet
+  tutorial_elaseq_name: 'Írás és kódolás: ELA integráció alapvető szabványokkal'
+  tutorial_bbcmathi_name: Bitsbox programozás + Matek (3-5)
+  tutorial_tlcpixel_name: Pixel puzzle
+  tutorial_arduino_name: Arduino
+  tutorial_introrobo_name: Bevezetés a robotikába
+  tutorial_tlcinvis_name: Láthatatlan tenyér
+  tutorial_tlcjflap_name: 'JFLAP: Véges állapotú gépek létrehozása'
+  tutorial_procolor_name: Vezess a suliba Ozobottal
+  tutorial_spiralsfinch_name: Spirálok a Pinttyel
+  tutorial_ozoi_name: Ozobot és OzoCodes bevezetés
+  tutorial_ticklel_name: LEGO építés
+  tutorial_spiralsdash_name: Rajzolj spriálokat vonalból
+  tutorial_ghdebug_name: Grace Hopper hibakeresés
+  tutorial_tlckk_name: Kriss-Kross rejtvények
+  tutorial_firstcomp_name: Az első számítógépem
+  tutorial_mazefinch_name: Át az útvesztőn Finch robottal
+  tutorial_tlccc_name: Kompressziós kód rejtvények
   tutorial_tlcdoodle_name: Algorithmic Doodle Art
   tutorial_tlcpunch_name: Punch Card Searching Activity
   tutorial_finchfract_name: Finch Fractals
@@ -961,29 +994,29 @@ hu:
   tutorial_dswb_name: Disney Star Wars
   tutorial_ssw_name: Disney Star Wars
   tutorial_sswb_name: Disney Star Wars
-  tutorial_kodable-unplugged_name: fuzzFamily Frenzy
-  tutorial_scratch_name: Get creative with coding
-  tutorial_bayes_name: Grandes Heroes
-  tutorial_gumball_name: Gumball Play Lab
-  tutorial_hrm_name: Human Resource Machine
-  tutorial_ice-age_name: Ice Age Play Lab
-  tutorial_koapp_name: Kodable (pre-readers welcome)
+  tutorial_kodable-unplugged_name: fuzzCsaládi Őrület
+  tutorial_scratch_name: Légy kreatív a kódolás segítségével
+  tutorial_bayes_name: Nagy hősök
+  tutorial_gumball_name: Gumball Játéklabor
+  tutorial_hrm_name: Emberi erőforrás gép
+  tutorial_ice-age_name: Jégkorszak játéklabor
+  tutorial_koapp_name: Kodable (még nem olvasók részére is)
   tutorial_lightbot-intl_name: Lightbot
   tutorial_rmc_name: Minecraft Kódolás Órája
   tutorial_smc_name: Minecraft Kódolás Órája
   tutorial_minecraft-2016_name: Minecraft Kódolás Órája
-  tutorial_thinkersmith-es_name: Mis Amigos Roboticos
-  tutorial_pixie_name: PIXIE Challenges
+  tutorial_thinkersmith-es_name: Robot barátaim
+  tutorial_pixie_name: PIXIE kihívás
   tutorial_play_name: Játék labor
-  tutorial_robomind-nl_name: Program a virtual robot
-  tutorial_spheroi_name: 'Blocks 1: Intro'
-  tutorial_spherol_name: 'Blocks 3: Lights'
-  tutorial_spherov_name: 'Blocks 4: Variables'
+  tutorial_robomind-nl_name: Programozz egy virtuális robotot
+  tutorial_spheroi_name: '1. blokk: Bevezetés'
+  tutorial_spherol_name: '3. blokk: Fények'
+  tutorial_spherov_name: '4. blokk: Változók'
   tutorial_swb_name: 'Csillagok háborúja: egy galaxis építése kódolással'
   tutorial_build-a-galaxy_name: 'Csillagok háborúja: egy galaxis építése kódolással'
-  tutorial_alicesims_name: Storyboarding and Programming with Alice and The Sims
-  tutorial_tchr_name: Teacher Led Lesson Plans
-  tutorial_robogame_name: The Robot Games
+  tutorial_alicesims_name: Történetkészítés és programozás az Alice and The Sims segítségével
+  tutorial_tchr_name: Tanár vezette óratervek
+  tutorial_robogame_name: A robot játék
   tutorial_tap_name: Tynker on Tablets
   tutorial_cintl_name: Írd meg az első számítógépes programodat
   tutorial_itchstop_name: ITCH Stop Frame Animation (Scratch)
@@ -1001,60 +1034,61 @@ hu:
   tutorial_kodableint_name: Introduction to Programming
   tutorial_kodableadv_name: Advanced Programming Concepts
   tutorial_tynkertj_name: Toxic Jungle
-  tutorial_wolframa_name: Age in Days
-  tutorial_wolframm_name: Random Melodies
-  tutorial_wolframspi_name: Sound of PI
-  tutorial_wolframsph_name: Draw a Sphere
-  tutorial_wolframp_name: Draw a Polygon
-  tutorial_wolframn_name: Ninja Name Generator
-  tutorial_soloweb_name: Your First Webpage in an Hour!
-  tutorial_khanweb_name: 'Khan Academy: Webpages'
-  tutorial_khandata_name: 'Khan Academy: Databases'
-  tutorial_robomeshiq_name: Program VEX IQ Robots with Blockly
-  tutorial_googlelogo_name: Create your own Google logo
-  tutorial_playtune_name: Play That Tune App
-  tutorial_computeit_name: Compute it
-  tutorial_codesterssj_name: Space Jokes
+  tutorial_wolframa_name: Életkor napokban
+  tutorial_wolframm_name: Véletlen dallamok
+  tutorial_wolframspi_name: PI hangja
+  tutorial_wolframsph_name: Rajzolj egy gömböt
+  tutorial_wolframp_name: Rajzolj egy sokszöget
+  tutorial_wolframn_name: Nindzsa-név generátor
+  tutorial_soloweb_name: Az első weboldalad egy óra alatt!
+  tutorial_khanweb_name: 'Khan Akadémia: weboldalak'
+  tutorial_khandata_name: 'Khan Akadémia: adatbázisok'
+  tutorial_robomeshiq_name: Programoyy IQ Robotokat Blocky-val
+  tutorial_googlelogo_name: Készítsd el saját Google logódat
+  tutorial_playtune_name: "'Játszd ezt a dallamot' App"
+  tutorial_computeit_name: Számold ki
+  tutorial_codesterssj_name: Űr humor
   tutorial_cmchat_name: Trivia Chatbot
-  tutorial_tynkerdb_name: Dragon Blast
-  tutorial_cmbuild_name: Game Builder
-  tutorial_robotrattle_name: Robot Rattle
-  tutorial_codestersh_name: Hedgehog Designs
-  tutorial_codehsdigipixel_name: Digital Art in Pixels with CodeHS
-  tutorial_ccbinary_name: Binary Hero
-  tutorial_codehsturtle_name: Program in Python with Tracy the Turtle
-  tutorial_grokhd_name: Hydrangea Danger
-  tutorial_grokem_name: Emoticon Madness
-  tutorial_kodmaze_name: Maze Maker Challenges
-  tutorial_codestersa_name: Asteroid Dodge
-  tutorial_cmdodo_name: Dodo Does Math
-  tutorial_tynkerspace_name: Space Quest
-  tutorial_gfbloons_name: Bloons Trigonometry Defense
+  tutorial_tynkerdb_name: Sárkánytűz
+  tutorial_cmbuild_name: Játékkészítő
+  tutorial_robotrattle_name: Csörgő robot
+  tutorial_codestersh_name: Sündisznó mintázatok
+  tutorial_codehsdigipixel_name: Digitális művészet pixelekkel CodeHS-sel
+  tutorial_ccbinary_name: Kétkomponensű hős
+  tutorial_codehsturtle_name: Programozás Python nyelvvel Tracyvel a teknőssel
+  tutorial_grokhd_name: Hortenzia veszély
+  tutorial_grokem_name: Elmebaj
+  tutorial_kodmaze_name: Útvesztőkészítő
+  tutorial_codestersa_name: Aszteroida kidobós
+  tutorial_cmdodo_name: Dodo matekozik
+  tutorial_tynkerspace_name: Űrkutatás
+  tutorial_gfbloons_name: Bloons trigonometria védelem
   tutorial_raspipong_name: Sense HAT Pong
-  tutorial_codehsvr_name: Create Virtual Worlds with CodeHS
+  tutorial_codehsvr_name: Készíts virtuális szavakat CodeHS-sel
   tutorial_codesterstp_name: Kirakósjáték átalakítás
   tutorial_codestersbb_name: Kosárlabda
   tutorial_gfcrossyroad_name: Learn to Code with Crossy Road
-  tutorial_googleww_name: Wonder Woman
-  tutorial_codehsjsapp_name: Make a Real App with JavaScript
-  tutorial_gfmihi_name: Mihi Maker
+  tutorial_googleww_name: Csodanő
+  tutorial_codehsjsapp_name: Készíts igazi alkalmazást JavaScripttel
+  tutorial_gfmihi_name: Térkép Készítő
   tutorial_hopdropphone_name: Make "Don't Drop the Phone" on iPad/iPhone
   tutorial_techfaa_name: Flocking Autonomous Agents
-  tutorial_codehsjsgraph_name: JavaScript Graphics with CodeHS
-  tutorial_thunkable_name: Learn How to Build 10 Apps in 1 Hour!
+  tutorial_codehsjsgraph_name: JavaScript grafikák CodeHS-al
+  tutorial_thunkable_name: Tanuld meg, hogyan kell 10 alkalmazást készíteni 1 óra
+    alatt!
   tutorial_hopcrossyroad_name: Make Crossy Road on iPad/iPhone
   tutorial_switchglitch_name: 'Switch & Glitch: Robot Adventure'
-  tutorial_codecar_name: Code Car Simulator
+  tutorial_codecar_name: Code autó szimulátor
   tutorial_codesterscp_name: A koordináta sík
-  tutorial_grokpetblock_name: Virtual Pet (micro:bit Blockly)
-  tutorial_techbim_name: Basic Image Manipulation
-  tutorial_techfpp_name: Introduction to Functional Programming with Python
+  tutorial_grokpetblock_name: Virtuális háziállat (micro:bit Blockly)
+  tutorial_techbim_name: Alapvető képmanipuláció
+  tutorial_techfpp_name: Bevezetés a funkcionális programozásba a Python segítségével
   tutorial_codesterscr_name: Cheer Routines
-  tutorial_grokdisease_name: Disease Epidemic
+  tutorial_grokdisease_name: Betegség járvány
   tutorial_techec_name: Explaining Closures in JS
-  tutorial_rgbegin_name: RoboGarden Coding - Beginner
+  tutorial_rgbegin_name: Kerti robot programozás - Kezdő
   tutorial_myradream_name: 'Actimator: Myra''s Dream'
-  tutorial_thinkfun_name: 'Robot Repair: Can You Fix the Robot Brain?'
+  tutorial_thinkfun_name: 'Robot javítás: Meg tudod javítani a robot agyát?'
   tutorial_hopfireworks_name: Make a Fireworks App on iPad/iPhone
   tutorial_grokspace_name: Space (Blockly)
   tutorial_codehspython_name: Code in Python with CodeHS
@@ -1097,32 +1131,32 @@ hu:
   tutorial_ozojourney_name: Magellan's Journey
   tutorial_ozocodes_name: Write your Name with OzoCodes
   tutorial_ozoeclipse_name: Eclipses and Celestial Mechanics
-  tutorial_ozosimulator_name: Program Simulator
-  tutorial_ozoalgorithm_name: Make a Multiplication Algorithm
+  tutorial_ozosimulator_name: Program szimulátor
+  tutorial_ozoalgorithm_name: Készítsen szorzási algoritmust
   tutorial_ozotimer_name: Ozobot Second Timer
-  tutorial_ozohabits_name: Modeling Animal Habits and Habitats
-  tutorial_ozoprogram_name: How to Program Robots
-  tutorial_ozopair_name: Pair Programming with Ozobot
-  tutorial_codesnoopy_name: Snoopy Snow Brawl
-  tutorial_applabintro_name: Intro to App Lab
-  tutorial_cslartist_name: The Little Artist In Your Computer Activity Pack
+  tutorial_ozohabits_name: Az állati élőhelyek és szokások modellezése
+  tutorial_ozoprogram_name: Hogyan programozz robotot
+  tutorial_ozopair_name: Páros programozás Ozobottal
+  tutorial_codesnoopy_name: Snoopy hócsata
+  tutorial_applabintro_name: Bevezetés az App Laborba
+  tutorial_cslartist_name: A kis művész a számítógépedben
   tutorial_cslscratchjr_name: Let's Play with the ScratchJr Kitten! Activity Pack
-  tutorial_floevents_name: Writing and interpreting Events
-  tutorial_florobot_name: Design a Robot
+  tutorial_floevents_name: Események írása és értelmezése
+  tutorial_florobot_name: Tervezz robotot
   tutorial_isavesanta_name: iSave Santa!
-  tutorial_iorder_name: iOrder
+  tutorial_iorder_name: e-rendelés
   tutorial_ianimate_name: iAnimate
   tutorial_iloveada_name: iLove Ada
   tutorial_kodflash_name: If Flash, Then Clap!
-  tutorial_kodchoose_name: Choose Your Own (Fuzzy) Adventure!
-  tutorial_kodpizzapre_name: Pizza Party! (pre-reader)
+  tutorial_kodchoose_name: Válaszd ki a saját (homályos) kalandodat!
+  tutorial_kodpizzapre_name: Pizza Party! (előzetes)
   tutorial_kodpizza_name: Pizza Party!
-  tutorial_kodwomen_name: Women in Tech
-  tutorial_tfunplug_name: 'Robot Repair: Can You Fix the Robot Brain? (Unplugged)'
+  tutorial_kodwomen_name: Nők technológiában
+  tutorial_tfunplug_name: 'Robot javítás: Meg tudod javítani a robot agyát'
   tutorial_lbvariables_name: Variables with Littlebits
   tutorial_lbfunctions_name: Fun with Functions & littleBits
-  tutorial_lblogic_name: Lessons in Logic with littleBits
-  tutorial_lbworld_name: 'littleBits: Change the world arcade challenge'
+  tutorial_lblogic_name: Logikai leckék littleBits-sel
+  tutorial_lbworld_name: 'littleBits: Változtasd meg a világot'
   tutorial_lbloops_name: Leap into loops with littleBits!
   tutorial_lbtug_name: 'littleBits: Tug of War'
   tutorial_lbpotato_name: 'littleBits: Hot Potato...of Doom!'
@@ -1131,21 +1165,22 @@ hu:
   tutorial_wonpuppy_name: Dash the Puppy (E3)
   tutorial_woncue_name: Cue's Starter Guide
   tutorial_wonzoo_name: Dot at the Petting Zoo (B2)
-  tutorial_wontrip_name: Dash's Road Trip (F2)
-  tutorial_woncollect_name: Dash the Collector (B1)
-  tutorial_wonsecret_name: Cue's Secret Message
-  tutorial_hsscience_name: 'Hopscotch: Make Interactive Science Models on Your iPad/iPhone!'
-  tutorial_popculture_name: Pop Culture Data Science
-  tutorial_legorobust_name: Robust Structures – LEGO® Education WeDo 2.0
-  tutorial_legoplants_name: Plants and Pollinators – LEGO® Education WeDo 2.0
-  tutorial_legopark_name: Autonomous Parking – LEGO® MINDSTORMS® Education EV3
-  tutorial_legodetect_name: Object Detection – LEGO® MINDSTORMS® Education EV3
-  tutorial_legolight_name: Automatic Headlights – LEGO® MINDSTORMS® Education EV3
-  tutorial_alexa_name: 'Amazon Alexa Fact Skill Tutorial: My School Facts'
-  tutorial_grokpetmicro_name: Virtual Pet (micro:bit MicroPython)
-  tutorial_pirateplunder_name: Pirate Plunder
-  tutorial_cadj_name: DR DJ Device
-  tutorial_cacrazy_name: Code Crazy Creatures
+  tutorial_wontrip_name: Dash útja (F2)
+  tutorial_woncollect_name: Dash, a gyűjtő (B1)
+  tutorial_wonsecret_name: Cue titkos üzenete
+  tutorial_hsscience_name: 'Hopscotch: Készíts interaktív tudományos modelleket iPad
+    / iPhone készüléken!'
+  tutorial_popculture_name: A popkultúra adattudománya
+  tutorial_legorobust_name: Robusztus szerkezetek - LEGO® Education WeDo 2.0
+  tutorial_legoplants_name: Növények és beporzók - LEGO® Education WeDo 2.0
+  tutorial_legopark_name: Önálló parkolás - LEGO® MINDSTORMS® Education EV3
+  tutorial_legodetect_name: Objektumdetektálás - LEGO® MINDSTORMS® Education EV3
+  tutorial_legolight_name: Automatikus fényszórók - LEGO® MINDSTORMS® Education EV3
+  tutorial_alexa_name: 'Alexa, az amazon oktatóprogramja: tények az iskolámról'
+  tutorial_grokpetmicro_name: Virtuális háziállat (micro:bit MicroPython)
+  tutorial_pirateplunder_name: Kalóz fosztogatás
+  tutorial_cadj_name: DR DJ készülék
+  tutorial_cacrazy_name: Programozz őrült lényeket
   tutorial_cajump_name: Jumping Jam
   tutorial_carest_name: Robo-restaurant puzzler
   tutorial_accai_name: Accenture Intelligent Space Exploration
@@ -1180,55 +1215,57 @@ hu:
   tutorial_blockscadsugar_name: Sugar Cubes
   tutorial_bsgridlight_name: 'GridLight: Hello World'
   tutorial_bpartscratch_name: 'Art & Music: Color (Scratch)'
-  tutorial_bpartvid_name: 'Art & Music: Color (Vidcode)'
-  tutorial_bpenglishscratch_name: 'English: Biography (Scratch)'
-  tutorial_bpenglishvid_name: 'English: Biography (Vidcode)'
-  tutorial_bphealthscratch_name: 'Health: DNA (Scratch)'
-  tutorial_bphealthvid_name: 'Health: DNA (Vidcode)'
-  tutorial_bpmathscratch_name: 'Math: Multiplication (Scratch)'
-  tutorial_bpmathvid_name: 'Math: Multiplication (Vidcode)'
-  tutorial_bpmlkscratch_name: 'Social Studies: Martin Luther King Jr. (Scratch)'
-  tutorial_bpmlkvid_name: 'Social Studies: Martin Luther King Jr. (Vidcode)'
-  tutorial_bpsafetyscratch_name: 'Digital Citizenship: Online Safety (Scratch)'
-  tutorial_bpsafetyvid_name: 'Digital Citizenship: Online Safety (Vidcode)'
-  tutorial_bpsciencescratch_name: 'Science: Food Chains (Scratch)'
-  tutorial_bpsciencevid_name: 'Science: Food Chains (Vidcode)'
-  tutorial_bptechscratch_name: 'Engineering & Tech: Computer Programming (Scratch)'
-  tutorial_bptechvid_name: 'Engineering & Tech: Computer Programming (Vidcode)'
-  tutorial_caflags_name: Drawing Flags with Blocks
-  tutorial_matariki_name: 'Matariki: Māori New Year'
-  tutorial_carestaurant_name: Robo-Restaurant Decorator
-  tutorial_casea_name: Sea Creature Sequences
-  tutorial_cashield_name: Shield Design Showdown
-  tutorial_ccwslimer_name: 'Super Slimer: Code Your Adventure'
-  tutorial_codinggalaxy_name: Coding Galaxy - Adventure Planet
-  tutorial_boatrace_name: Boat Race
+  tutorial_bpartvid_name: 'Művészet és zene: Szín (Vidcode)'
+  tutorial_bpenglishscratch_name: 'Angol: Életrajz (Scratch)'
+  tutorial_bpenglishvid_name: 'Angol: Életrajz (Vidcode)'
+  tutorial_bphealthscratch_name: 'Egészség: DNS (Scratch)'
+  tutorial_bphealthvid_name: 'Egészség: DNS (Vidcode)'
+  tutorial_bpmathscratch_name: 'Matek: Szorzás (Scratch)'
+  tutorial_bpmathvid_name: 'Matek: Szorzás (Vidcode)'
+  tutorial_bpmlkscratch_name: 'Társadalomtudomány: ifj. Martin Luther King (Scratch)'
+  tutorial_bpmlkvid_name: 'Társadalomtudomány: ifj. Martin Luther King (Vidcode)'
+  tutorial_bpsafetyscratch_name: 'Digitális állampolgárság: Online biztonság (Scratch)'
+  tutorial_bpsafetyvid_name: 'Digitális állampolgárság: Online biztonság (Vidcode)'
+  tutorial_bpsciencescratch_name: 'Tudomány: Élelmiszerláncok (Scratch)'
+  tutorial_bpsciencevid_name: 'Tudomány: Élelmiszerláncok (Vidcode)'
+  tutorial_bptechscratch_name: 'Mérnöki munka és technológia: számítógépes programozás
+    (Scratch)'
+  tutorial_bptechvid_name: 'Mérnöki munka és technológia: számítógépes programozás
+    (Vidcode)'
+  tutorial_caflags_name: Rajzolj zászlókat tömbökből
+  tutorial_matariki_name: 'Matariki: maori újév'
+  tutorial_carestaurant_name: Robot étterem dekorátor
+  tutorial_casea_name: Tengeri lények szekvenciái
+  tutorial_cashield_name: A pajzstervezés bemutatása
+  tutorial_ccwslimer_name: 'Szuper vékony: programozd a saját kalandod'
+  tutorial_codinggalaxy_name: Galaxis programozás - Kaland bolygó
+  tutorial_boatrace_name: Hajó verseny
   tutorial_ccplay_name: 'CodeCombat: Code, Play, Create'
-  tutorial_grinch_name: 'The Grinch: Saving Christmas with Code'
-  tutorial_codehsart_name: Generating Art with Code
-  tutorial_codehsbitcoin_name: 'Cryptocurrency: Explore the Bitcoin Ledger '
-  tutorial_codehsblockchain_name: 'Cryptocurrency: Explore Blockchain Technology'
+  tutorial_grinch_name: 'A Grinch: Mentsd meg a karácsonyt programozással'
+  tutorial_codehsart_name: Művészet kódokból
+  tutorial_codehsbitcoin_name: 'Kriptovaluta: Fedezd fel a Bitcoin könyvet '
+  tutorial_codehsblockchain_name: 'Kriptovaluta: Fedezd fel a Blockchain technológiát'
   tutorial_codehscipher_name: Caesar Cipher Wheel
-  tutorial_codehscollision_name: Coding Collision Simulations
-  tutorial_codehsmath_name: Coding Mathematical Models
-  tutorial_codehsmusic_name: Coding in Music
-  tutorial_codehssports_name: Coding in Sports
-  tutorial_codemojipizza_name: Make Pizza with JavaScript
-  tutorial_moonlander_name: Moon Lander
+  tutorial_codehscollision_name: Ütközési szimulációk kódolása
+  tutorial_codehsmath_name: Matematikai modellek kódolása
+  tutorial_codehsmusic_name: Zene kódolása
+  tutorial_codehssports_name: Sport kódolása
+  tutorial_codemojipizza_name: Készíts pizzát JavaScript-tel
+  tutorial_moonlander_name: Holdraszállás
   tutorial_sushicards_name: Beginner Scratch Sushi Cards
-  tutorial_codesparkcreate_name: 'codeSpark Academy with The Foos: Create Games'
-  tutorial_hardvsoft_name: Team Hardware vs. Team Software
-  tutorial_codestersecard_name: Code an Interactive eCard
-  tutorial_codesterslogo_name: Design Your Own Logo
-  tutorial_codesterstshirt_name: Code Your Initials
-  tutorial_codewards_name: Rescue the underwater city!
+  tutorial_codesparkcreate_name: 'codeSpark Akadémia csocsóval: Készíts játékot'
+  tutorial_hardvsoft_name: Csapat hardver vs. Csapat szoftver
+  tutorial_codestersecard_name: Programozz egy interaktív képeslapot
+  tutorial_codesterslogo_name: Tervezd meg saját logódat
+  tutorial_codesterstshirt_name: Programozd le a kezdőbetűidet
+  tutorial_codewards_name: Ments meg egy vízalatti várost!
   tutorial_olympics_name: C.A.T.S. go for Robot Olympics
   tutorial_codinismhero_name: Programming Hero
-  tutorial_discovery_name: An Unusual Discovery
-  tutorial_csfirstname_name: Animate a Name
+  tutorial_discovery_name: Szokatlan felfedezés
+  tutorial_csfirstname_name: Animálj egy nevet
   tutorial_obstaclecourse_name: Navigating an Obstacle Course with CodeSnaps
-  tutorial_edisonmove_name: 'Edison and EdPy: Get Edison moving'
-  tutorial_edisonspider_name: Edison and the spiralling spider trap
+  tutorial_edisonmove_name: 'Edison és EdPy: Mozdítsd meg Edisont'
+  tutorial_edisonspider_name: Edison és a spirális pókcsapda
   tutorial_edisonspotlight_name: Perform in the spotlight with Edison
   tutorial_firiapython_name: Learn Python with the micro:bit
   tutorial_gamefrootsquid_name: Code your own colossal squid game
@@ -1318,83 +1355,88 @@ hu:
   tutorial_allcancodeapps_name: 'Allcancode Platform: Build web and mobile apps in
     Blockly'
   tutorial_n2y_name: Bitt Bott Explores Earth
-  tutorial_danceparty_shortdescription: Code a Dance Party to share with your friends.
-    Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!
-  tutorial_chibitronics_shortdescription: Program a paper circuit to light up your
-    own story.
-  tutorial_athlete_shortdescription: Choose between making a basketball game or mix
-    and match across sports!
-  tutorial_moana_shortdescription: Moana is brave, fearless, and is determined to
-    find her own path.
+  tutorial_danceparty_shortdescription: Kódolj egy táncpartit és oszd meg a barátaiddal.
+    Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, és még sokan mások!
+  tutorial_chibitronics_shortdescription: Programozz le egy papír áramkört, hogy felvillanyozd
+    a sztorid.
+  tutorial_athlete_shortdescription: Választhatsz, hogy egy kosaras játékot készítesz,
+    vagy kombinálod a sportokat!
+  tutorial_moana_shortdescription: Moana bátor, elhatározott és nem fél megtalálni
+    saját útját.
   tutorial_star-wars_shortdescription: Tanulj meg droidokat programozni, és készítsd
     el a saját Csillagok háborúja játékodat, egy messzi, messzi galaxisban.
-  tutorial_gumadventure_shortdescription: Use code to continue an episode of The Amazing
-    World of Gumball.
-  tutorial_mchoc_shortdescription: Minecraft is back for the Hour of Code with a brand
-    new activity! Journey through Minecraft with code.
-  tutorial_vidnews_shortdescription: Code effects and graphics to make a news story
-    all about tech, diversity, kids, and coding.
-  tutorial_kodable-pre_shortdescription: A fun game to teach computer programming
-    concepts
-  tutorial_highseas_shortdescription: In this activity, you'll create an adventure
-    story with two characters that takes place on the high seas!
-  tutorial_capython_shortdescription: Use Python code to draw fun pictures with turtles.
+  tutorial_gumadventure_shortdescription: Használd kódoló tudásod, hogy folytasd Gumball
+    Csodálatos Világának egy epizódját.
+  tutorial_mchoc_shortdescription: A Minecraft egy vadonatúj programmal tér vissza
+    a Kódolás Órájára! Utazz végig a Minecraft világán kódok segítségével.
+  tutorial_vidnews_shortdescription: Kód effektek és sztorik, hogy izgalmas híreket
+    készíthess technológiáról, diverzitásról, a gyerekről és a kódolásról.
+  tutorial_kodable-pre_shortdescription: Egy izgalmas játék, mely megtanít a programozás
+    alapjaira
+  tutorial_highseas_shortdescription: Ebben a játékban egy kalandos történetet élhetsz
+    át a nyílt tengeren a két főhőssel!
+  tutorial_capython_shortdescription: Használd a Python tudásod, hogy vicces képeket
+    rajzolj teknősökkel.
   tutorial_frzn_shortdescription: Programozz, hogy csatlakozhass Annához és Elzához
     a jég varázslatos és gyönyörűséges világának felfedezésében.
-  tutorial_cocom_shortdescription: Learn Python and Javascript by coding your way
-    through Kithgard Dungeon!
+  tutorial_cocom_shortdescription: Tanuld meg a Pythont és a JavaScriptet és szabadulj
+    ki Kithgard várbörtönéből!
   tutorial_play-lab_shortdescription: Készíts egy mesét, vagy játssz a Játék laborral!
-  tutorial_boxisland_shortdescription: Take a trip on Box Island and collect all the
-    stars!
+  tutorial_boxisland_shortdescription: Utazz el a Doboz Szigetre és gyűjtsd össze
+    az összes csillagot!
   tutorial_textcomp_shortdescription: Vizsgálja meg a veszteségmentes tömörítési módszereket
     a szöveg tömörítő eszközzel
   tutorial_encryption_shortdescription: 'Bevezetés: miért kell a titkosítás, és egyszerű
     technikák titkos üzenetek feltörésére.'
-  tutorial_kanopixel_shortdescription: Code your way through iconic images from video
-    game history, from Tetris through Minecraft!
-  tutorial_foos_shortdescription: '"The Foos" is a fun, pre-reader friendly game to
-    learn about programming.'
-  tutorial_tynkerdd_shortdescription: Go on an epic quest for treasure.
-  tutorial_tynkerana_shortdescription: Create a working analog clock.
-  tutorial_vidcard_shortdescription: Learn how to make a greeting card with JavaScript!
-  tutorial_spritebox_shortdescription: Run, jump, and code your way through three
-    different worlds to collect the stars and make it to the finish line! Learn sequencing,
-    debugging and loops, and code in Swift, Java, or with Icons.
-  tutorial_tynkerch_shortdescription: Learn Javascript as you defeat viruses!
-  tutorial_lightbot_shortdescription: Program Lightbot to solve puzzles using procedures
-    and loops!
+  tutorial_kanopixel_shortdescription: Kódold át magad a videójáték történelmen, a
+    Tetristől a Minecraftig!
+  tutorial_foos_shortdescription: A Foos egy vidám, gyermekeknek szóló, programozást
+    oktató játék.
+  tutorial_tynkerdd_shortdescription: Élj át egy izgalmas kalandot és szerezd meg
+    a kincset.
+  tutorial_tynkerana_shortdescription: Készíts egy működő analóg órát.
+  tutorial_vidcard_shortdescription: Tanuld meg, hogyan készíthetsz üdvözlőlapot JavaScript-el!
+  tutorial_spritebox_shortdescription: Fuss, ugorj és kódolj, hogy megszerezd az összes
+    csillagot mindhárom világban és elérd a célvonalat! Tanulj meg sorozatokat készíteni,
+    hibakeresni és a ciklusokat, és kódolj Swift-ben, Java-ban vagy Icon-al.
+  tutorial_tynkerch_shortdescription: Tanuld meg a JavaScriptet miközben legyőzöd
+    a vírusokat!
+  tutorial_lightbot_shortdescription: Programozd be Lightbot-ot ciklusokkal, hogy
+    megoldja a puzzlet!
   tutorial_hoc_shortdescription: Placeholder for new code.org/hoc
   tutorial_code_shortdescription: Tanulj kódolni Mark Zuckerberggel és az Angry Birdsszel!
   tutorial_tinspire_shortdescription: Get students started coding on their TI-Nspire
     CX handhelds in just 10 minutes at a time.
-  tutorial_itchbounceball_shortdescription: Use ITCH - Scratch integrated with a video
-    lesson to make your own bouncing ball project
-  tutorial_vidclim_shortdescription: Combine CS & Environmental Science, and record
-    a video about climate.
-  tutorial_matlab_shortdescription: Find the closest location to meet your friends
-    using MATLAB!
-  tutorial_flap_shortdescription: Make your own game - Flappy Bird, Shark, or Submarine
-  tutorial_galaxy_shortdescription: Create your own Android Galaxy games, animations,
-    and interactive stories!
-  tutorial_inf_shortdescription: Use Play Lab to create a story or game starring Disney
-    Infinity characters.
-  tutorial_tynkersol_shortdescription: Program a moving model of the Solar System.
-  tutorial_itchg_shortdescription: Create an interactive naming game for the States
-    of Australia (Geography) with Itch (Scratch for Teachers)
-  tutorial_como_shortdescription: 'Learn and teach coding in CoffeeScript, a real-world
-    programming language. '
-  tutorial_processfound_shortdescription: 'Take look at programming in the context
-    of the visual arts. '
-  tutorial_tynkerhomo_shortdescription: Make a storytelling game about homophones!
-  tutorial_art_shortdescription: Draw cool pictures and designs with the Artist!
-  tutorial_tynkerbrick_shortdescription: Make your own version of this arcade classic.
-  tutorial_itchbio_shortdescription: Create your own game to name the parts of a biological
-    cell with ITCH (Scratch for Classrooms)
-  tutorial_itchj_shortdescription: Learn how to make a character jump and land on
-    platform with ITCH (Scratch for Teachers)
-  tutorial_tickleo_shortdescription: With Tickle, a user-friendly coding app, you
-    can easily program the Orca to swim in a number of ways by simply dragging and
-    dropping coding blocks to create a command for it to follow.
+  tutorial_itchbounceball_shortdescription: Használd a Scratch-et, hogy elkészítsd
+    a saját pattogó labdádat
+  tutorial_vidclim_shortdescription: Kombináld a számítástechinkát a környezetvédelemmel
+    és készíts videót az éghajlatokról.
+  tutorial_matlab_shortdescription: Találd meg a legközelebbi helyet, ahol találkozhatsz
+    a barátaiddal MATLAB segítségével!
+  tutorial_flap_shortdescription: Készítsd el a saját játékodat - Flappy Bird, Shark
+    vagy Submarine
+  tutorial_galaxy_shortdescription: Készítsd el a saját Android Galaxy játékod, animációd
+    és interaktív sztorid!
+  tutorial_inf_shortdescription: Használd a Play Lab-et, és készíts egy sztorit vagy
+    játékot Disney hősökkel.
+  tutorial_tynkersol_shortdescription: Programozd le a Naprendszer mozgó modelljét.
+  tutorial_itchg_shortdescription: Készíts egy interaktív játékot és nevezd meg Ausztrália
+    államait
+  tutorial_como_shortdescription: 'Tanulj és taníts kódolást CoffeeScript-ben, egy
+    valódi programnyelvben. '
+  tutorial_processfound_shortdescription: 'Tekints a programozásra a vizuális művészetek
+    szemszögéből. '
+  tutorial_tynkerhomo_shortdescription: Készíts történetmesélő játékot hasonló hangzású
+    szavakról!
+  tutorial_art_shortdescription: Rajzolj menő rajzokat és dizájnokat a Művész segítségével!
+  tutorial_tynkerbrick_shortdescription: Készíts el a saját verziódat ebből a klasszikusból.
+  tutorial_itchbio_shortdescription: Készítsd el a saját játékodat hogy megnevezd
+    egy sejt részeit ITCH-el (Scratch Osztályoknak)
+  tutorial_itchj_shortdescription: Taníts meg egy karaktert ugrálni és platformon
+    landolni ITCH-el (Scratch Tanároknak)
+  tutorial_tickleo_shortdescription: A Tickle felhasználóbarát kódoló alkalmazással
+    könnyen programozhatsz egy kardszárnyú delfint. Csak illezd egymás után a kód-elemeket,
+    és követni fogja az utasításaid.
   tutorial_hopgeo_shortdescription: 'Build your own Geometry Jumper game: dodge obstacles
     as they fly at you!'
   tutorial_tynkermult_shortdescription: Make a fun multiplication game!
@@ -1712,7 +1754,7 @@ hu:
   tutorial_kodable-unplugged_shortdescription: A fun unplugged exercise
   tutorial_scratch_shortdescription: Create your own interactive games, stories, and
     animations with Scratch!
-  tutorial_bayes_shortdescription: Grandes Heroes
+  tutorial_bayes_shortdescription: Nagy hősök
   tutorial_gumball_shortdescription: Create a Gumball story or make a game with Play
     Lab!
   tutorial_hrm_shortdescription: Program little office workers to solve puzzles. Be
@@ -2501,13 +2543,15 @@ hu:
   tutorial_allcancodeapps_shortdescription: Use the Allcancode Platform to create
     web and mobile apps from design to delivery.
   tutorial_n2y_shortdescription: Help Bitt Bott explore Earth using direction arrows.
-  tutorial_dance2019_longdescription: 'Programozz le egy Táncos bulit, és oszd meg barátaiddal. Közreműködik Katy Perry, Shawn Mendes, Panic! A diszkóban: Lil Nas X, Jonas Brothers, Nicki Minaj és még 34-en!'
-  tutorial_danceparty_longdescription: Code a Dance Party to share with your friends.
-    Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!
-  tutorial_chibitronics_longdescription: Program a paper circuit to light up your
-    own story.
-  tutorial_athlete_longdescription: Choose between making a basketball game or mix
-    and match across sports!
+  tutorial_dance2019_longdescription: 'Programozz le egy Táncos bulit, és oszd meg
+    barátaiddal. Közreműködik Katy Perry, Shawn Mendes, Panic! A diszkóban: Lil Nas
+    X, Jonas Brothers, Nicki Minaj és még 34-en!'
+  tutorial_danceparty_longdescription: Kódolj egy táncpartit és oszd meg a barátaiddal.
+    Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, és még sokan mások!
+  tutorial_chibitronics_longdescription: Programozz le egy papír áramkört, hogy felvillanyozd
+    a sztorid.
+  tutorial_athlete_longdescription: Választhatsz, hogy egy kosaras játékot készítesz,
+    vagy kombinálod a sportokat!
   tutorial_moana_longdescription: The new Disney Hour of Code tutorial uses a visual
     programming language using blocks where students simply drag and drop visual blocks
     to write code. Visual programming is a fun and easily understood way to teach
@@ -2522,8 +2566,8 @@ hu:
     Signal," a glitch affects how the characters relate to each other. In this activity,
     continue the story by making your own glitch and imagining how Gumball and his
     friends would react to it.
-  tutorial_mchoc_longdescription: Minecraft is back for the Hour of Code with a brand
-    new activity! Journey through Minecraft with code.
+  tutorial_mchoc_longdescription: A Minecraft egy vadonatúj programmal tér vissza
+    a Kódolás Órájára! Utazz végig a Minecraft világán kódok segítségével.
   tutorial_vidnews_longdescription: 'It''s the HOC News! Videos and graphics are all
     about tech, diversity, kids, and coding. Finished projects can be uploaded to
     school website as the report on the HOC itself. Teachers can encourage students
@@ -2596,9 +2640,9 @@ hu:
     You can also upload and record your own footage to personalize the experience.
 
     Created in partnership with GSGNY.
-  tutorial_spritebox_longdescription: Run, jump, and code your way through three different
-    worlds to collect the stars and make it to the finish line! Learn sequencing,
-    debugging and loops, and code in Swift, Java, or with Icons.
+  tutorial_spritebox_longdescription: Fuss, ugorj és kódolj, hogy megszerezd az összes
+    csillagot mindhárom világban és elérd a célvonalat! Tanulj meg sorozatokat készíteni,
+    hibakeresni és a ciklusokat, és kódolj Swift-ben, Java-ban vagy Icon-al.
   tutorial_tynkerch_longdescription: Save the computer from a malicious virus! You'll
     have to hack your way through the system by deleting viruses, opening doors, solving
     mazes, and navigating through the portals. Watch out for viruses and glitches!
@@ -2646,8 +2690,8 @@ hu:
     With Pocket Code we aim to inspire kids, teenagers, and young adults to create
     their very own games, animations, and interactive stories directly on their smartphones.
     \n"
-  tutorial_inf_longdescription: Use Play Lab to create a story or game starring Disney
-    Infinity characters.
+  tutorial_inf_longdescription: Használd a Play Lab-et, és készíts egy sztorit vagy
+    játékot Disney hősökkel.
   tutorial_tynkersol_longdescription: Program an interactive model of our Solar System.
     This project comes with step-by-step instructions that guide you through creating
     a simulation with planets orbiting the Sun. Then add facts about each planet that
@@ -2673,7 +2717,7 @@ hu:
     says a word that is a homophone, ask the player which homophone is the correct
     word for that context. The player better know their homophones, or else the dialog
     won't make any sense!
-  tutorial_art_longdescription: Draw cool pictures and designs with the Artist!
+  tutorial_art_longdescription: Rajzolj menő rajzokat és dizájnokat a Művész segítségével!
   tutorial_tynkerbrick_longdescription: Használja Tynker a fizikai motor, hogy a saját,
     személyre szabott változata a klasszikus arcade játék. Kezdjük azzal, programozás
     a lapát, hogy mozogjon, amíg a nyíl gombok megnyomása, majd adjunk hozzá egy labdát,
@@ -2697,9 +2741,9 @@ hu:
     This uses a cartesian coordinate system so you'll get to learn a little about screen coordinates here.
 
     Enjoy learning all about jumping with Itch! Headphones are recommended.
-  tutorial_tickleo_longdescription: With Tickle, a user-friendly coding app, you can
-    easily program the Orca to swim in a number of ways by simply dragging and dropping
-    coding blocks to create a command for it to follow.
+  tutorial_tickleo_longdescription: A Tickle felhasználóbarát kódoló alkalmazással
+    könnyen programozhatsz egy kardszárnyú delfint. Csak illezd egymás után a kód-elemeket,
+    és követni fogja az utasításaid.
   tutorial_hopgeo_longdescription: Készítse el saját verzióját a rendkívül megnyerő
     Geometria Jumper játék Ugróiskola nyílt végű programozási környezet! Az út mentén,
     majd szert gyakorlati tapasztalat fogalmak, mint a sorozat, ciklusokat, változókat,
@@ -3476,7 +3520,7 @@ hu:
     games, stories, animations — and share them with your friends. To get started,
     animate your name, create a dance scene, or make a hide-and-seek game featuring
     Cartoon Network's We Bare Bears!
-  tutorial_bayes_longdescription: Grandes Heroes
+  tutorial_bayes_longdescription: Nagy hősök
   tutorial_gumball_longdescription: Create a story or make a game with Play Lab! Make
     Gumball characters move, make sounds, score points, and even throw bananas!
   tutorial_hrm_longdescription: |-
@@ -4963,9 +5007,9 @@ hu:
     Each of the six activities includes simple directions that are supported with
     symbols from the n2y® SymbolStix PRIME® collection. The symbols help non-readers
     and beginning readers understand and follow the directions.
-  tutorial_dance2019_language: Arabic, Chinese, Czech, Danish, Dutch, English, Finnish,
-    French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean,
-    Malay, Polish, Portuguese, and 10 more!
+  tutorial_dance2019_language: Arab, kínai, cseh, dán, holland, angol, finn, francia,
+    német, görög, hindi, magyar, indonéz, olasz, japán, koreai, maláj, lengyel, portugál
+    és még 10 további nyelven!
   tutorial_danceparty_language: English, Arabic, Catalan, Chinese, Czech, Danish,
     Dutch, Finnish, French, German, Greek, Hungarian, Italian, Japanese, Korean, Norwegian,
     Polish, Portuguese, Russian, Spanish, Swedish, Thai, Turkish, and Vietnamese
@@ -5080,7 +5124,7 @@ hu:
   tutorial_frogger_language: English, Spanish, Italian, French, German, and Dutch
   tutorial_tynkereco_language: English only
   tutorial_mitedarc_language: English only
-  tutorial_khan_language: English, Portuguese (Brazil), Spanish
+  tutorial_khan_language: Czech, English, Portuguese (Brazil), Spanish
   tutorial_tynkerd_language: English only
   tutorial_cdmy_language: English, Spanish
   tutorial_codestersdance_language: English, Spanish
@@ -5293,8 +5337,8 @@ hu:
   tutorial_wolframp_language: English only
   tutorial_wolframn_language: English only
   tutorial_soloweb_language: English only
-  tutorial_khanweb_language: English, Portuguese (Brazil), Spanish
-  tutorial_khandata_language: English, Portuguese (Brazil), Spanish
+  tutorial_khanweb_language: Czech, English, Portuguese (Brazil), Spanish
+  tutorial_khandata_language: Czech, English, Portuguese (Brazil), Spanish
   tutorial_robomeshiq_language: English only
   tutorial_googlelogo_language: English only
   tutorial_playtune_language: English only
@@ -8225,6 +8269,7 @@ hu:
   tutorial_modtraits_name: Character Traits with GoPiGo
   tutorial_mee_name: 'Minecraft Kódolás Órája: Az MI lehetőségei '
   tutorial_kuborobo_name: KUBO Robotics Coding Routes
+  tutorial_ai-oceans_name: MI az Óceánokért
   tutorial_scratchimagine_longdescription: Imagine a world where anything is possible,
     then bring it to life with Scratch!
   tutorial_codesterspsa_longdescription: Learn the basics of coding in Python while
@@ -8410,8 +8455,9 @@ hu:
     from basic types and variables to functions. Each lesson features an in depth
     explanation of what each line of code does in order to ensure the students understand
     what is happening. Each line of code in the lesson is guided for student success.
-  tutorial_ccfirewall_longdescription: Learn how to program your own shareable game!
-    Use code to teach a Hero magic spells to defeat waves and waves of baddies.
+  tutorial_ccfirewall_longdescription: Tanuld meg hogyan készítheted el a saját megosztható
+    játékodat! Használj programkódot és tanítsd meg Hero-t hogyan tudja varázslattal
+    visszatartani a rosszakat.
   tutorial_htmljs_longdescription: Meet your new boss, Muffin the Cat, who is getting
     ready for a CatFashion Expo. He needs a program to track the calories and is asking
     you to help. In this fun and engaging activity, you will learn the basics of JavaScript
@@ -8588,6 +8634,9 @@ hu:
   tutorial_kuborobo_longdescription: In this activity, students put their logic and
     sequencing skills to the test as they use the Tagtiles to program their KUBO robot
     to travel to various locations on a printed map.
+  tutorial_ai-oceans_longdescription: Computer science is about so much more than
+    coding! Learn about AI, machine learning, training data, and bias, while exploring
+    ethical issues and how AI can be used to address world problems.
   tutorial_scratchimagine_language: English, Spanish
   tutorial_codesterspsa_language: Magyar
   tutorial_googlehero_language: English, Spanish
@@ -8690,6 +8739,7 @@ hu:
     (egyszerűsített), Kínai (hagyományos), Török, Lengyel, indonéz, ukrán, görög,
     bolgár, magyar, finn, dán, svéd, norvég, szlovák, Cseh, holland
   tutorial_kuborobo_language: English, Spanish
+  tutorial_ai-oceans_language: Magyar
   tutorial_scratchimagine_string_detail_grades: 2. osztálytól
   tutorial_codesterspsa_string_detail_grades: 6. osztálytól
   tutorial_googlehero_string_detail_grades: 2-tól 8. osztályig
@@ -8751,7 +8801,7 @@ hu:
   tutorial_pbstorytelling_string_detail_grades: 6. osztálytól
   tutorial_kibosnow_string_detail_grades: Pre-reader-Grade 5
   tutorial_kibohappy_string_detail_grades: Pre-reader-Grade 5
-  tutorial_rubylove_string_detail_grades: Pre-reader-Grade 8
+  tutorial_rubylove_string_detail_grades: Óvodától 8. osztályig
   tutorial_spherosmiles_string_detail_grades: 2. osztálytól
   tutorial_spherobaby_string_detail_grades: Nem olvasótól 8. osztályig
   tutorial_toxarchitect_string_detail_grades: 6. osztálytól
@@ -8771,7 +8821,7 @@ hu:
   tutorial_rootcodebreak_string_detail_grades: 2-tól 8. osztályig
   tutorial_microbit14_string_detail_grades: 2-tól 8. osztályig
   tutorial_barobomoon_string_detail_grades: 6. osztálytól
-  tutorial_eddog_string_detail_grades: Grades 2-6
+  tutorial_eddog_string_detail_grades: 2-tól 6. osztályig
   tutorial_microbit15_string_detail_grades: 2-tól 8. osztályig
   tutorial_unity_string_detail_grades: 9. osztálytól
   tutorial_blockscadtarget_string_detail_grades: 6. osztálytól
@@ -8787,7 +8837,8 @@ hu:
   tutorial_rpisensehat_string_detail_grades: 6. osztálytól
   tutorial_modtraits_string_detail_grades: 2. osztálytól
   tutorial_mee_string_detail_grades: 2. osztálytól
-  tutorial_kuborobo_string_detail_grades: Pre-reader - Grades 8
+  tutorial_kuborobo_string_detail_grades: Óvodától 8. osztályig
+  tutorial_ai-oceans_string_detail_grades: Grades 3+
   tutorial_scratchimagine_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_codesterspsa_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_googlehero_string_platforms: All modern browsers, Android tablet, iPad
@@ -8800,13 +8851,13 @@ hu:
   tutorial_cacolor_string_platforms: Minden modern böngésző
   tutorial_kodablebeach_string_platforms: All modern browsers, iPad, iPhone
   tutorial_tynkeren_string_platforms: All modern browsers, iPad
-  tutorial_tynkerjavapro_string_platforms: 'All modern browsers '
+  tutorial_tynkerjavapro_string_platforms: 'Minden modern böngésző '
   tutorial_grasshopperhack_string_platforms: Minden modern böngésző
-  tutorial_pbskids_string_platforms: Android tablet, iPad, Windows phone, Android
-    phone, iPhone, Game console app
+  tutorial_pbskids_string_platforms: Android tablet, iPad, Windows telefon, Android
+    telefon, iPhone, Játékkonzol alkalmazás
   tutorial_nclabdata_string_platforms: Minden modern böngésző
   tutorial_grasshopperphoto_string_platforms: Minden modern böngésző
-  tutorial_tynkerpyland_string_platforms: 'All modern browsers '
+  tutorial_tynkerpyland_string_platforms: 'Minden modern böngésző '
   tutorial_codeitimages_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_hyperpadenemy_string_platforms: iPad
   tutorial_tynkerpro_string_platforms: All modern browsers, iPad
@@ -8840,7 +8891,7 @@ hu:
   tutorial_ozaria_string_platforms: Minden modern böngésző
   tutorial_ttovum_string_platforms: Chrome, Firefox
   tutorial_ttpassage_string_platforms: Chrome, Firefox
-  tutorial_tynkerhtmlen_string_platforms: 'All modern browsers '
+  tutorial_tynkerhtmlen_string_platforms: 'Minden modern böngésző '
   tutorial_ttfrog_string_platforms: Chrome, Firefox
   tutorial_codemojijava_string_platforms: Minden modern böngésző
   tutorial_ccfirewall_string_platforms: All modern browsers, iPad
@@ -8852,7 +8903,7 @@ hu:
   tutorial_pbstorytelling_string_platforms: Minden modern böngésző
   tutorial_kibosnow_string_platforms: KIBO Robot Kit
   tutorial_kibohappy_string_platforms: KIBO Robot Kit
-  tutorial_rubylove_string_platforms: All modern browsers, Unplugged
+  tutorial_rubylove_string_platforms: Modern böngészők, Unplugged
   tutorial_spherosmiles_string_platforms: Minden modern böngésző, Android tablet,
     iPad, Android telefon, iPhone
   tutorial_spherobaby_string_platforms: Minden modern böngésző, Android tablet, iPad,
@@ -8869,8 +8920,8 @@ hu:
   tutorial_edshapeup_string_platforms: Minden modern böngésző
   tutorial_ozocolor_string_platforms: Unplugged
   tutorial_kcjanimals_string_platforms: Minden modern böngésző
-  tutorial_icomputeeggs_string_platforms: All modern browers, Android phone, Android
-    tablet, iPad, iPhone
+  tutorial_icomputeeggs_string_platforms: Minden modern böngésző, Android telefonok
+    és tabletek, iPad, iPhone
   tutorial_rootunplugged_string_platforms: Unplugged
   tutorial_rgtreasure_string_platforms: Unplugged
   tutorial_peblioportraits_string_platforms: Chrome
@@ -8888,13 +8939,15 @@ hu:
   tutorial_kcjmerry_string_platforms: Minden modern böngésző
   tutorial_modvariables_string_platforms: All modern browsers, Android tablet, Android
     phone, iPad, iPhone
-  tutorial_codestersmicro_string_platforms: 'All modern browsers '
-  tutorial_codestersdata_string_platforms: 'All modern browsers '
+  tutorial_codestersmicro_string_platforms: 'Minden modern böngésző '
+  tutorial_codestersdata_string_platforms: 'Minden modern böngésző '
   tutorial_ikodexmas_string_platforms: Minden modern böngésző
   tutorial_rpisensehat_string_platforms: Minden modern böngésző
   tutorial_modtraits_string_platforms: Minden modern böngésző
   tutorial_mee_string_platforms: Windows, iPad, MacOS
   tutorial_kuborobo_string_platforms: Unplugged
+  tutorial_ai-oceans_string_platforms: All modern browsers, modern Android tablets,
+    iPads, modern Android phones, iPhones
   tutorial_scratchimagine_string_detail_platforms: ''
   tutorial_codesterspsa_string_detail_platforms: ''
   tutorial_googlehero_string_detail_platforms: ''
@@ -8958,13 +9011,13 @@ hu:
   tutorial_kibohappy_string_detail_platforms: KIBO Robot Kit
   tutorial_rubylove_string_detail_platforms: ''
   tutorial_spherosmiles_string_detail_platforms: Sphero BOLT
-  tutorial_spherobaby_string_detail_platforms: Sphero SPRK+, Sphero Mini, or Sphero
+  tutorial_spherobaby_string_detail_platforms: Sphero SPRK+, Sphero Mini, vagy Sphero
     BOLT
   tutorial_toxarchitect_string_detail_platforms: ''
   tutorial_idodge_string_detail_platforms: ''
   tutorial_firiacodebot_string_detail_platforms: CodeBot robot
   tutorial_modlighthouse_string_detail_platforms: Cubelets Robot Blocks
-  tutorial_spherogreen_string_detail_platforms: Sphero BOLT, Sphero SPRK+, or Sphero
+  tutorial_spherogreen_string_detail_platforms: Sphero BOLT, Sphero SPRK+, vagy Sphero
     Mini
   tutorial_ozopopstar_string_detail_platforms: Ozobot
   tutorial_eddesign_string_detail_platforms: Edison robot
@@ -8977,7 +9030,7 @@ hu:
   tutorial_peblioportraits_string_detail_platforms: ''
   tutorial_rootcodebreak_string_detail_platforms: Root robot
   tutorial_microbit14_string_detail_platforms: micro:bit
-  tutorial_barobomoon_string_detail_platforms: Barobo Arduino Starter Kit
+  tutorial_barobomoon_string_detail_platforms: Barobo Arduino kezdő csomag
   tutorial_eddog_string_detail_platforms: Edison robot
   tutorial_microbit15_string_detail_platforms: micro:bit
   tutorial_unity_string_detail_platforms: Unity software
@@ -8985,8 +9038,8 @@ hu:
   tutorial_tcadicicles_string_detail_platforms: ''
   tutorial_blockscadscale_string_detail_platforms: ''
   tutorial_tcadloops_string_detail_platforms: ''
-  tutorial_phidgets_string_detail_platforms: Phidgets Getting Started Kit, Phidgets
-    Distance Sensors.
+  tutorial_phidgets_string_detail_platforms: Phidgets kezdő csomag, Phidgets távolság
+    érzékelők.
   tutorial_kcjmerry_string_detail_platforms: BBC micro:bit
   tutorial_modvariables_string_detail_platforms: Cubelets Robot Blocks
   tutorial_codestersmicro_string_detail_platforms: BBC micro:bit
@@ -8996,6 +9049,7 @@ hu:
   tutorial_modtraits_string_detail_platforms: GoPiGo
   tutorial_mee_string_detail_platforms: ''
   tutorial_kuborobo_string_detail_platforms: KUBO robot
+  tutorial_ai-oceans_string_detail_platforms: ''
   tutorial_scratchimagine_string_detail_programming_languages: Blokk programozás
   tutorial_codesterspsa_string_detail_programming_languages: Python
   tutorial_googlehero_string_detail_programming_languages: Blokk programozás
@@ -9005,27 +9059,27 @@ hu:
   tutorial_bananatales_string_detail_programming_languages: Python
   tutorial_scratchtales_string_detail_programming_languages: Blokk programozás
   tutorial_msemoji_string_detail_programming_languages: JavaScript, Python, Lua, CoffeeScript
-  tutorial_cacolor_string_detail_programming_languages: Computational Thinking focused
-    so no language
+  tutorial_cacolor_string_detail_programming_languages: Informatikai gondolkodásra
+    fókuszáló, tehát nem nyelv
   tutorial_kodablebeach_string_detail_programming_languages: Language independent
     (can be taught in multiple languages)
   tutorial_tynkeren_string_detail_programming_languages: Blokk programozás
   tutorial_tynkerjavapro_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_grasshopperhack_string_detail_programming_languages: JavaScript
   tutorial_pbskids_string_detail_programming_languages: Blokk programozás
-  tutorial_nclabdata_string_detail_programming_languages: Structured Query Language
-    (SQL), specifically PostgreSQL
+  tutorial_nclabdata_string_detail_programming_languages: Strukturált lekérdezőnyelv
+    (Structured Query Language -SQL), kiváltképp PostgreSQL
   tutorial_grasshopperphoto_string_detail_programming_languages: JavaScript
   tutorial_tynkerpyland_string_detail_programming_languages: Python
   tutorial_codeitimages_string_detail_programming_languages: Blokk programozás
-  tutorial_hyperpadenemy_string_detail_programming_languages: hyperPad Visual Programming
+  tutorial_hyperpadenemy_string_detail_programming_languages: hyperPad vizuális programozás
   tutorial_tynkerpro_string_detail_programming_languages: Blokk programozás, JavaScript
   tutorial_trashtag_string_detail_programming_languages: Blokk programozás
-  tutorial_casiege_string_detail_programming_languages: Security theory based
+  tutorial_casiege_string_detail_programming_languages: Biztonsági tételeken alapuló
   tutorial_thunkableyeet_string_detail_programming_languages: Blokk programozás
   tutorial_vidcodedeal_string_detail_programming_languages: JavaScript
   tutorial_codehsgeno_string_detail_programming_languages: Python
-  tutorial_hyperpadpong_string_detail_programming_languages: hyperPad Visual Programming
+  tutorial_hyperpadpong_string_detail_programming_languages: hyperPad vizuális programozás
   tutorial_tynkerland_string_detail_programming_languages: Blokk programozás, JavaScript
   tutorial_trinketgirl_string_detail_programming_languages: Python
   tutorial_rpimosquito_string_detail_programming_languages: Scratch
@@ -9072,7 +9126,8 @@ hu:
   tutorial_spherosmiles_string_detail_programming_languages: Blokk programozás, JavaScript
   tutorial_spherobaby_string_detail_programming_languages: Blokk programozás, JavaScript
   tutorial_toxarchitect_string_detail_programming_languages: JavaScript
-  tutorial_idodge_string_detail_programming_languages: Simplified version of JavaScript
+  tutorial_idodge_string_detail_programming_languages: A JavaScript egyszerűsített
+    verziója
   tutorial_firiacodebot_string_detail_programming_languages: Python
   tutorial_modlighthouse_string_detail_programming_languages: Language independent
     (can be taught in multiple languages)
@@ -9097,8 +9152,9 @@ hu:
   tutorial_tcadicicles_string_detail_programming_languages: Blokk programozás
   tutorial_blockscadscale_string_detail_programming_languages: Blokk programozás
   tutorial_tcadloops_string_detail_programming_languages: Blokk programozás
-  tutorial_phidgets_string_detail_programming_languages: Java, Phidgets support ALL
-    major programming languages. Can easily adapt this project to another language/environment.
+  tutorial_phidgets_string_detail_programming_languages: A Java, Phidgets minden vezető/elterjedt
+    programozási nyelvet támogat. Ezért ez a projekt könnyen átültethető más programozási
+    környezetbe.
   tutorial_kcjmerry_string_detail_programming_languages: Blokk programozás
   tutorial_modvariables_string_detail_programming_languages: Language independent
     (can be taught in multiple languages)
@@ -9108,8 +9164,9 @@ hu:
   tutorial_rpisensehat_string_detail_programming_languages: Python
   tutorial_modtraits_string_detail_programming_languages: Blokk programozás
   tutorial_mee_string_detail_programming_languages: Blokk programozás
-  tutorial_kuborobo_string_detail_programming_languages: Tagtiles that students piece
-    together
+  tutorial_kuborobo_string_detail_programming_languages: A TagTile-k, amiket a tanulók
+    összeraknak
+  tutorial_ai-oceans_string_detail_programming_languages: AI and Machine Learning
   school_not_found_heading: Nem találtuk meg iskoládat. Kérjük írj róla több információt!
   school_name: Iskola neve
   school_name_error: Iskolanév megadása kötelező.
@@ -9118,31 +9175,31 @@ hu:
   school_zip: Irányítószám
   school_zip_error: Irányítószám megadása kötelező.
   census_thanks: Köszönjük, hogy jelentkezett!
-  census_header: Please take a few minutes to tell us about your school (Optional).
-  census_heading: Please share how much coding/computer programming is taught at this
-    school. Assume for the purposes of the following questions that coding/computer
-    programming does not include HTML/CSS, Web design, or how to use apps.
-  census_how_many_hoc: How many students will do an Hour of Code?
-  census_how_many_after_school: How many students do computer programming in an after-school
-    program?
-  census_how_many_ten_hours: How many students take at least 10 hours of computer
-    programming integrated into a non-Computer Science course (such as TechEd, Math,
-    Science, Art, Library or general classroom/homeroom)?
-  census_how_many_twenty_hours: How many students take a semester or year-long computer
-    science course that includes at least 20 hours of coding/computer programming?
-  census_other_cs: This school teaches other computing classes that do not include
-    at least 20 hours of coding/computer programming. (For example, learning to use
-    applications, computer literacy, web design, HTML/CSS, or other)
-  census_connection: What is your connection to this school?
-  census_pledge: I pledge to expand computer science offerings at my school, and to
-    engage a diverse group of students, to bring opportunity to all.
-  census_followup_heading: Your school offers a semester or year-long computer science
-    class! What topics does this course include?
+  census_header: Pár mondatban írd le az iskoládat (nem kötelező).
+  census_heading: Körülbelül mekkora volumenben tanítanak programozást az iskoládban?
+    Kérlek a HTML/CSS, honlap/web dizájn és felhasználói szintű oktatást ne számold
+    ide.
+  census_how_many_hoc: Hány diák vesz majd részt az Hour of Code programban?
+  census_how_many_after_school: Hány diák tanul programozást különóra vagy szakkör
+    formájában?
+  census_how_many_ten_hours: Hány diák látogat olyan nem informatikai órát, mely legalább
+    10 tanórányi programozást foglal magába (például matematika, általános tudományok,
+    technika, stb.)?
+  census_how_many_twenty_hours: Hány diák vesz részt olyan féléves, vagy éves informatikai
+    képzésben, amely legalább 20 tanórányi programozást kínál?
+  census_other_cs: Ebben az iskolában nem elérhető olyan informatikai képzés mely
+    legalább 20 tanórányi programozást tartalmazna. Ezzel szemben például egyes programok
+    kezelésének elsajátítására, honlap készítésre, stb. fókuszálunk.
+  census_connection: Milyen kapcsolatban vagy ezzel az iskolával?
+  census_pledge: Megígérem, hogy iskolám minden diákja számára elérhetővé teszem,
+    és bővítem az informatikai képzések kínálatát, hogy mindenki lehetőséget kaphasson.
+  census_followup_heading: Milyen témákról tanulhatsz az iskoládban elérhető informatika
+    órákon/különórákon?
   census_followup_frequency: Milyen gyakran találkozik hetente ez az osztály?
   less_than_one: "< 1 óra / hét"
   one_to_three: 1-3 óra / hét
   three_plus: 3 + óra / hét
-  census_followup_more: Please tell us more about this course.
+  census_followup_more: Kérlek, oszd meg velünk a véleményed erről a kurzusról.
   census_followup_more_placeholder: Például az osztály neve, milyen gyakran találkozik,
     írd le mit tanítanak.
   census_topics_blocks: Blokkalapú programozás

@@ -47,7 +47,7 @@ Ta med hodetelefoner til elevene dine, eller be de ta med sine egne, dersom oppl
 
 - Forklar hvordan informasjonsteknologi påvirker livene våre. Bruk gjerne eksempler som både jenter og gutter kan kjenne seg igjen i (snakk om hvordan teknologi kan redde liv, forenkle hverdagen vår, om sosiale medier og kommunikasjon, o. l.).
 - Gå sammen i klassen om å lage en liste over ting vi bruker i hverdagen, som inneholder programkode.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Se tips for å få jenter interessert i dataprogrammering [her]({{ urls/girls }}).
 
 ## 6. Koding!
 
@@ -82,7 +82,7 @@ Ta med hodetelefoner til elevene dine, eller be de ta med sine egne, dersom oppl
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [Skriv ut diplomer]({{ urls/certificates }}) fo dine deltakere.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
 - [Bestill t-skjorter ](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more)til skolen din.
 - Del bilder og videoer av Kodetimen-arrangement på sosiale medier. Bruk emneknaggene #kodetimen, #HourOfCode og @codeorg så vi også kan dra nytte av dine erfaringer. Husk å spørre barna om tillatelse til å dele bilder der de er med!
