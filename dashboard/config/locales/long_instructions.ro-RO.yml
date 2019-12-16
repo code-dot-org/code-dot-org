@@ -1069,39 +1069,81 @@ ro-RO:
         **Folosește tastele pentru a-l face pe Robot să execute mișcările de cădere-aplaudare-cădere-aplaudare cât de repede poți!**"
       Dance_Party_12: Dezlănțuiește-te! Creează un dans al tău pe care să-l dansezi
         cu prietenii.
-      Dance_Party_extras_alternate_2019: |-
-        # Să intrăm  în formație!
+      Dance_Party_extras_alternate_2019: "# Înainte și înapoi!\n\nUneori poți dori
+        să creezi un tipar de mișcări de dans alese. Acest nou bloc te lasă să faci
+        asta. \n\n<xml><block type=\"Dancelab_alternateMoves\"><title name=\"GROUP\">sprites</title><title
+        name=\"N\">2</title><title name=\"MOVE1\">MOVES.Roll</title><title name=\"MOVE2\">MOVES.ClapHigh</title></block></xml>
+        \n\nMișcările de mai sus pe care le alegi se vor repeta secvențial mereu.
+        \n\n-   Creează o rutină alternantă pentru dansatorul principal din față!
+        \n-   Folosește diferite numere pentru a schimba viteza cu care mișcările
+        alternează. Încearcă „1” sau „0,5” pentru a alterna mai rapid!"
+      Dance_Party_extras_battle: |-
+        # Dans în echipe
 
-        Vezi acest dans care folosește blocul <xml><block type="Dancelab_alternateMoves"><title name="GROUP">sprites</title><title name="N">2</title><title name="MOVE1">MOVES.Roll</title><title name="MOVE2">MOVES.ClapHigh</title></block></xml> pentru a modifica formația dansatorilor de rezervă pe parcursul dansului. Încearcă una dintre aceste idei pentru a dezvolta dansul:
+        Aici este un dans între 2 echipe. Tastele săgeţi controlează unul dintre dansatori iar tastele "w,a,s,d" controlează celălalt dansator. Fă un dans impreună cu un prieten şi încearcă să îmbunătăţeşti acest dans.
 
-        -   Creează un al doilea grup de dansatori cu un aranjament diferit
-        -   Modifică aranjamentul la apăsarea unei taste
-        -   Modifică o proprietate când dansatorii schimbă formația
-      Dance_Party_extras_battle: "\"# Echipe de dans                                                                                                                                            \n\nIată
-        un dans între două echipe. Tastele cu săgeată controlează unul dintre dansatori,
-        iar tastele „w,a,s,d” îl controlează pe celălalt. Fă un dans cu un prieten,
-        apoi încearcă să îmbunătățești acest dans.\n\n-   Adaugă mai multe taste pentru
-        a controla dansurile                                                                              \n-
-        \  Fă ca dansatorii de rezervă să răspundă și la apăsarea tastelor                                                          \n-
-        \  Alternează dansatorii la fiecare 4 măsuri setându-le vizibilitatea\""
-      Dance_Party_extras_battle_2019: "\"# Echipe de dans                                                                                                                                            \n\nIată
-        un dans între două echipe. Tastele cu săgeată controlează unul dintre dansatori,
-        iar tastele „w,a,s,d” îl controlează pe celălalt. Fă un dans cu un prieten,
-        apoi încearcă să îmbunătățești acest dans.\n\n-   Adaugă mai multe taste pentru
-        a controla dansurile                                                                              \n-
-        \  Fă ca dansatorii de rezervă să răspundă și la apăsarea tastelor                                                          \n-
-        \  Alternează dansatorii la fiecare 4 măsuri setându-le vizibilitatea\""
-      Dance_Party_extras_every_beat: "\"# Sfert de note                                                                                                                                                     \n\nMajoritatea
-        dansurilor noastre folosesc măsuri întregi, dar fiecare măsură este alcătuită
-        din 4 sferturi de note. Acest dans folosește `toate măsurile 0,25` pentru
-        a face dansatorul să aplaude la fiecare sfert de notă.\n\nAcest dans mai folosește
-        un bloc _condițional_ pentru a controla momentul în care blocul `toate măsurile
-        0,25` modifică dansul. Încearcă să modifici cifrele din blocul condițional
-        pentru a vedea cum se modifică dansul.\n\n-   Experimentează cu alte durate
-        ale notelor (ex. 0,5 pentru o doime sau 0,125 pentru o optime).\n-   Adaugă
-        niște evenimente `după măsură`.\n-   Schimbă „măsurile” în „secunde” și încearcă
-        să-ți cronometrezi dansurile în acest fel.\"."
-      Dance_Party_extras_every_beat_2019: |-
+        -   Adaugă mai multe taste să controlezi dansatorii
+        -   Fă ca dansatorul de rezervă să răspundă şi el atunci când tastele sunt apăsate
+        -   Alternează dansatorul o dată la 4 măsuri configurând vizibilitatea lui
+      Dance_Party_extras_battle_2019: |-
+        # Dans în echipe
+
+        Aici este un dans între 2 echipe. Tastele săgeţi controlează unul dintre dansatori iar tastele "w,a,s,d" controlează celălalt dansator. Fă un dans impreună cu un prieten şi încearcă să îmbunătăţeşti acest dans.
+
+        -   Adaugă mai multe taste să controlezi dansatorii
+        -   Fă ca dansatorul de rezervă să răspundă şi el atunci când tastele sunt apăsate
+        -   Alternează dansatorul o dată la 4 măsuri configurând vizibilitatea lui
+      Dance_Party_extras_every_beat: |-
+        # Sfert de note
+
+        Majoritatea dansatorilor au utilizat toate măsurile, dar fiecare măsură este făcută din 4 sferturi de note. Acest dans utilizează 'la fiecare 0.25 măsuri' pentru a face dansatorul să bată din palme pe fiecare sfert de notă.
+
+        Acest dans foloseşte şi un bloc de tip _condiţional_ pentru a controla cînd blocul 'la fiecare 0.25 măsuri' schimbă dansul. Încearcă să schimbi numărul din blocul condiţional pentu a vedea cum modifică acesta dansul.
+
+        -   Experimentează cu alte durate de timp pentru note (cum ar fi 0.5 pentru jumătate de notă sau 0.125 pentru o optime).
+        -   Adaugă nişte evenimente de tip `după măsură`.
+        -   Schimbă "măsuri" cu "secunde" şi încearcă să sincronizezi dansul astfel.
+      Dance_Party_extras_layout: "# Să trecem în formație!\n\nVezi acest dans care
+        folosește blocul `aranjament` pentru a modifica formația dansatorilor de rezervă
+        pe durata dansului. Încearcă una dintre aceste idei pentru a dezvolta dansul:\n\n-
+        \  Creează un al doilea grup de dansatori cu un aranjament diferit                                                          \n-
+        \  Modifică aranjamentul la apăsarea unei taste                                                                                         \n-
+        \  Modifică o proprietate când dansatorii schimbă formația"
+      Dance_Party_extras_layout_2019: |-
+        # Hai să ne formăm!
+
+        Verificați acest dans care folosește blocul <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> pentru a schimba formarea dansatorilor de rezervă pe tot parcursul dansului. Încercați una dintre aceste idei pentru a o extinde:
+
+        -   Creați un al doilea grup de dansatori într-o dispunere diferită
+        -   Modificați aspectul când este apăsată o tastă
+        -   Modificați o proprietate atunci când dansatorii schimbă formația
+      Dance_Party_extras_mixed_2019: "# Mai multe butoane\n\nAcest dans te lasă să
+        controlezi în timp real proprietățile dansatorilor atunci când dansează automat.
+        Încearcă să schimbi alte proprietăți atunci când apeși butoanele. De exemplu:
+        \n\n-   Randomizează culoarea dansatorului când apeși „jos”. \n-   Adaugă
+        un grup de dansatori cu o așezare aleatorie când apeși „spațiu”."
+      Dance_Party_extras_on_beat: |-
+        # Sunete joase, medii şi înalte
+
+        Acest dans fooseşte evenimente de tip "vârf" pentru a declanşa nou cod când sunetele se aud mai tare în timpul muzicii. Încearcă să experimentezi cu diferite câtece pentru a vedea cum modifică ele dansul.
+      Dance_Party_extras_on_beat_2019: |-
+        # Sunete joase, medii şi înalte
+
+        Acest dans fooseşte evenimente de tip "vârf" pentru a declanşa nou cod când sunetele se aud mai tare în timpul muzicii. Încearcă să experimentezi cu diferite câtece pentru a vedea cum modifică ele dansul.
+      Dance_Party_extras_speed: |-
+        # Măreşte viteza, Micşorează viteza
+
+        Acest ultim dans utilizează blocul `setează viteza` pentru a controla cât de repede se mişcă fiecare dansator. Încearcă să experimentezi cu diferite viteze în diferite puncte din cântec. Simte-te liber să încerci pe acest dan, sau întoarce-te la oricare dintre dansurile anterioare pentru a le face şi mai interesante.
+      Dance_Party_extras_speed_2019: |-
+        # Grăbește-l, încetinește-l
+
+        Acest dans de final folosește blocul <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> pentru a controla cât de repede se mișcă fiecare dansator. Experimentează cu diferite viteze pe parcursul mai multor momente din cântec. Improvizează liber la acest dans sau revino la oricare dintre dansurile anterioare pentru a-l face și mai tare.
+      Dance_Party_extras_visible: "# Unde au dispărut?\n\nAcest dans arată și ascunde
+        două grupuri diferite de dansatori. Vizionează-l și apoi adaugă ceva personal.\n\n-
+        \  Adaugă un alt grup de dansatori                                                                                                                  \n-
+        \  Arată și ascunde dansatori folosind tastele cu săgeată                                                                          \n-
+        \  Ascunde toți dansatorii și treci la un efect de fundal captivant"
+      Dance_Party_extras_visible_2019: |-
         # Sfert de note
 
         Majoritatea dansurilor noastre folosesc măsuri întregi, dar fiecare măsură este alcătuită din 4 sferturi de note. Acest dans folosește [blockly block][0] pentru a-l face pe dansator să aplaude la fiecare sfert de notă după a cincea măsură.
@@ -1110,38 +1152,6 @@ ro-RO:
 
         -   Experimentează cu alte durate ale notelor (ex. 0,5 pentru o doime sau 0,125 pentru o optime).
         -   Adaugă alte evenimente.
-      Dance_Party_extras_layout: "\"# Să trecem în formație!\n\nVezi acest dans care
-        folosește blocul `aranjament` pentru a modifica formația dansatorilor de rezervă
-        pe durata dansului. Încearcă una dintre aceste idei pentru a dezvolta dansul:\n\n-
-        \  Creează un al doilea grup de dansatori cu un aranjament diferit                                                          \n-
-        \  Modifică aranjamentul la apăsarea unei taste                                                                                         \n-
-        \  Modifică o proprietate când dansatorii schimbă formația\""
-      Dance_Party_extras_on_beat: |-
-        # Sunete joase, medii şi înalte
-
-        Acest dans folosește evenimente „de vârf” pentru a activa codul când diferite părți ale melodiei devin puternice. Încearcă să improvizezi cu diferite cântece pentru a vedea cum se modifică dansul.
-      Dance_Party_extras_on_beat_2019: |-
-        # Sunete joase, medii şi înalte
-
-        Acest dans folosește evenimente „de vârf” pentru a activa codul când diferite părți ale melodiei devin puternice. Încearcă să improvizezi cu diferite cântece pentru a vedea cum se modifică dansul.
-      Dance_Party_extras_speed: |-
-        # Măreşte viteza, Micşorează viteza
-
-        Acest dans de final folosește blocul `setare viteză` pentru a controla cât de repede se mișcă fiecare dansator. Experimentează cu diferite viteze în diferite momente ale cântecului. Improvizează liber la acest dans sau revino la oricare dintre dansurile anterioare pentru a-l face și mai tare.
-      Dance_Party_extras_speed_2019: |-
-        # Grăbește-l, încetinește-l
-
-        Acest dans de final folosește blocul <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> pentru a controla cât de repede se mișcă fiecare dansator. Experimentează cu diferite viteze pe parcursul mai multor momente din cântec. Improvizează liber la acest dans sau revino la oricare dintre dansurile anterioare pentru a-l face și mai tare.
-      Dance_Party_extras_visible: "\"# Unde au dispărut?\n\nAcest dans arată și ascunde
-        două grupuri diferite de dansatori. Vizionează-l și apoi adaugă ceva personal.\n\n-
-        \  Adaugă un alt grup de dansatori                                                                                                                  \n-
-        \  Arată și ascunde dansatori folosind tastele cu săgeată                                                                          \n-
-        \  Ascunde toți dansatorii și treci la un efect de fundal captivant\""
-      Dance_Party_extras_visible_2019: "\"# Unde au dispărut?\n\nAcest dans arată și ascunde
-        două grupuri diferite de dansatori. Vizionează-l și apoi adaugă ceva personal.\n\n-
-        \  Adaugă un alt grup de dansatori                                                                                                                  \n-
-        \  Arată și ascunde dansatori folosind tastele cu săgeată                                                                          \n-
-        \  Ascunde toți dansatorii și treci la un efect de fundal captivant\""
       HOC 2018 Level_12: Felicitări! Mediul acvatic deschis te aşteaptă. Construieşte
         un recif de corali! Un vulcan! O epavă! Aşa cum vrei tu.
       Intro to Web Lab - Part 1_2019: |-
@@ -1535,18 +1545,3 @@ ro-RO:
       frozen square snowflake: Poţi crea un fulg de zăpadă folosind blocul "Repetă"
         pentru a face un pătrat de 10 ori, precum și blocul "Întoarce" pentru a se
         roti cu 36 de grade între fiecare pătrat?
-      Dance_Party_extras_layout_2019: |-
-        # Hai să ne formăm!
-
-        Verificați acest dans care folosește blocul <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> pentru a schimba formarea dansatorilor de rezervă pe tot parcursul dansului. Încercați una dintre aceste idei pentru a o extinde:
-
-        -   Creați un al doilea grup de dansatori într-o dispunere diferită
-        -   Modificați aspectul când este apăsată o tastă
-        -   Modificați o proprietate atunci când dansatorii schimbă formația
-      Dance_Party_extras_mixed_2019: |-
-        # Mai multe butoane
-
-        Acest dans vă permite să controlați proprietățile dansatorilor în timp real, în timp ce dansează automat. Încercați să faceți ca alte proprietăți să se schimbe atunci când apăsați butoanele. De exemplu:
-
-        -   Alegeți nuanța dansatorului când apăsați „în jos”.
-        -   Adăugați un grup de dansatori cu un layout aleatoriu când apăsați „spațiu”.
