@@ -364,10 +364,15 @@ zh-TW:
           FORMAT:
             '"border"': 邊框
             '"inner"': 正方形內部
+            '"diamond"': 鑽石
             '"circle"': 圓形
             '"grid"': 格狀
+            '"top"': 最上排
             '"row"': 橫列
+            '"bottom"': 最底排
+            '"left"': 左欄
             '"column"': 直排
+            '"right"': 右欄
             '"x"': 十字交叉
             '"plus"': 十字加號
             '"random"': 隨機

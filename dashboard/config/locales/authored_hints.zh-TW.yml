@@ -808,6 +808,8 @@ zh-TW:
           -   使用 `當左鍵被按下` 積木讓舞者在你按下按鍵時跳個舞。
 
           _這個關卡會在 7 小節後結束。_
+      Dance_Party_extras_alternate_2019:
+        alternate: 交替程式積木在「舞蹈演員」類別中。
       Function intro Ryan:
         Function_intro_Ryan_b: 如果您正確地調用了函數, 那麼這就是您要移動的路徑...
         Function_intro_Ryan_a: 您可以在自己的程式中呼叫使用功能多次！請嘗試呼叫兩次以解決此版圖。
@@ -3142,5 +3144,3 @@ zh-TW:
       grade5_artist_variables_triangles1_2019:
         grade5_artist_variables_triangles1_a: 要讓三角形的每個角保持為 60 度，需要將藝術家轉 120 度。
         grade5_artist_variables_triangles1_b: 使用`重複`迴圈來把程式縮短。
-      Dance_Party_extras_alternate_2019:
-        alternate: 備用塊在“ Dancers”類別中。

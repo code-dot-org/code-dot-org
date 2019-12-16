@@ -595,7 +595,7 @@ zh-TW:
       Dance_2019_05: |-
         _跟著音浪一起流動！_
 
-        添加 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"小節"</title></block></xml> 程式積木到工作區。讓舞者在 6 個小節後開始新的動作。
+        添加 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> 程式積木到工作區。讓舞者在 6 個小節後開始新的動作。
       Dance_2019_06: |-
         使用這個新程式積木來製作一組比較小的伴舞演員，將領舞者圍繞在中間。
 
@@ -629,13 +629,13 @@ zh-TW:
       Dance_Party_02: |-
         讓這隻麋鹿跳舞！
 
-        拖曳出 <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> 程式積木 到工作區上。連接此程式積木在 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> 程式積木的後面. 您的舞者應該在第 4 個小節之後開始新的動作。
+        拖曳出 <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> 程式積木 到工作區上。連接此程式積木在 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> 程式積木的後面. 您的舞者應該在第 4 個小節之後開始新的動作。
 
         **小節**用於計算音樂中的時間。在本教學課程中，一小節的長度為四拍。
       Dance_Party_03: |-
         _跟著音浪一起流動！_
 
-        添加 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"小節"</title></block></xml> 程式積木到工作區。讓舞者在 6 個小節後開始新的動作。
+        添加 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> 程式積木到工作區。讓舞者在 6 個小節後開始新的動作。
       Dance_Party_04: |-
         _這支舞需要一些閃光！_
 
@@ -689,6 +689,10 @@ zh-TW:
 
         **連續按下按鍵讓機器人做出 drop-clap-drop-clap 的動作，看看你能做多快！**
       Dance_Party_12: 隨著音樂律動！建立一支自己的舞蹈，與朋友分享。
+      Dance_Party_extras_alternate_2019: "# 不斷重複！\n\n有時您可能想用您選擇的舞蹈動作來創建一套模式。用這個新程式積木就可以做到這一點。\n\n<xml><block
+        type=\"Dancelab_alternateMoves\"><title name=\"GROUP\">sprites</title><title
+        name=\"N\">2</title><title name=\"MOVE1\">MOVES.Roll</title><title name=\"MOVE2\">MOVES.ClapHigh</title></block></xml>
+        \n\n您在上方選擇的動作將永遠重複進行。\n\n-   為前排領舞蹈演員創建一套交替的動作模式！\n-   使用不同的數位來改變動作的速率。嘗試使用「1」或「0.5」來加快動作交替的速度！"
       Dance_Party_extras_battle: |-
         # 舞蹈團隊
 
@@ -718,7 +722,7 @@ zh-TW:
       Dance_Party_extras_every_beat_2019: |-
         # 四分音符
 
-        大部分舞蹈都是按照小節為單位來設計的，而每個小節由 4 個四分音符構成。這段舞蹈使用 [blockly block][0]來讓舞者從第 5 小節之後在每個四分音符時都拍一下手。
+        大部分舞蹈都是按照小節為單位來設計的，而每個小節由 4 個四分音符構成。這段舞蹈使用<xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml>來讓舞者從第 5 小節之後在每個四分音符時都拍一下手。
 
         更改程式積木中的數字來試試看對舞蹈會有什麼影響。
 
@@ -740,6 +744,13 @@ zh-TW:
         -   製作採用不同佈局的另一組舞者
         -   按下按鍵時更改佈局
         -   舞者改變陣型時更改屬性
+      Dance_Party_extras_mixed_2019: |-
+        # 更多按鈕
+
+        此舞蹈讓您在舞蹈演員自動跳舞時即時控制他們的屬性。嘗試在按下按鈕時更改其他屬性。例如：
+
+        -   按「下」時，隨機分配舞蹈演員的色彩。
+        -   按「空格」時，添加一組具有隨機佈局的舞蹈演員。
       Dance_Party_extras_on_beat: |-
         # 低音、中音和高音
 
@@ -1598,21 +1609,3 @@ zh-TW:
       ramp_artist_loops9: 畫出一個每邊長 200 像素的正方形以過關。
       ramp_artist_loops9_2018: 畫出一個每邊長 200 像素的正方形以過關。
       ramp_artist_loops9_2019: 畫出一個每邊長 200 像素的正方形以過關。
-      Dance_Party_extras_alternate_2019: |-
-        ＃ 來來回回！
-
-        有時您可能想創建一種選擇的舞蹈動作模式。這個新塊使您可以做到這一點。
-
-        <xml><block type="Dancelab_alternateMoves"><title name="GROUP">sprites</title><title name="N">2</title><title name="MOVE1">MOVES.Roll</title><title name="MOVE2">MOVES.ClapHigh</title></block></xml>
-
-        您在上方選擇的移動將永遠重複進行。
-
-        在前面為主舞者創建一個交替例程！
-        使用不同的數字來更改移動交替的速率。嘗試使用“ 1”或“ 0.5”來更快地切換！
-      Dance_Party_extras_mixed_2019: |-
-        ＃更多按鈕
-
-        此舞讓您在舞者自動跳舞時實時控制他們的屬性。嘗試在按下按鈕時更改其他屬性。例如：
-
-        當您按下“向下”按鈕時，將舞者的色彩隨機化。
-        按“空格”時，添加一組具有隨機佈局的舞者。
