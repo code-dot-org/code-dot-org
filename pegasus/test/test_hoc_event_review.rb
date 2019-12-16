@@ -101,12 +101,25 @@ class HocEventReviewTest < Minitest::Test
       end
     end
 
+    it 'only finds events with processed data' do
+      with_form country: 'US', state: 'CA', special_event: 1 do
+        with_form country: 'US', state: 'OR', has_processed_data: false  do
+          expected = [
+            {state_code: 'CA', count: 1},
+          ]
+          actual = HocEventReview.event_counts_by_state special_events_only: true
+          assert_equal expected, actual
+        end
+      end
+    end
+
     # Helper to temporarily create a form row for testing retrieval methods.
     def with_form(
       review: nil,
       special_event: nil,
       state: nil,
-      country: nil
+      country: nil,
+      has_processed_data: true
     )
       # Necessary stubs for the insert_or_upsert_form helper
       stubs(:dashboard_user).returns(nil)
@@ -116,10 +129,6 @@ class HocEventReviewTest < Minitest::Test
       data = HocEventReviewTest.fake_data.merge(
         special_event_flag_b: special_event
       )
-      processed_data = {
-        location_country_code_s: country,
-        location_state_code_s: state
-      }
 
       # Add fake row
       row = insert_or_upsert_form(
@@ -130,7 +139,15 @@ class HocEventReviewTest < Minitest::Test
       # Adjust fake row
       form = Form.find(id: row[:id])
       form.update(review: review) unless review.nil?
-      form.update(processed_data: processed_data.to_json)
+
+      if has_processed_data
+        processed_data = {
+          location_country_code_s: country,
+          location_state_code_s: state
+        }
+        form.update(processed_data: processed_data.to_json)
+      end
+
       form.refresh
 
       # Run enclosed logic

@@ -44,7 +44,7 @@ module HocEventReview
         select(:data, :secret, :processed_data).
         limit(100).
         map do |form|
-          next unless !!form[:processed_data]
+          next unless form[:processed_data]
           JSON.parse(form[:data]).
               merge(secret: form[:secret]).
               merge(JSON.parse(form[:processed_data]))
