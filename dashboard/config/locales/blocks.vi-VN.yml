@@ -357,10 +357,15 @@ vi:
           FORMAT:
             '"border"': đường biên
             '"inner"': hình vuông bên trong
+            '"diamond"': kim cương
             '"circle"': vòng tròn
             '"grid"': lưới
+            '"top"': hàng trên cùng
             '"row"': hàng
+            '"bottom"': hàng dưới cùng
+            '"left"': cột trái
             '"column"': cột
+            '"right"': cột phải
             '"x"': criss-cross
             '"plus"': cộng
             '"random"': ngẫu nhiên
