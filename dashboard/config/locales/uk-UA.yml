@@ -361,6 +361,7 @@ uk:
       district_dashboard: Панель області
       label: Привіт %{username}
       stats: Студія коду
+      my_projects: Мої проекти
       settings: Мій профіль
       logout: Вийти
       signin: Увійти
@@ -1253,3 +1254,5 @@ uk:
     accept: Погоджуюся
   gdpr_dialog:
     true: Так
+  page_not_found_title: Сторінка не знайдена
+  page_not_found_header: '404: Сторінка не знайдена'
