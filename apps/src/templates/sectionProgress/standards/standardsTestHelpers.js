@@ -99,7 +99,7 @@ export const fakeStandards = [
     category: 'Networks and Internet',
     number: '1B-NI-05',
     description:
-      'Describe choise made during program development using code comments, presentations, and demonstrations.'
+      'Describe choices made during program development using code comments, presentations, and demonstrations.'
   },
   {
     id: 5,
