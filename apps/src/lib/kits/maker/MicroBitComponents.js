@@ -3,6 +3,7 @@
  */
 import {MicroBitButton} from './Button';
 import LedMatrix from './LedMatrix';
+import Accelerometer from './Accelerometer';
 
 /**
  * Initializes a set of components for the currently
@@ -15,7 +16,8 @@ export function createMicroBitComponents(board) {
   return Promise.resolve({
     buttonA: new MicroBitButton({mb: board, pin: 1}),
     buttonB: new MicroBitButton({mb: board, pin: 2}),
-    ledMatrix: new LedMatrix({mb: board})
+    ledMatrix: new LedMatrix({mb: board}),
+    accelerometer: new Accelerometer(board)
   });
 }
 
