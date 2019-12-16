@@ -355,10 +355,15 @@ ko:
           FORMAT:
             '"border"': 테두리
             '"inner"': 내부 사각형
+            '"diamond"': 다이아몬드
             '"circle"': 원
             '"grid"': 그리드
+            '"top"': 위쪽 행
             '"row"': 행
+            '"bottom"': 아래쪽 행
+            '"left"': 왼쪽 열
             '"column"': 열
+            '"right"': 오른쪽 열
             '"x"': 교차
             '"plus"': 더하기
             '"random"': random(랜덤)

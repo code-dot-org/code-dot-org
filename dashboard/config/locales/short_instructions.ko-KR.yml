@@ -617,6 +617,7 @@ ko-KR:
       Dance_2019_05: 이제 댄서가 6번째 마디 후 새로운 움직임을 시작하도록 하세요!
       Dance_2019_06: 리드 댄서를 가운데 두고 주변으로 백업 댄서들을 배치해 보세요.
       Dance_2019_07: 백업 댄서 그룹의 규모를 변경하세요.
+      Dance_2019_08: 한 댄서(또는 그룹 전체) 의 색조를 바꾸어 보세요!
       Dance_2019_09: 이 새 블록들로 창의성을 발휘하세요!
       Dance_2019_10: 이제 리듬을 타보세요! 자신만의 댄스를 만들어 친구와 공유하세요.
       Dance_Party_01: "‘새로 만들기’ 블록을 작업공간에 드래그하고, ‘설정’ 블록 안에서 연결하세요."
@@ -634,6 +635,20 @@ ko-KR:
       Dance_Party_11b: 오른쪽 화살표 키를 누를 때 로봇이 "드롭"하도록 하고, 위쪽 화살표 키를 누를 때 “플로스”하게 하세요.
         드롭-플로스를 최대한 빨리해보세요!
       Dance_Party_12: 이제 리듬을 타보세요! 자신만의 댄스를 만들어 친구와 공유하세요.
+      Dance_Party_extras_alternate_2019: 앞뒤로! (자세한 내용은 “더 보기” 클릭)
+      Dance_Party_extras_battle: 댄스 승무원 (자세한 내용은 “자세히”를 클릭)
+      Dance_Party_extras_battle_2019: 댄스 승무원 (자세한 내용은 “자세히”를 클릭)
+      Dance_Party_extras_every_beat: 분기 노트 (자세한 내용은 “자세히”를 클릭하십시오.)
+      Dance_Party_extras_every_beat_2019: 분기 노트 (자세한 내용은 “자세히”를 클릭하십시오.)
+      Dance_Party_extras_layout: 의 형성에 가자! (자세한 내용은 “자세히”를 클릭하십시오)
+      Dance_Party_extras_layout_2019: 의 형성에 가자! (자세한 내용은 “자세히”를 클릭하십시오)
+      Dance_Party_extras_mixed_2019: 더 많은 단추(자세한 내용은 “더 보기” 클릭)
+      Dance_Party_extras_on_beat: 저음, 중음, 고음 (자세한 내용은 “자세히”를 클릭하십시오)
+      Dance_Party_extras_on_beat_2019: 저음, 중음, 고음 (자세한 내용은 “자세히”를 클릭하십시오)
+      Dance_Party_extras_speed: 속도를 높이고 속도를 낮추십시오 (자세한 내용은 “자세히”를 클릭하십시오).
+      Dance_Party_extras_speed_2019: 속도를 높이고 속도를 낮추십시오 (자세한 내용은 “자세히”를 클릭하십시오).
+      Dance_Party_extras_visible: 그들은 어디로 갔어? (자세한 내용은 “자세히”를 클릭하십시오)
+      Dance_Party_extras_visible_2019: 그들은 어디로 갔어? (자세한 내용은 “자세히”를 클릭하십시오)
       Function intro Ryan: "'다리 짓기' 함수를 두 번 사용해서 횃불로 가는 길을 만드세요."
       Function intro Ryan_2019: "'다리 짓기' 함수를 두 번 사용해서 횃불로 가는 길을 만드세요."
       HOC 2018 Level_1: 상자에서 보트를 얻으세요.
@@ -1246,18 +1261,3 @@ ko-KR:
       scrat 19: '"조건/선택" 블록을 다시 한 번 사용해 보겠습니다. 한 번에 성공할 수 있겠어요?'
       scrat 20: 좀 더 복잡한 미로를 해결할 수 있도록 3개의 블럭만 더 더해줄 수 있나요? 그렇게 해준다면, 길이가 얼마나 길던지 상관없이
         꺽인 길에서 회전할 수 있게 됩니다. 빨리 빨리요! 얼음이 녹고 있어요!
-      Dance_2019_08: 한 댄서(또는 그룹 전체) 의 색조를 바꾸어 보세요!
-      Dance_Party_extras_alternate_2019: 이리저리! (자세한 내용은 "추가"를 클릭하십시오)
-      Dance_Party_extras_battle: 댄스 승무원 (자세한 내용은 “자세히”를 클릭)
-      Dance_Party_extras_battle_2019: 댄스 승무원 (자세한 내용은 “자세히”를 클릭)
-      Dance_Party_extras_every_beat: 분기 노트 (자세한 내용은 “자세히”를 클릭하십시오.)
-      Dance_Party_extras_every_beat_2019: 분기 노트 (자세한 내용은 “자세히”를 클릭하십시오.)
-      Dance_Party_extras_layout: 의 형성에 가자! (자세한 내용은 “자세히”를 클릭하십시오)
-      Dance_Party_extras_layout_2019: 의 형성에 가자! (자세한 내용은 “자세히”를 클릭하십시오)
-      Dance_Party_extras_mixed_2019: 더 많은 버튼 (자세한 내용은 "더보기"를 클릭하십시오)
-      Dance_Party_extras_on_beat: 저음, 중음, 고음 (자세한 내용은 “자세히”를 클릭하십시오)
-      Dance_Party_extras_on_beat_2019: 저음, 중음, 고음 (자세한 내용은 “자세히”를 클릭하십시오)
-      Dance_Party_extras_speed: 속도를 높이고 속도를 낮추십시오 (자세한 내용은 “자세히”를 클릭하십시오).
-      Dance_Party_extras_speed_2019: 속도를 높이고 속도를 낮추십시오 (자세한 내용은 “자세히”를 클릭하십시오).
-      Dance_Party_extras_visible: 그들은 어디로 갔어? (자세한 내용은 “자세히”를 클릭하십시오)
-      Dance_Party_extras_visible_2019: 그들은 어디로 갔어? (자세한 내용은 “자세히”를 클릭하십시오)

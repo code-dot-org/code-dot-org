@@ -87,6 +87,8 @@ ko-KR:
       CourseD_Dance_Party_11:
         dance_callout_11_a: 새 블록!
         dance_callout_11_b: 새 블록!
+      CourseD_Dance_Party_11_5:
+        dance_party_11_5_groups: "“모든 오리” 블록은 여기에서 찾으세요"
       Dance_2019_01:
         dance_callout_01: 이 블록을 프로그램에 추가하세요!
       Dance_2019_02:
@@ -114,6 +116,8 @@ ko-KR:
       Dance_Party_11:
         dance_callout_11_a: 새 블록!
         dance_callout_11_b: 새 블록!
+      Dance_Party_11_5:
+        dance_party_11_5_groups: "“모든 오리” 블록은 여기에서 찾으세요"
       Function intro Ryan:
         Function_intro_Ryan_1: 이 작은 지시문을 사용하면 컴퓨터에서 작업 공간에 보이는 이름이 같은 '대형' 코드를 실행하게
           됩니다.
@@ -226,5 +230,3 @@ ko-KR:
         replace_questions: '"???" 부분에 수를 입력하면 됩니다.'
       frozen square snowflake:
         replace_questions: '"???" 부분에 수를 입력하면 됩니다.'
-      Dance_Party_11_5:
-        dance_party_11_5_groups: "“모든 오리” 블록은 여기에서 찾으세요"
