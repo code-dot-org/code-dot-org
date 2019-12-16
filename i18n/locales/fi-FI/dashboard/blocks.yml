@@ -357,10 +357,15 @@ fi:
           FORMAT:
             '"border"': raja
             '"inner"': neliön sisällä
+            '"diamond"': timantti
             '"circle"': ympyrä
             '"grid"': ruudukko
+            '"top"': ylärivi
             '"row"': rivi
+            '"bottom"': alarivi
+            '"left"': vasen sarake
             '"column"': sarake
+            '"right"': oikea sarake
             '"x"': ristiinrastiin
             '"plus"': risti
             '"random"': satunnainen

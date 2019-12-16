@@ -33,7 +33,7 @@ fi-FI:
 
         Raahaa ‘tee uusi’-blokki työtilaan ja yhdistä se ‘asetukset’-blokin sisällä luodaksesi ensimmäisen tanssijasi.
 
-        -   -   Voit myös klikata hehkulamppua vasemmalla, jos haluat lisätietoja tai lisää haastetta.\*
+        -   _Voit myös klikata hehkulamppua vasemmalla, jos haluat lisätietoja tai lisää haastetta._
       CourseD_Dance_Party_02: |-
         Pistetään hirvi tanssimaan!
 
@@ -220,6 +220,14 @@ fi-FI:
       Dance_Party_11b: On tanssikisan aika! Kissa napauttaa, kun painat vasenta nuolinäppäintä.
         Laita Robotti “droppaamaan”, kun painat oikeaa nuolinäppäintä.
       Dance_Party_12: Ryhdy toimiin! Luo oma tanssi ja jaa se ystäviesi kanssa.
+      Dance_Party_extras_alternate_2019: "# Taakse- ja eteenpäin!\n\nJoskus saattaa
+        näyttää siltä, että haluat luoda kuvion valitsemillesi tanssiliikkeille. Tämä
+        uusi lohko mahdollistaa juuri tämän. \n\n<xml><block type=\"Dancelab_alternateMoves\"><title
+        name=\"GROUP\">sprites</title><title name=\"N\">2</title><title name=\"MOVE1\">MOVES.Roll</title><title
+        name=\"MOVE2\">MOVES.ClapHigh</title></block></xml> \n\nLiikkeet, jotka valitset
+        edellä, toistaa sarjaa loputtomasti. \n\n-   Luo vaihtoehtoinen rutiini päätanssijalle
+        edessä! \n-   Käytä eri numeroita vaihtaaksesi tahdin, jolla liikkeet vaihtelevat.
+        Kokeile ”1” tai ”0,5” vaihtaaksesi nopeammin!"
       Dance_Party_extras_battle: |-
         # Tanssiryhmät
 
@@ -246,6 +254,15 @@ fi-FI:
         -   Kokeile muita nuotinkestoja (kuten 0,5 puolinuotille tai 0,125 kahdeksasosanuotille)
         -   Lisää joitain `tahdin jälkeen`-tapahtumia.
         -   Vaihda “tahdit” “sekuntien” kanssa ja yritä ajoittaa tanssejasi siten.
+      Dance_Party_extras_every_beat_2019: |-
+        # Neljännesosat
+
+        Useimmissa tansseissamme on käytetty kokonaisia mittoja, mutta jokainen mitta koostuu neljästä vuosineljänneksestä. Tämä tanssi käyttää <xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml> saadaksesi tanssijan taputtelemaan jokaisen vuosineljänneksen muistiinpanon yhteydessä, mutta vain neljän ensimmäisen toimenpiteen kohdalla.
+
+        Yritä muuttaa lohkojen numeroita nähdäksesi kuinka se muuttaa tanssia.
+
+        -   Kokeile muilla noottien kestoilla (kuten 0,5 puoli-seteliä tai 0,125 kahdeksannessa nuotissa).
+        -   Lisää joitain muita tapahtumia.
       Dance_Party_extras_layout: |-
         # Mennään muodostelmaan!
 
@@ -262,6 +279,11 @@ fi-FI:
         -   Luo toinen ryhmä tanssijoita eri asettelussa
         -   Muuta asettelua, kun näppäintä painetaan
         -   Muuta ominaisuutta, kun tanssijat muuttavat muodostelmaa
+      Dance_Party_extras_mixed_2019: "# Lisää painikkeita\n\nTämän tanssin avulla
+        voit hallita tanssijan ominaisuuksia tosiajassa, kun ne tanssivat automaattisesti.
+        Yritä saada muut ominaisuudet muuttumaan, kun painat painikkeita. Esimerkki:
+        \n\n-   Satunnaista tanssijoiden sävyä, kun painat ”alas”. \n-   Lisää ryhmä
+        tanssijoita satunnaisella asettelulla, kun painat ”tila”."
       Dance_Party_extras_on_beat: |-
         Basso, midi ja diskantti
 
@@ -287,13 +309,14 @@ fi-FI:
         -   Näyttää ja piilottaa tanssijat nuolinäppäimillä
         -   Piilota kaikki tanssijat, ja siirry jännittävään taustaefektiin.
       Dance_Party_extras_visible_2019: |-
-        # Mihin he menivät?
+        # Neljäsosanuotit
 
-        Tämä tanssi näyttää ja piilottaa kaksi tanssijoiden ryhmää. Tsekkaa se ja lisää oma vivahteesi.
+        Useimmissa tansseissamme on kokonaiset tahdit, mutta jokainen tahti koostuu neljästä neljäsosanuotista. Tämä tanssi käyttää [blockly block][0] blokkia niin, että tanssija taputtaa käsiään jokaisen neljäsosanuotin kohdalla viidennen tahdin jälkeen.
 
-        -   Lisää uusi ryhmä tanssijoita
-        -   Näyttää ja piilottaa tanssijat nuolinäppäimillä
-        -   Piilota kaikki tanssijat, ja siirry jännittävään taustaefektiin.
+        Kokeile muuttaa blokin numeroita, jotta näet, miten se muuttaa tanssia.
+
+        -   Kokeile muita nuottien kestoja (kuten 0.5 puolinuotille tai 0.125 kahdeksasosanuotille).
+        -   Lisää muita tapahtumia.
       Function intro Ryan: "Työtilassasi on **toiminto** rakenna silta. Se sisältää
         kaiken koodin, jota tarvitset joen ylittämiseen! \\\r\n \\\r\nKorjaa polku
         napsauttamalla pieni vihreä lohko työtilaasi kahdesti ja vie {currentPlayerName}
@@ -460,30 +483,3 @@ fi-FI:
         Pidä huolta että käännyt 120 astetta ennen kutakin uutta neliötä.
       frozen square snowflake: Osaatko luoda lumihiutaleen käyttäen "toista"-lohkoa
         10 neliön tekemiseen ja "käänny"-lohkoa 36 asteen käännökseen neliöiden välillä?
-      Dance_Party_extras_alternate_2019: |-
-        # Edestakaisin!
-
-        Joskus haluat ehkä luoda kuvion valitsemistasi tanssiliikkeistä. Tämän uuden lohkon avulla voit tehdä juuri sen.
-
-        <xml><block type="Dancelab_alternateMoves"><title name="GROUP">sprites</title><title name="N">2</title><title name="MOVE1">MOVES.Roll</title><title name="MOVE2">MOVES.ClapHigh</title></block></xml>
-
-        Yllä olevat liikkeet toistuvat peräkkäin ikuisesti.
-
-        -   Luo vuorotteleva rutiini päätanssijalle edessä!
-        -   Käytä eri numeroita muuttaaksesi siirtonopeutta vuorotellen. Kokeile `1` tai`0.5` vuorotella nopeammin!
-      Dance_Party_extras_every_beat_2019: |-
-        # Neljännesosat
-
-        Useimmissa tansseissamme on käytetty kokonaisia mittoja, mutta jokainen mitta koostuu neljästä vuosineljänneksestä. Tämä tanssi käyttää <xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml> saadaksesi tanssijan taputtelemaan jokaisen vuosineljänneksen muistiinpanon yhteydessä, mutta vain neljän ensimmäisen toimenpiteen kohdalla.
-
-        Yritä muuttaa lohkojen numeroita nähdäksesi kuinka se muuttaa tanssia.
-
-        -   Kokeile muilla noottien kestoilla (kuten 0,5 puoli-seteliä tai 0,125 kahdeksannessa nuotissa).
-        -   Lisää joitain muita tapahtumia.
-      Dance_Party_extras_mixed_2019: |-
-        # Lisää painikkeita
-
-        Tämän tanssin avulla voit hallita tanssijoiden ominaisuuksia reaaliajassa heidän tanssiessaan automaattisesti. Yritä muuttaa muita ominaisuuksia, kun painat painikkeita. Esimerkiksi:
-
-        -   satunnaista tanssijan sävy, kun painat "alas".
-        -   Lisää tanssijaryhmä satunnaisella asettelulla, kun painat "välilyönti".
