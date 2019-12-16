@@ -64,6 +64,7 @@
   join_section:
     code:
       placeholder: "Seksjonskode (ABCDEF)"
+      submit: 'Bli med'
   add_hint_form:
     placeholder: 'Skriv inn et hint her'
     submit: 'Legg til hint'
