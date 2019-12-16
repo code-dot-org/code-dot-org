@@ -35,6 +35,9 @@ de-DE:
         draw O: O zeichnen
         draw D: D zeichnen
         draw E: E zeichnen
+      2-3 Artist Functions 10:
+        big gear: großes Zahnrad
+        small gear: kleines Zahnrad
       2-3 Artist Functions 11:
         draw a hexagon: zeichne ein Sechseck
       2-3 Artist Functions 11.5:
@@ -65,10 +68,17 @@ de-DE:
         draw a car: zeichne ein Auto
       4-5 Artist 8:
         draw circle: zeichne einen Kreis
+        draw goal: zeichne das Tor
       4-5 Bee Conditionals 7:
         check purple flower: prüfe die lila Blume
+      4-5 Bee Conditionals 8:
+        check flower make honey: überprüfe Blume mache Honig
       4-5 Bee Conditionals Assessment 1:
         get nectar or make honey: hole Nektar oder stelle Honig her
+      4-5 Bee Debugging 7:
+        make 3 honey: stelle 3 mal Honig her
+      4-5 Bee Debugging 9:
+        make all honey: stelle den gesamten Honig her
       Choose Your Own Adventure:
         story: Handlung
       Course 4 Artist Binary 1:

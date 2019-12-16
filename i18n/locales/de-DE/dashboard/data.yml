@@ -358,6 +358,8 @@ de:
         CSF_collector_repeat_loops: Der Sammler Schleifen
         CSF_collector_text_blocks: 'Einführung in Informatik und Programmieren: Der Sammler'
         CSF_create_functions: Funktionen erstellen
+        CSF_debugging_k1_blocks: Debugging
+        CSF_debugging_text_blocks: Debugging
         CSF_EF_cs_matters: Informatik ist wichtig
         CSF_maze_intro_k1_blocks: Einführung in Code Studio
         CSF_maze_intro_text_blocks: Einführung in Code Studio
@@ -487,6 +489,7 @@ de:
         CSF_SpriteLab_Intro_v2: Einführung Sprite Lab
         CSF_Spritelab_MakeSprite_v2: Wie man einen Sprite erstellt
         CSF_SpriteLab_SpritesInAction_v2: Sprites in Aktion
+        csd_debugging: Debugging
         csd_applab_designmode_short: App-Labor - Designmodus
     callout:
       text:

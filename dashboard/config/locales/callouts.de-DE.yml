@@ -83,6 +83,13 @@ de-DE:
       Course 4 Artist Vars 6:
         degrees_per_side: Teile 360 durch die Anzahl der Seiten, um die Größe der
           einzelnen Winkel in Grad zu erhalten.
+      Course 4 Bee 1:
+        if_bee_nectar: Nutze den "wenn"-Baustein, um zu entscheiden, ob die Biene
+          Nektar sammeln oder Honig machen soll
+      Course 4 Bee 3:
+        if_else_bee: Nutze den "wenn/ansonsten"-Baustein, sodass die Biene Nektar
+          sammelt, wenn sie auf einer Blume sitzt, und Honig macht, wenn sie nicht
+          auf einer Blume sitzt
       Course 4 Bee Params 2:
         edit_get_nectar: Verwende diese Taste, um die Funktion zu bearbeiten und die
           Richtung der Biene zu ändern, um den Nektar zu holen.
@@ -252,6 +259,9 @@ de-DE:
         behaviors_edit: Fügen Sie diesem Verhalten Code hinzu.
       behaviors free play:
         behaviors_edit: Fügen Sie diesem Verhalten Code hinzu.
+      course3_playLab_challenge1:
+        courseC_PlayLab_events_challenge1_1: Mit diesem Block kannst du Schauspieler
+          in verschiedene Bereiche des Spielraums verschieben.
       courseA_artist_loops4:
         courseA_artist_loops4_1: Diese Zahl gibt an, wie viele dieser Blöcke in dieser
           Aufgabe verwendet werden können.
@@ -370,6 +380,15 @@ de-DE:
       courseB_maze_seq2:
         courseB_maze_seq2_callout1: Klicke auf die Schritt Schaltfläche um Schritt-für-Schritt
           durch das Programm zu gehen. Das wird dir helfen, den Fehler zu finden!
+      courseC_PlayLab_events_challenge1:
+        courseC_PlayLab_events_challenge1_1: Mit diesem Block kannst du Schauspieler
+          in verschiedene Bereiche des Spielraums verschieben.
+      courseC_PlayLab_events_challenge1_2018:
+        courseC_PlayLab_events_challenge1_1: Mit diesem Block kannst du Schauspieler
+          in verschiedene Bereiche des Spielraums verschieben.
+      courseC_PlayLab_events_challenge1_2019:
+        courseC_PlayLab_events_challenge1_1: Mit diesem Block kannst du Schauspieler
+          in verschiedene Bereiche des Spielraums verschieben.
       courseC_artist_loops1a_2019:
         jumpto_callout: Dieser Block ist für dieses Projekt sehr wichtig. Achte darauf
           diesen zu verwenden!
@@ -485,6 +504,15 @@ de-DE:
           du sie gelöst hast.
       courseE_aboutme_2:
         '': Klicke hier!
+      courseE_playLab_challenge1:
+        courseC_PlayLab_events_challenge1_1: Mit diesem Block kannst du Schauspieler
+          in verschiedene Bereiche des Spielraums verschieben.
+      coursea_maze_ramp1_2018:
+        grade2_CaringForNewPet_0_1: Nachdem alle Bausteine zusammengesteckt wurden,
+          drücke auf "Ausführen ", um dein Programm zu starten.
+      coursea_maze_ramp1_2019:
+        grade2_CaringForNewPet_0_1: Nachdem alle Bausteine zusammengesteckt wurden,
+          drücke auf "Ausführen ", um dein Programm zu starten.
       express_maze_debugging9_2019:
         express_maze_debugging9_2019_1: Ziehe Bausteine aus der Toolbox in Ihren Arbeitsbereich.
       frozen circle function with parameter:

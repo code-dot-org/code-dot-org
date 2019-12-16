@@ -73,11 +73,18 @@ de-DE:
         2-3_Artist_Debugging_9_b: Du musst keinen weiteren Baustein hinzufügen, um
           die volle Drehung zu erhalten, sondern nur 60 Grad zum Baustein`drehe links`,
           der bereits vorhanden ist hinzufügen!
+      2-3 Artist Functions 11:
+        2-3_Artist_Functions_11_a: Du musst nicht nur die Anzahl und Länge der Seiten
+          innerhalb der Funktion ändern, sondern auch den Winkel, den der Zeichner
+          zwischen den Seiten dreht.
       2-3 Artist Functions 12:
         2-3_Artist_Functions_12_a: Führe den Code zuerst aus um zu schauen, was hinzugefügt
           werden muss.
       2-3 Artist Functions 3:
         2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
+      2-3 Artist Functions 4:
+        2-3_Artist_Functions_4_a: Der Künstler muss 120 Grad zwischen jedem Quadrat
+          drehen, um dieses Design zu vollenden.
       2-3 Artist Loops New 11:
         2-3_Artist_Loops_New_11_a: |-
           Denke daran, dass der Code aus dem letzten Puzzle war:
@@ -171,6 +178,19 @@ de-DE:
           behandeln wie eine lila Blume!
         2-3_Bee_Conditionals_14_b: Wenn die rote Blume lila wäre, könntest du herausfinden,
           wie man eine zusätzliche `Repeat`-Schleife verwendet, um den Code zu reduzieren?
+        2-3_Bee_Conditionals_14_c: |-
+          Versuche dies in zwei getrennte Teile aufzuteilen:
+
+          ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
+
+          1.  Sammle Nektar 3 mal.
+              -   5 mal vorwärts bewegen
+              -   Überprüfe, ob Nektar vorhanden ist, wenn ja: sammle ihn.
+              -   Links abbiegen
+
+          2.  Mache Honig
+              -   Einmal vorwärts bewegen
+              -   Mache zweimal Honig
       2-3 Bee Conditionals 15:
         2-3_Bee_Conditionals_15_a: 'Denke daran: Violette Blüten haben entweder 0
           oder 1 Nektar und sie können sich bei jedem Start des Programmes ändern.'
@@ -192,6 +212,14 @@ de-DE:
       2-3 Bee Debugging 4:
         2-3_Bee_Debugging_4_a: Macht die Biene etwas das keinen Sinn macht? Was passiert
           wenn du diesen Baustein abänderst?
+      2-3 Bee Functions 4:
+        2-3_Bee_Functions_4_a: Du musst keine Schleife mit einer Funktion verwenden.
+          Versuche die Bewegung mittels der Funktion, dann einzeln bewegen und die
+          Funktion erneut zu verwenden.
+      2-3 Bee Functions 6:
+        2-3_Bee_Functions_6_a: Du musst keine Schleife mit einer Funktion verwenden.
+          Versuche die Bewegung mittels der Funktion, dann einzeln bewegen und die
+          Funktion erneut zu verwenden.
       2-3 Bee Loops 2:
         2-3_Bee_Loops_2_a: Du solltest mit vier Bausteinen innerhalb deiner Schleife
           enden.
@@ -266,11 +294,47 @@ de-DE:
       4-5 Artist 11:
         4-5_Artist_11_a: In deiner Schleife, achte darauf dass der Künstler nach dem
           Zeichnen jeder Linie zurück springt und nach oben springt.
+      4-5 Artist 3:
+        4-5_Artist_3_a: |-
+          Wenn das Blumenbeet 600 Pixel groß ist und zwei der Seiten 200 Pixel lang sind, siehst du hier worauf sich die kurzen Seiten summieren:
+
+          **600 - 200 - 200 = 200**
+
+          Das bedeutet, dass sich beide kurzen Seiten auf 200 Pixel summieren.
+
+          **Was ist 200 / 2?**
+        4-5_Artist_3_b: Wenn du nicht sehen kannst, wo die `wiederhole`-Schleife beginnt,
+          probiere die gesamte Lösung aus und suche nach einem Muster.
       4-5 Artist 4:
         4-5_Artist_4_a: |-
           Ein Kreis hat 360 Grad!
 
           So oft musst du diesen Block (um 1 Grad zu drehen) wiederholen damit der Kreis komplett ist!
+      4-5 Artist 5:
+        4-5_Artist_5_a: |-
+          Trial and Error ist eine großartige Methode, aber du kannst das Problem auch lösen, indem du den 90-Grad-Winkel drittelst.
+
+          **90 / 3 = \_\_\_\_\_**
+      4-5 Artist 7:
+        4-5_Artist_7_a: 'Welcher Winkel ist der kleinste?  In welchem Winkel steht
+          der Zeichner? '
+      4-5 Artist 8:
+        4-5_Artist_8_b: "Dieses Bild kann auf 2 Arten gemacht werden!  \n\n-   Zeichne
+          zwei Rechtecke, die **120** lang und **160** hoch sind, mit einer überlappenden
+          Seite.\n\n-   Zeichne ein Rechteck, das **240** lang und **160** hoch ist,
+          und füge dann eine Linie in der Mitte hinzu."
+      4-5 Artist 9:
+        4-5_Artist_9_a: 'Wenn ein Dreieck ein Gleichseitiges ist, sind alle Seiten
+          und alle Winkel gleich.  '
+        4-5_Artist_9_b: Du musst drei Dreiecke gleicher Größe zeichnen. Vergiss nicht,
+          nach jeder Position auf deine neue Position zu springen.
+      4-5 Artist Assessment 1:
+        4-5_Artist_Assessment_1_a: Du musst nur das äußere Dreieck zeichnen, um dieses
+          Rätsel zu lösen.
+      4-5 Bee Nested Loops Rows:
+        4-5_Bee_Nested_Loops_Rows_a: Versuche dieses Rätsel wie ein langes Rechteck
+          zu behandeln, in dem sich die Biene vorwärts bewegen muss, und biege dann
+          mehrmals nach links ab, um den Weg abzuschließen.
       4-5 Maze 10:
         4-5_Maze_10_a: |-
           Wenn Du Schwierigkeiten dabei hast die Aufgabe mithilfe der Schleifen zu lösen, dann versuche es auf herkömmlichen Wege und suche dann nach sich wiederholenden Bausteinen.
@@ -294,6 +358,8 @@ de-DE:
           Suche nach sich wiederholenden Teilen in Deinem Code und setze diese in eine Schleife!
       4-5 Nested Loops 12:
         4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
+      4-5 While Loops 8:
+        4-5_While_Loops_8_a: Jedes Element benötigt eine eigene `while`-Schleife.
       Course 4 SCF 1:
         Course_4_SCF_1_a: Jedes Hexagon hat 40 Pixel lange Seiten.
       Course 4 SCF 1a:
@@ -940,6 +1006,11 @@ de-DE:
                     </block>
                   </statement>
                   </block></next></block></xml>
+      course2_harvester_loops_challenge2:
+        courseC_harvester_loops_challenge2_c: |-
+          Dieses Zickzackmuster kann zweimal wiederholt werden, um das Puzzle mit nur 20 Blöcken zu beenden!
+
+          ![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)
       course2_maze_loops_challenge1:
         courseC_maze_loops_challenge1_a: Denke daran, dass dieser Weg aus drei verschiedenen
           Teilen besteht. Jeder von ihnen hat ein Muster, das du wiederholen kannst.
@@ -955,12 +1026,31 @@ de-DE:
           die richtige Richtung drehe, wenn du mich rückwärts laufen lässt!_
         courseC_maze_programming_challenge2_b: Die kürzeste Lösung braucht nur 5 Blöcke,
           aber es benötigt den "wiederholen" Baustein!
+      course3_artist_functions_challenge1:
+        courseE_artist_functions_challenge1_a: Wenn du die Funktion noch einmal aufrufst,
+          kannst du das gleiche Design in der letzten Ecke erstellen. Du kannst auch
+          zu anderen Positionen springen oder das Ganze ändern, wie du willst!
       course3_maze_debugging_challenge1:
         courseC_maze_debugging_challenge1_b: Der Pfad von Scrat hat die Form eines
           Rechtecks! Er muss sich jedes Mal auf die gleiche Weise drehen!
         courseC_maze_debugging_challenge1_c: Wenn du feststeckst, kannst du immer
           wieder von vorne anfangen, oder den ganzen Code entfernen und deinen eigenen
           Weg finden!
+      course3_maze_debugging_challenge2:
+        courseC_maze_debugging_challenge2_a: Eine Möglichkeit, dies zu lösen, besteht
+          darin, zwischen den Kurven weitere Schritte vorwärts zu machen.
+        courseC_maze_debugging_challenge2_b: Wenn du festsitzt, kannst du jederzeit
+          von vorne anfangen oder den ganzen Code entfernen und deinen eigenen Weg
+          finden!
+        courseC_maze_debugging_challenge2_c: |-
+          Es gibt zwei verschiedene Wege auf denen du mit "gehe vorwärts" Dich bewegen kannst, und nur vier Kurven. Wenn du einen Weg findest, den Block "Wiederholung" zu verwenden, kann es noch mehr geben!
+
+          ![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)
+      course4_harvester_nested_loops_challenge1:
+        courseD_harvester_nested_loops_challenge1_a: Du hast wahrscheinlich schon
+          einmal eine Schleife benutzt, um ein Zick-Zack-Muster zu erstellen. Wenn
+          Du Dich an diesen Algorithmus erinnerst, kannst Du hier ein paar Ergänzungen
+          dazu machen.
       courseA_artist_loops2:
         courseA_artist_loops2_a: Du weißt nicht, wie man Linien zeichnet? Beginne
           damit, Blöcke zum <xml><block type="when_run"/></xml> Block anzufügen um
@@ -1452,40 +1542,465 @@ de-DE:
           Nachdem du auf ein Feld mit einem Schatz gelangt bist, nimm diesen Block um ihn einzusammeln.
 
           <xml>  <block type="collector_collect"/></xml>
+      courseA_harvester_loops1:
+        courseA_harvester_loops1_a: |-
+          Sobald du dich zu einem Maiskolben bewegt hast, benutze diesen Baustein um ihn auszuwählen!
+
+          <xml><block type="harvester_corn"/></xml>
+      courseA_harvester_loops1_2019:
+        courseA_harvester_loops1_a: |-
+          Sobald du dich zu einem Maiskolben bewegt hast, benutze diesen Baustein um ihn auszuwählen!
+
+          <xml><block type="harvester_corn"/></xml>
+      courseA_harvester_loops2:
+        courseA_harvester_loops2_a: |-
+          Dein Code wird **vier** `Gehe nach Westen`<xml><block type="maze_moveWest"/></xml> Bausteine haben.
+
+          und **vier** `Pflücke Mais`<xml><block type="harvester_corn"/></xml> Bausteine.
+        courseA_harvester_loops2_b: 'Wenn du immer noch Probleme hast, versuche, die
+          Schritte laut auszusprechen. '
       courseA_harvester_loops2_2019:
         courseA_harvester_loops2_a: "Dein Code wird **vier** `Bewege nach Westen`
           haben.\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\nBausteine und **vier**
           <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml> Bausteine. "
+        courseA_harvester_loops2_b: 'Wenn du immer noch Probleme hast, versuche, die
+          Schritte laut auszusprechen. '
+      courseA_harvester_loops3:
+        courseA_harvester_loops3_a: |-
+          Verwende einen 'wiederhole' Baustein wie diesen, um Dir zu helfen!
+
+          <xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="2-10">4</title>
+            </block></xml>
+        courseA_harvester_loops3_b: "Um Code zu wiederholen, nimm eine 'wiederholen'
+          (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\"
+          config=\"2-10\">4</title>\n  </block></xml>) Schleife und setze dann den
+          Baustein, den du möchtest hinein. "
+      courseA_harvester_loops3_2019:
+        courseA_harvester_loops3_a: |-
+          Verwende einen 'wiederhole' Baustein wie diesen, um Dir zu helfen!
+
+          <xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="2-10">4</title>
+            </block></xml>
+        courseA_harvester_loops3_b: "Um Code zu wiederholen, nimm eine 'wiederholen'
+          (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\"
+          config=\"2-10\">4</title>\n  </block></xml>) Schleife und setze dann den
+          Baustein, den du möchtest hinein. "
+      courseA_harvester_loops4:
+        courseA_harvester_loops4_a: Scheue dich nicht, `Ausführen` zu drücken, um
+          zu sehen, was passiert!
+        courseA_harvester_loops4_b: Wie viele Maiskolben gibt es? Wie oft wiederholt
+          sich Dein Code?
+      courseA_harvester_loops4_2019:
+        courseA_harvester_loops4_a: Scheue dich nicht, `Ausführen` zu drücken, um
+          zu sehen, was passiert!
+        courseA_harvester_loops4_b: Wie viele Maiskolben gibt es? Wie oft wiederholt
+          sich Dein Code?
       courseA_harvester_loops5:
         courseA_harvester_loops5_a: 'Wenn Du nicht mehr weiter kommst, teile die Aufgabe
           in 2 Teile und löse sie nacheinander: Der eine Teil ist vor der Ecke und
           der zweite nach der Ecke.'
+        courseA_harvester_loops5_b: |-
+          Dein endgültiger Code wird **eine** `wiederhole`<xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="2-10">6</title>
+              </block></xml> Schleife, **einen** `Gehe nach Süden` <xml><block type="maze_moveSouth" limit="1"/></xml> Baustein und **einen** `Gehe nach Osten`<xml><block type="maze_moveEast" limit="1"/> </xml> Baustein haben.
         courseA_harvester_loops5_c: Benutze diesen Weg, um den ganzen Mais zu pflücken!
       courseA_harvester_loops5_2019:
         courseA_harvester_loops5_a: 'Wenn Du nicht mehr weiter kommst, teile die Aufgabe
           in 2 Teile und löse sie nacheinander: Der eine Teil ist vor der Ecke und
           der zweite nach der Ecke.'
+        courseA_harvester_loops5_b: |-
+          Dein endgültiger Code wird **eine** `wiederhole`<xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="2-10">6</title>
+              </block></xml> Schleife, **einen** `Gehe nach Süden` <xml><block type="maze_moveSouth" limit="1"/></xml> Baustein und **einen** `Gehe nach Osten`<xml><block type="maze_moveEast" limit="1"/> </xml> Baustein haben.
         courseA_harvester_loops5_c: Benutze diesen Weg, um den ganzen Mais zu pflücken!
+      courseA_harvester_loops5a:
+        courseA_harvester_loops5a_a: |-
+          Du brauchst eine `wiederhole`<xml> <block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="2-10">6</title>
+            </block></xml> Schleife nach einer weiteren.
+        courseA_harvester_loops5a_b: Eine Schleife wiederholt `Gehe nach Süden`<xml><block
+          type="maze_moveSouth" limit="1"/></xml>, und die andere wiederholt `Gehe
+          nach Osten` <xml><block type="maze_moveEast" limit="1"/></xml>
+        courseA_harvester_loops5a_c: Benutze diesen Pfad, um dich in die eine Richtung
+          zu bewegen, und dann in die andere.
+      courseA_harvester_loops5a_2019:
+        courseA_harvester_loops5a_a: |-
+          Du brauchst eine `wiederhole`<xml> <block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="2-10">6</title>
+            </block></xml> Schleife nach einer weiteren.
+        courseA_harvester_loops5a_b: Eine Schleife wiederholt `Gehe nach Süden`<xml><block
+          type="maze_moveSouth" limit="1"/></xml>, und die andere wiederholt `Gehe
+          nach Osten` <xml><block type="maze_moveEast" limit="1"/></xml>
+        courseA_harvester_loops5a_c: Benutze diesen Pfad, um dich in die eine Richtung
+          zu bewegen, und dann in die andere.
       courseA_harvester_loops5b:
         courseA_harvester_loops5b_a: Drücke `Ausführen` und schaue, was passiert!
+        courseA_harvester_loops5b_b: Wiederholen sich deine Schleifen die richtige
+          Anzahl von Wiederholungen?
+        courseA_harvester_loops5b_c: Bewege dich in die eine Richtung, dann in die
+          andere auf diesem Weg.
       courseA_harvester_loops5b_2019:
         courseA_harvester_loops5b_a: Drücke `Ausführen` und schaue, was passiert!
+        courseA_harvester_loops5b_b: Wiederholen sich deine Schleifen die richtige
+          Anzahl von Wiederholungen?
+        courseA_harvester_loops5b_c: Bewege dich in die eine Richtung, dann in die
+          andere auf diesem Weg.
+      courseA_harvester_loops6:
+        courseA_harvester_loops6_b: Dies ist der Weg, den du gehen solltest, um den
+          ganzen Mais zu pflücken.
+      courseA_harvester_loops6_2019:
+        courseA_harvester_loops6_b: Dies ist der Weg, den du gehen solltest, um den
+          ganzen Mais zu pflücken.
+      courseA_harvester_loops7:
+        courseA_harvester_loops7_a: |-
+          Du brauchst zwei `wiederhole` <xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="2-10">5</title>
+            </block></xml>Schleifen hintereinander!
+        courseA_harvester_loops7_b: Verwende zwei Schleifen, um diesem Weg zu folgen.
+      courseA_harvester_loops7_2019:
+        courseA_harvester_loops7_a: |-
+          Du brauchst zwei `wiederhole` <xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="2-10">5</title>
+            </block></xml>Schleifen hintereinander!
+        courseA_harvester_loops7_b: Verwende zwei Schleifen, um diesem Weg zu folgen.
+      courseA_harvester_loops9:
+        courseA_harvester_loops9_a: Unterteile dieses Rätsel in drei verschiedene
+          Teile. Ein Teil zur ersten Ecke, ein Teil zur zweiten Ecke und ein Teil
+          zum Ende.
+        courseA_harvester_loops9_b: Habe keine Angst, den Code nach jedem Teil auszuführen,
+          um zu sehen, was passiert!
+        courseA_harvester_loops9_c: Folge diesen Weg, um den ganzen Mais zu pflücken.
+      courseA_harvester_loops9_2019:
+        courseA_harvester_loops9_a: Unterteile dieses Rätsel in drei verschiedene
+          Teile. Ein Teil zur ersten Ecke, ein Teil zur zweiten Ecke und ein Teil
+          zum Ende.
+        courseA_harvester_loops9_b: Habe keine Angst, den Code nach jedem Teil auszuführen,
+          um zu sehen, was passiert!
+        courseA_harvester_loops9_c: Folge diesen Weg, um den ganzen Mais zu pflücken.
+      courseA_harvester_seq1:
+        courseA_harvester_seq1_a: |-
+          Verwende diesen Baustein, um den Mais zu pflücken, wenn die Erntemaschine ihn findet!
+
+          <xml>
+            <block type="harvester_corn"/>
+          </xml>
+        courseA_harvester_seq1_b: |-
+          Der Erntemaschine muss sich dreimal nach Osten bewegen, um zum Mais zu gelangen. Verwende diesen Baustein:
+
+          <xml>
+            <block type="maze_moveEast"/>
+          </xml>
       courseA_harvester_seq10:
+        courseA_harvester_seq10_a: Wenn Du nicht mehr weiter weißt, versuche zuerst
+          einmal die einzelnen Schritte auf ein Blatt Papier zu schreiben.
+        courseA_harvester_seq10_b: Du benötigst`Gehe nach Osten`, dann `Gehe nach
+          Norden`. Beides zweimal. Vergiss nicht den Mais zu pflücken!
         courseA_harvester_seq10_c: Versuche, diesen Weg zu benutzen, um den gesamten
           Mais zu pflücken.
       courseA_harvester_seq10_2019:
+        courseA_harvester_seq10_a: Wenn Du nicht mehr weiter weißt, versuche zuerst
+          einmal die einzelnen Schritte auf ein Blatt Papier zu schreiben.
+        courseA_harvester_seq10_b: Du benötigst`Gehe nach Osten`, dann `Gehe nach
+          Norden`. Beides zweimal. Vergiss nicht den Mais zu pflücken!
         courseA_harvester_seq10_c: Versuche, diesen Weg zu benutzen, um den gesamten
           Mais zu pflücken.
+      courseA_harvester_seq13:
+        courseA_bee_seq1_a: |-
+          Verwenden Sie diesen Baustein, um Mais zu pflücken, sobald der Mähdrescher ihn erreicht hat.
+
+          <xml>
+            <block type="harvester_corn"/>
+          </xml>
+      courseA_harvester_seq13_2019:
+        courseA_bee_seq1_a: |-
+          Verwenden Sie diesen Baustein, um Mais zu pflücken, sobald der Mähdrescher ihn erreicht hat.
+
+          <xml>
+            <block type="harvester_corn"/>
+          </xml>
+      courseA_harvester_seq1_2019:
+        courseA_harvester_seq1_a: |-
+          Verwende diesen Baustein, um den Mais zu pflücken, wenn die Erntemaschine ihn findet!
+
+          <xml>
+            <block type="harvester_corn"/>
+          </xml>
+        courseA_harvester_seq1_b: |-
+          Der Erntemaschine muss sich dreimal nach Osten bewegen, um zum Mais zu gelangen. Verwende diesen Baustein:
+
+          <xml>
+            <block type="maze_moveEast"/>
+          </xml>
       courseA_harvester_seq2:
+        courseA_harvester_seq2_a: Vergiss nicht, den Mais mit <xml><block type="harvester_corn"/></xml>
+          zu pflücken!
         courseA_harvester_seq2_b: Versuche einmal, die einzelnen Schritte auf ein
           Blatt Papier zu schreiben um eine Lösung zu finden!
       courseA_harvester_seq2_2019:
+        courseA_harvester_seq2_a: Vergiss nicht, den Mais mit <xml><block type="harvester_corn"/></xml>
+          zu pflücken!
         courseA_harvester_seq2_b: Versuche einmal, die einzelnen Schritte auf ein
           Blatt Papier zu schreiben um eine Lösung zu finden!
+      courseA_harvester_seq3:
+        courseA_harvester_seq3_a: |-
+          Hast du daran gedacht, diesen Baustein zu verwenden?
+
+          <xml><block type="harvester_corn"/></xml>
+        courseA_harvester_seq3_b: Sag die Schritte laut und schau, ob es dir hilft,
+          die Antwort zu finden.
+      courseA_harvester_seq3_2019:
+        courseA_harvester_seq3_a: |-
+          Hast du daran gedacht, diesen Baustein zu verwenden?
+
+          <xml><block type="harvester_corn"/></xml>
+        courseA_harvester_seq3_b: Sag die Schritte laut und schau, ob es dir hilft,
+          die Antwort zu finden.
+      courseA_harvester_seq4:
+        courseA_harvester_seq4_a: Wie viele Felder gibt es zwischen dem Mähdrescher
+          und dem Mais? Wie viele Bausteine befinden sich bereits in Deinem Arbeitsbereich?
+        courseA_harvester_seq4_b: |-
+          Du brauchst fünf `Gehe nach Osten` Bausteine und einen `Pflücke Mais` Baustein:
+
+          <xml><block type="harvester_corn"/></xml>
+      courseA_harvester_seq4_2019:
+        courseA_harvester_seq4_a: Wie viele Felder gibt es zwischen dem Mähdrescher
+          und dem Mais? Wie viele Bausteine befinden sich bereits in Deinem Arbeitsbereich?
+        courseA_harvester_seq4_b: |-
+          Du brauchst fünf `Gehe nach Osten` Bausteine und einen `Pflücke Mais` Baustein:
+
+          <xml><block type="harvester_corn"/></xml>
       courseA_harvester_seq5:
+        courseA_harvester_seq5_a: Welcher Baustein bewegt die Erntemaschine in die
+          falsche Richtung?
         courseA_harvester_seq5_b: Du musst einen Block entfernen.
+        courseA_harvester_seq5_c: |-
+          Wirf diesen Baustein in den Müll!
+
+          <xml><block type="maze_moveNorth"/></xml>
       courseA_harvester_seq5_2019:
+        courseA_harvester_seq5_a: Welcher Baustein bewegt die Erntemaschine in die
+          falsche Richtung?
         courseA_harvester_seq5_b: Du musst einen Block entfernen.
+        courseA_harvester_seq5_c: |-
+          Wirf diesen Baustein in den Müll!
+
+          <xml><block type="maze_moveNorth"/></xml>
+      courseA_harvester_seq6:
+        courseA_harvester_seq6_a: Wenn du festsitzt, versuche die Schritte laut auszusprechen.
+          Es könnte dir helfen, den richtigen Weg zu finden.
+      courseA_harvester_seq6_2019:
+        courseA_harvester_seq6_a: Wenn du festsitzt, versuche die Schritte laut auszusprechen.
+          Es könnte dir helfen, den richtigen Weg zu finden.
+      courseA_harvester_seq7:
+        courseA_harvester_seq7_a: 'Teile die Aufgabe in zwei Teile und löse sie nacheinander:
+          Der eine Teil ist vor der Ecke und der zweite nach der Ecke.'
+        courseA_harvester_seq7_b: Hast du Probleme? Dies ist der Weg, den der Mähdrescher
+          gehen sollte.
+      courseA_harvester_seq7_2019:
+        courseA_harvester_seq7_a: 'Teile die Aufgabe in zwei Teile und löse sie nacheinander:
+          Der eine Teil ist vor der Ecke und der zweite nach der Ecke.'
+        courseA_harvester_seq7_b: Hast du Probleme? Dies ist der Weg, den der Mähdrescher
+          gehen sollte.
+      courseA_harvester_seq8:
+        courseA_harvester_seq8_a: Am Ende müsstest du **4** Gehe-Bausteiene und **2**
+          Pflücke-Bausteien verwendet haben.
+      courseA_harvester_seq8_2019:
+        courseA_harvester_seq8_a: Am Ende müsstest du **4** Gehe-Bausteiene und **2**
+          Pflücke-Bausteien verwendet haben.
+      courseA_harvester_seq9:
+        courseA_harvester_seq9_a: Führe den Code ein paar Mal aus, um zu sehen, was
+          passiert. Wo hört der Mähdrescher auf?
+        courseA_harvester_seq9_b: Vergiss nicht, den ganzen Mais zu pflücken! Du musst
+          **3** Maiskolben pflücken.
+        courseA_harvester_seq9_c: Du solltest diesen Weg gehen, um den ganzen Mais
+          zu pflücken.
+      courseA_harvester_seq9_2019:
+        courseA_harvester_seq9_a: Führe den Code ein paar Mal aus, um zu sehen, was
+          passiert. Wo hört der Mähdrescher auf?
+        courseA_harvester_seq9_b: Vergiss nicht, den ganzen Mais zu pflücken! Du musst
+          **3** Maiskolben pflücken.
+        courseA_harvester_seq9_c: Du solltest diesen Weg gehen, um den ganzen Mais
+          zu pflücken.
+      courseA_maze_ramp2_2018:
+        '1': |-
+          Dein Code sollte so aussehen!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast">
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseA_maze_ramp2_2019:
+        '1': |-
+          Dein Code sollte so aussehen!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast">
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseA_maze_ramp3a_2018:
+        '1': |-
+          Dein Code sollte so aussehen!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="maze_moveNorth"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseA_maze_ramp3a_2019:
+        '1': |-
+          Dein Code sollte so aussehen!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="maze_moveNorth"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseA_maze_ramp3b_2018:
+        '1': |-
+          Dein Code sollte so aussehen!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveSouth">
+                  <next>
+                    <block type="maze_moveWest">
+                      <next>
+                        <block type="maze_moveWest"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseA_maze_ramp3b_2019:
+        '1': |-
+          Dein Code sollte so aussehen!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveSouth">
+                  <next>
+                    <block type="maze_moveWest">
+                      <next>
+                        <block type="maze_moveWest"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseA_maze_ramp4a_2018:
+        '1': |-
+          Dein Code sollte so aussehen!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="maze_moveSouth"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseA_maze_ramp4a_2019:
+        '1': |-
+          Dein Code sollte so aussehen!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="maze_moveSouth"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseA_maze_ramp5a_2018:
+        '1': |-
+          Dein Code sollte so aussehen!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveWest">
+                  <next>
+                    <block type="maze_moveWest">
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseA_maze_ramp5a_2019:
+        '1': |-
+          Dein Code sollte so aussehen!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveWest">
+                  <next>
+                    <block type="maze_moveWest">
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
       courseA_maze_seq1:
         courseA_maze_seq1_a: |-
           Wenn der Vogel sich nicht bewegt, dann überprüfe ob die Blöcke richtig unter <xml>
@@ -1502,9 +2017,13 @@ de-DE:
       courseA_maze_seq10_2018:
         courseA_maze_seq10_a: Wenn Du nicht mehr weiter weißt, versuche zuerst einmal
           die einzelnen Schritte auf ein Blatt Papier zu schreiben.
+        courseA_maze_seq10_b: Du musst in 3 unterschiedliche Richtungen gehen um diese
+          Aufgabe zu lösen.
       courseA_maze_seq10_2019:
         courseA_maze_seq10_a: Wenn Du nicht mehr weiter weißt, versuche zuerst einmal
           die einzelnen Schritte auf ein Blatt Papier zu schreiben.
+        courseA_maze_seq10_b: Du musst in 3 unterschiedliche Richtungen gehen um diese
+          Aufgabe zu lösen.
       courseA_maze_seq13:
         courseA_maze_seq13_a: Wenn dir der Pfad, den du brauchst, nicht klar ist,
           fahre mit deinem Finger den Weg vom Vogel zum Schwein nach.
@@ -1576,9 +2095,21 @@ de-DE:
       courseA_maze_seq5_2018:
         '1': Versuche einmal, die einzelnen Schritte auf ein Blatt Papier zu schreiben
           um eine Lösung zu finden!
+        '2': |-
+          Du musst diesen Block verwenden:
+
+          <xml><block type="maze_moveSouth"/></xml>
       courseA_maze_seq5_2019:
         '1': Versuche einmal, die einzelnen Schritte auf ein Blatt Papier zu schreiben
           um eine Lösung zu finden!
+        '2': |-
+          Du musst diesen Block verwenden:
+
+          <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5a_2018:
+        '1': Sag die Schritte laut und schau, ob es dir hilft, die Antwort zu finden.
+      courseA_maze_seq5a_2019:
+        '1': Sag die Schritte laut und schau, ob es dir hilft, die Antwort zu finden.
       courseA_maze_seq6:
         courseA_maze_seq6_a: In deinem fertigen Code sollten 3 Bewegung-Blöcke sein.
         courseA_maze_seq6_b: 'Wenn Du nicht mehr weiter kommst, teile die Aufgabe
@@ -2061,6 +2592,190 @@ de-DE:
                 </block>
               </next>
             </block></xml>
+      courseB_Scrat_ramp1_2018:
+        '2': Hab keine Angst, einen Fehler zu machen! Probiere etwas aus, und wenn
+          es nicht funktioniert, versuche etwas anderes!
+      courseB_Scrat_ramp1_2019:
+        '2': Hab keine Angst, einen Fehler zu machen! Probiere etwas aus, und wenn
+          es nicht funktioniert, versuche etwas anderes!
+      courseB_Scrat_ramp2_2018:
+        '1': |-
+          Dein Code sollte so aussehen!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast">
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseB_Scrat_ramp2_2019:
+        '1': |-
+          Dein Code sollte so aussehen!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast">
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseB_Scrat_ramp3a_2018:
+        '1': |-
+          Dein Code sollte so aussehen!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="maze_moveNorth"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseB_Scrat_ramp3a_2019:
+        '1': |-
+          Dein Code sollte so aussehen!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="maze_moveNorth"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseB_Scrat_ramp3b_2018:
+        '1': |-
+          Dein Code sollte so aussehen!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveSouth">
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="maze_moveEast"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseB_Scrat_ramp3b_2019:
+        '1': |-
+          Dein Code sollte so aussehen!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveSouth">
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="maze_moveEast"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseB_Scrat_ramp4a_2018:
+        '1': |-
+          Dein Code sollte so aussehen!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="maze_moveSouth"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseB_Scrat_ramp4a_2019:
+        '1': |-
+          Dein Code sollte so aussehen!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="maze_moveSouth"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseB_Scrat_ramp5a_2018:
+        '1': |-
+          Dein Code sollte so aussehen!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveWest">
+                  <next>
+                    <block type="maze_moveWest">
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseB_Scrat_ramp5a_2019:
+        '1': |-
+          Dein Code sollte so aussehen!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveWest">
+                  <next>
+                    <block type="maze_moveWest">
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
       courseB_artist_loops2:
         courseB_artist_loops2_a: Wenn du die Schleife mehr als 4 mal wiederholen möchtest,
           kannst du die Zahl oben im Block ändern.
@@ -2178,6 +2893,24 @@ de-DE:
         courseB_maze_seq7_a: Füge 1 Block hinzu, um Scrat zur Eichel zu bewegen.
       courseB_maze_seq8:
         courseB_maze_seq8_b: Es gibt zwei Möglichkeiten um dieses Puzzle zu lösen!
+      courseB_maze_seq_challenge2:
+        courseB_maze_seq_challenge2_b: Ordne die Bausteine neu an und nimm den Treppenmusterweg.
+      courseB_maze_seq_challenge2_2018:
+        courseB_maze_seq_challenge2_b: Ordne die Bausteine neu an und nimm den Treppenmusterweg.
+      courseB_maze_seq_challenge2_2019:
+        courseB_maze_seq_challenge2_b: Ordne die Bausteine neu an und nimm den Treppenmusterweg.
+      courseC_PlayLab_events9:
+        courseC_PlayLab_events9_c: Du kannst mehr als ein Ereignis `wenn Schauspieler
+          berührt` gleichzeitig in deinem Arbeitsbereich haben, so dass du nicht das
+          erste löschen musst!
+      courseC_PlayLab_events9_2018:
+        courseC_PlayLab_events9_c: Du kannst mehr als ein Ereignis `wenn Schauspieler
+          berührt` gleichzeitig in deinem Arbeitsbereich haben, so dass du nicht das
+          erste löschen musst!
+      courseC_PlayLab_events9_2019:
+        courseC_PlayLab_events9_c: Du kannst mehr als ein Ereignis `wenn Schauspieler
+          berührt` gleichzeitig in deinem Arbeitsbereich haben, so dass du nicht das
+          erste löschen musst!
       courseC_PlayLab_eventsFP_2019:
         idea1: |-
           Brauchst du eine Idee?
@@ -2191,6 +2924,39 @@ de-DE:
           **Ein Abenteuer erleben** - Ändere den Hintergrund, dann lasse die Charaktere darüber reden, wo sie sich gerade befinden.
 
           <img src= "https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif" style="width: 200px">
+      courseC_PlayLab_events_challenge1:
+        courseC_PlayLab_events_challenge_a: |-
+          Du kannst diesen Block verwenden, um Schauspieler an verschiedene Orte im Spielraum zu bewegen.
+
+          <xml> <block type="studio_setSpritePosition">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">12</title>
+            </block></xml>
+      courseC_PlayLab_events_challenge1_2018:
+        courseC_PlayLab_events_challenge_a: |-
+          Du kannst diesen Block verwenden, um Schauspieler an verschiedene Orte im Spielraum zu bewegen.
+
+          <xml> <block type="studio_setSpritePosition">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">12</title>
+            </block></xml>
+      courseC_PlayLab_events_challenge1_2019:
+        courseC_PlayLab_events_challenge_a: |-
+          Du kannst diesen Block verwenden, um Schauspieler an verschiedene Orte im Spielraum zu bewegen.
+
+          <xml> <block type="studio_setSpritePosition">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">12</title>
+            </block></xml>
+      courseC_artist_loop1:
+        courseC_artist_loop1_a: Du brauchst keine Änderungen an der Schleife vorzunehmen,
+          setze einfach einen Baustein darüber.
+      courseC_artist_loop1_2018:
+        courseC_artist_loop1_a: Du brauchst keine Änderungen an der Schleife vorzunehmen,
+          setze einfach einen Baustein darüber.
+      courseC_artist_loop1_2019:
+        courseC_artist_loop1_a: Du brauchst keine Änderungen an der Schleife vorzunehmen,
+          setze einfach einen Baustein darüber.
       courseC_artist_loops1b_2019:
         courseC_artist_loops1b_a: |-
           Dies ist der erste Baustein, den du benötigst:
@@ -2341,6 +3107,15 @@ de-DE:
               </next>
             </block>
           </xml>
+      courseC_artist_loopsPre1a:
+        courseC_artist_loopsPre1a_a: Denken Sie daran, den `Drehe`-Baustein in die
+          Schleife einzuhängen.
+      courseC_artist_loopsPre1a_2018:
+        courseC_artist_loopsPre1a_a: Denken Sie daran, den `Drehe`-Baustein in die
+          Schleife einzuhängen.
+      courseC_artist_loopsPre1a_2019:
+        courseC_artist_loopsPre1a_a: Denken Sie daran, den `Drehe`-Baustein in die
+          Schleife einzuhängen.
       courseC_artist_loopsPrePre1a:
         courseC_artist_loopsPrePre1a_a: |-
           Den ersten Block, den du brauchen wirst, ist:
@@ -2615,7 +3390,34 @@ de-DE:
           auf jedem Feld verwenden.
         courseC_collector_prog_challenge1_b: Hast du dich verlaufen? Versuche diesen
           Weg zu nehmen um die Aufgabe zu lösen!
+      courseC_harvester_loops4:
+        courseC_harvester_loops4_a: Verwende den neuen Baustein "Sammle Mais", um
+          den Mais zu sammeln.
+      courseC_harvester_loops4_2018:
+        courseC_harvester_loops4_a: Verwende den neuen Baustein "Sammle Mais", um
+          den Mais zu sammeln.
+      courseC_harvester_loops4_2019:
+        courseC_harvester_loops4_a: Verwende den neuen Baustein "Sammle Mais", um
+          den Mais zu sammeln.
+      courseC_harvester_loops6:
+        courseC_harvester_loops6_b: Vergiss nicht, dich am Ende der Maisreihe zu drehen.
+      courseC_harvester_loops6_2018:
+        courseC_harvester_loops6_b: Vergiss nicht, dich am Ende der Maisreihe zu drehen.
+      courseC_harvester_loops6_2019:
+        courseC_harvester_loops6_b: Vergiss nicht, dich am Ende der Maisreihe zu drehen.
+      courseC_harvester_loops7:
+        courseC_harvester_loops7_a: Du kannst dieses Rätsel auf zwei Arten lösen,
+          entweder zuerst den Mais oder die Kürbisse.
+      courseC_harvester_loops7_2018:
+        courseC_harvester_loops7_a: Du kannst dieses Rätsel auf zwei Arten lösen,
+          entweder zuerst den Mais oder die Kürbisse.
+      courseC_harvester_loops7_2019:
+        courseC_harvester_loops7_a: Du kannst dieses Rätsel auf zwei Arten lösen,
+          entweder zuerst den Mais oder die Kürbisse.
+      courseC_harvester_loops_challenge1a:
+        courseC_harvester_loops_challenge1_a: Das ist ohne Schleifen zu schwer!
       courseC_harvester_loops_challenge1a_2018:
+        courseC_harvester_loops_challenge1_a: Das ist ohne Schleifen zu schwer!
         courseC_harvester_loops_challenge1_c: |-
           Nachdem du die ersten beiden Male Mais gepflückt hast, kannst du eine verschachtelte Schlaufe verwenden, um die nächsten acht Stücke auszuwählen.
 
@@ -2640,6 +3442,23 @@ de-DE:
                     </block>
                   </statement>
                   </block></xml>
+      courseC_harvester_loops_challenge1a_2019:
+        courseC_harvester_loops_challenge1_a: Das ist ohne Schleifen zu schwer!
+      courseC_harvester_loops_challenge2:
+        courseC_harvester_loops_challenge2_c: |-
+          Dieses Zickzackmuster kann zweimal wiederholt werden, um das Puzzle mit nur 20 Blöcken zu beenden!
+
+          ![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)
+      courseC_harvester_loops_challenge2_2018:
+        courseC_harvester_loops_challenge2_c: |-
+          Dieses Zickzackmuster kann zweimal wiederholt werden, um das Puzzle mit nur 20 Blöcken zu beenden!
+
+          ![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)
+      courseC_harvester_loops_challenge2_2019:
+        courseC_harvester_loops_challenge2_c: |-
+          Dieses Zickzackmuster kann zweimal wiederholt werden, um das Puzzle mit nur 20 Blöcken zu beenden!
+
+          ![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)
       courseC_maze_debugging2:
         courseC_maze_debugging2_c: Du findest nicht heraus, was schief läuft? Führe
           den Code ein paar mal aus um zu sehen, was passiert.
@@ -3366,3 +4185,15 @@ de-DE:
       courseF_bee_variables_4_2019:
         courseF_bee_variables_4_2019_1: Anstatt 1 von `gather` abzuziehen, addiere
           stattdessen jedesmal 1. Welchen Wert sollte die Variable zunächst haben?
+      coursea_maze_ramp1_2018:
+        courseC_maze_programming1_a: Wenn der Vogel nicht zum Schwein gelangt, stelle
+          sicher, dass beide Bausteine vollständig zusammengeklickt sind, und klicke
+          dann erneut auf "Ausführen".
+        courseC_maze_programming1_b: Hab keine Angst, einen Fehler zu machen! Probiere
+          etwas aus, und wenn es nicht funktioniert, versuche etwas anderes!
+      coursea_maze_ramp1_2019:
+        courseC_maze_programming1_a: Wenn der Vogel nicht zum Schwein gelangt, stelle
+          sicher, dass beide Bausteine vollständig zusammengeklickt sind, und klicke
+          dann erneut auf "Ausführen".
+        courseC_maze_programming1_b: Hab keine Angst, einen Fehler zu machen! Probiere
+          etwas aus, und wenn es nicht funktioniert, versuche etwas anderes!

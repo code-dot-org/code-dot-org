@@ -67,6 +67,24 @@ de-DE:
       2-3 Artist Debugging Assessment 1: "Prüfung: Warum ist dieses Quadrat auf jeder
         Seite 75 Pixel zu klein?  \n\nAn welcher Stelle läuft etwas im Code schief?"
       2-3 Artist Free Play: Freies Spiel! Zeichne was du willst.
+      2-3 Artist Functions 1: "\"Ich bin ein Zombie-Künstler. Ich liebe es zu zeichnen!\"
+        \ \n\nHilf dem Zombie, quadratische Gläser zu zeichnen.  \n\nDie Brücke zwischen
+        den Brillengläsern ist 25 Pixel kürzer als die Breite der Quadrate, die 100
+        Pixel beträgt."
+      2-3 Artist Functions 11: "Wir haben die Funktion \"Ein Quadrat zeichnen\" in
+        \"Ein Sechseck zeichnen\" umbenannt, aber sie gibt uns immer noch Felder!
+        Kannst du die Funktion \"Draw a hexagon\" ändern, um ein Hexagon mit 50 Pixel
+        Seiten zu zeichnen? \n\nZeichne das Bild mit der neuen Funktion!"
+      2-3 Artist Functions 2: "Mit Funktionen können Sie neue Bausteine definieren!
+        \n\nWir haben die Blöcke, die zum Zeichnen eines Quadrats benötigt werden,
+        in eine Funktion namens \"Zeichne ein Quadrat\" verschoben. Verwende diesmal
+        die Funktion \"Zeichne ein Quadrat\", um die Gläser zu erstellen. \n\nDie
+        Quadrate sind 75 Pixel voneinander entfernt."
+      2-3 Artist Functions 3: "Bearbeite die Funktion, um ein Quadrat mit einer Seitenlänge
+        von 115 zu zeichnen, um die größeren Gläser zu zeichnen. \n\nDie Quadrate
+        sind nun 45 Pixel voneinander entfernt."
+      2-3 Artist Functions 4: Platziere die Funktion nun in eine Schleife, um diese
+        drei Quadrate zu zeichnen.
       2-3 Artist Loops New 1: Lasst uns den Kopf dieses Roboters zeichnen! Kannst
         du ein Quadrat mit Seiten machen, die 100 Pixel groß sind?
       2-3 Artist Loops New 10: Jetzt lass uns einen Haufen V's miteinander verbinden,
@@ -183,9 +201,28 @@ de-DE:
         So viele schöne Blumen!
 
         Behebe den/die Fehler, um den gesamten Nektar zu sammeln.
+      2-3 Bee Functions 1: Funktionen sind Codeblöcke, die eine Aufgabe ausführen.
+        Benutze die Funktion "sammle 2 Nektar", um den Nektar von jeder Blume zu sammeln.
+      2-3 Bee Functions 10: Lila Blüten haben entweder 1 oder 0 Nektar.  Erstelle
+        eine Funktion, die Nektar nur aus den lila Blüten sammelt, die Nektar haben.
+      2-3 Bee Functions 2: "Funktionen sind Programm-Bausteine, die eine Aufgabe ausführen.
+        \n\nVerwende die „hohle 5“- Funktion, um gleichzeitig 5 mal Nektar zu holen."
       2-3 Bee Functions 3: Sammle den ganzen Nektar von allen Blumen.
+      2-3 Bee Functions 4: "Die „bewege und hole Nektar“- Funktion dreht die Biene,
+        sammelt Nektar und bringt die Biene an den Ausgangsort zurück.  \n\nBenutze
+        die Funktion, um den ganzen Nektar zu sammeln."
+      2-3 Bee Functions 5: Die Blüten haben jetzt mehr Nektar. Bearbeite die gegebene
+        Funktion so, dass sie 4 Portionen Nektar sammelt und benutze sie, um den ganzen
+        Nektar von den Blüten zu sammeln.
       2-3 Bee Functions 6: Jetzt benutze dieselbe Funktion, um Nektar von den drei
         Blüten zu sammeln.
+      2-3 Bee Functions 8: Erzeuge deine eigene Funktion, die 7 Portionen Nektar holt,
+        vorwärts bewegt und 7 mal Honig macht. Benutze die Funktion, um bei jeder
+        Blüte Nektar zu sammeln und bei jeder Wabe Honig zu erzeugen.
+      2-3 Bee Functions 9: Erzeuge deine eigene Funktion, die einen Weg entlanggeht,
+        Nektar holt, Honig erzeugt und dann die Biene zum Anfang des Weges zurückbringt.
+      2-3 Bee Functions Assessment 1: 'Prüfung: Benutze die gegebene Funktion, um
+        von jeder Blüte Nektar zu sammeln.'
       2-3 Bee Functions Assessment 2: 'Prüfung: Erzeuge eine Funktion, mit der man
         sich drehen, vorwärts bewegen und 3 mal Honig erzeugen kann. Anschließend
         lasse die Biene dahin zurückkehren wo sie angefangen hat und drehe um.'
@@ -217,6 +254,10 @@ de-DE:
         gesamten Nektar zu sammeln und den ganzen Honig herzustellen?
       2-3 Bee Loops 7: Füge diese Bausteine in eine Schleife ein, um Nektar von jeder
         Blüte zu sammeln?
+      2-3 Bee Loops 8: |-
+        Benutze die „Solange Nektar“- Schleife, um den ganzen Nektar zu sammeln.
+
+        Diese Schleife wird solange durchlaufen, wie die Bedingung wahr ist - in diesem Fall: `Nektar > 0`.
       2-3 Maze 1: 'Kannst du mir helfen, das böse Schwein zu fangen? Klinke ein paar
         `bewege vorwärts` Bausteine unter dem `Wenn ausführen` Baustein ein und drücke
         auf "Ausführen". '
@@ -251,16 +292,40 @@ de-DE:
         Anzahl an Bausteinen verwenden?
       2-3 Maze Loops 21: Bring mich mit den wenigsten Blöcken zur Sonnenblume!
       2-3 Maze Loops Assessment 1: 'Aufgabe: Bring mich mit nur 5 Bausteinen zur Sonnenblume! '
+      4-5 Artist 1: 'Hilf mir, meine Box fertig zu zeichnen. (Jede Linie ist 300 Pixel
+        lang) '
+      4-5 Artist 11: Vervollständige die grünen Linien. Die Linien sind 300 Pixel
+        lang und 15 Pixel voneinander entfernt.
+      4-5 Artist 2: Baue diesen Code in eine Schleife ein um so das Quadrat zu vervollständigen.
+      4-5 Artist 3: Dieses rechteckige Blumenbeet hat einen Umfang von 600. Die lange
+        Seite hat eine Länge von 200. Zeichne das Rechteck mit so wenigen Bausteinen
+        wie möglich.
       4-5 Artist 3.5: Finde heraus, was passiert, wenn du diesen Code ausführst (oder
         drücke auf „Ausführen“ und probiere es aus). Wiederhole den Vorgang, bis die
         Zeichnung vollständig ist. Die Farben sind (höchstwahrscheinlich) jedes Mal
         anders.
       4-5 Artist 4: Wie viel Grad hat ein Kreis?  Schließe die Bausteine in eine Schleife
         ein, um einen Farbenkreis zu erstellen.
+      4-5 Artist 5: Womit können wir "???" ersetzen, um sicherzustellen, dass der
+        Zombie diese Zeichnung mit der bereitgestellten Schleife vervollständigt?
+      4-5 Artist 6: Dieses gleichseitige Dreieck hat Winkel von 60, 60 und 60 Grad.
+        Jede Seite ist 200 Pixel groß. Vervollständige die Zeichnung.
+      4-5 Artist 7: Dieses rechtwinklige Dreieck hat Winkeln von 30, 60 und 90 Grad.
+        Die Länge der schrägen Seite beträgt das doppelte der Höhe (100 Pixel). Vervollständige
+        die Zeichnung.
+      4-5 Artist 8: "Die Mittellinie auf einem Fußballfeld ist senkrecht zu den Seitenlinien.\\\nDieses
+        Rechteck hat einen Umfang von insgesamt 800 Pixel und ist 240 Pixel lang.
+        Wie groß ist er?   \n\nZeichne die Grenzen und die Mittellinie."
+      4-5 Artist 9: Zeichne die rechte Hälfte dieses Bildes so, dass das Design symmetrisch
+        ist. Die Dreiecke sind gleichseitig und haben Seiten, die 50 Pixel lang sind.
       4-5 Artist Assessment 1: 'Prüfung: Benutze eine Schleife, um das gleichseitige
         Dreieck zu zeichnen. Jede Seite hat eine Länge von 300 Pixeln.'
       4-5 Artist Free Draw 1: Freies Zeichnen!  Zeichne, was deine Inspiration dir
         eingibt.
+      4-5 Artist Patterns 1: |-
+        Zeichne dieses Quadrat mit einer Schleife.
+
+        Jede Seite ist 20 Pixel lang.
       4-5 Artist Patterns 11: 'Wie oft muss die Schleife durchlaufen werden, damit
         ein Halbkreis gezeichnet wird? '
       4-5 Artist Patterns 7: Wir wollen den Code der letzten Aufgabe etwas verändern
@@ -268,9 +333,23 @@ de-DE:
         sich jetzt überdecken. Versuche es mit einer Änderung des ersten "springe
         rückwärts" Bausteins von 100 auf 50 (halb so weit). Wie weit sollte der Künstler
         beim zweiten "springe rückwärts" Baustein gehen?
+      4-5 Artist Patterns Free Play: Freies Spielen - versuche dein Glück beim Entwerfen
+        deines eigenen Musters!
+      4-5 Bee Conditionals 1: Die Biene kann nicht unterscheiden, ob dies eine Blume
+        oder eine Wabe ist. Sammle den Nektar nur aus Blüten, aber prüfe erst, ob
+        es sich um eine Wabe oder um eine Blüte handelt!
       4-5 Bee Conditionals 2: "Mehr Wolken! \n\nÜberprüfe unter jeder Wolke, ob sie
         eine Blume versteckt, bevor du Nektar sammelst.  \n\nDenkt daran: Nicht alle
         Wolken verbergen das Gleiche!"
+      4-5 Bee Conditionals 3: Jetzt will die Biene nur Honig erzeugen. Prüfe, damit
+        nur bei Waben Honig erzeugt wird!
+      4-5 Bee Conditionals 4: Das unbekannte Objekt ist entweder eine Blume oder eine
+        Bienenwabe. Benutze den „wenn/ansonsten"- Baustein um Nektar zu machen, wenn
+        es eine Blüte ist, „ansonsten", um Honig zu erzeugen (weil es eine Wabe ist).
+      4-5 Bee Conditionals 5: "Vielleicht ist eine Blume oder eine Wabe unter diesen
+        Wolken. \n\nBenutze den „wenn/ansonsten\"- Baustein um Nektar zu machen, wenn
+        dort eine Blüte ist, „ansonsten\", um Honig zu erzeugen (weil dort eine Wabe
+        ist)."
       4-5 Bee Debugging 10: Finde die Fehler und behebe sie.
       4-5 Bee Debugging 11: Zählt dies richtig?
       4-5 Bee Debugging 2: Hilf der Biene, Nektar zu holen und Honig zu erzeugen.
@@ -279,11 +358,24 @@ de-DE:
         aus?
       4-5 Bee Debugging 5: Etwas stimmt hier nicht ...
       4-5 Bee Debugging 7: Der Funktion fehlt etwas ...
+      4-5 Bee Debugging 8: Diese Funktion ist in Ordnung, wird aber nicht richtig
+        verwendet.
       4-5 Bee Debugging 9: Warum macht die Biene nicht genug Honig?
       4-5 Bee Debugging Assessment 1: 'Prüfung: Repariere den Code.'
       4-5 Bee Nested Loops 1: Benutze eine Schleife, um den gesamten Nektar zu sammeln.
+      4-5 Bee Nested Loops 2: 'Sammle den ganzen Nektar von allen Blumen. Benutze
+        eine verschachtelte Schleife. '
+      4-5 Bee Nested Loops 3: Sammle den gesamten Nektar, indem du den anfangs vorhandenen
+        Code in eine geschachtelte Schleife einschließt.
+      4-5 Bee Nested Loops 4: "Sammle den gesamten Nektar jeder Blüte und erzeuge
+        Honig bei jeder Honigwabe. \n\nBenutze eine verschachtelte Schleife. "
       4-5 Bee Nested Loops 5: Sammle den gesamten Nektar, indem du eine geschachtelte
         Schleife erzeugst.
+      4-5 Bee Nested Loops 7: Schließe diese Schleife in eine andere Schleife ein,
+        so dass eine geschachtelte Schleife entsteht, und sammle so den gesamten Nektar
+        der Blüten.
+      4-5 Bee Nested Loops Rows: Sammle Nektar aus den Blütenreihe! Benutze eine verschachtelte
+        Schleife.
       4-5 Maze 1: Guter Mensch. Ich Zombie. Muss ... zur ... Sonnenblume.
       4-5 Maze 10: Kannst du zur Sonnenblume gelangen, und dabei nur vier Bausteine
         benutzen?
@@ -310,6 +402,11 @@ de-DE:
         Verwende den "Wiederhole bis"-Baustein, um die Aufgabe mit so wenig Blöcken wie möglich zu lösen.
       4-5 Maze Assessment 1: 'Aufgabe: Gehe zur Sonnenblume und verwende dabei so
         wenig Bausteine wie möglich.'
+      4-5 Maze Conditionals 3: 'Benutze den `if`-Baustein, um zu entscheiden, wann
+        gedreht werden soll. '
+      4-5 Maze Conditionals 4: Ok, löse dieses wie das letzte Puzzle, aber du musst
+        dich daran erinnern, wie du den `wenn`-Baustein und `wiederhole bis`-Baustein
+        verwendet hast.
       4-5 Nested Loops 1: 'Vervollständige den Code um die Dreiecke zu zeichnen. Das
         erste ist bereits fertig. Hinweis: Drei Dreiecke in einer 360- Grad- Drehung.'
       4-5 Nested Loops 2: 'Erstelle nun eine Schleife in einer weiteren Schleife um
@@ -318,6 +415,8 @@ de-DE:
       4-5 Nested Loops 5: Benutze den angegebenen Code in einer Schleife, um eine
         Windmühle zu erstellen.
       4-5 Nested Loops 9: Zeichne die Zähne im Mund des Alligators!
+      4-5 While Loops Assessment 1: Hier sind viele Löcher und Erdhaufen.  Hilf mir,
+        die Löcher zu füllen und die Haufen zu entfernen und den Boden wieder zu ebnen.
       AB_Debug_PlayLab3: Bewege den Ritter zu jeder der Flaggen. Wenn etwas schief
         läuft, suchen Sie nach den Fehlern!
       Alien Defender: 'Projekt Idee: Macht ein Verteidigungsspiel in Play Lab!'
@@ -342,6 +441,19 @@ de-DE:
         geordnet auf den Bildschirm. (Klicke, um die komplette Anweisung anzuzeigen)
       CSDU6 arrays select rainbow_2019: Schreibe den Inhalt der Felder nach Nummer
         geordnet auf den Bildschirm. (Klicke, um die komplette Anweisung anzuzeigen)
+      Course 4 Artist 1: 'Hilf mir, meine Box fertig zu zeichnen. (Jede Linie ist
+        200 Pixel lang) '
+      Course 4 Artist 11: Jetzt kommt eine Herausforderung!  Hier ist ein Design,
+        das nur Bausteine benutzt, die dir bereits gezeigt wurden!  Schaffst du es,
+        es ohne weitere Informationen wieder zu erstellen?  Habe keine Angst zu versuchen
+        und dabei Fehler zu machen. Es wird nicht erwartet, dass es beim ersten Mal
+        perfekt wird.  Möchtest du mehr Hinweise sehen?  Klicke hier!
+      Course 4 Artist 12: |-
+        Möchtest Du noch einmal das Ausgangsdesign oder die Hinweise ansehen?  Klicke hier!
+
+        Ansonsten leg mit Deinem eigenen Design los!
+      Course 4 Artist 2: Kannst du eine Schleife verwenden, um das ausgegraute Quadrat
+        zu zeichnen?  (Jede Seite ist 300 Pixel lang)
       Course 4 Artist Binary 3: Kannst du dieses Muster zeichnen, indem du eine dreistellige
         Binärzeichenfolge durchlaufen lässt?
       Course 4 Artist Binary 4: Jede dieser Binärzeichenfolgen steht für eine Reihe
@@ -365,10 +477,20 @@ de-DE:
         Wir haben dir ein Gitter aus „Pixeln“ zur Verfügung gestellt, durch das du laufen kannst und in dem du Designs erstellen kannst, indem du nur bestimmte Quadrate anschaltest.  Kannst du den Künstler „01010101“ in Binärcode in der ersten Reihe zeichnen lassen?
       Course 4 Artist For Loops 6a: Nimm drei kleine Änderungen an dem Code aus dem
         vorherigem Level vor, um dies zu erreichen!
+      Course 4 Artist Inspire: |-
+        Möchtest Du noch einmal das Ausgangsdesign oder die Hinweise ansehen?  Klicke hier!
+
+        Ansonsten leg mit Deinem eigenen Design los!
       Course 4 Bee 1: |-
         Die Biene weiß nicht, was sich unter der Wolke verbirgt!
 
         Benutze den „Wenn“-Baustein, um nachzusehen und nur dann Nektar zu sammeln, wenn eine Blume unter der Wolke ist.
+      Course 4 Bee 2: Verwende den „Wenn/ansonsten“-Baustein, um bei jedem Objekt
+        zu prüfen, ob es sich um eine Blume oder Honigwabe handelt. Wenn es eine Blume
+        ist, sammle Nektar ... ansonsten, mache Honig!
+      Course 4 Bee 3: Das unbekannte Objekt ist entweder eine Blume oder eine Bienenwabe.
+        Benutze den „Wenn/ansonsten"- Baustein, um Nektar zu machen, wenn es eine
+        Blüte ist, ansonsten mache Honig (denn dann wäre es eine Honigwabe).
       Course 4 Bee Loops 5 NEW: Hier sind drei Blumen. Kannst du das Anweisungsmuster
         finden, das du dreimal wiederholen musst, um den Nektar mit möglichst wenigen
         Bausteinen zu sammeln?
@@ -1066,13 +1188,23 @@ de-DE:
         sammeln?
       course2_collector_prog_challenge2: Es gibt 20 Schätze zu finden. Sammle mindestens
         die Hälfte, um diese Herausforderung zu beenden!
+      course2_harvester_loops_challenge1: Sammle den gesamten Mais ein.
+      course2_harvester_loops_challenge2: Sammle den gesamten Salat ein. Vermeide
+        die Bäume und Felder!
       course2_maze_loops_challenge1: 'Versuche Schleifen zu verwenden, damit Scrat
         seine Eicheln findet! '
       course2_maze_programming_challenge1: '"Das Schwein versteckt sich! Kannst du
         mir helfen, mich zurechtzufinden?"\_'
       course2_maze_programming_challenge2: Manchmal gibt es mehr als eine Lösung für
         ein Problem. Manchmal ist es schneller, rückwärts zu gehen, als vorwärts!
+      course3_bee_functions_challenge2: Für diese Herausforderung bist du auf dich
+        allein gestellt!
+      course3_farmer_condLoops_challenge1: An den Kürbissen rechts abbiegen. Sammle
+        alles, um das Level zu beenden. Jede versteckte Ernstestelle hat nur einen
+        Mais oder Salat.
       course3_maze_debugging_challenge1: _"Gehe ich hier nur immer im Kreis herum?"_
+      course3_maze_debugging_challenge2: _"Wenn ich mich zu oft drehe, wird mir schwindelig!
+        Hilf mir, die Eichel mit nur vier Drehbefehlen zu erreichen."_
       course4_artist_fwp_challenge1: Versuche, dieses Programm auszuführen und verändere
         es, um zu sehen, was passiert. Kannst du herausfinden, wie es funktioniert?
         (Oder lösche es und ersetze es durch etwas ganz anderes)
@@ -1232,18 +1364,102 @@ de-DE:
         lösen.
       courseA_collector_preLoops7: Hier sind drei Stapel mit Schätzen. Sammle Sie
         alle ein!
+      courseA_harvester_loops1: Hilf dem Mähdrescher, den ganzen Mais zu pflücken!
+      courseA_harvester_loops10: Hilf der Erntemaschine alle fünf Ähren Mais zu pflücken!
+      courseA_harvester_loops10_2019: Hilf der Erntemaschine alle fünf Ähren Mais
+        zu pflücken!
+      courseA_harvester_loops11: 'Versuchs noch einmal alleine! '
+      courseA_harvester_loops11_2019: 'Versuchs noch einmal alleine! '
+      courseA_harvester_loops1_2019: Hilf dem Mähdrescher, den ganzen Mais zu pflücken!
       courseA_harvester_loops2: Achte darauf, dass Du den ganzen Mais pflückst!
       courseA_harvester_loops2_2019: Achte darauf, dass Du den ganzen Mais pflückst!
+      courseA_harvester_loops3: Kannst du den ganzen Mais mit nur **einem** Gehe-Baustein
+        pflücken?
+      courseA_harvester_loops3_2019: Kannst du den ganzen Mais mit nur **einem** Gehe-Baustein
+        pflücken?
+      courseA_harvester_loops4: Kannst du dem Mähdrescher helfen, den Fehler in ihrem
+        Code zu finden?
+      courseA_harvester_loops4_2019: Kannst du dem Mähdrescher helfen, den Fehler
+        in ihrem Code zu finden?
+      courseA_harvester_loops5: Versuchs selbst! Kannst du auch den Mais am Ende pflücken?
+      courseA_harvester_loops5_2019: Versuchs selbst! Kannst du auch den Mais am Ende
+        pflücken?
+      courseA_harvester_loops5a: Sieh dir den ganzen Mais an! Kannst du ihn ganz alleine
+        ernten?
+      courseA_harvester_loops5a_2019: Sieh dir den ganzen Mais an! Kannst du ihn ganz
+        alleine ernten?
+      courseA_harvester_loops5b: Kannst du deinen Code ändern, damit der Mähdrescher
+        den gesamten Mais pflückt?
+      courseA_harvester_loops5b_2019: Kannst du deinen Code ändern, damit der Mähdrescher
+        den gesamten Mais pflückt?
+      courseA_harvester_loops6: Du benötigst **einen** `Bewege nach Westen` Baustein
+        und **einen** `Bewege nach Norden` Baustein.
       courseA_harvester_loops6_2019: Du benötigst **einen** `Bewege nach Süden` Baustein
         und **einen** `Bewege nach Westen` Baustein.
+      courseA_harvester_loops7: 'Probier es selbst aus! '
+      courseA_harvester_loops7_2019: 'Probier es selbst aus! '
+      courseA_harvester_loops9: Kannst du herausfinden, wie man den gesamten Mais
+        pflückt?
+      courseA_harvester_loops9_2019: Kannst du herausfinden, wie man den gesamten
+        Mais pflückt?
+      courseA_harvester_seq1: Spiele mit diesen Bausteinen um dem Mähdrescher zu helfen
+        den Maiskolben einzusammeln.
       courseA_harvester_seq10: Achte darauf, dass Du den ganzen Mais pflückst!
       courseA_harvester_seq10_2019: Achte darauf, dass Du den ganzen Mais pflückst!
+      courseA_harvester_seq11: Versuche es selbst! Pflück den ganzen Mais.
+      courseA_harvester_seq11_2019: Versuche es selbst! Pflück den ganzen Mais.
       courseA_harvester_seq12: Pflück den ganzen Mais.
       courseA_harvester_seq12_2019: Pflück den ganzen Mais.
+      courseA_harvester_seq13: Spiele mit diesen Bausteinen um dem Mähdrescher zu
+        helfen die Maiskolben einzusammeln.
+      courseA_harvester_seq13_2019: Spiele mit diesen Bausteinen um dem Mähdrescher
+        zu helfen die Maiskolben einzusammeln.
+      courseA_harvester_seq1_2019: Spiele mit diesen Bausteinen um dem Mähdrescher
+        zu helfen den Maiskolben einzusammeln.
+      courseA_harvester_seq2: Benutze drei `bewege nach Westen` Bausteine und einen
+        `pflücke Mais` Baustein, um dieses Rätsel zu lösen.
+      courseA_harvester_seq2_2019: Benutze drei `bewege nach Westen` Bausteine und
+        einen `pflücke Mais` Baustein, um dieses Rätsel zu lösen.
+      courseA_harvester_seq3: Benutze drei `Gehe nach Norden` Bausteine und einen
+        `Pflücke Mais` Baustein.
+      courseA_harvester_seq3_2019: Benutze drei `Gehe nach Norden` Bausteine und einen
+        `Pflücke Mais` Baustein.
+      courseA_harvester_seq4: Füge einen Baustein hinzu, um dem Mähdrescher zu helfen,
+        den Mais zu sammeln.
+      courseA_harvester_seq4_2019: Füge einen Baustein hinzu, um dem Mähdrescher zu
+        helfen, den Mais zu sammeln.
+      courseA_harvester_seq5: Finde den Fehler und behebe ihn!
+      courseA_harvester_seq5_2019: Finde den Fehler und behebe ihn!
+      courseA_harvester_seq6: Versuche es selbst!
+      courseA_harvester_seq6_2019: Versuche es selbst!
+      courseA_harvester_seq7: Versuche es selbst!
+      courseA_harvester_seq7_2019: Versuche es selbst!
+      courseA_harvester_seq8: Jetzt muss der Erntemaschine zweimal Mais pflücken!
+      courseA_harvester_seq8_2019: Jetzt muss der Erntemaschine zweimal Mais pflücken!
       courseA_harvester_seq9: Füge zwei Blöcke hinzu, um dieses Puzzle zu beenden!
       courseA_harvester_seq9_2019: Füge zwei Blöcke hinzu, um dieses Puzzle zu beenden!
+      courseA_maze_ramp2_2018: Ziehe alle nötigen Blöcke zusammen, um deinen Code
+        zu vervollständigen, klicke dann auf "Ausführen".
+      courseA_maze_ramp2_2019: Ziehe alle nötigen Blöcke zusammen, um deinen Code
+        zu vervollständigen, klicke dann auf "Ausführen".
+      courseA_maze_ramp3a_2018: Füge einen `Nord`-Baustein am Ende der anderen Bausteine
+        hinzu, um diesen Code zu vervollständigen, dann klicke auf "▶ Run".
+      courseA_maze_ramp3a_2019: Füge einen `Nord`-Baustein am Ende der anderen Bausteine
+        hinzu, um diesen Code zu vervollständigen, dann klicke auf "▶ Run".
+      courseA_maze_ramp3b_2018: Füge einen `Nord`-Baustein am Ende der anderen Bausteine
+        hinzu, um diesen Code zu vervollständigen, dann klicke auf "Ausführen".
+      courseA_maze_ramp3b_2019: Füge einen `Nord`-Baustein am Ende der anderen Bausteine
+        hinzu, um diesen Code zu vervollständigen, dann klicke auf "Ausführen".
+      courseA_maze_ramp4a_2018: Kannst du herausfinden, welchen Block du am Ende der
+        anderen Blöcke hinzufügen musst, um diesen Code zu vervollständigen?
+      courseA_maze_ramp4a_2019: Kannst du herausfinden, welchen Block du am Ende der
+        anderen Blöcke hinzufügen musst, um diesen Code zu vervollständigen?
       courseA_maze_seq1: Bring den Vogel zum bösen Schwein!
       courseA_maze_seq10: 'Herausforderung: Geh um das TNT herum, um den Vogel zum
+        Schwein zu bringen! '
+      courseA_maze_seq10_2018: 'Herausforderung: Vermeide das TNT um den Vogel zum
+        Schwein zu bringen! '
+      courseA_maze_seq10_2019: 'Herausforderung: Vermeide das TNT um den Vogel zum
         Schwein zu bringen! '
       courseA_maze_seq11: Gehe zuerst in eine Richtung und dann in eine andere, um
         den Vogel zum Schwein zu bringen.
@@ -1265,6 +1481,10 @@ de-DE:
       courseA_maze_seq5: Versuche diese Aufgabe von Anfang an allein zu schaffen.
       courseA_maze_seq5_2018: Probiere dies hier mal aus.
       courseA_maze_seq5_2019: Probiere dies hier mal aus.
+      courseA_maze_seq5a_2018: Was kannst du am Ende dieses Codes hinzufügen, um den
+        Vogel zum Schwein zu bringen?
+      courseA_maze_seq5a_2019: Was kannst du am Ende dieses Codes hinzufügen, um den
+        Vogel zum Schwein zu bringen?
       courseA_maze_seq6: Gehe zuerst in eine Richtung und dann in eine andere, um
         den Vogel zum Schwein zu bringen!
       courseA_maze_seq6_2018: Gehe zuerst in eine Richtung und dann in eine andere,
@@ -1331,6 +1551,10 @@ de-DE:
       courseA_playLab_events7: Füge alles Mögliche, was du möchtest zu diesem Spiel
         hinzu. Schaffst du es, dass der Dinosaurier verschwindet, wenn Jorge in ihn
         hineinläuft?
+      courseA_playLab_events7_2018: _Freispiel:_ Füge diesem Spiel alles hinzu, was
+        du willst.
+      courseA_playLab_events7_2019: _Freispiel:_ Füge diesem Spiel alles hinzu, was
+        du willst.
       courseA_playlab_events_challenge1: Kannst du einen Code schreiben, damit auch
         meine anderen Freunde erscheinen? Die Tipps werden dir helfen dieses Projekt
         Schritt-für-Schritt zu schaffen.
@@ -1353,6 +1577,16 @@ de-DE:
         und "▶ Ausführen" drücken!
       courseB_Scrat_ramp1_2019: Für dieses Rätsel musst du die Blöcke zusammenstecken
         und "▶ Ausführen" drücken!
+      courseB_Scrat_ramp3a_2018: Füge einen `Nord`-Baustein am Ende der anderen Bausteine
+        hinzu, um diesen Code zu vervollständigen, dann klicke auf "▶ Run".
+      courseB_Scrat_ramp3a_2019: Füge einen `Nord`-Baustein am Ende der anderen Bausteine
+        hinzu, um diesen Code zu vervollständigen, dann klicke auf "▶ Run".
+      courseB_Scrat_ramp4a_2018: Kannst du herausfinden, welchen Block du am Ende
+        der anderen Blöcke hinzufügen musst, um diesen Code zu vervollständigen?
+      courseB_Scrat_ramp4a_2019: Kannst du herausfinden, welchen Block du am Ende
+        der anderen Blöcke hinzufügen musst, um diesen Code zu vervollständigen?
+      courseB_Scrat_ramp5a_2018: Probiere dies ganz alleine aus!
+      courseB_Scrat_ramp5a_2019: Probiere dies ganz alleine aus!
       courseB_artist_loops1: Dies ist eine neue Art von Aufgabe, sie hießt "Künstler".
         Spiele in diesem Level und zeichne etwas lustiges.
       courseB_artist_loops1_2018: Dies ist eine neue Art von Aufgabe, sie hießt "Künstler".
@@ -1448,6 +1682,9 @@ de-DE:
         kann.
       courseB_playlab_events4_2018: Hol dir den Drachen, um dieses Level zu beenden!
       courseB_playlab_events4_2019: Hol dir den Drachen, um dieses Level zu beenden!
+      courseB_starWars_prog2: Holt das ganze Metall.
+      courseB_starWars_prog2_2018: Holt das ganze Metall.
+      courseB_starWars_prog2_2019: Holt das ganze Metall.
       courseC19_playLab_EOC2: Nutze Ereignisse und Aktionen, um deinen Helden in Bewegung
         zu setzen. Komme zu den Zielen.
       courseC19_playLab_EOC5: Tolle Arbeit! Du hast alle grundlegenden Komponenten
@@ -1461,6 +1698,27 @@ de-DE:
         der Hund (Figur 1) sich zu Olivia, der Katze hinbewegt?
       courseC_PlayLab_eventsA_embed_2019: Lasst uns ein Spiel spielen. Erreiche 5
         Punkte, indem du den Pinguin auf den Oktopus bewegst!
+      courseC_PlayLab_eventsFP: Erstelle deine eigene Geschichte. Wenn du fertig bist,
+        klicke auf "Fertig stellen", um es mit Freunden zu teilen. Siehe Geschichtenideen
+        in den Hinweisen.
+      courseC_PlayLab_eventsFP_2018: Erstelle deine eigene Geschichte. Wenn du fertig
+        bist, klicke auf "Fertig stellen", um es mit Freunden zu teilen. Siehe Geschichtenideen
+        in den Hinweisen.
+      courseC_PlayLab_eventsFP_2019: Erstelle deine eigene Geschichte. Wenn du fertig
+        bist, klicke auf "Fertig stellen", um es mit Freunden zu teilen. Siehe Geschichtenideen
+        in den Hinweisen.
+      courseC_PlayLab_events_challenge1: "Benutze einen neuen Block, damit sich Waddles
+        automatisch zum Start zurückbewegt, wenn er in den Dinosaurier läuft und einen
+        Punkt erzielt. \nSpiele das Spiel und bewege die Waddles mit den Pfeilen,
+        bis du genug Punkte hast."
+      courseC_PlayLab_events_challenge1_2018: "Benutze einen neuen Block, damit sich
+        Waddles automatisch zum Start zurückbewegt, wenn er in den Dinosaurier läuft
+        und einen Punkt erzielt. \nSpiele das Spiel und bewege die Waddles mit den
+        Pfeilen, bis du genug Punkte hast."
+      courseC_PlayLab_events_challenge1_2019: "Benutze einen neuen Block, damit sich
+        Waddles automatisch zum Start zurückbewegt, wenn er in den Dinosaurier läuft
+        und einen Punkt erzielt. \nSpiele das Spiel und bewege die Waddles mit den
+        Pfeilen, bis du genug Punkte hast."
       courseC_artist_loop1_2018: Fügen wir etwas Pep hinzu mit einem `Set Pattern`
         Baustein.
       courseC_artist_loop1_2019: Fügen wir etwas Pep hinzu mit einem `Set Pattern`
@@ -1554,6 +1812,18 @@ de-DE:
         um diese Herausforderung zu beenden!
       courseC_data wizard: "Drücke \"Ausführen\". \nDer Zauberer lässt Tiere erscheinen.
         \n\nZähle sie. \nWas fällt dir auf?"
+      courseC_harvester_loops3: Sammle alle Kürbisse ein.
+      courseC_harvester_loops3_2018: Sammle alle Kürbisse ein.
+      courseC_harvester_loops3_2019: Sammle alle Kürbisse ein.
+      courseC_harvester_loops_challenge1a: Sammle den gesamten Mais ein.
+      courseC_harvester_loops_challenge1a_2018: Sammle den gesamten Mais ein.
+      courseC_harvester_loops_challenge1a_2019: Sammle den gesamten Mais ein.
+      courseC_harvester_loops_challenge2: Sammle den gesamten Salat ein. Vermeide
+        die Bäume und Felder!
+      courseC_harvester_loops_challenge2_2018: Sammle den gesamten Salat ein. Vermeide
+        die Bäume und Felder!
+      courseC_harvester_loops_challenge2_2019: Sammle den gesamten Salat ein. Vermeide
+        die Bäume und Felder!
       courseC_maze_debugging9_2019: Verwende die Bausteine in der Toolbox, um Ihr
         Programm zu erstellen. Bring den Vogel zum Schwein.
       courseC_maze_loops_challenge1a: 'Versuche Schleifen zu verwenden, damit Scrat
@@ -1811,6 +2081,8 @@ de-DE:
       courseE_bee_functions4: Die „bewege und hole Nektar“- Funktion dreht die Biene,
         sammelt Nektar und bringt die Biene an den Ausgangsort zurück. Benutze die
         Funktion, um den ganzen Nektar zu sammeln.
+      courseE_farmer_concept2: Sammle alle Kürbisse ein.
+      courseE_farmer_concept2_2018: Sammle alle Kürbisse ein.
       courseE_farmer_functions4b: Benutze deine neue Funktion um dieses Puzzle zu
         lösen.
       courseF_artist_for7: Nimm drei kleine Änderungen an dem Code aus dem vorherigem
@@ -1877,6 +2149,10 @@ de-DE:
         machen."
       courseF_bee_fwp8: Benutze deine neue Funktion um die Spirale zu lösen.
       courseF_bee_fwp9_predict1: Benutze deine neue Funktion um dieses Puzzle zu lösen.
+      coursea_maze_ramp1_2018: Für dieses Rätsel musst du die Bausteine zusammenstecken
+        und "▶ Ausführen" drücken!
+      coursea_maze_ramp1_2019: Für dieses Rätsel musst du die Bausteine zusammenstecken
+        und "▶ Ausführen" drücken!
       express_maze_debugging9_2019: Verwende die Blöcke in der Toolbox, um ein Programm
         zu erstellen. Bringt Scrat zur Eichel.
       flappy_1: Füge dem "Beim Klicken"-Baustein einen weiteren Baustein hinzu und

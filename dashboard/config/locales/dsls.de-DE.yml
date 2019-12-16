@@ -894,8 +894,10 @@ de-DE:
         - {}
         - {}
       CSD U3 Card Examples_2018:
+        title: Eine interaktive Karte erstellen
         content1: hier die Beschreibung
       CSD U3 Card Examples_2018_2019:
+        title: Eine interaktive Karte erstellen
         content1: hier die Beschreibung
       CSD U3 Functions Prediction define first:
         answers:
@@ -1007,9 +1009,31 @@ de-DE:
       CSD U3 combining rep_2018:
         title: Titel
         content1: hier die Beschreibung
+        markdown: |+
+          ### Kannst du diese binäre Zeichenkette dekodieren?
+
+
+
+          [](https://images.code.org/3aa6cac930e44cdc71b8fdcb7b1babe9-image-1531247036544.23.16 AM.png)
+
+
+
+          ### Welche Informationen benötigst du, um sie zu entschlüsseln?
+
       CSD U3 combining rep_2018_2019:
         title: Titel
         content1: hier die Beschreibung
+        markdown: |+
+          ### Kannst du diese binäre Zeichenkette dekodieren?
+
+
+
+          [](https://images.code.org/3aa6cac930e44cdc71b8fdcb7b1babe9-image-1531247036544.23.16 AM.png)
+
+
+
+          ### Welche Informationen benötigst du, um sie zu entschlüsseln?
+
       CSD U3 drawSprites placement match:
         questions:
         - {}
@@ -1051,51 +1075,393 @@ de-DE:
       CSD U5 Encryption 1:
         title: Titel
         content1: hier die Beschreibung
+        markdown: |
+          # Dekodierung von binären Zeichenketten
+
+          ![](https://images.code.org/6d8dcf1c1e6c2955fa767e9839af820e-image-1505420730035.24.20 PM.png)
+
+          ## Kodierungssystem:
+
+          ![](https://images.code.org/df5db2027cac3c16c4ef4b2b8f940d5d-image-1505420957117.28.48 PM.png) ![](https://images.code.org/4de0035c9053477fa6f5484800dc8140-image-1505420957118.28.39 PM.png)
+
+          ![](https://images.code.org/8335bef013e9655291fcfecf2c60fcd3-image-1505420957118.28.30 PM.png)  &nbsp;&nbsp; ![](https://images.code.org/ab3337f5b0848557c37fd114fe0d65b7-image-1505420957116.28.56 PM.png)
       CSD U5 Encryption 1_2018:
         title: Titel
         content1: hier die Beschreibung
+        markdown: |
+          # Dekodierung von binären Zeichenketten
+
+          ![](https://images.code.org/6d8dcf1c1e6c2955fa767e9839af820e-image-1505420730035.24.20 PM.png)
+
+          ## Kodierungssystem:
+
+          ![](https://images.code.org/df5db2027cac3c16c4ef4b2b8f940d5d-image-1505420957117.28.48 PM.png) ![](https://images.code.org/4de0035c9053477fa6f5484800dc8140-image-1505420957118.28.39 PM.png)
+
+          ![](https://images.code.org/8335bef013e9655291fcfecf2c60fcd3-image-1505420957118.28.30 PM.png)  &nbsp;&nbsp; ![](https://images.code.org/ab3337f5b0848557c37fd114fe0d65b7-image-1505420957116.28.56 PM.png)
       CSD U5 Encryption 1_2018_2019:
         title: Titel
         content1: hier die Beschreibung
+        markdown: |
+          # Dekodierung von binären Zeichenketten
+
+          ![](https://images.code.org/6d8dcf1c1e6c2955fa767e9839af820e-image-1505420730035.24.20 PM.png)
+
+          ## Kodierungssystem:
+
+          ![](https://images.code.org/df5db2027cac3c16c4ef4b2b8f940d5d-image-1505420957117.28.48 PM.png) ![](https://images.code.org/4de0035c9053477fa6f5484800dc8140-image-1505420957118.28.39 PM.png)
+
+          ![](https://images.code.org/8335bef013e9655291fcfecf2c60fcd3-image-1505420957118.28.30 PM.png)  &nbsp;&nbsp; ![](https://images.code.org/ab3337f5b0848557c37fd114fe0d65b7-image-1505420957116.28.56 PM.png)
       CSD U5 Encryption 2:
         title: Dekodierung von binären Zeichenketten
         content1: hier die Beschreibung
+        markdown: |
+          # Dekodierung von binären Zeichenketten
+
+          ![](https://images.code.org/8d98818a95a736974cb4e6e5ab3717f4-image-1514928554045.24.20 PM.png)
+
+          * Kannst du diese binäre Zeichenkette dekodieren?
+          * Was musst du wissen, bevor du es entschlüsseln kannst?
       CSD U5 Encryption 2_2018:
         title: Dekodierung von binären Zeichenketten
         content1: hier die Beschreibung
+        markdown: |
+          # Dekodierung von binären Zeichenketten
+
+          ![](https://images.code.org/8d98818a95a736974cb4e6e5ab3717f4-image-1514928554045.24.20 PM.png)
+
+          * Kannst du diese binäre Zeichenkette dekodieren?
+          * Was musst du wissen, bevor du es entschlüsseln kannst?
       CSD U5 Encryption 2_2018_2019:
         title: Dekodierung von binären Zeichenketten
         content1: hier die Beschreibung
+        markdown: |
+          # Dekodierung von binären Zeichenketten
+
+          ![](https://images.code.org/8d98818a95a736974cb4e6e5ab3717f4-image-1514928554045.24.20 PM.png)
+
+          * Kannst du diese binäre Zeichenkette dekodieren?
+          * Was musst du wissen, bevor du es entschlüsseln kannst?
       CSD U5 L13 SFLP Interpreting Data:
         title: Titel
         content1: hier die Beschreibung
       CSD U5 crosstab warmup:
         title: Pizza Umfrage
         content1: hier die Beschreibung
+        markdown: |+
+          # Kuchen-Umfrage
+
+          Für diese Umfrage müssen die Leute ihren Kuchen- und Glasurgeschmack wählen.
+
+          <table style="text-align: center; border: solid 1px darkgray;">
+          <tr><td style="width: 50px; background-color: gray; color:white"></td><td style="width: 200px; background-color: gray; color:white">Kuchen</td><td style="width: 200px; background-color: gray; color:white">Glasur</td></tr>
+          <tr><td>1</td><td>Schokoladenkuchen</td><td>Schokoladenglasur</td></tr>
+          <tr><td>2</td><td>Roter Samtkuchen</td><td>Frischkäse-Glasur</td></tr>
+          <tr><td>3</td><td>Schokoladenkuchen</td><td>Schokoladenglasur</td></tr>
+          <tr><td>4</td><td>Möhrenkuchen</td><td>Frischkäse-Glasur</td></tr>
+          <tr><td>5</td><td>Möhrenkuchen</td><td>Vanilla Icing</td></tr>
+          <tr><td>6</td><td>Schokoladenkuchen</td><td>Schokoladenglasur</td></tr>
+          <tr><td>7</td><td>Schokoladenkuchen</td><td>Frischkäseglasur</td></tr>
+          <tr><td>8</td><td>Möhrenkuchen</td><td>Frischkäseglasur</td></tr>
+          </table>
+          <br><br>
+
+          Wenn sich diese Leute auf eine Kuchen- und Glasurkombination für eine Party einigen mussten, was sollte es dann sein?
+
+          Was wäre, wenn sie zwei Kuchen mit Glasur bestellen könnten?
+
+          Wie kann das Wissen um beide Möglichkeiten uns helfen, besser zu verstehen, welche Art von Kuchen wir bestellen sollten?
+
       CSD U5 crosstab warmup_2018:
         title: Pizza Umfrage
         content1: hier die Beschreibung
+        markdown: |+
+          # Kuchen-Umfrage
+
+          Für diese Umfrage müssen die Leute ihren Kuchen- und Glasurgeschmack wählen.
+
+          <table style="text-align: center; border: solid 1px darkgray;">
+          <tr><td style="width: 50px; background-color: gray; color:white"></td><td style="width: 200px; background-color: gray; color:white">Kuchen</td><td style="width: 200px; background-color: gray; color:white">Glasur</td></tr>
+          <tr><td>1</td><td>Schokoladenkuchen</td><td>Schokoladenglasur</td></tr>
+          <tr><td>2</td><td>Roter Samtkuchen</td><td>Frischkäse-Glasur</td></tr>
+          <tr><td>3</td><td>Schokoladenkuchen</td><td>Schokoladenglasur</td></tr>
+          <tr><td>4</td><td>Möhrenkuchen</td><td>Frischkäse-Glasur</td></tr>
+          <tr><td>5</td><td>Möhrenkuchen</td><td>Vanilla Icing</td></tr>
+          <tr><td>6</td><td>Schokoladenkuchen</td><td>Schokoladenglasur</td></tr>
+          <tr><td>7</td><td>Schokoladenkuchen</td><td>Frischkäseglasur</td></tr>
+          <tr><td>8</td><td>Möhrenkuchen</td><td>Frischkäseglasur</td></tr>
+          </table>
+          <br><br>
+
+          Wenn sich diese Leute auf eine Kuchen- und Glasurkombination für eine Party einigen mussten, was sollte es dann sein?
+
+          Was wäre, wenn sie zwei Kuchen mit Glasur bestellen könnten?
+
+          Wie kann das Wissen um beide Möglichkeiten uns helfen, besser zu verstehen, welche Art von Kuchen wir bestellen sollten?
+
       CSD U5 crosstab warmup_2018_2019:
         title: Pizza Umfrage
         content1: hier die Beschreibung
+        markdown: |+
+          # Kuchen-Umfrage
+
+          Für diese Umfrage müssen die Leute ihren Kuchen- und Glasurgeschmack wählen.
+
+          <table style="text-align: center; border: solid 1px darkgray;">
+          <tr><td style="width: 50px; background-color: gray; color:white"></td><td style="width: 200px; background-color: gray; color:white">Kuchen</td><td style="width: 200px; background-color: gray; color:white">Glasur</td></tr>
+          <tr><td>1</td><td>Schokoladenkuchen</td><td>Schokoladenglasur</td></tr>
+          <tr><td>2</td><td>Roter Samtkuchen</td><td>Frischkäse-Glasur</td></tr>
+          <tr><td>3</td><td>Schokoladenkuchen</td><td>Schokoladenglasur</td></tr>
+          <tr><td>4</td><td>Möhrenkuchen</td><td>Frischkäse-Glasur</td></tr>
+          <tr><td>5</td><td>Möhrenkuchen</td><td>Vanilla Icing</td></tr>
+          <tr><td>6</td><td>Schokoladenkuchen</td><td>Schokoladenglasur</td></tr>
+          <tr><td>7</td><td>Schokoladenkuchen</td><td>Frischkäseglasur</td></tr>
+          <tr><td>8</td><td>Möhrenkuchen</td><td>Frischkäseglasur</td></tr>
+          </table>
+          <br><br>
+
+          Wenn sich diese Leute auf eine Kuchen- und Glasurkombination für eine Party einigen mussten, was sollte es dann sein?
+
+          Was wäre, wenn sie zwei Kuchen mit Glasur bestellen könnten?
+
+          Wie kann das Wissen um beide Möglichkeiten uns helfen, besser zu verstehen, welche Art von Kuchen wir bestellen sollten?
+
       CSD U5 data visualization:
         title: Titel
         content1: hier die Beschreibung
+        markdown: |
+          ## Bestes Haustier der Klasse
+          ### Hier sind drei verschiedene Möglichkeiten, die Ergebnisse einer Abstimmung über das beste Haustier anzuzeigen.
+
+          ![](https://images.code.org/7c9f4de7b0028ab929a3a10494535525-image-1488389767180.png) ![](https://images.code.org/7e14d63776050e7aad994ee2e47cb7ce-image-1488389776283.png) ![](https://images.code.org/cf0dd06d2e0ccdf9573e204d24aad90a-image-1488389830915.png)
+
+
+          ### Welches macht es für einen Menschen am einfachsten, eine Entscheidung darüber zu treffen, welches Haustier das beliebteste ist?
+          ### Welches macht es für einen Computer am einfachsten, eine Entscheidung zu treffen?
       CSD U5 data visualization_2018:
         title: Titel
         content1: hier die Beschreibung
+        markdown: |
+          ## Bestes Haustier der Klasse
+          ### Hier sind drei verschiedene Möglichkeiten, die Ergebnisse einer Abstimmung über das beste Haustier anzuzeigen.
+
+          ![](https://images.code.org/7c9f4de7b0028ab929a3a10494535525-image-1488389767180.png) ![](https://images.code.org/7e14d63776050e7aad994ee2e47cb7ce-image-1488389776283.png) ![](https://images.code.org/cf0dd06d2e0ccdf9573e204d24aad90a-image-1488389830915.png)
+
+
+          ### Welches macht es für einen Menschen am einfachsten, eine Entscheidung darüber zu treffen, welches Haustier das beliebteste ist?
+          ### Welches macht es für einen Computer am einfachsten, eine Entscheidung zu treffen?
       CSD U5 data visualization_2018_2019:
         title: Titel
         content1: hier die Beschreibung
+        markdown: |
+          ## Bestes Haustier der Klasse
+          ### Hier sind drei verschiedene Möglichkeiten, die Ergebnisse einer Abstimmung über das beste Haustier anzuzeigen.
+
+          ![](https://images.code.org/7c9f4de7b0028ab929a3a10494535525-image-1488389767180.png) ![](https://images.code.org/7e14d63776050e7aad994ee2e47cb7ce-image-1488389776283.png) ![](https://images.code.org/cf0dd06d2e0ccdf9573e204d24aad90a-image-1488389830915.png)
+
+
+          ### Welches macht es für einen Menschen am einfachsten, eine Entscheidung darüber zu treffen, welches Haustier das beliebteste ist?
+          ### Welches macht es für einen Computer am einfachsten, eine Entscheidung zu treffen?
       CSD U5 student record:
         title: Titel
         content1: hier die Beschreibung
+        markdown: "# Studentenakte\n\n<div style=\"float: right; height:209px; width:
+          456px; background-color: black;\">\n  <div style=\"float:left; height:52px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">0</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:52px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">1</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:52px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">2</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:53px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">3</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n</div>\n\n## Die Studentenakte enthält Informationen
+          nach folgenden Regeln:\n\n * <h4>Die ersten acht Bits speichern die Note
+          des Schülers als Binärzahl.</h4>\n * <h4>Die zweiten acht speichern das
+          Alter des Schülers als Binärzahl.</h4>\n * <h4>Die nächsten acht speichern
+          die erste Initiale des Schülers in ASCII.</h4>\n * <h4>Die letzten acht
+          speichern den letzten Initialwert des Schülers in ASCII.</h4>\n\n<br />\n<br
+          />\n"
       CSD U5 student record_2018:
         title: Titel
         content1: hier die Beschreibung
+        markdown: "# Studentenakte\n\n<div style=\"float: right; height:209px; width:
+          456px; background-color: black;\">\n  <div style=\"float:left; height:52px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">0</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:52px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">1</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:52px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">2</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:53px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">3</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n</div>\n\n## Die Studentenakte enthält Informationen
+          nach folgenden Regeln:\n\n * <h4>Die ersten acht Bits speichern die Note
+          des Schülers als Binärzahl.</h4>\n * <h4>Die zweiten acht speichern das
+          Alter des Schülers als Binärzahl.</h4>\n * <h4>Die nächsten acht speichern
+          die erste Initiale des Schülers in ASCII.</h4>\n * <h4>Die letzten acht
+          speichern den letzten Initialwert des Schülers in ASCII.</h4>\n\n<br />\n<br
+          />\n"
       CSD U5 student record_2018_2019:
         title: Titel
         content1: hier die Beschreibung
+        markdown: "# Studentenakte\n\n<div style=\"float: right; height:209px; width:
+          456px; background-color: black;\">\n  <div style=\"float:left; height:52px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">0</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:52px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">1</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:52px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">2</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:53px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">3</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n</div>\n\n## Die Studentenakte enthält Informationen
+          nach folgenden Regeln:\n\n * <h4>Die ersten acht Bits speichern die Note
+          des Schülers als Binärzahl.</h4>\n * <h4>Die zweiten acht speichern das
+          Alter des Schülers als Binärzahl.</h4>\n * <h4>Die nächsten acht speichern
+          die erste Initiale des Schülers in ASCII.</h4>\n * <h4>Die letzten acht
+          speichern den letzten Initialwert des Schülers in ASCII.</h4>\n\n<br />\n<br
+          />\n"
       CSD U5L02 autoSFLP_2019:
         markdown: "# Diese Umfrage befindet sich noch in der Entwicklung\n"
       CSD U6 LED create intro:
@@ -1239,7 +1605,7 @@ de-DE:
 
           Für Teil 2 wirst du Dein eigenes Projekt erstellen. Es gibt hier keine Rätsel - stattdessen gibt es eine Reihe von Projekten, die verschiedene Wege aufzeigen, komplexere Tanzpartys zu gestalten.
 
-          Du kannst diese Stufen _in beliebiger Reihenfolge_ durchführen. Springe herum, um zu sehen, wie etwas in einer früheren Ebene gemacht wurde, oder kombiniere Konzepte zwischen den Projekten. Probiere alle aus, wähle Deine Favoriten und verbringe Deine Zeit damit, dieses Projekt zu ergänzen, um es zu Deinem eigenen zu machen.
+          Du kannst diese Stufen in beliebiger Reihenfolge durchführen. Springe herum, um zu sehen, wie etwas in einem früheren Level gemacht wurde, oder kombiniere Konzepte aus verschiedenen Projekten. Probiere alle aus, wähle Deine Favoriten und verbringe Deine Zeit damit, dieses Projekt zu erweitern, um es zu Deinem eigenen zu machen.
 
           <a class="btn btn-large btn-primary next-stage submitButton pull-right">Weiter</a>
 
@@ -1324,6 +1690,44 @@ de-DE:
           <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
 
           </div>
+      Design a Screen for your App_2018:
+        markdown: |
+          # Ein Mock-Up Deiner App
+
+          Jetzt, da du einige Elemente im App Lab kennengelernt hast, kannst du damit beginnen, deine eigene App zu planen. Teile mit deiner Gruppe die Bildschirme so auf, dass jeder auf einem anderen Bildschirm arbeitet.
+
+          Da ihr die Arbeit aufteilen werden, werden ihr im Voraus planen müssen, um ein einheitliches Erscheinungsbild Eurer Seiten zu erreichen. Zum Beispiel werdet ihr Euch über Dinge austauschen müssen:
+
+          * Wohin gehen die Navigationstasten?
+          * Welche Farben sollen für Hintergründe, Text und Schaltflächen haben?
+          * Was ist der allgemeine Stil und das Layout?
+
+          # Namensraum
+
+          In der nächsten Lektion wirst du alle Bildschirme deiner Teammitglieder in einer App kombinieren. Um sicherzustellen, dass die IDs auf einer Seite nicht in Konflikt mit anderen stehen, musst du einen eindeutigen _Namensraum_ für die Seite angeben. Dies wird etwas sein, das du am Anfang jeder ID hinzufügst, damit deine Element-IDs nicht mit anderen in Konflikt geraten, wenn du die Bildschirme aller Beteiligten zusammenführst. Dein Namensraum sollte die ID deines Bildschirms mit einem Unterstrich am Ende sein. Wenn du zum Beispiel die Homepage erstellst, kannst du "home_" als Namensraum verwenden - was zu IDs wie:
+
+          * "home_title"
+          * "home_loginButton"
+          * "home_logo"
+      Design a Screen for your App_2018_2019:
+        markdown: |
+          # Ein Mock-Up Deiner App
+
+          Jetzt, da du einige Elemente im App Lab kennengelernt hast, kannst du damit beginnen, deine eigene App zu planen. Teile mit deiner Gruppe die Bildschirme so auf, dass jeder auf einem anderen Bildschirm arbeitet.
+
+          Da ihr die Arbeit aufteilen werden, werden ihr im Voraus planen müssen, um ein einheitliches Erscheinungsbild Eurer Seiten zu erreichen. Zum Beispiel werdet ihr Euch über Dinge austauschen müssen:
+
+          * Wohin gehen die Navigationstasten?
+          * Welche Farben sollen für Hintergründe, Text und Schaltflächen haben?
+          * Was ist der allgemeine Stil und das Layout?
+
+          # Namensraum
+
+          In der nächsten Lektion wirst du alle Bildschirme deiner Teammitglieder in einer App kombinieren. Um sicherzustellen, dass die IDs auf einer Seite nicht in Konflikt mit anderen stehen, musst du einen eindeutigen _Namensraum_ für die Seite angeben. Dies wird etwas sein, das du am Anfang jeder ID hinzufügst, damit deine Element-IDs nicht mit anderen in Konflikt geraten, wenn du die Bildschirme aller Beteiligten zusammenführst. Dein Namensraum sollte die ID deines Bildschirms mit einem Unterstrich am Ende sein. Wenn du zum Beispiel die Homepage erstellst, kannst du "home_" als Namensraum verwenden - was zu IDs wie:
+
+          * "home_title"
+          * "home_loginButton"
+          * "home_logo"
       DesigningForAccessibilityMarkdownLevel_2019:
         markdown: |
           # Entwerfen für Barrierefreiheit
@@ -3074,3 +3478,5 @@ de-DE:
         - text: Ich weiß es nicht.
           feedback: Laurel versucht Schätze einzusammeln an Stellen, wo kein Schatz
             ist, und das verursacht einen Fehler.
+      gradek1_activity_beNice:
+        title: Der Computer ist dein Freund

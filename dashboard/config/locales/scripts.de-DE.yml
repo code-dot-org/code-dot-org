@@ -382,6 +382,8 @@ de:
           stages:
             Overview and Setup Instructions:
               name: Übersicht und Installationsanweisungen
+            Packets and Reliability:
+              name: Pakete und Zuverlässigkeit
             Routers and addresses:
               name: Router und Adressen
         pixelation:
@@ -577,6 +579,10 @@ de:
               name: Text-Kompression
         CSPPD:
           stages:
+            Impact of Computer Science:
+              name: Auswirkungen der Informatik
+            Teaching Strategies:
+              name: Unterrichtsstrategien
             What is CSP?:
               name: Was ist CSP?
         CSPLessonSamples:
@@ -587,6 +593,10 @@ de:
               name: Lektion 15
         ECSPD:
           stages:
+            Impact of Computer Science:
+              name: Auswirkungen der Informatik
+            Teaching Strategies:
+              name: Unterrichtsstrategien
             What is ECS?:
               name: Was ist ECS?
         sciencePD:
@@ -612,6 +622,8 @@ de:
         cspunit3:
           description_short: Programmierung
           stages:
+            Canvas and Arrays in Apps:
+              name: Zeichenfläche und Arrays in Apps
             Compound Conditional Logic:
               name: Verbundene bedingte Logik
             Controlling Memory with Variables:
@@ -622,6 +634,8 @@ de:
               name: Funktionen mit Parametern erstellen
             Digital Assistant Project:
               name: Projekt zu Digitale Assistenten
+            Event-Driven Programming and Debugging:
+              name: Ereignisgesteuerte Programmierung und Debugging
             Events Unplugged:
               name: Offline-Events
             Functions with Return Values:
@@ -666,10 +680,18 @@ de:
               name: Das Design-Rezept
         ECSPD-NexTech:
           stages:
+            Impact of Computer Science:
+              name: Auswirkungen der Informatik
+            Teaching Strategies:
+              name: Unterrichtsstrategien
             What is ECS?:
               name: Was ist ECS?
         ECSPD-iZone:
           stages:
+            Impact of Computer Science:
+              name: Auswirkungen der Informatik
+            Teaching Strategies:
+              name: Unterrichtsstrategien
             What is ECS?:
               name: Was ist ECS?
         algebraPD-NexTech:
@@ -734,6 +756,8 @@ de:
               name: Zusammenfassung
         sciencePD3:
           stages:
+            Decode and Share:
+              name: Dekodieren und Teilen
             Welcome Back!:
               name: Willkommen zurück!
         cspunit2:
@@ -821,6 +845,8 @@ de:
           description: 'Phase 2 Online: Gemischtes Sommerstudium'
           description_short: 'Phase 2 Online: Gemischtes Sommerstudium'
           stages:
+            Best Practices for Teaching Computer Science:
+              name: Best Practices für den Informatikunterricht
             Booleans:
               name: Boolesche Werte
             Course Overview:
@@ -849,16 +875,30 @@ de:
               name: App-Labor
             Internet Simulator:
               name: Internet-Simulator
+            Text Compression Lesson:
+              name: Lektion zur Textkompression
             Welcome!:
               name: Willkommen!
         K5-OnlinePD:
           stages:
+            Best Practices for Teaching Computer Science:
+              name: Best Practices für den Informatikunterricht
             Computer Science Fundamentals:
               name: Informatik Grundlagen
             Getting Started:
               name: Erste Schritte
             Looking Ahead:
               name: Nach vorne schauen
+            'Mastering the Basics: Conditionals':
+              name: 'Die Grundlagen beherrschen: Bedingungen'
+            'Mastering the Basics: Events':
+              name: 'Die Grundlagen beherrschen: Ereignisse'
+            'Mastering the Basics: Functions':
+              name: 'Die Grundlagen beherrschen: Funktionen'
+            'Mastering the Basics: Loops':
+              name: 'Die Grundlagen beherrschen: Schleifen'
+            'Mastering the Basics: Sequencing':
+              name: 'Die Grundlagen beherrschen: Sequenzierung'
             Next Steps:
               name: Nächste Schritte
             Planning:
@@ -985,32 +1025,48 @@ de:
           stages:
             Welcome Back!:
               name: Willkommen zurück!
+        frequency_analysis:
+          stages:
+            Frequency Analysis:
+              name: Häufigkeitsanalyse
         ECSPD3-Unit2:
           stages:
+            Close & Next Steps:
+              name: Schließen und nächste Schritte
             Getting Started:
               name: Erste Schritte
             Intro to Unit 2:
               name: Einführung in Einheit 2
             Lesson Overviews:
               name: Unterrichtsübersicht
+            Teaching Strategies:
+              name: Unterrichtsstrategien
             Unit 2 Challenge:
               name: Einheit 2 - Herausforderung
         ECSPD3-Unit3:
           stages:
+            Close & Next Steps:
+              name: Schließen und nächste Schritte
             Getting Started:
               name: Erste Schritte
             Intro to Unit 3:
               name: Einführung in Einheit 3
+            Teaching Strategies:
+              name: Unterrichtsstrategien
             Unit 3 Challenge:
               name: Einheit 3 - Herausforderung
             Unit 3 Day-by-Day:
               name: Einheit 3 - Tag für Tag
         ECSPD3-Unit4:
           stages:
+            Close & Next Steps:
+              name: Schließen und nächste Schritte
             Getting Started:
               name: Erste Schritte
             Intro to Unit 4:
               name: Einführung in Einheit 4
+            Teaching Strategies:
+              name: Unterrichtsstrategien
             Unit 4 Challenge:
               name: Einheit 4 - Herausforderung
             Unit 4 Day-by-Day:
@@ -1047,10 +1103,20 @@ de:
           stages:
             Check Your Assumptions:
               name: Prüfe deine Voraussetzungen
+            Cleaning Data:
+              name: Bereinigung von Daten
+            Compiling Data:
+              name: Kompilieren von Daten
             Creating Javascript Objects:
               name: Javascript Objekte erstellen
             Creating Summary Tables:
               name: Zusammenfassungstabellen erstellen
+            Data, Security, and Privacy:
+              name: Daten, Sicherheit und Privatsphäre
+            Designing Data Collection:
+              name: Entwurf der Datenerhebung
+            Privacy vs Utility:
+              name: Datenschutz vs. Nützlichkeit
             Why Make Apps?:
               name: Warum Apps erstellen?
         ScienceP3OLPT2:
@@ -1091,6 +1157,8 @@ de:
           stages:
             Basic Circuits:
               name: Grundschaltungen
+            Blinky Lights:
+              name: Blinkende Lichter
         Special Fun:
           description_audience: 'Alter: 10-18'
           stages:
@@ -1133,6 +1201,8 @@ de:
         cspunit3temp:
           description_short: Programmierung
           stages:
+            Canvas and Arrays in Apps:
+              name: Zeichenfläche und Arrays in Apps
             Functions with Return Values:
               name: Funktion mit Rückgabewerten
             Image Scroller with Key Events:
@@ -1209,6 +1279,8 @@ de:
           stages:
             Check Your Assumptions:
               name: Prüfe deine Voraussetzungen
+            Cleaning Data:
+              name: Bereinigung von Daten
             Creating Summary Tables:
               name: Zusammenfassungstabellen erstellen
             What is Big Data?:
@@ -1353,6 +1425,8 @@ de:
               name: Bytes und Dateigrößen
             Check Your Assumptions:
               name: Prüfe deine Voraussetzungen
+            Cleaning Data:
+              name: Bereinigung von Daten
             Creating Summary Tables:
               name: Zusammenfassungstabellen erstellen
             Encoding B&W Images:
@@ -1387,12 +1461,16 @@ de:
         csp5-2017:
           title: CSP Lektion 5 - Apps erstellen ('17-'18)
           stages:
+            Canvas and Arrays in Apps:
+              name: Zeichenfläche und Arrays in Apps
             Compound Conditional Logic:
               name: Verbundene bedingte Logik
             Controlling Memory with Variables:
               name: Speicher mit Variablen steuern
             Digital Assistant Project:
               name: Projekt zu Digitale Assistenten
+            Event-Driven Programming and Debugging:
+              name: Ereignisgesteuerte Programmierung und Debugging
             Events Unplugged:
               name: Offline-Events
             Functions with Return Values:
@@ -1420,12 +1498,18 @@ de:
         CSDU3-Draft:
           description_short: Programmierung
           stages:
+            Drawing in Game Lab:
+              name: Zeichnen im Game Lab
             Sprites and Images:
               name: Sprites und Bilder
+            Variables and Animation:
+              name: Variablen und Animation
             Functions:
               name: Funktionen
             Defender:
               name: Verteidiger
+            'Project: Build a Game':
+              name: 'Projekt: Ein Spiel erstellen'
             Velocity:
               name: Geschwindigkeit
         2016_sciencePD_phase1:
@@ -1446,6 +1530,9 @@ de:
               name: Was Sie erwartet
         TEMP CSD Unit 3:
           description_short: Programmierung
+          stages:
+            Drawing in Game Lab:
+              name: Zeichnen im Game Lab
         CSF_Secret_Sample:
           description_audience: 'Alter: 8-18'
         algebraFacilitator:
@@ -1472,6 +1559,12 @@ de:
               name: Verwendung von Modellen im Klassenzimmer
             What to Expect:
               name: Was Sie erwartet
+        cspoptional:
+          stages:
+            Unit 1 - Encoding Numbers in the Real World:
+              name: Lektion 1 - Kodierung von Zahlen in der realen Welt
+            Unit 1 - Sending Bits in the Real World:
+              name: Lektion 1 - Senden von Bits in der realen Welt
         cspunit1-support:
           stages:
             Chapter Overviews:
@@ -1558,6 +1651,8 @@ de:
               name: Kindergarten Stage 1
         gradeKinder:
           stages:
+            Debugging:
+              name: Debugging
             Events:
               name: Ereignisse
             Events Unplugged:
@@ -1590,6 +1685,8 @@ de:
               name: Songschreiben
         grade1:
           stages:
+            Debugging:
+              name: Debugging
             Events:
               name: Ereignisse
             Events Unplugged:
@@ -1602,6 +1699,8 @@ de:
               name: Einführung in Schleifen
             Loops Unplugged:
               name: 'Offline: Schleifen'
+            More Computer Science:
+              name: Mehr Informatik
             Programming:
               name: Programmierung
             Unspotted Bugs:
@@ -1644,30 +1743,42 @@ de:
               name: Zusammenfassung
         ecs-unit2:
           stages:
+            Close & Next Steps:
+              name: Schließen und nächste Schritte
             Getting Started:
               name: Erste Schritte
             Intro to Unit 2:
               name: Einführung in Einheit 2
             Lesson Overviews:
               name: Unterrichtsübersicht
+            Teaching Strategies:
+              name: Unterrichtsstrategien
             Unit 2 Challenge:
               name: Einheit 2 - Herausforderung
         ecs-unit3:
           stages:
+            Close & Next Steps:
+              name: Schließen und nächste Schritte
             Getting Started:
               name: Erste Schritte
             Intro to Unit 3:
               name: Einführung in Einheit 3
+            Teaching Strategies:
+              name: Unterrichtsstrategien
             Unit 3 Challenge:
               name: Einheit 3 - Herausforderung
             Unit 3 Day-by-Day:
               name: Einheit 3 - Tag für Tag
         ecs-unit4:
           stages:
+            Close & Next Steps:
+              name: Schließen und nächste Schritte
             Getting Started:
               name: Erste Schritte
             Intro to Unit 4:
               name: Einführung in Einheit 4
+            Teaching Strategies:
+              name: Unterrichtsstrategien
             Unit 4 Challenge:
               name: Einheit 4 - Herausforderung
             Unit 4 Day-by-Day:
@@ -1688,6 +1799,8 @@ de:
               name: Einheit 5 - Unterricht
             Unit 5 Challenge:
               name: Einheit 5 - Herausforderung
+            Close & Next Steps:
+              name: Schließen und nächste Schritte
         ecs-unit6:
           stages:
             Alternative Ideas for Unit 6:
@@ -1702,6 +1815,8 @@ de:
               name: Einheit 6 - Übersicht
             Unit 6 lessons:
               name: Einheit 6 - Unterricht
+            Close & Next Steps:
+              name: Schließen und nächste Schritte
         grade3:
           stages:
             " Bee: Conditionals":
@@ -1739,12 +1854,18 @@ de:
         csd3-2017:
           description_short: Programmierung
           stages:
+            Drawing in Game Lab:
+              name: Zeichnen im Game Lab
             Sprites and Images:
               name: Sprites und Bilder
+            Variables and Animation:
+              name: Variablen und Animation
             Velocity:
               name: Geschwindigkeit
             Functions:
               name: Funktionen
+            'Project: Build a Game':
+              name: 'Projekt: Ein Spiel erstellen'
             Programming for Entertainment:
               name: Programmieren zur Unterhaltung
             Plotting Shapes:
@@ -1757,6 +1878,8 @@ de:
               name: Bedingungen
         grade2:
           stages:
+            At The Dog Park:
+              name: Im Hundepark
             Flappy:
               name: Flappy
             Binary Bracelets:
@@ -1809,10 +1932,16 @@ de:
           stages:
             Unit 1 Overview:
               name: Einheit 1 - Übersicht
+            'Lessons 2 - 3: Binary Messages':
+              name: 'Lektionen 2 - 3: Binäre Meldungen'
+            'Lessons 3 - 4 : Encoding Images':
+              name: 'Lektionen 3 - 4: Kodierung von Bildern'
             Unit 2 Overview:
               name: Einheit 2 - Übersicht
             Unit 3 Overview:
               name: Lerneinheit 3 Übersicht
+            Event Driven Programming:
+              name: Ereignisgesteuerte Programmierung
             Variables and Strings:
               name: Variablen und Zeichenketten
             Unit 5 Overview:
@@ -1821,6 +1950,8 @@ de:
           stages:
             Unit 1 Overview:
               name: Einheit 1 - Übersicht
+            'Lessons 2 - 3: Binary Messages':
+              name: 'Lektionen 2 - 3: Binäre Meldungen'
         basketball:
           title: Wähle Dein Team und spiele eine Runde Basketball
           description_short: Wähle Dein Team und spiele eine Runde Basketball
@@ -1869,8 +2000,12 @@ de:
           stages:
             Unit 2 Overview:
               name: Einheit 2 - Übersicht
+            'Lessons 3 - 4 : Encoding Images':
+              name: 'Lektionen 3 - 4: Kodierung von Bildern'
         csd4-2017:
           stages:
+            Event Driven Programming:
+              name: Ereignisgesteuerte Programmierung
             User Interfaces:
               name: Benutzeroberflächen
         minecraft:
@@ -1894,6 +2029,8 @@ de:
               name: Sicher unterwegs
         courseb-draft:
           stages:
+            More Computer Science:
+              name: Mehr Informatik
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-Life-Algorithmen: Pflanze Samen'
             Your Digital Footprint:
@@ -1993,6 +2130,10 @@ de:
           stages:
             Unit 3 Overview:
               name: Lerneinheit 3 Übersicht
+            'Lessons 1 - 2: Data in the Real World':
+              name: 'Lektionen 1 - 2: Daten in der realen Welt'
+            'Lessons 1 - 4: Data in the Real World':
+              name: 'Lektionen 1 - 4: Daten in der realen Welt'
             Unit 4 Overview:
               name: Einheit 4 - Übersicht
         sciencepd4:
@@ -2011,6 +2152,8 @@ de:
           stages:
             Binary:
               name: Binärdatei
+            Snowflakes:
+              name: Schneeflocken
         sciencepd5:
           stages:
             Welcome!:
@@ -2021,6 +2164,8 @@ de:
           stages:
             Unit 5 Overview:
               name: Einheit 5 - Übersicht
+            Event Driven Programming:
+              name: Ereignisgesteuerte Programmierung
             Variables and Strings:
               name: Variablen und Zeichenketten
         csppostap-2017:
@@ -2061,6 +2206,14 @@ de:
               name: Einführung
             Input:
               name: Eingabe
+        applab-1hour:
+          stages:
+            Event Driven Programming:
+              name: Ereignisgesteuerte Programmierung
+        applab-2hour:
+          stages:
+            Event Driven Programming:
+              name: Ereignisgesteuerte Programmierung
         coursed-ramp:
           stages:
             Introduction:
@@ -2098,6 +2251,8 @@ de:
               name: Formen und Zufälligkeiten
             Shapes and Randomness:
               name: Formen und Zufälligkeiten
+            Drawing in Game Lab:
+              name: Zeichnen im Game Lab
             Variables:
               name: Variablen
             Programming for Entertainment:
@@ -2112,6 +2267,10 @@ de:
               name: Funktionen
         csd3-old:
           stages:
+            Drawing in Game Lab:
+              name: Zeichnen im Game Lab
+            Variables and Animation:
+              name: Variablen und Animation
             Sprites and Images:
               name: Sprites und Bilder
             Velocity:
@@ -2150,6 +2309,8 @@ de:
               name: Programmieren zur Unterhaltung
             Plotting Shapes:
               name: Formen plotten
+            Drawing in Game Lab:
+              name: Zeichnen im Game Lab
             Shapes and Randomness:
               name: Formen und Zufälligkeiten
             Variables:
@@ -2172,6 +2333,8 @@ de:
           stages:
             Plotting Shapes:
               name: Formen plotten
+            Drawing in Game Lab:
+              name: Zeichnen im Game Lab
         csd2-old:
           stages:
             Describing Web pages:
@@ -2349,6 +2512,10 @@ de:
               name: foo
           title: CSP Lektion 3 - Einführung in die Programmierung (Teilziele)
           description_short: Programmierung
+        csd4-draft:
+          stages:
+            Event Driven Programming:
+              name: Ereignisgesteuerte Programmierung
         applab-intro:
           stages:
             Intro to AppLab - Choose Your Own Adventure:
@@ -2448,6 +2615,10 @@ de:
               name: "„Zähle mit“-Schleifenspaß"
             Songwriting with Parameters:
               name: Songschreiben mit Parametern
+        csd4-old:
+          stages:
+            Event Driven Programming:
+              name: Ereignisgesteuerte Programmierung
         csp3-staging:
           stages:
             Using Simple Commands:
@@ -2536,6 +2707,8 @@ de:
               name: Programmieren zur Unterhaltung
             Plotting Shapes:
               name: Formen plotten
+            Drawing in Game Lab:
+              name: Zeichnen im Game Lab
             Variables:
               name: Variablen
             Conditionals:
@@ -2556,6 +2729,8 @@ de:
               name: Programmieren zur Unterhaltung
             Plotting Shapes:
               name: Formen plotten
+            Drawing in Game Lab:
+              name: Zeichnen im Game Lab
             Variables:
               name: Variablen
             Conditionals:
@@ -2818,6 +2993,8 @@ de:
               name: Verlustreiche Kompression und Dateitypen
             Check Your Assumptions:
               name: Prüfe deine Voraussetzungen
+            Cleaning Data:
+              name: Bereinigung von Daten
             Creating Summary Tables:
               name: Zusammenfassungstabellen erstellen
         csp3-2018:
@@ -2872,6 +3049,8 @@ de:
               name: Abschließende Herausforderung
             Check Your Assumptions:
               name: Prüfe deine Voraussetzungen
+            Cleaning Data:
+              name: Bereinigung von Daten
             Creating Summary Tables:
               name: Zusammenfassungstabellen erstellen
         spritelab:
@@ -3205,6 +3384,8 @@ de:
               name: Programmieren zur Unterhaltung
             Plotting Shapes:
               name: Formen plotten
+            Drawing in Game Lab:
+              name: Zeichnen im Game Lab
             Variables:
               name: Variablen
             Conditionals:
@@ -3292,6 +3473,8 @@ de:
               name: Funktion mit Rückgabewerten
         csppostap-2019:
           stages:
+            Cleaning Data:
+              name: Bereinigung von Daten
             Creating Summary Tables:
               name: Zusammenfassungstabellen erstellen
             Creating Javascript Objects:
@@ -3392,6 +3575,8 @@ de:
               name: Programmieren zur Unterhaltung
             Plotting Shapes:
               name: Formen plotten
+            Drawing in Game Lab:
+              name: Zeichnen im Game Lab
             Variables:
               name: Variablen
             Conditionals:
@@ -3452,6 +3637,18 @@ de:
               name: Informatik Grundlagen
             Looking Ahead:
               name: Nach vorne schauen
+            'Mastering the Basics: Sequencing':
+              name: 'Die Grundlagen beherrschen: Sequenzierung'
+            'Mastering the Basics: Loops':
+              name: 'Die Grundlagen beherrschen: Schleifen'
+            'Mastering the Basics: Conditionals':
+              name: 'Die Grundlagen beherrschen: Bedingungen'
+            'Mastering the Basics: Functions':
+              name: 'Die Grundlagen beherrschen: Funktionen'
+            'Mastering the Basics: Events':
+              name: 'Die Grundlagen beherrschen: Ereignisse'
+            Best Practices for Teaching Computer Science:
+              name: Best Practices für den Informatikunterricht
             Planning:
               name: Planung
             Next Steps:
