@@ -148,16 +148,15 @@ sv-SE:
       Crack a Caesar Cipher: Instruktioner
       Dance_2019_01: Dra ett ”gör ett nytt”-block till arbetsytan och koppla det i
         ”setup”-blocket.
-      Dance_2019_02: "”Pil upp nedtryckt”-blocket gör så att du kan köra kod när pil
-        upp-tangenten är nedtryckt. Gör så att dansaren klappar när du trycker på
-        upp, eller prova ett annat danssteg!"
+      Dance_2019_02: Få katten att göra ett dansrörelse när du trycker på en tangent.
       Dance_2019_03: 'Det är dags för en danstävling! Programmera varje dansare så
         att de rör sig när du trycker på olika tangenter. Välj ett favoritsteg för
-        varje dansare eller ange ”(Slumpmässig)” och få en överraskning! '
+        varje dansare eller ange ”(Random)” och få en överraskning! '
       Dance_2019_04: Få din dansare att ta ett nytt danssteg efter den fjärde takten.
       Dance_2019_05: Gör nu så att dansaren startar en ny rörelse efter 6 åtgärder!
       Dance_2019_06: Skapa en grupp bakgrundsdansare runt den ledande dansaren i mitten.
       Dance_2019_07: Ändra storleken på gruppen med bakgrundsdansare.
+      Dance_2019_08: Försök byta nyans på en av dina dansare (eller en hel grupp)!
       Dance_2019_09: Var kreativ med de nya blocken!
       Dance_2019_10: Dags att svänga på höfterna! Skapa en egen dans att dela med
         dina vänner.
@@ -184,6 +183,27 @@ sv-SE:
         så fort du kan!
       Dance_Party_12: Dags att svänga på höfterna! Skapa en egen dans att dela med
         dina vänner.
+      Dance_Party_extras_alternate_2019: Fram och tillbaka (klicka på "More" för detaljer)
+      Dance_Party_extras_battle: Dansbesättningar (Klicka på ”Mer” för mer information)
+      Dance_Party_extras_battle_2019: Dansbesättningar (Klicka på ”Mer” för mer information)
+      Dance_Party_extras_every_beat: Kvartalsanteckningar (Klicka på ”Mer” för mer
+        information)
+      Dance_Party_extras_every_beat_2019: Kvartalsanteckningar (Klicka på ”Mer” för
+        mer information)
+      Dance_Party_extras_layout: Låt oss få i Formation! (Klicka på ”Mer” för mer
+        information)
+      Dance_Party_extras_layout_2019: Låt oss få i Formation! (Klicka på ”Mer” för
+        mer information)
+      Dance_Party_extras_mixed_2019: Fler knappar (klicka "more" för detaljer)
+      Dance_Party_extras_on_beat: Bas, Mid och diskant (Klicka på ”Mer” för mer information)
+      Dance_Party_extras_on_beat_2019: Bas, Mid och diskant (Klicka på ”Mer” för mer
+        information)
+      Dance_Party_extras_speed: Snabba upp det, sakta ner det (Klicka på ”Mer” för
+        mer information)
+      Dance_Party_extras_speed_2019: Snabba upp det, sakta ner det (Klicka på ”Mer”
+        för mer information)
+      Dance_Party_extras_visible: Vart gick de? (Klicka på ”Mer” för mer information)
+      Dance_Party_extras_visible_2019: Vart gick de? (Klicka på ”Mer” för mer information)
       Function intro Ryan: Använd "bygg bro"-funktionen två gånger för att skapa en
         väg till facklan.
       Function intro Ryan_2019: Använd "bygg bro"-funktionen två gånger för att skapa
@@ -382,13 +402,36 @@ sv-SE:
         samla ull från båda får.
       Overworld Shear Sheep_2019: Dags för fårklippning! Använd kommandot "klipp"
         för att samla ull från båda får.
-      Standalone_Artist_1: Välkommen till Artist! Först och främst, låt oss försöka
-        göra en enkel kvadrat med 'sväng höger' block och 'gå framåt' block. Varje
-        sida ska vara 100 bildpunkter lång.
+      Standalone_Artist_1: Välkommen till Artisten! Först och främst, låt oss försöka
+        göra en enkel kvadrat med 'sväng höger'-blocket och 'gå framåt'-blocket. Varje
+        sida ska vara 100 pixlar lång.
+      Standalone_Artist_2: Rita denna diamant med 120 och 60 graders vinklar och 150
+        pixlar långa sidor.
+      Standalone_Artist_3: Kan du rita denna hexagon med 100 pixlar långa sidor och
+        60 graders vinklar?
+      Standalone_Artist_4: Nu har du fått ett nytt block att leka med, upprepa. Den
+        upprepar en uppsättning kommandon. Vad händer om du upprepar dessa kommandon
+        6 gånger?
+      Standalone_Artist_5: Hur många gånger behöver du upprepa denna diamant för att
+        rita en blomma?
+      Standalone_Artist_5.5: 'Lägg märke till hur vi förenklat diamant-koden genom
+        att köra den i ett upprepa-block. Du kan upprepa hela sekvensen 12 gånger
+        för att rita blomman. Tips: Du måste svänga 30 grader efter din diamant-loop
+        så att du inte ritar över samma diamant.'
+      Standalone_Artist_6: 'Upprepa den här hexagon-koden 6 gånger för att skapa dess
+        utseende. Hur många grader måste du svänga varje gång? Tips: dividera antalet
+        grader i en cirkel med antalet gånger du upprepar.'
+      Standalone_Artist_7: 'En funktion är ett annat programmerings- verktyg som hjälper
+        dig att undvika att upprepa dig själv. Denna funktion ritar en blomma, så
+        du kan använda den varje gång du vill rita en blomma. Använd detta och det
+        nya hoppa-blocket för att rita dessa blommor. Tips: Blommorna är 150 pixlar
+        från varandra'
       Standalone_Artist_8: Här är en funktion som kallas "Rita en form" som vi har
         programmerat till att rita hexagoner. Kör koden för att se vad den gör och
         experimentera med funktionen för att se vad som händer. Kan du göra så att
         denna funktion ritar ett mönster av kvadrater, trianglar eller oktagoner?
+      Standalone_Artist_9: Gå vidare nu och rita vilken bild du vill! Du har även
+        en tom funktion som du kan göra vad du vill med!
       Underground Avoiding Lava: Lava döljer sig under några av de här blocken, och
         du måste täcka den innan du kan gå framåt. Ett "om"-kommando blir praktiskt
         här. Lägg till ett "gå framåt"-kommando på rätt plats för att bryta de här
@@ -599,8 +642,8 @@ sv-SE:
       frozen circle function with parameter: Här är ett "Skapa cirkel"-block som kan
         skapa cirklar av olika storlekar. Kan du använda den för att skapa en liten
         cirkel med storleken 5 och en stor cirkel med storleken 10?
-      frozen cross: Linda en "Upprepa" block runt dessa kommandon för att skapa ett
-        plustecken. Märkte du Elsa kan flytta framåt och bakåt?
+      frozen cross: Använd blocket "Upprepa" för att skapa ett plustecken. Har du
+        märkt att Elsa kan gå både framåt och bakåt?
       frozen cross rotate: Prova nu att upprepa det 10 gånger. Hur många grader behöver
         du svänga mellan varje linje?
       frozen cross rotate dense: 'Låt oss upprepa det 90 gånger! Hur många gånger
@@ -613,7 +656,7 @@ sv-SE:
         göra ett parallellogram 4 gånger, och svänga höger 90 grader mellan varje
         parallellogram.
       frozen diamond snowflake: Nu provar vi att skapa en ny snöflinga genom att använda
-        upprepa-blocket för att göra 10 parallellogram och svänga höger med 36 grader
+        upprepa blocket för att göra 10 parallellogram och svänga höger med 36 grader
         mellan varje.
       frozen freeplay: Du har officiellt blivit en mästare! Skapa ett vinterlandskap.
       frozen line: Hej! Jag är Elsa av Arendal. Hjälp mig göra en rak linje.
@@ -657,26 +700,3 @@ sv-SE:
       scrat 20: Kan du lägga till endast 3 block för att hjälpa mig att lösa en mer
         komplex labyrint? Om du gör det rätt, så kan jag gå en kurvig väg oavsett
         längd. Skynda! Isen smälter!
-      Dance_2019_08: Försök byta nyans på en av dina dansare (eller en hel grupp)!
-      Dance_Party_extras_alternate_2019: Fram och tillbaka! (Klicka på "Mer" för mer
-        information)
-      Dance_Party_extras_battle: Dansbesättningar (Klicka på ”Mer” för mer information)
-      Dance_Party_extras_battle_2019: Dansbesättningar (Klicka på ”Mer” för mer information)
-      Dance_Party_extras_every_beat: Kvartalsanteckningar (Klicka på ”Mer” för mer
-        information)
-      Dance_Party_extras_every_beat_2019: Kvartalsanteckningar (Klicka på ”Mer” för
-        mer information)
-      Dance_Party_extras_layout: Låt oss få i Formation! (Klicka på ”Mer” för mer
-        information)
-      Dance_Party_extras_layout_2019: Låt oss få i Formation! (Klicka på ”Mer” för
-        mer information)
-      Dance_Party_extras_mixed_2019: Fler knappar (Klicka på "Mer" för mer information)
-      Dance_Party_extras_on_beat: Bas, Mid och diskant (Klicka på ”Mer” för mer information)
-      Dance_Party_extras_on_beat_2019: Bas, Mid och diskant (Klicka på ”Mer” för mer
-        information)
-      Dance_Party_extras_speed: Snabba upp det, sakta ner det (Klicka på ”Mer” för
-        mer information)
-      Dance_Party_extras_speed_2019: Snabba upp det, sakta ner det (Klicka på ”Mer”
-        för mer information)
-      Dance_Party_extras_visible: Vart gick de? (Klicka på ”Mer” för mer information)
-      Dance_Party_extras_visible_2019: Vart gick de? (Klicka på ”Mer” för mer information)

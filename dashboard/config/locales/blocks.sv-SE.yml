@@ -355,10 +355,15 @@ sv:
           FORMAT:
             '"border"': gräns
             '"inner"': innanför kvadrat
+            '"diamond"': diamant
             '"circle"': cirkel
             '"grid"': rutnät
+            '"top"': översta raden
             '"row"': rad
+            '"bottom"': nedersta raden
+            '"left"': vänstra kolumnen
             '"column"': kolumn
+            '"right"': högra kolumnen
             '"x"': korsvis
             '"plus"': plus
             '"random"': slumpad
