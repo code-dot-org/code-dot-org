@@ -1113,10 +1113,10 @@ let UnwrappedPredict = class Predict extends React.Component {
 export const Predict = Radium(UnwrappedPredict); // Exported for unit tests.
 
 class PondPanel extends React.Component {
-  onPondPanelClick(e) {
+  onPondPanelClick = e => {
     setState({pondPanelShowing: false});
     e.stopPropagation();
-  }
+  };
 
   render() {
     const state = getState();
@@ -1128,10 +1128,7 @@ class PondPanel extends React.Component {
     return (
       <div>
         {!state.pondClickedFish && (
-          <div
-            style={styles.pondPanelLeft}
-            onClick={e => this.onPondPanelClick(e)}
-          >
+          <div style={styles.pondPanelLeft} onClick={this.onPondPanelClick}>
             {state.pondExplainGeneralSummary && (
               <div>
                 <div style={styles.pondPanelPreText}>
@@ -1242,7 +1239,7 @@ class PondPanel extends React.Component {
   }
 }
 
-let Pond = class Pond extends React.Component {
+let UnwrappedPond = class Pond extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -1364,13 +1361,10 @@ let Pond = class Pond extends React.Component {
     }
   };
 
-  onPondPanelButtonClick(e) {
+  onPondPanelButtonClick = e => {
     const state = getState();
 
-    if (
-      state.appMode === AppMode.FishShort ||
-      state.appMode === AppMode.FishLong
-    ) {
+    if ([AppMode.FishShort, AppMode.FishLong].includes(state.appMode)) {
       setState({
         pondPanelShowing: !state.pondPanelShowing
       });
@@ -1383,14 +1377,13 @@ let Pond = class Pond extends React.Component {
     }
 
     e.stopPropagation();
-  }
+  };
 
   render() {
     const state = getState();
 
     const showInfoButton =
-      (state.appMode === AppMode.FishShort ||
-        state.appMode === AppMode.FishLong) &&
+      [AppMode.FishShort, AppMode.FishLong].includes(state.appMode) &&
       state.pondFish.length > 0 &&
       state.recallFish.length > 0;
     const recallIconsStyle = showInfoButton
@@ -1399,14 +1392,14 @@ let Pond = class Pond extends React.Component {
 
     return (
       <Body>
-        <div onClick={e => this.onPondClick(e)} style={styles.pondSurface} />
+        <div onClick={this.onPondClick} style={styles.pondSurface} />
         <div style={recallIconsStyle}>
           <FontAwesomeIcon
             icon={faCheck}
             style={{
               ...styles.recallIcon,
               ...{borderTopLeftRadius: 8, borderBottomLeftRadius: 8},
-              ...(!state.showRecallFish ? styles.bgGreen : {})
+              ...(state.showRecallFish ? {} : styles.bgGreen)
             }}
             onClick={this.toggleRecall}
           />
@@ -1446,18 +1439,12 @@ let Pond = class Pond extends React.Component {
                 >
                   New Word
                 </Button>
-                <Button
-                  style={styles.finishButton}
-                  onClick={() => state.onContinue()}
-                >
+                <Button style={styles.finishButton} onClick={state.onContinue}>
                   Finish
                 </Button>
               </div>
             ) : (
-              <Button
-                style={styles.continueButton}
-                onClick={() => state.onContinue()}
-              >
+              <Button style={styles.continueButton} onClick={state.onContinue}>
                 Continue
               </Button>
             )}
@@ -1479,7 +1466,7 @@ let Pond = class Pond extends React.Component {
     );
   }
 };
-Pond = Radium(Pond);
+export const Pond = Radium(UnwrappedPond); // Exported for unit tests.
 
 let Guide = class Guide extends React.Component {
   onShowing() {
