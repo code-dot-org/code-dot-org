@@ -357,10 +357,15 @@ nl:
           FORMAT:
             '"border"': grens
             '"inner"': binnenkant vierkant
+            '"diamond"': diamant
             '"circle"': cirkel
             '"grid"': raster
+            '"top"': bovenste rij
             '"row"': rij
+            '"bottom"': onderste rij
+            '"left"': linkerkolom
             '"column"': kolom
+            '"right"': rechterkolom
             '"x"': kriskras
             '"plus"': Plus
             '"random"': willekeurig

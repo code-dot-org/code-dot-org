@@ -245,7 +245,7 @@ nl:
             '"verse"': couplet
             '"chorus"': refrein
       Dancelab_getEnergy:
-        text: krijg {RANGE}
+        text: krijg [RANGE] [0]
         options:
           RANGE:
             '"low"': Bass
@@ -357,10 +357,15 @@ nl:
           FORMAT:
             '"border"': grens
             '"inner"': binnenkant vierkant
+            '"diamond"': diamant
             '"circle"': cirkel
             '"grid"': raster
+            '"top"': bovenste rij
             '"row"': rij
+            '"bottom"': onderste rij
+            '"left"': linkerkolom
             '"column"': kolom
+            '"right"': rechterkolom
             '"x"': kriskras
             '"plus"': Plus
             '"random"': willekeurig

@@ -1757,7 +1757,7 @@ nl-NL:
 
           -   Zorg ervoor dat er een danser op het scherm verschijnt.
 
-          -   Dit level eindigt na 4 maten.\*
+          _Dit level eindigt na 4 maten._
         challenges: |-
           **Extra uitdagingen**
 
@@ -1795,7 +1795,7 @@ nl-NL:
 
           -   Je moet minstens twee dansers hebben.
 
-          _Dit level eindigt na 6 maten._
+          _Dit level eindigt na 5 maten._
         challenges: |-
           **Extra uitdaging**
 
@@ -2034,6 +2034,8 @@ nl-NL:
           -   Gebruik het blok 'wanneer linkerpijltoets ingedrukt' om de Robot een dansmove te laten doen wanneer je de linkerpijltoets indrukt.
 
           _Dit level eindigt na 8 maten._
+      Dance_Party_extras_alternate_2019:
+        alternate: Het alternatieve blok valt in de categorie "Dansers".
       Function intro Ryan:
         Function_intro_Ryan_b: Als je de functies correct aanroept, dan is dit het
           pad dat je zal volgen...
@@ -5158,5 +5160,3 @@ nl-NL:
           </next>
           </block>
           </xml>
-      Dance_Party_extras_alternate_2019:
-        alternate: Het alternatieve blok bevindt zich in de categorie "Dansers".

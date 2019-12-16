@@ -51,7 +51,7 @@ nl-NL:
 
         -   Door '(Volgende)', '(Vorige)' of '(Willekeurig)' te kiezen zorg je dat je danser elke keer als de code wordt uitgevoerd een andere move doet.
       CourseD_Dance_Party_06: |-
-        -   We hebben meer dansers nodig!\*
+        _We hebben meer dansers nodig!_
 
         Maak een achtergronddanser genaamd 'achtergronddanser1' om met de kat te dansen.
       CourseD_Dance_Party_08: |-
@@ -60,7 +60,8 @@ nl-NL:
         Je kunt het laten lijken alsof een danser op de achtergrond staat door hun _grootte_ kleiner te maken. Kun je beide achtergronddansers dezelfde grootte geven?
       CourseD_Dance_Party_09: |-
         Dansers hebben een "tint" eigenschap waarmee je hun kleur bepaalt. Probeer de tint van een van je dansers eens te veranderen.
-        \*Tinten mengen de kleur die je kiest met de kleuren van de danser.
+
+        -   Tinten mengen de kleur die je kiest met de kleuren van de danser.
       CourseD_Dance_Party_10: |-
         Nu weten we hoe we de eigenschappen van dansers kunnen veranderen. We kunnen deze eigenschappen ook automatisch op de muziek laten reageren met behulp van dit blok:
         <xml>
@@ -242,6 +243,14 @@ nl-NL:
         je op de linkerpijltoets drukt. Zorg dat de Robot "naar de grond gaat" door
         op de rechterpijltoets te drukken.
       Dance_Party_12: Ga helemaal los! Maak je eigen dans om te delen met je vrienden.
+      Dance_Party_extras_alternate_2019: "# Heen en weer!\n\nSoms wil je misschien
+        een patroon van dansbewegingen maken die je zelf kiest. Met dit nieuwe blok
+        kun je dat doen. \n\n<xml><block type=\"Dancelab_alternateMoves\"><title name=\"GROUP\">sprites</title><title
+        name=\"N\">2</title><title name=\"MOVE1\">MOVES.Roll</title><title name=\"MOVE2\">MOVES.ClapHigh</title></block></xml>
+        De bewegingen die je hierboven kiest zullen steeds herhalen. \n\n-   Creëer
+        een afwisselende routine voor de leaddanser aan de voorkant! \n-   Gebruik
+        verschillende nummers om de snelheid waarmee de bewegingen elkaar afwisselen
+        te veranderen. Probeer `1' of`0,5\\` om sneller af te wisselen!"
       Dance_Party_extras_battle: |-
         # Dancecrews
 
@@ -268,6 +277,15 @@ nl-NL:
         -   Experimenteer met andere nootlengtes (zoals 0,5 voor een halve noot of 0,125 voor een achtste noot).
         -   Voeg gebeurtenissen 'na de maat' toe.
         -   Wissel "maten" om met "seconden" en probeer de dans op die manier te timen.
+      Dance_Party_extras_every_beat_2019: |-
+        # Kwartnoten
+
+        De meeste van onze dansen hebben hele maten gebruikt, maar elke maat bestaat uit 4 kwartnoten. Deze dans gebruikt <xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml> om de danser elke kwartnoot te laten klappen, maar alleen voor de eerste 4 maten.
+
+        Probeer de nummers in de blokken te veranderen om te zien hoe het de dans verandert.
+
+        -   Experimenteer met andere nootduren (zoals 0,5 voor een halve noot of 0,125 voor een achtste noot).
+        -   Voeg nog andere evenementen toe.
       Dance_Party_extras_layout: |-
         # Ga in positie staan!
 
@@ -283,6 +301,12 @@ nl-NL:
         een van deze ideeën uit om het uit te breiden: \n\n-   Creëer een tweede groep
         dansers in een andere lay-out\n-   Wijzig de lay-out wanneer een toets wordt
         ingedrukt \n-   Wijzig een eigenschap wanneer de dansers van positie veranderen"
+      Dance_Party_extras_mixed_2019: "# Meer knoppen\n\nMet deze dans kun je de eigenschappen
+        van de dansers in real time controleren terwijl ze automatisch dansen. Probeer
+        andere eigenschappen te veranderen wanneer je op de knoppen drukt. Bijvoorbeeld:
+        \n\n-   Geef de tint van de danser een willekeurige kleur wanneer je op \"omlaag\"
+        drukt. \n-   Voeg een groep dansers met een willekeurige lay-out toe wanneer
+        je op \"ruimte\" drukt."
       Dance_Party_extras_on_beat: |-
         # Bass, mid en treble
 
@@ -661,30 +685,3 @@ nl-NL:
       frozen square snowflake: Kun je een sneeuwvlok maken door met het "Herhaal"
         blok 10 vierkanten te maken en met het "Draai" blok 36 graden te draaien tussen
         de vierkanten?
-      Dance_Party_extras_alternate_2019: |-
-        # Heen en weer!
-
-        Soms wilt u misschien een patroon van dansbewegingen maken die u kiest. Met dit nieuwe blok kun je precies dat doen.
-
-        <xml><block type="Dancelab_alternateMoves"><title name="GROUP">sprites</title><title name="N">2</title><title name="MOVE1">MOVES.Roll</title><title name="MOVE2">MOVES.ClapHigh</title></block></xml>
-
-        De hierboven gekozen bewegingen worden voor altijd herhaald.
-
-        -   Maak een afwisselende routine voor de hoofddanser aan de voorkant!
-        -   Gebruik verschillende nummers om de snelheid te wijzigen waarmee de bewegingen worden afgewisseld. Probeer `1` of`0.5` om sneller af te wisselen!
-      Dance_Party_extras_every_beat_2019: |-
-        # Kwartnoten
-
-        De meeste van onze dansen hebben hele maten gebruikt, maar elke maat bestaat uit 4 kwartnoten. Deze dans gebruikt <xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml> om de danser elke kwartnoot te laten klappen, maar alleen voor de eerste 4 maten.
-
-        Probeer de nummers in de blokken te veranderen om te zien hoe het de dans verandert.
-
-        -   Experimenteer met andere nootduren (zoals 0,5 voor een halve noot of 0,125 voor een achtste noot).
-        -   Voeg nog andere evenementen toe.
-      Dance_Party_extras_mixed_2019: |-
-        # Meer knoppen
-
-        deze dans kun je de eigenschappen van de dansers in realtime besturen terwijl ze automatisch dansen. Probeer andere eigenschappen te veranderen wanneer u op de knoppen drukt. Bijvoorbeeld:
-
-        -   Maak de tint van de danser willekeurig wanneer u op "omlaag" drukt.
-        -   Voeg een groep dansers toe met een willekeurige lay-out wanneer u op "spatie" drukt.
