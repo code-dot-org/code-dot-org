@@ -1601,10 +1601,10 @@
     test262-harness "^2.4.0"
     yargs "^7.0.1"
 
-"@code-dot-org/js-interpreter@1.3.10":
-  version "1.3.10"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/js-interpreter/-/js-interpreter-1.3.10.tgz#642200b69b34c8bc7636b5daddb8aa554930bd57"
-  integrity sha512-KnG9Q4L3f4y8McEBdytVqYQ5P6916SbCCH0VIpdnlCjYG516bPJ3V+6UcoPeZQBDh/NbF4WcYsDSSNontYA5UA==
+"@code-dot-org/js-interpreter@1.3.11":
+  version "1.3.11"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/js-interpreter/-/js-interpreter-1.3.11.tgz#9417863d62420371173015300c2a3917a780e67a"
+  integrity sha512-Pu9GFNzzRJKUKSLIBhvuY3+GHZRxMmFxcF2ZKdJzZnAImHmxdpFblrJcp7tEWohEMmoKFl92iKo0grNrdlNvug==
   dependencies:
     yargs "^7.0.1"
 
@@ -9936,7 +9936,7 @@ lodash.clonedeep@^4.3.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz#e23f3f9c4f8fbdde872529c1071857a086e5ccef"
 
-lodash.debounce@^4, lodash.debounce@^4.0.0, lodash.debounce@^4.0.3:
+lodash.debounce@^4.0.0, lodash.debounce@^4.0.3:
   version "4.0.8"
   resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
 
@@ -12712,14 +12712,6 @@ react-datepicker@1.6.0:
     prop-types "^15.6.0"
     react-onclickoutside "^6.7.1"
     react-popper "^0.9.1"
-
-react-debounce-input@^3.2.2:
-  version "3.2.2"
-  resolved "https://registry.yarnpkg.com/react-debounce-input/-/react-debounce-input-3.2.2.tgz#d2cc99c1ce47fae89037965f5699edc1b0317197"
-  integrity sha512-RIBu68Cq/gImKz/2h1cE042REDqyqj3D+7SJ3lnnIpJX0ht9D9PfH7KAnL+SgDz6hvKa9pZS2CnAxlkrLmnQlg==
-  dependencies:
-    lodash.debounce "^4"
-    prop-types "^15.7.2"
 
 react-dev-utils@^6.1.0:
   version "6.1.1"
