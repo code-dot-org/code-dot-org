@@ -9,7 +9,7 @@ hu-HU:
         answers:
         - text: Kezdj egy négyzettel<br/>Rakj egy háromszöget a négyzetre<br/>Rakj
             egy háromszöget a négyzet alá
-        - {}
+        - correct: true
         - text: Kezdj egy négyzettel<br/>Rakj egy paralelogrammát a négyzet fölé<br/>Rakj
             egy háromszöget a paralelogramma jobb oldalára
         - text: Kezdj egy négyzettel<br/>Rakj egy háromszöget a négyzet alá<br/>Rakj
@@ -22,7 +22,7 @@ hu-HU:
         - text: Melyik kép <em>nem</em> követi ezt az algoritmust?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 Big Event Match 1:
@@ -58,14 +58,14 @@ hu-HU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 Getting Loopy Multi 1:
         title: Feleletválasztós
         questions:
         - text: Hogyan egyszerűsítenéd ezeket a sorozatokat ciklusokkal?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -86,7 +86,7 @@ hu-HU:
         - text: Melyik program készíti ezt a képet?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 Maze Match 2:
         title: Labirintus párosítás
@@ -106,7 +106,7 @@ hu-HU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 Relay Programming Multi 1:
@@ -116,7 +116,7 @@ hu-HU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       2-3 Relay Programming Multi 2:
         title: Feleletválasztós
         questions:
@@ -124,13 +124,13 @@ hu-HU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       2-3 artist debug multi 1:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 artist functions multi 1:
@@ -139,7 +139,7 @@ hu-HU:
         - text: Válassza ki, hogy az adott függvények használata esetén mely blokkokra
             van szükség a kép megrajzolásához
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 artist loops match 1:
@@ -161,7 +161,7 @@ hu-HU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 artist loops multi 2:
         title: Művész. Ciklusok. Feleltválasztás
@@ -171,7 +171,7 @@ hu-HU:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       2-3 artist match 1:
         title: 'Művész: párosítás'
         content1: Párosítsd az alakzatokat az azokat befejező blokkokkal!
@@ -191,14 +191,14 @@ hu-HU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 bee conditionals multi 3:
         questions:
         - text: Válaszd ki a legmegfelelőbb blokkokat!
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 bee loops multi 1:
@@ -206,7 +206,7 @@ hu-HU:
         questions:
         - text: Melyik blokkok gyűjtik össze az összes nektárt?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -227,7 +227,7 @@ hu-HU:
         - text: Melyik sorozat a helyes megoldás?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 Algorithms Match 1:
@@ -253,6 +253,7 @@ hu-HU:
         - text: Sütemény sütés
         - text: Vásárlás bevásárlólistával
         - text: Banán
+          correct: true
       4-5 Computational Thinking Match 1:
         title: Megfelelő
         content1: E járművek mindegyike darabjaira van szétszerelve. Párosítsd mindegyik
@@ -275,6 +276,7 @@ hu-HU:
         answers:
         - text: Seattle _____ egy _____ _____.
         - text: _____ egy _____ város.
+          correct: true
         - text: _____ _____ egy _____.
         - text: Eugene egy _____ város.
       4-5 Crowdsourcing Multi 1:
@@ -283,13 +285,14 @@ hu-HU:
         - text: Ezen képek közül melyik ábrázolja leginkább a crowdsourcing-ot?
         answers:
         - {}
-        - {}
+        - correct: true
       4-5 Crowdsourcing Multi 2:
         title: Feleletválasztós
         questions:
         - text: Ezen tevékenységek közül melyik lenne a legjobb a crowdsourcing gyakorlására?
         answers:
         - text: A szobád kitakarítása
+          correct: true
         - text: A desszerted megevése
         - text: Fésülködés
         - text: Az arcod megmosása
@@ -301,6 +304,7 @@ hu-HU:
         answers:
         - text: Születésnapod
         - text: Kedvenc ételed
+          correct: true
         - text: Lakcímed
         - text: Szüleid bankkártyaszáma
       4-5 Internet Multi 1:
@@ -312,7 +316,7 @@ hu-HU:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       4-5 Internet Multi 2:
         title: Feleletválasztós
         questions:
@@ -320,7 +324,7 @@ hu-HU:
             weboldalon vagy?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 Songwriting Multi 1:
@@ -331,6 +335,7 @@ hu-HU:
         - text: Lou, Lou, ugorj az én Lou-mhoz,
         - text: Lou, Lou, ugorj az én Lou-mhoz, <br/> Lou, Lou, ugorj az én Lou-mhoz,
             <br/>Lou, Lou, ugorj az én Lou-mhoz, <br/> Ugorj az én Lou-mhoz, drágám.
+          correct: true
         - {}
         - {}
       4-5 Suncatchers Match 1:
@@ -354,7 +359,7 @@ hu-HU:
             a sorrendet, amit az 1. Program?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       4-5 artist loops multi 1:
         title: Művész. Ciklusok. Feleltválasztás
@@ -362,7 +367,7 @@ hu-HU:
         - text: Melyik blokkok fogják elkészíteni a mintát?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 artist multi 1:
@@ -371,7 +376,7 @@ hu-HU:
         - text: Melyik blokkok rajzolnak egy 100-as kerületű téglalapot?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 artist multi 2:
@@ -381,7 +386,7 @@ hu-HU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       4-5 bee conditionals multi 1:
         title: Méh Feltételes Többszörös választás
@@ -390,7 +395,7 @@ hu-HU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       4-5 bee debug multi 1:
         title: Méh Hibakeresés Többszörös választás
@@ -398,7 +403,7 @@ hu-HU:
         - text: A függvény melyik verziója fog működni?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 bee loops multi 1:
@@ -406,7 +411,7 @@ hu-HU:
         questions:
         - text: Melyik blokkok fogják megoldani a rejtvényt?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -415,7 +420,7 @@ hu-HU:
         questions:
         - text: Melyik blokkok oldják meg ezt a rejtvényt?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -436,7 +441,7 @@ hu-HU:
         questions:
         - text: Melyik blokkok oldják meg ezt a rejtvényt?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -455,19 +460,19 @@ hu-HU:
       CSD Header Size MC:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U2 Design Project:
@@ -607,7 +612,7 @@ hu-HU:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -616,7 +621,7 @@ hu-HU:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -625,7 +630,7 @@ hu-HU:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -637,19 +642,19 @@ hu-HU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018_2019:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Keypress Matching:
         questions:
@@ -684,7 +689,7 @@ hu-HU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Sprite Movement Predict Multi_2018:
         questions:
@@ -692,7 +697,7 @@ hu-HU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019:
         questions:
@@ -700,14 +705,14 @@ hu-HU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Sprites intro predict multi:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U3 Sprites intro predict multi_2018:
@@ -715,7 +720,7 @@ hu-HU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
@@ -723,7 +728,7 @@ hu-HU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U3 combining rep:
@@ -824,7 +829,7 @@ hu-HU:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       CSD U6 array multi_2018:
         questions:
         - {}
@@ -832,7 +837,7 @@ hu-HU:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       CSD U6 array multi_2018_2019:
         questions:
         - {}
@@ -840,7 +845,7 @@ hu-HU:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       CSD U6 final intro:
         content1: a leírás itt található
       CSD U6 final intro_2018:
@@ -853,7 +858,7 @@ hu-HU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U6 setProperty predict multi_2018:
         questions:
@@ -861,8 +866,125 @@ hu-HU:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
+      Dance_Party_extras_intro:
+        markdown: "# Táncolj tovább!\n\nA 2. részben saját projektet fogsz létrehozni.Itt
+          nincsenek feladványok, helyettük viszont van egy csomó projekt, amelyek
+          összetettebb táncos bulik létrehozásának a különböző módjait mutatják be.\n\nEzeket
+          a szinteket _bármilyen sorrendben_ teljesítheted.Ugrálj a szintek között,
+          és figyeld meg, hogyan lehetett elérni valamit az előző szinten, vagy kombináld
+          össze az elképzeléseket a projektek között.Próbáld ki mindet, válaszd ki
+          a kedvencedet, és folyamatosan bővítsd a projektedet, hogy igazán a magadénak
+          érezd.\n\n<a class=\"btn btn-large btn-primary next-stage submitButton pull-right\">Folytatás</a>
+          \n\n<div class=\"clearfix\"></div> \n\n<div style=\"float: left; margin:10px\">\n
+          <a href=\"2\"> \n<h2>\n Előre és hátra \n</h2> \n\n<img src=\"https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif\"></a>\n\n
+          </div> \n\n<div style=\"float: left; margin:10px\">\n <a href=\"3\">\n <h2>
+          \nTöbb gomb \n</h2> \n\n<img src=\"https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif\"></a>
+          \n\n</div> \n\n<div style=\"float: left; margin:10px\"> \n<a href=\"4\">\n
+          <h2> \nÁlljunk alakzatba\n </h2>\n\n <img src=\"https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif\"></a>\n\n
+          </div>\n\n <div style=\"float: left; margin:10px\">\n <a href=\"5\"> \n<h2>
+          \nHová tűntek?\n</h2> \n\n<img src=\"https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif\"></a>
+          \n\n</div> \n\n<div style=\"float: left; margin:10px\"> \n\n<a href=\"6\">\n
+          <h2> \nTánccsapatok \n</h2> \n\n<img src=\"https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif\"></a>
+          \n\n</div>\n <div style=\"float: left; margin:10px\">\n <a href=\"7\"> \n<h2>
+          \nNegyedek\n</h2>\n\n <img src=\"https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif\"></a>\n\n
+          </div> \n<div style=\"float: left; margin:10px\"> \n\n<a href=\"8\">\n <h2>
+          \nBasszus, közép- és magas hangok \n</h2>\n\n<img src=\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\"></a>
+          \n\n</div>\n <div style=\"float: left; margin:10px\"> \n<a href=\"9\"> \n<h2>\n
+          Gyorsítsd fel, lassítsd le \n</h2> \n\n<img src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"></a>
+          \n\n</div>\n"
+      Dance_Party_extras_intro_2019:
+        markdown: |
+          # Táncolj tovább!
+
+          A 2. részhez saját projektet fog létrehozni. Itt nincsenek rejtvények - ehelyett van egy csomó projekt, amelyek megmutatják, hogyan lehetne összetettebb táncpartiákat készíteni.
+
+          Ezeket a szinteket megteheti bármilyen sorrendben_. Ugrás körül, hogy megnézhesse, hogyan történtek valami egy korábbi szinten, vagy kombinálja a projektek közötti koncepciókat. Próbálja ki mindet, válassza ki a kedvencét, és töltsön idejét arra, hogy hozzáadja a projektet, hogy ez a sajátja legyen.
+
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Folytatás</a>
+
+          <div class="clearfix"></div>
+
+
+          <div style="float: left; margin: 10px">
+          <a href="2">
+          <h2>
+          Vissza és hátul
+          </h2>
+
+          <img src="https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="3">
+          <h2>
+          További gombok
+          </h2>
+
+          <img src="https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif"></a>
+
+          </div>
+          <div style="float: left; margin: 10px">
+          <a href="4">
+          <h2>
+          Keresse meg a formációt
+          </h2>
+
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="5">
+          <h2>
+          Hová mentek?
+          </h2>
+
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="6">
+          <h2>
+          Dance Crews
+          </h2>
+
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="7">
+          <h2>
+          Negyedjegyek
+          </h2>
+
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="8">
+          <h2>
+          Bass, Mid, Magasszó
+          </h2>
+
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="9">
+          <h2>
+          Gyorsítsa fel, lassítsa fel
+          </h2>
+
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
+
+          </div>
       DigitalFootprint-Unplugged:
         markdown: |
           # Digitális lábnyomod
@@ -897,7 +1019,7 @@ hu-HU:
         - text: Melyik blokkok oldják meg ezt a rejtvényt?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Artist 1 Multi 2:
@@ -905,7 +1027,7 @@ hu-HU:
         questions:
         - text: Melyik blokkok rajzolják le a négyzetet?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -928,7 +1050,7 @@ hu-HU:
         - text: Hány adag nektár ez?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Bee 1 Multi 2:
@@ -939,7 +1061,7 @@ hu-HU:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Bee Loops Match 1:
         title: Megfelelő
         content2: Párosítsd a blokkokat!
@@ -972,13 +1094,13 @@ hu-HU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Getting Loopy Multi 1:
         title: Feleletválasztós
         questions:
         - text: Hogyan egyszerűsítenéd ezeket a sorozatokat ciklusokkal?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Happy Maps Multi 1:
@@ -987,7 +1109,7 @@ hu-HU:
         - text: Melyik nyíl vezeti Flurb-ot a kincshez?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Keep it Private Multi 1:
@@ -995,7 +1117,7 @@ hu-HU:
         questions:
         - text: Melyik információt <strong>nem</strong> kellene megosztanod online?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Maze Debugging Multi 1:
@@ -1003,7 +1125,7 @@ hu-HU:
         questions:
         - text: Melyik választás legyen az utolsó blokk?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1012,7 +1134,7 @@ hu-HU:
         questions:
         - text: Melyik ismétlő blokk, azonos?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Maze Loops Multi 2:
@@ -1022,7 +1144,7 @@ hu-HU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Maze Match 1:
         title: Megfelelő
         content2: Párosítsd a feladványokat a blokkokkal!
@@ -1044,7 +1166,7 @@ hu-HU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       K-1 Move It Multi 1:
         title: Feleletválasztós
@@ -1052,7 +1174,7 @@ hu-HU:
         - text: Melyik algoritmus vezeti Flurb-ot a virágokhoz?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Plant a Seed Multi 1:
@@ -1062,14 +1184,14 @@ hu-HU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Plant a Seed Multi 2:
         title: Feleletválasztós
         questions:
         - text: Milyen lépést kell tenni az algoritmus üresen hagyott részén?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       K-1 Word Search Multi 1:
         title: Feleletválasztós
@@ -1077,7 +1199,7 @@ hu-HU:
         - text: Melyik blokk betűzi a "MOVE" szót?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       K-1 Word Search Multi 3:
         title: Feleletválasztós
@@ -1085,7 +1207,7 @@ hu-HU:
         - text: Melyik szó van betűzve?
         answers:
         - {}
-        - {}
+        - correct: true
         - text: DÉL
       Multi-Screen Apps:
         title: cím
@@ -1108,7 +1230,7 @@ hu-HU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       behaviors 4 predict:
@@ -1116,7 +1238,7 @@ hu-HU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_artist_prog6_predict1:
@@ -1125,7 +1247,7 @@ hu-HU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseC_multi_artist_prog6_predict1_2018:
         questions:
@@ -1133,7 +1255,7 @@ hu-HU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
         questions:
@@ -1141,38 +1263,41 @@ hu-HU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseC_multi_harvester_loops11_predict1:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
       courseC_multi_harvester_loops11_predict1_2018:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
       courseC_multi_maze_debugging8_predict1:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_debugging8_predict1_2018:
@@ -1180,7 +1305,7 @@ hu-HU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
@@ -1188,7 +1313,7 @@ hu-HU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_programming8_predict1:
@@ -1196,7 +1321,7 @@ hu-HU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_programming8_predict1_2018:
@@ -1204,7 +1329,7 @@ hu-HU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
@@ -1212,7 +1337,7 @@ hu-HU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_starWars_predict1:
@@ -1221,7 +1346,7 @@ hu-HU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - text: Nem tudom
       courseC_multi_starWars_predict1_2018:
         questions:
@@ -1229,7 +1354,7 @@ hu-HU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - text: Nem tudom
       courseC_multi_starWars_predict1_2018_2019:
         questions:
@@ -1237,14 +1362,14 @@ hu-HU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - text: Nem tudom
       courseC_multi_starWars_predict2:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_starWars_predict2_2018:
@@ -1252,7 +1377,7 @@ hu-HU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_starWars_predict2_2018_2019:
@@ -1260,7 +1385,7 @@ hu-HU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_artist_binary8_predict1:
@@ -1271,6 +1396,7 @@ hu-HU:
         - text: B
         - text: C
         - text: D
+          correct: true
       courseD_multi_artist_binary8_predict1_2018:
         questions:
         - {}
@@ -1279,6 +1405,7 @@ hu-HU:
         - text: B
         - text: C
         - text: D
+          correct: true
       courseD_multi_artist_binary8_predict1_2018_2019:
         questions:
         - {}
@@ -1287,11 +1414,13 @@ hu-HU:
         - text: B
         - text: C
         - text: D
+          correct: true
       courseD_multi_artist_nestedLoops9_predict1:
         questions:
         - {}
         answers:
         - text: A
+          correct: true
         - text: B
         - text: C
         - {}
@@ -1300,6 +1429,7 @@ hu-HU:
         - {}
         answers:
         - text: A
+          correct: true
         - text: B
         - text: C
         - {}
@@ -1308,6 +1438,7 @@ hu-HU:
         - {}
         answers:
         - text: A
+          correct: true
         - text: B
         - text: C
         - {}
@@ -1316,7 +1447,7 @@ hu-HU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_bee_conditionals1_predict1_2018:
@@ -1324,7 +1455,7 @@ hu-HU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
@@ -1332,14 +1463,14 @@ hu-HU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_bee_conditionals7_predict2:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1347,7 +1478,7 @@ hu-HU:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1355,7 +1486,7 @@ hu-HU:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1365,7 +1496,7 @@ hu-HU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
         questions:
@@ -1373,7 +1504,7 @@ hu-HU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         questions:
@@ -1381,31 +1512,34 @@ hu-HU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_bee_nestedLoops9_predict2:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
       courseD_multi_collector_debugging10_predict1:
         questions:
@@ -1413,7 +1547,7 @@ hu-HU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_condLoops9_predict1:
         questions:
@@ -1421,7 +1555,7 @@ hu-HU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
         questions:
@@ -1429,7 +1563,7 @@ hu-HU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         questions:
@@ -1437,14 +1571,14 @@ hu-HU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_ramp13:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_farmer_while10_predict2:
@@ -1452,7 +1586,7 @@ hu-HU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_farmer_while10_predict2_2018:
@@ -1460,7 +1594,7 @@ hu-HU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
@@ -1468,7 +1602,7 @@ hu-HU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_farmer_while4_predict1:
@@ -1477,7 +1611,7 @@ hu-HU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_while4_predict1_2018:
         questions:
@@ -1485,7 +1619,7 @@ hu-HU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
         questions:
@@ -1493,13 +1627,13 @@ hu-HU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_maze_until10_predict2:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1507,7 +1641,7 @@ hu-HU:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1515,7 +1649,7 @@ hu-HU:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1524,7 +1658,7 @@ hu-HU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_maze_until2_predict1_2018:
@@ -1532,7 +1666,7 @@ hu-HU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
@@ -1540,7 +1674,7 @@ hu-HU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_scrat_predict1:
@@ -1548,14 +1682,14 @@ hu-HU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseE_multi_bee_functions_predict1:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1566,14 +1700,14 @@ hu-HU:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseE_multi_farmer_functions11_predict_2018:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
         questions:
@@ -1581,7 +1715,7 @@ hu-HU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseE_prediction_artistFunction1:
         questions:
@@ -1590,7 +1724,7 @@ hu-HU:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseE_prediction_artistFunction1_2018:
         questions:
         - {}
@@ -1598,7 +1732,7 @@ hu-HU:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseE_prediction_artistFunction1_2018_2019:
         questions:
         - {}
@@ -1606,13 +1740,13 @@ hu-HU:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseF_bee_variables_8a_2018:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_bee_variables_8a_2018_2019:
@@ -1620,7 +1754,7 @@ hu-HU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_artist_for10_predict1:
@@ -1629,7 +1763,7 @@ hu-HU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseF_multi_artist_for10_predict1_2018:
         questions:
@@ -1637,7 +1771,7 @@ hu-HU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
         questions:
@@ -1645,13 +1779,13 @@ hu-HU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseF_multi_artist_fwp2_predict1:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1659,7 +1793,7 @@ hu-HU:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1667,7 +1801,7 @@ hu-HU:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1675,7 +1809,7 @@ hu-HU:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1684,14 +1818,14 @@ hu-HU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_bee_conditionals7_predict2:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1700,7 +1834,7 @@ hu-HU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_bee_for3_predict1_2018:
@@ -1708,7 +1842,7 @@ hu-HU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_bee_for3_predict1_2018_2019:
@@ -1716,7 +1850,7 @@ hu-HU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_bee_fwp9_predict1:
@@ -1724,14 +1858,14 @@ hu-HU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_playlab_variables4c_predictive1:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1740,7 +1874,7 @@ hu-HU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       coursee_prediction_artistfunction2_2018:
@@ -1748,7 +1882,7 @@ hu-HU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       coursee_prediction_artistfunction2_2018_2019:
@@ -1756,7 +1890,7 @@ hu-HU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       grade2_multi_collector_A_predict1:
@@ -1764,7 +1898,7 @@ hu-HU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       grade2_multi_collector_A_predict1_2018:
@@ -1772,7 +1906,7 @@ hu-HU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
@@ -1780,6 +1914,6 @@ hu-HU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}

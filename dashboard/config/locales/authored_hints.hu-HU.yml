@@ -422,6 +422,13 @@ hu-HU:
           **Választható feladat**
 
           Módosítsd a háttéreffektet a dal különböző pontjain. Ehhez csatlakoztasd az új blokkot az <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> események alá.
+      Dance_Party_05:
+        validation: |-
+          **Hogyan teljesíthetem ezt a szintet?**
+
+          -   A táncosodnak meg kell tennie legalább 4 különböző táncmozdulatot a szint vége előtt.
+
+          _Ez a szint 12 ütem után ér véget._
       Dance_Party_06:
         validation: |-
           **Hogyan csinálhatom meg ezt a szintet?**
@@ -480,6 +487,8 @@ hu-HU:
           -   A „balra nyíl megnyomásakor“ blokk használatával érd el, hogy a Robot valamilyen táncmozdulatot tegyen, amikor megnyomod.
 
           _Ez a szint 8 ütem után ér véget._
+      Dance_Party_extras_alternate_2019:
+        alternate: A Váltakoztatás blokk a "Táncosok" kategóriában található.
       Function intro Ryan:
         Function_intro_Ryan_a: A programodon belül többször is meghívhatsz egy függvényt.  A
           kirakós megoldásához próbáld kétszer meghívni.
@@ -676,12 +685,3 @@ hu-HU:
           Ne feledd, hogy a kódod a zöld blokkon belül építheted.
 
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
-      Dance_Party_05:
-        validation: |-
-          **Hogyan teljesíthetem ezt a szintet?**
-
-          -   A táncosodnak meg kell tennie legalább 4 különböző táncmozdulatot a szint vége előtt.
-
-          _Ez a szint 12 ütem után ér véget._
-      Dance_Party_extras_alternate_2019:
-        alternate: Az alternatív blokk a "Dancers" kategóriába tartozik.

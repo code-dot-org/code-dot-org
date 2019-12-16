@@ -243,6 +243,8 @@ hu-HU:
       Dance_2019_06: Állíts össze egy csoport háttértáncost a középen elhelyezkedő
         vezető táncos körül.
       Dance_2019_07: Változtasd meg a háttértáncosok csoportjának méretét.
+      Dance_2019_08: Próbáld megváltoztatni az egyik táncosod (vagy egy egész csoport)
+        színárnyalatát!
       Dance_2019_09: Légy kreatív ezekkel az új blokkokkal!
       Dance_2019_10: Lássuk, te hogy táncolsz! Hozd létre a saját táncodat, és oszd
         meg az ismerőseiddel.
@@ -270,6 +272,33 @@ hu-HU:
         ahogyan csak tudod!
       Dance_Party_12: Lássuk, te hogy táncolsz! Hozd létre a saját táncodat, és oszd
         meg az ismerőseiddel.
+      Dance_Party_extras_alternate_2019: Előre és hátra! (Kattints a "Több" gombra
+        a részletekért)
+      Dance_Party_extras_battle: Dance Crews (A részletekért kattintson a „Tovább”
+        gombra)
+      Dance_Party_extras_battle_2019: Dance Crews (A részletekért kattintson a „Tovább”
+        gombra)
+      Dance_Party_extras_every_beat: Negyed jegyzetek (a részletekért kattintson a
+        „Tovább” gombra)
+      Dance_Party_extras_every_beat_2019: Negyed jegyzetek (a részletekért kattintson
+        a „Tovább” gombra)
+      Dance_Party_extras_layout: Befelé az alakzatba! (A részletekért kattintson a
+        „Tovább” gombra)
+      Dance_Party_extras_layout_2019: Befelé az alakzatba! (A részletekért kattintson
+        a „Tovább” gombra)
+      Dance_Party_extras_mixed_2019: Több gomb (Kattints a "Több" gombra a részletekért)
+      Dance_Party_extras_on_beat: Basszus, középső és háromdimenziós (a részletekért
+        kattintson a „Tovább” gombra)
+      Dance_Party_extras_on_beat_2019: Basszus, középső és háromdimenziós (a részletekért
+        kattintson a „Tovább” gombra)
+      Dance_Party_extras_speed: Gyorsítsa fel, Lassítsa le (a részletekért kattintson
+        a „Tovább” gombra)
+      Dance_Party_extras_speed_2019: Gyorsítsa fel, Lassítsa le (a részletekért kattintson
+        a „Tovább” gombra)
+      Dance_Party_extras_visible: Hová mentek? (A részletekért kattintson a „Tovább”
+        gombra)
+      Dance_Party_extras_visible_2019: Hová mentek? (A részletekért kattintson a „Tovább”
+        gombra)
       Find the Wizard: Csinálj bármit, amit szeretnél. Egy egy számkitalálós játékra
         példa!
       FoodFight: Ez egy példa játék, amit elkészíthetsz a játéklaborban.
@@ -807,33 +836,3 @@ hu-HU:
       scrat 20: Tudnál nekem segíteni kijutni ebből az útvesztőből mindössze 3 elem
         hozzáadásával? Ha jól csinálod, bármilyen kacskaringós utat be tudok járni
         hosszától függetlenül. Siess! Olvad a jég!
-      Dance_2019_08: Próbáld megváltoztatni az egyik táncosod (vagy egy egész csoport)
-        színárnyalatát!
-      Dance_Party_extras_alternate_2019: Előre-hátra! (A részletekért kattintson a
-        "Több" elemre)
-      Dance_Party_extras_battle: Dance Crews (A részletekért kattintson a „Tovább”
-        gombra)
-      Dance_Party_extras_battle_2019: Dance Crews (A részletekért kattintson a „Tovább”
-        gombra)
-      Dance_Party_extras_every_beat: Negyed jegyzetek (a részletekért kattintson a
-        „Tovább” gombra)
-      Dance_Party_extras_every_beat_2019: Negyed jegyzetek (a részletekért kattintson
-        a „Tovább” gombra)
-      Dance_Party_extras_layout: Befelé az alakzatba! (A részletekért kattintson a
-        „Tovább” gombra)
-      Dance_Party_extras_layout_2019: Befelé az alakzatba! (A részletekért kattintson
-        a „Tovább” gombra)
-      Dance_Party_extras_mixed_2019: További gombok (a részletekért kattintson a "Több"
-        gombra)
-      Dance_Party_extras_on_beat: Basszus, középső és háromdimenziós (a részletekért
-        kattintson a „Tovább” gombra)
-      Dance_Party_extras_on_beat_2019: Basszus, középső és háromdimenziós (a részletekért
-        kattintson a „Tovább” gombra)
-      Dance_Party_extras_speed: Gyorsítsa fel, Lassítsa le (a részletekért kattintson
-        a „Tovább” gombra)
-      Dance_Party_extras_speed_2019: Gyorsítsa fel, Lassítsa le (a részletekért kattintson
-        a „Tovább” gombra)
-      Dance_Party_extras_visible: Hová mentek? (A részletekért kattintson a „Tovább”
-        gombra)
-      Dance_Party_extras_visible_2019: Hová mentek? (A részletekért kattintson a „Tovább”
-        gombra)
