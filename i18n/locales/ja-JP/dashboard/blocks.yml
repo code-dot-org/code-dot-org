@@ -361,15 +361,20 @@ ja:
           FORMAT:
             '"border"': 境界
             '"inner"': 四角の中
+            '"diamond"': ダイヤモンド
             '"circle"': 円
             '"grid"': グリッド
+            '"top"': 一番上の行
             '"row"': 行
+            '"bottom"': 最終行
+            '"left"': 左の列
             '"column"': 列
+            '"right"': 右の列
             '"x"': 十字
             '"plus"': プラス
             '"random"': ランダム に
       Dancelab_makeAnonymousDanceSprite:
-        text: "[LOCATION] [1] で新しい[COSTUME] [0] を作成します"
+        text: "{LOCATION} で新しい{COSTUME} を作成します"
         options:
           COSTUME:
             '"ALIEN"': エイリアン
@@ -1281,7 +1286,7 @@ ja:
             '"y"': y 位置
             '"direction"': 動きの方向
       Mikelab_groupCreateNewSprite:
-        text: "[LOCATION] [1] で新しい[COSTUME] [0] を作成します"
+        text: "{LOCATION} で新しい{COSTUME} を作成します"
         options:
           LOCATION:
             "{x: 200, y: 100}": 上
