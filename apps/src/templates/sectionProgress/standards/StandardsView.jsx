@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import StandardsIntroDialog from './StandardsIntroDialog';
+import StandardsLegend from './StandardsLegend';
 
 export default class StandardsView extends Component {
   static propTypes = {
@@ -13,6 +14,7 @@ export default class StandardsView extends Component {
       <div>
         <StandardsIntroDialog isOpen={this.props.showStandardsIntroDialog} />
         <p>Coming soon...</p>
+        <StandardsLegend />
       </div>
     );
   }
