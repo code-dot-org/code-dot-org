@@ -968,7 +968,7 @@ const MediaControl = Object.freeze({
   FastForward: 'fast-forward'
 });
 
-let Predict = class Predict extends React.Component {
+let UnwrappedPredict = class Predict extends React.Component {
   state = {
     displayControls: false,
     timeScale: defaultTimeScale
@@ -1040,14 +1040,12 @@ let Predict = class Predict extends React.Component {
       this.state.timeScale !== defaultTimeScale
     ) {
       selectedControl = MediaControl.FastForward;
-    } else {
-      selectedControl = MediaControl.Play;
     }
 
     return (
       <Body>
         {this.state.displayControls && (
-          <div style={styles.mediaControls}>
+          <div style={styles.mediaControls} id="uitest-media-ctrl">
             <span
               onClick={() => this.onScaleTime(true)}
               style={[
@@ -1090,13 +1088,21 @@ let Predict = class Predict extends React.Component {
           </div>
         )}
         {!state.isRunning && !state.isPaused && (
-          <Button style={styles.continueButton} onClick={this.onRun}>
+          <Button
+            style={styles.continueButton}
+            onClick={this.onRun}
+            id="uitest-run-btn"
+          >
             <FontAwesomeIcon icon={faPlay} />
             &nbsp; &nbsp; Run
           </Button>
         )}
         {(state.isRunning || state.isPaused) && state.canSkipPredict && (
-          <Button style={styles.continueButton} onClick={this.onContinue}>
+          <Button
+            style={styles.continueButton}
+            onClick={this.onContinue}
+            id="uitest-continue-btn"
+          >
             Continue
           </Button>
         )}
@@ -1104,7 +1110,7 @@ let Predict = class Predict extends React.Component {
     );
   }
 };
-Predict = Radium(Predict);
+export const Predict = Radium(UnwrappedPredict); // Exported for unit tests.
 
 class PondPanel extends React.Component {
   onPondPanelClick(e) {
