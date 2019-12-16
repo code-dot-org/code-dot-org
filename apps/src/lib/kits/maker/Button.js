@@ -37,7 +37,7 @@ export function MicroBitButton(board) {
 
   // Add a read-only `isPressed` property
   Object.defineProperty(this, 'isPressed', {
-    get: () => this.buttonEvents[1] > 0
+    get: () => this.buttonEvents[1] > this.buttonEvents[2]
   });
 }
 MicroBitButton.inherits(five.Button);
