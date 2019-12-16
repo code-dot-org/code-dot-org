@@ -2,6 +2,7 @@ import React from 'react';
 import Radium from 'radium';
 import PropTypes from 'prop-types';
 import msg from '@cdo/locale';
+import {ChartType} from '../dataUtils';
 import * as rowStyle from '@cdo/apps/applab/designElements/rowStyle';
 
 class DropdownField extends React.Component {
@@ -10,9 +11,24 @@ class DropdownField extends React.Component {
     onChange: PropTypes.func.isRequired,
     options: PropTypes.array.isRequired,
     disabledOptions: PropTypes.array,
-    value: PropTypes.string,
+    value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     inlineLabel: PropTypes.bool
   };
+
+  getDisplayNameForChartType(chartType) {
+    switch (chartType) {
+      case ChartType.BAR_CHART:
+        return msg.barChart();
+      case ChartType.HISTOGRAM:
+        return msg.histogram();
+      case ChartType.SCATTER_PLOT:
+        return msg.scatterPlot();
+      case ChartType.CROSS_TAB:
+        return msg.crossTab();
+      default:
+        return chartType;
+    }
+  }
 
   render() {
     const labelStyle = this.props.inlineLabel
@@ -44,7 +60,7 @@ class DropdownField extends React.Component {
               }
               value={option}
             >
-              {option}
+              {this.getDisplayNameForChartType(option)}
             </option>
           ))}
         </select>
