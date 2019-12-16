@@ -68,6 +68,7 @@ fa:
       Dancelab_layoutSprites:
         options:
           FORMAT:
+            '"diamond"': الماس
             '"random"': در هم
       Dancelab_makeAnonymousDanceSprite:
         options:
