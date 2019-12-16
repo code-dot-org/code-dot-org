@@ -139,6 +139,13 @@ it:
       di Code.org.
     already_linked: Il tuo account di %{provider} è già connesso al tuo account di
       Code.org.
+    existing_account:
+      account_exists: Buone notizie! Sei già registrato su Code.org con l'indirizzo
+        email %{email}
+      sign_in: Accedi e ti collegheremo al tuo profilo %{provider}.
+      sign_up: Non è il tuo indirizzo email? Vuoi creare un nuovo account con un altro
+        indirizzo email? Se scegli di creare un nuovo account, lo collegheremo anche
+        al tuo profilo %{provider}.
   signup_form:
     email_signup: Iscriviti con il tuo indirizzo email
     student_count: "%{count} studenti si sono già iscritti."

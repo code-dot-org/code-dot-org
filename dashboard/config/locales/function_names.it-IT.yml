@@ -172,7 +172,7 @@ it-IT:
         draw windows: disegna delle finestre
         rectangle: rettangolo
         sun: sole
-        diamond: diamante
+        diamond: rombo
         window: finestra
         draw a house: disegna una casa
         triangle: triangolo
@@ -183,7 +183,7 @@ it-IT:
         draw windows: disegna delle finestre
         rectangle: rettangolo
         sun: sole
-        diamond: diamante
+        diamond: rombo
         window: finestra
         draw a house: disegna una casa
         triangle: triangolo
@@ -262,7 +262,7 @@ it-IT:
       NEW Course 4 Artist Params 13:
         draw a polygon: disegna un poligono
       NEW Course 4 Artist Params 14:
-        draw a spiral edge: disegna il bordo di una spirale
+        draw a spiral edge: disegna una spirale
       NEW Course 4 Artist Params 15:
         draw a star: disegna una stella
         draw a circle: disegna un cerchio
@@ -330,11 +330,11 @@ it-IT:
       course3_bee_functions_challenge3:
         check nectar or honey: controlla nettare o miele
         row of nectar: riga di nettare
-        rowOfNectar: rigaDiNettare
+        rowOfNectar: riga di nettare
       course3_bee_functions_challenge4:
         check nectar or honey: controlla nettare o miele
         row of nectar: riga di nettare
-        rowOfNectar: rigaDiNettare
+        rowOfNectar: riga di nettare
         move and check: vai avanti e controlla
       course3_playLab_challenge1:
         win game: vittoria
@@ -669,11 +669,9 @@ it-IT:
         do something: fai qualcosa
       courseF_artist_fwp1:
         draw a square: disegna un quadrato
-        checker: controllore
         do something: fai qualcosa
       courseF_artist_fwp2:
         draw a square: disegna un quadrato
-        checker: controllore
         do something: fai qualcosa
       courseF_artist_fwp2_predict1:
         draw a square: disegna un quadrato
@@ -686,11 +684,11 @@ it-IT:
       courseF_artist_fwp5:
         draw a polygon: disegna un poligono
       courseF_artist_fwp6:
-        draw a spiral edge: disegna il bordo di una spirale
+        draw a spiral edge: disegna una spirale
       courseF_artist_fwp7:
-        draw a spiral edge: disegna il bordo di una spirale
+        draw a spiral edge: disegna una spirale
       courseF_artist_fwp8:
-        draw a spiral edge: disegna il bordo di una spirale
+        draw a spiral edge: disegna una spirale
       courseF_artist_fwp9:
         draw a star: disegna una stella
         draw a circle: disegna un cerchio
@@ -699,7 +697,7 @@ it-IT:
         draw a shape: disegna una forma
         draw a house: disegna una casa
         draw a square: disegna un quadrato
-        draw a spiral edge: disegna il bordo di una spirale
+        draw a spiral edge: disegna una spirale
       courseF_artist_fwp_challenge1:
         draw background: disegna lo sfondo
         draw a polygon: disegna un poligono
@@ -741,22 +739,22 @@ it-IT:
         get nectar make honey: prendi il nettare e fai il miele
       courseF_bee_functions_challenge1:
         row of nectar: riga di nettare
-        rowOfNectar: rigaDiNettare
+        rowOfNectar: riga di nettare
         check nectar or honey: controlla nettare o miele
       courseF_bee_functions_challenge2:
-        rowOfNectar: rigaDiNettare
+        rowOfNectar: riga di nettare
         move and check: vai avanti e controlla
         check nectar or honey: controlla nettare o miele
       courseF_bee_fwp2:
-        rowOfNectar: rigaDiNettare
+        rowOfNectar: riga di nettare
       courseF_bee_fwp3:
-        rowOfNectar: rigaDiNettare
+        rowOfNectar: riga di nettare
       courseF_bee_fwp4:
-        rowOfNectar: rigaDiNettare
+        rowOfNectar: riga di nettare
       courseF_bee_fwp5:
-        rowOfNectar: rigaDiNettare
+        rowOfNectar: riga di nettare
       courseF_bee_fwp6:
-        rowOfNectar: rigaDiNettare
+        rowOfNectar: riga di nettare
       courseF_bee_fwp7:
         rowOfNectarOrHoney: rigaDiNettareOMiele
       courseF_bee_fwp8:

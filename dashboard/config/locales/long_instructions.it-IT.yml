@@ -2396,6 +2396,11 @@ it-IT:
             </block></xml>
       course3_bee_functions_challenge1: Dovrai cavartela da solo in questa sfida.
         Potrebbe essere più difficile di quanto sembri!
+      course3_bee_functions_challenge3: Crea una nuova funzione per raccogliere tutto
+        il nettare e produrre tutto il miele `mentre c'è strada in avanti`. Usala
+        per completare l'esercizio!
+      course3_bee_functions_challenge4: Usa ciò che hai imparato per completare questo
+        esercizio!
       course3_farmer_until_challenge2: Usa il blocco `se/altrimenti` per seguire questo
         percorso con molte curve in diverse direzioni. Ad ogni angolo, usa il blocco
         `rimuovi 1` all'interno di un ciclo per eliminare il mucchio di terra.
@@ -6410,6 +6415,63 @@ it-IT:
         Riesci a ricreare questo disegno usando un solo ciclo?
 
         <img src="https://images.code.org/b0d15d06465d645c5ca533e5da6387b3-image-1446075597132.36.04.png" width="350px"/>
+      courseF_artist_fwp1: Continuiamo a sfruttare l'ambiente di modifica delle funzioni.
+        Ti ricordi come si correggono gli errori nella funzione `disegna un quadrato`?
+      courseF_artist_fwp2_predict1: |-
+        Modifica la funzione in modo che preveda un parametro chiamato `lunghezza`.
+
+        I lati di ogni quadrato sono 25 pixel più grandi del precedente. Il primo quadrato ha i lati di 25 pixel. Sostituisci i punti interrogativi ("???") con i valori necessari per disegnare correttamente l'immagine.
+      courseF_artist_fwp3: "Ora prova a creare una funzione partendo da zero!  \n\nCrea
+        la funzione `disegna un quadrato` e utilizzala per delineare questi quattro
+        riquadri.\\\nDevi aggiungere un parametro per gestire la `lunghezza` dei lati!\n\n*
+        * *\n\nPartendo dall'alto a destra, le larghezze dei riquadri sono 50, 100,
+        150 e 200."
+      courseF_artist_fwp4: |-
+        Ottimo lavoro! Ora modifica questa funzione aggiungendo un parametro per il numero di lati del poligono.
+
+        I lati di tutte le forme sono lunghi 100 pixel.
+      courseF_artist_fwp5: "Usa la funzione dell'ultimo esercizio per disegnare questa
+        serie di forme.  \n\nI lati del triangolo sono di 21 pixel e quelli delle
+        forme successive sono sempre 7 pixel più lunghi del precedente.\nUsa il blocco
+        matematico per eseguire la moltiplicazione, in modo da far sì che tutto questo
+        accada richiamando la funzione una sola volta.\n\n* * *\n\nIl blocco per eseguire
+        la moltiplicazione ha questo aspetto: <xml><block type=\"math_arithmetic\"
+        inline=\"true\">\n      <title name=\"OP\">MULTIPLY</title>\n    </block></xml>\n(`length`
+        = _lunghezza_, `sides` = _lati_)"
+      courseF_artist_fwp6: |-
+        **Sfida**: modifica la funzione `disegna una spirale` per aggiungere i parametri di cui hai bisogno e disegnare queste figure.
+
+        -   I lati del quadrato passano da 3 pixel a 90 pixel.
+        -   I lati dell'esagono passano da 3 pixel a 100 pixel.
+        -   I lati del triangolo passano da 3 pixel a 95 pixel.
+      courseF_artist_fwp7: |-
+        Completa la funzione `disegna una spirale` in modo che richieda la lunghezza minima al centro della spirale.
+
+        -   Il lato più corto al centro di questa spirale quadrata è di 50 pixel.
+        -   Il lato più lungo all'esterno di questa spirale quadrata è di 200 pixel.
+            (`length` = _lunghezza_, `sides` = _lati_)
+      courseF_artist_fwp8: |-
+        Riesci a capire come realizzare questo disegno utilizzando la funzione che hai appena creato?
+
+        -   I lati della spirale rossa passano da 50 a 200 pixel.
+        -   I lati della spirale blu passano da 25 a 150 pixel.
+        -   I lati della spirale verde passano da 100 a 350 pixel.
+            (`length` = _lunghezza_, `sides` = _lati_, `min`=_minimo_)
+      courseF_artist_fwp9: 'Tempo di giocare: nella cassetta degli attrezzi trovi
+        tutte le funzioni che hai creato e anche qualcuna in più. Prova a cambiare
+        lo spessore della penna per vedere come cambiano i tuoi disegni! Nei suggerimenti
+        trovi alcuni consigli...'
+      courseF_artist_fwp_challenge1: Prova ad eseguire questo programma e ad apportare
+        modifiche per vedere cosa succede. Riesci a capire come funziona? Puoi anche
+        cancellarlo e sostituirlo con qualcosa di totalmente diverso.
+      courseF_artist_fwp_challenge2: |-
+        Wow! Usa quello che hai imparato nell'esercizio precedente per disegnare un'immagine come questa.
+
+        _Nota: il codice diventa più semplice se usi le funzioni con parametri._
+
+        <br/>
+        <img src="https://images.code.org/d3d6a51fafdcc0a09a5c6b0e0f3c2b92-image-1446239805818.08.59.png" width="300px"/>
+        <br/>
       courseF_artist_variables10: |-
         Ecco il codice dell'esercizio precedente. Prova a modificare la variabile `length` (_lunghezza_) in altri modi.
 
@@ -6751,6 +6813,24 @@ it-IT:
         _"Questo campo è labirinticamente fantastico!"_
 
         Ora costruisci una tua funzione per aiutare l'ape a percorrere il labirinto girando a sinistra in corrispondenza dei fiori e a destra quando incontra dei favi. Chiaramente, non dimenticare di raccogliere il nettare e fare il miele lungo il percorso!
+      courseF_bee_functions7: |-
+        Per percorrere questo labirinto, ricostruisci la funzione del precedente esercizio.
+
+        Gira a sinistra in corrispondenza dei favi e a destra quando incontri dei fiori.\
+        **Attenzione:** alcune curve non sono segnate!
+      courseF_bee_functions8a: "Sotto questa nuvola, potrebbe esserci un fiore con
+        una quantità sconosciuta di nettare o un favo con una quantità sconosciuta
+        di miele.  \n\nScrivi un programma in grado di gestire entrambe le situazioni."
+      courseF_bee_functionsPre7: |-
+        Ora prova a creare una funzione per percorrere questo labirinto. In che modo è diverso da quello precedente?
+
+        Gira a sinistra in corrispondenza dei favi e a destra quando incontri dei fiori.\
+        **Attenzione:** alcune curve non sono segnate!
+      courseF_bee_functions_challenge1: Crea una nuova funzione per raccogliere tutto
+        il nettare e produrre tutto il miele `mentre c'è strada in avanti`. Usala
+        per completare l'esercizio!
+      courseF_bee_functions_challenge2: Usa ciò che hai imparato per completare questo
+        esercizio!
       courseF_bee_variables_3_2018: |-
         _"Che giardino fantastico!"_
 
@@ -6770,13 +6850,13 @@ it-IT:
       courseF_playlab_variables1a: "Le variabili possono servire per memorizzare del
         testo che si desidera utilizzare in seguito.  \n\nChiedi a Kiki, la ragazzina
         che gioca a calcio, di urlare \"Goal!\" assegnando quel testo alla variabile
-        `shout` (\"urlo\")."
+        `shout` (_urlo_)."
       courseF_playlab_variables2b: |-
         Può essere molto utile mescolare pezzi di frasi con delle variabili.
 
         Inserisci la variabile `color` nel mezzo di una frase, inserendola nella posizione vuota del blocco `unisci`.
       courseF_playlab_variables3b_josh: 'Aiuta Kiki a chiacchierare con Brian usando
-        la variabile `age` ("età") in tutti i punti del discorso in cui è necessario. '
+        la variabile `age` (_età_) in tutti i punti del discorso in cui è necessario. '
       courseF_playlab_variables4b: "Ora il pirata ha qualche domanda per Brian.\n\nIn
         questo programma si usa un blocco `chiedi`, in modo che tu possa inserire
         le risposte di Brian dopo aver cliccato su \"Esegui\". \n\nInserisci le variabili
@@ -6784,11 +6864,11 @@ it-IT:
       courseF_playlab_variables5c: |-
         Divertiti un po' combinando il blocco `chiedi` con un'istruzione condizionale `se/altrimenti`.
 
-        Il pirata sta per farti una domanda. Trascina una copia della variabile `answer` ("risposta") nella condizione dell'istruzione `se`, in modo da controllare se è stato inserito o meno il colore corretto.
+        Il pirata sta per farti una domanda. Trascina una copia della variabile `answer` (_risposta_) nella condizione dell'istruzione `se`, in modo da controllare se è stato inserito o meno il colore corretto.
       courseF_playlab_variables6c: |-
         Nel resto di questa lezione, userai diversi blocchi `chiedi` e istruzioni condizionali `se/altrimenti`, al fine di creare un gioco che controllerai **tu**!
 
-        Inizia definendo la variabile "codename" ("nome in codice") con una parola segreta che puoi ricordare facilmente. Quindi, usa un blocco `chiedi` per richiedere il nome in codice all'utente. Avrai bisogno di un blocco `se/altrimenti` per capire se il nome in codice inserito corrisponde a quello definito nel programma.
+        Inizia definendo la variabile "codeName" (_nome in codice_) con una parola segreta che puoi ricordare facilmente. Quindi, usa un blocco `chiedi` per richiedere il nome in codice all'utente. Avrai bisogno di un blocco `se/altrimenti` per capire se il nome in codice inserito corrisponde a quello definito nel programma.
       courseF_playlab_variables7b: "È ora di realizzare il tuo progetto!  \n\nCrea
         alcune domande e combina le risposte in una storia tutta tua.\n\nSe ti servono
         delle idee, clicca sull'icona dei suggerimenti."
@@ -6798,7 +6878,7 @@ it-IT:
         Utilizza l'istruzione condizionale `se/altrimenti` in modo che quando si inserisce il tuo nome in codice il gioco vinca sempre, mentre qualsiasi altro utente perda sempre.
       courseF_playlab_variables8c: Usa il blocco `unisci` (nella categoria "Testo"
         della cassetta degli attrezzi) per personalizzare i messaggi di vittoria/sconfitta,
-        facendo in modo che includano le variabili `codename` e `color`.
+        facendo in modo che includano le variabili `codeName` e `color`.
       courseF_playlab_variables_challenge1: Usa questi blocchi per fare in modo che
         i personaggi condividano un gioco di parole ("knock-knock joke"). Modifica
         il contenuto delle variabili `firstName` e `punchLine` per raccontare la tua

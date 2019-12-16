@@ -2157,6 +2157,21 @@ it-IT:
         - text: D
           correct: true
           feedback: Corretto!
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
       courseD_multi_artist_binary8_predict1_2018:
         questions:
         - text: Dai una bella occhiata al codice presente nell'area di lavoro. Che
@@ -2171,6 +2186,21 @@ it-IT:
         - text: D
           correct: true
           feedback: Corretto!
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
       courseD_multi_artist_binary8_predict1_2018_2019:
         questions:
         - text: Dai una bella occhiata al codice presente nell'area di lavoro. Che
@@ -2185,6 +2215,21 @@ it-IT:
         - text: D
           correct: true
           feedback: Corretto!
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
       courseD_multi_artist_nestedLoops9_predict1:
         questions:
         - text: Dai un'occhiata al codice presente nell'area di lavoro. Che disegno
@@ -2202,6 +2247,13 @@ it-IT:
         - text: Non lo so.
           feedback: Il ciclo interno realizza un pentagono e quello esterno lo ripete
             4 volte in cerchio.
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
       courseD_multi_artist_nestedLoops9_predict1_2018:
         questions:
         - text: Dai un'occhiata al codice presente nell'area di lavoro. Che disegno
@@ -2219,6 +2271,13 @@ it-IT:
         - text: Non lo so.
           feedback: Il ciclo interno realizza un pentagono e quello esterno lo ripete
             4 volte in cerchio.
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         questions:
         - text: Dai un'occhiata al codice presente nell'area di lavoro. Che disegno
@@ -2236,6 +2295,13 @@ it-IT:
         - text: Non lo so.
           feedback: Il ciclo interno realizza un pentagono e quello esterno lo ripete
             4 volte in cerchio.
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
       courseD_multi_bee_conditionals1_predict1:
         questions:
         - text: La nuvola sta bloccando la visuale. Potrebbe esserci un fiore sotto
@@ -3329,20 +3395,30 @@ it-IT:
           con contatore per cambiare la larghezza del pennello.  \n\n\n"
       courseF_multi_artist_fwp2_predict1:
         questions:
-        - {}
+        - text: Cosa succederà quando eseguirai questo programma?
         answers:
-        - correct: true
+        - text: L'artista utilizzerà la stessa funzione per disegnare due scatole
+            di dimensioni diverse.
+          correct: true
           feedback: Corretto!
-        - feedback: Sbagliato. I parametri ti consentono di utilizzare una singola
+        - text: L'artista utilizzerà la due diverse funzioni per disegnare due scatole
+            di dimensioni diverse.
+          feedback: Sbagliato. I parametri ti consentono di utilizzare una singola
             funzione per ottenere diversi risultati.
-        - feedback: Sbagliato. I parametri ti consentono di utilizzare una singola
+        - text: L'artista utilizzerà la due diverse funzioni per disegnare due scatole
+            di dimensioni uguali.
+          feedback: Sbagliato. I parametri ti consentono di utilizzare una singola
             funzione per ottenere diversi risultati.
         - text: Non lo so.
           feedback: Il programma utilizza i parametri per consentire ad una singola
             funzione di creare caselle di dimensioni diverse.
+        markdown: |+
+          Abbiamo aggiunto dei parametri alla funzione `disegnare un quadrato`.  Fai clic sul pulsante blu "modifica" per vedere l'intera definizione della funzione.
+
+
       courseF_multi_artist_variables3a_predict1:
         questions:
-        - text: Abbiamo impostato la variabile "length" ("lunghezza") a 50. Cosa accadrà
+        - text: Abbiamo impostato la variabile "length" (_lunghezza_) a 50. Cosa accadrà
             quando cliccherai su "Esegui"?
         answers:
         - text: L'artista disegnerà un triangolo con lati lunghi 50 pixel.
@@ -3360,7 +3436,7 @@ it-IT:
             `vai avanti`, quindi l'artista disegna un triangolo con lati di 50 pixel.
       courseF_multi_artist_variables3a_predict1_2018:
         questions:
-        - text: Abbiamo impostato la variabile "length" ("lunghezza") a 50. Cosa accadrà
+        - text: Abbiamo impostato la variabile "length" (_lunghezza_) a 50. Cosa accadrà
             quando cliccherai su "Esegui"?
         answers:
         - text: L'artista disegnerà un triangolo con lati lunghi 50 pixel.
@@ -3378,7 +3454,7 @@ it-IT:
             `vai avanti`, quindi l'artista disegna un triangolo con lati di 50 pixel.
       courseF_multi_artist_variables3a_predict1_2018_2019:
         questions:
-        - text: Abbiamo impostato la variabile "length" ("lunghezza") a 50. Cosa accadrà
+        - text: Abbiamo impostato la variabile "length" (_lunghezza_) a 50. Cosa accadrà
             quando cliccherai su "Esegui"?
         answers:
         - text: L'artista disegnerà un triangolo con lati lunghi 50 pixel.
@@ -3534,11 +3610,11 @@ it-IT:
         questions:
         - text: Cosa succederebbe se l'utente inserisse il nome "Ali"?
         answers:
-        - text: 'Il pirata direbbe: "Pleasure to meet you, Ali." ("Piacere di conoscerti,
-            Ali.")'
+        - text: 'Il pirata direbbe: "Pleasure to meet you, Ali." (_Piacere di conoscerti,
+            Ali._)'
           correct: true
           feedback: 'Corretto. '
-        - text: 'Il pirata direbbe: "Pleasure to meet you." ("Piacere di conoscerti.")'
+        - text: 'Il pirata direbbe: "Pleasure to meet you." (_Piacere di conoscerti._)'
           feedback: Sbagliato. Nota che il blocco `unisci` permette di inserire il
             nome fornito nella frase del pirata.
         - text: 'Il pirata direbbe: "Ali."'
@@ -3551,7 +3627,7 @@ it-IT:
           blocco `chiedi` interrompe l'esecuzione del programma e chiede all'utente
           di inserire del testo. \n\nQualsiasi testo l'utente inserisca, viene memorizzato
           nella variabile posizionata alla fine del blocco `chiedi`.  In questo caso,
-          la variabile `name` (\"nome\").\n"
+          la variabile `name` (_nome_).\n"
       coursee_prediction_artistfunction2:
         questions:
         - text: Cosa succederà quando cliccherai su "Esegui"?

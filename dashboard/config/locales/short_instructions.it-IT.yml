@@ -1911,6 +1911,11 @@ it-IT:
         come funziona, poi personalizzalo e rendilo tuo!
       course3_bee_functions_challenge1: Dovrai cavartela da solo in questa sfida.
         Potrebbe essere più difficile di quanto sembri!
+      course3_bee_functions_challenge3: Crea una nuova funzione per raccogliere tutto
+        il nettare e produrre tutto il miele `mentre c'è strada in avanti`. Usala
+        per completare l'esercizio!
+      course3_bee_functions_challenge4: Usa ciò che hai imparato per completare questo
+        esercizio!
       course3_farmer_condLoops_challenge2: Raccogli tutto per completare l'esercizio.
       course3_farmer_until_challenge2: Usa il blocco `se/altrimenti` per seguire questo
         percorso con molte curve in diverse direzioni. Ad ogni angolo, usa il blocco
@@ -4478,6 +4483,28 @@ it-IT:
         un solo ciclo?
       courseF_artist_for_challenge2_2019: Riesci a ricreare questo disegno usando
         un solo ciclo?
+      courseF_artist_fwp1: Correggi gli errori nella funzione `disegna un quadrato`.
+      courseF_artist_fwp2: Modifica la funzione in modo che preveda un parametro chiamato
+        `length` (_lunghezza_).
+      courseF_artist_fwp2_predict1: Modifica la funzione in modo che preveda un parametro
+        chiamato `length` (_lunghezza_).
+      courseF_artist_fwp3: Crea la funzione `disegna un quadrato` e utilizzala per
+        delineare questi quattro riquadri utilizzando un parametro.
+      courseF_artist_fwp4: Modifica questa funzione aggiungendo un parametro per il
+        numero di lati del poligono.
+      courseF_artist_fwp5: 'Usa la funzione dell''ultimo esercizio per disegnare questa
+        serie di forme.  '
+      courseF_artist_fwp6: 'Sfida: modifica la funzione `disegna una spirale` per
+        aggiungere i parametri di cui hai bisogno e disegnare queste figure.'
+      courseF_artist_fwp7: Completa la funzione `disegna una spirale` in modo che
+        richieda la lunghezza minima al centro della spirale.
+      courseF_artist_fwp8: Riesci a capire come realizzare questo disegno utilizzando
+        la funzione che hai appena creato?
+      courseF_artist_fwp9: 'Tempo di giocare: disegna qualcosa di magnifico! Prova
+        a cambiare lo spessore della penna per vedere come cambiano i tuoi disegni!'
+      courseF_artist_fwp_challenge1: Riesci a capire come funziona questo programma?
+      courseF_artist_fwp_challenge2: Usa quello che hai imparato nell'esercizio precedente
+        per disegnare un'immagine come questa.
       courseF_artist_variables10: 'Ecco il codice dell''esercizio precedente. Prova
         a modificare la variabile `length` (_lunghezza_) in altri modi.  '
       courseF_artist_variables10_2018: 'Ecco il codice dell''esercizio precedente.
@@ -4650,7 +4677,7 @@ it-IT:
         possibile di blocchi.
       courseF_bee_for_challenge2_2019: Risolvi questo esercizio usando il minor numero
         possibile di blocchi.
-      courseF_bee_functions2: Usa la funzione `get only nectar` ("prendi solo nettare")
+      courseF_bee_functions2: Usa la funzione `get only nectar` (_prendi solo nettare_)
         per raccogliere il nettare da ogni fiore.
       courseF_bee_functions3: Clicca su "modifica" per inserire il codice all'interno
         della funzione `only make honey` (_fai solo il miele_) e poi utilizzala per
@@ -4664,6 +4691,15 @@ it-IT:
         per raccogliere tutto il nettare.
       courseF_bee_functions6: Aiuta l'ape a percorrere il labirinto girando a sinistra
         in corrispondenza dei fiori e a destra quando incontra dei favi.
+      courseF_bee_functions7: Per percorrere questo labirinto, ricostruisci la funzione
+        del precedente esercizio.
+      courseF_bee_functions8a: Raccogli tutto il nettare e fai tutto il miele!
+      courseF_bee_functionsPre7: Ora prova a creare una funzione per percorrere questo
+        labirinto. In che modo è diverso da quello precedente?
+      courseF_bee_functions_challenge1: Crea una nuova funzione per raccogliere tutto
+        il nettare e produrre tutto il miele `mentre c'è strada in avanti`.
+      courseF_bee_functions_challenge2: Usa ciò che hai imparato per completare questo
+        esercizio!
       courseF_bee_fwp9_predict1: Usa la tua nuova funzione per risolvere questo esercizio.
       courseF_bee_variables_1_2018: Completa questo programma per far sì che l'ape
         possa raccogliere tutto il nettare e produrre tutto il miele.
@@ -4698,11 +4734,11 @@ it-IT:
       courseF_playlab_variables1a: Le variabili possono servire per memorizzare del
         testo che si desidera utilizzare in seguito.  Chiedi a Kiki, la ragazzina
         che gioca a calcio, di urlare "Goal!" assegnando quel testo alla variabile
-        `shout` ("urlo").
+        `shout` (_urlo_).
       courseF_playlab_variables2b: Inserisci la variabile `color` nel mezzo di una
         frase, inserendola nella posizione vuota del blocco `unisci`.
       courseF_playlab_variables3b_josh: 'Aiuta Kiki a chiacchierare con Brian usando
-        la variabile `age` ("età") in tutti i punti del discorso in cui è necessario. '
+        la variabile `age` (_età_) in tutti i punti del discorso in cui è necessario. '
       courseF_playlab_variables4b: Metti le variabili nelle posizioni corrette per
         creare questa conversazione.
       courseF_playlab_variables5c: Divertiti un po' combinando il blocco `chiedi`

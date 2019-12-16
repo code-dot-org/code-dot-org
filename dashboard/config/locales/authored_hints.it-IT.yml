@@ -1668,15 +1668,14 @@ it-IT:
       Course 4 SCF 3:
         Course_4_SCF_3_a: "![](https://images.code.org/9310e6352e85a8265b424c9d57ca28d1-image-1446239776339.gif)"
         Course_4_SCF_3_b: Il disegno è formato da una serie di ottagoni ognuno con
-          i lati lunghi `counter` (<i>contatore</i>) pixel.
+          i lati lunghi `counter` (_contatore_) pixel.
         Course_4_SCF_3_c: La funzione che disegna l'ottagono è chiamata dall'interno
-          di un ciclo `ripeti con counter` che conta all'indietro da 200 a 2 con passo
-          2.
-        Course_4_SCF_3_d: Ad ogni ripetizione del ciclo `ripeti con counter` devi
-          girare di 22.5 gradi.
-        Course_4_SCF_3_e: Il valore di `counter` controlla sia la larghezza del pennello
-          che il colore (diminuendo il "rosso" e aumentando sia il "verde" che il
-          "blu").
+          di un ciclo con contatore che conta all'indietro da 200 a 2 con passo 2.
+        Course_4_SCF_3_d: Ad ogni ripetizione del ciclo con contatore, devi girare
+          di 22.5 gradi.
+        Course_4_SCF_3_e: Il valore di `counter` (_contatore_) controlla sia la larghezza
+          del pennello che il colore (diminuendo il "rosso" e aumentando sia il "verde"
+          che il "blu").
         Course_4_SCF_3_f: |-
           **Soluzione:**
 
@@ -4046,6 +4045,10 @@ it-IT:
           **Sfida supplementare**
 
           Cambia effetto allo sfondo in momenti diversi della canzone agganciando il nuovo blocco a diversi eventi <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      Dance_Party_05:
+        validation: "**Come faccio a completare questo esercizio?**\n\n-   Il ballerino
+          deve cambiare almeno 4 diversi balli prima che il livello finisca. \n\n_L'esercizio
+          terminerà dopo 4 battute._"
       Dance_Party_06:
         validation: |-
           **Come faccio a completare questo esercizio?**
@@ -4971,7 +4974,21 @@ it-IT:
           Aggiungi qualche blocco e prova a vedere cosa fa. Poi aggiungine altri e controlla di nuovo. Velocemente arriverai alla soluzione!
         courseE_bee_functions_challenge1_b: Ricordati di inserire il codice all'interno
           del blocco verde aperto che definisce cosa deve fare la funzione.
+      course3_bee_functions_challenge3:
+        courseF_bee_functions_challenge1_a: Ricordati che è possibile richiamare una
+          funzione dall'interno della definizione di un'altra funzione!
       course3_bee_functions_challenge4:
+        courseF_bee_functions_challenge2_a: |-
+          Se c'è strada a destra, devi fare così:
+
+          -   prendi tutto il nettare o produci tutto il miele,
+          -   gira a destra verso il percorso laterale,
+          -   spostati fino alla fine del percorso laterale,
+          -   gira a destra.
+
+          Se si ripete due volte la sequenza precedente, si è pronti a proseguire lungo il sentiero principale.
+
+          **Clicca sull'ultimo suggerimento solo se vuoi vedere la soluzione completa!**
         courseF_bee_functions_challenge2_b: |-
           **Soluzione:**
 
@@ -5419,7 +5436,7 @@ it-IT:
           </xml>
       course4_playlab_variables_challenge1:
         courseF_playlab_variables_challenge1_a: |-
-          Avrai prendere altri blocchi dalla cassetta degli attrezzi per far parlare i personaggi.
+          Dorai prendere altri blocchi dalla cassetta degli attrezzi per far parlare i personaggi.
 
           <xml><block type="studio_saySpriteParamsTime" inline="true">
                 <value name="SPRITE">
@@ -16042,23 +16059,81 @@ it-IT:
               </next>
             </block>
           </xml>
+      courseF_artist_fwp1:
+        courseF_artist_fwp1_c: Metti tutte le istruzioni per disegnare un quadrato
+          all'interno della funzione.
+        courseF_artist_fwp1_a: Ricordati che devi girare di 90 gradi per disegnare
+          un quadrato.
+        courseF_artist_fwp1_b: Il ciclo deve ripetersi tante volte quanti sono i lati
+          di un quadrato.
+      courseF_artist_fwp2:
+        courseF_artist_fwp2_a: 'Devi premere il pulsante blu "modifica" per modificare
+          la funzione: aggiungi un parametro chiamato `lunghezza` e usalo all''interno
+          del blocco `vai avanti`!'
+        courseF_artist_fwp2_b: Per migliorare ulteriormente il programma, potresti
+          usare un ciclo con contatore per richiamare la funzione!
+      courseF_artist_fwp3:
+        courseF_artist_fwp3_a: Ottieni un codice migliore se metti tutto in un ciclo
+          con contatore.
+        courseF_artist_fwp3_b: |-
+          Assicurati di girare di 90 gradi tra un riquadro e l'altro!
+
+          ![](https://images.code.org/97bd8eded03c5aa39740876c8e9f7ff8-image-1469224745277.gif)
+      courseF_artist_fwp4:
+        courseF_artist_fwp4_b: Ricordati di **aggiungere** un parametro. E non eliminare
+          quello che c'è già! (`length` = _lunghezza_)
+        courseF_artist_fwp4_c: Dovrai richiamare tre volte la funzione per disegnare
+          queste forme.
+      courseF_artist_fwp5:
+        courseF_artist_fwp5_d: Un ciclo con contatore ti sarà molto utile!
+        courseF_artist_fwp5_c: Sarà necessario modificare leggermente la funzione
+          dato che quella precedente faceva girare l'artista a destra dopo ogni lato,
+          mentre in questo caso deve farlo girare a sinistra.
+        courseF_artist_fwp5_a: Hai notato che in ogni forma la lunghezza dei lati
+          è 7 volte il numero di lati che ha?
+        courseF_artist_fwp5_b: Non dimenticarti di saltare in avanti di 100 pixel
+          tra una forma e l'altra.
       courseF_artist_fwp6:
         courseF_artist_fwp6_a: Va benissimo sperimentare il comportamento della funzione
           per capire come si comporta al variare del valore dei parametri.
+        courseF_artist_fwp6_b: Non c'è bisogno di aggiungere alcun blocco di movimento
+          per completare questo programma.
+      courseF_artist_fwp7:
+        courseF_artist_fwp7_a: Ti senti perso dopo aver fatto alcuni tentativi? Prova
+          a cliccare sul pulsante "Ripristina" nell'angolo in alto a destra.
+        courseF_artist_fwp7_b: All'interno della funzione, devi creare una nuova variabile
+          per la lunghezza minima dei lati e posizionarla nel campo "da" del ciclo
+          con contatore.
+      courseF_artist_fwp8:
+        courseF_artist_fwp8_a: Se la precedente funzione era corretta, non dovresti
+          aver bisogno di modificarla per risolvere questo esercizio.
+        courseF_artist_fwp8_b: L'unica cosa da devi fare, è cambiare il colore della
+          linea ogni volta che richiami la funzione.
+      courseF_artist_fwp9:
+        courseF_artist_fwp9_a: "Prova uno di questi disegni: \n![](<https://images.code.org/eae6d52956c2bc06b90db3693037df36-image-1493739069435.9.13
+          hints.png>)"
+      courseF_artist_fwp_challenge1:
+        courseF_artist_fwp_challenge1_b: Il disegno è formato da una serie di poligoni
+          ognuno con i lati lunghi `counter` (_contatore_) pixel.
+        courseF_artist_fwp_challenge1_c: La funzione che disegna i poligoni è richiamata
+          dall'interno di un ciclo che va da 3 a 6 con un incremento di 1. Che forme
+          sta disegnando?
       courseF_artist_fwp_challenge2:
         courseF_artist_fwp_challenge1_a: "![](https://images.code.org/9310e6352e85a8265b424c9d57ca28d1-image-1446239776339.gif)"
         courseF_artist_fwp_challenge1_b: Il disegno è formato da una serie di ottagoni
-          ognuno con i lati lunghi `counter` (<i>contatore</i>) pixel.
+          ognuno con i lati lunghi `counter` (_contatore_) pixel.
         courseF_artist_fwp_challenge1_c: La funzione che disegna l'ottagono è chiamata
-          dall'interno di un ciclo `ripeti con counter` che conta all'indietro da
-          200 a 2 con passo 2.
-        courseF_artist_fwp_challenge1_d: Ad ogni ripetizione del ciclo `ripeti con
-          counter` devi girare di 22.5 gradi.
-        courseF_artist_fwp_challenge1_e: Il valore di `counter` controlla sia la larghezza
-          del pennello che il colore (diminuendo il "rosso" e aumentando sia il "verde"
-          che il "blu").
-        courseF_artist_fwp_challenge1_f: <b>Soluzione:</b> Se vuoi, <a href="https://studio.code.org/c/159884109"
-          target="_blank">clicca qui</a> e poi su "Come funziona" per vedere la soluzione.
+          dall'interno di un ciclo con contatore che conta all'indietro da 200 a 2
+          con passo 2.
+        courseF_artist_fwp_challenge1_d: Ad ogni ripetizione del ciclo con contatore,
+          devi girare di 22.5 gradi.
+        courseF_artist_fwp_challenge1_e: Il valore di `counter` (_contatore_) controlla
+          sia la larghezza del pennello che il colore (diminuendo il "rosso" e aumentando
+          sia il "verde" che il "blu").
+        courseF_artist_fwp_challenge1_f: |-
+          **Soluzione:**
+
+          ![Solution Blocks](https://images.code.org/a82cfea836b95ce6625b08afcc3b7b37-image-1469727289590.png)
       courseF_artist_variables10:
         courseF_artist_variables10_a: Divertiti con questo esercizio! Guarda come
           possono influire delle piccole modifiche sul funzionamento del programma.
@@ -17634,15 +17709,49 @@ it-IT:
           o un favo, prendere il nettare o fare il miele e poi girare.
         courseF_bee_functions6_c: Visto che la svolta è già all'interno della funzione,
           all'esterno basterà un ciclo `mentre` per completare il labirinto.
+      courseF_bee_functions7:
+        courseF_bee_functions7_a: Puoi dare un'occhiata alla funzione del precedente
+          esercizio.
+        courseF_bee_functions7_b: Prova a tracciare un percorso nel labirinto con
+          il dito. In quali punti l'ape deve prendere delle decisioni?
       courseF_bee_functions8a:
         courseF_bee_functions8a_a: |-
           Se ti sembra troppo difficile, prova a creare la funzione poco per volta.<br>
           Aggiungi qualche blocco e prova a vedere cosa fa. Poi aggiungine altri e controlla di nuovo. Velocemente arriverai alla soluzione!
+        courseF_bee_functions8a_b: Ricordati di inserire il codice all'interno del
+          blocco funzione dopo aver premuto il pulsante "modifica".
       courseF_bee_functionsPre7:
         courseF_bee_functions7_a: |-
           Se ti sembra troppo difficile, prova a creare la funzione poco per volta.<br>
           Aggiungi qualche blocco e prova a vedere cosa fa. Poi aggiungine altri e controlla di nuovo. Velocemente arriverai alla soluzione!
+        courseF_bee_functions7_b: |-
+          Ricordati di inserire il codice all'interno del blocco verde aperto che definisce cosa deve fare la funzione.
+
+          <xml>
+            <block type="procedures_defnoreturn" editable="false">
+              <mutation/>
+              <title name="NAME">get nectar make honey</title>
+              <statement name="STACK">
+              </statement>
+            </block>
+          </xml>
+        courseF_bee_functions7_c: Da che parte devi girare se c'è un favo? E quando
+          incontri un fiore? E se non c'è proprio nulla?
+      courseF_bee_functions_challenge1:
+        courseF_bee_functions_challenge1_a: Ricordati che è possibile richiamare una
+          funzione dall'interno della definizione di un'altra funzione!
       courseF_bee_functions_challenge2:
+        courseF_bee_functions_challenge2_a: |-
+          Se c'è strada a destra, devi fare così:
+
+          -   prendi tutto il nettare o produci tutto il miele,
+          -   gira a destra verso il percorso laterale,
+          -   spostati fino alla fine del percorso laterale,
+          -   gira a destra.
+
+          Se si ripete due volte la sequenza precedente, si è pronti a proseguire lungo il sentiero principale.
+
+          **Clicca sull'ultimo suggerimento solo se vuoi vedere la soluzione completa!**
         courseF_bee_functions_challenge2_b: |-
           **Soluzione:**
 
@@ -17788,7 +17897,7 @@ it-IT:
                             </block></xml>
       courseF_playlab_variables1a:
         courseF_playlab_variables1a_a: Dovrai sostituire le parole "What should I
-          shout?" ("Cosa devo urlare?"), che intravedi nel blocco verde, con "Goal!"
+          shout?" (_Cosa devo urlare?_), che intravedi nel blocco verde, con "Goal!"
       courseF_playlab_variables2b:
         courseF_playlab_variables2b_a: Cosa pensi che dirà Kiki quando premerai il
           pulsante "Esegui"?
@@ -17799,14 +17908,14 @@ it-IT:
       courseF_playlab_variables4b:
         courseF_playlab_variables4b_a: Non hai bisogno di prendere alcun blocco dalla
           cassetta degli attrezzi.
-        courseF_playlab_variables4b_b: Posiziona due volte la variabile `age` ("età")
-          e una volta la variabile `name` ("nome") in modo che la conversazione abbia
+        courseF_playlab_variables4b_b: Posiziona due volte la variabile `age` (_età_)
+          e una volta la variabile `name` (_nome_) in modo che la conversazione abbia
           senso.
       courseF_playlab_variables5c:
-        courseF_playlab_variables5c_a: Cerca il blocco della variabile `answer` ("risposta")
+        courseF_playlab_variables5c_a: Cerca il blocco della variabile `answer` (_risposta_)
           nella categoria “Variabili” della cassetta degli attrezzi.
         courseF_playlab_variables5c_b: Verifica il funzionamento del programma! Per
-          vedere come si comporta, prova ad inserire sia il colore "red" ("rosso"),
+          vedere come si comporta, prova ad inserire sia il colore "red" (_rosso_),
           sia altri colori.
       courseF_playlab_variables6c:
         courseF_playlab_variables6c_a: Il blocco `chiedi` lo trovi all'interno della
@@ -17826,7 +17935,7 @@ it-IT:
           personaggio dice` sfruttando le variabili per formare frasi personalizzate.
       courseF_playlab_variables_challenge1:
         courseF_playlab_variables_challenge1_a: |-
-          Avrai prendere altri blocchi dalla cassetta degli attrezzi per far parlare i personaggi.
+          Dorai prendere altri blocchi dalla cassetta degli attrezzi per far parlare i personaggi.
 
           <xml><block type="studio_saySpriteParamsTime" inline="true">
                 <value name="SPRITE">
@@ -18064,7 +18173,3 @@ it-IT:
         iceage_warn_ice_age_b: Aggiungi entrambi i nuovi blocchi sotto all'evento
           `quando si clicca su "Esegui"` per farli eseguire immediatamente all'avvio
           del programma.
-      Dance_Party_05:
-        validation: "**Come faccio a passare questo livello** \n\n-   Il
-          tuo ballerino deve passare attraverso almeno 4 diversi passi di danza prima
-          che il livello finisca. \n\nQuesto livello termina dopo 12 battute"

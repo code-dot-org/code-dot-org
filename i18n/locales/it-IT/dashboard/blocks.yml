@@ -364,10 +364,15 @@ it:
           FORMAT:
             '"border"': bordo
             '"inner"': quadrato interno
+            '"diamond"': rombo
             '"circle"': cerchio
             '"grid"': griglia
+            '"top"': prima fila
             '"row"': fila
+            '"bottom"': ultima fila
+            '"left"': colonna a sinistra
             '"column"': colonna
+            '"right"': colonna a destra
             '"x"': croce
             '"plus"': più
             '"random"': a caso
@@ -470,7 +475,7 @@ it:
           LAYOUT:
             '"border"': bordo
             '"inner"': quadrato interno
-            '"diamond"': diamante
+            '"diamond"': rombo
             '"circle"': cerchio
             '"grid"': griglia
             '"top"': prima fila
@@ -547,17 +552,17 @@ it:
             '"lasers"': Pista da ballo laser
             '"splatter"': Schizzi di vernice
             '"rainbow"': Arcobaleno
-            '"ripples_random"': Increspature casuali
+            '"ripples_random"': Cerchi casuali
             '"ripples"': Increspature
             '"snowflakes"': Neve
             '"text"': Titoli delle canzoni
-            '"squiggles"': Scarabocchi
+            '"squiggles"': Onde
             '"galaxy"': Spazio
             '"sparkles"': Scintille
             '"spiral"': Spirale
             '"disco"': Quadrati
             '"stars"': Stelle
-            '"music_wave"': Onde
+            '"music_wave"': Onde sonore
           PALETTE:
             '"rave"': Bianco e nero
             '"cool"': Blu
@@ -639,7 +644,7 @@ it:
             '"smile_face"': Smiley
             '"spotlight"': Riflettore
             '"color_lights"': Luci del palco
-            '"exploding_stars"': Starburst
+            '"exploding_stars"': Esplosione di stelle
             '"raining_tacos"': Tacos
       Dancelab_setProp:
         text: 'imposta la {PROPERTY} di {SPRITE} a {VAL} '
@@ -867,27 +872,27 @@ it:
             '"mid"': toni medi
             '"treble"': toni acuti
       Dancelab_translateStrings:
-        text: tradurre {STRING}
+        text: traduci {STRING}
         options:
           STRING:
-            '"music_wave"': Onde
+            '"music_wave"': Onde sonore
             '"ripples"': Increspature
-            '"ripples_random"': Increspature casuali
+            '"ripples_random"': Cerchi casuali
             '"quads"': Angoli
             '"flowers"': Fiori
             '"popsicles"': Ghiaccioli
-            '"squiggles"': Scarabocchi
+            '"squiggles"': Onde
             '"growing_stars"': Stelle nascenti
             '"emojis"': Emoji
             '"hearts_colorful"': Cuori
             '"paint_drio"': Gocce di vernice
-            '"exploding_stars"': Starburst
+            '"exploding_stars"': Esplosione di stelle
             '"row_top"': prima fila
             '"row_bottom"': ultima fila
             '"column_left"': colonna a sinistra
             '"column_right"': colonna a destra
-            '"diamond"': diamante
-            '"mural"': Murale
+            '"diamond"': rombo
+            '"mural"': Murales
             '"safari"': Safari
             '"network"': Rete
             '"highway"': Autostrada
