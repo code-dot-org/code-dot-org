@@ -90,10 +90,10 @@ ur-PK:
         <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> بلاک کو ورک اسپیس پر گھسیٹ کر لائیں۔ اسے <xml><block type="Dancelab_changeMoveEachLR"><title name="GROUP">"SHARK"</title><title name="MOVE">MOVES.ThisOrThat</title><title name="DIR">-1</title></block></xml> بلاک کے نیچے مربوط کریں۔ آپ کے ڈانسر کو چوتھی پیمائش کے بعد ایک نئی حرکت شروع کرنی چاہئیے۔
 
         **پیمائشیں** میوزک میں وقت شمار کرنے کے لئے استعمال کی جاتی ہیں۔ اس ٹیوٹوریل میں، ایک پیمائش چار دھڑکن طویل ہے۔.
-      Dance_2019_05: "\"_اب ہم گرونگ کر رہے ہیں!_ \n\n ایک <xml><block type=\"Dancelab_atTimestamp\"><title
-        name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml>
-        بلاک اپنی ورک اسپیس میں شامل کریں۔ 6 پیمائشوں کے بعد ڈانسر سے ایک نئی حرکت
-        شروع کرائیں۔\"."
+      Dance_2019_05: |-
+        _اب ہم گرونگ کر رہے ہیں!_
+
+         ایک <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> بلاک اپنی ورک اسپیس میں شامل کریں۔ 6 پیمائشوں کے بعد ڈانسر سے ایک نئی حرکت شروع کرائیں۔.
       Dance_2019_06: |-
         درمیان میں ایک قیادتی ڈانسر کے اردگرد چھوٹے بیک اپ ڈینرز کا ایک گروپ قائم کرنے کے لئے اس نئے بلاک کو استعمال کریں۔
 
@@ -128,13 +128,13 @@ ur-PK:
       Dance_Party_02: |-
         "آئیے اس موس بارہ سنگا کو ڈانس کرنے دیتے ہیں!
 
-         <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> بلاک کو ورک اسپیس سے باہر گھسیٹ کر لائیں۔ اسے \< <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> بلاک کے نیچے مربوط کریں۔ آپ کے ڈانسر کو چوتھی پیمائش کے بعد ایک نئی حرکت شروع کرنی چاہئیے۔
+         <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> بلاک کو ورک اسپیس سے باہر گھسیٹ کر لائیں۔ اسے \< <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> بلاک کے نیچے مربوط کریں۔ آپ کے ڈانسر کو چوتھی پیمائش کے بعد ایک نئی حرکت شروع کرنی چاہئیے۔
 
         **پیمائشیں** موسیقی میں وقت شمار کرنے کے لئے استعمال کی جاتی ہیں۔ اس ٹیوٹوریل میں، ایک پیمائش چار دھڑکن طویل ہوتی ہے۔".
-      Dance_Party_03: "\"_اب ہم گرونگ کر رہے ہیں!_ \n\n ایک <xml><block type=\"Dancelab_atTimestamp\"><title
-        name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml>
-        بلاک اپنی ورک اسپیس میں شامل کریں۔ 6 پیمائشوں کے بعد ڈانسر سے ایک نئی حرکت
-        شروع کرائیں۔\"."
+      Dance_Party_03: |-
+        _اب ہم گرونگ کر رہے ہیں!_
+
+         ایک <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> بلاک اپنی ورک اسپیس میں شامل کریں۔ 6 پیمائشوں کے بعد ڈانسر سے ایک نئی حرکت شروع کرائیں۔.
       Dance_Party_04: |-
         "_اس ڈانس کو کچھ فلیش کی ضرورت ہے!_
 
@@ -159,7 +159,7 @@ ur-PK:
         "اب ہم جانتے ہیں کہ ایک ڈانسر کی خصوصیات کو کیسے تبدیل کرنا ہے۔ ہم اس بلاک کا استعمال کرتے ہوئے ایک ہی خصوصیات کو خودکار طریقے سے میوزک کا جواب بھی دے سکتے ہیں:
         <xml>
           <block type="Dancelab_startMapping">
-            <title name="SPRITE">right\_unicorn</title>
+            <title name="SPRITE">right_unicorn</title>
             <title name="PROPERTY">"scale"</title>
             <title name="RANGE">"bass"</title>
           </block></xml>
@@ -188,14 +188,14 @@ ur-PK:
         **جتنی تیزی سے ہو سکے روبوٹ سے چھوڑیں-تالی بجائیں-چھوڑیں-تالی بجائیں کرانے کلیدوں کا استعمال کریں!**"
       Dance_Party_12: اپنا گروو جاری رکھیں! اپنے دوستوں کے ساتھ اشتراک کرنے کے لئے
         اپنا خود کا ڈانس بنائیں۔.
-      Dance_Party_extras_alternate_2019: |-
-        # آئیے تشکیل میں آتے ہیں!
-
-        اس ڈانس کی پڑتال کریں جو پورے ڈانس میں بیک اپ ڈانسرز کی تشکیل کو تبدیل کرنے کے لئے <xml><block type="Dancelab_alternateMoves"><title name="GROUP">sprites</title><title name="N">2</title><title name="MOVE1">MOVES.Roll</title><title name="MOVE2">MOVES.ClapHigh</title></block></xml> بلاک کا استعمال کرتا ہے۔ اسے وسعت دینے کے لئے ان خیالات میں سے ایک کو آزمائیں:
-
-        -   ایک مختلف لے آؤٹ میں ڈانسرز کا دوسرا گروپ تخلیق کریں
-        -   جب کوئی کلید دبائی جائے تو لے آؤٹ تبدیل کریں
-        -   جب ڈانسرز تشکیل کو تبدیل کریں تو خصوصیت کو تبدیل کریں
+      Dance_Party_extras_alternate_2019: "# آگے پیچھے!\n\nبعض اوقات آپ اپنے انتخاب
+        سے ڈانس کی حرکات کا پیٹرن تخلیق کرنا چاہتے ہیں۔ یہ نیا بلاک آپ کو ایسا ہی
+        کرنے دیتا ہے۔ \n\n<xml><block type=\"Dancelab_alternateMoves\"><title name=\"GROUP\">sprites</title><title
+        name=\"N\">2</title><title name=\"MOVE1\">MOVES.Roll</title><title name=\"MOVE2\">MOVES.ClapHigh</title></block></xml>
+        \n\nآپ کی اوپر منتخب کی جانیوالی حرکات ہمیشہ کے لئے ترتیب میں دہرائی جائیں
+        گی۔ \n\n-   سامنے پر قیادت ڈانسر کے لئے ایک متبادل روٹین تخلیق کریں! \n-   شرح
+        جس پر حرکات کو متبادل بنایا جاتا ہے کو تبدیل کرنے کے لئے مختلف اعداد کا استعمال
+        کریں۔ مزید تیزی سے متبادل بنانے کے لئے `1` یا `0.5` کی کوشش کریں!"
       Dance_Party_extras_battle: |-
         # ڈانس گروپیہ
 
@@ -220,7 +220,7 @@ ur-PK:
       Dance_Party_extras_every_beat_2019: |-
         # چوتھائی سُر
 
-        ہمارے بیشتر ڈانس نے سالم پیمائشیں استعمال کی ہیں، لیکن ہر پیمائش چار چوتھائی سُروں پر مشتمل ہے۔ یہ ڈانس 5ویں پیمائش کے بعد ہر چوتھائی سُر پر ڈانسر تالی بجانے کے لئے [blockly block][0] کا استعمال کرتا ہے۔
+        ہمارے بیشتر ڈانس نے سالم پیمائشیں استعمال کی ہیں، لیکن ہر پیمائش چار چوتھائی سُروں پر مشتمل ہے۔ یہ ڈانس 5ویں پیمائش کے بعد ہر چوتھائی سُر پر ڈانسر تالی بجانے کے لئے <xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml> کا استعمال کرتا ہے۔
 
         بلاک میں نمبروں کو تبدیل کرنے کی کوشش کریں تاکہ یہ دیکھ سکیں کہ یہ ڈانس کو کیسے تبدیل کرتا ہے۔
 
@@ -232,6 +232,20 @@ ur-PK:
         اس ڈانس کی پڑتال کریں جو پورے ڈانس میں بیک اپ ڈانسرز کی تشکیل کو تبدیل کرنے کے لئے 'لے آؤٹ' بلاک استعمال کرتا ہے۔ اسے وسعت دینے کے لئے ان خیالات میں سے ایک کو آزمائیں:
 
         -   ایک مختلف لے آؤٹ میں ڈانسرز کا دوسرا گروپ بنائیں\* جب کوئی کلید دبائی جائے تو لے آؤٹ تبدیل کریںجب ڈانسرز تشکیل تبدیل کریں تو ایک خصوصیت تبدیل کریں
+      Dance_Party_extras_layout_2019: |-
+        # آئیے تشکیل میں آتے ہیں!
+
+        اس ڈانس کی پڑتال کریں جو پورے ڈانس میں بیک اپ ڈانسرز کی تشکیل کو تبدیل کرنے کے لئے <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> بلاک کا استعمال کرتا ہے۔ اسے وسعت دینے کے لئے ان خیالات میں سے ایک کو آزمائیں:
+
+        -   ایک مختلف لے آؤٹ میں ڈانسرز کا دوسرا گروپ تخلیق کریں
+        -   جب کوئی کلید دبائی جائے تو لے آؤٹ تبدیل کریں
+        -   جب ڈانسرز تشکیل کو تبدیل کریں تو خصوصیت کو تبدیل کریں
+      Dance_Party_extras_mixed_2019: "# مزید بٹنز\n\n یہ ڈانس آپ کو حقیقی وقت میں
+        ڈانسر کی خصوصیات کنٹرول کرنے کی اجازت دیتا ہے جس دوران وہ خود بخود ڈانس کرتے
+        ہیں۔ جب آپ بٹنز دبائیں تو دوسری خصوصیات کو تبدیل کرنے کی کوشش کریں۔ مثال کے
+        طور پر: \n\n-   جب آپ \"نیچے\" کو دبائیں تو ڈانسر کی رنگت کو بے ترتیبانہ بنائیں۔
+        \n-   جب آپ \"جگہ\" دبائیں تو ایک بے ترتیبانہ لے آؤٹ کے ساتھ ڈانسرز کا ایک
+        گروپ شامل کریں۔."
       Dance_Party_extras_on_beat: |-
         # باس، مڈ، اور ٹر
 
@@ -307,18 +321,3 @@ ur-PK:
       frozen square snowflake: کیا آپ "رپیٹ" بلاک کو استعمال کرتے ہوئے ایک سنوفلیک
         کری-ایٹ کرسکتے ہیں؟ "دہرائیں" بلاک کی مدد سے ایک اسکوائر کو 10 باربنائیں،
         اور ہر ایک اسکوائر کے بعد 36 ڈگری تک موڑیں۔
-      Dance_Party_extras_layout_2019: |-
-        # آئیے تشکیل میں آتے ہیں!
-
-        اس ڈانس کی پڑتال کریں جو پورے ڈانس میں بیک اپ ڈانسرز کی تشکیل کو تبدیل کرنے کے لئے <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> بلاک کا استعمال کرتا ہے۔ اسے وسعت دینے کے لئے ان خیالات میں سے ایک کو آزمائیں:
-
-        -   ایک مختلف لے آؤٹ میں ڈانسرز کا دوسرا گروپ تخلیق کریں
-        -   جب کوئی کلید دبائی جائے تو لے آؤٹ تبدیل کریں
-        -   جب ڈانسرز تشکیل کو تبدیل کریں تو خصوصیت کو تبدیل کریں
-      Dance_Party_extras_mixed_2019: |-
-        # مزید بٹن
-
-        یہ رقص آپ کو رقص کرنے والوں کی جائداد کو حقیقی وقت پر قابو پانے دیتا ہے جبکہ وہ خود بخود رقص کرتے ہیں۔ جب آپ بٹن دبائیں تو دوسری خصوصیات کو تبدیل کرنے کی کوشش کریں۔ مثال کے طور پر:
-
-        -   جب آپ "نیچے" دبائیں تو رقاصہ کے رنگ کو بے ترتیب بنائیں۔
-        -   جب آپ "اسپیس" دبائیں تو بے ترتیب ترتیب کے ساتھ رقاصوں کا ایک گروپ شامل کریں۔
