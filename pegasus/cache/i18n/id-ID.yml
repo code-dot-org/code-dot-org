@@ -2107,6 +2107,8 @@ id-ID:
   app_lab_tutorials: Tutorial aplikasi Lab
   game_lab_documentation: Dokumentasi lab permainan
   game_lab_tutorials: Tutorial lab permainan
+  sprite_lab_documentation: Dokumentasi Lab Sprite
+  sprite_lab_tutorials: Tutorial Lab Sprite
   header_documentation: Dokumentasi
   user_header_label: Halo %{username}
   user_header_team: Tim
@@ -2371,5 +2373,7 @@ id-ID:
   hoc2018_mc_thank_microsoft: Kami berterima kasih kepada Mikrosoft atas dukungan
     visi dan misi kami untuk memastikan setiap anak memiliki kesempatan untuk belajar
     ilmu komputer dan keterampilan untuk sukses di abad ke 21.
+  hoc2019_mc_mee_title: AI Minecraft untuk Kebaikan
   hoc2019_mc_mee_description2: Akses sumber daya gratis termasuk rencana pelajaran,
     video, kurikulum ilmu komputer, dan pelatihan guru.
+  hoc2019_mc_more_coding_resources: Sumber daya coding lainnya

@@ -228,9 +228,8 @@ it-IT:
   thanks_for_submitting: Grazie per l'invio!
   if_you_enjoyed: Se ti è piaciuto imparare, chiedi anche ai tuoi amici di provare!  Vogliamo
     che tutto il mondo impari.
-  personalize_certificate: Personalizza il tuo attestato<br>(se sei in una scuola
-    italiana usa l'attestato di <a href="http://www.programmailfuturo.it/come/attestati-personalizzati"
-    target="_blank">Programma il Futuro</a>)
+  personalize_certificate: 'Personalizza il tuo attestato. Se preferisci, puoi anche
+    usare l''attestato italiano di Programma il Futuro: www.programmailfuturo.it/come/attestati-personalizzati'
   share_achievement: Condividi il tuo successo
   beyond_hour_message: Vai avanti con <a href='http://studio.code.org'>altri corsi</a>,
     o vedi altre opzioni per <a href='/learn/beyond'>Imparare dopo l'Ora del Codice</a>.
@@ -2246,6 +2245,7 @@ it-IT:
   hoc2018_mc_aquatic_title: Minecraft Viaggio Acquatico
   hoc2018_mc_aquatic_description: Minecraft è tornato per l'Ora del Codice con una
     nuovissima attività! Viaggia attraverso Minecraft grazie al coding.
+  hoc2019_mc_aquatic_description: Esplora e costruisci mondi sottomarini con la programmazione.
   hoc2018_mc_hero_title: Minecraft Il viaggio dell'eroe
   hoc2018_mc_hero_description: Minecraft è tornato per l'Ora del Codice con una nuovissima
     attività! Viaggia attraverso Minecraft grazie al coding.

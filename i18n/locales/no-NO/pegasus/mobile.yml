@@ -481,6 +481,7 @@
   video_title_chris_bosh: "Chris Bosh om programmering"
   video_1min: "1 min"
   video_2min: "2 min"
+  video_3min: "3 min"
   video_5min: "5 min"
   speak_another_language: "Snakker du et annet språk?"
   help_translate: "Hjelp oss å oversette."
@@ -725,6 +726,7 @@
   dashboard_coursee: 'Kurs E: '
   dashboard_coursef: 'Kurs F: '
   dashboard_unplugged: "Hvis dere ikke har datamaskiner i klasserommet, kan du <a href='%{unplugged_url}'>prøve disse øktene uten datamaskin</a>."
+  dashboard_tools: 'Verktøy: '
   dashboard_curriculum: "Pensum"
   dashboard_curriculum_overview: "K-5 (Barneskole) læreplanoversikt (amerikansk læreplan)"
   dashboard_overview: "Oversikt"
@@ -1421,6 +1423,7 @@
   hoc2018_mc_careers_more: "Flere <a href='%{careers_url}' target='_blank'>inspirerende videoer</a> med profesjonelle innenfor teknologi"
   hoc2018_mc_video_1min: "1 min"
   hoc2018_mc_video_2min: "2 min"
+  hoc2018_mc_video_3min: "3 min"
   hoc2018_mc_video_5min: "5 min"
   hoc2018_mc_video_title_steph_curry: "Kodetimen med Steph Curry"
   hoc2018_mc_video_title_sports: "Press deg selv. Alle kan lære."

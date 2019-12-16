@@ -306,7 +306,8 @@ ru-RU:
   studiobar_elementary_title: Начальные курсы
   studiobar_elementary_body: Наши три новых курса для K-5
   studiobar_dance_title: Танцевальная вечеринка
-  studiobar_dance_body: Создайте свою танцевальную вечеринку и поделитесь ей
+  studiobar_dance_body: Напишите программу своей танцевальной вечеринки и поделитесь
+    ей
   studiobar_hoc_title: Час кода
   studiobar_hoc_body: Учись писать код с Angry Birds
   studiobar_flappy_title: Порхающий код
@@ -2022,6 +2023,12 @@ ru-RU:
   account_sign_up_child_accept_terms: Я подтверждаю что у меня есть согласие моих
     родителей и законных опекунов на разрешение использования Code.org.
   hoc_overview_dance_title: Танцевальная вечеринка
+  hoc_overview_dance_subtitle: Напишите программу танцевальной вечеринки и поделитесь
+    ей с друзьями. С участием Кэти Перри, Мадонны, Джея Бальвина, Сиа, Кейт Урбан,
+    Сиары и еще 25 артистов!
+  hoc_overview_dance_2019_subtitle: Напишите программу танцевальной вечеринки и поделитесь
+    ей с друзьями. С участием Кэти Перри, Шона Мендес, группы Panic! At The Disco,
+    группы Lil Nas X, братьев Джонас, Никки Минаж и еще 34 артистов!
   hoc_overview_partner_activities_title: Дополнительные мероприятия от партнеров
   hoc_overview_partner_activities_body: Вебсайт «Час кода» предлагает более 100 мероприятий
     по изучению компьютерной науки для всех возрастов и уровней опыта. Разработан

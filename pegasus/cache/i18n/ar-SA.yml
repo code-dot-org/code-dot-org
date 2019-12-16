@@ -34,7 +34,7 @@ ar-SA:
   twentyhours_text: أتممت أول "ساعة من البرمجة" الخاصة بك؟ تعلم المزيد عن علوم الحاسوب
     ومفاهيم البرمجة الأساسية في الدورة التالية.
   og_title: كل طفل يستحق فرصة
-  og_title_soon: ساعة البرمجة قادمة
+  og_title_soon: قريباً يحين وقت ساعة من البرمجة
   og_title_here: هنا ساعة البرمجة!
   og_description: كل طالب في كل مدرسة يستحق الفرصة ليدرس علوم الحاسب . إنها تغير كل
     شيء.
@@ -295,8 +295,8 @@ ar-SA:
   studiobar_title_nolink: إستكشف ستوديو البرمجة
   studiobar_elementary_title: الدورات الابتدائية
   studiobar_elementary_body: دوراتنا الثلاث الجديدة لـ K&#8209;5
-  studiobar_dance_title: حفلة رقص
-  studiobar_dance_body: إنشاء حفلتك الراقصة ومشاركتها
+  studiobar_dance_title: حفلة الرقص
+  studiobar_dance_body: قم بإنشاء حفلة الرقص الخاصة بك ومشاركتها
   studiobar_hoc_title: الساعة من التعليمات البرمجية
   studiobar_hoc_body: تعلم البرمجة مع الطيور الغاضبة
   studiobar_flappy_title: رمز لعبة flappy
@@ -349,7 +349,7 @@ ar-SA:
   homepage_hero_text_stat_loc: "#loc  الأسطر من التعليمات البرمجية التي كتبها الطلاب"
   homepage_hero_text_stat_students: '#student_count حساب طالب في "استوديو البرمجة"'
   homepage_hero_text_stat_served: 'ساعة البرمجة: #served خدمة قدمت'
-  homepage_hero_hoc_is_coming: ساعة البرمجة قادمة
+  homepage_hero_hoc_is_coming: قريباً يحين وقت ساعة من البرمجة
   homepage_hero_hoc_is_here: هنا ساعة البرمجة
   homepage_slot_text_hoc: الساعة من التعليمات البرمجية
   homepage_slot_text_frozen: ملكة الثلج مع أنّا و إلزا
@@ -1719,7 +1719,7 @@ ar-SA:
   user_header_logout: تسجيل الخروج
   user_header_signin: تسجيل الدخول
   user_header_playlab: مختبر اللعب
-  user_header_dance: حفلة رقص
+  user_header_dance: حفلة الرقص
   user_header_minecraft: Minecraft
   user_header_flappy: فلابي
   hero_name: 'ماين كرافت: رحلة البطل'
@@ -1730,7 +1730,12 @@ ar-SA:
     أو الفرص المحلية أو أخبار علوم الكمبيوتر الأخرى؟ (تقريباً مرة في الشهر)
   account_sign_up_child_accept_terms: أؤكد على أنني حصلت على أذن من والدي أو الوصي
     لاستعمال خدمات Code.org.
-  hoc_overview_dance_title: حفلة رقص
+  hoc_overview_dance_title: حفلة الرقص
+  hoc_overview_dance_subtitle: ضع التعليمات البرمجية لحفلة الرقص لمشاركتها مع أصدقائك.
+    كاتي بيري، مادونا، جي بالفين، سيا، كيث أربان، سيارا، و25 مطرب ومطربة أخرين!
+  hoc_overview_dance_2019_subtitle: قم بإضفاء التعليمات البرمجية على حفلة الرقص لمشاركتها
+    مع أصدقائك. الشخصيات هي كاتي بيري ، شون مينديز، بانيك! آت ذا ديسكو، وليل ناز إكس،
+    ، جوناس بروثرز، نيكي ميناج، وأكثر من 34 شخصية رائعة أخرى!
   hoc_overview_partner_activities_title: مزيد من الأنشطة من الشركاء
   hoc_overview_partner_activities_body: يحتوي موقع Hour of Code "ساعة من البرمجة"
     على أكثر من 100 نشاط في علوم الكمبيوتر لجميع الأعمار ومستويات الخبرة التي طورها
@@ -1784,9 +1789,9 @@ ar-SA:
   hoc2018_mc_back_journey: عاد Minecraft بأنشطة جديدة تمامًا ومخصصة لساعة من البرمجة!
     رحلة عبر Minecraft مع البرمجة.
   hoc2018_mc_teacher_guide: عرض دليل المعلم
-  hoc2018_dance_party_main_heading: حفلة رقص
+  hoc2018_dance_party_main_heading: حفلة الرقص
   hoc2018_dance_create_your_own_dance_title: إنشاء حفلتك الراقصة الخاصة
-  hoc2018_dance_party_box_title: حفلة رقص
+  hoc2018_dance_party_box_title: حفلة الرقص
   hoc2018_dance_party_box_description: برمِج حفلة رقص لمشاركتها مع أصدقائك!
   hoc2018_dance_party_button: إبدأ
   hoc2018_dance_keep_on_dancing_box_title: استمر في الرقص

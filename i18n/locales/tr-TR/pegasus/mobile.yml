@@ -1381,9 +1381,11 @@
   user_header_logout: "Çıkış Yap"
   user_header_signin: "Giriş Yap"
   user_header_create: 'Oluştur '
+  user_header_applab: 'Uygulama Laboratuvarı'
   user_header_gamelab: "Oyun Laboratuvarı"
   user_header_playlab: "Oyun Laboratuvarı"
   user_header_dance: "Dans Partisi"
+  user_header_spritelab: "Kukla Laboratuvarı"
   user_header_minecraft: "Minecraft"
   user_header_flappy: "Flappy"
   user_header_view_all: "Tüm projeleri görüntüle..."
@@ -1419,9 +1421,10 @@
   applab_tile_teacher_guide: "Öğretmen kılavuzunu görüntüle"
   aquatic_name: 'Minecraft: Su Yolculuğu'
   account_sign_up_email_opt_in: "Size kurslarımızdaki yenilikler, yerel fırsatlar veya diğer bilgisayar bilimi haberleriyle ilgili e-posta gönderebilir miyiz?"
+  account_sign_up_child_accept_terms: "Code.org hizmetlerini kullanmam için ebeveynlerimin veya yasal vasimin izni olduğunu onaylıyorum."
   hoc_overview_dance_title: "Dans Partisi"
   hoc_overview_dance_subtitle: "Arkadaşlarınızla paylaşmak için bir Dans Partisi kodlayın. Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara ve 25 daha fazlası!"
-  hoc_overview_dance_2019_subtitle: "Arkadaşlarınızla paylaşmak için bir Dans Partisi kodlayın. Katy Perry, Shawn Mendes, Panic özelliği! Disco'da, Lil Nas X, Jonas Brothers, Nicki Minaj ve 34 daha fazlası!"
+  hoc_overview_dance_2019_subtitle: "Arkadaşlarınızla paylaşmak için bir Dans Partisi kodlayın. Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj ve 34 daha fazlası!"
   hoc_overview_partner_activities_title: "İş ortaklarımızdan daha fazla faaliyet"
   hoc_overview_partner_activities_body: "Kodlama Saati internet sitesi Code.org ve iş ortakları tarafından geliştirilen her yaşa ve deneyim seviyesine uygun 100’den fazla bilgisayar bilimi faaliyeti içerir."
   hoc_overview_partner_activities_link: "Faaliyetleri Görüntüle"
