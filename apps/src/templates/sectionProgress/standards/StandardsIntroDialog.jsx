@@ -39,9 +39,14 @@ class StandardsIntroDialog extends Component {
       url: '/dashboardapi/v1/users/me/set_standards_report_info_to_seen',
       type: 'post',
       data: {}
-    }).done(() => {
-      this.props.setCurrentUserHasSeenStandardsReportInfo(true);
-    });
+    })
+      .done(() => {
+        this.props.setCurrentUserHasSeenStandardsReportInfo(true);
+      })
+      .fail(() => {
+        // if it fails close the dialog for them but it will reopen next time they reload the page
+        this.props.setCurrentUserHasSeenStandardsReportInfo(true);
+      });
   };
 
   render() {
