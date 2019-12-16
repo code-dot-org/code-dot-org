@@ -1,76 +1,128 @@
-export const fakeStandardDescription =
-  'Compare and refine multiple algorithms for the same task and determine which is the most appropriate.';
-
-export const lessonCompletedByStandard = [
-  [
-    {
-      id: 1,
-      status: 'done'
-    },
-    {
-      id: 14,
-      status: 'done'
-    },
-    {
-      id: 15,
-      status: 'not done'
-    },
-    {
-      id: 16,
-      status: 'not done'
-    },
-    {
-      id: 17,
-      status: 'not done'
-    }
-  ],
-  [
-    {
-      id: 1,
-      status: 'done'
-    },
-    {
-      id: 2,
-      status: 'done'
-    },
-    {
-      id: 4,
-      status: 'not done'
-    },
-    {
-      id: 11,
-      status: 'not done'
-    },
-    {
-      id: 12,
-      status: 'not done'
-    },
-    {
-      id: 13,
-      status: 'not done'
-    },
-    {
-      id: 14,
-      status: 'done'
-    },
-    {
-      id: 15,
-      status: 'not done'
-    },
-    {
-      id: 16,
-      status: 'not done'
-    },
-    {
-      id: 17,
-      status: 'not done'
-    },
-    {
-      id: 18,
-      status: 'not done'
-    }
-  ]
-];
+export const lessonCompletedByStandard = {
+  1: {
+    lessons: [
+      {
+        lessonNumber: 1,
+        completed: true
+      },
+      {
+        lessonNumber: 14,
+        completed: true
+      },
+      {
+        lessonNumber: 15,
+        completed: false
+      },
+      {
+        lessonNumber: 16,
+        completed: false
+      },
+      {
+        lessonNumber: 17,
+        completed: false
+      }
+    ]
+  },
+  2: {
+    lessons: [
+      {
+        lessonNumber: 1,
+        completed: true
+      },
+      {
+        lessonNumber: 2,
+        completed: true
+      },
+      {
+        lessonNumber: 4,
+        completed: false
+      },
+      {
+        lessonNumber: 11,
+        completed: false
+      },
+      {
+        lessonNumber: 12,
+        completed: false
+      },
+      {
+        lessonNumber: 13,
+        completed: false
+      },
+      {
+        lessonNumber: 14,
+        completed: true
+      },
+      {
+        lessonNumber: 15,
+        completed: false
+      },
+      {
+        lessonNumber: 16,
+        completed: false
+      },
+      {
+        lessonNumber: 17,
+        completed: false
+      },
+      {
+        lessonNumber: 18,
+        completed: false
+      }
+    ]
+  },
+  3: {
+    lessons: [
+      {
+        lessonNumber: 1,
+        completed: true
+      },
+      {
+        lessonNumber: 14,
+        completed: true
+      },
+      {
+        lessonNumber: 15,
+        completed: false
+      },
+      {
+        lessonNumber: 16,
+        completed: false
+      },
+      {
+        lessonNumber: 17,
+        completed: false
+      }
+    ]
+  },
+  4: {
+    lessons: [
+      {
+        lessonNumber: 1,
+        completed: true
+      },
+      {
+        lessonNumber: 14,
+        completed: true
+      },
+      {
+        lessonNumber: 15,
+        completed: false
+      },
+      {
+        lessonNumber: 16,
+        completed: false
+      },
+      {
+        lessonNumber: 17,
+        completed: false
+      }
+    ]
+  },
+  5: {
+    lessons: []
+  }
+};
 
 export const fakeStandards = [
   {

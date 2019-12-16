@@ -32,9 +32,9 @@ class StandardDescriptionCell extends Component {
       return this.props.lessonsForStandardStatus.map((lesson, index) => {
         return (
           <ProgressBoxForLessonNumber
-            key={lesson.id}
-            completed={lesson.status === 'done'}
-            lessonNumber={lesson.id}
+            key={lesson.lessonNumber}
+            completed={lesson.completed}
+            lessonNumber={lesson.lessonNumber}
           />
         );
       });
