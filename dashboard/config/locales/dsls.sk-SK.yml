@@ -9,7 +9,7 @@ sk-SK:
         answers:
         - text: Začite štvorcom<br/>Vložte trojuholník nad štvorec<br/>Vložte trojuholník
             pod štvorec
-        - {}
+        - correct: true
         - text: Začite štvorcom<br/>Vložte rovnobežník nad štvorec<br/>Vložte trojuholník
             napravo od rovnobežníka
         - text: Začite štvorcom<br/>Vložte trojuholník pod štvorec<br/>Vložte rovnobežník
@@ -22,7 +22,7 @@ sk-SK:
         - text: Ktorý obrázok <em>nie je</em> podľa tohto algoritmu?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 Big Event Match 1:
@@ -58,14 +58,14 @@ sk-SK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 Getting Loopy Multi 1:
         title: Vyber správnu odpoveď
         questions:
         - text: Ako by si zjednodušil tento postup pomocou opakovania?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -86,7 +86,7 @@ sk-SK:
         - text: Ktorý program vytvorí tento obrázok?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 Maze Match 2:
         title: Spájanie s bludiskom
@@ -106,7 +106,7 @@ sk-SK:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 Relay Programming Multi 1:
@@ -116,7 +116,7 @@ sk-SK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       2-3 Relay Programming Multi 2:
         title: Vyber správnu odpoveď
         questions:
@@ -124,13 +124,13 @@ sk-SK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       2-3 artist debug multi 1:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 artist functions multi 1:
@@ -139,7 +139,7 @@ sk-SK:
         - text: Vyberte správne bloky pre nakreslenie tohto obrázku použitím daných
             funkcií
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 artist loops match 1:
@@ -161,7 +161,7 @@ sk-SK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 artist loops multi 2:
         title: Cykly s Umelcom - Vyber správnu odpoveď
@@ -171,7 +171,7 @@ sk-SK:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       2-3 artist match 1:
         title: Umelcovo párovanie
         content1: Spoj tvary s blokmi, ktoré ich dokončia.
@@ -191,14 +191,14 @@ sk-SK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 bee conditionals multi 3:
         questions:
         - text: Vyber najlepší z blokov.
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 bee loops multi 1:
@@ -206,7 +206,7 @@ sk-SK:
         questions:
         - text: Ktorý z blokov pomôže zozbierať všetok nektár?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -227,7 +227,7 @@ sk-SK:
         - text: Ktorá sada blokov je správnou odpoveďou?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 Algorithms Match 1:
@@ -253,6 +253,7 @@ sk-SK:
         - text: Pečenie koláčov
         - text: Nakupovanie podľa nákupného zoznamu
         - text: Banán
+          correct: true
       4-5 Computational Thinking Match 1:
         title: Zodpovedajúce
         content1: Každé z týchto vozidiel je rozložené na malé súčiastky. Spoj každé
@@ -275,6 +276,7 @@ sk-SK:
         answers:
         - text: Seatlle _____ _____ _____.
         - text: _____ je _____ mesto.
+          correct: true
         - text: _____ je _____ _____.
         - text: Eugene je _____ mesto.
       4-5 Crowdsourcing Multi 1:
@@ -283,13 +285,14 @@ sk-SK:
         - text: Ktorý z týchto obrázkov najlepšie vystihuje crowdsourcing?
         answers:
         - {}
-        - {}
+        - correct: true
       4-5 Crowdsourcing Multi 2:
         title: Vyber správnu odpoveď
         questions:
         - text: Ktorá z týchto aktivít by bola najvhodnejšia pre crowdsourcing?
         answers:
         - text: Upratovanie izby
+          correct: true
         - text: Jedenie dezertu
         - text: Česanie vlasov
         - text: Umývanie tváre
@@ -300,6 +303,7 @@ sk-SK:
         answers:
         - text: Dátum tvojich narodenín
         - text: Tvoje obľúbené jedlo
+          correct: true
         - text: Tvoja adresa
         - text: Číslo kreditnej karty tvojich rodičov
       4-5 Internet Multi 1:
@@ -311,7 +315,7 @@ sk-SK:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       4-5 Internet Multi 2:
         title: Vyber správnu odpoveď
         questions:
@@ -319,7 +323,7 @@ sk-SK:
             webstránke sa nachádzate?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 Songwriting Multi 1:
@@ -328,7 +332,7 @@ sk-SK:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 Suncatchers Match 1:
@@ -352,7 +356,7 @@ sk-SK:
             Program 1?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       4-5 artist loops multi 1:
         title: Cykly s Umelcom - Vyber správnu odpoveď
@@ -360,7 +364,7 @@ sk-SK:
         - text: Ktoré bloky vytvoria dizajn?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 artist multi 1:
@@ -369,7 +373,7 @@ sk-SK:
         - text: Ktorý blok nakreslí obdĺžnik s obvodom 100?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 artist multi 2:
@@ -379,7 +383,7 @@ sk-SK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       4-5 bee conditionals multi 1:
         title: Včela s podmienkami - Vyber správnu odpoveď
@@ -388,7 +392,7 @@ sk-SK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       4-5 bee debug multi 1:
         title: 'Včela: Odstraňovanie chýb - Vyber správnu odpoveď'
@@ -396,7 +400,7 @@ sk-SK:
         - text: Ktorá verzia funkcie bude fungovať správne?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 bee loops multi 1:
@@ -404,7 +408,7 @@ sk-SK:
         questions:
         - text: Ktoré bloky sú riešením úlohy?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -413,7 +417,7 @@ sk-SK:
         questions:
         - text: Ktorý z blokov vyrieši rébus?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -434,7 +438,7 @@ sk-SK:
         questions:
         - text: Ktorý z blokov vyrieši rébus?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -443,19 +447,19 @@ sk-SK:
       CSD Header Size MC:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U2 Design Project:
@@ -591,7 +595,7 @@ sk-SK:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -600,7 +604,7 @@ sk-SK:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -609,7 +613,7 @@ sk-SK:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -648,19 +652,19 @@ sk-SK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018_2019:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Keypress Matching:
         questions:
@@ -695,7 +699,7 @@ sk-SK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Sprite Movement Predict Multi_2018:
         questions:
@@ -703,7 +707,7 @@ sk-SK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019:
         questions:
@@ -711,14 +715,14 @@ sk-SK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Sprites intro predict multi:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U3 Sprites intro predict multi_2018:
@@ -726,7 +730,7 @@ sk-SK:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
@@ -734,7 +738,7 @@ sk-SK:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U3 combining rep:
@@ -863,7 +867,7 @@ sk-SK:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       CSD U6 array multi_2018:
         questions:
         - {}
@@ -871,7 +875,7 @@ sk-SK:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       CSD U6 array multi_2018_2019:
         questions:
         - {}
@@ -879,7 +883,7 @@ sk-SK:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       CSD U6 game project stop:
         markdown: |
           # Zastav sa
@@ -901,7 +905,7 @@ sk-SK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U6 setProperty predict multi_2018:
         questions:
@@ -909,7 +913,7 @@ sk-SK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U6 tugowar stop:
         markdown: |
@@ -934,7 +938,7 @@ sk-SK:
         - text: Ktoré bloky sú riešením tejto úlohy?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Artist 1 Multi 2:
@@ -942,7 +946,7 @@ sk-SK:
         questions:
         - text: Ktoré bloky nakreslia štvorec?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -965,7 +969,7 @@ sk-SK:
         - text: Koľko je toto nektárov?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Bee 1 Multi 2:
@@ -976,7 +980,7 @@ sk-SK:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Bee Loops Match 1:
         title: Zodpovedajúce
         content2: Spárujt bloky
@@ -1009,13 +1013,13 @@ sk-SK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Getting Loopy Multi 1:
         title: Vyber správnu odpoveď
         questions:
         - text: Ako by si zjednodušil tento postup pomocou opakovania?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Happy Maps Multi 1:
@@ -1024,7 +1028,7 @@ sk-SK:
         - text: Ktorá šípka dostane Flurb k pokladu?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Keep it Private Multi 1:
@@ -1032,7 +1036,7 @@ sk-SK:
         questions:
         - text: Ktoré informácie by ste <strong>nemali</strong> zdieľať online?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Maze Debugging Multi 1:
@@ -1040,7 +1044,7 @@ sk-SK:
         questions:
         - text: Ktorá z možností by mala byť posledným blokom?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1049,7 +1053,7 @@ sk-SK:
         questions:
         - text: Ktorý opakujúci sa blok je ten istý?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Maze Loops Multi 2:
@@ -1059,7 +1063,7 @@ sk-SK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Maze Match 1:
         title: Zodpovedajúce
         content2: Spárujte hádanky a bloky
@@ -1081,7 +1085,7 @@ sk-SK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       K-1 Move It Multi 1:
         title: Vyber správnu odpoveď
@@ -1089,7 +1093,7 @@ sk-SK:
         - text: Akým algoritmom sa Flurb dostane ku kvetinám?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Plant a Seed Multi 1:
@@ -1099,14 +1103,14 @@ sk-SK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Plant a Seed Multi 2:
         title: Vyber správnu odpoveď
         questions:
         - text: Ktorý krok má vyplniť prázdne miesto tohto algoritmu?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       K-1 Word Search Multi 1:
         title: Vyber správnu odpoveď
@@ -1114,7 +1118,7 @@ sk-SK:
         - text: Ktoré bloky vyhláskujú "MOVE"?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       K-1 Word Search Multi 3:
         title: Vyber správnu odpoveď
@@ -1122,7 +1126,7 @@ sk-SK:
         - text: Ktoré slovo je vyhláskované?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       Multi-Screen Apps:
         title: nadpis
@@ -1137,7 +1141,8 @@ sk-SK:
         - {}
         answers:
         - feedback: Nesprávne.
-        - feedback: Správne!
+        - correct: true
+          feedback: Správne!
         - feedback: Nesprávne.
         - feedback: Nesprávne
       behaviors 4 predict:
@@ -1145,7 +1150,8 @@ sk-SK:
         - {}
         answers:
         - feedback: Nesprávne.
-        - feedback: Správne!
+        - correct: true
+          feedback: Správne!
         - {}
         - feedback: Nesprávne
       courseC_multi_artist_prog6_predict1:
@@ -1157,6 +1163,7 @@ sk-SK:
         - text: Umelec nakreslí jednu čiaru.
           feedback: Nesprávne. Umelec nakreslí štvorec.
         - text: Umelec nakreslí štvorec.
+          correct: true
           feedback: Správne!
         - text: Neviem.
           feedback: Umelec nakreslí štvorec.
@@ -1169,6 +1176,7 @@ sk-SK:
         - text: Umelec nakreslí jednu čiaru.
           feedback: Nesprávne. Umelec nakreslí štvorec.
         - text: Umelec nakreslí štvorec.
+          correct: true
           feedback: Správne!
         - text: Neviem.
           feedback: Umelec nakreslí štvorec.
@@ -1181,6 +1189,7 @@ sk-SK:
         - text: Umelec nakreslí jednu čiaru.
           feedback: Nesprávne. Umelec nakreslí štvorec.
         - text: Umelec nakreslí štvorec.
+          correct: true
           feedback: Správne!
         - text: Neviem.
           feedback: Umelec nakreslí štvorec.
@@ -1193,6 +1202,7 @@ sk-SK:
           feedback: Nesprávne. Farmárka pozbiera 4 tekvice v každom z 3 opakovaní.  4
             krát 3 je 12!
         - text: '12'
+          correct: true
           feedback: Správne!
         - text: '15'
           feedback: Nesprávne. Farmárka pozbiera 4 tekvice v každom z 3 opakovaní.  4
@@ -1209,6 +1219,7 @@ sk-SK:
           feedback: Nesprávne. Farmárka pozbiera 4 tekvice v každom z 3 opakovaní.  4
             krát 3 je 12!
         - text: '12'
+          correct: true
           feedback: Správne!
         - text: '15'
           feedback: Nesprávne. Farmárka pozbiera 4 tekvice v každom z 3 opakovaní.  4
@@ -1225,6 +1236,7 @@ sk-SK:
           feedback: Nesprávne. Farmárka pozbiera 4 tekvice v každom z 3 opakovaní.  4
             krát 3 je 12!
         - text: '12'
+          correct: true
           feedback: Správne!
         - text: '15'
           feedback: Nesprávne. Farmárka pozbiera 4 tekvice v každom z 3 opakovaní.  4
@@ -1240,6 +1252,7 @@ sk-SK:
         - text: Program nezlyhá. Scrat sa dostane až k žaluďu.
           feedback: Nesprávne. Scrat pôjde zlým smerom po svojom poslednom otočení.
         - text: Scrat pôjde zlým smerom po svojom poslednom otočení.
+          correct: true
           feedback: Správne!
         - text: Scrat nespraví dostatok krokov a nedôjde až k žaluďu.
           feedback: Nesprávne. Scrat neurobí dosť krokov až potom, ako sa otočí nesprávnym
@@ -1255,6 +1268,7 @@ sk-SK:
         - text: Program nezlyhá. Scrat sa dostane až k žaluďu.
           feedback: Nesprávne. Scrat pôjde zlým smerom po svojom poslednom otočení.
         - text: Scrat pôjde zlým smerom po svojom poslednom otočení.
+          correct: true
           feedback: Správne!
         - text: Scrat nespraví dostatok krokov a nedôjde až k žaluďu.
           feedback: Nesprávne. Scrat neurobí dosť krokov až potom, ako sa otočí nesprávnym
@@ -1270,6 +1284,7 @@ sk-SK:
         - text: Program nezlyhá. Scrat sa dostane až k žaluďu.
           feedback: Nesprávne. Scrat pôjde zlým smerom po svojom poslednom otočení.
         - text: Scrat pôjde zlým smerom po svojom poslednom otočení.
+          correct: true
           feedback: Správne!
         - text: Scrat nespraví dostatok krokov a nedôjde až k žaluďu.
           feedback: Nesprávne. Scrat neurobí dosť krokov až potom, ako sa otočí nesprávnym
@@ -1284,6 +1299,7 @@ sk-SK:
         - text: Vták skončí jeden krok pred prasiatkom.
           feedback: Nesprávne. Tento kód dostane vtáka rovno k prasiatku.
         - text: Vták sa dostane až k prasiatku.
+          correct: true
           feedback: Správne!
         - text: Vták narazí do TNT.
           feedback: Nesprávne. Tento kód dostane vtáka rovno k prasiatku.
@@ -1296,6 +1312,7 @@ sk-SK:
         - text: Vták skončí jeden krok pred prasiatkom.
           feedback: Nesprávne. Tento kód dostane vtáka rovno k prasiatku.
         - text: Vták sa dostane až k prasiatku.
+          correct: true
           feedback: Správne!
         - text: Vták narazí do TNT.
           feedback: Nesprávne. Tento kód dostane vtáka rovno k prasiatku.
@@ -1308,6 +1325,7 @@ sk-SK:
         - text: Vták skončí jeden krok pred prasiatkom.
           feedback: Nesprávne. Tento kód dostane vtáka rovno k prasiatku.
         - text: Vták sa dostane až k prasiatku.
+          correct: true
           feedback: Správne!
         - text: Vták narazí do TNT.
           feedback: Nesprávne. Tento kód dostane vtáka rovno k prasiatku.
@@ -1322,6 +1340,7 @@ sk-SK:
         - text: BB-8 sa posunie iba o jeden krok
           feedback: Nesprávne. Opakovací blok posunie BB-8 dopredu 5-krát.
         - text: BB-8 sa pohne 5 krát a pozbiera všetok šrot
+          correct: true
           feedback: Správne!
         - text: Neviem
           feedback: Opakovací blok posunie BB-8 dopredu 5-krát.
@@ -1334,6 +1353,7 @@ sk-SK:
         - text: BB-8 sa posunie iba o jeden krok
           feedback: Nesprávne. Opakovací blok posunie BB-8 dopredu 5-krát.
         - text: BB-8 sa pohne 5 krát a pozbiera všetok šrot
+          correct: true
           feedback: Správne!
         - text: Neviem
           feedback: Opakovací blok posunie BB-8 dopredu 5-krát.
@@ -1346,6 +1366,7 @@ sk-SK:
         - text: BB-8 sa posunie iba o jeden krok
           feedback: Nesprávne. Opakovací blok posunie BB-8 dopredu 5-krát.
         - text: BB-8 sa pohne 5 krát a pozbiera všetok šrot
+          correct: true
           feedback: Správne!
         - text: Neviem
           feedback: Opakovací blok posunie BB-8 dopredu 5-krát.
@@ -1358,6 +1379,7 @@ sk-SK:
             ale potrebuje sa posunúť o 3.
         - text: BB-8 v prvom opakovaní nedôjde dostatočne ďaleko nato, aby pozbieral
             všetok kovový šrot.
+          correct: true
           feedback: Správne!
         - text: BB-8 pozbiera všetok šrot, bez akýchkoľvek problémov.
           feedback: Nesprávne. Prvé opakovanie umožní BB-8 posunúť sa len o dva kroky,
@@ -1374,6 +1396,7 @@ sk-SK:
             ale potrebuje sa posunúť o 3.
         - text: BB-8 v prvom opakovaní nedôjde dostatočne ďaleko nato, aby pozbieral
             všetok kovový šrot.
+          correct: true
           feedback: Správne!
         - text: BB-8 pozbiera všetok šrot, bez akýchkoľvek problémov.
           feedback: Nesprávne. Prvé opakovanie umožní BB-8 posunúť sa len o dva kroky,
@@ -1390,6 +1413,7 @@ sk-SK:
             ale potrebuje sa posunúť o 3.
         - text: BB-8 v prvom opakovaní nedôjde dostatočne ďaleko nato, aby pozbieral
             všetok kovový šrot.
+          correct: true
           feedback: Správne!
         - text: BB-8 pozbiera všetok šrot, bez akýchkoľvek problémov.
           feedback: Nesprávne. Prvé opakovanie umožní BB-8 posunúť sa len o dva kroky,
@@ -1409,6 +1433,7 @@ sk-SK:
         - text: C
           feedback: Nesprávne.
         - text: D
+          correct: true
           feedback: Správne!
       courseD_multi_artist_binary8_predict1_2018:
         questions:
@@ -1422,6 +1447,7 @@ sk-SK:
         - text: C
           feedback: Nesprávne.
         - text: D
+          correct: true
           feedback: Správne!
       courseD_multi_artist_binary8_predict1_2018_2019:
         questions:
@@ -1435,6 +1461,7 @@ sk-SK:
         - text: C
           feedback: Nesprávne.
         - text: D
+          correct: true
           feedback: Správne!
       courseD_multi_artist_nestedLoops9_predict1:
         questions:
@@ -1442,6 +1469,7 @@ sk-SK:
             keď stlačíš "Spustiť"?
         answers:
         - text: A
+          correct: true
           feedback: Správne!
         - text: B
           feedback: Nesprávne. Vnútorný cyklus nakreslí päťuholník a ten vonkajší
@@ -1457,6 +1485,7 @@ sk-SK:
             keď stlačíš "Spustiť"?
         answers:
         - text: A
+          correct: true
           feedback: Správne!
         - text: B
           feedback: Nesprávne. Vnútorný cyklus nakreslí päťuholník a ten vonkajší
@@ -1472,6 +1501,7 @@ sk-SK:
             keď stlačíš "Spustiť"?
         answers:
         - text: A
+          correct: true
           feedback: Správne!
         - text: B
           feedback: Nesprávne. Vnútorný cyklus nakreslí päťuholník a ten vonkajší
@@ -1491,6 +1521,7 @@ sk-SK:
             nektár, len ak je pod oblakom kvet.
         - text: Včela sa posunie nad oblak a pokúsi sa zobrať nektár len ak je pod
             ním kvet.
+          correct: true
           feedback: Správne!
         - text: 'Včela sa posunie nad oblak a neurobí nič viac, bez ohľadu na to,
             čo je pod oblakom. '
@@ -1509,6 +1540,7 @@ sk-SK:
             nektár, len ak je pod oblakom kvet.
         - text: Včela sa posunie nad oblak a pokúsi sa zobrať nektár len ak je pod
             ním kvet.
+          correct: true
           feedback: Správne!
         - text: 'Včela sa posunie nad oblak a neurobí nič viac, bez ohľadu na to,
             čo je pod oblakom. '
@@ -1527,6 +1559,7 @@ sk-SK:
             nektár, len ak je pod oblakom kvet.
         - text: Včela sa posunie nad oblak a pokúsi sa zobrať nektár len ak je pod
             ním kvet.
+          correct: true
           feedback: Správne!
         - text: 'Včela sa posunie nad oblak a neurobí nič viac, bez ohľadu na to,
             čo je pod oblakom. '
@@ -1540,6 +1573,7 @@ sk-SK:
         - {}
         answers:
         - text: Včela vezme nektár na každom kvete a vyrobí med na každom pláste.
+          correct: true
           feedback: Správne!
         - text: Včela sa pokúsi zobrať nektár z kvetu aj z plástu.
           feedback: Nesprávne. Blok `ak na kvete` umožní včele zobrať nektár z každého
@@ -1555,6 +1589,7 @@ sk-SK:
         - {}
         answers:
         - text: Včela vezme nektár na každom kvete a vyrobí med na každom pláste.
+          correct: true
           feedback: Správne!
         - text: Včela sa pokúsi zobrať nektár z kvetu aj z plástu.
           feedback: Nesprávne. Blok `ak na kvete` umožní včele zobrať nektár z každého
@@ -1570,6 +1605,7 @@ sk-SK:
         - {}
         answers:
         - text: Včela vezme nektár na každom kvete a vyrobí med na každom pláste.
+          correct: true
           feedback: Správne!
         - text: Včela sa pokúsi zobrať nektár z kvetu aj z plástu.
           feedback: Nesprávne. Blok `ak na kvete` umožní včele zobrať nektár z každého
@@ -1592,6 +1628,7 @@ sk-SK:
           feedback: Nesprávne. Včela zopakuje aktivitu pohybu vpred a zbierania medu
             vo vnorenom cykle, čím vyrieši úlohu.
         - text: Včela zozbiera všetok nektár.
+          correct: true
           feedback: Správne!
         - text: Neviem.
           feedback: Včela zopakuje aktivitu pohybu vpred a zbierania medu vo vnorenom
@@ -1608,6 +1645,7 @@ sk-SK:
           feedback: Nesprávne. Včela zopakuje aktivitu pohybu vpred a zbierania medu
             vo vnorenom cykle, čím vyrieši úlohu.
         - text: Včela zozbiera všetok nektár.
+          correct: true
           feedback: Správne!
         - text: Neviem.
           feedback: Včela zopakuje aktivitu pohybu vpred a zbierania medu vo vnorenom
@@ -1624,6 +1662,7 @@ sk-SK:
           feedback: Nesprávne. Včela zopakuje aktivitu pohybu vpred a zbierania medu
             vo vnorenom cykle, čím vyrieši úlohu.
         - text: Včela zozbiera všetok nektár.
+          correct: true
           feedback: Správne!
         - text: Neviem.
           feedback: Včela zopakuje aktivitu pohybu vpred a zbierania medu vo vnorenom
@@ -1635,6 +1674,7 @@ sk-SK:
         answers:
         - text: '4'
         - text: '8'
+          correct: true
           feedback: Správne!
         - text: '12'
         - text: Neviem.
@@ -1645,6 +1685,7 @@ sk-SK:
         answers:
         - text: '4'
         - text: '8'
+          correct: true
           feedback: Správne!
         - text: '12'
         - text: Neviem.
@@ -1655,6 +1696,7 @@ sk-SK:
         answers:
         - text: '4'
         - text: '8'
+          correct: true
           feedback: Správne!
         - text: '12'
         - text: Neviem.
@@ -1664,7 +1706,8 @@ sk-SK:
         answers:
         - {}
         - {}
-        - feedback: Správne!
+        - correct: true
+          feedback: Správne!
         - text: Neviem.
       courseD_multi_farmer_condLoops9_predict1:
         questions:
@@ -1672,7 +1715,8 @@ sk-SK:
         answers:
         - {}
         - text: Záhradníčka po ceste nepozbiera žiadne plodiny.
-        - feedback: Správne!
+        - correct: true
+          feedback: Správne!
         - text: Neviem.
       courseD_multi_farmer_condLoops9_predict1_2018:
         questions:
@@ -1680,7 +1724,8 @@ sk-SK:
         answers:
         - {}
         - text: Záhradníčka po ceste nepozbiera žiadne plodiny.
-        - feedback: Správne!
+        - correct: true
+          feedback: Správne!
         - text: Neviem.
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         questions:
@@ -1688,14 +1733,16 @@ sk-SK:
         answers:
         - {}
         - text: Záhradníčka po ceste nepozbiera žiadne plodiny.
-        - feedback: Správne!
+        - correct: true
+          feedback: Správne!
         - text: Neviem.
       courseD_multi_farmer_ramp13:
         questions:
         - {}
         answers:
         - {}
-        - feedback: Správne!
+        - correct: true
+          feedback: Správne!
         - {}
         - text: Neviem.
       courseD_multi_farmer_while10_predict2:
@@ -1705,6 +1752,7 @@ sk-SK:
         - text: Nič. Tento kód zanechá rovnú zem.
           feedback: Nesprávne. Chýba kód na odstránenie hliny z hromady.
         - text: Tento kód sa hromady ani nedotkne.
+          correct: true
           feedback: Správne!
         - text: Tento kód sa jám ani nedotkne.
         - text: Neviem.
@@ -1715,6 +1763,7 @@ sk-SK:
         - text: Nič. Tento kód zanechá rovnú zem.
           feedback: Nesprávne. Chýba kód na odstránenie hliny z hromady.
         - text: Tento kód sa hromady ani nedotkne.
+          correct: true
           feedback: Správne!
         - text: Tento kód sa jám ani nedotkne.
         - text: Neviem.
@@ -1725,6 +1774,7 @@ sk-SK:
         - text: Nič. Tento kód zanechá rovnú zem.
           feedback: Nesprávne. Chýba kód na odstránenie hliny z hromady.
         - text: Tento kód sa hromady ani nedotkne.
+          correct: true
           feedback: Správne!
         - text: Tento kód sa jám ani nedotkne.
         - text: Neviem.
@@ -1740,6 +1790,7 @@ sk-SK:
             a zastaví, keď hromada zmizne
         - text: Farmárka bude odstraňovať hlinu pokiaľ tam je hromada a zastaví, keď
             hromada zmizne.
+          correct: true
           feedback: Správne!
         - text: Neviem.
           feedback: Farmárka bude odstraňovať hlinu pokiaľ tam je hromada a zastaví,
@@ -1756,6 +1807,7 @@ sk-SK:
             a zastaví, keď hromada zmizne
         - text: Farmárka bude odstraňovať hlinu pokiaľ tam je hromada a zastaví, keď
             hromada zmizne.
+          correct: true
           feedback: Správne!
         - text: Neviem.
           feedback: Farmárka bude odstraňovať hlinu pokiaľ tam je hromada a zastaví,
@@ -1772,6 +1824,7 @@ sk-SK:
             a zastaví, keď hromada zmizne
         - text: Farmárka bude odstraňovať hlinu pokiaľ tam je hromada a zastaví, keď
             hromada zmizne.
+          correct: true
           feedback: Správne!
         - text: Neviem.
           feedback: Farmárka bude odstraňovať hlinu pokiaľ tam je hromada a zastaví,
@@ -1780,7 +1833,8 @@ sk-SK:
         questions:
         - text: Pozorne si prezri tento kód.  Čo sa stane, keď klikneš "Spustiť"?
         answers:
-        - feedback: Správne!
+        - correct: true
+          feedback: Správne!
         - {}
         - {}
         - text: Neviem.
@@ -1788,7 +1842,8 @@ sk-SK:
         questions:
         - text: Pozorne si prezri tento kód.  Čo sa stane, keď klikneš "Spustiť"?
         answers:
-        - feedback: Správne!
+        - correct: true
+          feedback: Správne!
         - {}
         - {}
         - text: Neviem.
@@ -1796,7 +1851,8 @@ sk-SK:
         questions:
         - text: Pozorne si prezri tento kód.  Čo sa stane, keď klikneš "Spustiť"?
         answers:
-        - feedback: Správne!
+        - correct: true
+          feedback: Správne!
         - {}
         - {}
         - text: Neviem.
@@ -1807,6 +1863,7 @@ sk-SK:
         answers:
         - text: Vták sa nepohne.
         - text: Vták sa dostane až k prasiatku.
+          correct: true
           feedback: Správne!
         - text: Vták sa posunie dopredu a narazí do TNT.
         - text: Neviem.
@@ -1820,6 +1877,7 @@ sk-SK:
         answers:
         - text: Vták sa nepohne.
         - text: Vták sa dostane až k prasiatku.
+          correct: true
           feedback: Správne!
         - text: Vták sa posunie dopredu a narazí do TNT.
         - text: Neviem.
@@ -1833,6 +1891,7 @@ sk-SK:
         answers:
         - text: Vták sa nepohne.
         - text: Vták sa dostane až k prasiatku.
+          correct: true
           feedback: Správne!
         - text: Vták sa posunie dopredu a narazí do TNT.
         - text: Neviem.
@@ -1844,14 +1903,15 @@ sk-SK:
         - {}
         answers:
         - {}
-        - feedback: Správne!
+        - correct: true
+          feedback: Správne!
         - {}
         - text: Neviem.
       courseE_multi_bee_functions_predict1:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - text: Neviem.
@@ -1863,6 +1923,7 @@ sk-SK:
         - text: Záhradníčka pozbiera všetky tekvice.
         - text: Záhradníčka pozbiera šalát.
         - text: Záhradníčka pozbiera kukuricu.
+          correct: true
           feedback: Správne!
       courseE_multi_farmer_functions11_predict_2018:
         questions:
@@ -1871,6 +1932,7 @@ sk-SK:
         - text: Záhradníčka zoberie dve tekvice.
         - text: Záhradníčka pozbiera všetky tekvice.
         - text: Záhradníčka pozbiera šalát.
+          correct: true
           feedback: Správne!
         - text: Záhradníčka pozbiera kukuricu.
       courseE_multi_farmer_functions11_predict_2018_2019:
@@ -1880,6 +1942,7 @@ sk-SK:
         - text: Záhradníčka zoberie dve tekvice.
         - text: Záhradníčka pozbiera všetky tekvice.
         - text: Záhradníčka pozbiera šalát.
+          correct: true
           feedback: Správne!
         - text: Záhradníčka pozbiera kukuricu.
       courseE_prediction_artistFunction1:
@@ -1889,7 +1952,7 @@ sk-SK:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseE_prediction_artistFunction1_2018:
         questions:
         - {}
@@ -1897,7 +1960,7 @@ sk-SK:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseE_prediction_artistFunction1_2018_2019:
         questions:
         - {}
@@ -1905,13 +1968,14 @@ sk-SK:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseF_bee_variables_8a_2018:
         questions:
         - text: Pozri sa na kód dole. Koľko jednotiek nektáru pozbiera včela na konci?
         answers:
         - text: Včela nepozbiera žiadny nektár, pretoźe premenná sa nevolá "získaj".
         - text: Včela pozbiera iba 2 nektáre.
+          correct: true
           feedback: Správne!
         - text: Včela pozbiera všetok nektár.
         - text: Neviem.
@@ -1921,6 +1985,7 @@ sk-SK:
         answers:
         - text: Včela nepozbiera žiadny nektár, pretoźe premenná sa nevolá "získaj".
         - text: Včela pozbiera iba 2 nektáre.
+          correct: true
           feedback: Správne!
         - text: Včela pozbiera všetok nektár.
         - text: Neviem.
@@ -1966,6 +2031,7 @@ sk-SK:
             čiara bude dlhšia a tenšía. '
         - text: Umelec nakreslí špirálu a vždy, keď prejde cez cyklus `for`, tak čiara
             bude dlhšia a hrubšia.
+          correct: true
           feedback: Správne!
         - text: Neviem.
       courseF_multi_artist_for10_predict1_2018:
@@ -1978,6 +2044,7 @@ sk-SK:
             čiara bude dlhšia a tenšía. '
         - text: Umelec nakreslí špirálu a vždy, keď prejde cez cyklus `for`, tak čiara
             bude dlhšia a hrubšia.
+          correct: true
           feedback: Správne!
         - text: Neviem.
       courseF_multi_artist_for10_predict1_2018_2019:
@@ -1990,13 +2057,15 @@ sk-SK:
             čiara bude dlhšia a tenšía. '
         - text: Umelec nakreslí špirálu a vždy, keď prejde cez cyklus `for`, tak čiara
             bude dlhšia a hrubšia.
+          correct: true
           feedback: Správne!
         - text: Neviem.
       courseF_multi_artist_fwp2_predict1:
         questions:
         - {}
         answers:
-        - feedback: Správne!
+        - correct: true
+          feedback: Správne!
         - {}
         - {}
         - text: Neviem.
@@ -2005,6 +2074,7 @@ sk-SK:
         - text: Nastavili sme premennú "dĺžka" na 50. Čo sa stane, keď klikneš "Spustiť"?
         answers:
         - text: Umelec nakreslí trojuholník s dĺžkou strán 50 pixelov.
+          correct: true
           feedback: Správne!
         - text: Umelec nakreslí 50-stranný mnohouholník s dĺžkou strán 3 pixely.
         - text: Umelec nakreslí tri strany s 50 stupňovými otočeniami.
@@ -2014,6 +2084,7 @@ sk-SK:
         - text: Nastavili sme premennú "dĺžka" na 50. Čo sa stane, keď klikneš "Spustiť"?
         answers:
         - text: Umelec nakreslí trojuholník s dĺžkou strán 50 pixelov.
+          correct: true
           feedback: Správne!
         - text: Umelec nakreslí 50-stranný mnohouholník s dĺžkou strán 3 pixely.
         - text: Umelec nakreslí tri strany s 50 stupňovými otočeniami.
@@ -2023,6 +2094,7 @@ sk-SK:
         - text: Nastavili sme premennú "dĺžka" na 50. Čo sa stane, keď klikneš "Spustiť"?
         answers:
         - text: Umelec nakreslí trojuholník s dĺžkou strán 50 pixelov.
+          correct: true
           feedback: Správne!
         - text: Umelec nakreslí 50-stranný mnohouholník s dĺžkou strán 3 pixely.
         - text: Umelec nakreslí tri strany s 50 stupňovými otočeniami.
@@ -2037,6 +2109,7 @@ sk-SK:
             nektár, len ak je pod oblakom kvet.
         - text: Včela sa posunie nad oblak a pokúsi sa zobrať nektár len ak je pod
             ním kvet.
+          correct: true
           feedback: Správne!
         - text: 'Včela sa posunie nad oblak a neurobí nič viac, bez ohľadu na to,
             čo je pod oblakom. '
@@ -2049,7 +2122,8 @@ sk-SK:
         questions:
         - text: Pozorne si prezri tento kód.  Čo sa stane, keď klikneš "Spustiť"?
         answers:
-        - feedback: Správne!
+        - correct: true
+          feedback: Správne!
         - text: Včela sa pokúsi zobrať nektár z kvetu aj z plástu.
         - text: Včela sa pokúsi vyrobiť med na kvete aj na pláste.
         - text: Neviem.
@@ -2060,6 +2134,7 @@ sk-SK:
         - text: 'Včela pôjde dopredu a pozbiera všetok nektár z každého kvetu. '
         - text: Včela pôjde dopredu a pozbiera všetok nektár z každého kvetu okrem
             jedného.
+          correct: true
           feedback: Správne!
         - text: 'Včela pôjde dopredu a pozbiera jeden nektár z každého kvetu. '
         - {}
@@ -2070,6 +2145,7 @@ sk-SK:
         - text: 'Včela pôjde dopredu a pozbiera všetok nektár z každého kvetu. '
         - text: Včela pôjde dopredu a pozbiera všetok nektár z každého kvetu okrem
             jedného.
+          correct: true
           feedback: Správne!
         - text: 'Včela pôjde dopredu a pozbiera jeden nektár z každého kvetu. '
         - text: 'Neviem. '
@@ -2080,6 +2156,7 @@ sk-SK:
         - text: 'Včela pôjde dopredu a pozbiera všetok nektár z každého kvetu. '
         - text: Včela pôjde dopredu a pozbiera všetok nektár z každého kvetu okrem
             jedného.
+          correct: true
           feedback: Správne!
         - text: 'Včela pôjde dopredu a pozbiera jeden nektár z každého kvetu. '
         - text: 'Neviem. '
@@ -2088,14 +2165,14 @@ sk-SK:
         - text: Čo sa stane, ked stlačíš "Spustiť"?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - text: Neviem.
       courseF_multi_playlab_variables4c_predictive1:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - text: Neviem.
@@ -2104,7 +2181,8 @@ sk-SK:
         - {}
         answers:
         - {}
-        - feedback: Správne!
+        - correct: true
+          feedback: Správne!
         - {}
         - {}
       coursee_prediction_artistfunction2_2018:
@@ -2112,7 +2190,8 @@ sk-SK:
         - {}
         answers:
         - {}
-        - feedback: Správne!
+        - correct: true
+          feedback: Správne!
         - {}
         - {}
       coursee_prediction_artistfunction2_2018_2019:
@@ -2120,7 +2199,8 @@ sk-SK:
         - {}
         answers:
         - {}
-        - feedback: Správne!
+        - correct: true
+          feedback: Správne!
         - {}
         - {}
       csd-post-survey-2018-markdown-with-link-to-survey_v2:
@@ -2152,6 +2232,7 @@ sk-SK:
             nie je a to spôsobuje chybu.
         - text: Laurel sa pokúsi zobrať drahokam na mieste, kde žiadny nie je a to
             spôsobí chybu.
+          correct: true
           feedback: Správne!
         - text: Laurel pozbiera všetky drahokamy.
           feedback: Nesprávne. Laurel sa pokúša zobrať drahokam na mieste, kde žiadny
@@ -2169,6 +2250,7 @@ sk-SK:
             nie je a to spôsobuje chybu.
         - text: Laurel sa pokúsi zobrať drahokam na mieste, kde žiadny nie je a to
             spôsobí chybu.
+          correct: true
           feedback: Správne!
         - text: Laurel pozbiera všetky drahokamy.
           feedback: Nesprávne. Laurel sa pokúša zobrať drahokam na mieste, kde žiadny
@@ -2186,6 +2268,7 @@ sk-SK:
             nie je a to spôsobuje chybu.
         - text: Laurel sa pokúsi zobrať drahokam na mieste, kde žiadny nie je a to
             spôsobí chybu.
+          correct: true
           feedback: Správne!
         - text: Laurel pozbiera všetky drahokamy.
           feedback: Nesprávne. Laurel sa pokúša zobrať drahokam na mieste, kde žiadny

@@ -562,6 +562,7 @@ sk:
       link: "Zistiť viac"
       applab_unsupported_tablet: "App Lab funguje najlepšie na stolnom počítači alebo notebooku s myšou a klávesnicou. Pri používaní App Labu na tomto zariadení sa môžu vyskytnúť chyby alebo probémy."
       gamelab_unsupported_tablet: "Game Lab funguje najlepšie na stolnom počítači alebo notebooku s myšou a klávesnicou. Pri používaní Game Lab na tomto zariadení sa môžu vyskytnúť chyby alebo problémy."
+      oceans_unsupported_browser: "Návod sa nedá otvoriť v tomto internetovom prehliadači. Skús otvoriť stránku cez Edge, Chrome, Firefox, alebo iný prehliadač."
       weblab_unsupported_browser: "Je nám ľúto, ale v tomto prehliadači nefunguje Web Lab správne. Do vyriešenia problému použite prosím iný internetový prehliadač. Ospravedlňujeme sa za prípadné nepríjemnosti."
       weblab_unsupported_locale_storage: "Pri používaní Web Labu v Inkognito móde (Private Browsing mode) môžete zaznamenať problémy. Spustite prosím váš projekt nanovo v normálnom móde. Ospravedlňujeme sa za prípadné komplikácie."
   slow_loading: 'Trvá to dlhšie než zvyčajne...'
