@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import StandardsIntroDialog from './StandardsIntroDialog';
 import StandardsProgressTable from './StandardsProgressTable';
 import {fakeStandards, lessonCompletedByStandard} from './standardsTestHelpers';
+import StandardsLegend from './StandardsLegend';
 
 export default class StandardsView extends Component {
   static propTypes = {
@@ -17,6 +18,7 @@ export default class StandardsView extends Component {
           standards={fakeStandards}
           lessonsCompletedByStandard={lessonCompletedByStandard}
         />
+        <StandardsLegend />
       </div>
     );
   }
