@@ -480,6 +480,14 @@ pt-PT:
       CourseE_HOC 2018 Level_9b: Chegaste ao recife de coral, agora procura o **Heart
         of the Sea** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
         ! Usa o coral azul e vermelho para alcançar o **baú** do tesouro ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
+      Dance_2019_01: "Arrasta o bloco <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"
+        block-text=\"make a new dancer\"><title name=\"COSTUME\" config=\"&quot;CAT&quot;,
+        &quot;PINEAPPLE&quot;\">\"CAT\"</title><title name=\"LOCATION\">{x: 200, y:
+        200}</title></block></xml> para o ambiente de trabalho e liga-o dentro do
+        bloco <xml><block type=\"Dancelab_whenSetup2\" next_connection_disabled=\"true\"
+        block-text=\"setup\"></block></xml>. \n\n Escolhe `gato` ou `preguiça` para
+        criar o teu primeiro dançarino.\n\n-   _Podes também clicar na lâmpada à esquerda
+        se quiseres mais informações ou desafios extras._"
       Dance_2019_02: "O bloco <xml><block type=\"Dancelab_whenKey\" block-text=\"when
         up pressed\"></block></xml> permite-te executar o código quando primes as
         teclas direcionais. \nUsa o bloco <xml><block type=\"Dancelab_doMoveEachLR\"
@@ -490,6 +498,14 @@ pt-PT:
       Dance_2019_03: Está na hora da dança! Programa cada dançarino para se mover
         quando premires teclas diferentes. Escolhe o teu movimento preferido para
         cada dançarino ou defini-o para `(Aleatório)` para algo completamente imprevisível!
+      Dance_2019_04: "Vamos pôr os dançarinos a mexerem-se ao ritmo da música!\n\nConecta
+        o bloco <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">4</title><title
+        name=\"UNIT\">\"measures\"</title></block></xml> a um bloco <xml><block type=\"Dancelab_changeMoveEachLR\"><title
+        name=\"GROUP\">\"SHARK\"</title><title name=\"MOVE\">MOVES.ThisOrThat</title><title
+        name=\"DIR\">-1</title></block></xml> da caixa de ferramentas. \n\nO teu dançarino
+        deverá começar um novo movimento após o quarto compasso.\n\nOs **compassos**
+        são usados para contar o tempo da música. Neste tutorial, um compasso tem
+        quatro tempos."
       Dance_2019_05: "_Agora já estamos a curtir!_ \n\nAdiciona um bloco <xml><block
         type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml>
         à tua área de trabalho. Faz o dançarino iniciar um novo movimento após 6 compassos."
@@ -518,7 +534,7 @@ pt-PT:
       Dance_Party_02: |-
         Vamos pôr este alce a dançar!
 
-        Arrasta o bloco <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> para a área de trabalho e conecta-lo por debaixo do bloco <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. O teu dançarino deverá iniciar um novo movimento após o quarto compasso.
+        Arrasta o bloco <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> para a área de trabalho e conecta-lo por debaixo do bloco <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. O teu dançarino deverá iniciar um novo movimento após o quarto compasso.
 
         Os **Compassos** são usados para contar o tempo na música. Neste tutorial, um compasso tem quatro batidas.
       Dance_Party_03: "_Agora já estamos a curtir!_ \n\nAdiciona um bloco <xml><block
