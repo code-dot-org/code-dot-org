@@ -243,7 +243,7 @@ fr:
             '"verse"': verset
             '"chorus"': chœur
       Dancelab_getEnergy:
-        text: obtenir {RANGE}
+        text: obtenir [RANGE] [0]
         options:
           RANGE:
             '"low"': grave
@@ -357,10 +357,15 @@ fr:
           FORMAT:
             '"border"': frontière
             '"inner"': carré intérieur
+            '"diamond"': diamant
             '"circle"': cercle
             '"grid"': grille
+            '"top"': rangée du haut
             '"row"': ligne
+            '"bottom"': rangée du bas
+            '"left"': colonne de gauche
             '"column"': colonne
+            '"right"': colonne de droite
             '"x"': entrecroisement
             '"plus"': plus
             '"random"': aléatoire
