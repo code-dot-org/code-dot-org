@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import ProgressBox from '@cdo/apps/templates/sectionProgress/ProgressBox';
 import i18n from '@cdo/locale';
+import ProgressBoxForLessonNumber from './ProgressBoxForLessonNumber';
 
 const styles = {
   main: {
@@ -18,9 +18,6 @@ const styles = {
   },
   lessonsAreaTitle: {
     marginRight: 10
-  },
-  lessonBox: {
-    marginRight: 10
   }
 };
 
@@ -33,33 +30,13 @@ class StandardDescriptionCell extends Component {
   getLessonBoxes = () => {
     if (this.props.lessonsForStandardStatus) {
       return this.props.lessonsForStandardStatus.map((lesson, index) => {
-        if (lesson.status === 'done') {
-          return (
-            <ProgressBox
-              key={lesson.id}
-              style={styles.lessonBox}
-              started={true}
-              incomplete={0}
-              imperfect={0}
-              perfect={20}
-              showLessonNumber
-              lessonNumber={lesson.id}
-            />
-          );
-        } else {
-          return (
-            <ProgressBox
-              key={lesson.id}
-              style={styles.lessonBox}
-              started={false}
-              incomplete={20}
-              imperfect={0}
-              perfect={0}
-              showLessonNumber
-              lessonNumber={lesson.id}
-            />
-          );
-        }
+        return (
+          <ProgressBoxForLessonNumber
+            key={lesson.id}
+            completed={lesson.status === 'done'}
+            lessonNumber={lesson.id}
+          />
+        );
       });
     } else {
       return;
