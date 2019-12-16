@@ -135,7 +135,7 @@ def get_weather_data
     WeatherForecastOffice.new('Seattle', 'Washington', '98115'),
     WeatherForecastOffice.new('Spokane', 'Washington', '99224')
   ]
-  records = []
+  records = {}
   columns = %w(id city state timestamp temp_min temp_max weather icon wind_speed)
   id = 1
   forecast_offices.each do |office|
@@ -155,7 +155,7 @@ def get_weather_data
         measurement["weather"][0]["icon"],
         measurement["wind"]["speed"]
       )
-      records.push(row.to_h.to_json)
+      records[id] = row.to_h.to_json
       id += 1
     end
   end
