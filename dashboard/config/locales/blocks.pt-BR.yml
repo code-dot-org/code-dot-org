@@ -3,6 +3,7 @@ pt-BR:
   data:
     blocks:
       Dancelab_alternateMoves:
+        text: "{GROUP} alternar cada {N} Medidas \nEntre {MOVE1} E {MOVE2}"
         options:
           GROUP:
             sprites: todos
@@ -16,6 +17,7 @@ pt-BR:
             '"PINEAPPLE"': todos os abacaxis
             '"ROBOT"': todos os robôs
             '"SHARK"': todos os tubarões
+            '"SLOTH"': Preguiças
             '"UNICORN"': Unicórnios
           MOVE1:
             MOVES.Roll: Rolar
@@ -69,6 +71,7 @@ pt-BR:
             '"PINEAPPLE"': todos os abacaxis
             '"ROBOT"': todos os robôs
             '"SHARK"': todos os tubarões
+            '"SLOTH"': Preguiças
             '"UNICORN"': todos unicórnios
           MOVE:
             '"next"': "(Próximo)"
@@ -134,6 +137,7 @@ pt-BR:
             '"PINEAPPLE"': todos os abacaxis
             '"ROBOT"': todos os robôs
             '"SHARK"': todos os tubarões
+            '"SLOTH"': Preguiças
             '"UNICORN"': Unicórnios
           PROPERTY:
             '"scale"': tamanho
@@ -157,6 +161,7 @@ pt-BR:
             '"PINEAPPLE"': todos os abacaxis
             '"ROBOT"': todos os robôs
             '"SHARK"': todos os tubarões
+            '"SLOTH"': Preguiças
             '"UNICORN"': Unicórnios
           MOVE:
             '"rand"': "(Aleatório)"
@@ -217,6 +222,8 @@ pt-BR:
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_everyMeasuresRange:
+        text: 'repetir cada {N} medidas após {START} '
       Dancelab_everySeconds:
         text: 'a cada {N} {UNIT} '
         options:
@@ -317,6 +324,7 @@ pt-BR:
             '"PINEAPPLE"': todos os abacaxis
             '"ROBOT"': todos os robôs
             '"SHARK"': todos os tubarões
+            '"SLOTH"': Preguiças
             '"UNICORN"': Unicórnios
           LOCATION:
             "{x: 200, y: 100}": parte de cima
@@ -344,14 +352,20 @@ pt-BR:
             '"PINEAPPLE"': todos os abacaxis
             '"ROBOT"': todos os robôs
             '"SHARK"': todos os tubarões
+            '"SLOTH"': Preguiças
             '"UNICORN"': Unicórnios
           FORMAT:
             '"border"': borda
             '"inner"': quadrado interno
+            '"diamond"': diamante
             '"circle"': círculo
             '"grid"': grade
+            '"top"': linha superior
             '"row"': linha
+            '"bottom"': linha inferior
+            '"left"': coluna esquerda
             '"column"': coluna
+            '"right"': coluna direita
             '"x"': linhas cruzadas
             '"plus"': mais
             '"random"': aleatório
@@ -369,6 +383,7 @@ pt-BR:
             '"PINEAPPLE"': Abacaxi
             '"ROBOT"': robô
             '"SHARK"': Tubarão
+            '"SLOTH"': Preguiça
             '"UNICORN"': unicórnio
           LOCATION:
             "{x: 200, y: 100}": parte de cima
@@ -397,6 +412,7 @@ pt-BR:
             '"PINEAPPLE"': Abacaxi
             '"ROBOT"': Robô
             '"SHARK"': Tubarão
+            '"SLOTH"': Preguiça
             '"UNICORN"': Unicórnio
           LOCATION:
             "{x: 200, y: 100}": parte de cima
@@ -445,6 +461,7 @@ pt-BR:
             '"PINEAPPLE"': Abacaxis
             '"ROBOT"': Robôs
             '"SHARK"': Tubarões
+            '"SLOTH"': Preguiças
             '"UNICORN"': Unicórnios
           LAYOUT:
             '"border"': borda
@@ -452,8 +469,12 @@ pt-BR:
             '"diamond"': diamante
             '"circle"': círculo
             '"grid"': grade
+            '"top"': linha superior
             '"row"': linha
+            '"bottom"': linha inferior
+            '"left"': coluna esquerda
             '"column"': coluna
+            '"right"': coluna direita
             '"x"': linhas cruzadas
             '"plus"': mais
             '"random"': aleatório
@@ -510,22 +531,29 @@ pt-BR:
             '"none"': Nenhum
             '"rand"': "(Aleatório)"
             '"circles"': Círculos
+            '"quads"': Ângulos
             '"color_cycle"': Cores
             '"diamonds"': Diamantes
             '"disco_ball"': Bola de discoteca
             '"fireworks"': Fogos de artifício
+            '"flowers"': Flores
+            '"growing_stars"': Estrelas em Crescimento
             '"swirl"': Hipno
             '"kaleidoscope"': Caleidoscópio
             '"lasers"': Laser de pista de dança
             '"splatter"': Respingos de tinta
             '"rainbow"': Arco-íris
+            '"ripples_random"': Ondulações aleatórias
+            '"ripples"': Ondulações
             '"snowflakes"': Neve
             '"text"': Título da música
+            '"squiggles"': Rsquiggles
             '"galaxy"': Espaço
             '"sparkles"': Brilhos
             '"spiral"': Espiral
             '"disco"': Quadrados
             '"stars"': Estrelas
+            '"music_wave"': Ondas
           PALETTE:
             '"rave"': Preto e branco
             '"cool"': Tons de azul
@@ -560,6 +588,7 @@ pt-BR:
             '"PINEAPPLE"': todos os abacaxis
             '"ROBOT"': todos os robôs
             '"SHARK"': todos os tubarões
+            '"SLOTH"': Preguiças
             '"UNICORN"': Unicórnios
           SPEED:
             '1': normal
@@ -592,9 +621,12 @@ pt-BR:
             '"none"': Nenhum
             '"rand"': "(Aleatório)"
             '"bubbles"': Bolhas
+            '"hearts_colorful"': Corações coloridas
             '"confetti"': Confete
+            '"emojis"': Emojis
             '"hearts_red"': Corações
             '"music_notes"': Notas musicais
+            '"paint_drip"': Pinte gotejamento
             '"pineapples"': Abacaxis
             '"pizzas"': Pizzas
             '"smiling_poop"': Cocô
@@ -603,6 +635,7 @@ pt-BR:
             '"smile_face"': Sorrisos
             '"spotlight"': Olofote
             '"color_lights"': Luzes de palco
+            '"exploding_stars"': Vetor estelar
             '"raining_tacos"': Tacos
       Dancelab_setProp:
         text: 'Definir {SPRITE} {PROPERTY} para {VAL} '
@@ -629,6 +662,7 @@ pt-BR:
             '"PINEAPPLE"': todos os abacaxis
             '"ROBOT"': todos os robôs
             '"SHARK"': todos os tubarões
+            '"SLOTH"': Preguiças
             '"UNICORN"': Unicórnios
           PROPERTY:
             '"scale"': tamanho
@@ -664,6 +698,7 @@ pt-BR:
             '"PINEAPPLE"': todos os abacaxis
             '"ROBOT"': todos os robôs
             '"SHARK"': todos os tubarões
+            '"SLOTH"': Preguiças
             '"UNICORN"': Unicórnios
           PROPERTY:
             '"scale"': tamanho
@@ -690,6 +725,7 @@ pt-BR:
             '"PINEAPPLE"': todos os abacaxis
             '"ROBOT"': todos os robôs
             '"SHARK"': todos os tubarões
+            '"SLOTH"': Preguiças
             '"UNICORN"': Unicórnios
       Dancelab_setTintEachInline:
         text: definir tonalidade de {THIS} para {VAL}
@@ -706,6 +742,7 @@ pt-BR:
             '"PINEAPPLE"': todos os abacaxis
             '"ROBOT"': todos os robôs
             '"SHARK"': todos os tubarões
+            '"SLOTH"': Preguiças
             '"UNICORN"': Unicórnios
       Dancelab_setTintInline:
         text: definir tonalidade {SPRITE} para {VAL}
@@ -730,6 +767,7 @@ pt-BR:
             '"PINEAPPLE"': todos os abacaxis
             '"ROBOT"': todos os robôs
             '"SHARK"': todos os tubarões
+            '"SLOTH"': Preguiças
             '"UNICORN"': Unicórnios
           VISIBILITY:
             'true': visível
@@ -764,6 +802,7 @@ pt-BR:
             '"PINEAPPLE"': todos os abacaxis
             '"ROBOT"': todos os robôs
             '"SHARK"': todos os tubarões
+            '"SLOTH"': Preguiças
             '"UNICORN"': Unicórnios
           PROPERTY:
             '"scale"': tamanho
@@ -808,6 +847,7 @@ pt-BR:
             '"PINEAPPLE"': todos os abacaxis
             '"ROBOT"': todos os robôs
             '"SHARK"': todos os tubarões
+            '"SLOTH"': Preguiças
             '"UNICORN"': Unicórnios
           PROPERTY:
             '"scale"': tamanho
@@ -823,10 +863,33 @@ pt-BR:
             '"mid"': médio
             '"treble"': agudo
       Dancelab_translateStrings:
+        text: traduzir {STRING}
         options:
           STRING:
+            '"music_wave"': Ondas
+            '"ripples"': Ondulações
+            '"ripples_random"': Ondulações aleatórias
+            '"quads"': Ângulos
+            '"flowers"': Flores
+            '"popsicles"': Picolés
+            '"squiggles"': Rsquiggles
+            '"growing_stars"': Estrelas em Crescimento
+            '"emojis"': Emojis
             '"hearts_colorful"': Corações
+            '"paint_drio"': Pinte gotejamento
+            '"exploding_stars"': Vetor estelar
+            '"row_top"': linha superior
+            '"row_bottom"': linha inferior
+            '"column_left"': coluna esquerda
+            '"column_right"': coluna direita
             '"diamond"': diamante
+            '"mural"': Mural
+            '"safari"': Safari
+            '"network"': Rede
+            '"highway"': Rodovia
+            '"stream"': Corrente
+            '"tile"': Azulejo
+            '"shadow"': Sombra
             '"s"': s
             '"t"': t
             '"u"': u
@@ -1178,6 +1241,7 @@ pt-BR:
             "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": peixe
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": não peixe
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": meu-rotulo
+            "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": não o meu rótulo
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1359,6 +1423,7 @@ pt-BR:
         options:
           DANCE:
             MOVES.ClapHigh: peixe
+            MOVES.Clown: não o meu rótulo
       Mikelab_locationAt:
         text: 'localização x: {X} y: {Y}'
       Mikelab_location_picker:
@@ -1485,6 +1550,8 @@ pt-BR:
         text: aalab elemento {SPRITE} começa a {BEHAVIOR} por {SECONDS} segundos
       aalab_addBehaviorUntilBoolean:
         text: aalab sprite {SPRITE} começa a {BEHAVIOR} até {CONDITION}
+      aalab_createNewSpriteAnonReturn2:
+        text: novo sprite chamado{SPRITE_NAME} com traje{ANIMATION_NAME} no local{LOCATION}
       aalab_goToScene:
         text: vai para cena {SCENE}
         options:

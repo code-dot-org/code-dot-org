@@ -47,7 +47,7 @@ pt-BR:
         edit_header: 'Editar Detalhes da Conta'
         finish_sign_up_header: 'Finalize a criação da sua conta'
         finish_sign_up_subheader: 'Preencha as informações a seguir para concluir a criação da sua conta Code.org.'
-        finish_sign_up_subheader_markdown: 'Preencha as informações a seguir para concluir a criação da sua conta Code.org.'
+        finish_sign_up_subheader_markdown: 'Preencha as informações a seguir para concluir a criação da sua conta Code.org para **%{email}**.'
         finish_sign_up_subheader_provider: 'Preencha as informações a seguir para concluir a criação de uma conta do Code.org usando seu <strong>%{provider}</strong> para <strong>%{email}</strong>.'
         finish_sign_up_subheader_provider_markdown: 'Preencha as informações a seguir para concluir a criação de uma conta do Code.org usando seu **%{provider}** para **%{email}**.'
         reset_password_token: "O link de redefinição de senha que você seguiu"
@@ -72,7 +72,7 @@ pt-BR:
     code:
       title: 'Entre em uma seção no Code.org'
       placeholder: "Código da seção (ABCDEF)"
-      instructions: "Por favor, insira o código de 6 letras que o seu professor lhe deu. (por exemplo: \"ABCDEF\") para se juntar a sessão deles."
+      instructions: "Insira o código de 6 letras que o seu professor lhe deu (por exemplo: \"ABCDEF\") para se juntar à sessão deles."
       instructions_short: "Digite o seu código da sessão de 6 letras"
       submit: 'Entrar'
   add_hint_form:
@@ -103,8 +103,8 @@ pt-BR:
     continue_with: 'Continuar com %{provider}'
     sign_in_with: 'Entre com %{provider}'
     signed_in: 'Sessão iniciada!'
-    signed_out_markdown: '### Acabaste de terminar a sessão da [Code.org](%{url}).'
-    sign_out_of_markdown: '#### Usaste o %{provider} para iniciar sessão. [Clica aqui](%{url}) para terminares a sessão no %{provider}.'
+    signed_out_markdown: '### Você saiu do [Code.org](%{url}).'
+    sign_out_of_markdown: '#### Você fez usou %{provider} para entrar. [Clique aqui](%{url}) para sair de %{provider}.'
     already_signedup: 'Já se cadastrou?'
     notyet_signedup: "Ainda não faz parte?"
     google_oauth2: 'Conta do Google'
@@ -124,6 +124,10 @@ pt-BR:
     unable_to_connect_provider: "Não foi possível conecta sua conta do Code.org ao seu %{provider}. Por favor tente novamente."
     already_in_use: "Seu %{provider} já está conectado a outra conta do Code.org."
     already_linked: "Seu %{provider} já está lincado a outra conta do Code.org."
+    existing_account:
+      account_exists: "Boas notícias! Você já tem uma conta no Code.org com %{email}"
+      sign_in: "Entre e conectaremos a conta ao seu perfil %{provider}."
+      sign_up: "Não é seu e-mail? Quer criar uma conta com outro e-mail? Também podemos conectar com seu perfil %{provider} se você quiser uma conta nova."
   signup_form:
     email_signup: 'Registre-se com o seu endereço de e-mail'
     student_count: '%{count} alunos já se registraram.'
@@ -210,7 +214,7 @@ pt-BR:
     login: 'Entrar'
     invalid_login: 'Login incorreto, tente novamente'
     pair_programming: 'Estou trabalhando em parceria no computador'
-    student_privacy_markdown: "Aprende mais sobre o porquê de não estares a ver o teu nome completo [here](%{student_privacy_blog})."
+    student_privacy_markdown: "Saiba por que você não vê seu nome completo [aqui](%{student_privacy_blog})."
   password:
     reset_form:
       title: 'Esqueceu sua senha?'
@@ -566,6 +570,7 @@ pt-BR:
       link: "Saiba mais"
       applab_unsupported_tablet: "App Lab funciona melhor em um computador desktop ou laptop com um mouse e um teclado. Você pode ter problemas usando esta ferramenta no seu dispositivo atual."
       gamelab_unsupported_tablet: "O Laboratório de Jogos funciona melhor em um computador desktop ou um laptop com um mouse e um teclado. Você pode ter problemas usando esta ferramenta no seu dispositivo atual."
+      oceans_unsupported_browser: "Esse tutorial não roda neste navegador. Tente visitar essa página usando Edge, Chrome, Firefox ou outro navegador moderno."
       weblab_unsupported_browser: "Infelizmente, estamos com problemas com o carregamento do Web Lab neste navegador. Você pode tentar usar um navegador diferente até que isso seja resolvido. Desculpe pela inconveniência."
       weblab_unsupported_locale_storage: "Você pode ter problemas ao usar o Laboratório Web no modo de Navegação Privativa. Por favor recarregue seu projeto no modo normal. Desculpe pela inconveniência."
   slow_loading: 'Isso está demorando mais do que o normal...'
@@ -691,6 +696,7 @@ pt-BR:
     header_artist: "Artista"
     report_abuse: "Reportar abuso"
   landing:
+    prerelease_tutorial: "Esse tutorial está em **beta**. Ele ainda está sujeito a revisões, conforme são recebidos feedbacks e são feitas melhorias."
     report_bug: "Reportar erro"
     support: "Obter ajuda"
     support_url: "//support.code.org"
@@ -758,6 +764,9 @@ pt-BR:
   age_interstitial:
     age: Sua idade
     header: Atualização de informações da conta
+    warning: "Estamos atualizando a experiência para oferecer uma proteção ainda maior à sua privacidade. Para isso, precisamos que usuários já existentes insiram sua idade aqui."
+    disclaimer: "Como sempre, o Code.org nunca vai alugar, vender ou compartilhar esta informação com terceiros."
+    sign_out_markdown: 'Se não quiser informar sua idade, você pode [sair](%{url}).'
   terms_interstitial:
     title: "Termos de Serviço e Política de Privacidade atualizados"
     intro_desc: "Atualizamos nossos Termos de Serviço e Política de Privacidade, conforme exibido abaixo. As alterações estão em vigor desde 24 de agosto de 2016.  A principal mudança: nós <i>não armazenaremos mais endereços de e-mail de contas de alunos no Code Studio.</i> Essa é uma grande mudança para nós, e esperamos que essa decisão defina um novo padrão para a privacidade dos alunos na tecnologia da educação. Enviamos um resumo das demais alterações a você por e-mail."
@@ -857,8 +866,10 @@ pt-BR:
   peer_review:
     accepted:
       name: 'Aceito'
+      description_markdown: '**Sim**, esse envio **atende** aos requisitos'
     rejected:
       name: 'Rejeitado'
+      description_markdown: '*Não**, esse envio **não atende** aos requisitos'
     escalated:
       name: 'Encaminhado'
       description: 'Eu gostaria que um instrutor revisasse este envio'
@@ -940,9 +951,13 @@ pt-BR:
     time4cs_c3: 'Viver em Everglades'
     time4cs_c4: 'Impactos Invasivos em Everglades'
     time4cs_c5: 'Cidadãos influenciam as mudanças em Everglades'
+    time4cs_c6: 'Condicionais (revisão)'
     k5_getting_started: 'Iniciando'
+    k5_csf_intro: 'Conheça os cursos de Conceitos básicos da Ciência da Computação'
     k5_coding_concepts: 'Conceitos de codificação e estratégias de ensino'
     k5_next_steps: 'Próximas etapas'
+    k5_basic_concepts: 'Conceitos Básicos de Programação e Prática de Ensino'
+    k5_diving_deeper: 'Aprofundamento: Cursos E e F'
   external_links:
     disclaimer: Aviso
     leaving_domain: Você está deixando este domínio para acessar um site que não é operado pela Code.org.
@@ -1096,6 +1111,7 @@ pt-BR:
       title: 'Presença da Oficina'
       intro: "Obrigado por tomar tempo para receber formação sobre o currículo do Code.org. Nossa missão para trazer oportunidades de educação em ciência da computação para todas as crianças em todas as escolas de todo o mundo não seria possível sem você."
       instructions: "Por favor preencha o formulário abaixo para indicar que 1) você participou de um workshop dirigido por um dos parceiros internacionais do Code.org, e 2) você concorda em compartilhar suas informações com o nosso parceiro international em seu país para que nós possamos ajudar a apoiar a sua jornada como um professor de ciência da computação."
+      thanks_markdown: "Obrigado por enviar! Estamos ansiosos para atendê-lo conforme você se familiariza com os currículos e as ferramentas do Code.org. Continue compartilhando suas perguntas e feedback conosco escrevendo para [support@code.org](%{support_email_url}) ou postando no [fórum de professores](%{teacher_forum_url})!"
     logged_out:
       heading: 'Obrigado pelo seu interesse no Programa de Aprendizagem Profissional!'
       body: 'Para começar, primeiro você precisa estar logado em sua conta do Code.org. Se você quiser mais informações sobre o programa antes de iniciar sua aplicação, por favor verifique a <a href="%{url}">visão geral do Programa de Aprendizagem Profissional</a>.'

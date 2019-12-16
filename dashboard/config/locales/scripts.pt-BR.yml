@@ -2931,6 +2931,12 @@ pt-BR:
               name: Fase de Teste com Bolhas
         csd3-2017:
           title: CSD Unidade 3 - Animações e Jogos ('17-'18)
+          description: " Na Unidade 3, você aproveitará sua experiência de codificação
+            ao programar animações, arte interativa e jogos no Laboratório de Jogos.
+            A unidade começa com formas simples e cria jogos sofisticados baseados
+            em sprites, usando os mesmos conceitos de programação e o processo de
+            design que os cientistas da computação usam diariamente. No projeto final,
+            você desenvolverá um programa interativo personalizado."
           description_short: Programação
           stages:
             Booleans and Conditionals:
@@ -2943,6 +2949,18 @@ pt-BR:
               name: Laço de Desenho e Randomização
             Drawing in Game Lab:
               name: Desenhando no Laboratório de Jogos
+              description_student: A classe é apresentada ao Laboratório de Jogos,
+                o ambiente de programação para esta unidade, e começa a usá-lo para
+                posicionar formas na tela. Esta lição aborda os conceitos básicos
+                de sequenciamento e depuração, além de alguns comandos simples. No
+                final da lição, a classe cria uma versão online da imagem que eles
+                criaram na lição anterior.
+              description_teacher: Os alunos são apresentados ao Laboratório de Jogos,
+                o ambiente de programação para esta unidade, e começam a usá-lo para
+                posicionar formas na tela. Eles aprendem o básico sobre sequenciamento
+                e depuração, bem como alguns comandos simples. No final da lição,
+                os alunos poderão programar imagens como as que eles criaram com a
+                ferramenta de desenho da lição anterior.
             'Project: Interactive Card':
               name: 'Projeto: Cartão Interativo'
             Sprites and Images:
@@ -2973,6 +2991,18 @@ pt-BR:
               name: Projeto - Projetar um Jogo
             Programming for Entertainment:
               name: Programação para entretenimento
+              description_student: Solicita-se à classe que considere "problemas"
+                como tédio e autoexpressão, e que reflita sobre como eles abordam
+                esses problemas em suas próprias vidas. A partir daí, eles irão explorar
+                como a Ciência da Computação em geral, e a programação especificamente,
+                desempenham um papel em uma forma específica de entretenimento ou
+                como um veículo para a autoexpressão.
+              description_teacher: Os alunos devem considerar "problemas" como tédio
+                e autoexpressão e refletir sobre como eles abordam esses problemas
+                em suas próprias vidas. A partir daí, os alunos irão explorar como
+                a Ciência da Computação em geral, e a programação especificamente,
+                desempenham um papel em uma forma específica de entretenimento ou
+                como um veículo para a autoexpressão.
             Plotting Shapes:
               name: Formas de plotagem
             Shapes and Randomness:
@@ -2996,12 +3026,29 @@ pt-BR:
                 final da aula.
             Variables:
               name: variáveis
+              description_student: Esta lição apresenta variáveis como uma maneira
+                de rotular um número em um programa ou salvar um valor gerado aleatoriamente.
+                A turma começa a lição com uma descrição muito básica do objetivo
+                de uma variável e pratica usando os novos blocos. Posteriormente,
+                a classe usa variáveis para salvar um número aleatório, permitindo
+                que os programas usem o mesmo número aleatório várias vezes.
             Sprites:
               name: Sprite
+              description_student: Para criar imagens mais interessantes e detalhadas,
+                a classe é introduzida no objeto sprite. Cada sprite pode ser atribuída
+                a uma imagem, e os sprites também acompanham vários valores sobre
+                si mesmos, o que será útil no futuro ao fazer animações. No final
+                da lição, todos criam uma cena usando sprites.
             The Draw Loop:
               name: O laço de desenho
             The Counter Pattern Unplugged:
               name: O padrão do contador desconectado
+              description_teacher: Os alunos exploram o comportamento subjacente das
+                variáveis por meio de uma atividade desconectada. Usando notecards
+                e string para simular variáveis dentro de um programa, os alunos implementam
+                alguns programas curtos. Uma vez familiarizados com essa sintaxe,
+                os alunos usam o mesmo processo com propriedades de sprite, acompanhando
+                o progresso de um sprite na tela.
             Sprite Movement:
               name: Movimento sprite
             Conditionals:
@@ -3012,6 +3059,12 @@ pt-BR:
               name: Outras formas de entrada
             Booleans Unplugged:
               name: Booleanos off-line
+              description_teacher: |-
+                Nesta lição, os alunos são apresentados a valores e lógica booleanos, bem como a declarações condicionais. A aula começa com um jogo simples de Levante-se e Sente-se, no qual as declarações booleanas (verdadeiro / falso) descrevem propriedades pessoais (cabelo ou cor dos olhos, tipo de roupa, idade, etc.). Isso faz com que os alunos pensem em como podem enquadrar uma propriedade com vários valores potenciais (como idade) com uma pergunta binária.
+
+                A partir daí, é fornecido aos alunos um grupo de objetos com propriedades físicas semelhantes, porém variáveis. Com um parceiro, eles agrupam esses objetos com base em instruções booleanas cada vez mais complexas, incluindo booleanos compostos com E e OU.
+
+                Finalmente, revelamos condicionais como uma ferramenta para tomar decisões ou impactar o fluxo de um programa usando instruções booleanas como entrada.
             Project - Interactive Card:
               name: Projeto - Cartão Interativo
             Project - Design a Game:
@@ -4012,6 +4065,8 @@ pt-BR:
               name: Luzes
             Event Types:
               name: Tipos de Eventos
+            Getters and Setters:
+              name: Getters e Setters
             Input Unplugged:
               name: Entrada desconectada
             Timed Loop:
@@ -4132,6 +4187,8 @@ pt-BR:
               name: Funcionalidade básica do aplicativo
             Event Types:
               name: Tipos de Eventos
+            Getters and Setters:
+              name: Getters e Setters
             Extra:
               name: Extra
         applab-2hour:
@@ -4152,6 +4209,8 @@ pt-BR:
               name: Funcionalidade básica do aplicativo
             Event Types:
               name: Tipos de Eventos
+            Getters and Setters:
+              name: Getters e Setters
         coursed-ramp:
           stages:
             Introduction:
@@ -4218,6 +4277,7 @@ pt-BR:
                 também experimentam uma variedade de novos tipos de eventos que provavelmente
                 nunca viram antes.
             Getters and Setters:
+              name: Getters e Setters
               description_student: Ao ler e alterar o conteúdo na tela de um aplicativo,
                 a turma começa a criar aplicativos que precisam apenas de uma única
                 tela. Mesmo com apenas uma tela, essas técnicas permitem muita interação
@@ -4320,8 +4380,16 @@ pt-BR:
               name: Entrada física
               description_student: Usando os botôes físicos e uma chave, os alunos
                 criam programas que usam o Playground de Circuitos como uma entrada.
+              description_teacher: Esta lição faz com que os alunos considerem o Circuito
+                Playground como estritamente um dispositivo de saída para usá-lo como
+                uma ferramenta de entrada e saída. Começando com os botões e comutadores
+                de hardware, cantando os botões e comutadores de hardware, os alunos
+                aprendem a usar `onBoardEvent ()`, analogamente a `onEvent ()`, a
+                fim de receber informações de seus Playgrounds de circuito.
             Analog Input:
               name: Entrada analógica
+              description_student: Explore as entradas analógicas no Circuito Playground,
+                escrevendo programas que respondem ao meio ambiente através de sensores.
               description_teacher: Nesta lição, os alunos exploram como os três sensores
                 analógicos (som, luz e temperatura) podem ser usados para escrever
                 programas que respondem a mudanças no ambiente. O uso desses sensores
@@ -4353,13 +4421,75 @@ pt-BR:
                 a turma começa a criar aplicativos que precisam apenas de uma única
                 tela. Mesmo com apenas uma tela, essas técnicas permitem muita interação
                 e funcionalidade do usuário.
+              description_teacher: Na Unidade 4, os alunos aprenderam uma abordagem
+                muito simples para o desenvolvimento de aplicativos no App Lab que
+                exigia uma tela separada para a maioria das interações. Para expandir
+                os tipos de aplicativos que os alunos podem criar e incentivá-los
+                a pensar de novas maneiras sobre como os usuários interagem com os
+                aplicativos, introduzimos o bloco `setProperty ()`. Este comando pode
+                ser usado para definir o conteúdo e as propriedades de vários elementos
+                da interface do usuário, permitindo que os alunos escrevam programas
+                que atualizam as informações em uma única tela, em vez de criar manualmente
+                telas duplicadas. Nesta lição, os alunos constroem aplicativos simples
+                que exigem apenas uma única tela, cujo conteúdo é alterado usando
+                `setProperty ()`.
             Board Events:
               description_student: Usando os botôes físicos e uma chave, os alunos
                 criam programas que usam o Playground de Circuitos como uma entrada.
+              description_teacher: Esta lição faz com que os alunos considerem o Circuito
+                Playground como estritamente um dispositivo de saída para usá-lo como
+                uma ferramenta de entrada e saída. Começando com os botões e comutadores
+                de hardware, cantando os botões e comutadores de hardware, os alunos
+                aprendem a usar `onBoardEvent ()`, analogamente a `onEvent ()`, a
+                fim de receber informações de seus Playgrounds de circuito.
             Getting Properties:
               name: Obtendo propriedades
+              description_student: Esta lição apresenta aos alunos o bloco getProperty,
+                que permite acessar as propriedades de diferentes elementos com código.
+                Os alunos primeiro praticam o uso do bloco para determinar o que o
+                usuário inseriu em vários elementos da interface do usuário. Posteriormente,
+                os alunos usam getProperty e setProperty junto com os contadores do
+                contador para fazer com que os elementos se movam pela tela. Um novo
+                elemento de tela, o controle deslizante e um novo gatilho de evento,
+                onChange, também são introduzidos.
+              description_teacher: Esta lição apresenta aos alunos o bloco `getProperty`,
+                que permite acessar as propriedades de diferentes elementos com código.
+                Os alunos primeiro praticam o uso do bloco para determinar o que o
+                usuário inseriu em vários elementos da interface do usuário. Mais
+                tarde, os alunos usam `getProperty` e` setProperty` junto com os contadores
+                de contador para fazer com que os elementos se movam pela tela. Um
+                novo elemento de tela, o controle deslizante e um novo gatilho de
+                evento, `onChange`, também são introduzidos.
             The Program Design Process:
               name: O processo de design de programa
+              description_student: Essa lição apresenta aos alunos o processo que
+                eles usarão para criar seus próprios programas ao longo desta unidade.
+                Esse processo é centrado em torno de um guia de projeto que solicita
+                aos alunos que desenhem suas telas, identifiquem elementos do Circuito
+                Playground a serem usados, definam variáveis e descrevem eventos antes
+                de começarem a programar. Esse processo é semelhante ao Processo de
+                Design de Jogos que usamos na Unidade 3. Nesta lição, os alunos começam
+                jogando um jogo no estilo cabo de guerra em que o código está oculto.
+                Eles discutem sobre quais componentes, eventos e variáveis precisam
+                para criar o programa. Eles recebem um guia completo do projeto, que
+                mostra uma maneira de implementar o projeto. Os alunos passam por
+                esse processo através de uma série de níveis. No final da lição, os
+                alunos têm a oportunidade de fazer melhorias no programa para torná-lo
+                seu.
+              description_teacher: Essa lição apresenta aos alunos o processo que
+                eles usarão para criar seus próprios programas ao longo desta unidade.
+                Esse processo é centrado em torno de um guia de projeto que solicita
+                aos alunos que desenhem suas telas, identifiquem elementos do Circuito
+                Playground a serem usados, definam variáveis e descrevem eventos antes
+                de começarem a programar. Esse processo é semelhante ao Processo de
+                Design de Jogos que usamos na Unidade 3. Nesta lição, os alunos começam
+                jogando um jogo no estilo cabo de guerra em que o código está oculto.
+                Eles discutem sobre quais componentes, eventos e variáveis precisam
+                para criar o programa. Eles recebem um guia completo do projeto, que
+                mostra uma maneira de implementar o projeto. Os alunos passam por
+                esse processo através de uma série de níveis. No final da lição, os
+                alunos têm a oportunidade de fazer melhorias no programa para torná-lo
+                seu.
             'Project: Make a Game':
               name: 'Projeto: Fazer um Jogo'
               description_student: Os alunos aprendem o que aprenderam no capítulo
@@ -4407,6 +4537,17 @@ pt-BR:
                 de quanto tempo seja. A classe usa essa estrutura para escrever programas
                 que processam todos os elementos nas listas, incluindo a lista de
                 LEDs coloridos.
+              description_teacher: Usar uma _repetição para_ para iterar sobre todos
+                os elementos em um vetor é uma construção realmente útil na maioria
+                das linguagens de programação. Nesta lição, os alunos aprendem o básico
+                de como uma _repetição para_ pode ser usada para repetir o código
+                e depois combiná-la com o que eles já aprenderam sobre vetores para
+                escrever programas que processam todos os elementos em um vetor. Os
+                alunos usam os laços para percorrer cada elemento de uma lista, um
+                de cada vez, sem precisar escrever código para cada elemento. No final
+                da lição, os alunos aplicarão isso com a lista `corLed` no quadro
+                para criar um aplicativo que altere todos os LEDs cada vez que um
+                botão for clicado.
             Accelerometer:
               name: Acelerômetro
               description_student: Nesta lição, os alunos explorarão o acelerômetro
@@ -4441,6 +4582,13 @@ pt-BR:
               name: Circuitos e Protótipos Físicos
               description_student: Conecte circuitos simples para criar um protótipo
                 físico usando materiais baratos e facilmente encontrados.
+              description_teacher: Na preparação para o projeto final deste capítulo,
+                os alunos aprenderão como desenvolver um protótipo de um objeto físico
+                que inclua um Circuito Playground. Usando um guia de planejamento
+                de projeto modelado, os alunos aprenderão como conectar alguns circuitos
+                simples e criar protótipos que possam comunicar o design pretendido
+                de um produto, usando materiais baratos e facilmente encontrados,
+                como papelão e fita adesiva.
             Innovations in Computing_:
               description_student: Explore uma ampla variedade de plataformas de computação
                 novas e inovadoras enquanto expande sua compreensão do que pode ser
@@ -4458,6 +4606,18 @@ pt-BR:
                 a turma começa a criar aplicativos que precisam apenas de uma única
                 tela. Mesmo com apenas uma tela, essas técnicas permitem muita interação
                 e funcionalidade do usuário.
+              description_teacher: Na Unidade 4, os alunos aprenderam uma abordagem
+                muito simples para o desenvolvimento de aplicativos no App Lab que
+                exigia uma tela separada para a maioria das interações. Para expandir
+                os tipos de aplicativos que os alunos podem criar e incentivá-los
+                a pensar de novas maneiras sobre como os usuários interagem com os
+                aplicativos, introduzimos o bloco `setProperty ()`. Este comando pode
+                ser usado para definir o conteúdo e as propriedades de vários elementos
+                da interface do usuário, permitindo que os alunos escrevam programas
+                que atualizam as informações em uma única tela, em vez de criar manualmente
+                telas duplicadas. Nesta lição, os alunos constroem aplicativos simples
+                que exigem apenas uma única tela, cujo conteúdo é alterado usando
+                `setProperty ()`.
             The Circuit Playground_:
               name: O parque de diversões do circuito
               description_student: Conheça o Playground de Circuitos, a placa de circuitos
@@ -4488,10 +4648,34 @@ pt-BR:
             Board Events_:
               description_student: Usando os botôes físicos e uma chave, os alunos
                 criam programas que usam o Playground de Circuitos como uma entrada.
+              description_teacher: Esta lição faz com que os alunos considerem o Circuito
+                Playground como estritamente um dispositivo de saída para usá-lo como
+                uma ferramenta de entrada e saída. Começando com os botões e comutadores
+                de hardware, cantando os botões e comutadores de hardware, os alunos
+                aprendem a usar `onBoardEvent ()`, analogamente a `onEvent ()`, a
+                fim de receber informações de seus Playgrounds de circuito.
             Getting Properties_:
               name: Obtendo propriedades
+              description_student: Esta lição apresenta aos alunos o bloco getProperty,
+                que permite acessar as propriedades de diferentes elementos com código.
+                Os alunos primeiro praticam o uso do bloco para determinar o que o
+                usuário inseriu em vários elementos da interface do usuário. Mais
+                tarde, os alunos usam getProperty e setProperty junto com o padrão
+                do contador para fazer com que os elementos se movam pela tela. Um
+                novo elemento de tela, o controle deslizante e um novo gatilho de
+                evento, onChange, também são introduzidos.
+              description_teacher: Esta lição apresenta aos alunos o bloco `getProperty`,
+                que permite acessar as propriedades de diferentes elementos com código.
+                Os alunos primeiro praticam o uso do bloco para determinar o que o
+                usuário inseriu em vários elementos da interface do usuário. Mais
+                tarde, os alunos usam `getProperty` e `setProperty` junto com o padrão
+                do contador para fazer com que os elementos se movam pela tela. Um
+                novo elemento de tela, o controle deslizante e um novo gatilho de
+                evento, `onChange`, também são introduzidos.
             Analog Input_:
               name: Entrada analógica
+              description_student: Explore as entradas analógicas no Circuito Playground,
+                escrevendo programas que respondem ao meio ambiente através de sensores.
               description_teacher: Nesta lição, os alunos exploram como os três sensores
                 analógicos (som, luz e temperatura) podem ser usados para escrever
                 programas que respondem a mudanças no ambiente. O uso desses sensores
@@ -4501,6 +4685,34 @@ pt-BR:
                 perceber que está fazendo isso.
             The Program Design Process_:
               name: O processo de design de programa
+              description_student: Essa lição apresenta aos alunos o processo que
+                eles usarão para criar seus próprios programas ao longo desta unidade.
+                Esse processo é centrado em torno de um guia de projeto que solicita
+                aos alunos que desenhem suas telas, identifiquem elementos do Circuito
+                Playground a serem usados, definam variáveis e descrevem eventos antes
+                de começarem a programar. Esse processo é semelhante ao Processo de
+                Design de Jogos que usamos na Unidade 3. Nesta lição, os alunos começam
+                jogando um jogo no estilo cabo de guerra em que o código está oculto.
+                Eles discutem sobre quais componentes, eventos e variáveis precisam
+                para criar o programa. Eles recebem um guia completo do projeto, que
+                mostra uma maneira de implementar o projeto. Os alunos passam por
+                esse processo através de uma série de níveis. No final da lição, os
+                alunos têm a oportunidade de fazer melhorias no programa para torná-lo
+                seu.
+              description_teacher: Essa lição apresenta aos alunos o processo que
+                eles usarão para criar seus próprios programas ao longo desta unidade.
+                Esse processo é centrado em torno de um guia de projeto que solicita
+                aos alunos que desenhem suas telas, identifiquem elementos do Circuito
+                Playground a serem usados, definam variáveis e descrevem eventos antes
+                de começarem a programar. Esse processo é semelhante ao Processo de
+                Design de Jogos que usamos na Unidade 3. Nesta lição, os alunos começam
+                jogando um jogo no estilo cabo de guerra em que o código está oculto.
+                Eles discutem sobre quais componentes, eventos e variáveis precisam
+                para criar o programa. Eles recebem um guia completo do projeto, que
+                mostra uma maneira de implementar o projeto. Os alunos passam por
+                esse processo através de uma série de níveis. No final da lição, os
+                alunos têm a oportunidade de fazer melhorias no programa para torná-lo
+                seu.
             'Project: Make a Game_':
               name: 'Projeto: Fazer um Jogo'
             Making Music_:
@@ -4530,6 +4742,17 @@ pt-BR:
                 de quanto tempo seja. A classe usa essa estrutura para escrever programas
                 que processam todos os elementos nas listas, incluindo a lista de
                 LEDs coloridos.
+              description_teacher: Usar uma _repetição para_ para iterar sobre todos
+                os elementos em um vetor é uma construção realmente útil na maioria
+                das linguagens de programação. Nesta lição, os alunos aprendem o básico
+                de como uma _repetição para_ pode ser usada para repetir o código
+                e depois combiná-la com o que eles já aprenderam sobre vetores para
+                escrever programas que processam todos os elementos em um vetor. Os
+                alunos usam os laços para percorrer cada elemento de uma lista, um
+                de cada vez, sem precisar escrever código para cada elemento. No final
+                da lição, os alunos aplicarão isso com a lista `corLed` no quadro
+                para criar um aplicativo que altere todos os LEDs cada vez que um
+                botão for clicado.
             Accelerometer_:
               name: Acelerômetro
               description_student: Nesta lição, os alunos explorarão o acelerômetro
@@ -4564,6 +4787,13 @@ pt-BR:
               name: Circuitos e Protótipos Físicos
               description_student: Conecte circuitos simples para criar um protótipo
                 físico usando materiais baratos e facilmente encontrados.
+              description_teacher: Na preparação para o projeto final deste capítulo,
+                os alunos aprenderão como desenvolver um protótipo de um objeto físico
+                que inclua um Circuito Playground. Usando um guia de planejamento
+                de projeto modelado, os alunos aprenderão como conectar alguns circuitos
+                simples e criar protótipos que possam comunicar o design pretendido
+                de um produto, usando materiais baratos e facilmente encontrados,
+                como papelão e fita adesiva.
             'Project: Prototype an Innovation_':
               name: 'Projeto: Protótipo de Inovação'
               description_student: Desenvolva dispositivos de computação inovadores
@@ -4925,6 +5155,8 @@ pt-BR:
               name: Pesquisa pós-curso do estudante
             Participate in a longitudinal study!:
               name: Participe de um estudo longitudinal!
+            CSP Post-Course Survey:
+              name: Pesquisa Pós-Curso PCC
           description_audience: Alunos de PCC
           description: Bem-vindo à Pesquisa de Pós-Curso em Princípios da CC do Code.org.
             Esta pesquisa leva cerca de 15 minutos para ser concluída. Suas respostas
@@ -4932,6 +5164,10 @@ pt-BR:
             anônimos para toda a turma. Os resultados são vitais para o seu professor
             e para o Code.org sustentar e melhorar o curso. Obrigado pelo seu tempo
             e consideração.
+        public-key-cryptography:
+          stages:
+            Public Key Crypto Widgets:
+              name: Widgets de criptografia de chave pública
         csd2-old:
           stages:
             Quality Websites:
@@ -5467,6 +5703,8 @@ pt-BR:
               name: 'Além da Programação: Crowdsourcing'
             'Programming: My Robotic Friends':
               name: 'Programando: Meus amigos robôs'
+            Sequence in Maze:
+              name: Sequência no labirinto
             Building a Foundation:
               name: Criando uma base
             Programming in Artist:
@@ -5538,6 +5776,8 @@ pt-BR:
               name: Funções na Abelha
             'Programming: My Robotic Friends':
               name: 'Programando: Meus amigos robôs'
+            Sequence in Maze:
+              name: Sequência no labirinto
             Building a Foundation:
               name: Criando uma base
             Programming in Artist:
@@ -5567,6 +5807,11 @@ pt-BR:
               name: Parabéns
             Wrap Up:
               name: Resumo
+          description_audience: Facilitadores para Iniciantes em DCC
+          description_short: Perguntas de reflexão para facilitadores iniciantes no
+            TeacherCon.
+          description: 'Um local para acompanhar sua reflexão do TeacherCon como facilitador
+            iniciante. '
         csp-explore-task:
           stages:
             Explore PT Prep - Reviewing the Task:
@@ -5618,6 +5863,10 @@ pt-BR:
             Wrap Up:
               name: Resumo
           description_audience: Facilitadores para Iniciantes no PCC
+          description_short: Perguntas de reflexão para facilitadores iniciantes no
+            TeacherCon.
+          description: 'Um local para acompanhar sua reflexão do TeacherCon como facilitador
+            iniciante. '
         novice-view:
           title: ver respostas iniciantes
           description_short: N / D
@@ -5868,6 +6117,8 @@ pt-BR:
               name: Tarefa para prática - Projete uma cena digital
             Unit 3 Chapter 1 Assessment:
               name: Unidade 3 Capítulo 1 Avaliação
+            foo:
+              name: foo
           title: CSP Unidade 3 - Programação
           description_short: Programação
           description: Esta unidade introduz os conceitos fundamentais de programação
@@ -5935,6 +6186,8 @@ pt-BR:
               name: Introdução ao Laboratório de Aplicativos - Introdução
             Intro to App Lab:
               name: Introdução Laboratório de Aplicativos
+            'Lesson 1: App Lab Intro':
+              name: 'Lição 1: Introdução ao Laboratório de Aplicativos'
           title: Introdução Laboratório de Aplicativos
           description_short: Crie seu próprio aplicativo em JavaScript usando programação
             ou texto com base em bloco. Se você já fez alguma programação com blocos,
@@ -5962,6 +6215,8 @@ pt-BR:
               name: Introdução aos condicionais com o agricultor
             'Algorithms: Dice Race':
               name: 'Algoritmos: Corrida de Dados'
+            Course E Introduction:
+              name: Curso E Introdução
             Conditionals:
               name: Condições
             Private and Personal Information:
@@ -5994,6 +6249,8 @@ pt-BR:
               name: Crowdsourcing
             Nested Loops in Bee:
               name: Laços Aninhados na abelha
+            Sequence in Maze:
+              name: Sequência no labirinto
         new-d:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -6061,6 +6318,8 @@ pt-BR:
               name: 'Como Isto Funciona: A Internet'
             'Common Sense Education: Digital Citizenship':
               name: 'Educação de senso comum: cidadania digital'
+            'Common Sense Education: Screen Out the Mean':
+              name: 'Educação de senso comum: descubra a média'
             'Events: The Big Event':
               name: 'Eventos: O Grande Evento'
             Events in Star Wars:
@@ -6111,15 +6370,22 @@ pt-BR:
               name: Laços aninhados
             Loops in Artist (UPDATED!):
               name: Laços em Artista (ATUALIZADO!)
+            Sarah test stage:
+              name: Sarah fase de teste
           title: Novo script expresso
         new-stages-sept-2017:
           stages:
             Loops in Artist:
               name: Laços no Artista
+            Sequences with Scrat:
+              name: Sequências com Scrat
+          title: Novas fases para 17/9
         new-e:
           stages:
             'Programming: My Robotic Friends':
               name: 'Programando: Meus amigos robôs'
+            Sequence in Maze:
+              name: Sequência no labirinto
             Building a Foundation:
               name: Criando uma base
             Programming in Artist:
@@ -6132,6 +6398,8 @@ pt-BR:
               name: Laços Aninhados com Frozen
             'Algorithms: Dice Race':
               name: 'Algoritmos: Corrida de Dados'
+            Course E Introduction:
+              name: Curso E Introdução
             Conditionals:
               name: Condições
             Private and Personal Information:
@@ -6167,6 +6435,8 @@ pt-BR:
           stages:
             'Programming: My Robotic Friends':
               name: 'Programando: Meus amigos robôs'
+            Sequence in Maze:
+              name: Sequência no labirinto
             Building a Foundation:
               name: Criando uma base
             Programming in Artist:
@@ -6179,6 +6449,8 @@ pt-BR:
               name: Laços Aninhados com Frozen
             'Algorithms: Tangrams':
               name: 'Algoritmos: tangrams'
+            Course E Introduction:
+              name: Curso E Introdução
             The Power of Words:
               name: O poder das palavras
             Ice Age Play Lab:
@@ -6215,6 +6487,7 @@ pt-BR:
               name: Revisar Seu Projeto
             Present Your Project:
               name: Apresente seu projeto
+          title: Novo script para F
         csd5-old:
           stages:
             Representation Matters:
@@ -6245,8 +6518,21 @@ pt-BR:
               name: Solução de Problemas com Big Data
             Project - Solve a Data Problem:
               name: Projeto - Resolver um problema de dados
+          title: DCC Unidade 5 - Dados e Sociedade
           description_short: Aprenda como as pessoas usam computadores para resolver
             problemas de dados.
+          description: A unidade 5 trata da importância dos dados na solução de problemas
+            e destaca como os computadores podem ajudar nesse processo. O primeiro
+            capítulo explora os diferentes sistemas usados para representar informações
+            em um computador e os desafios e as vantagens e desvantagens do uso deles.
+            No segundo capítulo, você aprenderá como as coleções de dados são usadas
+            para resolver problemas e como os computadores ajudam a automatizar as
+            etapas desse processo. O capítulo conclui considerando como o processo
+            de solução de problemas de dados pode ser aplicado a uma área de sua escolha.
+        subgoals-assessment-staging:
+          stages:
+            all assessment items as standalone assessment levels:
+              name: todos os itens de avaliação como níveis de avaliação independentes
         hocali:
           stages:
             new stage:
@@ -6329,6 +6615,11 @@ pt-BR:
               name: Criptografia simples
             Web Development - Creating Webpages:
               name: Desenvolvimento Web - Criando Páginas Web
+            App Development Unplugged - User Interfaces:
+              name: Desenvolvimento de aplicativo desconectado - interfaces de usuário
+            App Development - Intro to App Lab:
+              name: Desenvolvimento de aplicativos - Introdução ao Laboratório de
+                Aplicativos
             Creating Webpages:
               name: Criação de páginas Web
             User Interfaces:
@@ -6351,8 +6642,11 @@ pt-BR:
           stages:
             Collector Hour of Code 2017:
               name: Hora do Código do Coletor 2017
+          title: Hora do código 2017
         hero:
           stages:
+            'Minecraft\: Hero''s Journey Hour of Code':
+              name: 'Minecraft \: Hora do Código da Jornada do Herói'
             Minecraft Hour of Code:
               name: Hora do Código Minecraft
           title: 'Minecraft: Jornada do Herói'
@@ -6423,6 +6717,15 @@ pt-BR:
           stages:
             new stage:
               name: nova fase
+          title: Demonstração da AWS
+        halloween:
+          stages:
+            Halloween Artist:
+              name: Artista do Dia das Bruxas
+        valentine:
+          stages:
+            special valentine:
+              name: namorado especial
         colehoc17:
           stages:
             new stage:
@@ -6433,6 +6736,8 @@ pt-BR:
               name: courseB_unplugged_MRF_2018
             'Programming: My Robotic Friends':
               name: 'Programando: Meus amigos robôs'
+            Sequence in Maze:
+              name: Sequência no labirinto
             Building a Foundation:
               name: Criando uma base
             Programming in Artist:
@@ -6479,10 +6784,13 @@ pt-BR:
               name: Crowdsourcing
             Build a Star Wars Game:
               name: Construa um jogo de Guerra nas estrelas
+          title: Curso E 2018 (Desatualizado!)
         course-f-2018:
           stages:
             'Programming: My Robotic Friends':
               name: 'Programando: Meus amigos robôs'
+            Sequence in Maze:
+              name: Sequência no labirinto
             Building a Foundation:
               name: Criando uma base
             Programming in Artist:
@@ -6533,6 +6841,7 @@ pt-BR:
               name: Revisar Seu Projeto
             Present Your Project:
               name: Apresente seu projeto
+          title: Curso F 2018 (desatualizado)
         csd6-old:
           stages:
             Computing Innovations:
@@ -6541,6 +6850,8 @@ pt-BR:
               name: Entrada desconectada
             Event Types:
               name: Tipos de Eventos
+            Getters and Setters:
+              name: Getters e Setters
             The Circuit Playground:
               name: O parque de diversões do circuito
             Lists:
@@ -6564,8 +6875,14 @@ pt-BR:
             'Project: Prototype an Innovation':
               name: 'Projeto: Protótipo de Inovação'
         unembeddedlevels:
+          stages:
+            Only Stage:
+              name: Somente fases
           title: Níveis não integrados
         unembedded:
+          stages:
+            Only Stage:
+              name: Somente fases
           title: Níveis não integrados
         csd3-1819draft:
           stages:
@@ -6614,37 +6931,99 @@ pt-BR:
             Project - Design a Game:
               name: Projeto - Projetar um Jogo
           description_short: Programação
+          description: " Na Unidade 3, você aproveitará sua experiência de codificação
+            ao programar animações, arte interativa e jogos no Laboratório de Jogos.
+            A unidade começa com formas simples e cria jogos sofisticados baseados
+            em sprites, usando os mesmos conceitos de programação e o processo de
+            design que os cientistas da computação usam diariamente. No projeto final,
+            você desenvolverá um programa interativo personalizado."
         textbook:
           stages:
+            Test Map Level:
+              name: Nível do mapa de teste
             new stage:
               name: nova fase
         glj-behavior-test:
           stages:
             Cats and Dogs:
               name: Gatos e Cachorros
+          title: Teste do Laboratório de Jogos Jr. - Comportamento
         csd3-2018:
+          description: " Na Unidade 3, você aproveitará sua experiência de codificação
+            ao programar animações, arte interativa e jogos no Laboratório de Jogos.
+            A unidade começa com formas simples e cria jogos sofisticados baseados
+            em sprites, usando os mesmos conceitos de programação e o processo de
+            design que os cientistas da computação usam diariamente. No projeto final,
+            você desenvolverá um programa interativo personalizado."
           description_short: Programação
           stages:
             Programming for Entertainment:
               name: Programação para entretenimento
+              description_student: Solicita-se à classe que considere "problemas"
+                como tédio e autoexpressão, e que reflita sobre como eles abordam
+                esses problemas em suas próprias vidas. A partir daí, eles irão explorar
+                como a Ciência da Computação em geral, e a programação especificamente,
+                desempenham um papel em uma forma específica de entretenimento ou
+                como um veículo para a autoexpressão.
+              description_teacher: Os alunos devem considerar "problemas" como tédio
+                e autoexpressão e refletir sobre como eles abordam esses problemas
+                em suas próprias vidas. A partir daí, os alunos irão explorar como
+                a Ciência da Computação em geral, e a programação especificamente,
+                desempenham um papel em uma forma específica de entretenimento ou
+                como um veículo para a autoexpressão.
             Plotting Shapes:
               name: Formas de plotagem
             Drawing in Game Lab:
               name: Desenhando no Laboratório de Jogos
+              description_student: A classe é apresentada ao Laboratório de Jogos,
+                o ambiente de programação para esta unidade, e começa a usá-lo para
+                posicionar formas na tela. Esta lição aborda os conceitos básicos
+                de sequenciamento e depuração, além de alguns comandos simples. No
+                final da lição, a classe cria uma versão online da imagem que eles
+                criaram na lição anterior.
+              description_teacher: Os alunos são apresentados ao Laboratório de Jogos,
+                o ambiente de programação para esta unidade, e começam a usá-lo para
+                posicionar formas na tela. Eles aprendem o básico sobre sequenciamento
+                e depuração, bem como alguns comandos simples. No final da lição,
+                os alunos poderão programar imagens como as que eles criaram com a
+                ferramenta de desenho da lição anterior.
             Shapes and Randomization:
               name: Formas e Randomização
             Variables:
               name: variáveis
+              description_student: Esta lição apresenta variáveis como uma maneira
+                de rotular um número em um programa ou salvar um valor gerado aleatoriamente.
+                A turma começa a lição com uma descrição muito básica do objetivo
+                de uma variável e pratica usando os novos blocos. Posteriormente,
+                a classe usa variáveis para salvar um número aleatório, permitindo
+                que os programas usem o mesmo número aleatório várias vezes.
             Sprites:
               name: Sprite
+              description_student: Para criar imagens mais interessantes e detalhadas,
+                a classe é introduzida no objeto sprite. Cada sprite pode ser atribuída
+                a uma imagem, e os sprites também acompanham vários valores sobre
+                si mesmos, o que será útil no futuro ao fazer animações. No final
+                da lição, todos criam uma cena usando sprites.
             The Draw Loop:
               name: O laço de desenho
             The Counter Pattern Unplugged:
               name: O padrão do contador desconectado
+              description_teacher: Os alunos exploram o comportamento subjacente das
+                variáveis por meio de uma atividade desconectada. Usando notecards
+                e string para simular variáveis dentro de um programa, os alunos implementam
+                alguns programas curtos. Uma vez familiarizados com essa sintaxe,
+                os alunos usam o mesmo processo com propriedades de sprite, acompanhando
+                o progresso de um sprite na tela.
             Sprite Movement:
               name: Movimento sprite
             Booleans Unplugged:
               name: Booleanos off-line
+              description_teacher: |-
+                Nesta lição, os alunos são apresentados a valores e lógica booleanos, bem como a declarações condicionais. A aula começa com um jogo simples de Levante-se e Sente-se, no qual as declarações booleanas (verdadeiro / falso) descrevem propriedades pessoais (cabelo ou cor dos olhos, tipo de roupa, idade, etc.). Isso faz com que os alunos pensem em como podem enquadrar uma propriedade com vários valores potenciais (como idade) com uma pergunta binária.
+
+                A partir daí, é fornecido aos alunos um grupo de objetos com propriedades físicas semelhantes, porém variáveis. Com um parceiro, eles agrupam esses objetos com base em instruções booleanas cada vez mais complexas, incluindo booleanos compostos com E e OU.
+
+                Finalmente, revelamos condicionais como uma ferramenta para tomar decisões ou impactar o fluxo de um programa usando instruções booleanas como entrada.
             Conditionals:
               name: Condições
             Keyboard Input:
@@ -6820,6 +7199,8 @@ pt-BR:
               name: 'Como Isto Funciona: A Internet'
             'Common Sense Education: Digital Citizenship':
               name: 'Educação de senso comum: cidadania digital'
+            'Common Sense Education: Screen Out the Mean':
+              name: 'Educação de senso comum: descubra a média'
             'Events: The Big Event':
               name: O grande evento
             Events in Star Wars:
@@ -7823,6 +8204,8 @@ pt-BR:
           stages:
             'Programming: My Robotic Friends':
               name: 'Programando: Meus amigos robôs'
+            Sequence in Maze:
+              name: Sequência no labirinto
             Building a Foundation:
               name: Criando uma base
             Programming in Artist:
@@ -8009,6 +8392,8 @@ pt-BR:
           stages:
             'Programming: My Robotic Friends':
               name: 'Programando: Meus amigos robôs'
+            Sequence in Maze:
+              name: Sequência no labirinto
             Building a Foundation:
               name: Criando uma base
             Programming in Artist:
@@ -8525,28 +8910,81 @@ pt-BR:
             Post-Project Test:
               name: Teste pós-projeto
         csd3-2019:
+          description: " Na Unidade 3, você aproveitará sua experiência de codificação
+            ao programar animações, arte interativa e jogos no Laboratório de Jogos.
+            A unidade começa com formas simples e cria jogos sofisticados baseados
+            em sprites, usando os mesmos conceitos de programação e o processo de
+            design que os cientistas da computação usam diariamente. No projeto final,
+            você desenvolverá um programa interativo personalizado."
           description_short: Programação
           stages:
             Programming for Entertainment:
               name: Programação para entretenimento
+              description_student: Solicita-se à classe que considere "problemas"
+                como tédio e autoexpressão, e que reflita sobre como eles abordam
+                esses problemas em suas próprias vidas. A partir daí, eles irão explorar
+                como a Ciência da Computação em geral, e a programação especificamente,
+                desempenham um papel em uma forma específica de entretenimento ou
+                como um veículo para a autoexpressão.
+              description_teacher: Os alunos devem considerar "problemas" como tédio
+                e autoexpressão e refletir sobre como eles abordam esses problemas
+                em suas próprias vidas. A partir daí, os alunos irão explorar como
+                a Ciência da Computação em geral, e a programação especificamente,
+                desempenham um papel em uma forma específica de entretenimento ou
+                como um veículo para a autoexpressão.
             Plotting Shapes:
               name: Formas de plotagem
             Drawing in Game Lab:
               name: Desenhando no Laboratório de Jogos
+              description_student: A classe é apresentada ao Laboratório de Jogos,
+                o ambiente de programação para esta unidade, e começa a usá-lo para
+                posicionar formas na tela. Esta lição aborda os conceitos básicos
+                de sequenciamento e depuração, além de alguns comandos simples. No
+                final da lição, a classe cria uma versão online da imagem que eles
+                criaram na lição anterior.
+              description_teacher: Os alunos são apresentados ao Laboratório de Jogos,
+                o ambiente de programação para esta unidade, e começam a usá-lo para
+                posicionar formas na tela. Eles aprendem o básico sobre sequenciamento
+                e depuração, bem como alguns comandos simples. No final da lição,
+                os alunos poderão programar imagens como as que eles criaram com a
+                ferramenta de desenho da lição anterior.
             Shapes and Randomization:
               name: Formas e Randomização
             Variables:
               name: variáveis
+              description_student: Esta lição apresenta variáveis como uma maneira
+                de rotular um número em um programa ou salvar um valor gerado aleatoriamente.
+                A turma começa a lição com uma descrição muito básica do objetivo
+                de uma variável e pratica usando os novos blocos. Posteriormente,
+                a classe usa variáveis para salvar um número aleatório, permitindo
+                que os programas usem o mesmo número aleatório várias vezes.
             Sprites:
               name: Sprite
+              description_student: Para criar imagens mais interessantes e detalhadas,
+                a classe é introduzida no objeto sprite. Cada sprite pode ser atribuída
+                a uma imagem, e os sprites também acompanham vários valores sobre
+                si mesmos, o que será útil no futuro ao fazer animações. No final
+                da lição, todos criam uma cena usando sprites.
             The Draw Loop:
               name: O laço de desenho
             The Counter Pattern Unplugged:
               name: O padrão do contador desconectado
+              description_teacher: Os alunos exploram o comportamento subjacente das
+                variáveis por meio de uma atividade desconectada. Usando notecards
+                e string para simular variáveis dentro de um programa, os alunos implementam
+                alguns programas curtos. Uma vez familiarizados com essa sintaxe,
+                os alunos usam o mesmo processo com propriedades de sprite, acompanhando
+                o progresso de um sprite na tela.
             Sprite Movement:
               name: Movimento sprite
             Booleans Unplugged:
               name: Booleanos off-line
+              description_teacher: |-
+                Nesta lição, os alunos são apresentados a valores e lógica booleanos, bem como a declarações condicionais. A aula começa com um jogo simples de Levante-se e Sente-se, no qual as declarações booleanas (verdadeiro / falso) descrevem propriedades pessoais (cabelo ou cor dos olhos, tipo de roupa, idade, etc.). Isso faz com que os alunos pensem em como podem enquadrar uma propriedade com vários valores potenciais (como idade) com uma pergunta binária.
+
+                A partir daí, é fornecido aos alunos um grupo de objetos com propriedades físicas semelhantes, porém variáveis. Com um parceiro, eles agrupam esses objetos com base em instruções booleanas cada vez mais complexas, incluindo booleanos compostos com E e OU.
+
+                Finalmente, revelamos condicionais como uma ferramenta para tomar decisões ou impactar o fluxo de um programa usando instruções booleanas como entrada.
             Conditionals:
               name: Condições
             Keyboard Input:
@@ -8911,6 +9349,8 @@ pt-BR:
               name: Condicionais com cartas
             'Programming: My Robotic Friends':
               name: 'Programando: Meus amigos robôs'
+            Sequence in Maze:
+              name: Sequência no labirinto
             Building a Foundation:
               name: Criando uma base
             Programming in Artist:
@@ -9308,28 +9748,81 @@ pt-BR:
             CSS Classes:
               name: Classes CSS
         csd3-pilot:
+          description: " Na Unidade 3, você aproveitará sua experiência de codificação
+            ao programar animações, arte interativa e jogos no Laboratório de Jogos.
+            A unidade começa com formas simples e cria jogos sofisticados baseados
+            em sprites, usando os mesmos conceitos de programação e o processo de
+            design que os cientistas da computação usam diariamente. No projeto final,
+            você desenvolverá um programa interativo personalizado."
           description_short: Programação
           stages:
             Programming for Entertainment:
               name: Programação para entretenimento
+              description_student: Solicita-se à classe que considere "problemas"
+                como tédio e autoexpressão, e que reflita sobre como eles abordam
+                esses problemas em suas próprias vidas. A partir daí, eles irão explorar
+                como a Ciência da Computação em geral, e a programação especificamente,
+                desempenham um papel em uma forma específica de entretenimento ou
+                como um veículo para a autoexpressão.
+              description_teacher: Os alunos devem considerar "problemas" como tédio
+                e autoexpressão e refletir sobre como eles abordam esses problemas
+                em suas próprias vidas. A partir daí, os alunos irão explorar como
+                a Ciência da Computação em geral, e a programação especificamente,
+                desempenham um papel em uma forma específica de entretenimento ou
+                como um veículo para a autoexpressão.
             Plotting Shapes:
               name: Formas de plotagem
             Drawing in Game Lab:
               name: Desenhando no Laboratório de Jogos
+              description_student: A classe é apresentada ao Laboratório de Jogos,
+                o ambiente de programação para esta unidade, e começa a usá-lo para
+                posicionar formas na tela. Esta lição aborda os conceitos básicos
+                de sequenciamento e depuração, além de alguns comandos simples. No
+                final da lição, a classe cria uma versão online da imagem que eles
+                criaram na lição anterior.
+              description_teacher: Os alunos são apresentados ao Laboratório de Jogos,
+                o ambiente de programação para esta unidade, e começam a usá-lo para
+                posicionar formas na tela. Eles aprendem o básico sobre sequenciamento
+                e depuração, bem como alguns comandos simples. No final da lição,
+                os alunos poderão programar imagens como as que eles criaram com a
+                ferramenta de desenho da lição anterior.
             Shapes and Randomization:
               name: Formas e Randomização
             Variables:
               name: variáveis
+              description_student: Esta lição apresenta variáveis como uma maneira
+                de rotular um número em um programa ou salvar um valor gerado aleatoriamente.
+                A turma começa a lição com uma descrição muito básica do objetivo
+                de uma variável e pratica usando os novos blocos. Posteriormente,
+                a classe usa variáveis para salvar um número aleatório, permitindo
+                que os programas usem o mesmo número aleatório várias vezes.
             Sprites:
               name: Sprite
+              description_student: Para criar imagens mais interessantes e detalhadas,
+                a classe é introduzida no objeto sprite. Cada sprite pode ser atribuída
+                a uma imagem, e os sprites também acompanham vários valores sobre
+                si mesmos, o que será útil no futuro ao fazer animações. No final
+                da lição, todos criam uma cena usando sprites.
             The Draw Loop:
               name: O laço de desenho
             The Counter Pattern Unplugged:
               name: O padrão do contador desconectado
+              description_teacher: Os alunos exploram o comportamento subjacente das
+                variáveis por meio de uma atividade desconectada. Usando notecards
+                e string para simular variáveis dentro de um programa, os alunos implementam
+                alguns programas curtos. Uma vez familiarizados com essa sintaxe,
+                os alunos usam o mesmo processo com propriedades de sprite, acompanhando
+                o progresso de um sprite na tela.
             Sprite Movement:
               name: Movimento sprite
             Booleans Unplugged:
               name: Booleanos off-line
+              description_teacher: |-
+                Nesta lição, os alunos são apresentados a valores e lógica booleanos, bem como a declarações condicionais. A aula começa com um jogo simples de Levante-se e Sente-se, no qual as declarações booleanas (verdadeiro / falso) descrevem propriedades pessoais (cabelo ou cor dos olhos, tipo de roupa, idade, etc.). Isso faz com que os alunos pensem em como podem enquadrar uma propriedade com vários valores potenciais (como idade) com uma pergunta binária.
+
+                A partir daí, é fornecido aos alunos um grupo de objetos com propriedades físicas semelhantes, porém variáveis. Com um parceiro, eles agrupam esses objetos com base em instruções booleanas cada vez mais complexas, incluindo booleanos compostos com E e OU.
+
+                Finalmente, revelamos condicionais como uma ferramenta para tomar decisões ou impactar o fluxo de um programa usando instruções booleanas como entrada.
             Conditionals:
               name: Condições
             Keyboard Input:
@@ -9501,6 +9994,8 @@ pt-BR:
               name: Eventos
             Functions:
               name: funções
+            'Diving Deeper: Courses E and F':
+              name: 'Aprofundamento: Cursos E e F'
             Sprite Lab:
               name: Laboratório de Sprite
             Variables:

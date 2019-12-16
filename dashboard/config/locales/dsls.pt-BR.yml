@@ -698,6 +698,12 @@ pt-BR:
             AM.png
         - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
             AM.png
+        markdown: |
+          <pre>
+          &lt;h3&gt; Ovos &lt;/h3&gt;
+          &lt;h1&gt; Bacon &lt;/h1&gt;
+          &lt;h6&gt; Waffles &lt;/h6&gt;
+          </pre>
       CSD Header Size MC_2018:
         title: Verificação rápida de títulos
         content1: Olhe o código abaixo e preveja como os títulos serão mostrados.
@@ -712,6 +718,12 @@ pt-BR:
             AM.png
         - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
             AM.png
+        markdown: |
+          <pre>
+          &lt;h3&gt; Ovos &lt;/h3&gt;
+          &lt;h1&gt; Bacon &lt;/h1&gt;
+          &lt;h6&gt; Waffles &lt;/h6&gt;
+          </pre>
       CSD Header Size MC_2018_2019:
         title: Verificação rápida de títulos
         content1: Olhe o código abaixo e preveja como os títulos serão mostrados.
@@ -726,6 +738,12 @@ pt-BR:
             AM.png
         - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
             AM.png
+        markdown: |
+          <pre>
+          &lt;h3&gt; Ovos &lt;/h3&gt;
+          &lt;h1&gt; Bacon &lt;/h1&gt;
+          &lt;h6&gt; Waffles &lt;/h6&gt;
+          </pre>
       CSD U1 Lesson 5 Overview:
         markdown: |
           # Visão Geral
@@ -1312,6 +1330,8 @@ pt-BR:
             PM.png
         - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
             AM.png
+        markdown: " * Dica: algumas das listas HTML têm erros, então você terá que
+          pensar em quais equívocos no código estão causando os erros. *\n\n"
       CSD U2 lists match_2018:
         title: Listas de verificação rápida
         content1: Combine a lista com o código que a cria.
@@ -1337,6 +1357,8 @@ pt-BR:
             PM.png
         - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
             AM.png
+        markdown: " * Dica: algumas das listas HTML têm erros, então você terá que
+          pensar em quais equívocos no código estão causando os erros. *\n\n"
       CSD U2 lists match_2018_2019:
         title: Listas de verificação rápida
         content1: Combine a lista com o código que a cria.
@@ -1362,6 +1384,8 @@ pt-BR:
             PM.png
         - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
             AM.png
+        markdown: " * Dica: algumas das listas HTML têm erros, então você terá que
+          pensar em quais equívocos no código estão causando os erros. *\n\n"
       CSD U2 project guide:
         title: Seu Site Pessoal
         content1: descrição aqui
@@ -1503,6 +1527,14 @@ pt-BR:
         - text: "  0<br>200<br>100"
         - text: "  verdadeiro<br>erro<br>verdadeiro"
         - text: "  falso<br>verdadeiro<br>falso"
+        markdown: |
+          # Expressões booleanas
+
+          A tomada de decisão em computadores é baseada em instruções chamadas ** expressões booleanas **. Uma expressão booleana é ** qualquer expressão que só pode ser avaliada como `TRUE` ou` FALSE` **. Isso pode ser particularmente útil quando usado para comparar as propriedades de dois sprites. Por exemplo, você pode descobrir qual é maior ou mais alto. Nos próximos quebra-cabeças, usaremos expressões booleanas simples para comparar propriedades de sprites.
+
+          # Prever
+
+          Leia o código abaixo. Existem alguns novos símbolos nos quais você não foi apresentado. Adivinhe o que eles significam e tente responder à seguinte pergunta
       CSD U3 Boolean MC_2018:
         title: título
         questions:
@@ -1513,6 +1545,14 @@ pt-BR:
         - text: "  0<br>200<br>100"
         - text: "  verdadeiro<br>erro<br>verdadeiro"
         - text: "  falso<br>verdadeiro<br>falso"
+        markdown: |
+          # Expressões booleanas
+
+          A tomada de decisão em computadores é baseada em instruções chamadas ** expressões booleanas **. Uma expressão booleana é ** qualquer expressão que só pode ser avaliada como `TRUE` ou` FALSE` **. Isso pode ser particularmente útil quando usado para comparar as propriedades de dois sprites. Por exemplo, você pode descobrir qual é maior ou mais alto. Nos próximos quebra-cabeças, usaremos expressões booleanas simples para comparar propriedades de sprites.
+
+          # Prever
+
+          Leia o código abaixo. Existem alguns novos símbolos nos quais você não foi apresentado. Adivinhe o que eles significam e tente responder à seguinte pergunta
       CSD U3 Boolean MC_2018_2019:
         title: título
         questions:
@@ -1523,6 +1563,14 @@ pt-BR:
         - text: "  0<br>200<br>100"
         - text: "  verdadeiro<br>erro<br>verdadeiro"
         - text: "  falso<br>verdadeiro<br>falso"
+        markdown: |
+          # Expressões booleanas
+
+          A tomada de decisão em computadores é baseada em instruções chamadas ** expressões booleanas **. Uma expressão booleana é ** qualquer expressão que só pode ser avaliada como `TRUE` ou` FALSE` **. Isso pode ser particularmente útil quando usado para comparar as propriedades de dois sprites. Por exemplo, você pode descobrir qual é maior ou mais alto. Nos próximos quebra-cabeças, usaremos expressões booleanas simples para comparar propriedades de sprites.
+
+          # Prever
+
+          Leia o código abaixo. Existem alguns novos símbolos nos quais você não foi apresentado. Adivinhe o que eles significam e tente responder à seguinte pergunta
       CSD U3 Card Examples_2018:
         title: Criando um Cartão Interativo
         content1: descrição aqui
@@ -1636,6 +1684,12 @@ pt-BR:
           feedback: Funções poderão ser criadas em qualquer lugar no seu código. Ainda
             é uma boa ideia mantê-las agrupadas na parte inferior para que fiquem
             organizadas!
+        markdown: |
+          # Importa onde você cria funções?
+
+          Até agora, todas as suas funções foram criadas na parte inferior do seu código. O que você acha que acontecerá se você chamar uma função antes que ela seja definida?
+
+          Observe que o quadrado vermelho é desenhado ** antes de ** sua função ser criada, enquanto o quadrado verde é desenhado ** após ** sua função ser criada. Qual destes você acha que será desenhado?
       CSD U3 Functions Prediction define first_2018:
         answers:
         - text: O quadrado vermelho será desenhado, mas o verde não. Você não pode
@@ -1658,6 +1712,12 @@ pt-BR:
           feedback: Funções poderão ser criadas em qualquer lugar no seu código. Ainda
             é uma boa ideia mantê-las agrupadas na parte inferior para que fiquem
             organizadas!
+        markdown: |
+          # Importa onde você cria funções?
+
+          Até agora, todas as suas funções foram criadas na parte inferior do seu código. O que você acha que acontecerá se você chamar uma função antes que ela seja definida?
+
+          Observe que o quadrado vermelho é desenhado ** antes de ** sua função ser criada, enquanto o quadrado verde é desenhado ** após ** sua função ser criada. Qual destes você acha que será desenhado?
       CSD U3 Functions Prediction define first_2018_2019:
         answers:
         - text: O quadrado vermelho será desenhado, mas o verde não. Você não pode
@@ -1680,6 +1740,12 @@ pt-BR:
           feedback: Funções poderão ser criadas em qualquer lugar no seu código. Ainda
             é uma boa ideia mantê-las agrupadas na parte inferior para que fiquem
             organizadas!
+        markdown: |
+          # Importa onde você cria funções?
+
+          Até agora, todas as suas funções foram criadas na parte inferior do seu código. O que você acha que acontecerá se você chamar uma função antes que ela seja definida?
+
+          Observe que o quadrado vermelho é desenhado ** antes de ** sua função ser criada, enquanto o quadrado verde é desenhado ** após ** sua função ser criada. Qual destes você acha que será desenhado?
       CSD U3 Functions SFLP:
         markdown: |+
           # Visão global
@@ -2901,10 +2967,100 @@ pt-BR:
           Usando o circuito que você acabou de construir, retorne ao seu protótipo de bicicleta inteligente e adicione o pisca-pisca.
       CSD U6 final intro:
         content1: descrição aqui
+        markdown: |-
+          # Prototipe sua própria inovação
+
+          Agora que você tem todas as habilidades necessárias, é hora de criar seu próprio jogo!
+
+          Com um parceiro ou equipe, faça um levantamento sobre alguns dispositivos físicos diferentes que você pode criar protótipo. Você pode desenvolver os programas que você já criou nas lições anteriores, dispositivos inovadores que você viu no mundo real ou quaisquer idéias malucas que você possa ter.
+
+          Depois de definir uma idéia com sua equipe, preencha o Guia do projeto com os esboços dos componentes físicos do seu dispositivo, entradas e saídas necessárias e planos para quais informações serão processadas.
+
+          ## Ideias de inovação
+
+          Para ajudar a iniciar seu levantamento de idéias, confira estes exemplos de projetos:
+
+          Luz noturna automática
+
+          Usando fios condutores, LEDs e o sensor de luz, crie uma peça decorativa da arte da parede que se torna uma luz noturna quando as luzes se apagam. Este foi projetado para parecer vagalumes tremeluzentes.
+
+          ! [] (https://images.code.org/159af2d362c678c341d22b7f29635f8a-image-1518201828308.gif)
+
+          ### Instrumento musical
+
+          Crie um instrumento musical que possa ser tocado da maneira que desejar, usando sensores ou botões para entrada. Nesse caso, criamos cinco novos botões usando fita condutora de cobre, embora você também possa usar papel alumínio ou qualquer outro material condutor.
+
+          ! [] (https://images.code.org/deeb3d33ac1b51b19eec108f3b92efc7-image-1518202587911.gif)
+
+          ### Bop-it
+
+          Faça um jogo! Este usa uma matriz para armazenar os diferentes comandos, que são selecionados aleatoriamente cada vez que você segue corretamente as instruções na tela.
+
+          ![](https://images.code.org/3e67cd6a112a10063d4183662d8fecc0-image-1518202606948.gif)
       CSD U6 final intro_2018:
         content1: descrição aqui
+        markdown: |-
+          # Prototipe sua própria inovação
+
+          Agora que você tem todas as habilidades necessárias, é hora de criar seu próprio jogo!
+
+          Com um parceiro ou equipe, faça um levantamento sobre alguns dispositivos físicos diferentes que você pode criar protótipo. Você pode desenvolver os programas que você já criou nas lições anteriores, dispositivos inovadores que você viu no mundo real ou quaisquer idéias malucas que você possa ter.
+
+          Depois de definir uma idéia com sua equipe, preencha o Guia do projeto com os esboços dos componentes físicos do seu dispositivo, entradas e saídas necessárias e planos para quais informações serão processadas.
+
+          ## Ideias de inovação
+
+          Para ajudar a iniciar seu levantamento de idéias, confira estes exemplos de projetos:
+
+          Luz noturna automática
+
+          Usando fios condutores, LEDs e o sensor de luz, crie uma peça decorativa da arte da parede que se torna uma luz noturna quando as luzes se apagam. Este foi projetado para parecer vagalumes tremeluzentes.
+
+          ! [] (https://images.code.org/159af2d362c678c341d22b7f29635f8a-image-1518201828308.gif)
+
+          ### Instrumento musical
+
+          Crie um instrumento musical que possa ser tocado da maneira que desejar, usando sensores ou botões para entrada. Nesse caso, criamos cinco novos botões usando fita condutora de cobre, embora você também possa usar papel alumínio ou qualquer outro material condutor.
+
+          ! [] (https://images.code.org/deeb3d33ac1b51b19eec108f3b92efc7-image-1518202587911.gif)
+
+          ### Bop-it
+
+          Faça um jogo! Este usa uma matriz para armazenar os diferentes comandos, que são selecionados aleatoriamente cada vez que você segue corretamente as instruções na tela.
+
+          ![](https://images.code.org/3e67cd6a112a10063d4183662d8fecc0-image-1518202606948.gif)
       CSD U6 final intro_2018_2019:
         content1: descrição aqui
+        markdown: |-
+          # Prototipe sua própria inovação
+
+          Agora que você tem todas as habilidades necessárias, é hora de criar seu próprio jogo!
+
+          Com um parceiro ou equipe, faça um levantamento sobre alguns dispositivos físicos diferentes que você pode criar protótipo. Você pode desenvolver os programas que você já criou nas lições anteriores, dispositivos inovadores que você viu no mundo real ou quaisquer idéias malucas que você possa ter.
+
+          Depois de definir uma idéia com sua equipe, preencha o Guia do projeto com os esboços dos componentes físicos do seu dispositivo, entradas e saídas necessárias e planos para quais informações serão processadas.
+
+          ## Ideias de inovação
+
+          Para ajudar a iniciar seu levantamento de idéias, confira estes exemplos de projetos:
+
+          Luz noturna automática
+
+          Usando fios condutores, LEDs e o sensor de luz, crie uma peça decorativa da arte da parede que se torna uma luz noturna quando as luzes se apagam. Este foi projetado para parecer vagalumes tremeluzentes.
+
+          ! [] (https://images.code.org/159af2d362c678c341d22b7f29635f8a-image-1518201828308.gif)
+
+          ### Instrumento musical
+
+          Crie um instrumento musical que possa ser tocado da maneira que desejar, usando sensores ou botões para entrada. Nesse caso, criamos cinco novos botões usando fita condutora de cobre, embora você também possa usar papel alumínio ou qualquer outro material condutor.
+
+          ! [] (https://images.code.org/deeb3d33ac1b51b19eec108f3b92efc7-image-1518202587911.gif)
+
+          ### Bop-it
+
+          Faça um jogo! Este usa uma matriz para armazenar os diferentes comandos, que são selecionados aleatoriamente cada vez que você segue corretamente as instruções na tela.
+
+          ![](https://images.code.org/3e67cd6a112a10063d4183662d8fecc0-image-1518202606948.gif)
       CSD U6 game project stop:
         markdown: |
           # Pare
@@ -6018,6 +6174,13 @@ pt-BR:
         - text: Eu não sei.
           feedback: O laço interno faz um pentágono, e o laço externo o repete 4 vezes
             em um círculo.
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
       courseD_multi_artist_nestedLoops9_predict1_2018:
         questions:
         - text: Olhe com atenção o código abaixo. Qual desenho será feito quando você
@@ -6035,6 +6198,13 @@ pt-BR:
         - text: Eu não sei.
           feedback: O laço interno faz um pentágono, e o laço externo o repete 4 vezes
             em um círculo.
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         questions:
         - text: Olhe com atenção o código abaixo. Qual desenho será feito quando você
@@ -6052,6 +6222,13 @@ pt-BR:
         - text: Eu não sei.
           feedback: O laço interno faz um pentágono, e o laço externo o repete 4 vezes
             em um círculo.
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
       courseD_multi_bee_conditionals1_predict1:
         questions:
         - text: A nuvem está bloqueando a vista. Poderia haver uma flor sob esta nuvem.
@@ -6318,6 +6495,9 @@ pt-BR:
           feedback: O código fará com que a colheitadeira faça repetidamente um padrão
             de escada e colete tanto milho ou alface quanto ela se deparar. Ela não
             vai colher a abóbora.
+        markdown: |
+          Os brotos deste desafio serão milho ou alface.
+          <br/>
       courseD_multi_farmer_condLoops9_predict1_2018:
         questions:
         - text: Observe atentamente o código abaixo. O que acontecerá depois que você
@@ -6337,6 +6517,9 @@ pt-BR:
           feedback: O código fará com que a agricultora faça repetidamente um padrão
             de degrau e colha o máximo possível de alface e milho que ela encontrar
             no caminho. Ela não irá colher a abóbora.
+        markdown: |
+          Os brotos deste desafio serão milho ou alface.
+          <br/>
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         questions:
         - text: Observe atentamente o código abaixo. O que acontecerá depois que você
@@ -6356,6 +6539,9 @@ pt-BR:
           feedback: O código fará com que a agricultora faça repetidamente um padrão
             de degrau e colha o máximo possível de alface e milho que ela encontrar
             no caminho. Ela não irá colher a abóbora.
+        markdown: |
+          Os brotos deste desafio serão milho ou alface.
+          <br/>
       courseD_multi_farmer_ramp13:
         questions:
         - {}
@@ -6375,6 +6561,10 @@ pt-BR:
         - text: Eu não sei.
           feedback: O bloco `pegar abóbora` está dentro do laço, então o agricultor
             tentará colher abóboras em cada etapa, em vez de apenas no final.
+        markdown: |+
+          Aqui temos um novo tipo de desafio que usa blocos parecidos com os que você já viu. Você consegue adivinhar o que vai acontecer quando você executar o código abaixo?
+
+
       courseD_multi_farmer_while10_predict2:
         questions:
         - text: Dê uma boa olhada no código abaixo. O que será deixado no final deste
@@ -6740,6 +6930,7 @@ pt-BR:
           | Vamos ser criativos com laços aninhados! | Vamos ser criativos com funções! |
 
       courseF_bee_variables_8a_2018:
+        title: Variáveis Abelha Multi
         questions:
         - text: Veja o código abaixo. Quantas unidades de néctar a abelha coletará
             no final?
@@ -6757,6 +6948,7 @@ pt-BR:
           feedback: A variável volta a ser 0 antes das duas últimas chamadas de função,
             onde 1 é adicionado a cada vez. A abelha recolhe 2 unidades de néctar.
       courseF_bee_variables_8a_2018_2019:
+        title: Variáveis Abelha Multi
         questions:
         - text: Veja o código abaixo. Quantas unidades de néctar a abelha coletará
             no final?
@@ -6773,6 +6965,16 @@ pt-BR:
         - text: Eu não sei.
           feedback: A variável volta a ser 0 antes das duas últimas chamadas de função,
             onde 1 é adicionado a cada vez. A abelha recolhe 2 unidades de néctar.
+      courseF_external_variableConstant:
+        markdown: |+
+          <h2>Mais sobre Variáveis</h2>
+
+          <img src="https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png" style="padding-left: 30px; width:300px; float:right;"/>
+          <h3>Você acaba de aprender um ótimo jeito de usar uma variável... Como uma constante!
+          Quando você usa uma variável como uma constante, você define um valor uma vez, e então usa o *mesmo* valor várias vezes no seu programa, sem mudá-lo após clicar em "Executar"</h3>
+          <br/><hr/>
+          <h3>Na próxima parte do curso, você programará com variáveis que *mudam* dentro do programa.</h3>
+
       courseF_external_variableConstant_2018:
         markdown: |+
           <h2>Mais sobre Variáveis</h2>
@@ -7046,6 +7248,10 @@ pt-BR:
         - text: Eu não sei.
           feedback: Incorreta. A cada vez, através do loop `for`, o artista desenha
             uma linha mais longa que também é mais grossa.
+        markdown: |+
+          Nós usamos o contador do nosso laço de repetição `para` para mudar o tamanho do pincel no desenho.
+
+
       courseF_multi_artist_for10_predict1_2018:
         questions:
         - text: O que acontecerá quando você clicar em "Executar"?
@@ -7064,6 +7270,10 @@ pt-BR:
         - text: Eu não sei.
           feedback: Incorreta. A cada vez, através do loop `for`, o artista desenha
             uma linha mais longa que também é mais grossa.
+        markdown: |+
+          Nós usamos o contador do nosso laço de repetição `para` para mudar o tamanho do pincel no desenho.
+
+
       courseF_multi_artist_for10_predict1_2018_2019:
         questions:
         - text: O que acontecerá quando você clicar em "Executar"?
@@ -7082,6 +7292,10 @@ pt-BR:
         - text: Eu não sei.
           feedback: Incorreta. A cada vez, através do loop `for`, o artista desenha
             uma linha mais longa que também é mais grossa.
+        markdown: |+
+          Nós usamos o contador do nosso laço de repetição `para` para mudar o tamanho do pincel no desenho.
+
+
       courseF_multi_artist_fwp2_predict1:
         questions:
         - text: O que irá acontecer quando você executar este programa?
@@ -7101,6 +7315,10 @@ pt-BR:
         - text: Eu não sei.
           feedback: O programa usa parâmetros para permitir que uma única função crie
             duas caixas de tamanho diferentes.
+        markdown: |+
+          Nós adicionamos parâmetros para a função 'desenhe um quadrado'. Clique no botão "editar" azul para ver toda a definição da função.
+
+
       courseF_multi_artist_variables3a_predict1:
         questions:
         - text: Colocamos o valor variável comprimento como 50. O que irá acontecer
@@ -7175,6 +7393,11 @@ pt-BR:
         - text: Eu não sei.
           feedback: O bloco 'se na flor' assegura que a abelha só tentará obter néctar
             se houver uma flor embaixo da nuvem.
+        markdown: 'A nuvem está bloqueando a exibição. Poderia haver uma flor sob
+          esta nuvem. Se houver uma flor, a abelha precisará coletar néctar ** uma
+          vez **.
+
+'
       courseF_multi_bee_conditionals7_predict2:
         questions:
         - text: Olhe cuidadosamente para o código abaixo. O que você acha que acontecerá
@@ -7194,6 +7417,11 @@ pt-BR:
         - text: Eu não sei.
           feedback: O bloco 'se na flor' permite que a abelha obtenha néctar em cada
             flor, caso contrário, ela fará mel.
+        markdown: 'Às vezes uma nuvem cobre uma flor, às vezes ela cobre uma colmeia!
+          De qualquer forma, sempre terá apenas **uma** flor ou **uma** colmeia embaixo
+          de cada nuvem.
+
+'
       courseF_multi_bee_for3_predict1:
         questions:
         - text: Leia o código abaixo. O que acontecerá quando você clicar em "Executar"?
@@ -7213,6 +7441,10 @@ pt-BR:
             que há disponível na flor. '
           feedback: Incorreto. O laço de repetição "para" fará com que a abelha colete
             a quantidade correta de nectar, mas apenas chegará à 3 flores.
+        markdown: |+
+          Ah! O uso de laços de repetição `para` deixam esse desafio muito mais fácil!
+
+
       courseF_multi_bee_for3_predict1_2018:
         questions:
         - text: Leia o código abaixo. O que acontecerá quando você clicar em "Executar"?
@@ -7231,6 +7463,10 @@ pt-BR:
         - text: 'Eu não sei. '
           feedback: O laço de repetição irá fazer com que a abelha colete a quantidade
             correta de nectar, mas apenas coletará de 3 flores.
+        markdown: |+
+          Ah! O uso de laços de repetição `para` deixam esse desafio muito mais fácil!
+
+
       courseF_multi_bee_for3_predict1_2018_2019:
         questions:
         - text: Leia o código abaixo. O que acontecerá quando você clicar em "Executar"?
@@ -7249,6 +7485,10 @@ pt-BR:
         - text: 'Eu não sei. '
           feedback: O laço de repetição irá fazer com que a abelha colete a quantidade
             correta de nectar, mas apenas coletará de 3 flores.
+        markdown: |+
+          Ah! O uso de laços de repetição `para` deixam esse desafio muito mais fácil!
+
+
       courseF_multi_bee_fwp9_predict1:
         questions:
         - text: O que acontecerá quando você clicar em "Executar"?
@@ -7267,6 +7507,10 @@ pt-BR:
         - text: Eu não sei.
           feedback: Clicando para olhar dentro da função mostra que está programada
             para coletar a quantidade de nectar ou mel que for passada por parâmetro.
+        markdown: |+
+          Debaixo dessas nuvens, existe uma flor com exatamente 1 néctar ou um favo de mel com exatamente 1 mel. Clique no botão azul "editar" na função para ver o que há dentro antes de responder à pergunta abaixo.
+
+
       courseF_multi_playlab_variables4c_predictive1:
         questions:
         - text: O que aconteceria se você digitasse o nome "Ali" no prompt?
@@ -7283,6 +7527,12 @@ pt-BR:
         - text: Eu não sei.
           feedback: 'Incorreta. Observe que o bloco `juntar` insere o nome fornecido
             (Ali) na sentença do pirata. '
+        markdown: |
+          ** Este quebra-cabeça usa um novo bloco chamado bloco `pergunte`. **
+
+          O bloco `pergunte' interrompe o programa e solicita que o usuário insira algum texto.
+
+          Qualquer texto que o usuário digitar é salvo na variável mostrada no final do bloco `pergunte`. Nesse caso, é a variável `nome`.
       courseF_project_exemplars_2019:
         title: Teste a Página da Apostila de Markdown
         content1: Teste a Página da Apostila de Markdown
