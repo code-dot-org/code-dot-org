@@ -98,7 +98,7 @@ GEM
     ed25519 (1.2.4)
     equatable (0.6.1)
     erubis (2.7.0)
-    excon (0.60.0)
+    excon (0.71.0)
     faraday (0.14.0)
       multipart-post (>= 1.2, < 3)
     fauxhai (4.1.0)
