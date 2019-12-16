@@ -2,13 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import {Button, ConfirmationDialog, Words, wordSet, Train} from '@ml/oceans/ui';
+import {
+  Button,
+  ConfirmationDialog,
+  Words,
+  wordSet,
+  Train,
+  Predict
+} from '@ml/oceans/ui';
 import guide from '@ml/oceans/models/guide';
 import soundLibrary from '@ml/oceans/models/soundLibrary';
 import train from '@ml/oceans/models/train';
 import modeHelpers from '@ml/oceans/modeHelpers';
 import {setState, getState, resetState} from '@ml/oceans/state';
 import {AppMode, Modes} from '@ml/oceans/constants';
+import colors from '@ml/oceans/colors';
 
 const DEFAULT_PROPS = {
   // radiumConfig.userAgent is required because our unit tests run in the "node" testEnvironment
@@ -208,6 +216,7 @@ describe('Train', () => {
 
   afterEach(() => {
     train.onClassifyFish.restore();
+    resetState();
   });
 
   it('displays the current training count', () => {
@@ -317,5 +326,102 @@ describe('Train', () => {
     continueButton.simulate('click');
 
     expect(toModeStub.withArgs(Modes.Predicting).callCount).toEqual(1);
+  });
+});
+
+describe('Predict', () => {
+  afterEach(() => {
+    resetState();
+  });
+
+  it('displays media controls when run button is clicked', () => {
+    setState({isRunning: false, isPaused: false});
+    const wrapper = shallow(<Predict {...DEFAULT_PROPS} />);
+
+    expect(wrapper.exists('#uitest-run-btn')).toBeTruthy();
+    expect(wrapper.exists('#uitest-media-ctrl')).toBeFalsy();
+
+    wrapper.find('#uitest-run-btn').simulate('click');
+
+    const newState = getState();
+    expect(newState.isRunning).toBeTruthy();
+    expect(newState.runStartTime).not.toBeNull();
+    expect(wrapper.exists('#uitest-run-btn')).toBeFalsy();
+    expect(wrapper.exists('#uitest-media-ctrl')).toBeTruthy();
+  });
+
+  it('does not display media controls when run button is clicked in AppMode.CreaturesVTrashDemo', () => {
+    setState({
+      appMode: AppMode.CreaturesVTrashDemo,
+      isRunning: false,
+      isPaused: false
+    });
+    const wrapper = shallow(<Predict {...DEFAULT_PROPS} />);
+
+    expect(wrapper.exists('#uitest-media-ctrl')).toBeFalsy();
+    wrapper.find('#uitest-run-btn').simulate('click');
+    expect(wrapper.exists('#uitest-media-ctrl')).toBeFalsy();
+  });
+
+  it('highlights the selected media control based on state', () => {
+    const getCtrl = (wrapper, i) =>
+      wrapper.find('#uitest-media-ctrl > span').at(i);
+    const getIconName = wrapper =>
+      wrapper.find('FontAwesomeIcon').prop('icon').iconName;
+    let wrapper = shallow(<Predict {...DEFAULT_PROPS} />);
+
+    // Press play
+    wrapper.find('#uitest-run-btn').simulate('click');
+    let play = getCtrl(wrapper, 1);
+    expect(getIconName(play)).toEqual('pause');
+    // Play & pause icons should not be highlighted, even when it's the selected control.
+    // Only rewind & fast-forward are highlighted when selected.
+    expect(play.prop('style').color).toEqual(colors.white);
+
+    // Press play again to pause
+    play.simulate('click');
+    play = getCtrl(wrapper, 1);
+    expect(getIconName(play)).toEqual('play');
+    expect(play.prop('style').color).toEqual(colors.white);
+
+    // Press rewind
+    let rewind = getCtrl(wrapper, 0);
+    rewind.simulate('click');
+    rewind = getCtrl(wrapper, 0);
+    expect(rewind.prop('style').color).toEqual(colors.orange);
+    expect(rewind.childAt(0).text()).toEqual('x2');
+
+    // Press rewind again to change time scale
+    rewind.simulate('click');
+    rewind = getCtrl(wrapper, 0);
+    expect(rewind.prop('style').color).toEqual(colors.orange);
+    expect(rewind.childAt(0).text()).toEqual('');
+
+    // Press fast-forward
+    let fastForward = getCtrl(wrapper, 2);
+    fastForward.simulate('click');
+    fastForward = getCtrl(wrapper, 2);
+    expect(fastForward.prop('style').color).toEqual(colors.orange);
+    expect(fastForward.childAt(1).text()).toEqual('x2');
+
+    // Press fast-forward again to change time scale
+    fastForward.simulate('click');
+    fastForward = getCtrl(wrapper, 2);
+    expect(fastForward.prop('style').color).toEqual(colors.white);
+    expect(fastForward.childAt(1).text()).toEqual('');
+  });
+
+  it('displays the continue button based on state', () => {
+    setState({isRunning: false, isPaused: false, canSkipPredict: false});
+    let wrapper = shallow(<Predict {...DEFAULT_PROPS} />);
+    expect(wrapper.exists('#uitest-continue-btn')).toBeFalsy();
+
+    setState({isRunning: true, isPaused: false, canSkipPredict: true});
+    wrapper = shallow(<Predict {...DEFAULT_PROPS} />);
+    expect(wrapper.exists('#uitest-continue-btn')).toBeTruthy();
+
+    setState({isRunning: false, isPaused: true, canSkipPredict: true});
+    wrapper = shallow(<Predict {...DEFAULT_PROPS} />);
+    expect(wrapper.exists('#uitest-continue-btn')).toBeTruthy();
   });
 });
