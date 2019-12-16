@@ -129,6 +129,6 @@ class Api::V1::UsersController < Api::V1::JsonApiController
   # POST /api/v1/users/<user_id>/set_standards_report_info_to_seen
   def set_standards_report_info_to_seen
     @user.has_seen_standards_report_info_dialog = true
-    @user.save
+    @user.save!
   end
 end
