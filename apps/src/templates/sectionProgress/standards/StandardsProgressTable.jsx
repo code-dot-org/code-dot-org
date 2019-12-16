@@ -31,7 +31,7 @@ const styles = {
 class StandardsProgressTable extends Component {
   static propTypes = {
     standards: PropTypes.array,
-    lessonsCompletedByStandard: PropTypes.array
+    lessonsCompletedByStandard: PropTypes.object
   };
 
   standardCategoryCellFormatter = (standard, {rowData, rowIndex}) => {
@@ -148,12 +148,14 @@ class StandardsProgressTable extends Component {
 
   getNumCompleted = (standard, index) => {
     let count = 0;
-    if (this.props.lessonsCompletedByStandard[index]) {
-      this.props.lessonsCompletedByStandard[index].forEach(lesson => {
-        if (lesson.status === 'done') {
-          count++;
+    if (this.props.lessonsCompletedByStandard[index + 1]) {
+      this.props.lessonsCompletedByStandard[index + 1].lessons.forEach(
+        lesson => {
+          if (lesson.completed) {
+            count++;
+          }
         }
-      });
+      );
     }
     return count;
   };
@@ -165,7 +167,11 @@ class StandardsProgressTable extends Component {
       return {
         ...standard,
         numCompleted: this.getNumCompleted(standard, index),
-        lessonsForStandardStatus: this.props.lessonsCompletedByStandard[index]
+        lessonsForStandardStatus: this.props.lessonsCompletedByStandard[
+          index + 1
+        ]
+          ? this.props.lessonsCompletedByStandard[index + 1].lessons
+          : []
       };
     });
 
