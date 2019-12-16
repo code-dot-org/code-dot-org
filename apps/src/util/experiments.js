@@ -23,6 +23,7 @@ experiments.SCHOOL_AUTOCOMPLETE_DROPDOWN_NEW_SEARCH =
   'schoolAutocompleteDropdownNewSearch';
 experiments.APPLAB_DATASETS = 'applabDatasets';
 experiments.STUDENT_LIBRARIES = 'student-libraries';
+experiments.STANDARDS_REPORT = 'standardsReport';
 
 /**
  * Get our query string. Provided as a method so that tests can mock this.
