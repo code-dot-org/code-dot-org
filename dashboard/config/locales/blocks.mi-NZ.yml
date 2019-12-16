@@ -79,6 +79,8 @@ mi:
         options:
           GROUP:
             sprites: katoa
+          FORMAT:
+            '"diamond"': taimana
       Dancelab_makeAnonymousDanceSprite:
         options:
           COSTUME:
