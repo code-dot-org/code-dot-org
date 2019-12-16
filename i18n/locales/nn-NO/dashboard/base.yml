@@ -568,6 +568,7 @@ nn:
       link: "Lær meir"
       applab_unsupported_tablet: "App-lab fungerer best på en stasjonær eller bærbar datamaskin med mus og tastatur. Det kan oppstå problemer med dette verktøyet på denne eininga."
       gamelab_unsupported_tablet: "Spill-lab fungerer best på en stasjonær eller bærbar datamaskin med mus og tastatur. Det kan oppstå problem med dette verktøyet på den gjeldande eininga."
+      oceans_unsupported_browser: "Denne nettlesaren vert ikkje støtta for denne øvinga. Prøv Edge, Chrome, Firefox eller ein annan moderne nettlesar."
       weblab_unsupported_browser: "Dessverre opplever vi problem med lasting av Nett-lab på denne nettlesaren. Prøv ein annan nettlesar inntil problemet er løst. Beklager ulempa dette kan ha."
       weblab_unsupported_locale_storage: "Du kan oppleve problemer med å bruke Nett-lab i privat modus i nettlesaren. Vennligst last prosjektet på nytt i normalmodus. Beklager ulempa dette kan gi."
   slow_loading: 'Dette tar lengre tid enn vanleg...'

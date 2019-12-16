@@ -837,32 +837,32 @@ nn-NO:
       Standalone_Artist_1: Velkomen til Kunstnar! Først, la oss prøve å lage eit enkelt
         kvadrat ved å bruke blokkane for å snu til høgre og flytte framover. Kvar
         side bør vere 100 pikslar lange.
-      Standalone_Artist_2: Tegn denne diamanten med 120 og 60 graders vinkler og 150
-        piksler lange sider.
-      Standalone_Artist_3: Kan du tegne denne sekskanten med lange sider på 100 piksler
-        og vinkler på 60 grader?
-      Standalone_Artist_4: Nå har du fått en ny brikke som du kan bruke; gjenta-løkken.
-        Den vil repetere et sett med kommandoer. Hva skjer hvis du gjentar disse kommandoene
-        6 ganger?
-      Standalone_Artist_5: Hvor mange ganger må du å repetere denne diamanten for
-        å tegne blomsten?
-      Standalone_Artist_5.5: 'Legg merke til hvordan vi har forenklet diamantkoden
-        ved å legge inn en løkke. Du kan kjøre en sekvens i en løkke 12 ganger for
-        å tegne blomsten. Hint: Du vil trenge å snu 30 grader etter at diamanten har
-        kjørt i en løkke for å ikke fortsette å tegne over den samme diamanten.'
-      Standalone_Artist_6: 'Kjør denne sekskant-koden 6 ganger i en løkke for å lage
-        designet. Hvor mange grader må du snu hver gang? Hint: del antall grader i
-        en sirkel på antall ganger du skal kjøre løkka.'
-      Standalone_Artist_7: 'En funksjon er en annet programmeringsverktøy for å hjelpe
-        deg med å unngå å gjenta deg selv. Denne funksjonen tegner en blomst så du
-        kan bruke den hver gang du vil tegne en blomst. Bruk denne og den nye hoppe-blokken
-        til å tegne disse blomstene. Hint: Blomstene er 150 piksler fra hverandre'
+      Standalone_Artist_2: Teikn denne diamanten med vinklar på 120 og 60 gradar og
+        langsider på 150 pikslar.
+      Standalone_Artist_3: Kan du tegne denne sekskanten med lange sider på 100 pikslar
+        og vinklar på 60 grader?
+      Standalone_Artist_4: No har du fått ei ny blokk du kan bruke; gjenta-løkka.
+        Den vil repetere eit sett med kommandoer. Kva skjer hvis du gjentar ddsse
+        kommandoane 6 gonger?
+      Standalone_Artist_5: Kor monge gongar må du å repetere denne diamanten for å
+        teikne blomen?
+      Standalone_Artist_5.5: 'Legg merke til korleis vi har forenkla diamantkoden
+        ved å gjere han om til ei løkke. Du kan gjenta heile sekvensen 12 gonger for
+        å tegne ein blomst. Hint: du må snu 30 grader etter kvar diamantløkke slik
+        at du ikkje tegner den same diamanten om igjen og om igjen.'
+      Standalone_Artist_6: 'Gjenta denne heksagonkoden 6 gonger for å lage bildet.
+        Kor mange grader må du snu kvar gong? Hint: del antall grader i ein sirkel
+        på antall gonger du skal gjenta.'
+      Standalone_Artist_7: 'Ein funksjon er eit programmeringsverktøy som du kan bruke
+        for å slippe å gjenta deg sjølv. Denne funksjonen teiknar ein blome og du
+        kan bruke den kvar gong du vil teikne ein blome. Bruk denne og den nye hopp-blokken
+        for å teikne desse blomane. Tips: Blomane er 150 pikslar frå kvarandre'
       Standalone_Artist_8: Her er ein funksjon kalla "Teikn ein figur" som vi har
         programmert til å teikne sekskantar. Køyr koden for å sjå kva den gjer og
         så kan du eksperimentere med den og sjå kva som skjer om du endrer på den.
         Kan du få den til å teikne eit mønster av kvadrat, trekantar og åttekantar?
-      Standalone_Artist_9: Gå videre og lag det bildet du ønsker! Du har til og med
-        en tom funksjon som kan du få til å gjøre hva du vil!
+      Standalone_Artist_9: Gå vidare og lag kva for bilde du vil! Du har og ein tom
+        funksjon du kan få til å gjere kva du vil!
       U4 Model Design 1: Legg til ein stor raud knapp på skjermen din i design mode.
         (Klikk for å sjå fullstendige instruksjonar)
       U4 Model Design 1_2018: Legg til ein stor raud knapp på skjermen din i design
@@ -891,6 +891,10 @@ nn-NO:
         men det kan bli mørkt. Sett ut minst 2 faklar og grav ut minst 2 kol.
       Underground Mining Coal_2019: Du vil finne dei mest verdfulle ressursane under
         jorda, men det kan bli mørkt. Sett ut minst 2 faklar og grav ut minst 2 kol.
+      'Widget: Text Compression': Sjå etter mønster (repeterande ord eller fraser)
+        i teksten. Legg inn mønstra du finn i ordlista til høgre. Når du legg inn
+        eit mønster i ordlista, vil symbolet for mønsteret bli lagt inn i teksten
+        istadenfor mønsteret.
       bounce_1: Fest ei blokk til «når venstre pil»-blokka og trykk «Køyr». Flytt
         rekkerten ved å bruke venstre pil for å nå målet.
       bounce_10: Det er no eit mål på toppen. Fest «skår eit poeng» og «skår motstanderen

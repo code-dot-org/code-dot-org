@@ -676,6 +676,8 @@ nn:
       gamelab_unsupported_tablet: Spill-lab fungerer best på en stasjonær eller bærbar
         datamaskin med mus og tastatur. Det kan oppstå problem med dette verktøyet
         på den gjeldande eininga.
+      oceans_unsupported_browser: Denne nettlesaren vert ikkje støtta for denne øvinga.
+        Prøv Edge, Chrome, Firefox eller ein annan moderne nettlesar.
       weblab_unsupported_browser: Dessverre opplever vi problem med lasting av Nett-lab
         på denne nettlesaren. Prøv ein annan nettlesar inntil problemet er løst. Beklager
         ulempa dette kan ha.

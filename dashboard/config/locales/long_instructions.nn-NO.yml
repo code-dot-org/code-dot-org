@@ -153,6 +153,110 @@ nn-NO:
         jord det tar å fylle det.\nKan du skrive eit program som nyttar fyll-blokka
         ti å fylle holet til det er heilt jamnt?  "
       Alien Defender: "**Prosjektidé**: Lag eit forsvarsspel i Spel-lab!"
+      AppLab Intro 7 - Change Screen Color: "<div style=\"float:right\">\n\t<img src=\"https://images.code.org/bf9b1fb57751fa90c9b786339914ad70-image-1508521068798.34.54
+        AM.png\" style=\"height:150px\"> \n</div>\n\n**Mål:** Endre til grøn skjerm.
+        \n\n**Korleis:** Dra inn ei `setProperty()`-blokk. Bruk nedtrekksmenyen for
+        å sette skjermens \"bakgrunnsfarge\" til \"grøn\". Trykk så \"Køyr\".\n\n**Står
+        du fast? Trykk her:** ![expandable](https://images.code.org/3b5e70522b02867a1df1d5b5e481785e-image-1511279858395.gif)"
+      AppLab Intro 7 - Change Text 2: |-
+        <div style="float:right">
+        <img src="https://images.code.org/39ead723fbd2b047aa2d1e401cbfec8a-image-1506545619076.34.29 PM.png" style="height:200px;">
+        </div>
+
+        **Mål:** Gjer teksten større og blå.
+
+        **Korleis:**  Du treng to linjer med kode. Gi `"label1"` ein tekststorleik på  `80` og tekstfargen `blå`.
+
+        **Står du fast? Trykk her:** ![expandable](https://images.code.org/2d5d46a03082af3b01847aad6602e2ea-image-1511280140482.gif)
+      AppLab Intro 7 - Full Text: "<div style=\"float:right\">\n<img src=\"https://images.code.org/1e81d5bcdd69172f4127de55d045225f-image-1507565161167.05.19
+        AM.png\" style=\"height:200px\">\n</div>\n\n**Mål:** Gjer knappane rød og
+        blå. Endre så teksten for den store oransje etiketten.\n\n**korleis:** \n\n-
+        \  Husk at du kan halde over elementa for å sjå \"id\"-en deira.\n-   Sett
+        bakgrunnsfarge på knappane til `\"råd\"` og `\"blå\"`.\n-   Sett `\"tekst\"`-eigenskapen
+        på etiketten til det du ønsker, f.eks `\"Velkommen til appen min!\"`.\n\n**Står
+        du fast? Trykk her:** ![expandable](https://images.code.org/4bf99e7352e7c17a5bf73ced80171f6a-image-1511280628092.gif)"
+      AppLab Intro 7 - onEvent intro: |-
+        <img src="https://images.code.org/3d8c8487ea669563d3401c0009cd9462-image-1511281194897.gif" style="float:right;height:200px">
+
+        **Mål:** Skjermen startar som blå. Legg til kode slik at den blir grøm når du klikkar på "Gjer grøn"-knappen.
+
+        **Korleis:** Legg til kode inni påHending() som setter bakgrunnsfargen på skjermen til grøn.
+
+        **Står du fast? Klikk her:** ![expandable](https://images.code.org/5ddf6b129bc04b79839b3661ccef788b-image-1511281012076.gif)
+      AppLab Intro 7 - onEvent twoButtons: |-
+        <img src="https://images.code.org/158c9258bfff18c2177440f201446c47-image-1507566793890.gif" style="float:right;height:200px">
+
+        **Mål:** Hjelp til med å gjere denne lommelykt-appen ferdig. På-knappen gjer allereie skjermen kvit. Køyr appen og prøv det. Skriv deretter kode slik at Av-knappen gjer skjermen svart att.
+
+        **Korleis:** Legg til kode inni den tomme `påHending()` som setter bakgrunnsfargen på skjermen til svart og tekstfargen på etiketten til kvit.
+
+        **Står du fast? Klikk her:** ![expandable](https://images.code.org/020b1d9b465aaf35967a528a92961c13-image-1511281772276.gif)
+      AppLab Intro 7 - playSound: "<img src=\"https://images.code.org/28176329f15dea1a863564b069e72aab-image-1511282702534.44.52
+        AM.png\" style=\"float:right;height:200px\">\n\n**Mål:** Dette lydkortet er
+        nesten ferdig! Køyr det for å sjå korleis det fungerer. Legg deretter til
+        bilete, tekst og lyd på den siste knappen.\n\n**Korleis:** \n\n-   Legg til
+        `påHending()` til programmet og sett \"id\" to `\"knapp4\"`. Dra ein `spelLyd()`
+        til  `påHending()` og velg ein lyd frå biblioteket.  \n-   Add a `settEigenskap()`
+        (utanfor di  `påHending()`) for å endre eigenskapen til biletet på knappen.
+        Velg eit bilete ved å bruke tredje nedtrekksmeny.\n-   Legg til ein til `settEigneskap()`
+        for å endre teksten på knappen.\n\n**Står du fast? Klikk her:** ![expandable](https://images.code.org/a3fdcb8954c5e8d585bef64df1ec5b1a-image-1511285408512.gif)"
+      AppLab Intro 7 - thisOrThatAddButton: |-
+        <img src="https://images.code.org/3feb07aaf3d933b094647479673a3293-image-1508373443129.37.00 PM.png" style="float:right;height:200px">
+
+        **Mål:** Legg til ein annan knapp til skjermen som seier "Høgre!" med `"id"` til `"høgreKnapp"`.
+
+        **Korleis:** I designmodus, dra inn ein ny knapp. Flytt den og endre storleik på den. Sett deretter id, tekst, bakgrunnsfarge og tekststorleik.
+
+        **Står du fast? Klikk her:** ![expandable](https://images.code.org/7035ad0445984cf889b159cf5682e35a-image-1508383186447.gif)
+      AppLab Intro 7 - thisOrThatAddScreen: |-
+        <img src="https://images.code.org/f102a1363aa575cc530379d9a4ee378c-image-1508382068883.00.59 PM.png" style="float:right;height:200px">
+
+        **Mål:** Lag ein ny skjerm som heiter `"høgreSkjerm"`. Legg til ein tekst som seier "Du gjekk til høgre!".
+
+        **Mål:** I desigmodus, dra inn eit nytt skjermelement. Endre id til `"høgreSkjerm"`. Dra deretter ein etikett til skjermen og endre teksten til "Du gjekk til høgre".
+
+        **Står du fast? Klikk her:** ![expandable](https://images.code.org/11cf186acb0453cf9ec46929b763f568-image-1508383646159.gif)
+      AppLab Intro 7 - thisOrThatPersonalize: "<a href=\"https://studio.code.org/projects/applab/gx21oCP10-V4GlNMlSpwdQ\"
+        target=\"_blank\"><img src=\"https://images.code.org/ba6c0db48cc1c3c28c135f1c2f67f361-image-1511244802597.10.18
+        PM.png\" style=\"float:right;height:200px\"></a>\n<a href=\"https://studio.code.org/projects/applab/SM_edi1btguZZiQaTtUT9Q\"
+        target=\"_blank\"><img src=\"https://images.code.org/284b55697d786e0cd64350d0967c5dda-image-1511244806272.11.05
+        PM.png\" style=\"float:right;height:200px\"></a>\n<a href=\"https://studio.code.org/projects/applab/SMvVhgBX_GGyxg5LSEMrgg\"
+        target=\"_blank\"><img src=\"https://images.code.org/445181ff8d84861919512ba9b8e09586-image-1511244809994.12.40
+        PM.png\" style=\"float:right;height:200px\"></a>\n\n**Mål:** Bygg eigen app
+        ved å utvide dette prosjektet. Etterpå kan du dele det med nokon!\n\n**Korleis:**
+        Bestem deg for kva type app du vil lage. Legg til fleire skjermar, knappar,
+        tekst, lydar og brukarinteraksjonar i appen din. Det finst også nokre fleire
+        blokker i verktøykassa du kan eksperimentere med. Når du er ferdig, trykkar
+        du \"Del\" for å sende den til deg sjølv eller ein ven! \n\n<details>\n\n<summary><b>Velg
+        dine eigne eventyridéar</b></summary>\n\nPrøv <a href=\"https://studio.code.org/projects/applab/SMvVhgBX_GGyxg5LSEMrgg\"
+        target=\"_blank\">Døme på å velge eige eventyr-app</a> slik at du kan sjå
+        korleis det fungerar. Her er nokre idear som kan hjelpe deg med å finne på
+        ei eigen fortelling.\n\n<li>Lag eit eventyr om din favorittkarakter. Den kan
+        vere ekte eller dikta opp.</li>\n<li>Lag eit eventyr som fortel historia til
+        favorittboka, favorittfilmen eller lag di eiga historie.</li>\n<li>Lag eit
+        eventyr som har mange overraskande vendingar eller har eit vanskeleg moralsk
+        valg.</li>\n<br>\n</details>\n\n<details><summary><b>Idear til korthelsingar</b></summary>\n\nPrøv
+        <a href=\"https://studio.code.org/projects/applab/SM_edi1btguZZiQaTtUT9Q\"
+        target=\"_blank\">Døme på korthelsingsapp</a> slik at du kan sjå korleis det
+        fungerer. Her er nokre idear slik at du kan komme på eit eige kort.\n\n<li>Tenl
+        på ein bursdag, ferie eller ein annan spesiell dag som kjem snart. Lag eit
+        kort som passar det!</li>\n<li>Lag eit takkekort til nokon du liker godt.</li>\n<li>Lag
+        ein invitasjon til noko som skal skje.</li>\n<br>\n</details>\n\n<details><summary><b>Idear
+        til personlighetskviss</b></summary>\n\nPrøv <a href=\"https://studio.code.org/projects/applab/gx21oCP10-V4GlNMlSpwdQ\"
+        target=\"_blank\">Døme på ein personlighetskviss-app</a> slik at du kan sjå
+        korleis det fungerer. Her er nokre idear som kan hjelpe deg med å komme på
+        ein eigen kviss. \n\n<li>Lag ein kviss som foreslår noko ein person kan like,
+        til dømes eit måltid, eit lag, ei bok eller ein stad.</li>\n<li>Lag ein kviss
+        som spår framtida basert på svara dei gir.</li>\n<li>Lag ein kviss som hjelper
+        andre til å bestemme seg for noko vanskeleg.</li>\n\n</details>"
+      AppLab Intro 7 - thisOrThatSetScreen: |-
+        <img src="https://images.code.org/acd1acf659a2504d38ff80256d8e870f-image-1508374065550.com-crop (1).gif" style="float:right;height:200px">
+
+        **Mål:** Skjermen byttar til `"høgreSkjerm"` når brukaren klikkar på `"høgreKnapp"`.
+
+        **Korleis:** I kodemodus legger du til ei ny `påHending()` til programmet ditt for "Høgre!"-button. Legg til ein `settSkjerm()`-blokk inni den som bytter skjermen til `"høgreSkjerm"`.
+
+        **Står du fast? Klikk her:** ![expandable](https://images.code.org/64dfec0d9f9c2fc237abb90ef6a72f0e-image-1508384166252.gif)
       CSD U2 HTML Debug Paragraphs: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
@@ -414,6 +518,47 @@ nn-NO:
       CourseE_HOC 2018 Level_9b: Du kom deg til revet. No må du leite etter **hjarta
         til havet** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)!
         Bruk den blå og den røde korallen for å kome fram til **skattkista** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
+      Crack Random Substitution: |-
+        # Knekk ein tilfeldig erstatningskode!
+
+        Denne versjonen av verktøyet gir deg meir omformasjon om den krypterte teksten og fleire alternativ for korleis du kan prøve ulike løysingar.
+
+        ### Ulike måtar å analysere tekst
+
+        -   Leik deg med nokre av sorteringsalternative som er tilgjengelege i fana Tilfeldig erstatningskode for å få ulike syn på bokstavfrekvensen i teksten og i alfabetet.
+            ![](https://images.code.org/82efbca1807206c9a07de520fdb22027-image-1443572614493.23.28.png)
+
+        ### Ulike måtar å erstatte
+
+        -   For å erstatte ein bokstav, kan du dra ein blå bokstav i alfabetet rett under den oransje du ønsker å endre i den opprinnelege kodeteksten.
+            ![](https://images.code.org/da9a7af7568d8c1698872ab91b4d79d7-image-1443572471212.gif)
+
+        ### Leik. Du må alltid leike.
+
+        -   Det finst andre måtar å analysere og erstatte bokstavar som du kan finne ved å klikke på knappane og prøve det du vil.
+        -   Husk: du kan ikkje knekke den :)
+
+        Sjå kor lang tid det tar deg å knekke koden! Er dette ein god metode for å kryptere hemmelege data?
+
+        <img src="http://code.org/api/hour/finish_encryption.png">
+      Crack a Caesar Cipher: |-
+        # Knekk ein Cæsar-kode!
+
+        Dette verktøyet lar deg leike med tekst og lage Cæsarkode. Du kan bruke det til å kryptere eller dekryptere en melding.
+
+        # Gjer dette
+
+        -   Opne ei **Dømemelding** frå nedtrekksmenyen. Det vil opne ei melding som er kryptert med ein Cæsarkode.
+
+        ![](https://images.code.org/347139486c8c729bf3c6e72ce67da878-image-1476286380409.gif)
+
+        -   Bruk knappane i Cæsar-erstatningsfana. Du kan prøve deg fram med å dra alfabetet fram eller tilbake for å dekryptere meldinga.
+
+        ![](https://images.code.org/ef9ebc16d2f1442dc46fba9bd48b5d43-image-1476285966821.gif)
+
+        Sjå kor lang tid det tar deg å dekryptere meldinga! Er dette ein god metode for dekryptere hemmelege data?
+
+        <img src="http://code.org/api/hour/begin_encryption.png">
       Dance_2019_01: |-
         Dra <xml><block type="Dancelab_makeAnonymousDanceSprite" block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;, &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml>-blokka inn i arbeidsområdet og koble den inn i <xml><block type="Dancelab_whenSetup2" next_connection_disabled="true" block-text="setup"></block></xml>-blokka.
 
@@ -653,6 +798,10 @@ nn-NO:
       K-1 Bee Loops 5: Bruk gjenta-løkker til å hente nektar og honning!
       K-1 Maze Loops 2: Bruk Gjenta-blokka for å få meg bort til grisen!
       K-1 Maze Loops 8: Få meg bort til grisen! Bruk gjenta-blokka.
+      MC HOC 2016 SCORE LEVEL: "I nokre spel har du ein poengsum. Spel \"sisten\"
+        med desse jerngolemene og bruk <xml>  <block type=\"craft_addScore\">\n    <title
+        name=\"SCORE\">1</title>\n  </block></xml>-blokka for å gi deg sjølv eit poeng
+        når du tar dei. \n\n Nå fem poeng for å vinne!"
       MC_HOC_2017_01_RETRY: "Døra er låst, men heldigvis er agenten klar til å hjelpe!
         \\\r\n \\\r\nSett ei \"gå framover\"-blokk ved \"når køyrast\"-blokka i arbeidsområdet
         for å få agenten til å gå til trykkplata [PressurePlate_Up]. Trykk deretter
@@ -733,32 +882,32 @@ nn-NO:
         til sauen.
       Overworld Move to Sheep_2019: Legg til endå ei "gå framover"-blokk for å nå
         fram til sauen.
-      Standalone_Artist_2: Tegn denne diamanten med 120 og 60 graders vinkler og 150
-        piksler lange sider.
-      Standalone_Artist_3: Kan du tegne denne sekskanten med lange sider på 100 piksler
-        og vinkler på 60 grader?
-      Standalone_Artist_4: Nå har du fått en ny brikke som du kan bruke; gjenta-løkken.
-        Den vil repetere et sett med kommandoer. Hva skjer hvis du gjentar disse kommandoene
-        6 ganger?
-      Standalone_Artist_5: Hvor mange ganger må du å repetere denne diamanten for
-        å tegne blomsten?
-      Standalone_Artist_5.5: 'Legg merke til hvordan vi har forenklet diamantkoden
-        ved å legge inn en løkke. Du kan kjøre en sekvens i en løkke 12 ganger for
-        å tegne blomsten. Hint: Du vil trenge å snu 30 grader etter at diamanten har
-        kjørt i en løkke for å ikke fortsette å tegne over den samme diamanten.'
-      Standalone_Artist_6: 'Kjør denne sekskant-koden 6 ganger i en løkke for å lage
-        designet. Hvor mange grader må du snu hver gang? Hint: del antall grader i
-        en sirkel på antall ganger du skal kjøre løkka.'
-      Standalone_Artist_7: 'En funksjon er en annet programmeringsverktøy for å hjelpe
-        deg med å unngå å gjenta deg selv. Denne funksjonen tegner en blomst så du
-        kan bruke den hver gang du vil tegne en blomst. Bruk denne og den nye hoppe-blokken
-        til å tegne disse blomstene. Hint: Blomstene er 150 piksler fra hverandre'
-      Standalone_Artist_8: Her er en funksjon kalt "Tegn en figur" som vi har programmert
-        for å tegne sekskantene. Kjør koden for å se hva den gjør og eksperimenterer
-        deretter med funksjonen for å se hva som skjer. Kan du få den til å tegne
-        et mønster av firkanter, trekanter eller åttekanter?
-      Standalone_Artist_9: Gå videre og lag det bildet du ønsker! Du har til og med
-        en tom funksjon som kan du få til å gjøre hva du vil!
+      Standalone_Artist_2: Teikn denne diamanten med vinklar på 120 og 60 gradar og
+        langsider på 150 pikslar.
+      Standalone_Artist_3: Kan du tegne denne sekskanten med lange sider på 100 pikslar
+        og vinklar på 60 grader?
+      Standalone_Artist_4: No har du fått ei ny blokk du kan bruke; gjenta-løkka.
+        Den vil repetere eit sett med kommandoer. Kva skjer hvis du gjentar ddsse
+        kommandoane 6 gonger?
+      Standalone_Artist_5: Kor monge gongar må du å repetere denne diamanten for å
+        teikne blomen?
+      Standalone_Artist_5.5: 'Legg merke til korleis vi har forenkla diamantkoden
+        ved å gjere han om til ei løkke. Du kan gjenta heile sekvensen 12 gonger for
+        å tegne ein blomst. Hint: du må snu 30 grader etter kvar diamantløkke slik
+        at du ikkje tegner den same diamanten om igjen og om igjen.'
+      Standalone_Artist_6: 'Gjenta denne heksagonkoden 6 gonger for å lage bildet.
+        Kor mange grader må du snu kvar gong? Hint: del antall grader i ein sirkel
+        på antall gonger du skal gjenta.'
+      Standalone_Artist_7: 'Ein funksjon er eit programmeringsverktøy som du kan bruke
+        for å slippe å gjenta deg sjølv. Denne funksjonen teiknar ein blome og du
+        kan bruke den kvar gong du vil teikne ein blome. Bruk denne og den nye hopp-blokken
+        for å teikne desse blomane. Tips: Blomane er 150 pikslar frå kvarandre'
+      Standalone_Artist_8: Her er ein funksjon kalla "Teikn ein figur" som vi har
+        programmert til å teikne sekskantar. Køyr koden for å sjå kva den gjer og
+        så kan du eksperimentere med den og sjå kva som skjer om du endrer på den.
+        Kan du få den til å teikne eit mønster av kvadrat, trekantar og åttekantar?
+      Standalone_Artist_9: Gå vidare og lag kva for bilde du vil! Du har og ein tom
+        funksjon du kan få til å gjere kva du vil!
       Underground Avoiding Lava: Lava er gøymt under nokre av desse blokkene. Dei
         er du nøydd til å dekke over før du går framover. Ein "dersom"-kommando vil
         vera nyttig. Legg til ein "gå framover"-kommando på rett stad for å grave
@@ -773,6 +922,10 @@ nn-NO:
       Underground If Statements_2019: No begynnar ting å bli vanskeleg. Grav ut 3
         redstone, men ikkje dett ned i lavaen. Bruk ein "dersom"-kommando til å plassere
         brustein over all lavaen du grev fram.
+      'Widget: Text Compression': Sjå etter mønster (repeterande ord eller fraser)
+        i teksten. Legg inn mønstra du finn i ordlista til høgre. Når du legg inn
+        eit mønster i ordlista, vil symbolet for mønsteret bli lagt inn i teksten
+        istadenfor mønsteret.
       course1_artist_loops_challenge2: La oss spele eit spel! Tegn så mange X'ar som
         du kan! Klarar du tre på rad?
       course1_maze_debugging_challenge2: |-
@@ -883,8 +1036,9 @@ nn-NO:
         tolv gongar med ein 30 graders sving.
       courseC_artist_loops2a_2018: No kan du bruke ei løkke for å spinne fuglen din
         rundt tolv gongar med ein 30 graders sving.
-      courseC_artist_loops2a_2019: No kan du bruke ei løkke for å spinne fuglen din
-        rundt tolv gongar med ein 30 graders sving.
+      courseC_artist_loops2a_2019: "No kan du bruke ei løkke for å lage fleire kopiar.
+        Prøv å endre talet på \"snu\"- og \"gjenta\"-blokkene for å lage andre mønster.
+        \n\n* * *\n\nTrykk på \"Ferdig\" når du er nøgd med det du har laga. \n\n![expandable](https://images.code.org/8b4352a1abe72419043d278752261b57-image-1553097917337.png)\n![expandable](https://images.code.org/5211e2fe2852e25a884a790155ba47d5-image-1553097923167.png)\n![expandable](https://images.code.org/0e3fbe8bbd20526cc735dfd26d2473ee-image-1553097925789.png)"
       courseC_collector_prog9: _"La oss få heile skatten!"_
       courseC_collector_prog9_2018: _"La oss få heile skatten!"_
       courseC_collector_prog9_2019: _"La oss få heile skatten!"_

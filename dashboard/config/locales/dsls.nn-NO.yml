@@ -9,7 +9,7 @@ nn-NO:
         answers:
         - text: Start med eit kvadrat<br/>Sett ein trekant over kvadratet<br/>Set
             ein trekant under kvadratet
-        - {}
+        - correct: true
         - text: Start med eit kvadrat<br/>Sett eit parallellogram over kvadratet<br/>Sett
             ein trekant til høgre for parallellogrammet
         - text: Start med eit kvadrat<br/>Sett ein trekant under kvadratet<br/>Sett
@@ -22,7 +22,7 @@ nn-NO:
         - text: Kva for eit bilete fylgjer <em>ikkje</em> denne algoritma?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 Big Event Match 1:
@@ -58,14 +58,14 @@ nn-NO:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 Getting Loopy Multi 1:
         title: Fleirval
         questions:
         - text: Korleis kan du forenkle denne sekvensen med å bruke løkker?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -86,7 +86,7 @@ nn-NO:
         - text: Kva for eit program lagar dette biletet?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 Maze Match 2:
         title: Set saman labyrintane
@@ -106,7 +106,7 @@ nn-NO:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 Relay Programming Multi 1:
@@ -116,7 +116,7 @@ nn-NO:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       2-3 Relay Programming Multi 2:
         title: Fleirval
         questions:
@@ -124,13 +124,13 @@ nn-NO:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       2-3 artist debug multi 1:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 artist functions multi 1:
@@ -139,7 +139,7 @@ nn-NO:
         - text: Vel dei rette blokkene for å teikne dette bildet ved hjelp av dei
             gitte funksjonane
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 artist loops match 1:
@@ -161,7 +161,7 @@ nn-NO:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 artist loops multi 2:
         title: 'Kunstnar: Løkker i fleirval'
@@ -171,7 +171,7 @@ nn-NO:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       2-3 artist match 1:
         title: Kunstnar-samsvar
         content1: Set figuren saman med dei blokkene som fullfører forma.
@@ -191,14 +191,14 @@ nn-NO:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 bee conditionals multi 3:
         questions:
         - text: Vel dei beste blokkene!
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 bee loops multi 1:
@@ -206,7 +206,7 @@ nn-NO:
         questions:
         - text: Kva for blokker samler all nektaren?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -227,7 +227,7 @@ nn-NO:
         - text: Kva for sett av blokker er det rette svaret?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 Algorithms Match 1:
@@ -253,6 +253,7 @@ nn-NO:
         - text: Bake kaker
         - text: Handle med ei handleliste
         - text: Banan
+          correct: true
       4-5 Computational Thinking Match 1:
         title: Samsvar
         content1: Kvart av desse køyretya har blitt delt opp i mindre delar. Vel den
@@ -275,6 +276,7 @@ nn-NO:
         answers:
         - text: Seattle _____ ein _____ _____.
         - text: _____ er ein _____ by.
+          correct: true
         - text: _____ er _____ ein _____.
         - text: Eugene er ein _____ by.
       4-5 Crowdsourcing Multi 1:
@@ -283,13 +285,14 @@ nn-NO:
         - text: Kva for eit av desse bileta illustrerer crowdsourcing best?
         answers:
         - {}
-        - {}
+        - correct: true
       4-5 Crowdsourcing Multi 2:
         title: Fleirval
         questions:
         - text: Kva for ein av desse aktivitetane vil vere best for å øve på crowdsourcing?
         answers:
         - text: Rydde rommet ditt
+          correct: true
         - text: Spise desserten din
         - text: Børste håret
         - text: Vaske andletet ditt
@@ -300,6 +303,7 @@ nn-NO:
         answers:
         - text: Fødselsdagen din
         - text: Favorittmaten din
+          correct: true
         - text: Adressa di
         - text: Kredittkortnummeret til foreldra dine
       4-5 Internet Multi 1:
@@ -311,7 +315,7 @@ nn-NO:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       4-5 Internet Multi 2:
         title: Fleirval
         questions:
@@ -319,7 +323,7 @@ nn-NO:
             for nettside er du på?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 Songwriting Multi 1:
@@ -330,6 +334,7 @@ nn-NO:
         - text: Lou, Lou, skip to my Lou,
         - text: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou,
             Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.
+          correct: true
         - {}
         - {}
       4-5 Suncatchers Match 1:
@@ -353,7 +358,7 @@ nn-NO:
             same sekvensen som Program 1?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       4-5 artist loops multi 1:
         title: 'Kunstnar: Løkker i fleirval'
@@ -361,7 +366,7 @@ nn-NO:
         - text: Kva for blokker vil lage denne figuren?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 artist multi 1:
@@ -370,7 +375,7 @@ nn-NO:
         - text: Kva for blokker teiknar eit rektangel med ein omkrets på 100?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 artist multi 2:
@@ -380,7 +385,7 @@ nn-NO:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       4-5 bee conditionals multi 1:
         title: 'Bier: Vilkår i fleirval'
@@ -389,7 +394,7 @@ nn-NO:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       4-5 bee debug multi 1:
         title: 'Bier: Feilsøking i fleirval'
@@ -397,7 +402,7 @@ nn-NO:
         - text: Kva for versjon av funksjonen vil fungere?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 bee loops multi 1:
@@ -405,7 +410,7 @@ nn-NO:
         questions:
         - text: Kva for blokker løyser oppgåva?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -414,7 +419,7 @@ nn-NO:
         questions:
         - text: Kva for blokker løyser oppgåva?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -435,7 +440,7 @@ nn-NO:
         questions:
         - text: Kva for blokker løyser oppgåva?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -449,19 +454,19 @@ nn-NO:
       CSD Header Size MC:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U2 Design Project:
@@ -601,7 +606,7 @@ nn-NO:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -610,7 +615,7 @@ nn-NO:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -619,7 +624,7 @@ nn-NO:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -631,19 +636,19 @@ nn-NO:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018_2019:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Keypress Matching:
         questions:
@@ -678,7 +683,7 @@ nn-NO:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Sprite Movement Predict Multi_2018:
         questions:
@@ -686,7 +691,7 @@ nn-NO:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019:
         questions:
@@ -694,14 +699,14 @@ nn-NO:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Sprites intro predict multi:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U3 Sprites intro predict multi_2018:
@@ -709,7 +714,7 @@ nn-NO:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
@@ -717,7 +722,7 @@ nn-NO:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U3 combining rep:
@@ -818,7 +823,7 @@ nn-NO:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       CSD U6 array multi_2018:
         questions:
         - {}
@@ -826,7 +831,7 @@ nn-NO:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       CSD U6 array multi_2018_2019:
         questions:
         - {}
@@ -834,7 +839,7 @@ nn-NO:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       CSD U6 final intro:
         content1: forklaring her
       CSD U6 final intro_2018:
@@ -847,7 +852,7 @@ nn-NO:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U6 setProperty predict multi_2018:
         questions:
@@ -855,7 +860,7 @@ nn-NO:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       Dance_Party_extras_intro:
         markdown: "# Dans vidare!\n\nFor del 2 skal du lage eit eige prosjekt. Det
@@ -982,7 +987,7 @@ nn-NO:
         - text: Kva for blokker vil løyse denne oppgåva?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Artist 1 Multi 2:
@@ -990,7 +995,7 @@ nn-NO:
         questions:
         - text: Kva for blokker teiknar kvadratet?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1013,7 +1018,7 @@ nn-NO:
         - text: Kor mange nektar er dette?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Bee 1 Multi 2:
@@ -1024,7 +1029,7 @@ nn-NO:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Bee Loops Match 1:
         title: Samsvar
         content2: Vel blokker som passar saman
@@ -1057,13 +1062,13 @@ nn-NO:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Getting Loopy Multi 1:
         title: Fleirval
         questions:
         - text: Korleis kan du forenkle denne sekvensen med å bruke løkker?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Happy Maps Multi 1:
@@ -1072,7 +1077,7 @@ nn-NO:
         - text: Kva for pil flyttar Flurb til skatten?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Keep it Private Multi 1:
@@ -1080,7 +1085,7 @@ nn-NO:
         questions:
         - text: Kva for informasjon skal du <strong>ikkje</strong> dele på nettet?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Maze Debugging Multi 1:
@@ -1088,7 +1093,7 @@ nn-NO:
         questions:
         - text: Kva for val skal vere den siste blokka?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1097,7 +1102,7 @@ nn-NO:
         questions:
         - text: Kva for "gjenta"-blokk er den same?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Maze Loops Multi 2:
@@ -1107,7 +1112,7 @@ nn-NO:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Maze Match 1:
         title: Samsvar
         content2: Vel dei oppgåvene og blokkene som passar saman
@@ -1129,7 +1134,7 @@ nn-NO:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       K-1 Move It Multi 1:
         title: Fleirval
@@ -1137,7 +1142,7 @@ nn-NO:
         - text: Kva for algoritme flyttar Flurb til blomane?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Plant a Seed Multi 1:
@@ -1147,14 +1152,14 @@ nn-NO:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Plant a Seed Multi 2:
         title: Fleirval
         questions:
         - text: Kva for steg skal fylle tomrommet i denne algoritma?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       K-1 Word Search Multi 1:
         title: Fleirval
@@ -1162,7 +1167,7 @@ nn-NO:
         - text: Kva for blokker stavar "FLYTT"?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       K-1 Word Search Multi 3:
         title: Fleirval
@@ -1171,6 +1176,7 @@ nn-NO:
         answers:
         - text: SETT
         - text: KVADRAT
+          correct: true
         - text: SØR
       Multi-Screen Apps:
         title: tittel
@@ -1178,6 +1184,25 @@ nn-NO:
       New Challenge Introduction:
         title: tittel
         content1: forklaring her
+        markdown: "### Ny utfordring: Knekk ein tilfeldig erstatningskode...med ein
+          ny modul\n\nKvo om du i staden for å skifte heile alfabetet, kartla kvar
+          bokstav i alfabetet til tilfeldige ulike bokstavar i alfabetet? Dette blir
+          kalla **tilfeldig erstatningskode**.\n\n![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)\n\nI
+          staden for å kode den hemmelege meldinga med eit enkelt alfabetisk skifte,
+          kan du no møte meldingar som er koda med **tilfeldig erstatning**.\n\n\nDette
+          er mykje vanskelegare å knekke og treng eit meir sofistikert verktøy, så...\n\nNår
+          du klikkar på hald fram, vil du sjå ein **ny og meir sofistikert versjon
+          av krypteringsverktøyet** som viser ulike ting. \n\nMen kva det gjer er
+          eit lite mysterium!  \n\n###Di oppgåve:\n\n * Finne ut kva som skjer i denne
+          nye versjonen av verktøyet\n * Kva informasjon blir gitt deg?\n * Finn ut
+          kva verktøyet lar deg gjere\n * Som vanleg kan du ikkje knekke det. Så klikk
+          på ting, sjekk litt rundt.\n * Om du finn det ut, kan du kanskje klare å
+          knekke ei melding som er koda med tilfeldig erstatning.\n\n### Hint\n\n*
+          Visste du at **E** er den mest brukte bokstaven i alfabetet?\n\n### Gå saman
+          med nokon og diskuter\n Etter du har leikt litt med det, bør du gå saman
+          med nokon - ein partnar, ei lita gruppe, heile klassen - for å diskutere
+          kva de fann ut og verifisere at de veit kva som skjer og ulike måtar de
+          kan bruke verktøyet på. \n\n\n"
       OPD-K5 Stage3aGo:
         title: tittel
         content1: forklaring her
@@ -1185,15 +1210,58 @@ nn-NO:
         title: tittel
         content1: forklaring her
       'Technique: Frequency Analysis':
+        title: Slik knekker du erstatningskode
         content1: forklaring her
+        markdown: "# Knekke erstatningskode\n\nDen beste teknikken for å knekke ein
+          tilfeldig erstatningskode er kjent som **frekvensanalyse** \n\nOmskrive
+          frå: [wikipedia](https://en.wikipedia.org/wiki/Frequency_analysis)\n\n*
+          **Frekvensanalyse** er ein teknikk som baserar seg på kor **ofte** (frekvens)
+          ulike bokstavar dukkar opp i engelsk versus andre språk.\n* Til dømes, i
+          ein del med engelsk tekst, er *E*, *T*, *A* og *O* mest vanleg, medan *Z*,
+          *Q* og *X* er sjeldne. På same måte er *TH*, *ER*, *ON*, and *AN* dei mest
+          vanlege bokstavane som står ved sidan av kvarandre.\n* Faktisk så er distribusjonen
+          av bokstavar ganske det same for nesten *alle* døme på engelsk tekst.\n\n\nVersjonen
+          på modulen for førre side er meint til å hjelpe deg å **knekke erstatningskode
+          gjennom frekvensanalyse**.\n\nVed å analysere frekvensen på bokstavar i
+          den krypterte meldinga samanlikna med frekvensen på bokstavar i ein typisk
+          engelsk tekst, kan du komme inn på kva noko av kartlegginga av bokstavane.
+          \ \n\nVerktøyet viser deg frekvensen av bokstavar i den krypterte teksten
+          (oransje) samanlikna med frekvensen frå typisk engelsk (blå).\n\n### Hint:
+          Kor startar ein?\n\n1. Finn dei korte orda og \"knekk\" dei først.  Kor
+          mange ord på ein bokstav kjenner du til? (\"a\"). Eit veldig vanleg ord
+          på tre bokstavar er \"the\".\n2. Når du har gjort det, kan du ha erstatningar
+          for nokre av dei mest vanlege bokstavane.  Du kan bruke intuisjon for å
+          sjå på andre ord med desse erstatningane og gitte vidare.\n3. Etter du berre
+          har funne nokre få bokstavar som er vanskelege å finne, kan resten komme
+          ganske kjapt.\n4. Samanlikning av frekvensen på bokstavar gir god innsikt
+          for å kunne gitte bra. \n\n### Prøv dette:\nAnimasjonen under viser nokon
+          som kjem i gang. Dette prøvde dei\n\n* Først sortere bokstavane etter frekvens.
+          \n* Identifisere eit par med bokstavar som kan kartlegge ordet `the`.  \nDet
+          er ein god start!\n\n![](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)\n\n##
+          Er tilfeldig erstatning bra?\n* Etter litt øving, kor lang tid tar det deg
+          å knekke ein tilfeldig erstatningskode?\n* Er dette bra eller ikkje?\n\n\n"
       Terminology Recap:
+        title: Det var enkelt, kva er det neste?
         content1: forklaring her
+        markdown: "# Ta pause og oppsummer \n\nMeldingar som er krypterte med **Cæsarkode**
+          er veldig lette å knekke, spesielt når du har eit dataverktøy. No som du
+          har litt øving med å knekke alfabetiske sifferkodar (ganske enkelt, sant?),
+          la oss prøve noko meir vanskeleg. \n\n**Oppsummer terminologi:**\n\n* **Kryptering**
+          – ein prosess der ein koder meldingar for å halde dei hemmelege, slik at
+          berre \"autoriserte\" kan lese det.\n* **Dekryptering** – ein prosess som
+          omgjer krypteringa, tar ei hemmeleg melding og reproduserar den orginale
+          teksten.\n* **Kode** – det generiske namnet for ein teknikk (eller algoritme)
+          som gjer krypteringa\n* **Cæsarkode** – ein krypteringsteknikk som shifter
+          på alfabetet etter nokre bokstavar.\n* **Knekke kryptering** – Når du prøver
+          å finne ei hemmeleg melding *utan* å vite alle spesifikasjonane i koden,
+          brøver du å **knekke** krypteringa. \n\nKlikk på Hald fram for å sjå **Neste
+          utfordring**...\n"
       behaviors 1 predict:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - feedback: Feil
       behaviors 4 predict:
@@ -1201,7 +1269,7 @@ nn-NO:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - feedback: Feil
       courseC_multi_artist_prog6_predict1:
@@ -1210,7 +1278,7 @@ nn-NO:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseC_multi_artist_prog6_predict1_2018:
         questions:
@@ -1218,7 +1286,7 @@ nn-NO:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
         questions:
@@ -1226,38 +1294,41 @@ nn-NO:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseC_multi_harvester_loops11_predict1:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
       courseC_multi_harvester_loops11_predict1_2018:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
       courseC_multi_maze_debugging8_predict1:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_debugging8_predict1_2018:
@@ -1265,7 +1336,7 @@ nn-NO:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
@@ -1273,7 +1344,7 @@ nn-NO:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_programming8_predict1:
@@ -1281,7 +1352,7 @@ nn-NO:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_programming8_predict1_2018:
@@ -1289,7 +1360,7 @@ nn-NO:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
@@ -1297,7 +1368,7 @@ nn-NO:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_starWars_predict1:
@@ -1306,7 +1377,7 @@ nn-NO:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - text: Eg veit ikkje
       courseC_multi_starWars_predict1_2018:
         questions:
@@ -1314,7 +1385,7 @@ nn-NO:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - text: Eg veit ikkje
       courseC_multi_starWars_predict1_2018_2019:
         questions:
@@ -1322,14 +1393,14 @@ nn-NO:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - text: Eg veit ikkje
       courseC_multi_starWars_predict2:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_starWars_predict2_2018:
@@ -1337,7 +1408,7 @@ nn-NO:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_starWars_predict2_2018_2019:
@@ -1345,7 +1416,7 @@ nn-NO:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_artist_binary8_predict1:
@@ -1356,6 +1427,7 @@ nn-NO:
         - text: B
         - text: C
         - text: D
+          correct: true
       courseD_multi_artist_binary8_predict1_2018:
         questions:
         - {}
@@ -1364,6 +1436,7 @@ nn-NO:
         - text: B
         - text: C
         - text: D
+          correct: true
       courseD_multi_artist_binary8_predict1_2018_2019:
         questions:
         - {}
@@ -1372,11 +1445,13 @@ nn-NO:
         - text: B
         - text: C
         - text: D
+          correct: true
       courseD_multi_artist_nestedLoops9_predict1:
         questions:
         - {}
         answers:
         - text: A
+          correct: true
         - text: B
         - text: C
         - {}
@@ -1385,6 +1460,7 @@ nn-NO:
         - {}
         answers:
         - text: A
+          correct: true
         - text: B
         - text: C
         - {}
@@ -1393,6 +1469,7 @@ nn-NO:
         - {}
         answers:
         - text: A
+          correct: true
         - text: B
         - text: C
         - {}
@@ -1401,7 +1478,7 @@ nn-NO:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_bee_conditionals1_predict1_2018:
@@ -1409,7 +1486,7 @@ nn-NO:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
@@ -1417,14 +1494,14 @@ nn-NO:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_bee_conditionals7_predict2:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1432,7 +1509,7 @@ nn-NO:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1440,7 +1517,7 @@ nn-NO:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1450,7 +1527,7 @@ nn-NO:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
         questions:
@@ -1458,7 +1535,7 @@ nn-NO:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         questions:
@@ -1466,31 +1543,34 @@ nn-NO:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_bee_nestedLoops9_predict2:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
       courseD_multi_collector_debugging10_predict1:
         questions:
@@ -1498,7 +1578,7 @@ nn-NO:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_condLoops9_predict1:
         questions:
@@ -1506,7 +1586,7 @@ nn-NO:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
         questions:
@@ -1514,7 +1594,7 @@ nn-NO:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         questions:
@@ -1522,14 +1602,14 @@ nn-NO:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_ramp13:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_farmer_while10_predict2:
@@ -1537,7 +1617,7 @@ nn-NO:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_farmer_while10_predict2_2018:
@@ -1545,7 +1625,7 @@ nn-NO:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
@@ -1553,7 +1633,7 @@ nn-NO:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_farmer_while4_predict1:
@@ -1562,7 +1642,7 @@ nn-NO:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_while4_predict1_2018:
         questions:
@@ -1570,7 +1650,7 @@ nn-NO:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
         questions:
@@ -1578,13 +1658,13 @@ nn-NO:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_maze_until10_predict2:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1592,7 +1672,7 @@ nn-NO:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1600,7 +1680,7 @@ nn-NO:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1609,7 +1689,7 @@ nn-NO:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_maze_until2_predict1_2018:
@@ -1617,7 +1697,7 @@ nn-NO:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
@@ -1625,7 +1705,7 @@ nn-NO:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_scrat_predict1:
@@ -1633,14 +1713,14 @@ nn-NO:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseE_multi_bee_functions_predict1:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1651,14 +1731,14 @@ nn-NO:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseE_multi_farmer_functions11_predict_2018:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
         questions:
@@ -1666,7 +1746,7 @@ nn-NO:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseE_prediction_artistFunction1:
         questions:
@@ -1675,7 +1755,7 @@ nn-NO:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseE_prediction_artistFunction1_2018:
         questions:
         - {}
@@ -1683,7 +1763,7 @@ nn-NO:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseE_prediction_artistFunction1_2018_2019:
         questions:
         - {}
@@ -1691,13 +1771,13 @@ nn-NO:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseF_bee_variables_8a_2018:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_bee_variables_8a_2018_2019:
@@ -1705,7 +1785,7 @@ nn-NO:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_artist_for10_predict1:
@@ -1714,7 +1794,7 @@ nn-NO:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseF_multi_artist_for10_predict1_2018:
         questions:
@@ -1722,7 +1802,7 @@ nn-NO:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
         questions:
@@ -1730,13 +1810,13 @@ nn-NO:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseF_multi_artist_fwp2_predict1:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1744,7 +1824,7 @@ nn-NO:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1752,7 +1832,7 @@ nn-NO:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1760,7 +1840,7 @@ nn-NO:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1769,14 +1849,14 @@ nn-NO:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_bee_conditionals7_predict2:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1785,7 +1865,7 @@ nn-NO:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_bee_for3_predict1_2018:
@@ -1793,7 +1873,7 @@ nn-NO:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_bee_for3_predict1_2018_2019:
@@ -1801,7 +1881,7 @@ nn-NO:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_bee_fwp9_predict1:
@@ -1809,14 +1889,14 @@ nn-NO:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_playlab_variables4c_predictive1:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1825,7 +1905,7 @@ nn-NO:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       coursee_prediction_artistfunction2_2018:
@@ -1833,7 +1913,7 @@ nn-NO:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       coursee_prediction_artistfunction2_2018_2019:
@@ -1841,7 +1921,7 @@ nn-NO:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       grade2_multi_collector_A_predict1:
@@ -1849,7 +1929,7 @@ nn-NO:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       grade2_multi_collector_A_predict1_2018:
@@ -1857,7 +1937,7 @@ nn-NO:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
@@ -1865,6 +1945,6 @@ nn-NO:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
