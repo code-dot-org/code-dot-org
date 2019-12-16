@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import StandardsIntroDialog from './StandardsIntroDialog';
+import StandardsProgressTable from './StandardsProgressTable';
+import {fakeStandards, lessonCompletedByStandard} from './standardsTestHelpers';
 
 export default class StandardsView extends Component {
   static propTypes = {
-    //Provided by redux
     showStandardsIntroDialog: PropTypes.bool
   };
 
@@ -12,7 +13,10 @@ export default class StandardsView extends Component {
     return (
       <div>
         <StandardsIntroDialog isOpen={this.props.showStandardsIntroDialog} />
-        <p>Coming soon...</p>
+        <StandardsProgressTable
+          standards={fakeStandards}
+          lessonsCompletedByStandard={lessonCompletedByStandard}
+        />
       </div>
     );
   }
