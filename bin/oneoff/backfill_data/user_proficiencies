@@ -126,7 +126,7 @@ DATE_RANGES = [
 # (together with DATE_RANGES) above for input and output files.
 DATA_DIRECTORY = '/tmp'.freeze
 MONTHLY_FILENAME_PREFIX = (DATA_DIRECTORY + '/user_proficiencies').freeze
-AGGREGATE_FILENAME = (DATA_DIRECTORY + '/aggregate_20180701_20181214').freeze
+AGGREGATE_FILENAME = (DATA_DIRECTORY + '/aggregate_20190601_20191211').freeze
 
 SLICE_SIZE = 5_000
 
