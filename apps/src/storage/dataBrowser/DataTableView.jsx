@@ -13,6 +13,7 @@ import {changeView, showWarning, tableType} from '../redux/data';
 import * as dataStyles from './dataStyles';
 import color from '../../util/color';
 import {connect} from 'react-redux';
+import {getColumnNamesFromRecords} from '../firebaseMetadata';
 import experiments from '../../util/experiments';
 
 const MIN_TABLE_WIDTH = 600;
@@ -90,6 +91,23 @@ class DataTableView extends React.Component {
     }
   }
 
+  /**
+   * @param {Array} records Array of JSON-encoded records.
+   * @param {string} columns Array of column names.
+   */
+  getColumnNames(records, columns) {
+    // Make sure 'id' is the first column.
+    const columnNames = getColumnNamesFromRecords(records);
+
+    columns.forEach(columnName => {
+      if (columnNames.indexOf(columnName) === -1) {
+        columnNames.push(columnName);
+      }
+    });
+
+    return columnNames;
+  }
+
   importCsv = (csvData, onComplete) => {
     FirebaseStorage.importCsv(
       this.props.tableName,
@@ -142,9 +160,17 @@ class DataTableView extends React.Component {
   }
 
   render() {
-    if (this.props.view !== DataView.TABLE) {
-      return null;
-    }
+    let columnNames = this.getColumnNames(
+      this.props.tableRecords,
+      this.props.tableColumns
+    );
+    const visible = DataView.TABLE === this.props.view;
+    const containerStyle = [
+      styles.container,
+      {
+        display: visible ? '' : 'none'
+      }
+    ];
     const debugDataStyle = [
       dataStyles.debugData,
       {
@@ -155,7 +181,7 @@ class DataTableView extends React.Component {
       this.props.tableListMap[this.props.tableName] === tableType.SHARED;
 
     return (
-      <div id="dataTable" style={styles.container} className="inline-flex">
+      <div id="dataTable" style={containerStyle} className="inline-flex">
         <div style={dataStyles.viewHeader}>
           <span style={dataStyles.backLink}>
             <a
@@ -178,6 +204,7 @@ class DataTableView extends React.Component {
           </span>
         </div>
         <TableControls
+          columns={columnNames}
           clearTable={this.clearTable}
           importCsv={this.importCsv}
           exportCsv={this.exportCsv}
@@ -185,7 +212,9 @@ class DataTableView extends React.Component {
           readOnly={readOnly}
         />
         <div style={debugDataStyle}>{this.getTableJson()}</div>
-        {!this.state.showDebugView && <DataTable readOnly={readOnly} />}
+        {!this.state.showDebugView && (
+          <DataTable getColumnNames={this.getColumnNames} readOnly={readOnly} />
+        )}
       </div>
     );
   }
