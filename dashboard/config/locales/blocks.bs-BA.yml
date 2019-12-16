@@ -336,6 +336,7 @@ bs:
           FORMAT:
             '"border"': ivica
             '"inner"': unutar kvadrata
+            '"diamond"': dijamant
             '"circle"': krug
             '"grid"': mreža
             '"row"': red
