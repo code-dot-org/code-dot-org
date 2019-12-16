@@ -15,6 +15,12 @@ tr:
         deneyin.
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: geçersiz. Her link şifre yenilemek için yalnızca bir kez kullanılabilir
+                ve en son gönderilen link geçerlidir.
       messages:
         blank: gerekli
         blank_plural: gereklidir
@@ -40,6 +46,10 @@ tr:
         gender: Cinsiyet
         edit_header: Hesap Bilgilerini Düzenle
         finish_sign_up_header: Hesabınızı oluşturmayı bitirin
+        finish_sign_up_subheader: Code.org hesabı oluşturmayı bitirmek için sıradaki
+          bilgileri doldurun <strong>%{email}</strong>.
+        finish_sign_up_subheader_markdown: "**%{email}** İçin hesap oluşturmayı tamamlamak
+          için sıradaki bilgileri doldurunuz."
         error:
           future: gelecekte olması mümkün değil
   beta: beta
@@ -58,8 +68,12 @@ tr:
   heading_x_of_y: "%{heading} (sayfa %{x}, %{y})"
   join_section:
     code:
+      title: Code.org'daki bir gruba katılın
       placeholder: Bölüm kodu (ABCDEF)
+      instructions: 'Lütfen öğretmeninizin grubuna katılmak için size verdiği 6 harfli
+        kodu (örnek: "ABCDEF") girin.'
       instructions_short: 6 harfli bölüm kodunuzu girin
+      submit: Katıl
   add_hint_form:
     placeholder: Lütfen ipucunu buraya girin
     submit: İpucu ekle
@@ -86,8 +100,12 @@ tr:
   prize: ödül
   more_info: Daha fazla bilgi
   auth:
+    continue_with: "%{provider} ile devam et"
     sign_in_with: "%{provider} ile giriş yapın"
     signed_in: Giriş yapıldı!
+    signed_out_markdown: "### Code.org dan çıkış yaptınız%{url}."
+    sign_out_of_markdown: "#### Giriş yapmak için %{provider} kullandınız. %{provider}'dan
+      çıkmak için [Buraya tıklayın](%{url})."
     already_signedup: Zaten kayıtlı mısınız?
     notyet_signedup: Henüz kaydolmadınız mı?
     google_oauth2: Google Hesabı
@@ -96,6 +114,7 @@ tr:
     windowslive: Microsoft Hesabı
     microsoft_v2_auth: Microsoft Hesabı
     clever: Akıllı Hesap
+    powerschool: Güç okulu
     forgot_password: Şifrenizi mi unuttunuz?
     need_confirmation: Onay talimatlarını almadınız mı?
     need_unlock: Kilit açma talimatlarını almadınız mı?
@@ -141,6 +160,7 @@ tr:
     age: Yaş
     user_type: Bir öğrenci ya da bir öğretmen misiniz?
     submit: Kaydol
+    go_to_account: Hesabıma Git
     teacher: Öğretmen misiniz?
     valid_username: Mevcut!
     invalid_username: Kullanıcı adı en az 5 karakter uzunluğunda olmalıdır
@@ -150,6 +170,8 @@ tr:
     mismatch_password: Girdiğiniz iki parola aynı değil
     under_13_consent: Eğer 13 yaşından küçüksem, Code.org hizmetlerini kullanmam için
       ebeveynlerimin veya yasal vasimin izni olduğunu onaylıyorum.
+    student_consent: Code.org hizmetlerini kullanmam için ebeveynlerimin veya yasal
+      vasimin izni olduğunu onaylıyorum.
     agree_us_website: Amerika Birleşik Devletleri merkezli bir web sitesi kullanmayı
       kabul ediyorum.
     my_data_to_us: Bu siteyi kullanımıma ilişkin veriler Amerika Birleşik Devletleri’ne
@@ -370,6 +392,7 @@ tr:
       playlab_k1: Oyun Lab (Okul Öncesi)
       scratch: Scratch
       sports: Spor
+      spritelab: Kukla Laboratuvarı
       starwars: Yıldız Savaşları
       starwarsblocks: Yıldız savaşları (blok)
       starwarsblocks_hour: Yıldız savaşları (blok)
@@ -409,6 +432,7 @@ tr:
       example: Örnek Çözüm
       example_with_number: Örnek Çözüm %{solution_number}
       submitted_on: "%{date} tarihinde gönderildi"
+      last_updated: 'Son güncelleme:'
       unsubmit: Gönderini gerial
       worked_with: İle çalıştı
       update_lock_settings: Kilit ayarlarını burada değiştirin.
@@ -423,6 +447,9 @@ tr:
     current_password_hint: "(Değişikliklerinizi onaylamak için geçerli parolanız gerekiyor)"
     delete: Hesabını Sil
     delete_text: Aşağıdaki düğmeye tıklamak hesabınızı siler.
+    delete_text_teacher_managed_note: Bu hesabı silmeye yetkiniz yok çünkü öğretmeniniz
+      tarafından yönetiliyor. Öğretmen(ler)iniz hesabınızı silmeniz için sizi gruptan
+      kaldırmalı.
     delete_text_teacher_note: 'Lütfen dikkat: Kendi hesabınızı silmek, öğrencilerinizin
       hesaplarını silmez.'
     delete_confirm: Hesabınızı silmek istediğinize emin misiniz?
@@ -460,6 +487,8 @@ tr:
     confirm_secret_words: Gizli kelimenizi girerek siz olduğunuzu doğrulayın
     enter_parent_email: Ebeveyn ya da velinizin elektronik posta adresini girin (şifre
       kurtarmak için)
+    update: Hesabı güncelle
+    account_successfully_updated: Hesap başarıyla güncellendi.
     update_email: Güncelle
   user_level:
     completed: Tamamlandı
@@ -1013,12 +1042,14 @@ tr:
     csf_data: Veri
     csf_conditionals: Koşullar
     csf_sprites: Hareketli Nesneler
+    csf_spritelab: Kukla Laboratuvarı
     csf_nested_loops: İç İçe Döngüler
     csf_functions: Fonksiyonlar
     csf_variables: Değişkenler
     csf_for_loops: For Döngüleri
     csf_internet: İnternet
     csf_impacts: Bilgisayarın Etkileri
+    csf_warmup: Isınma
     csd1_1: 'Bölüm 1: Problem çözme süreci'
     csd1_2: 'Bölüm 2: Bilgisayar ve Problem çözme'
     csd2_1: 'Bölüm 1: Web içerik ve HTML'
@@ -1049,8 +1080,10 @@ tr:
     csp_variables: Değişkenler
     csp_conditionals: Koşullar
     csp_functions: Fonksiyonlar
+    csp_project: Proje
     csp_lists: Listeler
     csp_loops: Döngüler
+    csp_libraries: Kütüphaneler
     dlp: Yansıma İstemleri
     k5_getting_started: İlk adım
     k5_next_steps: Sonraki Adımlar

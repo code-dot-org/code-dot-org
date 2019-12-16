@@ -355,10 +355,15 @@ tr:
           FORMAT:
             '"border"': kenarlık
             '"inner"': iç kare
+            '"diamond"': elmas
             '"circle"': çember
             '"grid"': ızgara
+            '"top"': üst sıra
             '"row"': satır
+            '"bottom"': alt sıra
+            '"left"': sol sütun
             '"column"': sütun
+            '"right"': sağ sütun
             '"x"': çapraz geçiş
             '"plus"': artı
             '"random"': gelişigüzel

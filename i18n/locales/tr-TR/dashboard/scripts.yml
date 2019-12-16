@@ -1020,6 +1020,8 @@ tr:
               name: Tek başına video
             Curriculum Reference:
               name: Öğretim programı
+            Sprite Lab:
+              name: Kukla Laboratuvarı
             Contained Levels:
               name: İçerdiği Düzeyler
         algebraPD2b:
@@ -8433,6 +8435,8 @@ tr:
           stages:
             new stage:
               name: yeni kademe
+            Libraries:
+              name: Kütüphaneler
         express-2018-vn:
           stages:
             Graph Paper Programming:
@@ -8789,6 +8793,8 @@ tr:
               name: Olaylar
             Functions:
               name: Fonksiyonlar
+            Sprite Lab:
+              name: Kukla Laboratuvarı
             Variables:
               name: Değişkenler
             For Loops:
