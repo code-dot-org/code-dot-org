@@ -6,6 +6,8 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import BaseDialog from '../../BaseDialog';
 import DialogFooter from '../../teacherDashboard/DialogFooter';
 import Button from '../../Button';
+import {connect} from 'react-redux';
+import {setCurrentUserHasSeenStandardsReportInfo} from '@cdo/apps/templates/currentUserRedux';
 
 const styles = {
   description: {
@@ -21,17 +23,37 @@ const styles = {
   }
 };
 
+/*
+Dialog that show the first time a teacher goes to the
+Standards view of the Progress Tab in Teacher Dashboard
+ */
+
 class StandardsIntroDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
-    handleConfirm: PropTypes.func.isRequired
+    setCurrentUserHasSeenStandardsReportInfo: PropTypes.func.isRequired
+  };
+
+  dismissStandardsDialog = () => {
+    $.ajax({
+      url: '/dashboardapi/v1/users/me/set_standards_report_info_to_seen',
+      type: 'post',
+      data: {}
+    })
+      .done(() => {
+        this.props.setCurrentUserHasSeenStandardsReportInfo(true);
+      })
+      .fail(() => {
+        // if it fails close the dialog for them but it will reopen next time they reload the page
+        this.props.setCurrentUserHasSeenStandardsReportInfo(true);
+      });
   };
 
   render() {
     return (
       <BaseDialog
         isOpen={this.props.isOpen}
-        handleClose={this.props.handleConfirm}
+        handleClose={this.dismissStandardsDialog}
         useUpdatedStyles
         style={styles.dialog}
       >
@@ -68,9 +90,8 @@ class StandardsIntroDialog extends Component {
         <DialogFooter rightAlign>
           <Button
             text={i18n.gotIt()}
-            onClick={this.props.handleConfirm}
+            onClick={this.dismissStandardsDialog}
             color={Button.ButtonColor.orange}
-            className="no-mc"
           />
         </DialogFooter>
       </BaseDialog>
@@ -79,3 +100,14 @@ class StandardsIntroDialog extends Component {
 }
 
 export const UnconnectedStandardsIntroDialog = StandardsIntroDialog;
+
+export default connect(
+  state => ({}),
+  dispatch => ({
+    setCurrentUserHasSeenStandardsReportInfo(hasSeenStandardsReport) {
+      dispatch(
+        setCurrentUserHasSeenStandardsReportInfo(hasSeenStandardsReport)
+      );
+    }
+  })
+)(StandardsIntroDialog);
