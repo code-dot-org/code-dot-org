@@ -115,7 +115,7 @@ pl-PL:
       2-3 Relay Programming Multi 1:
         title: Test wielokrotnego wyboru
         questions:
-        - {}
+        - text: Który program **nie** tworzy tego obrazka?
         answers:
         - {}
         - {}
@@ -129,6 +129,7 @@ pl-PL:
         - {}
         - correct: true
       2-3 artist debug multi 1:
+        title: 'Artysta, debugowanie: Test wielokrotnego wyboru 1'
         questions:
         - {}
         answers:
@@ -146,6 +147,7 @@ pl-PL:
         - {}
         - {}
       2-3 artist loops match 1:
+        title: Artysta Dopasowanie Pętli 1
         content2: Dopasuj pętlę do kształtu
         questions:
         - {}
@@ -189,6 +191,7 @@ pl-PL:
         - {}
         - {}
       2-3 bee conditionals multi 1:
+        title: 'Pszczółka, warunki: Test wielokrotnego wyboru 1'
         questions:
         - text: Które z poniższych porównań jest prawdziwe?
         answers:
@@ -197,6 +200,7 @@ pl-PL:
         - correct: true
         - {}
       2-3 bee conditionals multi 3:
+        title: 'Pszczółka, warunki: Test wielokrotnego wyboru 2'
         questions:
         - text: Wybierz najlepsze bloki.
         answers:

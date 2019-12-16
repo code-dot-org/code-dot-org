@@ -40,6 +40,8 @@ pl-PL:
       2-3 Artist 9 NEW:
         2-3_Artist_9_a: Ten diament to tak na prawdę kwadrat obrócony na bok
       2-3 Artist Debugging 10:
+        2-3_Artist_Debugging_10_a: Pamiętaj, że chcesz by panel sterowania był o 10
+          pikseli _szerszy_...upewnij się, że **dodajesz** 10 do liczby, którą zmieniasz.
         2-3_Artist_Debugging_10_b: |-
           **Metoda prób i błędów sprawdza się tu doskonale!**
 
@@ -55,6 +57,13 @@ pl-PL:
       2-3 Artist Debugging 7:
         2-3_Artist_Debugging_7_a: Co się stanie, jeśli masz tryb Artysta i ruszają
           lub skaczą przez pierwszy wiersz?
+      2-3 Artist Debugging 8:
+        2-3_Artist_Debugging_8_a: |-
+          Ile razy powtórzył się mój kształt?
+
+          Ile razy kształt _powinien_ się powtórzyć?
+
+          Gdzie możesz to zmienić w programie?
       2-3 Artist Debugging 9:
         2-3_Artist_Debugging_9_a: Artysta musi obrócić się jeszcze w lewo o 60 stopni
           zanim rozpocznie rysowanie!
@@ -1241,6 +1250,17 @@ pl-PL:
           Czy możesz znaleźć ścieżkę aby dotrzeć do każdego kwiatka i plastra miodu bez uderzania w żadne drzewo? Najlepszą ścieżką jest spirala.
 
           **Możesz to rozwiązać nawet bez skręcania w lewo.**
+      course2_bee_conditionals_challenge2:
+        courseD_bee_conditionals_challenge1_b: |-
+          Zupełnie tak, jak w blokach 'jeśli na kwiatku', kod wewnątrz 'dopóki nektar > 0' będzie działał tylko, jeśli pszczółka jest na kwiatku. Główna różnica jest taka, że kod wewnątrz będzie się powtarzał dopóki nie będzie już żadnego nektaru. Wypróbuj ten wzór:
+
+          <xml>  <block type="bee_whileNectarAmount">
+              <title name="ARG1">nectarRemaining</title>
+              <title name="OP">&gt;</title>
+              <title name="ARG2">0</title>                    <statement name="DO">
+                                <block type="maze_nectar"/>
+                              </statement>
+            </block></xml>
       course2_collector_loops_challenge2:
         courseC_maze_loops_challenge2_a: Oryginalny kod działałby świetnie - gdyby
           był tylko jeden skarb na każdym stosie!
@@ -1256,6 +1276,33 @@ pl-PL:
         courseC_harvester_loops_challenge1_b: Możesz powtarzać `move forward` i `pick
           corn` tak wiele razy jak tylko zechcesz, następnie `turn right` w każdym
           narożniku.
+        courseC_harvester_loops_challenge1_c: |-
+          Najlepszy sposób na zebranie pierwszych czterech kolb kukurydzy, polega na użyciu bloku 'powtórz', wewnątrz innego bloku 'powtórz'. Możesz użyć tego wzoru też dla reszty łamigłówki!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">2</title>
+                      <statement name="DO">
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                          <next>
+                            <block type="harvester_corn"/>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  </block></next></block></xml>
       course2_maze_loops_challenge1:
         courseC_maze_loops_challenge1_a: Pomyśl o tej drodze, jakby była trzema różnymi
           kawałkami. Każdy ma jeden wzór, który możesz powtórzyć.

@@ -366,10 +366,15 @@ pl:
           FORMAT:
             '"border"': brzeg
             '"inner"': wewnątrz kwadratu
+            '"diamond"': diament
             '"circle"': koło
             '"grid"': siatka
+            '"top"': górny wiersz
             '"row"': rząd
+            '"bottom"': dolny wiersz
+            '"left"': lewa kolumna
             '"column"': kolumna
+            '"right"': prawa kolumna
             '"x"': krzyż
             '"plus"': plus
             '"random"': losowy

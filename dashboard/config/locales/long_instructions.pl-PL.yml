@@ -35,6 +35,39 @@ pl-PL:
       2-3 Artist 9 NEW: Dokończ ten latawiec
       2-3 Artist Assessment 1: "**Szacowanie:** Ukończ rysowanie ostatniego zęba.
         Jest on szeroki na 25 pikseli i wysoki na 25 pikseli."
+      2-3 Artist Debugging 1: "Ten kapelusz powinien być szeroki tylko na 50 pikseli.
+        \nCzy możesz to naprawić?\n\n<br/>"
+      2-3 Artist Debugging 10: "Pad kierunkowy na moim kontrolerze jest zbyt wąski.
+        \n\nCzy możesz poszerzyć go o 10 pikseli?\n\nSpróbuj najpierw uruchomić kod,
+        by zobaczyć, co jest źle."
+      2-3 Artist Debugging 11: |-
+        Moja śnieżynka rozpada się!
+
+        Czy mógłbyś wykminić, co jest źle?
+      2-3 Artist Debugging 2: "Ten kod na wąsy kota jest błędny. \n\nNapraw ten kod,
+        by rysował wąsy, które mają wszystkie taką sama długość."
+      2-3 Artist Debugging 3: "Moja łódź ma dziurę! \n\nCo potrzebujesz naprawić,
+        aby załatać dziurę?"
+      2-3 Artist Debugging 5: "Kod, który mamy na nogę i stopę jest błędny. \n\nCzy
+        możesz go naprawić?"
+      2-3 Artist Debugging 6: |-
+        Wygląda na to, że siedzę na krześle, któremu brakuje nogi!
+
+        Popraw kod, by narysować ostatnią nogę.
+      2-3 Artist Debugging 7: |-
+        Wygląda na to, że C w napisie code jest rysowane od tyłu!
+
+        Czy możesz sprawić, by z powrotem wyglądało jak C?
+      2-3 Artist Debugging 8: |-
+        Mój nauczyciel mówi, że powinienem kończyć to, co zacznę!
+
+        Pomóż mi ukończyć mój wiatraczek. Czy widzisz, co jest źle?
+      2-3 Artist Debugging 9: |-
+        Coś jest nie tak!
+
+        Kod na tę łodygę jest błędny. Czy potrafisz wykminić, jak spowodować, by artysta narysował łodygę we właściwy sposób?
+      2-3 Artist Debugging Assessment 1: "**Sprawdzian:** \nDlaczego boki tego kwadratu
+        pod koniec są o 75 pikseli za krótkie?  \n\nGdzie jest błąd w kodzie?"
       2-3 Artist Free Play: Czas na zabawę! Narysuj cokolwiek chcesz.
       2-3 Artist Loops New 1: Narysujmy głowę tego robota! Czy potrafisz stworzyć
         kwadrat o bokach, które mają 100 pikseli?<br/>
@@ -46,21 +79,96 @@ pl-PL:
       2-3 Artist Loops New 12: 'Narysuj diament o bokach 100 pikseli. '
       2-3 Artist Loops New 13: "Zacznij od pewnego kodu (na szaro), by narysować jeden
         diament. \n\nZapętlij szary kod, aby stworzyć zabawny wzór!"
+      2-3 Artist Loops New 14: |-
+        Pobaw się kodem dla diamentu i zobacz jakie inne wzory możesz stworzyć.
+
+        Spróbuj zmienić to, o ile stopni się obracasz i ile razy zapętlasz kod.
+      2-3 Artist Loops New 15: |-
+        Teraz narysuj to, co chcesz!
+        <br/><br/>
       2-3 Artist Loops New 2: |-
         Tutaj jest ta sama łamigłówka, którą właśnie rozwiązaliśmy, ale tym razem możemy użyć tylko jednego bloku 'idź naprzód' i jednego bloku 'skręć'.
 
         Czy potrafisz użyć bloku 'powtórz' do rozwiązania tej łamigłówki?
       2-3 Artist Loops New 9: Narysuj proste V (w którym oba boki mają po 50 pikseli),
         aby ukończyć strzałkę.
+      2-3 Artist Nested Loops 1: |-
+        Już wcześniej używałeś pętli, by rysować kształty, ale teraz umieścimy pętle wewnątrz innych pętli!
+
+         Cały kod umieść w bloku "powtórz", aby narysować ten wzór.
+
+        <br/>
       2-3 Artist Nested Loops 10: Powtórz w pętli ten kod 12 razy, aby ukończyć ten
         rysunek.
       2-3 Artist Nested Loops 12: Powtórz w pętli ten kod 12 razy, aby otrzymać te
         loki.
+      2-3 Artist Nested Loops 2: "Teraz zapętlij trójkąt 6 razy. \n\nPo każdym trójkącie,
+        będziesz potrzebował skręcić o 60 stopni przed narysowaniem kolejnego."
+      2-3 Artist Nested Loops 3: "Będziesz potrzebował zapętlić twój trójkąt 12 razy,
+        aby narysować ten wzór. \n\nPodziel liczbę stopni w kole (360) na liczbę kształtów,
+        które rysujesz (12), by dowiedzieć się jak daleko skręcić po narysowaniu każdego
+        z nich."
+      2-3 Artist Nested Loops 4: |-
+        Zapętlij ten diament 12 razy, aby narysować kwiatek!
+
+        Uwaga: Użyjemy tego samego kąta, co do zapętlenia 12 trójkątów, aby zapętlić 12 diamentów.\\ O ile stopni musisz skręcić po każdym kształcie?
       2-3 Artist Nested Loops Free Play: Masz wolną rękę, narysuj coś fajnego używając
         zagnieżdżonych pętli.
+      2-3 Bee Conditionals 2: "Jestem głodną pszczółką! \n\nPomóż mi zebrać cały nektar
+        z kwiatów, używając jak najmniejszej liczby bloków."
+      2-3 Bee Conditionals Assessment 1: |-
+        **Sprawdzian:** Zbierz cały nektar.\
+        Uważaj, by nie próbować zebrać nektaru z fioletowego kwiatka, jeśli nie ma on go.
+      2-3 Bee Debugging 1: |-
+        Te bloki naprawdę mnie męczą!
+
+        Napraw błąd (błędy), aby zebrać cały nektar.
+      2-3 Bee Debugging 10: "Zapętliłem się już tą łamigłówką! \n\nNapraw błąd (błędy),
+        aby zebrać cały nektar i wyprodukować cały miód."
+      2-3 Bee Debugging 2: |-
+        Czy potrafisz naleźć tutaj problem?
+
+        Napraw błąd (błędy), aby zebrać cały nektar.
+      2-3 Bee Debugging 3: |-
+        Ooh, to mnie kłopocze!
+
+        Napraw błąd (błędy), aby zebrać cały nektar.
+      2-3 Bee Debugging 5: "Ten kwiatek wygląda przepysznie! \n\nNapraw błąd(błędy),
+        aby zebrać cały nektar. \\\nMożesz teraz użyć obu: \"Uruchom \" lub \"Krok\"."
+      2-3 Bee Debugging 6: |-
+        Jakie słodkie wyzwanie!
+
+        Napraw błąd (błędy), aby zebrać cały nektar.
+      2-3 Bee Debugging 9: "Bądź \"pszczególnie\" cierpliwy w tej łamigłówce! \n\nBędziesz
+        potrzebował naprawić kilka rzeczy w tym programie, aby zebrać cały nektar
+        i wyprodukować cały miód."
+      2-3 Bee Debugging Assessment 1: |-
+        **Sprawdzian:** Czas, byś pokazał, co potrafisz!
+
+        Napraw błąd (błędy), aby zebrać cały nektar i wyprodukować cały miód.
       2-3 Bee Functions 1: "Funkcje są blokami kodu, które wykonują określone zadanie.
         \\\r\\\r\nUżyj funkcji `get 2 nectar`, aby zebrać nektar z każdego kwiatka."
+      2-3 Bee Loops 1: |-
+        Te kwiaty wyglądają przepysznie!
+
+        Zbierz nektar z każdego z kwiatów, używając możliwie najmniejszej liczby bloków.
+      2-3 Bee Loops 13: "**Sprawdzian:** Zbierz cały nektar, używając możliwie najmniejszej
+        liczby bloków."
       2-3 Bee Loops 3A: Użyj pętli "powtórz", by zebrać cały nektar.
+      2-3 Bee Loops 3B: Teraz użyj bloku 'powtórz', aby zebrać cały nektar i wyprodukować
+        cały miód.
+      2-3 Bee Loops 4: |-
+        Jaka pracowita pszczółka!
+
+        Pomóż Pszczółce zebrać cały nektar i wyprodukować cały miód z możliwie najmniejszą liczbą bloków.
+      2-3 Bee Loops 4A: |-
+        Ile razy pętle mogą ci pomóc w tej łamigłówce?
+
+        Pętle są twoim przyjacielem! Użyj tylko kilku z nich, by ukończyć tę łamigłówkę z możliwie najmniejszą liczbą bloków.
+      2-3 Bee Loops 5: "Kształt tej ścieżki jest inny niż innych ścieżek. \n\nCzy
+        potrafisz zebrać cały nektar, używając tak mało bloków, jak to tylko możliwe?"
+      2-3 Bee Loops 7: "Jaka piękna łąka z kwiatami!  \n\nPomóż pszczółce odwiedzić
+        każdy z nich.\n\nCzy potrafisz to zrobić za pomocą mniej niż 7 bloków?"
       2-3 Maze 1: "Czy pomożesz mi złapać tę niesforną świnkę? \n\nUstaw parę bloków
         'idź naprzód' pod blokiem 'po uruchomieniu' i naciśnij 'Uruchom'. "
       2-3 Maze 12: |-
@@ -409,7 +517,7 @@ pl-PL:
       Dance_Party_02: |-
         Stwórzmy taniec łosia!
 
-        Przeciągnij do obszaru roboczego blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>. Umieść go pod blokiem \<<xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Twój tancerz powinien rozpocząć nowy ruch po czwartym takcie.
+        Przeciągnij do obszaru roboczego blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>. Umieść go pod blokiem \<<xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Twój tancerz powinien rozpocząć nowy ruch po czwartym takcie.
 
         **Takty** służą w muzyce do odmierzania czasu. W tym samouczku takt składa się z 4 uderzeń.
       Dance_Party_03: |-
@@ -440,7 +548,7 @@ pl-PL:
         Teraz wiemy, jak zmieniać właściwości tancerza. Stosując poniższy blok możemy także sprawić, że te same właściwości będą automatycznie reagować na muzykę:
         <xml>
           <block type="Dancelab_startMapping">
-            <title name="SPRITE">right\_unicorn</title>
+            <title name="SPRITE">right_unicorn</title>
             <title name="PROPERTY">"scale"</title>
             <title name="RANGE">"bass"</title>
           </block></xml>
@@ -531,7 +639,7 @@ pl-PL:
         -   Zmień układ po naciśnięciu klawisza
         -   Zmień właściwość, gdy tancerze zmienią formację
       Dance_Party_extras_mixed_2019: |-
-        # Więcej przycisków
+        Więcej przycisków
 
         Ten taniec pozwala automatycznie kontrolować właściwości tancerzy w czasie rzeczywistym, podczas gdy oni tańczą. Spróbuj zmienić inne właściwości po naciśnięciu przycisków. Na przykład:
 
@@ -703,12 +811,18 @@ pl-PL:
       course2_artist_prog_challenge1: Narysuj pokoje dla każdego ze zwierząt. Jest
         wiele możliwości rozwiązania tej zagadki, więc baw się dobrze!
       course2_artist_prog_challenge2: _Pomóż mi namalować żółte linie na tej drodze!_
+      course2_bee_conditionals_challenge1: Zbierz cały nektar lub wyprodukuj cały
+        miód. Możesz zbierać nektar tylko z kwiatków i produkować miód z plastrów
+        miodu. Sprawdź każde miejsce, aby zobaczyć, czy jest tam kwiatek, czy plaster
+        miodu.
       course2_collector_loops_challenge2: |-
         _"Zapolujmy na skarby - używając pętli!"_
 
         Pomóż zbieraczowi poprzez debugowanie tego kodu. Zbierz cały skarb!
       course2_collector_prog_challenge1: Spójrz uważnie! Czy potrafisz zebrać wszystkie
         _10_ części skarbu?
+      course2_collector_prog_challenge2: W tej jaskini jest **20** skarbów. Zbierz
+        przynajmniej połowę, aby ukończyć wyzwanie!
       course2_harvester_loops_challenge1: Zbierz całą kukurydzę.
       course2_harvester_loops_challenge2: Zbierz wszystkie sałaty. Unikaj drzew i
         pól!

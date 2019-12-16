@@ -30,6 +30,39 @@ pl-PL:
       2-3 Artist 9 NEW: Dokończ ten latawiec
       2-3 Artist Assessment 1: 'Szacowanie: Ukończ rysowanie ostatniego zęba. Jest
         on szeroki na 25 pikseli i wysoki na 25 pikseli.'
+      2-3 Artist Debugging 1: Ten kapelusz powinien być szeroki tylko na 50 pikseli.
+        Czy możesz to naprawić?
+      2-3 Artist Debugging 10: "Pad kierunkowy na moim kontrolerze jest zbyt wąski.
+        \n\nCzy możesz poszerzyć go o 10 pikseli?\n\nSpróbuj najpierw uruchomić kod,
+        by zobaczyć, co jest źle."
+      2-3 Artist Debugging 11: |-
+        Moja śnieżynka rozpada się!
+
+        Czy mógłbyś wykminić, co jest źle?
+      2-3 Artist Debugging 2: "Ten kod na wąsy kota jest błędny. \n\nNapraw ten kod,
+        by rysował wąsy, które mają wszystkie taką sama długość."
+      2-3 Artist Debugging 3: "Moja łódź ma dziurę! \n\nCo potrzebujesz naprawić,
+        aby załatać dziurę?"
+      2-3 Artist Debugging 5: "Kod, który mamy na nogę i stopę jest błędny. \n\nCzy
+        możesz go naprawić?"
+      2-3 Artist Debugging 6: |-
+        Wygląda na to, że siedzę na krześle, któremu brakuje nogi!
+
+        Popraw kod, by narysować ostatnią nogę.
+      2-3 Artist Debugging 7: |-
+        Wygląda na to, że C w napisie code jest rysowane od tyłu!
+
+        Czy możesz sprawić, by z powrotem wyglądało jak C?
+      2-3 Artist Debugging 8: |-
+        Mój nauczyciel mówi, że powinienem kończyć to, co zacznę!
+
+        Pomóż mi ukończyć mój wiatraczek. Czy widzisz, co jest źle?
+      2-3 Artist Debugging 9: |-
+        Coś jest nie tak!
+
+        Kod na tę łodygę jest błędny. Czy potrafisz wykminić, jak spowodować, by artysta narysował łodygę we właściwy sposób?
+      2-3 Artist Debugging Assessment 1: "Sprawdzian: Dlaczego boki tego kwadratu
+        pod koniec są o 75 pikseli za krótkie?  \n\nGdzie jest błąd w kodzie?"
       2-3 Artist Free Play: Czas na zabawę! Narysuj cokolwiek chcesz.
       2-3 Artist Loops New 1: Narysujmy głowę tego robota! Czy potrafisz stworzyć
         kwadrat o bokach, które mają 100 pikseli?
@@ -50,24 +83,96 @@ pl-PL:
         Czy potrafisz użyć bloku 'powtórz' do rozwiązania tej łamigłówki?
       2-3 Artist Loops New 9: Narysuj proste V (w którym oba boki mają po 50 pikseli),
         aby ukończyć strzałkę.
+      2-3 Artist Nested Loops 1: Cały kod umieść w bloku "powtórz", aby narysować
+        ten wzór.
       2-3 Artist Nested Loops 10: Powtórz w pętli ten kod 12 razy, aby ukończyć ten
         rysunek.
       2-3 Artist Nested Loops 12: Powtórz w pętli ten kod 12 razy, aby otrzymać te
         loki.
+      2-3 Artist Nested Loops 2: "Teraz zapętlij trójkąt 6 razy. \n\nPo każdym trójkącie,
+        będziesz potrzebował skręcić o 60 stopni przed narysowaniem kolejnego."
+      2-3 Artist Nested Loops 3: "Będziesz potrzebował zapętlić trójkąt 12 razy, aby
+        narysować ten wzór. \n\nPodziel liczbę stopni w kole (360) na liczbę kształtów,
+        które rysujesz (12), by dowiedzieć się jak daleko skręcić po narysowaniu każdego
+        z nich."
+      2-3 Artist Nested Loops 4: |-
+        Zapętlij ten diament 12 razy, aby narysować kwiatek!
+
+        Uwaga: Użyjemy tego samego kąta, co do zapętlenia 12 trójkątów, aby zapętlić 12 diamentów.\\ O ile stopni musisz skręcić po każdym kształcie?
       2-3 Artist Nested Loops Free Play: Masz wolną rękę, narysuj coś fajnego używając
         zagnieżdżonych pętli.
       2-3 Bee Conditionals 2: "Jestem głodną pszczółką! \\\r Pomóż mi zebrać cały
         nektar z kwiatów używając możliwie najmniejszej liczby bloków."
       2-3 Bee Conditionals 9: Zbierz cały nektar z każdego kwiatka.
+      2-3 Bee Conditionals Assessment 1: 'Sprawdzian: Zbierz cały nektar. Uważaj,
+        by nie próbować zebrać nektaru z fioletowego kwiatka, jeśli nie ma on go.'
       2-3 Bee Debugging 1: Te bloki naprawdę męczą mnie. Napraw błędy, aby zebrać
         cały nektar.
+      2-3 Bee Debugging 10: |-
+        Zapętliłem się już tą łamigłówką!
+        Napraw błąd (błędy), aby zebrać cały nektar i wyprodukować cały miód.
+      2-3 Bee Debugging 2: |-
+        Czy potrafisz naleźć tutaj problem?
+
+        Napraw błąd (błędy), aby zebrać cały nektar.
+      2-3 Bee Debugging 3: |-
+        Ooh, to mnie kłopocze!
+
+        Napraw błąd (błędy), aby zebrać cały nektar.
       2-3 Bee Debugging 4: Te bloki naprawdę męczą mnie. Napraw błędy, aby zebrać
         cały nektar i zrobić miód.
+      2-3 Bee Debugging 5: "Ten kwiatek wygląda przepysznie! \n\nNapraw błąd(błędy),
+        aby zebrać cały nektar. Możesz teraz użyć obu: \"Uruchom \" lub \"Krok\"."
+      2-3 Bee Debugging 6: |-
+        Jakie słodkie wyzwanie!
+
+        Napraw błąd (błędy), aby zebrać cały nektar.
+      2-3 Bee Debugging 7: Napraw błąd (błędy), aby zebrać cały nektar i wyprodukować
+        cały miód.
+      2-3 Bee Debugging 8: |-
+        Tyle pięknych kwiatków!
+
+        Napraw błąd (błędy), aby zebrać cały nektar.
+      2-3 Bee Debugging 9: "Bądź \"pszczególnie\" cierpliwy w tej łamigłówce! \n\nBędziesz
+        potrzebował naprawić kilka rzeczy w tym programie, aby zebrać cały nektar
+        i wyprodukować cały miód."
+      2-3 Bee Debugging Assessment 1: |-
+        Sprawdzian: Czas, byś pokazał, co potrafisz!
+
+        Napraw błąd (błędy), aby zebrać cały nektar i wyprodukować cały miód.
       2-3 Bee Functions 3: Zbierz cały nektar z każdego kwiatka.
       2-3 Bee Functions 6: Teraz użyj tej samej funkcji, aby zebrać nektar z trzech
         kwiatów.
+      2-3 Bee Loops 1: |-
+        Te kwiaty wyglądają przepysznie!
+
+        Zbierz nektar z każdego z kwiatów, używając możliwie najmniejszej liczby bloków.
+      2-3 Bee Loops 13: 'Sprawdzian: Zbierz cały nektar, używając możliwie najmniejszej
+        liczby bloków.'
+      2-3 Bee Loops 1A: 'Cześć, jestem pszczółką. Czy pomożesz mi zebrać nektar z
+        tych kwiatów? '
+      2-3 Bee Loops 2: Zbierz cały nektar i wyprodukuj cały miód, używając możliwie
+        najmniejszej liczby bloków.
       2-3 Bee Loops 2A: Tym razem użyj pętli, by zebrać cały nektar.
+      2-3 Bee Loops 3: Zbierz nektar z każdego z kwiatów i wyprodukuj miód na każdym
+        plastrze miodu, używając możliwie najmniejszej liczby bloków.
       2-3 Bee Loops 3A: Użyj pętli "powtórz", by zebrać cały nektar.
+      2-3 Bee Loops 3B: Teraz użyj bloku 'powtórz', aby zebrać cały nektar i wyprodukować
+        cały miód.
+      2-3 Bee Loops 4: |-
+        Jaka pracowita pszczółka!
+
+        Pomóż pszczółce zebrać cały nektar i wyprodukować cały miód z możliwie najmniejszą liczbą bloków.
+      2-3 Bee Loops 4A: |-
+        Ile razy pętle mogą ci pomóc w tej łamigłówce?
+
+        Pętle są twoim przyjacielem! Użyj tylko kilku z nich, by ukończyć tę łamigłówkę z możliwie najmniejszą liczbą bloków.
+      2-3 Bee Loops 5: "Kształt tej ścieżki jest inny niż innych ścieżek. \n\nCzy
+        potrafisz zebrać cały nektar, używając tak mało bloków, jak to tylko możliwe?"
+      2-3 Bee Loops 6: Czy potrafisz znaleźć najszybszą drogę dla pszczółki, aby zebrać
+        cały nektar i wyprodukować cały miód?
+      2-3 Bee Loops 7: Jaka piękna łąka z kwiatami! Pomóż pszczółce odwiedzić każdy
+        z nich. Czy potrafisz to zrobić za pomocą mniej niż 7 bloków?
       2-3 Maze 1: 'Czy pomożesz mi złapać niesforną świnkę? Ustaw parę bloków ''idź
         naprzód'' pod blokiem ''po uruchomieniu'' i naciśnij ''Uruchom''. '
       2-3 Maze 10: Prowadź mnie do tego zielonego zła! (Uważaj na pola z TNT)
@@ -739,6 +844,10 @@ pl-PL:
       course2_bee_conditionals_challenge1: Zbierz cały nektar i zrób cały miód.
       course2_bee_conditionals_challenge2: Zbierz cały nektar i zrób cały miód.
       course2_collector_loops_challenge2: Zbierz cały skarb!
+      course2_collector_prog_challenge1: Popatrz uważnie! Czy potrafisz zebrać wszystkie
+        _10_ skarbów?
+      course2_collector_prog_challenge2: W tej jaskini jest 20 skarbów do znalezienia.
+        Zbierz przynajmniej połowę, aby ukończyć to wyzwanie!
       course2_harvester_loops_challenge1: Zbierz całą kukurydzę.
       course2_harvester_loops_challenge2: Zbierz wszystkie sałaty. Unikaj drzew i
         pól!
