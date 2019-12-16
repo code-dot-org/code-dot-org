@@ -366,15 +366,20 @@ ar:
           FORMAT:
             '"border"': الحدود
             '"inner"': مربع داخلي
+            '"diamond"': ماسة
             '"circle"': دائرة
             '"grid"': شبكة
+            '"top"': الصف العلوي
             '"row"': صف
+            '"bottom"': الصف السفلي
+            '"left"': العمود الأيسر
             '"column"': عمود
+            '"right"': العمود الأيمن
             '"x"': متقاطع
             '"plus"': زائد
             '"random"': عشوائي
       Dancelab_makeAnonymousDanceSprite:
-        text: جعل جديده {COSTUME} في {LOCATION}
+        text: قم بإنشاء {COSTUME} جديد في {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': كائن فضائى
@@ -690,7 +695,7 @@ ar:
             '"y"': الموضع الرأسي
             '"tint"': لون خفيف
       Dancelab_setPropRandomEach:
-        text: Randomize {GROUP} {PROPERTY}
+        text: قم بالترتيب العشوائي {GROUP} {PROPERTY}
         options:
           GROUP:
             sprites: الكل
@@ -1272,7 +1277,7 @@ ar:
             '"y"': الموضع ص
             '"direction"': اتجاه الحركة
       Mikelab_groupChangeAnim:
-        text: تغيير {SELECT} {COSTUME} في {COSTUME2}
+        text: قم بتغيير {SELECT} {COSTUME} في {COSTUME2}
         options:
           SELECT:
             '"all"': الكل
@@ -1290,7 +1295,7 @@ ar:
             '"y"': الموضع ص
             '"direction"': اتجاه الحركة
       Mikelab_groupCreateNewSprite:
-        text: جعل جديده {COSTUME} في {LOCATION}
+        text: قم بإنشاء {COSTUME} جديد في {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": أعلى

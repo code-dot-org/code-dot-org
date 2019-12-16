@@ -42,6 +42,8 @@ ar-SA:
       CourseD_Dance_Party_11:
         dance_callout_11_a: مربع برمجي جديد!
         dance_callout_11_b: مربع برمجي جديد!
+      CourseD_Dance_Party_11_5:
+        dance_party_11_5_groups: قم بإلقاء نظرة لمعرفة المربعات البرمجية "كل البط"
       Dance_2019_01:
         dance_callout_01: أضف هذا المربع البرمجي إلى برنامجك!
       Dance_2019_02:
@@ -69,6 +71,11 @@ ar-SA:
       Dance_Party_11:
         dance_callout_11_a: مربع برمجي جديد!
         dance_callout_11_b: مربع برمجي جديد!
+      Dance_Party_11_5:
+        dance_party_11_5_groups: قم بإلقاء نظرة لمعرفة المربعات البرمجية "كل البط"
+      Fish Tank 3-validated_2019:
+        spritelab_comment: استخدم القطعة البرمجية لتترك لنفسك أو للمعلم ملاحظات حول
+          كيفية عمل التعليمات البرمجية الخاصة بك.
       Function intro Ryan:
         Function_intro_Ryan_1: هذه التعليمات تخبر الكمبيوتر أن يشغل الجزء الكبير من
           البرنامج بنفس الاسم في مساحة العمل.
@@ -242,6 +249,8 @@ ar-SA:
       courseC_starWars_loops2_2019:
         courseC_starWars_loops2: ليس لديك إلا واحدة من هذه البلوكات التي يمكنك استخدامها
           في هذا اللغز.
+      courseD_maze_ramp3_2019:
+        stone_block_2: القطع البرمجية الرمادية لا يمكن حذفها.
       courseD_scrat_ramp8:
         courseD_maze_ramp7_1: هذا تحدي لغزك الاول! لا تقلق من المفترض ان يكون صعباً
           ويحتاج العديد من المحاولات لحلها.

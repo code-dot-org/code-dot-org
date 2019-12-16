@@ -1400,7 +1400,7 @@ ar:
         dance:
           stages:
             Dance Party:
-              name: حفلة رقص
+              name: حفلة الرقص
           title: حفلة رقص
           description_short: تحييها كاتي بيري ومادونا وجيه بالفين وسيا وكيث أوربان وسيارا و 25 شخصية أخرى!
           description: برمِج حفلة الرقص الخاصة بك لمشاركتها مع أصدقائك.
@@ -1417,11 +1417,11 @@ ar:
         dance--draft:
           stages:
             Dance Party:
-              name: حفلة رقص
+              name: حفلة الرقص
         dance-draft:
           stages:
             Dance Party:
-              name: حفلة رقص
+              name: حفلة الرقص
         dance-extras:
           description: تجاوز الساعة الأولى بأفكار مشاريع موسعة.
         coursef-2019:
@@ -1443,7 +1443,7 @@ ar:
         dance-low:
           stages:
             Dance Party:
-              name: حفلة رقص
+              name: حفلة الرقص
         coursed-2019:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -1461,7 +1461,7 @@ ar:
             Artist Binary:
               name: ثنائي الفنان
             Dance Party:
-              name: حفلة رقص
+              name: حفلة الرقص
         coursee-2019:
           stages:
             Building a Foundation:
@@ -1499,7 +1499,7 @@ ar:
             Crowdsourcing:
               name: حشد المصادر
             Dance Party:
-              name: حفلة رقص
+              name: حفلة الرقص
         andrea-test:
           stages:
             'null':
@@ -1633,7 +1633,7 @@ ar:
         dance-2019:
           stages:
             Dance Party:
-              name: حفلة رقص
+              name: حفلة الرقص
           description: برمِج حفلة الرقص الخاصة بك لمشاركتها مع أصدقائك.
         k5-onlinepd-2019:
           stages:

@@ -43,7 +43,7 @@ ar-SA:
       CourseD_Dance_Party_03: |-
         -   الآن نحن نرقص ونستمتع بذلك!\*
 
-        أضف المربع البرمجي <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> إلى مساحة عملك. اجعل الراقص يبدأ بحركة جديدة بعد 6 إجراءات.
+        أضف المربع البرمجي <xml><block type="Dancelab_atTimestamp" block-text="after 6 measures"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> إلى مساحة عملك. اجعل الراقص يبدأ بحركة جديدة بعد 6 إجراءات.
       CourseD_Dance_Party_04: |-
         _تحتاج هذه الرقصة إلى بعض التأثيرات الضوئية!_
 
@@ -79,8 +79,16 @@ ar-SA:
         يتيح لك المربع البرمجي <xml><block type="Dancelab_whenKey"></block></xml> تشغيل الكود البرمجي عند الضغط على السهم لأعلى.
 
         يمكنك تغيير حركة الرقص أو تغيير خصائص الراقص أو أداء حركة سريعة لمرة واحدة فقط. كن مبدعًا وابحث عن مربعات برمجية جديدة!
+      CourseD_Dance_Party_11_5: "تحقق من هذا المربع البرمجي: \n\n<xml>\n  <block type=\"Dancelab_makeNewDanceSpriteGroup\"
+        block-text=\"Make 6 new ducks in a circle\">\n    <title name=\"N\">6</title>\n
+        \   <title name=\"COSTUME\">\"DUCK\"</title>\n    <title name=\"LAYOUT\">\"circle\"</title>\n
+        \ </block></xml> \n\nيمكنك الآن إنشاء مجموعة من الراقصين مرة واحدة! \nجرب
+        استخدام بعض المربعات البرمجية \"كل البط\" لكتابة التعليمات البرمجية التي ستعمل
+        على جعل كل البط يرقص سوياً."
       CourseD_Dance_Party_11b: حان وقت عرض الرقص! تُربِّتُ القطة عند الضغط على مفتاح
         السهم الأيسر. اجعل الروبوت "يسقط" عند الضغط على مفتاح السهم الأيمن.
+      CourseD_Dance_Party_12: تمتع بالرقص لأقصى الحدود! قم بإنشاء الرقصة الخاصة بك
+        لمشاركتها مع أصدقائك.
       CourseE_HOC 2018 Level_1: تحتاج إلى إمدادات للرحلة التي بانتظارك. اجمع **مركبًا**
         ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
         من **الصندوق** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
@@ -108,6 +116,29 @@ ar-SA:
       CourseE_HOC 2018 Level_9b: لقد تمكنت من بلوغ الشعاب المرجانية، ابحث الآن عن
         \* \* قلب البحر \* \* ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)!
         استخدم المرجان الأزرق والأحمر للبحث عن صندوق **الكنز** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
+      Dance Party 2_2019: |-
+        الكائن الفضائي فخور بمهاراته في الرقص على كوكب مارس، لكن الآن يستطيع فقط التحرك جنباً إلى جنب.
+        استبدل السلوك في<xml>
+        <block type="gamelab_addBehaviorSimple" block-text="the sprite begins block">
+                <value name="SPRITE">
+                  <block type="gamelab_allSpritesWithAnimation">
+                    <title name="ANIMATION">"blue alien"</title>
+                  </block>
+                </value>
+              </block></xml> إلى سلوك آخر لجعل الكائن الفضائي يدور!
+      Dance Party 3_2019: انشيء روحاً تشبه الكائن الفضائي الزهري. <img src="https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fapi%2Fv1%2Fanimation-library%2FecnW7rdKTB0fUrKRKrqIHbrHVvyWh5hu%2Fcategory_characters%2FalienPink.png"
+        width="3%"></img>!
+      Dance Party 4_2019: "تشكيل فرقة رقص الكائنات الفضائية! \n\n-   انشئ روحاً ثالثة
+        تشبه الكائن الفضائي الأصفر،واجعلها ترقص عند النقر عليها.\n-   اجعل كل الكائنات
+        الفضائية في خط أفقي،مثل:![](https://images.code.org/09380fc01069e79d9d33a979379a666b-image-1555960752137.png)"
+      Dance Party 5_2019: "\\<! يمكننا تغيير جميع الأشياء في هذا البرنامج عند النقر
+        على الأرواح. أضف كوداً لتغيير لون كل كائن فضائي عند النقر عليه.-->\n\nلنحاول
+        استخدام حدثاً مختلفاً. \n\nانشئ حدثاً بالنقر مرة واحدة باستخدام القطعة البرمجية<xml><block
+        type=\"gamelab_keyPressed\" block-text=\"the keypress event block\"></block></xml>.
+        \n\nلهذا الحدث،عند النقر على المفتاح،يتغير لون كل كائن فضائي! اختر أي مفتاح
+        تريده،لكن إذا كنت تستخدم شاشة لمس ننصحك بإختيار المفاتيح _أعلى_،_أسفل_،_يسار_،_يمين_."
+      Dance Party Predict_2019: "**تنبأ قبل تشغيل البرنامج:** إليك روج تشبه كائن فضائي
+        أزرق! \nماذا باعتقادك سيحصل عند الضغط عليه؟  "
       Dance_2019_01: |-
         _دعونا نقيم حفلة رقص!_
 
@@ -139,6 +170,10 @@ ar-SA:
         &quot;CAT&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;,
         &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title>\n    <title name=\"LAYOUT\">\"circle\"</title>\n
         \ </block></xml>\nيمكنك الآن إنشاء حزمة من الراقصيين في نفس الوقت!"
+      Dance_2019_07: |-
+        كل راقصة لديها مجموعة من _properties_ التي تتحكم في ما يبدو.
+
+        استخدم <xml><block type="Dancelab_setPropEach" block-text="the set block"><title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title><title name="PROPERTY">"scale"</title><title name="VAL">???</title></block></xml> تحت كتلة الحدث الأخضر لجعل الراقصين يظهرون أقرب أو أبعد.
       Dance_2019_08: يجب أن يكون لدى الراقصين خاصية "اللون الخفيف" التي يمكن من خلالها
         إضافة طبقة لون. جرب أن تغيير من اللون الخفيف لراقص واحد من الراقصين لدك (أو
         المجموعة بأكملها)!
@@ -150,6 +185,8 @@ ar-SA:
         تتيح لك المربعات البرمجية الجديدة الأخرى في مربع الأدوات الخاص بك إلى القيام بتغيير خصائص الراقصين بشكل تدريجي (أو عشوائياً) بمرور الوقت.
 
         _كن مبدعًأ وتمتع!_
+      Dance_2019_10: تمتع بالرقص لأقصى الحدود! قم بإنشاء الرقصة الخاصة بك لمشاركتها
+        مع أصدقائك.
       Dance_Party_01: |-
         _دعونا نقِم حفلة رقص!_
 
@@ -159,7 +196,7 @@ ar-SA:
       Dance_Party_02: |-
         لنجعل غزال الموظ هذا يرقص!
 
-        اسحب المربع البرمجي <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> إلى مساحة العمل. صِله بأسفل المربع البرمجي <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. ينبغي أن يبدأ راقصك حركة جديدة بعد الإجراء الرابع.
+        اسحب المربع البرمجي <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> إلى مساحة العمل. صِله بأسفل المربع البرمجي <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. ينبغي أن يبدأ راقصك حركة جديدة بعد الإجراء الرابع.
 
         تُستخدَم **الإجراءات** لحساب الوقت منذ تشغيل الموسيقى. في هذا الدرس التعليمي، يكون الإجراء عبارة عن أربع خطوات بالطول.
       Dance_Party_03: |-
@@ -198,19 +235,34 @@ ar-SA:
 
         يستخدم هذا البرنامج مستوى "جهير" الموسيقى (الأصوات المنخفضة) للتحكم في ارتفاع أحد الراقصين. هل يمكنك جعل الراقص الآخر يستجِب للموسيقى أيضًا؟
       Dance_Party_11: |-
-        يتيح لك المربع البرمجي <xml><block type="Dancelab_whenKey"></block></xml> تشغيل الكود البرمجي عند الضغط على السهم لأعلى.
+        يتيح لك المربع البرمجي [0][blockly block] تشغيل الكود البرمجي عند الضغط على السهم لأعلى.
 
         يمكنك تغيير حركة الرقص أو تغيير خصائص الراقص أو أداء حركة سريعة لمرة واحدة فقط. كن مبدعًا وابحث عن مربعات برمجية جديدة!
+      Dance_Party_11_5: |-
+        تحقق من هذه الكتلة:
+
+        <xml>
+          <block type="Dancelab_makeNewDanceSpriteGroup">
+            <title name="N">6</title>
+            <title name="COSTUME">"DUCK"</title>
+            <title name="LAYOUT">"circle"</title>
+          </block></xml>
+
+        الآن يمكنك إنشاء مجموعة من الراقصين في وقت واحد!
+
+        حاول استخدام بعض كتل «جميع البط» لكتابة التعليمات البرمجية التي من شأنها أن تجعل كل البط الرقص معا.
       Dance_Party_11b: حان وقت عرض الرقص! تُربِّتُ القطة عند الضغط على مفتاح السهم
         الأيسر. اجعل الروبوت "يسقط" عند الضغط على مفتاح السهم الأيمن.
-      Dance_Party_extras_alternate_2019: |-
-        # دعونا نخوض في التشكيلة!
-
-        تحقق من هذه الرقصة التي تستخدم  [blockly block][0]  لتغيير تشكيلة الراقصين الاحتياطيين طيلة الرقصة. جرب واحدة من هذه الأفكار للتوسع:
-
-        -   قم بإنشاء مجموعة ثانية من الراقصين في تخطيط مختلف
-        -   قم بتغيير التخطيط عندما يكون المفتاح مضغوطاَ
-        -   قم بتغيير الخاصية عند قيام الراقصون بتغيير التشكيلة
+      Dance_Party_12: تمتع بالرقص لأقصى الحدود! قم بإنشاء الرقصة الخاصة بك لمشاركتها
+        مع أصدقائك.
+      Dance_Party_extras_alternate_2019: "# للخلف وللأمام!\n\nقد ترغب في بعض الأحيان
+        إلى إنشاء نمط من حركات الرقص التي تختارها. يتيح لك هذا المربع البرمجي الجديد
+        القيام بما تريد فحسب. \n\n<xml><block type=\"Dancelab_alternateMoves\"><title
+        name=\"GROUP\">sprites</title><title name=\"N\">2</title><title name=\"MOVE1\">MOVES.Roll</title><title
+        name=\"MOVE2\">MOVES.ClapHigh</title></block></xml> \n\nستتكرر الحركات أعلاه
+        في تسلسل إلى الأبد. \n\n-   قم بإنشاء طريقة بديلة للراقص الرئيسي في المقدمة!
+        \n-   استخدم الأرقام المختلفة لتغيير معدل التنقل بين الحركات. جرب من \"1\"
+        إلى \"5\" للتنقل بسرعة أكبر!"
       Dance_Party_extras_battle: |-
         # فرق الرقص
 
@@ -240,20 +292,30 @@ ar-SA:
       Dance_Party_extras_every_beat_2019: |-
         # النغمات الموسيقية  الرباعية
 
-        معظم الراقصين لدينا يستخدموا الإجراءات الكاملة، لكن كل إجراء يتكون من 4 نغمات موسيقية. تستخدم هذه الرقصة [blockly block][0] لصنع تصفيق الراقص عند كل نغمة ربعية بعد الإجراء الخامس.
+        معظم الراقصين لدينا يستخدموا الإجراءات الكاملة، لكن كل إجراء يتكون من 4 نغمات موسيقية. تستخدم هذه الرقصة <xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml> لصنع تصفيق الراقص عند كل نغمة ربعية بعد الإجراء الخامس.
 
         جرب تغيير الأرقام في المربع البرمجي لرؤية طريقة تغيير الرقصة.
 
         -   جرب الأمر مع فترات نغمات موسيقية أخرى (مثل  0.5 لنغمة موسيقية نصفية، أو 0.125 للنغمة الموسيقية الثامنة).
         -   اضف بعض الأحداث الأخرى.
-      Dance_Party_extras_layout: |-
-        # لننضم في تشكيل!
+      Dance_Party_extras_layout: "# دعونا نخوض في التشكيلة!\n\nتحقق من هذه الرقصة
+        التي تستخدم المربع البرمجي \"تخطيط\" لتغيير تشكيلة الراقصين الاحتياطيين طيلة
+        الرقصة. جرب واحدة من هذه الأفكار للتوسع: \n\n-   قم بإنشاء مجموعة ثانية من
+        الراقصين في تخطيط مختلف \n-   قم بتغيير التخطيط عند الضغط على المفتاح \n-
+        \  قم بتغيير الخاصية عند قيام الراقصين بتغيير التشكيلة"
+      Dance_Party_extras_layout_2019: |-
+        # دعونا نخوض في التشكيلة!
 
-        تحقق من هذه الرقصة التي تستخدم الكتلة "مخطط التوزيع" لتغيير تشكيل الراقصين الاحتياطيين طوال الرقصة. جرب إحدى هذه الأفكار لتوسيع نطاقها:
+        تحقق من هذه الرقصة التي تستخدم  <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml>  لتغيير تشكيلة الراقصين الاحتياطيين طيلة الرقصة. جرب واحدة من هذه الأفكار للتوسع:
 
-        -   إنشاء مجموعة ثانية من الراقصين في مخطط توزيع مختلف
-        -   تغيير مخطط التوزيع عند الضغط على أي مفتاح
-        -   تغيير الوظائف عند تغيير الراقصين للتشكيل
+        -   قم بإنشاء مجموعة ثانية من الراقصين في تخطيط مختلف
+        -   قم بتغيير التخطيط عندما يكون المفتاح مضغوطاَ
+        -   قم بتغيير الخاصية عند قيام الراقصون بتغيير التشكيلة
+      Dance_Party_extras_mixed_2019: "# أزرار إضافية تتيح\n\n لك هذه الرقصة التحكم
+        في خصائص الراقصين في الوقت الفعلي المناسب خلال قيامهم بالرقص أوتوماتيكياً.
+        حاول صنع خصائص أخرى يتم تغييرها عند ضغطك على الأزرار. على سبيل المثال: \n\nقم
+        بالترتيب العشوائي للون الخفيف الخاص بالراقص عند الضغط على \"لأسفل\". \n\n-
+        \  اضف مجموعة من الراقصين بمخطط عشوائي عند الضغط على \"مسافة\"."
       Dance_Party_extras_on_beat: |-
         # الجهير والنغمة متوسطة الطبقة والطنين الثلاثي
 
@@ -286,6 +348,24 @@ ar-SA:
         -   أضف مجموعة أخرى من الراقصين
         -   أظهر الراقصين وأخفهم باستخدام مفاتيح الأسهم
         -   أخفِ جميع الراقصين وبَدِلَ إلى تأثير خلفية مثير
+      Fish Tank 2-validated_2019: "هيا لنصنع حوض للاسماك! \nلنغيّر النبات الصحراوي
+        إلى اي نوع من السمك عن طريق الضغط على <xml><block type=\"gamelab_allSpritesWithAnimation\"
+        block-text=\"the sprite picker block\"><title name=\"ANIMATION\">\"tumbleweed\"</title></block></xml>.\nاحرص
+        على تحديث الزيّ في <xml><block type=\"gamelab_addBehaviorSimple\" block-text=\"the
+        add behavior block\"></block></xml>."
+      Fish Tank 3-validated_2019: "السمك يشعر بالدوار! \nعدّل سلوك السمك بجعلها تسبح
+        يساراً ويميناً."
+      Fish Tank 4-validated_2019: "حوض السمك يحتاج إلى الماء! \nاستخدم <xml><block
+        type=\"gamelab_setBackground\" inline=\"true\" block-text=\"the set background
+        color block\">\n    <value name=\"COLOR\">\n      <block type=\"colour_picker\">\n
+        \       <title name=\"COLOUR\">#0000ff</title>\n      </block>\n    </value>\n
+        \ </block></xml> لتغيير لون الخلفية إلى أي لون. ننصح باللون الأزرق!"
+      Fish Tank 5-validated_2019: |-
+        السمك مغامر ويريد مقابلة مخلوقات جديدة داخل البحر.
+        اضف روح إلى حوض السمك. هذه الروح يمكنها الحصول على أي زي غير اللون الذي استخدمته للسمكة!
+      Fish Tank 6-validated_2019: |-
+        ماذا تريد من صديق السمكة الجديد أن يفعل؟
+        اضف سلوك وراقبهم!
       Function intro Ryan: "هناك **دالة** تسمى `بناء جسر` موجودة في مكان العمل خاصتك.
         كل الاوامر اللتي تحتاجها لعبور النهر موجودة في هذه الدالة! \n\nاسحب القطعة
         الخضراء الصغيرة <xml> <block type=\"procedures_callnoreturn\" id=\"callMe\"><mutation
@@ -398,6 +478,28 @@ ar-SA:
         أحياناً يكون أسرع لو رجعت للوراء بدلاً من التوجه للأمام!
       course4_artist_fwp_challenge1: حاول تشغيل هذا البرنامج، وإجراء تغييرات لنرى
         ماذا سيحدث. بأستطاعتك معرفة كيف تعمل؟ (أو حذفها واستبدالها بشيء مختلف تماما)
+      courseA_artist_loops7_2019: |-
+        استخدم [0] قطعة التكرار البرمجية لإضافة تموجات إلى الماء
+        ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
+      courseA_collector_loops2_2019: 'اجمع الأكوام الثلاثة! حرّك لوريل إلى كل قطعة
+        من الكنز، ثم استخدم [0] قطعة التجميع البرمجية. '
+      courseA_harvester_seq2_2019: 'استخدم ثلاث [0] قطع لجعل آلة الحصاد الحصول على
+        الذرة! '
+      courseA_harvester_seq3_2019: استخدم ثلاث [0] قطع لجعل آلة الحصاد الحصول على
+        الذرة! لا تنسى التقاط الذرة في نهاية المطاف.
+      courseA_maze_ramp2_2019: قم بإرفاق كلا القطعتين البرمجيتين [0] إلى القطعة البرمجية
+        [1] لإنهاء الكود، ثم انقر فوق 'تشغيل'.
+      courseA_maze_ramp3a_2019: امسك القطعة البرمجية [0] من صندوق الأدوات وأضفها أسفل
+        القطع الأخرى لأنهاء الكود البرمجي، ثم انقر فوق ▶ نفذ.
+      courseA_playLab_events1_2019: هذا مستوى مختبر اللعب، انقل القطع البرمجية إلى
+        مساحة العمل وشاهد ما سيحدث!
+      courseA_playLab_events2_2019: خورخي الكلب يريد أن يقول "مرحبا." هل تستطيع مساعدته؟
+      courseB_Scrat_ramp3a_2019: امسك القطعة البرمجية [0] من صندوق الأدوات وأضفها
+        أسفل القطع الأخرى لأنهاء الكود البرمجي، ثم انقر فوق ▶ نفذ.
+      courseB_artist_loops4_2019: الآن نحن بحاجة إلى تجهيز التربة للزراعة. ابحث عن
+        الأخطاء البرمجية في الكود وساعد الفنان في تحضير الأرض.
+      courseB_collector_loops2_2019: حرّك لوريل إلى الكنز،ثم استخدم <xml><block type="collector_collect"
+        block-text="get treasure"/></xml> القطعة البرمجية لالتقاط الكنز.
       courseC19_playLab_EOC2: |-
         استخدم البلوكات لتجعل لاعبك يتحرك عندما تضغط زر الأسهم.
 
@@ -479,7 +581,7 @@ ar-SA:
 
         * * *
 
-        اضغط " إنهاء" عندما تكون راضي عن ما صنعت
+        اضغط " إنهاء" عندما تكون راضٍ عمّا صنعت
 
         ![expandable](https://images.code.org/1435d3650553df44eba973572d409a50-image-1553096405891.png)
         ![expandable](https://images.code.org/6912d2144b90aa7087fe854742d1e8b9-image-1553096425394.png)
@@ -1147,9 +1249,18 @@ ar-SA:
       courseD_bee_nestedLoops8_2019: "إجْمَع كُلّ الرَحِيق مِن جَمِيعِ الزُهور \nوقم
         بِـإنْتاج عَسَل عند خلية النحل. \\\r\n\\\r\nقُم بِـإسْتِخْدَام \"حَلْقَة تِكرارات
         متداخِلة\". "
+      courseD_maze_intro4_2019: '\-"تتبع المسار وأوصلني إلى الخنزير."- '
+      courseD_maze_intro5a_2019: احصي الفراغات في الشبكة بعناية!
+      courseD_maze_intro5c_2019: انتبه من المتفجرات! ساعد ريد ليصل إلى الخنزير.
       courseD_maze_nestedLoops4: خذني إلى زهرة عباد الشمس!
       courseD_maze_nestedLoops4_2018: خذني إلى زهرة عباد الشمس!
       courseD_maze_nestedLoops4_2019: خذني إلى زهرة عباد الشمس!
+      courseD_maze_ramp3_2019: |-
+        ساعد الطائر للوصول إلى الخنزير. يوجد هناك قطعة برمجية واحدة زرقاء 'تحرّك للأمام' اضافية.
+        ارمي القطعة البرمجية الاضافية عن طريق ازالتها من القطع الأخرى وسحبها مرّةً أخرى إلى صندوق الأدوات.
+      courseD_maze_ramp4_2019: '_"تتبع المسار وساعدني للوصول إلى ثمرة البلوط"_ '
+      courseD_maze_ramp5a_2019: احصي الفراغات في الشبكة بعناية!
+      courseD_maze_ramp5c_2019: ساعد سكرات للوصول إلى ثمة البلوط.
       courseE_bee_functions3: الدوال تتكون من عبارة أو سلسلة من العبارات المشفرة موضوعة
         في مربع برمجي و التي تقوم بمهمة معينة. استخدم الدالة "get5" لتحصل على 5 حبات
         رحيق في ان واحد. تأكد من استخدام حلقة لتحصل على العدد المثالي لعدد المربعات
@@ -1201,35 +1312,5 @@ ar-SA:
       grade2_collector_A: ساعد لورا بجمع كل المجوهرات.
       grade2_collector_A_2018: ساعد لورا بجمع كل المجوهرات.
       grade2_collector_A_2019: ساعد لورا بجمع كل المجوهرات.
-      Dance_2019_07: |-
-        كل راقصة لديها مجموعة من _properties_ التي تتحكم في ما يبدو.
-
-        استخدم <xml><block type="Dancelab_setPropEach" block-text="the set block"><title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title><title name="PROPERTY">"scale"</title><title name="VAL">???</title></block></xml> تحت كتلة الحدث الأخضر لجعل الراقصين يظهرون أقرب أو أبعد.
-      Dance_Party_11_5: |-
-        تحقق من هذه الكتلة:
-
-        <xml>
-          <block type="Dancelab_makeNewDanceSpriteGroup">
-            <title name="N">6</title>
-            <title name="COSTUME">"DUCK"</title>
-            <title name="LAYOUT">"circle"</title>
-          </block></xml>
-
-        الآن يمكنك إنشاء مجموعة من الراقصين في وقت واحد!
-
-        حاول استخدام بعض كتل «جميع البط» لكتابة التعليمات البرمجية التي من شأنها أن تجعل كل البط الرقص معا.
-      Dance_Party_extras_layout_2019: |-
-        # دعونا نخوض في التشكيلة!
-
-        تحقق من هذه الرقصة التي تستخدم  <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml>  لتغيير تشكيلة الراقصين الاحتياطيين طيلة الرقصة. جرب واحدة من هذه الأفكار للتوسع:
-
-        -   قم بإنشاء مجموعة ثانية من الراقصين في تخطيط مختلف
-        -   قم بتغيير التخطيط عندما يكون المفتاح مضغوطاَ
-        -   قم بتغيير الخاصية عند قيام الراقصون بتغيير التشكيلة
-      Dance_Party_extras_mixed_2019: |-
-        # More Buttons
-
-        يتيح لك هذا الرقص التحكم في خصائص الراقصين في الوقت الفعلي أثناء الرقص تلقائيًا. حاول جعل الخصائص الأخرى تتغير عندما تضغط على الأزرار. على سبيل المثال:
-
-        -   عشوائية لون الراقصة عندما تضغط على "لأسفل".
-        -   أضف مجموعة من الراقصين بتخطيط عشوائي عند الضغط على "space"
+      ramp_artist_loops4_2019: يمكنك انشاء هذه النجمة من خلال جمل تكرارية متسلسلة
+        من القطع البرمجية "تحرك للأمام" و "انعطف يمينًا بمقدار 144 درجة".

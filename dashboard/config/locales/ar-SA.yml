@@ -362,7 +362,7 @@ ar:
       applab: مختبر التطبيق
       artist: الرسام
       bounce: الارتداد
-      dance: حفلة رقص
+      dance: حفلة الرقص
       eval: تقييم
       flappy: فلابي
       frozen: ملكة الثلج Frozen
@@ -655,9 +655,9 @@ ar:
       audience: للأعمار 13 +
       cta: تعلم كيف
     dance:
-      title: حفلة رقص
+      title: حفلة الرقص
     dance-2019:
-      title: حفلة رقص
+      title: حفلة الرقص
     hoc:
       title: المتاهة الكلاسيكية
       body: جرب تعلّم أساسيات علوم الحاسب الآلي. الملايين قاموا بذلك.
