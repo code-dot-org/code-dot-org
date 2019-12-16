@@ -92,6 +92,11 @@ da-DK:
         Infinity_move_right_runbutton: Tilføj "flyt"-blok her
       Infinity_repeat:
         Infinity_repeat_callout: Placér "flyt"-blokke her
+      MC HOC 2016 Level 2-2:
+        craft2_run_button_callout: Når du er færdig, så tryk på 'Kør' for at prøve
+          programmet.
+      MC HOC 2016 New Walk:
+        MC_HOC_2016_New_Walk_callout2: Tryk på 'Kør' for at gå.
       MC_HOC_2017_03_Cole:
         MC_HOC_2017_03_Cole_1: Dette er et gentagelsesloop!  Træk det ind i arbejdsområdet,
           og fyld det med den kode, du vil køre igen og igen.
@@ -206,6 +211,27 @@ da-DK:
       courseA_maze_seq4:
         made_of_stone: Disse blokke er lavet af sten. Du kan flytte dem, men ikke
           slette dem!
+      courseA_playLab_events4:
+        courseA_playlab_events4_callout1: Dette er en opfordring
+      courseA_playLab_events4_2018:
+        courseA_playlab_events4_callout1: Dette er en opfordring
+      courseA_playLab_events4_2019:
+        courseA_playlab_events4_callout1: Dette er en opfordring
+      courseA_playLab_events5:
+        courseA_playLab_events5_1: Klik her for at ændre på retningen.
+      courseA_playLab_events5_2018:
+        courseA_playLab_events5_1: Klik her for at ændre på retningen.
+      courseA_playLab_events5_2019:
+        courseA_playLab_events5_1: Klik her for at ændre på retningen.
+      courseA_playLab_events6:
+        courseA_playLab_events6_1: Med denne kan du vælge en tilfældig lyd. Så ved
+          du ikke hvad du får, før du hører lyden!
+      courseA_playLab_events6_2018:
+        courseA_playLab_events6_1: Med denne kan du vælge en tilfældig lyd. Så ved
+          du ikke hvad du får, før du hører lyden!
+      courseA_playLab_events6_2019:
+        courseA_playLab_events6_1: Med denne kan du vælge en tilfældig lyd. Så ved
+          du ikke hvad du får, før du hører lyden!
       courseB_collector_loops1:
         courseB_collector_loops1_1: Kan du se nogle nye blokke i værktøjskassen? Vi
           skal nok vise senere hvordan du bruger dem.

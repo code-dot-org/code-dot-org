@@ -1431,7 +1431,7 @@ da:
         dance:
           stages:
             Dance Party:
-              name: Dansefest
+              name: Dance Party
           title: Dansefest
           description_short: Med Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara og 25 andre!
           description: Lav din egen dansefest sammen med dine venner.
@@ -1448,11 +1448,11 @@ da:
         dance--draft:
           stages:
             Dance Party:
-              name: Dansefest
+              name: Dance Party
         dance-draft:
           stages:
             Dance Party:
-              name: Dansefest
+              name: Dance Party
         dance-extras:
           description: Overskrid den første time med udvidede projektideer.
         coursef-2019:
@@ -1474,7 +1474,7 @@ da:
         dance-low:
           stages:
             Dance Party:
-              name: Dansefest
+              name: Dance Party
         coursed-2019:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -1490,7 +1490,7 @@ da:
             Artist Binary:
               name: Kunstner binære
             Dance Party:
-              name: Dansefest
+              name: Dance Party
         coursee-2019:
           stages:
             Building a Foundation:
@@ -1528,7 +1528,7 @@ da:
             Crowdsourcing:
               name: Crowdsourcing
             Dance Party:
-              name: Dansefest
+              name: Dance Party
         andrea-test:
           stages:
             'null':
@@ -1644,7 +1644,7 @@ da:
         dance-2019:
           stages:
             Dance Party:
-              name: Dansefest
+              name: Dance Party
           description: Lav din egen dansefest sammen med dine venner.
         k5-onlinepd-2019:
           stages:

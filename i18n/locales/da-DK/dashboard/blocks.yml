@@ -354,10 +354,15 @@ da:
           FORMAT:
             '"border"': grænse
             '"inner"': indersiden af firkant
+            '"diamond"': diamant
             '"circle"': cirkel
             '"grid"': gitter
+            '"top"': øverste række
             '"row"': række
+            '"bottom"': nederste række
+            '"left"': venstre kolonne
             '"column"': kolonne
+            '"right"': højre kolonne
             '"x"': kryds og tværs
             '"plus"': plus
             '"random"': tilfældig
