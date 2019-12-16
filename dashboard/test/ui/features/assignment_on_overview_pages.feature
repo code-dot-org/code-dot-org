@@ -1,4 +1,7 @@
+@skip
 @no_ie
+@no_firefox
+@no_safari
 @no_mobile
 Feature: (Un)Assign on script and course overview pages
 

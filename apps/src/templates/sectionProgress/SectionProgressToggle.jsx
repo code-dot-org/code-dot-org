@@ -29,20 +29,6 @@ class SectionProgressToggle extends React.Component {
     sectionId: PropTypes.number
   };
 
-  state = {
-    selectedToggle: this.props.currentView
-  };
-
-  componentWillReceiveProps(nextProps) {
-    // currentView can be set externally, and the component will
-    // still need to update when that happens.
-    if (this.state.selectedToggle !== nextProps.currentView) {
-      this.setState({
-        selectedToggle: nextProps.currentView
-      });
-    }
-  }
-
   onChange = selectedToggle => {
     firehoseClient.putRecord(
       {
@@ -51,7 +37,7 @@ class SectionProgressToggle extends React.Component {
         event: 'view_change_toggle',
         data_json: JSON.stringify({
           section_id: this.props.sectionId,
-          old_view: this.state.selectedToggle,
+          old_view: this.props.currentView,
           new_view: selectedToggle
         })
       },
@@ -61,11 +47,10 @@ class SectionProgressToggle extends React.Component {
   };
 
   render() {
-    const {selectedToggle} = this.state;
-    const {showStandardsToggle} = this.props;
+    const {currentView, showStandardsToggle} = this.props;
     return (
       <ToggleGroup
-        selected={selectedToggle}
+        selected={currentView}
         activeColor={color.teal}
         onChange={this.onChange}
       >
