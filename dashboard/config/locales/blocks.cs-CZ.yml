@@ -358,10 +358,15 @@ cs:
           FORMAT:
             '"border"': hranice
             '"inner"': vnitřní čtverec
+            '"diamond"': diamant
             '"circle"': kruh
             '"grid"': mřížka
+            '"top"': horní řádek
             '"row"': řádek
+            '"bottom"': dolní řádek
+            '"left"': levý sloupec
             '"column"': sloupec
+            '"right"': pravý sloupec
             '"x"': křížem krážem
             '"plus"': plus
             '"random"': náhodně
