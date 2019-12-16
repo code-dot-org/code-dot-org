@@ -1105,9 +1105,31 @@ ru-RU:
         after: Когда вы закончите с каждым лепестком, будьте уверены, что вы использовали
           'двигаться вперед на 20 пикселей' до поворота на 60 градусов.
       course1_artist_loops_challenge1:
+        courseA_artist_loops_challenge1_a: |-
+          Ты можешь использовать циклы, чтобы создать стены и крышу. Попробуй повторить с разными блоками.
+
+          ![](https://images.code.org/1581a2f599b501103064fc9864aa964d-image-1491863694560.png)
+
+          Создай свой собственный дом или нажми ![](https://images.code.org/53090194cea5dbf35ce9e35205156f5d-image-1491864793265.png), чтобы подсмотреть некоторые идеи!
         courseA_artist_loops_challenge1_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseA_artist_loops_challenge1_c: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseA_artist_loops_challenge1_d: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      course1_artist_loops_challenge2:
+        harvey_tictactoe: Ты можешь использовать блоки `прыжок` для перемещения в
+          другие места.
+      course1_collector_loops_challenge1:
+        courseA_collector_loops_challenge1_a: Попробуй изменить цифру в каждом цикле,
+          если что-то пойдет не так.
+        courseA_collector_loops_challenge1_c: На правой стороне пещеры 6 драгоценных
+          камней, но тебе нужно только подойти и собрать их, 5 раз. Ты знаешь почему?
+      course1_collector_loops_challenge2:
+        courseA_collector_loops_challenge2_b: Тебе нужно использовать только один
+          блок ![](<https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34
+          PM.png>), чтобы решить эту задачу.
+        courseA_collector_loops_challenge2_a: |-
+          Ты можешь двигаться назад и вернуться на дорожку во второй раз, прежде чем идти на юг.
+
+          ![](<https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png>)
       course1_maze_debugging_challenge1:
         courseA_maze_seq_challenge1_a: Некоторые пути приведут к взрывчатке, если
           ты уйдешь далеко.
@@ -1209,6 +1231,33 @@ ru-RU:
         courseE_bee_functions_challenge1_a: |-
           Если головоломка кажется сложной, то попробуйте построить немного функцию в то время.
           Добавьте некоторые блоки, а затем попробуйте его. Добавьте больше, а затем повторите попытку.  Вскоре вы пройдёте это задание!
+      courseB_collector_loops_challenge2a:
+        courseB_collector_loops_challenge2a_a: Если у вас что-то не получается, попробуйте
+          ещё раз. Не сдавайтесь!
+        courseB_collector_loops_challenge2a_b: Посмотрите на этот вариант прохождения
+          лабиринта. Видите ли вы способ, который вы можете повторить?
+        courseB_collector_loops_challenge2a_c: Чтобы собрать все сокровища, вам нужно
+          будет либо добавить два блока <xml> <block type="collector_collect"/></xml>
+          внутри вашего цикла, либо поместить блок внутри своего собственного блока
+          "repeat".
+      courseB_collector_loops_challenge2a_2018:
+        courseB_collector_loops_challenge2a_a: Если у вас что-то не получается, попробуйте
+          ещё раз. Не сдавайтесь!
+        courseB_collector_loops_challenge2a_b: Посмотрите на этот вариант прохождения
+          лабиринта. Видите ли вы способ, который вы можете повторить?
+        courseB_collector_loops_challenge2a_c: Чтобы собрать все сокровища, вам нужно
+          будет либо добавить два блока <xml> <block type="collector_collect"/></xml>
+          внутри вашего цикла, либо поместить блок внутри своего собственного блока
+          "repeat".
+      courseB_collector_loops_challenge2a_2019:
+        courseB_collector_loops_challenge2a_a: Если у вас что-то не получается, попробуйте
+          ещё раз. Не сдавайтесь!
+        courseB_collector_loops_challenge2a_b: Посмотрите на этот вариант прохождения
+          лабиринта. Видите ли вы способ, который вы можете повторить?
+        courseB_collector_loops_challenge2a_c: Чтобы собрать все сокровища, вам нужно
+          будет либо добавить два блока <xml> <block type="collector_collect"/></xml>
+          внутри вашего цикла, либо поместить блок внутри своего собственного блока
+          "repeat".
       courseB_maze_seq6:
         courseB_maze_seq5_c: Существует два способа для решения этой головоломки!
       courseB_maze_seq6_2018:

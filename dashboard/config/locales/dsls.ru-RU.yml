@@ -29,16 +29,17 @@ ru-RU:
         - {}
       2-3 Big Event Match 1:
         title: Соответствие
+        content1: "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
         content2: Сопоставить комбинацию кнопок с танцевальными движениями.
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
         - {}
       2-3 Binary Match 1:
         title: Соответствие
@@ -474,6 +475,47 @@ ru-RU:
         content1: Описание здесь
       Begin planning your project_2018_2019:
         content1: Описание здесь
+      Building a UI with Design Mode:
+        markdown: |
+          # Добро пожаловать в Режим дизайна Лаборатории приложений
+          В Режиме дизайна можно перетаскивать кнопки, списки другие элементы интерфейса на картинку телефона и размещать так, как нужно для работы создаваемого приложения.
+
+          ### Словарь
+          **Интерфейс пользователя (UI)** - Интерфейс пользователя или **UI** это то, как человек взаимодействует с компьютером или программой.  Наверное вам встречались такие способы взаимодействия:
+
+          * **Элементы интерфейса** или объекты  - кнопки, картинки, поля ввода текста, выпадающие меню, страницы и т. д.
+          * **События** или управляющие воздействия, например, *щелчок мыши*, *прокрутка*, *перемещение мыши*, *нажатие кнопки на клавиатуре*, и т. д.
+
+          В Лаборатории приложений легко добавить в программу элементы интерфейса и затем добавить код, который запустится при воздействии человека на элемент интерфейса (например, нажатие кнопки).  Это можно сделать в два этапа, и об этом наш урок.
+
+          Для начала переключимся в Режим дизайна и добавим в наше приложение один элемент интерфейса - кнопку.  Код для нее добавим позже.
+
+          <div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+          Над областью приложения (картинка телефона) есть переключатели между Режимом кода и Режимом дизайна. </p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>Для добавления элемента интерфейса просто перетащи его в область приложения ( картинка телефона). Когда он появится на странице приложения, можно менять его расположение, размер и много других свойств</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span><em>Свойства</em> таблица, которая содержит все параметры элемента интерфейса, которые можно поменять.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span><strong>Имя элемента (ID)</strong> позволяет обращаться к элементу в программе. Мы обсудим имена элементов позже.</p>
+          </div>
+
+          ![](https://images.code.org/01a31ac3be66deb6d01a92a1edfffd21-image-1476726587662.png)
+
+
+          <div style="column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 66%; float: right">
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span>Можно написать текст на кнопке такой, какой нужен в приложении.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">6.</span><strong>Замечание:</strong> Свойств у элемента много, чтобы увидеть все, нужно пользоваться полосой прокрутки.</p>
+          </div>
+
+          <div style="clear: both"></div>
+          <hr>
+
+          **Теперь попробуем!**
       CSD Header Size MC:
         answers:
         - {}
@@ -492,6 +534,63 @@ ru-RU:
         - correct: true
         - {}
         - {}
+      CSD U1 Lesson 5 Overview:
+        markdown: |
+          # Обзор
+
+          В этом уроке вы узнаете о различных типах устройств ввода и вывода, используемых компьютерами, а также о типах информации, которую они отправляют и получают.
+
+          ## Словарь
+
+          * **Ввод** - Устройство или компонент, который позволяет передавать информацию компьютеру
+          * **Вывод** - Любое устройство или компонент, который получает информацию от компьютера
+
+
+          ## Ресурсы
+
+          * [Ввод и Вывод - Руководство](https://docs.google.com/document/d/1ObS_kxkXoueaotPYFAEkcCDzn690zumqoLLnrU5kY2Q/export?format=pdf)
+      CSD U1 Lesson 6 Overview:
+        markdown: |
+          # Обзор
+
+          В этом уроке вы узнаете, как люди и компьютеры используют обработку для преобразования входных данных в выходные.
+
+          ## Словарь
+
+          * **Алгоритм** - Точная последовательность инструкций для процессов, которые могут быть выполнены компьютером
+
+          ## Ресурсы
+
+          * [Алгоритм Сортировки Карт - Руководство](https://docs.google.com/document/d/1o4kVRnXnigufkS9WsjHjeD38f8MQrX6qCEFpka-F9Oo/export?format=pdf)
+      CSD U1 Lesson 7 Overview:
+        markdown: |
+          # Обзор
+
+          На этом уроке вы узнаете о видах информации, которые хранятся в компьютере и о том, как хранилище является важной частью обработки информации.
+
+          ## Ресурсы
+
+          * [Хранение и Обработка - Руководство](https://docs.google.com/document/d/1I-OzbJizf7m5DK5jfRxDtSYtc_SoSk6vGtSM9tqlGw0/export?format=pdf)
+      CSD U1 Lesson 8 Overview:
+        markdown: |
+          # Обзор
+
+          В этом уроке вы узнаете о разных способах обработки информации, которые используют приложения для решения проблем.
+
+          ## Ресурсы
+
+          * [Исследование Приложений - Руководство](https://docs.google.com/document/d/1OW-fkwA7xeNZWiduWescL-6a6zFigtJVP7hfL1oNgVA/export?format=pdf)
+      CSD U1 Lesson 9 Overview:
+        markdown: |
+          # Обзор
+
+          Для этого проекта вы разработаете собственное приложение, которое решит проблему, которую вы должны определить.
+
+          ## Ресурсы
+
+          * [Приложения и Решение Проблем - Руководство](https://docs.google.com/document/d/1S7X-B2V1-WuT7ZLk1LAZRO1O5f4u7pgth4F7G00tGak/export?format=pdf)
+          * [Приложения и Решение Проблем - Экспертная Оценка](https://docs.google.com/document/d/13ekhJvtz1vovS6FhGBeDf1mcYFRyJe65bQdi8S8T9lU/export?format=pdf)
+          * [Приложения и Решение Проблем - Рубрика](https://docs.google.com/document/d/1ix0LfgiVglwyC5Bb6PBlfBrnbeCOz2wPIPTgXu-qMZE/export?format=pdf)
       CSD U2 Design Project:
         title: название
         content1: Описание здесь
@@ -1071,77 +1170,86 @@ ru-RU:
         content1: Описание здесь
       K-1 Artist 1 Multi 1:
         title: Вопрос с несколькими вариантами ответа
+        content1: "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500"
         questions:
         - text: Какие блоки решают эту головоломку?
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/W-S-S.png"
+        - text: "/script_assets/k_1_images/artist_images/E-S-S.png"
+          correct: true
+        - text: "/script_assets/k_1_images/artist_images/S-E-E.png"
+        - text: "/script_assets/k_1_images/artist_images/E-S.png"
       K-1 Artist 1 Multi 2:
         title: Вопрос с несколькими вариантами ответа
+        content1: "/script_assets/k_1_images/artist_images/square.png, 500"
         questions:
         - text: Какие блоки рисуют квадрат?
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/N-E-S-W.png"
+          correct: true
+        - text: "/script_assets/k_1_images/artist_images/E-S-W-N.png"
+        - text: "/script_assets/k_1_images/artist_images/N-S-E-W.png"
+        - text: "/script_assets/k_1_images/artist_images/N-W-S-E.png"
       K-1 Artist 2 Match 2:
         title: Соответствие
         content2: Сопоставь фигуры по типу.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/small_circle.png"
+        - text: "/script_assets/k_1_images/artist_images/large_square.png"
+        - text: "/script_assets/k_1_images/artist_images/medium_rectangle.png"
+        - text: "/script_assets/k_1_images/artist_images/small_triangle.png"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/medium_circle.png"
+        - text: "/script_assets/k_1_images/artist_images/small_square.png"
+        - text: "/script_assets/k_1_images/artist_images/large_rectangle.png"
+        - text: "/script_assets/k_1_images/artist_images/large_triangle.png"
       K-1 Bee 1 Multi 1:
         title: Вопрос с несколькими вариантами ответа
+        content1: "/script_assets/k_1_images/bee_images/1nectar+2nectar.png"
         questions:
         - text: Сколько здесь порций нектара?
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+          correct: true
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/4nectar.png"
       K-1 Bee 1 Multi 2:
         title: Вопрос с несколькими вариантами ответа
+        content1: "/script_assets/k_1_images/bee_images/2nectar+2nectar.png"
         questions:
         - text: Сколько здесь порций нектара?
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/k_1_images/bee_images/nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/4nectar.png"
+          correct: true
       K-1 Bee Loops Match 1:
         title: Соответствие
         content2: Сопоставь блоки
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/r4_gnectar.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+        - text: "/script_assets/k_1_images/bee_images/r5_ghoney.png"
+        - text: "/script_assets/k_1_images/move_blocks/r5_E.png"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/4_gnectar.png"
+        - text: "/script_assets/k_1_images/move_blocks/NNN.png"
+        - text: "/script_assets/k_1_images/bee_images/5_ghoney.png"
+        - text: "/script_assets/k_1_images/move_blocks/EEEEE.png"
       K-1 Big Event Match 1:
         title: Соответствие
+        content1: "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
         content2: Сопоставить комбинацию кнопок с танцевальными движениями.
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
       K-1 Digital Footprint Multi 1:
         title: Вопрос с несколькими вариантами ответа
         questions:
@@ -1153,113 +1261,134 @@ ru-RU:
         - correct: true
       K-1 Getting Loopy Multi 1:
         title: Вопрос с несколькими вариантами ответа
+        content1: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png"
         questions:
         - text: Как бы ты упростил эту последовательность с помощью циклов?
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png"
       K-1 Happy Maps Multi 1:
         title: Вопрос с несколькими вариантами ответа
+        content1: "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
         questions:
         - text: Какая стрелка направит Флурба к сокровищу?
         answers:
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/up.png"
         - text: "/script_assets/k_1_images/unplugged_images/down.png"
           correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/left.png"
+        - text: "/script_assets/k_1_images/unplugged_images/right.png"
       K-1 Keep it Private Multi 1:
         title: Вопрос с несколькими вариантами ответа
         questions:
         - text: Какой информацией следует <strong>не</strong> поделиться онлайн?
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png"
       K-1 Maze Debugging Multi 1:
         title: Вопрос с несколькими вариантами ответа
+        content1: "/script_assets/k_1_images/maze_images/EESq.png, 700"
         questions:
         - text: Какой блок должен быть последним?
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/N.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/S.png"
+        - text: "/script_assets/k_1_images/move_blocks/E.png"
+        - text: "/script_assets/k_1_images/move_blocks/W.png"
       K-1 Maze Loops Multi 1:
         title: Вопрос с несколькими вариантами ответа
+        content1: "/script_assets/k_1_images/move_blocks/NNNequals.png, 300"
         questions:
         - text: Выбери аналогичный блок «повторить».
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/r3_NN.png"
+        - text: "/script_assets/k_1_images/move_blocks/r4_N.png"
       K-1 Maze Loops Multi 2:
         title: Вопрос с несколькими вариантами ответа
+        content1: "/script_assets/k_1_images/move_blocks/SESESEequals.png, 240"
         questions:
         - text: Выбери правильный блок «повторить».
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/k_1_images/move_blocks/r3_S.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_ES.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_SE.png"
+          correct: true
       K-1 Maze Match 1:
         title: Соответствие
         content2: Сопоставь головоломки и блоки
         pre_title: Инструкции
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/maze_images/maze_EN.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_ENE.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_WW.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_WSS.png"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/EN.png"
+        - text: "/script_assets/k_1_images/move_blocks/ENE.png"
+        - text: "/script_assets/k_1_images/move_blocks/WW.png"
+        - text: "/script_assets/k_1_images/move_blocks/WSS.png"
       K-1 Maze Multiple Choice 2:
         title: Лабиринт
+        content1: "/script_assets/k_1_images/maze_images/maze_WS.png, 500"
         questions:
         - text: С помощью какого ответа можно пройти этот уровень?
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/EN.png"
+        - text: "/script_assets/k_1_images/move_blocks/ES.png"
+        - text: "/script_assets/k_1_images/move_blocks/WS.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/WN.png"
       K-1 Move It Multi 1:
         title: Вопрос с несколькими вариантами ответа
+        content1: "/script_assets/k_1_images/unplugged_images/move_it_1_q.png"
         questions:
         - text: Какой алгоритм приведет Флурба к цветам?
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/rightright.png"
+        - text: "/script_assets/k_1_images/unplugged_images/leftleft.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/upleft.png"
+        - text: "/script_assets/k_1_images/unplugged_images/leftdown.png"
       K-1 Plant a Seed Multi 1:
         title: Вопрос с несколькими вариантами ответа
+        content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png"
         questions:
         - text: Какой шаг должен быть в начале этого алгоритма?
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/poke-hole.png"
+        - text: "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png"
+        - text: "/script_assets/k_1_images/unplugged_images/dirty-teeth.png"
+          correct: true
       K-1 Plant a Seed Multi 2:
         title: Вопрос с несколькими вариантами ответа
+        content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png"
         questions:
         - text: Какой шаг должен стоять на месте пропуска в этом алгоритме?
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/brush-teeth.png"
+        - text: "/script_assets/k_1_images/unplugged_images/cover-seed.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/water-pot.png"
       K-1 Word Search Multi 1:
         title: Вопрос с несколькими вариантами ответа
+        content1: "/script_assets/k_1_images/search_images/move.png, 450"
         questions:
         - text: Какие блоки содержат буквы MOVE (ДВИЖЕНИЕ)?
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/EEES.png"
+        - text: "/script_assets/k_1_images/move_blocks/EESS.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/ESSS.png"
       K-1 Word Search Multi 3:
         title: Вопрос с несколькими вариантами ответа
+        content1: "/script_assets/k_1_images/search_images/square.png, 700"
         questions:
         - text: Какое слово записано?
         answers:
@@ -1273,6 +1402,25 @@ ru-RU:
       New Challenge Introduction:
         title: название
         content1: Описание здесь
+        markdown: "### Новая задача: взломать случайный шифр подстановки...с новым
+          виджетом\n\nЧто, если вместо того, чтобы переместить весь алфавит, мы сопоставили
+          каждую букву алфавита случайной другой букве алфавита? Это называется **шифром
+          случайной подстановки**.\n\n![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)\n\nТеперь
+          вместо того, чтобы секретное сообщение было закодировано простым алфавитным
+          сдвигом, вы столкнетесь с сообщениями, закодированными **случайной подстановкой**.\n\nЭто
+          гораздо труднее взломать и требует более сложного инструмента, так что...\n\nКогда
+          вы нажмете кнопку Продолжить, вы увидите **новую, более сложную версию инструмента
+          шифрования**, которая показывает вам много разных вещей.\n\nНо что он делает-это
+          немного загадка!\n### Ваша задача:\n \n* Выясните, что происходит в этой
+          новой версии инструмента\n* Какая информация представляется вам?\n* Выясните,
+          что инструмент позволяет вам делать\n* Как обычно: вы не можете сломать
+          его.  Так что нажимайте на вещи, копайтесь.\n* Если вы поймете это, вы можете
+          взломать сообщение, закодированное со случайной подстановкой.\n\n### Интересный
+          факт\n\nЗнаете ли вы, что **E** является наиболее распространенной буквой,
+          используемой в английском языке?\n\n### Собраться и обсудить\nЧерез некоторое
+          время, играя с ним, вы должны собраться вместе с кем-то :партнером, небольшой
+          группой, целым классом, чтобы обсудить то, что вы нашли, и проверить, что
+          вы знаете, что происходит, и различные способы использования инструмента.\n\n\n"
       OPD-K5 Stage3aGo:
         title: название
         content1: Описание здесь
@@ -1289,13 +1437,13 @@ ru-RU:
 
           <div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
 
-          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>Два переключателя над картинкой Телефон нужны для переключения между Режимом дизайна и Режимом кодирования..</p>
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span> Два переключателя над картинкой Телефон нужны для переключения между Режимом дизайна и Режимом кодирования..</p>
 
-          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>Для добавления элемента интерфейса в приложение просто перетащи его в Область приложения (на картинку телефона). Там его можно перемещать, изменять его размер и еще много разных свойств этого элемента. </p>
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span> Для добавления элемента интерфейса в приложение просто перетащи его в Область приложения (на картинку телефона). Там его можно перемещать, изменять его размер и еще много разных свойств этого элемента. </p>
 
-          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span><em>Вкладка Свойства</em> показывает все свойства элемента интерфейса, которые можно изменить для настройки его внешнего вида..</p>
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span><em> Вкладка Свойства</em> показывает все свойства элемента интерфейса, которые можно изменить для настройки его внешнего вида..</p>
 
-          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span><strong>Идентификатор элемента</strong> служит ссылкой на элемент в коде. Мы еще поговорим об идентификаторах позже..</p>
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span><strong> Идентификатор элемента</strong> служит ссылкой на элемент в коде. Мы еще поговорим об идентификаторах позже..</p>
           </div>
 
           ![](https://images.code.org/01a31ac3be66deb6d01a92a1edfffd21-image-1476726587662.png)
@@ -1303,22 +1451,128 @@ ru-RU:
 
           <div style="column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 66%; float: right">
 
-          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span>Можно поменять текст на кнопке на любой, который нужен.</p>
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span> Можно поменять текст на кнопке на любой, который нужен.</p>
 
-          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">6.</span><strong>Замечание:</strong>Листайте вниз, чтобы увидеть остальные свойства элемента, "скрытые" ниже.
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">6.</span><strong> Замечание:</strong>Листайте вниз, чтобы увидеть остальные свойства элемента, "скрытые" ниже.
           </div>
 
           <div style="clear: both"></div>
           <hr>
 
           **Итак, попробуем!**
+      'Overview: Images':
+        markdown: |+
+          # Картинки
+
+          ## Введи URL адрес картинки
+
+          <img src="https://images.code.org/acf4542eda586e7b73bc27dd8746848c-image-1477675154724.png" style="width: 250px; float: right">
+
+          URL адрес можно получить несколькими способами
+
+          Универсальный способ (показан справа)- найти картинку на WEB странице и кликнуть по ней правой кнопкой мыши и выбрать что-то похожее на "Copy Image Address" (Скопировать адрес картинки). Затем его можно вставить в текстовое поле в App Lab.
+
+          If you're unsure, you can also choose an option like "Open Image in New Tab" which isolate the image by itself and the URL will show in the address bar, which you can copy/paste into App Lab.
+
+          **Common Mistake**: Using the URL of an *image search web site* rather than a URL of the image itself.
+
+          * Make sure you get the path to an actual image file - something that ends with **.jpg**, **.gif** or **.png**.
+          * A URL that starts like this: `https://www.google.com/search?q=cat&espv=2&biw=1497....`  is probably wrong.
+
+
+          ## Upload your own images
+
+          If you have saved images on your computer you can upload them into app lab's **asset manager**.  Just **click Upload File** and follow the dialogs on screen.
+
+          For images the file must be of type: **.jpg**, **.png**, or **.gif**
+
+          Once you've uploaded the image then you need to **Choose** it to set the image to that file. If you add multiple images you'll see them all listed every time you upload a file and you can choose to use *any* file that you've already uploaded.
+
+          ![](https://images.code.org/d64d7e3dadc882897e450b00a0fc6cb2-image-1476896824985.gif)
+
+          ### Click Continue to try it!
+
+
       Prepare for your presentation:
         title: название
         content1: Описание здесь
       'Technique: Frequency Analysis':
+        title: Как взломать шифр подстановки
         content1: Описание здесь
+        markdown: "# Взломать шифр случайной подстановки\n\nЛучший метод для взлома
+          случайного шифра подстановки известен как **частотный анализ**\n\nВзято
+          из: [wikipedia](https://en.wikipedia.org/wiki/Frequency_analysis)\n\n* Частотный
+          анализ-это метод, основанный на том, как часто некоторые буквы появляются
+          на английском языке по сравнению с другими.\n* Например, данный раздел английского
+          текста, *Е*, *Т*, *А* и *O* являются наиболее распространенными,  *Z*, *Q*
+          и *X* являются редкими. Аналогично, *TH*, * ER*, * ON* и *AN* являются наиболее
+          распространенными парами букв, которые встречаются рядом друг с другом.\n*На
+          самом деле, распределение букв примерно одинаково почти для всех образцов
+          английского текста.\n\n\nВерсия виджета на предыдущей странице предназначена
+          для того, чтобы помочь вам **взломать шифр подстановки с помощью частотного
+          анализа**.\n\nАнализируя частоту букв в зашифрованном сообщении по сравнению
+          с частотой букв в типичном произведении английской прозы,вы можете сузить
+          круг возможных соответствий букв.\n\nИнструмент показывает, как частота
+          букв в зашифрованном тексте (оранжевый) сравнивается с частотами из типичного
+          английского языка (синий).\n\n### Совет: как начать?\n\n1. Найдите короткие
+          слова и \"взломайте\" их в первую очередь.  Сколько однобуквенных слов вы
+          знаете? (\"a)\"  Очень распространенное слово из 3 букв- \"the\".\n2. После
+          того, как вы сделали это, у вас есть замены для некоторых из наиболее распространенных
+          букв.  Вы должны быть в состоянии использовать интуицию, чтобы посмотреть
+          на другие слова с этими частичными заменами и сделать догадки.\n3. После
+          того, как вы найдете только несколько трудных букв, остальные быстро станут
+          понятны.\n4. Сравнение частот букв дает хорошее понимание для создания разумных
+          догадок.\n\n### Попробуй это:\nАнимация ниже показывает, что кто-то начинает
+          работу.  Вот что они пытались сделать\n\n* Сначала отсортируйте символы
+          по частоте. \n* Определите группу символов, которые могут соответствовать
+          слову \"the\".  \nЭто хорошее начало!\n\n![](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)\n\n##
+          Хороша ли случайная подстановка?\n* После небольшой практики, сколько времени
+          вам потребуется, чтобы взломать случайный шифр подстановки?\n* Это хорошо
+          или нет?\n\n\n"
       Terminology Recap:
+        title: Это было легко, что дальше?
         content1: Описание здесь
+        markdown: |
+          # Пауза и возврат
+
+          Сообщения, зашифрованные с помощью шифра Цезаря, очень легко взломать, особенно с помощью вычислительного инструмента. Теперь, когда у вас была небольшая практика взлома алфавитного шифра сдвига (довольно легко, да?) давайте попробуем что-нибудь более сложное.
+
+          **Повторение терминологии:**
+
+          * ** Шифрование ** - процесс кодирования сообщений, чтобы держать их в секрете, так что только" уполномоченные " стороны могут прочитать его.
+          * ** Расшифровка** - процесс, который отменяет шифрование, принимая секретное сообщение и воспроизводя начальный простой текст.
+          * ** Шифр ** - общий термин для метода (или алгоритма), который выполняет шифрование.
+          * ** Шифр Цезаря ** - техника шифрования, которая сдвигает алфавит на некоторое количество символов.
+          * ** Взлом шифрования ** - когда вы пытаетесь расшифровать секретное сообщение *без* зная все особенности шифра, вы пытаетесь **взломать** шифрование.
+
+          Нажмите кнопку Продолжить, чтобы увидеть **следующее задание**...
+      Unit 1 Lesson 2 Overview:
+        markdown: |
+          # Обзор
+
+          На этом уроке вы изучите формальный процесс решения проблем, который поможет вам структурировать свой подход к широкому кругу проблем.
+
+
+          ## Ресурсы
+
+          * [Процесс Решения Проблем - Руководство](https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf)
+      Unit 1 Lesson 3 Overview:
+        markdown: |
+          # Обзор
+          В этом уроке вы примените процесс решения проблем к различным проблемам, чтобы изучить, как каждый шаг помогает вам разрабатывать и улучшать решения проблем.
+
+          ## Ресурсы
+
+          * [Решение Проблем - Руководство](https://docs.google.com/document/d/1cym5lMuy41CbvXYe7F57N2XfI6Afp0hJsHovhR0GD2M/export?format=pdf)
+      Unit 1 Lesson 4 Overview:
+        markdown: |
+          # Обзор
+
+          В этом уроке вы начнете думать о том, как компьютеры помогают решать определенные виды проблем, а также изучите основные функции всех компьютеров.
+
+          ## Ресурсы
+
+          * [Что Такое Компьютер - Руководство](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)
       behaviors 1 predict:
         questions:
         - {}
@@ -1987,6 +2241,14 @@ ru-RU:
         - correct: true
         - {}
         - {}
+      csd-pre-survey-2017-levelgroup:
+        markdown: |
+          Класс разбивается на группы, чтобы проектировать лодки из алюминиевой фольги, которые должны выдержать как можно больше копеек. В конце урока группы размышляют над своим опытом в этой деятельности и устанавливают связи с типами решения проблем, с которыми он будут сталкиваться до конца курса.
+
+
+          ## Ресурсы
+
+          * [Алюминиевые лодки](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
       grade2_multi_collector_A_predict1:
         questions:
         - {}
