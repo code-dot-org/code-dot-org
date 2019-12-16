@@ -59,6 +59,7 @@ export default storybook => {
           incomplete={0}
           imperfect={0}
           perfect={20}
+          showLessonNumber={true}
           lessonNumber={88}
         />
       )
@@ -72,6 +73,7 @@ export default storybook => {
           incomplete={0}
           imperfect={0}
           perfect={0}
+          showLessonNumber={true}
           lessonNumber={1}
         />
       )
