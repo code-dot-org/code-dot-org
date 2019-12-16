@@ -358,10 +358,15 @@ fil:
           FORMAT:
             '"border"': border
             '"inner"': kwadrado sa loob
+            '"diamond"': diyamante
             '"circle"': bilog
             '"grid"': grid
+            '"top"': pinakamataas na hilera
             '"row"': hilera
+            '"bottom"': pinakamababang hilera
+            '"left"': kaliwang kolum
             '"column"': kolum
+            '"right"': kanang kolum
             '"x"': criss-cross
             '"plus"': idagdag
             '"random"': nang hindi pinipili
