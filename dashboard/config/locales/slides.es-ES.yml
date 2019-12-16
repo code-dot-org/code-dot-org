@@ -3894,6 +3894,11 @@ es:
       4:
         text: Eche un vistazo e intente experimentar con estos nuevos bloques y características.
           ¿Crearás un baile cuidadosamente coreografiado para tu canción favorita?
+    mc_2018_conditionals:
+      2:
+        text: Mi nombre es Netty, bienvenidos a mis ruinas. Tomamos decisiones a cada
+          momento basándonos en condiciones. Si parece que va a llover, nos llevamos
+          un paraguas. Si estamos hambrientos, comemos.
     mc_2018_closing:
       5:
         text: "¡Qué gran día! Toda la búsqueda del tesoro nos llevó a construir un
@@ -4025,16 +4030,20 @@ es:
           y creo que es importante que las personas controlen la tecnología que literalmente
           controla sus vidas.
       5:
+        image: notes/hoc_dance_measures_2019_5.png
         text: Para que tus bailarines se suelten, necesitarás un bloque de evento
           verde. Este bloque de eventos dice "después de 4 medidas".
       6:
+        image: notes/hoc_dance_measures_2019_6.png
         text: Si arrastra un bloque púrpura de "hacer para siempre", puede elegir
           un baile para que lo haga su bailarín. Debido a que está bajo el bloque
           de eventos "después de 4 medidas", su bailarín esperará cuatro compases
           de la canción antes de comenzar su baile.
       7:
+        image: notes/hoc_dance_measures_2019_7.png
         text: Vigile el contador de medidas en la parte superior del área de visualización.
       8:
+        image: notes/hoc_dance_measures_2019_8.png
         text: Mire y escuche el evento que activará el código de baile. Y en el momento
           justo, nuestro bailarín comienza a ir.
     hoc_dance_properties_2019:
@@ -4058,6 +4067,8 @@ es:
           cambiar las propiedades de un bailarín. Las propiedades describen cosas
           como la posición del bailarín en la pantalla, el tamaño del bailarín y el
           color del bailarín.
+      10:
+        image: notes/hoc_dance_properties_2019_10.png
     hoc_dance_congrats_2019:
       1:
         text: 'Hora de Codificar | Fiesta de Baile: Festejando!'

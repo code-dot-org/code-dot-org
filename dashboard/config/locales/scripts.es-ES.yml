@@ -1789,6 +1789,8 @@ es:
               name: Booleanos y condicionales
             Collision Detection:
               name: Detección de colisiones
+            Collisions:
+              name: Colisiones
             Functions:
               name: funciones
             Velocity:
@@ -1874,6 +1876,8 @@ es:
               name: Desvío de Algoritmos - Árbol de Expansión Mínima
             Algorithms Detour - Shortest Path:
               name: Desvío de Algoritmos - El Camino Más Corto
+            Unit 1 - How Routers Learn:
+              name: Unidad 1 - Cómo aprenden los enrutadores
         cspunit1-support:
           stages:
             Sending Binary Messages:
@@ -1900,6 +1904,12 @@ es:
               name: Modo de diseño
         CSDU2-Draft:
           stages:
+            Text on the Web:
+              name: Texto en la web
+            Website Design:
+              name: Diseño de página web
+            Classes:
+              name: Clases
             Peer Review:
               name: Revisión por pares
         CSDU5-Draft:
@@ -2097,6 +2107,7 @@ es:
                 para animar y controlar un solo sprite y construir un juego simple
                 en el que un personaje vuela y recoge monedas. '
             Collisions:
+              name: Colisiones
               description_student: La clase programa sus sprites para interactuar
                 de nuevas maneras. Después de una breve revisión de cómo usaron el
                 bloque isTouching, la clase intercambia ideas sobre otras formas en
@@ -2364,6 +2375,8 @@ es:
                 sobre el impacto de las aplicaciones en la sociedad. '
         csp-online-test:
           stages:
+            'Lessons 1 - 3: Algorithms':
+              name: 'Lecciones 1 - 3: Algoritmos'
             Unit 5 Overview:
               name: Unidad 5 visión general
         basketball:
@@ -2394,6 +2407,12 @@ es:
           stages:
             new stage:
               name: nueva etapa
+            Website Design:
+              name: Diseño de página web
+            Text on the Web:
+              name: Texto en la web
+            Classes:
+              name: Clases
             Peer Review:
               name: Revisión por pares
             Sources and Search Engines:
@@ -2488,6 +2507,8 @@ es:
               name: Ciudadanía Digital
             Build a Star Wars Game:
               name: Construye un juego de la Guerra de las Galaxias
+            Build Your Project:
+              name: Construye tu proyecto
             Internet:
               name: Internet
             Crowdsourcing:
@@ -2506,6 +2527,8 @@ es:
               name: Variables de sobre
             For Loop Fun:
               name: Diversión con bucles Para
+            Build Your Project:
+              name: Construye tu proyecto
             Songwriting with Parameters:
               name: Composicion musical con parámetros
             Introduction:
@@ -2549,6 +2572,10 @@ es:
           stages:
             Welcome Back!:
               name: "¡Bienvenido de nuevo!"
+        csp3-support:
+          stages:
+            'Lessons 1 - 3: Algorithms':
+              name: 'Lecciones 1 - 3: Algoritmos'
         csdgraveyard:
           stages:
             new stage:
@@ -2663,6 +2690,8 @@ es:
               name: Velocidad
             Collision Detection:
               name: Detección de colisiones
+            Collisions:
+              name: Colisiones
             Functions:
               name: funciones
             'Project: Design a Game':
@@ -2692,12 +2721,16 @@ es:
               name: Velocidad
             Collision Detection:
               name: Detección de colisiones
+            Collisions:
+              name: Colisiones
             Functions:
               name: funciones
             'Project: Design a Game':
               name: 'Proyecto: Diseñar un juego'
         csd2-draft:
           stages:
+            Text on the Web:
+              name: Texto en la web
             Lists:
               name: Listas
         csd3-chapters:
@@ -2712,6 +2745,8 @@ es:
               name: Velocidad
             Collision Detection:
               name: Detección de colisiones
+            Collisions:
+              name: Colisiones
             Functions:
               name: funciones
             'Project: Design a Game':
@@ -2742,6 +2777,12 @@ es:
               name: "¡Participe en un estudio longitudinal!"
         csd2-old:
           stages:
+            Website Design:
+              name: Diseño de página web
+            Text on the Web:
+              name: Texto en la web
+            Classes:
+              name: Clases
             Peer Review:
               name: Revisión por pares
         artist-and-bb8:
@@ -2808,6 +2849,8 @@ es:
               name: Diversión con bucles Para
             Songwriting with Parameters:
               name: Composicion musical con parámetros
+            Build Your Project:
+              name: Construye tu proyecto
             Build a Star Wars Game:
               name: Construye un juego de la Guerra de las Galaxias
               description_student: Siente la fuerza cuando construyes tu propio juego
@@ -2839,6 +2882,8 @@ es:
           stages:
             'Algorithms: Tangrams':
               name: 'Algoritmos: Tangrams'
+            Build Your Project:
+              name: Construye tu proyecto
             Building a Foundation:
               name: Construyendo una Base
             Loops in Artist:
@@ -2874,6 +2919,8 @@ es:
               name: Diversión con bucles Para
             Songwriting with Parameters:
               name: Composicion musical con parámetros
+            Build Your Project:
+              name: Construye tu proyecto
             Events in Star Wars:
               name: Eventos en la Guerra de las Galaxias
             Building a Foundation:
@@ -2948,6 +2995,8 @@ es:
               name: Condicionales
             Build a Star Wars Game:
               name: Construye un juego de la Guerra de las Galaxias
+            Build Your Project:
+              name: Construye tu proyecto
             Internet:
               name: Internet
             Crowdsourcing:
@@ -2984,6 +3033,8 @@ es:
               name: Bucles en Artista
             Events in Star Wars:
               name: Eventos en la Guerra de las Galaxias
+            Build Your Project:
+              name: Construye tu proyecto
             Building a Foundation:
               name: Construyendo una Base
             Nested Loops:
@@ -3002,6 +3053,8 @@ es:
               name: Condicionales
             Build a Star Wars Game:
               name: Construye un juego de la Guerra de las Galaxias
+            Build Your Project:
+              name: Construye tu proyecto
             Internet:
               name: Internet
             Crowdsourcing:
@@ -3022,6 +3075,8 @@ es:
               name: Diversión con bucles Para
             Songwriting with Parameters:
               name: Composicion musical con parámetros
+            Build Your Project:
+              name: Construye tu proyecto
         hocali:
           stages:
             new stage:
@@ -3110,6 +3165,8 @@ es:
               name: Introducción
             Conditionals:
               name: Condicionales
+            Build Your Project:
+              name: Construye tu proyecto
             Internet:
               name: Internet
             Crowdsourcing:
@@ -3134,6 +3191,8 @@ es:
               name: Diversión con bucles Para
             Songwriting with Parameters:
               name: Composicion musical con parámetros
+            Build Your Project:
+              name: Construye tu proyecto
         csd6-old:
           stages:
             Lists:
@@ -3150,6 +3209,8 @@ es:
               name: Velocidad
             Collision Detection:
               name: Detección de colisiones
+            Collisions:
+              name: Colisiones
             Functions:
               name: funciones
           description_short: Programación
@@ -3292,6 +3353,7 @@ es:
                 para animar y controlar un solo sprite y construir un juego simple
                 en el que un personaje vuela y recoge monedas. '
             Collisions:
+              name: Colisiones
               description_student: La clase programa sus sprites para interactuar
                 de nuevas maneras. Después de una breve revisión de cómo usaron el
                 bloque isTouching, la clase intercambia ideas sobre otras formas en
@@ -3375,6 +3437,8 @@ es:
               name: El Gran Evento
             Events in Star Wars:
               name: Eventos en la Guerra de las Galaxias
+            Build Your Project:
+              name: Construye tu proyecto
             'Loops: Getting Loopy':
               name: Bucleandose
             'Concept Practice with Minecraft ':
@@ -3487,6 +3551,8 @@ es:
                 una y otra vez dentro de tu programa más grande. Esta clase  ayudará
                 a los alumnos a entender intuitivamente por qué la combinación de
                 partes de código en funciones es una práctica tan útil.
+            Build Your Project:
+              name: Construye tu proyecto
             Internet:
               name: Internet
             Crowdsourcing:
@@ -3519,6 +3585,8 @@ es:
               name: Diversión con bucles Para
             Songwriting with Parameters:
               name: Composicion musical con parámetros
+            Build Your Project:
+              name: Construye tu proyecto
             Conditionals with Cards:
               name: Condicionales con tarjetas
         csp1-2018:
@@ -3819,6 +3887,8 @@ es:
               name: Variables de sobre
             For Loop Fun:
               name: Diversión con bucles Para
+            Build Your Project:
+              name: Construye tu proyecto
             The Artist:
               name: El artista
             Internet:
@@ -3898,6 +3968,8 @@ es:
                 una y otra vez dentro de tu programa más grande. Esta clase  ayudará
                 a los alumnos a entender intuitivamente por qué la combinación de
                 partes de código en funciones es una práctica tan útil.
+            Build Your Project:
+              name: Construye tu proyecto
             Internet:
               name: Internet
             Crowdsourcing:
@@ -3925,6 +3997,8 @@ es:
               name: Variables de sobre
             For Loop Fun:
               name: Diversión con bucles Para
+            Build Your Project:
+              name: Construye tu proyecto
             Binary Bracelets:
               name: Pulseras Binarias
             'Unplugged: Binary':
@@ -4214,6 +4288,7 @@ es:
                 para animar y controlar un solo sprite y construir un juego simple
                 en el que un personaje vuela y recoge monedas. '
             Collisions:
+              name: Colisiones
               description_student: La clase programa sus sprites para interactuar
                 de nuevas maneras. Después de una breve revisión de cómo usaron el
                 bloque isTouching, la clase intercambia ideas sobre otras formas en
@@ -4652,6 +4727,7 @@ es:
                 para animar y controlar un solo sprite y construir un juego simple
                 en el que un personaje vuela y recoge monedas. '
             Collisions:
+              name: Colisiones
               description_student: La clase programa sus sprites para interactuar
                 de nuevas maneras. Después de una breve revisión de cómo usaron el
                 bloque isTouching, la clase intercambia ideas sobre otras formas en
