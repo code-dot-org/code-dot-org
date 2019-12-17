@@ -21,7 +21,8 @@ const styles = {
     textAlign: 'center'
   },
   mainColumnCell: {
-    width: 80
+    width: 80,
+    textAlign: 'center'
   },
   descriptionCell: {
     maxWidth: 470

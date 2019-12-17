@@ -24,7 +24,6 @@ export default class ProgressBoxForLessonNumber extends Component {
         incomplete={completed ? 0 : 20}
         imperfect={0}
         perfect={completed ? 20 : 0}
-        showLessonNumber
         lessonNumber={lessonNumber}
       />
     );
