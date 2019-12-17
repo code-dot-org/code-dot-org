@@ -156,7 +156,13 @@ class VisualizerModal extends React.Component {
               displayName="Chart Type"
               options={['Bar Chart', 'Histogram', 'Scatter Plot', 'Cross Tab']}
               value={this.state.chartType}
-              onChange={event => this.setState({chartType: event.target.value})}
+              onChange={event =>
+                this.setState({
+                  chartType: event.target.value,
+                  selectedColumn1: '',
+                  selectedColumn2: ''
+                })
+              }
             />
 
             {this.state.chartType === 'Histogram' && (
@@ -219,7 +225,10 @@ class VisualizerModal extends React.Component {
               disabledOptions={[]}
               value={this.state.filterColumn}
               onChange={event =>
-                this.setState({filterColumn: event.target.value})
+                this.setState({
+                  filterColumn: event.target.value,
+                  filterValue: ''
+                })
               }
               inlineLabel
             />
