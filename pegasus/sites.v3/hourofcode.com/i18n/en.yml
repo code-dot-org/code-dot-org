@@ -44,11 +44,13 @@
   hoc_overview_oceans_tutorial_desc: 'Learn about artificial intelligence (AI), machine learning, training data, and bias, while exploring ethical issues and how AI can be used to address world problems.'
 
   ai_video_title_what_is_ai: 'What is AI?'
+  ai_video_title_algorithm_bias: 'Fighting bias in algorithms'
   ai_video_title_phone_knows_dog: 'How does your phone know this is a dog?'
   ai_video_title_what_is_ml: 'What is Machine Learning?'
   ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small and Prickly'
   ai_video_title_ethics_of_ai: 'Ethics of AI'
   ai_video_title_ml_human_bias: 'Machine Learning and Human Bias'
+  ai_video_title_seeing_ai: 'Seeing AI: Making the visual world more accessible'
 
   activity: 'Activity'
   name: 'Name'
@@ -72,16 +74,16 @@
   ai_audience_hs: 'High school'
 
   ai_activity_header: 'Activities Powered by AI and ML'
-  ai_activity_teachable: 'Teachable Machine'
-  ai_activity_teachable_desc: 'Train a computer to recognize your own images, sounds, and poses.'
+  ai_activity_seeing_ai: 'Seeing AI'
+  ai_activity_seeing_ai_desc: 'A free app that narrates the world around you in a variety of languages.'
   ai_activity_quick_draw: 'Quick, Draw!'
   ai_activity_quick_draw_desc: 'Can a neural network learn to recognize doodling?'
+  ai_activity_teachable: 'Teachable Machine'
+  ai_activity_teachable_desc: 'Train a computer to recognize your own images, sounds, and poses.'
   ai_activity_experiments: 'AI Experiments with Google'
   ai_activity_experiments_desc: 'Start exploring machine learning through pictures, drawings, language, music, and more.'
-  ai_activity_mixlab: 'MixLab'
-  ai_activity_mixlab_desc: 'Make music using voice commands.'
-  ai_activity_gaugan: 'GauGAN Beta'
-  ai_activity_gaugan_desc: 'Paint photo-realistic landscapes with the help of AI.'
+  ai_activity_zooniverse: 'Zooniverse - Snapshot Mountain Zebra'
+  ai_activity_zooniverse_desc: 'Help protect the endangered Cape Mountain Zebra by identifying the different animals in the images.'
 
   codeorg_homepage_hoc2018_curriculum: 'Go further with <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org courses</a>'
   codeorg_homepage_hoc2018_dance_heading: 'Create your own <span class="highlight-word">Dance&nbsp;Party</span>'
@@ -2412,7 +2414,7 @@
   tutorial_frogger_language: "English, Spanish, Italian, French, German, and Dutch"
   tutorial_tynkereco_language: "English only"
   tutorial_mitedarc_language: "English only"
-  tutorial_khan_language: "English, Portuguese (Brazil), Spanish"
+  tutorial_khan_language: "Czech, English, Portuguese (Brazil), Spanish"
   tutorial_tynkerd_language: "English only"
   tutorial_cdmy_language: "English, Spanish"
   tutorial_codestersdance_language: "English, Spanish"
@@ -2611,8 +2613,8 @@
   tutorial_wolframp_language: "English only"
   tutorial_wolframn_language: "English only"
   tutorial_soloweb_language: "English only"
-  tutorial_khanweb_language: "English, Portuguese (Brazil), Spanish"
-  tutorial_khandata_language: "English, Portuguese (Brazil), Spanish"
+  tutorial_khanweb_language: "Czech, English, Portuguese (Brazil), Spanish"
+  tutorial_khandata_language: "Czech, English, Portuguese (Brazil), Spanish"
   tutorial_robomeshiq_language: "English only"
   tutorial_googlelogo_language: "English only"
   tutorial_playtune_language: "English only"

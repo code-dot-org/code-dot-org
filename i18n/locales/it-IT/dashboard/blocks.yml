@@ -473,8 +473,12 @@ it:
             '"diamond"': diamante
             '"circle"': cerchio
             '"grid"': griglia
+            '"top"': prima fila
             '"row"': fila
+            '"bottom"': ultima fila
+            '"left"': colonna a sinistra
             '"column"': colonna
+            '"right"': colonna a destra
             '"x"': croce
             '"plus"': più
             '"random"': a caso
@@ -531,22 +535,29 @@ it:
             '"none"': Nessuno
             '"rand"': "(Casuale)"
             '"circles"': Tunnel
+            '"quads"': Angoli
             '"color_cycle"': Colori
             '"diamonds"': Rombi
             '"disco_ball"': Palla da discoteca
             '"fireworks"': Fuochi d'artificio
+            '"flowers"': Fiori
+            '"growing_stars"': Stelle nascenti
             '"swirl"': Ipnotico
             '"kaleidoscope"': Caleidoscopio
             '"lasers"': Pista da ballo laser
             '"splatter"': Schizzi di vernice
             '"rainbow"': Arcobaleno
+            '"ripples_random"': Increspature casuali
+            '"ripples"': Increspature
             '"snowflakes"': Neve
             '"text"': Titoli delle canzoni
+            '"squiggles"': Scarabocchi
             '"galaxy"': Spazio
             '"sparkles"': Scintille
             '"spiral"': Spirale
             '"disco"': Quadrati
             '"stars"': Stelle
+            '"music_wave"': Onde
           PALETTE:
             '"rave"': Bianco e nero
             '"cool"': Blu
@@ -614,9 +625,12 @@ it:
             '"none"': Nessuno
             '"rand"': "(Casuale)"
             '"bubbles"': Bolle
+            '"hearts_colorful"': Cuori colorati
             '"confetti"': Coriandoli
+            '"emojis"': Emoji
             '"hearts_red"': Cuori
             '"music_notes"': Note musicali
+            '"paint_drip"': Gocce di vernice
             '"pineapples"': Ananas
             '"pizzas"': Pizze
             '"smiling_poop"': Cacca
@@ -625,6 +639,7 @@ it:
             '"smile_face"': Smiley
             '"spotlight"': Riflettore
             '"color_lights"': Luci del palco
+            '"exploding_stars"': Starburst
             '"raining_tacos"': Tacos
       Dancelab_setProp:
         text: 'imposta la {PROPERTY} di {SPRITE} a {VAL} '
@@ -852,10 +867,33 @@ it:
             '"mid"': toni medi
             '"treble"': toni acuti
       Dancelab_translateStrings:
+        text: tradurre {STRING}
         options:
           STRING:
+            '"music_wave"': Onde
+            '"ripples"': Increspature
+            '"ripples_random"': Increspature casuali
+            '"quads"': Angoli
+            '"flowers"': Fiori
+            '"popsicles"': Ghiaccioli
+            '"squiggles"': Scarabocchi
+            '"growing_stars"': Stelle nascenti
+            '"emojis"': Emoji
             '"hearts_colorful"': Cuori
+            '"paint_drio"': Gocce di vernice
+            '"exploding_stars"': Starburst
+            '"row_top"': prima fila
+            '"row_bottom"': ultima fila
+            '"column_left"': colonna a sinistra
+            '"column_right"': colonna a destra
             '"diamond"': diamante
+            '"mural"': Murale
+            '"safari"': Safari
+            '"network"': Rete
+            '"highway"': Autostrada
+            '"stream"': Flusso
+            '"tile"': Piastrelle
+            '"shadow"': Ombra
             '"s"': s
             '"t"': t
             '"u"': u

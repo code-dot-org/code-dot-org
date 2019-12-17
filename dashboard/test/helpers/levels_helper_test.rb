@@ -430,7 +430,7 @@ class LevelsHelperTest < ActionView::TestCase
     # (position 4) Lockable 3
     # (position 5) Non-Lockable 2
 
-    input_dsl = <<-DSL.gsub(/^\s+/, '')
+    input_dsl = <<~DSL
       stage 'Lockable1',
         lockable: true;
       assessment 'LockableAssessment1';
@@ -494,8 +494,33 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal '/s/test_script/stage/2/puzzle/1/page/1', build_script_level_path(stage.script_levels[0], {puzzle_page: '1'})
   end
 
+  test 'build_script_level_path uses names for bonus levels to support cross-environment links' do
+    input_dsl = <<~DSL
+      stage 'Test bonus level links'
+      level 'Level1'
+      level 'BonusLevel1', bonus: true
+    DSL
+
+    create :level, name: 'Level1'
+    create :level, name: 'BonusLevel1'
+
+    script_data, _ = ScriptDSL.parse(input_dsl, 'test_bonus_level_links')
+
+    script = Script.add_script(
+      {name: 'test_bonus_level_links'},
+      script_data[:stages]
+    )
+
+    bonus_script_level = script.stages.first.script_levels[1]
+    uri = URI(build_script_level_path(bonus_script_level, {}))
+    assert_equal '/s/test_bonus_level_links/stage/1/extras', uri.path
+
+    query_params = CGI.parse(uri.query)
+    assert_equal bonus_script_level.level.name, query_params['level_name'].first
+  end
+
   test 'build_script_level_path handles bonus levels with or without solutions' do
-    input_dsl = <<-DSL.gsub(/^\s+/, '')
+    input_dsl = <<~DSL
       stage 'My cool stage'
       level 'Level1'
       level 'Level2'
@@ -521,13 +546,14 @@ class LevelsHelperTest < ActionView::TestCase
     uri = URI(build_script_level_path(sl, {}))
     query_params = CGI.parse(uri.query)
     assert_equal '/s/my_cool_script/stage/1/extras', uri.path
-    assert_equal sl.id.to_s, query_params['id'].first
+    assert_equal sl.level.name, query_params['level_name'].first
+    assert_nil query_params['solution'].first
 
     sl = stage.script_levels[3]
     uri = URI(build_script_level_path(sl, {solution: true}))
     query_params = CGI.parse(uri.query)
     assert_equal '/s/my_cool_script/stage/1/extras', uri.path
-    assert_equal sl.id.to_s, query_params['id'].first
+    assert_equal sl.level.name, query_params['level_name'].first
     assert_equal 'true', query_params['solution'].first
   end
 
