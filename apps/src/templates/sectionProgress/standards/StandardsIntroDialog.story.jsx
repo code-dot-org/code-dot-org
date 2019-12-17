@@ -6,6 +6,11 @@ export default storybook => {
   return storybook
     .storiesOf('Standards/StandardsIntroDialog', module)
     .add('overview', () => {
-      return <StandardsIntroDialog isOpen handleConfirm={action('Confirm')} />;
+      return (
+        <StandardsIntroDialog
+          isOpen
+          setCurrentUserHasSeenStandardsReportInfo={action('Has Seen True')}
+        />
+      );
     });
 };
