@@ -178,6 +178,11 @@ module CourseBlockHelper
       Script::TWENTY_HOUR_NAME => {
         title: I18n.t('upsell.20hour.title'),
         body: I18n.t('upsell.20hour.body')
+      },
+      Script::OCEANS_NAME => {
+        url: CDO.code_org_url('/oceans'),
+        title: data_t_suffix('script.name', id, 'title'),
+        body: data_t_suffix('script.name', id, 'description_short')
       }
     }
 

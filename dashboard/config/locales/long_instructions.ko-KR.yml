@@ -474,10 +474,6 @@ ko-KR:
             <title name="LAYOUT">"circle"</title>
           </block></xml>
         이제 여러 댄서들을 한번에 생성할 수 있습니다!
-      Dance_2019_07: |-
-        모든 댄서에게는 겉으로 보이는 것을 조정하는 _속성_이 있습니다.
-
-        댄서들의 크기를 변경해 댄서가 가까이 혹은 멀리 있도록 보이게 할 수 있습니다. 음악 시작 이후, 중간에 한 댄서 그룹의 크기를 변경하세요.
       Dance_2019_08: 댄서들에게는 색상을 덧댈 수 있는 “색조” 속성이 있습니다. 댄서 한 명(혹은 그룹 전체)의 색조를 바꾸어 보세요!
       Dance_2019_09: |-
         몇 번씩 트리거된 특별한 이벤트 종류입니다.
@@ -542,11 +538,11 @@ ko-KR:
         이 블록을 확인하세요.
 
         <xml>
-        <block type="Dancelab_makeNewDanceSpriteGroup">
-        <title name="N">6</title>
-        <title name="COSTUME">"DUCK"</title>
-        <title name="LAYOUT">"circle"</title>
-        </block></xml>
+          <block type="Dancelab_makeNewDanceSpriteGroup">
+            <title name="N">6</title>
+            <title name="COSTUME">"DUCK"</title>
+            <title name="LAYOUT">"circle"</title>
+          </block></xml>
 
         이제 한 번에 댄서 여러 명을 만들 수 있어요!
 
@@ -554,6 +550,14 @@ ko-KR:
       Dance_Party_11b: 이제 본격적인 댄스 시간이에요! 왼쪽 화살표 키를 누르면 고양이가 살짝 움직입니다. 오른쪽 화살표 키를 누르면
         로봇이 "드롭"합니다.
       Dance_Party_12: 이제 리듬을 타보세요! 자신만의 댄스를 만들어 친구와 공유하세요.
+      Dance_Party_extras_alternate_2019: |-
+        # 대형을 만들어 봅시다!
+
+        이 댄스를 확인하세요. <xml><block type="Dancelab_alternateMoves"><title name="GROUP">sprites</title><title name="N">2</title><title name="MOVE1">MOVES.Roll</title><title name="MOVE2">MOVES.ClapHigh</title></block></xml> 블록이 사용되어 댄스 내내 백업 댄서들의 대형을 바꿉니다. 다음 아이디어들을 시도하며 확장해 보세요.
+
+        -   다른 레이아웃에 두 번째 댄서 그룹 생성
+        -   키를 누르면 레이아웃 변경
+        -   댄서들이 대형을 바꾸면 속성 변경
       Dance_Party_extras_battle: |-
         # 댄스 크루
 
@@ -580,6 +584,15 @@ ko-KR:
         -   다른 음표 길이로 실험하세요.(2분 음표의 경우 0.5, 8분 음표의 경우 0.125)
         -   ‘마디 이후’ 이벤트를 추가하세요.
         -   "마디"를 "초"로 전환하는 방식으로 댄스의 타이밍을 시험해보세요.
+      Dance_Party_extras_every_beat_2019: |-
+        # 4분음표
+
+        저희의 댄스는 대부분 온전한 마디들을 사용했지만, 각 마디는 4분음표들로 되어 있습니다. 이 댄스는 [blockly block][0] 블록이 사용되어 댄서가 5번째 마디 이후 매 4분음표에서 손뼉을 칩니다.
+
+        블록의 숫자를 바꾸면 댄스가 어떻게 바뀌는지 알아보세요.
+
+        -   다른 길이의 음(예: 2분 음표는 0.5, 8분 음표는 0.125)으로 실험하세요.
+        -   다른 이벤트를 추가하세요.
       Dance_Party_extras_layout: |-
         # 대형 만들기
 
@@ -588,14 +601,6 @@ ko-KR:
         -   다른 레이아웃으로 두 번째 댄서 그룹 만들기
         -   키를 누를 때 레이아웃 변경
         -   댄서 대형을 바꿀 때 속성 변경
-      Dance_Party_extras_layout_2019: |-
-        # 대형을 만들어 봅시다!
-
-        이 댄스를 확인하세요. <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> 블록이 사용되어 댄스 내내 백업 댄서들의 대형을 바꿉니다. 다음 아이디어들을 시도하며 확장해 보세요.
-
-        -   다른 레이아웃에 두 번째 댄서 그룹 생성
-        -   키를 누르면 레이아웃 변경
-        -   댄서들이 대형을 바꾸면 속성 변경
       Dance_Party_extras_on_beat: |-
         # 저음, 중간음, 고음
 
@@ -906,3 +911,24 @@ ko-KR:
       iceage_throw_hearts: 시드는 그의 할머니인 그레니에게, 자기가 사랑한다는 것을 알리고 싶습니다. "캐릭터 던지기" 명령을
         사용해서 시드(캐릭터 1) 가 그레니(캐릭터 2) 에게 하트를 던지도록 해 주세요. 그 하트를 받으면 그레니의 분위기를 행복하게 바꾸면
         됩니다.
+      Dance_2019_07: "모든 댄서에게는 어떻게 보일지를 조정하는 _속성_들이 있습니다. \n\n댄서들이 가깝거나 멀게 보이도록 <xml><block
+        type=\"Dancelab_setPropEach\" block-text=\"the set block\"><title name=\"GROUP\"
+        config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;,
+        &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title><title
+        name=\"PROPERTY\">\"scale\"</title><title name=\"VAL\">???</title></block></xml>
+        블록을 녹색 이벤트 블록 밑에 사용하세요."
+      Dance_Party_extras_layout_2019: |-
+        # 형성하자!
+
+        에서 <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> 사용이 댄스를 체크 아웃[0] 블록 댄스 걸쳐 백업 댄서 '포메이션을 변경.
+
+        다른 레이아웃으로 두 번째 댄서 그룹 만들기
+        키를 누를 때 레이아웃 변경
+        댄서가 형성을 변경할 때 속성 변경
+      Dance_Party_extras_mixed_2019: |-
+        # 추가 버튼
+
+        이 댄스를 사용하면 댄서가 자동으로 춤추는 동안 실시간으로 댄서의 속성을 제어 할 수 있습니다. 버튼을 누를 때 다른 속성을 변경해보십시오. 예를 들면 다음과 같습니다.
+
+        "down"을 누를 때 댄서의 색조를 무작위로 지정합니다.
+        "space"를 누를 때 무작위 레이아웃의 댄서 그룹을 추가하십시오.

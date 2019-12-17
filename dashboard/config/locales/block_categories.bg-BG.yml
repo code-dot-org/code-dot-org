@@ -3,54 +3,26 @@ bg:
   data:
     block_categories:
       Actions: Действия
-      Loops: Повторения
-      Functions: Функции
-      Color: Цвят
-      Brushes: Четки
-      Math: Математика
-      Logic: Логика
-      Variables: Променливи
-      Number: Число
-      String: Низ
-      Image: Изображение
-      Boolean: Булеви стойности
-      Conditionals: Условия
-      Events: Събития
-      Games/Score: Игри/резултат
-      Comments: Коментари
-      Category: Категория
-      Prebuilt: Предварително създаден
-      Text: Текст
-      Picker: Избор
-      Comment: Коментар
-      Sprites: Спрайт
-      Behaviors: Поведения
-      'Variables ': 'Променливи '
-      Default: По подразбиране
-      Locations: Места
-      everythingelse: всичко останало
-      Location: Адрес
-      numbers: числа
-      Numbers: Числа
-      Input: Поле за въвеждане
-      Dancers: Танцьори
-      Groups: Групи
       Advanced: Разширено
-      Start: Старт
-      Music: Музика
-      Dancing: Танци
-      Sprite: Спрайт
-      Brush: Четка
-      Make Sprite: Направи Спрайт
-      Movement: Движение
-      Booleans: Booleans
-      Functional: Функционалност
-      Sprite Properties: Свойства на Спрайта
-      Predefined: Предварително-дефинирани
-      test: тест
-      test2: тест 2
-      Name: Име
-      NEW BLOCKS: НОВИ БЛОКОВЕ
+      Behaviors: Поведения
+      Brushes: Четки
+      Color: Цвят
+      Comment: Коментар
+      Comments: Коментари
+      Conditionals: Условия
+      Dancers: Танцьори
+      Default: По подразбиране
+      Events: Събития
+      Functions: Функции
       'Functions ': 'Функции '
       Game/Score: Игра/резултат
-      Function: Функция
+      Games/Score: Игри/резултат
+      Groups: Групи
+      Locations: Места
+      Logic: Логика
+      Loops: Повторения
+      Math: Математика
+      Numbers: Числа
+      Text: Текст
+      Variables: Променливи
+      'Variables ': 'Променливи '

@@ -3428,10 +3428,16 @@ pl:
               name: nowy etap
             What is a Computer?:
               name: Czym jest komputer?
+            Programming - Hour of Code:
+              name: Programowanie - Godzina Kodowania
             Simple Encryption:
               name: Proste szyfrowanie
+            Creating Webpages:
+              name: Tworzenie stron internetowych
             User Interfaces:
               name: Interfejsy użytkownika
+            Intro to App Lab (13+):
+              name: Wprowadzenie do App Lab (13+)
         allthesurveys:
           title: Wszystkie ankiety
         hero:
@@ -3493,6 +3499,7 @@ pl:
               name: Internet
             Crowdsourcing:
               name: Praca w grupie (Crowdsourcing)
+          title: Kurs E 2018 (Przestarzały!)
         course-f-2018:
           stages:
             Sequence in Maze:
@@ -4172,7 +4179,7 @@ pl:
             Dance Party:
               name: Potańcówka
           title: Potańcówka
-          description_short: Z piosenkami Katy Perry, Madonny, J. Balvina, Sia, Keitha Urbana, Ciary i 25 innych gwiazd!
+          description_short: Występują Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara i 25 innych gwiazd!
           description: Stwórz kod swojej własnej imprezy tanecznej i udostępnij ją swoim znajomym.
         frozen-2018-test-b:
           stages:
@@ -4197,7 +4204,6 @@ pl:
             Dance Party:
               name: Potańcówka
         dance-extras:
-          title: Nie przestawaj tańczyć
           description: Wyjdź poza pierwszą godzinę dzięki rozszerzonym pomysłom na projekt.
         coursef-2019:
           description_short: Poznaj wszystkie pojęcia z podstaw informatyki i stwórz własne dzieło sztuki, historyjkę lub grę.
@@ -4874,7 +4880,6 @@ pl:
             For Loops:
               name: Pętle dla (for)
         dance-extras-2019:
-          title: Nie przestawaj tańczyć
           description: Wyjdź poza pierwszą godzinę dzięki rozszerzonym pomysłom na projekt.
         csp10-pilot:
           stages:

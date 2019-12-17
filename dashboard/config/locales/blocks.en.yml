@@ -470,10 +470,15 @@ en:
           LAYOUT:
             '"border"': border
             '"inner"': inside square
+            '"diamond"': diamond
             '"circle"': circle
             '"grid"': grid
+            '"top"': top row
             '"row"': row
+            '"bottom"': bottom row
+            '"left"': left column
             '"column"': column
+            '"right"': right column
             '"x"': criss-cross
             '"plus"': plus
             '"random"': random
@@ -536,6 +541,7 @@ en:
             '"none"': None
             '"rand"': "(Random)"
             '"circles"': Circles
+            '"quads"': Angles
             '"color_cycle"': Colors
             '"diamonds"': Diamonds
             '"disco_ball"': Disco Ball
@@ -823,7 +829,7 @@ en:
             '"mid"': mid
             '"treble"': treble
       Dancelab_stopMapping:
-        text: "{SPRITE} stops {PROPERTY} following {RANGE}"
+        text: "{SPRITE} stop {PROPERTY} following {RANGE}"
         options:
           PROPERTY:
             '"scale"': size

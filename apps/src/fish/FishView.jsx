@@ -10,19 +10,23 @@ const styles = {
   container: {
     position: 'relative',
     width: '100%',
-    minWidth: '770px',
+    minWidth: '480px',
     margin: '0 auto',
     userSelect: 'none'
   },
   containerReact: {
     position: 'absolute',
     width: '100%',
-    minWidth: '770px',
+    minWidth: '480px',
     margin: '0 auto',
     userSelect: 'none',
     fontFamily: '"Gotham 4r", arial, sans-serif',
-    fontSize: '18px',
-    color: 'rgb(30,30,30)'
+    color: 'rgb(30,30,30)',
+    lineHeight: 1.3
+    // Note that fontSize has been removed from here and is set using CSS
+    // (in fish/style.scss) instead.  That way, CSS-based media queries in the
+    // same file can successfully override the font-size throughout the
+    // inheritance chain.
   },
   backgroundCanvas: {
     position: 'absolute',
@@ -45,7 +49,8 @@ class FishView extends React.Component {
   static propTypes = {
     isProjectLevel: PropTypes.bool.isRequired,
     isReadOnlyWorkspace: PropTypes.bool.isRequired,
-    onMount: PropTypes.func.isRequired
+    onMount: PropTypes.func.isRequired,
+    mobilePortraitWidth: PropTypes.number.isRequired
   };
 
   componentDidMount() {
@@ -54,9 +59,13 @@ class FishView extends React.Component {
 
   render() {
     return (
-      <StudioAppWrapper>
+      <StudioAppWrapper rotateContainerWidth={this.props.mobilePortraitWidth}>
         <CodeWorkspaceContainer topMargin={0}>
-          <ProtectedStatefulDiv id="container" style={styles.container}>
+          <ProtectedStatefulDiv
+            id="container"
+            style={styles.container}
+            dir="ltr"
+          >
             <div id="container-react" style={styles.containerReact} />
             <canvas id="background-canvas" style={styles.backgroundCanvas} />
             <canvas id="activity-canvas" style={styles.activityCanvas} />

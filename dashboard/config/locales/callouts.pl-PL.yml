@@ -173,6 +173,8 @@ pl-PL:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Nowy blok!
         dance_callout_11_b: Nowy blok!
+      CourseD_Dance_Party_11_5:
+        dance_party_11_5_groups: Poszukaj tutaj bloków 'wszystkie kaczki'
       Dance_2019_01:
         dance_callout_01: Wybierz tutaj rodzaj tancerza.
       Dance_2019_02:
@@ -200,6 +202,8 @@ pl-PL:
       Dance_Party_11:
         dance_callout_11_a: Nowy blok!
         dance_callout_11_b: Nowy blok!
+      Dance_Party_11_5:
+        dance_party_11_5_groups: Poszukaj tutaj bloków „wszystkie kaczki”
       Function intro Ryan:
         Function_intro_Ryan_1: Ta niewielka instrukcja każe komputerowi wykonać ten
           WIELKI kawałek kodu z tak taką nazwą w obszarze roboczym.

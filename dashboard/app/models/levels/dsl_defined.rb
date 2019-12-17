@@ -206,7 +206,7 @@ class DSLDefined < Level
     return dsl_text unless editor_experiment
 
     # remove previous editor experiment
-    dsl_text = dsl_text.sub(/^editor_experiment.*/, '')
+    dsl_text = dsl_text.sub(/\neditor_experiment.*/, '')
 
     # define editor_experiment on the second line of the dsl file.
     index = dsl_text.index("\n")

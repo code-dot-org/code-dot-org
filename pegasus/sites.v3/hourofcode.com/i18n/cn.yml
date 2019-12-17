@@ -21,10 +21,72 @@ cn:
   social_hoc_is_coming: The Hour of Code is coming!
   social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
     computer science. Change the world.'
-  social_hoc2019_coming_dates: The Hour of Code is coming December 9-15, 2019. Computer
-    science is foundational for every student to learn.
-  social_hoc2019_dance: Featuring Katy Perry, Jonas Brothers, Lil Nas X, Panic at
-    the Disco, and many more!
+  social_hoc2019_coming_dates: 编程一小时将于 2019 年 12 月 9 日至 15 日举办。计算机科学对于每个学生而言都是重要的基础知识。
+  social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
+    Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
+  oceans_landing_title: AI for Oceans
+  oceans_landing_description: 'Explore machine learning by teaching “A.I.” to recognize
+    fish. #CSforGood'
+  oceans_landing_specs: English only | Ages 11+
+  oceans_landing_teacher_resources: Teacher Resources
+  oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
+    AI, machine learning, training data, and bias, while exploring ethical issues.
+  oceans_landing_resource_button: View Resources
+  oceans_landing_cs_for_good: CS For Good
+  oceans_landing_cs_for_good_desc: Resources to help students understand the role
+    computer science could play in creating a more equitable world.
+  oceans_landing_learn_more: Learn more about AI and Machine Learning
+  social_hoc2019_oceans_title: 'AI for Oceans #CSForGood'
+  social_hoc2019_oceans_desc: Learn about AI, machine learning, training data, and
+    bias, while exploring ethical issues and how AI can be used to address world problems.
+    Computer science is about so much more than coding! Enjoy Code.org's first step
+    in a new journey to teach more about AI throughout our curriculum.
+  hoc_overview_oceans_tutorial_header: AI For Oceans
+  hoc_overview_oceans_tutorial_desc: Learn about AI, machine learning, training data,
+    and bias, while exploring ethical issues and how AI can be used to address world
+    problems.
+  ai_video_title_what_is_ai: What is AI?
+  ai_video_title_phone_knows_dog: How does your phone know this is a dog?
+  ai_video_title_what_is_ml: What is Machine Learning?
+  ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small
+    and Prickly'
+  ai_video_title_ethics_of_ai: Ethics of AI
+  ai_video_title_ml_human_bias: Machine Learning and Human Bias
+  activity: Activity
+  name: Name
+  description: Description
+  audience: Audience
+  ai_resource_header: Teach and Learn about AI
+  ai_resource_ml_for_kids: Machine Learning for Kids
+  ai_resource_ml_for_kids_desc: Train a machine learning model with text, numbers,
+    or images, and use it to make games in Scratch.
+  ai_resource_ibm_ml_for_kids: 'IBM: Machine Learning for Kids'
+  ai_resouce_ibm_ml_for_kids_desc: Hands-on activities to introduce simple machine
+    learning models to students through games and interactive projects.
+  ai_resource_ecs: 'ECS: Artificial Intelligence (AI)'
+  ai_resource_ecs_desc: A new alternate curriculum unit for the Exploring Computer
+    Science (ECS) curriculum.
+  ai_resource_elements_ai: Elements of AI
+  ai_resource_elements_ai_desc: A series of free online courses created by Reaktor
+    and the University of Helsinki.
+  ai_resource_cognimates: Cognimates
+  ai_resource_cognimates_desc: An AI education platform for building games, programming
+    robots and training.
+  ai_audience_k12: K-12 (Reading required)
+  ai_audience_hs: High school
+  ai_activity_header: Activities Powered by AI and ML
+  ai_activity_teachable: Teachable Machine
+  ai_activity_teachable_desc: Train a computer to recognize your own images, sounds,
+    and poses.
+  ai_activity_quick_draw: Quick, Draw!
+  ai_activity_quick_draw_desc: Can a neural network learn to recognize doodling?
+  ai_activity_experiments: AI Experiments with Google
+  ai_activity_experiments_desc: Start exploring machine learning through pictures,
+    drawings, language, music, and more.
+  ai_activity_mixlab: MixLab
+  ai_activity_mixlab_desc: Make music using voice commands.
+  ai_activity_gaugan: GauGAN Beta
+  ai_activity_gaugan_desc: Paint photo-realistic landscapes with the help of AI.
   codeorg_homepage_hoc2018_curriculum: 继续更深入的使用 <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org
     课程</a>
   codeorg_homepage_hoc2018_dance_heading: Create your own <span class="highlight-word">Dance&nbsp;Party</span>
@@ -39,6 +101,7 @@ cn:
   hourofcode_homepage_hoc2018_header_line1: 任何人、任何地方都可以组织“编程一小时”活动。超过 45 种语言的一小时教程。无需经验。
   hourofcode_homepage_hoc2018_header_line2: 4 至 104 岁均可参与。
   hoc2018_tutorial_mchoc_description: 使用代码方块，带领艾莉克斯或史蒂夫踏上《我的世界》冒险旅程。
+  codeorg_homepage_hoc2019_dance_heading: 尝试新版 <span class="highlight-word">Dance&nbsp;Party!</span>
   cookie_banner_message: 通过继续浏览我们的网站或单击"我同意"，您同意在您的计算机或设备上存储 cookie。
   cookie_banner_more_information: 请参阅 Code.org 的隐私政策。
   cookie_banner_accept: 我同意
@@ -541,6 +604,7 @@ cn:
     阅读操作指南</a>
   learn_robotics_banner_heading: 机器人
   learn_robotics_banner_blurb: 有机器人？使用机器人执行下面的活动，为不同年龄的学生打造充实的“编程一小时”！
+  tutorial_dance2019_name: 舞蹈派对 2019
   tutorial_danceparty_name: Dance Party
   tutorial_chibitronics_name: 'Chibitronics: Illuminated Story'
   tutorial_athlete_name: 编写你专属的运动游戏
@@ -1965,6 +2029,7 @@ cn:
   tutorial_allcancodeapps_shortdescription: Use the Allcancode Platform to create
     web and mobile apps from design to delivery.
   tutorial_n2y_shortdescription: Help Bitt Bott explore Earth using direction arrows.
+  tutorial_dance2019_longdescription: 编写舞会与您的朋友分享。当中更有 Katy Perry、Shawn Mendes、Panic! At The Disco、Lil Nas X、Jonas Brothers、Nicki Minaj，以及 34 名其他明星的豪华阵容！
   tutorial_danceparty_longdescription: Code a Dance Party to share with your friends.
     Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!
   tutorial_chibitronics_longdescription: Program a paper circuit to light up your
@@ -3206,6 +3271,8 @@ cn:
     Each of the six activities includes simple directions that are supported with
     symbols from the n2y® SymbolStix PRIME® collection. The symbols help non-readers
     and beginning readers understand and follow the directions.
+  tutorial_dance2019_language: 支持阿拉伯语、中文、捷克语、丹麦语、荷兰语、英语、芬兰语、法语、德语、希腊语、印地语、匈牙利语、印度尼西亚语、意大利语、日语、韩语、马来语、波兰语、葡萄牙语以及
+    10 多门其他语言！
   tutorial_danceparty_language: 多个
   tutorial_chibitronics_language: 英文
   tutorial_athlete_language: 英语、法语、西班牙语、意大利语、葡萄牙语（巴西）
@@ -3829,6 +3896,7 @@ cn:
   tutorial_duckrace_language: 英语、德语
   tutorial_allcancodeapps_language: 英文
   tutorial_n2y_language: 英文
+  tutorial_dance2019_string_detail_grades: 二年级以上
   tutorial_danceparty_string_detail_grades: 二年级以上
   tutorial_chibitronics_string_detail_grades: 幼儿园到五年级
   tutorial_athlete_string_detail_grades: 二年级以上
@@ -4182,7 +4250,7 @@ cn:
   tutorial_codehsrn_string_detail_grades: 初中三年级以上
   tutorial_codehswd_string_detail_grades: 六年级以上
   tutorial_turtlerobot_string_detail_grades: 幼儿园到五年级
-  tutorial_ozoevo_string_detail_grades: 所有年龄段
+  tutorial_ozoevo_string_detail_grades: 六年级以上
   tutorial_ozoexped_string_detail_grades: 六年级以上
   tutorial_ozojourney_string_detail_grades: 小学二年级到初中二年级
   tutorial_ozocodes_string_detail_grades: 所有年龄段
@@ -4309,7 +4377,7 @@ cn:
   tutorial_codesparkcreate_string_detail_grades: 幼儿园到五年级
   tutorial_hardvsoft_string_detail_grades: 幼儿园到五年级
   tutorial_codestersecard_string_detail_grades: 小学二年级到初中二年级
-  tutorial_codesterslogo_string_detail_grades: 小学二年级到初中二年级
+  tutorial_codesterslogo_string_detail_grades: 六年级以上
   tutorial_codesterstshirt_string_detail_grades: 六年级以上
   tutorial_codewards_string_detail_grades: 小学二年级到初中二年级
   tutorial_olympics_string_detail_grades: 小学二年级到初中二年级
@@ -4407,6 +4475,7 @@ cn:
   tutorial_duckrace_string_detail_grades: 二年级以上
   tutorial_allcancodeapps_string_detail_grades: 六年级以上
   tutorial_n2y_string_detail_grades: 起步阶段以上
+  tutorial_dance2019_string_platforms: 所有较新的浏览器，安卓平板电脑，iPad，无需插件
   tutorial_danceparty_string_platforms: 所有较新的浏览器，安卓平板电脑，iPad
   tutorial_chibitronics_string_platforms: 所有高版本浏览器
   tutorial_athlete_string_platforms: 所有高版本浏览器
@@ -5003,6 +5072,7 @@ cn:
   tutorial_duckrace_string_platforms: 所有较新的浏览器，安卓平板电脑，iPad
   tutorial_allcancodeapps_string_platforms: 所有高版本浏览器
   tutorial_n2y_string_platforms: 未插电
+  tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chibitronics Chibi Chip and Circuit
     Sticker LEDs
@@ -5582,6 +5652,7 @@ cn:
   tutorial_duckrace_string_detail_platforms: ''
   tutorial_allcancodeapps_string_detail_platforms: ''
   tutorial_n2y_string_detail_platforms: ''
+  tutorial_dance2019_string_detail_programming_languages: 方块
   tutorial_danceparty_string_detail_programming_languages: 方块
   tutorial_chibitronics_string_detail_programming_languages: 方块
   tutorial_athlete_string_detail_programming_languages: 方块
@@ -6222,7 +6293,7 @@ cn:
   tutorial_stemc_blckhole_name: Escape Velocity and Black Holes!
   tutorial_careconfigure_name: ReconFigure of Speech
   tutorial_rpiscratch_name: Scratch 3.0 phrasebook
-  tutorial_ozaria_name: Ozaria by CodeCombat
+  tutorial_ozaria_name: 奥佳睿
   tutorial_ttovum_name: Ovum City
   tutorial_ttpassage_name: The Passage
   tutorial_tynkerhtmlen_name: Affordable and Clean Energy (HTML)
@@ -6273,6 +6344,8 @@ cn:
   tutorial_ikodexmas_name: iKode Xmas
   tutorial_rpisensehat_name: Sense HAT data logger
   tutorial_modtraits_name: Character Traits with GoPiGo
+  tutorial_mee_name: Minecraft 编程时光：AI 造福人类 
+  tutorial_kuborobo_name: KUBO Robotics Coding Routes
   tutorial_scratchimagine_longdescription: Imagine a world where anything is possible,
     then bring it to life with Scratch!
   tutorial_codesterspsa_longdescription: Learn the basics of coding in Python while
@@ -6433,9 +6506,7 @@ cn:
     for you.
   tutorial_rpiscratch_longdescription: Create an interactive phrasebook that translates
     useful phrases into different languages.
-  tutorial_ozaria_longdescription: Customize your hero and journey to the Sky Mountain
-    where you learn to type real code, navigate through 15 game levels, and make your
-    own game in order to help save the world of Ozaria.
+  tutorial_ozaria_longdescription: 定制化你的英雄及去天山的旅程，需要闯过15个关卡，设计属于你自己的游戏，才能帮助拯救奥佳睿的世界。
   tutorial_ttovum_longdescription: Can you control the chaos? Hack your way into the
     cyberpunk world of Ovum City. Debug broken code, solve puzzles, and upgrade your
     hardware as you explore self guided open world. Don't get caught by the drones!
@@ -6629,6 +6700,12 @@ cn:
     environment.
   tutorial_modtraits_longdescription: 'Students use the steps of computational thinking
     to analyze character traits and create an algorithm to demonstrate those traits. '
+  tutorial_mee_longdescription: 一座村庄正在遭受火灾的威胁，需要您通过编程提供一个解决方案！认识您的编程助手——Minecraft
+    Agent，然后为 Agent 编程以在森林里导航并收集与导致火灾的条件有关的数据。该数据将帮助 Agent 学会预测可能发生火灾的地点。基于所收集的数据做出选择是人工智能或者说
+    AI 的基本概念。您的指令将连同 AI 一起使得 Agent 能够识别条件并移除会导致森林火灾蔓延的物质。您面临的最终挑战是通过编写代码来种植树木和生成动物，以使得森林恢复生机。
+  tutorial_kuborobo_longdescription: In this activity, students put their logic and
+    sequencing skills to the test as they use the Tagtiles to program their KUBO robot
+    to travel to various locations on a printed map.
   tutorial_scratchimagine_language: 仅英语
   tutorial_codesterspsa_language: 英文
   tutorial_googlehero_language: 仅英语
@@ -6725,6 +6802,8 @@ cn:
   tutorial_ikodexmas_language: 英文
   tutorial_rpisensehat_language: 英文
   tutorial_modtraits_language: 英文
+  tutorial_mee_language: 英语（美国）、英语（英国）、德语、西班牙语（西班牙）、西班牙语（墨西哥）、法语（法国）、法语（加拿大）、意大利语、日语、韩语、葡萄牙语（巴西）、葡萄牙语（葡萄牙）、俄语、中文（简体）、中文（繁体）、土耳其语、波兰语、印度尼西亚语、乌克兰语、希腊语、保加利亚语、匈牙利语、芬兰语、丹麦语、瑞典语、挪威语、斯洛伐克语、捷克语、荷兰语
+  tutorial_kuborobo_language: 仅英语
   tutorial_scratchimagine_string_detail_grades: 二年级以上
   tutorial_codesterspsa_string_detail_grades: 六年级以上
   tutorial_googlehero_string_detail_grades: 小学二年级到初中二年级
@@ -6821,6 +6900,8 @@ cn:
   tutorial_ikodexmas_string_detail_grades: 幼儿园到五年级
   tutorial_rpisensehat_string_detail_grades: 六年级以上
   tutorial_modtraits_string_detail_grades: 二年级以上
+  tutorial_mee_string_detail_grades: 二年级以上
+  tutorial_kuborobo_string_detail_grades: Pre-reader - Grades 8
   tutorial_scratchimagine_string_platforms: 所有较新的浏览器，安卓平板电脑，iPad
   tutorial_codesterspsa_string_platforms: 所有较新的浏览器，安卓平板电脑，iPad
   tutorial_googlehero_string_platforms: 所有较新的浏览器，安卓平板电脑，iPad
@@ -6920,6 +7001,8 @@ cn:
   tutorial_ikodexmas_string_platforms: 所有高版本浏览器
   tutorial_rpisensehat_string_platforms: 所有高版本浏览器
   tutorial_modtraits_string_platforms: 所有高版本浏览器
+  tutorial_mee_string_platforms: Windows, iPad, MacOS
+  tutorial_kuborobo_string_platforms: 未插电
   tutorial_scratchimagine_string_detail_platforms: ''
   tutorial_codesterspsa_string_detail_platforms: ''
   tutorial_googlehero_string_detail_platforms: ''
@@ -7019,6 +7102,8 @@ cn:
   tutorial_ikodexmas_string_detail_platforms: Microsoft Kodu
   tutorial_rpisensehat_string_detail_platforms: Raspbian (software), SenseHAT
   tutorial_modtraits_string_detail_platforms: GoPiGo
+  tutorial_mee_string_detail_platforms: ''
+  tutorial_kuborobo_string_detail_platforms: KUBO robot
   tutorial_scratchimagine_string_detail_programming_languages: 方块
   tutorial_codesterspsa_string_detail_programming_languages: Python
   tutorial_googlehero_string_detail_programming_languages: 方块
@@ -7127,6 +7212,9 @@ cn:
   tutorial_ikodexmas_string_detail_programming_languages: Microsoft Kodu
   tutorial_rpisensehat_string_detail_programming_languages: Python
   tutorial_modtraits_string_detail_programming_languages: 方块
+  tutorial_mee_string_detail_programming_languages: 方块
+  tutorial_kuborobo_string_detail_programming_languages: Tagtiles that students piece
+    together
   school_not_found_heading: 我们找不到你的学校。请输入更多信息。
   school_name: 学校名
   school_name_error: 必须填写学校名字

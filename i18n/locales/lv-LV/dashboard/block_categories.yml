@@ -1,0 +1,13 @@
+lv:
+  data:
+    block_categories:
+      Actions: Darbības
+      Color: Krāsa
+      Conditionals: Sazarojumi
+      Events: Pasākumi
+      Functions: Funkcijas
+      Logic: Loģika
+      Loops: Cikli
+      Math: Matemātika
+      Text: Teksts
+      Variables: Mainīgie

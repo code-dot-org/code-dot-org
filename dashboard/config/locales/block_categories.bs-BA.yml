@@ -3,18 +3,12 @@ bs:
   data:
     block_categories:
       Actions: Akcije
-      Loops: Petlje
-      Functions: Funkcije
       Color: Boja
-      Math: Matematika
-      Logic: Logika
-      Variables: Varijable
       Conditionals: Uvjeti
       Events: Događaji
+      Functions: Funkcije
+      Logic: Logika
+      Loops: Petlje
+      Math: Matematika
       Text: Tekst
-      Location: Mjesto
-      Start: Počni
-      Booleans: Logika
-      test: uslov
-      Name: Ime
-      Function: Funkcija
+      Variables: Varijable

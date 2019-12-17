@@ -1408,6 +1408,34 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal expected_notice, flash.notice
   end
 
+  test "connect_provider: return messaging specific to linked account" do
+    provider = AuthenticationOption::SILENT_TAKEOVER_CREDENTIAL_TYPES.sample
+
+    [User::TYPE_STUDENT, User::TYPE_TEACHER].each do |user_type|
+      user = create user_type
+      auth = generate_auth_user_hash(
+        provider: provider,
+        email: user.email
+      )
+      @request.env['omniauth.auth'] = auth
+
+      Timecop.freeze do
+        setup_should_connect_provider(user, 2.days.from_now)
+        get provider
+
+        assert_redirected_to 'http://test.host/users/edit'
+
+        provider_name = I18n.t(provider, scope: :auth)
+        expected_notice = user.teacher? ?
+          I18n.t('user.auth_option_saved', provider: provider_name, email: user.email) :
+          I18n.t('user.auth_option_saved_no_email', provider: provider_name)
+
+        assert_equal expected_notice, flash.notice
+        sign_out user
+      end
+    end
+  end
+
   test 'silent_takeover: Adds email to teacher account missing email' do
     # Set up existing account
     malformed_account = create :teacher, :demigrated

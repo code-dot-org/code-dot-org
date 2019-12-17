@@ -254,6 +254,9 @@ zh-TW:
         ＃印台
 
         單擊“運行”啟動程序，然後使用印台以簡單的顏色配合動物印章來繪製圖片。
+      CSD U5 Netflix Data Video: 透過觀看影片來了解Netflix如何解決此問題。在觀看同時，請思考要收集什麼樣的數據、以及該數據來自何處。
+      CSD U5 Netflix Data Video_2018: 透過觀看影片來了解Netflix如何解決此問題。在觀看同時，請思考要收集什麼樣的數據、以及該數據來自何處。
+      CSD U5 Netflix Data Video_2019: 透過觀看影片來了解Netflix如何解決此問題。在觀看同時，請思考要收集什麼樣的數據、以及該數據來自何處。
       CSD U5 black white images pixelation: "# 做做看\\\r\n\n\\\r\n輸入 0 或是 1 來完成這個 X
         形的圖案，如果你想要清除重來，可以點擊「可讀格式」。"
       CSD U5 black white images pixelation 2: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉\\\r\n\\\r\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47\nPM.png>)"
@@ -626,7 +629,7 @@ zh-TW:
       Dance_Party_02: |-
         讓這隻麋鹿跳舞！
 
-        拖曳出 <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> 程式積木 到工作區上。連接此程式積木在 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> 程式積木的後面. 您的舞者應該在第 4 個小節之後開始新的動作。
+        拖曳出 <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> 程式積木 到工作區上。連接此程式積木在 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> 程式積木的後面. 您的舞者應該在第 4 個小節之後開始新的動作。
 
         **小節**用於計算音樂中的時間。在本教學課程中，一小節的長度為四拍。
       Dance_Party_03: |-
@@ -672,11 +675,11 @@ zh-TW:
         有看到這個積木嗎？
 
         <xml>
-        <block type="Dancelab_makeNewDanceSpriteGroup">
-        <title name="N">6</title>
-        <title name="COSTUME">"DUCK"</title>
-        <title name="LAYOUT">"circle"</title>
-        </block></xml>
+          <block type="Dancelab_makeNewDanceSpriteGroup">
+            <title name="N">6</title>
+            <title name="COSTUME">"DUCK"</title>
+            <title name="LAYOUT">"circle"</title>
+          </block></xml>
 
         現在你可以一次建立一群舞者了！
 
@@ -712,6 +715,15 @@ zh-TW:
         -   嘗試使用其它節奏（1/2 拍或 1/8 拍）。
         -   在`每次經過_小節後`積木之後添加其它事件。
         -   用「秒」替換「節拍」，並嘗試以這種方式為舞蹈計時。
+      Dance_Party_extras_every_beat_2019: |-
+        # 四分音符
+
+        大部分舞蹈都是按照小節為單位來設計的，而每個小節由 4 個四分音符構成。這段舞蹈使用 [blockly block][0]來讓舞者從第 5 小節之後在每個四分音符時都拍一下手。
+
+        更改程式積木中的數字來試試看對舞蹈會有什麼影響。
+
+        -   嘗試採用其他音符時值（例如 0.5 是二分音符，0.125 是八分音符）。
+        -   添加其他事件。
       Dance_Party_extras_layout: |-
         # 讓我們加入陣形！
 
@@ -723,7 +735,7 @@ zh-TW:
       Dance_Party_extras_layout_2019: |-
         # 進入陣型！
 
-        使用<xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml>程式積木來改變伴舞演員在整個舞蹈中的陣型。嘗試以下任意創意來擴展：
+        使用<xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> 程式積木來改變伴舞演員在整個舞蹈中的陣型。嘗試以下任意創意來擴展：
 
         -   製作採用不同佈局的另一組舞者
         -   按下按鍵時更改佈局
@@ -1340,6 +1352,8 @@ zh-TW:
       courseD_bee_nestedLoops9_predict2: 釀造全部的蜂蜜。
       courseD_bee_nestedLoops9_predict2_2018: 釀造全部的蜂蜜。
       courseD_bee_nestedLoops9_predict2_2019: 釀造全部的蜂蜜。
+      courseD_collector_debugging6a_2018: 挑戰：使用工作區中的代碼，可至少獲得**6**件寶物！
+      courseD_collector_debugging6a_2019: 挑戰：使用工作區中的代碼，可至少獲得**6**件寶物！
       courseD_collector_ramp10: "和之前的路徑一樣，不過這次要沿路收集到發現到的寶藏。\\\r"
       courseD_collector_ramp8: "這關很像上一關，不過現在我們是要幫 Laurel 完成探險！\\\r\n\n<hr/>\r\n\r\n和之前的走法相同，不過這次試試改用一個重複迴圈來收集到寶藏。\r"
       courseD_collector_ramp9: 有更多寶藏了，你可以幫 Laurel 收集到所有的寶藏嗎？
@@ -1584,3 +1598,21 @@ zh-TW:
       ramp_artist_loops9: 畫出一個每邊長 200 像素的正方形以過關。
       ramp_artist_loops9_2018: 畫出一個每邊長 200 像素的正方形以過關。
       ramp_artist_loops9_2019: 畫出一個每邊長 200 像素的正方形以過關。
+      Dance_Party_extras_alternate_2019: |-
+        ＃ 來來回回！
+
+        有時您可能想創建一種選擇的舞蹈動作模式。這個新塊使您可以做到這一點。
+
+        <xml><block type="Dancelab_alternateMoves"><title name="GROUP">sprites</title><title name="N">2</title><title name="MOVE1">MOVES.Roll</title><title name="MOVE2">MOVES.ClapHigh</title></block></xml>
+
+        您在上方選擇的移動將永遠重複進行。
+
+        在前面為主舞者創建一個交替例程！
+        使用不同的數字來更改移動交替的速率。嘗試使用“ 1”或“ 0.5”來更快地切換！
+      Dance_Party_extras_mixed_2019: |-
+        ＃更多按鈕
+
+        此舞讓您在舞者自動跳舞時實時控制他們的屬性。嘗試在按下按鈕時更改其他屬性。例如：
+
+        當您按下“向下”按鈕時，將舞者的色彩隨機化。
+        按“空格”時，添加一組具有隨機佈局的舞者。

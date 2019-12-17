@@ -10824,9 +10824,9 @@ zh-CN:
           </block></xml>
         现在，您可以一次创建一批舞者！
       Dance_2019_07: |-
-        每个舞者都有一组_属性_来控制其外观。
+        每个舞者都有一组_属性_来控制其外观。使用绿色事件模块
 
-        您可以通过更改其大小来让舞者看起来距离更近或更远。音乐开始后的某个时间可更改一组舞者的大小。
+        下面的 <xml><block type="Dancelab_setPropEach" block-text="the set block"><title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title><title name="PROPERTY">"scale"</title><title name="VAL">???</title></block></xml> 来调节舞者在音乐开始之后的距离远近。
       Dance_2019_08: 舞者具有“色彩”属性，可以用来添加一层颜色。尝试更改其中一位舞者（或整个舞者）的色彩！
       Dance_2019_09: |-
         这是一种反复触发的特殊事件。
@@ -10838,7 +10838,7 @@ zh-CN:
         _要有创造力，玩得开心！_
       Dance_2019_10: 随着节奏律动吧！创建自己的舞蹈，并与朋友分享。
       Dance_Party_01: |-
-        _让我们开个舞会吧！_
+        _让我们开个舞会吧!_
 
         将“新建”模块拖到工作区，并关联到“设置”模块，创建您的第一个舞者。
 
@@ -10860,11 +10860,11 @@ zh-CN:
       Dance_Party_05: |-
         使用其他新模块让舞者**每 2 个小节**变换动作！
 
-        \*\*选择“(下一步)”、“(上一步)”或“(随机)”，让舞者在代码每次运行时做不同的动作。
+        -   选择`(下一步)`、`(上一步)`或`(随机)`，让舞者在代码每次运行时做不同的动作。
       Dance_Party_06: |-
         _我们需要更多舞者！_
 
-        创建名为“backup\_dancer1”的伴舞，与猫一起跳舞。
+        创建名为`backup_dancer1`的伴舞，与猫一起跳舞。
       Dance_Party_08: |-
         每个舞者都有一系列控制其外观的 _属性设置_。
 
@@ -10892,11 +10892,11 @@ zh-CN:
         查看此模块：
 
         <xml>
-        <block type="Dancelab_makeNewDanceSpriteGroup">
-        <title name="N">6</title>
-        <title name="COSTUME">"鸭子"</title>
-        <title name="LAYOUT">"圆圈"</title>
-        </block></xml>
+          <block type="Dancelab_makeNewDanceSpriteGroup">
+            <title name="N">6</title>
+            <title name="COSTUME">"DUCK"</title>
+            <title name="LAYOUT">"circle"</title>
+          </block></xml>
 
         现在可以一次创建多个舞者了！
 
@@ -10932,6 +10932,15 @@ zh-CN:
         -   试着使用其他持续时间（如0.5为半个小节，或0.125为1/8小节)。
         -   添加一些`小节后`的事件。
         -   将"小节"切换为"秒"，并试着以这种方式给舞蹈安排节奏。
+      Dance_Party_extras_every_beat_2019: |-
+        # 四分音符
+
+        大部分舞蹈都是按照小节为单位来设计的，而每个小节由 4 个四分音符构成。这段舞蹈使用[blockly block][0]来让舞者从第 5 小节之后在每个四分音符时都拍一下手。
+
+        更改模块中的数字来试试看对舞蹈会有什么影响。
+
+        -   尝试采用其他音符时值（例如 0.5 是二分音符，0.125 是八分音符）。
+        -   添加其他事件。
       Dance_Party_extras_layout: |-
         # 开始编队！
 
@@ -10943,7 +10952,7 @@ zh-CN:
       Dance_Party_extras_layout_2019: |-
         # 进入阵型！
 
-        使用<xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml>模块来改变伴舞演员在整个舞蹈中的阵型。尝试以下任意创意来扩展：
+        使用<xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> 模块来改变伴舞演员在整个舞蹈中的阵型。尝试以下任意创意来扩展：
 
         -   创建采用不同布局的另一组舞者
         -   按下按键时更改布局
@@ -11123,7 +11132,7 @@ zh-CN:
 
         -   添加一张门外的图片
         -   设置 ID （比如 _outside_）
-        -   隐藏这张图片（门开始它会自动显示）
+        -   隐藏这张图片（门开时它会自动显示）
       Standalone_Artist_2: 用 120 度和 60 度的角度，再加上长达150像素的边来画个钻石型。
       Standalone_Artist_3: 能够用100 像素的边和 60度的转度来绘制一个六边形吗？
       Standalone_Artist_4: 现在你已获得一个新的块—循环，该块可以重复执行一连串的指令。如果你循环这些指令6次，看看会发生什么？
@@ -15626,3 +15635,21 @@ zh-CN:
       ramp_artist_loops9: 画一个边长200像素的正方形来通过这关。
       ramp_artist_loops9_2018: 画一个边长200像素的正方形来通过这关。
       ramp_artist_loops9_2019: 画一个边长200像素的正方形来通过这关。
+      Dance_Party_extras_alternate_2019: |-
+        ＃ 来来回回！
+
+        有时您可能想创建一种选择的舞蹈动作模式。这个新块使您可以做到这一点。
+
+        <xml><block type="Dancelab_alternateMoves"><title name="GROUP">sprites</title><title name="N">2</title><title name="MOVE1">MOVES.Roll</title><title name="MOVE2">MOVES.ClapHigh</title></block></xml>
+
+        您在上方选择的移动将永远重复进行。
+
+        在前面为主舞者创建一个交替例程！
+        使用不同的数字来更改移动交替的速率。尝试使用“ 1”或“ 0.5”来更快地切换！
+      Dance_Party_extras_mixed_2019: |-
+        ＃更多按钮
+
+        此舞让您在舞者自动跳舞时实时控制他们的属性。尝试在按下按钮时更改其他属性。例如：
+
+        当您按下“向下”按钮时，将舞者的色彩随机化。
+        按“空格”时，添加一组具有随机布局的舞者。

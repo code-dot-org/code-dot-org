@@ -157,7 +157,7 @@ it-IT:
       2-3 artist debug multi 1:
         title: Esercizio di Verifica (Risposte Multiple)
         questions:
-        - {}
+        - text: Cosa dovresti modificare per ottenere un cerchio perfetto?
         answers:
         - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
         - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
@@ -361,10 +361,11 @@ it-IT:
         - text: Quando ti colleghi a code.org, a quale indirizzo IP fra quelli elencati
             in questa tabella ti farà arrivare il DNS?
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: 23.23.224.106
+        - text: 54.209.61.132
+        - text: 64.14.68.10
+        - text: 54.243.71.82
+          correct: true
       4-5 Internet Multi 2:
         title: Esercizio di Verifica (Risposte Multiple)
         content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
@@ -372,10 +373,11 @@ it-IT:
         - text: Se il DNS ti ha fatto arrivare ad una pagina con indirizzo IP 100.42.50.110,
             su quale sito web fra quelli elencati in questa tabella sei arrivato?
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: code.org
+        - text: csisfun.com
+          correct: true
+        - text: thinkersmith.org
+        - text: khanacademy.org
       4-5 Songwriting Multi 1:
         title: Esercizio di Verifica (Risposte Multiple)
         content1: "/script_assets/4-5_images/unplugged/songwriting_1_q.png"
@@ -1246,43 +1248,43 @@ it-IT:
         - {}
       Dance_Party_extras_intro:
         markdown: |
-          # Continua a Ballare!
+          # Continua a ballare!
 
-          Per la parte 2, creerai il tuo progetto. Non ci sono rompicapi qui - invece ci sono un sacco di progetti che mostrano differenti modi di fare feste da ballo più complesse.
+          Nella parte 2, creerai il tuo progetto. Qui non trovi esercizi guidati, bensì tanti progetti che mostrano diversi modi di creare balli più complessi.
 
-          Puoi fare questi livelli _in ogni ordine_. Salta intorno per vedere come qualcosa era stato fatto in un livello precedente, o combina un concetto tra i progetti. Provali tutti, scegli il tuo preferito, e passa il tuo tempo a lavorare su aggiungere a quel progetto per renderlo tuo.
+          Puoi provare questi progetti _in qualsiasi ordine_. Dai un'occhiata per scoprire com'è stato realizzato qualche effetto che hai intravisto in un esercizio precedente o combina dei meccanismi visti in diversi esercizi. Provali tutti, scegli il tuo preferito e divertiti a personalizzarlo per renderlo tuo.
 
-          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Continua</a>
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Continue</a>
 
-          <div class="clearfix">
+          <div class="clearfix"></div>
 
           <div style="float: left; margin: 10px">
           <a href="2">
           <h2>
-          Vai in Formazione
+          Tutti in formazione!
           </h2>
 
-          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif">
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
 
           </div>
 
           <div style="float: left; margin: 10px">
           <a href="3">
           <h2>
-          Dove andranno?
+          Dove sono andati?
           </h2>
 
-          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif">
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
 
           </div>
 
           <div style="float: left; margin: 10px">
           <a href="4">
           <h2>
-          Crew di Ballo
+          Gruppi di ballo
           </h2>
 
-          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif">
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
 
           </div>
 
@@ -1292,27 +1294,118 @@ it-IT:
           Quartine
           </h2>
 
-          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif">
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
 
           </div>
 
           <div style="float: left; margin: 10px">
           <a href="6">
           <h2>
-          Bassi, Medi, Acuti
+          Bassi, Medi e Alti
           </h2>
 
-          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif">
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
 
           </div>
 
           <div style="float: left; margin: 10px">
           <a href="7">
           <h2>
-          Velocizzalo, Rallentalo
+          Accelerare, Rallentare
           </h2>
 
-          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif">
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
+
+          </div>
+      Dance_Party_extras_intro_2019:
+        markdown: |
+          # Continua a ballare!
+
+          Nella parte 2, creerai il tuo progetto. Qui non trovi esercizi guidati, bensì tanti progetti che mostrano diversi modi di creare balli più complessi.
+
+          Puoi provare questi progetti _in qualsiasi ordine_. Dai un'occhiata per scoprire com'è stato realizzato qualche effetto che hai intravisto in un esercizio precedente o combina dei meccanismi visti in diversi esercizi. Provali tutti, scegli il tuo preferito e divertiti a personalizzarlo per renderlo tuo.
+
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Continue</a>
+
+          <div class="clearfix"></div>
+
+
+          <div style="float: left; margin: 10px">
+          <a href="2">
+          <h2>
+          Avanti e indietro
+          </h2>
+
+          <img src="https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="3">
+          <h2>
+          Più pulsanti
+          </h2>
+
+          <img src="https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif"></a>
+
+          </div>
+          <div style="float: left; margin: 10px">
+          <a href="4">
+          <h2>
+          Tutti in formazione!
+          </h2>
+
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="5">
+          <h2>
+          Dove sono andati?
+          </h2>
+
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="6">
+          <h2>
+          Gruppi di ballo
+          </h2>
+
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="7">
+          <h2>
+          Quartine
+          </h2>
+
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="8">
+          <h2>
+          Bassi, medi e alti
+          </h2>
+
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="9">
+          <h2>
+          Accelerare, rallentare
+          </h2>
+
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
 
           </div>
       Internet Simulator Setup:
@@ -2427,6 +2520,9 @@ it-IT:
           feedback: Il programma fa in modo che la contadina esegua ripetutamente
             un percorso a scalinata e raccolga tutte le pannocchie e le lattughe che
             incontra. Ma alla fine non raccoglie la zucca.
+        markdown: |
+          I germogli in questo esercizio potranno generare pannocchie o lattughe.
+          <br/>
       courseD_multi_farmer_condLoops9_predict1_2018:
         questions:
         - text: Dai una bella occhiata al codice presente nell'area di lavoro. Cosa
@@ -2446,6 +2542,9 @@ it-IT:
           feedback: Il programma fa in modo che la contadina esegua ripetutamente
             un percorso a scalinata e raccolga tutte le pannocchie e le lattughe che
             incontra. Ma alla fine non raccoglie la zucca.
+        markdown: |
+          I germogli in questo esercizio potranno generare pannocchie o lattughe.
+          <br/>
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         questions:
         - text: Dai una bella occhiata al codice presente nell'area di lavoro. Cosa
@@ -2465,6 +2564,9 @@ it-IT:
           feedback: Il programma fa in modo che la contadina esegua ripetutamente
             un percorso a scalinata e raccolga tutte le pannocchie e le lattughe che
             incontra. Ma alla fine non raccoglie la zucca.
+        markdown: |
+          I germogli in questo esercizio potranno generare pannocchie o lattughe.
+          <br/>
       courseD_multi_farmer_ramp13:
         questions:
         - {}
@@ -2487,6 +2589,10 @@ it-IT:
           feedback: Il blocco `prendi zucca` è all'interno del ciclo, quindi la contadina
             cerca di prendere le zucche ogni volta che esegue il ciclo, invece di
             farlo solo alla fine del percorso.
+        markdown: |+
+          Ecco un nuovo tipo di esercizio con dei blocchi simili a quelli che hai già visto. Riesci a prevedere ciò che accadrà quando eseguirai il seguente programma?
+
+
       courseD_multi_farmer_while10_predict2:
         questions:
         - text: Dai una bella occhiata al codice riportato di seguito. Cosa rimarrà
@@ -2880,6 +2986,15 @@ it-IT:
           feedback: La variabile viene impostata nuovamente a 0 prima delle ultime
             due chiamate della funzione, in cui viene aggiunto 1 ogni volta. Quindi
             poi l'ape raccoglie 2 dosi di nettare.
+      courseF_external_variableConstant:
+        markdown: "<h2>Qualcosa in più sulle variabili</h2>\n\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
+          style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>Hai appena
+          imparato un ottimo modo per usare una variabile: in questo caso viene chiamata
+          \"costante\"!  \nQuando usi una variabile come \"costante\", imposti il
+          suo valore una sola volta e poi lo utilizzi più volte nel programma senza
+          più modificarlo dopo aver fatto clic su \"Esegui\".\n</h3>\n<br/><hr/>\n<h3>Nella
+          prossima lezione scriverai del codice con variabili che *cambieranno valore*
+          durante l'esecuzione del programma.</h3>\n\n"
       courseF_external_variableConstant_2018:
         markdown: "<h2>Qualcosa in più sulle variabili</h2>\n\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
           style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>Hai appena
@@ -3168,6 +3283,8 @@ it-IT:
         - text: Non lo so.
           feedback: Sbagliato. Ad ogni iterazione del ciclo con contatore, l'artista
             disegna una linea più lunga e più spessa.
+        markdown: "In questo disegno, abbiamo usato la variabile `counter` del ciclo
+          con contatore per cambiare la larghezza del pennello.  \n\n\n"
       courseF_multi_artist_for10_predict1_2018:
         questions:
         - text: Cosa succederà quando cliccherai su "Esegui"?
@@ -3187,6 +3304,8 @@ it-IT:
         - text: Non lo so.
           feedback: Sbagliato. Ad ogni iterazione del ciclo con contatore, l'artista
             disegna una linea più lunga e più spessa.
+        markdown: "In questo disegno, abbiamo usato la variabile `counter` del ciclo
+          con contatore per cambiare la larghezza del pennello.  \n\n\n"
       courseF_multi_artist_for10_predict1_2018_2019:
         questions:
         - text: Cosa succederà quando cliccherai su "Esegui"?
@@ -3206,6 +3325,8 @@ it-IT:
         - text: Non lo so.
           feedback: Sbagliato. Ad ogni iterazione del ciclo con contatore, l'artista
             disegna una linea più lunga e più spessa.
+        markdown: "In questo disegno, abbiamo usato la variabile `counter` del ciclo
+          con contatore per cambiare la larghezza del pennello.  \n\n\n"
       courseF_multi_artist_fwp2_predict1:
         questions:
         - {}
@@ -3292,11 +3413,18 @@ it-IT:
         - text: Non lo so.
           feedback: Grazie al blocco `se c'è un fiore`, l'ape prende il nettare solo
             se c'è un fiore sotto alla nuvola.
+        markdown: 'La nuvola sta bloccando la visuale. Potrebbe esserci un fiore sotto
+          questa nuvola. Se c''è un fiore, l''ape dovrebbe raccogliere il nettare
+          **una volta**.
+
+'
       courseF_multi_bee_conditionals7_predict2:
         questions:
-        - {}
+        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
+            Cosa pensi che succederà quando cliccherai su "Esegui"?
         answers:
-        - correct: true
+        - text: L'ape prenderà il nettare da ogni fiore, altrimenti farà il miele.
+          correct: true
           feedback: Corretto!
         - text: L'ape cercherà di prendere il nettare sia dai fiori che dai favi.
           feedback: Sbagliato. Il blocco `se c'è un fiore` permette all'ape di prendere
@@ -3308,6 +3436,9 @@ it-IT:
         - text: Non lo so.
           feedback: Il blocco `se c'è un fiore` permette all'ape di prendere il nettare
             da ogni fiore, altrimenti fa il miele.
+        markdown: "A volte una nuvola copre un fiore, altre volte copre un favo! In
+          ogni caso, sotto ogni nuvola ci sarà sempre solo **un** fiore o **un** favo.
+          \n"
       courseF_multi_bee_for3_predict1:
         questions:
         - text: Guarda il codice presente nell'area di lavoro. Cosa succederà quando
@@ -3330,6 +3461,10 @@ it-IT:
           feedback: Sbagliato. Il ciclo con contatore farà in modo che l'ape raccolga
             la giusta quantità di nettare, ma, così com'è impostata, permetterà di
             raggiungere solo 4 fiori.
+        markdown: |+
+          Ah! Usando un <i>ciclo con contatore</i> (`per counter`), questo esercizio diventa molto più facile!
+
+
       courseF_multi_bee_for3_predict1_2018:
         questions:
         - text: Guarda il codice presente nell'area di lavoro. Cosa succederà quando
@@ -3351,6 +3486,10 @@ it-IT:
           feedback: Il ciclo con contatore farà in modo che l'ape raccolga la giusta
             quantità di nettare, ma, così com'è impostata, permetterà di raggiungere
             solo 4 fiori.
+        markdown: |+
+          Ah! Usando un <i>ciclo con contatore</i> (`per counter`), questo esercizio diventa molto più facile!
+
+
       courseF_multi_bee_for3_predict1_2018_2019:
         questions:
         - text: Guarda il codice presente nell'area di lavoro. Cosa succederà quando
@@ -3372,6 +3511,10 @@ it-IT:
           feedback: Il ciclo con contatore farà in modo che l'ape raccolga la giusta
             quantità di nettare, ma, così com'è impostata, permetterà di raggiungere
             solo 4 fiori.
+        markdown: |+
+          Ah! Usando un <i>ciclo con contatore</i> (`per counter`), questo esercizio diventa molto più facile!
+
+
       courseF_multi_bee_fwp9_predict1:
         questions:
         - text: Cosa succederà quando cliccherai su "Esegui"?
@@ -3389,17 +3532,26 @@ it-IT:
             passato attraverso un parametro.
       courseF_multi_playlab_variables4c_predictive1:
         questions:
-        - {}
+        - text: Cosa succederebbe se l'utente inserisse il nome "Ali"?
         answers:
-        - correct: true
+        - text: 'Il pirata direbbe: "Pleasure to meet you, Ali." ("Piacere di conoscerti,
+            Ali.")'
+          correct: true
           feedback: 'Corretto. '
-        - feedback: Sbagliato. Nota che il blocco `unisci` permette di inserire il
+        - text: 'Il pirata direbbe: "Pleasure to meet you." ("Piacere di conoscerti.")'
+          feedback: Sbagliato. Nota che il blocco `unisci` permette di inserire il
             nome fornito nella frase del pirata.
-        - feedback: Sbagliato. Nota che il blocco `unisci` permette di inserire il
+        - text: 'Il pirata direbbe: "Ali."'
+          feedback: Sbagliato. Nota che il blocco `unisci` permette di inserire il
             nome fornito nella frase del pirata.
         - text: Non lo so.
           feedback: 'Sbagliato. Nota che il blocco `unisci` permette di inserire il
             nome fornito nella frase del pirata. '
+        markdown: "**In questo esercizio compare il nuovo blocco `chiedi`.**\n\nIl
+          blocco `chiedi` interrompe l'esecuzione del programma e chiede all'utente
+          di inserire del testo. \n\nQualsiasi testo l'utente inserisca, viene memorizzato
+          nella variabile posizionata alla fine del blocco `chiedi`.  In questo caso,
+          la variabile `name` (\"nome\").\n"
       coursee_prediction_artistfunction2:
         questions:
         - text: Cosa succederà quando cliccherai su "Esegui"?

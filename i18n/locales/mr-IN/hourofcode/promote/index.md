@@ -1,5 +1,5 @@
 ---
-title: Spread the word
+title: याचा प्रचार करा
 ---
 
 {{ signup_button }}

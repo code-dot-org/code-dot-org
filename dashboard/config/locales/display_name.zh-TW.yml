@@ -2,9 +2,12 @@
 zh-TW:
   data:
     display_name:
+      AB_Debug_Artist1: '創作者的編碼調適 #1 (AB)'
+      App Lab Intro 8 - Video Design Mode: 影片：設計模式
       App Lab Intro 8 - Video Getting Started: 視頻：入門
       App Lab Intro 8 - Video Images and Sounds: 影片：圖像和聲音
       App Lab Intro 8 - Video Make It Interactive: 影片：加上互動性
+      App Lab Intro 8 - Video Share Your App: 影片：與大家共享你所製作的應用
       AppLab Intro 7 - Change Screen Color: 更改顯示幕顏色
       AppLab Intro 7 - Change Text 2: 修改文字
       AppLab Intro 7 - Full Text: 兩個按鈕
@@ -234,6 +237,10 @@ zh-TW:
       CSD U4L15 autoSFLP_2019: 教學內容概覽
       CSD U4L16 autoSFLP_2018: 教學內容概覽
       CSD U4L16 autoSFLP_2019: 教學內容概覽
+      CSD U5 Amazon Data Video: 收集有關用戶的資料
+      CSD U5 Amazon Data Video_2018: 收集有關用戶的資料
+      CSD U5 Waze Data Video: 收集有關用戶的資料
+      CSD U5 Waze Data Video_2018: 收集有關用戶的資料
       CSD U5 binary video: 二進位和資料
       CSD U5 binary video_2018: 二進位和資料
       CSD U5 binary video_2019: 二進位和資料
@@ -331,6 +338,9 @@ zh-TW:
       CSD U6L16 TFMD: 教學內容概覽
       CSD U6L16 TFMD_2018: 教學內容概覽
       CSD U6L16 TFMD_2019: 教學內容概覽
+      CSD What Makes a Computer a Computer Video: 影片：是什麼讓電腦成為電腦？
+      CSD What Makes a Computer a Computer Video_2018: 影片：是什麼讓電腦成為電腦？
+      CSD What Makes a Computer a Computer Video_2019: 影片：是什麼讓電腦成為電腦？
       'CSD: Animating Sprite Movement': 影片：角色動作
       'CSD: Animating Sprite Movement_2018': 影片：角色動作
       'CSD: Animating Sprite Movement_2019': 影片：角色動作
@@ -365,6 +375,9 @@ zh-TW:
       Dance_Party_extras_visible_2019: 他們要去哪？
       MC_HOC_2017_FP20x20: 自由發揮
       MC_HOC_2017_FP20x20_2019: 自由發揮
+      Oceans_Video_Machine_Learning: 影片：機器學習
+      Oceans_Video_Societal_Implications: 影片：社會含義
+      Oceans_Video_Training_Data: 影片：訓練數據
       courseA_video_Stevie: Stevie 和 Big Project
       courseA_video_Stevie_2018: Stevie 和 Big Project
       courseB_video_Unspotted: 沒被發現的蟲蟲
@@ -373,3 +386,5 @@ zh-TW:
       csd-pre-survey-levelgroup_2019: 教學內容概覽
       scrat_loops_C-F_video: 冰河歷險紀中的迴圈影片
       scrat_loops_C-F_video_2019: 冰河歷險紀中的迴圈影片
+      Dance_Party_extras_alternate_2019: 來來回回
+      Dance_Party_extras_mixed_2019: 更多按鈕

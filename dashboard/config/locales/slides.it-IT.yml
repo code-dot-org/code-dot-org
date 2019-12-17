@@ -3728,7 +3728,7 @@ it:
       1:
         text: 'Ora del Codice | Ballando col codice: Riscaldamento'
       2:
-        text: Hi! Mi chiamo Miral Kotb e sono una ballerina, una sviluppatrice di
+        text: Ciao! Mi chiamo Miral Kotb e sono una ballerina, una sviluppatrice di
           software e la creatrice di iLuminate.
       3:
         text: L'informatica è legata alla creatività in molti modi. Innumerevoli,
@@ -3745,7 +3745,7 @@ it:
           cambiare le loro mosse, farli reagire alla musica e renderli interattivi.
       6:
         text: Come vedi, lo schermo è suddiviso in tre parti principali. Sulla sinistra
-          c'è il palcoscenico. È lì che si esibiranno i ballerini.
+          c'è l'area di gioco, dove si esibiranno i ballerini.
       7:
         text: Quest'area centrale è la cassetta degli attrezzi. Nuovi blocchi di istruzioni
           compariranno in quest'area man mano che procederai nella lezione.
@@ -3762,14 +3762,14 @@ it:
           del blocco arancione. Questo ballerino è un gatto e si chiama “my_first_dancer”.
           Puoi cambiargli il nome come preferisci cliccando qui.
       11:
-        text: Puoi anche cambiare dove comparirà il ballerino nel palcoscenico con
-          questo menù a tendina.
+        text: Puoi anche cambiare dove comparirà il ballerino nell'area di lavoro
+          con questo menù a tendina.
       12:
-        text: Sopra al palcoscenico c'è un menù in cui scegliere la musica. Si può
-          scegliere tra molte canzoni, quindi cerca quelle che preferisci. Sotto al
-          palcoscenico c'è il pulsante "Esegui". Quando premerai "Esegui", vedrai
-          i ballerini che hai programmato apparire nel palcoscenico e la musica che
-          hai scelto inizierà a suonare.
+        text: Sopra all'area di gioco c'è un menù in cui scegliere la musica. Si può
+          scegliere tra molte canzoni, quindi divertiti a cercare le tue preferite.
+          Sotto al all'area di gioco c'è il pulsante "Esegui". Quando premerai "Esegui",
+          vedrai i ballerini che hai programmato apparire nell'area di gioco e la
+          musica che hai scelto inizierà a suonare.
       13:
         text: Prova tu! E anche se ti blocchi, non c'è problema! Alzati e muoviti
           e prima che te ne accorga, avrai direttamente creato il tuo ballo! Allora,
@@ -3805,7 +3805,7 @@ it:
           4 battute", il tuo ballerino attenderà quattro battute prima di iniziare
           il suo ballo.
       9:
-        text: Tieni d'occhio il contatore di battute sopra al palco.
+        text: Tieni d'occhio il contatore di battute sopra l'area di gioco.
       10:
         text: Osserva e ascolta attentamente per individuare l'evento che farà attivare
           le mosse di ballo. E proprio al momento giusto il ballerino si scatena!
@@ -4015,3 +4015,175 @@ it:
         image: notes/writing_first_program_4.png
       5:
         image: notes/writing_first_program_5.png
+    hoc_dance_warmup_2019:
+      1:
+        text: 'Ora del Codice | Ballando col codice: Riscaldamento'
+      2:
+        text: Ciao! Mi chiamo Miral Kotb e sono una ballerina, una sviluppatrice di
+          software e la creatrice di iLuminate.
+      3:
+        text: L'informatica è legata alla creatività in molti modi. Innumerevoli,
+          davvero. Una volta che hai imparato a scrivere del software, puoi mettere
+          le tue idee ovunque. Io l'ho fatto con dei costumi luminosi. Puoi fare davvero
+          tanto, una volta che hai gli strumenti per scrivere programmi. Le possibilità
+          sono davvero infinite.
+      4:
+        text: Nella prossima ora, verrai introdotto al mondo dell'informatica programmando
+          un ballo tutto tuo. Abbiamo messo insieme un po' di musiche di successo
+          e una squadra di grandiosi ballerini con cui divertirti.
+      5:
+        text: Dovrai usare dei blocchi di istruzioni per scegliere i vari ballerini,
+          cambiare le loro mosse, farli reagire alla musica e renderli interattivi.
+      6:
+        text: Come vedi, lo schermo è suddiviso in tre parti principali. Sulla sinistra
+          c'è l'area di gioco, dove si esibiranno i ballerini.
+      7:
+        text: L'area centrale è la cassetta degli attrezzi. Nuovi blocchi di istruzioni
+          compariranno in quest'area man mano che procederai nella lezione.
+      8:
+        text: La zona sulla destra è l'area di lavoro. Puoi trascinare i blocchi dalla
+          cassetta degli attrezzi nell'area di lavoro per creare il tuo programma.
+      9:
+        text: La descrizione dell'obiettivo di ogni esercizio è qui nella parte alta
+          dello schermo. Se hai bisogno di un suggerimento, basta che clicchi sulla
+          lampadina.
+      10:
+        text: Per iniziare, creiamo un nuovo ballerino usando questo blocco rosso.
+          Per prima cosa, prendilo dalla cassetta degli attrezzi e aggancialo all'interno
+          del blocco arancione. Questo ballerino è un gatto.
+      11:
+        text: Puoi anche cambiare dove comparirà il ballerino nell'area di lavoro
+          con questo menù a tendina.
+      12:
+        text: Sopra all'area di gioco c'è un menù in cui scegliere la musica. Si può
+          scegliere tra molte canzoni, quindi divertiti a cercare le tue preferite.
+          Sotto al all'area di gioco c'è il pulsante "Esegui". Quando premerai "Esegui",
+          vedrai i ballerini che hai programmato apparire nell'area di gioco e la
+          musica che hai scelto inizierà a suonare.
+      13:
+        text: Prova tu! E anche se ti blocchi, non c'è problema, alzati e muoviti
+          e, prima che te ne accorga, avrai già creato il tuo ballo personale. Allora,
+          cosa creerai?
+    hoc_dance_events_2019:
+      1:
+        text: 'Ora del Codice | Ballando col codice: Eventi'
+      2:
+        text: Mi chiamo Erin e sono un'ingegnera del software qui in Code.org ed ho
+          partecipato alla realizzazione di "Ballando col codice".
+      3:
+        text: Per sincronizzare diverse mosse di ballo con la musica, puoi usare un
+          concetto chiamato "Evento". Un evento dice al tuo programma di stare in
+          attesa di una certa situazione per far sì che accada qualcosa appena questo
+          avviene.
+      4:
+        text: Alcuni esempi di eventi sono quelli rappresentati da un clic del mouse,
+          dall'uso di un tasto freccia o dalla pressione di un dito sullo schermo.
+      5:
+        text: Stiamo per programmare un ballerino per fargli eseguire una certa mossa
+          quando si preme una freccia sullo schermo o il relativo tasto freccia sulla
+          tastiera.
+      6:
+        text: Possiamo usare il blocco evento "quando si preme in alto" collegandolo
+          al blocco "eseguono la mossa". Quando premiamo il tasto freccia verso l'alto,
+          viene eseguito il codice agganciato al blocco evento "quando si preme in
+          alto". Quale mossa di danza sceglierai?
+      7:
+        text: Assicurati che il tipo di ballerino che hai scelto corrisponda ad uno
+          dei ballerini che hai creato all'interno del blocco "quando si clicca su
+          Esegui" (setup), altrimenti non vedrai accadere nulla.
+      8:
+        text: Potresti creare anche altri eventi come questo per far eseguire ai ballerini
+          una mossa diversa per ogni freccia. Provaci e vedrai che, con poche linee
+          di codice, potrai realizzare il tuo ballo interattivo.
+    hoc_dance_measures_2019:
+      1:
+        text: 'Ora del Codice | Ballando col codice: Battute'
+      2:
+        text: Sono Aloe Blacc. Faccio il cantautore e l'animatore. Penso sia molto
+          importante imparare l'informatica perché l'informatica è il futuro. E penso
+          sia importante che le persone sappiano controllare la tecnologia che sta
+          letteralmente controllando la loro vita.
+      3:
+        text: |-
+          Gli eventi che useremo tra poco sono relativi alla variazione di certe caratteristiche musicali. Il cambiamento può indurre il ballerino
+          a fare una certa mossa di ballo.
+      4:
+        text: I ballerini professionisti preparano le loro coreografie contando i
+          battiti. In musica, un battuta è costituita da un certo numero di battiti.
+          Nella maggior parte delle canzoni una battuta contiene 4 battiti.
+      5:
+        text: Per far scatenare i tuoi ballerini, avrai bisogno di un blocco verde
+          per gestire gli eventi. Questo blocco verde dice "dopo 4 battute".
+      6:
+        text: Con un blocco viola "esegue ininterrottamente" (do forever) puoi scegliere
+          un ballo per il tuo ballerino. Ma, essendo agganciato al blocco evento "dopo
+          4 battute", il tuo ballerino attenderà quattro battute prima di iniziare
+          il suo ballo.
+      7:
+        text: Tieni d'occhio il contatore di battute sopra l'area di gioco.
+      8:
+        text: Osserva e ascolta attentamente per individuare l'evento che farà attivare
+          le mosse di ballo. E proprio al momento giusto il ballerino si scatena!
+    hoc_dance_properties_2019:
+      1:
+        text: 'Ora del Codice | Ballando col codice: Proprietà'
+      2:
+        text: Mi chiamo Maria. Sono una studentessa dell'Università di Washington
+          e sono una futura ingegnera di Amazon.
+      3:
+        text: Amo l'informatica perché unisce il problem solving e il pensiero critico.
+          E dopo aver messo ore di lavoro in un progetto, puoi ottenere qualcosa di
+          davvero fantastico e gratificante.
+      4:
+        text: Finora, hai avuto la possibilità di giocare con diversi tipi di ballerini
+          e li hai programmati per fargli interpretare diverse mosse di ballo. Ma
+          come funzionano davvero queste mosse?
+      5:
+        text: Ogni mossa è costituita da una serie di immagini chiamate fotogrammi
+          (frame). Ogni fotogramma è leggermente diverso quello precedente. Quando
+          si esegue il programma, il computer mostra un fotogramma dopo l'altro. Sono
+          mostrati così velocemente che sembra che il ballerino si muova. Questo è
+          il segreto di ogni animazione.
+      6:
+        text: Non solo puoi cambiare le mosse di ballo, puoi anche modificare le proprietà
+          del ballerino. Le proprietà definiscono caratteristiche del ballerino come
+          la posizione sullo schermo, la sua dimensione o i suoi colori.
+      7:
+        text: |-
+          Per cambiare le proprietà di un ballerino, devi usare un blocco "imposta" (set). Usiamo un blocco "imposta" per far sembrare
+          più piccoli i nostri ballerini. Prima di tutto trascina il blocco "imposta" nell'area di lavoro.
+      8:
+        text: Poi seleziona il ballerino che vuoi modificare e modifica il valore
+          della dimensione che vuoi ottenere. La dimensione intera è 100. Se scegli
+          un valore inferiore, il ballerino sarà più piccolo. Più piccolo sarà il
+          ballerino, più lontano sembrerà.
+      9:
+        text: Con il blocco "imposta", puoi anche modificare le proporzioni di un
+          ballerino, la rotazione, la posizione e il colore. Giocando con queste proprietà
+          puoi effettuare diversi tipi di modifiche e collegarle a diverse parti della
+          canzone.
+      10:
+        text: Ricorda, puoi impostare solo le proprietà di un ballerino che esiste
+          già. Assicurati che il blocco "imposta" venga dopo il blocco "crea un nuovo"
+          ballerino. Sentiti libero di sperimentare, sii creativo e divertiti!
+    hoc_dance_congrats_2019:
+      1:
+        text: 'Ora del Codice | Ballando col codice: Parte la festa!'
+      2:
+        text: Congratulazioni! Hai appena imparato le basi dell'informatica. Ora puoi
+          usare questi blocchi per creare un ballo tutto tuo da condividere con i
+          tuoi amici.
+      3:
+        text: Se guardi nella cassetta degli attrezzi, troverai dei blocchi che non
+          hai ancora visto. Per esempio, puoi usare il blocco "disponi" (layout) per
+          scegliere come distribuire i ballerini sullo schermo.
+      4:
+        text: Dai un'occhiata e fai qualche prova con questi nuovi blocchi. Progetterai
+          con attenzione il ballo abbinato alla tua canzone preferita?
+      5:
+        text: O una gara di ballo con i tuoi amici?
+      6:
+        text: O qualcosa di completamente diverso?
+      7:
+        text: Alla fine dell'esercizio potrai condividere la tua creazione con i tuoi
+          amici. Mettici tutta la tua immaginazione e divertiti!

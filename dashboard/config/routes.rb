@@ -620,6 +620,7 @@ Dashboard::Application.routes.draw do
       get 'projects/gallery/public/:project_type/:limit(/:published_before)', to: 'projects/public_gallery#index', defaults: {format: 'json'}
 
       get 'projects/personal', to: 'projects/personal_projects#index', defaults: {format: 'json'}
+      resources :section_libraries, only: [:index], defaults: {format: 'json'}
 
       # Routes used by UI test status pages
       get 'test_logs/*prefix/since/:time', to: 'test_logs#get_logs_since', defaults: {format: 'json'}
