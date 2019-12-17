@@ -47,11 +47,14 @@ const styles = {
   }
 }
 
-export default connect(state => ({
-  currentSectionName:
-    state.teacherSections.sections[state.teacherSections.selectedSectionId]
-      .name,
-  currentScriptName: state.scriptSelection.validScripts.filter(
-    script => script.id === state.scriptSelection.scriptId
-  )[0].name
-}))(TeacherDashboardHeader);
+export default connect(state => {
+  let currentSectionId = state.teacherSections.selectedSectionId;
+  let currentSectionName = state.teacherSections.sections[currentSectionId];
+
+  let currentScriptId = state.ScriptSelection.scriptId;
+  let currentScriptName = state.scriptSelection.validScripts.filter(
+    script => script.id === currentScriptId
+  )[0].name;
+
+  return {currentSectionName, currentScriptName};
+})(TeacherDashboardHeader);
