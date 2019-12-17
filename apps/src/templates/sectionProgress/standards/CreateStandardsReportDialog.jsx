@@ -20,7 +20,7 @@ const styles = {
   }
 };
 
-class CreateStandardsReportDialog extends Component {
+export class CreateStandardsReportDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     handleConfirm: PropTypes.func.isRequired

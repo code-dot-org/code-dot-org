@@ -61,6 +61,20 @@ describe('Button', () => {
     assert.strictEqual(large.props().style.paddingRight, 30);
   });
 
+  it('renders smaller if we use a small size', () => {
+    const regular = shallow(<Button href="/foo/bar" text="Click me" />);
+    const small = shallow(
+      <Button href="/foo/bar" text="Click me" size={Button.ButtonSize.small} />
+    );
+    assert.strictEqual(regular.props().style.height, 34);
+    assert.strictEqual(regular.props().style.paddingLeft, 24);
+    assert.strictEqual(regular.props().style.paddingRight, 24);
+
+    assert.strictEqual(small.props().style.height, 40);
+    assert.strictEqual(small.props().style.paddingLeft, 10);
+    assert.strictEqual(small.props().style.paddingRight, 10);
+  });
+
   it('renders an orange button by default', () => {
     const wrapper = shallow(<Button href="/foo/bar" text="Click me" />);
     assert.strictEqual(wrapper.props().style.backgroundColor, color.orange);
