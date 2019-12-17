@@ -10,7 +10,8 @@ const styles = {
   dialog: {
     paddingLeft: 20,
     paddingRight: 20,
-    paddingBottom: 20
+    paddingBottom: 20,
+    fontFamily: '"Gotham 4r", sans-serif, sans-serif'
   }
 };
 
@@ -32,7 +33,7 @@ export class LessonStatusDialog extends Component {
         <p>{i18n.updateUnpluggedLessonProgressSubHeading()}</p>
         <h3>{i18n.completedUnpluggedLessons()}</h3>
         <LessonStatusList />
-        <div>{i18n.pluggedLessonsNote()}</div>
+        <p>{i18n.pluggedLessonsNote()}</p>
         <DialogFooter rightAlign>
           <Button
             text={i18n.closeAndSave()}

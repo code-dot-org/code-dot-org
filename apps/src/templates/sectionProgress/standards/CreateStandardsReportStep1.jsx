@@ -19,7 +19,7 @@ export class CreateStandardsReportStep1 extends Component {
           {i18n.completedUnpluggedLessons()}
         </h3>
         <LessonStatusList />
-        <div>{i18n.pluggedLessonsNote()}</div>
+        <p>{i18n.pluggedLessonsNote()}</p>
         <DialogFooter rightAlign>
           <Button
             text={i18n.next()}
