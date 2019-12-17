@@ -61,7 +61,11 @@ class FishView extends React.Component {
     return (
       <StudioAppWrapper rotateContainerWidth={this.props.mobilePortraitWidth}>
         <CodeWorkspaceContainer topMargin={0}>
-          <ProtectedStatefulDiv id="container" style={styles.container}>
+          <ProtectedStatefulDiv
+            id="container"
+            style={styles.container}
+            dir="ltr"
+          >
             <div id="container-react" style={styles.containerReact} />
             <canvas id="background-canvas" style={styles.backgroundCanvas} />
             <canvas id="activity-canvas" style={styles.activityCanvas} />

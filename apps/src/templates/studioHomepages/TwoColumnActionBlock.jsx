@@ -19,13 +19,13 @@ const styles = {
   textItem: {
     backgroundColor: color.teal,
     padding: 25,
-    minHeight: 260,
+    minHeight: 281,
     boxSizing: 'border-box'
   },
   textItemCyan: {
     backgroundColor: color.light_cyan,
     padding: 25,
-    minHeight: 260,
+    minHeight: 281,
     boxSizing: 'border-box'
   },
   subHeading: {
@@ -46,7 +46,8 @@ const styles = {
   },
   image: {
     width: 485,
-    minHeight: 260
+    minHeight: 260,
+    height: 281
   },
   description: {
     paddingRight: 10,
@@ -222,40 +223,11 @@ export class SpecialAnnouncementActionBlock extends Component {
       <TwoColumnActionBlock
         id="danceparty-2019-announcement"
         imageUrl={pegasus(
-          '/shared/images/fill-540x289/teacher-announcement/hoc2019-danceparty.jpg'
+          '/shared/images/fill-540x300/teacher-announcement/hoc2019-danceparty.jpg'
         )}
         subHeading={i18n.specialAnnouncementHeadingHoc2019DanceParty()}
         description={i18n.specialAnnouncementDescriptionHoc2019DanceParty()}
         buttons={[
-          {
-            url: 'https://hourofcode.com/#join',
-            text: i18n.joinUs()
-          },
-          {
-            url: pegasus('/hourofcode/overview'),
-            text: i18n.tryIt()
-          }
-        ]}
-      />
-    );
-  }
-}
-
-export class OceansAnnouncement extends Component {
-  render() {
-    return (
-      <TwoColumnActionBlock
-        id="oceans-2019-announcement"
-        imageUrl={pegasus(
-          '/shared/images/fill-540x289/teacher-announcement/hoc2019-oceans.png'
-        )}
-        subHeading={i18n.specialAnnouncementHeadingHoc2019Oceans()}
-        description={i18n.specialAnnouncementDescriptionHoc2019Oceans()}
-        buttons={[
-          {
-            url: 'https://hourofcode.com/#join',
-            text: i18n.joinUs()
-          },
           {
             url: pegasus('/hourofcode/overview'),
             text: i18n.tryIt()
