@@ -5,11 +5,10 @@ import _ from 'lodash';
 import {getState, setState} from './state';
 import constants, {AppMode, Modes} from './constants';
 import modeHelpers from './modeHelpers';
-import {
+import helpers, {
   $time,
   currentRunTime,
   finishMovement,
-  resetTraining,
   friendlyNameForFishPart
 } from './helpers';
 import train from './models/train';
@@ -887,7 +886,7 @@ let UnwrappedTrain = class Train extends React.Component {
     const noButtonText =
       state.appMode === AppMode.CreaturesVTrash ? 'No' : `Not ${state.word}`;
     const resetTrainingFunction = () => {
-      resetTraining(state);
+      helpers.resetTraining(state);
       setState({showConfirmationDialog: false});
     };
 
@@ -1438,7 +1437,7 @@ let UnwrappedPond = class Pond extends React.Component {
                   style={styles.playAgainButton}
                   onClick={() => {
                     setState({pondClickedFish: null, pondPanelShowing: false});
-                    resetTraining(state);
+                    helpers.resetTraining(state);
                     modeHelpers.toMode(Modes.Words);
                   }}
                 >
