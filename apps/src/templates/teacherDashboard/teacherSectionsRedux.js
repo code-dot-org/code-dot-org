@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import $ from 'jquery';
+import {reload} from '@cdo/apps/utils';
 import {OAuthSectionTypes} from './shapes';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
@@ -220,11 +221,7 @@ export const editSectionProperties = props => ({
  */
 export const cancelEditingSection = () => ({type: EDIT_SECTION_CANCEL});
 
-/**
- * Submit staged section changes to the server.
- * Closes UI and updates section table on success.
- */
-export const finishEditingSection = () => (dispatch, getState) => {
+export const submitEditingSection = (dispatch, getState) => {
   dispatch({type: EDIT_SECTION_REQUEST});
   const state = getState().teacherSections;
   const section = state.sectionBeingEdited;
@@ -233,20 +230,43 @@ export const finishEditingSection = () => (dispatch, getState) => {
     ? '/dashboardapi/sections'
     : `/dashboardapi/sections/${section.id}`;
   const httpMethod = isAddingSection(state) ? 'POST' : 'PATCH';
+  return $.ajax({
+    url: dataUrl,
+    method: httpMethod,
+    contentType: 'application/json;charset=UTF-8',
+    data: JSON.stringify(serverSectionFromSection(section))
+  });
+};
+
+/**
+ * Submit staged section changes to the server.
+ * Closes UI and updates section table on success.
+ */
+export const finishEditingSection = () => (dispatch, getState) => {
+  const state = getState().teacherSections;
+  const section = state.sectionBeingEdited;
   return new Promise((resolve, reject) => {
-    $.ajax({
-      url: dataUrl,
-      method: httpMethod,
-      contentType: 'application/json;charset=UTF-8',
-      data: JSON.stringify(serverSectionFromSection(section))
-    })
+    submitEditingSection(dispatch, getState)
       .done(result => {
         dispatch({
           type: EDIT_SECTION_SUCCESS,
           sectionId: section.id,
           serverSection: result
         });
-        resolve();
+        resolve(result);
+      })
+      .fail((jqXhr, status) => {
+        dispatch({type: EDIT_SECTION_FAILURE});
+        reject(status);
+      });
+  });
+};
+
+export const reloadAfterEditingSection = () => (dispatch, getState) => {
+  return new Promise((resolve, reject) => {
+    submitEditingSection(dispatch, getState)
+      .done(result => {
+        reload();
       })
       .fail((jqXhr, status) => {
         dispatch({type: EDIT_SECTION_FAILURE});
@@ -418,6 +438,7 @@ const initialState = {
   sectionBeingEdited: null,
   showSectionEditDialog: false,
   saveInProgress: false,
+  stageExtrasScriptIds: [],
   // Track whether we've async-loaded our section and assignment data
   asyncLoadComplete: false,
   // Whether the roster dialog (used to import sections from google/clever) is open.
