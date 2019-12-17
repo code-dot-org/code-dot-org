@@ -38,9 +38,7 @@ class GoogleChartWrapper extends React.Component {
     let chart;
     let chartData;
     let columns;
-    let options = {
-      title: this.props.chartTitle || ''
-    };
+    let options = {};
 
     switch (this.props.chartType) {
       case 'Bar Chart':

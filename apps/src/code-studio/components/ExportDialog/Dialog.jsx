@@ -290,13 +290,19 @@ class ExportDialog extends React.Component {
       });
       return exportResult;
     } catch (e) {
-      recordExport('publishToExpoError');
+      const hasDataAPIsError = e.message.includes('hasDataAPIs');
+      const exportError = hasDataAPIsError
+        ? 'This project uses data APIs. Exporting this type of app is not supported during the Beta period.'
+        : 'Failed to create app. Please try again later.';
+      recordExport(
+        hasDataAPIsError ? 'publishBlockedDueToDataAPIs' : 'publishToExpoError'
+      );
       this.setState({
         exporting: false,
         md5PublishSavedSources: null,
         expoUri: null,
         expoSnackId: null,
-        exportError: 'Failed to create app. Please try again later.'
+        exportError
       });
     }
     // In the success case, we already returned, so reaching this point means
