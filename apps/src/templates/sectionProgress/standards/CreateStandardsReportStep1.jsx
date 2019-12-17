@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import i18n from '@cdo/locale';
-import {LessonStatusList} from './LessonStatusList';
+import LessonStatusList from './LessonStatusList';
 import Button from '../../Button';
 import DialogFooter from '../../teacherDashboard/DialogFooter';
 
