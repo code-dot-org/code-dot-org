@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import ProgressBox from '../sectionProgress/ProgressBox';
+import ProgressBox from '@cdo/apps/templates/sectionProgress/ProgressBox';
 import {
   summarizeProgressInStage,
   stageIsAllAssessment

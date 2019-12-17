@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import MultiCheckboxSelector from '../../MultiCheckboxSelector';
-import ProgressBox from '../ProgressBox';
+import ProgressBoxForLessonNumber from './ProgressBoxForLessonNumber';
 
 const styles = {
   lessonListItem: {
@@ -45,12 +45,8 @@ const ComplexLessonComponent = function({style, lesson}) {
   return (
     <div style={styles.lessonListItem}>
       <div>
-        <ProgressBox
-          started={false}
-          incomplete={0}
-          imperfect={0}
-          perfect={0}
-          showLessonNumber={true}
+        <ProgressBoxForLessonNumber
+          completed={false}
           lessonNumber={lesson.number}
         />
       </div>
