@@ -106,7 +106,10 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     )
 
     if auth_option.save
-      flash.notice = I18n.t('user.account_successfully_updated')
+      provider = I18n.t(auth_option.credential_type, scope: "auth", default: "")
+      flash.notice = auth_option.email.blank? ?
+        I18n.t('user.auth_option_saved_no_email', provider: provider) :
+        I18n.t('user.auth_option_saved', provider: provider, email: auth_option.email)
     else
       flash.alert = get_connect_provider_errors(auth_option)
     end
@@ -143,7 +146,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       sign_in_user user
     elsif user.persisted?
       # If email is already taken, persisted? will be false because of a validation failure
-      check_and_apply_oauth_takeover user
       sign_in_user user
     elsif (looked_up_user = User.find_by_email_or_hashed_email(user.email))
       email_already_taken_redirect \
