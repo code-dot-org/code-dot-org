@@ -2,16 +2,16 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {MultiGrid} from 'react-virtualized';
-import styleConstants from '../../styleConstants';
+import styleConstants from '../../../styleConstants';
 import {
   scriptDataPropType,
   getLevels,
   jumpToLessonDetails
-} from './sectionProgressRedux';
+} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
-import StudentProgressSummaryCell from '../sectionProgress/StudentProgressSummaryCell';
-import SectionProgressLessonNumberCell from '../sectionProgress/SectionProgressLessonNumberCell';
-import color from '../../util/color';
+import StudentProgressSummaryCell from './StudentProgressSummaryCell';
+import SectionProgressLessonNumberCell from '@cdo/apps/templates/sectionProgress/SectionProgressLessonNumberCell';
+import color from '../../../util/color';
 import {
   progressStyles,
   ROW_HEIGHT,
@@ -19,9 +19,9 @@ import {
   NAME_COLUMN_WIDTH,
   MAX_TABLE_SIZE,
   tooltipIdForLessonNumber
-} from './multiGridConstants';
+} from '@cdo/apps/templates/sectionProgress/multiGridConstants';
 import i18n from '@cdo/locale';
-import SectionProgressNameCell from './SectionProgressNameCell';
+import SectionProgressNameCell from '@cdo/apps/templates/sectionProgress/SectionProgressNameCell';
 
 const SUMMARY_COLUMN_WIDTH = 40;
 
