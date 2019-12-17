@@ -3,7 +3,7 @@ import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import StandardsView from '@cdo/apps/templates/sectionProgress/standards/StandardsView';
 
-describe('SectionProgress', () => {
+describe('StandardView', () => {
   let DEFAULT_PROPS;
 
   beforeEach(() => {
