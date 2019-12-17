@@ -17,7 +17,8 @@ import {
   getCurrentProgress,
   getCurrentScriptData,
   setLessonOfInterest,
-  scriptDataPropType
+  scriptDataPropType,
+  setCurrentView
 } from './sectionProgressRedux';
 import {tooltipIdForLessonNumber} from './multiGridConstants';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
@@ -71,6 +72,7 @@ class SectionProgress extends Component {
     section: sectionDataPropType.isRequired,
     validScripts: PropTypes.arrayOf(validScriptPropType).isRequired,
     currentView: PropTypes.oneOf(Object.values(ViewType)),
+    setCurrentView: PropTypes.func.isRequired,
     scriptData: scriptDataPropType,
     loadScript: PropTypes.func.isRequired,
     setScriptId: PropTypes.func.isRequired,
@@ -80,6 +82,23 @@ class SectionProgress extends Component {
 
   componentDidMount() {
     this.props.loadScript(this.props.scriptId);
+  }
+
+  componentDidUpdate(prevProps) {
+    // Check if we are going from a CSF script to a non-CSF script and
+    // currentView is Standards. If so re-set currentView to Summary since
+    // Standards doesn't apply.
+    const isCSFBefore =
+      prevProps.scriptData && !prevProps.scriptData.excludeCsfColumnInLegend;
+    const isCSFAfter =
+      this.props.scriptData && !this.props.scriptData.excludeCsfColumnInLegend;
+    if (
+      prevProps.currentView === ViewType.STANDARDS &&
+      isCSFBefore &&
+      !isCSFAfter
+    ) {
+      this.props.setCurrentView(ViewType.SUMMARY);
+    }
   }
 
   onChangeScript = scriptId => {
@@ -232,6 +251,9 @@ export default connect(
     },
     setLessonOfInterest(lessonOfInterest) {
       dispatch(setLessonOfInterest(lessonOfInterest));
+    },
+    setCurrentView(viewType) {
+      dispatch(setCurrentView(viewType));
     }
   })
 )(SectionProgress);
