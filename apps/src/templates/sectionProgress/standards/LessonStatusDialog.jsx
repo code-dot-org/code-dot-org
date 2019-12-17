@@ -14,7 +14,7 @@ const styles = {
   }
 };
 
-class LessonStatusDialog extends Component {
+export class LessonStatusDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     handleConfirm: PropTypes.func.isRequired
