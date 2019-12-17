@@ -1275,7 +1275,9 @@ let UnwrappedPond = class Pond extends React.Component {
       setState({pondFishTransitionStartTime: $time(), pondClickedFish: null});
     }
 
-    e.stopPropagation();
+    if (e) {
+      e.stopPropagation();
+    }
   };
 
   onPondClick = e => {
@@ -1376,7 +1378,9 @@ let UnwrappedPond = class Pond extends React.Component {
       }
     }
 
-    e.stopPropagation();
+    if (e) {
+      e.stopPropagation();
+    }
   };
 
   render() {
@@ -1420,13 +1424,14 @@ let UnwrappedPond = class Pond extends React.Component {
               ...(!state.pondPanelShowing ? {} : styles.bgTeal)
             }}
             onClick={this.onPondPanelButtonClick}
+            id="uitest-info-btn"
           >
             <FontAwesomeIcon icon={faInfo} style={styles.infoIcon} />
           </div>
         )}
         <img style={styles.pondBot} src={aiBotClosed} />
         {state.canSkipPond && (
-          <div>
+          <div id="uitest-nav-btns">
             {state.appMode === AppMode.FishLong ? (
               <div>
                 <Button
