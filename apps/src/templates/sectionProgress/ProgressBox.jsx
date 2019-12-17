@@ -31,7 +31,6 @@ export default class ProgressBox extends Component {
     perfect: PropTypes.number,
     style: PropTypes.object,
     stageIsAllAssessment: PropTypes.bool,
-    showLessonNumber: PropTypes.bool,
     lessonNumber: PropTypes.number
   };
 
@@ -84,7 +83,7 @@ export default class ProgressBox extends Component {
     };
     return (
       <div style={boxWithBorderStyle}>
-        {this.props.showLessonNumber && (
+        {this.props.lessonNumber && (
           <div style={lessonNumberStyle}>{this.props.lessonNumber}</div>
         )}
         <div style={incompleteLevels} />
