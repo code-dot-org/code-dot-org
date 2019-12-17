@@ -97,6 +97,23 @@ class LevelTest < ActiveSupport::TestCase
     end
   end
 
+  test "reject bad chars in custom level name" do
+    assert_does_not_create(Level) do
+      level = Level.create(@custom_maze_data.merge(name: 'bad <chars>'))
+      assert_not level.valid?
+      assert level.errors.include?(:name)
+    end
+  end
+
+  test "allow whitelisted chars in custom level name" do
+    assert_creates(Level) do
+      name = '+-=_(&"\''
+      level = Level.create(@custom_maze_data.merge(name: name))
+      assert level.valid?
+      assert_equal name, level.name
+    end
+  end
+
   test "get custom levels" do
     custom_levels = Level.custom_levels
     assert custom_levels.include?(@custom_level)
@@ -822,7 +839,7 @@ class LevelTest < ActiveSupport::TestCase
   test 'clone with suffix properly escapes suffixes' do
     level_1 = create :level, name: 'your_level_1'
 
-    tricky_suffix = '[(.\\'
+    tricky_suffix = '!(."'
 
     level_2 = level_1.clone_with_suffix(tricky_suffix)
     assert_equal "your_level_1#{tricky_suffix}", level_2.name
@@ -957,7 +974,6 @@ class LevelTest < ActiveSupport::TestCase
       name 'old multi level copy'
       editor_experiment 'new-level-editors'
       title 'Multiple Choice'
-
       question 'What is your favorite color?'
       wrong 'Red'
       wrong 'Green'

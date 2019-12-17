@@ -5,14 +5,14 @@ fi-FI:
   'yes': Kyllä
   'no': Ei
   select_language: Valitse kieli
-  upgrade_ie_message: Code.org poistaa pian tuen Internet Explorer 8, 9 ja 10 -selaimiin.
-    Ole hyvä ja päivitä uusimpaan selaimeen.
+  upgrade_ie_message: Code.org poistaa pian Internet Explorer 8, 9 ja 10 selaimien
+    tuen. Ole hyvä ja päivitä nykyaikaiseen selaimeen.
   upgrade_ie_message_csedweek: CSEdWeek.org poistaa pian tuen Internet Explorer 8,
     9 ja 10 -selaimiin. Ole hyvä ja päivitä uusimpaan selaimeen.
   upgrade_ie_link: Lue lisää
   en: Tietojenkäsittelytiede
   computer_science_edweek: Tietotekniikan koulutusviikko
-  csedweek_dates: 8. -14. Joulukuuta 2014
+  csedweek_dates: 3.-9. joulukuuta 2018
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Koodaustunti</a> on tulossa. Kaikki opettajat ja järjestäjät,
     <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -35,12 +35,15 @@ fi-FI:
   twentyhours_text: Ensimmäinen Koodaustunti tehtynä? Opi lisää tietojenkäsittelytieteestä
     ja ohjelmoinnin käsitteistä tällä jatkokurssilla.
   og_title: Jokainen lapsi ansaitsee mahdollisuuden
+  og_title_soon: Tunti koodia on tulossa
   og_title_here: Koodaustunti on täällä!
   og_description: Jokainen oppilas jokaisessa koulussa ansaitsee mahdollisuuden opiskella
     tietotekniikkaa. Se muuttaa kaiken.
   csedweek_og_title: Koodaustunti on täällä
   csedweek_og_description: Koodaustunti on maailmanlaajuinen liike, joka tavoittaa
     kymmeniä miljoonia eri ikäisiä oppilaita yli 180:ssä maassa ja yli 45 eri kielellä.
+  csedweek_og_description_here: Koodaustunti on saapunut. Jokainen oppilas jokaisessa
+    koulussa ansaitsee mahdollisuuden opiskella tietotekniikkaa. Se muuttaa kaiken.
   hoc2014_heading: Tule mukaan <a href="http://hourofcode.com">Koodaustuntiin</a><br/>8.–14.
     joulukuuta 2014<br/>
   hoc2014_students: Oppilaat
@@ -87,6 +90,7 @@ fi-FI:
   congratulations_volunteer: 'Onnittelut: Nyt kun olet kokeillut Koodaustuntia itse,
     <a href="https://code.org/volunteer">voit kirjautua vapaaehtoiseksi avustajaksi
     johonkin koululuokkaan</a> ja auttaa oppilaita oppimaan Koodaustunnilla!'
+  congratulations_on_completing_course: Onnittelut! Läpäisit kurssin %{course}
   congrats_next_tutorials_title: Kokeile näitä johdantoja seuraavaksi
   congrats_next_tutorials_desc: Kokeile näitä lyhyempiä, yhden tunnin oppitunteja,
     tai kokeile <a href="%{current_path}/next">kumppaneidemme oppitunteja</a>.
@@ -243,6 +247,8 @@ fi-FI:
   just_did_accelerated: Suoritin juuri nopeutetun kurssin - tsekkaa tämä! @codeorg
   just_did_hoc_donor: 'Suoritin juuri #Koodaustunnin - Tarkista tämä! (Kiitos %{donor_twitter}
     tukemisesta @codeorg)'
+  just_did_course_donor: Suoritin juuri kurssin %{course} - käy katsomassa! Kiitos
+    %{donor_twitter} @codeorg tuestasi
   twitter_teach_cs: Yhdeksän kymmenestä haluaisi että kouluissa opettaisiin tietojenkäsittelyä.
     http://youtu.be/nKIu9yen5nc. Käy katsomassa https://code.org/.
   twitter_cs_foundational: Tietojenkäsittelytiede on perustavaa opintoa jokaiselle
@@ -274,7 +280,8 @@ fi-FI:
   studiobar_title_nolink: Tutustu Koodistudioon
   studiobar_elementary_title: Alkeiskurssit
   studiobar_elementary_body: Kolme uutta kurssiamme alakoululaisille
-  studiobar_dance_body: Luo oma Dance Party
+  studiobar_dance_title: Tanssibileet
+  studiobar_dance_body: Luo ja jaa omat tanssibileesi
   studiobar_hoc_title: Koodaustunti
   studiobar_hoc_body: Opi koodaamaan Angry Birdsien kanssa
   studiobar_flappy_title: Flappy Code
@@ -327,6 +334,7 @@ fi-FI:
   homepage_hero_text_stat_loc: "#loc opiskelijoiden kirjoittamia koodirivejä"
   homepage_hero_text_stat_students: "#student_count opiskelijoiden tilejä Code Studio:ssa"
   homepage_hero_text_stat_served: 'Koodaustunti: #served tarjolla'
+  homepage_hero_hoc_is_coming: Tunti koodia on tulossa
   homepage_slot_text_hoc: Koodaustunti
   homepage_slot_text_frozen: Frozen Annan ja Elsan kanssa
   homepage_slot_text_teacher: Opettajan päänäyttö
@@ -1458,12 +1466,24 @@ fi-FI:
   user_header_signin: Kirjaudu sisään
   user_header_gamelab: Pelilabra
   user_header_playlab: Pelilabra
+  user_header_dance: Tanssibileet
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
   user_header_view_my_projects: Katso omia projektejasi
   applab_tile_start_tutorial: Aloita
   applab_tile_teacher_guide: Katso opettajan opas
   aquatic_name: 'Minecraft: Merellinen matka'
+  account_sign_up_email_opt_in: Saammeko lähettää ilmoituksia kursseistamme, paikallisista
+    tapahtumista tai muista tietojenkäsittelytekniikan uutisista sähköpostiisi? (noin
+    kerran kuussa)
+  account_sign_up_child_accept_terms: Vahvistan että minulla on huoltajani lupa käyttää
+    Code.org palveluita.
+  hoc_overview_dance_title: Tanssibileet
+  hoc_overview_dance_subtitle: Koodaa tanssibileet jakaaksesi se ystäviesi kanssa.
+    Esittelyssä Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara ja 25 muuta!
+  hoc_overview_dance_2019_subtitle: Koodaa tanssibileet jakaaksesi se ystäviesi kanssa.
+    Esittelyssä Katy Perry, Shawn Mendes, Panic! The Disco, Lil Nas X, Jonas Brothers,
+    Nicki Minaj, ja 34 enemmän!
   hoc_overview_partner_activities_title: Enemmän toimintoja yhteistyökumppaneilta
   hoc_overview_partner_activities_body: Hour of Code-sivustolla on yli 100 tietojenkäsittelyn
     aktiviteettia kaikenikäisille ja kaikille osaamistasoille. Sivuston on kehittänyt
@@ -1503,7 +1523,9 @@ fi-FI:
     uudella toiminnolla! Matka Minecraftin läpi koodilla.
   hoc2018_mc_teacher_guide: Katso opettajan opas
   hoc2018_mc_minecraft_education: Minecraft koulutus
+  hoc2018_dance_party_main_heading: Tanssibileet
   hoc2018_dance_create_your_own_dance_title: Luo oma Dance Party
+  hoc2018_dance_party_box_title: Tanssibileet
   hoc2018_dance_party_box_description: Koodaa oma Dance Party, jonka voit jakaa ystäviesi
     kanssa!
   hoc2018_dance_party_button: Aloita
