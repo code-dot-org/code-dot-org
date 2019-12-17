@@ -95,10 +95,20 @@ end
 # Prepare the given string for using in Image Magick.
 def escape_image_magick_string(string)
   string = string.force_8859_to_utf8
-  # Escape special Image Magick symbols @, %, and \n
-  string = string.gsub(/^@/, '\@')
-  string = string.gsub(/%/, '\%')
-  string = string.gsub(/\\n/, '\\\\\n')
+  # Escape special Image Magick symbols \, @, %, and \n
+  # Note we are using the gsub block replacement in order to avoid having to do
+  # extra '\' escaping. Otherwise we would have to write '\\\\\\' to insert two
+  # backslashes into the string. Using the block replacement results in normal
+  # string behavior: '\\\\' results in a string with two backslashes. See the
+  # String.gsub docs for more details.  This is for the sake of readable code.
+  # literal \ replaced with literal \\
+  string = string.gsub(/\\/) {'\\\\'}
+  # @ at the front of the string replaced with literal \@
+  string = string.gsub(/^@/) {'\\@'}
+  # % replaced with literal \%
+  string = string.gsub(/%/) {'\\%'}
+  # new-line character replaced with literal \\n
+  string = string.gsub(/\n/) {'\\\\n'}
   string.strip
 end
 
