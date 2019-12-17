@@ -522,7 +522,7 @@ la:
   hoc_faq_devices_a: Los tutoriales de Code.org funcionan en todos los dispositivos
     y navegadores. Puedes ver más información sobre la tecnología compatible con los
     tutoriales de Code.org <a href='%{codeorg_url}/educate/it'>aquí</a>, y con los
-    tutoriales que no pertenecen a Code.org en <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>la
+    tutoriales que no pertenecen a Code.org en <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> la
     descripción específica del tutorial. ¡No olvides que también ofrecemos <a href='%{unplugged_url}'>actividades
     sin conexión</a> si tu escuela no puede incorporar los tutoriales!
   hoc_faq_need_computers_q: "¿Necesito computadoras para todos los participantes?"
