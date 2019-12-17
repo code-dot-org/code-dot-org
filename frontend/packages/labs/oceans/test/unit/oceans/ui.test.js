@@ -8,7 +8,8 @@ import {
   Words,
   wordSet,
   Train,
-  Predict
+  Predict,
+  Pond
 } from '@ml/oceans/ui';
 import guide from '@ml/oceans/models/guide';
 import soundLibrary from '@ml/oceans/models/soundLibrary';
@@ -423,5 +424,113 @@ describe('Predict', () => {
     setState({isRunning: false, isPaused: true, canSkipPredict: true});
     wrapper = shallow(<Predict {...DEFAULT_PROPS} />);
     expect(wrapper.exists('#uitest-continue-btn')).toBeTruthy();
+  });
+});
+
+describe('Pond', () => {
+  let playSoundStub;
+
+  beforeEach(() => {
+    playSoundStub = sinon.stub(soundLibrary, 'playSound');
+  });
+
+  afterEach(() => {
+    soundLibrary.playSound.restore();
+    resetState();
+  });
+
+  it('recall icons toggle fish set on click', () => {
+    let wrapper = shallow(<Pond {...DEFAULT_PROPS} />);
+    let checkIcon = wrapper.find('FontAwesomeIcon').at(0);
+    let banIcon = wrapper.find('FontAwesomeIcon').at(1);
+
+    expect(checkIcon.prop('style').backgroundColor).toEqual(colors.green);
+    expect(banIcon.prop('style').backgroundColor).toBeFalsy();
+    expect(playSoundStub.callCount).toEqual(0);
+
+    banIcon.simulate('click');
+    wrapper = shallow(<Pond {...DEFAULT_PROPS} />);
+    checkIcon = wrapper.find('FontAwesomeIcon').at(0);
+    banIcon = wrapper.find('FontAwesomeIcon').at(1);
+
+    expect(checkIcon.prop('style').backgroundColor).toBeFalsy();
+    expect(banIcon.prop('style').backgroundColor).toEqual(colors.red);
+    expect(playSoundStub.withArgs('no').callCount).toEqual(1);
+  });
+
+  describe('info button', () => {
+    it('displays based on state', () => {
+      let wrapper = shallow(<Pond {...DEFAULT_PROPS} />);
+      expect(wrapper.exists('#uitest-info-btn')).toBeFalsy();
+
+      setState({
+        appMode: AppMode.FishShort,
+        pondFish: [{}],
+        recallFish: [{}]
+      });
+      wrapper = shallow(<Pond {...DEFAULT_PROPS} />);
+      expect(wrapper.exists('#uitest-info-btn')).toBeTruthy();
+    });
+
+    it('toggles pond panel on click', () => {
+      setState({
+        appMode: AppMode.FishShort,
+        pondFish: [{}],
+        recallFish: [{}],
+        pondPanelShowing: false
+      });
+      let wrapper = shallow(<Pond {...DEFAULT_PROPS} />);
+
+      wrapper.find('#uitest-info-btn').simulate('click');
+      expect(getState().pondPanelShowing).toBeTruthy();
+      expect(playSoundStub.withArgs('sortyes').callCount).toEqual(1);
+
+      wrapper = shallow(<Pond {...DEFAULT_PROPS} />);
+      expect(wrapper.exists('PondPanel')).toBeTruthy();
+
+      wrapper.find('#uitest-info-btn').simulate('click');
+      expect(getState().pondPanelShowing).toBeFalsy();
+      expect(playSoundStub.withArgs('sortno').callCount).toEqual(1);
+
+      wrapper = shallow(<Pond {...DEFAULT_PROPS} />);
+      expect(wrapper.exists('PondPanel')).toBeFalsy();
+    });
+  });
+
+  describe('navigation', () => {
+    it('displays buttons based on canSkipPond state', () => {
+      let wrapper = shallow(<Pond {...DEFAULT_PROPS} />);
+      expect(getState().canSkipPond).toBeFalsy();
+      expect(wrapper.exists('#uitest-nav-btns')).toBeFalsy();
+
+      setState({canSkipPond: true});
+      wrapper = shallow(<Pond {...DEFAULT_PROPS} />);
+      expect(wrapper.exists('#uitest-nav-btns')).toBeTruthy();
+    });
+
+    it('displays different buttons based on appMode state', () => {
+      const getBtnText = (btns, i) =>
+        btns
+          .at(i)
+          .render()
+          .text();
+
+      setState({canSkipPond: true, appMode: AppMode.FishLong});
+      let wrapper = shallow(<Pond {...DEFAULT_PROPS} />);
+
+      let buttons = wrapper.find('#uitest-nav-btns').find('Button');
+      expect(buttons.length).toEqual(3);
+      expect(getBtnText(buttons, 0)).toEqual('New Word');
+      expect(getBtnText(buttons, 1)).toEqual('Finish');
+      expect(getBtnText(buttons, 2)).toEqual('Train More');
+
+      setState({appMode: 'not-fish-long'});
+      wrapper = shallow(<Pond {...DEFAULT_PROPS} />);
+
+      buttons = wrapper.find('#uitest-nav-btns').find('Button');
+      expect(buttons.length).toEqual(2);
+      expect(getBtnText(buttons, 0)).toEqual('Continue');
+      expect(getBtnText(buttons, 1)).toEqual('Train More');
+    });
   });
 });
