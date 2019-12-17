@@ -2,6 +2,15 @@ require 'cdo/share_filtering'
 require_relative './bucket_helper.rb'
 require_relative './source_bucket.rb'
 
+class ProfanityPrivacyError < StandardError
+  def initialize(flagged_text)
+    @flagged_text = flagged_text
+    super
+  end
+
+  attr_reader :flagged_text
+end
+
 # The standard source filename used for blockly projects using channels.
 # Check whether it is defined—helpers can be double-included during test running.
 BLOCKLY_SOURCE_FILENAME = 'main.json'.freeze unless defined? BLOCKLY_SOURCE_FILENAME
@@ -16,6 +25,17 @@ def channel_policy_violation?(channel_id)
   body = channel_main_json_body channel_id
   return false unless body
   profanity_privacy_violation?(BLOCKLY_SOURCE_FILENAME, body)
+end
+
+def title_profanity_privacy_violation(name, locale)
+  share_failure = begin
+    ShareFiltering.find_name_failure(name, locale)
+  rescue OpenURI::HTTPError, IO::EAGAINWaitReadable
+    # If WebPurify or Geocoder are unavailable, default to viewable
+    # Add logging!
+    return false
+  end
+  share_failure
 end
 
 # @example
