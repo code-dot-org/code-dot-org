@@ -158,7 +158,7 @@ module ProxyHelper
     render plain: text, status: status
   end
 
-  # Do not permit proxying to a server on our own private network, unless it is our own dashboard IP Address (we
+  # Do not permit proxying  to a server on our own private network, unless it is our own dashboard IP Address (we
   # sometimes proxy to ourselves, which is an internal IP address on development / continuous integration environments).
   def allowed_ip_address?(hostname)
     host_ip_address = IPAddr.new(IPSocket.getaddress(hostname))

@@ -892,7 +892,7 @@ P5Lab.prototype.runButtonClick = function() {
   this.studioApp_.attempts++;
   this.execute();
 
-  // Enable the Finish button if is present:
+  // Enable the Finish button  if is present:
   var shareCell = document.getElementById('share-cell');
   if (shareCell && !this.level.validationCode) {
     shareCell.className = 'share-cell-enabled';
