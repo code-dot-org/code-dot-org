@@ -116,8 +116,9 @@ const NUM_STUDENTS_PER_PAGE = 50;
 
 // Types of views of the progress tab
 export const ViewType = {
-  SUMMARY: 'summary',
-  DETAIL: 'detail'
+  SUMMARY: 'summary', // lessons
+  DETAIL: 'detail', // levels
+  STANDARDS: 'standards'
 };
 
 /**

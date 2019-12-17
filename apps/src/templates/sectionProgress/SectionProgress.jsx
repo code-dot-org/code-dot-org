@@ -31,6 +31,7 @@ import {
 import {stageIsAllAssessment} from '@cdo/apps/templates/progress/progressHelpers';
 import color from '../../util/color';
 import firehoseClient from '../../lib/util/firehose';
+import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   heading: {
@@ -57,6 +58,12 @@ const styles = {
   },
   scriptLink: {
     color: color.teal
+  },
+  show: {
+    display: 'block'
+  },
+  hide: {
+    display: 'none'
   }
 };
 
@@ -164,6 +171,12 @@ class SectionProgress extends Component {
     const levelDataInitialized = scriptData && !isLoadingProgress;
     const linkToOverview = this.getLinkToOverview();
     const lessons = scriptData ? scriptData.stages : [];
+    const summaryStyle =
+      currentView === ViewType.SUMMARY ? styles.show : styles.hide;
+    const detailStyle =
+      currentView === ViewType.DETAIL ? styles.show : styles.hide;
+    const standardsStyle =
+      currentView === ViewType.STANDARDS ? styles.show : styles.hide;
 
     return (
       <div>
@@ -195,8 +208,8 @@ class SectionProgress extends Component {
               className="fa-pulse fa-3x"
             />
           )}
-          {levelDataInitialized && currentView === ViewType.SUMMARY && (
-            <div id="uitest-summary-view">
+          {levelDataInitialized && (
+            <div id="uitest-summary-view" style={summaryStyle}>
               <div
                 style={{...h3Style, ...styles.heading, ...styles.tableHeader}}
               >
@@ -219,8 +232,8 @@ class SectionProgress extends Component {
               />
             </div>
           )}
-          {levelDataInitialized && currentView === ViewType.DETAIL && (
-            <div id="uitest-detail-view">
+          {levelDataInitialized && (
+            <div id="uitest-detail-view" style={detailStyle}>
               <div
                 style={{...h3Style, ...styles.heading, ...styles.tableHeader}}
               >
@@ -246,6 +259,9 @@ class SectionProgress extends Component {
           )}
         </div>
         {levelDataInitialized && this.renderTooltips()}
+        {experiments.isEnabled(experiments.STANDARDS_REPORT) && (
+          <div style={standardsStyle}>Coming soon...</div>
+        )}
       </div>
     );
   }
