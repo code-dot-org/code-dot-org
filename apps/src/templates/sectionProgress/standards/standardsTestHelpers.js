@@ -100,22 +100,6 @@ export const lessonCompletedByStandard = {
       {
         lessonNumber: 1,
         completed: true
-      },
-      {
-        lessonNumber: 14,
-        completed: true
-      },
-      {
-        lessonNumber: 15,
-        completed: false
-      },
-      {
-        lessonNumber: 16,
-        completed: false
-      },
-      {
-        lessonNumber: 17,
-        completed: false
       }
     ]
   },
