@@ -1,7 +1,5 @@
 ---
 title: How-to 가이드
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

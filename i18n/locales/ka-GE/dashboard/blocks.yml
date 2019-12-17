@@ -2,6 +2,14 @@
 ka:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: ყველა
+          MOVE1:
+            MOVES.Rest: არცერთი
+          MOVE2:
+            MOVES.Rest: არცერთი
       Dancelab_atTimestamp:
         options:
           UNIT:
@@ -32,6 +40,15 @@ ka:
             "-1": "←"
       Dancelab_changePropBy:
         options:
+          PROPERTY:
+            '"scale"': ზომა
+            '"width"': სიგრძე
+            '"height"': სიმაღლე
+            '"rotation"': შებრუნება
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: ყველა
           PROPERTY:
             '"scale"': ზომა
             '"width"': სიგრძე
@@ -99,6 +116,19 @@ ka:
             "{x: 100, y: 300}": ქვედა მარცხენა
             "{x: 300, y: 300}": ქვედა მარჯვენა
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": შემთხვევითი
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: ყველა
+          LOCATION:
+            "{x: 100, y: 200}": მარცხნივ
+            "{x: 300, y: 200}": მარჯვნივ
+            "{x: 200, y: 200}": ცენტრი
+            "{x: 100, y: 100}": ზედა მარცხენა
+            "{x: 300, y: 100}": ზედა მარჯვენა
+            "{x: 100, y: 300}": ქვედა მარცხენა
+            "{x: 300, y: 300}": ქვედა მარჯვენა
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": შემთხვევითი
       Dancelab_layoutSprites:
         options:
           GROUP:
@@ -110,6 +140,13 @@ ka:
             '"random"': შემთხვევითი
       Dancelab_makeAnonymousDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': უცხოპლანეტელი
+            '"CAT"': კატა
+            '"DOG"': ძაღლი
+            '"DUCK"': იხვი
+            '"ROBOT"': რობოტი
+            '"UNICORN"': მარტორქა
           LOCATION:
             "{x: 100, y: 200}": მარცხნივ
             "{x: 300, y: 200}": მარჯვნივ
@@ -121,6 +158,13 @@ ka:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": შემთხვევითი
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': უცხოპლანეტელი
+            '"CAT"': კატა
+            '"DOG"': ძაღლი
+            '"DUCK"': იხვი
+            '"ROBOT"': რობოტი
+            '"UNICORN"': მარტორქა
           LOCATION:
             "{x: 100, y: 200}": მარცხნივ
             "{x: 300, y: 200}": მარჯვნივ
@@ -153,6 +197,7 @@ ka:
             '19': '19'
             '20': '20'
           LAYOUT:
+            '"diamond"': ბრილიანტი
             '"grid"': ბადე
             '"row"': მწკრივი
             '"column"': სვეტი
@@ -210,7 +255,6 @@ ka:
             '"width"': სიგრძე
             '"height"': სიმაღლე
             '"rotation"': შებრუნება
-            '"tint"': შეფერადება
       Dancelab_setPropEach:
         options:
           GROUP:
@@ -223,6 +267,16 @@ ka:
             '"tint"': შეფერადება
       Dancelab_setPropRandom:
         options:
+          PROPERTY:
+            '"scale"': ზომა
+            '"width"': სიგრძე
+            '"height"': სიმაღლე
+            '"rotation"': შებრუნება
+            '"tint"': შეფერადება
+      Dancelab_setPropRandomEach:
+        options:
+          GROUP:
+            sprites: ყველა
           PROPERTY:
             '"scale"': ზომა
             '"width"': სიგრძე
@@ -253,6 +307,20 @@ ka:
             '"bass"': დაბალი
             '"mid"': საშუალო
             '"treble"': მაღალი
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: ყველა
+          PROPERTY:
+            '"scale"': ზომა
+            '"width"': სიგრძე
+            '"height"': სიმაღლე
+            '"rotation"': შებრუნება
+            '"tint"': შეფერადება
+          RANGE:
+            '"bass"': დაბალი
+            '"mid"': საშუალო
+            '"treble"': მაღალი
       Dancelab_stopMapping:
         options:
           PROPERTY:
@@ -266,6 +334,29 @@ ka:
             '"bass"': დაბალი
             '"mid"': საშუალო
             '"treble"': მაღალი
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: ყველა
+          PROPERTY:
+            '"scale"': ზომა
+            '"width"': სიგრძე
+            '"height"': სიმაღლე
+            '"rotation"': შებრუნება
+            '"direction"': მოძრაობის მიმართულება
+            '"tint"': შეფერადება
+          RANGE:
+            '"bass"': დაბალი
+            '"mid"': საშუალო
+            '"treble"': მაღალი
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': ბრილიანტი
+            '"s"': s
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
       Dancelab_whenKey:
         options:
           KEY:
@@ -287,6 +378,8 @@ ka:
             '1': საშუალო
             '2': მაღალი
       Dancelab_whenSetup:
+        text: დაყენება
+      Dancelab_whenSetup2:
         text: დაყენება
       gamelab_changePropBy:
         options:
@@ -530,6 +623,8 @@ ka:
             MOVES.Rest: არცერთი
       Mikelab_randomColor:
         text: შემთხვევითი ფერი
+      Mikelab_repeatUntilComplete:
+        text: მუდამ გამეორება
       Mikelab_setBG:
         options:
           BG:

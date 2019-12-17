@@ -1,6 +1,5 @@
 ---
 title: Riktlinjer för övningar
-layout: wide
 ---
 
 <style>

@@ -1,6 +1,5 @@
 ---
-title: Contact International Partners
-layout: wide
+title: Contatti dei partner internazionali
 ---
 
 <style>
@@ -11,15 +10,15 @@ layout: wide
 
 {{ signup_button }}
 
-# Contact International Partners
+# Contatti dei partner internazionali
 
-Code.org works with many organizations around the world to make the Hour of Code a truly international movement. Did you know that in 2017, 60% of all Hour of Code events occurred outside of the U.S.?
+Code.org collabora con molte organizzazioni in tutto il mondo per rendere l'Ora del Codice un movimento veramente internazionale. Lo sapevate che nel 2017, il 60% di tutti gli eventi dell'Ora del codice si sono verificati al di fuori degli Stati Uniti?
 
-You, too, can play a leading role to get more people in your country involved! If you're in one of the countries below, reach out to the listed partner and get connected with your local Hour of Code.
+Anche tu puoi giocare un ruolo di primo piano per coinvolgere più persone nel tuo paese! Se ti trovi in uno dei paesi sotto elencati, contatta il partner indicato e collabora con l'organizzazione che coordina l'Ora del Codice nel tuo paese.
 
-*Don't see your country listed here?* [Apply to become an Hour of Code International Partner](https://goo.gl/forms/PZQEsqvet7yBE5ps2)! <br /> <br />
+*Non vedi il tuo paese elencato qui sotto?* [Richiedi di diventare un Partner internazionale dell'Ora del Codice](https://goo.gl/forms/PZQEsqvet7yBE5ps2)! <br /> <br />
 
-| Country                               | Organization                                                      | Contact Name                       | Email or Website                                                                              |
+| Nazione                               | Organizzazione                                                    | Contatto                           | Email e/o sito web                                                                            |
 | ------------------------------------- | ----------------------------------------------------------------- | ---------------------------------- | --------------------------------------------------------------------------------------------- |
 | Albania                               | ALMOOC                                                            | Ridvan Aliu   
 Isak Bilalli        | ridvan@eduongo.com   
@@ -30,7 +29,7 @@ www.program.ar                                                 |
 | Argentina                             | Nuc Ba Academia                                                   |                                    | http://academia.nucba.com.ar                                                                  |
 | Australia                             | Google                                                            | Marie Efstathiou                   | https://www.google.com/edu/cs                                                                 |
 | Australia                             | Grok Learning                                                     | Jane Abrams                        | https://groklearning.com                                                                      |
-| Brazil                                | Programaê! - Fundaçao Lemann                                      |                                    | http://programae.org.br/horadocodigo                                                          |
+| Brazil                                | Programaê! - Fundação Telefônica Vivo                             |                                    | http://programae.org.br/horadocodigo                                                          |
 | Cameroon                              | Big IT Company Ltd                                                |                                    |                                                                                               |
 | Canada                                | Brilliant Labs Inc.                                               |                                    | https://www.brilliantlabs.ca                                                                  |
 | Canada                                | Hatch Canada                                                      |                                    | www.hatchcanada.com                                                                           |
@@ -40,8 +39,8 @@ www.program.ar                                                 |
 hello@kidsandcode.org                                                  |
 | Canada                                | Kids Code Jeunesse                                                | Bry LeBlanc                        | http://kidscodejeunesse.org   
 contact@kidscodejeunesse.org                                   |
-| Canada                                | Nova Scotia Department of Education & Early Childhood Development | Peter Oldreive                     | http://ednet.ns.ca   
-Peter.Oldreive@novascotia.ca                                            |
+| Canada                                | Nova Scotia Department of Education & Early Childhood Development | Nick Baskwill                      | http://ednet.ns.ca   
+nicholas.baskwill@novascotia.ca                                         |
 | Canada                                | Partners In Research Canada                                       | Stacey Joyce                       | www.pirweb.org/en   
 sjoyce@pirweb.org                                                        |
 | Canada                                | Sault Ste. Marie innovation Centre                                |                                    | https://ssmic.com/                                                                            |

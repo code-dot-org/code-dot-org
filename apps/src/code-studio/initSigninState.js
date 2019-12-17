@@ -8,7 +8,7 @@ import {getStore} from './redux';
 import {
   setUserSignedIn,
   setUserType
-} from '@cdo/apps/code-studio/progressRedux';
+} from '@cdo/apps/templates/currentUserRedux';
 import {environmentSpecificCookieName} from '@cdo/apps/code-studio/utils';
 
 /**

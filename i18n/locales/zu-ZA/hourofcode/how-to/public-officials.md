@@ -1,7 +1,5 @@
 ---
 title: Indlela yokuqondisa yezikhulu zikahulumeni
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

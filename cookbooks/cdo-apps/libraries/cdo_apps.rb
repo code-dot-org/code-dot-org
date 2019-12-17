@@ -120,6 +120,9 @@ module CdoApps
       # Reload when application is rebuilt.
       subscribes :reload, 'execute[build-cdo]', :delayed
 
+      # Reload when global config is updated to pick up changes.
+      subscribes :reload, 'template[globals]', :delayed
+
       # Ensure globals.yml is up-to-date before (re)starting service.
       notifies :create, 'template[globals]', :before
       only_if {File.exist? init_script}

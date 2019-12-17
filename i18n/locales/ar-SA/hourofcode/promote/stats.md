@@ -1,7 +1,5 @@
 ---
 title: ملخصات وإحصائيات مفيدة
-layout: wide
-nav: promote_nav
 ---
 
 <a id="blurb"></a>
@@ -32,7 +30,7 @@ nav: promote_nav
 
 #### لماذا هذا مهم؟
 
-التكنولوجيا تحول كل الصناعات في الكوكب. في 2015، 7 ملايين منصب مفتوح في الولايات المتحدة -بما فيها الفن والتصميم - التي تعترف بقيمة مهارات البرمجة. But 55 percent of schools in the U.S. don't teach computer science. حان الوقت لكي نلحق بالقرن 21. بغض النظر عما سيمارسه الطلبة عندما يكبرون، سواء الطب أو التجارة أو السياسة، فابتكار التكنولوجيا سيمنحهم الثقة والقدرة على التنافسية. <br /> <br />
+التكنولوجيا تحول كل الصناعات في الكوكب. في 2015، 7 ملايين منصب مفتوح في الولايات المتحدة -بما فيها الفن والتصميم - التي تعترف بقيمة مهارات البرمجة. لكن 55 بالمئة من مدارس الولايات المتحدة لا تدرس علوم الكمبيوتر. حان الوقت لكي نلحق بالقرن 21. بغض النظر عما سيمارسه الطلبة عندما يكبرون، سواء الطب أو التجارة أو السياسة، فابتكار التكنولوجيا سيمنحهم الثقة والقدرة على التنافسية. <br /> <br />
 
 #### تقدير يمكناستخدامه في المواد
 
@@ -44,7 +42,7 @@ nav: promote_nav
 
 ## شارك هذه على مزاقع التواصل الاجتماعي وعبر البريد الالكتروني
 
-[![صورة](/images/social-media//fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![صورة](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![صورة](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![صورة](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![صورة](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![صورة](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="infographics"></a>
 

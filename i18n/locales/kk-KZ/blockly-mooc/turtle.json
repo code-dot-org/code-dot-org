@@ -47,6 +47,7 @@
   "jumpBackward": "артқа қарай секіру",
   "jumpForward": "алдыға қарай секіру",
   "jumpToOverDown": "",
+  "jumpToPosition": "",
   "jumpByDirection": "",
   "jumpTooltip": "Ешқандай белгі қалдырмастан ойыншыны қозғалту.",
   "jumpEastTooltip": "Ешқандай белгі қалдырмастан ойыншыны шығысқа қарай қозғалту.",

@@ -8,7 +8,7 @@ import {
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import {Row, Col, ControlLabel, FormGroup} from 'react-bootstrap';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
-import {isEmail} from '@cdo/apps/util/formatValidation';
+import {isEmail, isZipCode} from '@cdo/apps/util/formatValidation';
 import {styles} from './TeacherApplicationConstants';
 
 export default class TeachingBackground extends LabeledFormComponent {
@@ -139,6 +139,10 @@ export default class TeachingBackground extends LabeledFormComponent {
 
     if (data.principalEmail !== data.principalConfirmEmail) {
       formatErrors.principalConfirmEmail = 'Must match above email';
+    }
+
+    if (data.schoolZipCode && !isZipCode(data.schoolZipCode)) {
+      formatErrors.schoolZipCode = 'Must be a valid zip code';
     }
 
     return formatErrors;

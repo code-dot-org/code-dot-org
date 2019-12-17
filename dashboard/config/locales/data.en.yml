@@ -577,6 +577,20 @@ en:
         csd_debugging: Debugging
         csd_applab_designmode_short: App Lab Design Mode
         csp-pd-welcome: Welcome to the Family!
+        CSF-Teaching-Problem-Solving: CSF Teaching Problem Solving
+        u5-traversals-get-list-explanation: Code.org [levelbuilder] - Pilot Video - Data block
+        u7-libraries-explanation: 'App Lab: Make Your Own Blocks - How to Use Libraries'
+        how-to-k5-workshops: 'Code.org''s CS Fundamentals: Kid Tested, Teacher Approved'
+        why-should-teach-unplugged-activities: 'FAQ: Why should I teach "unplugged" activities?'
+        cs-principles-intro-to-objects: 'CS Principles: Intro to Objects'
+        oceans_machine_learning: Machine Learning
+        oceans_training_data: Training Data
+        oceans_societal_implications: Societal Implications
+        hoc_dance_congrats_2019: Dance Party 2019 - Party On!
+        hoc_dance_warmup_2019: Dance Party 2019 - Warm Up
+        hoc_dance_events_2019: Dance Party 2019 - Events
+        hoc_dance_measures_2019: Dance Party 2019 - Measures
+        hoc_dance_properties_2019: Dance Party 2019 - Properties
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

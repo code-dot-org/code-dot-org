@@ -168,7 +168,6 @@
 "hi-IN":
   english: "Hindi"
   native: "हिन्दी"
-  debug: true
   webfonts: false
 
 "hr": "hr-HR"

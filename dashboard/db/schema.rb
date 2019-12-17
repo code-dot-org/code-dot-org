@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190904030041) do
+ActiveRecord::Schema.define(version: 20191122183555) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -612,8 +612,10 @@ ActiveRecord::Schema.define(version: 20190904030041) do
     t.datetime "deleted_at"
     t.integer  "pd_enrollment_id"
     t.integer  "marked_by_user_id",              comment: "User id for the partner or admin who marked this teacher in attendance, or nil if the teacher self-attended."
+    t.index ["marked_by_user_id"], name: "index_pd_attendances_on_marked_by_user_id", using: :btree
     t.index ["pd_enrollment_id"], name: "index_pd_attendances_on_pd_enrollment_id", using: :btree
     t.index ["pd_session_id", "teacher_id"], name: "index_pd_attendances_on_pd_session_id_and_teacher_id", unique: true, using: :btree
+    t.index ["teacher_id"], name: "index_pd_attendances_on_teacher_id", using: :btree
   end
 
   create_table "pd_course_facilitators", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -1609,6 +1611,12 @@ ActiveRecord::Schema.define(version: 20190904030041) do
     t.index ["school_info_id"], name: "index_users_on_school_info_id", using: :btree
     t.index ["studio_person_id"], name: "index_users_on_studio_person_id", using: :btree
     t.index ["username", "deleted_at"], name: "index_users_on_username_and_deleted_at", unique: true, using: :btree
+  end
+
+  create_table "validated_user_levels", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer "time_spent",    default: 0
+    t.bigint  "user_level_id",             unsigned: true
+    t.index ["user_level_id"], name: "index_validated_user_levels_on_user_level_id", unique: true, using: :btree
   end
 
   create_table "videos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|

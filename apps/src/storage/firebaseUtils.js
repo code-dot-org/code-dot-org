@@ -79,6 +79,10 @@ export function getRecordsRef(tableName) {
   return getProjectDatabase().child(`storage/tables/${tableName}/records`);
 }
 
+export function getProjectCountersRef(tableName) {
+  return getProjectDatabase().child(`counters/tables/${tableName}`);
+}
+
 export function getSharedDatabase() {
   return getFirebase().child('v3/channels/shared');
 }

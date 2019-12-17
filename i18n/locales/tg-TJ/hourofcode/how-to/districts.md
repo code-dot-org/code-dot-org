@@ -1,7 +1,5 @@
 ---
 title: Дастурамали Соати рамз барои маҳаллаҳо
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

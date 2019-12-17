@@ -1,7 +1,5 @@
 ---
-title: Hour of Code How-To for Districts
-layout: wide
-nav: how_to_nav
+title: மாவட்டங்களுக்கான Hour of Code எவ்வாறு செய்வது
 ---
 
 {{signup_button}}

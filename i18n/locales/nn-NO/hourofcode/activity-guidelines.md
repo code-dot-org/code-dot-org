@@ -1,6 +1,5 @@
 ---
 title: Retningslinjer for aktivitetar
-layout: wide
 ---
 
 <style>

@@ -3,7 +3,7 @@ import {shallow, mount} from 'enzyme';
 import sinon from 'sinon';
 import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedExportDialog as ExportDialog} from '@cdo/apps/code-studio/components/ExportDialog/Dialog';
-import {SignInState} from '@cdo/apps/code-studio/progressRedux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
 describe('ExportDialog', () => {
   it('renders our signed in version when signed in', () => {

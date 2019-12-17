@@ -1,6 +1,5 @@
 ---
 title: اتصل بالشركاء الدوليين
-layout: wide
 ---
 
 <style>

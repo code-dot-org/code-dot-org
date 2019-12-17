@@ -1,10 +1,5 @@
 ---
 title: Kod Saatı təşkil etmək üçün qeydiyyatdan keçdiyinizə görə təşəkkür!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # Kod Saatı təşkil etmək üçün qeydiyyatdan keçdiyinizə görə təşəkkür!

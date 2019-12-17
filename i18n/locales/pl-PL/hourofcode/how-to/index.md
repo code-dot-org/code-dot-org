@@ -1,16 +1,14 @@
 ---
 title: Porady
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
 
 # Jak przeprowadzić Godzinę Kodowania ze swoją klasą
 
-### Przyłącz się do tej inicjatywy i pomóż grupie uczniów, by rozpoczęli swoją pierwszą godzinę informatyki postępując następująco. Godzina Kodowania jest łatwa do wykonania - nawet dla początkujących! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your class.
+### Przyłącz się do tej inicjatywy i pomóż grupie uczniów, by rozpoczęli swoją pierwszą godzinę informatyki postępując następująco. Godzina Kodowania jest łatwa do wykonania - nawet dla początkujących! Jeśli szukasz dodatkowych rąk do pomocy, znajdź [lokalnego wolontariusza]({{ urls/volunteer_local }}), aby pomógł przeprowadzić Ci Godzinę Kodowania w Twojej klasie.
 
-### Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
+### Zobacz nasz [przewodnik uczestnictwa, jeśli nadal masz pytania]({{ localized_files/participation_guide }}).
 
 * * *
 
@@ -18,11 +16,11 @@ nav: how_to_nav
 
 ## 2. Wybierz samouczek dla Waszej Godziny Kodowania
 
-We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for all age groups and experience levels. Uczniowie pracują samodzielnie, chociaż wielu aktywnościom towarzyszą plany lekcji dla nauczycieli (zobaczysz link, po kliknięciu na aktywność), do poprowadzenia dyskusji lub poszerzenia aktywności. [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
+Oferujemy wiele zabawy, [ samouczki dla uczniów ]({{ urls/learn }}) dla wszystkich grup wiekowych i poziomów zaawansowania. Uczniowie pracują samodzielnie, chociaż wielu aktywnościom towarzyszą plany lekcji dla nauczycieli (zobaczysz link, po kliknięciu na aktywność), do poprowadzenia dyskusji lub poszerzenia aktywności. [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
 ## 3. Promuj swoją Godzinę Kodowania
 
-Promote your Hour of Code [with these tools]({{ urls/promote_resources }}) and encourage others to host their own events.
+Promuj swoją Godzinę Kodowania [przy pomocy tych narzędzi]({{ urls/promote_resources }}) i zachęć innych do organizowania ich własnych wydarzeń.
 
 ## 4. Zaplanuj potrzebny sprzęt - komputery nie są niezbędne
 
@@ -38,12 +36,12 @@ Zapewnij uczniom słuchawki lub poproś, by przynieśli własne, jeśli samoucze
 
 ## 5. Rozpocznij swoją Godzinę Kodowania od obejrzenia inspirującego filmu
 
-**Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
+** Zaproś [ lokalnego wolontariusza]({{ urls/volunteer_local }}), by zainspirował Twoich uczniów, opowiadając o szerokich możliwościach w informatyce. ** Tysiące wolontariuszy na całym świecie jest gotowych pomóc w Twojej Godzinie Kodeksu odwiedzając Twoją klasę lub przez czat z Twoimi uczniami!
 
 **Pokaż inspirujący film:**
 
 - W oryginalnym wideo Code.org występują Bill Gates, Mark Zuckerberg i gwiazda NBA Chris Bosh. (Do wyboru są wersje trwające [1 minutę](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minut](https://www.youtube.com/watch?v=nKIu9yen5nc) oraz [9 minut](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Znajdź więcej inspirujących [zasobów]({{ urls/inspire }}) i [filmów](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **Jeśli Ty i Twoi uczniowie jesteście nowicjuszami w informatyce, to nie ma problemu. Oto kilka pomysłów na rozpoczęcie Godziny Kodowania:**
 
@@ -55,7 +53,7 @@ Zapewnij uczniom słuchawki lub poproś, by przynieśli własne, jeśli samoucze
 
 **Skieruj uczniów na zadania**
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+- Napisz na tablicy link do samouczka. Znajdź link wymieniony w [informacji dla Twojego wybranego samouczka]({{ urls/learn }}) pod liczbą uczestników.
 
 **Kiedy Twoi uczniowie napotkają trudności, możesz powiedzieć:**
 
@@ -65,7 +63,7 @@ Zapewnij uczniom słuchawki lub poproś, by przynieśli własne, jeśli samoucze
 
 **A co zrobić, jeśli któryś z uczniów skończy wcześniej?**
 
-- Students can see all tutorials and [try another Hour of Code activity]({{ urls/learn }}).
+- Uczniowie mogą zobaczyć wszystkie samouczki i [ spróbować innej aktywności w Godzinie Kodowania]({{ urls/learn }}).
 - Albo poproś uczniów, którzy skończyli wcześniej, by pomogli innym, którzy mają trudności.
 
 [col-33]
@@ -85,7 +83,7 @@ Zapewnij uczniom słuchawki lub poproś, by przynieśli własne, jeśli samoucze
 [/col-33]
 
 - [Wydrukuj certyfikaty]({{ urls/certificates }}) dla swoich uczniów.
-- [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
+- [Wydrukuj naklejki "I did an Hour of Code!"]({{ urls/promote_stickers }}) dla swoich uczniów.
 - [Zamów specjalne koszulki](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) dla Twojej szkoły.
 - Udostępnij w mediach społecznościowych zdjęcia i wideo ze swojej Godziny Kodowania. Użyj #HourOfCode i @codeorg, byśmy również mogli wyróżnić Twój sukces!
 
@@ -106,7 +104,7 @@ Zapewnij uczniom słuchawki lub poproś, by przynieśli własne, jeśli samoucze
 
 Godzina Kodowanie jest dopiero pierwszym krokiem na drodze do poznania, jak działa technologia i jak tworzyć aplikacje komputerowe. Aby kontynuować tę podróż:
 
-- Encourage students to continue to [learn online]({{ urls/learn_beyond }}).
-- [Attend]({{ urls/professional_development_workshops }}) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+- Zachęć uczniów do kontynuowania [ nauki online]({{ urls/learn_beyond }}).
+- [Weź udział ]({{ urls/professional_development_workshops }}) osobiście w jednodniowych warsztatach, by uzyskać instrukcje od doświadczonych informatyków. (Wyłącznie dla dydaktyków ze Stanów Zjednoczonych.)
 
 {{ signup_button }}

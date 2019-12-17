@@ -15,6 +15,7 @@ fa:
       messages:
         blank: "%s لازم است"
         blank_plural: ضروری هستند
+        invalid: نامعتبر است
         invalid_plural: معتبر نیستند
     attributes:
       user:
@@ -47,6 +48,7 @@ fa:
   join_section:
     code:
       placeholder: انتخاب کد (ABCDEF)
+      submit: پیوستن
   add_hint_form:
     placeholder: لطفا پیشنهادتان را اینجا وارد کنید
     submit: افزودن پیشنهاد
@@ -118,9 +120,14 @@ fa:
     select_school_type: نوع مدرسه
     private: خصوصی
     public: عمومی
+    homeschool: مدرسه در خانه
+    after_school: بعد از مدرسه
     other: دیگر
+    state: وضعیت
+    district_name: نام منطقه
     school: مدرسه
     school_name: نام مدرسه
+    school_zip: کد پستی مدرسه
     school_address: آدرس مدرسه
   signin_form:
     title: دارای حساب کاربری در حال حاضر؟ ورود
@@ -156,6 +163,8 @@ fa:
       روی لینک زیر برای ثبت نام آموزش علوم کامپیوتر در Code.org کلیک کنید ( با من به عنوان " معلم " ):
 
       آموزشها جالب و مصور هستند و مفاهیم اساسی کامپیوتر را به سادگی تجربه یک بازی به شما یاد میدهند کد نویسی را از بیل گیتس ، مارک زاکربرگ ، angry birds و plants vs. zombies یاد بگیرید.
+  teacher_mailer:
+    new_teacher_subject: به Code.org خوش آمدید!
   section:
     your_section:
       one: 'بخش شما:'
@@ -205,8 +214,18 @@ fa:
       my_dashboard: دَشبورد من
       course_catalog: سرفصل دوره‌ها
       project_gallery: پروژه ها
+      sections: بخش‌ها
       educate_hoc: ساعت کد نویسی
+      educate_tools: ابزار‌ها و فیلم‌ها
       about_us: درباره ما
+      about_partners: شرکا
+      about_team: کل تیم
+      about_jobs: مشاغل
+      about_contact: تماس با ما
+      about_faqs: سوال‌های متداول
+      learn: یادگیری
+      help_us: به ما کمک کنید
+      teach: آموزش
       about: درباره
     user:
       classroom: صفحه اصلی معلم
@@ -217,6 +236,8 @@ fa:
       logout: خروج
       signin: ورود
       already_registered: قبلا ثبت نام کرده اید؟?
+      team: تیم
+      navigator: شریک
       create: ایجاد
       algebra_game: جبر
       applab: آزمایشگاه نرم افزار
@@ -568,11 +589,17 @@ fa:
     save: ذخيره
   race_interstitial:
     races:
+      white: سفید
+      asian: آسیایی
       other: دیگر
     submit: ارسال کنید
     decline: ببند
   zendesk_too_young_message: با عرض پوزش ، کاربران کم سن ممکن است نتوانند به بخش پشتیبانی
     سایت ما وارد شوند . شما می توانید بخش <a href="http://support.code.org"> support.code.org</a>
+    را بدون ورود به سیستم و درخواست از والدین یا معلم برای تماس با ما مشاهده کنید
+    .
+  zendesk_too_young_message_markdown: با عرض پوزش ، کاربران کم سن ممکن است نتوانند
+    به بخش پشتیبانی سایت ما وارد شوند . شما می توانید بخش [support.code.org](http://support.code.org)
     را بدون ورود به سیستم و درخواست از والدین یا معلم برای تماس با ما مشاهده کنید
     .
   progress:
@@ -594,8 +621,11 @@ fa:
     new: ایجاد مورد جدید
     exit: بازگشت به درس
     project_gallery: پروژه ها
+    publish: انتشار
+    unpublish: عدم انتشار
     share_title: پروژه خود را به اشتراک بگذارید
     share_copy_link: 'لینک را کپی کنید:'
+    advanced_share: نمایش گزینه‌های پیشرفته
     name: نام
     updated: به روز رسانی شده
     project_type: نوع پروژه
@@ -636,12 +666,19 @@ fa:
         acknowledge: با ارسال این اطلاعات، شما می پذیرید که مطابق با سیاست %{link_start_privacy}
           حفظ حریم شخصی %{link_end} و %{link_start_tos} شرایط سرویس %{link_end} با
           موضوع برخورد می شود.
+  peer_review:
+    accepted:
+      name: پذیرفته شد
+    rejected:
+      name: رد شد
   flex_category:
     required: بررسی اجمالی
+    main_course: درس اصلی
     csf_digcit: شهروندی دیجیتالی
     csf_jigsaw: جورچین
     csf_loops: حلقه‌ها
     csf_events: رویدادها
+    csf_online_safety: امنیت سایبری
     csf_binary: دو دویی
     csf_conditionals: شرطی ها
     csf_nested_loops: حلقه های تو در تو
@@ -656,8 +693,18 @@ fa:
     csp_loops: حلقه‌ها
   hoc_download:
     minecraft_name: ساعتی با کد ماینکرفت
+    download_in_Catalan: 'دانلود Catalan:'
+    download_in_Chinese-Taiwan: 'دانلود Chinese-Taiwan:'
+    download_in_Chinese: 'دانلود Chinese:'
+    download_in_Croatian: 'دانلود Croatian:'
+    download_in_Czech: 'دانلود Czech:'
+    download_in_Danish: 'دانلود Danish:'
+    windows: Windows (64-bit)
+    mac: Mac OS X
   pd:
     form_labels:
+      first_name: نام
+      last_name: نام خانوادگی
       email: ایمیل
       school_name: نام مدرسه
     form_entries:

@@ -1,7 +1,5 @@
 ---
 title: Voorbeeld-opiniestuk Computer Science Eductation Week en Hour of Code
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

@@ -103,7 +103,11 @@ export default function reducer(state = {...instructionsInitialState}, action) {
     });
   }
 
-  if (action.type === SET_INSTRUCTIONS_RENDERED_HEIGHT && state.allowResize) {
+  if (
+    action.type === SET_INSTRUCTIONS_RENDERED_HEIGHT &&
+    state.allowResize &&
+    Math.abs(action.height - state.renderedHeight) > 1
+  ) {
     return Object.assign({}, state, {
       renderedHeight: action.height,
       expandedHeight: !state.collapsed ? action.height : state.expandedHeight
@@ -112,7 +116,7 @@ export default function reducer(state = {...instructionsInitialState}, action) {
 
   if (
     action.type === SET_INSTRUCTIONS_MAX_HEIGHT_NEEDED &&
-    action.maxNeededHeight !== state.maxNeededHeight &&
+    Math.abs(action.maxNeededHeight - state.maxNeededHeight) > 1 &&
     state.allowResize
   ) {
     return Object.assign({}, state, {

@@ -1,7 +1,5 @@
 ---
 title: Resolución de Ejemplo Soporte de la Semana de Educación de Ciencia de Computación y Una Hora de Código
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

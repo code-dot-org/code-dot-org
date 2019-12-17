@@ -1,6 +1,5 @@
 ---
 title: Udhëzime për aktivitetin
-layout: wide
 ---
 
 <style>

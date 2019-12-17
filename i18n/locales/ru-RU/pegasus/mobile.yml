@@ -9,7 +9,7 @@
   upgrade_ie_link: "Узнать больше"
   en: "Информатика"
   computer_science_edweek: "Неделя информатики"
-  csedweek_dates: "8-14 декабря 2014 года"
+  csedweek_dates: "3-9 декабря 2018 года"
   csedweek_banner_hoc: 'Скоро наступит <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Час кода</a> Приглашаем всех учителей и организаторов <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">запланировать свой час кода</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Вы учитель информатики? Смотреть другие ресурсы недели образования в информатике</a>'
   n_have_learned_an_hoc: "<h1>Попробовать</h1><h2>Час кода</h2><h3>Уже попробовали</h3>"
@@ -31,6 +31,7 @@
   og_description: "Каждый студент в каждой школе заслуживает возможность изучения компьютерных наук."
   csedweek_og_title: "Час кода настал"
   csedweek_og_description: "4-10 декабря 2017 года. Информатика - это основа для каждого учащегося."
+  csedweek_og_description_here: "Час кода уже здесь. Каждый ученик должен изучить информатику."
   hoc2014_heading: "Присоединяйтесь к <a href=\"http://hourofcode.com\">Часу кода</a><br/>8-14 декабря 2014 года<br/>"
   hoc2014_students: "Ученики"
   hoc2014_try: "Попробуйте это"
@@ -805,7 +806,7 @@
   carousel_heading_languages: "Учебные материалы от партнеров по другим языкам программирования"
   carousel_heading_beyond_languages: "Учебники по другим языкам программирования"
   carousel_heading_apps_games: "Создавай свои собственные приложения или игры"
-  carousel_heading_university: "Университетские курсы онлайн"
+  carousel_heading_university: "Онлайн-курсы и школы"
   carousel_heading_webpages: "Научись создавать веб-страницы"
   carousel_heading_robots: "Научись программировать роботов"
   carousel_heading_ide: "Популярные среди преподавателей платформы"
@@ -888,6 +889,8 @@
   coursed-2017_name: Курс D (2017)
   coursee-2017_name: Курс E (2017)
   coursef-2017_name: Курс F (2017)
+  express-2018_name: Экспресс-курс (2017)
+  express-2019_name: Экспресс-курс (2017)
   accelerated_name: "Ускоренный курс"
   express_name: "Экспресс-курс"
   20-hour_name: Ускоренный курс
@@ -1336,9 +1339,11 @@
   header_help_support: 'Помощь и поддержка '
   header_report_bug: "Сообщить об ошибке"
   header_tutorials: "Обучающие материалы"
+  sprite_lab_tutorials: "Лаборатория спрайтов: учебники"
   header_documentation: "Документация"
   user_header_label: "Привет, %{username}"
   user_header_team: "Команда"
+  user_header_my_projects: "Мои проекты"
   user_header_settings: "Настройки аккаунта"
   user_header_logout: "Выйти"
   user_header_signin: "Вход"
@@ -1346,11 +1351,15 @@
   user_header_gamelab: "Лаборатория игр"
   user_header_playlab: "Лаборатория игр"
   user_header_dance: "Танцевальная вечеринка"
+  user_header_spritelab: "Лаборатория Спрайтов"
   user_header_minecraft: "Minecraft"
   user_header_flappy: "Порхающий код"
   user_header_view_all: "Смотреть все проекты..."
+  user_header_view_project_gallery: "Показать проекты"
   user_header_view_my_projects: "Показать мои проекты"
+  view_all_sections: "Показать все классы"
   sign_in_instruct_website: "Перейти к %{code_org_url}."
+  joining_section_overview: "Если ваши ученики ещё не присоединились к вашему разделу, им следует выполнить инструкции ниже. Их достаточно проделать один раз. Присоединившись, ученики смогут увидеть назначенные им курсы, а вы сможете следить за их работой."
   hero_name: 'Майнкрафт: Путешествие Героя'
   applab_tile_start_tutorial: "Начать"
   applab_tile_teacher_guide: "Посмотреть руководство для учителей"
@@ -1364,6 +1373,7 @@
   hoc_overview_start_tutorial: "Начать"
   hoc_overview_view_teacher_guide: "Посмотреть руководство для учителей"
   hoc2018_creativity_create: "Создать"
+  hoc2018_creativity_hoc_coming: "Час кода настал…"
   hoc2018_creativity_what_will_you_create: "Что вы будете создавать?"
   hoc2018_mc_page_title: "Руководства к часу кода c Minecraft"
   hoc2018_mc_details: "Доступно на разных языках| на всех современных браузерах и планшетах| c 8 лет"
@@ -1418,6 +1428,8 @@
   hoc2018_mc_back: "Майнкрафт снова с вами и предлагает выполнить новые задания за Час Кода!"
   hoc2018_mc_back_journey: "Возвращение Minecraft с новыми возможностями на «Час кода»! Путешествие по миру программирования с Minecraft."
   hoc2018_mc_teacher_guide: "Посмотреть руководство для учителей"
+  hoc2018_mc_minecraft_education: "Обучение Minecraft"
+  hoc2018_mc_continue_learning: "Продолжаем учиться вместе с Minecraft."
   hoc2018_mc_go_to_mc_education: "Перейти к обучению в Minecraft"
   hoc2018_mc_short_description: "Используй навыки креативности и решения проблем, чтобы изучать и строить подводные миры с помощью программирования."
   hoc2018_mc_short_description_shorter: "Используй навыки креативности и решения проблем, чтобы изучать и строить подводные миры с помощью программирования."

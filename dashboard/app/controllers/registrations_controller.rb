@@ -262,6 +262,11 @@ class RegistrationsController < Devise::RegistrationsController
       notice: I18n.t('auth.demigration_success')
   end
 
+  def existing_account
+    params.require([:email, :provider])
+    render 'existing_account'
+  end
+
   private
 
   def update_user_email

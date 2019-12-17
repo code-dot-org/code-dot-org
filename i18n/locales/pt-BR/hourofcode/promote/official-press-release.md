@@ -1,7 +1,5 @@
 ---
 title: Comunicado de imprensa da Hora do Código para representantes políticos
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

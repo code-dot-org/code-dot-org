@@ -530,6 +530,8 @@ az:
       email_opt_in:
         opt_in_yes: 'Bəli'
         opt_in_no: 'Xeyr'
+    international_opt_in:
+      title: 'Məşğələdə iştirak'
   cookie_banner:
     accept: 'Razıyam'
   gdpr_dialog:

@@ -1,7 +1,5 @@
 ---
-title: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
-layout: wide
-nav: promote_nav
+title: कंप्यूटर विज्ञान शिक्षा सप्ताह का नमूना संकल्प सहायक और ऑवर ऑफ़ कोड
 ---
 
 {{ signup_button }}

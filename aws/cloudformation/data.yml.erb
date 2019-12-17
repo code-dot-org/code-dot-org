@@ -122,32 +122,22 @@ Resources:
          writeBufferSize: 8.megabytes / 1.kilobyte
       }.map{|x|x.join('=')}.join(';')%>
 <% Cdo::DMS.tasks(aws_dir('dms/tasks.yml')).each do |task_name, table_mappings| -%>
-  DMS<%=task_name.underscore.camelize%>:
-    Type: AWS::DMS::ReplicationTask
-    Properties:
-      MigrationType: full-load-and-cdc
-      ReplicationInstanceArn: !Ref TableauSync
-      ReplicationTaskIdentifier: <%= task_name %>
-      SourceEndpointArn: !Ref RDSEndpoint
-      TargetEndpointArn: !Ref RedshiftEndpoint
-      ReplicationTaskSettings: !Sub |
-        <%= YAML.load(erb_file(aws_dir('dms/replication-task-settings.yml.erb'))).to_json %>
-      TableMappings: !Sub |
-        <%= table_mappings.to_json %>
-  # Provision a second version of each replication task that uses Full Load with NO Change Data Capture (CDC)
-  # and that source from the production Aurora reader endpoint.
   DMS<%=task_name.underscore.camelize%>FullLoad:
     Type: AWS::DMS::ReplicationTask
     Properties:
       MigrationType: full-load
       ReplicationInstanceArn: !Ref TableauSync
-      ReplicationTaskIdentifier: <%= task_name %>-full-load
+      ReplicationTaskIdentifier: <%= task_name %>-full-load-no-cdc
       SourceEndpointArn: !Ref AuroraReaderEndpoint
       TargetEndpointArn: !Ref RedshiftEndpoint
       ReplicationTaskSettings: !Sub |
         <%= YAML.load(erb_file(aws_dir('dms/replication-task-settings.yml.erb'))).to_json %>
       TableMappings: !Sub |
           <%= table_mappings.to_json %>
+      Tags:
+        -
+          Key: environment
+          Value: <%=rack_env.to_s%>
 <% end -%>
   DMSS3Role:
     Type: AWS::IAM::Role

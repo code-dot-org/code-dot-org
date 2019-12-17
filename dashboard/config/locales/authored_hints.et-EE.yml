@@ -106,6 +106,27 @@ et-EE:
       CourseE_HOC 2018 Level_9b:
         voyage_aquatic_9a: Näed punaseid ja siniseid koralli plokke? Kasuta neid juhtpostidena,
           et keerata paremale ja vasakule läbi kaljuriffi.
+      Dance_2019_01:
+        validation: |-
+          \*\* Kuidas ma siit tasemelt läbi saan? \*\*
+
+          -   Veenduge, et tantsija kuvatakse ekraanil.
+
+          -   See tase lõppeb peale 4 ühikut.\*
+      Dance_2019_04:
+        validation: |-
+          **Kuidas ma siit tasemelt läbi saan?**
+
+          -   Tantsija peab liigutust vahetame peale 4 ühikut.
+
+          _Tase lõppeb peale 8 ühikut_
+      Dance_2019_05:
+        validation: |-
+          **Kuidas ma siit tasemelt läbi saan?**
+
+          -   Sinu tantsija peab peale 6 ühikut tantsima teist moodi kui ta tantsis peale 4 ühikut.
+
+          _Tase lõppeb peale 12 ühikut_
       Dance_Party_01:
         validation: |-
           \*\* Kuidas ma siit tasemelt läbi saan? \*\*

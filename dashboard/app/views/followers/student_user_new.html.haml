@@ -1,3 +1,6 @@
+- content_for(:head) do
+  %meta{name: "robots", content: "noindex"}/
+
 - if current_user || !@section
   %h2= t('join_section.code.title')
   %p= t('join_section.code.instructions')
@@ -6,7 +9,7 @@
     %br/
     = submit_tag t('join_section.code.submit'), class: 'btn btn-primary'
 - else
-  %h2 Register to join the class #{@section.name} taught by #{@section.user.name}
+  %h2 Register to join section #{params[:section_code]}
   %p
     If you already have an account at Code.org, please
     %a{href: "/users/sign_in?user_return_to=/join/#{params[:section_code]}"} sign into your account

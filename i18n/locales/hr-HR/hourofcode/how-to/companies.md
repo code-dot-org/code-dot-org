@@ -1,7 +1,5 @@
 ---
 title: Kako organizirati Sat kodiranja - za tvrtke
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

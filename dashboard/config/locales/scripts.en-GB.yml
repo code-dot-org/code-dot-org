@@ -119,3 +119,9 @@ en-GB:
           stages:
             Variables:
               name: Variables
+        k5-onlinepd-2019:
+          stages:
+            Loops:
+              name: Loops
+            Variables:
+              name: Variables

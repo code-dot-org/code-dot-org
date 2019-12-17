@@ -1,7 +1,7 @@
 import React from 'react';
 import sinon from 'sinon';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/deprecatedChai';
 import {UnconnectedOwnedSections as OwnedSections} from '@cdo/apps/templates/teacherDashboard/OwnedSections';
 import RosterDialog from '@cdo/apps/templates/teacherDashboard/RosterDialog';
 import AddSectionDialog from '@cdo/apps/templates/teacherDashboard/AddSectionDialog';

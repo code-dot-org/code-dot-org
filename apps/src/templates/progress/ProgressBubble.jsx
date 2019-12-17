@@ -19,6 +19,7 @@ import {
 import ProgressPill from '@cdo/apps/templates/progress/ProgressPill';
 import TooltipWithIcon from './TooltipWithIcon';
 import {SmallAssessmentIcon} from './SmallAssessmentIcon';
+import firehoseClient from '../../lib/util/firehose';
 
 /**
  * A ProgressBubble represents progress for a specific level. It can be a circle
@@ -109,6 +110,22 @@ class ProgressBubble extends React.Component {
 
   static defaultProps = {
     currentLocation: window.location
+  };
+
+  recordProgressTabProgressBubbleClick = () => {
+    firehoseClient.putRecord(
+      {
+        study: 'teacher_dashboard_actions',
+        study_group: 'progress',
+        event: 'go_to_level',
+        data_json: JSON.stringify({
+          student_id: this.props.selectedStudentId,
+          level_url: this.props.level.url,
+          section_id: this.props.selectedSectionId
+        })
+      },
+      {includeUserId: true}
+    );
   };
 
   render() {
@@ -239,12 +256,19 @@ class ProgressBubble extends React.Component {
     );
 
     // If we have an href, wrap in an achor tag
+    // Only record the click if we are in the progress tab (currently
+    // hideAssessmentIcon is only true for progress tab_
     if (href) {
       bubble = (
         <a
           href={href}
           style={{textDecoration: 'none'}}
           className="uitest-ProgressBubble"
+          onClick={
+            hideAssessmentIcon
+              ? this.recordProgressTabProgressBubbleClick
+              : null
+          }
         >
           {bubble}
         </a>

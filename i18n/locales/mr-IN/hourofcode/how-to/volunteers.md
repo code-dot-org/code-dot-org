@@ -1,7 +1,5 @@
 ---
-title: How-to guide for Hour of Code volunteers
-layout: wide
-nav: how_to_nav
+title: कोडचा तास स्वयंसेवकांसाठी "कसे करावे” मार्गदर्शिका
 ---
 
 {{ signup_button }}

@@ -1,7 +1,5 @@
 ---
-title: Spread the word
-layout: wide
-nav: promote_nav
+title: ఈ విషయాన్ని ప్రచారం చేయండి
 ---
 
 {{ signup_button }}

@@ -239,6 +239,7 @@ class Section < ActiveRecord::Base
     {
       id: id,
       name: name,
+      createdAt: created_at,
       teacherName: teacher.name,
       linkToProgress: "#{base_url}#{id}/progress",
       assignedTitle: title,

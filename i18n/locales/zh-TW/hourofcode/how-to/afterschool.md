@@ -1,7 +1,5 @@
 ---
 title: 活動指引
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
@@ -81,6 +79,6 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## 一小時玩程式之後呢，有什麼？
 
-一小時玩程式只是入門，是瞭解科技如何運作、軟體如何創造的一小步。 幫助學生們繼續他們的旅程，並鼓勵他們[在線上持續學習](%= codeorg_url('/learn/beyond') %)！
+一小時玩程式只是入門，是瞭解科技如何運作、軟體如何創造的一小步。 Help students continue their journey and encourage them to [learn more online](/beyond)!
 
 {{ signup_button }}

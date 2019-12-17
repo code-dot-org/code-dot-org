@@ -1,5 +1,5 @@
 var animationTabModule = require('@cdo/apps/p5lab/AnimationTab/animationTabModule');
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 
 describe('AnimationTab', function() {
   describe('reducer', function() {

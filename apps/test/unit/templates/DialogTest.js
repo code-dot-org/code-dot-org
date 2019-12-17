@@ -1,7 +1,7 @@
 /** @file Tests for Dialog component */
 import React from 'react';
 import {mount} from 'enzyme';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 import Dialog from '@cdo/apps/templates/Dialog';
 
 describe('Dialog', function() {

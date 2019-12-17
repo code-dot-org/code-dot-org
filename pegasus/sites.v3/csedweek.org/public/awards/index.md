@@ -8,23 +8,71 @@ theme: responsive
 
 # 2019 Champions of Computer Science Awards
 
-In celebration of the 2019 [Computer Science Education Week](https://csedweek.org/) (CSEdWeek), the [Computer Science Teachers Association](http://www.csteachers.org/) (CSTA) and [Code.org](https://code.org/) are pleased to announce that submissions for the third annual Champions of Computer Science Awards are now open! 
+In celebration of the 2019 [Computer Science Education Week](https://csedweek.org/) (CSEdWeek), the [Computer Science Teachers Association](http://www.csteachers.org/) (CSTA) and [Code.org](https://code.org/) are pleased to present the third annual Champions of Computer Science Awards! 
 <br>
 <br>
-The purpose of the Champions of CS Awards is to identify and celebrate students, teachers, administrators, and organizations who have made a significant impact to improve access to and the quality of CS education.
-<br>
-<br>
-Any K-12 student, teacher, or administrator may be nominated. Organizations that work directly to improve access to and the quality of CS education may also be nominated (examples: afterschool coding clubs, local CSTA chapters, regional or national nonprofits, etc.). This opportunity is only available for US submissions.
-<br>
-<br>
-Award winners and a guest of choice will receive an all-expenses paid trip (travel & hotel) to attend the CSEdWeek event on December 9th (location to be confirmed).
-<br>
-<br>
-Submit your nominations using [this form](https://www.cvent.com/c/abstracts/b2b495a4-4caf-4ed5-88b1-954d5a605b24). The deadline for submission is Monday, October 21, 2019 at midnight PT. Email awards@csteachers.org if you have questions. You can take a look at last year’s winners below!
+From creating smart glasses using artificial intelligence to bringing CS curricula to an entire district, this year's Champions of CS have had a significant, positive impact on their communities. Click the thumbnails below to learn more about each of our winners.
 <br>
 <br>
 
-# 2018 Winners
+# Meet the Winners
+
+[col-33]
+
+<a href="/awards/2019/axel-toro">
+    <center><img src="/images/awards/2019/fit-540/axel-3.png" width="90%"></center>
+    <div style="margin-top:5px;font-size:16px;text-align:center">Axel Toro</div>
+</a>
+
+[/col-33]
+
+[col-33]
+
+<a href="/awards/2019/ardrey-kell">
+    <center><img src="/images/awards/2019/fit-540/ardrey-kell-3.png" width="90%"></center>
+    <div style="margin-top:5px;font-size:16px;text-align:center">Ardrey Kell High School</div>
+</a>
+
+[/col-33]
+
+[col-33]
+
+<a href="/awards/2019/mission-edc">
+    <center><img src="/images/awards/2019/fit-540/mission-1.jpg" width="90%"></center>
+    <div style="margin-top:5px;font-size:16px;text-align:center">Mission EDC</div>
+</a>
+
+[/col-33]
+
+<div style="clear:both"></div>
+
+<br>
+<br>
+
+[col-33]
+
+<a href="/awards/2019/laginne-walker">
+    <center><img src="/images/awards/2019/fit-540/laginne-walker-2.jpg" width="90%"></center>
+    <div style="margin-top:5px;font-size:16px;text-align:center">Laginne Walker</div>
+</a>
+
+[/col-33]
+
+[col-33]
+
+<a href="/awards/2019/paul-foster">
+    <center><img src="/images/awards/2019/fit-540/paul-foster-2.jpg" width="90%"></center>
+    <div style="margin-top:5px;font-size:16px;text-align:center">Paul Foster</div>
+</a>
+
+[/col-33]
+
+<div style="clear:both"></div>
+
+<br>
+<br>
+
+# Last year's Winners
 
 [col-25]
 

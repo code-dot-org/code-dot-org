@@ -171,22 +171,19 @@ export default class TeacherHomepage extends Component {
       locale
     } = this.props;
 
-    // Hide the special announcement for now.
-    const showSpecialAnnouncement = false;
+    // Show the special announcement for Hour of Code 2019.
+    const showSpecialAnnouncement = true;
 
     // Hide the regular announcement/notification for now.
-    const showAnnouncement = true;
+    const showAnnouncement = false;
 
     return (
       <div>
         <HeaderBanner headingText={i18n.homepageHeading()} short={true} />
         <ProtectedStatefulDiv ref="flashes" />
         <ProtectedStatefulDiv ref="teacherReminders" />
-        {isEnglish && showSpecialAnnouncement && (
-          <SpecialAnnouncementActionBlock
-            hocLaunch={hocLaunch}
-            hasIncompleteApplication={!!sessionStorage['TeacherApplication']}
-          />
+        {showSpecialAnnouncement && (
+          <SpecialAnnouncementActionBlock hocLaunch={hocLaunch} />
         )}
         {announcement && showAnnouncement && (
           <div>
@@ -194,7 +191,7 @@ export default class TeacherHomepage extends Component {
               type={announcement.type || 'bullhorn'}
               notice={announcement.heading}
               details={announcement.description}
-              dismissible={false}
+              dismissible={true}
               buttonText={announcement.buttonText}
               buttonLink={announcement.link}
               newWindow={true}

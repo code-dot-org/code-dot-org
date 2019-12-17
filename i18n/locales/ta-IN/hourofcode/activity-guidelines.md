@@ -1,6 +1,5 @@
 ---
-title: Activity Guidelines
-layout: wide
+title: நடவடிக்கை வழிகாட்டுதல்கள்
 ---
 
 <style>

@@ -1,10 +1,5 @@
 ---
 title: Obrigado por se inscrever para sediar a Hora do Código!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": jogador
-  "twitter:site": "@codeorg"
 ---
 
 # Obrigado por se inscrever para sediar a Hora do Código!

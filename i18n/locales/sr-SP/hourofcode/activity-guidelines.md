@@ -1,6 +1,5 @@
 ---
 title: упутства за водиче
-layout: wide
 ---
 
 <style>

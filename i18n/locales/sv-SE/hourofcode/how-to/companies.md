@@ -1,7 +1,5 @@
 ---
 title: Hur hålla i en Kodtimme - företag
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

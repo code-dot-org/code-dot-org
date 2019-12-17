@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "za vsak element";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "Vsakemu elementu na seznamu določi spremenljivko '%1' in nato izvedi nekaj stavkov kode.";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "od %1 do %2 po %3";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "za";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Spremenljivka %1 se nastavi na začetno vrednost in tu določeni bloki se izvedejo. Nato se ves čas povečuje za tu določen interval, dokler ne doseže končne vrednosti, in bloki se vedno znova izvedejo.";

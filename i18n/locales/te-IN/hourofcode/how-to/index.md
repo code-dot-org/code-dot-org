@@ -1,7 +1,5 @@
 ---
-title: How-to Guide
-layout: wide
-nav: how_to_nav
+title: హౌ-టు గైడ్
 ---
 
 {{ signup_button }}

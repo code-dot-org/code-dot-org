@@ -1,6 +1,5 @@
 ---
 title: Activity Guidelines
-layout: wide
 ---
 
 <style>

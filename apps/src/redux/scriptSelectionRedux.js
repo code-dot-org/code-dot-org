@@ -26,33 +26,6 @@ export const setValidScripts = (
   assignedCourseId
 });
 
-export const loadValidScripts = (section, validScripts) => {
-  return async (dispatch, getState) => {
-    const promises = [
-      $.ajax({
-        method: 'GET',
-        url: `/dashboardapi/sections/${section.id}/student_script_ids`,
-        dataType: 'json'
-      }),
-      $.ajax({
-        method: 'GET',
-        url: `/dashboardapi/courses`,
-        dataType: 'json'
-      })
-    ];
-    const [studentScriptsData, validCourses] = await Promise.all(promises);
-    const {studentScriptIds} = studentScriptsData;
-    dispatch(
-      setValidScripts(
-        validScripts,
-        studentScriptIds,
-        validCourses,
-        section.course_id
-      )
-    );
-  };
-};
-
 // Selectors
 export const getSelectedScriptName = state => {
   const scriptId = state.scriptSelection.scriptId;

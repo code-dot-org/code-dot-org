@@ -1,6 +1,5 @@
 ---
 title: Kontakt zu internationalen Partnern
-layout: wide
 ---
 
 <style>
@@ -19,32 +18,32 @@ You, too, can play a leading role to get more people in your country involved! I
 
 *Don't see your country listed here?* [Apply to become an Hour of Code International Partner](https://goo.gl/forms/PZQEsqvet7yBE5ps2)! <br /> <br />
 
-| Country                               | Organization                                                      | Contact Name                       | Email or Website                                                                              |
+| Land                                  | Organisation                                                      | Ansprechpartner                    | E-Mail oder Webseite                                                                          |
 | ------------------------------------- | ----------------------------------------------------------------- | ---------------------------------- | --------------------------------------------------------------------------------------------- |
-| Albania                               | ALMOOC                                                            | Ridvan Aliu   
+| Albanien                              | ALMOOC                                                            | Ridvan Aliu   
 Isak Bilalli        | ridvan@eduongo.com   
 isaactiral@gmail.com                                                    |
-| Antigua and Barbuda                   | iLabGlobal                                                        |                                    | http://ilabglobal.com                                                                         |
-| Argentina                             | Fundación Sadosky                                                 |                                    | www.fundacionsadosky.org.ar   
+| Antigua und Barbuda                   | iLabGlobal                                                        |                                    | http://ilabglobal.com                                                                         |
+| Argentinien                           | Fundación Sadosky                                                 |                                    | www.fundacionsadosky.org.ar   
 www.program.ar                                                 |
-| Argentina                             | Nuc Ba Academia                                                   |                                    | http://academia.nucba.com.ar                                                                  |
-| Australia                             | Google                                                            | Marie Efstathiou                   | https://www.google.com/edu/cs                                                                 |
-| Australia                             | Grok Learning                                                     | Jane Abrams                        | https://groklearning.com                                                                      |
-| Brazil                                | Programaê! - Fundaçao Lemann                                      |                                    | http://programae.org.br/horadocodigo                                                          |
-| Cameroon                              | Big IT Company Ltd                                                |                                    |                                                                                               |
-| Canada                                | Brilliant Labs Inc.                                               |                                    | https://www.brilliantlabs.ca                                                                  |
-| Canada                                | Hatch Canada                                                      |                                    | www.hatchcanada.com                                                                           |
-| Canada                                | Canada Learning Code                                              | Carolyn Van                        | https://www.canadalearningcode.ca                                                             |
-| Canada                                | Actua                                                             | Tracy Ross                         | www.actua.ca                                                                                  |
-| Canada                                | Kids & Code                                                       |                                    | www.kidsandcode.org   
+| Argentinien                           | Nuc Ba Academia                                                   |                                    | http://academia.nucba.com.ar                                                                  |
+| Australien                            | Google                                                            | Marie Efstathiou                   | https://www.google.com/edu/cs                                                                 |
+| Australien                            | Grok Learning                                                     | Jane Abrams                        | https://groklearning.com                                                                      |
+| Brasilien                             | Programaê! - Fundação Telefônica Vivo                             |                                    | http://programae.org.br/horadocodigo                                                          |
+| Kamerun                               | Big IT Company Ltd                                                |                                    |                                                                                               |
+| Kanada                                | Brilliant Labs Inc.                                               |                                    | https://www.brilliantlabs.ca                                                                  |
+| Kanada                                | Hatch Canada                                                      |                                    | www.hatchcanada.com                                                                           |
+| Kanada                                | Canada Learning Code                                              | Carolyn Van                        | https://www.canadalearningcode.ca                                                             |
+| Kanada                                | Actua                                                             | Tracy Ross                         | www.actua.ca                                                                                  |
+| Kanada                                | Kids & Code                                                       |                                    | www.kidsandcode.org   
 hello@kidsandcode.org                                                  |
-| Canada                                | Kids Code Jeunesse                                                | Bry LeBlanc                        | http://kidscodejeunesse.org   
+| Kanada                                | Kids Code Jeunesse                                                | Bry LeBlanc                        | http://kidscodejeunesse.org   
 contact@kidscodejeunesse.org                                   |
-| Canada                                | Nova Scotia Department of Education & Early Childhood Development | Peter Oldreive                     | http://ednet.ns.ca   
+| Kanada                                | Nova Scotia Department of Education & Early Childhood Development | Peter Oldreive                     | http://ednet.ns.ca   
 Peter.Oldreive@novascotia.ca                                            |
-| Canada                                | Partners In Research Canada                                       | Stacey Joyce                       | www.pirweb.org/en   
+| Kanada                                | Partners In Research Canada                                       | Stacey Joyce                       | www.pirweb.org/en   
 sjoyce@pirweb.org                                                        |
-| Canada                                | Sault Ste. Marie innovation Centre                                |                                    | https://ssmic.com/                                                                            |
+| Kanada                                | Sault Ste. Marie innovation Centre                                |                                    | https://ssmic.com/                                                                            |
 | Chile                                 | Fundación Kodea                                                   | Claudia Jaña                       | http://horadelcodigo.cl   
 cjana@kodea.org                                                    |
 | China                                 | 码趣学院CodingMarch                                                   | Delia Wu                           | www.codingmarch.com   
@@ -58,19 +57,19 @@ gnahore@africachildrencode.org                           |
 paja@czechitas.cz                                                     |
 | Ecuador                               | Progracademy                                                      | Angelica Rodriguez                 | http://www.progracademy.org   
 angelica.rodriguez@progracademy.org                            |
-| Egypt                                 | Q-STEAM Club                                                      | Tamer Ragab                        | http://q-steam.com   
+| Ägypten                               | Q-STEAM Club                                                      | Tamer Ragab                        | http://q-steam.com   
 learn@q-steam.com                                                       |
-| Estonia                               | Vaata Maailma SA                                                  | Kristi Kivilo                      | http://www.vaatamaailma.ee   
+| Estland                               | Vaata Maailma SA                                                  | Kristi Kivilo                      | http://www.vaatamaailma.ee   
 kristi@vaatamaailma.ee                                          |
 | The Gambia                            | KidCoders Academy                                                 | Amie Njie                          | http://www.kidcodersacademy.gm   
 njieamy03@gmail.com                                         |
-| Georgia                               | Design Thinking Society                                           | Shota Murtskhvaladze               | http://designthinkingsociety.org.ge   
+| Georgien                              | Design Thinking Society                                           | Shota Murtskhvaladze               | http://designthinkingsociety.org.ge   
 shotamur@mindworks.ge                                  |
-| Georgia                               | Educare Georgia                                                   | George Jibladze   
+| Georgien                              | Educare Georgia                                                   | George Jibladze   
 Razmik Badalyan | http://www.educaregeorgia.org   
 gjibladze@educaregeorgia.com   
 rbadalyan@educaregeorgia.com |
-| Germany                               | moinworld e.V.                                                    |                                    | https://moinworld.de   
+| Deutschland                           | moinworld e.V.                                                    |                                    | https://moinworld.de   
 moin@moinworld.de                                                     |
 | Ghana                                 | Ghana Code Club                                                   | Ernestina Edem Appiah              | www.ghanacodeclub.org   
 tinasupport@gmail.com                                                |
@@ -78,17 +77,17 @@ tinasupport@gmail.com                                                |
 henrylee@i3dprinter.com.hk                                             |
 | Hong Kong                             | IAMAI Academy (Hong Kong) Ltd                                     | Johnson Chu                        | www.iamai.hk   
 johnson.chu@iamai.hk                                                          |
-| India                                 | CodeTigers                                                        | Sandeep Sheokand                   | sandeep.sheokand@gmail.com                                                                    |
-| India                                 | Mozilla Indore                                                    | Mrinal Jain                        | jain.mrinal140@gmail.com                                                                      |
-| India                                 | Pi Jam Foundation                                                 | Shoaib Dar                         | http://www.thepijam.org   
+| Indien                                | CodeTigers                                                        | Sandeep Sheokand                   | sandeep.sheokand@gmail.com                                                                    |
+| Indien                                | Mozilla Indore                                                    | Mrinal Jain                        | jain.mrinal140@gmail.com                                                                      |
+| Indien                                | Pi Jam Foundation                                                 | Shoaib Dar                         | http://www.thepijam.org   
 shoaib.dar@thepijam.org                                            |
-| India                                 | RISHS International School                                        |                                    | www.rishsinternationalschool.com   
+| Indien                                | RISHS International School                                        |                                    | www.rishsinternationalschool.com   
 principal@rishsinternationalschool.com                    |
-| India                                 | Be Cre8v                                                          |                                    | www.becre8v.com   
+| Indien                                | Be Cre8v                                                          |                                    | www.becre8v.com   
 sandeep@becre8v.com                                                        |
-| Indonesia                             | Coding Bee Academy                                                | Eko Haripin                        | http://www.codingbee.org   
+| Indonesien                            | Coding Bee Academy                                                | Eko Haripin                        | http://www.codingbee.org   
 hello@codingbee.org                                               |
-| Ireland                               | Cybersmarties.com                                                 | Diarmuid Hudner                    | www.cybersmarties.com   
+| Irland                                | Cybersmarties.com                                                 | Diarmuid Hudner                    | www.cybersmarties.com   
 diarmuid@cybersmarties.com                                           |
 | Israel                                | Wix                                                               | Yossi Hayut                        | www.wix.com   
 yossih@wix.com                                                                 |
@@ -168,12 +167,12 @@ hoc@edvira.com                                                           |
 Jane.shih@girlsintech.org                           |
 | Taiwan                                | Women Who Code Taipei                                             | Jane Shih                          | https://www.womenwhocode.com/taipei   
 Janeshih@womenwhocode.com                              |
-| Tanzania                              | Jenga Hub                                                         |                                    | http://jengahub.com                                                                           |
+| Tansania                              | Jenga Hub                                                         |                                    | http://jengahub.com                                                                           |
 | Thailand                              | Aksorn Education PLC                                              |                                    | www.aksorn.com                                                                                |
-| Thailand                              | Siamentis Ltd.                                                    | Chet Chetsandtikhun                | chet@siamentis.com                                                                            |
-| Turkey                                | RobinCode                                                         | Gözde Erbaz                        | www.robincode.org   
+| Thailand                              | Siamentis Ltd.                                                    | Chet Chetsandtikhun                | http://www.computingatschool.org.uk <0> compatsch@bcs.uk                                      |
+| Türkei                                | RobinCode                                                         | Gözde Erbaz                        | www.robincode.org   
 gozde@robincode.org                                                      |
-| UK                                    | Computing At School (CAS)                                         | Abi Edwards                        | http://www.computingatschool.org.uk   
+| Vereinigtes Königreich                | Computing At School (CAS)                                         | Abi Edwards                        | http://www.computingatschool.org.uk   
 compatsch@bcs.uk                                       |
 | Vietnam                               | Microsoft Vietnam                                                 | Nhi Le                             | https://www.microsoft.com/vi-vn   
 nhile@microsoft.com                                        |

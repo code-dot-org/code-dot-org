@@ -1,7 +1,5 @@
 ---
 title: 地区如何主办编程一小时
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

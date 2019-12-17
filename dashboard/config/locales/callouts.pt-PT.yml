@@ -55,6 +55,9 @@ pt-PT:
       Course 4 Artist Vars 6:
         degrees_per_side: Divida 360 pelo número de lados para obter o tamanho de
           cada ângulo em graus.
+      Course 4 Bee 3:
+        if_else_bee: Use o bloco "se-senão" para que a abelha colete o néctar de uma
+          flor, e faça mel se não for uma flor
       Course 4 Bee Params 2:
         edit_get_nectar: Use este botão para editar a função e alterar a direção para
           a qual a abelha vai virar para obter o néctar.
@@ -66,6 +69,13 @@ pt-PT:
         edit_add_parameter: Clique em editar para adicionar um parâmetro em sua função
       Course 4 Play Lab Vars 1:
         arrows_move_actor: Use as setas para mover o personagem
+      Dance_2019_01:
+        dance_callout_01: Escolhe o tipo de dançarino aqui.
+      Dance_2019_02:
+        dance_callout_11_a: Adiciona este bloco ao teu programa.
+        arrow_buttons: Prime os botões direcionais para controlar o teu dançarino.
+      Dance_2019_05:
+        dance_callout_05: Adiciona um novo evento ao teu programa.
       Function intro Ryan:
         Function_intro_Ryan_1: Esta breve instrução diz ao computador para executar
           o GRANDE pedaço de código com o mesmo nome no espaço de trabalho.
@@ -82,6 +92,11 @@ pt-PT:
         Infinity_move_right_runbutton: Adicione um bloco Mova aqui
       Infinity_repeat:
         Infinity_repeat_callout: Coloque blocos Mova aqui dentro
+      MC HOC 2016 Level 2-2:
+        craft2_run_button_callout: Quando estiveres pronto, carrega em "Executar"
+          para experimentares o teu programa.
+      MC HOC 2016 New Walk:
+        MC_HOC_2016_New_Walk_callout2: Carrega em "Executar" para começar a mover.
       MC_HOC_2017_03_Cole:
         MC_HOC_2017_03_Cole_1: Isto é uma ação circular "repetir"!  Arrasta-a para
           o espaço de trabalho e adiciona o código que pretendes executar sem fim.

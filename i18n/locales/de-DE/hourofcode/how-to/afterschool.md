@@ -1,7 +1,5 @@
 ---
 title: How-to Anleitung
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
@@ -81,6 +79,6 @@ Beginnen Sie Ihre Hour of Code mit einer motivierenden Diskussion mit den Teilne
 
 ## Was kommt nach der Hour of Code?
 
-Die Hour of Code ist erst der erste Schritt auf einer Reise, auf der man mehr darüber erfahren kann, wie Technologie funktioniert und wie Software Anwendungen erstellt werden. Helfen Sie Schülern, ihre Reise fortzusetzen, und ermutigen Sie sie [online mehr zu lernen](%= codeorg_url('/learn/beyond') %)!
+Die Hour of Code ist erst der erste Schritt auf einer Reise, auf der man mehr darüber erfahren kann, wie Technologie funktioniert und wie Software Anwendungen erstellt werden. Help students continue their journey and encourage them to [learn more online](/beyond)!
 
 {{ signup_button }}

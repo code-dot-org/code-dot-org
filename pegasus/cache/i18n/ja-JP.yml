@@ -989,7 +989,6 @@ ja-JP:
   coursef-2017_name: コース F (2017)
   pre-express-2018_name: 読み書き前 エクスプレスコース (2018)
   accelerated_name: 上級コース
-  express_name: エクスプレスコース
   20-hour_name: 上級コース
   algebra_name: コンピューターサイエンスと代数 フルコース
   AlgebraA_name: コンピューター・サイエンス代数 A コース
@@ -1636,7 +1635,13 @@ ja-JP:
   hoc2018_dance_teacher_resources_tile2_title: ダンスパーティーアンプラグド
   hoc2018_dance_teacher_resources_tile2_description: コンピューター不要! プログラミングの概念を学んで、一緒にダンスパーティーの振り付をしよう。
   hoc2018_dance_teacher_resources_tile2_button: アンプラグド　アクティビティ
+  hoc2018_dance_videos_section_heading: 触発される動画
+  hoc2018_dance_video_title_what_is_creativity: 創造性って何?
   hoc2018_dance_amazon_about_future_engineer_button: もっと詳しく知る
   hoc2018_dance_amazon_scholarship_programs_button: 今すぐ申し込む
   hoc2018_dance_measure: 小節
   hoc2018_dance_measure_colon: '小節:'
+  hoc2018_dance_video1: ダンスパーティー - イントロダクション
+  hoc2018_dance_video2: ダンスパーティー - イベント
+  hoc2018_dance_video3: ダンスパーティー - プロパティ
+  hoc2018_dance_video4: ダンスパーティー - 設定

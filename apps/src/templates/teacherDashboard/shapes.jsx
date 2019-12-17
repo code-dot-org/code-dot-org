@@ -5,6 +5,7 @@ import {makeEnum} from '@cdo/apps/utils';
 export const sectionShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
+  createdAt: PropTypes.string,
   // Though we validate valid login types here, the server actually owns the
   // canonical list, and passes us the list of valid login types.
   loginType: PropTypes.oneOf(Object.keys(SectionLoginType)),
@@ -136,4 +137,10 @@ export const sortableSectionShape = PropTypes.shape({
   hidden: PropTypes.bool.isRequired,
   assignmentName: PropTypes.arrayOf(PropTypes.string),
   assignmentPath: PropTypes.arrayOf(PropTypes.string)
+});
+
+export const sectionForDropdownShape = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  isAssigned: PropTypes.bool.isRequired
 });

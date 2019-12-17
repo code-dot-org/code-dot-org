@@ -19,13 +19,13 @@ const styles = {
   textItem: {
     backgroundColor: color.teal,
     padding: 25,
-    minHeight: 260,
+    minHeight: 281,
     boxSizing: 'border-box'
   },
   textItemCyan: {
     backgroundColor: color.light_cyan,
     padding: 25,
-    minHeight: 260,
+    minHeight: 281,
     boxSizing: 'border-box'
   },
   subHeading: {
@@ -46,7 +46,8 @@ const styles = {
   },
   image: {
     width: 485,
-    minHeight: 260
+    minHeight: 260,
+    height: 281
   },
   description: {
     paddingRight: 10,
@@ -214,49 +215,22 @@ export class AdministratorResourcesActionBlock extends Component {
 
 export class SpecialAnnouncementActionBlock extends Component {
   static propTypes = {
-    hocLaunch: PropTypes.string,
-    hasIncompleteApplication: PropTypes.bool
+    hocLaunch: PropTypes.string
   };
 
   render() {
-    return !!this.props.hasIncompleteApplication ? (
+    return (
       <TwoColumnActionBlock
-        id="teacher-application-continue-announcement"
+        id="danceparty-2019-announcement"
         imageUrl={pegasus(
-          '/shared/images/fill-540x289/teacher-announcement/professional-learning-2019-3.jpg'
+          '/shared/images/fill-540x300/teacher-announcement/hoc2019-danceparty.jpg'
         )}
-        subHeading={
-          'Finish your application to the Professional Learning Program'
-        }
-        subHeadingSmallFont={true}
-        description={
-          'We noticed you started your application to the Code.org Professional Learning Program.\
-          Finish your application while seats last!'
-        }
+        subHeading={i18n.specialAnnouncementHeadingHoc2019DanceParty()}
+        description={i18n.specialAnnouncementDescriptionHoc2019DanceParty()}
         buttons={[
           {
-            id: 'teacher-application-continue-button',
-            url: '/pd/application/teacher',
-            text: 'Finish application'
-          }
-        ]}
-      />
-    ) : (
-      <TwoColumnActionBlock
-        id="teacher-application-announcement"
-        imageUrl={pegasus(
-          '/shared/images/fill-540x289/teacher-announcement/professional-learning-2019-closing-soon.jpg'
-        )}
-        subHeading={i18n.specialAnnouncementHeadingJoinProfessionalLearning2019Deadline()}
-        subHeadingSmallFont={true}
-        description={i18n.specialAnnouncementDescriptionJoinProfessionalLearning2019Deadline()}
-        imageExtra={false}
-        teacherStyle={false}
-        buttons={[
-          {
-            id: 'teacher-application-join-button',
-            url: pegasus('/educate/professional-learning'),
-            text: i18n.joinUs()
+            url: pegasus('/hourofcode/overview'),
+            text: i18n.tryIt()
           }
         ]}
       />

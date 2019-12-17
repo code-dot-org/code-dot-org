@@ -1,7 +1,5 @@
 ---
 title: رہنمائی کیسے کریں – ڈسٹرکٹس
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

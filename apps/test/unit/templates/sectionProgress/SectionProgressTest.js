@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedSectionProgress} from '@cdo/apps/templates/sectionProgress/SectionProgress';
 import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 
@@ -38,7 +38,8 @@ describe('SectionProgress', () => {
         excludeCsfColumnInLegend: true
       },
       isLoadingProgress: false,
-      scriptFriendlyName: 'My Script'
+      scriptFriendlyName: 'My Script',
+      showStandardsIntroDialog: false
     };
   });
 

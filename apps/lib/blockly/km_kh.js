@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "សម្រាប់​ធាតុ​នីមួយៗ";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "រាល់​ធាតុ​ដែល​មាន​នៅ​ក្នុង​បញ្ជី​, កំណត់​អញ្ញត្តិ​ '%1' ទៅកាន់​ធាតុ​នីមួយៗ​, នឹង​បន្ទាប់​មក​ទៀត​អនុវត្តន៍​​នូវ​​សំនុំ​​​​ Code ​មួយ​ចំនួន​​.​";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "ចាប់​ពី %1 ទៅ %2 ដោយ​កើន​ម្ដង %3";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "រង្វិលជុំសម្រាប់";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "មាន​អថេរ %1 ដែល​ផ្ទុក​តម្លៃ​ចាប់​ពី​ចំនួន​ចាប់​ផ្ដើម​ទៅ​ដល់​ចំនួន​បញ្ចប់ ដោយ​រាប់​​ចន្លោះ​ជាក់លាក់ និងធ្វើ​ប្លុក​ជាក់​លាក់​ទាំង​នោះ";

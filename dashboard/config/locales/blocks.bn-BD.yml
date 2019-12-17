@@ -21,6 +21,11 @@ bn:
           PROPERTY:
             '"scale"': আকার
             '"height"': উচ্চতা
+      Dancelab_changePropEachBy:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+            '"height"': উচ্চতা
       Dancelab_doMoveEachLR:
         options:
           DIR:
@@ -54,18 +59,28 @@ bn:
             "{x: 100, y: 200}": বামে
             "{x: 300, y: 200}": ডানে
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": এলোমেলো
+      Dancelab_jumpToEach:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": বামে
+            "{x: 300, y: 200}": ডানে
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": এলোমেলো
       Dancelab_layoutSprites:
         options:
           FORMAT:
             '"random"': এলোমেলো
       Dancelab_makeAnonymousDanceSprite:
         options:
+          COSTUME:
+            '"DUCK"': হাঁস
           LOCATION:
             "{x: 100, y: 200}": বামে
             "{x: 300, y: 200}": ডানে
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": এলোমেলো
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"DUCK"': হাঁস
           LOCATION:
             "{x: 100, y: 200}": বামে
             "{x: 300, y: 200}": ডানে
@@ -127,7 +142,17 @@ bn:
           PROPERTY:
             '"scale"': আকার
             '"height"': উচ্চতা
+      Dancelab_setPropRandomEach:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+            '"height"': উচ্চতা
       Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+            '"height"': উচ্চতা
+      Dancelab_startMappingEach:
         options:
           PROPERTY:
             '"scale"': আকার
@@ -137,6 +162,15 @@ bn:
           PROPERTY:
             '"scale"': আকার
             '"height"': উচ্চতা
+      Dancelab_stopMappingEach:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+            '"height"': উচ্চতা
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"x"': এক্স
       Dancelab_whenKey:
         options:
           KEY:
@@ -257,6 +291,8 @@ bn:
             '"scale"': আকার
       Mikelab_randomColor:
         text: যেকোনো রঙ
+      Mikelab_repeatUntilComplete:
+        text: সবসময় পুনরাবৃত্তি করুন
       Mikelab_setBG:
         options:
           BG:

@@ -1,7 +1,5 @@
 ---
 title: Kódolás Órája útmutató tankerületeknek
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

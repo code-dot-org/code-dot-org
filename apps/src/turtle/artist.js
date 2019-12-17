@@ -53,7 +53,7 @@ import {captureThumbnailFromCanvas} from '../util/thumbnail';
 import {blockAsXmlNode, cleanBlocks} from '../block_utils';
 import ArtistSkins from './skins';
 import dom from '../dom';
-import {SignInState} from '../code-studio/progressRedux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import Visualization from '@code-dot-org/artist';
 import experiments from '../util/experiments';
 import {ArtistAutorunOptions} from '@cdo/apps/util/sharedConstants';
@@ -70,6 +70,8 @@ const MAX_STICKER_SIZE = 100;
 
 const SMOOTH_ANIMATE_STEP_SIZE = 5;
 const FAST_SMOOTH_ANIMATE_STEP_SIZE = 15;
+
+const MAX_TICKS_FOR_PREVIEW = 10000;
 
 const REMIX_PROPS = [
   {
@@ -354,11 +356,11 @@ Artist.prototype.init = function(config) {
     this.studioApp_.addChangeHandler(() => {
       if (this.limitedAutoRun) {
         if (this.studioApp_.isRunning() && !this.executing) {
-          this.execute();
+          this.execute({...this.executionInfo, ticks: MAX_TICKS_FOR_PREVIEW});
         }
       } else {
         if (!this.executing) {
-          this.execute();
+          this.execute({...this.executionInfo, ticks: MAX_TICKS_FOR_PREVIEW});
         }
       }
     });
@@ -603,7 +605,7 @@ Artist.prototype.drawBlocksOnCanvas = function(blocksOrCode, canvas) {
   } else {
     code = blocksOrCode;
   }
-  this.evalCode(code);
+  this.evalCode(code, this.executionInfo);
   this.drawCurrentBlocksOnCanvas(canvas);
 };
 
@@ -750,7 +752,7 @@ Artist.prototype.runButtonClick = function() {
   if (this.limitedAutoRun) {
     Blockly.mainBlockSpace.blockSpaceEditor.lockMovement();
   }
-  this.execute();
+  this.execute(this.executionInfo);
 };
 
 Artist.prototype.resetButtonClick = function() {
@@ -760,13 +762,13 @@ Artist.prototype.resetButtonClick = function() {
   }
 
   if (this.autoRun && !this.limitedAutoRun) {
-    this.execute();
+    this.execute({...this.executionInfo, ticks: MAX_TICKS_FOR_PREVIEW});
   } else {
     this.reset();
   }
 };
 
-Artist.prototype.evalCode = function(code, executionInfo = this.executionInfo) {
+Artist.prototype.evalCode = function(code, executionInfo) {
   try {
     CustomMarshalingInterpreter.evalWith(code, {
       Turtle: this.api,
@@ -839,7 +841,7 @@ Artist.prototype.handleExecutionError = function(
 /**
  * Execute the user's code.  Heaven help us...
  */
-Artist.prototype.execute = function() {
+Artist.prototype.execute = function(executionInfo) {
   this.executing = true;
   this.api.log = [];
 
@@ -864,7 +866,7 @@ Artist.prototype.execute = function() {
     }
 
     this.code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
-    this.evalCode(this.code);
+    this.evalCode(this.code, executionInfo);
   }
 
   // api.log now contains a transcript of all the user's actions.
@@ -1341,7 +1343,7 @@ Artist.prototype.displayFeedback_ = function() {
   const saveToProjectGallery =
     !level.impressive && PUBLISHABLE_SKINS.includes(this.skin.id);
   const isSignedIn =
-    getStore().getState().progress.signInState === SignInState.SignedIn;
+    getStore().getState().currentUser.signInState === SignInState.SignedIn;
 
   this.studioApp_.displayFeedback({
     feedbackType: this.testResults,

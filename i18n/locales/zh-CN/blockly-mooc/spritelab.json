@@ -12,7 +12,7 @@
   "spritelabFeedbackUseSpinningBehavior": "你的精灵需要开始旋转了。尝试改变它的行为。",
   "spritelabFeedbackPinkAlienBehavior": "你的粉色外星人精灵没有开始行动。",
   "spritelabFeedbackCreateThreeAliens": "你需要创造一个蓝色的外星人，一个粉红色的外星人和一个黄色的外星人。",
-  "spritelabFeedbackAliensNotInLine": "你需要创建一个蓝色外星，一个粉红色外星，和一个黄色外星。你的三个外星精灵需要安排在一条水平线（50像素以内）。",
+  "spritelabFeedbackAliensNotInLine": "你的三个外星精灵需要安排在一条水平线（50像素以内）。",
   "spritelabFeedbackYellowAlienBehavior": "黄色的外星人没有开始它的行为。",
   "spritelabFeedbackNoAlienColor": "至少有一个外星人没有改变颜色。",
   "spritelabFeedbackNeedAlienStopBehavior": "你的外星精灵需要停止他们所有的行为。",

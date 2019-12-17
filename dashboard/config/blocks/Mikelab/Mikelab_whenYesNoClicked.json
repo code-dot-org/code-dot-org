@@ -1,0 +1,28 @@
+{
+  "category": "Events",
+  "config": {
+    "func": "whenYesNoClicked",
+    "blockText": "when {KEY} clicked",
+    "args": [
+      {
+        "name": "KEY",
+        "options": [
+          [
+            "yes",
+            "\"yes\""
+          ],
+          [
+            "no",
+            "\"no\""
+          ]
+        ]
+      }
+    ],
+    "eventBlock": true,
+    "color": [
+      140,
+      1,
+      0.74
+    ]
+  }
+}

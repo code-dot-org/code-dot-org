@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom';
 import sinon from 'sinon';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 import SpriteLab from '@cdo/apps/p5lab/spritelab/SpriteLab';
 import Sounds from '@cdo/apps/Sounds';
 import {

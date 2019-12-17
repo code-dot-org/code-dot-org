@@ -36,7 +36,7 @@
   "reinfFeedbackMsg": "Bạn có thể bấm nút \"Thử lại\" để quay lại chơi trò chơi của mình.",
   "scoreText": "Điểm: {playerScore}",
   "setBackground": "thiết lập nền",
-  "setBackgroundRandom": "thiết lập nền ngẫu nhiên",
+  "setBackgroundRandom": "thiết lập cảnh nền Ngẫu nhiên",
   "setBackgroundFlappy": "thiết lập nền Thành phố (ban ngày)",
   "setBackgroundNight": "thiết lập nền Thành phố (ban đêm)",
   "setBackgroundSciFi": "thiết lập nền Viễn tưởng",

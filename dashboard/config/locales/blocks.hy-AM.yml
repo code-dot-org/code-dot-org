@@ -21,6 +21,11 @@ hy:
           PROPERTY:
             '"scale"': չափ
             '"height"': բարձրություն
+      Dancelab_changePropEachBy:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+            '"height"': բարձրություն
       Dancelab_doMoveEachLR:
         options:
           DIR:
@@ -54,18 +59,38 @@ hy:
             "{x: 100, y: 200}": ձախ
             "{x: 300, y: 200}": ճիշտ
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": կամայական
+      Dancelab_jumpToEach:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": ձախ
+            "{x: 300, y: 200}": ճիշտ
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": կամայական
       Dancelab_layoutSprites:
         options:
           FORMAT:
             '"random"': կամայական
       Dancelab_makeAnonymousDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': այլմոլորակային
+            '"CAT"': կատու
+            '"DOG"': շուն
+            '"DUCK"': բադ
+            '"ROBOT"': ռոբոտ
+            '"UNICORN"': միաեղջույր
           LOCATION:
             "{x: 100, y: 200}": ձախ
             "{x: 300, y: 200}": ճիշտ
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": կամայական
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': այլմոլորակային
+            '"CAT"': կատու
+            '"DOG"': շուն
+            '"DUCK"': բադ
+            '"ROBOT"': ռոբոտ
+            '"UNICORN"': միաեղջույր
           LOCATION:
             "{x: 100, y: 200}": ձախ
             "{x: 300, y: 200}": ճիշտ
@@ -93,6 +118,7 @@ hy:
             '19': '19'
             '20': '20'
           LAYOUT:
+            '"diamond"': ադամանդ
             '"random"': կամայական
       Dancelab_randomColor:
         text: կամայական գույն
@@ -127,7 +153,17 @@ hy:
           PROPERTY:
             '"scale"': չափ
             '"height"': բարձրություն
+      Dancelab_setPropRandomEach:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+            '"height"': բարձրություն
       Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+            '"height"': բարձրություն
+      Dancelab_startMappingEach:
         options:
           PROPERTY:
             '"scale"': չափ
@@ -137,6 +173,16 @@ hy:
           PROPERTY:
             '"scale"': չափ
             '"height"': բարձրություն
+      Dancelab_stopMappingEach:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+            '"height"': բարձրություն
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': ադամանդ
+            '"x"': x
       Dancelab_whenKey:
         options:
           KEY:
@@ -256,6 +302,8 @@ hy:
             '"scale"': չափ
       Mikelab_randomColor:
         text: կամայական գույն
+      Mikelab_repeatUntilComplete:
+        text: կրկնել հավերժ
       Mikelab_setBG:
         options:
           BG:

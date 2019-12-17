@@ -1,3 +1,6 @@
+- content_for(:head) do
+  %script{src: webpack_asset_path('js/levels/editors/_grid.js')}
+
 = hidden_field_tag :size, 8
 = f.hidden_field :maze_data
 .field#grid
@@ -57,14 +60,14 @@
       #mazeTable.span5
       .label.span3.offset1
         WHAT THE NUMBERS MEAN:
-        %ul(style="list-style-type:none;margin:0;")
+        %ul{style: "list-style-type:none;margin:0;"}
           %li.border 0 = border/wall
           %li.path 1 = path
           %li.start 2 = start
           %li.end 3 = end (for Maze levels only)
           %li.obstacle 4 = obstacle
         PLAYLAB:
-        %ul(style="list-style-type:none;margin:0;")
+        %ul{style: "list-style-type:none;margin:0;"}
           %li.start 16 = character
           %li.path 1 = waypoint flag
 

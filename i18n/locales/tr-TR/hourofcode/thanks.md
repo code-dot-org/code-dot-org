@@ -1,10 +1,5 @@
 ---
 title: Bir saat kodu oluşturduğunuz için teşekkürler!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # Bir saat kodu oluşturduğunuz için teşekkürler!

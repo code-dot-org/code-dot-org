@@ -21,7 +21,7 @@ import {
   setRunIsStarting
 } from './redux';
 import trackEvent from '../util/trackEvent';
-import {SignInState} from '../code-studio/progressRedux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import logToCloud from '../logToCloud';
 import {saveReplayLog} from '../code-studio/components/shareDialogRedux';
 import {
@@ -393,7 +393,7 @@ Dance.prototype.afterInject_ = function() {
     container: 'divDance',
     i18n: danceMsg,
     resourceLoader: new ResourceLoader(
-      'https://curriculum.code.org/images/sprites/dance_20181127/'
+      'https://curriculum.code.org/images/sprites/dance_20191106/'
     )
   });
 
@@ -533,7 +533,7 @@ Dance.prototype.runButtonClick = async function() {
   await this.danceReadyPromise;
 
   //Log song count in Dance Lab
-  trackEvent('HoC_Song', 'Play', getStore().getState().songs.selectedSong);
+  trackEvent('HoC_Song', 'Play-2019', getStore().getState().songs.selectedSong);
 
   Blockly.mainBlockSpace.traceOn(true);
   this.studioApp_.attempts++;
@@ -664,7 +664,7 @@ Dance.prototype.onHandleEvents = function(currentFrameEvents) {
  */
 Dance.prototype.displayFeedback_ = function() {
   const isSignedIn =
-    getStore().getState().progress.signInState === SignInState.SignedIn;
+    getStore().getState().currentUser.signInState === SignInState.SignedIn;
 
   const artistTwitterHandle =
     SongTitlesToArtistTwitterHandle[this.level.selectedSong];

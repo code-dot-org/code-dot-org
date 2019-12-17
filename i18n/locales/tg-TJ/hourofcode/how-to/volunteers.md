@@ -1,7 +1,5 @@
 ---
 title: Дастурамали чорабинӣ барои волонтёрони Соати рамз
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

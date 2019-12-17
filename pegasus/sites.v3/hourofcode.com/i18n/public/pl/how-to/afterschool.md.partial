@@ -10,7 +10,7 @@ nav: how_to_nav
 
 ### Przyłącz się do tej inicjatywy i pomóż grupie uczniów, by rozpoczęli swoją pierwszą godzinę informatyki postępując następująco. Godzina Kodowania jest łatwa do wykonania - nawet dla początkujących! Jeśli szukasz dodatkowych rąk do pomocy, możesz znaleźć [wolontariusza w okolicy]({{ urls/volunteer_local }}), by wsparł Cię w przeprowadzeniu zajęć Godziny Kodowania poza lekcjami lub w klubie.
 
----
+* * *
 
 ## 1. Obejrzyj ten film instruktażowy <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -81,6 +81,6 @@ Rozpocznij Godzinę Kodowania inspirując uczestników i dyskutując, jaki jest 
 
 ## Co będzie się działo po Godzinie Kodowania?
 
-Godzina Kodowanie jest dopiero pierwszym krokiem na drodze do poznania, jak działają technologie i jak tworzyć aplikacje komputerowe. Pomóż uczniom kontynuować ich podróż i zachęć ich do [ poznania więcej online ](%= codeorg_url('/learn/beyond') %)!
+Godzina Kodowanie jest dopiero pierwszym krokiem na drodze do poznania, jak działają technologie i jak tworzyć aplikacje komputerowe. Help students continue their journey and encourage them to [learn more online](/beyond)!
 
 {{ signup_button }}

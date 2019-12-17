@@ -1770,7 +1770,7 @@
     "long_instructions": "**Challenge:** Collect all of the corn and lettuce, then pick the pumpkin.",
     "authored_hints": {
       "courseD_farmer_condLoops7_a": "Notice that the easiest path to get to all of the crops is still a spiral.\n\n[][0]",
-      "courseD_farmer_condLoops7_b": "Try using `when path ahead` to keep the harvester moving the right number of steps."
+      "courseD_farmer_condLoops7_b": "Try using `while path ahead` to keep the harvester moving the right number of steps."
     }
   },
   "https://studio.code.org/s/express-2019/stage/15/puzzle/9": {
@@ -1813,7 +1813,8 @@
               "correct": false,
               "feedback": "The code will have the harvester repeatedly make a stairstep pattern and pick as much corn or lettuce as she comes across. She will not pick the pumpkin."
             }
-          ]
+          ],
+          "markdown": "The sprouts in this puzzle will be either corn or lettuce.\n<br/>\n"
         }
       }
     ]
@@ -2742,7 +2743,8 @@
               "correct": false,
               "feedback": "The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers."
             }
-          ]
+          ],
+          "markdown": "Ah!  The use of `for` loops makes this puzzle a lot easier!\n\n\n"
         }
       }
     ]
@@ -2954,7 +2956,8 @@
               "correct": false,
               "feedback": "Incorrect. Each time through the `for` loop, the artist draws a longer line that is also thicker."
             }
-          ]
+          ],
+          "markdown": "We used the counter from our `for` loop to change the width of the brush on this drawing.  \n\n\n"
         }
       }
     ]
@@ -3238,7 +3241,7 @@
     "dsls": {
       "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page",
-      "markdown": "# Project Examples\n\nYou are about to start your final project. Before you begin, spend some time looking at the example projects.\n\n## Sprite Lab\n\n| Cupcake Game (Sprite Lab) | Helicopter Game (Sprite Lab) |\n|---|---|\n| [![#Bunny Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png)](https://studio.code.org/projects/spritelab/gXM_YU_qL_QWo1o5Wkam96oiFrYY5VUp27m2xKlp7EQ/view) | [![#Helicopter Game (Sprite Lab)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png)](https://studio.code.org/projects/spritelab/QeROTy1pNyjNPC-ZZdBN1mcpkmTEMUc2FYwXX0SOFAY/view) |\n| Try adding text or a score to this game! | Try adding text or a score to this game! |\n\n## Artist\n\n| Flowers (Artist) | Spiral (Arist) |\n|---|---|\n| [![Flowers (Artist)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png)](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view) | [![Spiral (Artist)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png)](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view) |\n| Let's get creative with variables! | Let's get creative with For Loops! |\n\n"
+      "markdown": "# Project Examples\n\nYou are about to start your final project. Before you begin, spend some time looking at the example projects.\n\n## Sprite Lab\n\n| Cupcake Game (Sprite Lab) | Helicopter Game (Sprite Lab) |\n|---|---|\n| [![#Cupcake Game(Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png)](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) | [![#Helicopter Game (Sprite Lab)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png)](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view) |\n| Try adding text or a score to this game! | Try adding text or a score to this game! |\n\n## Artist\n\n| Flowers (Artist) | Spiral (Arist) |\n|---|---|\n| [![Flowers (Artist)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png)](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view) | [![Spiral (Artist)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png)](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view) |\n| Let's get creative with variables! | Let's get creative with For Loops! |\n\n"
     }
   },
   "https://studio.code.org/s/express-2019/stage/28/puzzle/2": {

@@ -9,7 +9,7 @@
     "project_template_level_name": "CSD U2 Project Template_2019",
     "instructions_important": "false",
     "hide_share_and_remix": "true",
-    "encrypted_examples": "sNrlR8YwEE9PSkapfZ4KAlFYg7aQ7snnTcYNPIqUvJ/cdiYJygd4TnwXlfJ2\nbxk5ob1B/bgrkcCzhguyWcY4VA==\n",
+    "encrypted_examples": "+FlJXZADWJiw+HRxRGcY4jbG/ETG5+XKfXkIbxwpoujJuH/Y9YvAua84r32G\nU/to/TXf59O0h7/Rf0dwlRTRWw==\n",
     "submittable": "false",
     "parent_level_id": 11511,
     "name_suffix": "_2019",
@@ -19,10 +19,14 @@
       "/docs/csd-1718/headers/index.html",
       "/docs/csd-1718/lists/index.html"
     ],
-    "map_reference": "/docs/csd-1718/cc_search/index.html"
+    "map_reference": "/docs/csd-1718/cc_search/index.html",
+    "encrypted": "false",
+    "mini_rubric": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-25 23:08:17 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-09 17:31:04 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-09 17:48:01 +0000\",\"changed\":[\"encrypted_examples\",\"reference_links\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-05-25 23:08:17 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-09 17:31:04 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-09 17:48:01 +0000\",\"changed\":[\"encrypted_examples\",\"reference_links\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-10-22 19:31:25 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </Weblab>

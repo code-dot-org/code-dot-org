@@ -819,6 +819,8 @@ class Script < ActiveRecord::Base
       Script::APPLAB_INTRO,
       Script::DANCE_PARTY_NAME,
       Script::DANCE_PARTY_EXTRAS_NAME,
+      Script::DANCE_PARTY_2019_NAME,
+      Script::DANCE_PARTY_EXTRAS_2019_NAME,
       Script::ARTIST_NAME,
       Script::SPORTS_NAME,
       Script::BASKETBALL_NAME
@@ -1329,6 +1331,10 @@ class Script < ActiveRecord::Base
     has_older_script_progress = has_older_version_progress?(user)
     user_script = user && user_scripts.find_by(user: user)
 
+    # If the current user is assigned to this script, get the section
+    # that assigned it.
+    assigned_section_id = user&.assigned_script?(self) ? user.section_for_script(self)&.id : nil
+
     summary = {
       id: id,
       name: name,
@@ -1366,7 +1372,8 @@ class Script < ActiveRecord::Base
       project_sharing: project_sharing,
       curriculum_umbrella: curriculum_umbrella,
       family_name: family_name,
-      version_year: version_year
+      version_year: version_year,
+      assigned_section_id: assigned_section_id
     }
 
     summary[:stages] = stages.map {|stage| stage.summarize(include_bonus_levels)} if include_stages

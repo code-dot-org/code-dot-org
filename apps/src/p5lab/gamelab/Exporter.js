@@ -20,8 +20,8 @@ import exportExpoSplashPng from '@cdo/apps/templates/export/expo/splash.png';
 import logToCloud from '@cdo/apps/logToCloud';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {APP_WIDTH, APP_HEIGHT} from '../constants';
+import {EXPO_SDK_VERSION} from '../../util/exporterConstants';
 import {
-  EXPO_SDK_VERSION,
   extractSoundAssets,
   createPackageFilesFromZip,
   createPackageFilesFromExpoFiles,

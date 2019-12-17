@@ -547,11 +547,13 @@ ne:
   terms_interstitial:
     title: "Updated Terms of Service and Privacy Policy"
     intro_desc: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
+    intro_desc_markdown: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016. The biggest change: we will _no longer store email addresses for student accounts on Code Studio._ This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
     intro_instructions: "You'll need to accept these new terms for students under the age of 13 in your classroom to have full access to all the latest features in Code Studio.  When registering an account for a student under 13, you will be asked to confirm that your school has parental consent for the collection of the student’s personal information for the use and benefit of the school, including educational programs such as Code Studio."
     tos: "Terms of Service"
     privacy: "Privacy Policy"
     privacy_notice: "Privacy Notice"
     accept_label: 'I agree to the updated <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
+    accept_label_markdown: I agree to the updated [Terms of Service](%{tos_url}) and [Privacy Policy](%{privacy_url})
     accept: "Accept"
     print: "Print"
     reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'

@@ -49,12 +49,17 @@
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
     "short_instructions": "Make the name of the user appear in uppercase (Click to see full instructions)",
-    "long_instructions": "# String Capitalization\r\n\r\nIf you want to change the capitalization of a string you can do so with two new functions\r\n\r\n![](https://images.code.org/d8523cdae7c07b34baa1c61809bb80d4-image-1445980407200.42.31 PM.png)\r\n\r\nNote that the syntax is similar to `console.log` . This is because `toUpperCase` really only makes sense as a command when you are using a **string**, just as `log` only makes sense when you are talking about the console. This function **evaluates to a new string in which all characters have been made uppercase / lowercase**. If you want to update the value in your original variable you'll have to do so explicitly, as in\r\n\r\n```\r\nvar myString = \"lower case for now\";\r\nmyString = myString.toUpperCase();\r\n```\r\n\r\n# Do This:\r\n\r\n* **Update your application so that the user's name is printed in UPPERCASE**.\r\n\r\n<img src=\"https://images.code.org/26d8ffb7c631c1c510f781b5bf46d494-image-1445980322936.04.55 PM.png\", style=\"width:250px;\">",
-    "preload_asset_list": null
+    "long_instructions": "# String Capitalization\r\n\r\nIf you want to change the capitalization of a string you can do so with two new functions\r\n\r\n![](https://images.code.org/d8523cdae7c07b34baa1c61809bb80d4-image-1445980407200.42.31 PM.png)\r\n\r\nNote that the syntax is similar to `console.log` . This is because `toUpperCase` really only makes sense as a command when you are using a **string**, just as `log` only makes sense when you are talking about the console. This function **evaluates to a new string in which all characters have been made uppercase / lowercase**. If you want to update the value in your original variable you'll have to do so explicitly, as in\r\n\r\n```\r\nvar myString = \"lower case for now\";\r\nmyString = myString.toUpperCase();\r\n```\r\n\r\n# Do This:\r\n\r\n* **Update your application so that the user's name is printed in UPPERCASE**.\r\n\r\n![](https://images.code.org/26d8ffb7c631c1c510f781b5bf46d494-image-1445980322936.04.55 PM.png)",
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "widget_mode": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-11-09 22:00:07 +0000\",\"changed\":[\"notes\",\"markdown_instructions\",\"instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2018-11-09 22:00:07 +0000\",\"changed\":[\"notes\",\"markdown_instructions\",\"instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-10-22 14:06:51 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

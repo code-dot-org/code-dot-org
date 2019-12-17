@@ -1,7 +1,5 @@
 ---
 title: 給一小時玩程式活動志工的活動指引
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

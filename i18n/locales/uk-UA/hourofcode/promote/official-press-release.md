@@ -1,7 +1,5 @@
 ---
 title: Прес-реліз Години коду для виборних посадових осіб
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

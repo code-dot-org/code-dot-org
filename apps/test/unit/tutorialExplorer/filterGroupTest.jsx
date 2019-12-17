@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 import FilterChoice from '@cdo/apps/tutorialExplorer/filterChoice';
 import FilterGroup from '@cdo/apps/tutorialExplorer/filterGroup';
 import FilterGroupContainer from '@cdo/apps/tutorialExplorer/filterGroupContainer';

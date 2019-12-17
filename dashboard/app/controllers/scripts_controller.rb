@@ -43,6 +43,8 @@ class ScriptsController < ApplicationController
 
     @show_redirect_warning = params[:redirect_warning] == 'true'
     @section = current_user&.sections&.find_by(id: params[:section_id])&.summarize
+    sections = current_user.try {|u| u.sections.where(hidden: false).select(:id, :name, :script_id, :course_id)}
+    @sections_with_assigned_info = sections&.map {|section| section.attributes.merge!({"isAssigned" => section[:script_id] == @script.id})}
   end
 
   def index
@@ -58,9 +60,9 @@ class ScriptsController < ApplicationController
   def create
     @script = Script.new(script_params)
     if @script.save && @script.update_text(script_params, params[:script_text], i18n_params, general_params)
-      redirect_to @script, notice: I18n.t('crud.created', model: Script.model_name.human)
+      redirect_to edit_script_url(@script), notice: I18n.t('crud.created', model: Script.model_name.human)
     else
-      render 'new'
+      render json: @script.errors
     end
   end
 
@@ -81,7 +83,25 @@ class ScriptsController < ApplicationController
   end
 
   def edit
+    beta = params[:beta].present?
+    if @script.script_levels.any?(&:has_experiment?)
+      beta = false
+      beta_warning = "The beta Script Editor is not available, because it does not support level variants with experiments."
+    end
     @show_all_instructions = params[:show_all_instructions]
+    @script_data = {
+      script: @script ? @script.summarize_for_edit : {},
+      i18n: @script ? @script.summarize_i18n : {},
+      beta: beta,
+      betaWarning: beta_warning,
+      levelKeyList: beta && Level.key_list,
+      stageLevelData: @script_file,
+      locales: options_for_locale_select,
+      script_families: ScriptConstants::FAMILY_NAMES,
+      version_year_options: Script.get_version_year_options,
+      flex_category_map: I18n.t('flex_category'),
+      is_levelbuilder: current_user.levelbuilder?
+    }
   end
 
   def update

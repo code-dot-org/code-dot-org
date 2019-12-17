@@ -1,7 +1,5 @@
 ---
 title: Eksempel Op-ed støttende informatikk utdanningsuke og Kodetimen
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

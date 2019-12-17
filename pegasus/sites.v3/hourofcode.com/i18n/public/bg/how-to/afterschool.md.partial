@@ -10,7 +10,7 @@ nav: how_to_nav
 
 ### Присъединете се към движението и въведете група от ученици в първия им час по компютърни науки с тези стъпки. Часът на кода е лесен за изпълнение - дори и за начинаещи! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
 
----
+* * *
 
 ## 1) Гледайте видео с примери <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -81,6 +81,6 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## Какво идва след Hour of Code?
 
-Hour of Code е само първата стъпка в образователното пътуване за това, как технологията работи и как се създават софтуерни приложения. Помогне на учениците да продължат пътуването си и ги насърчете да [Научат повече онлайн](%= codeorg_url('/learn/beyond') %)!
+Hour of Code е само първата стъпка в образователното пътуване за това, как технологията работи и как се създават софтуерни приложения. Help students continue their journey and encourage them to [learn more online](/beyond)!
 
 {{ signup_button }}

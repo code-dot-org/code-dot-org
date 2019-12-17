@@ -59,5 +59,3 @@ Here are a few **examples of events** you can host to build teacher community.
 - Host a [teacher hackathon](https://edtechhandbook.com/case-studies/remixed-how-to-host-an-education-hackathon/) at your location for CS educators in the area. It's a great way to network and encourage teachers to code and create!
 
 <a name="csfair"></a>
-## Computer Science Fair
-In Year 2 of your partnership, hold a computer science fair showcasing students and student projects in your region.  See <a href="https://docs.google.com/document/d/1zdolbbIN8hQzfdivqHWTzNR-WdYQ8U3U19UTpYb20Wk/edit?ts=59c53f15" target=_blank>this overview</a> for more information and sample agenda. See the <a href="https://docs.google.com/document/d/1YXIUGohlNNZKiGjHcywuyBV9e_c3UDE6CcgAfShOWuI/edit?ts=59ef9992" target=_blank>CS Fair - Allowable Expenses</a> for additional guidelines on expenses.

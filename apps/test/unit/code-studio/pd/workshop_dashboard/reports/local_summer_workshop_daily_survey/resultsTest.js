@@ -110,38 +110,42 @@ describe('Local Summer Workshop Daily Survey Results class', () => {
             }
           }}
           sessions={['Pre Workshop', 'Day 1']}
-          facilitators={{
-            1: 'Facilitator 1',
-            2: 'Facilitator 2'
-          }}
-          facilitatorAverages={{
-            'Facilitator 1': {
-              q1: {
-                this_workshop: 4.5,
-                all_my_workshops: 4.0
-              }
-            },
-            'Facilitator 2': {
-              q1: {
-                this_workshop: 1.5,
-                all_my_workshops: 2.0
+          courseName="Course Name"
+          workshopRollups={{
+            rollups: {
+              this_ws: {
+                workshop_id: 1,
+                response_count: 1,
+                averages: {overall_success_0: 7, overall_success: 7}
               }
             },
             questions: {
-              q1: 'Question 1'
-            }
-          }}
-          facilitatorResponseCounts={{
-            all_my_workshops: {
-              1: 40,
-              2: 50
+              overall_success_0: 'I feel more prepared to teach'
             },
-            this_workshop: {
-              1: 10,
-              2: 8
+            facilitators: {
+              '1': 'Facilitator Person 1'
             }
           }}
-          courseName="Course Name"
+          facilitatorRollups={{
+            rollups: {
+              facilitator_1_single_ws: {
+                facilitator_id: 1,
+                workshop_id: 1,
+                response_count: 1,
+                averages: {
+                  facilitator_effectiveness_0: 7,
+                  facilitator_effectiveness: 7
+                }
+              }
+            },
+            questions: {
+              facilitator_effectiveness_0:
+                'Demonstrated knowledge of the curriculum.'
+            },
+            facilitators: {
+              '1': 'Facilitator Person 1'
+            }
+          }}
         />
       </Provider>
     );
@@ -167,13 +171,13 @@ describe('Local Summer Workshop Daily Survey Results class', () => {
       results
         .find('Tab')
         .at(2)
-        .find('FacilitatorAveragesTable')
+        .find('SurveyRollupTable')
     ).to.have.length(1);
     expect(
       results
         .find('Tab')
         .at(3)
-        .find('FacilitatorAveragesTable')
+        .find('SurveyRollupTable')
     ).to.have.length(1);
   });
 });

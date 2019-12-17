@@ -1,0 +1,42 @@
+{
+  "category": "",
+  "config": {
+    "func": "ifRecognizeLabel",
+    "blockText": "if recognize object as {DANCE}\n do {DO1} else {DO2}",
+    "inline": true,
+    "color": [
+      210,
+      0.43,
+      0.64
+    ],
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite",
+        "customInput": "spritePicker"
+      },
+      {
+        "name": "DANCE",
+        "options": [
+          [
+            "fish",
+            "MOVES.ClapHigh"
+          ],
+          [
+            "my-label",
+            "MOVES.Clown"
+          ]
+        ],
+        "type": "Number"
+      },
+      {
+        "name": "DO1",
+        "statement": true
+      },
+      {
+        "name": "DO2",
+        "statement": true
+      }
+    ]
+  }
+}

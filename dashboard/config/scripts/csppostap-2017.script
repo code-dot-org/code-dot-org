@@ -12,7 +12,7 @@ is_stable true
 project_sharing true
 
 stage 'Creating Javascript Objects'
-level 'U4L02 Student Lesson Introduction'
+level 'U4L02 Student Lesson Introduction Video'
 level 'U4 - Objects - eventParameter'
 level 'U4 - Objects - dotNotation'
 level 'U4 - Objects - createDotNotation'

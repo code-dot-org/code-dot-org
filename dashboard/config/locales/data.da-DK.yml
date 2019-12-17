@@ -641,6 +641,8 @@ da:
         iceage_repeat: Ice Age kodetime - gentagelseskommandoer
         CSF_loops_AB: Løkker
         hoc_dance_warmup: Dansefest - Opvarmning
+        hoc_dance_events: Danse fest - Events
+        hoc_dance_properties: Danse fest - Indstillinger
         hoc_dance_congrats: Dansefest - lad festen fortsætte!
         csd_pair_programming: Par programmering
         csd_applab_parameters: Funktioner med parametre

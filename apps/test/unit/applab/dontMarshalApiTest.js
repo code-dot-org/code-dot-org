@@ -1,4 +1,4 @@
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 import sinon from 'sinon';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
 import * as dontMarshalApi from '@cdo/apps/applab/dontMarshalApi';

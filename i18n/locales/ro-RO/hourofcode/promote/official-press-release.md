@@ -1,7 +1,5 @@
 ---
 title: Hour of Code - Comunicat de presa pentru oficialii alesi
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

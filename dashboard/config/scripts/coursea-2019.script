@@ -1,6 +1,6 @@
 hidden false
 hideable_stages true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-19/coursea/"], ["teacherForum", "http://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-19/coursea/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-19/coursea/standards/"]]
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-19/coursea/"], ["teacherForum", "http://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-19/coursea/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-19/coursea/standards/"], ["curriculumGuide", "https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview"]]
 stage_extras_available true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-19/coursea/{LESSON}'
@@ -17,28 +17,40 @@ level 'GoingPlacesSafely-unplugged'
 
 stage 'Learn to Drag and Drop', flex_category: 'csf_sequencing'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:1', progression: 'Practice'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:2', progression: 'Practice'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:3', progression: 'Practice'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:4', progression: 'Practice'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:5', progression: 'Practice'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:6', progression: 'Practice'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:7', progression: 'Practice'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:8', progression: 'Practice'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:9', progression: 'Practice'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:10', progression: 'Practice'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:11', progression: 'Practice'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:12', progression: 'Practice'
 
 stage 'Programming: Happy Maps', flex_category: 'csf_sequencing'

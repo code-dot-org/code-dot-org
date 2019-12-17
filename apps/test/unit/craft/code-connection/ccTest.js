@@ -1,4 +1,4 @@
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/deprecatedChai';
 import sinon from 'sinon';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import {executeUserCode} from '@cdo/apps/craft/code-connection/craft';

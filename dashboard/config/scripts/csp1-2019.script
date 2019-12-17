@@ -7,7 +7,6 @@ teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-19/unit1/"],
 has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-19/unit1/{LESSON}'
-script_announcements [{"notice"=>"Are you signed up for the AP exam?", "details"=>"Be sure to ask your teacher about your school’s registration deadline and sign up to take the AP CS Principles exam! Not sure you want to take the test? Here are six great reasons why you should. ", "link"=>"https://code.org/educate/csp/ap-students", "type"=>"bullhorn", "visibility"=>"Student-only"}, {"notice"=>"Help us make history! Encourage girls to take the AP exam", "details"=>"Even though the number of young women who took the AP CS Principles exam increased by 32% last year, they are still half as likely to be encouraged to explore CS than their male peers. Help us change this by inspiring the girls in your class to take the exam.", "link"=>"https://code.org/girls", "type"=>"bullhorn", "visibility"=>"Teacher-only"}]
 family_name 'csp1'
 version_year '2019'
 is_stable true

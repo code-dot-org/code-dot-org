@@ -1,6 +1,6 @@
 module Pd
   module Teacher2021ApplicationConstants
-    include Pd::TeacherCommonApplicationConstants
+    YES_NO = %w(Yes No).freeze
 
     # Remove newlines and leading whitespace from multiline strings
     def self.clean_multiline(string)
@@ -17,42 +17,41 @@ module Pd
     }
 
     PAGE_LABELS = {
-      about_you: BASE_PAGE_LABELS[:section_1_about_you].slice(
-        :country,
-        :first_name,
-        :last_name,
-        :account_email,
-        :alternate_email
-      ).merge(
-        {
-          phone: 'Home or cell phone',
-          gender_identity: 'Gender identity',
-          race: 'Race or ethnicity',
-          zip_code: 'Home zip code',
-          school: 'School',
-          school_name: 'School name',
-          school_district_name: 'School district',
-          school_address: 'School address',
-          school_city: 'City',
-          school_state: 'State',
-          school_zip_code: 'Zip code',
-          school_type: 'My school is a',
-          principal_title: "Principal's title",
-          principal_first_name: "Principal's first name",
-          principal_last_name: "Principal's last name",
-          principal_email: "Principal's email address",
-          principal_confirm_email: "Confirm principal's email address",
-          principal_phone_number: "Principal's phone number",
-          current_role: 'What is your current role at your school?',
-          completing_on_behalf_of_someone_else: 'Are you completing this application on behalf of someone else?',
-          completing_on_behalf_of_name: 'If yes, please include the full name and role of the teacher and why you are applying on behalf of this teacher.',
-          how_heard: 'How did you hear about this program?'
-        }
-      ),
-      teaching_background:
-        BASE_PAGE_LABELS[:section_2_your_school].slice(
-          :previous_yearlong_cdo_pd
-        ),
+      about_you: {
+        country: 'Country',
+        first_name: 'First name',
+        last_name: 'Last name',
+        account_email: 'Account email',
+        alternate_email: 'If you use another email (especially during summer months), enter it here:',
+        phone: 'Home or cell phone',
+        gender_identity: 'Gender identity',
+        race: 'Race or ethnicity',
+        zip_code: 'Home zip code',
+        school: 'School',
+        school_name: 'School name',
+        school_district_name: 'School district',
+        school_address: 'School address',
+        school_city: 'City',
+        school_state: 'State',
+        school_zip_code: 'Zip code',
+        school_type: 'My school is a',
+        principal_title: "Principal's title",
+        principal_first_name: "Principal's first name",
+        principal_last_name: "Principal's last name",
+        principal_email: "Principal's email address",
+        principal_confirm_email: "Confirm principal's email address",
+        principal_phone_number: "Principal's phone number",
+        current_role: 'What is your current role at your school?',
+        completing_on_behalf_of_someone_else: 'Are you completing this application on behalf of someone else?',
+        completing_on_behalf_of_name: 'If yes, please include the full name and role of the teacher and why you are applying on behalf of this teacher.',
+        how_heard: 'How did you hear about this program?'
+      },
+      teaching_background: {
+        previous_yearlong_cdo_pd: clean_multiline(
+          "Have you participated in previous yearlong Code.org Professional Learning Programs?
+           If so, mark the programs you've participated in."
+        )
+      },
       choose_your_program: {
         program: clean_multiline(
           'Which professional learning program would you like to join for the 2020-21
@@ -73,7 +72,7 @@ module Pd
           school year? Please note that the CS Principles Professional Learning Program
           is not available for grades K-8. (select all that apply)'
         ),
-        csp_how_offer: BASE_PAGE_LABELS[:section_3_choose_your_program][:csp_how_offer],
+        csp_how_offer: 'How will you offer CS Principles?',
         cs_how_many_minutes: clean_multiline(
           'How many minutes per day is one CS program class section? (Include the
           number of minutes from start to finish that you see your students per class
@@ -91,12 +90,15 @@ module Pd
       },
       professional_learning_program_requirements:
         {
-          committed: BASE_PAGE_LABELS[:section_4_summer_workshop][:committed],
+          committed: 'Are you committed to participating in the entire Professional Learning Program?',
           able_to_attend_multiple: 'Your Regional Partner is hosting local summer workshop(s) at the following dates and locations. Please indicate which workshops you are able to attend. Select all that apply.',
           travel_to_another_workshop: 'If you are unable to make any of the above workshop dates, would you be open to traveling to another region for your local summer workshop?',
-          willing_to_travel: BASE_PAGE_LABELS[:section_4_summer_workshop][:willing_to_travel],
+          willing_to_travel: clean_multiline(
+            'The four one-day school year workshops are typically held on Saturdays, with an approximate
+           schedule of 9am - 4pm. How far would you be willing to travel to each workshop?'
+          ),
           interested_in_online_program: 'Do you want to be considered for the virtual academic year workshop track?',
-          pay_fee: BASE_PAGE_LABELS[:section_4_summer_workshop][:pay_fee],
+          pay_fee: 'Will your school be able to pay the fee?',
           understand_fee: "By checking this box, you indicate that you understand there may be a fee for the professional learning program you attend.",
           scholarship_reasons: "Please provide any additional information you'd like to share about why your application should be considered for a scholarship."
         },
@@ -129,6 +131,11 @@ module Pd
       }
     }.freeze
 
+    LABEL_OVERRIDES = {
+      program: 'Which professional learning program would you like to join for the 2020-21 school year?',
+      cs_how_many_minutes: 'How many minutes will your class last?'
+    }.freeze
+
     CSV_LABELS = {
       teacher: {
         date_applied: "Date Applied",
@@ -141,7 +148,6 @@ module Pd
         application_url: "Link to Application",
         assigned_workshop: "Assigned Workshop",
         friendly_registered_workshop: "Registered for workshop?",
-        total_score: "Bonus Points",
         notes: "General Notes",
         notes_2: "Notes 2",
         notes_3: "Notes 3",
@@ -211,11 +217,6 @@ module Pd
         student_tr_count: "Percentage of student enrollment by race - Two or more races (NCES data)",
       }
     }
-
-    LABEL_OVERRIDES = {
-      program: 'Which professional learning program would you like to join for the 2020-21 school year?',
-      cs_how_many_minutes: 'How many minutes will your class last?'
-    }.freeze
 
     MULTI_ANSWER_QUESTION_FIELDS = {
       school_name: {principal: :principal_school_name},
@@ -308,7 +309,6 @@ module Pd
         :meets_criteria,
         :meets_scholarship_criteria,
         :friendly_scholarship_status,
-        :total_score,
         :notes,
         :notes_2,
         :notes_3,
@@ -409,5 +409,57 @@ module Pd
         :student_tr_count
       ]
     }
+
+    SUBJECTS_TAUGHT_IN_PAST = [
+      'CS Fundamentals',
+      'CS in Algebra',
+      'CS in Science',
+      'CS Discoveries',
+      'CS Principles (intro or AP-level)',
+      'AP CS A',
+      'Beauty and Joy of Computing',
+      'Code HS',
+      'Edhesive',
+      'Exploring Computer Science',
+      'Mobile CSP',
+      'NMSI',
+      'Project Lead the Way',
+      'Robotics',
+      'ScratchEd'
+    ].freeze
+
+    TEXT_FIELDS = {
+      other_with_text: 'Other:'.freeze,
+      other_please_list: 'Other (Please List):'.freeze,
+      other_please_explain: 'Other (Please Explain):'.freeze,
+      not_teaching_this_year: "I'm not teaching this year (Please Explain):".freeze,
+      not_teaching_next_year: "I'm not teaching next year (Please Explain):".freeze,
+      dont_know_if_i_will_teach_explain: "I don't know if I will teach this course (Please Explain):".freeze,
+      unable_to_attend: "No, I'm unable to attend (Please Explain):".freeze,
+      able_to_attend_single: "Yes, I'm able to attend".freeze,
+      no_explain: "No (Please Explain):".freeze,
+      no_pay_fee: "No, my school or I will not be able to pay the summer workshop program fee.".freeze,
+      i_dont_know_explain: "I don't know (Please Explain):",
+      no_pay_fee_2021: 'No, my school will not be able to pay the program fee. I would like to be considered for a scholarship.',
+      no_pay_fee_1920: 'No, my school will not be able to pay the program fee. I would like to be considered for a scholarship.',
+      not_sure_explain: 'Not sure (Please Explain):',
+      unable_to_attend_2021: 'I’m not able to attend any of the above workshop dates. (Please Explain):',
+      unable_to_attend_1920: 'I’m not able to attend any of the above workshop dates. (Please Explain):'
+    }.freeze
+
+    SUBJECTS_THIS_YEAR = [
+      'Computer Science',
+      'Computer Literacy',
+      'Math',
+      'Science',
+      'History',
+      'Social Studies',
+      'English/Language Arts',
+      'Music',
+      'Art',
+      'Multimedia',
+      'Foreign Language',
+      TEXT_FIELDS[:other_please_list]
+    ]
   end
 end

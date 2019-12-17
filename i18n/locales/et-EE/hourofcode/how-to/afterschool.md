@@ -1,7 +1,5 @@
 ---
 title: Juhend
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
@@ -81,6 +79,6 @@ Alusta oma KoodiTund läbiviimist osalejate inspireerimisega ning aruteluga, kui
 
 ## Mis saab pärast KoodiTund läbiviimist?
 
-KoodiTund on alles esimene samm, kus õpime, kuidas tehnoloogia töötab ning kuidas programmeerida. Aiata õpilastel seda teekonda jätkata ning julgusta neid[ internetis edasi õppima](%= codeorg_url('/learn/beyond') %)!
+KoodiTund on alles esimene samm, kus õpime, kuidas tehnoloogia töötab ning kuidas programmeerida. Help students continue their journey and encourage them to [learn more online](/beyond)!
 
 {{ signup_button }}

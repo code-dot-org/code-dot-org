@@ -41,6 +41,7 @@ class XhrProxyController < ApplicationController
     api.pegelalarm.at
     api.randomuser.me
     api.rebrandly.com
+    api.spacexdata.com
     api.spotify.com
     api.themoviedb.org
     api.thingspeak.com
@@ -73,9 +74,6 @@ class XhrProxyController < ApplicationController
     rejseplanen.dk
     maker.ifttt.com
     noaa.gov
-    nuevaschool.ngrok.io
-    nuevaschool2.ngrok.io
-    nuevaschool3.ngrok.io
     numbersapi.com
     random.org
     restcountries.eu

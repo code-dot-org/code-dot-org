@@ -92,7 +92,7 @@ class CourseBlocksCsfModern extends Component {
           notice={i18n.courseBlocksLegacyNotificationHeading()}
           details={i18n.courseBlocksLegacyNotificationBody()}
           detailsLinkText={i18n.courseBlocksLegacyNotificationDetailsLinkText()}
-          detailsLink="https://docs.google.com/document/d/1MVDfbEzr0o9DqaOYmOOYpsQPTfXUFvCx4Xs9uixrdBE/edit?usp=sharing"
+          detailsLink={pegasus('/educate/curriculum/csf-transition-guide')}
           detailsLinkNewWindow={true}
           dismissible={false}
           buttons={[
@@ -169,8 +169,8 @@ export class CourseBlocksHoc extends Component {
 
   componentDidMount() {
     const tiles = this.props.isInternational
-      ? ['#dance', '#aquatic', '#frozen', '#hourofcode']
-      : ['#dance', '#aquatic', '#applab-intro', '#flappy'];
+      ? ['#dance-2019', '#aquatic', '#frozen', '#hourofcode']
+      : ['#dance-2019', '#aquatic', '#oceans', '#flappy'];
 
     tiles.forEach((tile, index) => {
       $(tile).appendTo(ReactDOM.findDOMNode(this.refs[index]));

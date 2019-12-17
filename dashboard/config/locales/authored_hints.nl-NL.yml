@@ -1855,13 +1855,92 @@ nl-NL:
         voyage_aquatic_9a: Wat een prachtig koraalrif! Blauw koraal geeft de \*\*
           rechte \*\* manier aan, en zorg ervoor dat je rood koraal niet \*\* links
           \*\* laat liggen!
+      Dance_2019_01:
+        validation: |-
+          **Hoe haal ik dit level?**
+
+          -   Zorg ervoor dat er een danser op het scherm verschijnt.
+
+          _Dit level eindigt na 4 maten._
+        challenges: "**Extra uitdaging**\n\n-   Kies een ander nummer om te spelen.
+          \n-   Verplaats je danser naar een nieuwe locatie.\n-   Maak meer dan één
+          danser."
+      Dance_2019_02:
+        validation: "**Hoe haal ik dit level?**\n\n-   De danser moet een beweging
+          uitvoeren. \n-   Je moet op een pijltjestoets drukken. \n\n_Dit level eindigt
+          na 4 maten._"
+        challenges: "**Extra uitdaging** \n\n-   Gebruik meer dan één blok <xml><block
+          type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>."
+      Dance_2019_03:
+        validation: "**Hoe haal ik dit level?**\n\n-   Beide danser moet een beweging
+          uitvoeren. \n-   Je moet op de pijltjestoetsen drukken. \n\n_Dit level eindigt
+          na 4 maten._"
+        challenges: "**Extra uitdaging** \n\n-   Laat een danser reageren op de linker
+          en rechter pijltjestoetsen."
+      Dance_2019_04:
+        validation: |-
+          **Hoe haal ik dit level?**
+
+          -   De danser moet na 4 maten een nieuwe move doen.
+
+          _Dit level eindigt na 8 maten._
+      Dance_2019_05:
+        validation: |-
+          **Hoe haal ik dit level?**
+
+          -   Na 6 maten moet je danser een andere move doen dan na 4 maten.
+
+          _Dit level eindigt na 12 maten._
+        challenges: "**Extra uitdaging** \n\n-   Verander de achtergrond wanneer de
+          dansers van beweging wisselen."
+      Dance_2019_06:
+        validation: |-
+          **Hoe haal ik dit level?**
+
+          -   Creëer één leaddancer en een groep back-up dansers.
+
+          _Dit level eindigt na 7 maten._
+        challenges: "**Extra uitdaging** \n\n-   Creëer meerdere groepen back-up dansers."
+      Dance_2019_07:
+        validation: "**Hoe haal ik dit level?**\n\n-   Wijzig de grootte van ten minste
+          één danser nadat de muziek is gestart. \n\n_Dit level eindigt na 6 maten._"
+        challenges: |-
+          **Extra uitdaging**
+
+          -   Experimenteer door andere eigenschappen te veranderen (breedte, hoogte, rotatie, enz.)
+      Dance_2019_08:
+        validation: "**Hoe haal ik dit level?**\n\n-   Wijzig de tint van ten minste
+          één danser. \n\n_Dit level eindigt na 6 maten._"
+        tint_hint: Is het je opgevallen dat je dansers niet precies veranderen in
+          de kleur die je kiest? Dit komt omdat **tinten** de kleur die je kiest mengen
+          met de kleuren van de danser.
+      Dance_2019_09:
+        validation: |-
+          **Hoe haal ik dit level?**
+
+          -   Druk gewoon op de knop "Voltooien"!
+        repeat_every_ideas: "**Ideeën nodig?**\n\n-   Verander herhaaldelijk de grootte
+          van een danser om hem te laten groeien. \n-   Verander herhaaldelijk de
+          rotatie van een danser om hem te laten draaien. \n-   Verander herhaaldelijk
+          de horizontale of verticale positie van een danser om hem over het scherm
+          te laten bewegen. \n\n\\_Je kunt ook negatieve getallen gebruiken om een
+          tegenovergesteld effect te creëren!"
+        next_previous: |-
+          **Extra uitdaging**
+
+          -   Je kunt dit nieuwe gebeurtenisblok ook gebruiken om door een lijst van dansbewegingen te gaan door de beweging  te zetten op `(Willekeurig)`, `(Volgende)` of `(Vorige)`.
+              <xml><block type="Dancelab_changeMoveEachLR">
+              <title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;">???</title>
+              <title name="MOVE">"rand"</title>
+              <title name="DIR">-1</title>
+              </block></xml>
       Dance_Party_01:
         validation: |-
           **Hoe haal ik dit level?**
 
           -   Zorg ervoor dat er een danser op het scherm verschijnt.
 
-          -   Dit level eindigt na 4 maten.\*
+          _Dit level eindigt na 4 maten._
         challenges: |-
           **Extra uitdagingen**
 
@@ -1893,13 +1972,17 @@ nl-NL:
           **Extra uitdaging**
 
           Verander het achtergrondeffect op verschillende momenten door het nieuwe blok te verbinden onder de <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> gebeurtenissen.
+      Dance_Party_05:
+        validation: "\\*\\*Hoe kan ik dit level halen? \n\n-   Je danser moet minstens
+          4 verschillende dansbewegingen doorlopen voordat het level eindigt. \n\n_Dit
+          level eindigt na 12 maten_"
       Dance_Party_06:
         validation: |-
           **Hoe haal ik dit level?**
 
           -   Je moet minstens twee dansers hebben.
 
-          _Dit level eindigt na 6 maten._
+          _Dit level eindigt na 5 maten._
         challenges: |-
           **Extra uitdaging**
 
@@ -5075,3 +5158,5 @@ nl-NL:
           </next>
           </block>
           </xml>
+      Dance_Party_extras_alternate_2019:
+        alternate: Het alternatieve blok bevindt zich in de categorie "Dansers".

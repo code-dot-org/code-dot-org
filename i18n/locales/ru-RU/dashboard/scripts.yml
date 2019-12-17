@@ -760,6 +760,8 @@ ru:
               name: Веб-лаборатория
             Curriculum Reference:
               name: Ссылки на учебный план
+            Sprite Lab:
+              name: Лаборатория Спрайтов
         algebraPD2b:
           description: 'Этап 2 онлайн: Смешанное летнее обучение'
           description_short: 'Этап 2 онлайн: Смешанное летнее обучение'
@@ -1076,10 +1078,16 @@ ru:
               name: 'Расчет: Определение переменных'
             'Calc: Evaluation Blocks':
               name: 'Расчет: Блоки оценки'
+            'Eval: Defining Functions':
+              name: 'Оценка: Определение процедур'
+            'Eval: Functions':
+              name: 'Оценка: процедуры'
             'Eval: Strings and Images':
               name: 'Анализ: Строки и картинки'
             'Eval: Writing Contracts':
               name: 'Анализ: Написание контрактов'
+            'Play Lab: Defining Functions':
+              name: 'Лаборатория игр: определение процедур'
             'Unplugged: Contracts':
               name: 'Урок без компьютера: Контракты'
             'Unplugged: The Design Recipe':
@@ -1165,6 +1173,8 @@ ru:
               name: API и параметры функции
             Creating Functions:
               name: Создание функций
+            Creating functions with Parameters:
+              name: Создание функций с параметрами
             The Need For Programming Languages:
               name: Необходимость языков программирования
             Using Simple Commands:
@@ -1212,6 +1222,8 @@ ru:
         CSDU3-Draft:
           description_short: Программирование
           stages:
+            Collision Detection:
+              name: Обнаружение столкновений
             Functions:
               name: функции
             Velocity:
@@ -1264,6 +1276,10 @@ ru:
           stages:
             Game Lab:
               name: Лаборатория игр
+        CSDU4-Draft:
+          stages:
+            Design Mode:
+              name: Режим дизайна
         CSDU2-Draft:
           stages:
             Introduction to HTML:
@@ -1385,6 +1401,8 @@ ru:
           stages:
             Velocity:
               name: Скорость
+            Collision Detection:
+              name: Обнаружение столкновений
             Functions:
               name: функции
             Plotting Shapes:
@@ -1441,6 +1459,8 @@ ru:
               name: 'Уроки 4-6: кодирование и отправка чисел'
             'Lesson 7: Encoding and Sending Text':
               name: 'Урок 7: кодирование и отправка текста'
+            'Lessons 4 - 6: Encoding and Sending Numbers':
+              name: 'Уроки 4-6: кодирование и отправка чисел'
             'Lesson 9: Internet Addressing':
               name: 'Урок 9: адресация в интернете'
             'Lessons 1 - 2: Bytes, File Sizes, and Text Compression':
@@ -1451,6 +1471,8 @@ ru:
               name: 'Уроки 1-3: алгоритмы'
         csp1-support:
           stages:
+            'Lessons 4 - 6: Encoding and Sending Numbers':
+              name: 'Уроки 4-6: кодирование и отправка чисел'
             'Lesson 7: Encoding and Sending Text':
               name: 'Урок 7: кодирование и отправка текста'
             'Lesson 9: Internet Addressing':
@@ -1562,6 +1584,8 @@ ru:
           stages:
             Digital Citizenship:
               name: Цифровое гражданство
+            Build Your Project:
+              name: Создать свой проект
             Internet:
               name: интернет
             Crowdsourcing:
@@ -1582,12 +1606,16 @@ ru:
               name: Цикл for в Пчеле
             For Loops in Artist:
               name: Цикл for в Художнике
+            Build Your Project:
+              name: Создать свой проект
             Songwriting with Parameters:
               name: Написание песен с параметрами
             Introduction:
               name: Введение
             Ice Age Play Lab:
               name: Лаборатория игр Ледниковый период
+            'Algorithms: Tangrams':
+              name: 'Алгоритмы: Танграмы'
         classic-hoc-impact-study:
           description_short: Постигай азы программирования с забавными персонажами!
           stages:
@@ -1759,6 +1787,8 @@ ru:
               name: Условные команды
             Velocity:
               name: Скорость
+            Collision Detection:
+              name: Обнаружение столкновений
             Functions:
               name: функции
         csd5-2017:
@@ -1777,6 +1807,8 @@ ru:
           stages:
             Velocity:
               name: Скорость
+            Collision Detection:
+              name: Обнаружение столкновений
             Functions:
               name: функции
         csd2-draft:
@@ -1793,12 +1825,18 @@ ru:
               name: Условные команды
             Velocity:
               name: Скорость
+            Collision Detection:
+              name: Обнаружение столкновений
             Functions:
               name: функции
+            'Chapter 1: Images and Animation':
+              name: 'Глава 1: Изображения и анимации'
             'null':
               name: 'нуль'
         coursef-ramp:
           stages:
+            'Algorithms: Tangrams':
+              name: 'Алгоритмы: Танграмы'
             Introduction:
               name: Введение
             Ice Age Play Lab:
@@ -1854,8 +1892,11 @@ ru:
           assignment_family_title: Курс С
         coursed-2017:
           stages:
+            'Algorithms: Graph Paper Programming':
+              description_teacher: Составляя друг для друга программы для рисования картинок, ученики начнут понимать суть программирования. Занятие начнется с того, что ученики будут давать друг другу команды раскрасить клеточки линованной бумаги для воспроизведения существующего рисунка.  Если останется время, урок можно будет завершить самостоятельным рисованием.
             Nested Loops:
               name: Вложенные циклы
+              description_student: Цикл внутри цикла. Что это значит? Этот урок объяснит вам, что происходит, когда вы помещаете цикл внутри другого цикла.
             Nested Loops in Artist:
               name: Вложенные циклы в Художнике
             While Loops in Farmer:
@@ -1864,8 +1905,11 @@ ru:
               name: Условия и циклы в Лабиринте
           title: Курс D
           assignment_family_title: Курс D
+          description_audience: 'Возраст: 7-11'
         coursee-2017:
           stages:
+            'Algorithms: Tangrams':
+              name: 'Алгоритмы: Танграмы'
             Ice Age Play Lab:
               name: Лаборатория игр Ледниковый период
             Envelope Variables:
@@ -1878,6 +1922,10 @@ ru:
               name: Цикл for в Художнике
             Songwriting with Parameters:
               name: Написание песен с параметрами
+            Build Your Project:
+              name: Создать свой проект
+            'Functions: Songwriting':
+              description_teacher: Одним из самых великолепных структур в мире компьютерной науки является функция.  Функции (иногда называемые процедурами) - это мини-программы, которые можно использовать снова и снова внутри большой программы. Этот урок поможет учащимся интуитивно понять, почему объединение частей кода в функцию является такой полезной практикой.  
             Building a Foundation:
               name: Создание основы
             Loops in Artist:
@@ -1889,10 +1937,14 @@ ru:
           description_audience: 'Возраст: 8-12'
         coursef-2017:
           stages:
+            'Algorithms: Tangrams':
+              name: 'Алгоритмы: Танграмы'
             For Loops in Bee:
               name: Цикл for в Пчеле
             For Loops in Artist:
               name: Цикл for в Художнике
+            Build Your Project:
+              name: Создать свой проект
             Building a Foundation:
               name: Создание основы
             Loops in Artist:
@@ -1946,6 +1998,8 @@ ru:
               name: Цикл for в Художнике
             Songwriting with Parameters:
               name: Написание песен с параметрами
+            Build Your Project:
+              name: Создать свой проект
             Conditional Loops in Maze:
               name: Условия и циклы в Лабиринте
             Building a Foundation:
@@ -1980,6 +2034,8 @@ ru:
               name: Создание функций
             APIs and Function Parameters:
               name: API и параметры функции
+            Creating functions with Parameters:
+              name: Создание функций с параметрами
           description_short: Программирование
         e-f-ramp:
           stages:
@@ -1991,6 +2047,8 @@ ru:
               name: Вложенные циклы
             Conditionals:
               name: Условные команды
+            Build Your Project:
+              name: Создать свой проект
             Internet:
               name: интернет
             Crowdsourcing:
@@ -2037,6 +2095,8 @@ ru:
               name: Цикл for в Пчеле
             For Loops in Artist:
               name: Цикл for в Художнике
+            Build Your Project:
+              name: Создать свой проект
             Building a Foundation:
               name: Создание основы
             Nested Loops:
@@ -2053,6 +2113,8 @@ ru:
               name: Циклы в исполнителе Художник
             Conditionals:
               name: Условные команды
+            Build Your Project:
+              name: Создать свой проект
             Internet:
               name: интернет
             Crowdsourcing:
@@ -2063,6 +2125,8 @@ ru:
               name: Создание основы
             Loops in Artist:
               name: Циклы в исполнителе Художник
+            'Algorithms: Tangrams':
+              name: 'Алгоритмы: Танграмы'
             Ice Age Play Lab:
               name: Лаборатория игр Ледниковый период
             Envelope Variables:
@@ -2075,6 +2139,8 @@ ru:
               name: Цикл for в Художнике
             Songwriting with Parameters:
               name: Написание песен с параметрами
+            Build Your Project:
+              name: Создать свой проект
         csd5-old:
           stages:
             ASCII and Binary Representation:
@@ -2097,6 +2163,8 @@ ru:
               name: Создание функций
             APIs and Function Parameters:
               name: API и параметры функции
+            Creating functions with Parameters:
+              name: Создание функций с параметрами
         pwc:
           stages:
             Simple Encryption:
@@ -2130,6 +2198,8 @@ ru:
               name: Введение
             Conditionals:
               name: Условные команды
+            Build Your Project:
+              name: Создать свой проект
             Internet:
               name: интернет
             Crowdsourcing:
@@ -2140,6 +2210,8 @@ ru:
               name: Создание основы
             Loops in Artist:
               name: Циклы в исполнителе Художник
+            'Algorithms: Tangrams':
+              name: 'Алгоритмы: Танграмы'
             Introduction:
               name: Введение
             Ice Age Play Lab:
@@ -2154,6 +2226,8 @@ ru:
               name: Цикл for в Художнике
             Songwriting with Parameters:
               name: Написание песен с параметрами
+            Build Your Project:
+              name: Создать свой проект
         csd6-old:
           stages:
             Lists:
@@ -2178,6 +2252,8 @@ ru:
               name: Условные команды
             Velocity:
               name: Скорость
+            Collision Detection:
+              name: Обнаружение столкновений
             Functions:
               name: функции
           description_short: "Программирование"
@@ -2192,6 +2268,8 @@ ru:
               name: Условные команды
             Velocity:
               name: Скорость
+            Collision Detection:
+              name: Обнаружение столкновений
             Functions:
               name: функции
         csd2-2018:
@@ -2219,6 +2297,7 @@ ru:
             'Persistence & Frustration: Stevie and the Big Project':
               name: Стиви и Большой Проект
         express-2018:
+          title: Экспресс-курс
           assignment_family_title: Экспресс-курс
           description_audience: 'Возраст: 9-18'
           stages:
@@ -2240,6 +2319,8 @@ ru:
               name: Цикл for в Пчеле
             For Loops in Artist:
               name: Цикл for в Художнике
+            Build Your Project:
+              name: Создать свой проект
             'Loops: Getting Loopy':
               name: Зацикливание
             Nested Loops in Bee:
@@ -2281,6 +2362,7 @@ ru:
               name: Вперед, вперед
         coursed-2018:
           assignment_family_title: Курс D
+          description_audience: 'Возраст: 7-11'
           stages:
             'Algorithms: Graph Paper Programming':
               name: Программирование на бумаге в клеточку
@@ -2312,6 +2394,8 @@ ru:
               name: Программирование на бумаге в клеточку
             Relay Programming:
               name: Эстафетное программирование
+            Nested Loops in Bees:
+              name: Вложенные циклы в Пчеле
             Nested Loops in Maze:
               name: Вложенные циклы в Лабиринте
         coursec-2018:
@@ -2330,6 +2414,12 @@ ru:
         csd6-2018:
           description_short: Программирование с физическими устройствами
           stages:
+            Arrays and For Loops_:
+              name: Множества и цикл for
+            Functions with Parameters_:
+              name: Процедуры с параметрами
+            'Project: Prototype an Innovation_':
+              name: 'Проект: Прототип Инновации'
             Analog Input:
               name: Иной ввод
             Arrays and For Loops:
@@ -2354,6 +2444,9 @@ ru:
               name: Введение
             'Functions: Songwriting':
               name: Написание песен
+              description_teacher: Одним из самых великолепных структур в мире компьютерной науки является функция.  Функции (иногда называемые процедурами) - это мини-программы, которые можно использовать снова и снова внутри большой программы. Этот урок поможет учащимся интуитивно понять, почему объединение частей кода в функцию является такой полезной практикой.  
+            Build Your Project:
+              name: Создать свой проект
             Internet:
               name: Интернет
             Crowdsourcing:
@@ -2374,6 +2467,8 @@ ru:
               name: Циклы в исполнителе Художник
             Nested Loops in Bee/Zombie:
               name: Вложенные циклы в Лабиринте
+            'Algorithms: Tangrams':
+              name: 'Алгоритмы: Танграмы'
             Introduction:
               name: Введение
             Ice Age Play Lab:
@@ -2388,6 +2483,8 @@ ru:
               name: Цикл for в Художнике
             Songwriting with Parameters:
               name: Написание песен с параметрами
+            Build Your Project:
+              name: Создать свой проект
             Conditionals with Cards:
               name: Условные выражения с картами
         csp1-2018:
@@ -2439,6 +2536,8 @@ ru:
               name: Создание функций
             APIs and Function Parameters:
               name: API и параметры функции
+            Creating functions with Parameters:
+              name: Создание функций с параметрами
             Creating Functions with Parameters:
               name: Создание функций с параметрами
         csp4-2018:
@@ -2555,7 +2654,6 @@ ru:
             Dance Party:
               name: Танцевальная вечеринка
         dance-extras:
-          title: Продолжайте танцевать
           description: Дополнительные идеи для проектов уведут вас за пределы первого часа.
         coursef-2019:
           description_audience: 'Возраст: 9-13'
@@ -2574,10 +2672,13 @@ ru:
               name: Цикл for в Пчеле
             For Loops in Artist:
               name: Цикл for в Художнике
+            Build Your Project:
+              name: Создать свой проект
             The Artist:
               name: Художник
             Nested Loops in the Maze:
               name: Вложенные циклы в Лабиринте
+              description_student: Цикл внутри цикла. Что это значит? Этот урок объяснит вам, что происходит, когда вы помещаете цикл внутри другого цикла.
             Internet:
               name: Интернет
             Crowdsourcing:
@@ -2587,6 +2688,7 @@ ru:
             Dance Party:
               name: Танцевальная вечеринка
         coursed-2019:
+          description_audience: 'Возраст: 7-11'
           stages:
             'Algorithms: Graph Paper Programming':
               name: Программирование на бумаге в клеточку
@@ -2625,17 +2727,22 @@ ru:
               name: Условные выражения с картами
             'Functions: Songwriting':
               name: Написание песен
+              description_teacher: Одним из самых великолепных структур в мире компьютерной науки является функция.  Функции (иногда называемые процедурами) - это мини-программы, которые можно использовать снова и снова внутри большой программы. Этот урок поможет учащимся интуитивно понять, почему объединение частей кода в функцию является такой полезной практикой.  
+            Build Your Project:
+              name: Создать свой проект
             Internet:
               name: интернет
             Crowdsourcing:
               name: Краудсорсинг
             Nested Loops in Bee:
               name: Вложенные циклы в Лабиринте
+              description_student: Цикл внутри цикла. Что это значит? Этот урок объяснит вам, что происходит, когда вы помещаете цикл внутри другого цикла.
             Nested Loops in Artist:
               name: Вложенные циклы в Художнике
             Songwriting:
               name: Написание песен
         express-2019:
+          title: Экспресс-курс (2017)
           description_audience: 'Возраст: 9-18'
           stages:
             Relay Programming:
@@ -2656,6 +2763,8 @@ ru:
               name: Цикл for в Пчеле
             For Loops in Artist:
               name: Цикл for в Художнике
+            Build Your Project:
+              name: Создать свой проект
             Binary Bracelets:
               name: Двоичные браслеты
             'Unplugged: Binary':
@@ -2752,6 +2861,8 @@ ru:
               name: Условные команды
             Velocity:
               name: Скорость
+            Collision Detection:
+              name: Обнаружение столкновений
             Functions:
               name: функции
         csd5-2019:
@@ -2816,6 +2927,8 @@ ru:
               name: Создание функций
             APIs and Function Parameters:
               name: API и параметры функции
+            Creating functions with Parameters:
+              name: Создание функций с параметрами
         csp4-2019:
           stages:
             What is Big Data?:
@@ -2862,6 +2975,12 @@ ru:
               name: Создание основы
             Loops in Artist:
               name: Циклы в исполнителе Художник
+        csp2-pilot-staging:
+          title: 'Урок 2: Интернет'
+        csp3-pilot-staging:
+          stages:
+            The Need for Programming Languages:
+              name: Необходимость языков программирования
         csp7-pilot-staging:
           stages:
             Libraries:
@@ -2887,10 +3006,16 @@ ru:
               name: Условные команды
             Velocity:
               name: Скорость
+            Collision Detection:
+              name: Обнаружение столкновений
             Functions:
               name: функции
             Random Numbers:
               name: Случайные числа
+        csp3-pilot:
+          stages:
+            The Need for Programming Languages:
+              name: Необходимость языков программирования
         csl-vn:
           stages:
             Loops in Ice Age:
@@ -2901,6 +3026,8 @@ ru:
           stages:
             Routers and Redundancy:
               name: Маршрутизаторы и резервирование
+            The Need for Addressing:
+              name: Необходимость адресации
         peru-2019:
           stages:
             Introduction:
@@ -2914,3 +3041,61 @@ ru:
             Dance Party:
               name: Танцевальная вечеринка
           description: Создавайте свой собственный танец и делитесь им с друзьями.
+        k5-onlinepd-2019:
+          stages:
+            Getting Started:
+              name: Приступить к работе
+            Computer Science Fundamentals:
+              name: Основы программирования
+            'Mastering the Basics: Sequencing':
+              name: 'Освоение основ: последовательности'
+            'Mastering the Basics: Loops':
+              name: 'Освоение основ: циклы'
+            'Mastering the Basics: Conditionals':
+              name: 'Освоение основ: условные операторы'
+            'Mastering the Basics: Functions':
+              name: 'Освоение основ: функции'
+            'Mastering the Basics: Events':
+              name: 'Освоение основ: события'
+            Planning:
+              name: Планирование
+            Next Steps:
+              name: Следующие шаги
+            Sequencing:
+              name: Последовательность действий
+            Loops:
+              name: Циклы
+            Conditionals:
+              name: Условные команды
+            Events:
+              name: События
+            Functions:
+              name: функции
+            Sprite Lab:
+              name: Лаборатория Спрайтов
+            Variables:
+              name: переменные
+            For Loops:
+              name: Циклы с параметром
+        dance-extras-2019:
+          description: Дополнительные идеи для проектов уведут вас за пределы первого часа.
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Условные команды
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Краудсорсинг
+            Conditionals with Cards:
+              name: Условные выражения с картами
+            Nested Loops in Bee:
+              name: Вложенные циклы в Пчеле
+            Nested Loops in Artist:
+              name: Вложенные циклы в Художнике
+        time4cs-experiment-unit-2:
+          stages:
+            Nested Loops in Maze:
+              name: Вложенные циклы в Лабиринте
+            Fancy Shapes using Nested Loops:
+              name: Вложенные циклы в Художнике

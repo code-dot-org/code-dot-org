@@ -12,8 +12,8 @@ zh-CN:
       AppLab Intro 7 - Change Text 2: 更改文本
       AppLab Intro 7 - Full Text: 两个按钮
       AppLab Intro 7 - onEvent intro: 使按钮工作
-      AppLab Intro 7 - onEvent twoButtons: 更多 当事件发生时(onEvent) 的练习
-      AppLab Intro 7 - playSound: 使用 播放声音
+      AppLab Intro 7 - onEvent twoButtons: 更多 当事件发生时（onEvent）的练习
+      AppLab Intro 7 - playSound: 使用 播放声音（playSound）
       AppLab Intro 7 - thisOrThatAddButton: 交替摆臂
       AppLab Intro 7 - thisOrThatAddScreen: 交替摆臂
       AppLab Intro 7 - thisOrThatPersonalize: 交替摆臂
@@ -648,11 +648,17 @@ zh-CN:
       CourseF_Project_SpriteLab: 课程 F 精灵实验室项目
       CourseF_Project_SpriteLab_2019: 课程 F 精灵实验室项目
       Dance_Party_extras_battle: 舞蹈团队
+      Dance_Party_extras_battle_2019: 舞蹈团队
       Dance_Party_extras_every_beat: 四分注释
+      Dance_Party_extras_every_beat_2019: 四分注释
       Dance_Party_extras_layout: 进入阵型
+      Dance_Party_extras_layout_2019: 进入阵型
       Dance_Party_extras_on_beat: 低音、中音和高音
-      Dance_Party_extras_speed: 加速、 减速
+      Dance_Party_extras_on_beat_2019: 低音、中音和高音
+      Dance_Party_extras_speed: 加速、减速
+      Dance_Party_extras_speed_2019: 加速、减速
       Dance_Party_extras_visible: 让他们去哪儿？
+      Dance_Party_extras_visible_2019: 让他们去哪儿？
       Final Personal Website: 最后个人主页
       Final Personal Website_2018: 最后个人主页
       Final Personal Website_2019: 最后个人主页
@@ -687,6 +693,9 @@ zh-CN:
       Making Music_2018: 制作音乐
       Making Music_2019: 制作音乐
       OPD-K5 WhatIsCS: 什么是计算机科学？
+      Oceans_Video_Machine_Learning: 视频：机器学习
+      Oceans_Video_Societal_Implications: 视频：社会影响
+      Oceans_Video_Training_Data: 视频：训练数据
       Revisiting the Counter Pattern_2018: 回顾计数模式
       Revisiting the Counter Pattern_2019: 回顾计数模式
       The Accelerometer_2018: 加速传感器
@@ -712,3 +721,5 @@ zh-CN:
       csd-pre-survey-levelgroup_2019: 课程概述
       scrat_loops_C-F_video: 冰河时代视频中的循环
       scrat_loops_C-F_video_2019: 冰河时代视频中的循环
+      Dance_Party_extras_alternate_2019: 来来回回
+      Dance_Party_extras_mixed_2019: 更多按钮

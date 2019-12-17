@@ -24,7 +24,7 @@ import Sounds from '../../Sounds';
 
 import {TestResults} from '../../constants';
 import {captureThumbnailFromCanvas} from '../../util/thumbnail';
-import {SignInState} from '../../code-studio/progressRedux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
 const MEDIA_URL = '/blockly/media/craft/';
 
@@ -838,7 +838,8 @@ export default class Craft {
         }
 
         const isSignedIn =
-          getStore().getState().progress.signInState === SignInState.SignedIn;
+          getStore().getState().currentUser.signInState ===
+          SignInState.SignedIn;
         studioApp().displayFeedback({
           feedbackType: testResultType,
           response,

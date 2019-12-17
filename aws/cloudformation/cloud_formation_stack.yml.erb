@@ -133,7 +133,9 @@ Resources:
           # Write analysis events to Firehose.
           # TODO: Import resources into stack.
           - Effect: Allow
-            Action: 'firehose:PutRecord'
+            Action:
+            - 'firehose:PutRecord'
+            - 'firehose:PutRecordBatch'
             Resource: !Sub "arn:aws:firehose:${AWS::Region}:${AWS::AccountId}:deliverystream/analysis-events"
           # S3 access for student-libraries bucket
           - Effect: Allow
@@ -645,7 +647,7 @@ Resources:
           - !ImportValue VPC-ELBSecurityGroup # Accept HTTP traffic on daemon
 <%  end -%>
 <% if database %>
-    DependsOn: AuroraMaster
+    DependsOn: Aurora1
 <% end -%>
 <%end-%>
 <% if alarms %>
@@ -704,16 +706,17 @@ Resources:
       VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
       DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
 
-  AuroraMaster:
+<% 2.times do |i| %>
+  Aurora<%=i%>:
     Type: AWS::RDS::DBInstance
     Properties:
-      DBInstanceIdentifier: !Sub "${AWS::StackName}-master"
+      DBInstanceIdentifier: !Sub "${AWS::StackName}-<%=i%>"
       DBClusterIdentifier: !Ref AuroraCluster
       DBInstanceClass: db.r4.large
       DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
       Engine: aurora-mysql
-      # We will usually do engine version updates manually, since updating this requires replacement, so this value may be out of sync with instance.
-      EngineVersion: 5.7.12
+      # We will usually do engine version updates manually, so don't specify an EngineVersion for the DBInstance.
+<% end -%>
 
   AuroraClusterDBParameters:
     Type: AWS::RDS::DBClusterParameterGroup

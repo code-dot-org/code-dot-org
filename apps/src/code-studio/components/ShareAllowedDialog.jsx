@@ -12,19 +12,15 @@ import color from '../../util/color';
 import * as applabConstants from '../../applab/constants';
 import * as p5labConstants from '@cdo/apps/p5lab/constants';
 import {SongTitlesToArtistTwitterHandle} from '../dancePartySongArtistTags';
-import {
-  hideShareDialog,
-  unpublishProject,
-  showLibraryCreationDialog
-} from './shareDialogRedux';
+import {hideShareDialog, unpublishProject} from './shareDialogRedux';
 import DownloadReplayVideoButton from './DownloadReplayVideoButton';
 import {showPublishDialog} from '../../templates/projects/publishDialog/publishDialogRedux';
 import PublishDialog from '../../templates/projects/publishDialog/PublishDialog';
 import {createHiddenPrintWindow} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import experiments from '@cdo/apps/util/experiments';
-import LibraryCreationDialog from './Libraries/LibraryCreationDialog';
+import LibraryCreationDialog from './libraries/LibraryCreationDialog';
+import LibraryClientApi from './libraries/LibraryClientApi';
 
 function recordShare(type) {
   if (!window.dashboard) {
@@ -169,7 +165,6 @@ class ShareAllowedDialog extends React.Component {
     onClose: PropTypes.func.isRequired,
     onShowPublishDialog: PropTypes.func.isRequired,
     onUnpublish: PropTypes.func.isRequired,
-    openLibraryCreationDialog: PropTypes.func.isRequired,
     hideBackdrop: BaseDialog.propTypes.hideBackdrop,
     canShareSocial: PropTypes.bool.isRequired,
     userSharingDisabled: PropTypes.bool
@@ -310,6 +305,7 @@ class ShareAllowedDialog extends React.Component {
       };
     }
     const {canPrint, canPublish, isPublished} = this.props;
+    let libraryClientAPI = new LibraryClientApi(this.props.channelId);
     return (
       <div>
         <BaseDialog
@@ -420,15 +416,6 @@ class ShareAllowedDialog extends React.Component {
                       className="no-mc"
                     />
                   )}
-                  {experiments.isEnabled('student-libraries') && isDroplet && (
-                    <button
-                      type="button"
-                      onClick={this.props.openLibraryCreationDialog}
-                      style={styles.button}
-                    >
-                      {i18n.shareLibrary()}
-                    </button>
-                  )}
                   <DownloadReplayVideoButton
                     style={styles.button}
                     onError={this.replayVideoNotFound}
@@ -513,7 +500,7 @@ class ShareAllowedDialog extends React.Component {
           )}
         </BaseDialog>
         <PublishDialog />
-        <LibraryCreationDialog channelId={this.props.channelId} />
+        <LibraryCreationDialog clientApi={libraryClientAPI} />
       </div>
     );
   }
@@ -536,10 +523,6 @@ export default connect(
     },
     onUnpublish(projectId) {
       dispatch(unpublishProject(projectId));
-    },
-    openLibraryCreationDialog() {
-      dispatch(showLibraryCreationDialog());
-      dispatch(hideShareDialog());
     }
   })
 )(ShareAllowedDialog);

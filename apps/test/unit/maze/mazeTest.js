@@ -1,6 +1,6 @@
 import sinon from 'sinon';
 
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 
 import Maze from '@cdo/apps/maze/maze';
 import ResultsHandler from '@cdo/apps/maze/results/resultsHandler';

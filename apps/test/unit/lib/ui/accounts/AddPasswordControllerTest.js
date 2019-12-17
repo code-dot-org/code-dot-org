@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import {spy, stub} from 'sinon';
-import {expect, assert} from '../../../../util/configuredChai';
+import {expect, assert} from '../../../../util/deprecatedChai';
 import AddPasswordController from '@cdo/apps/lib/ui/accounts/AddPasswordController';
 
 describe('AddPasswordController', () => {

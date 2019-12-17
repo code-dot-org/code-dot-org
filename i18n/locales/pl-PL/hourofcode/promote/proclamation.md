@@ -1,7 +1,5 @@
 ---
 title: Przykładowa rezolucja wspierająca Tydzień Edukacji Informatycznej i Godzinę Kodowania
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

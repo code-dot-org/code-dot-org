@@ -27,10 +27,11 @@ hu:
     attributes:
       user:
         name: 'Megjelenítendő név'
-        name_example: 'Megjelenítendő név <br/> (pl. hideg, Coder vagy Jane S.)'
+        name_example: 'Megjelenítendő név (pl. hideg, Coder vagy Jane S.)'
         email: 'Email'
         parent_email: 'Szülő/gondviselő e-mail'
         personal_email: "Személyes elektronikus levél cím <a href=\"%{url}\">(kattintson ide, ha nem rendelkezik e-mail címmel)</a>"
+        personal_email_markdown: "Személyes elektronikus levél cím [(kattintson ide, ha nem rendelkezik e-mail címmel)](%{url})"
         username: 'felhasználónév'
         password: 'Jelszó'
         password_confirmation: 'Jelszó megerősítése'
@@ -41,7 +42,9 @@ hu:
         edit_header: 'Felhasználói Adatok Szerkesztése'
         finish_sign_up_header: 'A profil létrehozásának befejezése'
         finish_sign_up_subheader: 'Töltsd ki az alábbi adatokat <strong>%{email}</strong> Code.org fiókod létrehozásához.'
+        finish_sign_up_subheader_markdown: 'Töltsd ki az alábbi adatokat **%{email}** Code.org fiókod létrehozásához.'
         finish_sign_up_subheader_provider: 'Töltsd ki az alábbi adatokat a Code.org felhasználó fiókod befejezéséhez <strong>%{provider}</strong><strong>%{email}</strong>.'
+        finish_sign_up_subheader_provider_markdown: 'Töltsd ki az alábbi adatokat a Code.org felhasználó fiókod befejezéséhez **%{provider}****%{email}**.'
         error:
           future: nem lehet a jövőben
   beta: "béta"
@@ -113,9 +116,11 @@ hu:
     student_count: '%{count} tanuló iratkozott már fel.'
     teacher_count: '%{count} tanár iratkozott már fel.'
     overview: 'Regisztrálj fiókot, hogy rögzítsd az előremeneteled vagy hogy egy osztály irányíts. <a href="/">Böngészhetsz a különböző szintek és puzzlek között</a> fiók nélkül is, de az állapotod mentéséhez regisztrálnod kell.'
+    overview_markdown: 'Regisztrálj fiókot, hogy rögzítsd az előremeneteled vagy hogy egy osztály irányíts. [Böngészhetsz a különböző szintek és puzzlek között](/) fiók nélkül is, de az állapotod mentéséhez regisztrálnod kell.'
     hoc_already_signed_up_heading: 'Kezdés bejelentkezés nélkül'
     hoc_already_signed_up_content: 'Sikeresen bejelentkeztél a Kódolás Órájába! Neked és a tanáraidnak nem kell bejelentkezned a Kód Stúdióba a kihívások eléréséhez. A kezdéshez <a href="%{learn_url}">válassz ki egy feladatot az osztályodnak,és oszd meg a linket.<br/><br/>Ha élvezted a Kódolás Óráját,akkor állíts be magadnak egy jelszót,és csinálj egy Kód Stúdió fiókot,hogy felvedd a tanáraidat egy<a href="%{educate_url}">kurzusra.'
     hoc_already_signed_up_content_post_hoc: 'Köszönjük, hogy otthont adott egy Kódolás Órájá-nak. A Code Studio szolgáltatásba való bejelentkezéshez jelszót kell beállítania fiókjához. Ezzel elmentheti a haladását és kezelheti az osztálytermét. A hallgatókhoz kurzusokat rendelhet, és nyomon követheti azok előrehaladását. <a href="%{studio_url}"> Továbbra is folytathatja a különböző szakaszok és rejtvények böngészését </a> fiók létrehozása nélkül.'
+    hoc_already_signed_up_content_post_hoc_markdown: 'Köszönjük, hogy otthont adott egy Kódolás Órájá-nak. A Code Studio szolgáltatásba való bejelentkezéshez jelszót kell beállítania fiókjához. Ezzel elmentheti a haladását és kezelheti az osztálytermét. A hallgatókhoz kurzusokat rendelhet, és nyomon követheti azok előrehaladását. [Továbbra is folytathatja a különböző szakaszok és rejtvények böngészését](%{studio_url}) fiók létrehozása nélkül.'
     teacher_educator_guide: 'Lásd a tanító segítségét'
     title: "Regisztrálj a Code.org-ba"
     school_name: 'Iskola neve (nem kötelező)'
@@ -377,6 +382,7 @@ hu:
     deleted_user: 'törölt felhasználó'
     create_personal_login_under_13_parent_email: 'Szülő/gondviselő e-mail címe'
     create_personal_login_email_note: "Megjegyzés: a tanulók e-mail címeit olyan módon tároljuk, hogy az nem teszi lehetővé számunkra a kapcsolatfelvételt. A tanulók a jelszóemlékeztető kivételével soha nem fognak e-mailt kapni a Code.org-tól. További információt az<a href='%{privacy_policy_url}', target='_blank'>adatvédelem</a> részben találsz."
+    create_personal_login_email_note_markdown: 'Megjegyzés: a tanulók e-mail címeit olyan módon tároljuk, hogy az nem teszi lehetővé számunkra a kapcsolatfelvételt. A tanulók a jelszóemlékeztető kivételével soha nem fognak e-mailt kapni a Code.org-tól. További információt az[adatvédelem](%{privacy_policy_url}) részben találsz.'
     parent_email_label: "Szülő/gondviselő e-mail (opcionális)"
     enter_parent_email: "Add meg szülőd vagy gondviselőd e-mail címét (jelszó-visszaállítás esetére)"
     update: "Adatok frissítése"
@@ -511,6 +517,8 @@ hu:
       cta: 'Ismerd meg hogyan'
     dance:
       title: 'Táncos buli'
+    dance-2019:
+      title: 'Táncos buli'
     hoc:
       title: 'Hagyományos Útvesztö'
       body: 'Ismerkedj meg a számítógép-tudomány alapjaival. Milliók kezdték már el.'
@@ -636,6 +644,7 @@ hu:
     tos: "Feltételek"
     privacy: "Adatvédelmi Elvek"
     accept_label: 'Elfogadom a frissített <a href="%{tos_url}" target="_blank">Felhasználási feltételeket</a> és az <a href="%{privacy_url}" target="_blank">Adatvédelmi irányelveket</a>'
+    accept_label_markdown: Elfogadom a frissített [Felhasználási feltételeket](%{tos_url}) és az [Adatvédelmi irányelveket](%{privacy_url})
     print: "Nyomtatás"
   school_info_interstitial:
     save: "Mentés"
@@ -645,6 +654,7 @@ hu:
     submit: "Elküldés"
     decline: "Bezár"
   zendesk_too_young_message: 'Elnézést, de kiskorú felhasználók nem iratkozhatnak fel a támogatói oldalunkra. Megnézheted a <a href="http://support.code.org"> support.code.org</a>oldalakat feliratkozás nélkül, illetve kérd meg a szüleidet vagy tanáraidat, hogy lépjenek kapcsolatba velünk a nevedben.'
+  zendesk_too_young_message_markdown: 'Elnézést, de kiskorú felhasználók nem iratkozhatnak fel a támogatói oldalunkra. Megnézheted a [support.code.org](http://support.code.org)oldalakat feliratkozás nélkül, illetve kérd meg a szüleidet vagy tanáraidat, hogy lépjenek kapcsolatba velünk a nevedben.'
   progress:
     not_started: el nem kezdett
     in_progress: folyamatban
@@ -737,6 +747,7 @@ hu:
     csp_functions: 'funkciók'
     csp_lists: 'Listák'
     csp_loops: 'hurkok'
+    k5_getting_started: 'Első lépések'
   external_links:
     disclaimer: Felelősséget kizáró nyilatkozat
   hoc_download:

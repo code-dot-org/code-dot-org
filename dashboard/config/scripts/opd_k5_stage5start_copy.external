@@ -1,0 +1,16 @@
+name 'OPD-K5 Stage5Start_copy'
+skip_dialog true
+markdown <<MARKDOWN
+# Overview: Conditionals
+
+<img src="https://images.code.org/d2c2e06ce0bef52ae173a1de35b92af7-image-1470945682161.png" width="450px"  style="border-radius:10px; float:right; margin: 0 0 40px 40px;"/>
+
+So far, you've written a few programs, added loops to increase efficiency, and added events to make your programs interactive. In this stage, we'll explore **conditionals** (if-statements), which begin to add logic to your program.
+
+## Coding concept
+- Practice coding simple conditionals (if-statements)
+
+## Teaching practice: Journaling
+- Using journal prompts to help students process and reflect on what they have learned, as well as work through problems
+
+MARKDOWN

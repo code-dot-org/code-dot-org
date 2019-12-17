@@ -1,10 +1,5 @@
 ---
 title: Eskerrik asko Kodearen Ordua antolatzeko izena emateagatik!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # Eskerrik asko Kodearen Ordua antolatzeko izena emateagatik!

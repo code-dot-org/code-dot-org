@@ -9,7 +9,7 @@ project_widget_types ["playlab", "artist"]
 family_name 'coursef'
 version_year '2018'
 is_stable true
-supported_locales ["sk-SK"]
+supported_locales ["it-IT", "sk-SK"]
 curriculum_umbrella 'CSF'
 
 stage 'Programming: My Robotic Friends', flex_category: 'csf_f_1'

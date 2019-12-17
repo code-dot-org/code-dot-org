@@ -1428,3 +1428,27 @@ ne:
               name: Introduction
             Nested Loops:
               name: Nested Loops
+        k5-onlinepd-2019:
+          stages:
+            Loops:
+              name: Loops
+            Conditionals:
+              name: Conditionals
+            Events:
+              name: कार्य 
+            Functions:
+              name: Functions
+            Variables:
+              name: Variables
+            For Loops:
+              name: For Loops
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Conditionals
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Conditionals with Cards

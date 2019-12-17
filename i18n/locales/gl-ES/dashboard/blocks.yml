@@ -21,6 +21,11 @@ gl:
           PROPERTY:
             '"scale"': tamaño
             '"height"': altura
+      Dancelab_changePropEachBy:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"height"': altura
       Dancelab_doMoveEachLR:
         options:
           DIR:
@@ -54,18 +59,38 @@ gl:
             "{x: 100, y: 200}": esquerda
             "{x: 300, y: 200}": dereita
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aleatorio
+      Dancelab_jumpToEach:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": esquerda
+            "{x: 300, y: 200}": dereita
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": aleatorio
       Dancelab_layoutSprites:
         options:
           FORMAT:
             '"random"': aleatorio
       Dancelab_makeAnonymousDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': extraterrestre
+            '"CAT"': gato
+            '"DOG"': can
+            '"DUCK"': pato
+            '"ROBOT"': robot
+            '"UNICORN"': unicornio
           LOCATION:
             "{x: 100, y: 200}": esquerda
             "{x: 300, y: 200}": dereita
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aleatorio
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': extraterrestre
+            '"CAT"': gato
+            '"DOG"': can
+            '"DUCK"': pato
+            '"ROBOT"': robot
+            '"UNICORN"': unicornio
           LOCATION:
             "{x: 100, y: 200}": esquerda
             "{x: 300, y: 200}": dereita
@@ -127,12 +152,27 @@ gl:
           PROPERTY:
             '"scale"': tamaño
             '"height"': altura
+      Dancelab_setPropRandomEach:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"height"': altura
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': tamaño
             '"height"': altura
+      Dancelab_startMappingEach:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"height"': altura
       Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"height"': altura
+      Dancelab_stopMappingEach:
         options:
           PROPERTY:
             '"scale"': tamaño
@@ -270,6 +310,8 @@ gl:
             '"y"': posición y
       Mikelab_randomColor:
         text: cor aleatoria
+      Mikelab_repeatUntilComplete:
+        text: Repetir para sempre
       Mikelab_setBG:
         options:
           BG:

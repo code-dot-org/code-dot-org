@@ -1,7 +1,5 @@
 ---
 title: Hodina kódu Návody pre kraje
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

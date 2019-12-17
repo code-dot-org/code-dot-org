@@ -1,10 +1,5 @@
 ---
 title: Благодаря за регистрирането ви като домакин на Hour of Code събитие!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # Благодаря за регистрирането ви като домакин на Hour of Code събитие!

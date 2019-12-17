@@ -77,6 +77,8 @@ class Pd::Enrollment < ActiveRecord::Base
     csf_has_physical_curriculum_guide
     previous_courses
     replace_existing
+    csf_intro_intent
+    csf_intro_other_factors
   )
 
   def set_default_scholarship_info
@@ -286,7 +288,9 @@ class Pd::Enrollment < ActiveRecord::Base
 
   def friendly_scholarship_status
     if workshop.scholarship_workshop?
-      Pd::ScholarshipInfo.find_by(user: user, application_year: workshop.school_year, course: workshop.course_key)&.friendly_status_name
+      Pd::ScholarshipInfo.
+        find_by(user: user, application_year: workshop.school_year, course: workshop.course_key)&.
+        friendly_status_name
     end
   end
 

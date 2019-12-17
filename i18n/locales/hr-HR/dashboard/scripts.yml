@@ -1486,3 +1486,27 @@ hr:
               name: Uvod
             Nested Loops:
               name: Ugniježđene petlje
+        k5-onlinepd-2019:
+          stages:
+            Loops:
+              name: Petlje
+            Conditionals:
+              name: Uvjeti
+            Events:
+              name: Događaji
+            Functions:
+              name: Funkcije
+            Variables:
+              name: Varijable
+            For Loops:
+              name: Petlja brojača
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Uvjeti
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Uvjeti s kartama

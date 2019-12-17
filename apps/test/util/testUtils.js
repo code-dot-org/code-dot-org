@@ -4,7 +4,6 @@ import sinon from 'sinon';
 const project = require('@cdo/apps/code-studio/initApp/project');
 const assets = require('@cdo/apps/code-studio/assets');
 import i18n from '@cdo/apps/code-studio/i18n';
-import {assert} from './configuredChai';
 export {
   throwOnConsoleErrorsEverywhere,
   throwOnConsoleWarningsEverywhere,
@@ -385,19 +384,4 @@ export function enforceDocumentBodyCleanup(
 
     describe('', runTestCases);
   });
-}
-
-/**
- * Ensures the require.context call matched exactly one file, and loads
- * that file as though it had been require()d directly. See:
- * https://webpack.js.org/guides/dependency-management/
- * @param context The result of a require.context call.
- */
-export function loadContext(context) {
-  assert.equal(
-    1,
-    context.keys().length,
-    'expected require.context to match exactly one file'
-  );
-  context.keys().forEach(context);
 }

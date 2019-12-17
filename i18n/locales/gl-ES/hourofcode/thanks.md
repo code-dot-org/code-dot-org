@@ -1,10 +1,5 @@
 ---
 title: Grazas por rexistrarte para realizar unha Hora do Código!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # Grazas por rexistrarte para realizar unha Hora do Código!

@@ -1318,7 +1318,6 @@ ca:
             Dance Party:
               name: Festa de ball
         dance-extras:
-          title: Seguir ballant
           description: Anar més enllà de la primera hora amb idees desenvolupades
             del projecte.
         coursef-2019:
@@ -1506,3 +1505,34 @@ ca:
               name: Festa de ball
           description: Crea un codi amb la teva pròpia festa de ball i comparteix-la
             amb els teus amics!
+        k5-onlinepd-2019:
+          stages:
+            Computer Science Fundamentals:
+              name: Fonaments de la informàtica
+            Loops:
+              name: Bucles
+            Conditionals:
+              name: Condicionals
+            Events:
+              name: Esdeveniments
+            Functions:
+              name: Funcions
+            Sprite Lab:
+              name: Laboratori de personatges
+            Variables:
+              name: Variables
+            For Loops:
+              name: Per bucles
+        dance-extras-2019:
+          description: Anar més enllà de la primera hora amb idees desenvolupades
+            del projecte.
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Condicionals
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Col·laboració oberta
+            Conditionals with Cards:
+              name: Condicionals amb targetes

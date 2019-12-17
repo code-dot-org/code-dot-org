@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "pre každú položku";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "Pre každú položku v zozname nastaviť premennú '%1' a potom robiť nejaké úkony.";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "od %1 do %2 počítané po %3";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "pre";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Premenná %1 dostane hodnoty v rozmedzí od prvého zadaného čísla po posledné číslo, počítajúc v zadanom intervale. Pre každú hodnotu sa vykonajú zvolené bloky.";

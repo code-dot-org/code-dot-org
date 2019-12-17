@@ -1,7 +1,5 @@
 ---
 title: Paano-gawin ang kaganapan ng Hour of Code
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

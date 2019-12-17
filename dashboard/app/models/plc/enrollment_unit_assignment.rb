@@ -81,7 +81,7 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
     if plc_course_unit.has_evaluation?
       Plc::LearningModule::MODULE_TYPES.select {|type| categories_for_stage.include?(type)}.each do |flex_category|
         module_category = flex_category
-        category_name = I18n.t("flex_category.#{module_category}")
+        category_name = I18n.t("flex_category.#{module_category}", default: I18n.t('flex_category.required'))
         summary << {
           category: category_name,
           status: module_assignment_for_type(flex_category).try(:status) || Plc::EnrollmentModuleAssignment::NOT_STARTED,

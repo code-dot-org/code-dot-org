@@ -1,6 +1,5 @@
 ---
 title: Wytyczne dla samouczków
-layout: wide
 ---
 
 <style>

@@ -1,5 +1,6 @@
 module Pd::Application
   class TeacherApplicationMailer < ActionMailer::Base
+    CODE_ORG_DEFAULT_NOTIFICATION_EMAIL = 'Liz Gauthier <liz.gauthier@code.org>'
     default from: 'Code.org <noreply@code.org>'
     default bcc: MailerConstants::PLC_EMAIL_LOG
 
@@ -65,12 +66,9 @@ module Pd::Application
     def principal_approval_completed_partner(teacher_application)
       @application = teacher_application
 
-      partner_contact_email = @application.formatted_partner_contact_email
-      raise "Partner contact email is required, application id #{@application.id}" unless partner_contact_email
-
       mail(
         from: 'Liz Gauthier <teacher@code.org>',
-        to: partner_contact_email,
+        to: @application.formatted_partner_contact_email || CODE_ORG_DEFAULT_NOTIFICATION_EMAIL,
         subject: 'A principal has completed the principal approval form'
       )
     end
@@ -86,6 +84,18 @@ module Pd::Application
     end
 
     def registration_sent(teacher_application)
+      @application = teacher_application
+
+      mail(
+        to: @application.formatted_applicant_email,
+        reply_to: @application.formatted_partner_contact_email,
+        subject: "Register for the #{@application.effective_regional_partner_name} #{@application.course_name} Summer Workshop"
+      )
+    end
+
+    # Reminder email sent to teachers who have not enrolled in a workshop within
+    # two weeks of being accepted into the program.
+    def registration_reminder(teacher_application)
       @application = teacher_application
 
       mail(

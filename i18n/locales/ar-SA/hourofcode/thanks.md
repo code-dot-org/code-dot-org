@@ -1,10 +1,5 @@
 ---
 title: شكراً لمشاركتك في استضافة حدث "ساعة البرمجة"!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": لاعب
-  "twitter:site": "@codeorg"
 ---
 
 # شكراً لمشاركتك في استضافة حدث "ساعة البرمجة"!

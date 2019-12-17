@@ -14,6 +14,7 @@ de:
         csp_2019_category_name: CS Principles ('19-'20)
         cspexams_category_name: Praxistest Grundlagen der Informatik
         csp17_category_name: Informatik Grundprinzipien
+        full_course_category_name: Vollständige Kurse
         hoc_category_name: Hour of Code
         math_category_name: Mathematik
       name:
@@ -295,6 +296,8 @@ de:
           description: Lerne funktionales Programmieren mithilfe von Algebra
           description_short: Lerne funktionales Programmieren mithilfe von Algebra
           stages:
+            'Calc: Defining Variables':
+              name: Variablen definieren und ersetzen
             'Eval: Boolean Operators':
               name: Boolesche Operatoren
             'Eval: Conditionals':
@@ -358,6 +361,16 @@ de:
               name: Pädagogik der Informatik
             Next Steps:
               name: Nächste Schritte
+            'Programming Concept: Conditionals':
+              name: 'Programmierkonzept: Bedingungen'
+            'Programming Concept: Events':
+              name: 'Programmierkonzept: Ereignisse (Events)'
+            'Programming Concept: Functions':
+              name: 'Programmierkonzept: Funktionen'
+            'Programming Concept: Loops':
+              name: 'Programmierkonzept: Schleifen'
+            Reflection:
+              name: Reflektieren
             Teacher Dashboard:
               name: Lehrer-Dashboard
             Unplugged lessons:
@@ -431,6 +444,8 @@ de:
           description: Code bearbeiten
           description_short: Code bearbeiten
           stages:
+            Applab:
+              name: AppLab
             Play Lab:
               name: Spielelabor
             The Artist:
@@ -497,6 +512,20 @@ de:
               name: Binärzahlen
             Bytes and File Sizes:
               name: Bytes und Dateigrößen
+            Encode a Complex Thing:
+              name: Eine Erfahrung kodieren
+            Encoding B&W Images:
+              name: Schwarz-weiß Bilder kodieren
+            Encoding Color Images:
+              name: Farbbilder kodieren
+            Encoding Numbers in the Real World:
+              name: Zahlen in der realen Welt kodieren
+            Encoding and Sending Text:
+              name: Text kodieren und senden
+            Lossy Compression and File Formats:
+              name: Verlustreiche Kompression und Dateitypen
+            Number Systems:
+              name: Zahlensystem
             Sending Binary Messages:
               name: Binäre Nachrichten senden
             Sending Binary Messages with the Internet Simulator:
@@ -519,6 +548,8 @@ de:
               name: Auswertungsbausteine
             Teacher Dashboard:
               name: Lehrer-Dashboard
+            Why Computer Science belongs in Algebra:
+              name: Warum Informatik zur Algebra gehört
         algPDmiami:
           stages:
             Booleans:
@@ -527,12 +558,18 @@ de:
               name: Auswertungsbausteine
             Luigi's Pizza:
               name: Luigis Pizza
+            Rocket-Height:
+              name: Höhe der Rakete
             Sam the Bat:
               name: Sam die Fledermaus
             Strings and Images:
               name: Zeichenfolgen und Bilder
             Your Game - Animation:
               name: Dein Spiel - Animation
+            Your Game - Booleans:
+              name: Dein Spiel - Booleans
+            Your Game - Collision Detection:
+              name: Dein Spiel - Kollisionserkennung
         text-compression:
           title: Text-Kompression
           stages:
@@ -554,10 +591,18 @@ de:
               name: Was ist ECS?
         sciencePD:
           stages:
+            Introduction to Complex Adaptive Systems:
+              name: Einführung in komplexe adaptive Systeme
+            Introduction to Computational Science:
+              name: Einführung in die Informatik
             Introduction to StarLogo Nova:
               name: Einführung in StarLogo Nova
             The Tutorial:
               name: Das Tutorial
+            Using Computer Models in Science:
+              name: Einsatz von Computermodellen in der Wissenschaft
+            Using Models in the Classroom:
+              name: Verwendung von Modellen im Klassenzimmer
             What to Expect:
               name: Was Sie erwartet
         rbo-reference:
@@ -567,18 +612,38 @@ de:
         cspunit3:
           description_short: Programmierung
           stages:
+            Compound Conditional Logic:
+              name: Verbundene bedingte Logik
+            Controlling Memory with Variables:
+              name: Speicher mit Variablen steuern
             Creating Functions:
               name: Funktionen erstellen
             Creating functions with Parameters:
               name: Funktionen mit Parametern erstellen
+            Digital Assistant Project:
+              name: Projekt zu Digitale Assistenten
             Events Unplugged:
               name: Offline-Events
+            Functions with Return Values:
+              name: Funktion mit Rückgabewerten
+            Image Scroller with Key Events:
+              name: Bildlaufleiste mit Tastaturereignissen
+            Introducing Design Mode:
+              name: Einführung in den Designmodus
             Introduction to Arrays:
               name: Einführung in Arrays
             Introduction to Conditional Logic:
               name: Einführung in Bedingungslogik
+            Introduction to Digital Assistants:
+              name: Einführung in die digitalen Assistenten
+            Looping and Random Numbers:
+              name: Schleifen- und Zufallszahlen
             Loops and Simulations:
               name: Schleifen und Simulationen
+            User Input and Strings:
+              name: Benutzereingaben und Zeichenketten
+            Using Simple Commands:
+              name: Einfache Befehle verwenden
             While Loops:
               name: Solange-Schleifen
         algebraPD3:
@@ -615,6 +680,8 @@ de:
               name: Auswertungsbausteine
             Teacher Dashboard:
               name: Lehrer-Dashboard
+            Why Computer Science belongs in Algebra:
+              name: Warum Informatik zur Algebra gehört
         algebraPD-iZone:
           stages:
             Course Overview:
@@ -623,20 +690,38 @@ de:
               name: Auswertungsbausteine
             Teacher Dashboard:
               name: Lehrer-Dashboard
+            Why Computer Science belongs in Algebra:
+              name: Warum Informatik zur Algebra gehört
         sciencePD-NexTech:
           stages:
+            Introduction to Complex Adaptive Systems:
+              name: Einführung in komplexe adaptive Systeme
+            Introduction to Computational Science:
+              name: Einführung in die Informatik
             Introduction to StarLogo Nova:
               name: Einführung in StarLogo Nova
             The Tutorial:
               name: Das Tutorial
+            Using Computer Models in Science:
+              name: Einsatz von Computermodellen in der Wissenschaft
+            Using Models in the Classroom:
+              name: Verwendung von Modellen im Klassenzimmer
             What to Expect:
               name: Was Sie erwartet
         sciencePD-iZone:
           stages:
+            Introduction to Complex Adaptive Systems:
+              name: Einführung in komplexe adaptive Systeme
+            Introduction to Computational Science:
+              name: Einführung in die Informatik
             Introduction to StarLogo Nova:
               name: Einführung in StarLogo Nova
             The Tutorial:
               name: Das Tutorial
+            Using Computer Models in Science:
+              name: Einsatz von Computermodellen in der Wissenschaft
+            Using Models in the Classroom:
+              name: Verwendung von Modellen im Klassenzimmer
             What to Expect:
               name: Was Sie erwartet
         sciencePD2:
@@ -647,13 +732,27 @@ de:
               name: Willkommen!
             Wrap-Up:
               name: Zusammenfassung
+        sciencePD3:
+          stages:
+            Welcome Back!:
+              name: Willkommen zurück!
         cspunit2:
           description_short: Programmierung
           stages:
+            Algorithms Detour - Hard Problems TSP:
+              name: Schwierige Probleme - Das Problem des reisenden Verkäufers
             Algorithms Detour - How Routers Learn:
               name: Wie Router lernen
+            Cracking the Code:
+              name: Den Code knacken
+            Routers and Redundancy:
+              name: Router und Redundanz
+            Tell Me a Secret - Encrypting Text:
+              name: Die Notwendigkeit von Verschlüsselung
             The Internet:
               name: Das Internet ist für alle da
+            The Need for Addressing:
+              name: Die Notwendigkeit von Addressierung
         algebraPD2a:
           description: 'Phase 2 Online: Gemischtes Sommerstudium'
           description_short: 'Phase 2 Online: Gemischtes Sommerstudium'
@@ -668,6 +767,8 @@ de:
               name: Freies Spiel
             Luigi's Pizza:
               name: Luigis Pizza
+            Rocket-Height:
+              name: Höhe der Rakete
             Sam the Bat:
               name: Sam die Fledermaus
             Strings and Images:
@@ -714,6 +815,8 @@ de:
               name: Video
             Mini Rubric:
               name: Mini Rubrik
+            Contained Levels:
+              name: Enthaltenen Level
         algebraPD2b:
           description: 'Phase 2 Online: Gemischtes Sommerstudium'
           description_short: 'Phase 2 Online: Gemischtes Sommerstudium'
@@ -732,6 +835,8 @@ de:
               name: Auswertungsbausteine
             Next Steps:
               name: Nächste Schritte
+            Rocket-Height:
+              name: Höhe der Rakete
             Strings and Images:
               name: Zeichenfolgen und Bilder
             Teacher Dashboard:
@@ -763,11 +868,11 @@ de:
           description_short: 'Phase 2 Online: Gemischtes Sommerstudium'
           stages:
             0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+              Lerneinheit 1, Tag 1-2
+              Was ist ein Computer?
             1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+              Lerneinheit 1, Tag 1-2
+              Was ist ein Computer?
             Welcome!:
               name: Willkommen!
             Wrap-up:
@@ -827,11 +932,11 @@ de:
           description_short: 'Phase 2 Online: Gemischtes Sommerstudium'
           stages:
             0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+              Lerneinheit 1, Tag 1-2
+              Was ist ein Computer?
             1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+              Lerneinheit 1, Tag 1-2
+              Was ist ein Computer?
             Welcome!:
               name: Willkommen!
             Wrap-up:
@@ -841,11 +946,11 @@ de:
           description_short: 'Phase 2 Online: Gemischtes Sommerstudium'
           stages:
             0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+              Lerneinheit 1, Tag 1-2
+              Was ist ein Computer?
             1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+              Lerneinheit 1, Tag 1-2
+              Was ist ein Computer?
             Welcome!:
               name: Willkommen!
             Wrap-up:
@@ -854,6 +959,8 @@ de:
           stages:
             Getting Started:
               name: Erste Schritte
+            Welcome to the Course!:
+              name: Willkommen im Kurs!
         asUnplugged:
           stages:
             Binary Bracelets:
@@ -874,6 +981,10 @@ de:
               name: Songschreiben
             The Big Event:
               name: Der große Event
+        sciencePD3_pre1:
+          stages:
+            Welcome Back!:
+              name: Willkommen zurück!
         ECSPD3-Unit2:
           stages:
             Getting Started:
@@ -940,6 +1051,8 @@ de:
               name: Javascript Objekte erstellen
             Creating Summary Tables:
               name: Zusammenfassungstabellen erstellen
+            Why Make Apps?:
+              name: Warum Apps erstellen?
         ScienceP3OLPT2:
           stages:
             Welcome!:
@@ -952,8 +1065,20 @@ de:
               name: Schließen und nächste Schritte
             Getting Started:
               name: Erste Schritte
+            Teaching Support - Lessons 1-3:
+              name: Unterrichtsunterstützung - Lektionen 1-3
+            Teaching Support - Lessons 13-16:
+              name: Unterrichtsunterstützung - Lektionen 13-16
+            Teaching Support - Lessons 17-20:
+              name: Unterrichtsunterstützung - Lektionen 17-20
+            Teaching Support - Lessons 4-7:
+              name: Unterrichtsunterstützung - Lektionen 4-7
+            Teaching Support - Lessons 8-12:
+              name: Unterrichtsunterstützung - Lektionen 8-12
         CSPPD3-Unit2:
           stages:
+            Challenge Overview:
+              name: Überblick über die Herausforderungen
             Complete the Challenge:
               name: Herausforderung abschließen
             Getting Started:
@@ -962,13 +1087,22 @@ de:
               name: Teilen und Absenden
             Unit 2 Overview:
               name: Einheit 2 - Übersicht
+        duino:
+          stages:
+            Basic Circuits:
+              name: Grundschaltungen
         Special Fun:
           description_audience: 'Alter: 10-18'
+          stages:
+            Halloween 2015:
+              name: Halloween 2015
         SpecialSeries:
           description_audience: 'Alter: 10-18'
           stages:
             Spring 2016:
               name: Frühling 2016
+            Halloween 2015:
+              name: Halloween 2015
         iceage:
           title: Ice Age Spielelabor
           description: Erstelle eine Geschichte oder ein Spiel mit dem Spielelabor!
@@ -978,21 +1112,49 @@ de:
               name: Ice Age Spielelabor
         CSPPD3-Unit3:
           stages:
+            Challenge Overview:
+              name: Überblick über die Herausforderungen
+            Chunk 1 Overview:
+              name: Chunk 1 Übersicht
+            Chunk 2 Overview:
+              name: Chunk 2 Übersicht
+            Chunk 3 Overview:
+              name: Chunk 3 Übersicht
+            Chunk 4 Overview:
+              name: Chunk 4 Übersicht
             Complete the Challenge:
               name: Herausforderung abschließen
             Getting Started:
               name: Erste Schritte
             Share out and Submit:
               name: Teilen und Absenden
+            Unit 3 Overview:
+              name: Lerneinheit 3 Übersicht
         cspunit3temp:
           description_short: Programmierung
           stages:
+            Functions with Return Values:
+              name: Funktion mit Rückgabewerten
+            Image Scroller with Key Events:
+              name: Bildlaufleiste mit Tastaturereignissen
             Introduction to Arrays:
               name: Einführung in Arrays
             Loops and Simulations:
               name: Schleifen und Simulationen
             While Loops:
               name: Solange-Schleifen
+        CSP-Unit3-Support:
+          stages:
+            Chunk 1 Overview:
+              name: Chunk 1 Übersicht
+            Chunk 2 Overview:
+              name: Chunk 2 Übersicht
+            Chunk 3 Overview:
+              name: Chunk 3 Übersicht
+            Chunk 4 Overview:
+              name: Chunk 4 Übersicht
+            Unit 3 Overview:
+              name: Lerneinheit 3 Übersicht
         gumball:
           title: Gumball Spielelabor
           description: Erstelle eine Geschichte oder ein Spiel mit dem Spielelabor!
@@ -1028,6 +1190,8 @@ de:
               name: Programmierstunde 2015
         CSPPD3-Unit3-pt2:
           stages:
+            Challenge Overview:
+              name: Überblick über die Herausforderungen
             Complete the Challenge:
               name: Herausforderung abschließen
             Share out and Submit:
@@ -1051,6 +1215,8 @@ de:
               name: Was ist Big Data?
         CSPPD3-Unit4:
           stages:
+            Challenge Overview:
+              name: Überblick über die Herausforderungen
             Chapter 1 Overview:
               name: Kapitel 1 - Übersicht
             Chapter 2 Overview:
@@ -1071,12 +1237,16 @@ de:
               name: Datensätze löschen
             Final Project:
               name: Abschließende Herausforderung
+            Sample Apps:
+              name: Beispielapps
             Updating Records:
               name: Datensätze aktualisieren
             Visualizing Data:
               name: Datensätze anzeigen
         CSPPD3-Unit5:
           stages:
+            Challenge Overview:
+              name: Überblick über die Herausforderungen
             Complete the Challenge:
               name: Herausforderung abschließen
             Getting Started:
@@ -1093,6 +1263,8 @@ de:
               name: Datensätze löschen
             Final Project:
               name: Abschließende Herausforderung
+            Sample Apps:
+              name: Beispielapps
             Updating Records:
               name: Datensätze aktualisieren
             Visualizing Data:
@@ -1149,14 +1321,21 @@ de:
               name: Auswertungsbausteine
             Teacher Dashboard:
               name: Lehrer-Dashboard
+            Why Computer Science belongs in Algebra:
+              name: Warum Informatik zur Algebra gehört
         algebraPD3c:
           stages:
             Getting Started:
               name: Erste Schritte
         csp1-2017:
+          title: CSP Lektion 1 - Das Internet ('17-'18)
           stages:
             Binary Numbers:
               name: Binärzahlen
+            Number Systems:
+              name: Zahlensystem
+            Routers and Redundancy:
+              name: Router und Redundanz
             Sending Binary Messages:
               name: Binäre Nachrichten senden
             Sending Binary Messages with the Internet Simulator:
@@ -1165,7 +1344,10 @@ de:
               name: Zahlen senden
             The Internet:
               name: das Internet
+            The Need for Addressing:
+              name: Die Notwendigkeit von Addressierung
         csp2-2017:
+          title: CSP Lektion 2 - Digitale Informationen ('17-'18)
           stages:
             Bytes and File Sizes:
               name: Bytes und Dateigrößen
@@ -1173,31 +1355,62 @@ de:
               name: Prüfe deine Voraussetzungen
             Creating Summary Tables:
               name: Zusammenfassungstabellen erstellen
+            Encoding B&W Images:
+              name: Schwarz-weiß Bilder kodieren
+            Encoding Color Images:
+              name: Farbbilder kodieren
+            Lossy Compression and File Formats:
+              name: Verlustreiche Kompression und Dateitypen
             Text Compression:
               name: Text-Kompression
         csp3-2017:
+          title: CSP Lektion 3 - Einführung in die Programmierung ('17-'18)
           description_short: Programmierung
           stages:
             Creating Functions:
               name: Funktionen erstellen
+            Looping and Random Numbers:
+              name: Schleifen- und Zufallszahlen
+            Using Simple Commands:
+              name: Einfache Befehle verwenden
             Creating Functions with Parameters:
               name: Funktionen mit Parametern erstellen
         csp4-2017:
+          title: CSP Lektion 4 - Big Data und Privatspäre ('17-'18)
           stages:
+            Cracking the Code:
+              name: Den Code knacken
             Simple Encryption:
               name: Einfache Verschlüsselung
             What is Big Data?:
               name: Was ist Big Data?
         csp5-2017:
+          title: CSP Lektion 5 - Apps erstellen ('17-'18)
           stages:
+            Compound Conditional Logic:
+              name: Verbundene bedingte Logik
+            Controlling Memory with Variables:
+              name: Speicher mit Variablen steuern
+            Digital Assistant Project:
+              name: Projekt zu Digitale Assistenten
             Events Unplugged:
               name: Offline-Events
+            Functions with Return Values:
+              name: Funktion mit Rückgabewerten
+            Image Scroller with Key Events:
+              name: Bildlaufleiste mit Tastaturereignissen
+            Introducing Design Mode:
+              name: Einführung in den Designmodus
             Introduction to Arrays:
               name: Einführung in Arrays
             Introduction to Conditional Logic:
               name: Einführung in Bedingungslogik
+            Introduction to Digital Assistants:
+              name: Einführung in die digitalen Assistenten
             Loops and Simulations:
               name: Schleifen und Simulationen
+            User Input and Strings:
+              name: Benutzereingaben und Zeichenketten
             While Loops:
               name: Solange-Schleifen
             Unit 3 Assessment 3:
@@ -1207,6 +1420,8 @@ de:
         CSDU3-Draft:
           description_short: Programmierung
           stages:
+            Sprites and Images:
+              name: Sprites und Bilder
             Functions:
               name: Funktionen
             Defender:
@@ -1215,10 +1430,18 @@ de:
               name: Geschwindigkeit
         2016_sciencePD_phase1:
           stages:
+            Introduction to Complex Adaptive Systems:
+              name: Einführung in komplexe adaptive Systeme
+            Introduction to Computational Science:
+              name: Einführung in die Informatik
             Introduction to StarLogo Nova:
               name: Einführung in StarLogo Nova
             The Tutorial:
               name: Das Tutorial
+            Using Computer Models in Science:
+              name: Einsatz von Computermodellen in der Wissenschaft
+            Using Models in the Classroom:
+              name: Verwendung von Modellen im Klassenzimmer
             What to Expect:
               name: Was Sie erwartet
         TEMP CSD Unit 3:
@@ -1231,12 +1454,22 @@ de:
               name: Auswertungsbausteine
             Teacher Dashboard:
               name: Lehrer-Dashboard
+            Why Computer Science belongs in Algebra:
+              name: Warum Informatik zur Algebra gehört
         sciencePD1:
           stages:
+            Introduction to Complex Adaptive Systems:
+              name: Einführung in komplexe adaptive Systeme
+            Introduction to Computational Science:
+              name: Einführung in die Informatik
             Introduction to StarLogo Nova:
               name: Einführung in StarLogo Nova
             The Tutorial:
               name: Das Tutorial
+            Using Computer Models in Science:
+              name: Einsatz von Computermodellen in der Wissenschaft
+            Using Models in the Classroom:
+              name: Verwendung von Modellen im Klassenzimmer
             What to Expect:
               name: Was Sie erwartet
         cspunit1-support:
@@ -1247,8 +1480,26 @@ de:
               name: Einführung in Einheit
             Sending Binary Messages:
               name: Binäre Nachrichten senden
+        test-teaching-ap-cs-unit-1:
+          stages:
+            test Unit 1 content module Alpha:
+              name: Test für Lerneinheit 1 Inhaltsmodul Alpha
+            test Unit 1 content module Bravo:
+              name: Test für Lerneinheit 1 Inhaltsmodul Bravo
+            test Unit 1 content module Charlie:
+              name: Test für Lerneinheit 1 Inhaltsmodul Charlie
+            test Unit 1 practice module Delta:
+              name: Test für Lerneinheit 1 Inhaltsmodul Delta
+            test Unit 1 practice module Echo:
+              name: testeinheit 1 Inhaltsmodul Echo
+            test Unit 1 practice module Foxtrot:
+              name: Test für Lerneinheit 1 Inhaltsmodul Foxtrott
+            test Unit 1 required reading:
+              name: testeinheit 1 erfordert Lesefähigkeiten
         allthehiddenthings:
           stages:
+            Contained Levels:
+              name: Enthaltenen Level
             Game Lab:
               name: Spielelabor
         cspunit1-support-test:
@@ -1267,10 +1518,14 @@ de:
               name: Entwurfsmodus
         CSDU2-Draft:
           stages:
+            Describing Webpages:
+              name: Webseiten beschreiben
             Digital Footprint:
               name: Digitaler Fußabdruck
             Images on the Web:
               name: Bilder im Web
+            Headers and Lists:
+              name: Überschriften und Listen
             Designing Web Pages:
               name: Webseiten entwerfen
             Holding:
@@ -1283,16 +1538,24 @@ de:
               name: Klassen
             Peer Review:
               name: Peer Review
+            Describing Web Pages:
+              name: Webseiten beschreiben
         MikeTest:
           stages:
             Artist Functions:
               name: Künstler Funktionen
         artistExemplar:
           description_audience: 'Alter: 8-18'
+        teachercon:
+          stages:
+            Lesson 1,10:
+              name: 'Lektion 1.10: Router und Redundanz'
         kinderTest:
           stages:
             'Bee: Conditionals':
               name: 'Biene: Bedingungen'
+            Kindergarten Stage 1:
+              name: Kindergarten Stage 1
         gradeKinder:
           stages:
             Events:
@@ -1321,6 +1584,8 @@ de:
               name: Entdecke Projektideen
             'Farmer: Functions (New)':
               name: 'Bauer: Funktionen (Neu)'
+            More Programming with Scratch:
+              name: Mehr Programmierung mit Scratch
             Songwriting:
               name: Songschreiben
         grade1:
@@ -1368,11 +1633,11 @@ de:
         ecs-unit1:
           stages:
             0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+              Lerneinheit 1, Tag 1-2
+              Was ist ein Computer?
             1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+              Lerneinheit 1, Tag 1-2
+              Was ist ein Computer?
             Welcome!:
               name: Willkommen!
             Wrap-up:
@@ -1474,10 +1739,18 @@ de:
         csd3-2017:
           description_short: Programmierung
           stages:
+            Sprites and Images:
+              name: Sprites und Bilder
             Velocity:
               name: Geschwindigkeit
             Functions:
               name: Funktionen
+            Programming for Entertainment:
+              name: Programmieren zur Unterhaltung
+            Plotting Shapes:
+              name: Formen plotten
+            Shapes and Randomness:
+              name: Formen und Zufälligkeiten
             Variables:
               name: Variablen
             Conditionals:
@@ -1524,12 +1797,24 @@ de:
               name: Das Design-Rezept
             Welcome!:
               name: Willkommen!
+        csd1-2017:
+          stages:
+            Intro to Problem Solving:
+              name: Einführung in die Problemlösung
+            Input and Output:
+              name: Ein- und Ausgabe
+            Processing:
+              name: Verarbeitung
         csp-online-test:
           stages:
             Unit 1 Overview:
               name: Einheit 1 - Übersicht
             Unit 2 Overview:
               name: Einheit 2 - Übersicht
+            Unit 3 Overview:
+              name: Lerneinheit 3 Übersicht
+            Variables and Strings:
+              name: Variablen und Zeichenketten
             Unit 5 Overview:
               name: Einheit 5 - Übersicht
         csp1-support:
@@ -1543,6 +1828,10 @@ de:
           stages:
             Bounce:
               name: Bounce
+        sample-csp5:
+          stages:
+            Controlling Memory with Variables:
+              name: Speicher mit Variablen steuern
         hoc-encryption:
           stages:
             Simple Encryption:
@@ -1554,6 +1843,8 @@ de:
               name: Binäre Armbänder
             Binary Images:
               name: Binärbilder
+            Course C EOC 2019:
+              name: Kurs C EOC 2019
             Play Lab:
               name: Spielelabor
         csd2-2017:
@@ -1570,12 +1861,18 @@ de:
               name: Peer Review
             Digital Footprint:
               name: Digitaler Fußabdruck
+            Intro to HTML:
+              name: Einführung in HTML
             Lists:
               name: Listen
         csp2-support:
           stages:
             Unit 2 Overview:
               name: Einheit 2 - Übersicht
+        csd4-2017:
+          stages:
+            User Interfaces:
+              name: Benutzeroberflächen
         minecraft:
           title: 'Mincecraft-Designer: Stunde des Codes'
           description_short: Baue ein Minecraft-Spiel. Erschaffe deine eigene Version
@@ -1629,6 +1926,8 @@ de:
           stages:
             Digital Citizenship:
               name: Digitalen Staatsbürgerschaft
+            More Programming with Scratch:
+              name: Mehr Programmierung mit Scratch
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1682,8 +1981,18 @@ de:
               name: Willkommen!
             Wrap-Up:
               name: Zusammenfassung
+        sciencepd3-2016:
+          stages:
+            Welcome Back!:
+              name: Willkommen zurück!
+        csp3-support:
+          stages:
+            Unit 3 Overview:
+              name: Lerneinheit 3 Übersicht
         csp4-support:
           stages:
+            Unit 3 Overview:
+              name: Lerneinheit 3 Übersicht
             Unit 4 Overview:
               name: Einheit 4 - Übersicht
         sciencepd4:
@@ -1712,6 +2021,8 @@ de:
           stages:
             Unit 5 Overview:
               name: Einheit 5 - Übersicht
+            Variables and Strings:
+              name: Variablen und Zeichenketten
         csppostap-2017:
           stages:
             Creating Javascript Objects:
@@ -1722,6 +2033,8 @@ de:
               name: Datensätze aktualisieren
             Visualizing Data:
               name: Datensätze anzeigen
+            Sample Apps:
+              name: Beispielapps
             Final Project:
               name: Abschließende Herausforderung
         gamelab-demo:
@@ -1734,8 +2047,12 @@ de:
               name: Kram
             Lists:
               name: Listen
+            Lights:
+              name: Lichter
             For Loops:
               name: '"Zähle mit"-Schleifen'
+            List and For Loops:
+              name: Listen und 'For'-Schleifen
             Functions with Parameters:
               name: Funktionen mit Parametern
         workshop-gamelab:
@@ -1760,16 +2077,33 @@ de:
           stages:
             Lists:
               name: Listen
+            Lights:
+              name: Lichter
             For Loops:
               name: '"Zähle mit"-Schleifen'
             Functions with Parameters:
               name: Funktionen mit Parametern
+            Circuits and Physical Prototypes:
+              description_student: Verdrahten Sie einfache Schaltungen, um einen physischen
+                Prototyp mit billigen und leicht zu findenden Materialien zu erstellen.
             Functions with Parameters_:
               name: Funktionen mit Parametern
+            Circuits and Physical Prototypes_:
+              description_student: Verdrahten Sie einfache Schaltungen, um einen physischen
+                Prototyp mit billigen und leicht zu findenden Materialien zu erstellen.
         csd3-draft:
+          description_short: Animationen und Spiele
           stages:
+            Shapes and Randomess:
+              name: Formen und Zufälligkeiten
+            Shapes and Randomness:
+              name: Formen und Zufälligkeiten
             Variables:
               name: Variablen
+            Programming for Entertainment:
+              name: Programmieren zur Unterhaltung
+            Plotting Shapes:
+              name: Formen plotten
             Conditionals:
               name: Bedingungen
             Velocity:
@@ -1778,18 +2112,46 @@ de:
               name: Funktionen
         csd3-old:
           stages:
+            Sprites and Images:
+              name: Sprites und Bilder
             Velocity:
               name: Geschwindigkeit
             Functions:
               name: Funktionen
+        csd1-old:
+          stages:
+            Intro to Problem Solving:
+              name: Einführung in die Problemlösung
         csd2-draft:
           stages:
             Digital Footprint:
               name: Digitaler Fußabdruck
+            Intro to HTML:
+              name: Einführung in HTML
+            Headers and Lists:
+              name: Überschriften und Listen
+            Images:
+              name: Bilder
             Lists:
               name: Listen
+        csd1-draft:
+          stages:
+            Intro to Problem Solving:
+              name: Einführung in die Problemlösung
+            Inputs and Outputs:
+              name: Ein- und Ausgaben
+            Processing:
+              name: Verarbeitung
+            Input and Output:
+              name: Ein- und Ausgabe
         csd3-chapters:
           stages:
+            Programming for Entertainment:
+              name: Programmieren zur Unterhaltung
+            Plotting Shapes:
+              name: Formen plotten
+            Shapes and Randomness:
+              name: Formen und Zufälligkeiten
             Variables:
               name: Variablen
             Conditionals:
@@ -1806,6 +2168,10 @@ de:
               name: Einführung
             Ice Age Play Lab:
               name: Ice Age Spielelabor
+        fmscsd3preview:
+          stages:
+            Plotting Shapes:
+              name: Formen plotten
         csd2-old:
           stages:
             Describing Web pages:
@@ -1830,24 +2196,33 @@ de:
               name: 'Real-Life-Algorithmen: Pflanze Samen'
           title: Kurs A
           assignment_family_title: Kurs A
+          description_audience: 'Alter: 4-7'
+          description_short: Eine Einführung in die Informatik für Leseanfänger.
         courseb-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-Life-Algorithmen: Pflanze Samen'
           title: Kurs B
           assignment_family_title: Kurs B
+          description_audience: 'Alter: 5-8'
+          description_short: Eine Einführung in die Informatik für Leseanfänger. (Ähnlich
+            wie Kurs A, aber mit mehr Abwechslung für ältere Schüler.)
         coursec-2017:
           stages:
             'Real-life Algorithms: Paper Planes':
               name: 'Alltagsalgorithmen: Papierflieger'
           title: Kurs C
           assignment_family_title: Kurs C
+          description_audience: 'Alter: 6-10'
         coursed-2017:
           stages:
             Nested Loops:
               name: Verschachtelte Schleifen
           title: Kurs D
           assignment_family_title: Kurs D
+          description_audience: 'Alter: 7-11'
+          description_short: Behandele Konzepte aus Kurs C, und gehe dann weiter mit
+            Algorithmen, verschachtelten Schleifen, Bedingungen und mehr.
         coursee-2017:
           stages:
             Ice Age Play Lab:
@@ -1860,16 +2235,68 @@ de:
               name: Songschreiben mit Parametern
             Building a Foundation:
               name: Grundlagen aufbauen
+            Debugging with Scrat:
+              name: Debuggen mit Scrat
             Nested Loops:
               name: Verschachtelte Schleifen
           title: Kurs E
           assignment_family_title: Kurs E
+          description_audience: 'Alter: 8-12'
+          description_short: Handle Konzepte in Kurs C & D schnell ab und gehe dann
+            mit Funktionen weiter.
         coursef-2017:
           stages:
+            Ice Age Play Lab:
+              name: Ereigniss in Ice Age
             Building a Foundation:
               name: Grundlagen aufbauen
+            Debugging with Scrat:
+              name: Debuggen mit Scrat
           title: Kurs F
           assignment_family_title: Kurs F
+          description_audience: 'Alter: 9-13'
+          description_short: Lernen Sie alle Konzepte in den Grundlagen der Informatik
+            und erstellen Sie Ihre eigene Zeichnung, Geschichte oder Ihr eigenes Spiel.
+        csdnovice:
+          stages:
+            Tuesday:
+              name: Dienstag
+            Wednesday:
+              name: Mittwoch
+            Thursday:
+              name: Donnerstag
+            Welcome:
+              name: Willkommen
+            Congrats:
+              name: Gratulation
+        cspnovice:
+          stages:
+            Welcome:
+              name: Willkommen
+            Tuesday:
+              name: Dienstag
+            Wednesday:
+              name: Mittwoch
+            Thursday:
+              name: Donnerstag
+        novice-view:
+          stages:
+            CSP Tuesday:
+              name: CSP Dienstag
+            CSP Wednesday:
+              name: CSP Mittwoch
+            CSP Thursday:
+              name: CSP Donnerstag
+        csp1-dlp:
+          title: CSP Lektion 1 Verständnis vertiefen
+        csp2-dlp:
+          title: CSP Lektion 2 Verständnis vertiefen
+        csp3-dlp:
+          title: CSP Lektion 3 Verständnis vertiefen
+        csp4-dlp:
+          title: CSP Lektion 4 Verständnis vertiefen
+        csp5-dlp:
+          title: CSP Lektion 5 Verständnis vertiefen
         express-2017:
           stages:
             Introduction:
@@ -1890,27 +2317,67 @@ de:
               name: Grundlagen aufbauen
             Nested Loops:
               name: Verschachtelte Schleifen
+          title: Expresskurs
+          assignment_family_title: Expresskurs (2018)
+          description_audience: 'Alter: 9-18'
         pre-express-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-Life-Algorithmen: Pflanze Samen'
             Spelling Bee:
               name: Buchstabierwettbewerb
+          description_audience: Alter 4-8
+          description_short: 'Eine Einführung in die Informatik für Leseanfänger:
+            Kombiniert das Beste aus unserem Kindergarten- und den Schulanfängerkursen.'
         subgoal-labels-opt-in:
           stages:
+            deprecated:
+              name: veraltet
+            other:
+              name: andere
             Thanks:
               name: Danke
         csp3-research-mxghyt:
           stages:
+            Using Simple Commands:
+              name: Einfache Befehle verwenden
             Creating Functions:
               name: Funktionen erstellen
+            Looping and Random Numbers:
+              name: Schleifen- und Zufallszahlen
+            foo:
+              name: foo
+          title: CSP Lektion 3 - Einführung in die Programmierung (Teilziele)
           description_short: Programmierung
+        applab-intro:
+          stages:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: Einführung in AppLab - Wähle Dein eigenes Abenteuer
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: Einführung in AppLab - Wähle Dein eigenes Abenteuer 2
+            Intro to AppLab - Your First App:
+              name: Einführung in AppLab - Deine erste App
+            Intro to AppLab - Your First App 2:
+              name: Einführung in AppLab - Deine erste App 2
+            Intro to AppLab - Your First App 3:
+              name: Einführung in AppLab - Deine erste App 3
+            Intro to AppLab - Your First App 4:
+              name: Einführung in AppLab - Deine erste App 4
+            Intro to AppLab - Getting Started:
+              name: Einführung in AppLab - Erste Schritte
+            Intro to App Lab:
+              name: Einführung in AppLab
+          title: Einführung in AppLab
         e-f-ramp:
           stages:
             Building a Foundation:
               name: Grundlagen aufbauen
+            Debugging with Scrat:
+              name: Debuggen mit Scrat
             Nested Loops:
               name: Verschachtelte Schleifen
+            Course E Introduction:
+              name: Kurs E Einführung
             Conditionals:
               name: Bedingungen
             Internet:
@@ -1935,18 +2402,30 @@ de:
               name: Grundlagen aufbauen
             Loops in Ice Age:
               name: Schleifen in Ice Age
+        csp3-a:
+          title: CSP Lektion 3 - Teilziele Gruppe A
         new-express:
           stages:
             Introduction:
               name: Einführung
             Building a Foundation:
               name: Grundlagen aufbauen
+            Debugging with Scrat:
+              name: Debuggen mit Scrat
             Nested Loops:
               name: Verschachtelte Schleifen
+        new-stages-sept-2017:
+          stages:
+            Sequences with Scrat:
+              name: Sequenzen mit Scrat
         new-e:
           stages:
             Building a Foundation:
               name: Grundlagen aufbauen
+            Debugging with Scrat:
+              name: Debuggen mit Scrat
+            Course E Introduction:
+              name: Kurs E Einführung
             Conditionals:
               name: Bedingungen
             Internet:
@@ -1957,6 +2436,10 @@ de:
           stages:
             Building a Foundation:
               name: Grundlagen aufbauen
+            Debugging with Scrat:
+              name: Debuggen mit Scrat
+            Course E Introduction:
+              name: Kurs E Einführung
             Ice Age Play Lab:
               name: Ice Age Spielelabor
             Envelope Variables:
@@ -1967,22 +2450,50 @@ de:
               name: Songschreiben mit Parametern
         csp3-staging:
           stages:
+            Using Simple Commands:
+              name: Einfache Befehle verwenden
             Creating Functions:
               name: Funktionen erstellen
+            Looping and Random Numbers:
+              name: Schleifen- und Zufallszahlen
         pwc:
           stages:
             Simple Encryption:
               name: Einfache Verschlüsselung
+            User Interfaces:
+              name: Benutzeroberflächen
+            Intro to App Lab:
+              name: Einführung in AppLab
         hero:
           stages:
             Minecraft Hour of Code:
               name: Minecraft Hour of Code
           description: Minecraft präsentiert eine brandneue Aktivität zur Hour of
             Code! Entdecke die Welt von Minecraft mit Code.
+        applab-intro-staging:
+          stages:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: Einführung in AppLab - Wähle Dein eigenes Abenteuer
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: Einführung in AppLab - Wähle Dein eigenes Abenteuer 2
+            Intro to AppLab - Your First App:
+              name: Einführung in AppLab - Deine erste App
+            Intro to AppLab - Your First App 2:
+              name: Einführung in AppLab - Deine erste App 2
+            Intro to AppLab - Your First App 3:
+              name: Einführung in AppLab - Deine erste App 3
+            Intro to AppLab - Your First App 4:
+              name: Einführung in AppLab - Deine erste App 4
+            Intro to AppLab - Getting Started:
+              name: Einführung in AppLab - Erste Schritte
+            Intro to App Lab:
+              name: Einführung in AppLab
         course-e-2018:
           stages:
             Building a Foundation:
               name: Grundlagen aufbauen
+            Debugging with Scrat:
+              name: Debuggen mit Scrat
             Nested Loops:
               name: Verschachtelte Schleifen
             Introduction:
@@ -1993,10 +2504,13 @@ de:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+          title: Kurs E 2018 (Veraltet!)
         course-f-2018:
           stages:
             Building a Foundation:
               name: Grundlagen aufbauen
+            Debugging with Scrat:
+              name: Debuggen mit Scrat
             Introduction:
               name: Einführung
             Ice Age Play Lab:
@@ -2007,14 +2521,21 @@ de:
               name: "„Zähle mit“-Schleifenspaß"
             Songwriting with Parameters:
               name: Songschreiben mit Parametern
+          title: Kurs F 2018 (Veraltet!)
         csd6-old:
           stages:
             Lists:
               name: Listen
+            Lights:
+              name: Lichter
             For Loops:
               name: '"Zähle mit"-Schleifen'
         csd3-1819draft:
           stages:
+            Programming for Entertainment:
+              name: Programmieren zur Unterhaltung
+            Plotting Shapes:
+              name: Formen plotten
             Variables:
               name: Variablen
             Conditionals:
@@ -2024,9 +2545,17 @@ de:
             Functions:
               name: Funktionen
           description_short: Programmierung
+        glj-behavior-test:
+          stages:
+            Cats and Dogs:
+              name: Katzen und Hunde
         csd3-2018:
           description_short: Programmierung
           stages:
+            Programming for Entertainment:
+              name: Programmieren zur Unterhaltung
+            Plotting Shapes:
+              name: Formen plotten
             Variables:
               name: Variablen
             Conditionals:
@@ -2037,12 +2566,17 @@ de:
               name: Funktionen
         csd2-2018:
           stages:
+            Intro to HTML:
+              name: Einführung in HTML
             Digital Footprint:
               name: Digitaler Fußabdruck
             Lists:
               name: Listen
         coursea-2018:
+          title: Kurs A (2018)
           assignment_family_title: Kurs A
+          description_short: Eine Einführung in die Informatik für Leseanfänger.
+          description_audience: 'Alter: 4-7'
           stages:
             'Debugging: Unspotted Bugs':
               name: Unentdeckte Bugs
@@ -2052,9 +2586,14 @@ de:
               name: Glücklich Karten
             Going Places Safely:
               name: Sicher unterwegs
+            Loops in Collector:
+              name: Schleifen mit Laurel
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie und das große Projekt
         express-2018:
+          title: Expresskurs (2018)
+          assignment_family_title: Expresskurs
+          description_audience: 'Alter: 9-18'
           stages:
             'Algorithms: Graph Paper Programming':
               name: Programmieren auf Millimeterpapier
@@ -2066,6 +2605,10 @@ de:
               name: Verschachtelte Schleifen
             'Events: The Big Event':
               name: Der große Event
+            Debugging in Maze:
+              name: Debuggen mit Scrat
+            Programming in Collector:
+              name: Den Schatz mit Laurel sammeln
             'Loops: Getting Loopy':
               name: Schöne Schleifen
             Conditionals with Cards:
@@ -2091,18 +2634,30 @@ de:
             Graph Paper Programming:
               name: Programmieren auf Millimeterpapier
         courseb-2018:
+          title: Kurs B (2018)
           assignment_family_title: Kurs B
+          description_audience: 'Alter: 5-8'
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-Life-Algorithmen: Pflanze Samen'
             Your Digital Footprint:
               name: Dein digitaler Fußabdruck
+            Loops in Collector:
+              name: Schleifen mit Laurel
+            Programming in Ice Age:
+              name: Programmieren mit Scrat
+            Loops in Ice Age:
+              name: Schleifen mit Scrat
+            Sequencing with Scrat:
+              name: Sequenzen mit Scrat
             Move It, Move It:
               name: Bewegung, Bewegung
             Copyright and Creativity:
               name: Es ist großartig etwas zu erschaffen und fair zu spielen
         coursed-2018:
+          title: Kurs D (2018)
           assignment_family_title: Kurs D
+          description_audience: 'Alter: 7-11'
           stages:
             'Algorithms: Graph Paper Programming':
               name: Programmieren auf Millimeterpapier
@@ -2110,6 +2665,8 @@ de:
               name: Einführung
             Building a Foundation:
               name: Grundlagen aufbauen
+            Debugging in Collector:
+              name: Debuggen mit Laurel
             Conditionals with Cards:
               name: Bedingungen mit Karten
             Digital Citizenship:
@@ -2124,11 +2681,39 @@ de:
               name: Programmieren auf Millimeterpapier
             Relay Programming:
               name: Relais-Programmierung
+        csp-exam:
+          stages:
+            Unit 1 - Assessment 1:
+              name: Einheit 1 - Bewertung 1
+            Unit 1 - Assessment 2:
+              name: Einheit 1 - Bewertung 2
+            Unit 2 - Assessment 1:
+              name: Lerneinheit 2 - Bewertung 1
+            Unit 2 - Assessment 2:
+              name: Lerneinheit 2 - Bewertung 2
+            Unit 3 - Assessment 1:
+              name: Lerneinheit 3 - Bewertung 1
+            Unit 4 - Assessment 1:
+              name: Lerneinheit 4 - Bewertung 1
+            Unit 5 - Assessment 1:
+              name: Lerneinheit 5 - Bewertung 1
+            Unit 5 - Assessment 2:
+              name: Lerneinheit 5 - Bewertung 2
+            Unit 2 - Assessment 3:
+              name: Lerneinheit 2 - Bewertung 3
+            Unit 2 - Assessment 4:
+              name: Lerneinheit 2 - Bewertung 4
+            Unit 2 - Assessment 5 - Practice AP Pseudocode Questions:
+              name: Lerneinheit 2 - Bewertung 5 - Praxis AP Pseudocode-Fragen
         coursec-2018:
+          title: Kurs C (2018)
           assignment_family_title: Kurs C
+          description_audience: 'Alter: 6-10'
           stages:
             Building a Foundation:
               name: Grundlagen aufbauen
+            Programming in Collector:
+              name: Den Schatz mit Laurel sammeln
             'Loops: Getting Loopy':
               name: Schöne Schleifen
             'Events: The Big Event':
@@ -2140,12 +2725,16 @@ de:
             Functions with Parameters:
               name: Funktionen mit Parametern
         coursee-2018:
+          title: Kurs E (2018)
           assignment_family_title: Kurs E
+          description_audience: 'Alter: 8-12'
           stages:
             'Programming: My Robotic Friends':
               name: Meine Roboterfreunde
             Building a Foundation:
               name: Grundlagen aufbauen
+            Debugging with Scrat:
+              name: Debuggen mit Scrat
             Introduction:
               name: Einführung
             'Functions: Songwriting':
@@ -2159,12 +2748,18 @@ de:
             Minecraft Hour of Code:
               name: Minecraft Hour of Code
         coursef-2018:
+          title: Kurs F (2018)
           assignment_family_title: Kurs F
+          description_short: Lernen Sie alle Konzepte in den Grundlagen der Informatik
+            und erstellen Sie Ihre eigene Zeichnung, Geschichte oder Ihr eigenes Spiel.
+          description_audience: 'Alter: 9-13'
           stages:
             'Programming: My Robotic Friends':
               name: Meine Roboterfreunde
             Building a Foundation:
               name: Grundlagen aufbauen
+            Debugging with Scrat:
+              name: Debuggen mit Scrat
             Introduction:
               name: Einführung
             Ice Age Play Lab:
@@ -2178,35 +2773,67 @@ de:
             Conditionals with Cards:
               name: Bedingungen mit Karten
         csp1-2018:
+          title: CSP Lektion 1 - Das Internet ('18-'19)
           stages:
             Sending Binary Messages:
               name: Binäre Nachrichten senden
             Sending Binary Messages with the Internet Simulator:
               name: Binäre Nachrichten mit dem Internet-Simulator senden
+            Number Systems:
+              name: Zahlensystem
             Binary Numbers:
               name: Binärzahlen
             Sending Numbers:
               name: Zahlen senden
             The Internet:
               name: das Internet
+            The Need for Addressing:
+              name: Die Notwendigkeit von Addressierung
+            Routers and Redundancy:
+              name: Router und Redundanz
+        csd1-2018:
+          stages:
+            Intro to Problem Solving:
+              name: Einführung in die Problemlösung
+            Input and Output:
+              name: Ein- und Ausgabe
+            Processing:
+              name: Verarbeitung
+        csd4-2018:
+          stages:
+            User Interfaces:
+              name: Benutzeroberflächen
         csp2-2018:
+          title: CSP Lektion 2 - Digitale Informationen ('18-'19)
           stages:
             Bytes and File Sizes:
               name: Bytes und Dateigrößen
             Text Compression:
               name: Text-Kompression
+            Encoding B&W Images:
+              name: Schwarz-weiß Bilder kodieren
+            Encoding Color Images:
+              name: Farbbilder kodieren
+            Lossy Compression and File Formats:
+              name: Verlustreiche Kompression und Dateitypen
             Check Your Assumptions:
               name: Prüfe deine Voraussetzungen
             Creating Summary Tables:
               name: Zusammenfassungstabellen erstellen
         csp3-2018:
+          title: CSP Lektion 3 - Einführung in die Programmierung ('18-'19)
           description_short: Programmierung
           stages:
+            Using Simple Commands:
+              name: Einfache Befehle verwenden
             Creating Functions:
               name: Funktionen erstellen
+            Looping and Random Numbers:
+              name: Schleifen- und Zufallszahlen
             Creating Functions with Parameters:
               name: Funktionen mit Parametern erstellen
         csp4-2018:
+          title: CSP Lektion 4 - Big Data und Privatspäre ('18-'19)
           stages:
             What is Big Data?:
               name: Was ist Big Data?
@@ -2215,13 +2842,20 @@ de:
             Check Your Assumptions:
               name: Prüfe deine Voraussetzungen
         csp5-2018:
+          title: CSP Lektion 5 - Apps erstellen ('18-'19)
           stages:
+            Controlling Memory with Variables:
+              name: Speicher mit Variablen steuern
+            User Input and Strings:
+              name: Benutzereingaben und Zeichenketten
             While Loops:
               name: Solange-Schleifen
             Loops and Simulations:
               name: Schleifen und Simulationen
             Introduction to Arrays:
               name: Einführung in Arrays
+            Functions with Return Values:
+              name: Funktion mit Rückgabewerten
         csppostap-2018:
           stages:
             Creating Javascript Objects:
@@ -2232,13 +2866,52 @@ de:
               name: Datensätze aktualisieren
             Visualizing Data:
               name: Datensätze anzeigen
+            Sample Apps:
+              name: Beispielapps
             Final Project:
               name: Abschließende Herausforderung
             Check Your Assumptions:
               name: Prüfe deine Voraussetzungen
             Creating Summary Tables:
               name: Zusammenfassungstabellen erstellen
+        spritelab:
+          description_audience: Kurs E/F Schüler
+        csd-novice-18:
+          stages:
+            Welcome:
+              name: Willkommen
+            Tuesday:
+              name: Dienstag
+            Wednesday:
+              name: Mittwoch
+            Thursday:
+              name: Donnerstag
+        csd-apprentice-18:
+          stages:
+            Tuesday:
+              name: Dienstag
+            Wednesday:
+              name: Mittwoch
+            Thursday:
+              name: Donnerstag
+        csp-novice-18:
+          stages:
+            Tuesday:
+              name: Dienstag
+            Wednesday:
+              name: Mittwoch
+            Thursday:
+              name: Donnerstag
+        csp-apprentice-18:
+          stages:
+            Tuesday:
+              name: Dienstag
+            Wednesday:
+              name: Mittwoch
+            Thursday:
+              name: Donnerstag
         pre-express-2018:
+          description_audience: 'Alter: 4-8'
           stages:
             'Debugging: Unspotted Bugs':
               name: Unentdeckte Bugs
@@ -2246,16 +2919,26 @@ de:
               name: Stevie und das große Projekt
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-Life-Algorithmen: Pflanze Samen'
+            Loops in Collector:
+              name: Schleifen mit Laurel
             Spelling Bee:
               name: Buchstabierwettbewerb
             Move It, Move It:
               name: Bewegung, Bewegung
+            Sequencing with Scrat:
+              name: Sequenzen mit Scrat
             Your Digital Footprint:
               name: Dein digitaler Fußabdruck
+            Programming in Ice Age:
+              name: Programmieren mit Scrat
             Copyright and Creativity:
               name: Es ist großartig etwas zu erschaffen und fair zu spielen
+            Loops in Ice Age:
+              name: Schleifen mit Scrat
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie und das große Projekt
+        spritelab-simple:
+          description_audience: Kurs E/F Schüler
         frozen-2018:
           stages:
             Artist:
@@ -2286,12 +2969,17 @@ de:
             Dance Party:
               name: Tanzparty
         dance-extras:
-          title: Tanzt weiter
           description: Überschreite die erste Stunde mit erweiterten Projektideen.
         coursef-2019:
+          title: Kurs F (2019)
+          description_short: Lernen Sie alle Konzepte in den Grundlagen der Informatik
+            und erstellen Sie Ihre eigene Zeichnung, Geschichte oder Ihr eigenes Spiel.
+          description_audience: 'Alter: 9-13'
           stages:
             Building a Foundation:
               name: Grundlagen aufbauen
+            Debugging with Scrat:
+              name: Debuggen mit Scrat
             Conditionals with Cards:
               name: Bedingungen mit Karten
             Envelope Variables:
@@ -2309,6 +2997,8 @@ de:
             Dance Party:
               name: Tanzparty
         coursed-2019:
+          title: Kurs D (2019)
+          description_audience: 'Alter: 7-11'
           stages:
             'Algorithms: Graph Paper Programming':
               name: Programmieren auf Millimeterpapier
@@ -2319,8 +3009,16 @@ de:
                 Wettlauf mit der Zeit, wenn sich die Schüler zu Teams zusammen finden
                 und zusammenarbeiten, um ein Programm zu schreiben. Eine Anweisung
                 nach der anderen.
+            Debugging in Collector:
+              name: Debuggen mit Laurel
             Loops in Ice Age:
               name: Schleifen in Ice Age
+              description_student: In dieser Lektion wirst du den Wiederholungsbaustein
+                verwenden, um Scrat dabei zu helfen, die Eichel so effizient wie möglich
+                zu erreichen.
+              description_teacher: Als schnelles Update (oder Einführung) in die Verwendung
+                von Schleifen werden die Schüler in dieser Phase den Baustein `repeat`
+                verwenden, um Scrat effizienter an die Eichel zu bringen.
             Conditionals with Cards:
               name: Bedingungen mit Karten
             Digital Citizenship:
@@ -2332,9 +3030,13 @@ de:
             Dance Party:
               name: Tanzparty
         coursee-2019:
+          title: Kurs E (2019)
+          description_audience: 'Alter: 8-12'
           stages:
             Building a Foundation:
               name: Grundlagen aufbauen
+            Debugging with Scrat:
+              name: Debuggen mit Scrat
             Nested Loops:
               name: Verschachtelte Schleifen
             Conditionals with Cards:
@@ -2350,9 +3052,15 @@ de:
             Songwriting:
               name: Songschreiben
         express-2019:
+          title: Expresskurs (2019)
+          description_audience: 'Alter: 9-18'
           stages:
             Relay Programming:
               name: Relais-Programmierung
+            Debugging in Maze:
+              name: Debuggen mit Scrat
+            Programming in Collector:
+              name: Den Schatz mit Laurel sammeln
             Conditionals with Cards:
               name: Bedingungen mit Karten
             Envelope Variables:
@@ -2371,6 +3079,14 @@ de:
               name: Crowdsourcing
             Dance Party:
               name: Tanzparty
+        csd1-2019:
+          stages:
+            Intro to Problem Solving:
+              name: Einführung in die Problemlösung
+            Input and Output:
+              name: Ein- und Ausgabe
+            Processing:
+              name: Verarbeitung
         andrea-test:
           stages:
             'null':
@@ -2379,9 +3095,23 @@ de:
           title: Tanzt weiter
           description: Überschreite die erste Stunde mit erweiterten Projektideen.
         coursec-2019:
+          title: Kurs C (2019)
+          description_audience: 'Alter: 6-10'
           stages:
             'Real-life Algorithms: Paper Planes':
               name: 'Alltagsalgorithmen: Papierflieger'
+            Programming in Collector:
+              name: Den Schatz mit Laurel sammeln
+              description_student: Schreibe Algorithmen, um Laurel, die Abenteurerin,
+                zu helfen, viele Edelsteine zu sammeln!
+              description_teacher: In dieser Reihe von Rätseln werden die Studenten
+                ihr Verständnis von Algorithmen und Debugging weiterentwickeln. Mit
+                einem neuen Charakter, Laurel der Abenteurerin, werden die Schüler
+                sequentielle Algorithmen entwickeln, um Laurel dazu zu bringen, Schätze
+                zu sammeln, während sie einen Weg entlang geht.
+            Programming in Artist:
+              description_student: Erstelle schöne Bilder durch die Programmierung
+                des Zeichners.
             'Events: The Big Event':
               name: Der große Event
             Binary Bracelets:
@@ -2391,27 +3121,69 @@ de:
         gamelab:
           title: Spielelabor
         coursea-2019:
+          title: Kurs A (2019)
+          description_short: Eine Einführung in die Informatik für Leseanfänger.
+          description_audience: 'Alter: 4-7'
           stages:
             'Programming: Happy Maps':
               name: Glücklich Karten
             Going Places Safely:
               name: Sicher unterwegs
+            Loops in Collector:
+              name: Schleifen mit Laurel
+              description_student: Hilf Laurel, der Abenteurerin, den Schatz unter
+                Tage zu sammeln.
+            Loops in Ice Age:
+              name: Schleifen mit Scrat
+              description_student: Hilf Scrat, mehr Boden mit Hilfe von Schleifen
+                abzudecken.
+            Programming in Ice Age:
+              name: Programmieren mit Scrat
+              description_student: Schreibe Programme, die Scrat helfen, die Eichel
+                zu erreichen.
+              description_teacher: Unter Verwendung von Charakteren aus Ice Age entwickeln
+                die Schüler sequentielle Algorithmen, um Scrat von einer Seite eines
+                Labyrinths zur Eichel auf der anderen Seite zu bewegen. Dazu ordne
+                sie Codebausteinen in einer linearen Abfolge an, so dass sie sich
+                gerade bewegen, nach links oder rechts drehen.
+            Sequencing with Scrat:
+              name: Sequenzen mit Scrat
+              description_student: Programmiere Scrat, um die Eichel zu erreichen.
         courseb-2019:
+          title: Kurs B (2019)
+          description_audience: 'Alter: 5-8'
           stages:
             Move It, Move It:
               name: Bewegung, Bewegung
+            Sequencing with Scrat:
+              name: Sequenzen mit Scrat
             Your Digital Footprint:
               name: Dein digitaler Fußabdruck
             Loops in Ice Age:
               name: Schleifen in Ice Age
+            Loops in Collector:
+              name: Schleifen mit Laurel
+              description_student: Programmiere Laurel die Abenteurerin so, dass er
+                in einer offenen Höhle Schätze sammelt.
+              description_teacher: In dieser Lektion vertiefen die Schüler das Konzept
+                der Schleifen. Hier sammelt Laurel die Abenteurerin mit Schleifen
+                Schätze in offenen Höhlen. Ein neuer Block `sammle Schatz` wird eingeführt,
+                um ihr auf ihrer Reise zu helfen.
             'Loops: Getting Loopy':
               name: Schöne Schleifen
         pre-express-2019:
+          description_audience: 'Alter: 4-8'
           stages:
             Move It, Move It:
               name: Bewegung, Bewegung
+            Sequencing with Scrat:
+              name: Sequenzen mit Scrat
             Your Digital Footprint:
               name: Dein digitaler Fußabdruck
+            Loops in Ice Age:
+              name: Schleifen mit Scrat
+            Loops in Collector:
+              name: Schleifen mit Laurel
             Spelling Bee:
               name: Buchstabierwettbewerb
         removed19:
@@ -2420,6 +3192,8 @@ de:
               name: 'Real-Life-Algorithmen: Pflanze Samen'
         csd2-2019:
           stages:
+            Intro to HTML:
+              name: Einführung in HTML
             Digital Footprint:
               name: Digitaler Fußabdruck
             Lists:
@@ -2427,6 +3201,10 @@ de:
         csd3-2019:
           description_short: Programmierung
           stages:
+            Programming for Entertainment:
+              name: Programmieren zur Unterhaltung
+            Plotting Shapes:
+              name: Formen plotten
             Variables:
               name: Variablen
             Conditionals:
@@ -2435,6 +3213,10 @@ de:
               name: Geschwindigkeit
             Functions:
               name: Funktionen
+        csd4-2019:
+          stages:
+            User Interfaces:
+              name: Benutzeroberflächen
         csd6-2019:
           stages:
             Functions with Parameters:
@@ -2443,30 +3225,49 @@ de:
           stages:
             Surveys:
               name: Umfragen
+          title: CSP Lektion 4 Lotse - Variabeln, Bedingungen, and Funktionen
         csp1-2019:
+          title: CSP Lektion 1 - Das Internet ('19-'20)
           stages:
             Sending Binary Messages:
               name: Binäre Nachrichten senden
             Sending Binary Messages with the Internet Simulator:
               name: Binäre Nachrichten mit dem Internet-Simulator senden
+            Number Systems:
+              name: Zahlensystem
             Binary Numbers:
               name: Binärzahlen
             Sending Numbers:
               name: Zahlen senden
             The Internet:
               name: das Internet
+            The Need for Addressing:
+              name: Die Notwendigkeit von Addressierung
+            Routers and Redundancy:
+              name: Router und Redundanz
         csp2-2019:
+          title: CSP Lektion 2 - Digitale Informationen ('19-'20)
           stages:
             Bytes and File Sizes:
               name: Bytes und Dateigrößen
             Text Compression:
               name: Text-Kompression
+            Encoding B&W Images:
+              name: Schwarz-weiß Bilder kodieren
+            Encoding Color Images:
+              name: Farbbilder kodieren
         csp3-2019:
+          title: CSP Lektion 3 - Einführung in die Programmierung ('19-'20)
           description_short: Programmierung
           stages:
+            Using Simple Commands:
+              name: Einfache Befehle verwenden
             Creating Functions:
               name: Funktionen erstellen
+            Looping and Random Numbers:
+              name: Schleifen- und Zufallszahlen
         csp4-2019:
+          title: CSP Lektion 4 - Big Data und Privatspäre ('19-'20)
           stages:
             What is Big Data?:
               name: Was ist Big Data?
@@ -2475,13 +3276,20 @@ de:
             Simple Encryption:
               name: Einfache Verschlüsselung
         csp5-2019:
+          title: CSP Lektion 5 - Apps erstellen ('19-'20)
           stages:
+            Controlling Memory with Variables:
+              name: Speicher mit Variablen steuern
+            User Input and Strings:
+              name: Benutzereingaben und Zeichenketten
             While Loops:
               name: Solange-Schleifen
             Loops and Simulations:
               name: Schleifen und Simulationen
             Introduction to Arrays:
               name: Einführung in Arrays
+            Functions with Return Values:
+              name: Funktion mit Rückgabewerten
         csppostap-2019:
           stages:
             Creating Summary Tables:
@@ -2494,10 +3302,20 @@ de:
               name: Datensätze aktualisieren
             Visualizing Data:
               name: Datensätze anzeigen
+            Sample Apps:
+              name: Beispielapps
             Final Project:
               name: Abschließende Herausforderung
         csp1-pilot:
           stages:
+            Number Systems:
+              name: Zahlensystem
+            Black and White Images:
+              name: Schwarz/Weiß Bilder
+            Color Images:
+              name: Farbbilder
+            Welcome to CSP:
+              name: Willkommen bei CSP
             Sending Binary Messages:
               name: Binäre Nachrichten senden
             Sending Binary Messages with the Internet Simulator:
@@ -2512,23 +3330,68 @@ de:
               name: Bedingungen mit Karten
             Building a Foundation:
               name: Grundlagen aufbauen
+            Debugging with Scrat:
+              name: Debuggen mit Scrat
+        csp2-pilot-staging:
+          title: 'Lektion 2: Das Internet'
+        csp3-pilot-staging:
+          stages:
+            'Project: Designing an App pt. 1':
+              name: 'Projekt: Erstellen einer App (Teil 1)'
+            'Project: Designing an App pt. 2':
+              name: 'Projekt: Erstellen einer App (Teil 2)'
+            Project - Designing an App Part 1:
+              name: 'Projekt: Erstellen einer App (Teil 1)'
+            Project - Designing an App Part 2:
+              name: 'Projekt: Erstellen einer App (Teil 2)'
+            Project - Designing an App Part 3:
+              name: 'Projekt: Erstellen einer App (Teil 3)'
+            The Need for Programming Languages:
+              name: Die Notwendigkeit für Programmiersprachen
         csp7-pilot-staging:
           stages:
             Libraries:
               name: Bibliotheken
+          title: 'Lektion 7: Funktionen und Bibliotheken'
+        csp9-pilot-staging:
+          title: 'Lektion 9: Daten'
         express-2018-vn:
           stages:
             Graph Paper Programming:
               name: Programmieren auf Millimeterpapier
+        csp5-pilot:
+          title: CSP Lektion 5 Lotse - Listen, Schleifen, and Verfahren
+        csd1-pilot:
+          stages:
+            Intro to Problem Solving:
+              name: Einführung in die Problemlösung
+            Input and Output:
+              name: Ein- und Ausgabe
+            Processing:
+              name: Verarbeitung
         csd2-pilot:
           stages:
+            Intro to HTML:
+              name: Einführung in HTML
             Digital Footprint:
               name: Digitaler Fußabdruck
             Lists:
               name: Listen
+            Project - Building a Webpage:
+              name: Projekt - Erstellung einer Webseite
+            Images:
+              name: Bilder
+            Exploring Web Pages:
+              name: Erkunde Webseiten
+            Linking Pages:
+              name: Verknüpfe Seiten
         csd3-pilot:
           description_short: Programmierung
           stages:
+            Programming for Entertainment:
+              name: Programmieren zur Unterhaltung
+            Plotting Shapes:
+              name: Formen plotten
             Variables:
               name: Variablen
             Conditionals:
@@ -2541,10 +3404,34 @@ de:
               name: Zufällige Zahlen
             Sprite Properties:
               name: Sprite Eigenschaften
+        csp3-pilot:
+          stages:
+            Project - Designing an App Part 1:
+              name: 'Projekt: Erstellen einer App (Teil 1)'
+            Project - Designing an App Part 2:
+              name: 'Projekt: Erstellen einer App (Teil 2)'
+            Project - Designing an App Part 3:
+              name: 'Projekt: Erstellen einer App (Teil 3)'
+            The Need for Programming Languages:
+              name: Die Notwendigkeit für Programmiersprachen
         csl-vn:
           stages:
+            Sequencing with Scrat:
+              name: Sequenzen mit Scrat
             Loops in Ice Age:
               name: Schleifen in Ice Age
+        csd4-pilot:
+          stages:
+            Input and Output:
+              name: Ein- und Ausgabe
+            Processing:
+              name: Verarbeitung
+        csp2-pilot:
+          stages:
+            Routers and Redundancy:
+              name: Router und Redundanz
+            The Need for Addressing:
+              name: Die Notwendigkeit von Addressierung
         peru-2019:
           stages:
             Introduction:
@@ -2557,3 +3444,41 @@ de:
               name: Tanzparty
           description: Codiere deine eigene Tanzparty, um sie mit deinen Freunden
             zu teilen!
+        k5-onlinepd-2019:
+          stages:
+            Getting Started:
+              name: Erste Schritte
+            Computer Science Fundamentals:
+              name: Informatik Grundlagen
+            Looking Ahead:
+              name: Nach vorne schauen
+            Planning:
+              name: Planung
+            Next Steps:
+              name: Nächste Schritte
+            Loops:
+              name: Schleifen
+            Conditionals:
+              name: Bedingungen
+            Events:
+              name: Ereignisse
+            Functions:
+              name: Funktionen
+            Variables:
+              name: Variablen
+            For Loops:
+              name: '"Zähle mit"-Schleifen'
+        dance-extras-2019:
+          description: Überschreite die erste Stunde mit erweiterten Projektideen.
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Bedingungen
+            Simon Says:
+              name: Simon sagt
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Bedingungen mit Karten

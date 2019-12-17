@@ -1,6 +1,5 @@
 ---
 title: Hela skolans medverkan
-layout: wide
 ---
 
 {{ signup_button }}

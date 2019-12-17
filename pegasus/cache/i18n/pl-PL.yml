@@ -12,7 +12,7 @@ pl-PL:
   upgrade_ie_link: Dowiedz się więcej
   en: Informatyka
   computer_science_edweek: Tydzień Edukacji Informatycznej
-  csedweek_dates: 8-14 grudnia 2014
+  csedweek_dates: 3-9 grudnia 2018
   csedweek_banner_hoc: 'Zbliża się <a href="http://hourofcode.com" style="color: white;
     text-decoration:underline; font-weight:bold"> Godzina Kodowania (Hour of Code)</a>.
     Zapraszamy wszystkich nauczycieli i organizatorów, <a href="http://hourofcode.com"
@@ -43,12 +43,11 @@ pl-PL:
   og_description: Każdy uczeń w każdej szkole zasługuje, by mieć szansę uczyć się
     informatyki.
   csedweek_og_title: Zbliża się Godzina Kodowania
-  csedweek_og_description: 4-10 grudnia 2017. Informatyka jest podstawą w nauce każdego
-    ucznia.
-  csedweek_og_description_soon: Godzina Kodowania zaczyna się 4 grudnia 2017 i trwa
-    do 10 grudnia 2017. Informatyka jest podstawą w nauce każdego ucznia.
+  csedweek_og_description: Informatyka jest podstawą w kształceniu każdego ucznia.
+  csedweek_og_description_soon: Godzina Kodowania nadchodzi 3-9 grudnia 2018, Informatyka
+    jest podstawą w kształceniu każdego ucznia.
   csedweek_og_description_here: Oto Godzina Kodowania. Informatyka jest podstawą w
-    nauce każdego ucznia.
+    kształceniu każdego ucznia.
   hoc2014_heading: Dołącz do <a href="http://hourofcode.com"> Godziny Kodowania (Hour
     of Code)</a> <br/> 8-14 grudnia 2014 r. <br/>
   hoc2014_students: Uczniowie
@@ -261,8 +260,8 @@ pl-PL:
   continue_learning_header: Kontynuuj naukę poza Godziną Kodowania
   continue_learning_body: Jest wiele opcji; możesz się uczyć online, w lokalnej szkole
     albo na obozie letnim.
-  learn_code_studio: Spróbuj kursy w Code Studio
-  learn_next_level: Wypróbuj inny kurs w Code Studio
+  learn_code_studio: Spróbuj kursy w Code.org
+  learn_next_level: Wypróbuj inny kurs w Code.org
   learn_online: Wypróbuj inne kursy online
   learn_classes: Znajdź grupę w swoim otoczeniu
   learn_back_to_minecraft: Ucz się z Minecraftem
@@ -308,7 +307,7 @@ pl-PL:
   stats_michael: '"<b>Nigdy</b> nie widziałem moich uczniów tak podekscytowanych nauką."
     - Frank Martinez, nauczyciel'
   studiobar_title: Wykorzystaj <a href='http://studio.code.org'> Studio Kodowania</a>
-  studiobar_title_nolink: Wykorzystaj Studio Kodowania
+  studiobar_title_nolink: Poznaj Kursy Code.org
   studiobar_elementary_title: Kursy podstawowe
   studiobar_elementary_body: Nasze trzy nowe kursy dla K &#8209;5
   studiobar_dance_title: Potańcówka
@@ -318,14 +317,14 @@ pl-PL:
   studiobar_flappy_title: Flappy Code
   studiobar_flappy_body: Utwórz i udostępnij swoją grę Flappy'ego
   studiobar_teacher_title: Dla nauczycieli
-  studiobar_teacher_body: Wprowadź Code Studio (Studio Kodowania) w swojej klasie
+  studiobar_teacher_body: Wprowadź Code.org w swojej klasie
   studiobar_frozen_title: Godzina Kodowania
   studiobar_frozen_body: Twórz z Anną i Elsą zimową krainę czarów
   studiobar_donate_title: Podaruj
   studiobar_donate_body: Jedno dziecko się uczy za każdego dolara, który podarujesz
   studiobar_shop_title: Sklep
   studiobar_shop_body: Łam stereotypy. Noś nasze logo z dumą.
-  homepage_stats_students: amerykańskich studentów mają konta na Code.org
+  homepage_stats_students: amerykańskich studentów ma konta na Code.org
   homepage_stats_female: naszych studentów to kobiety
   homepage_stats_teachers: nauczyciele korzystają z Code.org
   homepage_hero_text_malala: "&ldquo;Wzywam dziewczęta z wszystkich krajów do nauki
@@ -364,11 +363,11 @@ pl-PL:
     nauczyciel"
   homepage_hero_text_teacher2: "&ldquo;Ten program zainteresował i zaangażował do
     \nuczestnictwa 100% moich uczniów.&rdquo;\nAdam, nauczyciel"
-  homepage_hero_text_stat_loc: 2,5 mln dziewcząt uczy się w Code Studio
-  homepage_hero_text_stat_students: "#student_count kont uczniów w Studio Kodowania"
+  homepage_hero_text_stat_loc: 2,5 mln dziewcząt zapisało się, aby uczyć się na Code.org
+  homepage_hero_text_stat_students: "#student_count kont uczniów na Code.org"
   homepage_hero_text_stat_served: 'Godzina Kodowania: #served uczestników'
   homepage_hero_hoc_is_coming: Zbliża się Godzina Kodowania
-  homepage_hero_hoc_is_here: Zbliża się Godzina Kodowania
+  homepage_hero_hoc_is_here: Godzina Kodowania jest tutaj
   homepage_slot_text_hoc: Godzina Kodowania
   homepage_slot_text_frozen: Kraina Lodu z Anną i Elsą
   homepage_slot_text_teacher: Panel nauczyciela
@@ -434,7 +433,7 @@ pl-PL:
   homepage_slot_text_link_buy: Angażuj się
   homepage_slot_text_link_donate: Ofiaruj darowiznę
   homepage_slot_text_link_shop: Koszulki, czapki i inne
-  homepage_slot_text_link_administrators: Wprowadź w swojej szkole lub odwodzie
+  homepage_slot_text_link_administrators: Wprowadź informatykę do swojej szkoły
   homepage_gallery_header: Utworzono ponad %{project_count} mln projektów w Code.org
   homepage_header_donors: Code.org dziękuje za wsparcie
   homepage_donors_seall: Zobacz wszystkich
@@ -663,7 +662,7 @@ pl-PL:
   volunteer_engineer_submission_field_location_desc: Jeśli podasz swój dokładny adres,
     nie udostępnimy go, posłuży do pokazania na mapie Twojego miejsca.
   volunteer_engineer_submission_field_location_placeholder: Kod pocztowy, miasto i
-    województwo/kraj lub ulica
+    województwo/kraj
   volunteer_engineer_submission_field_location_flexibility: Służę pomocą w czasie
     Godziny Kodowania... (wybierze wszystko, co Ci odpowiada)
   volunteer_engineer_submission_checkbox_after_hoc: Jestem zainteresowany wolontariatem
@@ -942,7 +941,7 @@ pl-PL:
   dashboard_students_new_section: Utworzyłeś nową sekcję! Teraz dodaj swoich uczniów
     posługując się przyciskami <b>Dodaj ucznia</b> i <b>Dodaj wielu studentów</b>
     powyżej.
-  dashboard_students_name: Nazwa
+  dashboard_students_name: 'Nazwisko: '
   dashboard_students_progress: Postęp
   dashboard_students_male: Mężczyzna
   dashboard_students_female: Kobieta
@@ -997,6 +996,7 @@ pl-PL:
   dashboard_coursed: 'Kurs D: '
   dashboard_coursee: 'Kurs E: '
   dashboard_coursef: 'Kurs F: '
+  dashboard_express: 'Szybki Kurs: '
   dashboard_unplugged: Jeśli nie masz komputerów, <a href='%{unplugged_url}'> spróbuj
     tych lekcji bez komputera</a> w klasie.
   dashboard_tools: 'Narzędzia: '
@@ -1015,7 +1015,7 @@ pl-PL:
   dashboard_teacher_worksheet: arkusz nauczyciela
   dashboard_curriculum_csina: 'Informatyka w algebrze:'
   dashboard_curriculum_csins: 'Informatyka w przyrodzie:'
-  dashboard_curriculum_csp: 'AP ® Podstawy Informatyki:'
+  dashboard_curriculum_csp: 'Podstawy informatyki:'
   dashboard_curriculum_ecs: 'Poznawanie informatyki:'
   dashboard_curriculum_csd: 'Odkrycia Informatyczne: '
   dashboard_grade_k: K
@@ -1110,19 +1110,18 @@ pl-PL:
   carousel_heading_beginners: Samouczki partnerów dla uczniów z K-8
   carousel_heading_beyond_beginners: Samouczki dla początkujących
   carousel_heading_javascript: Samouczki partnerów do nauki JavaScript
-  carousel_heading_beyond_javascript: Samouczki uczące JavaScript
+  carousel_heading_beyond_javascript: Poznaj JavaScript
   carousel_heading_unplugged: Nie masz komputera lub dostępu do Internet? Poznaj informatykę
     "unplugged", czyli informatykę bez komputera
   carousel_heading_devices: Aplikacje z samouczkami partnerów dla telefonów komórkowych
     i tabletów
-  carousel_heading_beyond_devices: Aplikacje z samouczkami dla telefonów komórkowych
-    i tabletów
+  carousel_heading_beyond_devices: Aplikacje z dla telefonów komórkowych i tabletów
   carousel_heading_languages: Samouczki partnerów dla innych języków programowania
-  carousel_heading_beyond_languages: Samouczki dla innych języków programowania
+  carousel_heading_beyond_languages: Poznaj inne języki programowania
   carousel_heading_apps_games: Utwórz własną aplikację lub grę
   carousel_heading_university: Uniwersyteckie kursy online
   carousel_heading_webpages: Naucz się tworzyć strony internetowe
-  carousel_heading_robots: Naucz się programować roboty
+  carousel_heading_robots: Naucz się programować roboty i inne urządzenia
   carousel_heading_ide: Platformy popularne wśród nauczycieli
   carousel_heading_desktop: Naucz się kodować na komputerze
   carousel_heading_mobtabelem: Dla telefonów i tabletów
@@ -1216,9 +1215,16 @@ pl-PL:
   coursee_name: Kurs E
   coursef-draft_name: Kurs F
   coursef_name: Kurs F
+  coursea-2017_name: Kurs A (2017)
+  courseb-2017_name: Kurs B (2017)
+  coursec-2017_name: Kurs C (2017)
+  coursed-2017_name: Kurs D (2017)
+  coursee-2017_name: Kurs E (2017)
+  coursef-2017_name: Kurs F (2017)
+  express-2018_name: Szybki Kurs (2018)
   accelerated_name: Przyspieszony kurs
   20-hour_name: Przyspieszony kurs
-  algebra_name: Informatyka w algebrze
+  algebra_name: Pełny kurs Informatyka w algebrze
   AlgebraA_name: Informatyka w Kursie A Algebry
   AlgebraB_name: Informatyka w Kursie B Algebry
   gumball_name: Gumball
@@ -1291,30 +1297,30 @@ pl-PL:
   course2_gradelevel: W wieku 6-18
   course3_gradelevel: Wiek 8-18
   course4_gradelevel: W wieku 10-18
-  coursea_gradelevel: Klasa 5+
-  courseb_gradelevel: Klasy 6+
-  coursec_gradelevel: Klasy 7+
+  coursea_gradelevel: W wieku 4-7
+  courseb_gradelevel: W wieku 5-8
+  coursec_gradelevel: W wieku 6-10
   coursed_gradelevel: Klasa 8+
   coursee_gradelevel: Klasy 1+ szkół średnich
-  coursef_gradelevel: Klasy 2+ szkół średnich
-  coursea-2017_gradelevel: Klasa 5+
-  courseb-2017_gradelevel: Klasy 6+
-  coursec-2017_gradelevel: Klasy 7+
+  coursef_gradelevel: W wieku 9-13
+  coursea-2017_gradelevel: W wieku 4-7
+  courseb-2017_gradelevel: W wieku 5-8
+  coursec-2017_gradelevel: W wieku 6-10
   coursed-2017_gradelevel: Klasa 8+
   coursee-2017_gradelevel: W wieku 8-12
-  coursef-2017_gradelevel: Klasy 2+ szkół średnich
-  coursea-2018_gradelevel: Klasa 5+
-  courseb-2018_gradelevel: Klasy 6+
-  coursec-2018_gradelevel: Klasy 7+
+  coursef-2017_gradelevel: W wieku 9-13
+  coursea-2018_gradelevel: W wieku 4-7
+  courseb-2018_gradelevel: W wieku 5-8
+  coursec-2018_gradelevel: W wieku 6-10
   coursed-2018_gradelevel: Klasa 8+
   coursee-2018_gradelevel: W wieku 8-12
-  coursef-2018_gradelevel: Klasy 2+ szkół średnich
-  coursea-2019_gradelevel: Klasa 5+
-  courseb-2019_gradelevel: Klasy 6+
-  coursec-2019_gradelevel: Klasy 7+
+  coursef-2018_gradelevel: W wieku 9-13
+  coursea-2019_gradelevel: W wieku 4-7
+  courseb-2019_gradelevel: W wieku 5-8
+  coursec-2019_gradelevel: W wieku 6-10
   coursed-2019_gradelevel: Klasa 8+
   coursee-2019_gradelevel: W wieku 8-12
-  coursef-2019_gradelevel: Klasy 2+ szkół średnich
+  coursef-2019_gradelevel: W wieku 9-13
   accelerated_gradelevel: W wieku 10-18
   codeorg_platformtext: Nowoczesne przeglądarki, smartfony, tablety
   codeintl_platformtext: Nowoczesne przeglądarki, smartfony, tablety
@@ -2093,8 +2099,8 @@ pl-PL:
   view_all_sections: Zobacz Wszystkie Sekcje
   view_section: Zobacz Sekcję
   view_named_section: Zobacz %{section_name}
-  privacy_doc_explanation: Kliknij tutaj, aby zobaczyć naszą politykę prywatności,
-    którą będzie można udostępnić lub wydrukować dla uczniów.
+  privacy_doc_explanation: Kliknij tutaj po nasz dokument dotyczący prywatności, który
+    możesz udostępnić lub wydrukować dla swoich uczniów.
   signing_in: Logowanie
   sign_in_overview: 'Twoi uczniowie mogą zalogować się do swoich kont Code.org, wykonując
     następujące kroki:'
@@ -2103,8 +2109,8 @@ pl-PL:
   sign_in_instruct_name: Niech wybiorą nazwę do wyświetlenia.
   sign_in_instruct_secret: Niech wybiorą sekret %{secret}.
   sign_in_instruct_button: Niech klikną przycisk &ldquor;Zaloguj&rdquo;.
-  sign_in_overview_cards: Uczniowie mogą znaleźć wszystkie te informacje, wliczając
-    ich sekret %{secret}, na poniższych kartach logowania.
+  sign_in_overview_cards: Uczniowie mogą znaleźć wszystkie te informacje, w tym ich
+    sekret %{secret}, na poniższych kartach logowania.
   reset_student_password: Resetowanie haseł uczniów
   reset_student_password_instructions: Możesz zresetować sekret <word/picture> dla
     dowolnego z twoich uczniów udając się do karty &ldquor;Zarządzaj uczniami&rdquo;
@@ -2112,7 +2118,7 @@ pl-PL:
     a następnie klikając przycisk &ldquor;Resetuj sekret&rdquo;.
   login_cards: Karty Logowania
   print_login_cards: Wydrukuj karty logowania
-  joining_section: Dołączanie do twojej sekcji (tylko raz)
+  joining_section: Dołączanie do Twojej sekcji (tylko raz)
   joining_section_overview: Jeśli uczeń jeszcze nie dołączył do twojej sekcji, poproś
     go/ją o wykonanie następujących kroków. Zauważ, że muszą to zrobić tylko raz.
     Dołączając do twojej sekcji uczniowie będą mogli zobaczyć przypisany im kurs,
@@ -2124,8 +2130,8 @@ pl-PL:
   joining_section_instruct_account: Niech zalogują się do ich konta Code.org.
   joining_section_instruct_code: 'Niech przejdą do %{code_org_url} i wpiszą ich kod
     sekcji: %{section_code}.'
-  joining_section_instruct_button: Gdy nacisną przycisk &ldquor;Dalej&rdquo;, powinni
-    być dodani do twojej sekcji.
+  joining_section_instruct_button: Gdy nacisną przycisk &ldquor; Dalej&rdquo;, powinni
+    być dodani do Twojej sekcji.
   signing_in_single_instruct: Twoi uczniowie mogą zalogować się do swoich kont Code.org
     udając się na https://code.org/ i klikając na przycisk &ldquor;Zaloguj&rdquo;
     w prawym górnym rogu.
@@ -2134,7 +2140,7 @@ pl-PL:
     Facebook, Microsoft lub konto Clever), możesz zresetować jego/jej hasło udając
     się do karty &ldquor;Zarządzaj uczniami&rdquo; dla sekcji i klikając przycisk
     &ldquor;Resetuj hasło&rdquo; pod kolumną &ldquor;Hasło&rdquo;.
-  syncing_students: Synchronizowanie twoich studentów
+  syncing_students: Synchronizowanie Twoich studentów
   syncing_students_instructions: Jeśli lista uczniów w twojej sekcji Code.org kiedykolwiek
     się zdezaktualizuje w stosunku do Google Classroom, kliknij na przycisk &ldquor;Zsynchronizuj
     uczniów z Google Classroom&rdquo; na karcie &ldquor;Zarządzaj studentami&rdquor;.
@@ -2158,14 +2164,17 @@ pl-PL:
   hoc_overview_dance_title: Potańcówka
   hoc_overview_dance_subtitle: Zakoduj potańcówkę, aby podzielić się nią ze znajomymi.
     Występują Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara i 25 innych!
+  hoc_overview_dance_2019_subtitle: 'Koduj Potańcówkę, aby podzielić się ze znajomymi.
+    Występują: Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers,
+    Nicki Minaj i 34 innych!'
   hoc_overview_title: Aktywności Godziny Kodowania z Code.org
   hoc_overview_subtitle: <a href="https://hourofcode.com"> Godzina Kodowania (Hour
-    of Code) </a> to globalna inicjatywa docierająca do dziesiątek milionów studentów
+    of Code) </a> to globalna inicjatywa docierająca do dziesiątek milionów uczniów
     w ponad 180 krajach. Każdy, gdziekolwiek, może zorganizować wydarzenie Godziny
-    Kodowania lub wypróbować ponad 200 godzinnych samouczków dostępnych w ponad 45
+    Kodowania lub wypróbować ponad 500 godzinnych samouczków dostępnych w ponad 45
     językach.
   hoc_overview_partner_activities_title: Więcej aktywności od naszych partnerów
-  hoc_overview_partner_activities_body: Strona Godziny Kodowania zawiera ponad 100
+  hoc_overview_partner_activities_body: Strona Godziny Kodowania zawiera ponad 500
     aktywności informatycznych opracowanych przez Code.org i naszych partnerów dla
     osób w każdym wieku i na każdym poziomie.
   hoc_overview_partner_activities_link: Zobacz aktywności
@@ -2186,6 +2195,8 @@ pl-PL:
   hoc2018_creativity_courses: Przejdź dalej z kursami Code.org
   hoc2018_creativity_courses_link: Przejdź dalej z kursami <a href="https://studio.code.org/courses">Code.org
     courses</a>
+  hoc2018_homepage: Zapisz swoją klasę, aby wypróbować jedną z ponad 150 NOWYCH aktywności
+    w Godzinie Kodowania (3-9 grudnia)!
   hoc2018_mc_page_title: Samouczki Minecrafta w Godzinie Kodowania
   hoc2018_mc_details: Wiele języków | Nowoczesne przeglądarki i tablety | Klasy 2
     +
@@ -2196,6 +2207,7 @@ pl-PL:
   hoc2018_mc_aquatic_title: 'Minecraft: Wodna podróż'
   hoc2018_mc_aquatic_description: Minecraft powraca na Godzinę Kodowania z najnowszą
     serią zadań! Koduj podróżując po świecie Minecraftu.
+  hoc2019_mc_aquatic_description: Eksploruj i buduj podwodne światy za pomocą kodu.
   hoc2018_mc_hero_title: 'Minecraft: Podróż Bohatera'
   hoc2018_mc_hero_description: Minecraft powraca na Godzinę Kodowania z najnowszą
     serią zadań! Koduj podróżując po świecie Minecraftu.
@@ -2329,8 +2341,28 @@ pl-PL:
     wykorzystania ich muzyki przez Code.org.\n\n"
   hoc2018_dance_measure: Takt
   hoc2018_dance_measure_colon: 'Takt:'
+  hoc2018_aquatic_video1: Wodna Podróż z Minecraftem - Wprowadzenie
+  hoc2018_aquatic_video2: Wodna podróż z Minecraftem - Pętle
+  hoc2018_aquatic_video3: Wodna Podróż z Minecraftem - Warunki
+  hoc2018_aquatic_video4: Wodna Podróż Minecrafta - Gratulacje
   hoc2018_dance_video1: Potańcówka - Wprowadzenie
   hoc2018_dance_video2: Potańcówka - Zdarzenia
   hoc2018_dance_video3: Potańcówka - Właściwości
   hoc2018_dance_video4: Potańcówka - Gratulacje
+  page_not_found_title: Strona nie została znaleziona
+  page_not_found_header: '404: Strona nie została znaleziona'
+  page_not_found_button: Powrót do strony domowej
   hoc2018_mc_with_microsoft: 'W partnerstwie z: '
+  hoc2018_mc_thank_microsoft: Dziękujemy Microsoft za wspieranie naszej wizji i misji,
+    aby zapewnić, że każde dziecko ma możliwość nauki informatyki i umiejętności,
+    by odnieść sukces w XXI wieku.
+  hoc2019_mc_mee_title: Sztuczna inteligencja z Minecraftem na dobre
+  hoc2019_mc_mee_description1: 'Nowy samouczek dla Minecraftu w ramach Godziny Kodowania
+    jest teraz dostępny w Minecraft: Education Edition dla Windows, Mac i iPad. Naucz
+    się podstaw programowania i odkrywaj sztuczną inteligencję ze swoimi uczniami!'
+  hoc2019_mc_mee_description2: 'Uzyskaj dostęp do bezpłatnych zasobów, w tym: planu
+    lekcji, filmów, programu informatyki i szkoleń dla nauczycieli.'
+  hoc2019_mc_more_coding_resources: Więcej zasobów do kodowania
+  hoc2019_dance_previous_versions: "Czy szukasz poprzedniej wersji Potańcówki?  \nKliknij
+    tutaj, aby zacząć [Część 1](%{dance_2018_link}) i [Część  2](%{dance_extras_2018_link})
+    z ostatniego roku."

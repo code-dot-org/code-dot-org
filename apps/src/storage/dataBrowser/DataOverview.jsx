@@ -4,7 +4,7 @@
  * a new data table.
  */
 import AddTableListRow from './AddTableListRow';
-import {DataView} from '../constants';
+import {DataView, WarningType} from '../constants';
 import EditLink from './EditLink';
 import EditTableListRow from './EditTableListRow';
 import FirebaseStorage from '../firebaseStorage';
@@ -63,14 +63,15 @@ class DataOverview extends React.Component {
       () => this.props.onViewChange(DataView.TABLE, tableName),
       error => {
         if (
-          typeof error === 'string' &&
-          (error.includes('maximum number of tables') ||
-            error.includes('The table name is invalid') ||
-            error.includes('The table was renamed'))
+          error.type &&
+          (error.type === WarningType.MAX_TABLES_EXCEEDED ||
+            error.type === WarningType.TABLE_NAME_INVALID ||
+            error.type === WarningType.TABLE_RENAMED ||
+            error.type === WarningType.DUPLICATE_TABLE_NAME)
         ) {
-          this.props.onShowWarning(error);
+          this.props.onShowWarning(error.msg);
         } else {
-          console.warn(error);
+          console.warn(error.msg ? error.msg : error);
         }
       }
     );

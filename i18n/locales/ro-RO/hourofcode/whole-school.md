@@ -1,6 +1,5 @@
 ---
 title: Participarea intregii scoli
-layout: wide
 ---
 
 {{ signup_button }}

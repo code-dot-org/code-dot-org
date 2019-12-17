@@ -760,6 +760,77 @@ $default-modal-width: 640px;
   margin: 0;
 }
 
+.video-player-rounded-corners {
+  border-radius: 10px;
+  border-width: 0;
+}
+
+.video-player-full-width {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.video-content-full-width {
+  position: relative;
+  // Specifically supports 16x9 aspect ratio
+  padding-top: 56.25%;
+}
+
+@media screen and (max-height: 1330px) {
+  .standalone-video-full-width {
+    max-width: 1973px;
+  }
+}
+@media screen and (max-height: 1240px) {
+  .standalone-video-full-width {
+    max-width: 1813px;
+  }
+}
+@media screen and (max-height: 1150px) {
+  .standalone-video-full-width {
+    max-width: 1653px;
+  }
+}
+@media screen and (max-height: 1060px) {
+  .standalone-video-full-width {
+    max-width: 1493px;
+  }
+}
+@media screen and (max-height: 970px) {
+  .standalone-video-full-width {
+    max-width: 1333px;
+  }
+}
+@media screen and (max-height: 880px) {
+  .standalone-video-full-width {
+    max-width: 1173px;
+  }
+}
+@media screen and (max-height: 790px) {
+  .standalone-video-full-width {
+    max-width: 1013px;
+  }
+}
+@media screen and (max-height: 700px) {
+  .standalone-video-full-width {
+    max-width: 853px;
+  }
+}
+@media screen and (max-height: 610px) {
+  .standalone-video-full-width {
+    max-width: 693px;
+  }
+}
+
+.buttons-right-aligned {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: -44px;
+}
+
 .fallback-video-player-failed {
   video, div {
     visibility: hidden;
@@ -1508,6 +1579,10 @@ a.download-video {
   .finish-signup {
     width: 800px;
   }
+  /* FND-893 - Stop using markdown in <Label>s*/
+  .finish-signup #instructions p {
+    display: inline;
+  }
 
   .signup, .finish-signup {
     $school-info-background: #f7f7f7;
@@ -1622,7 +1697,7 @@ a.download-video {
 
   // OLD SIGN-UP FORM
   .signupform {
-    padding: 20px;
+    padding: 20px 0;
     margin-bottom: 0;
   }
   .itemblock {
@@ -1632,14 +1707,10 @@ a.download-video {
       margin-top: -4px;
       margin-right: 4px;
     }
-
-    label {
-      display: inline-block;
-    }
   }
   .labelblock {
     display: table-cell;
-    width: 140px;
+    width: 180px;
     vertical-align: middle;
   }
   .labelblock-wide {
@@ -1659,7 +1730,25 @@ a.download-video {
     margin-bottom: 5px;
     margin-top: 5px;
   }
-  .terms-checkbox, .race-checkbox {
+
+  /* FND-893 - Stop using markdown in <Label>s*/
+  label.terms {
+    font-size: inherit;
+    line-height: inherit;
+  }
+  .terms-text {
+    overflow: hidden;
+  }
+  .terms-text p {
+    display: inline;
+    margin: 0;
+  }
+  .terms-checkbox {
+    margin: 0 5px 0 0;
+    float: left;
+  }
+
+  .race-checkbox {
     margin: 0 5px 2px 0;
   }
   .right {
@@ -2184,6 +2273,9 @@ a.download-video {
     display: inline-block;
   }
 
+  &-full-width {
+    width: unset;
+  }
 }
 
 .multi #markdown.teacher {
@@ -2936,6 +3028,17 @@ $width: 400px;
   box-shadow: 0 0 7px 2px $shadow;
 }
 
+#assumed_identity_tag {
+  position: fixed;
+  top: 0;
+  right: 0;
+  color: $white;
+  background-color: $red;
+  padding: 3px;
+  z-index: 200;
+  box-shadow: 0 0 7px 2px $shadow;
+}
+
 #level-body {
   height: 100%;
 }
@@ -3160,7 +3263,7 @@ h2.danger {
 
   .logo {
     max-width: 235px;
-    max-height: 64px;
+    max-height: 128px;
     display: inline-block;
     margin-left: 20px;
     margin-right: 20px;

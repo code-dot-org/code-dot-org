@@ -1,7 +1,5 @@
 ---
 title: රාජ්‍ය නිලධාරින් සඳහා උපදෙස්
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

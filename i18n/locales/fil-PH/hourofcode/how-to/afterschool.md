@@ -1,7 +1,5 @@
 ---
 title: Paano-gawin na Gabay
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
@@ -81,6 +79,6 @@ I-kick off ang iyong Hour of Code sa pamamagitan ng pagpukaw sa mga kalahok at p
 
 ## Ano ang susunod pagkatapos ng Hour of Code?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](%= codeorg_url('/learn/beyond') %)!
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](/beyond)!
 
 {{ signup_button }}

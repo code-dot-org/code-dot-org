@@ -53,9 +53,9 @@ ur:
             The Maze:
               name: بھول بھلیا
         events:
-          title: موقعے
-          description: موقعے
-          description_short: موقعے
+          title: ایونٹس/واقعات
+          description: ایونٹس/واقعات
+          description_short: ایونٹس/واقعات
         algebraPD:
           stages:
             Teacher Dashboard:
@@ -97,13 +97,13 @@ ur:
         gradeKinder:
           stages:
             Events:
-              name: موقعے
+              name: ایونٹس/واقعات
             Loops:
               name: لوپس
         grade1:
           stages:
             Events:
-              name: موقعے
+              name: ایونٹس/واقعات
             Loops:
               name: لوپس
         csd3-2017:
@@ -117,7 +117,7 @@ ur:
             Conditionals:
               name: شرائط
             Events:
-              name: موقعے
+              name: ایونٹس/واقعات
             Loops:
               name: لوپس
             Variables:
@@ -242,20 +242,41 @@ ur:
           stages:
             Envelope Variables:
               name: لفافہ متغیرات
+        dance:
+          stages:
+            Dance Party:
+              name: ڈانس پارٹی
+          title: ڈانس پارٹی
+        dance--draft:
+          stages:
+            Dance Party:
+              name: ڈانس پارٹی
+        dance-draft:
+          stages:
+            Dance Party:
+              name: ڈانس پارٹی
         coursef-2019:
           stages:
             Envelope Variables:
               name: لفافہ متغیرات
             The Artist:
               name: مصور
+        dance-low:
+          stages:
+            Dance Party:
+              name: ڈانس پارٹی
         coursed-2019:
           stages:
             'Unplugged: Binary':
               name: ثنائی تصاویر
+            Dance Party:
+              name: ڈانس پارٹی
         express-2019:
           stages:
             Envelope Variables:
               name: لفافہ متغیرات
+            Dance Party:
+              name: ڈانس پارٹی
         andrea-test:
           stages:
             'null':
@@ -278,5 +299,23 @@ ur:
           stages:
             Variables:
               name: متغیرات
+            Conditionals:
+              name: شرائط
+        dance-2019:
+          stages:
+            Dance Party:
+              name: ڈانس پارٹی
+        k5-onlinepd-2019:
+          stages:
+            Loops:
+              name: لوپس
+            Conditionals:
+              name: شرائط
+            Events:
+              name: ایونٹس/واقعات
+            Variables:
+              name: متغیرات
+        time4cs-control-unit-1:
+          stages:
             Conditionals:
               name: شرائط

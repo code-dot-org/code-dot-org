@@ -1,14 +1,12 @@
 ---
 title: Anleitung für "Hour of Code"-Veranstaltung
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
 
-# How to organize an Hour of Code assembly or event
+# Wie Sie eine "Hour of Code"-Veranstaltung organisieren
 
-### Get your entire school or community involved in an Hour of Code!
+### Engagieren Sie ihre gesamte Schule oder Nachbarschaft in einer Hour of Code!
 
 * * *
 
@@ -20,13 +18,13 @@ nav: how_to_nav
 
 ## 2. Während der Veranstaltung
 
-- Kick off your event with one of our [inspirational videos]({{ promote/videos }}).
-- Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
+- Starten Sie Ihre Veranstaltung mit einem unserer [inspirierenden Videos](%= resolve_url('/promote/resources#videos') %).
+- Geben Sie zu Beginn einen Überblick über die Wichtigkeit der Informatik. Sie können dazu diese [ Statistiken und Info-Abbildungen (USA)](%= resolve_url('/promote/stats') %) verwenden.   
       
     
-- **Other event ideas**: 
+- **Weitere Ideen für Ihre Veranstaltung:**: 
     - Laden Sie eine Persönlichkeit aus der lokalen Wirtschaft ein und bitten Sie sie oder ihn über die Bedeutung der Informatik bei ihrer Arbeit zu diskutieren.
-    - Laden Sie Persönlichkeiten aus der Politik ein und zeigen Sie ihm oder ihr durch Ihre Schülerinnen und Schüler, was es mit Coding auf sich hat.
+    - Laden Sie einen Lokalpolitiker ein und lassen sie ihn von Ihren Schülern im Programmieren unterrichten.
     - Lassen Sie die Schülerinnen und Schüler eine "unplugged"-Aktivität vorführen.
     - Erklären Sie mit Ihren Schülerinnen und Schülern oder Ihren Lehrerkolleginnen und -kollegen die Grundlagen des Codings.
     - Wenn es an Ihrer Schule bereits Informatikunterricht gibt, zeigen Sie Projekte und Ergebnisse von Schülerinnen und Schülern aus dem Unterricht.

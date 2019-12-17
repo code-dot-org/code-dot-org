@@ -1,19 +1,21 @@
 ---
-title: "<%= hoc_s(:hoc2019_header) %>"
 theme: responsive_wide
-banner: null
+banner:
 layout: wide
 video_player: true
 social:
-  "twitter:site": "@codeorg"
-  "twitter:url": "https://code.org/"
+  twitter:site: "@codeorg"
+  twitter:url: https://code.org/
 critical_font: true
 jquery: defer
 style_min: true
 ---
+:ruby
+  @header["title"] = hoc_s(:hoc2019_header)
+
 =inline_css 'homepage.css'
 
-- cookie_key = '_user_type' + (rack_env == :production ? '' : "_#{rack_env.to_s}")
+- cookie_key = environment_specific_cookie_name '_user_type'
 - user_type = request.cookies[cookie_key]
 - user_type = "student" if user_type == "student_y"
 - if ["student", "teacher"].include?(user_type)

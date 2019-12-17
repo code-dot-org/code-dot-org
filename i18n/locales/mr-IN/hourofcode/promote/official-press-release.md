@@ -1,7 +1,5 @@
 ---
-title: Hour of Code Press Release for Elected Officials
-layout: wide
-nav: promote_nav
+title: निवडून आलेल्या अधिकाऱ्यांसाठी कोडचा तास प्रसिद्धीपत्रक
 ---
 
 {{ signup_button }}

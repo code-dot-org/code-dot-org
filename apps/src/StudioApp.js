@@ -57,6 +57,7 @@ import {setIsRunning, setStepSpeed} from './redux/runState';
 import {setPageConstants} from './redux/pageConstants';
 import {setVisualizationScale} from './redux/layout';
 import {mergeProgress} from './code-studio/progressRedux';
+import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
 import {
   setAchievements,
   setBlockLimit,
@@ -1837,6 +1838,32 @@ StudioApp.prototype.fixViewportForSmallScreens_ = function(viewport, config) {
   }
   var width = Math.max(minWidth, desiredWidth);
   var scale = deviceWidth / width;
+
+  var content = [
+    'width=' + width,
+    'minimal-ui',
+    'initial-scale=' + scale,
+    'maximum-scale=' + scale,
+    'minimum-scale=' + scale,
+    'target-densityDpi=device-dpi',
+    'user-scalable=no'
+  ];
+  viewport.setAttribute('content', content.join(', '));
+};
+
+/**
+ *
+ */
+StudioApp.prototype.fixViewportForSpecificWidthForSmallScreens_ = function(
+  viewport,
+  width
+) {
+  // iOS sets the screen width to the min of width and height. Android sets the
+  // screen width to the landscape width. We take the min of width and height
+  // here to enforce consistent behavior.
+  let screenWidth = Math.min(screen.width, screen.height);
+  const scale = screenWidth / width;
+
   var content = [
     'width=' + width,
     'minimal-ui',
@@ -2137,6 +2164,9 @@ StudioApp.prototype.handleHideSource_ = function(options) {
  * @param {object} config The object containing all metadata about the project
  */
 StudioApp.prototype.loadLibraryBlocks = function(config) {
+  if (!config.level.libraries && config.level.startLibraries) {
+    config.level.libraries = JSON.parse(config.level.startLibraries);
+  }
   if (!config.level.libraries) {
     return;
   }
@@ -2144,7 +2174,7 @@ StudioApp.prototype.loadLibraryBlocks = function(config) {
   config.level.libraryCode = '';
   config.level.libraries.forEach(library => {
     config.dropletConfig.additionalPredefValues.push(library.name);
-    config.level.libraryCode += library.source;
+    config.level.libraryCode += createLibraryClosure(library);
     // TODO: add category management for libraries (blocked on spec)
     // config.dropletConfig.categories['libraryName'] = {
     //   id: 'libraryName',
@@ -3187,15 +3217,23 @@ StudioApp.prototype.isResponsiveFromConfig = function(config) {
 /**
  * Checks if the level a teacher is viewing of a students has
  * not been started.
+ * For contained levels don't show the banner ever.
+ * Otherwise if its a channel backed level check for the channel. Lastly
+ * if its not a channel backed level and its not free play we know it has
+ * not been started if no progress has been made.
  */
 StudioApp.prototype.isNotStartedLevel = function(config) {
   const progress = getStore().getState().progress;
 
-  if (
-    ['Gamelab', 'Applab', 'Weblab', 'Spritelab'].includes(config.levelGameName)
+  if (config.hasContainedLevels) {
+    return false;
+  } else if (
+    ['Gamelab', 'Applab', 'Weblab', 'Spritelab', 'Dance'].includes(
+      config.levelGameName
+    )
   ) {
     return config.readonlyWorkspace && !config.channel;
-  } else if (!config.level.freePlay) {
+  } else {
     return (
       config.readonlyWorkspace &&
       progress.levelProgress[progress.currentLevelId] === undefined

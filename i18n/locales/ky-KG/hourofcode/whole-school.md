@@ -1,6 +1,5 @@
 ---
 title: Мектептин толук катышуусу
-layout: wide
 ---
 
 {{ signup_button }}

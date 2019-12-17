@@ -1,7 +1,5 @@
 ---
 title: Eksempel støtte til informatikk utdanningsuke og Kodetimen
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

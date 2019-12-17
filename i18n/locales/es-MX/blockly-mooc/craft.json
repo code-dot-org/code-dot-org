@@ -44,7 +44,7 @@
   "blockActionTeleport": "teletransportar objetivo",
   "blockActionTeleportToPlayer": "teletransportar hacia el jugador",
   "blockActionTestForBlock": "comprobar si un tipo de bloque",
-  "blockActionTestForBlocks": "comprobar si el patrón entre",
+  "blockActionTestForBlocks": "compara el modelo entre",
   "blockActionToScore": "a la puntuación",
   "blockActionTransfer": "transferir",
   "blockActionWait": "espera",

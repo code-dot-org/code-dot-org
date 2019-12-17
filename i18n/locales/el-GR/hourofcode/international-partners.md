@@ -1,6 +1,5 @@
 ---
 title: Επικοινωνήστε με τους διεθνείς εταίρους
-layout: wide
 ---
 
 <style>
@@ -30,7 +29,7 @@ www.program.ar                                                 |
 | Αργεντινή                                   | Nuc Ba Academia                                                   |                                    | http://academia.nucba.com.ar                                                                  |
 | Αυστραλία                                   | Google                                                            | Marie Efstathiou                   | https://www.google.com/edu/cs                                                                 |
 | Αυστραλία                                   | Grok Learning                                                     | Jane Abrams                        | https://groklearning.com                                                                      |
-| Βραζιλία                                    | Programaê! - Fundaçao Lemann                                      |                                    | http://programae.org.br/horadocodigo                                                          |
+| Βραζιλία                                    | Programaê! - Fundação Telefônica Vivo                             |                                    | http://programae.org.br/horadocodigo                                                          |
 | Καμερούν                                    | Big IT Company Ltd                                                |                                    |                                                                                               |
 | Καναδάς                                     | Brilliant Labs Inc.                                               |                                    | https://www.brilliantlabs.ca                                                                  |
 | Καναδάς                                     | Hatch Canada                                                      |                                    | www.hatchcanada.com                                                                           |
@@ -40,8 +39,8 @@ www.program.ar                                                 |
 hello@kidsandcode.org                                                  |
 | Καναδάς                                     | Kids Code Jeunesse                                                | Bry LeBlanc                        | http://kidscodejeunesse.org   
 contact@kidscodejeunesse.org                                   |
-| Καναδάς                                     | Nova Scotia Department of Education & Early Childhood Development | Peter Oldreive                     | http://ednet.ns.ca   
-Peter.Oldreive@novascotia.ca                                            |
+| Καναδάς                                     | Nova Scotia Department of Education & Early Childhood Development | Nick Baskwill                      | http://ednet.ns.ca   
+nicholas.baskwill@novascotia.ca                                         |
 | Καναδάς                                     | Partners In Research Canada                                       | Stacey Joyce                       | www.pirweb.org/en   
 sjoyce@pirweb.org                                                        |
 | Καναδάς                                     | Sault Ste. Marie innovation Centre                                |                                    | https://ssmic.com/                                                                            |

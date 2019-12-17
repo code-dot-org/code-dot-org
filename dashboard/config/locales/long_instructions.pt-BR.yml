@@ -620,6 +620,19 @@ pt-BR:
 
         -   Como você acompanhou o processo de solução de problemas na última aula?
         -   Como você poderia usar este processo em um problema do seu dia a dia?
+      CSD U1 - PixFilter 1x1 intro: |-
+        # 3 Bit Cores
+
+        Cada pixel é um quadrado em uma tela que emite luz. Cada pixel pode ter um certo número de bits atribuído a ele, e os bits por pixel determinam as cores que podem ser renderizadas.
+
+        Nesta ferramenta, estamos usando 3 bits para definir o único pixel preto grande. O primeiro bit afeta a tonalidade vermelha. O segundo bit afeta a tonalidade verde. O terceiro bit afeta a tonalidade azul.
+
+        # Faça isto
+
+        -   Clique no botão "Executar" para iniciar o componente
+        -   Clique nas lâmpadas para ativar ou desativar cada cor e ver o que acontece com seu pixel
+        -   Veja quantas cores diferentes você pode criar com apenas três bits
+        -   Anote o binário associado a cada cor que você criar
       CSD U1 - PixFilter Filter Intro: |-
         # Filtragem de pixels
 
@@ -632,6 +645,60 @@ pt-BR:
         -   Veja como os números na seção Binário refletem alterações nas cores
         -   Com base em como os bits mudam, você pode formular o que a substituição está fazendo? Converse com seu parceiro e veja se você consegue descobrir.
         -   Complete a tabela Nível 2 no seu Guia de atividades
+      CSD U1 - PixFilter Filter Revisit: |-
+        # Combinando filtros
+
+        Agora que você brincou com a filtragem de um único canal de cores, é hora de ver o que acontece se filtrarmos mais de uma cor.
+
+        # Faça isto
+
+        -   Usando as listas suspensas de cores na seção de filtro, crie um filtro que altere o valor de mais de um canal de cores
+        -   Clique na linha superior das lâmpadas na seção Diagrama para ver como o filtro converterá a entrada (lâmpadas superiores) na saída (lâmpadas inferiores)
+        -   Veja como os números na seção Binário refletem alterações nas cores
+        -   Complete a tabela Nível 4 no seu Guia de atividades
+      CSD U1 - PixFilter FreePlay: |-
+        # Jogo grátis
+
+        Faça como quiser, faça algo incrível
+      CSD U1 - PixFilter Mario: |-
+        # Combinando Filtros
+
+        Às vezes você terá que filtrar mais do que um pixel para obter a mudança de cor que você deseja.
+
+        # Faça Isto
+
+        Veja o Mário, ele está muito bem com seu chapéu vermelho e jardineiras. Sua missão é ajustar o filtro para que ele fique parecido com o Luigi, com um chapéu verde e jardineiras.
+
+        -   Primeiro, determine qual ou quais bits devem ser alterados para a mudança que você quer
+        -   Quando você descobrir quais bits precisam ser trocados, ajuste os menus suspensos do filtro de forma adequada
+        -   Depois que você conseguiu fazer o filtro funcionar como queria, tente bolar outros filtros que mudam _somente_ o chapéu e jardineiras - quantas cores de roupas diferentes você consegue obter?
+
+        _Quantas tentativas foram necessárias para que você encontrasse o filtro certo?_
+      CSD U1 - PixFilter Mushroom: |-
+        # Filtrando imagens
+
+        Agora que vimos como um único pixel pode ser filtrado para alterar sua cor, vamos tentar aplicar um filtro a uma imagem composta de vários pixels. O filtro que você criar será aplicado a cada pixel da imagem - e você ainda terá as lâmpadas disponíveis para experimentar como o filtro funcionará com cores individuais.
+
+        # Faça isto
+
+        Aqui está uma foto de um cogumelo vermelho - você vai tentar transformá-lo em um cogumelo amarelo.
+
+        -   Primeiro, determine qual bit precisa mudar para ficar vermelho em amarelo
+        -   Depois de descobrir qual bit precisa ser alterado, use as listas suspensas de filtros para fazer com que todas as áreas vermelhas fiquem amarelas
+        -   Depois que o filtro estiver funcionando para que o vermelho fique amarelo, veja se você consegue criar filtros que transformem o cogumelo em outras cores
+
+        \_ Quantas tentativas você levou para encontrar o filtro certo? \_
+      CSD U1 - PixFilter UnFilter: |-
+        # Faça isto
+
+        <img src="https://images.code.org/c15636bda16e8792c59ac955332e37a5-image-1471372091393.22.56.png" style="float:right; width: 200px"/>
+        Aqui está a aparência do nosso pássaro. Use o filtro para recuperá-lo ao normal.
+
+        -   Decida quais cores (e quais bits) você precisa alterar. Você pode precisar escrever seus pensamentos com lápis e papel.
+        -   Depois de saber quais bits precisam ser alterados, defina o menu suspenso do filtro adequadamente para testar sua resposta
+        -   Depois de corrigir a imagem, anote seu processo e seu filtro final na seção Nível 6 do Guia de atividades
+
+        \_ Quantas tentativas você levou para encontrar o filtro certo? \_
       CSD U2 CSS explore CSS: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
@@ -7042,8 +7109,8 @@ pt-BR:
         O programa desenha um carro de corrida e uma linha de chegada. Vamos descobrir quando o carro de corrida cruza a linha de chegada. Os sprites foram criados para você.
 
         -   Adicione uma instrução `console.log` dentro do loop de desenho. ([Mostre-me onde] [0])
-        -   Adicione uma expressão booleana dentro do `console.log` que pergunta" A posição x do carro de corrida é menor que a posição x da linha de chegada? "
-        -   Veja a saída do programa enquanto o carro se move. Quando a saída muda? Por quê?
+        -   Adicione uma expressão booleana dentro do `console.log` que pergunta "A posição x do carro de corrida é menor que a posição x da linha de chegada? "
+        -   Veja a saída do programa enquanto o carro se move. Quando a saída muda? Por que?
       CSD U3 AnimationsMulti Play Defender: |-
         # Defenda seu bolo!
 
@@ -11057,30 +11124,30 @@ pt-BR:
       CSD U3 abstraction rotation control: |-
         # Velocidade de controle
 
-        Você usou `velocidadeDeRotacao` fora do loop de desenho para fazer seu sprite girar quando seu programa foi iniciado. Você também pode usar `velocidadeDeRotacao` \*\* dentro \*\* do laço de repetição de desenhar para mudar a velocidade do sprite durante o jogo. Por exemplo, um sprite pode começar a girar quando o usuário pressiona a barra de espaço, e vai continuar girando até que seja ordenado que pare.
+        Você usou `velocidadeDeRotacao` fora do loop de desenho para fazer seu sprite girar quando seu programa foi iniciado. Você também pode usar `velocidadeDeRotacao` **dentro** do laço de repetição de desenhar para mudar a velocidade do sprite durante o jogo. Por exemplo, um sprite pode começar a girar quando o usuário pressiona a barra de espaço, e vai continuar girando até que seja ordenado que pare.
 
         # Faça isso
 
-        -   Veja a instrução `if` dentro do loop de desenho que verifica se a barra de espaço foi pressionada. ([Mostre-me onde] [0])
+        -   Veja a instrução `if` dentro do loop de desenho que verifica se a barra de espaço foi pressionada. ([Mostre-me onde](#triggercallout=code_triggered1))
         -   Use o bloco `velocidadeDeRotacao` para que a roda de cor comece a girar quando o usuário pressionar a barra de espaço.
       CSD U3 abstraction rotation control_2018: |-
         # Velocidade de controle
 
-        Você usou `velocidadeDeRotacao` fora do loop de desenho para fazer seu sprite girar quando seu programa foi iniciado. Você também pode usar `velocidadeDeRotacao` \*\* dentro \*\* do laço de repetição de desenhar para mudar a velocidade do sprite durante o jogo. Por exemplo, um sprite pode começar a girar quando o usuário pressiona a barra de espaço, e vai continuar girando até que seja ordenado que pare.
+        Você usou `velocidadeDeRotacao` fora do loop de desenho para fazer seu sprite girar quando seu programa foi iniciado. Você também pode usar `velocidadeDeRotacao` **dentro** do laço de repetição de desenhar para mudar a velocidade do sprite durante o jogo. Por exemplo, um sprite pode começar a girar quando o usuário pressiona a barra de espaço, e vai continuar girando até que seja ordenado que pare.
 
         # Faça isso
 
-        -   Veja a instrução `if` dentro do loop de desenho que verifica se a barra de espaço foi pressionada. ([Mostre-me onde] [0])
+        -   Veja a instrução `if` dentro do loop de desenho que verifica se a barra de espaço foi pressionada. ([Mostre-me onde](#triggercallout=code_triggered1))
         -   Use o bloco `velocidadeDeRotacao` para que a roda de cor comece a girar quando o usuário pressionar a barra de espaço.
       CSD U3 abstraction rotation control_2019: |-
-        # Velocidade de controle
+        # Controlando a Velocidade
 
-        Você usou `velocidadeDeRotacao` fora do loop de desenho para fazer seu sprite girar quando seu programa foi iniciado. Você também pode usar `velocidadeDeRotacao` \*\* dentro \*\* do laço de repetição de desenhar para mudar a velocidade do sprite durante o jogo. Por exemplo, um sprite pode começar a girar quando o usuário pressiona a barra de espaço, e vai continuar girando até que seja ordenado que pare.
+        Você usou `velocidadeDeRotacao` fora do laço de desenho para fazer sua figura girar quando seu programa foi iniciado. Você também pode usar `velocidadeDeRotacao` **dentro** do laço de desenho para alterar a velocidade da figura durante o jogo. Por exemplo, uma figura pode começar a girar quando o usuário pressionar a barra de espaço, e continuar girando até que receba um comando para parar.
 
         # Faça isso
 
-        -   Veja a instrução `if` dentro do loop de desenho que verifica se a barra de espaço foi pressionada. ([Mostre-me onde] [0])
-        -   Use o bloco `velocidadeDeRotacao` para que a roda de cor comece a girar quando o usuário pressionar a barra de espaço.
+        -   Veja a instrução `if` dentro do laço de desenho, que verifica se a barra de espaço foi pressionada. ([Mostre-me onde](#triggercallout=code_triggered1))
+        -   Use o bloco `velocidadeDeRotacao` para fazer a roda colorida começar a girar quando o usuário pressionar a barra de espaço.
       CSD U3 abstraction rotation_2018: |-
         # Velocidade de rotação
 
@@ -11365,6 +11432,21 @@ pt-BR:
         _Verifique com seu professor antes de iniciar qualquer um dos desafios._
 
         Usando apenas os comandos `reta` e`elipse`, você pode desenhar uma nova forma, como este triângulo feito de círculos?
+      CSD U3 collisions bounciness: Até o momento. "bounceOff" tem feito sprites irem
+        para longe de outros objetos assim que batem neles. No mundo real, praticamente
+        tudo fica um pouco mais lento quando quica em algo. Você pode usar o bloco
+        "elasticidade" para dizer o quanto um sprite acelera ou desacelera quando
+        bate em algo
+      CSD U3 collisions bounciness_2018: Até o momento. "bounceOff" tem feito sprites
+        irem para longe de outros objetos assim que batem neles. No mundo real, praticamente
+        tudo fica um pouco mais lento quando quica em algo. Você pode usar o bloco
+        "elasticidade" para dizer o quanto um sprite acelera ou desacelera quando
+        bate em algo
+      CSD U3 collisions bounciness_2019: Até o momento. "bounceOff" tem feito sprites
+        irem para longe de outros objetos assim que batem neles. No mundo real, praticamente
+        tudo fica um pouco mais lento quando quica em algo. Você pode usar o bloco
+        "elasticidade" para dizer o quanto um sprite acelera ou desacelera quando
+        bate em algo
       CSD U3 collisions build isTouching: |-
         # Balão
 
@@ -11830,6 +11912,93 @@ pt-BR:
         -   Na aba animação crie uma nova animação para o seu obstáculo. No exemplo, a imagem de um sol foi escolhida.
         -   Use o bloco `sprite.setAnimation()` para atribuir a imagem que você escolheu ao seu sprite.
         -   Execute o código e certifique-se que o sprite apareça onde você gostaria que estivesse na tela. Você precisará configurar o X, Y e propriedades de escala para que apareça da forma que você quer.
+      CSD U3 collisions flyman bounceOff: |-
+        # Jogo de voo - Interagindo com Obstáculos
+
+        Você não quer que o jogador seja capaz de mover-se através dos obstáculos, então você vai precisar usar uma das interações de sprites.
+
+        # Faça Isto
+
+        \-Adicione código ao seu jogo que evite o seu jogador de mover-se através dos obstáculos.
+        \-Se você usar umas das interações de colisão, escolha se vai querer resetar a elasticidade do personagem.
+        \-Converse com seu vizinho: Qual interação você usou? Existe mais de uma interação que faz o que você queria?
+      CSD U3 collisions flyman bounceOff_2018: |-
+        # Jogo de voo - Interagindo com Obstáculos
+
+        Você não quer que o jogador seja capaz de mover-se através dos obstáculos, então você vai precisar usar uma das interações de sprites.
+
+        # Faça Isto
+
+        \-Adicione código ao seu jogo que evite o seu jogador de mover-se através dos obstáculos.
+        \-Se você usar umas das interações de colisão, escolha se vai querer resetar a elasticidade do personagem.
+        \-Converse com seu vizinho: Qual interação você usou? Existe mais de uma interação que faz o que você queria?
+      CSD U3 collisions flyman bounceOff_2019: |-
+        # Jogo de voo - Interagindo com Obstáculos
+
+        Você não quer que o jogador seja capaz de mover-se através dos obstáculos, então você vai precisar usar uma das interações de sprites.
+
+        # Faça Isto
+
+        \-Adicione código ao seu jogo que evite o seu jogador de mover-se através dos obstáculos.
+        \-Se você usar umas das interações de colisão, escolha se vai querer resetar a elasticidade do personagem.
+        \-Converse com seu vizinho: Qual interação você usou? Existe mais de uma interação que faz o que você queria?
+      CSD U3 collisions flyman change colliders: |-
+        # Jogo do voo - Alterando Colisores
+
+        No momento os seus colisores são todas retangulares. Mude as para círculos e tenha colisões mais interessantes.
+
+        # Faça isto
+
+        -   Use o bloco `sprite.setCollider()` para alterar os colisores dos seus sprites para círculos.
+        -   Defina as propriedades de debug dos seus sprites para `true` para ter certeza que o seu jogo está funcionando conforme o esperado.
+        -   Jogue o seu jogo para ter certeza de que ele está funcionando como você quer.
+      CSD U3 collisions flyman change colliders_2018: |-
+        # Jogo do voo - Alterando Colisores
+
+        No momento os seus colisores são todas retangulares. Mude as para círculos e tenha colisões mais interessantes.
+
+        # Faça isto
+
+        -   Use o bloco `sprite.setCollider()` para alterar os colisores dos seus sprites para círculos.
+        -   Defina as propriedades de debug dos seus sprites para `true` para ter certeza que o seu jogo está funcionando conforme o esperado.
+        -   Jogue o seu jogo para ter certeza de que ele está funcionando como você quer.
+      CSD U3 collisions flyman change colliders_2019: |-
+        # Jogo do voo - Alterando Colisores
+
+        No momento os seus colisores são todas retangulares. Mude as para círculos e tenha colisões mais interessantes.
+
+        # Faça isto
+
+        -   Use o bloco `sprite.setCollider()` para alterar os colisores dos seus sprites para círculos.
+        -   Defina as propriedades de debug dos seus sprites para `true` para ter certeza que o seu jogo está funcionando conforme o esperado.
+        -   Jogue o seu jogo para ter certeza de que ele está funcionando como você quer.
+      CSD U3 collisions flyman displace coin: |-
+        # Jogo de Voo - Moeda atrás do Obstáculo
+
+        No momento a moeda está se movendo para lugares aleatórios. Isso significa que pode acontecer de a moeda aparecer aparecer até mesmo atrás de um obstáculo, nesse caso o personagem não pode alcançar ela. Você pode corrigir isso usando as interações de sprite.
+
+        # Faça Isto
+
+        -   Adicione código que evite a moeda de se mover para trás de um obstáculo. Não tenha medo de testar ideias para saber como funcionam.
+        -   Converse com seu vizinho: Qual interação você usou? Existe alguma outra interação que faça o mesmo?
+      CSD U3 collisions flyman displace coin_2018: |-
+        # Jogo de Voo - Moeda atrás do Obstáculo
+
+        No momento a moeda está se movendo para lugares aleatórios. Isso significa que pode acontecer de a moeda aparecer aparecer até mesmo atrás de um obstáculo, nesse caso o personagem não pode alcançar ela. Você pode corrigir isso usando as interações de sprite.
+
+        # Faça Isto
+
+        -   Adicione código que evite a moeda de se mover para trás de um obstáculo. Não tenha medo de testar ideias para saber como funcionam.
+        -   Converse com seu vizinho: Qual interação você usou? Existe alguma outra interação que faça o mesmo?
+      CSD U3 collisions flyman displace coin_2019: |-
+        # Jogo de Voo - Moeda atrás do Obstáculo
+
+        No momento a moeda está se movendo para lugares aleatórios. Isso significa que pode acontecer de a moeda aparecer aparecer até mesmo atrás de um obstáculo, nesse caso o personagem não pode alcançar ela. Você pode corrigir isso usando as interações de sprite.
+
+        # Faça Isto
+
+        -   Adicione código que evite a moeda de se mover para trás de um obstáculo. Não tenha medo de testar ideias para saber como funcionam.
+        -   Converse com seu vizinho: Qual interação você usou? Existe alguma outra interação que faça o mesmo?
       CSD U3 collisions flyman make it your own: |-
         # Jogo de voo - Faça o seu
 
@@ -12517,11 +12686,11 @@ pt-BR:
         -   Crie o sprite no lugar correto na tela
         -   Defina sua animação (ou cor e tamanho)
         -   Defina sua velocidade e velocidade de rotação, se necessário
-        -   Defina seu colisor e bounciness, se necessário
+        -   Defina seu colisor e elasticidade, se necessário
 
         Depois de criar cada sprite, teste-o antes de fazer o próximo. Se o seu sprite começar a partir da tela, primeiro coloque-o na tela para testá-lo, e mova-o de volta para fora da tela, uma vez que você saiba que está correto.
 
-        Se sua posição de sprites precisar ser redefinida posteriormente no seu jogo, é uma boa idéia fazer uma função que defina a posição desse sprite que você pode usar novamente mais tarde.
+        Se sua posição de sprites precisar ser redefinida posteriormente no seu jogo, é uma boa ideia fazer uma função que defina a posição desse sprite que você pode usar novamente mais tarde.
       CSD U3 game create sprites_2018: |-
         # Crie seus Sprites
 
@@ -12695,6 +12864,34 @@ pt-BR:
         -   Adicione um bloco dentro da terceira declaração `if` para mudar a animação para um animal diferente.
 
         _Dica: você pode usar o coelho que já está na aba Animações ou adicionar uma nova animação._
+      CSD U3 keydown conditional_2018: |-
+        # Mudando Sprites
+
+        Você viu no último nível que `apertarTecla` retorna `verdadeiro` enquanto você mantém pressionada uma tecla e `falso` quando a tecla não é pressionada. A entrada para o comando `apertarTecla` é o nome da chave que você deseja verificar entre aspas. Alguns exemplos são "x", "pra cima" e "espaço".
+
+        Podemos usar o `apertarTecla` como uma entrada para uma declaração`if` para alterar nossas animações com base no pressionamento de teclas!
+
+        # Faça isto
+
+        -   Execute o código e tente pressionar as teclas "p" e "h".
+        -   Olhe dentro da instrução `if` para ver como o código funciona.
+        -   Adicione um bloco dentro da terceira declaração `if` para mudar a animação para um animal diferente.
+
+        \_Desafio: Quando você usa `definirAnimacao`, ele mantém a nova animação até que você a altere novamente. Você pode alterar o código para que o sprite retorne automaticamente a uma girafa quando você não estiver segurando uma das teclas
+      CSD U3 keydown conditional_2018_2019: |-
+        # Mudando Sprites
+
+        Você viu no último nível que `apertarTecla` retorna `verdadeiro` enquanto você mantém pressionada uma tecla e `falso` quando a tecla não é pressionada. A entrada para o comando `apertarTecla` é o nome da chave que você deseja verificar entre aspas. Alguns exemplos são "x", "pra cima" e "espaço".
+
+        Podemos usar o `apertarTecla` como uma entrada para uma declaração`if` para alterar nossas animações com base no pressionamento de teclas!
+
+        # Faça isto
+
+        -   Execute o código e tente pressionar as teclas "p" e "h".
+        -   Olhe dentro da instrução `if` para ver como o código funciona.
+        -   Adicione um bloco dentro da terceira declaração `if` para mudar a animação para um animal diferente.
+
+        \_Desafio: Quando você usa `definirAnimacao`, ele mantém a nova animação até que você a altere novamente. Você pode alterar o código para que o sprite retorne automaticamente a uma girafa quando você não estiver segurando uma das teclas
       CSD U3 picture: |-
         # Desafio: desenhar uma imagem
 
@@ -13926,6 +14123,39 @@ pt-BR:
         Escreva sua resposta na caixa abaixo, depois execute o código e veja o que acontece.
       CSD U6 Catch the Mouse_2018: Previsão Integrada
       CSD U6 Catch the Mouse_2019: Previsão Integrada
+      CSD U6 Driver pt1: |-
+        # Volante
+
+        Este jogo é semelhante ao jogo de goleiro que você acabou de jogar, exceto um pouco diferente. Use sua placa como um volante para o carro (movendo-se de um lado para o outro). Você tem que chegar à bandeira quadriculada enquanto evita as bandeiras vermelhas ao longo do caminho!
+
+        # Faça isto
+
+        -   Faça o carro descer na tela enquanto o programa é executado.
+        -   Dê ao carro a capacidade de dirigir de um lado para o outro.
+
+        Pense nos programas que você criou até esse momento. Como você pode atualizar esses valores?
+      CSD U6 Driver pt1_2018: |-
+        # Volante
+
+        Este jogo é semelhante ao jogo de goleiro que você acabou de jogar, exceto um pouco diferente. Use sua placa como um volante para o carro (movendo-se de um lado para o outro). Você tem que chegar à bandeira quadriculada enquanto evita as bandeiras vermelhas ao longo do caminho!
+
+        # Faça isto
+
+        -   Faça o carro descer na tela enquanto o programa é executado.
+        -   Dê ao carro a capacidade de dirigir de um lado para o outro.
+
+        Pense nos programas que você criou até esse momento. Como você pode atualizar esses valores?
+      CSD U6 Driver pt1_2019: |-
+        # Volante
+
+        Este jogo é semelhante ao jogo de goleiro que você acabou de jogar, exceto um pouco diferente. Use sua placa como um volante para o carro (movendo-se de um lado para o outro). Você tem que chegar à bandeira quadriculada enquanto evita as bandeiras vermelhas ao longo do caminho!
+
+        # Faça isto
+
+        -   Faça o carro descer na tela enquanto o programa é executado.
+        -   Dê ao carro a capacidade de dirigir de um lado para o outro.
+
+        Pense nos programas que você criou até esse momento. Como você pode atualizar esses valores?
       CSD U6 LED all: |-
         # Luz multifuncional
 
@@ -14031,6 +14261,33 @@ pt-BR:
         # Faça isso
 
         Use o comando `.color()` para configurar cada um dos LEDs de cor para uma cor diferente.
+      CSD U6 Pedometer: |-
+        # Corredor
+
+        Este programa deve usar o evento `shake`, que é acionado quando o painel é sacudido. Ele deve adicionar um passo ao total do corredor sempre que o usuário sacode o tabuleiro.
+
+        # Fazem isto
+
+        -   Altere o evento para que seja acionado toda vez que o quadro for sacudido.
+        -   Adicione código dentro do evento para que os `passos` aumentem sempre que o quadro for sacudido.
+      CSD U6 Pedometer_2018: |-
+        # Corredor
+
+        Este programa deve usar o evento `shake`, que é acionado quando o painel é sacudido. Ele deve adicionar um passo ao total do corredor sempre que o usuário sacode o tabuleiro.
+
+        # Fazem isto
+
+        -   Altere o evento para que seja acionado toda vez que o quadro for sacudido.
+        -   Adicione código dentro do evento para que os `passos` aumentem sempre que o quadro for sacudido.
+      CSD U6 Pedometer_2019: |-
+        # Corredor
+
+        Este programa deve usar o evento `shake`, que é acionado quando o painel é sacudido. Ele deve adicionar um passo ao total do corredor sempre que o usuário sacode o tabuleiro.
+
+        # Fazem isto
+
+        -   Altere o evento para que seja acionado toda vez que o quadro for sacudido.
+        -   Adicione código dentro do evento para que os `passos` aumentem sempre que o quadro for sacudido.
       CSD U6 add LED button: |-
         Usando eventos
 
@@ -14359,6 +14616,34 @@ pt-BR:
 
         -   Adicione um bloco `soundSensor.threshold` antes do manipulador de eventos
         -   Teste quais são os diferentes valores de limite que afetam o evento "change"
+        -   Escolha um valor limite que faça com que o fundo da tela mude apenas quando for detectado um ruído alto.
+
+        \_ Dica: Seu limite depende de quanto ruído ambiente há na sala e de quanto ele muda. Um limiar que funciona em uma sala silenciosa pode não funcionar em uma sala de aula mais barulhenta.\_
+      CSD U6 analog threshold_2018: |-
+        # Alterar limite
+
+        Por padrão, o evento "change" de um sensor é acionado toda vez que o valor do sensor é alterado, mesmo que um. Os sensores de luz e som estão constantemente flutuando; portanto, você provavelmente deseja que o evento "change" seja um pouco menos responsivo. A propriedade `threshold` permite definir o quanto um sensor deve mudar antes de considerá-lo um evento" change "- portanto, definir`soundSensor.threshold = 100` faria com que o evento "change" do sensor de som fosse acionado apenas se seu valor aumentasse ou diminuiu em pelo menos 100.
+
+        # Faça isto
+
+        Este aplicativo altera a cor de fundo da tela sempre que o valor do sensor de som muda, mas queremos responder apenas a grandes mudanças de volume (como um barulho alto). Use o bloco `soundSensor.threshold` para corrigi-lo.
+
+        -   Adicione um bloco `soundSensor.threshold` antes do manipulador de eventos
+        -   Teste como diferentes valores de limite afetam o evento "change"
+        -   Escolha um valor limite que faça com que o fundo da tela mude apenas quando for detectado um ruído alto.
+
+        \_ Dica: Seu limite depende de quanto ruído ambiente há na sala e de quanto ele muda. Um limiar que funciona em uma sala silenciosa pode não funcionar em uma sala de aula mais barulhenta.\_
+      CSD U6 analog threshold_2019: |-
+        # Alterar limite
+
+        Por padrão, o evento "change" de um sensor é acionado toda vez que o valor do sensor é alterado, mesmo que um. Os sensores de luz e som estão constantemente flutuando; portanto, você provavelmente deseja que o evento "change" seja um pouco menos responsivo. A propriedade `threshold` permite definir o quanto um sensor deve mudar antes de considerá-lo um evento" change "- portanto, definir`soundSensor.threshold = 100` faria com que o evento "change" do sensor de som fosse acionado apenas se seu valor aumentasse ou diminuiu em pelo menos 100.
+
+        # Faça isto
+
+        Este aplicativo altera a cor de fundo da tela sempre que o valor do sensor de som muda, mas queremos responder apenas a grandes mudanças de volume (como um barulho alto). Use o bloco `soundSensor.threshold` para corrigi-lo.
+
+        -   Adicione um bloco `soundSensor.threshold` antes do manipulador de eventos
+        -   Teste como diferentes valores de limite afetam o evento "change"
         -   Escolha um valor limite que faça com que o fundo da tela mude apenas quando for detectado um ruído alto.
 
         \_ Dica: Seu limite depende de quanto ruído ambiente há na sala e de quanto ele muda. Um limiar que funciona em uma sala silenciosa pode não funcionar em uma sala de aula mais barulhenta.\_
@@ -15388,6 +15673,34 @@ pt-BR:
         -   Altere o nome de `minhaFuncao` para`definirCorLEDs`
         -   Altere o parâmetro de `n` para "vermelho"(observe as aspas!)
         -   Teste seu programa, o botão "Vermelho" deve acender todos os seus LEDs
+      CSD U6 for loop led function finish: |-
+        # Finalize o aplicativo
+
+        Se o botão vermelho funcionou, a única coisa que resta é chamar sua nova função quando todos os botões restantes forem pressionados.
+
+        # Faça isto
+
+        Para cada um dos botões restantes (verde, azul e branco):
+
+        -   Crie um novo manipulador de eventos
+        -   Chame sua função `setLedsColor` com a cor apropriada (" verde "," azul "ou" branco ")
+        -   Teste seu programa para garantir que todos os botões funcionem
+
+        Quando todos os botões estiverem funcionando corretamente, clique em "Enviar" para ativar o programa.
+      CSD U6 for loop led function finish_2018: |-
+        # Finalize o aplicativo
+
+        Se o botão vermelho funcionou, a única coisa que resta é chamar sua nova função quando todos os botões restantes forem pressionados.
+
+        # Faça isto
+
+        Para cada um dos botões restantes (verde, azul e branco):
+
+        -   Crie um novo manipulador de eventos
+        -   Chame sua função `setLedsColor` com a cor apropriada (" verde "," azul "ou" branco ")
+        -   Teste seu programa para garantir que todos os botões funcionem
+
+        Quando todos os botões estiverem funcionando corretamente, clique em "Enviar" para ativar o programa.
       CSD U6 for loop led function_2018: |-
         # Trocando cores com uma função
 
@@ -15440,6 +15753,30 @@ pt-BR:
         -   Adicione um manipulador de eventos para "botao\\ \_on"
         -   Coloque um _laço de repetição for_ no seu manipulador de eventos que se repita até chegar ao final do array `colorLeds`
         -   Dentro do loop for, chame `colorLeds[i].on()` para ativar o LED de cor atual
+      CSD U6 for loop led on_2018: |-
+        # Ligando Todos os LEDs Coloridos
+
+        Agora que você sabe como usar um _laço de repetição for_ para processar todos os elementos em um vetor, você pode ativar todos os LEDs coloridos com muito mais facilidade do que antes.
+
+        # Faça Isto
+
+        Nos próximos níveis, você irá criar um aplicativo que controla todos os LEDs coloridos em sua placa. O primeiro passo é conectar o botão que liga todos os LEDs. (Não se preocupe com o restante dos comentários na área de trabalho. Você irá trabalhar com eles nos próximos níveis.)
+
+        -   Adicione um manipulador de eventos para "botao\\ \_on"
+        -   Coloque um _laço de repetição for_ no seu manipulador de eventos para que se repita até chegar ao final do vetor `ledsColoridos`
+        -   Dentro do laço for, chame `ledsColoridos[i].on()` para ativar o LED corrent
+      CSD U6 for loop led on_2019: |-
+        # Ligando Todos os LEDs Coloridos
+
+        Agora que você sabe como usar um _laço de repetição for_ para processar todos os elementos em um vetor, você pode ativar todos os LEDs coloridos com muito mais facilidade do que antes.
+
+        # Faça Isto
+
+        Nos próximos níveis, você irá criar um aplicativo que controla todos os LEDs coloridos em sua placa. O primeiro passo é conectar o botão que liga todos os LEDs. (Não se preocupe com o restante dos comentários na área de trabalho. Você irá trabalhar com eles nos próximos níveis.)
+
+        -   Adicione um manipulador de eventos para "botao\\ \_on"
+        -   Coloque um _laço de repetição for_ no seu manipulador de eventos para que se repita até chegar ao final do vetor `ledsColoridos`
+        -   Dentro do laço for, chame `ledsColoridos[i].on()` para ativar o LED corrent
       CSD U6 for loop led personalize_2019: |-
         # Faça Você Mesmo
 
@@ -15507,6 +15844,18 @@ pt-BR:
 
         -   Como os parâmetros tornam as funções mais úteis?
         -   Como você sabe a hora em que você pode combinar várias funções em uma só?
+      CSD U6 game project board events: |-
+        # Eventos de tabuleiro
+
+        Volte para a seção Eventos do seu guia de atividades e encontre quaisquer eventos que respondam ao seu quadro (aqueles que usariam `onBoardEvent ()`). Crie manipuladores de eventos para cada um deles agora. Se esses eventos dependem de funções que você ainda não escreveu, deixe um comentário no código.
+      CSD U6 game project board events_2018: |-
+        # Eventos de tabuleiro
+
+        Volte para a seção Eventos do seu guia de atividades e encontre quaisquer eventos que respondam ao seu quadro (aqueles que usariam `onBoardEvent ()`). Crie manipuladores de eventos para cada um deles agora. Se esses eventos dependem de funções que você ainda não escreveu, deixe um comentário no código.
+      CSD U6 game project board events_2019: |-
+        # Eventos de tabuleiro
+
+        Volte para a seção Eventos do seu guia de atividades e encontre quaisquer eventos que respondam ao seu quadro (aqueles que usariam `onBoardEvent ()`). Crie manipuladores de eventos para cada um deles agora. Se esses eventos dependem de funções que você ainda não escreveu, deixe um comentário no código.
       CSD U6 game project finish: |-
         # Toques Finais e Testes
 
@@ -15786,6 +16135,30 @@ pt-BR:
 
         -   Leia o programa para entender como ele deve funcionar.
         -   Encontre e corrija os erros para que o programa funcione corretamente.
+      CSD U6 goalie: |-
+        # Atualizando valores com dados
+
+        Neste programa, o goleiro está tentando bloquear a bola de futebol, mas agora a bola não está se movendo.
+
+        # Faça isto
+
+        -   Use o padrão do contador para atualizar o valor `x` da bola para que ela se mova pela tela.
+      CSD U6 goalie_2018: |-
+        # Atualizando valores com dados
+
+        Neste programa, o goleiro está tentando bloquear a bola de futebol, mas agora a bola não está se movendo.
+
+        # Faça isto
+
+        -   Use o padrão do contador para atualizar o valor `x` da bola para que ela se mova pela tela.
+      CSD U6 goalie_2019: |-
+        # Atualizando valores com dados
+
+        Neste programa, o goleiro está tentando bloquear a bola de futebol, mas agora a bola não está se movendo.
+
+        # Faça isto
+
+        -   Use o padrão do contador para atualizar o valor `x` da bola para que ela se mova pela tela.
       CSD U6 hardware software video_2019: |-
         ## Perguntas a Considerar
 
@@ -15818,6 +16191,30 @@ pt-BR:
         -   Leia o código e preveja o que o programa fará, depois clique em "Executar" para testar sua previsão.
       CSD U6 interval_2018: Prever nível
       CSD U6 interval_2019: Prever nível
+      CSD U6 iter create notes: |-
+        # Reprodutor de música
+
+        Este programa permite tocar música agitando uma varinha sobre as diferentes notas, mas falta uma definição de função.
+
+        # Fazem isto
+
+        -   Crie uma função `verificarNotas()` que chamará `verificarNota(nota)` em tudo no array "notas".
+      CSD U6 iter create notes_2018: |-
+        # Reprodutor de música
+
+        Este programa permite tocar música agitando uma varinha sobre as diferentes notas, mas falta uma definição de função.
+
+        # Fazem isto
+
+        -   Crie uma função `verificarNotas()` que chamará `verificarNota(nota)` em tudo no array "notas".
+      CSD U6 iter create notes_2019: |-
+        # Reprodutor de música
+
+        Este programa permite tocar música agitando uma varinha sobre as diferentes notas, mas falta uma definição de função.
+
+        # Fazem isto
+
+        -   Crie uma função `verificarNotas()` que chamará `verificarNota(nota)` em tudo no array "notas".
       CSD U6 iter predict bubbles: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
       CSD U6 iter predict bubbles_2018: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
       CSD U6 iter predict bubbles_2019: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
@@ -15848,9 +16245,9 @@ pt-BR:
       CSD U6 light pattern off_2019: |-
         # Desativando
 
-        Quando você inicia esse aplicativo, as luzes estão apagadas, mas assim que você escolhe um padrão, não há como desligar as luzes!
+        Quando você inicia esse aplicativo, as luzes estão apagadas, mas assim que você escolhe um padrão, não há como desativar as luzes!
 
-        # Faça isso
+        # Faça isto
 
         Crie uma função que apague todos os LEDs e adicione um botão "Desligado" ao seu aplicativo e apague todos os LEDs coloridos.
       CSD U6 light show predict: |-
@@ -15910,6 +16307,33 @@ pt-BR:
 
         -   Leia o programa e discuta com seu parceiro como o botão esquerdo faz a motocicleta subir.
         -   Usando o botão esquerdo de trabalho como um exemplo, programe o botão direito para fazer a motocicleta abaixar.
+      CSD U6 params create colors: |-
+        # Seletor de cores
+
+        Neste programa, pressionar os botões na parte inferior da tela altera a cor das imagens e os LEDs coloridos.
+
+        # Faça isto
+
+        -   Crie uma função `escolherCor(cor)` que altere cada uma das imagens e os LEDs de cores para a cor especificada.
+        -   Chame sua função nos blocos de eventos para que todos os botões funcionem.
+      CSD U6 params create colors_2018: |-
+        # Seletor de cores
+
+        Neste programa, pressionar os botões na parte inferior da tela altera a cor das imagens e os LEDs coloridos.
+
+        # Faça isto
+
+        -   Crie uma função `escolherCor(cor)` que altere cada uma das imagens e os LEDs de cores para a cor especificada.
+        -   Chame sua função nos blocos de eventos para que todos os botões funcionem.
+      CSD U6 params create colors_2019: |-
+        # Seletor de cores
+
+        Neste programa, pressionar os botões na parte inferior da tela altera a cor das imagens e os LEDs coloridos.
+
+        # Faça isto
+
+        -   Crie uma função `escolherCor(cor)` que altere cada uma das imagens e os LEDs de cores para a cor especificada.
+        -   Chame sua função nos blocos de eventos para que todos os botões funcionem.
       CSD U6 params modify clouds_2019: |-
         # Nuvens
 
@@ -16282,6 +16706,45 @@ pt-BR:
 
         -   Examine o código e encontre o bug que impede que a duração seja definida corretamente.
                  \- (Dica: passe o mouse sobre os triângulos amarelos para obter pistas sobre o que pode estar errado com o código.)
+      CSD U6 stillness game predict code: |-
+        # Mude com o acelerômetro
+
+        Este programa usa o evento de mudança para aumentar um medidor de movimento toda vez que o quadro se move. Quando o medidor de movimento atinge 100, o alarme soa.
+
+        # Faça isto
+
+        Este programa possui dois erros que você precisa corrigir:
+
+        -   O medidor de movimento está sendo acionado pressionando o botão, em vez do evento `change` do acelerômetro.
+        -   O programador esqueceu como usar o padrão do contador para aumentar a variável de movimento.
+
+        Depois de encontrar os bugs, execute o programa e tente passar a placa para o seu parceiro sem disparar o alarme.
+      CSD U6 stillness game predict code_2018: |-
+        # Mude com o acelerômetro
+
+        Este programa usa o evento de mudança para aumentar um medidor de movimento toda vez que o quadro se move. Quando o medidor de movimento atinge 100, o alarme soa.
+
+        # Faça isto
+
+        Este programa possui dois erros que você precisa corrigir:
+
+        -   O medidor de movimento está sendo acionado pressionando o botão, em vez do evento `change` do acelerômetro.
+        -   O programador esqueceu como usar o padrão do contador para aumentar a variável de movimento.
+
+        Depois de encontrar os bugs, execute o programa e tente passar a placa para o seu parceiro sem disparar o alarme.
+      CSD U6 stillness game predict code_2019: |-
+        # Mude com o acelerômetro
+
+        Este programa usa o evento de mudança para aumentar um medidor de movimento toda vez que o quadro se move. Quando o medidor de movimento atinge 100, o alarme soa.
+
+        # Faça isto
+
+        Este programa possui dois erros que você precisa corrigir:
+
+        -   O medidor de movimento está sendo acionado pressionando o botão, em vez do evento `change` do acelerômetro.
+        -   O programador esqueceu como usar o padrão do contador para aumentar a variável de movimento.
+
+        Depois de encontrar os bugs, execute o programa e tente passar a placa para o seu parceiro sem disparar o alarme.
       CSD U6 test LED: |-
         # Controlar o LED
 
@@ -16915,6 +17378,22 @@ pt-BR:
         -   \*\* Defina a cor do botão \*\* para vermelho.
 
         <img src="https://images.code.org/4cab6a5233cf07df0d8e312932762012-image-1444314797615.gif" style="width: 500px; float: middle">
+      CSDU4 - Design Mode - 16: |-
+        # Ative Seu Botão
+
+        Na última aula você se concentrou em distribuir os elementos na página do seu aplicativo, em Modo de Desenho. Isto é uma ótima e rápida maneira de criar a parte visual do aplicativo, mas não é muito funcional. Se você clicar em qualquer um dos botões que você criou, nada acontece. Agora você irá criar funcionalidades básicas, fazendo com que os botões do seu aplicativo _façam_ algo!
+
+        **Objetivo:** Adicione código usando o Modo de Desenho para fazer um botão responder a um clique.
+
+        # Faça Isto:
+
+        Seu aplicativo inicial possui dois elementos, um _rotulo_ com o id `tituloRotulo` e um _botão_ com o id `alterarTituloBotão`. Para começar, você irá fazer o botão escrever uma mensagem no console, ao ser clicado.
+
+        -   Em Modo de Desenho, **clique no botão existente para editar suas propriedades**
+        -   Clique sobre a aba **Eventos**
+        -   Insira um `onEvent` no Modo de Desenho clicando em **Insira e mostre código** na **Aba de Eventos**.
+        -   Dê uma olhada no bloco que foi adicionado à aba **Modo de Código**.
+        -   Execute o programa, clique sobre o botão e **procure a saída gerada no _Console de Depuração_** sob a área de trabalho, ao invés da janela da aplicação. Iremos discutir o _Console de Depuração_ no próximo nível.
       CSDU4 - Design Mode - 17: |-
         # Atualizando IDs e depurando com o log do console
 
@@ -16947,6 +17426,37 @@ pt-BR:
         style=\"width:200px ; border: solid 1px black\"></td>\n    <td style=\"text-align:center\"><img
         src=\"https://images.code.org/e45fc7d451c071683fd3b59466b106b0-image-1444684677212.png\"
         style=\"width:200px; border: solid 1px black\"></td>\n</tr>\n</table>"
+      CSDU4 - Design Mode - 19: "# Segunda tela\n\nA maioria dos aplicativos possui
+        mais de uma tela ou página, cada uma com conteúdo diferente. Com o Modo Design,
+        você pode adicionar rapidamente uma nova tela ao seu aplicativo.\n\n# Faça
+        isto\n\nVocê vai adicionar uma segunda tela ao seu aplicativo e adicionar
+        um botão a essa tela. Verifique se você está usando bons IDs!\n\n-   Arraste
+        <img src=\"https://images.code.org/4337b39cfd797ed9289b70fb6cb365fb-image-1444353631083.17.39
+        PM.png\" style=\"width: 50px\"> da caixa de ferramentas de design para o seu
+        aplicativo. Agora você tem duas telas!\n-   Usando o Modo Design, crie um
+        botão em sua nova tela.  <img src=\"https://images.code.org/bbf464e2fc94bacba39407d6842f2336-image-1478300698068.04.35
+        PM.png\" style=\"width: 150px\"> \n-   Defina os IDs para suas telas e botões
+        como algo significativo, por exemplo \\_ \"telaInicial\" \\_, \\_ \"detalhesTela\"
+        \\_, \\_ \"botaoInicial\" \\_ e \\_ \"botaoDetalhes\" \\_\n\nVocê sempre pode
+        usar o menu suspenso da tela na parte superior da janela do aplicativo para
+        alternar entre as telas.  <img src=\"https://images.code.org/404e0b3f520a413c8a5e62e74b70bb19-image-1478300388689.58.59
+        PM.png\" style=\"width: 150px\"> "
+      CSDU4 - Design Mode - 20: |-
+        # Mudando de Telas
+
+        Você pode definir qual tela será exibida no seu aplicativo com o comando `definirTela()`. Se você estiver trabalhando em blocos, poderá selecionar para qual tela deseja alternar a partir de um menu suspenso.
+
+        ![](<https://images.code.org/615fae136488e1e6d1349e4383388e08-image-1478303858022.13.25 PM.png>)
+
+        # Faça isto
+
+        Você usará um bloco `onEvent()` com `definirTela ()` para fazer com que os dois botões do seu aplicativo alternem entre as duas telas.
+
+        -   Arraste dois blocos `onEvent()`
+        -   Defina os IDs para seus blocos `onEvent()` para cada um dos seus dois botões
+        -   Coloque um bloco `definirTela` dentro de cada um dos blocos`onEvent`.
+        -   Escolha a tela apropriada no menu suspenso de cada bloco `definirTela`.
+        -   Teste seu aplicativo para garantir que seus botões permitam alternar entre as duas telas
       CSDU4 - Design Mode - 21: |-
         # Adicionando imagens
 
@@ -16961,6 +17471,21 @@ pt-BR:
                  \- **Carregar imagens** clicando em "Escolher".
                  \- **Nota:** Você sempre pode ver todos os arquivos que você enviou clicando na engrenagem na parte superior da caixa de ferramentas. ![](<https://images.code.org/53b405b771bc11bf5d24c84c878c80dd-image-1444668067826.35.10 AM.png>)
         -   Certifique-se de dar uma boa identificação à sua imagem!
+      CSDU4 - Design Mode - 3: |-
+        # Como os Eventos Funcionam?
+
+        Aplicativos orientados a eventos são feitos por elementos que podem acionar eventos (tais como botões) e pedaços de código denominados **tratadores de eventos**. Tratadores de eventos são comandos que "escutam" o surgimento de eventos específicos em seu programa, e então executam alguma função quando o evento ocorre.
+
+        Quando você cria um tratador de evento, o Modo de Desenho insere automaticamente um bloco `console.log()` para ajudá-lo a testar o evento, mas você pode colocar qualquer código que você quiser dentro do tratador de evento.
+
+        # Faça Isto
+
+        A caixa de ferramentas tem um novo bloco chamado `defineTexto` que permite a você alterar o texto exibido por um elemento na tela. Você irá modificar o tratador de eventos do botão para que ele altere o título ao ser clicado.
+
+        -   Arraste um bloco `defineTexto()` para _dentro_ da função de `onEvent()` (onde o bloco `console.log()` está atualmente)
+        -   A partir do menu de contexto do bloco, selecione "tituloRotulo" (o id do elemento que será alterado)
+        -   No segundo parâmetro do bloco, substitua "texto" por um novo título para o aplicativo
+        -   Rode o programa e clique sobre o botão para vê-lo funcionar
       CSDU4 - Design Mode - 4: |-
         # IDs
 
@@ -16990,6 +17515,31 @@ pt-BR:
         -   Ao lado do campo "Imagem", clique em "Escolher..."
         -   Clique na guia "Ícones" e selecione um
         -   Certifique-se de dar um bom ID à sua imagem! (ainda precisamos dizer isso?)
+      CSDU4 Connecting Screens: |-
+        # Navegando
+
+        Depois de começar a adicionar várias telas a um aplicativo, você precisa garantir que os usuários sempre cheguem aonde querem ir. Nos próximos dois níveis, você aprenderá como garantir que um usuário sempre possa voltar à "página inicial" do seu aplicativo.
+
+        # Faça isto
+
+        Aqui está um aplicativo com quatro páginas diferentes, mas apenas a tela "vermelha" está vinculada até o momento. Nesse nível, você fará com que os outros dois botões levem o usuário à tela correta.
+
+        -   Adicione dois blocos `onEvent()`, um para os "botaoVerde" e "botaoVermelho"
+        -   Use o bloco `definirTela()` para fazer com que cada botão mude para a tela apropriada
+        -   Teste seu aplicativo para garantir que ambos os botões funcionem. Por exemplo, quando você clica no botão verde, deve ir para a tela verde.
+      CSDU4 Connecting Screens Getting Back: |-
+        # Navegando de volta
+
+        Agora, alguém que usa seu aplicativo pode acessar as páginas vermelha, verde e azul, mas não pode voltar à página inicial. Você pode adicionar seus próprios botões e manipuladores de eventos para ajudá-los a fazer isso.
+
+        # Faça isto
+
+        Crie botões e manipuladores de eventos para ajudar um usuário a voltar para a tela "inicial"
+
+        -   Use o Modo Design para criar um botão dentro de cada uma das telas "vermelho", "verde" e "azul". Certifique-se de fornecer identificações descritivas.
+        -   De volta ao seu código, arraste em três blocos `onEvent()`, um para cada um dos três botões que você criou.
+        -   Dentro de cada bloco `onEvent()`, use o bloco `setScreen()` que retorna à sua tela "inicial".
+        -   Teste seu aplicativo. Agora você deve conseguir voltar para a tela inicial de cada um dos outros três.
       CSDU4 Crowdsource App Demo: |-
         # Contribuição colaborativa
 
@@ -17342,12 +17892,32 @@ pt-BR:
 
         -   Crie um evento 'up' para o botão esquerdo.
         -   Adicione o código para desligar o LED quando o botão aparecer novamente.
+      CSDU6 - UI and Inputs - dropdown setText: |-
+        # setText e getText
+
+        Geralmente, você deseja obter o texto de um elemento da interface do usuário e usá-lo para definir o texto de outro elemento na tela. Você pode obter o texto no menu suspenso quando o usuário escolhe uma nova entrada e usa-a para definir o texto do rótulo "choiceDisplay".
+      CSDU6 - UI and Inputs - get set with text input: |-
+        # definirTexto e obterTexto
+
+        Você já viu como usar obterTexto e definirTexto. Você pode fazer com que este aplicativo obtenha o texto digitado pelo usuário após ele pressionar enter e mostrar o texto na parte inferior?
+
+        \_ Dica: o evento "mudar" é acionado quando o usuário clica em "enter" em um campo. Use um manipulador de eventos para a entrada de texto, observando o evento "mudar".\_
+      CSDU6 - UI and Inputs - getNumber: |-
+        # obterNumero
+
+        \*\* Código Inicial: \*\* Este programa cria uma calculadora simples, mas \*\* existe algo errado com ela. Tente colocar 2 + 2. \*\*
+
+        Podemos corrigir isso usando `obterNumero()` em vez de `obterTexto()`. Você pode consertar o programa alterando `obterTexto ()` para `obterNumero ()`?
       CSDU6 - UI and Inputs - getNumber practice: |-
         # pegarNúmero
 
         \*\* Código Inicial: \*\* O programa tenta atualizar o valorDisplay sempre que o valor do slider muda, mas sempre define o valor para 10.
 
         Você pode usar `pegarNumero()` para obter o valor do controle deslizante e atualizar o valorDisplay à medida que ele muda?
+      CSDU6 - UI and Inputs - getText: |-
+        # getText
+
+        Tente configurar um manipulador de eventos que obtenha o texto da lista suspensa sempre que um usuário selecionar um novo item na lista suspensa. Você precisará usar o getter `getText ()`. Sempre que você usar um getter, salve-o em uma variável. Use `console.log ()` para garantir que esteja funcionando.
       CSDU6 - UI and Inputs - hide show: |-
         # Ocultar e mostrar
 
@@ -17356,6 +17926,31 @@ pt-BR:
         -   Você deseja que o botão de alarme de parada seja oculto quando o programa iniciar. Você pode fazer isso no modo de design.
 
         Dica: ao clicar no botão de alarme de disparo, você deve alterar o texto, ocultar o botão de alarme de disparo, _e_ mostrar o botão de parar alarme.
+      CSDU6 - UI and Inputs - setProperty: |-
+        # setProperty background-color
+
+        Mude a `cor de fundo` de um botão para uma nova cor aleatória sempre que clicar em `setProperty()`.
+      CSDU6 - UI and Inputs - setProperty Image: |-
+        # definirPropriedade imagem
+
+        \*\* Nota: \*\* Este nível inicia no modo Design.
+
+        Existe um elemento de imagem configurado para você, mas ele não aparece quando você sai do Modo de design, porque não foi informado qual imagem exibir.
+
+        -   Use o comando `definirPropriedade()` para definir a imagem do elemento de imagem da interface do usuário na tela.
+      CSDU6 - UI and Inputs - setProperty first level: |-
+        # definirPropriedade
+
+        \*\* Código Inicial: \*\* Há uma chamada para `definirPropriedade()` que define a cor do texto para azul quando você executa o programa.
+
+        Você pode adicionar mais chamadas ao `definirPropriedade()` que alteram outras coisas sobre o texto quando você executa o programa? Tente mudar pelo menos mais 3 coisas.
+      CSDU6 - UI and Inputs - setScreen: |-
+        # definirTela
+
+        Vamos começar com um setter que você usou antes de `definirTela()`.
+
+        -   Faça com que o botão Sobre mim na página inicial vá para a página Sobre mim.
+        -   Faça o botão Voltar em Sobre mim ir para a página inicial.
       CSDU6 - UI and Inputs - setText: |-
         # definirTexto
 
@@ -17855,6 +18450,56 @@ pt-BR:
         # Faça isso
 
         -   Altere o código para que o ícone e sua cor sejam escolhidos usando a variável "myIndex".
+      CSDU6 buzzer 2d arrays_2018: |-
+        # Desafio: Vetores 2D
+
+        Vetores podem armazenar qualquer tipo de dados, como números, cadeias de caracteres, e até outros vetores. Quando colocamos um vetor no interior de outro, ele se torna um vetor 2D. O bloco `buzzer.tocarMusica()` pode ser usado para tocar músicas que parecem mais precisas com vetores 2D.
+
+        A estrutura que você tem usado para tocar notas se parece com isto:
+
+        `buzzer.tocarMusica( [vetor de notas para tocar] , duração da música completa);`
+
+        A principal diferença com `buzzer.tocarMusica()` é que cada elemento dentro de `[vetor de notas para tocar]` é um vetor com dois elementos: a nota que você quer tocar, e a duração da nota. Às vezes você irá querer uma semicolcheia na sua música, outras vezes você irá querer uma mínima, ou talvez algo no meio termo. Uma música completa poderia se parecer com isto:
+
+        `buzzer.tocarMusica([
+          ["G3",0.25],
+          ["C4",0.25],
+          ["E4",0.25],
+          ["G4",0.125],
+          [null,0.375],
+          ["E4",0.1875],
+          ["G4",1]
+        ], 120);`
+
+        # Faça isto
+
+        -   Use o bloco `buzzer.tocarMusica()` para criar uma música diferente.
+        -   Quando você estiver confortável com a estrutura, adicione mais notas à música.
+      CSDU6 buzzer 2d arrays_2019: |-
+        # Desafio: Vetores 2D
+
+        Vetores podem armazenar qualquer tipo de dados, como números, cadeias de caracteres, e até outros vetores. Quando colocamos um vetor no interior de outro, ele se torna um vetor 2D. O bloco `buzzer.tocarMusica()` pode ser usado para tocar músicas que parecem mais precisas com vetores 2D.
+
+        A estrutura que você tem usado para tocar notas se parece com isto:
+
+        `buzzer.tocarMusica( [vetor de notas para tocar] , duração da música completa);`
+
+        A principal diferença com `buzzer.tocarMusica()` é que cada elemento dentro de `[vetor de notas para tocar]` é um vetor com dois elementos: a nota que você quer tocar, e a duração da nota. Às vezes você irá querer uma semicolcheia na sua música, outras vezes você irá querer uma mínima, ou talvez algo no meio termo. Uma música completa poderia se parecer com isto:
+
+        `buzzer.tocarMusica([
+          ["G3",0.25],
+          ["C4",0.25],
+          ["E4",0.25],
+          ["G4",0.125],
+          [null,0.375],
+          ["E4",0.1875],
+          ["G4",1]
+        ], 120);`
+
+        # Faça isto
+
+        -   Use o bloco `buzzer.tocarMusica()` para criar uma música diferente.
+        -   Quando você estiver confortável com a estrutura, adicione mais notas à música.
       CSDU6 buzzer.stop_2018: |-
         # Parando a música
 
@@ -18749,6 +19394,56 @@ pt-BR:
       Dance Party Predict_2019: "\\*\\* Faça uma previsão: \\*\\* Aqui está uma figura
         que se parece com um alien azul!\n\nO que você acha que vai acontecer quando
         você clicar nele?  "
+      Dance_2019_01: |-
+        Arraste o bloco [blockly block] [0] para a área de trabalho e conecte-o dentro do [blockly block] [1]
+          quadra.
+
+          Escolha `gato` ou`preguiça` para criar seu primeiro dançarino.
+
+        -   _Você também pode clicar na lâmpada à esquerda se desejar obter mais informações ou desafios extras._
+      Dance_2019_02: |-
+        O bloco [blockly block] [0] permite executar o código quando você pressiona os botões de seta.
+        Use o [blockly block] [1] para fazer o gato bater palmas!
+
+        \_ Certifique-se de pressionar a tecla "seta para cima" ou \[] [2] depois de clicar no botão Executar! \_
+      Dance_2019_03: É hora de uma dança! Programe cada dançarino para se mover quando
+        você pressionar teclas diferentes. Escolha seu movimento favorito para cada
+        dançarino ou defina-o como `(Aleatório)`para fazer algo totalmente imprevisível!
+      Dance_2019_04: |-
+        Vamos fazer os dançarinos acompanharem a música!
+
+        Conecte o bloco [blockly block] [0] a um bloco [blockly block] [1] da caixa de ferramentas.
+
+        Seu dançarino deve iniciar uma nova jogada após o quarto compasso.
+
+        \*\* Medidas \*\* são usadas para contar o tempo na música. Neste tutorial, uma medida tem quatro tempos.
+      Dance_2019_05: "_Agora vamos curtir!_ \n\nAdicione um bloco <xml><block type=\"Dancelab_atTimestamp\"><title
+        name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"compassos\"</title></block></xml>
+        à sua área de trabalho. Faça o(a) dançarino(a) iniciar um novo movimento após
+        6 compassos."
+      Dance_2019_06: |-
+        Use esse novo bloco para configurar um grupo de dançarinos de backup menores em torno de um dançarino principal no meio.
+
+          [bloco bloqueado] [0]
+
+        Agora você pode criar um monte de dançarinos de backup de uma só vez!
+      Dance_2019_07: |-
+        Todo dançarino tem um conjunto de propriedades que controla como ele se parece.
+
+        Use [blockly block] [0] sob um bloco de eventos verde para fazer com que os dançarinos apareçam mais perto ou mais longe.
+      Dance_2019_08: Os dançarinos têm uma propriedade "tonalidade" que pode adicionar
+        uma camada de cor. Tente mudar o tom de um de seus dançarinos (ou de um grupo
+        inteiro)!
+      Dance_2019_09: |-
+        Esse \*\* novo bloco \*\* é um tipo especial de evento que é acionado repetidamente.
+
+        [blockly block] [0]
+
+        Ao colocar os outros novos blocos na sua caixa de ferramentas dentro do bloco de repetição, você pode alterar repetidamente as propriedades dos dançarinos ao longo do tempo. Seja criativo e divirta-se!
+
+        _Quando terminar, pressione o botão Concluir._
+      Dance_2019_10: Entre no ritmo! Crie sua própria dança para compartilhar com
+        seus amigos.
       Dance_Party_01: |-
         “Vamos fazer uma festa dançante!”
 
@@ -18818,7 +19513,23 @@ pt-BR:
         da seta para a direita.
       Dance_Party_12: Entre no ritmo! Crie sua própria dança para compartilhar com
         seus amigos.
+      Dance_Party_extras_alternate_2019: |-
+        # Vamos entrar em formação!
+
+        Veja esta dança que usa o <xml><block type="Dancelab_alternateMoves"><title name="GROUP">sprites</title><title name="N">2</title><title name="MOVE1">MOVES.Roll</title><title name="MOVE2">MOVES.ClapHigh</title></block></xml> para alterar a formação dos dançarinos de apoio ao longo da dança. Tente uma destas idéias para estendê-lo:
+
+        -   Crie um segundo grupo de dançarinos em um layout diferente
+        -   Alterar layout quando uma tecla é pressionada
+        -   Alterar uma propriedade quando os dançarinos mudam de formação
       Dance_Party_extras_battle: |-
+        # Equipes de dança
+
+        Aqui está uma disputa de dança entre duas equipes. As teclas direcionais controlam um dos dançarinos, e as teclas "w, a, s, d" controlam o outro. Divirta-se em uma disputa de dança com um amigo e depois tente melhorar essa dança.
+
+        -   Adicione mais teclas para controlar as danças
+        -   Faça com que os dançarinos auxiliares também respondam quando as teclas são pressionadas
+        -   Alterne o dançarino a cada 4 compassos, definindo sua visibilidade
+      Dance_Party_extras_battle_2019: |-
         # Equipes de dança
 
         Aqui está uma disputa de dança entre duas equipes. As teclas direcionais controlam um dos dançarinos, e as teclas "w, a, s, d" controlam o outro. Divirta-se em uma disputa de dança com um amigo e depois tente melhorar essa dança.
@@ -18836,6 +19547,15 @@ pt-BR:
         -   Experimente outras durações de notas (como 0,5 para uma mínima ou 0,125 para uma colcheia).
         -   Adicione alguns eventos `após o compasso`.
         -   Troque "compassos" por "segundos" e tente sincronizar suas danças dessa maneira.
+      Dance_Party_extras_every_beat_2019: |-
+        # Semínimas
+
+        A maioria das nossas danças usou compassos inteiros mas cada compasso é composto por 4 semínimas. Esta dança usa <xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml> para fazer o dançarino aplaudir a cada semínima, mas apenas nos quatro primeiros compassos.
+
+        Experimenta mudar os números nos blocos para ver como é que altera a dança.
+
+        -   Experimenta com outras durações de notas (como 0,5 para uma mínima ou 0,125 para uma colcheia)
+        -   Adiciona outros eventos.
       Dance_Party_extras_layout: |-
         # Vamos entrar em formação!
 
@@ -18844,7 +19564,26 @@ pt-BR:
         -   Crie um segundo grupo de dançarinos em um layout diferente
         -   Mude o layout quando uma tecla é pressionada
         -   Altere uma propriedade quando os dançarinos mudam de formação
+      Dance_Party_extras_layout_2019: |-
+        # Vamos Entrar em Formação!
+
+        Veja esta dança que usa o <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> para alterar a formação dos participantes de apoio ao longo da dança. Tente uma destas idéias para estendê-lo:
+
+        -   Crie um segundo grupo de dançarinos em um layout diferente
+        -   Altere o layout quando uma tecla é pressionada
+        -   Altere uma propriedade quando os dançarinos trocam de formação
+      Dance_Party_extras_mixed_2019: |-
+        # Mais Botões
+
+        Essa dança permite controlar as propriedades dos participantes em tempo real enquanto eles dançam automaticamente. Tente fazer outras propriedades mudarem quando você pressionar os botões. Por exemplo:
+
+        -   Altere a tonalidade do dançarino para uma valor aleatório quando você pressionar "seta para baixo".
+        -   Adicione um grupo de dançarinos com um layout aleatório quando você pressionar "espaço".
       Dance_Party_extras_on_beat: |-
+        # Grave, médio e agudo
+
+        Esta dança usa eventos de "pico" para acionar o código quando diferentes partes da música ficam altas. Tente mexer com músicas diferentes para ver como eles mudam a dança.
+      Dance_Party_extras_on_beat_2019: |-
         # Grave, médio e agudo
 
         Esta dança usa eventos de "pico" para acionar o código quando diferentes partes da música ficam altas. Tente mexer com músicas diferentes para ver como eles mudam a dança.
@@ -18852,7 +19591,19 @@ pt-BR:
         # Acelerar, Desacelerar
 
         Esta dança final usa o bloco `definir velocidade` para controlar a rapidez com que cada dançarino se move. Tente experimentar diferentes velocidades durante diferentes pontos na música. Sinta-se à vontade para continuar mexendo nessa dança ou retornar a qualquer uma das danças anteriores para torná-las ainda mais legais.
+      Dance_Party_extras_speed_2019: |-
+        # Acelere, diminua a velocidade
+
+        Essa dança final usa o <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> para controlar a rapidez com que cada dançarino se move. Tente experimentar velocidades diferentes durante pontos diferentes da música. Sinta-se à vontade para continuar mexendo nessa dança ou retornar a qualquer uma das danças anteriores para torná-las ainda mais legais.
       Dance_Party_extras_visible: |-
+        # Onde eles foram?
+
+        Esta dança mostra e oculta dois grupos diferentes de dançarinos. Confira e tente adicionar seu próprio toque.
+
+        -   Adicionar outro grupo de dançarinos
+        -   Mostrar e ocultar dançarinos usando as teclas de seta
+        -   Ocultar todos os dançarinos e alternar para um efeito de fundo estimulante
+      Dance_Party_extras_visible_2019: |-
         # Onde eles foram?
 
         Esta dança mostra e oculta dois grupos diferentes de dançarinos. Confira e tente adicionar seu próprio toque.
@@ -19480,6 +20231,16 @@ pt-BR:
 
         </details>
         </h5>
+      NetSim Standalone Automatic DNS: |-
+        # Sistema de Nome de Domínios (DNS)
+
+        Nesta versão do Simulador de Internet, um Sistema de Nome de Domínios (DNS) é fornecido a você e conhece os endereços IP de todos os computadores conectados. Você pode ver somente os nomes dos outros computadores conectados.\
+        ![](https://images.code.org/3ac2c23ed610abc7e785ec85054e89a9-image-1434746293690.PNG)
+
+        O endereço do DNS é sempre \<yourRouterNumber>.15. Envie uma mensagem com protocolo `GET [nomedohost]`, por exemplo `GET Bob2`, para o DNS obter o endereço do outro aluno. Você pode acompanhar as respostas na seção de Notas da aba DNS.\
+        ![](https://images.code.org/c81c1a6b876eb46674a7f7e5e70506ce-image-1434746797267.png)
+
+        Seu professor irá repassar instruções mais específicas para esta atividade.
       NetSim Standalone Broadcast: |-
         # Transmitir mensagens no Simulador da Internet
 
@@ -19532,11 +20293,77 @@ pt-BR:
         Agora que você transmitiu informações representadas como números decimais, é possível mapear esses números para caracteres de texto para enviar e receber informações baseadas em texto. Com um protocolo baseado em texto, você pode representar e comunicar com facilidade todos os tipos de informações.
 
         Seu professor fornecerá instruções mais específicas para esta atividade.
+      OPD-K5 CS Video: |-
+        ## Vamos Começar: Por que Fundamentos de Ciências da Computação (CC)?
+
+        Você irá completar este curso gratuito, em seu próprio passo, usando a mesma plataforma de aprendizado que você poderá usar em sua sala de aula com seus alunos.
+
+        Vamos começar aprendendo um pouco sobre o que são os Fundamentos de Ciências da Computação (CC), e como eles têm ajudado professores e alunos ao redor do mundo. No próximo nível, iremos cobrir como interagir com a plataforma de Fundamentos de CC, que você irá usar para completar o curso.
+
+        > ## Reflita
+        >
+        > Quais são suas primeiras impressões de Fundamentos de CC?
+        >
+        > [Envie suas impressões pelo Tweeter](https://twitter.com/teachcode) e não se esqueça de usar a tag @teachcode na sua mensagem para que possamos responder.
+        >
+        > <a href="http://ctt.ec/Bfjw3" target="blank"><button class="default">Compartilhe no Tweeter >></button></a><br><br>
+        > Não possui uma conta no Twitter? Você também pode nos encontrar no [Facebook](https://www.facebook.com/Code.org/) ou no [Instagram](https://www.instagram.com/codeorg/).
+      OPD-K5 Closing: |-
+        > \*\*Se você gostou deste curso, inscreva-se para um workshop presencial: \*\*
+        >
+        > [Inscreva-se agora](http://code.org/professional-development-workshops) para continuar aprendendo ciência da computação e sua pedagogia. As oficinas presenciais gratuitas são um local valioso para colaborar e interagir com outros educadores apaixonados em sua área.
+      OPD-K5 EventsVid: |-
+        Assista este vídeo que define "eventos" e mostra como eles funcionam em Fundamentos de CC. Em seguida, você irá tentar alguns quebra-cabeças que requerem que você codifique eventos.
+
+        > Um evento é uma linha de código que diz ao seu computador para "escutar" alguma coisa acontecer, e em seguida tomar uma ação. Por exemplo, em páginas web você geralmente pode exibir um menu suspenso ao passar sobre a barra de navegação com seu mouse. A "rolagem do mouse" é um "evento" que dispara uma ação.
       OPD-K5 FirstProgram: Assista o vídeo abaixo, que explica o primeiro programa
         que os estudantes irão escrever no [Curso A](https://studio.code.org/s/coursea-2018?section_id=2042045).
         Na próxima página, você mesmo irá escrever um programa parecido!
+      OPD-K5 LessonPlanning: |-
+        Até agora, você foi apresentado a alguns de nossos planos de aulas desplugados. No entanto, existem planos de aula para cada uma das lições em Fundamentos de CC - tanto conectadas quanto on-line. Você pode encontrar a lista completa de planos de aula para cada curso abaixo:
+        <br/>
+        <br/>
+        [Planos de aula do curso A](https://curriculum.code.org/csf-18/coursea/)<br/>
+        [Planos de aula do curso B](https://curriculum.code.org/csf-18/courseb/)<br/>
+        [Planos de aula do curso C](https://curriculum.code.org/csf-18/coursec/)<br/>
+        [Planos de aula do curso D](https://curriculum.code.org/csf-18/coursed/)<br/>
+        [Planos de aula do curso E](https://curriculum.code.org/csf-18/coursee/)<br/>
+        [Planos de aula do curso F](https://curriculum.code.org/csf-18/coursef/)<br/>
+
+        No entanto, você pode querer adaptar essas lições ou criar as suas próprias! O vídeo abaixo explica a estrutura das lições de Fundamentos de CC, mas também fornece dicas, caso você queira desenvolver suas próprias lições.
+      OPD-K5 Problem Solving: |-
+        # Melhories Práticas > Metacognição para Solução de Problemas
+
+        O ensino explícito de estratégias para solução de problemas antes, durante e depois da codificação é extremamente importante para ajudar os alunos a processarem seu aprendizado. A metacognição para solução de problemas envolve pensar sobre o processo de raciocínio em si, e refletir _como_ você resolve problemas. Assista ao vídeo abaixo para aprender como a "Receita para Resolver Quebra-Cabeças" da Code.org pode ajudar os alunos a ter sucesso em problemas difíceis:
+
+        <iframe width="640" height="390" src="https://www.youtube.com/embed/XN0G6bSbQ2M" frameborder="0" allowfullscreen></iframe>
+        [Não consegue ver o vídeo? Clique aqui][0]
+
+        [Esta planilha](https://twitter.com/teachcode) detalha os passos da Receita para Resolver Quebra-Cabeças.
+
+        <img src="https://images.code.org/18ec61f8b911b83ca1cdea404a34c40e-image-1434399798952.png" width="650px" style="margin-right:45px; border-radius:10px;">
+
+        > ## Reflita:
+        >
+        > Como você poderia explicitamente lecionar a resolução de problemas em sala de aula?
+        >
+        > [Compartilhe suas ideias no Twitter][2] e lembre-se de indicar a tag @teachcode no seu tweet para que possamos responder.
+        >
+        > <a href="http://ctt.ec/ic2bx" target="blank"><h4><i class="fa fa-external-link-square" ></i> Compartilhe no Tweeter</h4></a>
       OPD-K5 RepeatBlock: Assista o vídeo abaixo, que explica como laços funcionam
         e introduz o bloco 'Repita' em Fundamentos de CC.
+      OPD-K5 Unplugged Video: |-
+        ## Olhando à Frente > "Desplugando-se"
+
+        <img src="https://images.code.org/ae83fdee9390a1155e5173b2a06f9773-image-1434399991310.JPG" class="level-image">
+
+        Ao lecionar ciências da computação, você pode pensar que seria melhor ter acesso a tecnologias de alto padrão -- computadores novos, internet rápida, os últimos aplicativos. Mas na Code.org, nós descobrimos que algumas das lições mais impactantes de ciências da computação são na realidade aquelas "desplugadas", ou conduzidas com pouco ou nenhum uso de recursos de tecnologia. Nestas aulas, os alunos aprendem os conceitos de computação sem usar o computador.
+
+        Este é o motivo porque todos os nossos cursos de Fundamentos de CC usam atividades desplugadas para introduzir os conceitos de computação através de elementos físicos, antes que os alunos escrevam programas de computador utilizando estes conceitos. Um exemplo disto seria fazer em classe uma dança com movimentos repetidos para entender o conceito de como os laços replicam comandos em um programa de computador. Desta forma, quando os alunos forem escrever programas que utilizam laços, a atividade desplugada já forneceu a eles algo com que eles já tenham familiaridade, e podem relacionar este novo conceito com a atividade.
+
+        Assista o vídeo abaixo para entender os benefícios do uso de atividades desplugadas para lecionar ciências da computação.
+
+        **À medida que você progredir através das Etapas 4-8**, você terá uma oportunidade para rever algumas de nossas atividades desplugadas para cada um dos conceitos chave que são tratados neste curso.
       OPD-K5 WhatIsCS: Você já se perguntou "Exatamente, o que é ciência da computação?"
         Ou, "Por que alguns programas de computador são escritos com palavras e alguns
         são escritos usando imagens?" Se sim, assista a este vídeo; é uma ótima introdução
@@ -19677,6 +20504,22 @@ pt-BR:
         -   Adicione uma imagem para o exterior
         -   Escolha um bom ID (talvez _fora_)
         -   Esconda a imagem do exterior (será mostrada quando a porta se abrir)
+      Room Escape Workshop - 10 - 2: |-
+        # Porta Aberta
+
+        <img src="https://images.code.org/57407cb51f50e08ecddb8ce7d2d89157-image-1491065952915.58.58 PM.png" style="width:200px;float:right">
+
+        Abra a porta se eles tiverem a chave!
+
+        # Faça Isto
+
+        -   Adicione um bloco `onEvent` para clicar na porta
+        -   Adiciona uma declaração `if` dentro do `onEvent` para verificar se a posição da chave se moveu para a parte inferior da tela
+        -   Adicione uma declaração if
+        -   Na declaração if acrescente o `==`
+        -   Em um lado do `==` coloque a posição x em que a chave estiver posicionada ao ser clicada
+        -   No outro lado adicione o bloco `getXPosition()` - O ID para isto deverá ser o ID da sua chave!
+        -   Dentro da declaração `if` use `showElement` para exibir a imagem oculta da parte externa se eles tiverem a chave
       Room Escape Workshop - 3: |-
         # Ocultar o código
 
@@ -19707,6 +20550,38 @@ pt-BR:
         (o nome da variável) para ser _guess_ \n         \\- No lado direito, mude
         \\_ \"Digite um valor\" \\_ (a mensagem para solicitar ao usuário) para \\_
         \"Digite o código\" \\_"
+      Room Escape Workshop - 5: |-
+        # Verificando o Código Secreto
+
+        Agora que você já obteve do usuário uma tentativa do código secreto, você deverá verificar se ela está correta! Nós podemos fazer isto usando uma declaração `if`. Uma declaração if verifica se uma condição é verdadeira, e neste caso irá checar se o número fornecido pelo usuário é igual ao código secreto
+
+        # Faça Isto
+
+        -   Dentro do bloco `onEvent` para o cofre abaixo da linha de comando adicione uma declaração <img src="https://images.code.org/5e9a434b1ad6b8f010db928b668127a5-image-1491061131564.37.01 AM.png" style="width:100px">
+        -   Crie a condição usando o bloco <img src="https://images.code.org/f0680979704c30975550211b03ed222e-image-1491061134985.37.08 AM.png" style="width:100px"> que irá verificar se duas coisas são iguais
+        -   Em um lado do <img src="https://images.code.org/f0680979704c30975550211b03ed222e-image-1491061134985.37.08 AM.png" style="width:100px"> coloque _tentativa_ (o nome da variável que usamos para armazenar a tentativa do usuário)
+        -   No outro lado coloque o valor de seu código secreto
+      Room Escape Workshop - 7: |-
+        # Exibindo o interior do cofre
+
+        <img src="https://images.code.org/71e74305187a46d0badeb29a9a69ac56-image-1490371014841.55.37 AM.png" style="width:200px;float:right">
+
+        Quando você tiver o programa funcionando para verificar o código secreto, você irá querer "abrir" o cofre e mostrar a chave dentro. Primeiro você deverá criar estes elementos em modo de desenho.
+
+        # Faça Isto
+
+        -   Entre no modo de desenho e adicione uma imagem com um quadrado cinza
+            -   Clique e arraste um elemento de imagem <img src="https://images.code.org/8f4bc108415d83e5c528c9204502efc2-image-1491059181186.06.13 AM.png" style="width:75px"> para a tela
+            -   Dê a ele um bom ID (talvez _interiorCofre_)
+            -   Ache um quadrado cinza para usar como figura
+            -   Isto irá funcionar como o interior do cofre, já que irá encobrir a parte da frente do cofre quando for exibido
+        -   Adicione a imagem da chave
+        -   Clique e arraste um elemento de imagem <img src="https://images.code.org/8f4bc108415d83e5c528c9204502efc2-image-1491059181186.06.13 AM.png" style="width:75px"> para a tela
+        -   Dê a ele um bom ID (talvez _chave_)
+        -   Localize a imagem de uma chave para usar
+        -   Clique a propriedade ocultar no Modo de Desenho para o quadrado cinza e a chave. Quando eles estiverem ocultos irá parecer algo como abaixo em Modo de Desenho
+
+        <img src="https://images.code.org/2c2c7e9996515f2b30d416b558fd1360-image-1489605526794.17.55 PM.png" style="width:200px">
       Room Escape Workshop - 8: |-
         # Mostrando dentro do cofre
 
@@ -19717,6 +20592,18 @@ pt-BR:
         -   Dentro da instrução `se` que você criou no comando`onEvent` para adicionar com segurança:
                  \- O bloco `mostrarElemento` para mostrar o quadrado cinza
                  \- O bloco `mostrarElemento` para mostrar a chave
+      Room Escape Workshop - 9-2: |-
+        # Clique na tecla
+
+        <img src="https://images.code.org/1a736d2774860bebc5072b8ae8b38f34-image-1491066638078.10.00 PM.png" style="width:170px;float:right">
+
+        Depois que um usuário clicar na tecla, você desejará mostrar que a está segurando. Você pode fazer isso movendo a chave para o canto inferior da sala.
+
+        # Faça isto
+
+        -   Adicione um bloco `onEvent` para quando o usuário clicar na tecla.
+        -   Dentro do bloco `onEvent`:
+                 \- Use `definirPosicao` para mover a tecla para o canto inferior da tela
       Standalone_Artist_2: Desenhe este diamante com ângulos de 120 e 60 graus, e
         com lados de 150 pixels de comprimento.
       Standalone_Artist_3: Você pode desenhar este hexágono com lados de 100 pixels
@@ -21004,11 +21891,11 @@ pt-BR:
       courseA_artist_loops4: |-
         Agora use um <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> bloco de repetição para desenhar esta linha cinco vezes!
 
-        [](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
+        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
       courseA_artist_loops4_2018: |-
         Agora use um <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> bloco de repetição para desenhar esta linha cinco vezes!
 
-        [](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
+        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
       courseA_artist_loops4_2019: |-
         Agora use um <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> bloco de repetição para desenhar esta linha cinco vezes!
 
@@ -21131,7 +22018,7 @@ pt-BR:
 
         Arraste os blocos para área de trabalho e tente descobrir como obter o tesouro.  Obtenha pelo menos um ítem para passar este nível.
       courseA_collector_loops2: "Pegue todas as três pilhas! Mova Laurel para cada
-        peça do tesouro, e então use esse block: \n<xml><block type=\"collector_collect\"/></xml>"
+        peça do tesouro, e então use esse block: \n <xml><block type=\"collector_collect\"/></xml>"
       courseA_collector_loops2_2018: "Pegue todas as três pilhas! Mova Laurel para
         cada peça do tesouro, e então use esse block: \n<xml><block type=\"collector_collect\"/></xml>"
       courseA_collector_loops2_2019: 'Pegue todas as três pilhas! Mova Laured para
@@ -21161,7 +22048,7 @@ pt-BR:
         e um bloco ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
         na parte inferior do programa e clique em "Executar"!
       courseA_collector_preLoops7: "Pegue todas as três pilhas! Mova Laurel para cada
-        peça do tesouro, e então use esse block: \n<xml><block type=\"collector_collect\"/></xml>"
+        peça do tesouro, e então use esse block: \n <xml><block type=\"collector_collect\"/></xml>"
       courseA_harvester_loops1: Ajude a colheitadeira a pegar todo o milho!
       courseA_harvester_loops10: Ajude a colheitadeira a pegar todas as cinco espigas
         de milho!
@@ -21361,22 +22248,20 @@ pt-BR:
       courseA_playLab_events2_2019: Jorge, o Cão, quer dizer 'Olá". Você pode ajudá-lo?
       courseA_playLab_events3: |-
         Ajude Jorge, o cachorro, a mover-se conectando o <xml><block type="studio_move">
-
-        <title name="SPRITE">1</title>
-        <title name="DIR">8</title>
-        </block></xml> bloco à<xml><block type="studio_whenArrow">
-        <title name="VALUE">esquerda </title>
-        </block></xml> onde já se encontra o bloco de evento na área de trabalho.
+            <title name="SPRITE">1</title>
+            <title name="DIR">8</title>
+          </block></xml> bloco à <xml><block type="studio_whenArrow">
+            <title name="VALUE">left</title>
+          </block></xml> onde já se encontra o bloco de evento na área de trabalho.
 
         Leve Jorge até a bandeira para passar de nível!
       courseA_playLab_events3_2018: |-
         Ajude Jorge, o cachorro, a mover-se conectando o <xml><block type="studio_move">
-
-        <title name="SPRITE">1</title>
-        <title name="DIR">8</title>
-        </block></xml> bloco à<xml><block type="studio_whenArrow">
-        <title name="VALUE">esquerda </title>
-        </block></xml> onde já se encontra o bloco de evento na área de trabalho.
+            <title name="SPRITE">1</title>
+            <title name="DIR">8</title>
+          </block></xml> bloco à <xml><block type="studio_whenArrow">
+            <title name="VALUE">left</title>
+          </block></xml> onde já se encontra o bloco de evento na área de trabalho.
 
         Leve Jorge até a bandeira para passar de nível!
       courseA_playLab_events3_2019: |-

@@ -41,10 +41,11 @@ en:
     attributes:
       user:
         name: 'Display Name'
-        name_example: 'Display Name<br/>(e.g. Cool Coder or Jane S.)'
+        name_example: 'Display Name (e.g. Cool Coder or Jane S.)'
         email: 'Email'
         parent_email: 'Parent/guardian email'
         personal_email: "Personal email address <a href=\"%{url}\">(click here if you don't have an email address)</a>"
+        personal_email_markdown: "Personal email address [(click here if you don't have an email address)](%{url})"
         username: 'Username'
         password: 'Password'
         password_confirmation: 'Password confirmation'
@@ -55,7 +56,9 @@ en:
         edit_header: 'Edit Account Details'
         finish_sign_up_header: 'Finish creating your account'
         finish_sign_up_subheader: 'Fill out the following information to finish creating a Code.org account for <strong>%{email}</strong>.'
+        finish_sign_up_subheader_markdown: 'Fill out the following information to finish creating a Code.org account for **%{email}**.'
         finish_sign_up_subheader_provider: 'Fill out the following information to finish creating a Code.org account with <strong>%{provider}</strong> for <strong>%{email}</strong>.'
+        finish_sign_up_subheader_provider_markdown: 'Fill out the following information to finish creating a Code.org account with **%{provider}** for **%{email}**.'
         reset_password_token: "The reset password link you have followed"
         error:
           future: can't be in the future
@@ -131,14 +134,20 @@ en:
     unable_to_connect_provider: "Unable to connect your Code.org account to your %{provider} account. Please try again."
     already_in_use: "Your %{provider} account is already connected to another Code.org account."
     already_linked: "Your %{provider} account is already linked to your Code.org account."
+    existing_account:
+      account_exists: "Good news! You already have a Code.org account that uses %{email}"
+      sign_in: "Please sign in and we'll link your %{provider} profile."
+      sign_up: "Not your email? Want to create a new account with a different email? We will also link your %{provider} profile if you choose to create a new account."
   signup_form:
     email_signup: 'Sign up with your email address'
     student_count: '%{count} students have already signed up.'
     teacher_count: '%{count} teachers have already signed up.'
     overview: 'Sign up for an account to track your progress or manage your classroom. <a href="/">You can browse the various stages and puzzles</a> without an account, but you will need to sign up to save your progress and projects.'
+    overview_markdown: 'Sign up for an account to track your progress or manage your classroom. [You can browse the various stages and puzzles](/) without an account, but you will need to sign up to save your progress and projects.'
     hoc_already_signed_up_heading: 'Get started without logging in'
     hoc_already_signed_up_content: 'You are signed up to teach an Hour of Code! You and your students do not need to sign in to Code Studio to participate in this event. To get started, <a href="%{learn_url}">choose a tutorial</a> for your classroom and share the link with them.<br/><br/>If you enjoyed the Hour of Code and want to go further, you can set up a password and create a Code Studio account below to enroll your students in any of our <a href="%{educate_url}">longer courses</a>.'
     hoc_already_signed_up_content_post_hoc: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. <a href="%{studio_url}">You can also continue to browse the various stages and puzzles</a> without creating an account.'
+    hoc_already_signed_up_content_post_hoc_markdown: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. [You can also continue to browse the various stages and puzzles](%{studio_url}) without creating an account.'
     teacher_educator_guide: 'See educator guide'
     title: "Sign up for Code.org"
     school_name: 'School Name (optional)'
@@ -455,7 +464,9 @@ en:
     create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
     create_personal_login_link_account: 'You can also instead choose to connect to a personal account under the “Manage Linked Accounts” section.'
     create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
+    create_personal_login_terms_markdown: "By creating a personal login, I agree to be bound by the Code.org [terms of service](%{terms_of_service_url}). I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
     create_personal_login_email_note: "Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href='%{privacy_policy_url}', target='_blank'>privacy policy</a> for more information."
+    create_personal_login_email_note_markdown: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our [privacy policy](%{privacy_policy_url}) for more information.'
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     parent_email_label: "Parent/guardian email (optional)"
@@ -463,6 +474,8 @@ en:
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
     update: "Update Account"
     account_successfully_updated: "Account successfully updated."
+    auth_option_saved: "You have successfully linked your %{provider} account with email %{email}."
+    auth_option_saved_no_email: "You have successfully linked your %{provider} account."
     update_email: "Update"
   user_level:
     completed: 'Completed'
@@ -571,6 +584,7 @@ en:
       link: "Learn more"
       applab_unsupported_tablet: "App Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
       gamelab_unsupported_tablet: "Game Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
+      oceans_unsupported_browser: "This browser is not supported for this tutorial. Please try visiting this page using Edge, Chrome, Firefox, or another modern browser."
       weblab_unsupported_browser: "Unfortunately, we're currently experiencing issues with loading Web Lab on this browser. You may want to use a different browser until this is resolved. Sorry for the inconvenience."
       weblab_unsupported_locale_storage: "You may experience issues using Web Lab in Private Browsing mode. Please reload your project in normal mode. Sorry for the inconvenience."
   slow_loading: 'This is taking longer than usual...'
@@ -612,6 +626,8 @@ en:
       audience: 'Ages 13+'
       cta: 'Learn how'
     dance:
+      title: 'Dance Party'
+    dance-2019:
       title: 'Dance Party'
     hoc:
       title: 'Classic Maze'
@@ -686,7 +702,7 @@ en:
     activity_count: "In the past <b>%{days}</b> days, students have made <b>%{count}</b> apps and pictures by writing their own computer programs. Click on the pictures and screenshots to see each program in action."
     want_to_make_your_own: "Want to make your own?"
     how_to_save: "On the last level of these tutorials, click \"Finish\" and \"Save\" to save your work to the gallery."
-    more: "More &rarr;"
+    more: "More →"
     caption_by_name_age: "by %{name}, age %{age}"
     caption_time_ago: "%{time_ago} ago"
     header: "Gallery"
@@ -772,14 +788,17 @@ en:
   terms_interstitial:
     title: "Updated Terms of Service and Privacy Policy"
     intro_desc: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
+    intro_desc_markdown: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will *no longer store email addresses for student accounts on Code Studio.* This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
     intro_instructions: "You'll need to accept these new terms for students under the age of 13 in your classroom to have full access to all the latest features in Code Studio.  When registering an account for a student under 13, you will be asked to confirm that your school has parental consent for the collection of the student’s personal information for the use and benefit of the school, including educational programs such as Code Studio."
     tos: "Terms of Service"
     privacy: "Privacy Policy"
     privacy_notice: "Privacy Notice"
     accept_label: 'I agree to the <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.'
+    accept_label_markdown: I agree to the [Terms of Service](%{tos_url}) and [Privacy Policy](%{privacy_url}).
     accept: "Accept"
     print: "Print"
     reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'
+    reminder_desc_markdown: We have updated our [Terms of Service](%{tos_url}) and [Privacy Policy](%{privacy_url}). Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.
     review_terms: "Review updated terms"
   school_info_interstitial:
     title: "We want to bring Computer Science to every student - help us track our progress!"
@@ -801,6 +820,7 @@ en:
     submit: "Submit"
     decline: "Close"
   zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'
+  zendesk_too_young_message_markdown: 'Sorry, younger users may not sign in to our support site. You may browse [support.code.org](http://support.code.org) without signing in or ask your parent or teacher to contact us for you.'
   progress:
     not_started: not started
     in_progress: in progress
@@ -956,11 +976,18 @@ en:
     csp_libraries: 'Libraries'
     csp_parameters_return_values: 'Parameters and Return Values'
     dlp: 'Reflection Prompts'
-    time4cs_c1: 'Everglades and Its Ecosystems'
-    time4cs_c2: 'Food Chains in the Everglades'
-    time4cs_c3: 'Living in the Everglades'
-    time4cs_c4: 'Invasive Impacts on the Everglades'
-    time4cs_c5: 'Citizens Affect Change in the Everglades'
+    time4cs_c1: 'Collection 1: The Everglades & its Ecosystems'
+    time4cs_c2: 'Collection 2: Food Chains (in the Everglades)'
+    time4cs_c3: 'Collection 3: Native Species (in the Everglades)'
+    time4cs_c4: 'Collection 4: Impact of Invasive Species (on the Everglades)'
+    time4cs_c5: 'Collection 5: Citizens Take Action'
+    time4cs_c6: 'Conditionals (review)'
+    k5_getting_started: 'Getting Started'
+    k5_csf_intro: 'Get to know the CS Fundamentals Courses'
+    k5_coding_concepts: 'Coding Concepts and Teaching Strategies'
+    k5_next_steps: 'Next Steps'
+    k5_basic_concepts: 'Basic Coding Concepts and Teaching Practices'
+    k5_diving_deeper: 'Diving Deeper: Courses E and F'
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
@@ -1172,3 +1199,7 @@ en:
     privacy_policy: 'privacy policy'
     logout: 'Logout'
     yes: 'Yes'
+  page_not_found_title: "Page Not Found"
+  page_not_found_header: '404: Page Not Found'
+  page_not_found_description: "The page you are looking for doesn't exist at this address. Check the web address and resubmit. Or, go back to our homepage."
+  page_not_found_button: "Return home"

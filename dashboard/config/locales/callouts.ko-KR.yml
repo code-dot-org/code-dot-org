@@ -63,6 +63,9 @@ ko-KR:
         set_length: 정확한 값으로 "길이"를 설정하기 위해 이 블럭을 사용하세요.
       Course 4 Artist Vars 6:
         degrees_per_side: 각각의 회전 각도를 얻어내기 위해, 면의 개수를 360으로 나누세요.
+      Course 4 Bee 3:
+        if_else_bee: '"만약(if)/그렇지 않으면(else)" 블럭을 사용해서 꿀벌이 꽃에 꽃꿀이 있으면 집고, 아니면 꿀을 만들도록
+          해 보세요.'
       Course 4 Bee Params 2:
         edit_get_nectar: 이 버튼을 사용해 함수를 수정해서, 꿀벌이 꽃꿀 방향으로 회전할 수 있도록 하세요.
       Course 4 Maze 4:
@@ -84,6 +87,22 @@ ko-KR:
       CourseD_Dance_Party_11:
         dance_callout_11_a: 새 블록!
         dance_callout_11_b: 새 블록!
+      Dance_2019_01:
+        dance_callout_01: 이 블록을 프로그램에 추가하세요!
+      Dance_2019_02:
+        dance_callout_11_a: 이 블록을 프로그램에 추가합니다.
+        arrow_buttons: 댄서를 조종하려면 화살표 단추를 누르세요.
+      Dance_2019_04:
+        dance_callout_02: 이 블록을 프로그램에 추가하세요!
+      Dance_2019_05:
+        dance_callout_05: 프로그램에 새로운 이벤트를 추가하십시오.
+      Dance_2019_06:
+        dance_party_11_5_groups: 새 블록!
+      Dance_2019_07:
+        setprop_hint: 새 블록!
+      Dance_2019_09:
+        new_block_3: 새 블록!
+        new_block_4: 새 블록!
       Dance_Party_01:
         dance_callout_01: 이 블록을 프로그램에 추가하세요!
       Dance_Party_02:
@@ -207,3 +226,5 @@ ko-KR:
         replace_questions: '"???" 부분에 수를 입력하면 됩니다.'
       frozen square snowflake:
         replace_questions: '"???" 부분에 수를 입력하면 됩니다.'
+      Dance_Party_11_5:
+        dance_party_11_5_groups: "“모든 오리” 블록은 여기에서 찾으세요"

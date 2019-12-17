@@ -1,7 +1,5 @@
 ---
 title: Príručka - Ako na to
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
@@ -81,6 +79,6 @@ Začnite Hodinu Kódu motiváciou účastníkov a diskusiou o tom, ako počíta�
 
 ## Čo nasleduje po Hodine Kódu?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](%= codeorg_url('/learn/beyond') %)!
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](/beyond)!
 
 {{ signup_button }}

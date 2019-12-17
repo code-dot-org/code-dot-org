@@ -1615,3 +1615,27 @@ kk:
               name: Кіріспе
             Nested Loops:
               name: Кіріккен Циклдер
+        k5-onlinepd-2019:
+          stages:
+            Loops:
+              name: Ілмек
+            Conditionals:
+              name: Шарттар
+            Events:
+              name: Шаралар
+            Functions:
+              name: Функциялар
+            Variables:
+              name: Айнымалылар
+            For Loops:
+              name: For ілмектері
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Шарттар
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Кроудсорсинг
+            Conditionals with Cards:
+              name: Картаға қатысты шартты белгілер

@@ -1,10 +1,5 @@
 ---
 title: تشکر برای ورود به میزبانی ساعت کدنويسی!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # تشکر برای ورود به میزبانی ساعت کدنويسی!

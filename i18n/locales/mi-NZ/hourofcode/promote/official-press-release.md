@@ -1,7 +1,5 @@
 ---
 title: Te Pūrongo Pāpāho Hour of Code mā ngā Āpiha ā-Pōti
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

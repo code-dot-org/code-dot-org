@@ -10,7 +10,7 @@ nav: how_to_nav
 
 ### Únete al movimiento e introduce a un grupo de estudiantes a su primer hora de ciencias de la computación con estos pasos. La Hora del Código es sencilla, ¡incluso para principiantes! Si quieres ayuda adicional, puedes encontrar un [voluntario local]({{ urls/volunteer_local }}) que te ayudará a organizar una Hora del Código luego de clase.
 
----
+* * *
 
 ## 1. Mira este video explicativo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -81,6 +81,6 @@ Para dar inicio a la Hora del Código, inspira a los participantes y habla acerc
 
 ## ¿Qué viene después de la Hora del Código?
 
-La Hora del Código es solo el primer paso para aprender más sobre cómo funciona la tecnología y cómo crear aplicaciones de software. ¡Ayuda a los estudiantes a que sigan adelante y [aprendan más en línea](%= codeorg_url('/learn/beyond') %)!
+La Hora del Código es solo el primer paso para aprender más sobre cómo funciona la tecnología y cómo crear aplicaciones de software. ¡Ayuda a los estudiantes a que sigan adelante y [aprendan más en línea](/beyond)!
 
 {{ signup_button }}

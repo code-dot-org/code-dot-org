@@ -11050,6 +11050,8 @@ fil:
           stages:
             new stage:
               name: bagong yugto
+            Dance Party:
+              name: Dance Party
         frozen-2018-test-b:
           stages:
             Artist:
@@ -11060,6 +11062,14 @@ fil:
               name: Digital na Disenyo
             Linking Screens:
               name: Pag-uugnay sa mga Screen
+        dance--draft:
+          stages:
+            Dance Party:
+              name: Dance Party
+        dance-draft:
+          stages:
+            Dance Party:
+              name: Dance Party
         coursef-2019:
           description: Matutong gumami sa iba't ibang uri ng mga loop, mga event,
             mga function, at mga kondisyonal. Siyasatin ang iba't ibang mga pamamaraan
@@ -11269,6 +11279,10 @@ fil:
                 ng iba ay nagpapagawa sa gawaing mga ito na mapapamahalaan. Ang araling
                 ito ay magpapakita sa mga estudyante kung paano maaring nakakatulong
                 ang pagtutulungan sa industriya ng computer science.
+        dance-low:
+          stages:
+            Dance Party:
+              name: Dance Party
         coursed-2019:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -11312,6 +11326,8 @@ fil:
                 ibahagi online. Nagpapakita kay R2-D2 at ibang mga karakter sa Star
                 Wars, ang mga estudyante ay gagabayan sa mga pangyayari, pagkatapos
                 ay bibigyan ng lugar para makalikha ng kanilang sariling laro.
+            Dance Party:
+              name: Dance Party
         coursee-2019:
           description: Magsimulang mag-code gamit ang mga algoritmo, mga loop, mga
             kondisyonal, at mga pangyayari at pagkatapos ay pupunta ka sa mga function.
@@ -11575,6 +11591,8 @@ fil:
               name: Internet
             Crowdsourcing:
               name: Pag-crowdsourcing
+            Dance Party:
+              name: Dance Party
             Concept Practice with Minecraft:
               name: Masdan ang Hinaharap
         csd1-2019:
@@ -13610,6 +13628,8 @@ fil:
               name: Bago ang Surbey sa mga Prinsipyo sa CS
             Binary Numbers:
               name: Binary na mga Numero
+            Representing Information:
+              name: Pagrepresenta ng Impormasyon
         csd-videos:
           stages:
             new stage:
@@ -14556,11 +14576,27 @@ fil:
               name: bagong yugto
             Deeper Learning Overview:
               name: Buod ng Mas Malalim na Pag-aaral
+        dlp19-csd-mod-w3:
+          stages:
+            Deeper Learning Overview:
+              name: Buod ng Mas Malalim na Pag-aaral
+        dlp19-csd-mod-w4:
+          stages:
+            Deeper Learning Overview:
+              name: Buod ng Mas Malalim na Pag-aaral
         dlp19-csp-mod-w1:
           stages:
             Deeper Learning Overview:
               name: Buod ng Mas Malalim na Pag-aaral
         dlp19-csp-mod-w2:
+          stages:
+            Deeper Learning Overview:
+              name: Buod ng Mas Malalim na Pag-aaral
+        dlp19-csp-mod-w3:
+          stages:
+            Deeper Learning Overview:
+              name: Buod ng Mas Malalim na Pag-aaral
+        dlp19-csp-mod-w4:
           stages:
             Deeper Learning Overview:
               name: Buod ng Mas Malalim na Pag-aaral
@@ -14580,6 +14616,8 @@ fil:
               name: bagong yugto
             Routers and Redundancy:
               name: Mga Routers at Redundancy
+            The Need for Addressing:
+              name: Ang Pangangailangan ng Addressing
         peru-2019:
           stages:
             new stage:
@@ -14598,3 +14636,83 @@ fil:
               name: Mga Pangyayari sa Star Wars
             Nested Loops in Frozen:
               name: Naka-nest na mga Loop sa Frozen
+        dance-2019:
+          stages:
+            Dance Party:
+              name: Dance Party
+        k5-onlinepd-2019:
+          stages:
+            Getting Started:
+              name: Pagsisimula
+            Computer Science Fundamentals:
+              name: Mga Batayan ng Computer Science
+            Looking Ahead:
+              name: Masdan ang Hinaharap
+            'Mastering the Basics: Sequencing':
+              name: 'Pag-amo sa mga Pangunahing Kaalaman: Pagsunod-sunod'
+            'Mastering the Basics: Loops':
+              name: 'Pag-amo sa mga Pangunahing Kaalaman: Mga Loop'
+            'Mastering the Basics: Conditionals':
+              name: 'Pag-amo sa mga Pangunahing Kaalaman: Mga Kondisyonal'
+            'Mastering the Basics: Functions':
+              name: 'Pag-amo sa mga Pangunahing Kaalaman: Mga Function'
+            'Mastering the Basics: Events':
+              name: 'Pag-amo sa mga Pangunahing Kaalaman: Mga Kaganapan'
+            Best Practices for Teaching Computer Science:
+              name: Mga Magandang Gawi sa Pagtuturo ng Computer Science
+            Planning:
+              name: Pagpaplano
+            Next Steps:
+              name: Mga susunod na Hakbang
+            Loops:
+              name: Mga loop
+            Conditionals:
+              name: Mga conditional
+            Events:
+              name: Mga event
+            Functions:
+              name: Mga function
+            Variables:
+              name: Mga variable
+            For Loops:
+              name: For Loops
+        csp10-pilot:
+          stages:
+            new stage:
+              name: bagong yugto
+        csp4-preview:
+          stages:
+            new stage:
+              name: bagong yugto
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Mga conditional
+            Private and Personal Information:
+              name: Pribado at Personal na Impormasyon
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Pag-crowdsourcing
+            Conditionals with Cards:
+              name: Mga Conditional gamit ang mga Card
+            Nested Loops in Bee:
+              name: Mga Naka-Nest na mga Loop sa Bee
+            Nested Loops in Artist:
+              name: Naka--nest na mga Loops sa Artist
+            Nested Loops in Frozen:
+              name: Naka-nest na mga Loop sa Frozen
+            'Functions: Songwriting':
+              name: 'Mga Function: Pagsusulat ng Awit'
+            Functions in Artist:
+              name: Mga Function sa Artist
+        time4cs-experiment-unit-2:
+          stages:
+            Nested Loops in Maze:
+              name: Naka-nest na mga Loops sa Maze
+            Fancy Shapes using Nested Loops:
+              name: Naka--nest na mga Loops sa Artist
+            Nested Loops with Frozen:
+              name: Naka-Nest na mga Loops sa Frozen
+            Functions with Artist:
+              name: Mga Function sa Artist

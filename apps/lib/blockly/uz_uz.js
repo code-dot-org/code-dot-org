@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "har bir element uchun";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "Ro‘yxatning har bir elementi qiymatini '%1' deb olib, so‘ngra biror buyruqni bajaradi.";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "%1 dan %2 gacha %3 lik qadam bilan";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "for";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "%1 o‘zgaruvchini olib, boshlang‘ich sondan oxirgi songacha berilgan qadam bilan har bir qiymatni qo‘yib chiqadi va aytilgan buyruqni bajaradi.";

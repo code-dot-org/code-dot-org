@@ -1,7 +1,5 @@
 ---
 title: Guia para fazer um evento da Hora do Código
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

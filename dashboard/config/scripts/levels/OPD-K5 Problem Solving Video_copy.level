@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2019-10-21T17:56:46.000Z",
+  "level_num": "custom",
+  "user_id": 177,
+  "properties": {
+    "encrypted": "false",
+    "video_key": "CSF-Teaching-Problem-Solving",
+    "instructions_important": "false",
+    "long_instructions": "Explicitly teaching meta-cognitive problem solving strategies before, during and after coding is extremely important in helping students process their learning. \r\n\r\n> Mega-cognitive problem solving involves thinking about your thought process itself, and reflecting on _how_ you solve problems. \r\n\r\n[This worksheet](http://code.org/curriculum/docs/k-5/PuzzleSolvingStudent.png) details the different steps of the Puzzle Solving Recipe.\r\n\r\n<img src=\"https://images.code.org/18ec61f8b911b83ca1cdea404a34c40e-image-1434399798952.png\" width=\"650px\" style=\"margin-right:45px; border-radius:10px;\">\r\n\r\nWatch the video below to learn about Code.org's \"Puzzle Solving Recipe\" that can help students have success with difficult problems:",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19335,
+    "name_suffix": "_copy"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-10-15 21:13:36 +0000\",\"changed\":[\"name\"],\"changed_by_id\":177,\"changed_by_email\":\"josh.schulte@code.org\"},{\"changed_at\":\"2019-10-15 21:15:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":177,\"changed_by_email\":\"josh.schulte@code.org\"},{\"changed_at\":\"2019-10-21 19:11:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":898,\"changed_by_email\":\"bryan+teacher@code.org\"},{\"changed_at\":\"2019-10-21 22:33:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2019-10-21 22:33:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2019-11-01 18:02:12 +0000\",\"changed\":[],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

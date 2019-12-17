@@ -146,6 +146,21 @@ sv-SE:
       CourseE_HOC 2018 Level_9b: Använd korallen som riktmärken för att nå skatten.
       Crack Random Substitution: Instruktioner
       Crack a Caesar Cipher: Instruktioner
+      Dance_2019_01: Dra ett ”gör ett nytt”-block till arbetsytan och koppla det i
+        ”setup”-blocket.
+      Dance_2019_02: "”Pil upp nedtryckt”-blocket gör så att du kan köra kod när pil
+        upp-tangenten är nedtryckt. Gör så att dansaren klappar när du trycker på
+        upp, eller prova ett annat danssteg!"
+      Dance_2019_03: 'Det är dags för en danstävling! Programmera varje dansare så
+        att de rör sig när du trycker på olika tangenter. Välj ett favoritsteg för
+        varje dansare eller ange ”(Slumpmässig)” och få en överraskning! '
+      Dance_2019_04: Få din dansare att ta ett nytt danssteg efter den fjärde takten.
+      Dance_2019_05: Gör nu så att dansaren startar en ny rörelse efter 6 åtgärder!
+      Dance_2019_06: Skapa en grupp bakgrundsdansare runt den ledande dansaren i mitten.
+      Dance_2019_07: Ändra storleken på gruppen med bakgrundsdansare.
+      Dance_2019_09: Var kreativ med de nya blocken!
+      Dance_2019_10: Dags att svänga på höfterna! Skapa en egen dans att dela med
+        dina vänner.
       Dance_Party_01: Dra ett ”gör ett nytt”-block till arbetsytan och koppla det
         i ”setup”-blocket.
       Dance_Party_02: Gör så att älgen startar en ny rörelse efter 4 åtgärder!
@@ -642,3 +657,26 @@ sv-SE:
       scrat 20: Kan du lägga till endast 3 block för att hjälpa mig att lösa en mer
         komplex labyrint? Om du gör det rätt, så kan jag gå en kurvig väg oavsett
         längd. Skynda! Isen smälter!
+      Dance_2019_08: Försök byta nyans på en av dina dansare (eller en hel grupp)!
+      Dance_Party_extras_alternate_2019: Fram och tillbaka! (Klicka på "Mer" för mer
+        information)
+      Dance_Party_extras_battle: Dansbesättningar (Klicka på ”Mer” för mer information)
+      Dance_Party_extras_battle_2019: Dansbesättningar (Klicka på ”Mer” för mer information)
+      Dance_Party_extras_every_beat: Kvartalsanteckningar (Klicka på ”Mer” för mer
+        information)
+      Dance_Party_extras_every_beat_2019: Kvartalsanteckningar (Klicka på ”Mer” för
+        mer information)
+      Dance_Party_extras_layout: Låt oss få i Formation! (Klicka på ”Mer” för mer
+        information)
+      Dance_Party_extras_layout_2019: Låt oss få i Formation! (Klicka på ”Mer” för
+        mer information)
+      Dance_Party_extras_mixed_2019: Fler knappar (Klicka på "Mer" för mer information)
+      Dance_Party_extras_on_beat: Bas, Mid och diskant (Klicka på ”Mer” för mer information)
+      Dance_Party_extras_on_beat_2019: Bas, Mid och diskant (Klicka på ”Mer” för mer
+        information)
+      Dance_Party_extras_speed: Snabba upp det, sakta ner det (Klicka på ”Mer” för
+        mer information)
+      Dance_Party_extras_speed_2019: Snabba upp det, sakta ner det (Klicka på ”Mer”
+        för mer information)
+      Dance_Party_extras_visible: Vart gick de? (Klicka på ”Mer” för mer information)
+      Dance_Party_extras_visible_2019: Vart gick de? (Klicka på ”Mer” för mer information)

@@ -1,7 +1,5 @@
 ---
 title: 給家長的活動指引
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

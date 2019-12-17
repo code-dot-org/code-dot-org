@@ -1189,10 +1189,13 @@ sk-SK:
         - text: Pozri sa pozorne na tento kód. Koľko tekvíc farmárka pozbiera po kliknutí
             na "Spustiť"?
         answers:
-        - feedback: Nesprávne. Farmárka pozbiera 4 tekvice v každom z 3 opakovaní.  4
+        - text: '4'
+          feedback: Nesprávne. Farmárka pozbiera 4 tekvice v každom z 3 opakovaní.  4
             krát 3 je 12!
-        - feedback: Správne!
-        - feedback: Nesprávne. Farmárka pozbiera 4 tekvice v každom z 3 opakovaní.  4
+        - text: '12'
+          feedback: Správne!
+        - text: '15'
+          feedback: Nesprávne. Farmárka pozbiera 4 tekvice v každom z 3 opakovaní.  4
             krát 3 je 12!
         - text: Neviem.
           feedback: Farmárka pozbiera 4 tekvice v každom z 3 opakovaní.  4 krát 3
@@ -1202,10 +1205,13 @@ sk-SK:
         - text: Pozri sa pozorne na tento kód. Koľko tekvíc farmárka pozbiera po kliknutí
             na "Spustiť"?
         answers:
-        - feedback: Nesprávne. Farmárka pozbiera 4 tekvice v každom z 3 opakovaní.  4
+        - text: '4'
+          feedback: Nesprávne. Farmárka pozbiera 4 tekvice v každom z 3 opakovaní.  4
             krát 3 je 12!
-        - feedback: Správne!
-        - feedback: Nesprávne. Farmárka pozbiera 4 tekvice v každom z 3 opakovaní.  4
+        - text: '12'
+          feedback: Správne!
+        - text: '15'
+          feedback: Nesprávne. Farmárka pozbiera 4 tekvice v každom z 3 opakovaní.  4
             krát 3 je 12!
         - text: Neviem.
           feedback: Farmárka pozbiera 4 tekvice v každom z 3 opakovaní.  4 krát 3
@@ -1215,10 +1221,13 @@ sk-SK:
         - text: Pozri sa pozorne na tento kód. Koľko tekvíc farmárka pozbiera po kliknutí
             na "Spustiť"?
         answers:
-        - feedback: Nesprávne. Farmárka pozbiera 4 tekvice v každom z 3 opakovaní.  4
+        - text: '4'
+          feedback: Nesprávne. Farmárka pozbiera 4 tekvice v každom z 3 opakovaní.  4
             krát 3 je 12!
-        - feedback: Správne!
-        - feedback: Nesprávne. Farmárka pozbiera 4 tekvice v každom z 3 opakovaní.  4
+        - text: '12'
+          feedback: Správne!
+        - text: '15'
+          feedback: Nesprávne. Farmárka pozbiera 4 tekvice v každom z 3 opakovaní.  4
             krát 3 je 12!
         - text: Neviem.
           feedback: Farmárka pozbiera 4 tekvice v každom z 3 opakovaní.  4 krát 3
@@ -1624,27 +1633,30 @@ sk-SK:
         - text: Pozri sa pozorne na tento kód. Koľko medu včela vyrobí, keď klikneš
             "Spustiť"?
         answers:
-        - {}
-        - feedback: Správne!
-        - {}
+        - text: '4'
+        - text: '8'
+          feedback: Správne!
+        - text: '12'
         - text: Neviem.
       courseD_multi_bee_nestedLoops9_predict2_2018:
         questions:
         - text: Pozri sa pozorne na tento kód. Koľko medu včela vyrobí, keď klikneš
             "Spustiť"?
         answers:
-        - {}
-        - feedback: Správne!
-        - {}
+        - text: '4'
+        - text: '8'
+          feedback: Správne!
+        - text: '12'
         - text: Neviem.
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         questions:
         - text: Pozri sa pozorne na tento kód. Koľko medu včela vyrobí, keď klikneš
             "Spustiť"?
         answers:
-        - {}
-        - feedback: Správne!
-        - {}
+        - text: '4'
+        - text: '8'
+          feedback: Správne!
+        - text: '12'
         - text: Neviem.
       courseD_multi_collector_debugging10_predict1:
         questions:
@@ -2132,7 +2144,8 @@ sk-SK:
 
       grade2_multi_collector_A_predict1:
         questions:
-        - {}
+        - text: Pozri sa pozorne na kód nižšie. Ak by kód zbehol až do konca (ignorujúc
+            chyby), koľko drahokamov by Laurel pozbieral?
         answers:
         - text: Laurel pomocou tohto kódu pozbiera 4 drahokamy.
           feedback: Nesprávne. Laurel sa pokúša zobrať drahokam na mieste, kde žiadny

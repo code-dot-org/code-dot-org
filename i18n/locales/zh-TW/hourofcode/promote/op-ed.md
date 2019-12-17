@@ -1,7 +1,5 @@
 ---
 title: 支持計算機科學週及一小時玩程式活動的專欄文章範例
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

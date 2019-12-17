@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 import StudentsBeyondHoc from '@cdo/apps/templates/StudentsBeyondHoc';
 import {combineReducers, createStore} from 'redux';
 import responsive from '@cdo/apps/code-studio/responsiveRedux';

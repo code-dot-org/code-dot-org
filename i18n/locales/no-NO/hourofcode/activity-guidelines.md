@@ -1,6 +1,5 @@
 ---
 title: Retningslinjer for aktiviteter
-layout: wide
 ---
 
 <style>

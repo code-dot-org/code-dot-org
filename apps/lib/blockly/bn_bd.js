@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "প্রতিটি উপকরণের জন্য";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "তালিকার প্রত্যেক উপকরণের জন্য, চলক '%1' ধার্য করুন এবং কিছু বিবরণ দিন।";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "%3 দ্বারা %1 থেকে %2";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "জন্য";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "নির্দিষ্ট ব্যবধান দ্বারা বেড়ে চলেছে এভাবে শুরু নম্বর থেকে শেষ নম্বরের উপর পরিবর্তনশীল %1 নেও এবং নির্দিষ্ট ব্লকগুলো করো।";

@@ -8,21 +8,21 @@ nav: how_to_nav
 
 # クラスで Hour of Code を教える方法
 
-### この運動に参加して、以下のステップで初めてのコンピュータサイエンスを生徒たちへ紹介しましょう。 Hour of Code(アワーオブコード) は、とっても簡単です。はじめての方でもご心配いりません！ If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your class.
+### この運動に参加して、以下のステップで初めてのコンピュータサイエンスを生徒たちへ紹介しましょう。 Hour of Codeの運営は簡単です。初めての方でも心配いりません！ 誰かのサポートが必要ならば、Hour of Codeの実施をサポートしてくれる[地元のボランティア]({{ urls/volunteer_local }})を探すことができます。
 
-### Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
+### 分からないことがあれば、[イベント開催ガイド]({{ localized_files/participation_guide }})をご一読ください。
 
----
+* * *
 
-## 1. この「やり方を説明している動画」を見る <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. この手引きビデオを見る <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2. イベント用のチュートリアルを選ぶ
 
-We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
+生徒が自らのペースで学習できるバラエティに富んだ楽しい[チュートリアル]({{ urls/learn }})を年齢層や経験レベルに応じて提供しています。 生徒は自分自身でアクティビティに取り組みますが、教師が議論を導いたりアクティビティの幅を広げることができるよう、多くのアクティビティにはレッスンプラン（アクティビティをクリックするとリンクが表示されます）が含まれています。 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
 ## 3. あなたのHour of Codeを宣伝する
 
-Promote your Hour of Code [with these tools]({{ urls/promote_resources }}) and encourage others to host their own events.
+[これらのツールを使って]({{ urls/promote_resources }})あなたのHour of Codeを宣伝して、他の人たちが自身のイベントを開催するように促しましょう。
 
 ## 4. 必要なテクノロジーを準備する（コンピュータは必須ではありません）
 
@@ -38,14 +38,14 @@ Promote your Hour of Code [with these tools]({{ urls/promote_resources }}) and e
 
 ## 5. Hour of Codeの冒頭は興味がわく話やビデオで始める
 
-**Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
+**コンピューターサイエンスの広範な可能性について話すことで、生徒たちにひらめきを与える[地元のボランティア]({{ urls/volunteer_local }})を招待します。**世界中の数千人ものボランティアが、教室に出向いたり生徒たちとビデオチャットすることであなたのHour of Codeを手助けしてくれます！
 
 **以下のビデオを見せると効果的です。**
 
 - ビル・ゲイツ、マーク・ザッカーバーグ、そしてNBAスターのクリス・ボッシュを特集したCode.org設立時のオリジナルビデオ （[1分](https://www.youtube.com/watch?v=qYZF6oIZtfc)、[5分](https://www.youtube.com/watch?v=nKIu9yen5nc)、[9分](https://www.youtube.com/watch?v=dU1xS07N-FA)のバージョンがあります）
 - Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**あなたと生徒たちの両方がコンピューターサイエンスについてよく知らなくても問題ありません。以下のようなやり方でHour of Codeのアクティビティについて説明してみてはどうでしょう。**
+**あなたと生徒たちの両方がコンピューターサイエンスを学んだことがなくても問題ありません。以下のようなやり方でHour of Codeのアクティビティについて説明してみてはどうでしょう。**
 
 - テクノロジーが私たちの生活にどのような影響を与えているかを、男の子と女の子がともに興味を持つような実例を交えて説明する。例えば、コンピュータが医療の分野でどの様に使われているのか、人々を助けるためにどんな役割を担っているのか、もしくは人々を国境を超えてつなげるためにどんなアプリケーションが使われているのかなど。
 - クラス全体で、コンピュータが使われているシーンをリストアップしてみる。
@@ -55,7 +55,7 @@ Promote your Hour of Code [with these tools]({{ urls/promote_resources }}) and e
 
 **生徒たちに何をするのか指示する**
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+- 黒板にチュートリアルへのリンクを書きましょう。[あなたが選択したチュートリアルの情報]({{ urls/learn }})にあるリンクを探してください。
 
 **生徒たちが困っていたら以下のように声をかけてみてもよいです**
 
@@ -63,9 +63,9 @@ Promote your Hour of Code [with these tools]({{ urls/promote_resources }}) and e
 - 「コンピュータは、思った通りに動くとは限らないんだよ。」
 - 「プログラミングを学ぶということは、新しい言葉を学ぶことと同じなんだ。すぐにペラペラにはなれないよ。」
 
-**早く終わってしまった生徒がいたらどうすればよい？**
+**早く終わってしまった生徒がいたらどうすればよいでしょう？**
 
-- Students can see all tutorials and [try another Hour of Code activity]({{ urls/learn }}).
+- 生徒たちは、チュートリアルの一覧を確認して[他のHour of Codeアクティビティを試してみる]({{ urls/learn }})ことができます。
 - もしくは、困っている他の生徒を助けてあげるように伝えましょう。
 
 [col-33]
@@ -85,7 +85,7 @@ Promote your Hour of Code [with these tools]({{ urls/promote_resources }}) and e
 [/col-33]
 
 - [Print certificates]({{ urls/certificates }}) for your students.
-- [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
+- 生徒へ配る[「Hour of Codeをやったよ！」]({{ urls/promote_stickers }})ステッカーを印刷します。
 - あなたの学校向けの[特製Tシャツを注文](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more)します。
 - Hour of Codeのイベントの様子を撮影した写真やビデオをソーシャルメディア上で共有しましょう。 #HourOfCodeハッシュタグや@codeorg参照を使うと、我々があなたの取り組みをハイライトすることもできます！
 

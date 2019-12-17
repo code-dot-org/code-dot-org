@@ -1,7 +1,5 @@
 ---
-title: Hour of Code Press Release for Elected Officials
-layout: wide
-nav: promote_nav
+title: निर्वाचित अधिकारियों के लिए ऑवर ऑफ़ कोड प्रेस रिलीज
 ---
 
 {{ signup_button }}

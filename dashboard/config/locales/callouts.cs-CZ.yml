@@ -50,6 +50,24 @@ cs-CZ:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Nový blok!
         dance_callout_11_b: Nový blok!
+      CourseD_Dance_Party_11_5:
+        dance_party_11_5_groups: Pro bloky „všechny kachny“ se podívej sem
+      Dance_2019_01:
+        dance_callout_01: Přidej do svého programu tento blok!
+      Dance_2019_02:
+        dance_callout_11_a: Přidej tento blok do svého programu.
+        arrow_buttons: Mačkej klávesy se šipkami a ovládej tak svého tanečníka.
+      Dance_2019_04:
+        dance_callout_02: Přidej do svého programu tento blok!
+      Dance_2019_05:
+        dance_callout_05: Přidejte do svého programu novou událost.
+      Dance_2019_06:
+        dance_party_11_5_groups: Nový blok!
+      Dance_2019_07:
+        setprop_hint: Nový blok!
+      Dance_2019_09:
+        new_block_3: Nový blok!
+        new_block_4: Nový blok!
       Dance_Party_01:
         dance_callout_01: Přidej do svého programu tento blok!
       Dance_Party_02:
@@ -61,6 +79,8 @@ cs-CZ:
       Dance_Party_11:
         dance_callout_11_a: Nový blok!
         dance_callout_11_b: Nový blok!
+      Dance_Party_11_5:
+        dance_party_11_5_groups: Pro bloky „všechny kachny“ se podívej sem
       Function intro Ryan:
         Function_intro_Ryan_1: Tento malý pokyn říká počítači, aby spustil VELKÝ kus
           kódu se stejným názvem v pracovním prostoru.

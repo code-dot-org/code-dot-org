@@ -661,6 +661,29 @@ pt-BR:
           <hr>
 
           ** Agora você tenta! **
+      CSD - Getters and Setters:
+        markdown: |
+          # Getters e Setters
+
+          # Setters
+
+          Setters são comandos que ** configuram ** ou alteram informações. Todos os setters exigem pelo menos uma coisa como entrada: para o que deseja alterar as informações.
+
+          Você já usou `setScreen()` antes. `setScreen()` altera a tela que o usuário está visualizando. A única entrada que `setScreen()` utiliza é a nova tela para a qual mudar.
+
+          Outro exemplo de um setter que você usará é `setText()`.
+
+          <img src="//curriculum.code.org/images/applab/setText.png" style="margin: 20px auto">
+
+          # Getters
+
+          Getters são comandos que ** obtêm ** ou recuperam informações. Os getters geralmente exigem pelo menos uma entrada: o local do qual você deseja recuperar informações.
+
+          `getText ()` é um getter comum que você usará. Pode ser usado para obter o texto de algo como uma entrada de texto.
+
+          <img src="//curriculum.code.org/images/applab/getText.png" style="margin: 20px auto">
+
+          Freqüentemente, quando você usa um getter, é uma boa idéia salvar o resultado em uma variável para que você possa usá-lo em todo o programa.
       CSD Header Size MC:
         title: Verificação rápida de títulos
         content1: Olhe o código abaixo e preveja como os títulos serão mostrados.
@@ -2475,12 +2498,81 @@ pt-BR:
       CSD U5 crosstab warmup:
         title: Questionário sobre pizza
         content1: descrição aqui
+        markdown: |-
+          # Pesquisa de bolo
+
+          Para esta pesquisa, as pessoas escolheram um sabor de bolo e um sabor de gelo.
+
+          <table style="text-align: center; border: solid 1px darkgray;">
+          <tr><td style="width: 50px; background-color: gray; color:white"></td><td style="width: 200px; background-color: gray; color:white">Sabor de Bolo</td><td style="width: 200px; background-color: gray; color:white">Sabor de Cobertura</td></tr>
+          <tr><td>1</td><td>Bolo de Chocolate</td><td>Cobertura de Chocolate</td></tr>
+          <tr><td>2</td><td>Bolo Red Velvet</td><td>Cobertura de Cream Cheese</td></tr>
+          <tr><td>3</td><td>Bolo de Chocolate</td><td>Cobertura de Chocolate</td></tr>
+          <tr><td>4</td><td>Bolo de Cenoura</td><td>Cobertura de Cream Cheese</td></tr>
+          <tr><td>5</td><td>Bolo de Cenoura</td><td>Cobertura de Baunilha</td></tr>
+          <tr><td>6</td><td>Bolo de Chocolate</td><td>Cobertura de Chocolate</td></tr>
+          <tr><td>7</td><td>Bolo de Chocolate</td><td>Cobertura de Cream Cheese</td></tr>
+          <tr><td>8</td><td>Bolo de Cenoura</td><td>Cobertura de Cream Cheese</td></tr>
+          </table>
+          <br><br>
+
+          Se essas pessoas precisassem concordar com uma combinação de bolo e cobertura para uma festa, o que deveria ser?
+
+          E se eles pudessem pedir dois bolos com cobertura?
+
+          Como o conhecimento de ambas as escolhas nos ajuda a entender melhor que tipo de bolos devemos pedir?
       CSD U5 crosstab warmup_2018:
         title: Questionário sobre pizza
         content1: descrição aqui
+        markdown: |-
+          # Pesquisa de bolo
+
+          Para esta pesquisa, as pessoas escolheram um sabor de bolo e um sabor de gelo.
+
+          <table style="text-align: center; border: solid 1px darkgray;">
+          <tr><td style="width: 50px; background-color: gray; color:white"></td><td style="width: 200px; background-color: gray; color:white">Sabor de Bolo</td><td style="width: 200px; background-color: gray; color:white">Sabor de Cobertura</td></tr>
+          <tr><td>1</td><td>Bolo de Chocolate</td><td>Cobertura de Chocolate</td></tr>
+          <tr><td>2</td><td>Bolo Red Velvet</td><td>Cobertura de Cream Cheese</td></tr>
+          <tr><td>3</td><td>Bolo de Chocolate</td><td>Cobertura de Chocolate</td></tr>
+          <tr><td>4</td><td>Bolo de Cenoura</td><td>Cobertura de Cream Cheese</td></tr>
+          <tr><td>5</td><td>Bolo de Cenoura</td><td>Cobertura de Baunilha</td></tr>
+          <tr><td>6</td><td>Bolo de Chocolate</td><td>Cobertura de Chocolate</td></tr>
+          <tr><td>7</td><td>Bolo de Chocolate</td><td>Cobertura de Cream Cheese</td></tr>
+          <tr><td>8</td><td>Bolo de Cenoura</td><td>Cobertura de Cream Cheese</td></tr>
+          </table>
+          <br><br>
+
+          Se essas pessoas precisassem concordar com uma combinação de bolo e cobertura para uma festa, o que deveria ser?
+
+          E se eles pudessem pedir dois bolos com cobertura?
+
+          Como o conhecimento de ambas as escolhas nos ajuda a entender melhor que tipo de bolos devemos pedir?
       CSD U5 crosstab warmup_2018_2019:
         title: Questionário sobre pizza
         content1: descrição aqui
+        markdown: |-
+          # Pesquisa de bolo
+
+          Para esta pesquisa, as pessoas escolheram um sabor de bolo e um sabor de gelo.
+
+          <table style="text-align: center; border: solid 1px darkgray;">
+          <tr><td style="width: 50px; background-color: gray; color:white"></td><td style="width: 200px; background-color: gray; color:white">Sabor de Bolo</td><td style="width: 200px; background-color: gray; color:white">Sabor de Cobertura</td></tr>
+          <tr><td>1</td><td>Bolo de Chocolate</td><td>Cobertura de Chocolate</td></tr>
+          <tr><td>2</td><td>Bolo Red Velvet</td><td>Cobertura de Cream Cheese</td></tr>
+          <tr><td>3</td><td>Bolo de Chocolate</td><td>Cobertura de Chocolate</td></tr>
+          <tr><td>4</td><td>Bolo de Cenoura</td><td>Cobertura de Cream Cheese</td></tr>
+          <tr><td>5</td><td>Bolo de Cenoura</td><td>Cobertura de Baunilha</td></tr>
+          <tr><td>6</td><td>Bolo de Chocolate</td><td>Cobertura de Chocolate</td></tr>
+          <tr><td>7</td><td>Bolo de Chocolate</td><td>Cobertura de Cream Cheese</td></tr>
+          <tr><td>8</td><td>Bolo de Cenoura</td><td>Cobertura de Cream Cheese</td></tr>
+          </table>
+          <br><br>
+
+          Se essas pessoas precisassem concordar com uma combinação de bolo e cobertura para uma festa, o que deveria ser?
+
+          E se eles pudessem pedir dois bolos com cobertura?
+
+          Como o conhecimento de ambas as escolhas nos ajuda a entender melhor que tipo de bolos devemos pedir?
       CSD U5 data visualization:
         title: título
         content1: descrição aqui
@@ -2756,6 +2848,8 @@ pt-BR:
         - text: <img src="https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00
             PM.png" width="200px"
           correct: true
+        markdown: "![](https://images.code.org/134a993836c148f64a7045d489ec58dc-image-1512686800350.45.08
+          PM.png)\n"
       CSD U6 array multi_2018:
         title: Usando Vetores
         questions:
@@ -2771,6 +2865,8 @@ pt-BR:
         - text: <img src="https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00
             PM.png" width="200px"
           correct: true
+        markdown: "![](https://images.code.org/134a993836c148f64a7045d489ec58dc-image-1512686800350.45.08
+          PM.png)\n"
       CSD U6 array multi_2018_2019:
         title: Usando Vetores
         questions:
@@ -2786,6 +2882,8 @@ pt-BR:
         - text: <img src="https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00
             PM.png" width="200px"
           correct: true
+        markdown: "![](https://images.code.org/134a993836c148f64a7045d489ec58dc-image-1512686800350.45.08
+          PM.png)\n"
       CSD U6 circuit smart bike blinker build:
         markdown: |
           # Construa seu pisca-pisca
@@ -3020,6 +3118,52 @@ pt-BR:
 
           * [Fazer uma recomendação] (https://docs.google.com/document/d/1pKeFH1OkWzfg3MFTPCezhK_r4p8xu7QUkPKSf5vV41c/export?format=pdf) - Guia do projeto
           * [Faça uma recomendação] (https://docs.google.com/document/d/1ZdA-VIdyPZLONBFr7ojFeNfHCHYmacbrrphiR31k6Bk/export?format=pdf) - Revisão por pares
+      'CSD: getText vs getNumber':
+        markdown: |
+          # getText vs getNumber
+
+          Os computadores armazenam informações de maneiras diferentes. Duas maneiras diferentes pelas quais um computador armazena informações são sequências e números.
+
+          `getNumber ()` tenta obter o valor do que você está perguntando como um número.
+
+          `getText ()` obtém o valor do que você está perguntando como uma string. As strings são frequentemente marcadas nos seus programas com `" "`. Por exemplo, todos os nomes dos seus IDs são cadeias de caracteres. Você pode usar o `getText ()` para recuperar um número, mas saiba que ele será cercado por `" "`.
+
+          ## Por que isso importa?
+
+          Normalmente, é bom obter tudo como uma string, mas quando você quer fazer operações matemáticas, precisa de números, não de strings. Quando você tenta adicionar duas cadeias, o computador pensa que deseja combinar as duas cadeias em uma cadeia.
+
+          Então, quando você diz "" 2 "+" 2 "`, o computador avalia isso como `" 22 "`.
+
+          Onde, quando você diz `2 + 2` (observe não é `" "`), o computador avalia isso como` 4`.
+      'CSD: setProperty':
+        markdown: "# Como setProperty Funciona\n\n`setProperty` é o código que permite
+          definir propriedades dos elementos da interface do usuário, como cor, largura,
+          tamanho da fonte, etc. Qualquer propriedade que você pode definir no Modo
+          Design também pode ser definida no código usando` setProperty`\n\n<br><br>\n\n<div
+          style=\"column-count: 3; column-gap: 20px; column-rule: 0.5px solid #00adbc;
+          -moz-column-count: 3; width: 100%\">\n\n<p style=\"break-after: always;
+          -moz-column-break-after: always; -webkit-column-break-after: always;\">\n\n<span
+          style=\"color: #00adbc; font-size: 150%\">1.</span> No modo de código, você
+          pode encontrar <code> setProperty </code> na caixa de ferramentas Controles
+          da interface do usuário. <br>\n\n<span style=\"color: #00adbc; font-size:
+          150%\">2.</span>  Escolha o ID do elemento da interface do usuário do qual
+          você deseja alterar uma propriedade\n</p>\n\n<p style=\"break-after: always;
+          -moz-column-break-after: always; -webkit-column-break-after: always;\"></span>\n\n<span
+          style=\"color: #00adbc; font-size: 150%\">3.</span>  O menu suspenso mostra
+          uma lista de propriedades que você pode definir para esse elemento. Corresponde
+          à lista de propriedades que você vê para um elemento no <strong> Modo de
+          design </strong>\n</p>\n\n<p style=\"break-after: always; -moz-column-break-after:
+          always; -webkit-column-break-after: always;\">\n\n\t<span style=\"color:
+          #00adbc; font-size: 150%\">4.</span> O último parâmetro é o valor que você
+          deseja definir para essa propriedade. Estamos interessados ​​na cor de fundo,
+          que possui uma variedade de valores que você pode atribuir.\n</p>\n\n\n</div>\n\n<img
+          src=\"https://images.code.org/b7736bdcbde48f7951ebdc87135dd46c-image-1480536740764.png\"
+          style=\"display: block; margin: auto\"></span>\n\n\n## Como definir a \"cor
+          de fundo\"\n\n<span style=\"color: #00adbc; font-size: 150%\">1.</span>
+          * background-color * é uma string (entre aspas) que representa a cor. Normalmente,
+          você indica a cor como um valor hexadecimal ou como três valores decimais
+          RGB, como * \"rgb (255,0,0)\" *\n\n<img src=\"https://images.code.org/43291bf1c067145771bf88a147d74d26-image-1480538343306.png\"
+          style=\"display: block; margin: auto\">\n"
       CSDU6 Innovation:
         markdown: |+
           # Pesquisa em Inovação
@@ -3191,6 +3335,97 @@ pt-BR:
           foi feito em um nível anterior ou combine conceitos entre os projetos. Experimente
           todos, escolha o seu favorito e gaste seu tempo trabalhando para que este
           projeto se torne o seu\n"
+      Dance_Party_extras_intro_2019:
+        markdown: |
+          # Continue Dançando!
+
+          Na parte 2, você irá criar seu próprio projeto. Não teremos quebra-cabeças aqui - ao invés disso há uma variedade de projetos que mostram formas diferentes para criar festas dançantes mais complexas.
+
+          Você pode percorrer estes níveis _em qualquer ordem_. Revire tudo à volta para ver como alguma coisa foi feita em um nível anterior, ou combine conceitos entre os projetos. Experimente todos eles, escolha seu favorito, e gaste seu tempo incrementando o projeto para torná-lo seu.
+
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Prosseguir</a>
+
+          <div class="clearfix"></div>
+
+
+          <div style="float: left; margin: 10px">
+          <a href="2">
+          <h2>
+          Para Frente e para Trás
+          </h2>
+
+          <img src="https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="3">
+          <h2>
+          Mais Botões
+          </h2>
+
+          <img src="https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif"></a>
+
+          </div>
+          <div style="float: left; margin: 10px">
+          <a href="4">
+          <h2>
+          Entre em formação
+          </h2>
+
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="5">
+          <h2>
+          Para Onde Eles Foram?
+          </h2>
+
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="6">
+          <h2>
+          Blocos de Dança
+          </h2>
+
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="7">
+          <h2>
+          Notas Semínimas
+          </h2>
+
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="8">
+          <h2>
+          Grave, Médio, Agudo
+          </h2>
+
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="9">
+          <h2>
+          Mais Rápido, Mais Lento
+          </h2>
+
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
+
+          </div>
       Design a Screen for your App_2018:
         markdown: |
           # Simulando seu App
@@ -3327,9 +3562,99 @@ pt-BR:
       Internet Simulator Setup:
         title: Configuração do simulador de internet
         content1: descrição aqui
+        markdown: "# Simulador de Internet da Code.org\n\n_Nota: As instruções contidas
+          neste tutorial são para professores que desejam usar o Simulador de Internet
+          como uma ferramenta autônoma, separada do currículo Princípios de Ciências
+          da Computação (CSP) da Code.org. Se você estiver planejando usar as atividades
+          apresentadas como parte do currículo CSP da Code.org, então por favor se
+          dirija à [página do currículo CSP.](https://code.org/educate/csp)_\n\n###
+          Conteúdo\nExistem 3 páginas de noções gerais e informações contidas aqui:\n\n*
+          O que é o Simulador de Internet? Visão geral (veja abaixo)\n* [Instruções
+          de configuração](/s/netsim/stage/1/puzzle/2)\n* [FAQ - Perguntas mais frequentes](/s/netsim/stage/1/puzzle/3)\n\n###
+          O que é o Simulador de Internet? Uma visão geral:\n\nO Simulador de Internet
+          é uma ferramenta desenvolvida pela Code.org para nossas classes de alunos
+          de Ensino Médio [Princípios de Ciências da Computação - CSP](https://code.org/educate/csp).
+          A ferramenta é concebida para permitir aos alunos obterem experiência prática
+          com o tratamento e solução de diferentes tipos de problemas relacionados
+          a computadores conectados em rede. O Simulador de Internet é usado em várias
+          lições durante as Unidades 1 e 2 em nosso currículo para construir progressivamente
+          as diferentes camadas da Internet.\n\nSe você está considerando usar a ferramenta
+          em sua sala de aula com atividades que você criar, nós recomendaríamos a
+          você se familiarizar com a ferramenta através de nosso [plano de aulas](https://curriculum.code.org/csp/unit1).
+          **As instruções de configuração** na próxima página são para professores
+          que gostariam de usar o Simulador de Internet separado do currículo CSP
+          da Code.org.\n\nA ferramenta em si não _ensina_ estes conceitos, mas somente
+          oferece um ambiente para vários estudantes se juntarem e enviarem mensagens
+          baseadas em códigos binário, decimal ou ascii entre eles, ou para outros
+          colegas de classe. **O ambiente pode ser configurado** de várias formas
+          para que sejam expostos diferentes tipos de problemas, visualizados dados
+          e conexões entre servidores, e suportado o aprendizado de vários conceitos
+          relacionados à Internet.\n\nO Simulador de Internet foi concebido para ser
+          usado em *sala de aula* com estudantes trabalhando de forma presencial e
+          colaborativa para solucionar problemas. Por vezes estes problemas requerem
+          a criação de um protocolo de comunicação, ou a invenção de formas para codificar
+          informação de maneira estruturada para que seu transporte via Internet seja
+          viável.\n\n**No currículo de Princípios de Ciências da Computação da Code.org
+          (CSP)** nós normalmente estruturamos as aulas e atividades da seguinte forma:\n\n*
+          **Primeiro apresentamos um desafio aos alunos**\n * ex: A Internet física
+          é pouco confiável e pode perder mensagens\n* **Damos uma oportunidade de
+          experimentar com o simulador para que os problemas sejam percebidos**\n
+          * ex: Examinar os registros do roteador para descobrir que 10-20% de todas
+          as mensagens são perdidas e pacotes podem ser roteados fora de ordem\n*
+          **Damos uma oportunidade para criar uma solução própria para o desafio**\n
+          * ex: Inventar seu próprio protocolo para como enviar mensagens de forma
+          confiável sobre uma rede não confiável\n* **Por fim, os alunos pesquisam
+          como este protocolo ou invenção é aplicada \"no mundo real\"**\n * ex: Perquisar
+          como o TCP realmente funciona e assistir um vídeo\n\n### O Que o Simulador
+          de Internet Pode Ser Configurado Para Fazer?\n\nEm sua forma mais simples,
+          o Simulador de Internet pode comunicar um único bit de informação através
+          de um único cabo compartilhado, sem nenhuma coordenação ou sincronização.
+          Em seu modo mais avançado ele pode simular conexões não confiáveis através
+          de múltiplos roteadores, usando endereços IP, um DNS, e pacotes de tamanho
+          fixo que requerem a criação de protocolos similares a TCP/IP ou HTTP.\n\nNós
+          configuramos o Simulador de Internet de várias formas que são propícias
+          a lecionar determinados tópicos. Mas se você estiver usando o Simulador
+          de Internet em sala de aula você deverá estar ciente das configurações de
+          interface disponíveis que você poderá controlar ou dizer aos seus alunos
+          para configurá-las de uma forma determinada.\n\nPor exemplo: uma das características
+          do Simulador de Internet é que você pode exibir as representações binária,
+          decimal, hexadecimal e ASCII de quaisquer dados que você enviar. Em algumas
+          configurações você também poderá definir o \"tamanho do segmento\" que determina
+          como os bits são interpretados. Para uma aula que você mesmo criar, você
+          poderá escolher alguma das configurações fornecidas, mas poderá orientar
+          os alunos para que exibam somente uma representação dos bits em particular,
+          ou talvez poderá estipular que o tamanho do segmento seja um valor em particular.\n\nO
+          ponto é que as configurações fornecidas têm por finalidade servir como um
+          ponto de partida para lecionar um determinado tema. Você poderá ter que
+          empregar alguma ingenuidade e estratégias de ensino para refinar o uso do
+          Simulador para satisfazer suas necessidades.\n\n\n<br><br>\n<img src=\"https://images.code.org/0bf9799b2bec2756c1664b84e12cbe27-image-1438642671141.57.13.png\"
+          width=\"600px\" style=\"margin:0 100px\"/>\n<br><br>\n\n\n\n \n\n_Próximo
+          tópico: Instruções de configuração_\n\n<a class=\"btn btn-large btn-primary
+          next-stage submitButton\">Prosseguir</a>\n"
       Internet Simulator Setup 2:
         title: título
         content1: descrição aqui
+        markdown: "# Simulador de Internet: Instruções de Configuração\n\n1. **Crie
+          uma seção no Code Studio.** Para que os alunos de sua classe possam se comunicar
+          uns com os outros, todos eles deverão estar associados à mesma seção no
+          Code Studio. Quando estiver autenticado com uma conta de professor, você
+          irá precisar criar uma seção em que todos os seus alunos se vinculam. Para
+          criar uma seção:\n* Navegue para a área de [seções](https://code.org/teacher-dashboard#/sections)
+          no painel do professor\n* Clique no botão 'Nova Seção'. Recomendamos usar
+          o Tipo de Login 'Email' e 'cspunit1' para o curso. \n<br>\n<img src=\"https://images.code.org/9e9961a44b0a2f76ab92e6f9634d8f55-image-1438640255737.17.04.png\"
+          width=\"600px\" />\n<br><br>\n2. **Faça seus alunos se vincularem à sua
+          seção.** Após a seção ser criada, clique no link 'Gerenciar Alunos' para
+          a seção. Você verá um código da seção que você pode pedir a seus alunos
+          se associarem, quando eles já tiverem criado suas próprias contas no Code
+          Studio.\n<br>\n<img src=\"https://images.code.org/9b8863dbb5a8e229e9bc1c4fc74ddd22-image-1438641516264.png\"
+          width=\"400px\" />\n<br><br>\n3. **Forneça a seus alunos a URL da versão
+          do Simulador de Internet que você quer usar.** Nós criamos várias configurações
+          distintas do Simulador de Internet que estão disponíveis em [code.org/internetsimulator](http://code.org/internetsimulator).
+          Quando você encontrar uma configuração que esteja adequada à sua atividade,
+          compartihe a URL com os alunos. Se eles estiverem todos na mesma seção,
+          então eles automaticamente estarão aptos a se conectarem entre si quando
+          estiverem navegando na mesma URL. \n\n_Próximo tópico: Perguntas Mais Frequentes_\n\n<a
+          class=\"btn btn-large btn-primary next-stage submitButton\">Prosseguir</a>\n\n"
       Internet Simulator Setup 3:
         title: Configuração do Simulador de Internet 3
         content1: descrição aqui
@@ -3584,6 +3909,92 @@ pt-BR:
       Multi-Screen Apps:
         title: título
         content1: descrição aqui
+        markdown: |
+          # Criando Múltiplas Telas
+
+          Você pode imaginar que um aplicativo típico possui um número de "telas" ou visualizações que o usuário atravessa à medida que usa seu applicativo. Abaixo temos um exemplo típico com uma tela de abertura, uma tela que executa o jogo e uma tela de final de jogo.
+
+          <img src="https://images.code.org/27065f81b2bf53dea099a76868f66e8e-image-1477324003598.png" style="display: block; margin: auto">
+
+          ## O que é uma tela, afinal?
+
+          Uma tela é somente um elemento de interface, como qualquer outro em Modo de Desenho. Mas ela possui algumas propriedades especiais:
+
+          1. Uma tela é um elemento de UI que contém outros elementos de UI
+          2. Somente uma tela pode estar visível em um determinado momento
+          3. Somente elementos que "pertencem" à tela serão visíveis quando esta tela estiver ativa,
+          4. **Múltiplas telas, mas somente uma área de codificação**
+           * Mesmo quando seus *elementos de desenho* poderão estar espalhados através de múltiplas telas, seu código não irá se fragmentar desta maneira.
+           * Existe somente uma área de codificação, que irá conter todo o código para o aplicativo.
+
+          ## Como Criar uma Nova Tela
+
+          <div style="float: left; width: 33%">
+          Há duas maneiras para adicionar uma tela à sua aplicação. Primeiro, tenha certeza que você está em <em>Modo de Desenho</em>.
+          <br><br>
+          <span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+          Selecione <em>Nova Tela...</em> do menu de contexto no topo da área de exibição. <strong>Nota:</strong> Você também utiliza este menu de contexto para alternar entre telas em modo de desenho.
+          <br><br>
+          <span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>
+          Ou arraste e solte um elemento UI de Tela da caixa de ferramentas. <strong>Cuidado: </strong>Assim que você soltar o elemento de tela, o aplicativo irá mostrar a você uma <strong>nova tela em branco.</strong> Você pode retornar às outras telas usando o menu de contexto que fica no topo.
+
+          </div>
+
+          ![](https://images.code.org/ed8f45d70a65329597c1623ddd756249-image-1477165123570.png)
+
+          ## Defina as Propriedades da Tela
+
+          <div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 4; width: 100%">
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+          Use este menu de contexto para selecionar a tela em que você quer trabalhar. A lista irá conter os IDs de todas as telas que você criou.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>
+          Clique sobre a área em branco ao fundo para selecionar a tela e definir suas propriedades. </p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>
+          Telas também possuem IDs. Como outros elementos de UI, é uma boa ideia <em>dar às suas telas IDs descritivos e significativos</em>. Isto torna muito mais fácil escrever codigo.</p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span>
+          Se a sua tela estiver repleta com elementos de UI e não houver área em branco para clicá-la e selecioná-la, use este menu de contexto. Ele relaciona todos os elementos de UI que fazem parte da tela, incluindo a tela em si.</p>
+          </div>
+
+          <img src="https://images.code.org/5f8934e6ae0fc2d9dfde8c9a0d93eec2-image-1477249243769.png" style="display: block; margin: auto;">
+
+          <div style="column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 2; width: 50%; float: right">
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span>
+          Clique este botão para tornar a tela a "tela padrão", o que significa que a tela será será mostrada primeiro quando o aplicativo for iniciado.</p>
+
+
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">6.</span>
+          Telas não têm muitas propriedades, mas você pode definir o fundo da tela para uma cor ou uma imagem. Images são esticadas ou comprimidas para que caibam na tela.</p>
+
+          </div>
+          <div style="clear: both">&nbsp;</div>
+
+          ## Usando o comando *defineTela* para alterar telas via código
+
+          O comando `defineTela` altera a tela para exibir a tela que você quiser. Você especifica a tela pelo seu ID.
+
+          <img src="https://images.code.org/005222ed01ade7940963ce149d637286-image-1477168080948.png" style="display: block; margin: auto">
+
+          <div style="column-count: 3; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+          Localize <em>defineTela</em> na caixa de ferramentas dos elementos de UI e arraste-o para a área de codificação.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>
+          Na maioria das vezes você altera a tela em resposta a algum evento gerado pelo usuário. Neste caso <em>defineTela</em> está sendo adicionado a um tratador de evento "clique" para a imagem com Id: <em>smileyFace</em></p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>
+          Selecione o ID da tela que você quer exibir. Neste caso, quanto a tela smiley face é clicada, na tela onde aparece "Olá" nós queremos alterar a tela para que diga "tchau".</p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span>
+          <strong>Ideia chave: Múltiplas Telas - Área de Códificação Única.</strong> Teste é o código que trata o evento "clique" para uma <em>imagem que está localizada em uma tela diferente</em> - a <em>goodbyeScreen</em>. Você não pode ver a image neste momento, ou a tela, porque a tela não está selecionada. Entretanto, o código para ela é colocado aqui.</p>
+
+          </div>
       MyLoopyRoboticFriends-Unplugged:
         markdown: |
           # Meus Amigos Robôs Entrelaçados
@@ -3658,25 +4069,52 @@ pt-BR:
           ## Duração do Curso
 
           A conclusão deste curso on-line deve levar entre 3-7 horas, dependendo do seu conhecimento prévio e do quão profundo nos recursos do Code.org você deseja ir.
-      OPD-K5 CS:
+      OPD-K5 Assessment:
         markdown: |
-          # Vamos Começar > Por que Fundamentos de Ciências da Computação (CC)?
+          # Planejamento > Outros Materiais
 
-          Você irá completar este curso gratuíto, em seu próprio passo, usando a mesma plataforma de aprendizado que você poderá usar em sua sala de aula com seus alunos.
+          Quando você está autenticado em Code.org como professor, você tem acesso a muitos recursos que seus alunos não têm. Você já viu como localizar um curso, criar uma seção, e associar sua sala de aula a esta seção. Entretanto, você pode também:
 
-          Vamos começar aprendendo um pouco sobre o que são os Fundamentos de Ciências da Computação (CC), e como eles têm trabalhado para professores e alunos ao redor do mundo. No próximo nível, iremos cobrir como interagir com a plataforma de Fundamentos de CC, que você irá usar para completar o curso.
+          - **Acompanhar o Progresso de Alunos**: [Avalie o aprendizado](https://support.code.org/hc/en-us/articles/115000693231-Viewing-student-progress) de todos os seus alunos.
+          - **Sua Evolução no Curso**: Veja sua própria evolução nas aulas da Code.org, como um estudante. Seus alunos também serão capazes de visualizar suas evoluções em suas contas. Entretanto, como professor, você também poderá ver os planos de aulas e ver as soluções para cada quebra-cabeça.
+          - **Ajuda e Comunidade**: Acesse [support.code.org](https://support.code.org/), onde você poderá enviar perguntas, responder a perguntas de outros professores, e ler as perguntas mais frequentes dos colaboradores da Code.org. Nesta página, você poderá também contatar diretamente a Code.org para resolver quaisquer dúvidas que você possa ter.
+          - **Desenvolvimento Profissional**: Acesse [treinamento pessoal](https://code.org/professional-development-workshops) para professores.
+          - **Palestrantes Convidados de Ciência da Computação**: [Localize profissionais de TI que sejam engajados e apaixonados pelo que fazem](https://code.org/volunteer/local) e que adorariam falar aos seus alunos sobre suas atividades.
 
-          <iframe width="640" height="390" src="https://youtubeeducation.com/embed/rNIM1fzJ8u0" frameborder="0" allowfullscreen></iframe>
+          <br/>
+          ---
+          > ## Visite support.code.org
+          > Se você travar ou tiver perguntas, não deixe de verificar nossos artigos de suporte em suport.code.org! Você pode também entrar em contato diretamente conosco através desta página. [nosso forum](http://forum.code.org/t/teaching-conditionals/406/1).
 
-          **[Não consegue assistir o vídeo? Clique aqui para descarregar.](http://videos.code.org/k5-pd/how-to-k5-workshops.mp4)**
+          > <a href="http://support.code.org" target="blank"><button class="plc">Obtenha ajuda >></button></a>
 
-          > ## Reflita
-          Quais são suas primeiras impressões de Fundamentos de CC?
-
-          > [Envie suas impressões pelo Tweeter](https://twitter.com/teachcode) e não se esqueça de usar a tag @teachcode na sua mensagem para que possamos responder.
-
-          > <a href="http://ctt.ec/Bfjw3" target="blank"><button class="default">Compartilhe no Tweeter >></button></a><br><br>
-          Não possui uma conta no Twitter? Você também pode nos encontrar no [Facebook](https://www.facebook.com/Code.org/) ou no [Instagram](https://www.instagram.com/codeorg/).
+          Após inserir comentários no fórum, volte aqui e clique abaixo para ir à próxima etapa.
+      OPD-K5 CS Courses:
+        markdown: "# Planejamento > Primeiros passos com Code.org\n\n\n## Passo 1:
+          Escolha um curso\nTodos os nossos cursos - desde a alfabetização até os
+          níveis avançados - estão listados em nosso **[catálogo de cursos](https://studio.code.org/courses)**.
+          Para encontrar as lições de Fundamentos de CC que você esteve praticando,
+          vá à nosso **[página da ensino elementar](https://code.org/educate/curriculum/elementary-school)**
+          e role para baixo até a seção \"Cursos\". Todos os nossos cursos estão disponíveis
+          sem custos. Converse com colegas na sua escola para definir como o currículo
+          do curso pode ser integrado com uma variedade de disciplinas. \n![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
+          Passo 2: Prepare a seção de sua sala de aula\nPrepare uma seção de sala
+          de aula para acompanhar a evolução de seus alunos, imprimir cartões de login
+          para seus estudantes, gerenciar suas contas, e imprimir os certificados
+          que eles poderão levar para casa quando terminarem o curso. Clique neste
+          link para **[assistir um breve vídeo](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)**
+          que demostra como preparar sua primeira sala de aula na Code.org. Você pode
+          encontrar os passos neste **[artigo de apoio](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**.\n![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
+          Passo 3: Associe o curso à sua seção\nClique sobre o curso que estiver lecionando
+          - você deverá ver uma tela que se parece com a tela mostrada abaixo. Você
+          pode a seguir clicar em \"associar curso\" para associar este curso a uma
+          de suas seções.\n![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
+          Passo 4: Comece a lecionar!\nUma aula é tudo o que você precisa para trazer
+          conceitos de ciência da computação à sua sala de aula. Quando você ver o
+          entusiasmo dos seus alunos por CC, siga em frente com planoejamento de aulas
+          diárias para guiar seus estudantes, com atividades desplugadas que você
+          pode fazer sem um computador, e com os fóruns para se conectar a outros
+          professores.\n\n\n"
       OPD-K5 CS Tips:
         markdown: |
           Vamos Começar > Navegando por este Curso Online
@@ -3737,6 +4175,87 @@ pt-BR:
           <br/>
 
           > Isto é tudo! Fique à vontade para retornar a este nível sempre que você sentir necessidade de relembrar como esta plataforma funciona.
+      OPD-K5 Celebrate:
+        markdown: |
+          # Próximos Passos > Comemore!
+
+          Congratulações por completar este curso de desenvolvimento profissional online. Considerando que você finalizou todos os níveis deste treinamento, você pode baixar e imprimir o certificado de conclusão agora através dos seguintes passos:
+
+          1. Visite [este link](https://code.org/certificates?course=Teaching%20Computer%20Science%20Fundamentals).
+          2. Preencha seu nome no campo de entrada.
+          3. Clique em Imprimir Certificados
+          4. Clique com o botão direito na imagem do certificado, e escolha "Salvar Imagem Como..." para que você possa baixar para seu computador.
+
+          E não esqueça... você pode retornar a este curso online a qualquer hora para rever seu aprendizado, acessar links ou materiais, ou somente refrescar sua memória!
+
+          Obrigado por sua participação! Mal podemos esperar para saber como você implementa ciência da computação e Code Studio em sua sala de aula!
+      OPD-K5 Congrats:
+        markdown: |
+          # Eventos > Revisão
+
+          Nesta etapa, você criou um jogo divertido, combinando conceitos essenciais e demonstrando seu aprendizado. Por nos permitir disparar ações baseadas em outras partes do nosso programa, eventos nos permitem esticar nossos músculos de codificação.
+
+          **Tome um momento agora para revisar como eventos são introduzidos no currículo de Fundamentos de CC, e pondere como você poderia implementar as atividades sugeridas em sua sala de aula.**
+
+          ![](https://images.code.org/8312823c84d52d7119ab0b5e99363d39-image-1549054807593.jpg)
+      OPD-K5 CongratsFinal:
+        markdown: |
+          # Congratulações!
+
+          <img src="https://images.code.org/3e21c6e68f0b6565ba16ad2b63b892f0-image-1434398206115.jpg" width="450px">
+          <br/><br/>
+          Por agora você deve ter completado as Etapas 1-8 e aprendido os fundamentos básicos de ciência da computação. Nós esperamos que você tenha se divertido durante o caminho! Nós também esperamos que você tenha considerado como você poderia aplicar seu conhecimento à sua prática de ensino.
+          <br/><br/>
+          Na próxima etapa, nós vamos considerar algumas melhores práticas para ensino destes fundamentos em sala de aula.
+      OPD-K5 Connect:
+        markdown: "# Próximos Passos > Conecte-se\n\nAlém dos treinamentos formais
+          posteriores, você poderá considerar acessar a comunidade da code.org para
+          continuar a aprender informalmente a partir de outras pessoas, ou somente
+          para obter suporte e uma rede de colegas. Veja como:\n\n<br/><br/>\n\n>
+          **Continue participando da Comunidade de Ensino Profissinal (PLC):** O fórum
+          que você esteve usando durante o curso será um grande recurso para você
+          seguir adiante. Você poderá usá-lo não somente para consultar seu aprendizado
+          deste curso, mas também para obter suporte à medida que você continuar sua
+          jornada, ou mesmo para oferecer suporte a outros que necessitam seu conhecimento.
+          Lembre-se de adicionar este site nos favoritos e visite com frequência:
+          [http://forum.code.org/c/csf](http://forum.code.org/c/csf)  \n\n<br/>\n\n>
+          **Conecte-se com [@teachcode](http://twitter.com/teachcode) no Twitter.**\n\n<br/>\n\n>
+          **Associe-se à Associação de Professores de Ciência da Computação (CSTA):**
+          [A CSTA](http://csta.acm.org/index.html) é uma comunidade de educadores
+          que está comprometida em trazer o ensino de ciência da computação aos seus
+          alunos, enquanto eleva a percepção do assunto no público em geral. Eles
+          sediam uma conferência anual e também possuem seções regionais que promovem
+          eventos locais.\n"
+      OPD-K5 Culture:
+        markdown: |+
+          # Melhores Práticas > Cultura de Sala de Aula
+
+          Como podemos promover uma cultura saudável em nossas aulas de ciências da computação? Primeiro, podemos ter certeza que todos na sala de aula, incluindo nós mesmos, entendemos as maneiras como podemos agir como cientistas da computação e o que deveremos ter em mente. Isto mantém todos na mesma página e facilita nosso trabalho em classe.
+
+          <img src="https://images.code.org/b5d9ae18a882a4359f096b9c6ade135e-image-1434398703448.jpg" width="450px" style="margin-right:45px; border-radius:10px;">
+
+          ## Maneiras de agir como um cientista da computação:
+
+          - **Seja curioso:** Quando você está curioso, você faz coisas como cutucar em menus diversos, rodar trechos de código para ver o que acontece, ou verificar os efeitos de diferentes configurações. A curiosidade frequentemente nos torna capazes de responder às nossas próprias perguntas.
+          - **Faça perguntas:** Colabore com outros quando você tiver tentado descobrir a solução de um problema você mesmo.
+          - **Seja perseverante:** Tenha confiança ao lidar com problemas abertos complexos, e mantenha-se concentrado neles. Isso fica mais fácil quando você já tiver tido sucesso escrito programas, e sabe o quanto bem você se sente ao conseguir resolver um problema difícil de programação.
+          - **Quebre problemas grandes em problemas menores, mais gerenciáveis:** Isto é chamado *decomposição**.
+          - **Leia atentamente seu código:** O computador segue exatamente suas instruções. Rastreando através do código passo a passos (como se você fosse o computador processando as instruções) irá ajudá-lo a encontrar erros na sua lógica ou passos faltantes.
+          - **Não se sinta mal ao cometer erros:** Erros não são fracassos; eles somente levam você a um estágio mais próximo de criar a solução correta ou o produto final.
+          - **Saia de frente da tela:** Isto pode te dar um tempo necessário, e tipicamente você retorna ao problema com uma perspectiva nova.
+
+          ## Coisas para ter em mente enquanto aprende ciência da computação:
+
+          - O mundo da programação de computadores se move tão rápido que não há mestres, na realidade. **Todos somos aprendizes** em estágios diferentes, mas ainda assim todos somos aprendizes.
+          - A programação se torna mais confortável a cada vez que você volta a ela. **Você não vai se tornar um especialista na primeira vez.**
+          - Não há como contornar isto, o ato de programar e **aprender a programar leva tempo, mas qualquer um pode fazê-lo!**
+          - Você pode compartilhar **sua própria experiência autêntica de aprender a programar** com seus alunos!
+
+          > ## Reflexão:
+          > Como você pretende criar uma cultura positiva em sala de aula quando estiver lecionando ciência da computação? [Envie suas ideias no Tweeter](https://twitter.com/codeorg) lembrando de incluir a tag @codeorg na sua mensagem para que possamos responder.
+
+          > <a href="http://ctt.ec/pdL3a" target="blank"><button class="default">Compartilhe no Tweeter >></button></a>
+
       OPD-K5 Outline:
         markdown: |
           # Vamos Começar > Linhas Gerais do Curso
@@ -3829,6 +4348,31 @@ pt-BR:
           - Compartilhar os benefícios que você obteve e considerações sobre o curso
 
           > **Nota**: Os tempos sugeridos são providos acima para ajudá-lo a planejar seu tempo. Por favor veja que você poderá querer gastar mais ou menos tempo em determinada etapa, a depender de seu conhecimento prévio, interesse e disponibilidade. Tenha em mente que o andamento deste curso é totalmente definido por você; você sempre poderá deixar o curso para retomá-lo depois, ou revistar qualquer etapa ou nível a qualquer tempo.
+      OPD-K5 Pair:
+        markdown: |
+          # Melhores Práticas > Programação em Pares
+
+          Uma importante estratégia de gerenciamento de salas de aula que é usada por muitos educadores é o agrupamento estratégico. Na Code.org, nós sugerimos tentar o agrupamento estratégico que é usado pelas principais empresas de tecnologia: programação em pares.
+
+          >**Programação em pares** é quando dois estudantes utilizam um único computador para escreverem um programa juntos. O Centro Nacional para Mulheres e Tecnologia de Informação dos Estados Unidos (NCWIT) possui um [ótimo material sobre os benefícios da programação em pares](http://www.ncwit.org/sites/default/files/resources/pairprogramming_retainingwomencollaborativelearning_practice.pdf).
+
+          Pesquisas mostram que a programação em pares:
+
+          - Leva à codificação, pelos estudantes, de programas de melhor qualidade em relação a programas que foram codificados individualmente
+          - Reduz a chamada "lacuna de confiança" entre estudantes homens e mulheres, ao mesmo tempo que aumenta a confiança de todos os alunos
+          <br/><br/>
+
+          Assista a este vídeo para entender como funciona a programação em pares, e ouça diretamente dos estudantes como isto aprimora seu aprendizado.
+
+          <iframe width="640" height="390" src="https://www.youtube.com/embed/vgkahOzFH2Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          [Não consegue ver o vídeo? Clique aqui](http://videos.code.org/2014/C1-pair-programming.mp4)
+          <br/><br/>
+
+          A programação em pares não é somente benéfica para estudantes, ela é também praticada por alguns programadores profissionais. Veja este vídeo para aprender como introduzir a programação em pares para seus alunos.
+
+          <iframe width="640" height="390" src="https://www.youtube.com/embed/sxToW3ixrwo" frameborder="0" allowfullscreen></iframe>
+          [Não consegue ver o vídeo? Clique aqui](https://videos.code.org/levelbuilder/06pairprogramming_small-mp4.mp4)
+          <br/>
       OPD-K5 Participation:
         markdown: |
           # Vamos começar > Planejando sua participação
@@ -3866,6 +4410,18 @@ pt-BR:
           ## Qual é o seu plano?
 
           Tome um momento para considerar como e quando você irá completar este curso online para garantir que você obtenha o benefício máximo desta experiência. Quando você tiver um bom plano esboçado, continue a mergulhar mais profundamente na Etapa 1.
+      OPD-K5 PostSurvey:
+        markdown: |+
+          # Vamos começar - Preencha a pesquisa de encerramento
+
+          Obrigado por utilizar o curso online de desenvolvimento profissional Ensinando Fundamentos de Ciência da Computação!
+
+          Tendo você terminado o curso completo ou não, nós gostaríamos de conhecer suas impressões. Por favor preencha esta pequena pesquisa para ajudar-nos a aprimorar o curso e seguir em frente!
+
+          [Isto é um teste de encadeamente utilizando markdown](https://form.jotform.com/90557778075168?user_id=<user_id/>) <-- remova isto após testar (tentativa por Baker).
+
+          <a class="btn btn-large btn-primary submitButton" href="https://form.jotform.com/90557778075168?user_id=<user_id/>"> Preencha a pesquisa de encerramento</a>
+
       OPD-K5 PreSurvey:
         markdown: |+
           # Vamos começar -> Responda à pesquisa preliminar
@@ -3916,6 +4472,21 @@ pt-BR:
           de CC](http://studio.code.org/) por conta própria, a qualquer momento. Mas
           este curso dará a você uma boa noção sobre o que esperar, ao apresentar
           a você alguns dos desafios mais fundamentais em um curto espaço de tempo.\n"
+      OPD-K5 Stage10Start:
+        markdown: |
+          # Próximos Passos > Vamos Revisar
+
+          <img src="https://images.code.org/606dbb1b30885387e25bc1265f8966b2-image-1434150440566.JPG" width="450px">
+
+          ## Estamos quase lá!
+
+          Até aqui você aprendeu o básico de codificação, explorou como você poderá lecionar ciência da computação, e criou um plano simples com os próximos passos.
+
+          Ao completar a Etapa 11, você irá:
+
+          - Refletir no seu aprendizado
+          - Planejar os próximos passos que você poderá dar para continuar seu aprendizado
+          - Conectar-se com uma comunidade global de educadores interessados no ensino de ciência da computação
       OPD-K5 Stage1Go:
         markdown: |
           # Vamos Começar > Tudo pronto? Vamos!
@@ -4160,23 +4731,206 @@ pt-BR:
           >**O que Esperar desta Etapa:** Primeiramente iremos introduzir uma aula desplugada do Curso D (destinada ao Ano 3) que apresenta a ideia de condicionais. A seguir, você irá completar uma série de quebra-cabeças para aplicar seus conhecimentos usando condicionais. Terminaremos com uma oportunidade para reflexão. Você deverá gastar entre 20-45 minutos nesta etapa.
 
           Tudo pronto? Vamos lá!
-      OPD-K5 Unplugged:
+      OPD-K5 Stage6Go:
+        markdown: "# Funções > Aulas desplugadas\n\nProgramadores estão sempre à busca
+          de maneiras para tornar seus códigos mais eficientes. Uma forma que eles
+          fazem isso é através de **funções**, que permitem a eles reutilizar trechos
+          de código.\n\n**1. Revise \"[Funções: Composição musical](https://curriculum.code.org/csf-18/coursee/14/)\"
+          Plano de Aulas do Curso E.**\n<br/>\nO Curso E é destinado a estudantes
+          do Ano 4. Funções não fazem parte dos cursos A-D. \n\n<br/>\n\n**2. Assista
+          ao vídeo de alunos: Funções: Composição musical**\n<br/>\nEste é um vídeo
+          que você poderia apresentar aos seus alunos para ajudar a introduzir o conceito
+          de funções, e dar início à aula desplugada. <iframe width=\"560\" height=\"315\"
+          src=\"https://www.youtube.com/embed/5iDCKkI6y2Y?ecver=1\" frameborder=\"0\"
+          allowfullscreen></iframe><br/>\n[Não consegue ver o vídeo? Clique aqui](http://videos.code.org/2014/C3-songwriting-with-parameters.mp4)\n\n<br/>\n\n**3.
+          Assista a um professor apresentar esta aula: \"Funções: Composição musical\"**\n<br/>\nEste
+          vídeo tem por objetivo suportá-lo como professor, se você estiver procurando
+          por dicas em como apresentar esta lição.\n\n<iframe width=\"560\" height=\"315\"
+          src=\"https://www.youtube.com/embed/QuIMLel1mmw?ecver=1\" frameborder=\"0\"
+          allowfullscreen></iframe>\n[Não consegue ver o vídeo? Clique aqui](https://videos.code.org/levelbuilder/unplugged-lessoninaction-songwritingwithfunctions-mp4.mp4)\n<br/>\n\n---\n\n>
+          ## Reflexão\n> Como você explicaria o conceito de funções para seus alunos?
+          Compartilhe suas ideias em <a href=\"http://forum.code.org/t/teaching-functions/407/1\"
+          target=\"blank\">nosso fórum</a>.\n\n> <a href=\"http://forum.code.org/t/teaching-functions/407/1\"
+          target=\"blank\"><button class=\"plc\">Discuta nos fóruns >></button></a>\n\nApós
+          comentar no fórum, volte aqui e clique abaixo para prosseguir à próxima
+          página.\n"
+      OPD-K5 Stage6Review:
         markdown: |
-          # Olhando à Frente > Ficando "Desplugado"
+          # Funções > Reflexão
 
-          <img src="https://images.code.org/ae83fdee9390a1155e5173b2a06f9773-image-1434399991310.JPG" class="level-image">
+          Nesta etapa, exploramos como funções podem torná-lo um programador mais veloz e melhor, permitindo a você reutilizar segmentos do seu código. Na próxima etapa, iremos nos debruçar sobre o conceito essencial de eventos, e testar suas habilidades de codificação.
 
-          Ao lecionar ciência da computação, você pode pensar que seria melhor ter acesso a tecnologias de primeira linha - computadores novos, internet rápida, os últimos aplicativos. Mas em Code.org, nós descobrimos que algumas das aulas mais impactantes de ciência da computação são na verdade "desplugadas", ou ministradas com pouca ou nenhuma tecnologia. Nestas aulas, os alunos aprendem conceitos de computadores sem um computador.
+          **Tome um momento para revisar como funções são introduzidas no currículo Fundamentos de CC e considere como você poderia implementar as atividades sugeridas em sua sala de aula.**
 
-          É por isso que nossos cursos de Fundamentos de CC usam atividades desplugadas para introduzir conceitos de computação com o manuseio de conceitos físicos antes que os alunos escrevam programas usando estes conceitos. Um exemplo disto seria fazer uma dança com movimentos repetidos em classe, para entender o conceito de como os laços repetem comandos em um programa de computador. Desta forma, quando os alunos começam a escrever os programas usando laços, a atividade desplugada forneceu a eles algo com que eles já estão acostumados, e podem relacionar este novo conceito com esta atividade.
+          ![](https://images.code.org/47e2d3956aaafb745e462f0017c2a2b1-image-1549053916687.jpg)
+      OPD-K5 Stage6Start:
+        markdown: |+
+          # Funções > Visão Geral da Etapa
 
-          Assista o vídeo abaixo para compreender os benefícios do uso de atividades desplugadas para o ensino de ciência da computação.
+          <img src="https://images.code.org/6ac5cc9f26b87a62b0558947d4cfd457-image-1501267730981.jpg" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
 
-          <iframe width="640" height="390" src="https://youtubeeducation.com/embed/-7lcnNcONHY" frameborder="0" allowfullscreen></iframe>
-          [Baixe o video](https://videos.code.org/levelbuilder/unplugged-whyshouldteachunpluggedactivities-mp4.mp4)
+          Durante as primeiras etapas, você aprendeu como escrever um programa, adicionar laços, e usar condicionais. Nesta etapa, iremos introduzir o conceito de **funções**.
+
+          Ao completar a Etapa 7, você irá:
+
+          - Praticar a codificação de funções simples
+          - Refletir sobre sua aplicação em sala de aula
+
+          > **O que Esperar neste Estágio:** Primeiro, você irá assistir uma aula desplugada do Curso E (destinado ao Ano 4) que apresenta funções. Depois você irá aprender sobre funções através de um vídeo, e praticar seu uso em quebra-cabeças variados. Por fim você irá refletir sobre o que praticou. Você deverá gastar entre 20-45 minutos nesta etapa.
+
+          Tudo pronto? Vamos lá!
+
+      OPD-K5 Stage7Go:
+        markdown: |
+          # Eventos > Aulas Desplugadas
+
           <br/>
+
+          **1. Reveja "[O Grande Evento](https://curriculum.code.org/csf-18/coursec/11/)" Plano de Aulas do Curso C.**
           <br/>
-          **À medida que você percorrer as Etapas 4-8**, você terá a oportunidade de rever algumas das nossas atividades desplugadas para cada um dos conceitos essenciais que são tratados neste curso.
+          O Curso C é destinado a alunos do Ano 2. Eventos surgem em todos os cursos de Fundamentos de CC, de A-F. Nem todos os cursos possuem uma aula desplugada para a cobertura de eventos, mas você pode ver a aula desplugada para o Curso A e Curso B ao final desta página.
+          <br/><br/>
+
+          **2. Assista ao vídeo de alunos: O Grande Evento**
+          <br/>
+          Este é um vídeo que você poderia mostrar aos seus alunos para ajudar a introduzir o conceito de eventos, e dar início à aula desplugada.
+
+          <iframe width="640" height="390" src="https://www.youtube.com/embed/u0WV9shCoak" frameborder="0" allowfullscreen></iframe>
+
+          [Não consegue ver o vídeo? Clique aqui](http://videos.code.org/2014/C1-bigevent-unplugged.mp4)
+          <br/><br/>
+
+          **3. Assista ao vídeo do professor: Como facilitar "O Grande Evento"**
+          <br/>
+          Este vídeo se destina a suportar você como o professor, se você estiver à busca de dicas em como ministrar esta aula.
+
+          <iframe width="640" height="390" src="https://www.youtube.com/embed/aYECW6V8nQA" frameborder="0" allowfullscreen></iframe>
+          <br/><br/>
+
+          **4. Reveja outras aulas desplugadas que introduzem eventos**
+
+          - Curso A, Curso B (Pré-escola, Ano 1): [O Grande Evento Jr.](https://curriculum.code.org/csf-18/courseb/12/)
+
+          ---
+
+          > ## Reflexão
+          > Como você explicaria o conceito de eventos para seus alunos? Compartilhe suas ideias em <a href="http://forum.code.org/t/teaching-events/409/1">nosso fórum</a>.
+
+          > <a href="http://forum.code.org/t/teaching-events/409/1" target="blank"><button class="plc">Discuta nos fóruns >></button></a>
+
+          Após comentar no fórum, volte aqui e clique abaixo para seguir em frente.
+      OPD-K5 Stage7Start:
+        markdown: "# Eventos > Visão Geral da Etapa\n\n<img src=\"https://images.code.org/319df539d56b2795d659a56e9334a5fb-image-1434397946590.JPG\"
+          width=\"450px\" style=\"border-radius: 10px; float: right; margin: 0 0 40px
+          40px;\">\n\nAté aqui, você aprendeu como sequenciar um programa, adicionar
+          laços, e usar condicionais e funções. Estamos quase terminando! \n\nNesta
+          etapa, iremos olhar em *eventos*, um outro conceito essencial em ciência
+          da computação. À media que exploramos eventos, você irá sintetizar o que
+          você aprendeu até agora e escrever programas mais complexos.\n\nAo completar
+          a Etapa 8, você irá:\n\n- Praticar a codificação de eventos simples\n- Refletir
+          sobre sua aplicação em sala de aula\n\n>**O que Esperar nesta Etapa:** Você
+          irá começar com uma aula desplugada do Curso C (destinado ao Ano 2) apresentando
+          eventos. Então, você irá explorar alguns quebra-cabeças do Curso F (destinado
+          ao Ano 5) para experimentação com blocos de evento. Iremos fechar com uma
+          oportunidade para reflexão. Você deverá gastar entre 20-45 minutos nesta
+          etapa.\n\nTudo pronto? Vamos lá!\n"
+      OPD-K5 Stage8Go:
+        markdown: |
+          # Melhores Práticas > Reflexão
+
+          A Etapa 8 apresentou diversas melhores práticas para o ensino de ciência da computação. Tome um momento para considerar quais estratégias apresentadas neste etapa você poderá usar em sua prática. Na próxima etapa, você irá criar um plano simples e refletir sobre o curso como um todo.
+
+          ## Quais estratégias você irá usar ao facilitar o ensino de ciência da computação em sua classe?
+
+          Aqui estão alguns exemplos que foram extraídos da comunidade de professores:
+
+          - **Facilite atividades "desplugadas"** para ensinar conceitos essenciais (clique [aqui para uma lista completa de atividades desplugadas](https://code.org/curriculum/unplugged.)
+          - Implemente a regra **pergunte a 3 pessoas e depois para mim** em sua classe, em que os alunos devem antes pedir ajuda para 3 colegas antes que possam fazer a mesma pergunta ao professor. Isto reduz o número de alunos que você deverá responder individualmente, e promove o aprendizado a partir dos colegas.
+          - **Seja calmo e persistente** quando os problemas surgirem (e eles irão surgir). Sua reação irá dar o tom para os alunos. Se ao primeiro sinal de problema você disser "eu sou péssimo em tecnologia, eu desisto", seus alunos irão pensar que eles poderão fazer isto também.
+          - **Faça-os se sentir orgulhosos** de seus programas. Exiba-os, faça-os funcionar, publique-os online. É uma grande realização para você e para seus alunos que deve ser comemorada.
+          - **Faça perguntas para sondar** os alunos (mesmo se você não souber as respostas). Pergunte à classe se alguém tem a resposta. Fique confortável ao dizer "Eu não sei, vamos descobrir isto juntos!"
+
+          ---
+
+          > ## Reflita
+          Reveja mais estratégias ou acrescente suas próprias <a href ="http://forum.code.org/t/code-org-k5-professional-development-computer-science-pedagogy-6/14/4">em nossos fóruns.</a>:
+
+          > <a href="http://forum.code.org/t/code-org-k5-professional-development-computer-science-pedagogy-6/14/4" target="blank"><button class="plc">Compartilhe suas estratégias >></button></a>
+
+          Após explorar os fios do fórum e acrescentar suas ideias, clique abaixo para seguir à Etapa 9.
+      OPD-K5 Stage8Start:
+        markdown: "# Melhores Práticas > Visão Geral da Etapa\n\n<img src=\"https://images.code.org/1faca2c2dd1c9bd64ab5def347524d9c-image-1434398377360.JPG\"
+          width=\"450px\" style=\"border-radius:10px; float:right; margin: 0 0 40px
+          40px;\">\n\n**Você trihou seu caminho através da maior parte do conteúdo
+          deste curso. Parabéns!** \n\nNa Etapa 1, você revisou as informações do
+          curso.\nNa Etapa 2, você explorou ciência da computação como uma disciplina.
+          \nNa Etapa 3, você se preparou para conhecer o básico de ciência da computação.
+          \nNas Etapas 4-8, você assumiu o papel do aluno. \nAgora, vamos fazer a
+          transição para explorar como você poderia ensinar o que você aprendeu para
+          alunos jovens. \n\n\nAo completar a Etapa 9, você irá:\n\n- Revisar as melhores
+          práticas para lecionar ciência da computação\n\n> ## Olhando Adiante:\n>
+          As melhores práticas que iremos cobrir nesta etapa incluem:\n\n>- Estabelecer
+          uma cultura positiva em sala de aula que suporte o aprendizado auto direcionado,
+          experimentação e fracasso\n- Saber quando e como aplicar estratégias de
+          instruções obtidas de outras áreas\n- Usar estratégias de trabalho em grupo
+          como \"programação em pares\"\n- Ensinar explicitamente estratégias meta
+          cognitivas para a solução de problemas\n- \"Desplugar\" e ensinar alguns
+          conceitos essenciais com recursos de tecnologia mínimos ou inexistentes\n-
+          Outras melhores práticas sugeridas pela comunidade de professores da Code.org\n\nTambém
+          iremos prover uma oportunidade para você compartilhar suas melhores práticas
+          com a comunidade.\n"
+      OPD-K5 Stage9Go:
+        markdown: |
+          # Planejamento > Revisão
+
+          <img src="https://images.code.org/34e1d20a6ae73e28c6c88c5981fd6be6-image-1434411459379.JPG" width="450px">
+
+          Nesta etapa, você deve ter:
+
+          - Revisado o Painel do Professor e outros materiais na Code.org
+          - Planejado a forma como você poderá integrar ciência da computação à sua prática
+
+          Na etapa 11, nossa etapa final, você irá
+
+          - Refletir no seu aprendizado
+          - Planejar os próximos passos que você poderá tomar para continuar seu aprendizado
+          - Conectar-se com a comunidade global de educadores interessados no ensino de ciência da computação
+      OPD-K5 Stage9Start:
+        markdown: "# Planejamento > Explorando o Material do Professor\n\nDurante
+          as Etapas 4-8, você conheceu alguns dos recursos \"desplugados\" e online
+          que estão disponíveis para Fundamentos de CC, quando estavam alinhados com
+          os conceitos de CC que você estava aprendendo. \n\nAgora que você tem algum
+          conhecimento em como codificar, assim como em como lecionar ciência da computação,
+          é hora de começar a planejar suas aulas. Nesta etapa, iremos visitar outras
+          áreas da plataforma Code.org e o **[Painel do Professor](http://studio.code.org/)**.
+          \n\nAo completar esta etapa, você irá:\n\n- Explorar os materiais disponíveis
+          para professores\n- Explorar o **[Painel do Professor](http://studio.code.org/)**
+          da Code.org\n- Planejar como você poderia integrar ciência da computação
+          à sua prática\n\n***\n\nUma captura de tela do Painel do Professor é mostrada
+          abaixo. Para visualizá-la, você terá que se autenticar na sua conta de professor
+          na Code.org - quando você estiver autenticado, esta deverá ser a tela padrão
+          que você verá no website da Code.org. Se você não tiver uma conta de professor,
+          você pode **[cadastrar-se aqui para obter uma](https://studio.code.org/users/sign_up)**.\n\n![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)\n"
+      OPD-K5 Using CS:
+        markdown: |+
+          # Planejamento > Preparando-se para uma aula com Code Studio
+
+          Vamos dar uma olhada como funciona o Code Studio para você e para seus alunos em um ambiente de sala de aula.
+
+          ## Passo 1: Escolha um curso
+          Verifique nossa [página de ensino elementar](https://code.org/educate/curriculum/elementary-school) e encontre os planos de aulas e cursos completos para Fundamentos de CC, A-F. Ou, se você estiver interessado em nossos cursos de ensino médio, você irá encontrar cursos para todos os níveis - desde a pré-alfabetização até alunos sêniores, e todos os níveis intermediários. Todos os nossos cursos são disponíveis de forma gratuita. Converse com seus colegas na escola para definir como o currículo do curso poderá ser integrado à variedade de disciplinas.
+
+          ## Passo 2: Prepare a seção da sala de aula
+          Configure uma seção de sala de aula para visualizar a evolução dos alunos, imprimir cartões de login para seus alunos, gerenciar suas contas, e imprimir certificados que eles poderão levar para casa após terminar o curso. Clique neste link para [assistir um breve vídeo](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b) que demonstra como criar sua primeira sala de aulas de ciência da computação na Code.org. Você pode também encontrar os passos [neste artigo de apoio](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).
+
+          ## Passo 3: Associe o curso à sua seção
+          Clique sobre o curso que você está lecionando - você deve ver uma tela semelhate à tela mostrada abaixo. Você pode a seguir clicar em "Associar Curso" para associar este curso a uma de suas seções.
+
+          ## Passo 4: Comece a lecionar!
+          Uma aula é tudo o que você precisa para trazer conceitos de ciência da computação à sua sala de aula. Quando você vir o entusiasmo dos seus alunos por CC, vá em frente com planos de aulas diárias para orientar seus alunos, com atividades desplugadas que não requerem um computador, e com os fóruns para se conectar a outros professores.
+
+
+
       OPD-K5 Vocabulary:
         markdown: |
           # Fundamentos de CC > Vocabulário Chave
@@ -4270,6 +5024,24 @@ pt-BR:
 
           > <a href="http://ctt.ec/Bfjw3" target="blank"><button class="default">Compartilhe no Tweeter >></button></a><br><br>
           Não possui uma conta no Tweeter? Você também pode nos encontrar no [Facebook](https://www.facebook.com/Code.org/) ou [Instagram](https://www.instagram.com/codeorg/).
+      OPD-K5 Your Plan:
+        markdown: |
+          # Planejamento > Seu Plano
+
+          Nós esperamos que esta etapa tenha ajudado a apresentar a você os recursos disponíveis no Code Studio. Enquanto você pensa em como você poderá no futuro lecionar ciência da computação usando quaisquer recursos da code.org ou do Code Studio, tome um momento para [compartilhar seu plano com a Comunidade Profissional de Ensino (PLC)](http://forum.code.org/t/teaching-computer-science-your-plans/412).
+
+          Compartilhe conosco:
+
+          - Quais são suas metas para sua sala de aula? Como CC ou os recursos da code.org ajudam você a atingir estas metas?
+          - O que torna você mais empolgado quando se trata de colocar em prática alguns destes recursos?
+          - Quais desafios você antevê durante o percurso para atingir suas metas?
+          - Quais dúvidas você têm que esta comunidade poderá ajudá-lo a resolver?
+
+          Após postar seu plano inicial, fique à vontade para revisitar [este fio](http://forum.code.org/t/teaching-computer-science-your-plans/412) no futuro para nos manter atualizados de como as coisas estão indo!
+
+          <a href="http://forum.code.org/t/teaching-computer-science-your-plans/412" target="blank"><button class="plc">Publique seu plano >></button></a>
+
+          Após comentar no fórum, volte aqui e clique abaixo para continuar.
       OPD-Stage3Start:
         markdown: |
           # Olhando à Frente > Visão Geral desta Etapa
@@ -4316,6 +5088,46 @@ pt-BR:
           <hr>
 
           ** Agora você tenta! **
+      'Overview: If Statements':
+        markdown: |+
+          # Declaração If
+
+          ## Como funcionam as declarações If
+
+          <img src="https://images.code.org/361556bbff61bf91e2c737f745582dff-image-1479418505481.png" style="float: right; margin-left: 20px; margin-right: 20px">
+
+          As declarações If permitem a você *tomar uma decisão que determina quais linhas de código devem ser executadas em seguida.*
+
+          À direita temos um diagrama que mostra os elementos de uma declaração `If` básica em JavaScript.
+
+          Existem duas partes básicas em uma declaração If.
+
+          1. A condição que será calculada (Uma expressão booleana que resulta em **verdadeiro** ou **falso**)
+          2. O código que deverá ser executado *se* o resultado da expressão for verdadeiro - delimitado entre chaves
+
+          ## Um exemplo testado
+          <img src="https://images.code.org/ca716e009ddb8dc397eb5a651a1ac2d7-image-1479420772852.png" style="display: block; margin: auto; float: right">
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 150%;">1.</span>
+          O programa roda linha a linha conforme esperado. Ele exibe uma mensagem, e depois pede ao usuário que insira um número. Aquilo que o usuário digita é armazenado na variável <code>idade</code> e depois prossegue à próxima linha...
+          </p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 150%;">2.</span>
+          Quando o código da declaração <code>if</code> é encontrado, a <em>primeira</em> coisa que ocorre é a avaliação da condição contida entre parêntesis. Ele verifica se, neste ponto do programa, o valor da variável <code>idade</code> é maior ou igual a 18. Se ele for, dizemos que a expressão "<strong>retorna verdadeiro</strong>". Caso contrário ele retorna falso.
+          </p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 150%;">3.</span>
+          Estas declarações console.log irão <em>somente</em> rodar se a expressão for verdadeira. As chaves contém todo o código que deverá ser executado se, e somente se, a expressão for verdadeira. Caso contrário, a seção inteira do código contido na declaração if é <em>pulado</em>.
+          </p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 150%;">4.</span>
+          A execução é retomada aqui, na primeira linha após o fechamento das chaves da declaração if. Esta linha irá rodar <em>sempre</em>, mas note que se o usuário digitar uma idade inferior a 18, toda a declaração if será pulada, e o programa irá dizer somente "Obrigado por verificar". (Nós iremos consertar esta situação estranha em breve).
+
+          </p>
+
+          <div style="clear: both">&nbsp;</div>
+
+
       'Overview: Images':
         markdown: |+
           # Imagens
@@ -4447,6 +5259,62 @@ pt-BR:
           # Programação por Revesamento
 
           Introduza-se nas equipes e trabalhe junto para escrever programas que desenhem figuras.
+      Responding to User Input:
+        markdown: "# Respondendo à Entrada do Usuário\n\nO Modo de Desenho torna realmente
+          fácil desenhar a Interface de Usuário para sua aplicação, mas teremos que
+          mergulhar no Modo de Codificação para fazer o programa responder aos usuários.\n\nNo
+          Laboratório de Jogos o laço de Desenho simplesmente rodou código, usando
+          condicionais para checar interações do usuário. O Laboratório de Aplicativos,
+          por outro lado, aguarda para responder a determinados **eventos** que ocorrem
+          em um programa. Esta é a maneira do Laboratório de Aplicativos dizer \"Oi!
+          Algo acabou de acontecer!\". Isso significa que não precisa haver qualquer
+          código rodando quando você não estiver interagindo diretamente com um aplicativo,
+          e seu código pode responder a estes eventos à medida em que ocorrem.\n\nDe
+          forma geral, as tarefas de codificação envolvidas em fazer seu aplicativo
+          responder a eventos através do acionamento de funções são chamadas **Tratamento
+          de Eventos**. \n\nNo Laboratório de Aplicativos todo o tratamento de eventos
+          começa através da adicção de um bloco de código especial chamado `onEvent`.
+          Aqui está a forma de fazer isso:\n\n<br><br>\n\n<div style=\"column-count:
+          4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count:
+          4; width: 100%\">\n\n<p><span style=\"font-weight: bold; color: #00adbc;
+          font-size: 200%;\">1.</span>\nAtive o Modo de Desenho</p>\n\n<p><span style=\"font-weight:
+          bold; color: #00adbc; font-size: 200%;\">2.</span>\nArraste um bloco <code>onEvent</code>
+          da caixa de ferramentas para a área de trabalho.</p>\n\n<p><span style=\"font-weight:
+          bold; color: #00adbc; font-size: 200%;\">3.</span>\nUse o menu de contexto
+          para selecionar o <em>ID</em> do elemento da UI que você quer configurar
+          para responder a algum evento. Os IDs de todos os elementos da UI adicionados
+          em modo de desenho serão listados aqui.</p>\n<p><span style=\"font-weight:
+          bold; color: #00adbc; font-size: 200%;\">4.</span>\nUse o menu de contexto
+          para selecionar o <em>tipo</em> de evento a que você quer responder. (Use
+          somente \"click\" por enquanto).</p>\n\n<p><span style=\"font-weight: bold;
+          color: #00adbc; font-size: 200%;\">5.</span>\nAdicione código dentro da
+          função que você quer executar <em>quando</em> o usuário aciona o evento.
+          A função irá executar uma vez a cada vez que o usuário ativa o evento específico.</p>\n\n</div>\n\n![](https://images.code.org/9b506faaaadf61338dc738a4eafb66b2-image-1476740205599.png)\n\n###
+          Alterando Telas com um \"Clique\"\n\nEm programação orientada a eventos,
+          é importante entender que:\n\n* **Usuários acionam eventos** - Eventos ocorrem
+          quando os usuários clicam um botão, tocam a tela, movem o mouse, digitam
+          uma tecla no teclado, etc.\n* **Eventos acionam código** - Quanto um evento
+          ocorre ou \"é ativado\" ele pode ser usado para acionar uma função javascript
+          específica.\n\nO bloco `onEvent` do Laboratório de Aplicativos é um tipo
+          de função para tratamento de eventos chamada **Ouvidor de Eventos**. Ele
+          contém toda a configuração necessária para tratar eventos em um único comando,
+          que possui várias partes. Aqui está um exemplo com anotações completas:\n\n<img
+          src=\"//curriculum.code.org/images/applab/onEvent_diagram.png\" style=\"display:
+          block; margin: 20px auto\">\n\n<div style=\"column-count: 3; column-gap:
+          20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%\">\n\n<p><span
+          style=\"font-weight: bold; color: #00adbc; font-size: 200%;\">1.</span>\nCódigo
+          para executar quando a função callback é acionada quando o usuário clica
+          em <em>botão1</em>. Neste caso, simplesmente mova a tartaruga para a frente
+          em 27 pixels. O código para tratamento de eventos terá tipicamente mais
+          que uma linha. Isto é somente um exemplo simples para começar.</p>\n\n<p><span
+          style=\"font-weight: bold; color: #00adbc; font-size: 200%;\">2.</span>\nNote
+          que esta função, diferentemente de outras que vimos, não tem um nome. Ela
+          é também chamada de <em>função callback</em> que é um termo estranho. O
+          que faz uma função callback ser diferente de uma função comum é que você
+          não chama ela diretamente do seu código. Ao invés disso, a função callback
+          é <strong>chamada pelo sistema</strong> ao mesmo tempo em que um evento
+          específico ocorre. Funções callback são um padrão comum em programação orientada
+          a eventos.</p>\n</div>\n\n\n### Você irá experimentar isto em seguida!\n\n"
       ScreenOutTheMean-Unplugged:
         markdown: |
           # Identifique o Perturbador
@@ -4635,6 +5503,17 @@ pt-BR:
           ## Recursos
 
           * [O que é um Computador - Guia de Atividade](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)
+      Unit 1 Lesson 6 Overview:
+        markdown: |
+          # Solução de problemas - Computadores e lógica: Lição 6 - Processando com bits
+
+          ## Fundo
+
+          Nesta lição, você aprenderá como os computadores processam informações binárias ao projetar filtros no nível de bit de imagens simples.
+
+          # Recursos
+
+          * [Filtragem de pixels] (https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/edit?usp=sharing) - Guia de atividades ([PDF] (https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/export?format=pdf) | [DOCX] (https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/export?format=doc))
       Unit 2 Lesson 10 Overview:
         markdown: |
           # Visão global
@@ -5004,10 +5883,37 @@ pt-BR:
             na realidade precisa avançar 3 espaços.
       courseD_external_binary1:
         title: Desenho Binário
+        markdown: "<h1>Desenhe com Binário</h1>\n \n<h3>Binário é uma forma de representar
+          informação usando somente duas opções. Neste caso, <b>desligado</b> e <b>ligado</b>.\n<br/>\nAqui,
+          nós iremos usar o número <b>0</b> como código para \"desligado\" e o número
+          <b>1</b> como código para \"ligado\".\n<br/>\n<table>\n<tr><td><img src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>Nesta etapa, nós fornecemos a você uma grade com \"pixels\"
+          que você pode percorrer e fazer desenhos ligando quadrados específicos!</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
       courseD_external_binary1_2018:
         title: Desenho Binário
+        markdown: "<h1>Desenhe com Binário</h1>\n \n<h3>Binário é uma forma de representar
+          informação usando somente duas opções. Neste caso, <b>desligado</b> e <b>ligado</b>.\n<br/>\nAqui,
+          nós iremos usar o número <b>0</b> como código para \"desligado\" e o número
+          <b>1</b> como código para \"ligado\".\n<br/>\n<table>\n<tr><td><img src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>Nesta etapa, nós fornecemos a você uma grade com \"pixels\"
+          que você pode percorrer e fazer desenhos ligando quadrados específicos!</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
       courseD_external_binary1_2018_2019:
         title: Desenho Binário
+        markdown: "<h1>Desenhe com Binário</h1>\n \n<h3>Binário é uma forma de representar
+          informação usando somente duas opções. Neste caso, <b>desligado</b> e <b>ligado</b>.\n<br/>\nAqui,
+          nós iremos usar o número <b>0</b> como código para \"desligado\" e o número
+          <b>1</b> como código para \"ligado\".\n<br/>\n<table>\n<tr><td><img src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>Nesta etapa, nós fornecemos a você uma grade com \"pixels\"
+          que você pode percorrer e fazer desenhos ligando quadrados específicos!</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
       courseD_multi_artist_binary8_predict1:
         questions:
         - text: Olhe com atenção o código abaixo. Qual imagem será criada quando você
@@ -5022,6 +5928,21 @@ pt-BR:
         - text: D
           correct: true
           feedback: Correto!
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
       courseD_multi_artist_binary8_predict1_2018:
         questions:
         - text: Olhe com atenção o código abaixo. Qual imagem será criada quando você
@@ -5036,6 +5957,21 @@ pt-BR:
         - text: D
           correct: true
           feedback: Correto!
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
       courseD_multi_artist_binary8_predict1_2018_2019:
         questions:
         - text: Olhe com atenção o código abaixo. Qual imagem será criada quando você
@@ -5050,6 +5986,21 @@ pt-BR:
         - text: D
           correct: true
           feedback: Correto!
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
       courseD_multi_artist_nestedLoops9_predict1:
         questions:
         - text: Olhe com atenção o código abaixo. Qual desenho será feito quando você
@@ -5822,17 +6773,6 @@ pt-BR:
         - text: Eu não sei.
           feedback: A variável volta a ser 0 antes das duas últimas chamadas de função,
             onde 1 é adicionado a cada vez. A abelha recolhe 2 unidades de néctar.
-      courseF_external_variableConstant:
-        markdown: |+
-          <h2>Mais sobre Variáveis</h2>
-
-
-          <img src="https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png" style="padding-left: 30px; width:300px; float:right;"/>
-          <h3>Você acaba de aprender um ótimo jeito de usar uma variável... Como uma constante!
-          Quando você usa uma variável como uma constante, você configura o valor uma vez e então usa o *mesmo* valor várias vezes no seu programa sem mudá-lo após clicar em "Executar".</h3>
-          <br/><hr/>
-          <h3>Nas próximas etapas, você vai escrever códigos com variáveis que *mudam* dentro do programa.</h3>
-
       courseF_external_variableConstant_2018:
         markdown: |+
           <h2>Mais sobre Variáveis</h2>

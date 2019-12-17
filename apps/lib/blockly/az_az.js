@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "hər element üçün";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "Siyahıdakı hər element üçün \"%1\" dəyişənini elementə mənimsət və bundan sonra bəzi əmrləri yerinə yetir.";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "%1 ilə başlayıb, %2 qiymətinə kimi %3 qədər dəyiş";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "say:";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "%1 dəyişəni başlanğıc ədəddən son ədədə qədər göstərilən aralıqla qiymətlər aldıqca göstərilən blokları yerinə yetir.";

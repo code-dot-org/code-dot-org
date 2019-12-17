@@ -1,7 +1,5 @@
 ---
-title: Hour of Code How-To for Districts
-layout: wide
-nav: how_to_nav
+title: कोडचा तास-डिस्ट्रिक्टसाठी "कसे करावे"
 ---
 
 {{ signup_button }}

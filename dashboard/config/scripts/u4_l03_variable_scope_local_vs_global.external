@@ -5,7 +5,7 @@ css 'unplugged'
 
 
 markdown <<MARKDOWN
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Vlj1_X474to" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![](https://images.code.org/b0e16c1ff38f5f5448465a7b0654bcfd-image-1571329455230.png)](https://www.youtube.com/watch?v=Vlj1_X474to)
 
 # Create Variables Once, At the Top, Outside onEvent()
 
@@ -33,8 +33,6 @@ Local variables will eventually be useful but for now they're most likely to jus
 This code is pretty confusing. While it looks like there's only one variable being used, it actually has two variables, one local, and one global, and they're both named `count`! Changing the value of one will have no impact on the other. This can cause unexpected behavior in your code and it can get tricky to debug.
 
 The best way to avoid these issues is to **make sure for now that you're not using `var` inside of an `onEvent`.** If you run into a tricky debugging problem, check if you're accidentally creating a local variable.
-
-
 MARKDOWN
 
 teacher_markdown <<MARKDOWN

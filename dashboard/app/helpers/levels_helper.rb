@@ -25,7 +25,7 @@ module LevelsHelper
     elsif script_level.stage.lockable?
       script_lockable_stage_script_level_path(script_level.script, script_level.stage, script_level, params)
     elsif script_level.bonus
-      query_params = params.merge(id: script_level.id)
+      query_params = params.merge(level_name: script_level.level.name)
       script_stage_extras_path(script_level.script.name, script_level.stage.relative_position, query_params)
     else
       script_stage_script_level_path(script_level.script, script_level.stage, script_level, params)
@@ -233,8 +233,8 @@ module LevelsHelper
     @app_options =
       if @level.is_a? Blockly
         blockly_options
-      elsif @level.is_a? Weblab
-        weblab_options
+      elsif @level.is_a?(Weblab) || @level.is_a?(Fish)
+        non_blockly_puzzle_options
       elsif @level.is_a?(DSLDefined) || @level.is_a?(FreeResponse) || @level.is_a?(CurriculumReference)
         question_options
       elsif @level.is_a? Widget
@@ -368,15 +368,15 @@ module LevelsHelper
     level_options['stage_total'] = script_level ? script_level.stage_total : 1
   end
 
-  # Options hash for Weblab
-  def weblab_options
+  # Options hash for non-blockly puzzle apps
+  def non_blockly_puzzle_options
     # Level-dependent options
     app_options = {}
 
     l = @level
-    raise ArgumentError.new("#{l} is not a Weblab object") unless l.is_a? Weblab
+    raise ArgumentError.new("#{l} is not a non-blockly puzzle object") unless l.respond_to? :non_blockly_puzzle_level_options
 
-    level_options = l.weblab_level_options.dup
+    level_options = l.non_blockly_puzzle_level_options.dup
     app_options[:level] = level_options
 
     set_puzzle_position_options(level_options)
@@ -410,7 +410,7 @@ module LevelsHelper
       end
     end
 
-    app_options[:app] = 'weblab'
+    app_options[:app] = l.game.app
     app_options[:baseUrl] = Blockly.base_url
     app_options[:report] = {
       fallback_response: @fallback_response,
@@ -824,17 +824,17 @@ module LevelsHelper
   # LevelSourceImage using the image data in level_image.
   #
   # @param level_image [String] A base64-encoded image.
-  # @param level_source_id [Integer, nil] The id of a LevelSource or nil.
+  # @param level_source [LevelSource, nil] LevelSource or nil.
   # @param upgrade [Boolean] Whether to replace the saved image if level_image
   #   is higher resolution
   # @returns [LevelSourceImage] A level source image, or nil if one was not
   # created or found.
-  def find_or_create_level_source_image(level_image, level_source_id, upgrade=false)
+  def find_or_create_level_source_image(level_image, level_source, upgrade=false)
     level_source_image = nil
     # Store the image only if the image is set, and either the image has not been
     # saved or the saved image is smaller than the provided image
-    if level_image && level_source_id
-      level_source_image = LevelSourceImage.find_by(level_source_id: level_source_id)
+    if level_image && level_source
+      level_source_image = LevelSourceImage.find_by(level_source: level_source)
       upgradable = false
       if upgrade && level_source_image
         old_image_size = ImageSize.path(level_source_image.s3_url)
@@ -843,7 +843,7 @@ module LevelsHelper
           new_image_size.height > old_image_size.height
       end
       if !level_source_image || upgradable
-        level_source_image = LevelSourceImage.new(level_source_id: level_source_id)
+        level_source_image = LevelSourceImage.new(level_source: level_source)
         unless level_source_image.save_to_s3(Base64.decode64(level_image))
           level_source_image = nil
         end

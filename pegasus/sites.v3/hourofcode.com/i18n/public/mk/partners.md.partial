@@ -1,6 +1,7 @@
 ---
-title: <%= hoc_s(:title_partners) %>
+title: "<%= hoc_s(:title_partners) %>"
 ---
+
 The Hour of Code is driven by the Hour of Code and Computer Science Education Week Advisory and Review Committees.
 
 The [Advisory Committee](%= resolve_url('/advisory-committee') %) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. This committee guides the strategy for the Hour of Code campaign.
@@ -117,31 +118,31 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
----
+* * *
 
 # Major Promotional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
 
----
+* * *
 
 # International Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
----
+* * *
 
 # Activity Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
----
+* * *
 
 # Infrastructure Partners and Tools
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 
----
+* * *
 
 # Additional Partners
 

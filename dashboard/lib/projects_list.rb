@@ -15,7 +15,8 @@ module ProjectsList
     minecraft: ['minecraft_adventurer', 'minecraft_designer', 'minecraft_hero', 'minecraft_aquatic'],
     events: %w(starwars starwarsblocks starwarsblocks_hour flappy bounce sports basketball),
     k1: ['artist_k1', 'playlab_k1'],
-    dance: ['dance']
+    dance: ['dance'],
+    library: ['applab', 'gamelab']
   }.freeze
 
   # Sharing of advanced project types to the public gallery is restricted for
@@ -116,6 +117,33 @@ module ProjectsList
       return featured_published_projects
     end
 
+    # Retrieve a class set of libraries for a specified class section
+    # @param section The section that has all students whose libraries should
+    #                be returned.
+    # @return [Hash<Array<Hash>>] A hash of lists of published libraries.
+    def fetch_section_libraries(section)
+      project_types = PUBLISHED_PROJECT_TYPE_GROUPS[:library]
+      section_students = section.students
+      [].tap do |projects_list_data|
+        student_storage_ids = PEGASUS_DB[:user_storage_ids].
+          where(user_id: section_students.pluck(:id)).
+          select_hash(:id, :user_id)
+        student_storage_id_list = student_storage_ids.keys
+        PEGASUS_DB[:storage_apps].
+          where(storage_id: student_storage_id_list, state: 'active').
+          where(project_type: project_types).
+          where("value->'$.libraryName' IS NOT NULL").
+          each do |project|
+            # The channel id stored in the project's value field may not be reliable
+            # when apps are remixed, so recompute the channel id.
+            channel_id = storage_encrypt_channel_id(project[:storage_id], project[:id])
+            project_owner = section_students.find {|student| student.id == student_storage_ids[project[:storage_id]]}
+            project_data = get_library_row_data(project, channel_id, project_owner)
+            projects_list_data << project_data if project_data
+          end
+      end
+    end
+
     def project_and_featured_project_and_user_fields
       [
         :storage_apps__id___id,
@@ -190,6 +218,20 @@ module ProjectsList
         type: project_type(project_value['level']),
         updatedAt: project_value['updatedAt'],
         publishedAt: project[:published_at],
+      }.with_indifferent_access
+    end
+
+    # pull various fields out of the student and project records to populate
+    # a data structure that can be used to populate a UI component displaying a
+    # single library or a list of libraries.
+    def get_library_row_data(project, channel_id, student = nil)
+      project_value = project[:value] ? JSON.parse(project[:value]) : {}
+      return nil if project_value['hidden'] == true || project_value['hidden'] == 'true'
+      {
+        channel: channel_id,
+        name: project_value['libraryName'],
+        description: project_value['libraryDescription'],
+        studentName: student&.name,
       }.with_indifferent_access
     end
 

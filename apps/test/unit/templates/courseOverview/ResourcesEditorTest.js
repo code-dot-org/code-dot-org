@@ -1,4 +1,4 @@
-import {assert} from '../../../util/configuredChai';
+import {assert} from '../../../util/deprecatedChai';
 import React from 'react';
 import {shallow, mount} from 'enzyme';
 import ResourcesEditor from '@cdo/apps/templates/courseOverview/ResourcesEditor';

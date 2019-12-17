@@ -1,6 +1,5 @@
 ---
 title: Smjernice za tutorijale
-layout: wide
 ---
 
 <style>

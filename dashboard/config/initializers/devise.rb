@@ -342,7 +342,7 @@ Devise.setup do |config|
     manager.failure_app = CustomDeviseFailure
   end
 
-  require 'cookie_helpers'
+  require 'cdo/cookie_helpers'
   Warden::Manager.after_set_user do |user, auth|
     user_type =
       if user.teacher?
@@ -366,6 +366,7 @@ Devise.setup do |config|
     auth.cookies[environment_specific_cookie_name("_user_type")] = {value: "", expires: Time.at(0), domain: :all, httponly: true}
     auth.cookies[environment_specific_cookie_name("_shortName")] = {value: "", expires: Time.at(0), domain: :all}
     auth.cookies[environment_specific_cookie_name("_experiments")] = {value: "", expires: Time.at(0), domain: :all}
+    auth.cookies[environment_specific_cookie_name("_assumed_identity")] = {value: "", expires: Time.at(0), domain: :all, httponly: true}
   end
 
   # ==> Mountable engine configurations

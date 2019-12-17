@@ -1,7 +1,5 @@
 ---
-title: Hour of Code Press Release for Elected Officials
-layout: wide
-nav: promote_nav
+title: தெரிவு செய்யப்பட்ட அதிகாரிகளுக்கான Hour of Code செய்தி வெளியீடு
 ---
 
 {{signup_button}}

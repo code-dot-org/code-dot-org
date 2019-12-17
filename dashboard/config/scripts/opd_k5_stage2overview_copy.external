@@ -1,0 +1,20 @@
+name 'OPD-K5 Stage2Overview_copy'
+skip_dialog true
+markdown <<MARKDOWN
+# CS Fundamentals > Stage overview
+
+In Stage 1, you learned about this course and how to navigate the learning platform. Now you're ready to dive into the real content.
+
+Let's begin with some fundamentals.
+
+<img src="https://images.code.org/8af62f96e37199542519fae8580b0a29-image-1434146715374.jpg" width="450px" style="margin-right:45px; border-radius:10px;">
+
+By completing Stage 2, you will:
+
+- Define "computer science" and review key vocabulary
+- Identify the benefits of teaching and learning computer science
+- Differentiate between "coding" and "computer science"
+- Explain the benefits of beginning to code using visual programming
+
+Plan to spend between 10-30 minutes completing this stage.
+MARKDOWN

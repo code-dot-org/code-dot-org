@@ -215,10 +215,120 @@ fi-FI:
       CourseE_HOC 2018 Level_9b:
         voyage_aquatic_9a: Miten kaunis koralliriutta! Sininen koralli on **oikea**
           tie. Varmista, että punainen koralli ei ole **vasemmalla**!
+      Dance_2019_01:
+        validation: |-
+          **Kuinka ylitän tämän tason?**
+
+          -   Varmista, että tanssija näkyy ruudulla.
+
+          _Tämä taso päättyy 4 tahdin jälkeen._
+        challenges: |-
+          **Vapaaehtoiset haasteet**
+
+          -   Valitse eri kappale soitettavaksi.
+          -   Siirrä tanssijasi uuteen paikkaan.
+          -   Tee enemmän kuin yksi tanssija.
+      Dance_2019_02:
+        validation: |-
+          **Kuinka ylitän tämän tason?**
+
+          -   Tanssijan täytyy suorittaa liike.
+          -   Sinun täytyy painaa nuolinäppäintä.
+
+          _Tämä taso päättyy 4 tahdin jälkeen._
+        challenges: |-
+          **Vapaaehtoinen haaste**
+
+          -   Käytä enemmän kuin yksi <xml><block type="Dancelab_whenKey"><title name="KEY"></title></block></xml> -blokki.
+      Dance_2019_03:
+        validation: |-
+          **Kuinka ylitän tämän tason?**
+
+          -   Molempien tanssijoiden täytyy suorittaa liike.
+          -   Sinun täytyy painaa nuolinäppäimiä.
+
+          _Tämä taso päättyy 4 tahdin jälkeen._
+        challenges: |-
+          **Vapaaehtoinen haaste**
+
+          -   Tee tanssija vastaamaan vasen ja oikea nuolinäppäimiin.
+      Dance_2019_04:
+        validation: |-
+          **Kuinka ylitän tämän tason?**
+
+          -   Tanssijan täytyy vaihtaa uuteen liikkeeseen 4 tahdin jälkeen.
+
+          _Tämä taso päättyy 8 tahdin jälkeen._
+      Dance_2019_05:
+        validation: |-
+          **Kuinka ylitän tämän tason?**
+
+          -   Kuuden tahdin jälkeen, tanssijasi täytyy tanssia eri tanssia, kuin 4 tahtia sitten.
+
+          _Tämä taso päättyy 12 tahdin jälkeen._
+        challenges: |-
+          **Vapaaehtoinen haaste**
+
+          -   Muuta taustaa aina, kun tanssijat vaihtavat liikkeitä.
+      Dance_2019_06:
+        validation: |-
+          **Kuinka ylitän tämän tason?**
+
+          -   Luo yksi päätanssija ja taustatanssijoiden ryhmä.
+
+          _Tämä taso päättyy 7 tahdin jälkeen._
+        challenges: |-
+          **Vapaaehtoinen haaste**
+
+          -   Luo useita taustatanssijoiden ryhmiä.
+      Dance_2019_07:
+        validation: |-
+          **Kuinka ylitän tämän tason?**
+
+          -   Muuta vähintään yhden tanssijan kokoa musiikin alkamisen jälkeen.
+
+          _Tämä taso päättyy 6 tahdin jälkeen._
+        challenges: |-
+          **Vapaaehtoinen haaste**
+
+          -   Kokeile vaihtelemalla muita ominaisuuksia (leveys, pituus, kierto, yms.)
+      Dance_2019_08:
+        validation: |-
+          **Kuinka ylitän tämän tason?**
+
+          -   Muuta vähintään yhden tanssijan sävyä.
+
+          _Tämä taso päättyy 6 tahdin jälkeen._
+        tint_hint: Huomasitko, että tanssijat eivät muutu valitsemasi värin värisiksi?
+          Tämä johtuu siitä, että **sävyt** sekoittavat valitsemasi värin tanssijan
+          värien kanssa.
+      Dance_2019_09:
+        validation: |-
+          **Kuinka ylitän tämän tason?**
+
+          -   Paina "Valmis"-painiketta!
+        repeat_every_ideas: |-
+          **Tarvitsetko ideoita?**
+
+          -   Voit toistuvasti muuttaa tanssijan kokoa niin, että se kasvaa.
+          -   Voit toistuvasti muuttaa tanssijan kiertoa niin, että se pyörii.
+          -   Voit toistuvasti muuttaa tanssijan vaaka- tai pystyasentoa niin, että se liikkuu näytössä.
+
+          _Voit myös käyttää negatiivisia numeroita saadaksesi vastareaktion aikaan!_
+        next_previous: |-
+          **Vapaaehtoinen haaste**
+
+          -   Voit myös käydä läpi tanssiliikkeitä tämän uuden tapahtuman blokin avulla määrittämällä liikkeen asetukseen `(Satunnainen)`, `(Seuraava)`, tai `(Edellinen)`.
+              <xml><block type="Dancelab_changeMoveEachLR">
+              <title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;">???</title>
+              <title name="MOVE">"rand"</title>
+              <title name="DIR">-1</title>
+              </block></xml>
       Dance_Party_01:
         validation: |-
           **Kuinka ylitän tämän tason?**
-          \*Varmista, että tanssija näkyy ruudulla.
+
+          -   Varmista, että tanssija näkyy ruudulla.
 
           _Tämä taso päättyy 4 tahdin jälkeen._
         challenges: |-
@@ -252,6 +362,10 @@ fi-FI:
           **Vapaaehtoinen haaste**
 
           Muuta taustaefektiä kappaleen eri vaiheissa yhdistämällä uusi blokki tapahtumien <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> alle.
+      Dance_Party_05:
+        validation: "**Miten läpäisen tämän tason?** \n\n-   Tanssijasi täytyy käydä
+          läpi vähintään 4 erilaista tanssiliikettä ennen kuin taso muuttuu. \n\n_Tämä
+          taso päättyy 12 mittayksikön jälkeen._"
       Dance_Party_06:
         validation: |-
           **Kuinka ylitän tämän tason?**
@@ -464,3 +578,5 @@ fi-FI:
       courseE_artist_functions2_2019:
         courseD_artist_functions2_a: "Sinun ohjelma olisi: \n\n-   Käytä funktiota
           \n-   Siirrä eteenpäin 100 + 75 kuvapistettä\n-   Käytä funktiota"
+      Dance_Party_extras_alternate_2019:
+        alternate: Vaihtoehtoinen lohko on luokassa "Tanssijat".

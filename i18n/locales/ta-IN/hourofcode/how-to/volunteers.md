@@ -1,7 +1,5 @@
 ---
-title: How-to guide for Hour of Code volunteers
-layout: wide
-nav: how_to_nav
+title: தொண்டூழியர்களுக்கான எவ்வாறு செய்வது வழிகாட்டி
 ---
 
 {{signup_button}}

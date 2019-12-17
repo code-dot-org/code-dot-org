@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {SignInState} from '@cdo/apps/code-studio/progressRedux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import ShareAllowedDialog from './ShareAllowedDialog';
 import ShareDisallowedDialog from './ShareDisallowedDialog';
 
@@ -39,5 +39,5 @@ class ShareDialog extends Component {
 export const UnconnectedShareDialog = ShareDialog;
 
 export default connect(state => ({
-  signInState: state.progress.signInState
+  signInState: state.currentUser.signInState
 }))(ShareDialog);

@@ -1,4 +1,4 @@
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 import designMode from '@cdo/apps/applab/designMode';
 import elementLibrary from '@cdo/apps/applab/designElements/library';
 

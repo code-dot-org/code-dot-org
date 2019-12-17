@@ -356,7 +356,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "revokes the user's admin status" do
-    user = create :teacher, admin: true
+    user = create :admin
+
     assert user.admin?
 
     purge_user user

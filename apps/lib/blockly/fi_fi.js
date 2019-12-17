@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "kullekin kohteelle";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "Aseta muuttujan %1 arvoksi kukin listan kohde vuorollaan ja suorita joukko lausekkeita.";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "Väli %1-%2 %3:n välein";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "laske";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Asettaa muuttujaan %1 arvot alkuarvosta loppuarvoon annetun askeleen välein ja suorittaa joka askeleella annetut koodilohkot.";

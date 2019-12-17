@@ -1,10 +1,5 @@
 ---
 title: Terima kasih kerana mendaftarkan diri untuk menjadi tuan rumah kepada Acara Hour of Code!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # Terima kasih kerana mendaftarkan diri untuk menjadi tuan rumah kepada Acara Hour of Code!

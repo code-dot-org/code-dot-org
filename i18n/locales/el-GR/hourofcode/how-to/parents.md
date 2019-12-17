@@ -1,7 +1,5 @@
 ---
 title: '"Πώς να" οδηγός για τους γονείς'
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

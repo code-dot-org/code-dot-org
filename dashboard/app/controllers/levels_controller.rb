@@ -30,6 +30,7 @@ class LevelsController < ApplicationController
     EvaluationMulti,
     External,
     ExternalLink,
+    Fish,
     Flappy,
     FreeResponse,
     FrequencyAnalysis,
@@ -126,6 +127,10 @@ class LevelsController < ApplicationController
 
   # GET /levels/1/edit
   def edit
+    scripts = @level.script_levels.map(&:script)
+    @visible = scripts.reject(&:hidden).any?
+    @pilot = scripts.select(&:pilot_experiment).any?
+    @standalone = ProjectsController::STANDALONE_PROJECTS.values.map {|h| h[:name]}.include?(@level.name)
   end
 
   # GET /levels/:id/get_rubric
@@ -316,6 +321,8 @@ class LevelsController < ApplicationController
         @game = Game.craft
       elsif @type_class == Weblab
         @game = Game.weblab
+      elsif @type_class == Fish
+        @game = Game.fish
       elsif @type_class == CurriculumReference
         @game = Game.curriculum_reference
       end
@@ -431,7 +438,7 @@ class LevelsController < ApplicationController
     )
     level_source_image = find_or_create_level_source_image(
       params[:image],
-      level_source.try(:id),
+      level_source,
       true
     )
     @level.properties['solution_image_url'] = level_source_image.s3_url if level_source_image

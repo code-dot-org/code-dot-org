@@ -2995,14 +2995,6 @@ is-IS:
           feedback: Breytan er aftur stillt á 0 áður en kemur að síðustu tveimur köllunum
             á fallið, þar sem 1 er bætt við í hvert sinn. Síðan safnar býflugan 2
             af blómasafa.
-      courseF_external_variableConstant:
-        markdown: "<h2>Meira um breytur</h2>\n\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
-          style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>Þú varst
-          að læra þá gagnlegu lexíu að breyta getur verið... fasti!  \nÞegar breyta
-          er notuð sem fasti (constant), er sett gildi í hana einu sinni, og þetta
-          *sama* gildi er svo notað oft í forritinu án þess að því sé breytt þegar
-          ýtt er á \"Keyra\".  </h3>\n<br/><hr/>\n<h3>Síðar munt þú skrifa kóða með
-          breytum sem *munu* skipta um innihald á meðan forrit keyrir.</h3>\n\n"
       courseF_external_variableConstant_2018:
         markdown: "<h2>Meira um breytur</h2>\n\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
           style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>Þú varst

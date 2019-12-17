@@ -1,7 +1,5 @@
 ---
 title: Láta þetta berast
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

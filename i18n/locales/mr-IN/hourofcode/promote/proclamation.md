@@ -1,7 +1,5 @@
 ---
-title: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
-layout: wide
-nav: promote_nav
+title: कॉम्प्युटर सायंस शिक्षण आठवडा आणि कोडचा तास यांना आधार देणारा नमुना ठराव
 ---
 
 {{ signup_button }}

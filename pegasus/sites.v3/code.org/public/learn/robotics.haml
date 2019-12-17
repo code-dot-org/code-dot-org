@@ -5,7 +5,6 @@ layout: wide
 social:
   "twitter:card": photo
   "twitter:site": "@codeorg"
-  "twitter:url": "https://<%=request.host%>/learn"
   "twitter:image:src" : "https://code.org/images/learn/og-learn-robotics.png"
   "twitter:title": "Hour of Code"
   "twitter:description": "The Hour of Code is a global movement reaching tens of millions of students. One-hour tutorials are available in 45+ languages for all ages."
@@ -19,6 +18,8 @@ social:
   "og:video:height": ""
   "og:video:type": ""
 ---
+:ruby
+  @header["social"]["twitter:url"] = "https://#{request.host}/learn"
 
 :css
   .noFocusButton:focus {

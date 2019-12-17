@@ -1,7 +1,5 @@
 ---
-title: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
-layout: wide
-nav: promote_nav
+title: కంప్యూటర్ సైన్స్ ఎడ్యుకేషన్ వీక్ మరియు అవర్ ఆఫ్ కోడ్‌కు మద్దతుగా నమూనా తీర్మానం
 ---
 
 {{ signup_button }}

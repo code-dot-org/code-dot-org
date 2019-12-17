@@ -2,6 +2,7 @@
 es-ES:
   data:
     display_name:
+      AB_Debug_Artist1: 'Artista de la depuración #1 (AB)'
       Alien Defender: Defensor alienígena
       App Lab Intro 8 - Video Design Mode: 'Vídeo: Modo diseño'
       App Lab Intro 8 - Video Getting Started: 'Vídeo: Cómo empezar'
@@ -265,6 +266,9 @@ es-ES:
       CSD U3 challenge new shape: 'Desafío: Forma de Formas'
       CSD U3 challenge new shape_2018: 'Desafío: Forma de Formas'
       CSD U3 challenge new shape_2019: 'Desafío: Forma de Formas'
+      CSD U3 collisions build isTouching: Detección de colisiones
+      CSD U3 collisions build isTouching_2018: Detección de colisiones
+      CSD U3 collisions build isTouching_2019: Detección de colisiones
       CSD U3 collisions car intro: Juego de muestra
       CSD U3 collisions car intro_2018: Juego de muestra
       CSD U3 collisions car intro_2019: Juego de muestra
@@ -406,6 +410,7 @@ es-ES:
       CSD U4L16 autoSFLP_2019: Resumen de la lección
       CSD U5 Amazon Data Video: Recopilar información sobre los usuarios
       CSD U5 Amazon Data Video_2018: Recopilar información sobre los usuarios
+      CSD U5 Netflix Data Video_2019: Cómo Netflix utiliza datos
       CSD U5 Waze Data Video: Recopilar información sobre los usuarios
       CSD U5 Waze Data Video_2018: Recopilar información sobre los usuarios
       CSD U5 binary video: Binario y datos
@@ -617,6 +622,7 @@ es-ES:
       CSDU4 Project Import: 'Proyecto de aplicación: Importación de pantalla'
       CSDU4 Project Import_2018: 'Proyecto de aplicación: Importación de pantalla'
       CSDU4 Project Import_2019: 'Proyecto de aplicación: Importación de pantalla'
+      CSDU6 - UI and Inputs - getNumber: conseguirNúmero
       CSDU6 - board event challenge_2018: Tabla de sonido
       CSDU6 - board event challenge_2019: Tabla de sonido
       CSDU6 buzzer 2d arrays_2018: Vectores 2D
@@ -645,11 +651,17 @@ es-ES:
       CourseF_Project_SpriteLab_2019: Proyecto de Laboratorio de gráficos del Curso
         F
       Dance_Party_extras_battle: Compañías de baile
+      Dance_Party_extras_battle_2019: Compañías de baile
       Dance_Party_extras_every_beat: Negras
+      Dance_Party_extras_every_beat_2019: Negras
       Dance_Party_extras_layout: Todos en formación
+      Dance_Party_extras_layout_2019: Todos en formación
       Dance_Party_extras_on_beat: Graves, medios y agudos
+      Dance_Party_extras_on_beat_2019: Graves, medios y agudos
       Dance_Party_extras_speed: Acelerar, frenar
+      Dance_Party_extras_speed_2019: Acelerar, frenar
       Dance_Party_extras_visible: "¿Dónde están?"
+      Dance_Party_extras_visible_2019: "¿Dónde están?"
       Final Personal Website: Sitio web Personal final
       Final Personal Website_2018: Sitio web Personal final
       Final Personal Website_2019: Sitio web Personal final

@@ -1,6 +1,5 @@
 ---
 title: Öğretici kılavuzu
-layout: wide
 ---
 
 <style>

@@ -2,15 +2,13 @@
 title: State advocacy sheet
 chart: true
 state-facts: true
-<%
-  if request.params["pdf_version"]
-%>
-layout: page_print
-theme: pdf
-<%
-  end
-%>
 ---
+
+:ruby
+  if request.params["pdf_version"]
+    @header["layout"] = "page_print"
+    @header["theme"] = "pdf"
+  end
 
 // Generates custom state fact sheets based on the data in cdo-state-promote Google Sheet.
 
@@ -116,14 +114,14 @@ theme: pdf
             high school students
           in
           = state_info[:state_name_s]
-          took an AP Computer Science exam in 2018.
+          took an AP Computer Science exam in 2019.
         - else
           Only
           %b
             = format_integer_with_commas(state_info[:ap_cs_exams_i])
             exams were taken in AP Computer Science by high school students in
           = state_info[:state_name_s]
-          in 2018
+          in 2019
           = precede "(" do
             = format_integer_with_commas(state_info[:ap_csa_exams_i])
           took AP CS A and

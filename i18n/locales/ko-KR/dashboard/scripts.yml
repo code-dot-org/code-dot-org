@@ -531,6 +531,8 @@ ko:
               name: 꿀벌
             Bounce:
               name: 바운스
+            Farmer:
+              name: 농부
             Flappy:
               name: 플래피
             Jigsaw:
@@ -747,10 +749,16 @@ ko:
               name: '계산: 변수 정의하기'
             'Calc: Evaluation Blocks':
               name: '계산: 평가(결과 계산) 블럭'
+            'Eval: Defining Functions':
+              name: '평가: 함수 정의하기'
+            'Eval: Functions':
+              name: '평가: 함수'
             'Eval: Strings and Images':
               name: '평가: 문자열(문장)과 이미지'
             'Eval: Writing Contracts':
               name: '평가: 제한 조건 쓰기'
+            'Play Lab: Defining Functions':
+              name: '플레이 랩: 함수 정의하기'
             'Unplugged: Contracts':
               name: '언플러그드 : 제한 조건'
             'Unplugged: The Design Recipe':
@@ -797,6 +805,8 @@ ko:
           stages:
             Creating Functions:
               name: 함수 만들기
+            Creating functions with Parameters:
+              name: 매개변수가 있는 함수 만들기
             Creating Functions with Parameters:
               name: 매개변수가 있는 함수 만들기
         csp4-2017:
@@ -810,6 +820,8 @@ ko:
         CSDU3-Draft:
           description_short: 프로그래밍
           stages:
+            Collision Detection:
+              name: 충돌 감지
             Functions:
               name: 함수
             Velocity:
@@ -836,6 +848,10 @@ ko:
           stages:
             Game Lab:
               name: Game Lab
+        CSDU4-Draft:
+          stages:
+            Design Mode:
+              name: 디자인 모드
         CSDU2-Draft:
           stages:
             Peer Review:
@@ -927,6 +943,8 @@ ko:
           stages:
             Velocity:
               name: 속도
+            Collision Detection:
+              name: 충돌 감지
             Functions:
               name: 함수
             Variables:
@@ -1072,6 +1090,8 @@ ko:
               name: 소개
             Ice Age Play Lab:
               name: 아이스 에이지 Play Lab
+            'Algorithms: Tangrams':
+              name: '알고리즘: 탱그램'
         classic-hoc-impact-study:
           description_short: 컴퓨터과학(정보과학) 의 기초를 재미있는 캐릭터들과 함께 배워보세요!
           stages:
@@ -1162,12 +1182,16 @@ ko:
               name: 조건
             Velocity:
               name: 속도
+            Collision Detection:
+              name: 충돌 감지
             Functions:
               name: 함수
         csd3-old:
           stages:
             Velocity:
               name: 속도
+            Collision Detection:
+              name: 충돌 감지
             Functions:
               name: 함수
         csd2-draft:
@@ -1182,12 +1206,18 @@ ko:
               name: 조건
             Velocity:
               name: 속도
+            Collision Detection:
+              name: 충돌 감지
             Functions:
               name: 함수
+            'Chapter 1: Images and Animation':
+              name: '1 장: 이미지와 애니메이션'
             'null':
               name: '값 없음'
         coursef-ramp:
           stages:
+            'Algorithms: Tangrams':
+              name: '알고리즘: 탱그램'
             Introduction:
               name: 소개
             Ice Age Play Lab:
@@ -1222,12 +1252,16 @@ ko:
           assignment_family_title: 과정 C
         coursed-2017:
           stages:
+            'Algorithms: Graph Paper Programming':
+              description_teacher: 다른 사람이 그림을 그려내기 위해서 프로그래밍을 하는 과정에서, 학생들은 프로그래밍이 무엇인지 깨닫게 될 것입니다. 학생들은 어떤 그림을 만들어내기 위해 모눈종이에 채워져야하는 색들을 지시하면서 시작될 것입니다. 시간이 흐르면, 학생들은 그림을 완성하게 될 것입니다.
             Nested Loops:
               name: 중첩 반복
           title: 과정 D
           assignment_family_title: 과정 D
         coursee-2017:
           stages:
+            'Algorithms: Tangrams':
+              name: '알고리즘: 탱그램'
             Ice Age Play Lab:
               name: 아이스 에이지 Play Lab
             Envelope Variables:
@@ -1236,6 +1270,8 @@ ko:
               name: 재미있는 반복
             Songwriting with Parameters:
               name: 매개변수를 사용하는 음악 작곡
+            'Functions: Songwriting':
+              description_teacher: 컴퓨터과학(정보과학) 세상에서 가장 많은 구조들 중 하나는 함수입니다. 함수(부프로그램, 매서드, 프로시저 등)는 큰 프로그램을 만들 수 있도록 그 안에 매우 많이 사용될 수 있는 작은 프로그램이라고도 할 수 있습니다. 이번 내용에서는 예시를 통해 학생들이 여러 개의 코드들을 함께 묶어 함수로 사용하는 이유를 직관적으로 이해할 수 있도록 합니다.
             Building a Foundation:
               name: 건물 기초 만들기
             Nested Loops:
@@ -1244,6 +1280,8 @@ ko:
           assignment_family_title: 과정 E
         coursef-2017:
           stages:
+            'Algorithms: Tangrams':
+              name: '알고리즘: 탱그램'
             Building a Foundation:
               name: 건물 기초 만들기
           title: 과정 F
@@ -1282,6 +1320,8 @@ ko:
           stages:
             Creating Functions:
               name: 함수 만들기
+            Creating functions with Parameters:
+              name: 매개변수가 있는 함수 만들기
           description_short: 프로그래밍
         e-f-ramp:
           stages:
@@ -1333,6 +1373,8 @@ ko:
           stages:
             Building a Foundation:
               name: 건물 기초 만들기
+            'Algorithms: Tangrams':
+              name: '알고리즘: 탱그램'
             Ice Age Play Lab:
               name: 아이스 에이지 Play Lab
             Envelope Variables:
@@ -1345,6 +1387,8 @@ ko:
           stages:
             Creating Functions:
               name: 함수 만들기
+            Creating functions with Parameters:
+              name: 매개변수가 있는 함수 만들기
         pwc:
           stages:
             Simple Encryption:
@@ -1372,6 +1416,8 @@ ko:
           stages:
             Building a Foundation:
               name: 건물 기초 만들기
+            'Algorithms: Tangrams':
+              name: '알고리즘: 탱그램'
             Introduction:
               name: 소개
             Ice Age Play Lab:
@@ -1396,6 +1442,8 @@ ko:
               name: 조건
             Velocity:
               name: 속도
+            Collision Detection:
+              name: 충돌 감지
             Functions:
               name: 함수
           description_short: "프로그래밍"
@@ -1408,6 +1456,8 @@ ko:
               name: 조건
             Velocity:
               name: 속도
+            Collision Detection:
+              name: 충돌 감지
             Functions:
               name: 함수
         csd2-2018:
@@ -1504,6 +1554,8 @@ ko:
               name: 2진 팔찌
         csd6-2018:
           stages:
+            Functions with Parameters_:
+              name: 함수(값 전달)
             Functions with Parameters:
               name: 함수(값 전달)
         coursee-2018:
@@ -1517,6 +1569,7 @@ ko:
               name: 소개
             'Functions: Songwriting':
               name: 노래 만들기
+              description_teacher: 컴퓨터과학(정보과학) 세상에서 가장 많은 구조들 중 하나는 함수입니다. 함수(부프로그램, 매서드, 프로시저 등)는 큰 프로그램을 만들 수 있도록 그 안에 매우 많이 사용될 수 있는 작은 프로그램이라고도 할 수 있습니다. 이번 내용에서는 예시를 통해 학생들이 여러 개의 코드들을 함께 묶어 함수로 사용하는 이유를 직관적으로 이해할 수 있도록 합니다.
             Internet:
               name: 인터넷
             Crowdsourcing:
@@ -1532,6 +1585,8 @@ ko:
               name: 내 로봇 친구
             Building a Foundation:
               name: 건물 기초 만들기
+            'Algorithms: Tangrams':
+              name: '알고리즘: 탱그램'
             Introduction:
               name: 소개
             Ice Age Play Lab:
@@ -1553,6 +1608,8 @@ ko:
           stages:
             Creating Functions:
               name: 함수 만들기
+            Creating functions with Parameters:
+              name: 매개변수가 있는 함수 만들기
             Creating Functions with Parameters:
               name: 매개변수가 있는 함수 만들기
         csp4-2018:
@@ -1607,7 +1664,6 @@ ko:
             Dance Party:
               name: 댄스 파티
         dance-extras:
-          title: 계속 춤추기
           description: 확장된 프로젝트 아이디어로 첫 번째 시간을 뛰어넘으세요.
         coursef-2019:
           stages:
@@ -1655,6 +1711,7 @@ ko:
               name: 조건선택 카드
             'Functions: Songwriting':
               name: 노래 만들기
+              description_teacher: 컴퓨터과학(정보과학) 세상에서 가장 많은 구조들 중 하나는 함수입니다. 함수(부프로그램, 매서드, 프로시저 등)는 큰 프로그램을 만들 수 있도록 그 안에 매우 많이 사용될 수 있는 작은 프로그램이라고도 할 수 있습니다. 이번 내용에서는 예시를 통해 학생들이 여러 개의 코드들을 함께 묶어 함수로 사용하는 이유를 직관적으로 이해할 수 있도록 합니다.
             Internet:
               name: 인터넷
             Crowdsourcing:
@@ -1739,6 +1796,8 @@ ko:
               name: 조건
             Velocity:
               name: 속도
+            Collision Detection:
+              name: 충돌 감지
             Functions:
               name: 함수
         csd6-2019:
@@ -1758,6 +1817,8 @@ ko:
           stages:
             Creating Functions:
               name: 함수 만들기
+            Creating functions with Parameters:
+              name: 매개변수가 있는 함수 만들기
         csp4-2019:
           stages:
             Simple Encryption:
@@ -1774,6 +1835,8 @@ ko:
               name: 조건선택 카드
             Building a Foundation:
               name: 건물 기초 만들기
+        csp2-pilot-staging:
+          title: 'CS 원리 2단원'
         express-2018-vn:
           stages:
             Graph Paper Programming:
@@ -1791,6 +1854,8 @@ ko:
               name: 조건
             Velocity:
               name: 속도
+            Collision Detection:
+              name: 충돌 감지
             Functions:
               name: 함수
             Sprite Properties:
@@ -1806,3 +1871,31 @@ ko:
             Dance Party:
               name: 댄스 파티
           description: 나만의 댄스 파티의 코드를 만들고 친구와 공유하세요!
+        k5-onlinepd-2019:
+          stages:
+            Computer Science Fundamentals:
+              name: 컴퓨터 과학 기초
+            Loops:
+              name: 반복
+            Conditionals:
+              name: 조건
+            Events:
+              name: 이벤트
+            Functions:
+              name: 함수
+            Variables:
+              name: 변수
+            For Loops:
+              name: 반복을 위한
+        dance-extras-2019:
+          description: 확장된 프로젝트 아이디어로 첫 번째 시간을 뛰어넘으세요.
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: 조건
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: 클라우드소싱
+            Conditionals with Cards:
+              name: 조건선택 카드

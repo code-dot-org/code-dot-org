@@ -1,7 +1,5 @@
 ---
-title: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
-layout: wide
-nav: promote_nav
+title: கம்ப்யூட்டர் சயின்ஸ் கல்வி வாரம் மற்றும் Hour of Code க்கு ஆதரவான மாதிரி தீர்மானம்
 ---
 
 {{signup_button}}

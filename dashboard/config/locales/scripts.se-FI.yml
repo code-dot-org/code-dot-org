@@ -31,3 +31,7 @@ se:
           stages:
             Events:
               name: Dáhpáhusaid
+        k5-onlinepd-2019:
+          stages:
+            Events:
+              name: Dáhpáhusaid

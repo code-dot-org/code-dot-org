@@ -1,7 +1,5 @@
 ---
 title: Guia prático para os pais
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

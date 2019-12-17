@@ -1,6 +1,5 @@
 ---
 title: Бүкіл мектеппен қатысу
-layout: wide
 ---
 
 {{ signup_button }}

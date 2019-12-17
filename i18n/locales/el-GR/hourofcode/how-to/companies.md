@@ -1,7 +1,5 @@
 ---
 title: Πώς να φιλοξενήσετε μια ώρα του κώδικα - εταιρείες
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
@@ -61,7 +59,7 @@ nav: how_to_nav
 **Δείξτε ένα βίντεο που να εμπνέει:**
 
 - Το αρχικό βίντεο του Code.org, με τον Bill Gates, τον Mark Zuckerberg και τον παίχτη του ΝΒΑ Chris Bosh (Υπάρχουν εκδόσεις [1 λεπτού](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 λεπτών](https://www.youtube.com/watch?v=nKIu9yen5nc) και [9 λεπτών](https://www.youtube.com/watch?v=dU1xS07N-FA)).
-- Το [διεθνές βίντεο για την Ώρα του Κώδικα](https://www.youtube.com/watch?v=KsOIlDT145A)
+- Το [διεθνές βίντεο για την "Ώρα του Κώδικα"](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [Ο Πρόεδρος Obama καλεί όλους τους μαθητές να ασχοληθούν με την επιστήμη των υπολογιστών](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Βρείτε περισσότερα εμπνευσμένα βίντεο [εδώ](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 

@@ -1,7 +1,5 @@
 ---
 title: Інструкції Години коду для районів
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

@@ -97,6 +97,7 @@ pt:
               name: Seu rastro digital
         course3:
           title: Curso 3
+          description: O Curso 3 foi desenvolvido para estudantes que já fizeram o Curso 2. Os estudantes se aprofundarão nos tópicos de programação introduzidos nos cursos anteriores, buscando soluções flexíveis para problemas mais complexos. No final deste curso, os estudantes criam histórias e jogos interativos que podem compartilhar com qualquer pessoa. Este curso é recomendado para alunos de 4º-5º ano.
           description_short: O curso 3 é a continuação do curso 2.
           description_audience: Dos 8 aos 18 anos
           stages:
@@ -254,7 +255,7 @@ pt:
             Intro:
               name: Introdução
             Variables:
-              name: variáveis
+              name: Variáveis
         algebra:
           stages:
             'Eval: Boolean Operators':
@@ -298,6 +299,8 @@ pt:
               name: Próximos Passos
             Teacher Dashboard:
               name: Painel do Professor
+            new stage:
+              name: nova fase
         netsim:
           title: Simulador de internet
           stages:
@@ -552,6 +555,8 @@ pt:
               name: Abelha
             Bounce:
               name: Bounce
+            Farmer:
+              name: Agricultor
             Flappy:
               name: Flappy Bird
             Jigsaw:
@@ -883,7 +888,7 @@ pt:
             'Jigsaw: Learn to drag and drop':
               name: 'Puzzle: Aprender a arrastar e largar'
             Loops:
-              name: ciclos
+              name: Ciclos
             Programming:
               name: Programação
             'Real-life Algorithms: Plant a Seed':
@@ -901,7 +906,7 @@ pt:
             'Jigsaw: Learn to drag and drop':
               name: 'Puzzle: Aprender a arrastar e largar'
             Loops:
-              name: ciclos
+              name: Ciclos
             Programming:
               name: Programação
         grade5:
@@ -954,7 +959,7 @@ pt:
             Functions:
               name: Funções
             Variables:
-              name: variáveis
+              name: Variáveis
             Conditionals:
               name: Condicionais
         grade2:
@@ -982,11 +987,11 @@ pt:
             Functions with Parameters:
               name: Funções com parâmetros
             Loops:
-              name: ciclos
+              name: Ciclos
             Nested Loops:
               name: Laços aninhados
             Variables:
-              name: variáveis
+              name: Variáveis
             While Loops:
               name: Laços enquanto
         algebrapdnext:
@@ -1012,6 +1017,8 @@ pt:
               name: Laboratório
         csd2-2017:
           stages:
+            new stage:
+              name: nova fase
             Lists:
               name: Listas
         minecraft:
@@ -1087,6 +1094,8 @@ pt:
               name: Introdução
             Ice Age Play Lab:
               name: Laboratório de brincadeiras da Idade do gelo
+            'Algorithms: Tangrams':
+              name: 'Algoritmos: tangrams'
         classic-hoc-impact-study:
           description_short: Conheça os conceitos básicos da ciência da computação com a ajuda de vários personagens divertidos!
           stages:
@@ -1109,6 +1118,10 @@ pt:
               name: Olá!
             Wrap-Up:
               name: Resumo
+        csdgraveyard:
+          stages:
+            new stage:
+              name: nova fase
         sciencepd4:
           stages:
             Welcome!:
@@ -1143,6 +1156,14 @@ pt:
           stages:
             Introduction:
               name: Introdução
+        csd5-draft:
+          stages:
+            new stage:
+              name: nova fase
+        applab-2hour:
+          stages:
+            new stage:
+              name: nova fase
         coursed-ramp:
           stages:
             Introduction:
@@ -1168,7 +1189,7 @@ pt:
         csd3-draft:
           stages:
             Variables:
-              name: variáveis
+              name: Variáveis
             Conditionals:
               name: Condicionais
             Functions:
@@ -1184,7 +1205,7 @@ pt:
         csd3-chapters:
           stages:
             Variables:
-              name: variáveis
+              name: Variáveis
             Conditionals:
               name: Condicionais
             Functions:
@@ -1193,6 +1214,8 @@ pt:
               name: 'nulo'
         coursef-ramp:
           stages:
+            'Algorithms: Tangrams':
+              name: 'Algoritmos: tangrams'
             Introduction:
               name: Introdução
             Ice Age Play Lab:
@@ -1217,10 +1240,14 @@ pt:
               name: 'Algoritmos da Vida Real: Aviões de Papel'
         coursed-2017:
           stages:
+            'Algorithms: Graph Paper Programming':
+              description_teacher: Através da programação para desenhar as figuras, os alunos vão começar a entender o que de fato é programar. A aula vai começar com alunos dando instruções uns aos outros para colorir os quadrados em um papel quadriculado na tentativa de reproduzir uma figura existente. Se houver tempo, a aula pode ser concluída com imagens que os próprios alunos criaram.
             Nested Loops:
               name: Laços aninhados
         coursee-2017:
           stages:
+            'Algorithms: Tangrams':
+              name: 'Algoritmos: tangrams'
             Ice Age Play Lab:
               name: Laboratório de brincadeiras da Idade do gelo
             Envelope Variables:
@@ -1229,12 +1256,16 @@ pt:
               name: Diversão com laços for
             Songwriting with Parameters:
               name: Composição de música com parâmetros
+            'Functions: Songwriting':
+              description_teacher: Uma das estruturas mais incríveis no mundo da ciência da computação é a função. As funções (chamadas às vezes de procedimentos) são miniprogramas que podem ser usados repetidas vezes dentro do programa maior. Esta aula ajudará os alunos a entender, de maneira intuitiva, por que combinar blocos de códigos em funções é uma prática útil.  
             Building a Foundation:
               name: Criar uma base
             Nested Loops:
               name: Laços aninhados
         coursef-2017:
           stages:
+            'Algorithms: Tangrams':
+              name: 'Algoritmos: tangrams'
             Building a Foundation:
               name: Criar uma base
         express-2017:
@@ -1267,8 +1298,14 @@ pt:
           stages:
             Thanks:
               name: Obrigado
+        csp-pre-survey-test-2017:
+          stages:
+            new stage:
+              name: nova fase
         csp3-research-mxghyt:
           stages:
+            new stage:
+              name: nova fase
             Creating Functions:
               name: Criando funções
           description_short: Programação
@@ -1300,6 +1337,10 @@ pt:
               name: 'Artista: binário'
             Building a Foundation:
               name: Criar uma base
+        csp3-a:
+          stages:
+            new stage:
+              name: nova fase
         new-express:
           stages:
             Introduction:
@@ -1322,6 +1363,8 @@ pt:
           stages:
             Building a Foundation:
               name: Criar uma base
+            'Algorithms: Tangrams':
+              name: 'Algoritmos: tangrams'
             Ice Age Play Lab:
               name: Laboratório de brincadeiras da Idade do gelo
             Envelope Variables:
@@ -1330,18 +1373,36 @@ pt:
               name: Diversão com laços for
             Songwriting with Parameters:
               name: Composição de música com parâmetros
+        hocali:
+          stages:
+            new stage:
+              name: nova fase
         csp3-staging:
           stages:
             Creating Functions:
               name: Criando funções
         pwc:
           stages:
+            new stage:
+              name: nova fase
             Personal Innovations:
               name: Inovação Pessoal
         hero:
           stages:
             Minecraft Hour of Code:
               name: Hora do Código de Minecraft
+        csp-explore-2017:
+          stages:
+            new stage:
+              name: nova fase
+        aws-demo:
+          stages:
+            new stage:
+              name: nova fase
+        colehoc17:
+          stages:
+            new stage:
+              name: nova fase
         course-e-2018:
           stages:
             Building a Foundation:
@@ -1360,6 +1421,8 @@ pt:
           stages:
             Building a Foundation:
               name: Criar uma base
+            'Algorithms: Tangrams':
+              name: 'Algoritmos: tangrams'
             Introduction:
               name: Introdução
             Ice Age Play Lab:
@@ -1379,17 +1442,21 @@ pt:
         csd3-1819draft:
           stages:
             Variables:
-              name: variáveis
+              name: Variáveis
             Conditionals:
               name: Condicionais
             Functions:
               name: Funções
           description_short: "Programação"
+        textbook:
+          stages:
+            new stage:
+              name: nova fase
         csd3-2018:
           description_short: "Programação"
           stages:
             Variables:
-              name: variáveis
+              name: Variáveis
             Conditionals:
               name: Condicionais
             Functions:
@@ -1480,6 +1547,8 @@ pt:
               name: Pulseiras binárias
         csd6-2018:
           stages:
+            Functions with Parameters_:
+              name: Funções com parâmetros
             Functions with Parameters:
               name: Funções com parâmetros
         coursee-2018:
@@ -1492,6 +1561,7 @@ pt:
               name: Introdução
             'Functions: Songwriting':
               name: Composição
+              description_teacher: Uma das estruturas mais incríveis no mundo da ciência da computação é a função. As funções (chamadas às vezes de procedimentos) são miniprogramas que podem ser usados repetidas vezes dentro do programa maior. Esta aula ajudará os alunos a entender, de maneira intuitiva, por que combinar blocos de códigos em funções é uma prática útil.  
             Internet:
               name: A Internet
             Crowdsourcing:
@@ -1506,6 +1576,8 @@ pt:
               name: Meus amigos robóticos
             Building a Foundation:
               name: Criar uma base
+            'Algorithms: Tangrams':
+              name: 'Algoritmos: tangrams'
             Introduction:
               name: Introdução
             Ice Age Play Lab:
@@ -1567,10 +1639,25 @@ pt:
           stages:
             Artist:
               name: Artista
+        dance:
+          stages:
+            new stage:
+              name: nova fase
+            Dance Party:
+              name: Festa da Dança
+          title: Festa da Dança
         frozen-2018-test-b:
           stages:
             Artist:
               name: Artista
+        dance--draft:
+          stages:
+            Dance Party:
+              name: Festa da Dança
+        dance-draft:
+          stages:
+            Dance Party:
+              name: Festa da Dança
         coursef-2019:
           stages:
             Building a Foundation:
@@ -1587,6 +1674,10 @@ pt:
               name: A Internet
             Crowdsourcing:
               name: Aberto ao público
+        dance-low:
+          stages:
+            Dance Party:
+              name: Festa da Dança
         coursed-2019:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -1601,6 +1692,8 @@ pt:
               name: Imagens binárias
             Artist Binary:
               name: 'Artista: binário'
+            Dance Party:
+              name: Festa da Dança
         coursee-2019:
           stages:
             Building a Foundation:
@@ -1611,6 +1704,7 @@ pt:
               name: Condicionais com cartas
             'Functions: Songwriting':
               name: Composição
+              description_teacher: Uma das estruturas mais incríveis no mundo da ciência da computação é a função. As funções (chamadas às vezes de procedimentos) são miniprogramas que podem ser usados repetidas vezes dentro do programa maior. Esta aula ajudará os alunos a entender, de maneira intuitiva, por que combinar blocos de códigos em funções é uma prática útil.  
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1637,8 +1731,12 @@ pt:
               name: Internet
             Crowdsourcing:
               name: Aberto ao público
+            Dance Party:
+              name: Festa da Dança
         andrea-test:
           stages:
+            new stage:
+              name: nova fase
             'null':
               name: 'nulo'
         coursec-2019:
@@ -1675,6 +1773,10 @@ pt:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da Vida Real: Plante uma Semente'
+        dani-test-script:
+          stages:
+            new stage:
+              name: nova fase
         csd2-2019:
           stages:
             Lists:
@@ -1683,7 +1785,7 @@ pt:
           description_short: "Programação"
           stages:
             Variables:
-              name: variáveis
+              name: Variáveis
             Conditionals:
               name: Condicionais
             Functions:
@@ -1692,6 +1794,10 @@ pt:
           stages:
             Functions with Parameters:
               name: Funções com parâmetros
+        csp4-pilot:
+          stages:
+            Surveys:
+              name: Inquéritos
         csp1-2019:
           stages:
             Personal Innovations:
@@ -1725,6 +1831,8 @@ pt:
               name: Laços enquanto
         csp1-pilot:
           stages:
+            new stage:
+              name: nova fase
             Number Systems:
               name: Sistemas de Numeração
             Sending Binary Messages:
@@ -1733,6 +1841,10 @@ pt:
               name: Enviar Mensagens Binárias com o Simulador de Internet
             Binary Numbers:
               name: Números Binários
+        csd-videos:
+          stages:
+            new stage:
+              name: nova fase
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -1741,10 +1853,20 @@ pt:
               name: Condicionais com cartas
             Building a Foundation:
               name: Criar uma base
+        csp2-pilot-staging:
+          title: 'Unidade 2: A Internet'
+        csp7-pilot-staging:
+          stages:
+            new stage:
+              name: nova fase
         express-2018-vn:
           stages:
             Graph Paper Programming:
               name: Programação de papel milimetrico
+        csp5-pilot:
+          stages:
+            new stage:
+              name: nova fase
         csd2-pilot:
           stages:
             Lists:
@@ -1753,14 +1875,66 @@ pt:
           description_short: "Programação"
           stages:
             Variables:
-              name: variáveis
+              name: Variáveis
             Conditionals:
               name: Condicionais
             Functions:
               name: Funções
+        maddie-test:
+          stages:
+            new stage:
+              name: nova fase
+        dlp19-csd-mod-w2:
+          stages:
+            new stage:
+              name: nova fase
+        csp2-pilot:
+          stages:
+            new stage:
+              name: nova fase
         peru-2019:
           stages:
+            new stage:
+              name: nova fase
             Introduction:
               name: Introdução
             Nested Loops:
               name: Laços aninhados
+        dance-2019:
+          stages:
+            Dance Party:
+              name: Festa da Dança
+        k5-onlinepd-2019:
+          stages:
+            Next Steps:
+              name: Próximos Passos
+            Loops:
+              name: Ciclos
+            Conditionals:
+              name: Condicionais
+            Events:
+              name: Eventos
+            Functions:
+              name: Funções
+            Variables:
+              name: Variáveis
+            For Loops:
+              name: Ciclos "for"
+        csp10-pilot:
+          stages:
+            new stage:
+              name: nova fase
+        csp4-preview:
+          stages:
+            new stage:
+              name: nova fase
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Condicionais
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Aberto ao público
+            Conditionals with Cards:
+              name: Condicionais com cartas

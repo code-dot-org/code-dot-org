@@ -1,7 +1,5 @@
 ---
 title: 保護者用の手引き
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

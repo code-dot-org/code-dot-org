@@ -21,6 +21,11 @@ hr:
           PROPERTY:
             '"scale"': veličina
             '"height"': visina
+      Dancelab_changePropEachBy:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+            '"height"': visina
       Dancelab_doMoveEachLR:
         options:
           DIR:
@@ -54,18 +59,38 @@ hr:
             "{x: 100, y: 200}": lijevo
             "{x: 300, y: 200}": desno
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": slučajno odabran
+      Dancelab_jumpToEach:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": lijevo
+            "{x: 300, y: 200}": desno
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": slučajno odabran
       Dancelab_layoutSprites:
         options:
           FORMAT:
             '"random"': slučajno odabran
       Dancelab_makeAnonymousDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': vanzemaljac
+            '"CAT"': mačka
+            '"DOG"': pas
+            '"DUCK"': patka
+            '"ROBOT"': robot
+            '"UNICORN"': jednorog
           LOCATION:
             "{x: 100, y: 200}": lijevo
             "{x: 300, y: 200}": desno
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": slučajno odabran
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': vanzemaljac
+            '"CAT"': mačka
+            '"DOG"': pas
+            '"DUCK"': patka
+            '"ROBOT"': robot
+            '"UNICORN"': jednorog
           LOCATION:
             "{x: 100, y: 200}": lijevo
             "{x: 300, y: 200}": desno
@@ -93,6 +118,7 @@ hr:
             '19': '19'
             '20': '20'
           LAYOUT:
+            '"diamond"': dijamant
             '"random"': slučajno odabran
       Dancelab_randomColor:
         text: nasumično odabrana boja
@@ -127,7 +153,17 @@ hr:
           PROPERTY:
             '"scale"': veličina
             '"height"': visina
+      Dancelab_setPropRandomEach:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+            '"height"': visina
       Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+            '"height"': visina
+      Dancelab_startMappingEach:
         options:
           PROPERTY:
             '"scale"': veličina
@@ -137,6 +173,16 @@ hr:
           PROPERTY:
             '"scale"': veličina
             '"height"': visina
+      Dancelab_stopMappingEach:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+            '"height"': visina
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': dijamant
+            '"x"': x
       Dancelab_whenKey:
         options:
           KEY:
@@ -273,6 +319,8 @@ hr:
             '"y"': y pozicija
       Mikelab_randomColor:
         text: nasumično odabrana boja
+      Mikelab_repeatUntilComplete:
+        text: ponavljaj zauvijek
       Mikelab_setBG:
         options:
           BG:

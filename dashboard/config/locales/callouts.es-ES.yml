@@ -175,6 +175,15 @@ es-ES:
         dance_callout_11_b: "¡Bloque nuevo!"
       CourseD_Dance_Party_11_5:
         dance_party_11_5_groups: Mira aquí para los bloques "todos los patos"
+      Dance_2019_04:
+        dance_callout_02: "¡Añade este bloque a tu programa!"
+      Dance_2019_06:
+        dance_party_11_5_groups: "¡Bloque nuevo!"
+      Dance_2019_07:
+        setprop_hint: "¡Bloque nuevo!"
+      Dance_2019_09:
+        new_block_3: "¡Bloque nuevo!"
+        new_block_4: "¡Bloque nuevo!"
       Dance_Party_01:
         dance_callout_01: "¡Añade este bloque a tu programa!"
       Dance_Party_02:
@@ -307,6 +316,8 @@ es-ES:
         craft_what_is_iron: "¡Extrae este hierro!"
       Underground Iron_2019:
         craft_what_is_iron: "¡Extrae este hierro!"
+      Virtual Pet 2_2019:
+        '': Pulse aquí!
       behaviors 1:
         behaviors_edit: Hacer clic aquí para ver cómo funciona este comportamiento.
       behaviors 3a:
@@ -394,6 +405,8 @@ es-ES:
       courseA_collector_loops3_2019:
         gradek_adventurer_loops2_1: Este número indica cuántos de estos bloques se
           pueden utilizar en este rompecabezas.
+      courseA_collector_preLoops1:
+        courseA_collector_preLoops1_1: "¡Clica aquí para ver el código ejecutado!"
       courseA_collector_preLoops2:
         courseA_collector_loops1_1: "¿Ves algunos bloques nuevos en la caja de herramientas?
           No te preocupes, te mostraremos cómo usarlos más adelante en el escenario."
@@ -778,6 +791,8 @@ es-ES:
       courseD_scrat_ramp8:
         courseD_maze_ramp7_1: "¡Este es tu primer desafío de rompecabezas! Estos están
           hechos para ser díficiles y pueden implicar varios intentos."
+      courseE_aboutme_2:
+        '': Pulse aquí!
       courseE_artist_functions1:
         courseD_artist_functions1_1: Empieza usando este bloque para ayudar a crear
           el primer cuadrado.

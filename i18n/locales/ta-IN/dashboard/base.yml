@@ -95,12 +95,19 @@ ta:
     destroy: 'அழிக்கவும்'
   nav:
     header:
+      finished_hoc: "நான் முடித்துவிட்டேன்!"
+      course_catalog: "பாடத்திட்ட கேட்டலாக்"
+      project_gallery: "திட்டப்பணிகள்"
+      help_support: "உதவி மற்றும் ஆதரவு"
+      report_bug: "ஒரு பிரச்னையை தெரிவிக்கவும்"
       educate_hoc: "நிரல்வரி நேரம்"
+      about: "பற்றி"
     user:
       label: 'வணக்கம் %{username}'
       settings: 'எனது கணக்கு'
       logout: 'வெளியேறு'
       signin: 'உள்நுழை'
+      signup: 'ஒரு அக்கவுண்டை உருவாக்குங்கள்'
       create: 'உருவாக்கு'
       infinity: 'முடிவிலி'
     popup:
@@ -118,18 +125,39 @@ ta:
     trynow: 'இப்பொழுது முயற்சிக்கவும்'
   user_type:
     student: 'மாணவர்'
+  footer:
+    copyright: 'காப்புரிமை'
+    more: 'அதிகம்'
+    translate: 'எங்களது உள்ளடகத்தை மொழிமாற்றம் செய்ய தன்னார்வலர்'
+    tos: 'சேவையின் விதிமுறைகள்'
+    privacy: 'தனியுரிமை கொள்கை'
+    report_abuse: 'தவறான பயன்பாட்டை தெரிவிக்கவும்'
+  reference_area:
+    title: 'உதவி தேவையா?'
+    subtitle: 'இந்த வீடியோக்கள் மற்றும் உதவிக்குறிப்புகளை பார்க்கவும்'
+  video:
+    tab: 'வீடியோ.'
+  gallery:
+    report_abuse: "தவறான பயன்பாட்டை தெரிவிக்கவும்"
+  landing:
+    help_support: "உதவி மற்றும் ஆதரவு"
   dialog:
     ok: "சரி"
     startover_title: "உறுதியாக மீண்டும் தொடங்க வேண்டுகிறீரா?"
     startover_ok: "மீண்டும் துவங்கு"
     startover_cancel: "ரத்து செய்"
   terms_interstitial:
+    tos: "சேவையின் விதிமுறைகள்"
+    privacy: "தனியுரிமை கொள்கை"
     print: "அச்சிடு"
   race_interstitial:
     races:
       other: "வேறு"
     submit: "சமர்ப்பிக்க"
+    decline: "மூடவும்"
   project:
+    projects: "திட்டப்பணிகள்"
+    project_gallery: "திட்டப்பணிகள்"
     name: "பெயர்"
     saved: "சேமித்தது"
     abuse:
@@ -138,6 +166,7 @@ ta:
           other: 'வேறு'
   flex_category:
     csf_loops: 'சுழற்சிகள்'
+    csf_events: 'நிகழ்வுகள்'
     csf_functions: 'செயல்பாடுகள்'
     csf_variables: 'மாறிலிகள்'
     csp_variables: 'மாறிலிகள்'

@@ -1,7 +1,5 @@
 ---
 title: Как да бъдете домакин на Hour of Code - за фирми
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

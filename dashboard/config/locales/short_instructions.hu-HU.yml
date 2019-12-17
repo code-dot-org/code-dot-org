@@ -228,6 +228,24 @@ hu-HU:
       CourseE_HOC 2018 Level_9b: Kincskeresés közben használd a korallokat útjelzőként.
       Crack Random Substitution: Utasítások
       Crack a Caesar Cipher: Utasítások
+      Dance_2019_01: Húzd az „új készítése“ blokkot a munkaterületre, és csatlakoztasd
+        az „összeállítás“ blokkba.
+      Dance_2019_02: A `fel megnyomásakor` blokk segítségével a felfelé mutató nyíl
+        megnyomásakor futtathatsz kódot. Érd el, hogy a táncos tapsoljon a felfelé
+        gomb megnyomásakor, vagy próbálj ki egy másik mozdulatot!
+      Dance_2019_03: Eljött a táncverseny ideje! Programozz be minden táncost, hogy
+        mozogjon egyes gombok megnyomásakor. Válaszd ki a kedvenc mozdulatodat minden
+        egyes táncoshoz, vagy használd a "(Véletlenszerű)" beállítást, ha valami teljesen
+        kiszámíthatatlant szeretnél!
+      Dance_2019_04: Érd el, hogy a táncosod új mozdulatba kezdjen a negyedik ütem
+        után.
+      Dance_2019_05: Most állítsd be, hogy a táncos 6 ütem után kezdjen új mozdulatot!
+      Dance_2019_06: Állíts össze egy csoport háttértáncost a középen elhelyezkedő
+        vezető táncos körül.
+      Dance_2019_07: Változtasd meg a háttértáncosok csoportjának méretét.
+      Dance_2019_09: Légy kreatív ezekkel az új blokkokkal!
+      Dance_2019_10: Lássuk, te hogy táncolsz! Hozd létre a saját táncodat, és oszd
+        meg az ismerőseiddel.
       Dance_Party_01: Húzd az „új készítése“ blokkot a munkaterületre, és csatlakoztasd
         az „összeállítás“ blokkba.
       Dance_Party_02: Állítsd be, hogy a jávorszarvas 4 ütem után új mozdulatot kezdjen!
@@ -693,6 +711,8 @@ hu-HU:
       courseF_bee_functions4: A "menj és gyűjts nektárt" függvény hatására a méh elfordul,
         nektárt gyűjt, majd visszatér a kiindulási pontra. Használd a függvényt, hogy
         az összes nektárt összegyűjtsd.
+      express_maze_debugging9_2019: Használd az eszköztár blokkjait a programhoz.
+        Vidd a madarat a malachoz.
       flappy_1: Csatolj egy blokkot a "kattintáskor" blokkhoz, majd nyomd meg a "Futtatás"-t.
         Kattints vagy érintsd meg a képernyőt, hogy Flappy-t a célba segítsd.
       flappy_11: Hozz létre egy saját Flappy játékot! Meg tudod változtatni a kinézetet
@@ -787,3 +807,33 @@ hu-HU:
       scrat 20: Tudnál nekem segíteni kijutni ebből az útvesztőből mindössze 3 elem
         hozzáadásával? Ha jól csinálod, bármilyen kacskaringós utat be tudok járni
         hosszától függetlenül. Siess! Olvad a jég!
+      Dance_2019_08: Próbáld megváltoztatni az egyik táncosod (vagy egy egész csoport)
+        színárnyalatát!
+      Dance_Party_extras_alternate_2019: Előre-hátra! (A részletekért kattintson a
+        "Több" elemre)
+      Dance_Party_extras_battle: Dance Crews (A részletekért kattintson a „Tovább”
+        gombra)
+      Dance_Party_extras_battle_2019: Dance Crews (A részletekért kattintson a „Tovább”
+        gombra)
+      Dance_Party_extras_every_beat: Negyed jegyzetek (a részletekért kattintson a
+        „Tovább” gombra)
+      Dance_Party_extras_every_beat_2019: Negyed jegyzetek (a részletekért kattintson
+        a „Tovább” gombra)
+      Dance_Party_extras_layout: Befelé az alakzatba! (A részletekért kattintson a
+        „Tovább” gombra)
+      Dance_Party_extras_layout_2019: Befelé az alakzatba! (A részletekért kattintson
+        a „Tovább” gombra)
+      Dance_Party_extras_mixed_2019: További gombok (a részletekért kattintson a "Több"
+        gombra)
+      Dance_Party_extras_on_beat: Basszus, középső és háromdimenziós (a részletekért
+        kattintson a „Tovább” gombra)
+      Dance_Party_extras_on_beat_2019: Basszus, középső és háromdimenziós (a részletekért
+        kattintson a „Tovább” gombra)
+      Dance_Party_extras_speed: Gyorsítsa fel, Lassítsa le (a részletekért kattintson
+        a „Tovább” gombra)
+      Dance_Party_extras_speed_2019: Gyorsítsa fel, Lassítsa le (a részletekért kattintson
+        a „Tovább” gombra)
+      Dance_Party_extras_visible: Hová mentek? (A részletekért kattintson a „Tovább”
+        gombra)
+      Dance_Party_extras_visible_2019: Hová mentek? (A részletekért kattintson a „Tovább”
+        gombra)

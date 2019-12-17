@@ -2,6 +2,14 @@
 pt:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: tudo
+          MOVE1:
+            MOVES.Rest: Nenhum
+          MOVE2:
+            MOVES.Rest: Nenhum
       Dancelab_atTimestamp:
         options:
           UNIT:
@@ -24,6 +32,13 @@ pt:
             "-1": "←"
       Dancelab_changePropBy:
         options:
+          PROPERTY:
+            '"scale"': tamanho
+            '"height"': altura
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: tudo
           PROPERTY:
             '"scale"': tamanho
             '"height"': altura
@@ -70,20 +85,43 @@ pt:
             "{x: 100, y: 200}": para a esquerda
             "{x: 300, y: 200}": para a direita
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aleatório
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: tudo
+          LOCATION:
+            "{x: 100, y: 200}": para a esquerda
+            "{x: 300, y: 200}": para a direita
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": aleatório
       Dancelab_layoutSprites:
         options:
           GROUP:
             sprites: tudo
           FORMAT:
+            '"row"': aula
             '"random"': aleatório
       Dancelab_makeAnonymousDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': alienígena
+            '"CAT"': gato
+            '"DOG"': cão
+            '"DUCK"': pato
+            '"ROBOT"': robô
+            '"UNICORN"': unicórnio
           LOCATION:
             "{x: 100, y: 200}": para a esquerda
             "{x: 300, y: 200}": para a direita
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aleatório
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': alienígena
+            '"CAT"': gato
+            '"DOG"': cão
+            '"DUCK"': pato
+            '"ROBOT"': robô
+            '"UNICORN"': unicórnio
           LOCATION:
             "{x: 100, y: 200}": para a esquerda
             "{x: 300, y: 200}": para a direita
@@ -111,6 +149,8 @@ pt:
             '19': '19'
             '20': '20'
           LAYOUT:
+            '"diamond"': diamante
+            '"row"': aula
             '"random"': aleatório
       Dancelab_randomColor:
         text: cor aleatória
@@ -165,6 +205,13 @@ pt:
           PROPERTY:
             '"scale"': tamanho
             '"height"': altura
+      Dancelab_setPropRandomEach:
+        options:
+          GROUP:
+            sprites: tudo
+          PROPERTY:
+            '"scale"': tamanho
+            '"height"': altura
       Dancelab_setTintEach:
         options:
           THIS:
@@ -182,11 +229,36 @@ pt:
           PROPERTY:
             '"scale"': tamanho
             '"height"': altura
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: tudo
+          PROPERTY:
+            '"scale"': tamanho
+            '"height"': altura
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': tamanho
             '"height"': altura
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: tudo
+          PROPERTY:
+            '"scale"': tamanho
+            '"height"': altura
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': diamante
+            '"x"': x
+            '"y"': 'y'
+            '"1"': '1'
+            '"3"': '3'
+            '"5"': '5'
+            '"6"': '6'
+            '"8"': '8'
       Dancelab_whenKey:
         options:
           KEY:
@@ -195,8 +267,16 @@ pt:
             '"down"': para baixo
             '"right"': para a direita
             '"space"': espaço
+            '"f"': f
+            '"g"': g
+            '"q"': q
             '"x"': x
             '"y"': 'y'
+            '"1"': '1'
+            '"3"': '3'
+            '"5"': '5'
+            '"6"': '6'
+            '"8"': '8'
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -225,6 +305,9 @@ pt:
             '"left"': para a esquerda
             '"right"': para a direita
             '"space"': espaço
+            '"f"': f
+            '"g"': g
+            '"q"': q
             '"x"': x
             '"y"': 'y'
       gamelab_mirrorSprite:
@@ -356,6 +439,8 @@ pt:
             MOVES.Rest: Nenhum
       Mikelab_randomColor:
         text: cor aleatória
+      Mikelab_repeatUntilComplete:
+        text: repetir para sempre
       Mikelab_setBG:
         options:
           BG:

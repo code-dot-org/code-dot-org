@@ -27,10 +27,11 @@ ca:
     attributes:
       user:
         name: 'Nom a mostrar'
-        name_example: 'Mostra el nom<br/>(ex: Programador fantàstic o Joana S.)'
+        name_example: 'Mostra el nom (ex: Programador fantàstic o Joana S.)'
         email: 'Correu electrònic'
         parent_email: 'E-mail del pare/tutor'
         personal_email: "Adreça d'e-mail personal <a href=\"%{url}\">(feu clic aquí si teniu una adreça electrònica)</a>"
+        personal_email_markdown: "Adreça d'e-mail personal [(feu clic aquí si teniu una adreça electrònica)](%{url})"
         username: 'nom d''usuari'
         password: 'Contrasenya'
         password_confirmation: 'Confirma la contrasenya'
@@ -41,7 +42,9 @@ ca:
         edit_header: 'Edita les dades del compte'
         finish_sign_up_header: 'Acabar de crear el seu compte'
         finish_sign_up_subheader: 'Empleneu la informació següent per acabar creant un compte Code.org per a <strong>%{email}</strong>.'
+        finish_sign_up_subheader_markdown: 'Empleneu la informació següent per acabar creant un compte Code.org per a **%{email}**.'
         finish_sign_up_subheader_provider: 'Empleneu la informació següent per acabar creant un compte Code.org amb <strong>%{provider}</strong> per a <strong>%{email}</strong>.'
+        finish_sign_up_subheader_provider_markdown: 'Empleneu la informació següent per acabar creant un compte Code.org amb **%{provider}** per a **%{email}**.'
         error:
           future: no pot ser en el futur
   beta: "beta"
@@ -111,9 +114,11 @@ ca:
     student_count: '%{count} estudiants ja s''han inscrit.'
     teacher_count: '%{count} professors ja s''han inscrit.'
     overview: 'Inscrigui''s en un compte per tal de seguir el seu progrés o gestionar el seu grup-classe. <a href="/"> podeu navegar per les diferents etapes i trencaclosques</a> sense un compte, però cal tenir compte per guardar les dades del seu progrés i projectes.'
+    overview_markdown: 'Inscrigui''s en un compte per tal de seguir el seu progrés o gestionar el seu grup-classe. [podeu navegar per les diferents etapes i trencaclosques](/) sense un compte, però cal tenir compte per guardar les dades del seu progrés i projectes.'
     hoc_already_signed_up_heading: 'Comença sense connectar-te'
     hoc_already_signed_up_content: 'Estas inscrit per ensenyar una hora de codi! Vostè i els seus estudiants no cal que inicieu la sessió al Code Studio per participar en aquest esdeveniment. Per començar, <a href="%{learn_url}">escull un tutorial</a> per a l''aula i comparteix l''enllaç amb ells.<br/><br/>Si gaudeixen l''hora de codi i vol anar més lluny, podeu configurar una contrasenya i crear un compte de Code Studio per matricular als estudiants en qualsevol dels nostres <a href="%{educate_url}">cursos més llargs</a>.'
     hoc_already_signed_up_content_post_hoc: 'Gracies por allotjar una Hora de Codi. Per entrar a "Code Studio", has de crear una contrasenya per el teu compte. Això et deixarà grabar el teu progrés i organitzar la teva aula. Podras asignar cursos a estudiants i vure el seu progrés. <a href="%{studio_url}">També pots seguir navegant entre els diferents nivells i trencaclosques</a> sense crear un compte.'
+    hoc_already_signed_up_content_post_hoc_markdown: 'Gracies por allotjar una Hora de Codi. Per entrar a "Code Studio", has de crear una contrasenya per el teu compte. Això et deixarà grabar el teu progrés i organitzar la teva aula. Podras asignar cursos a estudiants i vure el seu progrés. [També pots seguir navegant entre els diferents nivells i trencaclosques](%{studio_url}) sense crear un compte.'
     teacher_educator_guide: 'Mira la guia de l''educador'
     title: "Inscrigui's a Code.org"
     school_name: 'Nom de l''escola (opcional)'
@@ -445,6 +450,8 @@ ca:
       body: "El Laboratori d'aplicacions és un entorn de programació on podeu crear aplicacions simples. Dissenyeu una aplicació, programeu-la amb blocs o JavaScript per fer-la funcionar i compartiu-la en pocs segons."
     dance:
       title: 'Festa de ball'
+    dance-2019:
+      title: 'Festa de ball'
     hoc:
       title: 'Laberint clàssic'
       body: 'Prova els conceptes bàsics de la informàtica. Ja ho han fet milions d''usuaris.'
@@ -568,6 +575,7 @@ ca:
     submit: "Envia"
     decline: "Tanca"
   zendesk_too_young_message: 'Lamentablement, els usuaris més joves no poden registrar-se en el nostre lloc de suport. Podeu navegar<a href="http://support.code.org">upport.code.org</a> sense registrar-vos o demanar als vostres pares o mestres que contactin amb nosaltres en representació vostra.'
+  zendesk_too_young_message_markdown: 'Lamentablement, els usuaris més joves no poden registrar-se en el nostre lloc de suport. Podeu navegar[upport.code.org](http://support.code.org) sense registrar-vos o demanar als vostres pares o mestres que contactin amb nosaltres en representació vostra.'
   progress:
     not_started: no començat
     in_progress: En curs

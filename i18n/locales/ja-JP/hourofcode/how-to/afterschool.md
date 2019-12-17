@@ -1,7 +1,5 @@
 ---
 title: イベント開催ガイド
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
@@ -12,7 +10,7 @@ nav: how_to_nav
 
 * * *
 
-## 1. この「やり方を説明している動画」を見る <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. この手引きビデオを見る <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2. チュートリアルを選ぶ
 
@@ -81,6 +79,6 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## Hour of Codeを終えたら？
 
-Hour of Codeは、あくまでコンピュータやアプリケーションがどうやって作られているのかを理解する最初の一歩にすぎません。 Help students continue their journey and encourage them to [learn more online](%= codeorg_url('/learn/beyond') %)!
+Hour of Codeは、あくまでコンピュータやアプリケーションがどうやって作られているのかを理解する最初の一歩にすぎません。 Help students continue their journey and encourage them to [learn more online](/beyond)!
 
 {{ signup_button }}

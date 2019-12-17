@@ -19,7 +19,7 @@ fr-FR:
           sur 'Terminer', sinon sur 'Reset', modifie to code et clique sur 'Démarrer'
           à nouveau.
       AppLab Intro 7 - thisOrThatAddButton:
-        AppLabHoCFinal11: Tu es maintenant en Mode Design.
+        AppLabHoCFinal11: Tu es maintenant en Mode Création.
       CSD U6 colorLeds intensity:
         CSDU6L10_rainbow: Ajoute tes blocs ici
       CSD U6 colorLeds intensity_2018:
@@ -69,6 +69,9 @@ fr-FR:
       Course 4 Artist Vars 6:
         degrees_per_side: Divise 360 par le nombre de côtés pour obtenir la taille
           de chaque angle en degrés.
+      Course 4 Bee 3:
+        if_else_bee: Utilise le bloc «Si/Sinon» pour que l'abeille butine le nectar
+          d'une fleur, ou fasse du miel si ce n'est pas une fleur
       Course 4 Bee Params 2:
         edit_get_nectar: Utilise ce bouton pour modifier la fonction et changer la
           direction dans laquelle l'abeille va tourner pour butiner le nectar.
@@ -92,6 +95,22 @@ fr-FR:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Nouveau bloc !
         dance_callout_11_b: Nouveau bloc !
+      Dance_2019_01:
+        dance_callout_01: Ajoutez ce bloc à votre programme!
+      Dance_2019_02:
+        dance_callout_11_a: Ajoute ce bloc à ton programme.
+        arrow_buttons: Appuies sur les boutons fléchés pour contrôler ton danseur.
+      Dance_2019_04:
+        dance_callout_02: Ajoutez ce bloc à votre programme!
+      Dance_2019_05:
+        dance_callout_05: Ajouter un nouvel événement à votre programme.
+      Dance_2019_06:
+        dance_party_11_5_groups: Nouveau bloc !
+      Dance_2019_07:
+        setprop_hint: Nouveau bloc !
+      Dance_2019_09:
+        new_block_3: Nouveau bloc !
+        new_block_4: Nouveau bloc !
       Dance_Party_01:
         dance_callout_01: Ajoutez ce bloc à votre programme!
       Dance_Party_02:
@@ -226,13 +245,13 @@ fr-FR:
           change le à ta convenance!
       courseA_artist_loops4:
         courseA_artist_loops4_1: Ce nombre t'indique combien de ces blocs tu peux
-          utiliser dans le puzzle.
+          utiliser dans ce puzzle.
       courseA_artist_loops4_2018:
         courseA_artist_loops4_1: Ce nombre t'indique combien de ces blocs tu peux
-          utiliser dans le puzzle.
+          utiliser dans ce puzzle.
       courseA_artist_loops4_2019:
         courseA_artist_loops4_1: Ce nombre t'indique combien de ces blocs tu peux
-          utiliser dans le puzzle.
+          utiliser dans ce puzzle.
       courseA_artist_loops7:
         courseA_artist_loops7_1: Ce nombre indique que seulement un bloc de ce type
           peut être utiliser dans la réponse finale.
@@ -253,37 +272,31 @@ fr-FR:
           ligne existante lorsque tu en as besoin?
       courseA_collector_loops1:
         courseA_collector_loops1_1: Y a-t-il de nouveaux blocs dans la boite à outils?
-          Ne t'inquiète pas, nous allons t'aider à les utiliser plus tard dans de
-          futurs étapes.
+          Ne t'inquiète pas, nous allons t'aider à les utiliser plus tard.
       courseA_collector_loops3:
         gradek_adventurer_loops2_1: Ce nombre t'indique combien de ces blocs tu peux
-          utiliser dans le puzzle.
+          utiliser dans ce puzzle.
       courseA_collector_loops3_2018:
         gradek_adventurer_loops2_1: Ce nombre t'indique combien de ces blocs tu peux
-          utiliser dans le puzzle.
+          utiliser dans ce puzzle.
       courseA_collector_loops3_2019:
         gradek_adventurer_loops2_1: Ce nombre t'indique combien de ces blocs tu peux
-          utiliser dans le puzzle.
+          utiliser dans ce puzzle.
       courseA_collector_preLoops2:
         courseA_collector_loops1_1: Y a-t-il de nouveaux blocs dans la boite à outils?
-          Ne t'inquiète pas, nous allons t'aider à les utiliser plus tard dans de
-          futurs étapes.
+          Ne t'inquiète pas, nous allons t'aider à les utiliser plus tard.
       courseA_collector_preLoops3:
         courseA_collector_loops1_1: Y a-t-il de nouveaux blocs dans la boite à outils?
-          Ne t'inquiète pas, nous allons t'aider à les utiliser plus tard dans de
-          futurs étapes.
+          Ne t'inquiète pas, nous allons t'aider à les utiliser plus tard.
       courseA_collector_preLoops4:
         courseA_collector_loops1_1: Y a-t-il de nouveaux blocs dans la boite à outils?
-          Ne t'inquiète pas, nous allons t'aider à les utiliser plus tard dans de
-          futurs étapes.
+          Ne t'inquiète pas, nous allons t'aider à les utiliser plus tard.
       courseA_collector_preLoops5:
         courseA_collector_loops1_1: Y a-t-il de nouveaux blocs dans la boite à outils?
-          Ne t'inquiète pas, nous allons t'aider à les utiliser plus tard dans de
-          futurs étapes.
+          Ne t'inquiète pas, nous allons t'aider à les utiliser plus tard.
       courseA_collector_preLoops6:
         courseA_collector_loops1_1: Y a-t-il de nouveaux blocs dans la boite à outils?
-          Ne t'inquiète pas, nous allons t'aider à les utiliser plus tard dans de
-          futurs étapes.
+          Ne t'inquiète pas, nous allons t'aider à les utiliser plus tard.
       courseA_maze_ramp2_2019:
         courseC_maze_programming2_1: C'est la boite à outils. C'est ici que tu trouves
           les blocs supplémentaires pour compléter les puzzles.
@@ -340,8 +353,7 @@ fr-FR:
           les blocs supplémentaires pour compléter les puzzles.
       courseB_collector_loops1:
         courseB_collector_loops1_1: Y a-t-il de nouveaux blocs dans la boite à outils?
-          Ne t'inquiète pas, nous allons t'aider à les utiliser plus tard dans de
-          futurs étapes.
+          Ne t'inquiète pas, nous allons t'aider à les utiliser plus tard.
       courseB_maze_seq1:
         courseB_maze_seq1: Clique dans la bulle si tu as besoin d'une astuce!
       courseB_maze_seq1_2018:
@@ -383,8 +395,7 @@ fr-FR:
           l'artiste au centre de l'écran.
       courseC_collector_prog1:
         courseC_collector_prog1_1: Y a-t-il de nouveaux blocs dans la boite à outils?
-          Ne t'inquiète pas, nous allons t'aider à les utiliser plus tard dans de
-          futurs étapes.
+          Ne t'inquiète pas, nous allons t'aider à les utiliser plus tard.
       courseC_collector_prog7:
         courseC_collector_prog7_1: Tu peux prendre plus de blocs de la boite à outils
           si tu en as besoin!
@@ -759,3 +770,5 @@ fr-FR:
         replace_questions: Utilise le menu déroulant pour remplacer «???» par un nombre.
       frozen square snowflake:
         replace_questions: Utilise le menu déroulant pour remplacer «???» par un nombre.
+      Dance_Party_11_5:
+        dance_party_11_5_groups: Regardez ici les blocs « tous les canards »

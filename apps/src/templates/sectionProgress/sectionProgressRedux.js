@@ -13,6 +13,7 @@ import {
 import _ from 'lodash';
 import {SET_SCRIPT} from '@cdo/apps/redux/scriptSelectionRedux';
 import {SET_SECTION} from '@cdo/apps/redux/sectionDataRedux';
+import firehoseClient from '../../lib/util/firehose';
 
 const SET_CURRENT_VIEW = 'sectionProgress/SET_CURRENT_VIEW';
 const SET_LESSON_OF_INTEREST = 'sectionProgress/SET_LESSON_OF_INTEREST';
@@ -72,8 +73,22 @@ export const addStudentLevelPairing = (scriptId, studentLevelPairing) => {
 
 export const jumpToLessonDetails = lessonOfInterest => {
   return (dispatch, getState) => {
+    const state = getState().sectionProgress;
     dispatch(setLessonOfInterest(lessonOfInterest));
     dispatch(setCurrentView(ViewType.DETAIL));
+    firehoseClient.putRecord(
+      {
+        study: 'teacher_dashboard_actions',
+        study_group: 'progress',
+        event: 'view_change_toggle',
+        data_json: JSON.stringify({
+          section_id: state.section.id,
+          old_view: ViewType.SUMMARY,
+          new_view: ViewType.DETAIL
+        })
+      },
+      {includeUserId: true}
+    );
   };
 };
 export const processScriptAndProgress = scriptId => {
@@ -101,8 +116,9 @@ const NUM_STUDENTS_PER_PAGE = 50;
 
 // Types of views of the progress tab
 export const ViewType = {
-  SUMMARY: 'summary',
-  DETAIL: 'detail'
+  SUMMARY: 'summary', // lessons
+  DETAIL: 'detail', // levels
+  STANDARDS: 'standards'
 };
 
 /**

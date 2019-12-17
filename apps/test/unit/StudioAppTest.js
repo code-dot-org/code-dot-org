@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import sinon from 'sinon';
-import {expect} from '../util/configuredChai';
+import {expect} from '../util/deprecatedChai';
 import {
   singleton as studioApp,
   stubStudioApp,
@@ -15,6 +15,7 @@ import {registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {sandboxDocumentBody} from '../util/testUtils';
 import sampleLibrary from './code-studio/components/libraries/sampleLibrary.json';
+import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
 
 describe('StudioApp', () => {
   sandboxDocumentBody();
@@ -234,7 +235,8 @@ describe('StudioApp', () => {
     it('given a library, adds all library closures to libraryCode', () => {
       let config = initialConfig;
       let librarycode =
-        sampleLibrary.libraries[0].source + sampleLibrary.libraries[1].source;
+        createLibraryClosure(sampleLibrary.libraries[0]) +
+        createLibraryClosure(sampleLibrary.libraries[1]);
 
       config.level.libraries = sampleLibrary.libraries;
       studioApp().loadLibraryBlocks(config);

@@ -12,7 +12,7 @@ nav: promote_nav
 
 ### Find all the resources you need to bring attention to your Hour of Code. Not sure where to begin? Start with our [how-to guide for hosting an Hour of Code]({{ how_to_url }})!
 
----
+* * *
 
 {{ promote_handouts }} {{ promote_videos }}
 
@@ -24,7 +24,6 @@ nav: promote_nav
 
 {{ promote_new_posters }}
 
-* Want to download smaller versions of these posters? <a href="https://www.dropbox.com/sh/8dqt7p9ioc4hnmu/AABQfTWLTPVh2Kgy32PSvLU3a?dl=0" target="_blank">Download them here</a>.
 * Looking for our posters from previous years? [Find them here]({{ promote/previous_posters_url }})!
 
 <a id="social"></a>
@@ -76,7 +75,7 @@ nav: promote_nav
     
     ### Find [more information and language you can use]({{ promote/stats_url }}) when talking about the Hour of Code.
     
----
+    * * *
     
     
 
@@ -97,7 +96,7 @@ nav: promote_nav
     
     Get started at http://hourofcode.com/{{ country }} <br />
     
----
+    * * *
     
     
 
@@ -120,7 +119,7 @@ nav: promote_nav
     
     You can read more about the event at http://hourofcode.com. Or, let us know if you’d like to schedule some time to talk about how [school name] can participate. <br />
     
----
+    * * *
     
     
 
@@ -143,7 +142,7 @@ nav: promote_nav
     
     See http://hourofcode.com/{{ country }} for details, and help spread the word. <br />
     
----
+    * * *
     
     
 
@@ -170,7 +169,7 @@ nav: promote_nav
     
     میں آپ سے رابطہ کے لیے چشم براہ ہوں۔<br />
     
----
+    * * *
     
     
 
