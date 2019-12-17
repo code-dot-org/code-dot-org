@@ -434,3 +434,9 @@ sv-SE:
         courseE_artist_functions1_a: Rutorna varje har 100 pixel sidor, det betyder
           att du kommer att behöva flytta framåt 175 pixlar innan du ritar din andra
           torget.
+      Dance_Party_05:
+        validation: "**Hur klarar jag denna nivå?** \n\n-   Din dansare behöver cykla
+          genom åtminstone 4 olika danssteg innan nivån slutar. \n\n_Denna nivå slutar
+          efter 12 takter._"
+      Dance_Party_extras_alternate_2019:
+        alternate: Det alternativa blocket är i kategorin "Dansare".

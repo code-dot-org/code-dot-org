@@ -1858,7 +1858,11 @@ StudioApp.prototype.fixViewportForSpecificWidthForSmallScreens_ = function(
   viewport,
   width
 ) {
-  const scale = screen.width / width;
+  // iOS sets the screen width to the min of width and height. Android sets the
+  // screen width to the landscape width. We take the min of width and height
+  // here to enforce consistent behavior.
+  let screenWidth = Math.min(screen.width, screen.height);
+  const scale = screenWidth / width;
 
   var content = [
     'width=' + width,

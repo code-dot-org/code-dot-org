@@ -21,7 +21,7 @@ import {getDatasetInfo} from '../storage/dataBrowser/dataUtils';
 import {initFirebaseStorage} from '../storage/firebaseStorage';
 import {
   getColumnsRef,
-  onColumnNames,
+  onColumnsChange,
   addMissingColumns
 } from '../storage/firebaseMetadata';
 import {getProjectDatabase, getSharedDatabase} from '../storage/firebaseUtils';
@@ -1345,7 +1345,7 @@ function onInterfaceModeChange(mode) {
 }
 
 function onDataPreview(tableName) {
-  onColumnNames(getSharedDatabase(), tableName, columnNames => {
+  onColumnsChange(getSharedDatabase(), tableName, columnNames => {
     getStore().dispatch(updateTableColumns(tableName, columnNames));
   });
 
@@ -1396,7 +1396,7 @@ function onDataViewChange(view, oldTableName, newTableName) {
       if (newTableType === tableType.PROJECT) {
         addMissingColumns(newTableName);
       }
-      onColumnNames(
+      onColumnsChange(
         newTableType === tableType.PROJECT
           ? getProjectDatabase()
           : getSharedDatabase(),

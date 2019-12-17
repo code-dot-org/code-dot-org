@@ -227,6 +227,8 @@ zh-CN:
             "-1": "←"
       Dancelab_eval:
         text: 执行 {CODE}
+      Dancelab_everyMeasuresRange:
+        text: '重复每 {N} 措施后 {START} '
       Dancelab_everySeconds:
         text: '每 {N} {UNIT} '
         options:
@@ -1223,6 +1225,17 @@ zh-CN:
         text: "{SPRITE} 的y坐标"
       Mikelab_addBehaviorSimple:
         text: 精灵 {SPRITE} 开始 {BEHAVIOR}
+      Mikelab_addTrainingData:
+        text: 添加培训数据： {NAME},{LOCATION}
+        options:
+          NAME:
+            "{x: 201, y: 100}": 对象
+            "{x: 200, y: 100}": 鱼
+          LOCATION:
+            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": 鱼
+            "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": 不是鱼
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 标签
+            "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": 不是我的标签
       Mikelab_changePropBy:
         text: 将 {PROPERTY} {SPRITE} 改为 {VAL}
         options:
@@ -1248,6 +1261,8 @@ zh-CN:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 随机
       Mikelab_eval:
         text: 执行 {CODE}
+      Mikelab_getNext:
+        text: 获取下一个对象
       Mikelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -1359,6 +1374,12 @@ zh-CN:
           {STATEMENT}
       Mikelab_hasBehavior:
         text: "{SPRITE} 当前在 {BEHAVIOR}"
+      Mikelab_hideFish:
+        text: 删除 {TRASH}
+        options:
+          TRASH:
+            object: 对象
+            fish: 鱼
       Mikelab_ifDanceIs:
         text: |-
           如果 {SPRITE} 正在 {DANCE}
@@ -1376,6 +1397,30 @@ zh-CN:
             MOVES.Kick: 踢腿
             MOVES.ThisOrThat: 交替摆臂
             MOVES.Rest: 没有
+      Mikelab_ifLabel:
+        text: |-
+          如果 {DANCE}
+          做 {DO1} 还 {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: 鱼
+            MOVES.Clown: 标签
+      Mikelab_ifRecognizeLabel:
+        text: |-
+          如果将对象识别为 {DANCE}
+          做 {DO1} 还 {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: 鱼
+            MOVES.Clown: 标签
+      Mikelab_ifRecognizeLabelOnly:
+        text: |-
+          如果将对象识别为 {DANCE}
+          做 {DO1}
+        options:
+          DANCE:
+            MOVES.ClapHigh: 鱼
+            MOVES.Clown: 不是我的标签
       Mikelab_locationAt:
         text: '位置 x: {X} y: {Y}'
       Mikelab_location_picker:
@@ -1386,6 +1431,10 @@ zh-CN:
         text: 精灵 {SPRITE} 停止 {BEHAVIOR}
       Mikelab_repeatUntilComplete:
         text: 一直重复
+      Mikelab_sendBad:
+        text: 向左移动对象
+      Mikelab_sendGood:
+        text: 向右移动对象
       Mikelab_setBG:
         options:
           BG:
@@ -1454,6 +1503,12 @@ zh-CN:
         text: 当鼠标点击时
       Mikelab_whenTouchesAny:
         text: 当{SPRITE} 触及任何精灵时
+      Mikelab_whenYesNoClicked:
+        text: 当 {KEY} 点击
+        options:
+          KEY:
+            '"yes"': 是
+            '"no"': 不
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -1506,7 +1561,10 @@ zh-CN:
         text: aalab 精灵 {SPRITE} 开始 {BEHAVIOR} 经历 {SECONDS} 秒
       aalab_addBehaviorUntilBoolean:
         text: 精灵{SPRITE} 开始{BEHAVIOR} 直到{CONDITION}
+      aalab_createNewSpriteAnonReturn2:
+        text: 新子画面命名{SPRITE_NAME} 与服装{ANIMATION_NAME} 在位置{LOCATION}
       aalab_goToScene:
+        text: 前往现场 {SCENE}
         options:
           SCENE:
             '1': '1'
@@ -1515,12 +1573,16 @@ zh-CN:
       aalab_prompt:
         text: 提问 {MESSAGE}
       aalab_scene:
+        text: 现场 {SCENE}
         options:
           SCENE:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_setupStory:
+        text: 设置故事
       aalab_showHideSprite:
+        text: "{OPTION}{SPRITE}"
         options:
           OPTION:
             '"show"': 显示
