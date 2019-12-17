@@ -15,6 +15,7 @@ import guide from '@ml/oceans/models/guide';
 import soundLibrary from '@ml/oceans/models/soundLibrary';
 import train from '@ml/oceans/models/train';
 import modeHelpers from '@ml/oceans/modeHelpers';
+import helpers from '@ml/oceans/helpers';
 import {setState, getState, resetState} from '@ml/oceans/state';
 import {AppMode, Modes} from '@ml/oceans/constants';
 import colors from '@ml/oceans/colors';
@@ -327,6 +328,8 @@ describe('Train', () => {
     continueButton.simulate('click');
 
     expect(toModeStub.withArgs(Modes.Predicting).callCount).toEqual(1);
+
+    modeHelpers.toMode.restore();
   });
 });
 
@@ -498,6 +501,16 @@ describe('Pond', () => {
   });
 
   describe('navigation', () => {
+    let toModeStub;
+
+    beforeEach(() => {
+      toModeStub = sinon.stub(modeHelpers, 'toMode');
+    });
+
+    afterEach(() => {
+      modeHelpers.toMode.restore();
+    });
+
     it('displays buttons based on canSkipPond state', () => {
       let wrapper = shallow(<Pond {...DEFAULT_PROPS} />);
       expect(getState().canSkipPond).toBeFalsy();
@@ -531,6 +544,64 @@ describe('Pond', () => {
       expect(buttons.length).toEqual(2);
       expect(getBtnText(buttons, 0)).toEqual('Continue');
       expect(getBtnText(buttons, 1)).toEqual('Train More');
+    });
+
+    it('"new word" button resets training and transitions to Modes.Words', () => {
+      const resetTrainingStub = sinon.stub(helpers, 'resetTraining');
+
+      setState({canSkipPond: true, appMode: AppMode.FishLong});
+      let wrapper = shallow(<Pond {...DEFAULT_PROPS} />);
+      const newWordBtn = wrapper.find('#uitest-nav-btns Button').at(0);
+
+      newWordBtn.simulate('click');
+
+      const newState = getState();
+      expect(newState.pondClickedFish).toBeNull();
+      expect(newState.pondPanelShowing).toBeFalsy();
+      expect(resetTrainingStub.callCount).toEqual(1);
+      expect(toModeStub.withArgs(Modes.Words).callCount).toEqual(1);
+
+      helpers.resetTraining.restore();
+    });
+
+    it('"finish" button calls onContinue', () => {
+      const onContinueSpy = sinon.spy();
+      setState({
+        canSkipPond: true,
+        appMode: AppMode.FishLong,
+        onContinue: onContinueSpy
+      });
+      let wrapper = shallow(<Pond {...DEFAULT_PROPS} />);
+      const finishBtn = wrapper.find('#uitest-nav-btns Button').at(1);
+
+      finishBtn.simulate('click');
+      expect(onContinueSpy.callCount).toEqual(1);
+    });
+
+    it('"continue" button calls onContinue', () => {
+      const onContinueSpy = sinon.spy();
+      setState({
+        canSkipPond: true,
+        onContinue: onContinueSpy
+      });
+      let wrapper = shallow(<Pond {...DEFAULT_PROPS} />);
+      const continueBtn = wrapper.find('#uitest-nav-btns Button').at(0);
+
+      continueBtn.simulate('click');
+      expect(onContinueSpy.callCount).toEqual(1);
+    });
+
+    it('"train more" button transitions to Modes.Training', () => {
+      setState({canSkipPond: true});
+      let wrapper = shallow(<Pond {...DEFAULT_PROPS} />);
+      const trainMoreBtn = wrapper.find('#uitest-nav-btns Button').at(1);
+
+      trainMoreBtn.simulate('click');
+
+      const newState = getState();
+      expect(newState.pondClickedFish).toBeNull();
+      expect(newState.pondPanelShowing).toBeFalsy();
+      expect(toModeStub.withArgs(Modes.Training).callCount).toEqual(1);
     });
   });
 });
