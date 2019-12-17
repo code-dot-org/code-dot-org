@@ -16,7 +16,8 @@ const styles = {
   dialog: {
     paddingLeft: 20,
     paddingRight: 20,
-    paddingBottom: 20
+    paddingBottom: 20,
+    fontFamily: '"Gotham 4r", sans-serif, sans-serif'
   }
 };
 
