@@ -142,9 +142,13 @@ class DataTableView extends React.Component {
   }
 
   render() {
-    if (this.props.view !== DataView.TABLE) {
-      return null;
-    }
+    const visible = DataView.TABLE === this.props.view;
+    const containerStyle = [
+      styles.container,
+      {
+        display: visible ? '' : 'none'
+      }
+    ];
     const debugDataStyle = [
       dataStyles.debugData,
       {
@@ -155,7 +159,7 @@ class DataTableView extends React.Component {
       this.props.tableListMap[this.props.tableName] === tableType.SHARED;
 
     return (
-      <div id="dataTable" style={styles.container} className="inline-flex">
+      <div id="dataTable" style={containerStyle} className="inline-flex">
         <div style={dataStyles.viewHeader}>
           <span style={dataStyles.backLink}>
             <a
