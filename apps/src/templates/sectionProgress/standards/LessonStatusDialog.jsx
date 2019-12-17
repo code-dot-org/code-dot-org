@@ -4,7 +4,7 @@ import i18n from '@cdo/locale';
 import BaseDialog from '../../BaseDialog';
 import DialogFooter from '../../teacherDashboard/DialogFooter';
 import Button from '../../Button';
-import {LessonStatusList} from './LessonStatusList';
+import LessonStatusList from './LessonStatusList';
 
 const styles = {
   dialog: {
