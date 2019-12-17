@@ -623,8 +623,6 @@ Dashboard::Application.routes.draw do
 
       get 'projects/personal', to: 'projects/personal_projects#index', defaults: {format: 'json'}
 
-      get 'projects/personal/check_name', to: 'projects/personal_projects#check_name', defaults: {format: 'json'}
-
       resources :section_libraries, only: [:index], defaults: {format: 'json'}
 
       # Routes used by UI test status pages
