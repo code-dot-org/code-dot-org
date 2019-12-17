@@ -1,4 +1,5 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import SmallChevronLink from '../SmallChevronLink';
@@ -9,12 +10,16 @@ const styles = {
   headerContainer: {
     display: 'flex',
     justifyContent: 'space-between'
+  },
+  headerSectionPrompt: {
+    fontWeight: 'bold'
   }
 };
 
-export default class TeacherDashboardHeader extends React.Component {
+/*export default*/ class TeacherDashboardHeader extends React.Component {
   static propTypes = {
-    sectionName: PropTypes.string.isRequired
+    currentSectionName: PropTypes.string.isRequired,
+    currentScriptName: PropTypes.string.isRequired
   };
 
   render() {
@@ -27,7 +32,13 @@ export default class TeacherDashboardHeader extends React.Component {
           chevronSide="left"
         />
         <div style={styles.headerContainer}>
-          <h1>{this.props.sectionName}</h1>
+          <div>
+            <h1>{this.props.currentSectionName}</h1>
+            <div>
+              <span style={styles.headerSectionPrompt}>Assigned to:</span>{' '}
+              {this.props.currentScriptName}
+            </div>
+          </div>
           <SelectSectionDropdown />
         </div>
         <TeacherDashboardNavigation />
@@ -35,3 +46,12 @@ export default class TeacherDashboardHeader extends React.Component {
     );
   }
 }
+
+export default connect(state => ({
+  currentSectionName:
+    state.teacherSections.sections[state.teacherSections.selectedSectionId]
+      .name,
+  currentScriptName: state.scriptSelection.validScripts.filter(
+    script => script.id === state.scriptSelection.scriptId
+  )[0].name
+}))(TeacherDashboardHeader);
