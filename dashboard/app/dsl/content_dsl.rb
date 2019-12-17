@@ -40,7 +40,12 @@ class ContentDSL < LevelDSL
 
   # @override
   def self.i18n_fields
-    # TODO: add contentX and title fields to this once FND-904 is complete
-    super + %w(markdown)
+    super + %w(
+      content1
+      content2
+      content3
+      markdown
+      title
+    )
   end
 end
