@@ -190,7 +190,7 @@ export const finishMovement = (t, pause = true) => {
   });
 };
 
-export const resetTraining = state => {
+const resetTraining = state => {
   state.trainer.clearAll();
   setState({
     yesCount: 0,
@@ -221,4 +221,8 @@ export const reportPageView = page => {
   const syntheticPagePath = window.location.pathname + '/' + page;
   window.ga('set', 'page', syntheticPagePath);
   window.ga('send', 'pageview');
+};
+
+export default {
+  resetTraining
 };
