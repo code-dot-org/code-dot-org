@@ -27,7 +27,7 @@ export const initAll = function(options) {
 
   loadSounds();
 
-  I18n.init();
+  I18n.init(options.i18n);
 
   // Set initial state for UI elements.
   setInitialState({
