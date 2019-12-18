@@ -379,6 +379,9 @@ export default {
           .appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);
 
         let allowBehaviorEditing = Blockly.useModalFunctionEditor;
+
+        // If there is a toolbox with no categories, disallow editing the behavior,
+        // because renaming the behavior can break things.
         if (appOptions.level.toolbox && !Blockly.hasCategories) {
           allowBehaviorEditing = false;
         }
