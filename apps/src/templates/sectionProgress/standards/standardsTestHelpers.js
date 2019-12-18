@@ -1,3 +1,18 @@
+export const unpluggedLessonList = [
+  {
+    id: 'one',
+    name: 'Lesson 1',
+    number: 1,
+    url: 'https://curriculum.code.org/csf-19/coursea/1/'
+  },
+  {
+    id: 'two',
+    name: 'Lesson 4',
+    number: 3,
+    url: 'https://curriculum.code.org/csf-19/coursea/3/'
+  }
+];
+
 export const lessonCompletedByStandard = {
   1: {
     lessons: [
