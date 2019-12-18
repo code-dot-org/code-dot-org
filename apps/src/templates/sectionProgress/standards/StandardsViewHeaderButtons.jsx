@@ -45,7 +45,7 @@ export class StandardsViewHeaderButtons extends Component {
           onClick={this.openLessonStatusDialog}
           color={Button.ButtonColor.gray}
           text={i18n.updateUnpluggedProgress()}
-          size={'small'}
+          size={'narrow'}
           style={styles.button}
         />
         <LessonStatusDialog
@@ -57,7 +57,7 @@ export class StandardsViewHeaderButtons extends Component {
           onClick={this.openCreateReportDialog}
           color={Button.ButtonColor.gray}
           text={i18n.generatePDFReport()}
-          size={'small'}
+          size={'narrow'}
           style={styles.button}
         />
         <CreateStandardsReportDialog
