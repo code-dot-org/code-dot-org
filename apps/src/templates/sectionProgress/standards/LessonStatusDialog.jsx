@@ -4,21 +4,18 @@ import i18n from '@cdo/locale';
 import BaseDialog from '../../BaseDialog';
 import DialogFooter from '../../teacherDashboard/DialogFooter';
 import Button from '../../Button';
-import MultiCheckboxSelector from '../../MultiCheckboxSelector';
+import LessonStatusList from './LessonStatusList';
 
 const styles = {
   dialog: {
     paddingLeft: 20,
     paddingRight: 20,
-    paddingBottom: 20
-  },
-  lessonListItem: {
-    display: 'flex',
-    flexDirection: 'row'
+    paddingBottom: 20,
+    fontFamily: '"Gotham 4r", sans-serif, sans-serif'
   }
 };
 
-class LessonStatusDialog extends Component {
+export class LessonStatusDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     handleConfirm: PropTypes.func.isRequired
@@ -35,27 +32,8 @@ class LessonStatusDialog extends Component {
         <h2>{i18n.updateUnpluggedLessonProgress()}</h2>
         <p>{i18n.updateUnpluggedLessonProgressSubHeading()}</p>
         <h3>{i18n.completedUnpluggedLessons()}</h3>
-        <MultiCheckboxSelector
-          noHeader={true}
-          items={[
-            {
-              id: 'one',
-              name: 'Lesson 1',
-              url: 'https://curriculum.code.org/csf-19/coursea/1/'
-            },
-            {
-              id: 'two',
-              name: 'Lesson 4',
-              url: 'https://curriculum.code.org/csf-19/coursea/3/'
-            }
-          ]}
-          itemPropName="lesson"
-          selected={[]}
-          onChange={() => {}}
-        >
-          <ComplexLessonComponent />
-        </MultiCheckboxSelector>
-        <div>{i18n.pluggedLessonsNote()}</div>
+        <LessonStatusList />
+        <p>{i18n.pluggedLessonsNote()}</p>
         <DialogFooter rightAlign>
           <Button
             text={i18n.closeAndSave()}
@@ -67,24 +45,5 @@ class LessonStatusDialog extends Component {
     );
   }
 }
-
-const ComplexLessonComponent = function({style, lesson}) {
-  return (
-    <div style={styles.lessonListItem}>
-      <div>Box</div>
-      <a style={{paddingLeft: 10}} href={lesson.url}>
-        {lesson.name}
-      </a>
-    </div>
-  );
-};
-ComplexLessonComponent.propTypes = {
-  style: PropTypes.object,
-  lesson: PropTypes.shape({
-    id: PropTypes.string,
-    name: PropTypes.string,
-    url: PropTypes.string
-  })
-};
 
 export const UnconnectedLessonStatusDialog = LessonStatusDialog;
