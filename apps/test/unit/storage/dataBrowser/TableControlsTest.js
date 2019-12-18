@@ -1,6 +1,6 @@
 import React from 'react';
 import {Provider} from 'react-redux';
-import {shallow, mount} from 'enzyme';
+import {mount} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 
 import {
