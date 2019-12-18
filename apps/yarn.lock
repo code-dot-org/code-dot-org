@@ -14451,10 +14451,10 @@ snack-build@0.0.1:
     babel-runtime "^6.23.0"
     graphql-request "^1.8.2"
 
-snack-sdk@2.3.4:
-  version "2.3.4"
-  resolved "https://registry.yarnpkg.com/snack-sdk/-/snack-sdk-2.3.4.tgz#a1c1492292052e91d7d9a65cf994dfba5b2b4c05"
-  integrity sha512-po6BghsYZZQ9Y9zeyWXynWJySIF6HBuM9jEVEuf/z/50DPyzuYupNHxz7p6WCcFwOSJowWFwzkG7uZ4SSn9HCA==
+snack-sdk@2.3.6:
+  version "2.3.6"
+  resolved "https://registry.yarnpkg.com/snack-sdk/-/snack-sdk-2.3.6.tgz#750d8eec557a8a5dc125337e4fac8ee1226c6941"
+  integrity sha512-eFq9S99RX7aLdTXckqIGhAw7s81SNGOnuWrKiLV2kaZEGEgruFWjDyD1SsIt5MlhHztIrPWTkGwuwctdKR3AZA==
   dependencies:
     babel-runtime "^6.23.0"
     diff "^3.2.0"
