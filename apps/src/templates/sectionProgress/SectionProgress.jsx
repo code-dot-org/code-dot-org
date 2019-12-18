@@ -75,7 +75,8 @@ class SectionProgress extends Component {
     loadScript: PropTypes.func.isRequired,
     setScriptId: PropTypes.func.isRequired,
     setLessonOfInterest: PropTypes.func.isRequired,
-    isLoadingProgress: PropTypes.bool.isRequired
+    isLoadingProgress: PropTypes.bool.isRequired,
+    showStandardsIntroDialog: PropTypes.bool
   };
 
   componentDidMount() {
@@ -143,7 +144,8 @@ class SectionProgress extends Component {
       currentView,
       scriptId,
       scriptData,
-      isLoadingProgress
+      isLoadingProgress,
+      showStandardsIntroDialog
     } = this.props;
 
     const levelDataInitialized = scriptData && !isLoadingProgress;
@@ -202,7 +204,11 @@ class SectionProgress extends Component {
           {levelDataInitialized && this.renderTooltips()}
           {experiments.isEnabled(experiments.STANDARDS_REPORT) && (
             <div id="uitest-standards-view" style={standardsStyle}>
-              <StandardsView />
+              <StandardsView
+                showStandardsIntroDialog={
+                  currentView === ViewType.STANDARDS && showStandardsIntroDialog
+                }
+              />
             </div>
           )}
         </div>
@@ -221,7 +227,8 @@ export default connect(
     currentView: state.sectionProgress.currentView,
     scriptData: getCurrentScriptData(state),
     studentLevelProgress: getCurrentProgress(state),
-    isLoadingProgress: state.sectionProgress.isLoadingProgress
+    isLoadingProgress: state.sectionProgress.isLoadingProgress,
+    showStandardsIntroDialog: !state.currentUser.hasSeenStandardsReportInfo
   }),
   dispatch => ({
     loadScript(scriptId) {
