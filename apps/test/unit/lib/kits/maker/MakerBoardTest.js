@@ -100,7 +100,7 @@ export function itImplementsTheMakerBoardInterface(BoardClass) {
           'Led',
           'Board',
           'NeoPixel',
-          'Button',
+          'PlaygroundButton',
           'Switch',
           'Piezo',
           'Sensor',
