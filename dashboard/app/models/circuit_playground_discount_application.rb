@@ -57,11 +57,12 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
   end
 
   # @return {boolean} true if user is an eligible facilitator or attended relevant workshop
-  def self.user_pd_eligible?(user, workshop_subjects=nil)
+  #
+  def self.user_pd_eligible?(user, workshop_subjects)
     user_pd_eligible_as_teacher?(user, workshop_subjects) || user_pd_eligible_as_facilitator?(user)
   end
 
-  private_class_method def self.user_pd_eligible_as_teacher?(user, workshop_subjects=nil)
+  private_class_method def self.user_pd_eligible_as_teacher?(user, workshop_subjects)
     Pd::Attendance.
       joins(:workshop).
       where(
@@ -91,7 +92,7 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
 
   # Looks to see if any of the users associated with this studio_person_id are eligible
   # for our circuit playground discount via their attendance at a given PD workshop
-  def self.studio_person_pd_eligible?(user, workshop_subjects=nil)
+  def self.studio_person_pd_eligible?(user, workshop_subjects)
     accounts = get_user_accounts(user)
     accounts.any? {|associated_user| user_pd_eligible?(associated_user, workshop_subjects)}
   end
