@@ -77,6 +77,8 @@ class Pd::Enrollment < ActiveRecord::Base
     csf_has_physical_curriculum_guide
     previous_courses
     replace_existing
+    csf_intro_intent
+    csf_intro_other_factors
   )
 
   def set_default_scholarship_info

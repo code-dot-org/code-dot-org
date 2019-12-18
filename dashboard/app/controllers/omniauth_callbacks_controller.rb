@@ -146,7 +146,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       sign_in_user user
     elsif user.persisted?
       # If email is already taken, persisted? will be false because of a validation failure
-      check_and_apply_oauth_takeover user
       sign_in_user user
     elsif (looked_up_user = User.find_by_email_or_hashed_email(user.email))
       email_already_taken_redirect \
