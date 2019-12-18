@@ -8,7 +8,7 @@
     "npm": ">=3.10.8"
   },
   "scripts": {
-    "lint": "eslint --ext .js,.jsx src test",
+    "lint": "eslint --format ./.eslintCustomMessagesFormatter.js --ext .js,.jsx src test",
     "test": "./test-low-memory.sh",
     "test-low-memory": "./test-low-memory.sh",
     "test:unit": "node --max_old_space_size=4096 ./node_modules/.bin/grunt unitTest",
@@ -246,7 +246,7 @@
     "rosie": "^2.0.1",
     "selectize": "^0.12.4",
     "snack-build": "0.0.1",
-    "snack-sdk": "2.3.4",
+    "snack-sdk": "2.3.6",
     "wgxpath": "^1.2.0",
     "whatwg-fetch": "^2.0.3"
   }
