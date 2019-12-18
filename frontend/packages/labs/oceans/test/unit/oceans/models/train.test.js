@@ -1,3 +1,7 @@
+/**
+ *  @jest-environment node
+ */
+
 const {initFishData} = require('@ml/utils/fishData');
 import {setState, getState, resetState} from '@ml/oceans/state';
 import {ClassType, Modes} from '@ml/oceans/constants';
