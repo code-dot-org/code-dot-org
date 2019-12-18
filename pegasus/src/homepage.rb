@@ -351,11 +351,11 @@ class Homepage
   end
 
   def self.show_single_hero(request)
-    launch_ai = DCDO.get('launch_ai', nil)
-    (launch_ai && request.language == "en") ? "oceans2019" : "dance2019"
+    "changeworld"
   end
 
   def self.get_heroes_arranged(request)
+    hero_changeworld = [{centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/announcement.jpg"}]
     hero_create = [{text: "homepage_hero_text_stat_students", centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/announcement.jpg"}]
     hero_hoc2019 = [{text: "homepage_hero_text_stat_students", centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2019.jpg"}]
     hero_dance2019 = [
@@ -372,6 +372,8 @@ class Homepage
       heroes_arranged = hero_hoc2019
     elsif show_single_hero(request) == "create"
       heroes_arranged = hero_create
+    elsif show_single_hero(request) == "changeworld"
+      heroes_arranged = hero_changeworld
     elsif show_single_hero(request) == "dance2019"
       heroes_arranged = hero_dance2019
     elsif show_single_hero(request) == "oceans2019"
