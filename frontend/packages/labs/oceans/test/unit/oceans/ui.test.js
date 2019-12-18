@@ -608,9 +608,10 @@ describe('Pond', () => {
 });
 
 describe('Guide', () => {
-  let currentGuideStub, playSoundStub;
+  let clock, currentGuideStub, playSoundStub;
 
   beforeEach(() => {
+    clock = sinon.useFakeTimers();
     currentGuideStub = sinon.stub(guide, 'getCurrentGuide');
     currentGuideStub.returns({
       id: 'guide-id',
@@ -622,6 +623,7 @@ describe('Guide', () => {
   });
 
   afterEach(() => {
+    clock.restore();
     guide.getCurrentGuide.restore();
     soundLibrary.playSound.restore();
   });
