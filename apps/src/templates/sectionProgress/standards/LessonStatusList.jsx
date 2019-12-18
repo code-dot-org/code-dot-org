@@ -2,6 +2,8 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import MultiCheckboxSelector from '../../MultiCheckboxSelector';
 import ProgressBoxForLessonNumber from './ProgressBoxForLessonNumber';
+import {connect} from 'react-redux';
+import {getUnpluggedLessonsForScript} from './sectionStandardsProgressRedux';
 
 const styles = {
   lessonListItem: {
@@ -10,27 +12,16 @@ const styles = {
   }
 };
 
-export class LessonStatusList extends Component {
-  static propTypes = {};
+class LessonStatusList extends Component {
+  static propTypes = {
+    unpluggedLessonList: PropTypes.array
+  };
 
   render() {
     return (
       <MultiCheckboxSelector
         noHeader={true}
-        items={[
-          {
-            id: 'one',
-            name: 'Lesson 1',
-            number: 1,
-            url: 'https://curriculum.code.org/csf-19/coursea/1/'
-          },
-          {
-            id: 'two',
-            name: 'Lesson 4',
-            number: 3,
-            url: 'https://curriculum.code.org/csf-19/coursea/3/'
-          }
-        ]}
+        items={this.props.unpluggedLessonList}
         itemPropName="lesson"
         selected={[]}
         onChange={() => {}}
@@ -67,3 +58,7 @@ ComplexLessonComponent.propTypes = {
 };
 
 export const UnconnectedLessonStatusList = LessonStatusList;
+
+export default connect(state => ({
+  unpluggedLessonList: getUnpluggedLessonsForScript()
+}))(LessonStatusList);
