@@ -5,6 +5,11 @@
   actions = Homepage.get_actions(request)
 
 - main_actions = capture_haml do
+  - if show_single_hero == "changeworld"
+    .hero-message-line1{style: "color: white; font-size: 28px; line-height: 28px; padding-top: 20px; padding-bottom: 20px; font-family: 'Gotham 5r', sans-serif"}
+      = hoc_s(:hoc2019_header_line1_mobile)
+    .hero-message-line2{style: "color: white; font-size: 28px; line-height: 28px; padding-bottom: 80px; font-family: 'Gotham 5r', sans-serif"}
+      = hoc_s(:hoc2019_header_line2_mobile)
   - if show_single_hero == "dance2019"
     -# Two lines of text
     .hero-message-line1{style: "font-size: 28px; line-height: 28px; padding-bottom: 10px; color: white"}
@@ -50,11 +55,9 @@
         Two headers with inverse media queries conditionally load the correctly-sized image.
       - response.add_header 'Link', "<#{entry[:image]}>; rel=preload; as=image; media=\"#{css_retina?(false)}\";"
       - response.add_header 'Link', "<#{entry[:image].gsub('.jpg', '_2x.jpg')}>; rel=preload; as=image; media=\"#{css_retina?}\";"
-      -# Temp: for dance2019, heroes will show/hide resposively, so use widehero_do_not_hide
-      .widehero_do_not_hide#fullwidth0{style: "background-position: #{entry[:centering]}; background-image: url(#{entry[:image]});", class: entry[:classname]}
+      .widehero#fullwidth0{style: "background-position: #{entry[:centering]}; background-image: url(#{entry[:image]});"}
     - else
-      -# Temp: for dance2019, heroes will show/hide responsively, so use widehero_do_not_hide
-      .widehero_do_not_hide.lazyload{id: "fullwidth#{index}", "data-bg"=> "#{entry[:image]}", style: "background-position: #{entry[:centering]}", class: entry[:classname]}
+      .widehero.lazyload{id: "fullwidth#{index}", "data-bg"=> "#{entry[:image]}", style: "background-position: #{entry[:centering]}"}
 
   #fullwidth
     - if request.site == 'code.org'
@@ -108,7 +111,6 @@
   - elsif show_single_hero
     #actions
       = main_actions
-
 
   #caption_container.container_responsive
     - unless show_single_hero
@@ -229,8 +231,6 @@
     var numWideHeroes = $(".widehero").length;
 
     if (numWideHeroes > 1) {
-      // Temporary for dance2019: don't cycle, even though we have multiple
-      // hero backgrounds, because we're using them responsively.
-      //timerId = setInterval(cycleImage, #{hero_display_time});
+      timerId = setInterval(cycleImage, #{hero_display_time});
     }
   });
