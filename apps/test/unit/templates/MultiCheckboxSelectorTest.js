@@ -123,14 +123,7 @@ describe('MultiCheckboxSelector', () => {
     });
 
     it('should not render a header', () => {
-      expect(
-        header.matchesElement(
-          <h2>
-            <input type="checkbox" checked={false} />
-            Some Items
-          </h2>
-        )
-      ).to.be.false;
+      expect(header).to.have.lengthOf(0);
     });
   });
 });
