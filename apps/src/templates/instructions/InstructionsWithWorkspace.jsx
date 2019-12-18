@@ -9,6 +9,7 @@ import {
   setInstructionsRenderedHeight
 } from '../../redux/instructions';
 import HeightResizer from './HeightResizer';
+import clamp from 'lodash/clamp';
 
 /**
  * A component representing the right side of the screen in our app. In particular
@@ -116,13 +117,16 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
    * @returns {number} How much we actually changed
    */
   handleHeightResize = delta => {
-    const currentHeight = this.props.instructionsHeight;
+    const {
+      instructionsHeight: oldHeight,
+      instructionsMaxHeight: maxHeight,
+      setInstructionsRenderedHeight: setHeight
+    } = this.props;
 
-    let newHeight = Math.max(MIN_HEIGHT, currentHeight + delta);
-    newHeight = Math.min(newHeight, this.props.instructionsMaxHeight);
+    const newHeight = clamp(oldHeight + delta, MIN_HEIGHT, maxHeight);
+    setHeight(newHeight);
 
-    this.props.setInstructionsRenderedHeight(newHeight);
-    return newHeight - currentHeight;
+    return newHeight - oldHeight;
   };
 
   render() {
