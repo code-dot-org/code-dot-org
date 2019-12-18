@@ -16,7 +16,7 @@ const styles = {
   }
 };
 
-/*export default*/ class TeacherDashboardHeader extends React.Component {
+class TeacherDashboardHeader extends React.Component {
   static propTypes = {
     currentSectionName: PropTypes.string.isRequired,
     currentScriptName: PropTypes.string.isRequired
@@ -35,8 +35,8 @@ const styles = {
           <div>
             <h1>{this.props.currentSectionName}</h1>
             <div>
-              <span style={styles.headerSectionPrompt}>Assigned to:</span>{' '}
-              {this.props.currentScriptName}
+              <span style={styles.headerSectionPrompt}>Assigned to:</span>
+              {` ${this.props.currentScriptName}`}
             </div>
           </div>
           <SelectSectionDropdown />
@@ -49,9 +49,10 @@ const styles = {
 
 export default connect(state => {
   let currentSectionId = state.teacherSections.selectedSectionId;
-  let currentSectionName = state.teacherSections.sections[currentSectionId];
+  let currentSectionName =
+    state.teacherSections.sections[currentSectionId].name;
 
-  let currentScriptId = state.ScriptSelection.scriptId;
+  let currentScriptId = state.scriptSelection.scriptId;
   let currentScriptName = state.scriptSelection.validScripts.filter(
     script => script.id === currentScriptId
   )[0].name;
