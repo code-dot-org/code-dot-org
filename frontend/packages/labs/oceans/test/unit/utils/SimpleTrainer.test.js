@@ -1,3 +1,7 @@
+/**
+ *  @jest-environment node
+ */
+
 import SimpleTrainer from '@ml/utils/SimpleTrainer';
 import * as tf from '@tensorflow/tfjs';
 

@@ -4,7 +4,6 @@
   "description": "",
   "main": "dist/main.js",
   "jest": {
-    "testEnvironment": "node",
     "moduleFileExtensions": [
       "js",
       "jsx"
