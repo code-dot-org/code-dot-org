@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import i18n from '@cdo/locale';
-import {LessonStatusList} from './LessonStatusList';
+import LessonStatusList from './LessonStatusList';
 import Button from '../../Button';
 import DialogFooter from '../../teacherDashboard/DialogFooter';
 
@@ -19,7 +19,7 @@ export class CreateStandardsReportStep1 extends Component {
           {i18n.completedUnpluggedLessons()}
         </h3>
         <LessonStatusList />
-        <div>{i18n.pluggedLessonsNote()}</div>
+        <p>{i18n.pluggedLessonsNote()}</p>
         <DialogFooter rightAlign>
           <Button
             text={i18n.next()}
