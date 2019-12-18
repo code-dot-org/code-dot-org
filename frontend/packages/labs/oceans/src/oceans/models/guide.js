@@ -55,7 +55,6 @@ const guides = [
       }
     },
     style: 'Info',
-    didYouKnow: true,
     image: trashBottleImage,
     imageStyle: imageStyleOverrides.bottle
   },
@@ -80,7 +79,6 @@ const guides = [
         return state.yesCount + state.noCount >= 15;
       }
     },
-    didYouKnow: true,
     style: 'Info',
     image: trashCanImage,
     imageStyle: imageStyleOverrides.can
@@ -228,7 +226,6 @@ const guides = [
         return state.yesCount + state.noCount >= 5;
       }
     },
-    didYouKnow: true,
     style: 'Info',
     image: seahorseImage,
     imageStyle: imageStyleOverrides.seahorse
@@ -254,7 +251,6 @@ const guides = [
         return state.yesCount + state.noCount >= 15;
       }
     },
-    didYouKnow: true,
     style: 'Info',
     image: turtleImage,
     imageStyle: imageStyleOverrides.turtle

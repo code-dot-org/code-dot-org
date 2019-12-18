@@ -1531,7 +1531,7 @@ let Guide = class Guide extends React.Component {
                 }}
               >
                 <div>
-                  {currentGuide.didYouKnow && (
+                  {currentGuide.style === 'Info' && (
                     <div style={styles.guideHeading}>
                       {I18n.t('didYouKnow')}
                     </div>
