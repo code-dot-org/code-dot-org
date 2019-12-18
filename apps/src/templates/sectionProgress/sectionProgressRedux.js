@@ -41,7 +41,7 @@ export const addScriptData = (scriptId, scriptData) => {
   // Filter to match scriptDataPropType
   const filteredScriptData = {
     id: scriptData.id,
-    excludeCsfColumnInLegend: scriptData.excludeCsfColumnInLegend,
+    csf: scriptData.isCSF,
     title: scriptData.title,
     path: scriptData.path,
     stages: scriptData.stages
@@ -129,7 +129,7 @@ export const ViewType = {
  */
 export const scriptDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
-  excludeCsfColumnInLegend: PropTypes.bool,
+  csf: PropTypes.bool,
   title: PropTypes.string,
   path: PropTypes.string,
   stages: PropTypes.arrayOf(
