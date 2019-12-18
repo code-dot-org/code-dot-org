@@ -14897,6 +14897,36 @@ es-MX:
         \n\n-   **Cambia el texto del botón** para que diga \"Presióname\".\n\n-   **Define
         el color del botón** para que sea rojo.\n\n<img src=\"https://images.code.org/4cab6a5233cf07df0d8e312932762012-image-1444314797615.gif\"
         style=\"width: 500px; float: middle\">"
+      CSDU4 - Design Mode - 16: |-
+        # Activa tu botón
+
+        En la última lección, te centraste en diseñar una página de tu aplicación en Modo de diseño. Esta es una forma excelente y rápida de descubrir el lado visual de una aplicación, pero no es muy funcional. Si haces clic en cualquiera de los botones que agregaste, no sucede nada. ¡Ahora estás trabajando para agregar algunas funciones básicas haciendo que los botones de tu aplicación realmente hagan algo!
+
+        \*\* Objetivo:\*\* Agregar código usando el Modo de diseño para que el botón responda a un clic.
+
+        # Hacer esto
+
+        Tu aplicación de inicio tiene dos elementos, una _etiqueta_ con la id `EtiquetaDeTítulo` y un _botón_ con el ID `cambiarBotónDeTítulo`. Para empezar, harás que el botón registre un mensaje en la consola cuando se haga clic.
+
+        -   En Modo de diseño, **haz clic en el botón proporcionado para editar sus propiedades**
+        -   Haz clic en la pestaña **Eventos**
+        -   Inserta un `enEvento` desde el Modo de diseño haciendo clic en **Insertar y mostrar código** debajo de la **Pestaña Eventos**.
+        -   Echa un vistazo al bloque que se agregó a la pestaña **Modo de código**.
+        -   Ejecuta el programa, haz clic en tu botón y **busca la salida en la _Consola de Depuración_** debajo del espacio de trabajo en lugar de la ventana de la aplicación. Discutiremos la _Consola de Depuración_ en el siguiente nivel.
+      CSDU4 - Design Mode - 17: |-
+        # Actualización de ID y depuración con el registro de la consola
+
+        Aquí tenemos un par de botones con controladores de eventos y sentencias de `registro.consola`, ¡pero todos están cambiados!
+
+        Deberíamos haberles dado a los botones mejores nombres de identificación para poder distinguir la diferencia en función de la identificación. **¿Puedes actualizar los nombres de ID y los mensajes `registro.consola` para que coincidan con el botón correcto?**
+
+        # Hacer esto
+
+        -   **Cambia las ID** de los botones en Modo de diseño a nombres más descriptivos.
+
+        -   Cambia al Modo de código y observa que los **desplegables de ID se han actualizado para incluir los nuevos ID**. (Aún debes seleccionar la ID correcta del menú desplegable).
+
+        -   **Actualiza los mensajes `registro.consola`** para que coincidan con los botones.
       CSDU4 - Design Mode - 18: "# Capas y eliminación\n\n<img src=\"https://images.code.org/9e620f70869de438c4f0c66663686876-image-1444678130772.gif\"
         style=\"width: 200px; float: right\">Los elementos de la interfaz de usuario
         pueden superponerse entre sí, por lo que querrás la posibilidad de cambiar
@@ -14915,6 +14945,37 @@ es-MX:
         style=\"width:200px ; border: solid 1px black\"></td>\n    <td style=\"text-align:center\"><img
         src=\"https://images.code.org/e45fc7d451c071683fd3b59466b106b0-image-1444684677212.png\"
         style=\"width:200px; border: solid 1px black\"></td>\n</tr>\n</table>"
+      CSDU4 - Design Mode - 19: "# Segunda pantalla\n\nLa mayoría de las aplicaciones
+        tienen más de una pantalla o página, y cada una tiene diferentes contenidos.
+        Con el Modo de diseño, puedes agregar rápidamente una nueva pantalla a tu
+        aplicación.\n\n# Hacer esto\n\nAgregarás una segunda pantalla a tu aplicación
+        y agregarás un botón a esa pantalla. ¡Asegúrate de estar usando buenas identificaciones!\n\n-
+        \  Arrastra <img src=\"https://images.code.org/4337b39cfd797ed9289b70fb6cb365fb-image-1444353631083.17.39
+        PM.png\" style=\"width: 50px\"> desde Caja de herramientas de diseño a tu
+        aplicación. ¡Ahora tienes dos pantallas!\n-   Usando el Modo de diseño, crea
+        un botón en tu nueva pantalla. <img src=\"https://images.code.org/bbf464e2fc94bacba39407d6842f2336-image-1478300698068.04.35
+        PM.png\" style=\"width: 150px\"> \n-   Establece las ID de tus pantallas y
+        botones en algo que tenga sentido, por ejemplo _\"pantallaDeInicio\"_, _\"pantallaDeDetalles\"_,
+        _\"botónDeInicio\"_ y _\"detailsButton\"_\n\nSiempre puedes usar el menú desplegable
+        de la pantalla en la parte superior de la ventana de la aplicación para cambiar
+        entre tus pantallas <img src=\"https://images.code.org/404e0b3f520a413c8a5e62e74b70bb19-image-1478300388689.58.59
+        PM.png\" style=\"width: 150px\"> "
+      CSDU4 - Design Mode - 20: |-
+        # Cambio de pantallas
+
+        Puedes establecer qué pantalla se muestra en su aplicación con el comando `configurarPantalla()`. Si está trabajando en bloques, puedes seleccionar a qué pantalla deseas cambiar desde un menú desplegable.
+
+        ![](<https://images.code.org/615fae136488e1e6d1349e4383388e08-image-1478303858022.13.25 PM.png>)
+
+        # Hacer esto
+
+        Utilizarás un bloque `enEvento()` con `configurarPantalla()` para hacer que los dos botones de tu aplicación cambien entre las dos pantallas.
+
+        -   Arrastra dos bloques `enEvento()`
+        -   Establece las ID para tus bloques `enEvento()` para cada uno de tus dos botones
+        -   Coloca un bloque `configurarPantalla` dentro de cada uno de los bloques `enEvento`
+        -   Elige la pantalla apropiada del menú desplegable de cada bloque `enEvento`
+        -   Prueba tu aplicación para asegurarte de que tus botones te permitan alternar entre las dos pantallas
       CSDU4 - Design Mode - 21: |-
         # Agregar imágenes
 
@@ -14929,6 +14990,21 @@ es-MX:
             -   \*\*Sube imágenes \*\* haciendo clic en "Elegir".
             -   **Nota:** Siempre puedes ver todos los archivos que has subido haciendo clic en el engranaje en la parte superior de la caja de herramientas. ![](<https://images.code.org/53b405b771bc11bf5d24c84c878c80dd-image-1444668067826.35.10 AM.png>)
         -   ¡Asegúrate de darle a tu imagen una buena ID!
+      CSDU4 - Design Mode - 3: |-
+        # ¿Cómo funcionan los eventos?
+
+        Las aplicaciones controladas por eventos están formadas por elementos que pueden desencadenar eventos (como botones) y fragmentos de código llamados **controladores de eventos**. Los controladores de eventos son comandos que "observan" que ciertos eventos ocurran en tu programa, y ​​luego ejecutan alguna función cuando ocurre un evento.
+
+        Cuando creas un controlador de eventos por primera vez desde el Modo de diseño, coloca un bloque `registro.consola ()` para ayudarte a probar el evento, pero puedes colocar casi cualquier código que desees dentro del controlador de eventos.
+
+        # Hacer esto
+
+        La caja de herramientas tiene un nuevo bloque llamado `configurarTexto` que te permite cambiar el texto de un elemento en la pantalla. Vas a modificar el controlador de eventos de botón para que cambie el texto del título al hacer clic.
+
+        -   Arrastra un bloque `configurarTexto ()` al _interior_ de la función de devolución de llamada `enEvento ()` (donde está actualmente el bloque `registro.consola ()`)
+        -   En el menú desplegable del bloque, selecciona "EtiquetaDeTítulo" (la identificación del elemento que deseas cambiar)
+        -   En la segunda entrada del bloque, reemplaza "texto" con un nuevo título para la aplicación
+        -   Ejecuta tu programa y haz clic en el botón para verlo funcionar
       CSDU4 - Design Mode - 4: |-
         # ID
 
@@ -15069,6 +15145,20 @@ es-MX:
 
         -   ¿En donde del App Lab puedes diseñar la interfaz de usuario para tu aplicación?
         -   ¿Cuales son algunos tipos de elementos que puedes agregar a tu aplicación?
+      CSDU4 Functionality visible: |-
+        # Control de visibilidad
+
+        Antes de esta lección, cuando estábamos proponiendo formas de simplificar la aplicación de prueba, mencionamos que era posible mostrar u ocultar elementos de diseño con código. Laboratorio de aplicaciones tiene dos funciones que te permiten controlar la visibilidad de un elemento:
+
+        -   `ocultarElemento()` hace invisible el elemento especificado
+        -   `mostrarElemento()` hace visible el elemento especificado
+
+        # Hacer esto
+
+        La aplicación proporcionada tiene una imagen y dos botones.
+
+        -   Adjunta un controlador de eventos al botón "Ocultar" que oculta la imagen al hacer clic
+        -   Adjunta un controlador de eventos al botón "Mostrar" que muestra la imagen al hacer clic
       CSDU4 List App Demo: |-
         # Administrador de listas
 
@@ -15299,6 +15389,69 @@ es-MX:
 
         -   Crea un evento 'up' para el botón izquierdo.
         -   Agrega código para apagar el LED cuando el botón vuelve hacia arriba.
+      CSDU6 - UI and Inputs - dropdown setText: |-
+        # configurarTexto y obtenerTexto
+
+        A menudo, querrás obtener el texto de un elemento de la interfaz de usuario y usarlo para establecer el texto de otro elemento en la pantalla. Puedes obtener el texto del menú desplegable cuando el usuario selecciona una nueva entrada y usarla para establecer el texto de la etiqueta "mostrarElección".
+      CSDU6 - UI and Inputs - get set with text input: |-
+        # configurarTexto y obtenerTexto
+
+        Ya has visto cómo usar obtenerTexto y configurarTexto. ¿Puedes hacer que esta aplicación obtenga el texto que el usuario escribió una vez que presionó enter y lo muestre en el área de texto en la parte inferior?
+
+        _Sugerencia: el evento "cambiar" se activa cuando el usuario hace clic en "enter" en un campo. Use un controlador de eventos para la entrada de texto observando el evento "cambiar"._
+      CSDU6 - UI and Inputs - getNumber: |-
+        # obtenerNúmero
+
+        **Código de inicio:** Este programa crea una calculadora simple, pero **hay algo mal con ella. Intenta poner 2 + 2.**
+
+        Podemos solucionar esto usando `obtenerNúmero()` en lugar de `obtenerTexto()`. ¿Puedes arreglar el programa cambiando `obtenerTexto()` a `obtenerNúmero()`?
+      CSDU6 - UI and Inputs - getNumber practice: |-
+        # obtenerNúmero
+
+        **Código de inicio:** El programa intenta actualizar el mostrarValor cada vez que cambia el valor del control deslizante, pero siempre establece el valor en 10.
+
+        ¿Puede usar `obtenerNúmero()` para obtener el valor del control deslizante y actualizar el valor de la pantalla a medida que cambia?
+      CSDU6 - UI and Inputs - getText: |-
+        # obtenerTexto
+
+        Intenta configurar un controlador de eventos que obtenga el texto del menú desplegable siempre que un usuario seleccione un nuevo elemento del menú desplegable. Necesitarás usar el getter `obtenerTexto()`. Siempre que uses un getter, debes guardarlo en una variable. Usa `registro.consola()` para asegurarte de que funciona.
+      CSDU6 - UI and Inputs - hide show: |-
+        # Ocultar y mostrar
+
+        Es un poco extraño que ambos botones estén en la pantalla al mismo tiempo. No necesitas el botón de detener la alarma hasta que la alarma esté activada. ¿Puedes hacer que los botones solo se muestren cuando sean necesarios?
+
+        -   Querrás que el botón de detener la alarma esté oculto cuando se inicia el programa. Puedes hacer esto en el Modo de diseño.
+
+        Sugerencia: cuando haces clic en el botón de activación de alarma, debes cambiar el texto, ocultar el botón de activación alarma _y_ mostrar el botón de detención de alarma.
+      CSDU6 - UI and Inputs - setProperty: |-
+        # color-de-fondo de configurarPropiedad
+
+        Cambia el `color-de-fondo` de un botón a un nuevo color aleatorio cada vez que se haga clic usando`configurarPropiedad()`.
+      CSDU6 - UI and Inputs - setProperty Image: |-
+        # imagen de configurarPropiedad
+
+        **Nota:** Este nivel comienza en el Modo de diseño.
+
+        Hay un elemento de imagen configurado para ti, pero no se muestra cuando sales del Modo de diseño porque no se le ha dicho qué imagen mostrar.
+
+        -   Utiliza el comando `configurarPropiedad()` para configurar la imagen del elemento Imagen de la interfaz de usuario en la pantalla.
+      CSDU6 - UI and Inputs - setProperty first level: |-
+        # configurarPropiedad
+
+        **Código de inicio:** Hay una llamada a `configurarPropiedad()` que establece el color del texto en azul cuando ejecutas el programa.
+
+        ¿Puedes agregar más llamadas a `configurarPropiedad()` que cambien otras cosas sobre el texto cuando ejecutas el programa? Intenta cambiar al menos 3 cosas más.
+      CSDU6 - UI and Inputs - setScreen: |-
+        # configurarPantalla
+
+        Comencemos con un setter que hayas usado antes de `configurarPantalla()`.
+
+        -   Haz que el botón Acerca de mí en la página de inicio vaya a la página Acerca de mí.
+        -   Haz que el botón Atrás en Acerca de mí vaya a la página de inicio.
+      CSDU6 - UI and Inputs - setText: |-
+        # configurarTexto
+
+        Vamos a comenzar a hacer una aplicación de alarma. Ya hemos configurado un controlador de eventos para el "activarBotónDeAlarma" que cambiará el texto "EtiquetaDeEstatus" a ENCENDIDO cuando se haga clic. ¿Se puede hacer que el botón de detener la alarma cambie el texto a APAGADO al hacer clic?
       CSDU6 - button LED prediction: Ver el nivel contenido para Markdown
       CSDU6 - button LED prediction_2018: Ver el nivel contenido para Markdown
       CSDU6 - button LED prediction_2019: Ver el nivel contenido para Markdown
@@ -16369,7 +16522,7 @@ es-MX:
       Dance_Party_02: |-
         ¡Hagamos bailar a este alce!
 
-        Arrastra el bloque \<<xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> al espacio de trabajo. Conéctalo debajo del bloque <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> Tu bailarín debería empezar a moverse después del cuarto compás.
+        Arrastra el bloque \<<xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> al espacio de trabajo. Conéctalo debajo del bloque <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> Tu bailarín debería empezar a moverse después del cuarto compás.
 
         Los **compases** se usan para contar el tiempo en la música. En este tutorial, un compás tiene cuatro tiempos.
       Dance_Party_03: |-
@@ -16434,12 +16587,12 @@ es-MX:
 
         A veces es posible que desees crear un patrón de movimientos de baile que elijas. Este nuevo bloque te permite hacer exactamente eso.
 
-        [blockly block][0]
+        <xml><block type="Dancelab_alternateMoves"><title name="GROUP">sprites</title><title name="N">2</title><title name="MOVE1">MOVES.Roll</title><title name="MOVE2">MOVES.ClapHigh</title></block></xml>
 
         Los movimientos que elijas arriba se repetirán en secuencia para siempre.
 
         -   ¡Crea una rutina alterna para el bailarín principal al frente!
-        -   Usa diferentes números para cambiar la velocidad a la que se alternan los movimientos. ¡Prueba `1` o`0.5` para alternar más rápidamente!
+        -   Usa diferentes números para cambiar la velocidad a la que se alternan los movimientos. ¡Prueba `1` o `0.5` para alternar más rápidamente!
       Dance_Party_extras_battle: |-
         # Equipos de baile
 
@@ -16469,16 +16622,24 @@ es-MX:
       Dance_Party_extras_every_beat_2019: |-
         # Negras
 
-        La mayoría de nuestros bailes utilizaron compases completos, pero cada compás está formado por 4 negras. Este baile usa [blockly block][0] para que el bailarín aplauda en cada negra, pero solamente luego de los primeros cuarto compases.
+        La mayoría de nuestros bailes utilizaron compases completos, pero cada compás está formado por 4 negras. Este baile usa <xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml> para que el bailarín aplauda en cada negra, pero solamente luego de los primeros cuatro compases.
 
         Intenta cambiar los números en los bloque para ver cómo cambia el baile.
 
         -   Experimenta con otras duraciones de notas (como 0,5 para una blanca o 0,125 para una corchea).
-        -   Añade algunos otros eventos.
+        -   Añade otros eventos.
       Dance_Party_extras_layout: |-
         # ¡Vamos a organizarnos!
 
         Echa un vistazo a este baile que utiliza el bloque `disposición` para cambiar la formación de los bailarines que acompañan. Prueba una de estas ideas para ampliarlo:
+
+        -   Crea un segundo grupo de bailarines en una disposición diferente
+        -   Cambia la disposición cuando se presiona una tecla
+        -   Cambia una propiedad cuando los bailarines cambian la formación
+      Dance_Party_extras_layout_2019: |-
+        # ¡Vamos a organizarnos!
+
+        Echa un vistazo a este baile que utiliza el bloque <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> para cambiar la formación de los bailarines que acompañan. Prueba una de estas ideas para ampliarlo:
 
         -   Crea un segundo grupo de bailarines en una disposición diferente
         -   Cambia la disposición cuando se presiona una tecla
@@ -16505,7 +16666,7 @@ es-MX:
       Dance_Party_extras_speed_2019: |-
         # Acelera, reduce la velocidad
 
-        El baile final utiliza el bloque [bloque blockly][0] para controlar que tan rápido se mueve cada bailarín. Experimenta con diferentes velocidades en diferentes puntos de la canción. No dudes en seguir experimentando con este baile o regresa a cualquiera de los bailes anteriores para mejorarlos.
+        El baile final utiliza el bloque <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> para controlar que tan rápido se mueve cada bailarín. Experimenta con diferentes velocidades en diferentes puntos de la canción. No dudes en seguir experimentando con este baile o regresa a cualquiera de los bailes anteriores para mejorarlos.
       Dance_Party_extras_visible: |-
         # ¿Dónde habrán ido?
 

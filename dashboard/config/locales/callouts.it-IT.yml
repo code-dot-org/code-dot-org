@@ -149,14 +149,14 @@ it-IT:
         dance_callout_11_a: Nuovo blocco!
         dance_callout_11_b: Nuovo blocco!
       Dance_2019_01:
-        dance_callout_01: Aggiungi questo blocco al tuo programma!
+        dance_callout_01: Qui scegli il tipo di ballerino.
       Dance_2019_02:
         dance_callout_11_a: Aggiungi questo blocco al tuo programma.
         arrow_buttons: Premi i pulsanti freccia per controllare il tuo ballerino.
       Dance_2019_04:
         dance_callout_02: Aggiungi questo blocco al tuo programma!
       Dance_2019_05:
-        dance_callout_05: Aggiungi un nuovo evento al programma.
+        dance_callout_05: Aggiungi un nuovo evento al tuo programma.
       Dance_2019_06:
         dance_party_11_5_groups: Nuovo blocco!
       Dance_2019_07:
@@ -879,11 +879,11 @@ it-IT:
       courseF_bee_for9_2019:
         courseF_bee_for9_1: I blocchi matematici li trovi qui dentro.
       courseF_bee_functions2:
-        courseF_bee_functions2_1: Questo blocco chiama una funzione. Clicca questo
-          bottono "modifica" per vedere cosa c'è all'interno!
+        courseF_bee_functions2_1: Questo blocco richiama una funzione. Clicca il pulsante
+          "modifica" per vedere cosa c'è all'interno!
       courseF_bee_functions6:
-        courseF_bee_functions6_1: Non dimenticare di guardare quì per più blocchi
-          che potrebbero aiutarti a renderlo più facile!
+        courseF_bee_functions6_1: Non dimenticarti che qui ci sono altri blocchi che
+          potrebbero semplificarti il lavoro!
       courseF_bee_functions_challenge1:
         courseF_bee_functions_challenge1_1: Quale codice dovresti inserire in questa
           funzione?
@@ -961,3 +961,5 @@ it-IT:
         grade5_artist_variables_triangles1_1: 'Guarda: c''è una nuova modalità per
           introdurre numeri nei blocchi. Questi blocchi "matematici" possono essere
           presi e spostati da un blocco all''altro!'
+      Dance_Party_11_5:
+        dance_party_11_5_groups: Guarda qui per blocchi "tutte le anatre"

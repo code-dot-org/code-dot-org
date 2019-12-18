@@ -736,7 +736,7 @@
   "toWander": "",
   "turnLeft": "obrni se levo",
   "turnRight": "obrni se desno",
-  "turnTooltip": "",
+  "turnTooltip": "Obrne me levo ali desno za 90 stopinj.",
   "unicorn": "",
   "vanish": "naredi nevidnega",
   "vanishActorN": "igralca {spriteIndex} naredi nevidnega",

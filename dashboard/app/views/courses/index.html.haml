@@ -1,5 +1,4 @@
 :ruby
-  launch_ai = DCDO.get('launch_ai', nil)
   lines_count = fetch_metrics['lines_of_code']
   lines_count = number_with_delimiter(lines_count, :delimiter => ',')
   students_count = fetch_user_metrics['number_students']
@@ -14,7 +13,6 @@
   courses_data[:codeorgurlprefix] = CDO.code_org_url
   courses_data[:signedout] = @is_signed_out
   courses_data[:modernelementarycoursesavailable] = @modern_elementary_courses_available
-  courses_data[:launch_ai] = launch_ai
 
   @page_title = @is_teacher ? I18n.t('courses_page.title_teacher') : I18n.t('courses_page.title_student')
 

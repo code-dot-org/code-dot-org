@@ -168,13 +168,31 @@ fil-PH:
         Course_4_SCV_6: Ang blokeng ito ay nagpapahintulot sa iyo na makapag-customize
           sa iyong kulat sa halos anumang mga bagay na gusto mong makita! Paglaruan
           ang mga numero para makita kung ano ang mangyayari!
+      CourseD_Dance_Party_01:
+        dance_callout_01: Idagdag ang block na ito sa iyong program!
+      CourseD_Dance_Party_02:
+        dance_callout_02: Idagdag ang block na ito sa iyong program!
+      CourseD_Dance_Party_04:
+        dance_callout_04: Idagdag ang block na ito sa iyong program!
+      CourseD_Dance_Party_06:
+        dance_callout_06: Idagdag ang bagong dancer dito
       Dance_2019_01:
         dance_callout_01: Add this block to your program!
       Dance_2019_02:
         dance_callout_11_a: Idagdag ang block na ito sa iyong program.
         arrow_buttons: Pindutin ang mga arrow button para kontrolin ang iyong dancer.
+      Dance_2019_04:
+        dance_callout_02: Idagdag ang block na ito sa iyong program!
       Dance_2019_05:
         dance_callout_05: Magdagdag ng isang bagong kaganapan sa iyong programa.
+      Dance_Party_01:
+        dance_callout_01: Idagdag ang block na ito sa iyong program!
+      Dance_Party_02:
+        dance_callout_02: Idagdag ang block na ito sa iyong program!
+      Dance_Party_04:
+        dance_callout_04: Idagdag ang block na ito sa iyong program!
+      Dance_Party_06:
+        dance_callout_06: Idagdag ang bagong dancer dito
       Function intro Ryan:
         Function_intro_Ryan_1: Ang maliit na mga instruksyon na ito ay nagsasabi sa
           kompyuter na magpatakbo ng MALALAKING tipag ng code na may parehong mga
@@ -719,3 +737,15 @@ fil-PH:
         grade5_artist_variables_triangles1_1: Bigyang-pansin na ang mga bloke ngayon
           ay mayroon nang bagong paraan para maglagay ng mga numero. Ang mga `math`
           na mga bloke ay maaaring hilahin palabas at igalaw sa paligid!
+      Dance_2019_06:
+        dance_party_11_5_groups: Bagong block!
+      Dance_2019_07:
+        setprop_hint: Bagong block!
+      Dance_2019_09:
+        new_block_3: Bagong block!
+        new_block_4: Bagong block!
+      Dance_Party_11:
+        dance_callout_11_a: Bagong block!
+        dance_callout_11_b: Bagong block!
+      Dance_Party_11_5:
+        dance_party_11_5_groups: Tingnan dito para sa mga block na "lahat pato"

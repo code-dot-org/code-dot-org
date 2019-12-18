@@ -9,7 +9,7 @@ cs-CZ:
         answers:
         - text: Začni se čtvercem<br/> dej trojúhelník nad čtverec<br/> dje trojúhelník
             pod čtverec
-        - {}
+        - correct: true
         - text: Začni se čtvercem<br/> Polož rovnoběžník nad čtverec<br/> dej trojúhelník
             vpravo od rovnoběžník
         - text: Začni se čtverecem <br/> dej trojúhelník pod čtverec<br/> dej rovnoběžník
@@ -22,7 +22,7 @@ cs-CZ:
         - text: Který obrázek <em>nebude</em> se provede tímto algoritmem?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 Big Event Match 1:
@@ -58,14 +58,14 @@ cs-CZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 Getting Loopy Multi 1:
         title: Vícenásobná volba
         questions:
         - text: Jak by si zjednodušil s cykly tuto posloupnost?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -86,7 +86,7 @@ cs-CZ:
         - text: Který program dělá tento obrázek?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 Maze Match 2:
         title: Porovnávací bludiště
@@ -106,7 +106,7 @@ cs-CZ:
         - text: Která sada bloků mě dostane k praseti?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 Relay Programming Multi 1:
@@ -116,7 +116,7 @@ cs-CZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       2-3 Relay Programming Multi 2:
         title: Vícenásobná volba
         questions:
@@ -124,13 +124,13 @@ cs-CZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       2-3 artist debug multi 1:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 artist functions multi 1:
@@ -138,7 +138,7 @@ cs-CZ:
         questions:
         - text: Vyber správné bloky k nakreslení tohoto obrázku pomocí zadané funkce
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 artist loops match 1:
@@ -161,7 +161,7 @@ cs-CZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 artist loops multi 2:
         title: 'Umělec - cykly: Vícenásobná volba'
@@ -171,7 +171,7 @@ cs-CZ:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       2-3 artist match 1:
         title: Umělecké porovnání
         content1: Porovnej tvar s bloky, abys to dokončil.
@@ -191,14 +191,14 @@ cs-CZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 bee conditionals multi 3:
         questions:
         - text: Vyber nejlepší bloky.
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 bee loops multi 1:
@@ -206,7 +206,7 @@ cs-CZ:
         questions:
         - text: Které bloky sesbírají všechen nektar?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -227,7 +227,7 @@ cs-CZ:
         - text: Která sada bloků je správnou odpovědí?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 Algorithms Match 1:
@@ -253,6 +253,7 @@ cs-CZ:
         - text: Pečení cukroví
         - text: Nakupování z nákupního lístku
         - text: Banán
+          correct: true
       4-5 Computational Thinking Match 1:
         title: Porovnání
         content1: Každý z těchto vozidel byla rozložená na menší kousky. Porovnej
@@ -275,6 +276,7 @@ cs-CZ:
         answers:
         - text: Seattle _____ _____ _____.
         - text: _____ je město _____.
+          correct: true
         - text: _____ je _____ _____.
         - text: Eugene je město _____.
       4-5 Crowdsourcing Multi 1:
@@ -283,13 +285,14 @@ cs-CZ:
         - text: Který z těchto obrázků představuje nejlépe crowdsourcing?
         answers:
         - {}
-        - {}
+        - correct: true
       4-5 Crowdsourcing Multi 2:
         title: Vícenásobná volba
         questions:
         - text: Které z těchto činností by byla nejlepší pro praktikování crowdsourcing?
         answers:
         - text: Úklid tvého pokoje
+          correct: true
         - text: Jíst tvůj dezert
         - text: Kartáčování tvých vlasů
         - text: Mytí tvého obličeje
@@ -300,6 +303,7 @@ cs-CZ:
         answers:
         - text: Tvoje narozeniny
         - text: Tvoje oblíbené jídlo
+          correct: true
         - text: Tvoje adresa
         - text: Číslo kreditní karty rodičů
       4-5 Internet Multi 1:
@@ -311,7 +315,7 @@ cs-CZ:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       4-5 Internet Multi 2:
         title: Vícenásobná volba
         questions:
@@ -319,7 +323,7 @@ cs-CZ:
             website jsi?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 Songwriting Multi 1:
@@ -328,7 +332,7 @@ cs-CZ:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 Suncatchers Match 1:
@@ -352,7 +356,7 @@ cs-CZ:
             1?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       4-5 artist loops multi 1:
         title: 'Umělec - cykly: Vícenásobná volba'
@@ -360,7 +364,7 @@ cs-CZ:
         - text: Které bloky vytváří návrh?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 artist multi 1:
@@ -369,7 +373,7 @@ cs-CZ:
         - text: Které bloky nakreslí obdélník s obvodem 100?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 artist multi 2:
@@ -379,7 +383,7 @@ cs-CZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       4-5 bee conditionals multi 1:
         title: Včelí podmínková vícenásobná volba
@@ -388,7 +392,7 @@ cs-CZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       4-5 bee debug multi 1:
         title: Včelí ladící vícenásobná volba
@@ -396,7 +400,7 @@ cs-CZ:
         - text: Která verze funkce bude fungovat?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 bee loops multi 1:
@@ -404,7 +408,7 @@ cs-CZ:
         questions:
         - text: Které bloky vyřeší puzzle?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -413,7 +417,7 @@ cs-CZ:
         questions:
         - text: Které bloky vyřeší puzzle?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -434,7 +438,7 @@ cs-CZ:
         questions:
         - text: Které bloky vyřeší puzzle?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -443,19 +447,19 @@ cs-CZ:
       CSD Header Size MC:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U2 Design Project:
@@ -576,7 +580,7 @@ cs-CZ:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -585,7 +589,7 @@ cs-CZ:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -594,7 +598,7 @@ cs-CZ:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -602,19 +606,19 @@ cs-CZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018_2019:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Keypress Matching:
         questions:
@@ -649,7 +653,7 @@ cs-CZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Sprite Movement Predict Multi_2018:
         questions:
@@ -657,7 +661,7 @@ cs-CZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019:
         questions:
@@ -665,14 +669,14 @@ cs-CZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Sprites intro predict multi:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U3 Sprites intro predict multi_2018:
@@ -680,7 +684,7 @@ cs-CZ:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
@@ -688,7 +692,7 @@ cs-CZ:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U3 combining rep:
@@ -746,7 +750,7 @@ cs-CZ:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       CSD U6 array multi_2018:
         questions:
         - {}
@@ -754,7 +758,7 @@ cs-CZ:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       CSD U6 array multi_2018_2019:
         questions:
         - {}
@@ -762,14 +766,14 @@ cs-CZ:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       CSD U6 setProperty predict multi:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U6 setProperty predict multi_2018:
         questions:
@@ -777,8 +781,39 @@ cs-CZ:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
+      Dance_Party_extras_intro:
+        markdown: "# Tancuj dál! \n\nVe 2. části budeš vytvářet svůj vlastní projekt.
+          Tady nenajdeš žádné hádanky - místo toho je tu několik projektů, které ukazují
+          různé možnosti vytváření složitých tanečních párty. \n\nTyto úrovně můžeš
+          procházet _v libovolném pořadí_. Přejdi do jiné a podívej se, jak se něco
+          dělalo v předchozí úrovni, nebo kombinuj koncepty z různých projektů. Vyzkoušej
+          je všechny, vyber si své oblíbené a věnuj čas jejich přidání do svého vlastního
+          projektu. \n\n<a class=\"btn btn-large btn-primary next-stage submitButton
+          pull-right\">Pokračovat</a> \n\n<div class=\"clearfix\"></div> \n\n<div
+          style=\"float: left; margin: 10px\"> \n<a href=\"2\">\n <h2> \nSem a tam
+          \n</h2> \n\n<img src=\"https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif\"></a>
+          \n\n</div> \n\n<div style=\"float: left; margin: 10px\"> \n<a href=\"3\">
+          \n<h2> \nVíce tlačítek \n</h2> \n\n<img src=\"https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif\"></a>
+          \n\n</div> \n\n<div style=\"float: left; margin: 10px\"> \n<a href=\"4\">
+          \n<h2> \nUtvoř sestavu \n</h2> \n\n<img src=\"https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif\"></a>
+          \n\n</div> \n\n<div style=\"float: left; margin: 10px\">\n <a href=\"5\">\n
+          <h2>\n Kam zmizeli?\n </h2> \n\n<img src=\"https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif\"></a>\n\n
+          </div> \n\n<div style=\"float: left; margin: 10px\"> \n<a href=\"6\"> \n<h2>
+          \nTaneční skupiny \n</h2> \n\n<img src=\"https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif\"></a>
+          \n\n</div> \n\n<div style=\"float: left; margin: 10px\"> \n<a href=\"7\">
+          \n<h2> \nČtvrťové noty \n</h2>\n\n <img src=\"https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif\"></a>\n\n
+          </div> \n\n<div style=\"float: left; margin: 10px\"> \n<a href=\"8\"> \n<h2>
+          \nBasy, středy a výšky \n</h2>\n\n <img src=\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\"></a>\n\n
+          </div> \n\n<div style=\"float: left; margin: 10px\"> \n<a href=\"9\"> \n<h2>\n
+          Zrychli, zpomal \n</h2>\n\n <img src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"></a>
+          \n\n</div>\n"
+      EnvelopeVariables-Unplugged:
+        markdown: 'Proměnné umožňují spoustu svobody v oboru informatiky. Tato lekce
+          pomáhá vysvětlit, co jsou proměnné a jak je lze použít mnoha různými způsoby.
+
+'
       Internet Simulator Setup 2:
         title: název
       K-1 Artist 1 Multi 1:
@@ -787,7 +822,7 @@ cs-CZ:
         - text: Které bloky vyřeší hádanku?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Artist 1 Multi 2:
@@ -795,7 +830,7 @@ cs-CZ:
         questions:
         - text: Které bloky nakreslí čtverec?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -818,7 +853,7 @@ cs-CZ:
         - text: Kolik je to nektaru?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Bee 1 Multi 2:
@@ -829,7 +864,7 @@ cs-CZ:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Bee Loops Match 1:
         title: Porovnání
         content2: Porovnej bloky
@@ -862,13 +897,13 @@ cs-CZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Getting Loopy Multi 1:
         title: Vícenásobná volba
         questions:
         - text: Jak by si zjednodušil s cykly tuto posloupnost?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Happy Maps Multi 1:
@@ -877,7 +912,7 @@ cs-CZ:
         - text: Kterou šipkou se dostane Flurb k pokladu?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Keep it Private Multi 1:
@@ -885,7 +920,7 @@ cs-CZ:
         questions:
         - text: Které informace bys měl <strong>sdílet online</strong>?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Maze Debugging Multi 1:
@@ -893,7 +928,7 @@ cs-CZ:
         questions:
         - text: Která volba by měla být posledním blokem?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -902,7 +937,7 @@ cs-CZ:
         questions:
         - text: Který opakovací blok je stejný?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Maze Loops Multi 2:
@@ -912,7 +947,7 @@ cs-CZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Maze Match 1:
         title: Porovnání
         content2: Přiřaď hádanky k blokům
@@ -934,7 +969,7 @@ cs-CZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       K-1 Move It Multi 1:
         title: Vícenásobná volba
@@ -942,7 +977,7 @@ cs-CZ:
         - text: Kterým algoritmem se dostane Flurb ke květinám?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Plant a Seed Multi 1:
@@ -952,14 +987,14 @@ cs-CZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Plant a Seed Multi 2:
         title: Vícenásobná volba
         questions:
         - text: Který krok by měl vyplnit prázdná pole pro tento algoritmus?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       K-1 Word Search Multi 1:
         title: Vícenásobná volba
@@ -967,7 +1002,7 @@ cs-CZ:
         - text: Které bloky vytváří "MOVE"?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       K-1 Word Search Multi 3:
         title: Vícenásobná volba
@@ -975,7 +1010,7 @@ cs-CZ:
         - text: Které slovo je napsáno?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       Multi-Screen Apps:
         title: název
@@ -990,7 +1025,7 @@ cs-CZ:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - feedback: Nesprávně
       behaviors 4 predict:
@@ -998,8 +1033,10 @@ cs-CZ:
         - {}
         answers:
         - {}
-        - {}
-        - {}
+        - text: Diagonálně
+          correct: true
+        - text: Cik cak
+          feedback: 'Špatně. '
         - feedback: Nesprávně
       courseC_multi_artist_prog6_predict1:
         questions:
@@ -1007,7 +1044,7 @@ cs-CZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseC_multi_artist_prog6_predict1_2018:
         questions:
@@ -1015,7 +1052,7 @@ cs-CZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
         questions:
@@ -1023,38 +1060,41 @@ cs-CZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseC_multi_harvester_loops11_predict1:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
       courseC_multi_harvester_loops11_predict1_2018:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
       courseC_multi_maze_debugging8_predict1:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_debugging8_predict1_2018:
@@ -1062,7 +1102,7 @@ cs-CZ:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
@@ -1070,7 +1110,7 @@ cs-CZ:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_programming8_predict1:
@@ -1078,7 +1118,7 @@ cs-CZ:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_programming8_predict1_2018:
@@ -1086,7 +1126,7 @@ cs-CZ:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
@@ -1094,7 +1134,7 @@ cs-CZ:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_starWars_predict1:
@@ -1103,7 +1143,7 @@ cs-CZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - text: Nevím
       courseC_multi_starWars_predict1_2018:
         questions:
@@ -1111,7 +1151,7 @@ cs-CZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - text: Nevím
       courseC_multi_starWars_predict1_2018_2019:
         questions:
@@ -1119,14 +1159,14 @@ cs-CZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - text: Nevím
       courseC_multi_starWars_predict2:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_starWars_predict2_2018:
@@ -1134,7 +1174,7 @@ cs-CZ:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_starWars_predict2_2018_2019:
@@ -1142,7 +1182,7 @@ cs-CZ:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_artist_binary8_predict1:
@@ -1153,6 +1193,7 @@ cs-CZ:
         - text: B
         - text: C
         - text: D
+          correct: true
       courseD_multi_artist_binary8_predict1_2018:
         questions:
         - {}
@@ -1161,6 +1202,7 @@ cs-CZ:
         - text: B
         - text: C
         - text: D
+          correct: true
       courseD_multi_artist_binary8_predict1_2018_2019:
         questions:
         - {}
@@ -1169,11 +1211,13 @@ cs-CZ:
         - text: B
         - text: C
         - text: D
+          correct: true
       courseD_multi_artist_nestedLoops9_predict1:
         questions:
         - {}
         answers:
         - text: A
+          correct: true
         - text: B
         - text: C
         - {}
@@ -1182,6 +1226,7 @@ cs-CZ:
         - {}
         answers:
         - text: A
+          correct: true
         - text: B
         - text: C
         - {}
@@ -1190,6 +1235,7 @@ cs-CZ:
         - {}
         answers:
         - text: A
+          correct: true
         - text: B
         - text: C
         - {}
@@ -1198,7 +1244,7 @@ cs-CZ:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_bee_conditionals1_predict1_2018:
@@ -1206,7 +1252,7 @@ cs-CZ:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
@@ -1214,14 +1260,14 @@ cs-CZ:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_bee_conditionals7_predict2:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1229,7 +1275,7 @@ cs-CZ:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1237,7 +1283,7 @@ cs-CZ:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1247,7 +1293,7 @@ cs-CZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
         questions:
@@ -1255,7 +1301,7 @@ cs-CZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         questions:
@@ -1263,31 +1309,34 @@ cs-CZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_bee_nestedLoops9_predict2:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
       courseD_multi_collector_debugging10_predict1:
         questions:
@@ -1295,7 +1344,7 @@ cs-CZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_condLoops9_predict1:
         questions:
@@ -1303,7 +1352,7 @@ cs-CZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
         questions:
@@ -1311,7 +1360,7 @@ cs-CZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         questions:
@@ -1319,14 +1368,14 @@ cs-CZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_ramp13:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_farmer_while10_predict2:
@@ -1334,7 +1383,7 @@ cs-CZ:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_farmer_while10_predict2_2018:
@@ -1342,7 +1391,7 @@ cs-CZ:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
@@ -1350,7 +1399,7 @@ cs-CZ:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_farmer_while4_predict1:
@@ -1359,7 +1408,7 @@ cs-CZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_while4_predict1_2018:
         questions:
@@ -1367,7 +1416,7 @@ cs-CZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
         questions:
@@ -1375,13 +1424,13 @@ cs-CZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_maze_until10_predict2:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1389,7 +1438,7 @@ cs-CZ:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1397,7 +1446,7 @@ cs-CZ:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1406,7 +1455,7 @@ cs-CZ:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_maze_until2_predict1_2018:
@@ -1414,7 +1463,7 @@ cs-CZ:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
@@ -1422,7 +1471,7 @@ cs-CZ:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_scrat_predict1:
@@ -1430,14 +1479,14 @@ cs-CZ:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseE_multi_bee_functions_predict1:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1448,14 +1497,14 @@ cs-CZ:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseE_multi_farmer_functions11_predict_2018:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
         questions:
@@ -1463,7 +1512,7 @@ cs-CZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseE_prediction_artistFunction1:
         questions:
@@ -1472,7 +1521,7 @@ cs-CZ:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseE_prediction_artistFunction1_2018:
         questions:
         - {}
@@ -1480,7 +1529,7 @@ cs-CZ:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseE_prediction_artistFunction1_2018_2019:
         questions:
         - {}
@@ -1488,13 +1537,13 @@ cs-CZ:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseF_bee_variables_8a_2018:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_bee_variables_8a_2018_2019:
@@ -1502,7 +1551,7 @@ cs-CZ:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_artist_for10_predict1:
@@ -1511,7 +1560,7 @@ cs-CZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseF_multi_artist_for10_predict1_2018:
         questions:
@@ -1519,7 +1568,7 @@ cs-CZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
         questions:
@@ -1527,13 +1576,13 @@ cs-CZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseF_multi_artist_fwp2_predict1:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1541,7 +1590,7 @@ cs-CZ:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1549,7 +1598,7 @@ cs-CZ:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1557,7 +1606,7 @@ cs-CZ:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1566,14 +1615,14 @@ cs-CZ:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_bee_conditionals7_predict2:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1582,7 +1631,7 @@ cs-CZ:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_bee_for3_predict1_2018:
@@ -1590,7 +1639,7 @@ cs-CZ:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_bee_for3_predict1_2018_2019:
@@ -1598,7 +1647,7 @@ cs-CZ:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_bee_fwp9_predict1:
@@ -1606,14 +1655,14 @@ cs-CZ:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_playlab_variables4c_predictive1:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1622,7 +1671,7 @@ cs-CZ:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       coursee_prediction_artistfunction2_2018:
@@ -1630,7 +1679,7 @@ cs-CZ:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       coursee_prediction_artistfunction2_2018_2019:
@@ -1638,7 +1687,7 @@ cs-CZ:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       grade2_multi_collector_A_predict1:
@@ -1646,7 +1695,7 @@ cs-CZ:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       grade2_multi_collector_A_predict1_2018:
@@ -1654,7 +1703,7 @@ cs-CZ:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
@@ -1662,6 +1711,6 @@ cs-CZ:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}

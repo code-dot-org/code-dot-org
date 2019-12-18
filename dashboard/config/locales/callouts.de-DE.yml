@@ -2,6 +2,10 @@
 de-DE:
   data:
     callouts:
+      2-3 Artist Debugging 1:
+        2-3_Artist_Debugging_1_a: Der Zeichner hat keinen "Step"-Button, aber du kannst
+          den Schieberegler nach links ziehen, um zu sehen, wie dein Programm sorgfältiger
+          läuft.
       2-3 Bee Conditionals 5:
         Bee_Cond_5_1a: Violette Blumen haben entweder 1 oder 0 Nektar.... doch das
           weißt du nicht, bis du den Code ausführst!

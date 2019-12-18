@@ -979,6 +979,13 @@ ro-RO:
         &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title>\n
         \   <title name=\"LAYOUT\">\"circle\"</title>\n  </block></xml>\nAcum poți
         crea imediat un grup de dansatori!"
+      Dance_2019_07: "Fiecare dansator are un set de _proprietăți_ care controlează
+        modul în care arată acesta. \n\nFolosește <xml><block type=\"Dancelab_setPropEach\"
+        block-text=\"the set block\"><title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;,
+        &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;,
+        &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title><title
+        name=\"PROPERTY\">\"scale\"</title><title name=\"VAL\">???</title></block></xml>
+        sub un bloc eveniment verde pentru a apropia sau a depărta dansatorii."
       Dance_2019_08: Dansatorii au o proprietate de „colorație" care poate adăuga
         un strat de culoare. Încearcă să schimbi culoarea unuia dintre dansatorii
         tăi (sau a unui grup întreg)!
@@ -1047,11 +1054,11 @@ ro-RO:
         Verifică acest bloc:
 
         <xml>
-        <block type="Dancelab_makeNewDanceSpriteGroup">
-        <title name="N">6</title>
-        <title name="COSTUME">"RAŢĂ"</title>
-        <title name="LAYOUT">"cerc"</title>
-        </block></xml>
+          <block type="Dancelab_makeNewDanceSpriteGroup">
+            <title name="N">6</title>
+            <title name="COSTUME">"DUCK"</title>
+            <title name="LAYOUT">"circle"</title>
+          </block></xml>
 
         Acum poţi creea mai mulţi dansatori în acelaşi timp!
 
@@ -1065,7 +1072,7 @@ ro-RO:
       Dance_Party_extras_alternate_2019: |-
         # Să intrăm  în formație!
 
-        Vezi acest dans care folosește blocul [blockly block][0] pentru a modifica formația dansatorilor de rezervă pe parcursul dansului. Încearcă una dintre aceste idei pentru a dezvolta dansul:
+        Vezi acest dans care folosește blocul <xml><block type="Dancelab_alternateMoves"><title name="GROUP">sprites</title><title name="N">2</title><title name="MOVE1">MOVES.Roll</title><title name="MOVE2">MOVES.ClapHigh</title></block></xml> pentru a modifica formația dansatorilor de rezervă pe parcursul dansului. Încearcă una dintre aceste idei pentru a dezvolta dansul:
 
         -   Creează un al doilea grup de dansatori cu un aranjament diferit
         -   Modifică aranjamentul la apăsarea unei taste
@@ -1095,9 +1102,14 @@ ro-RO:
         niște evenimente `după măsură`.\n-   Schimbă „măsurile” în „secunde” și încearcă
         să-ți cronometrezi dansurile în acest fel.\"."
       Dance_Party_extras_every_beat_2019: |-
-        # Grăbește-l, încetinește-l
+        # Sfert de note
 
-        Acest dans de final folosește blocul [blockly block][0] pentru a controla cât de repede se mișcă fiecare dansator. Experimentează cu diferite viteze pe parcursul mai multor momente din cântec. Improvizează liber la acest dans sau revino la oricare dintre dansurile anterioare pentru a-l face și mai tare.
+        Majoritatea dansurilor noastre folosesc măsuri întregi, dar fiecare măsură este alcătuită din 4 sferturi de note. Acest dans folosește [blockly block][0] pentru a-l face pe dansator să aplaude la fiecare sfert de notă după a cincea măsură.
+
+        Încearcă să modifici cifrele din bloc pentru a vedea modul în care aceasta schimbă dansul.
+
+        -   Experimentează cu alte durate ale notelor (ex. 0,5 pentru o doime sau 0,125 pentru o optime).
+        -   Adaugă alte evenimente.
       Dance_Party_extras_layout: "\"# Să trecem în formație!\n\nVezi acest dans care
         folosește blocul `aranjament` pentru a modifica formația dansatorilor de rezervă
         pe durata dansului. Încearcă una dintre aceste idei pentru a dezvolta dansul:\n\n-
@@ -1119,15 +1131,15 @@ ro-RO:
       Dance_Party_extras_speed_2019: |-
         # Grăbește-l, încetinește-l
 
-        Acest dans de final folosește blocul [blockly block][0] pentru a controla cât de repede se mișcă fiecare dansator. Experimentează cu diferite viteze pe parcursul mai multor momente din cântec. Improvizează liber la acest dans sau revino la oricare dintre dansurile anterioare pentru a-l face și mai tare.
+        Acest dans de final folosește blocul <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> pentru a controla cât de repede se mișcă fiecare dansator. Experimentează cu diferite viteze pe parcursul mai multor momente din cântec. Improvizează liber la acest dans sau revino la oricare dintre dansurile anterioare pentru a-l face și mai tare.
       Dance_Party_extras_visible: "\"# Unde au dispărut?\n\nAcest dans arată și ascunde
         două grupuri diferite de dansatori. Vizionează-l și apoi adaugă ceva personal.\n\n-
         \  Adaugă un alt grup de dansatori                                                                                                                  \n-
         \  Arată și ascunde dansatori folosind tastele cu săgeată                                                                          \n-
         \  Ascunde toți dansatorii și treci la un efect de fundal captivant\""
-      Dance_Party_extras_visible_2019: "\"# Unde au dispărut?\n\nAcest dans arată
-        și ascunde două grupuri diferite de dansatori. Vizionează-l și apoi adaugă
-        ceva personal.\n\n-   Adaugă un alt grup de dansatori                                                                                                                  \n-
+      Dance_Party_extras_visible_2019: "\"# Unde au dispărut?\n\nAcest dans arată și ascunde
+        două grupuri diferite de dansatori. Vizionează-l și apoi adaugă ceva personal.\n\n-
+        \  Adaugă un alt grup de dansatori                                                                                                                  \n-
         \  Arată și ascunde dansatori folosind tastele cu săgeată                                                                          \n-
         \  Ascunde toți dansatorii și treci la un efect de fundal captivant\""
       HOC 2018 Level_12: Felicitări! Mediul acvatic deschis te aşteaptă. Construieşte
@@ -1523,3 +1535,18 @@ ro-RO:
       frozen square snowflake: Poţi crea un fulg de zăpadă folosind blocul "Repetă"
         pentru a face un pătrat de 10 ori, precum și blocul "Întoarce" pentru a se
         roti cu 36 de grade între fiecare pătrat?
+      Dance_Party_extras_layout_2019: |-
+        # Hai să ne formăm!
+
+        Verificați acest dans care folosește blocul <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> pentru a schimba formarea dansatorilor de rezervă pe tot parcursul dansului. Încercați una dintre aceste idei pentru a o extinde:
+
+        -   Creați un al doilea grup de dansatori într-o dispunere diferită
+        -   Modificați aspectul când este apăsată o tastă
+        -   Modificați o proprietate atunci când dansatorii schimbă formația
+      Dance_Party_extras_mixed_2019: |-
+        # Mai multe butoane
+
+        Acest dans vă permite să controlați proprietățile dansatorilor în timp real, în timp ce dansează automat. Încercați să faceți ca alte proprietăți să se schimbe atunci când apăsați butoanele. De exemplu:
+
+        -   Alegeți nuanța dansatorului când apăsați „în jos”.
+        -   Adăugați un grup de dansatori cu un layout aleatoriu când apăsați „spațiu”.

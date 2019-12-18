@@ -55,7 +55,7 @@
       cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','collate_pdfs')
       cronjob at:'30 16,17 * * *', do:deploy_dir('bin', 'cron', 'update_dotd')
       cronjob at:'0 * * * *', do:deploy_dir('bin', 'cron', 'start_broken_link_checker'), notify:'dev+crontab@code.org'
-      #cronjob at:'0 20 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')
+      cronjob at:'0 20 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'update_dts')
       cronjob at:'0 17 * * *', do:deploy_dir('bin', 'cron', 'commit_trusted_proxies')
     end
@@ -76,7 +76,7 @@
       cronjob at:'18 22 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')
       # This should be run shortly after the commit_content job, running on both levelbuilder and
       # staging.
-      #cronjob at:'5 19 * * 1-5', do:deploy_dir('bin', 'cron', 'merge_lb_to_staging')
+      cronjob at:'5 19 * * 1-5', do:deploy_dir('bin', 'cron', 'merge_lb_to_staging')
     end
 
     if node.chef_environment == 'production' # production daemon
@@ -92,7 +92,8 @@
       cronjob at:'*/10 * * * *', do:deploy_dir('bin', 'cron', 'delete_twilio_data')
       cronjob at:'* * * * *', do:deploy_dir('bin', 'cron', 'confirm_usage')
       cronjob at:'5 16 * * *', do:deploy_dir('bin', 'cron', 'calculate_workshop_survey_results')
-      cronjob at:'0 */2 * * *', do:deploy_dir('bin', 'cron', 'teacher_applications_to_s3')
+      # [Brad] Disabled so that we can do the first run manually on production-daemon, to update credentials.
+      # cronjob at:'0 */2 * * *', do:deploy_dir('bin', 'cron', 'teacher_applications_to_gdrive')
       cronjob at:'0 11 * * *', do:deploy_dir('bin', 'cron', 'workshops_to_s3')
       cronjob at:'00 17 * * *', do:deploy_dir('bin', 'cron', 'stop_inactive_adhoc_instances')
       cronjob at:'0 10 * * *', do:deploy_dir('bin', 'cron', 'redshift_rollups')
@@ -106,8 +107,6 @@
     # 'daemons' in all environments.
     cronjob at:'*/1 * * * *', do:deploy_dir('aws', 'ci_build'), notify: 'dev+build@code.org'
     cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'mysql-metrics')
-    cronjob at:'0 12 * * *', do:deploy_dir('bin', 'cron', 'applab_datasets', 'weather')
-    
 
     # background tasks that adhoc instances don't need to run.
     unless node.chef_environment == 'adhoc'

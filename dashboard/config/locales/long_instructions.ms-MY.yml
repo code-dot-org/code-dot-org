@@ -3,11 +3,11 @@ ms-MY:
   data:
     long_instructions:
       CourseD_Dance_Party_01: |-
-        Mari kita adakan majlis tari-menari!
+        _Mari kita adakan majlis tari-menari!_
 
-        \_Seret blok `buat baharu` ke dalam ruang kerja dan sambungkannya dalam blok `persediaan` untuk cipta penari pertama.
+        Seret blok `buat baharu` ke dalam ruang kerja dan sambungkannya dalam blok `persediaan` untuk cipta penari pertama.
 
-        _Anda juga boleh klik mentol lampu di sebelah kiri jika anda mahu lebih banyak maklumat atau cabaran tambahan._
+        -   _Anda juga boleh klik mentol lampu di sebelah kiri jika anda mahu lebih banyak maklumat atau cabaran tambahan._
       CourseD_Dance_Party_02: |-
         Mari kita pastikan rusa ini menari!
 
@@ -95,6 +95,13 @@ ms-MY:
         &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title>\n
         \   <title name=\"LAYOUT\">\"circle\"</title>\n  </block></xml>\nSekarang
         anda boleh cipta kumpulan semua penari sekaligus!"
+      Dance_2019_07: "Setiap penari mempunyai kumpulan _sifat_ yang mengawal rupa
+        bentuknya. \n\nGunakan <xml><block type=\"Dancelab_setPropEach\" block-text=\"the
+        set block\"><title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;,
+        &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;,
+        &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title><title name=\"PROPERTY\">\"scale\"</title><title
+        name=\"VAL\">???</title></block></xml> di bawah blok acara hijau untuk membuatkan
+        penari muncul lebih dekat atau jauh."
       Dance_2019_08: Penari mempunyai sifat "warna" yang boleh menambah lapisan warna.
         Cuba tukar warna seorang daripada penari anda (atau seluruh kumpulan)!
       Dance_2019_09: |-
@@ -108,15 +115,15 @@ ms-MY:
       Dance_2019_10: Rasakan kegirangannya! Cipta tarian anda sendiri untuk berkongsi
         dengan rakan anda.
       Dance_Party_01: |-
-        Mari kita adakan majlis tari-menari!
+        _Mari kita adakan majlis tari-menari!_
 
-        \_Seret blok `buat baharu` ke dalam ruang kerja dan sambungkannya dalam blok `persediaan` untuk cipta penari pertama.
+        Seret blok `buat baharu` ke dalam ruang kerja dan sambungkannya dalam blok `persediaan` untuk cipta penari pertama.
 
-        _Anda juga boleh klik mentol lampu di sebelah kiri jika anda mahu lebih banyak maklumat atau cabaran tambahan._
+        -   _Anda juga boleh klik mentol lampu di sebelah kiri jika anda mahu lebih banyak maklumat atau cabaran tambahan._
       Dance_Party_02: |-
         Mari kita pastikan rusa ini menari!
 
-        Seret keluar blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> ke ruang kerja. Sambungkannya di bawah blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Penari anda sepatutnya memulakan gerakan baharu selepas corak berirama keempat.
+        Seret keluar blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> ke ruang kerja. Sambungkannya di bawah blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Penari anda sepatutnya memulakan gerakan baharu selepas corak berirama keempat.
 
         **Corak Berirama** digunakan untuk mengira masa dalam muzik.
       Dance_Party_03: |-
@@ -147,7 +154,7 @@ ms-MY:
         Sekarang kita tahu cara menukar sifat penari. Kita juga boleh membuatkan sifat yang sama bertindak balas kepada muzik secara automatik dengan menggunakan blok ini:
         <xml>
           <block type="Dancelab_startMapping">
-            <title name="SPRITE">right_unicorn</title>
+            <title name="SPRITE">right\_unicorn</title>
             <title name="PROPERTY">"scale"</title>
             <title name="RANGE">"bass"</title>
           </block></xml>
@@ -179,7 +186,7 @@ ms-MY:
       Dance_Party_extras_alternate_2019: |-
         # Mari Kita Berada dalam Formasi!
 
-        Lihat tarian ini yang menggunakan blok [blockly block][0] bagi menukar formasi penari sandaran sepanjang tarian. Cuba satu daripada idea ini untuk melanjutkannya:
+        Lihat tarian ini yang menggunakan blok <xml><block type="Dancelab_alternateMoves"><title name="GROUP">sprites</title><title name="N">2</title><title name="MOVE1">MOVES.Roll</title><title name="MOVE2">MOVES.ClapHigh</title></block></xml> bagi menukar formasi penari sandaran sepanjang tarian. Cuba satu daripada idea ini untuk melanjutkannya:
 
         -   Cipta kumpulan kedua penari dalam susun atur berbeza
         -   Tukar susun atur apabila kekunci ditekan
@@ -211,9 +218,14 @@ ms-MY:
         -   Tambahkan beberapa acara `selepas corak berirama`.
         -   Tukar "corak berirama" kepada "saat" dan cuba tentukan masa tarian anda dengan kaedah itu.
       Dance_Party_extras_every_beat_2019: |-
-        # Percepatkannya, Perlahankannya
+        # Not Perempat
 
-        Tarian akhir ini menggunakan blok [blockly block][0] untuk mengawal kepantasan setiap penari bergerak. Cuba bereksperimen dengan kelajuan berbeza semasa sudut berlainan dalam lagu. Jangan bimbang untuk terus bermain-main terhadap tarian ini, atau kembali kepada mana-mana tarian sebelumnya untuk menjadikannya lebih hebat.
+        Kebanyakan tarian kita telah menggunakan seluruh corak berirama, tetapi setiap corak berirama terdiri daripada 4 not perempat. Tarian ini menggunakan  block][0] untuk membuatkan penari menepuk tangan pada setiap not perempat selepas corak berirama ke-5.
+
+        Cuba ubah bilangan dalam blok untuk melihat cara ia menukar tarian.
+
+        -   Eksperimen dengan tempoh not lain (seperti 0.5 untuk not perdua atau 0.125 untuk not perlapan).
+        -   Tambahkan beberapa acara lain.
       Dance_Party_extras_layout: |-
         # Mari Kita Berada dalam Formasi!
 
@@ -237,7 +249,7 @@ ms-MY:
       Dance_Party_extras_speed_2019: |-
         # Percepatkannya, Perlahankannya
 
-        Tarian akhir ini menggunakan blok [blockly block][0] untuk mengawal kepantasan setiap penari bergerak. Cuba bereksperimen dengan kelajuan berbeza semasa sudut berlainan dalam lagu. Jangan bimbang untuk terus bermain-main terhadap tarian ini, atau kembali kepada mana-mana tarian sebelumnya untuk menjadikannya lebih hebat.
+        Tarian akhir ini menggunakan blok <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> untuk mengawal kepantasan setiap penari bergerak. Cuba bereksperimen dengan kelajuan berbeza semasa sudut berlainan dalam lagu. Jangan bimbang untuk terus bermain-main terhadap tarian ini, atau kembali kepada mana-mana tarian sebelumnya untuk menjadikannya lebih hebat.
       Dance_Party_extras_visible: |-
         # Ke Manakah Mereka Akan Pergi?
 
@@ -254,3 +266,18 @@ ms-MY:
         -   Tambah satu lagi kumpulan penari
         -   Tunjuk dan sembunyikan penari yang menggunakan kekunci anak panah
         -   Sembunyikan semua penari dan beralih kepada kesan latar belakang yang menarik
+      Dance_Party_extras_layout_2019: |-
+        # Mari kita mendapatkan dalam pembentukan!
+
+        Lihatlah tarian ini yang menggunakan blok <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> Halang untuk menukar pembentukan penari ' di seluruh tarian. Cuba salah satu idea ini untuk melanjutkan:
+
+        \-Buat Kumpulan kedua penari dalam susun atur yang berbeza
+        \-Tukar talaletak apabila kekunci ditekan
+        \-Tukar harta apabila penari perubahan pembentukan
+      Dance_Party_extras_mixed_2019: |-
+        # Lagi Tombol
+
+        Tarian ini memungkinkan Anda mengontrol sifat penari secara real time sementara mereka menari secara otomatis. Cuba buat sifat lain berubah apabila anda menekan butang. Sebagai contoh:
+
+        -   Randomize warna penari apabila anda menekan “bawah”.
+        -   Tambah sekumpulan penari dengan susun atur rawak apabila anda menekan “ruang”.

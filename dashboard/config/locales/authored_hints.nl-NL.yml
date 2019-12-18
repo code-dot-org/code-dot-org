@@ -1861,7 +1861,7 @@ nl-NL:
 
           -   Zorg ervoor dat er een danser op het scherm verschijnt.
 
-          -   Dit level eindigt na 4 maten.\*
+          _Dit level eindigt na 4 maten._
         challenges: "**Extra uitdaging**\n\n-   Kies een ander nummer om te spelen.
           \n-   Verplaats je danser naar een nieuwe locatie.\n-   Maak meer dan één
           danser."
@@ -1940,7 +1940,7 @@ nl-NL:
 
           -   Zorg ervoor dat er een danser op het scherm verschijnt.
 
-          -   Dit level eindigt na 4 maten.\*
+          _Dit level eindigt na 4 maten._
         challenges: |-
           **Extra uitdagingen**
 
@@ -1972,13 +1972,17 @@ nl-NL:
           **Extra uitdaging**
 
           Verander het achtergrondeffect op verschillende momenten door het nieuwe blok te verbinden onder de <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> gebeurtenissen.
+      Dance_Party_05:
+        validation: "\\*\\*Hoe kan ik dit level halen? \n\n-   Je danser moet minstens
+          4 verschillende dansbewegingen doorlopen voordat het level eindigt. \n\n_Dit
+          level eindigt na 12 maten_"
       Dance_Party_06:
         validation: |-
           **Hoe haal ik dit level?**
 
           -   Je moet minstens twee dansers hebben.
 
-          _Dit level eindigt na 6 maten._
+          _Dit level eindigt na 5 maten._
         challenges: |-
           **Extra uitdaging**
 
@@ -5154,3 +5158,5 @@ nl-NL:
           </next>
           </block>
           </xml>
+      Dance_Party_extras_alternate_2019:
+        alternate: Het alternatieve blok bevindt zich in de categorie "Dansers".

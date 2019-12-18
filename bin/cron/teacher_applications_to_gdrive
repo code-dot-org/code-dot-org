@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+require_relative '../../lib/cdo/only_one'
+exit unless only_one_running?(__FILE__)
+
+require_relative '../../dashboard/config/environment'
+require 'cdo/google_drive'
+
+applications = [%w(course regional_partner status scholarship_status school_type pay_fee email created_at)]
+
+Pd::Application::Teacher2021Application.find_each do |app|
+  applications << [
+    app.course,
+    app.regional_partner.try(:name),
+    app.status,
+    app.scholarship_status,
+    app.school_type,
+    app.sanitize_form_data_hash[:principal_pay_fee],
+    app.email,
+    app.created_at
+  ]
+end
+
+Google::Drive.new.add_sheet_to_spreadsheet(applications, "2020-21 Teacher Applications", "all_apps (auto)")
