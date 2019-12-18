@@ -19,6 +19,7 @@ import helpers from '@ml/oceans/helpers';
 import {setState, getState, resetState} from '@ml/oceans/state';
 import {AppMode, Modes} from '@ml/oceans/constants';
 import colors from '@ml/oceans/colors';
+import * as I18n from '@ml/oceans/i18n';
 
 const DEFAULT_PROPS = {
   // radiumConfig.userAgent is required because our unit tests run in the "node" testEnvironment
@@ -95,6 +96,10 @@ describe('Button', () => {
 describe('ConfirmationDialog', () => {
   let onYesClickSpy, onNoClickSpy;
 
+  beforeAll(() => {
+    I18n.init();
+  });
+
   beforeEach(() => {
     onYesClickSpy = sinon.spy();
     onNoClickSpy = sinon.spy();
@@ -137,6 +142,7 @@ describe('Words', () => {
   });
 
   it('selects the set of words based on the current appMode', () => {
+    I18n.init();
     const appMode = AppMode.FishShort;
     setState({appMode});
     const wrapper = shallow(<Words {...DEFAULT_PROPS} />);
@@ -163,6 +169,9 @@ describe('Words', () => {
 
   describe('onChangeWord', () => {
     let toModeStub;
+    beforeAll(() => {
+      I18n.init();
+    });
 
     beforeEach(() => {
       toModeStub = sinon.stub(modeHelpers, 'toMode');
@@ -182,7 +191,7 @@ describe('Words', () => {
         .find('Button')
         .at(i)
         .simulate('click');
-      const expectedWord = wrapper.state().choices[i];
+      const expectedWord = I18n.t(wrapper.state().choices[i]);
       expect(getState().word).toEqual(expectedWord);
     });
 
@@ -211,6 +220,10 @@ describe('Words', () => {
 
 describe('Train', () => {
   let classifyFishStub;
+
+  beforeAll(() => {
+    I18n.init();
+  });
 
   beforeEach(() => {
     classifyFishStub = sinon.stub(train, 'onClassifyFish');
@@ -334,6 +347,10 @@ describe('Train', () => {
 });
 
 describe('Predict', () => {
+  beforeAll(() => {
+    I18n.init();
+  });
+
   afterEach(() => {
     resetState();
   });
@@ -502,6 +519,10 @@ describe('Pond', () => {
 
   describe('navigation', () => {
     let toModeStub;
+
+    beforeAll(() => {
+      I18n.init();
+    });
 
     beforeEach(() => {
       toModeStub = sinon.stub(modeHelpers, 'toMode');
