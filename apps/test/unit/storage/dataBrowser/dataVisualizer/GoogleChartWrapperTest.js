@@ -2,6 +2,7 @@ import React from 'react';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
 import {expect} from '../../../../util/reconfiguredChai';
+import {ChartType} from '@cdo/apps/storage/dataBrowser/dataUtils';
 import GoogleChart from '@cdo/apps/applab/GoogleChart';
 import GoogleChartWrapper from '@cdo/apps/storage/dataBrowser/dataVisualizer/GoogleChartWrapper';
 
@@ -26,7 +27,7 @@ describe('GoogleChartWrapper', () => {
             {category1: 'green', category2: 4, category3: 10}
           ]}
           numericColumns={['category2', 'category3']}
-          chartType="Bar Chart"
+          chartType={ChartType.BAR_CHART}
           selectedColumn1="category1"
           chartTitle="Title"
         />
@@ -57,7 +58,7 @@ describe('GoogleChartWrapper', () => {
         <GoogleChartWrapper
           records={expectedChartData}
           numericColumns={['category2', 'category3']}
-          chartType="Histogram"
+          chartType={ChartType.HISTOGRAM}
           selectedColumn1="category2"
           bucketSize="2"
           chartTitle="Title"
@@ -83,7 +84,7 @@ describe('GoogleChartWrapper', () => {
         <GoogleChartWrapper
           records={expectedChartData}
           numericColumns={['category2', 'category3']}
-          chartType="Scatter Plot"
+          chartType={ChartType.SCATTER_PLOT}
           selectedColumn1="category2"
           selectedColumn2="category3"
           chartTitle="Title"
