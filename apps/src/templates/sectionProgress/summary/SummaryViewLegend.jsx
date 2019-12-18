@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import ProgressBox from './ProgressBox';
+import ProgressBox from '@cdo/apps/templates/sectionProgress/ProgressBox';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
