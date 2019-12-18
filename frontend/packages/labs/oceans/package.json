@@ -4,7 +4,6 @@
   "description": "",
   "main": "dist/main.js",
   "jest": {
-    "testEnvironment": "node",
     "moduleFileExtensions": [
       "js",
       "jsx"
@@ -72,7 +71,7 @@
     "file-loader": "^4.2.0",
     "idempotent-babel-polyfill": "6.26.0-1",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^15.0.0",
+    "jest": "^23.6.0",
     "jquery": "1.12.1",
     "lodash": "^4.17.5",
     "mem": ">=4.0.0",
