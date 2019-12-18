@@ -399,7 +399,7 @@ const guides = [
     id: 'fishshort-predicting-init1',
     textFn: state => {
       return I18n.t('fishshort-predicting-init1', {
-        WORD: state.word.toLowerCase()
+        word: state.word.toLowerCase()
       });
     },
     when: {appMode: AppMode.FishShort, currentMode: Modes.Predicting}
@@ -408,7 +408,7 @@ const guides = [
     id: 'fishshort-predicting-init2',
     textFn: state => {
       return I18n.t('fishshort-predicting-init2', {
-        WORD: state.word.toLowerCase()
+        word: state.word.toLowerCase()
       });
     },
     when: {appMode: AppMode.FishShort, currentMode: Modes.Predicting}
@@ -417,8 +417,8 @@ const guides = [
     id: 'fishshort-pond-init1',
     textFn: state => {
      return I18n.t('fishshort-pond-init1', {
-        N: state.fishData.length,
-        WORD: state.word.toLowerCase()
+        n: state.fishData.length,
+        word: state.word.toLowerCase()
       });
 
     },
@@ -521,7 +521,7 @@ const guides = [
     id: 'fishlong-predicting-init1',
     textFn: state => {
       return I18n.t('fishlong-predicting-init1', {
-        WORD: state.word.toLowerCase()
+        word: state.word.toLowerCase()
       });
     },
     when: {appMode: AppMode.FishLong, currentMode: Modes.Predicting}
@@ -530,7 +530,7 @@ const guides = [
     id: 'fishlong-predicting-init2',
     textFn: state => {
       return I18n.t('fishlong-predicting-init2', {
-        WORD: state.word.toLowerCase()
+        word: state.word.toLowerCase()
       });
     },
     when: {appMode: AppMode.FishLong, currentMode: Modes.Predicting}
@@ -539,8 +539,8 @@ const guides = [
     id: 'fishlong-pond-init1',
     textFn: state => {
       return I18n.t('fishlong-pond-init1', {
-        N: state.fishData.length,
-        WORD: state.word.toLowerCase()
+        n: state.fishData.length,
+        word: state.word.toLowerCase()
       });
     },
     when: {

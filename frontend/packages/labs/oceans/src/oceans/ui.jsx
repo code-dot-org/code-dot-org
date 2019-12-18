@@ -828,7 +828,7 @@ let UnwrappedWords = class Words extends React.Component {
     const word = I18n.t(wordKey);
     setState({
       word,
-      trainingQuestion: I18n.t('isThisFish', {WORD: word.toLowerCase()})
+      trainingQuestion: I18n.t('isThisFish', {word: word.toLowerCase()})
     });
     modeHelpers.toMode(Modes.Training);
 
@@ -883,7 +883,7 @@ let UnwrappedTrain = class Train extends React.Component {
     const noButtonText =
       state.appMode === AppMode.CreaturesVTrash
         ? I18n.t('no')
-        : I18n.t('notWord', {WORD: state.word});
+        : I18n.t('notWord', {word: state.word});
     const resetTrainingFunction = () => {
       helpers.resetTraining(state);
       setState({showConfirmationDialog: false});
@@ -1183,7 +1183,7 @@ class PondPanel extends React.Component {
                   {'”'} {I18n.t('or')}
                   {' “'}
                   <span style={{color: colors.red}}>
-                    {I18n.t('notWord', {WORD: state.word}).toLowerCase()}
+                    {I18n.t('notWord', {word: state.word}).toLowerCase()}
                   </span>
                   {'”'}.
                 </div>
