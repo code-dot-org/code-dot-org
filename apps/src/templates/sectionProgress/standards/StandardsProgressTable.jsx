@@ -190,6 +190,8 @@ class StandardsProgressTable extends Component {
   }
 }
 
+export const UnconnectedStandardsProgressTable = StandardsProgressTable;
+
 export default connect(state => ({
   standards: getStandardsCoveredForScript(),
   lessonsCompletedByStandard: getLessonsCompletedByStandardForScript()
