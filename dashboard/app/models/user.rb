@@ -99,6 +99,7 @@ class User < ActiveRecord::Base
     ops_gender
     using_text_mode
     last_seen_school_info_interstitial
+    has_seen_standards_report_info_dialog
     oauth_refresh_token
     oauth_token
     oauth_token_expiration
@@ -110,7 +111,6 @@ class User < ActiveRecord::Base
     data_transfer_agreement_source
     data_transfer_agreement_kind
     data_transfer_agreement_at
-    seen_oauth_connect_dialog
   )
 
   # Include default devise modules. Others available are:
