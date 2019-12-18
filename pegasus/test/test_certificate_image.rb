@@ -75,6 +75,23 @@ class CertificateImageTest < Minitest::Test
     assert_image twenty_hour_certificate_image, 1754, 1240, 'JPEG'
   end
 
+  def test_escape_image_magick_string
+    # Imagemagick will interperate a '@' at the beginning of a string to be a
+    # filepath
+    assert_equal '\\@hello', escape_image_magick_string('@hello')
+    # '@' in the middle of a string is fine.
+    assert_equal 'hello@world.com', escape_image_magick_string('hello@world.com')
+    # '%' is a special imagemagick symbol for inserting image metadata such as
+    # width.
+    assert_equal 'width=\\%x', escape_image_magick_string('width=%x')
+    # Strings shouldn't allow new-line characters.
+    assert_equal '\\\\n', escape_image_magick_string("\n")
+    # Imagemagick will interperate '\\n' as a new-line.
+    assert_equal '\\\\n', escape_image_magick_string('\\n')
+    # Nothing should be escaped with a '\' so just print any '\'s.
+    assert_equal '\\\\', escape_image_magick_string('\\')
+  end
+
   private
 
   def assert_image(image, width, height, format)
