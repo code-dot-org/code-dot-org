@@ -1,0 +1,45 @@
+name 'U4L10 CFU Conditionals Psuedocode 2'
+editor_experiment ''
+
+title 'AP Pseudocode: Conditionals'
+description ''
+right '5'
+wrong '10'
+wrong '15'
+wrong '20'
+
+
+markdown <<MARKDOWN
+## AP Reference Sheet 
+
+The AP Reference Sheet shows how Conditional-type questions will be represented on the exam. Read through these sections of the Reference Sheet and answer the question below. 
+
+![](https://images.code.org/53a8d7f6bc53164ed891740fdf7dfe2b-image-1567708424472.png)
+![](https://images.code.org/a75bb15a7c18311618edd611f5d3e99b-image-1567696845161.png)
+![](https://images.code.org/3d92c62368372cfae377bf7d8e07b11e-image-1567696864636.png)
+![](https://images.code.org/4a6a9d52bc33e0d5fce3db2fd712ea8c-image-1576269302928.52.33 AM.png)
+
+## Practice Question
+
+The program below asks a user to type in a number and then will output a message. What number will a user need to input for the message `"COLD"` to be displayed?
+
+```
+number <- INPUT()
+
+IF (number >= 10)
+{
+  IF (number <= 20)
+  {
+    DISPLAY("MEDIUM")
+  }
+  ELSE
+  {
+    DISPLAY("HOT")
+  }
+}
+ELSE
+{
+  DISPLAY("COLD")
+}
+```
+MARKDOWN
