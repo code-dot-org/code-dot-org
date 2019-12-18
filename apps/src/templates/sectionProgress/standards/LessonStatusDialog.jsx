@@ -4,17 +4,18 @@ import i18n from '@cdo/locale';
 import BaseDialog from '../../BaseDialog';
 import DialogFooter from '../../teacherDashboard/DialogFooter';
 import Button from '../../Button';
-import {LessonStatusList} from './LessonStatusList';
+import LessonStatusList from './LessonStatusList';
 
 const styles = {
   dialog: {
     paddingLeft: 20,
     paddingRight: 20,
-    paddingBottom: 20
+    paddingBottom: 20,
+    fontFamily: '"Gotham 4r", sans-serif, sans-serif'
   }
 };
 
-class LessonStatusDialog extends Component {
+export class LessonStatusDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     handleConfirm: PropTypes.func.isRequired
@@ -32,7 +33,7 @@ class LessonStatusDialog extends Component {
         <p>{i18n.updateUnpluggedLessonProgressSubHeading()}</p>
         <h3>{i18n.completedUnpluggedLessons()}</h3>
         <LessonStatusList />
-        <div>{i18n.pluggedLessonsNote()}</div>
+        <p>{i18n.pluggedLessonsNote()}</p>
         <DialogFooter rightAlign>
           <Button
             text={i18n.closeAndSave()}
