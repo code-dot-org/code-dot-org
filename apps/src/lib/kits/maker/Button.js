@@ -9,7 +9,7 @@ import {EXTERNAL_PINS} from './PlaygroundConstants';
  * @constructor
  * @extends {five.Button}
  */
-export default function Button(opts) {
+export function PlaygroundButton(opts) {
   // For Circuit Playground, treat touch pin buttons as pullups.
   opts.pullup = EXTERNAL_PINS.includes(opts.pin);
   five.Button.call(this, opts);
@@ -19,4 +19,25 @@ export default function Button(opts) {
     get: () => this.value === 1
   });
 }
-Button.inherits(five.Button);
+PlaygroundButton.inherits(five.Button);
+
+export function MicroBitButton(board) {
+  // There are six button events, ['', 'down', 'up', 'click', 'long-click', 'hold']
+  this.buttonEvents = new Array(6).fill(0);
+  board.mb.addFirmataEventListener((sourceID, eventID) => {
+    if (board.pin === sourceID) {
+      this.buttonEvents[eventID]++;
+      if (eventID === 1) {
+        this.emit('down');
+      } else if (eventID === 2) {
+        this.emit('up');
+      }
+    }
+  });
+
+  // Add a read-only `isPressed` property
+  Object.defineProperty(this, 'isPressed', {
+    get: () => this.buttonEvents[1] > this.buttonEvents[2]
+  });
+}
+MicroBitButton.inherits(five.Button);
