@@ -3,7 +3,6 @@ import React from 'react';
 import FlexGroup from './FlexGroup';
 import StageDescriptions from './StageDescriptions';
 import ScriptAnnouncementsEditor from './ScriptAnnouncementsEditor';
-// import LegendSelector from './LegendSelector';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import $ from 'jquery';
 import ResourcesEditor from '@cdo/apps/templates/courseOverview/ResourcesEditor';
