@@ -13,7 +13,7 @@ describe('StandardDescriptionCell', () => {
     lessonsForStandardStatus: lessonCompletedByStandard[1].lessons
   };
 
-  it('standards view shows StandardsIntroDialog', () => {
+  it('shows the correct number of progress boxes for lessons', () => {
     const wrapper = shallow(<StandardDescriptionCell {...DEFAULT_PROPS} />);
     expect(wrapper.find('ProgressBoxForLessonNumber')).to.have.lengthOf(
       lessonCompletedByStandard[1].lessons.length
