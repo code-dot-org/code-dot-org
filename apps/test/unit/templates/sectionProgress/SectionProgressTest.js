@@ -35,7 +35,7 @@ describe('SectionProgress', () => {
             levels: [{id: 789}]
           }
         ],
-        excludeCsfColumnInLegend: true
+        csf: false
       },
       isLoadingProgress: false,
       scriptFriendlyName: 'My Script',
@@ -55,12 +55,12 @@ describe('SectionProgress', () => {
     expect(wrapper.find('#uitest-spinner').exists()).to.be.false;
   });
 
-  it('summary view shows summary view and legend', () => {
+  it('shows summary view and legend', () => {
     const wrapper = shallow(<UnconnectedSectionProgress {...DEFAULT_PROPS} />);
     expect(wrapper.find('#uitest-summary-view').exists()).to.be.true;
   });
 
-  it('detail view shows detail view and legend', () => {
+  it('shows detail view and legend', () => {
     const wrapper = shallow(
       <UnconnectedSectionProgress
         {...DEFAULT_PROPS}
