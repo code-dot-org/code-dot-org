@@ -41,7 +41,6 @@ export class StandardsViewHeaderButtons extends Component {
     return (
       <div style={styles.buttonsGroup}>
         <Button
-          id={'lesson-status-button'}
           onClick={this.openLessonStatusDialog}
           color={Button.ButtonColor.gray}
           text={i18n.updateUnpluggedProgress()}
@@ -53,7 +52,6 @@ export class StandardsViewHeaderButtons extends Component {
           handleConfirm={this.closeLessonStatusDialog}
         />
         <Button
-          id={'create-report-button'}
           onClick={this.openCreateReportDialog}
           color={Button.ButtonColor.gray}
           text={i18n.generatePDFReport()}
