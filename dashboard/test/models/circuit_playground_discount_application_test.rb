@@ -50,7 +50,7 @@ class CircuitPlaygroundDiscountApplicationTest < ActiveSupport::TestCase
 
     assert CircuitPlaygroundDiscountApplication.studio_person_pd_eligible?(
       teacher,
-      [Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP]
+      Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP
     )
   end
 
@@ -66,7 +66,7 @@ class CircuitPlaygroundDiscountApplicationTest < ActiveSupport::TestCase
 
     refute CircuitPlaygroundDiscountApplication.studio_person_pd_eligible?(
       teacher,
-      [Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP]
+      Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
     )
   end
 
@@ -82,24 +82,30 @@ class CircuitPlaygroundDiscountApplicationTest < ActiveSupport::TestCase
 
     refute CircuitPlaygroundDiscountApplication.studio_person_pd_eligible?(
       teacher,
-      [Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP]
+      Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP
     )
   end
 
-  test 'studio_person_pd_eligible? returns true if user is on the eligible facilitator list' do
+  test 'studio_person_pd_eligible? returns true if user is on the eligible facilitator list and did not attend PD' do
     facilitator = create :facilitator
     DCDO.stubs(:get).
       with('facilitator_ids_eligible_for_maker_discount', []).
       returns([facilitator.id])
-    assert CircuitPlaygroundDiscountApplication.studio_person_pd_eligible?(facilitator)
+    assert CircuitPlaygroundDiscountApplication.studio_person_pd_eligible?(
+      facilitator,
+      Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP
+    )
   end
 
-  test 'studio_person_pd_eligible? returns false if user is not on the facilitator list' do
+  test 'studio_person_pd_eligible? returns false if user is not on the facilitator list and did not attend PD' do
     facilitator = create :facilitator
     DCDO.stubs(:get).
       with('facilitator_ids_eligible_for_maker_discount', []).
       returns([])
-    refute CircuitPlaygroundDiscountApplication.studio_person_pd_eligible?(facilitator)
+    refute CircuitPlaygroundDiscountApplication.studio_person_pd_eligible?(
+      facilitator,
+      Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP
+    )
   end
 
   test 'studio_person_pd_eligible? returns true if studio_person_id associated User is eligible' do
@@ -141,17 +147,35 @@ class CircuitPlaygroundDiscountApplicationTest < ActiveSupport::TestCase
       with('facilitator_ids_eligible_for_maker_discount', []).
       returns([user1.id])
 
-    assert_equal true, CircuitPlaygroundDiscountApplication.user_pd_eligible?(user1)
-    assert_equal false, CircuitPlaygroundDiscountApplication.user_pd_eligible?(user2)
+    assert_equal true, CircuitPlaygroundDiscountApplication.user_pd_eligible?(
+      user1,
+      Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP
+    )
+    assert_equal false, CircuitPlaygroundDiscountApplication.user_pd_eligible?(
+      user2,
+      Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP
+    )
 
-    assert_equal true, CircuitPlaygroundDiscountApplication.studio_person_pd_eligible?(user1)
-    assert_equal true, CircuitPlaygroundDiscountApplication.studio_person_pd_eligible?(user2)
+    assert_equal true, CircuitPlaygroundDiscountApplication.studio_person_pd_eligible?(
+      user1,
+      Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP
+    )
+    assert_equal true, CircuitPlaygroundDiscountApplication.studio_person_pd_eligible?(
+      user2,
+      Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP
+    )
   end
 
   test 'studio_person_pd_eligible? just checks the one user if they have no studio_person_id' do
     student = create :student
-    CircuitPlaygroundDiscountApplication.expects(:user_pd_eligible?).with(student, nil).once
-    refute CircuitPlaygroundDiscountApplication.studio_person_pd_eligible?(student)
+    CircuitPlaygroundDiscountApplication.expects(:user_pd_eligible?).with(
+      student,
+      Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP
+    ).once
+    refute CircuitPlaygroundDiscountApplication.studio_person_pd_eligible?(
+      student,
+      Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP
+    )
   end
 
   test 'application_status for unstarted application' do
@@ -165,6 +189,7 @@ class CircuitPlaygroundDiscountApplicationTest < ActiveSupport::TestCase
       has_confirmed_school: false,
       school_id: nil,
       school_name: nil,
+      school_high_needs_eligible: nil,
       gets_full_discount: nil,
       discount_code: nil,
       expiration: nil,
@@ -185,6 +210,7 @@ class CircuitPlaygroundDiscountApplicationTest < ActiveSupport::TestCase
       has_confirmed_school: false,
       school_id: nil,
       school_name: nil,
+      school_high_needs_eligible: nil,
       gets_full_discount: nil,
       discount_code: nil,
       expiration: nil,
@@ -196,7 +222,7 @@ class CircuitPlaygroundDiscountApplicationTest < ActiveSupport::TestCase
     assert_equal expected, CircuitPlaygroundDiscountApplication.application_status(teacher)
   end
 
-  test 'application_status for admin overriden application' do
+  test 'application_status for admin overriden application with no school information' do
     teacher = create :teacher
     create :circuit_playground_discount_application, user: teacher, unit_6_intention: 'no',
       full_discount: true, admin_set_status: true
@@ -207,6 +233,7 @@ class CircuitPlaygroundDiscountApplicationTest < ActiveSupport::TestCase
       school_id: nil,
       school_name: nil,
       gets_full_discount: true,
+      school_high_needs_eligible: nil,
       discount_code: nil,
       expiration: nil,
       is_pd_eligible: false,
