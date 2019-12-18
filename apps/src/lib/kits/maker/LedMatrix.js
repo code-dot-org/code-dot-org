@@ -29,6 +29,10 @@ export default class LedMatrix {
   }
 
   toggle(x, y, brightness) {
-    return this.matrix[x][y] > 0 ? this.off(x, y) : this.on(x, y, brightness);
+    this.matrix[x][y] > 0 ? this.off(x, y) : this.on(x, y, brightness);
+  }
+
+  allOff() {
+    this.board.mb.displayClear();
   }
 }
