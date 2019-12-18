@@ -9,7 +9,8 @@ import {
   wordSet,
   Train,
   Predict,
-  Pond
+  Pond,
+  Guide
 } from '@ml/oceans/ui';
 import guide from '@ml/oceans/models/guide';
 import soundLibrary from '@ml/oceans/models/soundLibrary';
@@ -603,5 +604,49 @@ describe('Pond', () => {
       expect(newState.pondPanelShowing).toBeFalsy();
       expect(toModeStub.withArgs(Modes.Training).callCount).toEqual(1);
     });
+  });
+});
+
+describe('Guide', () => {
+  let clock, currentGuideStub, playSoundStub;
+
+  beforeEach(() => {
+    clock = sinon.useFakeTimers();
+    currentGuideStub = sinon.stub(guide, 'getCurrentGuide');
+    currentGuideStub.returns({
+      id: 'guide-id',
+      style: '',
+      heading: 'hey, listen!',
+      text: 'this is an important message'
+    });
+    playSoundStub = sinon.stub(soundLibrary, 'playSound');
+  });
+
+  afterEach(() => {
+    clock.restore();
+    guide.getCurrentGuide.restore();
+    soundLibrary.playSound.restore();
+  });
+
+  it('sets guideTypingTimer if not already started', () => {
+    setState({guideShowing: false, guideTypingTimer: null});
+    const wrapper = shallow(<Guide {...DEFAULT_PROPS} />);
+
+    expect(getState().guideTypingTimer).not.toBeNull();
+  });
+
+  it('is dismissable', () => {
+    const dismissCurrentGuideStub = sinon
+      .stub(guide, 'dismissCurrentGuide')
+      .returns(true);
+    const wrapper = shallow(<Guide {...DEFAULT_PROPS} />);
+    const dismissHandler = wrapper.find('#uitest-dismiss-guide');
+
+    dismissHandler.simulate('click');
+
+    expect(dismissCurrentGuideStub.callCount).toEqual(1);
+    expect(playSoundStub.withArgs('other').callCount).toEqual(1);
+
+    guide.dismissCurrentGuide.restore();
   });
 });
