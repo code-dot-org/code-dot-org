@@ -22,12 +22,17 @@ import InstructionsWithWorkspace, {
 } from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
 
 describe('InstructionsWithWorkspace', () => {
+  const DEFAULT_PROPS = {
+    instructionsHeight: 400,
+    instructionsMaxHeight: 400,
+    isEmbedView: false,
+    setInstructionsMaxHeightAvailable: () => {},
+    setInstructionsRenderedHeight: () => {}
+  };
+
   it('renders instructions and code workspace', () => {
     const wrapper = shallow(
-      <UnwrappedInstructionsWithWorkspace
-        instructionsHeight={400}
-        setInstructionsMaxHeightAvailable={() => {}}
-      />
+      <UnwrappedInstructionsWithWorkspace {...DEFAULT_PROPS} />
     );
 
     expect(wrapper.find('Connect(TopInstructions)')).to.have.lengthOf(1);
@@ -36,10 +41,7 @@ describe('InstructionsWithWorkspace', () => {
 
   it('initially does not know window width or height', () => {
     const wrapper = shallow(
-      <UnwrappedInstructionsWithWorkspace
-        instructionsHeight={400}
-        setInstructionsMaxHeightAvailable={() => {}}
-      />
+      <UnwrappedInstructionsWithWorkspace {...DEFAULT_PROPS} />
     );
     expect(wrapper.state()).to.deep.equal({
       windowWidth: undefined,
@@ -68,6 +70,7 @@ describe('InstructionsWithWorkspace', () => {
     } = {}) {
       const wrapper = shallow(
         <UnwrappedInstructionsWithWorkspace
+          {...DEFAULT_PROPS}
           instructionsHeight={instructionsHeight}
           setInstructionsMaxHeightAvailable={setInstructionsMaxHeightAvailable}
         />
