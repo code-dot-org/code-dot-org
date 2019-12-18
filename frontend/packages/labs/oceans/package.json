@@ -13,11 +13,7 @@
       "^@ml(.*)$": "<rootDir>/src/$1",
       "^@public(.*)$": "<rootDir>/public/$1"
     },
-    "setupTestFrameworkScriptFile": "<rootDir>/test/setup.js",
-    "globals": {
-      "window": {},
-      "location": {}
-    }
+    "setupTestFrameworkScriptFile": "<rootDir>/test/setup.js"
   },
   "scripts": {
     "build": "webpack -p",
