@@ -53,42 +53,43 @@ def execute_replication_task(replication_task_arn, current_task_status)
     }
   )
   ChatClient.message 'cron-daily', "Start DMS Task Response: #{replication_task_arn} - #{start_task_response}"
-  dms_client.wait_until(
-    :replication_task_stopped,
-    {
-      filters: [
-        {
-          name: 'replication-task-arn',
-          values: [replication_task_arn]
-        }
-      ]
-    }
-  ) do |waiter|
-    # Poll once an hour for 36 hours.
-    waiter.max_attempts = 36
-    waiter.delay = 3600
-  end
-  task_status = dms_client.describe_replication_tasks(
-    {
-      filters: [
-        {
-          name: 'replication-task-arn',
-          values: [replication_task_arn]
-        }
-      ]
-    },
-    max_records: 1,
-    without_settings: true
-  ).replication_task[0]
+
+  # Wait 16 hours, checking every 10 minutes.  As of late-2019, it takes about 8 hours for the user_levels task to complete.
+  task_status = wait_until_replication_task_completed(replication_task_arn, 96, 600)
+
   # TODO: (suresh) Check detailed task status and raise error if it did not complete successfully.
   ChatClient.message 'cron-daily', "DMS Task Completed: #{replication_task_arn} - #{task_status}"
-rescue Aws::Waiters::Errors::WaiterFailed => error
-  # TODO: (suresh) Customize error handling for failed waiter.
-  ChatClient.message 'cron-daily', "Error executing DMS Replication Task #{replication_task_arn} - #{error.message}", color: 'red'
-  raise error
 rescue StandardError => error
   ChatClient.message 'cron-daily', "Error executing DMS Replication Task #{replication_task_arn} - #{error.message}", color: 'red'
   raise error
+end
+
+def wait_until_replication_task_completed(replication_task_arn, max_attempts, delay)
+  dms_client = Aws::DatabaseMigrationService::Client.new
+  attempts = 0
+  task_status = nil
+  while attempts <= max_attempts && task_status != 'stopped'
+    task_status = dms_client.describe_replication_tasks(
+      {
+        filters: [
+          {
+            name: 'replication-task-arn',
+            values: [replication_task_arn]
+          }
+        ]
+      },
+      max_records: 1,
+      without_settings: true
+    ).replication_task[0]
+
+    attempts += 1
+    sleep delay
+  end
+  return task_status if task_status == 'stopped'
+
+  raise StandardError.new("Timeout after waiting #{max_attempts * delay} seconds for Replication Task" \
+    " #{replication_task_arn} to complete.  Current task status - #{task_status}"
+  )
 end
 
 main
