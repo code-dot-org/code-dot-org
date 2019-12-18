@@ -751,6 +751,13 @@ let Loading = class Loading extends React.Component {
   }
 };
 
+/*
+ * The choices for each word set are i18n keys. If adding or changing a word
+ * choice, be sure to add the word the way it should appear in i18n/oceans.json.
+ * The keys here will also appear in google analytics, so it's worth making
+ * them readable in English.
+ *
+ * */
 const wordSet = {
   short: {
     textKey: 'wordQuestionShort',
