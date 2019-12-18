@@ -4,9 +4,9 @@ import Radium from 'radium';
 import _ from 'lodash';
 import {getState, setState} from './state';
 import constants, {AppMode, Modes} from './constants';
-import {toMode} from './toMode';
-import {$time, currentRunTime, finishMovement, resetTraining} from './helpers';
-import {onClassifyFish} from './models/train';
+import modeHelpers from './modeHelpers';
+import helpers, {$time, currentRunTime, finishMovement} from './helpers';
+import train from './models/train';
 import {arrangeFish} from './models/pond';
 import colors from './colors';
 import aiBotHead from '@public/images/ai-bot/ai-bot-head.png';
@@ -17,8 +17,8 @@ import arrowDownImage from '@public/images/arrow-down.png';
 import snail from '@public/images/snail-large.png';
 import loadingGif from '@public/images/loading.gif';
 import Typist from 'react-typist';
-import {getCurrentGuide, dismissCurrentGuide} from './models/guide';
-import {playSound} from './models/soundLibrary';
+import guide from './models/guide';
+import soundLibrary from './models/soundLibrary';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {
   faPlay,
@@ -657,7 +657,7 @@ class Content extends React.Component {
   }
 }
 
-let Button = class Button extends React.Component {
+let UnwrappedButton = class Button extends React.Component {
   static propTypes = {
     className: PropTypes.string,
     style: PropTypes.object,
@@ -666,18 +666,15 @@ let Button = class Button extends React.Component {
     sound: PropTypes.string
   };
 
-  onClick(event) {
-    dismissCurrentGuide();
+  onClick = event => {
+    guide.dismissCurrentGuide();
     const clickReturnValue = this.props.onClick(event);
 
     if (clickReturnValue !== false) {
-      if (this.props.sound && clickReturnValue !== false) {
-        playSound(this.props.sound);
-      } else {
-        playSound('other');
-      }
+      const sound = this.props.sound || 'other';
+      soundLibrary.playSound(sound);
     }
-  }
+  };
 
   render() {
     return (
@@ -685,19 +682,19 @@ let Button = class Button extends React.Component {
         type="button"
         className={this.props.className}
         style={[styles.button, this.props.style]}
-        onClick={event => this.onClick(event)}
+        onClick={this.onClick}
       >
         {this.props.children}
       </button>
     );
   }
 };
-Button = Radium(Button);
+export const Button = Radium(UnwrappedButton); // Exported for unit tests.
 
-let ConfirmationDialog = class ConfirmationDialog extends React.Component {
+let UnwrappedConfirmationDialog = class ConfirmationDialog extends React.Component {
   static propTypes = {
-    onYesClick: PropTypes.func,
-    onNoClick: PropTypes.func
+    onYesClick: PropTypes.func.isRequired,
+    onNoClick: PropTypes.func.isRequired
   };
 
   render() {
@@ -739,9 +736,9 @@ let ConfirmationDialog = class ConfirmationDialog extends React.Component {
     );
   }
 };
-ConfirmationDialog = Radium(ConfirmationDialog);
+export const ConfirmationDialog = Radium(UnwrappedConfirmationDialog); // Exported for unit tests.
 
-let Loading = class Loading extends React.Component {
+class Loading extends React.Component {
   render() {
     return (
       <Body>
@@ -749,7 +746,7 @@ let Loading = class Loading extends React.Component {
       </Body>
     );
   }
-};
+}
 
 /*
  * The choices for each word set are i18n keys. If adding or changing a word
@@ -758,7 +755,7 @@ let Loading = class Loading extends React.Component {
  * them readable in English.
  *
  * */
-const wordSet = {
+export const wordSet = {
   short: {
     textKey: 'wordQuestionShort',
     choices: [
@@ -792,12 +789,17 @@ const wordSet = {
   }
 };
 
-let Words = class Words extends React.Component {
+let UnwrappedWords = class Words extends React.Component {
   constructor(props) {
     super(props);
 
     // Randomize word choices in each set, merge the sets, and set as state.
     const appMode = getState().appMode;
+
+    if (!wordSet[appMode]) {
+      throw `Could not find a set of choices in wordSet for appMode '${appMode}'`;
+    }
+
     const appModeWordSet = wordSet[appMode].choices;
     let choices = [];
     let maxSize = 0;
@@ -828,7 +830,7 @@ let Words = class Words extends React.Component {
       word,
       trainingQuestion: I18n.t('isThisFish', {WORD: word.toLowerCase()})
     });
-    toMode(Modes.Training);
+    modeHelpers.toMode(Modes.Training);
 
     // Report an analytics event for the word chosen.
     if (window.trackEvent) {
@@ -867,9 +869,9 @@ let Words = class Words extends React.Component {
     );
   }
 };
-Words = Radium(Words);
+export const Words = Radium(UnwrappedWords); // Exported for unit tests.
 
-let Train = class Train extends React.Component {
+let UnwrappedTrain = class Train extends React.Component {
   state = {
     headOpen: false
   };
@@ -883,7 +885,7 @@ let Train = class Train extends React.Component {
         ? I18n.t('no')
         : I18n.t('notWord', {WORD: state.word});
     const resetTrainingFunction = () => {
-      resetTraining(state);
+      helpers.resetTraining(state);
       setState({showConfirmationDialog: false});
     };
 
@@ -902,7 +904,7 @@ let Train = class Train extends React.Component {
         </div>
         <div style={styles.counter}>
           <img src={counterIcon} style={styles.counterImg} />
-          <span style={styles.counterNum}>
+          <span style={styles.counterNum} id="uitest-train-count">
             {Math.min(999, state.yesCount + state.noCount)}
           </span>
         </div>
@@ -923,7 +925,7 @@ let Train = class Train extends React.Component {
             style={styles.trainButtonNo}
             onClick={() => {
               this.setState({headOpen: true});
-              return onClassifyFish(false);
+              return train.onClassifyFish(false);
             }}
             sound={'no'}
           >
@@ -935,7 +937,7 @@ let Train = class Train extends React.Component {
             style={styles.trainButtonYes}
             onClick={() => {
               this.setState({headOpen: true});
-              return onClassifyFish(true);
+              return train.onClassifyFish(true);
             }}
             sound={'yes'}
           >
@@ -946,7 +948,7 @@ let Train = class Train extends React.Component {
         </div>
         <Button
           style={styles.continueButton}
-          onClick={() => toMode(Modes.Predicting)}
+          onClick={() => modeHelpers.toMode(Modes.Predicting)}
         >
           {I18n.t('continue')}
         </Button>
@@ -954,7 +956,7 @@ let Train = class Train extends React.Component {
     );
   }
 };
-Train = Radium(Train);
+export const Train = Radium(UnwrappedTrain); // Exported for unit tests.
 
 const defaultTimeScale = 1;
 const timeScales = [1, 2];
@@ -964,7 +966,7 @@ const MediaControl = Object.freeze({
   FastForward: 'fast-forward'
 });
 
-let Predict = class Predict extends React.Component {
+let UnwrappedPredict = class Predict extends React.Component {
   state = {
     displayControls: false,
     timeScale: defaultTimeScale
@@ -983,7 +985,7 @@ let Predict = class Predict extends React.Component {
       state.onContinue();
     } else {
       setState({showRecallFish: false});
-      toMode(Modes.Pond);
+      modeHelpers.toMode(Modes.Pond);
     }
   };
 
@@ -1036,14 +1038,12 @@ let Predict = class Predict extends React.Component {
       this.state.timeScale !== defaultTimeScale
     ) {
       selectedControl = MediaControl.FastForward;
-    } else {
-      selectedControl = MediaControl.Play;
     }
 
     return (
       <Body>
         {this.state.displayControls && (
-          <div style={styles.mediaControls}>
+          <div style={styles.mediaControls} id="uitest-media-ctrl">
             <span
               onClick={() => this.onScaleTime(true)}
               style={[
@@ -1086,13 +1086,21 @@ let Predict = class Predict extends React.Component {
           </div>
         )}
         {!state.isRunning && !state.isPaused && (
-          <Button style={styles.continueButton} onClick={this.onRun}>
+          <Button
+            style={styles.continueButton}
+            onClick={this.onRun}
+            id="uitest-run-btn"
+          >
             <FontAwesomeIcon icon={faPlay} />
             &nbsp; &nbsp; {I18n.t('run')}
           </Button>
         )}
         {(state.isRunning || state.isPaused) && state.canSkipPredict && (
-          <Button style={styles.continueButton} onClick={this.onContinue}>
+          <Button
+            style={styles.continueButton}
+            onClick={this.onContinue}
+            id="uitest-continue-btn"
+          >
             {I18n.t('continue')}
           </Button>
         )}
@@ -1100,13 +1108,13 @@ let Predict = class Predict extends React.Component {
     );
   }
 };
-Predict = Radium(Predict);
+export const Predict = Radium(UnwrappedPredict); // Exported for unit tests.
 
 class PondPanel extends React.Component {
-  onPondPanelClick(e) {
+  onPondPanelClick = e => {
     setState({pondPanelShowing: false});
     e.stopPropagation();
-  }
+  };
 
   render() {
     const state = getState();
@@ -1118,10 +1126,7 @@ class PondPanel extends React.Component {
     return (
       <div>
         {!state.pondClickedFish && (
-          <div
-            style={styles.pondPanelLeft}
-            onClick={e => this.onPondPanelClick(e)}
-          >
+          <div style={styles.pondPanelLeft} onClick={this.onPondPanelClick}>
             {state.pondExplainGeneralSummary && (
               <div>
                 <div style={styles.pondPanelPreText}>
@@ -1233,7 +1238,7 @@ class PondPanel extends React.Component {
   }
 }
 
-let Pond = class Pond extends React.Component {
+let UnwrappedPond = class Pond extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -1250,11 +1255,11 @@ let Pond = class Pond extends React.Component {
     if (state.showRecallFish) {
       currentFishSet = state.recallFish;
       nextFishSet = state.pondFish;
-      playSound('yes');
+      soundLibrary.playSound('yes');
     } else {
       currentFishSet = state.pondFish;
       nextFishSet = state.recallFish;
-      playSound('no');
+      soundLibrary.playSound('no');
     }
 
     // Don't call arrangeFish if fish have already been arranged.
@@ -1269,12 +1274,14 @@ let Pond = class Pond extends React.Component {
       setState({pondFishTransitionStartTime: $time(), pondClickedFish: null});
     }
 
-    e.stopPropagation();
+    if (e) {
+      e.stopPropagation();
+    }
   };
 
   onPondClick = e => {
     // Don't allow pond clicks if a Guide is currently showing.
-    if (getCurrentGuide()) {
+    if (guide.getCurrentGuide()) {
       return;
     }
 
@@ -1327,7 +1334,7 @@ let Pond = class Pond extends React.Component {
             }
           });
           fishClicked = true;
-          playSound('yes');
+          soundLibrary.playSound('yes');
 
           if (
             state.appMode === AppMode.FishShort ||
@@ -1350,38 +1357,36 @@ let Pond = class Pond extends React.Component {
 
       if (!fishClicked) {
         setState({pondClickedFish: null});
-        playSound('no');
+        soundLibrary.playSound('no');
       }
     }
   };
 
-  onPondPanelButtonClick(e) {
+  onPondPanelButtonClick = e => {
     const state = getState();
 
-    if (
-      state.appMode === AppMode.FishShort ||
-      state.appMode === AppMode.FishLong
-    ) {
+    if ([AppMode.FishShort, AppMode.FishLong].includes(state.appMode)) {
       setState({
         pondPanelShowing: !state.pondPanelShowing
       });
 
       if (state.pondPanelShowing) {
-        playSound('sortno');
+        soundLibrary.playSound('sortno');
       } else {
-        playSound('sortyes');
+        soundLibrary.playSound('sortyes');
       }
     }
 
-    e.stopPropagation();
-  }
+    if (e) {
+      e.stopPropagation();
+    }
+  };
 
   render() {
     const state = getState();
 
     const showInfoButton =
-      (state.appMode === AppMode.FishShort ||
-        state.appMode === AppMode.FishLong) &&
+      [AppMode.FishShort, AppMode.FishLong].includes(state.appMode) &&
       state.pondFish.length > 0 &&
       state.recallFish.length > 0;
     const recallIconsStyle = showInfoButton
@@ -1390,14 +1395,14 @@ let Pond = class Pond extends React.Component {
 
     return (
       <Body>
-        <div onClick={e => this.onPondClick(e)} style={styles.pondSurface} />
+        <div onClick={this.onPondClick} style={styles.pondSurface} />
         <div style={recallIconsStyle}>
           <FontAwesomeIcon
             icon={faCheck}
             style={{
               ...styles.recallIcon,
               ...{borderTopLeftRadius: 8, borderBottomLeftRadius: 8},
-              ...(!state.showRecallFish ? styles.bgGreen : {})
+              ...(state.showRecallFish ? {} : styles.bgGreen)
             }}
             onClick={this.toggleRecall}
           />
@@ -1418,37 +1423,32 @@ let Pond = class Pond extends React.Component {
               ...(!state.pondPanelShowing ? {} : styles.bgTeal)
             }}
             onClick={this.onPondPanelButtonClick}
+            id="uitest-info-btn"
           >
             <FontAwesomeIcon icon={faInfo} style={styles.infoIcon} />
           </div>
         )}
         <img style={styles.pondBot} src={aiBotClosed} />
         {state.canSkipPond && (
-          <div>
+          <div id="uitest-nav-btns">
             {state.appMode === AppMode.FishLong ? (
               <div>
                 <Button
                   style={styles.playAgainButton}
                   onClick={() => {
                     setState({pondClickedFish: null, pondPanelShowing: false});
-                    resetTraining(state);
-                    toMode(Modes.Words);
+                    helpers.resetTraining(state);
+                    modeHelpers.toMode(Modes.Words);
                   }}
                 >
                   {I18n.t('newWord')}
                 </Button>
-                <Button
-                  style={styles.finishButton}
-                  onClick={() => state.onContinue()}
-                >
+                <Button style={styles.finishButton} onClick={state.onContinue}>
                   {I18n.t('finish')}
                 </Button>
               </div>
             ) : (
-              <Button
-                style={styles.continueButton}
-                onClick={() => state.onContinue()}
-              >
+              <Button style={styles.continueButton} onClick={state.onContinue}>
                 {I18n.t('continue')}
               </Button>
             )}
@@ -1456,7 +1456,7 @@ let Pond = class Pond extends React.Component {
               <Button
                 style={styles.backButton}
                 onClick={() => {
-                  toMode(Modes.Training);
+                  modeHelpers.toMode(Modes.Training);
                   setState({pondClickedFish: null, pondPanelShowing: false});
                 }}
               >
@@ -1470,7 +1470,7 @@ let Pond = class Pond extends React.Component {
     );
   }
 };
-Pond = Radium(Pond);
+export const Pond = Radium(UnwrappedPond); // Exported for unit tests.
 
 let Guide = class Guide extends React.Component {
   onShowing() {
@@ -1479,15 +1479,15 @@ let Guide = class Guide extends React.Component {
   }
 
   dismissGuideClick() {
-    const dismissed = dismissCurrentGuide();
+    const dismissed = guide.dismissCurrentGuide();
     if (dismissed) {
-      playSound('other');
+      soundLibrary.playSound('other');
     }
   }
 
   render() {
     const state = getState();
-    const currentGuide = getCurrentGuide();
+    const currentGuide = guide.getCurrentGuide();
 
     let guideBgStyle = [styles.guideBackground];
     if (currentGuide) {
@@ -1504,7 +1504,7 @@ let Guide = class Guide extends React.Component {
     // Start playing the typing sounds.
     if (!state.guideShowing && !state.guideTypingTimer && currentGuide) {
       const guideTypingTimer = setInterval(() => {
-        playSound('no', 0.5);
+        soundLibrary.playSound('no', 0.5);
       }, 1000 / 10);
       setState({guideTypingTimer});
     }
@@ -1583,10 +1583,6 @@ let Guide = class Guide extends React.Component {
 Guide = Radium(Guide);
 
 export default class UI extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const state = getState();
     const currentMode = getState().currentMode;

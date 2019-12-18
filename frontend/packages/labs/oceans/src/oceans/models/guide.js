@@ -569,7 +569,7 @@ const guides = [
   }
 ];
 
-export function getCurrentGuide() {
+const getCurrentGuide = () => {
   if (queryStrFor('guide') === 'off') {
     return null;
   }
@@ -595,9 +595,9 @@ export function getCurrentGuide() {
   }
 
   return null;
-}
+};
 
-export function dismissCurrentGuide() {
+const dismissCurrentGuide = () => {
   const currentGuide = getCurrentGuide();
 
   // If we have a current guide, and it's actually showing (rather than still
@@ -613,4 +613,9 @@ export function dismissCurrentGuide() {
   }
 
   return false;
-}
+};
+
+export default {
+  getCurrentGuide,
+  dismissCurrentGuide
+};

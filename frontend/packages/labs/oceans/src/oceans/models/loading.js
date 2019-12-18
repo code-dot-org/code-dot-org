@@ -4,7 +4,7 @@ import {getState, setState} from '../state';
 import {AppMode, Modes} from '../constants';
 import {initFishData} from '../../utils/fishData';
 import {getAppMode, $time, finishLoading} from '../helpers';
-import {toMode} from '../toMode';
+import modeHelpers from '../modeHelpers';
 import SimpleTrainer from '../../utils/SimpleTrainer';
 
 export const init = async () => {
@@ -45,6 +45,5 @@ export const init = async () => {
     mode = Modes.Words;
   }
 
-  // Ensure that we show the loading UI for at least 2 seconds, to avoid a flash.
-  finishLoading(startTime, () => toMode(mode));
+  finishLoading(startTime, () => modeHelpers.toMode(mode));
 };

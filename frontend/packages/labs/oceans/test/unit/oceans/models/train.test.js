@@ -1,7 +1,7 @@
 const {initFishData} = require('@ml/utils/fishData');
 import {setState, getState, resetState} from '@ml/oceans/state';
 import {ClassType, Modes} from '@ml/oceans/constants';
-import {init, onClassifyFish} from '@ml/oceans/models/train.js';
+import train from '@ml/oceans/models/train.js';
 
 describe('Model quality test', () => {
   beforeAll(() => {
@@ -17,7 +17,7 @@ describe('Model quality test', () => {
   });
 
   test('init state', () => {
-    init();
+    train.init();
     const state = getState();
     expect(state).toBeTruthy();
     expect(state.trainer).toBeTruthy();
@@ -26,11 +26,11 @@ describe('Model quality test', () => {
   });
 
   test('state changes on classify', () => {
-    init();
+    train.init();
     // Set isRunning to false to simulate animation ending
     setState({isRunning: false});
     const previousState = getState();
-    expect(onClassifyFish(true)).toBe(true);
+    expect(train.onClassifyFish(true)).toBe(true);
     const newState = getState();
     expect(newState.trainingIndex).toBe(previousState.trainingIndex + 1);
     expect(newState.yesCount).toBe(previousState.yesCount + 1);
