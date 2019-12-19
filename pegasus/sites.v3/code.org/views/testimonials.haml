@@ -3,14 +3,14 @@
   .col-33{style: "text-align:center; margin-top: 20px;"}
     %img{src: "/images/stats-kid1.jpg", style: "width: 70%"}
     %br/
-    =CGI.escapeHTML(I18n.t :stats_nina)
+    =CGI.unescapeHTML(I18n.t :stats_nina)
 
   .col-33{style: "text-align:center; margin-top: 20px;"}
     %img{src: "/images/stats-kid2.jpg", style: "width: 70%"}
     %br/
-    =CGI.escapeHTML(I18n.t :stats_student)
+    =CGI.unescapeHTML(I18n.t :stats_student)
 
   .col-33{style: "text-align:center; margin-top: 20px;"}
     %img{src: "/images/stats-kid3.jpg", style: "width: 70%"}
     %br/
-    =CGI.escapeHTML(I18n.t :stats_michael)
+    =CGI.unescapeHTML(I18n.t :stats_michael)

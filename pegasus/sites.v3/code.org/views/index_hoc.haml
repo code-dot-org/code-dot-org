@@ -1,5 +1,5 @@
 .lines_of_code_header{style: "background-color: #d43f3a"}
-  = CGI.escapeHTML(I18n.t(:csedweek_banner_teachers))
+  = CGI.unescapeHTML(I18n.t(:csedweek_banner_teachers))
 %br/
 
 :css
