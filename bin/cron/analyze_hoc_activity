@@ -161,7 +161,6 @@ def main
   total_with_gender = [1, total_females + total_males].max
 
   Properties.set :about_stats, {
-    number_served: total_started,
     number_students: DASHBOARD_REPORTING_DB_READONLY[:users].where(user_type: 'student').exclude(last_sign_in_at: nil).count,
     number_teachers: DASHBOARD_REPORTING_DB_READONLY[:users].where(user_type: 'teacher').exclude(last_sign_in_at: nil).count,
     percent_female: ((100 * total_females) / total_with_gender).to_i,
