@@ -16,6 +16,8 @@ import MakerError, {
 import {findPortWithViableDevice} from './portScanning';
 import * as redux from './redux';
 import {isChrome, gtChrome33, isCodeOrgBrowser} from './util/browserChecks';
+import MicroBitBoard from './MicroBitBoard';
+import experiments from '@cdo/apps/util/experiments';
 
 // Re-export some modules so consumers only need this 'toolkit' module
 export {dropletConfig, MakerError};
@@ -65,8 +67,11 @@ export function connect({interpreter, onDisconnect}) {
   if (currentBoard) {
     commands.injectBoardController(currentBoard);
     currentBoard.installOnInterpreter(interpreter);
-    // When the board is reset, the components are disabled. Re-enable now.
-    currentBoard.enableComponents();
+    //Microbit does not yet have components to re-enable
+    if (!experiments.isEnabled('microbit')) {
+      // When the board is reset, the components are disabled. Re-enable now.
+      currentBoard.enableComponents();
+    }
     return Promise.resolve();
   }
 
@@ -156,9 +161,14 @@ function getBoard() {
   if (shouldRunWithFakeBoard()) {
     return Promise.resolve(new FakeBoard());
   } else {
-    return findPortWithViableDevice().then(
-      port => new CircuitPlaygroundBoard(port)
-    );
+    if (experiments.isEnabled('microbit')) {
+      //TODO - break out the applicable parts of findPortWithViableDevice
+      return findPortWithViableDevice().then(() => new MicroBitBoard());
+    } else {
+      return findPortWithViableDevice().then(
+        port => new CircuitPlaygroundBoard(port)
+      );
+    }
   }
 }
 

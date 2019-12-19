@@ -16,7 +16,6 @@ import {
 } from '@cdo/apps/code-studio/hiddenStageRedux';
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   main: {
@@ -146,19 +145,14 @@ class CourseScript extends Component {
               color={Button.ButtonColor.gray}
               className="uitest-go-to-unit-button"
             />
-            {isAssigned &&
-              viewAs === ViewType.Student &&
-              experiments.isEnabled(experiments.ASSIGNMENT_UPDATES) && (
-                <Assigned />
-              )}
+            {isAssigned && viewAs === ViewType.Student && <Assigned />}
             {isAssigned && viewAs === ViewType.Teacher && selectedSectionId && (
               <UnassignButton sectionId={selectedSectionId} />
             )}
             {!isAssigned &&
               viewAs === ViewType.Teacher &&
               showAssignButton &&
-              selectedSectionId &&
-              experiments.isEnabled(experiments.ASSIGNMENT_UPDATES) && (
+              selectedSection && (
                 <AssignButton
                   sectionId={selectedSection.id}
                   scriptId={id}

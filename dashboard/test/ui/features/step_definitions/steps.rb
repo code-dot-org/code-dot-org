@@ -1746,3 +1746,12 @@ end
 And(/^one year passes for user "([^"]*)"$/) do |name|
   pass_time_for_user name, 1.year.ago
 end
+
+Then /^I click selector "([^"]*)" (\d+(?:\.\d*)?) times?$/ do |selector, times|
+  step_list = []
+  times.to_i.times do
+    step_list.push("Then I click selector \"#{selector}\" once I see it")
+    step_list.push("And I wait for 1 seconds")
+  end
+  steps step_list.join("\n")
+end

@@ -113,11 +113,14 @@ def localize_level_content
       script_strings.delete_if {|_, value| value.blank?}
 
       script_i18n_directory = "../#{I18N_SOURCE_DIR}/course_content"
+
+      # We want to make sure to categorize HoC scripts as HoC scripts even if
+      # they have a version year, so this ordering is important
       script_i18n_directory =
-        if script.version_year
-          File.join(script_i18n_directory, script.version_year)
-        elsif ScriptConstants.script_in_category?(:hoc, script.name)
+        if ScriptConstants.script_in_category?(:hoc, script.name)
           File.join(script_i18n_directory, "Hour of Code")
+        elsif script.version_year
+          File.join(script_i18n_directory, script.version_year)
         else
           File.join(script_i18n_directory, "other")
         end
@@ -129,8 +132,16 @@ def localize_level_content
     end
   end
 
-  File.open(File.join(I18N_SOURCE_DIR, "dashboard/block_categories.json"), 'w') do |file|
-    file.write(JSON.pretty_generate(block_category_strings.sort.to_h))
+  File.open(File.join(I18N_SOURCE_DIR, "dashboard/block_categories.yml"), 'w') do |file|
+    # Format strings for consumption by the rails i18n engine
+    formatted_data = {
+      "en" => {
+        "data" => {
+          "block_categories" => block_category_strings.sort.to_h
+        }
+      }
+    }
+    file.write(I18nScriptUtils.to_crowdin_yaml(formatted_data))
   end
 end
 

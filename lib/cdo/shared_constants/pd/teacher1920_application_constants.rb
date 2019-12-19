@@ -263,29 +263,6 @@ module Pd
     ALL_LABELS_WITH_OVERRIDES = ALL_LABELS.map {|k, v| [k, LABEL_OVERRIDES[k] || v]}.to_h.freeze
     ADDITIONAL_KEYS_IN_ANSWERS = MULTI_ANSWER_QUESTION_FIELDS.values.flat_map(&:values).uniq.freeze
 
-    VALID_SCORES = {
-      # Minimum requirements
-      regional_partner_name: YES_NO,
-      csd_which_grades: YES_NO,
-      csp_which_grades: YES_NO,
-      cs_total_course_hours: YES_NO,
-      plan_to_teach: YES_NO,
-      committed: YES_NO,
-      replace_existing: YES_NO,
-      principal_approval: YES_NO,
-      principal_schedule_confirmed: YES_NO,
-      principal_diversity_recruitment: YES_NO,
-      principal_implementation: {meets_minimum_criteria_scores: YES_NO, bonus_points_scores: [2, 0]},
-      # Scholarship requirements
-      previous_yearlong_cdo_pd: YES_NO,
-      # Bonus Points
-      csp_how_offer: [2, 0],
-      taught_in_past: [2, 0],
-      free_lunch_percent: [5, 0],
-      underrepresented_minority_percent: [5, 0],
-      race: [2, 0]
-    }
-
     # Need to explicitly list these for the shared constant generation to work.
     SCOREABLE_QUESTIONS = {
       bonus_points: [
@@ -331,15 +308,6 @@ module Pd
       :principal_diversity_recruitment
     ]
 
-    CRITERIA_SCORE_QUESTIONS_CSP = (
-      VALID_SCORES.select {|_, v| v == YES_NO}.keys -
-        [:csd_which_grades] - SCHOLARSHIP_QUESTIONS
-    ).freeze
-    CRITERIA_SCORE_QUESTIONS_CSD = (
-      VALID_SCORES.select {|_, v| v == YES_NO}.keys -
-        [:csp_how_offer, :csp_which_grades] - SCHOLARSHIP_QUESTIONS
-    ).freeze
-
     TEXT_FIELDS = {
       other_with_text: 'Other:'.freeze,
       other_please_list: 'Other (Please List):'.freeze,
@@ -355,6 +323,21 @@ module Pd
       not_sure_explain: 'Not sure (Please Explain):',
       unable_to_attend_1920: 'I’m not able to attend any of the above workshop dates. (Please Explain):'
     }.freeze
+
+    SUBJECTS_THIS_YEAR = [
+      'Computer Science',
+      'Computer Literacy',
+      'Math',
+      'Science',
+      'History',
+      'Social Studies',
+      'English/Language Arts',
+      'Music',
+      'Art',
+      'Multimedia',
+      'Foreign Language',
+      TEXT_FIELDS[:other_please_list]
+    ]
 
     SUBJECTS_TAUGHT_IN_PAST = [
       'CS Fundamentals',
