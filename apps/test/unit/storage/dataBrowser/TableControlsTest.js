@@ -16,7 +16,9 @@ import experiments from '@cdo/apps/util/experiments';
 
 import {ChartType} from '@cdo/apps/storage/dataBrowser/dataUtils';
 import TableControls from '@cdo/apps/storage/dataBrowser/TableControls';
-import VisualizerModal from '@cdo/apps/storage/dataBrowser/dataVisualizer/VisualizerModal';
+import VisualizerModal, {
+  INITIAL_STATE as VISUALIZER_MODAL_INITIAL_STATE
+} from '@cdo/apps/storage/dataBrowser/dataVisualizer/VisualizerModal';
 
 const DEFAULT_PROPS = {
   clearTable: () => {},
@@ -40,7 +42,7 @@ describe('TableControls', () => {
     experiments.setEnabled(experiments.APPLAB_DATASETS, false);
   });
 
-  it('creates a new VisualizerModal instance when tableName changes', () => {
+  it('VisualizerModal state resets when tableName changes', () => {
     const store = getStore();
     const wrapper = mount(
       <Provider store={store}>
@@ -57,8 +59,12 @@ describe('TableControls', () => {
         .find(VisualizerModal)
         .children()
         .first()
-        .state().chartType
-    ).to.equal(ChartType.BAR_CHART);
+        .state()
+    ).to.deep.equal({
+      ...VISUALIZER_MODAL_INITIAL_STATE,
+      chartType: ChartType.BAR_CHART,
+      selectedColumn1: 'column'
+    });
     wrapper.setProps({
       children: React.cloneElement(wrapper.props().children, {
         tableName: 'differentTable'
@@ -69,7 +75,7 @@ describe('TableControls', () => {
         .find(VisualizerModal)
         .children()
         .first()
-        .state().chartType
-    ).to.equal(ChartType.NONE);
+        .state()
+    ).to.deep.equal(VISUALIZER_MODAL_INITIAL_STATE);
   });
 });

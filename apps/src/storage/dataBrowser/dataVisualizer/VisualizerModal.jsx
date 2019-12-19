@@ -38,7 +38,7 @@ const styles = {
   }
 };
 
-const INITIAL_STATE = {
+export const INITIAL_STATE = {
   isVisualizerOpen: false,
   chartTitle: '',
   chartType: ChartType.NONE,
