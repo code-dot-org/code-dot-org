@@ -221,16 +221,16 @@ export class SpecialAnnouncementActionBlock extends Component {
   render() {
     return (
       <TwoColumnActionBlock
-        id="danceparty-2019-announcement"
         imageUrl={pegasus(
-          '/shared/images/fill-540x300/teacher-announcement/hoc2019-danceparty.jpg'
+          '/shared/images/fill-485x281/teacher-announcement/hoc2019-posthoc.jpg'
         )}
-        subHeading={i18n.specialAnnouncementHeadingHoc2019DanceParty()}
-        description={i18n.specialAnnouncementDescriptionHoc2019DanceParty()}
+        subHeading={i18n.specialAnnouncementHeadingPostHoc2019()}
+        description={i18n.specialAnnouncementDescriptionPostHoc2019()}
         buttons={[
           {
-            url: pegasus('/hourofcode/overview'),
-            text: i18n.tryIt()
+            id: 'go-beyond-learn-more-button',
+            url: '/courses?view=teacher',
+            text: i18n.learnMore()
           }
         ]}
       />
