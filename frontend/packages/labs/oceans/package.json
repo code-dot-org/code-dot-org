@@ -101,7 +101,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/react-fontawesome": "^0.1.7",
-    "messageformat": "^1.0.0",
+    "messageformat": "^1.1.0",
     "react-typist": "^2.0.5"
   },
   "files": [
