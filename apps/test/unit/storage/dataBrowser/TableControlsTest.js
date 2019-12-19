@@ -49,33 +49,39 @@ describe('TableControls', () => {
         <TableControls {...DEFAULT_PROPS} />
       </Provider>
     );
-    wrapper
-      .find(VisualizerModal)
-      .children()
-      .first()
-      .setState({chartType: ChartType.BAR_CHART, selectedColumn1: 'column'});
-    expect(
-      wrapper
-        .find(VisualizerModal)
-        .children()
-        .first()
-        .state()
-    ).to.deep.equal({
+    setModalState(wrapper, {
+      chartType: ChartType.BAR_CHART,
+      selectedColumn1: 'column'
+    });
+    assertModalState(wrapper, {
       ...VISUALIZER_MODAL_INITIAL_STATE,
       chartType: ChartType.BAR_CHART,
       selectedColumn1: 'column'
     });
-    wrapper.setProps({
-      children: React.cloneElement(wrapper.props().children, {
-        tableName: 'differentTable'
-      })
+    setModalProps(wrapper, {
+      tableName: 'differentTable'
     });
-    expect(
-      wrapper
-        .find(VisualizerModal)
-        .children()
-        .first()
-        .state()
-    ).to.deep.equal(VISUALIZER_MODAL_INITIAL_STATE);
+    assertModalState(wrapper, VISUALIZER_MODAL_INITIAL_STATE);
   });
+
+  function getModal(wrapper) {
+    return wrapper
+      .find(VisualizerModal)
+      .children()
+      .first();
+  }
+
+  function assertModalState(wrapper, expectedState) {
+    expect(getModal(wrapper).state()).to.deep.equal(expectedState);
+  }
+
+  function setModalState(wrapper, newState) {
+    getModal(wrapper).setState(newState);
+  }
+
+  function setModalProps(wrapper, newProps) {
+    wrapper.setProps({
+      children: React.cloneElement(wrapper.props().children, newProps)
+    });
+  }
 });
