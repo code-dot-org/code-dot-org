@@ -43,7 +43,18 @@ module Pegasus
   end
 end
 
-module EscapeTranslate
+module EscapeHTMLInTranslate
+  # Sinatra does not by default escape HTML in template strings, so we
+  # explicitly escape here to prevent translators from adding their own
+  # unwanted HTML.
+  #
+  # If developers need to use formatting tags or anchors in a string, we
+  # recommend they use TextRender.safe_markdown rather than trying to construct
+  # the string with raw HTML.
+  #
+  # If developers need to use HTML tags that are not supported by markdown in a
+  # string, we recommend they contact the i18n team about the best way to
+  # handle that.
   def translate(locale, key, options = ::I18n::EMPTY_HASH)
     CGI.escapeHTML(super(locale, key, options))
   end
@@ -54,7 +65,7 @@ def load_pegasus_settings
 
   I18n.backend = CDO.i18n_backend
   I18n.backend.class.send(:include, I18n::Backend::Fallbacks)
-  I18n.backend.class.send(:include, EscapeTranslate)
+  I18n.backend.class.send(:include, EscapeHTMLInTranslate)
   I18n.fallbacks = I18n::Locale::Fallbacks.new(['en-US'])
   if rack_env?(:development) && !CDO.load_locales
     I18n.load_path += Dir[cache_dir('i18n/en-US.yml')]
