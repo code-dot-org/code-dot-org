@@ -25,6 +25,11 @@ class LevelDSL < BaseDSL
     {name: @name, properties: @hash}
   end
 
+  # Serialize all fields specified in the i18n_fields method into a hash.
+  #
+  # Subclasses should extend the i18n_fields method to define which of the
+  # fields they add should be internationalized.
+  #
   # @override
   def i18n_hash
     fields = self.class.i18n_fields.

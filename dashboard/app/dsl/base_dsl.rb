@@ -30,7 +30,10 @@ class BaseDSL
     @hash
   end
 
-  # override in subclass
+  # After parse has been done, this function returns a hash of all the
+  # user-visible strings from this instance.
+  #
+  # Override in subclass to provide class-specific functionality.
   def i18n_hash
     {}
   end
