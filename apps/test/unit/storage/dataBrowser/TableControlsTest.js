@@ -14,6 +14,7 @@ import {reducers} from '@cdo/apps/applab/redux/applab';
 import {changeView} from '@cdo/apps/storage/redux/data';
 import experiments from '@cdo/apps/util/experiments';
 
+import {ChartType} from '@cdo/apps/storage/dataBrowser/dataUtils';
 import TableControls from '@cdo/apps/storage/dataBrowser/TableControls';
 import VisualizerModal from '@cdo/apps/storage/dataBrowser/dataVisualizer/VisualizerModal';
 
@@ -50,14 +51,14 @@ describe('TableControls', () => {
       .find(VisualizerModal)
       .children()
       .first()
-      .setState({chartType: 'Bar Chart', selectedColumn1: 'column'});
+      .setState({chartType: ChartType.BAR_CHART, selectedColumn1: 'column'});
     expect(
       wrapper
         .find(VisualizerModal)
         .children()
         .first()
         .state().chartType
-    ).to.equal('Bar Chart');
+    ).to.equal(ChartType.BAR_CHART);
     wrapper.setProps({
       children: React.cloneElement(wrapper.props().children, {
         tableName: 'differentTable'
@@ -69,6 +70,6 @@ describe('TableControls', () => {
         .children()
         .first()
         .state().chartType
-    ).to.equal('');
+    ).to.equal(ChartType.NONE);
   });
 });
