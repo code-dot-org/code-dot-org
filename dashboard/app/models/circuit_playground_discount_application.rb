@@ -56,8 +56,10 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
     where(user_id: associated_user_ids).first
   end
 
+  # Checks whether a user has attended a workshop with a given subject.
+  # Used to check both attendance at 5-day summer workshops and quarterly workshops.
+  # @param workshop_subjects [Array] A list of workshop subjects (or single value) to check for a user's attendance.
   # @return {boolean} true if user is an eligible facilitator or attended relevant workshop
-  #
   def self.user_pd_eligible?(user, workshop_subjects)
     user_pd_eligible_as_teacher?(user, workshop_subjects) || user_pd_eligible_as_facilitator?(user)
   end
