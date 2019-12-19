@@ -15,6 +15,7 @@ const styles = {
   main: {
     position: 'absolute',
     height: RESIZER_HEIGHT,
+    marginLeft: 15,
     right: 0
   },
   ellipsis: {
