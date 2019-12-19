@@ -18,7 +18,8 @@ export const personalProjectDataPropType = PropTypes.shape({
   thumbnailUrl: PropTypes.string,
   type: PropTypes.string.isRequired,
   updatedAt: PropTypes.string.isRequired,
-  isPublished: PropTypes.bool
+  isPublished: PropTypes.bool,
+  projectNameFailure: PropTypes.string
 });
 
 export const featuredProjectDataPropType = PropTypes.shape({
