@@ -38,6 +38,7 @@ export function cleanupMicroBitComponents(components, shouldDestroyComponents) {
 
   if (components.tempSensor) {
     components.tempSensor.stop();
+    components.tempSensor.currentTemp = 0;
   }
 
   if (shouldDestroyComponents) {
@@ -45,6 +46,17 @@ export function cleanupMicroBitComponents(components, shouldDestroyComponents) {
     delete components.buttonA;
     delete components.buttonB;
     delete components.tempSensor;
+  }
+}
+
+/**
+ * Re-initializes accelerometer
+ * @param {Object} components - map of components, as originally returned by
+ *   createMicroBitComponents.
+ */
+export function enableMicroBitComponents(components) {
+  if (components.tempSensor) {
+    components.tempSensor.start();
   }
 }
 
