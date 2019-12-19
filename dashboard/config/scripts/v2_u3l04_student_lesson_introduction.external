@@ -15,9 +15,9 @@ markdown <<MARKDOWN
 
 ## Introduced Code
 
-* [moveForward](//docs.code.org/applab/moveForward/)
-* [penDown](//docs.code.org/applab/penDown/)
-* [penUp](//docs.code.org/applab/penUp/)
-* [turnLeft](//docs.code.org/applab/turnLeft/)
+* [moveForward](//studio.code.org/docs/applab/moveForward/)
+* [penDown](//studio.code.org/docs/applab/penDown/)
+* [penUp](//studio.code.org/docs/applab/penUp/)
+* [turnLeft](//studio.code.org/docs/applab/turnLeft/)
 
 MARKDOWN
