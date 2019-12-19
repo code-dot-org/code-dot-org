@@ -1,5 +1,6 @@
 /** @file wrap Playground.Thermometer to expose raw value */
 import Playground from 'playground-io';
+import {EventEmitter} from 'events';
 
 // All we care about doing here is caching the temp sensor's raw input value
 // and then exposing it as a property on the Thermometer object.
@@ -32,3 +33,58 @@ const PlaygroundThermometer = {
   }
 };
 export default PlaygroundThermometer;
+
+export class MicroBitThermometer extends EventEmitter {
+  constructor(board) {
+    super();
+    this.currentTemp = 0;
+    this.board = board;
+    this.board.mb.addFirmataUpdateListener(() => {
+      this.emit('data');
+
+      // If the temp value has changed, update the local value and
+      // trigger a change event
+      if (this.currentTemp !== this.board.mb.analogChannel[12]) {
+        this.currentTemp = this.board.mb.analogChannel[12];
+        this.emit('change');
+      }
+    });
+    this.start();
+
+    Object.defineProperties(this, {
+      raw: {
+        get: function() {
+          return this.board.mb.analogChannel[12];
+        }
+      },
+      celsius: {
+        get: function() {
+          return this.raw;
+        }
+      },
+      fahrenheit: {
+        get: function() {
+          return ((this.celsius * 9) / 5 + 32).toFixed(2);
+        }
+      },
+      C: {
+        get: function() {
+          return this.celsius;
+        }
+      },
+      F: {
+        get: function() {
+          return this.fahrenheit;
+        }
+      }
+    });
+  }
+
+  start() {
+    this.board.mb.streamAnalogChannel(12); // enable temp sensor
+  }
+
+  stop() {
+    this.board.mb.stopStreamingAnalogChannel(12); // disable temp sensor
+  }
+}
