@@ -1,4 +1,4 @@
-import {assert} from '../../util/deprecatedChai';
+import {assert} from '../../util/reconfiguredChai';
 
 // we have to include the base locale file so the craft-specific one will work,
 // even though we don't need to use the base locale directly in this test.
