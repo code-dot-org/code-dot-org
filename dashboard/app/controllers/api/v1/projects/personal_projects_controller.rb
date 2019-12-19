@@ -1,5 +1,3 @@
-require 'cdo/share_filtering'
-
 class Api::V1::Projects::PersonalProjectsController < ApplicationController
   # GET /api/v1/projects/personal/
   def index

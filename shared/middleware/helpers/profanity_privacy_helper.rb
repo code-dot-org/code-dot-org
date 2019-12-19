@@ -32,7 +32,6 @@ def title_profanity_privacy_violation(name, locale)
     ShareFiltering.find_name_failure(name, locale)
   rescue OpenURI::HTTPError, IO::EAGAINWaitReadable
     # If WebPurify or Geocoder are unavailable, default to viewable
-    # Add logging!
     return false
   end
   share_failure
