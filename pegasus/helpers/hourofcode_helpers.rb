@@ -25,7 +25,7 @@ HOC_I18N = hoc_load_i18n
 def hoc_s(id)
   id = id.to_s
   language = @language || Languages.get_hoc_unique_language_by_locale(request.locale)
-  HOC_I18N[language][id] || HOC_I18N['en'][id]
+  CGI.escapeHTML(HOC_I18N[language][id] || HOC_I18N['en'][id])
 end
 
 def hoc_canonicalized_i18n_path(uri, query_string)

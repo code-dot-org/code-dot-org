@@ -43,11 +43,18 @@ module Pegasus
   end
 end
 
+module EscapeTranslate
+  def translate(locale, key, options = ::I18n::EMPTY_HASH)
+    CGI.escapeHTML(super(locale, key, options))
+  end
+end
+
 def load_pegasus_settings
   $log = Pegasus.logger
 
   I18n.backend = CDO.i18n_backend
   I18n.backend.class.send(:include, I18n::Backend::Fallbacks)
+  I18n.backend.class.send(:include, EscapeTranslate)
   I18n.fallbacks = I18n::Locale::Fallbacks.new(['en-US'])
   if rack_env?(:development) && !CDO.load_locales
     I18n.load_path += Dir[cache_dir('i18n/en-US.yml')]
