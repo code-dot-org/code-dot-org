@@ -64,7 +64,8 @@ export class MicroBitThermometer extends EventEmitter {
       },
       fahrenheit: {
         get: function() {
-          return ((this.celsius * 9) / 5 + 32).toFixed(2);
+          let rawValue = (this.celsius * 9) / 5 + 32;
+          return Math.floor(rawValue * 100) / 100;
         }
       },
       C: {
