@@ -6,4 +6,4 @@
     %img{src:"/images/fit-250/AFE-dark-logo.png"}
 
 .sponsor-subtext-description
-  = I18n.t(:hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link, amazon_future_engineer_link: 'https://www.amazonfutureengineer.com')
+  = CGI.unescapeHTML(I18n.t(:hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link, amazon_future_engineer_link: 'https://www.amazonfutureengineer.com'))

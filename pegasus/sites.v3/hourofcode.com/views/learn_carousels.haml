@@ -24,7 +24,7 @@
 - @variation = variation
 
 #carousel-ie8{:style=>'display:none'}
-  = view :learn_carousel, :heading=>I18n.t(:older_systems), :subheading=>I18n.t(:older_systems_subheading), :tag=>'IE8', :tutorials=>tutorials, :id=>'collection-ie8', :check_language=>true, :shuffle=>true
+  = view :learn_carousel, :heading=>I18n.t(:older_systems), :subheading=>CGI.unescapeHTML(I18n.t(:older_systems_subheading)), :tag=>'IE8', :tutorials=>tutorials, :id=>'collection-ie8', :check_language=>true, :shuffle=>true
 
 #carousel-international{:style=>'display:none'}
   = view :learn_carousel, :heading=>I18n.t(:carousel_heading_international), :tag=>'International', :tutorials=>tutorials, :id=>'collection-international', :international_layout=>true, :check_language=>true, :shuffle=>true
@@ -47,7 +47,7 @@
   %br
   - unless variation == "university"
     .footer-banner
-      = I18n.t(:learn_footer_all_tutorials)
+      = CGI.unescapeHTML(I18n.t(:learn_footer_all_tutorials))
 
 :javascript
 

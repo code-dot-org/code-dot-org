@@ -130,7 +130,7 @@
 
 #volunteer-engineer-thanks{:style=>"display: none;"}
   .alert.alert-success{role:"alert"}
-    %p= I18n.t(:volunteer_engineer_submission_thankyou).gsub('%{url}', '/volunteer/local')
+    %p= CGI.unescapeHTML(I18n.t(:volunteer_engineer_submission_thankyou)).gsub('%{url}', '/volunteer/local')
   - if !form.secret
     #edit-information
       You can update your volunteer information or email subscription preferences anytime

@@ -23,7 +23,7 @@ social:
 
 %h1= I18n.t(:hoc_overview_title)
 
-= I18n.t(:hoc_overview_subtitle)
+= CGI.unescapeHTML(I18n.t(:hoc_overview_subtitle))
 
 - if request.language == 'en'
   .tile-container-responsive{style: "margin-top: 20px;"}

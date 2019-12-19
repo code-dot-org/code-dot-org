@@ -80,8 +80,8 @@ video_player: true
 
   .video-smalltext
     %ul
-      %li= I18n.t(:videos_more, inspiring_videos_playlist: 'https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP')
-      %li= I18n.t(:careers_page_more, careers_url: CDO.code_org_url('/careers'))
+      %li= CGI.unescapeHTML(I18n.t(:videos_more, inspiring_videos_playlist: 'https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP'))
+      %li= CGI.unescapeHTML(I18n.t(:careers_page_more, careers_url: CDO.code_org_url('/careers')))
 
 %div#featured-athletes
   %h2= I18n.t(:sports_athletes_title)
