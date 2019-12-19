@@ -41,7 +41,7 @@ export const addScriptData = (scriptId, scriptData) => {
   // Filter to match scriptDataPropType
   const filteredScriptData = {
     id: scriptData.id,
-    csf: scriptData.isCSF,
+    csf: scriptData.csf,
     title: scriptData.title,
     path: scriptData.path,
     stages: scriptData.stages
