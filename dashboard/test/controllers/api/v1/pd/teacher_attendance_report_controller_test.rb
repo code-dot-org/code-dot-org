@@ -42,20 +42,34 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ::ActionController::T
     @program_manager = create :program_manager
 
     # CSF workshop from this program manager with 10 teachers.
-    @pm_workshop = create :workshop, :ended, organizer: @program_manager, course: Pd::Workshop::COURSE_CSF
+    @pm_workshop = create :workshop, :ended,
+      organizer: @program_manager,
+      course: Pd::Workshop::COURSE_CSF,
+      started_at: 1.day.ago,
+      ended_at: 1.day.ago,
+      sessions_from: 1.day.ago
     10.times do
       create :pd_workshop_participant, workshop: @pm_workshop, enrolled: true, attended: true
     end
 
     # CSF workshop from this organizer with 10 teachers.
-    @workshop = create :workshop, :ended, organizer: @organizer, course: Pd::Workshop::COURSE_CSF
+    @workshop = create :workshop, :ended,
+      organizer: @organizer,
+      course: Pd::Workshop::COURSE_CSF,
+      started_at: 1.day.ago,
+      ended_at: 1.day.ago,
+      sessions_from: 1.day.ago
     10.times do
       create :pd_workshop_participant, workshop: @workshop, enrolled: true, attended: true
     end
 
     # Non-CSF workshop from a different organizer, with 1 teacher.
-    @other_workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_ECS,
-      subject: Pd::Workshop::SUBJECT_ECS_PHASE_2
+    @other_workshop = create :workshop, :ended,
+      course: Pd::Workshop::COURSE_ECS,
+      subject: Pd::Workshop::SUBJECT_ECS_PHASE_2,
+      started_at: 1.day.ago,
+      ended_at: 1.day.ago,
+      sessions_from: 1.day.ago
     create :pd_workshop_participant, workshop: @other_workshop, enrolled: true, attended: true
   end
 
