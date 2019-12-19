@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/deprecatedChai';
+import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedSectionProgress} from '@cdo/apps/templates/sectionProgress/SectionProgress';
 import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import sinon from 'sinon';
@@ -40,7 +40,8 @@ describe('SectionProgress', () => {
         excludeCsfColumnInLegend: false
       },
       isLoadingProgress: false,
-      scriptFriendlyName: 'My Script'
+      scriptFriendlyName: 'My Script',
+      showStandardsIntroDialog: false
     };
   });
 
@@ -56,12 +57,12 @@ describe('SectionProgress', () => {
     expect(wrapper.find('#uitest-spinner').exists()).to.be.false;
   });
 
-  it('summary view shows summary view and legend', () => {
+  it('shows summary view', () => {
     const wrapper = shallow(<UnconnectedSectionProgress {...DEFAULT_PROPS} />);
     expect(wrapper.find('#uitest-summary-view').exists()).to.be.true;
   });
 
-  it('detail view shows detail view and legend', () => {
+  it('shows detail view', () => {
     const wrapper = shallow(
       <UnconnectedSectionProgress
         {...DEFAULT_PROPS}
@@ -71,7 +72,7 @@ describe('SectionProgress', () => {
     expect(wrapper.find('#uitest-detail-view').exists()).to.be.true;
   });
 
-  it('standards view shows standards view and legend', () => {
+  it('shows standards view', () => {
     sinon.stub(experiments, 'isEnabled').returns(true);
     const wrapper = shallow(
       <UnconnectedSectionProgress

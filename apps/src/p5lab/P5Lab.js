@@ -1,3 +1,4 @@
+/*global Blockly*/
 import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
@@ -827,6 +828,24 @@ P5Lab.prototype.onPuzzleComplete = function(submit, testResult, message) {
   } else {
     // We're using blockly, report the program as xml
     var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+
+    // When SharedFunctions (aka shared behavior_definitions) are enabled, they
+    // are always appended to startBlocks on page load.
+    // See StudioApp -> setStartBlocks_
+    // Because of this, we need to remove the SharedFunctions when we are in
+    // toolbox edit mode. Otherwise, they end up in a student's toolbox.
+    if (this.level.edit_blocks === 'toolbox_blocks') {
+      var allBlocks = Array.from(xml.querySelectorAll('xml > block'));
+      var toRemove = allBlocks.filter(element => {
+        return (
+          element.getAttribute('type') === 'behavior_definition' &&
+          element.getAttribute('usercreated') !== 'true'
+        );
+      });
+      toRemove.forEach(element => {
+        xml.removeChild(element);
+      });
+    }
     program = encodeURIComponent(Blockly.Xml.domToText(xml));
   }
 
