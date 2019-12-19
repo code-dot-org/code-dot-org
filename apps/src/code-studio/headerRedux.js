@@ -114,7 +114,7 @@ export default (state = initialState, action) => {
   if (action.type === SET_NAME_FAILURE) {
     return {
       ...state,
-      projectNameFailure: action.nameFailure
+      projectNameFailure: action.projectNameFailure
     };
   }
 
@@ -177,9 +177,9 @@ export const retryProjectSave = () => {
   return dispatch => dashboard.project.save();
 };
 
-export const setNameFailure = nameFailure => ({
+export const setNameFailure = projectNameFailure => ({
   type: SET_NAME_FAILURE,
-  nameFailure
+  projectNameFailure
 });
 
 export const resetNameFailure = () => ({

@@ -101,8 +101,8 @@ export function saveSuccess(projectId, lastUpdatedAt) {
   return {type: SAVE_SUCCESS, projectId, lastUpdatedAt};
 }
 
-export function saveFailure(projectId, nameFailure) {
-  return {type: SAVE_FAILURE, projectId, nameFailure};
+export function saveFailure(projectId, projectNameFailure) {
+  return {type: SAVE_FAILURE, projectId, projectNameFailure};
 }
 
 export function resetNameFailure(projectId) {
@@ -345,9 +345,9 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
         isEditing: false
       };
 
-      if (action.nameFailure) {
+      if (action.projectNameFailure) {
         unsavedProjects[saveAttemptProjectIndex].projectNameFailure =
-          action.nameFailure;
+          action.projectNameFailure;
         unsavedProjects[saveAttemptProjectIndex].isEditing = true;
       }
 
@@ -358,7 +358,7 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
     case RESET_NAME_FAILURE:
       var nameFailureProjectId = action.projectId;
 
-      var nameFailureProjectIndex = state.nameFailureProjects.findIndex(
+      var nameFailureProjectIndex = state.projects.findIndex(
         project => project.channel === nameFailureProjectId
       );
 
