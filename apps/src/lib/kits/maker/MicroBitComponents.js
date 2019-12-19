@@ -37,6 +37,7 @@ export function cleanupMicroBitComponents(components, shouldDestroyComponents) {
   }
 
   if (components.accelerometer) {
+    components.accelerometer.state = {x: 0, y: 0, z: 0};
     components.accelerometer.stop();
   }
 
