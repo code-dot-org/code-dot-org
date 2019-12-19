@@ -20,4 +20,4 @@ Pd::Application::Teacher2021Application.find_each do |app|
   ]
 end
 
-Google::Drive.new.add_sheet_to_spreadsheet(applications, "2019-20 Teacher Applications", "all_apps (auto)")
+Google::Drive.new.add_sheet_to_spreadsheet(applications, "2020-21 Teacher Applications", "all_apps (auto)")

@@ -11374,6 +11374,18 @@ en:
               name: Unit 4 TEACHER Survey
             'Lesson 15: Assessment Day':
               name: 'Lesson 15: Assessment Day'
+            Project - Decision Maker App - Part 1:
+              name: Project - Decision Maker App - Part 1
+            Project - Decision Maker App - Part 2:
+              name: Project - Decision Maker App - Part 2
+            Project - Decision Maker App - Part 3:
+              name: Project - Decision Maker App - Part 3
+            Project - Decision Maker App Part 1:
+              name: Project - Decision Maker App Part 1
+            Project - Decision Maker App Part 2:
+              name: Project - Decision Maker App Part 2
+            Project - Decision Maker App Part 3:
+              name: Project - Decision Maker App Part 3
           title: CSP Unit 4 Pilot - Variables, Conditionals, and Functions
           description_audience: ''
           description_short: ''
@@ -11898,6 +11910,14 @@ en:
               name: Circle Square Patterns
             'Lesson 14: Assessment Day':
               name: 'Lesson 14: Assessment Day'
+            'Project: Digital Information Dilemmas Part 1':
+              name: 'Project: Digital Information Dilemmas Part 1'
+            'Project: Digital Information Dilemmas Part 2':
+              name: 'Project: Digital Information Dilemmas Part 2'
+            Project - Digital Information Dilemmas Part 1:
+              name: Project - Digital Information Dilemmas Part 1
+            Project - Digital Information Dilemmas Part 2:
+              name: Project - Digital Information Dilemmas Part 2
           title: CSP Unit 1 Pilot - Digital Information
           description_audience: ''
           description_short: ''
@@ -13077,6 +13097,12 @@ en:
               name: 'Lesson 11: Unit Assessment'
             'Lesson 11: Assessment Day':
               name: 'Lesson 11: Assessment Day'
+            Project - Designing an App Part 5:
+              name: Project - Designing an App Part 5
+            Intro to Programming:
+              name: Intro to Programming
+            Debugging:
+              name: Debugging
           title: CSP Unit 3 Pilot - Intro to App Design
           description_audience: ''
           description_short: ''
@@ -13369,6 +13395,10 @@ en:
               name: 'Lesson 9: Assessment Day'
             The Need for Addressing:
               name: The Need for Addressing
+            Project - Internet Dilemmas Part 1:
+              name: Project - Internet Dilemmas Part 1
+            Project - Internet Dilemmas Part 2:
+              name: Project - Internet Dilemmas Part 2
           title: CSP Unit 2 Pilot - The Internet
           description_audience: ''
           description_short: ''
@@ -13603,6 +13633,18 @@ en:
               name: 'Project: Innovation Simulation Part 6'
             'Project: Innovation Simulation Part 7':
               name: 'Project: Innovation Simulation Part 7'
+            Project - Innovation Simulation Part 1:
+              name: Project - Innovation Simulation Part 1
+            Project - Innovation Simulation Part 2:
+              name: Project - Innovation Simulation Part 2
+            Project - Innovation Simulation Part 3:
+              name: Project - Innovation Simulation Part 3
+            Project - Innovation Simulation Part 4:
+              name: Project - Innovation Simulation Part 4
+            Project - Innovation Simulation Part 6:
+              name: Project - Innovation Simulation Part 6
+            Project - Innovation Simulation Part 7:
+              name: Project - Innovation Simulation Part 7
           title: Cybersecurity and Global Impacts
           description_audience: ''
           description_short: ''
@@ -13873,3 +13915,53 @@ en:
               name: Conditionals Review
               description_student: ''
               description_teacher: ''
+        csp7-pilot:
+          stages:
+            Parameters and Returns Explore:
+              name: Parameters and Returns Explore
+            Parameters and Returns Investigate:
+              name: Parameters and Returns Investigate
+            Parameters and Returns Practice:
+              name: Parameters and Returns Practice
+            Parameters and Returns Make:
+              name: Parameters and Returns Make
+            Libraries Explore:
+              name: Libraries Explore
+            Libraries Investigate:
+              name: Libraries Investigate
+            Libraries Practice:
+              name: Libraries Practice
+            Libraries Make:
+              name: Libraries Make
+            Project - Libraries Part 1:
+              name: Project - Libraries Part 1
+            Project - Libraries Part 2:
+              name: Project - Libraries Part 2
+            Project - Libraries Part 3:
+              name: Project - Libraries Part 3
+            Assessment Day:
+              name: Assessment Day
+            Parameters and Return Explore:
+              name: Parameters and Return Explore
+            Parameters and Return Investigate:
+              name: Parameters and Return Investigate
+            Parameters and Return Practice:
+              name: Parameters and Return Practice
+            Parameters and Return Make:
+              name: Parameters and Return Make
+            Libraries Make Part 1:
+              name: Libraries Make Part 1
+            Libraries Make Part  2:
+              name: Libraries Make Part  2
+            Libraries Make Part 3:
+              name: Libraries Make Part 3
+            Project - Make a Library Part 1:
+              name: Project - Make a Library Part 1
+            Project - Make a Library Part 2:
+              name: Project - Make a Library Part 2
+            Project - Make a Library Part 3:
+              name: Project - Make a Library Part 3
+          title: CSP Unit 7 Pilot - Parameters, Return, and Libraries
+          description_audience: ''
+          description_short: ''
+          description: ''
