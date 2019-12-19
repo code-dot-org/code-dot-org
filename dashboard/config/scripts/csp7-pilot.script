@@ -55,13 +55,13 @@ level 'U7 Libraries Practice 2', progression: 'Testing Libraries'
 level 'U7 Libraries Practice 1', progression: 'Testing Libraries'
 level 'U7 Libraries Practice 4', progression: 'Testing Libraries'
 
-stage 'Libraries Make Part 1', flex_category: 'csp_libraries'
+stage 'Project - Make a Library Part 1', flex_category: 'csp_libraries'
 level 'CSP U7L8 SFLP 20-21', progression: 'Lesson Overview'
 
-stage 'Libraries Make Part  2', flex_category: 'csp_libraries'
+stage 'Project - Make a Library Part 2', flex_category: 'csp_libraries'
 level 'CSP U7L9 SFLP 20-21', progression: 'Lesson Overview'
 
-stage 'Libraries Make Part 3', flex_category: 'csp_libraries'
+stage 'Project - Make a Library Part 3', flex_category: 'csp_libraries'
 level 'CSP U7L10 SFLP 20-21', progression: 'Lesson Overview'
 
 stage 'Assessment Day'
