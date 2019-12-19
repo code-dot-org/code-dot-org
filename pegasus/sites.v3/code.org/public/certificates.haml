@@ -14,8 +14,8 @@ theme: responsive
 %div.clear
   %div{:style=>"float: left; margin: 0 40px 0 0;"}<
     %img{:src=>small_certificate_image_url}
-  %p{:style=>"float: left; width: 360px; margin-top: 20px;"}<
-    = I18n.t(:enter_certificate_names, script_name: script_name)
+  %div{:style=>"float: left; width: 360px; margin-top: 20px;"}<
+    = I18n.t(:enter_certificate_names, script_name: script_name, markdown: true)
   %p{:style=>"float: left; width: 360px; margin-top: 20px;"}<
     ="#{I18n.t :want_a_blank_certificate_template} "
     %a{href: '/images/#{certificate_template_for(script)}', target: '_blank'}=I18n.t :print_one_here_certificates
@@ -30,7 +30,7 @@ theme: responsive
         ="&#x000A;"
   %br
   %br
-  %p=I18n.t :landscape_recommended_certificates
+  =I18n.t(:landscape_recommended_certificates, markdown: true)
   %button{:type=>"submit"}=I18n.t :print_certificates
 
 #print_option.col-50
