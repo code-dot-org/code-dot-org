@@ -49,6 +49,7 @@ describe('EnrollmentsPanel', () => {
         loadEnrollments={loadEnrollments}
       />
     );
+    assert(!wrapper.find('Spinner').exists(), 'Spinner was not rendered');
     assert(
       wrapper.find('WorkshopEnrollment').exists(),
       'WorkshopEnrollment was rendered'
