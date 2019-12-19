@@ -79,7 +79,7 @@ export default class ScriptEditor extends React.Component {
     this.state = {
       hidden: this.props.hidden,
       pilotExperiment: this.props.pilotExperiment,
-      csf: this.props.curriculumUmbrella === 'CSF'
+      curriculumUmbrella: this.props.curriculumUmbrella
     };
   }
 
@@ -96,10 +96,8 @@ export default class ScriptEditor extends React.Component {
   };
 
   handleUmbrellaSelectChange = event => {
-    const csf = event.target.value === 'CSF';
-    this.setState({
-      csf: csf
-    });
+    const curriculumUmbrella = event.target.value;
+    this.setState({curriculumUmbrella});
   };
 
   presubmit = e => {
@@ -180,7 +178,6 @@ export default class ScriptEditor extends React.Component {
                 name="curriculum_umbrella"
                 style={styles.dropdown}
                 defaultValue={this.props.curriculumUmbrella}
-                ref={select => (this.curriculumUmbrellaSelect = select)}
                 onChange={this.handleUmbrellaSelectChange}
               >
                 <option value="">(None)</option>
@@ -202,7 +199,9 @@ export default class ScriptEditor extends React.Component {
                 too many blocks and there will be information about CSTA
                 Standards.
               </p>
-              <ProgressLegend excludeCsfColumn={!this.state.csf} />
+              <ProgressLegend
+                excludeCsfColumn={this.state.curriculumUmbrella !== 'CSF'}
+              />
             </label>
             <label>
               Family Name
