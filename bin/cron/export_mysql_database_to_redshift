@@ -80,7 +80,7 @@ def wait_until_replication_task_completed(replication_task_arn, max_attempts, de
       },
       max_records: 1,
       without_settings: true
-    ).replication_task[0]
+    ).replication_tasks[0]
 
     attempts += 1
     sleep delay
