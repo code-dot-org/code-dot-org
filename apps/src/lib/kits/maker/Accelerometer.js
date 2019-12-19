@@ -3,9 +3,25 @@ import {EventEmitter} from 'events';
 export default class Accelerometer extends EventEmitter {
   constructor(board) {
     super();
+    this.state = {x: 0, y: 0, z: 0};
     this.board = board;
     this.board.mb.addFirmataUpdateListener(() => {
-      this.emit('change');
+      this.emit('data');
+
+      // If the acceleration value has changed, update the local value and
+      // trigger a change event
+      if (
+        this.state.x !== this.board.mb.analogChannel[8] ||
+        this.state.y !== this.board.mb.analogChannel[9] ||
+        this.state.z !== this.board.mb.analogChannel[10]
+      ) {
+        this.state.x = this.board.mb.analogChannel[8];
+        this.state.y = this.board.mb.analogChannel[9];
+        this.state.z = this.board.mb.analogChannel[10];
+        this.emit('change');
+      }
+
+      //TODO : implement 'shake' action
     });
     this.start();
 
