@@ -24,6 +24,7 @@ const UPDATE_PROJECT_NAME = 'projects/UPDATE_PROJECT_NAME';
 const CANCEL_RENAMING_PROJECT = 'projects/CANCEL_RENAMING_PROJECT';
 const SAVE_SUCCESS = 'projects/SAVE_SUCCESS';
 const SAVE_FAILURE = 'project/SAVE_FAILURE';
+const RESET_NAME_FAILURE = 'project/RESET_NAME_FAILURE';
 
 // Action creators
 
@@ -100,8 +101,12 @@ export function saveSuccess(projectId, lastUpdatedAt) {
   return {type: SAVE_SUCCESS, projectId, lastUpdatedAt};
 }
 
-export function saveFailure(projectId) {
-  return {type: SAVE_FAILURE, projectId};
+export function saveFailure(projectId, nameFailure) {
+  return {type: SAVE_FAILURE, projectId, nameFailure};
+}
+
+export function resetNameFailure(projectId) {
+  return {type: RESET_NAME_FAILURE, projectId};
 }
 
 // Reducers
@@ -339,9 +344,36 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
         isSaving: false,
         isEditing: false
       };
+
+      if (action.nameFailure) {
+        unsavedProjects[saveAttemptProjectIndex].projectNameFailure =
+          action.nameFailure;
+        unsavedProjects[saveAttemptProjectIndex].isEditing = true;
+      }
+
       return {
         ...state,
         projects: unsavedProjects
+      };
+    case RESET_NAME_FAILURE:
+      var nameFailureProjectId = action.projectId;
+
+      var nameFailureProjectIndex = state.nameFailureProjects.findIndex(
+        project => project.channel === nameFailureProjectId
+      );
+
+      var nameFailureProjects = [...state.projects];
+
+      var nameFailureProject = nameFailureProjects[nameFailureProjectIndex];
+
+      nameFailureProjects[nameFailureProjectIndex] = {
+        ...nameFailureProject,
+        projectNameFailure: undefined
+      };
+
+      return {
+        ...state,
+        projects: nameFailureProjects
       };
     default:
       return state;
@@ -408,7 +440,7 @@ const updateProjectNameOnServer = project => {
         dispatch(saveSuccess(project.id, data.updatedAt));
       })
       .fail((jqXhr, status) => {
-        dispatch(saveFailure(project.id));
+        dispatch(saveFailure(project.id, jqXhr.responseJSON.nameFailure));
       });
   };
 };

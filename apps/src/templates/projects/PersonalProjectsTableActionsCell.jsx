@@ -11,7 +11,8 @@ import {
   startRenamingProject,
   cancelRenamingProject,
   saveProjectName,
-  remix
+  remix,
+  resetNameFailure
 } from './projectsRedux';
 import {showDeleteDialog} from './deleteDialog/deleteProjectDialogRedux';
 import NameFailureDialog from '../../code-studio/components/NameFailureDialog';
@@ -33,11 +34,9 @@ class PersonalProjectsTableActionsCell extends Component {
     updatedName: PropTypes.string,
     cancelRenamingProject: PropTypes.func.isRequired,
     saveProjectName: PropTypes.func.isRequired,
-    remix: PropTypes.func.isRequired
-  };
-
-  state = {
-    projectNameFailure: undefined
+    remix: PropTypes.func.isRequired,
+    projectNameFailure: PropTypes.string,
+    resetNameFailure: PropTypes.func.isRequired
   };
 
   onDelete = () => {
@@ -53,27 +52,15 @@ class PersonalProjectsTableActionsCell extends Component {
   };
 
   onSave = () => {
-    $.get({
-      url: `/api/v1/projects/personal/check_name?new_name=${
-        this.props.updatedName
-      }`,
-      dataType: 'json'
-    }).done(data => {
-      if (data.nameFailure) {
-        this.setState({
-          projectNameFailure: data.nameFailure
-        });
-      } else {
-        this.props.saveProjectName(
-          this.props.projectId,
-          this.props.updatedName
-        );
-      }
-    });
+    this.props.saveProjectName(this.props.projectId, this.props.updatedName);
   };
 
   onRemix = () => {
     this.props.remix(this.props.projectId, this.props.projectType);
+  };
+
+  handleNameFailureDialogClose = () => {
+    this.props.resetNameFailure(this.props.projectId);
   };
 
   render() {
@@ -115,11 +102,9 @@ class PersonalProjectsTableActionsCell extends Component {
           </div>
         )}
         <NameFailureDialog
-          flaggedText={this.state.projectNameFailure}
-          isOpen={!!this.state.projectNameFailure}
-          handleClose={() => {
-            this.setState({projectNameFailure: undefined});
-          }}
+          flaggedText={this.props.projectNameFailure}
+          isOpen={!!this.props.projectNameFailure}
+          handleClose={this.handleNameFailureDialogClose}
         />
       </div>
     );
@@ -143,6 +128,9 @@ export default connect(
     },
     remix(projectId, projectType) {
       dispatch(remix(projectId, projectType));
+    },
+    resetNameFailure(projectId) {
+      dispatch(resetNameFailure(projectId));
     }
   })
 )(PersonalProjectsTableActionsCell);
