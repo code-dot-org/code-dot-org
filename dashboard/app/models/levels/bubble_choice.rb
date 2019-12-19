@@ -34,15 +34,15 @@ class BubbleChoice < DSLDefined
   )
 
   def dsl_default
-    <<ruby
-name 'unique level name here'
-display_name 'level display_name here'
-description 'level description here'
+    <<~ruby
+      name 'unique level name here'
+      display_name 'level display_name here'
+      description 'level description here'
 
-sublevels
-level 'level1'
-level 'level2'
-ruby
+      sublevels
+      level 'level1'
+      level 'level2'
+    ruby
   end
 
   # Returns all of the sublevels for this BubbleChoice level in order.

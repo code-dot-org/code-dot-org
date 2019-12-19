@@ -102,9 +102,12 @@ ur:
     login: 'Email'
     password: 'پاس ورڈ'
     remember: 'مجھے یاد رکھیے'
+    submit: 'سائن ان کریں'
   signin:
     try_heading: 'کیا آپ بغیرsign up کے کوڈنگ کرنا چاہتے ہیں؟'
     try_hoc: 'سب سے پہلے ایک گھنٹہ Hour of Code کھیل کر دیکھیں'
+  signinsection:
+    login: 'سائن ان کریں'
   password:
     reset_form:
       title: 'password یاد نہیں؟'
@@ -125,15 +128,24 @@ ur:
     submit: 'جمع کرائیں'
   nav:
     header:
+      finished_hoc: "میں نے ختم کیا!"
       my_dashboard: "ڈیش بورڈ"
+      course_catalog: "کورس کیٹلاگ"
+      project_gallery: "پروجیکٹس"
+      help_support: "مدد اور معاونت"
+      report_bug: "ایک مسئلہ کی اطلاع دیں"
       professional_learning: "پیشہ ورانہ تعلیم"
       educate_hoc: "آور-آف-کوڈ"
+      about: "متعلق"
     user:
       classroom: 'استاد کی ہوم پیج'
+      signin: 'سائن ان کریں'
+      signup: 'ایک اکاؤنٹ تخلیق کریں'
       create: 'بنائیں'
       algebra_game: 'الجبرا'
       artist_k1: 'آرٹسٹ (پری ریڈر)'
       basketball: 'باسکٹ بال'
+      dance: 'ڈانس پارٹی'
       frozen: 'فروزن'
       gamelab_jr: 'کھیل لیب (بیٹا)'
       iceage: 'برفانی عہد'
@@ -148,29 +160,51 @@ ur:
   user_type:
     student: 'Talib-e-ilm'
   footer:
+    copyright: 'کاپی رائٹ'
     more: 'مزید'
+    translate: 'ہمارے مندرجات کا ترجمہ کرنے کیلئے رضاکارانہ خدمات انجام دیں'
+    tos: 'سروس کی شرائط'
+    privacy: 'رازداری کی پالیسی'
+    report_abuse: 'غلط استعمال کی اطلاع دیں'
+  reference_area:
+    title: 'کیا آپ کو مدد چاہیے؟'
+    subtitle: 'یہ ویڈیوز اور اشارے دیکھیں'
+  video:
+    tab: 'ویڈیو.'
   compatibility:
     upgrade:
       link: "مزید سیکھے"
   upsell:
+    dance:
+      title: 'ڈانس پارٹی'
+    dance-2019:
+      title: 'ڈانس پارٹی'
     hoc2014:
       try_frozen: 'آرٹسٹ اینا اور ایلسا کے ساتھ، فروزن سے ماخوذ'
     frozen:
       title: "فروزن"
     unplugged_conditionals:
       title: "شرائط"
+  gallery:
+    report_abuse: "غلط استعمال کی اطلاع دیں"
+  landing:
+    help_support: "مدد اور معاونت"
   dialog:
-    ok: "ٹھيک ہے"
+    ok: "ٹھیک ہے"
     startover_title: "کیا آپ یقینی طور پر دوبارہ شروع (اسٹارٹ اوور) کرنا چاہتے ہیں؟"
-    startover_ok: "آغاز(اسٹارٹ اوور)"
+    startover_ok: "پھر سے شروع کریں"
     startover_cancel: "منسوخ کریں"
   terms_interstitial:
-    print: "پرنٹ"
+    tos: "سروس کی شرائط"
+    privacy: "رازداری کی پالیسی"
+    print: "پرنٹ کریں"
   race_interstitial:
     races:
       other: "دیگر"
     submit: "جمع کرائیں"
   project:
+    projects: "پروجیکٹس"
+    project_gallery: "پروجیکٹس"
     name: "نام"
     saved: "Saved"
     abuse:
@@ -179,7 +213,7 @@ ur:
           other: 'دیگر'
   flex_category:
     csf_loops: 'لوپس'
-    csf_events: 'موقعے'
+    csf_events: 'ایونٹس/واقعات'
     csf_conditionals: 'شرائط'
     csf_variables: 'متغیرات'
     csp_variables: 'متغیرات'

@@ -3,21 +3,30 @@ hi:
   data:
     block_categories:
       Actions: क्रियाएँ
-      Loops: फंदे
-      Functions: कार्य
+      Advanced: उन्नत
+      Behaviors: व्यवहार
+      Brushes: ब्रश
       Color: रंग
-      Math: गणित
-      Logic: तर्क
-      Variables: चर
-      Conditionals: शर्तें
-      Events: घटनाएँ
-      Text: पाठ
-      World: विश्व
-      Location: स्थान
-      Numbers: नंबर
+      Comment: टिप्पणी
+      Comments: टिप्पणियां
+      Conditionals: कंडीशनल्स
       Dancers: नर्तकों
+      Default: डिफॉल्ट
+      Events: घटनाएँ
+      Functions: कार्य
+      'Functions ': 'कार्य '
+      Game/Score: गेम/स्कोर
+      Games/Score: खेल/स्कोर
       Groups: समूह
-      Start: शुरू करें
-      test: परिक्षा
-      Name: नाम
-      Function: कार्य
+      Input: इनपुट
+      Locations: स्थान
+      Logic: तर्क
+      Loops: फंदे
+      Math: गणित
+      Numbers: नंबर
+      Properties: गुण
+      Sprites: स्प्राइट्स
+      Text: पाठ
+      Variables: चर
+      'Variables ': 'वेरिएबल्स '
+      World: विश्व

@@ -41,7 +41,7 @@
     "CONTROLS_FOREACH_INPUT_ITEM": "für jedes Element",
     "CONTROLS_FOREACH_TOOLTIP": "Setze für jedes Listenelement die Variable \"%1\" auf das aktuelle Listenelement und führe dann einige Anweisungen aus.",
     "CONTROLS_FOR_HELPURL": "http://de.wikipedia.org/wiki/For-Schleife",
-    "CONTROLS_FOR_INPUT_COUNTER": "",
+    "CONTROLS_FOR_INPUT_COUNTER": "für %1 von %2 zu %3 zähle mit %4",
     "CONTROLS_FOR_INPUT_FROM_TO_BY": "von %1 bis %2 mit Schrittweite %3",
     "CONTROLS_FOR_INPUT_WITH": "für",
     "CONTROLS_FOR_TOOLTIP": "Lasse die Variable %1 im angegebenen Intervall die Werte von einem Startwert bis zu einem Zielwert annehmen und führe die Anweisungen in den Bausteinen aus.",

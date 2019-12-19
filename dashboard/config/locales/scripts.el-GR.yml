@@ -1599,7 +1599,6 @@ el:
             Dance Party:
               name: Πάρτι Χορού
         dance-extras:
-          title: Συνεχίστε να Χορεύετε
           description: Πηγαίνετε πέρα από την πρώτη ώρα με εκτενείς ιδέες για πρότζεκτ.
         coursef-2019:
           stages:
@@ -1813,7 +1812,7 @@ el:
               name: Πάρτι Χορού
           description: Δημιουργήστε ένα δικό σας πάρτι χορού για να το μοιραστείτε
             με τους φίλους σας.
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Computer Science Fundamentals:
               name: Βασικές αρχές της επιστήμης υπολογιστών
@@ -1832,5 +1831,14 @@ el:
             For Loops:
               name: Βρόχοι Για
         dance-extras-2019:
-          title: Συνεχίστε να Χορεύετε
           description: Πηγαίνετε πέρα από την πρώτη ώρα με εκτενείς ιδέες για πρότζεκτ.
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Συνθήκες
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Υποθέσεις με Κάρτες

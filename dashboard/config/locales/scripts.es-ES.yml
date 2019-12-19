@@ -3803,7 +3803,6 @@ es:
             Dance Party:
               name: Fiesta para bailar
         dance-extras:
-          title: Sigue bailando
           description: Ve más allá de la primera hora con más ideas para proyectos.
         coursef-2019:
           description_short: Aprende todos los conceptos de Fundamentos de Informática
@@ -4726,6 +4725,8 @@ es:
               name: nueva etapa
             Routers and Redundancy:
               name: Enrutadores y reiteración
+            The Need for Addressing:
+              name: La necesidad para el redireccionamiento
         peru-2019:
           stages:
             new stage:
@@ -4745,7 +4746,7 @@ es:
             Dance Party:
               name: Fiesta para bailar
           description: "¡Programa tu propio baile para compartirlo con tus amigos!"
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Getting Started:
               name: Iniciando
@@ -4782,7 +4783,6 @@ es:
             For Loops:
               name: Bucles Para
         dance-extras-2019:
-          title: Sigue bailando
           description: Ve más allá de la primera hora con más ideas para proyectos.
         csp10-pilot:
           stages:
@@ -4792,3 +4792,17 @@ es:
           stages:
             new stage:
               name: nueva etapa
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Condicionales
+            Simon Says:
+              name: Simón dice
+            Access Ability:
+              name: Habilidad de acceso
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Colaboración Abierta
+            Conditionals with Cards:
+              name: Condicionales con tarjetas

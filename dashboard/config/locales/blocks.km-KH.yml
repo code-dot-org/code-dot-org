@@ -2,6 +2,14 @@
 km:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: ទាំងអស់
+          MOVE1:
+            MOVES.Rest: គ្មាន
+          MOVE2:
+            MOVES.Rest: គ្មាន
       Dancelab_atTimestamp:
         options:
           UNIT:
@@ -140,6 +148,7 @@ km:
             '19': '19'
             '20': '20'
           LAYOUT:
+            '"diamond"': គ្រាប់ពេជ្រ
             '"random"': ព្រាវ
       Dancelab_randomColor:
         text: ពណ៌​ព្រាវ

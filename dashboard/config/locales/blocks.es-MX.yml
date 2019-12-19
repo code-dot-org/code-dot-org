@@ -2,6 +2,47 @@
 es-MX:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        text: "{GROUP} alternar cada {N} compases \nentre {MOVE1} y {MOVE2}"
+        options:
+          GROUP:
+            sprites: todo
+            '"ALIEN"': extraterrestres
+            '"BEAR"': osos
+            '"CAT"': gatos
+            '"DOG"': perros
+            '"DUCK"': patos
+            '"FROG"': ranas
+            '"MOOSE"': alces
+            '"PINEAPPLE"': piñas
+            '"ROBOT"': robots
+            '"SHARK"': tiburones
+            '"SLOTH"': perezas
+            '"UNICORN"': unicornios
+          MOVE1:
+            MOVES.Roll: Vuelta completa
+            MOVES.ClapHigh: Palmas hacia arriba
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Doble abajo
+            MOVES.Drop: Caída
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresco
+            MOVES.Clown: Payaso
+            MOVES.Kick: Estrella
+            MOVES.ThisOrThat: Esto o aquello
+            MOVES.Rest: Ninguna
+          MOVE2:
+            MOVES.Roll: Vuelta completa
+            MOVES.ClapHigh: Palmas hacia arriba
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Doble abajo
+            MOVES.Drop: Caída
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresco
+            MOVES.Clown: Payaso
+            MOVES.Kick: Estrella
+            MOVES.ThisOrThat: Esto o aquello
+            MOVES.Rest: Ninguna
       Dancelab_atTimestamp:
         text: después {TIMESTAMP} {UNIT}
         options:
@@ -30,6 +71,7 @@ es-MX:
             '"PINEAPPLE"': piñas
             '"ROBOT"': robots
             '"SHARK"': tiburones
+            '"SLOTH"': perezas
             '"UNICORN"': todos los unicornios
           MOVE:
             '"next"': "(Siguiente)"
@@ -96,7 +138,8 @@ es-MX:
             '"PINEAPPLE"': piñas
             '"ROBOT"': robots
             '"SHARK"': tiburones
-            '"UNICORN"': Unicornios
+            '"SLOTH"': perezas
+            '"UNICORN"': unicornios
           PROPERTY:
             '"scale"': tamaño
             '"width"': ancho
@@ -119,7 +162,8 @@ es-MX:
             '"PINEAPPLE"': piñas
             '"ROBOT"': robots
             '"SHARK"': tiburones
-            '"UNICORN"': Unicornios
+            '"SLOTH"': perezas
+            '"UNICORN"': unicornios
           MOVE:
             '"rand"': "(Al azar)"
             MOVES.XBend: Flexión
@@ -281,7 +325,8 @@ es-MX:
             '"PINEAPPLE"': piñas
             '"ROBOT"': robots
             '"SHARK"': tiburones
-            '"UNICORN"': Unicornios
+            '"SLOTH"': perezas
+            '"UNICORN"': unicornios
           LOCATION:
             "{x: 200, y: 100}": arriba
             "{x: 200, y: 300}": abajo
@@ -308,7 +353,8 @@ es-MX:
             '"PINEAPPLE"': piñas
             '"ROBOT"': robots
             '"SHARK"': tiburones
-            '"UNICORN"': Unicornios
+            '"SLOTH"': perezas
+            '"UNICORN"': unicornios
           FORMAT:
             '"border"': borde
             '"inner"': cuadrado interno
@@ -333,8 +379,8 @@ es-MX:
             '"PINEAPPLE"': piña
             '"ROBOT"': robot
             '"SHARK"': tiburón
-            '"UNICORN"': unicornio
             '"SLOTH"': pereza
+            '"UNICORN"': unicornio
           LOCATION:
             "{x: 200, y: 100}": arriba
             "{x: 200, y: 300}": abajo
@@ -362,6 +408,7 @@ es-MX:
             '"PINEAPPLE"': piña
             '"ROBOT"': Robot
             '"SHARK"': tiburón
+            '"SLOTH"': pereza
             '"UNICORN"': Unicornio
           LOCATION:
             "{x: 200, y: 100}": arriba
@@ -406,18 +453,24 @@ es-MX:
             '"DOG"': Perros
             '"DUCK"': Patos
             '"FROG"': Ranas
-            '"MOOSE"': Alce
+            '"MOOSE"': alce
             '"PINEAPPLE"': Piñas
             '"ROBOT"': Robots
             '"SHARK"': Tiburones
-            '"UNICORN"': Unicornios
+            '"SLOTH"': perezas
+            '"UNICORN"': unicornios
           LAYOUT:
             '"border"': borde
             '"inner"': cuadrado interno
+            '"diamond"': diamante
             '"circle"': círculo
             '"grid"': cuadrícula
+            '"top"': fila superior
             '"row"': fila
+            '"bottom"': fila inferior
+            '"left"': columna izquierda
             '"column"': columna
+            '"right"': columna derecha
             '"x"': entrecruzado
             '"plus"': más
             '"random"': al azar
@@ -468,31 +521,35 @@ es-MX:
             '"vintage"': Vintage
             '"warm"': Tibio
       Dancelab_setBackgroundEffectWithPalette:
-        text: establecer efecto de fondo {PALETTE} {EFFECT}
+        text: "establecer efecto de fondo \n{PALETTE} {EFFECT}"
         options:
           EFFECT:
             '"none"': Ninguna
             '"rand"': "(Al azar)"
             '"circles"': Círculos
+            '"quads"': Ángulos
             '"color_cycle"': Colores
             '"diamonds"': Diamantes
             '"disco_ball"': Bola de discoteca
             '"fireworks"': Fuegos artificiales
+            '"flowers"': Flores
+            '"growing_stars"': Estrellas crecientes
             '"swirl"': Hipnosis
             '"kaleidoscope"': Caleidoscopio
             '"lasers"': Pista de baile láser
             '"splatter"': Salpicaduras de pintura
             '"rainbow"': Arcoíris
+            '"ripples_random"': Ondas aleatorias
+            '"ripples"': Ondas
             '"snowflakes"': Nieve
             '"text"': Nombres de canciones
+            '"squiggles"': Garabatos
             '"galaxy"': Espacio
             '"sparkles"': Chispas
             '"spiral"': Espiral
             '"disco"': Cuadrados
             '"stars"': Estrellas
             '"music_wave"': Olas
-            '"quads"': Ángulos
-            '"flowers"': Flores
           PALETTE:
             '"rave"': Blanco y negro
             '"cool"': Frío
@@ -527,7 +584,8 @@ es-MX:
             '"PINEAPPLE"': piñas
             '"ROBOT"': robots
             '"SHARK"': tiburones
-            '"UNICORN"': Unicornios
+            '"SLOTH"': perezas
+            '"UNICORN"': unicornios
           SPEED:
             '1': normal
             '2': rápido
@@ -559,9 +617,12 @@ es-MX:
             '"none"': Ninguna
             '"rand"': "(Al azar)"
             '"bubbles"': Burbujas
+            '"hearts_colorful"': Corazones coloridos
             '"confetti"': Confeti
+            '"emojis"': Emojis
             '"hearts_red"': Corazones
             '"music_notes"': Notas de música
+            '"paint_drip"': Gotas de pintura
             '"pineapples"': Piñas
             '"pizzas"': Pizzas
             '"smiling_poop"': Caca
@@ -570,6 +631,7 @@ es-MX:
             '"smile_face"': Sonrisas
             '"spotlight"': Reflector
             '"color_lights"': Luces de escenario
+            '"exploding_stars"': Explosión de estrellas
             '"raining_tacos"': Tacos
       Dancelab_setProp:
         text: 'definir {SPRITE} {PROPERTY} a {VAL} '
@@ -596,7 +658,8 @@ es-MX:
             '"PINEAPPLE"': piñas
             '"ROBOT"': robots
             '"SHARK"': tiburones
-            '"UNICORN"': Unicornios
+            '"SLOTH"': perezas
+            '"UNICORN"': unicornios
           PROPERTY:
             '"scale"': tamaño
             '"width"': ancho
@@ -631,8 +694,8 @@ es-MX:
             '"PINEAPPLE"': piñas
             '"ROBOT"': robots
             '"SHARK"': tiburones
-            '"UNICORN"': Unicornios
             '"SLOTH"': perezas
+            '"UNICORN"': unicornios
           PROPERTY:
             '"scale"': tamaño
             '"width"': ancho
@@ -658,7 +721,8 @@ es-MX:
             '"PINEAPPLE"': piñas
             '"ROBOT"': robots
             '"SHARK"': tiburones
-            '"UNICORN"': Unicornios
+            '"SLOTH"': perezas
+            '"UNICORN"': unicornios
       Dancelab_setTintEachInline:
         text: establecer tonalidad {THIS} a {VAL}
         options:
@@ -674,7 +738,8 @@ es-MX:
             '"PINEAPPLE"': piñas
             '"ROBOT"': robots
             '"SHARK"': tiburones
-            '"UNICORN"': Unicornios
+            '"SLOTH"': perezas
+            '"UNICORN"': unicornios
       Dancelab_setTintInline:
         text: definir tinte {SPRITE} a {VAL}
       Dancelab_setVisible:
@@ -698,7 +763,8 @@ es-MX:
             '"PINEAPPLE"': piñas
             '"ROBOT"': robots
             '"SHARK"': tiburones
-            '"UNICORN"': Unicornios
+            '"SLOTH"': perezas
+            '"UNICORN"': unicornios
           VISIBILITY:
             'true': visible
             'false': invisible
@@ -732,7 +798,8 @@ es-MX:
             '"PINEAPPLE"': piñas
             '"ROBOT"': robots
             '"SHARK"': tiburones
-            '"UNICORN"': Unicornios
+            '"SLOTH"': perezas
+            '"UNICORN"': unicornios
           PROPERTY:
             '"scale"': tamaño
             '"width"': ancho
@@ -776,7 +843,8 @@ es-MX:
             '"PINEAPPLE"': piñas
             '"ROBOT"': robots
             '"SHARK"': tiburones
-            '"UNICORN"': Unicornios
+            '"SLOTH"': perezas
+            '"UNICORN"': unicornios
           PROPERTY:
             '"scale"': tamaño
             '"width"': ancho
@@ -811,13 +879,13 @@ es-MX:
             '"column_left"': columna izquierda
             '"column_right"': columna derecha
             '"diamond"': diamante
-            '"l"': l
-            '"m"': m
-            '"n"': n
-            '"o"': o
-            '"p"': p
-            '"q"': q
-            '"r"': r
+            '"mural"': Mural
+            '"safari"': Safari
+            '"network"': Red
+            '"highway"': Carretera
+            '"stream"': Flujo
+            '"tile"': Mosaico
+            '"shadow"': Sombra
             '"s"': s
             '"t"': t
             '"u"': u

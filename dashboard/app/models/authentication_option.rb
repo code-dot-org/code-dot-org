@@ -32,8 +32,8 @@ class AuthenticationOption < ApplicationRecord
   validates :email, no_utf8mb4: true
   validates_email_format_of :email, allow_blank: true, if: :email_changed?, unless: -> {email.to_s.utf8mb4?}
 
-  validate :email_must_be_unique, :hashed_email_must_be_unique,
-    :cred_type_and_auth_id_must_be_unique
+  validate :email_must_be_unique, :hashed_email_must_be_unique, unless: -> {UNTRUSTED_EMAIL_CREDENTIAL_TYPES.include? credential_type}
+  validate :cred_type_and_auth_id_must_be_unique
 
   after_create :set_primary_contact_info
 
@@ -48,17 +48,33 @@ class AuthenticationOption < ApplicationRecord
     TWITTER = 'twitter',
     WINDOWS_LIVE = 'windowslive',
     MICROSOFT = 'microsoft_v2_auth',
-  ]
-
-  UNTRUSTED_EMAIL_CREDENTIAL_TYPES = [
-    CLEVER,
-    POWERSCHOOL
   ].freeze
 
   CREDENTIAL_TYPES = [
     EMAIL = 'email',
     OAUTH_CREDENTIAL_TYPES,
-  ].flatten
+  ].flatten.freeze
+
+  # "untrusted" emails are a somewhat subtle concept.
+  #
+  # They specifically refer to emails we receive from a provider that
+  #
+  # A) Does not themselves enforce uniqueness and/or
+  # B) Does not allow the user to change the email they have been assigned.
+  #
+  # In this case, we cannot ourselves enforce uniqueness because we don't want
+  # to punish users who were assigned an email that might not be theirs (and
+  # which might conflict with a "trusted" email already in our system). We have
+  # to be careful in these cases to not use the email as an identifier for
+  # user, and instead to rely exclusively on authentication_id
+  UNTRUSTED_EMAIL_CREDENTIAL_TYPES = [
+    CLEVER,
+    POWERSCHOOL
+  ].freeze
+
+  TRUSTED_EMAIL_CREDENTIAL_TYPES = (
+    CREDENTIAL_TYPES - UNTRUSTED_EMAIL_CREDENTIAL_TYPES
+  ).freeze
 
   SILENT_TAKEOVER_CREDENTIAL_TYPES = [
     FACEBOOK,
@@ -66,7 +82,13 @@ class AuthenticationOption < ApplicationRecord
     # TODO: (madelynkasula) Remove once we are sure users are no longer logging in via windowslive.
     WINDOWS_LIVE,
     MICROSOFT
-  ]
+  ].freeze
+
+  scope :trusted_email, -> {where(credential_type: TRUSTED_EMAIL_CREDENTIAL_TYPES)}
+
+  def google?
+    credential_type == GOOGLE
+  end
 
   def codeorg_email?
     Mail::Address.new(email).domain == 'code.org'

@@ -11,36 +11,100 @@ nn:
   campaign_date_full: 4.-10. desember
   campaign_date_year: '2017'
   campaign_date_full_year: 4.-10. desember, 2017
-  hoc2019_header: Lær om teknologi for å forandre verden.
-  hoc2019_header_line1_mobile: Lær om teknologi.
-  hoc2019_header_line2_mobile: Forandre verden.
-  social_hoc2019_every_sudent: 'Every student has the potential to change the world.
-    Help them get started. #CSforGood'
-  social_hoc2019_learn_computer_science: 'Learn computer science. Change the world.
-    #CSforGood #HourOfCode'
-  social_hoc_is_coming: The Hour of Code is coming!
-  social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
-    computer science. Change the world.'
-  social_hoc2019_coming_dates: The Hour of Code is coming December 9-15, 2019. Computer
-    science is foundational for every student to learn.
-  social_hoc2019_dance: Featuring Katy Perry, Jonas Brothers, Lil Nas X, Panic at
-    the Disco, and many more!
+  hoc2019_header: Lær deg informatikk. Endre verda.
+  hoc2019_header_line1_mobile: Lær deg informatikk.
+  hoc2019_header_line2_mobile: Endre verda.
+  social_hoc2019_every_sudent: 'Kvar elev har potensialet til å endra verda. Hjelp
+    dei i gong. #CSforGood'
+  social_hoc2019_learn_computer_science: 'Lær deg informatikk. Endre verda. #CSforGood
+    #HourOfCode'
+  social_hoc_is_coming: Kodetimen kjem!
+  social_hoc2019_hoc_is_about_csforgood: "#HourofCode handlar om #CSforGood. Lær deg
+    informatikk. Endre verda."
+  social_hoc2019_coming_dates: Kodetimen kjem 9.-15. desember 2019. Programmering
+    er eit fundament kvar elev kan lære.
+  social_hoc2019_dance: Med Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas
+    X, Jonas Brothers, Nicki Minaj og 34 andre!
+  oceans_landing_title: AI for Oceans
+  oceans_landing_description: 'Explore machine learning by teaching “A.I.” to recognize
+    fish. #CSforGood'
+  oceans_landing_specs: English only | Ages 11+
+  oceans_landing_teacher_resources: Teacher Resources
+  oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
+    AI, machine learning, training data, and bias, while exploring ethical issues.
+  oceans_landing_resource_button: View Resources
+  oceans_landing_cs_for_good: CS For Good
+  oceans_landing_cs_for_good_desc: Resources to help students understand the role
+    computer science could play in creating a more equitable world.
+  oceans_landing_learn_more: Learn more about AI and Machine Learning
+  social_hoc2019_oceans_title: 'AI for Oceans #CSForGood'
+  social_hoc2019_oceans_desc: Learn about AI, machine learning, training data, and
+    bias, while exploring ethical issues and how AI can be used to address world problems.
+    Computer science is about so much more than coding! Enjoy Code.org's first step
+    in a new journey to teach more about AI throughout our curriculum.
+  hoc_overview_oceans_tutorial_header: AI For Oceans
+  hoc_overview_oceans_tutorial_desc: Learn about AI, machine learning, training data,
+    and bias, while exploring ethical issues and how AI can be used to address world
+    problems.
+  ai_video_title_what_is_ai: What is AI?
+  ai_video_title_phone_knows_dog: How does your phone know this is a dog?
+  ai_video_title_what_is_ml: What is Machine Learning?
+  ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small
+    and Prickly'
+  ai_video_title_ethics_of_ai: Ethics of AI
+  ai_video_title_ml_human_bias: Machine Learning and Human Bias
+  activity: Activity
+  name: Name
+  description: Description
+  audience: Audience
+  ai_resource_header: Teach and Learn about AI
+  ai_resource_ml_for_kids: Machine Learning for Kids
+  ai_resource_ml_for_kids_desc: Train a machine learning model with text, numbers,
+    or images, and use it to make games in Scratch.
+  ai_resource_ibm_ml_for_kids: 'IBM: Machine Learning for Kids'
+  ai_resouce_ibm_ml_for_kids_desc: Hands-on activities to introduce simple machine
+    learning models to students through games and interactive projects.
+  ai_resource_ecs: 'ECS: Artificial Intelligence (AI)'
+  ai_resource_ecs_desc: A new alternate curriculum unit for the Exploring Computer
+    Science (ECS) curriculum.
+  ai_resource_elements_ai: Elements of AI
+  ai_resource_elements_ai_desc: A series of free online courses created by Reaktor
+    and the University of Helsinki.
+  ai_resource_cognimates: Cognimates
+  ai_resource_cognimates_desc: An AI education platform for building games, programming
+    robots and training.
+  ai_audience_k12: K-12 (Reading required)
+  ai_audience_hs: High school
+  ai_activity_header: Activities Powered by AI and ML
+  ai_activity_teachable: Teachable Machine
+  ai_activity_teachable_desc: Train a computer to recognize your own images, sounds,
+    and poses.
+  ai_activity_quick_draw: Quick, Draw!
+  ai_activity_quick_draw_desc: Can a neural network learn to recognize doodling?
+  ai_activity_experiments: AI Experiments with Google
+  ai_activity_experiments_desc: Start exploring machine learning through pictures,
+    drawings, language, music, and more.
+  ai_activity_mixlab: MixLab
+  ai_activity_mixlab_desc: Make music using voice commands.
+  ai_activity_gaugan: GauGAN Beta
+  ai_activity_gaugan_desc: Paint photo-realistic landscapes with the help of AI.
   codeorg_homepage_hoc2018_curriculum: Gå vidare med <a href="%{studio_url}/courses"
     class="hoc2018-curriculum-link">Code.org-kurs</a>
-  codeorg_homepage_hoc2018_dance_heading: Create your own <span class="highlight-word">Dance&nbsp;Party</span>
+  codeorg_homepage_hoc2018_dance_heading: Lag din eigen <span class="highlight-word">dansefest</span>
   codeorg_homepage_hoc2018_header_line1: Kodetimen kjem...
   codeorg_homepage_hoc2018_header_line2_desktop: Kva vil du <span class="hoc2018-highlight-word">skape?</span>
   codeorg_homepage_hoc2018_header_line2_mobile: Kva vil du skape?
   codeorg_homepage_hoc2018_header_line3: Løft fantasien og gi liv til innovasjon.
     Start med Kodetimen og ditt eige kreativitetsmerkevare, kva no det er.
-  codeorg_homepage_hoc2018_musician_before: Featuring
-  codeorg_homepage_hoc2018_musician_after: and more!
+  codeorg_homepage_hoc2018_musician_before: Med
+  codeorg_homepage_hoc2018_musician_after: og fleire!
   codeorg_homepage_hoc2018_video: Sjå videoen vår
   hourofcode_homepage_hoc2018_header_line1: Alle kan, kor som helst, ha ein kodetime.
     Øvingar på ein time på over 46 språk. Du treng inga tidlegare erfaring.
   hourofcode_homepage_hoc2018_header_line2: I alderen 4 til 104 år.
   hoc2018_tutorial_mchoc_description: Minecraft er tilbake i Kodetimen med ei heilt
     ny oppgåve! Reis gjennom Minecraft med kode.
+  codeorg_homepage_hoc2019_dance_heading: Prøv den nye <span class="highlight-word">Dansefesten!</span>
   cookie_banner_message: Ved å fortsatt bruke nettstaden vår eller ved å klikke på
     "Eg godtar", godtar du lagring av cookies på datamaskina eller eininga di.
   cookie_banner_more_information: Sjå Code.org sine Retningslinjer for personvern.
@@ -363,9 +427,9 @@ nn:
   social_hoc2018_mc_creativity: 'Bruk kreativiteten og ferdigheiter i problemløysing
     til å utforske og bygge undersjøiske verdenar med kode. '
   social_hoc2018_what_create: Kva vil du skape?
-  social_hoc2018_global_movement: The Hour of Code is a global movement reaching tens
-    of millions of students. One-hour tutorials are available in 45+ languages for
-    all ages.
+  social_hoc2018_global_movement: Kodetimen er ei verdensomsfattande rørsle som når
+    ut til titalls millionar elevar. Læringsopplegg på ein time fins på over 45 språk
+    og passar folk i alle aldrar.
   map_title: Kodetimekartet
   map_header: "# arrangement som er registrert for Kodetimen 2017"
   map_header_count_year: "%{event_count} arrangement registrert i %{year}"
@@ -390,8 +454,8 @@ nn:
     @codeorg'
   twitter_donor_text: 'I år handlar #Kodetimen om kreativitet. Eg er med! Er du? (Takk
     %{random_donor} for at du støtter @codeorg)'
-  twitter_donor_text_2019: 'This year''s #HourOfCode is about #CSforGood. I’m in!
-    Are you? (Thanks %{random_donor} for supporting @codeorg)'
+  twitter_donor_text_2019: 'I år handlar #Kodetimen om #CSforGood. Eg er med! Er du?
+    (Takk %{random_donor} for at du støttar @codeorg). #hourofcode'
   hoc_faq_title: Vanlege spørsmål
   hoc_faq_what_is_hoc_q: 'Kva er Kodetimen? '
   hoc_faq_what_is_hoc_a: |-
@@ -579,11 +643,11 @@ nn:
   videos_hoc_2014: Kodetimen er her - alle kan lære
   videos_obama_cs: President Obama om programmering
   videos_anybody_can_learn: Alle kan lære (1 min)
-  videos_creativity: What is Creativity?
-  videos_creativity_series: What is Creativity? View Full Series.
+  videos_creativity: Kva er kreativitet?
+  videos_creativity_series: Kva er kreativitet? Sjå heile serien.
   title_country_resources: Landspesifikke ressursar
   title_hoc_advisory_committee: Kodetimen og CSEdWeek Advisory Committee
-  title_hoc_review_committee: Hour of Code and CSEdWeek Review Committee
+  title_hoc_review_committee: Gjennomgangskomiteen for Kodetimen og CSEdWeek
   title_how_to_promote: Sprei ordet
   title_how_to_districts: Kodetimen - rettleiing for kommuner
   title_how_to_events: Kodetimen - rettleiing for arrangement
@@ -666,7 +730,8 @@ nn:
     dei i aktivitetane nedanfor og lag ein handfast Kodetime for alle aldrar! Nokre
     aktivitetar tilbyr til og med ein simulator slik at du kan komme i gang utan å
     ha ekstrautstyr.
-  tutorial_danceparty_name: Dance Party
+  tutorial_dance2019_name: Dansefest 2019
+  tutorial_danceparty_name: Dansefest
   tutorial_chibitronics_name: 'Chibitronics: Opplyst historie'
   tutorial_athlete_name: Kod ditt eige sportsspill
   tutorial_moana_name: 'Moana: navigasjon med kode'
@@ -745,7 +810,7 @@ nn:
   tutorial_buildpong_name: Bygg Pong med AI
   tutorial_tynkerdrones_name: Programmér dronar og robotar
   tutorial_carla_name: Programmering med Carla
-  tutorial_zulama_name: Zulama MakeQuest Video Game Activity
+  tutorial_zulama_name: 'Videospelaktivitet: Zulama MakeQuest'
   tutorial_capost_name: Bygg eit digitalt postkort med HTML og CSS
   tutorial_marco_name: Spring Marco!
   tutorial_codestersflappybike_name: Flaksesykkel
@@ -1059,21 +1124,21 @@ nn:
   tutorial_woncue_name: Nybyjarguide
   tutorial_wonzoo_name: Dot i dyrehagen (B2)
   tutorial_wontrip_name: Bilturen til Dash (F2)
-  tutorial_woncollect_name: Dash the Collector (B1)
-  tutorial_wonsecret_name: Cue's Secret Message
-  tutorial_hsscience_name: 'Hopscotch: Make Interactive Science Models on Your iPad/iPhone!'
-  tutorial_popculture_name: Pop Culture Data Science
-  tutorial_legorobust_name: Robust Structures – LEGO® Education WeDo 2.0
-  tutorial_legoplants_name: Plants and Pollinators – LEGO® Education WeDo 2.0
-  tutorial_legopark_name: Autonomous Parking – LEGO® MINDSTORMS® Education EV3
-  tutorial_legodetect_name: Object Detection – LEGO® MINDSTORMS® Education EV3
-  tutorial_legolight_name: Automatic Headlights – LEGO® MINDSTORMS® Education EV3
-  tutorial_alexa_name: 'Amazon Alexa Fact Skill Tutorial: My School Facts'
-  tutorial_grokpetmicro_name: Virtual Pet (micro:bit MicroPython)
-  tutorial_pirateplunder_name: Pirate Plunder
+  tutorial_woncollect_name: Dash – samlaren (B1)
+  tutorial_wonsecret_name: Den hemmelege meldinga til Cue
+  tutorial_hsscience_name: 'Hopscotch: Lag interaktive modellar på iPad/iPhone!'
+  tutorial_popculture_name: Popkulturinformatikk
+  tutorial_legorobust_name: Robuste strukturar – LEGO® Education WeDo 2.0
+  tutorial_legoplants_name: Plantar og pollinatorarar – LEGO® Education WeDo 2.0
+  tutorial_legopark_name: Autonom parkering – LEGO® MINDSTORMS® Education EV3
+  tutorial_legodetect_name: Objektdeteksjon – LEGO® MINDSTORMS® Education EV3
+  tutorial_legolight_name: Automatiske frontlykter – LEGO® MINDSTORMS® Education EV3
+  tutorial_alexa_name: 'Amazon-Alexa si faktasjekkøving: Mine skulefakta'
+  tutorial_grokpetmicro_name: Virtuelle kjæledyr (micro:bit MicroPython)
+  tutorial_pirateplunder_name: Piratplyndring
   tutorial_cadj_name: DR DJ Device
-  tutorial_cacrazy_name: Code Crazy Creatures
-  tutorial_cajump_name: Jumping Jam
+  tutorial_cacrazy_name: Kod ville skapningar
+  tutorial_cajump_name: Hoppande syltetøy
   tutorial_carest_name: Robo-restaurant puzzler
   tutorial_accai_name: Accenture Intelligent Space Exploration
   tutorial_vceclipse_name: Code the Eclipse
@@ -1174,20 +1239,20 @@ nn:
   tutorial_kibobowl_name: Measure and Predict with KIBO Robot Bowling
   tutorial_kibodance_name: Teach Your KIBO Robot to Dance!
   tutorial_buildcharacters_name: Build Your Own Kodable Fuzz
-  tutorial_designgames_name: Create Games with Javascript
+  tutorial_designgames_name: Lag spel med Javascript
   tutorial_makelevels_name: Make Your Own Kodable Mazes
   tutorial_wizard_name: Code Wizard Castle
-  tutorial_mbscratchcards_name: Scratch cards for micro:bit
-  tutorial_mbswiftplaygrounds_name: 'Swift Playgrounds: Intro to the micro:bit'
-  tutorial_mbbuttons_name: 'Introducing the BBC micro:bit: Animation and Buttons'
-  tutorial_meteor_name: Make a Falling Meteors Game for the BBC micro:bit
+  tutorial_mbscratchcards_name: Scratch-kort for micro:bit
+  tutorial_mbswiftplaygrounds_name: 'Swift Playgrounds: Introduksjon til micro:bit'
+  tutorial_mbbuttons_name: 'Introduksjon til BBCs micro:bit: Animasjon og knappar'
+  tutorial_meteor_name: Lag eit spel med fallande meteorar til BBC micro:bit
   tutorial_ballbounce_name: Ball Bounce Mobile App
   tutorial_mitcodi_name: Codi the Bee
   tutorial_mitdoodle_name: Digital Doodle Mobile App
   tutorial_talktome_name: Talk to Me Mobile App
   tutorial_mobilecspmap_name: Map Tour App
   tutorial_ozorandom_name: Ozobot Random Story Generator
-  tutorial_ozotroll_name: Evo the Troll
+  tutorial_ozotroll_name: Trollet Evo
   tutorial_peblioart_name: 'Interactive Art: Bringing Art to Life with Code'
   tutorial_astropi_name: 'Astro Pi: Mission Zero'
   tutorial_rgart_name: RoboGarden STEAM - Art
@@ -1245,8 +1310,8 @@ nn:
   tutorial_allcancodeapps_name: 'Allcancode Platform: Build web and mobile apps in
     Blockly'
   tutorial_n2y_name: Bitt Bott Explores Earth
-  tutorial_danceparty_shortdescription: Code a Dance Party to share with your friends.
-    Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!
+  tutorial_danceparty_shortdescription: Programmer ein dansefest du kan dele med venene
+    dine. Med Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara og 25 andre!
   tutorial_chibitronics_shortdescription: Programmer ein papirkrets til å lyse opp
     di eiga historie.
   tutorial_athlete_shortdescription: Velg mellom å lage et basketbalspel eller miks
@@ -1366,8 +1431,8 @@ nn:
     to code using JavaScript by designing your very own snowman'
   tutorial_tynkerd_shortdescription: Kjemp mot insekt for å redde hovedkortet!
   tutorial_cdmy_shortdescription: Learn JavaScript programming, in a web-browser
-  tutorial_codestersdance_shortdescription: 'Design your own dance routine and program
-    a sprite to perform it! '
+  tutorial_codestersdance_shortdescription: 'Design din eigen danserutine og programmer
+    ein sprite til å dansa den! '
   tutorial_codestersbasketball_shortdescription: 'Build your own pull and shoot basketball
     game! '
   tutorial_nclkarel_shortdescription: Lær å kode med roboten Karen medan de reiser
@@ -1480,8 +1545,8 @@ nn:
     riddar som skal besøke kvart kvadrat på eit brett berre ein gong.
   tutorial_fufafit_shortdescription: 'Use functions to shorten the code that will
     help the fuzzFamily build their strength! '
-  tutorial_ozodance_shortdescription: Help Ozobot learn to dance! Create and program
-    a dance routine for the Ozobot robot.
+  tutorial_ozodance_shortdescription: Hjelp Ozobot å lære seg å danse! Lag og programmer
+    ein danserutine for Ozobot-roboten.
   tutorial_codingrobotics_shortdescription: Students will focus on communication as
     it relates to programming.
   tutorial_box_shortdescription: Take a coding trip on Box Island with the brave Hiro.
@@ -1626,7 +1691,7 @@ nn:
     A fun way to learn the basic concepts of coding.
   tutorial_csfirst_shortdescription: Animate a story about two characters on the ocean.
     Add your own style!
-  tutorial_loopedy_shortdescription: Make a dance using loops!
+  tutorial_loopedy_shortdescription: Lag ein dans ved å bruke løkker!
   tutorial_dsw_shortdescription: Lær å programmere droider, og lag ditt eiget Star
     Wars-spel i ein galakse langt, langt unna.
   tutorial_dswb_shortdescription: Lær å programmere droider, og lag ditt eiget Star
@@ -1677,7 +1742,7 @@ nn:
   tutorial_itchstop_shortdescription: Learn to create your own Stop Frame Animations
     in Scratch
   tutorial_tynkerpn_shortdescription: Go for a nature walk with Peep!
-  tutorial_tynkerpd_shortdescription: Make Peep and his friends dance!
+  tutorial_tynkerpd_shortdescription: Få Peep og venene til å danse!
   tutorial_persistence_shortdescription: This lesson teaches that failure is not the
     end of a journey, but a hint for how to succeed.
   tutorial_getloopy_shortdescription: In this lesson, students will practice converting
@@ -2243,9 +2308,9 @@ nn:
   tutorial_kibobowl_shortdescription: Crash! How far does KIBO have to move to get
     from the start of the bowling lane to the pins? You can create a single straight
     lane or a more complicated path.
-  tutorial_kibodance_shortdescription: Let's have a KIBO Robot dance party! Set up
-    a music player to play a favorite classroom song, or a song connected to a world
-    culture you're exploring.
+  tutorial_kibodance_shortdescription: La oss ha ein KIBO-robot dansefest! La musikkspelaren
+    spele favorittsangen i klasserommet eller ein sang frå den kulturen i verda du
+    utforskar for tida.
   tutorial_buildcharacters_shortdescription: The most popular pre-reader app now includes
     a digital Maker Space! Make levels, design games, or build characters. Choose
     your activity and start creating with Kodable!  Featuring JavaScript for upper
@@ -2433,8 +2498,11 @@ nn:
   tutorial_allcancodeapps_shortdescription: Use the Allcancode Platform to create
     web and mobile apps from design to delivery.
   tutorial_n2y_shortdescription: Help Bitt Bott explore Earth using direction arrows.
-  tutorial_danceparty_longdescription: Code a Dance Party to share with your friends.
-    Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!
+  tutorial_dance2019_longdescription: Programmer ein dansefest du kan dele med venene
+    dine. Med Katy Perry, Shawn Mendes, Lil Nas X, Panic! At The Disco, Jonas Brothers
+    og mange fleire!
+  tutorial_danceparty_longdescription: Programmer ein dansefest du kan dele med venene
+    dine. Med Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara og 25 andre!
   tutorial_chibitronics_longdescription: Programmer ein papirkrets til å lyse opp
     di eiga historie.
   tutorial_athlete_longdescription: Velg mellom å lage et basketbalspel eller miks
@@ -2678,11 +2746,11 @@ nn:
     to build your own games. In this course, you will learn keyboard user-interface
     and game mechanics as you build a Super Mario™-styled game. Afterwards, you will
     be able to share your game!
-  tutorial_codesters_longdescription: 'Create your own games, animations, and artwork
-    using Python.  Once you''re done, share them with friends! Program in Python,
-    a real programming language used every day at companies - our drag and drop toolkit
-    makes it easy to learn!  Try building a basketball game, choreographing a dance,
-    or designing an animated card! '
+  tutorial_codesters_longdescription: 'Opprett eigne spel, animasjonar og grafikk
+    ved hjelp av Python. Når du er ferdig, del dei med vener! Programmér i Python,
+    eit ekte programmeringsspråk som blir brukt kvar dag i bedrifter – vårt dra-og-slepp-verktøy
+    gjer det enkelt å lære! Prøve å bygge ein basketballkamp, korregrafér ein dans
+    eller design eit animert kort! '
   tutorial_qrm_longdescription: Join Mary in learning the Quorum programming language
     as part of a light hearted and entertaining journey in biology. The activities
     are student-guided, with online examples, and are accessible to the blind and
@@ -2755,10 +2823,10 @@ nn:
     av Codecademy-elevar og lær grunnleggande kodinng og datavitskap ved å ta våre
     gøye Kodetimen-kurs. Ved slutten av kvart kurs, vil du ha eit ekte prosjekt du
     kan vise fram til vennar og familie.
-  tutorial_codestersdance_longdescription: 'Students use a drag-to-text toolkit that
-    allows them to start coding in Python right away! Students complete a set of guided
-    practice activities in which they learn how to use and modify a variety of programming
-    commands. Then, they apply these skills to create their own dance routine! '
+  tutorial_codestersdance_longdescription: 'Elevar nyttar dra-til-tekst-verktøy som
+    gjer det mogleg for dei å kode i Python med ein gong! Elevar fullfører eit sett
+    med guida øvingsaktivitetar som dei lærer seg å bruke og endrer på fleire ulike
+    programmeringskommandoar. Sidan nyttar dei desse til å skape deira eigen danserutine! '
   tutorial_codestersbasketball_longdescription: 'Students use our drag-to-text toolkit
     to start coding in Python right away! In this self-guided activity, students complete
     a series of direct-instruction activities in which they build a pull and shoot
@@ -3063,10 +3131,15 @@ nn:
     of functions on-screen to run a program.  This lesson is for students and teachers
     who have some experience with sequence, conditions, loops, or other foundational
     programming concepts.
-  tutorial_ozodance_longdescription: |-
-    This teacher-led tutorial introduces students to the concept of coding with the help of Ozobot, a small programmable robot. Students will be learning how to code by creating and programming a dance routine for Ozobot! They will use OzoBlockly, a visual programming language based on Blockly, to program the dance and then have fun see their choreography come alive when Ozobot performs their dance.
-
-    No programming experience or knowledge of Ozobot is required for this tutorial. However, even students with some programming experience will be engaged by the Ozobot games. The tutorial is designed for grades 1-12 and can be customized to your students' abilities.
+  tutorial_ozodance_longdescription: "Denne øvinga som blir leia av læraren introdusererer
+    elevar til konseptet å kode ved hjelp av Ozobot, ein liten robot du kan programmere.
+    Elevar lærer seg koding ved å skape og programmerer ein danserutine for Ozobot!
+    Dei vil bruke OzoBlockly, eit visuelt programmeringsspråk som er basert på Blockly,
+    for å programmere dansen og sidan ha det kjekt når dei ser koreografien sin blir
+    levande når Ozobot dansar dansen deira. \n\nDu treng ingen programmeringserfaring
+    eller kjennskap til Ozobot i denne øvinga. Sjølv elevar med noko programmeringserfaring
+    vil likevel bli engasjerte av Ozobot-spel. Øvinga passar for 1.-12. klassetrinn
+    og kan tilpassast det elevane dine kan klare."
   tutorial_codingrobotics_longdescription: Elevane vil lære om funksjonelle programmeringskonsept
     og bruke nye ferdigheitar til robotikk. Elevane vil bruke programmeringskunnskap
     til å styre roboten "Dash" i Path-appen ved hjelp av både Kodable og Wonder Workshop.
@@ -4642,12 +4715,12 @@ nn:
     to create a program to travel the length of the lane. They'll test how far a single
     forward block carries KIBO, then improve their programs using the Engineering
     Design Process.
-  tutorial_kibodance_longdescription: Let's have a KIBO Robot dance party! Set up
-    a music player to play a favorite classroom song, or a song connected to a world
-    culture you're exploring. Students will decorate their KIBO as a dancer, then
-    they will create a program to teach their KIBO to dance to the music. Students
-    will learn how to create a program to express an idea (in this case, a dance),
-    with a focus on sequencing ability.
+  tutorial_kibodance_longdescription: La oss ha ein KIBO-dansefest! La musikkspelaren
+    spele favorittsangen i klasserommet eller ein sang frå den kulturen i verda du
+    utforskar for tida. Elevar vil pynte KIBOen som ein dansar, sidan vil dei lage
+    eit program som får KIBO til å danse til musikken. Elelvar vil lære seg korleis
+    å skape eit program til å uttrykke ein idé (i dette tilfellet ein dans), med eit
+    fokus på å kunne sekvensiere.
   tutorial_buildcharacters_longdescription: The most popular pre-reader app now includes
     a digital Maker Space! Make levels, design games, or build characters. Choose
     your activity and start creating with Kodable!  Featuring JavaScript for upper
@@ -4898,6 +4971,9 @@ nn:
     Each of the six activities includes simple directions that are supported with
     symbols from the n2y® SymbolStix PRIME® collection. The symbols help non-readers
     and beginning readers understand and follow the directions.
+  tutorial_dance2019_language: Arabic, Chinese, Czech, Danish, Dutch, English, Finnish,
+    French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean,
+    Malay, Polish, Portuguese, and 10 more!
   tutorial_danceparty_language: English, Arabic, Catalan, Chinese, Czech, Danish,
     Dutch, Finnish, French, German, Greek, Hungarian, Italian, Japanese, Korean, Norwegian,
     Polish, Portuguese, Russian, Spanish, Swedish, Thai, Turkish, and Vietnamese
@@ -5572,6 +5648,7 @@ nn:
   tutorial_duckrace_language: Engelsk, tysk
   tutorial_allcancodeapps_language: Norsk Nynorsk
   tutorial_n2y_language: Norsk Nynorsk
+  tutorial_dance2019_string_detail_grades: Frå 2. klasse
   tutorial_danceparty_string_detail_grades: Frå 2. klasse
   tutorial_chibitronics_string_detail_grades: Grades 2-5
   tutorial_athlete_string_detail_grades: Frå 2. klasse
@@ -5925,7 +6002,7 @@ nn:
   tutorial_codehsrn_string_detail_grades: Frå 8. klasse
   tutorial_codehswd_string_detail_grades: Frå 6. klasse
   tutorial_turtlerobot_string_detail_grades: Frå ikkje-lesar til 5. klasse
-  tutorial_ozoevo_string_detail_grades: All ages
+  tutorial_ozoevo_string_detail_grades: Frå 6. klasse
   tutorial_ozoexped_string_detail_grades: Frå 6. klasse
   tutorial_ozojourney_string_detail_grades: Frå 2. - 8. klasse
   tutorial_ozocodes_string_detail_grades: All ages
@@ -6052,7 +6129,7 @@ nn:
   tutorial_codesparkcreate_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_hardvsoft_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_codestersecard_string_detail_grades: Frå 6.-8. klasse
-  tutorial_codesterslogo_string_detail_grades: Frå 2. - 8. klasse
+  tutorial_codesterslogo_string_detail_grades: Frå 6. klasse
   tutorial_codesterstshirt_string_detail_grades: Frå 6. klasse
   tutorial_codewards_string_detail_grades: Frå 2. - 8. klasse
   tutorial_olympics_string_detail_grades: Frå 2. - 8. klasse
@@ -6150,6 +6227,8 @@ nn:
   tutorial_duckrace_string_detail_grades: Frå 2. klasse
   tutorial_allcancodeapps_string_detail_grades: Frå 6. klasse
   tutorial_n2y_string_detail_grades: Pre-reader+
+  tutorial_dance2019_string_platforms: Alle moderne nettlesarar, Android nettbrett,
+    iPad, Fråkobla
   tutorial_danceparty_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_chibitronics_string_platforms: All modern browsers
   tutorial_athlete_string_platforms: All modern browsers
@@ -6873,6 +6952,7 @@ nn:
   tutorial_duckrace_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_allcancodeapps_string_platforms: All modern browsers
   tutorial_n2y_string_platforms: Unplugged
+  tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chibitronics Chibi Chip and Circuit
     Sticker LEDs
@@ -7452,6 +7532,7 @@ nn:
   tutorial_duckrace_string_detail_platforms: ''
   tutorial_allcancodeapps_string_detail_platforms: ''
   tutorial_n2y_string_detail_platforms: ''
+  tutorial_dance2019_string_detail_programming_languages: Blokker
   tutorial_danceparty_string_detail_programming_languages: Blokker
   tutorial_chibitronics_string_detail_programming_languages: Blokker
   tutorial_athlete_string_detail_programming_languages: Blokker
@@ -7939,7 +8020,7 @@ nn:
   tutorial_codesparkcreate_string_detail_programming_languages: Blokker
   tutorial_hardvsoft_string_detail_programming_languages: ''
   tutorial_codestersecard_string_detail_programming_languages: Blokker, Python
-  tutorial_codesterslogo_string_detail_programming_languages: Blokker, Python
+  tutorial_codesterslogo_string_detail_programming_languages: Python
   tutorial_codesterstshirt_string_detail_programming_languages: Blokker, Python
   tutorial_codewards_string_detail_programming_languages: CoffeeScript
   tutorial_olympics_string_detail_programming_languages: CoffeeScript
@@ -8143,6 +8224,8 @@ nn:
   tutorial_ikodexmas_name: iKode Xmas
   tutorial_rpisensehat_name: Sense HAT data logger
   tutorial_modtraits_name: Character Traits with GoPiGo
+  tutorial_mee_name: 'Kodetimen i Minecraft: nyttig kunstig intelligens '
+  tutorial_kuborobo_name: KUBO Robotics Coding Routes
   tutorial_scratchimagine_longdescription: Imagine a world where anything is possible,
     then bring it to life with Scratch!
   tutorial_codesterspsa_longdescription: Learn the basics of coding in Python while
@@ -8499,6 +8582,13 @@ nn:
     environment.
   tutorial_modtraits_longdescription: 'Students use the steps of computational thinking
     to analyze character traits and create an algorithm to demonstrate those traits. '
+  tutorial_mee_longdescription: 'En landsby trues av brann, og du må kode en løsning!
+    Møt Minecraft-agenten, også kjent som kodehjelperen din, og programmer deretter
+    agenten til å gå rundt i skogen og samle inn data om forholdene som kan føre til
+    brann. '
+  tutorial_kuborobo_longdescription: In this activity, students put their logic and
+    sequencing skills to the test as they use the Tagtiles to program their KUBO robot
+    to travel to various locations on a printed map.
   tutorial_scratchimagine_language: English, Spanish
   tutorial_codesterspsa_language: Norsk Nynorsk
   tutorial_googlehero_language: English, Spanish
@@ -8595,6 +8685,12 @@ nn:
   tutorial_ikodexmas_language: Norsk Nynorsk
   tutorial_rpisensehat_language: Norsk Nynorsk
   tutorial_modtraits_language: Norsk Nynorsk
+  tutorial_mee_language: Engelsk (USA), engelsk (Storbritannia), tysk, spansk (Spania),
+    spansk (Mexico), fransk (Frankrike), fransk (Canada), italiensk, japansk, koreansk,
+    portugisisk (Brasil), portugisisk (Portugal), russisk, kinesisk (forenklet), kinesisk
+    (tradisjonell), tyrkisk, Polsk, indonesisk, ukrainsk, gresk, bulgarsk, ungarsk,
+    finsk, dansk, svensk, norsk, slovakisk, tsjekkisk, nederlandsk
+  tutorial_kuborobo_language: English, Spanish
   tutorial_scratchimagine_string_detail_grades: Frå 2. klasse
   tutorial_codesterspsa_string_detail_grades: Frå 6. klasse
   tutorial_googlehero_string_detail_grades: Frå 2. - 8. klasse
@@ -8691,6 +8787,8 @@ nn:
   tutorial_ikodexmas_string_detail_grades: Grades 2-5
   tutorial_rpisensehat_string_detail_grades: Frå 6. klasse
   tutorial_modtraits_string_detail_grades: Frå 2. klasse
+  tutorial_mee_string_detail_grades: Frå 2. klasse
+  tutorial_kuborobo_string_detail_grades: Pre-reader - Grades 8
   tutorial_scratchimagine_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_codesterspsa_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_googlehero_string_platforms: All modern browsers, Android tablet, iPad
@@ -8796,6 +8894,8 @@ nn:
   tutorial_ikodexmas_string_platforms: All modern browsers
   tutorial_rpisensehat_string_platforms: All modern browsers
   tutorial_modtraits_string_platforms: All modern browsers
+  tutorial_mee_string_platforms: Windows, iPad, MacOS
+  tutorial_kuborobo_string_platforms: Unplugged
   tutorial_scratchimagine_string_detail_platforms: ''
   tutorial_codesterspsa_string_detail_platforms: ''
   tutorial_googlehero_string_detail_platforms: ''
@@ -8895,6 +8995,8 @@ nn:
   tutorial_ikodexmas_string_detail_platforms: Microsoft Kodu
   tutorial_rpisensehat_string_detail_platforms: Raspbian (software), SenseHAT
   tutorial_modtraits_string_detail_platforms: GoPiGo
+  tutorial_mee_string_detail_platforms: ''
+  tutorial_kuborobo_string_detail_platforms: KUBO robot
   tutorial_scratchimagine_string_detail_programming_languages: Blokker
   tutorial_codesterspsa_string_detail_programming_languages: Python
   tutorial_googlehero_string_detail_programming_languages: Blokker
@@ -9003,6 +9105,9 @@ nn:
   tutorial_ikodexmas_string_detail_programming_languages: Microsoft Kodu
   tutorial_rpisensehat_string_detail_programming_languages: Python
   tutorial_modtraits_string_detail_programming_languages: Blokker
+  tutorial_mee_string_detail_programming_languages: Blokker
+  tutorial_kuborobo_string_detail_programming_languages: Tagtiles that students piece
+    together
   school_not_found_heading: Vi kunne ikkje finne skulen din. Skriv inn meir informasjon.
   school_name: Skulenamn
   school_name_error: Skulenamn er påkrevd.

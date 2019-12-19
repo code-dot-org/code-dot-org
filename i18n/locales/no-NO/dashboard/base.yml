@@ -569,6 +569,8 @@
       cta: 'Lær hvordan'
     dance:
       title: 'Dansefest'
+    dance-2019:
+      title: 'Dansefest'
     hoc:
       title: 'Klassisk labyrint'
       body: 'Prøv de grunnleggende konseptene i datavitenskap. Mange millioner har alt prøvd.'

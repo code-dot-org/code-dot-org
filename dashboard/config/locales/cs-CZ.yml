@@ -65,6 +65,8 @@ cs:
   join_section:
     code:
       placeholder: Kód sekce (ABCDEF)
+      instructions_short: Zadejte svůj 6 písmenný kód oddílu
+      submit: Připojit se
   add_hint_form:
     placeholder: Zadej zde svůj tip
     submit: Přidat tip
@@ -93,6 +95,9 @@ cs:
     continue_with: Pokračujte s %{provider}
     sign_in_with: Přihlásit se přes %{provider}
     signed_in: Přihlášen!
+    signed_out_markdown: "### Jste odhlášeni z [Code.org](%{url})."
+    sign_out_of_markdown: "#### Použili jste %{provider} při registraci. Klepnutím
+      [Click here](%{url}) se odhlásíte ze služby %{provider}."
     already_signedup: Již jsi zaregistrován?
     notyet_signedup: Ještě ses nepřidal?
     google_oauth2: Google účet
@@ -375,7 +380,7 @@ cs:
       artist_k1: Umělec (předškolák)
       basketball: Basketbal
       bounce: Odraz
-      dance: Taneční večírek
+      dance: Dance Party
       flappy: Flappy
       frozen: Frozen
       gamelab_jr: Game Lab (beta)
@@ -666,7 +671,9 @@ cs:
       audience: Věk 13 +
       cta: Jak na to
     dance:
-      title: Taneční večírek
+      title: Dance Party
+    dance-2019:
+      title: Dance Party
     hoc:
       title: Klasické bludiště
       body: Zkuste základy informatiky. Miliony lidí to už zkusili.
@@ -694,6 +701,7 @@ cs:
     hoc-encryption:
       title: Jednoduché šifrování
     weblab:
+      title: Web Lab (beta)
       body: Web Lab je programovací prostředí, kde můžete vytvářej jednoduché webové
         stránky pomocí HTML a CSS. Navrhněte své webové stránky a sdílejte je ve vteřině
         dál.
@@ -730,6 +738,7 @@ cs:
     unplugged_conditionals:
       title: Podmínky
     widgets:
+      title: Widgety
       audience: Věk 14+
       cta: Jak na to
   gallery:

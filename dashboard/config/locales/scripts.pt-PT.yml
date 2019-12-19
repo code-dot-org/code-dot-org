@@ -1973,7 +1973,7 @@ pt:
           stages:
             Dance Party:
               name: Festa da Dança
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Next Steps:
               name: Próximos Passos
@@ -1997,3 +1997,13 @@ pt:
           stages:
             new stage:
               name: nova fase
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Condicionais
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Aberto ao público
+            Conditionals with Cards:
+              name: Condicionais com cartas

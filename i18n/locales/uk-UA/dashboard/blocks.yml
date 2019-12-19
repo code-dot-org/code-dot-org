@@ -2,6 +2,47 @@
 uk:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        text: "{GROUP} чергують кожні {N} \nтакти {MOVE1} та {MOVE2}"
+        options:
+          GROUP:
+            sprites: усі
+            '"ALIEN"': всі прибульці
+            '"BEAR"': всі ведмеді
+            '"CAT"': всі коти
+            '"DOG"': всі собаки
+            '"DUCK"': всі качки
+            '"FROG"': всі жаби
+            '"MOOSE"': всі лосі
+            '"PINEAPPLE"': всі ананаси
+            '"ROBOT"': всі роботи
+            '"SHARK"': всі акули
+            '"SLOTH"': лінивець
+            '"UNICORN"': Єдинороги
+          MOVE1:
+            MOVES.Roll: Хвиля
+            MOVES.ClapHigh: Плескання вгорі
+            MOVES.Dab: Деб
+            MOVES.DoubleJam: Подвійний вниз
+            MOVES.Drop: Дроп
+            MOVES.Floss: Флосс
+            MOVES.Fresh: Фреш
+            MOVES.Clown: Гангнам
+            MOVES.Kick: Зірка
+            MOVES.ThisOrThat: Це або те
+            MOVES.Rest: Немає
+          MOVE2:
+            MOVES.Roll: Хвиля
+            MOVES.ClapHigh: Плескання вгорі
+            MOVES.Dab: Деб
+            MOVES.DoubleJam: Подвійний вниз
+            MOVES.Drop: Дроп
+            MOVES.Floss: Флосс
+            MOVES.Fresh: Фреш
+            MOVES.Clown: Гангнам
+            MOVES.Kick: Зірка
+            MOVES.ThisOrThat: Це або те
+            MOVES.Rest: Немає
       Dancelab_atTimestamp:
         text: після {TIMESTAMP} {UNIT}
         options:
@@ -30,11 +71,23 @@ uk:
             '"PINEAPPLE"': всі ананаси
             '"ROBOT"': всі роботи
             '"SHARK"': всі акули
+            '"SLOTH"': лінивець
             '"UNICORN"': всі єдинороги
           MOVE:
             '"next"': "(Наступний)"
             '"prev"': "(Попередній)"
             '"rand"': "(Випадковий)"
+            MOVES.Roll: Хвиля
+            MOVES.ClapHigh: Плескання вгорі
+            MOVES.Dab: Деб
+            MOVES.DoubleJam: Подвійний вниз
+            MOVES.Drop: Дроп
+            MOVES.Floss: Флосс
+            MOVES.Fresh: Фреш
+            MOVES.Clown: Гангнам
+            MOVES.Kick: Зірка
+            MOVES.ThisOrThat: Це або те
+            MOVES.Rest: Немає
           DIR:
             '1': "→"
             "-1": "←"
@@ -45,6 +98,17 @@ uk:
             '"next"': "(Наступний)"
             '"prev"': "(Попередній)"
             '"rand"': "(Випадковий)"
+            MOVES.Roll: Хвиля
+            MOVES.ClapHigh: Плескання вгорі
+            MOVES.Dab: Деб
+            MOVES.DoubleJam: Подвійний вниз
+            MOVES.Drop: Дроп
+            MOVES.Floss: Флосс
+            MOVES.Fresh: Фреш
+            MOVES.Clown: Гангнам
+            MOVES.Kick: Зірка
+            MOVES.ThisOrThat: Це або те
+            MOVES.Rest: Немає
           DIR:
             '1': "→"
             "-1": "←"
@@ -59,6 +123,7 @@ uk:
             '"x"': горизонтальне положення
             '"y"': вертикальне положення
       Dancelab_changePropEachBy:
+        text: змінити {GROUP} {PROPERTY} на {VAL}
         options:
           GROUP:
             sprites: усі
@@ -72,6 +137,7 @@ uk:
             '"PINEAPPLE"': всі ананаси
             '"ROBOT"': всі роботи
             '"SHARK"': всі акули
+            '"SLOTH"': лінивець
             '"UNICORN"': Єдинороги
           PROPERTY:
             '"scale"': розмір
@@ -95,9 +161,33 @@ uk:
             '"PINEAPPLE"': всі ананаси
             '"ROBOT"': всі роботи
             '"SHARK"': всі акули
+            '"SLOTH"': лінивець
             '"UNICORN"': Єдинороги
           MOVE:
             '"rand"': "(Випадковий)"
+            MOVES.XBend: Вигин
+            MOVES.Roll: Хвиля
+            MOVES.XClapSide: Плескання
+            MOVES.ClapHigh: Плескання вгорі
+            MOVES.Dab: Деб
+            MOVES.XFever: Диско
+            MOVES.DoubleJam: Подвійний вниз
+            MOVES.Drop: Дроп
+            MOVES.Floss: Флосс
+            MOVES.Fresh: Фреш
+            MOVES.Clown: Гангнам
+            MOVES.XHeadHips: Голова + стегна
+            MOVES.XHop: Стрибок
+            MOVES.XHighKick: Удар
+            MOVES.XKnee: Коліно
+            MOVES.XKneel: На коліно
+            MOVES.XOle: Оле
+            MOVES.XArmsSide: Руки вбік
+            MOVES.XSlide: Слайд
+            MOVES.Kick: Зірка
+            MOVES.XArmsUp: Руки вгору
+            MOVES.ThisOrThat: Це або те
+            MOVES.Rest: Немає
           DIR:
             '1': "→"
             "-1": "←"
@@ -106,9 +196,34 @@ uk:
         options:
           MOVE:
             '"rand"': "(Випадковий)"
+            MOVES.XBend: Вигин
+            MOVES.Roll: Хвиля
+            MOVES.XClapSide: Плескання
+            MOVES.ClapHigh: Плескання вгорі
+            MOVES.Dab: Деб
+            MOVES.XFever: Диско
+            MOVES.DoubleJam: Подвійний вниз
+            MOVES.Drop: Дроп
+            MOVES.Floss: Флосс
+            MOVES.Fresh: Фреш
+            MOVES.Clown: Гангнам
+            MOVES.XHeadHips: Голова + стегна
+            MOVES.XHop: Стрибок
+            MOVES.XHighKick: Удар
+            MOVES.XKnee: Коліно
+            MOVES.XKneel: На коліно
+            MOVES.XOle: Оле
+            MOVES.XArmsSide: Руки вбік
+            MOVES.XSlide: Слайд
+            MOVES.Kick: Зірка
+            MOVES.XArmsUp: Руки вгору
+            MOVES.ThisOrThat: Це або те
+            MOVES.Rest: Немає
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_everyMeasuresRange:
+        text: 'повторювати кожні {N} такти після {START} '
       Dancelab_everySeconds:
         text: 'кожні {N} {UNIT} '
         options:
@@ -154,6 +269,19 @@ uk:
         text: |-
           якщо {SPRITE} виконує рух {DANCE}
           {DO1} {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: Плескання вгорі
+            MOVES.Clown: Гангнам
+            MOVES.Dab: Деб
+            MOVES.DoubleJam: Подвійний вниз
+            MOVES.Drop: Дроп
+            MOVES.Floss: Флосс
+            MOVES.Fresh: Фреш
+            MOVES.Roll: Хвиля
+            MOVES.Kick: Зірка
+            MOVES.ThisOrThat: Це або те
+            MOVES.Rest: Немає
       Dancelab_ifTime:
         text: |-
           якщо {UNIT} має значення {OP} {N}
@@ -162,6 +290,10 @@ uk:
           UNIT:
             '"measures"': кроків
             '"seconds"': секунди
+          OP:
+            '">"': ">"
+            '"<"': "<"
+            '"="': "="
       Dancelab_jumpTo:
         text: "{SPRITE} стрибає до {LOCATION}"
         options:
@@ -177,6 +309,7 @@ uk:
             "{x: 300, y: 300}": нижній правий кут
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": випадковий
       Dancelab_jumpToEach:
+        text: стрибає {GROUP} до {LOCATION}
         options:
           GROUP:
             sprites: усі
@@ -190,6 +323,7 @@ uk:
             '"PINEAPPLE"': всі ананаси
             '"ROBOT"': всі роботи
             '"SHARK"': всі акули
+            '"SLOTH"': лінивець
             '"UNICORN"': Єдинороги
           LOCATION:
             "{x: 200, y: 100}": вгорі
@@ -217,6 +351,7 @@ uk:
             '"PINEAPPLE"': всі ананаси
             '"ROBOT"': всі роботи
             '"SHARK"': всі акули
+            '"SLOTH"': лінивець
             '"UNICORN"': Єдинороги
           FORMAT:
             '"border"': рамка
@@ -229,6 +364,7 @@ uk:
             '"plus"': плюс
             '"random"': випадковий
       Dancelab_makeAnonymousDanceSprite:
+        text: створити нового {COSTUME} в {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': інопланетянин
@@ -241,6 +377,7 @@ uk:
             '"PINEAPPLE"': Ананас
             '"ROBOT"': робот
             '"SHARK"': Акула
+            '"SLOTH"': лінивець
             '"UNICORN"': єдиноріг
           LOCATION:
             "{x: 200, y: 100}": вгорі
@@ -269,6 +406,7 @@ uk:
             '"PINEAPPLE"': Ананас
             '"ROBOT"': Робот
             '"SHARK"': Акула
+            '"SLOTH"': лінивець
             '"UNICORN"': Єдиноріг
           LOCATION:
             "{x: 200, y: 100}": вгорі
@@ -317,14 +455,20 @@ uk:
             '"PINEAPPLE"': Ананаси
             '"ROBOT"': Роботи
             '"SHARK"': Акули
+            '"SLOTH"': лінивець
             '"UNICORN"': Єдинороги
           LAYOUT:
             '"border"': рамка
             '"inner"': внутрішній квадрат
+            '"diamond"': діамант
             '"circle"': коло
             '"grid"': сітка
+            '"top"': верхня шеренга
             '"row"': ряд
+            '"bottom"': нижня шеренга
+            '"left"': ліва колона
             '"column"': колона
+            '"right"': права колона
             '"x"': хрестик
             '"plus"': плюс
             '"random"': випадковий
@@ -348,31 +492,76 @@ uk:
           {EFFECT} {PALETTE}
         options:
           EFFECT:
+            '"none"': Немає
+            '"circles"': Коло
             '"color_cycle"': Кольори
             '"diamonds"': Ромби
+            '"disco_ball"': Дискокуля
+            '"fireworks"': Феєрверк
             '"swirl"': Гіпноз
+            '"kaleidoscope"': Калейдоскоп
+            '"lasers"': Лазерний танцпол
             '"splatter"': Бульбашки
             '"rainbow"': Веселка
             '"snowflakes"': Сніг
+            '"text"': Назва пісні
             '"galaxy"': Відступ
+            '"sparkles"': Блискітки
             '"spiral"': Спіраль
             '"disco"': Квадрати
+            '"stars"': Зірки
+          PALETTE:
+            '"rave"': Чорний та білий
+            '"cool"': Холодний
+            '"electronic"': Електронний
+            '"iceCream"': Морозиво
+            '"default"': Світлий
+            '"neon"': Неоновий
+            '"tropical"': Тропічний
+            '"vintage"': Вінтажний
+            '"warm"': Теплий
       Dancelab_setBackgroundEffectWithPalette:
         text: |-
           встановити ефект тла
           {PALETTE} {EFFECT}
         options:
           EFFECT:
+            '"none"': Немає
             '"rand"': "(Випадковий)"
+            '"circles"': Коло
+            '"quads"': Кути
             '"color_cycle"': Кольори
             '"diamonds"': Ромби
+            '"disco_ball"': Дискокуля
+            '"fireworks"': Феєрверк
+            '"flowers"': Квіти
+            '"growing_stars"': Зірки, які ростуть
             '"swirl"': Гіпноз
+            '"kaleidoscope"': Калейдоскоп
+            '"lasers"': Лазерний танцпол
             '"splatter"': Бульбашки
             '"rainbow"': Веселка
+            '"ripples_random"': Випадкові брижі
+            '"ripples"': Брижі
             '"snowflakes"': Сніг
+            '"text"': Назва пісні
+            '"squiggles"': Звивання
             '"galaxy"': Відступ
+            '"sparkles"': Блискітки
             '"spiral"': Спіраль
             '"disco"': Квадрати
+            '"stars"': Зірки
+            '"music_wave"': Хвилі
+          PALETTE:
+            '"rave"': Чорний та білий
+            '"cool"': Холодний
+            '"electronic"': Електронний
+            '"iceCream"': Морозиво
+            '"default"': Світлий
+            '"neon"': Неоновий
+            '"tropical"': Тропічний
+            '"vintage"': Вінтажний
+            '"warm"': Теплий
       Dancelab_setDanceSpeed:
         text: змінити для {SPRITE} швидкість танцю на {SPEED}
         options:
@@ -397,6 +586,7 @@ uk:
             '"PINEAPPLE"': всі ананаси
             '"ROBOT"': всі роботи
             '"SHARK"': всі акули
+            '"SLOTH"': лінивець
             '"UNICORN"': Єдинороги
           SPEED:
             '1': нормальний
@@ -408,18 +598,42 @@ uk:
         text: встановити ефект переднього плану {EFFECT}
         options:
           EFFECT:
+            '"none"': Немає
             '"bubbles"': Бульбашки
+            '"confetti"': Конфеті
+            '"hearts_red"': Серця
+            '"music_notes"': Музичні ноти
             '"pineapples"': Ананаси
+            '"pizzas"': Піцци
+            '"smiling_poop"': Какашка
             '"rain"': Дощ
+            '"floating_rainbows"': Райдуги
+            '"smile_face"': Смайли
+            '"spotlight"': Прожектор
+            '"color_lights"': Софіти
             '"raining_tacos"': Тако
       Dancelab_setForegroundEffectExtended:
         text: встановити ефект переднього плану {EFFECT}
         options:
           EFFECT:
+            '"none"': Немає
             '"rand"': "(Випадковий)"
             '"bubbles"': Бульбашки
+            '"hearts_colorful"': Різнокольорові серця
+            '"confetti"': Конфеті
+            '"emojis"': Емодзі
+            '"hearts_red"': Серця
+            '"music_notes"': Музичні ноти
+            '"paint_drip"': Патьоки фарби
             '"pineapples"': Ананаси
+            '"pizzas"': Піцци
+            '"smiling_poop"': Какашка
             '"rain"': Дощ
+            '"floating_rainbows"': Райдуги
+            '"smile_face"': Смайли
+            '"spotlight"': Прожектор
+            '"color_lights"': Софіти
+            '"exploding_stars"': Вибухаюча зірка
             '"raining_tacos"': Тако
       Dancelab_setProp:
         text: 'встановити {SPRITE} {PROPERTY} у {VAL} '
@@ -446,6 +660,7 @@ uk:
             '"PINEAPPLE"': всі ананаси
             '"ROBOT"': всі роботи
             '"SHARK"': всі акули
+            '"SLOTH"': лінивець
             '"UNICORN"': Єдинороги
           PROPERTY:
             '"scale"': розмір
@@ -467,6 +682,7 @@ uk:
             '"y"': вертикальне положення
             '"tint"': відтінок
       Dancelab_setPropRandomEach:
+        text: рандомізувати {GROUP} {PROPERTY}
         options:
           GROUP:
             sprites: усі
@@ -480,6 +696,7 @@ uk:
             '"PINEAPPLE"': всі ананаси
             '"ROBOT"': всі роботи
             '"SHARK"': всі акули
+            '"SLOTH"': лінивець
             '"UNICORN"': Єдинороги
           PROPERTY:
             '"scale"': розмір
@@ -506,6 +723,7 @@ uk:
             '"PINEAPPLE"': всі ананаси
             '"ROBOT"': всі роботи
             '"SHARK"': всі акули
+            '"SLOTH"': лінивець
             '"UNICORN"': Єдинороги
       Dancelab_setTintEachInline:
         text: встановити для {THIS} відтінок у {VAL}
@@ -522,6 +740,7 @@ uk:
             '"PINEAPPLE"': всі ананаси
             '"ROBOT"': всі роботи
             '"SHARK"': всі акули
+            '"SLOTH"': лінивець
             '"UNICORN"': Єдинороги
       Dancelab_setTintInline:
         text: встановити для {SPRITE} відтінок {VAL}
@@ -546,6 +765,7 @@ uk:
             '"PINEAPPLE"': всі ананаси
             '"ROBOT"': всі роботи
             '"SHARK"': всі акули
+            '"SLOTH"': лінивець
             '"UNICORN"': Єдинороги
           VISIBILITY:
             'true': видимий
@@ -566,6 +786,7 @@ uk:
             '"mid"': середні тони
             '"treble"': високі тони
       Dancelab_startMappingEach:
+        text: "{GROUP} починають {PROPERTY} після {RANGE}"
         options:
           GROUP:
             sprites: усі
@@ -579,6 +800,7 @@ uk:
             '"PINEAPPLE"': всі ананаси
             '"ROBOT"': всі роботи
             '"SHARK"': всі акули
+            '"SLOTH"': лінивець
             '"UNICORN"': Єдинороги
           PROPERTY:
             '"scale"': розмір
@@ -609,6 +831,7 @@ uk:
             '"mid"': середні тони
             '"treble"': високі тони
       Dancelab_stopMappingEach:
+        text: "{GROUP} припиняють {PROPERTY} після {RANGE}"
         options:
           GROUP:
             sprites: усі
@@ -622,6 +845,7 @@ uk:
             '"PINEAPPLE"': всі ананаси
             '"ROBOT"': всі роботи
             '"SHARK"': всі акули
+            '"SLOTH"': лінивець
             '"UNICORN"': Єдинороги
           PROPERTY:
             '"scale"': розмір
@@ -637,13 +861,50 @@ uk:
             '"mid"': середні тони
             '"treble"': високі тони
       Dancelab_translateStrings:
+        text: перекладіть {STRING}
         options:
           STRING:
+            '"music_wave"': Хвилі
+            '"ripples"': Брижі
+            '"ripples_random"': Випадкові брижі
+            '"quads"': Кути
+            '"flowers"': Квіти
+            '"popsicles"': Морозиво на паличці
+            '"squiggles"': Звивання
+            '"growing_stars"': Зірки, які ростуть
+            '"emojis"': Емодзі
+            '"hearts_colorful"': Серця
+            '"paint_drio"': Патьоки фарби
+            '"exploding_stars"': Вибухаюча зірка
+            '"row_top"': верхня шеренга
+            '"row_bottom"': нижня шеренга
+            '"column_left"': ліва колона
+            '"column_right"': права колона
             '"diamond"': діамант
+            '"mural"': Розпис стін
+            '"safari"': Сафарі
+            '"network"': Мережа
+            '"highway"': Шосе
+            '"stream"': Потік
+            '"tile"': Плитка
+            '"shadow"': Тінь
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
+            '"z"': z
             '"0"': '0'
             '"1"': '1'
             '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenKey:
         text: коли натиснуто {KEY}
         options:
@@ -653,10 +914,42 @@ uk:
             '"down"': вниз
             '"right"': праворуч
             '"space"': космос
+            '"enter"': enter
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
+            '"z"': z
             '"0"': '0'
             '"1"': '1'
             '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenPeak:
         text: коли досягаємо кінця {RANGE}
         options:
@@ -706,7 +999,31 @@ uk:
             '"left"': ліворуч
             '"right"': праворуч
             '"space"': космос
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
+            '"z"': z
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -761,6 +1078,10 @@ uk:
             '"left"': ліворуч
             '"right"': праворуч
             '"space"': космос
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       gamelab_whileKey:
         options:
           KEY:
@@ -769,6 +1090,10 @@ uk:
             '"left"': ліворуч
             '"right"': праворуч
             '"space"': космос
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -798,6 +1123,7 @@ uk:
             '"y"': позиція по осі y
             '"direction"': напрямок руху
       Mikelab_groupChangeAnim:
+        text: змінити {SELECT} {COSTUME} на {COSTUME2}
         options:
           SELECT:
             '"all"': усі
@@ -812,6 +1138,7 @@ uk:
             '"y"': позиція по осі y
             '"direction"': напрямок руху
       Mikelab_groupCreateNewSprite:
+        text: створити нового {COSTUME} в {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": вгорі
@@ -865,6 +1192,19 @@ uk:
         text: |-
           якщо {SPRITE} виконує рух {DANCE}
           {DO1} {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: Плескання вгорі
+            MOVES.Clown: Гангнам
+            MOVES.Dab: Деб
+            MOVES.DoubleJam: Подвійний вниз
+            MOVES.Drop: Дроп
+            MOVES.Floss: Флосс
+            MOVES.Fresh: Фреш
+            MOVES.Roll: Хвиля
+            MOVES.Kick: Зірка
+            MOVES.ThisOrThat: Це або те
+            MOVES.Rest: Немає
       Mikelab_randomColor:
         text: випадковий колір
       Mikelab_repeatUntilComplete:
@@ -973,6 +1313,10 @@ uk:
             '"left"': ліворуч
             '"right"': праворуч
             '"space"': космос
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       craft_ifPath:
         text: |-
           якщо є шлях {DIR}

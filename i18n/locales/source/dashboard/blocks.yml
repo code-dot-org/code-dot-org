@@ -2,6 +2,49 @@
 en:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        text: "[GROUP][0] alternate every [N][1] measures \nbetween [MOVE1][2] and [MOVE2][3]"
+        options:
+          GROUP:
+            sprites: all
+            '"ALIEN"': aliens
+            '"BEAR"': bears
+            '"CAT"': cats
+            '"DOG"': dogs
+            '"DUCK"': ducks
+            '"FROG"': frogs
+            '"MOOSE"': moose
+            '"PINEAPPLE"': pineapples
+            '"ROBOT"': robots
+            '"SHARK"': sharks
+            '"SLOTH"': sloths
+            '"UNICORN"': unicorns
+          MOVE1:
+            MOVES.Roll: Body Roll
+            MOVES.ClapHigh: Clap High
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double Down
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Star
+            MOVES.ThisOrThat: This or That
+            MOVES.Thriller: Zombie
+            MOVES.Rest: None
+          MOVE2:
+            MOVES.Roll: Body Roll
+            MOVES.ClapHigh: Clap High
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double Down
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Star
+            MOVES.ThisOrThat: This or That
+            MOVES.Thriller: Zombie
+            MOVES.Rest: None
       Dancelab_atTimestamp:
         text: after [TIMESTAMP][0] [UNIT][1]
         options:
@@ -30,6 +73,7 @@ en:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
+            '"SLOTH"': sloths
             '"UNICORN"': unicorns
           MOVE:
             '"next"': "(Next)"
@@ -97,6 +141,7 @@ en:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
+            '"SLOTH"': sloths
             '"UNICORN"': unicorns
           PROPERTY:
             '"scale"': size
@@ -120,6 +165,7 @@ en:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
+            '"SLOTH"': sloths
             '"UNICORN"': unicorns
           MOVE:
             '"rand"': "(Random)"
@@ -287,6 +333,7 @@ en:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
+            '"SLOTH"': sloths
             '"UNICORN"': unicorns
           LOCATION:
             "{x: 200, y: 100}": top
@@ -314,6 +361,7 @@ en:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
+            '"SLOTH"': sloths
             '"UNICORN"': unicorns
           FORMAT:
             '"border"': border
@@ -339,8 +387,8 @@ en:
             '"PINEAPPLE"': pineapple
             '"ROBOT"': robot
             '"SHARK"': shark
-            '"UNICORN"': unicorn
             '"SLOTH"': sloth
+            '"UNICORN"': unicorn
           LOCATION:
             "{x: 200, y: 100}": top
             "{x: 200, y: 300}": bottom
@@ -368,6 +416,7 @@ en:
             '"PINEAPPLE"': pineapple
             '"ROBOT"': robot
             '"SHARK"': shark
+            '"SLOTH"': sloth
             '"UNICORN"': unicorn
           LOCATION:
             "{x: 200, y: 100}": top
@@ -416,14 +465,20 @@ en:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
+            '"SLOTH"': sloths
             '"UNICORN"': unicorns
           LAYOUT:
             '"border"': border
             '"inner"': inside square
+            '"diamond"': diamond
             '"circle"': circle
             '"grid"': grid
+            '"top"': top row
             '"row"': row
+            '"bottom"': bottom row
+            '"left"': left column
             '"column"': column
+            '"right"': right column
             '"x"': criss-cross
             '"plus"': plus
             '"random"': random
@@ -486,25 +541,29 @@ en:
             '"none"': None
             '"rand"': "(Random)"
             '"circles"': Circles
+            '"quads"': Angles
             '"color_cycle"': Colors
             '"diamonds"': Diamonds
             '"disco_ball"': Disco Ball
             '"fireworks"': Fireworks
+            '"flowers"': Flowers
+            '"growing_stars"': Growing Stars
             '"swirl"': Hypno
             '"kaleidoscope"': Kaleidoscope
             '"lasers"': Laser Dance Floor
             '"splatter"': Paint Splatter
             '"rainbow"': Rainbow
+            '"ripples_random"': Random Ripples
+            '"ripples"': Ripples
             '"snowflakes"': Snow
             '"text"': Song Names
+            '"squiggles"': Squiggles
             '"galaxy"': Space
             '"sparkles"': Sparkles
             '"spiral"': Spiral
             '"disco"': Squares
             '"stars"': Stars
             '"music_wave"': Waves
-            '"quads"': Angles
-            '"flowers"': Flowers
           PALETTE:
             '"rave"': Black and White
             '"cool"': Cool
@@ -539,6 +598,7 @@ en:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
+            '"SLOTH"': sloths
             '"UNICORN"': unicorns
           SPEED:
             '1': normal
@@ -573,9 +633,12 @@ en:
             '"none"': None
             '"rand"': "(Random)"
             '"bubbles"': Bubbles
+            '"hearts_colorful"': Colorful Hearts
             '"confetti"': Confetti
+            '"emojis"': Emojis
             '"hearts_red"': Hearts
             '"music_notes"': Music Notes
+            '"paint_drip"': Paint Drip
             '"pineapples"': Pineapples
             '"pizzas"': Pizzas
             '"smiling_poop"': Poop
@@ -584,6 +647,7 @@ en:
             '"smile_face"': Smiles
             '"spotlight"': Spotlight
             '"color_lights"': Stage Lights
+            '"exploding_stars"': Starburst
             '"raining_tacos"': Tacos
       Dancelab_setProp:
         text: 'set [SPRITE][0] [PROPERTY][1] to [VAL][2] '
@@ -610,6 +674,7 @@ en:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
+            '"SLOTH"': sloths
             '"UNICORN"': unicorns
           PROPERTY:
             '"scale"': size
@@ -645,8 +710,8 @@ en:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
-            '"UNICORN"': unicorns
             '"SLOTH"': sloths
+            '"UNICORN"': unicorns
           PROPERTY:
             '"scale"': size
             '"width"': width
@@ -672,6 +737,7 @@ en:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
+            '"SLOTH"': sloths
             '"UNICORN"': unicorns
       Dancelab_setTintEachInline:
         text: set [THIS][0] tint to [VAL][1]
@@ -688,6 +754,7 @@ en:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
+            '"SLOTH"': sloths
             '"UNICORN"': unicorns
       Dancelab_setTintInline:
         text: set [SPRITE][0] tint to [VAL][1]
@@ -712,6 +779,7 @@ en:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
+            '"SLOTH"': sloths
             '"UNICORN"': unicorns
           VISIBILITY:
             'true': visible
@@ -746,6 +814,7 @@ en:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
+            '"SLOTH"': sloths
             '"UNICORN"': unicorns
           PROPERTY:
             '"scale"': size
@@ -790,6 +859,7 @@ en:
             '"PINEAPPLE"': pineapples
             '"ROBOT"': robots
             '"SHARK"': sharks
+            '"SLOTH"': sloths
             '"UNICORN"': unicorns
           PROPERTY:
             '"scale"': size
@@ -825,13 +895,13 @@ en:
             '"column_left"': left column
             '"column_right"': right column
             '"diamond"': diamond
-            '"l"': l
-            '"m"': m
-            '"n"': 'n'
-            '"o"': o
-            '"p"': p
-            '"q"': q
-            '"r"': r
+            '"mural"': Mural
+            '"safari"': Safari
+            '"network"': Network
+            '"highway"': Highway
+            '"stream"': Stream
+            '"tile"': Tile
+            '"shadow"': Shadow
             '"s"': s
             '"t"': t
             '"u"': u

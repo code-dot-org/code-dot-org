@@ -1,32 +1,66 @@
 # Utility methods for generating certificate images.
 # Note: requires pegasus_dir to be in scope.
 
+require 'honeybadger/ruby'
 require 'rmagick'
 require_relative '../script_constants'
 
 # This method returns a newly-allocated Magick::Image object.
 # NOTE: the caller MUST ensure image#destroy! is called on the returned image object to avoid memory leaks.
 def create_certificate_image2(image_path, name, params={})
-  name = name.to_s.force_8859_to_utf8.gsub(/@/, '\@').strip
-  name = ' ' if name.empty?
+  # The unmodified user input so we can document it error logs.
+  original_name = name
 
+  # Load the certificate template
   background = Magick::Image.read(image_path).first
 
-  y = params[:y] || 0
-  x = params[:x] || 0
-  width = params[:width] || background.columns
-  height = params[:height] || background.rows
+  # If the name is just whitespace characters, then return just the certificate
+  # template without a name.
+  name = name.strip
+  return background if name.empty?
 
-  draw = Magick::Draw.new
-  draw.annotate(background, width, height, x, y, name) do
-    draw.gravity = Magick::CenterGravity
-    self.pointsize = 90
-    self.font_family = 'Times'
-    self.font_weight = Magick::BoldWeight
-    self.stroke = 'none'
-    self.fill = 'rgb(87,87,87)'
+  # Limit the name length to prevent attacks where students send names hundreds
+  # of characters long and our system wastes memory trying to render a huge
+  # image.
+  name = name[0, 50] if name.size > 50
+
+  begin
+    # The user's name will be put into an image with a transparent background.
+    # This uses 'pango', the OS's text layout engine, in order to dynamically
+    # select the correct font. This is important for handling non-latin
+    # languages.
+    name_overlay = Magick::Image.read("pango:#{name}") do
+      # pango:markup is set to false in order to easily prevent pango markup injection
+      # from student names.
+      define('pango', 'markup', false)
+      self.background_color = 'none'
+      self.pointsize = 68
+      self.font = "Times bold"
+      self.fill = "#575757"
+    end.first.trim!
+  rescue Magick::ImageMagickError => exception
+    # We want to know what kinds of names we are failing to render.
+    Honeybadger.notify(
+      exception,
+      context: {
+        image_path: image_path,
+        name: name,
+        original_name: original_name,
+      }
+    )
+    # The student gave us a name we can't render, so leave the name blank.
+    return background
   end
 
+  # x,y offsets
+  y = params[:y] || 0
+  x = params[:x] || 0
+  # Combine the name image on top of the certificate template image
+  background.composite!(name_overlay, Magick::CenterGravity, x, y, Magick::OverCompositeOp)
+
+  # Free the memory in order to avoid memory leaks (images are stored in /tmp
+  # until destroyed)
+  name_overlay.destroy!
   background
 end
 
@@ -37,7 +71,7 @@ def create_workshop_certificate_image(image_path, fields)
   draw = Magick::Draw.new
 
   fields.each do |field|
-    string = field[:string].to_s.force_8859_to_utf8.gsub(/@/, '\@').strip
+    string = escape_image_magick_string(field[:string].to_s)
     next if string.empty?
 
     y = field[:y] || 0
@@ -58,10 +92,30 @@ def create_workshop_certificate_image(image_path, fields)
   background
 end
 
+# Prepare the given string for using in Image Magick.
+def escape_image_magick_string(string)
+  string = string.force_8859_to_utf8
+  # Escape special Image Magick symbols \, @, %, and \n
+  # Note we are using the gsub block replacement in order to avoid having to do
+  # extra '\' escaping. Otherwise we would have to write '\\\\\\' to insert two
+  # backslashes into the string. Using the block replacement results in normal
+  # string behavior: '\\\\' results in a string with two backslashes. See the
+  # String.gsub docs for more details.  This is for the sake of readable code.
+  # literal \ replaced with literal \\
+  string = string.gsub(/\\/) {'\\\\'}
+  # @ at the front of the string replaced with literal \@
+  string = string.gsub(/^@/) {'\\@'}
+  # % replaced with literal \%
+  string = string.gsub(/%/) {'\\%'}
+  # new-line character replaced with literal \\n
+  string = string.gsub(/\n/) {'\\\\n'}
+  string.strip
+end
+
 # This method returns a newly-allocated Magick::Image object.
 # NOTE: the caller MUST ensure image#destroy! is called on the returned image object to avoid memory leaks.
 def create_course_certificate_image(name, course=nil, sponsor=nil, course_title=nil)
-  name = name.force_8859_to_utf8.gsub(/@/, '\@')
+  name = escape_image_magick_string(name)
   name = ' ' if name.empty?
 
   course ||= ScriptConstants::HOC_NAME
@@ -158,6 +212,8 @@ def certificate_template_for(course)
       end
     elsif course == 'mee'
       'MC_Hour_Of_Code_Certificate_mee.png'
+    elsif course == ScriptConstants::OCEANS_NAME
+      'oceans_hoc_certificate.png'
     else
       'hour_of_code_certificate.jpg'
     end

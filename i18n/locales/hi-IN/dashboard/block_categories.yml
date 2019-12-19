@@ -1,0 +1,31 @@
+hi:
+  data:
+    block_categories:
+      Actions: क्रियाएँ
+      Advanced: उन्नत
+      Behaviors: व्यवहार
+      Brushes: ब्रश
+      Color: रंग
+      Comment: टिप्पणी
+      Comments: टिप्पणियां
+      Conditionals: कंडीशनल्स
+      Dancers: नर्तकों
+      Default: डिफॉल्ट
+      Events: घटनाएँ
+      Functions: कार्य
+      'Functions ': 'कार्य '
+      Game/Score: गेम/स्कोर
+      Games/Score: खेल/स्कोर
+      Groups: समूह
+      Input: इनपुट
+      Locations: स्थान
+      Logic: तर्क
+      Loops: फंदे
+      Math: गणित
+      Numbers: नंबर
+      Properties: गुण
+      Sprites: स्प्राइट्स
+      Text: पाठ
+      Variables: चर
+      'Variables ': 'वेरिएबल्स '
+      World: विश्व

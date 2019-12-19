@@ -256,14 +256,14 @@ fil:
         personal_login_created_username: 'Matagumpay na nalikha mo ang personal na login. Maari ka nang magsign-in sa iyong account gamit ang bansag mo na (%{username}) at password'
   nav:
     header:
-      finished_hoc: "Natapos ko ang aking Hour of Code"
+      finished_hoc: "Tapos na ako!"
       sign_in_to_save: 'Mag-sign in para i-save ang progreso'
       my_dashboard: "Aking Dashboard"
-      course_catalog: "Katalogo ng Kurso"
+      course_catalog: "Catalog ng Kurso"
       project_gallery: "Mga Proyekto"
       sections: "Mga Seksyon"
       help_support: "Tulong at Suporta"
-      report_bug: "I-report ang bug"
+      report_bug: "I-report ang problema"
       teacher_community: "Komunidad ng mga Guro"
       professional_learning: "Propesyonal na Pag-aaral"
       documentation: "Dokumentasyon"
@@ -292,7 +292,7 @@ fil:
       stats: "Mga Stats"
       help_us: "Tulungan Kami"
       teach: "Magturo"
-      about: "Tungkol"
+      about: "Tungkol sa"
     user:
       classroom: 'Home Page ng Teacher'
       district_dashboard: 'Dashboard ng Distrito'
@@ -300,7 +300,7 @@ fil:
       stats: 'Code Studio'
       settings: 'Account Ko'
       logout: 'Mag-sign out'
-      signin: 'Sign in'
+      signin: 'Mag-sign in'
       signup: 'Gumawa ng account'
       already_registered: 'Nakarehistro na?'
       team: 'Koponan'
@@ -314,6 +314,7 @@ fil:
       basketball: 'Basketbol'
       bounce: 'Bounce'
       calc: 'Cacl'
+      dance: 'Dance Party'
       eval: 'Eval'
       flappy: 'Flappy'
       frozen: 'Frozen'
@@ -462,24 +463,24 @@ fil:
     code_from_html: 'Ang Code.org ay gumagamit ng p5.play, na lisensiyado sa ilalim ng <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a>.'
     powered_by_aws: 'Pinagana sa pamamagitan ng Amazon Web Services'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, ang CODE logo at ang Hour of Code&reg; ay pagkakakilanlan ng Code.org.'
-    copyright: 'Karapatang-sipi'
-    more: 'More'
+    copyright: 'Karapatang-ari'
+    more: 'Mas Marami'
     feedback: 'Magbigay ng feedback'
-    translate: 'Magboluntaryo na magsali ng ating nilalaman'
+    translate: 'Magboluntaryo para isalin ang aming content'
     support: 'Tulong at Komunidad'
     support_url: 'http://support.code.org/'
     tos_short: 'Mga Alituntunin'
-    tos: 'Mga Palatuntunan'
-    privacy: 'Privacy Policy'
+    tos: 'Mga Alituntunin ng Serbisyo'
+    privacy: 'Patakaran sa Pagkapribado'
     secure: 'Tiyak na Bersyon'
-    report_abuse: 'I-report ang pag-abuso'
+    report_abuse: 'I-report ang Abuso'
     built_on_code_studio: 'Ginawa sa Code Studio'
     make_my_own_app: 'Gumawa ng sarili kong app'
     how_it_works: 'Paano ito Gumana (Tingnan ang Code)'
     try_hour_of_code: 'Subukan ang Hour of Code!'
   reference_area:
-    title: 'Kailangan mo ba ng tulong?'
-    subtitle: 'Tingnan ang mga video at mga pahiwatig'
+    title: 'Nangangailangan ng tulong?'
+    subtitle: 'Tingnan ang mga video na ito at ang mga hint'
     teacher: 'Tingnan ang solusyon'
     teacher_no_solution: 'Ihinto ang pagtingin sa solusyon'
     auth_error: 'Wala kang awtoridad para tingnan ang solusyon.'
@@ -539,6 +540,10 @@ fil:
       body_short: "Mag-design ng app, mag-code gamit ang blocks o Javascript para mapagana ito, at pagkatapos ibahagi ang iyong app sa ilang segundo lang."
       audience: 'Edad 13+'
       cta: 'Pag-aralang kung paano'
+    dance:
+      title: 'Dance Party'
+    dance-2019:
+      title: 'Dance Party'
     hoc:
       title: 'Klasiko na Maze'
       body: 'Subukan ang mga pangunahing konsepto ng computer science. Milyon-milyon ang sumubok nito.'
@@ -617,7 +622,7 @@ fil:
     header: "Galeriya"
     header_playlab: "Mga Istorya at mga laro"
     header_artist: "Code ng sining"
-    report_abuse: "I-report ang pag-abuso"
+    report_abuse: "I-report ang Abuso"
   landing:
     report_bug: "I-report ang Bug"
     support: "Humingi ng Tulong"
@@ -690,8 +695,8 @@ fil:
     intro_desc: "Binago namin ang aming mga palatuntunan at privacy policy, gaya ng pinakita namin sa baba. Ang mga pagbabago ay magkaroon ng bisa sa ika-24 ng Agosto, 2016. Ang pinakamalaking pagbabago: kami ay <i>hindi na mag-store ng email address ng mga estudyanteng account sa Code Studio.</i> Ito ay isang malaking bagay para sa amin, at kami ay umaasa na magbibigay ito ng bagong pamantayan para sa privacy ng mga estudyante sa teknolohiya na pang-edukasyon. Kami ay nagpapadala ng buod ng lahat ng mga pagbabago sa pamamagitan ng email."
     intro_desc_markdown: "Binago namin ang aming mga palatuntunan at privacy policy, gaya ng pinakita namin sa baba. Ang mga pagbabago ay magkaroon ng bisa sa ika-24 ng Agosto, 2016. Ang pinakamalaking pagbabago: kami ay _hindi na mag-store ng email address ng mga estudyanteng account sa Code Studio._ Ito ay isang malaking bagay para sa amin, at kami ay umaasa na magbibigay ito ng bagong pamantayan para sa privacy ng mga estudyante sa teknolohiya na pang-edukasyon. Kami ay nagpapadala ng buod ng lahat ng mga pagbabago sa pamamagitan ng email."
     intro_instructions: "Kailangan mong tanggapin ang mga bagong pamatayan para sa mga estudyante na wala pang 13 taong gulang sa iyong silid-aralan para magkaroon ng buong access sa lahat ng mga bagong katangian ng Code Studio. Kung magrehistro ng account para sa estudyante na wala pang 13 taong gulang, pagsasabihan ka na ikompirma kung ang iyong paaralan ay may pahintulot ng mga magulang para sa koleksyon ng mga personal na impormasyon ng mga estudyante para sa paggamit at pakinabang ng paaralan, kalakip na dito ang mga educational na mga programa gaya ng Code Studio."
-    tos: "Mga Palatuntunan"
-    privacy: "Privacy Policy"
+    tos: "Mga Alituntunin ng Serbisyo"
+    privacy: "Patakaran sa Pagkapribado"
     privacy_notice: "Pahayag sa Privacy"
     accept_label: 'Ako ay sumang-ayon sa updated na <a href="%{tos_url}" target="_blank">mga Palatuntunan</a> at sa <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
     accept_label_markdown: Ako ay sumang-ayon sa updated na [mga Palatuntunan](%{tos_url}) at sa [Privacy Policy](%{privacy_url})

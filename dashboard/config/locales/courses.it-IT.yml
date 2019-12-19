@@ -4,9 +4,9 @@ it:
     course:
       name:
         csp-2017:
-          assignment_family_title: Princìpi dell'Informatica
-          title: Princìpi dell'Informatica (scuole superiori)
-          version_title: Superiori
+          assignment_family_title: Principi di informatica
+          title: Principi di informatica ('17-'18)
+          version_title: "'17-'18"
           description_student: In autunno 2016, il College Board ha lanciato il suo
             più nuovo corso AP®, i Principi di Informatica AP. Il corso introduce
             gli studenti ai concetti fondamentali di informatica e li sfida ad esplorare
@@ -25,9 +25,9 @@ it:
             multidisciplinari.
           description_short: Impara i concetti fondamentali dell'informatica.
         csd-2017:
-          assignment_family_title: Alla scoperta dell'Informatica
-          title: Scoperte Informatica ('17-'18)
-          version_title: Superiori
+          assignment_family_title: Alla scoperta dell'informatica
+          title: Alla scoperta dell'informatica ('17-'18)
+          version_title: "'17-'18"
           description_student: Alla Scoperta dell'Informatica è un corso introduttivo
             all'informatica che conduce gli studenti alla realizzazione di autentiche
             creazioni e che introduce l'uso dell'informatica come strumento per la
@@ -46,8 +46,8 @@ it:
           description_teacher: Questo è un corso per globale e ha una corposa descrizione
             per gli insegnanti
         csd-2018:
-          assignment_family_title: Alla scoperta dell'Informatica
-          title: Scoperte Informatica ('18-'19)
+          assignment_family_title: Alla scoperta dell'informatica
+          title: Alla scoperta dell'informatica ('18-'19)
           version_title: "'18-'19"
           description_short: Corso introduttivo all'informatica che conduce gli studenti
             alla realizzazione di autentiche creazioni.
@@ -60,8 +60,8 @@ it:
             creazioni e che introduce l'uso dell'informatica come strumento per la
             creatività, la comunicazione, il problem-solving ed il divertimento.
         csp-2018:
-          assignment_family_title: Princìpi dell'Informatica
-          title: Principi Informatica ('18-'19)
+          assignment_family_title: Principi di informatica
+          title: Principi di informatica ('18-'19)
           version_title: "'18-'19"
           description_short: Impara i concetti fondamentali dell'informatica.
           description_student: In autunno 2016, il College Board ha lanciato il suo
@@ -81,7 +81,7 @@ it:
             sottorappresentava con strumenti di informatica essenziale e opportunità
             multidisciplinari.
         csp-2019:
-          title: Principi di Informatica ('19-'20)
+          title: Principi di informatica ('19-'20)
           version_title: "'19-'20"
           description_short: Impara i concetti fondamentali dell'informatica.
           description_student: In autunno 2016, il College Board ha lanciato il suo
@@ -101,7 +101,7 @@ it:
             sottorappresentava con strumenti di informatica essenziale e opportunità
             multidisciplinari.
         csd-2019:
-          title: Scoperte Informatica ('19-'20)
+          title: Alla scoperta dell'informatica ('19-'20)
           version_title: "'19-'20"
           description_short: Corso introduttivo all'informatica che conduce gli studenti
             alla realizzazione di autentiche creazioni.

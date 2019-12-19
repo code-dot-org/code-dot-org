@@ -28,13 +28,51 @@ it-IT:
         width="300"/>
       2-3 Artist 7: Finisci di disegnare le ultime due finestre a destra. Ciascuna
         finestra è un quadratino di lato 25 pixel.
+      2-3 Artist 8: |-
+        E ora costruisci una stalla!
+
+        Completa gli spazi per ciascun animale suddividendo il rettangolo in 2 quadrati delle stesse dimensioni.
+
+        Il rettangolo è largo 200 pixel e alto 100 pixel.
+
+        Ci sono molti modi diversi di risolvere quest'esercizio: divertiti!
       2-3 Artist 9 NEW: Finisci di disegnare questo aquilone
+      2-3 Artist Assessment 1: "**Questo è un esercizio di riepilogo**: Finisci di
+        disegnare l'ultimo dente, è largo 25 pixel e alto 25 pixel."
+      2-3 Artist Debugging 1: |-
+        Riesci a disegnare questo cappello facendo in modo che la sua parte superiore sia lunga solo 50 pixel?
+
+        <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-11#VIDEO" target="_blank">Video doppiato in italiano</a>
+      2-3 Artist Debugging 10: "Il tastierino direzionale del controller del mio gioco
+        è troppo stretto. \n\nRiesci ad allargarlo di 10 pixel?\n\nPrima, prova ad
+        eseguire il codice per vedere cosa c'è di sbagliato."
+      2-3 Artist Debugging 11: |-
+        Aiutami a completare il mio bellissimo fiocco di neve.
+
+        Quante volte devo eseguire il blocco "ripeti" per completarlo?
       2-3 Artist Debugging 2: |-
         Il codice che disegna i tre baffi a destra è sbagliato, correggilo.<br><br>
         <b>Suggerimento</b>: tutti i baffi hanno la stessa lunghezza.
+      2-3 Artist Debugging 3: "La mia barca ha un buco! \n\nRiesci a ripararla modificando
+        l'angolazione di una linea?"
+      2-3 Artist Debugging 5: |-
+        Il codice che disegna la gamba e il piede è sbagliato.
+
+        Riesci ad aiutarmi?
+      2-3 Artist Debugging 6: |-
+        Mi sembra di star seduto su una sedia senza una gamba.
+
+        Modifica i blocchi per disegnare la gamba mancante.
+      2-3 Artist Debugging 7: |-
+        Questo codice disegna la C al contrario nella parola "CODE".
+
+        Riesci a farla disegnare correttamente?
       2-3 Artist Debugging 8: La mia girandola non è finita. Riesci ad aiutarmi?
       2-3 Artist Debugging 9: Il codice per disegnare questo gambo non è corretto!
         Riesci a capire come aiutare l'artista?
+      2-3 Artist Debugging Assessment 1: "Questo è un esercizio di riepilogo: Questa
+        figura è troppo piccola. Riesci a farla più grande?  \n\n<b>Suggerimento</b>:
+        ogni lato dovrebbe essere 75 pixel più lungo della dimensione attuale."
       2-3 Artist Free Play: 'Tempo di giocare: disegna qualcosa che ti piace.'
       2-3 Artist Functions 10: Qui ci sono due funzioni, una per disegnare un ingranaggio
         grande e una per disegnare un ingranaggio piccolo. Usale per disegnare l'interno
@@ -70,6 +108,10 @@ it-IT:
       2-3 Artist Functions 9: Qui trovi la funzione `draw a snowflake` (<i>disegna
         un fiocco di neve</i>). Sperimentala per creare una scena invernale! Questo
         è un esercizio libero, quindi non c'è alcun problema da risolvere. Buon divertimento!
+      2-3 Artist Loops New 1: |-
+        Completiamo la testa del robot! Riesci a disegnare un quadrato con un lato di 100 pixel?
+
+        <br/>
       2-3 Artist Loops New 10: Cerca adesso di disegnare una serie di V collegate,
         usando un ciclo.
       2-3 Artist Loops New 11: Riscrivi il codice del precedente esercizio, ma questa
@@ -82,6 +124,9 @@ it-IT:
       2-3 Artist Loops New 14: Il codice che trovi già pronto è sempre quello per
         disegnare un rombo. Prova a variarlo per disegnare altre figure. Prova a cambiare
         il numero di gradi di cui giri o il numero di ripetizioni che fai.
+      2-3 Artist Loops New 15: |-
+        Disegna qualcosa che ti piace.
+        <br/><br/>
       2-3 Artist Loops New 2: |-
         Ecco lo stesso esercizio che hai appena risolto, ma questa volta puoi usare solo 1 blocco `vai avanti` ed 1 blocco `gira a ...` per disegnare il quadrato.<br>
         Puoi usare un blocco `ripeti ... volte` per risolvere questo esercizio?<br>
@@ -105,6 +150,10 @@ it-IT:
         Per disegnare questa figura devi ripetere il triangolo 12 volte.<br>
         <br>
         Per sapere di quanti gradi girare dopo ciascun triangolo, dividi il numero di gradi in un cerchio (360) per il numero di triangoli che stai disegnando (12).
+      2-3 Artist Nested Loops 4: |-
+        Per disegnare un fiore devi ripetere il rombo 12 volte.
+
+        <b>Suggerimento</b>: i 12 rombi sono come i 12 triangoli che hai già disegnato - di quanti gradi devi girare dopo aver disegnato ciascun rombo?
       2-3 Artist Nested Loops 5: |-
         Riempi le finestre di questo edificio usando un ciclo annidato.<br><br>
         Le finestre sono grandi 20 pixel e distanti 20 pixel l'una dall'altra.
@@ -117,8 +166,14 @@ it-IT:
         cerchio per il numero di figure che compongono il disegno.
       2-3 Artist Nested Loops 8: Aggiungiamo un po' d'erba al disegno. Ogni ciuffo
         d'erba è distante 50 pixel dal precedente.
+      2-3 Artist Nested Loops 9: |-
+        Completa quest'immagine aggiungendo un fiore.
+
+        Per disegnare il tuo fiore devi ripetere il rombo 12 volte girando un po' alla fine di ogni rombo.
       2-3 Artist Nested Loops Free Play: 'Tempo di giocare: disegna qualcosa di carino
         usando i cicli annidati.'
+      2-3 Bee Conditionals 11: Fammi volare nel giardino per raccogliere il nettare
+        solo dai fiori che ne hanno.
       2-3 Bee Conditionals 13: |-
         Qui ci sono diverse cose da fare!<br>
         Usa ciò che hai imparato per raccogliere tutto il nettare e poi fare il miele.<br><br>
@@ -158,6 +213,22 @@ it-IT:
         Riesci a capire qual è il problema in questo esercizio?<br><br>
         Correggi gli errori per raccogliere tutto il nettare.<br><br>
         Clicca su "Fai un passo" per eseguire il programma un blocco alla volta.
+      2-3 Bee Debugging 3: |-
+        Questi blocchi sbagliati mi fanno perdere tempo!
+
+        Correggi gli errori per raccogliere tutto il nettare.
+
+        Clicca su "Fai un passo" per eseguire il programma un blocco alla volta.
+      2-3 Bee Debugging 5: "Questo fiore sembra saporito! \n\nCorreggi gli errori
+        per raccogliere tutto il nettare.\n\nDa ora in avanti puoi usare, oltre al
+        comando \"Fai un passo\", anche il comando \"Esegui\" per eseguire tutti i
+        blocchi."
+      2-3 Bee Debugging 6: |-
+        Che dolce sfida!
+
+        Correggi gli errori per raccogliere tutto il nettare.
+
+        Ricorda che cliccando su "Fai un passo" puoi eseguire il programma un blocco alla volta.
       2-3 Bee Debugging 9: |-
         Questi blocchi sbagliati mi fanno perdere tempo. Correggi gli errori per raccogliere tutto il nettare e produrre tutto il miele.<br><br>
         Ricorda che cliccando su "Fai un passo" puoi eseguire il programma un blocco alla volta.
@@ -222,6 +293,8 @@ it-IT:
         di blocchi!
       2-3 Maze Loops 19: Usa i cicli per farmi arrivare al girasole col minor numero
         possibile di blocchi!
+      2-3 Maze Loops Assessment 1: "**Questo è un esercizio di riepilogo**: Fammi
+        arrivare al girasole, usando solo 5 blocchi! "
       4-5 Artist 1: Aiutami a disegnare il quadrato. (Ogni linea è lunga 300 pixel)
       4-5 Artist 2: Riesci a ripetere questo codice per completare il quadrato?
       4-5 Artist 3: Questa aiuola rettangolare ha un perimetro di 600 pixel. Il lato
@@ -246,6 +319,10 @@ it-IT:
         per disegnare il triangolo equilatero. Ogni lato è lungo 300 pixel.
       4-5 Artist Free Draw 1: Disegna liberamente!  Disegna qualunque cosa ti venga
         l'ispirazione di creare.
+      4-5 Artist Patterns 1: |-
+        Riesci a disegnare questo quadrato usando un ciclo?
+
+        Ogni lato è lungo 20 pixel.
       4-5 Artist Patterns 10: |-
         Questo codice disegna due righe di esagoni. Per disegnare tutto il favo devi eseguire l'intero codice 4 volte.<br>
         Suggerimento: per essere sicuro che l'artista non disegni fuori dallo schermo, assicurati di saltare indietro di 120 pixel nel ciclo più esterno.
@@ -1524,10 +1601,60 @@ it-IT:
         \n\nCosa pensi che succeda quando ci clicchi sopra?  "
       Dance Party Predict_2019: "**Fai una previsione:** Ecco ora un alieno blu! \n\nCosa
         pensi accadrà quando ci cliccherai sopra?  "
-      Dance_2019_05: |-
-        _Adesso sì che ci stiamo scatenando!_
+      Dance_2019_01: |-
+        Trascina il blocco <xml><block type="Dancelab_makeAnonymousDanceSprite" block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;, &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml> nell'area di lavoro e collegalo all'interno del blocco <xml><block type="Dancelab_whenSetup2" next_connection_disabled="true" block-text="setup"></block></xml>.
 
-        Aggiungi un blocco <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> alla tua area di lavoro e fai cominciare al ballerino una nuova mossa dopo 6 battute.
+        Scegli il `gatto` o il `bradipo` come primo ballerino.
+
+        -   _Puoi cliccare sulla lampadina qui a sinistra se desideri maggiori informazioni o sfide aggiuntive._
+      Dance_2019_02: "Il blocco <xml><block type=\"Dancelab_whenKey\" block-text=\"when
+        up pressed\"></block></xml> consente di eseguire alcuni blocchi di istruzioni
+        quando si preme la freccia verso l'alto. \nUsa il blocco <xml><block type=\"Dancelab_doMoveEachLR\"
+        block-text=\"do once\"><title name=\"GROUP\">\"CAT\"</title><title name=\"MOVE\">MOVES.XClapSide</title><title
+        name=\"DIR\">-1</title></block></xml> per far applaudire il gatto!\n\n_Assicurati
+        di premere la freccia verso l'alto o ![](<https://images.code.org/419e704e6841c0b696016bf5029b8cb9-image-1571864825506.06.45
+        PM.png>) dopo aver cliccato il pulsante \"Esegui\"!_"
+      Dance_2019_03: È ora di una gara di ballo! Programma ogni ballerino affinché
+        si muova quando premi un certo tasto. Scegli il tuo movimento preferito per
+        ogni ballerino o impostalo su `(Casuale)` per ottenere qualcosa di totalmente
+        imprevedibile!
+      Dance_2019_04: "Muoviamo i ballerini a tempo di musica!\n\nTrascina il blocco
+        <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">4</title><title
+        name=\"UNIT\">\"measures\"</title></block></xml> nell’area di lavoro e collegalalo
+        al blocco <xml><block type=\"Dancelab_changeMoveEachLR\"><title name=\"GROUP\">\"SHARK\"</title><title
+        name=\"MOVE\">MOVES.ThisOrThat</title><title name=\"DIR\">-1</title></block></xml>.
+        \n\nIl tuo ballerino deve iniziare una nuova mossa dopo la quarta battuta.\n\nIn
+        musica le **battute** sono usate per scandire il tempo. In questa esercitazione,
+        una battuta dura quattro quarti."
+      Dance_2019_05: "_Adesso sì che ci stiamo scatenando!_ \n\nAggiungi un blocco
+        <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title
+        name=\"UNIT\">\"measures\"</title></block></xml> all'area di lavoro e fai
+        cominciare al ballerino una nuova mossa dopo 6 battute."
+      Dance_2019_06: |-
+        Usa questo nuovo blocco per impostare un gruppo di ballerini secondari, dietro al ballerino principale posizionato nel mezzo.
+
+          <xml><block type="Dancelab_makeNewDanceSpriteGroup">
+            <title name="N">???</title>
+            <title name="COSTUME" config="&quot;BEAR&quot;, &quot;CAT&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title>
+            <title name="LAYOUT">"circle"</title>
+          </block></xml>
+
+        Ora puoi creare un gruppo di ballerini tutti in una volta!
+      Dance_2019_07: |-
+        Ogni ballerino è caratterizzato da un insieme di _proprietà_ che ne definiscono l'aspetto.
+
+        Collega il blocco <xml><block type="Dancelab_setPropEach" block-text="the set block"><title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title><title name="PROPERTY">"scale"</title><title name="VAL">???</title></block></xml> ad un blocco evento verde, per rappresentare ballerini più vicini e più lontani.
+      Dance_2019_08: I ballerini hanno una proprietà “tonalità” che può aggiungere
+        uno strato di colore. Prova a cambiare la tonalità di uno dei tuoi ballerini
+        (o di un intero gruppo)!
+      Dance_2019_09: |-
+        Questo **nuovo blocco** è un particolare tipo di evento che viene attivato più e più volte.
+
+        <xml><block type="Dancelab_everySeconds"><title name="N">2</title><title name="UNIT">"measures"</title></block></xml>
+
+        Posizionando in questo nuovo blocco evento gli altri nuovi blocchi che trovi nella cassetta degli attrezzi, potrai far variare le proprietà dei ballerini nel tempo. Sii creativo e divertiti!
+
+        _Quando hai finito, premi il pulsante termina._
       Dance_2019_10: Lasciati andare e lanciati in pista! Crea un ballo personalizzato
         da condividere con i tuoi amici.
       Dance_Party_01: |-
@@ -1542,10 +1669,10 @@ it-IT:
         Trascina il blocco <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> nell'area di lavoro e inseriscilo sotto al blocco <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Dopo la quarta battuta, il tuo ballerino dovrebbe cominciare ad eseguire una nuova mossa.
 
         Le **battute** in musica sono l’unità di misura del tempo. In questa esercitazione una battuta corrisponde a quattro secondi.
-      Dance_Party_03: |-
-        _Adesso sì che ci stiamo scatenando!_
-
-        Aggiungi un blocco <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> alla tua area di lavoro e fai cominciare al ballerino una nuova mossa dopo 6 battute.
+      Dance_Party_03: "_Adesso sì che ci stiamo scatenando!_ \n\nAggiungi un blocco
+        <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title
+        name=\"UNIT\">\"measures\"</title></block></xml> all'area di lavoro e fai
+        cominciare al ballerino una nuova mossa dopo 6 battute."
       Dance_Party_04: |-
         _Dobbiamo vivacizzare un po’ questo ballo!_
 
@@ -1578,79 +1705,120 @@ it-IT:
       Dance_Party_11_5: |-
         Dai un’occhiata a questo blocco:
 
-        <xml>   <block type="Dancelab_makeNewDanceSpriteGroup">     <title name="N">6</title>     <title name="COSTUME">"DUCK"</title>     <title name="LAYOUT">"circle"</title>   </block></xml>
+        <xml>
+          <block type="Dancelab_makeNewDanceSpriteGroup">
+            <title name="N">6</title>
+            <title name="COSTUME">"DUCK"</title>
+            <title name="LAYOUT">"circle"</title>
+          </block></xml>
 
         Ora sei in grado di creare un gruppo di ballerini in un colpo solo!
 
-        Prova ad usare alcuni blocchi `"tutti i paperi" eseguono la mossa ...` per scrivere del codice che faccia ballare i paperi tutti assieme.
+        Prova ad usare alcuni blocchi `"tutti i paperi" eseguono la mossa...` per scrivere del codice che faccia ballare i paperi tutti assieme.
       Dance_Party_11b: |-
         E ora una sfida all’ultima mossa! Quando premi la freccia a sinistra (←) il Gatto fa la "dab". Fai fare una “spaccata” al Robot premendo la freccia a destra (→) e fagli fare un "applauso" quando premi la freccia in giù (↓).
 
         **Usa i tasti per far fare al Robot il ballo spaccata-applauso-spaccata-applauso il più velocemente possibile!**
       Dance_Party_12: Lasciati andare e lanciati in pista! Crea un ballo personalizzato
         da condividere con i tuoi amici.
+      Dance_Party_extras_alternate_2019: "# Avanti e indietro!\n\nA volte potresti
+        voler creare una sequenza di mosse a tua scelta. Questo nuovo blocco ti permette
+        di fare proprio questo.\n\n<xml><block type=\"Dancelab_alternateMoves\"><title
+        name=\"GROUP\">sprites</title><title name=\"N\">2</title><title name=\"MOVE1\">MOVES.Roll</title><title
+        name=\"MOVE2\">MOVES.ClapHigh</title></block></xml>\n\nLe mosse indicate verranno
+        alternate per sempre.\n\n-   Crea una sequenza alternata tra il ballerino
+        principale e quelli secondari! \n-   Prova diversi ritmi di alternanza delle
+        mosse, per esempio `1` o `0.5` per alternare più in fretta!"
       Dance_Party_extras_battle: |-
-        # Gruppi di ballo
+        # Squadre di ballo
 
-        Ecco una gara di ballo tra due squadre. I tasti freccia controllano uno dei ballerini e i tasti "w, a, s, d" controllano l'altro. Sfida un amico a una gara di ballo, e poi prova a migliorarla.
+        Ecco una sfida tra due squadre di ballo. I tasti freccia controllano uno dei ballerini e i tasti "w, a, s, d" controllano l'altro. Sfida un amico e poi cerca di migliorare questa gara di ballo.
 
-        -   Aggiungi altri tasti per controllare i balli
-        -   Fai reagire anche i ballerini di seconda fila quando i tasti vengono premuti
-        -   Alterna il ballerino ogni 4 battute impostando la sua visibilità
+        -   Aggiungi più tasti per controllare il ballo
+        -   Fai in modo che anche i ballerini secondari rispondano quando vengono premuti i tasti
+        -   Imposta la visibilità dei ballerini in modo che si alternino ogni 4 battute
       Dance_Party_extras_battle_2019: |-
-        # Gruppi di ballo
+        # Squadre di ballo
 
-        Ecco una gara di ballo tra due squadre. I tasti freccia controllano uno dei ballerini e i tasti "w, a, s, d" controllano l'altro. Sfida un amico a una gara di ballo, e poi prova a migliorarla.
+        Ecco una sfida tra due squadre di ballo. I tasti freccia controllano uno dei ballerini e i tasti "w, a, s, d" controllano l'altro. Sfida un amico e poi cerca di migliorare questa gara di ballo.
 
-        -   Aggiungi altri tasti per controllare i balli
-        -   Fai reagire anche i ballerini di seconda fila quando i tasti vengono premuti
-        -   Alterna il ballerino ogni 4 battute impostando la sua visibilità
+        -   Aggiungi più tasti per controllare il ballo
+        -   Fai in modo che anche i ballerini secondari rispondano quando vengono premuti i tasti
+        -   Imposta la visibilità dei ballerini in modo che si alternino ogni 4 battute
       Dance_Party_extras_every_beat: |-
         # Quartine
 
-        La maggior parte dei nostri balli utilizza battute intere, ma ogni battuta è formata da 4 quartine. Questo ballo utilizza 'ogni 0,25 battute' per fare battere le mani al ballerino ad ogni quartina.
+        Finora abbiamo usato battute intere, ma spesso ogni battuta è composta da 4 quartine. Questo ballo usa il blocco `ogni 0.25 battute` per far applaudire il ballerino ad ogni quartina, ovvero quattro volte per ogni battuta.
 
-        Il ballo utilizza anche un\_blocco \_condizionale per controllare il momento in cui il blocco di «ogni 0,25 battute» può cambiare il ballo. Prova a cambiare i numeri nel blocco condizionale per vedere come cambia il ballo.
+        Questo ballo usa anche un blocco _condizionale_ per specificare quando il blocco "ogni 0.25 battute" può modificare il ballo. Prova a cambiare i numeri nel blocco condizionale per vedere come cambia il ballo.
 
-        -   Sperimenta la durata dell’altra nota (tipo 0,5 per una nota di mezzo o 0,125 per una croma).
-        -   Aggiungi alcuni eventi `dopo la battuta`.
-        -   Scambia le "battute" con i "secondi" e provare a temporizzare le tue danza in questo modo.
+        -   Sperimenta altre durate (come 0.5 per mezza battuta o 0.125 per un'ottava)
+        -   Aggiungi alcuni eventi `dopo ... battute`
+        -   Cambia "battute" con "secondi" e prova a controllare il ballo in questo modo
+      Dance_Party_extras_every_beat_2019: |-
+        # Quartine
+
+        Finora abbiamo usato battute intere, ma spesso ogni battuta è composta da 4 quartine. Questo ballo usa il blocco <xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml> per far applaudire il ballerino ad ogni quartina - ovvero quattro volte per ogni battuta - ma solo per le prime 4 battute.
+
+        Prova a cambiare i numeri nei blocchi per vedere come cambia il ballo.
+
+        -   Sperimenta altre durate (come 0.5 per mezza battuta o 0.125 per un'ottava).
+        -   Aggiungi altri eventi.
       Dance_Party_extras_layout: |-
-        # Tutti in Formazione!
+        # Tutti in formazione!
 
         Dai un'occhiata a questo ballo che usa il blocco `disponi ... nuovi ... in ...` per cambiare la formazione dei ballerini secondari durante il ballo. Prova ad estendere il progetto con una di queste idee.
 
         -   Crea un secondo gruppo di ballerini con una formazione diversa
         -   Cambia la disposizione quando si preme un tasto
         -   Cambia una proprietà quando i ballerini cambiano formazione
+      Dance_Party_extras_layout_2019: |-
+        # Tutti in formazione!
+
+        Dai un'occhiata a questo ballo che usa il blocco <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> per cambiare la formazione dei ballerini secondari durante il ballo. Prova ad estendere il progetto con una di queste idee.
+
+        -   Crea un secondo gruppo di ballerini con una formazione diversa
+        -   Cambia la disposizione quando si preme un tasto
+        -   Cambia una proprietà quando i ballerini cambiano formazione
+      Dance_Party_extras_mixed_2019: |-
+        # Più pulsanti
+
+        In questo ballo puoi controllare le proprietà dei ballerini in tempo reale mentre stanno ballando automaticamente. Prova a far cambiare altre proprietà quando premi i pulsanti. Per esempio:
+
+        -   Modifica casualmente la tonalità del ballerino quando si preme la freccia verso il basso.
+        -   Aggiungi un gruppo di ballerini con una disposizione casuale quando si preme "spazio".
       Dance_Party_extras_on_beat: |-
-        # Bassi, Medi e Alti
+        # Bassi, medi e alti
 
         Questo ballo usa eventi di "picco" per attivare il codice quando particolari frequenze diventano dominanti. Prova a vedere come cambia il ballo riproducendo canzoni diverse.
       Dance_Party_extras_on_beat_2019: |-
-        # Bassi, Medi e Alti
+        # Bassi, medi e alti
 
         Questo ballo usa eventi di "picco" per attivare il codice quando particolari frequenze diventano dominanti. Prova a vedere come cambia il ballo riproducendo canzoni diverse.
       Dance_Party_extras_speed: |-
-        # Accelerare, Rallentare
+        # Accelerare, rallentare
 
         Questo ballo finale usa il blocco `imposta la velocità di ballo` per controllare la velocità dei movimenti di ogni ballerino. Prova a sperimentare diverse velocità in diversi punti della canzone. Sentiti libero di continuare ad armeggiare su questo ballo o di tornare ai precedenti per renderli ancora più divertenti.
+      Dance_Party_extras_speed_2019: |-
+        # Accelerare, rallentare
+
+        Questo ballo finale usa il blocco <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> per controllare la velocità dei movimenti di ogni ballerino. Prova a sperimentare diverse velocità in diversi punti della canzone. Sentiti libero di continuare ad armeggiare su questo ballo o di tornare ai precedenti per renderli ancora più divertenti.
       Dance_Party_extras_visible: |-
         # Dove sono andati?
 
-        Questo ballo mostra e nasconde due diversi gruppi di ballerini. Dai un’occhiata e poi prova ad aggiungere il tuo tocco personale
+        In questo ballo, due diversi gruppi di ballerini appaiono e scompaiono. Provalo e poi cerca di aggiungere il tuo stile.
 
         -   Aggiungi un altro gruppo di ballerini
         -   Mostra e nascondi i ballerini usando i tasti freccia
-        -   Nascondi tutti i ballerini e passa a un emozionante effetto di sfondo
+        -   Nascondi i ballerini e sorprendi tutti con un effetto di sfondo mozzafiato
       Dance_Party_extras_visible_2019: |-
         # Dove sono andati?
 
-        Questo ballo mostra e nasconde due diversi gruppi di ballerini. Dai un’occhiata e poi prova ad aggiungere il tuo tocco personale
+        In questo ballo, due diversi gruppi di ballerini appaiono e scompaiono. Provalo e poi cerca di aggiungere il tuo stile.
 
         -   Aggiungi un altro gruppo di ballerini
         -   Mostra e nascondi i ballerini usando i tasti freccia
-        -   Nascondi tutti i ballerini e passa a un emozionante effetto di sfondo
+        -   Nascondi i ballerini e sorprendi tutti con un effetto di sfondo mozzafiato
       Fish Tank 1-validated: "**Fai una previsione**: Che cosa pensi accadrà quando
         eseguirai questo codice?"
       Fish Tank 2-validated: "Facciamo un acquario!  \n\nTrasforma Dusty (il cespuglio
@@ -2152,6 +2320,8 @@ it-IT:
         \ </block></xml> per lasciarti qualche veloce promemoria. Questi possono aiutarti
         a ricordarti cosa hai fatto e perché!  \n\nQuesti commenti sono solo per **te**,
         non influiscono in nessun modo sull'area di gioco."
+      course1_artist_loops_challenge2: Giochiamo! Disegna più X che puoi... Riesci
+        a disegnarne tre in fila... e fare TRIS?
       course1_artist_loops_challenge3: |-
         **Cip!**
 
@@ -2163,14 +2333,39 @@ it-IT:
         fino al maialino!
       course1_maze_debugging_challenge2: Correggi questo esercizio. Ci sono già tutti
         i blocchi giusti, ma sono nell'ordine sbagliato!
+      course1_maze_seq_challenge2: Hai solo quattro esemplari per ogni tipo di blocco.
+        Riesci a trovare un percorso che ti faccia arrivare fino al maialino prima
+        di terminare tutti i blocchi a disposizione?
+      course1_playlab_events_challenge1: |-
+        _"Dove si stanno nascondendo i miei amici? In questo gioco, se clicchi su di me, scoprirai dove si trova il gatto!"_
+
+        Cliccando sul gatto apparirà l'uccellino! Puoi scrivere un programma per mostrare anche gli altri personaggi?
+
+        In questo esercizio, se clicchi sui suggerimenti, ci troverai delle belle idee per realizzare questo progetto passo dopo passo.
+
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+      course1_playlab_events_challenge2: |-
+        _"Diamo una festa! Programma i miei amici in modo che facciano qualcosa quando li clicchi o li tocchi."_
+
+        Cosa diranno gli animali? Cos'altro succederà?
+
+        In questo esercizio, se clicchi sui suggerimenti, ci troverai delle belle idee!
+
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
       course2_artist_nestedLoops_challenge1: |-
         Riesci a scoprire come realizzare un'immagine come questa?
 
         -   Entrambe le forme hanno **lati di 50 pixel**.
         -   Gli _ottagoni_ si realizzano con angoli di **45 gradi**.
         -   I _triangoli_ si realizzano con angoli di **120 gradi**.
+      course2_artist_prog_challenge1: Disegna una stanza per ogni animale. Ci sono
+        molti modi per risolvere questo esercizio, quindi ti serve anche un po' di
+        fortuna!
       course2_artist_prog_challenge2: _"Aiutami a disegnare la linea gialla di questa
         strada!"_
+      course2_bee_conditionals_challenge1: Raccogli tutto il nettare e fai tutto il
+        miele. Puoi raccogliere il nettare solo dai fiori e fare il miele solo nei
+        favi. Controlla sotto ogni nuvola se c'è un fiore o un favo.
       course2_bee_conditionals_challenge2: Raccogli tutto il nettare e fai tutto il
         miele. Puoi raccogliere tutto il nettare da un fiore usando il blocco `mentre
         nettare > 0`.
@@ -2201,7 +2396,7 @@ it-IT:
             </block></xml>
       course3_bee_functions_challenge1: Dovrai cavartela da solo in questa sfida.
         Potrebbe essere più difficile di quanto sembri!
-      course3_farmer_until_challenge2: Usa il blocco `Se/Altrimenti` per seguire questo
+      course3_farmer_until_challenge2: Usa il blocco `se/altrimenti` per seguire questo
         percorso con molte curve in diverse direzioni. Ad ogni angolo, usa il blocco
         `rimuovi 1` all'interno di un ciclo per eliminare il mucchio di terra.
       course3_maze_until_challenge1: Nessun suggerimento, solo una sfida. Fai arrivare
@@ -2242,6 +2437,10 @@ it-IT:
       course4_harvester_nested_loops_challenge1: _"Ho bisogno di aiuto nella fattoria!
         Aiutami a raccogliere queste pannocchie usando solo i blocchi presenti nella
         cassetta degli attrezzi."_
+      course4_playlab_variables_challenge1: Usa questi blocchi per fare in modo che
+        i personaggi condividano un gioco di parole ("knock-knock joke"). Modifica
+        il contenuto delle variabili `firstName` e `punchLine` per raccontare la tua
+        storiella!
       courseA_artist_loops10: |-
         ## È ora di tornare a terra. Aiutami a posizionare le pietre così non cado in acqua!
 
@@ -5179,7 +5378,7 @@ it-IT:
         _"Mi trovo in un labirinto con tanti ortaggi differenti!"_
 
         `Gira a destra` in corrispondenza delle zucche, `gira a sinistra` se trovi una lattuga. Raccogli tutto per completare l'esercizio.
-      courseD_farmer_until_challenge2: Usa il blocco `Se/Altrimenti` per seguire questo
+      courseD_farmer_until_challenge2: Usa il blocco `se/altrimenti` per seguire questo
         percorso con molte curve in diverse direzioni. Ad ogni angolo, usa il blocco
         `rimuovi 1` all'interno di un ciclo per eliminare il mucchio di terra.
       courseD_farmer_while1: |-
@@ -6406,6 +6605,12 @@ it-IT:
         Le istruzioni condizionali posso essere utili anche quando sai esattamente cosa c'è in ogni casella.
 
         Raccogli tutto il nettare e fai tutto il miele.
+      courseF_bee_conditionals2: |-
+        _"È troppo nuvoloso per vedere i fiori!"_
+
+        Prima di prendere il nettare, controlla sotto ogni nuvola se sta nascondendo un fiore. Se sotto la nuvola c'è un fiore, l'ape deve prendere **una** dose di nettare.
+
+        Ricorda: le nuvole non nascondono sempre la stessa cosa!
       courseF_bee_conditionals3: Visto che puoi raccogliere il nettare solo dai fiori,
         devi prima controllare in ogni casella se c'è un fiore. Se sotto ognuna di
         queste nuvole c'è un fiore, l'ape dovrà raccogliere _una dose_ di nettare.
@@ -6518,6 +6723,34 @@ it-IT:
         possibile di blocchi.
       courseF_bee_for_challenge2_2019: Risolvi questo esercizio con il minore numero
         possibile di blocchi.
+      courseF_bee_functions2: "Per semplificare le cose, ora impariamo ad usare le
+        funzioni!\n\nD'ora in poi, userai un nuovo _strumento per modificare le funzioni_.
+        \ Si tratta di una finestra separata che apparirà quando cercherai di modificare
+        una funzione. Nell'area di lavoro non vedrai il codice della funzione, ma
+        non ti preoccupare... è sempre lì!  \n\n* * *\n\nEsercitiamoci con questa
+        funzione che raccoglie il nettare solo se l'ape è su un fiore.  Per vedere
+        il codice della funzione, clicca sul pulsante blu \"modifica\"!\n\nUsa la
+        funzione `get only nectar` (_prendi solo nettare_) per raccogliere il nettare
+        da ogni fiore."
+      courseF_bee_functions3: Ora devi creare tu una funzione per produrre del miele
+        **solo** se c'è un favo! Clicca su "modifica" per creare la funzione `only
+        make honey` (_fai solo il miele_), poi utilizzala per risolvere questo esercizio.
+      courseF_bee_functions3a: |-
+        Ogni nuvola potrebbe nascondere un fiore o un favo! Scrivi una funzione che raccolga il nettare se l'ape è su un fiore, altrimenti produca il miele.
+
+        Usa quindi la funzione per risolvere l'esercizio!
+      courseF_bee_functions4: "Sapevi che si può richiamare una funzione dall'_interno_
+        di un'altra funzione?  \n\nUsa la funzione `check nectar or honey` (_controlla
+        nettare o miele_) all'interno della nuova funzione `move and check` (_muoviti
+        e controlla_) per aiutare l'ape a girare, andare a prendere ciò che c'è sotto
+        la nuvola e fare retromarcia!"
+      courseF_bee_functions5a: Ora, costruisci la funzione `move and check` (_muoviti
+        e controlla_) in modo che porti l'ape alla nuvola ogni volta che c'è un percorso
+        sulla destra, quindi usala per risolvere questo esercizio!
+      courseF_bee_functions6: |-
+        _"Questo campo è labirinticamente fantastico!"_
+
+        Ora costruisci una tua funzione per aiutare l'ape a percorrere il labirinto girando a sinistra in corrispondenza dei fiori e a destra quando incontra dei favi. Chiaramente, non dimenticare di raccogliere il nettare e fare il miele lungo il percorso!
       courseF_bee_variables_3_2018: |-
         _"Che giardino fantastico!"_
 
@@ -6534,6 +6767,51 @@ it-IT:
         _"Incredibile!"_
 
         Modifica il codice in modo che funzioni per questo esercizio.
+      courseF_playlab_variables1a: "Le variabili possono servire per memorizzare del
+        testo che si desidera utilizzare in seguito.  \n\nChiedi a Kiki, la ragazzina
+        che gioca a calcio, di urlare \"Goal!\" assegnando quel testo alla variabile
+        `shout` (\"urlo\")."
+      courseF_playlab_variables2b: |-
+        Può essere molto utile mescolare pezzi di frasi con delle variabili.
+
+        Inserisci la variabile `color` nel mezzo di una frase, inserendola nella posizione vuota del blocco `unisci`.
+      courseF_playlab_variables3b_josh: 'Aiuta Kiki a chiacchierare con Brian usando
+        la variabile `age` ("età") in tutti i punti del discorso in cui è necessario. '
+      courseF_playlab_variables4b: "Ora il pirata ha qualche domanda per Brian.\n\nIn
+        questo programma si usa un blocco `chiedi`, in modo che tu possa inserire
+        le risposte di Brian dopo aver cliccato su \"Esegui\". \n\nInserisci le variabili
+        nelle posizioni corrette per creare questa conversazione."
+      courseF_playlab_variables5c: |-
+        Divertiti un po' combinando il blocco `chiedi` con un'istruzione condizionale `se/altrimenti`.
+
+        Il pirata sta per farti una domanda. Trascina una copia della variabile `answer` ("risposta") nella condizione dell'istruzione `se`, in modo da controllare se è stato inserito o meno il colore corretto.
+      courseF_playlab_variables6c: |-
+        Nel resto di questa lezione, userai diversi blocchi `chiedi` e istruzioni condizionali `se/altrimenti`, al fine di creare un gioco che controllerai **tu**!
+
+        Inizia definendo la variabile "codename" ("nome in codice") con una parola segreta che puoi ricordare facilmente. Quindi, usa un blocco `chiedi` per richiedere il nome in codice all'utente. Avrai bisogno di un blocco `se/altrimenti` per capire se il nome in codice inserito corrisponde a quello definito nel programma.
+      courseF_playlab_variables7b: "È ora di realizzare il tuo progetto!  \n\nCrea
+        alcune domande e combina le risposte in una storia tutta tua.\n\nSe ti servono
+        delle idee, clicca sull'icona dei suggerimenti."
+      courseF_playlab_variables7c: |-
+        Aggiungi un altro `chiedi` per chiedere all'utente di indovinare un colore.
+
+        Utilizza l'istruzione condizionale `se/altrimenti` in modo che quando si inserisce il tuo nome in codice il gioco vinca sempre, mentre qualsiasi altro utente perda sempre.
+      courseF_playlab_variables8c: Usa il blocco `unisci` (nella categoria "Testo"
+        della cassetta degli attrezzi) per personalizzare i messaggi di vittoria/sconfitta,
+        facendo in modo che includano le variabili `codename` e `color`.
+      courseF_playlab_variables_challenge1: Usa questi blocchi per fare in modo che
+        i personaggi condividano un gioco di parole ("knock-knock joke"). Modifica
+        il contenuto delle variabili `firstName` e `punchLine` per raccontare la tua
+        storiella!
+      courseF_playlab_variables_challenge2: "Questo è un gioco di inseguimenti!  Muovendo
+        il cane, tocca il gatto per ottenere 2 punti e il pinguino per guadagnarne
+        3 punti. Arriva esattamente a 10 punti per vincere!  \n\nMa fai attenzione,
+        quando il gatto e il pinguino si toccano, perdi 1 punto. \n\n* * *\n\nAggiungi
+        i blocchi necessari per far funzionare il gioco nel modo in cui è stato spiegato.\n\n-
+        \  Come puoi muovere il cane (personaggio 1) in tutte le direzioni utilizzando
+        i tasti freccia?\n-   Come puoi aggiungere punti quando il cane tocca il gatto
+        (personaggio 2) o il pinguino (personaggio 3)?\n-   Come puoi togliere un
+        punto quando il gatto ed il pinguino si toccano?"
       coursea_maze_ramp1_2018: Per far arrivare l'uccellino fino al maialino, trascina
         il blocco <xml><block type="maze_moveEast"/></xml> sotto al blocco <xml><block
         type="when_run"/></xml>, poi premi "▶ Esegui"!

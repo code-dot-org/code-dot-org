@@ -323,7 +323,7 @@ km:
               name: លក្ខខណ្ឌ
             Functions:
               name: អនុ​គមន៍
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Computer Science Fundamentals:
               name: មូលដ្ឋានគ្រិះវិទ្យាសាស្រ្ដកុំព្យូទ័រ
@@ -337,3 +337,7 @@ km:
               name: អនុ​គមន៍
             Variables:
               name: អ​ថេរ
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: លក្ខខណ្ឌ

@@ -9,7 +9,7 @@ da-DK:
         answers:
         - text: Start med en firkant<br/>Sæt en trekant oven på firkanten<br/>Sæt
             en trekant under firkanten
-        - {}
+        - correct: true
         - text: Start med et kvadrat <br/> sæt et parallelogram ovenover kvadratet
             <br/> sætte en trekant lige ved siden af parallelogrammet
         - text: Start med et kvadrat <br/> sæt en trekant under kvadratet <br/> sæt
@@ -22,7 +22,7 @@ da-DK:
         - text: Hvilket billede følger <em>ikke</em> denne algoritme?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 Big Event Match 1:
@@ -58,14 +58,14 @@ da-DK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 Getting Loopy Multi 1:
         title: Vælg et svar
         questions:
         - text: Hvordan kan du forenkle denne sekvens ved hjælp af løkker?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -86,7 +86,7 @@ da-DK:
         - text: Hvilket program tegner dette billede?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 Maze Match 2:
         title: Match Match
@@ -106,7 +106,7 @@ da-DK:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 Relay Programming Multi 1:
@@ -116,7 +116,7 @@ da-DK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       2-3 Relay Programming Multi 2:
         title: Vælg et svar
         questions:
@@ -124,13 +124,13 @@ da-DK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       2-3 artist debug multi 1:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 artist functions multi 1:
@@ -138,7 +138,7 @@ da-DK:
         questions:
         - text: Væld de rigtige blokke for at tegne billedet med de givne funktioner
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 artist loops match 1:
@@ -160,7 +160,7 @@ da-DK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 artist loops multi 2:
         title: Kunstner Løkker Multiple Choice
@@ -170,7 +170,7 @@ da-DK:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       2-3 artist match 1:
         title: Kunstner match
         content1: Match figuren med de blokke der tegner den færdig.
@@ -190,14 +190,14 @@ da-DK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 bee conditionals multi 3:
         questions:
         - text: Vælg de bedste blokke.
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 bee loops multi 1:
@@ -205,7 +205,7 @@ da-DK:
         questions:
         - text: Hvilke blokke indsamler al nektaren?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -226,7 +226,7 @@ da-DK:
         - text: Hvilket sæt af blokke er det korrekte svar?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 Algorithms Match 1:
@@ -253,6 +253,7 @@ da-DK:
         - text: Bage småkager
         - text: Indkøb fra en indkøbsliste
         - text: Banan
+          correct: true
       4-5 Computational Thinking Match 1:
         title: Matching
         content1: Hver af disse køretøjer er blevet nedbrudt i mindre stykker. Sammenlign
@@ -275,6 +276,7 @@ da-DK:
         answers:
         - text: Seattle _____ en _____ _____.
         - text: _____ er en _____ by.
+          correct: true
         - text: _____ er _____ en _____.
         - text: Eugene er en _____ by.
       4-5 Crowdsourcing Multi 1:
@@ -283,13 +285,14 @@ da-DK:
         - text: Hvilket af disse billeder repræsenterer bedst crowdsourcing?
         answers:
         - {}
-        - {}
+        - correct: true
       4-5 Crowdsourcing Multi 2:
         title: Vælg et svar
         questions:
         - text: Hvilken en af disse aktiviteter vil være bedst for lave crowdsourcing?
         answers:
         - text: Rydde op på dit værelse
+          correct: true
         - text: Spise dessert
         - text: Børste dit hår
         - text: Vaske dit ansigt
@@ -300,6 +303,7 @@ da-DK:
         answers:
         - text: Din fødselsdato
         - text: Din livret
+          correct: true
         - text: Din adresse
         - text: Dine forældres kreditkortnummer
       4-5 Internet Multi 1:
@@ -311,7 +315,7 @@ da-DK:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       4-5 Internet Multi 2:
         title: Vælg et svar
         questions:
@@ -319,7 +323,7 @@ da-DK:
             hvilken hjemmeside er du på?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 Songwriting Multi 1:
@@ -330,6 +334,7 @@ da-DK:
         - text: Lou, Lou, springe til min Lou
         - text: Lou, Lou, springe til min Lou <br/> Lou, Lou, springe til min Lou
             <br/> Lou, Lou, springe til min Lou <br/> Spring til min Lou, min ulv.
+          correct: true
         - {}
         - {}
       4-5 Suncatchers Match 1:
@@ -353,7 +358,7 @@ da-DK:
             rækkefølge som Program 1?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       4-5 artist loops multi 1:
         title: Kunstner Løkker Multiple Choice
@@ -361,7 +366,7 @@ da-DK:
         - text: Hvilke blokke vil lave dette design?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 artist multi 1:
@@ -370,7 +375,7 @@ da-DK:
         - text: Hvilke blokke tegner et rektangel med en omkreds på 100?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 artist multi 2:
@@ -380,7 +385,7 @@ da-DK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       4-5 bee conditionals multi 1:
         title: Bi Betingelser Multiple Choice
@@ -389,7 +394,7 @@ da-DK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       4-5 bee debug multi 1:
         title: Bi Fejlfinding Multiple Choice
@@ -397,7 +402,7 @@ da-DK:
         - text: Hvilken udgave af funktionen vil virke?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 bee loops multi 1:
@@ -405,7 +410,7 @@ da-DK:
         questions:
         - text: Hvilke blokke løser opgaven?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -414,7 +419,7 @@ da-DK:
         questions:
         - text: Hvilke blokke løser opgaven?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -435,7 +440,7 @@ da-DK:
         questions:
         - text: Hvilke blokke løser opgaven?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -449,19 +454,19 @@ da-DK:
       CSD Header Size MC:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U2 Design Project:
@@ -601,7 +606,7 @@ da-DK:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -610,7 +615,7 @@ da-DK:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -619,7 +624,7 @@ da-DK:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -631,19 +636,19 @@ da-DK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018_2019:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Keypress Matching:
         questions:
@@ -678,7 +683,7 @@ da-DK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Sprite Movement Predict Multi_2018:
         questions:
@@ -686,7 +691,7 @@ da-DK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019:
         questions:
@@ -694,14 +699,14 @@ da-DK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Sprites intro predict multi:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U3 Sprites intro predict multi_2018:
@@ -709,7 +714,7 @@ da-DK:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
@@ -717,7 +722,7 @@ da-DK:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U3 combining rep:
@@ -818,7 +823,7 @@ da-DK:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       CSD U6 array multi_2018:
         questions:
         - {}
@@ -826,7 +831,7 @@ da-DK:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       CSD U6 array multi_2018_2019:
         questions:
         - {}
@@ -834,7 +839,7 @@ da-DK:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       CSD U6 final intro:
         content1: Beskrivelse her
       CSD U6 final intro_2018:
@@ -847,7 +852,7 @@ da-DK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U6 setProperty predict multi_2018:
         questions:
@@ -855,8 +860,54 @@ da-DK:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
+      Dance_Party_extras_intro:
+        markdown: "# Bliv ved med at danse!\n\nI del 2, skal du skabe dit eget projekt.
+          Her er der ingen opgaver - i stedet er der en masse projekter, som viser
+          forskellige måder, du kan kode mere sammensatte danse.\n\nDu kan prøve disse
+          levels _i tilfældig rækkefølge_. Hop rundt og kig hvordan tingene er gjort
+          på et tidligere level, eller kombiner idéerne fra de forskellige projekter.
+          Prøv dem alle og vælg din favorit. Brug tiden på at skabe og tilføj til
+          det projekt du har valgt, og gør det til dit eget projekt. \n\n<a class=\"btn
+          btn-large btn-primary next-stage submitButton pull-right\">Continue</a>\n\n<div
+          class=\"clearfix\"></div>\n\n<div style=\"float: left; margin: 10px\">\n<a
+          href=\"2\">\n<h2>\nGet in Formation\n</h2>\n\n<img src=\"https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"3\">\n<h2>\nWhere'd They
+          Go?\n</h2>\n\n<img src=\"https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"4\">\n<h2>\nDance Crews\n</h2>\n\n<img
+          src=\"https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"5\">\n<h2>\nQuarter Notes\n</h2>\n\n<img
+          src=\"https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"6\">\n<h2>\nBass, Mid, Treble\n</h2>\n\n<img
+          src=\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"7\">\n<h2>\nSpeed it Up,
+          Slow it Down\n</h2>\n\n<img src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"></a>\n\n</div>\n"
+      Dance_Party_extras_intro_2019:
+        markdown: "# Fortsæt med at danse!\n\nI del 2, skal du skabe dit eget projekt.
+          Her er der ingen opgaver - i stedet er der en masse projekter, som viser
+          forskellige måder, du kan kode mere sammensatte danse.\n\nDu kan prøve disse
+          levels _i tilfældig rækkefølge_. Hop rundt og kig hvordan tingene er gjort
+          på et tidligere level, eller kombiner idéerne fra de forskellige projekter.
+          Prøv dem alle og vælg din favorit. Brug tiden på at skabe og tilføj til
+          det projekt du har valgt, og gør det til dit eget projekt. \n\n<a class=\"btn
+          btn-large btn-primary next-stage submitButton pull-right\">Continue</a>\n\n<div
+          class=\"clearfix\"></div>\n\n\n<div style=\"float: left; margin: 10px\">\n<a
+          href=\"2\">\n<h2>\nBack and Forth\n</h2>\n\n<img src=\"https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"3\">\n<h2>\nMore Buttons\n</h2>\n\n<img
+          src=\"https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif\"></a>\n\n</div>\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"4\">\n<h2>\nGet in Formation\n</h2>\n\n<img
+          src=\"https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"5\">\n<h2>\nWhere'd They
+          Go?\n</h2>\n\n<img src=\"https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"6\">\n<h2>\nDance Crews\n</h2>\n\n<img
+          src=\"https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"7\">\n<h2>\nQuarter Notes\n</h2>\n\n<img
+          src=\"https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"8\">\n<h2>\nBass, Mid, Treble\n</h2>\n\n<img
+          src=\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"9\">\n<h2>\nSpeed it Up,
+          Slow it Down\n</h2>\n\n<img src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"></a>\n\n</div>\n"
       Internet Simulator Setup:
         content1: Beskrivelse her
       Internet Simulator Setup 2:
@@ -870,7 +921,7 @@ da-DK:
         - text: Hvilke blokke løser opgaven?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Artist 1 Multi 2:
@@ -878,7 +929,7 @@ da-DK:
         questions:
         - text: Hvilke blokke tegner en firkant?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -901,7 +952,7 @@ da-DK:
         - text: Hvor mange nektar er dette?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Bee 1 Multi 2:
@@ -912,7 +963,7 @@ da-DK:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Bee Loops Match 1:
         title: Matching
         content2: Match blokkene
@@ -945,13 +996,13 @@ da-DK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Getting Loopy Multi 1:
         title: Vælg et svar
         questions:
         - text: Hvordan kan du forenkle denne sekvens ved hjælp af løkker?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Happy Maps Multi 1:
@@ -960,7 +1011,7 @@ da-DK:
         - text: Hvilken pil flytter Flurb hen til skatten?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Keep it Private Multi 1:
@@ -968,7 +1019,7 @@ da-DK:
         questions:
         - text: Hvilke information skal du <strong>ikke</strong> dele online?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Maze Debugging Multi 1:
@@ -976,7 +1027,7 @@ da-DK:
         questions:
         - text: Hvilket valg skal være den sidste blok?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -985,7 +1036,7 @@ da-DK:
         questions:
         - text: Hvilken gentag blok er den samme?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Maze Loops Multi 2:
@@ -995,7 +1046,7 @@ da-DK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Maze Match 1:
         title: Matching
         content2: Match gåder og blokke
@@ -1017,7 +1068,7 @@ da-DK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       K-1 Move It Multi 1:
         title: Vælg et svar
@@ -1025,7 +1076,7 @@ da-DK:
         - text: Hvilken algoritme flytter Flurb til blomsterne?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Plant a Seed Multi 1:
@@ -1035,14 +1086,14 @@ da-DK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Plant a Seed Multi 2:
         title: Vælg et svar
         questions:
         - text: Hvilke skridt skal udfylde for denne algoritme?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       K-1 Word Search Multi 1:
         title: Vælg et svar
@@ -1050,7 +1101,7 @@ da-DK:
         - text: Hvilke blokke staver "MOVE"?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       K-1 Word Search Multi 3:
         title: Vælg et svar
@@ -1059,6 +1110,7 @@ da-DK:
         answers:
         - text: SET
         - text: SQUARE
+          correct: true
         - text: SOUTH
       Multi-Screen Apps:
         title: titel
@@ -1081,7 +1133,7 @@ da-DK:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - feedback: Ukorrekt
       behaviors 4 predict:
@@ -1089,7 +1141,7 @@ da-DK:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - feedback: Ukorrekt
       courseC_multi_artist_prog6_predict1:
@@ -1098,7 +1150,7 @@ da-DK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseC_multi_artist_prog6_predict1_2018:
         questions:
@@ -1106,7 +1158,7 @@ da-DK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
         questions:
@@ -1114,38 +1166,41 @@ da-DK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseC_multi_harvester_loops11_predict1:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
       courseC_multi_harvester_loops11_predict1_2018:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
       courseC_multi_maze_debugging8_predict1:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_debugging8_predict1_2018:
@@ -1153,7 +1208,7 @@ da-DK:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
@@ -1161,7 +1216,7 @@ da-DK:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_programming8_predict1:
@@ -1169,7 +1224,7 @@ da-DK:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_programming8_predict1_2018:
@@ -1177,7 +1232,7 @@ da-DK:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
@@ -1185,7 +1240,7 @@ da-DK:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_starWars_predict1:
@@ -1194,7 +1249,7 @@ da-DK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseC_multi_starWars_predict1_2018:
         questions:
@@ -1202,7 +1257,7 @@ da-DK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseC_multi_starWars_predict1_2018_2019:
         questions:
@@ -1210,14 +1265,14 @@ da-DK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseC_multi_starWars_predict2:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_starWars_predict2_2018:
@@ -1225,7 +1280,7 @@ da-DK:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_starWars_predict2_2018_2019:
@@ -1233,7 +1288,7 @@ da-DK:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_artist_binary8_predict1:
@@ -1244,6 +1299,7 @@ da-DK:
         - text: B
         - text: C
         - text: D
+          correct: true
       courseD_multi_artist_binary8_predict1_2018:
         questions:
         - {}
@@ -1252,6 +1308,7 @@ da-DK:
         - text: B
         - text: C
         - text: D
+          correct: true
       courseD_multi_artist_binary8_predict1_2018_2019:
         questions:
         - {}
@@ -1260,11 +1317,13 @@ da-DK:
         - text: B
         - text: C
         - text: D
+          correct: true
       courseD_multi_artist_nestedLoops9_predict1:
         questions:
         - {}
         answers:
         - text: A
+          correct: true
         - text: B
         - text: C
         - {}
@@ -1273,6 +1332,7 @@ da-DK:
         - {}
         answers:
         - text: A
+          correct: true
         - text: B
         - text: C
         - {}
@@ -1281,6 +1341,7 @@ da-DK:
         - {}
         answers:
         - text: A
+          correct: true
         - text: B
         - text: C
         - {}
@@ -1289,7 +1350,7 @@ da-DK:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_bee_conditionals1_predict1_2018:
@@ -1297,7 +1358,7 @@ da-DK:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
@@ -1305,14 +1366,14 @@ da-DK:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_bee_conditionals7_predict2:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1320,7 +1381,7 @@ da-DK:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1328,7 +1389,7 @@ da-DK:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1338,7 +1399,7 @@ da-DK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
         questions:
@@ -1346,7 +1407,7 @@ da-DK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         questions:
@@ -1354,31 +1415,34 @@ da-DK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_bee_nestedLoops9_predict2:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
       courseD_multi_collector_debugging10_predict1:
         questions:
@@ -1386,7 +1450,7 @@ da-DK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_condLoops9_predict1:
         questions:
@@ -1394,7 +1458,7 @@ da-DK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
         questions:
@@ -1402,7 +1466,7 @@ da-DK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         questions:
@@ -1410,14 +1474,14 @@ da-DK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_ramp13:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_farmer_while10_predict2:
@@ -1425,7 +1489,7 @@ da-DK:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_farmer_while10_predict2_2018:
@@ -1433,7 +1497,7 @@ da-DK:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
@@ -1441,7 +1505,7 @@ da-DK:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_farmer_while4_predict1:
@@ -1450,7 +1514,7 @@ da-DK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_while4_predict1_2018:
         questions:
@@ -1458,7 +1522,7 @@ da-DK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
         questions:
@@ -1466,13 +1530,13 @@ da-DK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_maze_until10_predict2:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1480,7 +1544,7 @@ da-DK:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1488,7 +1552,7 @@ da-DK:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1497,7 +1561,7 @@ da-DK:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_maze_until2_predict1_2018:
@@ -1505,7 +1569,7 @@ da-DK:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
@@ -1513,7 +1577,7 @@ da-DK:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_scrat_predict1:
@@ -1521,14 +1585,14 @@ da-DK:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseE_multi_bee_functions_predict1:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1539,14 +1603,14 @@ da-DK:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseE_multi_farmer_functions11_predict_2018:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
         questions:
@@ -1554,7 +1618,7 @@ da-DK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseE_prediction_artistFunction1:
         questions:
@@ -1563,7 +1627,7 @@ da-DK:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseE_prediction_artistFunction1_2018:
         questions:
         - {}
@@ -1571,7 +1635,7 @@ da-DK:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseE_prediction_artistFunction1_2018_2019:
         questions:
         - {}
@@ -1579,13 +1643,13 @@ da-DK:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseF_bee_variables_8a_2018:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_bee_variables_8a_2018_2019:
@@ -1593,7 +1657,7 @@ da-DK:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_artist_for10_predict1:
@@ -1602,7 +1666,7 @@ da-DK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseF_multi_artist_for10_predict1_2018:
         questions:
@@ -1610,7 +1674,7 @@ da-DK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
         questions:
@@ -1618,13 +1682,13 @@ da-DK:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseF_multi_artist_fwp2_predict1:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1632,7 +1696,7 @@ da-DK:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1640,7 +1704,7 @@ da-DK:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1648,7 +1712,7 @@ da-DK:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1657,14 +1721,14 @@ da-DK:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_bee_conditionals7_predict2:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1673,7 +1737,7 @@ da-DK:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_bee_for3_predict1_2018:
@@ -1681,7 +1745,7 @@ da-DK:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_bee_for3_predict1_2018_2019:
@@ -1689,7 +1753,7 @@ da-DK:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_bee_fwp9_predict1:
@@ -1697,14 +1761,14 @@ da-DK:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_playlab_variables4c_predictive1:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1713,7 +1777,7 @@ da-DK:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       coursee_prediction_artistfunction2_2018:
@@ -1721,7 +1785,7 @@ da-DK:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       coursee_prediction_artistfunction2_2018_2019:
@@ -1729,7 +1793,7 @@ da-DK:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       grade2_multi_collector_A_predict1:
@@ -1737,7 +1801,7 @@ da-DK:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       grade2_multi_collector_A_predict1_2018:
@@ -1745,7 +1809,7 @@ da-DK:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
@@ -1753,6 +1817,6 @@ da-DK:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}

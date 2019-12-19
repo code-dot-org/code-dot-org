@@ -13,7 +13,8 @@ fr-FR:
       AppLab Intro 7 - Change Text 2: Modifie le texte
       AppLab Intro 7 - Full Text: Deux boutons
       AppLab Intro 7 - onEvent intro: Fais fonctionner les boutons
-      AppLab Intro 7 - onEvent twoButtons: Plus d’entraînement onEvent
+      AppLab Intro 7 - onEvent twoButtons: Plus d’entraînement avec les évènements
+        "onEvent"
       AppLab Intro 7 - playSound: Utiliser playSound
       AppLab Intro 7 - thisOrThatAddButton: Ceci ou cela
       AppLab Intro 7 - thisOrThatAddScreen: Ceci ou cela
@@ -683,3 +684,5 @@ fr-FR:
       csd-pre-survey-levelgroup_2019: Aperçu de la leçon
       scrat_loops_C-F_video: Vidéo des boucles dans l’Âge de Glace
       scrat_loops_C-F_video_2019: Vidéo des boucles dans l’Âge de Glace
+      Dance_Party_extras_alternate_2019: D'avant en arrière
+      Dance_Party_extras_mixed_2019: Plus de boutons

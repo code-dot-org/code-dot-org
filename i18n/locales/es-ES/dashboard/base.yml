@@ -594,6 +594,8 @@ es:
       cta: 'Cómo hacerlo'
     dance:
       title: 'Fiesta para bailar'
+    dance-2019:
+      title: 'Fiesta para bailar'
     hoc:
       title: 'Laberinto clásico'
       body: 'Prueba los fundamentos de la Ciencia de la Computación. Millones lo han intentado.'

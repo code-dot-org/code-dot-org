@@ -4972,7 +4972,7 @@ vi:
             new stage:
               name: giai đoạn mới
             Dance Party:
-              name: Bữa tiệc khiêu vũ
+              name: Bữa Tiệc Khiêu Vũ
           title: Bữa tiệc khiêu vũ
           description_short: Hợp tác với Katy Perry, Madonna, J. Balvin, Sia, Keith
             Urban, Ciara và 25 nghệ sĩ khác!
@@ -4992,13 +4992,12 @@ vi:
         dance--draft:
           stages:
             Dance Party:
-              name: Bữa tiệc khiêu vũ
+              name: Bữa Tiệc Khiêu Vũ
         dance-draft:
           stages:
             Dance Party:
-              name: Bữa tiệc khiêu vũ
+              name: Bữa Tiệc Khiêu Vũ
         dance-extras:
-          title: Hãy Tiếp tục Nhảy
           description: Hãy làm nhiều hơn nữa so với giờ đầu tiên với các ý tưởng dự
             án mở rộng.
         coursef-2019:
@@ -5026,7 +5025,7 @@ vi:
         dance-low:
           stages:
             Dance Party:
-              name: Bữa tiệc khiêu vũ
+              name: Bữa Tiệc Khiêu Vũ
         coursed-2019:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -5042,7 +5041,7 @@ vi:
             Artist Binary:
               name: Nghệ sĩ nhị phân
             Dance Party:
-              name: Bữa tiệc khiêu vũ
+              name: Bữa Tiệc Khiêu Vũ
         coursee-2019:
           stages:
             Building a Foundation:
@@ -5088,7 +5087,7 @@ vi:
             Crowdsourcing:
               name: Đa nguồn
             Dance Party:
-              name: Bữa tiệc khiêu vũ
+              name: Bữa Tiệc Khiêu Vũ
             Concept Practice with Minecraft:
               name: Nhìn về phía trước
         csd1-2019:
@@ -5540,6 +5539,8 @@ vi:
               name: Nguyên lý KHMT trước khi khảo sát
             Binary Numbers:
               name: Số nhị phân
+            Representing Information:
+              name: Miêu tả thông tin
         csd-videos:
           stages:
             new stage:
@@ -5797,6 +5798,8 @@ vi:
               name: giai đoạn mới
             Routers and Redundancy:
               name: Bộ định tuyến và dự phòng
+            The Need for Addressing:
+              name: Sự cần thiết cho các địa chỉ
         peru-2019:
           stages:
             new stage:
@@ -5810,10 +5813,10 @@ vi:
         dance-2019:
           stages:
             Dance Party:
-              name: Bữa tiệc khiêu vũ
+              name: Bữa Tiệc Khiêu Vũ
           description: Viết mã bữa tiệc khiêu vũ của riêng bạn để chia sẻ với bạn
             bè của mình!
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Getting Started:
               name: Bắt đầu
@@ -5852,7 +5855,6 @@ vi:
             For Loops:
               name: Cho vòng lặp
         dance-extras-2019:
-          title: Hãy Tiếp tục Nhảy
           description: Hãy làm nhiều hơn nữa so với giờ đầu tiên với các ý tưởng dự
             án mở rộng.
         csp10-pilot:
@@ -5863,3 +5865,17 @@ vi:
           stages:
             new stage:
               name: giai đoạn mới
+        time4cs-control-unit-1:
+          stages:
+            Sequencing in Maze:
+              name: Chuỗi tuần tự trong mê cung
+            Conditionals:
+              name: Điều kiện
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Đa nguồn
+        time4cs-experiment-unit-2:
+          stages:
+            Nested Loops with Frozen:
+              name: Vòng lặp lồng với Frozen

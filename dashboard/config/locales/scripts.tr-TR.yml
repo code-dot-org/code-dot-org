@@ -10295,7 +10295,6 @@ tr:
             Dance Party:
               name: Dans Partisi
         dance-extras:
-          title: Dans Etmeye Devam
           description: Genişletilmiş proje fikirleri ile ilk saatin ötesine geç.
         coursef-2019:
           description: Farklı döngüler, olaylar, fonksiyonlar ve koşulları kullanma
@@ -12595,6 +12594,8 @@ tr:
               name: Bilgisayar Bilimi ilkeleri ön anket
             Binary Numbers:
               name: İkili Sayılar
+            Representing Information:
+              name: Sunulan Bilgi
         csd-videos:
           stages:
             new stage:
@@ -13452,6 +13453,8 @@ tr:
               name: yeni kademe
             Routers and Redundancy:
               name: Yönlendiriciler ve yedeklilik
+            The Need for Addressing:
+              name: Adresleme için ihtiyaç
         peru-2019:
           stages:
             new stage:
@@ -13475,7 +13478,7 @@ tr:
             Dance Party:
               name: Dans Partisi
           description: Kendi dans partinizi kodlayın ve arkadaşlarınızla paylaşın!
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Getting Started:
               name: İlk adım
@@ -13512,7 +13515,6 @@ tr:
             For Loops:
               name: For Döngüleri
         dance-extras-2019:
-          title: Dans Etmeye Devam
           description: Genişletilmiş proje fikirleri ile ilk saatin ötesine geç.
         csp10-pilot:
           stages:
@@ -13522,3 +13524,35 @@ tr:
           stages:
             new stage:
               name: yeni kademe
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Koşullar
+            'Events: The Big Event':
+              name: 'Olaylar: Büyük Olay'
+            Private and Personal Information:
+              name: Özel ve Kişisel Bilgiler
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Kalabalık Kaynaklandırma 'Crowdsourcing'
+            Conditionals with Cards:
+              name: Kartlarla Koşullu Önermeler
+            Nested Loops in Bee:
+              name: Arı -içiçe döngüler
+            Nested Loops in Artist:
+              name: Sanatçıların İç İçe Döngüleri
+            Nested Loops in Frozen:
+              name: Frozen'da İç İçe Döngüler
+            'Functions: Songwriting':
+              name: 'Fonksiyonlar: şarkı yazma'
+            Functions in Artist:
+              name: Sanatçı- Fonksiyonlar
+        time4cs-experiment-unit-2:
+          stages:
+            Nested Loops in Maze:
+              name: Labirentte İçiçe Döngüler
+            Fancy Shapes using Nested Loops:
+              name: Sanatçıların İç İçe Döngüleri
+            Functions with Artist:
+              name: Sanatçı- Fonksiyonlar

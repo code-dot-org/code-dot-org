@@ -303,14 +303,14 @@ pl:
           (%{username}) i hasła
   nav:
     header:
-      finished_hoc: Skończyłem moją Godzinę Kodowania (Hour of Code)
+      finished_hoc: Skończyłem!
       sign_in_to_save: Zaloguj się, by zapisać postępy
       my_dashboard: Mój pulpit
       course_catalog: Katalog Kursów
       project_gallery: Galeria Projektów
       sections: Sekcje
       help_support: Pomoc i wsparcie
-      report_bug: Zgłoś błąd
+      report_bug: Zgłosić problem
       teacher_community: Społeczność nauczycieli
       professional_learning: Kształcenia Profesjonalne
       documentation: Dokumentacja
@@ -664,6 +664,8 @@ pl:
       audience: Wiek 13+
       cta: Zobacz instrukcję
     dance:
+      title: Potańcówka
+    dance-2019:
       title: Potańcówka
     hoc:
       title: Klasyczny labirynt

@@ -11124,30 +11124,30 @@ pt-BR:
       CSD U3 abstraction rotation control: |-
         # Velocidade de controle
 
-        Você usou `velocidadeDeRotacao` fora do loop de desenho para fazer seu sprite girar quando seu programa foi iniciado. Você também pode usar `velocidadeDeRotacao` \*\* dentro \*\* do laço de repetição de desenhar para mudar a velocidade do sprite durante o jogo. Por exemplo, um sprite pode começar a girar quando o usuário pressiona a barra de espaço, e vai continuar girando até que seja ordenado que pare.
+        Você usou `velocidadeDeRotacao` fora do loop de desenho para fazer seu sprite girar quando seu programa foi iniciado. Você também pode usar `velocidadeDeRotacao` **dentro** do laço de repetição de desenhar para mudar a velocidade do sprite durante o jogo. Por exemplo, um sprite pode começar a girar quando o usuário pressiona a barra de espaço, e vai continuar girando até que seja ordenado que pare.
 
         # Faça isso
 
-        -   Veja a instrução `if` dentro do loop de desenho que verifica se a barra de espaço foi pressionada. ([Mostre-me onde] [0])
+        -   Veja a instrução `if` dentro do loop de desenho que verifica se a barra de espaço foi pressionada. ([Mostre-me onde](#triggercallout=code_triggered1))
         -   Use o bloco `velocidadeDeRotacao` para que a roda de cor comece a girar quando o usuário pressionar a barra de espaço.
       CSD U3 abstraction rotation control_2018: |-
         # Velocidade de controle
 
-        Você usou `velocidadeDeRotacao` fora do loop de desenho para fazer seu sprite girar quando seu programa foi iniciado. Você também pode usar `velocidadeDeRotacao` \*\* dentro \*\* do laço de repetição de desenhar para mudar a velocidade do sprite durante o jogo. Por exemplo, um sprite pode começar a girar quando o usuário pressiona a barra de espaço, e vai continuar girando até que seja ordenado que pare.
+        Você usou `velocidadeDeRotacao` fora do loop de desenho para fazer seu sprite girar quando seu programa foi iniciado. Você também pode usar `velocidadeDeRotacao` **dentro** do laço de repetição de desenhar para mudar a velocidade do sprite durante o jogo. Por exemplo, um sprite pode começar a girar quando o usuário pressiona a barra de espaço, e vai continuar girando até que seja ordenado que pare.
 
         # Faça isso
 
-        -   Veja a instrução `if` dentro do loop de desenho que verifica se a barra de espaço foi pressionada. ([Mostre-me onde] [0])
+        -   Veja a instrução `if` dentro do loop de desenho que verifica se a barra de espaço foi pressionada. ([Mostre-me onde](#triggercallout=code_triggered1))
         -   Use o bloco `velocidadeDeRotacao` para que a roda de cor comece a girar quando o usuário pressionar a barra de espaço.
       CSD U3 abstraction rotation control_2019: |-
-        # Velocidade de controle
+        # Controlando a Velocidade
 
-        Você usou `velocidadeDeRotacao` fora do loop de desenho para fazer seu sprite girar quando seu programa foi iniciado. Você também pode usar `velocidadeDeRotacao` \*\* dentro \*\* do laço de repetição de desenhar para mudar a velocidade do sprite durante o jogo. Por exemplo, um sprite pode começar a girar quando o usuário pressiona a barra de espaço, e vai continuar girando até que seja ordenado que pare.
+        Você usou `velocidadeDeRotacao` fora do laço de desenho para fazer sua figura girar quando seu programa foi iniciado. Você também pode usar `velocidadeDeRotacao` **dentro** do laço de desenho para alterar a velocidade da figura durante o jogo. Por exemplo, uma figura pode começar a girar quando o usuário pressionar a barra de espaço, e continuar girando até que receba um comando para parar.
 
         # Faça isso
 
-        -   Veja a instrução `if` dentro do loop de desenho que verifica se a barra de espaço foi pressionada. ([Mostre-me onde] [0])
-        -   Use o bloco `velocidadeDeRotacao` para que a roda de cor comece a girar quando o usuário pressionar a barra de espaço.
+        -   Veja a instrução `if` dentro do laço de desenho, que verifica se a barra de espaço foi pressionada. ([Mostre-me onde](#triggercallout=code_triggered1))
+        -   Use o bloco `velocidadeDeRotacao` para fazer a roda colorida começar a girar quando o usuário pressionar a barra de espaço.
       CSD U3 abstraction rotation_2018: |-
         # Velocidade de rotação
 
@@ -15753,6 +15753,30 @@ pt-BR:
         -   Adicione um manipulador de eventos para "botao\\ \_on"
         -   Coloque um _laço de repetição for_ no seu manipulador de eventos que se repita até chegar ao final do array `colorLeds`
         -   Dentro do loop for, chame `colorLeds[i].on()` para ativar o LED de cor atual
+      CSD U6 for loop led on_2018: |-
+        # Ligando Todos os LEDs Coloridos
+
+        Agora que você sabe como usar um _laço de repetição for_ para processar todos os elementos em um vetor, você pode ativar todos os LEDs coloridos com muito mais facilidade do que antes.
+
+        # Faça Isto
+
+        Nos próximos níveis, você irá criar um aplicativo que controla todos os LEDs coloridos em sua placa. O primeiro passo é conectar o botão que liga todos os LEDs. (Não se preocupe com o restante dos comentários na área de trabalho. Você irá trabalhar com eles nos próximos níveis.)
+
+        -   Adicione um manipulador de eventos para "botao\\ \_on"
+        -   Coloque um _laço de repetição for_ no seu manipulador de eventos para que se repita até chegar ao final do vetor `ledsColoridos`
+        -   Dentro do laço for, chame `ledsColoridos[i].on()` para ativar o LED corrent
+      CSD U6 for loop led on_2019: |-
+        # Ligando Todos os LEDs Coloridos
+
+        Agora que você sabe como usar um _laço de repetição for_ para processar todos os elementos em um vetor, você pode ativar todos os LEDs coloridos com muito mais facilidade do que antes.
+
+        # Faça Isto
+
+        Nos próximos níveis, você irá criar um aplicativo que controla todos os LEDs coloridos em sua placa. O primeiro passo é conectar o botão que liga todos os LEDs. (Não se preocupe com o restante dos comentários na área de trabalho. Você irá trabalhar com eles nos próximos níveis.)
+
+        -   Adicione um manipulador de eventos para "botao\\ \_on"
+        -   Coloque um _laço de repetição for_ no seu manipulador de eventos para que se repita até chegar ao final do vetor `ledsColoridos`
+        -   Dentro do laço for, chame `ledsColoridos[i].on()` para ativar o LED corrent
       CSD U6 for loop led personalize_2019: |-
         # Faça Você Mesmo
 
@@ -17354,6 +17378,22 @@ pt-BR:
         -   \*\* Defina a cor do botão \*\* para vermelho.
 
         <img src="https://images.code.org/4cab6a5233cf07df0d8e312932762012-image-1444314797615.gif" style="width: 500px; float: middle">
+      CSDU4 - Design Mode - 16: |-
+        # Ative Seu Botão
+
+        Na última aula você se concentrou em distribuir os elementos na página do seu aplicativo, em Modo de Desenho. Isto é uma ótima e rápida maneira de criar a parte visual do aplicativo, mas não é muito funcional. Se você clicar em qualquer um dos botões que você criou, nada acontece. Agora você irá criar funcionalidades básicas, fazendo com que os botões do seu aplicativo _façam_ algo!
+
+        **Objetivo:** Adicione código usando o Modo de Desenho para fazer um botão responder a um clique.
+
+        # Faça Isto:
+
+        Seu aplicativo inicial possui dois elementos, um _rotulo_ com o id `tituloRotulo` e um _botão_ com o id `alterarTituloBotão`. Para começar, você irá fazer o botão escrever uma mensagem no console, ao ser clicado.
+
+        -   Em Modo de Desenho, **clique no botão existente para editar suas propriedades**
+        -   Clique sobre a aba **Eventos**
+        -   Insira um `onEvent` no Modo de Desenho clicando em **Insira e mostre código** na **Aba de Eventos**.
+        -   Dê uma olhada no bloco que foi adicionado à aba **Modo de Código**.
+        -   Execute o programa, clique sobre o botão e **procure a saída gerada no _Console de Depuração_** sob a área de trabalho, ao invés da janela da aplicação. Iremos discutir o _Console de Depuração_ no próximo nível.
       CSDU4 - Design Mode - 17: |-
         # Atualizando IDs e depurando com o log do console
 
@@ -17386,6 +17426,21 @@ pt-BR:
         style=\"width:200px ; border: solid 1px black\"></td>\n    <td style=\"text-align:center\"><img
         src=\"https://images.code.org/e45fc7d451c071683fd3b59466b106b0-image-1444684677212.png\"
         style=\"width:200px; border: solid 1px black\"></td>\n</tr>\n</table>"
+      CSDU4 - Design Mode - 19: "# Segunda tela\n\nA maioria dos aplicativos possui
+        mais de uma tela ou página, cada uma com conteúdo diferente. Com o Modo Design,
+        você pode adicionar rapidamente uma nova tela ao seu aplicativo.\n\n# Faça
+        isto\n\nVocê vai adicionar uma segunda tela ao seu aplicativo e adicionar
+        um botão a essa tela. Verifique se você está usando bons IDs!\n\n-   Arraste
+        <img src=\"https://images.code.org/4337b39cfd797ed9289b70fb6cb365fb-image-1444353631083.17.39
+        PM.png\" style=\"width: 50px\"> da caixa de ferramentas de design para o seu
+        aplicativo. Agora você tem duas telas!\n-   Usando o Modo Design, crie um
+        botão em sua nova tela.  <img src=\"https://images.code.org/bbf464e2fc94bacba39407d6842f2336-image-1478300698068.04.35
+        PM.png\" style=\"width: 150px\"> \n-   Defina os IDs para suas telas e botões
+        como algo significativo, por exemplo \\_ \"telaInicial\" \\_, \\_ \"detalhesTela\"
+        \\_, \\_ \"botaoInicial\" \\_ e \\_ \"botaoDetalhes\" \\_\n\nVocê sempre pode
+        usar o menu suspenso da tela na parte superior da janela do aplicativo para
+        alternar entre as telas.  <img src=\"https://images.code.org/404e0b3f520a413c8a5e62e74b70bb19-image-1478300388689.58.59
+        PM.png\" style=\"width: 150px\"> "
       CSDU4 - Design Mode - 20: |-
         # Mudando de Telas
 
@@ -17416,6 +17471,21 @@ pt-BR:
                  \- **Carregar imagens** clicando em "Escolher".
                  \- **Nota:** Você sempre pode ver todos os arquivos que você enviou clicando na engrenagem na parte superior da caixa de ferramentas. ![](<https://images.code.org/53b405b771bc11bf5d24c84c878c80dd-image-1444668067826.35.10 AM.png>)
         -   Certifique-se de dar uma boa identificação à sua imagem!
+      CSDU4 - Design Mode - 3: |-
+        # Como os Eventos Funcionam?
+
+        Aplicativos orientados a eventos são feitos por elementos que podem acionar eventos (tais como botões) e pedaços de código denominados **tratadores de eventos**. Tratadores de eventos são comandos que "escutam" o surgimento de eventos específicos em seu programa, e então executam alguma função quando o evento ocorre.
+
+        Quando você cria um tratador de evento, o Modo de Desenho insere automaticamente um bloco `console.log()` para ajudá-lo a testar o evento, mas você pode colocar qualquer código que você quiser dentro do tratador de evento.
+
+        # Faça Isto
+
+        A caixa de ferramentas tem um novo bloco chamado `defineTexto` que permite a você alterar o texto exibido por um elemento na tela. Você irá modificar o tratador de eventos do botão para que ele altere o título ao ser clicado.
+
+        -   Arraste um bloco `defineTexto()` para _dentro_ da função de `onEvent()` (onde o bloco `console.log()` está atualmente)
+        -   A partir do menu de contexto do bloco, selecione "tituloRotulo" (o id do elemento que será alterado)
+        -   No segundo parâmetro do bloco, substitua "texto" por um novo título para o aplicativo
+        -   Rode o programa e clique sobre o botão para vê-lo funcionar
       CSDU4 - Design Mode - 4: |-
         # IDs
 
@@ -17457,6 +17527,19 @@ pt-BR:
         -   Adicione dois blocos `onEvent()`, um para os "botaoVerde" e "botaoVermelho"
         -   Use o bloco `definirTela()` para fazer com que cada botão mude para a tela apropriada
         -   Teste seu aplicativo para garantir que ambos os botões funcionem. Por exemplo, quando você clica no botão verde, deve ir para a tela verde.
+      CSDU4 Connecting Screens Getting Back: |-
+        # Navegando de volta
+
+        Agora, alguém que usa seu aplicativo pode acessar as páginas vermelha, verde e azul, mas não pode voltar à página inicial. Você pode adicionar seus próprios botões e manipuladores de eventos para ajudá-los a fazer isso.
+
+        # Faça isto
+
+        Crie botões e manipuladores de eventos para ajudar um usuário a voltar para a tela "inicial"
+
+        -   Use o Modo Design para criar um botão dentro de cada uma das telas "vermelho", "verde" e "azul". Certifique-se de fornecer identificações descritivas.
+        -   De volta ao seu código, arraste em três blocos `onEvent()`, um para cada um dos três botões que você criou.
+        -   Dentro de cada bloco `onEvent()`, use o bloco `setScreen()` que retorna à sua tela "inicial".
+        -   Teste seu aplicativo. Agora você deve conseguir voltar para a tela inicial de cada um dos outros três.
       CSDU4 Crowdsource App Demo: |-
         # Contribuição colaborativa
 
@@ -17809,6 +17892,10 @@ pt-BR:
 
         -   Crie um evento 'up' para o botão esquerdo.
         -   Adicione o código para desligar o LED quando o botão aparecer novamente.
+      CSDU6 - UI and Inputs - dropdown setText: |-
+        # setText e getText
+
+        Geralmente, você deseja obter o texto de um elemento da interface do usuário e usá-lo para definir o texto de outro elemento na tela. Você pode obter o texto no menu suspenso quando o usuário escolhe uma nova entrada e usa-a para definir o texto do rótulo "choiceDisplay".
       CSDU6 - UI and Inputs - get set with text input: |-
         # definirTexto e obterTexto
 
@@ -17827,6 +17914,10 @@ pt-BR:
         \*\* Código Inicial: \*\* O programa tenta atualizar o valorDisplay sempre que o valor do slider muda, mas sempre define o valor para 10.
 
         Você pode usar `pegarNumero()` para obter o valor do controle deslizante e atualizar o valorDisplay à medida que ele muda?
+      CSDU6 - UI and Inputs - getText: |-
+        # getText
+
+        Tente configurar um manipulador de eventos que obtenha o texto da lista suspensa sempre que um usuário selecionar um novo item na lista suspensa. Você precisará usar o getter `getText ()`. Sempre que você usar um getter, salve-o em uma variável. Use `console.log ()` para garantir que esteja funcionando.
       CSDU6 - UI and Inputs - hide show: |-
         # Ocultar e mostrar
 
@@ -17835,6 +17926,10 @@ pt-BR:
         -   Você deseja que o botão de alarme de parada seja oculto quando o programa iniciar. Você pode fazer isso no modo de design.
 
         Dica: ao clicar no botão de alarme de disparo, você deve alterar o texto, ocultar o botão de alarme de disparo, _e_ mostrar o botão de parar alarme.
+      CSDU6 - UI and Inputs - setProperty: |-
+        # setProperty background-color
+
+        Mude a `cor de fundo` de um botão para uma nova cor aleatória sempre que clicar em `setProperty()`.
       CSDU6 - UI and Inputs - setProperty Image: |-
         # definirPropriedade imagem
 
@@ -18355,6 +18450,56 @@ pt-BR:
         # Faça isso
 
         -   Altere o código para que o ícone e sua cor sejam escolhidos usando a variável "myIndex".
+      CSDU6 buzzer 2d arrays_2018: |-
+        # Desafio: Vetores 2D
+
+        Vetores podem armazenar qualquer tipo de dados, como números, cadeias de caracteres, e até outros vetores. Quando colocamos um vetor no interior de outro, ele se torna um vetor 2D. O bloco `buzzer.tocarMusica()` pode ser usado para tocar músicas que parecem mais precisas com vetores 2D.
+
+        A estrutura que você tem usado para tocar notas se parece com isto:
+
+        `buzzer.tocarMusica( [vetor de notas para tocar] , duração da música completa);`
+
+        A principal diferença com `buzzer.tocarMusica()` é que cada elemento dentro de `[vetor de notas para tocar]` é um vetor com dois elementos: a nota que você quer tocar, e a duração da nota. Às vezes você irá querer uma semicolcheia na sua música, outras vezes você irá querer uma mínima, ou talvez algo no meio termo. Uma música completa poderia se parecer com isto:
+
+        `buzzer.tocarMusica([
+          ["G3",0.25],
+          ["C4",0.25],
+          ["E4",0.25],
+          ["G4",0.125],
+          [null,0.375],
+          ["E4",0.1875],
+          ["G4",1]
+        ], 120);`
+
+        # Faça isto
+
+        -   Use o bloco `buzzer.tocarMusica()` para criar uma música diferente.
+        -   Quando você estiver confortável com a estrutura, adicione mais notas à música.
+      CSDU6 buzzer 2d arrays_2019: |-
+        # Desafio: Vetores 2D
+
+        Vetores podem armazenar qualquer tipo de dados, como números, cadeias de caracteres, e até outros vetores. Quando colocamos um vetor no interior de outro, ele se torna um vetor 2D. O bloco `buzzer.tocarMusica()` pode ser usado para tocar músicas que parecem mais precisas com vetores 2D.
+
+        A estrutura que você tem usado para tocar notas se parece com isto:
+
+        `buzzer.tocarMusica( [vetor de notas para tocar] , duração da música completa);`
+
+        A principal diferença com `buzzer.tocarMusica()` é que cada elemento dentro de `[vetor de notas para tocar]` é um vetor com dois elementos: a nota que você quer tocar, e a duração da nota. Às vezes você irá querer uma semicolcheia na sua música, outras vezes você irá querer uma mínima, ou talvez algo no meio termo. Uma música completa poderia se parecer com isto:
+
+        `buzzer.tocarMusica([
+          ["G3",0.25],
+          ["C4",0.25],
+          ["E4",0.25],
+          ["G4",0.125],
+          [null,0.375],
+          ["E4",0.1875],
+          ["G4",1]
+        ], 120);`
+
+        # Faça isto
+
+        -   Use o bloco `buzzer.tocarMusica()` para criar uma música diferente.
+        -   Quando você estiver confortável com a estrutura, adicione mais notas à música.
       CSDU6 buzzer.stop_2018: |-
         # Parando a música
 
@@ -19249,28 +19394,54 @@ pt-BR:
       Dance Party Predict_2019: "\\*\\* Faça uma previsão: \\*\\* Aqui está uma figura
         que se parece com um alien azul!\n\nO que você acha que vai acontecer quando
         você clicar nele?  "
-      Dance_2019_03: Está na hora da dança! Programa cada dançarino de modo a mover-se
-        quando premires teclas diferentes. Escolhe o teu movimento preferido para
-        cada dançarino ou defini-o para `(Aleatório)` para algo completamente imprevisível!
+      Dance_2019_01: |-
+        Arraste o bloco [blockly block] [0] para a área de trabalho e conecte-o dentro do [blockly block] [1]
+          quadra.
+
+          Escolha `gato` ou`preguiça` para criar seu primeiro dançarino.
+
+        -   _Você também pode clicar na lâmpada à esquerda se desejar obter mais informações ou desafios extras._
+      Dance_2019_02: |-
+        O bloco [blockly block] [0] permite executar o código quando você pressiona os botões de seta.
+        Use o [blockly block] [1] para fazer o gato bater palmas!
+
+        \_ Certifique-se de pressionar a tecla "seta para cima" ou \[] [2] depois de clicar no botão Executar! \_
+      Dance_2019_03: É hora de uma dança! Programe cada dançarino para se mover quando
+        você pressionar teclas diferentes. Escolha seu movimento favorito para cada
+        dançarino ou defina-o como `(Aleatório)`para fazer algo totalmente imprevisível!
+      Dance_2019_04: |-
+        Vamos fazer os dançarinos acompanharem a música!
+
+        Conecte o bloco [blockly block] [0] a um bloco [blockly block] [1] da caixa de ferramentas.
+
+        Seu dançarino deve iniciar uma nova jogada após o quarto compasso.
+
+        \*\* Medidas \*\* são usadas para contar o tempo na música. Neste tutorial, uma medida tem quatro tempos.
       Dance_2019_05: "_Agora vamos curtir!_ \n\nAdicione um bloco <xml><block type=\"Dancelab_atTimestamp\"><title
         name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"compassos\"</title></block></xml>
         à sua área de trabalho. Faça o(a) dançarino(a) iniciar um novo movimento após
         6 compassos."
-      Dance_2019_06: "Usa este novo bloco para formar um grupo mais pequeno de dançarinos
-        secundários à volta do dançarino principal que está no meio. \n\n  <xml><block
-        type=\"Dancelab_makeNewDanceSpriteGroup\">\n    <title name=\"N\">???</title>\n
-        \   <title name=\"COSTUME\" config=\"&quot;BEAR&quot;, &quot;CAT&quot;, &quot;FROG&quot;,
-        &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title>\n
-        \   <title name=\"LAYOUT\">\"circle\"</title>\n  </block></xml>\n\nAgora podes
-        criar um monte de dançarinos secundários duma vez só!"
+      Dance_2019_06: |-
+        Use esse novo bloco para configurar um grupo de dançarinos de backup menores em torno de um dançarino principal no meio.
+
+          [bloco bloqueado] [0]
+
+        Agora você pode criar um monte de dançarinos de backup de uma só vez!
+      Dance_2019_07: |-
+        Todo dançarino tem um conjunto de propriedades que controla como ele se parece.
+
+        Use [blockly block] [0] sob um bloco de eventos verde para fazer com que os dançarinos apareçam mais perto ou mais longe.
+      Dance_2019_08: Os dançarinos têm uma propriedade "tonalidade" que pode adicionar
+        uma camada de cor. Tente mudar o tom de um de seus dançarinos (ou de um grupo
+        inteiro)!
       Dance_2019_09: |-
-        Isto é um tipo especial de evento que é acionado repetidamente.
+        Esse \*\* novo bloco \*\* é um tipo especial de evento que é acionado repetidamente.
 
-        <xml><block type="Dancelab_everySeconds"><title name="N">2</title><title name="UNIT">"measures"</title></block></xml>
+        [blockly block] [0]
 
-        Os outros blocos novos na tua caixa de ferramentas permitem-te trocar progressivamente (ou aleatoriamente!) as propriedades dos dançarinos ao longo do tempo.
+        Ao colocar os outros novos blocos na sua caixa de ferramentas dentro do bloco de repetição, você pode alterar repetidamente as propriedades dos dançarinos ao longo do tempo. Seja criativo e divirta-se!
 
-        _Sê criativo e diverte-te!_
+        _Quando terminar, pressione o botão Concluir._
       Dance_2019_10: Entre no ritmo! Crie sua própria dança para compartilhar com
         seus amigos.
       Dance_Party_01: |-
@@ -19342,6 +19513,14 @@ pt-BR:
         da seta para a direita.
       Dance_Party_12: Entre no ritmo! Crie sua própria dança para compartilhar com
         seus amigos.
+      Dance_Party_extras_alternate_2019: |-
+        # Vamos entrar em formação!
+
+        Veja esta dança que usa o <xml><block type="Dancelab_alternateMoves"><title name="GROUP">sprites</title><title name="N">2</title><title name="MOVE1">MOVES.Roll</title><title name="MOVE2">MOVES.ClapHigh</title></block></xml> para alterar a formação dos dançarinos de apoio ao longo da dança. Tente uma destas idéias para estendê-lo:
+
+        -   Crie um segundo grupo de dançarinos em um layout diferente
+        -   Alterar layout quando uma tecla é pressionada
+        -   Alterar uma propriedade quando os dançarinos mudam de formação
       Dance_Party_extras_battle: |-
         # Equipes de dança
 
@@ -19371,12 +19550,12 @@ pt-BR:
       Dance_Party_extras_every_beat_2019: |-
         # Semínimas
 
-        A maioria das nossas danças usou compassos inteiros mas cada compasso é composto por 4 semínimas. Esta dança usa <xml><block type="Dancelab_everyMeasuresRange" block-text="a new repeat block"><title name="N">0.25</title><title name="START">5</title><statement name="DO"></statement></block></xml> para fazer o dançarino aplaudir a cada semínima.
+        A maioria das nossas danças usou compassos inteiros mas cada compasso é composto por 4 semínimas. Esta dança usa <xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml> para fazer o dançarino aplaudir a cada semínima, mas apenas nos quatro primeiros compassos.
 
-        Experimenta mudar os números no bloco para ver como é que altera a dança.
+        Experimenta mudar os números nos blocos para ver como é que altera a dança.
 
         -   Experimenta com outras durações de notas (como 0,5 para uma mínima ou 0,125 para uma colcheia)
-        -   Adiciona outros eventos
+        -   Adiciona outros eventos.
       Dance_Party_extras_layout: |-
         # Vamos entrar em formação!
 
@@ -19386,13 +19565,20 @@ pt-BR:
         -   Mude o layout quando uma tecla é pressionada
         -   Altere uma propriedade quando os dançarinos mudam de formação
       Dance_Party_extras_layout_2019: |-
-        # Ponham-se em formação!
+        # Vamos Entrar em Formação!
 
-        Vê esta dança que usa o bloco <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> para mudar a formação dos dançarinos secundários ao longo da dança. Experimenta uma destas ideias para estendê-la:
+        Veja esta dança que usa o <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> para alterar a formação dos participantes de apoio ao longo da dança. Tente uma destas idéias para estendê-lo:
 
-        -   Cria um segundo grupo de dançarinos numa disposição diferente
-        -   Muda a disposição quando uma tecla é premida
-        -   Altera uma propriedade quando os dançarinos mudarem de formação
+        -   Crie um segundo grupo de dançarinos em um layout diferente
+        -   Altere o layout quando uma tecla é pressionada
+        -   Altere uma propriedade quando os dançarinos trocam de formação
+      Dance_Party_extras_mixed_2019: |-
+        # Mais Botões
+
+        Essa dança permite controlar as propriedades dos participantes em tempo real enquanto eles dançam automaticamente. Tente fazer outras propriedades mudarem quando você pressionar os botões. Por exemplo:
+
+        -   Altere a tonalidade do dançarino para uma valor aleatório quando você pressionar "seta para baixo".
+        -   Adicione um grupo de dançarinos com um layout aleatório quando você pressionar "espaço".
       Dance_Party_extras_on_beat: |-
         # Grave, médio e agudo
 
@@ -19406,9 +19592,9 @@ pt-BR:
 
         Esta dança final usa o bloco `definir velocidade` para controlar a rapidez com que cada dançarino se move. Tente experimentar diferentes velocidades durante diferentes pontos na música. Sinta-se à vontade para continuar mexendo nessa dança ou retornar a qualquer uma das danças anteriores para torná-las ainda mais legais.
       Dance_Party_extras_speed_2019: |-
-        # Acelera-a, Abranda-a
+        # Acelere, diminua a velocidade
 
-        Esta dança final usa o bloco <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> para controlar o quão rápido cada dançarino se mexe. Tenta experimentar com diferentes velocidades durante pontos diferentes na canção. Põe-te à vontade em mexericar nesta dança ou volta a qualquer uma das danças anteriores para torná-las mais fixes.
+        Essa dança final usa o <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> para controlar a rapidez com que cada dançarino se move. Tente experimentar velocidades diferentes durante pontos diferentes da música. Sinta-se à vontade para continuar mexendo nessa dança ou retornar a qualquer uma das danças anteriores para torná-las ainda mais legais.
       Dance_Party_extras_visible: |-
         # Onde eles foram?
 
@@ -21705,11 +21891,11 @@ pt-BR:
       courseA_artist_loops4: |-
         Agora use um <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> bloco de repetição para desenhar esta linha cinco vezes!
 
-        [](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
+        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
       courseA_artist_loops4_2018: |-
         Agora use um <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> bloco de repetição para desenhar esta linha cinco vezes!
 
-        [](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
+        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
       courseA_artist_loops4_2019: |-
         Agora use um <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> bloco de repetição para desenhar esta linha cinco vezes!
 
@@ -21832,7 +22018,7 @@ pt-BR:
 
         Arraste os blocos para área de trabalho e tente descobrir como obter o tesouro.  Obtenha pelo menos um ítem para passar este nível.
       courseA_collector_loops2: "Pegue todas as três pilhas! Mova Laurel para cada
-        peça do tesouro, e então use esse block: \n<xml><block type=\"collector_collect\"/></xml>"
+        peça do tesouro, e então use esse block: \n <xml><block type=\"collector_collect\"/></xml>"
       courseA_collector_loops2_2018: "Pegue todas as três pilhas! Mova Laurel para
         cada peça do tesouro, e então use esse block: \n<xml><block type=\"collector_collect\"/></xml>"
       courseA_collector_loops2_2019: 'Pegue todas as três pilhas! Mova Laured para
@@ -21862,7 +22048,7 @@ pt-BR:
         e um bloco ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
         na parte inferior do programa e clique em "Executar"!
       courseA_collector_preLoops7: "Pegue todas as três pilhas! Mova Laurel para cada
-        peça do tesouro, e então use esse block: \n<xml><block type=\"collector_collect\"/></xml>"
+        peça do tesouro, e então use esse block: \n <xml><block type=\"collector_collect\"/></xml>"
       courseA_harvester_loops1: Ajude a colheitadeira a pegar todo o milho!
       courseA_harvester_loops10: Ajude a colheitadeira a pegar todas as cinco espigas
         de milho!
@@ -22062,22 +22248,20 @@ pt-BR:
       courseA_playLab_events2_2019: Jorge, o Cão, quer dizer 'Olá". Você pode ajudá-lo?
       courseA_playLab_events3: |-
         Ajude Jorge, o cachorro, a mover-se conectando o <xml><block type="studio_move">
-
-        <title name="SPRITE">1</title>
-        <title name="DIR">8</title>
-        </block></xml> bloco à<xml><block type="studio_whenArrow">
-        <title name="VALUE">esquerda </title>
-        </block></xml> onde já se encontra o bloco de evento na área de trabalho.
+            <title name="SPRITE">1</title>
+            <title name="DIR">8</title>
+          </block></xml> bloco à <xml><block type="studio_whenArrow">
+            <title name="VALUE">left</title>
+          </block></xml> onde já se encontra o bloco de evento na área de trabalho.
 
         Leve Jorge até a bandeira para passar de nível!
       courseA_playLab_events3_2018: |-
         Ajude Jorge, o cachorro, a mover-se conectando o <xml><block type="studio_move">
-
-        <title name="SPRITE">1</title>
-        <title name="DIR">8</title>
-        </block></xml> bloco à<xml><block type="studio_whenArrow">
-        <title name="VALUE">esquerda </title>
-        </block></xml> onde já se encontra o bloco de evento na área de trabalho.
+            <title name="SPRITE">1</title>
+            <title name="DIR">8</title>
+          </block></xml> bloco à <xml><block type="studio_whenArrow">
+            <title name="VALUE">left</title>
+          </block></xml> onde já se encontra o bloco de evento na área de trabalho.
 
         Leve Jorge até a bandeira para passar de nível!
       courseA_playLab_events3_2019: |-

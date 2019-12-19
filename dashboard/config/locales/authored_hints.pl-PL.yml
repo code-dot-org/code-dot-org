@@ -79,6 +79,49 @@ pl-PL:
         2-3_Artist_Functions_4_a: Aby stworzyć ten wzór artysta musi obrócić się o
           120 stopni pomiędzy każdym bokiem.
       2-3 Artist Loops New 11:
+        2-3_Artist_Loops_New_11_a: |-
+          Pamiętaj, że kod z ostatniej łamigłówki był następujący:
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">8</title>
+                  <statement name="DO">
+                    <block type="draw_colour" inline="true">
+                      <value name="COLOUR">
+                        <block type="colour_random"/>
+                      </value>
+                      <next>
+                        <block type="draw_turn_by_constant_dropdown">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE" config="45,60,90,120,180">45</title>
+                          <next>
+                            <block type="draw_move_by_constant">
+                              <title name="DIR">moveForward</title>
+                              <title name="VALUE">50</title>
+                              <next>
+                                <block type="draw_turn_by_constant_dropdown">
+                                  <title name="DIR">turnLeft</title>
+                                  <title name="VALUE" config="45,60,90,120,180">90</title>
+                                  <next>
+                                    <block type="draw_move_by_constant">
+                                      <title name="DIR">moveForward</title>
+                                      <title name="VALUE">50</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </xml>
         2-3_Artist_Loops_New_11_b: Twój następny ruch powinien zacząć się na \*\*
           koniec \*\* kodu poprzedniej pętli.
       2-3 Artist Loops New 12:
@@ -93,6 +136,15 @@ pl-PL:
           we właściwym kierunku, do rozpoczęcia kolejnego.    W związku z tym nie
           trzeba dodać dodatkowej komendy 'skręcić w lewo przez', zanim zaczniemy
           ponownie rysować.
+        2-3_Artist_Loops_New_13_b: |-
+          Aby narysować każdy diament, artysta musi:
+
+          -   idź naprzód
+          -   skręć w prawo o 120 stopni
+          -   idź naprzód
+          -   skręć w prawo o 60 stopni
+
+          Potem zrób to wszystko jeszcze raz!
       2-3 Artist Loops New 9:
         2-3_Artist_Loops_New_9_a: Artysta musi skręcić o 45 stopni w prawo, zanim
           zacznie rysować.
@@ -551,11 +603,11 @@ pl-PL:
           zielony1, niebieski1, czerwony2, zielony2, niebieski2, długość oraz boki.'
       CourseD_Dance_Party_01:
         validation: |-
-          **Jak przejdę ten poziom?**
+          **Jak mam przejść ten poziom?**
 
           -   Postaraj się, aby na ekranie pojawił się tancerz.
 
-          -   Ten poziom kończy się po 4 taktach.
+          _Ten poziom kończy się po 4 taktach._
         challenges: |-
           **Dodatkowe wyzwania**
 
@@ -563,36 +615,36 @@ pl-PL:
           -   Zmień imię swojego tancerza.
       CourseD_Dance_Party_02:
         validation: |-
-          **Jak przejdę ten poziom?**
+          **Jak mam przejść ten poziom?**
 
-          -   Ten tancerz musi zmienić ruch po 4 taktach.
+          -   Ten tancerz musi zmienić ruch na nowy po 4 taktach.
 
-          -   Ten poziom kończy się po 7 taktach.
+          _Ten poziom kończy się po 7 taktach._
       CourseD_Dance_Party_03:
         validation: |-
-          **Jak przejdę ten poziom?**
+          **Jak mam przejść ten poziom?**
 
           -   Po 6 taktach Twój tancerz musi tańczyć inny taniec niż po 4 taktach.
 
-          -   Ten poziom kończy się po 11 taktach.
+          _Ten poziom kończy się po 11 taktach._
       CourseD_Dance_Party_04:
         validation: |-
-          **Jak przejdę ten poziom?**
+          **Jak mam przejść ten poziom?**
 
-          -   Musisz zmienić efekt tła w czasie siódmego taktu piosenki.
+          -   Musisz zmienić efekt tła przez siódmym taktem piosenki.
 
-          -   Ten poziom kończy się po 9 taktach.
+          _Ten poziom kończy się po 9 taktach._
         challenges: |-
           **Dodatkowe wyzwanie**
 
           Zmieniaj efekt tła w różnych momentach piosenki, łącząc nowy blok pod zdarzeniami <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
       CourseD_Dance_Party_06:
         validation: |-
-          **Jak przejdę ten poziom?**
+          **Jak mam przejść ten poziom?**
 
           -   Musisz mieć co najmniej dwóch tancerzy.
 
-          -   Ten poziom kończy się po 5 taktach.
+          _Ten poziom kończy się po 5 taktach._
         challenges: |-
           **Dodatkowe wyzwanie**
 
@@ -600,50 +652,50 @@ pl-PL:
           -   Spraw, aby wszyscy tancerze w różnych momentach piosenki wykonywali różne ruchy.
       CourseD_Dance_Party_08:
         validation: |-
-          **Jak przejdę ten poziom?**
+          **Jak mam przejść ten poziom?**
 
           -   Dwóch tancerzy musi mieć wielkość inną niż 100.
 
-          -   Ten poziom kończy się po 5 taktach.
+          _Ten poziom kończy się po 5 taktach._
         challenges: |-
           **Dodatkowe wyzwanie**
 
           -   Eksperymentuj, zmieniając inne właściwości (szerokość, wysokość, obrót, itp.)
       CourseD_Dance_Party_09:
         validation: |-
-          **Jak przejdę ten poziom?**
+          **Jak mam przejść ten poziom?**
 
           -   Zmień odcień przynajmniej jednego tancerza.
 
-          -   Ten poziom kończy się po 7 taktach.
+          _Ten poziom kończy się po 7 taktach._
       CourseD_Dance_Party_10:
         validation: |-
-          **Jak przejdę ten poziom?**
+          **Jak mam przejść ten poziom?**
 
           -   Należy zmienić właściwości dwóch lub więcej tancerzy.
 
-          -   Ten poziom kończy się po 7 taktach.
+          _Ten poziom kończy się po 7 taktach._
       CourseD_Dance_Party_11:
         validation: |-
-          **Jak przejdę ten poziom?**
+          **Jak mam przejść ten poziom?**
 
           -   Wystarczy być kreatywnym!
 
-          -   Ten poziom kończy się po 7 taktach.
+          _Ten poziom kończy się po 7 taktach._
       CourseD_Dance_Party_11_5:
         validation: |-
-          **Jak przejdę ten poziom?**
+          **Jak mam przejść ten poziom?**
 
           -   Wystarczy być kreatywnym!
 
-          -   Ten poziom kończy się po 7 taktach.
+          _Ten poziom kończy się po 7 taktach._
       CourseD_Dance_Party_11b:
         validation: |-
-          **Jak przejdę ten poziom?**
+          **Jak mam przejść ten poziom?**
 
-          -   Użyj bloku „kiedy strzałka w lewo”, aby sprawić, że Robot będzie tańczył po naciśnięciu tego klawisza.
+          -   Użyj bloku 'kiedy strzałka w lewo', aby sprawić, że Robot będzie tańczył po naciśnięciu tego klawisza.
 
-          -   Ten poziom kończy się po 7 taktach.
+          _Ten poziom kończy się po 7 taktach._
       CourseE_HOC 2018 Level_10:
         voyage_aquatic_10a: Widzisz **Latarnie morskie** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
           Jak wykorzystasz warunek z nimi, aby przejść przez Oceaniczny monument?
@@ -654,32 +706,119 @@ pl-PL:
           właściwą drogą, i uważaj, aby czerwony koral nie był po **lewej** stronie!
       Dance_2019_01:
         validation: |-
-          **Jak przejdę ten poziom?**
+          **Jak mam przejść ten poziom?**
 
           -   Postaraj się, aby na ekranie pojawił się tancerz.
 
-          -   Ten poziom kończy się po 4 taktach.
+          _Ten poziom kończy się po 4 taktach._
+        challenges: |-
+          **Opcjonalne wyzwania**
+
+          -   Wybierz inną piosenkę do odtworzenia.
+          -   Przenieś swojego tancerza w nowe miejsce.
+          -   Stwórz więcej niż jednego tancerza.
+      Dance_2019_02:
+        validation: |-
+          **Jak mam przejść ten poziom?**
+
+          -   Tancerz musi wykonać ruch.
+          -   Musisz nacisnąć klawisz strzałki.
+
+          _Ten poziom kończy się po 4 taktach._
+        challenges: |-
+          **Dodatkowe wyzwanie**
+
+          Użyj więcej niż jednego bloku <xml><block type="Dancelab_whenKey"><title name="KEY"></title></block></xml>.
+      Dance_2019_03:
+        validation: |-
+          **Jak mam przejść ten poziom?**
+
+          -   Obaj tancerze muszą wykonać ruch.
+          -   Musisz naciskać klawisze strzałek.
+
+          _Ten poziom kończy się po 6 taktach._
+        challenges: |-
+          **Dodatkowe wyzwanie**
+
+          -   Spraw, aby tancerz reagował na naciśnięcie klawiszy strzałek w lewo i w prawo.
       Dance_2019_04:
         validation: |-
-          **Jak przejdę ten poziom?**
+          **Jak mam przejść ten poziom?**
 
           -   Ten tancerz musi zmienić ruch po 4 taktach.
 
-          -   Ten poziom kończy się po 7 taktach.
+          _Ten poziom kończy się po 7 taktach._
       Dance_2019_05:
         validation: |-
-          **Jak przejdę ten poziom?**
+          **Jak mam przejść ten poziom?**
 
           -   Po 6 taktach Twój tancerz musi tańczyć inny taniec niż po 4 taktach.
 
-          -   Ten poziom kończy się po 11 taktach.
+          _Ten poziom kończy się po 11 taktach._
+        challenges: |-
+          **Dodatkowe wyzwanie**
+
+          -   Zmień tło zawsze wtedy, gdy tancerze zmieniają ruchy.
+      Dance_2019_06:
+        validation: |-
+          **Jak mam przejść ten poziom?**
+
+          -   Utwórz jednego tancerza głównego i grupę tancerzy pomocniczych w ciągu 4 pierwszych taktów piosenki.
+
+          _Ten poziom kończy się po siedmiu taktach._
+        challenges: |-
+          **Dodatkowe wyzwanie**
+
+          -   Utwórz wiele grup tancerzy pomocniczych.
+      Dance_2019_07:
+        validation: |-
+          **Jak mam przejść ten poziom?**
+
+          -   Zmień rozmiar co najmniej jednego tancerza.
+
+          _Ten poziom kończy się po 6 taktach._
+        challenges: |-
+          **Dodatkowe wyzwanie**
+
+          -   Eksperymentuj, zmieniając inne właściwości takie, jak szerokość lub obrót.
+      Dance_2019_08:
+        validation: |-
+          **Jak mam przejść ten poziom?**
+
+          -   Zmień odcień co najmniej jednego tancerza.
+
+          _Ten poziom kończy się po 6 taktach._
+        tint_hint: Czy zauważyłeś, że twoi tancerze nie zmieniają się dokładnie na
+          wybrany przez Ciebie kolor? To dlatego, że **odcienie** mieszają wybrany
+          kolor z kolorami tancerza.
+      Dance_2019_09:
+        validation: |-
+          **Jak przejść ten poziom?**
+
+          -   Wystarczy nacisnąć przycisk „Zakończ”!
+        repeat_every_ideas: |-
+          **Czy potrzebujesz pomysłów?**
+
+          -   Wielokrotnie zmieniaj rozmiar tancerza, aby rósł.
+          -   Wielokrotnie zmieniaj rotację tancerza, aby się obracał.
+
+          _Można również użyć liczb ujemnych, aby uzyskać odwrotny efekt!_
+        next_previous: |-
+          **Dodatkowe wyzwanie**
+
+          -   Możesz również użyć tego nowego bloku zdarzeń, aby cyklicznie przechodzić listę ruchów tanecznych, ustawiając ruch na „(Losowo)”, „(Następny)” lub „(Poprzedni)”.
+              <xml><block type="Dancelab_changeMoveEachLR">
+              <title name="GROUP">???</title>
+              <title name="MOVE">"rand"</title>
+              <title name="DIR">-1</title>
+              </block></xml>
       Dance_Party_01:
         validation: |-
-          **Jak przejdę ten poziom?**
+          **Jak mam przejść ten poziom?**
 
           -   Postaraj się, aby na ekranie pojawił się tancerz.
 
-          -   Ten poziom kończy się po 4 taktach.
+          _Ten poziom kończy się po 4 taktach._
         challenges: |-
           **Dodatkowe wyzwania**
 
@@ -687,43 +826,43 @@ pl-PL:
           -   Zmień imię swojego tancerza.
       Dance_Party_02:
         validation: |-
-          **Jak przejdę ten poziom?**
+          **Jak mam przejść ten poziom?**
 
           -   Ten tancerz musi zmienić ruch po 4 taktach.
 
-          -   Ten poziom kończy się po 7 taktach.
+          _Ten poziom kończy się po 7 taktach._
       Dance_Party_03:
         validation: |-
-          **Jak przejdę ten poziom?**
+          **Jak mam przejść ten poziom?**
 
           -   Po 6 taktach Twój tancerz musi tańczyć inny taniec niż po 4 taktach.
 
-          -   Ten poziom kończy się po 11 taktach.
+          _Ten poziom kończy się po 11 taktach._
       Dance_Party_04:
         validation: |-
-          **Jak przejdę ten poziom?**
+          **Jak mam przejść ten poziom?**
 
           -   Musisz zmienić efekt tła w czasie siódmego taktu piosenki.
 
-          -   Ten poziom kończy się po 9 taktach.
+          _Ten poziom kończy się po 9 taktach._
         challenges: |-
           **Dodatkowe wyzwanie**
 
           Zmieniaj efekt tła w różnych momentach piosenki, łącząc nowy blok pod zdarzeniami <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
       Dance_Party_05:
         validation: |-
-          **Jak przejść ten poziom?**
+          **Jak mam przejść ten poziom?**
 
           -   Twój tancerz musi wykonać cykl co najmniej 4 różnych ruchów tanecznych, zanim poziom się skończy.
 
           _Ten poziom kończy się po 12 taktach._
       Dance_Party_06:
         validation: |-
-          **Jak przejdę ten poziom?**
+          **Jak mam przejść ten poziom?**
 
           -   Musisz mieć co najmniej dwóch tancerzy.
 
-          -   Ten poziom kończy się po 5 taktach.
+          _Ten poziom kończy się po 5 taktach._
         challenges: |-
           **Dodatkowe wyzwanie**
 
@@ -731,50 +870,52 @@ pl-PL:
           -   Spraw, aby wszyscy tancerze w różnych momentach piosenki wykonywali różne ruchy.
       Dance_Party_08:
         validation: |-
-          **Jak przejdę ten poziom?**
+          **Jak mam przejść ten poziom?**
 
           -   Dwóch tancerzy musi mieć wielkość inną niż 100.
 
-          -   Ten poziom kończy się po 5 taktach.
+          _Ten poziom kończy się po 5 taktach._
         challenges: |-
           **Dodatkowe wyzwanie**
 
           -   Eksperymentuj, zmieniając inne właściwości (szerokość, wysokość, obrót, itp.)
       Dance_Party_09:
         validation: |-
-          **Jak przejdę ten poziom?**
+          **Jak mam przejść ten poziom?**
 
           -   Zmień odcień przynajmniej jednego tancerza.
 
-          -   Ten poziom kończy się po 7 taktach.
+          _Ten poziom kończy się po 7 taktach._
       Dance_Party_10:
         validation: |-
-          **Jak przejdę ten poziom?**
+          **Jak mam przejść ten poziom?**
 
           -   Należy zmienić właściwości dwóch lub więcej tancerzy.
 
-          -   Ten poziom kończy się po 7 taktach.
+          _Ten poziom kończy się po 7 taktach._
       Dance_Party_11:
         validation: |-
-          **Jak przejdę ten poziom?**
+          **Jak mam przejść ten poziom?**
 
           -   Wystarczy być kreatywnym!
 
-          -   Ten poziom kończy się po 7 taktach.
+          _Ten poziom kończy się po 7 taktach._
       Dance_Party_11_5:
         validation: |-
-          **Jak przejdę ten poziom?**
+          **Jak mam przejść ten poziom?**
 
           -   Wystarczy być kreatywnym!
 
-          -   Ten poziom kończy się po 7 taktach.
+          _Ten poziom kończy się po 7 taktach._
       Dance_Party_11b:
         validation: |-
-          **Jak przejdę ten poziom?**
+          **Jak mam przejść ten poziom?**
 
-          -   Użyj bloku „kiedy strzałka w lewo”, aby sprawić, że Robot będzie tańczył po naciśnięciu tego klawisza.
+          -   Użyj bloku 'kiedy strzałka w lewo', aby sprawić, że Robot będzie tańczył po naciśnięciu tego klawisza.
 
-          -   Ten poziom kończy się po 7 taktach.
+          _Ten poziom kończy się po 7 taktach._
+      Dance_Party_extras_alternate_2019:
+        alternate: Naprzemienny blok znajduje się w kategorii „Tancerze”.
       Function intro Ryan:
         Function_intro_Ryan_b: Jeśli wywołasz funkcję poprawnie, to jest ścieżką którą
           będziesz się przemieszczać...
@@ -1084,11 +1225,25 @@ pl-PL:
       course2_artist_prog_challenge1:
         courseC_artist_prog_challenge1_a: 'Prostokąt ma 200 pikseli szerokości i 100
           pikseli wysokości. '
+      course2_artist_prog_challenge2:
+        courseC_artist_prog_challenge2_a: "Możesz wkładać komendy do bloku 'powtórz',
+          by zapętlać je w kółko i w kółko. Spróbuj!\n\n<xml>\n  \n          <block
+          type=\"controls_repeat\">\n            <title name=\"TIMES\">6</title>\n
+          \           <statement name=\"DO\">\n              <block type=\"draw_move_by_constant_dropdown\">\n
+          \               <title name=\"DIR\">moveForward</title>\n                <title
+          name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                <next>\n
+          \                 <block type=\"jump_by_constant_dropdown\">\n                    <title
+          name=\"DIR\">jumpForward</title>\n                    <title name=\"VALUE\"
+          config=\"25,50,100,150,200,300\">25</title>\n                  </block>\n
+          \               </next>\n              </block>\n              </statement></block></xml>"
       course2_bee_conditionals_challenge1:
         courseD_bee_conditionals_challenge1_a: |-
           Czy możesz znaleźć ścieżkę aby dotrzeć do każdego kwiatka i plastra miodu bez uderzania w żadne drzewo? Najlepszą ścieżką jest spirala.
 
           **Możesz to rozwiązać nawet bez skręcania w lewo.**
+      course2_collector_loops_challenge2:
+        courseC_maze_loops_challenge2_a: Oryginalny kod działałby świetnie - gdyby
+          był tylko jeden skarb na każdym stosie!
       course2_collector_prog_challenge1:
         courseC_collector_prog_challenge1_a: Używaj komendy `collect` częściej aby
           zebrać dodatkowy skarb.
@@ -1101,6 +1256,16 @@ pl-PL:
         courseC_harvester_loops_challenge1_b: Możesz powtarzać `move forward` i `pick
           corn` tak wiele razy jak tylko zechcesz, następnie `turn right` w każdym
           narożniku.
+      course2_maze_loops_challenge1:
+        courseC_maze_loops_challenge1_a: Pomyśl o tej drodze, jakby była trzema różnymi
+          kawałkami. Każdy ma jeden wzór, który możesz powtórzyć.
+        courseC_maze_loops_challenge1_b: Pomiędzy każdym blokiem 'powtórz' będziesz
+          potrzebował 'skręć w lewo' lub 'skręć w prawo', by przygotować Scrata na
+          kolejny wzór.
+        courseC_maze_loops_challenge1_c: |-
+          Jak dojdziesz już tak daleko, potrzebujesz tylko 'skręć w lewo', potem 'idź naprzód' kilka razy. Nie poddawaj się!
+
+          ![](<https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34 PM.png>)
       course2_maze_programming_challenge2:
         courseC_maze_programming_challenge2_a: _Jeśli wyślesz mnie tyłem bądź bardzo
           ostrożny, bym obrócił się w dobrą stronę!_

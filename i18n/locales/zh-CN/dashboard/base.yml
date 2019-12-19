@@ -595,6 +595,8 @@ zh-CN:
       cta: '了解操作方法'
     dance:
       title: '舞蹈派对'
+    dance-2019:
+      title: '舞蹈派对'
     hoc:
       title: '经典迷宫'
       body: '请尝试计算机科学的基本知识。数百万人尝试了它。'

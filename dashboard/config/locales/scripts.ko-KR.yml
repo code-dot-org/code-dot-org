@@ -1684,7 +1684,6 @@ ko:
             Dance Party:
               name: 댄스 파티
         dance-extras:
-          title: 계속 춤추기
           description: 확장된 프로젝트 아이디어로 첫 번째 시간을 뛰어넘으세요.
         coursef-2019:
           stages:
@@ -1895,7 +1894,7 @@ ko:
             Dance Party:
               name: 댄스 파티
           description: 나만의 댄스 파티의 코드를 만들고 친구와 공유하세요!
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Computer Science Fundamentals:
               name: 컴퓨터 과학 기초
@@ -1912,5 +1911,14 @@ ko:
             For Loops:
               name: 반복을 위한
         dance-extras-2019:
-          title: 계속 춤추기
           description: 확장된 프로젝트 아이디어로 첫 번째 시간을 뛰어넘으세요.
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: 조건
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: 클라우드소싱
+            Conditionals with Cards:
+              name: 조건선택 카드

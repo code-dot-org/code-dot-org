@@ -13,7 +13,7 @@
   "basketballWhenPaddleCollided": "",
   "bounceBall": "",
   "bounceBallTooltip": "",
-  "continue": "",
+  "continue": "కొనసాగు",
   "dirE": "",
   "dirN": "",
   "dirS": "",
@@ -21,7 +21,7 @@
   "doCode": "",
   "elseCode": "",
   "finalLevel": "",
-  "heightParameter": "",
+  "heightParameter": "ఎత్తు",
   "ifCode": "",
   "ifPathAhead": "",
   "ifTooltip": "",
@@ -46,7 +46,7 @@
   "moveUp": "",
   "moveUpTooltip": "",
   "nextLevel": "",
-  "no": "",
+  "no": "లేదు",
   "noPathAhead": "",
   "noPathLeft": "",
   "noPathRight": "",
@@ -150,5 +150,5 @@
   "whenWallCollidedTooltip": "",
   "whileMsg": "",
   "whileTooltip": "",
-  "yes": ""
+  "yes": "అవును"
 }

@@ -2,6 +2,45 @@
 es:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: todo
+            '"ALIEN"': todos los extraterrestres
+            '"BEAR"': todos los osos
+            '"CAT"': todos los gatos
+            '"DOG"': todos los perros
+            '"DUCK"': todos los patos
+            '"FROG"': todas las ranas
+            '"MOOSE"': todos los alces
+            '"PINEAPPLE"': todas las piñas
+            '"ROBOT"': todos los robots
+            '"SHARK"': todos los tiburones
+            '"UNICORN"': Unicornios
+          MOVE1:
+            MOVES.Roll: Bamboleo
+            MOVES.ClapHigh: Palmas hacia arriba
+            MOVES.Dab: Limpia
+            MOVES.DoubleJam: Doble abajo
+            MOVES.Drop: Soltar
+            MOVES.Floss: Desalojar
+            MOVES.Fresh: Fresco
+            MOVES.Clown: Clown
+            MOVES.Kick: Estrella
+            MOVES.ThisOrThat: Este o aquel
+            MOVES.Rest: Ninguno
+          MOVE2:
+            MOVES.Roll: Bamboleo
+            MOVES.ClapHigh: Palmas hacia arriba
+            MOVES.Dab: Limpia
+            MOVES.DoubleJam: Doble abajo
+            MOVES.Drop: Soltar
+            MOVES.Floss: Desalojar
+            MOVES.Fresh: Fresco
+            MOVES.Clown: Clown
+            MOVES.Kick: Estrella
+            MOVES.ThisOrThat: Este o aquel
+            MOVES.Rest: Ninguno
       Dancelab_atTimestamp:
         text: después de {TIMESTAMP} {UNIT}
         options:
@@ -408,6 +447,7 @@ es:
           LAYOUT:
             '"border"': frontera
             '"inner"': cuadrado
+            '"diamond"': diamante
             '"circle"': círculo
             '"grid"': cuadrícula
             '"row"': fila
@@ -782,12 +822,6 @@ es:
           STRING:
             '"hearts_colorful"': Corazones
             '"diamond"': diamante
-            '"l"': l
-            '"m"': m
-            '"n"': 'n'
-            '"o"': o
-            '"p"': p
-            '"r"': r
             '"s"': s
             '"t"': t
             '"u"': u

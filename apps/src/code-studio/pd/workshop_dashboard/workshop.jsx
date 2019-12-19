@@ -125,7 +125,8 @@ export class Workshop extends React.Component {
             'regional_partner_name',
             'regional_partner_id',
             'scholarship_workshop?',
-            'potential_organizers'
+            'potential_organizers',
+            'created_at'
           ])
         });
       })
@@ -903,6 +904,7 @@ export class Workshop extends React.Component {
         {this.renderEndWorkshopPanel()}
         {this.renderEnrollmentsPanel()}
         {this.renderDetailsPanel()}
+        <MetadataFooter createdAt={this.state.workshop.created_at} />
       </Grid>
     );
   }
@@ -911,3 +913,28 @@ export class Workshop extends React.Component {
 export default connect(state => ({
   permission: state.workshopDashboard.permission
 }))(Workshop);
+
+/**
+ * A small, right-aligned section at the end of the workshop dashboard showing
+ * metadata we want to be able to check occasionally, like the workshop created_at date.
+ * @param {string} createdAt - and ISO 8601 date string
+ * @returns {Component}
+ * @constructor
+ */
+const MetadataFooter = ({createdAt}) => (
+  <Row>
+    <Col sm={12}>
+      <div style={METADATA_FOOTER_STYLE}>
+        Workshop created {new Date(createdAt).toLocaleDateString('en-US')}.
+      </div>
+    </Col>
+  </Row>
+);
+MetadataFooter.propTypes = {
+  createdAt: PropTypes.string.isRequired // An ISO 8601 date string
+};
+const METADATA_FOOTER_STYLE = {
+  textAlign: 'right',
+  fontSize: 'smaller',
+  fontStyle: 'italic'
+};

@@ -1627,7 +1627,6 @@
             Dance Party:
               name: Dansefest
         dance-extras:
-          title: Fortsett å danse
           description: Fortsett etter den første timen med større prosjektideer.
         coursef-2019:
           stages:
@@ -1835,7 +1834,7 @@
             Dance Party:
               name: Dansefest
           description: Programmer din egen dansefest du kan dele med vennene dine!
-        k5-onlinepd-copy:
+        k5-onlinepd-2019:
           stages:
             Computer Science Fundamentals:
               name: Grunnleggende informatikk
@@ -1854,5 +1853,14 @@
             For Loops:
               name: For-løkker
         dance-extras-2019:
-          title: Fortsett å danse
           description: Fortsett etter den første timen med større prosjektideer.
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Betingelser
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Betingelser med kort
