@@ -14,7 +14,7 @@ import _ from 'lodash';
 import five from '@code-dot-org/johnny-five';
 import PlaygroundIO from 'playground-io';
 import {PlaygroundButton} from './Button';
-import Thermometer from './Thermometer';
+import PlaygroundThermometer from './Thermometer';
 import TouchSensor from './TouchSensor';
 import Piezo from './Piezo';
 import NeoPixel from './NeoPixel';
@@ -177,7 +177,7 @@ export const componentConstructors = {
   Switch,
   Piezo,
   Sensor: five.Sensor,
-  Thermometer: five.Thermometer,
+  PlaygroundThermometer: five.Thermometer,
   Pin: five.Pin,
   Accelerometer: five.Accelerometer,
   Animation: five.Animation,
@@ -264,7 +264,7 @@ function initializeThermometer(board) {
   return new Promise(resolve => {
     const thermometer = new five.Thermometer({
       board,
-      controller: Thermometer,
+      controller: PlaygroundThermometer,
       pin: 'A0',
       freq: 100
     });
