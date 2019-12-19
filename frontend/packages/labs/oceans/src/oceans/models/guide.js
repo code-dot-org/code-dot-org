@@ -5,7 +5,7 @@ import turtleImage from '@public/images/turtle-large.png';
 import seahorseImage from '@public/images/seahorse-large.png';
 import trashBottleImage from '@public/images/bottle-large.png';
 import trashCanImage from '@public/images/can-large.png';
-import * as I18n from '../i18n';
+import I18n from '../i18n';
 
 const imageStyleOverrides = {
   turtle: {bottom: '1%', left: '6%'},

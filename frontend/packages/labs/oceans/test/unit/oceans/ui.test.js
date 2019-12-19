@@ -19,7 +19,7 @@ import helpers from '@ml/oceans/helpers';
 import {setState, getState, resetState} from '@ml/oceans/state';
 import {AppMode, Modes} from '@ml/oceans/constants';
 import colors from '@ml/oceans/colors';
-import * as I18n from '@ml/oceans/i18n';
+import I18n from '@ml/oceans/i18n';
 
 const DEFAULT_PROPS = {
   // radiumConfig.userAgent is required because our unit tests run in the "node" testEnvironment
@@ -97,7 +97,7 @@ describe('ConfirmationDialog', () => {
   let onYesClickSpy, onNoClickSpy;
 
   beforeAll(() => {
-    I18n.init();
+    I18n.initI18n();
   });
 
   beforeEach(() => {
@@ -142,7 +142,7 @@ describe('Words', () => {
   });
 
   it('selects the set of words based on the current appMode', () => {
-    I18n.init();
+    I18n.initI18n();
     const appMode = AppMode.FishShort;
     setState({appMode});
     const wrapper = shallow(<Words {...DEFAULT_PROPS} />);
@@ -170,7 +170,7 @@ describe('Words', () => {
   describe('onChangeWord', () => {
     let toModeStub;
     beforeAll(() => {
-      I18n.init();
+      I18n.initI18n();
     });
 
     beforeEach(() => {
@@ -222,7 +222,7 @@ describe('Train', () => {
   let classifyFishStub;
 
   beforeAll(() => {
-    I18n.init();
+    I18n.initI18n();
   });
 
   beforeEach(() => {
@@ -348,7 +348,7 @@ describe('Train', () => {
 
 describe('Predict', () => {
   beforeAll(() => {
-    I18n.init();
+    I18n.initI18n();
   });
 
   afterEach(() => {
@@ -521,7 +521,7 @@ describe('Pond', () => {
     let toModeStub;
 
     beforeAll(() => {
-      I18n.init();
+      I18n.initI18n();
     });
 
     beforeEach(() => {
