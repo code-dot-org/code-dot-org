@@ -25,6 +25,36 @@ describe('VisualizerModal', () => {
     expect(wrapper.find(BaseDialog).prop('isOpen')).to.be.true;
   });
 
+  describe('state management', () => {
+    it('clears selected columns when chart type changes', () => {
+      let wrapper = shallow(<VisualizerModal {...DEFAULT_PROPS} />);
+      wrapper.instance().setState({
+        chartType: 'Scatter Plot',
+        selectedColumn1: 'column1',
+        selectedColumn2: 'column2'
+      });
+      expect(wrapper.instance().state.selectedColumn1).to.equal('column1');
+      wrapper
+        .find({displayName: 'Chart Type'})
+        .simulate('change', {target: {value: 'Histogram'}});
+      expect(wrapper.instance().state.selectedColumn1).to.equal('');
+      expect(wrapper.instance().state.selectedColumn2).to.equal('');
+    });
+
+    it('clears filter value when filter column changes', () => {
+      let wrapper = shallow(<VisualizerModal {...DEFAULT_PROPS} />);
+      wrapper.instance().setState({
+        filterColumn: 'column',
+        filterValue: 'value'
+      });
+      expect(wrapper.instance().state.filterValue).to.equal('value');
+      wrapper
+        .find({displayName: 'Filter'})
+        .simulate('change', {target: {value: 'newColumn'}});
+      expect(wrapper.instance().state.filterValue).to.equal('');
+    });
+  });
+
   describe('parseRecords', () => {
     let wrapper;
     beforeEach(() => {
