@@ -7,7 +7,7 @@ import {setInitialState, setSetStateCallback} from './state';
 import {render as renderCanvas} from './renderer';
 import modeHelpers from './modeHelpers';
 import soundLibrary from './models/soundLibrary';
-import * as I18n from './i18n';
+import I18n from './i18n';
 
 //
 // Required in options:
@@ -27,7 +27,7 @@ export const initAll = function(options) {
 
   soundLibrary.loadSounds();
 
-  I18n.init(options.i18n);
+  I18n.initI18n(options.i18n);
 
   // Set initial state for UI elements.
   setInitialState({
