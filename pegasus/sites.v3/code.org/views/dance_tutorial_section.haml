@@ -10,11 +10,11 @@
     %img.img-dance-stars.tablet-only{src: "/images/fit-520/homepage/hoc2019_dance_stars.png"}
     %img.img-dance-stars.mobile-only{src: "/images/fit-300x300/homepage/hoc2019_dance_stars_mobile.png"}
     .new-announcement.desktop-only
-      = hoc_s(:codeorg_homepage_hoc2019_dance_heading)
+      = CGI.unescapeHTML(hoc_s(:codeorg_homepage_hoc2019_dance_heading))
     .new-announcement-tablet.tablet-only
-      = hoc_s(:codeorg_homepage_hoc2019_dance_heading)
+      = CGI.unescapeHTML(hoc_s(:codeorg_homepage_hoc2019_dance_heading))
     .new-announcement-mobile.mobile-only
-      = hoc_s(:codeorg_homepage_hoc2019_dance_heading)
+      = CGI.unescapeHTML(hoc_s(:codeorg_homepage_hoc2019_dance_heading))
 
   .col-25.specific-tutorial.right-tutorial.dance-tutorial
     .tutorial-box

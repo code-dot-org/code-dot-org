@@ -83,10 +83,10 @@ social:
       .bannerHeading= hoc_s(:learn_banner_heading)
       = hoc_s(:learn_banner_blurb)
       .bannerBeyond
-        = hoc_s(:learn_banner_beyond)
+        = CGI.unescapeHTML(hoc_s(:learn_banner_beyond))
       .bannerTeachers
         %img.bannerTeacherIcon{src: "/images/learn/teacher_icon.png"}
-        = hoc_s(:learn_banner_teachers)
+        = CGI.unescapeHTML(hoc_s(:learn_banner_teachers))
     #studentImage.hidden-xs.col-sm-12.col-md-6
 
 -# Not ideal but we can pull the undigested files from /blockly.

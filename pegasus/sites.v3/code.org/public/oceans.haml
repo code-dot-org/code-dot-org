@@ -94,7 +94,7 @@ theme: responsive
 
   %div{style: "clear: both; margin-top: 10px;"}
 
-  %h3.blurb= hoc_s(:oceans_landing_explanation)
+  %h3.blurb= CGI.unescapeHTML(hoc_s(:oceans_landing_explanation))
 
   = view :resource_boxes, resources: resources
 
@@ -129,8 +129,8 @@ theme: responsive
   #behind-the-scenes
     %h2= hoc_s(:oceans_behind_the_scenes)
 
-    %h3= hoc_s(:oceans_behind_the_scenes_1)
+    %h3= CGI.unescapeHTML(hoc_s(:oceans_behind_the_scenes_1))
 
-    %h3= hoc_s(:oceans_behind_the_scenes_2)
+    %h3= CGI.unescapeHTML(hoc_s(:oceans_behind_the_scenes_2))
 
 .clear

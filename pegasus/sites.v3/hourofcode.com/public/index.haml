@@ -122,11 +122,11 @@ social:
       -# Show a picture of the map unless it is currently the week of HOC.
       -if hoc_mode != "actual-hoc"
         = view :hoc_events_map
-        .footnote=hoc_s(:map_warning).gsub(/%{events_url}/, resolve_url('/events'))
+        .footnote=CGI.unescapeHTML(hoc_s(:map_warning)).gsub(/%{events_url}/, resolve_url('/events'))
       -else
         %a{href: resolve_url('/map')}
           %img{src: '/images/fit-1000/map.jpg', style: 'width: 100%;'}
-        .footnote=hoc_s(:map_warning).gsub(/%{events_url}/, resolve_url('/events'))
+        .footnote=CGI.unescapeHTML(hoc_s(:map_warning)).gsub(/%{events_url}/, resolve_url('/events'))
 
   -# Signup and Highlights
 
@@ -161,7 +161,7 @@ social:
       -if @language == "en"
         %p=hoc_s(:stats_females)
         %img{src: "/images/fit-300/stats-females.jpg", style: "width: 100%;"}
-        %p=hoc_s(:stats_females_more)
+        %p=CGI.unescapeHTML(hoc_s(:stats_females_more))
       -else
         %p=hoc_s(:stats_girls_more)
         %img{src: "/images/fit-300/stats-info3.jpg", style: "width: 100%;"}
