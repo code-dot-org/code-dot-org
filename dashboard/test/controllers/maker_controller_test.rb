@@ -291,7 +291,7 @@ class MakerControllerTest < ActionController::TestCase
     post :schoolchoice, params: {nces: school_washington.id}
     application = CircuitPlaygroundDiscountApplication.find_by(user_id: @teacher)
 
-    assert_equal application.full_discount, false
+    refute application.full_discount
   end
 
   test "complete: fails if not given a signature" do
