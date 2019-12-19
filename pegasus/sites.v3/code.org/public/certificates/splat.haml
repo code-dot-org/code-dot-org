@@ -42,7 +42,7 @@ social:
         %br.desktop-feature
 
         .count{:style=>"font-size: 42px; line-height: 42px; font-family: 'Gotham 5r', sans-serif;"}
-          -count_string = I18n.t(:n_have_learned_an_hoc).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
+          -count_string = CGI.escapeHTML(I18n.t(:n_have_learned_an_hoc)).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
           -if request.locale == 'en-US'
             %a{:href=>'/leaderboards', :style=>'text-decoration:none'}
               =count_string

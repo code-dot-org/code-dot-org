@@ -54,7 +54,7 @@ max_age: 60
         =TextRender.safe_markdown company['additional_actions_copy_t']
       -else
         =view :company_profile_additional_actions
-      = I18n.t :congratulations_volunteer
+      = CGI.escapeHTML(I18n.t(:congratulations_volunteer))
   -else
     %h1=I18n.t :congratulations_on_completing_hoc
 
