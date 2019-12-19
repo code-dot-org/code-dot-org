@@ -67,11 +67,8 @@ export function connect({interpreter, onDisconnect}) {
   if (currentBoard) {
     commands.injectBoardController(currentBoard);
     currentBoard.installOnInterpreter(interpreter);
-    //Microbit does not yet have components to re-enable
-    if (!experiments.isEnabled('microbit')) {
-      // When the board is reset, the components are disabled. Re-enable now.
-      currentBoard.enableComponents();
-    }
+    // When the board is reset, the components are disabled. Re-enable now.
+    currentBoard.enableComponents();
     return Promise.resolve();
   }
 
