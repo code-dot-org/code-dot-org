@@ -4,9 +4,12 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import i18n from '@cdo/locale';
 import {connect} from 'react-redux';
-
 import ProjectUpdatedAt from './ProjectUpdatedAt';
-import {refreshProjectName} from '../../headerRedux';
+import {
+  refreshProjectName,
+  setNameFailure,
+  resetNameFailure
+} from '../../headerRedux';
 import NameFailureDialog from '../NameFailureDialog';
 
 const styles = {
@@ -18,8 +21,7 @@ const styles = {
 class UnconnectedDisplayProjectName extends React.Component {
   static propTypes = {
     beginEdit: PropTypes.func.isRequired,
-    projectName: PropTypes.string.isRequired,
-    projectNameFailure: PropTypes.string
+    projectName: PropTypes.string.isRequired
   };
 
   render() {
@@ -50,7 +52,9 @@ class UnconnectedEditProjectName extends React.Component {
     finishEdit: PropTypes.func.isRequired,
     projectName: PropTypes.string.isRequired,
     refreshProjectName: PropTypes.func.isRequired,
-    projectNameFailure: PropTypes.string
+    projectNameFailure: PropTypes.string,
+    setNameFailure: PropTypes.func.isRequired,
+    resetNameFailure: PropTypes.func.isRequired
   };
 
   state = {
@@ -81,9 +85,7 @@ class UnconnectedEditProjectName extends React.Component {
         if (error.responseText) {
           const nameFailure = JSON.parse(error.responseText).nameFailure;
           if (nameFailure) {
-            this.setState({
-              projectNameFailure: nameFailure
-            });
+            this.props.setNameFailure(nameFailure);
           }
         }
       });
@@ -117,11 +119,9 @@ class UnconnectedEditProjectName extends React.Component {
           {i18n.save()}
         </div>
         <NameFailureDialog
-          flaggedText={this.state.projectNameFailure}
-          isOpen={!!this.state.projectNameFailure}
-          handleClose={() => {
-            this.setState({projectNameFailure: undefined});
-          }}
+          flaggedText={this.props.projectNameFailure}
+          isOpen={!!this.props.projectNameFailure}
+          handleClose={this.props.resetNameFailure}
         />
       </div>
     );
@@ -133,7 +133,9 @@ const EditProjectName = connect(
     projectNameFailure: state.header.projectNameFailure
   }),
   {
-    refreshProjectName
+    refreshProjectName,
+    setNameFailure,
+    resetNameFailure
   }
 )(UnconnectedEditProjectName);
 
