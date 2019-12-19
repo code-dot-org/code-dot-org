@@ -35,6 +35,7 @@ export default storybook => {
               schoolId="1234"
               schoolName="Code.org Junior Academy"
               hasConfirmedSchool={true}
+              schoolHighNeedsEligible={false}
               getsFullDiscount={false}
             />
           </div>
@@ -50,7 +51,7 @@ export default storybook => {
               schoolId="1234"
               schoolName="Code.org Junior Academy"
               hasConfirmedSchool={true}
-              getsFullDiscount={true}
+              schoolHighNeedsEligible={true}
               statusPD={Status.FAILED}
               statusStudentCount={Status.FAILED}
             />
@@ -67,7 +68,23 @@ export default storybook => {
               schoolId="1234"
               schoolName="Code.org Junior Academy"
               hasConfirmedSchool={true}
-              getsFullDiscount={true}
+              schoolHighNeedsEligible={true}
+            />
+          </div>
+        )
+      },
+      {
+        name: '2020: Failed academic year PD attendance requirement',
+        description: 'When a teacher did not attend quarterly PD',
+        story: () => (
+          <div style={{margin: '2em'}}>
+            <EligibilityChecklist
+              {...defaultProps}
+              schoolId="1234"
+              schoolName="Code.org Junior Academy"
+              hasConfirmedSchool={true}
+              schoolHighNeedsEligible={true}
+              statusAcademicYearPD={Status.FAILED}
             />
           </div>
         )
@@ -82,7 +99,7 @@ export default storybook => {
               schoolId="1234"
               schoolName="Code.org Junior Academy"
               hasConfirmedSchool={true}
-              getsFullDiscount={true}
+              schoolHighNeedsEligible={true}
               unit6Intention={Unit6Intention.NO}
             />
           </div>
@@ -98,7 +115,7 @@ export default storybook => {
               schoolId="1234"
               schoolName="Code.org Junior Academy"
               hasConfirmedSchool={true}
-              getsFullDiscount={true}
+              schoolHighNeedsEligible={true}
               unit6Intention={Unit6Intention.YES_SPRING_2020}
             />
           </div>
