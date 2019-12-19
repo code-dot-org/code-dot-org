@@ -25,7 +25,7 @@ describe('EligibilityChecklist', () => {
     assert.equal(wrapper.find('Unit6ValidationStep').length, 0);
     wrapper
       .instance()
-      .handleSchoolConfirmed({schoolId: '1', fullDiscount: true});
+      .handleSchoolConfirmed({schoolId: '1', schoolHighNeedsEligible: true});
     assert.equal(wrapper.find('Unit6ValidationStep').length, 1);
   });
 
@@ -35,7 +35,7 @@ describe('EligibilityChecklist', () => {
         {...defaultProps}
         hasConfirmedSchool
         schoolId="1"
-        getsFullDiscount={true}
+        schoolHighNeedsEligible={true}
       />
     );
     assert.equal(wrapper.find('Unit6ValidationStep').length, 1);
