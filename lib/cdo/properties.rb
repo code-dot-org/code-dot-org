@@ -46,7 +46,6 @@ class Properties
     # run properly.
     get(:about_stats) || {
       'percent_female' => 44,
-      'number_served' => 426_346_094,
       'number_students' => 19_177_297,
       'number_teachers' => 591_636
     }
