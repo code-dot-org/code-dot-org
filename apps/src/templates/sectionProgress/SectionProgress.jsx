@@ -150,13 +150,14 @@ class SectionProgress extends Component {
 
     const levelDataInitialized = scriptData && !isLoadingProgress;
     const lessons = scriptData ? scriptData.stages : [];
+    const csfCourseSelected =
+      levelDataInitialized && !scriptData.excludeCsfColumnInLegend;
     const summaryStyle =
       currentView === ViewType.SUMMARY ? styles.show : styles.hide;
     const detailStyle =
       currentView === ViewType.DETAIL ? styles.show : styles.hide;
     const standardsStyle =
       currentView === ViewType.STANDARDS ? styles.show : styles.hide;
-
     return (
       <div>
         <div style={styles.topRowContainer}>
@@ -170,11 +171,12 @@ class SectionProgress extends Component {
               onChange={this.onChangeScript}
             />
           </div>
-          <div style={styles.toggle}>
-            <div style={{...h3Style, ...styles.heading}}>{i18n.viewBy()}</div>
-            <SectionProgressToggle />
-          </div>
-
+          {levelDataInitialized && (
+            <div style={styles.toggle}>
+              <div style={{...h3Style, ...styles.heading}}>{i18n.viewBy()}</div>
+              <SectionProgressToggle showStandardsToggle={csfCourseSelected} />
+            </div>
+          )}
           {currentView === ViewType.DETAIL && lessons.length !== 0 && (
             <LessonSelector lessons={lessons} onChange={this.onChangeLevel} />
           )}
@@ -201,7 +203,7 @@ class SectionProgress extends Component {
           )}
           {levelDataInitialized && this.renderTooltips()}
           {experiments.isEnabled(experiments.STANDARDS_REPORT) && (
-            <div style={standardsStyle}>
+            <div id="uitest-standards-view" style={standardsStyle}>
               <StandardsView
                 showStandardsIntroDialog={
                   currentView === ViewType.STANDARDS && showStandardsIntroDialog
