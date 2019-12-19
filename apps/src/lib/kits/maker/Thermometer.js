@@ -6,7 +6,7 @@ import Playground from 'playground-io';
 // Otherwise we're going to pass everything through to the playground-io controller.
 
 let thermometerRawValue;
-const Thermometer = {
+const PlaygroundThermometer = {
   initialize: {
     value: function() {
       Playground.Thermometer.initialize.value.apply(this, arguments);
@@ -31,4 +31,4 @@ const Thermometer = {
     }
   }
 };
-export default Thermometer;
+export default PlaygroundThermometer;
