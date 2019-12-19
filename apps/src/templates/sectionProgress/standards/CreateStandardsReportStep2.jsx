@@ -33,12 +33,8 @@ export class CreateStandardsReportStep2 extends Component {
           <h3>{i18n.createStandardsReportStep2()}</h3>
           <span style={styles.optionalText}>{i18n.optional()}</span>
         </div>
-        <p>
-          <SafeMarkdown markdown={i18n.createStandardsReportPrompt()} />
-        </p>
-        <p>
-          <SafeMarkdown markdown={i18n.createStandardsReportSuggestion()} />
-        </p>
+        <SafeMarkdown markdown={i18n.createStandardsReportPrompt()} />
+        <SafeMarkdown markdown={i18n.createStandardsReportSuggestion()} />
         <ul>
           <li>
             <SafeMarkdown markdown={i18n.createStandardsReportSuggestion1()} />
