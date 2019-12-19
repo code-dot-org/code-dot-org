@@ -18,6 +18,7 @@ describe('SectionProgress', () => {
   beforeEach(() => {
     DEFAULT_PROPS = {
       setLessonOfInterest: () => {},
+      setCurrentView: () => {},
       loadScript: () => {},
       setScriptId: () => {},
       scriptId: 1,
