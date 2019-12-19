@@ -4,6 +4,11 @@ import * as Table from 'reactabular-table';
 import {tableLayoutStyles} from '@cdo/apps/templates/tables/tableConstants';
 import i18n from '@cdo/locale';
 import StandardDescriptionCell from './StandardDescriptionCell';
+import {connect} from 'react-redux';
+import {
+  getLessonsCompletedByStandardForScript,
+  getStandardsCoveredForScript
+} from './sectionStandardsProgressRedux';
 
 export const COLUMNS = {
   STANDARD_CATEGORY: 0,
@@ -185,4 +190,9 @@ class StandardsProgressTable extends Component {
   }
 }
 
-export default StandardsProgressTable;
+export const UnconnectedStandardsProgressTable = StandardsProgressTable;
+
+export default connect(state => ({
+  standards: getStandardsCoveredForScript(),
+  lessonsCompletedByStandard: getLessonsCompletedByStandardForScript()
+}))(StandardsProgressTable);
