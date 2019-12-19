@@ -5,7 +5,6 @@ import {hidePreview} from '../redux/data';
 import {getDatasetInfo} from './dataUtils';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 import DataTable from './DataTable';
-import {parseColumnsFromRecords} from '../firebaseMetadata';
 import msg from '@cdo/locale';
 
 class PreviewModal extends React.Component {
@@ -32,13 +31,7 @@ class PreviewModal extends React.Component {
         <h1>{this.props.tableName}</h1>
         <p>{datasetInfo.description}</p>
         <div style={{overflow: 'scroll', maxHeight: '70%'}}>
-          <DataTable
-            getColumnNames={(records, columns) =>
-              parseColumnsFromRecords(records)
-            }
-            readOnly
-            rowsPerPage={100}
-          />
+          <DataTable readOnly rowsPerPage={100} />
         </div>
         <button type="button" onClick={() => this.importTable(datasetInfo)}>
           {msg.import()}
