@@ -62,6 +62,8 @@ $(document).ready(function() {
 
   //TODO double check
   store.dispatch(setValidAssignments(validCourses, validScripts));
+  console.log('valid grades are');
+  console.log(validGrades);
   store.dispatch(setValidGrades(validGrades));
 
   if (!section.sharing_disabled && section.script.project_sharing) {
