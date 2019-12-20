@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
-import {ignoreMissingValues} from '../dataUtils';
+import {ChartType, ignoreMissingValues} from '../dataUtils';
 import GoogleChart from '@cdo/apps/applab/GoogleChart';
 
 class GoogleChartWrapper extends React.Component {
   static propTypes = {
     records: PropTypes.array.isRequired,
     numericColumns: PropTypes.arrayOf(PropTypes.string).isRequired,
-    chartType: PropTypes.string.isRequired,
+    chartType: PropTypes.number.isRequired,
     bucketSize: PropTypes.string,
     chartTitle: PropTypes.string,
     selectedColumn1: PropTypes.string,
@@ -38,10 +38,12 @@ class GoogleChartWrapper extends React.Component {
     let chart;
     let chartData;
     let columns;
-    let options = {};
+    let options = {
+      title: this.props.chartTitle || ''
+    };
 
     switch (this.props.chartType) {
-      case 'Bar Chart':
+      case ChartType.BAR_CHART:
         if (this.props.selectedColumn1) {
           chart = new GoogleChart.MaterialBarChart(this.chartArea);
           let records = ignoreMissingValues(this.props.records, [
@@ -54,7 +56,7 @@ class GoogleChartWrapper extends React.Component {
           columns = [this.props.selectedColumn1, 'count'];
         }
         break;
-      case 'Histogram':
+      case ChartType.HISTOGRAM:
         if (this.props.selectedColumn1 && this.props.bucketSize) {
           options.histogram = {bucketSize: this.props.bucketSize};
           chart = new GoogleChart.Histogram(this.chartArea);
@@ -64,7 +66,7 @@ class GoogleChartWrapper extends React.Component {
           columns = [this.props.selectedColumn1];
         }
         break;
-      case 'Scatter Plot':
+      case ChartType.SCATTER_PLOT:
         if (this.props.selectedColumn1 && this.props.selectedColumn2) {
           chart = new GoogleChart.MaterialScatterChart(this.chartArea);
           chartData = ignoreMissingValues(this.props.records, [
