@@ -108,14 +108,9 @@ class I18nScriptUtils
   end
 
   def self.get_level_url_key(script, level)
-    script_name = script.name
     script_level = level.script_levels.find_by_script_id(script.id)
-    if script_level.bonus
-      escaped_level_name = CGI.escape(level.name)
-      "https://studio.code.org/s/#{script_name}/stage/#{script_level.stage.relative_position}/extras?level_name=#{escaped_level_name}"
-    else
-      "https://studio.code.org/s/#{script_name}/stage/#{script_level.stage.relative_position}/puzzle/#{script_level.position}"
-    end
+    path = script_level.build_script_level_path(script_level)
+    URI.join("https://studio.code.org", path)
   end
 
   def self.get_level_from_url(url)

@@ -200,7 +200,7 @@ level 'CSD U3 abstraction velocityY_pilot', progression: 'Velocity'
 level 'CSD U3 abstraction rotation_pilot', progression: 'Velocity'
 level 'CSD U3 abstraction rotation control_pilot', progression: 'Velocity'
 level 'CSD U3 abstraction velocityY control_pilot', progression: 'Velocity'
-level 'CSD U3 abstraction velocityX if-statements_pilot', progression: 'Velocity'
+level 'CSD U3 abstraction velocityX if-statements_pilot', progression: 'Velocity', assessment: true
 level 'CSD U3 abstraction velocityX control_pilot', progression: 'Velocity'
 level 'CSD U3 abstraction jump_2018_pilot', progression: 'Side Scroller'
 level 'CSD U3 abstraction tumbleweed_pilot', progression: 'Side Scroller'

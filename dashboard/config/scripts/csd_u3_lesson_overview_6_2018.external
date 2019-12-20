@@ -11,9 +11,9 @@ In order to create more interesting and detailed images, the class is introduced
 
 ## Introduced Code
 
-* [drawSprites()](//docs.code.org/gamelab/drawSprites/)
-* [sprite.scale](//docs.code.org/gamelab/scale/)
-* [var sprite = createSprite()](//docs.code.org/gamelab/createSprite/)
+* [drawSprites()](//studio.code.org/docs/gamelab/drawSprites/)
+* [sprite.scale](//studio.code.org/docs/gamelab/scale/)
+* [var sprite = createSprite()](//studio.code.org/docs/gamelab/createSprite/)
 
 ## Resources
 
