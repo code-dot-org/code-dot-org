@@ -119,7 +119,7 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
       has_confirmed_school: application.try(:has_confirmed_school?) || false,
       school_id: school_id,
       school_name: school_id ? School.find(school_id).name : nil,
-      school_high_needs_eligible: School.find(school_id).try(:maker_high_needs?),
+      school_high_needs_eligible: school_id ? School.find(school_id).try(:maker_high_needs?) : nil,
       # true/false once has_submitted_school is true
       # false implies partial discount
       gets_full_discount: application.try(:full_discount),
