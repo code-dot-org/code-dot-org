@@ -38,7 +38,7 @@ describe('SectionProgress', () => {
             levels: [{id: 789}]
           }
         ],
-        excludeCsfColumnInLegend: false
+        csf: false
       },
       isLoadingProgress: false,
       scriptFriendlyName: 'My Script',

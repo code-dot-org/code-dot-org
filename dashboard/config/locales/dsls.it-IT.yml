@@ -720,9 +720,9 @@ it-IT:
           una pagina web\n* **Struttura Sito Web** - Lo scopo dei differenti pezzi
           di contenuto in una pagina web, usata per aiutare il computer a determinare
           come dovrebbe essere mostrato quel contenuto.\n\n## Codice Introdotto\n\n*
-          **[HTML](//docs.code.org/weblab/html/)** - `<html></html>` * **[Doctype](//docs.code.org/weblab/doctype/)**
-          - `<!DOCTYPE>` * **[Paragraph](//docs.code.org/weblab/P/)** - `<p></p>`
-          * **[Body](//docs.code.org/weblab/body/)** - `<body></body>` * **[Head](//docs.code.org/weblab/head/)**
+          **[HTML](//studio.code.org/docs/weblab/html/)** - `<html></html>` * **[Doctype](//studio.code.org/docs/weblab/doctype/)**
+          - `<!DOCTYPE>` * **[Paragraph](//studio.code.org/docs/weblab/P/)** - `<p></p>`
+          * **[Body](//studio.code.org/docs/weblab/body/)** - `<body></body>` * **[Head](//studio.code.org/docs/weblab/head/)**
           - `<head></head>`\n"
       CSD U2 L4 Overview:
         title: titolo
@@ -737,7 +737,7 @@ it-IT:
 
           ## Codice Introduzione
 
-          * **[Intestazione](//docs.code.org/weblab/h/)** - `<h1></h1>`
+          * **[Intestazione](//studio.code.org/docs/weblab/h/)** - `<h1></h1>`
 
       CSD U2 L5 Overview:
         title: titolo
@@ -766,9 +766,9 @@ it-IT:
           ## Codice Introdotto
 
 
-          * **[Elenco Disordinato](//docs.code.org/weblab/ul/)** - `<ul></ul>`
-          *  **[Elenco Elementi](//docs.code.org/weblab/li/)** - `<li></li>`
-          *  **[Elenco Ordinato](//docs.code.org/weblab/ol/)** - `<ol></ol>`
+          * **[Elenco Disordinato](//studio.code.org/docs/weblab/ul/)** - `<ul></ul>`
+          *  **[Elenco Elementi](//studio.code.org/docs/weblab/li/)** - `<li></li>`
+          *  **[Elenco Ordinato](//studio.code.org/docs/weblab/ol/)** - `<ol></ol>`
 
       CSD U2 Lesson 6 Overview:
         content1: Descrizione qui
