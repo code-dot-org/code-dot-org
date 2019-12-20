@@ -1,5 +1,9 @@
 import {EventEmitter} from 'events';
 
+function roundToHundredth(val) {
+  return Math.floor(val * 100) / 100;
+}
+
 export default class Accelerometer extends EventEmitter {
   constructor(board) {
     super();
@@ -30,19 +34,20 @@ export default class Accelerometer extends EventEmitter {
         get: function() {
           let rads = Math.atan2(this.x, Math.hypot(this.y, this.z));
 
-          return (rads * (180 / Math.PI)).toFixed(2);
+          return roundToHundredth(rads * (180 / Math.PI));
         }
       },
       roll: {
         get: function() {
           let rads = Math.atan2(this.y, Math.hypot(this.x, this.z));
 
-          return (rads * (180 / Math.PI)).toFixed(2);
+          return roundToHundredth(rads * (180 / Math.PI));
         }
       },
       inclination: {
         get: function() {
-          return Math.atan2(this.y, this.x) * (180 / Math.PI).toFixed(2);
+          let rads = Math.atan2(this.y, this.x);
+          return roundToHundredth(rads * (180 / Math.PI));
         }
       },
       x: {
@@ -62,9 +67,11 @@ export default class Accelerometer extends EventEmitter {
       },
       acceleration: {
         get: function() {
-          return Math.sqrt(
+          let total = Math.sqrt(
             this.x * this.x + this.y * this.y + this.z * this.z
-          ).toFixed(2);
+          );
+
+          return roundToHundredth(total);
         }
       }
     });
@@ -89,18 +96,22 @@ export default class Accelerometer extends EventEmitter {
 
   getAcceleration(accelerationDirection) {
     if (undefined === accelerationDirection) {
-      return [this.x.toFixed(2), this.y.toFixed(2), this.z.toFixed(2)];
+      return [
+        roundToHundredth(this.x),
+        roundToHundredth(this.y),
+        roundToHundredth(this.z)
+      ];
     }
     if (accelerationDirection === 'total') {
       return this.acceleration;
     }
     switch (accelerationDirection) {
       case 'x':
-        return this.x.toFixed(2);
+        return roundToHundredth(this.x);
       case 'y':
-        return this.y.toFixed(2);
+        return roundToHundredth(this.y);
       case 'z':
-        return this.z.toFixed(2);
+        return roundToHundredth(this.z);
     }
   }
 
