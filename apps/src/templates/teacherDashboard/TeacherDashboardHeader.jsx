@@ -69,9 +69,9 @@ export default connect(state => {
     state.teacherSections.sections[currentSectionId].name;
 
   let currentScriptId = state.scriptSelection.scriptId;
-  let currentScriptName = state.scriptSelection.validScripts.filter(
+  let currentScriptName = "TODO" /* state.scriptSelection.validScripts.filter(
     script => script.id === currentScriptId
-  )[0].name;
+  )[0].name;*/
 
   return {currentSectionName, currentScriptName, currentSectionId};
 })(TeacherDashboardHeader);

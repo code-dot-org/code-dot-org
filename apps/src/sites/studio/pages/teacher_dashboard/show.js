@@ -54,11 +54,16 @@ $(document).ready(function() {
   const store = getStore();
   // TODO: (madelynkasula) remove duplication in sectionData.setSection and teacherSections.setSections
   store.dispatch(setCurrentUserId(currentUserId));
+  console.log("THE SET SECTION")
+  console.log(section)
   store.dispatch(setSection(section));
   store.dispatch(setSections(sections));
   store.dispatch(selectSection(section.id));
   store.dispatch(setRosterProvider(section.login_type));
   store.dispatch(setLoginType(section.login_type));
+
+  //TODO set this correctly as needed
+  store.dispatch(setStageExtrasScriptIds([]));
 
   //TODO double check
   store.dispatch(setValidAssignments(validCourses, validScripts));
@@ -72,10 +77,7 @@ $(document).ready(function() {
 
   store.dispatch(
     setValidScripts(
-      validScripts,
-      studentScriptIds,
-      validCourses,
-      section.course_id
+      validScripts
     )
   );
 

@@ -6,6 +6,12 @@ import {
     setSection,
     SET_SECTION
 } from '@cdo/apps/redux/sectionDataRedux';
+import {
+    setScriptId,
+} from '@cdo/apps/redux/scriptSelectionRedux';
+import {
+    loadScript
+} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 
 /**
  * @const {string[]} The only properties that can be updated by the user
@@ -251,10 +257,17 @@ export const finishEditingSection = () => (dispatch, getState) => {
           serverSection: result
         });
         console.log('server section is')
-        console.log(serverSection)
+        console.log(result)
+       /* dispatch(
+            setSection(result) // TODO max
+        )*/
         dispatch(
-            setSection(serverSection)
+            setScriptId(result.script.id)
         )
+        dispatch(
+            loadScript(result.script.id)
+        )
+        console.log('loaded script')
         resolve();
       })
       .fail((jqXhr, status) => {
