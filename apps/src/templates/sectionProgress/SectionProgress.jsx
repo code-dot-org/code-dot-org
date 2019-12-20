@@ -89,8 +89,7 @@ class SectionProgress extends Component {
     // Check if we are on a non-CSF script and
     // currentView is Standards. If so re-set currentView to Summary since
     // Standards doesn't apply.
-    const isCSF =
-      this.props.scriptData && !this.props.scriptData.excludeCsfColumnInLegend;
+    const isCSF = this.props.scriptData && this.props.scriptData.csf;
     if (this.props.currentView === ViewType.STANDARDS && !isCSF) {
       this.props.setCurrentView(ViewType.SUMMARY);
     }
