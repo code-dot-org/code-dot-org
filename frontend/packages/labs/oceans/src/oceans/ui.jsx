@@ -5,12 +5,7 @@ import _ from 'lodash';
 import {getState, setState} from './state';
 import constants, {AppMode, Modes} from './constants';
 import modeHelpers from './modeHelpers';
-import helpers, {
-  $time,
-  currentRunTime,
-  finishMovement,
-  friendlyNameForFishPart
-} from './helpers';
+import helpers, {$time, currentRunTime, finishMovement} from './helpers';
 import train from './models/train';
 import {arrangeFish} from './models/pond';
 import colors from './colors';
@@ -36,6 +31,7 @@ import {
   faInfo,
   faTrash
 } from '@fortawesome/free-solid-svg-icons';
+import I18n from './i18n';
 
 const styles = {
   body: {
@@ -712,11 +708,10 @@ let UnwrappedConfirmationDialog = class ConfirmationDialog extends React.Compone
                 style={styles.confirmationHeader}
                 className="confirmation-text"
               >
-                Are you sure?
+                {I18n.t('areYouSure')}
               </div>
               <div style={styles.confirmationText}>
-                {`Erasing A.I.'s data will permanently delete all training. Is
-                that what you want to do?`}
+                {I18n.t('eraseWarning')}
               </div>
             </div>
           </div>
@@ -726,14 +721,14 @@ let UnwrappedConfirmationDialog = class ConfirmationDialog extends React.Compone
               style={styles.confirmationYesButton}
               className="dialog-button"
             >
-              <FontAwesomeIcon icon={faEraser} /> Erase
+              <FontAwesomeIcon icon={faEraser} /> {I18n.t('erase')}
             </Button>
             <Button
               onClick={this.props.onNoClick}
               style={styles.confirmationNoButton}
               className="dialog-button"
             >
-              Cancel
+              {I18n.t('cancel')}
             </Button>
           </div>
         </div>
@@ -753,34 +748,41 @@ class Loading extends React.Component {
   }
 }
 
+/*
+ * The choices for each word set are i18n keys. If adding or changing a word
+ * choice, be sure to add the word the way it should appear in i18n/oceans.json.
+ * The keys here will also appear in google analytics, so it's worth making
+ * them readable in English.
+ *
+ * */
 export const wordSet = {
   short: {
-    text: ['What type of fish do you want to train A.I. to detect?'],
+    textKey: 'wordQuestionShort',
     choices: [
-      ['Blue', 'Green', 'Red'],
-      ['Circular', 'Rectangular', 'Triangular']
+      ['blue', 'green', 'red'],
+      ['circular', 'rectangular', 'triangular']
     ],
     style: styles.button2col
   },
   long: {
-    text: ['Choose a new word to teach A.I.'],
+    textKey: 'wordQuestionLong',
     choices: [
       [
-        'Angry',
-        'Awesome',
-        'Delicious',
-        'Endangered',
-        'Fast',
-        'Fierce',
-        'Fun',
-        'Glitchy',
-        'Happy',
-        'Hungry',
-        'Playful',
-        'Scary',
-        'Silly',
-        'Spooky',
-        'Wild'
+        'angry',
+        'awesome',
+        'delicious',
+        'endangered',
+        'fast',
+        'fierce',
+        'fun',
+        'glitchy',
+        'happy',
+        'hungry',
+        'playful',
+        'scary',
+        'silly',
+        'spooky',
+        'wild'
       ]
     ],
     style: styles.button3col
@@ -822,10 +824,11 @@ let UnwrappedWords = class Words extends React.Component {
   }
 
   onChangeWord(itemIndex) {
-    const word = this.state.choices[itemIndex];
+    const wordKey = this.state.choices[itemIndex];
+    const word = I18n.t(wordKey);
     setState({
       word,
-      trainingQuestion: `Is this fish “${word.toLowerCase()}”?`
+      trainingQuestion: I18n.t('isThisFish', {word: word.toLowerCase()})
     });
     modeHelpers.toMode(Modes.Training);
 
@@ -836,11 +839,7 @@ let UnwrappedWords = class Words extends React.Component {
         [AppMode.FishLong]: 'words-long'
       };
 
-      window.trackEvent(
-        'oceans',
-        appModeToString[getState().appMode],
-        word.toLowerCase()
-      );
+      window.trackEvent('oceans', appModeToString[getState().appMode], wordKey);
     }
   }
 
@@ -850,11 +849,9 @@ let UnwrappedWords = class Words extends React.Component {
     return (
       <Body>
         <Content>
-          {wordSet[state.appMode].text && (
+          {wordSet[state.appMode].textKey && (
             <div style={styles.wordsText}>
-              {wordSet[state.appMode].text.map((text, i) => (
-                <div key={i}>{text}</div>
-              ))}
+              {I18n.t(wordSet[state.appMode].textKey)}{' '}
             </div>
           )}
           {this.state.choices.map((item, itemIndex) => (
@@ -864,7 +861,7 @@ let UnwrappedWords = class Words extends React.Component {
               style={[wordSet[state.appMode].style, styles.wordButton]}
               onClick={() => this.onChangeWord(itemIndex)}
             >
-              {item}
+              {I18n.t(item)}
             </Button>
           ))}
         </Content>
@@ -882,9 +879,11 @@ let UnwrappedTrain = class Train extends React.Component {
   render() {
     const state = getState();
     const yesButtonText =
-      state.appMode === AppMode.CreaturesVTrash ? 'Yes' : state.word;
+      state.appMode === AppMode.CreaturesVTrash ? I18n.t('yes') : state.word;
     const noButtonText =
-      state.appMode === AppMode.CreaturesVTrash ? 'No' : `Not ${state.word}`;
+      state.appMode === AppMode.CreaturesVTrash
+        ? I18n.t('no')
+        : I18n.t('notWord', {word: state.word});
     const resetTrainingFunction = () => {
       helpers.resetTraining(state);
       setState({showConfirmationDialog: false});
@@ -951,7 +950,7 @@ let UnwrappedTrain = class Train extends React.Component {
           style={styles.continueButton}
           onClick={() => modeHelpers.toMode(Modes.Predicting)}
         >
-          Continue
+          {I18n.t('continue')}
         </Button>
       </Body>
     );
@@ -1093,7 +1092,7 @@ let UnwrappedPredict = class Predict extends React.Component {
             id="uitest-run-btn"
           >
             <FontAwesomeIcon icon={faPlay} />
-            &nbsp; &nbsp; Run
+            &nbsp; &nbsp; {I18n.t('run')}
           </Button>
         )}
         {(state.isRunning || state.isPaused) && state.canSkipPredict && (
@@ -1102,7 +1101,7 @@ let UnwrappedPredict = class Predict extends React.Component {
             onClick={this.onContinue}
             id="uitest-continue-btn"
           >
-            Continue
+            {I18n.t('continue')}
           </Button>
         )}
       </Body>
@@ -1131,7 +1130,7 @@ class PondPanel extends React.Component {
             {state.pondExplainGeneralSummary && (
               <div>
                 <div style={styles.pondPanelPreText}>
-                  These were the most important fish parts:
+                  {I18n.t('mostImportantParts')}
                 </div>
                 {state.pondExplainGeneralSummary.slice(0, 5).map((f, i) => (
                   <div key={i}>
@@ -1151,14 +1150,14 @@ class PondPanel extends React.Component {
                           &nbsp;
                         </div>
                         <div style={styles.pondPanelGeneralBarText}>
-                          {friendlyNameForFishPart(f.partType)}
+                          {I18n.t(f.partType)}
                         </div>
                       </div>
                     )}
                   </div>
                 ))}
                 <div style={styles.pondPanelPostText}>
-                  Click individual fish to see their information.
+                  {I18n.t('clickIndividualFish')}
                 </div>
               </div>
             )}
@@ -1176,14 +1175,15 @@ class PondPanel extends React.Component {
             {state.pondExplainFishSummary && (
               <div>
                 <div style={styles.pondPanelPreText}>
-                  These were the most important fish parts in determining
-                  whether this fish was{' “'}
+                  {I18n.t('mostImportantPartsInDetermining')}
+                  {' “'}
                   <span style={{color: colors.green}}>
                     {state.word.toLowerCase()}
                   </span>
-                  {'”'} or{' “'}
+                  {'”'} {I18n.t('or')}
+                  {' “'}
                   <span style={{color: colors.red}}>
-                    not {state.word.toLowerCase()}
+                    {I18n.t('notWord', {word: state.word}).toLowerCase()}
                   </span>
                   {'”'}.
                 </div>
@@ -1204,7 +1204,7 @@ class PondPanel extends React.Component {
                           &nbsp;
                         </div>
                         <div style={styles.pondPanelGreenBarText}>
-                          {friendlyNameForFishPart(f.partType)}
+                          {I18n.t(f.partType)}
                         </div>
                       </div>
                     )}
@@ -1223,7 +1223,7 @@ class PondPanel extends React.Component {
                           &nbsp;
                         </div>
                         <div style={styles.pondPanelRedBarText}>
-                          {friendlyNameForFishPart(f.partType)}
+                          {I18n.t(f.partType)}
                         </div>
                       </div>
                     )}
@@ -1441,15 +1441,15 @@ let UnwrappedPond = class Pond extends React.Component {
                     modeHelpers.toMode(Modes.Words);
                   }}
                 >
-                  New Word
+                  {I18n.t('newWord')}
                 </Button>
                 <Button style={styles.finishButton} onClick={state.onContinue}>
-                  Finish
+                  {I18n.t('finish')}
                 </Button>
               </div>
             ) : (
               <Button style={styles.continueButton} onClick={state.onContinue}>
-                Continue
+                {I18n.t('continue')}
               </Button>
             )}
             <div>
@@ -1460,7 +1460,7 @@ let UnwrappedPond = class Pond extends React.Component {
                   setState({pondClickedFish: null, pondPanelShowing: false});
                 }}
               >
-                Train More
+                {I18n.t('trainMore')}
               </Button>
             </div>
           </div>
@@ -1532,9 +1532,9 @@ let UnwrappedGuide = class Guide extends React.Component {
                 }}
               >
                 <div>
-                  {currentGuide.heading && (
+                  {currentGuide.style === 'Info' && (
                     <div style={styles.guideHeading}>
-                      {currentGuide.heading}
+                      {I18n.t('didYouKnow')}
                     </div>
                   )}
                   <div style={styles.guideTypingText}>
@@ -1544,9 +1544,7 @@ let UnwrappedGuide = class Guide extends React.Component {
                       cursor={{show: false}}
                       onTypingDone={this.onShowing}
                     >
-                      {currentGuide.textFn
-                        ? currentGuide.textFn(getState())
-                        : currentGuide.text}
+                      {currentGuide.textFn(getState())}
                     </Typist>
                   </div>
                   <div
@@ -1557,14 +1555,12 @@ let UnwrappedGuide = class Guide extends React.Component {
                     }
                   >
                     <div style={styles.guideFinalText}>
-                      {currentGuide.textFn
-                        ? currentGuide.textFn(getState())
-                        : currentGuide.text}
+                      {currentGuide.textFn(getState())}
                     </div>
                   </div>
                   {currentGuide.style === 'Info' && (
                     <Button style={styles.infoGuideButton} onClick={() => {}}>
-                      Continue
+                      {I18n.t('continue')}
                     </Button>
                   )}
                 </div>

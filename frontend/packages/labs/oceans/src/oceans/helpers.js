@@ -66,21 +66,6 @@ export const colorForFishPart = (palette, part) => {
   }
 };
 
-export const friendlyNameForFishPart = part => {
-  const friendlyNamesForFishParts = {
-    dorsalFins: 'dorsal fin',
-    pectoralFinsFront: 'pectoral fins',
-    tails: 'tail',
-    bodies: 'body',
-    scales: 'scales',
-    eyes: 'eyes',
-    mouths: 'mouth',
-    colors: 'color'
-  };
-
-  return friendlyNamesForFishParts[part];
-};
-
 export const randomInt = (min, max) => {
   min = Math.ceil(min);
   max = Math.floor(max);

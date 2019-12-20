@@ -30,7 +30,7 @@ function initDemoPage() {
     canvas,
     backgroundCanvas,
     playSound: sounds.play.bind(sounds),
-    registerSound: sounds.register.bind(sounds),
+    registerSound: sounds.register.bind(sounds)
   });
 }
 
