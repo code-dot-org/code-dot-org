@@ -162,8 +162,7 @@ class SectionProgress extends Component {
 
     const levelDataInitialized = scriptData && !isLoadingProgress;
     const lessons = scriptData ? scriptData.stages : [];
-    const csfCourseSelected =
-      levelDataInitialized && !scriptData.excludeCsfColumnInLegend;
+    const csfCourseSelected = levelDataInitialized && scriptData.csf;
     const summaryStyle =
       currentView === ViewType.SUMMARY ? styles.show : styles.hide;
     const detailStyle =
