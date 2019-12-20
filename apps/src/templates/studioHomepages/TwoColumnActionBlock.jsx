@@ -171,7 +171,7 @@ export class LocalClassActionBlock extends Component {
     return (
       <TwoColumnActionBlock
         imageUrl={pegasus(
-          '/shared/images/fill-540x289/misc/beyond-local-map.png'
+          '/shared/images/fill-540x300/misc/beyond-local-map.png'
         )}
         heading={heading}
         subHeading={i18n.findLocalClassSubheading()}
@@ -192,7 +192,7 @@ export class AdministratorResourcesActionBlock extends Component {
     return (
       <TwoColumnActionBlock
         imageUrl={pegasus(
-          '/images/fill-540x289/2015AR/newcsteacherstrained.png'
+          '/images/fill-540x300/2015AR/newcsteacherstrained.png'
         )}
         heading={i18n.administratorResourcesHeading()}
         description={i18n.administratorResourcesDescription()}

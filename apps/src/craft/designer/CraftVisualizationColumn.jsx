@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import msg from '@cdo/locale';
-import craftMsg from './locale';
+import craftMsg from '../locale';
 
 import {default as GameButtons} from '../../templates/GameButtons';
 import BelowVisualization from '../../templates/BelowVisualization';

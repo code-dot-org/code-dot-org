@@ -805,11 +805,11 @@ es-MX:
 
           ## Código presentado
 
-          * **[HTML](//docs.code.org/weblab/html/)** - `<html></html>`
-          * **[Doctype](//docs.code.org/weblab/doctype/)** - `<!DOCTYPE>`
-          * **[Paragraph](//docs.code.org/weblab/P/)** - `<p></p>`
-          * **[Body](//docs.code.org/weblab/body/)** - `<body></body>`
-          * **[Head](//docs.code.org/weblab/head/)** - `<head></head>`
+          * **[HTML](//studio.code.org/docs/weblab/html/)** - `<html></html>`
+          * **[Doctype](//studio.code.org/docs/weblab/doctype/)** - `<!DOCTYPE>`
+          * **[Paragraph](//studio.code.org/docs/weblab/P/)** - `<p></p>`
+          * **[Body](//studio.code.org/docs/weblab/body/)** - `<body></body>`
+          * **[Head](//studio.code.org/docs/weblab/head/)** - `<head></head>`
       CSD U2 L4 Overview:
         title: Título
         content1: descripción aquí
@@ -824,7 +824,7 @@ es-MX:
 
           ## Código presentado
 
-          *  **[Heading](//docs.code.org/weblab/h/)** - `<h1></h1>`
+          *  **[Heading](//studio.code.org/docs/weblab/h/)** - `<h1></h1>`
 
       CSD U2 L5 Overview:
         title: Título
@@ -854,9 +854,9 @@ es-MX:
           ## Código presentado
 
 
-          *  **[Unordered List](//docs.code.org/weblab/ul/)** - `<ul></ul>`
-          *  **[List Item](//docs.code.org/weblab/li/)** - `<li></li>`
-          *  **[Ordered List](//docs.code.org/weblab/ol/)** - `<ol></ol>`
+          *  **[Unordered List](//studio.code.org/docs/weblab/ul/)** - `<ul></ul>`
+          *  **[List Item](//studio.code.org/docs/weblab/li/)** - `<li></li>`
+          *  **[Ordered List](//studio.code.org/docs/weblab/ol/)** - `<ol></ol>`
 
       CSD U2 L7 Overview:
         markdown: |
@@ -873,7 +873,7 @@ es-MX:
 
           ## Código presentado
 
-          *  **[Image](//docs.code.org/weblab/img/)** - `<img />`
+          *  **[Image](//studio.code.org/docs/weblab/img/)** - `<img />`
 
           ## Recursos
 
@@ -896,7 +896,7 @@ es-MX:
 
           ## Código presentado
 
-          *  **[Comment](//curriculum.code.org/documentation/weblab/comment/)** - `<!-- -->`
+          *  **[Comment](//studio.code.org/docs/weblab/comment/)** - `<!-- -->`
       CSD U2 Lesson 9 Overview:
         markdown: "# Resumen\n\nEsta lección trata de los hipervínculos, a través
           de los cuales los desarrolladores web pueden conectar páginas en un solo
@@ -905,7 +905,7 @@ es-MX:
           sitio en la Web.\n \n## Vocabulario\n\n* **Hipervínculo**: un enlace de
           un archivo HTML a otra ubicación o archivo, que generalmente se activa al
           hacer clic en una palabra o imagen resaltada en la pantalla.\n\n## Código
-          presentado\n\n*  **[Hyperlink](//docs.code.org/weblab/A/)** - `<a></a>`\n\n##
+          presentado\n\n*  **[Hyperlink](//studio.code.org/docs/weblab/A/)** - `<a></a>`\n\n##
           Recursos\n\n* [Personal Website - Project Guide](https://docs.google.com/document/d/1sPdFBq1nrwG9742tu3sXQ93xWbCWmNdCgo0dv3eYfXY/export?format=pdf)\n*
           [Personal Website - Peer Review](https://docs.google.com/document/d/1B5QXF0ASAy3vHcFQilQo3Q3J3GiiuQxBxnZFg8WDYaw/export?format=pdf)\n*
           [Personal Web Site - Rubric](https://docs.google.com/document/d/16ddR5r96qvv_Ti5gWN-AcjvCx0-SP6B7shSp-caKuDI/export?format=pdf)\n"
@@ -1159,8 +1159,8 @@ es-MX:
 
           ## Código presentado
 
-          * [sprite.debug](//docs.code.org/gamelab/debug/)
-          * [sprite.isTouching()](//docs.code.org/gamelab/isTouching/)
+          * [sprite.debug](//studio.code.org/docs/gamelab/debug/)
+          * [sprite.isTouching()](//studio.code.org/docs/gamelab/isTouching/)
 
           ## Recursos
 
@@ -1177,12 +1177,12 @@ es-MX:
 
           ## Código presentado
 
-          * [sprite.bounceOff()](//docs.code.org/gamelab/bounceOff/)
-          * [sprite.collide()](//docs.code.org/gamelab/collide/)
-          * [sprite.displace()](//docs.code.org/gamelab/displace/)
-          * [sprite.setCollider()](//docs.code.org/gamelab/setCollider/)
-          * [sprite.bounce()](//docs.code.org/gamelab/bounce/)
-          * [sprite.bounciness](//docs.code.org/gamelab/bounciness/)
+          * [sprite.bounceOff()](//studio.code.org/docs/gamelab/bounceOff/)
+          * [sprite.collide()](//studio.code.org/docs/gamelab/collide/)
+          * [sprite.displace()](//studio.code.org/docs/gamelab/displace/)
+          * [sprite.setCollider()](//studio.code.org/docs/gamelab/setCollider/)
+          * [sprite.bounce()](//studio.code.org/docs/gamelab/bounce/)
+          * [sprite.bounciness](//studio.code.org/docs/gamelab/bounciness/)
 
       CSD U3 Defender SFLP:
         markdown: |
@@ -1260,8 +1260,8 @@ es-MX:
 
           ## Código presentado
 
-          * [Define a function](//docs.code.org/gamelab/functionParams_none/)
-          * [Call a function](//docs.code.org/gamelab/callMyFunction/)
+          * [Define a function](//studio.code.org/docs/gamelab/functionParams_none/)
+          * [Call a function](//studio.code.org/docs/gamelab/callMyFunction/)
 
       CSD U3 Keypress Matching:
         title: 'Coincidencia: reacción a la pulsación de teclas'
@@ -1332,12 +1332,12 @@ es-MX:
           **Expresión booleana**: en programación, una expresión que evalúa si es
           Verdadero o Falso. \n* **Sentencia si**: la estructura de programación común
           que implementa \"sentencias condicionales\".\n\n## Código presentado\n\n*
-          [If statement](//docs.code.org/gamelab/ifBlock/)\n* [Less than operator](//docs.code.org/gamelab/lessThanOperator/)\n*
-          [Inequality operator](//docs.code.org/gamelab/inequalityOperator/)\n* [Less
-          than or equal operator](//docs.code.org/gamelab/lessThanOrEqualOperator/)\n*
-          [Greater than operator](//docs.code.org/gamelab/greaterThanOperator/)\n*
-          [Equality operator](//docs.code.org/gamelab/equalityOperator/)\n* [Greater
-          than or equal operator](//docs.code.org/gamelab/greaterThanOrEqualOperator/)\n"
+          [If statement](//studio.code.org/docs/gamelab/ifBlock/)\n* [Less than operator](//studio.code.org/docs/gamelab/lessThanOperator/)\n*
+          [Inequality operator](//studio.code.org/docs/gamelab/inequalityOperator/)\n* [Less
+          than or equal operator](//studio.code.org/docs/gamelab/lessThanOrEqualOperator/)\n*
+          [Greater than operator](//studio.code.org/docs/gamelab/greaterThanOperator/)\n*
+          [Equality operator](//studio.code.org/docs/gamelab/equalityOperator/)\n* [Greater
+          than or equal operator](//studio.code.org/docs/gamelab/greaterThanOrEqualOperator/)\n"
       CSD U3 Lesson Overview 12:
         markdown: |
           # Resumen
@@ -1346,7 +1346,7 @@ es-MX:
 
           ## Código presentado
 
-          * [keyDown()](//docs.code.org/gamelab/keyDown/)
+          * [keyDown()](//studio.code.org/docs/gamelab/keyDown/)
 
           ## Recursos
 
@@ -1363,14 +1363,14 @@ es-MX:
 
           ## Código presentado
 
-          * [keyWentUp()](//docs.code.org/gamelab/keyWentUp/)
-          * [mouseWentDown()](//docs.code.org/gamelab/mouseWentDown/)
-          * [mouseWentUp()](//docs.code.org/gamelab/mouseWentUp/)
-          * [keyWentDown()](//docs.code.org/gamelab/keyWentDown/)
-          * [mouseDown()](//docs.code.org/gamelab/mouseDown/)
-          * [mouseDidMove()](//docs.code.org/gamelab/mouseDidMove/)
-          * [sprite.visible](//docs.code.org/gamelab/visible/)
-          * [If/else statement](//docs.code.org/gamelab/ifElseBlock/)
+          * [keyWentUp()](//studio.code.org/docs/gamelab/keyWentUp/)
+          * [mouseWentDown()](//studio.code.org/docs/gamelab/mouseWentDown/)
+          * [mouseWentUp()](//studio.code.org/docs/gamelab/mouseWentUp/)
+          * [keyWentDown()](//studio.code.org/docs/gamelab/keyWentDown/)
+          * [mouseDown()](//studio.code.org/docs/gamelab/mouseDown/)
+          * [mouseDidMove()](//studio.code.org/docs/gamelab/mouseDidMove/)
+          * [sprite.visible](//studio.code.org/docs/gamelab/visible/)
+          * [If/else statement](//studio.code.org/docs/gamelab/ifElseBlock/)
 
       CSD U3 Lesson Overview 14:
         markdown: |
@@ -1419,9 +1419,9 @@ es-MX:
 
           ## Código presentado
 
-          * [ellipse()](//docs.code.org/gamelab/ellipse/)
-          * [rect()](//docs.code.org/gamelab/rect/)
-          * [fill()](//docs.code.org/gamelab/fill/)
+          * [ellipse()](//studio.code.org/docs/gamelab/ellipse/)
+          * [rect()](//studio.code.org/docs/gamelab/rect/)
+          * [fill()](//studio.code.org/docs/gamelab/fill/)
 
       CSD U3 Lesson Overview 4:
         markdown: |+
@@ -1435,10 +1435,10 @@ es-MX:
 
           ## Código presentado
 
-          * [background()](//docs.code.org/gamelab/background/)
-          * [ellipse()](//docs.code.org/gamelab/ellipse/)
-          * [rect()](//docs.code.org/gamelab/rect/)
-          * [randomNumber()](//docs.code.org/gamelab/randomNumber/)
+          * [background()](//studio.code.org/docs/gamelab/background/)
+          * [ellipse()](//studio.code.org/docs/gamelab/ellipse/)
+          * [rect()](//studio.code.org/docs/gamelab/rect/)
+          * [randomNumber()](//studio.code.org/docs/gamelab/randomNumber/)
 
       CSD U3 Lesson Overview 5:
         markdown: |
@@ -1452,8 +1452,8 @@ es-MX:
 
           ## Código presentado
 
-          * [Declare a variable](//docs.code.org/gamelab/declareNoAssign_x/)
-          * [Declare and assign a value to a variable](//docs.code.org/gamelab/declareAssign_x/)
+          * [Declare a variable](//studio.code.org/docs/gamelab/declareNoAssign_x/)
+          * [Declare and assign a value to a variable](//studio.code.org/docs/gamelab/declareAssign_x/)
 
           ## Recursos
 
@@ -1471,9 +1471,9 @@ es-MX:
 
           ## Código presentado
 
-          * [drawSprites()](//docs.code.org/gamelab/drawSprites/)
-          * [sprite.scale](//docs.code.org/gamelab/scale/)
-          * [var sprite = createSprite()](//docs.code.org/gamelab/createSprite/)
+          * [drawSprites()](//studio.code.org/docs/gamelab/drawSprites/)
+          * [sprite.scale](//studio.code.org/docs/gamelab/scale/)
+          * [var sprite = createSprite()](//studio.code.org/docs/gamelab/createSprite/)
 
           ## Recursos
 
@@ -1492,8 +1492,8 @@ es-MX:
 
           ## Código presentado
 
-          * [World.frameRate](//docs.code.org/gamelab/World.frameRate/)
-          * [function draw() {}](//docs.code.org/gamelab/draw/)
+          * [World.frameRate](//studio.code.org/docs/gamelab/World.frameRate/)
+          * [function draw() {}](//studio.code.org/docs/gamelab/draw/)
 
 
       CSD U3 Lesson Overview 8:
@@ -1549,9 +1549,9 @@ es-MX:
 
           ## Código presentado
 
-          * [sprite.velocityY](//docs.code.org/gamelab/velocityY/)
-          * [sprite.velocityX](//docs.code.org/gamelab/velocityX/)
-          * [sprite.rotationSpeed](//docs.code.org/gamelab/rotationSpeed/)
+          * [sprite.velocityY](//studio.code.org/docs/gamelab/velocityY/)
+          * [sprite.velocityX](//studio.code.org/docs/gamelab/velocityX/)
+          * [sprite.rotationSpeed](//studio.code.org/docs/gamelab/rotationSpeed/)
       CSD U3 Sprite Movement Predict Multi:
         questions:
         - text: Lee este programa y predice cuál de las siguientes animaciones se
@@ -1892,8 +1892,8 @@ es-MX:
 
           ## Código presentado
 
-          * [onEvent](//docs.code.org/applab/onEvent/)
-          * [setScreen](//docs.code.org/applab/setScreen/)
+          * [onEvent](//studio.code.org/docs/applab/onEvent/)
+          * [setScreen](//studio.code.org/docs/applab/setScreen/)
 
       CSD U4L15 SFLP:
         markdown: |
@@ -3178,7 +3178,7 @@ es-MX:
 
           ## Código presentado
 
-          * [RGB Color](//docs.code.org/weblab/rgb-color/)
+          * [RGB Color](//studio.code.org/docs/weblab/rgb-color/)
 
           ## Recursos
 
@@ -3207,11 +3207,11 @@ es-MX:
 
           ## Código presentado
 
-          *  **[Color](//docs.code.org/weblab/color/)** - `color: value;`
-          *  **[Text Align](//docs.code.org/weblab/text-align/)** - `text-align: value;`
-          *  **[Text Decoration](//docs.code.org/weblab/Text-Dec/)** - `text-decoration: value;`
-          *  **[Font Family](//docs.code.org/weblab/font-family/)** - `font-family:value;`
-          *  **[Font Size](//docs.code.org/weblab/font-size/)** - `font-size:value;`
+          *  **[Color](//studio.code.org/docs/weblab/color/)** - `color: value;`
+          *  **[Text Align](//studio.code.org/docs/weblab/text-align/)** - `text-align: value;`
+          *  **[Text Decoration](//studio.code.org/docs/weblab/Text-Dec/)** - `text-decoration: value;`
+          *  **[Font Family](//studio.code.org/docs/weblab/font-family/)** - `font-family:value;`
+          *  **[Font Size](//studio.code.org/docs/weblab/font-size/)** - `font-size:value;`
 
       Unit 2 Lesson 8 Overview:
         markdown: |+
@@ -3221,14 +3221,14 @@ es-MX:
 
           ## Código presentado
 
-          *  **[Background Color](//docs.code.org/weblab/background-color/)** - `background-color: value;`
-          *  **[Float](//docs.code.org/weblab/float/)** - `float: value;`
-          *  **[Margin](//docs.code.org/weblab/margin/)** - `margin: value;`
-          *  **[Width](//docs.code.org/weblab/width/)** - `width: value;`
-          *  **[Height](//docs.code.org/weblab/height/)** - `height: value;`
-          *  **[Border Style](//docs.code.org/weblab/border-style/)** - `border-style: value;`
-          *  **[Border Width](//docs.code.org/weblab/border-width/)** - `border-width: value;`
-          *  **[Border Color](//docs.code.org/weblab/border-color/)** - `border-color: value;`
+          *  **[Background Color](//studio.code.org/docs/weblab/background-color/)** - `background-color: value;`
+          *  **[Float](//studio.code.org/docs/weblab/float/)** - `float: value;`
+          *  **[Margin](//studio.code.org/docs/weblab/margin/)** - `margin: value;`
+          *  **[Width](//studio.code.org/docs/weblab/width/)** - `width: value;`
+          *  **[Height](//studio.code.org/docs/weblab/height/)** - `height: value;`
+          *  **[Border Style](//studio.code.org/docs/weblab/border-style/)** - `border-style: value;`
+          *  **[Border Width](//studio.code.org/docs/weblab/border-width/)** - `border-width: value;`
+          *  **[Border Color](//studio.code.org/docs/weblab/border-color/)** - `border-color: value;`
 
       behaviors 1 predict:
         questions:
