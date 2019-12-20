@@ -32,9 +32,7 @@ class DetailView extends Component {
           scriptData={scriptData}
           onScroll={this.afterScroll}
         />
-        <ProgressLegend
-          excludeCsfColumn={scriptData.excludeCsfColumnInLegend}
-        />
+        <ProgressLegend excludeCsfColumn={!scriptData.csf} />
       </div>
     );
   }
