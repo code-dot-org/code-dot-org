@@ -638,7 +638,7 @@ describe('Guide', () => {
       id: 'guide-id',
       style: '',
       heading: 'hey, listen!',
-      text: 'this is an important message'
+      textFn: () => 'this is an important message'
     });
     playSoundStub = sinon.stub(soundLibrary, 'playSound');
   });
