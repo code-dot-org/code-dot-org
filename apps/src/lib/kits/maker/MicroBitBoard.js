@@ -4,6 +4,7 @@ import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 import MBFirmataClient from '../../../third-party/maker/MBFirmataClient';
 import {
   createMicroBitComponents,
+  cleanupMicroBitComponents,
   componentConstructors
 } from './MicroBitComponents';
 
@@ -101,5 +102,12 @@ export default class MicroBitBoard extends EventEmitter {
     Object.keys(this.prewiredComponents_).forEach(key => {
       jsInterpreter.createGlobalProperty(key, this.prewiredComponents_[key]);
     });
+  }
+
+  reset() {
+    cleanupMicroBitComponents(
+      this.prewiredComponents_,
+      false /* shouldDestroyComponents */
+    );
   }
 }
