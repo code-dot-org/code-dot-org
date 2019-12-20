@@ -61,10 +61,8 @@ module Cdo
       # injection, which also means we don't support using this option with
       # source strings that include HTML
       def translate(locale, key, options = ::I18n::EMPTY_HASH)
-        markdown = options.fetch(:markdown, false)
-        options.delete(:markdown)
-        translation = super(locale, key, options)
-        if markdown
+        translation = super(locale, key, options.except(:markdown))
+        if options.fetch(:markdown, false)
           # The safe_links_only just makes sure that the URL is a "safe" web
           # one which starts with: "#", "/", "http://", "https://", "ftp://",
           # "mailto:" However, it isn't good enough because it ignores URLS
