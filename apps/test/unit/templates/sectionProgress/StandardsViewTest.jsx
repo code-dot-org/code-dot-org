@@ -55,7 +55,6 @@ describe('StandardView', () => {
     const wrapper = shallow(
       <StandardsView {...DEFAULT_PROPS} showStandardsIntroDialog={true} />
     );
-    console.log(wrapper.debug());
     expect(wrapper.find('#test-how-to-standards')).to.have.lengthOf(1);
   });
 });
