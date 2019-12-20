@@ -49,11 +49,9 @@ module Cdo
       # as the I18n key.
       def self.get_valid_separator(string)
         characters = string.split('').to_set
-        SEPARATORS.each do |separator|
-          return separator unless characters.include? separator
+        SEPARATORS.find do |separator|
+          !characters.include? separator
         end
-
-        nil
       end
     end
 
