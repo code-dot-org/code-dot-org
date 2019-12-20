@@ -798,7 +798,7 @@ const fishComponents = {
       ]
     }
   },
-  // PECTORAL FIN KNN DATA: [pointiness rank]
+  // PECTORAL FIN KNN DATA: []
   pectoralFinsFront: {
     pectoral_fin_1: {
       src: pectoral_fin_1_image,
