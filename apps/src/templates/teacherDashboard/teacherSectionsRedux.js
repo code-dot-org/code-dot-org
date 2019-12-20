@@ -2,6 +2,10 @@ import _ from 'lodash';
 import $ from 'jquery';
 import {OAuthSectionTypes} from './shapes';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {
+    setSection,
+    SET_SECTION
+} from '@cdo/apps/redux/sectionDataRedux';
 
 /**
  * @const {string[]} The only properties that can be updated by the user
@@ -246,6 +250,11 @@ export const finishEditingSection = () => (dispatch, getState) => {
           sectionId: section.id,
           serverSection: result
         });
+        console.log('server section is')
+        console.log(serverSection)
+        dispatch(
+            setSection(serverSection)
+        )
         resolve();
       })
       .fail((jqXhr, status) => {

@@ -5,6 +5,10 @@ import i18n from '@cdo/locale';
 import SmallChevronLink from '../SmallChevronLink';
 import SelectSectionDropdown from './SelectSectionDropdown';
 import TeacherDashboardNavigation from './TeacherDashboardNavigation';
+import EditSectionForm from './EditSectionForm';
+import EditSectionDialog from './EditSectionDialog';
+import {beginEditingSection} from './teacherSectionsRedux';
+import Button from '../Button';
 
 const styles = {
   headerContainer: {
@@ -38,10 +42,22 @@ class TeacherDashboardHeader extends React.Component {
               <span style={styles.headerSectionPrompt}>Assigned to:</span>
               {` ${this.props.currentScriptName}`}
             </div>
+            <Button
+              onClick={() => {
+                this.props.dispatch(
+                  beginEditingSection(this.props.currentSectionId)
+                );
+              }}
+              icon="gear"
+              size="default"
+              color="gray"
+              text="Edit section details"
+            />
           </div>
           <SelectSectionDropdown />
         </div>
         <TeacherDashboardNavigation />
+        <EditSectionDialog />
       </div>
     );
   }
@@ -57,5 +73,5 @@ export default connect(state => {
     script => script.id === currentScriptId
   )[0].name;
 
-  return {currentSectionName, currentScriptName};
+  return {currentSectionName, currentScriptName, currentSectionId};
 })(TeacherDashboardHeader);
