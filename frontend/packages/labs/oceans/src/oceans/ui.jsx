@@ -1472,7 +1472,7 @@ let UnwrappedPond = class Pond extends React.Component {
 };
 export const Pond = Radium(UnwrappedPond); // Exported for unit tests.
 
-let Guide = class Guide extends React.Component {
+let UnwrappedGuide = class Guide extends React.Component {
   onShowing() {
     clearInterval(getState().guideTypingTimer);
     setState({guideShowing: true, guideTypingTimer: null});
@@ -1523,6 +1523,7 @@ let Guide = class Guide extends React.Component {
               key={currentGuide.id}
               style={guideBgStyle}
               onClick={this.dismissGuideClick}
+              id="uitest-dismiss-guide"
             >
               <div
                 style={{
@@ -1580,7 +1581,7 @@ let Guide = class Guide extends React.Component {
     );
   }
 };
-Guide = Radium(Guide);
+export const Guide = Radium(UnwrappedGuide); // Exported for unit tests.
 
 export default class UI extends React.Component {
   render() {
