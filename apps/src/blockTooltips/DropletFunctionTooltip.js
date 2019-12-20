@@ -162,7 +162,7 @@ DropletFunctionTooltip.prototype.getFullDocumentationURL = function(appType) {
   if (this.customDocURL) {
     return this.customDocURL;
   }
-  return '//docs.code.org/' + appType + '/' + this.functionName + '/';
+  return '//studio.code.org/docs/' + appType + '/' + this.functionName + '/';
 };
 
 module.exports = DropletFunctionTooltip;
