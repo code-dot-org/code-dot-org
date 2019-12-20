@@ -13,17 +13,13 @@ $(document).ready(() => {
   Blockly.Css.inject(document);
   // Install the common Blockly blocks
   commonBlocks.install(window.Blockly, {});
-  // Install the custom CDO blocks for the following level/app types.
-  // TODO [FND-972] Only load the blocky content for one level type.
-  var options = [{skin: {id: 'birds'}, app: 'maze'}, {skin: {}, app: 'turtle'}];
-  for (var i = 0; i < options.length; i++) {
-    var option = options[i];
-    try {
-      const appBlocks = require('@cdo/apps/' + option.app + '/blocks');
-      appBlocks.install(window.Blockly, option);
-    } catch (error) {
-      console.warn(`Unable to load blockly blocks for ${option.app}: ${error}`);
-    }
+  try {
+    // TODO [FND-972] Only the associated level type's blocks.
+    // Install the custom CDO blocks for the associated level type.
+    const appBlocks = require('@cdo/apps/turtle/blocks');
+    appBlocks.install(window.Blockly, {skin: {}, app: 'turtle'});
+  } catch (error) {
+    console.warn(`Unable to load blockly blocks for turtle: ${error}`);
   }
 
   // Render Markdown
