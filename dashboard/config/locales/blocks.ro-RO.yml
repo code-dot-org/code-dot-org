@@ -964,6 +964,8 @@ ro:
         text: configurare
       Dancelab_whenSetup2:
         text: configurare
+      gamelab_addBehaviorSimple:
+        text: sprite {SPRITE} începe {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_changePropBy:
@@ -976,16 +978,23 @@ ro:
             '"y"': poziţia y
             '"direction"': direcţie de mişcare
       gamelab_checkTouching:
+        text: "{CONDITION} {SPRITE1} atinge {SPRITE2}"
         options:
           CONDITION:
             '"when"': când
             '"while"': în timp ce
       gamelab_clickedOn:
         text: când {SPRITE} e apăsat
+      gamelab_clickedSpritePointer:
+        text: a făcut clic pe {SPRITE}
       gamelab_comment:
         text: 'comentariu: {COMMENT}'
+      gamelab_createNewSprite:
+        text: "face un nou sprite \n numit {NAME} \n cu {COSTUME} \n la {LOCATION}"
       gamelab_destroy:
         text: elimină {THIS}
+      gamelab_draggable:
+        text: fiind draggable
       gamelab_edgesDisplace:
         text: marginile blochează {SPRITE} să se deplaseze
       gamelab_getProp:
@@ -999,6 +1008,7 @@ ro:
             '"direction"': direcţie de mişcare
             '"tint"': tentă
       gamelab_getThisSprite:
+        text: "{CHOICE} sprite"
         options:
           CHOICE:
             '"this"': acest
@@ -1054,6 +1064,8 @@ ro:
         text: locaţia {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeNewSpriteAnon:
+        text: face noi {ANIMATION_NAME} sprite la {LOCATION}
       gamelab_mirrorSprite:
         text: "{SPRITE} îndreptat {DIRECTION}"
         options:
@@ -1074,6 +1086,8 @@ ro:
             '"West"': Vest
       gamelab_moveToward:
         text: mută {SPRITE} pixeli {DISTANCE} spre {TARGET}
+      gamelab_playSound:
+        text: PlaySound {SOUND}
       gamelab_pointInDirection:
         text: îndreaptă {SPRITE} {DIRECTION}
         options:
@@ -1106,6 +1120,7 @@ ro:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': peșteră
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': oraș
+            '"https://studio.code.org/blockly/media/skins/studio/background.png"': instanţă
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': deșert
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': galaxie
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': rețea
@@ -1204,7 +1219,10 @@ ro:
         text: coordonatele x ale {SPRITE}
       gamelab_yLocationOf:
         text: coordonatele y ale {SPRITE}
+      Mikelab_addBehaviorSimple:
+        text: sprite {SPRITE} începe {BEHAVIOR}
       Mikelab_addTrainingData:
+        text: 'adăuga date de formare: {NAME},{LOCATION}'
         options:
           NAME:
             "{x: 201, y: 100}": obiect
@@ -1288,6 +1306,7 @@ ro:
       Mikelab_groupEdgesDisplace:
         text: marginile blochează {COSTUME} să se deplaseze
       Mikelab_groupGetProp:
+        text: "{SELECT} {COSTUME} {PROPERTY}"
         options:
           SELECT:
             '"average"': medie
@@ -1299,6 +1318,7 @@ ro:
             '"y"': poziţia y
             '"direction"': direcţie de mişcare
       Mikelab_groupRemoveAllBehaviors:
+        text: opri {SELECT} {COSTUME} comportamente
         options:
           SELECT:
             '"all"': toate
@@ -1402,6 +1422,10 @@ ro:
         text: obiectul {SPRITE} opreşte {BEHAVIOR}
       Mikelab_repeatUntilComplete:
         text: repetă pentru totdeauna
+      Mikelab_sendBad:
+        text: mutați obiectul la stânga
+      Mikelab_sendGood:
+        text: mutați obiectul la dreapta
       Mikelab_setBG:
         options:
           BG:
@@ -1420,6 +1444,7 @@ ro:
             '"right"': dreapta
             '"left"': stânga
       Mikelab_sprite:
+        text: nou {COSTUME} sprite la {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": sus
@@ -1482,6 +1507,14 @@ ro:
         text: ia-o la stânga
       RyanLab_turnRight:
         text: ia-o la dreapta
+      SpriteLab2Beta_spriteSay:
+        text: sprite {SPRITE} spun {TEXT} pentru {SECONDS} secunde
+      Vector_createSpriteWith:
+        text: |-
+          crea sprite
+          do{STATEMENT}
+      Vector_log:
+        text: mesaj jurnal {MESSAGE}
       Vector_positionCenter:
         text: centru
       Vector_push:
@@ -1497,9 +1530,16 @@ ro:
       Vector_vectorNorth:
         text: nord
       Vector_where:
+        text: fiecare sprite unde {PROPERTY} este {VALUE} do{STATEMENT}
         options:
           PROPERTY:
             "'shapeColor'": culoare
+      aalab_addBehaviorForDuration:
+        text: aalab sprite {SPRITE} începe {BEHAVIOR} pentru {SECONDS} secunde
+      aalab_addBehaviorUntilBoolean:
+        text: sprite {SPRITE} începe {BEHAVIOR} până la {CONDITION}
+      aalab_createNewSpriteAnonReturn2:
+        text: nou sprite numit{SPRITE_NAME} cu costum{ANIMATION_NAME} la locul{LOCATION}
       aalab_goToScene:
         text: du-te la scena {SCENE}
         options:
@@ -1516,11 +1556,18 @@ ro:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_setupStory:
+        text: poveste de configurare
       aalab_showHideSprite:
+        text: "{OPTION}{SPRITE}"
         options:
           OPTION:
             '"show"': arată
             '"hide"': ascunde
+      binary_drawBin:
+        text: trage binar {BIN}
+      binary_drawDec:
+        text: desena zecimal {DEC}
       binary_drawPixelHere:
         text: setează pixel {VAL}
         options:
@@ -1528,6 +1575,8 @@ ro:
             '0': oprit
             '1': pornit
             '"toggle"': comută
+      binary_drawString:
+        text: trage șir {STR}
       binary_goTo:
         text: sari la {LOC}
       binary_goToHome:
@@ -1575,6 +1624,7 @@ ro:
             "'sand'": nisip
             "'wool_blue'": apă adâncă
             "'planksOak'": cherestea de stejar
+            "'seaLantern'": felinar de mare
       craft_ifStandingOnLimit:
         text: |-
           dacă stă pe {TYPE}
@@ -1583,6 +1633,9 @@ ro:
           TYPE:
             "'sand'": nisip
             "'darkPrismarine'": prismarin întunecat
+            "'seaLantern'": felinar de mare
+      craft_log:
+        text: mesaj jurnal {MESSAGE}
       craft_moveForward:
         text: mută înainte
       craft_placeBlock:
@@ -1607,6 +1660,7 @@ ro:
             '"yellowDeadCoralBlock"': bloc mort de coral galben
             '"prismarine"': prismarin
             '"darkPrismarine"': prismarin întunecat
+            '"seaLantern"': felinar de mare
             '"packedIce"': gheaţă împachetată
             '"blueIce"': gheaţă albastră
             '"blackConcrete"': beton negru

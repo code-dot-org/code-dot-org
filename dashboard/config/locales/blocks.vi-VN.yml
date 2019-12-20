@@ -22,8 +22,10 @@ vi:
           MOVE1:
             MOVES.Roll: Cuộn cơ thể
             MOVES.ClapHigh: Vỗ tay cao
+            MOVES.Dab: Đáp
             MOVES.DoubleJam: Giảm gấp đôi
             MOVES.Drop: Thả
+            MOVES.Floss: Chỉ tơ nha khoa
             MOVES.Fresh: Tươi
             MOVES.Clown: Chú hề
             MOVES.Kick: Ngôi sao
@@ -32,14 +34,17 @@ vi:
           MOVE2:
             MOVES.Roll: Cuộn cơ thể
             MOVES.ClapHigh: Vỗ tay cao
+            MOVES.Dab: Đáp
             MOVES.DoubleJam: Giảm gấp đôi
             MOVES.Drop: Thả
+            MOVES.Floss: Chỉ tơ nha khoa
             MOVES.Fresh: Tươi
             MOVES.Clown: Chú hề
             MOVES.Kick: Ngôi sao
             MOVES.ThisOrThat: Đây hoặc đó
             MOVES.Rest: Không có
       Dancelab_atTimestamp:
+        text: sau {TIMESTAMP} {UNIT}
         options:
           UNIT:
             '"measures"': nhịp
@@ -74,8 +79,10 @@ vi:
             '"rand"': "(Ngẫu nhiên)"
             MOVES.Roll: Cuộn cơ thể
             MOVES.ClapHigh: Vỗ tay cao
+            MOVES.Dab: Đáp
             MOVES.DoubleJam: Giảm gấp đôi
             MOVES.Drop: Thả
+            MOVES.Floss: Chỉ tơ nha khoa
             MOVES.Fresh: Tươi
             MOVES.Clown: Chú hề
             MOVES.Kick: Ngôi sao
@@ -93,8 +100,10 @@ vi:
             '"rand"': "(Ngẫu nhiên)"
             MOVES.Roll: Cuộn cơ thể
             MOVES.ClapHigh: Vỗ tay cao
+            MOVES.Dab: Đáp
             MOVES.DoubleJam: Giảm gấp đôi
             MOVES.Drop: Thả
+            MOVES.Floss: Chỉ tơ nha khoa
             MOVES.Fresh: Tươi
             MOVES.Clown: Chú hề
             MOVES.Kick: Ngôi sao
@@ -160,9 +169,11 @@ vi:
             MOVES.Roll: Cuộn cơ thể
             MOVES.XClapSide: Vỗ tay
             MOVES.ClapHigh: Vỗ tay cao
+            MOVES.Dab: Đáp
             MOVES.XFever: Disco
             MOVES.DoubleJam: Giảm gấp đôi
             MOVES.Drop: Thả
+            MOVES.Floss: Chỉ tơ nha khoa
             MOVES.Fresh: Tươi
             MOVES.Clown: Chú hề
             MOVES.XHeadHips: Đầu + Hông
@@ -189,9 +200,11 @@ vi:
             MOVES.Roll: Cuộn cơ thể
             MOVES.XClapSide: Vỗ tay
             MOVES.ClapHigh: Vỗ tay cao
+            MOVES.Dab: Đáp
             MOVES.XFever: Disco
             MOVES.DoubleJam: Giảm gấp đôi
             MOVES.Drop: Thả
+            MOVES.Floss: Chỉ tơ nha khoa
             MOVES.Fresh: Tươi
             MOVES.Clown: Chú hề
             MOVES.XHeadHips: Đầu + Hông
@@ -261,8 +274,10 @@ vi:
           DANCE:
             MOVES.ClapHigh: Vỗ tay cao
             MOVES.Clown: Chú hề
+            MOVES.Dab: Đáp
             MOVES.DoubleJam: Giảm gấp đôi
             MOVES.Drop: Thả
+            MOVES.Floss: Chỉ tơ nha khoa
             MOVES.Fresh: Tươi
             MOVES.Roll: Cuộn cơ thể
             MOVES.Kick: Ngôi sao
@@ -346,6 +361,7 @@ vi:
             '"grid"': lưới
             '"row"': hàng
             '"column"': cột
+            '"x"': criss-cross
             '"plus"': cộng
             '"random"': ngẫu nhiên
       Dancelab_makeAnonymousDanceSprite:
@@ -454,6 +470,7 @@ vi:
             '"left"': cột trái
             '"column"': cột
             '"right"': cột phải
+            '"x"': criss-cross
             '"plus"': cộng
             '"random"': ngẫu nhiên
       Dancelab_mixColors:
@@ -893,7 +910,7 @@ vi:
             '"left"': trái
             '"down"': xuống
             '"right"': phải
-            '"space"': vũ trụ
+            '"space"': không gian
             '"enter"': nhập
             '"a"': a
             '"b"': b
@@ -941,6 +958,10 @@ vi:
         text: thiết lập
       Dancelab_whenSetup2:
         text: thiết lập
+      gamelab_addBehaviorSimple:
+        text: sprite {SPRITE} bắt đầu {BEHAVIOR}
+      gamelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       gamelab_changePropBy:
         text: thay đổi {PROPERTY} {SPRITE} theo {VAL}
         options:
@@ -951,10 +972,26 @@ vi:
             '"y"': tung độ
             '"direction"': phương hướng chuyển động
       gamelab_checkTouching:
+        text: "{CONDITION} {SPRITE1} chạm {SPRITE2} 123_321"
         options:
           CONDITION:
             '"when"': khi nào
             '"while"': Lặp khi
+      gamelab_clickedOn:
+        text: khi {SPRITE} nhấp
+      gamelab_clickedSpritePointer:
+        text: nhấp {SPRITE}
+      gamelab_comment:
+        text: 'bình luận: {COMMENT}'
+      gamelab_createNewSprite:
+        text: "làm cho một sprite mới \n gọi là {NAME} \n với trang phục {COSTUME}
+          \n {LOCATION} 123_321"
+      gamelab_destroy:
+        text: remove {THIS}
+      gamelab_draggable:
+        text: có thể kéo được
+      gamelab_edgesDisplace:
+        text: khối cạnh {SPRITE} từ di chuyển
       gamelab_getProp:
         text: "{PROPERTY} {SPRITE}"
         options:
@@ -965,9 +1002,19 @@ vi:
             '"y"': tung độ
             '"direction"': phương hướng chuyển động
             '"tint"': sắc thái
+      gamelab_getThisSprite:
+        text: "{CHOICE} sprite"
+        options:
+          CHOICE:
+            '"this"': điều này
+      gamelab_hideTitleScreen:
+        text: ẩn màn hình tiêu đề
+      gamelab_isTouchingEdges:
+        text: "{SPRITE} đang chạm vào các cạnh"
       gamelab_jumpTo:
         text: "{SPRITE} nhảy đến {LOCATION}"
       gamelab_keyPressed:
+        text: "{CONDITION} {KEY} ép"
         options:
           CONDITION:
             '"when"': khi nào
@@ -1003,34 +1050,91 @@ vi:
             '"w"': w
             '"x"': x
             '"z"': z
+      gamelab_locationAt:
+        text: 'vị trí x: {X} y: {Y}'
+      gamelab_locationMouse:
+        text: vị trí chuột
+      gamelab_locationOf:
+        text: vị trí của {SPRITE}
+      gamelab_location_picker:
+        text: "{LOCATION}"
+      gamelab_makeNewSpriteAnon:
+        text: làm mới {ANIMATION_NAME} sprite tại {LOCATION}
       gamelab_mirrorSprite:
+        text: "{SPRITE} mặt {DIRECTION}"
         options:
           DIRECTION:
             '"right"': phải
             '"left"': trái
+      gamelab_mouseLocation:
+        text: vị trí chuột
+      gamelab_moveForward:
+        text: di chuyển {SPRITE} {DISTANCE} pixel về phía trước
+      gamelab_moveInDirection:
+        text: Di chuyển {SPRITE} {DISTANCE} Pixel {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Phía Bắc
+            '"East"': Phía Đông
+            '"South"': Phía Nam
+            '"West"': Phía Tây
+      gamelab_moveToward:
+        text: di chuyển {SPRITE} pixel {DISTANCE} hướng {TARGET}
+      gamelab_playSound:
+        text: Âm thanh chơi {SOUND}
+      gamelab_pointInDirection:
+        text: điểm {SPRITE} {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Phía Bắc
+            '"East"': Phía Đông
+            '"South"': Phía Nam
+            '"West"': Phía Tây
+      gamelab_printText:
+        text: in {TEXT}
       gamelab_randColor:
         text: màu ngẫu nhiên
       gamelab_randomColor:
         text: màu ngẫu nhiên
+      gamelab_randomLocation:
+        text: vị trí ngẫu nhiên
+      gamelab_removeAllBehaviors:
+        text: "{SPRITE} dừng mọi thứ"
+      gamelab_removeBehaviorSimple:
+        text: sprite {SPRITE} điểm dừng {BEHAVIOR}
+      gamelab_removeTint:
+        text: loại bỏ màu từ {THIS}
+      gamelab_setAnimation:
+        text: thay đổi {THIS} trang phục để {ANIMATION}
       gamelab_setBackground:
         text: thiết lập màu nền {COLOR}
       gamelab_setBackgroundImage:
+        text: thiết lập nền để {IMG}
         options:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': hang
               động
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': thành
               phố
+            '"https://studio.code.org/blockly/media/skins/studio/background.png"': tòa
+              án
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': sa
               mạc
+            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': thiên
+              hà
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': lưới
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': cầu
               vồng
+            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': khoa
+              học viễn tưởng
+            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': sao
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': dưới
               nước
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': mùa
               đông
+            undefined: không
       gamelab_setProp:
+        text: bộ {SPRITE} [PROPERTY]123_321[1] để {VAL}
         options:
           PROPERTY:
             '"scale"': kích cỡ
@@ -1045,16 +1149,31 @@ vi:
             '"scale"': kích cỡ
             '"width"': chiều rộng
             '"height"': chiều cao
+      gamelab_setTint:
+        text: thay đổi màu sắc của {THIS} để {COLOR}
+      gamelab_setupSim:
+        text: |-
+          thiết lập mô phỏng với
+          {SPRITE1N}{SPRITE1COSTUME}Tốc độ{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}Tốc độ{SPRITE2SPEED}
+          Thu thập
+          {SPRITE3N}{SPRITE3COSTUME}
+      gamelab_showTitleScreen:
+        text: Hiển thị màn hình tiêu đề {BREAK} tiêu đề {TITLE} văn bản {SUBTITLE}
       gamelab_spriteClicked:
+        text: "{CONDITION} {SPRITE} nhấp"
         options:
           CONDITION:
             '"when"': khi nào
             '"while"': Lặp khi
       gamelab_turn:
+        text: lần lượt {SPRITE} {DIRECTION} {N} độ
         options:
           DIRECTION:
             '"right"': phải
             '"left"': trái
+      gamelab_whenDownArrow:
+        text: khi nhấn mũi tên xuống
       gamelab_whenKey:
         text: khi nhấn {KEY}
         options:
@@ -1068,7 +1187,18 @@ vi:
             '"w"': w
             '"s"': s
             '"d"': d
+      gamelab_whenLeftArrow:
+        text: khi nhấn mũi tên trái
+      gamelab_whenRightArrow:
+        text: khi nhấn mũi tên phải
+      gamelab_whenTouching:
+        text: khi {SPRITE1} chạm {SPRITE2}
+      gamelab_whenUpArrow:
+        text: khi nhấn mũi tên lên
+      gamelab_whileDownArrow:
+        text: trong khi nhấn mũi tên xuống
       gamelab_whileKey:
+        text: trong khi {KEY} ép
         options:
           KEY:
             '"up"': trên
@@ -1080,6 +1210,32 @@ vi:
             '"w"': w
             '"s"': s
             '"d"': d
+      gamelab_whileLeftArrow:
+        text: trong khi nhấn mũi tên trái
+      gamelab_whileRightArrow:
+        text: trong khi nhấn mũi tên phải
+      gamelab_whileTouching:
+        text: trong khi {SPRITE1} đang chạm {SPRITE2}
+      gamelab_whileUpArrow:
+        text: trong khi nhấn mũi tên lên
+      gamelab_xLocationOf:
+        text: x tọa độ {SPRITE}
+      gamelab_yLocationOf:
+        text: tọa độ y của {SPRITE}
+      Mikelab_addBehaviorSimple:
+        text: sprite {SPRITE} bắt đầu {BEHAVIOR}
+      Mikelab_addTrainingData:
+        text: 'thêm dữ liệu đào tạo: {NAME},{LOCATION}'
+        options:
+          NAME:
+            "{x: 201, y: 100}": đối tượng
+            "{x: 200, y: 100}": cá
+          LOCATION:
+            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": cá
+            "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": không phải cá
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": nhãn của tôi
+            "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": không phải là
+              nhãn của tôi
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1100,6 +1256,8 @@ vi:
             "{x: 300, y: 100}": trên phải
             "{x: 100, y: 300}": dưới trái
             "{x: 300, y: 300}": dưới phải
+      Mikelab_getNext:
+        text: lấy đối tượng tiếp theo
       Mikelab_getProp:
         options:
           PROPERTY:
@@ -1113,10 +1271,13 @@ vi:
         options:
           SELECT:
             '"all"': tất cả
+            '"this"': điều này
       Mikelab_groupChangePropBy:
+        text: thay đổi {PROPERTY} của {SELECT} {COSTUME} bởi {VAL}
         options:
           SELECT:
             '"all"': tất cả
+            '"this"': điều này
           PROPERTY:
             '"scale"': kích cỡ
             '"rotation"': xoay
@@ -1137,11 +1298,21 @@ vi:
             "{x: 100, y: 300}": dưới trái
             "{x: 300, y: 300}": dưới phải
       Mikelab_groupDestroy:
+        text: loại bỏ {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': tất cả
+            '"this"': điều này
+      Mikelab_groupDisplace:
+        text: tất cả {COSTUME} khối {COSTUME2} từ di chuyển
+      Mikelab_groupEdgesDisplace:
+        text: khối cạnh {COSTUME} từ di chuyển
       Mikelab_groupGetProp:
+        text: "{SELECT} {COSTUME}của {PROPERTY}"
         options:
+          SELECT:
+            '"average"': trung bình
+            '"this"': điều này
           PROPERTY:
             '"scale"': kích cỡ
             '"rotation"': xoay
@@ -1149,21 +1320,29 @@ vi:
             '"y"': tung độ
             '"direction"': phương hướng chuyển động
       Mikelab_groupRemoveAllBehaviors:
+        text: dừng {SELECT} {COSTUME} hành vi
         options:
           SELECT:
             '"all"': tất cả
+            '"this"': điều này
       Mikelab_groupRemoveBehaviorSimple:
+        text: "{SELECT} [COSTUME]123_321 điểm[1] {BEHAVIOR}"
         options:
           SELECT:
             '"all"': tất cả
+            '"this"': điều này
       Mikelab_groupRemoveTint:
+        text: loại bỏ màu sắc từ {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': tất cả
+            '"this"': điều này
       Mikelab_groupSetProp:
+        text: thiết lập {PROPERTY} của {SELECT} {COSTUME} để {VAL}
         options:
           SELECT:
             '"all"': tất cả
+            '"this"': điều này
           PROPERTY:
             '"scale"': kích cỡ
             '"rotation"': xoay
@@ -1171,9 +1350,29 @@ vi:
             '"y"': tung độ
             '"direction"': phương hướng chuyển động
       Mikelab_groupSetTint:
+        text: thay đổi màu sắc của {SELECT} {COSTUME} để {COLOR}
         options:
           SELECT:
             '"all"': tất cả
+            '"this"': điều này
+      Mikelab_groupWhenClickedOn:
+        text: khi {COSTUME} nhấp
+      Mikelab_groupWhenXTouchesY:
+        text: khi{COSTUME} chạm {COSTUME2}
+      Mikelab_groupWhileClicked:
+        text: trong khi nhấp vào {COSTUME}
+      Mikelab_groupWhileTouchingAny:
+        text: |-
+          trong khi{COSTUME} đang chạm {COSTUME2}
+          [STATEMENT]123_321[2]
+      Mikelab_hasBehavior:
+        text: "{SPRITE} hiện tại là {BEHAVIOR}"
+      Mikelab_hideFish:
+        text: remove {TRASH}
+        options:
+          TRASH:
+            object: đối tượng
+            fish: cá
       Mikelab_ifDanceIs:
         text: |-
           nếu {SPRITE} đang {DANCE}
@@ -1182,17 +1381,53 @@ vi:
           DANCE:
             MOVES.ClapHigh: Vỗ tay cao
             MOVES.Clown: Chú hề
+            MOVES.Dab: Đáp
             MOVES.DoubleJam: Giảm gấp đôi
             MOVES.Drop: Thả
+            MOVES.Floss: Chỉ tơ nha khoa
             MOVES.Fresh: Tươi
             MOVES.Roll: Cuộn cơ thể
             MOVES.Kick: Ngôi sao
             MOVES.ThisOrThat: Đây hoặc đó
             MOVES.Rest: Không có
+      Mikelab_ifLabel:
+        text: |-
+          nếu {DANCE}
+          làm {DO1} khác {DO2} 123_321
+        options:
+          DANCE:
+            MOVES.ClapHigh: cá
+            MOVES.Clown: nhãn của tôi
+      Mikelab_ifRecognizeLabel:
+        text: |-
+          nếu nhận ra đối tượng là {DANCE}
+          làm {DO1} [DO2]khác 123_321[2]
+        options:
+          DANCE:
+            MOVES.ClapHigh: cá
+            MOVES.Clown: nhãn của tôi
+      Mikelab_ifRecognizeLabelOnly:
+        text: |-
+          nếu nhận ra đối tượng là {DANCE}
+          làm {DO1}
+        options:
+          DANCE:
+            MOVES.ClapHigh: cá
+            MOVES.Clown: không phải là nhãn của tôi
+      Mikelab_locationAt:
+        text: 'vị trí x: {X} y: {Y}'
+      Mikelab_location_picker:
+        text: "{LOCATION}"
       Mikelab_randomColor:
         text: màu ngẫu nhiên
+      Mikelab_removeBehaviorSimple:
+        text: sprite {SPRITE} điểm dừng {BEHAVIOR}
       Mikelab_repeatUntilComplete:
         text: lặp lại mãi mãi
+      Mikelab_sendBad:
+        text: di chuyển đối tượng sang trái
+      Mikelab_sendGood:
+        text: di chuyển đối tượng sang phải
       Mikelab_setBG:
         options:
           BG:
@@ -1212,6 +1447,7 @@ vi:
             '"right"': phải
             '"left"': trái
       Mikelab_sprite:
+        text: mới {COSTUME} sprite tại {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": trên
@@ -1223,6 +1459,8 @@ vi:
             "{x: 300, y: 100}": trên phải
             "{x: 100, y: 300}": dưới trái
             "{x: 300, y: 300}": dưới phải
+      Mikelab_whenClickedOn:
+        text: khi {SPRITE} nhấp
       Mikelab_whenKeyPressed:
         text: khi nhấn {KEY}
         options:
@@ -1246,6 +1484,14 @@ vi:
             '"a"': A
             '"s"': Nam
             '"d"': D
+      Mikelab_whenMouseClicked:
+        text: khi nhấp chuột
+      Mikelab_whenYesNoClicked:
+        text: khi {KEY} nhấp
+        options:
+          KEY:
+            '"yes"': Vâng
+            '"no"': Không
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -1253,32 +1499,105 @@ vi:
             '"down"': mũi tên xuống dưới
             '"left"': mũi tên bên trái
             '"right"': mũi tên bên phải
+      Mikelab_xLocationOf:
+        text: x tọa độ {SPRITE}
+      Mikelab_yLocationOf:
+        text: tọa độ y của {SPRITE}
       RyanLab_moveForward:
         text: đi thẳng
       RyanLab_turnLeft:
         text: rẽ trái
       RyanLab_turnRight:
         text: rẽ phải
+      SpriteLab2Beta_spriteSay:
+        text: sprite {SPRITE} nói {TEXT} cho {SECONDS} giây
+      Vector_createSpriteWith:
+        text: |-
+          tạo sprite
+          làm{STATEMENT}
+      Vector_log:
+        text: thông điệp tường trình {MESSAGE}
       Vector_positionCenter:
         text: giữa
+      Vector_push:
+        text: vận tốc thiết lập {VECTOR}
+      Vector_randomLocation:
+        text: vị trí ngẫu nhiên
+      Vector_setColor:
+        text: thiết lập màu sắc để {COLOR}
+      Vector_setSize:
+        text: bộ chiều rộng {WIDTH} chiều cao {HEIGHT}
+      Vector_teleportTo:
+        text: đặt vị trí {POSITION}
+      Vector_vectorNorth:
+        text: phía bắc
+      Vector_where:
+        text: mỗi sprite nơi {PROPERTY} là {VALUE} làm{STATEMENT}
+        options:
+          PROPERTY:
+            "'shapeColor'": màu sắc
+      aalab_addBehaviorForDuration:
+        text: aalab sprite {SPRITE} bắt đầu {BEHAVIOR} cho {SECONDS} giây
+      aalab_addBehaviorUntilBoolean:
+        text: sprite {SPRITE} bắt đầu {BEHAVIOR} cho đến khi {CONDITION} 123_321
+      aalab_createNewSpriteAnonReturn2:
+        text: sprite mới tên{SPRITE_NAME} với trang phục{ANIMATION_NAME} tại vị trí{LOCATION}
       aalab_goToScene:
+        text: đi đến cảnh {SCENE}
         options:
           SCENE:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_prompt:
+        text: đặt câu hỏi {MESSAGE}
       aalab_scene:
+        text: cảnh {SCENE}
         options:
           SCENE:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_setupStory:
+        text: câu chuyện thiết lập
       aalab_showHideSprite:
+        text: "{OPTION}{SPRITE}"
         options:
           OPTION:
             '"show"': hiển thị
             '"hide"': ẩn
+      binary_drawBin:
+        text: vẽ nhị phân {BIN}
+      binary_drawBinScreen:
+        text: |-
+          vẽ màn hình
+          {B1}
+          {B2}
+          {B3}
+          {B4}
+          {B5}
+          {B6}
+          {B7}
+          {B8}
+      binary_drawDec:
+        text: vẽ thập phân {DEC}
+      binary_drawPixelHere:
+        text: bộ điểm ảnh {VAL}
+        options:
+          VAL:
+            '0': tắt
+            '1': trên
+            '"toggle"': bật/tắt
+      binary_drawString:
+        text: vẽ chuỗi {STR}
+      binary_goTo:
+        text: nhảy đến {LOC}
+      binary_goToHome:
+        text: nhảy lên trên cùng bên trái
+      binary_gridSize:
+        text: thiết lập kích thước lưới {SIZE}
       binary_move:
+        text: di chuyển {DIR}
         options:
           DIR:
             '"up"': trên

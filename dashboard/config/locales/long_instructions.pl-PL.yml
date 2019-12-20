@@ -409,7 +409,7 @@ pl-PL:
       Dance_Party_02: |-
         Stwórzmy taniec łosia!
 
-        Przeciągnij do obszaru roboczego blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>. Umieść go pod blokiem \<<xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Twój tancerz powinien rozpocząć nowy ruch po czwartym takcie.
+        Przeciągnij do obszaru roboczego blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>. Umieść go pod blokiem \<<xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Twój tancerz powinien rozpocząć nowy ruch po czwartym takcie.
 
         **Takty** służą w muzyce do odmierzania czasu. W tym samouczku takt składa się z 4 uderzeń.
       Dance_Party_03: |-
@@ -440,7 +440,7 @@ pl-PL:
         Teraz wiemy, jak zmieniać właściwości tancerza. Stosując poniższy blok możemy także sprawić, że te same właściwości będą automatycznie reagować na muzykę:
         <xml>
           <block type="Dancelab_startMapping">
-            <title name="SPRITE">right_unicorn</title>
+            <title name="SPRITE">right\_unicorn</title>
             <title name="PROPERTY">"scale"</title>
             <title name="RANGE">"bass"</title>
           </block></xml>
@@ -552,7 +552,7 @@ pl-PL:
       Dance_Party_extras_speed_2019: |-
         # Przyspiesz, zwolnij
 
-        Ostatni taniec wykorzystuje blok [blockly block] [0], by kontrolować tempo ruchu każdego tancerza. Spróbuj eksperymentować z różnymi prędkościami w różnych miejscach utworu. Zachowaj swobodę wprowadzania zmian w tym tańcu lub wróć do dowolnego z poprzednich tańców, aby sprawić, że będą jeszcze fajniejsze.
+        Ostatni taniec wykorzystuje blok <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml>, by kontrolować tempo ruchu każdego tancerza. Spróbuj eksperymentować z różnymi prędkościami w różnych miejscach utworu. Zachowaj swobodę wprowadzania zmian w tym tańcu lub wróć do dowolnego z poprzednich tańców, aby sprawić, że będą jeszcze fajniejsze.
       Dance_Party_extras_visible: |-
         # Gdzie oni poszli?
 
@@ -562,14 +562,13 @@ pl-PL:
         -   Pokaż i ukryj tancerzy przy użyciu klawiszy strzałek
         -   Ukryj wszystkich tancerzy i przełącz na ekscytujący efekt tła
       Dance_Party_extras_visible_2019: |-
-        # Ćwierćnuty
+        # Gdzie oni poszli?
 
-        Większość naszych tańców wykorzystuje całe takty, ale każdy takt składa się z czterech ćwierćnut. Taki taniec wykorzystuje blok [blockly block][0], by tancerz klaskał przy każdej ćwierćnucie po piątym takcie.
+        Ten taniec pokazuje i ukrywa dwie różne grupy tancerzy. Sprawdź to, a następnie spróbuj dodać własne ulepszenia.
 
-        Spróbuj zmienić liczby w bloku, by przekonać się, jak zmieni się taniec.
-
-        -   Eksperymentuj z czasem trwania innych nut (np. 0,5 dla półnuty lub 0,125 dla ósemki).
-        -   Dodaj inne wydarzenia.
+        -   Dodaj kolejną grupę tancerzy
+        -   Pokaż i ukryj tancerzy przy użyciu klawiszy strzałek
+        -   Ukryj wszystkich tancerzy i przełącz na ekscytujący efekt tła
       Function intro Ryan: "W Twoim polu roboczym znajduje się funkcja o nazwie \"build
         bridget\".  Zawiera ona cały kod potrzebny do przekroczenia rzeki! \\\r\n
         \\\r\nUmieść zielony bloczek dwukrotnie w polu roboczym, aby naprawić ścieżkę,

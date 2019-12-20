@@ -68,17 +68,8 @@ function getParams(form_data) {
 
   // Default showing US results
   if (!gmap_loc) {
-    gmap_loc = "37.6,-95.665";
-
-    params.push({
-      name: "distance",
-      value: 3000
-    });
-
-    params.push({
-      name: "num_volunteers",
-      value: 5000
-    });
+    // Westlake park, Seattle
+    gmap_loc = "47.611089,-122.337034";
   }
 
   params.push({

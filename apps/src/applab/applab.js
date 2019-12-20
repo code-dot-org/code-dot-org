@@ -19,11 +19,7 @@ import * as utils from '../utils';
 import * as dropletConfig from './dropletConfig';
 import {getDatasetInfo} from '../storage/dataBrowser/dataUtils';
 import {initFirebaseStorage} from '../storage/firebaseStorage';
-import {
-  getColumnsRef,
-  onColumnsChange,
-  addMissingColumns
-} from '../storage/firebaseMetadata';
+import {getColumnsRef, onColumnsChange} from '../storage/firebaseMetadata';
 import {getProjectDatabase, getSharedDatabase} from '../storage/firebaseUtils';
 import * as apiTimeoutList from '../lib/util/timeoutList';
 import designMode from './designMode';
@@ -1392,9 +1388,6 @@ function onDataViewChange(view, oldTableName, newTableName) {
         storageRef = sharedStorageRef.child(`tables/${newTableName}/records`);
       } else {
         storageRef = projectStorageRef.child(`tables/${newTableName}/records`);
-      }
-      if (newTableType === tableType.PROJECT) {
-        addMissingColumns(newTableName);
       }
       onColumnsChange(
         newTableType === tableType.PROJECT

@@ -524,12 +524,9 @@ de-DE:
 
           Ändern Sie den Hintergrundeffekt an verschiedenen Stellen des Songs, indem Sie den neuen Block unter den <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"Takte"</title></block></xml>-Ereignissen verbinden.
       Dance_Party_05:
-        validation: |-
-          **Wie bestehe ich dieses Level?**
-
-          -   Dein Tänzer muss mindestens 4 verschiedene Tanzbewegungen ausführen, bevor das Level endet.
-
-          _Dieses Level endet nach 12 Takten._
+        validation: "Wie kann ich zur nächsten Stufe gelangen? \n\nIhr Tänzer sollte
+          mindestens 4 verschiedene Tanzbewegungen durchlaufen, bevor die Stufe zu
+          Ende geht. \n\nDiese Stufe endet nach 12 Takten"
       Dance_Party_06:
         validation: |-
           **Wie schaffe ich diesen Level?**

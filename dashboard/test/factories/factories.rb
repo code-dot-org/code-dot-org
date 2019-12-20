@@ -67,7 +67,8 @@ FactoryGirl.define do
       user_type User::TYPE_TEACHER
       birthday Date.new(1980, 3, 14)
       factory :admin do
-        with_google_authentication_option
+        google_sso_provider
+        password nil
         after(:create) {|user| user.update(admin: true)}
       end
       trait :with_school_info do

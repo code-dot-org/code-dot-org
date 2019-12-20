@@ -9146,7 +9146,7 @@ es-MX:
 
         # Haz esto
 
-        Usa el bloque `reproducirSonido` desde el cajón "Mundo" para reproducir el sonido "<https://docs.code.org/sounds/blender.mp3>" cuando la manzana toca la licuadora. Deberás pegar la dirección del sonido en el bloque, para que se vea así: ![](<https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57 PM.png>)
+        Usa el bloque `reproducirSonido` desde el cajón "Mundo" para reproducir el sonido "<https://studio.code.org/docs/sounds/blender.mp3>" cuando la manzana toca la licuadora. Deberás pegar la dirección del sonido en el bloque, para que se vea así: ![](<https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57 PM.png>)
 
         [//]: # "https://images.code.org/82436176c744caa106cfc4971cd1db6c-image-1470247395711.png"
 
@@ -9168,7 +9168,7 @@ es-MX:
 
         # Haz esto
 
-        Usa el bloque `reproducirSonido` desde el cajón "Mundo" para reproducir el sonido "<https://docs.code.org/sounds/blender.mp3>" cuando la manzana toca la licuadora. Deberás pegar la dirección del sonido en el bloque, para que se vea así: ![](<https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57 PM.png>)
+        Usa el bloque `reproducirSonido` desde el cajón "Mundo" para reproducir el sonido "<https://studio.code.org/docs/sounds/blender.mp3>" cuando la manzana toca la licuadora. Deberás pegar la dirección del sonido en el bloque, para que se vea así: ![](<https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57 PM.png>)
 
         [//]: # "https://images.code.org/82436176c744caa106cfc4971cd1db6c-image-1470247395711.png"
 
@@ -9190,7 +9190,7 @@ es-MX:
 
         # Haz esto
 
-        Usa el bloque `reproducirSonido` desde el cajón "Mundo" para reproducir el sonido "<https://docs.code.org/sounds/blender.mp3>" cuando la manzana toca la licuadora. Deberás pegar la dirección del sonido en el bloque, para que se vea así: ![](<https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57 PM.png>)
+        Usa el bloque `reproducirSonido` desde el cajón "Mundo" para reproducir el sonido "<https://studio.code.org/docs/sounds/blender.mp3>" cuando la manzana toca la licuadora. Deberás pegar la dirección del sonido en el bloque, para que se vea así: ![](<https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57 PM.png>)
 
         [//]: # "https://images.code.org/82436176c744caa106cfc4971cd1db6c-image-1470247395711.png"
 
@@ -16676,14 +16676,13 @@ es-MX:
         -   Muestra y oculta a los bailarines con las teclas de flechas
         -   Oculta todos los bailarines y cambia a un emocionante efecto de fondo
       Dance_Party_extras_visible_2019: |-
-        # Negras
+        # ¿Dónde habrán ido?
 
-        La mayoría de nuestros bailes utilizaron compases completos, pero cada compás está formado por 4 negras. Este baile usa [bloque blockly][0] para que el bailarín aplauda en cada negra luego del quinto compás.
+        Este baile muestra y oculta dos diferentes grupos de bailarines. Echa un vistazo y luego intenta agregar tu propio estilo.
 
-        Intenta cambiar los números en el bloque para ver cómo cambia el baile.
-
-        -   Experimenta con otras duraciones de notas (como 0,5 para una semicorchea o 0,125 para una corchea).
-        -   Añade algunos eventos.
+        -   Añade otro grupo de bailarines
+        -   Muestra y oculta a los bailarines con las teclas de flechas
+        -   Oculta todos los bailarines y cambia a un emocionante efecto de fondo
       Escape Room Example: |-
         # Juego de escape
 
