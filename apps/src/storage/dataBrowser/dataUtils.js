@@ -27,6 +27,14 @@ export function isBlank(value) {
   return value === undefined || value === '' || value === null;
 }
 
+export function sortAlphabeticallyOrNumerically(items) {
+  const isNumeric = items.every(item => isNumber(item));
+  if (isNumeric) {
+    return items.sort((a, b) => a - b);
+  }
+  return items.sort();
+}
+
 /**
  * @param {Object[]} records
  * @param {string[]} columns
