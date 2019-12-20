@@ -56,7 +56,8 @@ module EscapeHTMLInTranslate
   # string, we recommend they contact the i18n team about the best way to
   # handle that.
   def translate(locale, key, options = ::I18n::EMPTY_HASH)
-    CGI.escapeHTML(super(locale, key, options))
+    result = super(locale, key, options)
+    result.is_a?(String) ? CGI.escapeHTML(result) : result
   end
 end
 
