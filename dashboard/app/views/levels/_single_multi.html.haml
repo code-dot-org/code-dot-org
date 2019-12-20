@@ -44,7 +44,7 @@
 
   - localized_questions = level.localized_property(:questions)
   - if localized_questions.any?
-    .multi-question!= render_multi_or_match_content(localized_questions[0]["text"])
+    .multi-question= render_multi_or_match_content(localized_questions[0]["text"])
 
   - answers_class = 'answers ' + (question_content_blank ? 'question-content-blank' : '')
 
@@ -85,7 +85,7 @@
                 ="#{multi_answer_characters[i]}. "
                 &nbsp;
             %label.item-label{style: "height: #{height}"}
-              != render_multi_or_match_content(localized_answers[i]['text'])
+              = render_multi_or_match_content(localized_answers[i]['text'])
           - if use_tight_layout && !force_wrap_layout
             %br/
 

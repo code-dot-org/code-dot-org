@@ -22,4 +22,4 @@
                       .item-answer-letter{style: "display: inline-block"}
                         = "#{correct_answer[:letter]}."
                         &nbsp;
-                    != render_multi_or_match_content(localized_answers[correct_answer[:index]]['text'])
+                    = render_multi_or_match_content(localized_answers[correct_answer[:index]]['text'])
