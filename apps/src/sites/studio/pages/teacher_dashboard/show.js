@@ -11,7 +11,10 @@ import manageStudents, {
 import teacherSections, {
   setSections,
   selectSection,
-  setRosterProvider
+  setRosterProvider,
+  setStageExtrasScriptIds,
+  setValidAssignments,
+  setValidGrades
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
@@ -29,6 +32,7 @@ const script = document.querySelector('script[data-dashboard]');
 const scriptData = JSON.parse(script.dataset.dashboard);
 const section = scriptData.section;
 const sections = scriptData.sections;
+const validGrades = scriptData.validGrades;
 const validScripts = scriptData.validScripts;
 const studentScriptIds = scriptData.studentScriptIds;
 const validCourses = scriptData.validCourses;
@@ -55,6 +59,10 @@ $(document).ready(function() {
   store.dispatch(selectSection(section.id));
   store.dispatch(setRosterProvider(section.login_type));
   store.dispatch(setLoginType(section.login_type));
+
+  //TODO double check
+  store.dispatch(setValidAssignments(validCourses, validScripts));
+  store.dispatch(setValidGrades(validGrades));
 
   if (!section.sharing_disabled && section.script.project_sharing) {
     store.dispatch(setShowSharingColumn(true));
