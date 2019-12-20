@@ -43,3 +43,6 @@ Some dorsal fins define an x-adjustment to shift the anchor point. This is usefu
 
 ### I18n
 By default, this tutorial is in English. The strings live at i18n/oceans.json and should not be moved without corresponding changes to the I18n pipeline in `code-dot-org`. Translations can be passed into the app using the `i18n` param. If any translations are missing, the English string will be used as a default. This also means that adding a new string is safe and does not require any further steps.
+
+### Machine Learning algorithms
+We currently have support for two machine learning algorithms: k nearest neighbor (KNN) and support vector machine (SVM). We also have a mobilenet model that is saved at `src/oceans/model.json` (it's saved here to avoid a call to googleapis.com).
