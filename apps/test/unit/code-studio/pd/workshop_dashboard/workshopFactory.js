@@ -7,13 +7,14 @@ import {States} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
  * @see also `workshopShape` and `enrollmentShape` in types.js
  */
 Factory.define('workshop')
-  .sequence('id')
+  .sequence('id', n => n.toString())
   .attr('course', 'CS Fundamentals')
   .attr('subject', 'Intro')
   .attr('sessions', () => Factory.buildList('session', 1))
   .attr('state', States[0])
   .attr('account_required_for_attendance?', false)
-  .attr('scholarship_workshop?', false);
+  .attr('scholarship_workshop?', false)
+  .attr('created_at', () => new Date().toISOString());
 
 Factory.define('session')
   .sequence('id')
