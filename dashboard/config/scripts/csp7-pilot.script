@@ -14,7 +14,7 @@ stage 'Parameters and Return Investigate', flex_category: 'csp_parameters_return
 level 'CSP U7L2 SFLP 20-21', progression: 'Lesson Overview'
 level 'U7 Param Return Investigate Rock', progression: 'App Investigation'
 level 'U7 Param Investigate Poetry App', progression: 'App Investigation'
-level 'U7L2 CSP CFU Param and Return', progression: 'Check For Understanding'
+level 'U7L2 CSP CFU Param and Return', progression: 'Check For Understanding', assessment: true
 
 stage 'Parameters and Return Practice', flex_category: 'csp_parameters_return_values'
 level 'CSP U7L3 SFLP 20-21', progression: 'Lesson Overview'
@@ -35,7 +35,7 @@ level 'U7 Param Return Make RPS App 2', progression: 'Build the Rock Paper Sciss
 level 'U7 Param Return Make RPS App 3', progression: 'Build the Rock Paper Scissors App'
 level 'U7 Param Return Make RPS App 4', progression: 'Build the Rock Paper Scissors App'
 level 'U7 Param Return Make RPS App 5', progression: 'Build the Rock Paper Scissors App'
-level 'U7 Param Return Make RPS App 6', progression: 'Build the Rock Paper Scissors App'
+level 'U7 Param Return Make RPS App 6', progression: 'Build the Rock Paper Scissors App', assessment: true
 
 stage 'Libraries Explore', flex_category: 'csp_libraries'
 level 'CSP U7L5 SFLP 20-21', progression: 'Lesson Overview'
@@ -45,7 +45,7 @@ stage 'Libraries Investigate', flex_category: 'csp_libraries'
 level 'CSP U7L6 SFLP 20-21', progression: 'Lesson Overview'
 level 'U7L6 States App Investigation', progression: 'States App'
 level 'U7L6 Pigify App Investigation', progression: 'Pigify App'
-level 'U7L6 CSP CFU Libraries', progression: 'Check For Understanding'
+level 'U7L6 CSP CFU Libraries', progression: 'Check For Understanding', assessment: true
 
 stage 'Libraries Practice', flex_category: 'csp_libraries'
 level 'CSP U7L7 SFLP 20-21', progression: 'Lesson Overview'
@@ -57,12 +57,16 @@ level 'U7 Libraries Practice 4', progression: 'Testing Libraries'
 
 stage 'Project - Make a Library Part 1', flex_category: 'csp_libraries'
 level 'CSP U7L8 SFLP 20-21', progression: 'Lesson Overview'
+level 'U7 Libraries Project Part 1', progression: 'Build Your Library'
 
 stage 'Project - Make a Library Part 2', flex_category: 'csp_libraries'
 level 'CSP U7L9 SFLP 20-21', progression: 'Lesson Overview'
+level 'U7 Libraries Project Part 2', progression: 'Build Your Library'
+level 'U7 Libraries Project Test a Library', progression: 'Test a Classmate\'s Library'
 
 stage 'Project - Make a Library Part 3', flex_category: 'csp_libraries'
 level 'CSP U7L10 SFLP 20-21', progression: 'Lesson Overview'
+level 'U7 Libraries Project Part 3', progression: 'Build Your Library', assessment: true
 
 stage 'Assessment Day'
 level 'CSP U7L12 SFLP 20-21', progression: 'Lesson Overview'
