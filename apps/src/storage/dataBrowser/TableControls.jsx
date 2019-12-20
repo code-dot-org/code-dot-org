@@ -67,7 +67,7 @@ class TableControls extends React.Component {
         </div>{' '}
         <div style={styles.buttonWrapper}>
           {experiments.isEnabled(experiments.APPLAB_DATASETS) && (
-            <VisualizerModal />
+            <VisualizerModal key={this.props.tableName} />
           )}
 
           {!this.props.readOnly && (

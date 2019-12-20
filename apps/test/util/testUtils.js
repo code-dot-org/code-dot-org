@@ -385,3 +385,45 @@ export function enforceDocumentBodyCleanup(
     describe('', runTestCases);
   });
 }
+
+/**
+ * Call in the `describe` block for a group of tests to stub the value of window.dashboard safely.
+ * @param {object} value - The temporary value for window.dashboard
+ * @example
+ *   describe('example', () => {
+ *     stubWindowDashboard({
+ *       CODE_ORG_URL: '//test.code.org'
+ *     });
+ *
+ *     it('stubs the value', () => {
+ *       assert.equal('//test.code.org', window.dashboard.CODE_ORG_URL);
+ *     });
+ *   });
+ */
+export function stubWindowDashboard(value) {
+  let originalDashboard;
+  before(() => (originalDashboard = window.dashboard));
+  after(() => (window.dashboard = originalDashboard));
+  beforeEach(() => (window.dashboard = value));
+}
+
+/**
+ * Call in the `describe` block for a group of tests to stub the value of window.pegasus safely.
+ * @param {object} value - The temporary value for window.pegasus
+ * @example
+ *   describe('example', () => {
+ *     stubWindowPegasus({
+ *       STUDIO_URL: '//test-studio.code.org'
+ *     });
+ *
+ *     it('stubs the value', () => {
+ *       assert.equal('//test-studio.code.org', window.dashboard.STUDIO_URL);
+ *     });
+ *   });
+ */
+export function stubWindowPegasus(value) {
+  let originalPegasus;
+  before(() => (originalPegasus = window.pegasus));
+  after(() => (window.pegasus = originalPegasus));
+  beforeEach(() => (window.pegasus = value));
+}

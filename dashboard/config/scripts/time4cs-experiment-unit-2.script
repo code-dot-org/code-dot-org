@@ -1,80 +1,83 @@
 login_required true
 hideable_stages true
+editor_experiment 'broward'
 
-stage 'Introduction to the Problem', flex_category: 'csf_conditionals'
+stage 'Introduction to the Problem', flex_category: 'time4cs_c1'
+level 'BrowardTestMarkdownLevel'
+level 'BrowardTestMarkdownLevel2'
+
+stage 'Crowdsourcing (Integrated lesson)', flex_category: 'time4cs_c1'
+level 'BrowardTestMarkdownLevel'
+level 'BrowardTestMarkdownLevel2'
+
+stage 'Everglades Habitats', flex_category: 'time4cs_c1'
 level 'BrowardTestMarkdownLevel'
 
-stage 'Crowdsourcing (Integrated lesson)', flex_category: 'csf_conditionals'
+stage 'Evaluating a Project in Sprite Lab', flex_category: 'time4cs_c1'
 level 'BrowardTestMarkdownLevel'
 
-stage 'Everglades Habitats', flex_category: 'csf_conditionals'
+stage 'Food Chains', flex_category: 'time4cs_c2'
 level 'BrowardTestMarkdownLevel'
 
-stage 'Evaluating a Project in Sprite Lab', flex_category: 'csf_conditionals'
+stage 'Conditionals with Cards (Integrated Lesson)- Part 1', flex_category: 'time4cs_c2'
 level 'BrowardTestMarkdownLevel'
 
-stage 'Food Chains', flex_category: 'csf_nested_loops'
+stage 'Alligator Holes', flex_category: 'time4cs_c2'
 level 'BrowardTestMarkdownLevel'
 
-stage 'Conditionals with Cards (Integrated Lesson)- Part 1', flex_category: 'csf_nested_loops'
+stage 'Food Chain Game', flex_category: 'time4cs_c2'
 level 'BrowardTestMarkdownLevel'
 
-stage 'Alligator Holes', flex_category: 'csf_nested_loops'
+stage 'Invasive Species', flex_category: 'time4cs_c3'
 level 'BrowardTestMarkdownLevel'
 
-stage 'Food Chain Game', flex_category: 'csf_nested_loops'
+stage 'Conditionals with Cards (Integrated Lesson)- Part 2', flex_category: 'time4cs_c3'
 level 'BrowardTestMarkdownLevel'
 
-stage 'Invasive Species', flex_category: 'csf_functions'
+stage 'I am in Big Trouble', flex_category: 'time4cs_c3'
 level 'BrowardTestMarkdownLevel'
 
-stage 'Conditionals with Cards (Integrated Lesson)- Part 2', flex_category: 'csf_functions'
+stage 'Conditionals in Sprite Lab', flex_category: 'time4cs_c3'
 level 'BrowardTestMarkdownLevel'
 
-stage 'I am in Big Trouble', flex_category: 'csf_functions'
+stage 'Nested Loops in Maze', flex_category: 'time4cs_c3'
 level 'BrowardTestMarkdownLevel'
 
-stage 'Conditionals in Sprite Lab', flex_category: 'csf_functions'
+stage 'Fancy Shapes using Nested Loops', flex_category: 'time4cs_c3'
 level 'BrowardTestMarkdownLevel'
 
-stage 'Nested Loops in Maze', flex_category: 'csf_functions'
+stage 'Nested Loops with Frozen', flex_category: 'time4cs_c3'
 level 'BrowardTestMarkdownLevel'
 
-stage 'Fancy Shapes using Nested Loops', flex_category: 'csf_functions'
+stage 'Fishy Business', flex_category: 'time4cs_c4'
 level 'BrowardTestMarkdownLevel'
 
-stage 'Nested Loops with Frozen', flex_category: 'csf_functions'
+stage 'Songwriting (Integrated Lesson)', flex_category: 'time4cs_c4'
 level 'BrowardTestMarkdownLevel'
 
-stage 'Fishy Business', flex_category: 'csf_sprites'
+stage 'Functions in Minecraft', flex_category: 'time4cs_c4'
 level 'BrowardTestMarkdownLevel'
 
-stage 'Songwriting (Integrated Lesson)', flex_category: 'csf_sprites'
+stage 'Functions with Harvester', flex_category: 'time4cs_c4'
 level 'BrowardTestMarkdownLevel'
 
-stage 'Functions in Minecraft', flex_category: 'csf_sprites'
+stage 'Functions with Artist', flex_category: 'time4cs_c4'
 level 'BrowardTestMarkdownLevel'
 
-stage 'Functions with Harvester', flex_category: 'csf_sprites'
+stage 'Pythons impacting native populations', flex_category: 'time4cs_c5'
 level 'BrowardTestMarkdownLevel'
 
-stage 'Functions with Artist', flex_category: 'csf_sprites'
+stage 'Functions in Sprite Lab', flex_category: 'time4cs_c5'
 level 'BrowardTestMarkdownLevel'
 
-stage 'Pythons impacting native populations', flex_category: 'end_of_course_project'
+stage 'Python Problem- Current Solutions', flex_category: 'time4cs_c5'
 level 'BrowardTestMarkdownLevel'
 
-stage 'Functions in Sprite Lab', flex_category: 'end_of_course_project'
+stage 'End of Course Project (integrated- project planning lesson)', flex_category: 'time4cs_c5'
 level 'BrowardTestMarkdownLevel'
 
-stage 'Python Problem- Current Solutions', flex_category: 'end_of_course_project'
+stage 'Debate- Pythons impacting native populations', flex_category: 'time4cs_c5'
 level 'BrowardTestMarkdownLevel'
 
-stage 'End of Course Project (integrated- project planning lesson)', flex_category: 'end_of_course_project'
-level 'BrowardTestMarkdownLevel'
-
-stage 'Debate- Pythons impacting native populations', flex_category: 'end_of_course_project'
-level 'BrowardTestMarkdownLevel'
-
-stage 'Work on Project', flex_category: 'end_of_course_project'
+stage 'Work on Project', flex_category: 'time4cs_c5'
 level 'BrowardTestMarkdownLevel'
