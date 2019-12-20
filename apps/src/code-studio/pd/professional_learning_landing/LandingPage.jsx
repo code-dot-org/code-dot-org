@@ -80,7 +80,7 @@ export const LastWorkshopSurveyBanner = ({
   <TwoColumnActionBlock
     isRtl={false}
     responsiveSize="lg"
-    imageUrl={pegasus('/shared/images/fill-540x289/misc/teacher.png')}
+    imageUrl={pegasus('/shared/images/fill-540x300/misc/teacher.png')}
     subHeading={subHeading}
     description={description}
     buttons={[

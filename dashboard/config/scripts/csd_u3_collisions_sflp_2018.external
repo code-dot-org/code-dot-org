@@ -11,11 +11,11 @@ The class programs their sprites to interact in new ways.  After a brief review 
 
 ## Introduced Code
 
-* [sprite.bounceOff()](//docs.code.org/gamelab/bounceOff/)
-* [sprite.collide()](//docs.code.org/gamelab/collide/)
-* [sprite.displace()](//docs.code.org/gamelab/displace/)
-* [sprite.setCollider()](//docs.code.org/gamelab/setCollider/)
-* [sprite.bounce()](//docs.code.org/gamelab/bounce/)
-* [sprite.bounciness](//docs.code.org/gamelab/bounciness/)
+* [sprite.bounceOff()](//studio.code.org/docs/gamelab/bounceOff/)
+* [sprite.collide()](//studio.code.org/docs/gamelab/collide/)
+* [sprite.displace()](//studio.code.org/docs/gamelab/displace/)
+* [sprite.setCollider()](//studio.code.org/docs/gamelab/setCollider/)
+* [sprite.bounce()](//studio.code.org/docs/gamelab/bounce/)
+* [sprite.bounciness](//studio.code.org/docs/gamelab/bounciness/)
 
 MARKDOWN
