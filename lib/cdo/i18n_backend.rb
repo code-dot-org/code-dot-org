@@ -117,26 +117,33 @@ module Cdo
         end
       end
 
-      def translate(locale, key, options = ::I18n::EMPTY_HASH)
-        result = super(locale, key, options)
-        # Log unused interpolation arguments to honeybadger; these are likely
-        # the result of translations mistakenly including interpolation syntax
-        # that was removed in the source string and we want to be notified so
-        # we can update the translation.
-        if result.is_a?(String) && ::I18n::INTERPOLATION_PATTERN.match?(result)
-          Honeybadger.notify(
-            error_class: 'Interpolation Pattern present in translation',
-            error_message: "String #{result.inspect} has unused interpolation patterns after translation",
-            context: {
-              key: key,
-              locale: locale,
-              options: options,
-              result: result,
-            }
-          )
-        end
-        result
-      end
+      # TODO: FND-974
+      # We currently have some strings that are _intentionally_ rendering
+      # without using all their interpolation patterns. (see
+      # _javascript_strings.haml for one example)
+      #
+      # Once all those intentional violations have been removed, we can
+      # uncomment this method override to add logging
+      #def translate(locale, key, options = ::I18n::EMPTY_HASH)
+      #  result = super(locale, key, options)
+      #  # Log unused interpolation arguments to honeybadger; these are likely
+      #  # the result of translations mistakenly including interpolation syntax
+      #  # that was removed in the source string and we want to be notified so
+      #  # we can update the translation.
+      #  if result.is_a?(String) && ::I18n::INTERPOLATION_PATTERN.match?(result)
+      #    Honeybadger.notify(
+      #      error_class: 'Interpolation Pattern present in translation',
+      #      error_message: "String #{result.inspect} has unused interpolation patterns after translation",
+      #      context: {
+      #        key: key,
+      #        locale: locale,
+      #        options: options,
+      #        result: result,
+      #      }
+      #    )
+      #  end
+      #  result
+      #end
     end
 
     class SimpleBackend < ::I18n::Backend::Simple
