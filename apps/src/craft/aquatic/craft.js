@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import trackEvent from '../../util/trackEvent';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
-import craftMsg from '../simple/locale';
+import craftMsg from '../locale';
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {
   GameController,
