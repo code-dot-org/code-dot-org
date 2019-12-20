@@ -39,7 +39,7 @@ const styles = {
   }
 };
 
-const INITIAL_STATE = {
+export const INITIAL_STATE = {
   isVisualizerOpen: false,
   chartTitle: '',
   chartType: ChartType.NONE,
@@ -170,7 +170,11 @@ class VisualizerModal extends React.Component {
               ]}
               value={this.state.chartType}
               onChange={event =>
-                this.setState({chartType: parseFloat(event.target.value)})
+                this.setState({
+                  chartType: parseFloat(event.target.value),
+                  selectedColumn1: '',
+                  selectedColumn2: ''
+                })
               }
             />
 
@@ -238,7 +242,10 @@ class VisualizerModal extends React.Component {
               disabledOptions={[]}
               value={this.state.filterColumn}
               onChange={event =>
-                this.setState({filterColumn: event.target.value})
+                this.setState({
+                  filterColumn: event.target.value,
+                  filterValue: ''
+                })
               }
               inlineLabel
             />

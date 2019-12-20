@@ -245,7 +245,8 @@ class ScriptDSL < BaseDSL
     @stage_extras_disabled = true
   end
 
-  def i18n_strings
+  # @override
+  def i18n_hash
     i18n_strings = {}
     @stages.each do |stage|
       i18n_strings[stage[:stage]] = {'name' => stage[:stage]}
