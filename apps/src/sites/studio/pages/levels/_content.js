@@ -28,14 +28,14 @@ $(document).ready(() => {
 
   // Render Markdown
   $('.content-level > .markdown-container').each(function() {
-    if (!this.dataset.markdown) {
+    const container = this;
+    if (!container.dataset.markdown) {
       return;
     }
 
-    var container = this;
     ReactDom.render(
-      React.createElement(SafeMarkdown, this.dataset, null),
-      this,
+      React.createElement(SafeMarkdown, container.dataset, null),
+      container,
       function() {
         // After the Markdown is rendered, render any Blockly blocks defined in
         // <xml> blocks.
