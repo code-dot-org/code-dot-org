@@ -1,5 +1,4 @@
 hideable_stages true
-exclude_csf_column_in_legend true
 student_detail_progress_view true
 
 stage 'Analysis of Design', flex_category: 'csd4_1'
