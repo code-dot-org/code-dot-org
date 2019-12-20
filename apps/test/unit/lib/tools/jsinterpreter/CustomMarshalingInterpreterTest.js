@@ -383,6 +383,34 @@ describe('The CustomMarshalingInterpreter', () => {
     );
   });
 
+  describe('step method', () => {
+    it('does not hit call stack size exceptions with simple polyfill Array.sort code', () => {
+      const interpreter = new CustomMarshalingInterpreter(
+        `var myArray = [];
+         var ARRAY_SIZE = 15;
+         for (var i = 0; i < ARRAY_SIZE; i++) {
+           myArray[i] = ARRAY_SIZE - 1 - i;
+         }
+         myArray.sort();
+        `,
+        new CustomMarshaler({
+          globalProperties: {}
+        })
+      );
+      interpreter.run();
+      const expectedSortedArray = [];
+      const ARRAY_SIZE = 15;
+      for (var i = 0; i < ARRAY_SIZE; i++) {
+        expectedSortedArray[i] = i;
+      }
+      expect(
+        interpreter.marshalInterpreterToNative(
+          interpreter.getValueFromScope('myArray')
+        )
+      ).to.eql(expectedSortedArray);
+    });
+  });
+
   describe('getProperty method', () => {
     it("delegates to the base class's getProperty method by default", () => {
       let interpreterUndefined = interpreter.getProperty(

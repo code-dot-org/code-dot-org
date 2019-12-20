@@ -98,7 +98,7 @@ const createCommonStore = function(options = {}) {
     pageConstants.failureAvatar = '/blockly/media/skins/bee/failure_avatar.png';
   } else {
     instructionsConstants.noInstructionsWhenCollapsed = true;
-    pageConstants.documentationUrl = 'https://docs.code.org/weblab/';
+    pageConstants.documentationUrl = 'https://studio.code.org/docs/weblab/';
     instructionsConstants.mapReference = '/docs/csd-1718/html_tags/index.html';
     instructionsConstants.levelVideos = [
       {

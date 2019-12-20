@@ -1,9 +1,9 @@
 :ruby
   ai_activities = [
-    {
-      url: "https://teachablemachine.withgoogle.com/",
-      title: hoc_s(:ai_activity_teachable),
-      description: hoc_s(:ai_activity_teachable_desc)
+   {
+      url: "https://www.microsoft.com/en-us/ai/seeing-ai",
+      title: hoc_s(:ai_activity_seeing_ai),
+      description: hoc_s(:ai_activity_seeing_ai_desc)
     },
     {
       url: "https://quickdraw.withgoogle.com/",
@@ -11,19 +11,19 @@
       description: hoc_s(:ai_activity_quick_draw_desc)
     },
     {
+      url: "https://teachablemachine.withgoogle.com/",
+      title: hoc_s(:ai_activity_teachable),
+      description: hoc_s(:ai_activity_teachable_desc)
+    },
+    {
       url: "https://experiments.withgoogle.com/collection/ai",
       title: hoc_s(:ai_activity_experiments),
       description: hoc_s(:ai_activity_experiments_desc)
     },
     {
-      url: "https://mixlab.withgoogle.com/",
-      title: hoc_s(:ai_activity_mixlab),
-      description: hoc_s(:ai_activity_mixlab_desc)
-    },
-    {
-      url: "http://nvidia-research-mingyuliu.com/gaugan",
-      title: hoc_s(:ai_activity_gaugan),
-      description: hoc_s(:ai_activity_gaugan_desc)
+      url: "https://www.zooniverse.org/projects/meredithspalmer/snapshot-mountain-zebra/classify?reload=0&workflow=11445",
+      title: hoc_s(:ai_activity_zooniverse),
+      description: hoc_s(:ai_activity_zooniverse_desc)
     }
   ]
 
@@ -75,7 +75,7 @@
     - ai_activities.each do |activity|
       %tr
         %td
-          %a{href: activity[:url]}
+          %a{href: activity[:url], target: '_blank'}
             =activity[:title]
         %td=activity[:description]
 
@@ -89,7 +89,7 @@
     - ai_ml_resources.each do |activity|
       %tr
         %td
-          %a{href: activity[:url]}
+          %a{href: activity[:url], target: '_blank'}
             =activity[:title]
         %td=activity[:description]
         %td=activity[:audience]

@@ -11,6 +11,14 @@ const styles = {
     boxSizing: 'content-box'
   },
   filler: {
+    width: 20,
+    position: 'absolute'
+  },
+  lessonNumber: {
+    position: 'absolute',
+    zIndex: 2,
+    paddingTop: 2,
+    textAlign: 'center',
     width: 20
   }
 };
@@ -22,7 +30,8 @@ export default class ProgressBox extends Component {
     imperfect: PropTypes.number,
     perfect: PropTypes.number,
     style: PropTypes.object,
-    stageIsAllAssessment: PropTypes.bool
+    stageIsAllAssessment: PropTypes.bool,
+    lessonNumber: PropTypes.number
   };
 
   render() {
@@ -68,8 +77,15 @@ export default class ProgressBox extends Component {
       height: imperfect
     };
 
+    const lessonNumberStyle = {
+      ...styles.lessonNumber,
+      color: perfect ? color.white : color.charcoal
+    };
     return (
       <div style={boxWithBorderStyle}>
+        {this.props.lessonNumber && (
+          <div style={lessonNumberStyle}>{this.props.lessonNumber}</div>
+        )}
         <div style={incompleteLevels} />
         <div style={imperfectLevels} />
         <div
