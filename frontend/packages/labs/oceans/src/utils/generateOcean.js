@@ -2,10 +2,10 @@ import {
   FishOceanObject,
   SeaCreatureOceanObject,
   TrashOceanObject
-} from '../demo/OceanObject';
-import {getState} from '../demo/state';
+} from '../oceans/OceanObject';
+import {getState} from '../oceans/state';
 import {fishData} from './fishData';
-import {filterFishComponents, generateColorPalette} from '../demo/helpers';
+import {filterFishComponents, generateColorPalette} from '../oceans/helpers';
 import _ from 'lodash';
 
 /*
@@ -17,10 +17,10 @@ import _ from 'lodash';
  */
 export const generateOcean = (
   numFish,
+  idStart = 0,
   loadFish = true,
   loadTrashImages,
-  loadCreatureImages,
-  idStart = 0
+  loadCreatureImages
 ) => {
   const state = getState();
   let ocean = [];

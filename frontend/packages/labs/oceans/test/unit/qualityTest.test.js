@@ -4,11 +4,21 @@ const {
   fieldInfos,
   MouthExpression,
   BodyShape
-} = require('../../src/utils/fishData');
-const {generateOcean, filterOcean} = require('../../src/utils/generateOcean');
-const SimpleTrainer = require('../../src/utils/SimpleTrainer');
-const SVMTrainer = require('../../src/utils/SVMTrainer');
-import {ClassType} from '../../src/demo/constants';
+} = require('@ml/utils/fishData');
+const {generateOcean, filterOcean} = require('@ml/utils/generateOcean');
+const SVMTrainer = require('@ml/utils/SVMTrainer');
+import {AppMode, ClassType} from '@ml/oceans/constants';
+import {setState} from '@ml/oceans/state';
+
+function clock(start) {
+  if (!start) return process.hrtime();
+  var end = process.hrtime(start);
+  return Math.round(end[0] * 1000 + end[1] / 1000000);
+}
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
 
 const trial = async function(trainSize, testSize, trainer, labelFn) {
   const trainingOcean = generateOcean(trainSize);
@@ -21,7 +31,9 @@ const trial = async function(trainSize, testSize, trainer, labelFn) {
     trainer.addTrainingExample(fish, label);
   }
 
+  //const trainStart = clock();
   trainer.train();
+  //console.log(`training latency: ${clock(trainStart)}`);
 
   for (const fish of testOcean) {
     fish.result = await trainer.predict(fish);
@@ -150,41 +162,150 @@ const PartKey = Object.freeze({
   PECTORAL_FIN_FRONT: 'pectoralFinFront',
   DORSAL_FIN: 'dorsalFin',
   TAIL: 'tail',
-  COLOR: 'colorPalette'
+  COLOR: 'colors'
 });
 
-const NUM_TRIALS = 5;
-const TRAIN_SIZE = 110;
+const NUM_TRIALS = 10;
+const TRAIN_SIZE = 100;
+const TEST_SIZE = 500;
 
 describe('Model quality test', () => {
   beforeAll(() => {
     initFishData();
   });
 
-  // TODO: (maddie) fix this test to work with new fishData.colors setup + re-enable
-  // test('Color test', async () => {
-  //   const trainSize = TRAIN_SIZE;
-  //
-  //   const idsByColor = {
-  //     red: [2, 5],
-  //     green: [3, 4],
-  //     blue: [0, 6]
-  //   };
-  //
-  //   for (const [color, ids] of Object.entries(idsByColor)) {
-  //     console.log(`${color}`);
-  //     const labelFn = (fish) => ids.includes(fish.colorPalette.index) ? ClassType.Like : ClassType.Dislike;
-  //     const result = await performTrials({
-  //       numTrials: NUM_TRIALS,
-  //       trainSize: trainSize,
-  //       testSize: 100,
-  //       labelFn: labelFn
-  //     });
-  //     analyzeConfusionMatrix(trainSize, result);
-  //     expect(result.precision).toBeGreaterThanOrEqual(0.9);
-  //     expect(result.recall).toBeGreaterThanOrEqual(0.6);
-  //   }
-  // });
+  beforeEach(() => {
+    setState({appMode: null});
+  });
+
+  test('Color test', async () => {
+    const trainSize = TRAIN_SIZE;
+
+    const idsByColor = {
+      red: [6, 7],
+      green: [2, 3],
+      blue: [4, 5]
+    };
+
+    const colorMatch = (rgb, colorIds) => {
+      const rgbs = Object.values(fishData.colors).map(color => color.rgb);
+
+      let match = false;
+      for (const id of colorIds) {
+        if (rgbs[id] === rgb) {
+          match = true;
+          break;
+        }
+      }
+
+      return match;
+    };
+
+    for (const [color, ids] of Object.entries(idsByColor)) {
+      console.log(`${color}`);
+      const labelFn = fish => {
+        return colorMatch(fish.colorPalette.bodyRgb, ids)
+          ? ClassType.Like
+          : ClassType.Dislike;
+      };
+      const result = await performTrials({
+        numTrials: NUM_TRIALS,
+        trainSize: trainSize,
+        testSize: 100,
+        labelFn: labelFn
+      });
+      analyzeConfusionMatrix(trainSize, result);
+      expect(result.precision).toBeGreaterThanOrEqual(0.85);
+      expect(result.recall).toBeGreaterThanOrEqual(0.5);
+    }
+  });
+
+  test('Fin color test', async () => {
+    const trainSize = TRAIN_SIZE;
+
+    const idsByColor = {
+      red: [6, 7],
+      green: [2, 3],
+      blue: [4, 5]
+    };
+
+    const colorMatch = (rgb, colorIds) => {
+      const rgbs = Object.values(fishData.colors).map(color => color.rgb);
+
+      let match = false;
+      for (const id of colorIds) {
+        if (rgbs[id] === rgb) {
+          match = true;
+          break;
+        }
+      }
+
+      return match;
+    };
+
+    for (const [color, ids] of Object.entries(idsByColor)) {
+      console.log(`${color}`);
+      const labelFn = fish => {
+        return colorMatch(fish.colorPalette.finRgb, ids)
+          ? ClassType.Like
+          : ClassType.Dislike;
+      };
+      const result = await performTrials({
+        numTrials: NUM_TRIALS,
+        trainSize: trainSize,
+        testSize: 100,
+        labelFn: labelFn
+      });
+      analyzeConfusionMatrix(trainSize, result);
+      expect(result.precision).toBeGreaterThanOrEqual(0.85);
+      expect(result.recall).toBeGreaterThanOrEqual(0.5);
+    }
+  });
+
+  test('test eels with smiling mouths', async () => {
+    setState({appMode: AppMode.FishLong});
+    const trainSize = 300; // Need more fish to hit enough to train on
+    const mouthData = fishData.mouths;
+    const mouthKey = PartKey.MOUTH;
+    const mouthNames = ['mouth15', 'mouth4', 'mouth5', 'mouth7', 'mouth8'];
+
+    const bodyData = fishData.bodies;
+    const bodyKey = PartKey.BODY;
+    const bodyNames = ['s1'];
+
+    const mouthIds = Object.entries(mouthData)
+      .filter(entry => mouthNames.includes(entry[0]))
+      .map(entry => entry[1].index);
+    const bodyIds = Object.entries(bodyData)
+      .filter(entry => bodyNames.includes(entry[0]))
+      .map(entry => entry[1].index);
+    console.log(
+      `mouth names: ${JSON.stringify(mouthNames)} mouthIds: ${JSON.stringify(
+        mouthIds
+      )}`
+    );
+    console.log(
+      `body names: ${JSON.stringify(bodyNames)} bodyIds: ${JSON.stringify(
+        bodyIds
+      )}`
+    );
+
+    const labelFn = fish =>
+      mouthIds.includes(fish[mouthKey].index) &&
+      bodyIds.includes(fish[bodyKey].index)
+        ? ClassType.Like
+        : ClassType.Dislike;
+
+    const result = await performTrials({
+      numTrials: 1,
+      trainSize: trainSize,
+      testSize: TEST_SIZE,
+      labelFn: labelFn
+    });
+    analyzeConfusionMatrix(trainSize, result);
+    expect(result.precision).toBeGreaterThanOrEqual(0.5);
+    expect(result.recall).toBeGreaterThan(0); // very relaxed thresholds since this case is difficult to get right due to # of variations
+  });
 
   test('Body shape test', async () => {
     const partKey = PartKey.BODY;
@@ -202,12 +323,12 @@ describe('Model quality test', () => {
       const result = await performTrials({
         numTrials: NUM_TRIALS,
         trainSize: trainSize,
-        testSize: 100,
+        testSize: TEST_SIZE,
         labelFn: labelFn
       });
       analyzeConfusionMatrix(trainSize, result);
-      expect(result.precision).toBeGreaterThanOrEqual(0.9);
-      expect(result.recall).toBeGreaterThanOrEqual(0.6);
+      expect(result.precision).toBeGreaterThanOrEqual(0.85);
+      expect(result.recall).toBeGreaterThanOrEqual(0.5);
     }
   });
 
@@ -224,10 +345,12 @@ describe('Model quality test', () => {
       const result = await performTrials({
         numTrials: NUM_TRIALS,
         trainSize: trainSize,
-        testSize: 100,
+        testSize: TEST_SIZE,
         labelFn: labelFn
       });
       analyzeConfusionMatrix(trainSize, result);
+      expect(result.precision).toBeGreaterThanOrEqual(0.85);
+      expect(result.recall).toBeGreaterThanOrEqual(0.5);
     }
   });
 
@@ -244,32 +367,58 @@ describe('Model quality test', () => {
       const result = await performTrials({
         numTrials: NUM_TRIALS,
         trainSize: trainSize,
-        testSize: 100,
+        testSize: TEST_SIZE,
         labelFn: labelFn
       });
       analyzeConfusionMatrix(trainSize, result);
+      expect(result.precision).toBeGreaterThanOrEqual(0.85);
+      expect(result.recall).toBeGreaterThanOrEqual(0.5);
     }
   });
 
   test('test tails', async () => {
     const partData = fishData.tails;
     const partKey = PartKey.TAIL;
-    const trainSize = TRAIN_SIZE;
+    const trainSize = 125;
 
     for (const [name, data] of Object.entries(partData)) {
       console.log(`${partKey} ${name}`);
       const id = data.index;
       const labelFn = fish => {
-        //console.log(JSON.stringify(fish, null, 2));
         return fish[partKey].index === id ? ClassType.Like : ClassType.Dislike;
       };
       const result = await performTrials({
-        numTrials: NUM_TRIALS,
+        numTrials: 5,
         trainSize: trainSize,
-        testSize: 100,
+        testSize: TEST_SIZE,
         labelFn: labelFn
       });
       analyzeConfusionMatrix(trainSize, result);
+      expect(result.precision).toBeGreaterThanOrEqual(0.65); // Lower threshold since it has no KNN data
+      expect(result.recall).toBeGreaterThanOrEqual(0.25);
+    }
+  });
+
+  test('test dorsal fins', async () => {
+    const partData = fishData.dorsalFins;
+    const partKey = PartKey.DORSAL_FIN;
+    const trainSize = 125;
+
+    for (const [name, data] of Object.entries(partData)) {
+      console.log(`${partKey} ${name}`);
+      const id = data.index;
+      const labelFn = fish => {
+        return fish[partKey].index === id ? ClassType.Like : ClassType.Dislike;
+      };
+      const result = await performTrials({
+        numTrials: 5,
+        trainSize: trainSize,
+        testSize: TEST_SIZE,
+        labelFn: labelFn
+      });
+      analyzeConfusionMatrix(trainSize, result);
+      expect(result.precision).toBeGreaterThanOrEqual(0.65); // Lower threshold since it has no KNN data
+      expect(result.recall).toBeGreaterThanOrEqual(0.25);
     }
   });
 
@@ -291,10 +440,12 @@ describe('Model quality test', () => {
       const result = await performTrials({
         numTrials: NUM_TRIALS,
         trainSize: trainSize,
-        testSize: 100,
+        testSize: TEST_SIZE,
         labelFn: labelFn
       });
       analyzeConfusionMatrix(trainSize, result);
+      expect(result.precision).toBeGreaterThanOrEqual(0.85);
+      expect(result.recall).toBeGreaterThanOrEqual(0.5);
     }
   });
 
@@ -316,10 +467,12 @@ describe('Model quality test', () => {
     const result = await performTrials({
       numTrials: NUM_TRIALS,
       trainSize: trainSize,
-      testSize: 100,
+      testSize: TEST_SIZE,
       labelFn: labelFn
     });
     analyzeConfusionMatrix(trainSize, result);
+    expect(result.precision).toBeGreaterThanOrEqual(0.85);
+    expect(result.recall).toBeGreaterThanOrEqual(0.5);
   });
 
   test('test SVM explanation', async () => {
@@ -368,5 +521,90 @@ describe('Model quality test', () => {
       const predictionExplanation = trainer.explainFish(fish);
       expect(predictionExplanation[0].partType).toEqual('mouths');
     }
+  });
+
+  test('test SVM explanation fast fish', async () => {
+    /* A more complex test case - the criteria is:
+     * 1). All "fast bodies" are Like, all "slow bodies" are Dislike
+     * 2). Of the bodies that are neither, "fast fins" are Like, and all other fins are Dislike
+     * Also covers the case where a part without KNN data (dorsal fins) is used together with one that has it (bodies).
+     */
+    const finData = fishData.dorsalFins;
+    const finKey = PartKey.DORSAL_FIN;
+    const fastFins = [
+      'dorsal_fin_2',
+      'dorsal_fin_4',
+      'dorsal_fin_10',
+      'dorsal_fin_12'
+    ];
+
+    const bodyData = fishData.bodies;
+    const bodyKey = PartKey.BODY;
+    const fastBodies = ['diamond1', 'other_1', 'oval_4', 'rectangle_3'];
+    const slowBodies = ['s1', 'triangle2', 'triangle3'];
+
+    const fastFinIds = Object.entries(finData)
+      .filter(entry => fastFins.includes(entry[0]))
+      .map(entry => entry[1].index);
+    const fastBodyIds = Object.entries(bodyData)
+      .filter(entry => fastBodies.includes(entry[0]))
+      .map(entry => entry[1].index);
+    const slowBodyIds = Object.entries(bodyData)
+      .filter(entry => slowBodies.includes(entry[0]))
+      .map(entry => entry[1].index);
+
+    console.log(`fast fin ids: ${JSON.stringify(fastFinIds)}`);
+    console.log(
+      `fast body ids: ${JSON.stringify(
+        fastBodyIds
+      )} slow body ids: ${JSON.stringify(slowBodyIds)}`
+    );
+
+    const labelFn = fish => {
+      const finId = fish[finKey].index;
+      const bodyId = fish[bodyKey].index;
+
+      if (slowBodyIds.includes(bodyId)) {
+        return ClassType.Dislike;
+      } else if (fastBodyIds.includes(bodyId)) {
+        return ClassType.Like;
+      }
+
+      return fastFinIds.includes(finId) ? ClassType.Like : ClassType.Dislike;
+    };
+
+    const accuracyTrainSize = 100;
+    // Test model accuracy
+    const result = await performTrials({
+      numTrials: 1,
+      trainSize: accuracyTrainSize,
+      testSize: TEST_SIZE,
+      labelFn: labelFn
+    });
+    analyzeConfusionMatrix(accuracyTrainSize, result);
+    expect(result.precision).toBeGreaterThanOrEqual(0.7);
+    expect(result.recall).toBeGreaterThanOrEqual(0.5);
+
+    // Test explanation
+    const explainTrainSize = 200;
+    const trainer = new SVMTrainer(fish => fish.getKnnData());
+    const trainingOcean = generateOcean(explainTrainSize);
+    const trainingLabels = trainingOcean.map(fish => labelFn(fish));
+
+    const testOcean = generateOcean(explainTrainSize);
+
+    for (const fish of trainingOcean) {
+      const label = labelFn(fish);
+      trainer.addTrainingExample(fish, label);
+    }
+
+    trainer.train();
+
+    const details = trainer.detailedExplanation(trainingOcean[0].fieldInfos);
+    const summary = trainer.summarize(trainingOcean[0].fieldInfos);
+    console.log(summary);
+    const top_two = [summary[0].partType, summary[1].partType];
+    expect(top_two).toContain('bodies');
+    expect(top_two).toContain('dorsalFins');
   });
 });

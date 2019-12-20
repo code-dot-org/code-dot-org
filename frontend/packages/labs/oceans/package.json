@@ -1,13 +1,19 @@
 {
   "name": "@code-dot-org/ml-activities",
-  "version": "0.0.15",
+  "version": "0.0.22",
   "description": "",
   "main": "dist/main.js",
   "jest": {
-    "testEnvironment": "node",
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
     "moduleNameMapper": {
-      ".+\\.(bin|jpg|jpeg|png|mp3|ogg|wav)$": "identity-obj-proxy"
-    }
+      ".+\\.(bin|jpg|jpeg|png|mp3|ogg|wav|gif)$": "identity-obj-proxy",
+      "^@ml(.*)$": "<rootDir>/src/$1",
+      "^@public(.*)$": "<rootDir>/public/$1"
+    },
+    "setupTestFrameworkScriptFile": "<rootDir>/test/setup.js"
   },
   "scripts": {
     "build": "webpack -p",
@@ -54,12 +60,14 @@
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^5.0.5",
     "css-loader": "^3.2.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-15.4": "^1.3.1",
     "eslint": ">=4.18.2",
     "eslint-plugin-react": "^7.11.0",
     "file-loader": "^4.2.0",
     "idempotent-babel-polyfill": "6.26.0-1",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^15.0.0",
+    "jest": "^23.6.0",
     "jquery": "1.12.1",
     "lodash": "^4.17.5",
     "mem": ">=4.0.0",
@@ -68,8 +76,10 @@
     "query-string": "4.1.0",
     "radium": "^0.25.2",
     "react": "~15.4.0",
+    "react-addons-test-utils": "~15.4.0",
     "react-dom": "~15.4.0",
     "react-test-renderer": "~15.4.0",
+    "sinon": "^7.5.0",
     "style-loader": "^1.0.0",
     "svm": "uponthesun/svmjs",
     "url-loader": "^2.2.0",
@@ -87,9 +97,10 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/react-fontawesome": "^0.1.7",
+    "messageformat": "^1.1.0",
     "react-typist": "^2.0.5"
   },
   "files": [
-    "dist/**/!(demo.js)"
+    "dist/**/!(oceans.js)"
   ]
 }

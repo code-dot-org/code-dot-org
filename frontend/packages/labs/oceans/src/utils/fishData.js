@@ -1,126 +1,121 @@
-import {AppMode} from '../demo/constants';
+import {AppMode} from '../oceans/constants';
 
-import pectoral_fin_1_image from '../../public/images/fish/pectoralFin/pectoral_fin_1.png';
-import pectoral_fin_10_image from '../../public/images/fish/pectoralFin/pectoral_fin_10.png';
-import pectoral_fin_11_image from '../../public/images/fish/pectoralFin/pectoral_fin_11.png';
-import pectoral_fin_12_image from '../../public/images/fish/pectoralFin/pectoral_fin_12.png';
-import pectoral_fin_13_image from '../../public/images/fish/pectoralFin/pectoral_fin_13.png';
-import pectoral_fin_14_image from '../../public/images/fish/pectoralFin/pectoral_fin_14.png';
-import pectoral_fin_15_image from '../../public/images/fish/pectoralFin/pectoral_fin_15.png';
-import pectoral_fin_16_image from '../../public/images/fish/pectoralFin/pectoral_fin_16.png';
-import pectoral_fin_17_image from '../../public/images/fish/pectoralFin/pectoral_fin_17.png';
-import pectoral_fin_2_image from '../../public/images/fish/pectoralFin/pectoral_fin_2.png';
-import pectoral_fin_3_image from '../../public/images/fish/pectoralFin/pectoral_fin_3.png';
-import pectoral_fin_4_image from '../../public/images/fish/pectoralFin/pectoral_fin_4.png';
-import pectoral_fin_5_image from '../../public/images/fish/pectoralFin/pectoral_fin_5.png';
-import pectoral_fin_6_image from '../../public/images/fish/pectoralFin/pectoral_fin_6.png';
-import pectoral_fin_7_image from '../../public/images/fish/pectoralFin/pectoral_fin_7.png';
-import pectoral_fin_8_image from '../../public/images/fish/pectoralFin/pectoral_fin_8.png';
-import pectoral_fin_9_image from '../../public/images/fish/pectoralFin/pectoral_fin_9.png';
+import pectoral_fin_1_image from '@public/images/fish/pectoralFin/pectoral_fin_1.png';
+import pectoral_fin_10_image from '@public/images/fish/pectoralFin/pectoral_fin_10.png';
+import pectoral_fin_11_image from '@public/images/fish/pectoralFin/pectoral_fin_11.png';
+import pectoral_fin_12_image from '@public/images/fish/pectoralFin/pectoral_fin_12.png';
+import pectoral_fin_13_image from '@public/images/fish/pectoralFin/pectoral_fin_13.png';
+import pectoral_fin_14_image from '@public/images/fish/pectoralFin/pectoral_fin_14.png';
+import pectoral_fin_15_image from '@public/images/fish/pectoralFin/pectoral_fin_15.png';
+import pectoral_fin_16_image from '@public/images/fish/pectoralFin/pectoral_fin_16.png';
+import pectoral_fin_17_image from '@public/images/fish/pectoralFin/pectoral_fin_17.png';
+import pectoral_fin_2_image from '@public/images/fish/pectoralFin/pectoral_fin_2.png';
+import pectoral_fin_3_image from '@public/images/fish/pectoralFin/pectoral_fin_3.png';
+import pectoral_fin_4_image from '@public/images/fish/pectoralFin/pectoral_fin_4.png';
+import pectoral_fin_5_image from '@public/images/fish/pectoralFin/pectoral_fin_5.png';
+import pectoral_fin_6_image from '@public/images/fish/pectoralFin/pectoral_fin_6.png';
+import pectoral_fin_7_image from '@public/images/fish/pectoralFin/pectoral_fin_7.png';
+import pectoral_fin_8_image from '@public/images/fish/pectoralFin/pectoral_fin_8.png';
+import pectoral_fin_9_image from '@public/images/fish/pectoralFin/pectoral_fin_9.png';
 
-import dorsal_fin_1_image from '../../public/images/fish/dorsalFin/dorsal_fin_1.png';
-import dorsal_fin_10_image from '../../public/images/fish/dorsalFin/dorsal_fin_10.png';
-import dorsal_fin_11_image from '../../public/images/fish/dorsalFin/dorsal_fin_11.png';
-import dorsal_fin_12_image from '../../public/images/fish/dorsalFin/dorsal_fin_12.png';
-import dorsal_fin_13_image from '../../public/images/fish/dorsalFin/dorsal_fin_13.png';
-import dorsal_fin_14_image from '../../public/images/fish/dorsalFin/dorsal_fin_14.png';
-import dorsal_fin_15_image from '../../public/images/fish/dorsalFin/dorsal_fin_15.png';
-import dorsal_fin_16_image from '../../public/images/fish/dorsalFin/dorsal_fin_16.png';
-import dorsal_fin_17_image from '../../public/images/fish/dorsalFin/dorsal_fin_17.png';
-import dorsal_fin_2_image from '../../public/images/fish/dorsalFin/dorsal_fin_2.png';
-import dorsal_fin_3_image from '../../public/images/fish/dorsalFin/dorsal_fin_3.png';
-import dorsal_fin_4_image from '../../public/images/fish/dorsalFin/dorsal_fin_4.png';
-import dorsal_fin_5_image from '../../public/images/fish/dorsalFin/dorsal_fin_5.png';
-import dorsal_fin_6_image from '../../public/images/fish/dorsalFin/dorsal_fin_6.png';
-import dorsal_fin_7_image from '../../public/images/fish/dorsalFin/dorsal_fin_7.png';
-import dorsal_fin_8_image from '../../public/images/fish/dorsalFin/dorsal_fin_8.png';
-import dorsal_fin_9_image from '../../public/images/fish/dorsalFin/dorsal_fin_9.png';
+import dorsal_fin_1_image from '@public/images/fish/dorsalFin/dorsal_fin_1.png';
+import dorsal_fin_10_image from '@public/images/fish/dorsalFin/dorsal_fin_10.png';
+import dorsal_fin_11_image from '@public/images/fish/dorsalFin/dorsal_fin_11.png';
+import dorsal_fin_12_image from '@public/images/fish/dorsalFin/dorsal_fin_12.png';
+import dorsal_fin_13_image from '@public/images/fish/dorsalFin/dorsal_fin_13.png';
+import dorsal_fin_14_image from '@public/images/fish/dorsalFin/dorsal_fin_14.png';
+import dorsal_fin_15_image from '@public/images/fish/dorsalFin/dorsal_fin_15.png';
+import dorsal_fin_16_image from '@public/images/fish/dorsalFin/dorsal_fin_16.png';
+import dorsal_fin_17_image from '@public/images/fish/dorsalFin/dorsal_fin_17.png';
+import dorsal_fin_2_image from '@public/images/fish/dorsalFin/dorsal_fin_2.png';
+import dorsal_fin_3_image from '@public/images/fish/dorsalFin/dorsal_fin_3.png';
+import dorsal_fin_4_image from '@public/images/fish/dorsalFin/dorsal_fin_4.png';
+import dorsal_fin_5_image from '@public/images/fish/dorsalFin/dorsal_fin_5.png';
+import dorsal_fin_6_image from '@public/images/fish/dorsalFin/dorsal_fin_6.png';
+import dorsal_fin_7_image from '@public/images/fish/dorsalFin/dorsal_fin_7.png';
+import dorsal_fin_8_image from '@public/images/fish/dorsalFin/dorsal_fin_8.png';
+import dorsal_fin_9_image from '@public/images/fish/dorsalFin/dorsal_fin_9.png';
 
-import tail_1_image from '../../public/images/fish/tailFin/tail_1.png';
-import tail_10_image from '../../public/images/fish/tailFin/tail_10.png';
-import tail_11_image from '../../public/images/fish/tailFin/tail_11.png';
-import tail_12_image from '../../public/images/fish/tailFin/tail_12.png';
-import tail_13_image from '../../public/images/fish/tailFin/tail_13.png';
-import tail_14_image from '../../public/images/fish/tailFin/tail_14.png';
-import tail_15_image from '../../public/images/fish/tailFin/tail_15.png';
-import tail_16_image from '../../public/images/fish/tailFin/tail_16.png';
-import tail_17_image from '../../public/images/fish/tailFin/tail_17.png';
-import tail_2_image from '../../public/images/fish/tailFin/tail_2.png';
-import tail_3_image from '../../public/images/fish/tailFin/tail_3.png';
-import tail_4_image from '../../public/images/fish/tailFin/tail_4.png';
-import tail_5_image from '../../public/images/fish/tailFin/tail_5.png';
-import tail_6_image from '../../public/images/fish/tailFin/tail_6.png';
-import tail_7_image from '../../public/images/fish/tailFin/tail_7.png';
-import tail_8_image from '../../public/images/fish/tailFin/tail_8.png';
-import tail_9_image from '../../public/images/fish/tailFin/tail_9.png';
+import tail_1_image from '@public/images/fish/tailFin/tail_1.png';
+import tail_10_image from '@public/images/fish/tailFin/tail_10.png';
+import tail_11_image from '@public/images/fish/tailFin/tail_11.png';
+import tail_12_image from '@public/images/fish/tailFin/tail_12.png';
+import tail_13_image from '@public/images/fish/tailFin/tail_13.png';
+import tail_14_image from '@public/images/fish/tailFin/tail_14.png';
+import tail_15_image from '@public/images/fish/tailFin/tail_15.png';
+import tail_16_image from '@public/images/fish/tailFin/tail_16.png';
+import tail_17_image from '@public/images/fish/tailFin/tail_17.png';
+import tail_2_image from '@public/images/fish/tailFin/tail_2.png';
+import tail_3_image from '@public/images/fish/tailFin/tail_3.png';
+import tail_4_image from '@public/images/fish/tailFin/tail_4.png';
+import tail_5_image from '@public/images/fish/tailFin/tail_5.png';
+import tail_6_image from '@public/images/fish/tailFin/tail_6.png';
+import tail_7_image from '@public/images/fish/tailFin/tail_7.png';
+import tail_8_image from '@public/images/fish/tailFin/tail_8.png';
+import tail_9_image from '@public/images/fish/tailFin/tail_9.png';
 
-import circle_1_image from '../../public/images/fish/body/circle_1.png';
-import circle_2_image from '../../public/images/fish/body/circle_2.png';
-import diamond1_image from '../../public/images/fish/body/diamond1.png';
-import other_1_image from '../../public/images/fish/body/other_1.png';
-import other_2_image from '../../public/images/fish/body/other_2.png';
-import other_3_image from '../../public/images/fish/body/other_3.png';
-import other_4_image from '../../public/images/fish/body/other_4.png';
-import other_5_image from '../../public/images/fish/body/other_5.png';
-import oval_1_image from '../../public/images/fish/body/oval_1.png';
-import oval_2_image from '../../public/images/fish/body/oval_2.png';
-import oval_3_image from '../../public/images/fish/body/oval_3.png';
-import oval_4_image from '../../public/images/fish/body/oval_4.png';
-import rectangle_1_image from '../../public/images/fish/body/rectangle_1.png';
-import rectangle_2_image from '../../public/images/fish/body/rectangle_2.png';
-import rectangle_3_image from '../../public/images/fish/body/rectangle_3.png';
-import s1_image from '../../public/images/fish/body/s1.png';
-import s2_image from '../../public/images/fish/body/s2.png';
-import star1_image from '../../public/images/fish/body/star1.png';
-import triangle2_image from '../../public/images/fish/body/triangle2.png';
-import triangle3_image from '../../public/images/fish/body/triangle3.png';
-import triangle_1_image from '../../public/images/fish/body/triangle_1.png';
+import circle_1_image from '@public/images/fish/body/circle_1.png';
+import circle_2_image from '@public/images/fish/body/circle_2.png';
+import diamond1_image from '@public/images/fish/body/diamond1.png';
+import other_1_image from '@public/images/fish/body/other_1.png';
+import other_2_image from '@public/images/fish/body/other_2.png';
+import other_3_image from '@public/images/fish/body/other_3.png';
+import other_4_image from '@public/images/fish/body/other_4.png';
+import other_5_image from '@public/images/fish/body/other_5.png';
+import oval_1_image from '@public/images/fish/body/oval_1.png';
+import oval_2_image from '@public/images/fish/body/oval_2.png';
+import oval_4_image from '@public/images/fish/body/oval_4.png';
+import rectangle_1_image from '@public/images/fish/body/rectangle_1.png';
+import rectangle_2_image from '@public/images/fish/body/rectangle_2.png';
+import rectangle_3_image from '@public/images/fish/body/rectangle_3.png';
+import s1_image from '@public/images/fish/body/s1.png';
+import star1_image from '@public/images/fish/body/star1.png';
+import triangle2_image from '@public/images/fish/body/triangle2.png';
+import triangle3_image from '@public/images/fish/body/triangle3.png';
+import triangle_1_image from '@public/images/fish/body/triangle_1.png';
 
-import eyebrow_raise_1_image from '../../public/images/fish/eyes/eyebrow_raise_1.png';
-import eyes1_image from '../../public/images/fish/eyes/eyes1.png';
-import eyes10_image from '../../public/images/fish/eyes/eyes10.png';
-import eyes11_image from '../../public/images/fish/eyes/eyes11.png';
-import eyes12_image from '../../public/images/fish/eyes/eyes12.png';
-import eyes13_image from '../../public/images/fish/eyes/eyes13.png';
-import eyes14_image from '../../public/images/fish/eyes/eyes14.png';
-import eyes2_image from '../../public/images/fish/eyes/eyes2.png';
-import eyes3_image from '../../public/images/fish/eyes/eyes3.png';
-import eyes4_image from '../../public/images/fish/eyes/eyes4.png';
-import eyes5_image from '../../public/images/fish/eyes/eyes5.png';
-import eyes6_image from '../../public/images/fish/eyes/eyes6.png';
-import eyes7_image from '../../public/images/fish/eyes/eyes7.png';
-import eyes9_image from '../../public/images/fish/eyes/eyes9.png';
-import small_1_image from '../../public/images/fish/eyes/small_1.png';
+import eyebrow_raise_1_image from '@public/images/fish/eyes/eyebrow_raise_1.png';
+import eyes1_image from '@public/images/fish/eyes/eyes1.png';
+import eyes10_image from '@public/images/fish/eyes/eyes10.png';
+import eyes11_image from '@public/images/fish/eyes/eyes11.png';
+import eyes13_image from '@public/images/fish/eyes/eyes13.png';
+import eyes14_image from '@public/images/fish/eyes/eyes14.png';
+import eyes16_image from '@public/images/fish/eyes/eyes16.png';
+import eyes17_image from '@public/images/fish/eyes/eyes17.png';
+import eyes18_image from '@public/images/fish/eyes/eyes18.png';
+import eyes19_image from '@public/images/fish/eyes/eyes19.png';
+import eyes2_image from '@public/images/fish/eyes/eyes2.png';
+import eyes3_image from '@public/images/fish/eyes/eyes3.png';
+import eyes4_image from '@public/images/fish/eyes/eyes4.png';
+import eyes5_image from '@public/images/fish/eyes/eyes5.png';
+import eyes6_image from '@public/images/fish/eyes/eyes6.png';
+import eyes7_image from '@public/images/fish/eyes/eyes7.png';
+import eyes9_image from '@public/images/fish/eyes/eyes9.png';
 
-import mouth1_image from '../../public/images/fish/mouth/mouth1.png';
-import mouth10_image from '../../public/images/fish/mouth/mouth10.png';
-import mouth11_image from '../../public/images/fish/mouth/mouth11.png';
-import mouth12_image from '../../public/images/fish/mouth/mouth12.png';
-import mouth13_image from '../../public/images/fish/mouth/mouth13.png';
-import mouth14_image from '../../public/images/fish/mouth/mouth14.png';
-import mouth15_image from '../../public/images/fish/mouth/mouth15.png';
-import mouth16_image from '../../public/images/fish/mouth/mouth16.png';
-import mouth17_image from '../../public/images/fish/mouth/mouth17.png';
-import mouth2_image from '../../public/images/fish/mouth/mouth2.png';
-import mouth3_image from '../../public/images/fish/mouth/mouth3.png';
-import mouth4_image from '../../public/images/fish/mouth/mouth4.png';
-import mouth5_image from '../../public/images/fish/mouth/mouth5.png';
-import mouth6_image from '../../public/images/fish/mouth/mouth6.png';
-import mouth7_image from '../../public/images/fish/mouth/mouth7.png';
-import mouth8_image from '../../public/images/fish/mouth/mouth8.png';
-import mouth9_image from '../../public/images/fish/mouth/mouth9.png';
+import mouth1_image from '@public/images/fish/mouth/mouth1.png';
+import mouth10_image from '@public/images/fish/mouth/mouth10.png';
+import mouth11_image from '@public/images/fish/mouth/mouth11.png';
+import mouth12_image from '@public/images/fish/mouth/mouth12.png';
+import mouth13_image from '@public/images/fish/mouth/mouth13.png';
+import mouth15_image from '@public/images/fish/mouth/mouth15.png';
+import mouth17_image from '@public/images/fish/mouth/mouth17.png';
+import mouth2_image from '@public/images/fish/mouth/mouth2.png';
+import mouth3_image from '@public/images/fish/mouth/mouth3.png';
+import mouth4_image from '@public/images/fish/mouth/mouth4.png';
+import mouth5_image from '@public/images/fish/mouth/mouth5.png';
+import mouth6_image from '@public/images/fish/mouth/mouth6.png';
+import mouth7_image from '@public/images/fish/mouth/mouth7.png';
+import mouth8_image from '@public/images/fish/mouth/mouth8.png';
+import mouth9_image from '@public/images/fish/mouth/mouth9.png';
 
-import scales2_image from '../../public/images/fish/scales/scales2.png';
-import scales3_image from '../../public/images/fish/scales/scales3.png';
-import scales4_image from '../../public/images/fish/scales/scales4.png';
-import scales5_image from '../../public/images/fish/scales/scales5.png';
-import scales6_image from '../../public/images/fish/scales/scales6.png';
-import scales7_image from '../../public/images/fish/scales/scales7.png';
-import scales8_image from '../../public/images/fish/scales/scales8.png';
-import scales9_image from '../../public/images/fish/scales/scales9.png';
-import scales10_image from '../../public/images/fish/scales/scales10.png';
-import scales11_image from '../../public/images/fish/scales/scales11.png';
-import scales12_image from '../../public/images/fish/scales/scales12.png';
+import scales5_image from '@public/images/fish/scales/scales5.png';
+import scales6_image from '@public/images/fish/scales/scales6.png';
+import scales7_image from '@public/images/fish/scales/scales7.png';
+import scales8_image from '@public/images/fish/scales/scales8.png';
+import scales9_image from '@public/images/fish/scales/scales9.png';
+import scales10_image from '@public/images/fish/scales/scales10.png';
+import scales11_image from '@public/images/fish/scales/scales11.png';
+import scales12_image from '@public/images/fish/scales/scales12.png';
 
 // Describe the different body parts of the fish. The object
 // is ordered by its render dependency (i.e., dorsalFin should be rendered
@@ -160,8 +155,8 @@ const fishComponents = {
   bodies: {
     circle_1: {
       src: circle_1_image,
-      anchor: [100, 50],
-      faceAnchor: [8, 13],
+      anchor: [95, 55],
+      faceAnchor: [8, 17],
       pectoralFinBackAnchor: [5, 76],
       pectoralFinFrontAnchor: [56, 82],
       dorsalFinAnchor: [50, 14],
@@ -172,8 +167,8 @@ const fishComponents = {
     },
     circle_2: {
       src: circle_2_image,
-      anchor: [96, 55],
-      faceAnchor: [6, 9],
+      anchor: [91, 60],
+      faceAnchor: [8, 12],
       pectoralFinBackAnchor: [22, 72],
       pectoralFinFrontAnchor: [70, 72],
       dorsalFinAnchor: [54, 14],
@@ -184,9 +179,9 @@ const fishComponents = {
     },
     diamond1: {
       src: diamond1_image,
-      anchor: [80, 100],
-      faceAnchor: [12, 2],
-      pectoralFinBackAnchor: [45, 33],
+      anchor: [80, 82],
+      faceAnchor: [15, 1],
+      pectoralFinBackAnchor: [40, 31],
       pectoralFinFrontAnchor: [75, 33],
       dorsalFinAnchor: [75, 15],
       tailAnchor: [120, 23],
@@ -202,13 +197,13 @@ const fishComponents = {
     },
     other_1: {
       src: other_1_image,
-      anchor: [50, 50],
-      faceAnchor: [8, 0],
-      pectoralFinBackAnchor: [32, 58],
-      pectoralFinFrontAnchor: [80, 60],
+      anchor: [71, 69],
+      faceAnchor: [12, 6],
+      pectoralFinBackAnchor: [32, 56],
+      pectoralFinFrontAnchor: [80, 58],
       dorsalFinAnchor: [69, 15],
       tailAnchor: [130, 15],
-      scalesAnchor: [76, 17],
+      scalesAnchor: [76, 18],
       knnData: [7150, BodyShape.OTHER],
       type: FishBodyPart.BODY,
       exclusions: [
@@ -220,8 +215,8 @@ const fishComponents = {
     },
     other_2: {
       src: other_2_image,
-      anchor: [50, 50],
-      faceAnchor: [25, 29],
+      anchor: [69, 44],
+      faceAnchor: [28, 36],
       pectoralFinBackAnchor: [22, 100],
       pectoralFinFrontAnchor: [80, 100],
       dorsalFinAnchor: [71, 15],
@@ -238,13 +233,13 @@ const fishComponents = {
     },
     other_3: {
       src: other_3_image,
-      anchor: [102, 52],
-      faceAnchor: [4, 12],
+      anchor: [97, 58],
+      faceAnchor: [7, 20],
       pectoralFinBackAnchor: [2, 69],
       pectoralFinFrontAnchor: [50, 72],
       dorsalFinAnchor: [48, 14],
       tailAnchor: [85, 40],
-      scalesAnchor: [61, 20],
+      scalesAnchor: [61, 21],
       knnData: [5782, BodyShape.OTHER],
       type: FishBodyPart.BODY,
       exclusions: [
@@ -256,8 +251,8 @@ const fishComponents = {
     },
     other_4: {
       src: other_4_image,
-      anchor: [93, 43],
-      faceAnchor: [15, 17],
+      anchor: [88, 48],
+      faceAnchor: [15, 21],
       pectoralFinBackAnchor: [22, 87],
       pectoralFinFrontAnchor: [68, 88],
       dorsalFinAnchor: [57, 13],
@@ -274,8 +269,8 @@ const fishComponents = {
     },
     other_5: {
       src: other_5_image,
-      anchor: [85, 50],
-      faceAnchor: [8, 22],
+      anchor: [80, 55],
+      faceAnchor: [9, 22],
       pectoralFinBackAnchor: [20, 75],
       pectoralFinFrontAnchor: [65, 78],
       dorsalFinAnchor: [65, 14],
@@ -292,8 +287,8 @@ const fishComponents = {
     },
     oval_1: {
       src: oval_1_image,
-      anchor: [90, 50],
-      faceAnchor: [9, 12],
+      anchor: [85, 55],
+      faceAnchor: [9, 15],
       pectoralFinBackAnchor: [25, 82],
       pectoralFinFrontAnchor: [70, 78],
       dorsalFinAnchor: [60, 17],
@@ -301,17 +296,12 @@ const fishComponents = {
       scalesAnchor: [71, 20],
       knnData: [9344, BodyShape.OVAL],
       type: FishBodyPart.BODY,
-      exclusions: [
-        AppMode.FishVTrash,
-        AppMode.CreaturesVTrashDemo,
-        AppMode.CreaturesVTrash,
-        AppMode.FishShort
-      ]
+      exclusions: [AppMode.FishShort, AppMode.FishLong]
     },
     oval_2: {
       src: oval_2_image,
-      anchor: [92, 67],
-      faceAnchor: [11, 3],
+      anchor: [87, 72],
+      faceAnchor: [11, 5],
       pectoralFinBackAnchor: [8, 53],
       pectoralFinFrontAnchor: [60, 53],
       dorsalFinAnchor: [58, 15],
@@ -326,27 +316,9 @@ const fishComponents = {
         AppMode.FishShort
       ]
     },
-    oval_3: {
-      src: oval_3_image,
-      anchor: [82, 61],
-      faceAnchor: [10, 7],
-      pectoralFinBackAnchor: [27, 60],
-      pectoralFinFrontAnchor: [60, 60],
-      dorsalFinAnchor: [68, 10],
-      tailAnchor: [130, 39],
-      scalesAnchor: [75, 18],
-      knnData: [7642, BodyShape.OVAL],
-      type: FishBodyPart.BODY,
-      exclusions: [
-        AppMode.FishVTrash,
-        AppMode.CreaturesVTrashDemo,
-        AppMode.CreaturesVTrash,
-        AppMode.FishShort
-      ]
-    },
     oval_4: {
       src: oval_4_image,
-      anchor: [86, 60],
+      anchor: [82, 65],
       faceAnchor: [10, 10],
       pectoralFinBackAnchor: [25, 62],
       pectoralFinFrontAnchor: [70, 60],
@@ -364,7 +336,7 @@ const fishComponents = {
     },
     rectangle_1: {
       src: rectangle_1_image,
-      anchor: [85, 63],
+      anchor: [75, 68],
       faceAnchor: [2, 5],
       pectoralFinBackAnchor: [23, 60],
       pectoralFinFrontAnchor: [62, 60],
@@ -372,24 +344,35 @@ const fishComponents = {
       tailAnchor: [126, 37],
       scalesAnchor: [86, 18],
       knnData: [9588, BodyShape.SQUARE],
-      type: FishBodyPart.BODY
+      type: FishBodyPart.BODY,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishLong
+      ]
     },
     rectangle_2: {
       src: rectangle_2_image,
-      anchor: [97, 55],
-      faceAnchor: [10, 11],
+      anchor: [92, 60],
+      faceAnchor: [5, 11],
       pectoralFinBackAnchor: [8, 76],
       pectoralFinFrontAnchor: [60, 78],
       dorsalFinAnchor: [53, 10],
       tailAnchor: [100, 45],
       scalesAnchor: [69, 20],
       knnData: [9224, BodyShape.SQUARE],
-      type: FishBodyPart.BODY
+      type: FishBodyPart.BODY,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash
+      ]
     },
     rectangle_3: {
       src: rectangle_3_image,
-      anchor: [97, 79],
-      faceAnchor: [2, 1],
+      anchor: [92, 84],
+      faceAnchor: [1, 0],
       pectoralFinBackAnchor: [15, 28],
       pectoralFinFrontAnchor: [59, 32],
       dorsalFinAnchor: [53, 10],
@@ -406,7 +389,7 @@ const fishComponents = {
     },
     s1: {
       src: s1_image,
-      anchor: [70, 50],
+      anchor: [96, 49],
       faceAnchor: [0, -7],
       pectoralFinBackAnchor: [10, 15],
       pectoralFinFrontAnchor: [38, 15],
@@ -425,30 +408,12 @@ const fishComponents = {
         AppMode.FishShort
       ]
     },
-    s2: {
-      src: s2_image,
-      anchor: [70, 70],
-      faceAnchor: [0, 27],
-      pectoralFinBackAnchor: [13, 54],
-      pectoralFinFrontAnchor: [42, 52],
-      dorsalFinAnchor: [75, 10],
-      tailAnchor: [106, 34],
-      scalesAnchor: [60, 7],
-      knnData: [4626, BodyShape.OTHER],
-      type: FishBodyPart.BODY,
-      exclusions: [
-        AppMode.FishVTrash,
-        AppMode.CreaturesVTrashDemo,
-        AppMode.CreaturesVTrash,
-        AppMode.FishShort
-      ]
-    },
     star1: {
       src: star1_image,
-      anchor: [70, 50],
-      faceAnchor: [11, 27],
-      pectoralFinBackAnchor: [30, 89],
-      pectoralFinFrontAnchor: [63, 91],
+      anchor: [83, 43],
+      faceAnchor: [18, 29],
+      pectoralFinBackAnchor: [28, 87],
+      pectoralFinFrontAnchor: [63, 89],
       dorsalFinAnchor: [63, 30],
       tailAnchor: [93, 62],
       scalesAnchor: [73, 26],
@@ -463,20 +428,20 @@ const fishComponents = {
     },
     triangle2: {
       src: triangle2_image,
-      anchor: [107, 30],
-      faceAnchor: [7, 70],
-      pectoralFinBackAnchor: [20, 110],
-      pectoralFinFrontAnchor: [54, 126],
-      dorsalFinAnchor: [80, 14],
-      tailAnchor: [70, 79],
-      scalesAnchor: [60, 26],
-      knnData: [6902, BodyShape.TRIANGLE],
+      anchor: [102, 40],
+      faceAnchor: [13, 58],
+      pectoralFinBackAnchor: [18, 100],
+      pectoralFinFrontAnchor: [47, 110],
+      dorsalFinAnchor: [70, 12],
+      tailAnchor: [68, 79],
+      scalesAnchor: [51, 26],
+      knnData: [5380, BodyShape.TRIANGLE],
       type: FishBodyPart.BODY
     },
     triangle3: {
       src: triangle3_image,
-      anchor: [103, 46],
-      faceAnchor: [20, 33],
+      anchor: [98, 51],
+      faceAnchor: [20, 31],
       pectoralFinBackAnchor: [28, 88],
       pectoralFinFrontAnchor: [62, 94],
       dorsalFinAnchor: [88, 10],
@@ -493,15 +458,16 @@ const fishComponents = {
     },
     triangle_1: {
       src: triangle_1_image,
-      anchor: [50, 40],
-      faceAnchor: [10, 43],
+      anchor: [88, 48],
+      faceAnchor: [16, 40],
       pectoralFinBackAnchor: [40, 95],
       pectoralFinFrontAnchor: [80, 100],
       dorsalFinAnchor: [80, 10],
       tailAnchor: [105, 66],
       scalesAnchor: [66, 20],
       knnData: [8285, BodyShape.TRIANGLE],
-      type: FishBodyPart.BODY
+      type: FishBodyPart.BODY,
+      exclusions: [AppMode.FishLong]
     }
   },
   // EYE KNN DATA: [eye area, eye:pupil ratio]
@@ -550,17 +516,6 @@ const fishComponents = {
         AppMode.FishShort
       ]
     },
-    eyes12: {
-      src: eyes12_image,
-      knnData: [717, 4.910958904109589],
-      type: FishBodyPart.EYE,
-      exclusions: [
-        AppMode.FishVTrash,
-        AppMode.CreaturesVTrashDemo,
-        AppMode.CreaturesVTrash,
-        AppMode.FishShort
-      ]
-    },
     eyes13: {
       src: eyes13_image,
       knnData: [301, 4.703125],
@@ -575,6 +530,50 @@ const fishComponents = {
     eyes14: {
       src: eyes14_image,
       knnData: [496, 1.6533333333333333],
+      type: FishBodyPart.EYE,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
+    },
+    eyes16: {
+      src: eyes16_image,
+      knnData: [674, 1.856749311294766],
+      type: FishBodyPart.EYE,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
+    },
+    eyes17: {
+      src: eyes17_image,
+      knnData: [475, 1.85546875],
+      type: FishBodyPart.EYE,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
+    },
+    eyes18: {
+      src: eyes18_image,
+      knnData: [1147, 5.052863436123348],
+      type: FishBodyPart.EYE,
+      exclusions: [
+        AppMode.FishVTrash,
+        AppMode.CreaturesVTrashDemo,
+        AppMode.CreaturesVTrash,
+        AppMode.FishShort
+      ]
+    },
+    eyes19: {
+      src: eyes19_image,
+      knnData: [1075, 1.2920673076923077],
       type: FishBodyPart.EYE,
       exclusions: [
         AppMode.FishVTrash,
@@ -647,17 +646,6 @@ const fishComponents = {
       src: eyes9_image,
       knnData: [732, 1.6944444444444444],
       type: FishBodyPart.EYE
-    },
-    small_1: {
-      src: small_1_image,
-      knnData: [112, 1.018181818181818],
-      type: FishBodyPart.EYE,
-      exclusions: [
-        AppMode.FishVTrash,
-        AppMode.CreaturesVTrashDemo,
-        AppMode.CreaturesVTrash,
-        AppMode.FishShort
-      ]
     }
   },
   // MOUTH KNN DATA: [numTeeth, ratio of height:width, MouthExpression]
@@ -711,31 +699,9 @@ const fishComponents = {
         AppMode.FishShort
       ]
     },
-    mouth14: {
-      src: mouth14_image,
-      knnData: [1, 2, MouthExpression.NEUTRAL],
-      type: FishBodyPart.MOUTH,
-      exclusions: [
-        AppMode.FishVTrash,
-        AppMode.CreaturesVTrashDemo,
-        AppMode.CreaturesVTrash,
-        AppMode.FishShort
-      ]
-    },
     mouth15: {
       src: mouth15_image,
       knnData: [1, 1.263157894736842, MouthExpression.SMILE],
-      type: FishBodyPart.MOUTH,
-      exclusions: [
-        AppMode.FishVTrash,
-        AppMode.CreaturesVTrashDemo,
-        AppMode.CreaturesVTrash,
-        AppMode.FishShort
-      ]
-    },
-    mouth16: {
-      src: mouth16_image,
-      knnData: [0, 0.6666666666666666, MouthExpression.NEUTRAL],
       type: FishBodyPart.MOUTH,
       exclusions: [
         AppMode.FishVTrash,
@@ -1522,21 +1488,6 @@ const fishComponents = {
     }
   },
   scales: {
-    scales2: {
-      src: scales2_image,
-      knnData: [],
-      type: FishBodyPart.SCALES
-    },
-    scales3: {
-      src: scales3_image,
-      knnData: [],
-      type: FishBodyPart.SCALES
-    },
-    scales4: {
-      src: scales4_image,
-      knnData: [],
-      type: FishBodyPart.SCALES
-    },
     scales5: {
       src: scales5_image,
       knnData: [],

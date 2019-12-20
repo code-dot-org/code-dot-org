@@ -1,6 +1,10 @@
-import {initFishData} from '../../../src/utils/fishData';
-import {generateOcean, filterOcean} from '../../../src/utils/generateOcean';
-import SimpleTrainer from '../../../src/utils/SimpleTrainer';
+/**
+ *  @jest-environment node
+ */
+
+import {initFishData} from '@ml/utils/fishData';
+import {generateOcean, filterOcean} from '@ml/utils/generateOcean';
+import SimpleTrainer from '@ml/utils/SimpleTrainer';
 
 describe('Generate ocean test', () => {
   beforeAll(() => {
@@ -50,7 +54,9 @@ describe('Generate ocean test', () => {
       }
     });
     Object.keys(eyeCounts).forEach(eye => {
-      expect(eyeCounts[eye]).toBeGreaterThanOrEqual(Math.floor(oceanSize / Object.keys(eyeCounts).length));
+      expect(eyeCounts[eye]).toBeGreaterThanOrEqual(
+        Math.floor(oceanSize / Object.keys(eyeCounts).length)
+      );
     });
   });
 });

@@ -1,4 +1,8 @@
-import SimpleTrainer from '../../../src/utils/SimpleTrainer';
+/**
+ *  @jest-environment node
+ */
+
+import SimpleTrainer from '@ml/utils/SimpleTrainer';
 import * as tf from '@tensorflow/tfjs';
 
 describe('Simple Trainer tests', () => {
