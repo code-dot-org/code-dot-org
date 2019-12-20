@@ -1,7 +1,13 @@
 import {EventEmitter} from 'events';
 
-function roundToHundredth(val) {
-  return Math.floor(val * 100) / 100;
+// Transfer the acceleration units from milli-g to meters/second^2
+// Round to the nearest hundredth
+function unitsFromMGToMS2(val) {
+  // Using 1024 as a divisor because the Microbit gives values between 0 and 1024
+  // to represent the values between 0 and 1g
+  let g = val / 1024;
+  let ms2 = g * 9.81;
+  return Math.floor(ms2 * 100) / 100;
 }
 
 export default class Accelerometer extends EventEmitter {
@@ -34,20 +40,20 @@ export default class Accelerometer extends EventEmitter {
         get: function() {
           let rads = Math.atan2(this.x, Math.hypot(this.y, this.z));
 
-          return roundToHundredth(rads * (180 / Math.PI));
+          return unitsFromMGToMS2(rads * (180 / Math.PI));
         }
       },
       roll: {
         get: function() {
           let rads = Math.atan2(this.y, Math.hypot(this.x, this.z));
 
-          return roundToHundredth(rads * (180 / Math.PI));
+          return unitsFromMGToMS2(rads * (180 / Math.PI));
         }
       },
       inclination: {
         get: function() {
           let rads = Math.atan2(this.y, this.x);
-          return roundToHundredth(rads * (180 / Math.PI));
+          return unitsFromMGToMS2(rads * (180 / Math.PI));
         }
       },
       x: {
@@ -71,7 +77,7 @@ export default class Accelerometer extends EventEmitter {
             this.x * this.x + this.y * this.y + this.z * this.z
           );
 
-          return roundToHundredth(total);
+          return unitsFromMGToMS2(total);
         }
       }
     });
@@ -97,9 +103,9 @@ export default class Accelerometer extends EventEmitter {
   getAcceleration(accelerationDirection) {
     if (undefined === accelerationDirection) {
       return [
-        roundToHundredth(this.x),
-        roundToHundredth(this.y),
-        roundToHundredth(this.z)
+        unitsFromMGToMS2(this.x),
+        unitsFromMGToMS2(this.y),
+        unitsFromMGToMS2(this.z)
       ];
     }
     if (accelerationDirection === 'total') {
@@ -107,11 +113,11 @@ export default class Accelerometer extends EventEmitter {
     }
     switch (accelerationDirection) {
       case 'x':
-        return roundToHundredth(this.x);
+        return unitsFromMGToMS2(this.x);
       case 'y':
-        return roundToHundredth(this.y);
+        return unitsFromMGToMS2(this.y);
       case 'z':
-        return roundToHundredth(this.z);
+        return unitsFromMGToMS2(this.z);
     }
   }
 
