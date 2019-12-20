@@ -29,9 +29,14 @@ This will set up a symlink in apps/node_modules/@code-dot-org to point at your l
 - If you want to go back to using the published module, in the code-dot-org apps/ directory run `yarn unlink @code-dot-org/ml-activities`.  You'll be given additional instructions on how to force the module to be rebuilt after that.
 
 ### Adding new fish components
-All fish components live in `public/images/fish` in their respective folders (eg bodies live in `body/`). Despite the fact that the fish face right in most of the tutorial, they are built as if they face left in order to simplify the math for the anchor points. This means that all components should be oriented as if the fish is facing left, which might require flopping any new assets. After adding the assets, they will need to be added to `src/utils/fishData.js`. `bin/determineKnnData.js` will output some of the lines that will be needed in `fishData`. Some components need more configuration:
+All fish components live in `public/images/fish` in their respective folders (eg bodies live in `body/`). Despite the fact that the fish face right in most of the tutorial, they are built as if they face left in order to simplify the math for the anchor points. This means that all components should be oriented as if the fish is facing left, which might require flopping any new assets. After adding the assets, they will need to be added to `src/utils/fishData.js`. `bin/determineKnnData.js` will output some of the lines that will be needed in `fishData`.
+
+All components can define `exclusions`, which are modes that the component won't be used in. Components appear in all modes by default.
+
+Some components need more configuration:
 
 # Bodies
-Bodies need an anchor point for the body then all of the other components, relative to the bounds of the body image.
+Bodies need an anchor point for the body then all of the other components, relative to the bounds of the body image. A face anchor point is used for both the eyes and the mouth. The eyes and mouth are arranged with respect to each other and the defined anchor point. The tail Y anchor point is set from where the center of the component should be.
 
-# Tails 
+# Dorsal fin
+Some dorsal fins define an x-adjustment to shift the anchor point. This is useful for dorsal fins that might look odd is not positioned correctly (eg symmetical).
