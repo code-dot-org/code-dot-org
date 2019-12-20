@@ -9,8 +9,7 @@
   / content levels.
   %script{src: webpack_asset_path('js/blockly.js')}
   %script{src: webpack_asset_path("js/#{js_locale}/blockly_locale.js")}
-  / TODO [FND-972] Only load the blocky content for one level type.
-  %script{src: webpack_asset_path("js/#{js_locale}/maze_locale.js")}
+  / TODO [FND-972] Only the associated level type's blocks.
   %script{src: webpack_asset_path("js/#{js_locale}/turtle_locale.js")}
 
   %script{src: webpack_asset_path('js/levels/_content.js')}
