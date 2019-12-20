@@ -69,9 +69,9 @@ class MakerController < ApplicationController
 
     # Ensure we have an existing application and the school is eligible
     application = CircuitPlaygroundDiscountApplication.find_by_studio_person_id(current_user.studio_person_id)
-    school = School.find(application.school_id)
-
     return head :not_found unless application
+
+    school = School.find(application.school_id)
     return head :forbidden unless school.try(:maker_high_needs?)
 
     # validate that we're eligible (this should be visible already, but we should
