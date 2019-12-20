@@ -8,6 +8,7 @@ class MakerControllerTest < ActionController::TestCase
     @teacher = create :teacher
     @admin = create :admin
     @school = create :school
+    @school_maker_high_needs = create :school, :is_maker_high_needs_school
 
     @csd_2017 = ensure_course Script::CSD_2017
     @csd_2018 = ensure_course Script::CSD_2018
@@ -196,7 +197,7 @@ class MakerControllerTest < ActionController::TestCase
     sign_in @teacher
     create :circuit_playground_discount_application,
       user: @teacher,
-      school: @school,
+      school: @school_maker_high_needs,
       full_discount: true
 
     CircuitPlaygroundDiscountApplication.stubs(:studio_person_pd_eligible?).returns(true)
@@ -211,7 +212,7 @@ class MakerControllerTest < ActionController::TestCase
     sign_in @teacher
     application = create :circuit_playground_discount_application,
       user: @teacher,
-      school: @school,
+      school: @school_maker_high_needs,
       full_discount: true
 
     assert_nil application.unit_6_intention
@@ -259,7 +260,7 @@ class MakerControllerTest < ActionController::TestCase
     assert_creates CircuitPlaygroundDiscountApplication do
       post :schoolchoice, params: {nces: @school.id}
       assert_response :success
-      expected = {"full_discount" => false}
+      expected = {"school_high_needs_eligible" => false}
       assert_equal expected, JSON.parse(@response.body)
     end
   end
