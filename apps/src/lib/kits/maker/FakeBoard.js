@@ -43,7 +43,7 @@ export default class FakeBoard extends EventEmitter {
       Sensor: FakeSensor,
       Thermometer: FakeThermometer,
       Pin: FakeComponent,
-      Accelerometer: FakeAccelerometer,
+      PlaygroundAccelerometer: FakeAccelerometer,
       Animation: FakeComponent,
       Servo: FakeComponent,
       TouchSensor: FakeComponent
