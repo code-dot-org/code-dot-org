@@ -7,7 +7,8 @@ import {
   editableValue,
   isNumber,
   isBoolean,
-  toBoolean
+  toBoolean,
+  sortAlphabeticallyOrNumerically
 } from '@cdo/apps/storage/dataBrowser/dataUtils';
 
 describe('isBlank', () => {
@@ -23,6 +24,26 @@ describe('isBlank', () => {
     expect(isBlank(-1)).to.be.false;
     expect(isBlank(' ')).to.be.false;
   });
+});
+
+describe('sortAlphabeticallyOrNumerically', () => {
+  expect(sortAlphabeticallyOrNumerically([])).to.deep.equal([]);
+  expect(sortAlphabeticallyOrNumerically([10, 1, 4, 12])).to.deep.equal([
+    1,
+    4,
+    10,
+    12
+  ]);
+  expect(
+    sortAlphabeticallyOrNumerically([
+      'abc',
+      'red',
+      'blue',
+      'green',
+      'words',
+      'CAPS'
+    ])
+  ).to.deep.equal(['CAPS', 'abc', 'blue', 'green', 'red', 'words']);
 });
 
 describe('ignoreMissingValues', () => {
