@@ -160,7 +160,7 @@ export class Workshop extends React.Component {
     const {workshopId} = params;
     const isWorkshopAdmin = permission.has(WorkshopAdmin);
     const {workshop, enrollments, loadingEnrollments} = this.state;
-    const {sessions, state: workshopState} = workshop;
+    const {created_at, sessions, state: workshopState} = workshop;
 
     return (
       <Grid>
@@ -203,6 +203,7 @@ export class Workshop extends React.Component {
           isWorkshopAdmin={isWorkshopAdmin}
           onWorkshopSaved={this.handleWorkshopSaved}
         />
+        <MetadataFooter createdAt={created_at} />
       </Grid>
     );
   }
