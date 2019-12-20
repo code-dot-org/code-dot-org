@@ -13748,7 +13748,7 @@ en:
           title: Time4CS Control Unit 2
           description_audience: ''
           description_short: ''
-          description: ''
+          description: Description for the unit goes here
         time4cs-experiment-unit-2:
           stages:
             Introduction to the Problem:

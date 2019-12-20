@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import memoize from 'memoize-one';
+import {DebounceInput} from 'react-debounce-input';
 import _ from 'lodash';
 import msg from '@cdo/locale';
 import color from '../../../util/color';
@@ -38,7 +39,7 @@ const styles = {
   }
 };
 
-const INITIAL_STATE = {
+export const INITIAL_STATE = {
   isVisualizerOpen: false,
   chartTitle: '',
   chartType: ChartType.NONE,
@@ -147,8 +148,10 @@ class VisualizerModal extends React.Component {
                 <label style={rowStyle.description}>
                   {msg.dataVisualizerChartTitle()}
                 </label>
-                <input
+                <DebounceInput
                   style={rowStyle.input}
+                  minLength={1}
+                  debounceTimeout={500}
                   value={this.state.chartTitle}
                   onChange={event =>
                     this.setState({chartTitle: event.target.value})
@@ -167,7 +170,11 @@ class VisualizerModal extends React.Component {
               ]}
               value={this.state.chartType}
               onChange={event =>
-                this.setState({chartType: parseFloat(event.target.value)})
+                this.setState({
+                  chartType: parseFloat(event.target.value),
+                  selectedColumn1: '',
+                  selectedColumn2: ''
+                })
               }
             />
 
@@ -235,7 +242,10 @@ class VisualizerModal extends React.Component {
               disabledOptions={[]}
               value={this.state.filterColumn}
               onChange={event =>
-                this.setState({filterColumn: event.target.value})
+                this.setState({
+                  filterColumn: event.target.value,
+                  filterValue: ''
+                })
               }
               inlineLabel
             />
