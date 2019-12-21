@@ -61,14 +61,7 @@ $(document).ready(function() {
   store.dispatch(selectSection(section.id));
   store.dispatch(setRosterProvider(section.login_type));
   store.dispatch(setLoginType(section.login_type));
-
-  //TODO set this correctly as needed
-  store.dispatch(setStageExtrasScriptIds([]));
-
-  //TODO double check
   store.dispatch(setValidAssignments(validCourses, validScripts));
-  console.log('valid grades are');
-  console.log(validGrades);
   store.dispatch(setValidGrades(validGrades));
 
   if (!section.sharing_disabled && section.script.project_sharing) {
