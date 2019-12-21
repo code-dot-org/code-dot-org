@@ -213,7 +213,7 @@ describe('entry tests', () => {
           // e.g., ar_sa.js -> ar_sa/blockly_locale.js
           rename: function(dest, src) {
             var outputPath = src.replace(
-              /(.{2,3}_.{2})\.js/g,
+              /(.+_.+)\.js/g,
               '$1/blockly_locale.js'
             );
             return path.join(dest, outputPath);
