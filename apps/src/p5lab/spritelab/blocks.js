@@ -515,17 +515,19 @@ export default {
       Blockly.BlockValueType.BEHAVIOR,
       'gamelab_behavior_get'
     );
-    Blockly.Flyout.configure(Blockly.BlockValueType.BEHAVIOR, {
-      initialize(flyout, cursor) {
-        if (behaviorEditor && !behaviorEditor.isOpen()) {
-          flyout.addButtonToFlyout_(
-            cursor,
-            'Create a Behavior',
-            behaviorEditor.openWithNewFunction.bind(behaviorEditor)
-          );
-        }
-      },
-      addDefaultVar: false
-    });
+    if (blockInstallOptions.level.editBlocks !== 'toolbox_blocks') {
+      Blockly.Flyout.configure(Blockly.BlockValueType.BEHAVIOR, {
+        initialize(flyout, cursor) {
+          if (behaviorEditor && !behaviorEditor.isOpen()) {
+            flyout.addButtonToFlyout_(
+              cursor,
+              'Create a Behavior',
+              behaviorEditor.openWithNewFunction.bind(behaviorEditor)
+            );
+          }
+        },
+        addDefaultVar: false
+      });
+    }
   }
 };

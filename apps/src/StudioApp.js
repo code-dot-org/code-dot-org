@@ -2682,7 +2682,8 @@ StudioApp.prototype.handleUsingBlockly_ = function(config) {
       false
     ),
     useModalFunctionEditor: utils.valueOr(
-      config.level.useModalFunctionEditor,
+      config.level.edit_blocks !== 'toolbox_blocks' &&
+        config.level.useModalFunctionEditor,
       false
     ),
     useContractEditor: utils.valueOr(config.level.useContractEditor, false),
@@ -2707,7 +2708,8 @@ StudioApp.prototype.handleUsingBlockly_ = function(config) {
   // Never show unused blocks or disable autopopulate in edit mode
   if (options.editBlocks) {
     options.showUnusedBlocks = false;
-    options.disableProcedureAutopopulate = false;
+    options.disableProcedureAutopopulate =
+      options.editBlocks === 'toolbox_blocks';
   }
 
   [
