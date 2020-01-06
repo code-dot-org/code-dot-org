@@ -1,0 +1,29 @@
+{
+  "started": 40,
+  "finished": 0,
+  "cities": {
+    "Ashburn": 38,
+    "Nairobi": 1,
+    "Other": 1
+  },
+  "states": {
+    "Virginia": 38,
+    "Nairobi Province": 1,
+    "Other": 1
+  },
+  "countries": {
+    "United States": 38,
+    "Kenya": 1,
+    "Bulgaria": 1
+  },
+  "tutorials": {
+    "starwars": 19,
+    "starwarsblocks": 19,
+    "mc": 2
+  },
+  "codedotorg_tutorial_count": 0,
+  "votes": {
+    "boys": "0",
+    "girls": "0"
+  }
+}
