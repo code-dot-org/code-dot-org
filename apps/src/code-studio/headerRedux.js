@@ -11,7 +11,7 @@ const ENABLE_LEVEL_BUILDER_SAVE_BUTTON =
 const REFRESH_PROJECT_NAME = 'header/REFRESH_PROJECT_NAME';
 const SHOW_TRY_AGAIN_DIALOG = 'header/SHOW_TRY_AGAIN_DIALOG';
 const SET_NAME_FAILURE = 'header/SET_NAME_FAILURE';
-const RESET_NAME_FAILURE = 'header/RESET_NAME_FAILURE';
+const UNSET_NAME_FAILURE = 'header/UNSET_NAME_FAILURE';
 
 export const projectUpdatedStatuses = {
   default: 'default',
@@ -104,7 +104,7 @@ export default (state = initialState, action) => {
     };
   }
 
-  if (action.type === RESET_NAME_FAILURE) {
+  if (action.type === UNSET_NAME_FAILURE) {
     return {
       ...state,
       projectNameFailure: undefined
@@ -182,6 +182,6 @@ export const setNameFailure = projectNameFailure => ({
   projectNameFailure
 });
 
-export const resetNameFailure = () => ({
-  type: RESET_NAME_FAILURE
+export const unsetNameFailure = () => ({
+  type: UNSET_NAME_FAILURE
 });
