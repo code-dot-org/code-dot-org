@@ -521,7 +521,7 @@ export default {
           if (behaviorEditor && !behaviorEditor.isOpen()) {
             flyout.addButtonToFlyout_(
               cursor,
-              'Create a Behavior',
+              i18n.createBlocklyBehavior(),
               behaviorEditor.openWithNewFunction.bind(behaviorEditor)
             );
           }
