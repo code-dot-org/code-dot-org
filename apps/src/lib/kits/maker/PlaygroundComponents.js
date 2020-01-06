@@ -177,7 +177,7 @@ export const componentConstructors = {
   Switch,
   Piezo,
   Sensor: five.Sensor,
-  PlaygroundThermometer: five.Thermometer,
+  Thermometer: five.Thermometer,
   Pin: five.Pin,
   Accelerometer: five.Accelerometer,
   Animation: five.Animation,
