@@ -8,7 +8,8 @@ import projects, {
   updateProjectName,
   cancelRenamingProject,
   saveSuccess,
-  saveFailure
+  saveFailure,
+  unsetNameFailure
 } from '@cdo/apps/templates/projects/projectsRedux';
 import {stubFakePersonalProjectData} from '@cdo/apps/templates/projects/generateFakeProjects';
 
@@ -206,6 +207,10 @@ describe('projectsRedux', () => {
       const updatedName = profanity;
       const action = setPersonalProjectsList(stubFakePersonalProjectData);
       const nextState = projects(initialState, action);
+      assert.deepEqual(
+        nextState.personalProjectsList.projects,
+        stubFakePersonalProjectData
+      );
       nextState.personalProjectsList.projects[3].updatedName = updatedName;
       const nextAction = saveFailure('abcd4', profanity);
       const nextNextState = projects(nextState, nextAction);
@@ -226,6 +231,25 @@ describe('projectsRedux', () => {
       assert.equal(
         nextNextState.personalProjectsList.projects[3].isEditing,
         true
+      );
+    });
+  });
+
+  describe('unsetNameFailure', () => {
+    it('unsetNameFailure sets the project projectNameFailure to undefined', () => {
+      const profanity = 'farts';
+      const action = setPersonalProjectsList(stubFakePersonalProjectData);
+      const nextState = projects(initialState, action);
+      assert.deepEqual(
+        nextState.personalProjectsList.projects,
+        stubFakePersonalProjectData
+      );
+      nextState.personalProjectsList.projects[3].projectNameFailure = profanity;
+      const nextAction = unsetNameFailure('abcd4');
+      const nextNextState = projects(nextState, nextAction);
+      assert.equal(
+        nextNextState.personalProjectsList.projects[3].projectNameFailure,
+        undefined
       );
     });
   });
