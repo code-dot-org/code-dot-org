@@ -7,6 +7,7 @@ import {changeInterfaceMode, viewAnimationJson} from './actions';
 import {startInAnimationTab} from './stateQueries';
 import {P5LabInterfaceMode, APP_WIDTH} from './constants';
 import {SpritelabReservedWords} from './spritelab/constants';
+import {TOOLBOX_EDIT_MODE} from '../constants';
 import experiments from '@cdo/apps/util/experiments';
 import {
   outputError,
@@ -834,7 +835,7 @@ P5Lab.prototype.onPuzzleComplete = function(submit, testResult, message) {
     // See StudioApp -> setStartBlocks_
     // Because of this, we need to remove the SharedFunctions when we are in
     // toolbox edit mode. Otherwise, they end up in a student's toolbox.
-    if (this.level.edit_blocks === 'toolbox_blocks') {
+    if (this.level.edit_blocks === TOOLBOX_EDIT_MODE) {
       var allBlocks = Array.from(xml.querySelectorAll('xml > block'));
       var toRemove = allBlocks.filter(element => {
         return (
