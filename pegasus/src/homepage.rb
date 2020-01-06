@@ -432,7 +432,7 @@ class Homepage
   end
 
   def self.show_courses_banner(request)
-    true
+    false
   end
 
   def self.get_dance_stars

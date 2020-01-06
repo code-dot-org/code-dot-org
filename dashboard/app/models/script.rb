@@ -1347,7 +1347,7 @@ class Script < ActiveRecord::Base
       hideable_stages: hideable_stages?,
       disablePostMilestone: disable_post_milestone?,
       isHocScript: hoc?,
-      isCSF: csf?,
+      csf: csf?,
       peerReviewsRequired: peer_reviews_to_complete || 0,
       peerReviewStage: peer_review_stage,
       student_detail_progress_view: student_detail_progress_view?,
