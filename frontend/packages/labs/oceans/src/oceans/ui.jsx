@@ -236,22 +236,26 @@ const styles = {
     position: 'absolute',
     top: '30%',
     right: '-2%',
-    width: '30%'
+    width: '30%',
+    direction: 'ltr'
   },
   trainBotHead: {
     transition: 'transform 500ms',
     left: '3%',
     width: '43%',
     top: '0%',
-    position: 'absolute'
+    position: 'absolute',
+    direction: 'ltr'
   },
   trainBotOpen: {
     transform: 'rotate(90deg)',
-    transformOrigin: 'bottom right'
+    transformOrigin: 'bottom right',
+    direction: 'ltr'
   },
   trainBotBody: {
     width: '49%',
-    marginTop: '30%'
+    marginTop: '30%',
+    direction: 'ltr'
   },
   counter: {
     position: 'absolute',
@@ -303,7 +307,8 @@ const styles = {
     width: '100%',
     bottom: '3.5%',
     display: 'flex',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    direction: 'ltr'
   },
   mediaControl: {
     cursor: 'pointer',
@@ -442,7 +447,8 @@ const styles = {
     width: '9.5%',
     borderRadius: 8,
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
+    direction: 'ltr'
   },
   recallIcon: {
     cursor: 'pointer',
