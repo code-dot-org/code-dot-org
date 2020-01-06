@@ -44,7 +44,7 @@ import msg from '@cdo/locale';
 import project from './code-studio/initApp/project';
 import puzzleRatingUtils from './puzzleRatingUtils';
 import userAgentParser from './code-studio/initApp/userAgentParser';
-import {KeyCodes, TestResults} from './constants';
+import {KeyCodes, TestResults, TOOLBOX_EDIT_MODE} from './constants';
 import {assets as assetsApi} from './clientApi';
 import {blocks as makerDropletBlocks} from './lib/kits/maker/dropletConfig';
 import {closeDialog as closeInstructionsDialog} from './redux/instructionsDialog';
@@ -2034,7 +2034,7 @@ StudioApp.prototype.configureDom = function(config) {
       // If in level builder editing blocks, make workspace extra tall
       vizHeight = 3000;
       // Modify the arrangement of toolbox blocks so categories align left
-      if (config.level.edit_blocks === 'toolbox_blocks') {
+      if (config.level.edit_blocks === TOOLBOX_EDIT_MODE) {
         this.blockYCoordinateInterval = 80;
         config.blockArrangement = {category: {x: 20}};
       }
@@ -2640,7 +2640,7 @@ StudioApp.prototype.handleUsingBlockly_ = function(config) {
     this.checkForEmptyBlocks_ = false;
     if (
       config.level.edit_blocks === 'required_blocks' ||
-      config.level.edit_blocks === 'toolbox_blocks' ||
+      config.level.edit_blocks === TOOLBOX_EDIT_MODE ||
       config.level.edit_blocks === 'recommended_blocks'
     ) {
       // Don't show when run block for toolbox/required/recommended block editing
@@ -2682,7 +2682,7 @@ StudioApp.prototype.handleUsingBlockly_ = function(config) {
       false
     ),
     useModalFunctionEditor: utils.valueOr(
-      config.level.edit_blocks !== 'toolbox_blocks' &&
+      config.level.edit_blocks !== TOOLBOX_EDIT_MODE &&
         config.level.useModalFunctionEditor,
       false
     ),
@@ -2709,7 +2709,7 @@ StudioApp.prototype.handleUsingBlockly_ = function(config) {
   if (options.editBlocks) {
     options.showUnusedBlocks = false;
     options.disableProcedureAutopopulate =
-      options.editBlocks === 'toolbox_blocks';
+      options.editBlocks === TOOLBOX_EDIT_MODE;
   }
 
   [
