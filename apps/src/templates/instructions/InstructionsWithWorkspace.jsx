@@ -3,8 +3,13 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import CodeWorkspaceContainer from '../CodeWorkspaceContainer';
-import TopInstructions from './TopInstructions';
-import {setInstructionsMaxHeightAvailable} from '../../redux/instructions';
+import TopInstructions, {MIN_HEIGHT} from './TopInstructions';
+import {
+  setInstructionsMaxHeightAvailable,
+  setInstructionsRenderedHeight
+} from '../../redux/instructions';
+import HeightResizer from './HeightResizer';
+import clamp from 'lodash/clamp';
 
 /**
  * A component representing the right side of the screen in our app. In particular
@@ -18,7 +23,10 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
     children: PropTypes.node,
     // props provided via connect
     instructionsHeight: PropTypes.number.isRequired,
-    setInstructionsMaxHeightAvailable: PropTypes.func.isRequired
+    instructionsMaxHeight: PropTypes.number.isRequired,
+    isEmbedView: PropTypes.bool.isRequired,
+    setInstructionsMaxHeightAvailable: PropTypes.func.isRequired,
+    setInstructionsRenderedHeight: PropTypes.func.isRequired
   };
 
   // only used so that we can rerender when resized
@@ -36,6 +44,15 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
    * call adjustTopPaneHeight as our maxHeight may need adjusting.
    */
   onResize = () => {
+    // We have to have a reference to this component to do anything on resize anyway.
+    // Guard here because our tests aren't cleaning up nicely :(
+    if (!this.codeWorkspaceContainer) {
+      return;
+    }
+
+    // TODO (brad)
+    // See if we can achieve this effect with memoization instead of state
+    // https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html#what-about-memoization
     const {
       windowWidth: lastWindowWidth,
       windowHeight: lastWindowHeight
@@ -93,10 +110,35 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
     window.removeEventListener('resize', this.onResize);
   }
 
+  /**
+   * Given a prospective delta, determines how much we can actually change the
+   * height (accounting for min/max) and changes height by that much.
+   * @param {number} delta
+   * @returns {number} How much we actually changed
+   */
+  handleHeightResize = delta => {
+    const {
+      instructionsHeight: oldHeight,
+      instructionsMaxHeight: maxHeight,
+      setInstructionsRenderedHeight: setHeight
+    } = this.props;
+
+    const newHeight = clamp(oldHeight + delta, MIN_HEIGHT, maxHeight);
+    setHeight(newHeight);
+
+    return newHeight - oldHeight;
+  };
+
   render() {
     return (
       <span>
         <TopInstructions />
+        {!this.props.isEmbedView && (
+          <HeightResizer
+            position={this.props.instructionsHeight}
+            onResize={this.handleHeightResize}
+          />
+        )}
         <CodeWorkspaceContainer
           ref={this.setCodeWorkspaceContainerRef}
           topMargin={this.props.instructionsHeight}
@@ -111,13 +153,21 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
 export default connect(
   function propsFromStore(state) {
     return {
-      instructionsHeight: state.instructions.renderedHeight
+      instructionsHeight: state.instructions.renderedHeight,
+      instructionsMaxHeight: Math.min(
+        state.instructions.maxAvailableHeight,
+        state.instructions.maxNeededHeight
+      ),
+      isEmbedView: state.pageConstants.isEmbedView
     };
   },
   function propsFromDispatch(dispatch) {
     return {
       setInstructionsMaxHeightAvailable(maxHeight) {
         dispatch(setInstructionsMaxHeightAvailable(maxHeight));
+      },
+      setInstructionsRenderedHeight(height) {
+        dispatch(setInstructionsRenderedHeight(height));
       }
     };
   }
