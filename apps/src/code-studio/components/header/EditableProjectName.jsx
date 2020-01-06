@@ -8,7 +8,7 @@ import ProjectUpdatedAt from './ProjectUpdatedAt';
 import {
   refreshProjectName,
   setNameFailure,
-  resetNameFailure
+  unsetNameFailure
 } from '../../headerRedux';
 import NameFailureDialog from '../NameFailureDialog';
 
@@ -54,7 +54,7 @@ class UnconnectedEditProjectName extends React.Component {
     refreshProjectName: PropTypes.func.isRequired,
     projectNameFailure: PropTypes.string,
     setNameFailure: PropTypes.func.isRequired,
-    resetNameFailure: PropTypes.func.isRequired
+    unsetNameFailure: PropTypes.func.isRequired
   };
 
   state = {
@@ -121,7 +121,7 @@ class UnconnectedEditProjectName extends React.Component {
         <NameFailureDialog
           flaggedText={this.props.projectNameFailure}
           isOpen={!!this.props.projectNameFailure}
-          handleClose={this.props.resetNameFailure}
+          handleClose={this.props.unsetNameFailure}
         />
       </div>
     );
@@ -135,7 +135,7 @@ const EditProjectName = connect(
   {
     refreshProjectName,
     setNameFailure,
-    resetNameFailure
+    unsetNameFailure
   }
 )(UnconnectedEditProjectName);
 

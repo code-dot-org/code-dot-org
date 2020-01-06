@@ -24,7 +24,7 @@ const UPDATE_PROJECT_NAME = 'projects/UPDATE_PROJECT_NAME';
 const CANCEL_RENAMING_PROJECT = 'projects/CANCEL_RENAMING_PROJECT';
 const SAVE_SUCCESS = 'projects/SAVE_SUCCESS';
 const SAVE_FAILURE = 'project/SAVE_FAILURE';
-const RESET_NAME_FAILURE = 'project/RESET_NAME_FAILURE';
+const UNSET_NAME_FAILURE = 'project/UNSET_NAME_FAILURE';
 
 // Action creators
 
@@ -105,8 +105,8 @@ export function saveFailure(projectId, projectNameFailure) {
   return {type: SAVE_FAILURE, projectId, projectNameFailure};
 }
 
-export function resetNameFailure(projectId) {
-  return {type: RESET_NAME_FAILURE, projectId};
+export function unsetNameFailure(projectId) {
+  return {type: UNSET_NAME_FAILURE, projectId};
 }
 
 // Reducers
@@ -355,7 +355,7 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
         ...state,
         projects: unsavedProjects
       };
-    case RESET_NAME_FAILURE:
+    case UNSET_NAME_FAILURE:
       var nameFailureProjectId = action.projectId;
 
       var nameFailureProjectIndex = state.projects.findIndex(
