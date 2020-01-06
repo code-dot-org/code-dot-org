@@ -36,7 +36,7 @@ const fakeSectionData = {
 
 const fakeScriptData789 = {
   id: 789,
-  excludeCsfColumnInLegend: false,
+  csf: true,
   title: 'Title 789',
   path: '/',
   stages: [{id: 1, levels: []}, {id: 2, levels: []}]
@@ -44,7 +44,7 @@ const fakeScriptData789 = {
 
 const fakeScriptData456 = {
   id: 456,
-  excludeCsfColumnInLegend: false,
+  csf: true,
   title: 'Title 456',
   path: '/',
   stages: [{id: 3, levels: []}, {id: 4, levels: []}]

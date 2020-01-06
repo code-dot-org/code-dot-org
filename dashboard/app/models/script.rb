@@ -136,7 +136,6 @@ class Script < ActiveRecord::Base
     student_detail_progress_view
     project_widget_visible
     project_widget_types
-    exclude_csf_column_in_legend
     teacher_resources
     stage_extras_available
     has_verified_resources
@@ -1348,12 +1347,12 @@ class Script < ActiveRecord::Base
       hideable_stages: hideable_stages?,
       disablePostMilestone: disable_post_milestone?,
       isHocScript: hoc?,
+      csf: csf?,
       peerReviewsRequired: peer_reviews_to_complete || 0,
       peerReviewStage: peer_review_stage,
       student_detail_progress_view: student_detail_progress_view?,
       project_widget_visible: project_widget_visible?,
       project_widget_types: project_widget_types,
-      excludeCsfColumnInLegend: exclude_csf_column_in_legend?,
       teacher_resources: teacher_resources,
       stage_extras_available: stage_extras_available,
       has_verified_resources: has_verified_resources?,
@@ -1500,7 +1499,6 @@ class Script < ActiveRecord::Base
   def self.build_property_hash(script_data)
     {
       hideable_stages: script_data[:hideable_stages] || false, # default false
-      exclude_csf_column_in_legend: script_data[:exclude_csf_column_in_legend] || false,
       professional_learning_course: script_data[:professional_learning_course] || false, # default false
       peer_reviews_to_complete: script_data[:peer_reviews_to_complete] || nil,
       student_detail_progress_view: script_data[:student_detail_progress_view] || false,
