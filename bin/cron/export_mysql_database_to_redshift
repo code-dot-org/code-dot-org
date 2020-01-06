@@ -11,8 +11,8 @@ require 'cdo/chat_client'
 # Export production Aurora MySQL tables to Redshift once a day.
 # 1) Start Data Migration Service (DMS) Replication Tasks, which are configured to drop existing tables in a parallel
 # set of `import_` Redshift schemas and then carry out full load of Aurora MySQL tables into the temporary `import_` schemas.
-# 2) Verify that all tables have replicated from MySQL to the staging schemas in Redshift within a configurable timeout.
-# 3) Drop the existing tables in the main Redshift schemas and rename / move the newly transferred tables into the main
+# 2) [NOT IMPLEMENTED YET] Verify that all tables have replicated from MySQL to the staging schemas in Redshift within a configurable timeout.
+# 3) [NOT IMPLEMENTED YET] Drop the existing tables in the main Redshift schemas and rename / move the newly transferred tables into the main
 # Redshift schemas.
 def main
   ChatClient.message 'cron-daily', 'Beginning export from Aurora MySQL database to Redshift.'
@@ -45,14 +45,13 @@ end
 def execute_replication_task(replication_task_arn, current_task_status)
   ChatClient.message 'cron-daily', "Starting DMS Replication Task: #{replication_task_arn}"
   dms_client = Aws::DatabaseMigrationService::Client.new
-  start_task_response = dms_client.start_replication_task(
+  dms_client.start_replication_task(
     {
       replication_task_arn: replication_task_arn,
       # TODO: (suresh) 'not-started' is not the correct status of a Replication Task that has not ever been executed.
       start_replication_task_type: current_task_status != 'not-started' ? 'reload-target' : 'start-replication'
     }
   )
-  ChatClient.message 'cron-daily', "Start DMS Task Response: #{replication_task_arn} - #{start_task_response}"
 
   # Wait 16 hours, checking every 10 minutes.  As of late-2019, it takes about 8 hours for the user_levels task to complete.
   task_status = wait_until_replication_task_completed(replication_task_arn, 96, 600)
@@ -83,6 +82,7 @@ def wait_until_replication_task_completed(replication_task_arn, max_attempts, de
     ).replication_tasks[0]
 
     attempts += 1
+    CDO.log.info "Task: #{replication_task_arn} / Status: #{task_status} / Attempt: #{attempts} of #{max_attempts}"
     sleep delay
   end
   return task_status if task_status == 'stopped'
