@@ -199,29 +199,6 @@ class EditSectionForm extends Component {
   }
 }
 
-export const UnconnectedEditSectionForm = EditSectionForm;
-
-export default connect(
-  state => ({
-    initialCourseId: state.teacherSections.initialCourseId,
-    initialScriptId: state.teacherSections.initialScriptId,
-    validGrades: state.teacherSections.validGrades,
-    validAssignments: state.teacherSections.validAssignments,
-    assignmentFamilies: state.teacherSections.assignmentFamilies,
-    sections: state.teacherSections.sections,
-    section: state.teacherSections.sectionBeingEdited,
-    isSaveInProgress: state.teacherSections.saveInProgress,
-    stageExtrasAvailable: id => stageExtrasAvailable(state, id),
-    hiddenStageState: state.hiddenStage,
-    assignedScriptName: assignedScriptName(state)
-  }),
-  {
-    editSectionProperties,
-    updateHiddenScript,
-    handleSave: finishEditingSection,
-    handleClose: cancelEditingSection
-  }
-)(EditSectionForm);
 
 const FieldProps = {
   value: PropTypes.any,
@@ -382,3 +359,51 @@ const YesNoDropdown = ({value, onChange, disabled}) => (
   </Dropdown>
 );
 YesNoDropdown.propTypes = FieldProps;
+
+function setScriptIdAfterEdit = () => (dispatch, getState) => {
+    finishEditingSection()(dispatch, getState)
+        .then(function(result) {
+            dispatch(
+                loadScript(result.script.id)
+            )
+            dispatch(
+                setScriptId(result.script.id)
+            )
+        })
+}
+
+function defaultPropsFromState = (state) => ({
+    initialCourseId: state.teacherSections.initialCourseId,
+    initialScriptId: state.teacherSections.initialScriptId,
+    validGrades: state.teacherSections.validGrades,
+    validAssignments: state.teacherSections.validAssignments,
+    assignmentFamilies: state.teacherSections.assignmentFamilies,
+    sections: state.teacherSections.sections,
+    section: state.teacherSections.sectionBeingEdited,
+    isSaveInProgress: state.teacherSections.saveInProgress,
+    stageExtrasAvailable: id => stageExtrasAvailable(state, id),
+    hiddenStageState: state.hiddenStage,
+    assignedScriptName: assignedScriptName(state)
+})
+
+export const UnconnectedEditSectionForm = EditSectionForm;
+
+export const SetScriptIdEditSectionForm = connect(
+  defaultPropsFromState,
+  {
+    editSectionProperties,
+    updateHiddenScript,
+    handleSave: setScriptIdAfterEdit,
+    handleClose: cancelEditingSection
+  }
+)(EditSectionForm)
+
+export default connect(
+  defaultPropsFromState,
+  {
+    editSectionProperties,
+    updateHiddenScript,
+    handleSave: finishEditingSection,
+    handleClose: cancelEditingSection
+  }
+)(EditSectionForm);

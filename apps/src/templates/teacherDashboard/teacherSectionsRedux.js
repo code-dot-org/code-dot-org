@@ -256,19 +256,14 @@ export const finishEditingSection = () => (dispatch, getState) => {
           sectionId: section.id,
           serverSection: result
         });
-        console.log('server section is')
-        console.log(result)
-       /* dispatch(
-            setSection(result) // TODO max
-        )*/
+        /*
         dispatch(
             setScriptId(result.script.id)
         )
         dispatch(
             loadScript(result.script.id)
-        )
-        console.log('loaded script')
-        resolve();
+        )*/ //TODO: Max
+        resolve(result);
       })
       .fail((jqXhr, status) => {
         dispatch({type: EDIT_SECTION_FAILURE});

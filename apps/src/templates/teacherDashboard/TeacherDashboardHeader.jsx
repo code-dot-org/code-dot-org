@@ -5,8 +5,7 @@ import i18n from '@cdo/locale';
 import SmallChevronLink from '../SmallChevronLink';
 import SelectSectionDropdown from './SelectSectionDropdown';
 import TeacherDashboardNavigation from './TeacherDashboardNavigation';
-import EditSectionForm from './EditSectionForm';
-import EditSectionDialog from './EditSectionDialog';
+import {SetScriptIdEditSectionDialog} from './EditSectionDialog';
 import {beginEditingSection} from './teacherSectionsRedux';
 import Button from '../Button';
 
@@ -57,7 +56,7 @@ class TeacherDashboardHeader extends React.Component {
           <SelectSectionDropdown />
         </div>
         <TeacherDashboardNavigation />
-        <EditSectionDialog />
+        <SetScriptIdEditSectionDialog />
       </div>
     );
   }
@@ -69,9 +68,9 @@ export default connect(state => {
     state.teacherSections.sections[currentSectionId].name;
 
   let currentScriptId = state.scriptSelection.scriptId;
-  let currentScriptName = "TODO" /* state.scriptSelection.validScripts.filter(
+  let currentScriptName = state.scriptSelection.validScripts.filter(
     script => script.id === currentScriptId
-  )[0].name;*/
+  )[0].name;
 
   return {currentSectionName, currentScriptName, currentSectionId};
 })(TeacherDashboardHeader);
