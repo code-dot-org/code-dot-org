@@ -200,5 +200,33 @@ describe('projectsRedux', () => {
         false
       );
     });
+
+    it('saveFailure with a projectNameFailure sets the project isEditing to true and sets projectNameFailure', () => {
+      const profanity = 'farts';
+      const updatedName = profanity;
+      const action = setPersonalProjectsList(stubFakePersonalProjectData);
+      const nextState = projects(initialState, action);
+      nextState.personalProjectsList.projects[3].updatedName = updatedName;
+      const nextAction = saveFailure('abcd4', profanity);
+      const nextNextState = projects(nextState, nextAction);
+      // Name doesn't change after saveFailure.
+      assert.equal(
+        nextNextState.personalProjectsList.projects[3].name,
+        nextState.personalProjectsList.projects[3].name
+      );
+      assert.equal(
+        nextNextState.personalProjectsList.projects[3].projectNameFailure,
+        profanity
+      );
+      assert.equal(
+        nextNextState.personalProjectsList.projects[3].isSaving,
+        false
+      );
+      // Should still be editing because you need to pick a new name without profanity.
+      assert.equal(
+        nextNextState.personalProjectsList.projects[3].isEditing,
+        true
+      );
+    });
   });
 });
