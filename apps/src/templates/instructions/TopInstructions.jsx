@@ -23,6 +23,7 @@ import styleConstants from '../../styleConstants';
 import commonStyles from '../../commonStyles';
 import Instructions from './Instructions';
 import CollapserIcon from './CollapserIcon';
+import HeightResizer from './HeightResizer';
 import i18n from '@cdo/locale';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import queryString from 'query-string';
@@ -33,7 +34,7 @@ import {WIDGET_WIDTH} from '@cdo/apps/applab/constants';
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
-export const MIN_HEIGHT = RESIZER_HEIGHT + 60;
+const MIN_HEIGHT = RESIZER_HEIGHT + 60;
 
 const TabType = {
   INSTRUCTIONS: 'instructions',
@@ -322,6 +323,22 @@ class TopInstructions extends Component {
     if (this.state.tabSelected === TabType.COMMENTS) {
       this.props.setInstructionsRenderedHeight(this.adjustMaxNeededHeight());
     }
+  };
+
+  /**
+   * Given a prospective delta, determines how much we can actually change the
+   * height (accounting for min/max) and changes height by that much.
+   * @param {number} delta
+   * @returns {number} How much we actually changed
+   */
+  handleHeightResize = delta => {
+    const currentHeight = this.props.height;
+
+    let newHeight = Math.max(MIN_HEIGHT, currentHeight + delta);
+    newHeight = Math.min(newHeight, this.props.maxHeight);
+
+    this.props.setInstructionsRenderedHeight(newHeight);
+    return newHeight - currentHeight;
   };
 
   /**
@@ -758,6 +775,12 @@ class TopInstructions extends Component {
                 </div>
               )}
           </div>
+          {!this.props.isEmbedView && (
+            <HeightResizer
+              position={this.props.height}
+              onResize={this.handleHeightResize}
+            />
+          )}
         </div>
       </div>
     );
