@@ -82,7 +82,7 @@ module Pd::Application
           TEXT_FIELDS[:other_with_text]
         ],
         replace_course: [
-          'Yes',
+          YES,
           'No, this course will be added to the schedule in addition to an existing computer science course',
           'No, computer science is new to my school',
           TEXT_FIELDS[:dont_know_explain]
