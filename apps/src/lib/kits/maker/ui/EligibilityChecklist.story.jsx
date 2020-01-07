@@ -5,7 +5,6 @@ import {Unit6Intention} from '../util/discountLogic';
 
 const defaultProps = {
   statusPD: Status.SUCCEEDED,
-  statusAcademicYearPD: Status.SUCCEEDED,
   statusStudentCount: Status.SUCCEEDED,
   hasConfirmedSchool: false,
   adminSetStatus: false,
@@ -69,22 +68,6 @@ export default storybook => {
               schoolName="Code.org Junior Academy"
               hasConfirmedSchool={true}
               schoolHighNeedsEligible={true}
-            />
-          </div>
-        )
-      },
-      {
-        name: '2020: Failed academic year PD attendance requirement',
-        description: 'When a teacher did not attend quarterly PD',
-        story: () => (
-          <div style={{margin: '2em'}}>
-            <EligibilityChecklist
-              {...defaultProps}
-              schoolId="1234"
-              schoolName="Code.org Junior Academy"
-              hasConfirmedSchool={true}
-              schoolHighNeedsEligible={true}
-              statusAcademicYearPD={Status.FAILED}
             />
           </div>
         )
