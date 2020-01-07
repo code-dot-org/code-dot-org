@@ -797,12 +797,12 @@ module Pd::Application
           end
 
         meets_minimum_criteria_scores[:replace_existing] =
-          if responses[:principal_wont_replace_existing_course] == principal_options[:replace_course][1]
-            YES
+          if responses[:principal_wont_replace_existing_course] == YES
+            NO
           elsif responses[:principal_wont_replace_existing_course] == TEXT_FIELDS[:i_dont_know_explain]
             nil
           else
-            NO
+            YES
           end
 
         school_stats = get_latest_school_stats(school_id)
