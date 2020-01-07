@@ -14,6 +14,8 @@ $(document).ready(() => {
     currently_distributing_discount_codes
   } = scriptData;
 
+  currently_distributing_discount_codes = true;
+
   ReactDOM.render(
     <div>
       {is_admin && <DiscountAdminOverride />}
@@ -30,7 +32,6 @@ $(document).ready(() => {
           schoolName={application.school_name}
           schoolHighNeedsEligible={application.school_high_needs_eligible}
           hasConfirmedSchool={application.has_confirmed_school}
-          getsFullDiscount={application.gets_full_discount}
           initialDiscountCode={application.discount_code}
           initialExpiration={application.expiration}
           adminSetStatus={application.admin_set_status}

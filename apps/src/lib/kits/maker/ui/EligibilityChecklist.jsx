@@ -26,7 +26,6 @@ export default class EligibilityChecklist extends React.Component {
     schoolName: PropTypes.string,
     schoolHighNeedsEligible: PropTypes.bool,
     hasConfirmedSchool: PropTypes.bool,
-    getsFullDiscount: PropTypes.bool,
     initialDiscountCode: PropTypes.string,
     initialExpiration: PropTypes.string,
     adminSetStatus: PropTypes.bool.isRequired,
@@ -62,7 +61,7 @@ export default class EligibilityChecklist extends React.Component {
     if (props.adminSetStatus) {
       this.state = {
         ...this.state,
-        statusYear: props.getsFullDiscount ? Status.SUCCEEDED : Status.FAILED
+        statusYear: Status.SUCCEEDED
       };
     }
 
