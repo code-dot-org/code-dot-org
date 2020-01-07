@@ -41,7 +41,7 @@ export default class FakeBoard extends EventEmitter {
       Switch: FakeToggleSwitch,
       Piezo: FakeBuzzer,
       Sensor: FakeSensor,
-      PlaygroundThermometer: FakeThermometer,
+      Thermometer: FakeThermometer,
       Pin: FakeComponent,
       Accelerometer: FakeAccelerometer,
       Animation: FakeComponent,
