@@ -12,6 +12,7 @@ export default storybook => {
         story: () => (
           <DiscountAdminOverride
             statusPD={Status.SUCCEEDED}
+            statusAcademicYearPD={Status.SUCCEEDED}
             statusStudentCount={Status.FAILED}
           />
         )

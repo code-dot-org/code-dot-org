@@ -13748,7 +13748,7 @@ en:
           title: Time4CS Control Unit 2
           description_audience: ''
           description_short: ''
-          description: ''
+          description: Description for the unit goes here
         time4cs-experiment-unit-2:
           stages:
             Introduction to the Problem:
@@ -13955,6 +13955,12 @@ en:
               name: Libraries Make Part  2
             Libraries Make Part 3:
               name: Libraries Make Part 3
+            Project - Make a Library Part 1:
+              name: Project - Make a Library Part 1
+            Project - Make a Library Part 2:
+              name: Project - Make a Library Part 2
+            Project - Make a Library Part 3:
+              name: Project - Make a Library Part 3
           title: CSP Unit 7 Pilot - Parameters, Return, and Libraries
           description_audience: ''
           description_short: ''

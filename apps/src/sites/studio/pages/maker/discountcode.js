@@ -22,12 +22,18 @@ $(document).ready(() => {
           statusPD={
             application.is_pd_eligible ? Status.SUCCEEDED : Status.FAILED
           }
+          statusAcademicYearPD={
+            application.is_quarterly_workshop_pd_eligible
+              ? Status.SUCCEEDED
+              : Status.FAILED
+          }
           statusStudentCount={
             application.is_progress_eligible ? Status.SUCCEEDED : Status.FAILED
           }
           unit6Intention={application.unit_6_intention}
           schoolId={application.school_id}
           schoolName={application.school_name}
+          schoolHighNeedsEligible={application.school_high_needs_eligible}
           hasConfirmedSchool={application.has_confirmed_school}
           getsFullDiscount={application.gets_full_discount}
           initialDiscountCode={application.discount_code}
