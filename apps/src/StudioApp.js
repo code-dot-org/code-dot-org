@@ -3113,8 +3113,8 @@ StudioApp.prototype.alertIfAbusiveProject = function() {
       'error',
       <AbuseError
         i18n={{
-          tos: msg.tosLong(),
-          contact_us: msg.contactUs()
+          tos: msg.tosLong({url: 'http://code.org/tos'}),
+          contact_us: msg.contactUs({url: 'https://code.org/contact'})
         }}
       />
     );
@@ -3132,7 +3132,7 @@ StudioApp.prototype.alertIfProfaneOrPrivacyViolatingProject = function() {
       <AbuseError
         i18n={{
           tos: msg.policyViolation(),
-          contact_us: msg.contactUs()
+          contact_us: msg.contactUs({url: 'https://code.org/contact'})
         }}
       />
     );
