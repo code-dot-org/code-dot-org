@@ -36,14 +36,14 @@ export default class Accelerometer extends EventEmitter {
     this.start();
 
     Object.defineProperties(this, {
-      pitch: {
+      roll: {
         get: function() {
           let rads = Math.atan2(this.x, Math.hypot(this.y, this.z));
 
           return unitsFromMGToMS2(rads * (180 / Math.PI));
         }
       },
-      roll: {
+      pitch: {
         get: function() {
           let rads = Math.atan2(this.y, Math.hypot(this.x, this.z));
 
