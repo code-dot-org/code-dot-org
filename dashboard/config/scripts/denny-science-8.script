@@ -1,4 +1,5 @@
 login_required true
+pilot_experiment 'denny-science-piloters'
 
 stage 'Collision Detector: Designing Screens'
 level 'CSD mini design mode video_copy'
