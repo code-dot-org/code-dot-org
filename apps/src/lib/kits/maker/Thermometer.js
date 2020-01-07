@@ -1,7 +1,7 @@
 /** @file wrap Playground.Thermometer to expose raw value */
 import Playground from 'playground-io';
 import {EventEmitter} from 'events';
-import {sensor_channels} from './MicroBitConstants';
+import {sensor_channels, roundToHundredth} from './MicroBitConstants';
 
 // All we care about doing here is caching the temp sensor's raw input value
 // and then exposing it as a property on the Thermometer object.
@@ -71,7 +71,7 @@ export class MicroBitThermometer extends EventEmitter {
       fahrenheit: {
         get: function() {
           let rawValue = (this.celsius * 9) / 5 + 32;
-          return Math.floor(rawValue * 100) / 100;
+          return roundToHundredth(rawValue);
         }
       },
       C: {
