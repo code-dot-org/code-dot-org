@@ -586,7 +586,6 @@
   "editable": "Editable",
   "eligibilityExplanation": "In order to be eligible to receive a code for a subsidized Circuit Playground kit, you must meet the following requirements:",
   "eligibilityReqPD": "You attended a 5-day summer workshop for CS Discoveries in 2019 or are participating in the 2019-20 Facilitator Development Program as a new CS Discoveries facilitator.",
-  "eligibilityReqAcademicYearPD": "You have attended the fourth academic year workshop in the 2019-20 school year or are participating in the 2019-20 Facilitator Development Program as a new CS Discoveries facilitator.",
   "eligibilityReqStudentCount": "Ten students in one of your sections have completed the first three units of CS Discoveries.",
   "eligibilityReqStudentCountFail": "Sorry, it doesn't look like you have enough students in your sections that have made progress in Units 2 and 3. Please check back here once your students have finished the first semester of CS Discoveries. If you are using a different account to track the progress of students or if you think there has been an error in detecting how much progress your students have made in Units 2 and 3, please contact us at teacher@code.org.",
   "eligibilityReqYear": "You plan to teach Unit 6 by the end of the 2020-21 school year.",
