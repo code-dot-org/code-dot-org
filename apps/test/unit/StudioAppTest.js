@@ -153,10 +153,10 @@ describe('StudioApp', () => {
       project.getStandaloneApp.returns('gamelab');
       var footItems = makeFooterMenuItems();
       var howItWorksIndex = footItems.findIndex(
-        item => item.text === 'footer.how_it_works'
+        item => item.key === 'how-it-works'
       );
       var reportAbuseIndex = footItems.findIndex(
-        item => item.text === 'footer.report_abuse'
+        item => item.key === 'report-abuse'
       );
       expect(howItWorksIndex).to.be.below(reportAbuseIndex);
     });
@@ -167,8 +167,8 @@ describe('StudioApp', () => {
       );
       project.getStandaloneApp.returns('gamelab');
       var footItems = makeFooterMenuItems();
-      var itemTexts = footItems.map(item => item.text);
-      expect(itemTexts).not.to.include('footer.try_hour_of_code');
+      var itemKeys = footItems.map(item => item.key);
+      expect(itemKeys).not.to.include('try-hoc');
     });
 
     it('does return Try-HOC menu item in PlayLab', () => {
@@ -177,8 +177,8 @@ describe('StudioApp', () => {
       );
       project.getStandaloneApp.returns('playlab');
       var footItems = makeFooterMenuItems();
-      var itemTexts = footItems.map(item => item.text);
-      expect(itemTexts).to.include('footer.try_hour_of_code');
+      var itemKeys = footItems.map(item => item.key);
+      expect(itemKeys).to.include('try-hoc');
     });
   });
 

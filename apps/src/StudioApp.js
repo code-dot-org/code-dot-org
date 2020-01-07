@@ -787,6 +787,7 @@ StudioApp.prototype.handleSharing_ = function(options) {
 export function makeFooterMenuItems() {
   const footerMenuItems = [
     {
+      key: 'try-hoc',
       text: msg.tryHourOfCode(),
       link: 'https://code.org/learn',
       newWindow: true
