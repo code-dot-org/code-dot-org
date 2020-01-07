@@ -7,10 +7,8 @@ class ContractMatchDSL < ContentDSL
 
   def answer(text) @hash[:answers] << text end
 
-  def i18n_strings
-    strings = super
-    strings['answers'] = @hash[:answers] unless @hash[:answers].empty?
-
-    strings.deep_stringify_keys
+  # @override
+  def self.i18n_fields
+    super + %w(answers)
   end
 end

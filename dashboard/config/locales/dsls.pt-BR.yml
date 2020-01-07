@@ -945,11 +945,11 @@ pt-BR:
 
           ## Código introduzido
 
-          * ** [HTML] (//docs.code.org/weblab/html/)** - `<html></html>`
-          * ** [Doctype] (//docs.code.org/weblab/doctype/)** - `<!DOCTYPE>
-          * ** [Paragraph] (//docs.code.org/weblab/P/)** - `<p></p>`
-          * ** [Body] (//docs.code.org/weblab/body/)** - `<body></body>`
-          * ** [Head] (//docs.code.org/weblab/head/)** - `<head></head>`
+          * ** [HTML] (//studio.code.org/docs/weblab/html/)** - `<html></html>`
+          * ** [Doctype] (//studio.code.org/docs/weblab/doctype/)** - `<!DOCTYPE>
+          * ** [Paragraph] (//studio.code.org/docs/weblab/P/)** - `<p></p>`
+          * ** [Body] (//studio.code.org/docs/weblab/body/)** - `<body></body>`
+          * ** [Head] (//studio.code.org/docs/weblab/head/)** - `<head></head>`
       CSD U2 L4 Overview:
         title: título
         content1: descrição aqui
@@ -963,7 +963,7 @@ pt-BR:
 
           ## Código introduzido
 
-          * ** [Heading] (// docs.code.org/weblab/h/)** - `<h1></h1>`
+          * ** [Heading] (// studio.code.org/docs/weblab/h/)** - `<h1></h1>`
 
       CSD U2 L5 Overview:
         title: título
@@ -992,9 +992,9 @@ pt-BR:
           ## Código introduzido
 
 
-          * ** [Lista não ordenada] (//docs.code.org/weblab/ul/)** - `<ul></ul>`
-          * ** [Item da Lista] (//docs.code.org/weblab/li/)** - `<li></li>`
-          * ** [Lista ordenada] (//docs.code.org/weblab/ol/)** - `<ol></ol>`
+          * ** [Lista não ordenada] (//studio.code.org/docs/weblab/ul/)** - `<ul></ul>`
+          * ** [Item da Lista] (//studio.code.org/docs/weblab/li/)** - `<li></li>`
+          * ** [Lista ordenada] (//studio.code.org/docs/weblab/ol/)** - `<ol></ol>`
 
       CSD U2 L7 Overview:
         markdown: |
@@ -1011,7 +1011,7 @@ pt-BR:
 
           ## Código Introduzido
 
-          *  **[Image](//docs.code.org/weblab/img/)** - `<img />`
+          *  **[Image](//studio.code.org/docs/weblab/img/)** - `<img />`
 
           ## Recursos
 
@@ -1033,7 +1033,7 @@ pt-BR:
 
           ## Código Introduzido
 
-          *  **[Comment](//curriculum.code.org/documentation/weblab/comment/)** - `<!-- -->`
+          *  **[Comment](//studio.code.org/docs/weblab/comment/)** - `<!-- -->`
       CSD U2 Lesson 9 Overview:
         markdown: |
           # Visão global
@@ -1045,7 +1045,7 @@ pt-BR:
 
           ## Código introduzido
 
-          * ** [Hyperlink] (//docs.code.org/weblab/A/)** - `<a></a>
+          * ** [Hyperlink] (//studio.code.org/docs/weblab/A/)** - `<a></a>
 
           ## Recursos
 
@@ -1559,8 +1559,8 @@ pt-BR:
 
           ## Código introduzido
 
-          * [sprite.debug] (// docs.code.org/gamelab/debug/)
-          * [sprite.isTouching ()] (// docs.code.org/gamelab/isTouching/)
+          * [sprite.debug] (// studio.code.org/docs/gamelab/debug/)
+          * [sprite.isTouching ()] (// studio.code.org/docs/gamelab/isTouching/)
 
           ## Recursos
 
@@ -1576,12 +1576,12 @@ pt-BR:
 
           ## Código introduzido
 
-          * [sprite.bounceOff()](//docs.code.org/gamelab/bounceOff/)
-          * [sprite.collide()](//docs.code.org/gamelab/collide/)
-          * [sprite.displace()](//docs.code.org/gamelab/displace/)
-          * [sprite.setCollider()](//docs.code.org/gamelab/setCollider/)
-          * [sprite.bounce()](//docs.code.org/gamelab/bounce/)
-          * [sprite.bounciness](//docs.code.org/gamelab/bounciness/)
+          * [sprite.bounceOff()](//studio.code.org/docs/gamelab/bounceOff/)
+          * [sprite.collide()](//studio.code.org/docs/gamelab/collide/)
+          * [sprite.displace()](//studio.code.org/docs/gamelab/displace/)
+          * [sprite.setCollider()](//studio.code.org/docs/gamelab/setCollider/)
+          * [sprite.bounce()](//studio.code.org/docs/gamelab/bounce/)
+          * [sprite.bounciness](//studio.code.org/docs/gamelab/bounciness/)
 
       CSD U3 Defender SFLP:
         markdown: |
@@ -1691,8 +1691,8 @@ pt-BR:
 
           ## Código introduzido
 
-          * [Definir uma função] (// docs.code.org/gamelab/functionParams_none/)
-          * [Chame uma função] (// docs.code.org/gamelab/callMyFunction/)
+          * [Definir uma função] (// studio.code.org/docs/gamelab/functionParams_none/)
+          * [Chame uma função] (// studio.code.org/docs/gamelab/callMyFunction/)
 
       CSD U3 Keypress Matching:
         title: 'Combinando: Respondendo a teclas pressionadas'
@@ -1759,12 +1759,12 @@ pt-BR:
           **Expressão booleana** - na programação, uma expressão é avaliada como Verdadeiro
           ou Falso. \n* ** Condição If** - A estrutura de programação comum que implementa
           \"instruções condicionais\".\n\n## Código introduzido\n\n* [Declaração]
-          (//docs.code.org/gamelab/ifBlock/)\n* [Menos que operador] (//docs.code.org/gamelab/lessThanOperator/)\n*
-          [Operador de desigualdade] (//docs.code.org/gamelab/inequalityOperator/)\n*
-          [Operador menor ou igual] (//docs.code.org/gamelab/lessThanOrEqualOperator/)\n*
-          [Operador Maior que] (//docs.code.org/gamelab/greaterThanOperator/)\n* [Operador
-          de igualdade] (//docs.code.org/gamelab/equalityOperator/)\n* [Operador maior
-          que ou igual] (//docs.code.org/gamelab/greaterThanOrEqualOperator/)\n"
+          (//studio.code.org/docs/gamelab/ifBlock/)\n* [Menos que operador] (//studio.code.org/docs/gamelab/lessThanOperator/)\n*
+          [Operador de desigualdade] (//studio.code.org/docs/gamelab/inequalityOperator/)\n*
+          [Operador menor ou igual] (//studio.code.org/docs/gamelab/lessThanOrEqualOperator/)\n*
+          [Operador Maior que] (//studio.code.org/docs/gamelab/greaterThanOperator/)\n* [Operador
+          de igualdade] (//studio.code.org/docs/gamelab/equalityOperator/)\n* [Operador maior
+          que ou igual] (//studio.code.org/docs/gamelab/greaterThanOrEqualOperator/)\n"
       CSD U3 Lesson Overview 12:
         markdown: |-
           # Visão global
@@ -1773,7 +1773,7 @@ pt-BR:
 
           ## Código introduzido
 
-          * [keyDown()] (// docs.code.org/gamelab/keyDown/)
+          * [keyDown()] (// studio.code.org/docs/gamelab/keyDown/)
 
           ## Recursos
 
@@ -1789,14 +1789,14 @@ pt-BR:
 
           ## Código introduzido
 
-          * [keyWentUp ()] (// docs.code.org/gamelab/keyWentUp/)
-          * [mouseWentDown ()] (// docs.code.org/gamelab/mouseWentDown/)
-          * [mouseWentUp ()] (// docs.code.org/gamelab/mouseWentUp/)
-          * [keyWentDown ()] (// docs.code.org/gamelab/keyWentDown/)
-          * [mouseDown ()] (// docs.code.org/gamelab/mouseDown/)
-          * [mouseDidMove ()] (// docs.code.org/gamelab/mouseDidMove/)
-          * [sprite.visible] (// docs.code.org/gamelab/visible/)
-          * [Declaração If / else] (// docs.code.org/gamelab/ifElseBlock/)
+          * [keyWentUp ()] (// studio.code.org/docs/gamelab/keyWentUp/)
+          * [mouseWentDown ()] (// studio.code.org/docs/gamelab/mouseWentDown/)
+          * [mouseWentUp ()] (// studio.code.org/docs/gamelab/mouseWentUp/)
+          * [keyWentDown ()] (// studio.code.org/docs/gamelab/keyWentDown/)
+          * [mouseDown ()] (// studio.code.org/docs/gamelab/mouseDown/)
+          * [mouseDidMove ()] (// studio.code.org/docs/gamelab/mouseDidMove/)
+          * [sprite.visible] (// studio.code.org/docs/gamelab/visible/)
+          * [Declaração If / else] (// studio.code.org/docs/gamelab/ifElseBlock/)
       CSD U3 Lesson Overview 14:
         markdown: |
           # Visão global
@@ -1830,9 +1830,9 @@ pt-BR:
 
           ## Código introduzido
 
-          * [ellipse()](//docs.code.org/gamelab/ellipse/)
-          * [rect()](//docs.code.org/gamelab/rect/)
-          * [fill()](//docs.code.org/gamelab/fill/)
+          * [ellipse()](//studio.code.org/docs/gamelab/ellipse/)
+          * [rect()](//studio.code.org/docs/gamelab/rect/)
+          * [fill()](//studio.code.org/docs/gamelab/fill/)
 
       CSD U3 Lesson Overview 4:
         markdown: |+
@@ -1845,10 +1845,10 @@ pt-BR:
 
           ## Código introduzido
 
-          * [fundo()] (// docs.code.org/gamelab/background/)
-          * [elipse()] (// docs.code.org/gamelab/ellipse/)
-          * [reta()] (// docs.code.org/gamelab/rect/)
-          * [numeroAleatorio()] (// docs.code.org/gamelab/randomNumber/)
+          * [fundo()] (// studio.code.org/docs/gamelab/background/)
+          * [elipse()] (// studio.code.org/docs/gamelab/ellipse/)
+          * [reta()] (// studio.code.org/docs/gamelab/rect/)
+          * [numeroAleatorio()] (// studio.code.org/docs/gamelab/randomNumber/)
 
       CSD U3 Lesson Overview 5:
         markdown: |
@@ -1861,8 +1861,8 @@ pt-BR:
 
           ## Código introduzido
 
-          * [Declare uma variável] (// docs.code.org/gamelab/declareNoAssign_x/)
-          * [Declare e atribua um valor a uma variável] (// docs.code.org/gamelab/declareAssign_x/)
+          * [Declare uma variável] (// studio.code.org/docs/gamelab/declareNoAssign_x/)
+          * [Declare e atribua um valor a uma variável] (// studio.code.org/docs/gamelab/declareAssign_x/)
 
           ## Recursos
 
@@ -1879,9 +1879,9 @@ pt-BR:
 
           ## Código introduzido
 
-          * [desenharSprite()] (//docs.code.org/gamelab/drawSprites/)
-          * [sprite.scale] (//docs.code.org/gamelab/scale/)
-          * [var sprite = criarSprite ()] (//docs.code.org/gamelab/createSprite/)
+          * [desenharSprite()] (//studio.code.org/docs/gamelab/drawSprites/)
+          * [sprite.scale] (//studio.code.org/docs/gamelab/scale/)
+          * [var sprite = criarSprite ()] (//studio.code.org/docs/gamelab/createSprite/)
 
           ## Recursos
 
@@ -1899,8 +1899,8 @@ pt-BR:
 
           ## Código introduzido
 
-          * [World.frameRate] (//docs.code.org/gamelab/World.frameRate/)
-          * [função desenhar() {}] (//docs.code.org/gamelab/draw/)
+          * [World.frameRate] (//studio.code.org/docs/gamelab/World.frameRate/)
+          * [função desenhar() {}] (//studio.code.org/docs/gamelab/draw/)
 
 
            
@@ -1958,9 +1958,9 @@ pt-BR:
 
           ## Código introduzido
 
-          * [sprite.velocityY](//docs.code.org/gamelab/velocityY/)
-          * [sprite.velocityX](//docs.code.org/gamelab/velocityX/)
-          * [sprite.rotationSpeed](//docs.code.org/gamelab/rotationSpeed/)
+          * [sprite.velocityY](//studio.code.org/docs/gamelab/velocityY/)
+          * [sprite.velocityX](//studio.code.org/docs/gamelab/velocityX/)
+          * [sprite.rotationSpeed](//studio.code.org/docs/gamelab/rotationSpeed/)
       CSD U3 Sprite Movement Predict Multi:
         questions:
         - text: Leia este programa e especifique quais das seguintes animações serão
@@ -2375,8 +2375,8 @@ pt-BR:
 
           ## Código introduzido
 
-          * [onEvent] (//docs.code.org/applab/onEvent/)
-          * [setScreen] (//docs.code.org/applab/setScreen/)
+          * [onEvent] (//studio.code.org/docs/applab/onEvent/)
+          * [setScreen] (//studio.code.org/docs/applab/setScreen/)
 
       CSD U4L15 SFLP:
         markdown: |
@@ -5525,7 +5525,7 @@ pt-BR:
 
           ## Código Introduzido
 
-          * [Cor RGB] (// docs.code.org/weblab/rgb-color/)
+          * [Cor RGB] (// studio.code.org/docs/weblab/rgb-color/)
 
           ## Recursos
 
@@ -5554,11 +5554,11 @@ pt-BR:
 
           ## Código Introduzido
 
-          *  **[Color](//docs.code.org/weblab/color/)** - `color: value;`
-          *  **[Text Align](//docs.code.org/weblab/text-align/)** - `text-align: value;`
-          *  **[Text Decoration](//docs.code.org/weblab/Text-Dec/)** - `text-decoration: value;`
-          *  **[Font Family](//docs.code.org/weblab/font-family/)** - `font-family:value;`
-          *  **[Font Size](//docs.code.org/weblab/font-size/)** - `font-size:value;`
+          *  **[Color](//studio.code.org/docs/weblab/color/)** - `color: value;`
+          *  **[Text Align](//studio.code.org/docs/weblab/text-align/)** - `text-align: value;`
+          *  **[Text Decoration](//studio.code.org/docs/weblab/Text-Dec/)** - `text-decoration: value;`
+          *  **[Font Family](//studio.code.org/docs/weblab/font-family/)** - `font-family:value;`
+          *  **[Font Size](//studio.code.org/docs/weblab/font-size/)** - `font-size:value;`
 
       Unit 2 Lesson 8 Overview:
         markdown: |+
@@ -5568,14 +5568,14 @@ pt-BR:
 
           ## Código Introduzido
 
-          *  **[Background Color](//docs.code.org/weblab/background-color/)** - `background-color: value;`
-          *  **[Float](//docs.code.org/weblab/float/)** - `float: value;`
-          *  **[Margin](//docs.code.org/weblab/margin/)** - `margin: value;`
-          *  **[Width](//docs.code.org/weblab/width/)** - `width: value;`
-          *  **[Height](//docs.code.org/weblab/height/)** - `height: value;`
-          *  **[Border Style](//docs.code.org/weblab/border-style/)** - `border-style: value;`
-          *  **[Border Width](//docs.code.org/weblab/border-width/)** - `border-width: value;`
-          *  **[Border Color](//docs.code.org/weblab/border-color/)** - `border-color: value;`
+          *  **[Background Color](//studio.code.org/docs/weblab/background-color/)** - `background-color: value;`
+          *  **[Float](//studio.code.org/docs/weblab/float/)** - `float: value;`
+          *  **[Margin](//studio.code.org/docs/weblab/margin/)** - `margin: value;`
+          *  **[Width](//studio.code.org/docs/weblab/width/)** - `width: value;`
+          *  **[Height](//studio.code.org/docs/weblab/height/)** - `height: value;`
+          *  **[Border Style](//studio.code.org/docs/weblab/border-style/)** - `border-style: value;`
+          *  **[Border Width](//studio.code.org/docs/weblab/border-width/)** - `border-width: value;`
+          *  **[Border Color](//studio.code.org/docs/weblab/border-color/)** - `border-color: value;`
 
       behaviors 1 predict:
         questions:
