@@ -8,7 +8,6 @@ import {Unit6Intention} from '@cdo/apps/lib/kits/maker/util/discountLogic';
 describe('EligibilityChecklist', () => {
   const defaultProps = {
     statusPD: Status.SUCCEEDED,
-    statusAcademicYearPD: Status.SUCCEEDED,
     statusStudentCount: Status.SUCCEEDED,
     hasConfirmedSchool: false,
     adminSetStatus: false,

@@ -1,4 +1,5 @@
 import ReactDOM from 'react-dom';
+import Blockly from '@code-dot-org/blockly';
 import $ from 'jquery';
 
 /**
