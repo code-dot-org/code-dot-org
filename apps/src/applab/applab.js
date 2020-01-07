@@ -72,7 +72,6 @@ import {showHideWorkspaceCallouts} from '../code-studio/callouts';
 import experiments from '../util/experiments';
 import header from '../code-studio/header';
 import {TestResults, ResultType} from '../constants';
-import i18n from '../code-studio/i18n';
 import {
   expoGenerateApk,
   expoCheckApkBuild,
@@ -186,7 +185,7 @@ Applab.makeFooterMenuItems = function(isIframeEmbed) {
   const footerMenuItems = [
     window.location.search.indexOf('nosource') < 0 && {
       key: 'how-it-works',
-      text: i18n.t('footer.how_it_works'),
+      text: commonMsg.howItWorks(),
       link: project.getProjectUrl('/view'),
       newWindow: true
     },
