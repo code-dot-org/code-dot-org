@@ -53,6 +53,8 @@ for file in $(find $orig_dir -name '*.json'); do
   cp_in $file $loc_dir$relname
 done
 
+### Oceans tutorial
+cp_in apps/node_modules/@code-dot-org/ml-activities/i18n/oceans.json i18n/locales/source/blockly-mooc/fish.json
 
 ### Pegasus
 
