@@ -87,14 +87,6 @@ GIT
       tilt
 
 GIT
-  remote: https://github.com/wjordan/i18n.git
-  revision: f366d62ad73bd0fee939ed9aa38ab88c9f94a8df
-  branch: cdo
-  specs:
-    i18n (1.0.1)
-      concurrent-ruby (~> 1.0)
-
-GIT
   remote: https://github.com/wjordan/image_optim.git
   revision: 939996f7ad102227c73b42bfda0058f9c66698aa
   ref: cdo
@@ -483,6 +475,8 @@ GEM
       json (~> 1.8)
       multi_xml (>= 0.5.2)
     httpclient (2.8.3)
+    i18n (1.6.0)
+      concurrent-ruby (~> 1.0)
     image_size (1.5.0)
     in_threads (1.4.0)
     jbuilder (2.5.0)
@@ -938,7 +932,6 @@ DEPENDENCIES
   highline (~> 1.6.21)
   honeybadger
   httparty
-  i18n!
   image_optim!
   image_optim_pack (~> 0.5.0)!
   image_optim_rails!
