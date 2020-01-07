@@ -125,7 +125,7 @@ describe('StudioApp', () => {
       project.getStandaloneApp.returns('gamelab');
       const footItems = makeFooterMenuItems();
       const howItWorksItem = footItems.find(
-        item => item.text === 'footer.how_it_works'
+        item => item.key === 'how-it-works'
       );
       expect(howItWorksItem.link).to.equal(
         'https://studio.code.org/projects/gamelab/C_2x38fH_jElONWxTLrCHw/edit'
@@ -139,7 +139,7 @@ describe('StudioApp', () => {
       project.getStandaloneApp.returns('gamelab');
       const footItems = makeFooterMenuItems();
       const howItWorksItem = footItems.find(
-        item => item.text === 'footer.how_it_works'
+        item => item.key === 'how-it-works'
       );
       expect(howItWorksItem.link).to.equal(
         'https://studio.code.org/projects/gamelab/C_2x38fH_jElONWxTLrCHw/edit'
