@@ -100,9 +100,6 @@ export class RegionalPartnerMiniContact extends React.Component {
         this.onSubmitComplete(result);
       }
     });
-    this.onSubmitComplete({
-      responseJSON: {}
-    });
   };
 
   handleChange = change => {
