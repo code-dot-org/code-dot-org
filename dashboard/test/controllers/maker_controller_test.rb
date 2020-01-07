@@ -414,7 +414,6 @@ class MakerControllerTest < ActionController::TestCase
     expected = {
       "application" => {
         "is_pd_eligible" => false,
-        "is_quarterly_workshop_pd_eligible" => false,
         "is_progress_eligible" => false,
         "user_school" => {
           "id" => nil,
@@ -450,7 +449,6 @@ class MakerControllerTest < ActionController::TestCase
     expected = {
       "application" => {
         "is_pd_eligible" => false,
-        "is_quarterly_workshop_pd_eligible" => false,
         "is_progress_eligible" => false,
         "user_school" => {
           "id" => nil,
