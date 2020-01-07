@@ -104,7 +104,7 @@ export function itImplementsTheMakerBoardInterface(BoardClass) {
           'Switch',
           'Piezo',
           'Sensor',
-          'PlaygroundThermometer',
+          'Thermometer',
           'Pin',
           'Accelerometer',
           'Animation',
