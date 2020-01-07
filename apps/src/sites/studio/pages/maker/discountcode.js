@@ -14,8 +14,6 @@ $(document).ready(() => {
     currently_distributing_discount_codes
   } = scriptData;
 
-  currently_distributing_discount_codes = true;
-
   ReactDOM.render(
     <div>
       {is_admin && <DiscountAdminOverride />}
