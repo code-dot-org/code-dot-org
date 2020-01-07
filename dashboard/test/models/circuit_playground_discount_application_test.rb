@@ -194,7 +194,6 @@ class CircuitPlaygroundDiscountApplicationTest < ActiveSupport::TestCase
       discount_code: nil,
       expiration: nil,
       is_pd_eligible: true,
-      is_quarterly_workshop_pd_eligible: true,
       is_progress_eligible: false,
       admin_set_status: false,
     }
@@ -215,7 +214,6 @@ class CircuitPlaygroundDiscountApplicationTest < ActiveSupport::TestCase
       discount_code: nil,
       expiration: nil,
       is_pd_eligible: false,
-      is_quarterly_workshop_pd_eligible: false,
       is_progress_eligible: false,
       admin_set_status: false,
     }
@@ -237,7 +235,6 @@ class CircuitPlaygroundDiscountApplicationTest < ActiveSupport::TestCase
       discount_code: nil,
       expiration: nil,
       is_pd_eligible: false,
-      is_quarterly_workshop_pd_eligible: false,
       is_progress_eligible: false,
       admin_set_status: true,
     }
@@ -252,7 +249,6 @@ class CircuitPlaygroundDiscountApplicationTest < ActiveSupport::TestCase
 
     expected = {
       is_pd_eligible: false,
-      is_quarterly_workshop_pd_eligible: false,
       is_progress_eligible: true,
       user_school: {
         id: nil,
