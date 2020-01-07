@@ -84,9 +84,9 @@ See [the apps readme](./apps/README.md) for more details.
 
 If you get a bunch of complaints about database, like missing tables or how some tables haven't been seeded, here are some things you can try in order from least to most drastic before running your tests again:
 
-1. `rake seed:secret_pictures seed:secret_words` to seed the missing data, or
+1. `bundle exec rake seed:secret_pictures seed:secret_words` to seed the missing data, or
 
-2. `RAILS_ENV=test rake db:reset db:test:prepare` to recreate your local dashboard test db and reseed the data.
+2. `RAILS_ENV=test bundle exec rake db:reset db:test:prepare` to recreate your local dashboard test db and reseed the data.
 
 If you just want to run a single file of tests, you can run
 `bundle exec spring testunit ./path/to/your/test.rb`
@@ -106,7 +106,7 @@ If you get an error about missing db fields, try migrating your test database:
 We have a set of integration tests, divided into "UI tests" (Selenium+Cucumber) and "Eyes tests" (Selenium+Cucumber+Applitools).  These tests live in [dashboard/test/ui](dashboard/test/ui) - for information on setting up and running these tests, see [the README in that directory](dashboard/test/ui) and our [guide to adding an eyes test](docs/testing-with-applitools-eyes.md).
 Or you can just use this shortcut (after you've installed chromedriver):
 
-`rake test:ui feature=dashboard/test/ui/features/sometest.feature`
+`bundle exec rake test:ui feature=dashboard/test/ui/features/sometest.feature`
 
 ### Pegasus Tests
 `cd pegasus && rake test` will run all of our pegasus Ruby tests. This usually takes ~20 seconds to run.
