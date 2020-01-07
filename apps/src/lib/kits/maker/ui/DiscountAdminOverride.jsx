@@ -78,9 +78,6 @@ export default class DiscountAdminOverride extends Component {
       teacherID,
       submitting: false,
       statusPD: application.is_pd_eligible ? Status.SUCCEEDED : Status.FAILED,
-      statusAcademicYearPD: application.is_quarterly_workshop_pd_eligible
-        ? Status.SUCCEEDED
-        : Status.FAILED,
       statusStudentCount: application.is_progress_eligible
         ? Status.SUCCEEDED
         : Status.FAILED,
@@ -158,10 +155,6 @@ export default class DiscountAdminOverride extends Component {
             <ValidationStep
               stepName={i18n.eligibilityReqPD()}
               stepStatus={this.state.statusPD}
-            />
-            <ValidationStep
-              stepName={i18n.eligibilityReqAcademicYearPD()}
-              stepStatus={this.state.statusAcademicYearPD}
             />
             <ValidationStep
               stepName={i18n.eligibilityReqStudentCount()}
