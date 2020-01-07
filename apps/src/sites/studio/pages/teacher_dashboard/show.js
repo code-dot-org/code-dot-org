@@ -39,7 +39,6 @@ const validCourses = scriptData.validCourses;
 const currentUserId = scriptData.currentUserId;
 const baseUrl = `/teacher_dashboard/sections/${section.id}`;
 
-//TODO
 $(document).ready(function() {
   registerReducers({
     teacherSections,
