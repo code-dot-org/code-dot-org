@@ -54,8 +54,6 @@ $(document).ready(function() {
   const store = getStore();
   // TODO: (madelynkasula) remove duplication in sectionData.setSection and teacherSections.setSections
   store.dispatch(setCurrentUserId(currentUserId));
-  console.log("THE SET SECTION")
-  console.log(section)
   store.dispatch(setSection(section));
   store.dispatch(setSections(sections));
   store.dispatch(selectSection(section.id));

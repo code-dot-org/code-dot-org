@@ -2,16 +2,6 @@ import _ from 'lodash';
 import $ from 'jquery';
 import {OAuthSectionTypes} from './shapes';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {
-    setSection,
-    SET_SECTION
-} from '@cdo/apps/redux/sectionDataRedux';
-import {
-    setScriptId,
-} from '@cdo/apps/redux/scriptSelectionRedux';
-import {
-    loadScript
-} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 
 /**
  * @const {string[]} The only properties that can be updated by the user
@@ -256,13 +246,6 @@ export const finishEditingSection = () => (dispatch, getState) => {
           sectionId: section.id,
           serverSection: result
         });
-        /*
-        dispatch(
-            setScriptId(result.script.id)
-        )
-        dispatch(
-            loadScript(result.script.id)
-        )*/ //TODO: Max
         resolve(result);
       })
       .fail((jqXhr, status) => {
