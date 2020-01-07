@@ -23,7 +23,7 @@ export const styles = {
   }
 };
 
-class PersonalProjectsTableActionsCell extends Component {
+export class PersonalProjectsTableActionsCell extends Component {
   static propTypes = {
     projectId: PropTypes.string.isRequired,
     projectType: PropTypes.string.isRequired,
