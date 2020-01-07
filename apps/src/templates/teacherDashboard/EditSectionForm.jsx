@@ -20,6 +20,12 @@ import {
   updateHiddenScript
 } from '@cdo/apps/code-studio/hiddenStageRedux';
 import ConfirmHiddenAssignment from '../courseOverview/ConfirmHiddenAssignment';
+import {
+    setScriptId,
+} from '@cdo/apps/redux/scriptSelectionRedux'
+import {
+    loadScript
+} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 
 const style = {
   root: {
@@ -360,8 +366,8 @@ const YesNoDropdown = ({value, onChange, disabled}) => (
 );
 YesNoDropdown.propTypes = FieldProps;
 
-function setScriptIdAfterEdit = () => (dispatch, getState) => {
-    finishEditingSection()(dispatch, getState)
+let setScriptIdAfterEdit = () => (dispatch, getState) => {
+    return finishEditingSection()(dispatch, getState)
         .then(function(result) {
             dispatch(
                 loadScript(result.script.id)
@@ -372,7 +378,7 @@ function setScriptIdAfterEdit = () => (dispatch, getState) => {
         })
 }
 
-function defaultPropsFromState = (state) => ({
+let defaultPropsFromState = (state) => ({
     initialCourseId: state.teacherSections.initialCourseId,
     initialScriptId: state.teacherSections.initialScriptId,
     validGrades: state.teacherSections.validGrades,

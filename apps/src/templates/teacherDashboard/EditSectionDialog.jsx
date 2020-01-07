@@ -41,11 +41,11 @@ function editSectionDialog(Form) {
     return EditSectionDialog
 }
 
-export const SetScriptIdEditSectionDialog = connect(state => ({
-  isOpen: isEditingSection(state.teacherSections)
-})(editSectionDialog(SetScriptIdEditSectionForm)
-
 export default connect(state => ({
   isOpen: isEditingSection(state.teacherSections)
-}))(editSectionDialog(EditSectionForm);
+}))(editSectionDialog(EditSectionForm));
+
+export const SetScriptIdEditSectionDialog = connect(state => ({
+  isOpen: isEditingSection(state.teacherSections)
+}))(editSectionDialog(SetScriptIdEditSectionForm))
 
