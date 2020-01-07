@@ -7,7 +7,6 @@ import {
   restoreStudioApp,
   makeFooterMenuItems
 } from '@cdo/apps/StudioApp';
-import i18n from '@cdo/apps/code-studio/i18n';
 import {assets as assetsApi} from '@cdo/apps/clientApi';
 import {listStore} from '@cdo/apps/code-studio/assets';
 import * as commonReducers from '@cdo/apps/redux/commonReducers';
@@ -112,15 +111,11 @@ describe('StudioApp', () => {
     beforeEach(() => {
       sinon.stub(project, 'getUrl');
       sinon.stub(project, 'getStandaloneApp');
-      sinon.stub(i18n, 't').callsFake(function(txt) {
-        return txt;
-      });
     });
 
     afterEach(() => {
       project.getUrl.restore();
       project.getStandaloneApp.restore();
-      i18n.t.restore();
     });
 
     it('returns a How It Works link to the project edit page from an embed page in GameLab', () => {

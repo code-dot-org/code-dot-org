@@ -2,6 +2,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import msg from '@cdo/locale';
 
 /**
  * A component containing some text/links for projects that have had abuse
@@ -10,26 +11,21 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
  */
 export default class AbuseError extends React.Component {
   static propTypes = {
-    i18n: PropTypes.shape({
-      tos: PropTypes.string.isRequired,
-      contact_us: PropTypes.string.isRequired
-    }).isRequired,
     className: PropTypes.string,
     style: PropTypes.object,
     textStyle: PropTypes.object
   };
 
   render() {
-    // It's only OK to use dangerouslySetInnerHTML as long as we're not
-    // populating it with user input. In our case, we're setting it using
-    // our i18n strings
     return (
       <div className={this.props.className} style={this.props.style}>
         <div>
-          <SafeMarkdown markdown={this.props.i18n.tos} />
+          <SafeMarkdown markdown={msg.tosLong({url: 'http://code.org/tos'})} />
         </div>
         <div>
-          <SafeMarkdown markdown={this.props.i18n.contact_us} />
+          <SafeMarkdown
+            markdown={msg.contactUs({url: 'https://code.org/contact'})}
+          />
         </div>
       </div>
     );

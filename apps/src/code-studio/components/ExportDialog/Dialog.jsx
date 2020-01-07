@@ -716,10 +716,6 @@ class ExportDialog extends React.Component {
           <p className="dialog-title">Export your project</p>
           {isAbusive && (
             <AbuseError
-              i18n={{
-                tos: i18nProp.t('project.abuse.tos'),
-                contact_us: i18nProp.t('project.abuse.contact_us')
-              }}
               className="alert-error"
               style={styles.abuseStyle}
               textStyle={styles.abuseTextStyle}

@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import AbuseError from './AbuseError';
+import msg from '@cdo/locale';
 
 /**
  * A big blue box with an exclamation mark on the left and our abuse text on
@@ -8,12 +9,6 @@ import AbuseError from './AbuseError';
  */
 export default class AbuseExclamation extends React.Component {
   static propTypes = {
-    i18n: PropTypes.shape({
-      tos: PropTypes.string.isRequired,
-      contact_us: PropTypes.string.isRequired,
-      edit_project: PropTypes.string.isRequired,
-      go_to_code_studio: PropTypes.string.isRequired
-    }).isRequired,
     isOwner: PropTypes.bool.isRequired
   };
 
@@ -63,10 +58,10 @@ export default class AbuseExclamation extends React.Component {
     let finalLink, finalLinkText;
     if (this.props.isOwner) {
       finalLink = 'edit';
-      finalLinkText = this.props.i18n.edit_project;
+      finalLinkText = msg.editProject();
     } else {
       finalLink = 'https://studio.code.org';
-      finalLinkText = this.props.i18n.go_to_code_studio;
+      finalLinkText = msg.goToCodeStudio();
     }
 
     return (
@@ -79,11 +74,7 @@ export default class AbuseExclamation extends React.Component {
               </div>
             </td>
             <td style={bodyStyle}>
-              <AbuseError
-                i18n={this.props.i18n}
-                className="exclamation-abuse"
-                textStyle={textStyle}
-              />
+              <AbuseError className="exclamation-abuse" textStyle={textStyle} />
               <p className="exclamation-abuse" style={textStyle}>
                 <a href={finalLink}>{finalLinkText}</a>
               </p>

@@ -344,10 +344,6 @@ class ShareAllowedDialog extends React.Component {
                 </p>
                 {this.props.isAbusive && (
                   <AbuseError
-                    i18n={{
-                      tos: this.props.i18n.t('project.abuse.tos'),
-                      contact_us: this.props.i18n.t('project.abuse.contact_us')
-                    }}
                     className="alert-error"
                     style={styles.abuseStyle}
                     textStyle={styles.abuseTextStyle}
