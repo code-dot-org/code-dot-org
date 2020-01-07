@@ -196,7 +196,9 @@ class VisualizerModal extends React.Component {
 
             {this.state.chartType === ChartType.HISTOGRAM && (
               <div style={styles.input}>
-                <label style={rowStyle.description}>Bucket Size</label>
+                <label style={rowStyle.description}>
+                  {msg.dataVisualizerBucketSize()}
+                </label>
                 <input
                   style={rowStyle.input}
                   value={this.state.bucketSize}
