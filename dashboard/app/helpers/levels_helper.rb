@@ -672,7 +672,8 @@ module LevelsHelper
     return match_answer_as_embedded_blockly(path) if File.extname(path).ends_with? '_blocks'
     return match_answer_as_iframe(path, width) if File.extname(path) == '.level'
 
-    text
+    @markdown_renderer ||= Redcarpet::Markdown.new(Redcarpet::Render::Safe)
+    @markdwon_renderer.render(text).html_safe
   end
 
   def level_title
