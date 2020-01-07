@@ -22,11 +22,6 @@ $(document).ready(() => {
           statusPD={
             application.is_pd_eligible ? Status.SUCCEEDED : Status.FAILED
           }
-          statusAcademicYearPD={
-            application.is_quarterly_workshop_pd_eligible
-              ? Status.SUCCEEDED
-              : Status.FAILED
-          }
           statusStudentCount={
             application.is_progress_eligible ? Status.SUCCEEDED : Status.FAILED
           }
