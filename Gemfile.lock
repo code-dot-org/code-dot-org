@@ -358,6 +358,13 @@ GEM
       activerecord (~> 5.0.0, >= 5.0.7)
     concurrent-ruby (1.1.5)
     connection_pool (2.2.1)
+    contentful (2.15.2)
+      http (> 0.8, < 5.0)
+      multi_json (~> 1)
+    contentful-management (2.11.0)
+      http (> 1.0, < 5.0)
+      json (>= 1.8, < 3.0)
+      multi_json (~> 1)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     crass (1.0.4)
@@ -422,6 +429,9 @@ GEM
     faraday (0.15.4)
       multipart-post (>= 1.2, < 3)
     ffi (1.10.0)
+    ffi-compiler (1.0.1)
+      ffi (>= 1.0.0)
+      rake
     firebase (0.2.6)
       httpclient
       json
@@ -477,8 +487,16 @@ GEM
       haml (>= 4.0, < 6)
       nokogiri (>= 1.6.0)
       ruby_parser (~> 3.5)
+    http (4.2.0)
+      addressable (~> 2.3)
+      http-cookie (~> 1.0)
+      http-form_data (~> 2.0)
+      http-parser (~> 1.2.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
+    http-form_data (2.1.1)
+    http-parser (1.2.1)
+      ffi-compiler (>= 1.0, < 2.0)
     httparty (0.13.7)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
@@ -911,6 +929,8 @@ DEPENDENCIES
   codemirror-rails
   colorize
   composite_primary_keys
+  contentful
+  contentful-management
   cucumber
   daemons
   dalli
