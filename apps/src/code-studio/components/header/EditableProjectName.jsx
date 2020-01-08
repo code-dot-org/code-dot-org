@@ -89,6 +89,9 @@ class UnconnectedEditProjectName extends React.Component {
         if (error instanceof NameFailureError) {
           this.props.setNameFailure(error.nameFailure);
         }
+        this.setState({
+          savingName: false
+        });
       });
   };
 

@@ -1,5 +1,5 @@
 /**
- * @param {sring} nameFailure
+ * @param {string} nameFailure
  * @constructor
  * @extends Error
  */
