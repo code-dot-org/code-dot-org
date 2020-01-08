@@ -83,12 +83,12 @@ export class RegionalPartnerMiniContact extends React.Component {
 
   submit = () => {
     const params = {
-      name: this.state.name,
+      // set null or empty values to undefined so they are ignored
+      name: this.state.name || undefined,
       email: this.state.email,
       zip: this.state.zip,
-      notes: this.state.notes,
+      notes: this.state.notes || undefined,
       source: this.props.sourcePageId,
-      // set null or empty values to undefined so they are ignored
       role: this.state.role || undefined,
       grade_levels: this.state.grade_levels || undefined
     };
