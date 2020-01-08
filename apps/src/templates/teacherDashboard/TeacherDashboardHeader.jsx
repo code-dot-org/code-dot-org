@@ -54,7 +54,9 @@ class TeacherDashboardHeader extends React.Component {
               text="Edit section details"
             />
           </div>
-          <SelectSectionButton />
+          <SelectSectionButton
+            onChangeOption={(option) => alert(JSON.stringify(option))}
+          />
         </div>
         <TeacherDashboardNavigation />
         <SetScriptIdEditSectionDialog />

@@ -56,8 +56,8 @@ class SelectSectionButton extends Component {
     this.setState({isMenuOpen: false});
   }
 
-  chooseMenuItem = section => {
-    this.props.onChangeSection(section.id);
+  chooseMenuItem = option => {
+    this.props.onChangeOption(option);
     if (this.props.forceReload) {
       reload();
     }
@@ -65,7 +65,7 @@ class SelectSectionButton extends Component {
   };
 
   render() {
-    const sections = this.props.sections;
+    const options = this.props.options;
     const menuOffset = {x: 0, y: 0};
 
     return (
@@ -84,11 +84,11 @@ class SelectSectionButton extends Component {
           beforeClose={this.beforeClose}
           offset={menuOffset}
         >
-          {sections &&
-            sections.map(option => {
+          {options &&
+            options.map(option => {
               let menuItemProps = {
                   option : option,
-                  onClick : () => this.chooseMenuItem(section),
+                  onClick : () => this.chooseMenuItem(option),
                   key : option.id
               }
               if ( option.id === this.props.selectedOptionIndex ) {
@@ -108,6 +108,6 @@ class SelectSectionButton extends Component {
 }
 
 export default connect(state => ({
-  sections: getVisibleSections(state),
+  options: getVisibleSections(state),
   selectedOptionIndex: state.teacherSections.selectedSectionId
 }))(SelectSectionButton)
