@@ -94,7 +94,7 @@ class Pd::RegionalPartnerMiniContactTest < ActiveSupport::TestCase
     mail = ActionMailer::Base.deliveries.first
 
     assert_equal ['liz.gauthier@code.org'], mail.to
-    assert_equal 'A person wants to connect with Code.org', mail.subject
+    assert_equal 'A teacher wants to connect with Code.org', mail.subject
     assert_equal ['partner@code.org'], mail.from
     assert_equal 2, ActionMailer::Base.deliveries.count
     assert_sendable mail
@@ -106,7 +106,7 @@ class Pd::RegionalPartnerMiniContactTest < ActiveSupport::TestCase
     mail = ActionMailer::Base.deliveries.first
 
     assert_equal ['liz.gauthier@code.org'], mail.to
-    assert_equal 'A person wants to connect with Code.org', mail.subject
+    assert_equal 'A teacher wants to connect with Code.org', mail.subject
     assert_equal ['partner@code.org'], mail.from
     assert_equal 2, ActionMailer::Base.deliveries.count
     assert_sendable mail
