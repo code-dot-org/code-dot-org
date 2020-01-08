@@ -82,6 +82,10 @@ class Tutorials
     by_short_code = CDO.cache.fetch("Tutorials/#{@table}/by_short_code") {@contents.index_by {|row| row[:short_code]}}
     by_short_code[short_code]
   end
+
+  def self.sort_by_popularity?(site, hoc_mode)
+    ("post-hoc" == hoc_mode) || (site == 'code.org' && [false, 'pre-hoc'].include?(hoc_mode))
+  end
 end
 
 def no_credit_count
