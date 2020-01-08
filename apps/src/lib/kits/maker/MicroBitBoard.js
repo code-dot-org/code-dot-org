@@ -5,6 +5,7 @@ import MBFirmataClient from '../../../third-party/maker/MBFirmataClient';
 import {
   createMicroBitComponents,
   cleanupMicroBitComponents,
+  enableMicroBitComponents,
   componentConstructors
 } from './MicroBitComponents';
 
@@ -51,6 +52,15 @@ export default class MicroBitBoard extends EventEmitter {
   }
 
   initializeEventForwarding() {}
+
+  /**
+   * Enable existing board components
+   */
+  enableComponents() {
+    if (this.prewiredComponents_) {
+      enableMicroBitComponents(this.prewiredComponents_);
+    }
+  }
 
   /**
    * @returns {boolean} whether a real board is currently connected or not.
