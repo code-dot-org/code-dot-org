@@ -20,7 +20,6 @@ const styles = {
 export default class EligibilityChecklist extends React.Component {
   static propTypes = {
     statusPD: PropTypes.oneOf(Object.values(Status)).isRequired,
-    statusAcademicYearPD: PropTypes.oneOf(Object.values(Status)).isRequired,
     statusStudentCount: PropTypes.oneOf(Object.values(Status)).isRequired,
     unit6Intention: PropTypes.string,
     schoolId: PropTypes.string,
@@ -152,12 +151,6 @@ export default class EligibilityChecklist extends React.Component {
               <SafeMarkdown markdown={eligibilityReqPDFail} />
             </ValidationStep>
             <ValidationStep
-              stepName={i18n.eligibilityReqAcademicYearPD()}
-              stepStatus={this.props.statusAcademicYearPD}
-            >
-              <SafeMarkdown markdown={eligibilityReqPDFail} />
-            </ValidationStep>
-            <ValidationStep
               stepName={i18n.eligibilityReqStudentCount()}
               stepStatus={this.props.statusStudentCount}
             >
@@ -167,7 +160,6 @@ export default class EligibilityChecklist extends React.Component {
               showRadioButtons={
                 this.props.statusStudentCount === Status.SUCCEEDED &&
                 this.props.statusPD === Status.SUCCEEDED &&
-                this.props.statusAcademicYearPD === Status.SUCCEEDED &&
                 !this.props.adminSetStatus
               }
               stepStatus={this.state.statusYear}
