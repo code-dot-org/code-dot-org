@@ -3,7 +3,6 @@ import $ from 'jquery';
 import sinon from 'sinon';
 const project = require('@cdo/apps/code-studio/initApp/project');
 const assets = require('@cdo/apps/code-studio/assets');
-import i18n from '@cdo/apps/code-studio/i18n';
 export {
   throwOnConsoleErrorsEverywhere,
   throwOnConsoleWarningsEverywhere,
@@ -16,11 +15,9 @@ export function setExternalGlobals(beforeFunc = before, afterFunc = after) {
   // Temporary: Provide React on window while we still have a direct dependency
   // on the global due to a bad code-studio/apps interaction.
   window.React = React;
-  window.dashboard = {...window.dashboard, i18n, assets, project};
+  window.dashboard = {...window.dashboard, assets, project};
 
   beforeFunc(() => {
-    sinon.stub(i18n, 't').callsFake(selector => selector);
-
     sinon.stub(project, 'clearHtml');
     sinon.stub(project, 'exceedsAbuseThreshold').returns(false);
     sinon.stub(project, 'hasPrivacyProfanityViolation').returns(false);
@@ -34,8 +31,6 @@ export function setExternalGlobals(beforeFunc = before, afterFunc = after) {
     sinon.stub(assets.listStore, 'list').returns([]);
   });
   afterFunc(() => {
-    i18n.t.restore();
-
     project.clearHtml.restore();
     project.exceedsAbuseThreshold.restore();
     project.hasPrivacyProfanityViolation.restore();
