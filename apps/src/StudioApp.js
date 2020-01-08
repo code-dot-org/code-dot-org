@@ -38,7 +38,6 @@ import WireframeButtons from './lib/ui/WireframeButtons';
 import annotationList from './acemode/annotationList';
 import color from './util/color';
 import getAchievements from './achievements';
-import i18n from './code-studio/i18n';
 import logToCloud from './logToCloud';
 import msg from '@cdo/locale';
 import project from './code-studio/initApp/project';
@@ -788,34 +787,35 @@ StudioApp.prototype.handleSharing_ = function(options) {
 export function makeFooterMenuItems() {
   const footerMenuItems = [
     {
-      text: i18n.t('footer.try_hour_of_code'),
+      key: 'try-hoc',
+      text: msg.tryHourOfCode(),
       link: 'https://code.org/learn',
       newWindow: true
     },
     {
       key: 'how-it-works',
-      text: i18n.t('footer.how_it_works'),
+      text: msg.howItWorks(),
       link: project.getProjectUrl('/edit'),
       newWindow: false
     },
     {
       key: 'report-abuse',
-      text: i18n.t('footer.report_abuse'),
+      text: msg.reportAbuse(),
       link: '/report_abuse',
       newWindow: true
     },
     {
-      text: i18n.t('footer.copyright'),
+      text: msg.copyright(),
       link: '#',
       copyright: true
     },
     {
-      text: i18n.t('footer.tos'),
+      text: msg.tos(),
       link: 'https://code.org/tos',
       newWindow: true
     },
     {
-      text: i18n.t('footer.privacy'),
+      text: msg.privacyPolicy(),
       link: 'https://code.org/privacy',
       newWindow: true
     }
@@ -852,7 +852,7 @@ StudioApp.prototype.renderShareFooter_ = function(container) {
     privacyPolicyInBase: false,
     copyrightInBase: false,
     copyrightStrings: copyrightStrings,
-    baseMoreMenuString: i18n.t('footer.built_on_code_studio'),
+    baseMoreMenuString: msg.builtOnCodeStudio(),
     baseStyle: {
       paddingLeft: 0,
       width: $('#visualization').width()
@@ -3113,8 +3113,8 @@ StudioApp.prototype.alertIfAbusiveProject = function() {
       'error',
       <AbuseError
         i18n={{
-          tos: i18n.t('project.abuse.tos'),
-          contact_us: i18n.t('project.abuse.contact_us')
+          tos: msg.tosLong({url: 'http://code.org/tos'}),
+          contact_us: msg.contactUs({url: 'https://code.org/contact'})
         }}
       />
     );
@@ -3131,8 +3131,8 @@ StudioApp.prototype.alertIfProfaneOrPrivacyViolatingProject = function() {
       'error',
       <AbuseError
         i18n={{
-          tos: i18n.t('project.abuse.policy_violation'),
-          contact_us: i18n.t('project.abuse.contact_us')
+          tos: msg.policyViolation(),
+          contact_us: msg.contactUs({url: 'https://code.org/contact'})
         }}
       />
     );
