@@ -108,7 +108,8 @@ module GitUtils
       when 'test'
         'origin/production'
       else # levelbuilder, feature branches, etc.
-        'origin/staging'
+        # In Continuous Integration (Drone) builds, use the base branch of the Pull Request, which might be staging-next.
+        CDO.ci ? "origin/#{circle_pr_branch_base_no_origin}" : 'origin/staging'
     end
   end
 
