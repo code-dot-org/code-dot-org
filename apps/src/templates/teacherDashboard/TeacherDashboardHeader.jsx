@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {switchToSection} from './urlHelpers';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import SmallChevronLink from '../SmallChevronLink';
@@ -55,7 +56,7 @@ class TeacherDashboardHeader extends React.Component {
             />
           </div>
           <SelectSectionButton
-            onChangeOption={(option) => alert(JSON.stringify(option))}
+            onChangeOption={(option) => switchToSection(option.id, this.props.currentSectionId)}
           />
         </div>
         <TeacherDashboardNavigation />
