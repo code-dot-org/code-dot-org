@@ -1,5 +1,6 @@
 require 'cdo/activity_constants'
 require 'cdo/share_filtering'
+require 'cdo/firehose'
 
 class ActivitiesController < ApplicationController
   include LevelsHelper
@@ -65,10 +66,14 @@ class ActivitiesController < ApplicationController
           params[:program].strip_utf8mb4
         )
         if share_checking_error
-          slog(
-            tag: 'share_checking_error',
-            error: "#{share_checking_error.class.name}: #{share_checking_error}",
-            level_source_id: @level_source.id
+          FirehoseClient.instance.put_record(
+            study: 'share_filtering',
+            study_group: 'v0',
+            event: 'share_filtering_error',
+            data_string: "#{share_checking_error.class.name}: #{share_checking_error}",
+            data_json: {
+              level_source_id: @level_source.id
+            }.to_json
           )
         end
       end
