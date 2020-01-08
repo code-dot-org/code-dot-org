@@ -15,8 +15,8 @@ import Button from '../Button';
 
 class SelectSectionButton extends Component {
   static propTypes = {
-    sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
-    onChangeSection: PropTypes.func.isRequired,
+    options: PropTypes.arrayOf(PropTypes.object).isRequired,
+    onChangeOption: PropTypes.func.isRequired,
     // We need to reload on section change on the script overview page to get
     // accurate information about students in the selected section.
     forceReload: PropTypes.bool,
@@ -71,7 +71,7 @@ class SelectSectionButton extends Component {
     return (
       <div>
         <Button
-          pseudoRef={button => (this.button = button)}
+          refGenerator={button => (this.button = button)}
           onClick={this.handleClick}
           icon="chevron-down"
           size="default"
@@ -86,8 +86,8 @@ class SelectSectionButton extends Component {
         >
           {sections &&
             sections.map(section => (
-              <TeacherSectionSelectorMenuItem
-                section={section}
+              <DropdownMenuItem
+                option={option}
                 onClick={() => this.chooseMenuItem(section)}
                 key={section.id}
               />
@@ -98,6 +98,11 @@ class SelectSectionButton extends Component {
   }
 }
 
-export default connect(state => ({
-    sections: getVisibleSections(state),
-}))(SelectSectionButton)
+export default connect(state => {
+    let selectedSectionId = state.teacherSections.selectedSectionId;
+    let 
+    
+    return ({
+        sections: getVisibleSections(state),
+    })
+})(SelectSectionButton)

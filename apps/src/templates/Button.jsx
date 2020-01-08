@@ -155,7 +155,7 @@ const styles = {
 class Button extends React.Component {
   static propTypes = {
     className: PropTypes.string,
-    pseudoRef: PropTypes.func,
+    refGenerator: PropTypes.func,
     href: PropTypes.string,
     text: PropTypes.string.isRequired,
     size: PropTypes.oneOf(Object.keys(ButtonSize)),
@@ -198,7 +198,7 @@ class Button extends React.Component {
       tabIndex,
       isPending,
       pendingText,
-      pseudoRef, 
+      refGenerator, 
     } = this.props;
 
     const color = this.props.color || ButtonColor.orange;
@@ -221,7 +221,7 @@ class Button extends React.Component {
         onKeyDown={this.onKeyDown}
         tabIndex={tabIndex}
         id={id}
-        ref={pseudoRef ? pseudoRef : undefined}
+        ref={refGenerator ? refGenerator : undefined}
       >
         <div style={_.pick(style, ['textAlign'])}>
           {icon && (
