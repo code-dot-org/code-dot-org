@@ -5,7 +5,15 @@ class ActivitiesControllerTest < ActionController::TestCase
   include LevelsHelper
   include UsersHelper
 
+  def stub_firehose
+    FirehoseClient.instance.stubs(:put_record).with do |args|
+      @firehose_record = args
+      true
+    end
+  end
+
   setup do
+    stub_firehose
     client_state.reset
     Gatekeeper.clear
 
@@ -899,13 +907,10 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
-  test 'sharing program with http error slogs' do
+  test 'sharing program with http error logs' do
     # allow sharing when there's an error, slog so it's possible to look up and review later
 
     WebPurify.stubs(:find_potential_profanity).raises(OpenURI::HTTPError.new('something broke', 'fake io'))
-    @controller.expects(:slog).with(:tag, :error, :level_source_id) do |params|
-      params[:tag] == 'share_checking_error' && params[:error] == 'OpenURI::HTTPError: something broke' && !params[:level_source_id].nil?
-    end
     @controller.expects(:slog).with(:tag) {|params| params[:tag] == 'activity_finish'}
 
     assert_creates(LevelSource) do
@@ -917,15 +922,17 @@ class ActivitiesControllerTest < ActionController::TestCase
     end
 
     assert_response :success
+
+    assert @firehose_record[:study], 'share_filtering'
+    assert @firehose_record[:event], 'share_filtering_error'
+    assert @firehose_record[:data_string], 'OpenURI::HTTPError: something broke'
+    refute_nil @firehose_record[:data_json]["level_source_id"]
   end
 
-  test 'sharing program with IO::EAGAINWaitReadable error slogs' do
+  test 'sharing program with IO::EAGAINWaitReadable error logs' do
     WebPurify.stubs(:find_potential_profanity).raises(IO::EAGAINWaitReadable)
     # allow sharing when there's an error, slog so it's possible to look up and review later
 
-    @controller.expects(:slog).with(:tag, :error, :level_source_id) do |params|
-      params[:tag] == 'share_checking_error' && params[:error] == 'IO::EAGAINWaitReadable: Resource temporarily unavailable' && !params[:level_source_id].nil?
-    end
     @controller.expects(:slog).with(:tag) {|params| params[:tag] == 'activity_finish'}
 
     assert_creates(LevelSource) do
@@ -937,6 +944,11 @@ class ActivitiesControllerTest < ActionController::TestCase
     end
 
     assert_response :success
+
+    assert @firehose_record[:study], 'share_filtering'
+    assert @firehose_record[:event], 'share_filtering_error'
+    assert @firehose_record[:data_string], 'IO::EAGAINWaitReadable: Resource temporarily unavailable'
+    refute_nil @firehose_record[:data_json]["level_source_id"]
   end
 
   test 'sharing program with swear word in Spanish rejects word' do
