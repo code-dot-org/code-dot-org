@@ -34,8 +34,14 @@
       = tag 'meta', property: 'og:description', content: t('share.description')
     = render partial: 'layouts/javascript_strings'
   %body
-    - unless Rails.env.production?
-      = render partial: 'layouts/environment_tag'
+    - if session[:assumed_identity]
+      - if Rails.env.production?
+        #assumed_identity_tag= 'Assumed identity'
+      - else
+        #assumed_identity_tag= 'Assumed identity (' + Rails.env + ')'
+    - else
+      - unless Rails.env.production?
+        = render partial: 'layouts/environment_tag'
     - if current_user && current_user.age.nil?
       = render partial: 'layouts/age_interstitial'
 

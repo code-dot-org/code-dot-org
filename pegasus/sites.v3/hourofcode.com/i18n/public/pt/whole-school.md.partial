@@ -5,6 +5,6 @@ layout: wide
 
 {{ signup_button }}
 
-# Get your whole school to participate
+# Envolva toda sua escola
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+Informações sobre como envolver a participação de toda sua escola no evento Hora do Código estão aqui.

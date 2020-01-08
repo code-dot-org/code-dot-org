@@ -37,3 +37,20 @@ Scenario: Maze level where student has not started
   And I wait until element ".editor-column" contains text "This student has not started the level."
   Then I see no difference for "student not started warning"
   And I close my eyes
+
+Scenario: Contained level
+  When I open my eyes to test "contained level"
+  When I sign in as "Teacher_Sally" and go home
+  And I wait until element ".uitest-owned-sections" is visible
+
+  And I am on "http://studio.code.org/s/allthethings/stage/41/puzzle/1"
+  And I wait for the page to fully load
+  And I wait until element "#teacher-panel-container" is visible
+  And I wait until element ".uitest-sectionselect:contains(Untitled Section)" is visible
+  And I wait until element ".student-table" is visible
+  And I click selector "#teacher-panel-container tr:nth(1)" to load a new page
+  And I wait for the page to fully load
+
+  And I wait until element ".editor-column" does not contain text "This student has not started the level."
+  Then I see no difference for "no student not started warning"
+  And I close my eyes

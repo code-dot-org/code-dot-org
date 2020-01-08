@@ -1,7 +1,7 @@
 /** @file Exports a set of tests that verify the MakerBoard interface */
 import sinon from 'sinon';
 import {EventEmitter} from 'events'; // see node-libs-browser
-import {expect} from '../../../../util/configuredChai';
+import {expect} from '../../../../util/deprecatedChai';
 import {N_COLOR_LEDS} from '@cdo/apps/lib/kits/maker/PlaygroundConstants';
 
 /**
@@ -100,7 +100,7 @@ export function itImplementsTheMakerBoardInterface(BoardClass) {
           'Led',
           'Board',
           'NeoPixel',
-          'Button',
+          'PlaygroundButton',
           'Switch',
           'Piezo',
           'Sensor',

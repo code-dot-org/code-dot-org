@@ -1,10 +1,12 @@
 ---
 layout: wide_index
-title: "<%= hoc_s(:front_title).gsub(/%{campaign_date}/, campaign_date('full-year')) %>"
 social:
-  "twitter:site": "@codeorg"
-  "twitter:url": "https://hourofcode.com"
+  twitter:site: "@codeorg"
+  twitter:url: https://hourofcode.com
 ---
+:ruby
+  @header["title"] = hoc_s(:front_title).gsub(/%{campaign_date}/, campaign_date('full-year'))
+
 %link{href: "/css/highlights-homepage.css", rel: "stylesheet", id: "highlight-styles"}
 
 -facebook = {:u=>"http://#{request.host}/us"}
@@ -13,13 +15,6 @@ social:
 -# ui tests rely on hourofcode.com being in a hoc_mode consistent with production. This default needs to be updated
 -# whenever we change the hoc_mode, to make sure we're still testing what we'll see on production.
 -hoc_mode = DCDO.get("hoc_mode", CDO.default_hoc_mode)
-
-:ruby
-  HIGHLIGHTS_CONSTANTS = [
-    {:id=>64, :heading_s=>hoc_s(:highlights_constant_trudeau_heading), :short_heading_s=>hoc_s(:highlights_constant_trudeau_short_heading), :image_url_s=>"hoc-trudeau.jpg", :link_text_s=>hoc_s(:highlights_watchvideo), :url_s=>"https://www.youtube.com/watch?v=8QwT58VTj_g"},
-    {:id=>63, :heading_s=>hoc_s(:highlights_constant_ny_heading), :short_heading_s=>hoc_s(:highlights_constant_ny_short_heading), :image_url_s=>"chicago-2.png", :link_text_s=>hoc_s(:highlights_readmore), :url_s=>"http://www.brooklynpaper.com/stories/39/5/dtg-hour-of-code-challenge-2016-01-29-bk.html"},
-    {:id=>65, :heading_s=>hoc_s(:highlights_constant_athletes_heading), :short_heading_s=>hoc_s(:highlights_constant_athletes_short_heading), :image_url_s=>"athletes.png", :link_text_s=>hoc_s(:highlights_watchvideo), :url_s=>"https://code.org/athletes"}
-  ]
 
 -twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
 -twitter[:hashtags] = 'HourOfCode' unless hoc_s(:front_header_banner).include? '#HourOfCode'

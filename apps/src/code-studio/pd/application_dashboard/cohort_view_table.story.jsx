@@ -21,7 +21,8 @@ export default storybook => {
                 school_name: 'Hogwarts',
                 email: 'nurse@hogwarts.edu',
                 notified: 'Yes',
-                assigned_workshop: 'Chicago Summer Workshop 6/1'
+                assigned_workshop: 'Chicago Summer Workshop 6/1',
+                registered_workshop_id: 1
               },
               {
                 id: 2,
@@ -31,7 +32,8 @@ export default storybook => {
                 school_name: 'Hogwarts',
                 email: 'short@hogwarts.edu',
                 notified: 'Yes',
-                assigned_workshop: 'Chicago Summer Workshop 6/1'
+                assigned_workshop: 'Chicago Summer Workshop 6/1',
+                registered_workshop_id: 2
               }
             ]}
             viewType="teacher"

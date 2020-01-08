@@ -1,6 +1,5 @@
 ---
 title: Contact International Partners
-layout: wide
 ---
 
 <style>
@@ -30,7 +29,7 @@ You, too, can play a leading role to get more people in your country involved! I
 | Argentina                             | Nuc Ba Academia                                                   |                                      | http://academia.nucba.com.ar                                                                       |
 | Australia                             | Google                                                            | Marie Efstathiou                     | https://www.google.com/edu/cs                                                                      |
 | Australia                             | Grok Learning                                                     | Jane Abrams                          | https://groklearning.com                                                                           |
-| Brazil                                | Programaê! - Fundaçao Lemann                                      |                                      | http://programae.org.br/horadocodigo                                                               |
+| Brazil                                | Programaê! - Fundação Telefônica Vivo                             |                                      | http://programae.org.br/horadocodigo                                                               |
 | Cameroon                              | Big IT Company Ltd                                                |                                      |                                                                                                    |
 | Canada                                | Brilliant Labs Inc.                                               |                                      | https://www.brilliantlabs.ca                                                                       |
 | Canada                                | Hatch Canada                                                      |                                      | www.hatchcanada.com                                                                                |
@@ -38,7 +37,7 @@ You, too, can play a leading role to get more people in your country involved! I
 | Canada                                | Actua                                                             | Tracy Ross                           | www.actua.ca                                                                                       |
 | Canada                                | Kids & Code                                                       |                                      | www.kidsandcode.org <br> hello@kidsandcode.org                                                     |
 | Canada                                | Kids Code Jeunesse                                                | Bry LeBlanc                          | http://kidscodejeunesse.org <br> contact@kidscodejeunesse.org                                      |
-| Canada                                | Nova Scotia Department of Education & Early Childhood Development | Peter Oldreive                       | http://ednet.ns.ca <br> Peter.Oldreive@novascotia.ca                                               |
+| Canada                                | Nova Scotia Department of Education & Early Childhood Development | Nick Baskwill                        | http://ednet.ns.ca <br> nicholas.baskwill@novascotia.ca                                            |
 | Canada                                | Partners In Research Canada                                       | Stacey Joyce                         | www.pirweb.org/en <br> sjoyce@pirweb.org                                                           |
 | Canada                                | Sault Ste. Marie innovation Centre                                |                                      | https://ssmic.com/                                                                                 |
 | Chile                                 | Fundación Kodea                                                   | Claudia Jaña                         | http://horadelcodigo.cl <br> cjana@kodea.org                                                       |

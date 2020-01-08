@@ -39,10 +39,10 @@
     "block_pool": "Dancelab",
     "preload_asset_list": [
       "https://curriculum.code.org/images/DancePartyLoading.gif",
-      "https://curriculum.code.org/images/sprites/dance_20181127/robot_32.png",
-      "https://curriculum.code.org/images/sprites/dance_20181127/robot_33.png",
-      "https://curriculum.code.org/images/sprites/dance_20181127/robot_34.png",
-      "https://curriculum.code.org/images/sprites/dance_20181127/robot_35.png"
+      "https://curriculum.code.org/images/sprites/dance_20191106/robot_32.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/robot_33.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/robot_34.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/robot_35.png"
     ],
     "custom_helper_library": "World.SPRITE_NAMES = [\"CAT\", \"DUCK\", \"MOOSE\", \"ROBOT\"];",
     "name_suffix": "_draft",

@@ -54,7 +54,7 @@ describe('EnrolledWorkshops', () => {
       enrolled_teacher_count: 10,
       capacity: 15,
       facilitators: [],
-      organizer: {name: 'organizer_name', email: 'organizer_email'},
+      organizer: {name: null, email: null},
       enrollment_code: 'code3',
       state: 'Ended'
     }

@@ -364,130 +364,152 @@ class SectionTest < ActiveSupport::TestCase
 
   test 'summarize: section with a course assigned' do
     course = create :course, name: 'somecourse'
-    section = create :section, script: nil, course: course
+    Timecop.freeze(Time.zone.now) do
+      section = create :section, script: nil, course: course
 
-    expected = {
-      id: section.id,
-      name: section.name,
-      teacherName: section.teacher.name,
-      linkToProgress: "//test.code.org/teacher-dashboard#/sections/#{section.id}/progress",
-      assignedTitle: 'somecourse',
-      linkToAssigned: '/courses/somecourse',
-      currentUnitTitle: '',
-      linkToCurrentUnit: '',
-      numberOfStudents: 0,
-      linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
-      code: section.code,
-      stage_extras: false,
-      pairing_allowed: true,
-      sharing_disabled: false,
-      login_type: "email",
-      course_id: course.id,
-      script: {id: nil, name: nil, project_sharing: nil},
-      studentCount: 0,
-      grade: nil,
-      providerManaged: false,
-      hidden: false,
-      students: [],
-    }
-    assert_equal expected, section.summarize
+      expected = {
+        id: section.id,
+        name: section.name,
+        teacherName: section.teacher.name,
+        linkToProgress: "//test.code.org/teacher-dashboard#/sections/#{section.id}/progress",
+        assignedTitle: 'somecourse',
+        linkToAssigned: '/courses/somecourse',
+        currentUnitTitle: '',
+        linkToCurrentUnit: '',
+        numberOfStudents: 0,
+        linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
+        code: section.code,
+        stage_extras: false,
+        pairing_allowed: true,
+        sharing_disabled: false,
+        login_type: "email",
+        course_id: course.id,
+        script: {id: nil, name: nil, project_sharing: nil},
+        studentCount: 0,
+        grade: nil,
+        providerManaged: false,
+        hidden: false,
+        students: [],
+      }
+      # Compare created_at separately because the object's created_at microseconds
+      # don't match Time.zone.now's microseconds (different levels of precision)
+      assert_equal Time.zone.now.change(sec: 0), section.created_at.change(sec: 0)
+      assert_equal expected, section.summarize.except!(:createdAt)
+    end
   end
 
   test 'summarize: section with a script assigned' do
     # Use an existing script so that it has a translation
     script = Script.find_by_name('jigsaw')
-    section = create :section, script: script, course: nil
 
-    expected = {
-      id: section.id,
-      name: section.name,
-      teacherName: section.teacher.name,
-      linkToProgress: "//test.code.org/teacher-dashboard#/sections/#{section.id}/progress",
-      assignedTitle: 'Jigsaw',
-      linkToAssigned: '/s/jigsaw',
-      currentUnitTitle: '',
-      linkToCurrentUnit: '',
-      numberOfStudents: 0,
-      linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
-      code: section.code,
-      stage_extras: false,
-      pairing_allowed: true,
-      sharing_disabled: false,
-      login_type: "email",
-      course_id: nil,
-      script: {id: script.id, name: script.name, project_sharing: nil},
-      studentCount: 0,
-      grade: nil,
-      providerManaged: false,
-      hidden: false,
-      students: [],
-    }
-    assert_equal expected, section.summarize
+    Timecop.freeze(Time.zone.now) do
+      section = create :section, script: script, course: nil
+
+      expected = {
+        id: section.id,
+        name: section.name,
+        teacherName: section.teacher.name,
+        linkToProgress: "//test.code.org/teacher-dashboard#/sections/#{section.id}/progress",
+        assignedTitle: 'Jigsaw',
+        linkToAssigned: '/s/jigsaw',
+        currentUnitTitle: '',
+        linkToCurrentUnit: '',
+        numberOfStudents: 0,
+        linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
+        code: section.code,
+        stage_extras: false,
+        pairing_allowed: true,
+        sharing_disabled: false,
+        login_type: "email",
+        course_id: nil,
+        script: {id: script.id, name: script.name, project_sharing: nil},
+        studentCount: 0,
+        grade: nil,
+        providerManaged: false,
+        hidden: false,
+        students: [],
+      }
+      # Compare created_at separately because the object's created_at microseconds
+      # don't match Time.zone.now's microseconds (different levels of precision)
+      assert_equal Time.zone.now.change(sec: 0), section.created_at.change(sec: 0)
+      assert_equal expected, section.summarize.except!(:createdAt)
+    end
   end
 
   test 'summarize: section with both a course and a script' do
     # Use an existing script so that it has a translation
     script = Script.find_by_name('jigsaw')
     course = create :course, name: 'somecourse'
-    # If this were a real section, it would actually have a script that is part of
-    # the provided course
-    section = create :section, script: script, course: course
 
-    expected = {
-      id: section.id,
-      name: section.name,
-      teacherName: section.teacher.name,
-      linkToProgress: "//test.code.org/teacher-dashboard#/sections/#{section.id}/progress",
-      assignedTitle: 'somecourse',
-      linkToAssigned: '/courses/somecourse',
-      currentUnitTitle: 'Jigsaw',
-      linkToCurrentUnit: '/s/jigsaw',
-      numberOfStudents: 0,
-      linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
-      code: section.code,
-      stage_extras: false,
-      pairing_allowed: true,
-      sharing_disabled: false,
-      login_type: "email",
-      course_id: course.id,
-      script: {id: script.id, name: script.name, project_sharing: nil},
-      studentCount: 0,
-      grade: nil,
-      providerManaged: false,
-      hidden: false,
-      students: [],
-    }
-    assert_equal expected, section.summarize
+    Timecop.freeze(Time.zone.now) do
+      # If this were a real section, it would actually have a script that is part of
+      # the provided course
+      section = create :section, script: script, course: course
+
+      expected = {
+        id: section.id,
+        name: section.name,
+        teacherName: section.teacher.name,
+        linkToProgress: "//test.code.org/teacher-dashboard#/sections/#{section.id}/progress",
+        assignedTitle: 'somecourse',
+        linkToAssigned: '/courses/somecourse',
+        currentUnitTitle: 'Jigsaw',
+        linkToCurrentUnit: '/s/jigsaw',
+        numberOfStudents: 0,
+        linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
+        code: section.code,
+        stage_extras: false,
+        pairing_allowed: true,
+        sharing_disabled: false,
+        login_type: "email",
+        course_id: course.id,
+        script: {id: script.id, name: script.name, project_sharing: nil},
+        studentCount: 0,
+        grade: nil,
+        providerManaged: false,
+        hidden: false,
+        students: [],
+      }
+      # Compare created_at separately because the object's created_at microseconds
+      # don't match Time.zone.now's microseconds (different levels of precision)
+      assert_equal Time.zone.now.change(sec: 0), section.created_at.change(sec: 0)
+      assert_equal expected, section.summarize.except!(:createdAt)
+    end
   end
 
   test 'summarize: section with neither course or script assigned' do
-    section = create :section, script: nil, course: nil
+    Timecop.freeze(Time.zone.now) do
+      section = create :section, script: nil, course: nil
 
-    expected = {
-      id: section.id,
-      name: section.name,
-      teacherName: section.teacher.name,
-      linkToProgress: "//test.code.org/teacher-dashboard#/sections/#{section.id}/progress",
-      assignedTitle: '',
-      linkToAssigned: '//test.code.org/teacher-dashboard#/sections/',
-      currentUnitTitle: '',
-      linkToCurrentUnit: '',
-      numberOfStudents: 0,
-      linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
-      code: section.code,
-      stage_extras: false,
-      pairing_allowed: true,
-      sharing_disabled: false,
-      login_type: "email",
-      course_id: nil,
-      script: {id: nil, name: nil, project_sharing: nil},
-      studentCount: 0,
-      grade: nil,
-      providerManaged: false,
-      hidden: false,
-      students: [],
-    }
-    assert_equal expected, section.summarize
+      expected = {
+        id: section.id,
+        name: section.name,
+        teacherName: section.teacher.name,
+        linkToProgress: "//test.code.org/teacher-dashboard#/sections/#{section.id}/progress",
+        assignedTitle: '',
+        linkToAssigned: '//test.code.org/teacher-dashboard#/sections/',
+        currentUnitTitle: '',
+        linkToCurrentUnit: '',
+        numberOfStudents: 0,
+        linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
+        code: section.code,
+        stage_extras: false,
+        pairing_allowed: true,
+        sharing_disabled: false,
+        login_type: "email",
+        course_id: nil,
+        script: {id: nil, name: nil, project_sharing: nil},
+        studentCount: 0,
+        grade: nil,
+        providerManaged: false,
+        hidden: false,
+        students: [],
+      }
+      # Compare created_at separately because the object's created_at microseconds
+      # don't match Time.zone.now's microseconds (different levels of precision)
+      assert_equal Time.zone.now.change(sec: 0), section.created_at.change(sec: 0)
+      assert_equal expected, section.summarize.except!(:createdAt)
+    end
   end
 
   test 'summarize: section with students' do

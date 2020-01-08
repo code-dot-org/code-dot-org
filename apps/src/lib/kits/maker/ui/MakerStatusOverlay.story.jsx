@@ -11,6 +11,7 @@ export default storybook => {
     isWrongBrowser: false,
     hasConnectionError: false,
     handleTryAgain: action('Try Again'),
+    useFakeBoardOnNextRun: action('Use fake board on next run'),
     handleDisableMaker: action('Disable Maker Toolkit'),
     handleOpenSetupPage: action('Open setup page')
   };

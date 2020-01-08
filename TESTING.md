@@ -84,9 +84,9 @@ See [the apps readme](./apps/README.md) for more details.
 
 If you get a bunch of complaints about database, like missing tables or how some tables haven't been seeded, here are some things you can try in order from least to most drastic before running your tests again:
 
-1. `rake seed:secret_pictures seed:secret_words` to seed the missing data, or
+1. `bundle exec rake seed:secret_pictures seed:secret_words` to seed the missing data, or
 
-2. `RAILS_ENV=test rake db:reset db:test:prepare` to recreate your local dashboard test db and reseed the data.
+2. `RAILS_ENV=test bundle exec rake db:reset db:test:prepare` to recreate your local dashboard test db and reseed the data.
 
 If you just want to run a single file of tests, you can run
 `bundle exec spring testunit ./path/to/your/test.rb`
@@ -106,7 +106,7 @@ If you get an error about missing db fields, try migrating your test database:
 We have a set of integration tests, divided into "UI tests" (Selenium+Cucumber) and "Eyes tests" (Selenium+Cucumber+Applitools).  These tests live in [dashboard/test/ui](dashboard/test/ui) - for information on setting up and running these tests, see [the README in that directory](dashboard/test/ui) and our [guide to adding an eyes test](docs/testing-with-applitools-eyes.md).
 Or you can just use this shortcut (after you've installed chromedriver):
 
-`rake test:ui feature=dashboard/test/ui/features/sometest.feature`
+`bundle exec rake test:ui feature=dashboard/test/ui/features/sometest.feature`
 
 ### Pegasus Tests
 `cd pegasus && rake test` will run all of our pegasus Ruby tests. This usually takes ~20 seconds to run.
@@ -129,3 +129,18 @@ If you've made a change that caused an eyes failiure, log into Applitools and ch
 
 * [Testing Production Locally](docs/testing-production-locally.md)
 * [Testing IE9](docs/testing-ie9.md)
+
+# Troubleshooting
+## Linux
+### SyntheticEvent.augmentClass is not a function
+```
+PhantomJS 2.1.1 (Linux 0.0.0) ERROR
+  TypeError: SyntheticEvent.augmentClass is not a function. (In 'SyntheticEvent.augmentClass(SyntheticCompositionEvent, CompositionEventInterface)', 'SyntheticEvent.augmentClass' is undefined)
+  at webpack:///node_modules/react-dom/lib/SyntheticCompositionEvent.js:33:0 <- test/integration-tests.js:322086
+
+```
+There is an issue with PhantomJS and React when running on Linux. The current workaround is to prefix any of your test commands with `BROWSER=Chrome`. For example:
+```
+BROWSER=Chrome bundle exec rake test:all
+```
+This will tell Karma, the testing framework this project uses, to use the Google Chrome browser instead of PhantomJS. *Note* you need to install Google Chrome for this to work. If you would prefer to use Chromium, you can use the prefix `BROWSER=Chrome CHROME_BIN=$(which chromium-browser)` instead.

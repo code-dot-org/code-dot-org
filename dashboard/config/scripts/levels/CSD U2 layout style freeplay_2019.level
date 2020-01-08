@@ -8,7 +8,7 @@
     "long_instructions": "# Personal Web Site\r\n\r\nTry out some of these new CSS properties on your personal web site.\r\n\r\n* Add styling of your choice to your web site. Be sure to use at least three new CSS properties.\r\n\r\n# Checklist\r\n\r\n* At least three of the following CSS Properties are used:\r\n\r\n  * `background-color`\r\n  * `height`\r\n  * `width`\r\n  * `border-style`\r\n  * `border-radius`\r\n  * `border-width`\r\n  * `float`\r\n  * `margin`\r\n\r\nWe encourage you to use more than three, though!  Explore additional CSS properties and add them to your page.",
     "project_template_level_name": "CSD U2 Project Template_2019",
     "instructions_important": "false",
-    "encrypted_examples": "Z6RGko0IK1jmjgGGRmpL1kdYYA9XKcN4R5X9RjfHasZf1p15N/buqHVbwjKK\nCXSR86mJHQBYm8KGIIrL5K3BP627N+RgFFv+yPylj9VNhMLy2L8bhAkxXApv\n7mkiHmJ6\n",
+    "encrypted_examples": "Z6RGko0IK1jmjgGGRmpL1kdYYA9XKcN4R5X9RjfHasZhGVv9IPnsgGiHn2FZ\nCzH+owR2qg7bmYrJqi9lzU9aZvFQhq9WLWPsg7RAIYjKiadejHC7jBuUknyO\nRP2y2dcZ\n",
     "hide_share_and_remix": "false",
     "submittable": "false",
     "parent_level_id": 11559,
@@ -24,10 +24,14 @@
       "/docs/concepts/html/formatting-html/",
       "/docs/concepts/other/creative-commons-search/"
     ],
-    "map_reference": "/docs/concepts/css/layout-properties/"
+    "map_reference": "/docs/concepts/css/layout-properties/",
+    "encrypted": "false",
+    "mini_rubric": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-29 17:34:52 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":177,\"changed_by_email\":\"josh.schulte@code.org\"},{\"changed_at\":\"2017-10-26 02:31:37 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-11-03 00:00:26 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-01-30 21:49:18 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-29 17:34:52 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":177,\"changed_by_email\":\"josh.schulte@code.org\"},{\"changed_at\":\"2017-10-26 02:31:37 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-11-03 00:00:26 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-01-30 21:49:18 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-10-22 21:18:59 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </Weblab>

@@ -8,6 +8,7 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {fullyLockedStageMapping} from '../../stageLockRedux';
 import {ViewType} from '../../viewAsRedux';
 import {hasLockableStages} from '../../progressRedux';
+import {pageTypes} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import StudentTable, {studentShape} from './StudentTable';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import {SelectedStudentInfo} from './SelectedStudentInfo';
@@ -59,7 +60,11 @@ class TeacherPanel extends React.Component {
     sectionData: PropTypes.object,
     scriptName: PropTypes.string,
     // pageType describes the current route the user is on. Used only for logging.
-    pageType: PropTypes.oneOf(['level', 'script_overview', 'stage_extras']),
+    pageType: PropTypes.oneOf([
+      pageTypes.level,
+      pageTypes.scriptOverview,
+      pageTypes.stageExtras
+    ]),
 
     // Provided by redux.
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,

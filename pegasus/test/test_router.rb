@@ -101,4 +101,19 @@ class RouterTest < Minitest::Test
     assert_equal 200, resp.status, path
     assert_match "Hello", resp.body
   end
+
+  def test_no_erb_in_yaml
+    # This test exists for mostly historic reasons; it used to be the case that
+    # the YAML headers in pegasus documents would be parsed first as ERB before
+    # being parsed as YAML.
+    #
+    # In addition to being somewhat confusing, this also led to a security risk
+    # once we started allowing translators to translate entire files.
+    #
+    # This tests exists just to enforce that we don't revert back to the old
+    # functionality.
+    resp = get('/test_no_erb_in_yaml')
+    refute_match "<title>1,2,3</title>", resp.body
+    assert_match "<title><%= (1..3).to_a.join(',').inspect %></title>", resp.body
+  end
 end

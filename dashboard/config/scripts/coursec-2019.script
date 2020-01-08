@@ -1,6 +1,6 @@
 hidden false
 hideable_stages true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-19/coursec/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-19/coursec/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-19/coursec/standards/"]]
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-19/coursec/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-19/coursec/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-19/coursec/standards/"], ["curriculumGuide", "https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview"]]
 stage_extras_available true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-19/coursec/{LESSON}'

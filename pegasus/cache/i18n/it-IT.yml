@@ -566,6 +566,10 @@ it-IT:
     "Un'avventura con Minecraft".
   minecraft_subtitle: L'Ora del Codice con Minecraft
   minecraft_store_camps: Free Minecraft Hour of Code Camps at the Microsoft Store
+  minecraft_signup_store_camps: <a href="%{signup_store_camp}"> Iscriviti</a> gratis
+    alle esercitazioni dell'Ora del codice in un Microsoft Store in Australia, Canada,
+    Puerto Rico o Stati Uniti per imparare come combinare la tua creatività con la
+    programmazione.
   minecraft_host_event: Organizza un evento dell'Ora del Codice con Minecraft
   minecraft_teach_resources: Risorse per l'insegnante e piano di lavoro della lezione.
   minecraft_leader_guide: Scarica le risorse per aiutarti a pianificare ed organizzare
@@ -844,7 +848,7 @@ it-IT:
   dashboard_course_ecs_desc: Esplorare l'Informatica in un corso annuale costituito
     da 6 unità. Interazione Uomo-Computer, Risoluzione Problemi, Web Design, Programmazione,
     Elaborazione ed Analisi dei Dati e Robotica.
-  dashboard_course_csp: Principi di informatica ® AP
+  dashboard_course_csp: Principi di informatica
   dashboard_course_csp_desc: I corsi di Code.org sono stati progettati in modo rigoroso,
     coinvolgente e approcciabile in modo da esplorare le idee alla base dei fondamenti
     dell'informatica.
@@ -1060,9 +1064,9 @@ it-IT:
   dashboard_teacher_worksheet: teacher worksheet
   dashboard_curriculum_csina: 'Informatica in Algebra:'
   dashboard_curriculum_csins: 'Informatica nelle Scienze:'
-  dashboard_curriculum_csp: 'Principi di informatica ® AP:'
+  dashboard_curriculum_csp: 'Principi di informatica:'
   dashboard_curriculum_ecs: 'Esplorando l''Informatica:'
-  dashboard_curriculum_csd: 'Alla Scoperta dell''Informatica (scuole medie - in inglese): '
+  dashboard_curriculum_csd: 'Alla scoperta dell''informatica: '
   dashboard_grade_k: livello
   dashboard_grade_other: Altro
   dashboard_login_word: Parola
@@ -1260,11 +1264,12 @@ it-IT:
   coursed-2018_name: Corso D (2018)
   coursee-2018_name: Corso E (2018)
   coursef-2018_name: Corso F (2018)
-  express-2018_name: Corso Rapido
+  express-2018_name: Corso Rapido (2018)
   pre-express-2018_name: Corso Rapido pre-scolare (2018)
+  express-2019_name: Corso Rapido (2017)
   pre-express-2019_name: Corso Rapido pre-scolare (2019)
   accelerated_name: Corso rapido
-  express_name: Corso Rapido
+  express_name: Corso Rapido (2018)
   pre-express_name: Corso Rapido pre-scolare
   20-hour_name: Corso rapido
   algebra_name: L'informatica in algebra
@@ -1509,8 +1514,8 @@ it-IT:
     storie animate o giochi interattivi.
   coursed_shortdescription_congrats: Vengono ripresi brevemente i concetti del corso
     C ed aggiunti algoritmi, cicli annidati, istruzioni condizionali e altro ancora.
-  coursee_shortdescription_congrats: Vengono ripresi brevemente i concetti dei corsi
-    C e D e viene aggiunto il concetto di funzione.
+  coursee_shortdescription_congrats: Vengono ripresi i concetti dei corsi C e D e
+    viene aggiunto il concetto di funzione.
   coursef_shortdescription_congrats: Impara tutti i concetti dei corsi di fondamenti
     di informatica e crea disegni, storie o giochi interattivi.
   coursea-2017_shortdescription_congrats: Introduzione all'informatica per bambini
@@ -1523,8 +1528,8 @@ it-IT:
   coursed-2017_shortdescription_congrats: Vengono ripresi brevemente i concetti del
     corso C ed aggiunti algoritmi, cicli annidati, istruzioni condizionali e altro
     ancora.
-  coursee-2017_shortdescription_congrats: Vengono ripresi brevemente i concetti dei
-    corsi C e D e viene aggiunto il concetto di funzione.
+  coursee-2017_shortdescription_congrats: Vengono ripresi i concetti dei corsi C e
+    D e viene aggiunto il concetto di funzione.
   coursef-2017_shortdescription_congrats: Impara tutti i concetti dei corsi di fondamenti
     di informatica e crea disegni, storie o giochi interattivi.
   coursea-2018_shortdescription_congrats: Introduzione all'informatica per bambini
@@ -1537,8 +1542,8 @@ it-IT:
   coursed-2018_shortdescription_congrats: Vengono ripresi brevemente i concetti del
     corso C ed aggiunti algoritmi, cicli annidati, istruzioni condizionali e altro
     ancora.
-  coursee-2018_shortdescription_congrats: Vengono ripresi brevemente i concetti dei
-    corsi C e D e viene aggiunto il concetto di funzione.
+  coursee-2018_shortdescription_congrats: Vengono ripresi i concetti dei corsi C e
+    D e viene aggiunto il concetto di funzione.
   coursef-2018_shortdescription_congrats: Impara tutti i concetti dei corsi di fondamenti
     di informatica e crea disegni, storie o giochi interattivi.
   coursea-2019_shortdescription_congrats: Introduzione all'informatica per bambini
@@ -1551,8 +1556,8 @@ it-IT:
   coursed-2019_shortdescription_congrats: Vengono ripresi brevemente i concetti del
     corso C ed aggiunti algoritmi, cicli annidati, istruzioni condizionali e altro
     ancora.
-  coursee-2019_shortdescription_congrats: Vengono ripresi brevemente i concetti dei
-    corsi C e D e viene aggiunto il concetto di funzione.
+  coursee-2019_shortdescription_congrats: Vengono ripresi i concetti dei corsi C e
+    D e viene aggiunto il concetto di funzione.
   coursef-2019_shortdescription_congrats: Impara tutti i concetti dei corsi di fondamenti
     di informatica e crea disegni, storie o giochi interattivi.
   codeorg_longdescription: Impara i concetti di base dell'informatica con la programmazione
@@ -2158,6 +2163,11 @@ it-IT:
   login_cards: Schede di accesso
   print_login_cards: Stampa le schede di accesso
   joining_section: Iscrizione alla tua classe (una tantum)
+  joining_section_overview: Se alcuni studenti non si sono ancora iscritti alla tua
+    classe, chiedigli di eseguire i seguenti passaggi. È una procedura una tantum.
+    Iscrivendosi alla tua classe, gli studenti potranno vedere il corso assegnato
+    e tu potrai monitorare i progressi di quanto faranno ogni volta che accederanno
+    con utenza e password.
   joining_section_instruct_website: 'Crea un account su Code.org se non ne hanno già
     uno. Lo possono fare su https://studio.code.org/users/sign_up. Nota: lo possono
     anche fare con un indirizzo email ed una password o tramite Google, Facebook o
@@ -2195,15 +2205,18 @@ it-IT:
   hoc_overview_dance_subtitle: Crea un progetto in "Ballando col codice" da condividere
     con i tuoi amici. Con Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara
     e altri 25!
+  hoc_overview_dance_2019_subtitle: Divertiti con i tuoi amici "Ballando col codice"
+    con Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers,
+    Nicki Minaj e molti altri!
   hoc_overview_title: Attività dell'Ora del Codice di Code.org
   hoc_overview_subtitle: L'<a href="https://hourofcode.com">Ora del Codice</a> è un
     movimento globale che coinvolge decine di milioni di studenti in più di 180 nazioni.
     Chiunque, in ogni parte del mondo, può organizzare un'Ora del Codice o provare
     una delle oltre 200 esercitazioni di un'ora, disponibili in oltre 45 lingue diverse.
   hoc_overview_partner_activities_title: Altre attività dei nostri partner
-  hoc_overview_partner_activities_body: Nel sito dell'Ora del Codice puoi trovare
-    più di 100 esercitazioni per tutte le età e livelli di esperienza, sviluppate
-    da Code.org e partner.
+  hoc_overview_partner_activities_body: Il sito Web “The Hour of Code” offre più di
+    100 attività legate all’informatica adatte a tutte le età e a tutti livelli di
+    esperienza, sviluppate da Code.org e dai suoi partner.
   hoc_overview_partner_activities_link: Visualizza tutte le attività
   hoc_overview_start_tutorial: Inizia
   hoc_overview_view_teacher_guide: Guida per l'insegnante (in inglese)

@@ -1,14 +1,11 @@
-- partner_name = @application.regional_partner&.name || 'Code.org'
-
 %p
   Hello
   = @application.first_name + ','
 
 %p
   Thank you for your interest in
-  = "#{@application.regional_partner&.name || 'Code.org'}'s"
-  Professional Learning Program!
-  We've received your application.
+  = @application.effective_regional_partner_name + "'s"
+  Professional Learning Program! We've received your application.
   = @application.regional_partner&.name || 'We'
   will review your application soon.
 
@@ -40,6 +37,6 @@
 %p
   Liz Gauthier
   %br
-  National Program Manager
+  Project Manager of District & School Recruitment
   %br
   Code.org

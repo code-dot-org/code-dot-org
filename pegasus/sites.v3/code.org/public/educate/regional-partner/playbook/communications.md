@@ -86,7 +86,7 @@ ________________
 There are two types of emails regarding logistical information for professional development workshops: manual emails written by the workshop organizer to invite participants to register for the workshop, and automated emails sent from the workshop dashboard.
 
 - **Manual emails:** The workshop organizer is responsible for sending the following communications to teachers:
-	- Invitations to register for a workshop. The [Academic Year Workshop Process Document](https://docs.google.com/document/d/1P1IhiMVgGCGZFVaof9bdc7pRKmTK0ZOQTOw0KDkhMxs/edit?usp=sharing) has examples of these emails. The 2019 Local Summer Workshops Process Doc is coming soon.
+	- Invitations to register for a workshop. The [Academic Year Workshop Process Document](https://docs.google.com/document/d/1sJUI1F7r270k8LYMbLBBZwqQho7xJMc0G-YUrfiRJwM/edit) has examples of these emails. The 2019 Local Summer Workshops Process Doc is coming soon.
 	- Emails about meetups and community events you organize.
 - **Automated emails:** Participants who sign up for a workshop will receive the following automated emails from Code.org. (*Workshop Details information will vary by program. Examples can be found in the [Workshop Dashboard Process Document](https://docs.google.com/document/d/1FEkjohxBfOkoSjPC0C3EvXztEf-kcocN8uk16WI2tlo/edit).*)
 	- Workshop Sign Up Confirmations will be automatically sent to a teacher that signs up for a workshop.

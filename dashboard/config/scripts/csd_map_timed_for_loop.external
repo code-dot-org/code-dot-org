@@ -1,7 +1,7 @@
 name 'CSD Map: Timed For Loop'
 display_name 'Timed For Loops'
 markdown <<MARKDOWN
-<object data="https://docs.code.org/csd/timedLoopFor/" type="text/html"  style="width: 100%; height: 1400px;"></object>
+<object data="https://studio.code.org/docs/csd/timedLoopFor/" type="text/html"  style="width: 100%; height: 1400px;"></object>
 MARKDOWN
 
 teacher_markdown <<MARKDOWN

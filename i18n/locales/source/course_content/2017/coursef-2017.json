@@ -1042,7 +1042,7 @@
   },
   "https://studio.code.org/s/coursef-2017/stage/16/puzzle/10": {
     "dsls": {
-      "markdown": "<h2>More on Variables</h2>\n\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\" style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>You've just learned one great way to use a variable...as a constant!  \nWhen you use a variable as a constant, you are setting a value one time, then using that *same* value multiple times in your program without changing it after you click \"Run\".  </h3>\n<br/><hr/>\n<h3>In the next part of the series, you will write code with variables that *do* change inside the program.</h3>\n\n"
+      "markdown": "<h2>More on Variables</h2>\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\" style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>You've just learned one great way to use a variable...as a constant!  \nWhen you use a variable as a constant, you are setting a value one time, then using that *same* value multiple times in your program without changing it after you click \"Run\".  </h3>\n<br/><hr/>\n<h3>In the next part of the series, you will write code with variables that *do* change inside the program.</h3>\n\n"
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/16/puzzle/11": {
@@ -1160,7 +1160,8 @@
               "correct": false,
               "feedback": "Incorrect. Notice that the `join` block inserts the provided name (Ali) into the pirate's sentence. "
             }
-          ]
+          ],
+          "markdown": "**This puzzle uses a new block called the `ask` block.**\n\nThe `ask` block stops the program and prompts the user to enter some text. \n\nWhatever text the user enters is then saved to the variable shown at the end of the `ask` block.  In this case, it's the variable `name`.\n"
         }
       }
     ]
@@ -1280,7 +1281,8 @@
               "correct": false,
               "feedback": "Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers."
             }
-          ]
+          ],
+          "markdown": "Ah!  The use of `for` loops makes this puzzle a lot easier!\n\n\n"
         }
       }
     ]
@@ -1485,7 +1487,8 @@
               "correct": false,
               "feedback": "Incorrect. Each time through the `for` loop, the artist draws a longer line that is also thicker."
             }
-          ]
+          ],
+          "markdown": "We used the counter from our `for` loop to change the width of the brush on this drawing.  \n\n\n"
         }
       }
     ]
@@ -1551,7 +1554,8 @@
               "correct": false,
               "feedback": "The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud."
             }
-          ]
+          ],
+          "markdown": "The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar **once**. \n"
         }
       }
     ]
@@ -1633,7 +1637,8 @@
               "correct": false,
               "feedback": "The `if at flower` block lets the bee get nectar at each flower, otherwise it makes honey."
             }
-          ]
+          ],
+          "markdown": "Sometimes a cloud covers a flower, sometimes it covers a honeycomb! Either way, there will only ever be **one** flower or **one** honeycomb under each cloud. \n"
         }
       }
     ]
@@ -1855,7 +1860,8 @@
               "correct": false,
               "feedback": "The program uses parameters to allow a single function to create two different size boxes."
             }
-          ]
+          ],
+          "markdown": "We have added parameters to the 'draw a square' function.  Click the blue \"edit\" button to see the entire function definition.\n\n\n"
         }
       }
     ]
@@ -2130,7 +2136,8 @@
               "correct": false,
               "feedback": "Clicking to look inside of the function shows that it is set to collect as many nectar or honey as is passed through a parameter."
             }
-          ]
+          ],
+          "markdown": "Underneath these clouds, there is either a flower with exactly 1 nectar, or a honeycomb with exactly 1 honey.  Click the blue \"edit\" button on the function to see what is inside before answering the question below.\n\n\n"
         }
       }
     ]

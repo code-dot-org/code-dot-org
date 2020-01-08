@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "әрбір элемент үшін";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "Тізімдегі әрбір элемент үшін элементке '%1' айнымалысын мәнін бер, сосын бұйрықты орында.";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "%1 - ден %2-ге дейін %3 қадамымен сана";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "бойынша цикл";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Берілген қадаммен басынан аяғына дейін айнымалыларға %1 мәнін беріп, сосын бұйрықты орында.";

@@ -4,7 +4,7 @@ import {
   dataURIFromURI,
   imageFromURI
 } from '@cdo/apps/imageUtils';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 import squarePlayspaceImage from './squarePlayspaceImage.png';
 import squarePlayspaceThumbnail from './squarePlayspaceThumbnail.png';
 import tallPlayspaceImage from './tallPlayspaceImage.png';

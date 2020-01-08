@@ -1,4 +1,4 @@
-import {expect, assert} from '../../../../util/configuredChai';
+import {expect, assert} from '../../../../util/deprecatedChai';
 import sinon from 'sinon';
 import Interpreter from '@code-dot-org/js-interpreter';
 import Observer from '@cdo/apps/Observer';
@@ -40,10 +40,10 @@ describe('The JSInterpreter class', function() {
       expect(functions[0].comment).to.equal(`${comment}\n${comment}`);
     });
 
-    it('returns the last single-line comment if there are multiple', () => {
-      let code = `//${comment}\n//${comment}last\nfunction testFunction() {}`;
+    it('returns multiple single-line comments', () => {
+      let code = `//${comment}\n//${comment}\nfunction testFunction() {}`;
       let functions = JSInterpreter.getFunctionsAndMetadata(code);
-      expect(functions[0].comment).to.equal(`${comment}last`);
+      expect(functions[0].comment).to.equal(`${comment}\n${comment}`);
     });
 
     it('returns no comment when an empty comment is passed', () => {

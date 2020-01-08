@@ -8,7 +8,7 @@ import LabeledFormComponent from '../../form_components/LabeledFormComponent';
 import PrivacyDialog from '../PrivacyDialog';
 import {PrivacyDialogMode} from '../../constants';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
-import {isInt, isPercent} from '@cdo/apps/util/formatValidation';
+import {isInt, isPercent, isZipCode} from '@cdo/apps/util/formatValidation';
 import {styles} from '../teacher/TeacherApplicationConstants';
 
 const MANUAL_SCHOOL_FIELDS = [
@@ -138,7 +138,7 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
     return (
       <div>
         {this.renderSchoolSection()}
-        {this.inputFor('totalStudentEnrollment')}
+        {this.numberInputFor('totalStudentEnrollment')}
         {this.numberInputFor('freeLunchPercent', {
           min: 0,
           max: 100,
@@ -390,8 +390,16 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
   static getErrorMessages(data) {
     let formatErrors = {};
 
-    if (data.totalStudentEnrollment && !isInt(data.totalStudentEnrollment)) {
-      formatErrors.totalStudentEnrollment = 'Must be a valid number';
+    if (data.schoolZipCode && !isZipCode(data.schoolZipCode)) {
+      formatErrors.schoolZipCode = 'Must be a valid zip code';
+    }
+
+    if (
+      data.totalStudentEnrollment &&
+      (!isInt(data.totalStudentEnrollment) || data.totalStudentEnrollment <= 0)
+    ) {
+      formatErrors.totalStudentEnrollment =
+        'Must be a valid and positive number';
     }
 
     ['freeLunchPercent', ...RACE_LIST].forEach(key => {
@@ -430,7 +438,9 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
       // Sanitize numeric fields (necessary for older browsers that don't
       // automatically enforce numeric inputs)
       ['freeLunchPercent', ...RACE_LIST].forEach(field => {
-        changes[field] = parseFloat(data[field]).toString();
+        if (data[field]) {
+          changes[field] = parseFloat(data[field]).toString();
+        }
       });
     }
 

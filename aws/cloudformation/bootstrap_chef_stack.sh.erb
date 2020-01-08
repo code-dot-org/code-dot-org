@@ -112,6 +112,8 @@ cat <<JSON > $FIRST_BOOT
 <% end -%>
 <% if TEMPLATE == 'cloud_formation_stack.yml.erb' && @database -%>
     "db_writer": "mysql://$DB_USERNAME:$DB_PASSWORD@${AuroraCluster.Endpoint.Address}:${AuroraCluster.Endpoint.Port}/",
+    "db_reader": "mysql://$DB_USERNAME:$DB_PASSWORD@${AuroraCluster.ReadEndpoint.Address}:${AuroraCluster.Endpoint.Port}/",
+    "db_cluster_id": "${AuroraCluster}",
 <% end -%>
 <% unless cdn_enabled -%>
     "cdn_enabled": false,

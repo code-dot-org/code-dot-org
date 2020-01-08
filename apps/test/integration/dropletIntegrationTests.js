@@ -1,4 +1,4 @@
-import {assert, expect} from '../util/configuredChai';
+import {assert, expect} from '../util/deprecatedChai';
 import * as dropletUtils from '@cdo/apps/dropletUtils';
 import {
   singleton as studioApp,

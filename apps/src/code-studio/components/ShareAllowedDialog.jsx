@@ -19,6 +19,8 @@ import PublishDialog from '../../templates/projects/publishDialog/PublishDialog'
 import {createHiddenPrintWindow} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import LibraryCreationDialog from './libraries/LibraryCreationDialog';
+import LibraryClientApi from './libraries/LibraryClientApi';
 
 function recordShare(type) {
   if (!window.dashboard) {
@@ -254,6 +256,8 @@ class ShareAllowedDialog extends React.Component {
       modalClass += ' no-modal-icon';
     }
 
+    const isDroplet =
+      this.props.appType === 'applab' || this.props.appType === 'gamelab';
     const artistTwitterHandle =
       SongTitlesToArtistTwitterHandle[this.props.selectedSong];
 
@@ -283,9 +287,7 @@ class ShareAllowedDialog extends React.Component {
       ? twitterShareUrlDance
       : twitterShareUrlDefault;
 
-    const showShareWarning =
-      !this.props.canShareSocial &&
-      (this.props.appType === 'applab' || this.props.appType === 'gamelab');
+    const showShareWarning = !this.props.canShareSocial && isDroplet;
     let embedOptions;
     if (this.props.appType === 'applab') {
       embedOptions = {
@@ -303,6 +305,7 @@ class ShareAllowedDialog extends React.Component {
       };
     }
     const {canPrint, canPublish, isPublished} = this.props;
+    let libraryClientAPI = new LibraryClientApi(this.props.channelId);
     return (
       <div>
         <BaseDialog
@@ -479,8 +482,7 @@ class ShareAllowedDialog extends React.Component {
                   </div>
                 )}
                 <div style={{clear: 'both', marginTop: 40}}>
-                  {(this.props.appType === 'applab' ||
-                    this.props.appType === 'gamelab') && (
+                  {isDroplet && (
                     <AdvancedShareOptions
                       allowExportExpo={this.props.allowExportExpo}
                       i18n={this.props.i18n}
@@ -498,6 +500,7 @@ class ShareAllowedDialog extends React.Component {
           )}
         </BaseDialog>
         <PublishDialog />
+        <LibraryCreationDialog clientApi={libraryClientAPI} />
       </div>
     );
   }

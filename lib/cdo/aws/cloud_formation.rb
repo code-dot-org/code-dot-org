@@ -182,17 +182,29 @@ module AWS
         end.compact
       end
 
-      def stack_options(template)
+      def base_options
+        # All stacks use the same shared Service Role for CloudFormation resource-management permissions.
+        # Pass `ADMIN=1` to update admin resources with a privileged Service Role.
+        role_name = "CloudFormation#{ENV['ADMIN'] ? 'Admin' : 'Service'}"
+        account = Aws::STS::Client.new.get_caller_identity.account
         {
           stack_name: stack_name,
-          parameters: parameters(template),
-          tags: [
-            {
-              key: 'environment',
-              value: rack_env
-            }
-          ],
-        }.merge(string_or_url(template)).tap do |options|
+          role_arn: "arn:aws:iam::#{account}:role/admin/#{role_name}"
+        }
+      end
+
+      def stack_options(template)
+        base_options.merge(
+          {
+            parameters: parameters(template),
+            tags: [
+              {
+                key: 'environment',
+                value: rack_env
+              }
+            ],
+          }
+        ).merge(string_or_url(template)).tap do |options|
           options[:capabilities] = %w[
             CAPABILITY_IAM
             CAPABILITY_NAMED_IAM
@@ -203,12 +215,6 @@ module AWS
               value: Aws::STS::Client.new.get_caller_identity.arn
             )
           end
-
-          # All stacks use the same shared Service Role for CloudFormation resource-management permissions.
-          # Pass `ADMIN=1` to update admin resources with a privileged Service Role.
-          role_name = "CloudFormation#{ENV['ADMIN'] ? 'Admin' : 'Service'}"
-          account = Aws::STS::Client.new.get_caller_identity.account
-          options[:role_arn] = "arn:aws:iam::#{account}:role/admin/#{role_name}"
         end
       end
 
@@ -360,7 +366,7 @@ module AWS
         if stack_exists?
           CDO.log.info "Shutting down #{stack_name}..."
           start_time = Time.now
-          cfn.delete_stack(stack_name: stack_name)
+          cfn.delete_stack(base_options)
           wait_for_stack(:delete, start_time)
         else
           CDO.log.warn "Stack #{stack_name} does not exist."

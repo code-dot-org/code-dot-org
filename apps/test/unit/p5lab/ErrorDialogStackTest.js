@@ -1,5 +1,5 @@
 var errorDialogStackModule = require('@cdo/apps/p5lab/errorDialogStackModule');
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 import {UnconnectedErrorDialogStack as ErrorDialogStack} from '@cdo/apps/p5lab/ErrorDialogStack';
 import {mount} from 'enzyme';
 import React from 'react';

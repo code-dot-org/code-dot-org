@@ -1,7 +1,6 @@
 hidden false
 login_required true
 hideable_stages true
-exclude_csf_column_in_legend true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csd/unit3/"], ["teacherForum", "https://forum.code.org/c/csd3"], ["vocabulary", "https://curriculum.code.org/csd/unit3/vocab/"], ["standardMappings", "https://curriculum.code.org/csd/unit3/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd/unit3/code/"]]
 has_verified_resources true

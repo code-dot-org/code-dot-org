@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "Minden";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "A lista elemein egyesével végighaladva a '%1' változót a jelenlegi elemre állítja, és végrehajtja a parancsokat.";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "értékét %1 -től %2 -ig %3 lépésközzel";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "számold";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "A kezdőértéktől kezdve változtassa a(z) \"%1\" változó értékét a megadott lépésközzel haladva egészen a végértékig és minden lépésben hajtsa végre az utasításokat.";

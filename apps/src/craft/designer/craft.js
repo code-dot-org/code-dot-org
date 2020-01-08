@@ -5,7 +5,7 @@ import _ from 'lodash';
 import Hammer from 'hammerjs';
 
 import {singleton as studioApp} from '../../StudioApp';
-import craftMsg from './locale';
+import craftMsg from '../locale';
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {
   GameController,
@@ -25,7 +25,7 @@ import Sounds from '../../Sounds';
 import {TestResults} from '../../constants';
 import trackEvent from '../../util/trackEvent';
 import {captureThumbnailFromCanvas} from '../../util/thumbnail';
-import {SignInState} from '../../code-studio/progressRedux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
 const MEDIA_URL = '/blockly/media/craft/';
 
@@ -980,7 +980,7 @@ Craft.reportResult = function(success) {
     // for things like e.g. crowdsourced hints & hint blocks
     onComplete: function(response) {
       const isSignedIn =
-        getStore().getState().progress.signInState === SignInState.SignedIn;
+        getStore().getState().currentUser.signInState === SignInState.SignedIn;
       studioApp().displayFeedback({
         feedbackType: testResultType,
         response: response,

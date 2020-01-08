@@ -5,6 +5,6 @@ layout: wide
 
 {{ signup_button }}
 
-# Get your whole school to participate
+# Zaproś całą swoją szkołę do wzięcia udziału
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+Informacje o tym, jak zaprosić całą szkołę do wzięcia udziału w Godzinie Kodowania, znajdą się tutaj.

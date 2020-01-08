@@ -108,7 +108,7 @@
   },
   "https://studio.code.org/s/csd4-2017/stage/13/puzzle/1": {
     "dsls": {
-      "markdown": "# Overview\n\nBuilding on the screens that the class designed in the previous lesson, teams combine screens into a single app. Simple code can then be added to make button clicks change to the appropriate screen.\n\n## Introduced Code\n\n* [onEvent](//docs.code.org/applab/onEvent/)\n* [setScreen](//docs.code.org/applab/setScreen/)\n\n"
+      "markdown": "# Overview\n\nBuilding on the screens that the class designed in the previous lesson, teams combine screens into a single app. Simple code can then be added to make button clicks change to the appropriate screen.\n\n## Introduced Code\n\n* [onEvent](//studio.code.org/docs/applab/onEvent/)\n* [setScreen](//studio.code.org/docs/applab/setScreen/)\n\n"
     }
   },
   "https://studio.code.org/s/csd4-2017/stage/13/puzzle/2": {

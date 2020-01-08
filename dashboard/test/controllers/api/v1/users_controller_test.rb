@@ -120,6 +120,16 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     assert_equal dismissed_value, test_user.donor_teacher_banner_dismissed
   end
 
+  test 'a post request to set_standards_report_info_to_seen' do
+    test_user = create :user
+    sign_in(test_user)
+    assert_nil test_user.has_seen_standards_report_info_dialog
+    post :set_standards_report_info_to_seen, params: {user_id: 'me'}
+    assert_response :success
+    test_user.reload
+    assert_equal true, test_user.has_seen_standards_report_info_dialog
+  end
+
   test "a get request to get school_name returns school object" do
     sign_in(@user)
     get :get_school_name, params: {user_id: @user.id}
@@ -143,5 +153,27 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     sign_in(@user)
     get :get_school_name, params: {user_id: '-1'}
     assert_response 403
+  end
+
+  test "get_school_donor_name 403s when not signed in" do
+    get :get_school_donor_name, params: {user_id: 'me'}
+    assert_response 403
+  end
+
+  test "get_school_donor_name returns null when no donor is found" do
+    sign_in create :teacher
+    get :get_school_donor_name, params: {user_id: 'me'}
+    assert_response 200
+    assert_equal 'null', response.body
+  end
+
+  test "get_school_donor_name returns donor name" do
+    usi = create :user_school_info
+    create :donor_school, name: 'DonorName', nces_id: usi.school_info.school_id
+
+    sign_in usi.user
+    get :get_school_donor_name, params: {user_id: 'me'}
+    assert_response 200
+    assert_equal '"DonorName"', response.body
   end
 end

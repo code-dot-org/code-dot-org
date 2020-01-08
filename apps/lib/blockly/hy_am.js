@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "յուրաքանչյուր կետի համար";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "Ցանկի յուրաքանչյուր կետի համար սահմանել փոփոխական '%1', որից հետո կատարել որոշակի պնդումներ.";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "%1 ից  %2՝  %3 քայլերով";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "հաշվել";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Տվեք %1 փոփոխականը սկզբի թվից մինչև վերջին թիվը՝ հաշվելով նախապես տրված միջակայքով, և կատարեք տրված բլոկները.";
