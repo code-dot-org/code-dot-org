@@ -386,6 +386,7 @@
   "dataLibraryHeader": "Data Library",
   "dataLibraryDescription": "Find and import tables of real data from the Code.org library.",
   "dataVisualizerPlaceholderText": "Select values to generate a visualization",
+  "dataVisualizerBucketSize": "Bucket Size",
   "dataVisualizerCreateChart": "Create chart on screen",
   "dataVisualizerChartTitle": "Chart Title",
   "dataVisualizerChartType": "Chart Type",
