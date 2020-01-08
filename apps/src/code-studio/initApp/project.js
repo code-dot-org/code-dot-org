@@ -8,6 +8,7 @@ import {files as filesApi} from '../../clientApi';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {AbuseConstants} from '@cdo/apps/util/sharedConstants';
 import experiments from '@cdo/apps/util/experiments';
+import NameFailureError from '../NameFailureError';
 
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
@@ -1360,7 +1361,14 @@ var projects = (module.exports = {
    */
   rename(newName) {
     this.setName(newName);
-    return this.save();
+    return this.save().catch(error => {
+      if (error.responseText) {
+        const parsed = JSON.parse(error.responseText);
+        throw new NameFailureError(parsed['nameFailure']);
+      } else {
+        throw new Error('Unknown error');
+      }
+    });
   },
   /**
    * Freezes the project. Also hides so that it's not available for

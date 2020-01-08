@@ -11,6 +11,7 @@ import {
   unsetNameFailure
 } from '../../headerRedux';
 import NameFailureDialog from '../NameFailureDialog';
+import NameFailureError from '../../NameFailureError';
 
 const styles = {
   buttonWrapper: {
@@ -80,19 +81,15 @@ class UnconnectedEditProjectName extends React.Component {
           savingName: false
         });
         this.props.finishEdit();
+        this.setState({
+          savingName: true
+        });
       })
       .catch(error => {
-        if (error.responseText) {
-          const nameFailure = JSON.parse(error.responseText).nameFailure;
-          if (nameFailure) {
-            this.props.setNameFailure(nameFailure);
-          }
+        if (error instanceof NameFailureError) {
+          this.props.setNameFailure(error.nameFailure);
         }
       });
-
-    this.setState({
-      savingName: true
-    });
   };
 
   render() {
