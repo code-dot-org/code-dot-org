@@ -116,10 +116,6 @@ steps:
   # Also fetch the target branch (which is staging or staging-next for pull requests.) We need this for determining which tests to run based on changed files.
   - git remote set-branches --add origin $DRONE_TARGET_BRANCH
   - git fetch --depth 100 origin $DRONE_TARGET_BRANCH
-  # Always fetch staging branch because the change detection logic compares against the staging branch even when the base
-  # branch is staging-next:
-  # https://github.com/code-dot-org/code-dot-org/blob/8ea6ee6b63abd36e51c69d400eefdaa87154030a/lib/cdo/git_utils.rb#L104-L113
-  - git fetch --depth 100 origin staging
   # Merge so we're up-to-date with the target before running tests. We only do this for UI tests, not unit tests,
   # since it disrupts Codecov pull request reports.
   - git config user.name "Drone"
