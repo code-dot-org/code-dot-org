@@ -62,7 +62,6 @@ describe('EligibilityChecklist', () => {
         schoolId="12345"
         schoolName="Code.org Junior Academy"
         hasConfirmedSchool={true}
-        getsFullDiscount={false}
       />
     );
     assert.equal(wrapper.find('Button').length, 1);
@@ -76,7 +75,6 @@ describe('EligibilityChecklist', () => {
         schoolId="12345"
         schoolName="Code.org Junior Academy"
         hasConfirmedSchool={true}
-        getsFullDiscount={false}
       />
     );
     assert.equal(wrapper.find('EligibilityConfirmDialog').length, 0);
@@ -93,7 +91,6 @@ describe('EligibilityChecklist', () => {
         schoolId="12345"
         schoolName="Code.org Junior Academy"
         hasConfirmedSchool={true}
-        getsFullDiscount={false}
       />
     );
     wrapper.find('Button').simulate('click');
@@ -103,14 +100,13 @@ describe('EligibilityChecklist', () => {
     assert(wrapper.is('DiscountCodeInstructions'));
   });
 
-  it('renders DiscountCodeInstructions if we previoulsy received a discountCode', () => {
+  it('renders DiscountCodeInstructions if we previously received a discountCode', () => {
     const wrapper = shallow(
       <EligibilityChecklist
         {...defaultProps}
         unit6Intention={Unit6Intention.YES_SPRING_2020}
         initialDiscountCode="MYCODE"
         initialExpiration="2018-12-31T00:00:00.000Z"
-        getsFullDiscount={false}
       />
     );
     assert(wrapper.is('DiscountCodeInstructions'));
@@ -122,7 +118,6 @@ describe('EligibilityChecklist', () => {
         {...defaultProps}
         unit6Intention={Unit6Intention.YES_SPRING_2020}
         adminSetStatus={true}
-        getsFullDiscount={true}
       />
     );
     assert.equal(wrapper.find('Unit6ValidationStep').length, 0);
@@ -134,7 +129,6 @@ describe('EligibilityChecklist', () => {
         {...defaultProps}
         unit6Intention={Unit6Intention.NO}
         adminSetStatus={true}
-        getsFullDiscount={true}
       />
     );
     assert.equal(wrapper.state().statusYear, Status.SUCCEEDED);
@@ -146,7 +140,6 @@ describe('EligibilityChecklist', () => {
         {...defaultProps}
         unit6Intention={Unit6Intention.NO}
         adminSetStatus={true}
-        getsFullDiscount={true}
       />
     );
     assert.equal(wrapper.find('Button').props().text, 'Get Code');
