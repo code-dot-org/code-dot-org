@@ -35,6 +35,8 @@ class TutorialsTest < Minitest::Test
     assert Tutorials.sort_by_popularity?(code_org, false)
 
     refute Tutorials.sort_by_popularity?(code_org, "bad data")
+    refute Tutorials.sort_by_popularity?(code_org, "soon-hoc")
+    refute Tutorials.sort_by_popularity?(code_org, "actual-hoc")
   end
 
   def test_sort_by_popularity_hour_of_code_com
@@ -43,6 +45,7 @@ class TutorialsTest < Minitest::Test
     assert Tutorials.sort_by_popularity?(hour_of_code, "post-hoc")
 
     refute Tutorials.sort_by_popularity?(hour_of_code, "pre-hoc")
+    refute Tutorials.sort_by_popularity?(hour_of_code, "actual-hoc")
     refute Tutorials.sort_by_popularity?(hour_of_code, false)
     refute Tutorials.sort_by_popularity?(hour_of_code, "not a value")
   end
@@ -53,6 +56,7 @@ class TutorialsTest < Minitest::Test
     assert Tutorials.sort_by_popularity?(cs_ed_week, "post-hoc")
 
     refute Tutorials.sort_by_popularity?(cs_ed_week, "pre-hoc")
+    refute Tutorials.sort_by_popularity?(cs_ed_week, "soon-hoc")
     refute Tutorials.sort_by_popularity?(cs_ed_week, false)
     refute Tutorials.sort_by_popularity?(cs_ed_week, "unexpected")
   end
