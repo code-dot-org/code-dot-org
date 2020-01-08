@@ -19,27 +19,37 @@ export const lessonCompletedByStandard = {
       {
         name: 'Mazes',
         lessonNumber: 1,
-        completed: true
+        completed: true,
+        numStudentsCompleted: 10,
+        numStudents: 30
       },
       {
         name: 'More Mazes',
         lessonNumber: 14,
-        completed: true
+        completed: true,
+        numStudentsCompleted: 10,
+        numStudents: 30
       },
       {
         name: 'Even More Mazes',
         lessonNumber: 15,
-        completed: false
+        completed: false,
+        numStudentsCompleted: 10,
+        numStudents: 30
       },
       {
         name: 'Hard Mazes',
         lessonNumber: 16,
-        completed: false
+        completed: false,
+        numStudentsCompleted: 10,
+        numStudents: 30
       },
       {
         name: 'Really Hard Mazes',
         lessonNumber: 17,
-        completed: false
+        completed: false,
+        numStudentsCompleted: 10,
+        numStudents: 30
       }
     ]
   },

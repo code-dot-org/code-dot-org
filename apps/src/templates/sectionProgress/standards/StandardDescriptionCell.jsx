@@ -19,6 +19,12 @@ const styles = {
   },
   lessonsAreaTitle: {
     marginRight: 10
+  },
+  tooltip: {
+    textAlign: 'center'
+  },
+  tooltipLessonName: {
+    fontFamily: '"Gotham 7r", sans-serif'
   }
 };
 
@@ -35,13 +41,24 @@ class StandardDescriptionCell extends Component {
           <span>
             <ReactTooltip
               id={lesson.name}
+              key={lesson.name}
               role="tooltip"
               wrapper="span"
               effect="solid"
               place="top"
             >
-              {lesson.name}
-              {lesson.completed ? 'Completed' : 'Not Completed'}
+              <div style={styles.tooltip}>
+                <div style={styles.tooltipLessonName}>{lesson.name}</div>
+                <div>
+                  {lesson.completed ? i18n.completed() : i18n.notCompleted()}
+                </div>
+                <div>
+                  {i18n.completedStudentCount({
+                    numStudentsCompleted: lesson.numStudentsCompleted,
+                    numStudents: lesson.numStudents
+                  })}
+                </div>
+              </div>
             </ReactTooltip>
             <ProgressBoxForLessonNumber
               key={lesson.lessonNumber}
