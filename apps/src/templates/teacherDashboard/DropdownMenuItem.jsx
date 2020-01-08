@@ -31,7 +31,7 @@ export default class DropdownMenuItem extends Component {
     const checkMarkStyle = {
       marginRight: 5,
       color: color.level_perfect,
-      visibility: option.selected? 'visible' : 'hidden'
+      visibility: this.props.isSelected? 'visible' : 'hidden'
     };
 
     return (

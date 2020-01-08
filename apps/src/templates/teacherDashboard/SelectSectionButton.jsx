@@ -5,6 +5,7 @@ import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import PopUpMenu from '../../lib/ui/PopUpMenu';
 import TeacherSectionSelectorMenuItem from './TeacherSectionSelectorMenuItem';
+import DropdownMenuItem from './DropdownMenuItem';
 import {sectionForDropdownShape} from './shapes';
 import {getVisibleSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import SmallChevronLink from '@cdo/apps/templates/SmallChevronLink';
@@ -16,8 +17,8 @@ import Button from '../Button';
 class SelectSectionButton extends Component {
   static propTypes = {
     options: PropTypes.arrayOf(PropTypes.object).isRequired,
-    selectedOptionIndex: PropTypes.number,
     onChangeOption: PropTypes.func.isRequired,
+    selectedOptionIndex: PropTypes.number,
     forceReload: PropTypes.bool,
   };
 
@@ -84,14 +85,14 @@ class SelectSectionButton extends Component {
           offset={menuOffset}
         >
           {sections &&
-            sections.map(section => {
-              menuItemProps = {
-                  option : {option},
-                  onClick : {() => this.chooseMenuItem(section)}
-                  key : {section.id}
+            sections.map(option => {
+              let menuItemProps = {
+                  option : option,
+                  onClick : () => this.chooseMenuItem(section),
+                  key : option.id
               }
-              if ( section.id === selectedOptionIndex ) {
-                  menuItemProps[isSelected] = true
+              if ( option.id === this.props.selectedOptionIndex ) {
+                  menuItemProps.isSelected = true
               }
               return(
                 <DropdownMenuItem
