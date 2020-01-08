@@ -32,7 +32,7 @@ const styles = {
     paddingBottom: 10
   },
   select: {
-    maxWidth: '500'
+    maxWidth: 500
   }
 };
 
