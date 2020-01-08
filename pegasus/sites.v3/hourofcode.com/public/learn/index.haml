@@ -112,6 +112,8 @@ social:
   - tutorial[:string_detail_platforms]              = hoc_s(prefix + "string_detail_platforms")
   - tutorial[:string_detail_programming_languages]  = hoc_s(prefix + "string_detail_programming_languages")
 
+- sort_by_popularity = [false, "post-hoc"].include?(DCDO.get("hoc_mode", CDO.default_hoc_mode))
+
 #tutorials
 
 .clear{style: "clear: both"}
@@ -125,7 +127,8 @@ social:
       locale: "#{locale_code}",
       roboticsButtonUrl: "#{resolve_url('/learn/robotics')}",
       showSortDropdown: #{DCDO.get('learn_show_sort_dropdown', true)},
-      disabledTutorials: #{DCDO.get('learn_hide_tutorials', [])}
+      disabledTutorials: #{DCDO.get('learn_hide_tutorials', [])},
+      defaultSortByPopularity: #{sort_by_popularity}
     });
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
 
