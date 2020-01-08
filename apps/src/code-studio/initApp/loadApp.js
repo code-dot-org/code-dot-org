@@ -28,6 +28,7 @@ import {
 import queryString from 'query-string';
 import * as imageUtils from '@cdo/apps/imageUtils';
 import trackEvent from '../../util/trackEvent';
+import msg from '@cdo/locale';
 
 // Max milliseconds to wait for last attempt data from the server
 var LAST_ATTEMPT_TIMEOUT = 5000;
@@ -190,16 +191,15 @@ export function setupApp(appOptions) {
       } else if (lastServerResponse.endOfStageExperience) {
         const body = document.createElement('div');
         const stageInfo = lastServerResponse.previousStageInfo;
-        const stageName = `${window.dashboard.i18n.t('stage')} ${
-          stageInfo.position
-        }: ${stageInfo.name}`;
+        const stageName = `${msg.stage()} ${stageInfo.position}: ${
+          stageInfo.name
+        }`;
         ReactDOM.render(
           <PlayZone
             stageName={stageName}
             onContinue={() => {
               dialog.hide();
             }}
-            i18n={window.dashboard.i18n}
           />,
           body
         );
@@ -304,21 +304,15 @@ function loadProjectAndCheckAbuse(appOptions) {
   return new Promise((resolve, reject) => {
     project.load().then(() => {
       if (project.hideBecauseAbusive()) {
-        renderAbusive(project, window.dashboard.i18n.t('project.abuse.tos'));
+        renderAbusive(project, msg.tosLong({url: 'http://code.org/tos'}));
         return;
       }
       if (project.hideBecausePrivacyViolationOrProfane()) {
-        renderAbusive(
-          project,
-          window.dashboard.i18n.t('project.abuse.policy_violation')
-        );
+        renderAbusive(project, msg.policyViolation());
         return;
       }
       if (project.getSharingDisabled()) {
-        renderAbusive(
-          project,
-          window.dashboard.i18n.t('project.sharing_disabled')
-        );
+        renderAbusive(project, msg.sharingDisabled());
         return;
       }
       resolve(appOptions);
