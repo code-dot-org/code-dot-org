@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import ReactTooltip from 'react-tooltip';
 import i18n from '@cdo/locale';
 import ProgressBoxForLessonNumber from './ProgressBoxForLessonNumber';
 
@@ -31,11 +32,24 @@ class StandardDescriptionCell extends Component {
     if (this.props.lessonsForStandardStatus) {
       return this.props.lessonsForStandardStatus.map((lesson, index) => {
         return (
-          <ProgressBoxForLessonNumber
-            key={lesson.lessonNumber}
-            completed={lesson.completed}
-            lessonNumber={lesson.lessonNumber}
-          />
+          <span>
+            <ReactTooltip
+              id={lesson.name}
+              role="tooltip"
+              wrapper="span"
+              effect="solid"
+              place="top"
+            >
+              {lesson.name}
+              {lesson.completed ? 'Completed' : 'Not Completed'}
+            </ReactTooltip>
+            <ProgressBoxForLessonNumber
+              key={lesson.lessonNumber}
+              completed={lesson.completed}
+              lessonNumber={lesson.lessonNumber}
+              tooltipId={lesson.name}
+            />
+          </span>
         );
       });
     } else {
