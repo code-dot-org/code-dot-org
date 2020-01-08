@@ -65,6 +65,7 @@ class StandardDescriptionCell extends Component {
               completed={lesson.completed}
               lessonNumber={lesson.lessonNumber}
               tooltipId={lesson.name}
+              linkToLessonPlan={lesson.url}
             />
           </span>
         );

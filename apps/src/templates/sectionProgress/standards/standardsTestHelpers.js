@@ -21,35 +21,40 @@ export const lessonCompletedByStandard = {
         lessonNumber: 1,
         completed: true,
         numStudentsCompleted: 10,
-        numStudents: 30
+        numStudents: 30,
+        url: 'https://curriculum.code.org/csf-19/coursea/1/'
       },
       {
         name: 'More Mazes',
         lessonNumber: 14,
         completed: true,
         numStudentsCompleted: 10,
-        numStudents: 30
+        numStudents: 30,
+        url: 'https://curriculum.code.org/csf-19/coursea/14/'
       },
       {
         name: 'Even More Mazes',
         lessonNumber: 15,
         completed: false,
         numStudentsCompleted: 10,
-        numStudents: 30
+        numStudents: 30,
+        url: 'https://curriculum.code.org/csf-19/coursea/15/'
       },
       {
         name: 'Hard Mazes',
         lessonNumber: 16,
         completed: false,
         numStudentsCompleted: 10,
-        numStudents: 30
+        numStudents: 30,
+        url: 'https://curriculum.code.org/csf-19/coursea/16/'
       },
       {
         name: 'Really Hard Mazes',
         lessonNumber: 17,
         completed: false,
         numStudentsCompleted: 10,
-        numStudents: 30
+        numStudents: 30,
+        url: 'https://curriculum.code.org/csf-19/coursea/17/'
       }
     ]
   },
