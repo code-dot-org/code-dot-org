@@ -17,22 +17,27 @@ export const lessonCompletedByStandard = {
   1: {
     lessons: [
       {
+        name: 'Mazes',
         lessonNumber: 1,
         completed: true
       },
       {
+        name: 'More Mazes',
         lessonNumber: 14,
         completed: true
       },
       {
+        name: 'Even More Mazes',
         lessonNumber: 15,
         completed: false
       },
       {
+        name: 'Hard Mazes',
         lessonNumber: 16,
         completed: false
       },
       {
+        name: 'Really Hard Mazes',
         lessonNumber: 17,
         completed: false
       }
