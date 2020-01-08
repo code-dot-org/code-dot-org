@@ -53,22 +53,24 @@ class CourseBlocksTools extends Component {
       : i18n.courseBlocksToolsTitleNonEn();
 
     return (
-      <ContentContainer
-        heading={headingText}
-        description={i18n.standaloneToolsDescription()}
-      >
-        <ResourceCardResponsiveContainer>
-          {this.cards.map((card, cardIndex) => (
-            <ResourceCard
-              key={cardIndex}
-              title={card.heading}
-              description={card.description}
-              buttonText={i18n.learnMore()}
-              link={pegasus(`/${card.path}`)}
-            />
-          ))}
-        </ResourceCardResponsiveContainer>
-      </ContentContainer>
+      <div id="uitest-course-blocks-tools">
+        <ContentContainer
+          heading={headingText}
+          description={i18n.standaloneToolsDescription()}
+        >
+          <ResourceCardResponsiveContainer>
+            {this.cards.map((card, cardIndex) => (
+              <ResourceCard
+                key={cardIndex}
+                title={card.heading}
+                description={card.description}
+                buttonText={i18n.learnMore()}
+                link={pegasus(`/${card.path}`)}
+              />
+            ))}
+          </ResourceCardResponsiveContainer>
+        </ContentContainer>
+      </div>
     );
   }
 }
