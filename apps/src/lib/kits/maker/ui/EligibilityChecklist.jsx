@@ -6,7 +6,10 @@ import DiscountCodeSchoolChoice from './DiscountCodeSchoolChoice';
 import Button from '@cdo/apps/templates/Button';
 import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
 import SafeMarkdown from '../../../../templates/SafeMarkdown';
-import {isUnit6IntentionEligible} from '../util/discountLogic';
+import {
+  isUnit6IntentionEligible,
+  inDiscountRedemptionWindow
+} from '../util/discountLogic';
 import Unit6ValidationStep from './Unit6ValidationStep';
 import EligibilityConfirmDialog from './EligibilityConfirmDialog';
 import DiscountCodeInstructions from './DiscountCodeInstructions';
@@ -36,6 +39,7 @@ export default class EligibilityChecklist extends React.Component {
     schoolId: null,
     schoolEligible: null,
     statusYear: Status.UNKNOWN,
+    statusRedemptionWindow: Status.UNKNOWN,
     yearChoice: null, // stores the teaching-year choice until submitted
     submitting: false,
     confirming: false,
@@ -52,6 +56,9 @@ export default class EligibilityChecklist extends React.Component {
       this.state = {
         ...this.state,
         yearChoice: props.unit6Intention,
+        statusRedemptionWindow: inDiscountRedemptionWindow(
+          props.unit6Intention
+        ),
         statusYear: isUnit6IntentionEligible(props.unit6Intention)
           ? Status.SUCCEEDED
           : Status.FAILED
@@ -87,8 +94,12 @@ export default class EligibilityChecklist extends React.Component {
     });
   };
 
-  handleUnit6Submitted = eligible => {
+  handleUnit6Submitted = ({eligible, unit6Intention}) => {
     this.setState({
+      statusRedemptionWindow: inDiscountRedemptionWindow(unit6Intention)
+        ? Status.SUCCEEDED
+        : Status.FAILED,
+      yearChoice: unit6Intention,
       statusYear: eligible ? Status.SUCCEEDED : Status.FAILED
     });
   };
@@ -167,21 +178,22 @@ export default class EligibilityChecklist extends React.Component {
             />
           </div>
         )}
-        {this.state.statusYear === Status.SUCCEEDED && (
-          <div>
+        {this.state.statusYear === Status.SUCCEEDED &&
+          this.state.statusRedemptionWindow === Status.SUCCEEDED && (
             <div>
-              <strong>
-                You meet all the requirements for a fully subsidized classroom
-                kit. Click the “Get Code” button to get your code.
-              </strong>
+              <div>
+                <strong>
+                  You meet all the requirements for a fully subsidized classroom
+                  kit. Click the “Get Code” button to get your code.
+                </strong>
+              </div>
+              <Button
+                color={Button.ButtonColor.orange}
+                text={i18n.getCode()}
+                onClick={this.confirmEligibility}
+              />
             </div>
-            <Button
-              color={Button.ButtonColor.orange}
-              text={i18n.getCode()}
-              onClick={this.confirmEligibility}
-            />
-          </div>
-        )}
+          )}
         {this.state.confirming && (
           <EligibilityConfirmDialog
             onCancel={this.handleCancelDialog}
