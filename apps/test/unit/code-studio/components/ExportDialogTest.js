@@ -3,7 +3,8 @@ import {shallow, mount} from 'enzyme';
 import sinon from 'sinon';
 import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedExportDialog as ExportDialog} from '@cdo/apps/code-studio/components/ExportDialog/Dialog';
-import {SignInState} from '@cdo/apps/code-studio/progressRedux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import i18n from '@cdo/locale';
 
 describe('ExportDialog', () => {
   it('renders our signed in version when signed in', () => {
@@ -124,7 +125,6 @@ describe('ExportDialog', () => {
   it('renders a warning when canShareSocial is off', () => {
     const wrapper = shallow(
       <ExportDialog
-        i18n={{t: id => id}}
         exportApp={async () => ({})}
         expoGenerateApk={async () => ({})}
         expoCheckApkBuild={async () => ({})}
@@ -141,9 +141,7 @@ describe('ExportDialog', () => {
       />
     );
     expect(
-      wrapper
-        .find('p')
-        .filterWhere(p => p.text() === 'project.share_u13_warning')
+      wrapper.find('p').filterWhere(p => p.text() === i18n.shareU13Warning())
     ).to.have.lengthOf(1);
   });
 

@@ -1,7 +1,5 @@
 ---
 title: Kako-da vodič za javne dužnosnike
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

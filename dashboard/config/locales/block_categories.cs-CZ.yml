@@ -3,22 +3,28 @@ cs:
   data:
     block_categories:
       Actions: Akce
-      Loops: Smyčky
-      Functions: Funkce
+      Advanced: Pokročilé
+      Behaviors: Chování
+      Brushes: Štětce
       Color: Barva
-      Math: Matematika
-      Logic: Logika
-      Variables: Proměnné
+      Comment: Komentář
+      Comments: Komentáře
       Conditionals: Podmínky
-      Events: Události
-      Text: text
-      Location: Místo
-      numbers: čísla
-      Numbers: Čísla
       Dancers: Tanečníci
+      Default: Výchozí
+      Events: Události
+      Functions: Funkce
+      'Functions ': 'Funkce '
+      Game/Score: Hra/Skóre
+      Games/Score: Hry/Skóre
       Groups: Skupiny
-      Start: Spustit
-      Booleans: Logické hodnoty
-      test: otestuj
-      Name: Jméno
-      Function: Funkce
+      Locations: Umístění
+      Logic: Logika
+      Loops: Smyčky
+      Math: Matematika
+      Numbers: Čísla
+      Properties: Vlastnosti
+      Text: text
+      Variables: Proměnné
+      'Variables ': 'Proměnné '
+      World: Svět

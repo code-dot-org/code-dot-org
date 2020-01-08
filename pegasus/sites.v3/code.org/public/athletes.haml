@@ -1,28 +1,30 @@
 ---
-title: "<%= I18n.t(:sports_page_title) %>"
 theme: responsive
 social:
-  "og:title": "<%= I18n.t(:sports_og_title) %>"
-  "og:description": "<%= I18n.t(:sports_og_description) %>"
-  "og:image" : "<%= 'https://' + request.host + '/images/social-media/athletes-thumbnail.jpg' %>"
-  "og:image:width": '1920'
-  "og:image:height": '1080'
-  "og:video:url": "<%= 'http://youtube.com/v/ip051U7Rvds' %>"
-  "og:video:secure_url": "<%= 'https://youtube.com/v/ip051U7Rvds' %>"
-  "og:video:type": "video/mp4"
-  "og:video:width": "640"
-  "og:video:height": "360"
-  "twitter:card": "player"
-  "twitter:site": "@codeorg"
-  "twitter:url": "https://code.org/athletes"
-  "twitter:title": "<%= I18n.t(:sports_og_title) %>"
-  "twitter:description": "<%= I18n.t(:sports_og_description) %>"
-  "twitter:image:src" : "<%= 'https://' + request.host + '/images/social-media/athletes-thumbnail.jpg' %>"
-  "twitter:player": "<%= 'https://youtube.com/embed/ip051U7Rvds' %>"
-  "twitter:player:width": "640"
-  "twitter:player:height": "360"
+  og:image:width: '1920'
+  og:image:height: '1080'
+  og:video:type: video/mp4
+  og:video:width: '640'
+  og:video:height: '360'
+  twitter:card: player
+  twitter:site: "@codeorg"
+  twitter:url: https://code.org/athletes
+  twitter:player:width: '640'
+  twitter:player:height: '360'
 video_player: true
 ---
+:ruby
+  @header["title"] = I18n.t(:sports_page_title)
+  @header["social"]["og:title"] = I18n.t(:sports_og_title)
+  @header["social"]["og:description"] = I18n.t(:sports_og_description)
+  @header["social"]["og:image"] = 'https://' + request.host + '/images/social-media/athletes-thumbnail.jpg'
+  @header["social"]["og:video:url"] = 'http://youtube.com/v/ip051U7Rvds'
+  @header["social"]["og:video:secure_url"] = 'https://youtube.com/v/ip051U7Rvds'
+  @header["social"]["twitter:title"] = I18n.t(:sports_og_title)
+  @header["social"]["twitter:description"] = I18n.t(:sports_og_description)
+  @header["social"]["twitter:image:src"] = 'https://' + request.host + '/images/social-media/athletes-thumbnail.jpg'
+  @header["social"]["twitter:player"] = 'https://youtube.com/embed/ip051U7Rvds'
+
 %link{href: "/css/sports.css", rel: "stylesheet"}
 
 %div{style: "clear:both"}

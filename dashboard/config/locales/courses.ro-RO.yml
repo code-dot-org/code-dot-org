@@ -40,6 +40,13 @@ ro:
             de creativitate, comunicare, rezolvare a problemelor și amuzament.
           description_short: Un curs introductiv în știința calculatoarelor care permite
             elevilor să creeze artefacte autentice.
+        allthethingscourse:
+          title: cursulpentrutoatelucrurile
+          description_short: Acesta este un curs pentru toatelucrurile
+          description_student: Acesta este un curs pentru toatelucrurile şi are o
+            descriere pentru studenţi
+          description_teacher: Acesta este un curs pentru toatelucrurile şi are o
+            descriere mai lungă pentru profesori
         csd-2018:
           assignment_family_title: Descoperiri în știința calculatoarelor
           title: Descoperiri în știința calculatoarelor ('18-'19)
@@ -78,6 +85,8 @@ ro:
             slab reprezentați prin instrumente de calcul esențiale și oportunități
             multidisciplinare.
         csp-2019:
+          title: Principiile științei calculatoarelor ('19-'20)
+          version_title: "'19-'20"
           description_short: Învățați concepte fundamentale ale științei calculatoarelor.
           description_student: În toamna lui 2016, College Board și-a lansat cel mai
             recent curs cu credite pentru universitate (AP®), Principiile științei
@@ -98,6 +107,8 @@ ro:
             slab reprezentați prin instrumente de calcul esențiale și oportunități
             multidisciplinare.
         csd-2019:
+          title: Descoperiri în știința calculatoarelor ('19-'20)
+          version_title: "'19-'20"
           description_short: Un curs introductiv în știința calculatoarelor care permite
             elevilor să creeze artefacte autentice.
           description_student: Descoperiri în știința calculatoarelor (Descoperiri

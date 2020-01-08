@@ -144,6 +144,8 @@ class ApiController < ApplicationController
     render json: {}
   end
 
+  use_database_pool lockable_state: :persistent
+
   # For a given user, gets the lockable state for each student in each of their sections
   def lockable_state
     unless current_user
@@ -167,6 +169,8 @@ class ApiController < ApplicationController
 
     render json: data
   end
+
+  use_database_pool section_progress: :persistent
 
   def section_progress
     section = load_section
@@ -242,6 +246,8 @@ class ApiController < ApplicationController
     render json: data
   end
 
+  use_database_pool section_level_progress: :persistent
+
   # This API returns data similar to user_progress, but aggregated for all users
   # in the section. It also only returns the "levels" portion
   # If not specified, the API will default to a page size of 50, providing the first page
@@ -303,6 +309,8 @@ class ApiController < ApplicationController
     end
   end
 
+  use_database_pool student_progress: :persistent
+
   def student_progress
     student = load_student(params.require(:student_id))
     section = load_section
@@ -334,6 +342,8 @@ class ApiController < ApplicationController
     render json: summary
   end
 
+  use_database_pool user_progress: :persistent
+
   # Return a JSON summary of the user's progress for params[:script].
   def user_progress
     if current_user
@@ -345,6 +355,8 @@ class ApiController < ApplicationController
       render json: {}
     end
   end
+
+  use_database_pool user_progress_for_stage: :persistent
 
   # Return the JSON details of the users progress on a particular script
   # level and marks the user as having started that level. (Because of the

@@ -1,0 +1,18 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2019-11-26T23:58:14.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "C2_artist_intro",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_experiment",
+    "parent_level_id": 14729,
+    "editor_experiment": "broward"
+  },
+  "published": true,
+  "notes": "Taking this out of the artist level in which it was embedded"
+}]]></config>
+</StandaloneVideo>

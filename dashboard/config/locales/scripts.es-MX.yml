@@ -1157,6 +1157,8 @@ es-MX:
               name: Bubble Choice
             Contained Levels:
               name: Niveles contenidos
+            ML Fish:
+              name: Pez ML
         algebraPD2b:
           title: Ciencias de la computación en álgebra PD
           description: Enseñar programación funcional a través de álgebra
@@ -1770,6 +1772,13 @@ es-MX:
           stages:
             Hour of Code 2015:
               name: Hora del código 2015
+        oceans:
+          title: AI para océanos
+          description: Descripción a definir.
+          description_short: Descripción corta a definir.
+          stages:
+            Oceans:
+              name: Océanos
         CSPPD3-Unit3-pt2:
           stages:
             Challenge Overview:
@@ -7033,7 +7042,7 @@ es-MX:
           description_short: Rápidamente repasada conceptos del Curso C, luego puedes
             ir más allá con algoritmos, ciclos anidados, condicionales y más.
           description: Aprende nuevos conceptos de programación incluyendo algoritmos,
-            loops anidados, loops, condicionales y eventos. Recibe una introducción
+            bucles anidados, bucles, condicionales y eventos. Recibe una introducción
             a la ciudadanía digital antes de crear tu propio juego o historia que
             puedes compartir.
         coursee-2017:
@@ -7936,7 +7945,7 @@ es-MX:
             Until Loops in Maze:
               name: Bucles 'mientras' en el Laberinto
           title: Curso Express
-          assignment_family_title: Curso Express
+          assignment_family_title: Curso Express (2018)
           description_audience: 'Edades: 9 a 18'
           description_short: Una introducción a la ciencia de la computación, que
             combina lo mejor de nuestro plan de estudios de escuela primaria para
@@ -12574,7 +12583,7 @@ es-MX:
           stages:
             Dance Party - Go Further:
               name: Fiesta de baile - Ir más allá
-          title: Sigue bailando
+          title: Sigue bailando (2018)
           description_short: Ve más allá de la Hora del Código con esta actividad
             de seguimiento para el tutorial de la Fiesta de baile de Code.org.
           description: Motívate con más ideas de proyectos.
@@ -15596,6 +15605,12 @@ es-MX:
               name: Evaluación de la Unidad 4
             'Lesson 15: Unit 4 Assessment':
               name: 'Lección 15: evaluación de la unidad 4'
+            Unit 4 STUDENT Survey:
+              name: Encuesta de la Unidad 3 para ESTUDIANTES
+            Unit 4 TEACHER Survey:
+              name: Encuesta de la Unidad 4 para DOCENTES
+            'Lesson 15: Assessment Day':
+              name: 'Lección 15: día de evaluación'
           title: 'Unidad 4: Variables, condicionales, funciones'
         csp1-2019:
           title: CSP Unidad 1 - Internet ('19-'20)
@@ -15976,6 +15991,16 @@ es-MX:
               name: Encuesta de la Unidad 1 para ESTUDIANTES
             Unit 1 TEACHER Survey:
               name: Encuesta de la Unidad 1 para DOCENTES
+            'Lesson 14: Unit Assessment':
+              name: 'Lección 14: evaluación de la unidad'
+            Representing Information:
+              name: Representación de la información
+            Representing Text:
+              name: Representar texto
+            Circle Square Patterns:
+              name: Patrones cuadrados circulares
+            'Lesson 14: Assessment Day':
+              name: 'Lección 14: día de evaluación'
           title: Piloto de la Unidad 1 de CSP
         csd-tests:
           stages:
@@ -16721,6 +16746,28 @@ es-MX:
               name: Encuesta de estudiantes (bibliotecas)
             Teacher Survey (Libraries):
               name: Encuesta de docentes (bibliotecas)
+            Loops Investigate:
+              name: Bucles Investigar
+            Loops Practice:
+              name: Bucles Practicar
+            Loops Make:
+              name: Bucles Crear
+            Semester Hackathon Part 1:
+              name: Hackatón semestral Parte 1
+            Semester Hackathon Part 2:
+              name: Hackatón semestral Parte 2
+            Semester Hackathon Part 3:
+              name: Hackatón semestral Parte 3
+            Semester Hackathon Part 4:
+              name: Hackatón semestral Parte 4
+            Semester Hackathon Part 5:
+              name: Hackatón semestral Parte 5
+            Unit 5 Assessment:
+              name: Evaluación de la Unidad 5
+            Semester Exam:
+              name: Examen semestral
+            'Lesson 13: Assessment Day':
+              name: 'Lección 13: día de evaluación'
           title: 'Unidad 5: Listas, bucles y recorridos'
         fit2019-novice:
           stages:
@@ -17671,6 +17718,8 @@ es-MX:
               name: Encuesta de la Unidad 3 para DOCENTES
             'Lesson 11: Unit Assessment':
               name: 'Lección 11: evaluación de la unidad'
+            'Lesson 11: Assessment Day':
+              name: 'Lección 11: día de evaluación'
           title: 'Unidad 3: Introducción al diseño de aplicaciones'
         csl-vn:
           stages:
@@ -17765,6 +17814,12 @@ es-MX:
             CS Discoveries Deeper Learning Module 3:
               name: Módulo 3 de Aprendizaje Profundo de Descubrimientos de Ciencias
                 de la Computación
+            Deeper Learning Overview:
+              name: Resumen del aprendizaje profundo
+            'Step 1: Develop Understanding':
+              name: 'Paso 1: desarrollar la comprensión'
+            'Step 2: Demonstrate Understanding':
+              name: 'Paso 2: demostrar la comprensión'
           title: Módulo 3 de Aprendizaje Profundo de Descubrimientos de Ciencias de
             la Computación
           description_audience: Facilitadores de Descubrimientos de las Ciencias de
@@ -17774,6 +17829,12 @@ es-MX:
             CS Discoveries Deeper Learning Module 4:
               name: Módulo 4 de Aprendizaje Profundo de Descubrimientos de Ciencias
                 de la Computación
+            Deeper Learning Overview:
+              name: Resumen del aprendizaje profundo
+            'Step 1: Develop Understanding':
+              name: 'Paso 1: desarrollar la comprensión'
+            'Step 2: Demonstrate Understanding':
+              name: 'Paso 2: demostrar la comprensión'
           title: Módulo 4 de Aprendizaje Profundo de Descubrimientos de Ciencias de
             la Computación
           description_audience: Facilitadores de Descubrimientos de las Ciencias de
@@ -17809,6 +17870,12 @@ es-MX:
             CS Principles Deeper Learning Module 3:
               name: Módulo 3 de Aprendizaje Profundo de Principios de Ciencias de
                 la Computación
+            Deeper Learning Overview:
+              name: Resumen del aprendizaje profundo
+            'Step 1: Develop Understanding':
+              name: 'Paso 1: desarrollar la comprensión'
+            'Step 2: Demonstrate Understanding':
+              name: 'Paso 2: demostrar la comprensión'
           title: Módulo 3 de Aprendizaje Profundo de Principios de Ciencias de la
             Computación
         dlp19-csp-mod-w4:
@@ -17816,6 +17883,12 @@ es-MX:
             CS Principles Deeper Learning Module 4:
               name: Módulo 4 de Aprendizaje Profundo de Principios de Ciencias de
                 la Computación
+            Deeper Learning Overview:
+              name: Resumen del aprendizaje profundo
+            'Step 1: Develop Understanding':
+              name: 'Paso 1: desarrollar la comprensión'
+            'Step 2: Demonstrate Understanding':
+              name: 'Paso 2: demostrar la comprensión'
           title: Módulo 4 de Aprendizaje Profundo de Principios de Ciencias de la
             Computación
         csd-pilot:
@@ -17924,6 +17997,14 @@ es-MX:
               name: Encuesta de la Unidad 2 para ESTUDIANTES
             Unit 2 TEACHER Survey:
               name: Encuesta de la Unidad 2 para DOCENTES
+            DNS and HTTP:
+              name: DNS y HTTP
+            Welcome to the Internet:
+              name: Bienvenidos a Internet
+            'Lesson 9: Assessment Day':
+              name: 'Lección 9: día de evaluación'
+            The Need for Addressing:
+              name: La necesidad de direccionamiento
         denny-science:
           stages:
             Earthquake Detector:
@@ -17966,6 +18047,10 @@ es-MX:
               name: Tiempo poco razonable
             Traveling Salesman:
               name: Vendedor viajero
+            Parallel and Distributed Algorithms:
+              name: Algoritmos paralelos y distribuidos
+            The Limits of Algorithms:
+              name: Los límites de los algoritmos
         denny-science-8:
           title: Detector de colisiones
           stages:
@@ -17987,5 +18072,262 @@ es-MX:
           stages:
             Dance Party:
               name: Fiesta de baile
+          title: Fiesta de baile (remix 2019)
           description: "¡Programa tu propia fiesta de baile para compartir con tus
             amigos!"
+        k5-onlinepd-2019:
+          description: "¡Aprende a enseñar ciencias de la computación con este curso
+            en línea gratuito y autodidacta de Fundamentos de Ciencias de la Computación!"
+          stages:
+            Getting Started:
+              name: Primeros pasos
+            Computer Science Fundamentals:
+              name: Fundamentos de la informática
+            Looking Ahead:
+              name: Mirar hacia adelante
+            'Mastering the Basics: Sequencing':
+              name: 'Dominio de los conceptos básicos: secuencias'
+            'Mastering the Basics: Loops':
+              name: 'Dominio de los conceptos básicos: bucles'
+            'Mastering the Basics: Conditionals':
+              name: 'Dominio de los conceptos básicos: condicionales'
+            'Mastering the Basics: Functions':
+              name: 'Dominio de los conceptos básicos: funciones'
+            'Mastering the Basics: Events':
+              name: 'Dominio de los conceptos básicos: eventos'
+            Best Practices for Teaching Computer Science:
+              name: Mejores prácticas para la enseñanza de ciencias de la computación
+            Planning:
+              name: Planificación
+            Next Steps:
+              name: Próximos pasos
+            Understanding the Computer Science Fundamentals Courses:
+              name: Cursos de comprensión de los Fundamentos de Ciencias de la Computación
+            extra:
+              name: extra
+            Welcome to this online course:
+              name: Bienvenido a este curso en línea
+            Understanding the Computer Science Fundamentals courses:
+              name: Cursos de comprensión de los Fundamentos de Ciencias de la Computación
+            Best practices for teaching computer science:
+              name: Mejores prácticas para la enseñanza de ciencias de la computación
+            Sequencing:
+              name: Secuencias
+            Loops:
+              name: Bucles
+            Conditionals:
+              name: Condicionales
+            Events:
+              name: Eventos
+            Functions:
+              name: Funciones
+            Diving Deeper:
+              name: Profundizar
+            Next steps:
+              name: Próximos pasos
+            Diving deeper:
+              name: Profundizar
+            Diving deeper (for Courses E and F):
+              name: Profundizar (para cursos E y F)
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Bienvenido a "Cómo enseñar los Fundamentos de Ciencias de la Computación"
+            Diving Deeper (for Courses E and F):
+              name: Profundizar (para cursos E y F)
+            'Diving Deeper: Courses E and F':
+              name: 'Profundizar: cursos E y F'
+            Sprite Lab:
+              name: Laboratorio de sprites
+            Variables:
+              name: Variables
+            For Loops:
+              name: Bucles Para
+            End-of-course projects:
+              name: Proyectos de fin de curso
+            Who is this section for?:
+              name: "¿Para quién es esta sección?"
+            Reviewing reflections:
+              name: Revisión de reflexiones
+            Reviewing your reflections:
+              name: Revisión de tus reflexiones
+            End of Course projects:
+              name: Proyectos de fin de curso
+        dance-extras-2019:
+          title: Sigue bailando (2019)
+          description: Motívate con más ideas de proyectos.
+          description_short: Ve más allá de la Hora del Código con esta actividad
+            de seguimiento para el tutorial de la Fiesta de baile de Code.org.
+          stages:
+            Dance Party - Go Further:
+              name: Fiesta de baile - Ir más allá
+        csp10-pilot:
+          stages:
+            new stage:
+              name: nueva etapa
+            'Project: Innovation Simulation Part 1':
+              name: 'Proyecto: simulación de la innovación, parte 1'
+            'Project: Innovation Simulation Part 2':
+              name: 'Proyecto: simulación de la innovación, parte 2'
+            Security Risks Part 1:
+              name: Riesgos de seguridad, parte 1
+            Security Risks Part 2:
+              name: Riesgos de seguridad Parte 2
+            Data Policies and Privacy:
+              name: Políticas y privacidad de datos
+            The Value of Privacy:
+              name: El valor de la privacidad
+            'Project: Innovation Simulation Part 3':
+              name: 'Proyecto: simulación de la innovación, parte 3'
+            Protecting Data Part 1:
+              name: Protección de datos, parte 1
+            Protecting Data Part 2:
+              name: Protección de datos, parte 2
+            'Lesson 14: Unit Assessment Day':
+              name: 'Lección 14: día de evaluación de la unidad'
+          title: Ciberseguridad e impactos globales
+        csp4-preview:
+          stages:
+            new stage:
+              name: nueva etapa
+            Variables Explore:
+              name: Variables Explorar
+            Variables Investigate:
+              name: Investigar variables
+            Variables Practice:
+              name: Variables Practicar
+            Variables Make:
+              name: Variables Crear
+            Conditionals Explore:
+              name: Condicionales Explorar
+            Conditionals Investigate:
+              name: Condicionales Investigar
+            Conditionals Practice:
+              name: Condicionales Practicar
+            Conditional Make:
+              name: Condicionales Crear
+            Functions Explore / Investigate:
+              name: Funciones Explorar / Investigar
+            Functions Practice:
+              name: Funciones Practicar
+            Functions Make:
+              name: Funciones Crear
+            Practice PT Part 1:
+              name: PT de práctica Parte 1
+            Practice PT Part 2:
+              name: PT de práctica Parte 2
+            Practice PT Part 3:
+              name: PT de práctica Parte 3
+            'Lesson 15: Unit 4 Assessment':
+              name: 'Lección 15: evaluación de la unidad 4'
+            'Lesson 15: Assessment Day':
+              name: 'Lección 15: día de evaluación'
+          title: Variables, condicionales y funciones
+        time4cs-control-unit-1:
+          stages:
+            Sequencing in Maze:
+              name: Secuencias en Laberinto
+            Programming and Loops with the Artist:
+              name: Programación y bucles con el Artista
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Condicionales en Minecraft: Voyage Aquatic'
+            Conditionals:
+              name: Condicionales
+            'Events: The Big Event':
+              name: 'Eventos: El Gran Evento'
+            Simon Says:
+              name: Simón dice
+            Learning Sprites with Sprite Lab:
+              name: Aprender sprites con Laboratorio de Sprite
+            Alien Dance Party with Sprite Lab:
+              name: Fiesta de baile extraterrestre con Laboratorio de Sprite
+            Private and Personal Information:
+              name: Información privada y personal
+            About Me:
+              name: Acerca de mí
+            Access Ability:
+              name: Habilidad de acceso
+            Conditionals Review:
+              name: Revisión de condicionales
+            Drawing with Loops:
+              name: Dibujar con bucles
+          title: Unidad 1 de control de Time4CS
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Colaboración abierta
+            Conditionals with Cards:
+              name: Condicionales con tarjetas
+            Nested Loops in Bee:
+              name: Bucles anidados en Abeja
+            Nested Loops in Artist:
+              name: Bucles anidados en Artista
+            Nested Loops in Frozen:
+              name: Bucles anidados en Frozen
+            'Functions: Songwriting':
+              name: 'Funciones: composición musical'
+            Functions in Minecraft:
+              name: Funciones en Minecraft
+            Functions in Harvester:
+              name: Funciones en la Cosechadora
+            Functions in Artist:
+              name: Funciones de Artista
+            Nested Loops in the Maze:
+              name: Bucles anidados en el Laberinto
+          title: Unidad 2 de control de Time4CS
+        time4cs-experiment-unit-2:
+          stages:
+            Introduction to the Problem:
+              name: Introducción al problema
+            Crowdsourcing (Integrated lesson):
+              name: Crowdsourcing (lección integrada)
+            Everglades Habitats:
+              name: Hábitats de Everglades
+            Evaluating a Project in Sprite Lab:
+              name: Evaluar un proyecto en el Laboratorio de sprites
+            Food Chains:
+              name: Cadenas alimentarias
+            Conditionals with Cards (Integrated Lesson)- Part 1:
+              name: Condicionales con naipes (lección integrada) - Parte 1
+            Alligator Holes:
+              name: Hoyos de cocodrilo
+            Food Chain Game:
+              name: Juego de la cadena alimenticia
+            Invasive Species:
+              name: Especies invasoras
+            Conditionals with Cards (Integrated Lesson)- Part 2:
+              name: Condicionales con naipes (lección integrada) - Parte 2
+            I am in Big Trouble:
+              name: Estoy en un gran problema
+            Conditionals in Sprite Lab:
+              name: Condicionales en el Laboratorio de sprites
+            Nested Loops in Maze:
+              name: Bucles anidados en Laberinto
+            Fancy Shapes using Nested Loops:
+              name: Formas elegantes con bucles anidados
+            Nested Loops with Frozen:
+              name: Bucles anidados con Frozen
+            Fishy Business:
+              name: Un negocio que huele mal
+            Songwriting (Integrated Lesson):
+              name: Composición de canciones (lección integrada)
+            Functions in Minecraft:
+              name: Funciones en Minecraft
+            Functions with Harvester:
+              name: Funciones en Cosechadora
+            Functions with Artist:
+              name: Funciones de Artista
+            Pythons impacting native populations:
+              name: Pitones que afectan a las poblaciones nativas
+            Functions in Sprite Lab:
+              name: Funciones en el Laboratorio de sprites
+            Python Problem- Current Solutions:
+              name: Problema con Python - Soluciones actuales
+            End of Course Project (integrated- project planning lesson):
+              name: Proyecto de fin de curso (lección integrada de planificación del
+                proyecto)
+            Debate- Pythons impacting native populations:
+              name: 'Debate: pitones que afectan a las poblaciones nativas'
+            Work on Project:
+              name: Trabajar en el proyecto
+          title: Unidad 2 de experimento de Time4CS
+          description_short: "[Agregar descripción]"
+          description: "[Agregar descripción]"

@@ -16,6 +16,13 @@ it:
         in coppia e riprova.
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: 'non è corretto. Attenzione: ogni link può essere usato una
+                sola volta per reimpostare la propria password e solamente il link
+                inviato più di recente funzionerà.'
       messages:
         blank: è un dato obbligatorio
         blank_plural: sono richiesti
@@ -24,11 +31,13 @@ it:
     attributes:
       user:
         name: Nome da visualizzare
-        name_example: Mostra Nome <br/>(es. Cool Coder o Jane S.)
+        name_example: Mostra Nome (es. Cool Coder o Jane S.)
         email: Indirizzo email
         parent_email: E-mail del genitore/tutore
         personal_email: E-mail personale<a href="%{url}">(clicca qui se non hai un
           indirizzo e-mail)</a>
+        personal_email_markdown: E-mail personale[(clicca qui se non hai un indirizzo
+          e-mail)](%{url})
         username: Nome utente
         password: password
         password_confirmation: Conferma della password
@@ -40,9 +49,15 @@ it:
         finish_sign_up_header: Completa la creazione del tuo account
         finish_sign_up_subheader: Compila i seguenti dati per terminare la creazione
           del tuo account Code.org per <strong>%{email}</strong>.
+        finish_sign_up_subheader_markdown: Compila i seguenti dati per terminare la
+          creazione del tuo account Code.org per **%{email}**.
         finish_sign_up_subheader_provider: Compila i seguenti dati per terminare la
           creazione del tuo account Code.org con <strong>%{provider}</strong> per
           <strong>%{email}</strong>.
+        finish_sign_up_subheader_provider_markdown: Compila i seguenti dati per terminare
+          la creazione del tuo account Code.org con **%{provider}** per **%{email}**.
+        reset_password_token: Il link per la reimpostazione della password che hai
+          usato
         error:
           future: non può essere in futuro
   beta: versione provvisoria
@@ -97,6 +112,9 @@ it:
     continue_with: Continua con %{provider}
     sign_in_with: Accedi usando %{provider}
     signed_in: Hai effettuato l'accesso!
+    signed_out_markdown: "### Ti sei scollegato da [Code.org](%{url})."
+    sign_out_of_markdown: "#### Ti sei registrato tramite %{provider}. [Clicca qui](%{url})
+      per scollgarti da %{provider}."
     already_signedup: Già iscritto?
     notyet_signedup: Non ti sei ancora iscritto?
     google_oauth2: Google
@@ -129,6 +147,12 @@ it:
       Crea un account per tenere traccia dei tuoi progressi o gestire la tua classe. <a href="/"> Puoi anche svolgere gli esercizi senza un account</a>, ma dovrai iscriverti per controllare i tuoi progressi e salvare i progetti che realizzerai.<br>
       <br>
       <b>Se sei in Italia, crea il tuo profilo attraverso il sito italiano <a href="https://programmailfuturo.it/chi/chi-puo-partecipare" target="_blank">Programma il Futuro</a>, sarà tutto più semplice!</b>
+    overview_markdown: Crea un account per tenere traccia dei tuoi progressi o gestire
+      la tua classe. [Puoi anche svolgere gli esercizi senza un account](/), ma dovrai
+      iscriverti per controllare i tuoi progressi e salvare i progetti che realizzerai.
+      **Se sei in Italia, crea il tuo profilo attraverso il sito italiano [Programma
+      il Futuro](https://programmailfuturo.it/chi/chi-puo-partecipare), sarà tutto
+      più semplice!**
     hoc_already_signed_up_heading: Iniziare senza effettuare il login
     hoc_already_signed_up_content: Ti sei iscritto per insegnare un'Ora del Codice!
       Tu e i tuoi studenti non avete bisogno di accedere a Code Studio per partecipare
@@ -142,6 +166,11 @@ it:
       Questo ti permetterà di salvare i tuoi progressi e gestire le tue classi. Potrai
       assegnare corsi agli studenti e tenere traccia dei loro progressi. <a href="%{studio_url}">Puoi
       anche esplorare corsi e lezioni disponibili</a>senza creare un account.
+    hoc_already_signed_up_content_post_hoc_markdown: Grazie per organizzare l'Ora
+      del Codice. Per accedere a Code Studio, devi impostare una password per il tuo
+      account. Questo ti permetterà di salvare i tuoi progressi e gestire le tue classi.
+      Potrai assegnare corsi agli studenti e tenere traccia dei loro progressi. [Puoi
+      anche esplorare corsi e lezioni disponibili](%{studio_url})senza creare un account.
     teacher_educator_guide: Vedi la guida per l'insegnante
     title: Iscriviti a Code.org
     school_name: Nome della scuola (facoltativo)
@@ -167,6 +196,11 @@ it:
     agree_us_website: Accetto di utilizzare un sito Web con sede negli Stati Uniti.
     my_data_to_us: I dati relativi al mio utilizzo di questo sito Web possono essere
       inviati e archiviati o elaborati negli Stati Uniti.
+    student_terms_markdown: Gli indirizzi di posta elettronica vengono memorizzati
+      in modo tale da impedirci di contattare gli studenti. Gli studenti non riceveranno
+      mai messaggi di posta elettronica da Code.org, tranne nel caso essi stessi richiedano
+      il recupero della password del loro account. Per ulteriori informazioni leggi
+      la nostra [informativa sulla privacy](http://code.org/privacy).
     additional_information: Abbiamo bisogno di alcune informazioni aggiuntive per
       continuare la tua iscrizione.
     user_type_button: Aggiorna Tipologia di Account
@@ -223,6 +257,8 @@ it:
     login: Accedi
     invalid_login: Accesso non valido, per favore riprova
     pair_programming: Sto lavorando in coppia
+    student_privacy_markdown: Clicca [qui](%{student_privacy_blog}) per ulteriori
+      informazioni (in inglese) sul perché non stai visualizzando il tuo nome completo.
   password:
     reset_form:
       title: Hai dimenticato la tua password?
@@ -479,11 +515,20 @@ it:
       accetto di essere vincolato dalle <a href='%{terms_of_service_url}', target='_blank'>condizioni
       d'uso</a>di Code.org. Se ho meno 13 anni, confermo di avere il permesso del
       mio genitore o tutore di usare i servizi di Code.org anche senza insegnante.
+    create_personal_login_terms_markdown: Creando le mie informazioni d'accesso personali,
+      accetto di essere vincolato dalle [condizioni d'uso](%{terms_of_service_url})di
+      Code.org. Se ho meno 13 anni, confermo di avere il permesso del mio genitore
+      o tutore di usare i servizi di Code.org anche senza insegnante.
     create_personal_login_email_note: 'Nota: Gli indirizzi email non sono memorizzati
       in una forma tale da permetterci di contattare gli studenti. Gli studenti non
       riceveranno mai email da Code.org tranne per il recupero della password. Consulta
       le nostre <a href=''%{privacy_policy_url}'', target=''_blank''>politiche per
       il rispetto della privacy</a> per ulteriori informazioni.'
+    create_personal_login_email_note_markdown: 'Nota: Gli indirizzi email non sono
+      memorizzati in una forma tale da permetterci di contattare gli studenti. Gli
+      studenti non riceveranno mai email da Code.org tranne per il recupero della
+      password. Consulta le nostre [politiche per il rispetto della privacy](%{privacy_policy_url})
+      per ulteriori informazioni.'
     enter_new_login_info: Inserisci le nuove informazioni di accesso
     confirm_secret_words: Conferma la tua identità inserendo le tue parole segrete
     parent_email_label: Email del genitore o tutore (facoltativo)
@@ -539,6 +584,10 @@ it:
     try_beta_courses: Novità! Prova i nostri corsi specifici per studenti delle scuole
       elementari (in versione provvisoria)
     use_as_teacher: Guarda questo sito come insegnante
+    heading_elementary_markdown: |-
+      ## Corsi di 20 ore
+
+      # Fondamenti di informatica (a qualunque età)
     your_gallery: La tua collezione
     no_primary_course: Prova un corso di Code Studio
     choose_next_course: Prova un corso di Code Studio scegliendone uno qui sotto
@@ -698,6 +747,8 @@ it:
       cta: Scopri come
     dance:
       title: Ballando col codice
+    dance-2019:
+      title: Ballando col codice
     hoc:
       title: Labirinto Classico
       body: Impara i concetti base dell'informatica. Milioni di persone l'hanno già
@@ -806,6 +857,8 @@ it:
     header_artist: Artista
     report_abuse: Segnala un abuso
   landing:
+    prerelease_tutorial: Questa esercitazione è in **versione provvisoria**. È soggetta
+      a revisioni man mano che arrivano osservazioni, al fine di migliorarla.
     report_bug: Report Bug
     support: Ottieni aiuto
     support_url: "//programmailfuturo.it/aiuto"
@@ -884,12 +937,25 @@ it:
   age_interstitial:
     age: La tua età
     header: Aggiornamento delle informazioni di iscrizione
+    warning: Ci stiamo organizzando per offrirti una maggiore protezione della privacy.
+      Per fare questo abbiamo bisogno che gli utenti esistenti inseriscano qui la
+      loro età.
+    disclaimer: Come sempre, Code.org non cederà, venderà o condividerà mai queste
+      informazioni con terzi.
+    sign_out_markdown: Se non vuoi fornire la tua età puoi [scollegarti](%{url}).
   terms_interstitial:
     title: Aggiornati i termini e le condizioni della privacy
     intro_desc: 'Abbiamo aggiornato i nostri Termini di Servizio e la nostra Informativa
       sulla Privacy, come mostrato di seguito. I cambiamenti saranno effettivi a partire
       dal 24 agosto 2016. La modifica più importante: noi <i>non memorizzeremo più
       le e-mail degli account degli studenti su Code studio.</i> Questo è molto importante
+      per noi e speriamo che stabilisca un nuovo standard per la privacy degli studenti
+      nella tecnologia di formazione. Ti abbiamo inviato un riassunto delle altre
+      modifiche via e-mail.'
+    intro_desc_markdown: 'Abbiamo aggiornato i nostri Termini di Servizio e la nostra
+      Informativa sulla Privacy, come mostrato di seguito. I cambiamenti saranno effettivi
+      a partire dal 24 agosto 2016. La modifica più importante: noi _non memorizzeremo
+      più le e-mail degli account degli studenti su Code studio._ Questo è molto importante
       per noi e speriamo che stabilisca un nuovo standard per la privacy degli studenti
       nella tecnologia di formazione. Ti abbiamo inviato un riassunto delle altre
       modifiche via e-mail.'
@@ -904,6 +970,8 @@ it:
     privacy_notice: Informativa sulla privacy
     accept_label: Accetto i <a href="%{tos_url}" target="_blank"> Termini di servizio</a>
       e <a href="%{privacy_url}" target="_blank"> Privacy Policy</a> aggiornati
+    accept_label_markdown: Accetto i [Termini di servizio](%{tos_url}) e [Privacy
+      Policy](%{privacy_url}) aggiornati
     accept: Accetto
     print: Stampa
     reminder_desc: Abbiamo aggiornato i nostri <a href="%{tos_url}" target="_blank">Termini
@@ -911,6 +979,11 @@ it:
       Privacy</a>. Si prega di leggerli attentamente prima di accettarli. Sii noti
       che i nostri strumenti per l'insegnamento di JavaScript potrebbero essere inaccessibili
       ai tuoi studenti prima di accettare esplicitamente i termini aggiornati.
+    reminder_desc_markdown: Abbiamo aggiornato i nostri [Termini di Servizio](%{tos_url})
+      e l'[Informativa sulla Privacy](%{privacy_url}). Si prega di leggerli attentamente
+      prima di accettarli. Sii noti che i nostri strumenti per l'insegnamento di JavaScript
+      potrebbero essere inaccessibili ai tuoi studenti prima di accettare esplicitamente
+      i termini aggiornati.
     review_terms: Rivedi i termini dell'aggiornamento
   school_info_interstitial:
     title: Vogliamo portare l'Informatica ad ogni studente - aiutaci a tenere traccia
@@ -938,6 +1011,10 @@ it:
     al nostro sito di supporto.<a href="http://support.code.org"></a> Contattaci su
     <a href="http://programmailfuturo.it">programmailfuturo.it</a> oppure chiedi ai
     tuoi genitori o insegnanti di contattarci al posto tuo.
+  zendesk_too_young_message_markdown: Siamo spiacenti, gli utenti più giovani non
+    possono accedere al nostro sito di supporto.[](http://support.code.org) Contattaci
+    su [programmailfuturo.it](http://programmailfuturo.it) oppure chiedi ai tuoi genitori
+    o insegnanti di contattarci al posto tuo.
   progress:
     not_started: non avviato
     in_progress: in corso
@@ -1024,8 +1101,10 @@ it:
   peer_review:
     accepted:
       name: Accettato
+      description_markdown: "**Sì**, questa iscrizione **rispetta** i requisiti"
     rejected:
       name: Rifiutato
+      description_markdown: "**No**, questa iscrizione **non rispetta** i requisiti"
     escalated:
       name: Aumentato
       description: Vorrei che un istruttore esaminasse questa presentazione
@@ -1109,6 +1188,8 @@ it:
     time4cs_c3: Vivere negli Everglades
     time4cs_c4: Impatti Invasivi sugli Everglades
     time4cs_c5: I Cittadini Influenzano il Cambiamento negli Everglades
+    k5_getting_started: Per cominciare
+    k5_next_steps: I prossimi passi
   external_links:
     disclaimer: Limiti di responsabilità
     leaving_domain: Stai per lasciare il nostro dominio, per entrare su un sito che
@@ -1283,8 +1364,8 @@ it:
       workshop_course:
         csf_af: Fondamenti di Informatica (Corsi A-F)
         csf_express: Fondamenti di Informatica (Corsi rapidi)
-        csd: Scoperte CS
-        csp: CS Principles
+        csd: Alla scoperta dell'informatica
+        csp: Principi di informatica
       email_opt_in:
         opt_in_yes: Sì
         opt_in_no: 'No'
@@ -1299,12 +1380,28 @@ it:
         di Code.org e 2) accetti di condividere i tuoi dati con il nostro partner
         internazionale nel tuo paese (in Italia: Programma il Futuro) in modo che
         possa aiutarti a sostenere il tuo viaggio come insegnante di informatica.'
+      thanks_markdown: Grazie per esserti iscritto! Non vediamo l'ora di supportarti
+        con i corsi e gli strumenti di Code.org. Continua a condividere con noi le
+        tue domande e i tuoi commenti scrivendoci a [support@code.org](%{support_email_url})
+        o postando sul [teacher forum](%{teacher_forum_url})!
     logged_out:
       heading: Grazie per il tuo interesse nel Programma di apprendimento professionale!
       body: Per iniziare, devi prima accedere al tuo account Code.org. Se desideri
         ulteriori informazioni sul programma prima di avviare la tua candidatura,
         consulta la <a href="%{url}"> panoramica del programma di apprendimento professionale
         </a>.
+    not_teacher:
+      body_markdown: Grazie per l'interesse dimostrato nel programma di apprendimento
+        professionale di Code.org (solo USA)! Al momento sei collegato con un account
+        studente. Crea un account insegnante o [vai alle impostazioni utente](%{user_settings})
+        per aggiornare il tuo account da studente a insegnante.
+      more_markdown: Se desideri ulteriori informazioni sul programma prima di avviare
+        la tua candidatura, consulta la [panoramica del programma di apprendimento
+        professionale](%{pl_overview}) (in inglese).
+    no_teacher_email:
+      body_markdown: Nel tuo account non è stato inserito alcun indirizzo email. Per
+        favore, prima di compilare questo modulo, [vai alle impostazioni del tuo account](%{user_registration})
+        per aggiungere il tuo indirizzo email.
   courses_category: Corsi Avanzati
   cookie_banner:
     message: Continuando a navigare nel nostro sito o cliccando su "Accetto", accetti
@@ -1319,3 +1416,8 @@ it:
     privacy_policy: informativa sulla privacy
     logout: Esci
     true: Sì
+  page_not_found_title: Pagina non trovata
+  page_not_found_header: 404 Pagina non trovata
+  page_not_found_description: La pagina che stai cercando non esiste a questo indirizzo.
+    Controlla l'indirizzo web e riprova. Oppure, torna alla nostra homepage.
+  page_not_found_button: Ritorna alla homepage

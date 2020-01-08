@@ -147,7 +147,17 @@ export default class CensusMapReplacement extends Component {
   }
 
   componentDidMount = () => {
-    this.initializeMap();
+    try {
+      this.initializeMap();
+    } catch (e) {
+      // logging this in a separate thread so errors don't get logged in the
+      // console but still make it to our error reporting system. We should
+      // change this code once React error boundariess are available (React
+      // 16).  https://reactjs.org/docs/error-boundaries.html
+      setTimeout(1, function() {
+        console.err(e);
+      });
+    }
 
     $(window).resize(() => {
       // Throttle calling of resizeMap
@@ -260,6 +270,7 @@ export default class CensusMapReplacement extends Component {
         ]
       });
 
+      _this.map.addControl(new mapboxgl.FullscreenControl(), 'top-right');
       _this.map.addControl(
         new mapboxgl.NavigationControl({showCompass: false}),
         'bottom-right'
@@ -387,29 +398,29 @@ export default class CensusMapReplacement extends Component {
 
   render() {
     return (
-      <div>
+      <div id="census-map">
         <div id="mapbox" className="full-width">
           <div id="inmaplegend" className="legend">
             <div className="legend-title">Legend</div>
-            <div className="color green" />
+            <div className="color legend-offers-cs" />
             <div className="caption">Offers computer science</div>
-            <div className="color blue" />
+            <div className="color legend-limited-cs" />
             <div className="caption">Limited or no CS opportunities</div>
-            <div className="color yellow" />
+            <div className="color legend-inconclusive-cs" />
             <div className="caption">Inconclusive data</div>
-            <div className="color white" />
+            <div className="color legend-no-data-cs" />
             <div className="caption">No Data</div>
           </div>
         </div>
         <div id="belowmaplegend" className="legend">
           <div className="legend-title">Legend</div>
-          <div className="color green" />
+          <div className="color legend-offers-cs" />
           <div className="caption">Offers computer science</div>
-          <div className="color blue" />
+          <div className="color legend-limited-cs" />
           <div className="caption">Limited or no CS opportunities</div>
-          <div className="color yellow" />
+          <div className="color legend-inconclusive-cs" />
           <div className="caption">Inconclusive data</div>
-          <div className="color white" />
+          <div className="color legend-no-data-cs" />
           <div className="caption">No Data</div>
         </div>
         <div id="map-footer">

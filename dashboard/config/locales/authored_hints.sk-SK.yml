@@ -1991,6 +1991,10 @@ sk-SK:
             </block>
           </xml>
       Course 4 SCFL 6:
+        Course_4_SCFL_6_a: Zmena farby sa deje s použitím bloku `nastav farbu s červená,
+          zelená, modrá`. Červená je konštanta 255, zelená je vždy hodnota `counter`
+          a modrá je vždy `255 - counter`.
+        Course_4_SCFL_6_c: 'Cyklus `for` ide od 5 do 250 po 2. '
         Course_4_SCFL_6_d: |-
           **Riešenie:**
 
@@ -3313,6 +3317,27 @@ sk-SK:
       CourseE_HOC 2018 Level_9b:
         voyage_aquatic_9a: Vidíš červené a modré koralové bloky? Použi ich ako ukazovatele
           cesty v útese na otočenie doprava a doľava.
+      Dance_2019_01:
+        validation: |-
+          **Ako prejdem túto úroveň?**
+
+          -   Zabezpeč, aby sa na obrazovke objavil tanečník.
+
+          _Táto úroveň končí po 4 taktoch._
+      Dance_2019_04:
+        validation: |-
+          **Ako prejdem túto úroveň?**
+
+          -   Tanečník musí po 4 taktoch zmeniť kroky.
+
+          _Úroveň končí po 7 taktoch._
+      Dance_2019_05:
+        validation: |-
+          **Ako prejdem túto úroveň?**
+
+          -   Po 6 taktoch musí tvoj tanečník robiť iný krok ako robil po 4 taktoch.
+
+          _Úroveň končí po 11 taktoch._
       Dance_Party_01:
         validation: |-
           **Ako prejdem túto úroveň?**
@@ -9051,12 +9076,21 @@ sk-SK:
           a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
           vyriešenú celú úlohu.
       courseD_maze_ramp2:
+        courseC_maze_programming2_a: Aby si použil blok `posuň sa dopredu`, tak ho
+          potiahni z panelu nástrojov na pracovnú plochu a pripoj ho k bloku `pri
+          spustení`.
         courseC_maze_programming2_b: Uisti sa, že sú všetky 3 bloky spojené a pripojené
           ku bloku "pri spustení".
       courseD_maze_ramp2_2018:
+        courseC_maze_programming2_a: Aby si použil blok `posuň sa dopredu`, tak ho
+          potiahni z panelu nástrojov na pracovnú plochu a pripoj ho k bloku `pri
+          spustení`.
         courseC_maze_programming2_b: Uisti sa, že sú všetky 3 bloky spojené a pripojené
           ku bloku "pri spustení".
       courseD_maze_ramp2_2019:
+        courseC_maze_programming2_a: Aby si použil blok `posuň sa dopredu`, tak ho
+          potiahni z panelu nástrojov na pracovnú plochu a pripoj ho k bloku `pri
+          spustení`.
         courseC_maze_programming2_b: Uisti sa, že sú všetky 3 bloky spojené a pripojené
           ku bloku "pri spustení".
       courseD_maze_ramp3:
@@ -9074,6 +9108,18 @@ sk-SK:
           chceš vymazať blok zo stredu tvojho kódu, potiahni všetky bloky na okraj
           pracovnej plochy. \n\nPrejdi na blok, ktorý chceš odstrániť a odtiahni ho
           naspäť do panela nástrojov.\n\nNakoniec vráť zvyšné bloky, tam kde patria."
+      courseD_maze_ramp4:
+        courseC_maze_programming4_a: Môžeš sa otočiť vpravo alebo vľavo z pohľadu
+          vtáka. Ak sa pozeráš doprava, tak otočením vpravo sa budeš pozerať nadol.
+        courseC_maze_programming4_b: Ak chceš ísť po ceste, posuň sa dopredu a otoč
+          sa jedným smerom, znova sa pohni a otoč sa opačným smerom. Posuň sa dopredu
+          ešte jeden krát, aby si sa dostal až k prasiatku.
+      courseD_maze_ramp4_2018:
+        courseC_maze_programming4_a: Môžeš sa otočiť vpravo alebo vľavo z pohľadu
+          vtáka. Ak sa pozeráš doprava, tak otočením vpravo sa budeš pozerať nadol.
+        courseC_maze_programming4_b: Ak chceš ísť po ceste, posuň sa dopredu a otoč
+          sa jedným smerom, znova sa pohni a otoč sa opačným smerom. Posuň sa dopredu
+          ešte jeden krát, aby si sa dostal až k prasiatku.
       courseD_maze_ramp4_2019:
         courseC_maze_programming4_a: Zo Scratovho pohľadu sa môžeš otočiť aj vľavo
           aj vpravo. Ak si natočený vpravo, ďalšie otočenie sa vpravo ťa natočí smerom
@@ -9248,6 +9294,9 @@ sk-SK:
           a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
           vyriešenú celú úlohu.
       courseD_scrat_ramp2:
+        courseC_maze_programming2_a: Aby si použil blok `posuň sa dopredu`, tak ho
+          potiahni z panelu nástrojov na pracovnú plochu a pripoj ho k bloku `pri
+          spustení`.
         courseC_maze_programming2_b: Uisti sa, že všetky tri bloky `posuň sa dopredu`
           sú spojené s blokom `pri spustení`.
       courseD_scrat_ramp3:
@@ -10221,6 +10270,12 @@ sk-SK:
             </block>
           </xml>
       courseF_artist_for_challenge2:
+        courseF_artist_for_challenge2_c: 'Cyklus `for` ide od 5 do 250 po 2. '
+        courseF_artist_for_challenge2_a: Zmena farby sa deje s použitím bloku `nastav
+          farbu s červená, zelená, modrá`. Červená je konštanta 255, zelená je vždy
+          hodnota `counter` a modrá je vždy `255 - counter`.
+        courseF_artist_for_challenge2_b: Kód bude jednoduchší ako si myslíš. Vo vnútri
+          cyklu len nastav farbu, posuň sa dopredu a otoč sa.
         courseF_artist_for_challenge2_d: |-
           **Riešenie:**
 
@@ -10313,6 +10368,12 @@ sk-SK:
 
           ![](<https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png>)
       courseF_artist_for_challenge2_2018:
+        courseF_artist_for_challenge2_c: 'Cyklus `for` ide od 5 do 250 po 2. '
+        courseF_artist_for_challenge2_a: Zmena farby sa deje s použitím bloku `nastav
+          farbu s červená, zelená, modrá`. Červená je konštanta 255, zelená je vždy
+          hodnota `counter` a modrá je vždy `255 - counter`.
+        courseF_artist_for_challenge2_b: Kód bude jednoduchší ako si myslíš. Vo vnútri
+          cyklu len nastav farbu, posuň sa dopredu a otoč sa.
         courseF_artist_for_challenge2_d: |-
           **Riešenie:**
 
@@ -10403,6 +10464,12 @@ sk-SK:
             </block>
           </xml>
       courseF_artist_for_challenge2_2019:
+        courseF_artist_for_challenge2_c: 'Cyklus `for` ide od 5 do 250 po 2. '
+        courseF_artist_for_challenge2_a: Zmena farby sa deje s použitím bloku `nastav
+          farbu s červená, zelená, modrá`. Červená je konštanta 255, zelená je vždy
+          hodnota `counter` a modrá je vždy `255 - counter`.
+        courseF_artist_for_challenge2_b: Kód bude jednoduchší ako si myslíš. Vo vnútri
+          cyklu len nastav farbu, posuň sa dopredu a otoč sa.
         courseF_artist_for_challenge2_d: |-
           **Riešenie:**
 

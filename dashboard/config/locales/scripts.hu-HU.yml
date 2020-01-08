@@ -1828,7 +1828,6 @@ hu:
             Dance Party:
               name: Táncos buli
         dance-extras:
-          title: Táncolj tovább
           description: Egy óra elteltével is folytathatod a bulit további projektötletekkel.
         coursef-2019:
           stages:
@@ -2021,6 +2020,10 @@ hu:
           stages:
             While Loops:
               name: Elől tesztelős ciklusok
+        csp1-pilot:
+          stages:
+            Representing Information:
+              name: Az információ ábrázolása
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -2107,3 +2110,35 @@ hu:
             Dance Party:
               name: Táncos buli
           description: Kódold le saját táncos bulidat, és oszd meg az ismerőseiddel!
+        k5-onlinepd-2019:
+          stages:
+            Getting Started:
+              name: Első lépések
+            Computer Science Fundamentals:
+              name: A számítógép-tudomány alapjai
+            Loops:
+              name: hurkok
+            Conditionals:
+              name: Feltételek
+            Events:
+              name: Események
+            Functions:
+              name: funkciók
+            Sprite Lab:
+              name: Sprite labor
+            Variables:
+              name: változók
+            For Loops:
+              name: Számláló ciklusok
+        dance-extras-2019:
+          description: Egy óra elteltével is folytathatod a bulit további projektötletekkel.
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Feltételek
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Csoportos megoldás
+            Conditionals with Cards:
+              name: Feltételek kártyákkal

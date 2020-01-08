@@ -22,6 +22,7 @@ require 'dynamic_config/dcdo'
 require 'active_support/core_ext/hash'
 require 'sass'
 require 'sass/plugin'
+require 'haml'
 
 if rack_env?(:production)
   require 'newrelic_rpm'
@@ -306,15 +307,15 @@ class Documents < Sinatra::Base
       match = content.match(/\A\s*^(?<yaml>---\s*\n.*?\n?)^(---\s*$\n?)/m)
       return [{}, content, 1] unless match
 
-      yaml = erb(match[:yaml], path: path, line: 1)
-      header = YAML.load(yaml, path) || {}
+      header = YAML.load(match[:yaml], path) || {}
       raise "YAML header error: expected Hash, not #{header.class}" unless header.is_a?(Hash)
+
       remaining_content = match.post_match
       line = content.lines.count - remaining_content.lines.count + 1
       [header, remaining_content, line]
     rescue => e
       # Append rendered header to error message.
-      e.message << "\n#{yaml}" if yaml
+      e.message << "\n#{match[:yaml]}" if match[:yaml]
       raise
     end
 

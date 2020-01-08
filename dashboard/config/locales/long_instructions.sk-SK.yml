@@ -1011,6 +1011,11 @@ sk-SK:
         -   Prikáž mimozemšťanom robiť nový tanečný krok vždy keď sa navzájom dotknú
       Dance Party Predict: "**Skús predvídať:** Tu je sprite s menom `alien1`! \n\nČo
         myslíš, že sa stane, keď na neho klikneš?  "
+      Dance_2019_05: "_Teraz sme to roztočili!_ \n\nPridaj blok <xml><block type=\"Dancelab_atTimestamp\"><title
+        name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"takty\"</title></block></xml>
+        na tvoju pracovnú plochu. Prikáž tanečníkovi spustiť nový krok po 6 taktoch."
+      Dance_2019_10: Roztoč to na parkete! Vytvor svoj vlastný tanec, ktorý môžeš
+        zdieľať s kamarátmi.
       Dance_Party_01: |-
         _Spravme si tanečnú párty!_
 
@@ -1080,6 +1085,14 @@ sk-SK:
         -   Pridaj viac kláves na ovládanie tanečníkov
         -   Uprav tanečníkov na pozadí tak, aby aj oni reagovali na stlačenia kláves
         -   Vymeň tanečníkov každé 4 takty nastavením ich viditeľnosti
+      Dance_Party_extras_battle_2019: |-
+        # Tanečné skupiny
+
+        Máme tu tanečný súboj medzi dvomi tanečnými skupinami. Šípky ovládajú jedného z tanečníkov a klávesy "w,a,s,d" ovládajú druhého. Daj si tanečný súboj s kamarátmi a potom skús tento súboj vylepšiť.
+
+        -   Pridaj viac kláves na ovládanie tanečníkov
+        -   Uprav tanečníkov na pozadí tak, aby aj oni reagovali na stlačenia kláves
+        -   Vymeň tanečníkov každé 4 takty nastavením ich viditeľnosti
       Dance_Party_extras_every_beat: |-
         # Štvrťové noty
 
@@ -1102,11 +1115,23 @@ sk-SK:
         # Basy, Stredy a Výšky
 
         Tento tanec používa udalosti s "vrcholmi" na spustenie kódu v momente, keď rôzne časti pesničky znejú hlasnejšie. Skús sa pohrať s rôznymi pesničkami, aby si videl ako menia priebeh tanca.
+      Dance_Party_extras_on_beat_2019: |-
+        # Basy, Stredy a Výšky
+
+        Tento tanec používa udalosti s "vrcholmi" na spustenie kódu v momente, keď rôzne časti pesničky znejú hlasnejšie. Skús sa pohrať s rôznymi pesničkami, aby si videl ako menia priebeh tanca.
       Dance_Party_extras_speed: |-
         # Zrýchli, spomaľ
 
         Tento finálny tanec využíva blok `nastav rýchlosť` na kontrolovanie toho, ako rýchlo sa tanečníci hýbu. Skús experimentovať s rôznymi rýchlosťami v rôznych momentoch pesničky. Neváhaj ďalej upravovať tento tanec, alebo sa vráť na ktorýkoľvek predchádzajúci tanec a sprav ho ešte viac cool.
       Dance_Party_extras_visible: |-
+        # Kam zmizli?
+
+        Tento tanec ukazuje a skrýva dve rôzne skupiny tanečníkov. Pozri si to a potom si uprav tanec podľa vlastného vkusu.
+
+        -   Pridaj ďalšiu skupinu tanečníkov
+        -   Ukáž a skry tanečníkov so stlačením šípky
+        -   Skry všetkých tanečníkov a nastav nejaký zaujímavý efekt pozadia
+      Dance_Party_extras_visible_2019: |-
         # Kam zmizli?
 
         Tento tanec ukazuje a skrýva dve rôzne skupiny tanečníkov. Pozri si to a potom si uprav tanec podľa vlastného vkusu.
@@ -1161,6 +1186,14 @@ sk-SK:
         id=\"callMe\"><mutation name=\"postav most\"/></block></xml> blok do pracovného
         priestoru, aby si opravil cestu a dostal hráča {currentPlayerName} k ruditovej
         fakli [redstone_torch]."
+      InspirationalArtwork: |-
+        Doteraz si sa naučil všetko, čo potrebuješ vedieť, aby si vytvoril takýto vzor!
+
+        Ak ťa tento obrázok inšpiruje, tak skús spraviť niečo podobné. Inak, vytvor niečo vlastné.
+      InspirationalArtwork_2018: |-
+        Doteraz si sa naučil všetko, čo potrebuješ vedieť, aby si vytvoril takýto vzor!
+
+        Ak ťa tento obrázok inšpiruje, tak skús spraviť niečo podobné. Inak, vytvor niečo vlastné.
       MC_HOC_2017_01_RETRY: "Dvere sú zamknuté, ale na pomoc prichádza agent. \n\nV
         pracovnom priestore prichyť blok 'posuň sa dopredu' k bloku 'pri spustení',
         aby sa agent dostal na prítlačnú dosku [PressurePlate_Up]. Potom stlač tlačidlo
@@ -1245,6 +1278,42 @@ sk-SK:
         ku ovci.
       Overworld Move to Sheep_2019: Pohni sa ešte o jeden krok dopredu, aby si sa
         dostal ku ovci.
+      Virtual Pet 1 Predict: |-
+        **Napíš predpoveď:** Toto je Geraldine, tvoje nové domáce zvieratko žirafa.
+
+        Čo myslíš, že sa stane, ked stlačíš "▶ Spustiť" a potom na ňu klikneš?
+      Virtual Pet 2: |-
+        V rohu je blatová mláka.
+
+        Vytvor takú **udalosť**, že keď sa Geraldine dotkne mláky, tak sa jej farba zmení na hnedú.
+      Virtual Pet 3: |-
+        Nemôžeme mať špinavú žirafu, ktorá sa túla po okolí!
+
+        1.  Pridaj na obrazovku nový mydlový sprite.
+        2.  Dokážeš to spraviť tak, že keď sa žirafa a mydlo dotknú, tak sa žirafa vráti naspäť k svojej normálnej farbe?
+
+        * * *
+
+        Použi tento blok, aby si vrátil farbu:
+        <xml><block type="gamelab_removeTint" inline="true">
+              <value name="THIS">
+                <block type="sprite_variables_get">
+                  <title name="VAR">mySprite</title>
+                </block>
+              </value>
+            </block></xml>
+      Virtual Pet 4: |-
+        Nechceme čakať, aby sa žirafa vždy sama vyčistila.
+
+        Pridaj správanie k tvojmu mydlu, aby bolo pretiahnuteľné, a potom ho pretiahni ponad žirafu, aby si ju vyčistil!
+      Virtual Pet 5: "Všetko toto hranie berie energiu!\n\nPridaj takú akciu ku každej
+        udalosti, keď sa žirafa dotkne iného sprite, že sa žirafa zmenší o 5.  "
+      Virtual Pet 6: "Vyrovnaná výživa je dôležitá! Musíme nakŕmiť žirafu, aby naspäť
+        získala silu.\n\nPridaj na scénu jablko a nechaj ho vrátiť žirafu do pôvodnej
+        veľkosti, keď sa dotknú.  "
+      Virtual Pet Freeplay: "Voľná hra: Čo viac dokážeš spraviť so svojou žirafou?\n\n-
+        \  Dokážeš pridať viac špeciálnych vecí pre tvôjho virtuálneho miláčika?\n-
+        \  Dokážěs jej dať nejakých priateľov?  "
       comment_intro_maze_2018: |-
         _"Hmm, čo robí tento program?"_
 
@@ -1264,6 +1333,13 @@ sk-SK:
         -   Oba útvary majú **strany o dĺžke 50 pixelov**
         -   Pri kreslení _osemuholníkov_ sa musíš otáčať o \*\* 45 stupňov\*\*.
         -   Pri kreslení _trojuholníkov_ sa musíš otáčať o **120 stupňov**.
+      course2_collector_prog_challenge1: Pozri sa pozorne! Vieš pozbierať všetkých
+        **10** drahokamov?
+      course2_harvester_loops_challenge1: Pozbieraj všetku kukuricu.
+      course2_harvester_loops_challenge2: Pozbieraj všetok šalát. Vyhni sa stromom
+        a poliam!
+      course2_maze_programming_challenge2: Niekedy existuje viac spôsobov ako vyriešiť
+        jeden problém. Niekedy je rýchlešie ísť dozadu ako ísť dopredu!
       course4_artist_binary_challenge2: |-
         V tejto mriežke je 256 bitov - to znamená, že aj pri malej zmene môžu vzniknúť veľké problémy. Si dostatočne vytrvalý/á, aby si vrátil/a logo späť do pôvodného stavu?
 
@@ -2274,6 +2350,12 @@ sk-SK:
       courseC_harvester_loops9: Pozbieraj všetky kukurice a tekvice.
       courseC_harvester_loops9_2018: Pozbieraj všetky kukurice a tekvice.
       courseC_harvester_loops9_2019: Pozbieraj všetky kukurice a tekvice.
+      courseC_harvester_loops_challenge2: Pozbieraj všetok šalát. Vyhni sa stromom
+        a poliam!
+      courseC_harvester_loops_challenge2_2018: Pozbieraj všetok šalát. Vyhni sa stromom
+        a poliam!
+      courseC_harvester_loops_challenge2_2019: Pozbieraj všetok šalát. Vyhni sa stromom
+        a poliam!
       courseC_maze_debugging1: |-
         Tento kód nie je úplne správny!
 
@@ -2399,6 +2481,12 @@ sk-SK:
         sa mu skrylo, tvojou úlohou je ho nájsť. '
       courseC_maze_programming_challenge1_2019: 'Vták potrebuje tvoju pomoc! Prasiatko
         sa mu skrylo, tvojou úlohou je ho nájsť. '
+      courseC_maze_programming_challenge2: Niekedy existuje viac spôsobov ako vyriešiť
+        jeden problém. Niekedy je rýchlešie ísť dozadu ako ísť dopredu!
+      courseC_maze_programming_challenge2_2018: Niekedy existuje viac spôsobov ako
+        vyriešiť jeden problém. Niekedy je rýchlešie ísť dozadu ako ísť dopredu!
+      courseC_maze_programming_challenge2_2019: Niekedy existuje viac spôsobov ako
+        vyriešiť jeden problém. Niekedy je rýchlešie ísť dozadu ako ísť dopredu!
       courseC_starWars_loops1: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _\"Pozbieraj ten šrot, BB-8!\"_ \n\nNa pozbieranie šrotu použi 5 rovnakých
         blokov. Šrot vyzerá takto: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
@@ -3570,6 +3658,18 @@ sk-SK:
         Dokážeš prísť na to, ako vytvoriť tento obrázok?
 
         <img src="https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png" width="350px"/>
+      courseF_artist_for_challenge2: |-
+        Dokážeš prísť na to, ako vytvoriť tento obrázok s jediným cyklom?
+
+        <img src="https://images.code.org/b0d15d06465d645c5ca533e5da6387b3-image-1446075597132.36.04.png" width="350px"/>
+      courseF_artist_for_challenge2_2018: |-
+        Dokážeš prísť na to, ako vytvoriť tento obrázok s jediným cyklom?
+
+        <img src="https://images.code.org/b0d15d06465d645c5ca533e5da6387b3-image-1446075597132.36.04.png" width="350px"/>
+      courseF_artist_for_challenge2_2019: |-
+        Dokážeš prísť na to, ako vytvoriť tento obrázok s jediným cyklom?
+
+        <img src="https://images.code.org/b0d15d06465d645c5ca533e5da6387b3-image-1446075597132.36.04.png" width="350px"/>
       courseF_artist_variables10: "Tu je tvoj kód z predošlej úlohy. Skús zmeniť premennú
         rôznymi spôsobmi. \n\n-   Čo sa stane, ak začneš s `dĺžka` menšou než 150?\n-
         \  Čo ak zakaždým vynásobiš tvoju premennú číslom 1.25 namiesto pripočítania

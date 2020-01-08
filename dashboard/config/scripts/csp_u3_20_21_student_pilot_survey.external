@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 
 After completing the unit, please fill out this short survey.
 
-<a class="btn btn-large btn-primary" href="https://form.jotform.com/92414021213137?uid=<user_id/>"> Take the student survey</a>
+<a class="btn btn-large btn-primary" href="https://form.jotform.com/92414021213137?uid=<user_id/>&unit=3"> Take the student survey</a>
 
 
 MARKDOWN

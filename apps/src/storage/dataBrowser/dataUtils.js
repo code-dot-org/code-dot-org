@@ -11,8 +11,39 @@ export const ColumnType = {
   BOOLEAN: 'boolean'
 };
 
+export const ChartType = {
+  NONE: 0,
+  BAR_CHART: 1,
+  HISTOGRAM: 2,
+  SCATTER_PLOT: 3,
+  CROSS_TAB: 4
+};
+
 export function getDatasetInfo(tableName) {
   return tables.find(table => table.name === tableName);
+}
+
+export function isBlank(value) {
+  return value === undefined || value === '' || value === null;
+}
+
+/**
+ * @param {Object[]} records
+ * @param {string[]} columns
+ * @return {Object[]} Returns array containing the records that have a
+ * value for all of the specified columns.
+ */
+export function ignoreMissingValues(records, columns) {
+  records = records || [];
+  columns = columns || [];
+  let filteredRecords = records;
+  columns.forEach(column => {
+    filteredRecords = filteredRecords.filter(
+      record => !isBlank(record[column])
+    );
+  });
+
+  return filteredRecords;
 }
 
 /**

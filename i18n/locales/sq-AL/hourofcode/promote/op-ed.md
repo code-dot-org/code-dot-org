@@ -1,7 +1,5 @@
 ---
 title: Shëmbull Kundër dhe Pro Mbështetëse të Javës së Arsimit në Shkencat Kompjuterike dhe Orës së Kodimit
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

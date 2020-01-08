@@ -18,17 +18,17 @@ Students read and use App Lab's API documentation to learn about new turtle comm
 
 
 * **Subgoal: [set pen properties]** - `//Set pen properties`
-     * **[penUp(image)](//docs.code.org/applab/penUp/)** - `penUp`
-     * **[penDown(image)](//docs.code.org/applab/penDown/)** - `penDown`
-     * **[rgb()](//docs.code.org/applab/rgb/)** - `rgb()`
-     * **[penColor](//docs.code.org/applab/penColor/)** - `penColor`
-     * **[penWidth](//docs.code.org/applab/penWidth/)** - `penWidth`
+     * **[penUp(image)](//studio.code.org/docs/applab/penUp/)** - `penUp`
+     * **[penDown(image)](//studio.code.org/docs/applab/penDown/)** - `penDown`
+     * **[rgb()](//studio.code.org/docs/applab/rgb/)** - `rgb()`
+     * **[penColor](//studio.code.org/docs/applab/penColor/)** - `penColor`
+     * **[penWidth](//studio.code.org/docs/applab/penWidth/)** - `penWidth`
 * **Subgoal: [orient turtle]** - `//Orient turtle`
-    *  **[turnTo](//docs.code.org/applab/turnTo/)** - `turnTo`
+    *  **[turnTo](//studio.code.org/docs/applab/turnTo/)** - `turnTo`
 * **Subgoal: [move turtle]** - `//Move turtle`
-	*  **[moveTo](//docs.code.org/applab/moveTo/)** - `moveTo`
-    *  **[arcRight](//docs.code.org/applab/arcRight/)** - `arcRight`
-    *  **[arcLeft](//docs.code.org/applab/arcLeft/)** - `arcLeft`
+	*  **[moveTo](//studio.code.org/docs/applab/moveTo/)** - `moveTo`
+    *  **[arcRight](//studio.code.org/docs/applab/arcRight/)** - `arcRight`
+    *  **[arcLeft](//studio.code.org/docs/applab/arcLeft/)** - `arcLeft`
 
 
 ## Lesson

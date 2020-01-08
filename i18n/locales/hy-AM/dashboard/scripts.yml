@@ -1593,3 +1593,27 @@ hy:
               name: ներածություն
             Nested Loops:
               name: nested Loops
+        k5-onlinepd-2019:
+          stages:
+            Loops:
+              name: loops
+            Conditionals:
+              name: conditionals
+            Events:
+              name: Իրադարձություններ
+            Functions:
+              name: գործառույթները
+            Variables:
+              name: փոփոխականների
+            For Loops:
+              name: For Loops
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: conditionals
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Conditionals with Cards

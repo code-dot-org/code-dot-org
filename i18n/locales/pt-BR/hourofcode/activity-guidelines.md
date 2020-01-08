@@ -1,6 +1,5 @@
 ---
 title: Orientações sobre tutoriais
-layout: wide
 ---
 
 <style>

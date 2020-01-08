@@ -1,7 +1,5 @@
 ---
 title: Кодтау сағатының волонтерлерге арналған нұсқауы
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

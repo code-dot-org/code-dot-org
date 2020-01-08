@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "एउटा वस्तुको लागि";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "प्रत्यक बस्तुको आन्तिम, सुची , चल को समूह '%1' बस्तु सम्मको र गर्नुहोस्  केहि भनाई |";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "%1देखि %2सम्म %3 बाट";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "for";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "%1 variable linus, pahilo number dekhi antim number samma values linus, tokiyeko number le count gardai, ani tokiyeko block ko adesh garnus.";

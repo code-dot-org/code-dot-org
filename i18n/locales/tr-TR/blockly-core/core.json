@@ -381,7 +381,7 @@
     "TEXT_TRIM_OPERATOR_RIGHT": "Sağdaki boşlukları kırp",
     "TEXT_TRIM_TOOLTIP": "Metnin bir veya her iki ucundan da boşlukları silinmiş şekilde kopyasını verir.",
     "UNUSED_CODE": "Kullanılmayan kod",
-    "VARIABLE": "",
+    "VARIABLE": "Değişken",
     "VARIABLES_DEFAULT_NAME": "öge",
     "VARIABLES_GET_CREATE_SET": "'%1'e ayarla' oluştur",
     "VARIABLES_GET_HELPURL": "http://code.google.com/p/blockly/wiki/Variables#Get",

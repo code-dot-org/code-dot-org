@@ -2,39 +2,39 @@
 title: Partner
 ---
 
-The Hour of Code is driven by the Hour of Code and Computer Science Education Week Advisory and Review Committees.
+Die Hour of Code wird von Beratungs- und Überprüfungsausschüssen für 'Hour of Code' und 'Computer Science Education Week' gesteuert.
 
-The [Advisory Committee]({{ urls/advisory_committee }}) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. This committee guides the strategy for the Hour of Code campaign.
+Der [Beiratsausschuss]({{ urls/advisory_committee }}) setzt sich aus Vertretern von K-12, Wissenschaft, Non-Profit-Organisationen, For-Profits und internationalen Organisationen zusammen. Dieses Komitee leitet die Strategie für die Kampagne "Hour of Code".
 
-The [Review Committee]({{ urls/review_committee }}) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+Das [Fallprüfungskomitee]({{ urls/review_committee }}) besteht aus 15 Pädagogen aus K-12-Gruppen, die Aktivitäten der Rubrik des Beratungsausschusses bewerten und empfehlen. Diese Pädagogen überprüfen schülergeführte Aktivitäten und lehrergeführte Unterrichtspläne, die von Hunderten von Aktivitätspartnern eingereicht wurden, und bewerten den Bildungswert der Aktivitäten, die Fähigkeit, die Lernenden zu engagieren, und die potenzielle Anziehungskraft auf verschiedene Gruppen von Schülern.
 
-Both committees' work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
+Die Arbeit und das Engagement beider Ausschüsse haben zum Erfolg der "Hour of Code" und ihrer Vision beigetragen, jedem Studenten eine Einführung in die Informatik zu bieten.
 
-# Major Partners and Corporate Supporters
+# Wichtige Partner und Unterstützer von Unternehmen
 
 {{ partners/major_partners_corporate_supporters }}
 
 * * *
 
-# International Partners
+# Internationale Partner
 
 {{ partners/international_partners }}
 
 * * *
 
-# Curriculum and Tutorial Partners
+# Curriculum und Tutorial Partner
 
 {{ partners/curriculum_tutorial_partners }}
 
 * * *
 
-# Infrastructure Partners and Tools
+# Infrastruktur Partner und Werkzeuge
 
 {{ partners/infrastructure_partners_tools }}
 
 * * *
 
-# Additional Partners
+# Weitere Partner
 
 {{ partners/additional_partners }}
 

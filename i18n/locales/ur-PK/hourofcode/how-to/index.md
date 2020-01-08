@@ -1,7 +1,5 @@
 ---
 title: ھاؤ-ٹو-گائیڈ
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

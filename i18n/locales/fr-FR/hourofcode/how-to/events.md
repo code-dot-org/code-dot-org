@@ -1,7 +1,5 @@
 ---
 title: Une Heure de Code comment faire ?
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

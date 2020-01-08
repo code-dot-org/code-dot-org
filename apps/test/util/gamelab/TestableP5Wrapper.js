@@ -1,7 +1,7 @@
 /** @file Helper to load a configured P5Wrapper object for tests */
 import 'script-loader!@code-dot-org/p5.play/examples/lib/p5';
 import 'script-loader!@code-dot-org/p5.play/lib/p5.play';
-import {expect} from '../configuredChai';
+import {expect} from '../deprecatedChai';
 import P5Wrapper from '@cdo/apps/p5lab/P5Wrapper';
 import {injectJSInterpreter as injectJSInterpreterToSprite} from '@cdo/apps/p5lab/P5SpriteWrapper';
 import {injectJSInterpreter as injectJSInterpreterToGroup} from '@cdo/apps/p5lab/P5GroupWrapper';

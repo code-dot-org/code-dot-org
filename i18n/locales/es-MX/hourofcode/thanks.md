@@ -1,10 +1,5 @@
 ---
 title: '¡Gracias por registrarte como anfitrión de la Hora del Código!'
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": reproductor
-  "twitter:site": "@codeorg"
 ---
 
 # ¡Gracias por inscribirte para ser anfitrión de una Hora del Código!

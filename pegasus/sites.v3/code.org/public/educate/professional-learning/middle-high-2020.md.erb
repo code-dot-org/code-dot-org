@@ -10,6 +10,19 @@ theme: responsive
   details summary {
     cursor: pointer;
   }
+
+  a.tertiary-link {
+    color: #00adbc;
+    font-size: 14px;
+    font-family: "Gotham 4r", sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+  }
+    a.tertiary-link .fa {
+      font-size: 12px;
+      font-weight: bold;
+      margin-left: 8px;
+    }
 </style>
 
 
@@ -19,20 +32,20 @@ theme: responsive
 
 <div style="clear: both;">
 
-<div class="col-50" style="padding-right: 30px; padding-top: 20px; padding-bottom: 50px;">
+<div class="col-50" style="padding-right: 30px; padding-top: 20px; padding-bottom: 25px;">
 
-<img src="/images/fit-450/marketing/excel-charter-schoolhoc-2015-stills-14.jpg">
+<img src="/images/fit-450/marketing/professional-learning-middle-high.jpg">
 <br><br>
 
 </div>
 
-<div class="col-50" style="padding-right: 30px; padding-top: 20px; padding-bottom: 50px;">
+<div class="col-50" style="padding-right: 30px; padding-top: 20px; padding-bottom: 25px;">
 
 <p>Whether you are new to teaching computer science (CS) or have previous experience, the Code.org Professional Learning Program prepares you to teach with confidence and offers year-round support. No CS experience is needed!</p>
 
 <p>Take part in the program to explore the curriculum and learning tools, practice new teaching strategies, discuss classroom management, and build a community of teachers. <b>Over 90% of attendees would recommend our program to another teacher</b>.</p>
 
-<p>Peer reviewed research shows that school participation in the Code.org program causes an estimated <b>5x increase in students that take and pass the AP CS Principles exam</b>. Check out our <a href="https://staging.code.org/files/programs/codeorg-program-brochure.pdf">Program Brochure</a> and <a href="https://code.org/administrators">share with your principal or superintendent</a> the benefits of bringing computer science to your school.</p>
+<p>Check out our <a href="https://code.org/files/programs/codeorg-program-brochure.pdf">Program Brochure</a> and <a href="https://code.org/administrators">share with your principal or superintendent</a> the benefits of bringing computer science to your school.</p>
 
 <br/>
 
@@ -40,67 +53,70 @@ theme: responsive
 
 </div>
 
-<div style="clear: both;"></div> 
+<div style="clear: both;"></div>
 
-<a name="scholarships"></a>
 <div style="clear: both;">
 <div class="col-100">
-<%= view :regional_partner_zip_form %>
-
+<%= view :regional_partner_zip_form_2020 %>
 </div>
 
 </div>
-
-
-<div style="clear: both;">
-<%= view :three_circles, circles: [] %>
-</div>
-
 
 <div style="clear: both;">
 
-<div class="col-33" style="padding-right: 20px;">
-<b><br>Who Should Apply</b>
+<div class="col-36" style="padding-right: 13px;">
+<h3><br><font color= "#0094ca"><b>How You’ll Benefit</b></font></h3>
 <br>
-  <summary>Applications will be considered from middle and high school educators who:</summary>
-  <p align="left">
- <ul>
- <li>Commit to participate in the full program</li>
- <li>Plan to teach CS in the 2020-2021 school year</li>
- <li>Promote diversity in classroom recruitment and enrollment</li>
+  <summary>You’ll become part of a community of teachers and gain:</summary>
+  <p>
+  <ul>
+ <li>Support and learning with a community of CS educators</li>
+ <li>Teaching skills that are effective in other classes</li>
+ <li>Access to a cohesive set of resources and trade organization discounts</li>
+ <li>Awareness and strategies to recruit and foster a diverse and equitable classroom</li>
 </ul>
-<a href="#">Program Requirements</a>
+<a href="#what-to-expect" class="tertiary-link">
+  What to Expect
+  <i class="fa fa-chevron-right"></i>
+</a>
 </p>
 </center>
 </div>
 
-<div class="col-33" style="padding-right: 20px;">
-<b><br>What You'll Learn</b>
+<div class="col-32" style="padding-right: 13px;">
+<h3><br><font color= "#0094ca"><b>What You'll Learn</b></font></h3>
 <br>
   <summary>You will learn to teach computer science successfully, equipped with:</summary>
   <p>
   <ul>
  <li>A solid understanding of the curriculum</li>
  <li>New teaching strategies and approaches to lesson planning</li>
- <li>The learning experience a student goes through when navigating course content</li>
+ <li>The student learning experience as they navigate course content</li>
 </ul>
-<a href="#">Content and Curriculum</a>
+<br><br>
+<a href="#content-and-curriculum" class="tertiary-link">
+  Content and Curriculum
+  <i class="fa fa-chevron-right"></i>
+</a>
 </p>
 </center>
 </div>
 
-<div class="col-33" style="padding-right: 20px;">
-<b><br>How You’ll Benefit</b>
+<div class="col-32" style="padding-right: 13px;">
+<h3><br><font color= "#0094ca"><b>Who Should Apply</b></font></h3>
 <br>
-  <summary>You’ll become part of a community of teachers and gain:</summary>
-  <p>
-  <ul>
- <li>Support and shared learning with a community of other CS educators</li>
- <li>Teaching skills that are equally effective in other classes</li>
- <li>Access to a cohesive set of resources and trade organization discounts</li>
- <li>Awareness and strategies to recruit and foster a diverse and equitable classroom</li>
+  <summary>Applications will be considered from middle and high school educators who:</summary>
+  <p align="left">
+ <ul>
+ <li>Can commit to participate in at least the initial 5-day workshop</li>
+ <li>Plan to teach CS in the 2020-2021 school year</li>
+ <li>Promote diversity in classroom recruitment and enrollment</li>
 </ul>
-<a href="#">What to Expect</a>
+<br><br>
+<a href="#program-requirements" class="tertiary-link">
+  Program Requirements
+  <i class="fa fa-chevron-right"></i>
+</a>
 </p>
 </center>
 </div>
@@ -108,59 +124,42 @@ theme: responsive
 <br>
 <br>
 
-<div style="clear: both;"></div> 
+<div style="clear: both;"></div>
 
-## What to expect
+<br><br>
 
 [breakoutquote]
 
 [col-33]
 
-<img src="/images/marketing/miral_1200x1071.jpg" style="max-width: 80%;"/>
+<img src="/images/marketing/professional-learning-2019-middle-high.jpg" style="max-width: 90%"/>
 
 [/col-33]
 
 [col-66]
 
-“When I work with celebrities, because I know code they instantly respect me and listen to what I have to say...to get the respect of people around you for what you really know how to do and not be afraid to do it will last you your whole life.”
-
-*Miral Kotb, Founder of iLuminate*
-
+"This was excellent professional development that allowed us time to reflect, process and debrief both individually and as a group.  The activities were engaging and meaningful to learning the content.  I feel like I'm leaving with skills I can immediately apply in teaching the curriculum."
+<br><br>
+-CS Discoveries Teacher, Alaska
 
 [/col-66]
 
 [clearboth]
 
 [/clearboth]
-   
+
 [/breakoutquote]
 
 <div style="clear: both;"></div>
+<a name="what-to-expect"></a>
 
-<div class="col-40" style="padding-right: 20px; padding-left: 0px; padding-top: 50px;">
-
-<img src="/images/fit-400/marketing/workshop-attendees-2019.jpg">
-<br><br>
-
-</div>
-
-<div class="col-60" style="padding-right: 10px; padding-left: 40px; padding-top: 50px;">
-
-<div style="clear: both;"></div>
+## What to expect
 
 <h3>Explore the curriculum and learning tools</h3>
 Discuss classroom management and engage in new teaching strategies. Working in small groups, you’ll learn new teaching skills and deepen your understanding of the curriculum content. <br><br>
 
 <h3>Practice classroom teaching and experience student learning</h3>
-You’ll engage with the curriculum both as an instructor and a learner. Becoming an active participant, you’ll gain concrete insight into your students’ perspective, which will aid you in creating strong lesson plans. 
-
-<br/>
-
-</div>
-
-</div>
-
-<div style="clear: both;"></div>
+You’ll engage with the curriculum both as an instructor and a learner. Becoming an active participant, you’ll gain concrete insight into your students’ perspective, which will aid you in creating strong lesson plans.
 
 <h3>Collaborate and share knowledge with fellow educators</h3>
 ​Teachers and facilitators will share their expertise and collaborate on strategies for the classroom, giving you a chance to learn from everyone in the room. Facilitators model pedagogical strategies and participants will share their own approaches by planning and delivering lessons.​
@@ -169,42 +168,53 @@ You’ll engage with the curriculum both as an instructor and a learner. Becomin
 All teachers will gain access to the Code.org forum, an online professional learning community that offers continued support with tools and content, introduces new and helpful resources for teaching the course, and provides a channel for continued community collaboration.
 
 <h3>Get discounted access to ISTE</h3>
-To help you say connected, we've also partnered with ISTE to offer all Code.org teachers discounted membership when they sign up for the first time. Through this partnership, we can offer an ISTE membership exclusively to Code.org teachers at the special price of $99 (regularly $125).<br><br>
+To help you say connected, we've also partnered with ISTE to offer all Code.org teachers discounted membership when they sign up for the first time. Through this partnership, we can offer an ISTE membership exclusively to Code.org teachers at the special price of $99 (regularly $125) annually.<br><br>
 
-<b>Benefits of ISTE membership:</b>
-- Professional Learning Networks made up of peer experts, including CS educators
-- Hundreds of webinar and ISTE Conference & Expo recordings on coding and other edtech topics
-- Empowered Learner, ISTE’s print and online magazine for members covering the most important topics in edtech 
-
-Check out our <a href="https://code.org/educate/professional-learning/values">professional learning values</a> for more information about our goals and approach to professional learning.<br><br>
-
-<center><img src="/images/fit-500/marketing/workshop-attendees-2019.jpg"></center>
+<details>
+  <summary><b>Benefits of an ISTE membership</b></summary>
+    <li>Professional Learning Networks made up of peer experts, including CS educators</li>
+    <li>Hundreds of webinar and ISTE Conference & Expo recordings on coding and other edtech topics</li>
+    <li>Empowered Learner, ISTE’s print and online magazine for members covering the most important topics in edtech</li>
+</details>
+<br><br>
 
 <div style="clear: both;"></div>
+<a name="program-requirements"></a>
 
 ## Program requirements
-Many teachers are surprised to learn just how feasible it is to expand computer science into their schools! You don’t need a fancy computer lab or previous experience teaching CS. 
 
-<b>We're actively looking for educators who:</b>
+<p>Many teachers are surprised to learn just how feasible it is to expand computer science into their schools! You don’t need a fancy computer lab or previous experience teaching CS.</p>
 
-- Can commit to participating in the full, year-long professional learning program
-- Teach students between 6th and 10th grade (CS Discoveries curriculum)
-- Teach students between 9th and 12th grade (CS Principles curriculum)
-- Plan to teach the course in the 2020-2021 school year: 
-    - 50+ course hours for CS Discoveries
-    - Full year or or 100+ course hours for CS Principals
-- Last but not least, support the recruitment and enrollment of a diverse group of students in the course, representative of the school's student population
-<br> 
-<b>Cost</b>: Generous scholarships and grants are available across the country to cover the cost of the program. [Enter your zip code](https://staging.code.org/educate/professional-learning/program-information?zip=) to find the program cost of your local workshop.  
+<div class="col-60" style="padding-right: 30px; padding-bottom: 20px;">
+
+<ul>
+<b>We're actively looking for educators who will:</b>
+<li>Engage in the professional learning program and be prepared to deliver the course in the 2020-21 school year (refer to our <a href="https://docs.google.com/document/d/1DhvzoNElJcfGYLrp5sVnnqp0ShvsePUpp3JK7ihjFGM/edit#">implementation recommendations</a>).</li>
+<li>Teach students between 6th and 10th grade (CS Discoveries curriculum)</li>
+<li>Teach students between 9th and 12th grade (CS Principles curriculum)</li>
+<li>Plan to teach the course in the 2020-2021 school year</li>
+<li>Support the recruitment and enrollment of a diverse group of students in the course, representative of the school's student population</li>
+</ul>
+
+<p><b>Cost</b>: Generous scholarships and grants are available across the country to cover the cost of the program. <a href="https://staging.code.org/educate/professional-learning/program-information?zip=">Enter your zip code</a> to find the program cost of your local workshop.</p>
+
+</div>
+
+<div class="col-40" style="padding-right: 30px; padding-top: 20px; padding-bottom: 20px;">
+
+<img src="/images/fit-400/marketing/workshop-attendees-2019-middle-high.jpg">
+
+</div>
+
+</div>
 
 <div style="clear: both;"></div>
+<a name="content-and-curriculum"></a>
 
 ## Content and curriculum
 Code.org provides a complete CS program combining professional learning and the K-12 curriculum, both of which consistently gets high ratings from teachers.
 
-PLACEHOLDER FOR TESTIMONIAL: This was one of the most well thought out curriculums I have seen in any content area. This is the first time that I think I will attempt to truly teach the curriculum from start to finish instead of just picking out the parts I think are useful.
-
-Middle and high school teachers will be participating in the Code.org professional learning workshop for one of the following courses:<br><br>
+Middle and high school teachers will be participating in the Code.org professional learning workshop for one of the course below. Teach a different grade level or have fewer hours available with your students? <a href="https://code.org/files/course-pl-options.pdf">Find the right course for your classroom</a>.<br><br>
 
 <div class="col-50">
 
@@ -239,6 +249,16 @@ Middle and high school teachers will be participating in the Code.org profession
 
 </div>
 
+<div style="clear: both;">
+
+<table style="border-style:hidden; padding-top: 30px; padding-bottom: 30px; padding-right: 20px; padding-left: 20px;">
+  <tr>
+    <td colspan="100" style="background-color:#00adbc; color:white; text-align:center; font-style:bold; border-style:hidden; font-size:18px;""> Peer reviewed research shows that school participation in the Code.org program causes an estimated <b>5x increase in students that take and pass the AP CS Principles exam</b>.
+      </td>
+    </tr>
+  </table>
+</div>
+
 <div style="clear: both;"></div>
 
 ## Get more information
@@ -247,7 +267,7 @@ Middle and high school teachers will be participating in the Code.org profession
 
 <br/>
 
-And be sure to check out our <a href="https://docs.google.com/document/d/e/2PACX-1vSxBryx0io9I8VE5PtBmmaLaVUlorblmLBmZ9FYLV_sqse86stk_WHidIUjsyCptR7itNfqPrVJlTx0/pub", target=_"blank">Professional Learning Program FAQs</a>.
+Check out our <a href="https://code.org/educate/professional-learning/values">professional learning values</a> for more information about our goals and approach to professional learning. Also, be sure to check out our <a href="https://docs.google.com/document/d/e/2PACX-1vSxBryx0io9I8VE5PtBmmaLaVUlorblmLBmZ9FYLV_sqse86stk_WHidIUjsyCptR7itNfqPrVJlTx0/pub", target=_"blank">Professional Learning Program FAQs</a>.
 
 
 ## Ready to apply?

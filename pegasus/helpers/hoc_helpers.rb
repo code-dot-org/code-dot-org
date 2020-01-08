@@ -122,7 +122,7 @@ def complete_tutorial(tutorial={})
       )
     end
 
-    site = tutorial[:orgname].try(:include?, 'Code.org') ?
+    site = tutorial[:orgname].try(:include?, 'Code.org') || tutorial[:code].try(:include?, 'mee') ?
       CDO.studio_url('', CDO.default_scheme) : "http://#{row[:referer]}"
 
     destination = "#{site}/congrats?i=#{row[:session]}"

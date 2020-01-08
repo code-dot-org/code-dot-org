@@ -35,6 +35,7 @@ var stringMethodPrefix = '[string].';
 var arrayMethodPrefix = '[list].';
 
 var stringBlockPrefix = 'str.';
+var arrayBlockPrefix = 'list.';
 
 // Configure shared APIs for App Lab
 // We wrap this because it runs before window.Applab exists
@@ -878,6 +879,16 @@ export var blocks = [
     noAutocomplete: true,
     tipPrefix: arrayMethodPrefix,
     type: 'property'
+  },
+  {
+    func: 'join',
+    blockPrefix: arrayBlockPrefix,
+    category: 'Variables',
+    modeOptionName: '*.join',
+    tipPrefix: arrayBlockPrefix,
+    paletteParams: ['separator'],
+    params: ['"-"'],
+    type: 'value'
   },
   {
     func: 'insertItem',

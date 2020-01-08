@@ -1,7 +1,5 @@
 ---
 title: Exemplo de páxina de opinión de apoio a Semana da Educación en Informática e a Hora do Código
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

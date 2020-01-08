@@ -47,6 +47,7 @@
   "jumpBackward": "hopp bakover med",
   "jumpForward": "hopp fremover med",
   "jumpToOverDown": "",
+  "jumpToPosition": "",
   "jumpByDirection": "",
   "jumpTooltip": "Flytter kunstneren uten å tegne noe.",
   "jumpEastTooltip": "Flytter artisten øst uten noen spor.",

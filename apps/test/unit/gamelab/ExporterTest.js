@@ -1,4 +1,4 @@
-import {assert, expect} from '../../util/configuredChai';
+import {assert, expect} from '../../util/deprecatedChai';
 import sinon from 'sinon';
 
 var testUtils = require('../../util/testUtils');
@@ -441,25 +441,9 @@ describe('The Gamelab Exporter,', function() {
             );
             window.$ = require('jquery');
 
-            // load unminified webpack-runtime and gamelab-api from the webpack
-            // output directory, allowing for any hash that may have been added to
-            // the filename and making sure not to match any minified files.
-
             // webpack-runtime must appear exactly once on any page containing webpack entries.
-            testUtils.loadContext(
-              require.context(
-                '../../../build/package/js/',
-                false,
-                /webpack-runtime(wp[a-f0-9]{20})?.js/
-              )
-            );
-            testUtils.loadContext(
-              require.context(
-                '../../../build/package/js/',
-                false,
-                /gamelab-api(wp[a-f0-9]{20})?.js/
-              )
-            );
+            require('../../../build/package/js/webpack-runtime.js');
+            require('../../../build/package/js/gamelab-api.js');
 
             //
             // Note: we are simulating a p5.js environment and manually calling

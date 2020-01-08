@@ -2696,3 +2696,7 @@ ne:
       11:
         text: If you forget what to do, the instructions for each level are at the
           top.
+    hoc_dance_events_2019:
+      4:
+        text: Some examples of events are listening for a mouse click, an arrow button,
+          or a tap on the screen.

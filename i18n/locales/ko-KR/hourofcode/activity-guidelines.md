@@ -1,6 +1,5 @@
 ---
 title: 튜토리얼 가이드라인
-layout: wide
 ---
 
 <style>

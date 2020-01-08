@@ -2571,3 +2571,7 @@ cs:
     mc_2017_agent_intro:
       11:
         text: Pokud zapomeneš jak hru hrát, instrukce ke každé úrovni jsou nahoře.
+    hoc_dance_events_2019:
+      4:
+        text: Některé příklady událostí naslouchají klepnutí myší, kurzorové směrové
+          tlačítko nebo dotek na obrazovku.

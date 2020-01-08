@@ -1,7 +1,5 @@
 ---
 title: Bagaimanakah untuk menjadi tuan rumah kepada Hour of Code - Syarikat-syarikat
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

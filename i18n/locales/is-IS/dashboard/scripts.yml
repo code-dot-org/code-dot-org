@@ -3202,7 +3202,6 @@ is:
             Nested Loops:
               name: Innri lykkjur
           title: Hraðnámskeið
-          assignment_family_title: Hraðnámskeið
           description_short: 'Kynning á tölvunarfræði: sameinar það besta úr námsefni okkar fyrir eldri nemendur í grunnskóla.'
           description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
         pre-express-2017:
@@ -3982,7 +3981,6 @@ is:
             Dance Party:
               name: Danspartý
         dance-extras:
-          title: Halda áfram að dansa
           description: Halda áfram eftir fyrstu klukkustundina með fleiri hugmyndir að verkefnum.
         coursef-2019:
           description_short: Lærðu öll hugtökin í Grunnatriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
@@ -4539,6 +4537,8 @@ is:
               name: nýr áfangi
             Routers and Redundancy:
               name: Netbeinar og umfremd
+            The Need for Addressing:
+              name: Þörfin fyrir vistföng
         peru-2019:
           stages:
             new stage:
@@ -4551,3 +4551,65 @@ is:
           stages:
             Dance Party:
               name: Danspartý
+        k5-onlinepd-2019:
+          stages:
+            Getting Started:
+              name: Fyrstu skrefin
+            Computer Science Fundamentals:
+              name: Grunnatriði tölvunarfræði
+            Looking Ahead:
+              name: Horft fram á við
+            'Mastering the Basics: Sequencing':
+              name: 'Grunnfærni: Skipanaröðin'
+            'Mastering the Basics: Loops':
+              name: 'Grunnfærni: Lykkjur'
+            'Mastering the Basics: Conditionals':
+              name: 'Grunnfærni: Skilyrðingar'
+            'Mastering the Basics: Functions':
+              name: 'Grunnfærni: Föll'
+            'Mastering the Basics: Events':
+              name: 'Grunnfærni: Atburðir'
+            Best Practices for Teaching Computer Science:
+              name: Bestu aðferðir við kennslu tölvunarfræði
+            Planning:
+              name: Áætlanagerð
+            Next Steps:
+              name: Næstu skref
+            Sequencing:
+              name: Skipanaröð
+            Loops:
+              name: Lykkjur
+            Conditionals:
+              name: Skilyrði
+            Events:
+              name: Atvik
+            Functions:
+              name: Föll
+            Sprite Lab:
+              name: Kvikasmiðjan
+            Variables:
+              name: Breytur
+            For Loops:
+              name: Frá lykkjur
+        dance-extras-2019:
+          description: Halda áfram eftir fyrstu klukkustundina með fleiri hugmyndir að verkefnum.
+        csp10-pilot:
+          stages:
+            new stage:
+              name: nýr áfangi
+        csp4-preview:
+          stages:
+            new stage:
+              name: nýr áfangi
+        time4cs-control-unit-1:
+          stages:
+            Sequencing in Maze:
+              name: Röð aðgerða í Völundarhúsi
+            Conditionals:
+              name: Skilyrði
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Hópvistun
+            Conditionals with Cards:
+              name: Skilyrði með kortum

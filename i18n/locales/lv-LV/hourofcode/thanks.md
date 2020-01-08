@@ -1,10 +1,5 @@
 ---
 title: Paldies, ka uzņēmies vadīt Programmēšanas stundu!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # Paldies, ka uzņēmies vadīt Programmēšanas stundu!

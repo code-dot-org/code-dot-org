@@ -88,16 +88,48 @@ uk-UA:
       Course 4 Playlab For Loops 4b:
         Course_4_Playlab_For_Loops_4b_2: У цій головоломці ви можете змінювати тільки
           "інкрімент" петлі "for".
+      CourseD_Dance_Party_01:
+        dance_callout_01: Додайте цей блок до своєї програми!
+      CourseD_Dance_Party_02:
+        dance_callout_02: Додайте цей блок до своєї програми!
+      CourseD_Dance_Party_04:
+        dance_callout_04: Додайте цей блок до своєї програми!
       CourseD_Dance_Party_06:
-        dance_callout_06: Додай сюди свого нового танцюриста
+        dance_callout_06: Додайте нового танцівника тут
       CourseD_Dance_Party_11:
         dance_callout_11_a: Новий блок!
         dance_callout_11_b: Новий блок!
+      CourseD_Dance_Party_11_5:
+        dance_party_11_5_groups: Шукайте блок "усі качки" тут
+      Dance_2019_01:
+        dance_callout_01: Оберіть тип танцівника тут.
+      Dance_2019_02:
+        dance_callout_11_a: Додайте цей блок до своєї програми.
+        arrow_buttons: Натискайте клавіші зі стрілками, щоб управляти своїм танцівником.
+      Dance_2019_04:
+        dance_callout_02: Додайте цей блок до своєї програми!
+      Dance_2019_05:
+        dance_callout_05: Додайте нову подію до програми.
+      Dance_2019_06:
+        dance_party_11_5_groups: Новий блок!
+      Dance_2019_07:
+        setprop_hint: Новий блок!
+      Dance_2019_09:
+        new_block_3: Новий блок!
+        new_block_4: Новий блок!
+      Dance_Party_01:
+        dance_callout_01: Додайте цей блок до своєї програми!
+      Dance_Party_02:
+        dance_callout_02: Додайте цей блок до своєї програми!
+      Dance_Party_04:
+        dance_callout_04: Додайте цей блок до своєї програми!
       Dance_Party_06:
-        dance_callout_06: Додай сюди свого нового танцюриста
+        dance_callout_06: Додайте нового танцівника тут
       Dance_Party_11:
         dance_callout_11_a: Новий блок!
         dance_callout_11_b: Новий блок!
+      Dance_Party_11_5:
+        dance_party_11_5_groups: Шукайте блок "усі качки" тут
       Function intro Ryan:
         Function_intro_Ryan_1: Ця інструкція каже комп’ютеру запустити ВЕЛИКИЙ фрагмент
           програмного коду з тим самим іменем у робочій області.
@@ -299,6 +331,7 @@ uk-UA:
         snowflake_dropdown: Скористайтесь розкривним списком, щоб створювати різні
           сніжинки!
       frozen line:
+        run: Натисни "Запустити", щоб випробувати програму!
         move_elsa_forward: Перемісти блок "Рухатися вперед" та прикріпи його під блоком
           "Коли гра починається", щоб змусити Ельзу рухатися вперед
       frozen perpendicular:

@@ -1,7 +1,5 @@
 ---
 title: How-to Guide
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
@@ -81,6 +79,6 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## จะทำอะไรต่อหลังจาก Hour of Code?
 
-Hour of Code นี้เป็นเพียงแค่ก้าวแรกในเดินทางเพื่อเรียนรู้เกี่ยวกับการทำงานของเทคโนโลยี และ การสร้างซอฟต์แวร์ ช่วยนักเรียนให้เรียนรู้ต่อไป และ สนับสนุนให้ [เรียนเพิ่มเติม ออนไลน์](%= codeorg_url('/learn/beyond') %)!
+Hour of Code นี้เป็นเพียงแค่ก้าวแรกในเดินทางเพื่อเรียนรู้เกี่ยวกับการทำงานของเทคโนโลยี และ การสร้างซอฟต์แวร์ Help students continue their journey and encourage them to [learn more online](/beyond)!
 
 {{ signup_button }}

@@ -2,6 +2,9 @@
 lv-LV:
   data:
     short_instructions:
+      2-3 Artist 1 new: Sveiks! Esmu mākslinieks. Tu vari uzrakstīt kodu, kas liks
+        man uzzīmēt gandrīz jebko. Izmanto dažus blokus, lai pārzīmētu pelēkās līnijas
+        attēlā. (Katra līnija ir 100 pikseļus gara)
       2-3 Artist 12: "Izveido apli, lai pabeigtu acs zīmējumu!\\\r\n\\\r\nCik reizes
         jāatkārto kods, lai uzzīmētu apli, ja aktieris katru reizi pagriežas par 1
         grādu? 180? 360? 500?"
@@ -10,7 +13,12 @@ lv-LV:
       2-3 Artist 3.4: Lekšanas bloks pārvieto mākslinieku bez zīmēšanas. Zīmē pārtraukto
         līniju, izmantojot `lēkt` un `pārvietoties` blokus. Katra līnija ir 50 pikseļus
         gara.
+      2-3 Artist 3new: |-
+        Sarkanā cepure ir 100 pikseļus augsta. Pabeidz zīmēt melno cepuri, kura ir par 70 pikseļiem zemāka.
+        (Katras cepures platums ir 50 pikseļi.)
       2-3 Artist 4: Palīdzi man pabeigt māju šim kaķim.
+      2-3 Artist 6: "Šai mājai vajag jumtu! Uzzīmē trijstūri. \nPadoms: visas trīs
+        malas ir vienāda garuma."
       2-3 Artist 9 NEW: Pabeidz gaisa pūķi
       2-3 Artist Debugging 5: "Kods kājai un pēdai ir kļūdains. \n\nVai vari to izlabot?"
       2-3 Artist Free Play: Brīvā spēle! Zīmē visu, ko vēlies.
@@ -38,8 +46,12 @@ lv-LV:
         Atkārto rombu 12 reizes, lai uzzīmētu ziedu.
       2-3 Bee Conditionals 9: Iegūsti visu nektāru no katra zieda.
       2-3 Bee Functions 3: Iegūsti visu nektāru no katra zieda.
+      2-3 Maze 1: 'Vai vari man palīdzēt notvert nerātno cūku? Saliec vairākus "pārvietot
+        uz priekšu" blokus zem "kad izpilda" bloka un spied "Palaist". '
       2-3 Maze 10: Aizved mani līdz zaļajam ļaunumam! (Izvairies no Dinamīta)
       2-3 Maze 2: Šī cūka bužina manas spalvas! Palīdzi man tikt līdz viņai!
+      2-3 Maze 3: Izseko maršrutam un aizved mani līdz tai muļķīgajai cūkai. Izvairies
+        no dinamīta, citādi lidos spalvas!
       2-3 Maze 4: Aizved mani līdz zaļajam ļaunumam! (Izvairies no Dinamīta)
       2-3 Maze 6: Saglabā mieru un palīdzi man atrast ļauno cūku. Citādi es varu sadusmoties!
       2-3 Maze 7: Aizved mani līdz zaļajam ļaunumam! (Izvairies no Dinamīta)
@@ -209,6 +221,8 @@ lv-LV:
         kamēr tā sasniedz karodziņu.
       bounce_7_sports: Pievieno blokus pie katra "kad" bloka. Ļauj bumbai lidot, kamēr
         tā sasniedz karodziņu.
+      course2_maze_programming_challenge1: _"Cūka slēpjas! Vai vari palīdzēt man atrast
+        apkārtceļu?"_
       course4_artist_fwp_challenge1: Pamēģini palaist šo programmu, un veic izmaiņas,
         lai redzētu, kas notiek. Vai tu vari izdomāt, kā tā strādā? (Vai arī izdzēs
         to un aizvieto to ar kaut ko pavisam citādāku)

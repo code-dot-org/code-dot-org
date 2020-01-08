@@ -1,7 +1,5 @@
 ---
-title: How-to guide for public officials
-layout: wide
-nav: how_to_nav
+title: పబ్లిక్ అధికారుల కోసం హౌ-టు గైడ్
 ---
 
 {{ signup_button }}

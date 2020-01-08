@@ -1,10 +1,5 @@
 ---
 title: Hvala na prijavi za domaćina Sata Kodiranja!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # Hvala na prijavi za domaćina Sata Kodiranja!

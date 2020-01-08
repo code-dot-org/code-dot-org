@@ -10,12 +10,10 @@ import reducer, {
   mergeProgress,
   mergePeerReviewProgress,
   disablePostMilestone,
-  setUserSignedIn,
   setIsHocScript,
   setIsAge13Required,
   setIsSummaryView,
   setStudentDefaultsSummaryView,
-  SignInState,
   levelsByLesson,
   levelsForLessonId,
   progressionsFromLevels,
@@ -289,18 +287,6 @@ describe('progressReduxTest', () => {
     it('can update postMilestoneDisabled', () => {
       const nextState = reducer(initialState, disablePostMilestone());
       assert.equal(nextState.postMilestoneDisabled, true);
-    });
-
-    it('initially sets signInState to Unknown', () => {
-      assert.equal(initialState.signInState, SignInState.Unknown);
-    });
-
-    it('can update signInState', () => {
-      const signedIn = reducer(initialState, setUserSignedIn(true));
-      assert.equal(signedIn.signInState, SignInState.SignedIn);
-
-      const signedOut = reducer(initialState, setUserSignedIn(false));
-      assert.equal(signedOut.signInState, SignInState.SignedOut);
     });
 
     it('initially sets isHocScript to null', () => {

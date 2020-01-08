@@ -1,7 +1,5 @@
 ---
 title: Blurbs and useful stats
-layout: wide
-nav: promote_nav
 ---
 
 <a id="blurb"></a>
@@ -32,7 +30,7 @@ Mi se nadamo da će izazvati interes kod učenika da nastave učiti. Istraživan
 
 #### Zašto je ovo važno?
 
-Tehnologija transformiše svaku industriju na planeti. In 2015, 7 million openings in the U.S. were in occupations—including art and design—that value coding skills. But 65 percent of schools in the U.S. don't teach computer science. Vrijeme je da sustignemo 21. stoljeće. Mi znamo da bez obzira šta će naši učenici da budu kad odrastu, bilo da odu u medicinu, poslovanje, politiku, ili umjetnost, znanje o tome kako napraviti tehnologiju će im dati samopouzdanje i takmičarski duh. <br /> <br />
+Tehnologija transformiše svaku industriju na planeti. In 2015, 7 million openings in the U.S. were in occupations—including art and design—that value coding skills. But 55 percent of schools in the U.S. don't teach computer science. Vrijeme je da sustignemo 21. stoljeće. Mi znamo da bez obzira šta će naši učenici da budu kad odrastu, bilo da odu u medicinu, poslovanje, politiku, ili umjetnost, znanje o tome kako napraviti tehnologiju će im dati samopouzdanje i takmičarski duh. <br /> <br />
 
 #### A quote you can use in materials
 
@@ -44,7 +42,7 @@ Code.org is a 501c3 public non-profit dedicated to expanding participation in co
 
 ## Share these on social media and in emails
 
-[![image](/images/social-media//fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="infographics"></a>
 

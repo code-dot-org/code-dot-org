@@ -1,7 +1,5 @@
 ---
 title: Blurbs and useful stats
-layout: wide
-nav: promote_nav
 ---
 
 <a id="blurb"></a>
@@ -32,7 +30,7 @@ Sperăm că va trezi interesul elevilor si ca acestia vor continua învăţarea.
 
 #### De ce este important acest lucru?
 
-Tehnologia transformă fiecare industrie pe planeta. În 2015, 7 milioane de deschideri în Sua erau în ocupaţii — inclusiv de arta si design — acea valoare a aptitudinii de a programa. But 65 percent of schools in the U.S. don't teach computer science. Este timpul să prindem din urmă secolul 21. Ştim că indiferent ce fac elevii noştrii atunci când cresc, indiferent dacă merg în domeniul medicinei, afaceri, politică sau arte, trebuie sa stie cum să construiască tehnologia, le va da încrederea şi un avantaj competitiv pentru a reuşi. <br /> <br />
+Tehnologia transformă fiecare industrie pe planeta. În 2015, 7 milioane de deschideri în Sua erau în ocupaţii — inclusiv de arta si design — acea valoare a aptitudinii de a programa. But 55 percent of schools in the U.S. don't teach computer science. Este timpul să prindem din urmă secolul 21. Ştim că indiferent ce fac elevii noştrii atunci când cresc, indiferent dacă merg în domeniul medicinei, afaceri, politică sau arte, trebuie sa stie cum să construiască tehnologia, le va da încrederea şi un avantaj competitiv pentru a reuşi. <br /> <br />
 
 #### A quote you can use in materials
 
@@ -44,7 +42,7 @@ Code.org® este o organizație non-profit dedicată extinderii educației cu pri
 
 ## Share these on social media and in emails
 
-[![imagine](/images/social-media//fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![imagine](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![imagine](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![imagine](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![imagine](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![imagine](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="infographics"></a>
 

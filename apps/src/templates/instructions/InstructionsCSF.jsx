@@ -639,8 +639,15 @@ class InstructionsCSF extends React.Component {
                   video={hint.hintVideo}
                 />
               ))}
+            {/*
+              The `key` prop on the InlineFeedback component is a workaround for a React 15.x problem
+              with efficiently updating inline blockly xml within this message. By providing a
+              changing key prop, we force the component to entirely unmount and re-mount when the
+              message contents change.  This may not be a problem once we upgrade to React 16.
+            */}
             {this.props.feedback && !this.props.collapsed && (
               <InlineFeedback
+                key={this.props.feedback.message}
                 borderColor={
                   this.props.isMinecraft ? color.white : color.charcoal
                 }
@@ -699,7 +706,7 @@ class InstructionsCSF extends React.Component {
   }
 }
 
-module.exports = connect(
+export default connect(
   function propsFromStore(state) {
     return {
       overlayVisible: state.instructions.overlayVisible,

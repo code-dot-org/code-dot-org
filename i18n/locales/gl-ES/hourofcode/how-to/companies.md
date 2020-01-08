@@ -1,7 +1,5 @@
 ---
 title: Como acoller unha Hora do Código - empresas
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

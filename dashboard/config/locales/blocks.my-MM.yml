@@ -2,6 +2,14 @@
 my:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: အားလုံး
+          MOVE1:
+            MOVES.Rest: ဘာမှမရှိ
+          MOVE2:
+            MOVES.Rest: ဘာမှမရှိ
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
@@ -18,6 +26,10 @@ my:
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: အားလုံး
       Dancelab_doMoveEachLR:
         options:
           GROUP:
@@ -38,6 +50,10 @@ my:
         options:
           DANCE:
             MOVES.Rest: ဘာမှမရှိ
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: အားလုံး
       Dancelab_layoutSprites:
         options:
           GROUP:
@@ -64,6 +80,8 @@ my:
             '18': '18'
             '19': '19'
             '20': '20'
+          LAYOUT:
+            '"diamond"': စိန်
       Dancelab_randomColor:
         text: ကျဘန်းအရောင်
       Dancelab_setBackgroundEffect:
@@ -104,6 +122,10 @@ my:
         options:
           GROUP:
             sprites: အားလုံး
+      Dancelab_setPropRandomEach:
+        options:
+          GROUP:
+            sprites: အားလုံး
       Dancelab_setTintEach:
         options:
           THIS:
@@ -116,6 +138,19 @@ my:
         options:
           THIS:
             sprites: အားလုံး
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: အားလုံး
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: အားလုံး
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': စိန်
+            '"x"': "×"
       Dancelab_whenKey:
         options:
           KEY:

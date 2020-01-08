@@ -374,6 +374,8 @@ hi-IN:
         - {}
         - {}
         - {}
+      Begin planning your project:
+        title: शीर्षक
       CSD Header Size MC:
         answers:
         - {}
@@ -392,6 +394,28 @@ hi-IN:
         - correct: true
         - {}
         - {}
+      CSD U2 Design Project:
+        title: शीर्षक
+      CSD U2 Design Project_2018:
+        title: शीर्षक
+      CSD U2 Design Project_2018_2019:
+        title: शीर्षक
+      CSD U2 L2 Overview:
+        title: शीर्षक
+      CSD U2 L3 Overview:
+        title: शीर्षक
+      CSD U2 L4 Overview:
+        title: शीर्षक
+      CSD U2 L5 Overview:
+        title: शीर्षक
+      CSD U2 L6 Overview:
+        title: शीर्षक
+      CSD U2 expand project:
+        title: शीर्षक
+      CSD U2 expand project_2018:
+        title: शीर्षक
+      CSD U2 expand project_2018_2019:
+        title: शीर्षक
       CSD U2 image debug match:
         questions:
         - {}
@@ -484,6 +508,7 @@ hi-IN:
         - {}
         - {}
       CSD U3 Boolean MC:
+        title: शीर्षक
         questions:
         - {}
         answers:
@@ -492,6 +517,7 @@ hi-IN:
         - {}
         - {}
       CSD U3 Boolean MC_2018:
+        title: शीर्षक
         questions:
         - {}
         answers:
@@ -500,6 +526,7 @@ hi-IN:
         - {}
         - {}
       CSD U3 Boolean MC_2018_2019:
+        title: शीर्षक
         questions:
         - {}
         answers:
@@ -600,6 +627,12 @@ hi-IN:
         - correct: true
         - {}
         - {}
+      CSD U3 combining rep:
+        title: शीर्षक
+      CSD U3 combining rep_2018:
+        title: शीर्षक
+      CSD U3 combining rep_2018_2019:
+        title: शीर्षक
       CSD U3 drawSprites placement match:
         questions:
         - {}
@@ -622,6 +655,26 @@ hi-IN:
         - {}
         - {}
         - {}
+      CSD U5 Encryption 1:
+        title: शीर्षक
+      CSD U5 Encryption 1_2018:
+        title: शीर्षक
+      CSD U5 Encryption 1_2018_2019:
+        title: शीर्षक
+      CSD U5 L13 SFLP Interpreting Data:
+        title: शीर्षक
+      CSD U5 data visualization:
+        title: शीर्षक
+      CSD U5 data visualization_2018:
+        title: शीर्षक
+      CSD U5 data visualization_2018_2019:
+        title: शीर्षक
+      CSD U5 student record:
+        title: शीर्षक
+      CSD U5 student record_2018:
+        title: शीर्षक
+      CSD U5 student record_2018_2019:
+        title: शीर्षक
       CSD U6 array multi:
         questions:
         - {}
@@ -732,6 +785,8 @@ hi-IN:
           <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
 
           </div>
+      Internet Simulator Setup 2:
+        title: शीर्षक
       K-1 Artist 1 Multi 1:
         questions:
         - {}
@@ -859,6 +914,7 @@ hi-IN:
         - {}
         - {}
       K-1 Maze Multiple Choice 2:
+        title: पहेली
         questions:
         - {}
         answers:
@@ -899,23 +955,33 @@ hi-IN:
         questions:
         - {}
         answers:
-        - {}
+        - text: सेट करें
         - correct: true
         - {}
+      Multi-Screen Apps:
+        title: शीर्षक
+      New Challenge Introduction:
+        title: शीर्षक
+      OPD-K5 Stage3aGo:
+        title: शीर्षक
+      Prepare for your presentation:
+        title: शीर्षक
       behaviors 1 predict:
         questions:
         - {}
         answers:
-        - {}
+        - feedback: ग़लत.
         - correct: true
-        - {}
+          feedback: सही!
+        - feedback: ग़लत.
         - feedback: गलत
       behaviors 4 predict:
         questions:
         - {}
         answers:
-        - {}
+        - feedback: ग़लत.
         - correct: true
+          feedback: सही!
         - {}
         - feedback: गलत
       courseC_multi_artist_prog6_predict1:
@@ -925,7 +991,8 @@ hi-IN:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: सही!
+        - text: मुझे पता नहीं
       courseC_multi_artist_prog6_predict1_2018:
         questions:
         - {}
@@ -933,7 +1000,8 @@ hi-IN:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: सही!
+        - text: मुझे पता नहीं
       courseC_multi_artist_prog6_predict1_2018_2019:
         questions:
         - {}
@@ -941,7 +1009,8 @@ hi-IN:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: सही!
+        - text: मुझे पता नहीं
       courseC_multi_harvester_loops11_predict1:
         questions:
         - {}
@@ -949,8 +1018,9 @@ hi-IN:
         - text: '4'
         - text: '12'
           correct: true
+          feedback: सही!
         - text: '15'
-        - {}
+        - text: मुझे पता नहीं
       courseC_multi_harvester_loops11_predict1_2018:
         questions:
         - {}
@@ -958,8 +1028,9 @@ hi-IN:
         - text: '4'
         - text: '12'
           correct: true
+          feedback: सही!
         - text: '15'
-        - {}
+        - text: मुझे पता नहीं
       courseC_multi_harvester_loops11_predict1_2018_2019:
         questions:
         - {}
@@ -967,56 +1038,63 @@ hi-IN:
         - text: '4'
         - text: '12'
           correct: true
+          feedback: सही!
         - text: '15'
-        - {}
+        - text: मुझे पता नहीं
       courseC_multi_maze_debugging8_predict1:
         questions:
         - {}
         answers:
         - {}
         - correct: true
+          feedback: सही!
         - {}
-        - {}
+        - text: मुझे पता नहीं
       courseC_multi_maze_debugging8_predict1_2018:
         questions:
         - {}
         answers:
         - {}
         - correct: true
+          feedback: सही!
         - {}
-        - {}
+        - text: मुझे पता नहीं
       courseC_multi_maze_debugging8_predict1_2018_2019:
         questions:
         - {}
         answers:
         - {}
         - correct: true
+          feedback: सही!
         - {}
-        - {}
+        - text: मुझे पता नहीं
       courseC_multi_maze_programming8_predict1:
         questions:
         - {}
         answers:
         - {}
         - correct: true
+          feedback: सही!
         - {}
-        - {}
+        - text: मुझे पता नहीं
       courseC_multi_maze_programming8_predict1_2018:
         questions:
         - {}
         answers:
         - {}
         - correct: true
+          feedback: सही!
         - {}
-        - {}
+        - text: मुझे पता नहीं
       courseC_multi_maze_programming8_predict1_2018_2019:
         questions:
         - {}
         answers:
         - {}
         - correct: true
+          feedback: सही!
         - {}
-        - {}
+        - text: मुझे पता नहीं
       courseC_multi_starWars_predict1:
         questions:
         - {}
@@ -1024,6 +1102,7 @@ hi-IN:
         - {}
         - {}
         - correct: true
+          feedback: सही!
         - text: मुझे पता नहीं
       courseC_multi_starWars_predict1_2018:
         questions:
@@ -1032,6 +1111,7 @@ hi-IN:
         - {}
         - {}
         - correct: true
+          feedback: सही!
         - text: मुझे पता नहीं
       courseC_multi_starWars_predict1_2018_2019:
         questions:
@@ -1040,6 +1120,7 @@ hi-IN:
         - {}
         - {}
         - correct: true
+          feedback: सही!
         - text: मुझे पता नहीं
       courseC_multi_starWars_predict2:
         questions:
@@ -1047,126 +1128,150 @@ hi-IN:
         answers:
         - {}
         - correct: true
+          feedback: सही!
         - {}
-        - {}
+        - text: मुझे पता नहीं
       courseC_multi_starWars_predict2_2018:
         questions:
         - {}
         answers:
         - {}
         - correct: true
+          feedback: सही!
         - {}
-        - {}
+        - text: मुझे पता नहीं
       courseC_multi_starWars_predict2_2018_2019:
         questions:
         - {}
         answers:
         - {}
         - correct: true
+          feedback: सही!
         - {}
-        - {}
+        - text: मुझे पता नहीं
       courseD_multi_artist_binary8_predict1:
         questions:
         - {}
         answers:
         - text: A
+          feedback: ग़लत.
         - text: B
+          feedback: ग़लत.
         - text: C
+          feedback: ग़लत.
         - text: D
           correct: true
+          feedback: सही!
       courseD_multi_artist_binary8_predict1_2018:
         questions:
         - {}
         answers:
         - text: A
+          feedback: ग़लत.
         - text: B
+          feedback: ग़लत.
         - text: C
+          feedback: ग़लत.
         - text: D
           correct: true
+          feedback: सही!
       courseD_multi_artist_binary8_predict1_2018_2019:
         questions:
         - {}
         answers:
         - text: A
+          feedback: ग़लत.
         - text: B
+          feedback: ग़लत.
         - text: C
+          feedback: ग़लत.
         - text: D
           correct: true
+          feedback: सही!
       courseD_multi_artist_nestedLoops9_predict1:
         questions:
         - {}
         answers:
         - text: A
           correct: true
+          feedback: सही!
         - text: B
         - text: C
-        - {}
+        - text: मुझे पता नहीं
       courseD_multi_artist_nestedLoops9_predict1_2018:
         questions:
         - {}
         answers:
         - text: A
           correct: true
+          feedback: सही!
         - text: B
         - text: C
-        - {}
+        - text: मुझे पता नहीं
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         questions:
         - {}
         answers:
         - text: A
           correct: true
+          feedback: सही!
         - text: B
         - text: C
-        - {}
+        - text: मुझे पता नहीं
       courseD_multi_bee_conditionals1_predict1:
         questions:
         - {}
         answers:
         - {}
         - correct: true
+          feedback: सही!
         - {}
-        - {}
+        - text: मुझे पता नहीं
       courseD_multi_bee_conditionals1_predict1_2018:
         questions:
         - {}
         answers:
         - {}
         - correct: true
+          feedback: सही!
         - {}
-        - {}
+        - text: मुझे पता नहीं
       courseD_multi_bee_conditionals1_predict1_2018_2019:
         questions:
         - {}
         answers:
         - {}
         - correct: true
+          feedback: सही!
         - {}
-        - {}
+        - text: मुझे पता नहीं
       courseD_multi_bee_conditionals7_predict2:
         questions:
         - {}
         answers:
         - correct: true
+          feedback: सही!
         - {}
         - {}
-        - {}
+        - text: मुझे पता नहीं
       courseD_multi_bee_conditionals7_predict2_2018:
         questions:
         - {}
         answers:
         - correct: true
+          feedback: सही!
         - {}
         - {}
-        - {}
+        - text: मुझे पता नहीं
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         questions:
         - {}
         answers:
         - correct: true
+          feedback: सही!
         - {}
         - {}
-        - {}
+        - text: मुझे पता नहीं
       courseD_multi_bee_nestedLoops2_predict1:
         questions:
         - {}
@@ -1174,7 +1279,8 @@ hi-IN:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: सही!
+        - text: मुझे पता नहीं
       courseD_multi_bee_nestedLoops2_predict1_2018:
         questions:
         - {}
@@ -1182,7 +1288,8 @@ hi-IN:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: सही!
+        - text: मुझे पता नहीं
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         questions:
         - {}
@@ -1190,7 +1297,8 @@ hi-IN:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: सही!
+        - text: मुझे पता नहीं
       courseD_multi_bee_nestedLoops9_predict2:
         questions:
         - {}
@@ -1198,8 +1306,9 @@ hi-IN:
         - text: '4'
         - text: '8'
           correct: true
+          feedback: सही!
         - text: '12'
-        - {}
+        - text: मुझे पता नहीं
       courseD_multi_bee_nestedLoops9_predict2_2018:
         questions:
         - {}
@@ -1207,8 +1316,9 @@ hi-IN:
         - text: '4'
         - text: '8'
           correct: true
+          feedback: सही!
         - text: '12'
-        - {}
+        - text: मुझे पता नहीं
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         questions:
         - {}
@@ -1216,8 +1326,9 @@ hi-IN:
         - text: '4'
         - text: '8'
           correct: true
+          feedback: सही!
         - text: '12'
-        - {}
+        - text: मुझे पता नहीं
       courseD_multi_collector_debugging10_predict1:
         questions:
         - {}
@@ -1225,7 +1336,8 @@ hi-IN:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: सही!
+        - text: मुझे पता नहीं
       courseD_multi_farmer_condLoops9_predict1:
         questions:
         - {}
@@ -1233,7 +1345,8 @@ hi-IN:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: सही!
+        - text: मुझे पता नहीं
       courseD_multi_farmer_condLoops9_predict1_2018:
         questions:
         - {}
@@ -1241,7 +1354,8 @@ hi-IN:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: सही!
+        - text: मुझे पता नहीं
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         questions:
         - {}
@@ -1249,39 +1363,44 @@ hi-IN:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: सही!
+        - text: मुझे पता नहीं
       courseD_multi_farmer_ramp13:
         questions:
         - {}
         answers:
         - {}
         - correct: true
+          feedback: सही!
         - {}
-        - {}
+        - text: मुझे पता नहीं
       courseD_multi_farmer_while10_predict2:
         questions:
         - {}
         answers:
         - {}
         - correct: true
+          feedback: सही!
         - {}
-        - {}
+        - text: मुझे पता नहीं
       courseD_multi_farmer_while10_predict2_2018:
         questions:
         - {}
         answers:
         - {}
         - correct: true
+          feedback: सही!
         - {}
-        - {}
+        - text: मुझे पता नहीं
       courseD_multi_farmer_while10_predict2_2018_2019:
         questions:
         - {}
         answers:
         - {}
         - correct: true
+          feedback: सही!
         - {}
-        - {}
+        - text: मुझे पता नहीं
       courseD_multi_farmer_while4_predict1:
         questions:
         - {}
@@ -1289,7 +1408,8 @@ hi-IN:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: सही!
+        - text: मुझे पता नहीं
       courseD_multi_farmer_while4_predict1_2018:
         questions:
         - {}
@@ -1297,7 +1417,8 @@ hi-IN:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: सही!
+        - text: मुझे पता नहीं
       courseD_multi_farmer_while4_predict1_2018_2019:
         questions:
         - {}
@@ -1305,63 +1426,71 @@ hi-IN:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: सही!
+        - text: मुझे पता नहीं
       courseD_multi_maze_until10_predict2:
         questions:
         - {}
         answers:
         - correct: true
+          feedback: सही!
         - {}
         - {}
-        - {}
+        - text: मुझे पता नहीं
       courseD_multi_maze_until10_predict2_2018:
         questions:
         - {}
         answers:
         - correct: true
+          feedback: सही!
         - {}
         - {}
-        - {}
+        - text: मुझे पता नहीं
       courseD_multi_maze_until10_predict2_2018_2019:
         questions:
         - {}
         answers:
         - correct: true
+          feedback: सही!
         - {}
         - {}
-        - {}
+        - text: मुझे पता नहीं
       courseD_multi_maze_until2_predict1:
         questions:
         - {}
         answers:
         - {}
         - correct: true
+          feedback: सही!
         - {}
-        - {}
+        - text: मुझे पता नहीं
       courseD_multi_maze_until2_predict1_2018:
         questions:
         - {}
         answers:
         - {}
         - correct: true
+          feedback: सही!
         - {}
-        - {}
+        - text: मुझे पता नहीं
       courseD_multi_maze_until2_predict1_2018_2019:
         questions:
         - {}
         answers:
         - {}
         - correct: true
+          feedback: सही!
         - {}
-        - {}
+        - text: मुझे पता नहीं
       courseD_multi_scrat_predict1:
         questions:
         - {}
         answers:
         - {}
         - correct: true
+          feedback: सही!
         - {}
-        - {}
+        - text: मुझे पता नहीं
       courseE_multi_bee_functions_predict1:
         questions:
         - {}
@@ -1369,7 +1498,7 @@ hi-IN:
         - correct: true
         - {}
         - {}
-        - {}
+        - text: मुझे पता नहीं
       courseE_multi_farmer_functions11_predict:
         questions:
         - {}
@@ -1378,6 +1507,7 @@ hi-IN:
         - {}
         - {}
         - correct: true
+          feedback: सही!
       courseE_multi_farmer_functions11_predict_2018:
         questions:
         - {}
@@ -1385,6 +1515,7 @@ hi-IN:
         - {}
         - {}
         - correct: true
+          feedback: सही!
         - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
         questions:
@@ -1393,6 +1524,7 @@ hi-IN:
         - {}
         - {}
         - correct: true
+          feedback: सही!
         - {}
       courseE_prediction_artistFunction1:
         questions:
@@ -1424,16 +1556,18 @@ hi-IN:
         answers:
         - {}
         - correct: true
+          feedback: सही!
         - {}
-        - {}
+        - text: मुझे पता नहीं
       courseF_bee_variables_8a_2018_2019:
         questions:
         - {}
         answers:
         - {}
         - correct: true
+          feedback: सही!
         - {}
-        - {}
+        - text: मुझे पता नहीं
       courseF_multi_artist_for10_predict1:
         questions:
         - {}
@@ -1441,7 +1575,8 @@ hi-IN:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: सही!
+        - text: मुझे पता नहीं
       courseF_multi_artist_for10_predict1_2018:
         questions:
         - {}
@@ -1449,7 +1584,8 @@ hi-IN:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: सही!
+        - text: मुझे पता नहीं
       courseF_multi_artist_for10_predict1_2018_2019:
         questions:
         - {}
@@ -1457,61 +1593,69 @@ hi-IN:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: सही!
+        - text: मुझे पता नहीं
       courseF_multi_artist_fwp2_predict1:
         questions:
         - {}
         answers:
         - correct: true
+          feedback: सही!
         - {}
         - {}
-        - {}
+        - text: मुझे पता नहीं
       courseF_multi_artist_variables3a_predict1:
         questions:
         - {}
         answers:
         - correct: true
+          feedback: सही!
         - {}
         - {}
-        - {}
+        - text: मुझे पता नहीं
       courseF_multi_artist_variables3a_predict1_2018:
         questions:
         - {}
         answers:
         - correct: true
+          feedback: सही!
         - {}
         - {}
-        - {}
+        - text: मुझे पता नहीं
       courseF_multi_artist_variables3a_predict1_2018_2019:
         questions:
         - {}
         answers:
         - correct: true
+          feedback: सही!
         - {}
         - {}
-        - {}
+        - text: मुझे पता नहीं
       courseF_multi_bee_conditionals1_predict1:
         questions:
         - {}
         answers:
         - {}
         - correct: true
+          feedback: सही!
         - {}
-        - {}
+        - text: मुझे पता नहीं
       courseF_multi_bee_conditionals7_predict2:
         questions:
         - {}
         answers:
         - correct: true
+          feedback: सही!
         - {}
         - {}
-        - {}
+        - text: मुझे पता नहीं
       courseF_multi_bee_for3_predict1:
         questions:
         - {}
         answers:
         - {}
         - correct: true
+          feedback: सही!
         - {}
         - {}
       courseF_multi_bee_for3_predict1_2018:
@@ -1520,6 +1664,7 @@ hi-IN:
         answers:
         - {}
         - correct: true
+          feedback: सही!
         - {}
         - {}
       courseF_multi_bee_for3_predict1_2018_2019:
@@ -1528,6 +1673,7 @@ hi-IN:
         answers:
         - {}
         - correct: true
+          feedback: सही!
         - {}
         - {}
       courseF_multi_bee_fwp9_predict1:
@@ -1537,21 +1683,23 @@ hi-IN:
         - {}
         - correct: true
         - {}
-        - {}
+        - text: मुझे पता नहीं
       courseF_multi_playlab_variables4c_predictive1:
         questions:
         - {}
         answers:
         - correct: true
+          feedback: 'सही। '
         - {}
         - {}
-        - {}
+        - text: मुझे पता नहीं
       coursee_prediction_artistfunction2:
         questions:
         - {}
         answers:
         - {}
         - correct: true
+          feedback: सही!
         - {}
         - {}
       coursee_prediction_artistfunction2_2018:
@@ -1560,6 +1708,7 @@ hi-IN:
         answers:
         - {}
         - correct: true
+          feedback: सही!
         - {}
         - {}
       coursee_prediction_artistfunction2_2018_2019:
@@ -1568,6 +1717,7 @@ hi-IN:
         answers:
         - {}
         - correct: true
+          feedback: सही!
         - {}
         - {}
       grade2_multi_collector_A_predict1:
@@ -1576,21 +1726,24 @@ hi-IN:
         answers:
         - {}
         - correct: true
-        - {}
-        - {}
+          feedback: सही!
+        - text: सारा खजाना एकत्र करने में लॉरेल की मदद करें।
+        - text: मुझे पता नहीं
       grade2_multi_collector_A_predict1_2018:
         questions:
         - {}
         answers:
         - {}
         - correct: true
-        - {}
-        - {}
+          feedback: सही!
+        - text: सारा खजाना एकत्र करने में लॉरेल की मदद करें।
+        - text: मुझे पता नहीं
       grade2_multi_collector_A_predict1_2018_2019:
         questions:
         - {}
         answers:
         - {}
         - correct: true
-        - {}
-        - {}
+          feedback: सही!
+        - text: सारा खजाना एकत्र करने में लॉरेल की मदद करें।
+        - text: मुझे पता नहीं

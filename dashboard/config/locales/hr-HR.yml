@@ -523,6 +523,10 @@ hr:
     stranicu za podršku. Možeš pregledavati <a href="http://support.code.org"> support.code.org</a>
     bez prijavljivanja ili pitaj roditelje ili učitelja da nas kontaktiraju umjesto
     tebe.
+  zendesk_too_young_message_markdown: Nažalost, mlađi korisnici se ne mogu prijaviti
+    na našu stranicu za podršku. Možeš pregledavati [support.code.org](http://support.code.org)
+    bez prijavljivanja ili pitaj roditelje ili učitelja da nas kontaktiraju umjesto
+    tebe.
   progress:
     not_started: nije započelo
     in_progress: u tijeku

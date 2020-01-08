@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "pour chaque élément";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "Pour chaque élément dans une liste, donner à la variable '%1' la valeur de l'élément, puis exécuter certaines instructions.";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#count_with";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "de %1 à %2 par %3";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "pour";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Faire en sorte que la variable %1 prenne les valeurs depuis le nombre de départ jusqu’au nombre final par incrément spécifié, en faisant les blocs spécifiés.";

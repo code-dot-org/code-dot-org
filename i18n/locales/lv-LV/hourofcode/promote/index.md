@@ -1,7 +1,5 @@
 ---
 title: Spread the word
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

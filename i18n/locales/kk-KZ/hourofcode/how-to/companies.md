@@ -1,7 +1,5 @@
 ---
 title: '"Кодтау Сағатын" қалай ұйымдастыруға болады - Компаниялар үшін'
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

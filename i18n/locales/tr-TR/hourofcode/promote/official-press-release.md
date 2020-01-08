@@ -1,7 +1,5 @@
 ---
 title: Seçilmiş Yetkililer için Kodlama Saati Basın Notları
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

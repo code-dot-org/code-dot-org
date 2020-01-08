@@ -1,6 +1,5 @@
 ---
 title: Συμμετοχή όλου του σχολείου
-layout: wide
 ---
 
 {{ signup_button }}

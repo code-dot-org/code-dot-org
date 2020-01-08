@@ -9,9 +9,10 @@ import Sounds from '../Sounds';
  * @returns {Promise<*>} The song manifest.
  */
 export async function getSongManifest(useRestrictedSongs) {
-  const manifestFilename = useRestrictedSongs
-    ? 'songManifest.json'
+  let manifestFilename = useRestrictedSongs
+    ? 'songManifest2019.json'
     : 'testManifest.json';
+
   const songManifestPromise = fetch(
     `/api/v1/sound-library/hoc_song_meta/${manifestFilename}`
   ).then(response => response.json());

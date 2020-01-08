@@ -47,6 +47,7 @@
   "jumpBackward": "skoč zpět o",
   "jumpForward": "skoč vpřed o",
   "jumpToOverDown": "",
+  "jumpToPosition": "",
   "jumpByDirection": "",
   "jumpTooltip": "Přesune malíře aniž by zanechal jakoukoliv stopu.",
   "jumpEastTooltip": "Posune malíře na východ bez zanechání stopy.",

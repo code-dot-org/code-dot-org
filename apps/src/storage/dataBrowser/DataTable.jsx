@@ -15,6 +15,7 @@ import color from '../../util/color';
 import {connect} from 'react-redux';
 import PaginationWrapper from '../../templates/PaginationWrapper';
 import msg from '@cdo/locale';
+import {WarningType} from '../constants';
 
 const MIN_TABLE_WIDTH = 600;
 const MAX_ROWS_PER_PAGE = 500;
@@ -56,7 +57,6 @@ const INITIAL_STATE = {
 
 class DataTable extends React.Component {
   static propTypes = {
-    getColumnNames: PropTypes.func.isRequired,
     readOnly: PropTypes.bool,
     rowsPerPage: PropTypes.number,
     // from redux state
@@ -161,12 +161,8 @@ class DataTable extends React.Component {
   };
 
   getNextColumnName() {
-    const names = this.props.getColumnNames(
-      this.props.tableRecords,
-      this.props.tableColumns
-    );
-    let i = names.length;
-    while (names.includes(`column${i}`)) {
+    let i = this.props.tableColumns.length;
+    while (this.props.tableColumns.includes(`column${i}`)) {
       i++;
     }
     return `column${i}`;
@@ -184,11 +180,11 @@ class DataTable extends React.Component {
         columnName,
         columnType,
         this.resetColumnState,
-        msg => {
-          if (String(msg).includes('Not all values in column')) {
-            this.props.onShowWarning(msg);
+        err => {
+          if (err.type === WarningType.CANNOT_CONVERT_COLUMN_TYPE) {
+            this.props.onShowWarning(err.msg);
           } else {
-            console.warn(msg);
+            console.warn(err.msg ? err.msg : err);
           }
         }
       );
@@ -210,10 +206,7 @@ class DataTable extends React.Component {
   }
 
   render() {
-    let columnNames = this.props.getColumnNames(
-      this.props.tableRecords,
-      this.props.tableColumns
-    );
+    let columnNames = [...this.props.tableColumns];
     let editingColumn = this.state.editingColumn;
 
     let rowsPerPage = this.props.rowsPerPage || MAX_ROWS_PER_PAGE;

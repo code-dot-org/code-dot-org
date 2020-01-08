@@ -1,10 +1,5 @@
 ---
 title: Köszönjük hogy jelentkeztél a Kódolás Órájának megtartására!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # Köszönjük hogy jelentkeztél a Kódolás Órájának megtartására!

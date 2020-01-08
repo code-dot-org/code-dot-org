@@ -1,7 +1,5 @@
 ---
 title: Сайланған өкілдерге арналған Кодтау сағатының баспасөз релизі
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

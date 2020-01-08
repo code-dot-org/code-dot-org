@@ -132,7 +132,7 @@ body.modal-open .supreme-container{
   font-size: 44px;
   line-height: 44px;
   color: white;
-  margin-top: 40px;
+  margin-top: 0px;
   margin-bottom: 20px;
 }
 
@@ -161,7 +161,7 @@ body.modal-open .supreme-container{
 
 .curriculum-banner {
   width: 100%;
-  background-color: rgb(118,101,160);;
+  background-color: rgb(118,101,160);
   text-align: center;
   color: white;
   padding: 14px;
@@ -181,7 +181,7 @@ body.modal-open .supreme-container{
 }
 
 #homepage .action_buttons {
-  margin-bottom: 100px;
+  margin-bottom: 20px;
 }
 
 #homepage #actions a {

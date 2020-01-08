@@ -1,0 +1,12 @@
+name 'unique level name here'
+display_name 'level display_name here'
+description 'level description here'
+
+sublevels
+level 'Dance_Party_extras_intro'
+level 'Dance_Party_extras_layout'
+level 'Dance_Party_extras_visible'
+level 'Dance_Party_extras_battle'
+level 'Dance_Party_extras_every_beat'
+level 'Dance_Party_extras_on_beat'
+level 'Dance_Party_extras_speed'

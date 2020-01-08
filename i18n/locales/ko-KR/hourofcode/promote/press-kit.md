@@ -1,7 +1,5 @@
 ---
 title: 언론매체 관련 키트
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

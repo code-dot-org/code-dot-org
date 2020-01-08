@@ -2,6 +2,41 @@
 eu:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            '"ALIEN"': estralurtar guztiak
+            '"BEAR"': hartz guztiak
+            '"CAT"': katu guztiak
+            '"DOG"': txakur guztiak
+            '"DUCK"': ahate guztiak
+            '"FROG"': zapo guztiak
+            '"MOOSE"': altze guztiak
+            '"PINEAPPLE"': piña giztiak
+            '"ROBOT"': robot guztiak
+            '"SHARK"': marrazo guztiak
+          MOVE1:
+            MOVES.Roll: Biratu
+            MOVES.ClapHigh: Txalo Haundi
+            MOVES.Dab: Mihi-arrain
+            MOVES.DoubleJam: Urdaiazpiko bikoitza
+            MOVES.Drop: Bota
+            MOVES.Floss: Haria
+            MOVES.Fresh: Freskatu
+            MOVES.Clown: Pailazoa
+            MOVES.Kick: Bota
+            MOVES.ThisOrThat: Hau edo Hori
+          MOVE2:
+            MOVES.Roll: Biratu
+            MOVES.ClapHigh: Txalo Haundi
+            MOVES.Dab: Mihi-arrain
+            MOVES.DoubleJam: Urdaiazpiko bikoitza
+            MOVES.Drop: Bota
+            MOVES.Floss: Haria
+            MOVES.Fresh: Freskatu
+            MOVES.Clown: Pailazoa
+            MOVES.Kick: Bota
+            MOVES.ThisOrThat: Hau edo Hori
       Dancelab_atTimestamp:
         text: "{TIMESTAMP} ondoren {UNIT}"
         options:
@@ -65,6 +100,25 @@ eu:
       Dancelab_changePropBy:
         text: aldatu {SPRITE} {PROPERTY} honekin {VAL}
         options:
+          PROPERTY:
+            '"scale"': tamaina
+            '"height"': Altuera
+            '"rotation"': itzulikapena
+            '"x"': posizio horizontala
+            '"y"': posizio bertikala
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            '"ALIEN"': estralurtar guztiak
+            '"BEAR"': hartz guztiak
+            '"CAT"': katu guztiak
+            '"DOG"': txakur guztiak
+            '"DUCK"': ahate guztiak
+            '"FROG"': zapo guztiak
+            '"MOOSE"': altze guztiak
+            '"PINEAPPLE"': piña giztiak
+            '"ROBOT"': robot guztiak
+            '"SHARK"': marrazo guztiak
           PROPERTY:
             '"scale"': tamaina
             '"height"': Altuera
@@ -182,6 +236,23 @@ eu:
             "{x: 100, y: 200}": ezkerrera
             "{x: 300, y: 200}": eskuinera
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ausazkoa
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            '"ALIEN"': estralurtar guztiak
+            '"BEAR"': hartz guztiak
+            '"CAT"': katu guztiak
+            '"DOG"': txakur guztiak
+            '"DUCK"': ahate guztiak
+            '"FROG"': zapo guztiak
+            '"MOOSE"': altze guztiak
+            '"PINEAPPLE"': piña giztiak
+            '"ROBOT"': robot guztiak
+            '"SHARK"': marrazo guztiak
+          LOCATION:
+            "{x: 100, y: 200}": ezkerrera
+            "{x: 300, y: 200}": eskuinera
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": ausazkoa
       Dancelab_layoutSprites:
         options:
           GROUP:
@@ -199,12 +270,28 @@ eu:
             '"random"': ausazkoa
       Dancelab_makeAnonymousDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': estralurtarra
+            '"CAT"': katua
+            '"DOG"': txakurra
+            '"DUCK"': ahatea
+            '"MOOSE"': altze guztiak
+            '"ROBOT"': robot
+            '"UNICORN"': adarbakarra
           LOCATION:
             "{x: 100, y: 200}": ezkerrera
             "{x: 300, y: 200}": eskuinera
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ausazkoa
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': estralurtarra
+            '"CAT"': katua
+            '"DOG"': txakurra
+            '"DUCK"': ahatea
+            '"MOOSE"': altze guztiak
+            '"ROBOT"': robot
+            '"UNICORN"': adarbakarra
           LOCATION:
             "{x: 100, y: 200}": ezkerrera
             "{x: 300, y: 200}": eskuinera
@@ -231,7 +318,19 @@ eu:
             '18': '18'
             '19': '19'
             '20': '20'
+          COSTUME:
+            '"ALIEN"': estralurtar guztiak
+            '"BEAR"': hartz guztiak
+            '"CAT"': katu guztiak
+            '"DOG"': txakur guztiak
+            '"DUCK"': ahate guztiak
+            '"FROG"': zapo guztiak
+            '"MOOSE"': altze guztiak
+            '"PINEAPPLE"': piña giztiak
+            '"ROBOT"': robot guztiak
+            '"SHARK"': marrazo guztiak
           LAYOUT:
+            '"diamond"': diamantea
             '"random"': ausazkoa
       Dancelab_randomColor:
         text: ausazko kolorea
@@ -278,7 +377,6 @@ eu:
             '"rotation"': itzulikapena
             '"x"': posizio horizontala
             '"y"': posizio bertikala
-            '"tint"': tinta
       Dancelab_setPropEach:
         options:
           GROUP:
@@ -301,6 +399,26 @@ eu:
             '"tint"': tinta
       Dancelab_setPropRandom:
         options:
+          PROPERTY:
+            '"scale"': tamaina
+            '"height"': Altuera
+            '"rotation"': itzulikapena
+            '"x"': posizio horizontala
+            '"y"': posizio bertikala
+            '"tint"': tinta
+      Dancelab_setPropRandomEach:
+        options:
+          GROUP:
+            '"ALIEN"': estralurtar guztiak
+            '"BEAR"': hartz guztiak
+            '"CAT"': katu guztiak
+            '"DOG"': txakur guztiak
+            '"DUCK"': ahate guztiak
+            '"FROG"': zapo guztiak
+            '"MOOSE"': altze guztiak
+            '"PINEAPPLE"': piña giztiak
+            '"ROBOT"': robot guztiak
+            '"SHARK"': marrazo guztiak
           PROPERTY:
             '"scale"': tamaina
             '"height"': Altuera
@@ -365,6 +483,28 @@ eu:
             '"tint"': tinta
           RANGE:
             '"mid"': erdi
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            '"ALIEN"': estralurtar guztiak
+            '"BEAR"': hartz guztiak
+            '"CAT"': katu guztiak
+            '"DOG"': txakur guztiak
+            '"DUCK"': ahate guztiak
+            '"FROG"': zapo guztiak
+            '"MOOSE"': altze guztiak
+            '"PINEAPPLE"': piña giztiak
+            '"ROBOT"': robot guztiak
+            '"SHARK"': marrazo guztiak
+          PROPERTY:
+            '"scale"': tamaina
+            '"height"': Altuera
+            '"rotation"': itzulikapena
+            '"x"': posizio horizontala
+            '"y"': posizio bertikala
+            '"tint"': tinta
+          RANGE:
+            '"mid"': erdi
       Dancelab_stopMapping:
         text: "{SPRITE} gelditu {PROPERTY} jarraituz {RANGE}"
         options:
@@ -378,6 +518,36 @@ eu:
             '"tint"': tinta
           RANGE:
             '"mid"': erdi
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            '"ALIEN"': estralurtar guztiak
+            '"BEAR"': hartz guztiak
+            '"CAT"': katu guztiak
+            '"DOG"': txakur guztiak
+            '"DUCK"': ahate guztiak
+            '"FROG"': zapo guztiak
+            '"MOOSE"': altze guztiak
+            '"PINEAPPLE"': piña giztiak
+            '"ROBOT"': robot guztiak
+            '"SHARK"': marrazo guztiak
+          PROPERTY:
+            '"scale"': tamaina
+            '"height"': Altuera
+            '"rotation"': itzulikapena
+            '"x"': posizio horizontala
+            '"y"': posizio bertikala
+            '"direction"': mugimentuaren norantza
+            '"tint"': tinta
+          RANGE:
+            '"mid"': erdi
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': diamantea
+            '"s"': s
+            '"w"': w
+            '"x"': x
       Dancelab_whenKey:
         text: "{KEY} zapaltzean"
         options:
@@ -590,6 +760,8 @@ eu:
             MOVES.ThisOrThat: Hau edo Hori
       Mikelab_randomColor:
         text: ausazko kolorea
+      Mikelab_repeatUntilComplete:
+        text: errepikatu betirako
       Mikelab_setBG:
         options:
           BG:

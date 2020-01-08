@@ -27,10 +27,11 @@ nl:
     attributes:
       user:
         name: 'Weergegeven naam'
-        name_example: 'Weergavenaam <br/> (bv. Stoere Coder of Emma S.)'
+        name_example: 'Weergavenaam (bv. Stoere Coder of Emma S.)'
         email: 'Email'
         parent_email: 'E-mail van de ouder/voogd'
         personal_email: "Persoonlijke e-mailadres <a href=\"%{url}\"> (Klik hier als u geen e-mailadres hebt)</a>"
+        personal_email_markdown: "Persoonlijke e-mailadres [(Klik hier als u geen e-mailadres hebt)](%{url})"
         username: 'gebruikersnaam'
         password: 'Wachtwoord'
         password_confirmation: 'Wachtwoord bevestiging'
@@ -41,7 +42,9 @@ nl:
         edit_header: 'Accountdetails bewerken'
         finish_sign_up_header: 'Voltooi het maken van je account'
         finish_sign_up_subheader: 'Vul de volgende informatie in om het aanmaken van een Code.org-account voor <strong>%{email}</strong> te voltooien.'
+        finish_sign_up_subheader_markdown: 'Vul de volgende informatie in om het aanmaken van een Code.org-account voor **%{email}** te voltooien.'
         finish_sign_up_subheader_provider: 'Vul de volgende informatie in om het aanmaken van een Code.org-account met <strong>%{provider}</strong> voor <strong>%{email}</strong> te voltooien.'
+        finish_sign_up_subheader_provider_markdown: 'Vul de volgende informatie in om het aanmaken van een Code.org-account met **%{provider}** voor **%{email}** te voltooien.'
         error:
           future: kan niet in de toekomst
   beta: "beta"
@@ -107,6 +110,7 @@ nl:
     student_count: '%{count} studenten hebben zich reeds aangemeld.'
     teacher_count: '%{count} leraren hebben zich reeds aangemeld.'
     overview: 'Maak een account aan om je vorderingen te volgen of je klad te managen.<a href="/">Je kan de verschillende stadia en puzzels</a>browsen maar als je je vorderingen en projecten wil opslaan dan moet je ingelogd zijn.'
+    overview_markdown: 'Maak een account aan om je vorderingen te volgen of je klad te managen.[Je kan de verschillende stadia en puzzels](/)browsen maar als je je vorderingen en projecten wil opslaan dan moet je ingelogd zijn.'
     hoc_already_signed_up_heading: 'Aan de slag zonder in te loggen'
     hoc_already_signed_up_content: 'U bent aangemeld als leraar van Hour of Code! U en uw leerlingen hoeven niet aan te melden bij Code Studio om deel te nemen aan dit project. Om te beginnen, <a href="%{learn_url}"> Kies een cursus</a> voor uw klas en deel de link met hen. <br/> <br/> Als U het leuk vond en verder wil gaan met Hour of Code, kunt u hieronder een gebruikersnaam en wachtwoord instellen voor uw leerlingen.<a href="%{educate_url}"> langere cursussen</a>.'
     teacher_educator_guide: 'Kijk in de lerarengids'
@@ -523,6 +527,8 @@ nl:
       cta: 'Leer hoe'
     dance:
       title: 'Dansfeest'
+    dance-2019:
+      title: 'Dansfeest'
     hoc:
       title: 'Klassiek doolhof'
       body: 'Probeer de beginselen van de informatica. Miljoenen gingen je voor!'
@@ -674,6 +680,7 @@ nl:
     submit: "Insturen"
     decline: "Afsluiten"
   zendesk_too_young_message: 'Sorry, jeugdige gebruikers mogen niet inloggen op onze ondersteuningssite. Je mag <a href="http://support.code.org">support.code.org</a> wel bekijken zonder in te loggen of je ouder of leraar vragen met ons contact op te nemen.'
+  zendesk_too_young_message_markdown: 'Sorry, jeugdige gebruikers mogen niet inloggen op onze ondersteuningssite. Je mag [support.code.org](http://support.code.org) wel bekijken zonder in te loggen of je ouder of leraar vragen met ons contact op te nemen.'
   progress:
     not_started: niet gestart
     in_progress: wordt uitgevoerd
@@ -765,6 +772,7 @@ nl:
     csp_functions: 'Functies'
     csp_lists: 'Lijsten'
     csp_loops: 'Lussen'
+    k5_next_steps: 'Volgende stappen'
   external_links:
     disclaimer: Disclaimer
   hoc_download:

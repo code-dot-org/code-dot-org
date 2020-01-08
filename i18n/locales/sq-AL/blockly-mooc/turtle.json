@@ -47,6 +47,7 @@
   "jumpBackward": "kërce mbrapa me",
   "jumpForward": "kërce përpara me",
   "jumpToOverDown": "",
+  "jumpToPosition": "",
   "jumpByDirection": "",
   "jumpTooltip": "Zhvendose artistin pa lënë asnjë shenjë.",
   "jumpEastTooltip": "Lëviz artistin në lindje pa lënë asnjë shenjë.",

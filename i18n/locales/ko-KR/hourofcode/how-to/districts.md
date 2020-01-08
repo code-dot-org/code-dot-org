@@ -1,7 +1,5 @@
 ---
 title: 지역을 위한 Hour of Code 방법
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

@@ -1,10 +1,5 @@
 ---
 title: Hvala, ker ste se prijavili kot gostitelj Ure za kodo!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # Hvala, ker ste se prijavili kot gostitelj Ure za kodo!

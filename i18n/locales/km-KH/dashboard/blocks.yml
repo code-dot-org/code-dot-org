@@ -2,6 +2,14 @@
 km:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: ទាំងអស់
+          MOVE1:
+            MOVES.Rest: គ្មាន
+          MOVE2:
+            MOVES.Rest: គ្មាន
       Dancelab_atTimestamp:
         options:
           UNIT:
@@ -24,6 +32,13 @@ km:
             "-1": "←"
       Dancelab_changePropBy:
         options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"height"': កម្ពស់
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: ទាំងអស់
           PROPERTY:
             '"scale"': ទំហំ
             '"height"': កម្ពស់
@@ -70,6 +85,14 @@ km:
             "{x: 100, y: 200}": ឆ្វេង
             "{x: 300, y: 200}": ស្តាំ
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ព្រាវ
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: ទាំងអស់
+          LOCATION:
+            "{x: 100, y: 200}": ឆ្វេង
+            "{x: 300, y: 200}": ស្តាំ
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": ព្រាវ
       Dancelab_layoutSprites:
         options:
           GROUP:
@@ -78,12 +101,26 @@ km:
             '"random"': ព្រាវ
       Dancelab_makeAnonymousDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': មនុស្សក្រៅភព
+            '"CAT"': ឆ្មា
+            '"DOG"': ឆ្កែ
+            '"DUCK"': ទា
+            '"ROBOT"': robot
+            '"UNICORN"': សេះដុះស្នែង
           LOCATION:
             "{x: 100, y: 200}": ឆ្វេង
             "{x: 300, y: 200}": ស្តាំ
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ព្រាវ
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': មនុស្សក្រៅភព
+            '"CAT"': ឆ្មា
+            '"DOG"': ឆ្កែ
+            '"DUCK"': ទា
+            '"ROBOT"': robot
+            '"UNICORN"': សេះដុះស្នែង
           LOCATION:
             "{x: 100, y: 200}": ឆ្វេង
             "{x: 300, y: 200}": ស្តាំ
@@ -111,6 +148,7 @@ km:
             '19': '19'
             '20': '20'
           LAYOUT:
+            '"diamond"': គ្រាប់ពេជ្រ
             '"random"': ព្រាវ
       Dancelab_randomColor:
         text: ពណ៌​ព្រាវ
@@ -165,6 +203,13 @@ km:
           PROPERTY:
             '"scale"': ទំហំ
             '"height"': កម្ពស់
+      Dancelab_setPropRandomEach:
+        options:
+          GROUP:
+            sprites: ទាំងអស់
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"height"': កម្ពស់
       Dancelab_setTintEach:
         options:
           THIS:
@@ -182,11 +227,31 @@ km:
           PROPERTY:
             '"scale"': ទំហំ
             '"height"': កម្ពស់
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: ទាំងអស់
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"height"': កម្ពស់
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': ទំហំ
             '"height"': កម្ពស់
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: ទាំងអស់
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"height"': កម្ពស់
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': គ្រាប់ពេជ្រ
+            '"x"': x
+            '"y"': 'y'
       Dancelab_whenKey:
         options:
           KEY:
@@ -356,6 +421,8 @@ km:
             MOVES.Rest: គ្មាន
       Mikelab_randomColor:
         text: ពណ៌​ព្រាវ
+      Mikelab_repeatUntilComplete:
+        text: ធ្វើ​ឡើង​វិញ​ជា​រៀង​រហូត
       Mikelab_setBG:
         options:
           BG:

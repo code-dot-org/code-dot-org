@@ -1,7 +1,5 @@
 ---
 title: Информатика аптасы менен Код саатын колдоо документинин үлгүсү
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

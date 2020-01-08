@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom';
 import sinon from 'sinon';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 import GameLab from '@cdo/apps/p5lab/gamelab/GameLab';
 import Sounds from '@cdo/apps/Sounds';
 import {
@@ -62,7 +62,7 @@ describe('GameLab', () => {
     });
 
     it('Must have studioApp injected first', () => {
-      expect(() => instance.init({})).to.throw('P5Lab requires a StudioApp');
+      expect(() => instance.init({})).to.throw('GameLab requires a StudioApp');
     });
 
     describe('After being injected with a studioApp instance', () => {

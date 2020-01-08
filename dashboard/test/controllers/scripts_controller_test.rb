@@ -296,15 +296,7 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test 'create' do
-    expected_contents = <<-TEXT.strip_heredoc
-      hidden false
-      login_required true
-      hideable_stages true
-      wrapup_video 'hoc_wrapup'
-      project_sharing true
-      curriculum_umbrella 'CSP'
-
-    TEXT
+    expected_contents = ''
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
     File.stubs(:write).with('config/scripts/test-script-create.script', expected_contents).once
     Rails.application.config.stubs(:levelbuilder_mode).returns true
@@ -312,23 +304,11 @@ class ScriptsControllerTest < ActionController::TestCase
 
     post :create, params: {
       script: {name: 'test-script-create'},
-      script_text: '',
-      visible_to_teachers: true,
-      login_required: true,
-      hideable_stages: true,
-      wrapup_video: 'hoc_wrapup',
-      project_sharing: 'on',
-      curriculum_umbrella: 'CSP'
     }
-    assert_redirected_to script_path id: 'test-script-create'
+    assert_redirected_to edit_script_path id: 'test-script-create'
 
     script = Script.find_by_name('test-script-create')
     assert_equal 'test-script-create', script.name
-    refute script.hidden
-    assert script.login_required
-    assert script.hideable_stages
-    assert script.project_sharing
-    assert_equal "CSP", script.curriculum_umbrella
   end
 
   test 'destroy raises exception for evil filenames' do
@@ -529,5 +509,37 @@ class ScriptsControllerTest < ActionController::TestCase
     create :script, name: 'dogs3', family_name: 'coursea', version_year: '1899', is_stable: true
     get :show, params: {id: 'coursea'}
     assert_redirected_to "/s/dogs2"
+  end
+
+  test 'uses gui editor when script levels have variants without experiments' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    (1..2).map {|n| create(:level, name: "Level #{n}")}
+    script_file = File.join(self.class.fixture_path, "test-fixture-variants.script")
+    Script.setup([script_file])
+
+    get :edit, params: {id: 'test-fixture-variants', beta: true}
+    assert_response :success
+    assert_select "script[data-levelbuildereditscript]"
+    assert_select "script[data-levelbuildereditscript]" do |elements|
+      assert elements.first['data-levelbuildereditscript'].match?(/"beta":true/)
+    end
+  end
+
+  test 'uses dsl editor when script levels have variants with experiments' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    (1..2).map {|n| create(:level, name: "Level #{n}")}
+    script_file = File.join(self.class.fixture_path, "test-fixture-experiments.script")
+    Script.setup([script_file])
+
+    get :edit, params: {id: 'test-fixture-experiments'}
+    assert_response :success
+    assert_select "script[data-levelbuildereditscript]"
+    assert_select "script[data-levelbuildereditscript]" do |elements|
+      assert elements.first['data-levelbuildereditscript'].match?(/"beta":false/)
+    end
   end
 end

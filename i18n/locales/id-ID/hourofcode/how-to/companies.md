@@ -1,7 +1,5 @@
 ---
 title: Bagaimana mengadakan Hour of Code - perusahaan
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

@@ -1,6 +1,5 @@
 ---
-title: Activity Guidelines
-layout: wide
+title: गतिविधि दिशानिर्देश
 ---
 
 <style>

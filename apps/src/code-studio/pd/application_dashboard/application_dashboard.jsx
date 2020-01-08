@@ -44,21 +44,6 @@ const ApplicationDashboardHeader = props => (
 );
 
 const paths = {
-  csf_facilitators: {
-    type: 'facilitator',
-    name: 'CS Fundamentals Facilitator Applications',
-    course: 'csf'
-  },
-  csd_facilitators: {
-    type: 'facilitator',
-    name: 'CS Discoveries Facilitator Applications',
-    course: 'csd'
-  },
-  csp_facilitators: {
-    type: 'facilitator',
-    name: 'CS Principles Facilitator Applications',
-    course: 'csp'
-  },
   csd_teachers: {
     type: 'teacher',
     name: 'CS Discoveries Teacher Applications',

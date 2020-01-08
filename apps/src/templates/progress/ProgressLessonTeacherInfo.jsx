@@ -105,7 +105,7 @@ export const UnconnectedProgressLessonTeacherInfo = ProgressLessonTeacherInfo;
 
 export default connect(
   state => ({
-    sectionId: state.teacherSections.selectedSectionId,
+    sectionId: state.teacherSections.selectedSectionId.toString(),
     scriptAllowsHiddenStages: state.hiddenStage.hideableStagesAllowed,
     hiddenStageState: state.hiddenStage,
     scriptName: state.progress.scriptName,

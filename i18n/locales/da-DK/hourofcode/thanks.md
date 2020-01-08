@@ -1,10 +1,5 @@
 ---
 title: Tak fordi du vil arrangere Hour of Code!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # Tak fordi du vil arrangere Hour of Code!

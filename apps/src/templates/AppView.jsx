@@ -20,7 +20,8 @@ class AppView extends React.Component {
 
     // not provided by redux
     visualizationColumn: PropTypes.element,
-    onMount: PropTypes.func.isRequired
+    onMount: PropTypes.func.isRequired,
+    rotateContainerWidth: PropTypes.number
   };
 
   componentDidMount() {
@@ -34,7 +35,7 @@ class AppView extends React.Component {
     });
 
     return (
-      <StudioAppWrapper>
+      <StudioAppWrapper rotateContainerWidth={this.props.rotateContainerWidth}>
         <Overlay />
         <div id="visualizationColumn" className={visualizationColumnClassNames}>
           {this.props.visualizationColumn}

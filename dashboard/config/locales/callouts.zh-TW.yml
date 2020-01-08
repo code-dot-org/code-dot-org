@@ -10,18 +10,58 @@ zh-TW:
         4-5_Artist_Patterns_Free_Play_1: 你喜愛的所有積木現在被依功能分成多個類別，點擊這些類別看看它們在哪裡！
       4-5 Bee Conditionals 2:
         4_5_Bee_Conditionals_2_1: 記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。
+      AppLab Intro 7 - Change Screen Color:
+        applab_hoc_finish: 顯示幕變綠了嗎？ 如果是這樣，請點擊“完成”。 如果沒有，請點擊“重置”，更改代碼，然後再次點擊“運行”。
+      AppLab Intro 7 - thisOrThatAddButton:
+        AppLabHoCFinal11: 你現在處於設計模式中。
       CSD U3 Variables Predict Where X:
         CSD_U3_variables: 在此修改數值
       CSD U3 Variables Predict Where X_2018:
         CSD_U3_variables: 在此修改數值
       CSD U3 Variables Predict Where X_2019:
         CSD_U3_variables: 在此修改數值
+      CSD U3 abstraction accelerateX:
+        CSD_U3_L11_S6_C1: 添加你的程式到這兒。
+      CSD U3 abstraction accelerateX_2018:
+        CSD_U3_L11_S6_C1: 添加你的程式到這兒。
+      CSD U3 abstraction accelerateX_2019:
+        CSD_U3_L11_S6_C1: 添加你的程式到這兒。
+      CSD U3 abstraction accelerateY:
+        CSD_U3_L11_S7_C1: 添加你的程式到這兒。
+      CSD U3 abstraction accelerateY_2018:
+        CSD_U3_L11_S7_C1: 添加你的程式到這兒。
+      CSD U3 abstraction accelerateY_2019:
+        CSD_U3_L11_S7_C1: 添加你的程式到這兒。
       CSD U3 abstraction jumping:
         CSD_U3_L13_S8_C1: 在此設定速度
       CSD U3 abstraction jumping_2018:
         CSD_U3_L13_S8_C1: 在此設定速度
       CSD U3 abstraction jumping_2019:
         CSD_U3_L13_S8_C1: 在此設定速度
+      CSD U3 abstraction velocityX:
+        CSD_U3_L11_S4_C1: 添加你的積木到這兒。
+      CSD U3 abstraction velocityX_2018:
+        CSD_U3_L11_S4_C1: 添加你的積木到這兒。
+      CSD U3 abstraction velocityX_2019:
+        CSD_U3_L11_S4_C1: 添加你的積木到這兒。
+      CSD U3 abstraction velocityY:
+        CSD_U3_L11_S5_C1: 添加你的積木到這兒。
+      CSD U3 abstraction velocityY_2018:
+        CSD_U3_L11_S5_C1: 添加你的積木到這兒。
+      CSD U3 abstraction velocityY_2019:
+        CSD_U3_L11_S5_C1: 添加你的積木到這兒。
+      CSD U3 collisions isTouching intro:
+        CSD_U3_L12_S2_C1: 添加你的積木到這兒。
+      CSD U3 collisions isTouching intro_2018:
+        CSD_U3_L12_S2_C1: 添加你的積木到這兒。
+      CSD U3 collisions isTouching intro_2019:
+        CSD_U3_L12_S2_C1: 添加你的積木到這兒。
+      CSD U3 collisions types:
+        CSD_U3_L13_S6_C1: 添加你的程式到這兒。
+      CSD U3 collisions types_2018:
+        CSD_U3_L13_S6_C1: 添加你的程式到這兒。
+      CSD U3 collisions types_2019:
+        CSD_U3_L13_S6_C1: 添加你的程式到這兒。
       CSD U3 debug:
         CSD_U3_rect_c1: 這兒是代碼
         CSD_U3_rect_c2: 拖曳這個積木到工作區裡。
@@ -49,6 +89,30 @@ zh-TW:
       CSD U3 fill_2019:
         CSD_U3_rect_c1: 這兒是代碼
         CSD_U3_rect_c2: 拖曳這個積木到工作區裡。
+      CSD U3 platform background1:
+        CSD_U3_L16_S3_C3: 修改這個函式。
+      CSD U3 platform background1_2018:
+        CSD_U3_L16_S3_C3: 修改這個函式。
+      CSD U3 platform background1_2019:
+        CSD_U3_L16_S3_C3: 修改這個函式。
+      CSD U3 platform platform1:
+        CSD_U3_S17_L8_C1: 這個積木創建了一個新的角色。
+      CSD U3 platform platform1_2018:
+        CSD_U3_S17_L8_C1: 這個積木創建了一個新的角色。
+      CSD U3 platform platform1_2019:
+        CSD_U3_S17_L8_C1: 這個積木創建了一個新的角色。
+      CSD U3 platform scoreboard:
+        CSD_U3_L17_S7_C1: 分數會輸出到這兒。
+      CSD U3 platform scoreboard_2018:
+        CSD_U3_L17_S7_C1: 分數會輸出到這兒。
+      CSD U3 platform scoreboard_2019:
+        CSD_U3_L17_S7_C1: 分數會輸出到這兒。
+      CSD U3 platform variable1:
+        callout: 這個積木創建了一個變數。
+      CSD U3 platform variable1_2018:
+        callout: 這個積木創建了一個變數。
+      CSD U3 platform variable1_2019:
+        callout: 這個積木創建了一個變數。
       CSD U3 rect:
         CSD_U3_rect_c1: 這兒是代碼
         CSD_U3_rect_c2: 這個是「運行」按鈕。
@@ -65,6 +129,12 @@ zh-TW:
       CSD U3 sequence_2019:
         CSD_U3_rect_c1: 這兒是代碼
         CSD_U3_rect_c2: 拖曳這個積木到工作區裡。
+      CSD U6 getProperty input:
+        CSD_U6L06P03: 添加你的積木到這兒。
+      CSD U6 getProperty input_2018:
+        CSD_U6L06P03: 添加你的積木到這兒。
+      CSD U6 getProperty input_2019:
+        CSD_U6L06P03: 添加你的積木到這兒。
       Course 4 Artist 4:
         repeat_full_circle: 殭屍需要移動多少次才能完成一個圓？輸入移動的次數。
       Course 4 Artist 7:
@@ -118,6 +188,24 @@ zh-TW:
       CourseD_Dance_Party_11:
         dance_callout_11_a: 新的程式積木！
         dance_callout_11_b: 新的程式積木！
+      CourseD_Dance_Party_11_5:
+        dance_party_11_5_groups: 在這裡查找「所有鴨子」程式積木
+      Dance_2019_01:
+        dance_callout_01: 在這裡選擇舞者的類型。
+      Dance_2019_02:
+        dance_callout_11_a: 將此程式積木添加到您的程式中。
+        arrow_buttons: 按箭頭按鈕控制舞者。
+      Dance_2019_04:
+        dance_callout_02: 將此程式積木新增至您的程式！
+      Dance_2019_05:
+        dance_callout_05: 將新事件添加到程式中。
+      Dance_2019_06:
+        dance_party_11_5_groups: 新的程式積木！
+      Dance_2019_07:
+        setprop_hint: 新的程式積木！
+      Dance_2019_09:
+        new_block_3: 新的程式積木！
+        new_block_4: 新的程式積木！
       Dance_Party_01:
         dance_callout_01: 將此程式積木新增至您的程式！
       Dance_Party_02:
@@ -129,6 +217,8 @@ zh-TW:
       Dance_Party_11:
         dance_callout_11_a: 新的程式積木！
         dance_callout_11_b: 新的程式積木！
+      Dance_Party_11_5:
+        dance_party_11_5_groups: 在這裡查找「所有鴨子」程式積木
       Function intro Ryan:
         Function_intro_Ryan_1: 此簡單的指令可告訴電腦在工作空間中執行有相同名稱的大量代碼。
       Function intro Ryan_2019:
@@ -239,6 +329,8 @@ zh-TW:
         gradek_adventurer_loops2_1: 這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。
       courseA_collector_loops3_2019:
         gradek_adventurer_loops2_1: 這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。
+      courseA_collector_preLoops1:
+        courseA_collector_preLoops1_1: 點擊此處觀看程式運行！
       courseA_collector_preLoops2:
         courseA_collector_loops1_1: 發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。
       courseA_collector_preLoops3:
@@ -257,6 +349,8 @@ zh-TW:
         courseA_maze_seq1_1: 當您需要提示時，點一下燈泡！
       courseA_maze_seq2:
         courseA_maze_seqA_callout1: 使用步進按鈕可以一步一步的運行程式中的指令，這可以讓你更容易找到出錯的地方！
+      courseA_maze_seq4:
+        made_of_stone: 這些積木就像石頭一樣，你可以移動它們，但你無法刪除它們！
       courseA_playLab_events4:
         courseA_playlab_events4_callout1: 這是一個標注
       courseA_playLab_events4_2018:
@@ -388,6 +482,10 @@ zh-TW:
         courseF_bee_functions2_1: 這個積木稱做函式（function）。點擊「編輯」按鈕看看裡面有什麼！
       courseF_bee_functions6:
         courseF_bee_functions6_1: 別忘了看看這兒，裡頭有更多積木，也許可以幫助你！
+      courseF_bee_variables_1_2018:
+        courseF_bee_functions_1_2018_1: 可以在這裡找到你的變量！
+      courseF_bee_variables_1_2019:
+        courseF_bee_functions_1_2018_1: 可以在這裡找到你的變量！
       frozen circle function with parameter:
         frozen_circle_function_with_parameter_circle: 使用「建立一個圓形」積木並修改它的尺寸。
       frozen cross:

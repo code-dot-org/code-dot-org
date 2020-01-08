@@ -1,7 +1,5 @@
 ---
 title: Blurbs and useful stats
-layout: wide
-nav: promote_nav
 ---
 
 <a id="blurb"></a>
@@ -32,7 +30,7 @@ Umaasa kami na ito'y magbibigay ng kislap sa interes sa mga estudyante upang pat
 
 #### Bakit ito mahalaga?
 
-Ang teknolohiya ay binabago ang bawat industriya sa planeta. Sa 2015, 7 milyon ang magbubukas sa U.S. ng mga trabaho—kasama ang sining at disenyo—na pinahahalagahan ang kasanayan sa coding. But 65 percent of schools in the U.S. don't teach computer science. Oras na para tayo ay huwag magpahuli sa ika-21 na siglo. Alam natin na kahit ano pa man ang gawin ng mga estudyante kapag malaki na sila, kahit sila ay mapunta sa medisina, negosyo, pulitika, o sa sining, sa kaalaman nila kung paano nabubuo ang teknolohiya ang magbibigay sa kanila ng tiwala sa sarili at ng kompetitibong kalamangan. <br /> <br />
+Ang teknolohiya ay binabago ang bawat industriya sa planeta. Sa 2015, 7 milyon ang magbubukas sa U.S. ng mga trabaho—kasama ang sining at disenyo—na pinahahalagahan ang kasanayan sa coding. But 55 percent of schools in the U.S. don't teach computer science. Oras na para tayo ay huwag magpahuli sa ika-21 na siglo. Alam natin na kahit ano pa man ang gawin ng mga estudyante kapag malaki na sila, kahit sila ay mapunta sa medisina, negosyo, pulitika, o sa sining, sa kaalaman nila kung paano nabubuo ang teknolohiya ang magbibigay sa kanila ng tiwala sa sarili at ng kompetitibong kalamangan. <br /> <br />
 
 #### A quote you can use in materials
 
@@ -44,7 +42,7 @@ Code.org ay isang 501c3 na pampubliko na hindi pwedeng pagkakitaan na inilaan up
 
 ## Share these on social media and in emails
 
-[![larawan](/images/social-media//fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![larawan](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![larawan](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![larawan](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![larawan](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![larawan](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="infographics"></a>
 

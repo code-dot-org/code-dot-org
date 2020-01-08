@@ -1,6 +1,5 @@
 ---
 title: Panduan Tutorial
-layout: wide
 ---
 
 <style>

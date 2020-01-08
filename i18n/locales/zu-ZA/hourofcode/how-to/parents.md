@@ -1,7 +1,5 @@
 ---
 title: Indlela yokuqondisa eyenzelwe abazali
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

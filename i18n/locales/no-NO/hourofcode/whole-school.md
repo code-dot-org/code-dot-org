@@ -1,6 +1,5 @@
 ---
 title: Full skoledeltakelse
-layout: wide
 ---
 
 {{ signup_button }}

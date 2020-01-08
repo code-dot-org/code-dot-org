@@ -1,7 +1,5 @@
 ---
 title: 학부모들을 위한 활용 가이드
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

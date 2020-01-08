@@ -1,7 +1,5 @@
 ---
 title: 議員向けのHour of Codeのプレスリリース
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

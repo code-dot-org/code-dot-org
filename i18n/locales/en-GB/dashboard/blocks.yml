@@ -16,6 +16,10 @@ en-GB:
         options:
           PROPERTY:
             '"height"': height
+      Dancelab_changePropEachBy:
+        options:
+          PROPERTY:
+            '"height"': height
       Dancelab_doMoveEachLR:
         options:
           DIR:
@@ -34,16 +38,24 @@ en-GB:
         options:
           LOCATION:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": random
+      Dancelab_jumpToEach:
+        options:
+          LOCATION:
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": random
       Dancelab_layoutSprites:
         options:
           FORMAT:
             '"random"': random
       Dancelab_makeAnonymousDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': alien
           LOCATION:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": random
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': alien
           LOCATION:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": random
       Dancelab_makeNewDanceSpriteGroup:
@@ -100,7 +112,15 @@ en-GB:
         options:
           PROPERTY:
             '"height"': height
+      Dancelab_setPropRandomEach:
+        options:
+          PROPERTY:
+            '"height"': height
       Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"height"': height
+      Dancelab_startMappingEach:
         options:
           PROPERTY:
             '"height"': height
@@ -108,6 +128,14 @@ en-GB:
         options:
           PROPERTY:
             '"height"': height
+      Dancelab_stopMappingEach:
+        options:
+          PROPERTY:
+            '"height"': height
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"x"': x
       Dancelab_whenKey:
         options:
           KEY:

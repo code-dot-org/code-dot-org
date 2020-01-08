@@ -1,10 +1,5 @@
 ---
 title: 謝謝您報名舉辦一小時玩程式活動！
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # 謝謝您報名舉辦一小時玩程式活動！

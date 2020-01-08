@@ -4,14 +4,23 @@ id:
     course:
       name:
         csp-2017:
+          version_title: "'17-'18"
           description_short: Mempelajari konsep-konsep pengetahuan dasar ilmu komputer.
+        csd-2017:
+          version_title: "'17-'18"
         allthethingscourse:
           description_short: Ini adalah kursus untuk semua bidang
           description_student: Ini adalah kursus untuk semua bidang dan memiliki penjelasan
             yang mudah bagi siswa
           description_teacher: Ini adalah kursus untuk semua bidang dan memiliki penjelasan
             yang mudah bagi guru
+        csd-2018:
+          version_title: "'18-'19"
         csp-2018:
+          version_title: "'18-'19"
           description_short: Mempelajari konsep-konsep pengetahuan dasar ilmu komputer.
         csp-2019:
+          version_title: "'19-'20"
           description_short: Mempelajari konsep-konsep pengetahuan dasar ilmu komputer.
+        csd-2019:
+          version_title: "'19-'20"

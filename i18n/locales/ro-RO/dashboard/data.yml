@@ -480,7 +480,8 @@ ro:
         hoc_dance_warmup: Petrecere cu dans - Pregătire
         hoc_dance_events: Petrecere cu dans - Evenimente
         hoc_dance_properties: Petrecere cu dans - Proprietăţi
-        hoc_dance_congrats: Petrecere cu dans - Petrecerea continuă!
+        hoc_dance_congrats: Petrecere dansantă - Să înceapă petrecerea!
+        teaching_csf_how_it_works: 'Predarea cursului Fundamentele CS: Cum funcționează cursul'
         elem_pd_2: Știința calculatoarelor în școala elementară - PD film 2/2
         what_is_cs: Ce este știința calculatoarelor?
         repeat_block: Utilizarea blocului ”repetă” (repeat)
@@ -493,9 +494,16 @@ ro:
         what_is_an_event: Ce este un eveniment?
         teaching_cs_pair_programming: 'Predarea cursului Fundamentele CS: Programarea pe perechi'
         teaching_problem_solving: 'Predarea cursului Fundamentele CS: Predarea modalităților de rezolvare a problemelor'
+        csd_applab_designmode: 'Descoperiri informatice: Laboratorul de Aplicaţii - Modul de Proiectare'
         csd_pair_programming: Programare în perechi
+        csd_gamelab_functions: Apelând şi definind funcţii
         csd_applab_parameters: Funcții cu Parametrii
+        csd_applab_loops: Bucle în laboratorul de aplicaţii
+        CSF_Going_Places_Safely: Cartierul meu online
+        CSF_SpriteLab_Intro_v2: Prezentând Laboratorul de Desen
+        CSF_Spritelab_MakeSprite_v2: Cum să Faci un Desen
         CSF_SpriteLab_SpritesInAction_v2: Spiriduși în acțiune
+        csd_applab_designmode_short: Laborator de aplicații - mod de proiectare
     callout:
       text:
         drag_blocks: Trage un bloc "mutare" şi fixează-l sub alt bloc

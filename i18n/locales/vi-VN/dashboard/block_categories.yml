@@ -1,0 +1,29 @@
+vi:
+  data:
+    block_categories:
+      Actions: hành động
+      Advanced: Nâng cao
+      Behaviors: Hành vi
+      Brushes: Bàn chải
+      Color: Màu sắc
+      Comment: Bình luận
+      Comments: Bình luận
+      Conditionals: Điều kiện
+      Dancers: Vũ công
+      Default: Mặc định
+      Events: Các sự kiện
+      Functions: Các hàm
+      'Functions ': 'Chức năng '
+      Game/Score: Trò chơi/Điểm
+      Games/Score: Trò chơi/Điểm
+      Groups: Nhóm
+      Locations: Địa điểm
+      Logic: Logic
+      Loops: Vòng lặp
+      Math: thuật toán
+      Numbers: Các con số
+      Properties: Thuộc tính
+      Text: Văn bản
+      Variables: Các biến
+      'Variables ': 'Các biến '
+      World: Thế giới

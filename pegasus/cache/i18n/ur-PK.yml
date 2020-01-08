@@ -5,6 +5,8 @@ ur-PK:
   'yes': جی
   'no': نہيں
   select_language: براہ مہربانی اپنی زبان منتخب کریں
+  upgrade_ie_message: کوڈ ڈاٹ او آر جی جلد ہی انٹرنیٹ ایکسپلورر 8 ، 9 اور 10 کی مدد
+    کو دور کردے گا۔ براہ کرم جدید براؤزر میں اپ گریڈ کریں.
   upgrade_ie_link: مزید سیکھے
   en: کمپیوٹر سائنس
   computer_science_edweek: کمپیوٹر سائنس کا تعلیمی ہفتہ
@@ -31,6 +33,7 @@ ur-PK:
   zipcode: زپ کوڈ یا ملک
   submit: جمع کرائیں
   twentyhours_heading: ہمارے کمپیوٹر سائنس کے تعارفی کورسز کر کے دیکھیے
+  og_title_soon: آور آف کوڈ آرہا ہے۔
   csedweek_og_title: کمپیوٹر سائنس کا تعلیمی ہفتہ
   hoc2014_everyone: ہر کوئی
   hoc2014_support: اس ▾ کی حمایت;
@@ -106,6 +109,8 @@ ur-PK:
   studiobar_title_nolink: Code Studio کو جانچیں
   studiobar_elementary_title: بنیادی کورسز
   studiobar_elementary_body: ہمارے تین نئے کورس K کے لیے &#8209; 5
+  studiobar_dance_title: ڈانس پارٹی
+  studiobar_dance_body: اپنی خود کی ڈانس پارٹی بنائیں اور اشتراک کریں
   studiobar_hoc_title: گھنٹے کا کوڈ
   studiobar_hoc_body: کوڈ کرنا سیکھیں Angry Birds کے ساتھ
   studiobar_flappy_body: خود کی Flappy گیم بنائیں اور دوسروں کو دکھائیں
@@ -158,6 +163,7 @@ ur-PK:
   homepage_hero_text_stat_loc: ٢٥ لاکھ لڑکیاں کوڈ سٹوڈیو میں اس وقت داخل ہیں۔
   homepage_hero_text_stat_students: "#student_count طلبہ کے اکاؤنٹس کوڈ سٹوڈیو پر"
   homepage_hero_text_stat_served: 'دا ہور کوڈ: #served لوگوں کی خدمات کی'
+  homepage_hero_hoc_is_coming: آور آف کوڈ آرہا ہے۔
   homepage_slot_text_hoc: گھنٹے کا کوڈ
   homepage_slot_text_frozen: فروزن۔ اینا اور ایلسا کے ساتھ
   homepage_slot_text_teacher: ٹیچر کا ڈیش بورڈ
@@ -260,7 +266,7 @@ ur-PK:
   playlab_iceage_title: برفانی عہد - جلد آ رہا ہے
   playlab_iceage_title_live: برفانی عہد
   starwars_subtitle: ایک کہکشاں کی کوڈ کے ساتھ تعمیر
-  starwars_blocks_title: بلاکس
+  starwars_blocks_title: مسدود کرتا ہے
   mc_name: Minecraft کوڈ کی گھڑی
   minecraft_agent_button: شروع کریں
   minecraft_designer_button: شروع کریں
@@ -396,11 +402,26 @@ ur-PK:
   flappy_shortcode: پھڑپھڑایں
   header_my_dashboard: ڈیش بورڈ
   header_courses: کورسز
+  header_course_catalog: کورس کیٹلاگ
+  header_project_gallery: پروجیکٹس
   header_professional_learning: پیشہ ورانہ تعلیم
   header_educate_hoc: آور-آف-کوڈ
+  header_about: متعلق
+  header_help_support: 'مدد اور معاونت '
+  header_report_bug: ایک مسئلہ کی اطلاع دیں
+  user_header_signin: سائن ان کریں
+  user_header_create: 'تخلیق کریں '
+  user_header_dance: ڈانس پارٹی
   user_header_view_my_projects: تمام منصوبوں کو دیکھیں
   view_all_sections: تمام سیکشن دیکھیں
   applab_tile_start_tutorial: شروع کریں
+  hoc_overview_dance_title: ڈانس پارٹی
+  hoc_overview_dance_subtitle: اپنے دوستوں کے ساتھ اشتراک کرنے کیلئے ڈانس پارٹی کوڈ
+    کریں۔ کیٹی پیری، میڈونا، جے بالون، سیا، کیتھ اربن، سیارا، اور مزید 25 کی خاصیت
+    بنانا!
+  hoc_overview_dance_2019_subtitle: اپنے دوستوں کے ساتھ اشتراک کرنے کیلئے ڈانس پارٹی
+    کوڈ کریں۔ کیٹی پیری، شان مینڈس، پینک کی خاصیت بنانا ڈسکو میں، لِل ناس ایکس، جوناس
+    برادرز، نکی میناج، اور 34 مزید!
   hoc_overview_start_tutorial: شروع کریں
   hoc2018_creativity_create: بنائیں
   hoc2018_creativity_what_will_you_create: آپ کیا بنائیں گے؟
@@ -412,5 +433,9 @@ ur-PK:
   hoc2018_mc_minecraft_education: Minecraft تعلیم کے لئے جانا
   hoc2018_mc_continue_learning: Minecraft کے ساتھ تعلیم جاری رکھیں ۔
   hoc2018_mc_go_to_mc_education: Minecraft تعلیم کے لئے جانا
+  hoc2018_dance_party_main_heading: ڈانس پارٹی
+  hoc2018_dance_party_box_title: ڈانس پارٹی
   hoc2018_dance_party_button: شروع کریں
   hoc2018_dance_amazon_about_future_engineer_button: مزید سیکھے
+  hoc2018_dance_measure: پیمائش
+  hoc2018_dance_measure_colon: 'پیمائش:'

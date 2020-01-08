@@ -1,6 +1,5 @@
 ---
 title: Dərsliklər üzrə təlimatlar
-layout: wide
 ---
 
 <style>

@@ -415,5 +415,7 @@ exports.collect = API_FUNCTION(function(id) {
   var row = Maze.controller.pegmanY;
   if (Maze.controller.subtype.tryCollect(row, col)) {
     Maze.executionInfo.queueAction('pickup', id);
+  } else {
+    Maze.executionInfo.queueAction('fail_pickup', id);
   }
 });

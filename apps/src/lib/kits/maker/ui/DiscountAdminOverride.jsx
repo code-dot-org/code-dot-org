@@ -31,6 +31,7 @@ export default class DiscountAdminOverride extends Component {
     submitting: false,
     teacherID: '',
     statusPD: Status.UNKNOWN,
+    statusAcademicYearPD: Status.UNKNOWN,
     statusStudentCount: Status.UNKNOWN,
     statusYear: Status.UNKNOWN,
     unit6Intention: '',
@@ -88,8 +89,8 @@ export default class DiscountAdminOverride extends Component {
       applicationSchool: application.application_school,
       adminOverride: application.admin_set_status
         ? application.full_discount
-          ? 'Full Discount'
-          : 'Partial Discount'
+          ? 'Full Discount (with AK/HI shipping)'
+          : 'Full Discount (without AK/HI shipping)'
         : 'None',
       fullDiscount: application.full_discount,
       discountCode: application.discount_code,
@@ -221,7 +222,7 @@ export default class DiscountAdminOverride extends Component {
                   <a href="https://studio.code.org/admin/studio_person">
                     Studio Person ID admin page{' '}
                   </a>{' '}
-                  to link this acccount to the account associated with the email
+                  to link this account to the account associated with the email
                   address we have on file.
                 </div>
                 <h4>Option 2: Give teacher a discount code</h4>
@@ -242,12 +243,24 @@ export default class DiscountAdminOverride extends Component {
                       style={styles.radio}
                       type="radio"
                       name="discountAmount"
+                      value="partial"
+                      checked={this.state.overrideValue === 'partial'}
+                      onChange={this.handleOverrideChange}
+                    />
+                    Teacher should receive full discount code (without AK/HI
+                    shipping)
+                  </label>
+                  <label>
+                    <input
+                      style={styles.radio}
+                      type="radio"
+                      name="discountAmount"
                       value="full"
                       checked={this.state.overrideValue === 'full'}
                       onChange={this.handleOverrideChange}
                     />
-                    Teacher should receive 100% discount code (kit price would
-                    become $0)
+                    Teacher should receive full discount code (with AK/HI
+                    shipping)
                   </label>
                 </div>
                 <Button

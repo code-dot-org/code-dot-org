@@ -1,5 +1,5 @@
 /** @file Tests for convertXmlToBlockly utility */
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 
 import {convertXmlToBlockly} from '@cdo/apps/templates/instructions/utils';
 

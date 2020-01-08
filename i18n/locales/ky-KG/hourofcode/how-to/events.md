@@ -1,7 +1,5 @@
 ---
 title: Код сааты иш-чарасын кантип өткөзүү керек
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

@@ -1,7 +1,5 @@
 ---
 title: Інструкції
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
@@ -81,6 +79,6 @@ Make sure to test tutorials on student computers or devices to ensure they work 
 
 ## Що після Години коду?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](%= codeorg_url('/learn/beyond') %)!
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](/beyond)!
 
 {{ signup_button }}

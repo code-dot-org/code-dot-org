@@ -1,6 +1,5 @@
 ---
 title: Οδηγίες για τα μαθήματα
-layout: wide
 ---
 
 <style>

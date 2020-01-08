@@ -158,100 +158,265 @@ module Pd::Application
     end
 
     # @override
-    def queue_email(email_type, deliver_now: false)
-      if email_type == :principal_approval_completed_partner && formatted_partner_contact_email.nil?
-        CDO.log.info "Skipping principal_approval_completed_partner for application id #{id}"
-      else
-        super
-      end
-    end
-
-    # @override
     def self.options
-      super.merge(
-        {
-          completing_on_behalf_of_someone_else: [YES, NO],
-          replace_existing: [
-            YES,
-            "No, this course will be added to the schedule in addition to an existing computer science course",
-            "No, computer science is new to my school",
-            TEXT_FIELDS[:i_dont_know_explain]
-          ],
-          how_heard: [
-            'Code.org website',
-            'Code.org email',
-            'Regional Partner website',
-            'Regional Partner email',
-            'Regional Partner event or workshop',
-            'From a teacher',
-            'From an administrator',
-            TEXT_FIELDS[:other_with_text]
-          ],
-          csd_which_grades: (6..12).map(&:to_s) <<
-            "Not sure yet if my school plans to offer CS Discoveries in the #{year} school year",
-          csp_which_grades: (9..12).map(&:to_s) <<
-            "Not sure yet if my school plans to offer CS Principles in the #{year} school year",
-          csd_which_units: [
-            'Unit 0: Problem Solving',
-            'Unit 1: Web Development',
-            'Unit 2: Animations & Games',
-            'Unit 3: What is a Computer?',
-            'Unit 4: The Design Process',
-            'Unit 5: Data & Society',
-            'Unit 6: Physical Computing',
-            'All units',
-            "I'm not sure"
-          ],
-          csp_which_units: [
-            'Unit 1: Digital Information',
-            'Unit 2: Internet',
-            'Unit 3: Intro App Development',
-            'Unit 4:  Variables, Conditionals, and Functions',
-            'Unit 5: Lists and Loops',
-            'Unit 6: Algorithms',
-            'Unit 7: Functions with Parameters, Return Values, and Libraries',
-            'Unit 8: AP Create Performance Task',
-            'Unit 9: Data',
-            'Unit 10: Cybersecurity and Global Impact',
-            'All units',
-            "I'm not sure"
-          ],
-          replace_which_course: [
-            'CodeHS',
-            'Codesters',
-            'Computer Applications (ex: using Microsoft programs)',
-            'CS Fundamentals',
-            'Exploring Computer Science',
-            'Globaloria',
-            'My CS',
-            'Project Lead the Way - Computer Science',
-            'Robotics',
-            'ScratchEd',
-            'Typing',
-            'We’ve created our own course',
-            TEXT_FIELDS[:other_please_explain]
-          ],
-          plan_to_teach: [
-            "Yes, I plan to teach this course this year (#{year})",
-            "I hope to teach this course this year (#{year})",
-            "No, I don’t plan to teach this course this year (#{year}), but I hope to teach this course the following year (2021-22)",
-            "No, someone else from my school will teach this course this year (#{year})",
-            TEXT_FIELDS[:dont_know_if_i_will_teach_explain]
-          ],
-          travel_to_another_workshop: [
-            'Yes, please provide me with additional information about attending a local summer workshop outside of my region.',
-            'No, I’m not interested in travelling to attend a local summer workshop outside of my region.',
-            TEXT_FIELDS[:not_sure_explain]
-          ],
-          pay_fee: [
-            'Yes, my school will be able to pay the full program fee.',
-            TEXT_FIELDS[:no_pay_fee_2021],
-            "I don't know."
-          ],
-          willing_to_travel: TeacherApplicationBase.options[:willing_to_travel] << 'I am unable to travel to the school year workshops',
-          interested_in_online_program: [YES, NO]
-        }
-      )
+      {
+        country: [
+          'United States',
+          'Other country'
+        ],
+
+        title: COMMON_OPTIONS[:title],
+        state: COMMON_OPTIONS[:state],
+        gender_identity: COMMON_OPTIONS[:gender_identity],
+        race: COMMON_OPTIONS[:race],
+
+        school_state: COMMON_OPTIONS[:state],
+        school_type: COMMON_OPTIONS[:school_type],
+
+        principal_title: COMMON_OPTIONS[:title],
+
+        current_role: [
+          'Teacher',
+          'Instructional coach',
+          'Librarian',
+          'School administrator',
+          'District administrator',
+          TEXT_FIELDS[:other_please_list]
+        ],
+
+        grades_at_school: GRADES,
+        grades_teaching: [
+          *GRADES,
+          TEXT_FIELDS[:not_teaching_this_year],
+          TEXT_FIELDS[:other_please_explain]
+        ],
+        grades_expect_to_teach: [
+          *GRADES,
+          TEXT_FIELDS[:not_teaching_next_year],
+          TEXT_FIELDS[:other_please_explain]
+        ],
+
+        subjects_teaching: SUBJECTS_THIS_YEAR,
+        subjects_expect_to_teach: SUBJECTS_THIS_YEAR,
+
+        does_school_require_cs_license: [
+          YES,
+          NO,
+          "I'm not sure",
+        ],
+
+        have_cs_license: [
+          YES,
+          NO,
+          "I'm not sure",
+          'Not applicable - My district does not require a specific license, certification, or endorsement to teach computer science.'
+        ],
+
+        subjects_licensed_to_teach: [
+          'Computer Science',
+          'Career and Technical Education',
+          'Math',
+          'Science',
+          'History',
+          'Social Studies',
+          'English/Language Arts',
+          'Music',
+          'Art',
+          'Multimedia',
+          'Foreign Language',
+          'Business',
+          'Special Education',
+          'Physical Education',
+          'I am not currently licensed',
+          TEXT_FIELDS[:other_please_list]
+        ],
+
+        previous_yearlong_cdo_pd: [
+          'CS Discoveries',
+          'CS Principles',
+          'Exploring Computer Science',
+          'CS in Algebra',
+          'CS in Science',
+          "I haven't participated in a yearlong Code.org Professional Learning Program"
+        ],
+
+        cs_offered_at_school: [
+          'AP CS A',
+          'Beauty and Joy of Computing',
+          'Bootstrap',
+          'Code HS',
+          'Code Monkey',
+          'Codesters',
+          'CS in Algebra',
+          'CS Discoveries',
+          'CS Fundamentals',
+          'CS Principles (intro or AP-level)',
+          'CS in Science',
+          'Edhesive',
+          'Exploring Computer Science',
+          'Globaloria',
+          'Hour of Code',
+          'Mobile CSP',
+          'NMSI',
+          'Project Lead the Way',
+          'Pythonroom',
+          'Robotics',
+          'Scalable Game Design',
+          'ScratchEd',
+          'Tynker',
+          'UC Davis C-Stem',
+          'UTeach',
+          TEXT_FIELDS[:other_please_list],
+          'No computer science courses are offered at my school'
+        ],
+
+        cs_opportunities_at_school: [
+          'Courses for credit',
+          'After school clubs',
+          'Lunch clubs',
+          'Hour of Code',
+          'No computer science opportunities are currently available at my school',
+          TEXT_FIELDS[:other_with_text]
+        ],
+
+        program: PROGRAM_OPTIONS,
+
+        csd_which_grades: (6..12).map(&:to_s) <<
+          "Not sure yet if my school plans to offer CS Discoveries in the #{year} school year",
+
+        csd_course_hours_per_week: [
+          '5 or more course hours per week',
+          '4 to less than 5 course hours per week',
+          '3 to less than 4 course hours per week',
+          'Less than 3 course hours per week',
+          TEXT_FIELDS[:other_please_list]
+        ],
+
+        csd_course_hours_per_year: COMMON_OPTIONS[:course_hours_per_year],
+
+        csd_terms_per_year: COMMON_OPTIONS[:terms_per_year],
+
+        csp_which_grades: (9..12).map(&:to_s) <<
+          "Not sure yet if my school plans to offer CS Principles in the #{year} school year",
+
+        csp_course_hours_per_week: [
+          'More than 5 course hours per week',
+          '4 - 5 course hours per week',
+          'Less than 4 course hours per week'
+        ],
+
+        csp_course_hours_per_year: COMMON_OPTIONS[:course_hours_per_year],
+
+        csp_terms_per_year: COMMON_OPTIONS[:terms_per_year],
+
+        csp_how_offer: [
+          'As an introductory course',
+          'As an AP course',
+          'We will offer both introductory and AP-level courses'
+        ],
+
+        csp_ap_exam: [
+          'Yes, all students will be expected to take the AP CS Principles exam',
+          "Students will be encouraged to take the exam, but it won't be required",
+          "No, I don't plan for my students to take the AP CS Principles exam"
+        ],
+
+        plan_to_teach: [
+          "Yes, I plan to teach this course this year (#{year})",
+          "I hope to teach this course this year (#{year})",
+          "No, I don’t plan to teach this course this year (#{year}), but I hope to teach this course the following year (2021-22)",
+          "No, someone else from my school will teach this course this year (#{year})",
+          TEXT_FIELDS[:dont_know_if_i_will_teach_explain]
+        ],
+
+        pay_fee: [
+          'Yes, my school will be able to pay the full program fee.',
+          TEXT_FIELDS[:no_pay_fee_2021],
+          "I don't know."
+        ],
+
+        how_heard: [
+          'Code.org website',
+          'Code.org email',
+          'Regional Partner website',
+          'Regional Partner email',
+          'Regional Partner event or workshop',
+          'From a teacher',
+          'From an administrator',
+          TEXT_FIELDS[:other_with_text]
+        ],
+
+        committed: [
+          YES,
+          'No (Please Explain):'
+        ],
+
+        willing_to_travel: [
+          'Up to 10 miles',
+          'Up to 25 miles',
+          'Up to 50 miles',
+          'Any distance',
+          'I am unable to travel to the school year workshops'
+        ],
+
+        taught_in_past: SUBJECTS_TAUGHT_IN_PAST + [
+          TEXT_FIELDS[:other_please_list],
+          "I don't have experience teaching any of these courses"
+        ],
+        completing_on_behalf_of_someone_else: [YES, NO],
+        replace_existing: [
+          YES,
+          "No, this course will be added to the schedule in addition to an existing computer science course",
+          "No, computer science is new to my school",
+          TEXT_FIELDS[:i_dont_know_explain]
+        ],
+        csd_which_units: [
+          'Unit 0: Problem Solving',
+          'Unit 1: Web Development',
+          'Unit 2: Animations & Games',
+          'Unit 3: What is a Computer?',
+          'Unit 4: The Design Process',
+          'Unit 5: Data & Society',
+          'Unit 6: Physical Computing',
+          'All units',
+          "I'm not sure"
+        ],
+        csp_which_units: [
+          'Unit 1: Digital Information',
+          'Unit 2: Internet',
+          'Unit 3: Intro App Development',
+          'Unit 4:  Variables, Conditionals, and Functions',
+          'Unit 5: Lists and Loops',
+          'Unit 6: Algorithms',
+          'Unit 7: Functions with Parameters, Return Values, and Libraries',
+          'Unit 8: AP Create Performance Task',
+          'Unit 9: Data',
+          'Unit 10: Cybersecurity and Global Impact',
+          'All units',
+          "I'm not sure"
+        ],
+        replace_which_course: [
+          'CodeHS',
+          'Codesters',
+          'Computer Applications (ex: using Microsoft programs)',
+          'CS Fundamentals',
+          'Exploring Computer Science',
+          'Globaloria',
+          'My CS',
+          'Project Lead the Way - Computer Science',
+          'Robotics',
+          'ScratchEd',
+          'Typing',
+          'We’ve created our own course',
+          TEXT_FIELDS[:other_please_explain]
+        ],
+        travel_to_another_workshop: [
+          'Yes, please provide me with additional information about attending a local summer workshop outside of my region.',
+          'No, I’m not interested in travelling to attend a local summer workshop outside of my region.',
+          TEXT_FIELDS[:not_sure_explain]
+        ],
+        interested_in_online_program: [YES, NO]
+      }
     end
 
     # @override
@@ -328,7 +493,23 @@ module Pd::Application
 
     # @override
     def additional_text_fields
-      super.concat [
+      [
+        [:current_role, TEXT_FIELDS[:other_please_list]],
+        [:grades_teaching, TEXT_FIELDS[:not_teaching_this_year], :grades_teaching_not_teaching_explanation],
+        [:grades_teaching, TEXT_FIELDS[:other_please_explain], :grades_teaching_other],
+        [:grades_expect_to_teach, TEXT_FIELDS[:not_teaching_next_year], :grades_expect_to_teach_not_expecting_to_teach_explanation],
+        [:grades_expect_to_teach, TEXT_FIELDS[:other_please_explain], :grades_expect_to_teach_other],
+        [:subjects_teaching, TEXT_FIELDS[:other_please_list]],
+        [:subjects_expect_to_teach, TEXT_FIELDS[:other_please_list]],
+        [:subjects_licensed_to_teach, TEXT_FIELDS[:other_please_list]],
+        [:taught_in_past, TEXT_FIELDS[:other_please_list]],
+        [:cs_offered_at_school, TEXT_FIELDS[:other_please_list]],
+        [:cs_opportunities_at_school, TEXT_FIELDS[:other_please_list]],
+        [:csd_course_hours_per_week, TEXT_FIELDS[:other_please_list]],
+        [:plan_to_teach, TEXT_FIELDS[:dont_know_if_i_will_teach_explain], :plan_to_teach_other],
+        [:able_to_attend_single, TEXT_FIELDS[:unable_to_attend], :able_to_attend_single_explain],
+        [:able_to_attend_multiple, TEXT_FIELDS[:no_explain], :able_to_attend_multiple_explain],
+        [:committed, TEXT_FIELDS[:no_explain], :committed_other],
         [:plan_to_teach, TEXT_FIELDS[:dont_know_if_i_will_teach_explain]],
         [:replace_existing, TEXT_FIELDS[:i_dont_know_explain]],
         [:able_to_attend_multiple, TEXT_FIELDS[:not_sure_explain], :able_to_attend_multiple_not_sure_explain],
@@ -356,7 +537,9 @@ module Pd::Application
     end
 
     def friendly_scholarship_status
-      Pd::ScholarshipInfo.find_by(user: user, application_year: application_year, course: course)&.friendly_status_name
+      Pd::ScholarshipInfo.
+        find_by(user: user, application_year: application_year, course: course)&.
+        friendly_status_name
     end
 
     def allow_sending_principal_email?
@@ -548,16 +731,14 @@ module Pd::Application
     # approval is done. Generates scores for responses, is idempotent and does not
     # override existing scores
     #
-    # Overriding the base class because scores are somewhat different
+    # @override
     def auto_score!
       responses = sanitize_form_data_hash
 
       options = self.class.options
       principal_options = Pd::Application::PrincipalApproval2021Application.options
 
-      meets_minimum_criteria_scores = {
-        regional_partner_name: regional_partner.presence ? YES : NO
-      }
+      meets_minimum_criteria_scores = {}
       meets_scholarship_criteria_scores = {}
       bonus_points_scores = {}
 
@@ -573,7 +754,6 @@ module Pd::Application
 
       if responses[:plan_to_teach].in? options[:plan_to_teach].first(4)
         meets_minimum_criteria_scores[:plan_to_teach] = responses[:plan_to_teach].in?(options[:plan_to_teach].first(2)) ? YES : NO
-        meets_scholarship_criteria_scores[:plan_to_teach] = responses[:plan_to_teach] == options[:plan_to_teach].first ? YES : NO
       end
 
       meets_minimum_criteria_scores[:replace_existing] =
@@ -587,9 +767,13 @@ module Pd::Application
 
       # Section 3
       if course == 'csd'
-        meets_scholarship_criteria_scores[:previous_yearlong_cdo_pd] = (responses[:previous_yearlong_cdo_pd] & ['CS Discoveries', 'Exploring Computer Science']).empty? ? YES : NO
+        took_csd_course =
+          responses[:previous_yearlong_cdo_pd].include?('CS Discoveries') ||
+          responses[:previous_yearlong_cdo_pd].include?('Exploring Computer Science')
+        meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] = took_csd_course ? NO : YES
       elsif course == 'csp'
-        meets_scholarship_criteria_scores[:previous_yearlong_cdo_pd] = responses[:previous_yearlong_cdo_pd].exclude?('CS Principles') ? YES : NO
+        meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] =
+          responses[:previous_yearlong_cdo_pd].include?('CS Principles') ? NO : YES
       end
 
       # Section 4
@@ -600,25 +784,13 @@ module Pd::Application
 
       # Principal Approval
       if responses[:principal_approval]
-        meets_scholarship_criteria_scores[:principal_approval] =
+        meets_minimum_criteria_scores[:principal_approval] =
           responses[:principal_approval] == principal_options[:do_you_approve].first ? YES : NO
-
-        meets_scholarship_criteria_scores[:principal_diversity_recruitment] =
-          responses[:principal_diversity_recruitment] == principal_options[:committed_to_diversity].first ? YES : NO
 
         meets_minimum_criteria_scores[:principal_schedule_confirmed] =
           if responses[:principal_schedule_confirmed]&.in?(principal_options[:committed_to_master_schedule].slice(0..1))
             YES
           elsif responses[:principal_schedule_confirmed] == principal_options[:committed_to_master_schedule][2]
-            NO
-          else
-            nil
-          end
-
-        meets_scholarship_criteria_scores[:principal_schedule_confirmed] =
-          if responses[:principal_schedule_confirmed] == principal_options[:committed_to_master_schedule][0]
-            YES
-          elsif responses[:principal_schedule_confirmed]&.in?(principal_options[:committed_to_master_schedule].slice(1..2))
             NO
           else
             nil
@@ -666,7 +838,7 @@ module Pd::Application
             meets_scholarship_criteria_scores: meets_scholarship_criteria_scores,
             bonus_points_scores: bonus_points_scores
           }
-        ) {|key, old, new| key.in?([:plan_to_teach, :replace_existing]) ? new : old}.to_json
+        ) {|key, old, new| key == :replace_existing ? new : old}.to_json
       )
     end
 
@@ -677,6 +849,7 @@ module Pd::Application
 
       scores = scored_questions.map {|q| response_scores[q]}
 
+      # Need all criteria to be YES to be qualified
       if scores.uniq == [YES]
         YES
       elsif NO.in? scores
@@ -687,23 +860,18 @@ module Pd::Application
     end
 
     def meets_scholarship_criteria
-      if principal_approval_state == NOT_REQUIRED
-        # If there is no needed principal approval, then criteria is just whether
-        # the one scholarship question is yes
-        response_scores_hash[:meets_scholarship_criteria_scores][:previous_yearlong_cdo_pd] || REVIEWING_INCOMPLETE
+      response_scores = response_scores_hash[:meets_scholarship_criteria_scores] || {}
+      scored_questions = SCOREABLE_QUESTIONS[:scholarship_questions]
+
+      scores = scored_questions.map {|q| response_scores[q]}
+
+      # Only need one of the criteria to be YES to be qualified for scholarship
+      if YES.in? scores
+        YES
+      elsif nil.in? scores
+        REVIEWING_INCOMPLETE
       else
-        response_scores = response_scores_hash[:meets_scholarship_criteria_scores] || {}
-        scored_questions = SCOREABLE_QUESTIONS[:scholarship_questions]
-
-        scores = scored_questions.map {|q| response_scores[q]}
-
-        if scores.uniq == [YES]
-          YES
-        elsif NO.in? scores
-          NO
-        else
-          REVIEWING_INCOMPLETE
-        end
+        NO
       end
     end
 

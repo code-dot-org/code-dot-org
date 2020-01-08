@@ -1,10 +1,5 @@
 ---
 title: Дякуємо за реєстрацію заходу в межах Години коду!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # Дякуємо за реєстрацію заходу в межах Години коду!

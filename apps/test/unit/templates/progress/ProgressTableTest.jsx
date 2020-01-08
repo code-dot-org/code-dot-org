@@ -1,5 +1,5 @@
 import React from 'react';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/deprecatedChai';
 import {shallow} from 'enzyme';
 import {
   UnconnectedProgressTable as ProgressTable,

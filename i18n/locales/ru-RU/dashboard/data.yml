@@ -40,6 +40,7 @@ ru:
         Custom: Художник
         CustomStudio: Лаборатория игр
         Gamelab: Лаборатория игр
+        Spritelab: Лаборатория Спрайтов
     trophy:
       name:
         Bronze: Бронзовый
@@ -475,12 +476,14 @@ ru:
         csd_gamelab_booleans: Логические выражения
         csd_gamelab_conditional_statements: Условные операторы
         csd_gamelab_if_else: Операторы Если/Иначе
+        CSF_SpriteLabIntro_CDEF: Это лаборатория спрайтов
         CSF_StarWars_ProjectIntro: Введение в проект Звездные войны
         mc_2018_intro: 'Майнкрафт: Водное путешествие. Введение'
         MC_2018_loops: 'Майнкрафт: Водное путешествие. Повторять пока'
         mc_2018_conditionals: 'Майнкрафт: Водное путешествие. Условия'
         mc_2018_closing: 'Майнкрафт: Водное путешествие. Поздравления'
         hoc_dance_warmup: Танцевальная вечеринка - разминка
+        writing_first_program: Напишите вашу первую программу!
         csd_pair_programming: Программирование в парах
         csd_applab_parameters: Процедуры с параметрами
     callout:

@@ -1,5 +1,5 @@
 /** @file Test maker command behavior */
-import {expect} from '../../../../util/configuredChai';
+import {expect} from '../../../../util/deprecatedChai';
 import sinon from 'sinon';
 import {
   analogRead,
@@ -13,20 +13,13 @@ import {
   onBoardEvent,
   pinMode
 } from '@cdo/apps/lib/kits/maker/commands';
+import FakeBoard from '@cdo/apps/lib/kits/maker/FakeBoard';
 
 describe('maker/commands.js', () => {
   let stubBoardController;
 
   beforeEach(() => {
-    stubBoardController = sinon.spy();
-    stubBoardController.pinMode = sinon.spy();
-    stubBoardController.digitalRead = sinon.spy();
-    stubBoardController.digitalWrite = sinon.spy();
-    stubBoardController.analogRead = sinon.spy();
-    stubBoardController.analogWrite = sinon.spy();
-    stubBoardController.boardConnected = sinon.stub();
-    stubBoardController.createLed = sinon.spy();
-    stubBoardController.createButton = sinon.spy();
+    stubBoardController = sinon.createStubInstance(FakeBoard);
     injectBoardController(stubBoardController);
   });
 

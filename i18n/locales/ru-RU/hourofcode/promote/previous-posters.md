@@ -1,7 +1,5 @@
 ---
 title: Плакаты прошлого Часа кода
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

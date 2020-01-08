@@ -21,6 +21,11 @@ kk:
           PROPERTY:
             '"scale"': шама
             '"height"': биіктік
+      Dancelab_changePropEachBy:
+        options:
+          PROPERTY:
+            '"scale"': шама
+            '"height"': биіктік
       Dancelab_doMoveEachLR:
         options:
           DIR:
@@ -54,18 +59,28 @@ kk:
             "{x: 100, y: 200}": солға
             "{x: 300, y: 200}": оңға
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": кездейсоқ
+      Dancelab_jumpToEach:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": солға
+            "{x: 300, y: 200}": оңға
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": кездейсоқ
       Dancelab_layoutSprites:
         options:
           FORMAT:
             '"random"': кездейсоқ
       Dancelab_makeAnonymousDanceSprite:
         options:
+          COSTUME:
+            '"DUCK"': үйрек
           LOCATION:
             "{x: 100, y: 200}": солға
             "{x: 300, y: 200}": оңға
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": кездейсоқ
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"DUCK"': үйрек
           LOCATION:
             "{x: 100, y: 200}": солға
             "{x: 300, y: 200}": оңға
@@ -93,6 +108,7 @@ kk:
             '19': '19'
             '20': '20'
           LAYOUT:
+            '"diamond"': алмас
             '"random"': кездейсоқ
       Dancelab_randomColor:
         text: кездейсоқ түс
@@ -127,7 +143,17 @@ kk:
           PROPERTY:
             '"scale"': шама
             '"height"': биіктік
+      Dancelab_setPropRandomEach:
+        options:
+          PROPERTY:
+            '"scale"': шама
+            '"height"': биіктік
       Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': шама
+            '"height"': биіктік
+      Dancelab_startMappingEach:
         options:
           PROPERTY:
             '"scale"': шама
@@ -137,6 +163,16 @@ kk:
           PROPERTY:
             '"scale"': шама
             '"height"': биіктік
+      Dancelab_stopMappingEach:
+        options:
+          PROPERTY:
+            '"scale"': шама
+            '"height"': биіктік
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': алмас
+            '"x"': x
       Dancelab_whenKey:
         options:
           KEY:
@@ -257,6 +293,8 @@ kk:
             '"scale"': шама
       Mikelab_randomColor:
         text: кездейсоқ түс
+      Mikelab_repeatUntilComplete:
+        text: әрқашан қайтала
       Mikelab_setBG:
         options:
           BG:

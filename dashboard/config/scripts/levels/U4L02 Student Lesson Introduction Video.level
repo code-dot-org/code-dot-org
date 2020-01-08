@@ -1,0 +1,21 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2019-10-21T18:57:16.000Z",
+  "level_num": "custom",
+  "user_id": 898,
+  "properties": {
+    "encrypted": "false",
+    "video_key": "cs-principles-intro-to-objects",
+    "instructions_important": "false",
+    "long_instructions": "## JavaScript Objects\r\n\r\n### Background\r\n\r\nThis lesson introduces JavaScript objects. It's not the first time you have come across objects in the course. You previously saw and used the `event` object for determining which keys were struck on the keyboard and the location of the mouse.\r\n\r\nIn this lesson, you'll learn more about objects and practice creating and using objects yourself. Finally, you'll incorporate objects into an app for storing contact information for a number of people. \r\n\r\n### Vocabulary\r\n\r\n* **JavaScript object:** a type of variable that contains a group of related properties with assigned values.\r\n* **Property:** a named variable that's part of an object.\r\n* **Name/value pair:** term for a single property of an object and the value assigned to it.\r\n\r\nVocabulary in use:\r\n\r\n<pre>\r\nvar person = {};      // person is a <strong>JavaScript object</strong>\r\nperson.name = \"Mary\"; // name is a <strong>property</strong> of the person object\r\nperson.age = 16;      // age is a <strong>named</strong> property with the <strong>value</strong> 16\r\n\r\n\t\t\t\t\t  // the person object has 2 <strong>name/value pairs</strong>\r\n</pre>\r\n\r\n### Lesson\r\n\r\n* Tutorial Video: JavaScript Objects\r\n* Introduction to creating and manipulating objects in App Lab.\r\n* Develop an app for storing contacts using an array of objects.\r\n\r\n### Resources\r\n\r\n* Tutorial Video: JavaScript Objects",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-10-21 18:57:27 +0000\",\"changed\":[],\"changed_by_id\":898,\"changed_by_email\":\"bryan+teacher@code.org\"},{\"changed_at\":\"2019-10-21 18:58:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":898,\"changed_by_email\":\"bryan+teacher@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

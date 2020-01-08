@@ -1,0 +1,13 @@
+si:
+  data:
+    block_categories:
+      Actions: ක්‍රියාවන්
+      Color: පාට
+      Conditionals: කන්ඩිෂනලස්
+      Events: වැඩසටහන්
+      Functions: ශ්‍රිතයන්
+      Logic: තර්කය
+      Loops: ලූපයන්
+      Math: ගණිත
+      Text: පෙළ
+      Variables: විචල්‍යන්

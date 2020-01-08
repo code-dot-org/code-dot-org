@@ -21,6 +21,11 @@ lt:
           PROPERTY:
             '"scale"': dydis
             '"height"': aukštis
+      Dancelab_changePropEachBy:
+        options:
+          PROPERTY:
+            '"scale"': dydis
+            '"height"': aukštis
       Dancelab_doMoveEachLR:
         options:
           DIR:
@@ -54,18 +59,38 @@ lt:
             "{x: 100, y: 200}": kairėn
             "{x: 300, y: 200}": dešinėn
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": atsitiktinis
+      Dancelab_jumpToEach:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": kairėn
+            "{x: 300, y: 200}": dešinėn
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": atsitiktinis
       Dancelab_layoutSprites:
         options:
           FORMAT:
             '"random"': atsitiktinis
       Dancelab_makeAnonymousDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': ateivis
+            '"CAT"': katė
+            '"DOG"': šuo
+            '"DUCK"': antis
+            '"ROBOT"': robotas
+            '"UNICORN"': vienaragis
           LOCATION:
             "{x: 100, y: 200}": kairėn
             "{x: 300, y: 200}": dešinėn
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": atsitiktinis
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': ateivis
+            '"CAT"': katė
+            '"DOG"': šuo
+            '"DUCK"': antis
+            '"ROBOT"': robotas
+            '"UNICORN"': vienaragis
           LOCATION:
             "{x: 100, y: 200}": kairėn
             "{x: 300, y: 200}": dešinėn
@@ -93,6 +118,7 @@ lt:
             '19': '19'
             '20': '20'
           LAYOUT:
+            '"diamond"': deimantą
             '"random"': atsitiktinis
       Dancelab_randomColor:
         text: Atsitiktinė spalva
@@ -127,7 +153,17 @@ lt:
           PROPERTY:
             '"scale"': dydis
             '"height"': aukštis
+      Dancelab_setPropRandomEach:
+        options:
+          PROPERTY:
+            '"scale"': dydis
+            '"height"': aukštis
       Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': dydis
+            '"height"': aukštis
+      Dancelab_startMappingEach:
         options:
           PROPERTY:
             '"scale"': dydis
@@ -137,6 +173,16 @@ lt:
           PROPERTY:
             '"scale"': dydis
             '"height"': aukštis
+      Dancelab_stopMappingEach:
+        options:
+          PROPERTY:
+            '"scale"': dydis
+            '"height"': aukštis
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': deimantą
+            '"x"': x
       Dancelab_whenKey:
         options:
           KEY:
@@ -272,6 +318,8 @@ lt:
             '"y"': y pozicija
       Mikelab_randomColor:
         text: Atsitiktinė spalva
+      Mikelab_repeatUntilComplete:
+        text: kartok visada
       Mikelab_setBG:
         options:
           BG:

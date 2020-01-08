@@ -1,7 +1,5 @@
 ---
 title: Paano-gawin ng Hour of Code para sa mga Distrito
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

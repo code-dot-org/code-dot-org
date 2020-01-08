@@ -1,7 +1,3 @@
-DROP VIEW IF EXISTS analysis.csp_csd_teachers_trained CASCADE;
-
--- to figure out
--- 19 teachers who are listed in 2016 and 2017 PD cohort?
 create or replace view analysis.csp_csd_teachers_trained as
 with 
 -- school information collated through manual feedback/editing after teachercons 2017.
@@ -24,22 +20,22 @@ schools_pd_2016 as
 -- takes the school information for the account most recently used if conflicting for a single studio person
 schools_users as
 (
-  select 
-    studio_person_id, 
-    school_id
+  select
+  	studio_person_id,
+  	school_id
   from
   (
     select 
-      studio_person_id, 
-      si.school_id, 
-      row_number() over(partition by studio_person_id order by current_sign_in_at desc) as how_recent
-    from dashboard_production_pii.users u
-      join dashboard_production.school_infos si on si.id = u.school_info_id
-      join analysis.school_stats ss on ss.school_id = si.school_id
-    where si.school_id is not null
-      and (ss.stage_mi = 1 or ss.stage_hi = 1 or ss.stage_hi is null)
+    	u.studio_person_id,
+    	si.school_id,
+    	row_number() over(partition by u.studio_person_id order by usi.last_confirmation_date desc) row_num
+    from dashboard_production_pii.user_school_infos usi
+    join dashboard_production_pii.users u on u.id = usi.user_id
+    join dashboard_production.school_infos si on si.id = usi.school_info_id
+    join analysis.school_stats ss on ss.school_id = si.school_id
+    where (ss.stage_hi = 1 or ss.stage_mi = 1 or ss.stage_hi is null)
   )
-  where how_recent = 1
+  where row_num = 1
 ),
 -- combines information from above three source into a single piece of school information for a studio_person_id
 schools as
@@ -59,14 +55,10 @@ trained_2016 as
     tp.studio_person_id,
     'CS Principles' as course,
     '2016-17' as school_year,
-    case partner
-      when 'Academy for CS Education - Florida International University' then 'Florida International University'
-      when 'The Council of Educational Administrative and Supervisory Organizations of Maryland (CEASOM)' then 'Maryland Codes'
-      when 'Utah STEM Action Center and Utah Board of Education' then 'Utah STEM Action Center'
-      else partner
-    end as regional_partner
+    rp1617.regional_partner_id
   from dashboard_production_pii.teacher_profiles tp
     left join public.bb_regional_partner_matches_cleaned rpm on rpm.studio_person_id = tp.studio_person_id
+    left join public.bb_regional_partner_name_id_mappings_1617 rp1617 on rp1617.regional_partner_name = rpm.partner
   where tp.studio_person_id not in
   (
     select 
@@ -82,56 +74,66 @@ trained_2017 as
     studio_person_id,
     course,
     '2017-18' as school_year,
-    case regional_partner
-      when 'The Council of Educational Administrative and Supervisory Organizations of Maryland (CEASOM)' then 'Maryland Codes'
-      when 'America Campaign - Big Sky Code Academy' then 'Teachers Teaching Tech (MT)'
-      when 'No Partner' then NULL
-      when 'mindSpark Learning and Colorado Education Initiative' then 'mindSpark Learning'
-      when 'The Div' then 'Oklahoma Public School Resource Center (OPSRC)'
-      else regional_partner
-    end as regional_partner
+    regional_partner_id
   from analysis_pii.teachers_trained_2017 tt
     join dashboard_production_pii.users u on u.id = tt.user_id
+    left join public.bb_regional_partner_name_id_mappings_1718 rp1718 on rp1718.regional_partner_name = tt.regional_partner
 ),
--- all teachers trained in 2017
+-- all teachers trained in 2018
 trained_2018 as
 (
   select 
     studio_person_id,
     course,
     '2018-19' as school_year,
-    rp.name regional_partner,
     tt.regional_partner_id
   from analysis_pii.teachers_trained_2018 tt
-    join dashboard_production_pii.regional_partners rp on rp.id = tt.regional_partner_id
+),
+-- all teachers trained in 2019
+trained_2019 as
+(
+  select 
+    studio_person_id,
+    course,
+    '2019-20' as school_year,
+    tt.regional_partner_id,
+    max(case when source = 'scholarship' then 1 else 0 end) as scholarship
+  from analysis_pii.teachers_trained_2019 tt
+  group by 1,2,3,4
 )
 select 
-  t.*, 
-  rp.id regional_partner_id, 
+  t.*,
+  0 as scholarship,
   sc.school_id
 from trained_2016 t
   join schools sc on sc.studio_person_id = t.studio_person_id
-  left join dashboard_production_pii.regional_partners rp on rp.name = t.regional_partner
 
 union all
 
 select 
   t.*, 
-  rp.id regional_partner_id, 
+  0 as scholarship,
   sc.school_id
 from trained_2017 t
   join schools sc on sc.studio_person_id = t.studio_person_id
-  left join dashboard_production_pii.regional_partners rp on rp.name = t.regional_partner
+
+union all
+
+select 
+  t.*, 
+  0 as scholarship,
+  sc.school_id
+from trained_2018 t
+  join schools sc on sc.studio_person_id = t.studio_person_id
   
 union all
 
 select 
-  t.*, 
+  t.*,
   sc.school_id
-from trained_2018 t
+from trained_2019 t
   join schools sc on sc.studio_person_id = t.studio_person_id
 
 with no schema binding;
 
-GRANT ALL PRIVILEGES ON analysis.csp_csd_teachers_trained TO GROUP admin;
-GRANT SELECT ON analysis.csp_csd_teachers_trained TO GROUP reader, GROUP reader_pii;
+grant select on analysis.csp_csd_teachers_trained to group reader, group reader_pii, group admin;

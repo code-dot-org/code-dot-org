@@ -38,14 +38,14 @@
     "validation_code": "if(nativeAPI.getTime(\"measures\") > 8){\r\n  World.validationStatus = 3;\r\n  sprites.forEach(function(sprite) {\r\n    if (sprite.tint != undefined) World.validationStatus = 0;\r\n  });\r\n  if (World.validationStatus > 0)\r\n    nativeAPI.fail(\"danceFeedbackUseSetTint\");\r\n  else\r\n    nativeAPI.pass();\r\n}",
     "block_pool": "Dancelab",
     "preload_asset_list": [
-      "https://curriculum.code.org/images/sprites/dance_20181127/bear_04.png",
-      "https://curriculum.code.org/images/sprites/dance_20181127/bear_05.png",
-      "https://curriculum.code.org/images/sprites/dance_20181127/bear_06.png",
-      "https://curriculum.code.org/images/sprites/dance_20181127/bear_07.png",
-      "https://curriculum.code.org/images/sprites/dance_20181127/unicorn_40.png",
-      "https://curriculum.code.org/images/sprites/dance_20181127/unicorn_41.png",
-      "https://curriculum.code.org/images/sprites/dance_20181127/unicorn_42.png",
-      "https://curriculum.code.org/images/sprites/dance_20181127/unicorn_43.png"
+      "https://curriculum.code.org/images/sprites/dance_20191106/bear_04.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/bear_05.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/bear_06.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/bear_07.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/unicorn_44.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/unicorn_45.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/unicorn_46.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/unicorn_47.png"
     ],
     "custom_helper_library": "World.SPRITE_NAMES = [\"ALIEN\", \"BEAR\", \"CAT\", \"DUCK\", \"FROG\", \"MOOSE\", \"ROBOT\", \"UNICORN\"];",
     "name_suffix": "_draft",

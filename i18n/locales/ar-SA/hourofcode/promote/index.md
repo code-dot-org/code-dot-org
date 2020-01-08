@@ -1,7 +1,5 @@
 ---
 title: أنشر الكلمة
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

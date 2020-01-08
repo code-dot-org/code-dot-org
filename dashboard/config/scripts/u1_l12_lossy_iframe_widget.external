@@ -6,6 +6,4 @@ markdown <<MARKDOWN
 Click to select the image you would like to explore. The images is compressed in 4 different ways. As you move your mouse around the image, the compressed images will update. You can use the Zoom buttons to zoom-in on the compressed images to see the differences. 
 
 Can you spot the differences in the different compressed versions of the image? 
-
-<iframe style="height: 700px; width: 100%; margin: 10px 0 10px;" allowTransparency="true" src="https://code-lossy-img-investigation.glitch.me/" frameborder="0"></iframe>
 MARKDOWN

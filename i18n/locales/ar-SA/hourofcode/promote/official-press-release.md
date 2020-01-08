@@ -1,7 +1,5 @@
 ---
 title: بيان صحفي لساعة البرمجة للمنتخبين الرسميين
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

@@ -199,7 +199,7 @@ vi-VN:
 
           -   Hãy đảm bảo rằng một vũ công xuất hiện trên màn hình.
 
-          _Cấp độ này kết thúc sau 4 nhịp._
+          \*Cấp độ này kết thúc sau 4 nhịp.\_
         challenges: |-
           **Thử thách tùy chọn**
 
@@ -299,13 +299,122 @@ vi-VN:
       CourseE_HOC 2018 Level_9b:
         voyage_aquatic_9a: Hãy xem các khối lệnh san hô màu đỏ và màu xanh? Sử dụng
           chúng như điểm chỉ dẫn để rẽ phải hoặc trái qua các rạn san hô.
+      Dance_2019_01:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+
+          -   Hãy đảm bảo rằng một vũ công xuất hiện trên màn hình.
+
+          \*Cấp độ này kết thúc sau 4 nhịp.\_
+        challenges: |-
+          **Thử thách tùy chọn**
+
+          -   Chọn một bài hát khác để chơi.
+          -   Di chuyển vũ công của bạn đến một vị trí mới.
+          -   Tạo nhiều hơn một vũ công.
+      Dance_2019_02:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+
+          -   Vũ công phải thực hiện một động tác.
+          -   Bạn phải nhấn một phím mũi tên.
+
+          _Cấp độ này kết thúc sau 4 nhịp._
+        challenges: |-
+          **Thử thách tùy chọn**
+
+          Sử dụng nhiều hơn một khối <xml><block type="Dancelab_whenKey"><title name="KEY"></title></block></xml>.
+      Dance_2019_03:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+
+          -   Cả hai vũ công phải thực hiện một động tác.
+          -   Bạn phải nhấn các phím mũi tên.
+
+          _Cấp độ này kết thúc sau 4 nhịp._
+        challenges: |-
+          **Thử thách tùy chọn**
+
+          -   Làm cho một vũ công phản hồi khi bạn nhấn phím mũi tên sang trái và sang phải.
+      Dance_2019_04:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+
+          -   Vũ công cần chuyển sang động tác mới sau 4 nhịp.
+
+          _Cấp độ này kết thúc sau 8 nhịp._
+      Dance_2019_05:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+
+          -   Sau 6 nhịp, vũ công cần làm một vũ điệu khác ngoài vũ điệu sau 4 nhịp.
+
+          _Cấp độ này kết thúc sau 12 nhịp._
+        challenges: |-
+          **Thử thách tùy chọn**
+
+          -   Thay đổi nền bất cứ khi nào các vũ công chuyển động tác.
+      Dance_2019_06:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+
+          -   Tạo một vũ công chính và một nhóm các vũ công phụ họa trong vòng 4 nhịp đầu tiên của bài hát.
+
+          _Cấp độ này kết thúc sau 7 nhịp._
+        challenges: |-
+          **Thử thách tùy chọn**
+
+          -   Tạo nhiều nhóm vũ công phụ họa.
+      Dance_2019_07:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+
+          -   Thay đổi kích thước của ít nhất một vũ công sau khi âm nhạc bắt đầu.
+
+          _Cấp độ này kết thúc sau 6 nhịp._
+        challenges: |-
+          **Thử thách tùy chọn**
+
+          -   Thử nghiệm bằng cách thay đổi các thuộc tính khác như chiều rộng hoặc góc xoay.
+      Dance_2019_08:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+
+          -   Thay đổi màu sắc của ít nhất một vũ công.
+
+          _Cấp độ này kết thúc sau 6 nhịp._
+        tint_hint: Bạn có nhận thấy rằng các vũ công của bạn không thay đổi thành
+          màu chính xác mà bạn đã chọn hay không? Điều này là do **tint** trộn màu
+          mà bạn đã chọn với màu vốn có của vũ công.
+      Dance_2019_09:
+        validation: |-
+          **Làm sao để tôi vượt qua cấp độ này?**
+
+          -   Chỉ cần nhấn nút "Finish"!
+        repeat_every_ideas: |-
+          **Bạn cần một số ý tưởng?**
+
+          -   Liên tục thay đổi kích thước của một vũ công để làm cho họ lớn lên.
+          -   Liên tục thay đổi góc xoay của vũ công để làm cho họ xoay tròn.
+          -   Liên tục thay đổi vị trí ngang hoặc dọc của một vũ công để làm cho họ di chuyển khắp màn hình.
+
+          _Bạn cũng có thể sử dụng số âm để tạo hiệu ứng ngược lại!_
+        next_previous: |-
+          **Thử thách tùy chọn**
+
+          -   Bạn cũng có thể sử dụng khối sự kiện mới này để duyệt qua danh sách các động tác nhảy bằng cách thiết lập động tác thành `(Random)`, `(Next)`, hoặc `(Previous)`.
+              <xml><block type="Dancelab_changeMoveEachLR">
+              <title name="GROUP">???</title>
+              <title name="MOVE">"rand"</title>
+              <title name="DIR">-1</title>
+              </block></xml>
       Dance_Party_01:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
 
           -   Hãy đảm bảo rằng một vũ công xuất hiện trên màn hình.
 
-          _Cấp độ này kết thúc sau 4 nhịp._
+          \*Cấp độ này kết thúc sau 4 nhịp.\_
         challenges: |-
           **Thử thách tùy chọn**
 
@@ -337,6 +446,10 @@ vi-VN:
           **Thách thức phụ**
 
           Thay đổi hiệu ứng nền ở những thời điểm khác nhau trong bài hát bằng cách liên kết những khối mới theo sự kiện <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"nhịp"</title></block></xml>.
+      Dance_Party_05:
+        validation: "**Làm sao để tôi vượt qua cấp độ này?** \n\n-   Vũ công của bạn
+          cần phải xoay vòng qua ít nhất 4 động tác nhảy khác nhau trước khi cấp độ
+          kết thúc. \n\n_Cấp độ này kết thúc sau 12 nhịp._"
       Dance_Party_06:
         validation: |-
           **Làm sao để tôi vượt qua cấp độ này?**
@@ -1645,6 +1758,129 @@ vi-VN:
               <title name="DIR">2</title>
             </block>
           </xml>
+      courseB_playlab_events6:
+        courseB_playlab_events6_a: |-
+          Bạn sẽ cần những khối lệnh này:
+          <xml>
+            <block type="studio_whenArrow" id="callMe">
+              <title name="VALUE">up</title>
+            </block>
+            <block type="studio_whenArrow" id="callMe">
+              <title name="VALUE">down</title>
+            </block>
+            </xml>
+        courseB_playlab_events6_b: |-
+          Sử dụng mũi tên thả xuống màu xanh trên khối 'Khi nào \_\_\_ mũi tên" để chọn các hướng khác nhau
+          ![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)
+        courseB_playlab_events6_c: Đến chỗ tất cả lá cờ để vượt qua thử thách!
+      courseB_playlab_events6_2018:
+        courseB_playlab_events6_a: |-
+          Bạn sẽ cần những khối lệnh này:
+          <xml>
+            <block type="studio_whenArrow" id="callMe">
+              <title name="VALUE">up</title>
+            </block>
+            <block type="studio_whenArrow" id="callMe">
+              <title name="VALUE">down</title>
+            </block>
+            </xml>
+        courseB_playlab_events6_b: |-
+          Sử dụng mũi tên thả xuống màu xanh trên khối 'Khi nào \_\_\_ mũi tên" để chọn các hướng khác nhau
+          ![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)
+        courseB_playlab_events6_c: Đến chỗ tất cả lá cờ để vượt qua thử thách!
+      courseB_playlab_events6_2019:
+        courseB_playlab_events6_a: |-
+          Bạn sẽ cần những khối lệnh này:
+          <xml>
+            <block type="studio_whenArrow" id="callMe">
+              <title name="VALUE">up</title>
+            </block>
+            <block type="studio_whenArrow" id="callMe">
+              <title name="VALUE">down</title>
+            </block>
+            </xml>
+        courseB_playlab_events6_b: |-
+          Sử dụng mũi tên thả xuống màu xanh trên khối 'Khi nào \_\_\_ mũi tên" để chọn các hướng khác nhau
+          ![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)
+        courseB_playlab_events6_c: Đến chỗ tất cả lá cờ để vượt qua thử thách!
+      courseB_playlab_events7:
+        courseB_playlab_events7_a: |-
+          Đây là khối lệnh mà bạn sẽ cần:
+
+          <xml>
+          <block type="studio_whenSpriteCollided">
+              <title name="SPRITE1">0</title>
+              <title name="SPRITE2">1</title>
+            </block>
+          </xml>
+        courseB_playlab_events7_b: |-
+          Đây là khối lệnh bạn sẽ cần để tạo ra âm thanh.
+
+          <xml>
+          <block type="studio_playSound">
+              <title name="SOUND">slap</title>
+            </block>
+          </xml>
+        courseB_playlab_events7_c: |-
+          Đây là khối bạn sẽ cần để chàng kị sĩ biến mất
+
+          <xml>
+          <block type="studio_vanish">
+              <title name="SPRITE">1</title>
+            </block>
+          </xml>
+      courseB_playlab_events7_2018:
+        courseB_playlab_events7_a: |-
+          Đây là khối lệnh mà bạn sẽ cần:
+
+          <xml>
+          <block type="studio_whenSpriteCollided">
+              <title name="SPRITE1">0</title>
+              <title name="SPRITE2">1</title>
+            </block>
+          </xml>
+        courseB_playlab_events7_b: |-
+          Đây là khối lệnh bạn sẽ cần để tạo ra âm thanh.
+
+          <xml>
+          <block type="studio_playSound">
+              <title name="SOUND">slap</title>
+            </block>
+          </xml>
+        courseB_playlab_events7_c: |-
+          Đây là khối bạn sẽ cần để chàng kị sĩ biến mất
+
+          <xml>
+          <block type="studio_vanish">
+              <title name="SPRITE">1</title>
+            </block>
+          </xml>
+      courseB_playlab_events7_2019:
+        courseB_playlab_events7_a: |-
+          Đây là khối lệnh mà bạn sẽ cần:
+
+          <xml>
+          <block type="studio_whenSpriteCollided">
+              <title name="SPRITE1">0</title>
+              <title name="SPRITE2">1</title>
+            </block>
+          </xml>
+        courseB_playlab_events7_b: |-
+          Đây là khối lệnh bạn sẽ cần để tạo ra âm thanh.
+
+          <xml>
+          <block type="studio_playSound">
+              <title name="SOUND">slap</title>
+            </block>
+          </xml>
+        courseB_playlab_events7_c: |-
+          Đây là khối bạn sẽ cần để chàng kị sĩ biến mất
+
+          <xml>
+          <block type="studio_vanish">
+              <title name="SPRITE">1</title>
+            </block>
+          </xml>
       courseB_starWars_prog1:
         courseB_starWars_prog1_a: Thử lần lượt thêm từng khối một vào chương trình,
           rồi nhấn nút "Chạy" để xem điều gì sẽ xảy ra.
@@ -1838,14 +2074,6 @@ vi-VN:
       courseC19_playLab_EOC2:
         courseE_playLab_scaffold1_c: Khi bạn hoàn thành, bạn có thể di chuyển nhân
           vật anh hùng của bạn bằng các phím mũi tên!
-      courseC_data wizard:
-        courseA_playLab_events7_a: |-
-          Dùng khối này khi các nhân vật va vào nhau.
-
-          <xml><block type="studio_whenSpriteCollided">
-              <title name="SPRITE1">1</title>
-              <title name="SPRITE2">0</title>
-            </block></xml>
       courseC_maze_programming6:
         courseC_maze_programming6_a: Có hai cách để giải câu đố này!
       courseC_maze_programming6_2018:
@@ -2033,3 +2261,5 @@ vi-VN:
       coursea_maze_ramp1_2019:
         courseC_maze_programming1_b: Đừng sợ mắc lỗi! Hãy thử một cái gì đó, và nếu
           nó chưa đúng, hãy thử một cái khác!
+      Dance_Party_extras_alternate_2019:
+        alternate: Khối thay thế nằm trong danh mục "Vũ công".

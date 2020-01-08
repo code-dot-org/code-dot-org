@@ -6,7 +6,7 @@
   },
   "https://studio.code.org/s/csd6-2019/stage/2/puzzle/1": {
     "dsls": {
-      "markdown": "# This survey is still under development\n"
+      "markdown": "# CS Discoveries Post-Course Survey\n\n**Your input and feedback is important to us!** We use it to:\n\n* understand your experience\n* make improvements to the course\n\nThanks for taking the time to help make CS Principles even better!\n\n"
     }
   },
   "https://studio.code.org/s/csd6-2019/stage/2/puzzle/3": {
@@ -433,7 +433,8 @@
           "text": "<img src=\"https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00 PM.png\" width=\"200px\"",
           "correct": true
         }
-      ]
+      ],
+      "markdown": "![](https://images.code.org/134a993836c148f64a7045d489ec58dc-image-1512686800350.45.08 PM.png)\n"
     }
   },
   "https://studio.code.org/s/csd6-2019/stage/10/puzzle/10": {
@@ -465,7 +466,7 @@
     "long_instructions": "# Light Patterns\n\nThis app already has one light pattern program, which can be activated by clicking a button. Notice that we put this pattern into a function to make the code cleaner and clearer.\n\n# Do This\n\nCreate a light pattern function of your own - maybe the colors of your favorite holiday, college, sports team, or try to create an image with the lights.\n\nAfter you've created your new function, add a button and event handler so that you can switch between the two light patterns."
   },
   "https://studio.code.org/s/csd6-2019/stage/10/puzzle/17": {
-    "long_instructions": "# Turning It Off\n\nWhen you start this app your lights are off, but as soon as choose a pattern, there's no way to turn the lights back off!\n\n# Do This\n\nCreate a function that turns all of the LEDs off, and then add a \"Off\" button to your app and make it turn off all of the color LEDs."
+    "long_instructions": "# Turning It Off\n\nWhen you start this app your lights are off, but as soon as you choose a pattern, there's no way to turn the lights back off!\n\n# Do This\n\nCreate a function that turns all of the LEDs off, and then add a \"Off\" button to your app and make it turn off all of the color LEDs."
   },
   "https://studio.code.org/s/csd6-2019/stage/10/extras?level_name=CSD+U6+light+pattern+challenge_2019": {
     "display_name": "Improved Light Show",

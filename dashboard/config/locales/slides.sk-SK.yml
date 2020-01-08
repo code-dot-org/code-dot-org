@@ -1337,3 +1337,97 @@ sk:
       7:
         text: Na konci lekcie môžeš zdieľať odkaz na svoj výtvor s kamarátmi. Potráp
           svoju predstavivosť a hlavne si to uži!
+    hoc_dance_warmup_2019:
+      1:
+        text: 'Hodina Kódu | Tanečná Párty: Zahrej sa'
+      2:
+        text: Ahoj! Volám sa Miral Kotb a som tanečníčka, softvérová vývojárka a zakladateľka
+          iLuminate.
+      4:
+        text: Behom nadchádzajúcej hodiny začneš s informatikou programovaním svojej
+          vlastnej tanečnej párty! Dali sme dokopy viacero hitov a tím výborných tanečníkov
+          s ktorými sa môžeš hrať.
+      5:
+        text: Budeš používať bloky kódu na to, aby si si vybral tanečníkov, zmenil
+          ich tanečné kroky, donútil ich reagovať na hudbu a spravil ich interaktívnymi.
+      6:
+        text: Uvidíš, že obrazovku máš rozdelenú na tri hlavné časti. Na ľavej strane
+          je hracia plocha. Tu sa objavia tvoji tanečníci.
+      8:
+        text: Priestor vpravo je pracovná plocha. Bloky z ponuky nástrojov môžeš presunút
+          na pracovnú plochu, čím vytvoríš svoj program.
+      9:
+        text: Inštrukcie ku každej úrovni budú tu, na vrchu obrazovky. Ak potrebuješ
+          poradiť, stačí kliknúť na žiarovku.
+      11:
+        text: S týmto môžeš tiež zmeniť, v ktorej časti hernej plochy sa tanečník
+          objaví.
+      12:
+        text: Nad hernou plochou je menu pre výber hudby. Sú tu tony pesničiek z ktorých
+          môžeš vyberať. Zabav sa pri hľadaní svojich obľúbených. Pod hracou plochou
+          je tlačíidlo na spustenie programu. Keď ho stlačíš, tanečníci z tvojho programu
+          sa objavia na hracej ploche a začne hrať hudba.
+    hoc_dance_events_2019:
+      1:
+        text: 'Hodina Kódu | Tanečná Párty: Udalosti'
+      4:
+        text: Niektoré príklady udalostí čakajú na kliknutie myškou, na stlačenie
+          tlačidla šípky, alebo na dotyk na dotykovú obrazovku.
+    hoc_dance_measures_2019:
+      2:
+        text: Som Aloe Blacc. Som spevák, skladateľ a zabávač. Myslím si, že je veľmi
+          dôležité učiť sa informatiku, lebo informatika je budúcnosť a myslím si,
+          že je dôležité pre ľudí, aby ovládali technológiu, ktorá doslovne ovláda
+          naše životy.
+      5:
+        text: Aby to tvoji tanečníci roztočili, budeš potrebovať zelený blok s udalosťou.
+          Tento blok s udalosťou hovorí "po 4 taktoch".
+      6:
+        text: Ak vytiahneš fialový blok "nekonečne krát", môžeš zvoliť tanec, ktorý
+          bude tvoj tanečník tancovať. Keďže sme ho umiestnili po blok "po 4 taktoch",
+          tvoj tanečník bude čakať štyri takty pesničky pred tým, ako začne tancovať.
+      7:
+        text: Sleduj počítadlo taktov (Measure) na vrchu hracej plochy.
+      8:
+        text: Sleduj a počúvaj, aká udalosť spustí tanečný kód. Náš tanec sa tak rozbehne
+          v ten správny čas.
+    hoc_dance_properties_2019:
+      1:
+        text: 'Hodina Kódu | Tanečná Párty: Vlastnosti'
+      2:
+        text: Volám sa Maria. Som študentkou tretieho ročníka na University of Washington
+          a pracujem ako Inžinier Budúcnosti v Amazone.
+      3:
+        text: Zbožňujem informatiku, lebo kombinuje riešenie problémov a kritické
+          myslenie a po tom ako vložíš hodiny práce do niečoho, môžeš z toho dostať
+          niečo skutočne cool a hodnotné.
+      5:
+        text: Každý tanečný krok sa skladá zo série obrázkov nazývaných snímky. Každá
+          snímka sa trochu líši od tej predchádzajúcej. Keď sa tvoj program spustí,
+          počítač ukazuje jednu snímku za druhou. Sú zobrazené tak rýchlo, že to vyzerá
+          ako keby sa tanečník hýbal. Toto je tajomstvo každej animácie.
+      6:
+        text: Môžeš meniť nie len to kroky tvojho tanečníka, ale môžeš zmeniť aj jeho
+          vlastnosti. Vlastnosti určujú veci ako tanečníkova pozícia na obrazovke,
+          jeho veľkosť, alebo farba.
+    hoc_dance_congrats_2019:
+      1:
+        text: 'Hodina Kódu | Tanečná Párty: Párty pokračuje!'
+      2:
+        text: Gratulujem! Práve sa ti podarilo naučiť základy informatiky. Teraz môžeš
+          použiť tieto bloky na vytvorenie svojej vlastnej tanečnej párty, ktorú môžeš
+          zdielať s kamarátmi.
+      3:
+        text: Ak sa pozrieš do ponuky nástrojov, nájdeš zopár úplne nových blokov,
+          ktoré si ešte nevidel. Napríklad môžeš použiť blok 'rozmiestni' na usporiadanie
+          tanečníkov na obrazovke rôznymi spôsobmi.
+      4:
+        text: Poobzeraj sa a experimentuj s týmito novými blokmi a vlastnosťami. Vytvoríš
+          na tvoju obľúbenú pesničku detailnú tanečnú choreografiu?
+      5:
+        text: Alebo tanečný súboj s kamarátmi?
+      6:
+        text: Alebo niečo úplne iné?
+      7:
+        text: Na konci lekcie môžeš zdieľať odkaz na svoj výtvor s kamarátmi. Potráp
+          svoju predstavivosť a hlavne si to uži!

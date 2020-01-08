@@ -1,11 +1,11 @@
-import {assert} from '../../../util/configuredChai';
+import {assert} from '../../../util/deprecatedChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import CourseOverviewTopRow from '@cdo/apps/templates/courseOverview/CourseOverviewTopRow';
 import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 
 const defaultProps = {
-  sectionsInfo: [],
+  sectionsForDropdown: [],
   id: 30,
   title: 'Computer Science Principles',
   resources: [
@@ -26,9 +26,9 @@ const defaultProps = {
 };
 
 describe('CourseOverviewTopRow', () => {
-  it('contains an AssignToSection button', () => {
+  it('contains a SectionAssigner', () => {
     const wrapper = shallow(<CourseOverviewTopRow {...defaultProps} />);
-    assert.equal(wrapper.find('Connect(AssignToSection)').length, 1);
+    assert.equal(wrapper.find('Connect(SectionAssigner)').length, 1);
   });
 
   it('has a button for each resource', () => {

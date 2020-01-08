@@ -1506,3 +1506,96 @@ hu:
       7:
         text: A lecke végén megoszthatod az alkotásodat a barátaiddal. Tornáztasd
           a képzelőerőd és érezd jól magad!
+    hoc_dance_warmup_2019:
+      1:
+        text: 'Kódolás Órája | Táncos buli: Bemelegítés'
+      2:
+        text: Szia! Az én nevem Miral Kotb, táncos, szoftverfejlesztő, és az iLuminate
+          megalkotója vagyok.
+      4:
+        text: A következő órában úgy ismerkedhetsz meg a számítógép-tudománnyal, hogy
+          beprogramozod a saját táncos bulidat! Összeállítottuk a zenét néhány slágerrel,
+          és egy csapat kiváló táncossal játszhatsz majd.
+      5:
+        text: Kód-blokkokat fogsz használni a különböző táncosok kiválasztásához,
+          a mozdulatok megváltoztatásához, hogy reagáljanak a zenére és hogy interaktív
+          legyen a tánc.
+      6:
+        text: Látni fogod, hogy a képernyő három részre oszlik. Bal oldalt játszódnak
+          az események. Itt fognak megjelenni a táncosaid.
+      8:
+        text: A jobb oldali rész a munkaterület. Az eszköztárból áthúzhatsz blokkokat
+          a munkaterületre, hogy felépítsd belőlük a programod.
+      9:
+        text: A feladat leírása minden feladványnál itt a képernyő felső részén jelenik
+          meg. Ha szükséged van segítségre, kattints a villanykörtére.
+      11:
+        text: Azt is megváltoztathatod, hol jelenjen meg a táncos a játéktereden.
+      12:
+        text: A játéktér felett van egy menü, ahol zenét választhatsz. Rengeteg közül
+          választhatsz, és reméljük jó szórakozás lesz, amíg megtalálod a kedvenceidet.
+          A játéktér alatt van a futtatás gomb. Ha ezt megnyomod, akkor megjelennek
+          a programod táncosai a játéktéren és felhangzik a zene.
+    hoc_dance_events_2019:
+      1:
+        text: 'Kódolás Órája | Táncos buli: Események'
+      4:
+        text: Például eseményeknek tekintjük az egérkattintást, a nyilakat ábrázoló
+          gombok leütését vagy a képernyő megérintését.
+    hoc_dance_measures_2019:
+      2:
+        text: A nevem Aloe Blacc. Énekes, zeneszerző és előadó vagyok. Szerintem nagyon
+          fontos számítógép-tudományt tanulni, mert a számítógép-tudomány a jövő,
+          és fontos tudni irányítani a technológiát ami úgy meghatározza az életünket.
+      5:
+        text: Hogy a táncosok elszabaduljanak, egy zöld esemény blokkra lesz szükséged.
+          Az esemény blokkra az van írva, "4 ütem után".
+      6:
+        text: Ha áthúzod a lila "csináld örökké" blokkot, választhatsz a táncosodnak
+          egy mozdulatot, amit ismételni fog. Mivel a "4 ütem után" blokk alá kerül,
+          így a táncosod 4 ütem után fog bekapcsolódni a táncba.
+      7:
+        text: Figyeld a képernyő felső részén az ütem számlálót.
+      8:
+        text: Figyeld és hallgasd az eseményt, ami ki fogja váltani a táncos kódot.
+          És a megfelelő pillanatban a táncos elkezd majd táncolni.
+    hoc_dance_properties_2019:
+      1:
+        text: 'Kódolás Órája | Táncos buli: Tulajdonságok'
+      2:
+        text: A nevem Maria, a washingtoni egyetem hallgatója vagyok és az Amazon
+          Jövő Mérnöke.
+      3:
+        text: Szeretem a számítógép-tudományt, mert van benne problémamegoldás, kritikus
+          gondolkodás és sok órányi munka után végül valami igazán menő és értékes
+          jön létre.
+      5:
+        text: Minden mozdulat képek sorozatából áll, amelyeket frame-eknek nevezünk.
+          Minden frame egy kicsit különbözik az előtte lévőtől. Amikor a program fut,
+          a számítógép egymás után mutatja a frame-eket. Olyan gyorsan követik egymást,
+          hogy úgy tűnik, mintha a táncos mozogna. Ez a titka minden animációnak.
+      6:
+        text: Nem csak a táncos mozgását, de a tulajdonságait is meg lehet változtatni.
+          A tulajdonságok olyan dolgokat írnak le, mint a táncos helye a képernyőn,
+          a táncos mérete vagy színe.
+    hoc_dance_congrats_2019:
+      1:
+        text: 'Kódolás Órája | Táncos buli: Induljon a party!'
+      2:
+        text: Gratulálunk! Elsajátítottad a számítógép-tudomány alapjait. Most már
+          használhatod ezeket a blokkokat, hogy a saját táncos bulidat létrehozd,
+          és megoszd a barátaiddal.
+      3:
+        text: Ha benézel az eszköztárba, olyan új blokkokat fogsz benne találni, amik
+          korábban nem voltak ott. Például használhatod az elrendezés blokkot, hogy
+          a táncosok különböző alakzatokat vegyenek fel a képernyőn.
+      4:
+        text: Fedezd fel a lehetőségeket és próbálj kísérletezni az új blokkokkal
+          és funkciókkal. Készítesz egy teljes koreográfiát a kedvenc dalodra?
+      5:
+        text: Vagy egy offline tánc a barátaiddal?
+      6:
+        text: Vagy valami más együtt?
+      7:
+        text: A lecke végén megoszthatod az alkotásodat a barátaiddal. Tornáztasd
+          a képzelőerőd és érezd jól magad!

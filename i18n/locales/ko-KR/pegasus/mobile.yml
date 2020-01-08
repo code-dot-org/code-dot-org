@@ -26,6 +26,7 @@
   twentyhours_heading: "컴퓨터과학(정보과학) 과정을 시도해 보세요."
   twentyhours_text: "Hour of Code 를 모두 마쳤나요? 다음과 같은 과정들을 통해 컴퓨터과학(정보과학)의 원리나 프로그래밍 기초개념들을 학습해 보세요."
   og_title: 'Code.org: 누구나 배울 수 있습니다.'
+  og_title_soon: "Hour of Code 가 여기 있습니다"
   og_title_here: "Hour of Code 가 여기에 있습니다!"
   og_description: "모든 학교의 모든 학생들은 컴퓨터과학(정보과학) 을 배울 기회가 있어야 합니다."
   og_description_celeb: "새로운 따라해보기 튜토리얼들을 해보고, 유명인들과의 동영상 채팅 기회를 잡아보세요!"
@@ -272,6 +273,8 @@
   homepage_hero_text_stat_loc: "#loc 학생들에 의해서 작성된 코드의 줄"
   homepage_hero_text_stat_students: "#student_count Code Studio에 등록된 학생 계정"
   homepage_hero_text_stat_served: 'Hour of Code: #served 제공'
+  homepage_hero_hoc_is_coming: "Hour of Code 가 여기 있습니다"
+  homepage_hero_hoc_is_here: "Hour of Code 가 여기 있습니다"
   homepage_slot_text_hoc: "The Hour of Code"
   homepage_slot_text_frozen: "안나와 엘사가 함께 하는 겨울왕국"
   homepage_slot_text_teacher: "선생님용 대시보드"
@@ -407,6 +410,7 @@
   minecraft_no_internet: "인터넷을 사용할 수 없습니까?"
   minecraft_download_adventurer: "Minecraft 모험가의 오프라인 버전을 다운로드."
   minecraft_subtitle: "마인크래프트 Hour of Code"
+  minecraft_leader_guide: "여러분의 계획을 돕고 이벤트를 진행하기위한 리소스들을 다운로드하세요."
   sports_page_title: "Hour of Code 스포츠"
   sports_og_title: "Hour of Code 스포츠 튜토리얼"
   sports_og_description: "챔피언과 금메달리스트들은 당신을 Hour of Code 에 도전하도록 격려합니다. 자신만의 스포츠게임을 코딩해보세요."
@@ -1299,6 +1303,7 @@
   user_header_dance: "댄스 파티"
   user_header_minecraft: "마인크래프트"
   user_header_flappy: "플래피"
+  user_header_view_project_gallery: "프로젝트 갤러리 보기"
   user_header_view_my_projects: "나의 프로젝트 보기"
   applab_tile_start_tutorial: "시작:"
   applab_tile_teacher_guide: "선생님 가이드 보기"
@@ -1362,3 +1367,4 @@
   hoc2018_dance_amazon_scholarship_programs_button: "지금 신청하기"
   hoc2018_dance_measure: "마디"
   hoc2018_dance_measure_colon: '마디:'
+  page_not_found_title: "페이지를 찾을 수 없습니다."

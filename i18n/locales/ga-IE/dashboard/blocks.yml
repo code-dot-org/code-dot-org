@@ -2,6 +2,14 @@
 ga:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: uile
+          MOVE1:
+            MOVES.Rest: Dada
+          MOVE2:
+            MOVES.Rest: Dada
       Dancelab_atTimestamp:
         options:
           UNIT:
@@ -24,6 +32,13 @@ ga:
             "-1": "←"
       Dancelab_changePropBy:
         options:
+          PROPERTY:
+            '"scale"': méid
+            '"height"': airde
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: uile
           PROPERTY:
             '"scale"': méid
             '"height"': airde
@@ -70,6 +85,14 @@ ga:
             "{x: 100, y: 200}": ar chlé
             "{x: 300, y: 200}": ar dheis
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": randamach
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: uile
+          LOCATION:
+            "{x: 100, y: 200}": ar chlé
+            "{x: 300, y: 200}": ar dheis
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": randamach
       Dancelab_layoutSprites:
         options:
           GROUP:
@@ -78,12 +101,26 @@ ga:
             '"random"': randamach
       Dancelab_makeAnonymousDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': eachtrán
+            '"CAT"': cat
+            '"DOG"': madra
+            '"DUCK"': lacha
+            '"ROBOT"': róbat
+            '"UNICORN"': aonbheannach
           LOCATION:
             "{x: 100, y: 200}": ar chlé
             "{x: 300, y: 200}": ar dheis
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": randamach
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': eachtrán
+            '"CAT"': cat
+            '"DOG"': madra
+            '"DUCK"': lacha
+            '"ROBOT"': róbat
+            '"UNICORN"': aonbheannach
           LOCATION:
             "{x: 100, y: 200}": ar chlé
             "{x: 300, y: 200}": ar dheis
@@ -111,6 +148,7 @@ ga:
             '19': '19'
             '20': '20'
           LAYOUT:
+            '"diamond"': diamant
             '"random"': randamach
       Dancelab_randomColor:
         text: dath randamach
@@ -165,6 +203,13 @@ ga:
           PROPERTY:
             '"scale"': méid
             '"height"': airde
+      Dancelab_setPropRandomEach:
+        options:
+          GROUP:
+            sprites: uile
+          PROPERTY:
+            '"scale"': méid
+            '"height"': airde
       Dancelab_setTintEach:
         options:
           THIS:
@@ -182,11 +227,31 @@ ga:
           PROPERTY:
             '"scale"': méid
             '"height"': airde
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: uile
+          PROPERTY:
+            '"scale"': méid
+            '"height"': airde
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': méid
             '"height"': airde
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: uile
+          PROPERTY:
+            '"scale"': méid
+            '"height"': airde
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': diamant
+            '"x"': x
+            '"y"': 'y'
       Dancelab_whenKey:
         options:
           KEY:
@@ -356,6 +421,8 @@ ga:
             MOVES.Rest: Dada
       Mikelab_randomColor:
         text: dath randamach
+      Mikelab_repeatUntilComplete:
+        text: go deo na ndeor
       Mikelab_setBG:
         options:
           BG:

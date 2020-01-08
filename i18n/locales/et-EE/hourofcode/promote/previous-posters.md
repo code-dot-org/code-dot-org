@@ -1,7 +1,5 @@
 ---
 title: Eelmised KoodiTund plakatid
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

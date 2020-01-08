@@ -26,10 +26,11 @@ ga:
     attributes:
       user:
         name: 'Ainm Taispeána'
-        name_example: 'Ainm Taispeána<br/>(m.sh. Sárchódálaí nó Sinéad S.)'
+        name_example: 'Ainm Taispeána (m.sh. Sárchódálaí nó Sinéad S.)'
         email: 'Ríomhphost'
         parent_email: 'Seoladh ríomhphoist do thuismitheoir'
         personal_email: "Seoladh ríomhphoist pearsanta <a href=\"%{url}\">(cliceáil anseo mura bhfuil seoladh ríomhphoist agat)</a>"
+        personal_email_markdown: "Seoladh ríomhphoist pearsanta [(cliceáil anseo mura bhfuil seoladh ríomhphoist agat)](%{url})"
         username: 'Ainm úsáideora'
         password: 'Focal faire'
         password_confirmation: 'Deimhniú an fhocail faire'
@@ -101,9 +102,11 @@ ga:
     student_count: 'Tá %{count} dalta cláraithe cheana.'
     teacher_count: 'Tá %{count} múinteoir cláraithe cheana.'
     overview: 'Cruthaigh cuntas le do sheomra ranga a bhainistiú nó do dhul chun cinn a leanúint. Is féidir leat <a href="/">na cúrsaí agus na dúshláin éagsúla</a> a bhrabhsáil gan chuntas, ach ní mór duit clárú chun do chuid tograí agus do dhul chun cinn a shábháil.'
+    overview_markdown: 'Cruthaigh cuntas le do sheomra ranga a bhainistiú nó do dhul chun cinn a leanúint. Is féidir leat [na cúrsaí agus na dúshláin éagsúla](/) a bhrabhsáil gan chuntas, ach ní mór duit clárú chun do chuid tograí agus do dhul chun cinn a shábháil.'
     hoc_already_signed_up_heading: 'Tosú gan logáil isteach'
     hoc_already_signed_up_content: 'Chláraigh tú chun Uair Chódála a mhúineadh! Ní gá duitse ná do na daltaí logáil isteach sa Stiúideo Códála chun páirt a ghlacadh san ócáid seo. Ar dtús, <a href="%{learn_url}">roghnaigh cúrsa teagaisc</a> don seomra ranga agus tabhair an nasc do na daltaí.<br/><br/>Má thaitin an Uair Chódála leat agus má tá tú ag iarraidh níos mó a dhéanamh, is féidir cuntas ar an Stiúideo Códála a chruthú thíos, agus do chuid daltaí a chlárú le haon cheann de na <a href="%{educate_url}">cúrsaí níos faide</a> atá againn.'
     hoc_already_signed_up_content_post_hoc: 'Go raibh maith agat as Uair Chódála a óstáil. Ní mór duit focal faire a shocrú chun logáil isteach sa Stiúideo Códála. Sa chaoi seo beidh tú in ann do dhul chun cinn a shábháil agus do sheomra ranga a bhainistiú. Beidh tú in ann cúrsaí a shannadh agus dul chun cinn na ndaltaí a leanúint. Nó más fearr leat, is féidir <a href="%{studio_url}">na céimeanna agus na dúshláin éagsúla a bhrabhsáil</a> gan cuntas a chruthú.'
+    hoc_already_signed_up_content_post_hoc_markdown: 'Go raibh maith agat as Uair Chódála a óstáil. Ní mór duit focal faire a shocrú chun logáil isteach sa Stiúideo Códála. Sa chaoi seo beidh tú in ann do dhul chun cinn a shábháil agus do sheomra ranga a bhainistiú. Beidh tú in ann cúrsaí a shannadh agus dul chun cinn na ndaltaí a leanúint. Nó más fearr leat, is féidir [na céimeanna agus na dúshláin éagsúla a bhrabhsáil](%{studio_url}) gan cuntas a chruthú.'
     teacher_educator_guide: 'Féach an lámhleabhar do mhúinteoirí'
     title: "Cláraigh le Code.org"
     school_name: 'Ainm do Scoile (roghnach)'
@@ -386,7 +389,9 @@ ga:
     create_personal_login_under_13_parent_email: 'Seoladh ríomhphoist do thuismitheoir'
     create_personal_login_info: 'Más mian leat Code.org a úsáid fiú tar éis dheireadh na scoilbhliana, is féidir leat do chuntas féin a chruthú thíos.'
     create_personal_login_terms: "Má chruthaíonn tú cuntas pearsanta, glacann tú le <a href='%{terms_of_service_url}', target='_blank'>téarmaí seirbhíse Code.org</a>. Má tá tú níos óige ná 13 bliain d'aois, deimhníonn tú go bhfuair tú cead ó thuismitheoir nó ó chaomhnóir dlíthiúil seirbhísí Code.org a úsáid fiú gan múinteoir i láthair."
+    create_personal_login_terms_markdown: "Má chruthaíonn tú cuntas pearsanta, glacann tú le [téarmaí seirbhíse Code.org](%{terms_of_service_url}). Má tá tú níos óige ná 13 bliain d'aois, deimhníonn tú go bhfuair tú cead ó thuismitheoir nó ó chaomhnóir dlíthiúil seirbhísí Code.org a úsáid fiú gan múinteoir i láthair."
     create_personal_login_email_note: "Nóta: Ní stórálaimid seoltaí ríomhphoist ar bhealach a ligfeadh dúinn dul i dteagmháil le daltaí. Ní bhfaighidh daltaí aon ríomhphost ó Code.org seachas chun focal faire a athshocrú. Féach ár <a href='%{privacy_policy_url}', target='_blank'>bpolasaí príobháideachais</a> chun tuilleadh eolais a fháil."
+    create_personal_login_email_note_markdown: 'Nóta: Ní stórálaimid seoltaí ríomhphoist ar bhealach a ligfeadh dúinn dul i dteagmháil le daltaí. Ní bhfaighidh daltaí aon ríomhphost ó Code.org seachas chun focal faire a athshocrú. Féach ár [bpolasaí príobháideachais](%{privacy_policy_url}) chun tuilleadh eolais a fháil.'
     enter_new_login_info: 'Tabhair do shonraí nua logála isteach'
     confirm_secret_words: 'Deimhnigh gur tusa atá ann trí na focail rúnda atá agat a chur isteach'
     enter_parent_email: "Cuir isteach seoladh ríomhphoist do thuismitheora (i gcás gur gá duit d'fhocal faire a athshocrú)"
@@ -681,14 +686,17 @@ ga:
   terms_interstitial:
     title: "Téarmaí Seirbhíse agus Polasaí Príobháideachais Nua"
     intro_desc: "Táimid tar éis na Téarmaí Seirbhíse agus an Polasaí Príobháideachais a leasú, mar a léirítear thíos. Chuaigh na hathruithe seo i bhfeidhm ar 24 Lúnasa 2016. An t-athrú is mó: <i>ní stórálfaimid seoltaí ríomhphoist mar chuid de chuntais dalta sa Stiúideo Códála.</i> Is mór an rud é seo, agus tá súil againn go leagfaidh sé síos caighdeán nua maidir le príobháideachas i dteicneolaíocht an oideachais. Sheolamar achoimre ar na hathruithe eile i dteachtaireacht r-phoist."
+    intro_desc_markdown: "Táimid tar éis na Téarmaí Seirbhíse agus an Polasaí Príobháideachais a leasú, mar a léirítear thíos. Chuaigh na hathruithe seo i bhfeidhm ar 24 Lúnasa 2016. An t-athrú is mó: _ní stórálfaimid seoltaí ríomhphoist mar chuid de chuntais dalta sa Stiúideo Códála._ Is mór an rud é seo, agus tá súil againn go leagfaidh sé síos caighdeán nua maidir le príobháideachas i dteicneolaíocht an oideachais. Sheolamar achoimre ar na hathruithe eile i dteachtaireacht r-phoist."
     intro_instructions: "Caithfidh tú glacadh leis na téarmaí nua a bhaineann le daltaí i do sheomra ranga atá níos óige ná 13 bliana d'aois chun teacht ar na gnéithe nua sa Stiúideo Códála. Nuair a chláróidh tú cuntas le haghaidh dalta atá níos óige ná 13, iarrfar ort deimhniú gur thug tuismitheoir cead do do scoil faisnéis phearsanta a bhailiú ón dalta ar mhaithe leis an scoil, cláracha oideachasúla cosúil leis an Stiúideo Códála san áireamh."
     tos: "Téarmaí Seirbhíse"
     privacy: "Polasaí Príobháideachais"
     privacy_notice: "Polasaí Príobháideachais"
     accept_label: 'Glacaim leis na <a href="%{tos_url}" target="_blank">Téarmaí Seirbhíse</a> nua agus leis <a href="%{privacy_url}" target="_blank">an bPolasaí Príobháideachais</a> nua'
+    accept_label_markdown: Glacaim leis na [Téarmaí Seirbhíse](%{tos_url}) nua agus leis [an bPolasaí Príobháideachais](%{privacy_url}) nua
     accept: "Glacaim Leo"
     print: "Priontáil"
     reminder_desc: 'Rinneamar leasú ar <a href="%{tos_url}" target="_blank">na Téarmaí Seirbhíse</a> agus ar <a href="%{privacy_url}" target="_blank">an bPolasaí Príobháideachais</a>. Léigh na cáipéisí seo go cúramach sula nglacfaidh tú leo. Go dtí go nglacfaidh tú leis an téarmaí nua, seans nach mbeidh do chuid daltaí in ann tairbhe a bhaint as na hacmhainní atá againn a mhúineann JavaScript.'
+    reminder_desc_markdown: Rinneamar leasú ar [na Téarmaí Seirbhíse](%{tos_url}) agus ar [an bPolasaí Príobháideachais](%{privacy_url}). Léigh na cáipéisí seo go cúramach sula nglacfaidh tú leo. Go dtí go nglacfaidh tú leis an téarmaí nua, seans nach mbeidh do chuid daltaí in ann tairbhe a bhaint as na hacmhainní atá againn a mhúineann JavaScript.
     review_terms: "Léigh na téarmaí seirbhíse nua"
   school_info_interstitial:
     title: "Ba mhaith linn deis a thabhairt do gach dalta an Ríomheolaíocht a fhoghlaim - cabhraigh linn súil a choinneáil ar an dul chun cinn!"
@@ -710,6 +718,7 @@ ga:
     submit: "Seol"
     decline: "Dún"
   zendesk_too_young_message: 'Ár leithscéal, ach níl cead ag úsáideoirí óga logáil isteach sa suíomh tacaíochta. Is féidir leat cuairt a thabhairt ar <a href="http://support.code.org">support.code.org</a> gan logáil isteach, nó iarr ar thuismitheoir nó ar mhúinteoir dul i dteagmháil linn ar do shon.'
+  zendesk_too_young_message_markdown: 'Ár leithscéal, ach níl cead ag úsáideoirí óga logáil isteach sa suíomh tacaíochta. Is féidir leat cuairt a thabhairt ar [support.code.org](http://support.code.org) gan logáil isteach, nó iarr ar thuismitheoir nó ar mhúinteoir dul i dteagmháil linn ar do shon.'
   progress:
     not_started: gan tosú
     in_progress: idir lámha

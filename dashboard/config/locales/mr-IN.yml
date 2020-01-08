@@ -1,15 +1,71 @@
 ---
 mr:
   or: किंवा
+  continue: सुरू ठेवा
   signup_form:
     user_type_student: विध्यार्थी
+    email_preference_yes: होय
+    email_preference_no: नाही
+  signin_form:
+    submit: साइन इन करा
+  signinsection:
+    login: साइन इन करा
   nav:
+    header:
+      finished_hoc: माझं झालंय!
+      course_catalog: अभ्यासक्रमाचा कॅटलॉग
+      project_gallery: प्रकल्प
+      help_support: सहाय्य आणि मदत
+      report_bug: समस्या रिपोर्ट करा
+      about: या बद्दल
     user:
+      signin: साइन इन करा
+      signup: अकाउंट तयार करा
       create: बनवा
+      dance: डांस पार्टी
   teacher:
     panel:
       student: विध्यार्थी
   user_type:
     student: विध्यार्थी
+  footer:
+    copyright: कॉपीराइट
+    translate: आमच्या सामग्रीचा अनुवाद करण्यासाठी पुढे या
+    tos: सेवेच्या अटी
+    privacy: गोपनीयता धोरण
+    report_abuse: गैरवर्तनाची रिपोर्ट करा
+  reference_area:
+    title: मदत पाहिजे?
+    subtitle: हे व्हिडिओ आणि इशारे पाहा
+  video:
+    tab: व्हिडिओ.
+    notes: व्हिडिओ नाही? नोट्स दाखवा.
+  upsell:
+    dance:
+      title: डांस पार्टी
+    dance-2019:
+      title: डांस पार्टी
+  gallery:
+    report_abuse: गैरवर्तनाची रिपोर्ट करा
+  landing:
+    help_support: सहाय्य आणि मदत
+  dialog:
+    ok: ठीक आहे
+    startover_ok: पुन्हा सुरू करा
+  terms_interstitial:
+    tos: सेवेच्या अटी
+    privacy: गोपनीयता धोरण
+    print: प्रिंट
   project:
+    projects: प्रकल्प
+    project_gallery: प्रकल्प
     name: नाव
+  flex_category:
+    csf_events: ईव्हेंट्स
+  pd:
+    form_entries:
+      email_opt_in:
+        opt_in_yes: होय
+        opt_in_no: नाही
+  gdpr_dialog:
+    true: होय

@@ -1,7 +1,5 @@
 ---
 title: 先前的一小時玩程式活動海報
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

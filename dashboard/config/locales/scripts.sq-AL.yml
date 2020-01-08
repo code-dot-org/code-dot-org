@@ -1776,3 +1776,29 @@ sq:
               name: Hyrja
             Nested Loops:
               name: Përsëritjet e Mbivendosura
+        k5-onlinepd-2019:
+          stages:
+            Next Steps:
+              name: Hapat e ardhshme
+            Loops:
+              name: cikle
+            Conditionals:
+              name: Kushtet
+            Events:
+              name: Ngjarje
+            Functions:
+              name: funksione
+            Variables:
+              name: variabla
+            For Loops:
+              name: Për Ciklet
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Kushtet
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Kushtoret me Karta

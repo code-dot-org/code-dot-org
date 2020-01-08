@@ -46,6 +46,18 @@ export default class CustomMarshalingInterpreter extends Interpreter {
         opt_initFunc(thisInterpreter, scope);
       }
     });
+    // Program nodes always have end=0 for some reason (acorn related).
+    // The Interpreter.step method assumes that a falsey state.node.end value means
+    // the interpreter is inside polyfill code, because it strips all location information from ast nodes for polyfill code.
+    // This means the interpreter will sometimes step more often than necessary. This is a problem for us when breakpoints
+    // are turned on because the interpreter can step over nodes that we need to check before they get stepped, resulting
+    // in an infinite loop.
+    // Also, our code likes them to have end=1 for historical reasons, the result
+    // being that unhandled exceptions will highlight the first character
+    // of the program. The logic below preserves that behavior:
+    if (this.ast && this.ast.type === 'Program') {
+      this.ast.end = 1;
+    }
   }
 
   /**
@@ -261,24 +273,6 @@ export default class CustomMarshalingInterpreter extends Interpreter {
    */
   setPropertyWithoutCustomMarshaling(...args) {
     return super.setProperty(...args);
-  }
-
-  step() {
-    const state = this.peekStackFrame();
-    // Program nodes always have end=0 for some reason (acorn related).
-    // The Interpreter.step method assumes that a falsey state.node.end value means
-    // the interpreter is inside polyfill code, because it strips all location information from ast nodes for polyfill code.
-    // This means the interpreter will sometimes step more often than necessary. This is a problem for us when breakpoints
-    // are turned on because the interpreter can step over nodes that we need to check before they get stepped, resulting
-    // in an infinite loop.
-    // See this line in the interpreter code which introduced this behavior:
-    //   https://github.com/NeilFraser/JS-Interpreter/commit/a4ded3ed1de7960cda9177d1bacb6a2526440d14#diff-966ad2ec9f775b3820dd37b4d36b650aR116
-    // TODO: push a fix upstream that checks state.node.end === undefined so the interpreter
-    // doesn't step unnecessarily for Program nodes.
-    if (state && state.node.type === 'Program') {
-      state.node.end = 1;
-    }
-    return super.step();
   }
 
   // The following overridden methods need to be patched in order to support custom marshaling.

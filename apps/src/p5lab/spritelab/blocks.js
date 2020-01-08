@@ -1,4 +1,5 @@
 /* global dashboard */
+/* global appOptions */
 
 import {SVG_NS} from '@cdo/apps/constants';
 import {getStore} from '@cdo/apps/redux';
@@ -225,11 +226,7 @@ const customInputTypes = {
       };
       block.superSetTitleValue = block.setTitleValue;
       block.setTitleValue = function(newValue, name) {
-        if (
-          inputConfig.assignment &&
-          name === inputConfig.name &&
-          block.blockSpace.isFlyout
-        ) {
+        if (name === inputConfig.name && block.blockSpace.isFlyout) {
           newValue = Blockly.Variables.generateUniqueName(newValue);
         }
         block.superSetTitleValue(newValue, name);
@@ -381,7 +378,15 @@ export default {
           .appendTitle(fieldLabel, 'VAR')
           .appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);
 
-        if (Blockly.useModalFunctionEditor) {
+        let allowBehaviorEditing = Blockly.useModalFunctionEditor;
+
+        // If there is a toolbox with no categories, disallow editing the behavior,
+        // because renaming the behavior can break things.
+        if (appOptions.level.toolbox && !Blockly.hasCategories) {
+          allowBehaviorEditing = false;
+        }
+
+        if (allowBehaviorEditing) {
           var editLabel = new Blockly.FieldIcon(Blockly.Msg.FUNCTION_EDIT);
           Blockly.bindEvent_(
             editLabel.fieldGroup_,

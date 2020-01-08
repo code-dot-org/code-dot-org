@@ -1,24 +1,24 @@
 name 'csp-20-21-u4-assess-conditionals pick 1'
-encrypted 'wkchWoHR4XZGNK9LNjFfB5loia875C8OgBLh8A3ZMfHps34cxv1LKwfe+4s+
-mr7cNM3CCTiZQI8UvZ+vbYVm1DqZseBfi2ABgJAzQf9tcOBqtJ46RC8FaiL+
-ONmt8hrfv6sS/Zby5bxAhNKq73cDylNjpPbozUCISEvKPuvFHVId//HGA5+3
-Zrx+XiijTUlvAWNpRXaGM3Lafo0Dz+MkEDJVOydPurPVWXotTO12xbomF8rU
-UcldQc7Z9y+3jHf/bAPpmQ08G4v48OuqebXjhVcVMDt5GN6BSf2BAr6gl/SI
-Qv6fBwChNmGAAmhvsh9bkb1Io7lM7/GUslL4rvFc+6zvVB8L8YH7yeIaQjS1
-lSe9vpKr5wzuLjN9lfX+w9xYGYMiVlK1Udq2ds2k21fFYvCuh+UvPJ9U0Gx0
-cBtrphfWGqs7i2megss1XWGjOEzUIBOh7Mwkqc3/wMXyK6UaPyTs3lzQGhvI
-3p1yN2DoRIyAnw8Vet3EI0nWBkKmhhend831rhyFFU+0bFSVpa26NDqEjiQg
-r+qRxEV9heSr0hM5frWjFztc5kDK+a16uRDP14VD/AJ0lpUBV0EksY4EXApu
-ihennVOlPqia3V5u4/m4qM3Z5DI5ss6pgCsBwUB6kiYjBQitvXv7P15VpsLl
-S7/zeZOsNckoqnhkN8wx6OYYq8SqqmQptrBiHhF7re7LZEym+FR7dc+OrkSK
-iUvgJq4omNk/tSE7v4q8NSwqupByThj8vCoFIRNVVSDbwoK49jliw0duBh44
-+unAjJCsaxEnXoi0ljshsmw7oO1S9/s66+zu/P/Q65221cJGp3wYGRIa2l+y
-3xbj4EKlCfvRcFU0wpbasEQB0NPF201eIveafs+Y1tHutQK6Tq3SxmHI+Gio
-gGkAtlNXYx2AZfOF6VNFs1ojLO8k/v3QiHIsAqRYgkK8A/p9zT0Pume35tS5
-Po15UwKA5F4lIXFiPn01ZA3snOpeA0fs/SKtqNMmPfMP9ieq9+KwcmWAbonF
-pAWfwgNujQX4ksZO9spSm5WbNOAiXeQv+Olreii+vWxU007JBe8lzn0N4KWD
-hk8vT6Q8vxPG1wxF63vsutrBNKIr6sE+6jKpF/+QZ+NC0jA6XVxINbwe4Ypo
-CQCv1QAPWE1BJ0HohIRX4mavqy6/nElpTqqmJAMghoAuGhIQX46LBDRXKka5
-eEcYve/9y1oZM37BgGXZW0vDpvME9CYzkdZqPB3uF1o5M9UDXsokx+yynAyC
-srEMj+ARQdUf+MN4BcUZvyavDxTVfHSzZCmObK8szg==
-'
+editor_experiment ''
+
+
+
+
+wrong '<img src="https://images.code.org/ee9cda3b7b0a4b992e6d085ca15191b4-image-1552686189426.42.47 PM.png" style="height:250px">'
+wrong '<img src="https://images.code.org/365cfe7314133bb8f99a4075df41a2a0-image-1552685852116.36.58 PM.png" style="height:250px">'
+right '<img src="https://images.code.org/a9a6fab0bde8929dc19b22b2a6613685-image-1574868753247.30.49 AM.png" style="height:250px">'
+wrong '<img src="https://images.code.org/4736267db8711822944b7ccc6c9000f3-image-1552686069909.40.42 PM.png" style="height:250px">'
+
+markdown <<MARKDOWN
+A movie theater charges different ticket prices based on a customer's age. The prices are shown in the table below.
+
+| Age | Ticket Price |
+|:-----------------------:|:------------------:|
+|12 and younger|$5|
+|13 to 64|$8|
+|65 and older|$6|
+
+<br>
+
+The customer's age is stored in the variable `age` and the price is stored in the variable `price`. Which piece of code will correctly decide the price for each ticket.
+MARKDOWN

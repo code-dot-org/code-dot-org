@@ -1,7 +1,5 @@
 ---
-title: How-to guide for parents
-layout: wide
-nav: how_to_nav
+title: తల్లిదండ్రుల కోసం హౌ-టు గైడ్
 ---
 
 {{ signup_button }}

@@ -96,6 +96,30 @@ da-DK:
       Course 4 Bee Params 5: Lad os starte fra bunden - kan du oprette en ny funktion
         kaldet "skaf 5 nektar" med en retning parameter?
       Course 4 Maze 5: Kan du løse denne opgave ved brug af færrest muligt antal blokke?
+      CourseD_Dance_Party_01: Træk blokken `lav en ny`til arbejdsområdet, og tilslut
+        den inden i `indstillings`blokken.
+      CourseD_Dance_Party_02: Få elgen til at starte et nyt trin efter 4 takter!
+      CourseD_Dance_Party_03: Få nu danseren til at starte et nyt trin efter 6 takter!
+      CourseD_Dance_Party_04: Føj en baggrundseffekt til dit program.
+      CourseD_Dance_Party_05: Brug en anden ny blok til at få danseren til at ændre
+        bevægelser hver 2. takt.
+      CourseD_Dance_Party_06: Opret en backup-danser kaldet `backup_danser1` til at
+        danse med katten.
+      CourseD_Dance_Party_08: Kan du få begge backup-dansere til at være samme størrelse?
+      CourseD_Dance_Party_09: Brug blokken `indstil farvetone` til at ændre en dansers
+        farve.
+      CourseD_Dance_Party_10: Få den anden danser til at reagere på musikken ved hjælp
+        af blokken `begynder at følge`.
+      CourseD_Dance_Party_11: Blokken `når op trykkes` giver dig mulighed for at køre
+        programmering, når pil op-tasten trykkes. Prøv at få danseren til at gøre
+        et hurtigt trin, når du trykker op.
+      CourseD_Dance_Party_11_5: Brug "alle ænder"-blokke, til at få alle ænder til
+        at danse sammen.
+      CourseD_Dance_Party_11b: Få Robotten til at "droppe" en gang når du trykker
+        på højre piletast, og "klappe" en gang, når du trykker på pil op. Gør drop-klappet
+        så hurtigt du kan!
+      CourseD_Dance_Party_12: Bliv groovy! Skab dit eget Dance Party som du kan dele
+        med dine venner.
       CourseE_HOC 2018 Level_1: Indsaml en båd fra kisten.
       CourseE_HOC 2018 Level_10: Gå til indgangen af havmonumentet.
       CourseE_HOC 2018 Level_11: Byg en kanal med prismarine inde i havmonumentet.
@@ -109,6 +133,64 @@ da-DK:
         til skatten.
       Crack Random Substitution: Instruktioner
       Crack a Caesar Cipher: Instruktioner
+      Dance_2019_01: 'Træk blokken <xml><block type="Dancelab_makeAnonymousDanceSprite"
+        block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;,
+        &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml>
+        ind på arbejdsområdet, og sæt den ind i <xml><block type="Dancelab_whenSetup2"
+        next_connection_disabled="true" block-text="setup"></block></xml> blokken.'
+      Dance_2019_02: Få katten til at lave nogle dansetrin når du trykker på en tast.
+      Dance_2019_03: 'Det er tid til at få danset! Programmér hver danser til at bevæge
+        sig, når du trykker på forskellige taster. Vælg dit foretrukne dansetrin for
+        hver danser, eller indstil det til ”(Tilfældig)” for at opnå noget helt uforudsigeligt! '
+      Dance_2019_04: Få din danser til at starte en ny bevægelse efter den fjerde
+        handling.
+      Dance_2019_05: Få nu danseren til at starte et nyt trin efter 6 takter!
+      Dance_2019_06: Opret en gruppe af backup-dansere omkring solodanseren i midten.
+      Dance_2019_07: Skift størrelsen på gruppen af backup-dansere.
+      Dance_2019_08: Prøv at ændre farvetonen på en af dine dansere (eller en hel
+        gruppe)!
+      Dance_2019_09: Vær kreativ med disse nye blokke!
+      Dance_2019_10: Bliv groovy! Skab dit eget Dance Party som du kan dele med dine
+        venner.
+      Dance_Party_01: Træk blokken `lav en ny`til arbejdsområdet, og tilslut den inden
+        i `indstillings`blokken.
+      Dance_Party_02: Få elgen til at starte et nyt trin efter 4 takter!
+      Dance_Party_03: Få nu danseren til at starte et nyt trin efter 6 takter!
+      Dance_Party_04: Føj en baggrundseffekt til dit program.
+      Dance_Party_05: Brug en anden ny blok til at få danseren til at ændre bevægelser
+        hver 2. takt.
+      Dance_Party_06: Opret en backup-danser kaldet `backup_danser1` til at danse
+        med katten.
+      Dance_Party_08: Kan du få begge backup-dansere til at være samme størrelse?
+      Dance_Party_09: Brug blokken `indstil farvetone` til at ændre en dansers farve.
+      Dance_Party_10: Få den anden danser til at reagere på musikken ved hjælp af
+        blokken `begynder at følge`.
+      Dance_Party_11: Blokken `når op trykkes` giver dig mulighed for at køre programmering,
+        når pil op-tasten trykkes. Prøv at få danseren til at gøre et hurtigt trin,
+        når du trykker op.
+      Dance_Party_11_5: Brug "alle ænder"-blokke, til at få alle ænder til at danse
+        sammen.
+      Dance_Party_11b: Få Robotten til at "droppe" en gang når du trykker på højre
+        piletast, og "klappe" en gang, når du trykker på pil op. Gør drop-klappet
+        så hurtigt du kan!
+      Dance_Party_12: Bliv groovy! Skab dit eget Dance Party som du kan dele med dine
+        venner.
+      Dance_Party_extras_alternate_2019: Frem og tilbage (Klik 'Mere' for forklaring)
+      Dance_Party_extras_battle: Dansegruppe (Klik 'Mere' for forklaring)
+      Dance_Party_extras_battle_2019: Dansegruppe (Klik 'Mere' for forklaring)
+      Dance_Party_extras_every_beat: Fjerdedels node (Klik 'Mere' for forklaring)
+      Dance_Party_extras_every_beat_2019: Fjerdedels node (Klik 'Mere' for forklaring)
+      Dance_Party_extras_layout: Lad os komme i gang! (Klik "Mere" for at få detaljerne)
+      Dance_Party_extras_layout_2019: Lad os komme i gang! (Klik "Mere" for at få
+        detaljerne)
+      Dance_Party_extras_mixed_2019: Flere knapper (Klik 'Mere' for forklaring)
+      Dance_Party_extras_on_beat: Bas, midt, og diskant (Klik 'Mere' for forklaring)
+      Dance_Party_extras_on_beat_2019: Bas, midt, og diskant (Klik 'Mere' for forklaring)
+      Dance_Party_extras_speed: Sæt tempo op, sæt tempo ned (Klik 'Mere' for forklaring)
+      Dance_Party_extras_speed_2019: Sæt tempo op, sæt tempo ned (Klik 'Mere' for
+        forklaring)
+      Dance_Party_extras_visible: Hvor blev de af? (klik på 'Mere' for forklaring)
+      Dance_Party_extras_visible_2019: Hvor blev de af? (klik på 'Mere' for forklaring)
       Function intro Ryan: Brug "byg bro" funktionen to gange for at bygge en vej
         hen til faklen.
       Function intro Ryan_2019: Brug "byg bro" funktionen to gange for at bygge en
@@ -116,7 +198,7 @@ da-DK:
       HOC 2018 Level_1: Indsaml en båd fra kisten.
       HOC 2018 Level_10: Gå til indgangen af havmonumentet.
       HOC 2018 Level_11: Byg en kanal med prismarine inde i havmonumentet.
-      HOC 2018 Level_12: Design dit eget undervandsmiljø, du bestemmer!
+      HOC 2018 Level_12: Design dit eget undervandsmiljø, du bestemmer selv!
       HOC 2018 Level_2: Gå til enden af molen.
       HOC 2018 Level_3: Tag over det åbne hav, og find til torsken.
       HOC 2018 Level_4: Brug en løkke til at komme hen til delfinen.
@@ -267,6 +349,10 @@ da-DK:
       Underground Mining Coal_2019: Du finder de mest værdifulde ressourcer under
         jorden, men der kan være mørkt. Placér mindst to fakler, og udvind mindst
         to stykker kul.
+      'Widget: Text Compression': Kig efter mønstre (gentagede ord eller vendinger)
+        i teksten. Tilføj det mønster, som du finder til ordlisten til højre. Når
+        du skriver ordet eller vendingen ind i ordlisten, vil et symbol for dette
+        blive indsat i teksten i stedet for 'mønstret'.
       bounce_1: Vedhæft en blok til "når venstre pil"-blokken og tryk på "Kør Program".
         Flyt battet ved hjælp af venstre pil for at nå slut-målet.
       bounce_10: Der er nu et mål på toppen. Vedhæft "score point" og "score modstander-point"-blokke
@@ -297,10 +383,136 @@ da-DK:
       course4_artist_fwp_challenge1: Prøv at køre dette program, og foretag ændringer
         for at se hvad der sker. Kan du finde ud af hvordan det virker? (Ellers slet
         det og erstat det med noget helt andet)
+      courseA_artist_loops10: Hjælp mig med at lægge nogle sten, så jeg ikke falder
+        i vandet!
+      courseA_artist_loops10_2018: Hjælp mig med at lægge nogle sten, så jeg ikke
+        falder i vandet!
+      courseA_artist_loops10_2019: Hjælp mig med at lægge nogle sten, så jeg ikke
+        falder i vandet!
+      courseA_artist_loops11: Hjælp mig med at bygge trin så jeg kan se skibene sejle.
+      courseA_artist_loops11_2018: Hjælp mig med at bygge trin så jeg kan se skibene
+        sejle.
+      courseA_artist_loops11_2019: Hjælp mig med at bygge trin så jeg kan se skibene
+        sejle.
+      courseA_artist_loops12: Kunstneren så noget sjovt. Tegn hvad du tror han så.
+      courseA_artist_loops12_2018: Kunstneren så noget sjovt. Tegn hvad du tror han
+        så.
+      courseA_artist_loops12_2019: Kunstneren så noget sjovt. Tegn hvad du tror han
+        så.
+      courseA_artist_loops_challenge1: Kan du tegne et hus? Du må selv om hvordan
+        det skal se ud!
+      courseA_artist_loops_challenge1_2018: Kan du tegne et hus? Du må selv om hvordan
+        det skal se ud!
+      courseA_artist_loops_challenge1_2019: Kan du tegne et hus? Du må selv om hvordan
+        det skal se ud!
+      courseA_artist_loops_challenge2a: _"Hjælp mig med at få disse telte sat op!"_
+      courseA_artist_loops_challenge2a_2018: _"Hjælp mig med at få disse telte sat
+        op!"_
+      courseA_artist_loops_challenge2a_2019: _"Hjælp mig med at få disse telte sat
+        op!"_
+      courseA_collector_loops1: Bevæg Laurel rundt og saml så mange skatte som du
+        kan!
+      courseA_collector_loops1_2018: Bevæg Laurel rundt og saml så mange skatte som
+        du kan!
+      courseA_collector_loops1_2019: Bevæg Laurel rundt og saml så mange skatte som
+        du kan!
+      courseA_collector_loops2: Saml alle 3 skatte for at komme gennem dette trin.
+      courseA_collector_loops2_2018: Saml alle 3 skatte for at komme gennem dette
+        trin.
+      courseA_collector_loops4: Ret Laurel's sti, så hun kan samle alle skattene.
+      courseA_collector_loops4_2018: Ret Laurel's sti, så hun kan samle alle skattene.
+      courseA_collector_loops4_2019: Ret Laurel's sti, så hun kan samle alle skattene.
+      courseA_collector_loops5: Brug hvad du har lært for at samle alle skattene op.
+      courseA_collector_loops5_2018: Brug hvad du har lært for at samle alle skattene
+        op.
+      courseA_collector_loops5_2019: Brug hvad du har lært for at samle alle skattene
+        op.
+      courseA_collector_loops6: Tilføj blokke til denne kode for at samle alle skattene.
+      courseA_collector_loops6_2018: Tilføj blokke til denne kode for at samle alle
+        skattene.
+      courseA_collector_loops6_2019: Tilføj blokke til denne kode for at samle alle
+        skattene.
+      courseA_collector_loops7: Hva skal du tilføje til denne kode for at samle alle
+        skattene?
+      courseA_collector_loops7_2018: Hva skal du tilføje til denne kode for at samle
+        alle skattene?
+      courseA_collector_loops7_2019: Hva skal du tilføje til denne kode for at samle
+        alle skattene?
+      courseA_collector_loops8: Skriv koden for at samle alle skattene.
+      courseA_collector_loops8_2018: Skriv koden for at samle alle skattene.
+      courseA_collector_loops8_2019: Skriv koden for at samle alle skattene.
+      courseA_collector_loops9: "**Udfordring:** Skattene ligger hele vejen op ad
+        trinene! Skriv en kode så Laurel samle alle op."
+      courseA_collector_loops9_2018: "**Udfordring:** Skattene ligger hele vejen op
+        ad trinene! Skriv en kode så Laurel samle alle op."
+      courseA_collector_loops9_2019: "**Udfordring:** Skattene ligger hele vejen op
+        ad trinene! Skriv en kode så Laurel samle alle op."
+      courseA_collector_preLoops7: Saml alle 3 skatte for at komme gennem dette trin.
       courseA_maze_seq1: Få fuglen hen til den onde gris!
+      courseA_maze_seq10: 'Udfording: Gå uden om TNT for at få fuglen hen til grisen! '
+      courseA_maze_seq11: Flyt i en retning, så en anden, for at få fuglen hen til
+        grisen.
+      courseA_maze_seq11_2018: Flyt i en retning, så en anden, for at få fuglen hen
+        til grisen.
+      courseA_maze_seq11_2019: Flyt i en retning, så en anden, for at få fuglen hen
+        til grisen.
+      courseA_maze_seq12: 'Fang den gris! '
+      courseA_maze_seq12_2018: 'Fang den gris! '
+      courseA_maze_seq12_2019: 'Fang den gris! '
+      courseA_maze_seq13: Fang den gris, hvis du kan!
+      courseA_maze_seq13_2018: Fang den gris, hvis du kan!
+      courseA_maze_seq13_2019: Fang den gris, hvis du kan!
       courseA_maze_seq1_2018: Få fuglen hen til den onde gris!
       courseA_maze_seq1_2019: Få fuglen hen til den onde gris!
       courseA_maze_seq2: Fiks koden for at få fuglen hentil grisen.
+      courseA_maze_seq3: Ret koden, for at få fuglen hen til grisen!
+      courseA_maze_seq4: Fjern en blok for at få fuglen hen til grisen!
+      courseA_maze_seq5: Prøv denne opgave selv helt fra begyndelsen.
+      courseA_maze_seq6: Flyt i en retning, så en anden, for at komme hen til grisen!
+      courseA_maze_seq6_2018: Flyt i en retning, så en anden, for at komme hen til
+        grisen!
+      courseA_maze_seq6_2019: Flyt i en retning, så en anden, for at komme hen til
+        grisen!
+      courseA_maze_seq7: Prøv at finde ud af hvad der mangler, og tilføj så blokke,
+        for at få fuglen hen til grisen!
+      courseA_maze_seq8: Løs dette level for at få fuglen hen til grisen!
+      courseA_maze_seq8_2018: Løs dette level for at få fuglen hen til grisen!
+      courseA_maze_seq8_2019: Løs dette level for at få fuglen hen til grisen!
+      courseA_maze_seq9: Ret fejlen og tilføj blokke, så fuglen kommer hen til grisen!
+      courseA_maze_seq_challenge1: Der er noget galt. Ret koden så fuglen kommer hen
+        til grisen!
+      courseA_maze_seq_challenge1_2018: Der er noget galt. Ret koden så fuglen kommer
+        hen til grisen!
+      courseA_maze_seq_challenge1_2019: Der er noget galt. Ret koden så fuglen kommer
+        hen til grisen!
+      courseA_maze_seq_challenge2: Følg sporet og før fuglen hen til den tåbelige
+        gris. Undgå TNT ellers vil fjerene flyve væk!
+      courseA_maze_seq_challenge2_2018: Følg sporet og før fuglen hen til den tåbelige
+        gris. Undgå TNT ellers vil fjerene flyve væk!
+      courseA_maze_seq_challenge2_2019: Følg sporet og før fuglen hen til den tåbelige
+        gris. Undgå TNT ellers vil fjerene flyve væk!
+      courseA_playLab_events1: Dette er Play Lab. Flyt blokke hen på arbejdsområdet
+        og se hvad der sker!
+      courseA_playLab_events1_2018: Dette er Play Lab. Flyt blokke hen på arbejdsområdet
+        og se hvad der sker!
+      courseA_playLab_events2: Hunden Jorge ønsker at sige 'Hej med dig' Kan du hjælpe
+        den?
+      courseA_playLab_events2_2018: Hunden Jorge ønsker at sige 'Hej med dig' Kan
+        du hjælpe den?
+      courseA_playLab_events3: Forbind 'bevæg til venstre' - blokken med 'når til
+        venstre' blokke, som allerede er på arbejdsområdet.
+      courseA_playLab_events3_2018: Forbind 'bevæg til venstre' - blokken med 'når
+        til venstre' blokke, som allerede er på arbejdsområdet.
+      courseA_playLab_events3_2019: Forbind 'bevæg til venstre' - blokken med 'når
+        til venstre' blokke, som allerede er på arbejdsområdet.
+      courseA_playLab_events4: Tilføj blokke for bevægelse til højre, når der trykkes
+        på 'højre' knap.
+      courseA_video_events: Du har brug for et bedre playlab/events combo
+      courseA_video_events_2018: Du har brug for et bedre playlab/events combo
+      courseA_video_events_2019: Du har brug for et bedre playlab/events combo
+      courseB_maze_seq6: Flyt i en retning, så en anden, for at komme hen til grisen!
+      courseB_maze_seq7: Prøv at finde ud af hvad der mangler, og tilføj så blokke,
+        for at få fuglen hen til grisen!
       courseC_artist_prog5: 'Dette hus har brug for et tag! Tegn trekanten. Tip: alle
         tre sider er den samme længde.'
       courseC_artist_prog5_2018: 'Dette hus har brug for et tag! Tegn trekanten. Tip:

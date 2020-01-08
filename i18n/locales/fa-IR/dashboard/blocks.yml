@@ -21,6 +21,11 @@ fa:
           PROPERTY:
             '"scale"': اندازه
             '"height"': ارتفاع
+      Dancelab_changePropEachBy:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+            '"height"': ارتفاع
       Dancelab_doMoveEachLR:
         options:
           DIR:
@@ -54,18 +59,32 @@ fa:
             "{x: 100, y: 200}": سمت چپ
             "{x: 300, y: 200}": سمت راست
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": در هم
+      Dancelab_jumpToEach:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": سمت چپ
+            "{x: 300, y: 200}": سمت راست
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": در هم
       Dancelab_layoutSprites:
         options:
           FORMAT:
             '"random"': در هم
       Dancelab_makeAnonymousDanceSprite:
         options:
+          COSTUME:
+            '"CAT"': گربه
+            '"DOG"': سگ
+            '"DUCK"': اردک
           LOCATION:
             "{x: 100, y: 200}": سمت چپ
             "{x: 300, y: 200}": سمت راست
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": در هم
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"CAT"': گربه
+            '"DOG"': سگ
+            '"DUCK"': اردک
           LOCATION:
             "{x: 100, y: 200}": سمت چپ
             "{x: 300, y: 200}": سمت راست
@@ -93,6 +112,7 @@ fa:
             '19': '19'
             '20': '20'
           LAYOUT:
+            '"diamond"': الماس
             '"random"': در هم
       Dancelab_randomColor:
         text: رنگ تصادفی
@@ -127,7 +147,17 @@ fa:
           PROPERTY:
             '"scale"': اندازه
             '"height"': ارتفاع
+      Dancelab_setPropRandomEach:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+            '"height"': ارتفاع
       Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+            '"height"': ارتفاع
+      Dancelab_startMappingEach:
         options:
           PROPERTY:
             '"scale"': اندازه
@@ -137,6 +167,16 @@ fa:
           PROPERTY:
             '"scale"': اندازه
             '"height"': ارتفاع
+      Dancelab_stopMappingEach:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+            '"height"': ارتفاع
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': الماس
+            '"x"': طول (x)
       Dancelab_whenKey:
         options:
           KEY:
@@ -256,6 +296,8 @@ fa:
             '"scale"': اندازه
       Mikelab_randomColor:
         text: رنگ تصادفی
+      Mikelab_repeatUntilComplete:
+        text: تکرار بی‌پایان
       Mikelab_setBG:
         options:
           BG:

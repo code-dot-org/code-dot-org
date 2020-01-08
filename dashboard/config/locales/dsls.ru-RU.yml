@@ -11,6 +11,7 @@ ru-RU:
             треугольник под квадратом
         - text: Начни с квадрата<br/>Помести треугольник справа от квадрата<br/>Помести
             параллелограмм под квадратом<br/>Помести треугольник справа от параллелограмма
+          correct: true
         - text: Начни с квадрата <br/> Помести параллелограмм над квадратом<br/> Помести
             треугольник справа от параллелограмма
         - text: Начни с квадрата <br/> Помести треугольник под квадратом<br/> Помести
@@ -23,7 +24,7 @@ ru-RU:
         - text: Какое изображение <em>не</em> соответствует этому алгоритму?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 Big Event Match 1:
@@ -55,24 +56,24 @@ ru-RU:
       2-3 Conditionals Multi 1:
         title: Вопрос с несколькими вариантами ответа
         questions:
-        - text: Какой набор карт рассчитан правильно по правилам игры?
+        - text: Какой набор карт рассчитан в соответствиями с правилами игры?
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 Getting Loopy Multi 1:
         title: Вопрос с несколькими вариантами ответа
         questions:
         - text: Как бы ты упростил эту последовательность с помощью циклов?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
       2-3 Graph Paper Match 1:
         title: Соответствие
-        content1: Сопоставь сетку и программу.
+        content1: Подбери программы к рисункам.
         questions:
         - {}
         - {}
@@ -87,7 +88,7 @@ ru-RU:
         - text: С помощью какой программы создано это изображение?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 Maze Match 2:
         title: 'Лабиринт: сопоставление'
@@ -104,20 +105,20 @@ ru-RU:
       2-3 Maze Multi 2:
         title: Лабиринт. Вопрос с несколькими вариантами ответа
         questions:
-        - {}
+        - text: Какая последовательность блоков приведёт меня к свинке?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 Relay Programming Multi 1:
         title: Вопрос с несколькими вариантами ответа
         questions:
-        - {}
+        - text: Какая программа **не** создаёт это изображение?
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       2-3 Relay Programming Multi 2:
         title: Вопрос с несколькими вариантами ответа
         questions:
@@ -125,89 +126,94 @@ ru-RU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       2-3 artist debug multi 1:
+        title: 'Художник: Отладка и Множественный выбор 1'
         questions:
-        - {}
+        - text: Что тебе нужно исправить чтобы сделать круг завершённым?
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
       2-3 artist functions multi 1:
         title: Художник. Функции. Вопрос с несколькими вариантами ответа 1
         questions:
         - text: Выбери правильные блоки, чтобы нарисовать это изображение с помощью
             данной функции
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 artist loops match 1:
-        content2: Сопоставь цикл и форму
+        title: Художник. Циклы. Сопоставление 1
+        content2: Сопоставь цикл и фигуру
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png"
       2-3 artist loops multi 1:
-        title: Художник. Циклы. Вопрос с несколькими вариантами ответа
+        title: Художник. Циклы. Выбор ответа
         questions:
-        - text: Какая форма получается этом цикле?
+        - text: Какая фигура получается этом цикле?
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 artist loops multi 2:
-        title: Художник. Циклы. Вопрос с несколькими вариантами ответа
+        title: Художник. Циклы. Выбор ответа
         questions:
         - text: Какая фигура выражена этой программой?
         answers:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       2-3 artist match 1:
         title: Художник. Сопоставление
-        content1: Сопоставь форму и блок.
+        content1: Сопоставь фигуру и блоки, которые её рисуют.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q1.png"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q1.png"
       2-3 bee conditionals multi 1:
+        title: Условия с Пчёлкой. Множественный выбор 1
         questions:
         - text: Какое из сравнений ниже верно?
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 bee conditionals multi 3:
+        title: Условия с Пчёлкой. Множественный выбор 2
         questions:
         - text: Выбери лучшие блоки.
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 bee loops multi 1:
         title: Пчела. Циклы. Вопрос с несколькими вариантами ответа 1
         questions:
-        - text: Какие блоки собирают весь нектар?
+        - text: Какие блоки позволят собрать весь нектар?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -223,12 +229,12 @@ ru-RU:
         - {}
         - {}
       2-3 maze multi 1:
-        title: Лабиринт. Вопрос с несколькими вариантами ответа 1
+        title: 'Лабиринт: Выбор ответа 1'
         questions:
         - text: Какой набор блоков является правильным ответом?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 Algorithms Match 1:
@@ -253,28 +259,32 @@ ru-RU:
         - text: Выпечка печенья
         - text: Покупки по списку продуктов
         - text: Банан
+          correct: true
       4-5 Computational Thinking Match 1:
         title: Соответствие
         content1: Каждый из этих автомобилей разобран на части. Сопоставь автомобиль
           со списком деталей к нему.
         questions:
-        - text: "<h3>Колеса/сторона: 2<br/>Окна/сторона: 0</h3>"
-        - text: "<h3>Колеса/сторона: 2<br/>Окна/сторона: 1</h3>"
-        - text: "<h3>Колеса/сторона: 2<br/>Окна/сторона: 6</h3>"
-        - text: "<h3>Колеса/сторона: 3<br/>Окна/сторона: 2</h3>"
+        - text: "<h3>Колес с одной стороны: 2<br/>Окон с одной стороны: 0</h3>"
+        - text: "<h3>Колес с одной стороны: 2<br/>Окон с одной стороны: 1</h3>"
+        - text: "<h3>Колес с одной стороны: 2<br/>Окон с одной стороны: 6</h3>"
+        - text: "<h3>Колес с одной стороны: 3<br/>Окон с одной стороны: 2</h3>"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png"
       4-5 Computational Thinking Multi 1:
         title: Вопрос с несколькими вариантами ответа
+        content1: Ниже приведены три предложения. Какой из шаблонов подходит ко всем
+          трем предложениям?
         questions:
         - text: Москва — это большой город.<br/>Самара — это средний город.<br/>Тында
             — это маленький город.
         answers:
         - text: Москва — _____ _____ _____.
         - text: _____ — это _____ город.
+          correct: true
         - text: _____ — _____ это _____.
         - text: Тында – это _____ город.
       4-5 Crowdsourcing Multi 1:
@@ -282,14 +292,16 @@ ru-RU:
         questions:
         - text: Какая из этих картинок лучше всего иллюстрирует краудсорсинг?
         answers:
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png"
+          correct: true
       4-5 Crowdsourcing Multi 2:
         title: Вопрос с несколькими вариантами ответа
         questions:
         - text: Какой из этих видов деятельности больше подходит для краудсорсинга?
         answers:
         - text: Уборка своей комнаты
+          correct: true
         - text: Наслаждение десертом
         - text: Расчесывание волос
         - text: Умывание лица
@@ -300,10 +312,12 @@ ru-RU:
         answers:
         - text: Ваша дата рождения
         - text: Ваше любимое блюдо
+          correct: true
         - text: Ваш адрес
         - text: Номер кредитной карты ваших родителей
       4-5 Internet Multi 1:
         title: Вопрос с несколькими вариантами ответа
+        content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
         questions:
         - text: Когда ты заходишь на code.org, на какой IP-адрес тебя скорее всего
             направят?
@@ -311,36 +325,45 @@ ru-RU:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       4-5 Internet Multi 2:
         title: Вопрос с несколькими вариантами ответа
+        content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
         questions:
         - text: Если DNS отправил тебя на страницу с IP-адресом 100.42.50.110, на
             каком ты сайте?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 Songwriting Multi 1:
         title: Вопрос с несколькими вариантами ответа
+        content1: "/script_assets/4-5_images/unplugged/songwriting_1_q.png"
         questions:
-        - {}
+        - text: Какой самый большой фрагмент песни можно выделить как припев, чтобы
+            он повторялся каждый раз одинаково?
         answers:
         - text: Lou, Lou, skip to my Lou,
         - text: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou,
             Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.
-        - {}
-        - {}
+          correct: true
+        - text: "? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou,
+            Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's
+            in the buttermilk, <br/>Shoo, fly, shoo,"
+        - text: "? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the
+            buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo,
+            fly, shoo, <br/>Skip to my Lou, my darlin."
       4-5 Suncatchers Match 1:
         title: Соответствие
         content1: Сопоставь программы и образованные ими слова, используя предоставленные
           ниже навыки.
+        content2: "/script_assets/4-5_images/unplugged/suncatchers_1.png"
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a2.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a3.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png"
         answers:
         - text: "<h4>STACK</h4>"
         - text: "<h4>STAMP</h4>"
@@ -348,20 +371,22 @@ ru-RU:
         - text: "<h4>RAMP</h4>"
       4-5 Suncatchers Multi 1:
         title: Вопрос с несколькими вариантами ответа
+        content1: "/script_assets/4-5_images/unplugged/suncatchers_2_q.png"
         questions:
         - text: Какие из программ ниже <em>не</em> создают такую же последовательность
             как программа 1?
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png"
+          correct: true
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png"
       4-5 artist loops multi 1:
-        title: Художник. Циклы. Вопрос с несколькими вариантами ответа
+        title: Художник. Циклы. Выбор ответа
         questions:
         - text: Какие блоки создадут структуру кода?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 artist multi 1:
@@ -370,7 +395,7 @@ ru-RU:
         - text: Какие блоки рисуют прямоугольник с периметром 100?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 artist multi 2:
@@ -380,16 +405,19 @@ ru-RU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       4-5 bee conditionals multi 1:
         title: Пчела. Условные команды. Вопрос с несколькими вариантами ответа
+        content2: "? В фиолетовом цветке может быть 3, 2 или одна порция нектара,
+          но не известно, сколько именно. Какие блоки правильно проверяют и собирают
+          весь нектар с фиолетового цветка?"
         questions:
         - text: Выбери лучшие блоки.
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       4-5 bee debug multi 1:
         title: Пчела. Отладка. Вопрос с несколькими вариантами ответа
@@ -397,7 +425,7 @@ ru-RU:
         - text: Какая версия функции будет работать?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 bee loops multi 1:
@@ -405,7 +433,7 @@ ru-RU:
         questions:
         - text: Какие блоки решат головоломку?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -414,7 +442,7 @@ ru-RU:
         questions:
         - text: Какие блоки решают головоломку?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -435,7 +463,7 @@ ru-RU:
         questions:
         - text: Какие блоки решают головоломку?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -449,19 +477,19 @@ ru-RU:
       CSD Header Size MC:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U2 Design Project:
@@ -604,7 +632,7 @@ ru-RU:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -613,7 +641,7 @@ ru-RU:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -622,7 +650,7 @@ ru-RU:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -636,19 +664,19 @@ ru-RU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018_2019:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Keypress Matching:
         questions:
@@ -683,7 +711,7 @@ ru-RU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Sprite Movement Predict Multi_2018:
         questions:
@@ -691,7 +719,7 @@ ru-RU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019:
         questions:
@@ -699,14 +727,14 @@ ru-RU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Sprites intro predict multi:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U3 Sprites intro predict multi_2018:
@@ -714,7 +742,7 @@ ru-RU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
@@ -722,7 +750,7 @@ ru-RU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U3 combining rep:
@@ -826,7 +854,7 @@ ru-RU:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       CSD U6 array multi_2018:
         questions:
         - {}
@@ -834,7 +862,7 @@ ru-RU:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       CSD U6 array multi_2018_2019:
         questions:
         - {}
@@ -842,7 +870,7 @@ ru-RU:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       CSD U6 final intro:
         content1: Описание здесь
       CSD U6 final intro_2018:
@@ -855,7 +883,7 @@ ru-RU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U6 setProperty predict multi_2018:
         questions:
@@ -863,8 +891,177 @@ ru-RU:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
+      Dance_Party_extras_intro:
+        markdown: |
+          # Продолжайте танцевать!
+
+          В части №2 вы можете создавать свой личный проект. Здесь нет никаких головоломок-вместо этого есть куча проектов, которые показывают различные способы сделать более сложные танцевальные вечеринки.
+
+          Вы можете проходить эти уровни в любом порядке. Вернитесь назад, чтобы посмотреть, как что-то было сделано на предыдущем уровне, или объединить концепции между проектами. Попробуйте их все, выберите свой любимый и потратьте свое время на добавление к этому проекту, чтобы сделать его своим собственным.
+
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Continue</a>
+
+          <div class="clearfix"></div>
+
+          <div style="float: left; margin: 10px">
+          <a href="2">
+          <h2>
+          Давайте устроим порядок!
+          </h2>
+
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="3">
+          <h2>
+          Куда они делись?
+          </h2>
+
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="4">
+          <h2>
+          Танцевальная команда
+          </h2>
+
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="5">
+          <h2>
+          Четвертные Ноты
+          </h2>
+
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="6">
+          <h2>
+          Бас, Середина, Высокие Частоты
+          </h2>
+
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="7">
+          <h2>
+          Ускорить, замедлить
+          </h2>
+
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
+
+          </div>
+      Dance_Party_extras_intro_2019:
+        markdown: |
+          # Продолжайте танцевать!
+
+          В части №2 вы можете создавать свой личный проект. Здесь нет никаких головоломок-вместо этого есть куча проектов, которые показывают различные способы сделать более сложные танцевальные вечеринки.
+
+          Вы можете проходить эти уровни в любом порядке. Вернитесь назад, чтобы посмотреть, как что-то было сделано на предыдущем уровне, или объединить концепции между проектами. Попробуйте их все, выберите свой любимый и потратьте свое время на добавление к этому проекту, чтобы сделать его своим собственным.
+
+
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Continue</a>
+
+          <div class="clearfix"></div>
+
+
+          <div style="float: left; margin: 10px">
+          <a href="2">
+          <h2>
+          Туда и обратно
+          </h2>
+
+          <img src="https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="3">
+          <h2>
+          Больше кнопок
+          </h2>
+
+          <img src="https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif"></a>
+
+          </div>
+          <div style="float: left; margin: 10px">
+          <a href="4">
+          <h2>
+          Давайте устроим порядок
+          </h2>
+
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="5">
+          <h2>
+          Куда они делись?
+          </h2>
+
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="6">
+          <h2>
+          Танцевальная команда
+          </h2>
+
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="7">
+          <h2>
+          Четвертные Ноты
+          </h2>
+
+
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="8">
+          <h2>
+          Бас, Середина, Высокие Частоты
+          </h2>
+
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="9">
+          <h2>
+          Ускорить, замедлить
+          </h2>
+
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
+
+          </div>
+      GraphPaperProgramming-Unplugged:
+        markdown: |
+          # Программирование на бумаге
+
+          Напиши алгоритмы, которые твои одноклассники смогут использовать чтобы нарисовать картинки.
       Internet Simulator Setup:
         content1: Описание здесь
       Internet Simulator Setup 2:
@@ -878,7 +1075,7 @@ ru-RU:
         - text: Какие блоки решают эту головоломку?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Artist 1 Multi 2:
@@ -886,7 +1083,7 @@ ru-RU:
         questions:
         - text: Какие блоки рисуют квадрат?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -909,7 +1106,7 @@ ru-RU:
         - text: Сколько здесь порций нектара?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Bee 1 Multi 2:
@@ -920,7 +1117,7 @@ ru-RU:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Bee Loops Match 1:
         title: Соответствие
         content2: Сопоставь блоки
@@ -953,13 +1150,13 @@ ru-RU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Getting Loopy Multi 1:
         title: Вопрос с несколькими вариантами ответа
         questions:
         - text: Как бы ты упростил эту последовательность с помощью циклов?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Happy Maps Multi 1:
@@ -968,7 +1165,8 @@ ru-RU:
         - text: Какая стрелка направит Флурба к сокровищу?
         answers:
         - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/down.png"
+          correct: true
         - {}
         - {}
       K-1 Keep it Private Multi 1:
@@ -976,7 +1174,7 @@ ru-RU:
         questions:
         - text: Какой информацией следует <strong>не</strong> поделиться онлайн?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Maze Debugging Multi 1:
@@ -984,7 +1182,7 @@ ru-RU:
         questions:
         - text: Какой блок должен быть последним?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -993,7 +1191,7 @@ ru-RU:
         questions:
         - text: Выбери аналогичный блок «повторить».
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Maze Loops Multi 2:
@@ -1003,7 +1201,7 @@ ru-RU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Maze Match 1:
         title: Соответствие
         content2: Сопоставь головоломки и блоки
@@ -1025,7 +1223,7 @@ ru-RU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       K-1 Move It Multi 1:
         title: Вопрос с несколькими вариантами ответа
@@ -1033,7 +1231,7 @@ ru-RU:
         - text: Какой алгоритм приведет Флурба к цветам?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Plant a Seed Multi 1:
@@ -1043,14 +1241,14 @@ ru-RU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Plant a Seed Multi 2:
         title: Вопрос с несколькими вариантами ответа
         questions:
         - text: Какой шаг должен стоять на месте пропуска в этом алгоритме?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       K-1 Word Search Multi 1:
         title: Вопрос с несколькими вариантами ответа
@@ -1058,7 +1256,7 @@ ru-RU:
         - text: Какие блоки содержат буквы MOVE (ДВИЖЕНИЕ)?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       K-1 Word Search Multi 3:
         title: Вопрос с несколькими вариантами ответа
@@ -1066,7 +1264,8 @@ ru-RU:
         - text: Какое слово записано?
         answers:
         - text: SET (УСТАНОВИТЬ)
-        - {}
+        - text: КВАДРАТ
+          correct: true
         - text: ЮГ
       Multi-Screen Apps:
         title: название
@@ -1077,6 +1276,42 @@ ru-RU:
       OPD-K5 Stage3aGo:
         title: название
         content1: Описание здесь
+      'Overview: Design Mode':
+        markdown: |
+          #Добро пожаловать в Режим дизайна Лаборатории приложений.
+          В Режиме дизайна перетаскивайте элементы интерфейса в приложение.
+
+          ###Словарь
+          * **Интерфейс пользователя (UI)** - Как пользователь взаимодействует с компьютером или приложением.
+          * **UI элементы** или объекты - кнопки, картинки, поля ввода текста, выпадающие меню, страницы и тому подобное
+
+          ##Пример
+
+          <div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>Два переключателя над картинкой Телефон нужны для переключения между Режимом дизайна и Режимом кодирования..</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>Для добавления элемента интерфейса в приложение просто перетащи его в Область приложения (на картинку телефона). Там его можно перемещать, изменять его размер и еще много разных свойств этого элемента. </p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span><em>Вкладка Свойства</em> показывает все свойства элемента интерфейса, которые можно изменить для настройки его внешнего вида..</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span><strong>Идентификатор элемента</strong> служит ссылкой на элемент в коде. Мы еще поговорим об идентификаторах позже..</p>
+          </div>
+
+          ![](https://images.code.org/01a31ac3be66deb6d01a92a1edfffd21-image-1476726587662.png)
+
+
+          <div style="column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 66%; float: right">
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span>Можно поменять текст на кнопке на любой, который нужен.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">6.</span><strong>Замечание:</strong>Листайте вниз, чтобы увидеть остальные свойства элемента, "скрытые" ниже.
+          </div>
+
+          <div style="clear: both"></div>
+          <hr>
+
+          **Итак, попробуем!**
       Prepare for your presentation:
         title: название
         content1: Описание здесь
@@ -1089,7 +1324,7 @@ ru-RU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - feedback: Неправильно
       behaviors 4 predict:
@@ -1097,7 +1332,7 @@ ru-RU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - feedback: Неправильно
       courseC_multi_artist_prog6_predict1:
@@ -1106,7 +1341,7 @@ ru-RU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseC_multi_artist_prog6_predict1_2018:
         questions:
@@ -1114,7 +1349,7 @@ ru-RU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
         questions:
@@ -1122,38 +1357,41 @@ ru-RU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseC_multi_harvester_loops11_predict1:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
       courseC_multi_harvester_loops11_predict1_2018:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
       courseC_multi_maze_debugging8_predict1:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_debugging8_predict1_2018:
@@ -1161,7 +1399,7 @@ ru-RU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
@@ -1169,7 +1407,7 @@ ru-RU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_programming8_predict1:
@@ -1177,7 +1415,7 @@ ru-RU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_programming8_predict1_2018:
@@ -1185,7 +1423,7 @@ ru-RU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
@@ -1193,7 +1431,7 @@ ru-RU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_starWars_predict1:
@@ -1202,7 +1440,7 @@ ru-RU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - text: Я не знаю
       courseC_multi_starWars_predict1_2018:
         questions:
@@ -1210,7 +1448,7 @@ ru-RU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - text: Я не знаю
       courseC_multi_starWars_predict1_2018_2019:
         questions:
@@ -1218,14 +1456,14 @@ ru-RU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - text: Я не знаю
       courseC_multi_starWars_predict2:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_starWars_predict2_2018:
@@ -1233,7 +1471,7 @@ ru-RU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_starWars_predict2_2018_2019:
@@ -1241,7 +1479,7 @@ ru-RU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_artist_binary8_predict1:
@@ -1252,6 +1490,7 @@ ru-RU:
         - text: Б
         - text: В
         - text: Г
+          correct: true
       courseD_multi_artist_binary8_predict1_2018:
         questions:
         - {}
@@ -1260,6 +1499,7 @@ ru-RU:
         - text: Б
         - text: В
         - text: Г
+          correct: true
       courseD_multi_artist_binary8_predict1_2018_2019:
         questions:
         - {}
@@ -1268,11 +1508,13 @@ ru-RU:
         - text: Б
         - text: В
         - text: Г
+          correct: true
       courseD_multi_artist_nestedLoops9_predict1:
         questions:
         - {}
         answers:
         - text: А
+          correct: true
         - text: Б
         - text: В
         - {}
@@ -1281,6 +1523,7 @@ ru-RU:
         - {}
         answers:
         - text: А
+          correct: true
         - text: Б
         - text: В
         - {}
@@ -1289,6 +1532,7 @@ ru-RU:
         - {}
         answers:
         - text: А
+          correct: true
         - text: Б
         - text: В
         - {}
@@ -1297,7 +1541,7 @@ ru-RU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_bee_conditionals1_predict1_2018:
@@ -1305,7 +1549,7 @@ ru-RU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
@@ -1313,14 +1557,14 @@ ru-RU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_bee_conditionals7_predict2:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1328,7 +1572,7 @@ ru-RU:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1336,7 +1580,7 @@ ru-RU:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1346,7 +1590,7 @@ ru-RU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
         questions:
@@ -1354,7 +1598,7 @@ ru-RU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         questions:
@@ -1362,31 +1606,34 @@ ru-RU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_bee_nestedLoops9_predict2:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
       courseD_multi_collector_debugging10_predict1:
         questions:
@@ -1394,7 +1641,7 @@ ru-RU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_condLoops9_predict1:
         questions:
@@ -1402,7 +1649,7 @@ ru-RU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
         questions:
@@ -1410,7 +1657,7 @@ ru-RU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         questions:
@@ -1418,14 +1665,14 @@ ru-RU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_ramp13:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_farmer_while10_predict2:
@@ -1433,7 +1680,7 @@ ru-RU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_farmer_while10_predict2_2018:
@@ -1441,7 +1688,7 @@ ru-RU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
@@ -1449,7 +1696,7 @@ ru-RU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_farmer_while4_predict1:
@@ -1458,7 +1705,7 @@ ru-RU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_while4_predict1_2018:
         questions:
@@ -1466,7 +1713,7 @@ ru-RU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
         questions:
@@ -1474,13 +1721,13 @@ ru-RU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_maze_until10_predict2:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1488,7 +1735,7 @@ ru-RU:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1496,7 +1743,7 @@ ru-RU:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1505,7 +1752,7 @@ ru-RU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_maze_until2_predict1_2018:
@@ -1513,7 +1760,7 @@ ru-RU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
@@ -1521,7 +1768,7 @@ ru-RU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_scrat_predict1:
@@ -1529,14 +1776,14 @@ ru-RU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseE_multi_bee_functions_predict1:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1547,14 +1794,14 @@ ru-RU:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseE_multi_farmer_functions11_predict_2018:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
         questions:
@@ -1562,7 +1809,7 @@ ru-RU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseE_prediction_artistFunction1:
         questions:
@@ -1571,7 +1818,7 @@ ru-RU:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseE_prediction_artistFunction1_2018:
         questions:
         - {}
@@ -1579,7 +1826,7 @@ ru-RU:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseE_prediction_artistFunction1_2018_2019:
         questions:
         - {}
@@ -1587,13 +1834,13 @@ ru-RU:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseF_bee_variables_8a_2018:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_bee_variables_8a_2018_2019:
@@ -1601,7 +1848,7 @@ ru-RU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_artist_for10_predict1:
@@ -1610,7 +1857,7 @@ ru-RU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseF_multi_artist_for10_predict1_2018:
         questions:
@@ -1618,7 +1865,7 @@ ru-RU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
         questions:
@@ -1626,13 +1873,13 @@ ru-RU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseF_multi_artist_fwp2_predict1:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1640,7 +1887,7 @@ ru-RU:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1648,7 +1895,7 @@ ru-RU:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1656,7 +1903,7 @@ ru-RU:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1665,14 +1912,14 @@ ru-RU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_bee_conditionals7_predict2:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1681,7 +1928,7 @@ ru-RU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_bee_for3_predict1_2018:
@@ -1689,7 +1936,7 @@ ru-RU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_bee_for3_predict1_2018_2019:
@@ -1697,7 +1944,7 @@ ru-RU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_bee_fwp9_predict1:
@@ -1705,14 +1952,14 @@ ru-RU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_playlab_variables4c_predictive1:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1721,7 +1968,7 @@ ru-RU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       coursee_prediction_artistfunction2_2018:
@@ -1729,7 +1976,7 @@ ru-RU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       coursee_prediction_artistfunction2_2018_2019:
@@ -1737,7 +1984,7 @@ ru-RU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       grade2_multi_collector_A_predict1:
@@ -1745,7 +1992,7 @@ ru-RU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       grade2_multi_collector_A_predict1_2018:
@@ -1753,7 +2000,7 @@ ru-RU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
@@ -1761,6 +2008,6 @@ ru-RU:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}

@@ -1,5 +1,9 @@
 {
   "blockActionRepeat": "पुन्हा करा",
   "blockIf": "जर",
+  "directionDown": "खाली",
+  "directionLeft": "डावा",
+  "directionRight": "उजवा",
+  "directionUp": "वर",
   "to": "पर्यंत"
 }

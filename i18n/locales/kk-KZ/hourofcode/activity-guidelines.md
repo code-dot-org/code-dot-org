@@ -1,6 +1,5 @@
 ---
 title: Жаттығулар бағдары
-layout: wide
 ---
 
 <style>

@@ -62,6 +62,7 @@ Then(/^I report abuse on the project$/) do
   steps %Q{
     Then I switch tabs
     Then I wait until current URL contains "report_abuse"
+    And I wait until element "#uitest-email" is visible
     And I type "abuse_reporter@school.edu" into "#uitest-email"
     And I select the "Other" option in dropdown "uitest-abuse-type"
     And I type "I just don't like it." into "#uitest-abuse-detail"
