@@ -32,7 +32,7 @@ const styles = {
     paddingBottom: 10
   },
   select: {
-    maxWidth: '500px'
+    maxWidth: '500'
   }
 };
 
@@ -44,6 +44,10 @@ const ROLES = [
   'District Administrator',
   'Other'
 ];
+
+const ROLE_MAP = ROLES.map(v => ({value: v, label: v}));
+// add friendly empty value option
+ROLE_MAP.unshift({value: '', label: '-'});
 
 const GRADE_LEVEL = ['K-5', '6-8', '9-12'];
 
@@ -129,13 +133,6 @@ export class RegionalPartnerMiniContact extends React.Component {
     }
   };
 
-  roleMap = () => {
-    const roleMap = ROLES.map(v => ({value: v, label: v}));
-    // add friendly empty value option
-    roleMap.unshift({value: '', label: '-'});
-    return roleMap;
-  };
-
   render() {
     if (this.state.submitted) {
       return (
@@ -217,7 +214,7 @@ export class RegionalPartnerMiniContact extends React.Component {
               value={this.state.role}
               onChange={this.onRoleChange}
               placeholder="-"
-              options={this.roleMap()}
+              options={ROLE_MAP}
               {...SelectStyleProps}
             />
           </FormGroup>
