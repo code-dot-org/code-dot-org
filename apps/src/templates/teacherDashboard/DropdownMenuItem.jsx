@@ -22,6 +22,7 @@ const styles = {
 export default class DropdownMenuItem extends Component {
   static propTypes = {
     option: PropTypes.object.isRequired, // TODO define shape
+    isSelected: PropTypes.bool,
     onClick: PropTypes.func.isRequired
   };
 

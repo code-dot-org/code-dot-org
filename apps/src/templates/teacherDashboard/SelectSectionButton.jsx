@@ -16,9 +16,8 @@ import Button from '../Button';
 class SelectSectionButton extends Component {
   static propTypes = {
     options: PropTypes.arrayOf(PropTypes.object).isRequired,
+    selectedOptionIndex: PropTypes.number,
     onChangeOption: PropTypes.func.isRequired,
-    // We need to reload on section change on the script overview page to get
-    // accurate information about students in the selected section.
     forceReload: PropTypes.bool,
   };
 
@@ -85,24 +84,29 @@ class SelectSectionButton extends Component {
           offset={menuOffset}
         >
           {sections &&
-            sections.map(section => (
-              <DropdownMenuItem
-                option={option}
-                onClick={() => this.chooseMenuItem(section)}
-                key={section.id}
-              />
-            ))}
+            sections.map(section => {
+              menuItemProps = {
+                  option : {option},
+                  onClick : {() => this.chooseMenuItem(section)}
+                  key : {section.id}
+              }
+              if ( section.id === selectedOptionIndex ) {
+                  menuItemProps[isSelected] = true
+              }
+              return(
+                <DropdownMenuItem
+                  {...menuItemProps}
+                />
+              )
+            })
+          }
         </PopUpMenu>
       </div>
     );
   }
 }
 
-export default connect(state => {
-    let selectedSectionId = state.teacherSections.selectedSectionId;
-    let 
-    
-    return ({
-        sections: getVisibleSections(state),
-    })
-})(SelectSectionButton)
+export default connect(state => ({
+  sections: getVisibleSections(state),
+  selectedOptionIndex: state.teacherSections.selectedSectionId
+}))(SelectSectionButton)
