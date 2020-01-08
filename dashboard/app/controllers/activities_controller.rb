@@ -53,9 +53,9 @@ class ActivitiesController < ApplicationController
       if @level.game.sharing_filtered?
         begin
           share_failure = ShareFiltering.find_share_failure(params[:program], locale)
-        rescue OpenURI::HTTPError, IO::EAGAINWaitReadable => share_checking_error
+        rescue OpenURI::HTTPError, IO::EAGAINWaitReadable => share_filtering_error
           # If WebPurify or Geocoder fail, the program will be allowed, and we
-          # retain the share_checking_error to log it alongside the level_source
+          # retain the share_filtering_error to log it alongside the level_source
           # ID below.
         end
       end
@@ -65,12 +65,12 @@ class ActivitiesController < ApplicationController
           @level,
           params[:program].strip_utf8mb4
         )
-        if share_checking_error
+        if share_filtering_error
           FirehoseClient.instance.put_record(
             study: 'share_filtering',
             study_group: 'v0',
             event: 'share_filtering_error',
-            data_string: "#{share_checking_error.class.name}: #{share_checking_error}",
+            data_string: "#{share_filtering_error.class.name}: #{share_filtering_error}",
             data_json: {
               level_source_id: @level_source.id
             }.to_json
