@@ -67,7 +67,6 @@ export function connect({interpreter, onDisconnect}) {
   if (currentBoard) {
     commands.injectBoardController(currentBoard);
     currentBoard.installOnInterpreter(interpreter);
-    //Microbit does not yet have components to re-enable
     // When the board is reset, the components are disabled. Re-enable now.
     currentBoard.enableComponents();
     return Promise.resolve();
@@ -159,7 +158,7 @@ function getBoard() {
   if (shouldRunWithFakeBoard()) {
     return Promise.resolve(new FakeBoard());
   } else {
-    if (experiments.isEnabled('microbit')) {
+    if (experiments.isEnabled(experiments.BETT_DEMO)) {
       //TODO - break out the applicable parts of findPortWithViableDevice
       return findPortWithViableDevice().then(() => new MicroBitBoard());
     } else {
