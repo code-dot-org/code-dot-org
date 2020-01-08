@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import SmallChevronLink from '../SmallChevronLink';
 import SelectSectionDropdown from './SelectSectionDropdown';
+import SelectSectionButton from './SelectSectionButton';
 import TeacherDashboardNavigation from './TeacherDashboardNavigation';
 import {SetScriptIdEditSectionDialog} from './EditSectionDialog';
 import {beginEditingSection} from './teacherSectionsRedux';
@@ -53,7 +54,7 @@ class TeacherDashboardHeader extends React.Component {
               text="Edit section details"
             />
           </div>
-          <SelectSectionDropdown />
+          <SelectSectionButton />
         </div>
         <TeacherDashboardNavigation />
         <SetScriptIdEditSectionDialog />
