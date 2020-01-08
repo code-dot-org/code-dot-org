@@ -31,8 +31,8 @@ class Pd::RegionalPartnerMiniContact < ApplicationRecord
   def send_regional_partner_contact_emails
     form = sanitize_and_trim_form_data_hash
 
-    # We don't have a known role here, so let's use another word.
-    form[:role] = "person"
+    # role is optional, use another word if role not given
+    form[:role] = "person" unless form[:role]
     form[:mini] = true
 
     if regional_partner_id
