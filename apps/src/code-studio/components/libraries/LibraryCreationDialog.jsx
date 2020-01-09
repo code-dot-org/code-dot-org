@@ -26,7 +26,10 @@ const styles = {
   largerCheckbox: {
     width: 20,
     height: 20,
-    margin: 10
+    marginLeft: 0,
+    marginRight: 10,
+    marginTop: 10,
+    marginBottom: 10
   },
   functionItem: {
     marginBottom: 20
@@ -46,6 +49,19 @@ const styles = {
   button: {
     marginLeft: 10,
     marginRight: 10
+  },
+  info: {
+    fontSize: 12,
+    fontStyle: 'italic'
+  },
+  textInput: {
+    fontSize: 14,
+    padding: 6,
+    color: color.dimgray
+  },
+  description: {
+    width: '98%',
+    resize: 'vertical'
   }
 };
 
@@ -224,9 +240,8 @@ class LibraryCreationDialog extends React.Component {
   displayNameInput = () => {
     return (
       <div>
-        <p>{i18n.libraryNameRequirements()}</p>
         <input
-          style={styles.linkBox}
+          style={styles.textInput}
           type="text"
           value={this.state.libraryName}
           onChange={this.setLibraryName}
@@ -236,6 +251,7 @@ class LibraryCreationDialog extends React.Component {
             })
           }
         />
+        <div style={styles.info}>{i18n.libraryNameRequirements()}</div>
       </div>
     );
   };
@@ -255,7 +271,7 @@ class LibraryCreationDialog extends React.Component {
       <textarea
         rows="2"
         cols="200"
-        style={styles.textarea}
+        style={{...styles.textInput, ...styles.description}}
         placeholder={i18n.libraryDescriptionPlaceholder()}
         value={this.state.libraryDescription}
         onChange={event =>
@@ -291,7 +307,7 @@ class LibraryCreationDialog extends React.Component {
           {comment.length === 0 && (
             <p style={styles.alert}>{i18n.libraryExportNoCommentError()}</p>
           )}
-          <pre>{comment}</pre>
+          <pre style={styles.textInput}>{comment}</pre>
         </div>
       );
     });
@@ -317,19 +333,16 @@ class LibraryCreationDialog extends React.Component {
   displayContent = () => {
     return (
       <div>
-        <Heading2>
-          {this.state.isPublished ? this.state.libraryName : i18n.libraryName()}
-        </Heading2>
-        {!this.state.isPublished && this.displayNameInput()}
+        <Heading2>{i18n.libraryName()}</Heading2>
+        {this.displayNameInput()}
         <Heading2>{i18n.description()}</Heading2>
         {this.displayDescription()}
         <Heading2>{i18n.catProcedures()}</Heading2>
         {this.displayFunctions()}
-        <input
-          className="btn btn-primary"
-          type="submit"
-          value={i18n.publish()}
+        <Button
+          style={{marginLeft: 0, marginTop: 20}}
           onClick={this.publish}
+          text={i18n.publish()}
         />
         {this.displayError()}
       </div>
