@@ -112,7 +112,7 @@ class LibraryCreationDialog extends React.Component {
         });
       }
       this.setState({
-        libraryName: libraryParser.sanitizeName(
+        libraryName: libraryParser.suggestName(
           dashboard.project.getLevelName()
         ),
         librarySource: librarySource,
@@ -221,6 +221,25 @@ class LibraryCreationDialog extends React.Component {
     );
   };
 
+  displayNameInput = () => {
+    return (
+      <div>
+        <p>{i18n.libraryNameRequirements()}</p>
+        <input
+          style={styles.linkBox}
+          type="text"
+          value={this.state.libraryName}
+          onChange={this.setLibraryName}
+          onBlur={event =>
+            this.setState({
+              libraryName: libraryParser.suggestName(event.target.value)
+            })
+          }
+        />
+      </div>
+    );
+  };
+
   resetErrorMessage = () => {
     if (
       this.state.libraryDescription &&
@@ -298,8 +317,10 @@ class LibraryCreationDialog extends React.Component {
   displayContent = () => {
     return (
       <div>
-        <Heading2>{i18n.libraryName()}</Heading2>
-        {this.state.libraryName}
+        <Heading2>
+          {this.state.isPublished ? this.state.libraryName : i18n.libraryName()}
+        </Heading2>
+        {!this.state.isPublished && this.displayNameInput()}
         <Heading2>{i18n.description()}</Heading2>
         {this.displayDescription()}
         <Heading2>{i18n.catProcedures()}</Heading2>
