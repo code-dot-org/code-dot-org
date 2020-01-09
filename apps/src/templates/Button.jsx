@@ -21,7 +21,8 @@ const ButtonColor = {
 
 const ButtonSize = {
   default: 'default',
-  large: 'large'
+  large: 'large',
+  thin: 'thin'
 };
 
 const styles = {
@@ -148,7 +149,12 @@ const styles = {
       paddingLeft: 30,
       paddingRight: 30,
       lineHeight: '40px'
-    }
+    },
+    [ButtonSize.thin]: {
+      height: 20,
+      paddingLeft: 10,
+      paddingRight: 10,
+    },
   }
 };
 

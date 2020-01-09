@@ -74,7 +74,7 @@ class SelectSectionButton extends Component {
           refGenerator={button => (this.button = button)}
           onClick={this.handleClick}
           icon="chevron-down"
-          size="default"
+          size="thin"
           color="gray"
           text="Select section"
         />

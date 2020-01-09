@@ -13,12 +13,17 @@ import Button from '../Button';
 
 const styles = {
   headerContainer: {
-    display: 'flex',
-    justifyContent: 'space-between'
   },
   headerSectionPrompt: {
     fontWeight: 'bold'
-  }
+  },
+  headerSubtext: {
+    display: 'flex',
+    justifyContent: 'space-between'
+  },
+  headerButtons: {
+    display:'flex'
+  },
 };
 
 class TeacherDashboardHeader extends React.Component {
@@ -36,28 +41,32 @@ class TeacherDashboardHeader extends React.Component {
           isRtl={true}
           chevronSide="left"
         />
-        <div style={styles.headerContainer}>
+        <div>
           <div>
             <h1>{this.props.currentSectionName}</h1>
-            <div>
-              <span style={styles.headerSectionPrompt}>Assigned to:</span>
-              {` ${this.props.currentScriptName}`}
+            <div style={styles.headerSubtext}>
+              <div>
+                  <span style={styles.headerSectionPrompt}>Assigned to:</span>
+                  {` ${this.props.currentScriptName}`}
+              </div>
+              <div style={styles.headerButtons}>
+                <Button
+                  onClick={() => {
+                    this.props.dispatch(
+                      beginEditingSection(this.props.currentSectionId)
+                    );
+                  }}
+                  icon="gear"
+                  size="thin"
+                  color="gray"
+                  text="Edit section details"
+                />
+                <SelectSectionButton
+                  onChangeOption={(option) => switchToSection(option.id, this.props.currentSectionId)}
+                />
+              </div>
             </div>
-            <Button
-              onClick={() => {
-                this.props.dispatch(
-                  beginEditingSection(this.props.currentSectionId)
-                );
-              }}
-              icon="gear"
-              size="default"
-              color="gray"
-              text="Edit section details"
-            />
           </div>
-          <SelectSectionButton
-            onChangeOption={(option) => switchToSection(option.id, this.props.currentSectionId)}
-          />
         </div>
         <TeacherDashboardNavigation />
         <SetScriptIdEditSectionDialog />
