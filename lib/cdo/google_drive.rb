@@ -111,7 +111,7 @@ module Google
       document = @session.spreadsheet_by_key(document_key)
       raise "Could not find document #{document_key}" unless document
       worksheet = document.worksheet_by_title(sheet_name)
-      raise "Could not find worksheet '#{sheet_name}'" unless worksheet
+      worksheet ||= document.add_worksheet(sheet_name, 500)
       worksheet.delete_rows(1, worksheet.num_rows)
       worksheet.update_cells(1, 1, data)
       worksheet.save
