@@ -38,7 +38,7 @@ class StandardDescriptionCell extends Component {
     if (this.props.lessonsForStandardStatus) {
       return this.props.lessonsForStandardStatus.map((lesson, index) => {
         return (
-          <span>
+          <span key={lesson.name}>
             <ReactTooltip
               id={lesson.name}
               key={lesson.name}
