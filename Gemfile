@@ -179,7 +179,7 @@ gem 'omniauth-microsoft_v2_auth', github: 'dooly-ai/omniauth-microsoft_v2_auth'
 # Ref: https://github.com/joel/omniauth-windowslive/pull/17
 gem 'omniauth-windowslive', '~> 0.0.11', github: 'wjordan/omniauth-windowslive', ref: 'cdo'
 
-gem 'bootstrap-sass', '~> 2.3.2.2'
+gem 'bootstrap-sass', '~> 3.2.0'
 
 # Ref: https://github.com/haml/haml/issues/940
 # https://github.com/haml/haml/issues/982
