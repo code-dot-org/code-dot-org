@@ -1,6 +1,7 @@
 # For documentation see, e.g., http://guides.rubyonrails.org/routing.html.
 
 Dashboard::Application.routes.draw do
+
   # Override Error Codes
   get "404", to: "application#render_404", via: :all
 
@@ -675,4 +676,9 @@ Dashboard::Application.routes.draw do
   post '/safe_browsing', to: 'safe_browsing#safe_to_open', defaults: {format: 'json'}
 
   get '/curriculum_tracking_pixel', to: 'curriculum_tracking_pixel#index'
+
+  comfy_route :cms_admin, path: '/cms_admin'
+
+  # Make sure this routeset is defined last
+  comfy_route :cms, path: '/cms', sitemap: false
 end
