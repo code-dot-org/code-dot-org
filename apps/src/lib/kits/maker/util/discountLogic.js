@@ -13,9 +13,15 @@ export const Unit6Intention = {
   UNSURE: 'unsure'
 };
 
-// Dates used to establish whether a user can redeem their discount code
-export const fallEligibilityDate = new Date('2020-06-30');
-export const springEligibilityDate = new Date('2020-10-31');
+/**
+ * @enum {Date} Date when teachers become eligible for discounts
+ *   conditional on their responses to the Unit 6 question.
+ */
+export const eligibilityDates = {
+  yesFall2020: new Date('2020-07-01'),
+  yesSpring2021: new Date('2020-11-01')
+};
+
 const today = new Date();
 
 /**
@@ -42,12 +48,12 @@ export function inDiscountRedemptionWindow(unit6Intention) {
     return true;
   } else if (
     Unit6Intention.YES_FALL_2020 === unit6Intention &&
-    today > fallEligibilityDate
+    today > eligibilityDates.FALL_2020
   ) {
     return true;
   } else if (
     Unit6Intention.YES_SPRING_2021 === unit6Intention &&
-    today > springEligibilityDate
+    today > eligibilityDates.SPRING_2021
   ) {
     return true;
   } else {
