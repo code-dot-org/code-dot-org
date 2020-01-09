@@ -50,7 +50,10 @@ describe('EligibilityChecklist', () => {
       />
     );
     assert.equal(wrapper.find('Button').length, 0);
-    wrapper.instance().handleUnit6Submitted(true);
+    wrapper.instance().handleUnit6Submitted({
+      eligible: true,
+      unit6Intention: Unit6Intention.YES_SPRING_2020
+    });
     assert.equal(wrapper.find('Button').length, 1);
   });
 
