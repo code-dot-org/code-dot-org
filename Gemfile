@@ -347,4 +347,6 @@ gem 'colorize'
 gem 'gnista', github: 'wjordan/gnista', ref: 'embed', submodules: true
 gem 'hammerspace'
 
+gem "comfortable_mexican_sofa", "~> 1.12.10"
+
 gem 'require_all', require: false
