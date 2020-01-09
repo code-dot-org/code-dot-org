@@ -13,4 +13,16 @@ module ContentfulHelper
   def contentful_script(script_name)
     contentful_client.entries(content_type: 'script', 'fields.name' => script_name).first
   end
+
+  CONTENTFUL_LEVEL_TYPES = %w{
+    multipleChoiceLevel
+    externalMarkdownLevel
+  }
+
+  def contentful_level(level_name)
+    CONTENTFUL_LEVEL_TYPES.each do |content_type|
+      level = contentful_client.entries(content_type: content_type, 'fields.name' => level_name).first
+      return level if level
+    end
+  end
 end
