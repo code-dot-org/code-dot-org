@@ -145,20 +145,30 @@ export function createLibraryJson(
 }
 
 /**
- * Removes all illegal characters from a library's name and insures it starts
- * with a capitalized letter.
+ * Creates a suggested name for a library by removing all illegal characters
+ * and ensuring is starts with a capitol letter.
+ * @param {string} libraryName The name of the library
+ * @returns {string} The name of the library without any illegal characters.
+ */
+export function suggestName(libraryName) {
+  let suggestedName = sanitizeName(libraryName);
+  if (suggestedName.length === 0 || !isNaN(suggestedName.charAt(0))) {
+    suggestedName = 'Lib' + suggestedName;
+  }
+  suggestedName =
+    suggestedName.charAt(0).toUpperCase() + suggestedName.slice(1);
+  return suggestedName;
+}
+
+/**
+ * Removes all illegal characters from a library's name.
  * @param {string} libraryName The name of the library
  * @returns {string} The name of the library without any illegal characters.
  */
 export function sanitizeName(libraryName) {
-  // /\s+/g <- removes all whtespace
+  // /\s+/g <- removes all whitespace
   // /\W/g <- removes all characters except numbers and letters and underscores
   let sanitizedName = libraryName.replace(/\s+/g, '').replace(/\W/g, '');
-  if (sanitizedName.length === 0 || !isNaN(sanitizedName.charAt(0))) {
-    sanitizedName = 'Lib' + sanitizedName;
-  }
-  sanitizedName =
-    sanitizedName.charAt(0).toUpperCase() + sanitizedName.slice(1);
   return sanitizedName;
 }
 
@@ -166,6 +176,7 @@ export default {
   prepareLibraryForImport,
   getFunctions,
   createLibraryJson,
+  suggestName,
   sanitizeName,
   createLibraryClosure
 };
