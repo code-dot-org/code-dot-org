@@ -1,3 +1,4 @@
+import FontAwesome from './../FontAwesome';
 import React from 'react';
 import {connect} from 'react-redux';
 import {switchToSection} from './urlHelpers';
@@ -10,6 +11,7 @@ import TeacherDashboardNavigation from './TeacherDashboardNavigation';
 import {SetScriptIdEditSectionDialog} from './EditSectionDialog';
 import {beginEditingSection} from './teacherSectionsRedux';
 import Button from '../Button';
+import DropdownButton from '../DropdownButton';
 
 const styles = {
   headerContainer: {
@@ -25,6 +27,21 @@ const styles = {
     display:'flex'
   },
 };
+
+function getDropdownOptions(sections, selectedSectionName) {
+    console.log(selectedSectionName)
+    let options = Object.keys(sections).map(function(i)  {
+          let section = sections[i]
+          if (section.name === selectedSectionName) {
+              return <a> <FontAwesome icon="check"/> {section.name} </a>
+          }
+          else {
+              return <a> {section.name} </a>
+          }
+      })
+    console.log(options)
+    return options
+}
 
 class TeacherDashboardHeader extends React.Component {
   static propTypes = {
@@ -57,13 +74,15 @@ class TeacherDashboardHeader extends React.Component {
                     );
                   }}
                   icon="gear"
-                  size="thin"
                   color="gray"
                   text="Edit section details"
                 />
-                <SelectSectionButton
-                  onChangeOption={(option) => switchToSection(option.id, this.props.currentSectionId)}
-                />
+                <DropdownButton
+                    text="Select section"
+                    color="gray"
+                >
+                    {getDropdownOptions(this.props.allSections, this.props.currentSectionName)}
+                </DropdownButton>
               </div>
             </div>
           </div>
@@ -85,5 +104,7 @@ export default connect(state => {
     script => script.id === currentScriptId
   )[0].name;
 
-  return {currentSectionName, currentScriptName, currentSectionId};
+  let allSections = state.teacherSections.sections
+
+  return {currentSectionName, currentScriptName, currentSectionId, allSections};
 })(TeacherDashboardHeader);
