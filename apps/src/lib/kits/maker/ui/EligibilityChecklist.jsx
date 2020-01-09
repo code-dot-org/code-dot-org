@@ -186,22 +186,23 @@ export default class EligibilityChecklist extends React.Component {
               {redemptionWindowFail(eligibilityDates[this.state.yearChoice])}
             </div>
           )}
-        {this.state.statusYear === Status.SUCCEEDED &&
-          this.state.statusRedemptionWindow === Status.SUCCEEDED && (
+        {((this.state.statusYear === Status.SUCCEEDED &&
+          this.state.statusRedemptionWindow === Status.SUCCEEDED) ||
+          this.props.adminSetStatus) && (
+          <div>
             <div>
-              <div>
-                <strong>
-                  You meet all the requirements for a fully subsidized classroom
-                  kit. Click the “Get Code” button to get your code.
-                </strong>
-              </div>
-              <Button
-                color={Button.ButtonColor.orange}
-                text={i18n.getCode()}
-                onClick={this.confirmEligibility}
-              />
+              <strong>
+                You meet all the requirements for a fully subsidized classroom
+                kit. Click the “Get Code” button to get your code.
+              </strong>
             </div>
-          )}
+            <Button
+              color={Button.ButtonColor.orange}
+              text={i18n.getCode()}
+              onClick={this.confirmEligibility}
+            />
+          </div>
+        )}
         {this.state.confirming && (
           <EligibilityConfirmDialog
             onCancel={this.handleCancelDialog}
