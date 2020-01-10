@@ -20,7 +20,7 @@ fr:
             '"SLOTH"': paresseux
             '"UNICORN"': Licornes
           MOVE1:
-            MOVES.Roll: Roulis de caisse
+            MOVES.Roll: Mouvements de hanches
             MOVES.ClapHigh: Tapez des mains en haut
             MOVES.Dab: Dab
             MOVES.DoubleJam: Doubler la mise
@@ -32,7 +32,7 @@ fr:
             MOVES.ThisOrThat: Ceci ou cela
             MOVES.Rest: Aucun
           MOVE2:
-            MOVES.Roll: Roulis de caisse
+            MOVES.Roll: Mouvements de hanches
             MOVES.ClapHigh: Tapez des mains en haut
             MOVES.Dab: Dab
             MOVES.DoubleJam: Doubler la mise
@@ -77,7 +77,7 @@ fr:
             '"next"': "(Suivant)"
             '"prev"': "(Précédent)"
             '"rand"': "(Aléatoire)"
-            MOVES.Roll: Roulis de caisse
+            MOVES.Roll: Mouvements de hanches
             MOVES.ClapHigh: Tapez des mains en haut
             MOVES.Dab: Dab
             MOVES.DoubleJam: Doubler la mise
@@ -98,7 +98,7 @@ fr:
             '"next"': "(Suivant)"
             '"prev"': "(Précédent)"
             '"rand"': "(Aléatoire)"
-            MOVES.Roll: Roulis de caisse
+            MOVES.Roll: Mouvements de hanches
             MOVES.ClapHigh: Tapez des mains en haut
             MOVES.Dab: Dab
             MOVES.DoubleJam: Doubler la mise
@@ -166,7 +166,7 @@ fr:
           MOVE:
             '"rand"': "(Aléatoire)"
             MOVES.XBend: Pliez
-            MOVES.Roll: Roulis de caisse
+            MOVES.Roll: Mouvements de hanches
             MOVES.XClapSide: Tapez
             MOVES.ClapHigh: Tapez des mains en haut
             MOVES.Dab: Dab
@@ -197,7 +197,7 @@ fr:
           MOVE:
             '"rand"': "(Aléatoire)"
             MOVES.XBend: Pliez
-            MOVES.Roll: Roulis de caisse
+            MOVES.Roll: Mouvements de hanches
             MOVES.XClapSide: Tapez
             MOVES.ClapHigh: Tapez des mains en haut
             MOVES.Dab: Dab
@@ -225,7 +225,7 @@ fr:
       Dancelab_everyMeasuresRange:
         text: 'répéter toutes les {N} mesures après {START} '
       Dancelab_everySeconds:
-        text: 'chaque {N} {UNIT} '
+        text: 'répéter toutes les {N} {UNIT} '
         options:
           UNIT:
             '"measures"': mesures
@@ -279,7 +279,7 @@ fr:
             MOVES.Drop: Drop
             MOVES.Floss: Floss dance
             MOVES.Fresh: Fresh dance
-            MOVES.Roll: Roulis de caisse
+            MOVES.Roll: Mouvements de hanches
             MOVES.Kick: Étoile
             MOVES.ThisOrThat: Ceci ou cela
             MOVES.Rest: Aucun
@@ -304,10 +304,10 @@ fr:
             "{x: 100, y: 200}": vers la gauche
             "{x: 300, y: 200}": vers la droite
             "{x: 200, y: 200}": vers le centre
-            "{x: 100, y: 100}": vers le haut à gauche
-            "{x: 300, y: 100}": vers le haut à droite
-            "{x: 100, y: 300}": vers le bas à gauche
-            "{x: 300, y: 300}": vers le haut à droite
+            "{x: 100, y: 100}": en haut à gauche
+            "{x: 300, y: 100}": en haut à droite
+            "{x: 100, y: 300}": en bas à gauche
+            "{x: 300, y: 300}": en bas à droite
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aléatoire
       Dancelab_jumpToEach:
         text: sauter {GROUP} à {LOCATION}
@@ -332,10 +332,10 @@ fr:
             "{x: 100, y: 200}": vers la gauche
             "{x: 300, y: 200}": vers la droite
             "{x: 200, y: 200}": vers le centre
-            "{x: 100, y: 100}": vers le haut à gauche
-            "{x: 300, y: 100}": vers le haut à droite
-            "{x: 100, y: 300}": vers le bas à gauche
-            "{x: 300, y: 300}": vers le haut à droite
+            "{x: 100, y: 100}": en haut à gauche
+            "{x: 300, y: 100}": en haut à droite
+            "{x: 100, y: 300}": en bas à gauche
+            "{x: 300, y: 300}": en bas à droite
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": aléatoire
       Dancelab_layoutSprites:
         text: afficher {GROUP} en tant que {FORMAT}
@@ -357,10 +357,15 @@ fr:
           FORMAT:
             '"border"': frontière
             '"inner"': carré intérieur
+            '"diamond"': diamant
             '"circle"': cercle
             '"grid"': grille
+            '"top"': rangée du haut
             '"row"': ligne
+            '"bottom"': rangée du bas
+            '"left"': colonne de gauche
             '"column"': colonne
+            '"right"': colonne de droite
             '"x"': entrecroisement
             '"plus"': plus
             '"random"': aléatoire
@@ -386,10 +391,10 @@ fr:
             "{x: 100, y: 200}": vers la gauche
             "{x: 300, y: 200}": vers la droite
             "{x: 200, y: 200}": vers le centre
-            "{x: 100, y: 100}": vers le haut à gauche
-            "{x: 300, y: 100}": vers le haut à droite
-            "{x: 100, y: 300}": vers le bas à gauche
-            "{x: 300, y: 300}": vers le haut à droite
+            "{x: 100, y: 100}": en haut à gauche
+            "{x: 300, y: 100}": en haut à droite
+            "{x: 100, y: 300}": en bas à gauche
+            "{x: 300, y: 300}": en bas à droite
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aléatoire
       Dancelab_makeNewDanceSprite:
         text: |-
@@ -415,10 +420,10 @@ fr:
             "{x: 100, y: 200}": vers la gauche
             "{x: 300, y: 200}": vers la droite
             "{x: 200, y: 200}": vers le centre
-            "{x: 100, y: 100}": vers le haut à gauche
-            "{x: 300, y: 100}": vers le haut à droite
-            "{x: 100, y: 300}": vers le bas à gauche
-            "{x: 300, y: 300}": vers le haut à droite
+            "{x: 100, y: 100}": en haut à gauche
+            "{x: 300, y: 100}": en haut à droite
+            "{x: 100, y: 300}": en bas à gauche
+            "{x: 300, y: 300}": en bas à droite
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aléatoire
       Dancelab_makeNewDanceSpriteGroup:
         text: |-
@@ -499,11 +504,11 @@ fr:
             '"fireworks"': Feux d'artifice
             '"swirl"': Hypno
             '"kaleidoscope"': Kaléidoscope
-            '"lasers"': Piste de danse laser
+            '"lasers"': Laser piste de danse
             '"splatter"': Éclaboussures de peinture
             '"rainbow"': Arc-en-ciel
             '"snowflakes"': Neige
-            '"text"': Titre de la chanson
+            '"text"': Titres de chansons
             '"galaxy"': Espace
             '"sparkles"': Éclats
             '"spiral"': Spirale
@@ -511,7 +516,7 @@ fr:
             '"stars"': Étoiles
           PALETTE:
             '"rave"': Noir et blanc
-            '"cool"': Blues
+            '"cool"': Cool
             '"electronic"': Electronic
             '"iceCream"': Crème glacée
             '"default"': Lumière
@@ -520,7 +525,7 @@ fr:
             '"vintage"': Vintage
             '"warm"': Rouges
       Dancelab_setBackgroundEffectWithPalette:
-        text: définir l’effet de fond {PALETTE} {EFFECT}
+        text: définir l'effet d'arrière-plan{PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Aucun
@@ -535,13 +540,13 @@ fr:
             '"growing_stars"': Étoiles montantes
             '"swirl"': Hypno
             '"kaleidoscope"': Kaléidoscope
-            '"lasers"': Piste de danse laser
+            '"lasers"': Laser piste de danse
             '"splatter"': Éclaboussures de peinture
             '"rainbow"': Arc-en-ciel
             '"ripples_random"': Ondulations aléatoires
             '"ripples"': Ondulations
             '"snowflakes"': Neige
-            '"text"': Titre de la chanson
+            '"text"': Titres de chansons
             '"squiggles"': Gribouillis
             '"galaxy"': Espace
             '"sparkles"': Éclats
@@ -551,7 +556,7 @@ fr:
             '"music_wave"': Vagues
           PALETTE:
             '"rave"': Noir et blanc
-            '"cool"': Blues
+            '"cool"': Cool
             '"electronic"': Electronic
             '"iceCream"': Crème glacée
             '"default"': Lumière
@@ -602,10 +607,10 @@ fr:
             '"music_notes"': Notes de musique
             '"pineapples"': Ananas
             '"pizzas"': Pizzas
-            '"smiling_poop"': Crotte
+            '"smiling_poop"': Poop
             '"rain"': Pluie
             '"floating_rainbows"': Arc-en-ciel
-            '"smile_face"': Smileys
+            '"smile_face"': Sourires
             '"spotlight"': Projecteur
             '"color_lights"': Éclairage de scène
             '"raining_tacos"': Tacos
@@ -624,10 +629,10 @@ fr:
             '"paint_drip"': Gouttes de peinture
             '"pineapples"': Ananas
             '"pizzas"': Pizzas
-            '"smiling_poop"': Crotte
+            '"smiling_poop"': Poop
             '"rain"': Pluie
             '"floating_rainbows"': Arc-en-ciel
-            '"smile_face"': Smileys
+            '"smile_face"': Sourires
             '"spotlight"': Projecteur
             '"color_lights"': Éclairage de scène
             '"exploding_stars"': Starburst
@@ -1237,10 +1242,10 @@ fr:
             "{x: 100, y: 200}": vers la gauche
             "{x: 300, y: 200}": vers la droite
             "{x: 200, y: 200}": vers le centre
-            "{x: 100, y: 100}": vers le haut à gauche
-            "{x: 300, y: 100}": vers le haut à droite
-            "{x: 100, y: 300}": vers le bas à gauche
-            "{x: 300, y: 300}": vers le haut à droite
+            "{x: 100, y: 100}": en haut à gauche
+            "{x: 300, y: 100}": en haut à droite
+            "{x: 100, y: 300}": en bas à gauche
+            "{x: 300, y: 300}": en bas à droite
       Mikelab_getNext:
         text: obtenir l'objet suivant
       Mikelab_getProp:
@@ -1278,10 +1283,10 @@ fr:
             "{x: 100, y: 200}": vers la gauche
             "{x: 300, y: 200}": vers la droite
             "{x: 200, y: 200}": vers le centre
-            "{x: 100, y: 100}": vers le haut à gauche
-            "{x: 300, y: 100}": vers le haut à droite
-            "{x: 100, y: 300}": vers le bas à gauche
-            "{x: 300, y: 300}": vers le haut à droite
+            "{x: 100, y: 100}": en haut à gauche
+            "{x: 300, y: 100}": en haut à droite
+            "{x: 100, y: 300}": en bas à gauche
+            "{x: 300, y: 300}": en bas à droite
       Mikelab_groupDestroy:
         text: enlève {SELECT} {COSTUME}
         options:
@@ -1371,7 +1376,7 @@ fr:
             MOVES.Drop: Drop
             MOVES.Floss: Floss dance
             MOVES.Fresh: Fresh dance
-            MOVES.Roll: Roulis de caisse
+            MOVES.Roll: Mouvements de hanches
             MOVES.Kick: Étoile
             MOVES.ThisOrThat: Ceci ou cela
             MOVES.Rest: Aucun
@@ -1439,10 +1444,10 @@ fr:
             "{x: 100, y: 200}": vers la gauche
             "{x: 300, y: 200}": vers la droite
             "{x: 200, y: 200}": vers le centre
-            "{x: 100, y: 100}": vers le haut à gauche
-            "{x: 300, y: 100}": vers le haut à droite
-            "{x: 100, y: 300}": vers le bas à gauche
-            "{x: 300, y: 300}": vers le haut à droite
+            "{x: 100, y: 100}": en haut à gauche
+            "{x: 300, y: 100}": en haut à droite
+            "{x: 100, y: 300}": en bas à gauche
+            "{x: 300, y: 300}": en bas à droite
       Mikelab_whenClickedOn:
         text: quand on clique sur {SPRITE}
       Mikelab_whenKeyPressed:
