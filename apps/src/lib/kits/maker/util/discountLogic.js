@@ -19,8 +19,8 @@ export const Unit6Intention = {
  *   conditional on their responses to the Unit 6 question.
  */
 export const eligibilityDates = {
-  yesFall2020: moment('2020-07-01'),
-  yesSpring2021: moment('2020-11-01')
+  [Unit6Intention.YES_FALL_2020]: moment('2020-07-01'),
+  [Unit6Intention.YES_SPRING_2021]: moment('2020-11-01')
 };
 
 /**
@@ -49,12 +49,12 @@ export function inDiscountRedemptionWindow(unit6Intention) {
     return true;
   } else if (
     Unit6Intention.YES_FALL_2020 === unit6Intention &&
-    today > eligibilityDates.yesFall2020
+    today > eligibilityDates[Unit6Intention.YES_FALL_2020]
   ) {
     return true;
   } else if (
     Unit6Intention.YES_SPRING_2021 === unit6Intention &&
-    today > eligibilityDates.yesSpring2021
+    today > eligibilityDates[Unit6Intention.YES_SPRING_2021]
   ) {
     return true;
   } else {
