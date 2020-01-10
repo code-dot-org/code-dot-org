@@ -30,6 +30,16 @@ class AnnouncementsTest < ActiveSupport::TestCase
     assert_equal("teacher-apps-closing-2020-sign-up-2", announcement[:buttonId2])
   end
 
+  test 'returns nil for invalid banner id' do
+    announcement = Announcements.get_announcement_for_page("/another-page")
+    assert_nil announcement
+  end
+
+  test 'returns nil for page not found' do
+    announcement = Announcements.get_announcement_for_page("/not-a-page")
+    assert_nil announcement
+  end
+
   test 'quietly reject invalid data' do
     incomplete_banner_data = {
       pages: {
