@@ -92,7 +92,7 @@ routing_rules = [
     },
     redirect: {
       host_name: HOST_NAME,
-      replace_key_prefix_with: "documentation"
+      replace_key_prefix_with: "documentation/"
     }
   },
 ]
