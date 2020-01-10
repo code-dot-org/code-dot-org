@@ -65,10 +65,6 @@ const styles = {
   }
 };
 
-function select(event) {
-  event.target.select();
-}
-
 /**
  * @readonly
  * @enum {string}
@@ -79,7 +75,8 @@ export const PublishState = {
   PUBLISHED: 'published',
   ERROR_PUBLISH: 'error_publish',
   CODE_ERROR: 'code_error',
-  NO_FUNCTIONS: 'no_functions'
+  NO_FUNCTIONS: 'no_functions',
+  INVALID_INPUT: 'invalid_input'
 };
 
 class LibraryCreationDialog extends React.Component {
@@ -144,8 +141,7 @@ class LibraryCreationDialog extends React.Component {
   };
 
   copyChannelId = () => {
-    let channelId = document.getElementById('library-sharing');
-    channelId.select();
+    this.channelId.select();
     document.execCommand('copy');
   };
 
@@ -220,8 +216,8 @@ class LibraryCreationDialog extends React.Component {
           <div style={styles.centerContent}>
             <input
               type="text"
-              id="library-sharing"
-              onClick={select}
+              ref={channelId => (this.channelId = channelId)}
+              onClick={event => event.target.select()}
               readOnly="true"
               value={dashboard.project.getCurrentId()}
               style={styles.copy}
@@ -298,6 +294,7 @@ class LibraryCreationDialog extends React.Component {
           <input
             style={styles.largerCheckbox}
             type="checkbox"
+            disabled={comment.length === 0}
             name={name}
             checked={this.state.selectedFunctions[name] || false}
             onChange={this.boxChecked(name)}
@@ -323,9 +320,7 @@ class LibraryCreationDialog extends React.Component {
     }
     return (
       <div>
-        <p id="error-alert" style={styles.alert}>
-          {errorMessage}
-        </p>
+        <p style={styles.alert}>{errorMessage}</p>
       </div>
     );
   };
