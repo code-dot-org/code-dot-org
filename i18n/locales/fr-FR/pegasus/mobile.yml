@@ -26,7 +26,7 @@
   twentyhours_heading: "Essayez notre introduction au cours d’informatique"
   twentyhours_text: "Première Heure de Code complétée&#160;? Découvrez les concepts de l’informatique et de la programmation avec ce cours d’approfondissement."
   og_title: 'Chaque enfant mérite une opportunité'
-  og_title_soon: "L'Heure de Code arrive"
+  og_title_soon: "L'Heure du Code arrive"
   og_title_here: "L'Heure du Code est ici!"
   og_description: "Chaque élève de chaque école mérite une opportunité d'étudier l'informatique."
   og_description_celeb: "Essayez les nouveaux tutoriels, gagnez une conversation avec une célébrité pour vous ou pour votre classe!"
@@ -277,7 +277,7 @@
   homepage_hero_text_stat_loc: "2,5 millions de filles sont inscrites pour apprendre sur Code Studio"
   homepage_hero_text_stat_students: "#student_count comptes d'élèves sur Code Studio"
   homepage_hero_text_stat_served: 'L’Heure de Code: #served servis'
-  homepage_hero_hoc_is_coming: "L'Heure de Code arrive"
+  homepage_hero_hoc_is_coming: "L'Heure du Code arrive"
   homepage_hero_hoc_is_here: "L'Heure de Code est là"
   homepage_slot_text_hoc: "L'Heure de Code"
   homepage_slot_text_frozen: "La reine des neige avec Anna et Elsa"
@@ -1450,7 +1450,8 @@
   account_sign_up_email_opt_in: "Pouvons-nous vous envoyer des e-mails d’information sur nos formations, des opportunités près de chez vous ou d’autres brèves dans le domaine informatique?"
   account_sign_up_child_accept_terms: "Je confirme que j’ai l'autorisation de mes parents ou de mon tuteur légal pour utiliser les services de Code.org."
   hoc_overview_dance_title: "Fête dansante"
-  hoc_overview_dance_subtitle: "Codez une Fête dansante à partager avec vos amis. Avec Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara et 25 autres !"
+  hoc_overview_dance_subtitle: "Codez une soirée dansante à partager avec vos amis. Avec Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, et 25 autres !"
+  hoc_overview_dance_2019_subtitle: "Codez une soirée dansante à partager avec vos amis. Avec Katy Perry, Shawn Mendes, Panic ! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, et 34 autres !"
   hoc_overview_title: "Activités Heure de Code de Code.org"
   hoc_overview_subtitle: "L'<a href=\"https://hourofcode.com\">Heure de Code</a> est un mouvement mondial qui touche des dizaines de millions d'étudiants dans plus de 180 pays. N'importe qui, n'importe où, peut organiser un événement Heure de Code ou essayer l'un des plus de 200 tutoriels d'une heure, disponibles dans plus de 45 langues."
   hoc_overview_partner_activities_title: "Plus d'activités des partenaires"

@@ -2208,9 +2208,13 @@ fr-FR:
 
           _Ce niveau se termine après 9 mesures._
         challenges: |-
-          **Défis optionnels**
+          "**Optional Challenge**
 
-          Change l’effet de fond à différents moments de la chanson en connectant le nouveau bloc sous les événements <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"mesures"</title></block></xml>.
+          Change the background effect at different points during the song by connecting the new block under the <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> events.".
+      Dance_Party_05:
+        validation: "**Comment réussir ce niveau ?** \n\n-   Votre danseur doit effectuer
+          au moins 4 mouvements de danse différents avant la fin du niveau. \n\n_Ce
+          niveau se termine après 12 mesures._"
       Dance_Party_06:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
@@ -2269,6 +2273,8 @@ fr-FR:
           -   Utilise le bloc ˋen appuyant sur vers la gaucheˋ pour que le robot fasse un mouvement de danse.
 
           _Ce niveau se termine après 7 mesures._
+      Dance_Party_extras_alternate_2019:
+        alternate: Le bloc alternatif est dans la catégorie « Danseurs ».
       Function intro Ryan:
         Function_intro_Ryan_b: Si tu appelles les fonctions correctement, voici le
           chemin que tu feras...
@@ -13493,9 +13499,3 @@ fr-FR:
           pour amener ce puzzle où il devrait être. '
         iceage_warn_ice_age_b: Ajouter les 2 nouveaux blocs sous `lorsque l'exécution
           commence` pour qu'ils démarrent juste après le départ du programme.
-      Dance_Party_05:
-        validation: "**Comment réussir ce niveau ?** \n\n-   Votre danseur doit effectuer
-          au moins 4 mouvements de danse différents avant la fin du niveau. \n\n_Ce
-          niveau se termine après 12 mesures._"
-      Dance_Party_extras_alternate_2019:
-        alternate: Le bloc alternatif est dans la catégorie "Danseurs".
