@@ -19,8 +19,8 @@ export const Unit6Intention = {
  *   conditional on their responses to the Unit 6 question.
  */
 export const eligibilityDates = {
-  yesFall2020: moment('2020-07-01'),
-  yesSpring2021: moment('2020-11-01')
+  FALL_2020: moment('2020-07-01'),
+  SPRING_2021: moment('2020-11-01')
 };
 
 /**
