@@ -115,8 +115,7 @@ export default class DiscountCodeInstructions extends Component {
           </a>
         </div>
         <div style={styles.step}>
-          4) Proceed to checkout. The cost of the kit should be $0. If you are
-          in Alaska or Hawaii, your shipping will be covered as well.
+          4) Proceed to checkout. The cost of the kit should be $0.
         </div>
         <div style={{marginTop: 20}}>
           <SafeMarkdown markdown={endnoteMd} />
