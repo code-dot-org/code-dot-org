@@ -380,9 +380,14 @@ export default {
 
         let allowBehaviorEditing = Blockly.useModalFunctionEditor;
 
-        // If there is a toolbox with no categories, disallow editing the behavior,
-        // because renaming the behavior can break things.
-        if (appOptions.level.toolbox && !Blockly.hasCategories) {
+        // If there is a toolbox with no categories and the level allows editing
+        // blocks, disallow editing the behavior, because renaming the behavior
+        // can break things.
+        if (
+          appOptions.level.toolbox &&
+          !appOptions.readonlyWorkspace &&
+          !Blockly.hasCategories
+        ) {
           allowBehaviorEditing = false;
         }
 
