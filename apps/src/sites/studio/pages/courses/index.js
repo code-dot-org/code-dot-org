@@ -22,7 +22,7 @@ function showCourses() {
   const signedOut = coursesData.signedout;
   const modernElementaryCoursesAvailable =
     coursesData.modernelementarycoursesavailable;
-  const specialAnnouncement = coursesData.specialannouncement;
+  const specialAnnouncement = coursesData.specialAnnouncement;
 
   ReactDOM.render(
     <Provider store={getStore()}>
