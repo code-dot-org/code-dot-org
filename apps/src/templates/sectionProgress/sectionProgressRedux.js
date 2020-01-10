@@ -82,7 +82,7 @@ export const jumpToLessonDetails = lessonOfInterest => {
         study_group: 'progress',
         event: 'view_change_toggle',
         data_json: JSON.stringify({
-          section_id: state.sectionProgress.section.id,
+          section_id: state.sectionData.section.id,
           old_view: ViewType.SUMMARY,
           new_view: ViewType.DETAIL,
           script_id: state.scriptSelection.scriptId
